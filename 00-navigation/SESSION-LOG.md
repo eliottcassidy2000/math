@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S3 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S2 (via context summary)
+**Files read:** THM-013, OPEN-QUESTIONS, SESSION-LOG, q009_general_formula.py, q009_n7_fast.py, q009_adj_decomposition.py, q009_n7_minimal.py
+**Summary of work:** Tested THM-013 formula at n=8: FAILS (8/30). Discovered the simplified formula -2*sum(s_x*H(B_x))+2*sum(DL-CL) only works for n<=7. The failure is due to VD 3-5 cycle pairs at n=8. Derived the CORRECT general formula: DH = sum_{k>=1} 2^k * Delta(alpha_k), where Delta(alpha_k) recursively uses alpha_{k-1} of cycle complements. Verified n=4,...,9 (including n=9 where alpha_3 is nonzero). Also verified OCF directly at n=8 (20/20 random). Developed swap involution approach (THM-014): swapping i,j in Ham paths creates a perfect matching; unmatched paths blocked by s_x=-1 (T) or s_x=+1 (T') vertices. This gives adj(i,j)-adj'(j,i) = #U_T - #U_T', connecting the adjacency difference directly to the s_x blocking structure.
+**New contributions:**
+- THM-013 updated: corrected general formula, n=8 failure documented, verified n=4,...,9
+- THM-014: Swap involution lemma for arc-flip delta
+- T030: n=8 formula failure and correction
+- T031: Swap involution proof strategy
+- OCF verified at n=8 (20 random tournaments)
+- OPEN-Q-009 updated with general formula and n=8 findings
+**Unresolved threads:**
+- PROVE the identity adj(i,j) - adj'(j,i) = DeltaI(Omega, 2) -- the remaining step for OCF
+- The swap involution decomposition needs to be connected to the cycle formula via the nadj terms
+- n=9 alpha_3 verification (5/5 so far, could use more)
+
 ## kind-pasteur-2026-03-05-S5 — 2026-03-05
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S3 (via context summary; S4 was infra fix session)

@@ -69,21 +69,36 @@ The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-o
 
 The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H(T) = I(Ω(T),2)) by showing ΔH = ΔI for each arc flip from transitive.
 
-**MAJOR PROGRESS (opus-S2, THM-013):** At n=6, derived explicit formula:
-  ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5)
-where s_x = 1-T[x][i]-T[j][x], B_x = V\{i,j,x}. Verified 2216/2216 flips.
+**GENERAL FORMULA (opus-S2, THM-013 updated):**
 
-At n=5: even simpler: Ω(T) is always complete, ΔI = 2·(#destroyed - #created). Verified 732/732.
+  ΔH = Σ_{k≥1} 2^k · Δα_k = ΔI(Ω, 2)
 
-**Remaining task:** Prove the adjacency identity:
-  adj(i,j) - adj'(j,i) = -2·Σ_x s_x·H(B_x) + 2·(D5-C5)
+where Δα_k = Σ_L [Σ_{C_L using i→j} α_{k-1}(comp(C)) − Σ_{C'_L using j→i} α_{k-1}(comp(C'))]
 
-Key structural facts already proved:
-- All destroyed/created cycles have {i,j} ⊆ V(C) (complement unchanged)
-- THM-012: mu invariant when ≥1 flip endpoint in V(C)\{v}
-- Complement adjacency formula for persist-change cycles (1896/1896 at n=6)
+This is the EXACT general formula, verified n=4,...,9 (including n=9 where α_3 ≠ 0).
 
-**Source:** file.txt exploration, opus-2026-03-05-S2
+**CRITICAL FINDING (opus-S2 continued):** The simplified formula
+  ΔH = -2·Σ s_x·H(B_x) + 2·Σ_{L≥5}(DL−CL)
+is CORRECT only for n≤7. It FAILS at n=8 (8/30 match) due to missing VD 3-5 pair terms.
+
+**Simplified forms by n:**
+- n≤5: ΔH = 2·Σ_L(DL−CL)
+- n=6,7: ΔH = -2·Σ s_x·H(B_x) + 2·Σ_{L≥5}(DL−CL)
+- n=8: needs correction for VD pairs involving 5-cycles
+- n=9+: needs α_3 terms (three mutually VD 3-cycles)
+
+**Remaining task:** Prove the identity adj(i,j) − adj'(j,i) = Σ 2^k Δα_k.
+This would prove OCF for all n (combined with base case H(transitive)=1=I(∅,2)).
+
+The recursive structure (Δα_k depends on α_{k-1} of complements) suggests
+an inductive proof using OCF on smaller tournaments.
+
+Key structural facts:
+- All affected cycles contain {i,j} (complement unchanged by flip)
+- At most one cycle in an independent set is affected
+- Complement α values computable by inductive OCF
+
+**Source:** opus-2026-03-05-S2 (multiple sessions)
 
 ---
 

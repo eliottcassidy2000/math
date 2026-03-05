@@ -1,102 +1,138 @@
-# THM-013: Arc-Flip Independence Polynomial Formula
+# THM-013: Arc-Flip Formula for DeltaH
 
-**Type:** Theorem (verified n=4,5,6 exhaustively; n=7 sampled)
-**Certainty:** 5 — PROVED at n≤6 (exhaustive); VERIFIED at n=7 (50 random flips)
-**Status:** PROVED at n≤6, CONJECTURED for general n
+**Type:** Theorem (verified n=4,...,9; proved at n<=6)
+**Certainty:** 5 -- PROVED at n<=6 (exhaustive); VERIFIED at n=7,8,9 (sampled)
+**Status:** PROVED at n<=6, VERIFIED for general n up to n=9
 **Added by:** opus-2026-03-05-S2
 **Tags:** #ocf #arc-reversal #independence-polynomial #open-q-009 #claim-a
 
 ---
 
-## Statement
+## Statement (General)
 
-Let T be a tournament on n=6 vertices, and let T' be obtained by flipping arc i→j to j→i. Define:
-- s_x = 1 - T[x][i] - T[j][x] for each x ∈ V\{i,j} (takes values in {-1, 0, 1})
-- B_x = V\{i,j,x} (the 3-vertex complement)
-- D5 = #{directed 5-cycles using arc i→j in T}
-- C5 = #{directed 5-cycles using arc j→i in T'}
+Let T be a tournament on n vertices, and T' obtained by flipping arc i->j to j->i.
 
-Then the **GENERAL** formula (verified n=4,5,6,7):
+**The GENERAL formula (all n):**
 
-**ΔH = H(T) - H(T') = -2·Σ_{x ∈ V\{i,j}} s_x · H(T[B_x]) + 2·Σ_{L≥5, L odd} (DL - CL)**
+**DeltaH = H(T) - H(T') = DeltaI(Omega(T), 2) = sum_{k>=1} 2^k * Delta(alpha_k)**
 
-where DL = #{directed L-cycles using arc i→j in T}, CL = #{directed L-cycles using arc j→i in T'}.
+where alpha_k = #{independent sets of size k in the odd-cycle conflict graph Omega(T)}.
 
-Equivalently (via the adjacency formula ΔH = adj_T(i,j) - adj_{T'}(j,i)):
+### Computing Delta(alpha_k)
 
-**adj_T(i,j) - adj_{T'}(j,i) = -2·Σ_x s_x · H(B_x) + 2·Σ_{L≥5} (DL - CL)**
+An odd cycle is affected by the flip iff it contains both i and j. Two VD cycles cannot both contain {i,j}, so at most one cycle in any independent set is affected.
 
-IMPORTANT: The cycle sum starts at L=5, not L=3. The 3-cycle contribution is already encoded in the -2·Σ s_x·H(B_x) term (via the identity D3-C3 = -Σ s_x).
+**Delta(alpha_k)** = sum_L [sum_{C: L-cycle using i->j in T} alpha_{k-1}(comp(C))
+                          - sum_{C': L-cycle using j->i in T'} alpha_{k-1}(comp(C'))]
+
+where comp(C) = V \ V(C), and alpha_{k-1} counts independent sets in Omega(T[comp(C)]).
+
+Key: comp(C) subset of V\{i,j}, so T[comp(C)] = T'[comp(C)] (unchanged by flip).
+
+### Simplified forms by n
+
+**n<=5:** alpha_k = 0 for k >= 2 (can't fit two VD 3-cycles).
+  DeltaH = 2 * sum_L (DL - CL)
+
+**n=6:** alpha_k = 0 for k >= 3. Only VD 3-3 pairs contribute to alpha_2.
+  DeltaH = -2*sum_x s_x*H(B_x) + 2*(D5-C5)
+  where s_x = 1 - T[x][i] - T[j][x], B_x = V\{i,j,x}
+
+**n=7:** Same structure as n=6 (alpha_k=0 for k>=3, no VD 3-5 possible).
+  DeltaH = -2*sum_x s_x*H(B_x) + 2*sum_{L>=5}(DL-CL)
+
+**n=8:** alpha_3 = 0 but VD 3-5 pairs appear in alpha_2. The n<=7 formula FAILS.
+  Must include: 4 * sum_{L>=5} [sum_C alpha_1(comp(C)) - sum_C' alpha_1(comp(C'))]
+  This correction accounts for VD pairs where a 5-cycle (using i->j) pairs with
+  a 3-cycle in its 3-vertex complement.
+
+**n=9:** alpha_3 first becomes nonzero (three VD 3-cycles fit in 9 vertices).
+  The 8*Delta(alpha_3) term contributes.
 
 ---
 
-## Proof Sketch (for ΔI formula)
+## Proof (for n<=6)
 
-At n=6, the independence polynomial has the form:
-I(Ω(T), 2) = 1 + 2·|{odd cycles}| + 4·|{VD 3-cycle pairs}|
+At n=6, I(Omega(T), 2) = 1 + 2*|{odd cycles}| + 4*|{VD 3-cycle pairs}|
 
-(Max independent set size = 2 at n=6: only pairs of vertex-disjoint 3-cycles.)
+**Step 1: Delta(#cycles)**
+- Destroyed/created odd cycles must contain {i,j} (use the flipped arc).
+- D3 - C3 = -sum_x s_x (identity: T[j][x]*T[x][i] - T[i][x]*T[x][j] = -s_x)
+- Delta(#cycles) = -sum(s_x) + (D5 - C5)
 
-**Step 1: Δ(#cycles)**
-- Destroyed odd cycles (in T not T') must contain both i,j in their vertex set (since they use arc i→j).
-- Created odd cycles (in T' not T) must contain both i,j (they use arc j→i).
-- #destroyed_3 - #created_3 = Σ_x (T[j][x]·T[x][i] - T[i][x]·T[x][j]) = -Σ_x s_x
-- So: Δ(#cycles) = -Σ s_x + (D5 - C5)
+**Step 2: Delta(#VD pairs)**
+- A VD 3-3 pair partitions V\{i,j} into {{i,j,x}, B_x}.
+- delta(cyclicity of {i,j,x}) = -s_x (3-cycle destroyed/created).
+- cyclicity of B_x unchanged.
+- Delta(#VD pairs) = -sum_x s_x * c(B_x)
 
-**Step 2: Δ(#VD pairs)**
-A VD 3-cycle pair partitions V into two triples {A, B}. The flip i↔j only affects triples containing both i and j. For each x ∈ V\{i,j}, the partition {{i,j,x}, V\{i,j,x}} has:
-- δ(cyclicity of {i,j,x}) = c_{T'}({i,j,x}) - c_T({i,j,x}) = s_x
-- cyclicity of V\{i,j,x} is unchanged
-- Δ(VD pair) = s_x · c(B_x)
+**Step 3: Combine** (using H(B_x) = 1 + 2*c(B_x) for 3-vertex tournaments)
+DeltaI = 2*(-sum(s_x) + D5-C5) + 4*(-sum(s_x)*c(B_x))
+       = -2*sum(s_x)*(1+2c(B_x)) + 2*(D5-C5)
+       = -2*sum(s_x)*H(B_x) + 2*(D5-C5)  QED
 
-Since H(B_x) = 1 + 2·c(B_x) for a 3-tournament:
-Δ(#VD pairs) = Σ_x s_x · c(B_x)
+---
 
-**Step 3: Combine**
-ΔI = 2·(-Σ s_x + D5 - C5) + 4·(- Σ s_x · c(B_x))
-   = -2·Σ s_x · (1 + 2c(B_x)) + 2·(D5 - C5)
-   = -2·Σ s_x · H(B_x) + 2·(D5 - C5)  QED
+## Why the n<=7 formula fails at n=8
+
+At n=8, B_x has 5 vertices. By OCF on B_x:
+  H(B_x) = I(Omega(B_x), 2) = 1 + 2*alpha_1(B_x)  (alpha_2(B_x)=0 since 5<6)
+
+The formula -2*sum(s_x)*H(B_x) correctly captures 3-cycle changes and their
+pairing with cycles WITHIN B_x. But it misses VD pairs where a 5-cycle
+(containing {i,j}) pairs with a 3-cycle in its 3-vertex complement.
+
+The 5-cycle contribution to Delta(alpha_2) is:
+  sum_{C: 5-cycle using i->j} alpha_1(comp(C)) - sum_{C': 5-cycle using j->i} alpha_1(comp(C'))
+
+This is the "correction term" needed at n=8. It was empirically found to be
+nonzero and accounts for all residuals (15/15 verified).
 
 ---
 
 ## Significance
 
-This reduces OCF (= Claim A) to a single identity:
+The general formula DeltaH = sum 2^k * Delta(alpha_k) is equivalent to OCF.
+Proving this identity for any arc flip, combined with the base case
+H(transitive) = 1 = I(empty, 2), proves OCF for all n.
 
-**adj_T(i,j) - adj_{T'}(j,i) = -2·Σ_x s_x · H(B_x) + 2·(D5 - C5)**
+The recursive structure: Delta(alpha_k) depends on alpha_{k-1} of sub-tournaments,
+which by inductive OCF equals (I(Omega(sub), 2) - 1 - ... ) / 2^{k-1}.
 
-The LHS counts adjacency differences for Hamiltonian paths. The RHS involves:
-- s_x: determined by 4 arc directions (x↔i, j↔x)
-- H(B_x): Hamiltonian path count of 3-vertex sub-tournaments (always 1 or 3)
-- D5, C5: 5-cycle counts, expressible as sums over Ham paths of B_x weighted by boundary arcs
-
-Since any tournament is reachable from the transitive tournament by arc flips, and OCF holds for the transitive tournament (H=1=I(∅,2)), proving this identity for all flips proves OCF for all n=6 tournaments.
-
----
-
-## Generalization Prospects
-
-At n=5: Ω(T) is always complete (any two cycles share a vertex), so I(Ω,2) = 1 + 2·|cycles|. The formula simplifies to ΔI = 2·(#destroyed - #created), which was verified 732/732.
-
-At n≥7: the formula generalizes but requires additional terms for independent sets of size > 2 (possible when n ≥ 9, where three VD 3-cycles can fit).
-
-For n=7,8: max independent set size is still 2, so the same formula structure applies with modified B_x sizes.
+**To prove OCF, it suffices to prove:**
+  adj(i,j) - adj'(j,i) = sum_{k>=1} 2^k * Delta(alpha_k)
+for any tournament T and arc i->j, where the RHS is determined by the
+odd-cycle structure of T and T'.
 
 ---
 
 ## Verification Record
 
-| n | Flips tested | Formula correct |
-|---|-------------|----------------|
-| 4 | 500 random | 500/500 |
-| 5 | 300 random + 732 exhaustive | 1032/1032 |
-| 6 | 200 random + 2216 exhaustive | 2416/2416 |
-| 7 | 50 random | 50/50 |
+| n | Flips tested | Formula | Result |
+|---|-------------|---------|--------|
+| 4 | 500 random | simplified | 500/500 |
+| 5 | 300 random + 732 exhaustive | simplified | 1032/1032 |
+| 6 | 200 random + 2216 exhaustive | simplified | 2416/2416 |
+| 7 | 50 random | simplified (same as n<=7) | 50/50 |
+| 8 | 15 random | full general (with correction) | 15/15 |
+| 9 | 5 random | full general (with alpha_3) | 5/5 |
+
+Note: "simplified" = the n<=7 formula -2*sum(s_x*H(B_x)) + 2*sum(DL-CL).
+This is INCORRECT at n>=8; must use full general formula.
 
 ---
 
-## The 5-Cycle Term
+## The Identity D3-C3 = -sum(s_x)
 
-D5 - C5 = Σ_x Σ_{P path in B_x} [T[j][P[0]]·T[P[2]][i] - T[i][P[0]]·T[P[2]][j]]
+T[j][x]*T[x][i] - T[i][x]*T[x][j] = -s_x for each x in V\{i,j}.
 
-This counts the net change in 5-cycles, weighted by whether each 3-vertex path in the complement can be "extended" through the flipped arc.
+Proof: enumerate all 4 cases of (T[x][i], T[j][x]).
+
+---
+
+## The 5-Cycle Term (n=6 specific)
+
+D5 - C5 = sum_x sum_{P path in B_x} [T[j][P[0]]*T[P[2]][i] - T[i][P[0]]*T[P[2]][j]]
+
+Counts net 5-cycle changes weighted by whether 3-vertex paths in complement
+can be "extended" through the flipped arc.
