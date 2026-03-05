@@ -20,7 +20,9 @@
       "Bash(git diff*)",
       "Bash(gh pr:*)",
       "Bash(winget list gh)",
-      "Bash(where gh)"
+      "Bash(where gh)",
+      "Bash(git:*)",
+      "Bash(GIT_EDITOR=true git rebase:*)"
     ]
   },
   "hooks": {
