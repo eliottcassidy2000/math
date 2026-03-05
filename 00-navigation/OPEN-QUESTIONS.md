@@ -128,14 +128,38 @@ At n=2k, the first cycle whose mu can exceed 1 has length 2k-1. The "excess" mu 
 ## OPEN-Q-013 🟡
 **Correct formula for H(T_p) for Paley primes p ≡ 3 (mod 4)**
 
-CONJ-002 refuted for p=11: H(T_11) = 95095 = 55*1729, not 4455. Known values:
-- p=3: H=3, H/|Aut|=1
-- p=7: H=189, H/|Aut|=9=3^2
-- p=11: H=95095, H/|Aut|=1729=7*13*19
+Both conjectures are FALSE for p=11:
+- Original conjecture H(T_p) = p * 3^((p-1)(p-3)/8) gives 649,539 for p=11, not divisible by 55.
+- Revised conjecture H(T_p) = |Aut(T_p)| * 3^((p-3)/2) gives 4455 for p=11 (off by factor 21.4).
 
-The sequence 1, 9, 1729 has no obvious pattern. Is there a number-theoretic formula fitting these values?
+**Known values (all confirmed by direct computation):**
+- p=3: H=3, |Aut|=3, H/|Aut|=1
+- p=7: H=189, |Aut|=21, H/|Aut|=9=3^2
+- p=11: H=95095, |Aut|=55, H/|Aut|=1729=7*13*19 (Hardy-Ramanujan taxicab number)
+- p=19: H=unknown, |Aut|=171, H/|Aut|=unknown
 
-**Source:** kind-pasteur-2026-03-05-S2 computation
+**Sequence:** 1, 9, 1729 — no obvious pattern. 3^k pattern breaks catastrophically at p=11.
+
+**Complete cycle count table for T_11** (confirmed kind-pasteur-S5 from inbox/other.txt, all consistent with H=95095):
+| k | c_k(T_11) | C(11,k) | c_k/C(11,k) | integer? |
+|---|-----------|---------|-------------|----------|
+| 3 | 55 | 165 | 1/3 | no |
+| 4 | 165 | 330 | 1/2 | no |
+| 5 | 594 | 462 | 9/7 | no |
+| 6 | 1595 | 462 | 145/42 | no |
+| 7 | 3960 | 330 | 12 | YES |
+| 8 | 7425 | 165 | 45 | YES |
+| 9 | 11055 | 55 | 201 | YES |
+| 10 | 10681 | 11 | 971 | YES |
+| 11 | 5505 | 1 | 5505 | YES |
+
+**OCF verification:** 95095 = 1 + 2*(55+594+3960+11055+5505) + 4*10879 + 8*1155 EXACT
+
+**Integrality observation:** C(11,k) | c_k(T_11) for ALL k >= 6 = (p+1)/2. This appears to be a genuine structural theorem; see T028.
+
+**Next computational target:** H(T_19) (requires computing Ham paths of 19-vertex tournament). |Aut(T_19)|=171=9*19.
+
+**Source:** kind-pasteur-2026-03-05-S2 computation; cycle table from kind-pasteur-2026-03-05-S5 (inbox/other.txt)
 
 ---
 

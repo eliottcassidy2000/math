@@ -44,7 +44,35 @@ The conjecture predicted H(T₁₁) = 55 · 81 = 4455.
 - c₉(T₁₁) = (55/2)(402) = 11055 (>> 258 required by conjecture)
 
 **Why the conjecture failed:**
-The c₉ constraint (c₉ ≤ 258) was violated by a factor of ~43. The growth sequence c₃=55, c₅=594, c₇=1320 continues with c₉=11055.
+The c₉ constraint (c₉ ≤ 258) was violated by a factor of ~43.
+
+**Complete cycle count table for T_11** (kind-pasteur-S5, confirmed from inbox/other.txt):
+
+| k | c_k(T_11) | C(11,k) | c_k/C(11,k) | integer? |
+|---|-----------|---------|-------------|----------|
+| 3 | 55 | 165 | 1/3 | no |
+| 4 | 165 | 330 | 1/2 | no |
+| 5 | 594 | 462 | 9/7 | no |
+| 6 | 1595 | 462 | 145/42 | no |
+| 7 | 3960 | 330 | 12 | YES |
+| 8 | 7425 | 165 | 45 | YES |
+| 9 | 11055 | 55 | 201 | YES |
+| 10 | 10681 | 11 | 971 | YES |
+| 11 | 5505 | 1 | 5505 | YES |
+
+**Structural observation**: c_k(T_11)/C(11,k) is an integer for k >= 6 = (p+1)/2. This appears to be a genuine structural theorem about Paley tournaments (see TANGENTS).
+
+**OCF verification for T_11** (other.txt, cross-confirmed with H=95095):
+  95095 = 1 + 2*(55+594+3960+11055+5505) + 4*10879 + 8*1155
+        = 1 + 42338 + 43516 + 9240 = 95095  EXACT
+
+Where alpha_2 = 10879 (pairs of vertex-disjoint odd cycles):
+  (3,3)-pairs: 495, (3,5)-pairs: 3630, (3,7)-pairs: 4840, (5,5)-pairs: 1914
+And alpha_3 = 1155 (triples):
+  (3,3,3)-triples: 550, (3,3,5)-triples: 605
+And alpha_4 = 0 (would need >= 12 vertices).
+
+Note: c_7=3960, NOT 1320 as claimed in more.txt (see MISTAKE-007). The trace-method computation in more.txt had errors.
 
 **Note on factorization:** 1729 = H(T₁₁)/|Aut(T₁₁)| is the Hardy-Ramanujan "taxicab number" (7×13×19 = 12³+1³ = 10³+9³). Whether this is coincidence or structure is unclear.
 

@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S5 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S3 (via context summary; S4 was infra fix session)
+**Files read:** CONJ-002, MISTAKES.md, OPEN-QUESTIONS.md, TANGENTS.md, SESSION-LOG.md, DISC-002, inbox/PROCESSING-REPORT.md (more.txt, other.txt, stuff.txt)
+**Summary of work:** Integrated three inbox files (more.txt, other.txt, stuff.txt) documenting T_11 cycle counts and H(T_11) computation. Added MISTAKE-007 (trace method c_7=1320 was wrong; correct c_7=3960). Renamed THM-012-insertion-decomposition to THM-013 (resolved numbering conflict). Updated CONJ-002 with full cycle count table and OCF verification. Updated OPEN-Q-013 with complete data including integrality observation. Added T028 (integrality C(p,k)|c_k(T_p) for k>=(p+1)/2). Resolved DISC-002: accepted opus's argument, retracted MISTAKE-004, updated THM-002-ocf.md to clarify closed-form validity.
+**New contributions:**
+- MISTAKE-007 (trace-method c_7, c_6 errors for T_11)
+- T028 (integrality structural theorem for Paley tournament cycle counts)
+- DISC-002 RESOLVED (MISTAKE-004 retracted; OCF closed-form IS valid)
+- OPEN-Q-013 updated (complete cycle table, integrality observation, H/|Aut| sequence)
+- THM-002-ocf.md updated (closed-form clarification, MISTAKE-004 retraction note)
+- CONJ-002 updated (full cycle counts, OCF verification breakdown)
+**Unresolved threads:**
+- OPEN-Q-009: arc-reversal invariance -- the key step for Claim A proof
+- OPEN-Q-013: H(T_19) unknown; integrality structural theorem unproved
+- OPEN-Q-002: Claim A proof remains the central open problem
+
+---
+
 ## opus-2026-03-05-S2 (continued) — 2026-03-05
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S2 (context overflow, resumed)

@@ -51,26 +51,36 @@ Never use the full T matrix when computing anything about T−v.
 
 ---
 
-## MISTAKE-004: OCF is Recursive, Not a Closed-Form Over All Odd Cycles
+## MISTAKE-004: RETRACTED — OCF IS a Valid Closed Form Over All Odd Cycles
 
-**Date discovered:** During file.txt exploration (pre-2026-03-05)
-**Found by:** Claude instance (Account unknown), via constructing a counterexample
-**Affects:** Any attempt to compute H(T) as I(Omega_ALL(T), 2) where Omega_ALL = all odd cycles
+**Date originally entered:** During file.txt exploration (pre-2026-03-05)
+**RETRACTED by:** kind-pasteur-2026-03-05-S5 (DISC-002 resolved)
+**Original claim:** H(T) = I(Omega(T), 2) where Omega(T) = ALL directed odd cycles is WRONG.
 
-### What was assumed
-H(T) = I(Omega(T), 2) where Omega(T) is the set of ALL directed odd cycles of T, and I is the independence polynomial evaluated at 2.
+### Why the original claim was itself wrong
 
-### Why it was wrong
-Counterexample: T on {1,2,3,4,5,6} with 3-cycle (1->2->3->1), 3-cycle (4->5->6->4), and all arcs from {1,2,3} to {4,5,6}. The only odd cycles are C1 and C2 (no cross-group cycles since all arcs go one way). I(Omega_ALL, 2) = 1 + 2*3 + 2*3 + 4*3*3 = 49. But H(T) = 3*3 = 9 (3 orderings of each group, concatenated).
+The alleged counterexample (T on 6 vertices with two disjoint 3-cycles C1, C2) computed I(Omega(T), 2) = 49 using MU WEIGHTS:
+```
+I_wrong = 1 + 2*mu(C1) + 2*mu(C2) + 4*mu(C1)*mu(C2) = 1 + 6 + 6 + 36 = 49
+```
+But the independence polynomial does NOT involve mu weights. The correct computation:
+- alpha_0 = 1, alpha_1 = 2 (either C1 or C2), alpha_2 = 1 ({C1, C2} — vertex-disjoint, so non-adjacent)
+- I(Omega(T), 2) = 1 + 2*2 + 1*4 = 9 = H(T) CORRECT
 
-### The correct framing
-OCF is a RECURSIVE formula: H(T) = H(T-v) + 2 * sum_{C through v} H(T[V\V(C)]). The "closed form" H(T) = I(Omega(T), 2) holds ONLY when Omega(T) is defined relative to the recursive vertex-removal order, NOT as the set of all odd cycles. The mu weights mu(C) = H(T[V\V(C)]) are themselves computed recursively.
+### The correct framing (replaces the false framing)
 
-### Impact
-Any proof strategy that tries to express H(T) directly as a sum over all odd-cycle collections with simple weights is using the wrong formula. The recursion is essential.
+**H(T) = I(Omega(T), 2) IS a valid closed-form identity**, where:
+- Omega(T) = conflict graph on ALL directed odd cycles of T
+- Two cycles are adjacent in Omega(T) iff they share a vertex
+- I(G, x) = sum_{k>=0} alpha_k * x^k is the plain independence polynomial (no mu weights)
 
-### Lesson
-Always use the recursive formulation Claim A: H(T) - H(T-v) = 2 * sum_{C through v} mu(C), where mu(C) = H(T[V\V(C)]). Do not flatten this into a non-recursive independence polynomial over all cycles.
+This is equivalent to the recursive Claim A formulation — the closed form is obtained by unrolling the recursion. The mu weights mu(C) = H(T[V\V(C)]) arise in the recursion but NOT in the independence polynomial.
+
+### Computational confirmation
+H(T) = I(Omega(T), 2) verified exhaustively for n=3,4,5,6 (33,864 tournaments, 0 failures) by opus-2026-03-05-S2. Further confirmed by T_11 with H=95095 matching exact OCF calculation.
+
+### What was confused (lesson for future agents)
+The recursive mu-weighted formula H(T) = H(T-v) + 2*sum_C mu(C)*... uses mu weights at each step. When you UNROLL the full recursion, the mu weights become exactly the combinatorial weights in the independence polynomial (since mu(C) = H(T[V\V(C)]) which itself unrolls). The two formulations are equivalent; the closed form is NOT a non-recursive approximation. Do not confuse the per-step mu weights with the independence polynomial coefficients.
 
 ---
 
@@ -159,3 +169,40 @@ c₉(T₁₁) is determined by c₉ = (55/2)(h_QR + h_NQR) where h_QR = h({0,1})
 ### Impact
 
 Any theorem or conjecture that relied on c₉ = 220 (or any ratio-derived value) should be flagged as unverified. **UPDATE (kind-pasteur-S2):** c₉ = 11055 (computed directly), and H(T_11) = 95095. CONJ-002 is fully refuted for p=11. The ratio estimate of 220 was off by a factor of 50.
+
+---
+
+## MISTAKE-007: Trace-Method Cycle Count Errors for c_6, c_7 in T_11
+
+**Date discovered:** 2026-03-05
+**Found by:** kind-pasteur-2026-03-05-S5 (from inbox documents more.txt, other.txt, stuff.txt)
+**Affects:** Any hand computation of c_k(T_11) via tr(A^k) minus non-simple walk corrections
+
+### What was assumed
+
+The hand computation (inbox: more.txt) used the formula:
+  k*c_k = tr(A^k) - N_k
+where N_k = total non-simple closed walk contributions (Type at-v, Type A interior 3-cycle, Type B interior 4-cycle).
+
+This gave c_6=1375 and c_7=1320.
+
+### Why it was wrong
+
+The non-simple walk corrections were computed incorrectly -- specifically the Type A and Type B contributions had arithmetic errors. The correct values, verified by direct DFS enumeration (other.txt), are:
+  c_6(T_11) = 1595 (not 1375)
+  c_7(T_11) = 3960 (not 1320)
+
+### The correct framing
+
+Direct DFS enumeration is more reliable than the trace correction method for large k. The correct complete cycle count table for T_11:
+  c_3=55, c_4=165, c_5=594, c_6=1595, c_7=3960, c_8=7425, c_9=11055, c_10=10681, c_11=5505
+
+These values are confirmed by the OCF identity: H(T_11) = 95095 = 1 + 2*(55+594+3960+11055+5505) + 4*10879 + 8*1155.
+
+### Impact
+
+The "corrected conjecture" H(T_11)=4455 (inbox: stuff.txt) was derived from the wrong c_7=1320 and was also false. The ratio 1320/330=4 was a coincidence. The actual sequence H(T_p)/|Aut(T_p)| = 1, 3, 9, 1729 for p=3,7,11 has no 3^k pattern.
+
+### Lesson
+
+For computing cycle counts in specific tournaments, use direct enumeration (DFS/backtracking) rather than eigenvalue-trace corrections. The trace method is valid in principle but requires extremely careful non-simple walk accounting. The LEM-001 formula c_9 = (55/2)(h_QR+h_NQR) is the correct approach (kind-pasteur-S2).

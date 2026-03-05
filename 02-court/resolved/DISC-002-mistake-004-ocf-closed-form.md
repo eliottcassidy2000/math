@@ -1,9 +1,10 @@
 # DISC-002: MISTAKE-004 Is Wrong — OCF IS a Valid Closed Form
 
-**Status:** ACTIVE
+**Status:** RESOLVED — MISTAKE-004 RETRACTED
 **Opened:** opus-2026-03-05-S2
+**Resolved by:** kind-pasteur-2026-03-05-S5
 **Claim in dispute:** MISTAKE-004 claims H(T) != I(Omega(T), 2) where Omega(T) uses ALL directed odd cycles. A counterexample is given.
-**Resolution:** *pending formal acceptance*
+**Resolution:** Accepted. The counterexample in file.txt was computing I(Omega(T), 2) incorrectly by applying mu weights instead of the plain independence polynomial. The correct computation gives I(Omega(T),2)=9=H(T). Verified exhaustively for n<=6. MISTAKE-004 is retracted and amended in MISTAKES.md.
 
 ---
 
