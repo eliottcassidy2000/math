@@ -67,9 +67,7 @@ trap cleanup EXIT
 
 # ── Format streaming JSON into readable terminal output ────────────────────
 format_stream() {
-  # Reads stream-json lines from stdin and prints a readable live view.
-  # Shows: assistant text, tool calls, tool results (trimmed), and progress.
-  python3 -u -c '
+  python3 -u << 'PYEOF'
 import sys, json
 
 for line in sys.stdin:
@@ -91,32 +89,36 @@ for line in sys.stdin:
             elif block.get("type") == "tool_use":
                 name = block.get("name", "?")
                 inp = block.get("input", {})
-                # Show tool call compactly
                 if name == "Read":
-                    print(f"\n--- Reading: {inp.get(\"file_path\", \"?\")} ---", flush=True)
+                    fp = inp.get("file_path", "?")
+                    print(f"\n--- Reading: {fp} ---", flush=True)
                 elif name == "Write":
-                    print(f"\n--- Writing: {inp.get(\"file_path\", \"?\")} ---", flush=True)
+                    fp = inp.get("file_path", "?")
+                    print(f"\n--- Writing: {fp} ---", flush=True)
                 elif name == "Edit":
-                    print(f"\n--- Editing: {inp.get(\"file_path\", \"?\")} ---", flush=True)
+                    fp = inp.get("file_path", "?")
+                    print(f"\n--- Editing: {fp} ---", flush=True)
                 elif name == "Bash":
                     cmd = inp.get("command", "?")
                     if len(cmd) > 120:
                         cmd = cmd[:120] + "..."
                     print(f"\n$ {cmd}", flush=True)
                 elif name == "Glob":
-                    print(f"\n--- Glob: {inp.get(\"pattern\", \"?\")} ---", flush=True)
+                    pat = inp.get("pattern", "?")
+                    print(f"\n--- Glob: {pat} ---", flush=True)
                 elif name == "Grep":
-                    print(f"\n--- Grep: {inp.get(\"pattern\", \"?\")} ---", flush=True)
+                    pat = inp.get("pattern", "?")
+                    print(f"\n--- Grep: {pat} ---", flush=True)
                 else:
                     print(f"\n--- {name} ---", flush=True)
 
     elif etype == "result":
-        # Final result
         result = event.get("result", "")
         if result:
-            print(f"\n{'='*60}", flush=True)
+            sep = "=" * 60
+            print(f"\n{sep}", flush=True)
             print(result, flush=True)
-  '
+PYEOF
 }
 
 # ── Session runner ─────────────────────────────────────────────────────────
