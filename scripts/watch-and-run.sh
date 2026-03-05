@@ -160,6 +160,7 @@ run_session() {
     claude -p "$prompt" \
       --model "$MODEL" \
       --max-turns "$MAX_TURNS" \
+      --verbose \
       --output-format stream-json \
       --allowedTools "Bash(git *),Bash(python3 *),Bash(ls *),Bash(cat .machine-id),Read,Write,Edit,Glob,Grep" \
       2>>"$session_log" | tee -a "$session_log.raw" | format_stream
