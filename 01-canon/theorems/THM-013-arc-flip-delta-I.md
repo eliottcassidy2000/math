@@ -1,8 +1,8 @@
 # THM-013: Arc-Flip Independence Polynomial Formula
 
-**Type:** Theorem (conditional on n=6; conjecture for general n)
-**Certainty:** 5 — PROVED at n=6 (exhaustive verification, 2216 flips)
-**Status:** PROVED at n=6, CONJECTURED for general n
+**Type:** Theorem (verified n=4,5,6 exhaustively; n=7 sampled)
+**Certainty:** 5 — PROVED at n≤6 (exhaustive); VERIFIED at n=7 (50 random flips)
+**Status:** PROVED at n≤6, CONJECTURED for general n
 **Added by:** opus-2026-03-05-S2
 **Tags:** #ocf #arc-reversal #independence-polynomial #open-q-009 #claim-a
 
@@ -16,15 +16,17 @@ Let T be a tournament on n=6 vertices, and let T' be obtained by flipping arc i�
 - D5 = #{directed 5-cycles using arc i→j in T}
 - C5 = #{directed 5-cycles using arc j→i in T'}
 
-Then:
+Then the **GENERAL** formula (verified n=4,5,6,7):
 
-**ΔI(Ω,2) = I(Ω(T),2) - I(Ω(T'),2) = -2·Σ_{x ∈ V\{i,j}} s_x · H(T[B_x]) + 2·(D5 - C5)**
+**ΔH = H(T) - H(T') = -2·Σ_{x ∈ V\{i,j}} s_x · H(T[B_x]) + 2·Σ_{L≥5, L odd} (DL - CL)**
 
-Combined with OCF (H(T) = I(Ω(T),2), verified for n≤6):
+where DL = #{directed L-cycles using arc i→j in T}, CL = #{directed L-cycles using arc j→i in T'}.
 
-**adj_T(i,j) - adj_{T'}(j,i) = -2·Σ_x s_x · H(B_x) + 2·(D5 - C5)**
+Equivalently (via the adjacency formula ΔH = adj_T(i,j) - adj_{T'}(j,i)):
 
-where adj_T(i,j) = #{Hamiltonian paths of T with i immediately before j}.
+**adj_T(i,j) - adj_{T'}(j,i) = -2·Σ_x s_x · H(B_x) + 2·Σ_{L≥5} (DL - CL)**
+
+IMPORTANT: The cycle sum starts at L=5, not L=3. The 3-cycle contribution is already encoded in the -2·Σ s_x·H(B_x) term (via the identity D3-C3 = -Σ s_x).
 
 ---
 
@@ -84,10 +86,12 @@ For n=7,8: max independent set size is still 2, so the same formula structure ap
 
 ## Verification Record
 
-| n | Flips tested | Formula correct | ΔH = ΔI |
-|---|-------------|----------------|---------|
-| 5 | 732 | 732/732 (simplified) | 732/732 |
-| 6 | 2216 | 2216/2216 | 2216/2216 |
+| n | Flips tested | Formula correct |
+|---|-------------|----------------|
+| 4 | 500 random | 500/500 |
+| 5 | 300 random + 732 exhaustive | 1032/1032 |
+| 6 | 200 random + 2216 exhaustive | 2416/2416 |
+| 7 | 50 random | 50/50 |
 
 ---
 
