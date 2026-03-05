@@ -16,6 +16,14 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$REPO_ROOT"
 
+# Ensure remote uses SSH (never prompts for credentials)
+CURRENT_URL=$(git remote get-url origin)
+if [[ "$CURRENT_URL" == https://* ]]; then
+  SSH_URL=$(echo "$CURRENT_URL" | sed 's|https://github.com/|git@github.com:|')
+  git remote set-url origin "$SSH_URL"
+  echo "Switched remote to SSH: $SSH_URL"
+fi
+
 POLL_INTERVAL="${POLL_INTERVAL:-60}"
 MAX_TURNS="${MAX_TURNS:-50}"
 MODEL="${MODEL:-claude-sonnet-4-6}"
