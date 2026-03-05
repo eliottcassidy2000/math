@@ -17,6 +17,7 @@
 #   MODEL          model to use (default: claude-sonnet-4-6)
 #   ONCE           set to 1 to run one session then exit
 #   COOLDOWN       seconds to wait after own push before polling again (default: 10)
+#   QUIET          set to 1 for minimal output (log file only)
 
 set -euo pipefail
 
@@ -30,6 +31,7 @@ POLL_INTERVAL="${POLL_INTERVAL:-30}"
 MAX_TURNS="${MAX_TURNS:-50}"
 MODEL="${MODEL:-claude-sonnet-4-6}"
 COOLDOWN="${COOLDOWN:-10}"
+QUIET="${QUIET:-0}"
 LOCKFILE="$REPO_ROOT/.session.lock"
 LOGDIR="$REPO_ROOT/scripts/logs"
 
@@ -63,6 +65,60 @@ cleanup() {
 }
 trap cleanup EXIT
 
+# ── Format streaming JSON into readable terminal output ────────────────────
+format_stream() {
+  # Reads stream-json lines from stdin and prints a readable live view.
+  # Shows: assistant text, tool calls, tool results (trimmed), and progress.
+  python3 -u -c '
+import sys, json
+
+for line in sys.stdin:
+    line = line.strip()
+    if not line:
+        continue
+    try:
+        event = json.loads(line)
+    except json.JSONDecodeError:
+        continue
+
+    etype = event.get("type", "")
+
+    if etype == "assistant":
+        msg = event.get("message", {})
+        for block in msg.get("content", []):
+            if block.get("type") == "text":
+                print(block["text"], flush=True)
+            elif block.get("type") == "tool_use":
+                name = block.get("name", "?")
+                inp = block.get("input", {})
+                # Show tool call compactly
+                if name == "Read":
+                    print(f"\n--- Reading: {inp.get(\"file_path\", \"?\")} ---", flush=True)
+                elif name == "Write":
+                    print(f"\n--- Writing: {inp.get(\"file_path\", \"?\")} ---", flush=True)
+                elif name == "Edit":
+                    print(f"\n--- Editing: {inp.get(\"file_path\", \"?\")} ---", flush=True)
+                elif name == "Bash":
+                    cmd = inp.get("command", "?")
+                    if len(cmd) > 120:
+                        cmd = cmd[:120] + "..."
+                    print(f"\n$ {cmd}", flush=True)
+                elif name == "Glob":
+                    print(f"\n--- Glob: {inp.get(\"pattern\", \"?\")} ---", flush=True)
+                elif name == "Grep":
+                    print(f"\n--- Grep: {inp.get(\"pattern\", \"?\")} ---", flush=True)
+                else:
+                    print(f"\n--- {name} ---", flush=True)
+
+    elif etype == "result":
+        # Final result
+        result = event.get("result", "")
+        if result:
+            print(f"\n{'='*60}", flush=True)
+            print(result, flush=True)
+  '
+}
+
 # ── Session runner ─────────────────────────────────────────────────────────
 run_session() {
   local trigger_msg="$1"
@@ -85,16 +141,29 @@ run_session() {
   # Pull latest
   git pull --rebase 2>&1 | tee -a "$session_log"
 
-  # Run Claude Code in non-interactive mode
+  # Build prompt
   local prompt="You are machine '${MACHINE_ID}'. Follow the CLAUDE.md startup sequence exactly. ${trigger_msg} When finished, write a session letter (using agents/processor.py --send), update SESSION-LOG.md, then commit and push your work."
 
-  claude -p "$prompt" \
-    --model "$MODEL" \
-    --max-turns "$MAX_TURNS" \
-    --allowedTools "Bash(git *),Bash(python3 *),Bash(ls *),Bash(cat .machine-id),Read,Write,Edit,Glob,Grep" \
-    2>&1 | tee -a "$session_log"
+  # Run Claude Code with streaming output
+  if [ "$QUIET" = "1" ]; then
+    # Background/quiet mode: log only
+    claude -p "$prompt" \
+      --model "$MODEL" \
+      --max-turns "$MAX_TURNS" \
+      --verbose \
+      --allowedTools "Bash(git *),Bash(python3 *),Bash(ls *),Bash(cat .machine-id),Read,Write,Edit,Glob,Grep" \
+      >> "$session_log" 2>&1
+  else
+    # Interactive mode: stream to terminal AND log
+    claude -p "$prompt" \
+      --model "$MODEL" \
+      --max-turns "$MAX_TURNS" \
+      --output-format stream-json \
+      --allowedTools "Bash(git *),Bash(python3 *),Bash(ls *),Bash(cat .machine-id),Read,Write,Edit,Glob,Grep" \
+      2>>"$session_log" | tee -a "$session_log.raw" | format_stream
+  fi
 
-  local exit_code=${PIPESTATUS[0]}
+  local exit_code=${PIPESTATUS[0]:-$?}
 
   # Safety net: push any uncommitted changes claude left behind
   if [ -n "$(git status --porcelain)" ]; then
