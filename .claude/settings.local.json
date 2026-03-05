@@ -6,7 +6,9 @@
       "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --check)",
       "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --status)",
       "Bash(PYTHONIOENCODING=utf-8 python3 inbox/processor.py)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(git commit:*)",
+      "Bash(git add .claude/settings.local.json)"
     ]
   }
 }
