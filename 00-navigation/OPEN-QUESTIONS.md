@@ -84,10 +84,17 @@ At n=7, mu(5-cycle) = 1 always (V\{v + 4 cycle vertices} has 2 vertices, no odd 
 
 ---
 
-## OPEN-Q-011 🟡
-**Near-cancellation of two error effects at n=6 -- extends (weakly) to n=7**
+## OPEN-Q-011 -- RESOLVED (statistical artifact, not structural)
+**Near-cancellation of two error effects at n=6**
 
-Define A = sum_P' #TypeII(P'), B = sum_P' sum_{TypeII at j} mu(v,P'[j],P'[j+1]), D = sum_{all odd C through v} mu(C). Then A - B approx -5.88 (mu>1 inflation) and B - D approx +5.88 (5-cycle contributions). These are NEARLY EQUAL AND OPPOSITE at n=6. Is there an exact algebraic identity relating (A-B) + (B-D) = 0?
+**Resolved by:** opus-2026-03-05-S2, confirmed by kind-pasteur at n=7
+
+**Answer:** The near-cancellation is a statistical observation, NOT an exact identity. Computational verification (3000 pairs at n=6, opus-S2) shows:
+- A = D exactly for only 836/3000 (28%) of pairs
+- A - D ranges from -12 to +9 (mean ≈ 0)
+- Mean(A-B) ≈ -Mean(B-D) is approximate, not exact
+
+The decomposition A-B = -(B-D) does NOT hold pair-by-pair. The two effects cancel on average but not structurally. This is NOT a viable proof strategy for Claim A.
 
 **Status (kind-pasteur-2026-03-05-S3):** PARTIAL ANSWER. At n=7, tested 1050 (T,v) pairs: mean A-D = 0.097 (near zero), but NOT zero in general (range -39 to 26). Mean A-B = -73.78, mean B-D = +73.88 (near-cancellation on average). The near-cancellation is STATISTICAL, not algebraic. The per-pair |A-D|<=1 holds only 13.1% of time. The decomposition Claim A = (A=B) + (B=D) does NOT yield two tractable sub-identities. The near-cancellation at n=6 was likely a low-n coincidence.
 
@@ -123,3 +130,4 @@ The sequence 1, 9, 1729 has no obvious pattern. Is there a number-theoretic form
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery. Independently confirmed by opus-S2 with explicit mu triviality bound L >= n-2.
 - **OPEN-Q-003**: Per-path failure at n=6 iff some TypeII position has mu>1 (THM-009).
 - **Paley computation (kind-pasteur)**: h_QR=h_NQR=201, c_9(T_11)=11055, H(T_11)=95095. CONJ-002 refuted for p=11 (kind-pasteur-2026-03-05-S2). Code: 03-artifacts/code/compute_H_T11.py.
+- **OPEN-Q-011**: Near-cancellation is statistical, not structural. Not a viable proof strategy. (opus-S2, confirmed kind-pasteur n=7)
