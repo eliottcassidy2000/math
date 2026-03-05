@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 agents/processor.py --help)",
+      "Bash(python3 agents/processor.py --register)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --check)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --status)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --list)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --send*)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/finish_session.py*)",
+      "Bash(python3 agents/finish_session.py*)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 inbox/processor.py)",
+      "Bash(git add -A)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git pull*)",
+      "Bash(git status)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(gh pr:*)",
+      "Bash(winget list gh)",
+      "Bash(where gh)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 agents/check_session_closed.py"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -78,16 +78,20 @@ The key unproved step for a general proof of Claim A. D(T,v) = H(T) - H(T-v) - 2
 
 At n=7, mu(5-cycle) = 1 always (V\{v + 4 cycle vertices} has 2 vertices, no odd cycles). So 5-cycle contributions are "trivially weighted" just like 3-cycles at n<=5. A per-path formula summing over both 3-cycle and 5-cycle embeddings (each with their mu weights) might work at n=7. Test computationally.
 
-**Source:** FINAL_FINDINGS.md, Q3
+**Status (kind-pasteur-2026-03-05-S3):** NEGATIVE RESULT. The per-path formula does NOT simplify at n=7. The algebraic identity (inshat-1)/2 = #{TypeII} = #{3-cycle embeddings} is trivially satisfied, but this just restates THM-004+005 -- it does not encode 5-cycle information. Computing the actual A, B, D quantities (see test_n7_ABD.py) shows A=/=D in general. A=/=D means: total TypeII count (A) does not equal total odd-cycle mu sum (D). The 5-cycles contribute non-trivially even when mu=1. See T027 and OPEN-Q-011.
+
+**Source:** FINAL_FINDINGS.md, Q3; kind-pasteur-2026-03-05-S3
 
 ---
 
 ## OPEN-Q-011 🟡
-**Near-cancellation of two error effects at n=6**
+**Near-cancellation of two error effects at n=6 -- extends (weakly) to n=7**
 
-Define A = sum_P' #TypeII(P'), B = sum_P' sum_{TypeII at j} mu(v,P'[j],P'[j+1]), D = sum_{all odd C through v} mu(C). Then A - B approx -5.88 (mu>1 inflation) and B - D approx +5.88 (5-cycle contributions). These are NEARLY EQUAL AND OPPOSITE. Is there an exact algebraic identity relating (A-B) + (B-D) = 0 to the structure of 5-cycles? Can the proof of Claim A be decomposed into proving A-B = -(B-D)?
+Define A = sum_P' #TypeII(P'), B = sum_P' sum_{TypeII at j} mu(v,P'[j],P'[j+1]), D = sum_{all odd C through v} mu(C). Then A - B approx -5.88 (mu>1 inflation) and B - D approx +5.88 (5-cycle contributions). These are NEARLY EQUAL AND OPPOSITE at n=6. Is there an exact algebraic identity relating (A-B) + (B-D) = 0?
 
-**Source:** FINAL_FINDINGS.md
+**Status (kind-pasteur-2026-03-05-S3):** PARTIAL ANSWER. At n=7, tested 1050 (T,v) pairs: mean A-D = 0.097 (near zero), but NOT zero in general (range -39 to 26). Mean A-B = -73.78, mean B-D = +73.88 (near-cancellation on average). The near-cancellation is STATISTICAL, not algebraic. The per-pair |A-D|<=1 holds only 13.1% of time. The decomposition Claim A = (A=B) + (B=D) does NOT yield two tractable sub-identities. The near-cancellation at n=6 was likely a low-n coincidence.
+
+**Source:** FINAL_FINDINGS.md; kind-pasteur-2026-03-05-S3
 
 ---
 
@@ -100,7 +104,22 @@ At n=2k, the first cycle whose mu can exceed 1 has length 2k-1. The "excess" mu 
 
 ---
 
+## OPEN-Q-013 🟡
+**Correct formula for H(T_p) for Paley primes p ≡ 3 (mod 4)**
+
+CONJ-002 refuted for p=11: H(T_11) = 95095 = 55*1729, not 4455. Known values:
+- p=3: H=3, H/|Aut|=1
+- p=7: H=189, H/|Aut|=9=3^2
+- p=11: H=95095, H/|Aut|=1729=7*13*19
+
+The sequence 1, 9, 1729 has no obvious pattern. Is there a number-theoretic formula fitting these values?
+
+**Source:** kind-pasteur-2026-03-05-S2 computation
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery. Independently confirmed by opus-S2 with explicit mu triviality bound L >= n-2.
 - **OPEN-Q-003**: Per-path failure at n=6 iff some TypeII position has mu>1 (THM-009).
+- **Paley computation (kind-pasteur)**: h_QR=h_NQR=201, c_9(T_11)=11055, H(T_11)=95095. CONJ-002 refuted for p=11 (kind-pasteur-2026-03-05-S2). Code: 03-artifacts/code/compute_H_T11.py.

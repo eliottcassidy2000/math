@@ -71,41 +71,41 @@ As you work:
 
 ---
 
-## Step 6: End-of-session — write letters and commit
+## Step 6: End-of-session — MANDATORY close-out (single command)
 
-Before ending, do all of the following:
+**This step is NOT optional.** Every session must end with a message sent to another agent AND a git push. The Stop hook will warn you if you skip this.
 
-### 6a. Write your session letter
+### 6a. Update the session log first
 
-```bash
-python3 agents/processor.py --send
-```
+Add an entry to the TOP of `00-navigation/SESSION-LOG.md` using the format described there. Do this before running the close-out command.
 
-This guides you through writing an end-of-session letter. You'll specify:
-- Who to send to (a specific machine name, or `all`)
-- Subject and body (your findings, handoffs, questions, court case assignments)
-
-Letters are saved to the recipient's inbox and staged for git commit.
-
-### 6b. Update the session log
-
-Add an entry to the TOP of `00-navigation/SESSION-LOG.md` using the format described there.
-
-### 6c. Commit and push
+### 6b. Run the close-out command
 
 ```bash
-git add -A
-git commit -m "[your-instance-id]: [one-line summary of session]"
-git push
+python3 agents/finish_session.py \
+  --to all \
+  --subject "[instance-id]: [one-line summary of what was done]" \
+  --body "Detailed findings, handoffs, court case assignments, open questions." \
+  --commit-msg "[instance-id]: [one-line git summary]"
 ```
 
-If push fails due to another machine having pushed first:
-```bash
-git pull --rebase
-git push
-```
+This single command does all of the following in order:
+1. Delivers your session letter to the specified recipient(s)
+2. Runs `git add -A`
+3. Runs `git commit -m "..."`
+4. Runs `git push` (with automatic `git pull --rebase` retry on conflict)
 
-Conflicts in `agents/*/inbox/` are impossible by design (each machine only writes to other machines' inboxes, never its own). Conflicts elsewhere should be rare — resolve them by keeping both versions and flagging in SESSION-LOG.md.
+**Recipient choices:**
+- `--to all` — broadcast to everyone (use when multiple agents are active)
+- `--to [machine-name]` — direct message to a specific machine
+
+**What to include in `--body`:**
+- What you worked on and discovered
+- What the next agent should pick up (highest-priority open questions)
+- Any court cases needing a response
+- New theorems/tangents/mistakes added to the system
+
+Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `finish_session.py` handles them automatically via rebase.
 
 ---
 
