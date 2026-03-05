@@ -70,6 +70,12 @@ The naive involution pairing TypeII liftings with orphans fails because the map 
 
 ---
 
+**T019** #paley-tournament #H-Tp #1729 #taxicab | certainty: high (computation verified) | source: kind-pasteur-2026-03-05-S2
+H(T_11) = 95095 = 5*7*11*13*19 = 55*1729, where 1729 is the Hardy-Ramanujan taxicab number (7*13*19 = 12^3+1^3). H/|Aut| gives the sequence 1, 9, 1729 for p=3,7,11. The formula 3^((p-3)/2) was wrong. Whether 1729's taxicab property is meaningful or coincidental is open. The factorization 95095 = 5*7*11*13*19 (product of five consecutive-ish primes) may have a structural explanation via the automorphism group and its action on Ham paths.
+
+**T020** #paley-tournament #c9 #symmetry | certainty: high | source: kind-pasteur-2026-03-05-S2
+h_QR = h_NQR = 201 (directed Ham cycles in T_11\{0,1} and T_11\{0,2}). This equality reflects the anti-automorphism x↦2x of T_11 (which maps QR pair {0,1} to NQR pair {0,2} via multiplication by 2 ∈ NQR). The anti-automorphism reverses arcs, mapping Ham cycles to reverse-Ham cycles, but T_11 is self-complementary (T_11 ≅ T_11^op), giving a bijection between Ham cycles of T_11\{0,1} and T_11\{0,2}. This symmetry can be exploited for future Paley tournament computations.
+
 ## Computational
 
 **T014** #n7-verification #random-sampling | certainty: high | source: LaTeX paper
