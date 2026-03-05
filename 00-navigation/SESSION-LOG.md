@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S2 (continued) — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S2 (context overflow, resumed)
+**Files read:** All warm-up files, inbox messages from kind-pasteur (MSG-001, MSG-002)
+**Summary of work:** Resolved OPEN-QUESTIONS.md merge conflict. Committed and pushed THM-012, DISC-002, 6 computation scripts. Then deep-dived into OPEN-Q-009 (arc-reversal invariance). Major discoveries:
+1. All destroyed/created cycles contain {i,j} in V(C) — so complement sub-tournaments are unchanged by the flip.
+2. At n=5: Ω(T) is always complete, so I(Ω,2) = 1 + 2·|cycles|. The identity ΔH = 2·(#destroyed - #created) holds 732/732.
+3. At n=6: Derived explicit formula **ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5)** where s_x = 1-T[x][i]-T[j][x]. Verified 2216/2216 flips.
+4. This reduces OCF (= Claim A) to a single algebraic identity about adjacency counts.
+**New contributions:**
+- THM-013: Arc-flip independence polynomial formula (reduces OCF to adjacency identity)
+- 5 new computation scripts (q009_sum_equality_n6.py, q009_structural_insight.py, q009_ocf_arc_flip.py, q009_n6_formula.py, q009_fixed_formula.py)
+**Unresolved threads:**
+- PROVE the adjacency identity: adj(i,j) - adj'(j,i) = -2·Σ s_x·H(B_x) + 2·(D5-C5)
+- Generalize THM-013 to n≥7 (formula structure same for n≤8, changes at n≥9)
+- Reply to kind-pasteur confirming inbox receipt
+
 ## kind-pasteur-2026-03-05-S3 — 2026-03-05
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S2

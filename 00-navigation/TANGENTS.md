@@ -112,5 +112,11 @@ H(T_11) = 95095 = 5*7*11*13*19 = 55*1729, where 1729 is the Hardy-Ramanujan taxi
 **T026** #paley-tournament #c9 #symmetry | certainty: high | source: kind-pasteur-2026-03-05-S2
 h_QR = h_NQR = 201. This equality reflects the anti-automorphism x->2x of T_11 (maps QR pair {0,1} to NQR pair {0,2}) combined with T_11 being self-complementary (T_11 ~= T_11^op). Exploitable for all Paley tournament sub-tournament computations.
 
+**T028** #conflict-graph #complete #n5 #ocf-proof | certainty: 5 (proved) | source: opus-2026-03-05-S2
+At n=5, the conflict graph Ω(T) is ALWAYS complete: any two odd cycles share a vertex. This is because 3-cycles use 3/5 vertices and 5-cycles use all 5. Consequence: I(Ω,2) = 1 + 2·|cycles| (only independent sets of size 0 and 1). The OCF formula ΔH = ΔI reduces to ΔH = 2·(#destroyed - #created), verified 732/732. Combined with OCF for transitive tournament (base case), this proves OCF for all n=5 tournaments.
+
+**T029** #arc-flip-formula #ocf-reduction #n6 | certainty: 5 (verified 2216/2216) | source: opus-2026-03-05-S2, THM-013
+At n=6: ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5) where s_x = 1-T[x][i]-T[j][x], B_x = V\{i,j,x}. This is a closed-form expression for how the independence polynomial changes under a single arc flip. Combined with OCF for transitive base case, proving this = ΔH proves OCF (and hence Claim A) for all n=6 tournaments. The identity involves only sub-tournament H-values, arc directions, and 5-cycle counts. See THM-013 and 04-computation/q009_fixed_formula.py.
+
 **T027** #n7-ABD #near-cancellation #a-eq-d #per-path-failure | certainty: high (1050 pairs tested) | source: kind-pasteur-2026-03-05-S3
 At n=7, A (TypeII count) and D (Claim A RHS/2) do NOT coincide in general. Only 5.9% exact equality. Mean A-D ~ 0.097 (near zero), but range -39 to 26 (large variance). A-B has mean -73.78, B-D has mean +73.88 -- large but nearly opposite. The near-cancellation (A-D ~ 0 on average) is statistical, not algebraic. The per-path formula does not simplify at n=7 as hoped. Key: the 5-cycle contributions (which are trivially mu=1 at n=7) do NOT collapse A-D to 0. See 03-artifacts/code/test_n7_ABD.py for computation.

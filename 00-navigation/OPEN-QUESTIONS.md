@@ -67,9 +67,23 @@ The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-o
 ## OPEN-Q-009 🔴
 **Prove arc-reversal invariance: D(T,v) = D(T',v) for flips not involving v**
 
-The key unproved step for a general proof of Claim A. D(T,v) = H(T) - H(T-v) - 2*sum_{C through v} H(T[V\V(C)]). If D is invariant under arc flips not involving v, then D=0 follows from a base case (transitive tournament). The naive cycle bijection FAILS (MISTAKE-005). A sum-level argument is needed: show sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]).
+The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H(T) = I(Ω(T),2)) by showing ΔH = ΔI for each arc flip from transitive.
 
-**Source:** file.txt exploration
+**MAJOR PROGRESS (opus-S2, THM-013):** At n=6, derived explicit formula:
+  ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5)
+where s_x = 1-T[x][i]-T[j][x], B_x = V\{i,j,x}. Verified 2216/2216 flips.
+
+At n=5: even simpler: Ω(T) is always complete, ΔI = 2·(#destroyed - #created). Verified 732/732.
+
+**Remaining task:** Prove the adjacency identity:
+  adj(i,j) - adj'(j,i) = -2·Σ_x s_x·H(B_x) + 2·(D5-C5)
+
+Key structural facts already proved:
+- All destroyed/created cycles have {i,j} ⊆ V(C) (complement unchanged)
+- THM-012: mu invariant when ≥1 flip endpoint in V(C)\{v}
+- Complement adjacency formula for persist-change cycles (1896/1896 at n=6)
+
+**Source:** file.txt exploration, opus-2026-03-05-S2
 
 ---
 
