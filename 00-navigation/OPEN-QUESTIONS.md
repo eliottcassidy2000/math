@@ -7,7 +7,9 @@
 ## OPEN-Q-001 -- RESOLVED
 **The n=5 mystery: why does the per-path identity hold despite 5-cycles?**
 
-**RESOLVED by THM-008:** The per-path identity holds trivially for n<=5 because mu(C) = 1 for ALL 3-cycles C through v. The complement V\{v,a,b} has at most 2 vertices, which cannot form an odd cycle. The identity reduces to #TypeII = #TypeII. The 5-cycles are irrelevant because the per-path identity only involves 3-cycles (by THM-005), and all 3-cycle mu weights are trivially 1. There is no "delicate balance" -- the identity is vacuous at n<=5.
+**RESOLVED by THM-008:** The per-path identity holds trivially for n<=5 because mu(C) = 1 for ALL odd cycles C through v. For 3-cycles, the complement V\{v,a,b} has at most 2 vertices, which cannot form an odd cycle. For 5-cycles, C\{v} exhausts all of T-v, leaving 0 available vertices. The identity reduces to #TypeII = #TypeII. There is no "delicate balance" -- the identity is vacuous at n<=5.
+
+**Additional detail (opus-S2):** More generally, mu(C) = 1 whenever cycle length L >= n-2 (THM-008 mu triviality bound). At n=6, mu(3-cycle) is in {1, 3}: mu=1 (76.7%) when 3 available vertices form transitive subtournament, mu=3 (23.3%) when cyclic.
 
 ---
 
@@ -100,5 +102,5 @@ At n=2k, the first cycle whose mu can exceed 1 has length 2k-1. The "excess" mu 
 
 ## Resolved Questions (moved here when answered)
 
-- **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.
+- **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery. Independently confirmed by opus-S2 with explicit mu triviality bound L >= n-2.
 - **OPEN-Q-003**: Per-path failure at n=6 iff some TypeII position has mu>1 (THM-009).

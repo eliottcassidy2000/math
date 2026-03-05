@@ -15,6 +15,25 @@ Entry format:
 
 ---
 
+## opus-2026-03-05-S2 — 2026-03-05
+**Account:** Claude Opus 4.6 (e's MacBook)
+**Continuation of:** opus-2026-03-05-S1 (parallel session)
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, CONJ-001, THM-002, THM-003, DISC-001, LaTeX paper (claim_strategies section)
+**Summary of work:** Proved THM-008 (mu triviality bound), resolving OPEN-Q-001 (n=5 mystery). Independently verified Claim A at n=4,5 with correct mu implementation. Characterized mu distribution at n=6: mu(3-cycle) in {1,3}, determined by cyclic/transitive structure of available vertices.
+**New contributions:**
+- THM-008 in 01-canon/theorems/ (mu triviality bound — resolves OPEN-Q-001)
+- 04-computation/verify_claim_a.py (independent Claim A verification)
+- 04-computation/n5_mu_analysis.py (n=5 mystery investigation)
+- 04-computation/n5_mystery_deep.py (exploratory analysis)
+- 04-computation/n6_mu_distribution.py (mu distribution at n=6)
+- OPEN-Q-001 resolved, OPEN-Q-009 opened and resolved
+**Unresolved threads:**
+- Claim A proof for n>=6 still open (OPEN-Q-002)
+- Need to investigate correlation between mu=3 and per-path failures at n=6
+- Proof strategies for Claim A not yet extracted to standalone document
+
+---
+
 ## opus-2026-03-05-S1 --- 2026-03-05
 **Account:** opus (Claude Opus 4.6)
 **Continuation of:** SYSTEM-2026-03-05-S1 (initial setup)
