@@ -137,11 +137,14 @@ The simple formula delta = 2*(#gained_cycles - #lost_cycles) holds at n<=5 but F
 **T035** #contiguous-block #dead-end | certainty: high (confirmed dead end) | source: kind-pasteur-2026-03-05-S5
 The "contiguous block" decomposition (cycles embedded as contiguous substrings in Ham paths) does NOT give the right counting. f_C = 2*H(comp) per cycle fails (50% at n=4). The "non-cycle" path count f_0 is NOT flip-invariant at n>=5. The correct decomposition is algebraic (A-clique on Omega), not combinatorial (contiguous blocks).
 
+**T036** #paley-tournament #integrality #cycle-counts #structural-theorem | certainty: medium | source: kind-pasteur-2026-03-05-S5 (inbox/other.txt)
+
 **T037** #polynomial-identity #proof #ocf #n4-hand-proof | certainty: high (proved) | source: kind-pasteur-2026-03-05-S6
 At n=4, the swap involution identity U_{T'}-U_T = 2*sum(s_x) can be proved BY HAND as a polynomial identity: U_T = pt(r+q-rq) + qr(t+p-tp) + pr + qt, and U_{T'}-U_T simplifies to 4-2(p+q+r+t) = 2*(s_a+s_b). All cross-terms from double-blocking cancel perfectly. Extended to n=5 (512 cases) and n=6 (16384 cases) by exhaustive symbolic verification. See THM-015 and symbolic_proof.py.
 
 **T038** #sign-convention #thm-013 #destroyed-created | certainty: high | source: kind-pasteur-2026-03-05-S6
 CAUTION: THM-013 uses D=destroyed, C=created convention. In the formula H(T')-H(T) = 2*sum(s_x*H(B_x)) + 2*(gained_5cycles - lost_5cycles), the 5-cycle term has a PLUS sign. Easy to get wrong — the sign error caused initial n=6 failures.
 
-**T036** #paley-tournament #integrality #cycle-counts #structural-theorem | certainty: medium | source: kind-pasteur-2026-03-05-S5 (inbox/other.txt)
+**T039** #contraction #proof-strategy #digraph | certainty: high (verified) | source: opus-2026-03-05-S3
+Contract i,j into single vertex w: adj(i,j) = H(G) and adj'(j,i) = H(G') where G,G' are digraphs on n-1 vertices. Key: G has bidirectional arcs w<->v for s_v=-1 vertices and no arcs for s_v=+1; G' swaps these (bidirectional for s=+1, none for s=-1; s=0 vertices identical). So ΔH = H(G)-H(G') is controlled entirely by the s_v != 0 vertices' connection to w. Paths where w's neighbors are all s=0 cancel. This recovers the swap involution from a graph-theoretic perspective. OCF proof reduces to showing H(G)-H(G') = ΔI for these specific digraphs.
 For T_11, the average c_k(T_11)/C(11,k) is an exact integer for ALL k >= 6 = (p+1)/2, but fractional for k < 6. Specifically: c_7/C(11,7)=12, c_8/C(11,8)=45, c_9/C(11,9)=201, c_10/C(11,10)=971, c_11/C(11,11)=5505 are all integers; while c_3/C(11,3)=1/3, c_4/C(11,4)=1/2, c_5/C(11,5)=9/7, c_6/C(11,6)=145/42 are not. Proposed structural theorem: C(p,k) | c_k(T_p) for k >= (p+1)/2, for Paley primes p ≡ 3 (mod 4). The regularity of T_p (each vertex has out-degree (p-1)/2) likely forces this integrality via symmetry. Proving this rigorously is an accessible target -- see OPEN-Q-013.
