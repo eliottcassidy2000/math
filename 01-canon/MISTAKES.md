@@ -46,6 +46,52 @@ When computing μ(C) for any cycle C in T:
 
 Never use the full T matrix when computing anything about T−v.
 
+### Resolution
+**Independent verification completed** (opus-2026-03-05-S1): tournament_lib.py implements mu(C) correctly per the above steps. Exhaustive verification of Claim A at n<=6 (196,608 pairs, 0 failures) confirms the paper's results are valid. See DISC-001 for the formal resolution.
+
+---
+
+## MISTAKE-004: OCF is Recursive, Not a Closed-Form Over All Odd Cycles
+
+**Date discovered:** During file.txt exploration (pre-2026-03-05)
+**Found by:** Claude instance (Account unknown), via constructing a counterexample
+**Affects:** Any attempt to compute H(T) as I(Omega_ALL(T), 2) where Omega_ALL = all odd cycles
+
+### What was assumed
+H(T) = I(Omega(T), 2) where Omega(T) is the set of ALL directed odd cycles of T, and I is the independence polynomial evaluated at 2.
+
+### Why it was wrong
+Counterexample: T on {1,2,3,4,5,6} with 3-cycle (1->2->3->1), 3-cycle (4->5->6->4), and all arcs from {1,2,3} to {4,5,6}. The only odd cycles are C1 and C2 (no cross-group cycles since all arcs go one way). I(Omega_ALL, 2) = 1 + 2*3 + 2*3 + 4*3*3 = 49. But H(T) = 3*3 = 9 (3 orderings of each group, concatenated).
+
+### The correct framing
+OCF is a RECURSIVE formula: H(T) = H(T-v) + 2 * sum_{C through v} H(T[V\V(C)]). The "closed form" H(T) = I(Omega(T), 2) holds ONLY when Omega(T) is defined relative to the recursive vertex-removal order, NOT as the set of all odd cycles. The mu weights mu(C) = H(T[V\V(C)]) are themselves computed recursively.
+
+### Impact
+Any proof strategy that tries to express H(T) directly as a sum over all odd-cycle collections with simple weights is using the wrong formula. The recursion is essential.
+
+### Lesson
+Always use the recursive formulation Claim A: H(T) - H(T-v) = 2 * sum_{C through v} mu(C), where mu(C) = H(T[V\V(C)]). Do not flatten this into a non-recursive independence polynomial over all cycles.
+
+---
+
+## MISTAKE-005: Cycle Bijection Under Arc Reversal Fails
+
+**Date discovered:** During file.txt exploration
+**Found by:** Claude instance (Account unknown)
+**Affects:** Proof strategy for arc-reversal invariance D(T,v) = D(T',v)
+
+### What was assumed
+When T' is obtained from T by flipping arc i->j to j->i (with i,j != v), odd cycles through v containing i->j in T biject with odd cycles through v containing j->i in T', preserving V(C).
+
+### Why it was wrong
+A cycle C through v containing i->j can be written as v ->^{P1} i -> j ->^{P2} v. The "conjugate" C' would need j->i in T', requiring the path segments to be REVERSED. But reversing a directed path P2 does not generally give a valid directed path in the same tournament (arcs may point the wrong way).
+
+### The correct framing
+There is NO individual bijection C <-> C' preserving vertex sets. The arc-reversal invariance, if true, must hold as a SUM equality: sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]). This is a weaker statement that doesn't require a cycle-by-cycle bijection.
+
+### Impact
+The arc-reversal invariance D(T,v) = D(T',v) remains the key unproved step for a general proof of Claim A. The cycle bijection approach is a dead end; a sum-level argument is needed.
+
 ---
 
 ## MISTAKE-002: Exact Path Formula H(T) = B_v + S_v + R_v

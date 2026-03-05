@@ -57,10 +57,32 @@ The Q-Lemma uses a fixed-point-free involution on two-block path decompositions.
 
 ---
 
+## Dead Ends (documented to prevent re-exploration)
+
+**T016** #dead-end #cycle-bijection #arc-reversal | certainty: high (confirmed dead end) | source: file.txt
+The naive cycle bijection under arc reversal FAILS. When T' flips i->j to j->i, cycles through v containing i->j do NOT biject with cycles containing j->i preserving vertex sets, because reversing directed path segments doesn't preserve validity. See MISTAKE-005. Any proof of arc-reversal invariance must work at the SUM level, not cycle-by-cycle.
+
+**T017** #dead-end #contraction | certainty: high (confirmed dead end) | source: file.txt
+Tournament contraction T/(a->b) (merging a,b into single vertex) does NOT always give a valid tournament. The "mixed case" (x beats a, b beats x) leaves the arc between x and the merged vertex undefined. adj_T(a,b) != H(any fixed tournament) in general.
+
+**T018** #dead-end #involution #parity | certainty: high (confirmed dead end) | source: file.txt
+The naive involution pairing TypeII liftings with orphans fails because the map (Q, TypeII position k) -> (orphan path with swapped block) may produce an invalid path when the arc Q_{k-1} -> Q_{k+1} doesn't exist. A more sophisticated involution or a completely different approach is needed.
+
+---
+
 ## Computational
 
 **T014** #n7-verification #random-sampling | certainty: high | source: LaTeX paper
 Claim A is verified at n=7 by random sampling (3,500 pairs, 0 failures). Full exhaustive verification at n=7 would be computationally expensive (2^21 tournaments × 7 vertices = ~14M pairs) but could be worth attempting on a cluster for increased confidence before investing heavily in a proof.
 
-**T015** #failure-characterization #n6 | certainty: medium | source: MASTER_FINDINGS F5
-The per-path identity fails for 2,758/9,126 (≈30%) of (T,v,P') triples at n=6. What characterizes the failing triples? Is there a simple condition on the tournament structure (e.g., number of 5-cycles, structure of Ω(T)) that predicts failure? This characterization might hint at a corrected formula.
+**T015** #failure-characterization #n6 | certainty: high (RESOLVED) | source: MASTER_FINDINGS F5, FINAL_FINDINGS
+RESOLVED: The per-path identity fails iff some Type-II position has mu > 1, iff V\{v,a,b} contains a 3-cycle in T-v. See THM-009. The ~30% failure rate corresponds to the probability that complement vertices form a 3-cycle.
+
+**T019** #near-cancellation #two-effects #proof-strategy | certainty: medium | source: FINAL_FINDINGS
+The two error effects at n=6 (mu>1 inflation of 3-cycles: mean A-B ~ -5.88, and 5-cycle contributions: mean B-D ~ +5.88) nearly cancel. This suggests decomposing Claim A as (A=B) + (B=D) where each half is a more tractable identity. The near-cancellation hints at deep structural coupling between mu weights and higher-cycle contributions.
+
+**T020** #block-counting #contiguous #3-cycle | certainty: high | source: file.txt
+For n=4, exactly 3 Ham paths contain a 3-cycle as contiguous block (THM-010). For general n, H_C^+(T) = sum_Q f_C(Q) with explicit f_C (THM-011). The gap between contiguous-block paths and ALL paths is the main obstacle. Understanding non-contiguous interleaving of cycle vertices with complement vertices is key.
+
+**T021** #arc-reversal-invariance #sum-equality #key-step | certainty: high (key open problem) | source: file.txt
+Arc-reversal invariance D(T,v) = D(T',v) is the key unproved step. Requires showing sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]). This is a SUM equality, not a bijection. Both sides can be expressed in terms of path-pairs in T_0 (T with arc (i,j) deleted), since T[V\V(C)] = T'[V\V(C)] when V(C) contains both i and j. See OPEN-Q-009.

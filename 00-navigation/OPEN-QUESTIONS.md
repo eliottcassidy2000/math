@@ -4,16 +4,10 @@
 
 ---
 
-## OPEN-Q-001 🔴
+## OPEN-Q-001 -- RESOLVED
 **The n=5 mystery: why does the per-path identity hold despite 5-cycles?**
 
-At n=5, 5-cycles through v DO exist (they use all 5 vertices: v→a→b→c→d→v requires 4 other vertices, which T-v has exactly). Yet the per-path identity (inshat−1)/2 = Σ_{3-cycle embeddings} μ(C) holds with 0 failures at n=5.
-
-At n=6 it fails 2,758/9,126 times. The per-path identity only sums over 3-cycle embeddings (by the bijection in THM-005), but Claim A's RHS includes all odd-cycle contributions. At n=6 the 5-cycles add uncaptured weight. Why doesn't this break things at n=5?
-
-**Hypothesis:** At n=5, every 5-cycle embedding is always "accompanied" by exactly the right set of 3-cycle embeddings to account for its μ contribution. This delicate balance breaks at n=6.
-
-**What's needed:** A theorem explaining why the 5-cycle μ contribution is always "absorbed" by 3-cycles at n=5.
+**RESOLVED by THM-008:** The per-path identity holds trivially for n<=5 because mu(C) = 1 for ALL 3-cycles C through v. The complement V\{v,a,b} has at most 2 vertices, which cannot form an odd cycle. The identity reduces to #TypeII = #TypeII. The 5-cycles are irrelevant because the per-path identity only involves 3-cycles (by THM-005), and all 3-cycle mu weights are trivially 1. There is no "delicate balance" -- the identity is vacuous at n<=5.
 
 ---
 
@@ -26,10 +20,10 @@ The central open problem. Verified exhaustively for n≤6 (196,608 pairs) and by
 
 ---
 
-## OPEN-Q-003 🟡
+## OPEN-Q-003 -- RESOLVED
 **Characterize when the per-path identity holds at n=6**
 
-~70% of (T,v,P') triples at n=6 satisfy the per-path identity. ~30% fail. What structural property of T distinguishes the two groups? Is it the number of 5-cycles through v? The structure of Ω(T-v)?
+**RESOLVED by THM-009:** The per-path identity fails for path P' iff some Type-II position (a,b) in P' has mu(v,a,b) > 1, which happens iff the 3 vertices V\{v,a,b} form a directed 3-cycle in T-v. This is a perfect binary separation: mu>1 at any TypeII position => always fails; all mu=1 => always holds.
 
 ---
 
@@ -68,6 +62,43 @@ The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-o
 
 ---
 
+## OPEN-Q-009 🔴
+**Prove arc-reversal invariance: D(T,v) = D(T',v) for flips not involving v**
+
+The key unproved step for a general proof of Claim A. D(T,v) = H(T) - H(T-v) - 2*sum_{C through v} H(T[V\V(C)]). If D is invariant under arc flips not involving v, then D=0 follows from a base case (transitive tournament). The naive cycle bijection FAILS (MISTAKE-005). A sum-level argument is needed: show sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]).
+
+**Source:** file.txt exploration
+
+---
+
+## OPEN-Q-010 🟡
+**Per-path formula including 3-cycles AND 5-cycles at n=7**
+
+At n=7, mu(5-cycle) = 1 always (V\{v + 4 cycle vertices} has 2 vertices, no odd cycles). So 5-cycle contributions are "trivially weighted" just like 3-cycles at n<=5. A per-path formula summing over both 3-cycle and 5-cycle embeddings (each with their mu weights) might work at n=7. Test computationally.
+
+**Source:** FINAL_FINDINGS.md, Q3
+
+---
+
+## OPEN-Q-011 🟡
+**Near-cancellation of two error effects at n=6**
+
+Define A = sum_P' #TypeII(P'), B = sum_P' sum_{TypeII at j} mu(v,P'[j],P'[j+1]), D = sum_{all odd C through v} mu(C). Then A - B approx -5.88 (mu>1 inflation) and B - D approx +5.88 (5-cycle contributions). These are NEARLY EQUAL AND OPPOSITE. Is there an exact algebraic identity relating (A-B) + (B-D) = 0 to the structure of 5-cycles? Can the proof of Claim A be decomposed into proving A-B = -(B-D)?
+
+**Source:** FINAL_FINDINGS.md
+
+---
+
+## OPEN-Q-012 🟢
+**Tower hypothesis: L-cycle corrections from (L+2)-cycles**
+
+At n=2k, the first cycle whose mu can exceed 1 has length 2k-1. The "excess" mu from shorter cycles may be exactly compensated by contributions from cycles 2 vertices longer. Is there a recursive structure where L-cycle corrections are expressed in terms of (L+2)-cycle contributions, creating a tower that sums to Claim A?
+
+**Source:** FINAL_FINDINGS.md, Q5
+
+---
+
 ## Resolved Questions (moved here when answered)
 
-*None yet.*
+- **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.
+- **OPEN-Q-003**: Per-path failure at n=6 iff some TypeII position has mu>1 (THM-009).
