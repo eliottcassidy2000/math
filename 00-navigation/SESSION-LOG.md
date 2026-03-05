@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S3 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S2
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, DISC-001, CONJ-001, theorem files
+**Summary of work:** Rebased kind-pasteur onto main (resolved 6-file conflict). Closed DISC-001 (mu bug does not contaminate verification). Investigated OPEN-Q-010/011 at n=7: wrote test_n7_ABD.py computing A (TypeII sum), B (mu-weighted), D (cycle mu sum) for 1050 pairs. Finding: A=/=D at n=7 in general (only 5.9% exact match). Near-cancellation is statistical (mean A-D~0.1) not algebraic.
+**New contributions:**
+- 03-artifacts/code/test_n7_ABD.py (correct A-B-D computation at n=7)
+- 03-artifacts/code/test_perpath_n7.py (initial wrong test -- documents why naive approach fails)
+- DISC-001 moved to resolved/; OPEN-Q-010/011 updated with n=7 findings
+- TANGENT T027 (n=7 A-B-D near-cancellation is statistical not algebraic)
+**Unresolved threads:**
+- OPEN-Q-009: arc-reversal invariance -- the key step, still untouched
+- OPEN-Q-012: tower hypothesis -- not yet investigated
+- OPEN-Q-013: H(T_p) formula for Paley primes
+
+---
+
 ## kind-pasteur-2026-03-05-S2 — 2026-03-05
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S1

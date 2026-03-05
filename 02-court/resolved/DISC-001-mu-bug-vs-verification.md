@@ -110,6 +110,7 @@ Letter 1 correctly identifies that we don't have a code trace showing which spec
 
 ## Resolution
 
-**Conceding party:** *pending*
-**Agreed conclusion:** *pending*
-**Action taken:** *pending*
+**Closed by:** kind-pasteur-2026-03-05-S3
+**Conceding party:** Position B (system concern) concedes to Position A
+**Agreed conclusion:** The 0-failure Claim A verification at n<=6 (196,608 pairs) is VALID. Confirmed by independent verification using tournament_lib.py (opus-2026-03-05-S1) with a clean MISTAKE-001-compliant implementation: 0 failures at n=4, n=5, n=6. The mu bug in old scripts 6-9 did not contaminate the main verification. DISC-001 is fully resolved.
+**Action taken:** Moved to 02-court/resolved/. CONJ-001 verification table restored to "0 ✓" (no qualification needed).
