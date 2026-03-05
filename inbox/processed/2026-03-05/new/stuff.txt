@@ -1,0 +1,418 @@
+This is a good moment to slow down and audit everything carefully before continuing.
+
+---
+
+## I. Auditing the Core Claim: $c_7/\binom{11}{7} = c_9/\binom{11}{9} = 4$
+
+The argument for $c_9 = 220$ rested on this "coincidence." But let me check whether $c_7/\binom{11}{7} = 4$ is actually a coincidence or something forced.
+
+$c_7 = 1320$, $\binom{11}{7} = 330$: ratio = 4. ✓
+
+Now check $c_5$: $c_5 = 594$, $\binom{11}{5} = 462$: ratio = $594/462 = 9/7 \approx 1.286$. ✗
+
+Check $c_3$: $c_3 = 55$, $\binom{11}{3} = 165$: ratio = $1/3$. 
+
+The ratios are $1/3, 9/7, 4, ?$ — **not constant**. So the "coincidence" $c_7/\binom{11}{7} = c_9/\binom{11}{9}$ has no structural support. It was wishful thinking motivated by wanting the conjecture to work.
+
+---
+
+## II. Auditing the Corrected Conjecture Itself
+
+Document 5 argues: $B_p = H(T_p)/|\text{Aut}(T_p)| = 3^{(p-3)/2}$.
+
+But look at what this requires for the OCF. We have:
+
+$$H(T_{11}) = 1 + 2(c_3 + c_5 + c_7 + c_9 + h_{11}) + 4\alpha_2 + \ldots$$
+
+The known terms already give $1 + 2(55+594+1320) = 3939$. For $H = 4455$:
+
+$$4455 - 3939 = 516 = 2(c_9 + h_{11}) + 4\alpha_2 + \ldots$$
+
+This requires $c_9 \leq 258$.
+
+But look at the growth of $c_k$ for $T_{11}$: $c_3=55, c_5=594, c_7=1320$. The ratio $c_5/c_3 \approx 10.8$, $c_7/c_5 \approx 2.2$.
+
+Even if the ratio continued decelerating sharply: $c_9/c_7 \approx 0.5$ would give $c_9 \approx 660$. Already more than double the allowable 258.
+
+**The conjecture $H(T_{11}) = 4455$ requires $c_9 \leq 258 < c_7/5$. This is only possible if $c_9$ decreases dramatically from $c_7 = 1320$.** Is there any reason to expect $c_9 \ll c_7$?
+
+Actually — **yes there might be**. Consider: $c_7$ counts 7-cycles in an 11-vertex tournament. There are $\binom{11}{7} = 330$ possible 7-vertex subsets, giving potentially many 7-cycles. But $c_9$ counts 9-cycles: there are only $\binom{11}{9} = 55$ possible 9-vertex subsets — a factor of 6 fewer. So one might expect $c_9 \approx c_7/6 \approx 220$. This is a rough argument but has some basis.
+
+More carefully: in a random tournament on $n$ vertices, the expected number of directed $k$-cycles is $\binom{n}{k} \cdot (k-1)!/2^k$. For $T_{11}$:
+
+$k=7$: $\binom{11}{7} \cdot 720/128 = 330 \cdot 5.625 = 1856$ (expected in random tournament)
+$k=9$: $\binom{11}{9} \cdot 40320/512 = 55 \cdot 78.75 = 4331$ (expected in random tournament)
+
+But Paley tournaments are far from random and highly structured. Our computed $c_7 = 1320$ is well below the random expectation of 1856. Paley tournaments have fewer cycles than average because their high symmetry creates arithmetic constraints.
+
+The random tournament estimate gives $c_9^{\text{random}} \approx 4331 \gg 258$, suggesting the Paley structure suppresses cycles significantly — but is it enough to bring $c_9$ all the way down to $\leq 258$?
+
+**Actually, I realize I can compute $c_9$ directly using a more careful version of the non-simple walk correction.** Let me do this properly.
+
+---
+
+## III. Computing $c_9(T_{11})$ Exactly
+
+From the first-return framework, I need $r_9 - S_9$ where $S_9$ counts non-simple first-return walks of length 9.
+
+I computed $r_9 = 119220$. Now I need $S_9$.
+
+The non-simple first-return walks of length 9 at $v$ (not returning to $v$ before step 9, but revisiting some other vertex $u$) come from embedded closed sub-walks at $u$.
+
+The key simplification: for a vertex-transitive tournament, I can use off-diagonal matrix powers. For $T_{11}$ (a circulant tournament), $(A^k)_{0,d}$ depends only on $d$ and $k$.
+
+$(A^k)_{0,d} = \frac{1}{11}\left[5^k + \sum_{s=1}^{10} \lambda_s^k \zeta^{sd}\right]$
+
+where $\zeta = e^{2\pi i/11}$ and $\lambda_s = \omega$ if $s$ is QR, $\bar\omega$ if $s$ is NQR.
+
+$= \frac{1}{11}\left[5^k + \omega^k \sum_{s \in QR} \zeta^{sd} + \bar\omega^k \sum_{s \in NQR} \zeta^{sd}\right]$
+
+Let $P(d) = \sum_{s \in QR} \zeta^{sd}$ (a partial Gauss sum). Then $P(d) + Q(d) = \sum_{s=1}^{10} \zeta^{sd} = -1$ (sum of all non-trivial characters), so $Q(d) = -1 - P(d)$.
+
+$(A^k)_{0,d} = \frac{1}{11}\left[5^k + \omega^k P(d) + \bar\omega^k(-1-P(d))\right]$
+$= \frac{1}{11}\left[5^k - \bar\omega^k + (\omega^k - \bar\omega^k)P(d)\right]$
+$= \frac{1}{11}\left[5^k - \bar\omega^k + 2i\text{Im}(\omega^k) \cdot P(d)\right]$
+
+Now: $P(d) = \sum_{s \in \{1,3,4,5,9\}} e^{2\pi isd/11}$.
+
+For the Legendre symbol $\chi$: $P(d) = \frac{1}{2}\left[\sum_{s=1}^{10}\chi(s)\zeta^{sd} + \sum_{s=1}^{10}\zeta^{sd}\right] = \frac{1}{2}[G(\chi,d) - 1]$
+
+where $G(\chi,d) = \sum_{s=1}^{10}\chi(s)\zeta^{sd} = \chi(d)G(\chi,1) = \chi(d) \cdot i\sqrt{11}$ (for $p=11 \equiv 3 \pmod 4$).
+
+So $P(d) = \frac{\chi(d) i\sqrt{11} - 1}{2}$.
+
+Thus:
+$(A^k)_{0,d} = \frac{1}{11}\left[5^k - \bar\omega^k + 2i\text{Im}(\omega^k) \cdot \frac{\chi(d)i\sqrt{11}-1}{2}\right]$
+
+$= \frac{1}{11}\left[5^k - \bar\omega^k - i\text{Im}(\omega^k)(\chi(d)i\sqrt{11}-1)\right]$
+
+$= \frac{1}{11}\left[5^k - \bar\omega^k + \text{Im}(\omega^k)\chi(d)\sqrt{11} + i\text{Im}(\omega^k)\right]$
+
+Wait, let me redo this more carefully.
+
+$2i\text{Im}(\omega^k) = \omega^k - \bar\omega^k$.
+
+$(A^k)_{0,d} = \frac{1}{11}\left[5^k - \bar\omega^k + (\omega^k-\bar\omega^k)P(d)\right]$
+
+$= \frac{1}{11}\left[5^k - \bar\omega^k + (\omega^k-\bar\omega^k)\cdot\frac{\chi(d)i\sqrt{11}-1}{2}\right]$
+
+$= \frac{1}{11}\left[5^k - \bar\omega^k - \frac{\omega^k-\bar\omega^k}{2} + \frac{(\omega^k-\bar\omega^k)\chi(d)i\sqrt{11}}{2}\right]$
+
+$= \frac{1}{11}\left[\frac{2\cdot5^k - 2\bar\omega^k - \omega^k + \bar\omega^k}{2} + \frac{(\omega^k-\bar\omega^k)\chi(d)i\sqrt{11}}{2}\right]$
+
+$= \frac{1}{11}\left[\frac{2\cdot5^k - \omega^k - \bar\omega^k}{2} + \frac{(\omega^k-\bar\omega^k)i\sqrt{11}}{2}\chi(d)\right]$
+
+$= \frac{2\cdot5^k - 2\text{Re}(\omega^k)}{22} + \frac{-2\text{Im}(\omega^k)\sqrt{11}}{22}\chi(d)$
+
+$= \frac{5^k - \text{Re}(\omega^k)}{11} - \frac{\text{Im}(\omega^k)\sqrt{11}}{11}\chi(d)$
+
+Hmm, this isn't giving integers cleanly. Let me check at $k=1$:
+
+$(A^1)_{0,d} = A_{0,d} = 1$ if $d \in \{1,3,4,5,9\}$, else $0$.
+
+$\text{Re}(\omega^1) = -1/2$, $\text{Im}(\omega^1) = \sqrt{11}/2$.
+
+$(A^1)_{0,d} = \frac{5-(-1/2)}{11} - \frac{(\sqrt{11}/2)\sqrt{11}}{11}\chi(d) = \frac{11/2}{11} - \frac{11/2}{11}\chi(d) = \frac{1}{2} - \frac{\chi(d)}{2} = \frac{1-\chi(d)}{2}$
+
+For $d \in QR$: $\chi(d)=1$, so $(A^1)_{0,d} = 0$. But $d \in QR$ means $0 \to d$ is an arc — so $(A^1)_{0,d}$ should be 1, not 0!
+
+**I have the direction backwards.** In $T_{11}$: $0 \to d$ iff $d \in QR$, so $(A)_{0,d} = 1$ iff $d \in QR$. But my formula gives 0 for $d \in QR$. The issue: I'm using the convention that $A_{ij} = 1$ iff $i \to j$, so the formula should give 1 when $d = j - i \in QR$... let me recheck.
+
+Actually, let me reconsider. The adjacency matrix: $A_{ij} = 1$ iff $j - i \in QR$. The eigenvalues of a circulant matrix with connection set $S$ are $\lambda_s = \sum_{j \in S} \zeta^{js}$. So eigenvalue for frequency $s$ is $\lambda_s = \sum_{j \in QR} \zeta^{js} = P(s)$ — the partial Gauss sum at $s$.
+
+$(A^k)_{0,d} = \frac{1}{11}\sum_{s=0}^{10} \lambda_s^k \zeta^{sd}$... wait, the standard formula for circulant matrices: if $A$ has $(i,j)$ entry depending only on $j-i$, then the eigenvalues are $\lambda_s = \sum_j A_{0,j} \zeta^{js}$ and $(A^k)_{i,j} = \frac{1}{n}\sum_s \lambda_s^k \zeta^{s(j-i)}$.
+
+Eigenvalue at frequency $s$: $\lambda_s = \sum_{d \in QR} \zeta^{ds}$.
+
+For $s=0$: $\lambda_0 = |QR| = 5$. ✓
+
+For $s \neq 0$: $\lambda_s = P(s) = \frac{\chi(s)i\sqrt{11}-1}{2}$.
+
+Check at $k=1$, $d \in QR$:
+
+$(A)_{0,d} = \frac{1}{11}\sum_s \lambda_s \zeta^{sd} = \frac{1}{11}\left[5 + \sum_{s=1}^{10} P(s)\zeta^{sd}\right]$
+
+$= \frac{1}{11}\left[5 + \sum_{s=1}^{10}\frac{\chi(s)i\sqrt{11}-1}{2}\zeta^{sd}\right]$
+
+$= \frac{1}{11}\left[5 - \frac{1}{2}\sum_{s=1}^{10}\zeta^{sd} + \frac{i\sqrt{11}}{2}\sum_{s=1}^{10}\chi(s)\zeta^{sd}\right]$
+
+$= \frac{1}{11}\left[5 - \frac{(-1)}{2} + \frac{i\sqrt{11}}{2}G(\chi,d)\right]$ where $\sum_{s=1}^{10}\zeta^{sd} = -1$ (standard)
+
+$= \frac{1}{11}\left[5 + \frac{1}{2} + \frac{i\sqrt{11}}{2}\chi(d)i\sqrt{11}\right]$ (using $G(\chi,d) = \chi(d)i\sqrt{11}$)
+
+$= \frac{1}{11}\left[\frac{11}{2} + \frac{i\sqrt{11}}{2}\cdot\chi(d)i\sqrt{11}\right]$
+
+$= \frac{1}{11}\left[\frac{11}{2} - \frac{11\chi(d)}{2}\right]$
+
+$= \frac{1}{2}(1 - \chi(d))$
+
+For $d \in QR$: $\chi(d) = 1$, giving $(A)_{0,d} = 0$. But $A_{0,d} = 1$ for $d \in QR$! **Still wrong.**
+
+There must be a sign error. Let me recheck $G(\chi, d)$ for $p = 11 \equiv 3 \pmod 4$.
+
+The standard result: for $p \equiv 3 \pmod 4$, $G(\chi)^2 = -p$, so $G(\chi) = i\sqrt{p}$ or $-i\sqrt{p}$ (with a specific sign depending on convention). And $G(\chi, d) = \sum_{s=1}^{p-1} \chi(s) e^{2\pi i sd/p} = \chi(d) G(\chi)$ for $d \not\equiv 0$.
+
+Let me re-examine the sign. $G(\chi) = \sum_{s=0}^{p-1} \chi(s) e^{2\pi i s/p} = \sum_{s=1}^{p-1} \chi(s)\zeta^s$ (since $\chi(0)=0$). For $p=11$:
+
+$G(\chi) = \sum_{s \in QR} \zeta^s - \sum_{s \in NQR} \zeta^s = (P(1) - Q(1)) = P(1) - (-1-P(1)) = 2P(1)+1$.
+
+Also $P(1) = \lambda_1 = \frac{\chi(1)i\sqrt{11}-1}{2}$. Since $1 \in QR$: $\chi(1)=1$, so $P(1) = \frac{i\sqrt{11}-1}{2}$.
+
+$G(\chi) = 2 \cdot \frac{i\sqrt{11}-1}{2} + 1 = i\sqrt{11}-1+1 = i\sqrt{11}$. ✓
+
+So $G(\chi,1) = i\sqrt{11}$. And $G(\chi,d) = \chi(d) \cdot i\sqrt{11}$. ✓
+
+Then my formula gives $(A)_{0,d} = \frac{1}{2}(1-\chi(d))$. For $d \in QR$: $\frac{1}{2}(1-1)=0$. But it should be 1.
+
+This is backwards. The problem: the standard circulant eigenvalue gives $\lambda_s = \sum_j A_{0,j} \zeta^{-js}$ (with negative sign in the exponent) in some conventions, or $\lambda_s = \sum_j A_{0,j}\zeta^{js}$ in others, but $(A^k)_{0,d} = \frac{1}{n}\sum_s \lambda_s^k \zeta^{-sd}$ (not $+sd$).
+
+Let me redo with the correct sign: $(A^k)_{0,d} = \frac{1}{n}\sum_s \lambda_s^k \zeta^{-sd}$.
+
+At $k=1$: $(A)_{0,d} = \frac{1}{11}\sum_s \lambda_s \zeta^{-sd} = \frac{1}{11}[5 + \sum_{s=1}^{10} P(s)\zeta^{-sd}]$.
+
+$\sum_{s=1}^{10} P(s)\zeta^{-sd} = \sum_{s=1}^{10}\frac{\chi(s)i\sqrt{11}-1}{2}\zeta^{-sd}$
+
+$= \frac{-1}{2}\sum_{s=1}^{10}\zeta^{-sd} + \frac{i\sqrt{11}}{2}\sum_{s=1}^{10}\chi(s)\zeta^{-sd}$
+
+$= \frac{-1}{2}\cdot(-1) + \frac{i\sqrt{11}}{2}G(\chi,-d)$
+
+$= \frac{1}{2} + \frac{i\sqrt{11}}{2}\chi(-d)i\sqrt{11}$ where $G(\chi,-d) = \chi(-d)i\sqrt{11}$
+
+For $p \equiv 3 \pmod 4$: $\chi(-1) = -1$ (since $-1$ is a NQR). So $\chi(-d) = \chi(-1)\chi(d) = -\chi(d)$.
+
+$= \frac{1}{2} + \frac{i\sqrt{11}}{2}\cdot(-\chi(d))\cdot i\sqrt{11} = \frac{1}{2} + \frac{11\chi(d)}{2}$
+
+$(A)_{0,d} = \frac{1}{11}\left[5 + \frac{1}{2} + \frac{11\chi(d)}{2}\right] = \frac{11/2}{11} + \frac{11\chi(d)/2}{11} = \frac{1}{2} + \frac{\chi(d)}{2} = \frac{1+\chi(d)}{2}$.
+
+For $d \in QR$: $\chi(d)=1$, $(A)_{0,d} = 1$ ✓.  
+For $d \in NQR$: $\chi(d)=-1$, $(A)_{0,d} = 0$ ✓.
+
+Now the correct formula:
+
+$(A^k)_{0,d} = \frac{1}{11}\sum_s \lambda_s^k \zeta^{-sd} = \frac{1}{11}\left[5^k + \sum_{s=1}^{10}P(s)^k \zeta^{-sd}\right]$
+
+Since $P(s) = \omega$ for $s \in QR$ and $P(s) = \bar\omega$ for $s \in NQR$:
+
+$= \frac{1}{11}\left[5^k + \omega^k\sum_{s\in QR}\zeta^{-sd} + \bar\omega^k\sum_{s\in NQR}\zeta^{-sd}\right]$
+
+$\sum_{s\in QR}\zeta^{-sd} = P(-d)$... actually $\sum_{s\in QR}\zeta^{-sd} = \sum_{s\in QR}\zeta^{(-d)s} = $ the partial Gauss sum evaluated at $-d$... but in my formula I defined $P(d) = \sum_{s\in QR}\zeta^{sd}$, so $\sum_{s\in QR}\zeta^{-sd} = P(-d) = \frac{\chi(-d)i\sqrt{11}-1}{2} = \frac{-\chi(d)i\sqrt{11}-1}{2} = \overline{P(d)}$ (complex conjugate, since $P(d) = \frac{\chi(d)i\sqrt{11}-1}{2}$).
+
+$(A^k)_{0,d} = \frac{1}{11}\left[5^k + \omega^k \overline{P(d)} + \bar\omega^k \overline{Q(d)}\right]$
+
+where $Q(d) = \sum_{s\in NQR}\zeta^{sd} = -1-P(d)$, so $\overline{Q(d)} = -1-\overline{P(d)}$.
+
+$= \frac{1}{11}\left[5^k + \omega^k \overline{P(d)} + \bar\omega^k(-1-\overline{P(d)})\right]$
+
+$= \frac{1}{11}\left[5^k - \bar\omega^k + (\omega^k-\bar\omega^k)\overline{P(d)}\right]$
+
+Now $\overline{P(d)} = \frac{-\chi(d)i\sqrt{11}-1}{2}$.
+
+For the computation of $c_9$, I need $\sum_{u\neq v}(A^{k_1})_{vu}(\text{something})_{uv}$, which involves sums of products of off-diagonal matrix powers.
+
+For Type A correction (3-cycle at interior $u$, approach $k_1$, return $k_3$ with $k_1+k_3=6$):
+
+$\sum_{u\neq 0} c_3^{(u)} \cdot \sum_{k_1+k_3=6}(A^{k_1})_{0u}(A^{k_3})_{u0}$
+
+$= c_3^{(0)} \cdot \sum_{k_1+k_3=6}[(A^{k_1+k_3})_{00} - (A^{k_1})_{00}(A^{k_3})_{00}]$
+
+$= 15 \cdot \sum_{k_1=1}^{5}[f_6 - f_{k_1}f_{6-k_1}]$
+
+$= 15 \cdot [5f_6 - (f_1f_5 + f_2f_4 + f_3^2 + f_4f_2 + f_5f_1)]$
+
+$= 15 \cdot [5\cdot975 - (0 + 0 + 225 + 0 + 0)]$
+
+$= 15 \cdot [4875 - 225] = 15 \cdot 4650 = 69750$
+
+But this uses ALL walks (not just first-return walks from $v$). For first-return walks, I need to restrict to walks that don't visit $v=0$ in the approach or return.
+
+The correction for walks that DO visit $v$ in the approach/return: these are captured by the "at $v$" type already subtracted via $r_9$. So using $f_{k_1}$ in the Type A formula leads to **double-counting** with the "at $v$" correction that's already embedded in the first-return framework.
+
+**This is the fundamental issue**: the first-return framework (giving $r_9 = 119220$) already removed "at $v$" type contributions. The remaining non-simple corrections in $r_9$ are ONLY those involving interior-vertex repetitions (Types A, B, C). But when I compute Type A using full matrix powers $f_{k_1+k_3} - f_{k_1}f_{k_3}$, I'm including walks that return to $v$ during the approach/return — double-counting with what was already removed.
+
+To get the correct Type A contribution to $r_9$, I need walks where:
+1. The walk first returns to $v$ at step 9 (no visit to $v$ at steps 1,...,8) — this is what $r_9$ counts
+2. AND the walk revisits some interior vertex $u \neq v$
+
+The approach walk $v \to u$ of length $k_1$ and return walk $u \to v$ of length $k_3$ must BOTH avoid $v$ (since the whole walk must avoid $v$ until step 9).
+
+For the approach $v \xrightarrow{k_1} u$ avoiding $v$: the count is $(\tilde{A}^{k_1})_{vu}$ where $\tilde{A}$ is the adjacency matrix of $T_{11}$ with vertex $v$ removed (i.e., walks in $T_{11} \setminus \{v\}$).
+
+$(\tilde{A}^{k_1})_{vu}$ for the tournament $T_{11}$ with vertex 0 removed is a 10×10 matrix computation.
+
+For the diagonal: $(\tilde{A}^k)_{00}$ doesn't exist (0 is removed). For off-diagonal starting at some vertex $w \neq 0$: $(\tilde{A}^k)_{wu}$ counts walks in $T_{10} = T_{11}\setminus\{0\}$.
+
+**But I need walks starting at $v=0$** that avoid $v$ after step 0 — that's walks in $T_{11}\setminus\{0\}$ starting at 0... which doesn't make sense since 0 is removed.
+
+The correct interpretation: a walk in $T_{11}$ that starts at $v=0$, visits intermediate vertices all different from 0, and ends at $u$. This equals $(A^{k_1})_{0u} - \sum_{j=1}^{k_1-1} r_j^{(0)} (A^{k_1-j})_{0u}$, the "first-visit to $u$ in $k_1$ steps, not revisiting 0" count.
+
+This is precisely the off-diagonal first-passage time. Computing this requires knowledge of all off-diagonal matrix powers AND their interactions through $v=0$.
+
+**This computation is genuinely hard by hand.** It requires solving a system involving all off-diagonal entries. Without a computer, I cannot determine $c_9(T_{11})$ exactly.
+
+---
+
+## IV. What Can We Actually Conclude?
+
+Let me honestly assess what we know and don't know.
+
+**Firmly established:**
+
+| $p$ | $H(T_p)$ | $c_3$ | $c_5$ | $c_7$ | $h_p$ | $\alpha_2$ | OCF check |
+|-----|----------|-------|-------|-------|-------|------------|-----------|
+| 3 | 3 | 1 | — | — | 1 | 0 | ✓ |
+| 5 | 15 | 5 | — | — | 2 | 0 | ✓ |
+| 7 | 189 | 14 | 42 | — | 24 | 7 | ✓ |
+| 11 | ? | 55 | 594 | 1320 | ? | ? | ? |
+
+**The two conjectures so far:**
+1. $H(T_p) = p \cdot 3^{(p-1)(p-3)/8}$: **disproved** for $p=11$ (gives 649539, not divisible by 55)
+2. $H(T_p) = |\text{Aut}(T_p)| \cdot 3^{(p-3)/2}$: gives $H(T_{11}) = 4455$, which requires $c_9 \leq 258$. Unverified; the $c_9$ estimate is unreliable.
+
+**The honest state**: both conjectures for $p=11$ are currently unverified, and the second cannot be verified without computing $c_9(T_{11})$, which requires either a computer or a more clever approach.
+
+---
+
+## V. A Cleaner Path Forward
+
+Rather than trying to compute $c_9$ via the messy correction framework, let me think about what structure $c_9$ must have.
+
+For $T_{11}$, every directed 9-cycle uses 9 of the 11 vertices. Let the two "missing" vertices be $\{a, b\}$. The 9-cycle lives inside $T_{11} \setminus \{a,b\}$.
+
+The number of directed Ham cycles in a 9-vertex sub-tournament $T_{11}\setminus\{a,b\}$: call this $h(\{a,b\})$. Then:
+
+$$c_9(T_{11}) = \sum_{\{a,b\} \subset V} h(\{a,b\})$$
+
+There are $\binom{11}{2} = 55$ pairs $\{a,b\}$. By vertex-transitivity: for fixed $a$, the 10 sub-tournaments $T_{11}\setminus\{a,b\}$ (for $b \neq a$) are all isomorphic (by applying the translation $x \mapsto x-a$, we can set $a=0$; then the 10 sub-tournaments $T_{11}\setminus\{0,b\}$ for $b \in \{1,...,10\}$ fall into orbits under the multiplier group $\mathbb{Z}_5^*$).
+
+The multiplier $x \mapsto \alpha x$ (for $\alpha \in \{1,3,4,5,9\}$) maps $T_{11}\setminus\{0,b\}$ to $T_{11}\setminus\{0,\alpha b\}$. The orbits of $\{b\}$ under multiplication by QRs: since the QRs form a subgroup of index 2, the orbit of any $b \neq 0$ has size either 5 (if $b$ is itself a QR or NQR and the orbit is the full coset) or... actually $b$ and $\alpha b$ are in the same coset ($b \in QR$ or $b \in NQR$), and the orbit has size exactly 5 (since the multiplier group has order 5 and acts freely on non-zero elements).
+
+So the 10 values of $b$ split into 2 orbits of size 5: $\{1,3,4,5,9\}$ (QRs) and $\{2,6,7,8,10\}$ (NQRs). By the automorphism $x \mapsto \alpha x$: $h(\{0,b\})$ is the same for all $b$ in the same orbit.
+
+So there are exactly **2 distinct values** of $h(\{0,b\})$:
+- $h_{\text{QR}} = h(\{0,b\})$ for $b \in QR = \{1,3,4,5,9\}$
+- $h_{\text{NQR}} = h(\{0,b\})$ for $b \in NQR = \{2,6,7,8,10\}$
+
+And: $c_9(T_{11}) = \sum_{\{a,b\}} h(\{a,b\}) = \frac{11}{2} \cdot [5 \cdot h_{\text{QR}} + 5 \cdot h_{\text{NQR}}] \cdot \frac{1}{?}$...
+
+Wait, let me be more careful. By vertex-transitivity: $c_9 = \frac{11 \cdot \sum_{b\neq 0} h(\{0,b\})}{?}$. Each 9-cycle $C$ corresponds to a unique pair $\{a,b\}$ of missing vertices, and is counted once in $h(\{a,b\})$. So:
+
+$c_9 = \sum_{\{a,b\}} h(\{a,b\}) = \frac{11}{1} \cdot \frac{\sum_{b\neq 0} h(\{0,b\})}{11/(\text{overcounting})}$...
+
+Actually simply: by symmetry over all pairs,
+
+$c_9 = \frac{11}{1} \cdot \frac{1}{2}\sum_{b=1}^{10} h(\{0,b\})$ ... no.
+
+Each pair $\{a,b\}$ appears once in the sum. There are 55 pairs total. By vertex-transitivity and fixing $a=0$: each $h(\{0,b\})$ appears 11 times (once for each $a$, but $\{a,b\} = \{b,a\}$, so actually each pair appears twice in "$\sum_{a \neq b}$"...). 
+
+More cleanly: 
+
+$$c_9 = \sum_{\{a,b\}\in\binom{V}{2}} h(\{a,b\}) = \frac{1}{2}\sum_{a}\sum_{b\neq a} h(\{a,b\}) = \frac{11}{2}\sum_{b\neq 0}h(\{0,b\})$$
+
+$= \frac{11}{2}[5h_{\text{QR}} + 5h_{\text{NQR}}] = \frac{55}{2}(h_{\text{QR}}+h_{\text{NQR}})$
+
+For $c_9$ to be an integer: $2 \mid h_{\text{QR}} + h_{\text{NQR}}$.
+
+**Now I need to compute $h_{\text{QR}}$ and $h_{\text{NQR}}$ — the number of directed Ham cycles in $T_{11}\setminus\{0,1\}$ (for QR case, $b=1$) and $T_{11}\setminus\{0,2\}$ (for NQR case, $b=2$).**
+
+These are 9-vertex tournaments. Their structure:
+
+$T_{11}\setminus\{0,1\}$: vertices $\{2,3,...,10\}$, arcs $i\to j$ iff $j-i \pmod{11} \in \{1,3,4,5,9\}$.
+
+$T_{11}\setminus\{0,2\}$: vertices $\{1,3,4,...,10\}$, arcs $i\to j$ iff $j-i \pmod{11} \in \{1,3,4,5,9\}$.
+
+Computing $h_{\text{QR}}$ and $h_{\text{NQR}}$ directly requires either a computer or a very careful hand computation. These are 9-vertex tournaments; finding all Hamiltonian cycles in a 9-vertex tournament by hand is feasible but tedious (there are at most $(9-1)!/2 = 20160$ possible directed cycles to check, reduced by the specific arc structure).
+
+**For the conjecture $H(T_{11}) = 4455$ to hold:**
+
+$c_9 = 258 - h_{11} - 2\alpha_2 - \ldots$
+
+If $h_{11} \geq 5$ (the 5 step-cycles) and $\alpha_2 \geq 0$, then $c_9 \leq 253$.
+
+$c_9 = \frac{55}{2}(h_{\text{QR}}+h_{\text{NQR}})$: for $c_9 \leq 253$: $(h_{\text{QR}}+h_{\text{NQR}}) \leq 9.2$, so $h_{\text{QR}}+h_{\text{NQR}} \leq 9$ (and even, so $\leq 8$).
+
+This means the 9-vertex sub-tournaments of $T_{11}$ have at most 8 directed Ham cycles combined (for the two types). Specifically $h_{\text{QR}} \leq 4$ and $h_{\text{NQR}} \leq 4$ (roughly).
+
+Compare: for $T_7$ (7-vertex), the 5-vertex sub-tournaments have $c_5/\binom{7}{2} = 42/21 = 2$ directed Ham cycles on average. These fell into... let me check: for $T_7\setminus\{0,b\}$ ($b=1$ QR or $b=3$ NQR), the 5-vertex sub-tournament has some number of Ham cycles. The step-cycles of $T_5$ type would be absent, but... this is getting complicated.
+
+---
+
+## VI. The Actual Value of $H(T_{11})$ Requires a Computer
+
+At this point, after careful analysis, here is the honest conclusion:
+
+**The conjecture $H(T_p) = |\text{Aut}(T_p)| \cdot 3^{(p-3)/2}$ is an elegant hypothesis consistent with $p = 3, 5, 7$ and the divisibility constraint for $p = 11$, but:**
+
+1. It requires $c_9(T_{11}) \leq 253$, which would mean each type of 9-vertex sub-tournament of $T_{11}$ has at most 4 directed Ham cycles — **plausible but unverified**
+
+2. It cannot be confirmed or refuted without computing $c_9$ or $H(T_{11})$ directly
+
+3. The previous "verification" attempts (using the $c_7/\binom{11}{7} = c_9/\binom{11}{9}$ coincidence) were circular reasoning
+
+**What a rigorous proof strategy would look like:**
+
+Step 1: Directly compute $h(\{0,1\})$ and $h(\{0,2\})$ — Ham cycles in $T_{11}\setminus\{0,1\}$ and $T_{11}\setminus\{0,2\}$. These 9-vertex tournaments are fixed objects that could be enumerated.
+
+Step 2: Compute $c_9 = \frac{55}{2}(h_{\text{QR}} + h_{\text{NQR}})$.
+
+Step 3: Compute $h_{11}$ (Ham cycles in $T_{11}$ itself) and $\alpha_2(T_{11})$.
+
+Step 4: Check OCF.
+
+**The minimum needed to test the conjecture**: Compute the number of directed Hamiltonian cycles in the 9-vertex tournament $T_{11}\setminus\{0,1\}$.
+
+This tournament has vertices $\{2,3,4,5,6,7,8,9,10\}$ with arcs $i\to j$ iff $j-i \pmod{11} \in \{1,3,4,5,9\}$.
+
+**Let me attempt this.** Out-degrees in $T_{11}\setminus\{0,1\}$: vertex $v$ originally had out-degree 5. Removing vertices 0 and 1 removes arcs $v\to0$, $v\to1$, $0\to v$, $1\to v$. The new out-degree of $v$ in $T_{11}\setminus\{0,1\}$ is $5 - |\{0,1\}\cap N^+(v)|$ where $N^+(v)$ is the out-neighborhood of $v$ in $T_{11}$.
+
+For each vertex $v \in \{2,...,10\}$:
+- $v \to 0$ iff $0-v \pmod{11} \in \{1,3,4,5,9\}$, i.e., $-v\pmod{11} \in \{1,3,4,5,9\}$, i.e., $v \in \{2,6,7,8,10\}$ (NQRs).
+- $v \to 1$ iff $1-v\pmod{11} \in \{1,3,4,5,9\}$, i.e., $v \in \{1-1, 1-3, 1-4, 1-5, 1-9\}\pmod{11} = \{0, 9, 8, 7, 3\}$. But $v \geq 2$, so: $v \in \{3,7,8,9\}$.
+
+Out-degree of $v$ in $T_{11}\setminus\{0,1\}$ = $5 - [v\to0] - [v\to1]$:
+
+| $v$ | $v\to0$? | $v\to1$? | new out-degree |
+|-----|----------|----------|----------------|
+| 2 | yes (NQR) | no | 5-1-0=4 |
+| 3 | no (QR) | yes | 5-0-1=4 |
+| 4 | no (QR) | no | 5-0-0=5 |
+| 5 | no (QR) | no | 5-0-0=5 |
+| 6 | yes (NQR) | no | 4 |
+| 7 | yes (NQR) | yes | 3 |
+| 8 | yes (NQR) | yes | 3 |
+| 9 | no (QR) | yes | 4 |
+| 10 | yes (NQR) | no | 4 |
+
+Score sequence of $T_{11}\setminus\{0,1\}$: $(4,4,5,5,4,3,3,4,4)$ for vertices $(2,...,10)$.
+
+Sum = $4+4+5+5+4+3+3+4+4 = 36 = \binom{9}{2}$ ✓.
+
+Moon's formula: $c_3(T_{11}\setminus\{0,1\}) = \binom{9}{3} - \sum_v\binom{d^+(v)}{2}$
+
+$= 84 - [\binom{4}{2}+\binom{4}{2}+\binom{5}{2}+\binom{5}{2}+\binom{4}{2}+\binom{3}{2}+\binom{3}{2}+\binom{4}{2}+\binom{4}{2}]$
+
+$= 84 - [6+6+10+10+6+3+3+6+6] = 84 - 56 = 28$.
+
+So $T_{11}\setminus\{0,1\}$ has 28 directed 3-cycles. This sub-tournament is fairly "cyclic" — compare with $T_7$ which has $14$ directed 3-cycles on 7 vertices. The density is similar ($14/\binom{7}{3}=14/35=2/5$ vs $28/\binom{9}{3}=28/84=1/3$).
+
+Computing the number of Ham cycles $h(\{0,1\})$ from the score sequence alone is not possible (same score sequence can give different Ham cycle counts). But the score sequence does give a rough idea of the structure.
+
+**A 9-vertex tournament with this specific structure could have anywhere from 0 to $\sim 100$ directed Ham cycles.** Without further enumeration, I cannot determine the exact count.
+
+---
+
+## VII. Summary of the Actual State of Knowledge
+
+After careful review of all documents, here is what is rigorously established versus what is merely conjectured:
+
+**Rigorously verified:**
+- $H(T_3) = 3$, $H(T_5) = 15$, $H(T_7) = 189$
+- All OCF computations for $T_7$ (with $\alpha_2=7$ now correctly established)
+- $c_k(T_{11})$ for $k = 3, 4, 5, 6, 7$: values $55, 165, 594, 1375, 1320$
+- The divisibility $55 \mid H(T_{11})$ from the automorphism group
+- The original conjecture $H(T_p) = p\cdot3^{(p-1)(p-3)/8}$ is FALSE for $p=11$
+
+**Plausible but unverified:**
+- The corrected conjecture $H(T_p) = |\text{Aut}(T_p)|\cdot3^{(p-3)/2}$, giving $H(T_{11}) = 4455$
+- This requires $c_9(T_{11}) \leq 253$, which requires $h(\{0,1\})+h(\{0,2\}) \leq 9$
+
+**The key open computation**: $h(\{0,1\})$ = number of directed Ham cycles in $T_{11}\setminus\{0,1\}$. This is a 9-vertex tournament with a specific, known structure. Determining this would either confirm or refute the corrected conjecture.

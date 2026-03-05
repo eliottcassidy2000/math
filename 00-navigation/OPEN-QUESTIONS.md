@@ -65,40 +65,33 @@ The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-o
 ---
 
 ## OPEN-Q-009 🔴
-**Prove arc-reversal invariance: D(T,v) = D(T',v) for flips not involving v**
+**Prove arc-flip identity: E(T) = H(T) - I(Omega(T), 2) is invariant under arc flips**
 
-The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H(T) = I(Ω(T),2)) by showing ΔH = ΔI for each arc flip from transitive.
+The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H(T) = I(Omega(T),2)) by showing delta_H = delta_I for each arc flip from transitive.
 
-**GENERAL FORMULA (opus-S2, THM-013 updated):**
+**GENERAL FORMULA (opus-S2, THM-013; independently derived by kind-pasteur-S5 via A-clique):**
 
-  ΔH = Σ_{k≥1} 2^k · Δα_k = ΔI(Ω, 2)
+  delta_I = sum_{k>=1} 2^k * Delta(alpha_k)
 
-where Δα_k = Σ_L [Σ_{C_L using i→j} α_{k-1}(comp(C)) − Σ_{C'_L using j→i} α_{k-1}(comp(C'))]
+where Delta(alpha_k) depends recursively on alpha_{k-1} of cycle complements. Equivalently (kind-pasteur-S5): delta_I = 2 * [sum_{gained C'} I(R_{C'}, 2) - sum_{lost C} I(R_C, 2)] where R_C = Omega(T[V\V(C)]). By strong induction, I(R_C, 2) = H(complement). This is the A-clique argument adapted to arc flips (same technique as Claim B proof). Verified n=4,...,9 (opus) and n=5 exhaustive + n=6 random (kind-pasteur).
 
-This is the EXACT general formula, verified n=4,...,9 (including n=9 where α_3 ≠ 0).
+**Simplified forms by n (opus-S2):**
+- n<=5: delta_H = 2*sum_L(DL-CL) [simple formula]
+- n=6,7: delta_H = -2*sum s_x*H(B_x) + 2*sum_{L>=5}(DL-CL)
+- n=8: needs correction for VD 3-5 pairs (simplified formula fails 8/30)
+- n=9+: needs alpha_3 terms (three mutually VD 3-cycles)
 
-**CRITICAL FINDING (opus-S2 continued):** The simplified formula
-  ΔH = -2·Σ s_x·H(B_x) + 2·Σ_{L≥5}(DL−CL)
-is CORRECT only for n≤7. It FAILS at n=8 (8/30 match) due to missing VD 3-5 pair terms.
+**Remaining task:** Prove adj(i,j) - adj'(j,i) = delta_I combinatorially.
 
-**Simplified forms by n:**
-- n≤5: ΔH = 2·Σ_L(DL−CL)
-- n=6,7: ΔH = -2·Σ s_x·H(B_x) + 2·Σ_{L≥5}(DL−CL)
-- n=8: needs correction for VD pairs involving 5-cycles
-- n=9+: needs α_3 terms (three mutually VD 3-cycles)
-
-**Remaining task:** Prove the identity adj(i,j) − adj'(j,i) = Σ 2^k Δα_k.
-This would prove OCF for all n (combined with base case H(transitive)=1=I(∅,2)).
-
-The recursive structure (Δα_k depends on α_{k-1} of complements) suggests
-an inductive proof using OCF on smaller tournaments.
-
-Key structural facts:
+**Key structural facts (both agents independently confirmed):**
 - All affected cycles contain {i,j} (complement unchanged by flip)
-- At most one cycle in an independent set is affected
-- Complement α values computable by inductive OCF
+- At most one affected cycle in any independent set (A-clique)
+- Complement values computable by inductive OCF
+- The swap involution (opus THM-014) gives adj(i,j)-adj'(j,i) = #U_T - #U_T'
 
-**Source:** opus-2026-03-05-S2 (multiple sessions)
+See PROP-001 (kind-pasteur), THM-013, THM-014 (opus).
+
+**Source:** opus-2026-03-05-S2 (multiple sessions); kind-pasteur-2026-03-05-S5
 
 ---
 

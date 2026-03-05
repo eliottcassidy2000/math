@@ -324,7 +324,7 @@ def cmd_register(args):
 
         [Add any notes about this machine's role or specialization.]
     """)
-    (agent_dir / "identity.md").write_text(identity_content)
+    (agent_dir / "identity.md").write_text(identity_content, encoding='utf-8')
 
     # Add a .gitkeep so the inbox directory is tracked
     (inbox_dir / ".gitkeep").write_text("")

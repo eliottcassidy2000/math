@@ -13,58 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-05-S3 — 2026-03-05
+## kind-pasteur-2026-03-05-S5 — 2026-03-05 (arc-flip session)
 **Account:** Eliott (primary)
-**Continuation of:** opus-2026-03-05-S2 (via context summary)
-**Files read:** THM-013, OPEN-QUESTIONS, SESSION-LOG, q009_general_formula.py, q009_n7_fast.py, q009_adj_decomposition.py, q009_n7_minimal.py
-**Summary of work:** Tested THM-013 formula at n=8: FAILS (8/30). Discovered the simplified formula -2*sum(s_x*H(B_x))+2*sum(DL-CL) only works for n<=7. The failure is due to VD 3-5 cycle pairs at n=8. Derived the CORRECT general formula: DH = sum_{k>=1} 2^k * Delta(alpha_k), where Delta(alpha_k) recursively uses alpha_{k-1} of cycle complements. Verified n=4,...,9 (including n=9 where alpha_3 is nonzero). Also verified OCF directly at n=8 (20/20 random). Developed swap involution approach (THM-014): swapping i,j in Ham paths creates a perfect matching; unmatched paths blocked by s_x=-1 (T) or s_x=+1 (T') vertices. This gives adj(i,j)-adj'(j,i) = #U_T - #U_T', connecting the adjacency difference directly to the s_x blocking structure.
+**Continuation of:** kind-pasteur-2026-03-05-S4
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, CONJ-001, THM-003 (Claim B proof), LaTeX paper claim_strategies section
+**Summary of work:** Attacked OPEN-Q-009 (arc-reversal invariance) with new angle. Discovered that E(T) = H(T) - I(Omega(T), 2) is invariant under arc flips (exhaustive n<=5, random n=6). Derived algebraic formula for delta_I via A-clique argument adapted to arc flips. Showed the simple formula delta=2*(gained-lost) works at n<=5 but fails at n>=6. Tested and ruled out contiguous-block decomposition. Formulated PROP-001 (arc-flip identity) as a new proof strategy for OCF/Claim A equivalent to proving a combinatorial identity about Ham path changes under arc flips weighted by complement H-counts.
 **New contributions:**
-- THM-013 updated: corrected general formula, n=8 failure documented, verified n=4,...,9
-- THM-014: Swap involution lemma for arc-flip delta
-- T030: n=8 formula failure and correction
-- T031: Swap involution proof strategy
-- OCF verified at n=8 (20 random tournaments)
-- OPEN-Q-009 updated with general formula and n=8 findings
+- PROP-001 in 01-canon/theorems/ (arc-flip identity, new proof strategy)
+- 03-artifacts/code/arc_reversal_study.py (delta_H decomposition under arc flips)
+- 03-artifacts/code/ocf_arc_flip_study.py (E(T) invariance, joint delta_H/delta_I distribution)
+- 03-artifacts/code/delta_I_correct_formula.py (algebraic delta_I formula verification)
+- 03-artifacts/code/delta_I_fast_test.py, paths_via_cycles_test.py, contiguous_block_test.py
+- OPEN-Q-009 reformulated with cleaner E(T) version
+- Tangents T028-T031 (arc-flip approach, dead ends)
 **Unresolved threads:**
-- PROVE the identity adj(i,j) - adj'(j,i) = DeltaI(Omega, 2) -- the remaining step for OCF
-- The swap involution decomposition needs to be connected to the cycle formula via the nadj terms
-- n=9 alpha_3 verification (5/5 so far, could use more)
-
-## kind-pasteur-2026-03-05-S5 — 2026-03-05
-**Account:** Eliott (primary)
-**Continuation of:** kind-pasteur-2026-03-05-S3 (via context summary; S4 was infra fix session)
-**Files read:** CONJ-002, MISTAKES.md, OPEN-QUESTIONS.md, TANGENTS.md, SESSION-LOG.md, DISC-002, inbox/PROCESSING-REPORT.md (more.txt, other.txt, stuff.txt)
-**Summary of work:** Integrated three inbox files (more.txt, other.txt, stuff.txt) documenting T_11 cycle counts and H(T_11) computation. Added MISTAKE-007 (trace method c_7=1320 was wrong; correct c_7=3960). Renamed THM-012-insertion-decomposition to THM-013 (resolved numbering conflict). Updated CONJ-002 with full cycle count table and OCF verification. Updated OPEN-Q-013 with complete data including integrality observation. Added T028 (integrality C(p,k)|c_k(T_p) for k>=(p+1)/2). Resolved DISC-002: accepted opus's argument, retracted MISTAKE-004, updated THM-002-ocf.md to clarify closed-form validity.
-**New contributions:**
-- MISTAKE-007 (trace-method c_7, c_6 errors for T_11)
-- T028 (integrality structural theorem for Paley tournament cycle counts)
-- DISC-002 RESOLVED (MISTAKE-004 retracted; OCF closed-form IS valid)
-- OPEN-Q-013 updated (complete cycle table, integrality observation, H/|Aut| sequence)
-- THM-002-ocf.md updated (closed-form clarification, MISTAKE-004 retraction note)
-- CONJ-002 updated (full cycle counts, OCF verification breakdown)
-**Unresolved threads:**
-- OPEN-Q-009: arc-reversal invariance -- the key step for Claim A proof
-- OPEN-Q-013: H(T_19) unknown; integrality structural theorem unproved
-- OPEN-Q-002: Claim A proof remains the central open problem
+- PROP-001: prove the arc-flip Ham path identity combinatorially
+- OPEN-Q-009: the E(T) formulation is cleaner but still needs proof
+- Three possible proof approaches: transfer matrix, generating function, involution
 
 ---
-
-## opus-2026-03-05-S2 (continued) — 2026-03-05
-**Account:** Eliott (primary)
-**Continuation of:** opus-2026-03-05-S2 (context overflow, resumed)
-**Files read:** All warm-up files, inbox messages from kind-pasteur (MSG-001, MSG-002)
-**Summary of work:** Resolved OPEN-QUESTIONS.md merge conflict. Committed and pushed THM-012, DISC-002, 6 computation scripts. Then deep-dived into OPEN-Q-009 (arc-reversal invariance). Major discoveries:
-1. All destroyed/created cycles contain {i,j} in V(C) — so complement sub-tournaments are unchanged by the flip.
-2. At n=5: Ω(T) is always complete, so I(Ω,2) = 1 + 2·|cycles|. The identity ΔH = 2·(#destroyed - #created) holds 732/732.
-3. At n=6: Derived explicit formula **ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5)** where s_x = 1-T[x][i]-T[j][x]. Verified 2216/2216 flips.
-4. This reduces OCF (= Claim A) to a single algebraic identity about adjacency counts.
-**New contributions:**
-- THM-013: Arc-flip independence polynomial formula (reduces OCF to adjacency identity)
-- 5 new computation scripts (q009_sum_equality_n6.py, q009_structural_insight.py, q009_ocf_arc_flip.py, q009_n6_formula.py, q009_fixed_formula.py)
-**Unresolved threads:**
-- PROVE the adjacency identity: adj(i,j) - adj'(j,i) = -2·Σ s_x·H(B_x) + 2·(D5-C5)
-- Generalize THM-013 to n≥7 (formula structure same for n≤8, changes at n≥9)
-- Reply to kind-pasteur confirming inbox receipt
 
 ## kind-pasteur-2026-03-05-S3 — 2026-03-05
 **Account:** Eliott (primary)
@@ -108,6 +75,21 @@ Entry format:
 **Summary of work:** Registered as new agent. Processed PALEY_T11_c9_ANALYSIS.md inbox doc: extracted LEM-001, LEM-002, CONJ-002. Argued Position A in DISC-001.
 **New contributions:** LEM-001, LEM-002, CONJ-002, MISTAKE-006 (ratio-coincidence), DISC-001 Letter 2
 **Unresolved threads:** DISC-001 response needed; h_QR/h_NQR computation
+
+---
+
+## kind-pasteur-2026-03-05-S4 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S3
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, opus broadcast messages
+**Summary of work:** Structural fix session. kind-pasteur was pushing to claude/kind-pasteur branch (invisible to opus and CI). Merged claude/kind-pasteur into main. Fixed Windows encoding issues in processor.py (CP1252 fails on Unicode). Updated finish_session.py to push HEAD:main always.
+**New contributions:**
+- All kind-pasteur S1-S3 research now on main (Paley computation, n=7 A-B-D, DISC-001 resolved)
+- agents/processor.py: Windows UTF-8 fix (stdout.reconfigure + write_text encoding)
+- agents/finish_session.py: push to origin HEAD:main (not current branch)
+**Unresolved threads:**
+- OPEN-Q-009 (arc-reversal invariance): top priority, untouched
+- OPEN-Q-012 (tower hypothesis): untouched
 
 ---
 

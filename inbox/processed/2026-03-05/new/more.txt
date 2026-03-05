@@ -1,0 +1,530 @@
+Let me carefully verify the key claims in Document 7 before integrating them.
+
+---
+
+## I. Verifying $c_4(T_{11})$ and $c_5(T_{11})$
+
+**QRs mod 11**: $1^2=1, 2^2=4, 3^2=9, 4^2=5, 5^2=3$ mod 11. QRs = $\{1,3,4,5,9\}$. So $T_{11}$: $i\to j$ iff $j-i\in\{1,3,4,5,9\}\pmod{11}$.
+
+**Eigenvalue setup**: $\omega = \frac{-1+i\sqrt{11}}{2}$, minimal polynomial $x^2+x+3=0$ (since $\omega^2 = \frac{1-2i\sqrt{11}-11}{4} = \frac{-10-2i\sqrt{11}}{4} = \frac{-5-i\sqrt{11}}{2}$, and $-\omega-3 = \frac{1-i\sqrt{11}}{2}-3 = \frac{-5-i\sqrt{11}}{2}$). ✓
+
+**$\text{tr}(A^4) = 5^4 + 5\omega^4 + 5\bar\omega^4 = 625 + 10\text{Re}(\omega^4)$.**
+
+$\omega^3 = 3-2\omega$ (from document): verify: $\omega^3 = \omega\cdot\omega^2 = \omega(-\omega-3) = -\omega^2-3\omega = -(-\omega-3)-3\omega = \omega+3-3\omega = 3-2\omega$. ✓
+
+$\omega^4 = \omega(3-2\omega) = 3\omega-2\omega^2 = 3\omega-2(-\omega-3) = 3\omega+2\omega+6 = 5\omega+6$. ✓
+
+$\text{Re}(\omega^4) = 5\cdot(-1/2)+6 = -5/2+6 = 7/2$.
+
+$\text{tr}(A^4) = 625 + 10\cdot(7/2) = 625+35 = 660$.
+
+**$c_4(T_{11})$**: are there non-simple closed walks of length 4? A length-4 closed walk $v_0\to v_1\to v_2\to v_3\to v_0$ is non-simple if some vertex repeats. If $v_i=v_j$ for $i<j$: the sub-walk has length $j-i\in\{2,3\}$. Length 2 requires $v_i\to v_{i+1}\to v_i$: impossible in tournament. Length 3: a directed 3-cycle $v_i\to v_{i+1}\to v_{i+2}\to v_i$, leaving a remainder walk of length 1 (self-loop): impossible. So all length-4 closed walks are simple. ✓
+
+$c_4(T_{11}) = 660/4 = 165$. ✓
+
+**$c_5(T_{11})$**: Document computes $\text{tr}(A^5)=2970$, $c_5=594$.
+
+$\omega^5 = \omega(5\omega+6) = 5\omega^2+6\omega = 5(-\omega-3)+6\omega = \omega-15$. ✓
+
+$\text{Re}(\omega^5) = -1/2-15 = -31/2$. ✓
+
+$\text{tr}(A^5) = 3125+10(-31/2) = 3125-155 = 2970$. ✓
+
+No non-simple length-5 walks (same argument as Document 6's verification — the only sub-walk lengths would be 3+2 or 4+1, both impossible). ✓
+
+$c_5(T_{11}) = 594$. ✓
+
+---
+
+## II. Auditing the $c_7(T_{11})$ Computation
+
+**Document claims**: non-simple length-7 closed walks of type (3+4), giving correction term $\sum_v 2c_3^{(v)}c_4^{(v)} = 19800$.
+
+**$c_3^{(v)} = c_3\times3/p = 55\times3/11 = 15$**. ✓
+
+**$c_4^{(v)} = c_4\times4/p = 165\times4/11 = 60$**. ✓
+
+**The correction formula $N_7 = \sum_v 2c_3^{(v)}c_4^{(v)}$**: the document argues that non-simple length-7 closed walks only come from (3+4) decompositions at the base vertex. Let me check whether "walks that revisit a non-starting vertex" are also captured.
+
+The document notes a walk like $v_0\to v_1\to v_2\to v_3\to v_4\to v_1\to v_5\to v_0$, which visits $v_1$ twice. This is NOT captured by the (3+4) decomposition at $v_0$. Document acknowledges this and says "I'm missing a class of non-simple walks," then gets a non-integer and concludes there are more corrections needed.
+
+**The document does NOT resolve this and gets $c_7(T_{11}) = 58740/7 = 8391.4...$** — a non-integer. This is explicitly acknowledged as unresolved.
+
+So the $c_7(T_{11})$ computation is **incomplete** in Document 7. The document correctly identifies the problem but doesn't fix it.
+
+**Let me try to fix it.** The walk $v_0\to v_1\to v_2\to v_3\to v_4\to v_1\to v_5\to v_0$ visits $v_1$ at positions 1 and 5. The sub-walk from $v_1$ to $v_1$: $v_1\to v_2\to v_3\to v_4\to v_1$ (length 4, a directed 4-cycle through $v_1$). The "outer" walk: $v_0\to v_1\to\cdots\to v_1\to v_5\to v_0$ has the 4-cycle embedded at positions 1-5, with $v_0\to v_1$ (1 step) before and $v_1\to v_5\to v_0$ (2 steps) after.
+
+More systematically: a non-simple closed walk of length 7 from $v$ to $v$ where the repetition is NOT at $v$ itself must contain an embedded closed walk at some interior vertex $u\neq v$. The structure is:
+
+$v \xrightarrow{k_1} u \xrightarrow{k_2} u \xrightarrow{k_3} v$
+
+where $k_1+k_2+k_3=7$, $k_1,k_3\geq1$, $k_2\geq3$ (minimum closed walk length in a tournament is 3), and $k_1+k_3\geq2$. The walk from $v$ to $u$ of length $k_1$ and from $u$ to $v$ of length $k_3$ need not be simple.
+
+For length 7: $k_1+k_2+k_3=7$, $k_2\in\{3,4\}$ (can't have $k_2\geq5$ since $k_1+k_3\geq2$ forces $k_2\leq5$, and $k_2=5$ with $k_1+k_3=2$ means $k_1=k_3=1$).
+
+**Type A**: $k_2=3$ (3-cycle at interior vertex $u$). Then $k_1+k_3=4$.
+
+Sub-cases: $(k_1,k_3)\in\{(1,3),(2,2),(3,1)\}$.
+
+For each: the number of such walks contributing to $(A^7)_{vv}$ is:
+
+$(A^{k_1})_{vu} \cdot c_3^{(u)} \cdot (A^{k_3})_{uv}$
+
+summed over all $u\neq v$.
+
+Wait: $(A^{k_1})_{vu}$ counts walks of length $k_1$ from $v$ to $u$ (not necessarily simple). For $k_1=1$: this is just $A_{vu}$ (0 or 1, whether $v\to u$ is an arc). For $k_1=2$: $(A^2)_{vu} = \sum_w A_{vw}A_{wu}$ = number of length-2 walks from $v$ to $u$.
+
+The contribution to $(A^7)_{vv}$ from Type A walks (3-cycle at $u$, length $k_1$ to $u$, length $k_3$ back):
+
+$$\sum_{u\neq v} c_3^{(u)} \cdot \sum_{k_1+k_3=4, k_1,k_3\geq1} (A^{k_1})_{vu}(A^{k_3})_{uv}$$
+
+$= \sum_{u\neq v} c_3^{(u)} \cdot [(A)_{vu}(A^3)_{uv} + (A^2)_{vu}(A^2)_{uv} + (A^3)_{vu}(A)_{uv}]$
+
+$= \sum_{u\neq v} c_3^{(u)} \cdot [A_{vu}(A^3)_{uv} + (A^2)_{vu}(A^2)_{uv} + (A^3)_{vu}A_{uv}]$
+
+By vertex-transitivity: $c_3^{(u)} = 15$ for all $u$ in $T_{11}$.
+
+$\sum_{u} [A_{vu}(A^3)_{uv}] = (A\cdot A^3)_{vv}... $ no wait: $\sum_u A_{vu}(A^3)_{uv} = (A^4)_{vv}$? No: $(A^4)_{vv} = \sum_u A_{vu}(A^3)_{uv}$ only if the walk goes $v\to u\to\cdots\to v$ in 4 steps total, which would be $k_1=1, k_3=3$... but $(A^4)_{vv}$ counts ALL 4-step closed walks from $v$ to $v$, which is what we want for the $k_1=1,k_3=3$ contribution summed over $u$.
+
+Wait: $\sum_u A_{vu}(A^3)_{uv} = (A\cdot A^3)_{vv} = (A^4)_{vv}$. ✓
+
+Similarly $\sum_u (A^2)_{vu}(A^2)_{uv} = (A^2\cdot A^2)_{vv} = (A^4)_{vv}$. ✓
+
+And $\sum_u (A^3)_{vu}A_{uv} = (A^3\cdot A)_{vv} = (A^4)_{vv}$. ✓
+
+So the Type A contribution at vertex $v$ is:
+
+$c_3^{(v)} \cdot [(A^4)_{vv} + (A^4)_{vv} + (A^4)_{vv}] - $ (correction for $u=v$ terms)
+
+Wait, I summed over $u\neq v$ but the matrix products sum over ALL $u$ including $v$. The $u=v$ terms: $c_3^{(v)}\cdot[A_{vv}(A^3)_{vv} + (A^2)_{vv}(A^2)_{vv} + (A^3)_{vv}A_{vv}]$. Since $A_{vv}=0$ (no self-loops) and $(A^2)_{vv}=0$ (no 2-cycles in tournament), $(A^3)_{vv} = $ number of 3-cycles through $v = c_3^{(v)} = 15$. But for the $u=v$ term: $A_{vv}=0$, so all three terms vanish. ✓ No correction needed.
+
+So Type A total contribution at $v$:
+
+$15\cdot 3\cdot (A^4)_{vv} = 45\cdot c_4^{(v)}$ where $(A^4)_{vv}$ counts ALL 4-step closed walks from $v$, which (since all are simple 4-cycles) equals $c_4^{(v)} = 60$.
+
+Wait: I need to be more careful. $(A^4)_{vv}$ counts all closed walks of length 4 from $v$, which I established equals $c_4^{(v)} = 60$ (all simple). ✓
+
+Type A contribution per vertex: $15 \cdot (60+60+60) = 15\cdot180 = 2700$.
+
+Hmm wait — I'm double counting. Let me redo this.
+
+The Type A contribution to $(A^7)_{vv}$ from walks where a 3-cycle is embedded at an interior vertex $u\neq v$:
+
+$\sum_{u\neq v} c_3^{(u)} \cdot [(A^1)_{vu}(A^3)_{uv} + (A^2)_{vu}(A^2)_{uv} + (A^3)_{vu}(A^1)_{uv}]$
+
+The three terms correspond to $k_1\in\{1,2,3\}$ with $k_3=4-k_1$:
+
+$= c_3 \cdot \frac{3}{11} \cdot [$ wait, by vertex transitivity $c_3^{(u)}=15$ for all $u$, so:
+
+$= 15 \cdot \sum_{u\neq v} [(A)_{vu}(A^3)_{uv} + (A^2)_{vu}(A^2)_{uv} + (A^3)_{vu}(A)_{uv}]$
+
+$= 15 \cdot [(A^4)_{vv} - 0 + (A^4)_{vv} - 0 + (A^4)_{vv} - 0]$ (the $u=v$ terms all vanish as shown)
+
+$= 15 \cdot 3 \cdot (A^4)_{vv} = 45 \cdot 60 = 2700$.
+
+**Type B**: $k_2=4$ (4-cycle at interior vertex $u$). Then $k_1+k_3=3$ with $k_1,k_3\geq1$. Sub-cases: $(k_1,k_3)\in\{(1,2),(2,1)\}$.
+
+$\sum_{u\neq v} c_4^{(u)} \cdot [(A^1)_{vu}(A^2)_{uv} + (A^2)_{vu}(A^1)_{uv}]$
+
+$= 60 \cdot [(A^3)_{vv} + (A^3)_{vv}]$
+
+$= 60 \cdot 2 \cdot c_3^{(v)} = 120 \cdot 15 = 1800$.
+
+Now, total non-simple contribution per vertex: $N_7^{(v)} = $ (Type A) + (Type B) + (Type at $v$).
+
+Type at $v$ (the original (3+4) decomposition at $v$): from Document 7 = $2c_3^{(v)}c_4^{(v)} = 2\cdot15\cdot60 = 1800$.
+
+But wait — I need to also check: are Type A and Type B walks distinct from each other and from the "at $v$" type? And are there overlaps (walks counted in multiple types)?
+
+**Overlap issue**: a walk of length 7 might have MULTIPLE embedded closed sub-walks. For example, a walk with both a 3-cycle at $u$ AND a 3-cycle back at $v$: this would be a walk of total length $k_1 + 3 + k_3 = 7$ with the 3-cycle at $u$, AND $k_1+k_3=4$ with $k_1=1,k_3=3$ or $k_1=3,k_3=1$, plus additionally the "outer" walk of length $k_3=3$ from $u$ back to $v$ being itself a 3-cycle at $v$. This would be a walk of length $1+3+3=7$: go $v\to u$ (1 step), 3-cycle at $u$ (3 steps), 3-cycle at $v$ (3 steps, but we're at $u$, not $v$)... this doesn't quite work.
+
+Actually the overlap would be: a walk counted in both "3-cycle at interior vertex" AND "3+4 at base vertex $v$" categories. This happens if the outer walk from $v$ of length 4 (in the "at $v$" type) is itself non-simple (contains a closed sub-walk). But all length-4 closed walks in a tournament are simple 4-cycles, so the "at $v$" type walks $v\xrightarrow{3}\text{cycle}\xrightarrow{4}\text{cycle}\to v$ are simple in the 4-cycle portion. No overlap there.
+
+But a Type A walk (3-cycle at $u$, length-1 approach, length-3 return) where the length-3 return $u\xrightarrow{3}v$ is itself a 3-cycle through $u$ (not $v$) — this would be counted in Type A for the first 3-cycle, and the "return" walk of length 3 from $u$ to $v$ is a directed path, not necessarily a cycle. For it to be counted again in "at $v$" type, we'd need the overall walk to decompose as (3-cycle at $v$) + (4-cycle at $v$), which it won't if the 3-cycle is at $u\neq v$.
+
+The inclusion-exclusion for non-simple walks is correct as long as we correctly account for the decomposition. The issue is whether my decomposition covers ALL cases.
+
+**Are there other types?** A non-simple walk of length 7 from $v$ to $v$ must have a repeated vertex. I considered: (i) repetition at $v$ itself (Type "at $v$"), (ii) repetition at interior vertex $u$ with 3-cycle at $u$ (Type A), (iii) repetition at interior vertex $u$ with 4-cycle at $u$ (Type B). 
+
+Could there be a repetition at an interior vertex with a LONGER embedded cycle? $k_2=5$ would need $k_1+k_3=2$, forcing $k_1=k_3=1$: so the walk goes $v\to u\to(\text{5-cycle at }u)\to u\to v$, length $1+5+1=7$. ✓ This is **Type C**: 5-cycle at interior vertex $u$ with 1-step approach and 1-step return.
+
+$\sum_{u\neq v} c_5^{(u)} \cdot (A)_{vu}(A)_{uv}$
+
+$= c_5^{(u)} \cdot (A^2)_{vv}$
+
+But $(A^2)_{vv} = 0$ in a tournament (no 2-cycles). ✓ So Type C contributes 0.
+
+What about $k_2=6$? Then $k_1+k_3=1$, meaning either $k_1=0$ (no approach, $u=v$) or $k_3=0$ (no return, $u=v$). Both give $u=v$, which is the "at $v$" type. ✓
+
+**Are there walks with TWO separate interior repetitions?** E.g., a walk that has a 3-cycle at $u_1$ AND a 3-cycle at $u_2$ (different vertices), both embedded: total cycle lengths $3+3=6$, outer walk length $7-6=1$... this doesn't close properly unless the outer walk forms a loop.
+
+More precisely: $v\to u_1\to(\text{3-cycle at }u_1)\to u_1\to u_2\to(\text{3-cycle at }u_2)\to u_2\to v$: length $1+3+1+3+\text{steps}=...$. This would need $1+3+1+3+k_5=7$, so $k_5=-1$: impossible. So two embedded cycles of length 3 each would require total length $\geq 3+3+3$ (to travel between them and return), which is $\geq 9 > 7$. ✓ No such walks of length 7.
+
+**Complete accounting for non-simple length-7 walks**:
+
+Per vertex $v$:
+- Type "at $v$": $2c_3^{(v)}c_4^{(v)} = 1800$
+- Type A (3-cycle at interior $u$): $15\cdot3\cdot(A^4)_{vv} = 15\cdot3\cdot60 = 2700$
+- Type B (4-cycle at interior $u$): $60\cdot2\cdot(A^3)_{vv} = 60\cdot2\cdot15 = 1800$
+- Type C: 0
+
+Total per vertex: $1800+2700+1800 = 6300$.
+
+**But wait** — are these overcounting anything? Consider a walk that both: (a) decomposes as a 3-cycle then 4-cycle at $v$, AND (b) has a 3-cycle at some interior vertex $u$. Can a walk of length 7 be simultaneously of Type "at $v$" and Type A?
+
+Type "at $v$": $v\xrightarrow{3\text{-cycle}}v\xrightarrow{4\text{-cycle}}v$ or $v\xrightarrow{4\text{-cycle}}v\xrightarrow{3\text{-cycle}}v$.
+
+Type A: $v\xrightarrow{k_1}u\xrightarrow{3\text{-cycle}}u\xrightarrow{7-3-k_1}v$.
+
+A walk can't be both unless the 3-cycle at $v$ in Type "at $v$" is also a 3-cycle at some $u\neq v$. Since a 3-cycle has 3 vertices, if $u$ is one of the other two vertices of that 3-cycle (not $v$), then the 3-cycle through $v$ is "also" a 3-cycle through $u$. But the Type A decomposition centers the cycle at $u$, not $v$.
+
+**Actually there's a real double-counting issue here.** Consider the specific walk: $v\to u\to w\to v\to a\to b\to c\to v$ where $v\to u\to w\to v$ is a 3-cycle (at $v$) and $v\to a\to b\to c\to v$ is a 4-cycle (at $v$). This walk is Type "at $v$" (3-cycle then 4-cycle). But does it also satisfy Type A? The 3-cycle $v\to u\to w\to v$ is also a 3-cycle through $u$ and through $w$. If I try to view this walk as "Type A with 3-cycle at $u$": the walk goes $v\to u$ (1 step), then $u\to w\to v\to a\to\ldots$ — but the "3-cycle at $u$" would need to be $u\to w\to v\to u$... wait, does $v\to u$ exist in the tournament? The original walk has $v\to u$, so yes. The 3-cycle at $u$: $u\to w\to v\to u$ would need $v\to u$ (which we have!) to form a 3-cycle. So this is the SAME 3-cycle ($v,u,w$) viewed as centered at $u$ instead of $v$.
+
+So the walk $v\to u\to w\to v\to a\to b\to c\to v$ is:
+- Type "at $v$": (3-cycle $v,u,w$) + (4-cycle $v,a,b,c$)
+- Type A with $u$ as center: approach $v\to u$ (1 step), 3-cycle $u\to w\to v\to u$, return $u\to a\to b\to c\to v$... but this return is 4 steps, and the return walk $u\to a\to b\to c\to v$ needs to be a valid walk in $T_{11}$.
+
+Hmm wait: the original walk is $v\to u\to w\to v\to a\to b\to c\to v$. If I rewrite this as centered at $u$: the walk starts at $v$, goes to $u$, then the sub-walk from $u$ is $u\to w\to v\to a\to b\to c\to v\to ?$... but the walk ends at $v$, not $u$. For the Type A decomposition centered at $u$: we need the walk to go from $v$, reach $u$, do a closed sub-walk at $u$, then return to $v$. The closed sub-walk at $u$ would be $u\to w\to v\to\ldots\to u$. But in our walk, after $v$ (step 3) we go to $a,b,c,v$ — we never return to $u$. So this walk does NOT have a "3-cycle at interior vertex $u$" in the Type A sense.
+
+OK so the Type "at $v$" decomposition and Type A decomposition are different classes of walks and there's no double counting (as long as I'm careful that Type A requires the walk to return to the interior vertex $u$ before completing the journey back to $v$).
+
+Let me re-examine what "3-cycle at interior vertex $u$" means: the walk visits $u$ at two different points, with the sub-walk between those visits being a 3-cycle at $u$. So the walk has the pattern $v\to\cdots\to u\to(\text{3-cycle})\to u\to\cdots\to v$.
+
+The walk $v\to u\to w\to v\to a\to b\to c\to v$: does it revisit $u$? The vertices visited are $v,u,w,v,a,b,c,v$ — vertex $v$ is visited multiple times, but $u$ is visited only once. So this walk is NOT of Type A.
+
+**Type A walks specifically revisit an interior vertex $u\neq v$.** The walk $v\to u\to w\to v\to a\to b\to c\to v$ has $v$ revisited but $u$ not revisited — so it's Type "at $v$" only. ✓
+
+**A genuinely Type A walk**: $v\to u\to w\to x\to u\to y\to v$... length 6 — too short. Need length 7: $v\to u\to w\to x\to u\to y\to z\to v$ (length 7 with 3-cycle $u\to w\to x\to u$ at interior $u$, approach $v\to u$ of length 1, return $u\to y\to z\to v$ of length 3).
+
+This walk has pattern: $v\xrightarrow{1}u\xrightarrow{3\text{-cycle}}u\xrightarrow{3}v$. Does it revisit $v$? The return walk $u\to y\to z\to v$ — if $y=v$ or $z=v$, then $v$ is also revisited. Possible in principle but not required.
+
+**Does this Type A walk also belong to Type "at $v$"?** Only if the walk can also be decomposed as (3-cycle at $v$) + (4-cycle at $v$). The walk $v\to u\to w\to x\to u\to y\to z\to v$ visits $u$ twice (positions 1 and 4) but $v$ only at positions 0 and 6 (start/end). So this walk is NOT decomposable as (closed walk at $v$) + (closed walk at $v$). ✓ It's purely Type A.
+
+**Conclusion**: The three types (at $v$, Type A, Type B) are genuinely distinct. ✓
+
+**But there's one more issue**: can a walk be BOTH Type A (3-cycle at interior $u$) AND Type B (4-cycle at interior $w$)? A walk with BOTH a 3-cycle at $u$ and a 4-cycle at $w$ would have total embedded cycle length $3+4=7$, with 0 additional steps — meaning the walk IS exactly the composition, with no extra steps for traveling between $v$, $u$, and $w$. This forces $v=u=w$ (no travel between them), but $u,w\neq v$ by assumption. **Impossible.** ✓ No overlap between Type A and Type B.
+
+**Summary of non-simple length-7 walk contributions to $(A^7)_{vv}$**:
+
+- Type "at $v$": $2c_3^{(v)}c_4^{(v)} = 1800$
+- Type A: $45 \cdot (A^4)_{vv} = 45\cdot60 = 2700$
+- Type B: $120 \cdot (A^3)_{vv} = 120\cdot15 = 1800$
+
+Total: $6300$ per vertex.
+
+Total over all vertices: $N_7 = 11\times6300 = 69300$.
+
+$7c_7(T_{11}) = \text{tr}(A^7) - N_7 = 78540 - 69300 = 9240$.
+
+$c_7(T_{11}) = 9240/7 = 1320$. ✓ Integer! 
+
+**Verify divisibility**: $1320\times7/11 = 1320\times7/11 = 840$ directed 7-cycles per vertex. $1320\times7 = 9240$, $9240/11=840$ ✓ (each vertex in 840 directed 7-cycles).
+
+---
+
+## III. Attempting $c_9(T_{11})$
+
+This requires correcting $\text{tr}(A^9)$ for all non-simple walks of length 9. The types are more numerous.
+
+**$\omega^9$ computation**:
+$\omega^6 = \omega(5\omega+6) \cdot \omega^2$... let me use the recurrence.
+$\omega^6 = \omega\cdot\omega^5 = \omega(\omega-15) = \omega^2-15\omega = (-\omega-3)-15\omega = -16\omega-3$.
+$\omega^7 = \omega(-16\omega-3) = -16\omega^2-3\omega = -16(-\omega-3)-3\omega = 16\omega+48-3\omega = 13\omega+48$.
+$\omega^8 = \omega(13\omega+48) = 13\omega^2+48\omega = 13(-\omega-3)+48\omega = -13\omega-39+48\omega = 35\omega-39$.
+$\omega^9 = \omega(35\omega-39) = 35\omega^2-39\omega = 35(-\omega-3)-39\omega = -35\omega-105-39\omega = -74\omega-105$.
+$\text{Re}(\omega^9) = -74\cdot(-1/2)-105 = 37-105 = -68$. ✓ (Matches document.)
+
+$\text{tr}(A^9) = 5^9+10\cdot(-68) = 1953125-680 = 1952445$. ✓
+
+Non-simple walk types for length 9:
+
+**Type "at $v$" decompositions** (returning to $v$ mid-walk):
+- $(3,6)$ at $v$: 3-cycle then closed length-6 walk at $v$. Need $(A^6)_{vv}$.
+- $(4,5)$: 4-cycle then closed length-5 walk. Need $(A^5)_{vv}$.
+- $(5,4)$: similar.
+- $(6,3)$: similar.
+- But also $(3,3,3)$: three 3-cycles at $v$ — but $3\times3=9$ exactly.
+- $(3,6)$ and $(6,3)$ both need $(A^6)_{vv}$ and are symmetric.
+
+This rapidly becomes complex. Let me compute what's needed.
+
+$(A^3)_{vv} = c_3^{(v)} = 15$.
+$(A^4)_{vv} = c_4^{(v)} = 60$.
+$(A^5)_{vv} = c_5^{(v)} = 594\times5/11 = 270$.
+$(A^6)_{vv} = ?$ — need $c_6^{(v)}$ plus corrections for non-simple length-6 walks.
+
+**Non-simple length-6 closed walks at $v$**:
+- $(3,3)$: two 3-cycles at $v$: $c_3^{(v)}\cdot c_3^{(v)}\cdot$ (orderings)... actually for $(3,3)$: $\binom{c_3^{(v)}+1}{?}$... no. The number of walks that do a 3-cycle then another 3-cycle: for the first 3-cycle, there are $c_3^{(v)} = 15$ choices, and for the second, also 15 choices (independently). So $15^2 = 225$ ordered pairs. But each ordered pair (with possible repeats) gives a distinct walk. Total at-$v$ contribution: $225$ (since any two 3-cycles can be traversed in sequence). Wait — but the two 3-cycles could be the same cycle traversed twice, which is fine.
+
+Actually more carefully: the number of length-6 closed walks at $v$ that decompose as (3-cycle)(3-cycle) = (number of directed 3-cycles through $v$)$^2 = 15^2 = 225$.
+
+And the "at $v$" type for length 9 with $(3,6)$: the 3-cycle part gives 15 choices, and the length-6 closed walk at $v$ gives $(A^6)_{vv}$ choices (total, including non-simple). We need $(A^6)_{vv}$.
+
+$(A^6)_{vv}$ = (simple 6-cycles through $v$) + (non-simple length-6 closed walks through $v$).
+
+Simple 6-cycles: $c_6^{(v)} = c_6\times6/11$.
+
+Non-simple length-6 at $v$: only $(3,3)$ type (two 3-cycles), giving $15^2=225$.
+
+So $(A^6)_{vv} = c_6^{(v)} + 225$.
+
+I need $c_6(T_{11})$.
+
+$\text{tr}(A^6) = 5^6 + 10\text{Re}(\omega^6) = 15625+10(-16\cdot(-1/2)-3) = 15625+10(8-3) = 15625+50 = 15675$.
+
+Non-simple length-6 closed walks: Type "at $v$" $(3,3)$: $\sum_v 15^2 = 11\cdot225=2475$. Type A (3-cycle at interior $u$, approach+return of length 3): $c_3^{(u)}\cdot\sum_{k_1+k_3=3, k_1,k_3\geq1}...$
+
+$(k_1,k_3)\in\{(1,2),(2,1)\}$: $c_3^{(u)}\cdot[(A)_{vu}(A^2)_{uv}+(A^2)_{vu}(A)_{uv}] = 15\cdot[(A^3)_{vv}+(A^3)_{vv}] = 15\cdot2\cdot15 = 450$ per vertex.
+
+Type B (4-cycle at interior $u$, approach+return of length 2, $k_1=k_3=1$): $c_4^{(u)}\cdot(A)_{vu}(A)_{uv} = 60\cdot(A^2)_{vv} = 60\cdot0 = 0$ per vertex (since $(A^2)_{vv}=0$ in tournament). ✓
+
+Total non-simple per vertex: $225+450 = 675$.
+
+$6c_6 = \text{tr}(A^6) - 11\cdot675 = 15675-7425 = 8250$.
+$c_6(T_{11}) = 8250/6 = 1375$. ✓ Integer.
+
+$(A^6)_{vv} = 1375\cdot6/11 + 225 = 750+225 = 975$.
+
+Now back to $c_9$.
+
+This computation is getting very involved. Let me just set up the correction systematically.
+
+$\text{tr}(A^9) = 9c_9 + N_9$ where $N_9$ = total non-simple contributions.
+
+$N_9$ per vertex $v$:
+
+**Type "at $v$"** (walk returns to $v$ at some intermediate point):
+
+$(3,6)$: $c_3^{(v)}\cdot(A^6)_{vv} = 15\cdot975 = 14625$
+$(6,3)$: same = $14625$
+$(4,5)$: $c_4^{(v)}\cdot(A^5)_{vv} = 60\cdot270 = 16200$
+$(5,4)$: same = $16200$
+$(3,3,3)$: $c_3^{(v)}\cdot c_3^{(v)}\cdot c_3^{(v)} = 15^3 = 3375$ (three consecutive 3-cycles at $v$, 1 ordering)... actually there are multiple orderings. The number of length-9 closed walks at $v$ decomposing as three 3-cycles: $c_3^{(v)}\cdot c_3^{(v)}\cdot c_3^{(v)} = 15^3=3375$ (choose each 3-cycle independently; they can repeat). Wait: the walk is a sequence of 9 arcs, and we partition it as (first 3)(next 3)(last 3). Each group is a 3-cycle at $v$, independently chosen. So yes, $15^3=3375$ ways.
+
+But I need to subtract overlaps from the $(3,6)$ and $(6,3)$ types that themselves decompose into $(3,3)$: the $(A^6)_{vv}$ I computed already includes non-simple length-6 walks (including $(3,3)$ type). So the type $(3,6)$ contribution $c_3^{(v)}\cdot(A^6)_{vv}$ already includes cases where the length-6 walk itself is a $(3,3)$ walk — which would give a $(3,3,3)$ pattern overall. 
+
+**There's an inclusion-exclusion issue**: the "at $v$" types $(3,6)$, $(6,3)$, $(4,5)$, $(5,4)$ are based on the FIRST return to $v$. If I use the first-return decomposition, I avoid double-counting.
+
+This is getting into **renewal theory** territory. For a clean computation, I should use the **first-return** decomposition:
+
+Let $F_k^{(v)}$ = number of closed walks of length $k$ from $v$ to $v$ that do NOT visit $v$ in between (first-return walks). Then:
+
+$(A^k)_{vv} = \sum_{j=1}^{k} F_j^{(v)} \cdot (A^{k-j})_{vv}$
+
+with $(A^0)_{vv} = 1$.
+
+This gives a recursive formula for extracting simple cycle contributions, but it requires knowing $F_j^{(v)}$ for all $j<k$, which in turn requires knowledge of all shorter cycle counts.
+
+Given the complexity, let me just try to compute $c_9(T_{11})$ assuming the formula $H(T_{11}) = 11\cdot3^{10}$ and see if OCF becomes consistent.
+
+**Checking OCF consistency for $T_{11}$ using the conjecture**:
+
+$H(T_{11}) = 649539$.
+
+OCF: $H = 1 + 2\sum c_{2k+1} + 4\alpha_2 + 8\alpha_3 + \ldots$
+
+Known: $c_3=55$, $c_5=594$, $c_7=1320$, $c_6=1375$ (not relevant, it's even). And $c_9=?$, $c_{11}=h_{11}=?$.
+
+$\sum_{\text{odd }k\leq11} c_k = 55+594+1320+c_9+h_{11}$.
+
+Also need $\alpha_2,\alpha_3,...$
+
+The minimum $n$ for three pairwise disjoint 3-cycles is 9. Since $|T_{11}|=11\geq9$: we can have 3 disjoint 3-cycles (9 vertices) with 2 remaining. So $\alpha_k$ for $k\geq3$ could be nonzero.
+
+This is getting very complex. Let me just verify the conjecture via a targeted consistency check.
+
+**From vertex-transitivity**: $H(T_{11})=11\times$(Ham paths starting from vertex 0). If $H=649539$: paths from vertex 0 = $649539/11=59049=3^{10}$.
+
+**Check**: $H(\text{from }0) = 3^{10}$? The five branches from vertex 0 (five out-neighbors): by the automorphism $x\mapsto ax$ for $a\in\{1,3,4,5,9\}$ (QRs, which are automorphisms of $T_{11}$): all five branches from 0 give equal path counts. So $H(\text{from }0) = 5\times$(paths via branch $0\to1$). For this to equal $3^{10}$: paths via $0\to1$ = $3^{10}/5$. But $3^{10}=59049$ is not divisible by 5! **Contradiction?**
+
+Wait — $x\mapsto 2x$ is an automorphism of $T_7$ mapping $0\to1$ branch to $0\to2$ branch. Similarly for $T_{11}$: $x\mapsto 3x$ maps $0\to1$ to $0\to3$ (since $3\in$ QRs). So the branches from 0 to different out-neighbors are related by automorphisms mapping 1 to 3, to 4, to 5, to 9.
+
+Is $x\mapsto ax$ for any QR $a$ mapping branch $0\to1$ to branch $0\to a$? Yes: the automorphism $x\mapsto ax$ maps $0\to0$ and $1\to a$, and preserves arc directions (since multiplying differences by a QR preserves membership in QRs). ✓
+
+So ALL five branches from 0 have equal counts. $H(\text{from }0) = 5\times B$ where $B$ = paths via branch $0\to1$. For $H(T_{11})=649539$: $H(\text{from }0) = 649539/11 = 59049 = 5B$. But $59049/5 = 11809.8$... not an integer!
+
+**This is a serious problem.** $59049 = 3^{10}$ is not divisible by 5. But $H(\text{from }0)$ must be divisible by 5 (five equal branches). So $H(T_{11}) = 11\times 5\times B = 55B$ for some integer $B$. Thus $55\mid H(T_{11})$.
+
+$649539/55 = 11809.8...$. Not an integer! **The conjecture $H(T_{11}) = 649539$ is inconsistent with the 5-fold symmetry at each vertex.**
+
+So either the conjecture is wrong for $p=11$, or my symmetry argument is wrong.
+
+**Let me recheck the symmetry**: for $T_7$, $H(\text{from }0) = 27 = 3\times9 = 3B$ with $B=9$. Three branches from 0, each giving 9 paths. $27/3=9$ ✓. And $H(T_7)=189=7\times27$. ✓
+
+For $T_5$: $H(\text{from }0)=3=$ one branch (vertex 0 has 2 out-neighbors, two branches giving... wait: 2 out-neighbors, $H(\text{from }0)=3$ paths. But $3/2$ is not an integer. So the two branches from vertex 0 in $T_5$ don't give equal counts?
+
+Wait: for $T_5$, I found 3 Ham paths from vertex 0. Let me check the branches:
+- $0\to1\to2\to3\to4$: branch $0\to1$
+- $0\to2\to3\to4\to1$: branch $0\to2$
+- $0\to2\to4\to1\to3$: branch $0\to2$
+
+So branch $0\to1$: 1 path. Branch $0\to2$: 2 paths. **Unequal!**
+
+But the automorphism $x\mapsto 2x$ maps $0\to0$ and $1\to2$. So it should map branch $0\to1$ to branch $0\to2$. If this is an automorphism, both branches should have equal counts. Contradiction?
+
+Let me verify: $x\mapsto 2x\pmod5$ maps $0\to0, 1\to2, 2\to4, 3\to1, 4\to3$. Does this preserve $T_5$'s arc directions? $T_5$: $i\to j$ iff $j-i\in\{1,2\}\pmod5$. Under $x\mapsto 2x$: arc $i\to j$ maps to $2i\to2j$, with difference $2j-2i=2(j-i)$. $2\{1,2\}=\{2,4\}\pmod5$. But QRs of $T_5$ are $\{1,2\}$, and $\{2,4\}\neq\{1,2\}$. So $x\mapsto2x$ is NOT an automorphism of $T_5$!
+
+**I was wrong.** The automorphisms of the Paley tournament $T_p$ are the maps $x\mapsto ax+b$ where $a$ is a QR mod $p$ (to preserve the QR difference structure). For $T_5$: QRs are $\{1,4\}$ (since $1^2=1, 2^2=4, 3^2=4, 4^2=1$ mod 5). So $x\mapsto 4x$ is an automorphism. $x\mapsto 2x$ is NOT.
+
+Wait: for $T_5$ with arcs $i\to j$ iff $j-i\in\{1,2\}\pmod5$: the automorphism group consists of maps $x\mapsto ax+b$ where $a\{1,2\}=\{1,2\}\pmod5$, i.e., $a\in\{1,2\}$... wait: $1\times\{1,2\}=\{1,2\}$ ✓ and $2\times\{1,2\}=\{2,4\}$. $\{2,4\}\neq\{1,2\}$, so $a=2$ doesn't work for $T_5$.
+
+What value of $a$ gives $a\{1,2\}=\{1,2\}\pmod5$? $a=1$: trivially ✓. Any other? $a=2$: $\{2,4\}$ ✗. $a=3$: $\{3,6\equiv1\}=\{1,3\}$ ✗. $a=4$: $\{4,8\equiv3\}=\{3,4\}$ ✗. So only $a=1$ (translations) preserve $T_5$. The automorphism group is just translations $\mathbb{Z}_5$.
+
+**This means $T_5$'s automorphism group acts transitively on vertices but NOT on arcs.** The "Paley tournament on 5 vertices" is $\mathbb{Z}_5$-transitive but not arc-transitive.
+
+For $T_7$ (arcs $i\to j$ iff $j-i\in\{1,2,4\}\pmod7$): the QRs are $\{1,2,4\}$. Map $x\mapsto 2x$: $2\{1,2,4\}=\{2,4,1\}=\{1,2,4\}$ ✓. Map $x\mapsto 4x$: $4\{1,2,4\}=\{4,1,2\}=\{1,2,4\}$ ✓. So $T_7$ has automorphisms $x\mapsto ax+b$ for $a\in\{1,2,4\}$, $b\in\mathbb{Z}_7$ — a group of order $3\times7=21$. This group is arc-transitive.
+
+For $T_{11}$ (QRs $\{1,3,4,5,9\}$): map $x\mapsto ax$ preserves QRs iff $a\cdot\{1,3,4,5,9\}=\{1,3,4,5,9\}\pmod{11}$. Check $a=3$: $3\{1,3,4,5,9\}=\{3,9,12,15,27\}\equiv\{3,9,1,4,5\}=\{1,3,4,5,9\}$ ✓. Check $a=4$: $4\{1,3,4,5,9\}=\{4,12,16,20,36\}\equiv\{4,1,5,9,3\}=\{1,3,4,5,9\}$ ✓. So $T_{11}$ also has arc-transitive automorphisms $x\mapsto ax+b$ for $a\in\{1,3,4,5,9\}$, $b\in\mathbb{Z}_{11}$, group of order $5\times11=55$.
+
+So the automorphism $x\mapsto ax$ with $a\in\{1,3,4,5,9\}$ maps vertex 0 to vertex 0 and maps branch $0\to1$ to branch $0\to a$ (since $a\cdot1=a$). This IS a valid automorphism, so ALL FIVE branches from vertex 0 are equivalent. Therefore $H(\text{from }0) = 5B$ for integer $B$.
+
+**For $H(T_{11}) = 649539$**: $H(\text{from }0) = 649539/11 = 59049$. And $59049 = 5B$ gives $B = 59049/5 = 11809.8$... not an integer. **Contradiction.** ✓ (My earlier calculation.)
+
+**Conclusion: $H(T_{11}) \neq 649539$.** The conjecture $H(T_p) = p\cdot3^{(p-1)(p-3)/8}$ fails at $p=11$.
+
+---
+
+## IV. What Divisibility Must $H(T_{11})$ Satisfy?
+
+From the arc-transitivity: $55\mid H(T_{11})$ (since $H(\text{from }0) = 5B$ and $H(T_{11}) = 11\times5B = 55B$).
+
+Also $11\mid H(T_{11})$ (from free $\mathbb{Z}_{11}$ action). And $5\mid H(T_{11})$ from the arc symmetry. So $55\mid H(T_{11})$.
+
+**Checking the conjecture values**:
+- $H(T_3) = 3$: $\mathbb{Z}_3$ action gives $3\mid3$ ✓. Arc-transitivity: $T_3$ has group of order $3\times1=3$ (only translations, since the single QR $\{1\}$ gives only $a=1$). Hmm, for $p=3$: QRs = $\{1\}$ (only $1^2=1$ mod 3). So $a\cdot\{1\}=\{1\}$ only for $a=1$. Group = translations only, order 3. Each vertex has 1 out-neighbor, 1 branch. So $H(T_3)=3=3\times1$ ✓.
+
+- $H(T_5) = 15$: $55\nmid15$, but for $T_5$ arc-transitivity doesn't hold (only $\mathbb{Z}_5$ symmetry). From vertex 0, branches to $\{1,2\}$ (2 out-neighbors, NOT all equivalent since no arc-transitive automorphism). So $H(\text{from }0) = 3$ and $H(T_5)=15=5\times3$. The branches $0\to1$ and $0\to2$ give 1 and 2 paths respectively (not equal). ✓ No arc-transitivity constraint for $T_5$.
+
+- $H(T_7) = 189 = 55\nmid189$, but $T_7$ arc group has order 21 (not 55). $7\times3\mid189$: $21\mid189=9\times21$ ✓. Branches from 0: 3 branches, all equal (arc-transitive with $|$aut$|=21$), giving $189/7/3=9$ paths per branch. ✓
+
+- For $T_{11}$: arc group has order 55. $H(T_{11}) = 55B$, so $B = H(\text{from }0)/5$.
+
+The smallest values of $H(T_{11})$ consistent with $55\mid H$: $55, 110, 165,...$
+
+From the pattern, $H$ grows rapidly. Let me get a lower bound: $H(T_{11})\geq H(\text{transitive}) = 1$... that's trivially weak. From OCF: $H(T_{11}) \geq 1 + 2\times55 = 111$ (just from 3-cycles).
+
+A better estimate: $H(T_{11}) = 1 + 2(c_3+c_5+c_7+c_9+h_{11}) + 4\alpha_2+... = 1+2(55+594+1320+c_9+h_{11})+4\alpha_2+...$
+
+$= 1 + 2(1969+c_9+h_{11}) + 4\alpha_2+...$
+
+Without knowing $c_9$ and $h_{11}$, we can't complete this.
+
+---
+
+## V. The Correct Pattern for $H(T_p)$
+
+The conjecture $H(T_p)=p\cdot3^{\binom{(p-1)/2}{2}}$ fails at $p=11$. What pattern do the verified values suggest?
+
+$H(T_3)=3$, $H(T_5)=15$, $H(T_7)=189$.
+
+Divisibility constraints:
+- $3\mid H(T_3)$, $H(T_3)=3\cdot1$ with $B_3=1$.
+- $5\mid H(T_5)$ (from $\mathbb{Z}_5$), $H(T_5)=5\cdot3$ with $B_5=3$.
+- $21\mid H(T_7)$ (from arc group of order 21), $H(T_7)=21\cdot9$ with $B_7=9$.
+- $55\mid H(T_{11})$, $H(T_{11})=55\cdot B_{11}$.
+
+Pattern in $B_p = H(T_p)/|{\rm Aut}(T_p)|$: $B_3=1, B_5=3, B_7=9$.
+
+$1,3,9 = 3^0, 3^1, 3^2$! So **$B_p = 3^{(p-3)/4}$** for $p\equiv3\pmod4$?
+
+- $p=3$: $(3-3)/4=0$, $B_3=3^0=1$ ✓
+- $p=7$: $(7-3)/4=1$, $B_7=3^1=3$... but $B_7=9=3^2$ ✗.
+
+Hmm. $|{\rm Aut}(T_3)|=3$, $|{\rm Aut}(T_5)|=5$, $|{\rm Aut}(T_7)|=21$, $|{\rm Aut}(T_{11})|=55$.
+
+Actually for $T_5$: the automorphism group should also include the multiplier maps. QRs of $\mathbb{F}_5$ are $\{1,4\}$ (since $1^2=1, 2^2=4$ mod 5). So $a\in\{1,4\}$ preserves the QR set: $1\cdot\{1,2\}=\{1,2\}$ ✓, $4\cdot\{1,2\}=\{4,3\}=\{3,4\}$... hmm, $T_5$ has arcs $j-i\in\{1,2\}$, not $\{1,4\}$. 
+
+Wait: I need to recheck what the "Paley tournament on 5 vertices" is. Since $5\equiv1\pmod4$, the Paley construction technically requires $p\equiv3\pmod4$ for a tournament. For $p=5$, the "regular tournament" on 5 vertices with arcs $j-i\in\{1,2\}$ is the one used throughout. Its automorphisms: $x\mapsto ax+b$ preserves it iff $a\{1,2\}=\{1,2\}\pmod5$. $a=1$: ✓. $a=2$: $\{2,4\}$ ✗. $a=3$: $\{3,6\equiv1\}=\{1,3\}$ ✗. $a=4$: $\{4,8\equiv3\}=\{3,4\}$ ✗. So only $a=1$, group = $\mathbb{Z}_5$, order 5. ✓
+
+For $T_7$ (arcs $j-i\in\{1,2,4\}$, the QRs mod 7): aut group is affine maps with $a\in\{1,2,4\}$, order $3\times7=21$. ✓
+
+For $T_{11}$ (arcs $j-i\in\{1,3,4,5,9\}$, the QRs mod 11): aut group has $a\in\{1,3,4,5,9\}$, order $5\times11=55$. ✓
+
+So $|{\rm Aut}(T_p)|$: for $p=3$: 3; $p=5$: 5; $p=7$: 21; $p=11$: 55.
+
+These are $p, p, p(p-1)/2, p(p-1)/2$... for $p=3$: $3\times1=3$ (since $(p-1)/2=1$ for $p=3$, and $a=1$ is the only multiplier giving QR = $\{1\}$). Actually $|{\rm Aut}(T_p)| = p\cdot\frac{p-1}{2}$ for $p\equiv3\pmod4$ (Paley tournament), and $|{\rm Aut}(T_5)| = 5$ (only translations since $T_5$ isn't strictly Paley).
+
+$B_p = H(T_p)/|{\rm Aut}(T_p)|$:
+- $p=3$: $B_3=3/3=1$
+- $p=5$: $B_5=15/5=3$
+- $p=7$: $B_7=189/21=9$
+- $p=11$: $B_{11}=H(T_{11})/55$
+
+$B_3=1, B_5=3, B_7=9 = 3^0, 3^1, 3^2$.
+
+The pattern $B_p = 3^{(p-3)/4}$ for $p\equiv3\pmod4$:
+- $p=3$: $3^0=1$ ✓
+- $p=7$: $3^1=3$... but $B_7=9=3^2$. ✗
+
+$B_p = 3^{(p-3)/2}$?
+- $p=3$: $3^0=1$ ✓
+- $p=7$: $3^2=9$ ✓
+- $p=11$: $3^4=81$, giving $H(T_{11})=55\times81=4455$.
+
+Check: $4455 = 55\times81$ ✓. But what about $p=5$? $3^{(5-3)/2}=3^1=3$, $B_5=3$ ✓. So perhaps $B_p = 3^{(p-3)/2}$ for all odd primes $p$!
+
+Giving: $H(T_p) = |{\rm Aut}(T_p)|\cdot3^{(p-3)/2}$.
+
+For $p=5$: $|{\rm Aut}|=5$, $H=5\cdot3=15$ ✓.
+For $p=7$: $|{\rm Aut}|=21$, $H=21\cdot9=189$ ✓.
+For $p=11$: $|{\rm Aut}|=55$, $H=55\cdot81=4455$.
+
+**Checking divisibility**: $H(T_{11})=4455=55\times81$, and $55\mid4455$ ✓. And $55B_{11}=4455$ gives $B_{11}=81=3^4$ ✓.
+
+**This is the corrected conjecture**: $H(T_p) = \frac{p(p-1)}{2}\cdot3^{(p-3)/2}$ for Paley-type tournaments on primes $p\geq5$ (where the automorphism group has order $p(p-1)/2$), and $H(T_3)=3$.
+
+Actually: for $p=3$, $|{\rm Aut}|=3=p$ (not $p(p-1)/2=3$ either, since $(p-1)/2=1$). So $p(p-1)/2=3\cdot1=3$, and $H(T_3)=3=3\cdot3^0=3\cdot1$ ✓.
+
+So the formula $H(T_p) = \frac{p(p-1)}{2}\cdot3^{(p-3)/2}$ works for all primes in our sequence!
+
+Verify: $\frac{p(p-1)}{2}\cdot3^{(p-3)/2}$:
+- $p=3$: $\frac{3\cdot2}{2}\cdot3^0 = 3\cdot1=3$ ✓
+- $p=5$: $\frac{5\cdot4}{2}\cdot3^1=10\cdot3=30\neq15$ ✗!
+
+So $p=5$ breaks this formula. The issue: for $p=5$, $|{\rm Aut}(T_5)|=5\neq p(p-1)/2=10$.
+
+Let me just use $H(T_p) = |{\rm Aut}(T_p)|\cdot3^{(p-3)/2}$ directly:
+
+- $p=3$: $3\cdot1=3$ ✓
+- $p=5$: $5\cdot3=15$ ✓
+- $p=7$: $21\cdot9=189$ ✓
+- $p=11$: $55\cdot81=4455$ (conjectured)
+
+This is a cleaner formula, but requires knowing $|{\rm Aut}(T_p)|$ for each $p$.
+
+For $p\equiv3\pmod4$: $|{\rm Aut}(T_p)| = p(p-1)/2$.
+
+$H(T_p) = \frac{p(p-1)}{2}\cdot3^{(p-3)/2}$ for $p\equiv3\pmod4$ and $p\geq3$.
+
+- $p=3$: $3\cdot1\cdot1=3$ ✓
+- $p=7$: $7\cdot3\cdot9=189$ ✓
+- $p=11$: $11\cdot5\cdot81=4455$ (conjectured)
+
+For $p=5$ ($p\equiv1\pmod4$, different structure): $H(T_5)=15=5\cdot3=5\cdot3^1$.
+
+The formula $\frac{p(p-1)}{2}\cdot3^{(p-3)/2}$ at $p=5$ gives $10\cdot3=30\neq15$. The discrepancy is a factor of 2, because $|{\rm Aut}(T_5)|=5$, not 10.
+
+**So there are two cases**:
+- $p\equiv3\pmod4$: $H(T_p) = \frac{p(p-1)}{2}\cdot3^{(p-3)/2}$
+- $p=5$ (and $p\equiv1\pmod4$ generally?): $H(T_p) = p\cdot3^{(p-3)/2}$... wait: $5\cdot3^1=15$ ✓.
+
+Interesting: for $p=7$, $p\cdot3^{(p-3)/2}=7\cdot9=63\neq189$. So this alternate formula doesn't work for $p\equiv3\pmod4$.
+
+The difference between $p=5$ and $p=7$: the automorphism group size. For $p=5$: aut group is just translations ($|G|=p$). For $p=7$: aut group is affine maps with multiplier in QRs ($|G|=p\cdot\frac{p-1}{2}$).
+
+**Unified formula**: $H(T_p) = |{\rm Aut}(T_p)|\cdot3^{(p-3)/2}$.
+
+---
+
+## VI. Final Summary
+
+**Verified calculations**:
+
+1. $c_4(T_{11})=165$ ✓
+2. $c_5(T_{11})=594$ ✓  
+3. $c_7(T_{11})=1320$ ✓ (with correct non-simple walk corrections: Type "at $v$" + Type A + Type B = 1800+2700+1800=6300 per vertex, total correction 69300, giving $c_7=9240/7=1320$)
+4. $c_6(T_{11})=1375$ ✓ (intermediate computation needed for $c_9$)
+5. Conjecture $H(T_p)=p\cdot3^{(p-1)(p-3)/8}$ **disproved** for $p=11$ by 5-fold branch symmetry argument: $H(T_{11})$ must be divisible by 55, but $649539/55\notin\mathbb{Z}$.
+6. **Corrected conjecture**: $H(T_p) = |{\rm Aut}(T_p)|\cdot3^{(p-3)/2}$ giving $H(T_{11})=4455$.
+
+**Open**: verify $H(T_{11})=4455$ directly. This requires either computation or further development of the OCF for $T_{11}$ (computing $c_9$, $h_{11}$, $\alpha_2$, $\alpha_3$).

@@ -84,12 +84,6 @@ Claim A is verified at n=7 by random sampling (3,500 pairs, 0 failures). Full ex
 **T015** #failure-characterization #n6 | certainty: high (RESOLVED) | source: MASTER_FINDINGS F5, FINAL_FINDINGS
 RESOLVED: The per-path identity fails iff some Type-II position has mu > 1, iff V\{v,a,b} contains a 3-cycle in T-v. See THM-009. The ~30% failure rate corresponds to the probability that complement vertices form a 3-cycle.
 
-**T019** #near-cancellation #two-effects #proof-strategy | certainty: medium | source: FINAL_FINDINGS
-The two error effects at n=6 (mu>1 inflation of 3-cycles: mean A-B ~ -5.88, and 5-cycle contributions: mean B-D ~ +5.88) nearly cancel. This suggests decomposing Claim A as (A=B) + (B=D) where each half is a more tractable identity. The near-cancellation hints at deep structural coupling between mu weights and higher-cycle contributions.
-
-**T020** #block-counting #contiguous #3-cycle | certainty: high | source: file.txt
-For n=4, exactly 3 Ham paths contain a 3-cycle as contiguous block (THM-010). For general n, H_C^+(T) = sum_Q f_C(Q) with explicit f_C (THM-011). The gap between contiguous-block paths and ALL paths is the main obstacle. Understanding non-contiguous interleaving of cycle vertices with complement vertices is key.
-
 **T021** #arc-reversal-invariance #sum-equality #key-step | certainty: high (key open problem) | source: file.txt
 Arc-reversal invariance D(T,v) = D(T',v) is the key unproved step. Requires showing sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]). This is a SUM equality, not a bijection. Both sides can be expressed in terms of path-pairs in T_0 (T with arc (i,j) deleted), since T[V\V(C)] = T'[V\V(C)] when V(C) contains both i and j. See OPEN-Q-009.
 
@@ -112,20 +106,36 @@ H(T_11) = 95095 = 5*7*11*13*19 = 55*1729, where 1729 is the Hardy-Ramanujan taxi
 **T026** #paley-tournament #c9 #symmetry | certainty: high | source: kind-pasteur-2026-03-05-S2
 h_QR = h_NQR = 201. This equality reflects the anti-automorphism x->2x of T_11 (maps QR pair {0,1} to NQR pair {0,2}) combined with T_11 being self-complementary (T_11 ~= T_11^op). Exploitable for all Paley tournament sub-tournament computations.
 
-**T028** #conflict-graph #complete #n5 #ocf-proof | certainty: 5 (proved) | source: opus-2026-03-05-S2
-At n=5, the conflict graph Ω(T) is ALWAYS complete: any two odd cycles share a vertex. This is because 3-cycles use 3/5 vertices and 5-cycles use all 5. Consequence: I(Ω,2) = 1 + 2·|cycles| (only independent sets of size 0 and 1). The OCF formula ΔH = ΔI reduces to ΔH = 2·(#destroyed - #created), verified 732/732. Combined with OCF for transitive tournament (base case), this proves OCF for all n=5 tournaments.
-
-**T029** #arc-flip-formula #ocf-reduction #n6 | certainty: 5 (verified 2216/2216) | source: opus-2026-03-05-S2, THM-013
-At n=6: ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5) where s_x = 1-T[x][i]-T[j][x], B_x = V\{i,j,x}. This is a closed-form expression for how the independence polynomial changes under a single arc flip. Combined with OCF for transitive base case, proving this = ΔH proves OCF (and hence Claim A) for all n=6 tournaments. The identity involves only sub-tournament H-values, arc directions, and 5-cycle counts. See THM-013 and 04-computation/q009_fixed_formula.py.
-
 **T027** #n7-ABD #near-cancellation #a-eq-d #per-path-failure | certainty: high (1050 pairs tested) | source: kind-pasteur-2026-03-05-S3
 At n=7, A (TypeII count) and D (Claim A RHS/2) do NOT coincide in general. Only 5.9% exact equality. Mean A-D ~ 0.097 (near zero), but range -39 to 26 (large variance). A-B has mean -73.78, B-D has mean +73.88 -- large but nearly opposite. The near-cancellation (A-D ~ 0 on average) is statistical, not algebraic. The per-path formula does not simplify at n=7 as hoped. Key: the 5-cycle contributions (which are trivially mu=1 at n=7) do NOT collapse A-D to 0. See 03-artifacts/code/test_n7_ABD.py for computation.
 
-**T030** #n8-formula-failure #vd-pairs-35 #general-formula | certainty: 5 (verified) | source: opus-2026-03-05-S2
+---
+
+## Arc-Flip Approach (opus-S2 + kind-pasteur-S5, merged)
+
+**T028** #conflict-graph #complete #n5 #ocf-proof | certainty: high (proved) | source: opus-2026-03-05-S2
+At n=5, the conflict graph Ω(T) is ALWAYS complete: any two odd cycles share a vertex. This is because 3-cycles use 3/5 vertices and 5-cycles use all 5. Consequence: I(Ω,2) = 1 + 2·|cycles| (only independent sets of size 0 and 1). The OCF formula ΔH = ΔI reduces to ΔH = 2·(#destroyed - #created), verified 732/732. Combined with OCF for transitive tournament (base case), this proves OCF for all n=5 tournaments.
+
+**T029** #arc-flip-formula #ocf-reduction #n6 | certainty: high (verified 2216/2216) | source: opus-2026-03-05-S2, THM-013
+At n=6: ΔI = -2·Σ_x s_x·H(B_x) + 2·(D5-C5) where s_x = 1-T[x][i]-T[j][x], B_x = V\{i,j,x}. This is a closed-form expression for how the independence polynomial changes under a single arc flip. Combined with OCF for transitive base case, proving this = ΔH proves OCF (and hence Claim A) for all n=6 tournaments. The identity involves only sub-tournament H-values, arc directions, and 5-cycle counts. See THM-013 and 04-computation/q009_fixed_formula.py.
+
+**T030** #n8-formula-failure #vd-pairs-35 #general-formula | certainty: high (verified) | source: opus-2026-03-05-S2
 The simplified formula DH = -2*sum(s_x*H(B_x)) + 2*sum(DL-CL) FAILS at n=8 (8/30 random flips). The failure is due to VD 3-5 cycle pairs that first appear at n=8 (3+5=8 vertices). The correct general formula is DH = sum_{k>=1} 2^k * Delta(alpha_k) where Delta(alpha_k) recursively depends on alpha_{k-1} of cycle complements. Verified n=4,...,9 including n=9 where alpha_3 is nonzero. See THM-013 updated.
 
-**T031** #swap-involution #proof-strategy #blocking-vertices | certainty: 5 (verified) | source: opus-2026-03-05-S2, THM-014
+**T031** #swap-involution #proof-strategy #blocking-vertices | certainty: high (verified) | source: opus-2026-03-05-S2, THM-014
 For proving ΔH = ΔI, the swap involution (swap i,j positions in a Ham path) creates a perfect matching between adj(i,j) and adj'(j,i) paths. Unmatched T-paths are blocked by s_x=-1 vertices (either predecessor of i doesn't beat j, or successor of j beats i). Unmatched T'-paths blocked by s_x=+1 vertices. This gives adj(i,j)-adj'(j,i) = #U_T - #U_T'. The blocking structure directly connects to the s_x values in the cycle formula. See THM-014.
 
-**T028** #paley-tournament #integrality #cycle-counts #structural-theorem | certainty: medium | source: kind-pasteur-2026-03-05-S5 (inbox/other.txt)
+**T032** #arc-flip #E-invariance #proof-strategy | certainty: high (exhaustive n<=5, random n=6) | source: kind-pasteur-2026-03-05-S5
+E(T) = H(T) - I(Omega(T), 2) is invariant under arc flips. Verified exhaustively for n<=5 (10240 flip tests) and by random sampling for n=6 (600+ tests). This gives a NEW PROOF STRATEGY for OCF/Claim A: prove E flip-invariant, then since E(transitive)=0, E=0 for all T. See PROP-001.
+
+**T033** #arc-flip #A-clique #delta-I-formula | certainty: high (algebraic derivation + verification) | source: kind-pasteur-2026-03-05-S5
+The change in I(Omega(T), 2) under an arc flip has a clean algebraic formula via the A-clique argument: delta_I = 2*[sum_gained I(R_C, 2) - sum_lost I(R_C, 2)] where R_C = Omega(complement). This is the SAME technique as the Claim B proof, adapted to arc flips instead of vertex deletion. Verified at n=5,6.
+
+**T034** #arc-flip #simple-formula #n-dependence | certainty: high | source: kind-pasteur-2026-03-05-S5
+The simple formula delta = 2*(#gained_cycles - #lost_cycles) holds at n<=5 but FAILS at n>=6 (31% failure rate). This is because I(R_C, 2) = 1 for all cycles at n<=5 (complements too small for independent cycles), but I(R_C, 2) can be 3 at n=6 (complement has a free 3-cycle). The correct formula uses the full I(R_C, 2) weights.
+
+**T035** #contiguous-block #dead-end | certainty: high (confirmed dead end) | source: kind-pasteur-2026-03-05-S5
+The "contiguous block" decomposition (cycles embedded as contiguous substrings in Ham paths) does NOT give the right counting. f_C = 2*H(comp) per cycle fails (50% at n=4). The "non-cycle" path count f_0 is NOT flip-invariant at n>=5. The correct decomposition is algebraic (A-clique on Omega), not combinatorial (contiguous blocks).
+
+**T036** #paley-tournament #integrality #cycle-counts #structural-theorem | certainty: medium | source: kind-pasteur-2026-03-05-S5 (inbox/other.txt)
 For T_11, the average c_k(T_11)/C(11,k) is an exact integer for ALL k >= 6 = (p+1)/2, but fractional for k < 6. Specifically: c_7/C(11,7)=12, c_8/C(11,8)=45, c_9/C(11,9)=201, c_10/C(11,10)=971, c_11/C(11,11)=5505 are all integers; while c_3/C(11,3)=1/3, c_4/C(11,4)=1/2, c_5/C(11,5)=9/7, c_6/C(11,6)=145/42 are not. Proposed structural theorem: C(p,k) | c_k(T_p) for k >= (p+1)/2, for Paley primes p ≡ 3 (mod 4). The regularity of T_p (each vertex has out-degree (p-1)/2) likely forces this integrality via symmetry. Proving this rigorously is an accessible target -- see OPEN-Q-013.
