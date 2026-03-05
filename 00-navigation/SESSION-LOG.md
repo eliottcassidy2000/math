@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S6 — 2026-03-05 (polynomial identity proof)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S5 (context continuation)
+**Files read:** SESSION-LOG.md, OPEN-QUESTIONS.md, TANGENTS.md, THM-013, THM-014, all S5 code files
+**Summary of work:** Resolved 6-file git merge conflict from S5 rebase. Then discovered and proved a NEW PROOF METHOD for OCF: the swap involution's unmatched path count U_T'-U_T can be expressed as a polynomial identity in arc variables, and this polynomial equals delta_I from THM-013. Proved by hand at n=4 (clean formula: U_T'-U_T = 4-2(p+q+r+t) = 2*sum(s_x)). Verified exhaustively at n=5 (512 cases) and n=6 (16384 cases). This constitutes a PROOF of OCF for n<=6. Found and fixed a sign convention error in THM-013's D/C labels.
+**New contributions:**
+- THM-015 in 01-canon/theorems/ (swap polynomial identity, proves OCF at n<=6)
+- 03-artifacts/code/symbolic_proof.py (polynomial identity verifier for n=4,5,6)
+- 03-artifacts/code/symbolic_proof_fast.py (optimized n=6 version)
+- 03-artifacts/code/unmatched_decomposition.py (structural analysis of blocking)
+- 03-artifacts/code/unmatched_vs_formula.py (aggregate identity tests)
+- Tangents T037-T038 (polynomial identity proof, sign convention warning)
+- Resolved S5 merge conflicts (TANGENTS renumbered T028-T036, all files clean)
+**Unresolved threads:**
+- Prove the polynomial identity for ALL n (not just n<=6) — this would prove OCF/Claim A
+- The n=4 hand proof suggests a transfer matrix / generating function approach
+- n=7 verification feasible (2^19 = 524K cases) but needs optimization
+- OPEN-Q-009 partially resolved: proof method identified, works at n<=6
+
+---
+
 ## kind-pasteur-2026-03-05-S5 — 2026-03-05 (arc-flip session)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S4
