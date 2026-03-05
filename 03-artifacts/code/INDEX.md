@@ -8,11 +8,11 @@ Reusable code for mathematical calculations in this project. Any Claude can add 
 
 | ID | File | Language | Purpose | Notes |
 |----|------|----------|---------|-------|
-| CODE-001 | calculations/tournament_basics.py | Python | Generate all n-vertex tournaments, compute H(T), check Rédei | Core utility; verified correct for n≤6 |
-| CODE-002 | calculations/conflict_graph.py | Python | Build Ω(T) from a tournament; compute I(G,2) | To be written from paper's description |
-| CODE-003 | calculations/mu_correct.py | Python | Correct implementation of μ(C) computation (see MISTAKE-001) | **Do not use the buggy ind_poly_at_2_restricted() from old scripts** |
-
-*Note: CODE-001 through CODE-003 are placeholders. Add actual files when code is extracted from old scripts or rewritten.*
+| CODE-000 | tournament_lib.py | Python | **Complete computation library**: tournaments, H(T), odd cycles, conflict graphs, I(G,x), mu(C), Claim A/B verification | MISTAKE-001 compliant. Verified correct: n<=5 exhaustive, n<=6 in progress. Supersedes CODE-001 through CODE-003. |
+| CODE-000v | verify.py | Python | Verification runner (CLI) for Claims A, B, Redei | Uses tournament_lib.py. Supports exhaustive and random sampling. |
+| ~~CODE-001~~ | ~~calculations/tournament_basics.py~~ | | ~~(placeholder, never written)~~ | Superseded by CODE-000 |
+| ~~CODE-002~~ | ~~calculations/conflict_graph.py~~ | | ~~(placeholder, never written)~~ | Superseded by CODE-000 |
+| ~~CODE-003~~ | ~~calculations/mu_correct.py~~ | | ~~(placeholder, never written)~~ | Superseded by CODE-000 |
 
 ---
 

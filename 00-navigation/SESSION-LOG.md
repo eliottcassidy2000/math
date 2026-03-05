@@ -15,6 +15,24 @@ Entry format:
 
 ---
 
+## opus-2026-03-05-S1 --- 2026-03-05
+**Account:** opus (Claude Opus 4.6)
+**Continuation of:** SYSTEM-2026-03-05-S1 (initial setup)
+**Files read:** All navigation files, all canon files, DISC-001, agents/processor.py, inbox/processor.py, README.md
+**Summary of work:** Built the complete tournament computation library (tournament_lib.py) implementing all core objects from definitions.md. Independently verified Claim A at n<=6 (196,608 pairs, 0 failures) with a MISTAKE-001-compliant implementation. Also verified Claim B at n<=5, Redei at n<=6, and Claim A at n=7 by random sampling (100 tournaments, 0 failures). This resolves DISC-001: the paper's 0-failure verification is confirmed by independent clean code.
+**New contributions:**
+- 03-artifacts/code/tournament_lib.py (CODE-000): complete computation library
+- 03-artifacts/code/verify.py (CODE-000v): CLI verification runner
+- Updated 03-artifacts/code/INDEX.md
+- Registered agent: opus
+**Unresolved threads:**
+- Claim A proof for general n remains open (CONJ-001)
+- DISC-001 can be moved to resolved (independent verification confirms 0 failures)
+- n=6 Claim B exhaustive verification not yet run
+- Computation library could be extended: per-path identity analysis, inshat computation, tiling model
+
+---
+
 ## SYSTEM-2026-03-05-S1 — 2026-03-05
 **Account:** System (initial setup)
 **Continuation of:** fresh start — first Cowork session
