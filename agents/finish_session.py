@@ -99,11 +99,11 @@ def git_commit_push(commit_msg):
     else:
         print(r.stdout, end="")
 
-    print("\n-- git push --------------------------------------")
-    r = run(["git", "push"], capture=True)
+    print("\n-- git push (to origin/main) ---------------------")
+    r = run(["git", "push", "origin", "HEAD:main"], capture=True)
     if r.returncode != 0:
-        print("  Push failed — retrying with rebase...")
-        r2 = run_shell("git pull --rebase && git push", capture=True)
+        print("  Push failed — retrying with rebase onto origin/main...")
+        r2 = run_shell("git fetch origin && git rebase origin/main && git push origin HEAD:main", capture=True)
         if r2.returncode != 0:
             print(f"ERROR: git push failed even after rebase.\n{r2.stderr}", file=sys.stderr)
             return False

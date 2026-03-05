@@ -32,7 +32,16 @@ Estimated reading time: ~5 minutes. Do not skip this.
 
 ---
 
-## Step 3: Process incoming messages
+## Step 3: Pull latest from main first
+
+```bash
+git fetch origin && git rebase origin/main
+```
+
+This ensures your worktree has all recent opus commits before working.
+All agents push to `origin/main`; this keeps you in sync.
+
+## Step 4: Process incoming messages
 
 ```bash
 python3 agents/processor.py --check
@@ -46,7 +55,7 @@ Read each message before proceeding. If any message asks you to argue a court ca
 
 ---
 
-## Step 4: Process the human intake inbox (if files are present)
+## Step 5: Process the human intake inbox (if files are present)
 
 ```bash
 python3 inbox/processor.py
@@ -56,7 +65,7 @@ If this generates a `inbox/PROCESSING-REPORT.md`, read it and integrate the cont
 
 ---
 
-## Step 5: Do the actual work
+## Step 6: Do the actual work
 
 Work on the highest-priority open question or assigned task. Refer to:
 - `01-canon/theorems/CONJ-001-claim-a.md` — the central open problem

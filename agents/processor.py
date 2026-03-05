@@ -26,6 +26,12 @@ import textwrap
 from datetime import datetime
 from pathlib import Path
 
+# Windows: force UTF-8 so box-drawing chars and emoji don't crash on CP1252
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ('utf-8', 'utf8'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+if sys.stderr.encoding and sys.stderr.encoding.lower() not in ('utf-8', 'utf8'):
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 # ─── Paths ────────────────────────────────────────────────────────────────────
 SCRIPT_DIR  = Path(__file__).resolve().parent
 REPO_ROOT   = SCRIPT_DIR.parent
@@ -207,7 +213,7 @@ def cmd_send(args):
         # Also write to broadcast/ so future agents can read it
         BROADCAST.mkdir(exist_ok=True)
         bc_filename = msg_filename(BROADCAST, machine_id, subject)
-        (BROADCAST / bc_filename).write_text(content)
+        (BROADCAST / bc_filename).write_text(content, encoding='utf-8')
         print(f"\n  ✓ Broadcast saved: agents/broadcast/{bc_filename}")
     else:
         recipients = [to]
@@ -216,7 +222,7 @@ def cmd_send(args):
         inbox = AGENTS_DIR / recipient / "inbox"
         inbox.mkdir(parents=True, exist_ok=True)
         filename = msg_filename(inbox, machine_id, subject)
-        (inbox / filename).write_text(content)
+        (inbox / filename).write_text(content, encoding='utf-8')
         print(f"  ✓ Delivered to {recipient}: agents/{recipient}/inbox/{filename}")
 
     print(f"\nMessage sent. Remember to git add -A && git commit && git push.\n")
