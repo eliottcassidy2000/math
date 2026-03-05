@@ -22,7 +22,8 @@
       "Bash(winget list gh)",
       "Bash(where gh)",
       "Bash(git:*)",
-      "Bash(GIT_EDITOR=true git rebase:*)"
+      "Bash(GIT_EDITOR=true git rebase:*)",
+      "Bash(unset CLAUDECODE; claude --help 2>&1 | head -80)"
     ]
   },
   "hooks": {
