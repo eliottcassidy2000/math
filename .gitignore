@@ -1,0 +1,21 @@
+# Machine identity — each machine has its own, never committed
+.machine-id
+
+# Read log — local tracking of which messages have been read
+agents/.read-log.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
