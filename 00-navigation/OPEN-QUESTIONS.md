@@ -100,7 +100,22 @@ At n=2k, the first cycle whose mu can exceed 1 has length 2k-1. The "excess" mu 
 
 ---
 
+## OPEN-Q-013 🟡
+**Correct formula for H(T_p) for Paley primes p ≡ 3 (mod 4)**
+
+CONJ-002 refuted for p=11: H(T_11) = 95095 = 55*1729, not 4455. Known values:
+- p=3: H=3, H/|Aut|=1
+- p=7: H=189, H/|Aut|=9=3^2
+- p=11: H=95095, H/|Aut|=1729=7*13*19
+
+The sequence 1, 9, 1729 has no obvious pattern. Is there a number-theoretic formula fitting these values?
+
+**Source:** kind-pasteur-2026-03-05-S2 computation
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery. Independently confirmed by opus-S2 with explicit mu triviality bound L >= n-2.
 - **OPEN-Q-003**: Per-path failure at n=6 iff some TypeII position has mu>1 (THM-009).
+- **Paley computation (kind-pasteur)**: h_QR=h_NQR=201, c_9(T_11)=11055, H(T_11)=95095. CONJ-002 refuted for p=11 (kind-pasteur-2026-03-05-S2). Code: 03-artifacts/code/compute_H_T11.py.

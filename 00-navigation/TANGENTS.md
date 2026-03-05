@@ -14,8 +14,8 @@ The number of internal signature patterns giving exactly k Type-II positions wit
 **T002** #asymptotic #cycle-length #mu-weights | certainty: low | source: MASTER_FINDINGS F4
 The average Type-II contribution per L-cycle window is (L-4)/4, growing with L. Does this lead to an asymptotic formula for Σ_C μ(C) as a function of cycle-length distribution? Could give insight into why Claim A holds in aggregate even when per-path identity fails.
 
-**T003** #n5-mystery #5-cycles #per-path-identity | certainty: high (the mystery is real) | source: MASTER_FINDINGS F5
-At n=5, 5-cycles through v DO exist (v→a→b→c→d→v uses all 5 vertices). Yet the per-path identity holds at n=5 (0 failures). At n=6 it fails (2,758/9,126 failures). WHY? Hypothesis: at n=5 every 5-cycle embedding is always "accompanied" by exactly the right 3-cycle embeddings to compensate its μ contribution. This delicate balance breaks at n=6. This is **the deepest mystery** in the current work.
+**T003** #n5-mystery #5-cycles #per-path-identity | certainty: high (RESOLVED by THM-008) | source: MASTER_FINDINGS F5
+RESOLVED: mu(C)=1 trivially for ALL cycles at n<=5. At n=5, 5-cycle C\{v} exhausts all T-v vertices so no independent cycles exist. Per-path identity is vacuously true at n<=5. There was no "delicate balance" -- the identity is degenerate. See THM-008.
 
 **T004** #per-path-formula #generalization | certainty: low | source: MASTER_FINDINGS open questions
 Is there a correct per-path formula for ALL n (not just n≤5)? The 3-cycle-only formula undercounts at n≥6 because it misses longer-cycle μ contributions. The natural generalization (sum over all cycles) overcounts. The maximal-embedding-only formula also fails. Finding the right per-path formula would likely imply Claim A.
@@ -86,3 +86,22 @@ For n=4, exactly 3 Ham paths contain a 3-cycle as contiguous block (THM-010). Fo
 
 **T021** #arc-reversal-invariance #sum-equality #key-step | certainty: high (key open problem) | source: file.txt
 Arc-reversal invariance D(T,v) = D(T',v) is the key unproved step. Requires showing sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]). This is a SUM equality, not a bijection. Both sides can be expressed in terms of path-pairs in T_0 (T with arc (i,j) deleted), since T[V\V(C)] = T'[V\V(C)] when V(C) contains both i and j. See OPEN-Q-009.
+
+---
+
+## Paley Tournaments
+
+**T022** #paley-tournament #sub-tournament #h-QR-h-NQR | certainty: high (RESOLVED) | source: PALEY_T11_c9_ANALYSIS.md, kind-pasteur-S2
+c_9(T_11) = (55/2)(h_QR + h_NQR) exactly (LEM-001). RESOLVED: h_QR = h_NQR = 201, c_9 = 11055, H(T_11) = 95095 = 55*1729 (direct enumeration, kind-pasteur-S2). CONJ-002 refuted for p=11.
+
+**T023** #paley-tournament #ratio-coincidence #false-pattern | certainty: high (confirmed false) | source: PALEY_T11_c9_ANALYSIS.md
+The ratios c_k / C(11,k) for T_11 are 1/3 (k=3), 9/7 (k=5), 4 (k=7) -- no pattern. Ratio=4 at k=7 that motivated c_9=220 estimate was wishful thinking (MISTAKE-006). Don't use ratio arguments for c_k in structured tournaments.
+
+**T024** #paley-tournament #spectral #gauss-sum | certainty: medium | source: PALEY_T11_c9_ANALYSIS.md
+Off-diagonal matrix powers in Paley tournaments: (A^k)_{0,d} = [5^k - Re(omega^k)]/11 +/- [Im(omega^k)*sqrt(11)/11]*chi(d), where omega = (i*sqrt(11)-1)/2 and chi is the Legendre symbol. Gives a closed form for counting walks in terms of chi(d) without full matrix powers.
+
+**T025** #paley-tournament #H-Tp #1729 #taxicab | certainty: high | source: kind-pasteur-2026-03-05-S2
+H(T_11) = 95095 = 5*7*11*13*19 = 55*1729, where 1729 is the Hardy-Ramanujan taxicab number (7*13*19). H/|Aut| gives the sequence 1, 9, 1729 for p=3,7,11. The formula 3^((p-3)/2) fails at p=11. Whether 1729 structure is meaningful is open. Next: H(T_19) unknown; see OPEN-Q-013.
+
+**T026** #paley-tournament #c9 #symmetry | certainty: high | source: kind-pasteur-2026-03-05-S2
+h_QR = h_NQR = 201. This equality reflects the anti-automorphism x->2x of T_11 (maps QR pair {0,1} to NQR pair {0,2}) combined with T_11 being self-complementary (T_11 ~= T_11^op). Exploitable for all Paley tournament sub-tournament computations.

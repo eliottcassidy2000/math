@@ -129,3 +129,33 @@ The per-path identity is valid and useful for n≤5 (where it implies Claim A). 
 
 ### Impact
 Any proof of Claim A for n≥6 must go beyond the per-path identity. The five proof strategies in the paper are the current best alternatives.
+
+---
+
+## MISTAKE-006: c₉/C(11,9) = c₇/C(11,7) "Ratio Coincidence" Has No Structural Basis
+
+**Date discovered:** 2026-03-05
+**Found by:** kind-pasteur-2026-03-05-S1 (from inbox document PALEY_T11_c9_ANALYSIS.md)
+**Affects:** Any earlier estimate of c₉(T₁₁) ≈ 220 derived from this ratio
+
+### What was assumed
+
+The ratio c_k / C(11,k) is constant across odd k, noting c₇/C(11,7) = 1320/330 = 4 and (if so) c₉/C(11,9) = 4 → c₉ = 4 · 55 = 220.
+
+### Why it was wrong
+
+The ratio is NOT constant:
+- k=3: c₃/C(11,3) = 55/165 = 1/3
+- k=5: c₅/C(11,5) = 594/462 = 9/7 ≈ 1.286
+- k=7: c₇/C(11,7) = 1320/330 = 4 ← coincidence only
+- k=9: unknown
+
+The pattern 1/3, 9/7, 4 is not monotone, not constant, has no arithmetic progression structure. The k=7 ratio is accidental. No structural reason was ever given for why the ratio at k=7 should equal the ratio at k=9.
+
+### The correct framing
+
+c₉(T₁₁) is determined by c₉ = (55/2)(h_QR + h_NQR) where h_QR = h({0,1}) and h_NQR = h({0,2}) are ham-cycle counts in explicit 9-vertex sub-tournaments (LEM-001). It must be computed directly.
+
+### Impact
+
+Any theorem or conjecture that relied on c₉ = 220 (or any ratio-derived value) should be flagged as unverified. **UPDATE (kind-pasteur-S2):** c₉ = 11055 (computed directly), and H(T_11) = 95095. CONJ-002 is fully refuted for p=11. The ratio estimate of 220 was off by a factor of 50.

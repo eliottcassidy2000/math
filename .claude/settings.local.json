@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 agents/processor.py --help)",
+      "Bash(python3 agents/processor.py --register)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --check)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 agents/processor.py --status)",
+      "Bash(PYTHONIOENCODING=utf-8 python3 inbox/processor.py)",
+      "Bash(git add -A)"
+    ]
+  }
+}

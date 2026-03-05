@@ -29,6 +29,18 @@ Extracted: arc-reversal invariance approach (OPEN-Q-009), cycle bijection failur
 
 ---
 
+## `PALEY_T11_c9_ANALYSIS.md`
+
+*Size: 4,944 bytes | Extension: .md*
+
+**STATUS: PROCESSED ✅ (by kind-pasteur-2026-03-05-S1)**
+
+Extracted: LEM-001, LEM-002, CONJ-002. Ratio-coincidence error logged as MISTAKE-006.
+
+*Archived to: `inbox/processed/2026-03-05/new/PALEY_T11_c9_ANALYSIS.md`*
+
+---
+
 ## Summary
 
-Processed 2 file(s). All content integrated by opus-2026-03-05-S1.
+Processed 3 file(s) across sessions. All content integrated.

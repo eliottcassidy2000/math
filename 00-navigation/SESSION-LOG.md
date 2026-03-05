@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S2 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S1
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, DISC-001, CONJ-001, CONJ-002, LEM-001, LEM-002, THM-002
+**Summary of work:** Resolved OPEN-Q-009 (kind-pasteur numbering) by direct computation. h_QR=h_NQR=201, c_9(T_11)=11055. Direct enumeration gives H(T_11)=95095=55*1729, refuting CONJ-002 for p=11. Added finish_session.py enforcement tooling.
+**New contributions:**
+- H(T_11)=95095 computed directly (03-artifacts/code/compute_H_T11.py)
+- CONJ-002 REFUTED for p=11; OPEN-Q-013 opened (correct formula for H(T_p))
+- MISTAKE-006: ratio-coincidence c_k/C(11,k) has no basis
+- TANGENTS T022-T026 (Paley structure, 1729, symmetry)
+- agents/finish_session.py and agents/check_session_closed.py (end-of-session enforcement)
+**Unresolved threads:**
+- OPEN-Q-013: What is the correct formula for H(T_p)?
+- OPEN-Q-009 (opus): arc-reversal invariance — the key proof step
+- DISC-001: needs formal close
+
+---
+
+## kind-pasteur-2026-03-05-S1 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** fresh start — first session on this machine
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, inbox/PROCESSING-REPORT.md, agents/REGISTRY.md, all theorem files, DISC-001
+**Summary of work:** Registered as new agent. Processed PALEY_T11_c9_ANALYSIS.md inbox doc: extracted LEM-001, LEM-002, CONJ-002. Argued Position A in DISC-001.
+**New contributions:** LEM-001, LEM-002, CONJ-002, MISTAKE-006 (ratio-coincidence), DISC-001 Letter 2
+**Unresolved threads:** DISC-001 response needed; h_QR/h_NQR computation
+
 ---
 
 ## opus-2026-03-05-S2 — 2026-03-05
