@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S4b — 2026-03-05 (Signed Position Identity + C verifier)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S3 (parallel session to S4)
+**Files read:** All warm-up files, inbox snippet from S4 diff, all n=8 computation files
+**Summary of work:** Parallel session that independently verified Even-Odd Split Lemma and added new findings: (1) Proved equivalence to Signed Position Identity: sum_{P: i→j} (-1)^{pos(i)} = sum_{P': j→i} (-1)^{pos(j)}. (2) Proved tournament-specific: fails for 282/500 digraphs at n=4. (3) Proved polynomial: holds for continuous T[a][b]+T[b][a]=1. (4) Built C implementation of OCF verifier (ocf_n8_full.c), confirmed 0 fails through 3M+ configs.
+**New contributions:**
+- 04-computation/even_odd_split_verify.py (independent verification n=4,5,6)
+- 04-computation/signed_position_identity.py (equivalent formulation, verified)
+- 04-computation/digraph_signed_test.py (proves tournament-specific)
+- 04-computation/weighted_tournament_test.py (proves polynomial)
+- 04-computation/proof_n8_v4.py (correct Python OCF verifier, 200/200)
+- 04-computation/ocf_n8_full.c (4-thread C verifier)
+- 04-computation/ocf_n8_simple.c (single-thread C, verified 100k/0 fails)
+- T044 (Even-Odd Split / Signed Position Identity tangent)
+**Unresolved threads:**
+- Even-Odd Split Lemma needs general proof (potential route to Claim A)
+- Bracket structure B(u,w) analysis incomplete
+
+---
+
 ## opus-2026-03-05-S4 — 2026-03-05 (n=7 and n=8 PROVED, even-odd split discovery)
 **Account:** Eliott (opus machine)
 **Continuation of:** opus-2026-03-05-S3 (context continuation)

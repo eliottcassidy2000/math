@@ -92,34 +92,36 @@ where Delta(alpha_k) depends recursively on alpha_{k-1} of cycle complements. Eq
 - n=8: needs correction for VD 3-5 pairs (simplified formula fails 8/30)
 - n=9+: needs alpha_3 terms (three mutually VD 3-cycles)
 
-**EXHAUSTIVE PROOF FRONTIER (opus-S4, extending kind-pasteur-S6):**
+**EXHAUSTIVE PROOF FRONTIER (opus-S4, extending kind-pasteur-S6/S7):**
 - n<=6: proved by kind-pasteur-S6 (symbolic polynomial identity, THM-015)
-- n=7: PROVED by opus-S4 (2^20 = 1,048,576 configs, 4 seconds)
+- n=7: PROVED by opus-S3/S4 (2^20 = 1,048,576 configs) and kind-pasteur-S7 (SymPy + enumeration)
 - n=8: PROVED by opus-S4 (2^27 = 134,217,728 configs, 57 minutes, ALL passing)
-  Uses full A-clique formula (simplified formula fails at n=8 due to VD 3-5 pairs)
+  Also independently verified by opus-S4b C implementation (0 fails through 3M+ configs)
 - n=9 would need 2^35 ~ 34B configs — infeasible without new approach
 
-**Even-Odd Split Lemma (opus-S4, new discovery):**
-The adj decomposition delta = sum_S Delta(S, others\S) satisfies:
+**Even-Odd Split Lemma (opus-S4/S4b, new discovery):**
+The adj decomposition delta = sum_S Delta(S, V\{i,j}\S) satisfies:
   sum_{|S| even} Delta(S,R) = sum_{|S| odd} Delta(S,R)
 i.e., the alternating sum vanishes: sum (-1)^|S| Delta(S,R) = 0.
-This means delta = 2*(odd-S sum) where odd-S terms correspond to odd cycles.
-Verified n=5,...,8. This is EQUIVALENT to OCF but provides a clean algebraic
-reformulation as a vanishing alternating sum of bilinear forms.
+Equivalently (Signed Position Identity, opus-S4b): sum_{P: i->j} (-1)^{pos(i)} = sum_{P': j->i} (-1)^{pos(j)}.
+This is a POLYNOMIAL identity requiring T[a][b]+T[b][a]=1 (FAILS for general digraphs: 282/500 fail at n=4).
+Verified n=4,...,8 exhaustive, continuous weighted tournaments pass.
 See 03-artifacts/drafts/even-odd-split-lemma.md.
 
-**Remaining task:** Prove the alternating sum identity for all n.
+**Remaining task:** Prove the signed position identity / alternating sum identity for all n.
 
 **Key structural facts (both agents independently confirmed):**
 - All affected cycles contain {i,j} (complement unchanged by flip)
 - At most one affected cycle in any independent set (A-clique)
 - Complement values computable by inductive OCF
 - The swap involution (opus THM-014) gives adj(i,j)-adj'(j,i) = #U_T - #U_T'
-- Even-odd split: delta decomposes equally between even-S and odd-S terms (T040)
+- Even-odd split: delta decomposes equally between even-S and odd-S terms (T040/T044)
+- Bracket B(u,w) = T[u][i]*T[j][w] - T[u][j]*T[i][w] has block structure by s-types (T043)
+- When all s_v=0: brackets AND boundary terms vanish (potential induction base)
 
 See PROP-001 (kind-pasteur), THM-013, THM-014, THM-015 (both agents).
 
-**Source:** opus-2026-03-05-S2/S4; kind-pasteur-2026-03-05-S5/S6
+**Source:** opus-2026-03-05-S2/S3/S4/S4b; kind-pasteur-2026-03-05-S5/S6/S7
 
 ---
 
