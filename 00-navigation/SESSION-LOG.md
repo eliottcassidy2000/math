@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S18e — 2026-03-06 (SC maximizer n=7, anti-aut involution theorem)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S18d
+**Summary of work:**
+  (1) **SC MAXIMIZER CONFIRMED AT n=7 (exhaustive)**: All 15 self-complementary score classes at n=7 have SC tournament achieving max H. Global max H=189 at regular (3,3,3,3,3,3,3) = Paley T_7. Key refinement: only self-complementary score sequences (s_i+s_{n-1-i}=n-1) can contain SC tournaments; the conjecture is vacuous for non-SC score sequences. 647s computation over 2^21 = 2M tournaments.
+  (2) **ANTI-AUTOMORPHISM INVOLUTION THEOREM**: All anti-automorphisms of SC tournaments at n=5,6 are involutions (sigma^2=id). At even n=6: sigma is fixed-point-free with 3 two-cycles, creating 4 vertex-disjoint 3-cycle pairs. At odd n=5: 1 fixed point + 2 two-cycles. The involution structure is the algebraic mechanism behind the SC advantage.
+  (3) **DISJOINT PAIR MECHANISM**: SC tournament at n=6 has 8 three-cycles all selecting one vertex from each sigma-orbit, forming 4 complementary pairs covering all 6 vertices. NSC tournament with same score has only 1 disjoint pair. This produces alpha_2=4 vs alpha_2=1 in the independence polynomial, explaining H=45 vs H=43.
+**New contributions:** T091 (updated), T093 (updated), T095, sc_maximizer_n7_fast.py, anti_aut_analysis.py
+**Unresolved threads:**
+- Prove SC maximizer algebraically (involution mechanism is clear, need formal proof)
+- Test at n=8 (even n, can have fpf involution, expect strong result)
+- Is the anti-automorphism ALWAYS an involution? Or only at small n?
+
 ## opus-2026-03-06-S3 — 2026-03-06 (Deep census, blueself parity theorem, POS uniformity)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S2 (context continuation)
@@ -47,7 +60,7 @@ Entry format:
   (5) **Paired class FALSE**: "Paired minimize H" is false (transitive H=1 is SC). But "SC max within score class" is TRUE.
 **New contributions:** T091, T092, paired_class_H_analysis.py, sc_maximizer_proof.py, interlacing_fast.py
 **Unresolved threads:**
-- Interlacing at n>=7 (background computation running)
+- Interlacing at n>=7 (FAILS — 36/1113 failures, corrected in T084)
 - Prove SC maximizer algebraically
 - Blueself = highest H among SC at even n?
 
