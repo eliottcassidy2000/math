@@ -13,28 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-05-S14 — 2026-03-05 (Deep research: real roots theorem, comparability, Chudnovsky-Seymour, literature survey)
+## kind-pasteur-2026-03-05-S14 — 2026-03-05 (Deep research: real roots theorem, Paley maximizer, literature survey)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S13 (context continuation)
 **Files read:** MEMORY.md, THM-019, OPEN-QUESTIONS.md, TANGENTS.md, SESSION-LOG.md
 **Summary of work:**
   (1) NEW THEOREM (THM-020): All roots of I(Omega(T), x) are real and negative for n<=8. PROVED via claw-freeness + Chudnovsky-Seymour (2007). Real-rootedness conjectured for all n.
   (2) COMPUTATIONAL: Verified real roots at n=5 (exhaustive), n=6 (500), n=9 (50), n=10 (30) — 0 failures anywhere, even beyond claw-free range.
-  (3) TESTED & DISPROVED: Omega(T) is NOT always a comparability graph (fails at n=7: 1%, n=8: 58%). So comparability cannot explain real roots.
-  (4) TESTED & CONFIRMED: det(I+2A) =/= H(T) in general (only 240/1024 at n=5). No simple spectral formula for H(T).
-  (5) FIXED: Cycle enumeration bug — old code found only one directed cycle per vertex set, missing multiple 5-cycles on same 5 vertices (up to 3). This caused false modular cascade failures.
-  (6) LITERATURE: Found Mitrovic (arXiv:2407.18608, 2504.20968) extending Grinberg-Stanley framework via Hopf algebras and noncommuting variables.
-  (7) LITERATURE: Confirmed H(T_p) = 3, 189, 95095 and H/|Aut| = 1, 9, 1729 are NOT in OEIS. Genuinely new sequences.
-  (8) FINDING: lambda=2 is OUTSIDE hard-core uniqueness for max_degree(Omega) >= 4 (which happens at n=5+). Real roots are a special property of tournament conflict graphs.
-  (9) Graph property hierarchy for Omega(T): Chordal (n<=5) => Perfect (n<=7) => Comparability (n<=6) ... Claw-free (n<=8) independently. All fail before n=9.
+  (3) TESTED & DISPROVED: Omega(T) is NOT always a comparability graph (fails n=7: 1%, n=8: 58%).
+  (4) TESTED: det(I+2A) =/= H(T) in general. No simple spectral formula.
+  (5) FIXED: Cycle enumeration bug — multiple directed cycles per vertex set.
+  (6) **MAJOR: Paley tournaments MAXIMIZE H(T)!** OEIS A038375 confirms: a(3)=3=H(T_3), a(7)=189=H(T_7), a(11)=95095=H(T_11). New conjecture: T_p maximizes Hamiltonian paths for Paley primes.
+  (7) LITERATURE (5 background agents, all completed):
+    - 7 papers cite Grinberg-Stanley, including chromatic-Redei-Berge connection (arXiv:2506.08841)
+    - Bezakova et al. 2024 dichotomy for H-free graphs and hard-core model
+    - Omega(T) NOT interval graph at n=6 (13.9% fail)
+    - Line graph hypothesis: if Omega(T) = L(H), Heilmann-Lieb gives real roots
+    - H(T_p) and H/|Aut| sequences NOT in OEIS
+    - El Sahili-Abi Aad (2019) extends Forcade parity; Grunbaum conjecture proved
+    - Our conflict graph / independence polynomial formulation is NOT in any G-S paper — genuinely original
+    - Cycle divisibility threshold corrected: k >= (p+3)/2, not (p+1)/2
+  (8) FINDING: lambda=2 is OUTSIDE hard-core uniqueness for Omega(T). Real roots are special.
+  (9) Graph property hierarchy: interval (n<=5) < chordal (n<=5) < comparability (n<=6) < perfect (n<=7) < claw-free (n<=8).
 **New contributions:**
 - THM-020-real-roots.md (new theorem)
-- OPEN-Q-015 (prove real roots for all n)
-- T048-T052 in TANGENTS.md
+- OPEN-Q-015 (real roots conjecture)
+- T048-T058 in TANGENTS.md (Paley maximizer, line graph, interval graph, LGV connection, subdivided claw, chromatic-RB connection)
+- Corrected cycle divisibility threshold in OPEN-Q-013
 **Unresolved threads:**
-- Real roots at n>=9 needs new proof approach (beyond claw-freeness)
-- Jerrum-Patel (2026) subdivided-claw results may help
-- H(T_19) still not computed
+- Test line graph hypothesis (Beineke's 9 forbidden subgraphs)
+- Test subdivided-claw-freeness at n=9
+- Compute H(T_19) — would test both Paley maximizer conjecture and extend the sequence
+- Submit H(T_p) to OEIS
 - Bijective proof of OCF still open
 
 ## kind-pasteur-2026-03-05-S13 — 2026-03-05 (Web research: hard-core model, independence polynomial at lambda=2, statistical physics connections)

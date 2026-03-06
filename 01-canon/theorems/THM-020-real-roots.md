@@ -78,8 +78,20 @@ Omega(T) is always claw-free for n<=8 (vertex counting), which suffices for real
 
 ---
 
+## Potential Proof Approaches for n>=9
+
+1. **Line graph hypothesis:** If Omega(T) is always a line graph, real roots follow from Heilmann-Lieb (1972). Line graphs are claw-free and satisfy Beineke's 9 forbidden subgraph conditions. Testable computationally.
+
+2. **Subdivided-claw-freeness:** Bezakova et al. (arXiv:2404.07615, 2024) prove a dichotomy for H-free graphs. Jerrum-Patel (2026) give zero-free regions for S_{a,b,c}-free graph classes of bounded degree. If Omega(T) avoids subdivided claws even when it has claws, this may suffice.
+
+3. **Direct structural argument:** Prove real roots from the specific combinatorial structure of Omega(T) (e.g., using the Grinberg-Stanley symmetric function framework).
+
+---
+
 ## References
 
 1. Chudnovsky, M., Seymour, P. "The roots of the independence polynomial of a clawfree graph." J. Combin. Theory Ser. B 97 (2007), 350-357.
 2. Jerrum, M., Patel, V. "Zero-free regions for the independence polynomial on restricted graph classes." J. London Math. Soc. (2026).
 3. Grinberg, D., Stanley, R.P. arXiv:2412.10572, Corollary 20 (proves H(T) = I(Omega(T), 2)).
+4. Bezakova, I., Galanis, A., Goldberg, L.A., Stefankovic, D. arXiv:2404.07615 (2024). Hard-core model dichotomy.
+5. Heilmann, O.J., Lieb, E.H. "Theory of Monomer-Dimer Systems." Commun. Math. Phys. 25 (1972), 190-232.

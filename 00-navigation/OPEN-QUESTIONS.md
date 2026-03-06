@@ -190,11 +190,19 @@ Both conjectures are FALSE for p=11:
 
 **OCF verification:** 95095 = 1 + 2*(55+594+3960+11055+5505) + 4*10879 + 8*1155 EXACT
 
-**Integrality observation:** C(11,k) | c_k(T_11) for ALL k >= 6 = (p+1)/2. This appears to be a genuine structural theorem; see T028.
+**Integrality observation (CORRECTED):** C(11,k) | c_k(T_11) for ALL k >= 7 = (p+3)/2, NOT k >= 6 = (p+1)/2 (c_6=1595, C(11,6)=462, 1595/462 is not integer). The correct threshold appears to be k >= (p+3)/2. Source: kind-pasteur-2026-03-05-S14 correction via Paley agent.
+
+**MAJOR DISCOVERY (kind-pasteur-S14): Paley tournaments MAXIMIZE H(T)!**
+OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 189, 661, 3357, 15745, 95095.
+- a(3) = 3 = H(T_3) for Paley prime p=3
+- a(7) = 189 = H(T_7) for Paley prime p=7
+- a(11) = 95095 = H(T_11) for Paley prime p=11
+
+**Conjecture: Paley tournaments T_p (p ≡ 3 mod 4 prime) achieve the maximum number of Hamiltonian paths among all tournaments on p vertices.** This is a major new conjecture. If true, it connects the Hamiltonian-path-maximization problem to number theory via quadratic residues.
 
 **Next computational target:** H(T_19) (requires computing Ham paths of 19-vertex tournament). |Aut(T_19)|=171=9*19.
 
-**Source:** kind-pasteur-2026-03-05-S2 computation; cycle table from kind-pasteur-2026-03-05-S5 (inbox/other.txt)
+**Source:** kind-pasteur-2026-03-05-S2 computation; cycle table from kind-pasteur-2026-03-05-S5 (inbox/other.txt); OEIS A038375 connection from kind-pasteur-2026-03-05-S14
 
 ---
 

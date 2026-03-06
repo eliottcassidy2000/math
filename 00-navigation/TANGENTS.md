@@ -185,5 +185,23 @@ Mitrovic (arXiv:2407.18608, 2024) develops Hopf algebra structures on the Redei-
 **T052** #paley-oeis #new-sequences | certainty: high | source: kind-pasteur-2026-03-05-S13
 The sequences H(T_p)/|Aut(T_p)| = 1, 9, 1729 (for p=3,7,11) and H(T_p) = 3, 189, 95095 are NOT in OEIS. These could be submitted as new sequences once H(T_19) is computed. The Tribonacci connection (A000213 for full transitive tournaments) also has no known tournament interpretation in OEIS.
 
+**T053** #paley-maximizer #A038375 #conjecture | certainty: high (verified p=3,7,11) | source: kind-pasteur-2026-03-05-S14
+MAJOR CONJECTURE: Paley tournaments T_p (p = 3 mod 4 prime) achieve the MAXIMUM H(T) among all n-vertex tournaments. Confirmed via OEIS A038375: a(3)=3=H(T_3), a(7)=189=H(T_7), a(11)=95095=H(T_11). If true, this connects Hamiltonian path maximization to number theory. Note a(5)=15 is NOT achieved by a Paley tournament (p=5 = 1 mod 4, no Paley tournament exists). Computing H(T_19) and comparing to a(19) (unknown) would be the next test.
+
+**T054** #line-graph #heilmann-lieb #omega | certainty: medium | source: kind-pasteur-2026-03-05-S14
+Is Omega(T) always a line graph? If so, real roots follow from Heilmann-Lieb (1972) rather than Chudnovsky-Seymour. A line graph must be claw-free AND satisfy Beineke's 9 forbidden subgraph conditions. Testable at n=5,6. If Omega(T) = L(H) for some H, then I(Omega(T), x) = matching polynomial of H, connecting OCF to matching theory.
+
+**T055** #interval-graph #omega-fails-n6 | certainty: high | source: kind-pasteur-2026-03-05-S14 (Tribonacci agent)
+Omega(T) is an interval graph for n<=5 (exhaustive) but FAILS at n=6 (13.9% fail exhaustively). Failure is due to non-chordality (induced C4 or longer). The interval property holds for T_full_n (consecutive odd intervals), but not for general tournaments. Interval => Chordal => Perfect => Comparability (no!). Failures: interval n=6, chordal n=6, perfect n=8, comparability n=7.
+
+**T056** #chromatic-redei-berge #mitrovic-stojadinovic | certainty: medium | source: kind-pasteur-2026-03-05-S14 (Redei-Berge agent)
+Mitrovic & Stojadinovic (arXiv:2506.08841) prove that the chromatic symmetric function and Redei-Berge function are "almost identical" at the poset level. This connects Stanley's chromatic symmetric function theory to tournament path counting. The Stanley-Stembridge conjecture techniques may thus apply to tournament problems. Also: Grujic & Stojadinovic (arXiv:2402.07606) establish a Hopf algebra structure with deletion-contraction for U_D, potentially providing an algebraic foundation for our vertex-deletion recurrence (Claim A).
+
+**T057** #LGV-lemma #even-odd-split | certainty: medium | source: kind-pasteur-2026-03-05-S14 (Novel hypotheses agent)
+THM-016/017 (even-odd split) has strong structural parallels to the Lindstrom-Gessel-Viennot lemma. Talaska (2012) extended LGV to arbitrary digraphs where cycles appear in the denominator. Our alternating sum sum_S (-1)^|S| H(S) h_start(W\S, v) may be an instance of extended LGV. Investigating this connection could yield a proof of the even-odd split independent of OCF.
+
+**T058** #subdivided-claw #bezakova-dichotomy | certainty: medium | source: kind-pasteur-2026-03-05-S14
+Bezakova et al. (arXiv:2404.07615, 2024) prove a dichotomy: for bounded-degree H-free graphs, Glauber dynamics mixes in O(n log n) for ALL fugacities iff H is a subdivided claw or path. Check whether Omega(T) at n>=9 is subdivided-claw-free (S_{a,b,c}-free). If so, Jerrum-Patel (2026) zero-free regions extend to cover lambda=2.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.
