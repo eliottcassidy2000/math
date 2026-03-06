@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-06-S2
+**Last full repo scour:** opus-2026-03-06-S3
 **Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
@@ -333,6 +333,22 @@
 - **Mod-4 structure:** Neither sigma preserves H mod 4 reliably.
 **Scripts:** `04-computation/sigma_structure.py`
 **Next step:** (1) Understand algebraic significance of the S_3 group. (2) Can the n->n+2 POS structure be used differently (not through H preservation)? (3) Relate to transfer matrix symmetry (INV-001).
+
+### INV-038: Blueself parity theorem and census structure
+**Source:** opus-2026-03-06-S3 (deep census investigation)
+**Status:** THM-023 PROVED. Census in progress through n=8.
+**What:** Blueself (GS + self-flip) exists if and only if n is even. Proved algebraically: flip changes endpoint scores by score'(0) = n - score(0), so same-score requires score(0) = n/2 (integer only at even n).
+**Census results (exhaustive n=3,...,6, in progress n=7,8):**
+- POS orientation is perfectly UNIFORM: each pattern gets exactly 2^(m-#POS) tilings
+- GS POS is also perfectly UNIFORM
+- SC always maximizes H within each score sequence class (confirmed with kind-pasteur findings)
+- Blueself at n=4: H=5 (rank 1/4), n=6: H=41,45 (ranks 5,1/56) — near or at global maximum
+- Blackself at odd n is in SC classes; at even n exclusively in NSC (paired) classes
+- SF tilings come in flip-pairs; SF count per class is 2 at n=6, 4 at n=5
+- Self-flip fraction decreases: 25%, 12.5%, 1.56% at n=4,5,6
+**Scripts:** `04-computation/deep_census_analysis.py`, `04-computation/pos_tiling_census.py`, `04-computation/census_n8.py`
+**Theorem:** `01-canon/theorems/THM-023-blueself-parity.md`
+**Next step:** (1) Complete n=7 and n=8 census. (2) Investigate why blueself achieves max H. (3) Count blueself at n=8 (1280 eligible GS tilings, need canonicalization).
 
 ---
 

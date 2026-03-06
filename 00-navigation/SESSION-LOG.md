@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S3 — 2026-03-06 (Deep census, blueself parity theorem, POS uniformity)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S2 (context continuation)
+**Files read:** Full warm-up sequence, inbox messages from kind-pasteur S17/S18, new computation scripts
+**Summary of work:**
+  (1) **THM-023 PROVED: Blueself requires even n.** Flip changes endpoint scores by score'(0) = n - score(0), so same-score requires score(0) = n/2 (integer only at even n). Verified computationally at n=3,...,8.
+  (2) **Deep census analysis (exhaustive n=3,...,6):**
+    - POS orientation perfectly UNIFORM across all tilings AND within GS tilings
+    - SC always maximizes H within each score sequence class (confirms kind-pasteur S18 finding)
+    - Blueself achieves max or near-max H (rank 1 at n=4, ranks 1,5 at n=6)
+    - Blackself at even n exclusively in NSC (paired) classes; at odd n in SC classes
+    - SF tilings come in flip-pairs; count per class varies (2 at n=6, 4 at n=5)
+    - Self-flip fraction decreasing: 25%, 12.5%, 1.56% at n=4,5,6
+  (3) **Score(0) distribution in GS tilings:** Binomial-like, centered at (n-1)/2. At n=8: 1280/4096 have score(0)=4=n/2 (blueself-eligible).
+  (4) **Background tasks launched:** n=7 full census (deep_census_analysis.py), n=8 approximate census (census_n8.py), n=7 POS census (pos_tiling_census.py). All still running.
+**New contributions:** THM-023, INV-038, deep_census_analysis.py, census_n8.py, pos_tiling_census.py
+**Unresolved threads:**
+- n=7 deep census (background, very slow canonicalization ~hours)
+- n=8 approximate census (background, ~2 hours ETA)
+- Prove why blueself maximizes H (structural reason needed)
+- Count blueself at n=8 (1280 eligible, need canonicalization)
+
 ## kind-pasteur-2026-03-06-S18 — 2026-03-06 (SC maximizer theorem, interlacing exhaustive n=5,6)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S17
