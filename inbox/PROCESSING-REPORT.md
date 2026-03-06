@@ -1,6 +1,6 @@
 # Inbox Processing Report
 
-**Generated:** 2026-03-06 00:32:42  
+**Generated:** 2026-03-06 00:32:42
 **Files found:** 1  
 
 ---

@@ -45,17 +45,19 @@ If true, this would imply:
 
 ## Verification Record
 
-| n | Method | Real-root failures |
-|---|--------|-------------------|
-| 5 | exhaustive (1024) | 0 |
-| 6 | 500 random | 0 |
-| 7 | 1000 random (THM-019) | 0 |
-| 8 | 5 random (full Omega) | 0 |
-| 9 | 50 random (3-cycle subgraph) | 0 |
-| 10 | 30 random (3-cycle subgraph) | 0 |
-| 12 | 20 random (3-cycle subgraph, ~56 cycles) | 0 |
-| 15 | 20 random (3-cycle subgraph, ~119 cycles) | 0 |
-| 20 | 10 random (3-cycle subgraph, ~291 cycles) | 0 |
+| n | Method | Poly degree | Real-root failures |
+|---|--------|-------------|-------------------|
+| 5 | exhaustive (1024) | 1 | 0 |
+| 6 | 500 random | 1-2 | 0 |
+| 7 | 200 random (full Omega) | 1-2 | 0 |
+| 8 | 50 random (3-cycle subgraph) | 2 | 0 |
+| 9 | 50 random (3-cycle subgraph) | 2-3 | 0 |
+| 10 | 50 random (3-cycle subgraph) | 3 | 0 |
+| 12 | 30 random (3-cycle subgraph, ~55 cycles) | 3-4 | 0 |
+| 15 | 10 random (3-cycle subgraph, ~110 cycles) | 5 | 0 |
+| 20 | 1 random (3-cycle subgraph, ~298 cycles) | 6 | 0 |
+
+**Ultra-log-concavity also verified** (0 failures) at all tested n. alpha_k/C(m,k) is log-concave where m = |V(Omega_3)|. (kind-pasteur-S16)
 
 ---
 

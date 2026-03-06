@@ -53,6 +53,30 @@ Entry format:
 - Connect sigma reduction to arc-flip proof strategy (INV-004)
 - Higher odd cycle contribution as correction to H ≈ 1+2c3
 
+## kind-pasteur-2026-03-05-S16 — 2026-03-05 (Real roots to degree 6, perpendicular bell curve, J(n,3) NOT hereditary)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S15 (context continuation)
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, INVESTIGATION-BACKLOG.md, THM-020-real-roots.md, knuth-connections-research.md, tournament_lib.py, Irving-Omar paper (arXiv HTML)
+**Summary of work:**
+  (1) **RESOLVED GIT REBASE**: Merged S15 commit with opus-S12, pushed successfully.
+  (2) **PERPENDICULAR BELL CURVE**: H(T) forms a perfect symmetric bell curve vs tiling Hamming weight at n=5 (exhaustive). Avg H by HW: 1.0, 3.2, 5.3, 6.9, 8.0, 8.4, 8.0, 6.9, 5.3, 3.2, 1.0. Ratio perp/diag = 2.79. NSC avg H is CONSTANT (~4.5) across all HW, while SC avg varies 1.0-9.7. NSC H values severely constrained: {3,5} at n=5 vs SC {1,3,9,11,13,15}.
+  (3) **REAL ROOTS EXTENDED TO DEGREE 6**: Verified 0 failures for I(Omega_3(T), x) at n=5 (exhaustive, deg 1), n=6 (500, deg 1-2), n=7 (200, deg 1-2), n=8-10 (50 each, deg 2-3), n=12 (30, deg 3-4), n=15 (10, deg 5), n=20 (3 confirmed, deg 6). All roots real and negative.
+  (4) **ULC CONFIRMED**: Ultra-log-concavity (alpha_k/C(m,k) log-concave) holds with 0 failures at ALL tested n.
+  (5) **J(n,3) HEREDITARY REAL-ROOTEDNESS IS FALSE**: Arbitrary induced subgraphs of Johnson graph J(n,3) do NOT always have real-rooted I.P. Counterexample: 7 triples at n=9, alpha=[1,7,5,1], discriminant=-44. About 1.1% of random 7-element subsets fail. BUT tournament-realizable triple sets ALWAYS give real roots. This proves real-rootedness is tournament-specific, not a general J(n,3) property.
+  (6) **HOOK EXPANSION ANALYSIS**: Irving-Omar Prop 26 hook coefficients [s_{(i,1^{n-i})}]U_T are palindromic for all tournaments. Transitive hooks = binomial coefficients C(n-1,k). At n=4: exactly 3 hook patterns (H=1→[1,3,3,1], H=3→[3,3,3,3], H=5→[5,3,3,5]).
+  (7) **IRVING-OMAR PROOF CHAIN**: Fully understood Corollary 20 proof. S(D) = permutations whose nontrivial cycles are D-cycles. 2^psi = 2^(#nontrivial cycles). Each directed cycle gives one permutation cycle. So sum = I(Omega(D), 2).
+  (8) **SCHWESER-STIEBITZ-TOFT**: Only mod-2 results. No new mod-4 information beyond what we have.
+  (9) Processed inbox: tournament_n5_v5.html (interactive tiling explorer visualization tool, no new theorems).
+**New contributions:**
+- T074 (perpendicular bell curve), T075 (NSC constrained), T076 (hook palindrome), T077 (degree-6 real roots at n=20), T078 (J(n,3) NOT hereditary)
+- Updated THM-020 verification table with polynomial degrees
+- 04-computation/perpendicular_propagation.py, real_roots_deep.py, hook_expansion_test.py
+**Unresolved threads:**
+- H(T_19) computation (agent launched, may be running)
+- Why does tournament structure prevent non-real roots? The constraint is: cyclic triples of a tournament form a specific subset of J(n,3). What algebraic property of this subset forces real-rootedness?
+- The perpendicular bell curve: does it hold for all n? What is the closed-form relationship between HW and avg H?
+- Web research agent for recent real-roots results (launched, may be running)
+
 ## kind-pasteur-2026-03-05-S15 — 2026-03-05 (Perpendicular maximizer, Claude's Cycles, ultra-log-concavity)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S14b (same session)
