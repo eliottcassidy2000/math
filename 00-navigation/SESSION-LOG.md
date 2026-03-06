@@ -13,6 +13,37 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S11b — 2026-03-06 (sigma-equivariance + Fibonacci det)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S11 (ran out of context)
+**Summary of work:**
+  (1) **PROVED sigma-equivariance theorem for SC tournaments:**
+    For T with involution anti-aut sigma:
+    - Off-diagonal: M[sigma(a),sigma(b)] = (-1)^{n-2} M[a,b]
+    - Diagonal: M[sigma(a),sigma(a)] = (-1)^{n-1} M[a,a]
+    At odd n: forces M[i,sigma(i)] = 0 for all sigma-paired vertices.
+    This is the algebraic basis of the GS flip dichotomy (THM-022).
+    Verified: n=3,4,5 exhaustive (0 violations), n=7 sampled.
+
+  (2) **PROVED det(M(T_full_n)) = (-1)^{n(n-1)/2} * F_{n+1} (Fibonacci):**
+    M(T_full) is tridiagonal with alternating +/-1 entries.
+    Row-scaling by (-1)^i gives matrix N with Fibonacci recurrence for det.
+    Cross-scale pattern: H(T_full) = Tribonacci, det(M(T_full)) = Fibonacci.
+    Verified: n=2,...,15.
+
+  (3) **Explored post-THM-030 implications:**
+    - Read kind-pasteur-S25 scripts on VT corollary, Paley transfer matrix
+    - At n=5, ALL H=15 maximizers (including non-regular) have M = 3*I
+    - Testing whether this extends to n=7 (M = 27*I for all maximizers)
+
+**New contributions:**
+  - 04-computation/sigma_equivariance_transfer.py
+  - 04-computation/fibonacci_det_transitive.py
+**Unresolved threads:**
+  - Does M = (H/n)*I for ALL H-maximizers, not just VT? (running at n=7)
+  - Prove sigma-equivariance from reindexing identity algebraically
+  - Cross-scale eigenvalue patterns beyond T_full family
+
 ## opus-2026-03-06-S25 — 2026-03-06 (COMPLETE PROOF of Key Identity and even r-powers)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S24 (ran out of context)
