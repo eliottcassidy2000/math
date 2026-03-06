@@ -1,7 +1,7 @@
 # Tiling Isomorphism Classes and the SC+SF Symmetry Kernel
 
-**Instance:** opus-2026-03-06-S7
-**Status:** VERIFIED computationally n=3,...,7
+**Instance:** opus-2026-03-06-S7, updated opus-2026-03-06-S8 (n=8)
+**Status:** VERIFIED computationally n=3,...,8
 
 ---
 
@@ -24,8 +24,11 @@ that are simultaneously **self-converse** (T ~ T^op) and **self-flip**
 | 5 | 12      | 8  | 2  | 2     | 15    | NO               |
 | 6 | 56      | 12 | 8  | 2     | 45    | YES              |
 | 7 | 456     | 88 | 30 | 8     | 189   | NO               |
+| 8 | 6880    |~170|~163| 5     | 661   | NO               |
 
 Class counts match OEIS A000568 (non-isomorphic tournaments on n vertices).
+n=8 SC/SF counts are approximate (from fingerprint analysis with 6689 fp classes);
+kernel count of 5 is exact (brute-force verified).
 
 ---
 
@@ -64,24 +67,45 @@ A class is in the **symmetry kernel** if it satisfies both:
 
 All n=7 kernel classes have |Aut|=1, |AntiAut|=1, and nearly-regular scores.
 
-### Kernel Growth: 0, 1, 2, 2, 8
+**n=8 (5 classes):** [BRUTE-FORCE VERIFIED]
+- H=641, |Aut|=1, |AntiAut|=1, scores=(4,4,4,4,3,3,3,3), GS=37/641
+- H=653, |Aut|=1, |AntiAut|=1, scores=(4,4,4,4,3,3,3,3), GS=37/653
+- H=637, |Aut|=1, |AntiAut|=1, scores=(4,4,4,4,3,3,3,3), GS=39/637
+- H=621, |Aut|=3, |AntiAut|=3, scores=(4,4,4,4,3,3,3,3), GS=39/207
+- H=657, |Aut|=1, |AntiAut|=1, scores=(4,4,4,4,3,3,3,3), GS=37/657
+
+All n=8 kernel classes have near-regular scores (4,4,4,4,3,3,3,3) and c3=20.
+One class (H=621) has |Aut|=3; the rest have |Aut|=1.
+Total SC+SF masks: 20 out of 2^21 = 2,097,152.
+
+### Kernel Growth: 0, 1, 2, 2, 8, 5
 
 ---
 
 ## Key Structural Findings
 
-### F1: H-maximizer alternates between kernel and non-kernel by parity
+### F1: H-maximizer vs kernel — pattern breaks at n=8
 
+**Original pattern (n=3,...,7):**
 At **even n** (4, 6): the H-maximizer is in the kernel (SC+SF).
-At **odd n** (5, 7): the H-maximizer is SC but NOT SF. The maximizer is
-the regular tournament (all scores equal), which has high automorphism
-group (|Aut|=5 at n=5, |Aut|=21 at n=7) — too symmetric to be self-flip.
+At **odd n** (5, 7): the H-maximizer is SC but NOT SF.
 
-This connects to the observation that at odd n, the maximizer is the
-Paley tournament, whose high symmetry prevents it from being its own
-"anti-tournament" relative to any fixed Hamiltonian path.
+**n=8 BREAKS this pattern:** The H-maximizer (H=661) is SC but NOT SF.
+There are 6 iso classes with H=661: 2 are SC-only, 4 are neither SC nor SF.
+NONE of the 6 H=661 classes are self-flip.
 
-### F2: Grid-symmetric tilings per kernel class ~ 3^floor((n-2)/2)
+Refined pattern:
+- n=4: H-max in kernel (SC+SF)
+- n=5: H-max SC only (Paley, |Aut|=5)
+- n=6: H-max in kernel (SC+SF, |Aut|=3)
+- n=7: H-max SC only (Paley, |Aut|=21)
+- n=8: H-max SC only (|Aut|=1), H(flip)=631 != 661
+
+The even/odd pattern held only for small n. At n=8, the H-maximizer
+is not even close to SF: its flip has H=631 (30 less than 661).
+The kernel's max H at n=8 is 657, falling short of the global max 661.
+
+### F2: Grid-symmetric tilings per kernel class — prediction fails at n=8
 
 | n | 3^floor((n-2)/2) | GS counts in kernel |
 |---|------------------|---------------------|
@@ -89,19 +113,23 @@ Paley tournament, whose high symmetry prevents it from being its own
 | 5 | 3                | [3, 3]              |
 | 6 | 9                | [9, 9]              |
 | 7 | 9                | [9,9,5,9,7,9,9,7]  |
+| 8 | 27               | [37,37,39,39,37]    |
 
-Exact for n=4,5,6. At n=7, holds for 5/8 kernel classes (those with
-score (4,3,3,3,3,3,2)). The two exceptions with GS=7 have score
-(4,4,3,3,3,2,2); the one with GS=5 has score (4,4,4,3,2,2,2).
+Exact for n=4,5,6. At n=7, holds for 5/8 kernel classes.
+**At n=8, the prediction 3^3=27 is WRONG:** all kernel GS counts are
+37 or 39. The GS per class no longer follows the simple 3^floor((n-2)/2)
+formula. Instead, the counts cluster around 37-39 (averaging ~38).
+The |Aut|=3 class has GS=39 with class_size=207 (GS/size=0.188), while
+|Aut|=1 classes have GS=37 with class_size~650 (GS/size~0.057).
 
-### F3: GS/size ratio of 3/5 persists for kernel H-maximizers at even n
+### F3: GS/size ratio of 3/5 — DISPROVED at n=8
 
 - n=4 #2:  GS/size = 3/5 = 0.600
 - n=6 #54: GS/size = 9/15 = 3/5 = 0.600
+- **n=8 kernel max H (657): GS/size = 37/657 = 0.0563** (NOT 3/5)
 
-Both are the H-maximizer within their kernel. The ratio 3/5 may persist
-at n=8 — prediction: the n=8 kernel should contain an H-maximizer class
-with GS/size = 27/45 = 3/5.
+The 3/5 ratio was a small-n artifact. At n=8, kernel GS/size ratios
+are 0.057-0.188, far from 3/5. The prediction 27/45 fails completely.
 
 ### F4: Parent-child inheritance chain
 
@@ -140,12 +168,17 @@ by their directed cycle counts (alpha_1 = 80, 65, 59 respectively).
 
 ## H Values of Kernel Classes vs Maximum
 
-| n | Kernel H range | Max H | Kernel/Max ratio |
-|---|---------------|-------|------------------|
-| 4 | [5, 5]        | 5     | [1.000, 1.000]   |
-| 5 | [11, 13]      | 15    | [0.733, 0.867]   |
-| 6 | [41, 45]      | 45    | [0.911, 1.000]   |
-| 7 | [117, 159]    | 189   | [0.619, 0.841]   |
+| n | Kernel H range | Max H | Kernel/Max ratio    |
+|---|---------------|-------|---------------------|
+| 4 | [5, 5]        | 5     | [1.000, 1.000]      |
+| 5 | [11, 13]      | 15    | [0.733, 0.867]      |
+| 6 | [41, 45]      | 45    | [0.911, 1.000]      |
+| 7 | [117, 159]    | 189   | [0.619, 0.841]      |
+| 8 | [621, 657]    | 661   | [0.939, 0.994]      |
+
+The kernel max H at n=8 is 657 = 661 - 4, very close to but not equal
+to the global maximum. The kernel's H range narrows in relative terms
+at even n: ratio range 0.939-0.994 at n=8 vs 0.619-0.841 at n=7.
 
 The kernel H values are concentrated in the upper range of all H values,
 but the ratio to max H decreases at odd n (where the maximizer is outside

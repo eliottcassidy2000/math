@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S8 — 2026-03-06 (n=8 SC+SF kernel: 5 classes, even/odd pattern broken)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S7
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, INVESTIGATION-BACKLOG.md, tiling_iso_n7_c.py, tiling-isomorphism-kernel.md
+**Summary of work:**
+  (1) **n=8 SC+SF kernel analysis — VERIFIED:** Extended tiling isomorphism analysis to n=8 (2^21 = 2,097,152 tilings). Used C-accelerated fingerprint analysis with 6689 fingerprint classes (vs OEIS 6880 iso classes), then brute-force verified kernel classes with all 40320 permutations.
+  (2) **SC+SF kernel count: exactly 5** at n=8. Sequence now: 0,1,2,2,8,5 for n=3,...,8.
+  (3) **Even/odd H-maximizer pattern BROKEN at n=8:** The H-maximizer (H=661) is SC but NOT SF, just like at odd n. The H=661 tournament has 6 iso classes: 2 SC-only, 4 neither, 0 SF. None are SC+SF. The kernel's max H is 657 (99.4% of max).
+  (4) **GS formula DISPROVED at n=8:** Kernel GS counts are 37-39, NOT the predicted 3^3=27. The 3/5 ratio also fails (actual ~0.057).
+  (5) **Structural analysis:** All kernel classes have scores (4,4,4,4,3,3,3,3), c3=20, c5 in [60,78], c7 in [96,102]. One class has |Aut|=3; rest have |Aut|=1. H-max has highest OCF residual (128 from higher-order independent sets in Omega).
+**New contributions:** T128/T129 updated (pattern broken), tiling-isomorphism-kernel.md updated to n=8, tiling_iso_n8_c.py, verify_n8_kernel.py, kernel_structure_n8.py
+**Unresolved threads:**
+- Why does the even/odd pattern break at n=8? Is n=6 the last even n with H-max in kernel?
+- What distinguishes SC+SF tournaments from SC-only at a structural level?
+- The kernel count sequence 0,1,2,2,8,5 has no obvious pattern; n=9 data would help
+- INV-051/INV-052 (Mitrovic noncommuting Rédei-Berge) still highest priority for OCF proof strategy
+
 ## kind-pasteur-2026-03-06-S21 — 2026-03-06 (DRT n=11 analysis, alpha_1 gap theorem, converse of Redei)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S20
