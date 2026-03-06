@@ -368,13 +368,13 @@
 **Status:** Hypothesis only. NOT tested.
 **What:** At n=2k, the first cycle with mu>1 has length 2k-1. Excess from shorter cycles may be compensated by (L+2)-cycle contributions. Is there a recursive tower structure?
 
-### INV-042: Fano-Paley design structure and alpha_2
-**Source:** T102, opus-2026-03-06-S4
-**Status:** DISCOVERED. Combinatorial design structure proved computationally.
-**What:** The cyclic triples of Paley T_p form a 2-(p, 3, (p+1)/4) BIBD. At p=7: two Fano planes (lambda=2), 7 disjoint pairs = one per vertex. At p=11: lambda=3, 495 disjoint pairs, 550 disjoint triples. The BIBD is Aut-transitive (single orbit of 55 triples under Aut of size 55).
-**Key insight:** The Fano decomposition at p=7 perfectly explains alpha_2=7 in I(Omega(T_7),x) = 1+80x+7x^2. Each omitted vertex uniquely determines a disjoint 3-cycle pair (one line from each Fano copy). |Aut(T_7)|=21 divides |Aut(Fano)|=168=|GL(3,2)|.
-**Why it matters:** Design theory gives structural tools for bounding alpha_k, which determines H via OCF. The design parameters (p+1)/4 grow linearly with p, governing the number of disjoint cycle pairs. May explain why Paley tournaments maximize H.
-**Next step:** (1) Check if the BIBD decomposes into sub-designs for larger p. (2) Compute alpha_2 for T_11 (need to count disjoint pairs among ALL odd cycles, not just 3-cycles). (3) Connect design theory bounds on disjoint pairs to H-maximization.
+### INV-042: Fano-Paley design structure and alpha_2 — MAJOR PROGRESS
+**Source:** T102, opus-2026-03-06-S4; T114, kind-pasteur-2026-03-06-S18h
+**Status:** PROVED at n=7. BIBD arrangement MINIMIZES alpha_2 but MAXIMIZES H.
+**What:** The cyclic triples of Paley T_p form a 2-(p, 3, (p+1)/4) BIBD. At p=7: lambda=2, 7 disjoint pairs = MINIMUM among all regular tournaments. The BIBD is Aut-transitive.
+**CRITICAL CORRECTION (S18h):** Previous hypothesis was that BIBD maximizes alpha_2, driving H. This is WRONG. The BIBD actually MINIMIZES alpha_2 (7 vs 10 or 14 for other regular tournaments). But H-maximization is driven by alpha_1 (total DIRECTED odd cycles), not alpha_2. The BIBD forces every 5-vertex subtournament to be regular T_5 (2 directed Ham cycles each), giving 42 directed 5-cycles vs 28-36 for non-BIBD. Combined: alpha_1=80, alpha_2=7, H=189 vs alpha_1=59, alpha_2=14, H=175. Three rigid classes at n=7 (THM-027).
+**Formula:** For regular tournaments, D = C(b,2) - p*C(r,2) + sum C(lambda_e, 2). BIBD minimizes the convex sum by Jensen's inequality.
+**Next step:** (1) Verify at p=11: does BIBD also maximize directed 5-cycles? (2) Prove that BIBD forces subtournament regularity. (3) Can we prove alpha_1 maximization from BIBD structure at general p?
 
 ### INV-043: Paley deletion extended to p=19
 **Source:** T104, opus-2026-03-06-S4

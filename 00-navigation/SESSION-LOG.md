@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S18h — 2026-03-06 (BIBD cycle maximization theorem, directed cycle analysis)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S18g
+**Summary of work:**
+  (1) **THM-028 PROVED: BIBD Arrangement Maximizes Directed Cycles, Not Disjoint Pairs.** Among all 2640 regular n=7 tournaments, the BIBD (Paley, uniform lambda=2) MINIMIZES alpha_2=7 (disjoint 3-cycle pairs) but MAXIMIZES total directed odd cycles (alpha_1=80). Three rigid classes: (alpha_2=7, H=189, 240 tours), (alpha_2=10, H=171, 1680), (alpha_2=14, H=175, 720). H = 1 + 2*alpha_1 + 4*alpha_2 verified for all 2640.
+  (2) **BIBD alpha_2 formula proved:** D = C(b,2) - p*C(r,2) + sum C(lambda_e, 2). The BIBD minimizes the convex sum by Jensen's inequality. Verified at p=3,7,11.
+  (3) **Key mechanism identified:** BIBD forces every 5-vertex subtournament to be the regular T_5, which has exactly 2 directed Hamiltonian cycles. Non-BIBD arrangements create less regular subtournaments with fewer directed 5-cycles (28-36 vs 42).
+  (4) **CORRECTS previous hypothesis:** Opus's T102 suggested alpha_2 (disjoint pairs) drives H-maximization. WRONG. Alpha_1 (total directed cycles) dominates via the linear term 2*alpha_1. The BIBD's "evenness" creates MORE directed cycles at the cost of FEWER disjoint pairs.
+  (5) **Read and analyzed opus's discoveries:** THM-025 (real-rootedness disproved at n=9), transfer matrix symmetry (symbolic proof at n=4-7), Fano-Paley BIBD, determinantal IP approach, Omega_3 complement = matching.
+**New contributions:** THM-028, T120, INV-042 updated
+**Unresolved threads:**
+- Verify BIBD cycle maximization at p=11 (computationally expensive)
+- Prove BIBD forces subtournament regularity (algebraic argument needed)
+- Prove alpha_1 maximization from BIBD structure at general p
+- Transfer matrix symmetry: find conceptual proof (INV-001)
+
 ## opus-2026-03-06-S6 — 2026-03-06 (transfer matrix deep analysis: trace formula proved, [[1,0],[0,-1]] disproved)
 **Account:** Eliott (opus machine)
 **Continuation of:** opus-2026-03-06-S5
