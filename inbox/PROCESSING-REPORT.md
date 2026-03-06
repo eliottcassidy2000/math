@@ -1,53 +1,62 @@
 # Inbox Processing Report
 
-**Generated:** 2026-03-05 17:57:35  
+**Generated:** 2026-03-06 00:32:42  
 **Files found:** 1  
 
 ---
 
-## `snippet.txt`
+## `tournament_n5_v5.html`
 
-*Size: 3,140 bytes | Extension: .txt*
+*Size: 37,778 bytes | Extension: .html*
 
 **STATUS: NEW CONTRIBUTION 🆕**
 
 **Content preview:**
 
 ```
-*Remaining task:** Prove adj(i,j) - adj'(j,i) = delta_I combinatorially.                                                
-       84 +**EXHAUSTIVE PROOF FRONTIER (opus-S4, extending kind-pasteur-S6):**                                                      
-       85 +- n<=6: proved by kind-pasteur-S6 (symbolic polynomial identity, THM-015)                                              
-       86 +- n=7: PROVED by opus-S4 (2^20 = 1,048,576 configs, 4 seconds)                                                    
-       87 +- n=8: IN PROGRESS by opus-S4 (2^27 = 134M configs, ~1hr, all chunks passing so far)                              
-       88 +  Uses full A-clique formula (simplified formula fails at n=8 due to VD 3-5 pairs)                                
-       89  
-       90 +**Even-Odd Split Lemma (opus-S4, new discovery):**                                                                
-       91 +The adj decomposition delta = sum_S Delta(S, others\S) satisfies:                                                
-       92 +  sum_{|S| even} Delta(S,R) = sum_{|S| odd} Delta(S,R)                                                            
-       93 +i.e., the alternating sum vanishes: sum (-1)^|S| Delta(S,R) = 0.                                                  
-       94 +This means delta = 2*(odd-S sum) where odd-S terms correspond to odd cycles.                                      
-       95 +Verified n=5,...,8. This is EQUIVALENT to OCF but provides a clean algebraic                                      
-       96 +reformulation as a vanishing alternating sum of bilinear forms.                                                  
-       97 +See 03-artifacts/drafts/even-odd-split-lemma.md.                                                                  
-       98 +                                                                                                                  
-       99 +**Remaining task:** Prove the alternating sum identity for all n.                                                
-      100 +                                                                                                                  
-      101  **Key structural facts (both agents independently confirmed):**
-      102  - All affected cycles contain {i,j} (complement unchanged by flip)
-      103  - At most one affected cycle in any independent set (A-clique)
-      104  - Complement values computable by inductive OCF
-      105  - The swap involution (opus THM-014) gives adj(i,j)-adj'(j,i) = #U_T - #U_T'
-      106 +- Even-odd split: delta decomposes equally between even-S and odd-S terms (T040)                                  
-      107  
-       92 -See PROP-001 (kind-pasteur), THM-013, THM-014 (opus).                                                            
-      108 +See PROP-001 (kind-pasteur), THM-013, THM-014, THM-015 (both agents).                                            
-      109  
-       94 -**Source:** opus-2026-03-05-S2 (multiple sessions); kind-pasteur-2026-03-05-S5                                    
-      110 +**Source:** opus-2026-03-05-S2/S4; kind-pasteur-2026-03-05-S5/S6      
-```
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tournament Tiling Explorer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 14px; background: #f0f2f5; color: #111; }
+    h1 { margin: 0 0 4px; font-size: 1.4em; }
+    .subtitle { font-size: 13px; color: #555; margin-bottom: 12px; }
+    .top-panels { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+    .panel { border: 1px solid #ccc; padding: 12px; border-radius: 10px; background: #fff; }
+    .panel h3 { margin: 0 0 10px; font-size: 1em; }
+    .n-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .n-row label { font-weight: 700; font-size: 14px; }
+    .n-row input[type=range] { width: 160px; cursor: pointer; }
+    #n-display { font-size: 20px; font-weight: 900; color: #1a6fc4; min-width: 24px; text-align: center; }
+    .n-info { font-size: 12px; color: #666; }
+    #tile-grid-wrap { position: relative; }
+    .tile-cell {
+      position: absolute; display: flex; align-items: center; justify-content: center;
+      border: 2px solid #444; border-radius: 6px;
+      cursor: pointer; user-select: none; font-weight: 700;
+      transition: background 0.1s, color 0.1s;
+    }
+    .tile-cell.on  { background: #1f77b4; color: #fff; border-color: #1357a0; }
+    .tile-cell.off { background: #fff; color: #333; }
+    .tile-cell:hover { filter: brightness(0.88); }
+    .btn-row { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
+    .action-btn {
+      padding: 5px 13px; border-radius: 6px; border: 1px solid #999;
+      background: #eee; cursor: pointer; font-size: 12px; font-weight: 600;
+    }
+    .action-btn:hover { background: #ddd; }
+    .score-display { margin-top: 10px; font-family: monospace; font-size: 15px; }
+    .score-label { font-size: 12px; color: #666; }
+    #main-canvas { display: block; border: 1px solid #ddd; border-radius: 6px; }
+    #big-panel { border: 1px solid #ccc; border-radius: 10px; background: #fff; padding: 16px; }
+    #big-panel h3 { margin: 0 0 8px; font-size: 1em; }
 
-**Suggested integration:**
-- Contains theorem/proof material → extract to `01-canon/theorems/`
+... (691 more lines)
+```
 
 ### Claude action required:
 - Read the full file (it's been archived; path shown below)
@@ -58,7 +67,7 @@
 - Note any discrepancies with existing canon → open court case if needed
 - Update `00-navigation/SESSION-LOG.md`
 
-*Archived to: `inbox/processed/2026-03-05/new/snippet.txt`*
+*Archived to: `inbox/processed/2026-03-06/new/tournament_n5_v5.html`*
 
 ---
 

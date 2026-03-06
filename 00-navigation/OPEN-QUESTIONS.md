@@ -220,7 +220,11 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 ## OPEN-Q-015 🟡
 **Prove I(Omega(T), x) has all real negative roots for all n**
 
-PROVED for n<=8 via claw-freeness + Chudnovsky-Seymour (THM-020). Computationally verified:
+PROVED for n<=8 via TWO independent methods:
+1. Claw-freeness + Chudnovsky-Seymour (THM-020)
+2. **Elementary discriminant + Turán's theorem** (THM-021, opus-S15): For n<=8, deg(I)<=2, so real roots iff a1^2>=4*a2. Triangle-free Turán bound gives a2<=c3^2/4, hence disc>=0. No deep graph structure theory needed.
+
+Computationally verified:
 - n=5: exhaustive (1024), 0 failures
 - n=6: 500 random, 0 failures
 - n=9: 50 random (3-cycle subgraph), 0 failures

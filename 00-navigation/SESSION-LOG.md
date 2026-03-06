@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S15 — 2026-03-06 (Elementary real-rootedness proof via Turán's theorem + discriminant)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S14 (continuation after merge conflict resolution)
+**Files read:** Full warm-up sequence, all inbox messages, INVESTIGATION-BACKLOG.md, human inbox (tournament-tiling-explorer.html)
+**Summary of work:**
+  (1) **RESOLVED MERGE CONFLICTS** from previous session's failed push. Three files (TANGENTS.md, SESSION-LOG.md, .session-state.json) had conflict markers from concurrent kind-pasteur-S15 and opus-S13 commits. All resolved: kept both sides, renamed my session S12→S14 to avoid collision. Successfully pushed.
+  (2) **INTEGRATED HUMAN INBOX**: Tournament Tiling Explorer (interactive HTML visualization tool). Archived to 03-artifacts/visualizations/. Extracted perspective conjecture (T075): #vertex-orbits at n predicts #classes at n+1, holds for n=3→4 and n=4→5, fails at n=5→6.
+  (3) **NEW THEOREM THM-021: ELEMENTARY PROOF OF REAL-ROOTEDNESS** for n≤8 via discriminant analysis + Turán's theorem. Key insight: for n≤8, alpha(Omega)≤2, so I(Omega,x) = 1+a₁x+a₂x² has real roots iff a₁²≥4a₂. The "disjoint 3-cycle graph" is triangle-free (three disjoint triples need 9>n vertices), so by Turán: a₂≤c₃²/4, giving discriminant≥0. At n=8, 3-5 pairs handled by AM-GM ((c₅-1)²≥0). This is an INDEPENDENT proof of THM-020, using only classical combinatorics instead of Chudnovsky-Seymour.
+  (4) **EXHAUSTIVE VERIFICATION**: Discriminant bound verified for ALL tournaments at n=5 (1024), n=6 (32768), n=7 (2,097,152). Sampled at n=8 (2000) and n=9 (500). Zero failures.
+  (5) **TIGHTNESS ANALYSIS**: The bound is TIGHT at n=6,7 — tournaments with exactly 2 complementary 3-cycles achieve disc=0, giving I=(1+x)² (double root at -1). These form a single isomorphism class at n=6 with score sequence (4,4,4,1,1,1).
+**New contributions:**
+- THM-021 (discriminant real-rootedness proof)
+- T074 (discriminant approach tangent), T075 (perspective conjecture from HTML tool)
+- 04-computation/discriminant_real_roots.py (exhaustive verification script)
+- 03-artifacts/visualizations/tournament-tiling-explorer.html (human's visualization tool)
+- OPEN-Q-015 updated with alternative proof reference
+**Unresolved threads:**
+- For n≥9, degree≥3: need Newton/ULC bounds to extend real-rootedness proof
+- The perspective conjecture (T075): why does it fail at n=5→6? Is there a corrected version?
+- Turán bound is tight: can the double-root tournaments (disc=0) be characterized algebraically?
+
 ## opus-2026-03-06-S1 — 2026-03-06 (Deep tiling geometry investigation)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S13 (backlog investigation)
