@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S7 — 2026-03-05 (n=7 proof + structural analysis)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S6 (context continuation)
+**Files read:** SESSION-LOG.md, OPEN-QUESTIONS.md, TANGENTS.md, MISTAKES.md, definitions.md, THM-013, THM-014, THM-015, all S6 code files
+**Summary of work:** Extended OCF proof to n=7 via two independent methods: (1) SymPy polynomial identity verification (20 arc variables, 1858 monomials, 77s) and (2) exhaustive {0,1} enumeration (1,048,576 cases, 775s). Both confirm delta_H = delta_I as polynomial identity at n=7. Also explored structural decomposition for general proof: proved delta_H = -sum s_x*(R1+R2) algebraically, showed R1+R2 = 2*H(B_x) at n=4, found excess terms at n=5 satisfy sum s_x*exc(x) = -2*(D5-C5) on {0,1} but NOT as polynomial identity (non-multilinear). Investigated f(S)+f(S^c) pairing: universal at n=4, fails at n>=5 due to 5-cycle corrections. Created complete hand proof for n=4 via f(S) decomposition.
+**New contributions:**
+- THM-015 updated to PROVED at n<=7 (was n<=6)
+- 03-artifacts/code/sympy_proof_n5.py (SymPy polynomial identity proof at n=5)
+- 03-artifacts/code/sympy_proof_n6.py (SymPy polynomial identity proof at n=6)
+- 03-artifacts/code/sympy_proof_n7.py (SymPy polynomial identity proof at n=7)
+- 03-artifacts/code/algebraic_proof_n4.py (complete hand proof at n=4)
+- 03-artifacts/code/pairing_proof.py (f(S)+f(S^c) analysis, shows n>=5 failure)
+- 03-artifacts/code/proof_structure_analysis.py (pred/succ decomposition, s-signature analysis)
+**Unresolved threads:**
+- Prove polynomial identity for ALL n — central remaining open problem
+- n=8 SymPy verification feasible (user offered overnight compute)
+- Structural proof approaches: transfer matrix, induction on n, permanent expansion
+- Non-multilinear excess identity blocks naive decomposition approach
+
+---
+
 ## opus-2026-03-05-S3 — 2026-03-05
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S2 (context overflow, resumed)
