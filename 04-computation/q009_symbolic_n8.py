@@ -91,19 +91,34 @@ def verify_n8():
         H_Bw += wt
     alpha_I = -2 * H_Bw
 
-    # Cycle derivatives: chains of odd length 3 and 5 with w at endpoint
-    for chain_len in [3, 5]:
+    # FULL inductive formula: chains of odd length >= 3 with w at endpoint,
+    # weighted by H(comp) where comp = W \ {chain vertices}
+    for chain_len in [3, 5]:  # max chain = 5 (uses 5 of 6 W-vertices)
         for combo in combinations(W_verts, chain_len):
             if 'w' not in combo:
                 continue
+            comp = [x for x in W_verts if x not in combo]
+            # H(comp) = sum of Ham path weights in comp
+            H_comp = Sym(0)
+            if len(comp) == 0:
+                H_comp = Sym(1)
+            elif len(comp) == 1:
+                H_comp = Sym(1)
+            else:
+                for pi in permutations(comp):
+                    wt = Sym(1)
+                    for k in range(len(pi)-1):
+                        wt *= T(pi[k], pi[k+1])
+                    H_comp += wt
+
             for perm in permutations(combo):
                 int_wt = Sym(1)
                 for k in range(len(perm)-1):
                     int_wt *= T(perm[k], perm[k+1])
                 if perm[0] == 'w':
-                    alpha_I += 2 * (-p_vals[perm[-1]]) * int_wt
+                    alpha_I += 2 * (-p_vals[perm[-1]]) * int_wt * H_comp
                 elif perm[-1] == 'w':
-                    alpha_I += 2 * (-q_vals[perm[0]]) * int_wt
+                    alpha_I += 2 * (-q_vals[perm[0]]) * int_wt * H_comp
 
     print("Expanding alpha_I...")
     alpha_I = expand(alpha_I)
