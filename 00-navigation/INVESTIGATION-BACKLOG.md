@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-06-S3
+**Last full repo scour:** kind-pasteur-2026-03-06-S18e
 **Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
@@ -333,6 +333,20 @@
 - **Mod-4 structure:** Neither sigma preserves H mod 4 reliably.
 **Scripts:** `04-computation/sigma_structure.py`
 **Next step:** (1) Understand algebraic significance of the S_3 group. (2) Can the n->n+2 POS structure be used differently (not through H preservation)? (3) Relate to transfer matrix symmetry (INV-001).
+
+### INV-039: SC Maximizer Theorem and sigma* structure
+**Source:** kind-pasteur-2026-03-06-S18/S18e, T091, T093, T095, OPEN-Q-016
+**Status:** VERIFIED exhaustive n=4,5,6,7. Mechanism identified. NOT proved.
+**What:** Within each self-complementary score class, max H is always achieved by SC tournament. The mechanism: involutory anti-automorphism sigma induces sigma* on directed odd cycles, which is an involutory automorphism of Omega(T). At even n, sigma* is fixed-point-free, pairing all cycles. Some pairs are vertex-disjoint (giving alpha_2 contributions). At even n, sigma is fixed-point-free on vertices (proved: fixed point implies score=(n-1)/2, non-integer).
+**Key results:**
+- n=7: all 15 self-comp score classes confirmed
+- sigma* is ALWAYS involution and ALWAYS preserves Omega conflict graph
+- At n=6: SC H=45 has 4 disjoint 3-cycle pairs; NSC H=43 has only 1
+- Two routes to max H: more cycles (alpha_1) OR more disjoint pairs (alpha_2)
+- Involutory anti-aut always exists (even when non-involutory ones also exist)
+**Scripts:** sc_maximizer_n7_fast.py, anti_aut_analysis.py, sigma_star_analysis.py, anti_aut_involution_test.py
+**Draft:** sc-maximizer-mechanism.md
+**Next step:** (1) Test at n=8 (even n, computationally expensive but important). (2) Prove algebraically that sigma* structure maximizes I(Omega,2). (3) Connect to Kahn-Galvin-Tetali or Godsil's matching polynomial results for graphs with involutory automorphisms.
 
 ### INV-038: Blueself parity theorem and census structure
 **Source:** opus-2026-03-06-S3 (deep census investigation)
