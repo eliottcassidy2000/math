@@ -13,7 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-<<<<<<< Updated upstream
+## opus-2026-03-06-S19b — 2026-03-06 (T^op equivalence verification, structural characterization of real-root failure)
+**Account:** Eliott (opus machine)
+**Continuation of:** opus-2026-03-06-S19
+**Summary of work:**
+  (1) **T^op EQUIVALENCE VERIFIED n=4,...,7.** Ran top_equivalence_proof.py: M[a,b]=M[b,a] and M_{T^op}[a,b] = (-1)^{n-2} M_T[a,b] confirmed symbolically at n=4,5 and numerically at n=6,7. The parity constraint analysis reveals superset-sum conditions don't simplify to a neat pattern — symmetry arises from deeper combinatorial structure.
+  (2) **THM-025 extended with 3 additional counterexamples** including a degree-4 case (a₃=4). Structural characterization: failure requires 3 vertex-disjoint 3-cycles with near-total inter-group dominance (~3% rate at max imbalance=9).
+  (3) **Tangents T142-T143 added** for transfer T^op equivalence and additional counterexamples.
+**New contributions:** top_equivalence_proof.py verified, THM-025 extended, T142-T143
+**Unresolved threads:**
+- Prove T^op equivalence for general n (the key step for Claim A)
+- The parity constraint approach yields necessary conditions but doesn't explain WHY they hold
+- INV-051/INV-052 (Mitrovic noncommuting Rédei-Berge) remains highest priority for OCF proof
+
 ## opus-2026-03-06-S8 — 2026-03-06 (n=8 SC+SF kernel: 5 classes, even/odd pattern broken)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S7

@@ -85,12 +85,41 @@ Two roots are complex, confirming non-real-rootedness.
 
 ---
 
+## Additional counterexamples (opus-2026-03-06-S19)
+
+Three more counterexamples found via targeted search (high score variance):
+
+1. **Scores (2,2,2,3,4,5,5,6,7):** I(Omega,x) = [1, 157, 22, 1], disc = -3,529,903. Newton PASSES but discriminant negative. 157 cycles (16 tri, 69 pent, 63 hept, 9 ham).
+
+2. **Scores (1,2,2,4,5,5,5,6,6):** I(Omega,x) = [1, 152, 47, 4], disc = -5,053,548. **Degree 4** polynomial (a₃=4 independent triples). Newton passes. 152 cycles.
+
+3. **Scores varied:** I(Omega,x) = [1, 85, 24, 2], disc = -733,364. Newton passes. a₃=2.
+
+All share the structural signature: extreme inter-group dominance between the 3 groups defined by vertex-disjoint 3-cycles (max imbalance = 9, i.e., all 9 arcs one-way between some pair of groups).
+
+---
+
+## Structural characterization (opus-2026-03-06-S19)
+
+The failure mechanism requires:
+1. **Three vertex-disjoint 3-cycles** partitioning all 9 vertices into groups A, B, C
+2. **Near-total inter-group dominance**: at least one pair of groups has all 9 arcs one-way
+3. This creates a "transitivity bottleneck" where almost all cycles pass through a hub vertex
+
+The maximally imbalanced tournament (each group fully dominates the next) gives I(Omega_3) = (1+x)³ with disc = 0 exactly — the boundary case. One arc flip creates disc < 0.
+
+Statistical rarity: 0 failures in 10,000 random n=9 samples. Failures occur ONLY at max imbalance = 9, and even then in ~3% of such tournaments.
+
+---
+
 ## What remains true
 
 - I(Omega(T), x) has all real roots for n <= 8 (THM-020, proved via claw-freeness)
 - Newton's first inequality a_1^2 >= 2*a_2 appears to still hold at n=9 (empirically)
 - Log-concavity of coefficients fails at n=9 (Newton's failure implies this)
-- Real-rootedness holds for MOST n=9 tournaments; the failure requires specific score sequences
+- Real-rootedness holds for MOST n=9 tournaments; the failure requires extreme inter-group dominance
+- Failure also occurs with Newton passing but disc < 0 (subtler than originally found)
+- At n=10, 11: 0 failures in 2000 samples each (Omega_3 only)
 
 ---
 
@@ -99,3 +128,6 @@ Two roots are complex, confirming non-real-rootedness.
 - `04-computation/full_omega_n9_correct.py` — full Omega construction and IP computation
 - `04-computation/real_roots_n9_verify.py` — finds the counterexample tournament
 - `04-computation/newton_n8_sample.py` — confirms n=8 has no failures (200 samples)
+- `04-computation/intergroup_analysis.py` — inter-group dominance characterization
+- `04-computation/three_disjoint_3cycles.py` — 3d3c frequency and failure analysis
+- `04-computation/pfaffian_omega_connection.py` — Pfaffian/determinantal exploration
