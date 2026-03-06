@@ -102,6 +102,21 @@ See PROP-001, THM-013, THM-014, THM-015, THM-016, THM-017, THM-018.
 
 ---
 
+## OPEN-Q-014 🟡
+**Prove Omega(T) is always perfect (and possibly claw-free)**
+
+Computationally verified for all n<=5 (exhaustive) and n=6 (2000 sample, 0 failures).
+Chordality fails at n=6 (72/2000 non-chordal), so perfectness is tight.
+
+All roots of I(Omega(T), x) are real and negative (verified). Log-concavity and unimodality
+hold universally. If Omega(T) is claw-free, Chudnovsky-Seymour gives all-real-roots for free.
+
+See THM-019, INV-032.
+
+**Source:** opus-2026-03-05-S5 (observation), kind-pasteur-2026-03-05-S12 (verification)
+
+---
+
 ## OPEN-Q-010 🟡
 **Per-path formula including 3-cycles AND 5-cycles at n=7**
 
