@@ -126,6 +126,16 @@ split is now proved for ALL n, via Claim (B) (THM-016). See THM-016 for the indu
 delta_H = 2 * sum_{|S| odd} Delta(S,R), but this does NOT equal the cycle formula delta_I
 (see MISTAKE-008). An additional identity is needed to connect these two expressions.
 
+**NEW BREAKTHROUGH (opus-2026-03-05-S5, THM-018):**
+The s-coefficient identity alpha_w^H = alpha_w^I has been PROVED SYMBOLICALLY at n=4,...,7.
+Key findings:
+- alpha_w^H can be rewritten via "insertion decomposition": insert w at each position in perms of B_w
+- The base contribution is -2*H(W), with a correction that matches cycle derivatives exactly
+- At s=0: T(I,v) = T(J,v) for all v in W (crucial symmetry)
+- The identity is a POLYNOMIAL IDENTITY in the arc variables (diff = 0 in SymPy)
+- At n>=8: needs full Delta(alpha_k) formula from THM-013 (higher-order cycle interactions)
+- A general proof might follow by induction, using OCF at sub-tournament level
+
 **Key structural facts (both agents independently confirmed):**
 - All affected cycles contain {i,j} (complement unchanged by flip)
 - At most one affected cycle in any independent set (A-clique)

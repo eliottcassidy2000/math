@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S5b — 2026-03-05 (THM-018: alpha_w^H = alpha_w^I PROVED symbolically at n=4,...,7)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S4d (context continuation x2)
+**Files read:** All warm-up files, previous computation files, THM-013, THM-002
+**Summary of work:** (1) Reformulated alpha_w^H as insertion decomposition: for each perm pi of B_w, insert w at each position with interface correction factors. (2) Discovered base = -2*H(W) and correction = 2*(H(W)-H(B_w)) + cycle_derivs. (3) Proved key structural insight: T(I,v) = T(J,v) at s=0 (i,j interchangeable). (4) PROVED alpha_w^H = alpha_w^I as polynomial identity at n=4,5,6,7 using SymPy symbolic computation (diff = 0 exactly). (5) Identified that n>=8 needs additional Delta(alpha_2) terms from THM-013 (VD cycle pairs). (6) Created THM-018 documenting the proof.
+**New contributions:**
+- THM-018: coefficient identity alpha_w^H = alpha_w^I proved at n<=7 (symbolic)
+- 04-computation/q009_alpha_identity.py (insertion decomposition and factor analysis)
+- 04-computation/q009_insertion_decomp.py (defect = cycle derivatives verification)
+- 04-computation/q009_symbolic_proof.py (symbolic proof n=4,5,6)
+- 04-computation/q009_symbolic_n7.py (symbolic proof n=7)
+- 04-computation/q009_symbolic_n8.py (n=8 attempt — needs full delta_I formula)
+**Unresolved threads:**
+- General proof of alpha_w^H = alpha_w^I for all n (key remaining step for OCF)
+- Need full delta_I formula (including Delta(alpha_2)) for n>=8 symbolic verification
+- Inductive proof approach: use OCF at sub-tournament level to simplify Delta(alpha_k)
+
 ## opus-2026-03-05-S5 — 2026-03-05 (Priority C+E investigation)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4b (continuation after context compaction)
