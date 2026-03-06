@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S10 — 2026-03-06 (positivity hierarchy, even cycle vanishing, hook Schur positivity)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S9
+**Summary of work:**
+  (1) **POSITIVITY HIERARCHY TESTED:** h-positivity FAILS for all non-transitive tournaments (only transitive is h-positive). e-positivity = h-positivity (via omega(U_T) = U_T). s-positivity FAILS (s(2,2) < 0 at n=4). p-positivity HOLDS (= OCF).
+  (2) **EVEN CYCLE VANISHING THEOREM (PROVED):** p_mu(U_T) = 0 whenever mu has any even part. Clean involution proof: reverse even k-cycle c in sigma to get sigma', sign flips by (-1)^{k-1} = -1. Verified n=3-7. Consequence: only odd-part cycle types contribute to U_T.
+  (3) **HOOK SCHUR POSITIVITY:** PROVED at n=4, VERIFIED at n=5 (11/11), n=6 (40/40). **FAILS at n=7** (231/242, 11 failures all for middle hook (4,1,1,1)). Regular tournament T_7 gives [s_{(4,1,1,1)}] = -83/28 from 48 directed 7-cycles.
+  (4) **NON-HOOK NEGATIVITY:** At n=4, s(2,2) carries all negativity (chi^{(2,2)}((3,1))=-1). At n=5, s(3,2) and s(2,2,1) carry it. Non-hook chars at (3,1,...,1) are always negative.
+  (5) **DEEP CONNECTION TO S23:** The even cycle vanishing is the symmetric-function version of kind-pasteur's even-r-powers conjecture (T147). Both stem from the same T<->T^op involution = perpendicular grid reflection.
+**New contributions:** T148 (even cycle vanishing), T149 (hook positivity), T150 (geometric interpretation), INV-053, INV-054
+**New scripts:** h_positivity_test.py, positivity_full_test.py, schur_hook_analysis.py, hook_positivity_test.py (buggy, superseded), hook_geometric_analysis.py, tournament_cycle_structure.py, even_cycle_vanishing_proof.py
+**Unresolved threads:**
+- Characterize WHICH hooks are always positive (outer hooks seem robust, middle hooks fail at n=7)
+- Does hook positivity hold at n=8? (n=8 is even, so (8)-cycles vanish by even cycle vanishing)
+- Geometric interpretation: why do outer hooks maintain positivity?
+- Connection between even cycle vanishing and even-r-powers (same phenomenon at different levels)
+
 ## kind-pasteur-2026-03-06-S23 — 2026-03-06 (path reversal proof at c=0, even-r-powers conjecture, parity filter mechanism)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S22
@@ -75,6 +92,22 @@ Entry format:
 - Prove T^op equivalence for general n (the key step for Claim A)
 - The parity constraint approach yields necessary conditions but doesn't explain WHY they hold
 - INV-051/INV-052 (Mitrovic noncommuting Rédei-Berge) remains highest priority for OCF proof
+
+## opus-2026-03-06-S9 — 2026-03-06 (Deep paper read: chromatic-Rédei-Berge bridge + noncommuting DC)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S8
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, INVESTIGATION-BACKLOG.md, kernel_structure_n8.py, verify_n8_kernel.py
+**Summary of work:**
+  (1) **Deep reading of Mitrovic-Stojadinovic arXiv:2506.08841** (Jun 2025, "Chromatic-Rédei-Berge connection"): Full 20-page read. Key results: Thm 3.2 (X_{inc(P)}=omega(U_P)), Thm 4.1 (converse of Rédei for posets), Thm 4.8 (type-preserving broken-cycle bijection), Conjecture 6.3 (h-positivity for (3+1)-free), Thm 6.11 (h-positivity propagation via DC).
+  (2) **Deep reading of Mitrovic arXiv:2504.20968** (Apr 2025, "Noncommuting Rédei-Berge"): Full 10-page read. Key: Definition 3.1 (W_X in noncommuting vars), Thm 3.7 (deletion-contraction W_X = W_{X\e} - W_{X/e}↑), Corollary 3.12 (noncommutative OCF for tournaments), the ↑ operation as "vertex merging with memory."
+  (3) **Identified 5 interconnected curiosity-sparking research webs:** (a) Chromatic bridge as a 30-year theorem pipeline, (b) Noncommuting DC as inductive proof engine, (c) Forbidden H-values spectrum, (d) Stanley-Stembridge via tournaments, (e) Hopf algebra route to transfer matrix symmetry.
+  (4) **Updated INV-051/052** with detailed paper findings. Added tangents T141-T145.
+**New contributions:** T141 (chromatic bridge), T142 (poset Rédei converse), T143 (h-positivity for tournaments), T144 (noncommutative OCF), T145 (bags of sticks decomposition). INV-051/052 deeply updated.
+**Unresolved threads:**
+- Is every tournament poset (3+1)-free? If so, U_T is h-positive (T143)
+- Does Theorem 4.8's broken-cycle bijection specialize to a bijective OCF proof?
+- Can the noncommutative set-partition OCF (T144) project to prove transfer matrix symmetry?
+- What is the "associated poset" for a tournament, and what is its incomparability graph?
 ## opus-2026-03-06-S8 — 2026-03-06 (n=8 SC+SF kernel: 5 classes, even/odd pattern broken)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S7

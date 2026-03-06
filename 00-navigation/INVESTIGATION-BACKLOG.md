@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-06-S8
+**Last full repo scour:** opus-2026-03-06-S10
 **Last web research:** kind-pasteur-2026-03-06-S19 (extensive 40+ query web search across 6 parallel agents + direct searches)
 
 ---
@@ -148,6 +148,29 @@
 **Source:** OPEN-Q-009, ocf_n8_full.c
 **Status:** PROVED by opus-S4 (2^27 configs, 57min, all passing). Independent verification by opus-S4b C implementation (3M+ configs, 0 fails through partial run).
 **Next:** Close this out. Focus on n=9 strategy or general proof.
+
+### INV-053: Even Cycle Vanishing Theorem — PROVED
+**Source:** opus-2026-03-06-S10, T148
+**Status:** PROVED. Clean involution argument.
+**What:** For any tournament T on [n], p_mu(U_T) = 0 whenever mu has an even part. The proof pairs each permutation sigma with even k-cycle c with sigma' (c reversed); the sign flips because (-1)^{k-1} = -1 for even k. Verified computationally n=3 through n=7.
+**Consequences:** (1) U_T lives in the subspace spanned by p_mu with all odd parts — drastically fewer terms. (2) At n=4, only types (1^4) and (3,1) contribute; at n=5, only (1^5), (3,1,1), (5); at n=6, only (1^6), (3,1,1,1), (3,3), (5,1). (3) The Schur expansion simplifies: [s_lambda]U_T = sum over odd-part mu only. (4) This is the SAME T<->T^op involution as in the path reversal proof (T147).
+**Connection to INV-001:** The even-r-powers conjecture (kind-pasteur-S23) is the transfer matrix version of this same phenomenon. Both arise from the perpendicular grid symmetry.
+
+### INV-054: Hook Schur Positivity for Tournaments — PARTIAL (fails at n=7)
+**Source:** opus-2026-03-06-S10, T149
+**Status:** PROVED at n=4 (clean sign argument). VERIFIED at n=5 (11/11), n=6 (40/40). **FAILS at n=7** (231/242, 11 failures all for middle hook (4,1,1,1)).
+**What:** [s_{(k,1^{n-k})}]U_T >= 0 holds at n=4,5,6 but fails at n=7.
+
+**n=4 proof:** Only p-types (1^4) and (3,1) matter (by INV-053). All hook characters non-negative at both → sum of non-negative terms.
+
+**n=7 failure mechanism:** chi^{(4,1,1,1)}((7)) = -1 and chi^{(4,1,1,1)}((5,1,1)) = 0. Regular tournament T_7 has 48 directed 7-cycles contributing -48/7, overwhelming positive 3-cycle terms. Result: [s_{(4,1,1,1)}]U_{T_7} = -83/28 ≈ -2.96.
+
+**Which hooks always hold:** Hooks (n) and (1^n) have all-positive characters at odd types → always positive. Hooks (n-2,1,1) and (3,1^{n-3}) also have all-positive chars (at n=7). Only hooks with j odd and j near n/2 can fail.
+
+**Non-hook negativity:** Non-hook chars at (3,1,...,1) are always negative → non-hook coefficients negative for all non-transitive tournaments (verified n=4,5,6).
+
+**Refined question:** For which hooks is positivity universal? Is there a simple characterization (e.g., j even, or |j - n/2| > threshold)?
+**Scripts:** `04-computation/schur_hook_analysis.py`, `04-computation/tournament_cycle_structure.py`, `04-computation/even_cycle_vanishing_proof.py`, `04-computation/hook_positivity_n6.py`, `04-computation/hook_positivity_n7.py`
 
 ---
 
@@ -549,8 +572,8 @@
 ## Priority G: New leads from web search (kind-pasteur-2026-03-06-S19)
 
 ### INV-051: Mitrovic noncommuting Rédei-Berge function (arXiv:2504.20968, Apr 2025)
-**Source:** kind-pasteur-2026-03-06-S19 web search
-**Status:** NEW LEAD — HIGH PRIORITY
+**Source:** kind-pasteur-2026-03-06-S19 web search; opus-2026-03-06-S9 (detailed paper read)
+**Status:** DEEPLY READ — HIGH PRIORITY
 **What:** Stefan Mitrovic introduces the Rédei-Berge function in NONCOMMUTING variables, which satisfies deletion-contraction (W_X = W_{X\e} - W_{X/e}↑). The commutative version does NOT have deletion-contraction. Key properties: W_X = W_{X^op}, product rule W_{X·Y} = W_X·W_Y. For tournaments: W_X = sum over permutations with all odd cycles of 2^{psi(sigma)} p_{Type(sigma)} with positive integer coefficients.
 **Why it matters:** Deletion-contraction enables INDUCTIVE PROOFS. This could provide an inductive framework for OCF or transfer matrix symmetry. The noncommutative structure preserves more information than the commutative version.
 **TESTED (kind-pasteur S19):** Direct deletion-contraction does NOT preserve OCF. At n=4:
@@ -559,14 +582,31 @@
   - OCF for T/e (contracted): only 60.7% hold
   OCF is TOURNAMENT-SPECIFIC and does not hold for general digraphs from deletion/contraction.
   The noncommuting framework operates at a different level than H(T).
-**Next step:** (1) Instead of naive DC → OCF induction, investigate whether DC can be used to relate the SYMMETRIC FUNCTION U_T across tournaments (e.g., U_T = U_{T'} + correction for single arc reversal). (2) Check if the noncommutative framework gives a new proof of even-odd split or transfer matrix symmetry.
+**DETAILED READING (opus-S9):**
+  - Definition 3.1: W_X = sum_{f:V->P} sum_{sigma in Sigma_V(f,X)} delta_f(sigma) x_{f(v1)}...x_{f(vn)} where x_i are NONCOMMUTING. Depends on vertex labeling (unlike commutative U_X).
+  - Theorem 3.7 (Deletion-Contraction): W_X = W_{X\e} - W_{X/e}↑ where e=(v_{n-1},v_n). The ↑ operation doubles the last variable: (x_{i1}...x_{in-1})↑ = x_{i1}...x_{in-2} x_{in-1}^2. This is the KEY technical device.
+  - Theorem 3.10: W_X = sum_{sigma in S_V(X,Xbar)} (-1)^{phi(sigma)} p_{Type(sigma)} where Type is now a SET PARTITION (not integer partition). The noncommutative p_pi tracks which vertices are in which cycle.
+  - Corollary 3.12: For tournaments, W_X = sum_{sigma in S_V(X), all odd cycles} 2^{psi(sigma)} p_{Type(sigma)}. This is the NONCOMMUTATIVE OCF — same sum but tracking set-partition cycle types.
+  - Key insight: The ↑ operation has no obvious tiling interpretation, but it corresponds to "merging the last two vertices while remembering which was which." This is precisely what our contraction approach (T017) failed to handle in commutative setting.
+**Next step:** (1) Instead of naive DC -> OCF induction, investigate whether DC can be used to relate the SYMMETRIC FUNCTION U_T across tournaments (e.g., U_T = U_{T'} + correction for single arc reversal). (2) Check if the noncommutative framework gives a new proof of even-odd split or transfer matrix symmetry. (3) CRITICAL: Investigate whether Theorem 3.10 (noncommutative power-sum expansion over SET partitions) implies transfer matrix symmetry when projected to integer partitions.
 
 ### INV-052: Mitrovic-Stojadinovic chromatic↔Rédei-Berge connection (arXiv:2506.08841, Jun 2025)
-**Source:** kind-pasteur-2026-03-06-S19 web search
-**Status:** NEW LEAD — HIGH PRIORITY
-**What:** Proves the chromatic function of a graph and the Rédei-Berge function of a digraph are "almost identical" at the poset level. The connection enables translating properties between the two. Key results: converse of Rédei's theorem, generalization of the triple deletion property, and positivity questions.
-**Why it matters:** The chromatic symmetric function is much better studied than the Rédei-Berge function. Any result proved for chromatic functions could potentially be translated to our tournament setting via this bridge. The "converse of Rédei's theorem" is directly relevant.
-**Next step:** (1) Read full paper. (2) Extract the exact "converse of Rédei's theorem." (3) Check if chromatic polynomial real-rootedness results transfer to our I(Omega(T),x) setting.
+**Source:** kind-pasteur-2026-03-06-S19 web search; opus-2026-03-06-S9 (FULL PAPER READ)
+**Status:** DEEPLY READ — HIGH PRIORITY. Contains multiple directly relevant results.
+**What:** Proves the chromatic function of a graph and the Rédei-Berge function of a digraph are "almost identical" at the poset level. For any poset P: X_{inc(P)} = omega(U_P) (Theorem 3.2). This extends to noncommutative versions: Y_{inc(P)} = omega(W_P) (Theorem 5.7). Commutative diagram of four Hopf algebra morphisms (p.8, Remark 3.4).
+**KEY RESULTS FROM FULL READ (opus-S9):**
+  1. **Theorem 4.1 (Converse of Rédei):** If P is a poset that is NOT a chain, then the number of quasi-linear extensions is EVEN. Proof: chi_{inc(P)}(1) and (-1)^|P| u_P(-1) have the same parity. u_P(1) counts quasi-linear extensions; chi_{inc(P)}(1)=0 unless inc(P) is discrete (P is a chain). THIS GENERALIZES RÉDEI'S THEOREM TO POSETS.
+  2. **Theorem 4.8:** For any poset P and partition lambda: #{broken-cycle-free subsets of inc(P) with component sizes lambda} = #{permutations in S_V(D_P-bar) with cycle type lambda}. This is a CYCLE-TYPE-PRESERVING bijection between broken cycles and permutations — potentially a route to bijective OCF proof.
+  3. **Corollary 3.3:** chi_{inc(P)}(m) = (-1)^|P| u_P(-m). The chromatic polynomial at m colors = Rédei-Berge polynomial at -m. Our H(T) = u_T(1) = (-1)^n chi_{inc(P)}(-1) for the associated poset.
+  4. **Theorem 4.6:** D_P-bar contains a Hamiltonian cycle iff P is irreducible. Combined with Corollary 4.5: U_{P_n} forms an algebraic basis of Sym for any sequence of irreducible posets.
+  5. **Section 6 (Positivity):** Conjecture 6.3: If P is (3+1)-free, U_P is h-positive. Theorem 6.4: Already proved s-positive. Theorem 6.11: h-positivity propagates through deletion-contraction if there's a "sink-like" vertex.
+  6. **Section 7 (Bags of sticks):** Decomposition into bags of sticks (disjoint unions of directed paths) gives explicit formulas. Triple deletion property generalized.
+**Why it matters for us:**
+  - The bridge X_{inc(P)} = omega(U_P) means we can use 30 years of chromatic symmetric function theory on tournament problems
+  - Theorem 4.1 is a clean generalization of the parity theorem we're studying
+  - Theorem 4.8 gives a TYPE-PRESERVING bijection — this is exactly what a bijective OCF proof would need
+  - The h-positivity results (Section 6) may apply to tournament-associated posets
+**Next step:** (1) For a tournament T, identify the associated poset P such that D_P = T. (2) Check if Theorem 4.8 gives a new proof of OCF when specialized to tournaments. (3) Investigate whether tournament posets are (3+1)-free (this would give h-positivity of U_T). (4) Test computationally: does the broken-cycle bijection from Thm 4.8 match our OCF terms?
 
 ### INV-053: Savchenko cycle counting formulas for regular tournaments — VERIFIED AT n=7
 **Source:** kind-pasteur-2026-03-06-S19 web search; Savchenko J. Graph Theory 83 (2016), Discrete Math (2017), arXiv:2403.07629 (2024)
