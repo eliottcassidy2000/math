@@ -51,6 +51,11 @@ If true, this would imply:
 | 6 | 500 random | 0 |
 | 7 | 1000 random (THM-019) | 0 |
 | 8 | 5 random (full Omega) | 0 |
+| 9 | 50 random (3-cycle subgraph) | 0 |
+| 10 | 30 random (3-cycle subgraph) | 0 |
+| 12 | 20 random (3-cycle subgraph, ~56 cycles) | 0 |
+| 15 | 20 random (3-cycle subgraph, ~119 cycles) | 0 |
+| 20 | 10 random (3-cycle subgraph, ~291 cycles) | 0 |
 
 ---
 
