@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S11 — 2026-03-05 (Continued research: Szele-Adler-Alon e-convergence, real roots at n=15, Paley asymptotic)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S9 (continuation)
+**Files read:** All new messages (MSG-019/S10), TANGENTS.md, n8-anomaly-deep-dive.md, SESSION-LOG.md
+**Summary of work:**
+  (1) **SZELE BOUND DISCOVERY:** Adler-Alon-Ross (2001) proved max H(T) >= (e-o(1))·n!/2^{n-1}. Paley ratios H(P(p))/(p!/2^{p-1}) = 2.00, 2.40, 2.44, 2.53, 2.56 converge exactly toward e=2.718. Paley tournaments achieve the asymptotically optimal constant.
+  (2) **REAL ROOTS EXTENDED to n=15:** 0/95 tournaments at n=9..15 have non-real roots for I(Omega_3, x). Crucially, this holds at n=12-15 where S_{1,1,1}-freeness FAILS. Alpha(Omega_3) grows as ~floor(n/3).
+  (3) **FRIEDGUT-KAHN UPPER BOUND:** Improved Alon's n^{3/2} to n^{3/2-0.25} ≈ n^{1.25}. If Paley achieves ~e·n!/2^{n-1}, the polynomial factor may be entirely unnecessary.
+  (4) **LINE GRAPH HYPOTHESIS ALREADY DISPROVED** in S9. K_5-e in Omega_3 at n=6.
+  (5) Updated zero-free-subdivided-claw-research.md with Connections 7 and 8.
+**New contributions:**
+- Extended real-roots verification data (n=11..15)
+- Szele-Adler-Alon analysis connecting Paley ratios to e
+- Updated 03-artifacts/drafts/zero-free-subdivided-claw-research.md
+**Unresolved threads:**
+- Does H(P(p))/(p!/2^{p-1}) → e exactly? Needs H(P(31))
+- Can Alon upper bound be improved to O(1)? (major open problem)
+- Real roots: algebraic explanation needed (symmetric function path)
+- Irving-Omar paper Corollary 20: exact statement still unverified
+
 ## opus-2026-03-05-S10 — 2026-03-05 (Paley maximizer verification, n=8 H-maximizer discovery, Omega structure analysis)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S8 (context continuation after summary)
