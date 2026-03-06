@@ -198,6 +198,28 @@ Both conjectures are FALSE for p=11:
 
 ---
 
+## OPEN-Q-015 🟡
+**Prove I(Omega(T), x) has all real negative roots for all n**
+
+PROVED for n<=8 via claw-freeness + Chudnovsky-Seymour (THM-020). Computationally verified:
+- n=5: exhaustive (1024), 0 failures
+- n=6: 500 random, 0 failures
+- n=9: 50 random (3-cycle subgraph), 0 failures
+- n=10: 30 random (3-cycle subgraph), 0 failures
+
+At n>=9, Omega(T) has claws (90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
+Omega(T) is also NOT a comparability graph for n>=7 (fails 1/100 at n=7, 58/100 at n=8).
+A new argument is needed. Possible approaches:
+- Jerrum-Patel (2026) zero-free regions for subdivided-claw-free graphs
+- Direct structural analysis of Omega(T) beyond claw-freeness
+- Connection to the Grinberg-Stanley symmetric function framework
+
+If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, H(T) > 0 for all x > 0.
+
+**Source:** kind-pasteur-2026-03-05-S13 (THM-020)
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.

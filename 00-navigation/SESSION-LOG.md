@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S14 — 2026-03-05 (Deep research: real roots theorem, comparability, Chudnovsky-Seymour, literature survey)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S13 (context continuation)
+**Files read:** MEMORY.md, THM-019, OPEN-QUESTIONS.md, TANGENTS.md, SESSION-LOG.md
+**Summary of work:**
+  (1) NEW THEOREM (THM-020): All roots of I(Omega(T), x) are real and negative for n<=8. PROVED via claw-freeness + Chudnovsky-Seymour (2007). Real-rootedness conjectured for all n.
+  (2) COMPUTATIONAL: Verified real roots at n=5 (exhaustive), n=6 (500), n=9 (50), n=10 (30) — 0 failures anywhere, even beyond claw-free range.
+  (3) TESTED & DISPROVED: Omega(T) is NOT always a comparability graph (fails at n=7: 1%, n=8: 58%). So comparability cannot explain real roots.
+  (4) TESTED & CONFIRMED: det(I+2A) =/= H(T) in general (only 240/1024 at n=5). No simple spectral formula for H(T).
+  (5) FIXED: Cycle enumeration bug — old code found only one directed cycle per vertex set, missing multiple 5-cycles on same 5 vertices (up to 3). This caused false modular cascade failures.
+  (6) LITERATURE: Found Mitrovic (arXiv:2407.18608, 2504.20968) extending Grinberg-Stanley framework via Hopf algebras and noncommuting variables.
+  (7) LITERATURE: Confirmed H(T_p) = 3, 189, 95095 and H/|Aut| = 1, 9, 1729 are NOT in OEIS. Genuinely new sequences.
+  (8) FINDING: lambda=2 is OUTSIDE hard-core uniqueness for max_degree(Omega) >= 4 (which happens at n=5+). Real roots are a special property of tournament conflict graphs.
+  (9) Graph property hierarchy for Omega(T): Chordal (n<=5) => Perfect (n<=7) => Comparability (n<=6) ... Claw-free (n<=8) independently. All fail before n=9.
+**New contributions:**
+- THM-020-real-roots.md (new theorem)
+- OPEN-Q-015 (prove real roots for all n)
+- T048-T052 in TANGENTS.md
+**Unresolved threads:**
+- Real roots at n>=9 needs new proof approach (beyond claw-freeness)
+- Jerrum-Patel (2026) subdivided-claw results may help
+- H(T_19) still not computed
+- Bijective proof of OCF still open
+
 ## kind-pasteur-2026-03-05-S13 — 2026-03-05 (Web research: hard-core model, independence polynomial at lambda=2, statistical physics connections)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S12 (new session)
