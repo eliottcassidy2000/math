@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S5 — 2026-03-06 (deep web synthesis — Hopf algebra, Feng reversibility, DRT, Irving-Omar)
+**Account:** Eliott (opus machine)
+**Continuation of:** opus-2026-03-06-S4
+**Summary of work:**
+  Deep web investigation across all leads with 4 parallel research agents. Major synthesis of 12+ papers and connections.
+
+  KEY FINDINGS:
+  (1) **Irving-Omar (2412.10572):** Corollary 20 IS our OCF. ham(D) = Σ_S det(Ā[S])·per(A[S^c]). Walk generating function W=det(I+zXĀ)/det(I-zXA).
+  (2) **Hopf algebra route to INV-001 (NEW, INV-045):** Grujić-Stojadinović Hopf comultiplication = our subset convolution. Combined with Feng's dual Burnside reversibility theorem, the tournament constraint T[x,y]+T[y,x]=1 should play role of detailed balance → transfer matrix symmetry.
+  (3) **DRT theory (T116, INV-047):** Paley tournaments are doubly regular tournaments ↔ skew Hadamard matrices (Reid-Brown 1972). Nozaki-Suda characterize skew Hadamard via spectra of size n-2 tournaments. Connects our spectral regularity finding to maximizer theory.
+  (4) **Asymptotic convergence (T117, INV-048):** Adler-Alon-Ross proved max H(T) ≥ (e-o(1))·n!/2^{n-1}. Our Paley ratios converge toward e. Paley = quasi-random explains this.
+  (5) **El Sahili-Ghazo Hanna (2023):** T and T^op have same oriented Ham path TYPE distribution. Our transfer matrix identity M_{T^op}=(-1)^{n-2}M_T is stronger.
+  (6) **Our BIBD discovery appears NOVEL:** No prior work found connecting Paley tournament 3-cycles to BIBDs or Fano plane decomposition.
+  (7) **Pantangi (2019):** Critical groups distinguish Paley from other DRTs — potential algebraic invariant for H-maximization.
+  (8) **Satake (2025):** New cyclotomic nearly-doubly-regular tournaments. Savchenko's conjecture.
+
+**New contributions:** T114-T118, INV-045 through INV-050, web-synthesis-opus-S5.md
+**Unresolved threads:**
+- Formalize Feng reversibility → transfer matrix symmetry proof (INV-045, highest priority)
+- Check if non-Paley DRTs exist at small p and compare H values (INV-047)
+- Compute H(T_p)/(p!/2^{p-1}) at p=31 (INV-048)
+- Read Ai (2025) on new digraph polynomials (INV-049)
+
 ## kind-pasteur-2026-03-06-S18g — 2026-03-06 (hereditary CORRECTION, deletion ratio formula, R-minimization refuted)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18f

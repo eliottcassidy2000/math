@@ -3,7 +3,7 @@
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-06-S4
-**Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
+**Last web research:** opus-2026-03-06-S5 (deep web synthesis — Hopf algebra, Feng reversibility, DRT, Irving-Omar)
 
 ---
 
@@ -110,7 +110,7 @@
 **BREAKTHROUGH (opus-S4):** M[a,b]-M[b,a] = 0 as a polynomial in the arc variables t_{ij} AFTER applying the tournament constraint T[j,i]=1-T[i,j]. With independent arc variables the difference is NONZERO (12 terms at n=4, 48 at n=5). The tournament constraint is essential and sufficient.
 **Equivalent formulation:** M_{T^op} = (-1)^{n-2} M_T (converse identity). Combined with path reversal M_{T^op}[i,j]=(-1)^{n-2}M_T[j,i], gives symmetry.
 **Key insight:** Connects to Feng's Dual Burnside (Q=AB symmetric under detailed balance). The tournament constraint T[x,y]+T[y,x]=1 plays the role of the "detailed balance" condition.
-**Next step:** Find a CONCEPTUAL proof that works for all n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using the cancellation structure observed at n=4 (terms factor into X and -X via T[c,d]+T[d,c]=1).
+**Next step:** Find a CONCEPTUAL proof that works for all n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using the cancellation structure observed at n=4 (terms factor into X and -X via T[c,d]+T[d,c]=1). **(4) NEW (opus-S5): Feng's dual Burnside reversibility (see INV-045). (5) NEW: Irving-Omar det/per formula (see INV-046). (6) NEW: Hopf algebra comultiplication self-duality (see T114).**
 **Script:** `04-computation/symbolic_symmetry_proof.py`
 
 ### INV-002: Subset convolution identity — the core algebraic challenge
@@ -489,3 +489,47 @@
 - [DONE] n=8 H-maximizer identified: H=661=a(8), self-converse, |Aut|=1, does NOT contain P(7) (opus-S9)
 - [DONE] Full Omega structure at n=8: 76-78 vertices, density 0.98, 70-75% of H from 5/7-cycles (opus-S9)
 - [DONE] Ratio H(P(p))/(p!/2^{p-1}) converges toward e: 2.00, 2.40, 2.44, 2.53, 2.56 for p=3,7,11,19,23 (opus-S9)
+- [DONE] Deep web synthesis: Irving-Omar, Grinberg-Stanley, Grujić-Stojadinović, Feng, DRT theory (opus-2026-03-06-S5)
+
+---
+
+## Priority F: New leads from web synthesis (opus-2026-03-06-S5)
+
+### INV-045: Hopf algebra route to transfer matrix symmetry
+**Source:** T114, Grujić-Stojadinović arXiv:2402.07606, Feng arXiv:2510.25202
+**Status:** CONNECTION IDENTIFIED. Most promising algebraic route.
+**What:** The Hopf comultiplication Δ([T]) = Σ_S [T|_S]⊗[T|_{V\S}] encodes our subset convolution. Feng's dual Burnside process proves Q=AB is symmetric under detailed balance. The tournament constraint T[x,y]+T[y,x]=1 is the detailed balance condition. If formalized, this proves INV-001 for all n.
+**Why it matters:** Transfer matrix symmetry ⟹ OCF (via even-odd split + s-coefficient identity). A Hopf algebra proof would be clean and publication-worthy.
+**Next step:** (1) Express our transfer matrix M in Feng's AB framework precisely. (2) Verify detailed balance condition algebraically. (3) Apply Feng Thm 3.3 to conclude symmetry.
+
+### INV-046: Irving-Omar det/per formula → transfer matrix
+**Source:** T118, Irving-Omar arXiv:2412.10572 Proposition 2
+**Status:** CONNECTION IDENTIFIED. Not attempted.
+**What:** ham(D) = Σ_S det(Ā[S])·per(A[S^c]). The walk generating function W_D(z)=det(I+zXĀ)/det(I-zXA) encodes Hamiltonian path structure as ratio of determinants. This may directly relate to our transfer matrix decomposition.
+**Next step:** Express our M[a,b] in terms of Irving-Omar's matrix framework. Check if their det/per identity implies M symmetry.
+
+### INV-047: Paley maximizer via DRT theory
+**Source:** T116, Reid-Brown 1972, Nozaki-Suda arXiv:1202.5374
+**Status:** CLASSICAL EQUIVALENCE + our computational evidence.
+**What:** DRTs ↔ skew Hadamard matrices. Paley T_p is the canonical DRT. Nozaki-Suda characterize skew Hadamard via spectra of tournaments of size n-2. Our spectral regularity finding (corr(H,λ₁)=-0.97) + DRT theory could explain why Paley maximizes H.
+**Key question:** Among all DRTs on p vertices, does Paley ALWAYS maximize H? Or is this specific to Paley among all tournaments?
+**Next step:** (1) Check if non-Paley DRTs exist at small p and compare H values. (2) Relate DRT cycle balance to alpha_k maximization.
+
+### INV-048: Asymptotic convergence H(T_p)/(p!/2^{p-1}) → e
+**Source:** T117, Adler-Alon-Ross 2001
+**Status:** COMPUTATIONAL EVIDENCE. Not proved.
+**What:** Adler-Alon-Ross proved max H(T) ≥ (e-o(1))·n!/2^{n-1} using random regular tournaments. Our Paley ratios 2.00→2.56 suggest convergence to e. Paley tournaments are quasi-random in Chung-Graham-Wilson sense.
+**Next step:** (1) Compute H(T_p)/(p!/2^{p-1}) for p=31 if feasible. (2) Check if quasi-randomness implies near-optimal H. (3) Try Stirling approximation on the cycle-count formula.
+
+### INV-049: El Sahili-Ghazo Hanna type-preserving converse symmetry
+**Source:** arXiv:2101.00713 (2023), J. Graph Theory 102
+**Status:** PUBLISHED RESULT, connection to our work identified.
+**What:** T and T^op have the same number of oriented Hamiltonian paths of EVERY type. Our transfer matrix identity M_{T^op} = (-1)^{n-2} M_T is a STRONGER result that implies this. The El Sahili result follows from transfer matrix symmetry + path reversal.
+**Impact:** Our transfer matrix results strengthen known literature results.
+**Next step:** Note in paper draft. Check if Ai (2025) "New Digraph Polynomials" extends further.
+
+### INV-050: Satake's cyclotomic NDRTs (arXiv:2502.12090, Feb 2025)
+**Source:** T116 area
+**Status:** IDENTIFIED. Not investigated.
+**What:** Nearly-doubly-regular tournaments from almost difference sets. Savchenko's conjecture on canonical spectrum. Under Hardy-Littlewood conjecture F, infinitely many NDRTs with canonical spectrum exist.
+**Next step:** Read paper. Check if NDRTs approach Paley's H-maximization. Compare spectra.

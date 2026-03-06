@@ -359,5 +359,20 @@ Even the 3-CYCLE-ONLY polynomial I(Omega_3(T), x) fails real-rootedness at n=9. 
 **T113** #R-minimization #deletion-ratio #variational #OCF-consequence | certainty: REFUTED at n=7 | source: kind-pasteur-2026-03-06-S18g
 DELETION-SUM RATIO FORMULA (THM-025): R(T) = n - E_weighted[|U(S)|] is PROVED. But the conjecture that H-maximizer minimizes R is FALSE at n=7 (tournaments with H=123 achieve R=1.585 < R(max)=5/3). The formula itself remains a clean identity connecting vertex deletion to independent sets. The breakdown at n=7 occurs because some non-maximal tournaments have very efficient vertex coverage despite lower total cycle count. The formula is useful structurally but NOT as a variational characterization of the maximizer.
 
+**T114** #hopf-algebra-comultiplication #subset-convolution #OCF-structure | certainty: high (confirmed) | source: opus-2026-03-06-S5
+Grujić-Stojadinović (arXiv:2402.07606) Hopf algebra comultiplication Δ([T]) = Σ_S [T|_S] ⊗ [T|_{V\S}] is EXACTLY our subset convolution. The Hopf algebra deletion property for cycles (U_X = Σ (-1)^{|S|-1} U_{X\S} for edge subsets forming a cycle) could relate H(T) to H(T-v) via Claim A. The Hopf antipode encodes Berge's theorem. See web-synthesis-opus-S5.md.
+
+**T115** #feng-reversibility #tournament-constraint #transfer-symmetry | certainty: medium (connection identified) | source: opus-2026-03-06-S5
+Feng's Dual Burnside (arXiv:2510.25202) proves Q=AB is reversible/symmetric under detailed balance. Our transfer matrix has AB structure. The tournament constraint T[x,y]+T[y,x]=1 plays the role of detailed balance condition. This could prove INV-001 (transfer matrix symmetry) for all n by showing tournaments are "reversible digraphs" in Feng's framework.
+
+**T116** #DRT-skew-Hadamard #paley-equivalence #maximizer | certainty: high (classical result) | source: opus-2026-03-06-S5
+Doubly regular tournaments ↔ skew Hadamard matrices (Reid-Brown 1972). Paley T_p is the canonical DRT. DRTs have the most balanced cycle distribution. Nozaki-Suda (arXiv:1202.5374) characterize skew Hadamard via tournament spectra of size n-2. This connects our spectral regularity finding (corr(H,λ₁)=-0.97) to DRT theory and potentially explains Paley deletion maximality.
+
+**T117** #adler-alon-ross #asymptotic-e #random-regular | certainty: high (published 2001) | source: opus-2026-03-06-S5
+Adler-Alon-Ross proved max H(T) ≥ (e-o(1)) · n!/2^{n-1}. Our ratios H(T_p)/(p!/2^{p-1}) = 2.00, 2.40, 2.44, 2.53, 2.56 converge toward e≈2.718. Paley tournaments are quasi-random, consistent with the random regular tournaments that achieve this asymptotic. Open: does H(T_p)/(p!/2^{p-1}) → e as p → ∞?
+
+**T118** #irving-omar #matrix-algebra #det-per-formula | certainty: high (published 2025) | source: opus-2026-03-06-S5
+Irving-Omar (arXiv:2412.10572) give ham(D) = Σ_S det(Ā[S])·per(A[S^c]) and reprove OCF for tournaments as Corollary 20. Their walk generating function W_D(z) = det(I+zXĀ)/det(I-zXA) may connect to our transfer matrix. The det/per decomposition over subsets parallels our subset convolution structure.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.
