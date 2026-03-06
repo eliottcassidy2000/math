@@ -233,7 +233,7 @@ Computationally verified:
 - Paley p=7: full Omega has 80 cycles {3:14, 5:42, 7:24}, I.P.=[1,80,7], roots=-11.42,-0.013 (real)
 - Paley p=11: full Omega has 21169 cycles, I.P.=[1,21169,10879,1155], all 3 roots real (kind-pasteur-S16 agent)
 - n=20 (3-cycle subgraph): degree 6 polynomial, all 6 roots real and negative (kind-pasteur-S16)
-- **Interlacing under vertex deletion:** 0/1324 failures (n=5 exhaustive + n=6,7 random) — I(Omega(T-v),x) interlaces I(Omega(T),x) (kind-pasteur-S16 agent)
+- **Interlacing under vertex deletion:** HOLDS at n=5 (0/5120 exhaustive), n=6 (0/196608 exhaustive). FAILS at n=7 (36/1113 failures for full Omega). NOT a viable proof approach. (kind-pasteur-S18, correcting S16 agent)
 - 100% log-concave and unimodal across ALL tested polynomials
 
 At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
@@ -258,11 +258,31 @@ At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Se
 - arXiv:2505.22766 polymer-gas representation of I(G,x) for claw-free G — structural tool, doesn't give real-rootedness directly.
 - Direct structural argument from Omega(T) combinatorics (alpha <= floor(n/3)).
 - Grinberg-Stanley / Irving-Omar symmetric function framework (most promising).
-- **Interlacing** (new lead): if I(Omega(T-v),x) interlaces I(Omega(T),x) for all v, and base case has real roots, induction gives real roots for all n. Verified 0/1324 failures.
+- ~~Interlacing: FAILS at n=7 (36/1113). Not viable.~~ (kind-pasteur-S18)
 
 If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, H(T) > 0 for all x > 0.
 
 **Source:** kind-pasteur-2026-03-05-S13 (THM-020)
+
+---
+
+## OPEN-Q-016 🟡
+**Prove SC Maximizer: Within each self-complementary score class, max H is achieved by SC tournament**
+
+Verified exhaustively at n=4,5,6,7. The mechanism: anti-automorphism sigma of SC tournament is an involution (sigma^2=id, at least one such exists). At even n, sigma is fixed-point-free (proved: fixed point implies score = (n-1)/2, non-integer). The sigma-orbits create natural pairings of odd cycles where paired cycles are vertex-disjoint, boosting alpha_2 in the independence polynomial and hence H = I(Omega(T), 2).
+
+Two routes to max H observed at n=6:
+- Route A: Fewer total cycles but more disjoint pairs (high alpha_2)
+- Route B: More total cycles with fewer disjoint pairs (high alpha_1)
+
+Both achieve H=45, while NSC achieves only H=43.
+
+Key open sub-questions:
+1. Prove algebraically that sigma-orbit structure always beats NSC
+2. Does the theorem extend to n=8? (computationally expensive)
+3. Is every global H-maximizer always SC? (stronger conjecture, also verified n<=7)
+
+**Source:** kind-pasteur-2026-03-06-S18/S18e, sc-maximizer-mechanism.md
 
 ---
 
