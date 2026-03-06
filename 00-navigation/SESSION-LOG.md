@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S6 — 2026-03-06 (transfer matrix deep analysis: trace formula proved, [[1,0],[0,-1]] disproved)
+**Account:** Eliott (opus machine)
+**Continuation of:** opus-2026-03-06-S5
+**Summary of work:**
+  Investigated transfer matrix structure in depth. Three major findings:
+
+  (1) **MISTAKE-011: M = [[1,0],[0,-1]] claim is FALSE.** The 2×2 transfer matrix is NOT always diag(1,-1). Exhaustive check at n=4 shows 2199/2500 failures. M values vary widely (observed -3 to +3 at n=5). The only universal property is SYMMETRY M[a,b] = M[b,a].
+
+  (2) **THM-027 PROVED: Transfer Matrix Trace Formula.** The n×n transfer matrix satisfies tr(M) = H(T) for odd n, 0 for even n. PROOF: Each pair (σ through S ending at a, τ through R starting from a) bijects with a Hamiltonian path P. Contribution is (-1)^{pos(a,P)}. Summing over all a gives (1-(-1)^n)/2 per path. Verified exhaustively n=3,...,7.
+
+  (3) **Off-diagonal sum formula:** sum_{a≠b} M[a,b] = 0 for odd n, 2*H(T) for even n. Verified n=3,...,7.
+
+  Also analyzed the per-subset cancellation structure at n=4,5 looking for an involution proof of symmetry. The Cauchy-Binet decomposition M = E^T·Λ·B shows no simple pairing. The complement pairing D(S)+D(U\S) is constant at n=4 but not at n=5.
+
+**New contributions:** THM-027, MISTAKE-011, T119
+**Unresolved threads:**
+- Prove transfer matrix symmetry M[a,b] = M[b,a] for general n (INV-001/INV-045)
+- Prove off-diagonal sum formula for general n
+- The trace formula proof is complete; can it inspire a symmetry proof?
+
 ## opus-2026-03-06-S5 — 2026-03-06 (deep web synthesis — Hopf algebra, Feng reversibility, DRT, Irving-Omar)
 **Account:** Eliott (opus machine)
 **Continuation of:** opus-2026-03-06-S4

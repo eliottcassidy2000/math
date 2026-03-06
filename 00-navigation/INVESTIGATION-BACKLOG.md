@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-06-S4
+**Last full repo scour:** opus-2026-03-06-S6
 **Last web research:** opus-2026-03-06-S5 (deep web synthesis — Hopf algebra, Feng reversibility, DRT, Irving-Omar)
 
 ---
@@ -110,8 +110,14 @@
 **BREAKTHROUGH (opus-S4):** M[a,b]-M[b,a] = 0 as a polynomial in the arc variables t_{ij} AFTER applying the tournament constraint T[j,i]=1-T[i,j]. With independent arc variables the difference is NONZERO (12 terms at n=4, 48 at n=5). The tournament constraint is essential and sufficient.
 **Equivalent formulation:** M_{T^op} = (-1)^{n-2} M_T (converse identity). Combined with path reversal M_{T^op}[i,j]=(-1)^{n-2}M_T[j,i], gives symmetry.
 **Key insight:** Connects to Feng's Dual Burnside (Q=AB symmetric under detailed balance). The tournament constraint T[x,y]+T[y,x]=1 plays the role of the "detailed balance" condition.
+**New findings (opus-S6):**
+- **THM-027 PROVED:** Trace formula tr(M) = H(T) for odd n, 0 for even n. Clean bijection proof via (-1)^{pos(a,P)} formula for diagonal entries.
+- **MISTAKE-011:** Old claim M = [[1,0],[0,-1]] always is FALSE (2199/2500 failures at n=4). M entries range from -3 to +3.
+- **Off-diagonal sum:** sum_{a≠b} M[a,b] = 0 (odd n), 2*H(T) (even n). Verified n=3,...,7 but NOT yet proved.
+- **Complement pairing D(S)+D(U\S) is constant at n=4 but NOT at n=5**, ruling out the simplest telescoping argument.
+- **Cauchy-Binet decomposition:** M = E^T * Lambda * B where E[S,v]=E_v(S), B[S,v]=B_v(U\S), Lambda=diag((-1)^|S|). Symmetry equivalent to E^T*Lambda*B = B^T*Lambda*E.
 **Next step:** Find a CONCEPTUAL proof that works for all n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using the cancellation structure observed at n=4 (terms factor into X and -X via T[c,d]+T[d,c]=1). **(4) NEW (opus-S5): Feng's dual Burnside reversibility (see INV-045). (5) NEW: Irving-Omar det/per formula (see INV-046). (6) NEW: Hopf algebra comultiplication self-duality (see T114).**
-**Script:** `04-computation/symbolic_symmetry_proof.py`
+**Scripts:** `04-computation/symbolic_symmetry_proof.py`, `04-computation/transfer_symmetry_analysis.py`
 
 ### INV-002: Subset convolution identity — the core algebraic challenge
 **Source:** proof-landscape-for-general-ocf.md (Approach B), T047

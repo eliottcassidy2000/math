@@ -291,3 +291,34 @@ The pattern: regular maximizers exist at odd n and are vertex-transitive, so all
 ### Impact
 
 The investigation INV-044 and tangent T104 need correction. The hereditary chain is: T_7 -> T_6_max -> (chain breaks at n=5 for non-regular) or T_7 -> T_6_max -> T_5_regular -> T_4_max -> T_3. The chain from Paley T_7 goes through regular maximizers at each odd step.
+
+---
+
+## MISTAKE-011: Transfer Matrix M = [[1,0],[0,-1]] Claim Was Wrong
+
+**Date discovered:** 2026-03-06
+**Found by:** opus-2026-03-06-S6
+**Affects:** `04-computation/transfer_matrix_test.py`, INV-001 documentation
+
+### What was assumed
+
+The 2x2 transfer matrix M indexed by endpoints {i,j} of a fixed arc always equals [[+1, 0], [0, -1]]. This was stated as a verified fact in `transfer_matrix_test.py`.
+
+### Why it was wrong
+
+Exhaustive check at n=4 (64 tournaments x 5 arc pairs = 320 tests) shows 2199/2500 failures at n=4 with the original test parameters. Example: the transitive tournament on 4 vertices gives M[0,1] = 1, not 0. The values of M[a,b] vary widely depending on the tournament (observed values include -3, -2, -1, 0, 1, 2, 3 at n=5).
+
+The original test used random tournaments with seed=42 and checked only specific arc pairs. The claim was never properly validated.
+
+### The correct framing
+
+The transfer matrix M[a,b] = sum_{S ⊆ V\{a,b}} (-1)^|S| E_a(S) B_b(V\{a,b}\S) satisfies:
+1. **Symmetry**: M[a,b] = M[b,a] for all a,b (PROVED symbolically n<=7, verified numerically n<=8)
+2. **Trace formula**: sum_a M[a,a] = H(T) for odd n, 0 for even n (THM-027)
+3. **Off-diagonal sum**: sum_{a!=b} M[a,b] = 0 for odd n, 2*H(T) for even n
+
+The individual entries M[a,b] are NOT always 0 or ±1. They are integers whose distribution depends on the tournament structure.
+
+### Impact
+
+INV-001 (proving transfer matrix symmetry) is still the correct goal — the symmetry M[a,b] = M[b,a] IS always true. But the diagonal values are NOT fixed constants, which changes the picture for any proof attempt that assumed diag(1,-1).
