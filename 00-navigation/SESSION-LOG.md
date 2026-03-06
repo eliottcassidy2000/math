@@ -44,6 +44,24 @@ Entry format:
 - SC maximizer at n=8 (computationally expensive, OPEN-Q-016)
 - Paley deletion at p=19 (need H(T_19−v) = a(18)?)
 - Full involution existence test at n=7 (too slow for brute force; proved theoretically via THM-024)
+## opus-2026-03-06-S4 — 2026-03-06 (Fano-Paley, transfer matrix polynomial proof, Paley deletion p=19)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S3 (context continuation, ran overnight)
+**Files read:** Full warm-up sequence, kind-pasteur S18e messages, sc-maximizer-mechanism.md, interlacing-clique-deletion.md
+**Summary of work:**
+  (1) **PROVED: Anti-aut sigma induces Omega(T) automorphism.** Clean proof: sigma maps directed cycle C to reversed cycle on sigma(V(C)), preserving vertex-sharing. At even n, sigma* is fixed-point-free on cycles.
+  (2) **PROVED: Path reversal identity** M_{T^op}[i,j] = (-1)^{n-2} M_T[j,i] via subset complement.
+  (3) **BREAKTHROUGH: Transfer matrix symmetry is a POLYNOMIAL IDENTITY** (T103). M[a,b]-M[b,a]=0 after tournament substitution T[j,i]=1-T[i,j]. Proved symbolically at n=4,5,6,7. With independent variables, nonzero (12-48 terms). Tournament constraint is essential. This is the key to INV-001.
+  (4) **DISCOVERED: Fano-Paley connection** (T102). The 14 cyclic triples of T_7 = TWO copies of the Fano plane PG(2,2). Each of 7 disjoint pairs takes one line from each Fano. alpha_2=7 perfectly explained. Generalizes: cyclic triples of T_p form 2-(p,3,(p+1)/4) BIBD.
+  (5) **PALEY DELETION p=19**: H(T_19-v)=117,266,659,317 for all v. Self-comp scores (8^9,9^9). Conjecture a(18)=117266659317.
+  (6) **T_11 design**: 55 cyclic triples form a 2-(11,3,3) BIBD. 495 disjoint pairs, 550 disjoint triples. Aut-transitive on triples.
+  (7) **Omega clique analysis**: At n=5, Omega is always a clique (theta=1, alpha_2=0). At n=6, H=45 achievers have two routes: alpha=[1,14,4] or [1,20,1].
+**New contributions:** T102 (Fano-Paley), T103 (transfer polynomial), T104 (Paley p=19), symbolic_symmetry_proof.py
+**Unresolved threads:**
+- Prove transfer symmetry conceptually (not just by symbolic computation)
+- SC maximizer proof: Fano structure might give algebraic handle
+- n=8 SC maximizer test
+- Transfer matrix symmetry: M_{T^op} = (-1)^{n-2} M_T^T is interesting but doesn't directly give symmetry
 
 ## opus-2026-03-06-S17 — 2026-03-06 (comprehensive verification + spectral analysis of Omega)
 **Account:** Eliott (primary)

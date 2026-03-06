@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** kind-pasteur-2026-03-06-S18e
+**Last full repo scour:** opus-2026-03-06-S4
 **Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
@@ -93,12 +93,15 @@
 - **Best circulant at n=9 gives H=3267 < 3357 = max.** H-maximizer at non-prime n is NOT circulant.
 **Next step:** (1) Find direct bijection between run decompositions and weighted interval packings. (2) Check if the transfer matrix for T_full has Tribonacci characteristic polynomial factor.
 
-### INV-001: Prove transfer matrix symmetry for all n
-**Source:** T045 (tangents), symmetry_check.py, paper-connections.md
-**Status:** Verified n=4,...,8 (7500+ tests). NOT yet proved.
-**What:** M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) is always symmetric. This is STRONGER than the even-odd split (MISTAKE-008 shows even-odd split != OCF). Proving this symmetry for all n would prove OCF.
-**Key insight:** Connects to Feng's Dual Burnside (Q=AB symmetric under detailed balance). The "forward leg" (paths ending at vertex) and "backward leg" (paths starting at vertex) appear to satisfy a hidden reversibility.
-**Next step:** Attempt algebraic proof at n=4,5 using the bracket structure (T047). Try to express M in terms of the bracket table {M-, M+, Z1, Z0} and show symmetry follows from the block structure.
+### INV-001: Prove transfer matrix symmetry for all n — MAJOR PROGRESS
+**Source:** T045, T103 (tangents), symmetry_check.py, symbolic_symmetry_proof.py
+**Status:** PROVED SYMBOLICALLY at n=4,5,6,7 (exact polynomial identity). Verified numerically n=4,...,8 (7500+ tests).
+**What:** M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) is always symmetric. This is STRONGER than the even-odd split.
+**BREAKTHROUGH (opus-S4):** M[a,b]-M[b,a] = 0 as a polynomial in the arc variables t_{ij} AFTER applying the tournament constraint T[j,i]=1-T[i,j]. With independent arc variables the difference is NONZERO (12 terms at n=4, 48 at n=5). The tournament constraint is essential and sufficient.
+**Equivalent formulation:** M_{T^op} = (-1)^{n-2} M_T (converse identity). Combined with path reversal M_{T^op}[i,j]=(-1)^{n-2}M_T[j,i], gives symmetry.
+**Key insight:** Connects to Feng's Dual Burnside (Q=AB symmetric under detailed balance). The tournament constraint T[x,y]+T[y,x]=1 plays the role of the "detailed balance" condition.
+**Next step:** Find a CONCEPTUAL proof that works for all n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using the cancellation structure observed at n=4 (terms factor into X and -X via T[c,d]+T[d,c]=1).
+**Script:** `04-computation/symbolic_symmetry_proof.py`
 
 ### INV-002: Subset convolution identity — the core algebraic challenge
 **Source:** proof-landscape-for-general-ocf.md (Approach B), T047
@@ -349,6 +352,22 @@
 **Status:** Hypothesis only. NOT tested.
 **What:** At n=2k, the first cycle with mu>1 has length 2k-1. Excess from shorter cycles may be compensated by (L+2)-cycle contributions. Is there a recursive tower structure?
 
+### INV-042: Fano-Paley design structure and alpha_2
+**Source:** T102, opus-2026-03-06-S4
+**Status:** DISCOVERED. Combinatorial design structure proved computationally.
+**What:** The cyclic triples of Paley T_p form a 2-(p, 3, (p+1)/4) BIBD. At p=7: two Fano planes (lambda=2), 7 disjoint pairs = one per vertex. At p=11: lambda=3, 495 disjoint pairs, 550 disjoint triples. The BIBD is Aut-transitive (single orbit of 55 triples under Aut of size 55).
+**Key insight:** The Fano decomposition at p=7 perfectly explains alpha_2=7 in I(Omega(T_7),x) = 1+80x+7x^2. Each omitted vertex uniquely determines a disjoint 3-cycle pair (one line from each Fano copy). |Aut(T_7)|=21 divides |Aut(Fano)|=168=|GL(3,2)|.
+**Why it matters:** Design theory gives structural tools for bounding alpha_k, which determines H via OCF. The design parameters (p+1)/4 grow linearly with p, governing the number of disjoint cycle pairs. May explain why Paley tournaments maximize H.
+**Next step:** (1) Check if the BIBD decomposes into sub-designs for larger p. (2) Compute alpha_2 for T_11 (need to count disjoint pairs among ALL odd cycles, not just 3-cycles). (3) Connect design theory bounds on disjoint pairs to H-maximization.
+
+### INV-043: Paley deletion extended to p=19
+**Source:** T104, opus-2026-03-06-S4
+**Status:** COMPUTED. Consistent with conjecture.
+**What:** H(T_19 - v) = 117,266,659,317 for all vertices v. Scores: (8^9, 9^9), self-complementary. H(T_19)-H(T_19-v) = 1,055,429,087,598 = 2*527,714,543,799.
+**Conjecture:** a(18) = 117,266,659,317 in OEIS A038375. Verified chain: a(2)=1=H(T_3-v), a(6)=45=H(T_7-v), a(10)=15745=H(T_11-v).
+**Cannot verify** against OEIS (only goes to a(11)=95095).
+**Next step:** If someone computes a(18), compare. Or prove Paley deletion gives maximizer using design theory + SC maximizer mechanism.
+
 ### INV-031: Lindstrom-Gessel-Viennot (LGV) approach to bijection
 **Source:** T046
 **Status:** Idea only. NOT attempted.
@@ -386,18 +405,34 @@
 **Next step:** (1) Understand algebraic significance of the S_3 group. (2) Can the n->n+2 POS structure be used differently (not through H preservation)? (3) Relate to transfer matrix symmetry (INV-001).
 
 ### INV-039: SC Maximizer Theorem and sigma* structure
-**Source:** kind-pasteur-2026-03-06-S18/S18e, T091, T093, T095, OPEN-Q-016
-**Status:** VERIFIED exhaustive n=4,5,6,7. Mechanism identified. NOT proved.
+**Source:** kind-pasteur-2026-03-06-S18/S18e, opus-2026-03-06-S4, OPEN-Q-016
+**Status:** VERIFIED exhaustive n=4,5,6,7. Mechanism deeply analyzed. NOT proved.
 **What:** Within each self-complementary score class, max H is always achieved by SC tournament. The mechanism: involutory anti-automorphism sigma induces sigma* on directed odd cycles, which is an involutory automorphism of Omega(T). At even n, sigma* is fixed-point-free, pairing all cycles. Some pairs are vertex-disjoint (giving alpha_2 contributions). At even n, sigma is fixed-point-free on vertices (proved: fixed point implies score=(n-1)/2, non-integer).
-**Key results:**
-- n=7: all 15 self-comp score classes confirmed
-- sigma* is ALWAYS involution and ALWAYS preserves Omega conflict graph
-- At n=6: SC H=45 has 4 disjoint 3-cycle pairs; NSC H=43 has only 1
-- Two routes to max H: more cycles (alpha_1) OR more disjoint pairs (alpha_2)
-- Involutory anti-aut always exists (even when non-involutory ones also exist)
-**Scripts:** sc_maximizer_n7_fast.py, anti_aut_analysis.py, sigma_star_analysis.py, anti_aut_involution_test.py
+**Key results (opus-S4 deepened):**
+- **PROVED: sigma always induces Omega automorphism** (clean proof: sigma maps directed C to reverse of sigma(C), preserving vertex-sharing)
+- **PROVED: At even n, sigma* has NO fixed cycles** (3-cycles: can't fix set of 3 with fpf involution; 5-cycles at n=6: can't fix set of 5 with 3 two-cycles)
+- SC and NSC have the SAME number of 3-cycles within score class — the difference is in ARRANGEMENT (disjoint pairs vs all overlapping)
+- SC max alpha_2 >= NSC max alpha_2 within every score class at n=6
+- **Path reversal identity:** M_{T^op}[i,j] = (-1)^{n-2} M_T[j,i] (proved)
+- **At odd n=5:** alpha_2 = 0 for ALL SC tournaments (fixed point forces all cycles to overlap)
+- **At odd n=7 (Paley):** 21 anti-auts, 7 involutions (one per fixed point), each finds 1 disjoint 3-cycle pair
+**Scripts:** sc_maximizer_n7_fast.py, anti_aut_analysis.py, anti_aut_exhaustive.py, clique_antiaut_connection.py
 **Draft:** sc-maximizer-mechanism.md
-**Next step:** (1) Test at n=8 (even n, computationally expensive but important). (2) Prove algebraically that sigma* structure maximizes I(Omega,2). (3) Connect to Kahn-Galvin-Tetali or Godsil's matching polynomial results for graphs with involutory automorphisms.
+**Next step:** (1) Test at n=8 (even n). (2) Prove SC always achieves max alpha_2 within score class. (3) Formalize the "arrangement advantage" into an algebraic proof.
+
+### INV-040: Paley deletion gives H-maximizer
+**Source:** kind-pasteur-2026-03-06-S18e, opus-2026-03-06-S4
+**Status:** VERIFIED at p=3,7,11. Conjecture.
+**What:** Deleting any vertex from Paley tournament T_p gives a tournament with H = max H at n=p-1 (= OEIS A038375(p-1)).
+**Results:**
+- T_3 → T_2: H=3 → H=1 = a(2) ✓
+- T_7 → T_6: H=189 → H=45 = a(6) ✓
+- T_11 → T_10: H=95095 → H=15745 = a(10) ✓
+- All vertex deletions give the same H (by Aut(T_p) transitivity)
+- T_11 - v has self-complementary scores (4,4,4,4,4,5,5,5,5,5)
+- H(T_p) - H(T_p-v) = 2 * (sum of mu-weighted cycles through v) (Claim A)
+**Conjecture:** T_p - v is the GLOBAL H-maximizer at n = p-1 for all Paley primes p ≡ 3 mod 4.
+**Next step:** (1) Verify at p=19 (need H(T_19 - v), n=18 DP ~2^18*18 ~ 5M, feasible). (2) Test whether T_p - v is SC. (3) Relate to lattice theory or QR structure.
 
 ### INV-038: Blueself parity theorem and census structure
 **Source:** opus-2026-03-06-S3 (deep census investigation)
