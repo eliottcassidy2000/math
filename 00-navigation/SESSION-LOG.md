@@ -31,23 +31,23 @@ Entry format:
 
 ---
 
-## opus-2026-03-05-S4b — 2026-03-05 (Signed Position Identity + C verifier)
+## opus-2026-03-05-S4b — 2026-03-05 (Transfer matrix symmetry + paper connections)
 **Account:** Eliott (primary)
-**Continuation of:** opus-2026-03-05-S3 (parallel session to S4)
-**Files read:** All warm-up files, inbox snippet from S4 diff, all n=8 computation files
-**Summary of work:** Parallel session that independently verified Even-Odd Split Lemma and added new findings: (1) Proved equivalence to Signed Position Identity: sum_{P: i→j} (-1)^{pos(i)} = sum_{P': j→i} (-1)^{pos(j)}. (2) Proved tournament-specific: fails for 282/500 digraphs at n=4. (3) Proved polynomial: holds for continuous T[a][b]+T[b][a]=1. (4) Built C implementation of OCF verifier (ocf_n8_full.c), confirmed 0 fails through 3M+ configs.
+**Continuation of:** opus-2026-03-05-S3 (parallel session to S4, then extended)
+**Files read:** All warm-up files, inbox snippet from S4 diff, all n=8 computation files, arXiv:2110.05188, arXiv:2510.25202
+**Summary of work:** Three phases: (1) Verified Even-Odd Split Lemma, proved tournament-specific/polynomial, built C verifier for n=8. (2) Analyzed two external papers: "Tournament Representations" (flip classes, locally transitive, R-cones) and "Dual Burnside Process" (Q=AB factorization, spectral correspondence). (3) MAJOR DISCOVERY: the transfer matrix M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) is ALWAYS SYMMETRIC (verified 7500+ tests, n=4..8). This is STRONGER than Even-Odd Split — each cross-term individually agrees. Connected to Burnside detailed balance. Also found locally transitive tournaments DO have 5-cycles and 7-cycles (conjecture "only 3-cycles" fails). All OCF tests pass for R-cones, automorphism-symmetric tournaments, locally transitive tournaments.
 **New contributions:**
-- 04-computation/even_odd_split_verify.py (independent verification n=4,5,6)
-- 04-computation/signed_position_identity.py (equivalent formulation, verified)
-- 04-computation/digraph_signed_test.py (proves tournament-specific)
-- 04-computation/weighted_tournament_test.py (proves polynomial)
-- 04-computation/proof_n8_v4.py (correct Python OCF verifier, 200/200)
-- 04-computation/ocf_n8_full.c (4-thread C verifier)
-- 04-computation/ocf_n8_simple.c (single-thread C, verified 100k/0 fails)
-- T044 (Even-Odd Split / Signed Position Identity tangent)
+- 03-artifacts/drafts/paper-connections.md (10 connections to external papers)
+- 04-computation/locally_transitive_test.py (cycle structure of rank-2 tournaments)
+- 04-computation/burnside_connection_test.py (character/Fourier decomposition)
+- 04-computation/transfer_matrix_test.py (transfer matrix structure)
+- 04-computation/symmetry_check.py (VERIFIES transfer matrix symmetry, 7500+ tests)
+- T045 (Transfer matrix symmetry discovery)
+- T046 (Tournament representations / flip class connection)
 **Unresolved threads:**
-- Even-Odd Split Lemma needs general proof (potential route to Claim A)
-- Bracket structure B(u,w) analysis incomplete
+- PROVE transfer matrix symmetry for all n (would prove OCF)
+- Explore detailed-balance / reversibility interpretation
+- R-cone simplification strategy (prove OCF for R-cones, extend via flip)
 
 ---
 
