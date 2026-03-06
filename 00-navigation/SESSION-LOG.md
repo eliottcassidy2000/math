@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S19 — 2026-03-06 (EXTENSIVE web research: 40+ queries, 16 new investigation leads)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S18h
+**Summary of work:**
+  Conducted the most extensive web search campaign of the project: 6 parallel search agents + 20+ direct searches covering tournament polynomials, Hopf algebras, extremal theory, graph polynomials, Rédei extensions, OEIS/computational leads.
+
+  **Major new leads discovered:**
+  (1) **Mitrovic noncommuting Rédei-Berge function** (arXiv:2504.20968, Apr 2025) — has DELETION-CONTRACTION, enabling inductive proofs. The commutative version lacks this. HIGH PRIORITY for OCF induction. (INV-051)
+  (2) **Mitrovic-Stojadinovic chromatic↔Rédei-Berge bridge** (arXiv:2506.08841, Jun 2025) — proves these functions are "almost identical" at poset level. Enables importing chromatic symmetric function results. Proves "converse of Rédei's theorem." (INV-052)
+  (3) **Savchenko cycle counting series** (2016-2024) — exact polynomial c_k formulas for regular tournaments. c8(DRT) independent of which DRT. Phase transition at n=39 where DRT advantage reverses. (INV-053)
+  (4) **Komarov-Mackey 5-cycle formula** (JGT 2017) — exact c5 from edge score sequence. (INV-054)
+  (5) **Linial-Morgenstern cycle minimization** — spectral methods for cycle density extremals. (INV-055)
+  (6) **Jerrum-Patel zero-free regions** (JLMS 2026) — characterizes which H-free classes have real-rooted I.P. (INV-056)
+  (7) **Herman Terwilliger algebras** (2024) — classifies DRTs, 237 non-isomorphic at n=27. (INV-057)
+  (8) **Pantangi critical groups** distinguish Paley from non-Paley DRTs. (INV-058)
+  (9) Additional leads: cyclic subtournament Hamiltonicity (INV-059), Eulerian trace formula (INV-060), Hamilton transversals (INV-061), forward arc maximization (INV-062), Paley spectral pseudorandomness (INV-063), Mitrovic Hopf new bases (INV-064), IP root gap (INV-065), low-rank tournament matrices (INV-066).
+
+**New contributions:** INV-051 through INV-066 (16 new leads), T121-T127 (7 new tangents)
+**Unresolved threads:**
+- INV-051 (noncommuting Rédei-Berge) and INV-052 (chromatic bridge) are the HIGHEST priority for next session
+- INV-053 (Savchenko formulas) could immediately verify/extend our cycle maximization theory
+- 6 background search agents may have additional results not yet integrated
+
 ## kind-pasteur-2026-03-06-S18h — 2026-03-06 (BIBD cycle maximization theorem, directed cycle analysis)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18g

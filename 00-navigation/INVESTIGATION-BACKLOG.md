@@ -3,7 +3,7 @@
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-06-S6
-**Last web research:** opus-2026-03-06-S5 (deep web synthesis — Hopf algebra, Feng reversibility, DRT, Irving-Omar)
+**Last web research:** kind-pasteur-2026-03-06-S19 (extensive 40+ query web search across 6 parallel agents + direct searches)
 
 ---
 
@@ -539,3 +539,119 @@
 **Status:** IDENTIFIED. Not investigated.
 **What:** Nearly-doubly-regular tournaments from almost difference sets. Savchenko's conjecture on canonical spectrum. Under Hardy-Littlewood conjecture F, infinitely many NDRTs with canonical spectrum exist.
 **Next step:** Read paper. Check if NDRTs approach Paley's H-maximization. Compare spectra.
+
+---
+
+## Priority G: New leads from web search (kind-pasteur-2026-03-06-S19)
+
+### INV-051: Mitrovic noncommuting Rédei-Berge function (arXiv:2504.20968, Apr 2025)
+**Source:** kind-pasteur-2026-03-06-S19 web search
+**Status:** NEW LEAD — HIGH PRIORITY
+**What:** Stefan Mitrovic introduces the Rédei-Berge function in NONCOMMUTING variables, which satisfies deletion-contraction (W_X = W_{X\e} - W_{X/e}↑). The commutative version does NOT have deletion-contraction. Key properties: W_X = W_{X^op}, product rule W_{X·Y} = W_X·W_Y. For tournaments: W_X = sum over permutations with all odd cycles of 2^{psi(sigma)} p_{Type(sigma)} with positive integer coefficients.
+**Why it matters:** Deletion-contraction enables INDUCTIVE PROOFS. This could provide an inductive framework for OCF or transfer matrix symmetry. The noncommutative structure preserves more information than the commutative version.
+**Next step:** (1) Read full paper. (2) Express OCF in the noncommutative framework. (3) Check if deletion-contraction + OCF at smaller n → OCF at n via induction.
+
+### INV-052: Mitrovic-Stojadinovic chromatic↔Rédei-Berge connection (arXiv:2506.08841, Jun 2025)
+**Source:** kind-pasteur-2026-03-06-S19 web search
+**Status:** NEW LEAD — HIGH PRIORITY
+**What:** Proves the chromatic function of a graph and the Rédei-Berge function of a digraph are "almost identical" at the poset level. The connection enables translating properties between the two. Key results: converse of Rédei's theorem, generalization of the triple deletion property, and positivity questions.
+**Why it matters:** The chromatic symmetric function is much better studied than the Rédei-Berge function. Any result proved for chromatic functions could potentially be translated to our tournament setting via this bridge. The "converse of Rédei's theorem" is directly relevant.
+**Next step:** (1) Read full paper. (2) Extract the exact "converse of Rédei's theorem." (3) Check if chromatic polynomial real-rootedness results transfer to our I(Omega(T),x) setting.
+
+### INV-053: Savchenko cycle counting formulas for regular tournaments
+**Source:** kind-pasteur-2026-03-06-S19 web search; Savchenko J. Graph Theory 83 (2016), Discrete Math (2017), arXiv:2403.07629 (2024)
+**Status:** NEW LEAD — HIGH PRIORITY for cycle maximization theory
+**What:** Savchenko has a series of papers giving EXACT polynomial formulas for c_k(T) (number of k-cycles) in regular tournaments:
+- c5, c6 formulas (2016, J. Graph Theory 83)
+- c7 formula (2017, Discrete Math)
+- c8 for DRTs vs locally transitive tournaments (2024, arXiv:2403.07629)
+Key finding: c8(DRT_n) is INDEPENDENT of which DRT is chosen. Phase transition at n=39: DRTs have more 8-cycles than locally-transitive for n≤35 but FEWER for n≥39.
+**Why it matters:** These exact formulas could determine whether Paley tournaments maximize cycle counts at EVERY length, or only for short cycles. The phase transition at n=39 suggests our cycle-maximization mechanism may reverse at larger n. Also, the spectral methods used (eigenvalue-based cycle counting) could connect to our transfer matrix work.
+**Next step:** (1) Obtain and study the c5,c6,c7 formulas. (2) Compute c5, c7 for Paley T_7 using Savchenko's formula and verify against our counts. (3) Investigate the n=39 phase transition for Hamiltonian path implications.
+
+### INV-054: Komarov-Mackey exact 5-cycle formula (arXiv:1410.6828, JGT 2017)
+**Source:** kind-pasteur-2026-03-06-S19 web search
+**Status:** NEW LEAD — MEDIUM PRIORITY
+**What:** Exact formula for number of directed 5-cycles in any tournament in terms of edge score sequence. Maximum c5 ≈ (3/4)*C(n,5), achieved by almost all random tournaments. Lower bounds also proved.
+**Why it matters:** This formula, combined with our alpha_1 analysis, could give an exact expression for the directed 5-cycle contribution to H(T). At n=7, we showed Paley has 42 directed 5-cycles (2 per vertex set) — this may follow from the Komarov-Mackey formula + regularity.
+**Next step:** (1) Read the formula. (2) Apply it to Paley tournaments. (3) Check if it gives a closed form for alpha_1 contributions.
+
+### INV-055: Linial-Morgenstern cycle density conjecture and extremal tournaments
+**Source:** kind-pasteur-2026-03-06-S19 web search; arXiv:2011.14142 (Ma-Tang), arXiv:1902.00572
+**Status:** NEW LEAD — MEDIUM PRIORITY
+**What:** Linial-Morgenstern conjecture: among tournaments with fixed c3 density d, the c4 density is minimized by random blowups of transitive tournaments. Proved for d ≥ 1/36 using spectral methods. Ma-Tang extend to c_ℓ for ℓ ≢ 2 mod 4 when d is near 1.
+**Why it matters:** This is the "dual" to our maximization question. We show Paley maximizes total directed cycles; this literature characterizes minimizers. The spectral methods used here (eigenvalue-based cycle density bounds) could provide tools for our Paley maximizer proof.
+**Next step:** Check if the extremal results constrain H(T) via OCF.
+
+### INV-056: Jerrum-Patel zero-free regions for H-free graphs (JLMS 2026)
+**Source:** kind-pasteur-2026-03-06-S19 web search
+**Status:** NEW LEAD — MEDIUM PRIORITY (for real-rootedness question)
+**What:** Jerrum & Patel (2026, JLMS) prove zero-free regions for the independence polynomial of H-free graphs for various H. For claw-free: all zeros on negative real line (= Chudnovsky-Seymour). For subdivided claws: related zero-free regions. KEY: for H NOT a subdivided claw or path, there exist H-free graphs of max degree 3 with zeros NOT on the negative real line.
+**Why it matters:** Our Omega_3(T) has all real roots for n≤20 but is NOT always claw-free (fails n≥9). Jerrum-Patel's results on subdivided claw avoidance may explain why real roots persist beyond n=8. The tournament-specific constraint on Omega_3 structure may ensure avoidance of exactly the "bad" subgraphs.
+**Next step:** (1) Check what specific subdivided claws appear in Omega_3(T) at n≥9. (2) Apply Jerrum-Patel to determine if their zero-free regions explain our observations.
+
+### INV-057: Herman's Terwilliger algebras of DRTs (arXiv:2404.11560, 2024)
+**Source:** kind-pasteur-2026-03-06-S19 web search
+**Status:** NEW LEAD — LOW-MEDIUM PRIORITY
+**What:** Allen Herman computes Terwilliger algebras for DRTs (asymmetric rank-3 association schemes). Thin irreducible modules, dimension 4k+9. Key: Terwilliger algebras distinguish non-isomorphic DRTs up to n=23, but FAIL at n=27 (need rational Terwilliger algebras). There are 237 non-isomorphic DRTs at n=27.
+**Why it matters:** (1) If all DRTs at small n have the same H(T), that would be a DRT invariant. (2) If Terwilliger algebra structure constrains H(T), this gives an algebraic route to Paley maximization. (3) The n=27 DRT classification gives test cases for our conjectures beyond Paley primes.
+**Next step:** (1) Check if all DRTs at n=7 (there's only one: Paley) or n=11 have the same H. (2) At n=27, compare H across different DRT isomorphism classes.
+
+### INV-058: Pantangi critical groups distinguish Paley from other DRTs
+**Source:** kind-pasteur-2026-03-06-S19 web search; Pantangi arXiv:1905.08568 (2019)
+**Status:** CONNECTION IDENTIFIED
+**What:** Pantangi shows critical groups (sandpile groups) distinguish Paley from non-Paley DRTs. Chandler-Sin-Xiang computed Smith/critical groups of Paley GRAPHS. Different DRT constructions (Szekeres-Whiteman 2-block, Wallis-Whiteman 4-block) are distinguished by their critical groups.
+**Why it matters:** If H(T) is a DRT invariant AND different DRTs have different critical groups, then H could be read off the critical group. This would give a purely algebraic characterization of the H-maximizer.
+**Next step:** Compute critical groups for DRTs at n=11,19 and check correlation with H values.
+
+### INV-059: Cyclic subsets of tournaments (arXiv:2508.03634, Aug 2025)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Hunter-Liu-Milojević-Sudakov
+**Status:** NEW LEAD — LOW PRIORITY
+**What:** Optimal bounds on probability that random induced subtournament of high min-degree tournament is Hamiltonian. Extends to p-biased measure. Proves that high min-degree forces high Hamiltonicity probability.
+**Why it matters:** Paley T_p has min-degree (p-1)/2 (doubly regular). This paper could give explicit bounds on the fraction of induced subtournaments that are Hamiltonian, which connects to our cycle counting.
+**Next step:** Apply their bounds to Paley tournaments. Check if this gives lower bounds on c_k counts.
+
+### INV-060: Eulerian cycle trace formula (arXiv:2502.02915, Feb 2025)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Ye Luo
+**Status:** NEW LEAD — SPECULATIVE
+**What:** Trace formula counting Eulerian cycles via "twisted" vertex and edge adjacency matrices. Uses homological spectral graph theory.
+**Why it matters:** Our transfer matrix tr(M) = H(T) (THM-027) is also a trace formula. This paper's approach—using twisted adjacency matrices with spectral antisymmetry—could provide a template for proving our trace formula properties (symmetry, off-diagonal sum) at general n.
+**Next step:** Read the paper and check if "twisted adjacency" techniques apply to tournament transfer matrices.
+
+### INV-061: Hamilton transversals in tournaments (Combinatorica 2024)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Chakraborti-Kim-Lee-Seo arXiv:2307.00912
+**Status:** NEW LEAD — LOW PRIORITY
+**What:** For collections of sufficiently many tournaments on the same vertex set, transversal Hamilton paths/cycles exist. For m=|V|-1 tournaments, there's a transversal Ham path; for m=|V| with m-1 strongly connected, transversal Ham cycle.
+**Why it matters:** The "transversal" perspective could give a new way to relate Ham paths across different tournaments, potentially connecting to how H(T) changes under arc reversals.
+
+### INV-062: Forward arc maximization in tournaments (arXiv:2602.10713, Feb 2026)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Guo-Gutin-Lan-Shao-Yeo-Zhou
+**Status:** NEW LEAD — LOW PRIORITY
+**What:** Characterizes maximum forward arcs in Hamilton cycles/paths for semicomplete and locally semicomplete digraphs. Polynomial-time algorithms.
+**Why it matters:** Forward arcs in Hamilton paths relate to our "position-based" analysis (pos(a,P) in THM-027 trace formula). The maximum forward arc structure could inform transfer matrix properties.
+
+### INV-063: Spectral pseudorandomness and Paley clique bounds (Exp. Math. 2024)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Kunisky-Yu arXiv:2303.16475
+**Status:** NEW LEAD — LOW PRIORITY
+**What:** Studies spectral pseudorandomness of Paley graphs via subgraph eigenvalue distributions. Conjecturally, minimum eigenvalue convergence would improve clique number bounds beyond √p.
+**Why it matters:** Spectral properties of Paley graphs/tournaments are central to our theory. If Paley tournaments have stronger spectral pseudorandomness than other DRTs, this could explain H-maximization via eigenvalue-based cycle counting formulas.
+
+### INV-064: Mitrovic Hopf algebra new bases (arXiv:2407.18608v3, Mar 2025)
+**Source:** kind-pasteur-2026-03-06-S19 web search
+**Status:** CONNECTION IDENTIFIED — supplements INV-033
+**What:** Introduces two new combinatorial Hopf algebras of posets and permutations with Rédei-Berge functions. Constructs new bases for symmetric functions whose generators are Rédei-Berge functions. Investigates which digraph invariants are extractable from the Rédei-Berge function.
+**Why it matters:** If H(T) can be expressed as a coefficient in one of these new bases, it gives an algebraic handle on Hamiltonian path counting.
+**Next step:** Check which digraph invariants the paper extracts. Is H(T) among them?
+
+### INV-065: Independence polynomial root gap (arXiv:2510.09197, FSTTCS 2025)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Om Prakash & Vikram Sharma
+**Status:** NEW LEAD — LOW PRIORITY
+**What:** Quantifies the gap between the smallest real root β(G) of I(G,x) and all other roots. For connected graphs, β(G) is a simple real root smaller than 1, but previous proofs gave no gap bound. This paper provides explicit bounds.
+**Why it matters:** For our Omega(T) real-rootedness question, having a gap bound could help prove that all roots are real by showing they're well-separated from the complex plane.
+
+### INV-066: Low-rank matrices from tournaments and symmetric designs (arXiv:2401.14015, 2024)
+**Source:** kind-pasteur-2026-03-06-S19 web search; Balachandran-Sankarnarayanan
+**Status:** NEW LEAD — LOW-MEDIUM PRIORITY
+**What:** Constructs symmetric matrices from tournament structures where rank depends on design-theoretic properties. Symmetric designs (BIBDs) give matrices with rank near n/2. The rank-topology relationship involves bipartite graph eigenvalues.
+**Why it matters:** Our transfer matrix M is constructed from a tournament and is symmetric. This paper's framework connecting tournament-derived matrices with design theory could explain structural properties of M (e.g., why symmetry holds, what the rank structure is).
+**Next step:** Check if our M fits their M_T(f,a) framework.
