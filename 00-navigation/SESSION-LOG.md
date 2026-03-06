@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S10 — 2026-03-05 (Paley maximizer verification, n=8 H-maximizer discovery, Omega structure analysis)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S8 (context continuation after summary)
+**Files read:** SESSION-LOG.md, TANGENTS.md, OPEN-QUESTIONS.md, THM-020, MSG-013, n8-anomaly-deep-dive.md, verify_n8_claims.py, INVESTIGATION-BACKLOG.md
+**Summary of work:**
+  (1) DISCOVERED: a(8)=661 from OEIS A038375. The H-maximizer at n=8 is a SC tournament with |Aut|=1, NOT T_657 (H=657, the Paley extension). T_661 does NOT contain P(7) as a vertex-deletion and has non-uniform D_v=(67,63,68,72,72,68,63,67).
+  (2) CONFIRMED: P(7) is the GLOBAL H-maximizer at n=7, verified by exhaustive enumeration of all 2,097,152 tournaments on 7 vertices. 240 tournaments achieve H=189.
+  (3) CONFIRMED: Paley maximizer conjecture at p=11: H(P(11))=95095=a(11).
+  (4) NEW COMPUTATIONS: H(P(19))=1,172,695,746,915 and H(P(23))=15,760,206,976,379,349. These are candidate values for a(19) and a(23) in OEIS.
+  (5) RATIO ANALYSIS: H(P(p))/(p!/2^{p-1}) = 2.00, 2.40, 2.44, 2.53, 2.56 for p=3,7,11,19,23 — converging toward e=2.718, consistent with Szele-Alon-Friedland asymptotic bound.
+  (6) OMEGA STRUCTURE: Full Omega at n=8 has 76-78 vertices (density 0.98). The 3-cycle subgraph accounts for only 30% of H(T); 70% comes from 5-cycle and 7-cycle contributions. This is the structural signature of the n=8 transition.
+  (7) IMPORTANT NEGATIVE: The Paley maximizer conjecture applies ONLY at Paley primes (p=3 mod 4). At non-Paley n=8, the maximizer has trivial automorphism group and no Paley substructure.
+**New contributions:**
+- T059 (n=8 maximizer and 5-cycle dominance), T060 (Paley ratio convergence to e) in TANGENTS.md
+- T053 updated with p=19,23 data and n=8 negative result
+- INV-024 extended through p=23, INV-032 updated with perfectness failure
+- 04-computation/check_max_h8.py, paley_maximizer_test.py, paley_h_sequence.py, n8_omega_structure.py
+**Unresolved threads:**
+- Submit H(P(p)) values to OEIS (a(19), a(23) are new)
+- Test line graph hypothesis for Omega(T) (Beineke forbidden subgraphs)
+- Test subdivided-claw-freeness at n=9
+- Compute H(P(31)) if feasible
+
 ## opus-2026-03-05-S9 — 2026-03-05 (Deep web research: zero-free regions, subdivided claws, real-roots mystery)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S8 (context continuation after compaction)

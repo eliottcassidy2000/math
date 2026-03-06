@@ -2,19 +2,19 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-05-S4b
-**Last web research:** opus-2026-03-05-S6 (Tribonacci-focused)
+**Last full repo scour:** opus-2026-03-05-S9
+**Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
 
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
-**Source:** Web research opus-S5, opus-S7 (disproof)
-**Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9) or perfect (fails n=8). Holds trivially for n<=8 (claw-free) and n<=7 (perfect) by vertex counting.
-**What remained true:** All-real-roots of I(Omega(T), x) appears to hold even for imperfect/non-claw-free Omega (tested n=8, 200 samples, 0 failures). This would be a new theorem NOT explained by Chudnovsky-Seymour.
-**Note:** OCF is now proved by Grinberg-Stanley, so this is no longer a proof strategy — it's a structural question.
-**Next step:** (1) Test all-real-roots at n=9 where Omega is genuinely non-claw-free. (2) If confirmed, formulate as conjecture and seek proof.
+**Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)
+**Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9, 90%) or perfect (fails n=8, 53.8%). NOT a line graph (K_5-e found at n=6, 45%). S_{1,1,1}-free through n=11, fails n=12.
+**What remained true:** All-real-roots of I(Omega(T), x) appears to hold even for imperfect/non-claw-free Omega (tested n<=10, 0 failures). This is a deep structural conjecture NOT explained by any forbidden subgraph property.
+**Note:** OCF is now proved by Grinberg-Stanley, so this is no longer a proof strategy — it's a structural question. Real-rootedness explanation must be algebraic (Irving-Omar/Grinberg-Stanley symmetric function framework).
+**Next step:** (1) Test all-real-roots at n=9 where Omega is genuinely non-claw-free. (2) If confirmed, formulate as conjecture and seek algebraic proof.
 
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)
@@ -198,12 +198,17 @@
 
 ## Priority D: Computational targets
 
-### INV-024: H(T_19) for the Paley prime p=19
-**Source:** OPEN-Q-013
-**Status:** COMPUTED (opus-S5). H(T_19) = 1,172,695,746,915.
-**Result:** |Aut(T_19)| = 171. H/|Aut| = 6,857,869,865 (exact integer). H is odd. c_3=285, c_5=11628. Per-endpoint count = 61,720,828,785 (same for all 19 endpoints — Paley symmetry). Computed via C DP in 0.5s.
+### INV-024: H(T_p) for Paley primes — EXTENDED
+**Source:** OPEN-Q-013, opus-S9
+**Status:** COMPUTED through p=23.
+**Results:**
+- H(P(3))=3, H(P(7))=189, H(P(11))=95095, H(P(19))=1,172,695,746,915, H(P(23))=15,760,206,976,379,349
+- All match OEIS A038375 where known (a(3)=3, a(7)=189, a(11)=95095)
+- P(7) confirmed as GLOBAL maximizer by exhaustive check of all 2^21 n=7 tournaments
+- |Aut(T_19)| = 171, H/|Aut| = 6,857,869,865
+- Ratio H(P(p))/(p!/2^{p-1}): 2.000, 2.400, 2.440, 2.527, 2.557 — converging toward e=2.718
 **Sequence:** H/|Aut| = 1 (p=3), 9 (p=7), 1729 (p=11), 6857869865 (p=19).
-**Note:** c_3 formula gives 285 but expected 199 — discrepancy needs investigation (formula may be for non-isomorphic rather than labeled 3-cycles).
+**Next step:** Submit H(P(p)) values and H(P(p))/|Aut| sequence to OEIS. Compute H(P(31)) if feasible (2^31*31 DP — ~66B ops, might take hours).
 
 ### INV-025: Integrality conjecture C(p,k) | c_k(T_p) for k >= (p+1)/2
 **Source:** T036/T153 (tangents), OPEN-Q-013 table
@@ -308,3 +313,7 @@
 - [DEAD] Contiguous block decomposition (T035)
 - [DEAD] Contraction approach (T017)
 - [DEAD] Alpha_1 = c_3 (mod 2) conjecture — counterexamples at all n (opus-S5)
+- [DONE] Paley maximizer conjecture verified at p=3,7,11 (exhaustive at p=7), extended with H(P(19)), H(P(23)) (opus-S9)
+- [DONE] n=8 H-maximizer identified: H=661=a(8), self-converse, |Aut|=1, does NOT contain P(7) (opus-S9)
+- [DONE] Full Omega structure at n=8: 76-78 vertices, density 0.98, 70-75% of H from 5/7-cycles (opus-S9)
+- [DONE] Ratio H(P(p))/(p!/2^{p-1}) converges toward e: 2.00, 2.40, 2.44, 2.53, 2.56 for p=3,7,11,19,23 (opus-S9)
