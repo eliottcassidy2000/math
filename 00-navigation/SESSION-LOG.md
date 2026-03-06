@@ -35,6 +35,20 @@ Entry format:
   (6) **TRANSFER MATRIX vs INDEPENDENCE POLYNOMIAL:** T(r) is degree n-1 in r while I(Omega,x) has degree alpha(Omega). Transfer matrix captures H=I(Omega,2) but NOT the full polynomial.
 **New contributions:** THM-030, key_identity_complete_proof.py, transfer-matrix-symmetry-proof.md, T151, T152
 **Unresolved threads:** Prove M=(H/n)*I characterizes vertex-transitive tournaments; find combinatorial interpretation of Key Identity
+## kind-pasteur-2026-03-06-S25b — 2026-03-06 (THM-030 implications: Fibonacci determinant, uniform positions, Irving-Omar)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25 (ran out of context)
+**Summary of work:**
+  Extended analysis of THM-030 implications:
+  (1) **UNIFORM POSITION DISTRIBUTION for VT tournaments**: Each vertex appears at each position in exactly H/n Hamiltonian paths. Strictly stronger than M=(H/n)*I. All VT at n=3,5,7 have uniform position. At n=7, uniform position correlates with scalar M (H=189,175 uniform; H=171 non-uniform).
+  (2) **IRVING-OMAR CONNECTION**: Their Prop 2 (ham(D) = sum_S det(Abar[S]) per(A[S^c])) verified. Our transfer matrix M[a,b] is an ENDPOINT-CONDITIONED refinement — Irving-Omar don't have this. M[a,b] is NOT the same as H(a->b).
+  (3) **TRANSITIVE TOURNAMENT**: M is tridiagonal with M[i,i]=(-1)^i, M[i,i+1]=(-1)^i. After conjugation D*M = I+tridiag(S). Eigenvalues = 2cos(kpi/(n+1)). |det(M)| = F(n+1) (FIBONACCI!). Verified n=3,...,7.
+  (4) **HOOK SCHUR COEFFICIENTS**: For T_3: h=[3,0,3]. Paley T_5: h=[15,10,10,10,15]. Paley T_7: h=[189,126,147,84,147,126,189]. Always palindromic. Transitive: h = binomial coefficients C(n-1,k). All n=5 regular have same hooks.
+  (5) **OCF vs KEY IDENTITY**: cs(b) measures endpoint balance (B_b - E_b), while delta_b = H-H(T-b) measures cycle contribution. These are DIFFERENT. Key Identity doesn't directly imply OCF.
+  (6) **WEB RESEARCH**: Irving-Omar (2412.10572), Mitrovic-Stojadinovic Hopf (2407.18608), Schweser-Stiebitz-Toft mixed (2510.10659) — confirmed our results are NOVEL.
+**New contributions:** T153, T154, T155, 7 computation scripts
+**Unresolved threads:** LaTeX write-up, det(M) formula for general tournaments, characterize uniform position
+
 ## kind-pasteur-2026-03-06-S25 — 2026-03-06 (PROOF COMPLETE: even r-powers / transfer matrix symmetry)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S24 (ran out of context)

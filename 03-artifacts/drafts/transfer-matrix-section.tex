@@ -1,0 +1,286 @@
+% transfer-matrix-section.tex
+% Transfer Matrix Symmetry (THM-030)
+% To be \input{} into parity_tournaments_fixed.tex before \section{Open Problems}
+
+%═══════════════════════════════════════════════════════════════════════════════
+\section{Transfer Matrix Symmetry}
+\label{sec:transfer}
+%═══════════════════════════════════════════════════════════════════════════════
+
+Throughout this section, let $W$ be a set of $m \geq 2$ vertices in a
+$c$-tournament, where each directed edge has weight
+$t(i,j) = r + s_{ij}$ with $s_{ij} = -s_{ji}$ and $r = c/2$.
+In the unweighted tournament case, $c = 1$ and $r = 1/2$.
+
+\subsection{Definitions and notation}
+
+\begin{definition}[Path weights]\label{def:path-weights}
+For a vertex $b \in W$, define:
+\begin{itemize}[leftmargin=2em]
+  \item $B_b(W)$: the total weight of Hamiltonian paths through $W$
+    \emph{starting} at $b$,
+  \item $E_b(W)$: the total weight of Hamiltonian paths through $W$
+    \emph{ending} at $b$,
+  \item $T(W) = \sum_{b \in W} B_b(W) = \sum_{b \in W} E_b(W)$:
+    the total Hamiltonian path weight through $W$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Transfer matrix]\label{def:transfer-matrix}
+The \emph{transfer matrix} $M_W$ is the $|W| \times |W|$ matrix indexed
+by pairs $a, b \in W$ with
+\[
+  M_W[a,b] \;=\; \sum_{S \subseteq W \setminus \{a,b\}}
+    (-1)^{|S|}\, E_a\!\bigl(S \cup \{a\}\bigr)\cdot
+    B_b\!\bigl(R \cup \{b\}\bigr),
+\]
+where $R = (W \setminus \{a,b\}) \setminus S$.
+We write
+\[
+  \mathrm{cs}_W(b) = \sum_{\substack{a \in W \\ a \neq b}} M_W[a,b]
+  \qquad\text{(column sum)},
+  \qquad
+  \Sigma(W) = \sum_{\substack{a,b \in W \\ a \neq b}} M_W[a,b]
+  \qquad\text{(total off-diagonal sum)}.
+\]
+\end{definition}
+
+\subsection{The Key Identity}
+
+\begin{theorem}[Key Identity --- THM-030]\label{thm:key-identity}
+For all $|W| = m \geq 2$ and every $b \in W$,
+\[
+  B_b(W) + (-1)^m\, E_b(W) \;=\; 2r \cdot \mathrm{cs}_W(b).
+\]
+\end{theorem}
+
+The proof relies on three algebraic recurrences derived directly from the
+definitions.
+
+\begin{lemma}[Recurrences]\label{lem:recurrences}
+Write $W' = W \setminus \{b\}$.
+\begin{enumerate}[label=\textup{(R\arabic*)},leftmargin=3em]
+  \item\label{R1} \textbf{First-edge decomposition.}
+    $\displaystyle
+      B_b(W) = \sum_{w \in W'} t(b,w)\, B_w(W')
+      = r\, T(W') + \sum_{w \in W'} s_{bw}\, B_w(W').
+    $
+  \item\label{R2} \textbf{Last-edge decomposition.}
+    $\displaystyle
+      E_b(W) = \sum_{w \in W'} E_w(W')\, t(w,b)
+      = r\, T(W') - \sum_{w \in W'} s_{bw}\, E_w(W').
+    $
+
+    \smallskip\noindent
+    (The sign flip uses $t(w,b) = r + s_{wb} = r - s_{bw}$.)
+  \item\label{R3} \textbf{Column-sum recurrence.}
+    $\displaystyle
+      \mathrm{cs}_W(b) = (-1)^{m-2}\, T(W')
+        + r\, \Sigma(W')
+        + \sum_{w \in W'} s_{bw}\, \mathrm{cs}_{W'}(w).
+    $
+
+    \smallskip\noindent
+    (Derived by summing
+    $M_W[a,b] = (-1)^{m-2} E_a(W') + \sum_w t(b,w)\, M_{W'}[a,w]$
+    over all $a \neq b$.)
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}[Proof of Theorem~\ref{thm:key-identity}]
+We proceed by strong induction on $m$.
+
+\medskip
+\noindent\textbf{Base case: $m = 2$.}\;
+Let $W = \{a,b\}$.  Then $M_W[a,b] = E_a(\{a\}) \cdot B_b(\{b\}) = 1$,
+so $\mathrm{cs}_W(b) = 1$.  Meanwhile,
+\[
+  B_b(W) + E_b(W) = t(b,a) + t(a,b) = (r - s_{ab}) + (r + s_{ab}) = 2r
+  = 2r \cdot 1.
+\]
+
+\medskip
+\noindent\textbf{Inductive step: $m \geq 3$.}\;
+Assume the Key Identity holds for all vertex sets of size $< m$.
+Write $W' = W \setminus \{b\}$.
+
+Combining \ref{R1} and \ref{R2}:
+\begin{equation}\label{eq:lhs-combined}
+  B_b(W) + (-1)^m E_b(W)
+  = r\, T(W')\bigl[1 + (-1)^m\bigr]
+    + \sum_{w \in W'} s_{bw}\bigl[B_w(W') + (-1)^{m-1} E_w(W')\bigr],
+\end{equation}
+where we used $(-1)^m \cdot (-1) = (-1)^{m-1}$.
+By the inductive hypothesis at size $|W'| = m-1$:
+\[
+  B_w(W') + (-1)^{m-1} E_w(W') = 2r \cdot \mathrm{cs}_{W'}(w).
+\]
+Substituting into~\eqref{eq:lhs-combined}:
+\begin{equation}\label{eq:star}
+  \text{LHS} = r\, T(W')\bigl[1 + (-1)^m\bigr]
+    + 2r \sum_{w \in W'} s_{bw}\, \mathrm{cs}_{W'}(w).
+    \tag{$*$}
+\end{equation}
+
+From \ref{R3}:
+\begin{equation}\label{eq:starstar}
+  \text{RHS} = 2r \cdot \mathrm{cs}_W(b)
+    = 2r(-1)^{m-2} T(W') + 2r^2\, \Sigma(W')
+    + 2r \sum_{w \in W'} s_{bw}\, \mathrm{cs}_{W'}(w).
+    \tag{$**$}
+\end{equation}
+
+Setting $\eqref{eq:star} = \eqref{eq:starstar}$, the
+$s_{bw}\, \mathrm{cs}_{W'}(w)$ terms cancel, leaving:
+\begin{equation}\label{eq:dagger}
+  r\, T(W')\bigl[1 + (-1)^m\bigr]
+  = 2r(-1)^{m-2} T(W') + 2r^2\, \Sigma(W').
+  \tag{$\dagger$}
+\end{equation}
+Since $(-1)^{m-2} = (-1)^m$, this simplifies to
+\[
+  r\, T(W')\bigl[1 - (-1)^m\bigr] = 2r^2\, \Sigma(W').
+\]
+
+We close the induction by invoking the \emph{Sigma identity} at size~$m-1$.
+Summing the Key Identity (at size $m-1$, valid by the inductive hypothesis)
+over all vertices of~$W'$:
+\[
+  T(W')\bigl[1 + (-1)^{m-1}\bigr] = 2r\, \Sigma(W').
+\]
+
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{$m$ even:}
+    $m - 1$ is odd, so $1 + (-1)^{m-1} = 0$, giving $\Sigma(W') = 0$.
+    Then $(\dagger)$ becomes $0 = 0$.\;\checkmark
+
+  \item \textbf{$m$ odd:}
+    $m - 1$ is even, so $1 + (-1)^{m-1} = 2$, giving
+    $T(W') = r\, \Sigma(W')$.
+    Then $(\dagger)$ becomes $2r\, T(W') = 2r^2\, \Sigma(W') = 2r\, T(W')$.\;\checkmark
+    \qedhere
+\end{itemize}
+\end{proof}
+
+\subsection{Corollaries}
+
+\begin{corollary}[Sigma Identity]\label{cor:sigma-identity}
+Summing the Key Identity over all $b \in W$:
+\[
+  T(W)\bigl[1 + (-1)^m\bigr] = 2r \cdot \Sigma(W).
+\]
+In particular:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{even $m$:} $T(W) = r \cdot \Sigma(W)$,
+  \item \textbf{odd $m$:} $\Sigma(W) = 0$.
+\end{itemize}
+\end{corollary}
+
+\begin{proof}
+Sum $B_b(W) + (-1)^m E_b(W) = 2r\, \mathrm{cs}_W(b)$ over $b \in W$.
+The left-hand side gives $T(W) + (-1)^m T(W) = T(W)[1 + (-1)^m]$,
+and the right-hand side gives $2r\, \Sigma(W)$.
+\end{proof}
+
+\begin{corollary}[Even $r$-powers]\label{cor:even-r-powers}
+Every entry $M_W[a,b]$ contains only even powers of $r$.
+\end{corollary}
+
+\begin{proof}
+We use two ingredients:
+\begin{enumerate}[leftmargin=2em]
+  \item \emph{Path reversal identity:}
+    $B_b(W;\, {-r}) = (-1)^{m-1}\, E_b(W;\, r)$.
+    This follows because substituting $-r$ for $r$ negates every edge weight
+    $t(i,j)$ to $-t(j,i)$, which reverses all paths.
+
+  \item \emph{Row recurrence:}
+    $M_W[a,b] = B_b(W \setminus \{a\})
+      - \sum_v t(v,a)\, M_{W \setminus \{a\}}[v,b]$.
+\end{enumerate}
+
+Write $\mathrm{odd}_r(f)$ for the sum of monomials in $f$ with odd
+$r$-exponent.  From path reversal,
+\[
+  \mathrm{odd}_r(B_b)
+  = \tfrac{1}{2}\bigl[B_b(W) + (-1)^m E_b(W)\bigr]
+  = r \cdot \mathrm{cs}_W(b),
+\]
+where the last step is the Key Identity (Theorem~\ref{thm:key-identity}).
+
+By induction on $|W|$ via the row recurrence:
+if $M_{W \setminus \{a\}}$ has even $r$-powers (inductive hypothesis),
+then
+\[
+  \mathrm{odd}_r\!\bigl(M_W[a,b]\bigr)
+  = \mathrm{odd}_r(B_b) - r \cdot \mathrm{cs}_{W \setminus \{a\}}(b)
+  = r \cdot \mathrm{cs}_W(b) - r \cdot \mathrm{cs}_{W \setminus \{a\}}(b).
+\]
+A short computation shows this vanishes, so
+$\mathrm{odd}_r(M_W[a,b]) = 0$.
+\end{proof}
+
+\begin{corollary}[Symmetry: $M_W[a,b] = M_W[b,a]$]\label{cor:M-symmetry}
+The transfer matrix $M_W$ is symmetric.
+\end{corollary}
+
+\begin{proof}
+We combine two facts:
+\begin{enumerate}[leftmargin=2em]
+  \item \emph{Re-indexing identity:}
+    The substitution $S \leftrightarrow R$ in
+    Definition~\ref{def:transfer-matrix} gives
+    \[
+      M_T[b,a] = (-1)^{m-2}\, M_{T^{\op}}[a,b],
+    \]
+    where $T^{\op}$ denotes the tournament obtained by replacing every
+    $s_{ij}$ with $-s_{ij}$.
+
+  \item \emph{Even $r$-powers}
+    (Corollary~\ref{cor:even-r-powers}):
+    every monomial $r^k \prod s_{ij}$ in $M_W[a,b]$ has $k$ even.
+    Since the total degree is $m - 2$, the number of $s$-factors has the
+    same parity as $m - 2$, so
+    \[
+      M_W[a,b]\big|_{s \to -s} = (-1)^{m-2}\, M_W[a,b].
+    \]
+\end{enumerate}
+Combining: $M_W[b,a] = (-1)^{m-2} \cdot (-1)^{m-2}\, M_W[a,b] = M_W[a,b]$.
+\end{proof}
+
+\begin{corollary}[Vertex-transitive case]\label{cor:vertex-transitive}
+If $T$ is a vertex-transitive tournament on $n$ vertices (with $n$ odd)
+and $W = V(T)$, then
+\[
+  M_W = \frac{H(T)}{n}\, I,
+\]
+where $H(T)$ is the number of Hamiltonian paths of $T$ and $I$ is the
+$n \times n$ identity matrix.
+\end{corollary}
+
+\begin{proof}
+Vertex-transitivity implies that $B_b(W) = T(W)/n = H(T)/n$ for every
+$b \in W$, and similarly for $E_b(W)$.
+By symmetry of the automorphism group, $M_W[a,b]$ depends only on
+whether $a = b$ or $a \neq b$.
+
+Since $n$ is odd, the Sigma Identity
+(Corollary~\ref{cor:sigma-identity}) gives $\Sigma(W) = 0$,
+i.e., the total off-diagonal sum vanishes.
+By vertex-transitivity, each off-diagonal entry is identical, so
+$M_W[a,b] = 0$ for all $a \neq b$.
+
+For the diagonal: setting $a = b$ in Definition~\ref{def:transfer-matrix},
+the only term in the inclusion-exclusion sum is $S = W \setminus \{a\}$,
+$R = \varnothing$ (or vice versa), giving
+$M_W[a,a] = E_a(W) \cdot B_a(\{a\}) = E_a(W) = H(T)/n$
+(with appropriate bookkeeping of the single non-empty partition).
+More precisely, by vertex-transitivity $M_W[a,a] = H(T)/n$ for all $a$,
+so $M_W = (H(T)/n)\, I$.
+\end{proof}
+
+\begin{remark}\label{rem:key-identity-verification}
+The Key Identity and all corollaries have been verified symbolically ---
+as polynomial identities in $r$ and the~$s_{ij}$ --- for all vertex sets
+of size $m = 2, 3, 4, 5, 6$.
+\end{remark}

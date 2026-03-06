@@ -3,7 +3,7 @@
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-06-S10
-**Last web research:** kind-pasteur-2026-03-06-S19 (extensive 40+ query web search across 6 parallel agents + direct searches)
+**Last web research:** kind-pasteur-2026-03-06-S25 (Irving-Omar det/per, Mitrovic-Stojadinovic Hopf, Schweser-Stiebitz-Toft mixed)
 
 ---
 
