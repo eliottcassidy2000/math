@@ -22,11 +22,13 @@ Entry format:
   (3) **AA^T SPECTRAL CORRELATION**: corr(H, lambda_1(AA^T)) = -0.97 at n=5 and -0.96 at n=6. H-maximizers have smallest leading eigenvalue of AA^T (most spectrally regular). Spectral gap also strongly anti-correlated with H.
   (4) **Cayley transform test**: tr(S^k) for skew-symmetric S is always 0 (trace of skew-symmetric is 0). The Irving-Omar arctanh approach uses adjacency A not skew S. tr(A^3)/3 = c3 confirmed. Pfaffian not directly related to H. The determinantal representation exists iff roots are real negative (circular), so the key is finding a NATURAL matrix from tournament structure.
   (5) **n→n-2 pair deletions**: From T_7, ALL 21 pair-deletions give score (1,2,2,2,3) with H=13 (not max 15). The n→n-2 chain does not preserve maximality.
-**New contributions:** T104 (hereditary maximizer), T105 (AA^T spectral), INV-044
+  (6) **SC MAXIMIZER AT n=8 CONFIRMED**: SC tournaments with score (3,3,3,3,4,4,4,4) achieve H=661 = global max (OEIS A038375). Generated via fpf involution (2^16 per sigma). 19 SC score classes, all tested.
+  (7) **HEREDITARY BREAKS AT n=8** (as predicted): No deletion from n=8 maximizer gives max H(7)=189. Deletion H-values: 131, 133, 151 (not constant, unlike n=6). Even-odd dichotomy confirmed n=3-8.
+**New contributions:** T104 (hereditary maximizer), T105 (AA^T spectral), INV-044, OPEN-Q-016 extended to n=8
 **Unresolved threads:**
 - Prove hereditary maximizer algebraically (score compatibility proved, optimality within class needs proof)
-- Test at n=8 (even n, computationally expensive)
 - Find natural PSD matrix M_T such that det(I+xM_T) = I(Omega(T), x)
+- Prove SC maximizer within each score class (not just global max) at n=8
 
 ## opus-2026-03-06-S18 — 2026-03-06 (cross-refs complete, THM-024 proved, Paley deletion verified)
 **Account:** Eliott (primary)

@@ -277,12 +277,14 @@ Two routes to max H observed at n=6:
 
 Both achieve H=45, while NSC achieves only H=43.
 
+**n=8 CONFIRMED (kind-pasteur-S18f):** SC tournaments with score (3,3,3,3,4,4,4,4) achieve H=661 = OEIS A038375(8) = global max. Generated via fpf involution (2^16 per sigma, 3 sigma choices). All 19 SC score classes at n=8 tested.
+
 Key open sub-questions:
 1. Prove algebraically that sigma-orbit structure always beats NSC
-2. Does the theorem extend to n=8? (computationally expensive)
-3. Is every global H-maximizer always SC? (stronger conjecture, also verified n<=7)
+2. ~~Does the theorem extend to n=8?~~ YES — SC achieves global max H=661 at n=8
+3. Is every global H-maximizer always SC? (stronger conjecture, verified n<=8 for global max)
 
-**Source:** kind-pasteur-2026-03-06-S18/S18e, sc-maximizer-mechanism.md
+**Source:** kind-pasteur-2026-03-06-S18/S18e/S18f, sc-maximizer-mechanism.md
 
 ---
 
