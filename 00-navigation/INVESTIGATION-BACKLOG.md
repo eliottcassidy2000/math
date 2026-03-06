@@ -125,11 +125,12 @@
 **What:** Which graphs G arise as Omega(T) for some tournament T? This characterization could constrain the structure of the independence polynomial and potentially simplify OCF proofs.
 **Next step:** Compute Omega(T) for all small tournaments. Catalog which graphs appear. Look for forbidden subgraph characterizations.
 
-### INV-014: 2-adic tower / higher Redei theorems
+### INV-014: 2-adic tower / higher Redei theorems — PARTIALLY RESOLVED
 **Source:** OPEN-Q-008, T007, tex Section 5.5
-**Status:** Concept identified. NOT explored computationally.
-**What:** I(Omega(T), x) at x=4,8,... gives mod-4, mod-8 invariants of H(T). What is v_2(H(T))? Is there a combinatorial characterization?
-**Next step:** Compute v_2(H(T)) for all tournaments at n=5,6,7. Look for patterns related to cycle structure.
+**Status:** COMPUTED (opus-S13). v_2(H(T)) = 0 ALWAYS (= Redei's theorem).
+**What:** I(Omega(T), x) at x=4,8,... gives mod-4, mod-8 invariants of H(T). v_2(H(T)) = 0 universally.
+**Results:** H mod 4 ≡ 1+2*alpha_1 (mod 4) via OCF. At n=3,4 this equals 1+2*c3 (mod 4) exactly. At n≥5 the c3 formula breaks (5-cycles contribute to alpha_1). H mod 2^k approaches uniform on odd residues as n grows.
+**Impact:** OPEN-Q-008 partially resolved. No deeper 2-adic structure at level of H(T). The mod-4 structure is fully explained by alpha_1 parity via OCF.
 
 ---
 

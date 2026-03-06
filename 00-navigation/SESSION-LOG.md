@@ -30,6 +30,27 @@ Entry format:
 - What is the precise relationship between odd/even dichotomy and perpendicular propagation?
 - Does the "three-axis" analogy (Hamming weight / self-converse / automorphism) have algebraic content?
 
+## opus-2026-03-05-S13 — 2026-03-06 (Rigorous backlog investigation: 2-adic tower, full Omega real roots, coefficient analysis)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S12 (continuation)
+**Files read:** INVESTIGATION-BACKLOG.md, OPEN-QUESTIONS.md, symmetry_check.py, paper-deep-connections.md
+**Summary of work:**
+  (1) **INV-014 (2-adic tower): PARTIALLY RESOLVED.** v_2(H(T)) = 0 for ALL tournaments (exhaustive n≤6, sampled n=7). This IS Redei's theorem. H mod 4 ≡ 1+2·alpha_1 (mod 4) via OCF. At n=3,4 this equals 1+2·c_3 exactly, but breaks at n≥5 when 5-cycles contribute. H mod 2^k approaches uniform on odd residues as n grows.
+  (2) **OPEN-Q-015 (real roots): FULL OMEGA VERIFICATION.** Tested I(Omega(T), x) with ALL odd cycles (3+5+7+9-cycles), not just 3-cycles. 185 samples at n=5..9: 100% OCF pass, 100% real roots, 100% log-concave, 100% unimodal. Paley p=7: full Omega has 80 cycles, I.P.=[1,80,7], roots both real negative.
+  (3) **Coefficient structure discovered.** Alpha_k/alpha_{k-1} ratios drop super-exponentially (~0.3 for k=1→2, ~0.03 for k=2→3). Root ratio ≈ alpha_1²/alpha_2 from Vieta formulas. Independence polynomial degree = floor(n/3) for full Omega.
+  (4) **Source cone identity: H(source_cone(T')) = H(T').** Confirmed by INV-035 background agent. Trivial from path structure but important for R-cone proof strategy (INV-004).
+  (5) Launched 3 background agents for INV-014, INV-013, INV-035. Two produced partial results; INV-014 agent got stuck on long computation.
+**New contributions:**
+- 03-artifacts/drafts/backlog-investigation-results.md (comprehensive results document)
+- OPEN-Q-008 partially resolved (v_2=0 always)
+- OPEN-Q-015 strengthened (full Omega verification)
+- INV-014 status updated in backlog
+**Unresolved threads:**
+- Background agents may still be running (INV-013 realizable Omega, INV-035 tournament families)
+- Full Omega at n≥10 needs more efficient cycle enumeration
+- Algebraic explanation for real-rootedness remains the key open problem
+- Irving-Omar symmetric function approach to real-rootedness not yet explored
+
 ## opus-2026-03-05-S12 — 2026-03-05 (Deep web research: Knuth connections to OCF — 7 channels identified)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S11 (continuation)

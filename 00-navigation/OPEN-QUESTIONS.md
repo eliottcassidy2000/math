@@ -66,10 +66,14 @@ Verified for n=5 and n=7 (m=2 and m=3 respectively, giving 4 and 512 self-evacua
 
 ---
 
-## OPEN-Q-008 🟢
+## OPEN-Q-008 🟢 — PARTIALLY RESOLVED
 **2-adic tower: what is the 2-adic valuation of H(T)?**
 
-The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-order mod-2^k invariants. Is there a combinatorial characterization of v_2(H(T)) (the 2-adic valuation)?
+**PARTIALLY RESOLVED (opus-2026-03-05-S13):** v_2(H(T)) = 0 for ALL tournaments (this IS Redei's theorem — H(T) is always odd). Verified exhaustively at n≤6 and sampled at n=7 (5000 tournaments).
+
+The mod-4 structure: H(T) ≡ 1 + 2·alpha_1 (mod 4) via OCF, where alpha_1 = #odd cycles in Omega(T). At n=3,4 this equals 1+2·c_3 (mod 4), but at n≥5 the relationship breaks because 5-cycles contribute.
+
+**Reformulated question:** What is the distribution of H(T) mod 2^k for k≥2? Computations show it approaches uniform on odd residues as n grows. The OCF gives H mod 4 via alpha_1 parity, H mod 8 via alpha_1 and alpha_2, etc.
 
 ---
 
@@ -214,6 +218,9 @@ PROVED for n<=8 via claw-freeness + Chudnovsky-Seymour (THM-020). Computationall
 - n=6: 500 random, 0 failures
 - n=9: 50 random (3-cycle subgraph), 0 failures
 - n=10: 30 random (3-cycle subgraph), 0 failures
+- **FULL Omega (all odd cycles, not just 3-cycles):** n=5..9, 185 samples, 0 failures (opus-S13)
+- Paley p=7: full Omega has 80 cycles {3:14, 5:42, 7:24}, I.P.=[1,80,7], roots=-11.42,-0.013 (real)
+- 100% log-concave and unimodal across ALL 206 tested polynomials
 
 At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
 
