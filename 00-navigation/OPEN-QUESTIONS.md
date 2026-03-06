@@ -231,7 +231,10 @@ Computationally verified:
 - n=10: 30 random (3-cycle subgraph), 0 failures
 - **FULL Omega (all odd cycles, not just 3-cycles):** n=5..9, 185 samples, 0 failures (opus-S13)
 - Paley p=7: full Omega has 80 cycles {3:14, 5:42, 7:24}, I.P.=[1,80,7], roots=-11.42,-0.013 (real)
-- 100% log-concave and unimodal across ALL 206 tested polynomials
+- Paley p=11: full Omega has 21169 cycles, I.P.=[1,21169,10879,1155], all 3 roots real (kind-pasteur-S16 agent)
+- n=20 (3-cycle subgraph): degree 6 polynomial, all 6 roots real and negative (kind-pasteur-S16)
+- **Interlacing under vertex deletion:** 0/1324 failures (n=5 exhaustive + n=6,7 random) — I(Omega(T-v),x) interlaces I(Omega(T),x) (kind-pasteur-S16 agent)
+- 100% log-concave and unimodal across ALL tested polynomials
 
 At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
 
@@ -246,12 +249,16 @@ At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Se
 
 **BARRIER (Engstrom, arXiv:1610.00805):** Real-rootedness of the multivariate independence polynomial CHARACTERIZES claw-freeness. No broader graph class guarantees real roots via the same mechanism. The explanation MUST be tournament-specific and algebraic.
 
+**Key structural clue (kind-pasteur-S16):** J(n,3) is NOT hereditarily real-rooted (counterexample at n=9, alpha=[1,7,5,1], disc=-44). But tournament-realizable subsets ALWAYS give real roots (0 failures at n=5-20). Real-rootedness is a tournament-structure property, not a Johnson graph property.
+
 **Remaining approaches:**
 - Jerrum-Patel (2026, JLMS): zero-free regions for bounded-degree H-free (H = subdivided claw). Applies at n<=9, chain grows with n.
 - Irving-Omar (arXiv:2412.10572): matrix-algebraic tools for Redei-Berge symmetric function. Schur-basis resolution may connect to parity.
 - Prakash-Sharma (arXiv:2510.09197): root gap quantification — could show gap stays positive for tournament conflict graphs.
+- arXiv:2505.22766 polymer-gas representation of I(G,x) for claw-free G — structural tool, doesn't give real-rootedness directly.
 - Direct structural argument from Omega(T) combinatorics (alpha <= floor(n/3)).
 - Grinberg-Stanley / Irving-Omar symmetric function framework (most promising).
+- **Interlacing** (new lead): if I(Omega(T-v),x) interlaces I(Omega(T),x) for all v, and base case has real roots, induction gives real roots for all n. Verified 0/1324 failures.
 
 If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, H(T) > 0 for all x > 0.
 

@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S17 — 2026-03-06 (Integrate background agents: H(T_19), web research, interlacing discovery)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S16 (context continuation)
+**Files read:** SESSION-LOG.md, TANGENTS.md, OPEN-QUESTIONS.md, THM-020, background agent outputs
+**Summary of work:**
+  (1) Resolved git merge conflicts from S16 push (TANGENTS.md, SESSION-LOG.md, inbox files, rename conflict) — renumbered kind-pasteur T074-T078 to T079-T083 to avoid collision with opus T074-T075
+  (2) Integrated 4 background agent results:
+    - **H(T_19) confirmed**: 1,172,695,746,915, |Aut|=171, H/|Aut|=6,857,869,865 (exact integer). All 19 per-endpoint counts equal (vertex-transitive).
+    - **Web research**: arXiv:2505.22766 polymer-gas representation new; Sokal conjecture (Peters-Regts) only helps at Delta<=3; Prakash-Sharma root gap doesn't give real-rootedness; no published work on Omega(T) independence polynomial.
+    - **Independence poly analysis**: Full Omega(T_11) has 21169 cycles, I=[1,21169,10879,1155], degree 3, all real roots. INTERLACING under vertex deletion: 0/1324 failures — major new lead!
+    - **J(n,3) large n**: 0/50 failures at n=12,15 for random induced subgraphs (failures only appear at n=9 with small subsets).
+  (3) Added tangents T084 (interlacing), T085 (full Omega T_11), T086 (polymer-gas)
+  (4) Updated OPEN-Q-015 with interlacing lead, web research results, full Omega data
+**New contributions:** T084, T085, T086; updated OPEN-Q-015
+**Unresolved threads:**
+- INTERLACING is the most promising lead for proving real roots by induction. Need to formalize and test more.
+- Can the Omega(T) -> Omega(T-v) relationship be made explicit enough to prove interlacing?
+- H(T_31) computation (next Paley prime)
+
 ## opus-2026-03-06-S15 — 2026-03-06 (Elementary real-rootedness proof via Turán's theorem + discriminant)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S14 (continuation after merge conflict resolution)

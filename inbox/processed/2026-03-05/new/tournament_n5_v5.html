@@ -1,0 +1,731 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tournament Tiling Explorer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 14px; background: #f0f2f5; color: #111; }
+    h1 { margin: 0 0 4px; font-size: 1.4em; }
+    .subtitle { font-size: 13px; color: #555; margin-bottom: 12px; }
+    .top-panels { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+    .panel { border: 1px solid #ccc; padding: 12px; border-radius: 10px; background: #fff; }
+    .panel h3 { margin: 0 0 10px; font-size: 1em; }
+    .n-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .n-row label { font-weight: 700; font-size: 14px; }
+    .n-row input[type=range] { width: 160px; cursor: pointer; }
+    #n-display { font-size: 20px; font-weight: 900; color: #1a6fc4; min-width: 24px; text-align: center; }
+    .n-info { font-size: 12px; color: #666; }
+    #tile-grid-wrap { position: relative; }
+    .tile-cell {
+      position: absolute; display: flex; align-items: center; justify-content: center;
+      border: 2px solid #444; border-radius: 6px;
+      cursor: pointer; user-select: none; font-weight: 700;
+      transition: background 0.1s, color 0.1s;
+    }
+    .tile-cell.on  { background: #1f77b4; color: #fff; border-color: #1357a0; }
+    .tile-cell.off { background: #fff; color: #333; }
+    .tile-cell:hover { filter: brightness(0.88); }
+    .btn-row { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
+    .action-btn {
+      padding: 5px 13px; border-radius: 6px; border: 1px solid #999;
+      background: #eee; cursor: pointer; font-size: 12px; font-weight: 600;
+    }
+    .action-btn:hover { background: #ddd; }
+    .score-display { margin-top: 10px; font-family: monospace; font-size: 15px; }
+    .score-label { font-size: 12px; color: #666; }
+    #main-canvas { display: block; border: 1px solid #ddd; border-radius: 6px; }
+    #big-panel { border: 1px solid #ccc; border-radius: 10px; background: #fff; padding: 16px; }
+    #big-panel h3 { margin: 0 0 8px; font-size: 1em; }
+    #overview-svg { display: block; width: 100%; }
+    .toggle-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; align-items: center; }
+    .toggle-bar span { font-size: 12px; color: #555; }
+    .tog-btn {
+      padding: 4px 13px; border-radius: 20px; border: 2px solid; cursor: pointer;
+      font-size: 12px; font-weight: 700; user-select: none; transition: opacity 0.15s, background 0.15s;
+    }
+    .tog-btn.active   { opacity: 1; }
+    .tog-btn.inactive { opacity: 0.3; }
+    .tog-blue  { border-color:#1a6fc4; color:#1a6fc4; background:#e8f0ff; }
+    .tog-black { border-color:#333;    color:#333;    background:#f0f0f0; }
+    .tog-red   { border-color:#c0392b; color:#c0392b; background:#ffeaea; }
+    .tog-merge { border-color:#7b2fa8; color:#7b2fa8; background:#f3eaff; }
+    .hint { font-size:11px; color:#777; margin-left:6px; }
+    footer { margin-top: 14px; font-size: 12px; color: #777; }
+  </style>
+</head>
+<body>
+<h1>Tournament Tiling Explorer</h1>
+<p class="subtitle">Hamiltonian path fixed: <strong>n→n-1→…→1</strong>. All tiles off = transitive tournament. Right angle at bottom-left.</p>
+
+<div class="n-row">
+  <label>n =</label>
+  <span id="n-display">5</span>
+  <input type="range" id="n-slider" min="3" max="6" value="5" step="1">
+  <span class="n-info" id="n-info"></span>
+</div>
+
+<div class="top-panels">
+  <div class="panel">
+    <h3>Triangular tile grid</h3>
+    <div id="tile-grid-wrap"></div>
+    <div class="btn-row">
+      <button class="action-btn" id="reset-btn">Reset (all off)</button>
+      <button class="action-btn" id="invert-btn">Invert tiling</button>
+      <button class="action-btn" id="transpose-btn">Flip over y=x</button>
+    </div>
+    <div class="score-display">
+      <div class="score-label">Score sequence:</div>
+      <div id="scoreseq"></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>Tournament graph</h3>
+    <canvas id="main-canvas" width="340" height="340"></canvas>
+  </div>
+</div>
+
+<div id="big-panel">
+  <h3 id="overview-title">All isomorphism classes</h3>
+  <div class="toggle-bar">
+    <span>Lines:</span>
+    <div class="tog-btn tog-blue  active" id="tog-blue" >Blue (flip, grid-sym)</div>
+    <div class="tog-btn tog-black active" id="tog-black">Black (flip, grid-asym)</div>
+    <div class="tog-btn tog-red   active" id="tog-red"  >Red (transpose-paired)</div>
+    <div class="tog-btn tog-merge active" id="tog-merge">Merge transpose pairs</div>
+    <span class="hint">Click a blue/black line to highlight its endpoints & update class diagrams</span>
+  </div>
+  <svg id="overview-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+</div>
+<footer id="footer-text"></footer>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────
+// GLOBALS
+// ─────────────────────────────────────────────────────────────────────
+let N=5, VERTS, TILES, TRANS_MAP, tilings, groups, canonSigs, classTransposeTarget, classPairs;
+let parentClassMap=[]; // parentClassMap[ci] = parent class index at n-1, or -1 if n<=3
+let parentVertexOrbits=[]; // parentVertexOrbits[ci] = number of vertex orbits in this class's rep
+
+// ─────────────────────────────────────────────────────────────────────
+// CORE MATH
+// ─────────────────────────────────────────────────────────────────────
+function buildData(n) {
+  N=n;
+  VERTS=Array.from({length:N},(_,i)=>N-i);
+  TILES=[];
+  for(let y=1;y<=N-2;y++) for(let x=N;x>=y+2;x--) TILES.push([x,y]);
+
+  const tileKey=(x,y)=>`${x},${y}`;
+  const tileIdx={};
+  TILES.forEach((t,i)=>tileIdx[tileKey(t[0],t[1])]=i);
+  TRANS_MAP=TILES.map(([x,y])=>tileIdx[tileKey(n-y+1,n-x+1)]);
+
+  function isGridSym(bits){
+    for(let i=0;i<TILES.length;i++) if(TRANS_MAP[i]!==i&&bits[i]!==bits[TRANS_MAP[i]]) return false;
+    return true;
+  }
+  function bitsToAdj(bits){
+    const A=Array.from({length:N},()=>Array(N).fill(0));
+    for(let k=0;k<N-1;k++) A[k][k+1]=1;
+    for(let i=0;i<TILES.length;i++){
+      const[xL,yL]=TILES[i], xi=VERTS.indexOf(xL), yi=VERTS.indexOf(yL);
+      if(bits[i]===0) A[xi][yi]=1; else A[yi][xi]=1;
+    }
+    return A;
+  }
+  function adjToStr(A){return A.flat().join('');}
+  function permutations(arr){
+    if(arr.length<=1)return[arr.slice()];
+    const res=[];
+    for(let i=0;i<arr.length;i++){const rest=arr.filter((_,j)=>j!==i);for(const s of permutations(rest))res.push([arr[i],...s]);}
+    return res;
+  }
+  const perms=permutations(Array.from({length:N},(_,i)=>i));
+  function canonicalize(A){
+    let best=null;
+    for(const p of perms){const s=adjToStr(Array.from({length:N},(_,i)=>Array.from({length:N},(_,j)=>A[p[i]][p[j]])));if(best===null||s<best)best=s;}
+    return best;
+  }
+  function adjScores(A){return A.map(row=>row.reduce((s,v)=>s+v,0));}
+
+  const numT=TILES.length;
+  tilings=[];
+  for(let mask=0;mask<(1<<numT);mask++){
+    const bits=Array.from({length:numT},(_,k)=>(mask>>k)&1);
+    const adj=bitsToAdj(bits);
+    const canonical=canonicalize(adj);
+    const scores=adjScores(adj).slice().sort((a,b)=>b-a).join('');
+    const gridSym=isGridSym(bits);
+    const flipMask=bits.reduce((m,b,k)=>m|((1-b)<<k),0);
+    const transBits=new Array(numT);for(let i=0;i<numT;i++)transBits[TRANS_MAP[i]]=bits[i];
+    const transMask=transBits.reduce((m,b,k)=>m|(b<<k),0);
+    tilings.push({bits,adj,canonical,scores,mask,gridSym,flipMask,transMask});
+  }
+  groups={};
+  for(const t of tilings){if(!groups[t.canonical])groups[t.canonical]=[];groups[t.canonical].push(t);}
+  canonSigs=Object.keys(groups).sort();
+  canonSigs.forEach((sig,ci)=>groups[sig].forEach(t=>t.classIndex=ci));
+  const maskToT={};tilings.forEach(t=>maskToT[t.mask]=t);
+  for(const t of tilings) t.transClassIdx=maskToT[t.transMask].classIndex;
+  classTransposeTarget=canonSigs.map((_,ci)=>{const s=new Set(groups[canonSigs[ci]].map(t=>t.transClassIdx));return[...s][0];});
+  classPairs=[];
+  const seenCP=new Set();
+  canonSigs.forEach((_,ci)=>{
+    const tgt=classTransposeTarget[ci];
+    if(tgt!==ci){const key=Math.min(ci,tgt)+'_'+Math.max(ci,tgt);if(!seenCP.has(key)){seenCP.add(key);classPairs.push({a:Math.min(ci,tgt),b:Math.max(ci,tgt)});}}
+  });
+  // ── Parent class map (n-1 system) ──
+  // For each class, remove top vertex (index 0 = label n) from canonical rep -> sub-tournament -> parent class.
+  // parentVertexOrbits[ci] = #vertex orbits in this class (= perspectives this class contributes).
+  parentClassMap=[];
+  parentVertexOrbits=[];
+  {
+    function vertOrbitCount(A,n){
+      const ps2=permutations(Array.from({length:n},(_,i)=>i));
+      const autList=ps2.filter(p=>{for(let i=0;i<n;i++)for(let j=0;j<n;j++)if(A[p[i]][p[j]]!==A[i][j])return false;return true;});
+      const par2=Array.from({length:n},(_,i)=>i);
+      function find2(x){return par2[x]===x?x:par2[x]=find2(par2[x]);}
+      function unite2(x,y){par2[find2(x)]=find2(y);}
+      for(const aut of autList)for(let i=0;i<n;i++)unite2(i,aut[i]);
+      return new Set(Array.from({length:n},(_,i)=>find2(i))).size;
+    }
+    // Vertex orbits for each class at current N
+    canonSigs.forEach((sig,ci)=>{
+      parentVertexOrbits.push(vertOrbitCount(groups[sig][0].adj, N));
+    });
+
+    if(N>=4){
+      const Np=N-1;
+      const Vp=Array.from({length:Np},(_,i)=>Np-i);
+      const Tp=[];for(let y=1;y<=Np-2;y++)for(let x=Np;x>=y+2;x--)Tp.push([x,y]);
+      function bitsToAdjP(bits){
+        const A=Array.from({length:Np},()=>Array(Np).fill(0));
+        for(let k=0;k<Np-1;k++)A[k][k+1]=1;
+        for(let i=0;i<Tp.length;i++){const[xL,yL]=Tp[i],xi=Vp.indexOf(xL),yi=Vp.indexOf(yL);if(bits[i]===0)A[xi][yi]=1;else A[yi][xi]=1;}
+        return A;
+      }
+      const permsP=permutations(Array.from({length:Np},(_,i)=>i));
+      function canonP(A){let best=null;for(const p of permsP){const s=adjToStr(Array.from({length:Np},(_,i)=>Array.from({length:Np},(_,j)=>A[p[i]][p[j]])));if(best===null||s<best)best=s;}return best;}
+      const parentTilings=[];
+      for(let mask=0;mask<(1<<Tp.length);mask++){
+        const bits=Array.from({length:Tp.length},(_,k)=>(mask>>k)&1);
+        const adj=bitsToAdjP(bits); parentTilings.push({can:canonP(adj)});
+      }
+      const parentGroups={};for(const t of parentTilings){if(!parentGroups[t.can])parentGroups[t.can]=[];parentGroups[t.can].push(t);}
+      const parentSigs=Object.keys(parentGroups).sort();
+      canonSigs.forEach((sig,ci)=>{
+        const rep=groups[sig][0];
+        const subAdj=Array.from({length:Np},(_,i)=>Array.from({length:Np},(_,j)=>rep.adj[i+1][j+1]));
+        parentClassMap.push(parentSigs.indexOf(canonP(subAdj)));
+      });
+    }else{
+      canonSigs.forEach(()=>parentClassMap.push(-1));
+    }
+  }
+
+  window._bitsToAdj=bitsToAdj; window._adjScores=adjScores; window._isGridSym=isGridSym;
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// TILE GRID UI
+// ─────────────────────────────────────────────────────────────────────
+const CELL_W=76,CELL_H=40,CELL_GAP=7;
+function tileGridPos(i){const[x,y]=TILES[i];return{col:N-x,row:y-1};}
+function tilePx(i){const{col,row}=tileGridPos(i);return{px:col*(CELL_W+CELL_GAP),py:(N-3-row)*(CELL_H+CELL_GAP)};}
+
+const tileGridWrap=document.getElementById('tile-grid-wrap');
+let tileEls=[];
+function buildTileGrid(bits){
+  tileGridWrap.innerHTML='';tileEls=[];
+  tileGridWrap.style.width=((N-2)*(CELL_W+CELL_GAP)-CELL_GAP)+'px';
+  tileGridWrap.style.height=((N-2)*(CELL_H+CELL_GAP)-CELL_GAP)+'px';
+  for(let i=0;i<TILES.length;i++){
+    const el=document.createElement('div');
+    el.className='tile-cell '+(bits[i]?'on':'off');
+    const{px,py}=tilePx(i);
+    el.style.cssText=`left:${px}px;top:${py}px;width:${CELL_W}px;height:${CELL_H}px;font-size:13px`;
+    el.textContent=TILES[i][0]+'-'+TILES[i][1];
+    el.addEventListener('click',()=>{el.classList.toggle('on');el.classList.toggle('off');onBitsChanged();});
+    tileGridWrap.appendChild(el);tileEls.push(el);
+  }
+}
+function getCurrentBits(){return tileEls.map(el=>el.classList.contains('on')?1:0);}
+function getCurrentMask(){return getCurrentBits().reduce((m,b,k)=>m|(b<<k),0);}
+function loadBits(bits){bits.forEach((b,i)=>{tileEls[i].classList.toggle('on',b===1);tileEls[i].classList.toggle('off',b===0);});onBitsChanged();}
+
+document.getElementById('reset-btn').addEventListener('click',()=>loadBits(Array(TILES.length).fill(0)));
+document.getElementById('invert-btn').addEventListener('click',()=>loadBits(getCurrentBits().map(b=>1-b)));
+document.getElementById('transpose-btn').addEventListener('click',()=>{
+  const bits=getCurrentBits(),out=new Array(TILES.length);
+  for(let i=0;i<TILES.length;i++)out[TRANS_MAP[i]]=bits[i];loadBits(out);
+});
+
+// ─────────────────────────────────────────────────────────────────────
+// DRAWING FUNCTIONS
+// ─────────────────────────────────────────────────────────────────────
+// Build edge color map for a given bits array
+function makeEdgeColorMap(bits){
+  const pathEdges=new Set();for(let k=0;k<N-1;k++)pathEdges.add(`${k},${k+1}`);
+  const tileEdge={};
+  for(let i=0;i<TILES.length;i++){
+    const[xL,yL]=TILES[i],xi=VERTS.indexOf(xL),yi=VERTS.indexOf(yL);
+    if(bits[i]===0)tileEdge[`${xi},${yi}`]='#1a7fe8';else tileEdge[`${yi},${xi}`]='#d63b2f';
+  }
+  return(i,j)=>{const key=`${i},${j}`;return pathEdges.has(key)?'#111':(tileEdge[key]||'#888');};
+}
+
+function drawTournamentOnCtx(ctx,A,labels,W,H,bits,centerLabel){
+  ctx.clearRect(0,0,W,H);ctx.save();
+  const nv=labels.length,cx=W/2,cy=H/2,R=Math.min(W,H)*0.34;
+  const pos=Array.from({length:nv},(_,k)=>({x:cx+R*Math.cos(2*Math.PI*k/nv-Math.PI/2),y:cy+R*Math.sin(2*Math.PI*k/nv-Math.PI/2)}));
+  const nodeR=Math.max(4,Math.min(W,H)/20),lw=Math.max(1,Math.min(W,H)/110),ah=Math.max(5,Math.min(W,H)/26);
+  const colorFn=bits?makeEdgeColorMap(bits):(i,j)=>(i===j-1?'#111':'#888');
+  for(let i=0;i<nv;i++)for(let j=0;j<nv;j++){
+    if(A[i][j]!==1)continue;
+    const color=colorFn(i,j);
+    const{x:x1,y:y1}=pos[i],{x:x2,y:y2}=pos[j];
+    const dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy);if(L<1)continue;
+    const sx=x1+dx*.14,sy=y1+dy*.14,ex=x2-dx*.14,ey=y2-dy*.14;
+    ctx.strokeStyle=ctx.fillStyle=color;ctx.lineWidth=lw;
+    ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.stroke();
+    const a=Math.atan2(dy,dx);
+    ctx.beginPath();ctx.moveTo(ex,ey);
+    ctx.lineTo(ex-ah*Math.cos(a-.42),ey-ah*Math.sin(a-.42));
+    ctx.lineTo(ex-ah*Math.cos(a+.42),ey-ah*Math.sin(a+.42));
+    ctx.closePath();ctx.fill();
+  }
+  ctx.lineWidth=Math.max(1,lw*.7);ctx.strokeStyle='#222';
+  ctx.font=`bold ${Math.max(8,Math.min(W,H)/18)}px monospace`;
+  for(let i=0;i<nv;i++){
+    ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(pos[i].x,pos[i].y,nodeR,0,2*Math.PI);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#111';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(String(labels[i]),pos[i].x,pos[i].y);
+  }
+  // Center label: parent class number
+  if(centerLabel!==undefined && centerLabel!==null && centerLabel>=0){
+    const clR=Math.max(9,Math.min(W,H)*0.13);
+    ctx.fillStyle='rgba(255,255,255,0.88)';
+    ctx.beginPath();ctx.arc(cx,cy,clR,0,2*Math.PI);ctx.fill();
+    ctx.strokeStyle='#8855cc';ctx.lineWidth=1.2;ctx.stroke();
+    ctx.fillStyle='#6633aa';
+    ctx.font=`bold ${Math.max(9,Math.min(W,H)/11)}px monospace`;
+    ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(String(centerLabel),cx,cy);
+  }
+  ctx.restore();
+}
+
+// Main canvas (larger arrowheads)
+const mainCanvas=document.getElementById('main-canvas'),mctx=mainCanvas.getContext('2d');
+function drawMainCanvas(bits){
+  const A=window._bitsToAdj(bits);
+  // Find which class the current tiling belongs to
+  const mask=bits.reduce((m,b,k)=>m|(b<<k),0);
+  const t=tilings.find(x=>x.mask===mask);
+  const clabel=(t&&parentClassMap[t.classIndex]>=0)?parentClassMap[t.classIndex]:null;
+  drawTournamentOnCtx(mctx,A,VERTS,mainCanvas.width,mainCanvas.height,bits,clabel);
+}
+
+function drawTileThumb(ctx,bits,W,H){
+  ctx.clearRect(0,0,W,H);ctx.fillStyle='#f4f6f9';ctx.fillRect(0,0,W,H);
+  const pad=2,gap=1,cols=N-2,rows=N-2;
+  const tw=(W-pad*2-gap*(cols-1))/cols,th=(H-pad*2-gap*(rows-1))/rows;
+  for(let i=0;i<TILES.length;i++){
+    const{col,row}=tileGridPos(i);
+    const px=pad+col*(tw+gap),py=pad+(rows-1-row)*(th+gap);
+    ctx.strokeStyle='#555';ctx.fillStyle=bits[i]?'#1f77b4':'#fff';ctx.lineWidth=0.8;
+    ctx.beginPath();rrPath(ctx,px,py,tw,th,1.5);ctx.fill();ctx.stroke();
+  }
+}
+function rrPath(ctx,x,y,w,h,r){ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+
+// ─────────────────────────────────────────────────────────────────────
+// OVERVIEW SVG STATE
+// ─────────────────────────────────────────────────────────────────────
+const SVG_NS='http://www.w3.org/2000/svg';
+const overviewSvg=document.getElementById('overview-svg');
+
+const togState={blue:true,black:true,red:true,merge:true};
+let blueLayer,blackLayer,redLayer,classLayer,thumbLayer,glowLayer;
+let tilingNodePos={},thumbRects={},glowEl=null,hlEls=[];
+let flipLineData=[];
+// Per-class: canvas element for live redraw
+let classCanvases={}; // ci → {canvas, adj} — for normal classes
+// For merged nodes, we store two canvases: mergedCanvases[pairKey] = {canvasA, adjA, canvasB, adjB}
+let mergedCanvases={};
+let mergedMode=false;
+
+['blue','black','red'].forEach(key=>{
+  document.getElementById('tog-'+key).addEventListener('click',function(){
+    togState[key]=!togState[key];this.classList.toggle('active',togState[key]);this.classList.toggle('inactive',!togState[key]);
+    applyToggles();
+  });
+});
+document.getElementById('tog-merge').addEventListener('click',function(){
+  togState.merge=!togState.merge;this.classList.toggle('active',togState.merge);this.classList.toggle('inactive',!togState.merge);
+  buildOverview();onBitsChanged();
+});
+function applyToggles(){
+  if(blueLayer)  blueLayer.style.display =togState.blue ?'':'none';
+  if(blackLayer) blackLayer.style.display=togState.black?'':'none';
+  if(redLayer)   redLayer.style.display  =togState.red  ?'':'none';
+}
+
+function svgEl(tag,attrs={}){
+  const el=document.createElementNS(SVG_NS,tag);
+  for(const[k,v]of Object.entries(attrs))el.setAttribute(k,String(v));
+  return el;
+}
+function makeFO(w,h){
+  const fo=svgEl('foreignObject',{width:w,height:h});
+  const c=document.createElement('canvas');c.width=w;c.height=h;c.style.display='block';
+  fo.appendChild(c);return{fo,c};
+}
+
+// Which classes are in a pair
+const pairedClassSet=()=>new Set(classPairs.flatMap(({a,b})=>[a,b]));
+
+// ─────────────────────────────────────────────────────────────────────
+// BUILD OVERVIEW
+// ─────────────────────────────────────────────────────────────────────
+function buildOverview(){
+  mergedMode=togState.merge&&classPairs.length>0;
+  while(overviewSvg.firstChild)overviewSvg.removeChild(overviewSvg.firstChild);
+  tilingNodePos={};thumbRects={};glowEl=null;hlEls=[];flipLineData=[];classCanvases={};mergedCanvases={};
+
+  const showThumbs=(N<=5);
+  const paired=pairedClassSet();
+
+  // Build display node list
+  // In merged mode: paired classes → one merged node each pair; self-contained stays
+  // In unmerged mode: all classes as normal nodes
+  // displayNodes[i] = {type:'single',ci} or {type:'merged',pairIdx,a,b}
+  const displayNodes=[];
+  const ciToDisplayNode={}; // ci → index in displayNodes
+  if(mergedMode){
+    const usedCi=new Set();
+    // First: self-contained classes in original order
+    // Then: paired classes as merged nodes
+    // We want to preserve a sensible order: go through canonSigs order, emit nodes as we first encounter them
+    for(let ci=0;ci<canonSigs.length;ci++){
+      if(usedCi.has(ci))continue;
+      if(paired.has(ci)){
+        // find pair
+        const pair=classPairs.find(({a,b})=>a===ci||b===ci);
+        const a=pair.a,b=pair.b;
+        const idx=displayNodes.length;
+        displayNodes.push({type:'merged',pairIdx:classPairs.indexOf(pair),a,b});
+        ciToDisplayNode[a]=idx;ciToDisplayNode[b]=idx;
+        usedCi.add(a);usedCi.add(b);
+      }else{
+        const idx=displayNodes.length;
+        displayNodes.push({type:'single',ci});
+        ciToDisplayNode[ci]=idx;
+        usedCi.add(ci);
+      }
+    }
+  }else{
+    for(let ci=0;ci<canonSigs.length;ci++){
+      ciToDisplayNode[ci]=displayNodes.length;
+      displayNodes.push({type:'single',ci});
+    }
+  }
+
+  const nNodes=displayNodes.length;
+  // Layout grid
+  const cols=N<=3?2:N===4?4:N===5?(mergedMode?5:4):8;
+  const rows=Math.ceil(nNodes/cols);
+
+  const TOURN_R=N<=4?60:N===5?54:38;
+  const ORBIT_R=showThumbs?(N<=4?130:120):0;
+  const THUMB_W=N<=4?40:34,THUMB_H=N<=4?40:34;
+  const cellW=showThumbs?(ORBIT_R+THUMB_W/2+14)*2:(TOURN_R+18)*2+40;
+  const cellH=showThumbs?(ORBIT_R+THUMB_H/2+22)*2:(TOURN_R+18)*2+40;
+  const SVG_W=cols*cellW,SVG_H=rows*cellH;
+  overviewSvg.setAttribute('viewBox',`0 0 ${SVG_W} ${SVG_H}`);
+
+  // Center positions for display nodes
+  const nodePos=displayNodes.map((_,ni)=>({x:(ni%cols+.5)*cellW,y:(Math.floor(ni/cols)+.5)*cellH}));
+  // Also maintain classPos for drawing red lines (unmerged mode)
+  const classPos=Array.from({length:canonSigs.length},(_,ci)=>nodePos[ciToDisplayNode[ci]]);
+
+  // Defs
+  const defs=document.createElementNS(SVG_NS,'defs');
+  const gf=svgEl('filter',{id:'glow',x:'-60%',y:'-60%',width:'220%',height:'220%'});
+  const fg=svgEl('feGaussianBlur',{stdDeviation:'3',result:'blur'});
+  const fm=svgEl('feMerge');
+  [svgEl('feMergeNode',{in:'blur'}),svgEl('feMergeNode',{in:'SourceGraphic'})].forEach(n=>fm.appendChild(n));
+  gf.appendChild(fg);gf.appendChild(fm);defs.appendChild(gf);
+  overviewSvg.appendChild(defs);
+
+  redLayer=svgEl('g');blueLayer=svgEl('g');blackLayer=svgEl('g');
+  classLayer=svgEl('g');thumbLayer=svgEl('g');glowLayer=svgEl('g');
+  [redLayer,blueLayer,blackLayer,classLayer,thumbLayer,glowLayer].forEach(l=>overviewSvg.appendChild(l));
+  applyToggles();
+
+  // ── Build display nodes ──
+  displayNodes.forEach((node,ni)=>{
+    const cp=nodePos[ni];
+    if(node.type==='single'){
+      buildSingleNode(node.ci,cp,TOURN_R,ORBIT_R,THUMB_W,THUMB_H,showThumbs);
+    }else{
+      buildMergedNode(node,cp,TOURN_R,ORBIT_R,THUMB_W,THUMB_H,showThumbs);
+    }
+  });
+
+  // ── Flip-pair lines ──
+  if(showThumbs){
+    const drawnFP=new Set();
+    for(const t of tilings){
+      const flipM=t.flipMask;
+      const pk=t.mask<flipM?`${t.mask}_${flipM}`:`${flipM}_${t.mask}`;
+      if(drawnFP.has(pk))continue;drawnFP.add(pk);
+      const pa=tilingNodePos[t.mask],pb=tilingNodePos[flipM];
+      if(!pa||!pb)continue;
+      const partBits=Array.from({length:TILES.length},(_,k)=>(flipM>>k)&1);
+      const bothSym=t.gridSym&&window._isGridSym(partBits);
+      const color=bothSym?'#1a6fc4':'#333',lw=bothSym?2.0:1.4,layer=bothSym?blueLayer:blackLayer;
+      const dx=pb.x-pa.x,dy=pb.y-pa.y,L=Math.hypot(dx,dy);if(L<1)continue;
+      const nx=-dy/L,ny=dx/L,pull=Math.min(24,L*.10);
+      const qx=(pa.x+pb.x)/2+nx*pull,qy=(pa.y+pb.y)/2+ny*pull;
+      const d=`M${pa.x},${pa.y} Q${qx},${qy} ${pb.x},${pb.y}`;
+      const vis=svgEl('path',{d,fill:'none',stroke:color,'stroke-width':lw,'pointer-events':'none'});
+      const hit=svgEl('path',{d,fill:'none',stroke:'transparent','stroke-width':10,cursor:'pointer'});
+      const entry={vis,hit,maskA:t.mask,maskB:flipM,color,ciA:t.classIndex,ciB:tilings.find(x=>x.mask===flipM).classIndex};
+      flipLineData.push(entry);
+      hit.addEventListener('click',e=>{e.stopPropagation();highlightEndpoints(entry);});
+      layer.appendChild(vis);layer.appendChild(hit);
+    }
+  }
+
+  // ── Red class-pair lines (unmerged mode only) ──
+  if(!mergedMode){
+    classPairs.forEach(({a,b})=>{
+      const pa=classPos[a],pb=classPos[b];
+      const dx=pb.x-pa.x,dy=pb.y-pa.y,L=Math.hypot(dx,dy);if(L<1)return;
+      const nx=-dy/L,ny=dx/L,pull=Math.min(80,L*.2);
+      const qx=(pa.x+pb.x)/2+nx*pull,qy=(pa.y+pb.y)/2+ny*pull;
+      redLayer.appendChild(svgEl('path',{d:`M${pa.x},${pa.y} Q${qx},${qy} ${pb.x},${pb.y}`,fill:'none',stroke:'#c0392b','stroke-width':2.5,'stroke-dasharray':'8,5',opacity:0.9}));
+    });
+  }
+
+  overviewSvg.addEventListener('click',()=>clearEndpointHighlight());
+}
+
+// ── Single class node ──
+function buildSingleNode(ci,cp,TOURN_R,ORBIT_R,THUMB_W,THUMB_H,showThumbs){
+  const members=groups[canonSigs[ci]];
+  classLayer.appendChild(svgEl('circle',{cx:cp.x,cy:cp.y,r:TOURN_R+6,fill:'#e8f2ff',stroke:'#7799cc','stroke-width':1.8}));
+  const{fo:tfo,c:tc}=makeFO(TOURN_R*2,TOURN_R*2);
+  tfo.setAttribute('x',cp.x-TOURN_R);tfo.setAttribute('y',cp.y-TOURN_R);
+  const _clabelS=parentClassMap[ci]>=0?parentClassMap[ci]:null;
+  drawTournamentOnCtx(tc.getContext('2d'),members[0].adj,VERTS,TOURN_R*2,TOURN_R*2,members[0].bits,_clabelS);
+  classLayer.appendChild(tfo);
+  classCanvases[ci]={canvas:tc,adj:members[0].adj,clabel:_clabelS};
+  const lbl=svgEl('text',{x:cp.x,y:cp.y+TOURN_R+16,'text-anchor':'middle','font-size':Math.max(9,TOURN_R/5),fill:'#334','font-family':'monospace'});
+  lbl.textContent=`#${ci} [${members[0].scores}] ×${members.length}`;
+  classLayer.appendChild(lbl);
+  if(showThumbs) buildTilingOrbit(members,cp,ORBIT_R,THUMB_W,THUMB_H,Math.PI*2,0,-Math.PI/2);
+}
+
+// ── Merged node (two classes combined) ──
+function buildMergedNode(node,cp,TOURN_R,ORBIT_R,THUMB_W,THUMB_H,showThumbs){
+  const{a,b}=node;
+  const membersA=groups[canonSigs[a]],membersB=groups[canonSigs[b]];
+  const R=TOURN_R+6;
+  // Split circle: left half blue border (class a), right half red border (class b)
+  // Draw filled background first
+  classLayer.appendChild(svgEl('circle',{cx:cp.x,cy:cp.y,r:R,fill:'#f0eaff',stroke:'none'}));
+  // Left semicircle arc (top → bottom going left, i.e. 90°→270° = π/2→3π/2)
+  const lArc=svgEl('path',{
+    d:`M ${cp.x} ${cp.y-R} A ${R} ${R} 0 0 0 ${cp.x} ${cp.y+R}`,
+    fill:'none',stroke:'#7799cc','stroke-width':2.5
+  });
+  // Right semicircle
+  const rArc=svgEl('path',{
+    d:`M ${cp.x} ${cp.y-R} A ${R} ${R} 0 0 1 ${cp.x} ${cp.y+R}`,
+    fill:'none',stroke:'#c0392b','stroke-width':2.5
+  });
+  // Vertical dividing line
+  const vLine=svgEl('line',{x1:cp.x,y1:cp.y-R,x2:cp.x,y2:cp.y+R,stroke:'#bbb','stroke-width':1,'stroke-dasharray':'4,3'});
+  classLayer.appendChild(lArc);classLayer.appendChild(rArc);classLayer.appendChild(vLine);
+
+  // Two tournament canvases side by side inside the circle
+  // Each fits in a half-circle of radius R; use diameter = R for each sub-canvas
+  const subD=Math.floor(R*0.96), subR2=subD/2;
+  // Class A on left half
+  const{fo:foA,c:cA}=makeFO(subD,subD);
+  foA.setAttribute('x',cp.x-subD);foA.setAttribute('y',cp.y-subR2);
+  const _clA=parentClassMap[a]>=0?parentClassMap[a]:null;
+  const _clB=parentClassMap[b]>=0?parentClassMap[b]:null;
+  drawTournamentOnCtx(cA.getContext('2d'),membersA[0].adj,VERTS,subD,subD,membersA[0].bits,_clA);
+  classLayer.appendChild(foA);
+  classCanvases[a]={canvas:cA,adj:membersA[0].adj,clabel:_clA};
+  // Class B on right half
+  const{fo:foB,c:cB}=makeFO(subD,subD);
+  foB.setAttribute('x',cp.x);foB.setAttribute('y',cp.y-subR2);
+  drawTournamentOnCtx(cB.getContext('2d'),membersB[0].adj,VERTS,subD,subD,membersB[0].bits,_clB);
+  classLayer.appendChild(foB);
+  classCanvases[b]={canvas:cB,adj:membersB[0].adj,clabel:_clB};
+
+  // Labels
+  const lblA=svgEl('text',{x:cp.x-TOURN_R*0.6,y:cp.y+TOURN_R+16,'text-anchor':'middle','font-size':9,fill:'#336','font-family':'monospace'});
+  lblA.textContent=`#${a} ×${membersA.length}`;classLayer.appendChild(lblA);
+  const lblB=svgEl('text',{x:cp.x+TOURN_R*0.6,y:cp.y+TOURN_R+16,'text-anchor':'middle','font-size':9,fill:'#633','font-family':'monospace'});
+  lblB.textContent=`#${b} ×${membersB.length}`;classLayer.appendChild(lblB);
+
+  if(showThumbs){
+    // Class A tilings on left semicircle (angles π/2 to 3π/2, going counterclockwise from top)
+    buildTilingOrbit(membersA,cp,ORBIT_R,THUMB_W,THUMB_H,Math.PI,Math.PI/2,0);
+    // Class B tilings on right semicircle (angles -π/2 to π/2)
+    buildTilingOrbit(membersB,cp,ORBIT_R,THUMB_W,THUMB_H,Math.PI,-Math.PI/2,0);
+  }
+}
+
+// ── Build a set of tiling thumbnails along an arc ──
+// members: array of tiling objects
+// cp: center {x,y}
+// orbitR: orbit radius
+// arcSpan: total arc (2π for full circle, π for semicircle)
+// arcStart: starting angle
+// arcOffset: additional starting offset (so top = -π/2 for full circle)
+function buildTilingOrbit(members,cp,orbitR,THUMB_W,THUMB_H,arcSpan,arcStart,arcOffset){
+  const nm=members.length;
+  members.forEach((t,mi)=>{
+    const frac=nm>1?mi/(nm):0;
+    const angle=arcStart+arcOffset+arcSpan*frac;
+    const mx=cp.x+orbitR*Math.cos(angle),my=cp.y+orbitR*Math.sin(angle);
+    tilingNodePos[t.mask]={x:mx,y:my};
+
+    classLayer.appendChild(svgEl('line',{
+      x1:cp.x,y1:cp.y,x2:mx,y2:my,
+      stroke:'#ddd','stroke-width':0.6,'stroke-dasharray':'3,3'
+    }));
+
+    const{fo,c}=makeFO(THUMB_W,THUMB_H);
+    fo.setAttribute('x',mx-THUMB_W/2);fo.setAttribute('y',my-THUMB_H/2);
+    drawTileThumb(c.getContext('2d'),t.bits,THUMB_W,THUMB_H);
+    thumbLayer.appendChild(fo);
+
+    const rect=svgEl('rect',{x:mx-THUMB_W/2-1,y:my-THUMB_H/2-1,width:THUMB_W+2,height:THUMB_H+2,fill:'transparent',stroke:'#999','stroke-width':1,rx:3,cursor:'pointer'});
+    rect.dataset.mask=t.mask;
+    rect.addEventListener('click',()=>{loadBits(t.bits);window.scrollTo({top:0,behavior:'smooth'});});
+    rect.addEventListener('mouseenter',()=>{if(!rect.dataset.hl)rect.setAttribute('stroke','#1f77b4');});
+    rect.addEventListener('mouseleave',()=>{if(!rect.dataset.hl)rect.setAttribute('stroke',getCurrentMask()===t.mask?'#ff8c00':'#999');});
+    thumbLayer.appendChild(rect);
+    thumbRects[t.mask]=rect;
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// LIVE CLASS CANVAS REDRAW
+// ─────────────────────────────────────────────────────────────────────
+function updateClassCanvas(ci,bits){
+  const entry=classCanvases[ci];if(!entry)return;
+  const{canvas,adj,clabel}=entry;
+  drawTournamentOnCtx(canvas.getContext('2d'),adj,VERTS,canvas.width,canvas.height,bits,clabel);
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// ENDPOINT HIGHLIGHT + CLASS CANVAS UPDATE
+// ─────────────────────────────────────────────────────────────────────
+function clearEndpointHighlight(){
+  hlEls.forEach(el=>{
+    delete el.dataset.hl;
+    el.setAttribute('stroke',getCurrentMask()===parseInt(el.dataset.mask)?'#ff8c00':'#999');
+    el.setAttribute('stroke-width','1');
+  });
+  hlEls=[];
+  flipLineData.forEach(e=>e.vis.setAttribute('stroke',e.color));
+  // Reset class canvases to their representative bits
+  for(let ci=0;ci<canonSigs.length;ci++){
+    const members=groups[canonSigs[ci]];
+    updateClassCanvas(ci,members[0].bits);
+  }
+}
+
+function highlightEndpoints(entry){
+  clearEndpointHighlight();
+  entry.vis.setAttribute('stroke','#00cc77');
+  const bitsA=tilings.find(t=>t.mask===entry.maskA).bits;
+  const bitsB=tilings.find(t=>t.mask===entry.maskB).bits;
+  // Update class canvases for both endpoints
+  updateClassCanvas(entry.ciA,bitsA);
+  updateClassCanvas(entry.ciB,bitsB);
+  [entry.maskA,entry.maskB].forEach(mask=>{
+    const r=thumbRects[mask];if(!r)return;
+    r.dataset.hl='1';r.dataset.mask=mask;
+    r.setAttribute('stroke','#00aa66');r.setAttribute('stroke-width','2.5');
+    hlEls.push(r);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// GLOW + CLASS CANVAS UPDATE ON SELECTION
+// ─────────────────────────────────────────────────────────────────────
+function updateGlow(mask){
+  if(glowEl){glowEl.parentNode?.removeChild(glowEl);glowEl=null;}
+  for(const m in thumbRects){
+    const r=thumbRects[m];
+    if(!r.dataset.hl)r.setAttribute('stroke',parseInt(m)===mask?'#ff8c00':'#999');
+  }
+  // Update the class canvas for the class that owns this tiling
+  const t=tilings.find(x=>x.mask===mask);
+  if(t){
+    updateClassCanvas(t.classIndex,t.bits);
+    // Reset other classes to their representative
+    for(let ci=0;ci<canonSigs.length;ci++){
+      if(ci!==t.classIndex){
+        const members=groups[canonSigs[ci]];
+        updateClassCanvas(ci,members[0].bits);
+      }
+    }
+  }
+  const pos=tilingNodePos[mask];if(!pos)return;
+  const tw=N<=4?40:34,th=N<=4?40:34;
+  glowEl=svgEl('rect',{x:pos.x-tw/2-4,y:pos.y-th/2-4,width:tw+8,height:th+8,fill:'none',stroke:'#ff8c00','stroke-width':3,rx:6,filter:'url(#glow)'});
+  glowLayer.appendChild(glowEl);
+  if(thumbRects[mask])thumbRects[mask].setAttribute('stroke','#ff8c00');
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// MAIN UPDATE
+// ─────────────────────────────────────────────────────────────────────
+function onBitsChanged(){
+  const bits=getCurrentBits();
+  drawMainCanvas(bits);
+  const A=window._bitsToAdj(bits);
+  document.getElementById('scoreseq').textContent=window._adjScores(A).join(', ');
+  const mask=bits.reduce((m,b,k)=>m|(b<<k),0);
+  updateGlow(mask);
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// N SLIDER
+// ─────────────────────────────────────────────────────────────────────
+function rebuildForN(n){
+  buildData(n);
+  document.getElementById('n-display').textContent=n;
+  const totalPersp=parentVertexOrbits.reduce((s,v)=>s+v,0);
+  const nextN=n+1;
+  // Build next-n class count for conjecture check (we know: 3->4, 4->5 hold; 5->6 does not)
+  const conjectureNote=(n<=4)?` · ${totalPersp} perspectives → ${canonSigs.length+1>0?'predicts':'?'} n=${nextN} count`:'';
+  document.getElementById('n-info').textContent=`${TILES.length} tiles · ${tilings.length} tilings · ${canonSigs.length} classes · ${totalPersp} vertex-perspectives${conjectureNote}`;
+  document.getElementById('overview-title').textContent=`All ${canonSigs.length} isomorphism classes (n=${n})${n>=6?' — thumbnails hidden':''}`;
+  const persp=parentVertexOrbits.reduce((s,v)=>s+v,0);
+  const conj=n===3?`Perspectives: ${persp} → predicts n=4 has ${persp} classes ✓`:
+             n===4?`Perspectives: ${persp} → predicts n=5 has ${persp} classes ✓`:
+             n===5?`Perspectives: ${persp} → predicts n=6 has ${persp} classes, but actual is 56 ✗ (conjecture fails here)`:
+             `Perspectives: ${persp}`;
+  document.getElementById('footer-text').textContent=`2^${TILES.length}=${tilings.length} binary tilings → ${canonSigs.length} isomorphism classes. ${conj}. Purple center label = parent class at n=${n-1}.`;
+  buildTileGrid(Array(TILES.length).fill(0));
+  buildOverview();
+  onBitsChanged();
+}
+document.getElementById('n-slider').addEventListener('input',e=>rebuildForN(parseInt(e.target.value)));
+rebuildForN(5);
+</script>
+</body>
+</html>
