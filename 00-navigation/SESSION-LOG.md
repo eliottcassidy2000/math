@@ -30,6 +30,34 @@ Entry format:
 - What is the precise relationship between odd/even dichotomy and perpendicular propagation?
 - Does the "three-axis" analogy (Hamming weight / self-converse / automorphism) have algebraic content?
 
+## opus-2026-03-06-S14 — 2026-03-06 (Rigorous verification of all claims, OPEN-Q fixes, Irving-Omar matrix algebra exploration)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S10 (continuation)
+**Files read:** Full warm-up sequence, all inbox messages, INVESTIGATION-BACKLOG.md, all new session logs
+**Summary of work:**
+  (1) RIGOROUS VERIFICATION: Re-derived all critical computational claims from scratch.
+    - OCF exhaustive n=3,4,5: PASS (0 failures with correct all-cycle enumeration)
+    - Paley H values P(3)=3, P(7)=189, P(11)=95095: PASS
+    - H(P(19))=1172695746915, H(P(23))=15760206976379349: PASS
+    - Max H at n=7 = 189 achieved by 240 tournaments (exhaustive): PASS
+    - T_11 OCF decomposition 1+2*21169+4*10879+8*1155=95095: PASS
+    - No claws in Omega at n=6 (exhaustive): PASS
+    - Claw-free argument for n<=8: VERIFIED (sound vertex-counting proof)
+  (2) BUG FOUND in many auxiliary scripts: cycle-finding with `break` after first cycle per vertex set misses multiple directed cycles on same vertex set (e.g., two directed 5-cycles on 5 vertices). The CORE verification script (verify_core_results.py) is CORRECT (uses fix-minimum-vertex without break). This bug does NOT affect any verified theorems.
+  (3) AUDIT AGENTS found 3 issues in OPEN-Q-013: H(T_19) still marked "unknown" (computed in S5/S10), attribution incomplete, next target obsolete. ALL FIXED.
+  (4) AUDIT AGENTS found theorem files healthy with 2 minor issues (THM-018 scope clarification, THM-013 filename). No critical errors.
+  (5) IRVING-OMAR PAPER VERIFIED: Corollary 20 says exactly what repo claims. Proof uses matrix exponential + Cayley transform of tournament adjacency matrix. CREATIVE LEAD: odd-cycle extraction via arctanh splitting connects to orthogonal/unitary spectral theory, potentially explaining real roots.
+  (6) NUMBER-THEORETIC OBSERVATION: alpha_3(T_11) = 1155 = |Aut|*21. alpha values of Paley tournaments have divisibility by |Aut| for alpha_3 (but not alpha_1, alpha_2).
+  (7) c_3(P(7)) = 14 (not 7). The value 7 was for undirected cyclic triples with a different normalization. 14 cyclic + 21 transitive = 35 = C(7,3). Consistent with p(p^2-1)/24 = 14.
+**New contributions:**
+- OPEN-Q-013 updated with H(T_19), H(T_23), a(8)=661 discovery, Szele ratio data
+- T065 (Irving-Omar Cayley transform connection to real roots) in TANGENTS.md
+- 04-computation/verify_all_claims.py (comprehensive verification script)
+**Unresolved threads:**
+- Irving-Omar Cayley transform: can I(Omega(T), x) be expressed as a determinant?
+- Alpha_k divisibility by |Aut| for Paley tournaments — systematic study needed
+- Real roots: algebraic path via symmetric functions remains the key open problem
+
 ## opus-2026-03-05-S13 — 2026-03-06 (Rigorous backlog investigation: 2-adic tower, full Omega real roots, coefficient analysis)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S12 (continuation)

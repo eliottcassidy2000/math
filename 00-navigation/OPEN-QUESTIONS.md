@@ -175,9 +175,12 @@ Both conjectures are FALSE for p=11:
 - p=3: H=3, |Aut|=3, H/|Aut|=1
 - p=7: H=189, |Aut|=21, H/|Aut|=9=3^2
 - p=11: H=95095, |Aut|=55, H/|Aut|=1729=7*13*19 (Hardy-Ramanujan taxicab number)
-- p=19: H=unknown, |Aut|=171, H/|Aut|=unknown
+- p=19: H=1,172,695,746,915, |Aut|=171, H/|Aut|=6,857,869,865 (computed opus-S5/S10)
+- p=23: H=15,760,206,976,379,349 (computed opus-S10)
 
-**Sequence:** 1, 9, 1729 — no obvious pattern. 3^k pattern breaks catastrophically at p=11.
+**Sequence H/|Aut|:** 1, 9, 1729, 6857869865 — no obvious pattern. 3^k pattern breaks catastrophically at p=11.
+
+**Ratio H(P(p))/(p!/2^{p-1}):** 2.000, 2.400, 2.440, 2.527, 2.557 for p=3,7,11,19,23 — converges toward e=2.718, consistent with Szele-Alon-Friedland asymptotic theory (opus-S10/S11).
 
 **Complete cycle count table for T_11** (confirmed kind-pasteur-S5 from inbox/other.txt, all consistent with H=95095):
 | k | c_k(T_11) | C(11,k) | c_k/C(11,k) | integer? |
@@ -204,9 +207,13 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 **Conjecture: Paley tournaments T_p (p ≡ 3 mod 4 prime) achieve the maximum number of Hamiltonian paths among all tournaments on p vertices.** This is a major new conjecture. If true, it connects the Hamiltonian-path-maximization problem to number theory via quadratic residues.
 
-**Next computational target:** H(T_19) (requires computing Ham paths of 19-vertex tournament). |Aut(T_19)|=171=9*19.
+**IMPORTANT (opus-S10):** At non-Paley n=8, a(8)=661 is achieved by a SC tournament with |Aut|=1 that does NOT contain P(7). The Paley extension T_657 gives H=657<661. The conjecture applies ONLY at Paley primes p=3 mod 4.
 
-**Source:** kind-pasteur-2026-03-05-S2 computation; cycle table from kind-pasteur-2026-03-05-S5 (inbox/other.txt); OEIS A038375 connection from kind-pasteur-2026-03-05-S14
+**P(7) confirmed as GLOBAL maximizer** at n=7 by exhaustive enumeration of all 2,097,152 tournaments (opus-S10). 240 tournaments achieve H=189.
+
+**Next computational target:** H(P(31)) (2^31*31 ~ 66B ops). Also: submit H(P(p)) sequence to OEIS.
+
+**Source:** kind-pasteur-2026-03-05-S2, S5, S14; opus-2026-03-05-S5 (H(T_19)), opus-2026-03-05-S10 (a(8)=661, H(P(23)), exhaustive n=7), opus-S11 (Szele analysis)
 
 ---
 
