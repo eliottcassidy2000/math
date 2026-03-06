@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-06-S1
+**Last full repo scour:** opus-2026-03-06-S2
 **Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
@@ -319,6 +319,20 @@
 **Full writeup:** `03-artifacts/drafts/tiling-symmetry-analysis.md`
 **Scripts:** `04-computation/tiling_*.py` (5 files)
 **Next step:** (1) Investigate which tiling properties predict H beyond c3. (2) Connect sigma reduction to arc-flip proof strategy. (3) Look for grid-local rules that determine class.
+
+### INV-037: Pin-grid sigma vs tournament sigma — two-sigma structure
+**Source:** opus-2026-03-06-S2 (sigma structure investigation)
+**Status:** INVESTIGATED. Clean structural results, but no proof path yet.
+**What:** The pin-grid sigma (r,c)->(c,r) and tournament sigma (i,j)->(n-1-j,n-1-i) are DIFFERENT symmetries. Pin sigma acts within strips; tournament sigma acts across strips. They agree only on diagonal r=c.
+**Key results:**
+- **POS-free identity:** free(strip k) = cumul_POS(k) = floor(k/2). Growth rate: delta_free(k) = POS(k) = [k even].
+- **n->n+2 structure:** Adds strips n and n+1 with exactly n sigma-free bits and exactly 1 POS (midpoint arc).
+- **Tournament sigma always preserves H** (converse operation, verified n=3,...,7).
+- **Pin-grid sigma does NOT preserve H** in general (only 5% at n=7).
+- **Two sigmas don't commute;** composition has order 3; generate S_3-like group.
+- **Mod-4 structure:** Neither sigma preserves H mod 4 reliably.
+**Scripts:** `04-computation/sigma_structure.py`
+**Next step:** (1) Understand algebraic significance of the S_3 group. (2) Can the n->n+2 POS structure be used differently (not through H preservation)? (3) Relate to transfer matrix symmetry (INV-001).
 
 ---
 
