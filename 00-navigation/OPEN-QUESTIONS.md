@@ -217,52 +217,30 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
-## OPEN-Q-015 🟡
+## OPEN-Q-015 -- RESOLVED (DISPROVED at n=9)
 **Prove I(Omega(T), x) has all real negative roots for all n**
 
-PROVED for n<=8 via TWO independent methods:
-1. Claw-freeness + Chudnovsky-Seymour (THM-020)
-2. **Elementary discriminant + Turán's theorem** (THM-021, opus-S15): For n<=8, deg(I)<=2, so real roots iff a1^2>=4*a2. Triangle-free Turán bound gives a2<=c3^2/4, hence disc>=0. No deep graph structure theory needed.
+**DISPROVED by opus-2026-03-06-S18 (THM-025):** Explicit counterexample at n=9.
 
-Computationally verified:
-- n=5: exhaustive (1024), 0 failures
-- n=6: 500 random, 0 failures
-- n=9: 50 random (3-cycle subgraph), 0 failures
-- n=10: 30 random (3-cycle subgraph), 0 failures
-- **FULL Omega (all odd cycles, not just 3-cycles):** n=5..9, 185 samples, 0 failures (opus-S13)
-- Paley p=7: full Omega has 80 cycles {3:14, 5:42, 7:24}, I.P.=[1,80,7], roots=-11.42,-0.013 (real)
-- Paley p=11: full Omega has 21169 cycles, I.P.=[1,21169,10879,1155], all 3 roots real (kind-pasteur-S16 agent)
-- n=20 (3-cycle subgraph): degree 6 polynomial, all 6 roots real and negative (kind-pasteur-S16)
-- **Interlacing under vertex deletion:** HOLDS at n=5 (0/5120 exhaustive), n=6 (0/196608 exhaustive). FAILS at n=7 (36/1113 failures for full Omega). NOT a viable proof approach. (kind-pasteur-S18, correcting S16 agent)
-- 100% log-concave and unimodal across ALL tested polynomials
+The tournament with score sequence [1,1,3,4,4,4,6,6,7] has:
+- I(Omega(T), x) = 1 + 94x + 10x^2 + x^3
+- Newton's inequality FAILS at k=2: a_2^2 = 100 < a_1*a_3*3/2 = 141
+- Two complex roots: -4.995 +/- 8.303i
+- H(T) = I(Omega(T), 2) = 237 (OCF still correct)
 
-At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
+**What remains true:**
+- PROVED for n <= 8 via claw-freeness + Chudnovsky-Seymour (THM-020)
+- Elementary discriminant + Turan proof for n<=8 (THM-021)
+- Real-rootedness holds for MOST n=9 tournaments; failure requires specific score sequences
+- OCF (H(T) = I(Omega(T), 2)) is completely unaffected
 
-**Structural hierarchy (kind-pasteur-S14b):** Each property explains real roots up to the n where it fails:
-- Line graph: FAILS at n=6 (K5-e appears, 53%)
-- Quasi-line: FAILS at n=8 (49%)
-- Claw-free: FAILS at n=9 (86%)
-- S_{2,1,1}-free (subdivided claw): FAILS at n=10 (92%)
-- **Real roots: STILL HOLD at n=10,12,15,20 (0 failures)**
+**Earlier (now misleading) verification:** Prior sampling at n=9-20 using Omega_3 (3-cycle subgraph only) showed 0 failures. But the FULL Omega with all odd cycles reveals the failure. The Omega_3 restriction also fails for this tournament: I(Omega_3, x) = 1 + 12x + 6x^2 + x^3 with disc=-1323.
 
-**Refuted approaches:** Line graph (Heilmann-Lieb), quasi-line, all standard forbidden-subgraph classes.
+**The Engstrom barrier was prescient:** Engstrom (arXiv:1610.00805) showed real-rootedness characterizes claw-freeness for multivariate IP. Since Omega(T) has claws at n>=9, real roots cannot be guaranteed.
 
-**BARRIER (Engstrom, arXiv:1610.00805):** Real-rootedness of the multivariate independence polynomial CHARACTERIZES claw-freeness. No broader graph class guarantees real roots via the same mechanism. The explanation MUST be tournament-specific and algebraic.
+**Revised question:** What is the FRACTION of n=9 tournaments where real-rootedness fails? Is there a structural characterization of the failing tournaments?
 
-**Key structural clue (kind-pasteur-S16):** J(n,3) is NOT hereditarily real-rooted (counterexample at n=9, alpha=[1,7,5,1], disc=-44). But tournament-realizable subsets ALWAYS give real roots (0 failures at n=5-20). Real-rootedness is a tournament-structure property, not a Johnson graph property.
-
-**Remaining approaches:**
-- Jerrum-Patel (2026, JLMS): zero-free regions for bounded-degree H-free (H = subdivided claw). Applies at n<=9, chain grows with n.
-- Irving-Omar (arXiv:2412.10572): matrix-algebraic tools for Redei-Berge symmetric function. Schur-basis resolution may connect to parity.
-- Prakash-Sharma (arXiv:2510.09197): root gap quantification — could show gap stays positive for tournament conflict graphs.
-- arXiv:2505.22766 polymer-gas representation of I(G,x) for claw-free G — structural tool, doesn't give real-rootedness directly.
-- Direct structural argument from Omega(T) combinatorics (alpha <= floor(n/3)).
-- Grinberg-Stanley / Irving-Omar symmetric function framework (most promising).
-- ~~Interlacing: FAILS at n=7 (36/1113). Not viable.~~ (kind-pasteur-S18)
-
-If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, H(T) > 0 for all x > 0.
-
-**Source:** kind-pasteur-2026-03-05-S13 (THM-020)
+**Source:** opus-2026-03-06-S18 (THM-025), kind-pasteur-2026-03-05-S13 (THM-020)
 
 ---
 

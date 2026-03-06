@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S18 — 2026-03-06 (DISPROVE real-rootedness of I(Omega(T), x) at n=9)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S17 (multi-session overnight)
+**Summary of work:**
+  (1) **DISPROOF OF REAL-ROOTEDNESS AT n=9 (THM-025)**: Found explicit counterexample tournament with score sequence [1,1,3,4,4,4,6,6,7]. Full Omega has 94 directed odd cycles, I(Omega, x) = 1 + 94x + 10x^2 + x^3. Newton's 2nd inequality FAILS: a_2^2=100 < a_1*a_3*(3/2)=141. Two complex roots. H(T)=I(Omega,2)=237 (OCF unaffected). This disproves OPEN-Q-015 conjecture for general n.
+  (2) **Omega_3 also fails**: For same tournament, I(Omega_3, x) = 1 + 12x + 6x^2 + x^3 with discriminant = -1323 < 0. Newton's inequalities both HOLD for Omega_3 (a subtlety: disc < 0 is strictly stronger than Newton failure for degree-3).
+  (3) **n <= 8 remains valid**: THM-020 (claw-free => real roots via Chudnovsky-Seymour) confirmed. 200 random n=8 tournaments with full Omega: 0 failures. The claw-free bound is SHARP.
+  (4) **Failure is extremely rare**: 0 failures in 100k random n=9 tournaments (Omega_3) and 0 in 1323 high-variance n=9 tournaments (full Omega). The counterexample requires very specific structure (11/12 three-cycles share vertex 3). Arc-flip analysis: 3/36 neighbors also fail, all involving vertex 3.
+  (5) **Cut-flip analysis, determinantal IP**: Explored cut-flip delta preservation (trivial since OCF proved), Omega_3 complement = matching at n<=6 (new, T109), Turan proves Newton's 1st inequality for n<=11 (T110).
+**New contributions:** THM-025 (disproof), T109-T112, updated OPEN-Q-015 (resolved/disproved), updated THM-020
+**Scripts:** full_omega_n9_correct.py, real_roots_n9_verify.py, newton_n8_sample.py, real_roots_failure_rate.py, and others
+**Unresolved threads:**
+- What fraction of n=9 tournaments fail real-rootedness? (appears < 1 in 100k)
+- Does failure occur at n=10 more frequently?
+- New question: what structural property of Omega(T) ensures real-rootedness for "most" tournaments?
+
 ## kind-pasteur-2026-03-06-S18f — 2026-03-06 (hereditary maximizer chain + spectral analysis)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18e

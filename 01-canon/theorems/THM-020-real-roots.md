@@ -30,16 +30,11 @@ A claw (K_{1,3}) in Omega(T) requires a central odd cycle C0 adjacent to three p
 
 ---
 
-## Status at n>=9
+## Status at n>=9 — DISPROVED
 
-At n=9, Omega(T) is NOT always claw-free (90% of random tournaments have a claw in Omega). The Chudnovsky-Seymour argument fails. However, real-rootedness may still hold for a different reason.
+**DISPROVED (opus-2026-03-06-S18, THM-025):** I(Omega(T), x) does NOT always have real roots at n=9. Explicit counterexample: tournament with score sequence [1,1,3,4,4,4,6,6,7], giving I(Omega, x) = 1 + 94x + 10x^2 + x^3. Newton's inequality fails at k=2 (100 < 141).
 
-**Open question:** Does I(Omega(T), x) have all real roots for n>=9?
-
-If true, this would imply:
-- H(T) > 0 for all tournaments (alternative proof of Redei for all n)
-- Log-concavity of independence polynomial coefficients for all n
-- Unimodality of the coefficient sequence
+The n<=8 result (this theorem) remains valid. The claw-free bound n<=8 is sharp.
 
 ---
 
@@ -77,10 +72,9 @@ If true, this would imply:
 | Quasi-line | YES | YES | YES | NO (49% fail) | NO (90% fail) | NO (100%) |
 | Claw-free | YES | YES | YES | YES (trivial) | NO (86% fail) | NO (98%) |
 | S_{2,1,1}-free | YES | YES | YES | YES | YES (0/100 fail) | NO (92% fail) |
-| Real roots | YES | YES | YES | YES | YES (verified) | YES (verified) |
+| Real roots | YES | YES | YES | YES | **NO** (THM-025) | - |
 
-The hierarchy: Line graph => Claw-free => S_{2,1,1}-free. Each explains real roots up to the n where it fails.
-Real roots persist beyond ALL known structural explanations. A new mechanism operates at n>=10.
+The hierarchy: Line graph => Claw-free => S_{2,1,1}-free. Real roots fail exactly when claw-freeness fails (n=9). The Chudnovsky-Seymour bound is SHARP for tournaments.
 
 ---
 

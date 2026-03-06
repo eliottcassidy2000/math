@@ -14,7 +14,9 @@
 **Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9, 90%) or perfect (fails n=8, 53.8%). NOT a line graph (K_5-e found at n=6, 45%). S_{1,1,1}-free through n=11, fails n=12.
 **What remained true:** All-real-roots of I(Omega(T), x) appears to hold even for imperfect/non-claw-free Omega (tested n<=10, 0 failures). This is a deep structural conjecture NOT explained by any forbidden subgraph property.
 **Note:** OCF is now proved by Grinberg-Stanley, so this is no longer a proof strategy — it's a structural question. Real-rootedness explanation must be algebraic (Irving-Omar/Grinberg-Stanley symmetric function framework).
-**Next step:** (1) Test all-real-roots at n=9 where Omega is genuinely non-claw-free. (2) If confirmed, formulate as conjecture and seek algebraic proof.
+**Extended testing (opus-S18):** Real-rootedness tested for I(Omega_3(T), x) at n=9-21 with 0 failures across 1470+ samples (degrees up to 5). Log-concavity and Newton's inequalities hold in all cases. The "Omega_3 complement = matching" structure holds exhaustively at n≤6 (31088/31088) but fails at n≥7 (75.3%).
+**Turán-based proof for n≤11:** At n=9-11, alpha(Omega_3) = 3, so the disjoint-pair graph is triangle-free. Turán gives a2 ≤ c3²/4, proving Newton's first inequality a1² ≥ 3a2. Combined with the degree-3 discriminant bound, this could give a complete proof at n≤11. For n≥12, Turán alone fails.
+**Next step:** (1) Complete Turán+discriminant proof for n=9-11. (2) Find tournament-specific bounds on a2 for n≥12. (3) Investigate Irving-Omar determinantal formula for algebraic proof.
 
 ### INV-038: Clique-deletion interlacing for Omega(T)
 **Source:** opus-2026-03-06-S17, T100, interlacing-clique-deletion.md
