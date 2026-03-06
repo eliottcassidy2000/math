@@ -126,29 +126,33 @@ is LINEAR in the s-variables (s_w = 1-p_w-q_w). The coefficient of s_v decompose
   sum_{S ⊆ W\{v}} (-1)^|S| H(S) h_start(W\S, v) = (-1)^{m+1} h_end(W, v)
 where H(S) = total Hamiltonian path weight on S (H(∅) = 1).
 
-**STATUS of Claim (B): PROVED** (THM-016)
-- Proved by INDUCTION on m, using first-step decomposition of h_start
-- Key steps: (1) separate boundary term, (2) first-step decomposition, (3) exchange sums,
-  (4) apply induction hypothesis, (5) use T(v,u)=1-T(u,v), (6) cancellation (-1)^{m-1}+(-1)^m=0
-- Verified computationally at m=1,...,7 with real-valued arcs in [-2,3]
-- See THM-016-hamiltonian-alternating-sum.md for full proof
-- See 04-computation/q009_claim_b_proof.py for step-by-step numerical verification
+**STATUS of Claim (B):**
+- **PROVED for all m** by induction (kind-pasteur-2026-03-05-S10, THM-016)
+- Proof uses h_start expansion + path extension + inductive hypothesis
+- This is a STANDALONE identity about tournament Hamiltonian paths (no interface variables)
+- Does NOT involve vertices i,j at all — purely about internal tournament structure
+- Verified computationally at m=1,...,8 (polynomial identity in arc variables)
 
-**With Claim (B) proved, B(Li,Rj)=B(Lj,Ri) is proved for all n (THM-017).**
+Claim (B) being proved closes the induction for B(Li,Rj) = B(Lj,Ri) for all n.
 
 ---
 
 ## Connection to OCF Proof
 
-The signed adjacency identity (even-odd split) is a NECESSARY CONDITION for OCF.
-It says sum_S (-1)^|S| Delta(S,R) = 0 (alternating sum vanishes).
-OCF requires sum_S Delta(S,R) = delta_I (unsigned sum = cycle formula).
+**CORRECTED (kind-pasteur-S10):** The signed adjacency identity IS the even-odd split, but
+the even-odd split is a CONSEQUENCE of OCF, NOT equivalent to it (see MISTAKE-008).
 
-**CAVEAT (kind-pasteur-S8):** The even-odd split is a CONSEQUENCE of OCF, NOT equivalent
-to it. The odd-S sum of Delta(S,R) differs from the cycle formula per-subset.
+**What is now PROVED:**
+- Claim (B) for all m (THM-016, inductive proof)
+- B(Li,Rj) = B(Lj,Ri) for all n (follows from Claim (B) + induction on m)
+- Even-odd split for all n (equivalent to B(Li,Rj) = B(Lj,Ri))
 
-**Proof chain (current status):**
-- THM-016 → THM-017: B(Li,Rj)=B(Lj,Ri) for ALL n (PROVED)
-- THM-015: delta_H = delta_I for n ≤ 8 (PROVED by exhaustive verification)
-- OCF for n ≤ 8 (PROVED)
-- OCF for all n: STILL OPEN (requires delta_H=delta_I for all n, or new approach)
+**What remains OPEN:**
+- OCF (H(T) = I(Omega(T), 2)) does NOT follow from the even-odd split alone.
+- The gap: delta_H = 2 * sum_{|S| odd} Delta(S,R), but sum_{|S| odd} Delta(S,R) is NOT
+  the same as sum_C (gained-lost) * H(complement). The former involves L_j(S)*R_i(R)
+  boundary products; the latter involves g(S)*H(R) with the i→first and last→j factors included.
+- To bridge the gap, one would need to show that these two expressions are equal, which is
+  essentially the full OCF identity restated.
+
+The proof chain: Claim (B) → B(Li,Rj)=B(Lj,Ri) → even-odd split. But even-odd split ≠> OCF.

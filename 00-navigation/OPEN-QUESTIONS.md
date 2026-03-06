@@ -119,7 +119,12 @@ Verified n=4,...,8 exhaustive, continuous weighted tournaments pass.
 of Delta(S,R) differs from the cycle formula [g-l]*H(R) per-subset; see even-odd-split-lemma.md.
 See 03-artifacts/drafts/even-odd-split-lemma.md.
 
-**Remaining task:** Prove the signed position identity / alternating sum identity for all n.
+**PROVED (kind-pasteur-S10):** The signed position identity / alternating sum identity / even-odd
+split is now proved for ALL n, via Claim (B) (THM-016). See THM-016 for the inductive proof.
+
+**Remaining task:** Bridge the gap between even-odd split and OCF. The even-odd split gives
+delta_H = 2 * sum_{|S| odd} Delta(S,R), but this does NOT equal the cycle formula delta_I
+(see MISTAKE-008). An additional identity is needed to connect these two expressions.
 
 **Key structural facts (both agents independently confirmed):**
 - All affected cycles contain {i,j} (complement unchanged by flip)

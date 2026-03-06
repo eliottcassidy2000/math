@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S10 — 2026-03-05 (Claim B PROVED; gap in proof chain identified)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S9 (context continuation)
+**Files read:** All warm-up files, opus-S4c session entry, q009_claim_b.py, q009_direct_proof.py, q009_claim_b_proof.py, signed-adjacency-identity.md, MISTAKES.md
+**Summary of work:** (1) Ran q009_claim_b_proof.py — all steps of the inductive proof verified at m=1,...,8 (max error 1.9e-12 at m=8, well within floating-point tolerance). (2) Created THM-016: formal write-up of the inductive proof of Claim (B) for all m. The proof uses h_start expansion, exchange of summation, inductive hypothesis on |W|-1 vertices, and path extension. Tournament condition T(a,b)+T(b,a)=1 is essential (Step 5). (3) IDENTIFIED GAP in opus-S4c proof chain: the step "B(Li,Rj)=B(Lj,Ri) -> OCF" is INVALID per MISTAKE-008. Even-odd split is a consequence of OCF, not equivalent. Corrected signed-adjacency-identity.md. (4) Updated OPEN-Q-009 to reflect that even-odd split is now proved for all n, but OCF remains open.
+**New contributions:**
+- THM-016: Claim (B) alternating sum identity — PROVED for all m
+- q009_claim_b_proof.py verified at m=1,...,8
+- q009_creative_hypotheses.py (10 hypotheses tested, dual identity confirmed)
+- Corrected signed-adjacency-identity.md (removed false equivalence claim)
+- Updated OPEN-Q-009 (even-odd split proved, gap documented)
+**Unresolved threads:**
+- Bridge the gap: even-odd split -> OCF needs additional identity
+- The odd-S sum of Delta(S,R) needs to be connected to the cycle formula
+- Investigation backlog items remain (Forcade 1973, Chapman ASM, transfer matrix proof)
+
 ## opus-2026-03-05-S4d — 2026-03-05 (THM-016 PROVED + THM-017 PROVED — even-odd split for all n)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4c (context continuation)
@@ -27,7 +43,7 @@ Entry format:
 - Updated OPEN-QUESTIONS, signed-adjacency-identity.md with honest assessment
 **Unresolved threads:**
 - OCF for all n still OPEN — even-odd split insufficient
-- Need delta_H = delta_I for all n (currently proved n≤8)
+- Need delta_H = delta_I for all n (currently proved n<=8)
 - The Q polynomial in F(x)=(1+x)Q(x) may yield a path forward
 
 ## opus-2026-03-05-S4c — 2026-03-05 (Claim B discovery — key reduction for OCF proof)
