@@ -187,9 +187,16 @@
 **Impact:** Open Problem 9 needs reformulation. Alpha_1 ≠ c_3 mod 2 in general.
 
 ### INV-027: Realizable conflict graphs catalog
-**Source:** INV-013
-**Status:** NOT done.
-**What:** For n=3,...,7, compute Omega(T) for all non-isomorphic tournaments. Catalog which graphs appear. Look for forbidden subgraphs.
+**Source:** INV-013, conflict_graph_catalog.py
+**Status:** DONE (opus-S5). Major structural finding.
+**Results:**
+  - n=3: 2 distinct Omega structures. n=4: 3. n=5: 6. n=6: 24. n=7 (sampled): 172.
+  - **Omega(T) is ALWAYS PERFECT** (exhaustive n<=6, 2000 random n=7). This is a significant constraint — independence number = clique cover number.
+  - Omega(T) is NOT always chordal (14% non-chordal at n=6, 12% at n=7).
+  - For n<=5, Omega is always complete (pigeonhole: any two subsets of size>=3 share a vertex in a 5-element set).
+  - At n=6, non-edges correspond exclusively to complementary 3-cycles (vertex sets partition {0,...,5}).
+  - Omega can be disconnected at n=6 (80/32768 tournaments, always exactly 2 complementary 3-cycles).
+**Impact:** Perfectness of Omega(T) constrains the independence polynomial and could simplify OCF proof strategies. For perfect graphs, Lovasz theta = clique number, and the fractional chromatic number = chromatic number.
 
 ### INV-028b: Fix DR mod-4 proof (Thm 7.4 in tex)
 **Source:** tex-deep-analysis.md (ISSUE-1)
@@ -258,6 +265,7 @@
 - [DONE] Ballot sequence bijective proof for C(L-2, 2k-1) (opus-S5)
 - [DONE] Hard-core lattice gas: lambda=2 is non-perturbative regime (opus-S5)
 - [DONE] Alpha_1 ≡ c_3 (mod 2) conjecture DISPROVED (opus-S5)
+- [DONE] Conflict graph catalog: Omega(T) is always PERFECT (opus-S5, exhaustive n<=6)
 - [DEAD] Per-vertex decomposition of unmatched counts (T045)
 - [DEAD] Cycle bijection under arc reversal (MISTAKE-005)
 - [DEAD] Contiguous block decomposition (T035)
