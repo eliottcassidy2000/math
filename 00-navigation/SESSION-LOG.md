@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S20 — 2026-03-06 (c-tournament symmetry discovery, deep structural analysis)
+**Account:** Eliott (opus machine)
+**Continuation of:** opus-2026-03-06-S19b
+**Summary of work:**
+  (1) **c-TOURNAMENT SYMMETRY THEOREM DISCOVERED:** M[a,b]=M[b,a] holds for ALL "c-tournaments" where t_ij+t_ji=c (any constant c, not just c=1). Verified symbolically at n=3,4,5; numerically at n=6,7. The constraint must be UNIFORM (non-uniform c gives 100% failure) and ALL pairs need constraining.
+  (2) **T^op equivalence = symmetry:** Proved the re-indexing identity M_T[b,a] = (-1)^{n-2} M_{T^op}[a,b] is trivially true. Combined with T^op equiv, this shows T^op equiv ⟺ symmetry.
+  (3) **Skew decomposition:** In coordinates t_ij = c/2 + s_ij (s skew-symmetric), M is EVEN in s for n even, ODD for n odd. At n=4: M = c²/2 + Q(s). At n=5: M = c²·L(s)/2 + C(s). The c^{n-2} coefficient is (n-2)!/2^{n-2} for even n, 0 for odd n.
+  (4) **Not determinantal:** M is NOT a cofactor, adjugate entry, or Pfaffian of the adjacency/skew matrix. Checked at n=4 symbolically.
+  (5) **Cancellation structure:** Individual D(S) = E_a·B_b - E_b·B_a terms don't vanish; symmetry requires all 2^{n-2} terms in the alternating sum.
+**New contributions:** T144-T146, INV-001 updated with c-tournament finding, 5 new computation scripts
+**Unresolved threads:**
+- Prove c-tournament symmetry for general n
+- The skew parity structure suggests a proof via representation theory of S_n on skew matrices
+- INV-051/052 (Mitrovic) still unread
+
 ## kind-pasteur-2026-03-06-S22 — 2026-03-06 (THM-029 correction: alpha_1=3 achievable at n>=7, H=7 still impossible)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S21

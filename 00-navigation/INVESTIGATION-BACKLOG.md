@@ -109,6 +109,7 @@
 **BREAKTHROUGH (opus-S4):** M[a,b]-M[b,a] = 0 as a polynomial in the arc variables t_{ij} AFTER applying the tournament constraint T[j,i]=1-T[i,j]. With independent arc variables the difference is NONZERO (12 terms at n=4, 48 at n=5). The tournament constraint is essential and sufficient.
 **Equivalent formulation:** M_{T^op} = (-1)^{n-2} M_T (converse identity). Combined with path reversal M_{T^op}[i,j]=(-1)^{n-2}M_T[j,i], gives symmetry.
 **Key insight:** Connects to Feng's Dual Burnside (Q=AB symmetric under detailed balance). The tournament constraint T[x,y]+T[y,x]=1 plays the role of the "detailed balance" condition.
+**c-TOURNAMENT GENERALIZATION (opus-S19b):** Symmetry holds for ALL c-tournaments where t_ij + t_ji = c (any constant c, not just c=1). Verified symbolically n=3,4,5; numerically n=6,7. The constraint must be UNIFORM across pairs (non-uniform c_ij gives 100% failure) and ALL pairs need it. In skew coordinates t_ij = c/2 + s_ij: M is EVEN in s for n even, ODD for n odd. The c^{n-2} coefficient is (n-2)!/2^{n-2} for even n, 0 for odd n. This c-generalization SIMPLIFIES the proof problem: we can work with skew-symmetric part S = A-A^T and ignore the specific value c=1.
 **New findings (opus-S6):**
 - **THM-027 PROVED:** Trace formula tr(M) = H(T) for odd n, 0 for even n. Clean bijection proof via (-1)^{pos(a,P)} formula for diagonal entries.
 - **MISTAKE-011:** Old claim M = [[1,0],[0,-1]] always is FALSE (2199/2500 failures at n=4). M entries range from -3 to +3.
