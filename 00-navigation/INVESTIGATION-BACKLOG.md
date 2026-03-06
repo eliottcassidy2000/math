@@ -12,20 +12,19 @@
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
 **Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)
 **Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9, 90%) or perfect (fails n=8, 53.8%). NOT a line graph (K_5-e found at n=6, 45%). S_{1,1,1}-free through n=11, fails n=12.
-**What remained true:** All-real-roots of I(Omega(T), x) appears to hold even for imperfect/non-claw-free Omega (tested n<=10, 0 failures). This is a deep structural conjecture NOT explained by any forbidden subgraph property.
-**Note:** OCF is now proved by Grinberg-Stanley, so this is no longer a proof strategy — it's a structural question. Real-rootedness explanation must be algebraic (Irving-Omar/Grinberg-Stanley symmetric function framework).
-**Extended testing (opus-S18):** Real-rootedness tested for I(Omega_3(T), x) at n=9-21 with 0 failures across 1470+ samples (degrees up to 5). Log-concavity and Newton's inequalities hold in all cases. The "Omega_3 complement = matching" structure holds exhaustively at n≤6 (31088/31088) but fails at n≥7 (75.3%).
-**Turán-based proof for n≤11:** At n=9-11, alpha(Omega_3) = 3, so the disjoint-pair graph is triangle-free. Turán gives a2 ≤ c3²/4, proving Newton's first inequality a1² ≥ 3a2. Combined with the degree-3 discriminant bound, this could give a complete proof at n≤11. For n≥12, Turán alone fails.
-**Next step:** (1) Complete Turán+discriminant proof for n=9-11. (2) Find tournament-specific bounds on a2 for n≥12. (3) Investigate Irving-Omar determinantal formula for algebraic proof.
+**DISPROVED (THM-025, opus-S18):** Real-rootedness of I(Omega(T),x) FAILS at n=9. Counterexample: score [1,1,3,4,4,4,6,6,7], I=[1,94,10,1], Newton k=2 fails (100 < 141), complex roots confirmed.
+**Structural characterization (opus-S19):** Failure requires (a) three vertex-disjoint 3-cycles partitioning V, AND (b) near-total inter-group domination (9-0, 9-0, 7-2 arc counts), creating a transitivity bottleneck with hub vertex in 92/94 cycles. The extreme tournament (full domination) gives I=(1+x)^3 with disc=0 exactly. One arc flip creates disc<0. Failure is MAXIMALLY RARE: 0 in 10000 random samples at n=9, 0 at n=10,11.
+**What remains true:** Real-rootedness holds at n<=8 (Chudnovsky-Seymour, claw-free) and for "generic" tournaments at all n. But it is NOT a universal structural property.
+**Next step:** (1) Characterize exact tournament class where failure occurs. (2) Check if the clique-deletion interlacing approach (INV-038) can prove real-rootedness under a claw-free assumption.
 
 ### INV-038: Clique-deletion interlacing for Omega(T)
 **Source:** opus-2026-03-06-S17, T100, interlacing-clique-deletion.md
 **Status:** STRUCTURAL INSIGHT. Proof sketch for n<=8.
 **What:** Through-v cycles always form a CLIQUE in Omega(T) (proved: sharing vertex v). Deleting vertex v = deleting this clique from Omega(T). The sequential deletion recurrence I(G,x) = I(G-u,x) + x*I(G\N[u],x) can be applied step-by-step. At n=5, 100% of remaining cycles are adjacent to some through-v cycle (Omega is very dense).
-**Key insight:** For n<=8 (claw-free), Chudnovsky-Seymour guarantees each step preserves real roots. For n>=9, the clique structure + high density may still force interlacing.
+**Key insight:** For n<=8 (claw-free), Chudnovsky-Seymour guarantees each step preserves real roots. For n>=9, real-rootedness can FAIL (THM-025), so the interlacing approach cannot extend to all tournaments. However, 84 claws at n=9 counterexample all share the same 3 leaves — the claw structure is very specific.
 **Verification:** 0 failures: n=5 (5120 exhaustive), n=6 (196608 exhaustive), n=7-8 (random).
-**Impact:** If provable for ALL n, gives inductive proof of real-rootedness of I(Omega(T),x).
-**Next step:** (1) Verify n=7 exhaustive. (2) Check whether the "remainder" G\N[u] always has real-rooted I.P. (3) Look for common interlacing framework.
+**Impact:** Proves real-rootedness for n<=8. For n>=9, would need a tournament-specific claw-free condition.
+**Next step:** (1) Characterize when Omega(T) is claw-free at n>=9. (2) Check if "generically claw-free" suffices for applications.
 **Scripts:** `04-computation/interlacing_verify.py`, `04-computation/interlacing_structure.py`
 **Writeup:** `03-artifacts/drafts/interlacing-clique-deletion.md`
 

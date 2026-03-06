@@ -359,6 +359,7 @@ Even the 3-CYCLE-ONLY polynomial I(Omega_3(T), x) fails real-rootedness at n=9. 
 **T113** #R-minimization #deletion-ratio #variational #OCF-consequence | certainty: REFUTED at n=7 | source: kind-pasteur-2026-03-06-S18g
 DELETION-SUM RATIO FORMULA (THM-025): R(T) = n - E_weighted[|U(S)|] is PROVED. But the conjecture that H-maximizer minimizes R is FALSE at n=7 (tournaments with H=123 achieve R=1.585 < R(max)=5/3). The formula itself remains a clean identity connecting vertex deletion to independent sets. The breakdown at n=7 occurs because some non-maximal tournaments have very efficient vertex coverage despite lower total cycle count. The formula is useful structurally but NOT as a variational characterization of the maximizer.
 
+<<<<<<< Updated upstream
 **T114** #hopf-algebra-comultiplication #subset-convolution #OCF-structure | certainty: high (confirmed) | source: opus-2026-03-06-S5
 Grujić-Stojadinović (arXiv:2402.07606) Hopf algebra comultiplication Δ([T]) = Σ_S [T|_S] ⊗ [T|_{V\S}] is EXACTLY our subset convolution. The Hopf algebra deletion property for cycles (U_X = Σ (-1)^{|S|-1} U_{X\S} for edge subsets forming a cycle) could relate H(T) to H(T-v) via Claim A. The Hopf antipode encodes Berge's theorem. See web-synthesis-opus-S5.md.
 
@@ -421,6 +422,27 @@ At n=11, there are exactly 2 DRT classes (from (11,5,2)-difference sets): Paley 
 
 **T134** #savchenko-odd-cycle-dominance #DRT-maximizes-odd-cycles | certainty: high (published result) | source: kind-pasteur-2026-03-06-S21 (Savchenko 2024)
 Savchenko proves c_m(DR_n) > c_m(RLT_n) for m = 1,2,3 mod 4 (including ALL odd m). For m = 0 mod 4, RLT eventually dominates (phase transition at n=39 for m=8). Since H(T) depends on odd cycles via OCF, DRT's odd-cycle dominance directly explains why DRT maximizes H. Combined with T133: among DRTs, Paley has the most cycles.
+
+**T135** #pfaffian-omega #skew-adjacency #no-correlation | certainty: high (computed n=9) | source: opus-2026-03-06-S19
+Pfaffian subminors |Pf(S_v)| of S=A-A^T have NO correlation with H(T) across random tournaments (corr = -0.006). For counterexample: |Pf| = [5,21,3,9,5,15,5,3,9], sum=75, H=237. Arborescences also unrelated (total=108675 vs H=237). The Irving-Omar W(z)=det(I+zA^T)/det(I-zA) does NOT match I(Omega,z) at any z except trivially. The determinantal and independence polynomial worlds are separate.
+
+**T136** #claw-structure #84-claws #unique-triple | certainty: high (exact computation) | source: opus-2026-03-06-S19
+The counterexample Omega has exactly 1 independent triple {(0,4,6),(2,5,8),(1,3,7)} and 84 claws K_{1,3}, ALL sharing these same 3 leaves. The 84 centers are cycles adjacent to all 3 independent 3-cycles. Structure: 3 pendant leaves + 84 center vertices (near-clique) + 7 intermediate vertices. This extreme claw count from a single triple is the mechanism for non-real-rootedness.
+
+**T137** #extreme-tournament #disc-zero #binomial-cubic | certainty: high (exact) | source: opus-2026-03-06-S19
+The maximally imbalanced tournament (3 groups in 3-cycles, each group fully dominating the next) gives I(Omega_3,x) = [1,3,3,1] = (1+x)^3 with disc=0 EXACTLY. One inter-group arc flip gives disc=-255; two flips gives disc=-1323 (matching counterexample). Three flips restores disc>0. The counterexample is ~2 perturbations from the extreme boundary.
+
+**T138** #intergroup-dominance #3cycle-partition #9-equals-3x3 | certainty: high (exact+statistical) | source: opus-2026-03-06-S19
+The n=9 transition occurs because 9=3x3 allows 3 vertex-disjoint 3-cycles. 85.5% of random n=9 tournaments have this property. But ZERO out of 10000 random samples show disc<0 for Omega_3 — failure requires near-total inter-group dominance (9-0 arc counts between groups). The counterexample groups have: B>>A (9-0), A>>C (9-0), B>>C (7-2). This creates a "transitivity bottleneck" forcing all odd cycles through hub vertices.
+
+**T139** #disc-vs-newton #cubic-threshold #scaling | certainty: high (exact algebra) | source: opus-2026-03-06-S19
+For cubic 1+a1*x+a2*x^2+a3*x^3 with a3=1: Newton threshold is a2>=sqrt(1.5*a1) but discriminant threshold is a2 ~ a1^2/4. At a1=12: Newton needs a2>=4.24, disc needs a2>=36.17 (for Omega_3). But for full Omega with a1=94: Newton needs a2>=11.87, while actual a2=10 barely fails Newton. The disc gap explains why Newton failures are rarer than expected and why random sampling never finds failures.
+
+**T140** #perm-equals-9 #cycle-covers #OCF-combinatorics | certainty: high (computed) | source: opus-2026-03-06-S19
+For the counterexample: perm(A)=9 (exactly 9 cycle covers) vs H(T)=237 (Hamiltonian paths). The ratio 237/9=26.33... has no obvious interpretation. perm(I+A)=198. The OCF identity H=I(Omega,2) is unrelated to the permanent; it's a fundamentally different combinatorial decomposition.
+
+**T141** #n10-n11-omega3 #no-failure #alpha-bound | certainty: high (2000 samples each) | source: opus-2026-03-06-S19
+At n=10 and n=11, Omega_3 still has 0 Newton failures and 0 negative discriminants in 2000 random samples. Max alpha(Omega_3) = floor(n/3) = 3 at both. Almost all have degree-3 independence polynomials. Failure remains extremely rare, likely requiring the same transitivity bottleneck.
 
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.

@@ -13,6 +13,7 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+<<<<<<< Updated upstream
 ## opus-2026-03-06-S8 — 2026-03-06 (n=8 SC+SF kernel: 5 classes, even/odd pattern broken)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S7
@@ -163,6 +164,26 @@ Entry format:
 - Check if non-Paley DRTs exist at small p and compare H values (INV-047)
 - Compute H(T_p)/(p!/2^{p-1}) at p=31 (INV-048)
 - Read Ai (2025) on new digraph polynomials (INV-049)
+## opus-2026-03-06-S19 — 2026-03-06 (deep structural anatomy of real-rootedness failure)
+**Account:** Eliott (opus)
+**Continuation of:** opus-2026-03-06-S18
+**Summary of work:**
+  (1) **Pfaffian-Omega connection**: Explored whether Pfaffian subminors of S=A-A^T relate to H(T) or Omega structure. Result: NO correlation (r=-0.006 across 50 random tournaments). Arborescences also unrelated.
+  (2) **84 claws in Omega**: The counterexample Omega has exactly 1 independent triple and 84 claws K_{1,3}, all sharing the same 3 leaves {(0,4,6),(2,5,8),(1,3,7)}. The 84 centers are cycles adjacent to all 3 groups.
+  (3) **Inter-group dominance**: The 3 disjoint 3-cycles partition vertices into groups with near-total one-sided domination: B>>A (9-0), A>>C (9-0), B>>C (7-2). This creates a transitivity bottleneck.
+  (4) **Extreme tournament boundary**: The maximally imbalanced tournament gives I(Omega_3)=(1+x)^3 with disc=0 exactly. 1 flip => disc=-255, 2 flips => disc=-1323. The counterexample sits ~2 flips from this boundary.
+  (5) **0 failures in 10000 random samples**: Omega_3 disc<0 NEVER occurs randomly at n=9. Also 0 at n=10,11 (2000 samples each).
+  (6) **Disc vs Newton threshold**: For cubics with a3=1, disc needs a2~a1^2/4 while Newton needs a2~sqrt(a1). The gap is enormous and explains why failures are maximally rare.
+  (7) **Arc-conflict and weighted vertex-set alternatives**: Neither I_arc(Omega,2) nor I_vset(Omega,2) equals H(T). The vertex-conflict definition is the UNIQUE correct one for OCF.
+  (8) **OCF trivially implies Redei**: H(T) = 1 + 2*a1 + 4*a2 + ... is always odd.
+  (9) **e_3(A^T) = # directed 3-cycles**: The k=3 elementary symmetric function of eigenvalues equals the 3-cycle count.
+  (10) **perm(A) = 9 for counterexample**: 9 cycle covers vs H=237 Hamiltonian paths.
+**New contributions:** T135-T141
+**Unresolved threads:**
+- Transfer matrix symmetry analysis (script written, needs runtime)
+- Modified polynomial search (script written, needs runtime)
+- Exact characterization of when Omega has claws (beyond just 3 disjoint 3-cycles)
+- Why does the inter-group transitivity bottleneck suppress independent pairs so dramatically?
 
 ## kind-pasteur-2026-03-06-S18g — 2026-03-06 (hereditary CORRECTION, deletion ratio formula, R-minimization refuted)
 **Account:** Eliott (primary)
