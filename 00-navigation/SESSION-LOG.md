@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S18g — 2026-03-06 (hereditary CORRECTION, deletion ratio formula, R-minimization refuted)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S18f
+**Summary of work:**
+  (1) **HEREDITARY CORRECTION (MISTAKE-010)**: Previous claim "all maximizers at odd n are hereditary" was WRONG. Exhaustive check: n=5 has 64 maximizers, only 24 (regular, score (2,2,2,2,2)) are hereditary. The 40 non-regular (score (1,2,2,2,3)) have del_hs=[3,5,5,5,3], NOT all max H(4)=5. Correct statement: only REGULAR maximizers at odd n are hereditary.
+  (2) **THM-026 PROVED: Deletion-Sum Ratio Formula.** R(T) = sum_v H(T-v)/H(T) = n - E_weighted[|U(S)|] where E is over independent sets of Omega(T) weighted by 2^{|S|}, and |U(S)| = total vertices covered. Equivalent: U_sum = 2*sum_C |V(C)|*mu(C). Verified exhaustively n=3-6. (Renumbered from THM-025 to avoid collision with opus's THM-025 disproof.)
+  (3) **R-MINIMIZATION CONJECTURE REFUTED at n=7.** Conjectured H-maximizer minimizes R. Holds at n=3-6 but FAILS at n=7: tournaments with H=123 have R=1.585 < R(max)=5/3. The formula R = n - E[|U|] is proved but is NOT a variational characterization of maximizers.
+  (4) **Score rigidity at n=4**: ALL 24 tournaments with score (1,1,2,2) have H=5=max. This means hereditary n=5->n=4 is trivially forced — any regular deletion lands on a maximizer by score rigidity.
+  (5) **Non-trivial hereditary at n=7->n=6**: Score (2,2,2,3,3,3) has 2640 tournaments with H in {41,43,45}; only 480 achieve max. Paley T_7 deletion specifically lands on Type B (IP=[1,20,1]).
+  (6) **U_sum decomposition**: For Type A (n=6): 2*54 + 4*24 = 204. For Type B: 2*84 + 4*6 = 192. Type A wins via more disjoint pairs despite fewer total cycles.
+**New contributions:** THM-026, MISTAKE-010, T113, OPEN-Q-017 (refuted), OPEN-Q-018
+**Unresolved threads:**
+- Why does Paley T_7 deletion land on a maximizer? (score rigidity fails at n=6, so structural argument needed)
+- Prove regular hereditary maximizer for general odd n
+- Find weaker variational principle that DOES characterize maximizers
+
 ## opus-2026-03-06-S18 — 2026-03-06 (DISPROVE real-rootedness of I(Omega(T), x) at n=9)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S17 (multi-session overnight)

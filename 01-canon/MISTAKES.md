@@ -258,3 +258,36 @@ At n=8, must use the full A-clique formula: delta_I = 2*sum_C [gained-lost]*H(co
 ### Impact
 
 The original script would have produced WRONG results. Fixed immediately upon discovery.
+
+---
+
+## MISTAKE-010: Hereditary Maximizer Chain Claimed for ALL Maximizers at Odd n
+
+**Date discovered:** 2026-03-06
+**Found by:** kind-pasteur-2026-03-06-S18g
+**Affects:** INV-044, T104 (hereditary maximizer chain)
+
+### What was assumed
+
+"At odd n, every vertex deletion from ANY maximizer gives the (n-1)-maximizer."
+
+### Why it was wrong
+
+Exhaustive check at n=5 shows: 64 maximizers (H=15), of which only 24 (regular score (2,2,2,2,2)) are hereditary. The remaining 40 (score (1,2,2,2,3)) have del_hs including H=3 values, NOT max H(4)=5.
+
+Full data:
+- n=3: 2/2 hereditary (all regular)
+- n=4: 0/24 hereditary (all non-regular)
+- n=5: 24/64 hereditary (only regular ones)
+- n=6: 0/480 hereditary (all non-regular)
+- n=7: 240/240 hereditary (all regular)
+
+### The correct framing
+
+**Only REGULAR maximizers at odd n are hereditary.** At n=3,5,7, the regular maximizers (those with score (k,k,...,k)) have ALL vertex deletions giving max H(n-1). Non-regular maximizers at n=5 do NOT have this property.
+
+The pattern: regular maximizers exist at odd n and are vertex-transitive, so all deletions are isomorphic. One deletion being optimal implies all are.
+
+### Impact
+
+The investigation INV-044 and tangent T104 need correction. The hereditary chain is: T_7 -> T_6_max -> (chain breaks at n=5 for non-regular) or T_7 -> T_6_max -> T_5_regular -> T_4_max -> T_3. The chain from Paley T_7 goes through regular maximizers at each odd step.

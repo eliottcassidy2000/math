@@ -266,6 +266,51 @@ Key open sub-questions:
 
 ---
 
+## OPEN-Q-017 🟢 — PARTIALLY REFUTED
+**R-Minimization: H-maximizer minimizes R(T) = sum_v H(T-v) / H(T)?**
+
+Confirmed at n=3,4,5,6 that the H-maximizer minimizes R(T). **FAILS at n=7**: tournaments with H=123 achieve R=1.585 < 5/3 ≈ 1.667 (the H=189 maximizer's R).
+
+Exact R values for maximizers:
+- n=3: R=1.000 (sum=3, H=3)
+- n=4: R=1.600 (sum=8, H=5)
+- n=5: R=1.400 to 1.667 (sum=21 to 25, H=15), min R at non-regular maximizers
+- n=6: R=1.467 to 1.733 (sum=66 to 78, H=45), min R at Type A maximizers
+- n=7: R=5/3 (sum=315, H=189), constant (all maximizers regular)
+
+For hereditary (regular) maximizers at odd n: R = n * H_{n-1}/H_n.
+
+Interpretation: The maximizer has the LEAST "surplus" of descendant paths relative to its own count. Each deletion creates "new" paths that weren't sub-paths of T-paths, and the maximizer minimizes this relative surplus.
+
+Sub-questions:
+1. Does R-minimization hold at n=7,8?
+2. Can R-minimization be proved from OCF = I(Omega(T), 2)?
+3. Is there a formula for R_min in terms of n and the independence polynomial coefficients?
+
+**Source:** kind-pasteur-2026-03-06-S18g
+
+---
+
+## OPEN-Q-018 🟢
+**Hereditary Maximizer Chain: Corrected version**
+
+CORRECTED from previous session's overly broad claim. Only REGULAR maximizers at odd n are hereditary (all vertex deletions give max H(n-1)). Non-regular maximizers at odd n=5 are NOT hereditary.
+
+Full data (exhaustive n=3..7):
+- n=3: 2/2 hereditary (all regular)
+- n=4: 0/24 hereditary
+- n=5: 24/64 hereditary (only regular, score (2,2,2,2,2))
+- n=6: 0/480 hereditary
+- n=7: 240/240 hereditary (all regular)
+
+Conjecture: At odd n, regular maximizers are always hereditary. At even n, no maximizers are hereditary (since regular score is impossible).
+
+Open: Does this extend to n=9 (odd)? Need to check if regular n=9 maximizers (if they exist) give max H(8)=661 on all deletions.
+
+**Source:** kind-pasteur-2026-03-06-S18g, MISTAKE-010
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.

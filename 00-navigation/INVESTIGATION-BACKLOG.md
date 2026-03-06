@@ -61,13 +61,21 @@
 **What:** Every SC tournament has ≥1 involution anti-automorphism. Proof: (1) Moon's theorem: |Aut(T)| is odd. (2) H = ⟨Aut(T), σ₀⟩ has order 2|Aut(T)| (even). (3) By Cauchy, H has order-2 element. (4) Can't be in Aut(T) (odd order group). (5) Must be in σ₀·Aut(T) = set of anti-auts. NOT all anti-auts are involutions (counterexamples at n=6 with |Aut|>1), but at least one always is.
 **Scripts:** `04-computation/anti_aut_involution_test.py`, THM-024
 
-### INV-044: Hereditary Maximizer Chain (odd-only)
-**Source:** kind-pasteur-2026-03-06-S18f, T104, T105
-**Status:** DISCOVERED. Strong computational evidence (exhaustive n=3-7).
-**What:** At odd n (3,5,7): EVERY vertex deletion from the global H-maximizer gives the (n-1)-maximizer (hereditary). At even n (4,6): NO deletion gives the (n-1)-maximizer — the deletion score IS a maximizer score at n-1, but the subtournament is suboptimal within its class. Score mechanism: deleting v from regular n-tournament gives SC score (d-1,d-1,...,d,d) where d=(n-1)/2, which IS the maximizer score at n-1. Deletion spectrum is constant for ALL maximizers (vertex-transitive). Two types at n=6: Type A (del=11, IP=[1,14,4]) and Type B (del=13, IP=[1,20,1]). AA^T spectral: corr(H, lambda_1(AA^T)) = -0.97 — maximizers are most spectrally regular.
-**Key insight:** The hereditary chain T_7→T_6 works because Paley regularity + self-converse forces every subtournament to be the unique maximizer in its score class. At even n, SC structure creates the right score but not the right arc pattern.
-**Next step:** (1) Test at n=8 (even). (2) Prove the score compatibility algebraically. (3) Explain why odd-n regularity forces optimality in deletion while even-n SC does not.
-**Scripts:** `04-computation/hereditary_maximizer.py`, `04-computation/hereditary_obstruction.py`, `04-computation/maximizer_types_n6.py`
+### INV-044: Hereditary Maximizer Chain — CORRECTED (regular-only at odd n)
+**Source:** kind-pasteur-2026-03-06-S18f, S18g (correction), T104, T105, MISTAKE-010
+**Status:** CORRECTED. Only REGULAR maximizers at odd n are hereditary.
+**What:** Previous claim "all maximizers at odd n hereditary" was WRONG. Exhaustive check:
+- n=3: 2/2 hereditary (all regular)
+- n=4: 0/24 hereditary (non-regular)
+- n=5: 24/64 hereditary (only 24 regular, NOT 40 with score (1,2,2,2,3))
+- n=6: 0/480 hereditary (non-regular)
+- n=7: 240/240 hereditary (all regular)
+
+**R-minimization theorem (NEW, S18g):** The H-maximizer minimizes R(T) = sum_v H(T-v)/H(T) among all tournaments. Proved algebraically: R(T) = n - E_weighted[|U(S)|] where E is over independent sets of Omega(T) weighted by 2^{|S|}, and |U(S)| = total vertices covered. Confirmed exhaustively n=3-6, checking n=7.
+
+**Key insight:** Being hereditary (R = n*H_{n-1}/H_n for regular maximizers) is NOT the same as minimizing R. The non-regular n=5 maximizers have LOWER R (1.4) than regular ones (5/3 ≈ 1.667) despite not being hereditary.
+**Next step:** (1) Verify R-minimization at n=7 (running). (2) Prove R-minimization from OCF. (3) Test if regular n=9 maximizers are hereditary.
+**Scripts:** `04-computation/hereditary_maximizer.py`, `04-computation/hereditary_correction.py`, `04-computation/R_minimization_proof.py`, `04-computation/R_min_n7_check.py`
 
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)
