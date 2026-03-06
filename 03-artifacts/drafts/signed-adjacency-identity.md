@@ -91,28 +91,54 @@ Then B(+s, d, t) = B(-s, d, t) for all (s, d, internal arcs).
 Since each monomial in B uses at most 2 interface arcs (one from the left boundary p_{w_k},
 one from the right boundary q_{u_1}), the maximum s-degree is 2. Therefore:
 
-**The evenness condition reduces to: all s-degree-1 terms vanish.**
+**The evenness condition reduces to: all s-degree-1 coefficients vanish.**
 
-For each vertex w, the s-degree-1 contribution is -(C_w + D_w)/2 where:
-- C_w = dB/dp_w (sensitivity when w appears at left boundary)
-- D_w = dB/dq_w (sensitivity when w appears at right boundary)
+WARNING: This does NOT mean C_w + D_w = 0 everywhere. C_w + D_w is a function of
+all arc variables including other s-values. The correct statement is:
 
-So OCF reduces to proving: **C_w + D_w = 0 for each w in W.**
+**alpha_w := dB/ds_w |_{s=0} = 0 for each w in W.**
 
-Verified computationally at n=3,4,5: at s=0, dB/ds_w < 1e-10 for all w, all configurations.
+At n=4: C_a + D_a = s_b (zero only at s=0). The s-polynomial is B = B_0(d,t) - sa*sb/2.
+At n=5: all s-linear coefficients verified zero (< 1e-11). Quadratic terms are only
+CROSS-terms s_w*s_u (w != u); diagonal s_w^2 terms are zero.
+
+Verified computationally at n=3,4,5,6,7: B(Li,Rj) = B(Lj,Ri) with real-valued arcs in [-2,3].
 
 **Subsidiary identity:** B(Li, Lj) = (-1)^m * B(Ri, Rj), equivalently B(Lj, Li) = B(Ri, Rj).
 
 ---
 
+## Proof Structure (INDUCTIVE)
+
+The identity B(Li,Rj) = B(Lj,Ri) can be proved by INDUCTION on |W| = m:
+
+**Base cases:** m=0 (trivial), m=1 (complementarity: T[a][b]+T[b][a]=1), m=2 (hand algebra).
+
+**Inductive step:** Assume the identity for |W| < m. The difference D = B(Li,Rj)-B(Lj,Ri)
+is LINEAR in the s-variables (s_w = 1-p_w-q_w). The coefficient of s_v decomposes into:
+
+1. **d-dependent part:** sum_{u!=v} (d_u/2)(left(u)-right(u)). By the inductive hypothesis
+   applied to sub-tournaments on W\{u,v} (size m-2), left(u) = right(u), so this VANISHES.
+
+2. **d-independent part:** boundary + d_indep = 0, which reduces to:
+
+**CLAIM (B):** For any tournament on m vertices W with vertex v:
+  sum_{S ⊆ W\{v}} (-1)^|S| H(S) h_start(W\S, v) = (-1)^{m+1} h_end(W, v)
+where H(S) = total Hamiltonian path weight on S (H(∅) = 1).
+
+**STATUS of Claim (B):**
+- Proved algebraically at m=1,2,3
+- Verified computationally at m=1,...,8 (polynomial identity in arc variables)
+- This is a STANDALONE identity about tournament Hamiltonian paths (no interface variables)
+- Does NOT involve vertices i,j at all — purely about internal tournament structure
+
+If Claim (B) is proved for all m, the full induction closes, proving OCF for all n.
+
+---
+
 ## Connection to OCF Proof
 
-If we can prove this identity for ALL n, combined with:
-- THM-015 (swap polynomial identity: delta_H = delta_I) — proved for n<=8
-- Base case: H(transitive) = 1 = I(empty, 2)
-- Arc-flip reachability from transitive tournament
-
-This would establish OCF for all n, proving Claim A.
-
 The signed adjacency identity IS the even-odd split, which IS equivalent to OCF.
-So proving this single polynomial identity proves the main conjecture.
+Proving Claim (B) for all m proves the main conjecture (Claim A).
+
+The proof chain: Claim (B) for all m → B(Li,Rj)=B(Lj,Ri) for all n → OCF for all n → Claim A.

@@ -13,7 +13,42 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S4c — 2026-03-05 (Claim B discovery — key reduction for OCF proof)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S4
+**Files read:** All warm-up files, previous session's exploration scripts
+**Summary of work:** Major progress on OPEN-Q-009. (1) Corrected the s-evenness reduction (C_w+D_w=0 was wrong; correct statement is s-linear coefficients vanish). (2) Verified B(Li,Rj)=B(Lj,Ri) as polynomial identity at n=3,...,7 with real-valued arcs in [-2,3]. (3) Discovered the PAIRING STRUCTURE: for each u!=v, left(u)=right(u) exactly, meaning the d-dependent part of alpha_v vanishes by the INDUCTIVE HYPOTHESIS. (4) Isolated CLAIM (B): a standalone identity about tournament Hamiltonian path weights: sum_{S⊆W\{v}} (-1)^|S| H(S) h_start(W\S,v) = (-1)^{m+1} h_end(W,v). Verified at m=1,...,8. Proved algebraically at m=1,2,3. (5) Established full proof chain: Claim B → B(Li,Rj)=B(Lj,Ri) → OCF → Claim A.
+**New contributions:**
+- 04-computation/q009_cw_dw_proof.py (showed C_w+D_w!=0, corrected reduction)
+- 04-computation/q009_algebra_n4.py (exact n=4 algebra, s-coordinate formula)
+- 04-computation/q009_s_quadratic.py (quadratic s-structure analysis)
+- 04-computation/q009_direct_proof.py (alpha_v decomposition, pairing discovery)
+- 04-computation/q009_claim_b.py (Claim B verification m=1,...,8)
+- Updated signed-adjacency-identity.md with proof structure and Claim B
+**Unresolved threads:**
+- Prove Claim (B) for all m — the ONLY remaining step for OCF proof
+- Claim (B) is an alternating-sum identity about internal tournament Hamiltonian paths
+- Proved at m=1,2,3 by direct algebra; need general proof (possibly by induction on m)
+
 ## kind-pasteur-2026-03-05-S9 — 2026-03-05 (tex deep analysis)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S8 (context continuation)
+**Files read:** Full parity_tournaments_fixed.tex (2189 lines), all opus-S4b new files (paper-connections.md, INVESTIGATION-BACKLOG.md, 4 new computation scripts), inbox messages MSG-004 and MSG-005
+**Summary of work:** Pulled opus-S4b contributions (transfer matrix symmetry discovery, investigation backlog, paper connections). Then performed line-by-line analysis of entire tex file. Found 5 issues: (1) DR mod-4 proof (Thm 7.4) has broken arithmetic — v_2 analysis produces impossible value, falls back to 3 examples. (2) SE-SYT formula (Thm 7.3) produces non-integer 2^{3/2} for m=2. (3) Transitive uniqueness proof (Prop 2.1) is incomplete/hand-wavy. (4) Verification record outdated (missing n≤8 results). (5) Rajkumar et al. missing from bibliography. Extracted 5 geometric insights, cataloged all 12 references with investigation priority, identified 5 most promising unexploited directions, and mapped paper concepts to recent discoveries. Created comprehensive tex-deep-analysis.md. Added 3 new investigation leads to backlog (INV-028b, INV-029b, INV-030b).
+**New contributions:**
+- 03-artifacts/drafts/tex-deep-analysis.md (comprehensive analysis report)
+- INV-028b: Fix DR mod-4 proof
+- INV-029b: Fix SE-SYT formula
+- INV-030b: Pin grid S_3 symmetry for OCF
+- Investigation backlog updated
+**Unresolved threads:**
+- Forcade 1973 GF approach (INV-023) — highest priority unexplored lead
+- Chapman 2001 ASM bijection (INV-021) — could give determinantal formula for H(T)
+- Striker 2011 S_3-equivariance (INV-008) — completely unexplored open problem
+- Transfer matrix symmetry proof (INV-001) — opus-S4b's discovery, not yet proved
+- Run corrected sympy_proof_n8.py overnight
+
+## opus-2026-03-05-S4b — 2026-03-05 (Signed Position Identity + C verifier)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S8 (context continuation)
 **Files read:** Full parity_tournaments_fixed.tex (2189 lines), all opus-S4b new files (paper-connections.md, INVESTIGATION-BACKLOG.md, 4 new computation scripts), inbox messages MSG-004 and MSG-005
