@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S18 — 2026-03-06 (SC maximizer theorem, interlacing exhaustive n=5,6)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S17
+**Files read:** THM-022, opus inbox MSG-015, TANGENTS.md, OPEN-QUESTIONS.md
+**Summary of work:**
+  (1) **SC MAXIMIZER THEOREM (exhaustive n=4,5,6)**: Within each score sequence class, the isomorphism class with maximum H is ALWAYS self-converse. At n=6 score (3,3,3,2,2,2): SC max=45 > NSC max=43. At (4,3,3,2,2,1): SC max=37 > NSC max=31.
+  (2) **INTERLACING EXHAUSTIVE**: I(Omega(T-v),x) interlaces I(Omega(T),x) — 0/5120 at n=5, 0/196608 at n=6. EXHAUSTIVE.
+  (3) **Cycle analysis**: Within score class (3,3,3,2,2,2), all classes have c3=8 but SC has more disjoint pairs (alpha_2=4 vs 1).
+  (4) **Score regularity**: Low score variance correlates with high H. SC -> regular scores -> high H.
+  (5) **Paired class FALSE**: "Paired minimize H" is false (transitive H=1 is SC). But "SC max within score class" is TRUE.
+**New contributions:** T091, T092, paired_class_H_analysis.py, sc_maximizer_proof.py, interlacing_fast.py
+**Unresolved threads:**
+- Interlacing at n>=7 (background computation running)
+- Prove SC maximizer algebraically
+- Blueself = highest H among SC at even n?
+
 ## opus-2026-03-06-S16 — 2026-03-06 (Tiling model ↔ independence polynomial: blueself/blackself theorems)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S15 (context continuation)
