@@ -158,8 +158,9 @@
 
 ### INV-008: Striker-Chapman S3-equivariance (Open Problem 5 in paper)
 **Source:** oq:striker in tex, \cite{striker2011,chapman2001}
-**Status:** NOT INVESTIGATED AT ALL.
+**Status:** INVESTIGATED (kind-pasteur-S22 agent). Question imprecise as stated.
 **What:** Is the Striker-Chapman bijection between ASMs and tournaments S3-equivariant under the barycentric identification? Striker (2011) gives a unifying poset perspective connecting ASMs, plane partitions, Catalan objects, tournaments, and tableaux. Chapman (2001) connects ASMs to tournaments directly.
+**Finding:** Chapman's bijection maps oriented monotone triangles (not ASMs directly) to tournaments. Striker's tournament bijection uses the disjoint three-color poset {b,r,(g)}, while ASMs use the four-color poset {b,y,o,g} — different subposets. No S3 action is defined in either paper. The question needs precise formulation: (a) define "the bijection" (Chapman's Phi? Striker's poset? composition?), (b) define how S3 acts on both sides. Only then can it be tested at n=3,4.
 **Why it matters:** If S3-equivariant, then the S3 orbit counts in our Section 6 could be computed via ASM symmetries, potentially giving new structural constraints on H(T).
 **Next step:** Read Striker (2011) and Chapman (2001) carefully. Test equivariance computationally at small n.
 
@@ -502,8 +503,9 @@
 
 ### INV-045: Hopf algebra route to transfer matrix symmetry
 **Source:** T114, Grujić-Stojadinović arXiv:2402.07606, Feng arXiv:2510.25202
-**Status:** CONNECTION IDENTIFIED. Most promising algebraic route.
-**What:** The Hopf comultiplication Δ([T]) = Σ_S [T|_S]⊗[T|_{V\S}] encodes our subset convolution. Feng's dual Burnside process proves Q=AB is symmetric under detailed balance. The tournament constraint T[x,y]+T[y,x]=1 is the detailed balance condition. If formalized, this proves INV-001 for all n.
+**Status:** INVESTIGATED (kind-pasteur-S22 agent). No direct proof obtained.
+**What:** The Hopf comultiplication Δ([T]) = Σ_S [T|_S]⊗[T|_{V\S}] encodes our subset convolution. Feng's dual Burnside process proves Q=AB is symmetric under detailed balance. The tournament constraint T[x,y]+T[y,x]=1 is the detailed balance condition.
+**Finding:** Feng's framework FAILS because it requires positivity (probability transitions), but our M = E^T * Lambda * B has Lambda = diag((-1)^|S|) with negative entries. Grujic-Stojadinovic gives U_X = U_{X^op} (proved) but this is a GLOBAL identity, not per-entry M[a,b]=M[b,a]. The Hopf comultiplication IS cocommutative but this doesn't directly imply transfer matrix symmetry because E_a and B_b are different types of objects. **Most promising remaining paths:** (1) inductive s-variable approach, (2) Irving-Omar det/per formula (INV-046), (3) "signed Feng" extension (new theorem needed), (4) pointed Hopf algebra tracking distinguished vertices.
 **Why it matters:** Transfer matrix symmetry ⟹ OCF (via even-odd split + s-coefficient identity). A Hopf algebra proof would be clean and publication-worthy.
 **Next step:** (1) Express our transfer matrix M in Feng's AB framework precisely. (2) Verify detailed balance condition algebraically. (3) Apply Feng Thm 3.3 to conclude symmetry.
 
@@ -623,10 +625,11 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Why it matters:** Paley T_p has min-degree (p-1)/2 (doubly regular). This paper could give explicit bounds on the fraction of induced subtournaments that are Hamiltonian, which connects to our cycle counting.
 **Next step:** Apply their bounds to Paley tournaments. Check if this gives lower bounds on c_k counts.
 
-### INV-060: Eulerian cycle trace formula (arXiv:2502.02915, Feb 2025)
+### INV-060: Eulerian cycle trace formula (arXiv:2502.02915, Feb 2025) — CLOSED
 **Source:** kind-pasteur-2026-03-06-S19 web search; Ye Luo
-**Status:** NEW LEAD — SPECULATIVE
+**Status:** CLOSED (too remote, kind-pasteur-S22 agent investigation)
 **What:** Trace formula counting Eulerian cycles via "twisted" vertex and edge adjacency matrices. Uses homological spectral graph theory.
+**Finding:** Connection too remote to be actionable. Luo counts Eulerian cycles (edge traversals) via H_1 characters; we count Hamiltonian paths (vertex traversals) via inclusion-exclusion. Different domain, different algebraic structure. Closest classical analogue to our transfer matrix is Ryser's permanent formula, not Luo's trace formula.
 **Why it matters:** Our transfer matrix tr(M) = H(T) (THM-027) is also a trace formula. This paper's approach—using twisted adjacency matrices with spectral antisymmetry—could provide a template for proving our trace formula properties (symmetry, off-diagonal sum) at general n.
 **Next step:** Read the paper and check if "twisted adjacency" techniques apply to tournament transfer matrices.
 

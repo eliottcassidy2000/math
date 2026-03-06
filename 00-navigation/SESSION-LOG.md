@@ -21,11 +21,16 @@ Entry format:
   (2) **H=7 STILL IMPOSSIBLE — REFINED PROOF:** H=7 requires (alpha_1=3, i_2=0) via OCF. When i_2=0 (all cycles pairwise conflict), they share a common vertex, forcing c5>=1 and alpha_1>=4. When alpha_1=3 occurs, the cycles don't all conflict (i_2>=1), giving H>=11. Either way H!=7. Verified: 500k random n=7 tournaments, H=7 never found.
   (3) **Specific alpha_1=3 tournament:** bits=1474494, n=7, triples={0,1,2},{3,4,6},{4,5,6}, scores=(1,1,2,2,5,5,5), H=15 (not 7, because i_2=2).
   (4) **All-conflicting c3=3 at n=7:** 3000 tested, ALL have H=9 (alpha_1=4, i_2=0). Confirms the common-vertex mechanism still holds when i_2=0.
-**New contributions:** THM-029 corrected, OPEN-Q-019 updated
+**New contributions:** THM-029 corrected, OPEN-Q-019 updated, INV-060 closed, INV-008/INV-045 updated with agent findings
+**Background agent results (4 agents):**
+  - **Eulerian trace (INV-060):** CLOSED — too remote. Different domain (edge vs vertex), homological vs inclusion-exclusion.
+  - **Hopf algebra (INV-045):** No direct proof. Feng needs positivity (our signs break it). U_X=U_{X^op} is global, not per-entry. Best remaining: s-variable induction, Irving-Omar det/per.
+  - **Striker-Chapman (INV-008):** Question imprecise. Chapman and Striker use different bijections for different subposets. Needs precise formulation before testing.
+  - **Alpha_1=3 proof:** Exhaustive n=7 confirms 3360 tournaments with alpha_1=3. Clean proof for n<=6 via Moon's strong connectivity theorem.
 **Unresolved threads:**
-- Is H=21 a permanent gap? Structural analysis needed (multiple (alpha_1, i_2, i_3) combinations possible)
-- Background agents investigating Hopf algebra, Striker-Chapman, Eulerian trace — not yet completed
+- Is H=21 a permanent gap? Structural analysis needed
 - INV-052 (chromatic-Redei bridge) still unread
+- Transfer matrix symmetry (INV-001) still open — best approach: s-variable induction or Irving-Omar det/per
 
 ## opus-2026-03-06-S19b — 2026-03-06 (T^op equivalence verification, structural characterization of real-root failure)
 **Account:** Eliott (opus machine)
