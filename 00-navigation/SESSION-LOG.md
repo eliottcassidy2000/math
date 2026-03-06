@@ -30,6 +30,26 @@ Entry format:
 - Need full delta_I formula (including Delta(alpha_2)) for n>=8 symbolic verification
 - Inductive proof approach: use OCF at sub-tournament level to simplify Delta(alpha_k)
 
+## kind-pasteur-2026-03-05-S11 — 2026-03-05 (Tribonacci theorem; tiling class structure deepened)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S10 (context continuation)
+**Files read:** All warm-up files, full_class_analysis.py, tiling-class-structure.md, tiling_structure_analysis.py, OPEN-QUESTIONS.md, INVESTIGATION-BACKLOG.md, paper-deep-connections.md, broadcast MSG-011
+**Summary of work:**
+  (1) DISPROVED the 2^(n-2)+1 conjecture for the full tiling class at n=7,8 (H=31,57 vs expected 33,65).
+  (2) DISCOVERED the correct formula: H(T_full_n) = Tribonacci(n) = H(n-1)+H(n-2)+H(n-3), OEIS A000213. Verified through n=12.
+  (3) PROVED the Tribonacci recurrence via a combinatorial argument: Ham paths biject to "run decompositions" (ordered sequences of consecutive intervals with gap condition). Conditioning on first interval size yields f(n) = S(n-2) + S(n-3) where S is the partial sum; telescoping gives f(n) = f(n-1)+f(n-2)+f(n-3). Complete proof written up.
+  (4) Analyzed self-paired class "perpendicular" geometry: confirmed all self-flip pairs have Hamming midpoint exactly at m/2 (hypercube center). Self-paired classes straddle the transitive<->full diagonal. All self-paired tournaments are self-converse with odd H values.
+  (5) Pulled and reviewed opus-S5 findings: H(T_19) computed, alpha_1 conjecture disproved, Omega(T) always perfect, hard-core non-perturbative.
+**New contributions:**
+- Tribonacci theorem for full tiling class (complete proof in tiling-class-structure.md)
+- Updated tiling-class-structure.md with F3 correction, F11 (perpendicular geometry), F12 (Tribonacci)
+- Self-paired class H values all odd: 5, 11, 13, 15, 25, 41, 43, 45
+**Unresolved threads:**
+- Omega perfectness implications for OCF (agent running but incomplete)
+- Formula for number of self-paired classes: 1, 2, 8, ...
+- Bridge even-odd split to OCF
+- Transfer matrix symmetry proof (INV-001, highest priority per opus-S5)
+
 ## opus-2026-03-05-S5 — 2026-03-05 (Priority C+E investigation)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4b (continuation after context compaction)
