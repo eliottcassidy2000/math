@@ -25,7 +25,11 @@
       "Bash(GIT_EDITOR=true git rebase:*)",
       "Bash(unset CLAUDECODE; claude --help 2>&1 | head -80)",
       "Bash(grep:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(pip3 install:*)",
+      "Bash(kill 7000:*)",
+      "Bash(pkill:*)"
     ]
   },
   "hooks": {

@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S4 — 2026-03-05 (n=7 and n=8 PROVED, even-odd split discovery)
+**Account:** Eliott (opus machine)
+**Continuation of:** opus-2026-03-05-S3 (context continuation)
+**Files read:** TANGENTS.md (resolved merge conflict), THM-015, PROP-001, OPEN-QUESTIONS.md, SESSION-LOG.md, symbolic_proof.py, symbolic_proof_fast.py, kind-pasteur inbox messages
+**Summary of work:** Resolved git merge conflict from S3 rebase (renumbered my T032 to T039). Then wrote optimized n=7 exhaustive verifier using numpy-vectorized bitmask approach — PROVED OCF at n=7 (2^20 = 1,048,576 configs in 4 seconds). Extended to n=8 with chunked processing — PROVED OCF at n=8 (2^27 = 134,217,728 configs, 57 minutes). Discovered the Even-Odd Split Lemma: the adj decomposition delta = sum_S Delta(S,R) splits equally between even-|S| and odd-|S| terms, so delta = 2*(odd-S sum). This connects directly to the cycle formula (only odd cycles). The alternating sum sum(-1)^|S| Delta(S,R) = 0 is equivalent to OCF but provides a clean algebraic reformulation. Verified n=5,...,8.
+**New contributions:**
+- THM-015 updated: n=7 and n=8 PROVED
+- 04-computation/q009_prove_n7.py (numpy-vectorized exhaustive verifier)
+- 04-computation/q009_prove_n8.py (chunked n=8 verifier)
+- 04-computation/q009_even_odd_split.py (even-odd split discovery)
+- 04-computation/q009_alternating_sum.py (alternating sum analysis)
+- 03-artifacts/drafts/even-odd-split-lemma.md (new proof angle documentation)
+- Tangent T040 (even-odd split)
+- OPEN-Q-009 updated with proof frontier and even-odd split
+**Unresolved threads:**
+- n=8 exhaustive verification COMPLETE (134M/134M, 57 min)
+- Prove the alternating sum identity for ALL n (equivalent to OCF)
+- The even-odd split is a clean algebraic reformulation but doesn't simplify the proof
+
+---
+
 ## kind-pasteur-2026-03-05-S7 — 2026-03-05 (n=7 proof + structural analysis)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S6 (context continuation)

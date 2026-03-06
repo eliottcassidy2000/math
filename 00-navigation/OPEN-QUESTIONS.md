@@ -92,17 +92,34 @@ where Delta(alpha_k) depends recursively on alpha_{k-1} of cycle complements. Eq
 - n=8: needs correction for VD 3-5 pairs (simplified formula fails 8/30)
 - n=9+: needs alpha_3 terms (three mutually VD 3-cycles)
 
-**Remaining task:** Prove adj(i,j) - adj'(j,i) = delta_I combinatorially.
+**EXHAUSTIVE PROOF FRONTIER (opus-S4, extending kind-pasteur-S6):**
+- n<=6: proved by kind-pasteur-S6 (symbolic polynomial identity, THM-015)
+- n=7: PROVED by opus-S4 (2^20 = 1,048,576 configs, 4 seconds)
+- n=8: PROVED by opus-S4 (2^27 = 134,217,728 configs, 57 minutes, ALL passing)
+  Uses full A-clique formula (simplified formula fails at n=8 due to VD 3-5 pairs)
+- n=9 would need 2^35 ~ 34B configs — infeasible without new approach
+
+**Even-Odd Split Lemma (opus-S4, new discovery):**
+The adj decomposition delta = sum_S Delta(S, others\S) satisfies:
+  sum_{|S| even} Delta(S,R) = sum_{|S| odd} Delta(S,R)
+i.e., the alternating sum vanishes: sum (-1)^|S| Delta(S,R) = 0.
+This means delta = 2*(odd-S sum) where odd-S terms correspond to odd cycles.
+Verified n=5,...,8. This is EQUIVALENT to OCF but provides a clean algebraic
+reformulation as a vanishing alternating sum of bilinear forms.
+See 03-artifacts/drafts/even-odd-split-lemma.md.
+
+**Remaining task:** Prove the alternating sum identity for all n.
 
 **Key structural facts (both agents independently confirmed):**
 - All affected cycles contain {i,j} (complement unchanged by flip)
 - At most one affected cycle in any independent set (A-clique)
 - Complement values computable by inductive OCF
 - The swap involution (opus THM-014) gives adj(i,j)-adj'(j,i) = #U_T - #U_T'
+- Even-odd split: delta decomposes equally between even-S and odd-S terms (T040)
 
-See PROP-001 (kind-pasteur), THM-013, THM-014 (opus).
+See PROP-001 (kind-pasteur), THM-013, THM-014, THM-015 (both agents).
 
-**Source:** opus-2026-03-05-S2 (multiple sessions); kind-pasteur-2026-03-05-S5
+**Source:** opus-2026-03-05-S2/S4; kind-pasteur-2026-03-05-S5/S6
 
 ---
 

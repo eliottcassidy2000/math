@@ -1,10 +1,10 @@
 # THM-015: Swap Involution Polynomial Identity
 
-**Type:** Theorem (proved at n<=7 by exhaustive symbolic verification)
-**Certainty:** 5 -- PROVED at n<=7
-**Status:** PROVED at n<=7
+**Type:** Theorem (proved at n<=8 by exhaustive symbolic verification)
+**Certainty:** 5 -- PROVED at n<=8
+**Status:** PROVED at n<=8
 **Added by:** kind-pasteur-2026-03-05-S6
-**Updated by:** kind-pasteur-2026-03-05-S7
+**Updated by:** kind-pasteur-2026-03-05-S7, opus-2026-03-05-S4
 **Tags:** #ocf #arc-reversal #involution #proof #polynomial-identity
 
 ---
@@ -17,7 +17,7 @@ Define the **swap involution** on Hamiltonian paths using arc i→j: swap the po
 
 Let U_T = #{unmatched T-paths} and U_{T'} = #{unmatched T'-paths}.
 
-**Theorem:** For all n <= 7 (and conjecturally all n):
+**Theorem:** For all n <= 8 (and conjecturally all n):
 
 U_{T'} - U_T = delta_I
 
@@ -60,8 +60,8 @@ This holds as a polynomial identity, not just over {0,1}.
 
 This proof method converts the OCF identity (H(T) = I(Omega(T), 2)) into a finite polynomial identity that can be verified by exhaustive evaluation. Combined with the base case H(transitive) = 1 = I(empty, 2) and the arc-flip reachability of any tournament from the transitive tournament, this proves OCF for all n where the polynomial identity is verified.
 
-**Proved so far:** OCF for n <= 7.
-**Next target:** n = 8 (2^27 ~ 134M cases for {0,1} evaluation; SymPy polynomial approach with 40320 permutations may be more feasible).
+**Proved so far:** OCF for n <= 8.
+**Scaling:** n=7: 4s (2^20). n=8: 57min (2^27). n=9 would need 2^35 ~ 34B configs — infeasible without new approach.
 
 ---
 
@@ -71,7 +71,7 @@ This proof method converts the OCF identity (H(T) = I(Omega(T), 2)) into a finit
 - THM-013 (arc-flip formula): establishes delta_I = sum 2^k Delta(alpha_k)
 - THM-015 (this theorem): proves delta_H = delta_I by showing U_{T'} - U_T = delta_I
 
-Together these give: H(T) = I(Omega(T), 2) for all tournaments with n <= 7.
+Together these give: H(T) = I(Omega(T), 2) for all tournaments with n <= 8.
 
 ---
 
@@ -82,8 +82,13 @@ Together these give: H(T) = I(Omega(T), 2) for all tournaments with n <= 7.
 | 4 | 32 (2^5) | 6 | 32/32 PASS |
 | 5 | 512 (2^9) | 24 | 512/512 PASS |
 | 6 | 16384 (2^14) | 120 | 16384/16384 PASS |
-| 7 | 1048576 (2^20) | 720 | 1048576/1048576 PASS (opus-S3 27min, kind-pasteur-S7 775s) |
+| 7 | 1048576 (2^20) | 720 | 1048576/1048576 PASS (opus-S3 27min, opus-S4 4s, kind-pasteur-S7 775s) |
 | 7 | polynomial | 5040 | PASS as 20-variable polynomial identity (77s SymPy, kind-pasteur-S7) |
+| 8 | 134217728 (2^27) | 5040 | 134217728/134217728 PASS (opus-S4, 57 min) |
+
+n=7 verified by multiple methods: opus-S3 (27min), opus-S4 numpy-vectorized (4s), kind-pasteur-S7 SymPy (77s) and {0,1} (775s).
+n=8 uses full A-clique formula (VD 3-5 pairs make simplified formula fail).
+Code: 04-computation/q009_prove_n7.py, q009_prove_n8.py; 03-artifacts/code/sympy_proof_n7.py.
 
 ---
 
