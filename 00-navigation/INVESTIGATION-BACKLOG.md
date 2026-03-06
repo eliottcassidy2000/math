@@ -2,7 +2,7 @@
 
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
-**Last full repo scour:** opus-2026-03-05-S9
+**Last full repo scour:** opus-2026-03-06-S1
 **Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
@@ -302,6 +302,23 @@
 **Source:** T046
 **Status:** Idea only. NOT attempted.
 **What:** The bijection between Ham paths and 2-colored cycle sets, if it exists, might require a global construction like LGV lattice path counting. The non-local nature of the correspondence (T035 dead end) suggests a determinantal approach.
+
+### INV-036: Tiling grid geometry and class structure
+**Source:** opus-2026-03-06-S1 (deep tiling investigation)
+**Status:** INVESTIGATED. Key structural findings.
+**What:** How does the {0,1}^m tiling space geometry relate to tournament isomorphism classes?
+**Results:**
+- **Sigma (converse) acts cleanly on classes:** sigma permutes bits (no complement), preserves weight. Self-converse: 2,2,8,12 classes at n=3,4,5,6. Sigma-fixed tilings = 2^floor((n-1)^2/4).
+- **Complement does NOT respect classes:** unlike sigma, flipping all non-path arcs does not map classes to classes.
+- **Standard invariants almost distinguish:** At n=6, (score, c3, c5, omega_deg, H) fails only for sigma pairs (converse-paired classes) plus occasional self-converse coincidences.
+- **Triangle 3-cycle probability:** P=1/2 for consecutive triples (path arcs), P=1/4 for all others. E[c3] = (C(n,3) + n-2)/4.
+- **Strong H~c3 correlation:** r=0.956 at n=5,6. H = 1+2c3 exact at n<=4, breaks at n>=5.
+- **Bit-position variance:** Longest arc (gap=n-1) most predictive of class. Middle arcs vary most.
+- **Class transition graph:** Always connected. ΔH always even. E[ΔH]=0 for every arc position.
+- **Weight distributions distinguish:** Can separate classes sharing all tournament invariants.
+**Full writeup:** `03-artifacts/drafts/tiling-symmetry-analysis.md`
+**Scripts:** `04-computation/tiling_*.py` (5 files)
+**Next step:** (1) Investigate which tiling properties predict H beyond c3. (2) Connect sigma reduction to arc-flip proof strategy. (3) Look for grid-local rules that determine class.
 
 ---
 

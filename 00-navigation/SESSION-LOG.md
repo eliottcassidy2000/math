@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S1 — 2026-03-06 (Deep tiling geometry investigation)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S13 (backlog investigation)
+**Files read:** INVESTIGATION-BACKLOG.md, SESSION-LOG.md, OPEN-QUESTIONS.md, definitions.md, backlog-investigation-results.md, knuth-connections-research.md, tiling-class-structure.md, parity_tournaments_fixed.tex
+**Summary of work:**
+  (1) **SIGMA SYMMETRY**: Proved sigma (converse + relabel) acts cleanly on tiling classes. sigma PRESERVES bits (permutes, no complement) and weight. Sigma-fixed tilings = 2^floor((n-1)^2/4). Self-converse classes: 2,2,8,12 at n=3,4,5,6.
+  (2) **COMPLEMENT DOES NOT RESPECT CLASSES**: Unlike sigma, bit-complement (flip all non-path arcs) does NOT map classes to classes. This asymmetry is fundamental.
+  (3) **TRIANGLE 3-CYCLE FORMULA**: P(3-cycle) = 1/2 for consecutive triples, 1/4 for all others. E[c3] = (C(n,3) + n-2)/4 over random tilings.
+  (4) **STRONG H~c3 CORRELATION**: r = 0.956 at n=5,6. H = 1+2c3 exact at n<=4, breaks at n>=5 due to higher odd cycles.
+  (5) **CLASS TRANSITION GRAPH**: Always connected. ΔH always even (Rédei). E[ΔH] = 0 for every arc position. Self-loop fraction: 42%, 10%, 5% at n=4,5,6.
+  (6) **INDISTINGUISHABLE CLASSES**: At n=6, classes sharing all tournament invariants are either sigma pairs (converse twins), self-converse coincidences, or cross-score partners. Weight distribution can distinguish beyond tournament invariants.
+  (7) **BIT-POSITION VARIANCE**: Longest arc (gap=n-1) is most predictive of class. Middle arcs vary most within classes.
+**New contributions:**
+- INV-036 (tiling grid geometry), tiling-symmetry-analysis.md, 5 computation scripts
+**Unresolved threads:**
+- Find grid-local rules predicting class membership beyond c3
+- Connect sigma reduction to arc-flip proof strategy (INV-004)
+- Higher odd cycle contribution as correction to H ≈ 1+2c3
+
 ## kind-pasteur-2026-03-05-S15 — 2026-03-05 (Perpendicular maximizer, Claude's Cycles, ultra-log-concavity)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S14b (same session)
