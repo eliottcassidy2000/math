@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S7 — 2026-03-05 (Omega perfectness DISPROVED at n=8; claw-freeness trivial at n<=8)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S6 (context continuation x3)
+**Files read:** THM-019, grinberg-stanley-connection.md, tiling-class-structure.md, OPEN-QUESTIONS.md, SESSION-LOG.md, all inbox messages, omega_perfectness_implications.py
+**Summary of work:**
+  (1) Reviewed all new material from git pull: OCF proved by Grinberg-Stanley, THM-019, Tribonacci, tiling class structure.
+  (2) Committed endpoint decomposition / linearity work (q009_endpoint_decomp.py, q009_G_identity.py, q009_G_in_test.py, q009_linearity_proof.py) as historical contributions.
+  (3) PROVED: Omega(T) is trivially claw-free for n<=8 by vertex counting (3 pairwise v.d. odd cycles + 1 touching all three requires >= 9 vertices).
+  (4) DISPROVED: Omega(T) is NOT always claw-free at n=9 (90% of random tournaments have claws).
+  (5) DISPROVED: Omega(T) is NOT always perfect at n=8. 53.8% of random n=8 tournaments have a C5 (5-hole) in the 3-cycle conflict graph. Explicit counterexample constructed with 13 forced arcs.
+  (6) VERIFIED: Omega(T) appears perfect at n<=7 (0/1000 failures).
+  (7) CONFIRMED: OCF holds regardless of Omega perfectness (H=I(Omega,2)=417 at the n=8 counterexample).
+**New contributions:**
+- THM-019 CORRECTED: perfectness fails at n=8, holds for n<=7
+- OPEN-Q-014 RESOLVED (disproved)
+- 04-computation/omega_claw_fast.py (claw-freeness analysis)
+- 04-computation/omega_c5_test.py (C5 construction at n=8)
+- 04-computation/omega_claw_free_test.py (comprehensive test, slow)
+- Vertex counting theorem: claw impossible for n<=8
+**Unresolved threads:**
+- Do all-real-roots / log-concavity of I(Omega,x) survive at n>=8 despite imperfection?
+- What structural property of Omega(T) DOES explain OCF? (not perfectness, not claw-free)
+- Prove Omega(T) perfectness for n<=7 (clean vertex-count argument for C5?)
+
 ## kind-pasteur-2026-03-05-S12 — 2026-03-05 (CRITICAL: OCF proved by Grinberg-Stanley; comprehensive audit)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S11 (context continuation)

@@ -102,18 +102,23 @@ See PROP-001, THM-013, THM-014, THM-015, THM-016, THM-017, THM-018.
 
 ---
 
-## OPEN-Q-014 🟡
+## OPEN-Q-014 -- RESOLVED (DISPROVED)
 **Prove Omega(T) is always perfect (and possibly claw-free)**
 
-Computationally verified for all n<=5 (exhaustive) and n=6 (2000 sample, 0 failures).
-Chordality fails at n=6 (72/2000 non-chordal), so perfectness is tight.
+**DISPROVED by opus-2026-03-05-S7:**
+- **Perfectness FAILS at n=8.** 53.8% of random n=8 tournaments have a C5 (5-hole) in the
+  3-cycle conflict subgraph of Omega(T). Explicit counterexample constructed.
+- **Claw-freeness TRIVIALLY holds at n<=8** (vertex counting: 3 pairwise disjoint odd cycles
+  + 1 touching all three requires >= 9 vertices). FAILS at n=9 (90% of random tournaments).
+- **Perfectness holds for n<=7** (0 failures in 1000 random trials).
+- **OCF still holds** despite Omega(T) being imperfect (proved by Grinberg-Stanley).
 
-All roots of I(Omega(T), x) are real and negative (verified). Log-concavity and unimodality
-hold universally. If Omega(T) is claw-free, Chudnovsky-Seymour gives all-real-roots for free.
+The all-real-roots property of I(Omega(T), x) and log-concavity still hold empirically
+at n<=6. Whether they hold at n>=8 (where Omega is imperfect) needs separate investigation.
 
-See THM-019, INV-032.
+See THM-019 (corrected), `04-computation/omega_c5_test.py`, `04-computation/omega_claw_fast.py`.
 
-**Source:** opus-2026-03-05-S5 (observation), kind-pasteur-2026-03-05-S12 (verification)
+**Source:** opus-2026-03-05-S7 (disproof)
 
 ---
 
