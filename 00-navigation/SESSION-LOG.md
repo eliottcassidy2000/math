@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S6 — 2026-03-05 (Tribonacci web research: interval graph structure, Chudnovsky-Seymour connection)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S5 (context continuation)
+**Files read:** tiling-class-structure.md, full_class_analysis.py, web-research-connections.md, hard_core_fast.py, paper-deep-connections.md
+**Summary of work:** (1) Deep web research with Tribonacci structure in mind. (2) DISCOVERED that all odd cycles of T_full_n are consecutive intervals — Omega(T_full_n) is an INTERVAL GRAPH. (3) PROVED I(Omega(T_full_n), 2) satisfies Tribonacci recurrence independently of H(T_full_n) via weighted interval packing DP with telescoping. (4) Connected to Chudnovsky-Seymour: Omega(T) claw-free implies I(Omega(T), x) has ALL REAL (negative) ROOTS — log-concavity, positivity at x=2. (5) Connected to Chvátal-Sbihi: claw-free perfect graphs decompose via clique cutsets into elementary (line graphs of bipartite graphs) and peculiar atoms. (6) Identified Jerrum-Patel 2026 paper extending zero-free regions. (7) Found multiple combinatorial interpretations of Tribonacci (tilings, compositions, binary sequences).
+**New contributions:**
+- 03-artifacts/drafts/tribonacci-web-research.md (comprehensive synthesis)
+- INV-035 added to INVESTIGATION-BACKLOG (Tribonacci interval graph structure)
+- INV-032 updated with Chudnovsky-Seymour connection
+- Verified OCF for T_full family n=3,...,8 via interval graph computation
+**Unresolved threads:**
+- Prove Omega(T) is always claw-free (INV-032 — would unlock Chudnovsky-Seymour)
+- Direct bijection between run decompositions and weighted interval packings
+- Extend Tribonacci analysis to other tournament families
+- Check transfer matrix eigenvalues for T_full
+
 ## opus-2026-03-05-S5b — 2026-03-05 (THM-018: alpha_w^H = alpha_w^I PROVED symbolically at n=4,...,7)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4d (context continuation x2)
