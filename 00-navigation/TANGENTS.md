@@ -299,6 +299,9 @@ WITHIN each score sequence class, the isomorphism class with maximum H is ALWAYS
 **T092** #score-regularity-H-correlation #variance | certainty: high (exhaustive n=6) | source: kind-pasteur-2026-03-06-S18
 Score sequence regularity (low variance) strongly correlates with high H at n=6. Regularity 0.250 (most regular, (3,3,3,2,2,2)) → H=41-45. Regularity 2.917 (transitive, (5,4,3,2,1,0)) → H=1. SC classes cluster at low regularity (regular scores).
 
+**T094** #blueself-maximizer #even-n #global-max | certainty: high (exhaustive n=4,6) | source: kind-pasteur-2026-03-06-S18
+At even n, a BLUESELF class always achieves or ties for the global maximum H. n=4: unique blueself class has H=5 (global max). n=6: blueself classes have H=41 and H=45; H=45 ties with a non-self-flip class for global max. The blueself property (grid-symmetric + self-flip) is the strongest structural constraint, and it correlates with maximal H. At odd n, blueself doesn't exist (THM-022 Theorem 5), so the SC maximizer operates through blackself instead.
+
 **T093** #SC-mechanism #anti-automorphism #cycle-orbits | certainty: high (computational n=5,6) | source: kind-pasteur-2026-03-06-S18
 The SC maximizer mechanism varies by n. At n=5 score (3,2,2,2,1): all 3 SC classes have c3=4 but differ in c5 count (1,2,3). The SC with c5=3 has H=15 (max). At n=6 score (3,3,3,2,2,2): all 5 classes have c3=8 but differ in c5 and alpha_2. The anti-automorphism sigma acts on cycles with 0 fixed points, pairing them into orbits. Tournament with sigma=[5,4,3,2,1,0] (reversal) has 4 disjoint 3-cycle pairs (max), giving I.P.=[1,14,4] and H=45. The NSC classes have only 1 disjoint pair. SC structure creates more vertex-disjoint cycle packings via the orbit structure of sigma.
 
