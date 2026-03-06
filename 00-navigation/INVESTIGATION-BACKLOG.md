@@ -102,7 +102,7 @@
 - **Best circulant at n=9 gives H=3267 < 3357 = max.** H-maximizer at non-prime n is NOT circulant.
 **Next step:** (1) Find direct bijection between run decompositions and weighted interval packings. (2) Check if the transfer matrix for T_full has Tribonacci characteristic polynomial factor.
 
-### INV-001: Prove transfer matrix symmetry for all n — MAJOR PROGRESS
+### INV-001: Prove transfer matrix symmetry for all n — PROVED (THM-030)
 **Source:** T045, T103 (tangents), symmetry_check.py, symbolic_symmetry_proof.py
 **Status:** PROVED SYMBOLICALLY at n=4,5,6,7 (exact polynomial identity). Verified numerically n=4,...,8 (7500+ tests).
 **What:** M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) is always symmetric. This is STRONGER than the even-odd split.
@@ -121,7 +121,7 @@
 **ALGEBRAIC PROOF (kind-pasteur-S23b): M[a,b](-r) = M[b,a](r)** — 5-step proof: T(-r)=-T^T, path reversal under negated transpose, sign bookkeeping, S↔R relabeling. Verified n=4,5,6. This proves the EQUIVALENCE between (i) symmetry, (ii) even-r-powers, (iii) s-parity.
 **TOGGLE ANALYSIS (S23b):** At n=4, r^1 monomials cancel pairwise between different S-subsets. At n>=5, cancellation is multi-way (not simple pairwise). No clean single-vertex toggle involution found on whole subsets.
 **H(U) MATRIX (S23b, from Kogan/Hamiltonian cycle polynomial):** H(U)_{i,j} = sum of Ham path weights from i to j. Identity: U*H(U)^T = H(U)*U^T. For c-tournaments U+U^T = c(J-I), this gives UH^T = H(cJ-cI-U), but does NOT directly imply H=H^T. Also note: M[a,b] is NOT the same as H(T)_{a,b} (M has inclusion-exclusion signs, H is a direct sum).
-**Next step:** Prove the even-r-powers property for general n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using cancellation structure. **(4) Feng's dual Burnside (INV-045). (5) Irving-Omar det/per (INV-046). (6) Hopf comultiplication (T114). (7) Direct combinatorial proof that odd-degree s-monomials cancel under (-1)^|S| weighting. (8) NEW: Deletion-contraction via noncommutative W_T (Mitrovic). (9) NEW: Trace-of-odd-powers vanishing for skew-symmetric matrices.**
+**PROVED by opus-2026-03-06-S25 (THM-030).** Key Identity: B_b(W)+(-1)^m E_b(W) = 2r*col_sum(b). Inductive proof using first-edge, last-edge, and column recurrences. The s-terms cancel by induction; the residual is the Sigma identity at size m-1 (itself a corollary). Verified computationally m=2..6. This proves even r-powers, symmetry M[a,b]=M[b,a], and Sigma identities (T=r*Sigma even, Sigma=0 odd) for ALL n.
 **Scripts:** `04-computation/symbolic_symmetry_proof.py`, `04-computation/transfer_symmetry_analysis.py`
 **COEFFICIENT STRUCTURE (opus-S22 continuation):**
 - **[r^{n-2}] = (n-2)!** when n even, **0** when n odd. Proof: counting argument, sum_k C(n-2,k)(-1)^k k!(n-2-k)! = (n-2)! * sum_k(-1)^k. Verified n=3,...,6.
@@ -547,7 +547,7 @@
 
 ## Priority F: New leads from web synthesis (opus-2026-03-06-S5)
 
-### INV-045: Hopf algebra route to transfer matrix symmetry
+### INV-045: Hopf algebra route to transfer matrix symmetry — SUPERSEDED by THM-030
 **Source:** T114, Grujić-Stojadinović arXiv:2402.07606, Feng arXiv:2510.25202
 **Status:** INVESTIGATED (kind-pasteur-S22 agent). No direct proof obtained.
 **What:** The Hopf comultiplication Δ([T]) = Σ_S [T|_S]⊗[T|_{V\S}] encodes our subset convolution. Feng's dual Burnside process proves Q=AB is symmetric under detailed balance. The tournament constraint T[x,y]+T[y,x]=1 is the detailed balance condition.
@@ -555,11 +555,11 @@
 **Why it matters:** Transfer matrix symmetry ⟹ OCF (via even-odd split + s-coefficient identity). A Hopf algebra proof would be clean and publication-worthy.
 **Next step:** (1) Express our transfer matrix M in Feng's AB framework precisely. (2) Verify detailed balance condition algebraically. (3) Apply Feng Thm 3.3 to conclude symmetry.
 
-### INV-046: Irving-Omar det/per formula → transfer matrix
+### INV-046: Irving-Omar det/per formula → transfer matrix — SUPERSEDED by THM-030
 **Source:** T118, Irving-Omar arXiv:2412.10572 Proposition 2
-**Status:** CONNECTION IDENTIFIED. Not attempted.
-**What:** ham(D) = Σ_S det(Ā[S])·per(A[S^c]). The walk generating function W_D(z)=det(I+zXĀ)/det(I-zXA) encodes Hamiltonian path structure as ratio of determinants. This may directly relate to our transfer matrix decomposition.
-**Next step:** Express our M[a,b] in terms of Irving-Omar's matrix framework. Check if their det/per identity implies M symmetry.
+**Status:** SUPERSEDED. Transfer matrix symmetry now proved directly (THM-030, opus-S25) without needing Irving-Omar det/per.
+**What:** ham(D) = Σ_S det(Ā[S])·per(A[S^c]). The walk generating function W_D(z)=det(I+zXĀ)/det(I-zXA) encodes Hamiltonian path structure.
+**Remaining interest:** Irving-Omar's framework may still provide insight into WHY the Key Identity works — e.g., is there a matrix-algebraic interpretation of B_b + (-1)^m E_b = 2r·col_sum?
 
 ### INV-047: Paley maximizer via DRT theory
 **Source:** T116, Reid-Brown 1972, Nozaki-Suda arXiv:1202.5374
