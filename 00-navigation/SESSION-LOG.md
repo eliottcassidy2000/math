@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S9 — 2026-03-05 (tex deep analysis)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S8 (context continuation)
+**Files read:** Full parity_tournaments_fixed.tex (2189 lines), all opus-S4b new files (paper-connections.md, INVESTIGATION-BACKLOG.md, 4 new computation scripts), inbox messages MSG-004 and MSG-005
+**Summary of work:** Pulled opus-S4b contributions (transfer matrix symmetry discovery, investigation backlog, paper connections). Then performed line-by-line analysis of entire tex file. Found 5 issues: (1) DR mod-4 proof (Thm 7.4) has broken arithmetic — v_2 analysis produces impossible value, falls back to 3 examples. (2) SE-SYT formula (Thm 7.3) produces non-integer 2^{3/2} for m=2. (3) Transitive uniqueness proof (Prop 2.1) is incomplete/hand-wavy. (4) Verification record outdated (missing n≤8 results). (5) Rajkumar et al. missing from bibliography. Extracted 5 geometric insights, cataloged all 12 references with investigation priority, identified 5 most promising unexploited directions, and mapped paper concepts to recent discoveries. Created comprehensive tex-deep-analysis.md. Added 3 new investigation leads to backlog (INV-028b, INV-029b, INV-030b).
+**New contributions:**
+- 03-artifacts/drafts/tex-deep-analysis.md (comprehensive analysis report)
+- INV-028b: Fix DR mod-4 proof
+- INV-029b: Fix SE-SYT formula
+- INV-030b: Pin grid S_3 symmetry for OCF
+- Investigation backlog updated
+**Unresolved threads:**
+- Forcade 1973 GF approach (INV-023) — highest priority unexplored lead
+- Chapman 2001 ASM bijection (INV-021) — could give determinantal formula for H(T)
+- Striker 2011 S_3-equivariance (INV-008) — completely unexplored open problem
+- Transfer matrix symmetry proof (INV-001) — opus-S4b's discovery, not yet proved
+- Run corrected sympy_proof_n8.py overnight
+
+---
+
 ## opus-2026-03-05-S4b — 2026-03-05 (repo scour + backlog creation)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4b (context continuation — second part)

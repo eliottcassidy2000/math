@@ -182,6 +182,24 @@
 **Status:** NOT done.
 **What:** For n=3,...,7, compute Omega(T) for all non-isomorphic tournaments. Catalog which graphs appear. Look for forbidden subgraphs.
 
+### INV-028b: Fix DR mod-4 proof (Thm 7.4 in tex)
+**Source:** tex-deep-analysis.md (ISSUE-1)
+**Status:** Proof is BROKEN (arithmetic produces v_2 = -2). Result verified for n=3,7,11 only.
+**What:** The proof attempts Moon's formula arithmetic but fails. Need proper v_2 analysis using Kummer's theorem, or prove via alpha_1 parity directly (not just |C_3|).
+**Next step:** Compute alpha_1 mod 2 for DR_n using OCF. Possibly downgrade to "Verified Conjecture" in tex.
+
+### INV-029b: Fix SE-SYT formula (Thm 7.3 in tex)
+**Source:** tex-deep-analysis.md (ISSUE-2)
+**Status:** Classical formula cited gives non-integer (2^{3/2} for m=2). Result verified n=5,7.
+**What:** Find correct classical reference for SE-SYT count on 2-core shapes. Likely Stembridge (1996) or similar.
+**Next step:** Look up Stembridge's "Canonical bases and self-evacuating tableaux." Give clean proof or correct citation.
+
+### INV-030b: Pin grid S_3 symmetry for OCF
+**Source:** tex-deep-analysis.md (Section E)
+**Status:** NOT explored.
+**What:** The S_3 action on barycentric coordinates constrains the polynomial identity. Can it reduce the proof of delta_H = delta_I by exploiting the 6-fold symmetry? The subset convolution lives on Boolean lattice 2^{others} which is a sublattice of the pin grid.
+**Next step:** Check if delta_H = delta_I as polynomial has S_3 symmetry. If so, proving it on a fundamental domain suffices.
+
 ---
 
 ## Priority E: Tangents needing investigation
