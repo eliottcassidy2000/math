@@ -313,6 +313,63 @@ Bridging this gap requires either:
 2. Adapting the involution proof directly to the endpoint-conditioned setting
 3. Using deletion-contraction (Mitrovic) to prove even-r-powers inductively
 
+## 17. ALGEBRAIC PROOF: M[a,b](-r) = M[b,a](r) (NEW, proved in S23)
+
+**This is a clean algebraic proof of the equivalence between the two symmetry conjectures.**
+
+**Theorem:** For any c-tournament with weights t_ij = r + s_ij (where s_ij = -s_ji, r = c/2):
+```
+M[a,b](-r, s) = M[b,a](r, s)
+```
+
+**Proof (5 steps):**
+1. **T(-r) = -T(r)^T:** Since T(-r)[i,j] = -r + s_ij and -T(r)^T[i,j] = -(r + s_ji) = -(r - s_ij) = -r + s_ij. ✓
+2. **Path reversal under negated transpose:** E_a(V; -T^T) = (-1)^{|V|-1} B_a(V; T) (reversing a path of k arcs under -T^T gives (-1)^k times the reversed path weight under T).
+3. **Similarly:** B_b(V; -T^T) = (-1)^{|V|-1} E_b(V; T).
+4. **Substitution:** M[a,b](-r) = sum_S (-1)^|S| · [(-1)^|S| B_a(S∪{a}; T)] · [(-1)^|R| E_b(R∪{b}; T)] = sum_S (-1)^{|R|} B_a(S∪{a}) E_b(R∪{b}).
+5. **Relabel S↔R:** This equals sum_{S'} (-1)^{|S'|} E_b(S'∪{b}) B_a(R'∪{a}) = M[b,a](r). ✓
+
+**Corollary:** The following are equivalent:
+- (i) M[a,b] = M[b,a] (transfer matrix symmetry)
+- (ii) M[a,b](r) has only even powers of r
+- (iii) M[a,b](r,-s) = (-1)^{n-2} M[a,b](r,s) (s-parity)
+
+Proof: (i)⟺(ii) from M[a,b](-r) = M[b,a](r): M[a,b] = M[b,a] iff M[a,b](r) = M[a,b](-r) iff only even r-powers.
+
+**Verified computationally:** n=4,5,6 in `04-computation/m_negr_equals_m_swap.py`.
+
+## 18. Noncommutative Rédei-Berge: Key Properties (arXiv:2504.20968)
+
+Mitrovic's noncommutative W_X has:
+- **W_X = W_{X^op}** (Theorem 3.4) — the same T↔T^op symmetry
+- **Deletion-contraction:** W_X = W_{X\e} - W_{X/e}↑ (powerful induction tool)
+- **p-expansion:** W_X = sum_{σ} (-1)^{φ(σ)} p_{Type(σ)} (same as commutative)
+- **Multiplicativity:** W_{X·Y} = W_X · W_Y for certain graph operations
+
+The noncommutative version tracks vertex positions but does NOT directly encode endpoint-specific path counts. Extracting M[a,b] from W_X remains an open problem.
+
+## 19. Converse Invariance Polynomial (arXiv:2407.17051, Ai et al. 2025)
+
+For an oriented graph D, define the "converse invariance polynomial":
+```
+P_D(x) = sum_u (1+x)^{d+(u)} * (1-x)^{d-(u)}
+```
+**Theorem (Ai):** If D is converse invariant (same count in T and T^op for all tournaments T), then P_D(x) = P_{-D}(x), which requires ALL ODD COEFFICIENTS to vanish.
+
+**Parallel to our problem:** Our even-r-powers conjecture also requires odd coefficients to vanish. The Ai polynomial measures degree-sequence compatibility; our polynomial measures path-weight compatibility. Both capture T↔T^op symmetry through parity constraints.
+
+El Sahili proved all oriented graphs with max degree ≤ 2 (including Hamiltonian paths of any type) are converse invariant. But this is about UNWEIGHTED counts and doesn't directly give our weighted M[a,b] symmetry.
+
+## 20. Walk Generating Function and Endpoints (arXiv:2412.10572)
+
+The walk generating function W_D(z) = det(I + zXA^T) / det(I - zXA) for tournaments.
+
+The (a,b) entry of (I - zXA)^{-1} generates walks from a to b. Extracting the multilinear coefficient gives Hamiltonian walk counts. For c-tournaments:
+- A = rJ' + S (where J' = J-I, S skew-symmetric)
+- The walk GF becomes det(I + zX(rJ'-S)) / det(I - zX(rJ'+S))
+
+Under r → -r: this transforms via the T(-r) = -T^T identity, potentially connecting to the M(-r) = M(b,a) result.
+
 ## Open Connections Still to Explore
 
 - [ ] The LGV lemma for non-intersecting paths — can M[a,b] be expressed as a determinant of a path matrix?

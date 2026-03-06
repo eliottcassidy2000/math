@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S23b — 2026-03-06 (extended web research + algebraic proof)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S23
+**Summary of work:**
+  (1) **ALGEBRAIC PROOF: M[a,b](-r) = M[b,a](r)** — Clean 5-step proof using T(-r) = -T^T and path reversal. Verified n=4,5,6. This proves the EQUIVALENCE between transfer matrix symmetry and even-r-powers. Script: m_negr_equals_m_swap.py
+  (2) **Extensive web research (16+ new sources):** Found Mitrovic noncommutative Redei-Berge with deletion-contraction (arXiv:2504.20968), Ai converse-invariance polynomial (arXiv:2407.17051), Sawczuk-Gnang Hamiltonian cycle identity (arXiv:2510.02473), H(U) endpoint matrix with identity U*H(U)^T = H(U)*U^T, trace-of-odd-powers vanishing for skew-symmetric matrices.
+  (3) **Toggle involution analysis:** At n=4, r^1 terms cancel via pairwise monomial cancellation (each s_ij appears twice with opposite signs from different S-subsets). At n>=5, the cancellation is multi-way (not simple pairwise between subsets). No clean single-vertex toggle involution found.
+  (4) **Structure of M[a,b]:** Computed full transfer matrix at n=4 (all 6 off-diagonal pairs symmetric). At n=5: r-degree 2 (not 3), meaning r^3 also vanishes. At n=6: r^0(120 terms), r^2(48), r^4(1).
+**New scripts:** m_negr_equals_m_swap.py, m_as_determinant.py, toggle_involution_r1.py
+**Updated:** transfer-symmetry-web-research.md (sections 17-20 added)
+**Unresolved threads:**
+- Prove even-r-powers (or equivalently M[a,b]=M[b,a]) for general n — the central open problem
+- The H(U) matrix identity U*H(U)^T = H(U)*U^T — does it imply symmetry for c-tournaments?
+- The trace-of-odd-powers mechanism — can it be adapted to endpoint-conditioned sums?
+- Deletion-contraction induction via noncommutative W_T — how to extract M[a,b] from W_T?
+
 ## opus-2026-03-06-S10 — 2026-03-06 (positivity hierarchy, even cycle vanishing, hook Schur positivity)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S9
