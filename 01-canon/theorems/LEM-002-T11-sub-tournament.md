@@ -77,6 +77,12 @@ By a parallel computation with vertex 2 replaced (2 is NQR), the structure of T�
 
 **RESOLVED:** h_NQR = h({0,2}) = 201 (same as h_QR). CONJ-002 is refuted.
 
+## Verification Scripts
+
+- `04-computation/paley_h_sequence.py` — computes H for Paley sub-tournaments T₁₁∖{a,b}
+- `04-computation/paley_deletion_test.py` — score sequence and 3-cycle count of T₁₁∖{0,1}
+- `04-computation/paley_maximizer_test.py` — QR/NQR structure in sub-tournament
+
 ## References
 
 - Source: inbox/processed/2026-03-05/new/PALEY_T11_c9_ANALYSIS.md (Sections IV, V)

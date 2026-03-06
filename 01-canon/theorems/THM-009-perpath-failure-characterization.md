@@ -36,6 +36,12 @@ When all mu = 1, both sides are #TypeII. When some mu = 3, the RHS exceeds the L
 
 ---
 
+## Verification Scripts
+
+- `04-computation/n6_mu_distribution.py` — perfect binary separation at n=6: 100% correlation
+- `04-computation/per_cycle_identity.py` — per-path identity failure analysis
+- `04-computation/q009_proof_n5.py` — contrast with n=5 where all μ=1
+
 ## Consequences
 
 Answers OPEN-Q-003: the structural property distinguishing passing/failing triples at n = 6 is whether any Type-II position's complement vertices form a 3-cycle.

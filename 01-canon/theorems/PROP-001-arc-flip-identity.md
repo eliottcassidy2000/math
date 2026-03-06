@@ -124,6 +124,13 @@ of independent interest:
 
 ---
 
+## Verification Scripts
+
+- `04-computation/q009_ocf_arc_flip.py` — arc-flip invariance of E(T) = H(T) − I(Ω(T),2)
+- `04-computation/arc_reversal_decomposition.py` — full arc-reversal decomposition
+- `04-computation/verify_all_claims.py` — E(T) invariance verification across arc flips
+- `04-computation/q009_alpha_match.py` — independence polynomial coefficients under arc flips
+
 ## Source
 
 kind-pasteur-2026-03-05-S5 (original); kind-pasteur-2026-03-05-S12 (resolution)

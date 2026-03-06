@@ -122,6 +122,14 @@ This is INCORRECT at n>=8; must use full general formula.
 
 ---
 
+## Verification Scripts
+
+- `04-computation/q009_n8_deltaI.py` — general arc-flip formula verification at n=8
+- `04-computation/q009_n8_correct_formula.py` — verified formula; n≤7 simplification fails at n=8
+- `04-computation/q009_n8_residual.py` — residual terms from VD pairs including 5-cycles at n=8
+- `04-computation/q009_ocf_arc_flip.py` — OCF arc-flip perspective; ΔH = ΔI verification
+- `04-computation/arc_reversal_decomposition.py` — full decomposition of arc reversal effects
+
 ## The Identity D3-C3 = -sum(s_x)
 
 T[j][x]*T[x][i] - T[i][x]*T[x][j] = -s_x for each x in V\{i,j}.

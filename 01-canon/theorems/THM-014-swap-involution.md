@@ -77,6 +77,11 @@ since s_x = -1 iff {i,j,x} forms a 3-cycle using arc i->j.
 
 ---
 
+## Verification Scripts
+
+- `04-computation/q009_swap_involution.py` — swap involution on Hamiltonian paths
+- `04-computation/q009_nadj_analysis.py` — inclusion-exclusion decomposition of unmatched paths
+
 ## Verification
 
 | n | Trials | matched_T = matched_{T'} | #U_T - #U_{T'} = delta |

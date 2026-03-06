@@ -40,6 +40,11 @@ Total = |p(z)| + (3 - |p(z)|) = 3. QED
 
 ---
 
+## Verification Scripts
+
+- `04-computation/q009_algebra_n4.py` — exact algebraic analysis at n=4
+- `04-computation/verify_all_theorems.py` — verification of n=4 block-counting bijection
+
 ## Significance
 
 This is a clean combinatorial result showing that at n = 4, the "contiguous block" count is exactly 3 regardless of how z relates to the 3-cycle. For general n, the analogous count H_C^+(T) = sum_Q f_C(Q) depends on the structure of the complement tournament T[V \ V(C)]. See THM-011 for the general formula.

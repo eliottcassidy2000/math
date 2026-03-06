@@ -46,6 +46,12 @@ By a stars-and-bars/ballot sequence argument: this count is C(L−2, 2k−1).
 
 Verified computationally for L = 3, 5, 7 against all possible interior patterns.
 
+## Verification Scripts
+
+- `04-computation/ballot_sequence_test.py` — binomial formula C(L−2, 2k−1) verification for Type-II counts
+- `04-computation/q009_insertion_decomp.py` — internal signature pattern enumeration
+- `04-computation/q009_F_formula.py` — F formula tests including Type-II distribution
+
 ## Notes & History
 
 This is a **new result** added to the paper (labeled F4 in MASTER_FINDINGS). The clean binomial formula C(L−2, 2k−1) strongly suggests a connection to ballot sequences or Dyck paths. The bijective proof would be a clean standalone result.

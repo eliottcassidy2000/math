@@ -269,7 +269,7 @@ If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, 
 ## OPEN-Q-016 🟡
 **Prove SC Maximizer: Within each self-complementary score class, max H is achieved by SC tournament**
 
-Verified exhaustively at n=4,5,6,7. The mechanism: anti-automorphism sigma of SC tournament is an involution (sigma^2=id, at least one such exists). At even n, sigma is fixed-point-free (proved: fixed point implies score = (n-1)/2, non-integer). The sigma-orbits create natural pairings of odd cycles where paired cycles are vertex-disjoint, boosting alpha_2 in the independence polynomial and hence H = I(Omega(T), 2).
+Verified exhaustively at n=4,5,6,7. The mechanism: anti-automorphism sigma of SC tournament creates orbit pairing structure. **CORRECTION (opus-S18):** NOT all anti-auts are involutions — at n=6, two SC classes with |Aut|>1 have order-6 anti-auts (σ² is a non-trivial automorphism). However, every SC tournament has ≥1 involution anti-aut (verified n=4,5,6). At even n, involution sigma is fixed-point-free (proved: fixed point implies score = (n-1)/2, non-integer). The sigma-orbits create natural pairings of odd cycles where paired cycles are vertex-disjoint, boosting alpha_2 in the independence polynomial and hence H = I(Omega(T), 2).
 
 Two routes to max H observed at n=6:
 - Route A: Fewer total cycles but more disjoint pairs (high alpha_2)

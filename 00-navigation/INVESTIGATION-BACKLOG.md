@@ -40,12 +40,24 @@
 **What:** At n=6, blueself class with H=41 is NOT the SC maximizer in score class (3,3,3,2,2,2) (SC max is H=45, also blueself). Blueself classes are always SC and have regular scores, but not always max-H. The blueself with higher disjoint pair count (alpha_2=4) beats the one with more total cycles (alpha_1=16).
 **Script:** `04-computation/blueself_sc_maximizer_connection.py`
 
-### INV-041: Quasi-regularity of Omega(T) and real-rootedness mechanism
-**Source:** opus-2026-03-06-S17, T101
-**Status:** DISCOVERED. Strong computational evidence.
-**What:** Omega_3(T) is spectrally quasi-regular: lambda_max/avg_degree ≈ 1.005-1.011 for all n=5-15. Density stays above 0.5 even at n=15. I.P. degree ≤ 3 at n=10. 0 real-root failures in 700 samples total. The quasi-regularity may explain real-rootedness via a mechanism weaker than claw-freeness: for near-regular dense graphs, local neighborhood structure (each N(v) close to a union of ≤2 cliques) may hold even with occasional claws.
-**Next step:** Prove that the quasi-regularity of Omega_3(T) is a consequence of the tournament structure (vertex count argument). Then connect to Chudnovsky-Seymour local conditions.
-**Script:** `04-computation/omega_spectral_fast.py`
+### INV-041: Quasi-regularity of Omega(T) — EXPLAINED
+**Source:** opus-2026-03-06-S17 (T101), opus-2026-03-06-S18 (T103, proof)
+**Status:** EXPLAINED. Theoretical argument + verified n=5-20.
+**What:** Omega_3(T) is quasi-regular because adjacency depends on vertex-set intersection (sharing ≥1 vertex), not arc orientations. This makes Omega_3 an induced subgraph of J(n,3) (Johnson graph), inheriting its regularity. All 3-element subsets have identical intersection statistics, so degree of each 3-cycle concentrates around E[deg] = (C(n,3)−C(n−3,3))/4−1. The coefficient of variation CV = O(1/√m) → 0 as n→∞, giving λ_max/avg_deg ≈ 1+CV² → 1. Verified: CV drops from 0.05 (n=6) to 0.03 (n=20). This does not directly explain real-rootedness but constrains spectral structure.
+**Scripts:** `04-computation/omega_spectral_fast.py`, `04-computation/omega_quasireg_proof.py`
+
+### INV-042: Paley deletion maximizer — VERIFIED p=3,7,11
+**Source:** kind-pasteur-2026-03-06-S18e (T097), opus-2026-03-06-S18
+**Status:** VERIFIED at p=3,7,11. Conjecture for all Paley primes.
+**What:** H(T_p − v) = a(p−1) (OEIS A038375 max H at n=p−1). Verified: T_3−v: H=1=a(2), T_7−v: H=45=a(6), T_11−v: H=15745=a(10). By vertex-transitivity all deletions equivalent. Combined with T053 (T_p achieves a(p)), the maximizer chain is "hereditary" via vertex deletion. Claim A decomposition for T_7: diff=144=2×72, sum_mu=6×3+30+24=72 (all 3-cycle complements have a 3-cycle in Paley).
+**Next step:** Verify at p=19 (need H(T_19−v) = a(18)). Investigate: does the n=p−1 maximizer always come from Paley deletion, or can it be achieved by non-Paley tournaments too?
+**Scripts:** `04-computation/paley_deletion_test.py`
+
+### INV-043: Anti-aut involution existence — PROVED (THM-024)
+**Source:** opus-2026-03-06-S18 (T102, THM-024), correcting kind-pasteur S18e (T095)
+**Status:** PROVED. Clean group theory argument.
+**What:** Every SC tournament has ≥1 involution anti-automorphism. Proof: (1) Moon's theorem: |Aut(T)| is odd. (2) H = ⟨Aut(T), σ₀⟩ has order 2|Aut(T)| (even). (3) By Cauchy, H has order-2 element. (4) Can't be in Aut(T) (odd order group). (5) Must be in σ₀·Aut(T) = set of anti-auts. NOT all anti-auts are involutions (counterexamples at n=6 with |Aut|>1), but at least one always is.
+**Scripts:** `04-computation/anti_aut_involution_test.py`, THM-024
 
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)

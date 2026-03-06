@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S18 — 2026-03-06 (cross-refs complete, THM-024 proved, Paley deletion verified)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S17
+**Files read:** All theorem files, TANGENTS, INVESTIGATION-BACKLOG, OPEN-QUESTIONS, SESSION-LOG
+**Summary of work:**
+  (1) **CROSS-REFERENCING COMPLETE**: Added "Verification Scripts" sections to all 15 remaining theorem files (THM-003, 005-010, 012-014, 021, 023, PROP-001, LEM-001, LEM-002). All 30 theorem files now have script references.
+  (2) **THM-024 PROVED: Every SC tournament has an involution anti-aut.** Corrects T095/T093 which claimed ALL anti-auts are involutions (false at n=6). Proof uses Moon's theorem (|Aut(T)| odd) + Cauchy's theorem (⟨Aut(T), σ⟩ has even order → order-2 element in anti-aut coset). Clean 5-line group theory proof.
+  (3) **PALEY DELETION VERIFIED at p=11**: H(T_11 − v) = 15745 = a(10) = max H at n=10 (OEIS A038375). Extends the Paley deletion pattern: T_3→a(2), T_7→a(6), T_11→a(10). All confirmed.
+  (4) **QUASI-REGULARITY EXPLAINED (T103)**: Omega_3(T) is quasi-regular because adjacency depends on vertex-set intersection (Johnson graph structure). CV of degree = O(1/√m) → 0, forcing λ_max/avg_deg → 1. Verified n=5-20.
+  (5) **WINDOWS PATH FIXES**: Fixed 7 more scripts with Windows paths (kind-pasteur S18e additions).
+  (6) **CLAIM A DECOMPOSITION for T_7**: sum_mu = 6×3 + 30×1 + 24×1 = 72. All 3-cycle complements in Paley T_7 have a 3-cycle (mu=3). Corrected c_5 count (42 directed, not 21).
+**New contributions:** THM-024, T102, T103, INV-042, INV-043
+**Unresolved threads:**
+- SC maximizer at n=8 (computationally expensive, OPEN-Q-016)
+- Paley deletion at p=19 (need H(T_19−v) = a(18)?)
+- Full involution existence test at n=7 (too slow for brute force; proved theoretically via THM-024)
+
 ## opus-2026-03-06-S17 — 2026-03-06 (comprehensive verification + spectral analysis of Omega)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18

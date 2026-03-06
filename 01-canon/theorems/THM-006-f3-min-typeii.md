@@ -32,6 +32,11 @@ Since s[j]=1 and s[j+L−2]=0, the signature must transition from 1 to 0 somewhe
 
 The monotone pattern (1,…,1,0) achieves exactly one such transition (the final position). □
 
+## Verification Scripts
+
+- `04-computation/per_cycle_identity.py` — Type-II position analysis for cycle embeddings
+- `04-computation/ballot_sequence_test.py` — verifies monotone signature patterns achieving minimum
+
 ## Notes & History
 
 This lemma establishes that every cycle embedding "witnesses" at least one 3-cycle-detectable Type-II position. It's a key component in understanding how the per-path identity can potentially capture the contributions of longer cycles (though as OPEN-Q-001 shows, this capture is imperfect for n≥6).

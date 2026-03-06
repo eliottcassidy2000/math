@@ -11,8 +11,8 @@ Investigate how these overlapping subgrids relate to tournament structure.
 kind-pasteur-2026-03-06-S18e
 """
 
-import sys
-sys.path.insert(0, r'C:\Users\Eliott\Documents\GitHub\math\03-artifacts\code')
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import tournament_from_bits, hamiltonian_path_count, find_odd_cycles
 
 # Visualize the triangular grid

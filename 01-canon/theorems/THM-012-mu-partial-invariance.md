@@ -53,6 +53,11 @@ At n=6 with 3-cycles (|A| = 3): flipping an arc among the 3 available vertices c
 
 ---
 
+## Verification Scripts
+
+- `04-computation/mu_arc_invariance.py` — partial invariance under arc flips verification
+- `04-computation/arc_reversal_q009.py` — arc-reversal invariance of μ tests
+
 ## Significance for OPEN-Q-009
 
 For the arc-reversal invariance approach to proving Claim A, we need:

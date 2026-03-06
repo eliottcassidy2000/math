@@ -5,8 +5,8 @@ Corrects earlier analysis that used frozenset (wrong for 5-cycles on same vertex
 
 kind-pasteur-2026-03-06-S18e
 """
-import sys
-sys.path.insert(0, r'C:\Users\Eliott\Documents\GitHub\math\03-artifacts\code')
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import (tournament_from_bits, opposite_tournament,
                              find_odd_cycles, conflict_graph, hamiltonian_path_count)
 from itertools import permutations

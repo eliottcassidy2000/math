@@ -37,6 +37,11 @@ If v → a → b → v is a directed 3-cycle and (a,b) are consecutive in P' (i.
 
 **Bijection:** Each 3-cycle (v,a,b) with (a,b) consecutive in P' corresponds to exactly one Type-II position in P' (at the index j where a=P[j]). Each Type-II position corresponds to exactly one such 3-cycle. □
 
+## Verification Scripts
+
+- `04-computation/per_cycle_identity.py` — tests bijection between Type-II positions and 3-cycles
+- `04-computation/ballot_sequence_test.py` — ballot sequence connection to Type-II enumeration
+
 ## Notes & History
 
 This result, combined with THM-004, means the per-path identity is *fundamentally about 3-cycles* — it can never "see" longer odd cycles. This is exactly why the identity fails at n=6 when 5-cycles start contributing non-trivially to Claim A's RHS (see OPEN-Q-001 for the deeper question of why it works at n=5).

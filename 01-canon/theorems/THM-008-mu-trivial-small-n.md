@@ -41,6 +41,12 @@ This resolves OPEN-Q-001: the "n=5 mystery" is no mystery at all. 5-cycles exist
 
 ---
 
+## Verification Scripts
+
+- `04-computation/n5_mu_analysis.py` — proves μ(3-cycle)=1 at n≤5 via structural analysis
+- `04-computation/n6_mu_distribution.py` — comparison with n=6 where μ can vary
+- `04-computation/q009_proof_n5.py` — verification of per-path identity trivial form at n=5
+
 ## Relationship to Other Results
 
 - Explains why per-path identity holds at n <= 5 (MISTAKE-003 context)

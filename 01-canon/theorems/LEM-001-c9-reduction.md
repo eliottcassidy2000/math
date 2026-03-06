@@ -51,6 +51,12 @@ Therefore c₉(T₁₁) = (55/2)(402) = 11055. And H(T₁₁) = 95095 (not 4455)
 
 The constraint "h_QR + h_NQR ≤ 8" was derived from the false conjecture and is itself false.
 
+## Verification Scripts
+
+- `04-computation/paley_h_sequence.py` — computes H(P(p)) for Paley primes; QR/NQR orbit structure
+- `04-computation/paley_maximizer_test.py` — Paley tournament symmetry and maximizer properties
+- `04-computation/paley_deletion_test.py` — T₁₁ vertex deletion structure
+
 ## References
 
 - Source: inbox/processed/2026-03-05/new/PALEY_T11_c9_ANALYSIS.md (Section III)

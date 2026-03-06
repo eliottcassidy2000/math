@@ -51,6 +51,12 @@ We verify α₁² ≥ c₃² + 4c₅ where α₁ = c₃ + c₅ + c₇:
 
 ---
 
+## Verification Scripts
+
+- `04-computation/discriminant_real_roots.py` — Turán-based elementary proof verification; α₁² ≥ 4α₂
+- `04-computation/q009_polynomial_test.py` — independence polynomial discriminant checks
+- `04-computation/real_roots_deep.py` — Newton inequalities and ultra-log-concavity analysis
+
 ## Tightness
 
 The bound is **tight** at n = 6 and n = 7: tournaments with exactly two directed 3-cycles on complementary vertex sets (and no other odd cycles) achieve discriminant = 0, giving a double root at x = −1.

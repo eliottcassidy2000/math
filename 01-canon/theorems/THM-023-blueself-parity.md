@@ -48,6 +48,12 @@ so flip ALWAYS changes the score sequence of a GS tiling.
 - n=7 (odd): 0/512 GS tilings have flip-same-scores. 0 blueself.
 - n=8 (even): 1280/4096 GS tilings have score(0)=4=n/2. (blueself TBD)
 
+## Verification Scripts
+
+- `04-computation/blueself_odd_n_proof.py` — algebraic proof that blueself requires even n
+- `04-computation/blueself_parity.py` — score sequence transformation under flip
+- `04-computation/blackself8_deep.py` — comparison: blackself exists at all n≥5
+
 ## Remarks
 
 1. score(0)=n/2 is necessary but not sufficient for blueself.

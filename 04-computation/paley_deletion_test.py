@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Test: Paley tournament vertex deletion gives maximizer at n-1."""
-import sys
-sys.path.insert(0, r'C:\Users\Eliott\Documents\GitHub\math\03-artifacts\code')
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import hamiltonian_path_count, find_odd_cycles
 
 # Paley T_7: QR = {1, 2, 4} mod 7

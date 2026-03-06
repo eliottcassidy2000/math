@@ -11,8 +11,8 @@ This script tests exhaustively at n=4,5,6,7 (7 is slow).
 kind-pasteur-2026-03-06-S18e
 """
 
-import sys
-sys.path.insert(0, r'C:\Users\Eliott\Documents\GitHub\math\03-artifacts\code')
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import tournament_from_bits, opposite_tournament
 from itertools import permutations
 from collections import defaultdict

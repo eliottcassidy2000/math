@@ -41,6 +41,13 @@ Full proof in LaTeX paper §claim_strategies (subsec:scaffold).
 | 5 | 5,120 | 0 ✓ |
 | 6 | 196,608 | 0 ✓ |
 
+## Verification Scripts
+
+- `04-computation/q009_claim_b.py` — verifies Claim B identity I(Ω(T),2) − I(Ω(T−v),2) = 2·Σ μ(C)
+- `04-computation/q009_claim_b_proof.py` — inductive proof verification across n=4,5,6
+- `04-computation/q009_alternating_sum.py` — alternating sum identity (key lemma in Claim B)
+- `04-computation/verify_all_theorems.py` — comprehensive verification including Claim B
+
 ## Notes & History
 
 Claim B being proved while Claim A remains open is the central asymmetry of the paper. The OCF formula requires both: Claim B gives I(Ω(T),2) satisfies the right recurrence; Claim A gives H(T) satisfies the same recurrence; together they imply H(T) = I(Ω(T),2) by induction.
