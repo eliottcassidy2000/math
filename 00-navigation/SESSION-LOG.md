@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S24 — 2026-03-06 (KEY IDENTITY for inductive proof of even r-powers)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S23 (ran out of context)
+**Summary of work:**
+  (1) **KEY IDENTITY DISCOVERED AND VERIFIED:** odd(B_b(W)) = r * sum_v M_W[v,b]. Verified for n=3,4,5,6 and ALL choices of b. This identity is the LAST STEP needed for an inductive proof of even r-powers.
+  (2) **INDUCTIVE PROOF STRUCTURE COMPLETE:**
+    - Row recurrence: M_n[a,b] = B_b(V\{a}) - r*col_sum - s_part
+    - By induction, s_part is even in r, r*col_sum is odd in r
+    - odd(M_n) = odd(B_b) - r*col_sum = 0 by KEY IDENTITY
+    - Proof reduces to proving KEY IDENTITY for general n
+  (3) **KEY IDENTITY ANALYSIS:**
+    - Equivalent form: B_b + (-1)^m E_b = 2r * col_sum (using path reversal E_b = B_b(r,-s))
+    - T(S') = total Ham path weight through S' has definite r-parity (-1)^{|S'|-1} (proved via path reversal bijection)
+    - Derivative connection: d/dr B_b|_{r=0} = col_sum(0) (matches exactly)
+    - NOT termwise: odd(H(b,v)) != r*M[v,b] individually; cancellation is at sum level
+    - M[v,b] is NOT a cofactor of (I-T) or any obvious matrix
+  (4) **RULED OUT:** Cofactor approach definitively eliminated (degree mismatch + explicit mismatch at all n)
+**New scripts:** vertex_deletion_even_r.py, key_identity_proof.py, key_identity_why.py
+**Unresolved threads:**
+- PROVE the KEY IDENTITY odd(B_b(W)) = r * sum_v M_W[v,b] for general n
+- This would complete the inductive proof of even r-powers (and thus M[a,b] = M[b,a])
+- Possible approaches: direct algebraic manipulation, generating function, matrix identity
+
 ## kind-pasteur-2026-03-06-S23b — 2026-03-06 (extended web research + algebraic proof)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S23
