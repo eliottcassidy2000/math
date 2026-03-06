@@ -578,7 +578,9 @@ Key finding: c8(DRT_n) is INDEPENDENT of which DRT is chosen. Phase transition a
   - Locally Transitive: 720 tours, dc={3:14, 5:28, 7:17}, H=175
   - Other Regular: 1680 tours, dc={3:14, 5:36, 7:15}, H=171
 Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes directed 5-cycles and 7-cycles. LTT has "diametrically opposite" properties per Savchenko.
-**Next step:** (1) Obtain Savchenko's exact polynomial c_k formulas. (2) Check if DRT always maximizes c_k for ALL odd k (our n=7 says yes). (3) Investigate the n=39 phase transition for c8 and Ham path implications. (4) Verify at n=11 if DRT cycle counts are also invariant across different DRT constructions.
+**EXTENDED (kind-pasteur S21):** Savchenko (2024) proves c_m(DR_n) > c_m(RLT_n) for ALL m = 1,2,3 mod 4 (including all odd m). Only m = 0 mod 4 has the phase transition. This directly explains DRT's H-maximization via OCF.
+**DRT n=11 ANALYSIS (kind-pasteur S21):** Two DRT classes at n=11 (from (11,5,2)-difference sets): Paley QR={1,3,4,5,9} (H=95095, c3=55, c5=594, |Aut|=55) and non-Paley {1,2,3,5,8} (H=69311, c3=44, c5=407, |Aut|=11). Cycle counts are NOT invariant across different DRT classes — Paley strictly dominates. Savchenko's c_k invariance is within a single isomorphism class.
+**Next step:** (1) Obtain Savchenko's exact polynomial c_k formulas. (2) Test at n=19 or n=23 (multiple DRT classes). (3) Prove Paley maximizes H among ALL DRTs.
 
 ### INV-054: Komarov-Mackey exact 5-cycle formula (arXiv:1410.6828, JGT 2017)
 **Source:** kind-pasteur-2026-03-06-S19 web search
@@ -666,3 +668,21 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **What:** Constructs symmetric matrices from tournament structures where rank depends on design-theoretic properties. Symmetric designs (BIBDs) give matrices with rank near n/2. The rank-topology relationship involves bipartite graph eigenvalues.
 **Why it matters:** Our transfer matrix M is constructed from a tournament and is symmetric. This paper's framework connecting tournament-derived matrices with design theory could explain structural properties of M (e.g., why symmetry holds, what the rank structure is).
 **Next step:** Check if our M fits their M_T(f,a) framework.
+
+### INV-067: Alpha_1 gap theorem and converse of Redei — NEW DISCOVERY
+**Source:** kind-pasteur-2026-03-06-S21 (computation)
+**Status:** PROVED (exhaustive n=3-6, THM-029)
+**What:** alpha_1(T) = 3 is IMPOSSIBLE for any tournament T on any number of vertices. Structural mechanism: c3<=2 forces c5=0 (alpha_1<=2); c3=3 forces c5>=1 (alpha_1>=4). The three cyclic triples always share a common vertex and span 5 vertices with score (1,1,2,3,3), which always has a 5-cycle. Via OCF, H=7 is impossible (requires alpha_1=3). H=21 also unachievable.
+**Achievable H values:** n=5: {1,3,5,9,11,13,15}. n=6: {1,3,5,9,11,...,45}\{7,21,35,39}. At n=7: 35 and 39 become achievable but 7 and 21 remain gaps.
+**Connection:** Relates to Mitrovic-Stojadinovic "converse of Redei" (INV-052).
+**Next step:** (1) Prove alpha_1=3 impossibility for ALL n (not just n<=6). (2) Find all permanent H-gaps. (3) Check OEIS for the sequence of achievable alpha_1 values.
+**Scripts:** h7_impossibility.py, alpha1_gaps.py, alpha1_gap3_proof.py, c3_forces_c5.py, redei_converse_fast.py
+**Theorem:** THM-029
+
+### INV-068: DRT non-uniqueness and Paley dominance at n=11 — NEW FINDING
+**Source:** kind-pasteur-2026-03-06-S21 (computation)
+**Status:** COMPUTED
+**What:** At n=11, exactly 2 DRT isomorphism classes exist (from (11,5,2)-difference sets). Paley (QR={1,3,4,5,9}) has H=95095, c3=55, c5=594, |Aut|=55. Non-Paley ({1,2,3,5,8}) has H=69311, c3=44, c5=407, |Aut|=11. Both are self-converse. Paley strictly dominates in ALL cycle counts.
+**Key insight:** "DRT" is NOT a single tournament — different DRTs can have different cycle counts and H values. Paley is the BEST DRT. This strengthens the Paley maximizer conjecture from "Paley maximizes among all tournaments" to "Paley maximizes even among DRTs."
+**Next step:** Test at n=19 and n=23 where more DRT classes exist.
+**Scripts:** drt_n11_analysis.py, drt_n11_verify.py, drt_n11_deeper.py

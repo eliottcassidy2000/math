@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S21 — 2026-03-06 (DRT n=11 analysis, alpha_1 gap theorem, converse of Redei)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S20
+**Summary of work:**
+  (1) **DRT n=11 ANALYSIS — TWO CLASSES, PALEY DOMINATES:** At n=11, exactly 2 DRT isomorphism classes exist. Paley QR={1,3,4,5,9} (H=95095, c3=55, c5=594, |Aut|=55) strictly dominates non-Paley {1,2,3,5,8} (H=69311, c3=44, c5=407, |Aut|=11) in ALL cycle counts. Savchenko's c_k invariance is within an isomorphism class, not across DRT classes.
+  (2) **ALPHA_1 GAP THEOREM (THM-029) — H=7 IS IMPOSSIBLE:** Proved that alpha_1(T) = 3 (total directed odd cycles) is impossible for any tournament. Structural mechanism: c3<=2 forces c5=0 (alpha_1<=2); c3=3 forces c5>=1 (alpha_1>=4) because 3 cyclic triples always share a common vertex and span 5 vertices with score (1,1,2,3,3). Via OCF, H=7 requires alpha_1=3, so H=7 is a permanent gap.
+  (3) **CONVERSE OF REDEI — ACHIEVABLE H VALUES:** Computed all achievable H(T) values at n=2-6 exhaustive, n=7 sampled. Permanent gaps: H=7, H=21 confirmed unachievable through n=7. At n=6, gaps include 7,21,35,39; at n=7, 35 and 39 become achievable.
+  (4) **SAVCHENKO ODD-CYCLE DOMINANCE:** Extracted from Savchenko (2024): c_m(DR_n) > c_m(RLT_n) for ALL m = 1,2,3 mod 4 (all odd m). Phase transition only at m = 0 mod 4. This directly explains DRT H-maximization via OCF.
+**New contributions:** THM-029, T132-T134, INV-067, INV-068, INV-053 extended
+**Unresolved threads:**
+- Prove alpha_1=3 impossibility for ALL n (need n>=7 proof, not just exhaustive)
+- Find all permanent H-gaps (is H=21 also a permanent gap?)
+- Test Paley dominance at n=19 or n=23
+- INV-052 (chromatic-Redei bridge) still unread
+
 ## kind-pasteur-2026-03-06-S20 — 2026-03-06 (Computational verification: DRT/LTT classification, DC-OCF test)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S19

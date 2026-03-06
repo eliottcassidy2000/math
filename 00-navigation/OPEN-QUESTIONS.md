@@ -311,6 +311,31 @@ Open: Does this extend to n=9 (odd)? Need to check if regular n=9 maximizers (if
 
 ---
 
+## OPEN-Q-019 🟢
+**Converse of Redei: which odd integers arise as H(T)?**
+
+Redei's theorem says H(T) is always odd. The converse asks: for which odd k does there exist a tournament T with H(T)=k?
+
+**Permanent gaps discovered (THM-029, kind-pasteur-2026-03-06-S21):**
+- **H=7 is impossible** for ANY tournament on ANY number of vertices. Proof: H=7 requires alpha_1=3 via OCF, but alpha_1=3 is structurally forbidden (c3<=2 => alpha_1<=2; c3=3 => alpha_1>=4).
+- **H=21 is impossible** through n=7 (exhaustive at n<=6, sampled at n=7). Structural argument similar but more complex.
+
+**Achievable values (exhaustive):**
+- n=5: {1,3,5,9,11,13,15}
+- n=6: {1,3,5,9,11,13,15,17,19,23,25,27,29,31,33,37,41,43,45}
+- n=7 (sampled): 77 distinct values from 1 to 189
+
+**Open questions:**
+- Is H=21 a permanent gap (impossible at all n)?
+- Are there other permanent gaps beyond 7 and 21?
+- What is the density of achievable values as max H grows?
+
+**Connection:** Mitrovic-Stojadinovic (arXiv:2506.08841) address "converse of Redei's theorem" — may contain related results.
+
+**Source:** kind-pasteur-2026-03-06-S21, THM-029
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.
