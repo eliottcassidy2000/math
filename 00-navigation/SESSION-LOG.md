@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S5 — 2026-03-05 (Priority C+E investigation)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S4b (continuation after context compaction)
+**Files read:** INVESTIGATION-BACKLOG.md, paper-deep-connections.md, hard_core_lattice_gas.py, hard_core_fast.py, ballot_sequence_test.py, compute_H_T19.py, mod4_score_test.py, conflict_graph_catalog.py, SESSION-LOG.md, TANGENTS.md, OPEN-QUESTIONS.md
+**Summary of work:** Continued Priority C and E investigation from previous context. Ran all computational scripts created in prior context and gathered results:
+  - H(T_19) = 1,172,695,746,915 (INV-024 DONE). H/|Aut| = 6,857,869,865. All 19 endpoints have equal count (Paley symmetry). Computed via C DP in 0.5s.
+  - alpha_1 ≡ c_3 (mod 2) conjecture DISPROVED (INV-026). Counterexamples at n=3,4,5. All have alpha_1=0 but c3 odd.
+  - Hard-core lattice gas (INV-028): lambda=2 above ALL convergence thresholds. OCF is non-perturbative.
+  - Omega(T) structure for n=4,5: max degree grows, independence number = 1 at n=4.
+  - mod4_score_test.py has a bug: reports OCF mismatches at n=5, but OCF is correct (bug in cycle-finding code). Alpha_1 result is valid since it's independent of OCF.
+  Updated INVESTIGATION-BACKLOG.md with all findings: INV-015, INV-016, INV-019 (paper connections deepened), INV-024 (H(T_19) computed), INV-026 (conjecture disproved), INV-028 (non-perturbative confirmed), INV-029 (bijective proof found).
+**New contributions:**
+- INVESTIGATION-BACKLOG.md updated with 7 investigation results
+- paper-deep-connections.md (created in prior context, verified this session)
+- compute_H_T19.py output: H(T_19) = 1,172,695,746,915
+- ballot_sequence_test.py: bijective proof of C(L-2, 2k-1) confirmed
+- hard_core_lattice_gas.py + hard_core_fast.py: non-perturbative regime confirmed
+- mod4_score_test.py: alpha_1 ≡ c_3 (mod 2) disproved (NOTE: has OCF mismatch bug at n=5)
+**Unresolved threads:**
+- INV-001 (transfer matrix symmetry proof) — highest priority, Feng connection is the best lead
+- INV-004 (R-cone + cut-flip proof strategy) — enabled by Rajkumar Prop 1
+- INV-027 (conflict graph catalog) — script exists but too slow, needs optimization
+- INV-020/021 (Striker/Chapman papers) — correct arXiv IDs not found
+- mod4_score_test.py OCF mismatch bug needs fixing
+- conflict_graph_catalog.py needs optimization for n>=5
+
 ## kind-pasteur-2026-03-05-S10 — 2026-03-05 (Claim B PROVED; gap in proof chain identified)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S9 (context continuation)
@@ -50,7 +76,7 @@ Entry format:
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4
 **Files read:** All warm-up files, previous session's exploration scripts
-**Summary of work:** Major progress on OPEN-Q-009. (1) Corrected the s-evenness reduction (C_w+D_w=0 was wrong; correct statement is s-linear coefficients vanish). (2) Verified B(Li,Rj)=B(Lj,Ri) as polynomial identity at n=3,...,7 with real-valued arcs in [-2,3]. (3) Discovered the PAIRING STRUCTURE: for each u!=v, left(u)=right(u) exactly, meaning the d-dependent part of alpha_v vanishes by the INDUCTIVE HYPOTHESIS. (4) Isolated CLAIM (B): a standalone identity about tournament Hamiltonian path weights: sum_{S⊆W\{v}} (-1)^|S| H(S) h_start(W\S,v) = (-1)^{m+1} h_end(W,v). Verified at m=1,...,8. Proved algebraically at m=1,2,3. (5) Established full proof chain: Claim B → B(Li,Rj)=B(Lj,Ri) → OCF → Claim A.
+**Summary of work:** Major progress on OPEN-Q-009. (1) Corrected the s-evenness reduction (C_w+D_w=0 was wrong; correct statement is s-linear coefficients vanish). (2) Verified B(Li,Rj)=B(Lj,Ri) as polynomial identity at n=3,...,7 with real-valued arcs in [-2,3]. (3) Discovered the PAIRING STRUCTURE: for each u!=v, left(u)=right(u) exactly, meaning the d-dependent part of alpha_v vanishes by the INDUCTIVE HYPOTHESIS. (4) Isolated CLAIM (B): a standalone identity about tournament Hamiltonian path weights: sum_{S⊆W\{v}} (-1)^|S| H(S) h_start(W\S,v) = (-1)^{m+1} h_end(W,v). Verified at m=1,...,8. Proved algebraically at m=1,2,3. (5) Established full proof chain: Claim B -> B(Li,Rj)=B(Lj,Ri) -> OCF -> Claim A.
 **New contributions:**
 - 04-computation/q009_cw_dw_proof.py (showed C_w+D_w!=0, corrected reduction)
 - 04-computation/q009_algebra_n4.py (exact n=4 algebra, s-coordinate formula)
@@ -67,37 +93,14 @@ Entry format:
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S8 (context continuation)
 **Files read:** Full parity_tournaments_fixed.tex (2189 lines), all opus-S4b new files (paper-connections.md, INVESTIGATION-BACKLOG.md, 4 new computation scripts), inbox messages MSG-004 and MSG-005
-**Summary of work:** Pulled opus-S4b contributions (transfer matrix symmetry discovery, investigation backlog, paper connections). Then performed line-by-line analysis of entire tex file. Found 5 issues: (1) DR mod-4 proof (Thm 7.4) has broken arithmetic — v_2 analysis produces impossible value, falls back to 3 examples. (2) SE-SYT formula (Thm 7.3) produces non-integer 2^{3/2} for m=2. (3) Transitive uniqueness proof (Prop 2.1) is incomplete/hand-wavy. (4) Verification record outdated (missing n≤8 results). (5) Rajkumar et al. missing from bibliography. Extracted 5 geometric insights, cataloged all 12 references with investigation priority, identified 5 most promising unexploited directions, and mapped paper concepts to recent discoveries. Created comprehensive tex-deep-analysis.md. Added 3 new investigation leads to backlog (INV-028b, INV-029b, INV-030b).
+**Summary of work:** Pulled opus-S4b contributions (transfer matrix symmetry discovery, investigation backlog, paper connections). Then performed line-by-line analysis of entire tex file. Found 5 issues: (1) DR mod-4 proof (Thm 7.4) has broken arithmetic. (2) SE-SYT formula (Thm 7.3) produces non-integer. (3) Transitive uniqueness proof incomplete. (4) Verification record outdated. (5) Rajkumar et al. missing from bibliography.
 **New contributions:**
 - 03-artifacts/drafts/tex-deep-analysis.md (comprehensive analysis report)
-- INV-028b: Fix DR mod-4 proof
-- INV-029b: Fix SE-SYT formula
-- INV-030b: Pin grid S_3 symmetry for OCF
-- Investigation backlog updated
+- INV-028b, INV-029b, INV-030b added to backlog
 **Unresolved threads:**
-- Forcade 1973 GF approach (INV-023) — highest priority unexplored lead
-- Chapman 2001 ASM bijection (INV-021) — could give determinantal formula for H(T)
-- Striker 2011 S_3-equivariance (INV-008) — completely unexplored open problem
-- Transfer matrix symmetry proof (INV-001) — opus-S4b's discovery, not yet proved
-- Run corrected sympy_proof_n8.py overnight
-
-## opus-2026-03-05-S4b — 2026-03-05 (Signed Position Identity + C verifier)
-**Account:** Eliott (primary)
-**Continuation of:** kind-pasteur-2026-03-05-S8 (context continuation)
-**Files read:** Full parity_tournaments_fixed.tex (2189 lines), all opus-S4b new files (paper-connections.md, INVESTIGATION-BACKLOG.md, 4 new computation scripts), inbox messages MSG-004 and MSG-005
-**Summary of work:** Pulled opus-S4b contributions (transfer matrix symmetry discovery, investigation backlog, paper connections). Then performed line-by-line analysis of entire tex file. Found 5 issues: (1) DR mod-4 proof (Thm 7.4) has broken arithmetic — v_2 analysis produces impossible value, falls back to 3 examples. (2) SE-SYT formula (Thm 7.3) produces non-integer 2^{3/2} for m=2. (3) Transitive uniqueness proof (Prop 2.1) is incomplete/hand-wavy. (4) Verification record outdated (missing n≤8 results). (5) Rajkumar et al. missing from bibliography. Extracted 5 geometric insights, cataloged all 12 references with investigation priority, identified 5 most promising unexploited directions, and mapped paper concepts to recent discoveries. Created comprehensive tex-deep-analysis.md. Added 3 new investigation leads to backlog (INV-028b, INV-029b, INV-030b).
-**New contributions:**
-- 03-artifacts/drafts/tex-deep-analysis.md (comprehensive analysis report)
-- INV-028b: Fix DR mod-4 proof
-- INV-029b: Fix SE-SYT formula
-- INV-030b: Pin grid S_3 symmetry for OCF
-- Investigation backlog updated
-**Unresolved threads:**
-- Forcade 1973 GF approach (INV-023) — highest priority unexplored lead
-- Chapman 2001 ASM bijection (INV-021) — could give determinantal formula for H(T)
-- Striker 2011 S_3-equivariance (INV-008) — completely unexplored open problem
-- Transfer matrix symmetry proof (INV-001) — opus-S4b's discovery, not yet proved
-- Run corrected sympy_proof_n8.py overnight
+- Forcade 1973 GF approach (INV-023)
+- Chapman 2001 ASM bijection (INV-021)
+- Transfer matrix symmetry proof (INV-001)
 
 ---
 

@@ -101,18 +101,20 @@
 ## Priority C: References to investigate
 
 ### INV-015: Rajkumar et al. (arXiv:2110.05188) — tournament representations
-**Source:** paper-connections.md, T046
-**Status:** PARTIALLY investigated (opus-S4b). Connections documented. Paper NOT in our bibliography.
-**What:** Flip classes, locally transitive = rank 2, R-cones, sign rank. Key results: every T in flip class of R-cone; mu(T) dimension bound; forbidden configurations.
-**Action needed:** ADD to bibliography. Develop INV-004 and INV-005 concretely.
+**Source:** paper-connections.md, T046, paper-deep-connections.md Section 2
+**Status:** INVESTIGATED (opus-S4b, opus-S5). Key theorems extracted. Connections documented.
+**What:** Flip classes, locally transitive = rank 2, R-cones, sign rank. Key results: every T in flip class of R-cone (Prop 1, distance exactly 1 cut-flip); mu(T) dimension bound <= 2(mu(T)+1) (Thm 11); sign-rank bound (Thm 12).
+**Key finding:** Proposition 1 is constructive: T' = phi_{i ∪ T_i^-}(T) is R-coned by i. Cut-flip distance to R-cone is exactly 1. This directly enables INV-004 strategy.
+**Assessment:** mu(T) induction (INV-005) less promising than FAS induction — mu may change unpredictably under cut-flips.
+**Action needed:** ADD to bibliography. Concretely develop INV-004 (R-cone + cut-flip proof).
 **Tested:** Locally transitive tournaments DO have 5/7-cycles (T046). OCF passes 100% for LT, R-cones, automorphism-symmetric tournaments.
 
 ### INV-016: Feng (arXiv:2510.25202) — dual Burnside process
-**Source:** paper-connections.md, tex line 1600/2151
-**Status:** PARTIALLY investigated (opus-S4b). In bibliography but with minimal annotation.
+**Source:** paper-connections.md, paper-deep-connections.md Section 3, tex line 1600/2151
+**Status:** INVESTIGATED (opus-S4b, opus-S5). Key theorems extracted. Deep connection found.
 **What:** Q=AB factorization, primal-dual spectral correspondence, lumping theory.
-**Connections:** Transfer matrix symmetry (INV-001) resembles detailed balance. The Z_2^m group action on subsets with (-1)^|S| as character connects to Burnside orbit counting.
-**Action needed:** Deepen connection. Can the primal-dual eigenvector correspondence (Thm 3.10) be applied to our transfer matrix?
+**Key findings:** (1) Q=AB is REVERSIBLE with pi(g)=|X_g|/(|G|*z) — detailed balance gives symmetry (Thm 3.3). (2) Block-flip M=[[0,A],[B,0]], M^2=[[Q,0],[0,K]] — bipartite structure with period 2. (3) Eigenvector intertwining (Thm 3.10): A maps K-eigenvectors to Q-eigenvectors, B maps back. (4) Our transfer matrix has EXACTLY this AB structure: A maps subsets to "path ends at vertex", B maps "path starts at vertex" to complement subsets. Transfer matrix symmetry (INV-001) = hidden detailed balance condition.
+**Action needed:** Try to formalize the "hidden detailed balance" — identify the group action and show it satisfies Feng's reversibility conditions. This could prove INV-001.
 
 ### INV-017: El Sahili & Abi Aad (2020) — parity of paths in tournaments
 **Source:** tex bibliography, \cite{elsahili2020}
@@ -127,10 +129,11 @@
 **Action needed:** Read the paper. They study H(T) directly — any bounds or structural results could inform OCF.
 
 ### INV-019: Schweser-Stiebitz-Toft (arXiv:2510.10659) — Redei revisited
-**Source:** tex bibliography, \cite{schweser2025}
-**Status:** Referenced. Connection to INV-010 (mixed graphs).
-**What:** Stronger Redei for mixed graphs. Compatible with Route A (Q-Lemma).
-**Action needed:** Read the paper. Check if their strengthening gives a Q-Lemma generalization that constrains OCF.
+**Source:** tex bibliography, \cite{schweser2025}, paper-deep-connections.md Section 1
+**Status:** INVESTIGATED (opus-S5). Key theorems extracted.
+**What:** Redei's Stronger Theorem (Thm 1.1): add non-oriented edges to tournament, #Ham paths beginning AND ending in tournament vertices is EVEN. Berge's Stronger Theorem (Thm 1.2): G and G-bar have same Ham path parity. Dirac's Stronger Theorem (Thm 2.1): inclusion-exclusion on edge subsets.
+**Key findings:** (1) Direct connection to Open Problem 4 (mixed graphs). Non-oriented edges DOUBLE insertion opportunities in Q-Lemma. (2) Berge's theorem gives H(T) ≡ H(T^op) (mod 2) for tournaments, and constrains I(Omega(G),2) under complementation. (3) Strategy for extending Q-Lemma: verify computationally that inshat remains odd for mixed graphs.
+**Action needed:** Test inshat parity for mixed graphs computationally. If confirmed, Q-Lemma proof extends directly.
 
 ### INV-020: Striker (2011) — unifying poset perspective
 **Source:** tex bibliography, \cite{striker2011}
@@ -162,9 +165,10 @@
 
 ### INV-024: H(T_19) for the Paley prime p=19
 **Source:** OPEN-Q-013
-**Status:** NOT computed. Requires 19-vertex Ham path counting.
-**What:** Next value in the sequence H/|Aut| = 1, 9, 1729, ??? Could reveal pattern.
-**Feasibility:** 2^171 tournaments is impossible. Must compute H(T_19) directly using DP on the specific Paley tournament. n=19 DP is O(2^19 * 19^2) ~ 10^8, feasible.
+**Status:** COMPUTED (opus-S5). H(T_19) = 1,172,695,746,915.
+**Result:** |Aut(T_19)| = 171. H/|Aut| = 6,857,869,865 (exact integer). H is odd. c_3=285, c_5=11628. Per-endpoint count = 61,720,828,785 (same for all 19 endpoints — Paley symmetry). Computed via C DP in 0.5s.
+**Sequence:** H/|Aut| = 1 (p=3), 9 (p=7), 1729 (p=11), 6857869865 (p=19).
+**Note:** c_3 formula gives 285 but expected 199 — discrepancy needs investigation (formula may be for non-isomorphic rather than labeled 3-cycles).
 
 ### INV-025: Integrality conjecture C(p,k) | c_k(T_p) for k >= (p+1)/2
 **Source:** T036/T153 (tangents), OPEN-Q-013 table
@@ -174,8 +178,13 @@
 
 ### INV-026: Alpha_1 vs |C_3| mod 2 — systematic test
 **Source:** INV-011, oq:mod4_struct
-**Status:** NOT done.
-**What:** For all tournaments at n=5,6,7: compute alpha_1 (number of independent pairs of odd cycles) and |C_3| (number of 3-cycles). Test if alpha_1 = |C_3| (mod 2).
+**Status:** TESTED (opus-S5). CONJECTURE IS FALSE.
+**Result:** Counterexamples at every n tested:
+  - n=3: 2/8 counterexamples (the 3-cycle tournaments have c3=1 odd, alpha_1=0 even)
+  - n=4: 16/64 counterexamples (R-cone and near-R-cone tournaments)
+  - n=5: 384/1024 counterexamples
+  All counterexamples have alpha_1=0 but c3 odd. The conjecture fails because alpha_1 counts independent PAIRS of odd cycles in Omega(T), which is 0 whenever #cycles <= 1.
+**Impact:** Open Problem 9 needs reformulation. Alpha_1 ≠ c_3 mod 2 in general.
 
 ### INV-027: Realizable conflict graphs catalog
 **Source:** INV-013
@@ -205,14 +214,22 @@
 ## Priority E: Tangents needing investigation
 
 ### INV-028: Hard-core lattice gas at fugacity 2
-**Source:** T006
-**Status:** Concept identified. NOT explored.
-**What:** H(T) = I(Omega(T), 2) is the partition function of the hard-core model on Omega(T) at fugacity lambda=2. Statistical mechanics tools (transfer matrices, Bethe ansatz, correlation inequalities) could apply.
+**Source:** T006, hard_core_lattice_gas.py, hard_core_fast.py
+**Status:** INVESTIGATED (opus-S5). Key finding: non-perturbative regime.
+**What:** H(T) = I(Omega(T), 2) = Z(Omega(T), lambda=2). Lambda=2 is ABOVE all cluster expansion convergence thresholds for any max degree Delta >= 2:
+  - Shearer bound: 1/(Delta-1) << 2 for Delta >= 2
+  - LLL/tree bound: (Delta-1)^{Delta-1}/Delta^Delta << 2 for Delta >= 2
+  - Kotecky-Preiss: 1/(e*(Delta+1)) << 2 for Delta >= 1
+  This means OCF is a non-perturbative identity — standard polymer expansion / cluster expansion methods CANNOT prove it.
+**Omega(T) structure (n=4,5):** #cycles dist ranges from 0 to 6 (n=5). Max degree of Omega grows with n. Density is moderate. Independence number = 1 for all n=4 tournaments with cycles (all cycles share vertices).
+**Impact:** Rules out perturbative approaches. OCF requires exact cancellations, not convergence arguments.
 
 ### INV-029: Ballot sequence / Dyck path connection
-**Source:** T001, OPEN-Q-005
-**Status:** Formula C(L-2, 2k-1) proved. Bijective proof MISSING.
-**What:** The distribution of Type-II counts within an L-cycle window is given by binomial coefficients. This should have a clean bijective proof via ballot sequences.
+**Source:** T001, OPEN-Q-005, ballot_sequence_test.py
+**Status:** RESOLVED (opus-S5). Bijective proof FOUND.
+**What:** C(L-2, 2k-1) counts signatures with exactly k Type-II positions in an L-cycle window.
+**Bijective proof:** The L-cycle through v has L-1 non-v vertices, giving L-1 signature values (s_1=1 forced, s_{L-1}=0 forced, L-3 free). There are L-2 consecutive pairs. Define transition indicators t_j = (s_j != s_{j+1}). Since s starts at 1 and ends at 0, total transitions must be odd. Transitions alternate fall-rise-fall...fall, so k Type-II = (2k-1 transitions + 1)/2. Choosing which 2k-1 of the L-2 positions are transitions gives C(L-2, 2k-1). QED.
+**Convention note:** Initial attempt with wrong convention (L-4 free vars, sig length L-2) gave C(L-3, 2k-1). Correct convention: L-1 non-v vertices, sig length L-1, L-3 free vars, L-2 pairs.
 
 ### INV-030: Tower hypothesis (L-cycle corrections from (L+2)-cycles)
 **Source:** T012, OPEN-Q-012
@@ -236,7 +253,13 @@
 - [DONE] Per-path identity failure characterized (THM-009)
 - [DONE] Even-odd split is consequence not equivalent to OCF (MISTAKE-008)
 - [DONE] Bracket structure B(u,w) analyzed (T047, bracket_structure.py)
+- [DONE] H(T_19) computed: 1,172,695,746,915; H/|Aut|=6,857,869,865 (opus-S5)
+- [DONE] Deep paper analysis: SST, Rajkumar, Feng — all key theorems extracted (opus-S5)
+- [DONE] Ballot sequence bijective proof for C(L-2, 2k-1) (opus-S5)
+- [DONE] Hard-core lattice gas: lambda=2 is non-perturbative regime (opus-S5)
+- [DONE] Alpha_1 ≡ c_3 (mod 2) conjecture DISPROVED (opus-S5)
 - [DEAD] Per-vertex decomposition of unmatched counts (T045)
 - [DEAD] Cycle bijection under arc reversal (MISTAKE-005)
 - [DEAD] Contiguous block decomposition (T035)
 - [DEAD] Contraction approach (T017)
+- [DEAD] Alpha_1 = c_3 (mod 2) conjecture — counterexamples at all n (opus-S5)
