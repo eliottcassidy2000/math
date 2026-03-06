@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S4b — 2026-03-05 (repo scour + backlog creation)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S4b (context continuation — second part)
+**Files read:** Full tex paper (open problems, bibliography, literature), TANGENTS, OPEN-QUESTIONS, MISTAKES, MASTER_FINDINGS, proof-landscape, signed-adjacency-identity, all code file headers, paper-connections.md
+**Summary of work:** Completed the user's directive to establish a systematic practice of scouring the repo for leads. Read every significant file in the repo. Created INVESTIGATION-BACKLOG.md with 31 cataloged leads across 5 priority tiers (A: blocks OCF proof, B: structural understanding, C: references to investigate, D: computational targets, E: tangent investigations). Updated CLAUDE.md with mandatory Step 5b (repo scouring every session). Notable findings: Rajkumar paper (2110.05188) is NOT in the tex bibliography despite being connected; 6 bibliography entries have NOT been investigated for OCF connections (Striker, Chapman, Eplett, El Sahili x2, Forcade GF approach); 3 open problems from the paper have zero investigation (mixed graphs, Striker-Chapman equivariance, realizable conflict graphs).
+**New contributions:**
+- `00-navigation/INVESTIGATION-BACKLOG.md` — comprehensive lead catalog (31 items)
+- `CLAUDE.md` Step 5b — mandatory repo-scouring practice for all agents
+- Memory file created at `.claude/projects/.../memory/MEMORY.md`
+**Unresolved threads:**
+- INV-001 (transfer matrix symmetry proof) — highest priority
+- INV-008 (Striker-Chapman equivariance) — completely uninvestigated
+- INV-015 (add Rajkumar to bibliography)
+- INV-024 (compute H(T_19)) — feasible, not done
+- n=8 C verifier may still be running from earlier in this session
+
 ## kind-pasteur-2026-03-05-S8 — 2026-03-05 (error audit)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S7 (context continuation)

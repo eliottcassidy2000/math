@@ -65,18 +65,38 @@ If this generates a `inbox/PROCESSING-REPORT.md`, read it and integrate the cont
 
 ---
 
+## Step 5b: Scour the repo for leads (every session, ~5 min)
+
+**This step is MANDATORY.** Before diving into focused work, spend a few minutes scanning for unexplored connections and new leads:
+
+1. Read `00-navigation/INVESTIGATION-BACKLOG.md` — the master list of all leads
+2. Skim the **bibliography** in `03-artifacts/drafts/parity_tournaments_fixed.tex` (lines 2128-2187) — check if any reference has been added but not investigated
+3. Skim the **Open Problems** section (lines 1851-1919) — check if any has new computational evidence
+4. Check `00-navigation/TANGENTS.md` for any tangent not yet in the backlog
+5. Quickly scan any NEW files (check `git log --oneline -10 --name-only`) for leads embedded in code comments or draft documents
+
+**If you find a new lead:** Add it to `INVESTIGATION-BACKLOG.md` with source, status, and next step.
+**If you investigate a lead:** Update its status in the backlog.
+**If a lead turns out to be a dead end:** Move it to the "Completed / Closed" section with explanation.
+
+The goal is to ensure NO reference, conjecture, or connection sits uninvestigated without at least being cataloged.
+
+---
+
 ## Step 6: Do the actual work
 
 Work on the highest-priority open question or assigned task. Refer to:
 - `01-canon/theorems/CONJ-001-claim-a.md` — the central open problem
 - `02-court/active/` — any open disputes that need responses
 - `00-navigation/OPEN-QUESTIONS.md` — prioritized by 🔴/🟡/🟢
+- `00-navigation/INVESTIGATION-BACKLOG.md` — prioritized leads to investigate
 
 As you work:
 - Add new tangents to `00-navigation/TANGENTS.md`
 - Add new theorems/lemmas to `01-canon/theorems/` using the template
 - Log mistakes to `01-canon/MISTAKES.md`
 - Open court cases for disagreements, don't silently override existing claims
+- Update `00-navigation/INVESTIGATION-BACKLOG.md` when you make progress on any lead
 
 ---
 
