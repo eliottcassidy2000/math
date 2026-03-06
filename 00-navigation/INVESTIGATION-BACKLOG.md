@@ -123,6 +123,23 @@
 **H(U) MATRIX (S23b, from Kogan/Hamiltonian cycle polynomial):** H(U)_{i,j} = sum of Ham path weights from i to j. Identity: U*H(U)^T = H(U)*U^T. For c-tournaments U+U^T = c(J-I), this gives UH^T = H(cJ-cI-U), but does NOT directly imply H=H^T. Also note: M[a,b] is NOT the same as H(T)_{a,b} (M has inclusion-exclusion signs, H is a direct sum).
 **Next step:** Prove the even-r-powers property for general n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using cancellation structure. **(4) Feng's dual Burnside (INV-045). (5) Irving-Omar det/per (INV-046). (6) Hopf comultiplication (T114). (7) Direct combinatorial proof that odd-degree s-monomials cancel under (-1)^|S| weighting. (8) NEW: Deletion-contraction via noncommutative W_T (Mitrovic). (9) NEW: Trace-of-odd-powers vanishing for skew-symmetric matrices.**
 **Scripts:** `04-computation/symbolic_symmetry_proof.py`, `04-computation/transfer_symmetry_analysis.py`
+**COEFFICIENT STRUCTURE (opus-S22 continuation):**
+- **[r^{n-2}] = (n-2)!** when n even, **0** when n odd. Proof: counting argument, sum_k C(n-2,k)(-1)^k k!(n-2-k)! = (n-2)! * sum_k(-1)^k. Verified n=3,...,6.
+- **[r^2] for n=5 = 2·sum_{u∈U}(s_{au}+s_{bu})**. For n=6: degree-2 in s with all coefficients ±2. For n=4: just 2 (constant).
+- **[r^1] telescoping (n=4):** Each s_{uv} (u∈U, v∈{a,b}) appears exactly once with + and once with - across subsets. Moving vertex u between S and R flips the sign contribution.
+- **M is NOT a cofactor** of A=rJ'+S (exhaustive test n=3,4). Cofactors have degree n-1; M has degree n-2.
+- **M is NOT a permanent minor** of A either. The fundamental identity A(-r)=-A^T is clean but M does not decompose as a simple matrix function of A.
+- **Key algebraic identity:** A(-r,s) = -A(r,s)^T (since J' symmetric, S skew). Any expression built from A·A^T+A^T·A (which is even in r) could explain the property, but no such expression matching M has been found.
+- **Literature update:** Irving-Omar (arXiv:2412.10572), Mitrovic noncommuting Redei-Berge (arXiv:2504.20968) with deletion-contraction W_X = W_{X\e} - W_{X/e}^up, El Sahili-Ghazo Hanna proving T and T^op have same Hamiltonian path type distribution.
+**APPROACH RULING (opus-S22 continuation):**
+- ❌ Simple cofactor/minor of A (degree mismatch)
+- ❌ Permanent of A minor (doesn't match)
+- ❌ Adjugate entries of A, I±A, J-A (all fail)
+- ❓ Deletion-contraction via Mitrovic noncommuting Redei-Berge (unexplored, most promising NEW lead)
+- ❓ Irving-Omar walk generating function det(I+zXĀ)/det(I-zXA) (connection to M unclear)
+- ❓ Direct r^1=0 proof via telescoping + induction on n (promising for base case)
+**Next step:** (1) Try Mitrovic deletion-contraction approach — express M[a,b] recursively and prove even-r by induction. (2) Understand Irving-Omar matrix formula and whether it encodes M[a,b]. (3) Prove [r^1]=0 directly via the telescoping structure observed at n=4,5. (4) Previous approaches (Feng, Hopf, involution) remain viable but untested.
+**Scripts:** `04-computation/symbolic_symmetry_proof.py`, `04-computation/transfer_symmetry_analysis.py`, `04-computation/determinantal_identity_test.py`, `04-computation/det_compare_explicit.py`, `04-computation/r1_coefficient_analysis.py`, `04-computation/r_coefficient_structure.py`
 
 ### INV-002: Subset convolution identity — the core algebraic challenge
 **Source:** proof-landscape-for-general-ocf.md (Approach B), T047

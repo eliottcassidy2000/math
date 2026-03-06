@@ -28,6 +28,39 @@ Entry format:
 - The H(U) matrix identity U*H(U)^T = H(U)*U^T — does it imply symmetry for c-tournaments?
 - The trace-of-odd-powers mechanism — can it be adapted to endpoint-conditioned sums?
 - Deletion-contraction induction via noncommutative W_T — how to extract M[a,b] from W_T?
+## opus-2026-03-06-S23 — 2026-03-06 (even r-powers: determinantal search, coefficient structure, literature)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S22 (ran out of context)
+**Summary of work:**
+  (1) **EXHAUSTIVE COFACTOR/MINOR SEARCH:** M[a,b] is NOT a cofactor, minor, permanent minor, or adjugate entry of A=rJ'+S, I±A, J-A, or any simple matrix derived from A. Tested n=3,4 with all pairs. Degree mismatch: cofactors have degree n-1, M has degree n-2.
+  (2) **r-COEFFICIENT STRUCTURE DISCOVERED:** [r^{n-2}] = (n-2)! (n even) or 0 (n odd) — proved by counting argument. [r^2] for n=5 = 2·sum(s_{au}+s_{bu}), for n=6 = degree-2 polynomial with ±2 coefficients. Verified n=3,...,6.
+  (3) **r^1 TELESCOPING MECHANISM:** At n=4, each s_{uv} term in [r^1] appears once with + and once with - when a vertex u moves between S and R. At n=5, same telescoping at degree 2 in s. This is the KEY mechanism for odd-power vanishing.
+  (4) **LITERATURE SEARCH (3 parallel agents):** Found Irving-Omar (arXiv:2412.10572) matrix algebra for Redei-Berge, Mitrovic (arXiv:2504.20968) noncommuting version with deletion-contraction, El Sahili-Ghazo Hanna proving T and T^op equal Hamiltonian path type distributions. Key new lead: Mitrovic deletion-contraction W_X = W_{X\e} - W_{X/e}^up.
+  (5) **RE-INDEXING PROOF AUDITED (subagent):** M_T[b,a] = (-1)^{n-2} M_{T^op}[a,b] confirmed correct in all 4 steps.
+  (6) **APPROACH RULING:** Eliminated determinantal/cofactor approach (degree mismatch). Identified Mitrovic deletion-contraction as most promising new lead for inductive proof.
+**New scripts:** determinantal_identity_test.py, det_compare_explicit.py, r1_coefficient_analysis.py, r_coefficient_structure.py
+**New contributions:** INV-001 updated with coefficient structure and approach rulings
+**Unresolved threads:**
+- Prove even r-powers for general n (THE LAST GAP)
+- Mitrovic deletion-contraction approach (unexplored, most promising)
+- Irving-Omar walk generating function → M[a,b] connection (unclear)
+- Direct telescoping proof of [r^1]=0 (promising, needs generalization beyond n=4)
+
+## opus-2026-03-06-S22 — 2026-03-06 (continuation of S21 audit; even r-powers exploration)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S21 (ran out of context)
+**Summary of work:**
+  S21 performed exhaustive devil's-advocate audit of ALL claims:
+  (1) **PROVED M[a,b](-r,s) = M[b,a](r,s)** — clean derivation via path reversal on r. Under r→-r: E→B, B→E with sign (-1)^|S|, (-1)^|R|. Relabeling S↔R gives M[b,a].
+  (2) **VERIFIED even r-powers n=3-7** (200 random tests at n=6,7). r^1 cancellation at n=4: each s_ij appears twice with opposite signs. At n=5: toggle pairing (S∋u vs S∌u) splits sum into exact negatives.
+  (3) **M is NOT a matrix function** — exhaustive search: adj(rI±S), cofactors of r²I-S², Laplacian cofactors, char poly coefficients — none match M.
+  (4) **8-part audit ALL PASS:** path reversal, S↔R relabeling, circularity confirmed, even r-powers, c=0 symmetry, skew constraint required, general-c identity, r^1 polynomial fit.
+  (5) S22 (this session): reading S10 results on even cycle vanishing + hook Schur positivity. Exploring connection to even r-powers proof.
+**New scripts:** audit_path_reversal.py, even_r_powers_proof.py, matrix_identity_search.py, r1_cancellation_pairing.py, s_squared_connection.py
+**Unresolved threads:**
+- Prove even r-powers for general n (THE LAST GAP)
+- Even cycle vanishing ↔ even r-powers: same involution at different levels?
+- LGV/determinantal approach not yet tried seriously
 
 ## opus-2026-03-06-S10 — 2026-03-06 (positivity hierarchy, even cycle vanishing, hook Schur positivity)
 **Account:** Eliott (primary)
