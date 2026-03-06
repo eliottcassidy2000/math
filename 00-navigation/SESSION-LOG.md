@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S25 — 2026-03-06 (COMPLETE PROOF of Key Identity and even r-powers)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S24 (ran out of context)
+**Summary of work:**
+  (1) **COMPLETE INDUCTIVE PROOF OF THE KEY IDENTITY (THM-030):**
+    B_b(W) + (-1)^m E_b(W) = 2r * col_sum_W(b)
+  Proved by strong induction on m = |W|. The proof uses three recurrences:
+    (R1) B_b = r*T(W') + sum s_{bw} B_w(W')  [first-edge decomposition]
+    (R2) E_b = r*T(W') - sum s_{bw} E_w(W')  [last-edge decomposition]
+    (R3) col_sum(b) = (-1)^{m-2} T(W') + r*Sigma(W') + sum s_{bw} cs_{W'}(w) [column recurrence]
+  Combining: the s-terms cancel by induction, leaving r*T(W')[1-(-1)^m] = 2r^2*Sigma(W'),
+  which follows from the Sigma identity at size m-1 (itself a corollary of KEY IDENTITY at m-1).
+  (2) **COROLLARIES PROVED:**
+    - Sigma identity: T = r*Sigma (even m), Sigma = 0 (odd m)
+    - Even r-powers: M[a,b] has only even powers of r
+    - Symmetry: M[a,b] = M[b,a]
+  (3) **ALL VERIFIED computationally for m = 2, 3, 4, 5, 6** (every vertex, every recurrence)
+**New contributions:** THM-030, key_identity_complete_proof.py
+**Unresolved threads:** Connect to Irving-Omar framework and tiling isomorphism classes
+
 ## opus-2026-03-06-S24 — 2026-03-06 (KEY IDENTITY for inductive proof of even r-powers)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S23 (ran out of context)
