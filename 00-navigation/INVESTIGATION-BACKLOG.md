@@ -119,11 +119,19 @@
 - Full survey: 10 distinct (H, Fix, Aut) combinations among 2560 SC+Aut>1 tournaments.
 **Next step:** Confirm T_657 is isomorphic to a known Paley extension. Resolve definition ambiguity with paper author.
 
-### INV-013: Realizable odd-cycle conflict graphs (Open Problem 8 in paper)
+### INV-013: Realizable odd-cycle conflict graphs (Open Problem 8 in paper) — INVESTIGATED
 **Source:** oq:realizable in tex
-**Status:** NOT INVESTIGATED.
-**What:** Which graphs G arise as Omega(T) for some tournament T? This characterization could constrain the structure of the independence polynomial and potentially simplify OCF proofs.
-**Next step:** Compute Omega(T) for all small tournaments. Catalog which graphs appear. Look for forbidden subgraph characterizations.
+**Status:** INVESTIGATED (opus-S13 background agent). Key structural findings.
+**What:** Which graphs G arise as Omega_3(T) for some tournament T?
+**Results:**
+- Realizable isomorphism classes: 2 (n=3), 3 (n=4), 6 (n=5), 18 (n=6), ~97+ (n=7 sampled)
+- n≤5: Omega_3 is ALWAYS a complete graph (two 3-cycles on ≤5 vertices must share a vertex)
+- n=6: Always "complete minus matching" — complement is disjoint union of edges
+- n=7: First non-perfect graphs (11/97 classes have chi=omega+1)
+- alpha(Omega_3) ≤ floor(n/3) — proved by vertex counting (3k vertices for k disjoint 3-cycles)
+- 100% real-rooted across all realizable classes (exhaustive n≤6, sampled n=7)
+**Key insight:** The low independence number (alpha ≤ 2 for n≤8) means I(Omega_3, x) has degree ≤ 2, so real-rootedness is "easy" for Omega_3. The full Omega (including 5,7-cycles) has alpha ≤ floor(n/3) similarly, keeping degree low.
+**Next step:** Characterize which "complete minus matching" graphs at n=6 are NOT realizable. Extend to n=8 where alpha=2 still but degree may increase.
 
 ### INV-014: 2-adic tower / higher Redei theorems — PARTIALLY RESOLVED
 **Source:** OPEN-Q-008, T007, tex Section 5.5
