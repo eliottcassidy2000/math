@@ -15,7 +15,7 @@ The "full tiling" tournament T_full_n has adjacency: v_i beats v_j iff j=i+1 (pa
 - 5-cycles: {k, k+1, k+2, k+3, k+4} for k = 0,...,n-5
 - (2j+1)-cycles: {k,...,k+2j} for k = 0,...,n-2j-1
 
-**Proof sketch:** In T_full_n, the only "short forward" arcs are path edges i→i+1. All arcs i→j with j > i+1 are reversed (j→i). So any directed cycle must use path edges to go forward and backward arcs to jump back. A 3-cycle a→b→c→a needs two forward steps and one backward jump: k→k+1→k+2→k. The backward arc k+2→k exists since k+2 >= k+2. Similar for longer odd cycles: k→k+1→...→k+2j→k uses 2j path edges forward and one backward arc k+2j→k.
+**Proof:** In T_full_n, the only forward arcs are path edges i→i+1. For any i < j with j >= i+2, the arc goes j→i (backward). Therefore, in any directed cycle, you can only increase the vertex label by +1 (via a path edge) and can only decrease it by -2 or more (via a backward arc). If the vertex set of a cycle had a gap (two consecutive elements s_i, s_{i+1} with s_{i+1} - s_i >= 2), then crossing that gap forward would require a non-path forward arc, which doesn't exist. Once you drop below the gap via a backward arc, you can never return above it. So the vertex set must be gap-free, i.e., a consecutive interval [k, k+L-1]. For odd length L=2j+1, the unique cycle is k→k+1→...→k+2j→k (using 2j path edges forward and one backward arc k+2j→k, which exists since k+2j >= k+2).
 
 **Consequence:** Omega(T_full_n) is an INTERVAL GRAPH on odd-length intervals on {0,...,n-1}. Two cycles conflict iff their intervals overlap. The number of cycles is sum_{j=1}^{floor((n-1)/2)} (n-2j).
 
@@ -62,19 +62,13 @@ This suggests a **deeper structural correspondence** between run decompositions 
 If G is claw-free, then all roots of I(G, x) are real.
 
 ### Implication for OCF
-Since Omega(T) is ALWAYS claw-free (verified exhaustively n<=6, sampled n=7,8):
-- **I(Omega(T), x) has all real roots** for every tournament T
-- Since coefficients of I are positive, all roots are NEGATIVE real
-- Therefore I(Omega(T), x) > 0 for all x > 0
-- In particular, I(Omega(T), 2) > 0 always, consistent with H(T) >= 1
+**UPDATE (opus-S7):** Omega(T) is claw-free only for n<=8 (trivially, by vertex counting) and FAILS at n=9 (90% of random tournaments have claws). Omega(T) is also NOT always perfect (C5 appears at n=8, 53.8%).
 
-**Stronger implications:**
-- I(Omega(T), x) = product_{r root} (1 + x/|r|) where all |r| > 0
-- At x=2: H(T) = I(Omega(T), 2) = product(1 + 2/|r_i|), each factor > 1
-- The coefficients of I are LOG-CONCAVE (follows from all-real-roots)
-- The independence sequence (i_0, i_1, ..., i_alpha) is unimodal
+**For n<=8:** Chudnovsky-Seymour applies, giving all real (negative) roots, log-concavity, positivity. This is trivially true because claw-freeness is trivially true.
 
-**Key question:** Can we prove Omega(T) is claw-free for all T? This would give all-real-roots for FREE via Chudnovsky-Seymour.
+**For n>=9:** Chudnovsky-Seymour does NOT directly apply. However, empirical testing (200 random n=8 tournaments including imperfect ones) shows all roots remain real and negative even when Omega has C5 (imperfect). This suggests a **deeper explanation** for real-rootedness that goes beyond claw-freeness.
+
+**Key question (revised):** Does I(Omega(T), x) have all real roots for ALL tournaments at ALL n? If so, this would be a new theorem about conflict graphs not explained by claw-freeness alone.
 
 ---
 
@@ -99,9 +93,9 @@ I(G, x) = I(G_1, x) * I(G_2, x) / I(K, x)
 (The clique contributes to both parts; dividing by I(K,x) corrects double-counting.)
 
 ### For Omega(T):
-If we can show Omega(T) has clique cutsets, then I(Omega(T), 2) FACTORS into a product of atom contributions. If each atom's contribution mirrors a piece of the Hamiltonian path count (via transfer matrix blocks), OCF would follow from the factorization.
+**UPDATE (opus-S7):** Omega(T) is NOT always claw-free perfect, so Chvátal-Sbihi does not apply universally. This decomposition approach works only for n<=8 where claw-freeness is trivial. OCF is proved by Grinberg-Stanley using entirely different methods (symmetric functions / matrix algebra), not graph decomposition.
 
-**The T_full example illustrates this:** Omega(T_full_n) is an interval graph, which decomposes via clique cutsets at every position. The DP sweep computing I(Omega, 2) is exactly this factorization.
+**The T_full example still illustrates the principle:** Omega(T_full_n) is an interval graph (always chordal, always perfect, always claw-free), and the DP sweep computing I(Omega, 2) mirrors the clique-cutset factorization. This is a useful illustration even though the approach doesn't generalize.
 
 ---
 
@@ -135,11 +129,9 @@ The symbolic dynamics of the Tribonacci substitution produces a domain exchange 
 Extends Chudnovsky-Seymour to show zero-free REGIONS for independence polynomials of H-free graphs (for any fixed subdivided claw H). Combined with Barvinok's interpolation method, gives FPTAS for computing I(G, x) in these zero-free regions.
 
 ### For OCF:
-Since Omega(T) is claw-free, I(Omega(T), x) has all roots on the negative real line. The largest (closest to 0) root r_max determines the radius of convergence of the cluster expansion.
+**UPDATE (opus-S7):** Omega(T) is NOT always claw-free (fails at n=9). However, all-real-roots appears to hold empirically even for imperfect, non-claw-free Omega(T). If true universally, the roots are all on the negative real line regardless of claw-freeness.
 
-**Key question:** What is r_max for Omega(T) as a function of n? If |r_max| > 2 for all T, then x=2 is in the convergent regime and I(Omega(T), 2) can be computed term-by-term. If |r_max| < 2 for some T, then exact cancellations are needed.
-
-From our earlier analysis (Scott-Sokal): lambda=2 is above the Shearer bound for max degree >= 2. But Chudnovsky-Seymour gives ALL roots real, not just in the Shearer disk. The actual zero structure of I(Omega(T), x) could be much better than the worst-case Shearer bound.
+**Key question (revised):** Does I(Omega(T), x) always have all real roots? If so, this is NOT explained by Chudnovsky-Seymour and would be a genuinely new property of tournament conflict graphs. Testing at n=9 and n=10 would be informative.
 
 ---
 
@@ -216,21 +208,17 @@ The fact that interpretation (5) counts H(T_full) and interpretation (6) counts 
 
 3. **The key to proving OCF might be showing that the clique-cutset decomposition of Omega(T) mirrors the vertex-deletion/subset-convolution structure of H(T) for ALL tournaments, not just T_full.**
 
-### Tier 1 Priority (highest potential)
+### Revised Priorities (post-Grinberg-Stanley proof, post-claw-free disproof)
 
-1. **Prove Omega(T) is always claw-free** (INV-032). This gives all-real-roots via Chudnovsky-Seymour and enables the Chvátal-Sbihi decomposition.
+**OCF is proved.** The remaining questions are structural and explanatory.
 
-2. **Study the clique-cutset structure of Omega(T)** for general tournaments. Does Omega always decompose in a way that mirrors the Ham path DP?
+1. **Test all-real-roots conjecture at n>=9.** Does I(Omega(T), x) always have all real (negative) roots, even when Omega is not claw-free? This would be a genuinely new theorem. (Tested at n=8: holds for all 200 sampled, including imperfect Omega.)
 
-3. **Develop the transfer matrix interpretation.** The n×n transfer matrix for H(T) should relate to the independence polynomial of Omega(T) via Chvátal-Sbihi atoms.
+2. **Extend the Tribonacci analysis to other tournament families.** The T_full family is the one case where Omega has beautiful interval graph structure. Do circulant, Paley, or other families yield recognizable recurrences?
 
-### Tier 2 Priority
+3. **Find a bijection between run decompositions and weighted odd-interval packings** for T_full, providing a bijective proof of OCF for this family (complementing the algebraic Grinberg-Stanley proof).
 
-4. **Map the zero structure of I(Omega(T), x).** Since all roots are negative real (Chudnovsky-Seymour + claw-free), compute the largest root for various T. Determine whether x=2 is always above all roots.
-
-5. **Extend the Tribonacci analysis to other tournament families.** Do other constructive families (circulant tournaments, Paley tournaments, etc.) yield recognizable recurrences for H(T_n)?
-
-6. **Find a bijection between run decompositions and weighted odd-interval packings** for T_full, providing a bijective proof of OCF for this family.
+4. **Characterize the phase transition**: Why does perfectness fail at exactly n=8 and claw-freeness at n=9? What structural property of Omega(T) DOES hold universally?
 
 ---
 

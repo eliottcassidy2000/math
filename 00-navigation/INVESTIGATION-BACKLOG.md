@@ -7,15 +7,14 @@
 
 ---
 
-## Priority A: Directly blocks or could prove OCF
+## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
 
-### INV-032: Omega(T) is always claw-free AND perfect — Dyer-Jerrum decomposition
-**Source:** Web research opus-S5, arXiv:1909.03414 (Dyer-Jerrum-Müller-Vušković)
-**Status:** CLAW-FREENESS VERIFIED computationally (exhaustive n<=6, sampled n=7,8). NOT proved.
-**What:** Omega(T) is always (claw, odd-hole)-free. This is exactly the class studied by Dyer-Jerrum, who show the partition function of independent sets can be computed via clique-cutset decomposition into atoms. For claw-free perfect graphs, the structure theorem (Chvátal-Sbihi) decomposes into line graphs of bipartite graphs (computable via permanent) or "peculiar" graphs.
-**Why this could prove OCF:** If the clique-cutset decomposition of Omega(T) mirrors the Hamiltonian path decomposition of the tournament, then I(Omega, 2) = H(T) follows from the decomposition structure. The claw-free perfect structure is highly constrained and may force the identity.
-**Critical consequence (opus-S6):** Chudnovsky-Seymour (2007) proved that I(G,x) has ALL REAL ROOTS for claw-free G. Since Omega(T) is claw-free, ALL roots of I(Omega(T), x) are negative real. This means I(Omega(T), 2) > 0 always, coefficients are log-concave, and the independence sequence is unimodal.
-**Next step:** (1) PROVE Omega(T) is always claw-free. (2) Study the clique-cutset decomposition of Omega(T). (3) Check if atoms are line graphs of bipartite graphs.
+### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
+**Source:** Web research opus-S5, opus-S7 (disproof)
+**Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9) or perfect (fails n=8). Holds trivially for n<=8 (claw-free) and n<=7 (perfect) by vertex counting.
+**What remained true:** All-real-roots of I(Omega(T), x) appears to hold even for imperfect/non-claw-free Omega (tested n=8, 200 samples, 0 failures). This would be a new theorem NOT explained by Chudnovsky-Seymour.
+**Note:** OCF is now proved by Grinberg-Stanley, so this is no longer a proof strategy — it's a structural question.
+**Next step:** (1) Test all-real-roots at n=9 where Omega is genuinely non-claw-free. (2) If confirmed, formulate as conjecture and seek proof.
 
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)

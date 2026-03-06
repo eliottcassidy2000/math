@@ -101,21 +101,11 @@ The boundary between chordal and non-chordal Omega(T) may correspond to a struct
 The partition function of vertex-weighted independent sets can be approximated in polynomial time for (fork, odd hole)-free graphs via graph decomposition. The key technique: the permanent of the adjacency matrix can be viewed as approximating the partition function on line graphs of bipartite graphs (which are perfect).
 
 ### Relevance:
-Omega(T) is always perfect (no odd holes). **VERIFIED: Omega(T) is also ALWAYS CLAW-FREE.**
+**UPDATE (opus-S7):** Omega(T) is NOT always perfect (C5 at n=8, 53.8%) and NOT always claw-free (fails at n=9, 90%). Claw-freeness holds trivially for n<=8 by vertex counting (a claw in the 3-cycle conflict graph requires >= 9 vertices). Perfectness holds for n<=7.
 
-Exhaustive verification:
-- n<=5: Omega(T) is always complete, so trivially claw-free.
-- n=6: 32,768/32,768 tournaments — ALL claw-free (exhaustive).
-- n=7: 500/500 random — ALL claw-free.
-- n=8: 30/30 random — ALL claw-free.
+The Dyer-Jerrum decomposition applies only for n<=8 (trivially claw-free regime). OCF is now proved by Grinberg-Stanley (arXiv:2412.10572) using symmetric functions, not graph decomposition.
 
-**This means Omega(T) is a (claw, odd-hole)-free graph** — exactly the class studied by Dyer-Jerrum-Müller-Vušković! Their decomposition via clique cutsets and atoms could give a structural formula for I(Omega(T), 2).
-
-For claw-free perfect graphs, the structure theorem (Chvátal-Sbihi) says they decompose via clique cutsets into "atoms" that are either line graphs of bipartite graphs, or "peculiar" graphs. The partition function on each atom can be computed via the permanent (for line graphs) or small-case analysis.
-
-**Action:** Prove Omega(T) is always claw-free. Then apply the Dyer-Jerrum clique-cutset decomposition to get a structural formula for I(Omega, 2) = H(T).
-
-**WHY this might prove OCF:** If Omega(T) decomposes via clique cutsets into atoms whose independence polynomials factor in a way that mirrors the Hamiltonian path decomposition of the tournament, then OCF follows from the decomposition structure.
+**Remaining interest:** Even though Omega(T) is not always (claw, odd-hole)-free, empirical testing (n=8, 200 samples) suggests I(Omega(T), x) still has all real roots even for imperfect Omega. If this holds generally, it would be a new result not explained by claw-freeness.
 
 ---
 

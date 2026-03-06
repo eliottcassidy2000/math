@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S9 — 2026-03-05 (Deep web research: zero-free regions, subdivided claws, real-roots mystery)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S8 (context continuation after compaction)
+**Files read:** MEMORY.md, all inbox messages (MSG-010 through MSG-013, MSG-015), THM-020-real-roots.md, n8-anomaly-deep-dive.md, web-research-connections.md, tribonacci-web-research.md, grinberg-stanley-connection.md, MISTAKES.md, THM-002, THM-019, INVESTIGATION-BACKLOG.md, hard-core-statistical-physics-connections.md
+**Summary of work:**
+  (1) SYSTEMATIC AUDIT: Found and fixed errors in tribonacci-web-research.md (4 sections with false claw-free/perfect claims), web-research-connections.md (Connection 4), INVESTIGATION-BACKLOG (INV-032).
+  (2) BUG FOUND: hard_core_fast.py chordality check (lines 157-168) only checks 1 of 3 C4 orderings. Reports 0% non-chordal when correct is ~14% at n=6.
+  (3) **NEW COMPUTATIONAL: S_{1,1,1}-freeness** — Omega_3(T) is S_{1,1,1}-free (subdivided claw with each edge subdivided once) through n=11, FAILS at n=12 (100%). Each subdivision level buys ~3 more vertices. Pattern: claw-free n<=8, S_{1,1,1}-free n<=11.
+  (4) **LINE GRAPH HYPOTHESIS DISPROVED:** K_5-e (Beineke forbidden subgraph) found in Omega_3(T) at n=6 (45%). Not a line graph.
+  (5) **JERRUM-PATEL 2026 ANALYSIS:** Subdivided claws are the EXACT boundary for zero-free regions of I(G,x) in bounded-degree H-free graphs. Best possible: non-subdivided-claw H allows zeros on positive real axis. BUT: requires bounded degree AND fixed H, both of which fail for Omega(T) at large n.
+  (6) **BEZAKOVA et al. 2024:** Matching mixing-time dichotomy — O(n log n) for S_{a,b,c}-free bounded-degree, exponential otherwise. Same limitations.
+  (7) **KEY INSIGHT: Real-rootedness cannot be explained by any forbidden subgraph property.** Every fixed subgraph eventually appears in Omega(T). Explanation must be algebraic, likely through Irving-Omar/Grinberg-Stanley symmetric function framework.
+  (8) **AUTHOR CORRECTION:** arXiv:2412.10572 is by Irving & Omar, not Grinberg & Stanley. They build on G-S's framework.
+  (9) **SZELE BOUND:** H(T) <= c·n^{3/2}·n!/2^{n-1} (Alon 1990, solving Szele 1943 conjecture). Lower bound n!/2^{n-1} achieved probabilistically. Paley maximizer conjecture (kind-pasteur-S14b) says T_p achieves the max; ratio H(T_p)/(p!/2^{p-1}) ≈ 2, 2.4, 2.44 for p=3,7,11.
+**New contributions:**
+- 03-artifacts/drafts/zero-free-subdivided-claw-research.md (comprehensive research document)
+- Fixed 4 errors in existing documentation files
+- S_{1,1,1} computational data for n=9..12
+**Unresolved threads:**
+- Prove real roots for n>=9 — algebraic approach needed (symmetric functions?)
+- Rate of growth of max subdivided claw in Omega(T) as function of n
+- Is there a weaker graph property ("quasi-claw-free"?) that holds universally?
+- Irving-Omar framework: does it say anything about I(Omega(T), x) beyond x=2?
+- Compute H(T_19) for Paley maximizer conjecture
+- Szele bound tightness: does H(T_p) ~ c·p!/2^{p-1} for some constant c?
+
 ## kind-pasteur-2026-03-05-S14 — 2026-03-05 (Deep research: real roots theorem, Paley maximizer, literature survey)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S13 (context continuation)
