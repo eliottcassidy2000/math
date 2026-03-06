@@ -60,19 +60,22 @@ For comparison: T₉ (9-vertex regular tournament) has C(9,3)/3 = 28 directed 3-
 
 ---
 
-## Notes on Hamiltonian Cycle Count h_QR
+## Hamiltonian Cycle Count h_QR — RESOLVED
 
-The score sequence alone does not determine the Ham cycle count h_QR = h({0,1}). The structure is explicit enough for direct enumeration (9-vertex tournament with known arc rule).
+**UPDATE (kind-pasteur-2026-03-05-S2):** Direct computation gives:
+- h_QR = h({0,1}) = 201
+- h_NQR = h({0,2}) = 201
 
-For the conjecture CONJ-002 to hold, h_QR + h_NQR ≤ 8, so h_QR ≤ 8 individually. Whether this is plausible: for comparison, the average number of directed Ham cycles in a random 9-vertex tournament is (9−1)!/2^9 · correction... actually the exact formula: expected = (9−1)! / 2^8 = 40320/256 ≈ 157. So h_QR ≤ 8 would mean T₁₁\{0,1} has dramatically fewer Ham cycles than a random tournament — consistent with Paley tournaments' high arithmetic structure suppressing cycles.
+So h_QR + h_NQR = 402, and c₉(T₁₁) = (55/2)(402) = 11055.
+The conjecture CONJ-002 is REFUTED: H(T₁₁) = 95095, not 4455.
 
 ---
 
 ## Sub-Tournament T₁₁\{0,2} (NQR Case)
 
-By a parallel computation with vertex 2 replaced (2 is NQR), the structure of T₁₁\{0,2} can be derived similarly. The computation of h_NQR = h({0,2}) is analogous.
+By a parallel computation with vertex 2 replaced (2 is NQR), the structure of T₁₁\{0,2} can be derived similarly.
 
-**Key open question:** Is h_QR + h_NQR ≤ 8? This would confirm CONJ-002 is at least consistent.
+**RESOLVED:** h_NQR = h({0,2}) = 201 (same as h_QR). CONJ-002 is refuted.
 
 ## References
 

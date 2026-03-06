@@ -1,7 +1,7 @@
 # Signed Adjacency Identity (new proof angle)
 
 **Discovered by:** opus-2026-03-05-S4
-**Status:** Verified as polynomial identity at n=3,4,5; equivalent to even-odd split and OCF
+**Status:** PROVED for all n (THM-016 + THM-017); equivalent to even-odd split, but NOT equivalent to OCF (see MISTAKE-008)
 
 ---
 

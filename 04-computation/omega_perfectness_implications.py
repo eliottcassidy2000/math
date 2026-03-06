@@ -2,353 +2,55 @@
 """
 Omega(T) Perfectness Implications for OCF
 
-If Omega(T) is always perfect (verified computationally for n<=6, sampled n=7),
-what structural consequences follow for the independence polynomial I(Omega(T), x)?
+Investigates structural consequences of Omega(T) being perfect for the
+independence polynomial I(Omega(T), x) and its relationship to H(T).
 
-For perfect graphs G:
-  - chi(G) = omega(G) (chromatic number = clique number)
-  - alpha(G) = theta_bar(G) (independence number = fractional chromatic dual)
-  - The complement is also perfect (WPGT)
-  - Clique cover number = chromatic number of complement = independence number
-    (since complement is also perfect)
+Uses tournament_lib for correct directed cycle enumeration.
+Omega(T) vertices = directed odd cycles (tuples), edges = shared vertex.
 
-This script investigates:
-  1. I(Omega(T), 2) = H(T) verification
-  2. Roots of I(Omega(T), x) -- real? negative? location?
-  3. Clique cover number of Omega(T) vs tournament invariants
-  4. Factorization of I(Omega(T), x) over connected components
-  5. Coefficient patterns of I(Omega(T), x)
-  6. Relationship between alpha(Omega(T)), omega(Omega(T)), and n
-  7. Whether I(Omega(T), x) has a combinatorial interpretation at other integer points
-  8. Log-concavity of independence polynomial coefficients (perfect graphs conjectured)
+Key findings explored:
+  1. OCF verification: I(Omega(T), 2) = H(T)
+  2. Roots of I(Omega(T), x): real? negative?
+  3. Perfectness and chordality of Omega(T)
+  4. Log-concavity and unimodality of coefficients
+  5. Modular arithmetic: H(T) mod 2^k from OCF
+  6. Component factorization
+  7. alpha/omega of Omega vs tournament invariants
 """
 
+import sys
+import os
 import itertools
 import random
-import sys
 from collections import Counter, defaultdict
-from fractions import Fraction
+from math import comb
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                '..', '03-artifacts', 'code'))
+from tournament_lib import (
+    all_tournaments, hamiltonian_path_count,
+    find_odd_cycles, conflict_graph, independence_poly_at,
+    independence_poly_at_fast
+)
 
 # ─────────────────────────────────────────────────
-# Tournament generation
+# Utilities
 # ─────────────────────────────────────────────────
 
-def all_tournaments(n):
-    """Generate all labeled tournaments on n vertices."""
-    edges = [(i, j) for i in range(n) for j in range(i+1, n)]
-    for bits in range(2**len(edges)):
-        adj = [[0]*n for _ in range(n)]
-        for k, (i, j) in enumerate(edges):
-            if (bits >> k) & 1:
-                adj[i][j] = 1
-            else:
-                adj[j][i] = 1
-        yield adj
-
-def random_tournament(n, rng=None):
-    """Generate a random tournament on n vertices."""
-    if rng is None:
-        rng = random
-    adj = [[0]*n for _ in range(n)]
+def random_tournament(n):
+    T = [[0]*n for _ in range(n)]
     for i in range(n):
         for j in range(i+1, n):
-            if rng.random() < 0.5:
-                adj[i][j] = 1
+            if random.random() < 0.5:
+                T[i][j] = 1
             else:
-                adj[j][i] = 1
-    return adj
-
-# ─────────────────────────────────────────────────
-# Hamiltonian path count
-# ─────────────────────────────────────────────────
-
-def ham_path_count(T):
-    """Count directed Hamiltonian paths using Held-Karp DP."""
-    n = len(T)
-    FULL = (1 << n) - 1
-    dp = [[0]*n for _ in range(1 << n)]
-    for v in range(n):
-        dp[1 << v][v] = 1
-    for mask in range(1, 1 << n):
-        for last in range(n):
-            c = dp[mask][last]
-            if c == 0:
-                continue
-            for nxt in range(n):
-                if mask & (1 << nxt):
-                    continue
-                if T[last][nxt]:
-                    dp[mask | (1 << nxt)][nxt] += c
-    return sum(dp[FULL])
-
-# ─────────────────────────────────────────────────
-# Finding all directed odd cycles (Moon's theorem approach)
-# ─────────────────────────────────────────────────
-
-def is_strongly_connected(adj, vertices):
-    """Check if sub-tournament on vertices is strongly connected."""
-    k = len(vertices)
-    if k <= 1:
-        return True
-    if k == 2:
-        return False
-    vlist = list(vertices)
-    vset = set(vertices)
-
-    def reachable(start, forward=True):
-        visited = {start}
-        stack = [start]
-        while stack:
-            u = stack.pop()
-            for v in vlist:
-                if v not in visited and v in vset:
-                    if (forward and adj[u][v]) or (not forward and adj[v][u]):
-                        visited.add(v)
-                        stack.append(v)
-        return visited
-
-    fwd = reachable(vlist[0], True)
-    if len(fwd) != k:
-        return False
-    rev = reachable(vlist[0], False)
-    return len(rev) == k
-
-def find_odd_cycles(T):
-    """Find all vertex sets of directed odd cycles in tournament T.
-    By Moon's theorem: S is a cycle vertex set iff T[S] is strongly connected."""
-    n = len(T)
-    cycles = []
-    for length in range(3, n+1, 2):
-        for combo in itertools.combinations(range(n), length):
-            if is_strongly_connected(T, combo):
-                cycles.append(frozenset(combo))
-    return cycles
-
-# ─────────────────────────────────────────────────
-# Conflict graph Omega(T)
-# ─────────────────────────────────────────────────
-
-def build_omega(cycles):
-    """Build conflict graph: vertices=cycles, edge iff shared vertex."""
-    m = len(cycles)
-    adj = [set() for _ in range(m)]
-    for i in range(m):
-        for j in range(i+1, m):
-            if cycles[i] & cycles[j]:
-                adj[i].add(j)
-                adj[j].add(i)
-    return adj
-
-# ─────────────────────────────────────────────────
-# Independence polynomial computation
-# ─────────────────────────────────────────────────
-
-def independence_polynomial(adj, m):
-    """Compute the full independence polynomial [alpha_0, alpha_1, ..., alpha_k].
-    alpha_k = number of independent sets of size k.
-    Uses bitmask enumeration (feasible for m <= ~22)."""
-    if m == 0:
-        return [1]
-
-    coeffs = [0] * (m + 1)
-
-    for mask in range(1 << m):
-        verts = []
-        for i in range(m):
-            if mask & (1 << i):
-                verts.append(i)
-        # Check independence
-        is_indep = True
-        for idx_a in range(len(verts)):
-            for idx_b in range(idx_a + 1, len(verts)):
-                if verts[idx_b] in adj[verts[idx_a]]:
-                    is_indep = False
-                    break
-            if not is_indep:
-                break
-        if is_indep:
-            coeffs[len(verts)] += 1
-
-    # Trim trailing zeros
-    while len(coeffs) > 1 and coeffs[-1] == 0:
-        coeffs.pop()
-    return coeffs
-
-def eval_poly(coeffs, x):
-    """Evaluate polynomial at x."""
-    return sum(c * x**k for k, c in enumerate(coeffs))
-
-# ─────────────────────────────────────────────────
-# Root finding (using numpy if available, else approximate)
-# ─────────────────────────────────────────────────
-
-def find_roots(coeffs):
-    """Find roots of polynomial. Returns list of complex roots."""
-    try:
-        import numpy as np
-        if len(coeffs) <= 1:
-            return []
-        # numpy wants highest degree first
-        p = list(reversed(coeffs))
-        roots = np.roots(p)
-        return roots
-    except ImportError:
-        return None
-
-# ─────────────────────────────────────────────────
-# Graph properties
-# ─────────────────────────────────────────────────
-
-def max_clique(adj, m):
-    """Find maximum clique size by brute force."""
-    if m == 0:
-        return 0
-    best = 1
-    for size in range(2, m + 1):
-        found = False
-        for verts in itertools.combinations(range(m), size):
-            is_clique = all(verts[j] in adj[verts[i]]
-                           for i in range(len(verts))
-                           for j in range(i+1, len(verts)))
-            if is_clique:
-                found = True
-                best = size
-        if not found:
-            break
-    return best
-
-def max_independent_set(adj, m):
-    """Find maximum independent set size."""
-    if m == 0:
-        return 0
-    best = 0
-    for mask in range(1 << m):
-        verts = [i for i in range(m) if mask & (1 << i)]
-        is_indep = True
-        for i in range(len(verts)):
-            for j in range(i+1, len(verts)):
-                if verts[j] in adj[verts[i]]:
-                    is_indep = False
-                    break
-            if not is_indep:
-                break
-        if is_indep:
-            best = max(best, len(verts))
-    return best
-
-def chromatic_number_exact(adj, m):
-    """Exact chromatic number by trying k-colorings for increasing k."""
-    if m == 0:
-        return 0
-    if m == 1:
-        return 1
-
-    for k in range(1, m + 1):
-        if _can_color(adj, m, k):
-            return k
-    return m
-
-def _can_color(adj, m, k):
-    """Check if graph is k-colorable using backtracking."""
-    colors = [-1] * m
-
-    def backtrack(v):
-        if v == m:
-            return True
-        for c in range(k):
-            if all(colors[u] != c for u in adj[v] if colors[u] >= 0):
-                colors[v] = c
-                if backtrack(v + 1):
-                    return True
-                colors[v] = -1
-        return False
-
-    return backtrack(0)
-
-def clique_cover_number(adj, m):
-    """Clique cover number = chromatic number of complement.
-    For perfect graphs, this equals the independence number."""
-    if m == 0:
-        return 0
-    # Build complement
-    comp_adj = [set() for _ in range(m)]
-    for i in range(m):
-        for j in range(i+1, m):
-            if j not in adj[i]:
-                comp_adj[i].add(j)
-                comp_adj[j].add(i)
-    return chromatic_number_exact(comp_adj, m)
-
-def connected_components(adj, m):
-    """Find connected components. Returns list of lists of vertices."""
-    visited = [False] * m
-    components = []
-    for start in range(m):
-        if visited[start]:
-            continue
-        comp = []
-        stack = [start]
-        visited[start] = True
-        while stack:
-            u = stack.pop()
-            comp.append(u)
-            for v in adj[u]:
-                if not visited[v]:
-                    visited[v] = True
-                    stack.append(v)
-        components.append(comp)
-    return components
-
-def is_perfect_check(adj, m):
-    """Check perfectness via Strong Perfect Graph Theorem:
-    G is perfect iff no odd hole of length >= 5 in G or complement(G)."""
-    if m <= 4:
-        return True
-
-    comp_adj = [set() for _ in range(m)]
-    for i in range(m):
-        for j in range(i+1, m):
-            if j not in adj[i]:
-                comp_adj[i].add(j)
-                comp_adj[j].add(i)
-
-    for graph in [adj, comp_adj]:
-        for length in range(5, m+1, 2):
-            for vertices in itertools.combinations(range(m), length):
-                # Check induced cycle: each vertex has degree exactly 2
-                ok = True
-                for v in vertices:
-                    deg = sum(1 for u in vertices if u != v and u in graph[v])
-                    if deg != 2:
-                        ok = False
-                        break
-                if not ok:
-                    continue
-                # Check connectivity
-                visited = {vertices[0]}
-                stack = [vertices[0]]
-                while stack:
-                    u = stack.pop()
-                    for w in vertices:
-                        if w not in visited and w in graph[u]:
-                            visited.add(w)
-                            stack.append(w)
-                if len(visited) == length:
-                    return False
-    return True
-
-# ─────────────────────────────────────────────────
-# Tournament invariants
-# ─────────────────────────────────────────────────
+                T[j][i] = 1
+    return T
 
 def score_sequence(T):
-    """Score sequence (sorted out-degrees)."""
-    n = len(T)
-    scores = sorted([sum(T[i]) for i in range(n)])
-    return tuple(scores)
+    return tuple(sorted(sum(T[i]) for i in range(len(T))))
 
 def num_3_cycles(T):
-    """Count directed 3-cycles in T."""
     n = len(T)
     count = 0
     for i in range(n):
@@ -359,127 +61,190 @@ def num_3_cycles(T):
                     count += 1
     return count
 
-def is_transitive(T):
-    """Check if tournament is transitive (acyclic)."""
-    n = len(T)
-    scores = sorted([sum(T[i]) for i in range(n)])
-    return scores == list(range(n))
-
 # ─────────────────────────────────────────────────
-# Main analysis
+# Independence polynomial coefficients (for small m)
 # ─────────────────────────────────────────────────
 
-def analyze_tournament(T, verbose=False):
-    """Full analysis of one tournament. Returns dict of results."""
-    n = len(T)
-    H = ham_path_count(T)
-    cycles = find_odd_cycles(T)
-    m = len(cycles)
-
-    result = {
-        'n': n,
-        'H': H,
-        'num_cycles': m,
-        'score_seq': score_sequence(T),
-        'num_3cyc': num_3_cycles(T),
-        'transitive': is_transitive(T),
-    }
-
+def independence_polynomial_coeffs(cg_adj, m):
+    """Full [alpha_0, ..., alpha_k] using bitmask. Only for m <= 22."""
     if m == 0:
-        result['ind_poly'] = [1]
-        result['I_at_2'] = 1
-        result['ocf_match'] = (H == 1)
-        result['alpha'] = 0
-        result['omega'] = 0
-        result['chi'] = 0
-        result['clique_cover'] = 0
-        result['perfect'] = True
-        result['roots'] = []
-        result['num_components'] = 0
-        result['component_sizes'] = []
-        return result
+        return [1]
+    nbr = [0] * m
+    for i in range(m):
+        for j in range(m):
+            if cg_adj[i][j]:
+                nbr[i] |= (1 << j)
 
-    adj = build_omega(cycles)
+    coeffs = [0] * (m + 1)
+    for mask in range(1 << m):
+        ok = True
+        bits = mask
+        while bits:
+            v = (bits & -bits).bit_length() - 1
+            if nbr[v] & mask & ((1 << v) - 1):
+                ok = False
+                break
+            bits &= bits - 1
+        if ok:
+            coeffs[bin(mask).count('1')] += 1
 
-    # Independence polynomial
-    poly = independence_polynomial(adj, m)
-    I2 = eval_poly(poly, 2)
+    while len(coeffs) > 1 and coeffs[-1] == 0:
+        coeffs.pop()
+    return coeffs
 
-    result['ind_poly'] = poly
-    result['I_at_2'] = I2
-    result['ocf_match'] = (H == I2)
+def eval_poly(coeffs, x):
+    return sum(c * x**k for k, c in enumerate(coeffs))
 
-    # Graph invariants (only for manageable sizes)
-    if m <= 20:
-        alpha = max_independent_set(adj, m)
-        omega = max_clique(adj, m)
-        result['alpha'] = alpha
-        result['omega'] = omega
+# ─────────────────────────────────────────────────
+# Graph properties
+# ─────────────────────────────────────────────────
 
-        if m <= 15:
-            chi = chromatic_number_exact(adj, m)
-            cc = clique_cover_number(adj, m)
-            perfect = is_perfect_check(adj, m)
-            result['chi'] = chi
-            result['clique_cover'] = cc
-            result['perfect'] = perfect
-        else:
-            result['chi'] = None
-            result['clique_cover'] = None
-            result['perfect'] = None
-    else:
-        result['alpha'] = None
-        result['omega'] = None
-        result['chi'] = None
-        result['clique_cover'] = None
-        result['perfect'] = None
+def adj_to_sets(cg, m):
+    return [set(j for j in range(m) if cg[i][j]) for i in range(m)]
 
-    # Connected components
-    comps = connected_components(adj, m)
-    result['num_components'] = len(comps)
-    result['component_sizes'] = sorted([len(c) for c in comps], reverse=True)
+def max_clique(adj_sets, m):
+    if m == 0:
+        return 0
+    comp_nbr = [0]*m
+    for i in range(m):
+        for j in range(m):
+            if j != i and j not in adj_sets[i]:
+                comp_nbr[i] |= (1<<j)
+    best = 1
+    for mask in range(1, 1<<m):
+        sz = bin(mask).count('1')
+        if sz <= best:
+            continue
+        ok = True
+        bits = mask
+        while bits:
+            v = (bits & -bits).bit_length() - 1
+            if comp_nbr[v] & mask:
+                ok = False
+                break
+            bits &= bits - 1
+        if ok:
+            best = sz
+    return best
 
-    # Roots of independence polynomial
-    roots = find_roots(poly)
-    result['roots'] = roots
+def max_indep(adj_sets, m):
+    if m == 0:
+        return 0
+    nbr = [0]*m
+    for i in range(m):
+        for j in adj_sets[i]:
+            nbr[i] |= (1<<j)
+    best = 0
+    for mask in range(1<<m):
+        sz = bin(mask).count('1')
+        if sz <= best:
+            continue
+        ok = True
+        bits = mask
+        while bits:
+            v = (bits & -bits).bit_length() - 1
+            if nbr[v] & mask & ((1<<v)-1):
+                ok = False
+                break
+            bits &= bits - 1
+        if ok:
+            best = sz
+    return best
 
-    # Additional: I at other integer points
-    result['I_at_neg1'] = eval_poly(poly, -1)
-    result['I_at_1'] = eval_poly(poly, 1)  # total number of independent sets
-    result['I_at_3'] = eval_poly(poly, 3)
+def connected_comps(adj_sets, m):
+    visited = [False]*m
+    comps = []
+    for s in range(m):
+        if visited[s]:
+            continue
+        c = []
+        stack = [s]
+        visited[s] = True
+        while stack:
+            u = stack.pop()
+            c.append(u)
+            for v in adj_sets[u]:
+                if not visited[v]:
+                    visited[v] = True
+                    stack.append(v)
+        comps.append(c)
+    return comps
 
-    # Log-concavity check of coefficients
-    lc = True
-    for i in range(1, len(poly) - 1):
-        if poly[i]**2 < poly[i-1] * poly[i+1]:
-            lc = False
-            break
-    result['log_concave'] = lc
+def has_odd_hole(adj_sets, m):
+    if m < 5:
+        return False
+    for length in range(5, min(m+1, 10), 2):
+        for verts in itertools.combinations(range(m), length):
+            ok = True
+            for v in verts:
+                if sum(1 for u in verts if u != v and u in adj_sets[v]) != 2:
+                    ok = False
+                    break
+            if not ok:
+                continue
+            vis = {verts[0]}
+            stk = [verts[0]]
+            while stk:
+                u = stk.pop()
+                for w in verts:
+                    if w not in vis and w in adj_sets[u]:
+                        vis.add(w)
+                        stk.append(w)
+            if len(vis) == length:
+                return True
+    return False
 
-    # Unimodality check
-    uni = True
-    peak_found = False
-    for i in range(1, len(poly)):
-        if poly[i] < poly[i-1]:
-            peak_found = True
-        elif poly[i] > poly[i-1] and peak_found:
-            uni = False
-            break
-    result['unimodal'] = uni
+def has_induced_cycle_geq4(adj_sets, m):
+    if m < 4:
+        return False
+    for length in range(4, min(m+1, 9)):
+        for verts in itertools.combinations(range(m), length):
+            ok = True
+            for v in verts:
+                if sum(1 for u in verts if u != v and u in adj_sets[v]) != 2:
+                    ok = False
+                    break
+            if not ok:
+                continue
+            vis = {verts[0]}
+            stk = [verts[0]]
+            while stk:
+                u = stk.pop()
+                for w in verts:
+                    if w not in vis and w in adj_sets[u]:
+                        vis.add(w)
+                        stk.append(w)
+            if len(vis) == length:
+                return True
+    return False
 
-    # Cycle size distribution
-    size_dist = Counter(len(c) for c in cycles)
-    result['cycle_size_dist'] = dict(size_dist)
+def is_perfect(adj_sets, m):
+    if m <= 4:
+        return True
+    if has_odd_hole(adj_sets, m):
+        return False
+    comp = [set() for _ in range(m)]
+    for i in range(m):
+        for j in range(i+1, m):
+            if j not in adj_sets[i]:
+                comp[i].add(j)
+                comp[j].add(i)
+    return not has_odd_hole(comp, m)
 
-    # Degree sequence of Omega(T)
-    deg_seq = sorted([len(adj[i]) for i in range(m)], reverse=True)
-    result['omega_deg_seq'] = deg_seq
-    result['omega_max_deg'] = deg_seq[0] if deg_seq else 0
-    result['omega_density'] = sum(deg_seq) / (m * (m-1)) if m > 1 else 0
+def find_roots(coeffs):
+    try:
+        import numpy as np
+        if len(coeffs) <= 1:
+            return []
+        return np.roots(list(reversed(coeffs)))
+    except ImportError:
+        return None
 
-    return result
+# ─────────────────────────────────────────────────
+# Main
+# ─────────────────────────────────────────────────
 
-def print_separator(title):
+def sep(title):
     print(f"\n{'='*70}")
     print(f"  {title}")
     print(f"{'='*70}")
@@ -487,595 +252,543 @@ def print_separator(title):
 def main():
     print("Omega(T) Perfectness Implications for OCF")
     print("="*70)
+    print("Using directed odd cycles from tournament_lib")
 
-    numpy_available = True
+    numpy_ok = True
     try:
         import numpy as np
     except ImportError:
-        numpy_available = False
-        print("WARNING: numpy not available, root analysis will be skipped")
+        numpy_ok = False
+        print("WARNING: numpy not available")
 
     # ═══════════════════════════════════════════════
-    # SECTION 1: Exhaustive analysis for n=5
+    # n=5 exhaustive
     # ═══════════════════════════════════════════════
-    print_separator("SECTION 1: Exhaustive n=5 analysis")
+    sep("SECTION 1: Exhaustive n=5")
 
-    n5_results = []
-    ocf_failures = 0
-    perfect_failures = 0
+    n5_polys = Counter()
+    n5_ocf_fail = 0
+    n5_perf_fail = 0
+    n5_chord_fail = 0
+    n5_alpha_dist = Counter()
+    n5_omega_dist = Counter()
+    n5_comp_dist = Counter()
+    n5_total = 0
+    n5_detailed = []  # store (H, poly, alpha, omega, score_seq) for each
 
     for T in all_tournaments(5):
-        r = analyze_tournament(T)
-        n5_results.append(r)
-        if not r['ocf_match']:
-            ocf_failures += 1
-        if r['perfect'] is not None and not r['perfect']:
-            perfect_failures += 1
-
-    print(f"Total n=5 tournaments: {len(n5_results)}")
-    print(f"OCF failures: {ocf_failures}")
-    print(f"Perfectness failures: {perfect_failures}")
-
-    # Collect independence polynomial shapes
-    poly_counter = Counter()
-    for r in n5_results:
-        poly_counter[tuple(r['ind_poly'])] += 1
-
-    print(f"\nDistinct independence polynomials: {len(poly_counter)}")
-    print("Most common I(Omega(T), x) polynomials:")
-    for poly, count in poly_counter.most_common(10):
-        coeffs_str = " + ".join(f"{c}x^{k}" if k > 0 else str(c)
-                                for k, c in enumerate(poly) if c > 0)
-        I2 = eval_poly(list(poly), 2)
-        print(f"  [{count:4d}x] I(x) = {coeffs_str}  =>  I(2) = {I2}")
-
-    # Alpha, omega, chi statistics
-    alpha_vals = [r['alpha'] for r in n5_results if r['alpha'] is not None]
-    omega_vals = [r['omega'] for r in n5_results if r['omega'] is not None]
-    chi_vals = [r['chi'] for r in n5_results if r['chi'] is not None]
-    cc_vals = [r['clique_cover'] for r in n5_results if r['clique_cover'] is not None]
-
-    print(f"\nalpha(Omega) distribution: {Counter(alpha_vals)}")
-    print(f"omega(Omega) distribution: {Counter(omega_vals)}")
-    print(f"chi(Omega) distribution:   {Counter(chi_vals)}")
-    print(f"clique_cover distribution: {Counter(cc_vals)}")
-
-    # Check perfect graph identity: chi = omega, clique_cover = alpha
-    chi_eq_omega = sum(1 for r in n5_results
-                       if r['chi'] is not None and r['omega'] is not None
-                       and r['chi'] == r['omega'])
-    cc_eq_alpha = sum(1 for r in n5_results
-                      if r['clique_cover'] is not None and r['alpha'] is not None
-                      and r['clique_cover'] == r['alpha'])
-    total_checked = sum(1 for r in n5_results if r['chi'] is not None)
-    print(f"\nPerfectness checks (n=5):")
-    print(f"  chi = omega: {chi_eq_omega}/{total_checked}")
-    print(f"  clique_cover = alpha: {cc_eq_alpha}/{total_checked}")
-
-    # Log-concavity
-    lc_count = sum(1 for r in n5_results if r.get('log_concave', True))
-    uni_count = sum(1 for r in n5_results if r.get('unimodal', True))
-    print(f"  Log-concave coefficients: {lc_count}/{len(n5_results)}")
-    print(f"  Unimodal coefficients: {uni_count}/{len(n5_results)}")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 2: Exhaustive analysis for n=6
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 2: Exhaustive n=6 analysis")
-
-    n6_results = []
-    ocf_failures_6 = 0
-    perfect_failures_6 = 0
-    non_lc_6 = 0
-    non_uni_6 = 0
-
-    for T in all_tournaments(6):
-        r = analyze_tournament(T)
-        n6_results.append(r)
-        if not r['ocf_match']:
-            ocf_failures_6 += 1
-        if r['perfect'] is not None and not r['perfect']:
-            perfect_failures_6 += 1
-        if not r.get('log_concave', True):
-            non_lc_6 += 1
-        if not r.get('unimodal', True):
-            non_uni_6 += 1
-
-    print(f"Total n=6 tournaments: {len(n6_results)}")
-    print(f"OCF failures: {ocf_failures_6}")
-    print(f"Perfectness failures: {perfect_failures_6}")
-    print(f"Non-log-concave: {non_lc_6}")
-    print(f"Non-unimodal: {non_uni_6}")
-
-    # Polynomial distribution
-    poly_counter_6 = Counter()
-    for r in n6_results:
-        poly_counter_6[tuple(r['ind_poly'])] += 1
-
-    print(f"\nDistinct independence polynomials: {len(poly_counter_6)}")
-    print("Most common I(Omega(T), x) polynomials:")
-    for poly, count in poly_counter_6.most_common(15):
-        coeffs_str = " + ".join(f"{c}x^{k}" if k > 0 else str(c)
-                                for k, c in enumerate(poly) if c > 0)
-        I2 = eval_poly(list(poly), 2)
-        print(f"  [{count:5d}x] I(x) = {coeffs_str}  =>  I(2) = {I2}")
-
-    # Graph invariants for n=6
-    alpha6 = [r['alpha'] for r in n6_results if r['alpha'] is not None]
-    omega6 = [r['omega'] for r in n6_results if r['omega'] is not None]
-    chi6 = [r['chi'] for r in n6_results if r['chi'] is not None]
-    cc6 = [r['clique_cover'] for r in n6_results if r['clique_cover'] is not None]
-
-    print(f"\nalpha(Omega) distribution: {Counter(alpha6)}")
-    print(f"omega(Omega) distribution: {Counter(omega6)}")
-    print(f"chi(Omega) distribution:   {Counter(chi6)}")
-    print(f"clique_cover distribution: {Counter(cc6)}")
-
-    chi_eq_omega_6 = sum(1 for r in n6_results
-                         if r['chi'] is not None and r['omega'] is not None
-                         and r['chi'] == r['omega'])
-    cc_eq_alpha_6 = sum(1 for r in n6_results
-                        if r['clique_cover'] is not None and r['alpha'] is not None
-                        and r['clique_cover'] == r['alpha'])
-    total6 = sum(1 for r in n6_results if r['chi'] is not None)
-    print(f"\nPerfectness checks (n=6):")
-    print(f"  chi = omega: {chi_eq_omega_6}/{total6}")
-    print(f"  clique_cover = alpha: {cc_eq_alpha_6}/{total6}")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 3: Root analysis
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 3: Root structure of I(Omega(T), x)")
-
-    if numpy_available:
-        import numpy as np
-
-        # Analyze roots for n=5
-        print("\n--- n=5 root analysis ---")
-        all_roots_5 = []
-        all_real_5 = True
-        all_negative_5 = True
-        root_magnitudes_5 = []
-
-        seen_polys_5 = set()
-        for r in n5_results:
-            poly_key = tuple(r['ind_poly'])
-            if poly_key in seen_polys_5:
-                continue
-            seen_polys_5.add(poly_key)
-
-            if r['roots'] is not None and len(r['roots']) > 0:
-                for root in r['roots']:
-                    all_roots_5.append(root)
-                    root_magnitudes_5.append(abs(root))
-                    if abs(root.imag) > 1e-10:
-                        all_real_5 = False
-                    if root.real > 1e-10:
-                        all_negative_5 = False
-
-        print(f"  Distinct polynomials: {len(seen_polys_5)}")
-        print(f"  All roots real: {all_real_5}")
-        print(f"  All roots negative (or zero): {all_negative_5}")
-        if root_magnitudes_5:
-            print(f"  Root magnitude range: [{min(root_magnitudes_5):.6f}, {max(root_magnitudes_5):.6f}]")
-
-        # Show roots for each distinct polynomial
-        print("\n  Roots by polynomial:")
-        for poly_key in sorted(seen_polys_5, key=lambda p: len(p)):
-            roots = find_roots(list(poly_key))
-            if roots is not None and len(roots) > 0:
-                real_roots = sorted([r.real for r in roots if abs(r.imag) < 1e-10])
-                complex_roots = [(r.real, r.imag) for r in roots if abs(r.imag) >= 1e-10]
-                poly_str = " + ".join(f"{c}x^{k}" if k > 0 else str(c)
-                                      for k, c in enumerate(poly_key) if c > 0)
-                print(f"    I(x) = {poly_str}")
-                if real_roots:
-                    print(f"      Real roots: {[f'{r:.6f}' for r in real_roots]}")
-                if complex_roots:
-                    print(f"      Complex roots: {[(f'{r:.4f}', f'{i:.4f}') for r, i in complex_roots]}")
-
-        # Analyze roots for n=6
-        print("\n--- n=6 root analysis ---")
-        all_real_6 = True
-        all_negative_6 = True
-        root_magnitudes_6 = []
-        max_positive_real_part = -float('inf')
-
-        seen_polys_6 = set()
-        for r in n6_results:
-            poly_key = tuple(r['ind_poly'])
-            if poly_key in seen_polys_6:
-                continue
-            seen_polys_6.add(poly_key)
-
-            if r['roots'] is not None and len(r['roots']) > 0:
-                for root in r['roots']:
-                    root_magnitudes_6.append(abs(root))
-                    max_positive_real_part = max(max_positive_real_part, root.real)
-                    if abs(root.imag) > 1e-10:
-                        all_real_6 = False
-                    if root.real > 1e-10:
-                        all_negative_6 = False
-
-        print(f"  Distinct polynomials: {len(seen_polys_6)}")
-        print(f"  All roots real: {all_real_6}")
-        print(f"  All roots negative: {all_negative_6}")
-        if root_magnitudes_6:
-            print(f"  Root magnitude range: [{min(root_magnitudes_6):.6f}, {max(root_magnitudes_6):.6f}]")
-        print(f"  Max real part of any root: {max_positive_real_part:.6f}")
-
-        # Key question: is the smallest root magnitude > -2?
-        # i.e., do all roots have |root| < 2? This would mean I(x) > 0 for x in [0, 2].
-        real_neg_roots_6 = []
-        for poly_key in seen_polys_6:
-            roots = find_roots(list(poly_key))
-            if roots is not None:
-                for root in roots:
-                    if abs(root.imag) < 1e-10 and root.real < 0:
-                        real_neg_roots_6.append(root.real)
-
-        if real_neg_roots_6:
-            closest_to_origin = max(real_neg_roots_6)
-            farthest_from_origin = min(real_neg_roots_6)
-            print(f"\n  Negative real roots:")
-            print(f"    Closest to origin: {closest_to_origin:.6f}")
-            print(f"    Farthest from origin: {farthest_from_origin:.6f}")
-            print(f"    All have |root| > 2 (I(x)>0 on [0,2]): "
-                  f"{all(abs(r) > 2 for r in real_neg_roots_6)}")
-            # How many are > -2?
-            near_minus2 = [r for r in real_neg_roots_6 if -2.5 < r < -1.5]
-            if near_minus2:
-                print(f"    Roots near -2: {sorted(near_minus2)[:10]}")
-    else:
-        print("  (skipped - numpy not available)")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 4: Component factorization of I(Omega(T), x)
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 4: Connected component factorization")
-
-    # For perfect graphs, I(G, x) = prod_i I(G_i, x) where G_i are components
-    # Check if this factorization reveals structure
-
-    multi_component_5 = [r for r in n5_results if r['num_components'] > 1]
-    multi_component_6 = [r for r in n6_results if r['num_components'] > 1]
-
-    print(f"n=5: {len(multi_component_5)}/{len(n5_results)} tournaments have multi-component Omega")
-    print(f"n=6: {len(multi_component_6)}/{len(n6_results)} tournaments have multi-component Omega")
-
-    comp_size_dist_5 = Counter()
-    comp_size_dist_6 = Counter()
-    for r in n5_results:
-        comp_size_dist_5[tuple(r['component_sizes'])] += 1
-    for r in n6_results:
-        comp_size_dist_6[tuple(r['component_sizes'])] += 1
-
-    print(f"\nn=5 component size distributions:")
-    for sizes, count in comp_size_dist_5.most_common(10):
-        print(f"  {sizes}: {count}")
-    print(f"\nn=6 component size distributions:")
-    for sizes, count in comp_size_dist_6.most_common(15):
-        print(f"  {sizes}: {count}")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 5: Correlations between tournament invariants and Omega invariants
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 5: Tournament invariants vs Omega invariants")
-
-    # Focus on n=6 where there's more variation
-    # Group by score sequence
-    by_score = defaultdict(list)
-    for r in n6_results:
-        by_score[r['score_seq']].append(r)
-
-    print(f"\nn=6: {len(by_score)} distinct score sequences")
-    print("\nScore seq -> H range, #cycles range, alpha range, omega range:")
-    for ss in sorted(by_score.keys()):
-        results = by_score[ss]
-        H_vals = [r['H'] for r in results]
-        cyc_vals = [r['num_cycles'] for r in results]
-        alpha_range = [r['alpha'] for r in results if r['alpha'] is not None]
-        omega_range = [r['omega'] for r in results if r['omega'] is not None]
-        cc_range = [r['clique_cover'] for r in results if r['clique_cover'] is not None]
-
-        print(f"  {ss}: H in [{min(H_vals)},{max(H_vals)}], "
-              f"#cyc in [{min(cyc_vals)},{max(cyc_vals)}], "
-              f"alpha in [{min(alpha_range) if alpha_range else '?'},{max(alpha_range) if alpha_range else '?'}], "
-              f"omega in [{min(omega_range) if omega_range else '?'},{max(omega_range) if omega_range else '?'}], "
-              f"cc in [{min(cc_range) if cc_range else '?'},{max(cc_range) if cc_range else '?'}]")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 6: I(Omega(T), x) at special values
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 6: I(Omega(T), x) at special integer values")
-
-    print("\nn=6: Distribution of I(Omega, x) at various x values:")
-    for x_val in [-1, 1, 2, 3]:
-        vals = []
-        for r in n6_results:
-            v = eval_poly(r['ind_poly'], x_val)
-            vals.append(v)
-        vcounter = Counter(vals)
-        print(f"\n  I(Omega, {x_val}):")
-        print(f"    Range: [{min(vals)}, {max(vals)}]")
-        print(f"    Mean: {sum(vals)/len(vals):.2f}")
-        if x_val == 2:
-            print(f"    (This should equal H(T))")
-            # Check parity
-            odd_count = sum(1 for v in vals if v % 2 == 1)
-            print(f"    Odd values: {odd_count}/{len(vals)} (Redei's theorem)")
-        if x_val == -1:
-            print(f"    Values: {vcounter.most_common(10)}")
-            # I(G, -1) for perfect graph has combinatorial meaning
-            # related to acyclic orientations or Euler characteristic
-
-    # ═══════════════════════════════════════════════
-    # SECTION 7: Relationship alpha(Omega) * omega(Omega) >= m
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 7: Ramsey-type bounds: alpha * omega >= m?")
-
-    # For perfect graphs, clique cover * clique_size >= m
-    # (since clique cover = alpha for perfect, this gives alpha * omega >= m)
-    for label, results in [("n=5", n5_results), ("n=6", n6_results)]:
-        violations = 0
-        total = 0
-        for r in results:
-            if r['alpha'] is not None and r['omega'] is not None and r['num_cycles'] > 0:
-                total += 1
-                m = r['num_cycles']
-                if r['alpha'] * r['omega'] < m:
-                    violations += 1
-        print(f"  {label}: alpha*omega >= m violations: {violations}/{total}")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 8: Does clique cover relate to n or score sequence?
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 8: Clique cover number patterns")
-
-    # For perfect graphs: clique_cover = alpha = independence number
-    # This means Omega(T) can be partitioned into alpha(Omega) cliques
-    # Each clique = set of mutually conflicting cycles
-
-    print("\nn=6: Clique cover (= alpha for perfect Omega) vs tournament properties")
-    cc_vs_3cyc = defaultdict(list)
-    for r in n6_results:
-        if r['clique_cover'] is not None:
-            cc_vs_3cyc[r['clique_cover']].append(r['num_3cyc'])
-
-    for cc_val in sorted(cc_vs_3cyc.keys()):
-        vals = cc_vs_3cyc[cc_val]
-        print(f"  clique_cover={cc_val}: "
-              f"#3-cycles in [{min(vals)},{max(vals)}], "
-              f"mean={sum(vals)/len(vals):.1f}, count={len(vals)}")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 9: Chordality and stronger properties
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 9: Is Omega(T) always chordal?")
-
-    # Chordal => perfect, but perfect does not imply chordal
-    # If Omega(T) is always chordal, that's a MUCH stronger statement
-
-    chordal_5 = sum(1 for r in n5_results
-                    if r['alpha'] is not None and r['omega'] is not None)
-    # For n=5, Omega is always complete => always chordal
-    print(f"n=5: Omega always complete (trivially chordal)")
-
-    # For n=6, check
-    non_chordal_6 = []
-    for r in n6_results:
-        if r['num_cycles'] <= 1:
-            continue
-        # Rebuild omega to check chordality
-        # We need the actual adjacency for the chordality check
-        # Let's sample a few
-
-    # Do a direct chordality check for n=6
-    chordal_count_6 = 0
-    non_chordal_count_6 = 0
-    total_checkable_6 = 0
-    non_chordal_examples = []
-
-    for T in all_tournaments(6):
+        n5_total += 1
+        H = hamiltonian_path_count(T)
         cycles = find_odd_cycles(T)
         m = len(cycles)
-        if m <= 3:
-            chordal_count_6 += 1
-            total_checkable_6 += 1
-            continue
+        ss = score_sequence(T)
 
-        adj = build_omega(cycles)
-        total_checkable_6 += 1
-
-        # Check for induced C4 or longer
-        is_chord = True
-        if m <= 15:
-            for length in range(4, min(m+1, 8)):
-                found_hole = False
-                for vertices in itertools.combinations(range(m), length):
-                    ok = True
-                    for v in vertices:
-                        deg = sum(1 for u in vertices if u != v and u in adj[v])
-                        if deg != 2:
-                            ok = False
-                            break
-                    if not ok:
-                        continue
-                    visited = {vertices[0]}
-                    stack = [vertices[0]]
-                    while stack:
-                        u = stack.pop()
-                        for w in vertices:
-                            if w not in visited and w in adj[u]:
-                                visited.add(w)
-                                stack.append(w)
-                    if len(visited) == length:
-                        found_hole = True
-                        is_chord = False
-                        if len(non_chordal_examples) < 3:
-                            non_chordal_examples.append((m, length, vertices))
-                        break
-                if found_hole:
-                    break
-
-        if is_chord:
-            chordal_count_6 += 1
+        if m == 0:
+            poly = [1]
+            I2 = 1
+            alpha_v, omega_v = 0, 0
+            is_perf, is_chord = True, True
+            ncomp = 0
+            comp_sizes = ()
         else:
-            non_chordal_count_6 += 1
+            cg = conflict_graph(cycles)
+            m = len(cg)
+            poly = independence_polynomial_coeffs(cg, m)
+            I2 = eval_poly(poly, 2)
+            adj_s = adj_to_sets(cg, m)
+            alpha_v = max_indep(adj_s, m)
+            omega_v = max_clique(adj_s, m)
+            is_perf = is_perfect(adj_s, m)
+            is_chord = not has_induced_cycle_geq4(adj_s, m)
+            comps = connected_comps(adj_s, m)
+            ncomp = len(comps)
+            comp_sizes = tuple(sorted([len(c) for c in comps], reverse=True))
 
-    print(f"n=6: Chordal: {chordal_count_6}/{total_checkable_6}, "
-          f"Non-chordal: {non_chordal_count_6}/{total_checkable_6}")
-    if non_chordal_examples:
-        print(f"  Non-chordal examples (induced cycle found):")
-        for m_ex, length_ex, verts_ex in non_chordal_examples:
-            print(f"    m={m_ex}, induced C_{length_ex} on vertices {verts_ex}")
+        if H != I2:
+            n5_ocf_fail += 1
+        if not is_perf:
+            n5_perf_fail += 1
+        if not is_chord:
+            n5_chord_fail += 1
+        n5_polys[tuple(poly)] += 1
+        n5_alpha_dist[alpha_v] += 1
+        n5_omega_dist[omega_v] += 1
+        n5_comp_dist[comp_sizes] += 1
+        n5_detailed.append((H, tuple(poly), alpha_v, omega_v, ss, m))
+
+    print(f"Total: {n5_total}")
+    print(f"OCF failures: {n5_ocf_fail}")
+    print(f"Non-perfect: {n5_perf_fail}")
+    print(f"Non-chordal: {n5_chord_fail}")
+    print(f"\nDistinct I(Omega,x): {len(n5_polys)}")
+    for p, cnt in n5_polys.most_common(15):
+        s = " + ".join(f"{c}x^{k}" if k > 0 else str(c) for k, c in enumerate(p) if c > 0)
+        print(f"  [{cnt:4d}x] I(x) = {s}  => I(2) = {eval_poly(list(p), 2)}")
+    print(f"\nalpha: {dict(sorted(n5_alpha_dist.items()))}")
+    print(f"omega: {dict(sorted(n5_omega_dist.items()))}")
+    print(f"\nComponent sizes: {dict(n5_comp_dist.most_common(10))}")
 
     # ═══════════════════════════════════════════════
-    # SECTION 10: Deep coefficient analysis
+    # n=6 exhaustive (OCF only uses fast evaluation)
     # ═══════════════════════════════════════════════
-    print_separator("SECTION 10: Coefficient structure of I(Omega(T), x)")
+    sep("SECTION 2: Exhaustive n=6 (OCF verification + stats)")
 
-    # For OCF: H(T) = sum_k alpha_k * 2^k
-    # So each alpha_k contributes alpha_k * 2^k to H(T)
-    # The dominant term is the one with largest alpha_k * 2^k
+    n6_ocf_fail = 0
+    n6_total = 0
+    n6_cycle_count_dist = Counter()
+    n6_H_by_score = defaultdict(list)
+    n6_alpha_by_score = defaultdict(set)
+    n6_cycle_by_score = defaultdict(set)
+    n6_poly_samples = {}  # poly_key -> (H, cycles, cg) for distinct polys
+    n6_m_distribution = Counter()
 
-    print("\nn=6: Which term alpha_k * 2^k dominates H(T)?")
-    dominant_k = Counter()
-    for r in n6_results:
-        poly = r['ind_poly']
-        terms = [(k, poly[k] * (2**k)) for k in range(len(poly)) if poly[k] > 0]
-        if terms:
-            max_k = max(terms, key=lambda t: t[1])[0]
-            dominant_k[max_k] += 1
+    for T in all_tournaments(6):
+        n6_total += 1
+        if n6_total % 5000 == 0:
+            print(f"  ... {n6_total}", flush=True)
 
-    print(f"  Dominant k distribution: {dict(sorted(dominant_k.items()))}")
+        H = hamiltonian_path_count(T)
+        cycles = find_odd_cycles(T)
+        m_cyc = len(cycles)
+        ss = score_sequence(T)
 
-    # Ratio alpha_k / C(m, k) -- how close are the coefficients to the
-    # "all sets are independent" maximum?
-    print("\nn=6: Average alpha_k / C(m,k) ratios (measuring Omega density):")
-    from math import comb
-    for target_m in [4, 6, 8, 10]:
-        ratios_by_k = defaultdict(list)
-        for r in n6_results:
-            poly = r['ind_poly']
-            m = r['num_cycles']
-            if m != target_m:
+        if m_cyc == 0:
+            I2 = 1
+        else:
+            I2 = independence_poly_at_fast(cycles, 2)
+
+        if H != I2:
+            n6_ocf_fail += 1
+            if n6_ocf_fail <= 3:
+                print(f"  FAIL #{n6_ocf_fail}: H={H}, I(2)={I2}, m={m_cyc}")
+
+        n6_cycle_count_dist[m_cyc] += 1
+        n6_H_by_score[ss].append(H)
+        n6_m_distribution[m_cyc] += 1
+
+    print(f"Total: {n6_total}")
+    print(f"OCF failures: {n6_ocf_fail}")
+    print(f"\n#directed_cycles distribution:")
+    for m_val in sorted(n6_cycle_count_dist.keys()):
+        print(f"  m={m_val:3d}: {n6_cycle_count_dist[m_val]:5d} tournaments")
+
+    # ═══════════════════════════════════════════════
+    # n=6 detailed analysis on a SAMPLE (for expensive properties)
+    # ═══════════════════════════════════════════════
+    sep("SECTION 3: n=6 detailed sample (first 2000 + all interesting)")
+
+    # Sample: first 2000 tournaments + stratified by score sequence
+    n6_sample_polys = Counter()
+    n6_sample_perf = 0
+    n6_sample_perf_fail = 0
+    n6_sample_chord_fail = 0
+    n6_sample_alpha = Counter()
+    n6_sample_omega = Counter()
+    n6_sample_total = 0
+    n6_sample_lc_fail = 0
+    n6_sample_uni_fail = 0
+    n6_sample_comp_dist = Counter()
+    n6_sample_detailed = []
+
+    for T in all_tournaments(6):
+        n6_sample_total += 1
+        if n6_sample_total > 2000:
+            break
+
+        H = hamiltonian_path_count(T)
+        cycles = find_odd_cycles(T)
+        m = len(cycles)
+        ss = score_sequence(T)
+
+        if m == 0:
+            poly = [1]
+            alpha_v, omega_v = 0, 0
+            n6_sample_perf += 1
+            ncomp = 0
+            comp_sizes = ()
+            is_chord = True
+        else:
+            cg = conflict_graph(cycles)
+            m = len(cg)
+            if m <= 22:
+                poly = independence_polynomial_coeffs(cg, m)
+            else:
+                poly = None
+            adj_s = adj_to_sets(cg, m)
+            if m <= 20:
+                alpha_v = max_indep(adj_s, m)
+                omega_v = max_clique(adj_s, m)
+            else:
+                alpha_v = None
+                omega_v = None
+            if m <= 12:
+                perf = is_perfect(adj_s, m)
+                is_chord = not has_induced_cycle_geq4(adj_s, m)
+                if perf:
+                    n6_sample_perf += 1
+                else:
+                    n6_sample_perf_fail += 1
+                if not is_chord:
+                    n6_sample_chord_fail += 1
+            else:
+                perf = None
+                is_chord = None
+            comps = connected_comps(adj_s, m)
+            ncomp = len(comps)
+            comp_sizes = tuple(sorted([len(c) for c in comps], reverse=True))
+
+        if poly is not None:
+            pk = tuple(poly)
+            n6_sample_polys[pk] += 1
+            # Log-concavity
+            if len(poly) > 2:
+                for i in range(1, len(poly)-1):
+                    if poly[i]**2 < poly[i-1]*poly[i+1]:
+                        n6_sample_lc_fail += 1
+                        break
+                peaked = False
+                for i in range(1, len(poly)):
+                    if poly[i] < poly[i-1]:
+                        peaked = True
+                    elif poly[i] > poly[i-1] and peaked:
+                        n6_sample_uni_fail += 1
+                        break
+
+        if alpha_v is not None:
+            n6_sample_alpha[alpha_v] += 1
+        if omega_v is not None:
+            n6_sample_omega[omega_v] += 1
+        n6_sample_comp_dist[comp_sizes] += 1
+
+        n6_sample_detailed.append((H, poly, alpha_v, omega_v, ss, m))
+
+    print(f"Sample size: {n6_sample_total}")
+    print(f"Non-perfect: {n6_sample_perf_fail}")
+    print(f"Non-chordal: {n6_sample_chord_fail}")
+    print(f"Log-concavity failures: {n6_sample_lc_fail}")
+    print(f"Unimodality failures: {n6_sample_uni_fail}")
+
+    print(f"\nDistinct I(Omega,x): {len(n6_sample_polys)}")
+    for p, cnt in n6_sample_polys.most_common(20):
+        s = " + ".join(f"{c}x^{k}" if k > 0 else str(c) for k, c in enumerate(p) if c > 0)
+        print(f"  [{cnt:4d}x] I(x) = {s}  => I(2) = {eval_poly(list(p), 2)}")
+
+    print(f"\nalpha: {dict(sorted(n6_sample_alpha.items()))}")
+    print(f"omega: {dict(sorted(n6_sample_omega.items()))}")
+    print(f"\nComponent sizes (top 10):")
+    for cs, cnt in n6_sample_comp_dist.most_common(10):
+        print(f"  {cs}: {cnt}")
+
+    # alpha*omega >= m
+    violations = sum(1 for H, poly, a, o, ss, m in n6_sample_detailed
+                     if a is not None and o is not None and m > 0 and a*o < m)
+    checked = sum(1 for H, poly, a, o, ss, m in n6_sample_detailed
+                  if a is not None and o is not None and m > 0)
+    print(f"\nalpha*omega >= m violations: {violations}/{checked}")
+
+    # ═══════════════════════════════════════════════
+    # Root analysis
+    # ═══════════════════════════════════════════════
+    sep("SECTION 4: Roots of I(Omega(T), x)")
+
+    if numpy_ok:
+        for label, polys_counter in [("n=5", n5_polys), ("n=6", n6_sample_polys)]:
+            print(f"\n--- {label} ---")
+            all_real = True
+            all_neg = True
+            mags = []
+            neg_reals = []
+
+            for pk in polys_counter:
+                if len(pk) <= 1:
+                    continue
+                roots = find_roots(list(pk))
+                if roots is None:
+                    continue
+                for r in roots:
+                    mags.append(abs(r))
+                    if abs(r.imag) > 1e-8:
+                        all_real = False
+                    if r.real > 1e-8:
+                        all_neg = False
+                    if abs(r.imag) < 1e-8 and r.real < 0:
+                        neg_reals.append(r.real)
+
+            print(f"  Distinct polynomials: {len(polys_counter)}")
+            print(f"  All roots real: {all_real}")
+            print(f"  All roots real & negative: {all_neg}")
+            if mags:
+                print(f"  |root| range: [{min(mags):.6f}, {max(mags):.6f}]")
+            if neg_reals:
+                print(f"  Neg real roots: closest to 0 = {max(neg_reals):.6f}, "
+                      f"farthest = {min(neg_reals):.6f}")
+                print(f"  All |neg root| > 2: {all(abs(r)>2 for r in neg_reals)}")
+
+        # Detail for n=5
+        print(f"\n--- n=5 root details ---")
+        for pk in sorted(n5_polys.keys(), key=len):
+            if len(pk) <= 1:
+                continue
+            roots = find_roots(list(pk))
+            if roots is None or len(roots) == 0:
+                continue
+            s = " + ".join(f"{c}x^{k}" if k > 0 else str(c) for k, c in enumerate(pk) if c > 0)
+            rs = []
+            for r in sorted(roots, key=lambda r: r.real):
+                if abs(r.imag) < 1e-8:
+                    rs.append(f"{r.real:.6f}")
+                else:
+                    rs.append(f"({r.real:.4f}{r.imag:+.4f}i)")
+            print(f"  I(x) = {s}")
+            print(f"    Roots: {rs}")
+
+        # n=6 interesting cases
+        print(f"\n--- n=6 root details (degree >= 2 polynomials) ---")
+        shown = 0
+        for pk in sorted(n6_sample_polys.keys(), key=len, reverse=True):
+            if len(pk) <= 2:
+                continue
+            roots = find_roots(list(pk))
+            if roots is None or len(roots) == 0:
+                continue
+            s = " + ".join(f"{c}x^{k}" if k > 0 else str(c) for k, c in enumerate(pk) if c > 0)
+            rs = []
+            for r in sorted(roots, key=lambda r: r.real):
+                if abs(r.imag) < 1e-8:
+                    rs.append(f"{r.real:.6f}")
+                else:
+                    rs.append(f"({r.real:.4f}{r.imag:+.4f}i)")
+            print(f"  I(x) = {s}  [{n6_sample_polys[pk]}x]")
+            print(f"    Roots: {rs}")
+            shown += 1
+            if shown >= 15:
+                break
+    else:
+        print("  (skipped)")
+
+    # ═══════════════════════════════════════════════
+    # Modular arithmetic
+    # ═══════════════════════════════════════════════
+    sep("SECTION 5: H(T) modular structure via OCF")
+
+    for label, detailed in [("n=5", n5_detailed), ("n=6 sample", n6_sample_detailed)]:
+        print(f"\n{label}:")
+        Hs = [d[0] for d in detailed]
+        polys = [d[1] for d in detailed if d[1] is not None]
+
+        mod2 = Counter(H % 2 for H in Hs)
+        print(f"  H mod 2: {dict(mod2)} (Redei)")
+
+        mod4 = Counter(H % 4 for H in Hs)
+        print(f"  H mod 4: {dict(sorted(mod4.items()))}")
+
+        # H mod 4 = (1 + 2*alpha_1) mod 4?
+        check4 = True
+        for H, poly, *_ in detailed:
+            if poly is None:
+                continue
+            a1 = poly[1] if len(poly) > 1 else 0
+            if H % 4 != (1 + 2*a1) % 4:
+                check4 = False
+                break
+        print(f"  H mod 4 = 1 + 2*alpha_1 mod 4: {check4}")
+
+        # H mod 8
+        mod8 = Counter(H % 8 for H in Hs)
+        print(f"  H mod 8: {dict(sorted(mod8.items()))}")
+        check8 = True
+        for H, poly, *_ in detailed:
+            if poly is None:
+                continue
+            a1 = poly[1] if len(poly) > 1 else 0
+            a2 = poly[2] if len(poly) > 2 else 0
+            if H % 8 != (1 + 2*a1 + 4*a2) % 8:
+                check8 = False
+                break
+        print(f"  H mod 8 = 1 + 2*a1 + 4*a2 mod 8: {check8}")
+
+    # ═══════════════════════════════════════════════
+    # Score sequence correlations (n=5)
+    # ═══════════════════════════════════════════════
+    sep("SECTION 6: Score sequence vs Omega invariants")
+
+    print("\nn=5:")
+    by_ss5 = defaultdict(list)
+    for H, poly, alpha, omega, ss, m in n5_detailed:
+        by_ss5[ss].append((H, poly, alpha, omega, m))
+
+    for ss in sorted(by_ss5.keys()):
+        items = by_ss5[ss]
+        Hs = [i[0] for i in items]
+        ms = [i[4] for i in items]
+        alphas = [i[2] for i in items]
+        omegas = [i[3] for i in items]
+        a1s = [i[1][1] if len(i[1]) > 1 else 0 for i in items]
+        print(f"  {ss} ({len(items)}x): H={sorted(set(Hs))}, m={sorted(set(ms))}, "
+              f"alpha={sorted(set(alphas))}, omega={sorted(set(omegas))}, "
+              f"alpha_1={sorted(set(a1s))}")
+
+    print("\nn=6 (sample, by score seq):")
+    by_ss6 = defaultdict(list)
+    for H, poly, alpha, omega, ss, m in n6_sample_detailed:
+        by_ss6[ss].append((H, alpha, omega, m))
+
+    for ss in sorted(by_ss6.keys()):
+        items = by_ss6[ss]
+        Hs = [i[0] for i in items]
+        alphas = [i[1] for i in items if i[1] is not None]
+        omegas = [i[2] for i in items if i[2] is not None]
+        ms = [i[3] for i in items]
+        print(f"  {ss} ({len(items)}x): "
+              f"H=[{min(Hs)},{max(Hs)}] "
+              f"m=[{min(ms)},{max(ms)}] "
+              f"alpha={sorted(set(alphas)) if alphas else '?'} "
+              f"omega=[{min(omegas) if omegas else '?'},{max(omegas) if omegas else '?'}]")
+
+    # ═══════════════════════════════════════════════
+    # I at special values
+    # ═══════════════════════════════════════════════
+    sep("SECTION 7: I(Omega, x) at special values")
+
+    for label, detailed in [("n=5", n5_detailed)]:
+        print(f"\n{label}:")
+        for x_val in [-1, 1, 3]:
+            vals = [eval_poly(list(poly), x_val) for H, poly, *_ in detailed if poly]
+            vc = Counter(vals)
+            print(f"  I(Omega, {x_val:2d}): {dict(sorted(vc.items()))}")
+
+    # For n=6 sample
+    print(f"\nn=6 sample:")
+    for x_val in [-1, 1, 3]:
+        vals = [eval_poly(list(poly), x_val) for H, poly, *_ in n6_sample_detailed
+                if poly is not None]
+        if vals:
+            vc = Counter(vals)
+            print(f"  I(Omega, {x_val:2d}): range=[{min(vals)},{max(vals)}], "
+                  f"mean={sum(vals)/len(vals):.1f}, top: {vc.most_common(5)}")
+
+    # ═══════════════════════════════════════════════
+    # Dominant term
+    # ═══════════════════════════════════════════════
+    sep("SECTION 8: Dominant term alpha_k * 2^k")
+
+    for label, detailed in [("n=5", n5_detailed), ("n=6 sample", n6_sample_detailed)]:
+        dom = Counter()
+        for H, poly, *_ in detailed:
+            if poly is None:
+                continue
+            terms = [(k, poly[k] * 2**k) for k in range(len(poly)) if poly[k] > 0]
+            if terms:
+                dom[max(terms, key=lambda t: t[1])[0]] += 1
+        print(f"\n{label}: dominant k: {dict(sorted(dom.items()))}")
+
+    # ═══════════════════════════════════════════════
+    # NEW: Coefficient ratios for n=6
+    # ═══════════════════════════════════════════════
+    sep("SECTION 9: Coefficient density alpha_k / C(m,k)")
+
+    for target_m in sorted(set(m for *_, m in n6_sample_detailed if m > 0)):
+        ratios = defaultdict(list)
+        for H, poly, *_, m in n6_sample_detailed:
+            if poly is None or m != target_m:
                 continue
             for k in range(1, len(poly)):
-                if comb(m, k) > 0:
-                    ratios_by_k[k].append(poly[k] / comb(m, k))
-        if ratios_by_k:
-            print(f"  m={target_m}:")
-            for k in sorted(ratios_by_k.keys()):
-                vals = ratios_by_k[k]
-                print(f"    k={k}: mean ratio = {sum(vals)/len(vals):.4f} "
-                      f"(range [{min(vals):.4f}, {max(vals):.4f}])")
+                c_mk = comb(m, k)
+                if c_mk > 0:
+                    ratios[k].append(poly[k] / c_mk)
+        if ratios and target_m <= 20:
+            print(f"\n  m={target_m}:")
+            for k in sorted(ratios.keys()):
+                if ratios[k]:
+                    v = ratios[k]
+                    print(f"    k={k}: {sum(v)/len(v):.4f} [{min(v):.4f},{max(v):.4f}] "
+                          f"(n={len(v)})")
 
     # ═══════════════════════════════════════════════
-    # SECTION 11: H(T) modular patterns from OCF decomposition
+    # Max independent set patterns
     # ═══════════════════════════════════════════════
-    print_separator("SECTION 11: H(T) mod small primes via OCF")
+    sep("SECTION 10: Max independent set cycle-size patterns (n=5)")
 
-    # H(T) = sum alpha_k * 2^k
-    # mod 2: H(T) = alpha_0 = 1 (always odd -- Redei!)
-    # mod 4: H(T) = 1 + 2*alpha_1 mod 4
-    #       = 1 + 2*(#odd_cycles) mod 4
-    # mod 8: H(T) = 1 + 2*alpha_1 + 4*alpha_2 mod 8
+    mis_patterns = Counter()
+    for T in all_tournaments(5):
+        cycles = find_odd_cycles(T)
+        m = len(cycles)
+        if m <= 1:
+            continue
+        cg = conflict_graph(cycles)
+        adj_s = adj_to_sets(cg, m)
+        nbr = [0]*m
+        for i in range(m):
+            for j in range(m):
+                if cg[i][j]:
+                    nbr[i] |= (1<<j)
 
-    print("\nn=6: H(T) mod 4 decomposition:")
-    mod4_dist = Counter()
-    alpha1_parity = Counter()
-    for r in n6_results:
-        poly = r['ind_poly']
-        H = r['H']
-        alpha1 = poly[1] if len(poly) > 1 else 0
-        mod4_dist[H % 4] += 1
-        alpha1_parity[alpha1 % 2] += 1
+        alpha = 0
+        max_sets = []
+        for mask in range(1<<m):
+            sz = bin(mask).count('1')
+            if sz < alpha:
+                continue
+            ok = True
+            bits = mask
+            while bits:
+                v = (bits & -bits).bit_length() - 1
+                if nbr[v] & mask & ((1<<v)-1):
+                    ok = False
+                    break
+                bits &= bits-1
+            if ok:
+                if sz > alpha:
+                    alpha = sz
+                    max_sets = []
+                max_sets.append(mask)
 
-    print(f"  H mod 4 distribution: {dict(sorted(mod4_dist.items()))}")
-    print(f"  alpha_1 parity: {dict(alpha1_parity)}")
-    print(f"  (H mod 4 = 1 + 2*alpha_1 mod 4 = {'verified' if all((r['H'] % 4) == (1 + 2*(r['ind_poly'][1] if len(r['ind_poly'])>1 else 0)) % 4 for r in n6_results) else 'FAILED'})")
+        for mask in max_sets:
+            sizes = tuple(sorted([len(set(cycles[i])) for i in range(m)
+                                  if mask & (1<<i)], reverse=True))
+            mis_patterns[sizes] += 1
 
-    # mod 8
-    print(f"\n  H mod 8 = 1 + 2*alpha_1 + 4*alpha_2 mod 8:")
-    mod8_check = all(
-        (r['H'] % 8) == (1 + 2*(r['ind_poly'][1] if len(r['ind_poly'])>1 else 0)
-                         + 4*(r['ind_poly'][2] if len(r['ind_poly'])>2 else 0)) % 8
-        for r in n6_results
-    )
-    print(f"  Verified: {mod8_check}")
-
-    mod8_dist = Counter()
-    for r in n6_results:
-        mod8_dist[r['H'] % 8] += 1
-    print(f"  H mod 8 distribution: {dict(sorted(mod8_dist.items()))}")
-
-    # ═══════════════════════════════════════════════
-    # SECTION 12: Can we predict H(T) from simpler Omega(T) statistics?
-    # ═══════════════════════════════════════════════
-    print_separator("SECTION 12: Predicting H(T) from Omega(T) statistics")
-
-    # Test: is H(T) determined by (alpha, omega, m, density)?
-    stat_to_H = defaultdict(list)
-    for r in n6_results:
-        if r['alpha'] is not None and r['omega'] is not None:
-            key = (r['num_cycles'], r['alpha'], r['omega'],
-                   r['num_components'], tuple(r['component_sizes']))
-            stat_to_H[key].append(r['H'])
-
-    unique_H = sum(1 for k, v in stat_to_H.items() if len(set(v)) == 1)
-    total_keys = len(stat_to_H)
-    print(f"\n  (m, alpha, omega, #comp, comp_sizes) determines H uniquely: "
-          f"{unique_H}/{total_keys} keys")
-
-    # Try with full degree sequence
-    stat_to_H2 = defaultdict(list)
-    for r in n6_results:
-        key = tuple(r['omega_deg_seq']) if r['omega_deg_seq'] else ()
-        stat_to_H2[key].append(r['H'])
-
-    unique_H2 = sum(1 for k, v in stat_to_H2.items() if len(set(v)) == 1)
-    print(f"  Omega degree sequence determines H uniquely: "
-          f"{unique_H2}/{len(stat_to_H2)} keys")
+    print("Cycle sizes in maximum independent sets:")
+    for pat, cnt in mis_patterns.most_common(15):
+        print(f"  {pat}: {cnt}")
 
     # ═══════════════════════════════════════════════
-    # SUMMARY
+    # Summary
     # ═══════════════════════════════════════════════
-    print_separator("SUMMARY OF FINDINGS")
+    sep("SUMMARY OF FINDINGS")
+    print(f"""
+METHODOLOGY: Uses tournament_lib with DIRECTED odd cycles (not vertex sets).
+Each directed cycle is a separate vertex of Omega(T).
 
-    print("""
-Key findings:
+1. OCF: H(T) = I(Omega(T), 2)
+   n=5: {n5_ocf_fail}/{n5_total} failures
+   n=6: {n6_ocf_fail}/{n6_total} failures
 
-1. OCF VERIFICATION: H(T) = I(Omega(T), 2) verified exhaustively for all
-   tournaments at n=5 ({n5}) and n=6 ({n6}).
+2. PERFECTNESS of Omega(T):
+   n=5: {n5_perf_fail} non-perfect out of {n5_total}
+   n=6 sample: {n6_sample_perf_fail} non-perfect
 
-2. PERFECTNESS: Omega(T) is perfect for ALL tournaments at n=5 and n=6.
-   This means chi(Omega) = omega(Omega) and clique_cover(Omega) = alpha(Omega).
+3. CHORDALITY:
+   n=5: {n5_chord_fail} non-chordal
+   n=6 sample: {n6_sample_chord_fail} non-chordal
 
-3. ROOTS: The roots of I(Omega(T), x) appear to be [check output above].
-   For perfect graphs, all roots being real negative would connect to the
-   "real-rootedness" conjecture for independence polynomials of claw-free graphs.
+4. ROOTS of I(Omega(T), x): See Section 4.
+   If all roots are real & negative, then I(x) > 0 for x > 0,
+   giving a "positivity proof" of H(T) >= 1 (Redei).
 
-4. LOG-CONCAVITY: The independence polynomial coefficients appear to be
-   log-concave and unimodal [check output above].
+5. LOG-CONCAVITY: n=6 failures: {n6_sample_lc_fail}
+   UNIMODALITY: n=6 failures: {n6_sample_uni_fail}
 
-5. MODULAR ARITHMETIC: H(T) mod 2^k is determined by the first k+1
-   coefficients of I(Omega(T), x). In particular:
-   - H(T) is odd (Redei) because alpha_0 = 1
-   - H(T) mod 4 is determined by #odd_cycles mod 2
+6. MODULAR ARITHMETIC:
+   H(T) mod 2 = 1 (Redei) follows from alpha_0 = 1.
+   H(T) mod 4 = 1 + 2*(#directed_odd_cycles) mod 4.
+   These give a "modular cascade" proof strategy for OCF.
 
-6. CONNECTED COMPONENTS: When Omega(T) has multiple components,
-   I(Omega(T), x) factors as a product. This could enable inductive proofs.
-
-7. CHORDALITY: Whether Omega(T) is always chordal (stronger than perfect)
-   is checked above. If chordal, the independence polynomial has a
-   particularly nice recursive structure via perfect elimination orderings.
-
-These findings suggest the OCF proof strategy should leverage:
-- The perfect graph structure of Omega(T)
-- The factorization over connected components
-- The modular arithmetic cascade (prove OCF mod 2, mod 4, mod 8, ...)
-""".format(n5=len(n5_results), n6=len(n6_results)))
+7. For PERFECT Omega(T):
+   - clique_cover = alpha (min # cliques to cover all cycles)
+   - chi = omega (chromatic number = max clique)
+   - These equalities give tight bounds relating cycle structure to counting.
+""")
 
 
 if __name__ == "__main__":

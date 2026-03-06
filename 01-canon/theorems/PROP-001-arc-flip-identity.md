@@ -1,9 +1,9 @@
 # PROP-001: Arc-Flip Identity (Equivalent to OCF/Claim A)
 
-**Type:** Proposition (computationally verified, proof open)
-**Certainty:** 3 -- VERIFIED (exhaustive n<=5, random n=6)
-**Status:** OPEN
-**Last reviewed:** kind-pasteur-2026-03-05-S5
+**Type:** Theorem (PROVED — follows from OCF)
+**Certainty:** 5 — PROVED for all n
+**Status:** PROVED (corollary of OCF / Grinberg-Stanley)
+**Last reviewed:** kind-pasteur-2026-03-05-S12
 **Tags:** #arc-flip #ocf #claim-a #proof-strategy
 
 ---
@@ -110,18 +110,20 @@ R_C values observed: {1} at n<=5, {1, 3} at n=6.
 
 ---
 
-## What Remains
+## Resolution
 
-Prove the target identity combinatorially. Possible approaches:
-1. **Transfer matrix / path-pair analysis:** Express both sides as sums over
-   path-pair decompositions of V\{i,j} and match term-by-term.
-2. **Generating function approach:** Both H and I(Omega, 2) are polynomials in
-   the arc indicators {T[i][j]}. Show they agree modulo the tournament ideal.
-3. **Involution argument:** Find a sign-reversing involution on a suitable set
-   that witnesses the identity.
+PROP-001 is now PROVED as a corollary of OCF (THM-002). Since H(T) = I(Omega(T), 2)
+for all tournaments (Grinberg-Stanley, arXiv:2412.10572 Corollary 20), E(T) = 0
+identically, so it is trivially invariant under arc flips.
+
+The direct combinatorial approaches listed below are no longer needed, but remain
+of independent interest:
+1. Transfer matrix / path-pair analysis
+2. Generating function approach
+3. Involution argument
 
 ---
 
 ## Source
 
-kind-pasteur-2026-03-05-S5
+kind-pasteur-2026-03-05-S5 (original); kind-pasteur-2026-03-05-S12 (resolution)

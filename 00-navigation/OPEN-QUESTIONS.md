@@ -13,19 +13,21 @@
 
 ---
 
-## OPEN-Q-002 🔴
+## OPEN-Q-002 -- RESOLVED
 **Prove Claim A: H(T) − H(T−v) = 2Σ_{C∋v} μ(C)**
 
-The central open problem. Equivalent to OCF: H(T) = I(Ω(T), 2). Claim B (the algebraic companion with I(Ω,2) instead of H(T)) is proved. The gap is the combinatorial identity connecting H(T) to I(Ω(T),2).
+**RESOLVED by kind-pasteur-2026-03-05-S12:** Claim A is PROVED for all n.
 
-**Verification record (opus-2026-03-05-S2+S3):**
-- n≤6: EXHAUSTIVE (33,864 tournaments, 0 failures) via verify_ocf_sweep.py
-- n=7: EXHAUSTIVE (1,048,576 arc assignments, 0 failures) via symbolic_proof_n7.py (27min, opus-S3)
-- n=8: 500 random, 0 failures
-- n=9: 100 random, 0 failures (first verification at this n; max indep set size=3)
-- n=10: 30 random, 0 failures (first verification at this n)
+**Proof:** OCF (H(T) = I(Omega(T), 2)) is proved by Grinberg & Stanley
+(arXiv:2307.05569, 2023; arXiv:2412.10572, 2024, Corollary 20).
+Their formula: ham(D̄) = Σ_{σ ∈ S(D), all cycles odd} 2^{ψ(σ)}.
+For tournaments, D̄ = D^op (converse) and ham(D^op) = ham(D) by path reversal.
+The RHS = I(Omega(D), 2) since independent sets in Omega(D) biject with
+collections of vertex-disjoint odd directed cycles.
+Therefore H(T) = I(Omega(T), 2). Combined with Claim B (THM-003, proved),
+this gives Claim A. See CONJ-001, THM-002.
 
-**Current approaches (from paper §claim_strategies):** Five routes documented. None yet complete.
+**Prior verification record:** n≤8 exhaustive (THM-015), n≤10 random sampling, all consistent.
 
 ---
 
@@ -71,83 +73,32 @@ The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-o
 
 ---
 
-## OPEN-Q-009 🔴 → MAJOR PROGRESS (Claim B path identity PROVED)
+## OPEN-Q-009 -- RESOLVED
 **Prove arc-flip identity: E(T) = H(T) - I(Omega(T), 2) is invariant under arc flips**
 
-The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H(T) = I(Omega(T),2)) by showing delta_H = delta_I for each arc flip from transitive.
+**RESOLVED by kind-pasteur-2026-03-05-S12:** E(T) = 0 for ALL tournaments (not just invariant).
+OCF (H(T) = I(Omega(T), 2)) is proved by Grinberg-Stanley (arXiv:2412.10572, Corollary 20).
+See THM-002, CONJ-001 for the complete proof chain.
 
-**BREAKTHROUGH (opus-2026-03-05-S4/S4c):** The Hamiltonian path alternating sum identity
-(THM-016, "Claim B path identity") is now PROVED by induction on m:
-  sum_{S⊆W\{v}} (-1)^|S| H(S) h_start(W\S, v) = (-1)^{m+1} h_end(W, v)
-This was the LAST MISSING PIECE for the inductive proof of B(Li,Rj)=B(Lj,Ri).
-THM-016 → THM-017: B(Li,Rj)=B(Lj,Ri) for ALL n — the even-odd split is PROVED.
-**CAVEAT:** The even-odd split is necessary but NOT sufficient for OCF (kind-pasteur-S8).
-OCF for all n still requires proving delta_H = delta_I (unsigned sum = cycle formula).
-**Remaining:** Find a route from the even-odd split to OCF, or prove delta_H=delta_I directly.
+**Historical work (preserved for reference):**
 
-**GENERAL FORMULA (opus-S2, THM-013; independently derived by kind-pasteur-S5 via A-clique):**
+The project independently discovered and partially proved OCF via multiple routes:
+- **THM-015**: Proved delta_H = delta_I as polynomial identity at n <= 8 (exhaustive)
+- **THM-016/017**: Proved the even-odd split for all n (inductive proof via Claim B path identity)
+- **THM-018**: Proved coefficient identity alpha_w^H = alpha_w^I symbolically at n <= 8
+- **MISTAKE-008**: Correctly identified that even-odd split is necessary but NOT sufficient for OCF
 
-  delta_I = sum_{k>=1} 2^k * Delta(alpha_k)
+The even-odd split (THM-016/017) was the strongest general-n result obtained internally.
+The gap between even-odd split and full OCF is now bridged by the Grinberg-Stanley proof.
 
-where Delta(alpha_k) depends recursively on alpha_{k-1} of cycle complements. Equivalently (kind-pasteur-S5): delta_I = 2 * [sum_{gained C'} I(R_{C'}, 2) - sum_{lost C} I(R_C, 2)] where R_C = Omega(T[V\V(C)]). By strong induction, I(R_C, 2) = H(complement). This is the A-clique argument adapted to arc flips (same technique as Claim B proof). Verified n=4,...,9 (opus) and n=5 exhaustive + n=6 random (kind-pasteur).
-
-**Independent verification (opus-2026-03-05-S3):** Adjacency identity adj(i,j)-adj'(j,i) = RHS verified:
-- n=5: 10,240/10,240 (exhaustive, all tournaments x all arcs)
-- n=6: 3,000/3,000 (random sampling)
-
-**Simplified forms by n (opus-S2):**
-- n<=5: delta_H = 2*sum_L(DL-CL) [simple formula]
-- n=6,7: delta_H = -2*sum s_x*H(B_x) + 2*sum_{L>=5}(DL-CL)
-- n=8: needs correction for VD 3-5 pairs (simplified formula fails 8/30)
-- n=9+: needs alpha_3 terms (three mutually VD 3-cycles)
-
-**EXHAUSTIVE PROOF FRONTIER (opus-S4, extending kind-pasteur-S6/S7):**
-- n<=6: proved by kind-pasteur-S6 (symbolic polynomial identity, THM-015)
-- n=7: PROVED by opus-S3/S4 (2^20 = 1,048,576 configs) and kind-pasteur-S7 (SymPy + enumeration)
-- n=8: PROVED by opus-S4 (2^27 = 134,217,728 configs, 57 minutes, ALL passing)
-  Also independently verified by opus-S4b C implementation (0 fails through 3M+ configs)
-- n=9 would need 2^35 ~ 34B configs — infeasible without new approach
-
-**Even-Odd Split Lemma (opus-S4/S4b, new discovery):**
-The adj decomposition delta = sum_S Delta(S, V\{i,j}\S) satisfies:
-  sum_{|S| even} Delta(S,R) = sum_{|S| odd} Delta(S,R)
-i.e., the alternating sum vanishes: sum (-1)^|S| Delta(S,R) = 0.
-Equivalently (Signed Position Identity, opus-S4b): sum_{P: i->j} (-1)^{pos(i)} = sum_{P': j->i} (-1)^{pos(j)}.
-This is a POLYNOMIAL identity requiring T[a][b]+T[b][a]=1 (FAILS for general digraphs: 282/500 fail at n=4).
-Verified n=4,...,8 exhaustive, continuous weighted tournaments pass.
-**CAVEAT (kind-pasteur-S8):** This is a CONSEQUENCE of OCF, not equivalent to it. The odd-S sum
-of Delta(S,R) differs from the cycle formula [g-l]*H(R) per-subset; see even-odd-split-lemma.md.
-See 03-artifacts/drafts/even-odd-split-lemma.md.
-
-**PROVED (kind-pasteur-S10):** The signed position identity / alternating sum identity / even-odd
-split is now proved for ALL n, via Claim (B) (THM-016). See THM-016 for the inductive proof.
-
-**Remaining task:** Bridge the gap between even-odd split and OCF. The even-odd split gives
-delta_H = 2 * sum_{|S| odd} Delta(S,R), but this does NOT equal the cycle formula delta_I
-(see MISTAKE-008). An additional identity is needed to connect these two expressions.
-
-**NEW BREAKTHROUGH (opus-2026-03-05-S5, THM-018):**
-The s-coefficient identity alpha_w^H = alpha_w^I has been PROVED SYMBOLICALLY at n=4,...,7.
-Key findings:
-- alpha_w^H can be rewritten via "insertion decomposition": insert w at each position in perms of B_w
-- The base contribution is -2*H(W), with a correction that matches cycle derivatives exactly
-- At s=0: T(I,v) = T(J,v) for all v in W (crucial symmetry)
-- The identity is a POLYNOMIAL IDENTITY in the arc variables (diff = 0 in SymPy)
-- At n>=8: needs full Delta(alpha_k) formula from THM-013 (higher-order cycle interactions)
-- A general proof might follow by induction, using OCF at sub-tournament level
-
-**Key structural facts (both agents independently confirmed):**
+**Key structural facts discovered along the way:**
 - All affected cycles contain {i,j} (complement unchanged by flip)
 - At most one affected cycle in any independent set (A-clique)
-- Complement values computable by inductive OCF
-- The swap involution (opus THM-014) gives adj(i,j)-adj'(j,i) = #U_T - #U_T'
-- Even-odd split: delta decomposes equally between even-S and odd-S terms (T040/T044)
-- Bracket B(u,w) = T[u][i]*T[j][w] - T[u][j]*T[i][w] has block structure by s-types (T043)
-- When all s_v=0: brackets AND boundary terms vanish (potential induction base)
+- The swap involution (THM-014) gives adj(i,j)-adj'(j,i) = #U_T - #U_T'
+- Even-odd split: delta decomposes equally between even-S and odd-S terms
+- The s-coefficient identity (THM-018) reduces OCF to a per-vertex polynomial identity
 
-See PROP-001 (kind-pasteur), THM-013, THM-014, THM-015 (both agents).
-
-**Source:** opus-2026-03-05-S2/S3/S4/S4b; kind-pasteur-2026-03-05-S5/S6/S7
+See PROP-001, THM-013, THM-014, THM-015, THM-016, THM-017, THM-018.
 
 ---
 
@@ -229,7 +180,9 @@ Both conjectures are FALSE for p=11:
 
 ## Resolved Questions (moved here when answered)
 
-- **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery. Independently confirmed by opus-S2 with explicit mu triviality bound L >= n-2.
+- **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.
+- **OPEN-Q-002**: Claim A PROVED for all n. OCF proved by Grinberg-Stanley (arXiv:2412.10572, Corollary 20). See CONJ-001, THM-002. (kind-pasteur-2026-03-05-S12)
 - **OPEN-Q-003**: Per-path failure at n=6 iff some TypeII position has mu>1 (THM-009).
-- **Paley computation (kind-pasteur)**: h_QR=h_NQR=201, c_9(T_11)=11055, H(T_11)=95095. CONJ-002 refuted for p=11 (kind-pasteur-2026-03-05-S2). Code: 03-artifacts/code/compute_H_T11.py.
-- **OPEN-Q-011**: Near-cancellation is statistical, not structural. Not a viable proof strategy. (opus-S2, confirmed kind-pasteur n=7)
+- **OPEN-Q-009**: Arc-flip invariance resolved — E(T) = 0 for all T (OCF proved). See THM-002. (kind-pasteur-2026-03-05-S12)
+- **OPEN-Q-011**: Near-cancellation is statistical, not structural. Not a viable proof strategy.
+- **Paley computation (kind-pasteur)**: h_QR=h_NQR=201, c_9(T_11)=11055, H(T_11)=95095. CONJ-002 refuted for p=11.

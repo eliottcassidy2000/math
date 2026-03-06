@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S12 — 2026-03-05 (CRITICAL: OCF proved by Grinberg-Stanley; comprehensive audit)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S11 (context continuation)
+**Files read:** All warm-up files, all theorem files (THM-001 through THM-018, CONJ-001, CONJ-002, PROP-001, LEM-001, LEM-002), MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, tiling-class-structure.md, signed-adjacency-identity.md, paper-deep-connections.md
+**Summary of work:**
+  (1) COMPREHENSIVE AUDIT of all mathematical results in the project. Read every theorem file, checked proof chains, cross-referenced claims.
+  (2) FOUND AND FIXED: THM-016 significance section incorrectly claimed even-odd split implies OCF (contradicts MISTAKE-008). Fixed.
+  (3) FOUND AND FIXED: signed-adjacency-identity.md status line said "equivalent to OCF". Fixed.
+  (4) FOUND: THM-013 numbering collision (THM-013-insertion-decomposition.md says "THM-012" inside). Fixed header.
+  (5) FOUND: Two duplicate THM-016 files (claim-b and hamiltonian-alternating-sum). Noted for future merge.
+  (6) FOUND: LEM-001 and LEM-002 outdated after CONJ-002 refutation. Updated with resolution notes.
+  (7) VERIFIED numerically (via background agents): THM-016 inductive proof (all steps correct, no gaps), Tribonacci proof (all 5 components verified), OCF at n=3,4,5 (independent recomputation), H(T_11)=95095, Claim B at n=6.
+  (8) **CRITICAL DISCOVERY**: Web search found that OCF (H(T) = I(Omega(T), 2)) is ALREADY PROVED in the literature by Grinberg & Stanley (arXiv:2307.05569, 2023; arXiv:2412.10572, 2024). Their Corollary 20 states ham(D̄) = Σ 2^{ψ(σ)} over permutations with all odd D-cycles. For tournaments, D̄ = D^op and ham(D^op) = ham(D), so this gives H(T) = I(Omega(T), 2) exactly.
+  (9) Updated CONJ-001 (now PROVED), THM-002 (now PROVED for all n), PROP-001 (now PROVED), OPEN-Q-002 and OPEN-Q-009 (RESOLVED). Created grinberg-stanley-connection.md documenting the full equivalence.
+  (10) Updated LEM-001, LEM-002 with computed values (h_QR=h_NQR=201).
+  (11) Web searches also confirmed: Tribonacci connection is NEW (not in OEIS for tournaments), H(T_19) value is NEW, Omega(T) perfectness is NEW, the H/|Aut| sequence 1,9,1729 is NOT in OEIS.
+**New contributions:**
+- CONJ-001 → PROVED (via Grinberg-Stanley OCF + Claim B)
+- THM-002 → PROVED for all n (three independent proofs documented)
+- PROP-001 → PROVED
+- OPEN-Q-002, OPEN-Q-009 → RESOLVED
+- 03-artifacts/drafts/grinberg-stanley-connection.md (full analysis of equivalence)
+- Error fixes: THM-016, signed-adjacency-identity.md, THM-013 header, LEM-001, LEM-002
+- 04-computation/verify_core_results.py (independent OCF verification)
+- 04-computation/verify_tribonacci_proof.py (tribonacci proof verification)
+**Unresolved threads:**
+- Merge duplicate THM-016 files
+- Canonize Omega(T) perfectness (potentially new theorem)
+- The project's independent contributions (THM-016/017 even-odd split, THM-018 coefficient identity, tiling class structure, Tribonacci theorem) remain valuable and NEW
+- Consider submitting Tribonacci result to OEIS
+- The Grinberg-Stanley proof technique (symmetric functions / matrix algebra) is entirely different from our combinatorial methods — worth studying for further applications
+
 ## opus-2026-03-05-S6 — 2026-03-05 (Tribonacci web research: interval graph structure, Chudnovsky-Seymour connection)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S5 (context continuation)

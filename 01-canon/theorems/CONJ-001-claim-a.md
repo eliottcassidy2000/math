@@ -1,11 +1,11 @@
-# CONJ-001: Claim A — The Central Open Problem
+# CONJ-001: Claim A — PROVED (via Grinberg-Stanley OCF)
 
-**Type:** Conjecture
-**Certainty:** 3 — VERIFIED (exhaustive n≤6, random n=7; proof open)
-**Status:** OPEN
-**Last reviewed:** SYSTEM-2026-03-05-S1
-**Disputes:** see 02-court/active/DISC-001-mu-bug-vs-verification.md
-**Tags:** #claim-a #central-open-problem #vertex-deletion #hamiltonian-paths
+**Type:** Theorem (was Conjecture; now proved)
+**Certainty:** 5 — PROVED for all n
+**Status:** PROVED
+**Last reviewed:** kind-pasteur-2026-03-05-S12
+**Disputes:** RESOLVED (DISC-001 moot; OCF proved externally)
+**Tags:** #claim-a #proved #vertex-deletion #hamiltonian-paths #grinberg-stanley
 
 ---
 
@@ -21,43 +21,63 @@ where the sum is over all directed odd cycles C through v, and μ(C) = I(Ω(T−
 
 ---
 
-## What Is Known
+## PROOF (via Grinberg-Stanley + Claim B)
 
-**Proved for n ≤ 5:** The per-path identity (THM-005 + THM-004) implies Claim A for n ≤ 5, because for n ≤ 5 the only odd cycles through v are 3-cycles (the argument is in the paper; see OPEN-Q-001 for why this breaks at n=6).
+**Claim A is a COROLLARY of OCF (THM-002) + Claim B (THM-003).**
 
-**Verified exhaustively:**
+**Step 1:** OCF states H(T) = I(Omega(T), 2) for all tournaments T.
+OCF is now PROVED for all n — it is Corollary 20 of arXiv:2412.10572
+(Grinberg-Stanley, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", 2024),
+combined with the observation that for tournaments, the complement D̄ = D^op (converse),
+and ham(D^op) = ham(D) by path reversal. See THM-002 for full details.
 
-| n | Pairs (T,v) | Failures |
-|---|-------------|---------|
-| 4 | 256 | 0 ✓ |
-| 5 | 5,120 | 0 ✓ |
-| 6 | 196,608 | 0 ✓ |
-| 7 (random) | 3,500 | 0 ✓ |
+**Step 2:** Claim B (THM-003) states:
+I(Omega(T), 2) - I(Omega(T-v), 2) = 2 * sum_{C through v} mu(C).
+This is proved via the A-clique argument.
 
-⚠️ **Note:** There is an active discrepancy (DISC-001) regarding a μ computation bug in scripts 6-9. The verification numbers above are from the paper's main verification runs; the MASTER_FINDINGS document reports a bug in ind_poly_at_2_restricted() that may affect some verification logic. The paper's claims are stated to be unaffected. This needs formal resolution. See 02-court/active/DISC-001.
+**Step 3:** Since OCF holds for both T and T-v:
+H(T) - H(T-v) = I(Omega(T),2) - I(Omega(T-v),2) = 2 * sum_{C through v} mu(C). QED.
 
 ---
 
-## Known Non-Proofs / Failed Approaches
+## Verification Record (pre-proof)
+
+| n | Pairs (T,v) | Failures |
+|---|-------------|---------|
+| 4 | 256 | 0 |
+| 5 | 5,120 | 0 |
+| 6 | 196,608 | 0 |
+| 7 (random) | 3,500 | 0 |
+| 8 (THM-015) | 134,217,728 | 0 |
+
+All computational verifications are consistent with the now-proved result.
+
+---
+
+## Historical Failed Approaches (no longer relevant)
 
 | Approach | Status |
 |----------|--------|
 | H(T) = B_v + S_v + R_v (exact) | REFUTED (96/256 failures at n=4) |
 | S_v + R_v = 2Σμ(C) | REFUTED (144/256 failures at n=4) |
-| Per-path identity (3-cycle only) | Fails for n≥6 (2,758/9,126 at n=6) |
+| Per-path identity (3-cycle only) | Fails for n>=6 (2,758/9,126 at n=6) |
 | Natural generalization (all cycles) | Overcounts at n=6 |
 | Maximal-embedding-only formula | Fails at n=6 |
 
----
-
-## Proof Strategies (from paper §claim_strategies)
-
-Five organized approaches are listed in the paper. Details need to be extracted into a separate document. **Any Claude working on Claim A should start here.**
+These approaches attempted to prove Claim A directly. The actual proof goes through OCF
+(Grinberg-Stanley) + Claim B (A-clique), bypassing per-path methods entirely.
 
 ---
 
 ## Relationship to Other Results
 
-- Claim A + Claim B (THM-003) + induction → OCF formula (THM-002)
-- Claim A for n≤5 ← per-path identity ← THM-004 + THM-005
-- Claim A for n≥6: per-path identity is insufficient (see OPEN-Q-001, OPEN-Q-004)
+- **OCF (THM-002, PROVED)** + **Claim B (THM-003, PROVED)** → **Claim A (THIS, PROVED)**
+- OCF proved by Grinberg-Stanley (arXiv:2307.05569, arXiv:2412.10572)
+- OCF independently verified at n <= 8 by polynomial identity (THM-015, THM-018)
+- Claim A for n<=5 also follows from per-path identity (THM-004 + THM-005)
+
+## Key References
+
+- Grinberg & Stanley, "The Rédei-Berge symmetric function of a directed graph", arXiv:2307.05569 (2023)
+- Grinberg & Stanley, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", arXiv:2412.10572 (2024)
+- Corollary 20 of arXiv:2412.10572 is the OCF formula in permutation-cycle language

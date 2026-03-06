@@ -88,12 +88,16 @@ Each proof step verified independently at every m. Code: `04-computation/q009_cl
 
 ## Significance
 
-This identity is the KEY LEMMA for proving B(Li,Rj) = B(Lj,Ri) (the even-odd split / signed adjacency identity) by induction. The proof chain:
+This identity is the KEY LEMMA for proving B(Li,Rj) = B(Lj,Ri) (the even-odd split / signed adjacency identity) by induction. The proved chain:
 
 1. **THM-016** (this theorem) for all m
-2. → B(Li, Rj) = B(Lj, Ri) for all n (via induction on |W| = n-2)
-3. → delta_H = delta_I for all n (via THM-013 + THM-014)
-4. → H(T) = I(Omega(T), 2) for all n (OCF, by induction on arcs from transitive tournament)
-5. → **Claim A proved for all n**
+2. → B(Li, Rj) = B(Lj, Ri) for all n (via induction on |W| = n-2, THM-017)
+3. → Even-odd split for all n
+
+**CAVEAT (MISTAKE-008):** Steps 1-3 do NOT prove OCF. The even-odd split is a necessary
+condition for OCF, not sufficient. The chain B(Li,Rj)=B(Lj,Ri) → delta_H=delta_I was
+previously claimed but is FALSE (see MISTAKE-008, signed-adjacency-identity.md).
+OCF additionally requires proving that delta_H = delta_I (unsigned), which is proved
+only at n<=8 (THM-015, THM-018).
 
 The inductive proof of B(Li,Rj)=B(Lj,Ri) uses THM-016 for the d-independent part, and the induction hypothesis on sub-tournaments of size |W|-2 for the d-dependent part.

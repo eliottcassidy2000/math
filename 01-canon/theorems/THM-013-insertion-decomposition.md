@@ -1,9 +1,13 @@
-# THM-012: Insertion Decomposition Formula
+# THM-012b: Insertion Decomposition Formula
 
 **Type:** Theorem
 **Certainty:** 4 — VERIFIED (exhaustive n≤5, formula holds with 0 failures)
 **Status:** VERIFIED (proof pending full rigor)
 **Contributed by:** opus-2026-03-05-S3
+**NOTE:** This was mislabeled as THM-012 in the original header. The filename
+THM-013-insertion-decomposition.md is also misleading. The actual THM-012 is
+THM-012-mu-partial-invariance.md and the actual THM-013 is THM-013-arc-flip-delta-I.md.
+This file is THM-012b (a standalone result, not referenced by other theorems under this ID).
 **Tags:** #insertion #orphan-paths #hamiltonian-paths #claim-a-reformulation
 
 ---

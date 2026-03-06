@@ -43,14 +43,13 @@ Therefore h({0,b}) takes exactly two values:
 $$c_9 = \frac{11}{2}[5 h_{\text{QR}} + 5 h_{\text{NQR}}] = \frac{55}{2}(h_{\text{QR}} + h_{\text{NQR}})$$
 □
 
-## Key Consequence for the H(T₁₁) Conjecture
+## Key Consequence for the H(T₁₁) Conjecture — RESOLVED
 
-If the conjecture CONJ-002 holds (H(T₁₁) = 4455), the OCF gives:
-$$4455 - 3939 = 516 \geq 2c_9 \implies c_9 \leq 258 \implies h_{\text{QR}} + h_{\text{NQR}} \leq \frac{2 \cdot 258}{55} < 9.4$$
+**UPDATE (kind-pasteur-2026-03-05-S2):** CONJ-002 is REFUTED for p=11.
+Direct computation gives h_QR = h_NQR = 201, so h_QR + h_NQR = 402.
+Therefore c₉(T₁₁) = (55/2)(402) = 11055. And H(T₁₁) = 95095 (not 4455).
 
-Since h_QR + h_NQR must be a non-negative even integer: **h_QR + h_NQR ≤ 8**.
-
-This is the key constraint to check computationally. See LEM-002 for structure of T₁₁\{0,1}.
+The constraint "h_QR + h_NQR ≤ 8" was derived from the false conjecture and is itself false.
 
 ## References
 
