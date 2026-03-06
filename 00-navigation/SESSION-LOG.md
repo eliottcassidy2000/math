@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S15 — 2026-03-05 (Perpendicular maximizer, Claude's Cycles, ultra-log-concavity)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S14b (same session)
+**Files read:** n8-anomaly-deep-dive.md, tiling-class-structure.md, INVESTIGATION-BACKLOG.md, parity_tournaments_fixed.tex (Open Problems section), Irving-Omar paper (web)
+**Summary of work:**
+  (1) **PERPENDICULAR MAXIMIZER PRINCIPLE**: Self-converse tournaments (T ~ T^op) have significantly more Hamiltonian paths: SC/NSC mean ratio 1.97 at n=5 (exhaustive), 1.59 at n=7 (random). The global H-maximizer is ALWAYS self-converse. In tiling space, SC tournaments sit perpendicular to the transitive<->full diagonal. This is the geometric reason Paley tournaments (always SC) maximize H.
+  (2) **ULTRA-LOG-CONCAVITY**: I(Omega(T), x) coefficients satisfy ULC (alpha_k/C(m,k) is log-concave) with 0 failures across n=5 (exhaustive), n=6-9 (random). This is STRONGER than Newton inequalities. Despite Omega NOT being a matroid (62% non-matroid at n=6), ULC holds.
+  (3) **CLAUDE'S CYCLES CONNECTION**: Knuth's paper (Feb 2026) on m^3-vertex Hamiltonian cycle decomposition. Works for ODD m (Gray code construction), fails for EVEN m. Parallels our Paley maximizer working for odd primes and n=8 being the first even anomaly. Three coordinate axes (i,j,k) mirror three directions in tournament space.
+  (4) **IRVING-OMAR BARRIER**: Schur expansion of Redei-Berge function is NOT positive for tournaments (counterexample in paper). Rules out Schur-positivity route to real-rootedness. But Corollary 20 confirms our OCF formula.
+  (5) Revisited n=8 anomaly: BlackSelf(8) = T_657, which extends P(7), has uniform D_v=54, and (H-Fix)/2=312 (even). The mu explosion at n=8 is the tournament analog of Claude's Cycles failing at even m.
+**New contributions:**
+- T070 (perpendicular maximizer), T071 (ultra-log-concavity), T072 (Claude's Cycles), T073 (Irving-Omar barrier)
+**Unresolved threads:**
+- Can ULC be proved from tournament structure? (Would imply log-concavity, a step toward real roots)
+- What is the precise relationship between odd/even dichotomy and perpendicular propagation?
+- Does the "three-axis" analogy (Hamming weight / self-converse / automorphism) have algebraic content?
+
 ## opus-2026-03-05-S12 — 2026-03-05 (Deep web research: Knuth connections to OCF — 7 channels identified)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S11 (continuation)
