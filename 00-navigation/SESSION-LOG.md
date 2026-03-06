@@ -56,6 +56,31 @@ Entry format:
 - Whether Omega(T) has special structure beyond claw-freeness that explains positivity at lambda=2
 - Potential use of transfer matrix methods from stat mech for tournament problems
 
+## opus-2026-03-05-S8 — 2026-03-05 (Deep n=8 anomaly investigation: BlackSelf, mu explosion, Paley connection)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S7
+**Files read:** THM-019, tiling-class-structure.md, FINAL_FINDINGS.md, THM-016, INVESTIGATION-BACKLOG.md, omega_claw_fast.py, q009_adj_decomposition.py, tex paper (oq:n8 definition)
+**Summary of work:**
+  (1) Investigated the n=8 anomaly at the user's request, connecting blueself/blackself/pos formulas.
+  (2) Exhaustive enumeration of all 65536 self-converse n=8 tournaments with reversal anti-automorphism.
+  (3) Found 2560 with |Aut|>1, surveyed all: 10 distinct (H, Fix(beta), |Aut|) types.
+  (4) DISCOVERED: T_657 (H=657, |Aut|=3) contains Paley tournament P(7) as vertex-deletion — the Hadamard connection for INV-012.
+  (5) DISCOVERED: T_657 has perfectly uniform D_v = 54 for all vertices (unique among specimens).
+  (6) DISCOVERED: mu values at n=8 reach {3, 5, 7, 9, 11} for 3-cycles and {1, 3} for 5-cycles.
+  (7) DISCOVERED: Full Omega at n=8 has 76 vertices (20+48+8 cycles of length 3,5,7).
+  (8) IDENTIFIED: T_A (|Aut|=9, H=621) is the ONLY SC+Aut>1 specimen with no C5 in Omega_3.
+  (9) CORRECTED: Signed position identity requires T and T' (flipped tournament), not same T on both sides.
+  (10) Web research: Chudnovsky-Seymour, El Sahili parity results, doubly regular tournaments ↔ skew Hadamard.
+**New contributions:**
+- `03-artifacts/drafts/n8-anomaly-deep-dive.md` — comprehensive analysis
+- `04-computation/blackself8_*.py` — four investigation scripts
+- INV-012 updated with detailed findings
+**Unresolved threads:**
+- Confirm T_657 is isomorphic to a known construction
+- Resolve BlackSelf(8) definition ambiguity
+- Full Omega independence polynomial at n=8 (76 vertices, needs specialized algorithm)
+- Investigate whether uniform D_v characterizes Paley extensions
+
 ## opus-2026-03-05-S7 — 2026-03-05 (Omega perfectness DISPROVED at n=8; claw-freeness trivial at n<=8)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S6 (context continuation x3)

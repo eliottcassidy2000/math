@@ -107,11 +107,18 @@
 **What:** Does alpha_1(T) (equiv H(T) mod 4) admit a score-sequence characterization? Moon's formula determines |C_3| from score sequence. Question: is alpha_1 = |C_3| (mod 2) in general?
 **Next step:** Test computationally at n=5,6,7. Extract alpha_1 and |C_3| for all tournaments.
 
-### INV-012: BlackSelf(8) exceptional class (Open Problem 7 in paper)
+### INV-012: BlackSelf(8) exceptional class (Open Problem 7 in paper) — PARTIALLY RESOLVED
 **Source:** oq:n8 in tex
-**Status:** Computationally identified. NOT classified.
+**Status:** DEEP INVESTIGATION by opus-2026-03-05-S8. See `03-artifacts/drafts/n8-anomaly-deep-dive.md`.
 **What:** Unique isomorphism class at n=8 that is self-converse, has |Aut|>1, |Fix(beta)| odd, but H(T)/|Fix(beta)| is even. Is it related to a Hadamard matrix of order 8 or a skew conference matrix?
-**Next step:** Extract the specific tournament. Check against known Hadamard/conference matrices.
+**Key findings:**
+- Exhaustive search over ALL 65536 SC tournaments (alpha = reversal): ZERO have Fix(beta) | H with H/Fix even.
+- The definition likely means (H-Fix)/2 is even (number of beta-orbit pairs is even).
+- Under this interpretation: T_657 (H=657, Fix=33, |Aut|=3) is the best candidate: (657-33)/2 = 312 (even).
+- T_657 CONTAINS P(7) (Paley tournament on 7 vertices) as vertex-deletion. P(7) ↔ unique skew Hadamard matrix of order 8. THIS IS THE HADAMARD CONNECTION.
+- T_657 has perfectly uniform D_v = 54 (mu-weighted 3-cycle count) for all 8 vertices.
+- Full survey: 10 distinct (H, Fix, Aut) combinations among 2560 SC+Aut>1 tournaments.
+**Next step:** Confirm T_657 is isomorphic to a known Paley extension. Resolve definition ambiguity with paper author.
 
 ### INV-013: Realizable odd-cycle conflict graphs (Open Problem 8 in paper)
 **Source:** oq:realizable in tex
