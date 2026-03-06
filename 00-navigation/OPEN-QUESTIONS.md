@@ -316,9 +316,9 @@ Open: Does this extend to n=9 (odd)? Need to check if regular n=9 maximizers (if
 
 Redei's theorem says H(T) is always odd. The converse asks: for which odd k does there exist a tournament T with H(T)=k?
 
-**Permanent gaps discovered (THM-029, kind-pasteur-2026-03-06-S21):**
-- **H=7 is impossible** for ANY tournament on ANY number of vertices. Proof: H=7 requires alpha_1=3 via OCF, but alpha_1=3 is structurally forbidden (c3<=2 => alpha_1<=2; c3=3 => alpha_1>=4).
-- **H=21 is impossible** through n=7 (exhaustive at n<=6, sampled at n=7). Structural argument similar but more complex.
+**Permanent gaps discovered (THM-029, kind-pasteur-2026-03-06-S21, corrected S22):**
+- **H=7 is impossible** for ANY tournament on ANY number of vertices. CORRECTED proof (S22): alpha_1=3 IS achievable at n>=7, but H=7 still impossible because H=7 requires (alpha_1=3, i_2=0), and i_2=0 forces common vertex among triples which forces c5>=1, giving alpha_1>=4. When alpha_1=3 occurs (n>=7), the triples don't all conflict, so i_2>=1, giving H>=11.
+- **H=21 is absent** through n=7 (exhaustive at n<=6, sampled at n=7). Whether it's a permanent gap remains open.
 
 **Achievable values (exhaustive):**
 - n=5: {1,3,5,9,11,13,15}

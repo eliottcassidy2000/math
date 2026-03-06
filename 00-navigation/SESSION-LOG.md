@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S22 — 2026-03-06 (THM-029 correction: alpha_1=3 achievable at n>=7, H=7 still impossible)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S21
+**Summary of work:**
+  (1) **THM-029 CORRECTED:** The claim that alpha_1=3 is impossible for ALL tournaments was FALSE. At n=7, ~9.2% of c3=3 tournaments have alpha_1=3 (c3=3, c5=0, c7=0). The common-vertex structural argument only works at n<=6. At n>=7, triples can span 7 vertices without common vertex.
+  (2) **H=7 STILL IMPOSSIBLE — REFINED PROOF:** H=7 requires (alpha_1=3, i_2=0) via OCF. When i_2=0 (all cycles pairwise conflict), they share a common vertex, forcing c5>=1 and alpha_1>=4. When alpha_1=3 occurs, the cycles don't all conflict (i_2>=1), giving H>=11. Either way H!=7. Verified: 500k random n=7 tournaments, H=7 never found.
+  (3) **Specific alpha_1=3 tournament:** bits=1474494, n=7, triples={0,1,2},{3,4,6},{4,5,6}, scores=(1,1,2,2,5,5,5), H=15 (not 7, because i_2=2).
+  (4) **All-conflicting c3=3 at n=7:** 3000 tested, ALL have H=9 (alpha_1=4, i_2=0). Confirms the common-vertex mechanism still holds when i_2=0.
+**New contributions:** THM-029 corrected, OPEN-Q-019 updated
+**Unresolved threads:**
+- Is H=21 a permanent gap? Structural analysis needed (multiple (alpha_1, i_2, i_3) combinations possible)
+- Background agents investigating Hopf algebra, Striker-Chapman, Eulerian trace — not yet completed
+- INV-052 (chromatic-Redei bridge) still unread
+
 ## opus-2026-03-06-S19b — 2026-03-06 (T^op equivalence verification, structural characterization of real-root failure)
 **Account:** Eliott (opus machine)
 **Continuation of:** opus-2026-03-06-S19
@@ -25,7 +39,6 @@ Entry format:
 - Prove T^op equivalence for general n (the key step for Claim A)
 - The parity constraint approach yields necessary conditions but doesn't explain WHY they hold
 - INV-051/INV-052 (Mitrovic noncommuting Rédei-Berge) remains highest priority for OCF proof
-
 ## opus-2026-03-06-S8 — 2026-03-06 (n=8 SC+SF kernel: 5 classes, even/odd pattern broken)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S7

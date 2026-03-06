@@ -668,10 +668,10 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Why it matters:** Our transfer matrix M is constructed from a tournament and is symmetric. This paper's framework connecting tournament-derived matrices with design theory could explain structural properties of M (e.g., why symmetry holds, what the rank structure is).
 **Next step:** Check if our M fits their M_T(f,a) framework.
 
-### INV-067: Alpha_1 gap theorem and converse of Redei — NEW DISCOVERY
-**Source:** kind-pasteur-2026-03-06-S21 (computation)
-**Status:** PROVED (exhaustive n=3-6, THM-029)
-**What:** alpha_1(T) = 3 is IMPOSSIBLE for any tournament T on any number of vertices. Structural mechanism: c3<=2 forces c5=0 (alpha_1<=2); c3=3 forces c5>=1 (alpha_1>=4). The three cyclic triples always share a common vertex and span 5 vertices with score (1,1,2,3,3), which always has a 5-cycle. Via OCF, H=7 is impossible (requires alpha_1=3). H=21 also unachievable.
+### INV-067: Alpha_1 gap theorem and converse of Redei — CORRECTED S22
+**Source:** kind-pasteur-2026-03-06-S21 (computation), CORRECTED S22
+**Status:** PARTIALLY PROVED (THM-029 corrected)
+**What:** alpha_1=3 is impossible at n<=6 but ACHIEVABLE at n>=7 (~9.2% of c3=3 at n=7). Common-vertex property fails at n>=7. HOWEVER, H=7 remains impossible for ALL n by refined argument: H=7 requires (alpha_1=3, i_2=0), but i_2=0 forces common vertex => c5>=1 => alpha_1>=4; while alpha_1=3 implies i_2>=1 => H>=11. H=21 absent through n=7.
 **Achievable H values:** n=5: {1,3,5,9,11,13,15}. n=6: {1,3,5,9,11,...,45}\{7,21,35,39}. At n=7: 35 and 39 become achievable but 7 and 21 remain gaps.
 **Connection:** Relates to Mitrovic-Stojadinovic "converse of Redei" (INV-052).
 **Next step:** (1) Prove alpha_1=3 impossibility for ALL n (not just n<=6). (2) Find all permanent H-gaps. (3) Check OEIS for the sequence of achievable alpha_1 values.
