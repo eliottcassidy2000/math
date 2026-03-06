@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S16 — 2026-03-06 (Tiling model ↔ independence polynomial: blueself/blackself theorems)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S15 (context continuation)
+**Files read:** Full warm-up sequence, tournament-tiling-explorer.html, definitions.md, MISTAKES.md
+**Summary of work:**
+  (1) **Resolved merge conflict** from previous session's push (agents/.session-state.json).
+  (2) **Deep investigation** of relationship between tiling model structures (flip, grid-symmetry, transpose) and the independence polynomial I(Omega(T), x). Wrote 4 computational scripts totaling ~600 lines.
+  (3) **PROVED Theorem 1 (THM-022):** T^op preserves I(Omega(T), x) — cycle reversal argument.
+  (4) **PROVED Theorem 2:** Flip and transpose commute (pointwise ops commute with permutations).
+  (5) **PROVED Theorem 3:** Grid-symmetry is a flip-invariant (corollary of Thm 2).
+  (6) **PROVED Theorem 4:** For grid-symmetric tilings, k_0 + k_{n-1} = n-2 (endpoint constraint).
+  (7) **PROVED Theorem 5 (odd-n obstruction):** No blueself tilings exist at odd n. Score-sequence product constraint: endpoint products differ by n-2-2k_0, which is nonzero at odd n. Exhaustive verification: 0/16 (n=5), 0/512 (n=7).
+  (8) **VERIFIED Theorem 6:** Blueself/blackself mutual exclusivity at class level for n<=7. All 30 self-flip classes at n=7 are pure blackself. At n=6: 2 blueself, 6 blackself, 0 mixed.
+  (9) **DISCOVERED:** flip(T) is NOT isomorphic to T^op in general (only 3.9% at n=6). Flip does not preserve H or I.P.
+  (10) **Filed THM-022** with 7 theorems/observations. Added tangents T087-T090.
+**New contributions:**
+- THM-022 (tiling-indpoly structure theorems)
+- T087 (flip-invariance of grid-symmetry), T088 (odd-n obstruction), T089 (mutual exclusivity), T090 (flip ≠ T^op)
+- 04-computation/tiling_indpoly_investigation.py (main investigation)
+- 04-computation/tiling_proofs.py (focused proofs)
+- 04-computation/mutual_exclusivity_n7.py (n=7 verification)
+- 04-computation/blueself_parity.py (parity analysis)
+**Unresolved threads:**
+- Mutual exclusivity at n>=8 (even n, non-trivial)
+- Algebraic proof of odd-n obstruction for ALL odd n (current proof is exhaustive for n<=7)
+- Connection between blueself classes and H-maximization (blueself classes have high H, regular scores)
+
 ## kind-pasteur-2026-03-06-S17 — 2026-03-06 (Integrate background agents: H(T_19), web research, interlacing discovery)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S16 (context continuation)

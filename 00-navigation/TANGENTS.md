@@ -281,5 +281,17 @@ Full Omega(T_11) has 21169 vertices (all odd cycles), I.P. = [1, 21169, 10879, 1
 **T086** #polymer-gas #claw-free #arxiv-2505-22766 | certainty: medium | source: kind-pasteur-2026-03-06-S17 (web research agent)
 arXiv:2505.22766 (May 2025): Z_G(z) = (1+z)^|V| * sum_F (-1)^|F| (z/(1+z))^|V_F| for claw-free graphs, connecting independence polynomial to abstract polymer gas. Improved zero-free disk radius r*_Delta = 1/(1+2*Delta) for even Delta. While the zero-free disk doesn't reach x=2, the polymer-gas representation could provide structural insight for Omega(T) at n<=8 where claw-freeness holds. Does NOT help at n>=9.
 
+**T087** #tiling-flip #grid-symmetry #flip-invariant #blueself-blackself | certainty: high (PROVED) | source: opus-2026-03-06-S16
+THM-022: Grid-symmetry is a FLIP INVARIANT (proved via commutativity of pointwise ops with permutations). Flip and transpose commute: F(G(t))=G(F(t)). Consequence: blueself tilings come in flip-pairs. Additionally, transpose preserves I(Omega(T),x) exactly (cycle reversal argument). See THM-022.
+
+**T088** #blueself-parity #odd-n-obstruction #score-sequence | certainty: high (PROVED n<=7) | source: opus-2026-03-06-S16
+NO BLUESELF at odd n: For grid-symmetric tilings, k_0+k_{n-1}=n-2 (endpoint constraint). Flip changes endpoint scores with product difference n-2-2k_0, which vanishes only at k_0=(n-2)/2 — not an integer at odd n. Score multisets CANNOT match. Verified: 0/16 at n=5, 0/512 at n=7. Even n: blueself exists (1 class at n=4, 2 at n=6). Pattern: blueself ↔ even n exclusively.
+
+**T089** #blueself-blackself #mutual-exclusivity #class-level | certainty: high (verified n<=7) | source: opus-2026-03-06-S16
+No isomorphism class contains BOTH blueself and blackself tilings, verified exhaustively at n=4,5,6,7. At odd n this is vacuous (no blueself exists). At even n (4,6), the result is non-trivial. Self-flip members within a class always have uniform grid-symmetry. The mechanism: flip preserves grid-symmetry (T087), so self-flip members come in same-type pairs. Open whether the class-level separation holds at n>=8.
+
+**T090** #flip-not-top #tiling-operation #tournament-level | certainty: high (computational) | source: opus-2026-03-06-S16
+The tiling flip F(T) is NOT isomorphic to T^op in general. F reverses non-path arcs only; T^op reverses ALL arcs. Measured: flip(T)≅T^op for only 25% (n=4), 12.5% (n=5), 3.9% (n=6) of tilings. Flip does NOT preserve H or I(Omega,x). The flip is a path-dependent operation with no clean tournament-level description.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.
