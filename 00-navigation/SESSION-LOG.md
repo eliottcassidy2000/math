@@ -30,8 +30,11 @@ Entry format:
     - Even r-powers: M[a,b] has only even powers of r
     - Symmetry: M[a,b] = M[b,a]
   (3) **ALL VERIFIED computationally for m = 2, 3, 4, 5, 6** (every vertex, every recurrence)
-**New contributions:** THM-030, key_identity_complete_proof.py
-**Unresolved threads:** Connect to Irving-Omar framework and tiling isomorphism classes
+  (4) **SPECTRAL ANALYSIS:** For vertex-transitive tournaments at odd n, M = (H/n)*I (scalar identity). Verified n=3 cyclic (M=I), n=5 Paley (M=2I), n=7 Paley (M=27I).
+  (5) **SYMMETRIC FUNCTION CONNECTION:** THM-030 and Even Cycle Vanishing Theorem (INV-053) are parallel T<->T^op symmetries at different abstraction levels (transfer matrix vs symmetric function).
+  (6) **TRANSFER MATRIX vs INDEPENDENCE POLYNOMIAL:** T(r) is degree n-1 in r while I(Omega,x) has degree alpha(Omega). Transfer matrix captures H=I(Omega,2) but NOT the full polynomial.
+**New contributions:** THM-030, key_identity_complete_proof.py, transfer-matrix-symmetry-proof.md, T151, T152
+**Unresolved threads:** Prove M=(H/n)*I characterizes vertex-transitive tournaments; find combinatorial interpretation of Key Identity
 ## kind-pasteur-2026-03-06-S25 — 2026-03-06 (PROOF COMPLETE: even r-powers / transfer matrix symmetry)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S24 (ran out of context)
