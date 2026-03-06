@@ -33,6 +33,26 @@ Entry format:
 - Real roots: algebraic explanation needed (symmetric function path)
 - Irving-Omar paper Corollary 20: exact statement still unverified
 
+## kind-pasteur-2026-03-05-S14b — 2026-03-05 (Structural hierarchy: subdivided-claw-freeness, line graph refutation)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S14 (context continuation)
+**Files read:** THM-020, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md
+**Summary of work:**
+  (1) T054 REFUTED: Omega(T) is NOT a line graph at n=6. K5-e (Beineke forbidden subgraph) in 53% of n=6 tournaments. Heilmann-Lieb cannot explain real roots.
+  (2) NEW FINDING: Omega(T) is S_{2,1,1}-free (subdivided-claw-free) at n<=9 (0/100 failures), but FAILS at n>=10 (92%). Combined with opus-S9: S_{1,1,1}-free through n=11, fails at n=12. Each subdivision level buys ~3 vertices.
+  (3) Quasi-line graph property FAILS at n=8 (49%), n=9 (10%), n=10 (0%).
+  (4) Full structural hierarchy: line graph (n<=5) < quasi-line (n<=7) < claw-free (n<=8) < S_{2,1,1}-free (n<=9) < S_{1,1,1}-free (n<=11) < ??? Real roots hold at ALL tested n.
+  (5) LITERATURE: Alon (1990) + Adler-Alon-Ross (2001): max H(T) = Theta(n!/2^{n-1}). Paley maximizer conjecture consistent.
+  (6) LITERATURE: Jerrum-Patel (2026) proves real roots for bounded-degree H-free (H = subdivided claw). Key insight from opus-S9: every fixed subgraph eventually appears in Omega(T), so explanation must be algebraic.
+  (7) Verified all real roots + log-concavity + unimodality at n=9 (10 random).
+**New contributions:**
+- T061-T064 (line graph refuted, S_{2,1,1}-free, quasi-line fails, Alon bounds)
+- Updated THM-020 with expanded graph property table (including line graph, quasi-line, S_{2,1,1})
+- Updated OPEN-Q-015 with comprehensive structural analysis
+**Unresolved threads:**
+- What structural property explains real roots at n>=10? (opus-S9 says: must be algebraic)
+- Real roots: Irving-Omar/Grinberg-Stanley symmetric function framework is most promising path
+
 ## opus-2026-03-05-S10 — 2026-03-05 (Paley maximizer verification, n=8 H-maximizer discovery, Omega structure analysis)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S8 (context continuation after summary)

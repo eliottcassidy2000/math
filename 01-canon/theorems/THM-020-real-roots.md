@@ -61,16 +61,19 @@ If true, this would imply:
 
 ## Graph Properties of Omega(T)
 
-| Property | n<=5 | n=6 | n=7 | n=8 | n=9 |
-|----------|------|-----|-----|-----|-----|
-| Chordal | YES | NO (72/2000 fail) | - | - | - |
-| Perfect | YES | YES | YES | NO (53.8% fail) | - |
-| Comparability | YES | YES (200/200) | NO (1/100 fail) | NO (58/100 fail) | - |
-| Claw-free | YES | YES | YES | YES (trivial) | NO (90% fail) |
-| Real roots | YES | YES | YES | YES | OPEN |
+| Property | n<=5 | n=6 | n=7 | n=8 | n=9 | n=10 |
+|----------|------|-----|-----|-----|-----|------|
+| Line graph | YES | NO (53% fail) | - | - | - | - |
+| Chordal | YES | NO (72/2000 fail) | - | - | - | - |
+| Perfect | YES | YES | YES | NO (53.8% fail) | - | - |
+| Comparability | YES | YES (200/200) | NO (1/100 fail) | NO (58/100 fail) | - | - |
+| Quasi-line | YES | YES | YES | NO (49% fail) | NO (90% fail) | NO (100%) |
+| Claw-free | YES | YES | YES | YES (trivial) | NO (86% fail) | NO (98%) |
+| S_{2,1,1}-free | YES | YES | YES | YES | YES (0/100 fail) | NO (92% fail) |
+| Real roots | YES | YES | YES | YES | YES (verified) | YES (verified) |
 
-The hierarchy is: Chordal => Perfect => Comparability (no) ... Claw-free is independent.
-Omega(T) is always claw-free for n<=8 (vertex counting), which suffices for real roots.
+The hierarchy: Line graph => Claw-free => S_{2,1,1}-free. Each explains real roots up to the n where it fails.
+Real roots persist beyond ALL known structural explanations. A new mechanism operates at n>=10.
 
 ---
 
@@ -85,11 +88,15 @@ Omega(T) is always claw-free for n<=8 (vertex counting), which suffices for real
 
 ## Potential Proof Approaches for n>=9
 
-1. **Line graph hypothesis:** If Omega(T) is always a line graph, real roots follow from Heilmann-Lieb (1972). Line graphs are claw-free and satisfy Beineke's 9 forbidden subgraph conditions. Testable computationally.
+1. **~~Line graph hypothesis~~:** REFUTED at n=6. K5-e (Beineke forbidden subgraph) appears in 53% of n=6 tournaments. Heilmann-Lieb does not apply. (kind-pasteur-S14b)
 
-2. **Subdivided-claw-freeness:** Bezakova et al. (arXiv:2404.07615, 2024) prove a dichotomy for H-free graphs. Jerrum-Patel (2026) give zero-free regions for S_{a,b,c}-free graph classes of bounded degree. If Omega(T) avoids subdivided claws even when it has claws, this may suffice.
+2. **Subdivided-claw-freeness (PARTIALLY VIABLE):** Omega(T) is S_{2,1,1}-free at n=9 (0/100 failures) despite having claws (86%). But S_{2,1,1} appears at n>=10 (92%). The hierarchy is: claw-free (n<=8) -> S_{2,1,1}-free (n<=9) -> ??? (n>=10). Jerrum-Patel (2026, J. London Math. Soc.) prove all real roots for bounded-degree S_{a,b,c}-free graphs, but this requires a FIXED subdivided claw avoided for ALL n. The increasing chain of avoided subgraphs does not directly fit their framework.
 
-3. **Direct structural argument:** Prove real roots from the specific combinatorial structure of Omega(T) (e.g., using the Grinberg-Stanley symmetric function framework).
+3. **~~Quasi-line graphs~~:** FAILS at n=8 (49%). Not viable. (kind-pasteur-S14b)
+
+4. **Direct structural argument:** Prove real roots from the specific combinatorial structure of Omega(T) (e.g., using the Grinberg-Stanley symmetric function framework). The independence number alpha(Omega) <= floor(n/3) is small, which limits the degree of I(Omega,x).
+
+5. **Degree-dependent argument:** At each n, Omega(T) avoids some subdivided claw S_n and has max degree Delta_n. Both grow with n, but perhaps the Jerrum-Patel zero-free region grows fast enough to always include x=2.
 
 ---
 

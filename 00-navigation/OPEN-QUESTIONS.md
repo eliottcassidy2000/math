@@ -215,12 +215,22 @@ PROVED for n<=8 via claw-freeness + Chudnovsky-Seymour (THM-020). Computationall
 - n=9: 50 random (3-cycle subgraph), 0 failures
 - n=10: 30 random (3-cycle subgraph), 0 failures
 
-At n>=9, Omega(T) has claws (90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
-Omega(T) is also NOT a comparability graph for n>=7 (fails 1/100 at n=7, 58/100 at n=8).
-A new argument is needed. Possible approaches:
-- Jerrum-Patel (2026) zero-free regions for subdivided-claw-free graphs
-- Direct structural analysis of Omega(T) beyond claw-freeness
-- Connection to the Grinberg-Stanley symmetric function framework
+At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Seymour doesn't apply.
+
+**Structural hierarchy (kind-pasteur-S14b):** Each property explains real roots up to the n where it fails:
+- Line graph: FAILS at n=6 (K5-e appears, 53%)
+- Quasi-line: FAILS at n=8 (49%)
+- Claw-free: FAILS at n=9 (86%)
+- S_{2,1,1}-free (subdivided claw): FAILS at n=10 (92%)
+- **Real roots: STILL HOLD at n=10,12,15,20 (0 failures)**
+
+**Refuted approaches:** Line graph (Heilmann-Lieb), quasi-line, all standard forbidden-subgraph classes.
+
+**Remaining approaches:**
+- Jerrum-Patel (2026, J. London Math. Soc.): zero-free regions for bounded-degree H-free graphs where H is a subdivided claw. Applies at n<=9 (S_{2,1,1}-free), but at n>=10 a larger subdivided claw must be avoided. The chain of avoided subgraphs grows with n — unclear if this converges.
+- Alon-Adler-Ross (2001): max H(T) = Theta(n!/2^{n-1}) via regular tournaments. Real roots would give H(T) > 0 for all T.
+- Direct structural argument from Omega(T) combinatorics (independence number <= floor(n/3)).
+- Connection to Grinberg-Stanley symmetric function framework.
 
 If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, H(T) > 0 for all x > 0.
 

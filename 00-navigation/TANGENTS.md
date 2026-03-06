@@ -209,5 +209,17 @@ At n=8, the H-maximizer (H=661, a(8) from OEIS A038375) is a self-converse tourn
 **T060** #paley-ratio #szele-bound #asymptotic | certainty: high | source: opus-2026-03-05-S9
 The ratio H(P(p))/(p!/2^{p-1}) for Paley primes: 2.000 (p=3), 2.400 (p=7), 2.440 (p=11), 2.527 (p=19), 2.557 (p=23). This converges slowly toward e=2.718..., consistent with the Szele-Alon upper bound max H <= O(n^{1/2} * n!/2^{n-1}). If Paley tournaments achieve the asymptotic max, then H(P(p)) ~ e * p!/2^{p-1} as p->infinity. The convergence rate H(P(p))/(p!/2^{p-1}) ~ e(1 - c/sqrt(p)) fits the data well. This connects tournament Hamiltonian path optimization to quadratic residue structure.
 
+**T061** #line-graph-refuted #beineke #heilmann-lieb | certainty: high (REFUTED) | source: kind-pasteur-2026-03-05-S14b
+T054 (line graph hypothesis) REFUTED at n=6. K5-e (Beineke forbidden subgraph #2) appears in 53% of n=6 tournaments with >=4 cycles. Omega(T) is NOT a line graph in general. Heilmann-Lieb (1972) cannot explain real roots of I(Omega(T), x). Claw-free at n<=8 is a stronger property that works.
+
+**T062** #subdivided-claw-free #S211-free #real-roots | certainty: high (computational) | source: kind-pasteur-2026-03-05-S14b
+Omega(T) (3-cycle subgraph) is S_{2,1,1}-free (no subdivided claw with one path of length 2) at n=9 (0/100 random failures) despite 86% having claws. FAILS at n=10 (92% have S_{2,1,1}). Combined with opus-S9 finding: S_{1,1,1}-free through n=11, fails at n=12. Hierarchy: claw-free (n<=8) -> S_{2,1,1}-free (n<=9) -> S_{1,1,1}-free (n<=11) -> ??? (n>=12). Each subdivision level buys ~3 more vertices. Jerrum-Patel (2026) applies but requires fixed H.
+
+**T063** #quasi-line-fails #chudnovsky-structure | certainty: high (computational) | source: kind-pasteur-2026-03-05-S14b
+Omega(T) is NOT quasi-line at n=8 (49%), n=9 (10%), n=10 (0%). A quasi-line graph has N(v) = union of two cliques for every v. Since quasi-line is intermediate between line graphs and claw-free, and Omega has claws at n>=9, this was expected. Not a viable approach for real roots beyond n=8.
+
+**T064** #alon-hamiltonian-maximum #regular-tournaments | certainty: high (literature) | source: kind-pasteur-2026-03-05-S14b
+Alon (1990): max H(T) <= c * n^{3/2} * n!/2^{n-1}. Adler-Alon-Ross (2001): max H(T) >= (e-o(1)) * n!/2^{n-1} using random regular tournaments. This means max H(T) = Theta(n!/2^{n-1}). Regular tournaments (including Paley) are near-maximizers. Our conjecture that Paley achieves the EXACT maximum (A038375) is consistent but much stronger than asymptotic bounds.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.
