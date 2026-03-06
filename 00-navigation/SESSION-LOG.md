@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S13 — 2026-03-05 (Web research: hard-core model, independence polynomial at lambda=2, statistical physics connections)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S12 (new session)
+**Files read:** All warm-up files, inbox messages (MSG-007, MSG-013, MSG-014 x2), tribonacci-web-research.md
+**Summary of work:**
+  (1) Comprehensive web research on connections between H(T) = I(Omega(T), 2) and statistical physics.
+  (2) FINDING: lambda=2 is in the NON-PERTURBATIVE regime of the hard-core model. The uniqueness threshold lambda_c(Delta) < 2 for all Delta >= 5. Cluster expansion diverges; approximate counting is #P-hard. OCF is a rare exact evaluation in this regime.
+  (3) FINDING: I(G, 2) counts 2-labeled independent sets: pairs (S, f) where S is independent and f: S -> {1,2}. For OCF, each Ham path corresponds to a colored collection of vertex-disjoint odd cycles.
+  (4) FINDING: Scott-Sokal (2005) connects LLL to independence polynomial zero-free regions. The Shearer zero-free disc is far too small to reach lambda=2 for any nontrivial max degree. Positivity of I(Omega(T), 2) cannot be deduced from LLL; it requires the combinatorial identity H(T) >= 1.
+  (5) FINDING: Chudnovsky-Seymour (2007) gives all-real-roots for claw-free graphs, applicable to Omega(T) only for n <= 8. Jerrum-Patel (2026) extends zero-free regions to H-free classes.
+  (6) Confirmed Grinberg-Stanley proof (arXiv:2307.05569 + arXiv:2412.10572) uses matrix algebra, NOT statistical mechanics. No bijective interpretation exists yet.
+  (7) Created comprehensive research report: hard-core-statistical-physics-connections.md with 11 references.
+**New contributions:**
+- 03-artifacts/drafts/hard-core-statistical-physics-connections.md (comprehensive research report)
+**Unresolved threads:**
+- Bijective proof of OCF: each Ham path <-> 2-colored independent cycle collection
+- Whether Omega(T) has special structure beyond claw-freeness that explains positivity at lambda=2
+- Potential use of transfer matrix methods from stat mech for tournament problems
+
 ## opus-2026-03-05-S7 — 2026-03-05 (Omega perfectness DISPROVED at n=8; claw-freeness trivial at n<=8)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S6 (context continuation x3)
