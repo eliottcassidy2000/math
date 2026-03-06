@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S18f — 2026-03-06 (hereditary maximizer chain + spectral analysis)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S18e
+**Summary of work:**
+  (1) **HEREDITARY MAXIMIZER CHAIN (exhaustive n=3-7)**: At odd n=3,5,7: EVERY vertex deletion from the global H-maximizer gives the (n-1)-maximizer. At even n=4,6: NO deletion gives the (n-1)-maximizer. The deletion spectrum is CONSTANT for all maximizers (vertex-transitive). Two types at n=6: Type A (del=11, IP=[1,14,4], more disjoint pairs) and Type B (del=13, IP=[1,20,1], more total cycles). Both perfectly vertex-homogeneous (4 c3 + 5 or 10 c5 through every vertex).
+  (2) **SCORE OBSTRUCTION ANALYSIS**: The even-n hereditary failure is NOT due to score incompatibility — deletion score at n=6 IS a maximizer score at n=5. The subtournament is simply suboptimal within that score class. At odd n, regular score + Paley structure forces deletion to be optimal. Score change: regular n → delete v → SC score (d-1,d-1,...,d,d) = maximizer score at n-1.
+  (3) **AA^T SPECTRAL CORRELATION**: corr(H, lambda_1(AA^T)) = -0.97 at n=5 and -0.96 at n=6. H-maximizers have smallest leading eigenvalue of AA^T (most spectrally regular). Spectral gap also strongly anti-correlated with H.
+  (4) **Cayley transform test**: tr(S^k) for skew-symmetric S is always 0 (trace of skew-symmetric is 0). The Irving-Omar arctanh approach uses adjacency A not skew S. tr(A^3)/3 = c3 confirmed. Pfaffian not directly related to H. The determinantal representation exists iff roots are real negative (circular), so the key is finding a NATURAL matrix from tournament structure.
+  (5) **n→n-2 pair deletions**: From T_7, ALL 21 pair-deletions give score (1,2,2,2,3) with H=13 (not max 15). The n→n-2 chain does not preserve maximality.
+**New contributions:** T104 (hereditary maximizer), T105 (AA^T spectral), INV-044
+**Unresolved threads:**
+- Prove hereditary maximizer algebraically (score compatibility proved, optimality within class needs proof)
+- Test at n=8 (even n, computationally expensive)
+- Find natural PSD matrix M_T such that det(I+xM_T) = I(Omega(T), x)
+
 ## opus-2026-03-06-S18 — 2026-03-06 (cross-refs complete, THM-024 proved, Paley deletion verified)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S17

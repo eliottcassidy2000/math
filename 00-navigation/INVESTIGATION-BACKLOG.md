@@ -59,6 +59,14 @@
 **What:** Every SC tournament has ≥1 involution anti-automorphism. Proof: (1) Moon's theorem: |Aut(T)| is odd. (2) H = ⟨Aut(T), σ₀⟩ has order 2|Aut(T)| (even). (3) By Cauchy, H has order-2 element. (4) Can't be in Aut(T) (odd order group). (5) Must be in σ₀·Aut(T) = set of anti-auts. NOT all anti-auts are involutions (counterexamples at n=6 with |Aut|>1), but at least one always is.
 **Scripts:** `04-computation/anti_aut_involution_test.py`, THM-024
 
+### INV-044: Hereditary Maximizer Chain (odd-only)
+**Source:** kind-pasteur-2026-03-06-S18f, T104, T105
+**Status:** DISCOVERED. Strong computational evidence (exhaustive n=3-7).
+**What:** At odd n (3,5,7): EVERY vertex deletion from the global H-maximizer gives the (n-1)-maximizer (hereditary). At even n (4,6): NO deletion gives the (n-1)-maximizer — the deletion score IS a maximizer score at n-1, but the subtournament is suboptimal within its class. Score mechanism: deleting v from regular n-tournament gives SC score (d-1,d-1,...,d,d) where d=(n-1)/2, which IS the maximizer score at n-1. Deletion spectrum is constant for ALL maximizers (vertex-transitive). Two types at n=6: Type A (del=11, IP=[1,14,4]) and Type B (del=13, IP=[1,20,1]). AA^T spectral: corr(H, lambda_1(AA^T)) = -0.97 — maximizers are most spectrally regular.
+**Key insight:** The hereditary chain T_7→T_6 works because Paley regularity + self-converse forces every subtournament to be the unique maximizer in its score class. At even n, SC structure creates the right score but not the right arc pattern.
+**Next step:** (1) Test at n=8 (even). (2) Prove the score compatibility algebraically. (3) Explain why odd-n regularity forces optimality in deletion while even-n SC does not.
+**Scripts:** `04-computation/hereditary_maximizer.py`, `04-computation/hereditary_obstruction.py`, `04-computation/maximizer_types_n6.py`
+
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)
 **Status:** CONNECTION IDENTIFIED. NOT formalized.
