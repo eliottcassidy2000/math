@@ -36,6 +36,31 @@ Entry format:
 - INV-053 (Savchenko formulas) could immediately verify/extend our cycle maximization theory
 - 6 background search agents may have additional results not yet integrated
 
+## opus-2026-03-06-S7 — 2026-03-06 (tiling isomorphism classes: SC+SF kernel discovery, n=7 analysis)
+**Account:** Eliott (opus machine)
+**Continuation of:** opus-2026-03-06-S6
+**Summary of work:**
+  Deep investigation of tournament isomorphism classes and their tiling structure, focused on how symmetrical tilings group and how symmetry persists across n values.
+
+  (1) **SC+SF SYMMETRY KERNEL DISCOVERED.** Classes that are both self-converse (T ~ T^op) AND self-flip (flipping all non-path arcs gives isomorphic tournament) form a persistent "kernel." Count: n=4:1, n=5:2, n=6:2, n=7:8. These kernel classes have nearly-regular scores and H values in the upper range.
+
+  (2) **EVEN/ODD PATTERN for H-maximizer.** At even n (4,6), the H-maximizer IS in the SC+SF kernel. At odd n (5,7), the H-maximizer (regular/Paley, high |Aut|) is SC but NOT SF. Proved computationally: Paley(7) fails self-flip for ALL 189 Hamiltonian paths — the flip always changes the score sequence from regular to non-regular.
+
+  (3) **GS ~ 3^floor((n-2)/2) in kernel.** Grid-symmetric tilings per kernel class follow this formula exactly at n=4,5,6 and for most classes at n=7 (6/8 have GS=9=3^2). The exceptions have slightly different score types.
+
+  (4) **n=7 FULLY ENUMERATED.** 456 isomorphism classes (matching OEIS A000568). 88 self-converse, 30 self-flip, 8 both. 3 regular tournament classes: Paley (H=189, |Aut|=21), H=175 (|Aut|=7), H=171 (|Aut|=3). All regular tournaments are SC with anti-auts but none are SF.
+
+  (5) **Self-flip mechanism explained.** Self-flip requires a permutation that is anti-automorphism on non-path arcs but automorphism on path arcs. This MIXED condition is impossible for vertex-transitive tournaments because the base path cannot be distinguished from other arcs by any automorphism. Low-|Aut| tournaments have enough asymmetry to satisfy this condition.
+
+  (6) **SF-only classes come in transpose pairs.** At n=7, all 22 SF-only classes form 11 pairs {T, T^op} with equal H.
+
+**New contributions:** T128, T129, tiling-isomorphism-kernel.md
+**Unresolved threads:**
+- n=8 kernel count (requires 2^28 = 268M tilings — needs C implementation)
+- Prove GS = 3^floor((n-2)/2) formula for kernel classes
+- Prove even/odd pattern for H-max in kernel
+- Explain why kernel count jumps from 2 to 8 between n=6 and n=7
+
 ## kind-pasteur-2026-03-06-S18h — 2026-03-06 (BIBD cycle maximization theorem, directed cycle analysis)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18g
