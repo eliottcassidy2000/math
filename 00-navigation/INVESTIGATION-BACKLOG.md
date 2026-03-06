@@ -16,6 +16,37 @@
 **Note:** OCF is now proved by Grinberg-Stanley, so this is no longer a proof strategy — it's a structural question. Real-rootedness explanation must be algebraic (Irving-Omar/Grinberg-Stanley symmetric function framework).
 **Next step:** (1) Test all-real-roots at n=9 where Omega is genuinely non-claw-free. (2) If confirmed, formulate as conjecture and seek algebraic proof.
 
+### INV-038: Clique-deletion interlacing for Omega(T)
+**Source:** opus-2026-03-06-S17, T100, interlacing-clique-deletion.md
+**Status:** STRUCTURAL INSIGHT. Proof sketch for n<=8.
+**What:** Through-v cycles always form a CLIQUE in Omega(T) (proved: sharing vertex v). Deleting vertex v = deleting this clique from Omega(T). The sequential deletion recurrence I(G,x) = I(G-u,x) + x*I(G\N[u],x) can be applied step-by-step. At n=5, 100% of remaining cycles are adjacent to some through-v cycle (Omega is very dense).
+**Key insight:** For n<=8 (claw-free), Chudnovsky-Seymour guarantees each step preserves real roots. For n>=9, the clique structure + high density may still force interlacing.
+**Verification:** 0 failures: n=5 (5120 exhaustive), n=6 (196608 exhaustive), n=7-8 (random).
+**Impact:** If provable for ALL n, gives inductive proof of real-rootedness of I(Omega(T),x).
+**Next step:** (1) Verify n=7 exhaustive. (2) Check whether the "remainder" G\N[u] always has real-rooted I.P. (3) Look for common interlacing framework.
+**Scripts:** `04-computation/interlacing_verify.py`, `04-computation/interlacing_structure.py`
+**Writeup:** `03-artifacts/drafts/interlacing-clique-deletion.md`
+
+### INV-039: Blueself odd-n obstruction — PROVED for ALL odd n
+**Source:** opus-2026-03-06-S17, THM-022 Theorem 5 (upgraded)
+**Status:** PROVED. Pure algebraic proof, no exhaustive search needed.
+**What:** No blueself tilings exist at any odd n. Grid-symmetry forces k_0+k_{n-1}=n-2 (endpoint constraint). Flip changes endpoint multisets: {1+k_0, n-2-k_0} -> {n-1-k_0, k_0}. For these to be equal as multisets, need k_0=(n-2)/2 (non-integer at odd n) or 1=0 (impossible). Therefore sorted scores always differ, so flip(T) is never isomorphic to T.
+**Script:** `04-computation/blueself_odd_n_proof.py`
+**Impact:** Upgrades THM-022 Theorem 5 from "proved n<=7" to "proved all n". Completes the odd half of the blueself existence dichotomy.
+
+### INV-040: Blueself vs SC maximizer — DISPROVED
+**Source:** opus-2026-03-06-S17, T099
+**Status:** DISPROVED at n=6.
+**What:** At n=6, blueself class with H=41 is NOT the SC maximizer in score class (3,3,3,2,2,2) (SC max is H=45, also blueself). Blueself classes are always SC and have regular scores, but not always max-H. The blueself with higher disjoint pair count (alpha_2=4) beats the one with more total cycles (alpha_1=16).
+**Script:** `04-computation/blueself_sc_maximizer_connection.py`
+
+### INV-041: Quasi-regularity of Omega(T) and real-rootedness mechanism
+**Source:** opus-2026-03-06-S17, T101
+**Status:** DISCOVERED. Strong computational evidence.
+**What:** Omega_3(T) is spectrally quasi-regular: lambda_max/avg_degree ≈ 1.005-1.011 for all n=5-15. Density stays above 0.5 even at n=15. I.P. degree ≤ 3 at n=10. 0 real-root failures in 700 samples total. The quasi-regularity may explain real-rootedness via a mechanism weaker than claw-freeness: for near-regular dense graphs, local neighborhood structure (each N(v) close to a union of ≤2 cliques) may hold even with occasional claws.
+**Next step:** Prove that the quasi-regularity of Omega_3(T) is a consequence of the tournament structure (vertex count argument). Then connect to Chudnovsky-Seymour local conditions.
+**Script:** `04-computation/omega_spectral_fast.py`
+
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)
 **Status:** CONNECTION IDENTIFIED. NOT formalized.

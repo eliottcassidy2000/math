@@ -99,8 +99,9 @@ property would follow. This would give:
 does not use perfectness of Omega(T). If perfectness is proved, it would give structural
 insight into WHY the OCF formula works, beyond the algebraic proof.
 
-**Open question:** Is Omega(T) always claw-free? (This would imply perfectness via
-Chudnovsky-Seymour.) See INV-032 in INVESTIGATION-BACKLOG.
+**Claw-freeness (RESOLVED):** Omega(T) is claw-free for n<=8 (vertex counting: 3 pairwise
+disjoint odd cycles + 1 touching all three requires >= 9 vertices). Fails at n>=9
+(90% of random n=9 tournaments have claws). See THM-020.
 
 ---
 

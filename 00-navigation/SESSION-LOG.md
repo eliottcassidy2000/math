@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S17 — 2026-03-06 (comprehensive verification + spectral analysis of Omega)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S18
+**Files read:** Full warm-up sequence, all theorem files, all computation scripts
+**Summary of work:**
+  (1) **COMPREHENSIVE THEOREM AUDIT**: Verified all 30 theorem files. Found and resolved: duplicate THM-013 (renamed to THM-012b), duplicate THM-016 (removed hamiltonian-alternating-sum, kept claim-b), wrong MISTAKE-006 cross-ref in THM-012b, outdated claw-free question in THM-019, LEM-001/LEM-002 certainty mismatch (2->5), THM-001 Route D outdated conditionality.
+  (2) **31 PATH FIXES**: Fixed 6 Windows paths and 25 non-portable relative paths across computation scripts.
+  (3) **PROVED: No blueself at ANY odd n** -- algebraic proof via endpoint score multiset analysis. THM-022 Theorem 5 upgraded from computational (n<=7) to universal.
+  (4) **DISPROVED: Blueself = SC maximizer** at n=6. Blueself H=41 is not SC max (SC max=45).
+  (5) **DISCOVERED: Through-v cycles form clique** in Omega(T) (proved). At n=5, 100% of remaining cycles adjacent to some through-v cycle.
+  (6) **SPECTRAL ANALYSIS OF OMEGA_3(T)**: lambda_max/avg_degree ~ 1.005-1.011 for all n=5-15. Omega is quasi-regular. 0 real-root failures in 700 samples (n=5-10).
+  (7) **VERIFICATION SCRIPTS**: Created verify_all_theorems.py, blueself_odd_n_proof.py, interlacing_verify.py, interlacing_structure.py, blueself_sc_maximizer_connection.py, omega_spectral_fast.py.
+  (8) **CROSS-REFERENCING**: Added verification script paths to 5 theorem files.
+**New contributions:** THM-012b rename, THM-016 dedup, T096, T097, T098, INV-038-041, interlacing-clique-deletion.md draft
+**Unresolved threads:**
+- verify_all_theorems.py stuck on n=7 OCF (find_odd_cycles slow at n=7)
+- Quasi-regularity of Omega: needs theoretical explanation
+- 20 of 30 theorem files still lack verification script references
+
 ## kind-pasteur-2026-03-06-S18e — 2026-03-06 (SC maximizer n=7, anti-aut involution theorem)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18d

@@ -1,7 +1,7 @@
 """Debug: why does Δ(#VD pairs) formula fail?"""
 
 import sys
-sys.path.insert(0, '03-artifacts/code')
+import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import all_tournaments, find_odd_cycles
 
 

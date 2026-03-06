@@ -1,7 +1,7 @@
 # LEM-001: Reduction of c₉(T₁₁) to Sub-Tournament Hamiltonian Cycles
 
 **Type:** Lemma
-**Certainty:** 2 — VERIFIED (proof is complete; relies only on vertex-transitivity of T₁₁ and orbit counting)
+**Certainty:** 5 — PROVED (relies only on vertex-transitivity of T₁₁ and orbit counting)
 **Status:** PROVED
 **Last reviewed:** kind-pasteur-2026-03-05-S1
 **Disputes:** none

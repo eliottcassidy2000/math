@@ -1,7 +1,7 @@
 """Check: which component of ΔI formula is wrong?"""
 
 import sys
-sys.path.insert(0, '03-artifacts/code')
+import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import (
     all_tournaments, find_odd_cycles, conflict_graph, independence_poly_at
 )

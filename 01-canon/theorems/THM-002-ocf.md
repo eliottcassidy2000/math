@@ -70,6 +70,11 @@ Combined with base case H(transitive) = 1 = I(empty, 2) and arc-flip reachabilit
 | 8 | 134,217,728 configs | 0 | exhaustive (THM-015) |
 | 11 (Paley) | 1 | 0 | H(T_11) = 95095 = I(Ω(T_11), 2) |
 
+**Verification scripts:**
+- `04-computation/verify_all_theorems.py` (THM-002 section, exhaustive n<=5, sampled n=6,7)
+- `04-computation/verify_ocf_full.py` (full OCF verification with all odd cycles)
+- `03-artifacts/code/compute_H_T11.py` (Paley T_11 verification)
+
 ## Notes & History
 
 The formula H(T) = I(Ω(T), 2) was discovered independently in this project (2026) and proved computationally for n ≤ 8. It was subsequently found to be equivalent to Corollary 20 of Grinberg-Stanley (arXiv:2307.05569, 2023; arXiv:2412.10572, 2024), who proved it in full generality using the Rédei-Berge symmetric function and matrix algebra.

@@ -27,13 +27,15 @@ The paper gives four independent proof routes:
 
 **Route C (automorphism action):** Free automorphism-group action. Unconditional.
 
-**Route D (OCF):** H(T) = I(Ω(T), 2). Conditional on Claim A (see CONJ-001). Since I(Ω(T), 2) ≥ 1 (the empty independent set) and satisfies the deletion-contraction recurrence, parity follows.
+**Route D (OCF):** H(T) = I(Ω(T), 2). Now unconditional — Claim A is PROVED (see CONJ-001, THM-002). Since I(Ω(T), 2) ≥ 1 (the empty independent set) and satisfies the deletion-contraction recurrence, parity follows.
 
 The classical proof (Rédei, 1934) proceeds by induction on n. The base case n=1 is trivial (H=1). The inductive step uses vertex deletion and a careful parity argument.
 
 ## Verification Record
 
 Verified computationally for all n ≤ 6 (exhaustive) and n = 7 (random sampling).
+
+**Verification script:** `04-computation/verify_all_theorems.py` (THM-001 section)
 
 ## Notes & History
 

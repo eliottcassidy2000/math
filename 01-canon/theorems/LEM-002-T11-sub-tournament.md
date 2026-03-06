@@ -1,7 +1,7 @@
 # LEM-002: Structure of the Sub-Tournament T₁₁\{0,1}
 
 **Type:** Lemma
-**Certainty:** 2 — VERIFIED (exact computation from definition)
+**Certainty:** 5 — PROVED (exact computation from definition)
 **Status:** PROVED
 **Last reviewed:** kind-pasteur-2026-03-05-S1
 **Disputes:** none

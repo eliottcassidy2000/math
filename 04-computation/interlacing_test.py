@@ -17,7 +17,7 @@ kind-pasteur-2026-03-06-S18
 """
 
 import sys
-sys.path.insert(0, r'C:\Users\Eliott\Documents\GitHub\math\03-artifacts\code')
+import os; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '03-artifacts', 'code'))
 from tournament_lib import (tournament_from_bits, all_tournaments,
                              random_tournament, find_odd_cycles,
                              conflict_graph, hamiltonian_path_count)

@@ -59,6 +59,11 @@ If true, this would imply:
 
 **Ultra-log-concavity also verified** (0 failures) at all tested n. alpha_k/C(m,k) is log-concave where m = |V(Omega_3)|. (kind-pasteur-S16)
 
+**Verification scripts:**
+- `04-computation/real_roots_deep.py` (real-rootedness checks at various n)
+- `04-computation/omega_claw_fast.py` (claw-freeness checks)
+- `04-computation/verify_all_theorems.py` (THM-021 section, discriminant checks)
+
 ---
 
 ## Graph Properties of Omega(T)
