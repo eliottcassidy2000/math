@@ -206,3 +206,55 @@ The "corrected conjecture" H(T_11)=4455 (inbox: stuff.txt) was derived from the 
 ### Lesson
 
 For computing cycle counts in specific tournaments, use direct enumeration (DFS/backtracking) rather than eigenvalue-trace corrections. The trace method is valid in principle but requires extremely careful non-simple walk accounting. The LEM-001 formula c_9 = (55/2)(h_QR+h_NQR) is the correct approach (kind-pasteur-S2).
+
+---
+
+## MISTAKE-008: Even-Odd Split Claimed "Equivalent to OCF"
+
+**Date discovered:** 2026-03-05
+**Found by:** kind-pasteur-2026-03-05-S8 (reviewing opus-S4 output)
+**Affects:** even-odd-split-lemma.md, OPEN-Q-009, TANGENTS T040
+
+### What was assumed
+
+The even-odd split (sum_{|S| even} Delta(S,R) = sum_{|S| odd} Delta(S,R)) was claimed EQUIVALENT to OCF in multiple places.
+
+### Why it was wrong
+
+The odd-S sum of Delta(S,R) = L_j(S)*R_i(R) - L_i(S)*R_j(R) is NOT the same as the cycle formula [g(S)-l(S)]*H(R). Specifically:
+- L_j(S) = sum_a h_end(S,a)*T[a][j] does not include the T[i][first] factor
+- g(S) = sum_{perms} T[i][first]*...*T[last][j] does include it
+
+So even=odd gives delta_H = 2*(odd sum of Delta), but this odd sum is not the cycle formula. The even-odd split is a CONSEQUENCE of OCF, not equivalent to it. Proving even=odd would not prove OCF.
+
+### The correct framing
+
+The even-odd split is a necessary condition for OCF. It is a valid structural observation (verified n=5,...,8) but strictly weaker than OCF. To prove OCF via this route, one would additionally need to show that the odd-S sum of Delta(S,R) equals the cycle formula — which is essentially the full OCF identity.
+
+### Impact
+
+The even-odd split cannot serve as a standalone reformulation of OCF. It may still be useful as a sanity check or structural constraint, but claims of "equivalence" in the documentation have been corrected.
+
+---
+
+## MISTAKE-009: sympy_proof_n8.py Used Simplified n<=7 Formula
+
+**Date discovered:** 2026-03-05
+**Found by:** kind-pasteur-2026-03-05-S8
+**Affects:** 03-artifacts/code/sympy_proof_n8.py (original version)
+
+### What was assumed
+
+The formula -2*sum(s_x*H(B_x)) + 2*(D5-C5) + 2*(D7-C7) applies at n=8.
+
+### Why it was wrong
+
+THM-013 explicitly states this formula FAILS at n=8 due to VD 3-5 cycle pairs. At n=8, the complement of a 5-cycle has 3 vertices, and H(3-vertex) can be 1 or 3 (not always 1 as at n<=7). The simplified formula doesn't weight 5-cycle contributions by their complement's H value.
+
+### The correct framing
+
+At n=8, must use the full A-clique formula: delta_I = 2*sum_C [gained-lost]*H(comp(C)). The script has been rewritten to use this formula.
+
+### Impact
+
+The original script would have produced WRONG results. Fixed immediately upon discovery.

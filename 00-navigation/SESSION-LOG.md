@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-05-S8 — 2026-03-05 (error audit)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-05-S7 (context continuation)
+**Files read:** All canon files, all opus-S3/S4 new files, all proof scripts, TANGENTS, OPEN-QUESTIONS
+**Summary of work:** Pulled opus-S3 and opus-S4 contributions, then audited the entire codebase for errors. Found and fixed 4 issues: (1) BUG in sympy_proof_n8.py — used simplified n<=7 formula which THM-013 says FAILS at n=8; rewrote to use full A-clique formula. (2) LOGICAL ERROR in even-odd split lemma — claimed "equivalent to OCF" but it's only a consequence; the odd-S sum of Delta(S,R) differs from the cycle formula [g-l]*H(R) at the per-subset level. (3) Stale claim in proof-landscape saying n<=7 instead of n<=8. (4) Duplicate tangent number T040. Verified all SymPy proofs (n=4,5,6) and opus n=7 proof pass correctly. NOTE: opus-S4b ran in parallel and found additional structure (Signed Position Identity, tournament-specificity, bracket analysis) — see their session entry.
+**New contributions:**
+- MISTAKE-008: even-odd split equivalence claim corrected
+- MISTAKE-009: sympy_proof_n8.py formula bug documented and fixed
+- sympy_proof_n8.py rewritten with correct full A-clique formula
+- Tangent numbering fixed (T040 duplicate -> T044-T047)
+- Even-odd-split-lemma.md corrected, OPEN-Q-009 corrected, TANGENTS corrected
+**Unresolved threads:**
+- Run sympy_proof_n8.py overnight (corrected version, full A-clique formula)
+- Prove OCF for all n — central open problem
+- Reconcile even-odd split equivalence claim with opus-S4b's Signed Position Identity analysis
+
+---
+
 ## opus-2026-03-05-S4b — 2026-03-05 (Signed Position Identity + C verifier)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S3 (parallel session to S4)

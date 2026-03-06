@@ -106,6 +106,8 @@ i.e., the alternating sum vanishes: sum (-1)^|S| Delta(S,R) = 0.
 Equivalently (Signed Position Identity, opus-S4b): sum_{P: i->j} (-1)^{pos(i)} = sum_{P': j->i} (-1)^{pos(j)}.
 This is a POLYNOMIAL identity requiring T[a][b]+T[b][a]=1 (FAILS for general digraphs: 282/500 fail at n=4).
 Verified n=4,...,8 exhaustive, continuous weighted tournaments pass.
+**CAVEAT (kind-pasteur-S8):** This is a CONSEQUENCE of OCF, not equivalent to it. The odd-S sum
+of Delta(S,R) differs from the cycle formula [g-l]*H(R) per-subset; see even-odd-split-lemma.md.
 See 03-artifacts/drafts/even-odd-split-lemma.md.
 
 **Remaining task:** Prove the signed position identity / alternating sum identity for all n.

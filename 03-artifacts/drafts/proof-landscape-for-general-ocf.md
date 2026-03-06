@@ -1,6 +1,6 @@
 # Proof Landscape for General OCF: H(T) = I(Omega(T), 2)
 
-**Status:** PROVED for n <= 7 (exhaustive), VERIFIED for n <= 10 (sampling)
+**Status:** PROVED for n <= 8 (exhaustive), VERIFIED for n <= 10 (sampling)
 **Author:** opus-2026-03-05-S3
 **Goal:** Prove for ALL n
 
@@ -30,7 +30,7 @@ odd-cycle conflict graph, evaluated at x=2.
 ## What's Known
 
 - **Claim B is PROVED:** I(Omega(T),2) - I(Omega(T-v),2) = 2*sum mu(C).
-- **Formulation 1 is PROVED at n<=7** by exhaustive symbolic verification.
+- **Formulation 1 is PROVED at n<=8** by exhaustive symbolic verification (opus-S4).
 - **Delta_I has a closed form (THM-013):** Delta_I = sum_{k>=1} 2^k Delta(alpha_k).
   Simplified: Delta_I = -2*sum_x s_x*H(B_x) + 2*(D5-C5) + higher corrections.
 
