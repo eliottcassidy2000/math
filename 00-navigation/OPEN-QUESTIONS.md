@@ -226,11 +226,14 @@ At n>=9, Omega(T) has claws (86-90% of random n=9 tournaments), so Chudnovsky-Se
 
 **Refuted approaches:** Line graph (Heilmann-Lieb), quasi-line, all standard forbidden-subgraph classes.
 
+**BARRIER (Engstrom, arXiv:1610.00805):** Real-rootedness of the multivariate independence polynomial CHARACTERIZES claw-freeness. No broader graph class guarantees real roots via the same mechanism. The explanation MUST be tournament-specific and algebraic.
+
 **Remaining approaches:**
-- Jerrum-Patel (2026, J. London Math. Soc.): zero-free regions for bounded-degree H-free graphs where H is a subdivided claw. Applies at n<=9 (S_{2,1,1}-free), but at n>=10 a larger subdivided claw must be avoided. The chain of avoided subgraphs grows with n — unclear if this converges.
-- Alon-Adler-Ross (2001): max H(T) = Theta(n!/2^{n-1}) via regular tournaments. Real roots would give H(T) > 0 for all T.
-- Direct structural argument from Omega(T) combinatorics (independence number <= floor(n/3)).
-- Connection to Grinberg-Stanley symmetric function framework.
+- Jerrum-Patel (2026, JLMS): zero-free regions for bounded-degree H-free (H = subdivided claw). Applies at n<=9, chain grows with n.
+- Irving-Omar (arXiv:2412.10572): matrix-algebraic tools for Redei-Berge symmetric function. Schur-basis resolution may connect to parity.
+- Prakash-Sharma (arXiv:2510.09197): root gap quantification — could show gap stays positive for tournament conflict graphs.
+- Direct structural argument from Omega(T) combinatorics (alpha <= floor(n/3)).
+- Grinberg-Stanley / Irving-Omar symmetric function framework (most promising).
 
 If true, gives: alternative proof of Redei, log-concavity of I.P. coefficients, H(T) > 0 for all x > 0.
 

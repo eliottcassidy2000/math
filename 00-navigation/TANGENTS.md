@@ -221,5 +221,20 @@ Omega(T) is NOT quasi-line at n=8 (49%), n=9 (10%), n=10 (0%). A quasi-line grap
 **T064** #alon-hamiltonian-maximum #regular-tournaments | certainty: high (literature) | source: kind-pasteur-2026-03-05-S14b
 Alon (1990): max H(T) <= c * n^{3/2} * n!/2^{n-1}. Adler-Alon-Ross (2001): max H(T) >= (e-o(1)) * n!/2^{n-1} using random regular tournaments. This means max H(T) = Theta(n!/2^{n-1}). Regular tournaments (including Paley) are near-maximizers. Our conjecture that Paley achieves the EXACT maximum (A038375) is consistent but much stronger than asymptotic bounds.
 
+**T065** #claw-free-characterization #barrier | certainty: high (published) | source: kind-pasteur-2026-03-05-S14b (web search)
+Engstrom (arXiv:1610.00805, Alco 2019): A stability-like property of the MULTIVARIATE independence polynomial characterizes claw-freeness. This is a BARRIER RESULT: no broader graph class than claw-free can guarantee real-rootedness of I(G,x) via the same mechanism. For Omega(T), which has claws at n>=9, the real-rootedness conjecture (if true) requires a tournament-specific argument — not a general graph property. The explanation MUST be algebraic, arising from the specific structure of tournament conflict graphs.
+
+**T066** #schweser-redei-revisited #dirac-berge-hierarchy | certainty: high (published) | source: kind-pasteur-2026-03-05-S14b (web search)
+Schweser et al. (arXiv:2510.10659, Oct 2025, revised Feb 2026): "The Tournament Theorem of Redei revisited". Exhibits and connects the stronger theorems of Redei, Dirac, and Berge about Hamiltonian paths. Clarifies that Dirac's stronger theorem has two corollaries: one equivalent to Redei's stronger theorem, the other related to Berge's. May sharpen our understanding of the parity structure.
+
+**T067** #knuth-taocp-8a #hamiltonian-enumeration | certainty: medium | source: kind-pasteur-2026-03-05-S14b (web search, OEIS A391999)
+Donald Knuth's TAOCP Prefascicle 8a (work in progress, 2025) covers Hamiltonian path/cycle enumeration. Referenced by OEIS A391999. If Knuth has new computational results on tournament Hamiltonian paths, this could include data beyond the 11 terms of A038375 or provide new structural insights.
+
+**T068** #undecidability-tournaments #polynomial-inequalities | certainty: high (published IMRN 2025) | source: kind-pasteur-2026-03-05-S14b (web search)
+Chen-Lin-Ma-Wei (arXiv:2412.04972, IMRN 2025): Proving polynomial inequalities in digraph homomorphism densities for tournaments is UNDECIDABLE. This concerns flag algebra / homomorphism density context, not our specific setting, but is a cautionary note about the limits of algebraic approaches to tournament problems.
+
+**T069** #root-gap #independence-polynomial | certainty: high (published) | source: kind-pasteur-2026-03-05-S14b (web search)
+Prakash & Sharma (arXiv:2510.09197, FSTTCS 2025): "On The Roots of Independence Polynomial: Quantifying The Gap." Quantifies the gap between the smallest real root and the smallest absolute value among all other roots. Could help analyze the root structure of I(Omega(T), x) even when claw-freeness doesn't apply — e.g., by showing the gap remains positive (forcing real-rootedness) for tournament conflict graphs.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.
