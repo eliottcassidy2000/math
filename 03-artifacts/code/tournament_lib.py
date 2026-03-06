@@ -169,10 +169,62 @@ def conflict_graph(cycles):
     return adj
 
 
+def independence_poly_at_fast(cycles, x, max_indep_size=None):
+    """Fast I(Omega, x) for conflict graphs of cycle collections.
+    Exploits the fact that independent sets correspond to vertex-disjoint
+    cycle collections. For n <= 11, max independent set size <= 3.
+    For n <= 14, max size <= 4.  Much faster than brute-force 2^m."""
+    m = len(cycles)
+    if m == 0:
+        return 1
+    if max_indep_size is None:
+        # Estimate: max VD odd cycles in n vertices is floor(n/3)
+        total_verts = len(set(v for c in cycles for v in c))
+        max_indep_size = total_verts // 3
+
+    vsets = [frozenset(c) for c in cycles]
+    # Build adjacency bitmasks
+    adj_bits = [0] * m
+    for a in range(m):
+        for b in range(a + 1, m):
+            if vsets[a] & vsets[b]:
+                adj_bits[a] |= 1 << b
+                adj_bits[b] |= 1 << a
+
+    total = 1 + x * m  # size 0 and 1
+
+    if max_indep_size >= 2:
+        pairs = []
+        for a in range(m):
+            for b in range(a + 1, m):
+                if not (adj_bits[a] & (1 << b)):
+                    pairs.append((a, b))
+                    total += x ** 2
+
+        if max_indep_size >= 3:
+            triples = []
+            for a, b in pairs:
+                for c in range(b + 1, m):
+                    if not (adj_bits[a] & (1 << c)) and not (adj_bits[b] & (1 << c)):
+                        triples.append((a, b, c))
+                        total += x ** 3
+
+            if max_indep_size >= 4:
+                for a, b, c in triples:
+                    for d in range(c + 1, m):
+                        if (not (adj_bits[a] & (1 << d)) and
+                            not (adj_bits[b] & (1 << d)) and
+                            not (adj_bits[c] & (1 << d))):
+                            total += x ** 4
+
+    return total
+
+
 def independence_poly_at(adj, x):
     """Evaluate independence polynomial I(G, x) by enumeration.
     adj is an adjacency matrix (list of lists).
-    O(2^m * m) where m = number of vertices."""
+    O(2^m * m) where m = number of vertices.  Use independence_poly_at_fast
+    for conflict graphs of cycles when m is large."""
     m = len(adj)
     if m == 0:
         return 1  # empty graph: I = 1 (just the empty set)
@@ -242,6 +294,143 @@ def mu(T, v, cycle, _tv_cache=None):
 
 
 # ---------------------------------------------------------------------------
+# Arc-flip operations (for THM-013 / OPEN-Q-009)
+# ---------------------------------------------------------------------------
+
+def flip_arc(T, i, j):
+    """Return T' obtained by flipping arc i->j to j->i.
+    Requires T[i][j] == 1.  Returns a new tournament."""
+    assert T[i][j] == 1, f"No arc {i}->{j} to flip"
+    n = len(T)
+    Tp = [row[:] for row in T]
+    Tp[i][j] = 0
+    Tp[j][i] = 1
+    return Tp
+
+
+def adj_count(T, i, j):
+    """Count Hamiltonian paths of T with i immediately before j.
+    adj_T(i,j) = #{P in Ham(T) : P[k]=i, P[k+1]=j for some k}.
+
+    Method: adj(i,j) = sum_S dp_fwd[S][i] * dp_fwd_rev[V\\S][j]
+    where dp_fwd[S][i] = paths through S ending at i (forward DP on T)
+    and dp_fwd_rev[R][j] = paths through R ending at j (forward DP on T^op)
+                         = paths through R starting at j in T."""
+    n = len(T)
+    if not T[i][j]:
+        return 0
+    full = (1 << n) - 1
+
+    # Forward DP on T: dp[mask][v] = paths through mask ending at v
+    dp = [[0]*n for _ in range(1 << n)]
+    for v in range(n):
+        dp[1 << v][v] = 1
+    for mask in range(1, 1 << n):
+        for v in range(n):
+            cnt = dp[mask][v]
+            if not (mask & (1 << v)) or cnt == 0:
+                continue
+            for u in range(n):
+                if mask & (1 << u):
+                    continue
+                if T[v][u]:
+                    dp[mask | (1 << u)][u] += cnt
+
+    # Forward DP on T^op: dp_r[mask][v] = paths through mask ending at v in T^op
+    #                                    = paths through mask starting at v in T
+    dp_r = [[0]*n for _ in range(1 << n)]
+    for v in range(n):
+        dp_r[1 << v][v] = 1
+    for mask in range(1, 1 << n):
+        for v in range(n):
+            cnt = dp_r[mask][v]
+            if not (mask & (1 << v)) or cnt == 0:
+                continue
+            for u in range(n):
+                if mask & (1 << u):
+                    continue
+                if T[u][v]:  # reversed: arc u->v in T means v->u in T^op
+                    dp_r[mask | (1 << u)][u] += cnt
+
+    # adj(i,j) = sum over S containing i (not j) of dp[S][i] * dp_r[V\S][j]
+    total = 0
+    for mask in range(1, 1 << n):
+        if not (mask & (1 << i)):
+            continue
+        if mask & (1 << j):
+            continue
+        prefix_count = dp[mask][i]
+        if prefix_count == 0:
+            continue
+        rest = full ^ mask
+        if not (rest & (1 << j)):
+            continue
+        suffix_count = dp_r[rest][j]
+        total += prefix_count * suffix_count
+    return total
+
+
+def compute_s_x(T, i, j, x):
+    """s_x = 1 - T[x][i] - T[j][x] for x in V\\{i,j}."""
+    return 1 - T[x][i] - T[j][x]
+
+
+def count_directed_5_cycles_through_arc(T, i, j):
+    """Count directed 5-cycles in T that use the arc i->j.
+    A 5-cycle through arc i->j: i->j->a->b->c->i for some {a,b,c} subset of V\\{i,j}."""
+    n = len(T)
+    if not T[i][j]:
+        return 0
+    others = [x for x in range(n) if x != i and x != j]
+    count = 0
+    for a, b, c in permutations(others, 3):
+        if T[j][a] and T[a][b] and T[b][c] and T[c][i]:
+            count += 1
+    return count
+
+
+def verify_thm013(T, i, j):
+    """Verify THM-013 adjacency identity for flipping arc i->j.
+
+    Identity: adj_T(i,j) - adj_{T'}(j,i) = -2*sum_x s_x*H(B_x) + 2*(D5-C5)
+
+    Returns (passed, lhs, rhs)."""
+    n = len(T)
+    assert T[i][j] == 1, f"No arc {i}->{j}"
+
+    Tp = flip_arc(T, i, j)
+
+    lhs = adj_count(T, i, j) - adj_count(Tp, j, i)
+
+    others = [x for x in range(n) if x != i and x != j]
+
+    # Compute sum_x s_x * H(B_x)
+    sum_sH = 0
+    for x in others:
+        sx = compute_s_x(T, i, j, x)
+        # B_x = V\{i,j,x}
+        bx_verts = [w for w in range(n) if w != i and w != j and w != x]
+        if not bx_verts:
+            h_bx = 1 if len(bx_verts) == 0 else 0
+        else:
+            # Build sub-tournament on bx_verts
+            bx_n = len(bx_verts)
+            Bx = [[0]*bx_n for _ in range(bx_n)]
+            for ai in range(bx_n):
+                for bi in range(bx_n):
+                    Bx[ai][bi] = T[bx_verts[ai]][bx_verts[bi]]
+            h_bx = hamiltonian_path_count(Bx)
+        sum_sH += sx * h_bx
+
+    D5 = count_directed_5_cycles_through_arc(T, i, j)
+    C5 = count_directed_5_cycles_through_arc(Tp, j, i)
+
+    rhs = -2 * sum_sH + 2 * (D5 - C5)
+
+    return lhs == rhs, lhs, rhs
+
+
+# ---------------------------------------------------------------------------
 # Claim verification
 # ---------------------------------------------------------------------------
 
@@ -287,6 +476,19 @@ def verify_claim_b(T, v):
     total_mu = sum(mu(T, v, c, _tv_cache=cache) for c in cycles_v)
     rhs = 2 * total_mu
     return lhs == rhs, lhs, rhs
+
+
+def verify_ocf(T):
+    """Verify OCF: H(T) = I(Omega(T), 2).  Returns (passed, H, I)."""
+    h = hamiltonian_path_count(T)
+    cycles = find_odd_cycles(T)
+    n = len(T)
+    if n <= 14:
+        i_val = independence_poly_at_fast(cycles, 2)
+    else:
+        cg = conflict_graph(cycles)
+        i_val = independence_poly_at(cg, 2)
+    return h == i_val, h, i_val
 
 
 def verify_redei(T):

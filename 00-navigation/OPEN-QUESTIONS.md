@@ -16,7 +16,14 @@
 ## OPEN-Q-002 🔴
 **Prove Claim A: H(T) − H(T−v) = 2Σ_{C∋v} μ(C)**
 
-The central open problem. Verified exhaustively for n≤6 (196,608 pairs) and by random sampling for n=7 (3,500 pairs, 0 failures). Claim B (the algebraic companion with I(Ω,2) instead of H(T)) is proved. The gap is the combinatorial identity connecting H(T) to I(Ω(T),2).
+The central open problem. Equivalent to OCF: H(T) = I(Ω(T), 2). Claim B (the algebraic companion with I(Ω,2) instead of H(T)) is proved. The gap is the combinatorial identity connecting H(T) to I(Ω(T),2).
+
+**Verification record (opus-2026-03-05-S2+S3):**
+- n≤6: EXHAUSTIVE (33,864 tournaments, 0 failures) via verify_ocf_sweep.py
+- n=7: 5,000 random tournaments, 0 failures
+- n=8: 500 random, 0 failures
+- n=9: 100 random, 0 failures (first verification at this n; max indep set size=3)
+- n=10: 30 random, 0 failures (first verification at this n)
 
 **Current approaches (from paper §claim_strategies):** Five routes documented. None yet complete.
 
@@ -74,6 +81,10 @@ The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H
   delta_I = sum_{k>=1} 2^k * Delta(alpha_k)
 
 where Delta(alpha_k) depends recursively on alpha_{k-1} of cycle complements. Equivalently (kind-pasteur-S5): delta_I = 2 * [sum_{gained C'} I(R_{C'}, 2) - sum_{lost C} I(R_C, 2)] where R_C = Omega(T[V\V(C)]). By strong induction, I(R_C, 2) = H(complement). This is the A-clique argument adapted to arc flips (same technique as Claim B proof). Verified n=4,...,9 (opus) and n=5 exhaustive + n=6 random (kind-pasteur).
+
+**Independent verification (opus-2026-03-05-S3):** Adjacency identity adj(i,j)-adj'(j,i) = RHS verified:
+- n=5: 10,240/10,240 (exhaustive, all tournaments x all arcs)
+- n=6: 3,000/3,000 (random sampling)
 
 **Simplified forms by n (opus-S2):**
 - n<=5: delta_H = 2*sum_L(DL-CL) [simple formula]

@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S3 — 2026-03-05
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S2 (context overflow, resumed)
+**Files read:** All warm-up + THM-012, THM-013, TANGENTS, OPEN-QUESTIONS
+**Summary of work:** Extended tournament_lib.py with arc-flip functions. Independently verified THM-013 adjacency identity. Extended OCF verification to n=10 (first time n>=8 verified).
+1. Added adj_count(), flip_arc(), verify_thm013(), verify_ocf(), independence_poly_at_fast() to tournament_lib.py
+2. THM-013 adjacency identity: VERIFIED n=5 exhaustive (10240/10240), n=6 sampled (3000/3000)
+3. OCF H(T)=I(Omega(T),2): VERIFIED n<=6 exhaustive (33,864), n=7 (5000), n=8 (500), n=9 (100), n=10 (30) -- all 0 failures
+4. Algebraic analysis: decomposed adj(i,j)-adj'(j,i) as subset convolution. Per-vertex LHS/RHS decomposition does NOT match -- proof must work globally.
+5. Key insight: at n<=8, max independent set size in Omega(T) is 2; at n=9, it's 3. Fast I computation exploits this.
+**New contributions:**
+- tournament_lib.py: 6 new functions (adj_count, flip_arc, compute_s_x, count_directed_5_cycles_through_arc, verify_thm013, verify_ocf, independence_poly_at_fast)
+- verify_ocf_sweep.py: clean verification script
+- OCF verified through n=10 for first time
+- Updated OPEN-QUESTIONS.md with verification records
+**Unresolved threads:**
+- PROVE the adjacency identity (algebraic approach via subset convolution may be tractable)
+- The per-vertex decomposition doesn't match between LHS and RHS -- global approach needed
+- Consider transfer matrix / generating function methods
+
+---
+
 ## kind-pasteur-2026-03-05-S6 — 2026-03-05 (polynomial identity proof)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-05-S5 (context continuation)
