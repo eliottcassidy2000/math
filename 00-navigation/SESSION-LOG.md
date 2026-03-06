@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S4d — 2026-03-05 (THM-016 PROVED + THM-017 PROVED — even-odd split for all n)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S4c (context continuation)
+**Files read:** All previous session files, OPEN-QUESTIONS, theorem files
+**Summary of work:** PROVED THM-016 (Claim B path identity) by induction on m using first-step decomposition. Key steps: (1) separate boundary term, (2) first-step decomposition of h_start, (3) exchange summation order, (4) recognize inner sum as THM-016 at size m-1, (5) use T(v,u)=1-T(u,v) to get H(W')-h_end(W,v), (6) cancellation (-1)^{m-1}+(-1)^m=0. Then PROVED THM-017 (B(Li,Rj)=B(Lj,Ri)) for all n by induction on |W|, using THM-016 for the d-independent part and the induction hypothesis for the d-dependent part. Both proofs verified numerically at all sizes. CORRECTED: the even-odd split is necessary but NOT sufficient for OCF (kind-pasteur-S8 was right). Investigated the gap: F(x)=(1+x)Q(x) where F(1)=delta_H and F(-1)=0, but Q doesn't have universal structure.
+**New contributions:**
+- 04-computation/q009_claim_b_proof.py (THM-016 proof verification)
+- 04-computation/q009_full_proof.py (THM-017 full proof verification)
+- 04-computation/q009_bridge_gap.py (investigating gap to OCF)
+- 01-canon/theorems/THM-016-hamiltonian-alternating-sum.md (PROVED)
+- 01-canon/theorems/THM-017-even-odd-split-proof.md (PROVED)
+- Updated OPEN-QUESTIONS, signed-adjacency-identity.md with honest assessment
+**Unresolved threads:**
+- OCF for all n still OPEN — even-odd split insufficient
+- Need delta_H = delta_I for all n (currently proved n≤8)
+- The Q polynomial in F(x)=(1+x)Q(x) may yield a path forward
+
 ## opus-2026-03-05-S4c — 2026-03-05 (Claim B discovery — key reduction for OCF proof)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S4

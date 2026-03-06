@@ -126,19 +126,29 @@ is LINEAR in the s-variables (s_w = 1-p_w-q_w). The coefficient of s_v decompose
   sum_{S ⊆ W\{v}} (-1)^|S| H(S) h_start(W\S, v) = (-1)^{m+1} h_end(W, v)
 where H(S) = total Hamiltonian path weight on S (H(∅) = 1).
 
-**STATUS of Claim (B):**
-- Proved algebraically at m=1,2,3
-- Verified computationally at m=1,...,8 (polynomial identity in arc variables)
-- This is a STANDALONE identity about tournament Hamiltonian paths (no interface variables)
-- Does NOT involve vertices i,j at all — purely about internal tournament structure
+**STATUS of Claim (B): PROVED** (THM-016)
+- Proved by INDUCTION on m, using first-step decomposition of h_start
+- Key steps: (1) separate boundary term, (2) first-step decomposition, (3) exchange sums,
+  (4) apply induction hypothesis, (5) use T(v,u)=1-T(u,v), (6) cancellation (-1)^{m-1}+(-1)^m=0
+- Verified computationally at m=1,...,7 with real-valued arcs in [-2,3]
+- See THM-016-hamiltonian-alternating-sum.md for full proof
+- See 04-computation/q009_claim_b_proof.py for step-by-step numerical verification
 
-If Claim (B) is proved for all m, the full induction closes, proving OCF for all n.
+**With Claim (B) proved, B(Li,Rj)=B(Lj,Ri) is proved for all n (THM-017).**
 
 ---
 
 ## Connection to OCF Proof
 
-The signed adjacency identity IS the even-odd split, which IS equivalent to OCF.
-Proving Claim (B) for all m proves the main conjecture (Claim A).
+The signed adjacency identity (even-odd split) is a NECESSARY CONDITION for OCF.
+It says sum_S (-1)^|S| Delta(S,R) = 0 (alternating sum vanishes).
+OCF requires sum_S Delta(S,R) = delta_I (unsigned sum = cycle formula).
 
-The proof chain: Claim (B) for all m → B(Li,Rj)=B(Lj,Ri) for all n → OCF for all n → Claim A.
+**CAVEAT (kind-pasteur-S8):** The even-odd split is a CONSEQUENCE of OCF, NOT equivalent
+to it. The odd-S sum of Delta(S,R) differs from the cycle formula per-subset.
+
+**Proof chain (current status):**
+- THM-016 → THM-017: B(Li,Rj)=B(Lj,Ri) for ALL n (PROVED)
+- THM-015: delta_H = delta_I for n ≤ 8 (PROVED by exhaustive verification)
+- OCF for n ≤ 8 (PROVED)
+- OCF for all n: STILL OPEN (requires delta_H=delta_I for all n, or new approach)

@@ -71,10 +71,19 @@ The OCF formula gives H(T) = I(Ω(T), 2). Evaluating at x=4,8,... gives higher-o
 
 ---
 
-## OPEN-Q-009 🔴
+## OPEN-Q-009 🔴 → MAJOR PROGRESS (Claim B path identity PROVED)
 **Prove arc-flip identity: E(T) = H(T) - I(Omega(T), 2) is invariant under arc flips**
 
 The key unproved step for a general proof of Claim A. Equivalently: prove OCF (H(T) = I(Omega(T),2)) by showing delta_H = delta_I for each arc flip from transitive.
+
+**BREAKTHROUGH (opus-2026-03-05-S4/S4c):** The Hamiltonian path alternating sum identity
+(THM-016, "Claim B path identity") is now PROVED by induction on m:
+  sum_{S⊆W\{v}} (-1)^|S| H(S) h_start(W\S, v) = (-1)^{m+1} h_end(W, v)
+This was the LAST MISSING PIECE for the inductive proof of B(Li,Rj)=B(Lj,Ri).
+THM-016 → THM-017: B(Li,Rj)=B(Lj,Ri) for ALL n — the even-odd split is PROVED.
+**CAVEAT:** The even-odd split is necessary but NOT sufficient for OCF (kind-pasteur-S8).
+OCF for all n still requires proving delta_H = delta_I (unsigned sum = cycle formula).
+**Remaining:** Find a route from the even-odd split to OCF, or prove delta_H=delta_I directly.
 
 **GENERAL FORMULA (opus-S2, THM-013; independently derived by kind-pasteur-S5 via A-clique):**
 
