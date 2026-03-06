@@ -104,7 +104,7 @@
 
 ### INV-001: Prove transfer matrix symmetry for all n — PROVED (THM-030)
 **Source:** T045, T103 (tangents), symmetry_check.py, symbolic_symmetry_proof.py
-**Status:** PROVED SYMBOLICALLY at n=4,5,6,7 (exact polynomial identity). Verified numerically n=4,...,8 (7500+ tests).
+**Status:** PROVED FOR ALL n by induction (kind-pasteur-2026-03-06-S25). Verified computationally m=2,...,6 all (a,b) pairs.
 **What:** M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) is always symmetric. This is STRONGER than the even-odd split.
 **BREAKTHROUGH (opus-S4):** M[a,b]-M[b,a] = 0 as a polynomial in the arc variables t_{ij} AFTER applying the tournament constraint T[j,i]=1-T[i,j]. With independent arc variables the difference is NONZERO (12 terms at n=4, 48 at n=5). The tournament constraint is essential and sufficient.
 **Equivalent formulation:** M_{T^op} = (-1)^{n-2} M_T (converse identity). Combined with path reversal M_{T^op}[i,j]=(-1)^{n-2}M_T[j,i], gives symmetry.
@@ -121,7 +121,7 @@
 **ALGEBRAIC PROOF (kind-pasteur-S23b): M[a,b](-r) = M[b,a](r)** — 5-step proof: T(-r)=-T^T, path reversal under negated transpose, sign bookkeeping, S↔R relabeling. Verified n=4,5,6. This proves the EQUIVALENCE between (i) symmetry, (ii) even-r-powers, (iii) s-parity.
 **TOGGLE ANALYSIS (S23b):** At n=4, r^1 monomials cancel pairwise between different S-subsets. At n>=5, cancellation is multi-way (not simple pairwise). No clean single-vertex toggle involution found on whole subsets.
 **H(U) MATRIX (S23b, from Kogan/Hamiltonian cycle polynomial):** H(U)_{i,j} = sum of Ham path weights from i to j. Identity: U*H(U)^T = H(U)*U^T. For c-tournaments U+U^T = c(J-I), this gives UH^T = H(cJ-cI-U), but does NOT directly imply H=H^T. Also note: M[a,b] is NOT the same as H(T)_{a,b} (M has inclusion-exclusion signs, H is a direct sum).
-**PROVED by opus-2026-03-06-S25 (THM-030).** Key Identity: B_b(W)+(-1)^m E_b(W) = 2r*col_sum(b). Inductive proof using first-edge, last-edge, and column recurrences. The s-terms cancel by induction; the residual is the Sigma identity at size m-1 (itself a corollary). Verified computationally m=2..6. This proves even r-powers, symmetry M[a,b]=M[b,a], and Sigma identities (T=r*Sigma even, Sigma=0 odd) for ALL n.
+**PROVED INDEPENDENTLY by both opus-S25 and kind-pasteur-S25 (THM-030).** Key Identity: odd_r(B_b(W)) = r * col_sum_W(b), equivalently B_b(W)+(-1)^m E_b(W) = 2r*col_sum(b). Inductive proof using column recurrence + first-edge decomposition. The Sigma identity (r*Sigma = odd(T)) follows from summing the inductive hypothesis. The proof closes because odd(sum s*even(B_v)) = 0. Verified computationally m=2..6 all (a,b) pairs. See complete_even_r_proof.py, key_identity_complete_proof.py.
 **Scripts:** `04-computation/symbolic_symmetry_proof.py`, `04-computation/transfer_symmetry_analysis.py`
 **COEFFICIENT STRUCTURE (opus-S22 continuation):**
 - **[r^{n-2}] = (n-2)!** when n even, **0** when n odd. Proof: counting argument, sum_k C(n-2,k)(-1)^k k!(n-2-k)! = (n-2)! * sum_k(-1)^k. Verified n=3,...,6.

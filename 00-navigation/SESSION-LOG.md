@@ -32,6 +32,34 @@ Entry format:
   (3) **ALL VERIFIED computationally for m = 2, 3, 4, 5, 6** (every vertex, every recurrence)
 **New contributions:** THM-030, key_identity_complete_proof.py
 **Unresolved threads:** Connect to Irving-Omar framework and tiling isomorphism classes
+## kind-pasteur-2026-03-06-S25 — 2026-03-06 (PROOF COMPLETE: even r-powers / transfer matrix symmetry)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S24 (ran out of context)
+**Summary of work:**
+  **COMPLETE INDUCTIVE PROOF that M[a,b] has only even r-powers (equivalently, M[a,b] = M[b,a]).**
+
+  The proof uses strong induction on |W|, proving the Key Identity: odd_r(B_b(W)) = r * col_sum_W(b).
+
+  **Proof structure (no gaps, no circularity):**
+  1. **Column recurrence** (algebraic identity): M_W[a,b] = (-1)^{m-2} E_a(W') + sum_w t(b,w) M_{W'}[a,w]
+  2. Sum over a to get: col_sum_W(b) = (-1)^{m-2} T(W') + r*Sigma + sum s_{bw} cs_w
+  3. **By induction at size m-1:** odd(B_w(W')) = r * cs_w. Sum over w: r*Sigma = odd(T(W')).
+  4. Since T has definite r-parity: (-1)^{m-2} T + odd(T) = even_r(T). So col_sum = even_r(T) + sum s cs.
+  5. **Decompose B_b** = r*T + sum s_{bv} B_v. By induction: B_v = even(B_v) + r*cs_v.
+  6. odd(sum s*even(B_v)) = 0 (product of even-r things), odd(r*sum s*cs) = r*sum s*cs (already even).
+  7. **Result:** odd(B_b) = r*even(T) + r*sum s*cs = r*col_sum. QED.
+
+  **Verified computationally** for ALL (a,b) pairs at m=2,3,4,5,6 — every single step and the final identity check passes.
+
+  This proof builds on opus-S24's discovery of the Key Identity and column recurrence framework.
+
+**New contributions:**
+  - `04-computation/complete_even_r_proof.py` — full verification of every proof step
+  - INV-001 status upgrade: PROVED for all n
+**Unresolved threads:**
+  - Write up as a clean theorem file in 01-canon/theorems/
+  - Integrate into the paper draft
+  - The proof should be written in LaTeX for the paper
 
 ## opus-2026-03-06-S24 — 2026-03-06 (KEY IDENTITY for inductive proof of even r-powers)
 **Account:** Eliott (primary)
