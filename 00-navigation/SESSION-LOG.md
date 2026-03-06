@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-05-S12 — 2026-03-05 (Deep web research: Knuth connections to OCF — 7 channels identified)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-05-S11 (continuation)
+**Files read:** MSG-014 (kind-pasteur-S14b), SESSION-LOG.md, TANGENTS.md
+**Summary of work:**
+  (1) **KNUTH FASCICLE 8a** (Dec 2025): Section 7.2.2.4 of TAOCP on Hamiltonian paths and cycles. "Path flipping" = our arc-flip approach. Directly relevant to OCF proof strategy. Priority: read for tournament-specific exercises.
+  (2) **CLAUDE'S CYCLES** (Knuth, Feb 2026): Hamiltonian cycle decomposition of Cayley digraphs solved by Claude Opus 4.6 via modular Gray code. 760 valid decompositions. Parallel: algebraic structure (Cayley/Paley) enables exact solutions.
+  (3) **RÉDEI REVISITED** (arXiv:2510.10659, Oct 2025): Schweser-Stiebitz-Toft exhibit stronger Rédei theorems by Dirac and Berge. Dirac's theorem constrains parity of Hamiltonian paths in mixed graphs — could give mod-4 information beyond OCF.
+  (4) **ZDD TECHNOLOGY**: Knuth's Zero-Suppressed Decision Diagrams could efficiently compute I(Omega(T), x) for moderate n, exploiting sparse complement of dense Omega.
+  (5) **ALGORITHM X / DLX**: Exact cover formulation of odd-cycle packing. DLX could enumerate all vertex-disjoint odd-cycle collections, providing alternative OCF verification.
+  (6) **PERMANENT / CYCLE COVERS**: Ryser's inclusion-exclusion for permanents is structurally parallel to independence polynomial evaluation. Bridge to Björklund's GF(2) method.
+  (7) **PÓLYA ENUMERATION**: Aut(T_p) acting on odd-cycle collections. Cycle index of affine group could give structured formula for I(Omega(T_p), 2).
+  (8) Read kind-pasteur-S14b findings: S_{2,1,1}-free at n<=9, quasi-line fails at n=8, line graph at n=6. Full hierarchy: line(n<=5) < quasi-line(n<=7) < claw-free(n<=8) < S_{2,1,1}-free(n<=9) < S_{1,1,1}-free(n<=11).
+**New contributions:**
+- 03-artifacts/drafts/knuth-connections-research.md (7 connections with priority ranking)
+**Unresolved threads:**
+- Read Knuth fasc8a.pdf for tournament exercises
+- Read arXiv:2510.10659 (Rédei revisited) for stronger parity theorems
+- Implement ZDD-based I(Omega(T), x) for n=8-12
+- Formalize Cayley/Paley algebraic structure parallel
+
 ## opus-2026-03-05-S11 — 2026-03-05 (Continued research: Szele-Adler-Alon e-convergence, real roots at n=15, Paley asymptotic)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-05-S9 (continuation)
