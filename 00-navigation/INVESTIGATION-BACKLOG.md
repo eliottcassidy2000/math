@@ -3,10 +3,30 @@
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-05-S4b
+**Last web research:** opus-2026-03-05-S5
 
 ---
 
 ## Priority A: Directly blocks or could prove OCF
+
+### INV-032: Omega(T) is always claw-free AND perfect — Dyer-Jerrum decomposition
+**Source:** Web research opus-S5, arXiv:1909.03414 (Dyer-Jerrum-Müller-Vušković)
+**Status:** CLAW-FREENESS VERIFIED computationally (exhaustive n<=6, sampled n=7,8). NOT proved.
+**What:** Omega(T) is always (claw, odd-hole)-free. This is exactly the class studied by Dyer-Jerrum, who show the partition function of independent sets can be computed via clique-cutset decomposition into atoms. For claw-free perfect graphs, the structure theorem (Chvátal-Sbihi) decomposes into line graphs of bipartite graphs (computable via permanent) or "peculiar" graphs.
+**Why this could prove OCF:** If the clique-cutset decomposition of Omega(T) mirrors the Hamiltonian path decomposition of the tournament, then I(Omega, 2) = H(T) follows from the decomposition structure. The claw-free perfect structure is highly constrained and may force the identity.
+**Next step:** (1) PROVE Omega(T) is always claw-free. (2) Study the clique-cutset decomposition of Omega(T). (3) Check if atoms are line graphs of bipartite graphs.
+
+### INV-033: Redei-Berge Hopf algebra formalization of OCF
+**Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)
+**Status:** CONNECTION IDENTIFIED. NOT formalized.
+**What:** The Redei-Berge symmetric function U_X for digraphs has comultiplication Delta([X]) = sum_S [X|S] tensor [X|V\S] — this IS our subset convolution. The character zeta counts Hamiltonian paths. The antipode S(U_X) = (-1)^|V| U(X-bar) encodes Berge's theorem. OCF could be a Hopf algebra identity relating zeta to the independence polynomial of Omega(T).
+**Next step:** Read arXiv:2402.07606 in full. Express OCF in Hopf algebra language. Check if I(Omega, 2) has a natural coalgebra interpretation.
+
+### INV-034: Björklund cycle cover reduction adapted for OCF
+**Source:** Web research opus-S5, arXiv:1008.0541, arXiv:1301.7250
+**Status:** CONNECTION IDENTIFIED. NOT attempted.
+**What:** Björklund reduces Hamiltonian cycle counting to cycle cover counting via inclusion-exclusion and determinants. Could a directed version for Hamiltonian PATHS in tournaments reduce specifically to ODD cycle covers, yielding OCF? The characteristic-2 aspects are particularly relevant since Redei is a mod-2 statement.
+**Next step:** Study whether Björklund's labeled cycle cover approach specializes to odd cycle covers for tournaments.
 
 ### INV-001: Prove transfer matrix symmetry for all n
 **Source:** T045 (tangents), symmetry_check.py, paper-connections.md
@@ -266,6 +286,8 @@
 - [DONE] Hard-core lattice gas: lambda=2 is non-perturbative regime (opus-S5)
 - [DONE] Alpha_1 ≡ c_3 (mod 2) conjecture DISPROVED (opus-S5)
 - [DONE] Conflict graph catalog: Omega(T) is always PERFECT (opus-S5, exhaustive n<=6)
+- [DONE] Omega(T) is always CLAW-FREE (opus-S5, exhaustive n<=6, sampled n=7,8)
+- [DONE] Web research: 9 new connections documented in web-research-connections.md (opus-S5)
 - [DEAD] Per-vertex decomposition of unmatched counts (T045)
 - [DEAD] Cycle bijection under arc reversal (MISTAKE-005)
 - [DEAD] Contiguous block decomposition (T035)
