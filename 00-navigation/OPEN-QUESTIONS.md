@@ -20,7 +20,7 @@ The central open problem. Equivalent to OCF: H(T) = I(Ω(T), 2). Claim B (the al
 
 **Verification record (opus-2026-03-05-S2+S3):**
 - n≤6: EXHAUSTIVE (33,864 tournaments, 0 failures) via verify_ocf_sweep.py
-- n=7: 5,000 random tournaments, 0 failures
+- n=7: EXHAUSTIVE (1,048,576 arc assignments, 0 failures) via symbolic_proof_n7.py (27min, opus-S3)
 - n=8: 500 random, 0 failures
 - n=9: 100 random, 0 failures (first verification at this n; max indep set size=3)
 - n=10: 30 random, 0 failures (first verification at this n)

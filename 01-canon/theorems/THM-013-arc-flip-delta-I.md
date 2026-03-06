@@ -1,8 +1,8 @@
 # THM-013: Arc-Flip Formula for DeltaH
 
-**Type:** Theorem (verified n=4,...,9; proved at n<=6)
-**Certainty:** 5 -- PROVED at n<=6 (exhaustive); VERIFIED at n=7,8,9 (sampled)
-**Status:** PROVED at n<=6, VERIFIED for general n up to n=9
+**Type:** Theorem (verified n=4,...,9; proved at n<=7)
+**Certainty:** 5 -- PROVED at n<=7 (exhaustive); VERIFIED at n=8,9 (sampled)
+**Status:** PROVED at n<=7, VERIFIED for general n up to n=9
 **Added by:** opus-2026-03-05-S2
 **Tags:** #ocf #arc-reversal #independence-polynomial #open-q-009 #claim-a
 

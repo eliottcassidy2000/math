@@ -82,8 +82,8 @@ Together these give: H(T) = I(Omega(T), 2) for all tournaments with n <= 7.
 | 4 | 32 (2^5) | 6 | 32/32 PASS |
 | 5 | 512 (2^9) | 24 | 512/512 PASS |
 | 6 | 16384 (2^14) | 120 | 16384/16384 PASS |
-| 7 | 1048576 (2^20) | 720 | 1048576/1048576 PASS (775s enumeration) |
-| 7 | polynomial | 5040 | PASS as 20-variable polynomial identity (77s SymPy) |
+| 7 | 1048576 (2^20) | 720 | 1048576/1048576 PASS (opus-S3 27min, kind-pasteur-S7 775s) |
+| 7 | polynomial | 5040 | PASS as 20-variable polynomial identity (77s SymPy, kind-pasteur-S7) |
 
 ---
 

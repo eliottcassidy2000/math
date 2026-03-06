@@ -41,18 +41,23 @@ Entry format:
 **Summary of work:** Extended tournament_lib.py with arc-flip functions. Independently verified THM-013 adjacency identity. Extended OCF verification to n=10 (first time n>=8 verified).
 1. Added adj_count(), flip_arc(), verify_thm013(), verify_ocf(), independence_poly_at_fast() to tournament_lib.py
 2. THM-013 adjacency identity: VERIFIED n=5 exhaustive (10240/10240), n=6 sampled (3000/3000)
-3. OCF H(T)=I(Omega(T),2): VERIFIED n<=6 exhaustive (33,864), n=7 (5000), n=8 (500), n=9 (100), n=10 (30) -- all 0 failures
+3. OCF H(T)=I(Omega(T),2): PROVED n<=7 exhaustive (1,048,576 arc assignments at n=7, 27min), n=8 (500 random), n=9 (100), n=10 (30) -- all 0 failures
 4. Algebraic analysis: decomposed adj(i,j)-adj'(j,i) as subset convolution. Per-vertex LHS/RHS decomposition does NOT match -- proof must work globally.
 5. Key insight: at n<=8, max independent set size in Omega(T) is 2; at n=9, it's 3. Fast I computation exploits this.
+6. Explored proof strategies: per-vertex nadj decomposition (dead end), transfer matrix/permanent (no clean formula found), bijection search (suggestive structure but no proof), inclusion-exclusion over blockers (correct framework but doesn't simplify).
+7. Key structural finding: s=0 vertices never block swaps (cleanly separates U_T from U_T'), but nadj_sum/H(B_x) ratio is not constant -- the identity is fundamentally global.
 **New contributions:**
 - tournament_lib.py: 6 new functions (adj_count, flip_arc, compute_s_x, count_directed_5_cycles_through_arc, verify_thm013, verify_ocf, independence_poly_at_fast)
 - verify_ocf_sweep.py: clean verification script
-- OCF verified through n=10 for first time
-- Updated OPEN-QUESTIONS.md with verification records
+- symbolic_proof_n7.py: exhaustive n=7 OCF proof (1,048,576/1,048,576 PASS)
+- OCF PROVED through n=7, verified through n=10
+- Updated THM-013, THM-015, OPEN-QUESTIONS.md with n=7 exhaustive results
+- 4 exploratory scripts: unmatched_decomposition_by_vertex.py, inductive_structure.py, transfer_matrix_approach.py, bijection_search.py, proof_strategy_analysis.py
 **Unresolved threads:**
-- PROVE the adjacency identity (algebraic approach via subset convolution may be tractable)
-- The per-vertex decomposition doesn't match between LHS and RHS -- global approach needed
-- Consider transfer matrix / generating function methods
+- PROVE the identity for all n (not just n<=7): the central open problem
+- Subset convolution framework is the right language but per-vertex doesn't match; need global argument
+- The "2-colored independent cycle set" interpretation of I(Omega,2) may lead to a bijective proof
+- n=8 proof feasible with optimization (2^27 ~134M cases) but would take hours
 
 ---
 
