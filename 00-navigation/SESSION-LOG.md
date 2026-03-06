@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S23 — 2026-03-06 (path reversal proof at c=0, even-r-powers conjecture, parity filter mechanism)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S22
+**Summary of work:**
+  (1) **COMPLETE PROOF AT c=0:** Path reversal identity B_v(S+v) = (-1)^|S| E_v(S+v) at pure skew weights. This converts M[a,b] = (-1)^{n-2} sum_S E_a(S+a) E_b(R+b) — an UNSIGNED sum symmetric by S<->R relabeling. Verified n=3,4,5,6.
+  (2) **PATH REVERSAL AT GENERAL c:** Verified B_v(S+v; c,s) = E_v(S+v; c,-s) for ALL v, S at n=4,5. Reversing a path negates the skew part but preserves the c/2 base.
+  (3) **EVEN r-POWERS CONJECTURE VERIFIED n=3-6:** M(r,s) where r=c/2 has ONLY even powers of r. Odd r-powers (r^1, r^3) vanish identically. This is equivalent to M[a,b]=M[b,a] at general c.
+  (4) **THREE EQUIVALENT STATEMENTS:** (i) M[a,b]=M[b,a], (ii) only even r-powers in M(r,s), (iii) M has definite s-parity (-1)^{n-2}. All verified through n=6.
+  (5) **PARITY FILTER MECHANISM:** The (-1)^|S| signs in M act as a parity filter — they project out wrong-parity s-terms from the unsigned sum P. P is NOT symmetric but M IS, because the signs extract exactly the symmetric part. Positivity and skew-symmetry are COMPLEMENTARY, not opposed.
+  (6) **P (unsigned transfer matrix) analysis:** P[a,b]-P[b,a] is ODD in s at n=5 — exactly what the parity filter removes. The signs (-1)^|S| convert skew-antisymmetry (path reversal flips signs) into matrix symmetry.
+**New contributions:** positivity_skew_symmetry.py, skew_parity_proof.py, INV-001 updated, T147
+**Unresolved threads:**
+- Prove the even-r-powers property for general n (the remaining gap for full proof)
+- Complement pairing analysis shows individual pairs DON'T cancel — cancellation is global
+- Is there a representation-theoretic explanation for the even-r-powers property?
+
 ## opus-2026-03-06-S20 — 2026-03-06 (c-tournament symmetry discovery, deep structural analysis)
 **Account:** Eliott (opus machine)
 **Continuation of:** opus-2026-03-06-S19b

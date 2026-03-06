@@ -116,7 +116,9 @@
 - **Off-diagonal sum:** sum_{a≠b} M[a,b] = 0 (odd n), 2*H(T) (even n). Verified n=3,...,7 but NOT yet proved.
 - **Complement pairing D(S)+D(U\S) is constant at n=4 but NOT at n=5**, ruling out the simplest telescoping argument.
 - **Cauchy-Binet decomposition:** M = E^T * Lambda * B where E[S,v]=E_v(S), B[S,v]=B_v(U\S), Lambda=diag((-1)^|S|). Symmetry equivalent to E^T*Lambda*B = B^T*Lambda*E.
-**Next step:** Find a CONCEPTUAL proof that works for all n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using the cancellation structure observed at n=4 (terms factor into X and -X via T[c,d]+T[d,c]=1). **(4) NEW (opus-S5): Feng's dual Burnside reversibility (see INV-045). (5) NEW: Irving-Omar det/per formula (see INV-046). (6) NEW: Hopf algebra comultiplication self-duality (see T114).**
+**PATH REVERSAL PROOF AT c=0 (kind-pasteur-S23):** COMPLETE proof when c=0 (pure skew weights). Path reversal: B_v(S+v) = (-1)^|S| E_v(S+v). This gives M[a,b] = (-1)^{n-2} sum_S E_a(S+a) E_b(R+b) — unsigned, manifestly symmetric by S<->R relabeling. Verified n=3,4,5,6.
+**EVEN r-POWERS CONJECTURE (kind-pasteur-S23):** At general c, M(r,s) where r=c/2 has ONLY even r-powers. Equivalent to symmetry. Verified n=3,4,5,6. Path reversal gives B_v(c,s) = E_v(c,-s), which yields M[b,a](c,s) = (-1)^{n-2} M[a,b](c,-s). So symmetry reduces to M having definite s-parity (-1)^{n-2}, i.e., only even r-powers.
+**Next step:** Prove the even-r-powers property for general n. Possible approaches: (1) Sign-reversing involution on subsets using tournament constraint. (2) Determinantal identity. (3) Induction using cancellation structure. **(4) Feng's dual Burnside (INV-045). (5) Irving-Omar det/per (INV-046). (6) Hopf comultiplication (T114). (7) NEW: Direct combinatorial proof that odd-degree s-monomials in the unsigned sum P cancel under (-1)^|S| weighting.**
 **Scripts:** `04-computation/symbolic_symmetry_proof.py`, `04-computation/transfer_symmetry_analysis.py`
 
 ### INV-002: Subset convolution identity — the core algebraic challenge
