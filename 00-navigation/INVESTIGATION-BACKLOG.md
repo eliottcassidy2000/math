@@ -549,7 +549,13 @@
 **Status:** NEW LEAD — HIGH PRIORITY
 **What:** Stefan Mitrovic introduces the Rédei-Berge function in NONCOMMUTING variables, which satisfies deletion-contraction (W_X = W_{X\e} - W_{X/e}↑). The commutative version does NOT have deletion-contraction. Key properties: W_X = W_{X^op}, product rule W_{X·Y} = W_X·W_Y. For tournaments: W_X = sum over permutations with all odd cycles of 2^{psi(sigma)} p_{Type(sigma)} with positive integer coefficients.
 **Why it matters:** Deletion-contraction enables INDUCTIVE PROOFS. This could provide an inductive framework for OCF or transfer matrix symmetry. The noncommutative structure preserves more information than the commutative version.
-**Next step:** (1) Read full paper. (2) Express OCF in the noncommutative framework. (3) Check if deletion-contraction + OCF at smaller n → OCF at n via induction.
+**TESTED (kind-pasteur S19):** Direct deletion-contraction does NOT preserve OCF. At n=4:
+  - H(T) = H(T\e) - H(T/e): only 18.8% match (DC is for W_X not H)
+  - OCF for T\e (non-tournament): only 39.3% hold
+  - OCF for T/e (contracted): only 60.7% hold
+  OCF is TOURNAMENT-SPECIFIC and does not hold for general digraphs from deletion/contraction.
+  The noncommuting framework operates at a different level than H(T).
+**Next step:** (1) Instead of naive DC → OCF induction, investigate whether DC can be used to relate the SYMMETRIC FUNCTION U_T across tournaments (e.g., U_T = U_{T'} + correction for single arc reversal). (2) Check if the noncommutative framework gives a new proof of even-odd split or transfer matrix symmetry.
 
 ### INV-052: Mitrovic-Stojadinovic chromatic↔Rédei-Berge connection (arXiv:2506.08841, Jun 2025)
 **Source:** kind-pasteur-2026-03-06-S19 web search
@@ -558,16 +564,21 @@
 **Why it matters:** The chromatic symmetric function is much better studied than the Rédei-Berge function. Any result proved for chromatic functions could potentially be translated to our tournament setting via this bridge. The "converse of Rédei's theorem" is directly relevant.
 **Next step:** (1) Read full paper. (2) Extract the exact "converse of Rédei's theorem." (3) Check if chromatic polynomial real-rootedness results transfer to our I(Omega(T),x) setting.
 
-### INV-053: Savchenko cycle counting formulas for regular tournaments
+### INV-053: Savchenko cycle counting formulas for regular tournaments — VERIFIED AT n=7
 **Source:** kind-pasteur-2026-03-06-S19 web search; Savchenko J. Graph Theory 83 (2016), Discrete Math (2017), arXiv:2403.07629 (2024)
-**Status:** NEW LEAD — HIGH PRIORITY for cycle maximization theory
+**Status:** VERIFIED at n=7. Cycle counts are class invariants. DRT vs LTT classification matches.
 **What:** Savchenko has a series of papers giving EXACT polynomial formulas for c_k(T) (number of k-cycles) in regular tournaments:
 - c5, c6 formulas (2016, J. Graph Theory 83)
 - c7 formula (2017, Discrete Math)
 - c8 for DRTs vs locally transitive tournaments (2024, arXiv:2403.07629)
 Key finding: c8(DRT_n) is INDEPENDENT of which DRT is chosen. Phase transition at n=39: DRTs have more 8-cycles than locally-transitive for n≤35 but FEWER for n≥39.
 **Why it matters:** These exact formulas could determine whether Paley tournaments maximize cycle counts at EVERY length, or only for short cycles. The phase transition at n=39 suggests our cycle-maximization mechanism may reverse at larger n. Also, the spectral methods used (eigenvalue-based cycle counting) could connect to our transfer matrix work.
-**Next step:** (1) Obtain and study the c5,c6,c7 formulas. (2) Compute c5, c7 for Paley T_7 using Savchenko's formula and verify against our counts. (3) Investigate the n=39 phase transition for Hamiltonian path implications.
+**VERIFIED (kind-pasteur S19):** At n=7, the three regular tournament classes are EXACTLY:
+  - DRT (Paley): 240 tours, dc={3:14, 5:42, 7:24}, H=189
+  - Locally Transitive: 720 tours, dc={3:14, 5:28, 7:17}, H=175
+  - Other Regular: 1680 tours, dc={3:14, 5:36, 7:15}, H=171
+Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes directed 5-cycles and 7-cycles. LTT has "diametrically opposite" properties per Savchenko.
+**Next step:** (1) Obtain Savchenko's exact polynomial c_k formulas. (2) Check if DRT always maximizes c_k for ALL odd k (our n=7 says yes). (3) Investigate the n=39 phase transition for c8 and Ham path implications. (4) Verify at n=11 if DRT cycle counts are also invariant across different DRT constructions.
 
 ### INV-054: Komarov-Mackey exact 5-cycle formula (arXiv:1410.6828, JGT 2017)
 **Source:** kind-pasteur-2026-03-06-S19 web search

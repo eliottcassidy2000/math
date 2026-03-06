@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S20 — 2026-03-06 (Computational verification: DRT/LTT classification, DC-OCF test)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S19
+**Summary of work:**
+  (1) **DRT/LTT/Other classification at n=7 — VERIFIED:** The 2640 regular n=7 tournaments split into exactly 3 classes: DRT (Paley, 240), Locally Transitive (720), Other Regular (1680). Directed cycle counts are CLASS INVARIANTS: DRT={3:14,5:42,7:24}, LTT={3:14,5:28,7:17}, Other={3:14,5:36,7:15}. DRT maximizes at EVERY odd length. Confirms Savchenko's "diametrically opposite" characterization.
+  (2) **Deletion-contraction does NOT preserve OCF — NEGATIVE RESULT:** At n=4, OCF fails for T\e (39.3%) and T/e (60.7%). OCF is tournament-specific. This blocks naive DC induction but the noncommuting Rédei-Berge framework operates at a richer level.
+**New contributions:** T128-T129, INV-051 updated (tested), INV-053 updated (verified), savchenko_cycle_test.py, deletion_contraction_ocf.py
+**Unresolved threads:**
+- INV-052 (chromatic-Rédei-Berge bridge) still highest priority for next deep read
+- Obtain Savchenko's actual polynomial formulas for c_k
+- Verify DRT cycle invariance at n=11
+
 ## kind-pasteur-2026-03-06-S19 — 2026-03-06 (EXTENSIVE web research: 40+ queries, 16 new investigation leads)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S18h
