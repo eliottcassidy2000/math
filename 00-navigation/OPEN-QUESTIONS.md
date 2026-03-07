@@ -334,13 +334,25 @@ Exhaustive enumeration of all 2,097,152 tournaments on 7 vertices confirms H=21 
 **Gaps in [1,189] at n=7:** 7, 21, 63, 107, 119, 149, 161-169 (block), 173, 177-187 (block)
 Note 63 = 7*9 and 21 = 7*3. These may be related to the H=7 gap.
 
+**THM-079 Component Reduction (opus-S39):**
+- Disconnected Omega: IMPOSSIBLE (THM-029 blocks I(component)=7)
+- P_4 component: IMPOSSIBLE (two sharing 3-cycles on 5 verts force 3rd cycle)
+- alpha_3>=1 decompositions: ALL IMPOSSIBLE (forces sum>=26>20)
+- K_{1,3} star in (4,3) case: IMPOSSIBLE (forces alpha_3>=1)
+- Remaining: connected Omega with I=21 via K_6-2e or larger dense graphs
+- I(P_4,2)=21 discovered; graph classification: v=4 P_4, v=5 none, v=6 K_6-2e
+
+**H=63 is NOT a permanent gap (opus-S39 agent):**
+H=63 found at n=8 (227 in 600k samples). All n=7 gaps except 7 and 21 are filled at n=8.
+The ONLY permanent gaps through n=9 sampling are **H=7 and H=21**.
+
 **Open questions:**
 - Is H=21 a permanent gap (impossible at all n)? STRONG EVIDENCE YES (absent n<=9)
-- Are there other permanent gaps beyond 7 and 21?
-- Is 63 a permanent gap? (absent at n=7, needs checking at n=8,9)
+- Can the K_6-minus-2-edges route be ruled out? (the remaining open case for H=21)
+- Are there other permanent gaps beyond 7 and 21? EVIDENCE: NO (63 filled at n=8)
 - What is the density of achievable values as max H grows?
 
-**Connection:** Mitrovic-Stojadinovic (arXiv:2506.08841) address "converse of Redei's theorem" — may contain related results.
+**Connection:** Mitrovic-Stojadinovic (arXiv:2506.08841) "converse of Redei" is about poset-level parity (non-chain posets have even quasi-linear extension count), NOT about the H-spectrum. Does not address which odd integers are achievable as H(T).
 
 **Source:** kind-pasteur-2026-03-06-S21, THM-029
 
