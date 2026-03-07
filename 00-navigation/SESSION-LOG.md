@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S25c — 2026-03-06 (scalar M characterization, det(M) patterns)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25b (context continuation)
+**Summary of work:**
+  (1) **VERIFIED Fibonacci determinant formula** for transitive tournament: det(M) = (-1)^{n(n-1)/2} * F(n+1), confirmed n=2,...,11. D*M = I+U-L satisfies Fibonacci recurrence. Chebyshev eigenvalue conjecture is FALSE.
+  (2) **EXHAUSTIVE n=5 det(M) analysis**: det values = {-27,-9,1,8,9,16,17,243}. 10 distinct eigenvalue patterns = 10 isomorphism classes (up to reversal). 240/1024 have even det (H=1 transitive gives det=8).
+  (3) **MAJOR: M=(H/n)*I characterization at n=5**: ALL 64 H=15 tournaments have M=3*I, including 40 non-regular (1,2,2,2,3) ones. These non-regular ones are NOT vertex-transitive but STILL have uniform position distribution. So at n=5, M scalar <==> H-maximizer, NOT M scalar <==> VT.
+  (4) **At n=7: M scalar <==> VT** (100 sampled regular tournaments, no counterexamples). All circulant tournaments have scalar M. Non-circulant regular with H=175 can have scalar M (if VT) or not (if H=171).
+  (5) **Integrated opus-S11b/S26 findings**: THM-048 (GS class sizes odd), THM-049 (r-swap identity M[b,a]=M[a,b](-r)), sigma-equivariance theorem.
+  (6) **Web research**: Seidel tournament matrix determinants (2024), Hamilton transversals (Chakraborti-Kim 2024), CR tournaments (2025). Confirmed transfer matrix M[a,b] formulation is novel.
+**New contributions:** T156, T157, 4 computation scripts
+**Unresolved threads:**
+  - Characterize M=(H/n)*I precisely: is it "2-transitive" or some other property?
+  - Investigate why eigenvalue 1 appears in every non-scalar M pattern at n=5
+  - Does the Fibonacci det formula extend to near-transitive tournaments?
+  - Prove M scalar for circulant tournaments algebraically (not just numerically)
+
 ## opus-2026-03-06-S11b — 2026-03-06 (sigma-equivariance + Fibonacci det)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S11 (ran out of context)
