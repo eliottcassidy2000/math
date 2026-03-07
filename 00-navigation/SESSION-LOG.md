@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S26 (continued²) — 2026-03-06 (position-uniform, converse disproof, even-r hierarchy)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S26 (continued) (context limit)
+**Summary of work:**
+  (1) **THM-052 CONVERSE DISPROVED at n=5:** Scalar M does NOT imply vertex-transitive. Counterexample: "cone over C_3" with scores (1,2,2,2,3), |Aut|=3, but M=3I. Has anti-automorphisms swapping poles.
+  (2) **POSITION-UNIFORM <=> SCALAR M at n=3,5 (exhaustive):** N[v,j] = H/n for all v,j is exactly equivalent to M=(H/n)*I. 64/1024 labeled tournaments on 5 vertices satisfy this.
+  (3) **Aut+Anti transitivity analysis:** Aut(T) union Anti(T) transitive => scalar M (= VT for tournaments), but NOT conversely. Non-VT scalar-M tournaments have 2 orbits under Aut+Anti.
+  (4) **Even-r polynomial for non-VT PU:** VT tournaments have EACH c_k individually scalar. Non-VT PU tournaments have non-scalar c_0 and c_2 that cancel at r=1/2. Key: c_0 off-diagonal = 0.5 cancelled by c_2*0.25 = -0.5.
+  (5) **Cone construction does NOT generalize to n=7:** H=135, H%7=2. No non-circulant PU found at n=7 (1000 random + 84 flips tested).
+  (6) **FORMULA: tr(c_{n-3}) = 2*(n-2)!*t_3 + const(n).** Verified at n=5 (12*t_3-30) and n=7 (240*t_3-2100). Constants: -0.5, -30, -2100.
+  (7) **tr(c_2) at n=7 depends on full iso class,** not just cycle counts. Varies from -57 to +63 within same score sequence.
+  (8) **n=9 even-r: top 3 coefficients universal for regular.** tr(c_8)=362880=9!, tr(c_6)=90720, tr(c_4)=6480 all universal. Only tr(c_2), tr(c_0) vary.
+  (9) **Even-r vs OCF connection:** H = tr(c_0) + tr(c_2)/4 + ... refines the OCF H = 1 + 2*alpha_1 + 4*alpha_2. At n=5: tr(c_0) = H - 3*t_3.
+**New contributions:** THM-052 converse disproof, position-uniform characterization, cone construction analysis, c_{n-3} formula, even-r hierarchy
+**Unresolved threads:**
+  - Prove tr(c_{n-3}) = 2*(n-2)!*t_3 + const algebraically
+  - What is const(n)? Ratios are 60, 70 — pattern unclear
+  - At n=7 (prime), is PU = VT? (evidence: no non-VT PU found)
+  - What determines tr(c_2) at n>=7? (finer than score sequence)
+  - Extend OCF connection: express tr(c_k) in terms of independence polynomial coefficients
+
 ## opus-2026-03-06-S11b (continued³) — 2026-03-06 (diagonal signed position + perpendicularity)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S11b (continued²) (context limit)
