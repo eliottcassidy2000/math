@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S39 (continued) — 2026-03-07 (H=21 structural impossibility analysis)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S39
+**Summary of work:**
+  (1) **THM-078: u_T size-weighted independence polynomial** (renamed from THM-077 to avoid collision with S35c4's Walsh OCF proof).
+  (2) **THM-079: H=21 component reduction PROVED.** Part A: disconnected Omega ruled out (requires I(component)=7, blocked by THM-029). Part B: P_4 realization ruled out (two 3-cycles sharing vertex on 5 vertices always force 3rd cycle). Corollary: H=21 requires connected Omega with >=6 vertices.
+  (3) **I(P_4, 2) = 21 discovery.** Path graph on 4 vertices gives independence polynomial value exactly 21 at x=2. Key target structure for H=21.
+  (4) **Graph classification for I(G,2)=21.** Exhaustive enumeration: v=4 only P_4, v=5 none, v=6 only K_6-minus-2-edges (13 edges, 2 non-edges).
+  (5) **n=6 exhaustive (alpha_1, alpha_2) analysis.** All 6 decompositions of alpha_1+2*alpha_2=10 have zero tournaments. Missing sums {3,10,17,19} correspond to gaps {7,21,35,39}.
+  (6) **Score sequence analysis for t_3=4 at n=9.** 26 score sequences found; 0 of 1M random samples achieved exactly 4 three-cycles in P_4 arrangement.
+  (7) **t_3=4 forces t_5>0 at n=7.** 0 of 17,837 tournaments with t_3=4 had t_5=0.
+**New contributions:** THM-079, graph I=21 classification, P_4 impossibility proof
+**Unresolved threads:** K_6-minus-2-edges route still open; need n>=9 analysis; H=21 full proof remains conjectural
+
 ## opus-2026-03-07-S35 (continued^4) — 2026-03-07 (THM-076 general-r + THM-077 new OCF proof)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35 (continued^3)

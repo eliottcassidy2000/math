@@ -1050,3 +1050,21 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Source:** opus-2026-03-07-S38 agent
 **Status:** CLOSED (dead end).
 **What:** The bags-of-sticks decomposition (Mitrovic-Stojadinovic Theorem 4.2) expresses U_X via inclusion-exclusion over edge deletions. Under OCF specialization, every bag of sticks contributes 1 (acyclic digraphs have empty Omega). So the decomposition reduces to: H(T) = sum of inclusion-exclusion coefficients, which is trivially true. No new information for OCF.
+
+### INV-096: H=21 Component Reduction (THM-079) — PARTIAL RESULT
+**Source:** opus-2026-03-07-S39
+**Status:** PROVED PARTIAL. Two of three routes ruled out; K_6-2e route remains open.
+**What:** For H(T)=21, the OCF requires I(Omega(T),2)=21. Component factorization gives:
+  - Disconnected case: IMPOSSIBLE. 21=3*7, but I(component)=7 impossible by THM-029 argument (3 pairwise-conflicting cycles always generate 4th).
+  - P_4 case: IMPOSSIBLE. I(P_4,2)=21, but P_4 realization blocked because two sharing 3-cycles on 5 vertices always force a 3rd cycle (exhaustively verified), creating a 5th vertex in Omega.
+  - K_6-2e case: OPEN. I(K_6-2e, 2)=21. Requires 6 odd cycles with exactly 2 disjoint pairs and no other cycles.
+**Key discovery:** I(P_4, 2)=21. The path graph on 4 vertices gives exactly 21.
+**Key discovery:** Graph I=21 classification: v=4 only P_4, v=5 none, v=6 only K_6-minus-2-edges.
+**Next step:** (1) Prove K_6-2e realization impossible for Omega(T). (2) Show t_3=6 with K_6-2e conflict pattern forces additional cycles. (3) Extend the "sharing forces extra cycle" argument to 5-cycles.
+**Scripts:** `04-computation/h21_gap_mechanism.py`, `04-computation/t3_t5_parity.py`
+
+### INV-097: u_T Size-Weighted Independence Polynomial (THM-078) — PROVED
+**Source:** opus-2026-03-07-S39
+**Status:** PROVED. u_T(m) = sum_j sw(j)*m^{n-2j} where sw(j) = sum over j-element independent sets of 2^|S|.
+**What:** The size-weighted independence polynomial identity connects u_T(m) to the Omega(T) independence structure. Q_T(w) = u_T(sqrt(w))/sqrt(w) has all real non-positive roots for n<=8 (Leake-Ryder/Chudnovsky-Seymour stability for claw-free graphs). Fails at n>=9 when claws appear.
+**Next step:** Check if Q_T root structure has implications for achievable H values.
