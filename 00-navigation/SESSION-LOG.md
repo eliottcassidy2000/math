@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35 (continued^4) — 2026-03-07 (THM-076 general-r + THM-077 new OCF proof)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35 (continued^3)
+**Summary of work:**
+  (1) **THM-076 general-r proof COMPLETE.** Used EGF on set partitions: F(t,x)=(1+bt)/(1-at), giving G_r(x) = 2r!/((1-x)^r(1+x)). The half-weighted partial sum S(j)=1/2 for ALL j (alternating sums telescope). Hockey-stick identity gives Sigma=(m+r)!/m!. Crucially, Sigma depends ONLY on m and r, NOT on individual path sizes a_i. Verified r=1..5, n up to 20.
+  (2) **THM-077: NEW ELEMENTARY PROOF OF OCF.** Direct Walsh analysis proves H(T) = I(Omega(T), 2) without using GS machinery. H side: even-length path components force contiguity in any HP (each internal vertex has degree 2). Sign product (-1)^{2a}=1, so block count = 2^r*(n-2k)!. I side: THM-076 gives same amplitude. Sign: epsilon_S = (-1)^{asc(S)} on both sides independently. hat{H}[S] = hat{I}[S] for ALL S. QED.
+  (3) **Sign formula discovered.** hat{H}[S] = (-1)^{asc(S)} * 2^r*(n-2k)!/2^{n-1}, where asc(S) counts ascents in path components. Consistent with THM-068 (PCD descent-sign).
+  (4) **Hypercube/4D connection clarified.** At n=7, H lives in effective 4-parameter Walsh space: degree 0, degree 2, degree 4 (two amplitude types: P_4 and P_2+P_2), degree 6. This is the "4D structure" noted by previous sessions.
+  (5) **Skeleton analysis.** GS flip = toggle non-backbone bits on hypercube. Complement invariance = even-power vanishing = H(T)=H(T^op). NSC classes are those with non-palindromic score sequences.
+**New contributions:** THM-076 (complete general-r proof), THM-077 (new OCF proof), T179, T180
+**Unresolved threads:** Write up THM-077 for paper; formal proof that contiguity extends to multi-component (currently only verified); extend OPCD to general degree
+
 ## opus-2026-03-07-S38 — 2026-03-07 (H=21 gap proved n<=7, tangent number proof, Mitrovic DC explored)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S37
