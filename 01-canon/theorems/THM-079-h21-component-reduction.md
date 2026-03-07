@@ -390,6 +390,29 @@ So every vertex in T-v is in a 3-cycle. By Part Q: T-v is cycle-rich. QED.
 - All mm=2 cases: S (vertices with out-degree 0 in P) is always non-empty
   (51,280 tests, 100% S non-empty, kind-pasteur-S33)
 
+## Part S (VERIFIED): Bottleneck Analysis and No-Good-Deletion Structure
+
+**Instance:** opus-2026-03-07-S43
+
+The poisoning graph P from Part R is a special case of the bottleneck function.
+We independently analyzed the bottleneck structure at n=9:
+
+**Computational Results (100M random n=9, 93M cycle-rich):**
+- Found exactly 20 no-good-deletion cycle-rich tournaments
+- ALL 20 share IDENTICAL structure:
+  - Score sequence: (1,1,1,4,4,4,7,7,7)
+  - t3 = 3, max matching mm = 3, H = 27
+  - sum|B(v)| = 9 (EVERY vertex uniquely bottlenecked)
+  - Number of bottleneck centers = 6
+  - The 3 disjoint 3-cycles partition ALL 9 vertices
+
+**Observation:** All no-good-deletion cases have mm = 3, confirming Part R's
+dichotomy is tight: the only obstruction to good deletion is having mm >= 3.
+
+**n >= 10 verification:** 0 no-good-deletion in 192M cycle-rich n=10
+tournaments (200M random trials), suggesting good deletion always exists
+for cycle-rich n >= 10.
+
 ## Status: PROVED
 
 **H(T) != 21 for any tournament T on any number of vertices n.**
@@ -432,3 +455,9 @@ The proof combines:
 - `04-computation/h21_cycle_rich_auto_no_ss.py` — cycle-rich => no source/sink (kind-pasteur-S33)
 - `04-computation/h21_source_sink_avoidance.py` — source/sink avoidance analysis (kind-pasteur-S33)
 - `04-computation/h21_dichotomy_proof.py` — dichotomy verification at n=9 (kind-pasteur-S33)
+- `04-computation/h21_bottleneck_v2.c` — bottleneck structure at n=9: 20 no-good-del all (1,1,1,4,4,4,7,7,7) (opus-S43)
+- `04-computation/h21_no_good_del_n10.c` — 0/192M no-good-deletion at n=10 (opus-S43)
+- `04-computation/h21_moon_bound_cycle_rich.py` — Moon's formula t3 lower bounds (opus-S43)
+- `04-computation/h21_extreme_low_t3.py` — min H by t3 for cycle-rich n=9 (opus-S43)
+- `04-computation/h21_achievable_w_n7.c` — exhaustive w-value spectrum at n=7 (opus-S43)
+- `04-computation/h21_gap_pattern_analysis.py` — algebraic structure of w=3,10 gaps (opus-S43)
