@@ -150,6 +150,46 @@ In particular:
 
 ---
 
+## Tangent Number Connection
+
+**Theorem.** F_{2k}(0) = (-1)^k T_{k+1} / 4^k, where T_k are the tangent numbers (tan(x) = sum T_k x^{2k-1}/(2k-1)!). The sequence T_k = 1, 2, 16, 272, 7936, ... (OEIS A000182).
+
+**Verified for k=0..4:**
+
+| k | F_{2k}(0) | (-1)^k T_{k+1}/4^k | Match |
+|---|-----------|---------------------|-------|
+| 0 | 1 | 1 | YES |
+| 1 | -1/2 | -1/2 | YES |
+| 2 | 1 | 1 | YES |
+| 3 | -17/4 | -17/4 | YES |
+| 4 | 31 | 31 | YES |
+
+Similarly, F'_{2k+1}(0) = (-1)^k T_{k+2}/4^k (verified k=0,1,2).
+
+This means the signed Hamiltonian path count w_0 involves tangent numbers in its invariant-free (constant) part.
+
+---
+
+## Unified Formula: C_0(r) = F_{n-1}(r)
+
+**Theorem.** The background polynomial C_0(r) (constant part of W(r), independent of any tournament invariant) equals F_{n-1}(r). Verified at n=4,5,6,7,8,9.
+
+This gives the completely unified formula:
+
+**W(r) = sum_{S in IndSets(Omega(T))} 2^{|S|} * I_S(T) * F_{(n-1)-2|pi_S|}(r)**
+
+where:
+- The sum includes the empty set (contributing F_{n-1}(r))
+- I_S(T) is the weighted independent set count for type S
+- |pi_S| is the sum of block lengths
+- F_j is the universal master polynomial from central factorial numbers
+
+At r=1/2: all F_j(1/2) = 1, so W(1/2) = sum 2^{|S|} I_S(T) = I(Omega(T), 2) = H(T). This is OCF.
+
+The W-polynomial is a **deformed independence polynomial** of Omega(T), where the deformation parameter r replaces the constant weight 2 with a position-count-dependent universal function F_f(r).
+
+---
+
 ## Scripts
 
 - `04-computation/universal_master_polynomial.py` (22-case verification)
@@ -161,8 +201,10 @@ In particular:
 
 ## Open Questions
 
-1. **Algebraic proof:** Can the central factorial number recurrence be derived from the Newton identity / position pattern decomposition?
+1. **Algebraic proof:** Can the central factorial number recurrence b_{k,j} = b_{k-1,j-1} + j^2 b_{k-1,j} be derived from the position pattern decomposition? The j^2 factor should come from how free positions interact with j existing blocks.
 
-2. **Constant polynomial C_0(r):** The "background" polynomial (for the transitive tournament) also follows from the master sequence but with a different structure. What determines it?
+2. **Central factorial interpretation:** The expansion x^n = sum T(n,k) x^{[k]} where x^{[k]} is the central factorial directly implies the recurrence. Is u = r^2 - 1/4 a natural central factorial base for the position-sum expansion?
 
-3. **Connection to central factorials:** The central factorial numbers arise in the expansion x^n = sum T(n,k) * x^[k] where x^[k] is the central factorial. Is there a direct interpretation where r^j expands in central factorials of (r^2 - 1/4)?
+3. **Tangent number interpretation:** Why do tangent numbers govern the signed count w_0? Is there a direct analytic connection between tan(x) and the signed Hamiltonian path polynomial?
+
+4. **Deformed independence polynomial:** The unified formula shows W(r) is I(Omega(T), {F_f(r)}). Can this deformed polynomial be studied as an algebraic object? Does it have real-rootedness properties analogous to I(Omega, x)?
