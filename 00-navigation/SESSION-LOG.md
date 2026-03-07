@@ -26,6 +26,26 @@ Entry format:
 **New contributions:** Updated THM-055 with n=9 formulas, trc2_exact_n9.py
 **Unresolved threads:** c_0 formula at n=9 (needs more data), algebraic proof of singleton cancellation
 
+## kind-pasteur-2026-03-06-S25g — 2026-03-06 (Simplex-Cube Perspectives + w_0 Verification + Rooted Tournaments)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25f (context limit)
+**Files read:** SESSION-LOG.md, simplex-cube-perspectives-S25g.md, w0_equals_H_minus_3t3.py, simplex_perspective_counting.py, opus S28 scripts
+**Summary of work:**
+  (1) **w_0 = H - 3*t_3 VERIFIED** at n=5 for all 1024 tournaments exhaustively. Derivation: W(1/2)=H expands to w_0 + 3*t_3 = H.
+  (2) **w_0 = H - C*t_3 FAILS at n=7**: Not a linear function of (H, t_3) or even (H, t_3, t_5). Regression max error ~2.5. Additional invariants needed beyond cycle counts.
+  (3) **Signed backward-parity count verified**: W(0) = (1/2)^{n-1} * (E-O) where E/O = even/odd backward-arc parity path counts. At n=5: E-O = 16*(H-3*t_3).
+  (4) **Perspective counting conjecture P(n) = 2*(n-1)! tested**: VERIFIED for n=2,3,4,5. FAILS at n=6 (P(6)=296, not 240). The coincidence for small n doesn't generalize.
+  (5) **P(n) = OEIS A093934** (with offset): The sequence 2, 4, 12, 48, 296 matches A093934 = "tournaments with signed nodes". P(n) counts rooted tournament isomorphism classes.
+  (6) **Orbit distributions**: n=5: {1:1, 3:4, 5:7}; n=6: {2:5, 4:10, 6:41}. Most classes have trivial automorphism.
+  (7) **Simplex-cube document** created: tournaments as labeled simplices in hypercubes, connections to Euler/Jones/Tutte polynomial evaluations.
+  (8) **Integrated opus S28**: Moment hierarchy and sigma pattern theory connect to W(r) coefficient structure.
+**New contributions:** simplex-cube-perspectives-S25g.md, w0_equals_H_minus_3t3.py, perspective_counting_v2.py, perspective_counting_v3.py
+**Unresolved threads:**
+  - What invariants beyond (t_3, t_5) determine w_0 at n=7?
+  - Is there a combinatorial interpretation of P(n) = A093934?
+  - Creative exploration of simplex-in-cube geometry for tournaments
+  - Functions with similar structure to w_0 = -t_3 + 2*t_5 + 1
+
 ## kind-pasteur-2026-03-06-S25f — 2026-03-06 (Grand Synthesis + W(r) Stratification + Pfaffian Duality)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S25e (context limit)
