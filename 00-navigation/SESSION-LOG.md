@@ -39,10 +39,14 @@ Entry format:
   (3) **Key structural insight:** NONHAM(a,b)=0 trivially when T[a,b]=1. When T[a,b]=0, NONHAM(a,b)=M[a,b]. So NONHAM=0 <=> M vanishes on non-edges of T. Combined with THM-030 symmetry, this gives complete proof chain: position-uniform => M=(H/n)*I.
   (4) **Cancellation mechanism:** For uniform T, nonzero E*B products at adjacent subset sizes pair up and cancel. For non-uniform T, orphan terms remain. Detailed subset-by-subset analysis in nonham_proof_analysis.py.
   (5) **Web research:** Bjorklund et al. "Fourier meets Mobius" (subset convolution) is the algebraic framework for M[a,b]. Doubly regular tournaments <-> skew Hadamard matrices (existing literature).
-**New contributions:** nonham_vanish_general.py, nonham_vanish_uniform.py, nonham_proof_analysis.py, nonham_vanish_n9.py, nonham_vanish_n11_paley.py, nonham_vanish_n13_paley.py, updated INV-069
+  (6) **Cancellation mechanism investigation:** Cross-ratio identity E*B(S)=E*B(complement) FAILS for all tournaments. Palindrome e_s=e_{|U|-s} holds at n=7 but not n=5. Consec palindrome also fails at n=5. The general mechanism is many-to-many cancellation, not simple pairing.
+  (7) **Augmented tournament reformulation:** M[a,b] = signed count of Ham paths in T'=T+{a->b} using added edge, weighted by (-1)^{pos(a)}. This is equivalent to the split pair formula.
+  (8) **No position-uniform at even n:** Exhaustive check shows 0 position-uniform tournaments at n=4 and n=6. The proof chain applies only at odd n.
+**New contributions:** nonham_vanish_general.py, nonham_vanish_uniform.py, nonham_proof_analysis.py, nonham_vanish_n9.py, nonham_vanish_n11_paley.py, nonham_vanish_n13_paley.py, nonham_algebraic_proof.py, complement_pairing_test.py, palindrome_es_test.py, position_uniform_even_n.py, augmented_tournament_proof.py, consec_palindrome_test.py, updated INV-069
 **Unresolved threads:**
   - Prove NONHAM=0 for position-uniform T at general n (step 1 of proof chain)
-  - Find algebraic proof of the adjacent-level pairing mechanism
+  - Find algebraic proof — cross-ratio, palindrome, and consec approaches all insufficient
+  - The proof may require fundamentally new algebraic insight (Forcade GF? Hopf algebra?)
 
 ## opus-2026-03-06-S11b — 2026-03-06 (perpendicularity, eigenvalue formula, Key Identity verification)
 **Account:** Eliott (primary)
