@@ -102,8 +102,11 @@ For non-circulant vertex-transitive tournaments, the automorphism group may not 
 - n=5: 64/64 position-uniform (exhaustive), all palindromic
 - n=7: 8/8 circulant, all palindromic
 - n=9: 16/16 circulant, all palindromic
-- n=11: Paley T_11, palindromic (f(d,j) = 1729 for all d,j with T[0,d]=1 or T[d,0]=1)
-- n=13: Paley T_13, palindromic
+- n=11: Paley T_11 (p=11, 3 mod 4), palindromic (f(d,j) = 1729 for all d,j)
+- n=13: Circulant S={1,2,3,4,5,6}, palindromic (H=3,711,175) [CORRECTED: original used QR mod 13 which is NOT a tournament since 13=1 mod 4, see MISTAKE-011]
+- n=15: Circulant S={1,2,3,4,5,6,7}, palindromic (H=198,464,295)
+
+**Note (MISTAKE-011):** Paley tournaments exist only at p = 3 mod 4. Earlier verifications labeled "T_13" and "T_17" used QR sets for p = 1 mod 4, which give non-tournament digraphs.
 
 ## Source Files
 

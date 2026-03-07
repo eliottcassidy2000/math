@@ -322,3 +322,37 @@ The individual entries M[a,b] are NOT always 0 or ±1. They are integers whose d
 ### Impact
 
 INV-001 (proving transfer matrix symmetry) is still the correct goal — the symmetry M[a,b] = M[b,a] IS always true. But the diagonal values are NOT fixed constants, which changes the picture for any proof attempt that assumed diag(1,-1).
+
+---
+
+## MISTAKE-011: Paley "tournament" at p = 1 mod 4 is NOT a tournament
+
+**Date discovered:** 2026-03-06 (kind-pasteur-S25d)
+**Found by:** kind-pasteur
+**Affects:** nonham_vanish_n13_paley.py, palindromic_N_proof.py (n=13 and n=17 entries), paley_super_uniform.py, any script using QR mod p for p = 1 mod 4
+
+### What was assumed
+
+Computations labeled "Paley T_13" and "Paley T_17" used the quadratic residue set QR mod p as the circulant generator set. This was assumed to give a tournament.
+
+### Why it was wrong
+
+Paley tournaments exist ONLY at p = 3 mod 4 (where -1 is a quadratic NON-residue). At p = 1 mod 4, -1 is a QR, so QR is closed under negation: d in QR implies -d in QR. This means both T[i,j]=1 and T[j,i]=1 for QR-separated pairs, giving bidirectional edges. The resulting digraph is NOT a tournament.
+
+Valid Paley tournament primes: 3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, ...
+INVALID: 5, 13, 17, 29, 37, 41, 53, 61, 73, ...
+
+### The correct framing
+
+- "H(T_13) = 1,579,968" is the path count of a non-tournament circulant digraph, not a tournament.
+- "H(T_17) = 5,587,473,776" is similarly invalid.
+- The "Paley T_5" with S={1,4} is also NOT a tournament (p=5 = 1 mod 4).
+- THM-052 proof is unaffected (algebraic, works for any circulant tournament).
+- n=13 re-verified with S={1,2,3,4,5,6} (valid tournament): H=3,711,175, palindromic N confirmed.
+
+### Impact
+
+- THM-052 verification examples at n=13 and n=17 need correction: use valid circulant tournament generator sets, not QR mod p for p=1 mod 4.
+- The earlier NONHAM vanishing verification at n=13 (nonham_vanish_n13_paley.py) was on a non-tournament. Needs re-running with valid tournament.
+- No impact on the algebraic proof of THM-052.
+- The memory entry "H(T_p) = 3, 189, 95095" is still correct (those are p=3 mod 4 primes).
