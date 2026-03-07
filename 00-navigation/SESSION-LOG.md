@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S11b (continued) — 2026-03-06 (eigenvalue formula, spectral skeleton, perpendicularity)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S11b (context limit)
+**Summary of work:**
+  (1) **UNIFIED eigenvalue formula for M(T_full_n) at ALL n:** mu_j = 3+2cos(j*pi/K), K=(n+1)/2. Even n: K=half-integer, full ±pairing. Odd n: K=integer, plus lambda_0=1. Verified n=2..25. Spectral radius approaches sqrt(5) as O(pi^2/(2n)).
+  (2) **Position variance as perpendicularity mechanism:** pvar(T) has inverted-U shape vs H. At position-uniform tournaments (odd n), C(a,b,j) is constant, so alternating sum 1-1+1-1...=0 forces M off-diag=0. This is WHY position-uniform => M=(H/n)I.
+  (3) **SPECTRAL BIPARTITE STRUCTURE discovered at n=5:** H=9 class (18 tilings) splits into TWO spectral sub-classes of 9 each: A={2-sqrt7,1,1,3,2+sqrt7} and B={2-sqrt5,2-sqrt5,1,2+sqrt5,2+sqrt5}. Cross-spectral flip graph is BIPARTITE. Sub-class B has block-diagonal M with eigenvalues phi^3 (golden ratio cube!). Blocks satisfy A+B=4I, AB=-I (mutual negative inverses).
+  (4) **n=7 skeleton analysis:** 242 distinct (score,H) classes. Regular score (3,...,3) splits into H=171 (NOT pos-uniform, M has defect 4 at one vertex), H=175 (pos-uniform, M=25I), H=189 (Paley, M=27I). The defect at H=171 is exactly n-3=4.
+  (5) **Cross-scale eigenvalue flow:** dH=0 flips preserve lambda=1 eigenvalue. dH>0 compresses eigenvalues toward H/n (scalar). dH<0 spreads them. dH=0 cross-spectral flips rotate within spectral fiber — source of perpendicularity.
+**New contributions:** unified_eigenvalue_formula.py, pvar_perpendicularity_mechanism.py, spectral_bipartite_skeleton.py
+**Unresolved threads:**
+  - Prove perpendicularity analytically (inverted-U of pvar)
+  - Does bipartite spectral structure extend to n=7?
+  - Prove defect = n-3 for near-uniform regular tournaments
+
 ## opus-2026-03-06-S26 (continued) — 2026-03-06 (consecutive formula, reversal identity, IO)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S26 (context limit)
