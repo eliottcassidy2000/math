@@ -210,14 +210,31 @@ S(T^comp) = (-1)^{n-1} S(T). At odd n: S(T^comp) = S(T). At even n: S(T^comp) = 
 
 The backbone tiling class size equals H(T) / |Aut(T)| by orbit-stabilizer.
 
+## D_k Linearity Results
+
+**D_2 and D_3 are EXACTLY linear in t3** (verified at n=5 and n=7):
+- D_2 = (C(n-1,2)-(n-2))·n!/4 + (n-2)·(n-3)!·(C(n,2)(n-2)-2C(n,3)+2t3)
+- Simplified: D_2 = a_n + 2·(n-2)·(n-3)!·t3 where a_n is a universal constant
+- n=5: D_2 = 150 + 12·t3, D_3 = 30 + 12·t3 (same coefficient!)
+- n=7: D_2 = 16800 + 240·t3, D_3 = 8400 + 480·t3 (ratio 1:2)
+- D_2 coefficient of t3 = 2·(n-3)!·(n-2) universally
+
+**D_4 and higher are NOT linear in t3** at n=7 (depend on t5, bc33, etc.)
+
+**At n=5:** D_4 = H(T), so c_0 = H - 3·t3 exactly. c_0 = 0 iff H = 3·t3, which holds iff t3 is odd.
+
+**At n=7:** c_0 = H + (lower terms)/64 where lower terms ≡ 48 mod 64. c_0 has fractional part 3/4 always, with integer part in [-3, 3].
+
 ## Open Questions
 
-1. **Prove D_k mod 2^{n-1-k} universal algebraically.** The key step: show that the tournament-dependent part of D_k is always divisible by 2^{n-1-k}. Known: D_0 = n! (trivial), D_1 = n!*(n-1)/2 (edge count universal).
+1. **Prove D_k mod 2^{n-1-k} universal algebraically for general k.** D_2 universality proved via pair-partition identity. D_3 and higher need similar arguments.
 
-2. **Verify n=9 prediction computationally.** Need to check S mod 256 = 0 and whether S=0 actually occurs.
+2. **What determines S=0 at n=9?** Beyond t3 being even (necessary), what additional invariants determine S=0? (~17% of random tournaments have S=0.)
 
-3. **What determines S(T) at n=7?** Not a linear function of {t3, t5, t7, bc33}. What invariants are needed?
+3. **What determines c_0 at n=7?** c_0 - 3/4 ∈ {-3,...,3} is NOT well-predicted by t3 alone (R²≈0.03). Depends on D_4, D_5 which involve t5, bc33 and deeper invariants.
 
 4. **Self-flip classes at n=7.** Fingerprint matching suggests they exist (~1.2% of samples).
 
 5. **Cross-scale embedding.** No simple formula for S(T_7) from S(T_5) sub-tournament values.
+
+6. **D_3 coefficient of t3.** At n=5 it equals the D_2 coefficient; at n=7 it's double. What is the general formula?
