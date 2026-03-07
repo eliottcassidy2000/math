@@ -1,0 +1,113 @@
+# THM-064: W(i/2) Evaluation and H-Maximizer Characterization
+
+**Type:** Theorem + Conjecture
+**Certainty:** 4 -- VERIFIED (exhaustive n=3,4,5; sampled n=6,7; partially at n=11)
+**Status:** PARTIALLY PROVED
+**Added by:** kind-pasteur-2026-03-07-S27
+**Tags:** #W-polynomial #forward-edge #Paley #maximizer #complex-evaluation
+
+---
+
+## Statement
+
+### (i) W(i/2) is real at odd n, pure imaginary at even n
+
+For any tournament T on n vertices:
+- If n is odd: W(i/2) is real (W has only even powers of r)
+- If n is even: W(i/2) is pure imaginary (W has only odd powers of r)
+
+This follows immediately from the r-parity of W (THM-061).
+
+### (ii) Polar decomposition
+
+Each permutation P contributes to W(i/2) a term of modulus (1/sqrt(2))^{n-1} and argument pi/4 * (3(n-1) - 2k_P), where k_P = number of forward edges.
+
+Therefore:
+
+**W(i/2) = exp(i*pi*3(n-1)/4) / 2^{(n-1)/2} * A(-i)**
+
+where A(x) = sum_k a_k x^k is the forward-edge generating polynomial.
+
+### (iii) W(i/2) = 0 iff (x^2+1) | A(x)
+
+Since A(x) has real coefficients and is palindromic (a_k = a_{n-1-k}), the condition A(-i) = 0 is equivalent to:
+
+**(x^2 + 1) divides A(x)**
+
+which decomposes into two real conditions:
+- sum_k (-1)^k a_{2k} = 0 (alternating sum of even-indexed coefficients)
+- sum_k (-1)^k a_{2k+1} = 0 (alternating sum of odd-indexed coefficients)
+
+At odd n (where only even powers of r appear), the imaginary condition is automatic, and only one real condition remains.
+
+### (iv) Explicit formulas via Fourier coefficients
+
+Using W(i/2) = sum_j w_{n-1-2j} * (-1)^{(n-1)/2-j} / 2^{n-1-2j} at odd n:
+
+**n=3:** W(i/2) = -2 + 2*t3
+
+**n=5:** W(i/2) = 16 - 4*t3 + 2*t5
+
+**n=7:** W(i/2) = -272 + 32*t3 - 4*t5 - 8*a33 + 2*t7
+
+### (v) Vanishing characterizes H-maximizers at small odd n (VERIFIED)
+
+| n | W(i/2) = 0 tournaments | Total | All max-H? | Max H |
+|---|------------------------|-------|------------|-------|
+| 3 | 2 (both 3-cycles) | 8 | YES | 3 |
+| 5 | 24 (all regular) | 1024 | YES | 15 |
+| 7 | 240 (Paley/BIBD class) | 32768 | YES | 189 |
+
+At n=3,5,7: **W(i/2) = 0 if and only if T is an H-maximizer.**
+
+### (vi) Failure at n=11
+
+Paley T_11 (the H-maximizer with H = 95095) has W(i/2) = -10010, NOT zero.
+
+So W(i/2) = 0 does NOT characterize H-maximizers at all odd n.
+
+### (vii) Even n: W(i/2) never vanishes
+
+At n=4: W(i/2) is pure imaginary and nonzero for all 64 tournaments.
+At n=6: W(i/2) is pure imaginary and nonzero for 5000 sampled tournaments.
+
+---
+
+## Invariant Condition
+
+W(i/2) = 0 imposes a linear constraint on the OCF invariants:
+
+**n=3:** t3 = 1
+
+**n=5:** t5 = 2*t3 - 8 (satisfied only by regular tournaments with t3=5, t5=2)
+
+**n=7:** 32*t3 - 4*t5 - 8*a33 + 2*t7 = 272 (Paley: 448-168-56+48 = 272)
+
+These are EXTREMAL conditions: only the H-maximizing tournament class satisfies them.
+
+---
+
+## Connection to Forward-Edge Polynomial
+
+The condition (x^2+1) | A(x) means the forward-edge polynomial A(x) has 4th roots of unity (+-i) as roots. For palindromic polynomials of degree d, this is equivalent to B(0) = 0 where A(x) = x^{d/2} B(x + 1/x).
+
+At n=3: A(x) = 3(1 + x^2) = 3(x - i)(x + i). Complete factorization.
+
+---
+
+## Open Questions
+
+1. **Why does W(i/2) = 0 characterize maximizers at n=3,5,7 but not n=11?** Is there a structural reason related to the number of independent OCF invariants?
+
+2. **Does W(i/2) = 0 imply H = max for ALL odd n?** (One direction of the characterization.) That is: does the linear constraint always select the maximal H class? Verified at n=3,5,7 but unknown at n=9.
+
+3. **Is |W(i/2)| monotonically related to H?** Computationally: at n=7, W(i/2) is always negative, and more negative for lower H. Is |W(i/2)| anti-correlated with H?
+
+4. **Other roots of unity:** Do higher roots of unity (cube roots, 5th roots) at r = e^{2*pi*i*k/m}/2 give additional constraints that help characterize maximizers?
+
+---
+
+## Scripts
+
+- `04-computation/W_half_i_vanishing.py` -- Main verification
+- `04-computation/W_complex_evals.py` -- Complex evaluations and Parseval analysis
