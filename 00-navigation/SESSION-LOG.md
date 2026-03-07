@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S28 (continued) — 2026-03-07 (P(u,x) hierarchy, Mersenne vanishing, H=21 gap, THM-065 n=9)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S28 (context continuation)
+**Summary of work:**
+  (1) **THM-065 verified at n=9:** Null space dimension = 3, all 3 predicted null vectors confirmed (250 random tournaments, max |C*v| < 1e-11).
+  (2) **THM-067: c_1 Formula and Mersenne Vanishing (PROVED).** c_1^(f,d) = 2^{f+1} - d - 2. Vanishes iff n = 2^{f+1}-1 (Mersenne numbers: 1, 7, 31, 127, ...). Explains why p_{m-1}(x) is linear at n=7.
+  (3) **P(u,x) coefficient hierarchy.** Complete formulas at n=5 (exhaustive) and n=7. p_m(x) = I(Omega,x), p_{m-1}(x) linear at n=7 (bc coefficient = 0 due to c_1^(2,6)=0).
+  (4) **H=21 permanent gap evidence.** Absent at n=7 (100k samples), n=8 (200k), n=9 (50k). At n=7, no valid (alpha_1, alpha_2) decomposition gives H=21: alpha_1=10 forces alpha_2=2, alpha_1=8 forces alpha_2=0, etc. All paths blocked.
+  (5) **Investigated opus's THM-068/069/070.** Clean 4-step Claim A proof, position character decomposition, graph equality.
+  (6) **GS typed IP synthesis.** U_T = p_1^n * I_typed(Omega; 2p_k/p_1^k), G_T(t,x) is genuinely new beyond U_T.
+**New contributions:** THM-067, P_hierarchy_general.py, null_space_n9.py, h21_alpha_constraints.py
+**Unresolved threads:** H=21 proof (rigorous impossibility), alpha constraint structure for general n, typed G_T ↔ P(u,x) connection
+
 ## opus-2026-03-07-S35 (continued) — 2026-03-07 (Position Character Decomposition)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35 (context continuations)
