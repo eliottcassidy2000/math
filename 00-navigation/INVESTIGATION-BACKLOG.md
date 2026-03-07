@@ -751,3 +751,41 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Key insight:** "DRT" is NOT a single tournament — different DRTs can have different cycle counts and H values. Paley is the BEST DRT. This strengthens the Paley maximizer conjecture from "Paley maximizes among all tournaments" to "Paley maximizes even among DRTs."
 **Next step:** Test at n=19 and n=23 where more DRT classes exist.
 **Scripts:** drt_n11_analysis.py, drt_n11_verify.py, drt_n11_deeper.py
+
+### INV-069: Scalar M characterization — M=(H/n)*I ↔ H-maximizer at n=5, ↔ VT at n=7
+**Source:** kind-pasteur-2026-03-06-S25c (T156), opus-2026-03-06-S26 (T158)
+**Status:** COMPUTED, OPEN CONJECTURE
+**What:** Transfer matrix M[a,b] = sum_S (-1)^|S| E_a(S+a) B_b(R+b) is scalar (= (H/n)*I) for certain tournaments. At n=5: ALL 64 H-maximizers (H=15) have M=3*I, including 40 non-regular (scores 1,2,2,2,3) with |Aut|=3 (Z/3Z). These non-VT tournaments still have uniform position distribution. At n=7: M scalar ⟺ VT (100 sampled regular, 0 counterexamples). All circulant tournaments have scalar M. The characterization seems to be "uniform position distribution" (every vertex appears equally often at each position in Ham paths), which is weaker than VT at n=5 but equivalent at n=7.
+**Key results:**
+- n=5: M scalar ⟹ H=15 (max), but NOT ⟹ VT or regular
+- n=7: M scalar ⟺ VT (conjecture, verified 100 samples)
+- All circulant ⟹ M scalar (verified n=3,5,7)
+- Paley T_7: |Aut|=21 (Frobenius Z/7Z⋊Z/3Z), sigma(x)=2x mod 7 is extra aut
+- opus finding: non-regular n=5 scalar M has Z/3Z aut, uniform endpoint counts, uniform 3-cycle participation
+**Algebraic proof:** OPEN. Fourier analysis shows circulant M is scalar iff all off-diagonal entries vanish. Cyclic symmetry alone doesn't force this — some deeper cancellation occurs.
+**Next step:** (1) Prove M=(H/n)*I for circulant tournaments algebraically. (2) Find precise characterization beyond n=5,7. (3) Test at n=9.
+**Scripts:** `04-computation/transfer_matrix_maximizers.py`, `04-computation/circulant_scalar_m_proof.py`, `04-computation/scalar_m_characterization.py`, `04-computation/scalar_m_n5_analysis.py`, `04-computation/circulant_m_scalar_proof.py`
+
+### INV-070: Fibonacci determinant formula for transitive tournament
+**Source:** kind-pasteur-2026-03-06-S25c (T157)
+**Status:** VERIFIED n=2,...,11
+**What:** For the transitive tournament T_n (i beats j iff i<j), det(M) = (-1)^{n(n-1)/2} * F(n+1) where F is Fibonacci. The matrix D*M = I+U-L (tridiagonal: 1s on diagonal/superdiagonal, -1s on subdiagonal) satisfies the Fibonacci recurrence. The Chebyshev eigenvalue conjecture (eigenvalues = 2cos(kπ/(n+1))) is FALSE.
+**Connection:** The transitive tournament is the unique acyclic tournament, so Omega(T_n) is empty and I(Omega,2)=1=H(T_n). The transfer matrix has a clean tridiagonal structure reflecting the total order.
+**Next step:** (1) Does the Fibonacci structure extend to near-transitive tournaments? (2) What is det(M) for other named tournament families?
+**Scripts:** `04-computation/fibonacci_determinant_proof.py`
+
+### INV-071: det(M) as tournament invariant — exhaustive n=5
+**Source:** kind-pasteur-2026-03-06-S25c (T157)
+**Status:** COMPUTED
+**What:** At n=5, det(M) takes values {-27,-9,1,8,9,16,17,243} across 10 isomorphism classes (up to converse). The 10 eigenvalue patterns of M classify tournaments into exactly the 10 isomorphism classes. det(M) is NOT determined by (H,c3) — e.g., H=5,c3=2 gives both det=9 and det=17.
+**Key finding:** det(M) is not related to det(A), per(A), or any simple matrix expression of the adjacency matrix A. Tested det(I±S), det(A+A^T), det(A*A^T), det(I+A*A^T) — none match. The transfer matrix is fundamentally different from the adjacency matrix.
+**opus finding:** char poly det(λI-M) encodes hierarchy of path correlations. Scalar M ⟹ char poly = (λ-H/n)^n. PSD threshold at n=5: H≥13 ⟹ M is PSD.
+**Next step:** (1) Compute det(M) exhaustively at n=7 (sample). (2) Find if any spectral graph invariant matches. (3) Investigate PSD threshold at general odd n.
+**Scripts:** `04-computation/det_m_general_formula.py`, `04-computation/det_m_vs_adjacency_spectrum.py`, `04-computation/char_poly_M_analysis.py`, `04-computation/pos_skeleton_connection.py`
+
+### INV-072: IO walk GF vs transfer matrix bridge
+**Source:** opus-2026-03-06-S26, kind-pasteur-2026-03-06-S25c
+**Status:** STRUCTURAL COMPARISON, NO BRIDGE FOUND
+**What:** Irving-Omar walk GF W_D(z) = det(I+zXA^T)/det(I-zXA) uses cycle covers (det/per), while M[a,b] uses path decomposition (E_a*B_b). M[a,b] ≠ H(a→b) (direct endpoint-conditioned count). W(-z,-r) = W(z,r) at commutative level (opus finding). No simple matrix expression of A gives M.
+**Key structural difference:** IO is multiplicative (det/per = products over cycles), M is additive (sum over subsets with inclusion-exclusion signs). Bridge might exist through Hopf algebra coproduct structure.
+**Next step:** (1) Express M[a,b] in terms of IO's det/per framework. (2) Check if deletion-contraction on M matches Mitrovic's W_X = W_{X\e} - W_{X/e}^up.
