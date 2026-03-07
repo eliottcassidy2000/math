@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S11b — 2026-03-06 (perpendicularity, eigenvalue formula, Key Identity verification)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S11 (ran out of context)
+**Summary of work:**
+  (1) **H-spectral perpendicularity DISCOVERED**: In tiling space at n=5, the H-gradient and spectral-distance-gradient are globally perpendicular (mean cosine = 0.009). Transitions from +0.87 (transitive) through 0 (midpoint) to -0.96 (maximizer). Confirmed at n=7 (sampled, mean cos = -0.049). PR is nearly perfectly parallel to H (cos=0.97).
+  (2) **Exact eigenvalue formula for M(T_full_{2k+1})**: lambda_j = ±sqrt(3 + 2cos(j*pi/(k+1))) for j=1,...,k plus lambda_0=1. Verified n=3,...,19. The mu=lambda^2 values are Chebyshev-spaced and centered at 3.
+  (3) **Eigenvalue ± pairing analysis**: Only transitive has full ±pairing. Pairing deviation grows with H. tr(M^{2k+1}) = 1 only for transitive (odd n).
+  (4) **Key Identity verification**: THM-030's B_b(W) + (-1)^|W| E_b(W) = col_sum(M_W, b) verified at r=1/2 for valid tournaments. CRITICAL: col_sum is TRANSFER MATRIX column sum, not adjacency in-degree (an earlier script had this wrong).
+  (5) **F-C decomposition**: M(off-diag) = F + (-1)^n C where C is trivially symmetric (by S<->R relabeling), F is empirically symmetric. Both individually symmetric.
+  (6) **Char poly recurrence**: p_n = (lambda-(-1)^{n-1})*p_{n-1} - p_{n-2}. Even n: only even powers. Odd n: (lambda-1) divides, quotient has only even powers.
+**New contributions:** perpendicularity_analysis.py, key_identity_r_half_verification.py, transitive_eigenvalue_formula.py
+**Unresolved threads:**
+  - Prove perpendicularity analytically (why does overall cosine ≈ 0?)
+  - Even-n eigenvalue formula (boundary conditions differ)
+  - Does eigenvalue formula extend to non-transitive tournaments?
+  - Investigate F symmetry proof (would give independent M symmetry proof)
+
 ## opus-2026-03-06-S26 — 2026-03-06 (tiling skeleton, spectral analysis, IO bridge, PSD)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S25 (ran out of context)
