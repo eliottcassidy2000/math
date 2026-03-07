@@ -305,6 +305,7 @@
 | **W(r)** (W-polynomial) | tr(M(r)); only even r-powers | c_{n−1}=n!, c_{n−3} depends on t₃ | signed-hp-permanent-skeleton |
 | **D_k** | Σ_P C(forward(P), k) | D_k mod 2^{n−1−k} is universal | THM-H |
 | **k-fold partition identity** | Σ_{perms of 2k vertices} Π A[P_{2i-1}][P_{2i}] = (2k)!/2^k | PROVED (THM-I); key to universal congruence | opus-S35c11 |
+| **THM-J** (S universality criterion) | S mod 2^{n−1} is T-independent iff n−3 is 0 or 2^k | Via Legendre: v₂((n−3)!) = (n−3)−s₂(n−3); need s₂(n−3) ≤ 1 | opus-S35c11 |
 
 ---
 
@@ -338,7 +339,34 @@
 
 ---
 
-## IX. OEIS CONNECTIONS
+## IX. 2-ADIC STRUCTURE AND SIGNED HP PERMANENT
+
+The signed HP permanent S(T) = Σ_P Π B[P_i][P_{i+1}] (B = 2A − 1 skew-symmetric) reveals deep 2-adic structure:
+
+| Property | Statement | Where |
+|----------|-----------|-------|
+| **S(T) = 0 at even n** | Reversal involution: (-1)^{n-1} = -1 pairs cancel | THM-A |
+| **S mod 2^{n-1} universal** | Depends only on n (not T), proved via D_k decomposition | THM-H |
+| **S universality criterion** | Universal iff s₂(n−3) ≤ 1 (n−3 is 0 or power of 2) | THM-J |
+| **Universal n values** | n ∈ {3, 5, 7, 11, 19, 35, 67, 131, ...} | THM-J |
+| **Non-universal n values** | n ∈ {9, 13, 15, 17, 21, 23, ...} — S mod 2^{n-1} depends on t₃ parity | THM-J |
+| **S = 0 possible** | Only at n ≡ 1 mod 4 (verified n=5,9) | THM-H pattern |
+| **c₀ = S/2^{n-1}** | Fractional part: 0 at n=5, 3/4 at n=7, {0,1/2} at n=9 | opus-S35c11 |
+| **n mod 4 chain** | C(n,2) parity → Σ in(v)·out(v) parity → D₂ parity → S parity | Structural |
+| **D_k linearity in t₃** | D₂, D₃ linear in t₃; D₄+ depend on higher invariants (t₅, bc₃₃) | opus-S35c11 |
+| **k-fold partition identity** | Non-adjacent D_S = n!/2^k (master identity for universality) | THM-I |
+
+### Key Insight: Legendre's Formula Connection
+The 2-adic valuation v₂((n-3)!) = (n-3) − s₂(n-3) where s₂ is binary digit sum. For S universality we need v₂(2·(n-3)!) ≥ n-3, i.e., s₂(n-3) ≤ 1. This connects tournament theory to the binary representation of n — an unexpected number-theoretic input.
+
+### Open 2-Adic Questions
+- Does S universality extend to higher 2-adic levels (S mod 2^n, 2^{n+1}, ...)?
+- At non-universal n, does S depend on invariants beyond t₃?
+- Is there a p-adic analogue for odd primes p?
+
+---
+
+## X. OEIS CONNECTIONS
 
 | Sequence | What | Values | Status |
 |----------|------|--------|--------|
