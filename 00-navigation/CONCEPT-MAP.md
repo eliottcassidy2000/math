@@ -166,6 +166,7 @@
 ### Established Connections
 | Field | Connection | Strength | Reference |
 |-------|-----------|----------|-----------|
+| **Acyclic orientations / Stanley reciprocity** | Tournaments are orientations of K_n; χ_{K_n}(−1) = (−1)^n·n!; U_T connects to chromatic SF | Strong | Stanley 1973, Mitrovic-Stojadinovic |
 | **Statistical mechanics** | I(G,x) = hard-core partition function at fugacity x | Strong | T006, T050 |
 | **Representation theory** | Pin grid = staircase Young diagram δ_{n−2}; hook lengths all odd | Medium | T009 |
 | **Algebraic combinatorics** | U_T = Rédei-Berge symmetric function | Strong | Grinberg-Stanley |
@@ -252,7 +253,9 @@
 
 **COMPUTATIONAL RESULT (kind-pasteur-S34):** Quiver mutation at vertex k preserves H(T) whenever the result is a tournament! Verified exhaustive n=4 (64/64), n=5 (640/640), sampled n=7 (1126/1126). Zero violations. The mutation only produces a tournament when k is a source (deg 0) or sink (deg n−1), or at specific score-class positions. At n=5, 62.5% of H-preserving mutations produce NON-isomorphic tournaments — this is a genuinely new symmetry, not just relabeling!
 
-**Scripts:** `tournament_quiver_mutation.py`, `quiver_mutation_h_invariance.py`
+**MECHANISM IDENTIFIED:** Quiver mutation at vertex k produces a tournament iff k is a source (deg 0) or sink (deg n−1). The mutation simply reverses ALL arcs incident to k. This preserves H because source/sink vertices are forced to start/end every Ham path, and the reversal creates a bijection between start-paths and end-paths. The cluster algebra connection provides an algebraic framework for this symmetry.
+
+**Scripts:** `tournament_quiver_mutation.py`, `quiver_mutation_h_invariance.py`, `quiver_mutation_mechanism.py`
 
 #### 13. MATROID THEORY: Tournament Matroid
 **Idea:** Define a matroid on the arcs of a tournament where independent sets are "acyclic subsets" (subsets of arcs that contain no directed cycle). The rank function r(S) = |S| − (# cycles in S) could encode the cycle structure. The Tutte polynomial T_M(x,y) of this matroid at specific evaluations could give H(T) or cycle counts.
