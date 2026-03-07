@@ -13,6 +13,17 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35 — 2026-03-07 (Walsh-Fourier Diagonalization PROVED at n=7)
+**Account:** opus
+**Continuation of:** opus-2026-03-06-S11b (many continuations)
+**Summary of work:**
+  (1) **THM-066: Walsh-Fourier Diagonalization (PROVED at n=5,7).** The OCF H(T) on the Boolean hypercube {0,1}^m decomposes into Walsh degree components D_{2j}, each with Walsh degree EXACTLY 2j. The Fourier coefficients w_k = 2^k * D_{n-1-k} have pure Walsh degree.
+  (2) **Analytical proofs of all Walsh coefficients at n=7:** t3_hat=-1/4, t5_hat=-3/4, t7_hat=-3/8, bc_hat=-1/4 at degree 2. t5_hat=1/16, t7_hat=1/32, bc_hat=0 (path) and t5=0, t7=1/16, bc=1/16 (double-fan) at degree 4.
+  (3) **Generalized telescoping:** t7_hat = (t5+2bc)_hat/2 at degree 4, extending t5_hat = t3_hat/2 at degree 2. This connects to THM-065 f-level grouping.
+  (4) **Key insight:** The Walsh basis diagonalizes the Fourier decomposition because f-level sums are the natural variables, and each cycle's contribution at lower Walsh degrees telescopes via the factor-of-2 identity.
+**New contributions:** THM-066
+**Unresolved threads:** General n proof; degree-6 structure of w_0 at n=7; connection to skeleton eigenvalues
+
 ## opus-2026-03-07-S33 — 2026-03-07 (Trivariate GF, empty set insight, reduced polynomial P(u,x))
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S32 (context limit, then S33 continuation)
