@@ -218,6 +218,19 @@ Verified at n=5 (k=1,2) and n=7 (k=1,2,3).
 
 **Pattern:** S=0 possible at n ≡ 1 mod 4 (verified n=5,9). S never 0 at n ≡ 3 mod 4 (verified n=3,7).
 
+### THM-J: Algebraic Criterion for S Universality (PROVED)
+
+**S mod 2^{n-1} is tournament-independent iff n-3 is 0 or a power of 2.**
+
+For odd n, this gives: S universal at n ∈ {3, 5, 7, 11, 19, 35, 67, ...}.
+S depends on t3 parity at n ∈ {9, 13, 15, 17, 21, 23, ...}.
+
+**Proof.** The D_2 coefficient of t3 is 2·(n-3)!·(n-2). For D_2 to be universal mod 2^{n-3}, we need v_2(2·(n-3)!) ≥ n-3, i.e., 1 + v_2((n-3)!) ≥ n-3. By Legendre's formula v_2(m!) = m - s_2(m), this becomes s_2(n-3) ≤ 1, equivalently n-3 is a power of 2 (or 0).
+
+When n-3 is NOT a power of 2: 2·(n-3)! has v_2 = 1 + (n-3) - s_2(n-3) < n-3. The t3-dependent part 2·(n-3)!·(n-2)·t3 contributes a non-vanishing term to 4·D_2 mod 2^{n-1}, making S mod 2^{n-1} depend on t3 mod 2.
+
+Verified: n=5,7 (universal) ✓, n=9 (t3-dependent) ✓, n=11 (universal) predicted.
+
 ### Complement Invariance (PROVED)
 
 S(T^comp) = (-1)^{n-1} S(T). At odd n: S(T^comp) = S(T). At even n: S(T^comp) = -S(T) = 0.
