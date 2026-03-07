@@ -26,25 +26,33 @@ Entry format:
 **New contributions:** Updated THM-055 with n=9 formulas, trc2_exact_n9.py
 **Unresolved threads:** c_0 formula at n=9 (needs more data), algebraic proof of singleton cancellation
 
-## kind-pasteur-2026-03-06-S25g — 2026-03-06 (Simplex-Cube Perspectives + w_0 Verification + Rooted Tournaments)
+## kind-pasteur-2026-03-06-S25g — 2026-03-06 (W-Hierarchy Spectral Decomposition + THM-058 PROVED)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S25f (context limit)
-**Files read:** SESSION-LOG.md, simplex-cube-perspectives-S25g.md, w0_equals_H_minus_3t3.py, simplex_perspective_counting.py, opus S28 scripts
+**Files read:** SESSION-LOG.md, simplex-cube-perspectives-S25g.md, opus S28 scripts
 **Summary of work:**
-  (1) **w_0 = H - 3*t_3 VERIFIED** at n=5 for all 1024 tournaments exhaustively. Derivation: W(1/2)=H expands to w_0 + 3*t_3 = H.
-  (2) **w_0 = H - C*t_3 FAILS at n=7**: Not a linear function of (H, t_3) or even (H, t_3, t_5). Regression max error ~2.5. Additional invariants needed beyond cycle counts.
-  (3) **Signed backward-parity count verified**: W(0) = (1/2)^{n-1} * (E-O) where E/O = even/odd backward-arc parity path counts. At n=5: E-O = 16*(H-3*t_3).
-  (4) **Perspective counting conjecture P(n) = 2*(n-1)! tested**: VERIFIED for n=2,3,4,5. FAILS at n=6 (P(6)=296, not 240). The coincidence for small n doesn't generalize.
-  (5) **P(n) = OEIS A093934** (with offset): The sequence 2, 4, 12, 48, 296 matches A093934 = "tournaments with signed nodes". P(n) counts rooted tournament isomorphism classes.
-  (6) **Orbit distributions**: n=5: {1:1, 3:4, 5:7}; n=6: {2:5, 4:10, 6:41}. Most classes have trivial automorphism.
-  (7) **Simplex-cube document** created: tournaments as labeled simplices in hypercubes, connections to Euler/Jones/Tutte polynomial evaluations.
-  (8) **Integrated opus S28**: Moment hierarchy and sigma pattern theory connect to W(r) coefficient structure.
-**New contributions:** simplex-cube-perspectives-S25g.md, w0_equals_H_minus_3t3.py, perspective_counting_v2.py, perspective_counting_v3.py
+  (1) **w_0 = H - 3*t_3 VERIFIED** at n=5 exhaustively. FAILS at n=7 (needs more invariants).
+  (2) **EXACT w_0 at n=7**: w_0 = 2*t_3 - t_5 + 2*t_7 - 2*alpha_2 - 17/4. Zero error over 15 samples.
+  (3) **COMPLETE W-coefficient hierarchy at n=7** (ALL formulas exact, 0 error):
+      w_6 = 5040, w_4 = 240*t_3 - 2100, w_2 = -60*t_3 + 12*t_5 + 24*alpha_2 + 231,
+      w_0 = 2*t_3 - t_5 + 2*t_7 - 2*alpha_2 - 17/4.
+      Each level adds one new cycle complexity. This is a spectral decomposition.
+  (4) **THM-058 PROVED**: w_{n-3} = (n-2)! * [2*t_3 - C(n,3)/2] for ALL tournaments.
+      Algebraic proof: non-adjacent sigma = 0, sigma_adj = (n-3)!*[2t_3-C(n,3)/2].
+      Verified at n=5 (exhaustive), n=7 (20 samples), n=9 (15 samples, via DP).
+  (5) **w_{n-5} decomposition**: Only (1,g,1) patterns contribute (massive vanishing).
+      sigma_1111 = -12*t_3 + 4*t_5 + 42 (sees t_5 via consecutive positions).
+      sigma_{1g1} = -8*t_3 + 8*alpha_2 + 35 for g>=2 (sees alpha_2 via separated pairs).
+      This explains the hierarchy mechanism: t_5 enters via consecutive, alpha_2 via separated.
+  (6) **P(n) = OEIS A093934**: Rooted tournament count. P(n) = 2*(n-1)! for n<=5, FAILS at n=6.
+  (7) **Penalty shift principle**: H-w_0 penalizes t_3 at n=5 but t_5+alpha_2 at n=7.
+  (8) **Creative synthesis**: Connection map linking tournaments to 6 mathematical categories.
+**New contributions:** THM-058 (PROVED), W-coefficient-hierarchy-S25g.md, creative-synthesis-S25g.md, simplex-cube-perspectives-S25g.md, INV-082/083/084, T173-T176
 **Unresolved threads:**
-  - What invariants beyond (t_3, t_5) determine w_0 at n=7?
-  - Is there a combinatorial interpretation of P(n) = A093934?
-  - Creative exploration of simplex-in-cube geometry for tournaments
-  - Functions with similar structure to w_0 = -t_3 + 2*t_5 + 1
+  - Prove sigma_1111 and sigma_{1g1} formulas algebraically (extend THM-058 approach)
+  - Complete w_{n-5} proof for general n
+  - Is there a topological interpretation of w_0 (Euler characteristic of some space)?
+  - Check sigma_{1g1} independence of g at n=9
 
 ## kind-pasteur-2026-03-06-S25f — 2026-03-06 (Grand Synthesis + W(r) Stratification + Pfaffian Duality)
 **Account:** Eliott (primary)
