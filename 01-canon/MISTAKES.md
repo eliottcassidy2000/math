@@ -356,3 +356,36 @@ INVALID: 5, 13, 17, 29, 37, 41, 53, 61, 73, ...
 - The earlier NONHAM vanishing verification at n=13 (nonham_vanish_n13_paley.py) was on a non-tournament. Needs re-running with valid tournament.
 - No impact on the algebraic proof of THM-052.
 - The memory entry "H(T_p) = 3, 189, 95095" is still correct (those are p=3 mod 4 primes).
+
+---
+
+## MISTAKE-012: Blue Pair / Tournament Complement Confusion
+
+**Date discovered:** 2026-03-06 (opus-S11b continued²)
+**Found by:** opus
+**Affects:** blue_skeleton_even_r_synthesis.py (opus-S26)
+
+### What was assumed
+
+The script blue_skeleton_even_r_synthesis.py claimed that "BLUE PAIR HAS SAME TRANSFER MATRIX at odd n", conflating the tiling blue pair (flipping only non-path arcs) with the tournament complement (flipping ALL arcs).
+
+### Why it was wrong
+
+1. The tiling blue pair only flips arcs (a,b) with |a-b| >= 2, keeping path arcs (i,i-1) fixed. So s → -s only for non-path pairs, NOT all pairs. M(T') ≠ M(T) in general.
+
+2. The tournament complement T^c (A^c[i][j] = 1-A[i][j]) does flip ALL arcs, giving s → -s everywhere. But M(T^c) ≠ M(T) in general either!
+
+3. The correct formula: M(T^c) = diag(M(T)) - offdiag(M(T)). The diagonal is preserved and off-diagonal is NEGATED. This is because M[a,b] for a≠b involves n-2 edge weights (odd s-degree at odd n), while M[a,a] involves n-1 edge weights (even s-degree at odd n).
+
+### The correct framing
+
+**THM (verified n=5 exhaustive, n=7 spot):** For any tournament T at odd n:
+  M(T^c)[a,a] = M(T)[a,a]   and   M(T^c)[a,b] = -M(T)[a,b] for a≠b.
+
+COROLLARY: M(T^c) = M(T) iff M(T) is diagonal (scalar M at odd n).
+
+### Impact
+
+- The claim in blue_skeleton_even_r_synthesis.py is WRONG. M(T) ≠ M(T') for tiling blue pairs, and M(T) ≠ M(T^c) for tournament complement (unless M is diagonal).
+- The analysis of which iso classes are "self-paired" in that script is unaffected (it's about iso class mapping, not about M equality).
+- The complement formula is a NEW theorem that should be recorded.
