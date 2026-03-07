@@ -340,7 +340,67 @@ where all five symmetries are simultaneously maximized.
 
 ---
 
-## IX. Open Questions from This Analysis
+## IX. The Recursive Hopf Structure of W(r)
+
+### Discovery: W(r) coefficients use OCF at smaller n as building blocks
+
+The overlap=3 contribution to w_{n-5} at n=7 equals:
+
+  6 * sum_{|S|=5} chain_sum(T|_S)
+
+where chain_sum(T|_S) = H(T|_S) - 3*c_3(T|_S).
+
+By our n=5 identity w_0 = -t_3 + 2*t_5 + 1, this equals:
+
+  chain_sum(T|_S) = 1 - c_3(S) + 2*c_5(S)
+
+Summing over all C(7,5) = 21 five-element subsets:
+
+  sum_S chain_sum = 21 - 6*t_3 + 2*t_5
+
+(since each 3-cycle appears in C(4,2) = 6 subsets, each 5-cycle in exactly 1).
+
+So: **overlap_3 = 126 - 36*t_3 + 12*t_5**.
+
+This is the HOPF ALGEBRA COPRODUCT in action:
+
+  Delta([T]) = sum_S [T|_S] tensor [T|_{V\S}]
+
+The overlap=3 contribution is the "fiber" of Delta over 5-element subsets,
+evaluated using the OCF at n=5 on each fiber.
+
+### General Pattern
+
+At each coefficient level, w_{n-2k-1} involves:
+- **overlap = 2k+1** (maximal overlap): uses OCF at n=2k+1 on sub-tournaments
+- **overlap = 2k** through **overlap = k+1**: uses finer invariants
+- **overlap = k** (minimal, disjoint blocks): uses score-type invariants
+
+The hierarchy is:
+1. w_{n-1} = n! uses OCF at n=1 (trivially 1)
+2. w_{n-3} uses OCF at n=3 (t_3 = 3-cycle count)
+3. w_{n-5} uses OCF at n=5 (t_3, t_5, and complementary structure)
+4. w_{n-7} should use OCF at n=7 (t_3, t_5, t_7, and higher invariants)
+
+This recursive structure mirrors the Hopf algebra: the primitive elements
+(indecomposable tournaments) generate the algebra, and the coproduct
+decomposes each coefficient into contributions from smaller tournaments.
+
+### Connection to Deletion-Contraction
+
+Mitrovic's W_X = W_{X\e} - W_{X/e} gives a RECURSIVE decomposition of
+the Redei-Berge function by edge deletion/contraction.
+
+Our W(r) coefficient hierarchy is a DIFFERENT recursive decomposition:
+by overlap type (how much the "front" and "back" halves of a path share).
+
+Both decompositions ultimately reduce to OCF on smaller tournaments.
+Are they EQUIVALENT? If so, the Hopf coproduct, deletion-contraction,
+and W(r) coefficients are three faces of the same recursive structure.
+
+---
+
+## X. Open Questions from This Analysis
 
 1. **PATH-CYCLE DUALITY**: Is the duality between H and Pf(S) at odd/even n a formal mathematical duality (e.g., Poincare duality on some space)?
 
