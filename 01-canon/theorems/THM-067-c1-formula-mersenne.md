@@ -1,4 +1,4 @@
-# THM-066: General c_1 Formula and Mersenne Vanishing
+# THM-067: General c_1 Formula and Mersenne Vanishing
 
 **Type:** Theorem (PROVED)
 **Certainty:** 5 -- PROVED (algebraic, verified computationally)
