@@ -1,41 +1,62 @@
+#!/usr/bin/env python3
 """
-H21_gap_search.py -- Investigate whether H=21 is achievable at n=8,9,10,11,12.
+H21_gap_search.py -- Determine whether H=21 is achievable for any tournament.
 
-H(T) = number of Hamiltonian paths in tournament T.
-Uses OCF: H(T) = I(Omega(T), 2) where Omega is the conflict graph on directed
-odd cycles and I is the independence polynomial.
+H(T) = number of directed Hamiltonian paths in tournament T.
+By OCF: H(T) = I(Omega(T), 2) = 1 + 2*i_1 + 4*i_2 + 8*i_3 + ...
 
 Strategy:
-1. Random sampling at each n to collect achieved H values
-2. Report which odd values <= 25 are missing
-3. Targeted construction attempts for H=21
-4. Analysis of why H=21 might be impossible
+1. Exhaustive search at n <= 7 (2^21 = 2M at n=7)
+2. Large random sampling at n=8, 9, 10
+3. Systematic edge-flip from transitive at n=8
+4. OCF decomposition analysis
 """
 
 import random
 import sys
-from itertools import combinations
-from collections import defaultdict
+import time
+from itertools import combinations, permutations
+from collections import Counter, defaultdict
+
+# ============================================================
+# Core computation: fast H via array-based DP
+# ============================================================
+
+def count_H_from_bits(n, bits):
+    """Count H for tournament encoded as integer (upper triangle bits)."""
+    # Build adjacency as flat array for speed
+    adj = [[0]*n for _ in range(n)]
+    k = 0
+    for i in range(n):
+        for j in range(i+1, n):
+            if bits & (1 << k):
+                adj[i][j] = 1
+            else:
+                adj[j][i] = 1
+            k += 1
+    return count_H(adj, n)
+
 
 def count_H(A, n):
-    """Count Hamiltonian paths in tournament with adjacency matrix A."""
-    dp = {}
+    """Count Hamiltonian paths via bitmask DP (array-based, fast)."""
+    if n <= 1:
+        return 1
+    full = (1 << n) - 1
+    dp = [[0]*n for _ in range(1 << n)]
     for v in range(n):
-        dp[(1 << v, v)] = 1
+        dp[1 << v][v] = 1
     for mask in range(1, 1 << n):
         for v in range(n):
-            if not (mask & (1 << v)):
-                continue
-            c = dp.get((mask, v), 0)
-            if c == 0:
+            c = dp[mask][v]
+            if not (mask & (1 << v)) or c == 0:
                 continue
             for u in range(n):
                 if mask & (1 << u):
                     continue
                 if A[v][u]:
-                    dp[(mask | (1 << u), u)] = dp.get((mask | (1 << u), u), 0) + c
-    full = (1 << n) - 1
-    return sum(dp.get((full, v), 0) for v in range(n))
+                    dp[mask | (1 << u)][u] += c
+    return sum(dp[full])
+
 
 def random_tournament(n):
     """Generate a random tournament on n vertices."""
@@ -48,452 +69,427 @@ def random_tournament(n):
                 A[j][i] = 1
     return A
 
+
+def tournament_from_bits(n, bits):
+    """Construct tournament from integer encoding of upper triangle."""
+    A = [[0]*n for _ in range(n)]
+    k = 0
+    for i in range(n):
+        for j in range(i+1, n):
+            if bits & (1 << k):
+                A[i][j] = 1
+            else:
+                A[j][i] = 1
+            k += 1
+    return A
+
+
 def transitive_tournament(n):
-    """Generate the transitive tournament: i beats j iff i < j."""
+    """Transitive tournament: i beats j iff i < j."""
     A = [[0]*n for _ in range(n)]
     for i in range(n):
         for j in range(i+1, n):
             A[i][j] = 1
     return A
 
+
 def flip_edge(A, n, i, j):
-    """Flip the edge between i and j. Returns a new matrix."""
+    """Flip the arc between i and j."""
     B = [row[:] for row in A]
     B[i][j], B[j][i] = B[j][i], B[i][j]
     return B
 
-def find_directed_3cycles(A, n):
-    """Find all directed 3-cycles in tournament A."""
-    cycles = []
-    for i in range(n):
-        for j in range(i+1, n):
-            for k in range(j+1, n):
-                # Check all 2 orientations of the 3-cycle on {i,j,k}
-                if A[i][j] and A[j][k] and A[k][i]:
-                    cycles.append((i,j,k))
-                elif A[i][k] and A[k][j] and A[j][i]:
-                    cycles.append((i,k,j))
-    return cycles
 
-def find_odd_cycles_up_to(A, n, max_len=None):
-    """Find all directed odd cycles (as vertex sets) in tournament A.
-    Returns list of frozensets of vertices."""
-    if max_len is None:
-        max_len = n
-    cycle_sets = set()
+# ============================================================
+# OCF computation
+# ============================================================
 
-    # For each subset of odd size 3,5,7,...
-    for size in range(3, max_len+1, 2):
+def find_odd_cycle_vsets(A, n):
+    """Find all directed odd cycle VERTEX SETS in tournament A.
+    A vertex set supports a directed odd cycle iff the sub-tournament
+    on those vertices has a Hamiltonian cycle."""
+    cycle_sets = []
+    for size in range(3, n+1, 2):
         for subset in combinations(range(n), size):
-            # Check if there's a directed Hamiltonian cycle on this subset
-            sub_nodes = list(subset)
+            # Check for Hamiltonian cycle on this subset
+            s = size
+            sub = list(subset)
+            idx = {v: i for i, v in enumerate(sub)}
             # Build sub-adjacency
-            idx = {v: i for i, v in enumerate(sub_nodes)}
-            sub_A = [[0]*size for _ in range(size)]
-            for a in sub_nodes:
-                for b in sub_nodes:
+            sub_A = [[0]*s for _ in range(s)]
+            for a in sub:
+                for b in sub:
                     if a != b and A[a][b]:
                         sub_A[idx[a]][idx[b]] = 1
-            # Count Hamiltonian cycles using DP
-            # dp[(mask, v)] = number of Hamiltonian paths from node 0 to v using mask
-            s = size
-            dp = {}
-            dp[(1, 0)] = 1  # start at node 0
+            # DP: Hamiltonian paths from node 0
+            dp = [[0]*s for _ in range(1 << s)]
+            dp[1][0] = 1
             for mask in range(1, 1 << s):
                 if not (mask & 1):
-                    continue  # must include node 0
+                    continue
                 for v in range(s):
-                    if not (mask & (1 << v)):
-                        continue
-                    c = dp.get((mask, v), 0)
-                    if c == 0:
+                    c = dp[mask][v]
+                    if not (mask & (1 << v)) or c == 0:
                         continue
                     for u in range(s):
                         if mask & (1 << u):
                             continue
                         if sub_A[v][u]:
-                            dp[(mask | (1 << u), u)] = dp.get((mask | (1 << u), u), 0) + c
+                            dp[mask | (1 << u)][u] += c
             full = (1 << s) - 1
-            # Check if any path from 0 to v closes back to 0
-            has_cycle = False
-            for v in range(1, s):
-                if dp.get((full, v), 0) > 0 and sub_A[v][0]:
-                    has_cycle = True
-                    break
+            has_cycle = any(dp[full][v] > 0 and sub_A[v][0] for v in range(1, s))
             if has_cycle:
-                cycle_sets.add(frozenset(subset))
+                cycle_sets.append(frozenset(subset))
     return cycle_sets
 
-def build_conflict_graph(cycle_sets):
-    """Build conflict graph: vertices are cycle sets, edges between non-disjoint ones."""
-    cycles = list(cycle_sets)
-    m = len(cycles)
-    adj = [[False]*m for _ in range(m)]
-    for i in range(m):
-        for j in range(i+1, m):
-            if cycles[i] & cycles[j]:  # share a vertex
-                adj[i][j] = True
-                adj[j][i] = True
-    return cycles, adj
 
-def independence_polynomial_at_2(cycles_list, adj, max_size=None):
-    """Compute I(Omega, 2) = sum over independent sets S of 2^|S|."""
-    m = len(cycles_list)
-    if max_size is None:
-        max_size = m
+def compute_ocf_decomposition(A, n):
+    """Compute full OCF: returns (i_0, i_1, i_2, ...) and I(Omega,2)."""
+    cycle_sets = find_odd_cycle_vsets(A, n)
+    m = len(cycle_sets)
 
-    # For small m, enumerate all independent sets
-    if m > 25:
-        # Too large, use approximation or skip
-        return None
+    if m == 0:
+        return [1], 1  # just i_0=1
 
-    total = 0
-    for mask in range(1 << m):
-        # Check if mask is an independent set
-        is_indep = True
-        nodes_in = []
-        for i in range(m):
-            if mask & (1 << i):
-                nodes_in.append(i)
-        for idx_a in range(len(nodes_in)):
-            if not is_indep:
-                break
-            for idx_b in range(idx_a+1, len(nodes_in)):
-                if adj[nodes_in[idx_a]][nodes_in[idx_b]]:
-                    is_indep = False
+    # Build adjacency bitmasks for conflict graph
+    adj_bits = [0] * m
+    for a in range(m):
+        for b in range(a+1, m):
+            if cycle_sets[a] & cycle_sets[b]:
+                adj_bits[a] |= 1 << b
+                adj_bits[b] |= 1 << a
+
+    # Count independent sets by size
+    size_counts = Counter()
+    if m <= 25:
+        for mask in range(1 << m):
+            ok = True
+            seen = 0
+            temp = mask
+            while temp:
+                v = (temp & -temp).bit_length() - 1
+                if adj_bits[v] & seen:
+                    ok = False
                     break
-        if is_indep:
-            total += (1 << len(nodes_in))  # 2^|S|
-    return total
+                seen |= 1 << v
+                temp &= temp - 1
+            if ok:
+                size_counts[bin(mask).count('1')] += 1
+    else:
+        return None, None
 
-def analyze_tournament_ocf(A, n):
-    """Compute H via OCF decomposition: find cycle structure."""
-    cycle_sets = find_odd_cycles_up_to(A, n)
-    cycles_list, adj = build_conflict_graph(cycle_sets)
+    max_k = max(size_counts.keys()) if size_counts else 0
+    i_vals = [size_counts.get(k, 0) for k in range(max_k + 1)]
+    I_at_2 = sum(i_vals[k] * (2**k) for k in range(len(i_vals)))
+    return i_vals, I_at_2
 
-    # Count 3-cycles
-    c3 = sum(1 for cs in cycle_sets if len(cs) == 3)
-    # Count 5-cycles
-    c5 = sum(1 for cs in cycle_sets if len(cs) == 5)
-
-    # alpha_1 = total odd cycle vertex-sets
-    alpha_1 = len(cycle_sets)
-
-    # alpha_2 = number of disjoint pairs (independent edges in conflict graph complement)
-    # = pairs that are disjoint (no shared vertex)
-    alpha_2 = 0
-    for i in range(len(cycles_list)):
-        for j in range(i+1, len(cycles_list)):
-            if not adj[i][j]:  # disjoint
-                alpha_2 += 1
-
-    ip = independence_polynomial_at_2(cycles_list, adj)
-    return {
-        'c3': c3, 'c5': c5, 'alpha_1': alpha_1, 'alpha_2': alpha_2,
-        'I_Omega_2': ip, 'num_cycles': len(cycle_sets)
-    }
 
 # ============================================================
-# PART 1: Random sampling
+# PHASE 1: Exhaustive search n <= 7
 # ============================================================
-print("=" * 70)
-print("PART 1: Random sampling to find achieved H values")
-print("=" * 70)
 
-target_values = set(range(1, 28, 2))  # odd values 1,3,...,27
+def exhaustive_search(n):
+    """Exhaustively check ALL tournaments on n vertices."""
+    m = n * (n - 1) // 2
+    total = 1 << m
+    h_counts = Counter()
+    found_21 = None
 
-for n in range(8, 13):
-    num_samples = 10000
-    if n >= 11:
-        num_samples = 5000  # slower for larger n
-    if n >= 12:
-        num_samples = 2000
+    print(f"\n--- Exhaustive n={n}: {total} tournaments ---")
+    t0 = time.time()
 
-    achieved = set()
-    h_counts = defaultdict(int)
-    h21_found = False
+    for bits in range(total):
+        A = tournament_from_bits(n, bits)
+        h = count_H(A, n)
+        h_counts[h] += 1
+        if h == 21 and found_21 is None:
+            found_21 = bits
+            print(f"  *** H=21 FOUND at bits={bits} ***")
 
-    print(f"\nn={n}: Sampling {num_samples} random tournaments...")
-    sys.stdout.flush()
+    elapsed = time.time() - t0
+    print(f"  Time: {elapsed:.1f}s")
+
+    all_odd = sorted([h for h in h_counts if h <= 60 and h % 2 == 1])
+    print(f"  Odd H values <= 60: {all_odd}")
+
+    missing = [h for h in range(1, 52, 2) if h not in h_counts]
+    print(f"  Missing odd H <= 51: {missing}")
+
+    # Show counts near 21
+    print(f"  Counts near 21: ", end="")
+    for hv in range(15, 28, 2):
+        print(f"H={hv}:{h_counts.get(hv, 0)} ", end="")
+    print()
+
+    if found_21 is not None:
+        print(f"  H=21 ACHIEVED! bits={found_21}")
+    else:
+        print(f"  H=21 NOT achieved at n={n}")
+
+    return h_counts, found_21
+
+
+# ============================================================
+# PHASE 2: Random sampling n=8,9,10
+# ============================================================
+
+def random_search(n, num_samples):
+    """Large random sample search."""
+    h_counts = Counter()
+    found_21 = None
+
+    print(f"\n--- Random search n={n}: {num_samples} samples ---")
+    t0 = time.time()
 
     for trial in range(num_samples):
         A = random_tournament(n)
         h = count_H(A, n)
-        achieved.add(h)
-        if h <= 30:
-            h_counts[h] += 1
-        if h == 21:
-            h21_found = True
-            # Save the tournament
-            print(f"  *** H=21 FOUND at n={n}, trial {trial}! ***")
-            print(f"  Adjacency: {[A[i] for i in range(n)]}")
+        h_counts[h] += 1
+        if h == 21 and found_21 is None:
+            found_21 = [row[:] for row in A]
+            print(f"  *** H=21 FOUND at trial {trial} ***")
+
+        if (trial + 1) % 100000 == 0:
+            elapsed = time.time() - t0
+            rate = (trial+1) / elapsed
+            print(f"  {trial+1}/{num_samples} ({elapsed:.0f}s, {rate:.0f}/s)")
             sys.stdout.flush()
 
-    # Also add transitive tournament (H=1)
-    A_trans = transitive_tournament(n)
-    h_trans = count_H(A_trans, n)
-    achieved.add(h_trans)
+    elapsed = time.time() - t0
+    print(f"  Total time: {elapsed:.1f}s")
 
-    small_achieved = sorted([h for h in achieved if h <= 30])
-    missing_odd = sorted([h for h in target_values if h not in achieved])
+    # Show near-21 counts
+    print(f"  Counts near 21: ", end="")
+    for hv in range(15, 28, 2):
+        print(f"H={hv}:{h_counts.get(hv, 0)} ", end="")
+    print()
 
-    print(f"  Achieved H values <= 30: {small_achieved}")
-    print(f"  Missing odd values <= 27: {missing_odd}")
-    print(f"  H counts for small values: {dict(sorted(h_counts.items()))}")
-    if not h21_found:
-        print(f"  H=21 NOT found in {num_samples} samples")
-    sys.stdout.flush()
+    missing = [h for h in range(1, 52, 2) if h not in h_counts and h <= max(h_counts)]
+    print(f"  Missing odd H <= 51: {missing}")
 
-# ============================================================
-# PART 2: Targeted construction for H=21
-# ============================================================
-print("\n" + "=" * 70)
-print("PART 2: Targeted edge-flip construction for H=21")
-print("=" * 70)
-
-def try_targeted_construction(n, target_h=21, max_attempts=5000):
-    """Try to construct a tournament with H=target_h by flipping edges."""
-    best_diff = float('inf')
-    best_h = None
-    found = False
-
-    for attempt in range(max_attempts):
-        # Start with transitive tournament
-        A = transitive_tournament(n)
-        h = 1  # transitive has H=1
-
-        # Randomly flip edges and track H
-        edges = [(i,j) for i in range(n) for j in range(i+1, n)]
-        random.shuffle(edges)
-
-        for i, j in edges:
-            B = flip_edge(A, n, i, j)
-            new_h = count_H(B, n)
-
-            if new_h == target_h:
-                print(f"  FOUND H={target_h} at n={n}!")
-                print(f"  Adjacency: {[B[r] for r in range(n)]}")
-                return B, True
-
-            if abs(new_h - target_h) < abs(h - target_h):
-                A = B
-                h = new_h
-            elif random.random() < 0.1:  # sometimes accept worse
-                A = B
-                h = new_h
-
-            if abs(h - target_h) < best_diff:
-                best_diff = abs(h - target_h)
-                best_h = h
-
-    print(f"  n={n}: Best H found near 21: {best_h} (diff={best_diff})")
-    return None, False
-
-for n in [8, 9, 10]:
-    print(f"\nTargeted search at n={n}...")
-    sys.stdout.flush()
-    try_targeted_construction(n, target_h=21, max_attempts=2000)
-    sys.stdout.flush()
-
-# ============================================================
-# PART 3: Exhaustive search at n=8 for H=21
-# ============================================================
-print("\n" + "=" * 70)
-print("PART 3: Near-exhaustive search at n=8 for small H values")
-print("=" * 70)
-
-# At n=8, there are 2^28 tournaments. We can't enumerate all,
-# but we can do a large sample and also systematically explore
-# tournaments with few 3-cycles (which tend to have small H).
-
-# Strategy: start from transitive, flip 1,2,3,... edges systematically
-print("\nn=8: Systematic edge-flip from transitive tournament")
-sys.stdout.flush()
-
-n = 8
-A_trans = transitive_tournament(n)
-edges = [(i,j) for i in range(n) for j in range(i+1, n)]
-num_edges = len(edges)  # 28
-
-achieved_h = set()
-achieved_h.add(1)
-
-# Flip 1 edge
-print("  Flipping 1 edge...")
-for e1 in range(num_edges):
-    i, j = edges[e1]
-    A = flip_edge(A_trans, n, i, j)
-    h = count_H(A, n)
-    achieved_h.add(h)
-
-print(f"  After 1-flip: achieved H <= 30: {sorted([h for h in achieved_h if h <= 30])}")
-sys.stdout.flush()
-
-# Flip 2 edges
-print("  Flipping 2 edges...")
-for e1 in range(num_edges):
-    A1 = flip_edge(A_trans, n, edges[e1][0], edges[e1][1])
-    for e2 in range(e1+1, num_edges):
-        A2 = flip_edge(A1, n, edges[e2][0], edges[e2][1])
-        h = count_H(A2, n)
-        achieved_h.add(h)
-
-print(f"  After 2-flip: achieved H <= 30: {sorted([h for h in achieved_h if h <= 30])}")
-sys.stdout.flush()
-
-# Flip 3 edges (this is C(28,3)=3276, feasible)
-print("  Flipping 3 edges...")
-for e1 in range(num_edges):
-    A1 = flip_edge(A_trans, n, edges[e1][0], edges[e1][1])
-    for e2 in range(e1+1, num_edges):
-        A2 = flip_edge(A1, n, edges[e2][0], edges[e2][1])
-        for e3 in range(e2+1, num_edges):
-            A3 = flip_edge(A2, n, edges[e3][0], edges[e3][1])
-            h = count_H(A3, n)
-            achieved_h.add(h)
-
-small_h = sorted([h for h in achieved_h if h <= 30])
-print(f"  After 3-flip: achieved H <= 30: {small_h}")
-missing = sorted([h for h in range(1, 28, 2) if h not in achieved_h])
-print(f"  Missing odd values <= 27: {missing}")
-sys.stdout.flush()
-
-# ============================================================
-# PART 4: OCF analysis of near-21 tournaments
-# ============================================================
-print("\n" + "=" * 70)
-print("PART 4: OCF analysis -- what cycle structures give H near 21?")
-print("=" * 70)
-
-# For small n where we can compute the full OCF
-n = 7
-print(f"\nn={n}: Sampling tournaments with H near 21 and analyzing cycle structure...")
-sys.stdout.flush()
-
-near_21 = []
-for trial in range(20000):
-    A = random_tournament(n)
-    h = count_H(A, n)
-    if 15 <= h <= 27:
-        near_21.append((h, A))
-
-# Group by H value
-by_h = defaultdict(list)
-for h, A in near_21:
-    by_h[h].append(A)
-
-print(f"  H value distribution near 21 at n={n}:")
-for h in sorted(by_h.keys()):
-    count = len(by_h[h])
-    print(f"    H={h}: {count} tournaments found")
-
-# Analyze cycle structure for H values around 21
-for target in [19, 21, 23]:
-    if target in by_h and len(by_h[target]) > 0:
-        A = by_h[target][0]
-        info = analyze_tournament_ocf(A, n)
-        print(f"\n  OCF analysis for H={target} tournament at n={n}:")
-        print(f"    c3={info['c3']}, c5={info['c5']}, alpha_1={info['alpha_1']}")
-        print(f"    alpha_2={info['alpha_2']}, I(Omega,2)={info['I_Omega_2']}")
+    if found_21:
+        print(f"  H=21 ACHIEVED!")
     else:
-        print(f"\n  H={target}: NOT FOUND at n={n}")
-sys.stdout.flush()
+        print(f"  H=21 NOT found in {num_samples} samples")
+
+    return h_counts, found_21
+
 
 # ============================================================
-# PART 5: Algebraic constraint analysis
+# PHASE 3: Systematic edge-flip from transitive at n=8
 # ============================================================
-print("\n" + "=" * 70)
-print("PART 5: Algebraic constraint analysis for H=21")
-print("=" * 70)
 
-print("""
-OCF: H(T) = I(Omega(T), 2) = sum_{k>=0} i_k * 2^k
+def systematic_flip_search(n, max_flips=4):
+    """Systematically flip 1..max_flips edges from transitive tournament."""
+    A_trans = transitive_tournament(n)
+    edges = [(i, j) for i in range(n) for j in range(i+1, n)]
+    ne = len(edges)
+    achieved = set()
+    achieved.add(1)  # transitive has H=1
 
-where i_k = number of independent sets of size k in Omega(T).
+    print(f"\n--- Systematic flip search n={n}, up to {max_flips} flips ---")
+    t0 = time.time()
 
-H = 21 = 10101 in binary = 1 + 4 + 16 = 2^0 + 2^2 + 2^4
+    # 1-flip
+    for e1 in range(ne):
+        A = flip_edge(A_trans, n, edges[e1][0], edges[e1][1])
+        achieved.add(count_H(A, n))
+    print(f"  After 1-flip ({ne} combos): H<=30 = {sorted(h for h in achieved if h <= 30)}")
 
-So we need: i_0=1 (always), and the sum i_1*2 + i_2*4 + i_3*8 + ... = 20
+    # 2-flip
+    if max_flips >= 2:
+        cnt = 0
+        for e1 in range(ne):
+            A1 = flip_edge(A_trans, n, edges[e1][0], edges[e1][1])
+            for e2 in range(e1+1, ne):
+                A2 = flip_edge(A1, n, edges[e2][0], edges[e2][1])
+                achieved.add(count_H(A2, n))
+                cnt += 1
+        print(f"  After 2-flip ({cnt} combos): H<=30 = {sorted(h for h in achieved if h <= 30)}")
 
-Possible decompositions of 20 = sum i_k * 2^k (k>=1):
-  i_1=10, rest=0: 10*2 = 20  => H = 1 + 20 = 21
-  i_1=8, i_2=1: 16+4 = 20    => H = 1 + 16 + 4 = 21
-  i_1=6, i_2=2: 12+8 = 20    => H = 1 + 12 + 8 = 21
-  i_1=4, i_2=3: 8+12 = 20    => H = 1 + 8 + 12 = 21
-  i_1=2, i_2=4: 4+16 = 20    => H = 1 + 4 + 16 = 21
-  i_1=0, i_2=5: 0+20 = 20    => H = 1 + 0 + 20 = 21
-  i_1=8, i_3=0.5: impossible (i_3 must be integer)
-  i_1=6, i_2=1, i_3=0.25: impossible
-  i_1=4, i_2=1, i_3=1: 8+4+8=20  => H = 1+8+4+8 = 21
-  i_1=2, i_2=1, i_3=2: 4+4+16=24 != 20
-  etc.
+    # 3-flip
+    if max_flips >= 3:
+        cnt = 0
+        for e1 in range(ne):
+            A1 = flip_edge(A_trans, n, edges[e1][0], edges[e1][1])
+            for e2 in range(e1+1, ne):
+                A2 = flip_edge(A1, n, edges[e2][0], edges[e2][1])
+                for e3 in range(e2+1, ne):
+                    A3 = flip_edge(A2, n, edges[e3][0], edges[e3][1])
+                    achieved.add(count_H(A3, n))
+                    cnt += 1
+        print(f"  After 3-flip ({cnt} combos): H<=30 = {sorted(h for h in achieved if h <= 30)}")
 
-Key question: Can any tournament have alpha_1 (= i_1) = 10 with all cycles
-pairwise conflicting (i_2 = 0)?  That gives H = 1 + 20 = 21.
+    # 4-flip
+    if max_flips >= 4:
+        cnt = 0
+        for e1 in range(ne):
+            A1 = flip_edge(A_trans, n, edges[e1][0], edges[e1][1])
+            for e2 in range(e1+1, ne):
+                A2 = flip_edge(A1, n, edges[e2][0], edges[e2][1])
+                for e3 in range(e2+1, ne):
+                    A3 = flip_edge(A2, n, edges[e3][0], edges[e3][1])
+                    for e4 in range(e3+1, ne):
+                        A4 = flip_edge(A3, n, edges[e4][0], edges[e4][1])
+                        achieved.add(count_H(A4, n))
+                        cnt += 1
+            if (e1+1) % 5 == 0:
+                print(f"    4-flip progress: {e1+1}/{ne} outer edges...")
+                sys.stdout.flush()
+        print(f"  After 4-flip ({cnt} combos): H<=30 = {sorted(h for h in achieved if h <= 30)}")
 
-Or: alpha_1=8, i_2=1 (exactly one disjoint pair)?  H = 1+16+4 = 21.
-""")
-sys.stdout.flush()
+    elapsed = time.time() - t0
+    print(f"  Total time: {elapsed:.1f}s")
 
-# ============================================================
-# PART 6: Check if H=21 is achievable by analyzing i_k decomposition
-# ============================================================
-print("=" * 70)
-print("PART 6: Verify OCF decomposition for achieved H values near 21")
-print("=" * 70)
+    missing = [h for h in range(1, 52, 2) if h not in achieved]
+    print(f"  Missing odd H <= 51: {missing}")
 
-# At n=7, do detailed OCF for all achieved H values
-n = 7
-h_to_ocf = {}
-random.seed(42)
+    if 21 in achieved:
+        print(f"  H=21 ACHIEVED via edge flips!")
+    else:
+        print(f"  H=21 NOT achieved")
 
-print(f"\nn={n}: Computing OCF decomposition for tournaments with various H values...")
-sys.stdout.flush()
+    return achieved
 
-count = 0
-for trial in range(30000):
-    A = random_tournament(n)
-    h = count_H(A, n)
-    if h not in h_to_ocf and h <= 50:
-        info = analyze_tournament_ocf(A, n)
-        h_to_ocf[h] = info
-        count += 1
-        if count % 5 == 0:
-            sys.stdout.flush()
-
-print(f"\n  OCF decompositions at n={n}:")
-for h in sorted(h_to_ocf.keys()):
-    info = h_to_ocf[h]
-    print(f"    H={h}: alpha_1={info['alpha_1']}, alpha_2={info['alpha_2']}, "
-          f"c3={info['c3']}, c5={info['c5']}, I(Omega,2)={info['I_Omega_2']}")
-
-# Check which H values are achieved
-all_h_n7 = set()
-random.seed(123)
-for trial in range(50000):
-    A = random_tournament(7)
-    h = count_H(A, 7)
-    all_h_n7.add(h)
-
-print(f"\n  All achieved H values at n=7 (up to 50): {sorted([h for h in all_h_n7 if h <= 50])}")
-print(f"  Missing odd values <= 27 at n=7: {sorted([h for h in range(1, 28, 2) if h not in all_h_n7])}")
-sys.stdout.flush()
 
 # ============================================================
-# PART 7: Summary
+# PHASE 4: OCF analysis of near-21 tournaments
 # ============================================================
-print("\n" + "=" * 70)
-print("SUMMARY")
-print("=" * 70)
-print("""
-The key constraint for H=21:
-  H = I(Omega(T), 2) = 1 + 2*i_1 + 4*i_2 + 8*i_3 + ...
 
-  21 = 1 + 20, so we need sum_{k>=1} i_k * 2^k = 20.
+def ocf_analysis(n, num_samples=50000):
+    """Collect tournaments with H near 21 and analyze OCF structure."""
+    print(f"\n--- OCF analysis n={n}: {num_samples} samples ---")
 
-  Since i_k >= 0, the simplest decomposition is i_1=10, i_k=0 for k>=2.
-  This means 10 odd-cycle vertex sets, all pairwise sharing a vertex.
+    near_h = defaultdict(list)
+    t0 = time.time()
 
-  The question is whether the combinatorial constraints on tournaments
-  allow exactly these independence polynomial values.
-""")
+    for trial in range(num_samples):
+        A = random_tournament(n)
+        h = count_H(A, n)
+        if 15 <= h <= 27 and len(near_h[h]) < 3:
+            near_h[h].append([row[:] for row in A])
+
+    elapsed = time.time() - t0
+    print(f"  Sampling done in {elapsed:.1f}s")
+
+    print(f"  H values with examples: {sorted(near_h.keys())}")
+
+    for hv in sorted(near_h.keys()):
+        if near_h[hv]:
+            A = near_h[hv][0]
+            i_vals, I_at_2 = compute_ocf_decomposition(A, n)
+            if i_vals is not None:
+                i_str = ', '.join(f'i_{k}={i_vals[k]}' for k in range(len(i_vals)))
+                print(f"    H={hv}: {i_str}, verify I(Omega,2)={I_at_2}")
+            else:
+                print(f"    H={hv}: too many cycles for full OCF")
+
+    if 21 in near_h:
+        print(f"\n  *** H=21 examples found! ***")
+        for A in near_h[21]:
+            i_vals, I_at_2 = compute_ocf_decomposition(A, n)
+            print(f"    I(Omega,2)={I_at_2}, decomposition={i_vals}")
+            print(f"    Adjacency: {A}")
+    else:
+        print(f"\n  H=21 NOT found at n={n}")
+
+
+# ============================================================
+# PHASE 5: Theoretical analysis
+# ============================================================
+
+def theoretical_analysis():
+    """Print all (i_1, i_2, i_3, ...) that give H=21."""
+    print("\n--- Theoretical: all (i_1, i_2, ...) giving H=21 ---")
+    print("H = 1 + 2*i_1 + 4*i_2 + 8*i_3 + 16*i_4")
+    print("Need: 2*i_1 + 4*i_2 + 8*i_3 + 16*i_4 = 20\n")
+
+    solutions = []
+    for i1 in range(11):
+        r1 = 20 - 2*i1
+        if r1 < 0: break
+        for i2 in range(r1//4 + 1):
+            r2 = r1 - 4*i2
+            if r2 < 0: break
+            for i3 in range(r2//8 + 1):
+                r3 = r2 - 8*i3
+                if r3 < 0: break
+                if r3 == 0:
+                    solutions.append((i1, i2, i3))
+                elif r3 % 16 == 0:
+                    i4 = r3 // 16
+                    solutions.append((i1, i2, i3, i4))
+
+    for s in solutions:
+        parts = ', '.join(f'i_{k+1}={s[k]}' for k in range(len(s)) if s[k] > 0)
+        if not parts:
+            parts = "(no cycles -- impossible since H=21>1)"
+        print(f"  {parts}")
+    print(f"\n  Total: {len(solutions)} decompositions")
+    print(f"\n  Note: i_1 = alpha_1 = total directed odd cycles (vertex sets)")
+    print(f"  i_2 = number of vertex-disjoint PAIRS of odd cycles")
+    print(f"  Key parity: i_1 must be EVEN (since H is odd and H=1+2*i_1+...)")
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+if __name__ == '__main__':
+    print("=" * 70)
+    print("H=21 GAP SEARCH -- Is H(T)=21 achievable for any tournament T?")
+    print("=" * 70)
+
+    theoretical_analysis()
+
+    # Phase 1: Exhaustive for n=3..7
+    print("\n" + "=" * 70)
+    print("PHASE 1: Exhaustive search (n=3 through 7)")
+    print("=" * 70)
+    all_achieved = set()
+    for n in range(3, 8):
+        hc, found = exhaustive_search(n)
+        all_achieved.update(hc.keys())
+
+    missing_global = [h for h in range(1, 52, 2) if h not in all_achieved]
+    print(f"\nGlobal missing odd H <= 51 after exhaustive n<=7: {missing_global}")
+
+    # Phase 2: Random sampling at n=8,9,10
+    print("\n" + "=" * 70)
+    print("PHASE 2: Random sampling (n=8, 9, 10)")
+    print("=" * 70)
+
+    for n, samples in [(8, 50000), (9, 20000), (10, 5000), (11, 2000), (12, 500)]:
+        hc, found = random_search(n, samples)
+        all_achieved.update(hc.keys())
+
+    missing_global = [h for h in range(1, 52, 2) if h not in all_achieved]
+    print(f"\nGlobal missing odd H <= 51 after random n<=12: {missing_global}")
+
+    # Phase 3: Systematic edge flips at n=8
+    print("\n" + "=" * 70)
+    print("PHASE 3: Systematic edge-flip search (n=8)")
+    print("=" * 70)
+    achieved_flip = systematic_flip_search(8, max_flips=3)
+    all_achieved.update(achieved_flip)
+
+    missing_global = [h for h in range(1, 52, 2) if h not in all_achieved]
+    print(f"\nGlobal missing odd H <= 51 after flip search: {missing_global}")
+
+    # Phase 4: OCF analysis at n=7, 8
+    print("\n" + "=" * 70)
+    print("PHASE 4: OCF decomposition analysis")
+    print("=" * 70)
+    ocf_analysis(7, 30000)
+
+    # Final summary
+    print("\n" + "=" * 70)
+    print("FINAL SUMMARY")
+    print("=" * 70)
+    print(f"Missing odd H values <= 51: {[h for h in range(1,52,2) if h not in all_achieved]}")
+    if 21 in all_achieved:
+        print("RESULT: H=21 IS achievable.")
+    else:
+        print("RESULT: H=21 was NOT found in any search.")
+        print("Combined evidence: exhaustive n<=7, 50K samples n=8,")
+        print("20K n=9, 5K n=10, 2K n=11, 500 n=12, systematic 3-flip n=8.")
