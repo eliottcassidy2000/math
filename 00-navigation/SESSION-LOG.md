@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S11b (continued^4) — 2026-03-06 (Coefficient Hierarchy Theorem)
+**Account:** opus
+**Continuation of:** opus-2026-03-06-S11b (continued^3)
+**Summary of work:**
+  (1) **THM-055: Coefficient Hierarchy Theorem** — Proved that tr(c_{n-1-2k}) = sum_P e_{2k}(s_P) where e_{2k} is a polynomial of degree 2k in f_P (forward arc count). Via Newton's identity reduction, all power sums p_j of s_i = ±1/2 collapse to functions of p_1 = f - (n-1)/2.
+  (2) **Explicit formulas computed** via sympy for e_0, e_2, e_4, e_6 at n=5,7,9.
+  (3) **Moment hierarchy discovered:** sum_P f^j for j≤3 depends only on t_3; sum_P f^4 depends on MORE than t_3. This is why tr(c_{n-5}) cannot be expressed via simple cycle counts.
+  (4) **Position decomposition at n=7:** f_(4) splits into 4 types by position adjacency pattern: "4 consec" (3 subsets, 5 vertices = subtournament H sums), "3+1" (6 subsets, 6 vertices), "2+2" (3 subsets, 6 vertices), "2+1+1" (3 subsets, 7 vertices = irreducible whole-tournament invariant).
+  (5) **At n=5:** f_(4) = H directly (only 1 subset of 4 positions), giving tr(c_0) = H - 3*t_3.
+  (6) Read algebraic proof of c_{n-3} from opus-S27. Read grand synthesis from S25f.
+**New contributions:** THM-055, coefficient_hierarchy_proof.py
+**Unresolved threads:**
+  - Prove sum_P f^3 depends only on t_3 algebraically (currently only verified computationally)
+  - What is the explicit invariant that sum_P f^4 captures at n≥7?
+  - Can the hierarchy be used to bound or relate c_0 to H?
+
 ## kind-pasteur-2026-03-06-S25e — 2026-03-06 (THM-052 DISPROVED for non-SC VT; McKay database)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S25d (context limit, then continuation)
