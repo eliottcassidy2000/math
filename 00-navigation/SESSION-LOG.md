@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S32 — 2026-03-07 (DEFORMED EULERIAN NUMBERS — complete a_k(T) formula)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S31 (context limit)
+**Summary of work:**
+  (1) **THM-062: Deformed Eulerian Numbers (PROVED).** Complete closed-form:
+      a_k(T) = A(n,k) + sum_I 2^{parts(I)} * c_k^{(f_I, n-1)} * I(T)
+      where c_k^{(f,d)} = sum_j A(f+1,j) * C(d-f, k-j) * (-1)^{d-f-k+j}
+  (2) **Key insight:** Transitive tournament gives standard Eulerian numbers A(n,k).
+      All invariant corrections sum to zero (preserving n! total).
+  (3) **Bivariate formula:** Phi_T(x,y) = A_n(x,y) + sum_I 2^parts * A_{f+1}(x,y) * (x-y)^{n-1-f} * I(T).
+      Reduces to W(r) on line x-y=1.
+  (4) **Derivative formulas:**
+      - F'_f(1/2) = 2^{f+1} - 2 (Mersenne-like)
+      - a_{n-2}(T) = OCF polynomial. At n=7: 120 + 48*t3 - 12*t7
+      - F''_f(1/2) = f(f-1) + 2(f-1)(2^{f+1}-f-2) + 2*A(f+1,2)
+      - a_{n-3}(T) at n=7: 1191 + 30*t3 - 18*t5 + 30*t7 - 36*bc (constant = A(7,2))
+  (5) **Negative results:** Tournament Eulerian poly E_T(x) NOT real-rooted (74-100% complex).
+      W(r) roots also generally off real/imaginary axes.
+  (6) **Verification:** 260+ coefficient checks (n=5: 75, n=7: 140, n=9: 45). All exact.
+**New contributions:** THM-062-forward-edge-distribution.md, 7 computation scripts
+**Unresolved threads:** General F^{(k)}_f(1/2) closed form; a_k at n=9 with full invariants; combinatorial interpretation of c_k^{(f,d)}; positivity constraints from a_k >= 0
+
 ## kind-pasteur-2026-03-07-S26 — 2026-03-07 (THM-061 Anti-Evaluation + W(r) Flip Analysis)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-06-S25h (context limit)
