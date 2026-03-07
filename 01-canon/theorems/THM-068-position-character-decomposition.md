@@ -55,11 +55,11 @@ The Parseval energy at each Walsh degree level satisfies:
 
 This follows from sum_v (-1)^{2*[v in N(S)]} = n.
 
-### (vi) Connection to THM-053 and THM-067
+### (vi) Connection to THM-053 and THM-069
 
 This theorem bridges:
 - **THM-053** (M[v,v] = sum_P (-1)^{pos(v,P)}): the pos function is encoded in the highest Walsh degree (n-1), where the position character equals (-1)^{pos(v,path)} with no scaling.
-- **THM-067** (Walsh-Fourier diagonalization): H decomposes into pure Walsh degree components D_{2k}. The PCD refines this by showing M[v,v] decomposes identically, with each D_{2k} split into vertex-dependent signed components.
+- **THM-069** (Walsh-Fourier diagonalization): H decomposes into pure Walsh degree components D_{2k}. The PCD refines this by showing M[v,v] decomposes identically, with each D_{2k} split into vertex-dependent signed components.
 
 The scaling 1/(n-2k) increases from 1/n (degree 0) to 1 (top degree), meaning the highest Walsh degree carries the MOST per-vertex information about position parity, while lower degrees carry progressively averaged information.
 

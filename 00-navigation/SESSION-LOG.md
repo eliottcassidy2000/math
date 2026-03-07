@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35 (continued) — 2026-03-07 (Position Character Decomposition)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35 (context continuations)
+**Summary of work:**
+  (1) **THM-068: Position Character Decomposition (PCD).** M[v,v]_hat[S] = (-1)^{[v in N(S)]} * H_hat[S] / (n-2k) for Walsh degree 2k. |N(S)| = k, C(n,k) patterns per degree.
+  (2) **Degree-2 PROVED ALGEBRAICALLY for all odd n.** Key: 2*(n-3)! valid permutations per block position, descent count always 1, alternating position sum gives -1/(n-2) ratio for shared vertex.
+  (3) **Even-length component rule PROVED.** H_hat[S] ≠ 0 iff every path component of S has even length. Odd-length components have opposite descent parity → exact cancellation. Verified at n=7.
+  (4) **Walsh degree ↔ OCF invariant correspondence.** P_{2j} ↔ (2j+1)-cycle, P_{2j1}+P_{2j2} ↔ disjoint odd-cycle pairs. Partition count = p(k) matches invariant count.
+  (5) **Off-diagonal rank pattern.** M1[a,b]_hat has rank n-2k at degree 2k. M1 (as defined) is NOT symmetric; OCF transfer matrix is different.
+  (6) **Fixed w_6 constant** in THM-069: 5040 = 7! (not 720 = 6!), w_0 constant = -17/4.
+**New contributions:** THM-068, pcd_verification.py
+**Unresolved threads:** Algebraic proof of PCD at degree 4+; OCF proof via Walsh framework; exact off-diagonal transfer matrix definition
+
 ## opus-2026-03-07-S34 — 2026-03-07 (GS-OCF Bridge, Graph Equality THM-067, f(C)=2mu(C))
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S33 (context limit, then S34)
@@ -34,11 +47,11 @@ Entry format:
 **Account:** opus
 **Continuation of:** opus-2026-03-06-S11b (many continuations)
 **Summary of work:**
-  (1) **THM-066: Walsh-Fourier Diagonalization (PROVED at n=5,7).** The OCF H(T) on the Boolean hypercube {0,1}^m decomposes into Walsh degree components D_{2j}, each with Walsh degree EXACTLY 2j. The Fourier coefficients w_k = 2^k * D_{n-1-k} have pure Walsh degree.
+  (1) **THM-069 (formerly THM-067): Walsh-Fourier Diagonalization (PROVED at n=5,7).** The OCF H(T) on the Boolean hypercube {0,1}^m decomposes into Walsh degree components D_{2j}, each with Walsh degree EXACTLY 2j. The Fourier coefficients w_k = 2^k * D_{n-1-k} have pure Walsh degree.
   (2) **Analytical proofs of all Walsh coefficients at n=7:** t3_hat=-1/4, t5_hat=-3/4, t7_hat=-3/8, bc_hat=-1/4 at degree 2. t5_hat=1/16, t7_hat=1/32, bc_hat=0 (path) and t5=0, t7=1/16, bc=1/16 (double-fan) at degree 4.
   (3) **Generalized telescoping:** t7_hat = (t5+2bc)_hat/2 at degree 4, extending t5_hat = t3_hat/2 at degree 2. This connects to THM-065 f-level grouping.
   (4) **Key insight:** The Walsh basis diagonalizes the Fourier decomposition because f-level sums are the natural variables, and each cycle's contribution at lower Walsh degrees telescopes via the factor-of-2 identity.
-**New contributions:** THM-066
+**New contributions:** THM-067 (originally THM-066, renamed due to collision)
 **Unresolved threads:** General n proof; degree-6 structure of w_0 at n=7; connection to skeleton eigenvalues
 
 ## opus-2026-03-07-S33 — 2026-03-07 (Trivariate GF, empty set insight, reduced polynomial P(u,x))
