@@ -318,7 +318,7 @@ Redei's theorem says H(T) is always odd. The converse asks: for which odd k does
 
 **Permanent gaps discovered (THM-029, kind-pasteur-2026-03-06-S21, corrected S22):**
 - **H=7 is impossible** for ANY tournament on ANY number of vertices. CORRECTED proof (S22): alpha_1=3 IS achievable at n>=7, but H=7 still impossible because H=7 requires (alpha_1=3, i_2=0), and i_2=0 forces common vertex among triples which forces c5>=1, giving alpha_1>=4. When alpha_1=3 occurs (n>=7), the triples don't all conflict, so i_2>=1, giving H>=11.
-- **H=21 is a permanent gap** (exhaustive n<=7, 500k samples at n=8). Structural proof 4/6 complete: (0,5),(2,4) trivial; (4,3) Part D; (6,2) 5-cycle forcing theorem. Open: (8,1) mixed-cycle case, (10,0) general.
+- **H=21 is a permanent gap — PROVED FOR ALL n** (kind-pasteur-S33). Complete proof via poisoning graph DAG argument (Dichotomy Theorem, Part R of THM-079).
 
 **Achievable values (exhaustive):**
 - n=5: {1,3,5,9,11,13,15}
@@ -369,8 +369,8 @@ The ONLY permanent gaps through n=9 sampling are **H=7 and H=21**.
 - **Complete proof structure (Part P):** H!=21 for all n, modulo proving the dichotomy.
 
 **Open questions:**
-- PROVE the deletion+matching dichotomy for all n >= 9 (verified at n=9)
-- Alternative: prove min-H for cycle-rich tournaments is > 21 for all n >= 8
+- ~~PROVE the deletion+matching dichotomy for all n >= 9~~ **RESOLVED** (kind-pasteur-S33, poisoning graph DAG argument)
+- ~~Alternative: prove min-H for cycle-rich tournaments is > 21 for all n >= 8~~ **RESOLVED** (follows from dichotomy: cycle-rich H >= 25 for all n >= 8)
 - Are there other permanent gaps beyond 7 and 21? EVIDENCE: NO (63 filled at n=8)
 - What is the density of achievable values as max H grows?
 

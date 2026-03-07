@@ -3,7 +3,7 @@
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-06-S10
-**Last web research:** kind-pasteur-2026-03-06-S25 (Irving-Omar det/per, Mitrovic-Stojadinovic Hopf, Schweser-Stiebitz-Toft mixed)
+**Last web research:** kind-pasteur-2026-03-07-S33 (Lichiardopol, Chen-Chang disjoint cycles, Frankl Erdos matching)
 
 ---
 
@@ -1052,20 +1052,48 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Status:** CLOSED (dead end).
 **What:** The bags-of-sticks decomposition (Mitrovic-Stojadinovic Theorem 4.2) expresses U_X via inclusion-exclusion over edge deletions. Under OCF specialization, every bag of sticks contributes 1 (acyclic digraphs have empty Omega). So the decomposition reduces to: H(T) = sum of inclusion-exclusion coefficients, which is trivially true. No new information for OCF.
 
-### INV-096: H=21 Component Reduction (THM-079) — PARTIAL RESULT
-**Source:** opus-2026-03-07-S39
-**Status:** PROVED PARTIAL. Two of three routes ruled out; K_6-2e route remains open.
+### INV-096: H=21 Component Reduction (THM-079) — PROVED FOR ALL n
+**Source:** opus-2026-03-07-S39 (partial), kind-pasteur-2026-03-07-S33 (completion)
+**Status:** PROVED. H(T) ≠ 21 for ALL tournaments on ALL n vertices.
 **What:** For H(T)=21, the OCF requires I(Omega(T),2)=21. Component factorization gives:
-  - Disconnected case: IMPOSSIBLE. 21=3*7, but I(component)=7 impossible by THM-029 argument (3 pairwise-conflicting cycles always generate 4th).
-  - P_4 case: IMPOSSIBLE. I(P_4,2)=21, but P_4 realization blocked because two sharing 3-cycles on 5 vertices always force a 3rd cycle (exhaustively verified), creating a 5th vertex in Omega.
-  - K_6-2e case: OPEN. I(K_6-2e, 2)=21. Requires 6 odd cycles with exactly 2 disjoint pairs and no other cycles.
-**Key discovery:** I(P_4, 2)=21. The path graph on 4 vertices gives exactly 21.
-**Key discovery:** Graph I=21 classification: v=4 only P_4, v=5 none, v=6 only K_6-minus-2-edges.
-**Next step:** (1) Prove K_6-2e realization impossible for Omega(T). (2) Show t_3=6 with K_6-2e conflict pattern forces additional cycles. (3) Extend the "sharing forces extra cycle" argument to 5-cycles.
-**Scripts:** `04-computation/h21_gap_mechanism.py`, `04-computation/t3_t5_parity.py`
+  - Disconnected case: IMPOSSIBLE. 21=3*7, but I(component)=7 impossible by THM-029 argument.
+  - P_4 case: IMPOSSIBLE. P_4 realization blocked because sharing 3-cycles force extra cycles.
+  - K_6-2e case: SUPERSEDED by Dichotomy Theorem proof.
+**Dichotomy Theorem (Part R):** For cycle-rich T on n≥9, either (a) 3 disjoint 3-cycles exist (⟹ H≥27), or (b) safe deletion to cycle-rich T−v exists (⟹ H≥H(T−v)+2≥27). Proved via poisoning graph DAG argument. Combined with base case n≤8 (exhaustive) and Part J (non-cyclic vertex removal), gives H(T)≠21 for ALL n.
+**Key ingredients:** Lemma Q (cycle-rich ⟹ no source/sink), poisoning graph has out-degree ≤1 and is acyclic, DAG source deletion preserves cycle-rich.
+**Scripts:** `04-computation/h21_gap_mechanism.py`, `h21_dichotomy_proof.py`, `h21_poisoning_graph.py`, `h21_cycle_rich_auto_no_ss.py`
+**Writeup:** `03-artifacts/drafts/dichotomy-proof-formal.md`
 
 ### INV-097: u_T Size-Weighted Independence Polynomial (THM-078) — PROVED
 **Source:** opus-2026-03-07-S39
 **Status:** PROVED. u_T(m) = sum_j sw(j)*m^{n-2j} where sw(j) = sum over j-element independent sets of 2^|S|.
 **What:** The size-weighted independence polynomial identity connects u_T(m) to the Omega(T) independence structure. Q_T(w) = u_T(sqrt(w))/sqrt(w) has all real non-positive roots for n<=8 (Leake-Ryder/Chudnovsky-Seymour stability for claw-free graphs). Fails at n>=9 when claws appear.
 **Next step:** Check if Q_T root structure has implications for achievable H values.
+
+### INV-098: Lichiardopol's Conjecture and Disjoint Cycle Forcing — EXPLORED
+**Source:** kind-pasteur-2026-03-07-S33 (web research)
+**Status:** EXPLORED. Used in H=21 proof context but not directly needed.
+**What:** Lichiardopol's conjecture (proved for q=3 by Bang-Jensen, Bessy, Thomassé): tournaments with min out-degree ≥ (q-1)k-1 have k vertex-disjoint q-cycles. For 3-cycles with k=3: min outdeg ≥ 5. However, at n=9 cycle-rich, min outdeg is ALWAYS ≤ 4 (100% of 106,424 tested), so Lichiardopol doesn't directly fire. The poisoning graph argument covers ALL cases including those below the Lichiardopol threshold.
+**Papers:** [Bang-Jensen-Bessy-Thomassé](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v27i2p52)
+**Next step:** Could be useful for other permanent H-gap proofs where k≥4 disjoint cycles are needed.
+
+### INV-099: Chen-Chang 2024 Disjoint Cycles in Tournaments — CATALOGED
+**Source:** kind-pasteur-2026-03-07-S33 (web research)
+**Status:** CATALOGED. Not yet deeply investigated.
+**What:** Chen-Chang (2024, J. Graph Theory) prove results on disjoint cycles in tournaments. Extends cycle-matching theory. Could provide tools for proving existence of k≥4 disjoint 3-cycles under weaker conditions than Lichiardopol.
+**Paper:** [Chen-Chang 2024](https://onlinelibrary.wiley.com/doi/10.1002/jgt.23038)
+**Next step:** Read the paper for potentially stronger theorems applicable to H-gap proofs.
+
+### INV-100: Frankl's Proof of Erdos Matching Conjecture (k=3) — CATALOGED
+**Source:** kind-pasteur-2026-03-07-S33 (web research)
+**Status:** CATALOGED. Provides context for 3-uniform hypergraph matching.
+**What:** Frankl proved the Erdos matching conjecture for k=3: bounds the max number of 3-element sets with no matching of size s+1. The cycle vertex sets in Omega(T) form a 3-uniform hypergraph (for 3-cycles). Frankl's bound could constrain the maximum number of 3-cycles with bounded matching number.
+**Connection:** If mm(T) ≤ 2, Frankl's bound limits |Omega_3(T)| ≤ max(C(5,3), 3*3-3+1) depending on exact formulation. This could give an independent route to the dichotomy.
+**Next step:** Check exact Frankl bound for our setting (n vertices, 3-uniform, matching ≤ 2).
+
+### INV-101: Other Permanent H-Gaps Beyond 7 and 21 — OPEN
+**Source:** kind-pasteur-2026-03-07-S33
+**Status:** OPEN. Major new question enabled by the H=21 proof.
+**What:** With H=7 and H=21 both proved as permanent gaps (never achieved for ANY n), the natural question is: are there other permanent gaps? Known achievable values at small n include 1,3,5,9,11,13,15,25,27,... Candidates for permanent gaps: any even H (OCF gives odd H for odd-n tournaments, but even-n can give even H). The question is whether there exist odd values H>21 that are permanent gaps.
+**Computational evidence:** H values up to n=9 show no H=7 or H=21. The next suspicious gap would need systematic enumeration of achievable H at n=10,11.
+**Next step:** (1) Enumerate all achievable H values at n=10 (exhaustive or large sample). (2) Check if the dichotomy/poisoning graph technique generalizes to rule out other specific H values. (3) Does the subsidiary bound H≥25 for cycle-rich create gaps at 23?

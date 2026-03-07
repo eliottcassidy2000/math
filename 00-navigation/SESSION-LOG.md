@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S33 — 2026-03-07 (H=21 impossibility PROVED for all n)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S32 (context compacted)
+**Summary of work:**
+  (1) **DICHOTOMY THEOREM PROVED (Part R of THM-079).** For cycle-rich tournaments on n >= 9: either 3 disjoint 3-cycles (Part C, H >= 27) or safe deletion to cycle-rich n-1. Proof via "poisoning graph" P on outer vertices R:
+    - Lemma R.1: out-degree <= 1 in P (3-matching contradiction)
+    - Lemma R.2: P is a DAG (cycle contradiction: wk->w1 forces cycle through w1 not w2, contradicting w1->w2)
+    - Lemma R.3: DAG source = safe deletion vertex (preserves 3-cycle coverage)
+  (2) **KEY INSIGHT: cycle-rich => no source/sink (Part Q).** Source/sink can't be in 3-cycle (score n-1 beats everyone, score 0 beats nobody). This eliminates the source/sink avoidance gap entirely!
+  (3) **COMPLETE PROOF: H(T) != 21 for ALL tournaments on ALL n.** Strong induction with subsidiary claim: cycle-rich => H >= 25. Base: n=8 exhaustive (min H=25). Step: dichotomy gives H >= 27 >= 25.
+  (4) **Computational verification:** 106,424 cycle-rich n=9 tournaments (0 failures). 51,280 mm=2 cases: S always non-empty (100%). Lichiardopol threshold analysis: min outdeg >= 5 never occurs at n=9.
+  (5) **Web research:** Lichiardopol conjecture (proved), Chen-Chang 2024, Frankl's Erdos matching conjecture, Hunter-Liu-Milojevi-Sudakov 2025 cyclic subsets paper.
+**New contributions:** Parts Q, R of THM-079; dichotomy-proof-formal.md; 5 new computation scripts
+**Unresolved threads:**
+  - Are there permanent gaps beyond H=7 and H=21?
+  - Can the poisoning graph approach extend to characterize ALL permanent H-gaps?
+
 ## opus-2026-03-07-S42 — 2026-03-07 (n=9 cycle-rich structure, dichotomy proof, H-spectrum confirmation)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S41
