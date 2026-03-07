@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35c6 — 2026-03-07 (Complete M[a,b] Walsh formula + Walsh symmetry proof)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c5
+**Summary of work:**
+  (1) **COMPLETE WALSH FORMULA FOR M[a,b] PROVED.** hat{M[a,b]}[S] = (-1)^{asc(S)} * (n-2-|S|)!/2^{n-2}. Analytically derived via inclusion-exclusion factorization + alternating sum telescoping. Exhaustively verified at n=5 (968/968 match).
+  (2) **Valid monomial characterization.** S nonzero iff: disjoint paths, |S| odd, no component has both a,b, rooted components have root at path endpoint, unrooted components have even length. Key insight: amplitude is INDEPENDENT of r (number of components).
+  (3) **General degree-1 formula proved analytically.** hat{M[a,b]}[{p,w}] = sgn(p-w) * (n-3)!/2^{n-2}. Verified at n=5 (exact) and n=7 (amplitude 3/4, matched by 500+ paired samples).
+  (4) **WALSH PROOF OF M[a,b] = M[b,a].** Formula is manifestly symmetric in a,b: amplitude independent of (a,b) ordering, sign depends only on edge set, valid-monomial conditions symmetric. New, much simpler proof than THM-030's inductive argument.
+  (5) **H = trace(M) verified.** Off-diagonal sum = 0 for all tournaments (Sigma = 0 for odd n). M[v,v] has even Walsh spectrum with uniform amplitude 1/4 (deg 2) and 1/8 (deg 4). hat{H}[S] = sum_v hat{M[v,v]}[S] confirmed.
+  (6) **Amplitude table derived.** deg 1: (n-3)!/2^{n-2}; deg 3: (n-5)!/2^{n-2}; deg 5: (n-7)!/2^{n-2}. No r-dependence (unlike H which has 2^r factor).
+**New contributions:** THM-080 (major update: PROVED status, complete formula), Walsh symmetry proof
+**Unresolved threads:** Verify degree-3 amplitude at n=7 with higher precision; derive M[v,v] Walsh formula analytically; connect to OCF proof; explore super-object combining H and M
+
 ## opus-2026-03-07-S35 (continued^5) — 2026-03-07 (Skeleton structure + Transfer matrix odd Walsh)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c4
