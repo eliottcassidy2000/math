@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S31 — 2026-03-07 (Master Polynomial PROVED: Eulerian Numbers + EGF)
+**Account:** opus
+**Continuation of:** opus-2026-03-06-S30 (context limit)
+**Summary of work:**
+  (1) **RECURRENCE FIX**: THM-059 had j^2 instead of (j+1)^2 in the b-triangle recurrence. Fixed and logged as MISTAKE-016.
+  (2) **F_7 COMPUTED**: F_7(r) = -124r + 3024r^3 - 20160r^5 + 40320r^7. Matches n=8 background polynomial.
+  (3) **n=10 VERIFICATION**: All 25 W-coefficients verified with zero error. New invariant bc55 (disjoint 5-cycle pairs) enters. F_9 confirmed.
+  (4) **PERMUTATION FORMULA PROVED**: F_f(r) = sum_{sigma in S_{f+1}} prod (r + sign(sigma(i+1)-sigma(i))/2). Verified f=0..6.
+  (5) **EULERIAN NUMBER DECOMPOSITION**: F_f(r) = sum_k A(f+1,k) * (r+1/2)^{f-k} * (r-1/2)^k. This identifies the master polynomial with the Eulerian polynomial evaluated at the "ascent/descent weighting."
+  (6) **EXPONENTIAL GENERATING FUNCTION PROVED**: sum F_j(r) x^j/(j+1)! = (e^x-1)/(x((r+1/2)-(r-1/2)e^x)). Derived from classical Eulerian polynomial EGF.
+  (7) **TANGENT NUMBERS PROVED**: At r=0, the EGF becomes (2/x)tanh(x/2), giving F_{2k}(0) = (-1)^k T_{k+1}/4^k. Previously verified; now PROVED algebraically.
+  (8) **CENTRAL FACTORIAL CONNECTION EXPLAINED**: The b_{k,j} numbers are exactly the Eulerian polynomial A_{2k+1}(t) expanded in the u=pq basis. The (j+1)^2 factor in the recurrence comes from this change of basis.
+**New contributions:** THM-059 upgraded to PROVED, MISTAKE-016, master_poly_n10_verify.py
+**Unresolved threads:** Algebraic proof of FREE POSITION UNIVERSALITY (why F_f is independent of which positions are free); deformed independence polynomial properties
+
 ## kind-pasteur-2026-03-06-S25h — 2026-03-06/07 (Bipartite Skeleton + t3 Parity)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-06-S25g (context limit)

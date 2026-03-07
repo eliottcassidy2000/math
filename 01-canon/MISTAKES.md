@@ -489,3 +489,30 @@ The correct W(r) = tr(M(r)) coefficients at n=7 are:
 - The c_0 formula constant changed from +253/4 to -17/4 (difference = 270/4 = (5040-720)/64)
 - The n=9 claim c_8 = 362880 = 9! = n! was already correct
 - All middle coefficients (c_2, c_4) are unaffected
+
+---
+
+## MISTAKE-016: THM-059 recurrence had j^2 instead of (j+1)^2
+
+**Date discovered:** 2026-03-07
+**Found by:** opus-2026-03-07-S31
+**Affects:** THM-059 central factorial recurrence statement (table and formulas were correct, only the recurrence formula was wrong)
+
+### What was stated
+b_{k,j} = b_{k-1,j-1} + j^2 * b_{k-1,j}
+
+### Why it was wrong
+Plugging in: b_{2,1} should be 5, but j^2 * b_{k-1,j} = 1^2 * 1 = 1, giving b_{2,1} = 1+1 = 2 (not 5).
+
+### The correct formula
+b_{k,j} = b_{k-1,j-1} + (j+1)^2 * b_{k-1,j}
+
+This was confirmed by checking all 15 entries of the b-triangle for k=0..4. The correct recurrence is equivalent to the standard central factorial number recurrence with shifted column indices.
+
+### Resolution
+THM-059 corrected. The (j+1)^2 factor now has a combinatorial explanation via the Eulerian polynomial decomposition: F_f(r) = sum_k A(f+1,k) * (r+1/2)^{f-k} * (r-1/2)^k, where the central factorial structure emerges from expanding in u = (r+1/2)(r-1/2) = r^2-1/4.
+
+### Impact
+- The numerical table and all computed F_j values were always correct
+- Only the stated recurrence formula was wrong
+- The OEIS A036969 identification may need clarification (different column conventions)
