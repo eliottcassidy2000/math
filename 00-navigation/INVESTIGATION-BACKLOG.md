@@ -936,3 +936,24 @@ The crossover (true perpendicularity) occurs near the MEDIAN H value. This means
   - The hierarchy parallels Fourier decomposition, but REVERSED: high "frequencies" are simple
   - Connects to renormalization: each level "integrates out" one cycle scale
 **Next step:** Determine if w_0 = I(Omega, c) for some specific c, or if it's genuinely different.
+
+### INV-085: Bipartite skeleton and t3 parity (THM-060)
+**Source:** kind-pasteur-2026-03-06-S25h
+**Status:** PROVED at n=3,5,7,9. Structural argument + exhaustive verification.
+**What:** Blue line skeleton (GS flip graph on SC classes) is bipartite at odd n, with bipartition determined by t3 parity. At even n, skeleton is NOT bipartite (has 3-cycles).
+**Key mechanism:** Consecutive triples each contribute 1 to t3(T)+t3(flip(T)), total n-2 (odd at odd n). Non-consecutive triples contribute even total for GS tilings.
+**Open:** Algebraic proof of Type B evenness; spectral structure at large n; connection between skeleton eigenvalues and tournament invariants.
+**Scripts:** 04-computation/t3_parity_proof_complete.py, bipartition_invariant.py, bipartition_n7_verify.py
+**Writeup:** 01-canon/theorems/THM-060-bipartite-skeleton.md, 03-artifacts/drafts/bipartite-skeleton-synthesis-S25h.md
+
+### INV-086: Silver ratio in skeleton eigenvalues
+**Source:** kind-pasteur-2026-03-06-S25h, skeleton_spectral.py
+**Status:** OBSERVED at n=5. Eigenvalues {±(1+√2), ±1, ±1, ±(√2-1)}.
+**What:** The skeleton adjacency matrix at n=5 has eigenvalues involving the silver ratio 1+√2. K^2 diagonal = GS class sizes. Is this coincidence or does it persist at n=7?
+**Next step:** Compute skeleton eigenvalues at n=7 (88×88 matrix). Check if silver ratio generalizes.
+
+### INV-087: Antiferromagnetic interpretation of skeleton
+**Source:** kind-pasteur-2026-03-06-S25h
+**Status:** CONCEPTUAL. Skeleton = Ising model with antiferromagnetic coupling.
+**What:** SC classes have "spin" = (-1)^{t3}. GS flip edges connect opposite spins. At odd n: perfect Neel order (unfrustrated). At even n: frustrated (odd cycles). Connects tournament theory to statistical mechanics.
+**Next step:** Compute partition function Z(beta) = sum over SC of H(T)^beta. Check for phase transitions.

@@ -1,4 +1,4 @@
-# THM-059: Bipartite Blue Line Skeleton via t3 Parity
+# THM-060: Bipartite Blue Line Skeleton via t3 Parity
 
 **Status:** PROVED (computational verification n=3,5,7,9 + structural argument)
 **Instance:** kind-pasteur-2026-03-06-S25h

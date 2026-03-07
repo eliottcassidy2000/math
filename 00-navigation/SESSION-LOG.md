@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S25h — 2026-03-06/07 (Bipartite Skeleton + t3 Parity)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-06-S25g (context limit)
+**Summary of work:**
+  (1) **THM-060 (PROVED): Blue line skeleton is bipartite at odd n, with t3 parity determining the bipartition.** For GS tilings, t3(T)+t3(flip(T)) = n-2 + even = ODD at odd n. Verified n=3,5,7,9.
+  (2) **Proof mechanism:** Consecutive triples contribute exactly 1 each (total n-2, odd). Non-consecutive triples contribute even total (Types A and B). GS constraint is essential for Type B evenness.
+  (3) **Even/odd dichotomy:** At even n, t3 sum is EVEN, skeleton is NOT bipartite (has 3-cycles at n=6), self-flips occur. At odd n: 100% cross-class, bipartite, no self-flips.
+  (4) **NSC sidedness:** NSC pair members always have same t3 (since T and T^op have same t3), so both sit on same side of bipartition.
+  (5) **Diff distribution = scaled Binomial(n-2, k)**: The n-2 consecutive triples act as independent ±1 coins.
+  (6) **Spectral analysis (n=5):** Skeleton eigenvalues {±(1+√2), ±1, ±1, ±(√2-1)} — silver ratio appears! K^2 diagonal = GS class sizes. Antiferromagnetic interpretation.
+  (7) **GS cube geometry:** Flip = antipodal map on {0,1}^k. Cube adjacency (local, Hamming-1) ≠ skeleton (global, antipodal flip). Two fundamentally different graph structures.
+**New contributions:** THM-060-bipartite-skeleton.md, bipartite-skeleton-synthesis-S25h.md, 12 computation scripts in 04-computation/
+**Unresolved threads:** Algebraic proof of Type B evenness; spectral structure at n=7; connection between skeleton eigenvalues and tournament invariants; Möbius strip interpretation at even n
+
 ## opus-2026-03-06-S30 — 2026-03-06 (Universal Master Polynomial + Central Factorial Numbers)
 **Account:** opus
 **Continuation of:** opus-2026-03-06-S29 (context limit)
