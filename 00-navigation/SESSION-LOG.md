@@ -13,19 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-07-S35 (continued^5) — 2026-03-07 (Skeleton structure, Walsh-SC connection)
+## opus-2026-03-07-S35 (continued^5) — 2026-03-07 (Skeleton structure + Transfer matrix odd Walsh)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c4
 **Summary of work:**
-  (1) **SC/NSC skeleton analysis at n=5 and n=7.** Complete classification of tournament isomorphism classes into self-complementary (SC) and non-self-complementary (NSC) complement pairs.
-  (2) **Signed S_n symmetry of Walsh spectrum (T181).** Proved: hat{H}[S] = (-1)^{|S cap F_sigma|} * hat{H}[sigma^{-1}(S)] for any vertex permutation sigma. Verified at n=5 (0 mismatches over 1024 monomials).
-  (3) **Even-degree Walsh invisibility of SC/NSC (T182).** Proved that even-degree Walsh coordinates cannot distinguish SC from NSC — NSC pairs are "chiral dimers" invisible to H. At n=5: 3 H=3 classes share identical (C2,C4)=(-6,0) but 1 is SC, 2 form NSC pair.
-  (4) **Palindromic score necessary but not sufficient (n>=7).** At n=5 palindromic score <=> SC. At n=7 this breaks: ~124 palindromic-score NSC classes exist.
-  (5) **Orbit coordinate decomposition (T183).** H = 15/2 + 3/4*C2 + 1/8*C4 at n=5. t3 shares same degree-2 Walsh signs with ratio 3. C2 = 4*t3 - 10.
-  (6) **SC constructive enumeration at n=7.** Using Moon's theorem (SC witness has type (2,2,2,1)), enumerated all 4096 labeled SC tournaments with fixed sigma. Found 65 distinct (H,t3,score) signatures, H ranging 1-189.
-  (7) **Position function symmetry.** For SC tournaments: f_v(T) = f_{sigma(v)}(T^op) where sigma is SC witness. NSC pairs have different position multisets.
-**New contributions:** T181, T182, T183
-**Unresolved threads:** Complete SC enumeration at n=7 (need all 88 classes); palindromic-score NSC characterization; connection between skeleton and transfer matrix symmetry
+  (1) **SC/NSC skeleton analysis at n=5 and n=7.** Classification of isomorphism classes into SC and NSC complement pairs.
+  (2) **Signed S_n symmetry of Walsh spectrum (T181).** hat{H}[S] = (-1)^{|S cap F_sigma|} * hat{H}[sigma^{-1}(S)]. Verified n=5.
+  (3) **Even-degree Walsh invisibility of SC/NSC (T182).** NSC pairs invisible to H.
+  (4) **Palindromic score necessary but not sufficient (n>=7, T182).**
+  (5) **Orbit coordinates (T183).** H = 15/2 + 3/4*C2 + 1/8*C4 at n=5. t3 proportional at degree 2.
+  (6) **SC constructive enumeration at n=7.** 4096 labeled, 65 signatures, H range 1-189.
+  (7) **THM-080: Transfer matrix lives in ODD Walsh subspace (T184).** M[a,b](T^op) = -M[a,b](T). All even Walsh coefficients vanish. H and M form even/odd duality.
+  (8) **Degree-1 formula for M (THM-080).** hat{M[a,b]}[{p,w}] = sgn(p-w)/4. Physical: M^(1) = (s_a+s_b-(n-2))/2.
+  (9) **Universal ascent sign rule (T185).** sign(S) = (-1)^{asc(S)} applies to BOTH H (even degrees) and M (odd degrees). Unifies the complete Walsh structure.
+  (10) **Degree-3 structure of M.** P3 paths with endpoint at path endpoint give nonzero. Triangles always zero. Same structure as H at degree 2.
+**New contributions:** THM-080, T181-T185
+**Unresolved threads:** M amplitude formula at general degree; new proof of THM-030 via Walsh; complete SC enumeration n=7
 
 ## opus-2026-03-07-S39 (continued) — 2026-03-07 (H=21 structural impossibility analysis)
 **Account:** opus

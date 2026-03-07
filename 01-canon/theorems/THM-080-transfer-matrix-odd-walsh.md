@@ -46,8 +46,34 @@ where s_a = out-degree of a to the interior vertices {0,...,n-1} \ {a,b}, and si
 
 Note: hat{M[a,b]}[{p,w}] = hat{M[b,a]}[{p,w}] trivially since M is symmetric. The formula sgn(p-w) is independent of whether p=a or p=b.
 
+## Degree-3 Structure
+
+At n=5, M[0,1] has 24 nonzero degree-3 Walsh monomials:
+- 12 of type P2+P1 (fan pair + isolated edge) on all 5 vertices, both endpoints present
+- 6 of type P3 on {0,2,3,4} (vertex 0 at path endpoint, vertex 1 absent)
+- 6 of type P3 on {1,2,3,4} (vertex 1 at path endpoint, vertex 0 absent)
+
+All triangles (C3) give zero. P3 paths with the endpoint vertex in the interior also give zero.
+
+## Universal Ascent Sign Rule
+
+The signs of ALL nonzero Walsh coefficients — for both H and M — follow the same formula:
+
+sign(S) = (-1)^{asc(S)}
+
+where asc(S) = total number of ascents across all path components of S. An ascent in a path v_0-v_1-...-v_k is a pair (v_i, v_{i+1}) with v_i < v_{i+1}.
+
+This rule is verified for:
+- H at degree 2 (THM-077: P2 fan pairs)
+- H at degree 4 (THM-077: P4 and P2+P2)
+- M at degree 1 (single edges)
+- M at degree 3 (P3 paths and P2+P1 fan+edge)
+
+The rule unifies H (even Walsh) and M (odd Walsh) through a single combinatorial invariant.
+
 ## Open Questions
 
-- What determines the degree-3 signs? The degree-3 pattern involves 24 nonzero monomials (out of C(10,3)=120) with amplitude 1/8.
-- Does the degree-1 formula generalize to n=7? Expected: hat{M[a,b]}[{p,w}] = sgn(p-w) / (n-2)! * some factor.
-- Can the odd-sector Walsh structure provide a new proof of THM-030 (transfer matrix symmetry)?
+- What is the amplitude formula for hat{M[a,b]}[S] at general degree? It depends on which vertices are path endpoints vs interior vs absent, and which are the special vertices a,b.
+- Does the degree-1 formula generalize to n=7?
+- Can the universal ascent sign rule + amplitude formula provide a new proof of THM-030 (transfer matrix symmetry)?
+- The duality H=even, M=odd suggests a "super-object" that combines both. Is this related to the c-tournament parameter r?

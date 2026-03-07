@@ -587,3 +587,9 @@ Tournament isomorphism classes decompose into SC (self-complementary, 1-element 
 
 **T183** #orbit-coordinates #h-decomposition #t3-proportionality | certainty: high (proved n=5) | source: opus-2026-03-07-S35c5
 H(T) is decomposed into orbit coordinates: H = 15/2 + 3/4*C2 + 1/8*C4 at n=5, where C2 = sum of signed degree-2 Walsh characters and C4 = sum of signed degree-4 characters. Only 8 of 24 possible (C2,C4) values are realized. t3 (3-cycle count) uses the SAME degree-2 signs as H, with |hat{H}|/|hat{t3}| = 3 at degree 2. So C2 = 4*t3 - 10 at n=5. The degree-4 coordinate C4 captures information beyond t3 — specifically about longer cycles (t5).
+
+**T184** #transfer-matrix-odd-walsh #complement-antisymmetric #M-duality | certainty: high (verified n=5 exhaustive) | source: opus-2026-03-07-S35c5
+THM-030 transfer matrix M[a,b] lives ENTIRELY in the odd Walsh subspace: hat{M[a,b]}[S]=0 for all even |S|. This means M[a,b](T^op) = -M[a,b](T) (complement-antisymmetric). H and M form a complete duality: H = even sector (complement-symmetric), M = odd sector (complement-antisymmetric). Degree-1: hat{M[a,b]}[{p,w}] = sgn(p-w)/4 = +(1/4) if p beats w, -(1/4) if p loses. Physical meaning: M[a,b]^(1) = (s_a+s_b-(n-2))/2 (excess endpoint score).
+
+**T185** #universal-ascent-sign #walsh-unification #H-M-connection | certainty: high (verified n=5, all degrees 0-4) | source: opus-2026-03-07-S35c5
+The Walsh sign rule sign(S) = (-1)^{asc(S)} (ascent count over path components) is UNIVERSAL — it applies to BOTH H (even Walsh, THM-077) AND M (odd Walsh, THM-080). This unifies the entire Walsh spectrum of tournament HP structure: H uses even-length paths, M uses odd-length paths, both with the same sign formula. Amplitudes differ but signs are the same combinatorial invariant. This suggests a "super-object" combining H and M that sees all Walsh degrees.
