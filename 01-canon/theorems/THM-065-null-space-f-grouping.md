@@ -29,14 +29,25 @@ The null space of the map (invariants) -> (a_k) has dimension:
 where Q(n) = A000009(n) = number of partitions of n into distinct parts, and (n+1)/2 = number of distinct f-values (one per even f in {0, 2, ..., n-3}).
 
 The number of OCF invariants (= partitions into odd parts >= 3 with sum <= n) equals Q(n) - 1.
+Equivalently, the number of invariant types INCLUDING the empty set is A078408(m) where m = (n-1)/2
+(A078408 = number of partitions of 2m+1 into distinct parts).
 
-| n  | #types (Q(n)-1) | #f-values ((n-1)/2) | null_dim |
-|----|-----------------|---------------------|----------|
-| 5  | 2               | 2                   | 0        |
-| 7  | 4               | 3                   | 1        |
-| 9  | 7               | 4                   | 3        |
-| 11 | 11              | 5                   | 6        |
-| 13 | 17              | 6                   | 11       |
+| n  | #types+1 (A078408) | #f-values ((n+1)/2) | null_dim |
+|----|-------------------|---------------------|----------|
+| 3  | 2                 | 2                   | 0        |
+| 5  | 3                 | 3                   | 0        |
+| 7  | 5                 | 4                   | 1        |
+| 9  | 8                 | 5                   | 3        |
+| 11 | 12                | 6                   | 6        |
+| 13 | 18                | 7                   | 11       |
+| 15 | 27                | 8                   | 19       |
+| 17 | 38                | 9                   | 29       |
+| 19 | 54                | 10                  | 44       |
+| 21 | 76                | 11                  | 65       |
+
+The null_dim sequence (0, 0, 1, 3, 6, 11, 19, 29, 44, 65, 92, 129, 178, 241, ...) is NOT in OEIS.
+It equals A078408(m) - (m+1) and grows exponentially (Hardy-Ramanujan asymptotics for partitions)
+while the f-value count grows only linearly.
 
 At each f-level with invariants I_1, ..., I_r having parts p_1, ..., p_r, there are r-1 null vectors of the form:
 
