@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S30 — 2026-03-06 (Universal Master Polynomial + Central Factorial Numbers)
+**Account:** opus
+**Continuation of:** opus-2026-03-06-S29 (context limit)
+**Summary of work:**
+  (1) **UNIVERSAL MASTER POLYNOMIAL THEOREM (THM-059)**: The per-invariant r-polynomial C_I(r,n) = 2^{parts(I)} * F_f(r) where f = free position count. The F_j are determined by the CENTRAL FACTORIAL NUMBER TRIANGLE (OEIS A036969) via the recurrence b_{k,j} = b_{k-1,j-1} + j^2 * b_{k-1,j}. VERIFIED 22/22 cases across n=4..9.
+  (2) **SHIFT PRINCIPLE**: C_{t_{2j+1}}(r) at n = C_{t_{2j-1}}(r) at n-2. Follows as corollary of (1).
+  (3) **COMPLETE n=8 COEFFICIENT TABLE**: w_7=40320, w_5=-20160+1440t3, w_3=3024-480t3+48t5+96bc, w_1=-124+34t3-8t5+4t7-16bc+8bc35. All EXACT (0 error).
+  (4) **PENALTY VERIFIED at n=9**: penalty = -30 + (21/2)*t3 + 3*t7 + 6*bc35 + 12*a3. Zero error.
+  (5) **PREDICTIONS for n=11**: F_8(r) = 31 - 2640r^2 + 40320r^4 - 211680r^6 + 362880r^8. C_{t3}(r) at n=11 = 2*F_8(r). Testable computationally.
+  (6) **Even-n W-polynomial**: Has only ODD powers of r. Top coefficient = n! (same as odd n). Same hierarchical structure.
+**New contributions:** THM-059 (Universal Master Polynomial), w1_n8_complete.py, w_even_n_hierarchy.py, w_generating_function_test.py, universal_master_polynomial.py
+**Unresolved threads:** Algebraic proof of central factorial recurrence; C_0(r) structure; F_8/F_9 predictions awaiting n=11 verification
+
 ## opus-2026-03-06-S11b (continued^5) — 2026-03-06 (Cross-scale perpendicularity + n=9 formulas)
 **Account:** opus (overnight)
 **Continuation of:** opus-2026-03-06-S11b (continued^4, context limit)

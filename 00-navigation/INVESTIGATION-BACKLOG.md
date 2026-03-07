@@ -681,6 +681,14 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Why it matters:** If H(T) is a DRT invariant AND different DRTs have different critical groups, then H could be read off the critical group. This would give a purely algebraic characterization of the H-maximizer.
 **Next step:** Compute critical groups for DRTs at n=11,19 and check correlation with H values.
 
+### INV-062: Universal Master Polynomial and Central Factorial Numbers — VERIFIED (THM-059)
+**Source:** opus-2026-03-06-S30
+**Status:** VERIFIED computationally (22/22 cases, n=4..9). Algebraic proof pending.
+**What:** The per-invariant r-polynomial C_I(r,n) = 2^{parts(I)} * F_f(r) where f = free position count and F_j is determined by the central factorial number triangle (OEIS A036969) via b_{k,j} = b_{k-1,j-1} + j^2 * b_{k-1,j}. This completely determines the entire W-coefficient hierarchy for all tournaments at all n. The shift principle is a corollary.
+**Key findings:** (1) F_j(1/2) = 1 for all j. (2) Leading coefficient = (j+1)!. (3) Predictions made for n=11 without computation. (4) Complete n=8 even-n table computed.
+**Next step:** (1) Algebraic proof of the central factorial recurrence from position pattern analysis. (2) Verify F_8 prediction at n=11 computationally. (3) Investigate C_0(r) (constant/background polynomial).
+**Scripts:** `04-computation/universal_master_polynomial.py`, `04-computation/w1_n8_complete.py`
+
 ### INV-059: Cyclic subsets of tournaments (arXiv:2508.03634, Aug 2025)
 **Source:** kind-pasteur-2026-03-06-S19 web search; Hunter-Liu-Milojević-Sudakov
 **Status:** NEW LEAD — LOW PRIORITY
