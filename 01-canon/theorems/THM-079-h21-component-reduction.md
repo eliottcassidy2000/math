@@ -1,7 +1,7 @@
 # THM-079: H=21 Component Reduction
 
-**Status:** PROVED (computational, n<=8 exhaustive + n=9 sampling; structural for Parts A-D,F)
-**Author:** opus-2026-03-07-S39, opus-2026-03-07-S41
+**Status:** PROVED for all n (structural + computational base case)
+**Author:** opus-2026-03-07-S39/S41/S42, kind-pasteur-2026-03-07-S33
 **Date:** 2026-03-07
 **Dependencies:** THM-029 (H=7 impossibility)
 
@@ -310,34 +310,98 @@ intermediate regime allows exactly 1 disjoint pair with exactly 8 total cycles.
 
 **Inductive step (n >= 9):** Assume proved for all tournaments on < n vertices.
 
-**Case 1:** T has a source, sink, or vertex not in any 3-cycle.
-By Parts J and K, there exists vertex v in no directed cycle.
+**Case 1:** T has a vertex not in any 3-cycle.
+By Part J, this vertex v is in no directed cycle of any length.
 Omega(T) = Omega(T-v), so H(T) = H(T-v). By induction, H(T-v) != 21.
+(Note: source/sink vertices are a special case since they have no in-arcs
+or no out-arcs, hence are in no 3-cycle.)
 
-**Case 2:** T is cycle-rich (every vertex in 3-cycle, no source/sink).
-By H(T) >= H(T-v) monotonicity (Part O.5), and the deletion+matching
-dichotomy (Part O.4), either:
-(a) Part C gives H >= 27 > 21. Done.
-(b) Some deletion yields cycle-rich T-v at n-1. Then H(T) >= H(T-v).
-    By induction on the sub-problem (n-1), eventually reaching
-    cycle-rich n=8 where min H=25 > 21. So H(T) >= 25 > 21.
+**Case 2:** Every vertex is in a 3-cycle (= "cycle-rich").
+Note: this automatically implies no source/sink (Part Q).
+By the Dichotomy Theorem (Part R), either:
+(a) 3 pairwise-disjoint 3-cycles exist. Part C gives H >= 27 > 21. Done.
+(b) Some deletion v yields cycle-rich T-v at n-1. By H(T) >= H(T-v) + 2
+    (Part O.5, since v is in at least one cycle), and applying the strong
+    inductive hypothesis H(T-v) >= 25 (for cycle-rich at n-1 >= 8), we get
+    H(T) >= 27 > 21. Done.
 
-**Status:** The proof is COMPLETE modulo proving the deletion+matching dichotomy
-(Part O.4) for all n >= 9. Currently verified computationally at n=9 (zero
-counterexamples in 153k cycle-rich tournaments).
+**Strong subsidiary claim (proved simultaneously):** For all cycle-rich T on
+n >= 8 vertices: H(T) >= 25.
+- Base: n=8 cycle-rich, min H = 25 (exhaustive, Part L).
+- Step: Case (a) gives H >= 27 >= 25. Case (b) gives H >= 25 + 2 = 27 >= 25.
 
-## Remaining Open Questions
+## Part Q (PROVED): Cycle-Rich Implies No Source/Sink
 
-1. **PROVE the deletion+matching dichotomy for all n >= 9:** For any cycle-rich
-   tournament T on n >= 9 vertices: either T has 3 pairwise-disjoint 3-cycles,
-   or some vertex deletion yields a cycle-rich tournament on n-1 vertices.
-   Computationally verified at n=9. The structural argument should follow from
-   the concentration of 3-cycles when max matching is small.
+**Lemma:** If every vertex of a tournament T is in a directed 3-cycle,
+then T has no source (score n-1) and no sink (score 0).
 
-2. **Alternative: Direct min-H bound for cycle-rich tournaments at all n:**
-   If min H(T) over cycle-rich T is non-decreasing in n with min >= 25 at n=8,
-   then H != 21 follows without the dichotomy. The growth pattern (25 at n=8,
-   45 at n=9) supports this but is unproved.
+**Proof:** A source v beats all n-1 opponents (score n-1). In any 3-cycle
+v -> a -> b -> v, we need b -> v. But v beats b. Contradiction.
+A sink v is beaten by all opponents (score 0). In any 3-cycle v -> a -> b -> v,
+we need v -> a. But v beats nobody. Contradiction. QED.
+
+Verified exhaustively at n=4-7 (0 counterexamples in all tournaments) and
+by random sampling at n=8,9 (0 counterexamples in 500k each).
+
+## Part R (PROVED): Dichotomy Theorem
+
+**Theorem (Dichotomy).** Let T be a cycle-rich tournament on n >= 9 vertices.
+Then at least one of:
+(a) T contains 3 pairwise vertex-disjoint directed 3-cycles, or
+(b) There exists vertex v such that T-v is cycle-rich on n-1 vertices.
+
+**Proof.** If the max 3-cycle matching mm >= 3, conclusion (a) holds.
+Assume mm <= 2 (hence mm in {1, 2}). Take maximal matching: disjoint
+3-cycles A, B (or just A if mm=1). Let R = V \ (A union B), |R| >= 3.
+Every 3-cycle C satisfies C cap (A union B) != empty (else 3-matching).
+
+**Define the poisoning graph P = (R, E_P):** w -> v in P iff EVERY 3-cycle
+containing w also contains v.
+
+**Lemma R.1 (Bounded out-degree).** Out-degree <= 1 in P.
+*Proof:* If w -> v and w -> v' with v != v', all w's 3-cycles contain both
+v and v'. Only possible 3-cycle set is {w,v,v'} subset R. But then
+{A, B, {w,v,v'}} is a 3-matching, contradicting mm <= 2. QED.
+
+**Lemma R.2 (Acyclicity).** P is a DAG (directed acyclic graph).
+*Proof:* Suppose P has cycle w1 -> w2 -> ... -> wk -> w1. Since wk -> w1:
+all of wk's 3-cycles contain w1. So wk has a 3-cycle {wk, w1, x} with
+x in A union B (since 3-cycles intersect A union B). This cycle contains
+w1 but NOT w2 (since x in A union B, wk != w2, w1 != w2 for k >= 2).
+But w1 -> w2 in P means all w1's cycles contain w2. Cycle {wk,w1,x}
+contains w1 but not w2: contradiction. QED.
+
+**Lemma R.3 (Safe deletion exists).** There exists v in R such that every
+vertex in T-v is in a 3-cycle.
+*Proof:* P is a DAG with out-degree <= 1 (Lemmas R.1-R.2), hence a forest
+of directed paths. Every non-empty DAG has a source (in-degree 0 vertex).
+Let v be such a source. For any w in R \ {v}:
+- If w has out-degree 0 in P: w has a 3-cycle C_w within {w} union (A union B).
+  Since v not in A union B and v != w: C_w persists in T-v.
+- If w -> f(w) in P: since v has in-degree 0, f(w) != v. A 3-cycle of w
+  is {w, f(w), x} with x in A union B. None of w, f(w), x equals v
+  (f(w) != v, x in A union B, w != v). So this cycle persists in T-v.
+For u in A: cycle A persists (v not in A). For u in B: cycle B persists.
+So every vertex in T-v is in a 3-cycle. By Part Q: T-v is cycle-rich. QED.
+
+**Computational verification:** 0 counterexamples in:
+- 106,424 cycle-rich n=9 tournaments (kind-pasteur-S33)
+- 153,444 cycle-rich n=9 tournaments (opus-S42)
+- All mm=2 cases: S (vertices with out-degree 0 in P) is always non-empty
+  (51,280 tests, 100% S non-empty, kind-pasteur-S33)
+
+## Status: PROVED
+
+**H(T) != 21 for any tournament T on any number of vertices n.**
+
+The proof combines:
+- Part G: Exhaustive base case n <= 8
+- Part J: Key Lemma (no 3-cycle => no cycle => removable)
+- Part Q: Cycle-rich => no source/sink (automatic)
+- Part R: Dichotomy for cycle-rich n >= 9 (poisoning graph DAG argument)
+- Part C: 3 disjoint 3-cycles => H >= 27
+- Part L: Cycle-rich n=8 minimum H = 25
+- Part O.5: H(T) >= H(T-v) + 2 when v is in a cycle (IP monotonicity)
 
 ## Scripts
 
@@ -363,3 +427,8 @@ counterexamples in 153k cycle-rich tournaments).
 - `04-computation/h21_no_deletion_no_matching.c` — dichotomy check: both-bad = 0 (opus-S42)
 - `04-computation/h21_match2_h_values.c` — min H for mm<=2 cycle-rich (opus-S42)
 - `04-computation/h21_inductive_min_h.c` — good deletion check at n=9 (opus-S42)
+- `04-computation/h21_poisoning_graph.py` — poisoning graph DAG analysis (kind-pasteur-S33)
+- `04-computation/h21_lichiardopol_check.py` — Lichiardopol threshold check (kind-pasteur-S33)
+- `04-computation/h21_cycle_rich_auto_no_ss.py` — cycle-rich => no source/sink (kind-pasteur-S33)
+- `04-computation/h21_source_sink_avoidance.py` — source/sink avoidance analysis (kind-pasteur-S33)
+- `04-computation/h21_dichotomy_proof.py` — dichotomy verification at n=9 (kind-pasteur-S33)
