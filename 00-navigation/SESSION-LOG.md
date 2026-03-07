@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35c8 — 2026-03-07 (det(M)=0 at n=7, eigenvalue classification, regular M=scalar)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c7
+**Summary of work:**
+  (1) **det(M)=0 EXISTS at n=7.** Found 8/5000 random tournaments (0.2%) with det(M)=0. Disproves conjecture that M always invertible. Score sequences: (0,3,3,3,4,4,4) and (2,2,2,3,3,3,6) — complement pairs, both with source/sink vertex and order-3 automorphism group.
+  (2) **Complete eigenvalue classification at n=5.** Each H value has 1-2 eigenvalue spectra. H=1 (transitive): {-2,-sqrt(2),1,sqrt(2),2}, det=8. H=15 (regular): M=3I, det=243=3^5. 8 distinct det values: {-27,-9,1,8,9,16,17,243}.
+  (3) **Regular tournaments: M = (H/n)*I ALWAYS.** Verified at n=3,5,7 (Paley). At n=7: H=189, M=27*I. Off-diagonal entries all zero. Follows from vertex-transitive automorphism group + M symmetry + off-diagonal sum = 0.
+  (4) **M[v,v] - H(T-v) relationship.** D(v) = [H(T-v) - M[v,v]]/2 satisfies D(v) = H - Even(v) - sum_mu(v), which is equivalent to Claim A (tautology, no new info).
+  (5) **M mod 2 NOT clean.** Off-diagonal entries can be odd (50%). M mod 2 ≠ I.
+  (6) **H/M ladder ratio n-d confirmed algebraic.** Purely from factorial ratio (n-d)!/(n-d-1)! = n-d combined with 2^r/2^{r-1} * 2^{n-2}/2^{n-1} = 1.
+  (7) **R_a Walsh decomposition.** Row sum R_a has both even and odd Walsh. Even part = M[a,a] Walsh. Degree-1 odd part: only 4 nonzero monomials (edges touching a), amplitude 3/4.
+**New contributions:** det(M)=0 characterization at n=7, regular tournament M=scalar theorem, eigenvalue classification
+**Unresolved threads:** Exact characterization of det(M)=0; connect M structure to OCF proof; explore n=7 eigenvalue spectra
+
 ## opus-2026-03-07-S40 — 2026-03-07 (H=21 permanent gap: i_2 jump pattern + 5-cycle forcing)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S39
