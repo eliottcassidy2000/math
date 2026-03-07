@@ -76,18 +76,52 @@ Only 4 decompositions of alpha_1 + 2*alpha_2 = 10 remain:
 - (6, 2): 6 cycles with exactly 2 disjoint pairs.
 - (4, 3): 4 cycles with exactly 3 disjoint pairs.
 
-For (4,3): the star K_{1,3} subcase is ruled out (3 mutually disjoint leaves force alpha_3>=1).
-The P_4 subcase is ruled out by Part B. The triangle+isolated subcase remains open.
+## Part D (PROVED): (4,3) Decomposition Fully Eliminated
+
+For (4,3): the only connected graphs on 4 vertices with 3 edges are trees: P_4 and K_{1,3}.
+- P_4 ruled out by Part B.
+- K_{1,3} ruled out: 3 mutually disjoint leaves force alpha_3>=1, contradicting Part C.
+- The only other graph with 3 edges on 4 vertices is C_3+isolated, which is disconnected.
+Therefore (4,3) is fully eliminated.
+
+## Part E: Directed Cycle Counting Correction
+
+**Important:** Omega(T) vertices are DIRECTED odd cycles, not vertex sets. A vertex set
+of size 5 can support 0, 1, 2, or 3 distinct directed 5-cycles, each a separate vertex
+in Omega. Multiple directed cycles on the same vertex set are always adjacent (sharing
+all vertices), forming a clique. This means alpha_1 (total cycles) >= vertex-set count,
+making I(Omega,2) LARGER. The decomposition analysis is unchanged but harder to achieve.
+
+## Part F: Tournament Forcing of Extra Cycles
+
+**Computational finding (opus-S40):** Even when 6 three-cycle triples have the K_6-2e
+conflict pattern and are realizable as directed 3-cycles in a tournament, the tournament
+structure ALWAYS forces additional directed 5-cycles. These extra cycles expand Omega
+beyond the 6-vertex K_6-2e skeleton.
+
+At n=6 (exhaustive, 2160 tournaments with K_6-2e 3-cycle pattern):
+- Every realization has 4, 6, or 8 additional directed 5-cycles
+- I(Omega(T), 2) is always 29, 33, or 37 (minimum 29, never 21)
+- The sharing lemma alone is insufficient (2790/5040 K_6-2e triple arrangements
+  pass the sharing lemma test), but tournament forcing of 5-cycles provides
+  the actual obstruction
 
 ## Remaining Open Question
 
-Can Omega(T) be connected with I(Omega,2) = 21 via a K_6-minus-2-edges structure
-(or larger graphs)? This requires ≥ 6 odd cycles with very specific conflict patterns
-and no extra cycles. Computationally verified impossible through n=7 (exhaustive)
-and n=8,9 (sampling).
+The 5-cycle forcing at n=6 pushes I(Omega,2) >= 29 for K_6-2e realizations. At n >= 7,
+the tournament forcing should be even stronger (more vertices = more cycle-forming
+opportunities). But a general proof is needed showing that for ANY n, ANY tournament T
+with K_6-2e (or K_8-e or K_10) in its 3-cycle conflict graph always has I(Omega,2) > 21.
+
+Three remaining decompositions:
+- (10,0): K_10. At n=8: t3=10 always has t5 >= 12 (100% in 29k samples).
+- (8,1): K_8-e. Not yet directly investigated.
+- (6,2): K_6-2e. I(Omega) >= 29 at n=6 (exhaustive). Needs n>=7 verification.
 
 ## Scripts
 
 - `04-computation/h21_gap_mechanism.py` — (t3, t5, p33) exhaustive analysis at n=6
 - `04-computation/t3_t5_parity.py` — parity obstruction: t3=5 forces t5 even
 - `04-computation/t3_t5_parity_law.py` — complete case analysis at n=6
+- `04-computation/k6_2e_omega_check.py` — K_6-2e exhaustive check (opus-S40)
+- `04-computation/k6_2e_sharing_proof.py` — sharing lemma approach (opus-S40)
