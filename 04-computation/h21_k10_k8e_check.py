@@ -174,12 +174,12 @@ def count_disjoint_pairs_triples(cycles3):
 
 def build_full_omega_and_compute_I2(all_cycles):
     """Given list of all odd cycles (as tuples of vertices),
-    build Omega and compute I(Omega, 2) via bitmask enumeration of independent sets."""
+    build Omega and compute I(Omega, 2) via recursive DP with memoization."""
     m = len(all_cycles)
     if m == 0:
         return 1
 
-    # Build conflict adjacency
+    # Build conflict adjacency using bitmasks
     vsets = [set(c) for c in all_cycles]
     conflict = [0] * m
     for i in range(m):
@@ -188,72 +188,29 @@ def build_full_omega_and_compute_I2(all_cycles):
                 conflict[i] |= (1 << j)
                 conflict[j] |= (1 << i)
 
-    # Enumerate independent sets
-    if m > 25:
-        # Too many cycles for bitmask enumeration; use DP on conflict graph
-        # For now, fall back to approximate or skip
-        return _compute_I2_dp(conflict, m)
+    # Use recursive DP with memoization on vertex subsets
+    # I(G[S], 2) for vertex subset S (bitmask)
+    # Recurrence: pick lowest-index vertex v in S,
+    #   I(G[S], 2) = I(G[S\{v}], 2) + 2 * I(G[S \ N[v]], 2)
+    memo = {}
 
-    total = 0
-    for mask in range(1 << m):
-        ok = True
-        bits = mask
-        while bits:
-            v = (bits & -bits).bit_length() - 1
-            if conflict[v] & mask & ~(1 << v):
-                ok = False
-                break
-            bits &= bits - 1
-        if ok:
-            total += (1 << bin(mask).count('1'))
-    return total
+    def dp(subset):
+        if subset == 0:
+            return 1
+        if subset in memo:
+            return memo[subset]
 
-def _compute_I2_dp(conflict, m):
-    """Compute I(G, 2) using inclusion-exclusion / DP for larger graphs.
-    Uses the recurrence: I(G,x) = I(G-v, x) + x * I(G-N[v], x)."""
-    # Base cases
-    if m == 0:
-        return 1
+        # Pick the lowest vertex in subset
+        v = (subset & -subset).bit_length() - 1
+        s_minus_v = subset & ~(1 << v)
+        s_minus_Nv = subset & ~((1 << v) | conflict[v])
 
-    # Pick vertex 0
-    v = 0
-    neighbors_v = conflict[v]  # bitmask of neighbors
-    closed_v = neighbors_v | (1 << v)  # N[v] = v and its neighbors
+        result = dp(s_minus_v) + 2 * dp(s_minus_Nv)
+        memo[subset] = result
+        return result
 
-    # Build subgraph G - v
-    remaining1 = list(range(1, m))
-    if not remaining1:
-        return 3  # I(K1, 2) = 1 + 2 = 3
-
-    # Reindex for G - v
-    new_conflict1 = []
-    idx_map1 = {old: new for new, old in enumerate(remaining1)}
-    for old in remaining1:
-        c = 0
-        for old2 in remaining1:
-            if old2 != old and (conflict[old] & (1 << old2)):
-                c |= (1 << idx_map1[old2])
-        new_conflict1.append(c)
-
-    I_minus_v = _compute_I2_dp(new_conflict1, len(remaining1))
-
-    # Build subgraph G - N[v]
-    remaining2 = [i for i in range(m) if not (closed_v & (1 << i))]
-    if not remaining2:
-        return I_minus_v + 2  # I(G-N[v]) = I(empty) = 1, contribution = 2*1
-
-    idx_map2 = {old: new for new, old in enumerate(remaining2)}
-    new_conflict2 = []
-    for old in remaining2:
-        c = 0
-        for old2 in remaining2:
-            if old2 != old and (conflict[old] & (1 << old2)):
-                c |= (1 << idx_map2[old2])
-        new_conflict2.append(c)
-
-    I_minus_Nv = _compute_I2_dp(new_conflict2, len(remaining2))
-
-    return I_minus_v + 2 * I_minus_Nv
+    full = (1 << m) - 1
+    return dp(full)
 
 def count_hamiltonian_paths(adj, n):
     """Count Hamiltonian paths using Held-Karp DP."""
