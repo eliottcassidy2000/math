@@ -301,6 +301,7 @@
 | **S(T)** (signed HP permanent) | Σ_P Π B[P_i][P_{i+1}], B=2A−1 | S=0 at even n; S mod 2^{n−1} universal | THM-A through THM-H |
 | **W(r)** (W-polynomial) | tr(M(r)); only even r-powers | c_{n−1}=n!, c_{n−3} depends on t₃ | signed-hp-permanent-skeleton |
 | **D_k** | Σ_P C(forward(P), k) | D_k mod 2^{n−1−k} is universal | THM-H |
+| **k-fold partition identity** | Σ_{perms of 2k vertices} Π A[P_{2i-1}][P_{2i}] = (2k)!/2^k | PROVED (THM-I); key to universal congruence | opus-S35c11 |
 
 ---
 
