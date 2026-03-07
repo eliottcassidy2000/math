@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S25e — 2026-03-06 (THM-052 DISPROVED for non-SC VT; McKay database)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25d (context limit, then continuation)
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, INVESTIGATION-BACKLOG.md, frobenius21_palindromic_N.py
+**Summary of work:**
+  (1) **THM-052 DISPROVED for non-SC VT tournaments:** Computed N(0,1,j) for the F_21 non-normal Cayley tournament at n=21 via prefix+suffix bitmask DP (1075s total). N is NOT palindromic (all 20 values differ from mirror), alternating sum = M[0,1] = 45,478,409 != 0. M is NOT scalar.
+  (2) **McKay database validation:** Downloaded McKay's VT tournament data for n=21 (users.cecs.anu.edu.au/~bdm/data/). 88 circulant + 22 non-circulant = 110 total VT tournaments. ALL 88 circulant are self-converse, ALL 22 non-circulant are NOT self-converse. n=21 is the SMALLEST order with non-circulant VT tournaments.
+  (3) **digraph6 decoder bug fixed:** Initial decoder skipped diagonal entries in digraph6 format, corrupting adjacency matrices. Fixed by advancing bit index on diagonal. Verified: all circulant tournaments now correctly decode as regular (all out-degree 10).
+  (4) **3-cycle counts:** All 22 non-circulant VT tournaments have identical 3-cycle count (385), same as our F_21 construction. All are regular.
+  (5) **Literature search:** El Sahili-Ghazo Hanna (2023): T and T^op have same oriented Hamiltonian path type distribution. Ai et al. (2025): converse-invariant digraph polynomial. Neither directly addresses position distributions.
+  (6) **MISTAKE-013, MISTAKE-014 logged:** Self-converse assumption false for non-abelian VT; THM-052 scope must be restricted.
+**New contributions:** mcKay_vt21_selfconverse.py, MISTAKE-013, MISTAKE-014, INV-077, INV-078
+**Unresolved threads:**
+  - Which of McKay's 22 non-circulant VT tournaments corresponds to our F_21 construction?
+  - What is the exact M matrix structure for the non-SC tournament? (only M[0,1] computed)
+  - Verify Aut+Anti characterization at n=7 exhaustively
+  - Does any structure theorem hold for non-SC VT M matrices?
+
 ## opus-2026-03-06-S26 (continued²) — 2026-03-06 (position-uniform, converse disproof, even-r hierarchy)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S26 (continued) (context limit)

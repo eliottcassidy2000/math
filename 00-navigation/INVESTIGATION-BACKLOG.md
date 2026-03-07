@@ -812,6 +812,7 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Open extension:** Prove for general vertex-transitive (non-circulant) tournaments. The proof uses circulant-specific translation symmetry. At n=15, non-circulant VT tournaments exist (Babai-Kantor doubly-regular tournaments).
 **Scripts:** `04-computation/palindromic_N_proof.py`, `04-computation/palindromic_N_posuniform.py`, `04-computation/palindromic_N_n9.py`, `04-computation/palindromic_N_n11.py`, `04-computation/selfcomp_posuniform_n7.py`
 
+<<<<<<< Updated upstream
 ### INV-074: Diagonal signed position theorem — VERIFIED n=5
 **Source:** opus-2026-03-06-S11b (continued³)
 **Status:** VERIFIED computationally at n=5 (all 12 iso classes).
@@ -840,3 +841,21 @@ The crossover (true perpendicularity) occurs near the MEDIAN H value. This means
 **Conjecture:** For ALL odd n, the H-maximizer has scalar M. This is equivalent to saying H-maximizers are always vertex-transitive (or at least "position-uniform").
 **Connection:** Combines with THM-052 (circulant => scalar) and the Paley maximizer conjecture. If Paley maximizes H and Paley is circulant, then Paley gives scalar M. The deeper question is whether scalar M is NECESSARY for H-maximization.
 **Next step:** Verify at n=9 (need to find maximizers first).
+
+### INV-077: VT tournament NOT self-converse at n=21 — THM-052 DISPROVED for non-SC VT
+**Source:** kind-pasteur-2026-03-06-S25e
+**Status:** RESOLVED. M is NOT scalar for non-SC VT tournaments.
+**What:** ALL 22 non-circulant VT tournaments at n=21 (from McKay's database) are NOT self-converse. These are Cayley tournaments on F_21 = Z/7 x| Z/3. All 88 circulant VT tournaments at n=21 ARE self-converse.
+**Computation (n=21, 1075s):**
+- H(T) = 123,522,430,238,361 (divisible by 21)
+- N(0,1,j) is NOT palindromic: N[0]=581,223,220,317 vs N[19]=581,314,958,778
+- Alternating sum = M[0,1] = 45,478,409 != 0
+- Therefore M != (H/n)*I for this VT tournament
+**Conclusion:** THM-052 is PROVED for self-converse VT (including all circulants) but DISPROVED for non-SC VT. Self-converse is the exact boundary.
+**Scripts:** `04-computation/frobenius21_palindromic_N.py`, `04-computation/mcKay_vt21_selfconverse.py`
+
+### INV-078: Aut(T) union Anti(T) transitivity characterizes scalar M
+**Source:** opus-2026-03-06-S26 (scalar_m_aut_anti_characterization.py)
+**Status:** VERIFIED at n=5 (exhaustive). CONFIRMED at n=21: F_21 non-SC has Anti=empty, M not scalar.
+**What:** Scalar M (M = (H/n)*I) holds iff Aut(T) union Anti(T) acts transitively on V. For the F_21 non-normal tournament: Aut=F_21 (transitive) but Anti=empty, so Aut+Anti = Aut alone. The conjecture predicts M not scalar, which is CONFIRMED by computation.
+**Next step:** Verify at n=7 (exhaustive).

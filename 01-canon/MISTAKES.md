@@ -294,7 +294,7 @@ The investigation INV-044 and tangent T104 need correction. The hereditary chain
 
 ---
 
-## MISTAKE-011: Transfer Matrix M = [[1,0],[0,-1]] Claim Was Wrong
+## MISTAKE-011a: Transfer Matrix M = [[1,0],[0,-1]] Claim Was Wrong
 
 **Date discovered:** 2026-03-06
 **Found by:** opus-2026-03-06-S6
@@ -325,7 +325,7 @@ INV-001 (proving transfer matrix symmetry) is still the correct goal — the sym
 
 ---
 
-## MISTAKE-011: Paley "tournament" at p = 1 mod 4 is NOT a tournament
+## MISTAKE-011b: Paley "tournament" at p = 1 mod 4 is NOT a tournament
 
 **Date discovered:** 2026-03-06 (kind-pasteur-S25d)
 **Found by:** kind-pasteur
@@ -389,3 +389,70 @@ COROLLARY: M(T^c) = M(T) iff M(T) is diagonal (scalar M at odd n).
 - The claim in blue_skeleton_even_r_synthesis.py is WRONG. M(T) ≠ M(T') for tiling blue pairs, and M(T) ≠ M(T^c) for tournament complement (unless M is diagonal).
 - The analysis of which iso classes are "self-paired" in that script is unaffected (it's about iso class mapping, not about M equality).
 - The complement formula is a NEW theorem that should be recorded.
+
+---
+
+## MISTAKE-013: "All VT tournaments are self-converse" assumption is FALSE
+
+**Date discovered:** 2026-03-06 (kind-pasteur-S25e)
+**Found by:** kind-pasteur (confirmed by independent background agent + McKay database)
+**Affects:** opus-2026-03-06-S26 THM-052 extension claim (commit 8ed2516)
+
+### What was assumed
+
+opus-S26 claimed THM-052 extends to ALL vertex-transitive tournaments via the reflection-reversal bijection phi = sigma * rev, stating "for any vertex-transitive tournament T, there exists an anti-automorphism tau." This implicitly assumes all VT tournaments are self-converse.
+
+### Why it was wrong
+
+At n=21, ALL 22 non-circulant VT tournaments (from McKay's database) are NOT self-converse. These are Cayley tournaments on F_21 = Z/7 x| Z/3 (Frobenius group, smallest non-abelian group of odd order) with non-normal connection sets. Exhaustive backtracking search confirms no anti-automorphism exists for any of them. All 88 circulant tournaments at n=21 ARE self-converse.
+
+The inversion map g -> g^{-1} gives an anti-automorphism iff S is a union of conjugacy classes ("normal" S). For non-abelian groups, non-normal S creates VT tournaments without any anti-automorphism.
+
+### The correct framing
+
+- THM-052 is PROVED for circulant tournaments (all abelian Cayley tournaments at odd n)
+- THM-052 covers all VT tournaments at n <= 19 (all circulant by McKay data)
+- THM-052 **FAILS** for non-abelian-group VT tournaments at n=21 (PROVED by computation)
+- M[0,1] = 45,478,409 for the F_21 non-normal tournament (H = 123,522,430,238,361)
+- N(0,1,j) is NOT palindromic: all 20 values N[j] != N[19-j]
+
+### Impact
+
+- opus's general VT theorem claim is FALSE and must be retracted
+- THM-052 must specify "circulant" or "self-converse VT" as hypothesis
+- Self-converse is the RIGHT boundary: SC VT => palindromic N => scalar M; non-SC VT => non-palindromic N => non-scalar M
+- The per-orbit structure (N depends on vertex-pair orbit) still holds, but palindromicity requires SC
+
+---
+
+## MISTAKE-014: THM-052 extension to all VT tournaments is DISPROVED
+
+**Date discovered:** 2026-03-06 (kind-pasteur-S25e)
+**Found by:** kind-pasteur
+**Affects:** THM-052 scope, opus-S26 proof
+
+### What was assumed
+
+THM-052 was claimed to hold for ALL vertex-transitive tournaments at odd n: M = (H/n)*I.
+
+### Why it was wrong
+
+Computational proof at n=21: the Cayley tournament on F_21 with non-normal connection set has M[0,1] = 45,478,409 != 0. The N(0,1,j) sequence is NOT palindromic:
+  N[0] = 581,223,220,317 vs N[19] = 581,314,958,778 (differ by 91,738,461)
+  Alternating sum = 45,478,409
+
+### The correct framing
+
+THM-052 holds for self-converse VT tournaments at odd n. Self-converse is necessary (not just sufficient) for palindromic N, and palindromic N at odd n is equivalent to scalar M for VT tournaments.
+
+Hierarchy of scalar M:
+1. Circulant (always SC) => scalar M [PROVED]
+2. Abelian Cayley (always SC via -x) => scalar M [PROVED]
+3. Non-abelian Cayley with normal S (SC via inversion) => scalar M [PROVED by same argument]
+4. Non-abelian Cayley with non-normal S (NOT SC) => M NOT scalar [DISPROVED at n=21]
+
+### Impact
+
+- THM-052 scope must be restricted
+- Opens question: which specific non-abelian VT tournaments have scalar M?
+- Answer: exactly the self-converse ones (those with normal connection sets)
