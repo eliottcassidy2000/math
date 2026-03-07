@@ -30,7 +30,7 @@ At n=7:
 - sum_P f^j for j=4 depends on MORE than t_3 (verified at n=5,7).
 
 Therefore:
-- **k=0:** tr(c_{n-1}) = (n-1)! (universal)
+- **k=0:** tr(c_{n-1}) = n! (universal)
 - **k=1:** tr(c_{n-3}) = 2(n-2)!(t_3 - C(n,3)/4) (depends only on t_3)
 - **k=2:** tr(c_{n-5}) depends on t_3 AND sum_P f^4 (the 4th moment of forward-arc count)
 
@@ -89,9 +89,9 @@ The "2+1+1" pattern involves all n=7 vertices and captures tournament structure 
 
 | n | c_{n-1} | c_{n-3} | c_{n-5} | c_{n-7} |
 |---|---------|---------|---------|---------|
-| 5 | (n-1)! (univ) | f(t_3) | f(t_3, H) | - |
-| 7 | (n-1)! (univ) | f(t_3) | f(t_3, sum_P f^4) | f(t_3, f^4, f^6) |
-| 9 | (n-1)! (univ) | f(t_3) | f(t_3, sum_P f^4) | f(t_3, f^4, f^6) |
+| 5 | n! (univ) | f(t_3) | f(t_3, H) | - |
+| 7 | n! (univ) | f(t_3) | f(t_3, sum_P f^4) | f(t_3, f^4, f^6) |
+| 9 | n! (univ) | f(t_3) | f(t_3, sum_P f^4) | f(t_3, f^4, f^6) |
 
 At n=5: sum_P f_(4) = H (since C(4,4)=1 position subset = all edges = Hamiltonian path count).
 
@@ -123,23 +123,23 @@ where bc = sum over 6-vertex subsets S of #{unordered partitions (T,T') of S int
 - All other patterns: 0 (singleton cancellation)
 - Total: 24*bc - 60*t_3 + 12*t_5 + 231
 
-**Consequence:** tr(c_0) = H - 6*bc - 3*t_5 + 249/4
+**Consequence:** tr(c_0) = H - 6*bc - 3*t_5 - 21/4
 
 **Complete coefficient table at n=7:**
 
 | Coefficient | Formula | Depends on |
 |-------------|---------|------------|
-| tr(c_6) | 720 | universal |
+| tr(c_6) | 5040 = 7! | universal |
 | tr(c_4) | 240*t_3 - 2100 | t_3 |
 | tr(c_2) | 24*bc - 60*t_3 + 12*t_5 + 231 | t_3, t_5, bc |
-| tr(c_0) | 2*t_3 - t_5 + 2*t_7 - 2*bc + 253/4 | t_3, t_5, t_7, bc |
+| tr(c_0) | 2*t_3 - t_5 + 2*t_7 - 2*bc - 17/4 | t_3, t_5, t_7, bc |
 
 Using OCF: H = 1 + 2*(t_3 + t_5 + t_7) + 4*bc, so equivalently:
-tr(c_0) = H - 6*bc - 3*t_5 - 2*t_7 + 249/4... No, let me recompute:
-tr(c_0) = H - 6*bc - 3*t_5 + 249/4 (from c_0 + c_2/4 + c_4/16 + c_6/64 = H).
+tr(c_0) = H - c_2/4 - c_4/16 - c_6/64 = H - 6*bc + 15*t_3 - 3*t_5 - 231/4 - 15*t_3 + 2100/16 - 5040/64
+= H - 6*bc - 3*t_5 - 21/4.
 
-Substituting OCF: tr(c_0) = (1 + 2*t_3 + 2*t_5 + 2*t_7 + 4*bc) - 6*bc - 3*t_5 + 249/4
-= 2*t_3 - t_5 + 2*t_7 - 2*bc + 253/4.
+Substituting OCF: tr(c_0) = (1 + 2*t_3 + 2*t_5 + 2*t_7 + 4*bc) - 6*bc - 3*t_5 - 21/4
+= 2*t_3 - t_5 + 2*t_7 - 2*bc - 17/4.
 
 Verified: max error = 0.000000 over 100 random tournaments.
 Verified: c_0 + c_2/4 + c_4/16 + c_6/64 = H (exact).

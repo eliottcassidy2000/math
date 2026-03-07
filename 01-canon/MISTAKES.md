@@ -456,3 +456,32 @@ Hierarchy of scalar M:
 - THM-052 scope must be restricted
 - Opens question: which specific non-abelian VT tournaments have scalar M?
 - Answer: exactly the self-converse ones (those with normal connection sets)
+
+---
+
+## MISTAKE-016: tr(c_{n-1}) = (n-1)! should be n!
+
+**Date discovered:** 2026-03-06
+**Found by:** opus-2026-03-06-S11b (continued^6)
+**Affects:** THM-055 coefficient table at n=7 (c_6 row and c_0 row)
+
+### What was assumed
+
+THM-055 table listed tr(c_6) = 720 = 6! = (n-1)! at n=7.
+
+### Why it was wrong
+
+tr(c_{n-1}) = sum_P e_0(s_P) = sum_P 1 = n!, NOT (n-1)!. Direct polynomial fitting of sum_P prod(r+s_i) confirms the leading coefficient is 5040 = 7! at n=7. The ratio between tr(M(r)) and sum_P prod(r+s_i) is exactly 1.0 (verified at multiple r values).
+
+### The correct framing
+
+- tr(c_6) = 5040 = 7! at n=7 (was listed as 720)
+- tr(c_0) = 2*t_3 - t_5 + 2*t_7 - 2*bc - 17/4 (was listed with +253/4)
+- All other coefficient formulas (c_4, c_2) were correct
+- The n=9 table already had the correct c_8 = 362880 = 9!
+
+### Impact
+
+- THM-055 table corrected
+- The c_0 formula constant changed from +253/4 to -17/4 (difference = 270/4 = (5040-720)/64)
+- No other results affected since c_0 was always computed from H - c_2/4 - c_4/16 - c_6/64
