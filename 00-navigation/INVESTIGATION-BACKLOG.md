@@ -95,10 +95,18 @@
 **Scripts:** `04-computation/hereditary_maximizer.py`, `04-computation/hereditary_correction.py`, `04-computation/R_minimization_proof.py`, `04-computation/R_min_n7_check.py`
 
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
-**Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg)
-**Status:** CONNECTION IDENTIFIED. NOT formalized.
-**What:** The Redei-Berge symmetric function U_X for digraphs has comultiplication Delta([X]) = sum_S [X|S] tensor [X|V\S] — this IS our subset convolution. The character zeta counts Hamiltonian paths. The antipode S(U_X) = (-1)^|V| U(X-bar) encodes Berge's theorem. OCF could be a Hopf algebra identity relating zeta to the independence polynomial of Omega(T).
-**Next step:** Read arXiv:2402.07606 in full. Express OCF in Hopf algebra language. Check if I(Omega, 2) has a natural coalgebra interpretation.
+**Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg), arXiv:2506.08841 (Mitrovic-Stojadinovic)
+**Status:** CONNECTION IDENTIFIED. Key bridge found (S36).
+**What:** The Redei-Berge symmetric function U_X for digraphs has comultiplication Delta([X]) = sum_S [X|S] tensor [X|V\S] — this IS our subset convolution. The character zeta counts Hamiltonian paths. The antipode S(U_X) = (-1)^|V| U(X-bar) encodes Berge's theorem.
+**NEW (Mitrovic-Stojadinovic, arXiv:2506.08841, June 2025):**
+  - X_{inc(P)} = omega(U_P): Chromatic function of incomparability graph = omega of Redei-Berge
+  - "Converse of Redei": if poset is not a chain, quasi-linear extensions are even
+  - Bags-of-sticks decomposition: U_X = sum of simpler digraphs via inclusion-exclusion on edges
+  - Stanley-Stembridge connection: e-positivity of X_{inc(P)} <=> h-positivity of U_P
+  - Noncommutative deletion-contraction: W_X = W_{X\e} - W_{X/e}^up
+  - Mitrovic-Stojadinovic phi(pi) = sum_{gamma X-cycle} (len(gamma)-1) is EXACTLY our S = sum(l_i-1)!
+**Verified (S36):** OCF specialization p_1->1, p_{odd>=3}->2, p_{even}->0 gives H(T) from U_T.
+**Next step:** (1) Express OCF via bags-of-sticks decomposition. (2) Check if deletion-contraction on W_T gives a direct proof of Claim A. (3) Explore chromatic function connection for imperfect Omega(T).
 
 ### INV-034: Björklund cycle cover reduction adapted for OCF
 **Source:** Web research opus-S5, arXiv:1008.0541, arXiv:1301.7250
