@@ -250,6 +250,10 @@
 
 **Concrete test:** Check if the cluster variable associated to a tournament quiver equals H(T) or I(Ω(T), x) for some specialization.
 
+**COMPUTATIONAL RESULT (kind-pasteur-S34):** Quiver mutation at vertex k preserves H(T) whenever the result is a tournament! Verified exhaustive n=4 (64/64), n=5 (640/640), sampled n=7 (1126/1126). Zero violations. The mutation only produces a tournament when k is a source (deg 0) or sink (deg n−1), or at specific score-class positions. At n=5, 62.5% of H-preserving mutations produce NON-isomorphic tournaments — this is a genuinely new symmetry, not just relabeling!
+
+**Scripts:** `tournament_quiver_mutation.py`, `quiver_mutation_h_invariance.py`
+
 #### 13. MATROID THEORY: Tournament Matroid
 **Idea:** Define a matroid on the arcs of a tournament where independent sets are "acyclic subsets" (subsets of arcs that contain no directed cycle). The rank function r(S) = |S| − (# cycles in S) could encode the cycle structure. The Tutte polynomial T_M(x,y) of this matroid at specific evaluations could give H(T) or cycle counts.
 
