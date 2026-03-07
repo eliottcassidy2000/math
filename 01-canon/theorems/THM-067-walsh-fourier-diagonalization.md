@@ -1,4 +1,4 @@
-# THM-066: Walsh-Fourier Diagonalization of H(T)
+# THM-067: Walsh-Fourier Diagonalization of H(T)
 
 **Type:** Theorem
 **Certainty:** 5 -- PROVED (exhaustive n=5; analytical n=7)
