@@ -1,4 +1,4 @@
-# THM-073: Master Decomposition of P(u,x)
+# THM-074: Master Decomposition of P(u,x)
 
 **Status:** PROVED (algebraic identity, verified computationally at n=5 exhaustive, n=7 all cycle types)
 **Proved by:** kind-pasteur-2026-03-07-S29
@@ -59,6 +59,17 @@ since (t-1)^2/t = t - 2 + 1/t = u - 2.
 
 The total: g(t)/t^m = P_{f+1}(u,0) * (u-2)^{S/2} = P_{n-S}(u,0) * (u-2)^{S/2}.
 
+## Important Clarification
+
+G_T(t,x) is NOT the tournament Eulerian polynomial E_T(t) = sum_{HP} t^{desc(HP)}.
+The typed_GT.py claim "G_T(t;2,2,...) = E_T(t)" is FALSE (verified: fails for transitive T_5).
+
+G_T(t,x) is the "inflated independence polynomial":
+- G_T(0, x) = I(Omega(T), x) [independence polynomial of conflict graph]
+- G_T(0, 2) = H(T) [Hamiltonian path count, the key evaluation]
+- G_T(1, x) = n! [universal constant, all corrections vanish via (t-1)^S factor]
+- G_T(t, 0) = A_n(t) [Eulerian polynomial, cycle-independent]
+
 ## Examples
 
 ### n=5 (m=2)
@@ -67,9 +78,7 @@ P(u,x) = P_5(u,0) + t3 * x * 2 * (u-2) * P_3(u,0) + t5 * x * 2 * (u-2)^2
 = (u^2+26u+64) + 2*t3*x*(u-2)(u+4) + 2*t5*x*(u-2)^2
 
 ### n=7 (m=3)
-P(u,x) = P_7(u,0) + 2*t3*x*(u-2)*P_5(u,0) + [2*t5+4*bc]*x^{1,2}*(u-2)^2*P_3(u,0) + 2*t7*x*(u-2)^3
-
-More precisely, grouping by S:
+Grouping by S:
 - S=0: P_7(u,0) [base]
 - S=2: 2*t3 * x * (u-2) * P_5(u,0) [3-cycles]
 - S=4: [2*t5*x + 4*bc*x^2] * (u-2)^2 * P_3(u,0) [5-cycles and (3,3)-pairs share same u-factor!]
@@ -80,6 +89,20 @@ More precisely, grouping by S:
 The c_1 coefficient of P_{m-1}(x) involves evaluating g_I(u) at the u^{m-1} level.
 The coefficient c_1^{(f,d)} = 2^{f+1} - d - 2 vanishes when n = 2^{f+1} - 1 (Mersenne).
 At n=7 (f=2, d=6): c_1^{(2,6)} = 0, making P_2(x) linear in x (the bc/alpha_2 term vanishes).
+
+## Connection to Tangent Numbers
+
+At u=0 (corresponding to t=i):
+  P_n(0, 0) = 2^{(n-1)/2} * T_n
+
+where T_n is the n-th tangent number (T_1=1, T_3=2, T_5=16, T_7=272, T_9=7936, ...).
+Verified for n=1,3,5,7,9,11,13.
+
+Equivalently: A_n(i) = (2i)^{(n-1)/2} * T_n.
+
+This connects the base polynomial to alternating permutations and the sec/tan
+generating function, providing a link between tournament parity and classical
+enumerative combinatorics.
 
 ## Connection to Null Space
 
