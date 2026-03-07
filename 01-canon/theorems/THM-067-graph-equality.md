@@ -72,7 +72,7 @@ In other words, Claim B already implies Claim A if and only if the inclusion-exc
 |---|--------|-------------|--------|
 | 5 | Exhaustive | 5120 | PASS |
 | 7 | 20 random tournaments | 2664 | PASS |
-| 9 | Agent testing | (in progress) | ... |
+| 9 | 10 random tournaments | 30,511 | PASS |
 
 ---
 

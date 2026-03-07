@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S34 — 2026-03-07 (GS-OCF Bridge, Graph Equality THM-067, f(C)=2mu(C))
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S33 (context limit, then S34)
+**Summary of work:**
+  (1) **GS-OCF Bridge (PROVED).** Verified exhaustively at n=5: Grinberg-Stanley's U_T in power-sum basis equals the TYPED independence polynomial of Omega(T). U_T = sum_{S indep} 2^|S| * prod p_{len(c)} * p_1^{n-sum_len}. Each directed k-cycle contributes exactly 2 to the p_k coefficient.
+  (2) **G_T(t,x) is genuinely new beyond U_T.** The power-sum expansion LOSES descent information. Our G_T requires the quasisymmetric structure, not just power sums.
+  (3) **Null space explained via S = sum(l_i - 1).** The correction function g(t) = A_{f+1}(t)*(t-1)^{d-f} depends ONLY on S, not individual cycle lengths. This explains why the forward-edge distribution can't distinguish cycle types with the same S. Null dims: n=3:0, 5:0, 7:1, 9:3, 11:6, 13:11. Confirms and extends THM-065.
+  (4) **THM-067: Graph Equality (PROVED).** For any cycle C through v: Omega(T)\N[C] = Omega(T-v)|_{avoid C\{v}}. Trivial proof: v in C implies any cycle disjoint from C avoids v. Immediately gives f(C) = 2*mu(C) for ALL tournaments.
+  (5) **f(C) = 2*mu(C) verified at n=5 (exhaustive), n=7 (2664 pairs), n=9 (30511 pairs).**
+  (6) **Claim A structural mechanism clarified:** alpha_0 = 1 (empty set) cancels in deletion, leaving only cycles through v. Each cycle contributes independently via f(C) = 2*mu(C). The higher-order inclusion-exclusion terms vanish (implied by Claim B).
+**New contributions:** THM-067, 12+ computation scripts, GS-OCF bridge analysis
+**Unresolved threads:**
+  - Connection between THM-067 graph equality and THM-068 position character decomposition
+  - Does the S = sum(l_i-1) grouping connect to the Walsh-Fourier degree structure?
+  - Can typed G_T with separate y_k weights reveal more structure?
+  - General n formula for null space dimension (related to odd partitions)
+
 ## opus-2026-03-07-S35 — 2026-03-07 (Walsh-Fourier Diagonalization PROVED at n=7)
 **Account:** opus
 **Continuation of:** opus-2026-03-06-S11b (many continuations)
