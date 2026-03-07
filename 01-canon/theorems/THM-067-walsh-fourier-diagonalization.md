@@ -29,10 +29,10 @@ where w_{n-1-2j} is a function of tournament invariants with Walsh degree exactl
 - H = 120/16 + (12*t3-30)/4 + (1-t3+2*t5) = 1 + 2*t3 + 2*t5
 
 **n=7** (analytically verified):
-- w_6 = 720 = 6! (constant)
+- w_6 = 5040 = 7! (constant)
 - w_4 = 240*(t3 - 35/4) (Walsh degree 2)
 - w_2 = -60*t3 + 12*t5 + 24*bc33 + 231 (Walsh degree 4)
-- w_0 = 253/4 + 2*t3 - t5 + 2*t7 - 2*bc33 (Walsh degree 6)
+- w_0 = -17/4 + 2*t3 - t5 + 2*t7 - 2*bc33 (Walsh degree 6)
 
 ### (iii) Generalized telescoping
 
