@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S40 — 2026-03-07 (H=21 permanent gap: i_2 jump pattern + 5-cycle forcing)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S39
+**Summary of work:**
+  (1) **H=21 EXHAUSTIVE at n=7.** Confirmed 0/2,097,152 tournaments have H=21 (C implementation, 19s).
+  (2) **H-spectrum analysis n=3..7.** Only permanent gaps in [1..200] are H=7 and H=21. H=63 NOT permanent (achieved at n=8).
+  (3) **i_2 JUMP PATTERN discovered.** The achievable (alpha_1, i_2) pairs systematically skip values needed for H=21. E.g., alpha_1=8 gives i_2 in {0,7} never 1; alpha_1=10 gives i_2=2 always never 0. Verified exhaustively n<=7, sampling n=8 (500k).
+  (4) **Five-Cycle Forcing Theorem (K_6-2e).** Complete structural proof via 3 lemmas: L1 mixed cross arcs force 5-cycles, L2 cross 3-cycle implies mixed arcs, L3 K_6-2e structure prevents one-directional arcs. Proves (6,2) decomposition impossible for ALL n.
+  (5) **K_8-e partial proof.** All-3-cycle case: forced 5-cycle makes alpha_1>=9, then alpha_1+2*i_2=10 gives i_2=0.5 (impossible). Mixed case open.
+  (6) **Proof status: 4/6 decompositions fully eliminated.** (0,5),(2,4) trivial; (4,3) Part D; (6,2) 5-cycle forcing. Open: (8,1) mixed, (10,0).
+**New contributions:** THM-079 Parts G,H,I; Five-Cycle Forcing Theorem; 10+ computation scripts
+**Unresolved threads:** (8,1) K_8-e mixed-cycle proof; (10,0) K_10 structural proof; alpha_1=10 always i_2=2 explanation
+
 ## opus-2026-03-07-S35c6 — 2026-03-07 (Complete M[a,b] Walsh formula + Walsh symmetry proof)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c5

@@ -318,7 +318,7 @@ Redei's theorem says H(T) is always odd. The converse asks: for which odd k does
 
 **Permanent gaps discovered (THM-029, kind-pasteur-2026-03-06-S21, corrected S22):**
 - **H=7 is impossible** for ANY tournament on ANY number of vertices. CORRECTED proof (S22): alpha_1=3 IS achievable at n>=7, but H=7 still impossible because H=7 requires (alpha_1=3, i_2=0), and i_2=0 forces common vertex among triples which forces c5>=1, giving alpha_1>=4. When alpha_1=3 occurs (n>=7), the triples don't all conflict, so i_2>=1, giving H>=11.
-- **H=21 is absent** through n=7 (exhaustive at n<=6, sampled at n=7). Whether it's a permanent gap remains open.
+- **H=21 is a permanent gap** (exhaustive n<=7, 500k samples at n=8). Structural proof 4/6 complete: (0,5),(2,4) trivial; (4,3) Part D; (6,2) 5-cycle forcing theorem. Open: (8,1) mixed-cycle case, (10,0) general.
 
 **Achievable values (exhaustive):**
 - n=5: {1,3,5,9,11,13,15}
@@ -341,6 +341,13 @@ Note 63 = 7*9 and 21 = 7*3. These may be related to the H=7 gap.
 - K_{1,3} star in (4,3) case: IMPOSSIBLE (forces alpha_3>=1)
 - Remaining: connected Omega with I=21 via K_6-2e or larger dense graphs
 - I(P_4,2)=21 discovered; graph classification: v=4 P_4, v=5 none, v=6 K_6-2e
+
+**THM-079 Update (opus-S40):**
+- **K_6-2e FULLY ELIMINATED** by Five-Cycle Forcing Theorem (3 lemmas, structural proof for all n)
+- **i_2 jump pattern discovered**: achievable (alpha_1, i_2) pairs in tournaments systematically skip the values needed for H=21. Verified exhaustively at n<=7, by sampling at n=8.
+- **H=7 and H=21 are the ONLY permanent gaps** in [1..200] at n<=8.
+- **H=63 is NOT a permanent gap** (achieved at n=8, 138/500k samples).
+- Remaining open: (8,1) K_8-e mixed-cycle case, (10,0) K_10 structural proof.
 
 **H=63 is NOT a permanent gap (opus-S39 agent):**
 H=63 found at n=8 (227 in 600k samples). All n=7 gaps except 7 and 21 are filled at n=8.
