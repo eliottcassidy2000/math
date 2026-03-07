@@ -1,4 +1,4 @@
-# THM-077: u_T(m) is the Size-Weighted Independence Polynomial
+# THM-078: u_T(m) is the Size-Weighted Independence Polynomial
 
 **Type:** Theorem (PROVED)
 **Certainty:** 5 -- PROVED (algebraic + exhaustive verification)
