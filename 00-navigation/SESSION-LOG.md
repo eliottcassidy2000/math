@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S33 — 2026-03-07 (Trivariate GF, empty set insight, reduced polynomial P(u,x))
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S32 (context limit, then S33 continuation)
+**Summary of work:**
+  (1) **THM-063: Trivariate GF G_T(t,x) (PROVED).** The generating function
+      G_T(t,x) = A_n(t) + sum_I x^{parts} I(T) A_{f+1}(t)(t-1)^{d-f}
+      has clean special evaluations:
+      - G_T(t,0) = A_n(t) [Eulerian poly, T-independent]
+      - G_T(0,x) = I(Omega(T), x) [INDEPENDENCE POLYNOMIAL!]
+      - G_T(1,x) = n! for all x [T-independent]
+      - G_T(t,2) = E_T(t) = sum a_k t^k
+      Proof: (-1)^{d-f} = 1 always (d-f always even for cycle collections).
+  (2) **Palindromic symmetry:** G_T(t,x) = t^{n-1} G_T(1/t, x) for ALL x.
+      Generalizes the known a_k = a_{n-1-k} palindromy.
+  (3) **Reduced polynomial P(u,x):** Writing u = t+1/t, G_T = t^m P(u,x).
+      The LEADING coefficient p_m(x) = I(Omega(T), x) (independence poly!).
+      P(2,x) = n! for all x. Explicit OCF formulas at n=5 (exhaustive) and n=7.
+  (4) **Null space discovery:** The forward-edge distribution a_k(T) has a rank
+      deficiency: changing (t5, bc) by (-2, +1) leaves all a_k unchanged.
+      The forward-edge distribution cannot distinguish "2 five-cycles" from
+      "1 disjoint 3-cycle pair." Verified computationally.
+  (5) **E_T(-1) = deformed zigzag number.** Verified at n=3,5,7,9.
+      Coefficient pattern: 2^{parts+2S} * E_{n-2S} where E_j = tangent numbers.
+  (6) **E_T(i) alternates purely real/imaginary** by n mod 4. Verified.
+  (7) **Bilinear structure:** G_T is NOT a product A_n(t)*I(Omega,x).
+      Delta = G_T - A_n*I vanishes on both axes, equals -n!*(I-1) at t=1.
+      N_T(t,2) = E_T(t)/A_n(t) smoothly interpolates from H to 1.
+**New contributions:** THM-063-trivariate-gf.md, 10+ computation scripts
+**Unresolved threads:**
+  - General n formula for p_j(x) coefficients in the reduced polynomial
+  - Does the null space structure persist/grow at n=9? (more null vectors?)
+  - Combinatorial interpretation of p_j for j < m
+  - Connection between P(u,x) structure and Claim A
+  - Literature search for "deformed Eulerian" or bivariate Eulerian-independence GF
+
 ## kind-pasteur-2026-03-07-S27 — 2026-03-07 (W(i/2)=0 characterizes H-maximizers; deep core review)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S26 (context limit)
