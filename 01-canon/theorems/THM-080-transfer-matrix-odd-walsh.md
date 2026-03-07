@@ -9,11 +9,24 @@
 
 For the transfer matrix M[a,b](T) = sum_{S subset U} (-1)^|S| E_a(S+{a}) B_b(R+{b}):
 
-**hat{M[a,b]}[S] = (-1)^{asc(S)} * 2^s * (n-2-|S|)! / 2^{n-2}**
+**|hat{M[a,b]}[S]| = 2^s * (n-2-|S|)! / 2^{n-2}**
+
+**sign(hat{M[a,b]}[S]) = (-1)^{asc_root(S, a, b)}**
 
 when S is a *valid monomial* (defined below), and 0 otherwise.
 
 Here **s = number of unrooted (even-length) components** of S — components containing neither a nor b.
+
+### Sign Convention (root-based traversal)
+
+**asc_root(S, a, b)** counts ascending edges with the following traversal:
+- **a-rooted components** (containing a): traverse from a outward
+- **b-rooted components** (containing b): traverse from b outward
+- **Unrooted components**: traverse from smaller endpoint (either direction gives same sign for even length)
+
+For (a,b) = (0,1) or any pair where both roots are the smallest endpoints of their components, this reduces to the standard asc(S) = ascents from smaller endpoints.
+
+**Verified exhaustively** at n=5 for (a,b) = (0,1), (0,2), (0,3), (1,2), (2,3), (3,4): **512/512 matches each**.
 
 ### Valid Monomial Conditions
 
@@ -30,7 +43,7 @@ S is valid for M[a,b] if and only if:
 
 - **2^s factor for unrooted components:** Rooted components (containing a or b) have 1 valid orientation in the HP (pinned at a or b). Unrooted even-length components have 2 valid orientations that give the same sign. This parallels H's 2^r factor (where all r components are unrooted).
 
-- **Degree-1 specialization:** hat{M[a,b]}[{p,w}] = sgn(p-w) * (n-3)!/2^{n-2} for p in {a,b}, w in U (s=0 always). At n=5: +/-1/4. At n=7: +/-3/4.
+- **Degree-1 specialization:** For edge {p,w} with p in {a,b}, w in U: hat{M[a,b]}[{p,w}] = (-1)^{[p<w] if root-based} * (n-3)!/2^{n-2}. For root p traversing to w: sign = (-1)^{[p<w]}.
 
 - **Linear approximation:** M[a,b]^(1)(T) = (n-3)!/2^{n-3} * (s_a + s_b - (n-2)) where s_a, s_b are out-degrees to interior vertices.
 
