@@ -21,7 +21,15 @@ for each nonzero Walsh monomial S of degree 2k, where:
 - N(S) is a "negative set" of k vertices determined by the monomial S
 - The formula sum_v M[v,v]_hat[S] = H_hat[S] follows since |N(S)| = k
 
-### (ii) Negative set structure
+### (ii) Even-length component rule (PROVED)
+
+**H_hat[S] ≠ 0 only if every path component of the subgraph S has even length.**
+
+The subgraph induced by |S| = 2k edges (with max degree ≤ 2, required to be embeddable in a Hamiltonian path) is a union of vertex-disjoint paths. Components of odd length L give desc d and L-d from the two traversal directions; since L is odd, these have opposite parity, causing exact cancellation.
+
+For even-length L = 2a: both directions give desc with the same parity, so (-1)^desc is constant.
+
+### (iii) Negative set structure
 
 The negative set N(S) has |N(S)| = k for any monomial S of Walsh degree 2k.
 
@@ -29,15 +37,17 @@ The negative set N(S) has |N(S)| = k for any monomial S of Walsh degree 2k.
 
 **Degree 2 (k=1):** N(S) = {shared vertex}. For edge pair S = {(a,b),(a,c)}, the shared vertex a is the unique negative vertex. M[v,v]_hat = ±H_hat/(n-2).
 
-**Degree n-1 (k=(n-1)/2, top degree):** N(S) = {odd-position vertices of Hamiltonian path S}. M[v,v]_hat = (-1)^{pos(v,path)} * H_hat[S]. No scaling factor (1/(n-2k) = 1).
+**Degree 4 (k=2):** Two types: P4 (path on 5 vertices) and P2+P2 (two disjoint wedges). For P4: N = {odd-position vertices of the path}. For P2+P2: N = {center vertex of each wedge}.
 
-### (iii) Pattern counts
+**Degree n-1 (k=(n-1)/2, top degree):** Only type is P_{n-1} (Hamiltonian path). N(S) = {odd-position vertices}. M[v,v]_hat = (-1)^{pos(v,path)} * H_hat[S]. No scaling (1/(n-2k) = 1).
+
+### (iv) Pattern counts
 
 At Walsh degree 2k, there are exactly C(n,k) distinct position character patterns, corresponding to the C(n,k) choices of k-element negative set from n vertices.
 
 At n=5: C(5,0) = 1, C(5,1) = 5, C(5,2) = 10 patterns at degrees 0, 2, 4.
 
-### (iv) Energy identity
+### (v) Energy identity
 
 The Parseval energy at each Walsh degree level satisfies:
 
@@ -45,7 +55,7 @@ The Parseval energy at each Walsh degree level satisfies:
 
 This follows from sum_v (-1)^{2*[v in N(S)]} = n.
 
-### (v) Connection to THM-053 and THM-067
+### (vi) Connection to THM-053 and THM-067
 
 This theorem bridges:
 - **THM-053** (M[v,v] = sum_P (-1)^{pos(v,P)}): the pos function is encoded in the highest Walsh degree (n-1), where the position character equals (-1)^{pos(v,path)} with no scaling.
@@ -103,8 +113,9 @@ The hierarchy terminates at k = (n-1)/2 where it recovers the full signed positi
 
 ## Scripts
 
+- `04-computation/pcd_verification.py` -- Comprehensive verification at n=3,5,7
 - `/tmp/pos_walsh_bridge.py` -- Initial discovery of even-degree-only property for M[v,v]
-- `/tmp/pos_walsh_detail.py` -- Detailed coefficient analysis by vertex role
-- `/tmp/pos_walsh_formula.py` -- Discovery and verification of the degree-2 and degree-4 formulas
-- `/tmp/pos_character_theorem.py` -- Full theorem verification with pattern counts
-- `/tmp/skeleton_walsh_eigenvalues.py` -- Energy decomposition verification
+- `/tmp/pos_walsh_formula.py` -- Discovery of degree-2 and degree-4 formulas
+- `/tmp/pcd_algebraic.py` -- Algebraic proof of degree-2 case
+- `/tmp/pcd_degree4_other_types.py` -- Even-length component rule discovery
+- `/tmp/pcd_even_length_proof.py` -- Proof of descent cancellation for odd-length components
