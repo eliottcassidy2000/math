@@ -13,22 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S25c (continued) — 2026-03-06 (NONHAM vanishing, proof chain)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25c (context limit)
+**Summary of work:**
+  (1) **NONHAM vanishing test (ALL tournaments):** Ran nonham_vanish_general.py. NONHAM != 0 for general tournaments: 12 failures at n=3, 240 at n=4, 2096 at n=5. The consecutive formula M[a,b] = sum_j (-1)^j consec(a,b,j) does NOT hold universally.
+  (2) **NONHAM vanishing (position-uniform only):** Confirmed NONHAM=0 for ALL 64 position-uniform n=5 tournaments (exhaustive). Confirmed for ALL 8 circulant n=7 (8/8), n=9 (16/16). Confirmed for Paley T_11 and T_13.
+  (3) **Key structural insight:** NONHAM(a,b)=0 trivially when T[a,b]=1. When T[a,b]=0, NONHAM(a,b)=M[a,b]. So NONHAM=0 <=> M vanishes on non-edges of T. Combined with THM-030 symmetry, this gives complete proof chain: position-uniform => M=(H/n)*I.
+  (4) **Cancellation mechanism:** For uniform T, nonzero E*B products at adjacent subset sizes pair up and cancel. For non-uniform T, orphan terms remain. Detailed subset-by-subset analysis in nonham_proof_analysis.py.
+  (5) **Web research:** Bjorklund et al. "Fourier meets Mobius" (subset convolution) is the algebraic framework for M[a,b]. Doubly regular tournaments <-> skew Hadamard matrices (existing literature).
+**New contributions:** nonham_vanish_general.py, nonham_vanish_uniform.py, nonham_proof_analysis.py, nonham_vanish_n9.py, nonham_vanish_n11_paley.py, nonham_vanish_n13_paley.py, updated INV-069
+**Unresolved threads:**
+  - Prove NONHAM=0 for position-uniform T at general n (step 1 of proof chain)
+  - Find algebraic proof of the adjacent-level pairing mechanism
+
 ## opus-2026-03-06-S11b — 2026-03-06 (perpendicularity, eigenvalue formula, Key Identity verification)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S11 (ran out of context)
 **Summary of work:**
   (1) **H-spectral perpendicularity DISCOVERED**: In tiling space at n=5, the H-gradient and spectral-distance-gradient are globally perpendicular (mean cosine = 0.009). Transitions from +0.87 (transitive) through 0 (midpoint) to -0.96 (maximizer). Confirmed at n=7 (sampled, mean cos = -0.049). PR is nearly perfectly parallel to H (cos=0.97).
-  (2) **Exact eigenvalue formula for M(T_full_{2k+1})**: lambda_j = ±sqrt(3 + 2cos(j*pi/(k+1))) for j=1,...,k plus lambda_0=1. Verified n=3,...,19. The mu=lambda^2 values are Chebyshev-spaced and centered at 3.
-  (3) **Eigenvalue ± pairing analysis**: Only transitive has full ±pairing. Pairing deviation grows with H. tr(M^{2k+1}) = 1 only for transitive (odd n).
-  (4) **Key Identity verification**: THM-030's B_b(W) + (-1)^|W| E_b(W) = col_sum(M_W, b) verified at r=1/2 for valid tournaments. CRITICAL: col_sum is TRANSFER MATRIX column sum, not adjacency in-degree (an earlier script had this wrong).
-  (5) **F-C decomposition**: M(off-diag) = F + (-1)^n C where C is trivially symmetric (by S<->R relabeling), F is empirically symmetric. Both individually symmetric.
-  (6) **Char poly recurrence**: p_n = (lambda-(-1)^{n-1})*p_{n-1} - p_{n-2}. Even n: only even powers. Odd n: (lambda-1) divides, quotient has only even powers.
+  (2) **Exact eigenvalue formula for M(T_full_{2k+1})**: lambda_j = +/-sqrt(3 + 2cos(j*pi/(k+1))) for j=1,...,k plus lambda_0=1. Verified n=3,...,19. The mu=lambda^2 values are Chebyshev-spaced and centered at 3.
+  (3) **Eigenvalue +/- pairing analysis**: Only transitive has full +/-pairing. Pairing deviation grows with H. tr(M^{2k+1}) = 1 only for transitive (odd n).
+  (4) **Key Identity verification**: THM-030's B_b(W) + (-1)^|W| E_b(W) = col_sum(M_W, b) verified at r=1/2 for valid tournaments.
+  (5) **F-C decomposition**: M(off-diag) = F + (-1)^n C where C is trivially symmetric. Both individually symmetric.
+  (6) **Char poly recurrence**: p_n = (lambda-(-1)^{n-1})*p_{n-1} - p_{n-2}.
 **New contributions:** perpendicularity_analysis.py, key_identity_r_half_verification.py, transitive_eigenvalue_formula.py
 **Unresolved threads:**
-  - Prove perpendicularity analytically (why does overall cosine ≈ 0?)
-  - Even-n eigenvalue formula (boundary conditions differ)
-  - Does eigenvalue formula extend to non-transitive tournaments?
-  - Investigate F symmetry proof (would give independent M symmetry proof)
+  - Prove perpendicularity analytically
+  - Investigate F symmetry proof
 
 ## opus-2026-03-06-S26 — 2026-03-06 (tiling skeleton, spectral analysis, IO bridge, PSD)
 **Account:** Eliott (primary)

@@ -762,9 +762,22 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 - All circulant ⟹ M scalar (verified n=3,5,7)
 - Paley T_7: |Aut|=21 (Frobenius Z/7Z⋊Z/3Z), sigma(x)=2x mod 7 is extra aut
 - opus finding: non-regular n=5 scalar M has Z/3Z aut, uniform endpoint counts, uniform 3-cycle participation
-**Algebraic proof:** OPEN. Fourier analysis shows circulant M is scalar iff all off-diagonal entries vanish. Cyclic symmetry alone doesn't force this — some deeper cancellation occurs.
-**Next step:** (1) Prove M=(H/n)*I for circulant tournaments algebraically. (2) Find precise characterization beyond n=5,7. (3) Test at n=9.
-**Scripts:** `04-computation/transfer_matrix_maximizers.py`, `04-computation/circulant_scalar_m_proof.py`, `04-computation/scalar_m_characterization.py`, `04-computation/scalar_m_n5_analysis.py`, `04-computation/circulant_m_scalar_proof.py`
+**NONHAM VANISHING (kind-pasteur S25c):** The split pair decomposition M[a,b] = HAM(a,b) + NONHAM(a,b) shows:
+- NONHAM(a,b) = 0 trivially when T[a,b]=1 (all split pairs are Ham paths)
+- NONHAM(a,b) = M[a,b] when T[a,b]=0 (junction always fails)
+- So NONHAM=0 for all (a,b) ⟺ M[a,b]=0 whenever T[a,b]=0
+- VERIFIED: NONHAM=0 for ALL position-uniform n=5 (64/64 exhaustive) and ALL circulant n=7 (8/8)
+- NONHAM ≠ 0 for general (non-uniform) tournaments at n=3,4,5
+**PROOF CHAIN (verified n=3,5,7):**
+1. Position-uniform ⟹ NONHAM=0 ⟹ M[a,b]=0 when T[a,b]=0
+2. THM-030: M[a,b]=M[b,a]
+3. For T[a,b]=1: T[b,a]=0 ⟹ M[b,a]=0 ⟹ M[a,b]=0 by symmetry
+4. M[a,a]=H/n from position uniformity
+5. M=(H/n)*I. QED (modulo proving step 1 at general n)
+**Algebraic proof of step 1:** OPEN. The cancellation mechanism: for uniform T, nonzero E*B products at adjacent subset sizes pair up and cancel. For non-uniform T, "orphan" terms remain.
+**Connection to Björklund et al.:** M[a,b] is a subset convolution in their "Fourier meets Möbius" framework.
+**Next step:** (1) Prove NONHAM=0 for position-uniform tournaments at general n. (2) Test at n=9 (circulant only, n=9 exhaustive infeasible). (3) Find algebraic proof of the pairing mechanism.
+**Scripts:** `04-computation/transfer_matrix_maximizers.py`, `04-computation/circulant_scalar_m_proof.py`, `04-computation/scalar_m_characterization.py`, `04-computation/scalar_m_n5_analysis.py`, `04-computation/circulant_m_scalar_proof.py`, `04-computation/nonham_vanish_general.py`, `04-computation/nonham_vanish_uniform.py`, `04-computation/nonham_proof_analysis.py`
 
 ### INV-070: Fibonacci determinant formula for transitive tournament
 **Source:** kind-pasteur-2026-03-06-S25c (T157)
