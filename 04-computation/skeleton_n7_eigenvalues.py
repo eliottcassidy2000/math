@@ -8,8 +8,9 @@ connected by GS (Grinberg-Stanley) tiling flips, then computes eigenvalues.
 At n=5: 8 SC classes, eigenvalues +/-(1+sqrt2), +/-1, +/-1, +/-(sqrt2-1).
 At n=7: 88 SC classes forming an 88x88 skeleton.
 
-Optimization: use refined invariant (score seq + A^2 row sums + A^3 diagonal)
-to bucket tournaments, then compute canonical form only within each bucket.
+Strategy: represent each tournament as a bitmask of upper-triangle entries,
+precompute the permutation action on bitmasks, then find canonical forms
+by taking the minimum over all 5040 permuted bitmasks.
 
 kind-pasteur-2026-03-07
 """
@@ -20,66 +21,136 @@ import time
 import sys
 
 # ============================================================
-# Core tournament functions
+# Fast canonical form using bitmask representation
 # ============================================================
 
-def tournament_from_tiling(n, tiling_bits):
-    """Build tournament adjacency matrix from tiling bits.
-    Edges indexed as: for i in range(n), for j in range(i+2, n).
-    The (i, i+1) edges are always directed i -> i+1 (Hamiltonian path).
+def precompute_perm_tables(n):
+    """Precompute how each permutation acts on the upper-triangle bit encoding.
+
+    Encoding: bit k corresponds to (i,j) where i<j, enumerated in order.
+    A[i][j]=1 iff bit k is set. For i>j, A[i][j] = 1 - A[j][i].
     """
-    A = [[0]*n for _ in range(n)]
-    for i in range(n-1):
-        A[i][i+1] = 1
-    idx = 0
+    # Build the (i,j) pairs for upper triangle
+    pairs = []
     for i in range(n):
-        for j in range(i+2, n):
-            if (tiling_bits >> idx) & 1:
+        for j in range(i+1, n):
+            pairs.append((i, j))
+    npairs = len(pairs)
+    pair_to_idx = {p: k for k, p in enumerate(pairs)}
+
+    # For each permutation, compute the bit remapping
+    perm_tables = []  # list of (source_bits_mask, target_bit_idx, flip_needed)
+
+    for perm in permutations(range(n)):
+        # After applying perm, edge (i,j) with i<j maps to (perm[i], perm[j])
+        # If perm[i] < perm[j], the new position is pair_to_idx[(perm[i], perm[j])]
+        # If perm[i] > perm[j], we need to flip the bit
+        table = []  # for each source bit k: (target_bit, flip)
+        for k, (i, j) in enumerate(pairs):
+            pi, pj = perm[i], perm[j]
+            if pi < pj:
+                target = pair_to_idx[(pi, pj)]
+                flip = False
+            else:
+                target = pair_to_idx[(pj, pi)]
+                flip = True
+            table.append((target, flip))
+        perm_tables.append(table)
+
+    return pairs, npairs, perm_tables
+
+def apply_perm_to_bits(bits, table, npairs):
+    """Apply a permutation to a bitmask tournament representation."""
+    result = 0
+    for k in range(npairs):
+        target, flip = table[k]
+        bit_val = (bits >> k) & 1
+        if flip:
+            bit_val = 1 - bit_val
+        if bit_val:
+            result |= (1 << target)
+    return result
+
+def canonical_fast(bits, perm_tables, npairs):
+    """Find canonical form by taking minimum over all permutations."""
+    best = bits
+    for table in perm_tables:
+        form = apply_perm_to_bits(bits, table, npairs)
+        if form < best:
+            best = form
+    return best
+
+def tournament_from_upper_bits(n, ubits):
+    """Build adjacency matrix from upper-triangle bitmask."""
+    A = [[0]*n for _ in range(n)]
+    k = 0
+    for i in range(n):
+        for j in range(i+1, n):
+            if (ubits >> k) & 1:
                 A[i][j] = 1
             else:
                 A[j][i] = 1
-            idx += 1
+            k += 1
     return A
+
+def tiling_to_upper(n, tiling_bits):
+    """Convert tiling encoding to upper-triangle encoding.
+
+    Tiling encoding: edge (i, i+1) always i->i+1 (not in bits).
+    Other edges: for i in range(n), for j in range(i+2, n).
+
+    Upper-triangle encoding: all (i,j) with i<j, in order.
+    """
+    # Build the tiling edge list
+    tiling_edges = []
+    for i in range(n):
+        for j in range(i+2, n):
+            tiling_edges.append((i, j))
+
+    # Build upper-triangle pairs
+    upper_pairs = []
+    for i in range(n):
+        for j in range(i+1, n):
+            upper_pairs.append((i, j))
+    upper_idx = {p: k for k, p in enumerate(upper_pairs)}
+
+    # Start with all spine edges i->i+1
+    ubits = 0
+    for i in range(n-1):
+        ubits |= (1 << upper_idx[(i, i+1)])
+
+    # Add tiling bits
+    for tidx, (i, j) in enumerate(tiling_edges):
+        if (tiling_bits >> tidx) & 1:
+            ubits |= (1 << upper_idx[(i, j)])
+        # else: j->i, which means A[i][j]=0, already 0
+
+    return ubits
+
+def upper_to_tiling(n, ubits):
+    """Convert upper-triangle encoding back to tiling encoding."""
+    upper_pairs = []
+    for i in range(n):
+        for j in range(i+1, n):
+            upper_pairs.append((i, j))
+    upper_idx = {p: k for k, p in enumerate(upper_pairs)}
+
+    tiling_edges = []
+    for i in range(n):
+        for j in range(i+2, n):
+            tiling_edges.append((i, j))
+
+    tiling_bits = 0
+    for tidx, (i, j) in enumerate(tiling_edges):
+        if (ubits >> upper_idx[(i, j)]) & 1:
+            tiling_bits |= (1 << tidx)
+
+    return tiling_bits
 
 def num_tiling_bits(n):
     return n*(n-1)//2 - (n-1)
 
-def score_seq(A, n):
-    return tuple(sorted(sum(A[i]) for i in range(n)))
-
-def refined_invariant(A, n):
-    """Strong invariant: score seq + A^2 row sums + A^3 diagonal sums."""
-    scores = tuple(sorted(sum(A[i]) for i in range(n)))
-    A2 = [[sum(A[i][k]*A[k][j] for k in range(n)) for j in range(n)] for i in range(n)]
-    a2_scores = tuple(sorted(sum(A2[i]) for i in range(n)))
-    # A^3 diagonal = sum_j A2[i][j]*A[j][i] for each i
-    a3_diag = tuple(sorted(sum(A2[i][j]*A[j][i] for j in range(n)) for i in range(n)))
-    return (scores, a2_scores, a3_diag)
-
-def canonical(A, n):
-    """Canonical form via full permutation search."""
-    best = None
-    for perm in permutations(range(n)):
-        form = tuple(A[perm[i]][perm[j]] for i in range(n) for j in range(n) if i != j)
-        if best is None or form < best:
-            best = form
-    return best
-
-def converse(A, n):
-    return [[A[j][i] for j in range(n)] for i in range(n)]
-
-def is_isomorphic(A, B, n):
-    """Check if A and B are isomorphic (faster than full canonical)."""
-    target = tuple(B[i][j] for i in range(n) for j in range(n) if i != j)
-    for perm in permutations(range(n)):
-        form = tuple(A[perm[i]][perm[j]] for i in range(n) for j in range(n) if i != j)
-        if form == target:
-            return True
-    return False
-
 def tiling_transpose_pairs(n):
-    """Find pairs of tiling bit positions that are swapped by the
-    vertex reversal i -> n-1-i (which maps T to its converse)."""
     edges = []
     for i in range(n):
         for j in range(i+2, n):
@@ -103,7 +174,6 @@ def tiling_transpose_pairs(n):
     return pairs, fixed
 
 def gen_gs_tilings(n, pairs, fixed):
-    """Generate all GS tilings (those invariant under transpose pairing)."""
     gs_dof = len(pairs) + len(fixed)
     result = []
     for free_val in range(2**gs_dof):
@@ -148,99 +218,91 @@ def count_ham_paths(A, n):
                     dp[mask | (1 << nxt)][nxt] += dp[mask][last]
     return sum(dp[full])
 
+def converse_upper(ubits, n):
+    """Compute the converse (transpose) tournament in upper-triangle encoding."""
+    npairs = n*(n-1)//2
+    # Flip all bits: A[i][j] <-> A[j][i] means upper bit flips
+    return ubits ^ ((1 << npairs) - 1)
+
 # ============================================================
-# Phase 1: Build isomorphism class database
+# Main computation
 # ============================================================
 
-def build_class_database(n):
-    """Build class database for ALL tilings using refined invariant bucketing."""
+def main():
+    n = 7
     m = num_tiling_bits(n)
-    total = 2**m
+    npairs_upper = n*(n-1)//2  # 21 for n=7
+    total_tilings = 2**m  # 2^15 = 32768
 
-    print(f"Phase 1: Building class database for n={n}")
-    print(f"  Tiling bits: {m}, Total tilings: {total}")
+    t_start = time.time()
+    print(f"SKELETON EIGENVALUE ANALYSIS at n={n}")
+    print(f"{'='*70}")
+    print(f"  Tiling bits: {m}, Total tilings: {total_tilings}")
+    print(f"  Upper-triangle bits: {npairs_upper}")
+
+    # Phase 0: Precompute permutation tables
+    print(f"\nPhase 0: Precomputing permutation tables...")
     t0 = time.time()
-
-    # Step 1: Group all tilings by refined invariant
-    ri_groups = defaultdict(list)
-    for bits in range(total):
-        A = tournament_from_tiling(n, bits)
-        ri = refined_invariant(A, n)
-        ri_groups[ri].append(bits)
-
+    pairs, npairs, perm_tables = precompute_perm_tables(n)
     t1 = time.time()
-    print(f"  Refined invariant grouping: {t1-t0:.1f}s, {len(ri_groups)} groups")
+    print(f"  {len(perm_tables)} permutations, {npairs} edge pairs")
+    print(f"  Time: {t1-t0:.1f}s")
 
-    # Step 2: Within each group, find isomorphism classes
-    canon_db = {}      # canonical form -> class_idx
-    class_list = []    # list of class info dicts
-    bits_to_class = {} # tiling bits -> class_idx
+    # Phase 1: Convert all tilings to upper-triangle and compute canonical forms
+    print(f"\nPhase 1: Computing canonical forms for all {total_tilings} tilings...")
+    t1 = time.time()
 
-    groups_done = 0
-    for ri, bits_list in ri_groups.items():
-        groups_done += 1
-        if groups_done % 50 == 0:
-            print(f"    Processing group {groups_done}/{len(ri_groups)}...", flush=True)
+    tiling_to_canon = {}  # tiling_bits -> canonical form (upper encoding)
+    canon_to_class = {}   # canonical form -> class index
+    class_list = []       # class info
+    bits_to_class = {}    # tiling_bits -> class index
 
-        # Within this group, cluster by isomorphism
-        group_classes = []  # list of (canon, class_idx, rep_A)
+    for tiling_bits in range(total_tilings):
+        ubits = tiling_to_upper(n, tiling_bits)
+        canon = canonical_fast(ubits, perm_tables, npairs)
 
-        for bits in bits_list:
-            A = tournament_from_tiling(n, bits)
+        if canon not in canon_to_class:
+            idx = len(class_list)
+            canon_to_class[canon] = idx
 
-            # Try to match against existing classes in this group
-            matched = False
-            for gc_canon, gc_idx, gc_rep in group_classes:
-                if is_isomorphic(A, gc_rep, n):
-                    bits_to_class[bits] = gc_idx
-                    class_list[gc_idx]['tilings'].add(bits)
-                    matched = True
-                    break
+            # Check SC: is converse isomorphic?
+            conv = converse_upper(ubits, n)
+            canon_conv = canonical_fast(conv, perm_tables, npairs)
+            sc = (canon == canon_conv)
 
-            if not matched:
-                # New class - compute canonical form
-                c = canonical(A, n)
-                if c in canon_db:
-                    idx = canon_db[c]
-                    bits_to_class[bits] = idx
-                    class_list[idx]['tilings'].add(bits)
-                    group_classes.append((c, idx, class_list[idx]['rep']))
-                else:
-                    idx = len(class_list)
-                    canon_db[c] = idx
-                    # Check SC: is converse isomorphic to original?
-                    A_op = converse(A, n)
-                    c_op = canonical(A_op, n)
-                    sc = (c == c_op)
-                    scores = score_seq(A, n)
-                    class_list.append({
-                        'canon': c, 'rep': A, 'tilings': {bits}, 'sc': sc,
-                        'scores': scores, 'gs_tilings': set(),
-                    })
-                    bits_to_class[bits] = idx
-                    group_classes.append((c, idx, A))
+            A = tournament_from_upper_bits(n, ubits)
+            scores = tuple(sorted(sum(A[i]) for i in range(n)))
+
+            class_list.append({
+                'canon': canon, 'rep_ubits': ubits, 'rep': A,
+                'sc': sc, 'scores': scores,
+                'tilings': {tiling_bits}, 'gs_tilings': set()
+            })
+        else:
+            idx = canon_to_class[canon]
+            class_list[idx]['tilings'].add(tiling_bits)
+
+        bits_to_class[tiling_bits] = idx
+
+        if (tiling_bits + 1) % 5000 == 0:
+            elapsed = time.time() - t1
+            rate = (tiling_bits + 1) / elapsed
+            eta = (total_tilings - tiling_bits - 1) / rate
+            print(f"  {tiling_bits+1}/{total_tilings} ({elapsed:.1f}s, ETA {eta:.0f}s)", flush=True)
 
     t2 = time.time()
     num_classes = len(class_list)
     num_sc = sum(1 for c in class_list if c['sc'])
-    print(f"  Canonical form computation: {t2-t1:.1f}s")
-    print(f"  {num_classes} total classes, {num_sc} SC, {num_classes - num_sc} NSC")
-    print(f"  Total phase 1 time: {t2-t0:.1f}s")
+    print(f"  Done: {num_classes} classes, {num_sc} SC, {num_classes - num_sc} NSC")
+    print(f"  Time: {t2-t1:.1f}s")
 
-    return class_list, bits_to_class, canon_db
+    # Phase 2: Build GS flip skeleton
+    print(f"\nPhase 2: Building GS flip skeleton...")
+    t2 = time.time()
 
-# ============================================================
-# Phase 2: Build skeleton adjacency matrix
-# ============================================================
-
-def build_skeleton(n, class_list, bits_to_class):
-    """Build the GS flip skeleton adjacency matrix for SC classes."""
-    m = num_tiling_bits(n)
-    pairs, fixed = tiling_transpose_pairs(n)
-    gs_tilings = gen_gs_tilings(n, pairs, fixed)
-    gs_dof = len(pairs) + len(fixed)
-
-    print(f"\nPhase 2: Building GS flip skeleton")
+    tp_pairs, tp_fixed = tiling_transpose_pairs(n)
+    gs_tilings = gen_gs_tilings(n, tp_pairs, tp_fixed)
+    gs_dof = len(tp_pairs) + len(tp_fixed)
     print(f"  GS DOF: {gs_dof}, GS tilings: {len(gs_tilings)}")
 
     # Mark GS tilings
@@ -248,18 +310,20 @@ def build_skeleton(n, class_list, bits_to_class):
         idx = bits_to_class[bits]
         class_list[idx]['gs_tilings'].add(bits)
 
-    # SC classes only
     sc_indices = [i for i, c in enumerate(class_list) if c['sc']]
+    sc_set = set(sc_indices)
     sc_to_local = {v: i for i, v in enumerate(sc_indices)}
     nsc = len(sc_indices)
     print(f"  SC classes: {nsc}")
 
-    # Build adjacency matrix (weighted by number of GS tilings connecting them)
+    # Build adjacency matrices
     K_weighted = np.zeros((nsc, nsc))
-    K_binary = np.zeros((nsc, nsc))  # unweighted (0/1)
+    K_binary = np.zeros((nsc, nsc))
 
     same_class = 0
     cross_class = 0
+    sc_to_sc = 0
+    sc_to_nsc = 0
 
     for bits in gs_tilings:
         c_from = bits_to_class[bits]
@@ -270,61 +334,97 @@ def build_skeleton(n, class_list, bits_to_class):
             same_class += 1
         else:
             cross_class += 1
-            if c_from in sc_to_local and c_to in sc_to_local:
+            if c_from in sc_set and c_to in sc_set:
+                sc_to_sc += 1
                 i, j = sc_to_local[c_from], sc_to_local[c_to]
                 K_weighted[i][j] += 1
-                K_weighted[j][i] = K_weighted[i][j]  # symmetric
                 K_binary[i][j] = 1
                 K_binary[j][i] = 1
+            elif c_from in sc_set or c_to in sc_set:
+                sc_to_nsc += 1
 
-    print(f"  Same-class flips: {same_class}, Cross-class flips: {cross_class}")
+    # Make weighted symmetric
+    K_weighted = (K_weighted + K_weighted.T) / 2  # each edge counted from both sides
+    # Actually: each GS tiling flip is counted once (bits -> flipped).
+    # If c_from and c_to are both SC, it's counted once from c_from's perspective.
+    # The reverse (flipped -> bits) is also a GS tiling (since flipping is involution).
+    # So K_weighted already double-counts. Let me fix this.
 
-    # Compute class properties
-    for idx in sc_indices:
-        if 't3' not in class_list[idx]:
-            A = class_list[idx]['rep']
-            class_list[idx]['t3'] = count_3cycles(A, n)
-            class_list[idx]['H'] = count_ham_paths(A, n)
+    # Recount properly
+    K_weighted = np.zeros((nsc, nsc))
+    for bits in gs_tilings:
+        c_from = bits_to_class[bits]
+        flipped = flip_tiling(bits, m)
+        c_to = bits_to_class[flipped]
+        if c_from != c_to and c_from in sc_set and c_to in sc_set:
+            i, j = sc_to_local[c_from], sc_to_local[c_to]
+            K_weighted[i][j] += 1
+    # Now K_weighted[i][j] = # GS tilings in class i that flip to class j
+    # This is NOT symmetric in general! But for the skeleton, we want
+    # the undirected weight = total crossings between i and j
+    K_sym = (K_weighted + K_weighted.T)  # total crossings (each pair counted from both sides)
+    # Actually K_weighted[i][j] + K_weighted[j][i] = total GS tilings connecting i and j
+    # For eigenvalue analysis, use the symmetric version
 
-    return K_weighted, K_binary, sc_indices, sc_to_local
+    print(f"  Same-class flips: {same_class}")
+    print(f"  Cross-class (SC-SC): {sc_to_sc}")
+    print(f"  Cross-class (SC-NSC): {sc_to_nsc}")
 
-# ============================================================
-# Phase 3: Spectral analysis
-# ============================================================
+    # Check symmetry
+    asym = np.max(np.abs(K_weighted - K_weighted.T))
+    print(f"  Max asymmetry in K_weighted: {asym}")
 
-def spectral_analysis(K, sc_indices, class_list, n):
-    """Full spectral analysis of the skeleton adjacency matrix."""
+    t3 = time.time()
+    print(f"  Time: {t3-t2:.1f}s")
+
+    # Phase 3: Compute t3 and H for SC classes
+    print(f"\nPhase 3: Computing t3 and H for {nsc} SC classes...")
+    t3 = time.time()
+    for i, idx in enumerate(sc_indices):
+        A = class_list[idx]['rep']
+        class_list[idx]['t3'] = count_3cycles(A, n)
+        class_list[idx]['H'] = count_ham_paths(A, n)
+    t4 = time.time()
+    print(f"  Time: {t4-t3:.1f}s")
+
+    # Phase 4: Spectral analysis
+    print(f"\n{'='*70}")
+    print(f"SPECTRAL ANALYSIS OF WEIGHTED SKELETON")
+    print(f"{'='*70}")
+    analyze_spectrum(K_weighted, sc_indices, class_list, n, "weighted")
+
+    print(f"\n\n{'='*70}")
+    print(f"SPECTRAL ANALYSIS OF BINARY (0/1) SKELETON")
+    print(f"{'='*70}")
+    analyze_spectrum(K_binary, sc_indices, class_list, n, "binary")
+
+    t_end = time.time()
+    print(f"\n\nTotal computation time: {t_end - t_start:.1f}s")
+
+    # Save data
+    print(f"\n--- SAVING DATA ---")
+    np.savez('C:/Users/Eliott/Documents/GitHub/math/04-computation/skeleton_n7_data.npz',
+             K_weighted=K_weighted, K_binary=K_binary,
+             sc_indices=np.array(sc_indices),
+             t3_vals=np.array([class_list[idx]['t3'] for idx in sc_indices]),
+             H_vals=np.array([class_list[idx]['H'] for idx in sc_indices]),
+             scores=np.array([str(class_list[idx]['scores']) for idx in sc_indices]))
+    print(f"  Saved to skeleton_n7_data.npz")
+
+def analyze_spectrum(K, sc_indices, class_list, n, label):
     nsc = len(sc_indices)
 
-    print(f"\n{'='*70}")
-    print(f"SPECTRAL ANALYSIS: n={n}, {nsc}x{nsc} skeleton")
-    print(f"{'='*70}")
+    # Make K symmetric for eigenvalue computation
+    K_sym = (K + K.T) / 2
 
-    # Compute t3 and H for all SC classes
-    print(f"\nComputing t3 and H for {nsc} SC classes...")
-    t0 = time.time()
-    for i, idx in enumerate(sc_indices):
-        if 't3' not in class_list[idx]:
-            A = class_list[idx]['rep']
-            class_list[idx]['t3'] = count_3cycles(A, n)
-        if 'H' not in class_list[idx]:
-            A = class_list[idx]['rep']
-            class_list[idx]['H'] = count_ham_paths(A, n)
-        if (i+1) % 20 == 0:
-            print(f"  {i+1}/{nsc} done...", flush=True)
-    t1 = time.time()
-    print(f"  Done in {t1-t0:.1f}s")
+    # Eigenvalues
+    evals = np.linalg.eigvalsh(K_sym)
+    evals_sorted = np.sort(evals)[::-1]
 
-    # 1. Eigenvalues
-    print(f"\n--- EIGENVALUES ---")
-    evals = np.linalg.eigvalsh(K)
-    evals_sorted = np.sort(evals)[::-1]  # descending
-
-    # Round and find distinct
-    evals_rounded = np.round(evals_sorted, 6)
+    # Find distinct eigenvalues
     distinct = []
     multiplicities = []
-    for ev in evals_rounded:
+    for ev in evals_sorted:
         found = False
         for i, d in enumerate(distinct):
             if abs(ev - d) < 1e-5:
@@ -335,45 +435,47 @@ def spectral_analysis(K, sc_indices, class_list, n):
             distinct.append(ev)
             multiplicities.append(1)
 
+    print(f"\n--- EIGENVALUES ({label}) ---")
     print(f"\nAll {nsc} eigenvalues (descending):")
     for i in range(0, len(evals_sorted), 10):
         chunk = evals_sorted[i:i+10]
         print(f"  [{i:3d}-{i+len(chunk)-1:3d}]: {[f'{e:.6f}' for e in chunk]}")
 
-    print(f"\nDistinct eigenvalues (with multiplicities):")
-    for d, m in zip(distinct, multiplicities):
-        print(f"  {d:+12.6f}  (mult {m})")
+    print(f"\nDistinct eigenvalues ({len(distinct)} total, with multiplicities):")
+    for d, mult in zip(distinct, multiplicities):
+        print(f"  {d:+12.6f}  (mult {mult})")
 
-    # 2. Bipartite check: eigenvalues in +/- pairs
-    print(f"\n--- BIPARTITE SIGNATURE CHECK ---")
-    pos_evals = sorted([e for e in evals_sorted if e > 1e-8], reverse=True)
-    neg_evals = sorted([-e for e in evals_sorted if e < -1e-8], reverse=True)
-    zero_evals = [e for e in evals_sorted if abs(e) < 1e-8]
+    # Bipartite check
+    print(f"\n--- BIPARTITE SIGNATURE CHECK ({label}) ---")
+    pos_evals = sorted([e for e in evals_sorted if e > 1e-6], reverse=True)
+    neg_evals = sorted([-e for e in evals_sorted if e < -1e-6], reverse=True)
+    zero_evals = [e for e in evals_sorted if abs(e) < 1e-6]
 
     print(f"  Positive: {len(pos_evals)}, Negative: {len(neg_evals)}, Zero: {len(zero_evals)}")
 
     is_bipartite = True
     if len(pos_evals) != len(neg_evals):
         is_bipartite = False
-        print(f"  NOT bipartite: unequal +/- counts")
+        print(f"  NOT bipartite: unequal +/- counts ({len(pos_evals)} vs {len(neg_evals)})")
     else:
-        for p, n_val in zip(pos_evals, neg_evals):
-            if abs(p - n_val) > 1e-4:
-                is_bipartite = False
-                print(f"  NOT bipartite: {p:.6f} vs {n_val:.6f}")
-                break
-        if is_bipartite:
+        max_diff = 0
+        for p, nv in zip(pos_evals, neg_evals):
+            max_diff = max(max_diff, abs(p - nv))
+        print(f"  Max |lambda_+ - |lambda_-||: {max_diff:.8f}")
+        if max_diff < 1e-4:
             print(f"  BIPARTITE confirmed: all eigenvalues in +/- pairs")
+        else:
+            is_bipartite = False
+            print(f"  NOT bipartite: +/- pairing fails")
 
-    # Also check via t3 parity coloring
+    # Check t3 parity bipartiteness
     t3_vals = [class_list[idx]['t3'] for idx in sc_indices]
     t3_parities = [t % 2 for t in t3_vals]
 
-    # Check if K only connects different parities
     bipartite_by_t3 = True
     for i in range(nsc):
         for j in range(nsc):
-            if K[i][j] > 0 and t3_parities[i] == t3_parities[j]:
+            if K_sym[i][j] > 0 and t3_parities[i] == t3_parities[j]:
                 bipartite_by_t3 = False
                 break
         if not bipartite_by_t3:
@@ -384,182 +486,177 @@ def spectral_analysis(K, sc_indices, class_list, n):
         side_B = sum(1 for p in t3_parities if p == 0)
         print(f"  Side A (odd t3): {side_A}, Side B (even t3): {side_B}")
 
-    # 3. Algebraic number identification
-    print(f"\n--- ALGEBRAIC NUMBER IDENTIFICATION ---")
+    # Algebraic number identification
+    print(f"\n--- ALGEBRAIC NUMBER IDENTIFICATION ({label}) ---")
     sqrt2 = np.sqrt(2)
     sqrt3 = np.sqrt(3)
     sqrt5 = np.sqrt(5)
-    phi = (1 + sqrt5) / 2  # golden ratio
-    silver = 1 + sqrt2      # silver ratio
+    sqrt6 = np.sqrt(6)
+    sqrt7 = np.sqrt(7)
 
-    algebraic_candidates = {
-        'sqrt(2)': sqrt2, '-sqrt(2)': -sqrt2,
-        'sqrt(3)': sqrt3, '-sqrt(3)': -sqrt3,
-        'sqrt(5)': sqrt5, '-sqrt(5)': -sqrt5,
-        'phi': phi, '-phi': -phi,
-        '1/phi': 1/phi, '-1/phi': -1/phi,
-        'silver': silver, '-silver': -silver,
-        'sqrt(2)-1': sqrt2-1, '-(sqrt(2)-1)': -(sqrt2-1),
-    }
+    candidates = {}
+    # a + b*sqrt(r) for small a, b, r
+    for a_num in range(-30, 31):
+        for a_den in [1, 2, 3, 4, 5, 6]:
+            a = a_num / a_den
+            for b_num in range(-10, 11):
+                for b_den in [1, 2, 3, 4, 5, 6]:
+                    b = b_num / b_den
+                    if b == 0 and a_den == 1:
+                        continue  # already covered by integer check
+                    for rval, rname in [(sqrt2,'s2'), (sqrt3,'s3'), (sqrt5,'s5'),
+                                        (sqrt6,'s6'), (sqrt7,'s7')]:
+                        val = a + b*rval
+                        if abs(val) < max(abs(evals_sorted)) + 2:
+                            name = f"{a_num}/{a_den}+{b_num}/{b_den}*{rname}"
+                            candidates[val] = name
 
-    # Also check small integer + sqrt combinations
-    for a in range(-10, 11):
-        for b in [0, 1, -1, 2, -2, 3, -3]:
-            for r in [sqrt2, sqrt3, sqrt5]:
-                val = a + b*r
-                name = f"{a}+{b}*{['sqrt2','sqrt3','sqrt5'][[sqrt2,sqrt3,sqrt5].index(r)]}"
-                if abs(val) < max(abs(evals_sorted)) + 1:
-                    algebraic_candidates[name] = val
-
-    # Also check a/b * sqrt(c)
-    for a in range(1, 11):
-        for b in range(1, 11):
-            for r in [sqrt2, sqrt3, sqrt5]:
-                val = a/b * r
-                rname = ['sqrt2','sqrt3','sqrt5'][[sqrt2,sqrt3,sqrt5].index(r)]
-                algebraic_candidates[f"{a}/{b}*{rname}"] = val
-                algebraic_candidates[f"-{a}/{b}*{rname}"] = -val
-
-    matched = {}
+    identified = {}
     for ev in evals_sorted:
+        # Check integer
+        if abs(ev - round(ev)) < 1e-5:
+            identified[round(ev, 6)] = str(int(round(ev)))
+            continue
+        # Check simple fractions
+        found_frac = False
+        for den in range(2, 13):
+            num = round(ev * den)
+            if abs(ev - num/den) < 1e-5:
+                identified[round(ev, 6)] = f"{num}/{den}"
+                found_frac = True
+                break
+        if found_frac:
+            continue
+        # Check algebraic
         best_name = None
-        best_diff = 1e-3  # threshold
-        for name, val in algebraic_candidates.items():
+        best_diff = 1e-4
+        for val, name in candidates.items():
             if abs(ev - val) < best_diff:
                 best_diff = abs(ev - val)
                 best_name = name
         if best_name:
-            matched[round(ev, 6)] = best_name
-        # Also check if it's a small rational
-        for num in range(-50, 51):
-            for den in range(1, 21):
-                if abs(ev - num/den) < 1e-5:
-                    if round(ev, 6) not in matched:
-                        matched[round(ev, 6)] = f"{num}/{den}"
+            identified[round(ev, 6)] = best_name
 
-    print(f"  Identified algebraic eigenvalues:")
-    for ev_val, name in sorted(matched.items(), reverse=True):
-        print(f"    {ev_val:+12.6f} = {name}")
+    if identified:
+        print(f"  Identified eigenvalues:")
+        for ev_val, name in sorted(identified.items(), reverse=True):
+            print(f"    {ev_val:+12.6f} = {name}")
+    else:
+        print(f"  No simple algebraic identifications found")
 
-    # 4. Try to find minimal polynomials
-    print(f"\n--- MINIMAL POLYNOMIAL SEARCH ---")
+    # Minimal polynomial search
+    print(f"\n--- MINIMAL POLYNOMIAL SEARCH ({label}) ---")
     for d, mult in zip(distinct, multiplicities):
-        # Try to find integer polynomial of degree <= 4 that d satisfies
-        x = d
+        x = float(d)
         found = False
-        for deg in range(1, 7):
-            # Try p(x) = 0 with integer coefficients
-            # Use numpy to check
-            if deg == 1:
-                # ax + b = 0 => x = -b/a
-                for a in range(1, 20):
-                    b = -round(a * x)
-                    if abs(a*x + b) < 1e-4:
-                        print(f"  {d:+12.6f} (mult {mult}): root of {a}x + {b}")
-                        found = True
-                        break
-            elif deg == 2:
-                # ax^2 + bx + c = 0
-                for a in range(1, 20):
-                    for b in range(-30, 31):
-                        c = -round(a*x**2 + b*x)
-                        if abs(a*x**2 + b*x + c) < 1e-3:
-                            disc = b*b - 4*a*c
-                            print(f"  {d:+12.6f} (mult {mult}): root of {a}x^2 + {b}x + {c}  [disc={disc}]")
+        # Degree 1: integer or rational
+        for den in range(1, 20):
+            num = round(x * den)
+            if abs(x * den - num) < 1e-4:
+                if den == 1:
+                    print(f"  {d:+12.6f} (mult {mult}): integer {num}")
+                else:
+                    print(f"  {d:+12.6f} (mult {mult}): rational {num}/{den}")
+                found = True
+                break
+        if found:
+            continue
+        # Degree 2: ax^2 + bx + c = 0
+        for a in range(1, 15):
+            for b in range(-40, 41):
+                c = -round(a*x**2 + b*x)
+                if abs(a*x**2 + b*x + c) < 1e-3:
+                    disc = b*b - 4*a*c
+                    print(f"  {d:+12.6f} (mult {mult}): root of {a}x^2 + {b}x + {c}  [disc={disc}]")
+                    found = True
+                    break
+            if found:
+                break
+        if found:
+            continue
+        # Degree 3
+        for a in range(1, 8):
+            for b in range(-20, 21):
+                for c in range(-40, 41):
+                    dd = -round(a*x**3 + b*x**2 + c*x)
+                    if abs(a*x**3 + b*x**2 + c*x + dd) < 5e-2:
+                        # Verify more carefully
+                        if abs(a*x**3 + b*x**2 + c*x + dd) < 1e-2:
+                            print(f"  {d:+12.6f} (mult {mult}): root of {a}x^3 + {b}x^2 + {c}x + {dd}")
                             found = True
                             break
-                    if found:
-                        break
-            elif deg == 3:
-                for a in range(1, 10):
-                    for b in range(-15, 16):
-                        for c in range(-30, 31):
-                            dd = -round(a*x**3 + b*x**2 + c*x)
-                            if abs(a*x**3 + b*x**2 + c*x + dd) < 1e-2:
-                                print(f"  {d:+12.6f} (mult {mult}): root of {a}x^3 + {b}x^2 + {c}x + {dd}")
-                                found = True
-                                break
+                if found:
+                    break
+            if found:
+                break
+        if not found:
+            # Degree 4
+            for a in range(1, 5):
+                for b in range(-15, 16):
+                    for c in range(-30, 31):
+                        for dd in range(-50, 51):
+                            ee = -round(a*x**4 + b*x**3 + c*x**2 + dd*x)
+                            val = a*x**4 + b*x**3 + c*x**2 + dd*x + ee
+                            if abs(val) < 1e-1:
+                                if abs(val) < 5e-2:
+                                    print(f"  {d:+12.6f} (mult {mult}): root of {a}x^4 + {b}x^3 + {c}x^2 + {dd}x + {ee}")
+                                    found = True
+                                    break
                         if found:
                             break
                     if found:
                         break
-            if found:
-                break
+                if found:
+                    break
         if not found:
-            print(f"  {d:+12.6f} (mult {mult}): no small polynomial found (deg <= 6)")
+            print(f"  {d:+12.6f} (mult {mult}): no small polynomial found")
 
-    # 5. Spectral gap
-    print(f"\n--- SPECTRAL GAP ---")
+    # Spectral gap
+    print(f"\n--- SPECTRAL GAP ({label}) ---")
     lambda1 = evals_sorted[0]
     lambda2 = evals_sorted[1]
     gap = lambda1 - lambda2
     print(f"  Largest eigenvalue:  {lambda1:.6f}")
     print(f"  Second largest:      {lambda2:.6f}")
     print(f"  Spectral gap:        {gap:.6f}")
-    print(f"  Ratio lambda2/lambda1: {lambda2/lambda1:.6f}")
+    if lambda1 > 0:
+        print(f"  Ratio lambda2/lambda1: {lambda2/lambda1:.6f}")
 
-    # 6. Degree and t3 projections onto eigenspaces
-    print(f"\n--- EIGENVECTOR PROJECTIONS ---")
-    evals_full, evecs = np.linalg.eigh(K)
+    # Eigenvector projections
+    print(f"\n--- EIGENVECTOR PROJECTIONS ({label}) ---")
+    evals_full, evecs = np.linalg.eigh(K_sym)
     idx_sorted = np.argsort(-evals_full)
 
-    # Degree vector
-    degree = K.sum(axis=1)
-    print(f"\n  Degree vector stats: min={degree.min():.0f}, max={degree.max():.0f}, "
-          f"mean={degree.mean():.1f}, std={degree.std():.1f}")
-
-    # t3 vector
+    degree = K_sym.sum(axis=1)
     t3_vec = np.array([class_list[idx]['t3'] for idx in sc_indices], dtype=float)
-    print(f"  t3 vector stats: min={t3_vec.min():.0f}, max={t3_vec.max():.0f}, "
-          f"mean={t3_vec.mean():.1f}, std={t3_vec.std():.1f}")
-
-    # H vector
     H_vec = np.array([class_list[idx]['H'] for idx in sc_indices], dtype=float)
-    print(f"  H vector stats: min={H_vec.min():.0f}, max={H_vec.max():.0f}, "
-          f"mean={H_vec.mean():.1f}, std={H_vec.std():.1f}")
 
-    # Project onto eigenspaces
-    print(f"\n  Degree vector projection (top 10 eigenspaces):")
-    deg_centered = degree - degree.mean()
-    deg_norm = np.linalg.norm(deg_centered)
-    if deg_norm > 0:
+    print(f"\n  Degree: min={degree.min():.0f}, max={degree.max():.0f}, mean={degree.mean():.1f}")
+    print(f"  t3:     min={t3_vec.min():.0f}, max={t3_vec.max():.0f}, mean={t3_vec.mean():.1f}")
+    print(f"  H:      min={H_vec.min():.0f}, max={H_vec.max():.0f}, mean={H_vec.mean():.1f}")
+
+    for vec_name, vec in [("degree", degree), ("t3", t3_vec), ("H", H_vec)]:
+        print(f"\n  {vec_name} projection onto top 10 eigenspaces:")
+        vec_norm2 = np.dot(vec, vec)
         for k in range(min(10, nsc)):
             j = idx_sorted[k]
-            comp = np.dot(degree, evecs[:, j])
-            frac = comp**2 / np.dot(degree, degree)
-            print(f"    ev={evals_full[j]:+10.6f}: component={comp:+10.4f}, "
-                  f"fraction={frac:.4f}")
+            comp = np.dot(vec, evecs[:, j])
+            frac = comp**2 / vec_norm2 if vec_norm2 > 0 else 0
+            print(f"    ev={evals_full[j]:+10.6f}: component={comp:+10.4f}, fraction={frac:.6f}")
 
-    print(f"\n  t3 vector projection (top 10 eigenspaces):")
-    for k in range(min(10, nsc)):
-        j = idx_sorted[k]
-        comp = np.dot(t3_vec, evecs[:, j])
-        frac = comp**2 / np.dot(t3_vec, t3_vec)
-        print(f"    ev={evals_full[j]:+10.6f}: component={comp:+10.4f}, "
-              f"fraction={frac:.4f}")
-
-    print(f"\n  H vector projection (top 10 eigenspaces):")
-    for k in range(min(10, nsc)):
-        j = idx_sorted[k]
-        comp = np.dot(H_vec, evecs[:, j])
-        frac = comp**2 / np.dot(H_vec, H_vec)
-        print(f"    ev={evals_full[j]:+10.6f}: component={comp:+10.4f}, "
-              f"fraction={frac:.4f}")
-
-    # 7. Check if degree vector is an eigenvector
-    print(f"\n--- DEGREE AS EIGENVECTOR CHECK ---")
-    Kd = K @ degree
-    # Is Kd proportional to degree?
+    # Degree as eigenvector
+    print(f"\n--- DEGREE AS EIGENVECTOR ({label}) ---")
+    Kd = K_sym @ degree
     if degree.min() > 0:
         ratios = Kd / degree
-        print(f"  K*degree / degree: min={ratios.min():.4f}, max={ratios.max():.4f}")
-        if abs(ratios.max() - ratios.min()) < 0.01:
-            print(f"  YES: degree is an eigenvector with eigenvalue {ratios.mean():.6f}")
+        print(f"  K*deg / deg: min={ratios.min():.4f}, max={ratios.max():.4f}")
+        if abs(ratios.max() - ratios.min()) < 0.1:
+            print(f"  APPROX eigenvector with eigenvalue ~{ratios.mean():.4f}")
         else:
-            print(f"  NO: degree is not an eigenvector (ratio varies)")
+            print(f"  NOT an eigenvector")
 
-    # 8. Connected components
-    print(f"\n--- CONNECTIVITY ---")
+    # Connectivity
+    print(f"\n--- CONNECTIVITY ({label}) ---")
     visited = set()
     components = []
     for start in range(nsc):
@@ -574,74 +671,16 @@ def spectral_analysis(K, sc_indices, class_list, n):
             comp.add(u)
             visited.add(u)
             for v in range(nsc):
-                if K[u][v] > 0 and v not in comp:
+                if K_sym[u][v] > 0 and v not in comp:
                     stack.append(v)
         components.append(comp)
 
-    print(f"  Connected components: {len(components)}")
+    print(f"  Components: {len(components)}")
     for i, comp in enumerate(components):
-        print(f"    Component {i}: {len(comp)} vertices")
+        if len(comp) > 1 or len(components) <= 5:
+            print(f"    Component {i}: {len(comp)} vertices")
 
-    # 9. Characteristic polynomial (if small enough)
-    if nsc <= 100:
-        print(f"\n--- CHARACTERISTIC POLYNOMIAL ---")
-        charpoly = np.round(np.poly(evals_sorted), 2)
-        print(f"  Degree: {len(charpoly)-1}")
-        # Just show first and last few coefficients
-        if len(charpoly) > 20:
-            print(f"  First 10 coeffs: {charpoly[:10].tolist()}")
-            print(f"  Last 10 coeffs:  {charpoly[-10:].tolist()}")
-        else:
-            print(f"  Coefficients: {charpoly.tolist()}")
-
-    return evals_sorted, evecs, evals_full
-
-# ============================================================
-# Main
-# ============================================================
-
-def main():
-    n = 7
-    t_start = time.time()
-
-    print(f"SKELETON EIGENVALUE ANALYSIS at n={n}")
-    print(f"{'='*70}\n")
-
-    # Build class database
-    class_list, bits_to_class, canon_db = build_class_database(n)
-
-    # Build skeleton
-    K_weighted, K_binary, sc_indices, sc_to_local = build_skeleton(n, class_list, bits_to_class)
-
-    # Use the WEIGHTED adjacency matrix for spectral analysis
-    # (K[i,j] = number of GS tilings in class i that flip to class j)
-    print(f"\nUsing WEIGHTED adjacency matrix for spectral analysis")
-    print(f"  (K[i,j] = # GS tilings in class i that flip to class j)")
-
-    evals_w, evecs_w, evals_full_w = spectral_analysis(
-        K_weighted, sc_indices, class_list, n)
-
-    # Also analyze the BINARY (0/1) adjacency matrix
-    print(f"\n\n{'='*70}")
-    print(f"BINARY (0/1) SKELETON ANALYSIS")
-    print(f"{'='*70}")
-
-    evals_b, evecs_b, evals_full_b = spectral_analysis(
-        K_binary, sc_indices, class_list, n)
-
-    t_end = time.time()
-    print(f"\n\nTotal computation time: {t_end - t_start:.1f}s")
-
-    # Save data for later use
-    print(f"\n--- SAVING DATA ---")
-    np.savez('C:/Users/Eliott/Documents/GitHub/math/04-computation/skeleton_n7_data.npz',
-             K_weighted=K_weighted, K_binary=K_binary,
-             evals_weighted=evals_w, evals_binary=evals_b,
-             sc_indices=np.array(sc_indices),
-             t3_vals=np.array([class_list[idx]['t3'] for idx in sc_indices]),
-             H_vals=np.array([class_list[idx]['H'] for idx in sc_indices]),
-             scores=[str(class_list[idx]['scores']) for idx in sc_indices])
-    print(f"  Saved to skeleton_n7_data.npz")
+    return evals_sorted
 
 if __name__ == '__main__':
     main()
