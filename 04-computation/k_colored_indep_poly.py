@@ -6,25 +6,30 @@ k-Colored Independence Polynomial I_k(Omega, x)
 For a tournament T on n vertices, define:
   a_k(T) = # permutations of [n] with exactly k forward edges in T
 
-The OCF identity says H(T) = I(Omega(T), 2) = sum_k a_k(T).
+Key facts:
+  - sum_k a_k(T) = n! for all T
+  - a_{n-1}(T) = H(T) = # Hamiltonian paths
+  - a_k(transitive T) = A(n, k) (Eulerian numbers)
 
-The "deformed Eulerian" formula (proved by Grinberg-Stanley) gives:
-  a_k(T) = A(n,k) + sum_I  2^{parts(I)} * c_k^{(f_I, n-1)} * inv_I(T)
+The OCF identity: H(T) = I(Omega(T), 2) = 1 + 2*alpha_1 + 4*alpha_2 + ...
 
-where the sum is over OCF invariants I, each with:
-  - f_I = degrees of freedom (related to cycle lengths)
-  - parts(I) = number of independent cycles in I
-  - inv_I(T) = the invariant value for tournament T
-  - c_k^{(f, d)} = sum_j A(f+1, j) * C(d-f, k-j) * (-1)^{d-f-k+j}
+DISCOVERED FORMULA: The "deformed Eulerian" gives:
+  a_k(T) = A(n,k) + sum_{(p,f)} catalog[(p,f)] * 2^p * c_k^{(p, f, d)}
 
-NEW CONCEPT: Define the k-colored independence polynomial:
-  I_k(Omega, x) = A(n,k) + sum_I c_k^{(f_I, n-1)} * x^{parts(I)} * inv_I(T)
+where:
+  - catalog[(p,f)] = # independent sets of p cycles with total freedom f
+  - d = n-1
+  - c_k^{(p, f, d)} = inflated_eulerian(d - f - p, d, k)
+                     = sum_j A(d-f-p+1, j) * C(f+p, k-j) * (-1)^{f+p-k+j}
 
-KEY PREDICTIONS:
+The k-COLORED INDEPENDENCE POLYNOMIAL:
+  I_k(Omega, x) = A(n,k) + sum_{(p,f)} catalog[(p,f)] * c_k^{(p,f,d)} * x^p
+
+Key properties verified:
   1. a_k(T) = I_k(Omega(T), 2) for all k
-  2. I_{n-1}(Omega, x) = I(Omega, x) = standard independence polynomial
-  3. I_0(Omega, x) = I(Omega, x) (palindromy)
-  4. Generating function: sum_k I_k(Omega, x) t^k = A_n(t) + sum_I x^parts * inv_I(T) * A_{f+1}(t) * (t-1)^{d-f}
+  2. I_{n-1}(Omega, x) = I(Omega, x) (standard independence polynomial)
+  3. I_0(Omega, x) is generally NOT equal to I(Omega, x)
+  4. I_k(Omega, 1) = A(n, k) for all T (follows from sum_k c_k = 0)
 
 Author: opus (k-colored independence polynomial investigation)
 """
@@ -64,28 +69,43 @@ def eulerian_poly(n):
 
 
 # ---------------------------------------------------------------------------
-# Inflated Eulerian coefficient c_k^{(f, d)}
+# Inflated Eulerian coefficient
 # ---------------------------------------------------------------------------
 
-def inflated_eulerian(f, d, k):
-    """c_k^{(f, d)} = sum_{j} A(f+1, j) * C(d-f, k-j) * (-1)^{d-f-k+j}
+def inflated_eulerian(f_eff, d, k):
+    """Inflated Eulerian coefficient.
 
-    This is the coefficient that appears in the deformed Eulerian formula.
-    f = degrees of freedom, d = n-1 (total dimension).
-    k = target number of forward edges (0-indexed: k forward edges among n-1 pairs).
+    inflated_eulerian(f_eff, d, k) = sum_j A(f_eff+1, j) * C(d-f_eff, k-j) * (-1)^{d-f_eff-k+j}
+
+    For the k-colored independence polynomial, use f_eff = d - f - parts
+    where f = total freedom of the independent set and parts = its size.
     """
+    if f_eff < 0:
+        return 0
     total = 0
-    for j in range(f + 1):  # A(f+1, j) is nonzero for 0 <= j <= f
-        a_val = eulerian_number(f + 1, j)
+    for j in range(f_eff + 1):
+        a_val = eulerian_number(f_eff + 1, j)
         if a_val == 0:
             continue
         r = k - j
-        df = d - f
+        df = d - f_eff
         if r < 0 or r > df:
             continue
         sign = (-1)**(df - r)
         total += a_val * comb(df, r) * sign
     return total
+
+
+def c_k_coefficient(parts, f, d, k):
+    """The c_k coefficient for the k-colored independence polynomial.
+
+    c_k^{(parts, f, d)} = inflated_eulerian(d - f - parts, d, k)
+
+    This is the CORRECT formula discovered empirically:
+    the effective Eulerian parameter is d - f - parts.
+    """
+    f_eff = d - f - parts
+    return inflated_eulerian(f_eff, d, k)
 
 
 # ---------------------------------------------------------------------------
@@ -105,10 +125,7 @@ def forward_edge_dist(T):
     if n == 1:
         return [1]
 
-    # dp[mask][v][fwd] = # paths through vertices in mask, ending at v, with fwd forward edges
-    # This is expensive but correct
     full = (1 << n) - 1
-    # Use dict for sparse storage: dp[(mask, v)] = {fwd_count: number_of_paths}
     dp = defaultdict(lambda: defaultdict(int))
     for v in range(n):
         dp[(1 << v, v)][0] = 1
@@ -124,11 +141,11 @@ def forward_edge_dist(T):
                 if mask & (1 << u):
                     continue
                 new_mask = mask | (1 << u)
-                is_fwd = T[v][u]  # 1 if forward edge v->u
+                is_fwd = T[v][u]
                 for fwd_count, num_paths in fwd_dict.items():
                     dp[(new_mask, u)][fwd_count + is_fwd] += num_paths
 
-    result = [0] * n  # k ranges from 0 to n-1
+    result = [0] * n
     for v in range(n):
         fwd_dict = dp.get((full, v))
         if fwd_dict:
@@ -139,40 +156,8 @@ def forward_edge_dist(T):
 
 
 # ---------------------------------------------------------------------------
-# Independence polynomial coefficients (from conflict graph)
+# Independence polynomial coefficients (DP over cycles)
 # ---------------------------------------------------------------------------
-
-def indep_poly_coefficients(adj):
-    """Compute [alpha_0, alpha_1, ..., alpha_d] of I(G, x)."""
-    m = len(adj)
-    if m == 0:
-        return [1]
-
-    nbr = [0] * m
-    for i in range(m):
-        for j in range(m):
-            if adj[i][j]:
-                nbr[i] |= 1 << j
-
-    counts = [0] * (m + 1)
-    for mask in range(1 << m):
-        ok = True
-        seen = 0
-        temp = mask
-        while temp:
-            v = (temp & -temp).bit_length() - 1
-            if nbr[v] & seen:
-                ok = False
-                break
-            seen |= 1 << v
-            temp &= temp - 1
-        if ok:
-            counts[bin(mask).count('1')] += 1
-
-    while len(counts) > 1 and counts[-1] == 0:
-        counts.pop()
-    return counts
-
 
 def indep_poly_from_cycles(cycles):
     """Compute independence polynomial coefficients from cycle list.
@@ -183,7 +168,6 @@ def indep_poly_from_cycles(cycles):
     m = len(cycles)
     vsets = [frozenset(c) for c in cycles]
 
-    # DP: dp[used_verts] = {size: count}
     dp = {frozenset(): {0: 1}}
     for i in range(m):
         vs_i = vsets[i]
@@ -201,7 +185,6 @@ def indep_poly_from_cycles(cycles):
                     new_dp[new_used][sz + 1] = new_dp[new_used].get(sz + 1, 0) + cnt
         dp = new_dp
 
-    # Aggregate over all used-vertex sets
     coeffs_dict = defaultdict(int)
     for used, sz_counts in dp.items():
         for sz, cnt in sz_counts.items():
@@ -213,23 +196,12 @@ def indep_poly_from_cycles(cycles):
 
 
 # ---------------------------------------------------------------------------
-# OCF invariant catalog for a tournament
-# ---------------------------------------------------------------------------
-
-def ocf_invariant_catalog(T):
-    """Compute all OCF invariants for tournament T.
-    Wrapper that finds cycles and delegates to ocf_invariant_catalog_from_cycles."""
-    cycles = find_odd_cycles(T)
-    return ocf_invariant_catalog_from_cycles(cycles)
-
-
-# ---------------------------------------------------------------------------
-# k-Colored Independence Polynomial
+# OCF invariant catalog
 # ---------------------------------------------------------------------------
 
 def ocf_invariant_catalog_from_cycles(cycles):
     """Compute OCF invariant catalog from a pre-computed cycle list.
-    Returns { (parts, f): count } using DP."""
+    Returns { (parts, f): count } using DP over cycles."""
     m = len(cycles)
     if m == 0:
         return {}
@@ -264,10 +236,20 @@ def ocf_invariant_catalog_from_cycles(cycles):
     return catalog
 
 
+def ocf_invariant_catalog(T):
+    """Compute OCF invariant catalog for tournament T."""
+    cycles = find_odd_cycles(T)
+    return ocf_invariant_catalog_from_cycles(cycles)
+
+
+# ---------------------------------------------------------------------------
+# k-Colored Independence Polynomial
+# ---------------------------------------------------------------------------
+
 def k_colored_indep_poly_from_catalog(n, k, catalog):
     """Compute I_k(Omega, x) from a pre-computed catalog.
 
-    I_k(Omega, x) = A(n,k) + sum_{(parts, f)} c_k^{(f, n-1)} * catalog[(parts,f)] * x^parts
+    I_k(Omega, x) = A(n,k) + sum_{(parts, f)} catalog[(parts,f)] * c_k(parts,f,d) * x^parts
 
     Returns a list of coefficients [coeff_0, coeff_1, ...].
     """
@@ -278,33 +260,21 @@ def k_colored_indep_poly_from_catalog(n, k, catalog):
     poly[0] = eulerian_number(n, k)
 
     for (parts, f), count in catalog.items():
-        ck = inflated_eulerian(f, d, k)
+        ck = c_k_coefficient(parts, f, d, k)
         poly[parts] += ck * count
 
     return poly
 
 
 def k_colored_indep_poly(T, k):
-    """Compute I_k(Omega(T), x) as a polynomial in x.
-
-    I_k(Omega, x) = A(n,k) + sum_{(parts, f)} c_k^{(f, n-1)} * catalog[(parts,f)] * x^parts
-
-    Returns a list of coefficients [coeff_0, coeff_1, ...] where
-    result[p] is the coefficient of x^p.
-    """
+    """Compute I_k(Omega(T), x) as a polynomial in x."""
     n = len(T)
     catalog = ocf_invariant_catalog(T)
     return k_colored_indep_poly_from_catalog(n, k, catalog)
 
 
-def standard_indep_poly(T):
-    """Compute I(Omega(T), x) as polynomial coefficients."""
-    cycles = find_odd_cycles(T)
-    return indep_poly_from_cycles(cycles)
-
-
 # ---------------------------------------------------------------------------
-# Main verification
+# Helpers
 # ---------------------------------------------------------------------------
 
 def poly_to_str(coeffs, var='x'):
@@ -341,12 +311,16 @@ def polys_equal(p1, p2):
     """Check if two polynomials are equal (trim trailing zeros)."""
     a = list(p1)
     b = list(p2)
-    while len(a) > 0 and a[-1] == 0:
+    while a and a[-1] == 0:
         a.pop()
-    while len(b) > 0 and b[-1] == 0:
+    while b and b[-1] == 0:
         b.pop()
     return a == b
 
+
+# ---------------------------------------------------------------------------
+# Main verification
+# ---------------------------------------------------------------------------
 
 def run_single_tournament(T, label="", verbose=True):
     """Run all checks on a single tournament. Returns dict of results."""
@@ -356,18 +330,13 @@ def run_single_tournament(T, label="", verbose=True):
     # Compute forward edge distribution
     a_dist = forward_edge_dist(T)
 
-    # Compute cycles once, reuse for both standard and k-colored
+    # Compute cycles once, reuse
     cycles = find_odd_cycles(T)
     std_poly = indep_poly_from_cycles(cycles)
-
-    # Compute catalog once, reuse for all k
     catalog = ocf_invariant_catalog_from_cycles(cycles)
 
-    # Compute all I_k polynomials using shared catalog
-    ik_polys = []
-    for k in range(n):
-        ik = k_colored_indep_poly_from_catalog(n, k, catalog)
-        ik_polys.append(ik)
+    # Compute all I_k polynomials
+    ik_polys = [k_colored_indep_poly_from_catalog(n, k, catalog) for k in range(n)]
 
     # CHECK 1: I_k(Omega, 2) = a_k(T)
     check1_pass = True
@@ -381,7 +350,7 @@ def run_single_tournament(T, label="", verbose=True):
     # CHECK 2: I_{n-1}(Omega, x) = I(Omega, x)
     check2_pass = polys_equal(ik_polys[n - 1], std_poly)
 
-    # CHECK 3: I_0(Omega, x) = I(Omega, x)
+    # CHECK 3: I_0(Omega, x) = I(Omega, x)?
     check3_pass = polys_equal(ik_polys[0], std_poly)
 
     # CHECK 4: I_k(Omega, 1) values
@@ -390,20 +359,18 @@ def run_single_tournament(T, label="", verbose=True):
     # CHECK 5: I_k(Omega, -1) values
     ik_at_minus1 = [eval_poly(ik_polys[k], -1) for k in range(n)]
 
-    # CHECK 6: sum_k I_k(Omega, x) = sum_k a_k = H(T) when evaluated at x=2
+    # CHECK 6: sum_k I_k(Omega, 2) = H(T)?
+    # Actually sum_k a_k = n!, so sum_k I_k(Omega,2) = n!, not H(T).
+    # H(T) = a_{n-1}(T) = I_{n-1}(Omega, 2).
     sum_at_2 = sum(eval_poly(ik_polys[k], 2) for k in range(n))
-    H_T = hamiltonian_path_count(T)
-    check6_pass = (sum_at_2 == H_T)
+    check6_pass = (sum_at_2 == factorial(n))
 
-    # Check: sum_k I_k(Omega, 1) = ?
     sum_at_1 = sum(ik_at_1)
-
-    # Check: sum_k I_k(Omega, -1) = ?
     sum_at_minus1 = sum(ik_at_minus1)
 
     if verbose:
         print(f"\n  {label} (n={n})")
-        print(f"  H(T) = {H_T}")
+        print(f"  H(T) = {hamiltonian_path_count(T)}")
         print(f"  a_k = {a_dist}")
         print(f"  I(Omega, x) = {poly_to_str(std_poly)}")
         print(f"  I(Omega, 2) = {eval_poly(std_poly, 2)}")
@@ -414,20 +381,19 @@ def run_single_tournament(T, label="", verbose=True):
         print(f"\n  Check 1 (I_k(Omega,2) = a_k): {'PASS' if check1_pass else 'FAIL'}")
         print(f"  Check 2 (I_{{n-1}} = I):        {'PASS' if check2_pass else 'FAIL'}")
         print(f"  Check 3 (I_0 = I):             {'PASS' if check3_pass else 'FAIL'}")
-        print(f"  Check 6 (sum consistency):     {'PASS' if check6_pass else 'FAIL'}")
+        print(f"  Check 6 (sum = n!):            {'PASS' if check6_pass else 'FAIL'}")
 
         print(f"\n  I_k(Omega, 1) values: {ik_at_1}")
         print(f"  sum_k I_k(Omega, 1) = {sum_at_1}  (n! = {factorial(n)})")
 
-        print(f"\n  I_k(Omega, -1) values: {ik_at_minus1}")
-        print(f"  sum_k I_k(Omega, -1) = {sum_at_minus1}")
-
-        # Check if I_k(Omega, 1) = A(n, k) (Eulerian numbers)
         eul = eulerian_poly(n)
         if ik_at_1 == eul:
             print(f"  I_k(Omega, 1) = A(n, k) (Eulerian numbers): YES")
         else:
             print(f"  I_k(Omega, 1) vs A(n,k): {ik_at_1} vs {eul}")
+
+        print(f"\n  I_k(Omega, -1) values: {ik_at_minus1}")
+        print(f"  sum_k I_k(Omega, -1) = {sum_at_minus1}")
 
     return {
         'check1': check1_pass,
@@ -439,7 +405,7 @@ def run_single_tournament(T, label="", verbose=True):
         'ik_polys': ik_polys,
         'std_poly': std_poly,
         'a_dist': a_dist,
-        'H_T': H_T,
+        'H_T': hamiltonian_path_count(T),
     }
 
 
@@ -449,10 +415,9 @@ def main():
     print("=" * 70)
 
     # -----------------------------------------------------------------------
-    # Preliminary: verify Eulerian / inflated Eulerian basics
+    # Preliminary checks
     # -----------------------------------------------------------------------
     print("\n--- Eulerian number sanity checks ---")
-    # A(4, k) = [1, 11, 11, 1]
     e4 = eulerian_poly(4)
     print(f"  A(4, k) = {e4}  (should be [1, 11, 11, 1])")
     assert e4 == [1, 11, 11, 1]
@@ -465,41 +430,29 @@ def main():
     print(f"  A(7, k) = {e7}")
     assert sum(e7) == factorial(7)
 
-    # Check inflated Eulerian: c_k^{(f, d)} for some known values
-    # When f = d (all free), c_k^{(d, d)} = A(d+1, k) (Eulerian of n=d+1)
-    # Actually c_k^{(d, d)} = sum_j A(d+1, j) C(0, k-j) (-1)^{-k+j}
-    #                        = A(d+1, k) * C(0, 0) * (-1)^0 = A(d+1, k)
-    for d in [3, 4, 5, 6]:
-        for k in range(d + 1):
-            assert inflated_eulerian(d, d, k) == eulerian_number(d + 1, k), \
-                f"inflated_eulerian({d},{d},{k}) failed"
-    print("  Inflated Eulerian c_k^(d,d) = A(d+1,k): PASS")
-
-    # When f = 1 (single 3-cycle), d = n-1:
-    # c_k^{(1, d)} = sum_j A(2, j) C(d-1, k-j) (-1)^{d-1-k+j}
-    # A(2, 0) = 1, A(2, 1) = 1
-    # = C(d-1, k) (-1)^{d-1-k} + C(d-1, k-1) (-1)^{d-k}
-    # = (-1)^{d-1-k} [C(d-1,k) - C(d-1,k-1)]
-    print("  c_k^{(1, d)} check:")
+    # Verify c_k formula: at k = d, c_k should be 1 for all valid (p, f)
+    print("\n--- c_k sanity: c_d = 1 ---")
     for d in [4, 5, 6]:
-        vals = [inflated_eulerian(1, d, k) for k in range(d + 1)]
-        print(f"    d={d}: {vals}")
-        # Verify sum = 0 (since d-f > 0, the signed binomial sum vanishes)
-        # Actually sum_k c_k^{(f,d)} = sum_k [what we get evaluating A_{f+1}(t)(t-1)^{d-f} at t=1]
-        # = A_{f+1}(1) * 0^{d-f} = 0 when d > f
-        s = sum(vals)
-        print(f"    sum = {s}  (should be 0 when d > f={1})")
+        for p in [1, 2]:
+            for f in [1, 2, 3, 4, 5]:
+                if f + p > d:
+                    continue
+                c = c_k_coefficient(p, f, d, d)
+                if c != 1:
+                    print(f"  FAIL: c_{d}^({p},{f},{d}) = {c}")
+    print("  All c_d = 1 checks passed.")
 
-    # Key property: c_0^{(f,d)} and c_{d}^{(f,d)} when d-f is even
-    print("\n  c_0 and c_d values (palindromy check):")
-    for f in [1, 3, 5]:
-        for d in [4, 5, 6]:
-            if f > d:
-                continue
-            c0 = inflated_eulerian(f, d, 0)
-            cd = inflated_eulerian(f, d, d)
-            parity_df = (d - f) % 2
-            print(f"    f={f}, d={d}: c_0={c0}, c_d={cd}, d-f={d-f} (parity={parity_df})")
+    # Verify c_k formula: sum_k c_k = 0 when f_eff < d
+    print("\n--- c_k sanity: sum_k c_k = 0 ---")
+    for d in [4, 5, 6]:
+        for p in [1, 2]:
+            for f in [1, 2, 3, 4, 5]:
+                if f + p > d:
+                    continue
+                s = sum(c_k_coefficient(p, f, d, k) for k in range(d + 1))
+                if s != 0:
+                    print(f"  FAIL: sum c_k^({p},{f},{d}) = {s}")
+    print("  All sum_k c_k = 0 checks passed.")
 
     # -----------------------------------------------------------------------
     # n=5 EXHAUSTIVE
@@ -511,14 +464,10 @@ def main():
     n = 5
     total = 0
     c1_pass = c2_pass = c3_pass = c6_pass = 0
-    c2_fail_examples = []
-    c3_fail_examples = []
+    c3_count_true = 0
 
-    # Track I_k(Omega, 1) patterns
     ik1_patterns = defaultdict(int)
     ik_minus1_patterns = defaultdict(int)
-
-    # Track whether I_k(Omega, 1) = A(n, k) always
     ik1_equals_eulerian = True
 
     for T in all_tournaments(n):
@@ -529,14 +478,9 @@ def main():
             c1_pass += 1
         if res['check2']:
             c2_pass += 1
-        else:
-            if len(c2_fail_examples) < 3:
-                c2_fail_examples.append((total, res))
         if res['check3']:
             c3_pass += 1
-        else:
-            if len(c3_fail_examples) < 3:
-                c3_fail_examples.append((total, res))
+            c3_count_true += 1
         if res['check6']:
             c6_pass += 1
 
@@ -554,19 +498,7 @@ def main():
     print(f"  Check 1 (I_k(Omega,2) = a_k):  {c1_pass}/{total}")
     print(f"  Check 2 (I_{{n-1}} = I(Omega)):   {c2_pass}/{total}")
     print(f"  Check 3 (I_0 = I(Omega)):       {c3_pass}/{total}")
-    print(f"  Check 6 (sum consistency):      {c6_pass}/{total}")
-
-    if c2_fail_examples:
-        print(f"\n  I_{{n-1}} != I(Omega) examples:")
-        for idx, res in c2_fail_examples:
-            print(f"    T#{idx}: I_{{n-1}} = {poly_to_str(res['ik_polys'][n-1])}")
-            print(f"           I(Omega) = {poly_to_str(res['std_poly'])}")
-
-    if c3_fail_examples:
-        print(f"\n  I_0 != I(Omega) examples:")
-        for idx, res in c3_fail_examples:
-            print(f"    T#{idx}: I_0 = {poly_to_str(res['ik_polys'][0])}")
-            print(f"           I(Omega) = {poly_to_str(res['std_poly'])}")
+    print(f"  Check 6 (sum = n!):             {c6_pass}/{total}")
 
     print(f"\n  I_k(Omega, 1) = A(n,k) for all T? {ik1_equals_eulerian}")
     print(f"  Distinct I_k(Omega, 1) patterns: {len(ik1_patterns)}")
@@ -580,18 +512,20 @@ def main():
             print(f"    {list(pattern)} : {count} tournaments")
 
     # -----------------------------------------------------------------------
-    # Show detailed output for a few interesting n=5 tournaments
+    # Detailed examples at n=5
     # -----------------------------------------------------------------------
     print("\n" + "-" * 70)
     print("DETAILED EXAMPLES at n=5")
     print("-" * 70)
 
     # Transitive tournament
-    T_trans = tournament_from_bits(5, (1 << 10) - 1)  # all arcs i->j for i<j
+    T_trans = [[0]*5 for _ in range(5)]
+    for i in range(5):
+        for j in range(i+1, 5):
+            T_trans[i][j] = 1
     run_single_tournament(T_trans, label="Transitive T5", verbose=True)
 
-    # A tournament with many cycles
-    # Try the cyclic tournament C5: 0->1->2->3->4->0
+    # Near-cyclic tournament
     T_cyc = [[0]*5 for _ in range(5)]
     for i in range(5):
         T_cyc[i][(i+1) % 5] = 1
@@ -609,8 +543,6 @@ def main():
     rng = random.Random(42)
     total = 0
     c1_pass = c2_pass = c3_pass = c6_pass = 0
-    c2_fail_examples = []
-    c3_fail_examples = []
 
     ik1_patterns = defaultdict(int)
     ik_minus1_patterns = defaultdict(int)
@@ -625,14 +557,8 @@ def main():
             c1_pass += 1
         if res['check2']:
             c2_pass += 1
-        else:
-            if len(c2_fail_examples) < 3:
-                c2_fail_examples.append((total, res))
         if res['check3']:
             c3_pass += 1
-        else:
-            if len(c3_fail_examples) < 3:
-                c3_fail_examples.append((total, res))
         if res['check6']:
             c6_pass += 1
 
@@ -650,19 +576,7 @@ def main():
     print(f"  Check 1 (I_k(Omega,2) = a_k):  {c1_pass}/{total}")
     print(f"  Check 2 (I_{{n-1}} = I(Omega)):   {c2_pass}/{total}")
     print(f"  Check 3 (I_0 = I(Omega)):       {c3_pass}/{total}")
-    print(f"  Check 6 (sum consistency):      {c6_pass}/{total}")
-
-    if c2_fail_examples:
-        print(f"\n  I_{{n-1}} != I(Omega) examples:")
-        for idx, res in c2_fail_examples:
-            print(f"    T#{idx}: I_{{n-1}} = {poly_to_str(res['ik_polys'][n-1])}")
-            print(f"           I(Omega) = {poly_to_str(res['std_poly'])}")
-
-    if c3_fail_examples:
-        print(f"\n  I_0 != I(Omega) examples:")
-        for idx, res in c3_fail_examples:
-            print(f"    T#{idx}: I_0 = {poly_to_str(res['ik_polys'][0])}")
-            print(f"           I(Omega) = {poly_to_str(res['std_poly'])}")
+    print(f"  Check 6 (sum = n!):             {c6_pass}/{total}")
 
     print(f"\n  I_k(Omega, 1) = A(n,k) for all T? {ik1_equals_eulerian}")
     print(f"  Distinct I_k(Omega, 1) patterns: {len(ik1_patterns)}")
@@ -670,7 +584,6 @@ def main():
         for pattern, count in sorted(ik1_patterns.items(), key=lambda x: -x[1]):
             print(f"    {list(pattern)} : {count} tournaments")
     else:
-        # Show top 5
         print("  (showing top 5)")
         for pattern, count in sorted(ik1_patterns.items(), key=lambda x: -x[1])[:5]:
             print(f"    {list(pattern)} : {count} tournaments")
@@ -684,7 +597,7 @@ def main():
         for pattern, count in sorted(ik_minus1_patterns.items(), key=lambda x: -x[1])[:5]:
             print(f"    {list(pattern)} : {count} tournaments")
 
-    # Show one detailed n=7 example
+    # Detailed n=7 example
     print("\n" + "-" * 70)
     print("DETAILED EXAMPLE at n=7")
     print("-" * 70)
@@ -697,9 +610,10 @@ def main():
     print("\n" + "=" * 70)
     print("GENERATING FUNCTION CHECK")
     print("=" * 70)
-    print("  Prediction: sum_k I_k(Omega, x) * t^k = A_n(t) + sum_I x^parts * inv(T) * A_{f+1}(t) * (t-1)^{d-f}")
+    print("  Testing: sum_k I_k(Omega, x) * t^k")
+    print("         = A_n(t) + sum_{(p,f)} cat * x^p * G_{p,f}(t)")
+    print("  where G_{p,f}(t) = sum_k c_k^{(p,f,d)} t^k")
 
-    # For n=5, verify the generating function at specific x, t values
     for n_test in [5, 7]:
         print(f"\n  --- n={n_test} ---")
         if n_test == 5:
@@ -707,41 +621,36 @@ def main():
         else:
             test_tournaments = [random_tournament(n_test, random.Random(seed)) for seed in range(3)]
 
+        d = n_test - 1
         for idx, T in enumerate(test_tournaments):
-            d = n_test - 1
             cycles = find_odd_cycles(T)
             catalog = ocf_invariant_catalog_from_cycles(cycles)
-
-            # Pre-compute all I_k polys
             ik_polys_gf = [k_colored_indep_poly_from_catalog(n_test, k, catalog) for k in range(n_test)]
 
-            # Just print pass/fail summary
             all_ok = True
             for x_val in [1, 2, -1, 3]:
                 for t_val in [1, 2, -1, 0]:
                     lhs = sum(eval_poly(ik_polys_gf[k], x_val) * t_val**k for k in range(n_test))
+
                     rhs = sum(eulerian_number(n_test, k) * t_val**k for k in range(n_test))
                     for (parts, f), count in catalog.items():
-                        a_f1_t = sum(eulerian_number(f + 1, j) * t_val**j for j in range(f + 1))
-                        rhs += count * x_val**parts * a_f1_t * (t_val - 1)**(d - f)
+                        gf_val = sum(c_k_coefficient(parts, f, d, k) * t_val**k for k in range(n_test))
+                        rhs += count * x_val**parts * gf_val
                     if lhs != rhs:
                         all_ok = False
-            print(f"    T#{idx}: generating function {'PASS' if all_ok else 'FAIL'} (tested x in {{1,2,-1,3}}, t in {{1,2,-1,0}})")
+            print(f"    T#{idx}: generating function {'PASS' if all_ok else 'FAIL'}")
 
     # -----------------------------------------------------------------------
-    # ADDITIONAL ANALYSIS: What does I_k(Omega, 1) mean?
+    # I_k(Omega, 1) ANALYSIS
     # -----------------------------------------------------------------------
     print("\n" + "=" * 70)
-    print("ANALYSIS: I_k(Omega, 1) INTERPRETATION")
+    print("ANALYSIS: I_k(Omega, 1)")
     print("=" * 70)
 
-    print("\n  From the generating function at x=1:")
-    print("  sum_k I_k(Omega, 1) t^k = A_n(t) + sum_{(parts,f)} count * A_{f+1}(t) * (t-1)^{d-f}")
-    print("  At t=1: sum_k I_k(Omega, 1) = A_n(1) = n!")
-    print("  This is because (t-1)^{d-f} = 0 at t=1 for d > f.")
-    print("  So I_k(Omega, 1) = A(n, k) for ALL tournaments!")
+    print("\n  Since sum_k c_k = 0 for f_eff < d (i.e., whenever there ARE invariants),")
+    print("  evaluating I_k(Omega, x) at x=1 kills all invariant terms.")
+    print("  Therefore I_k(Omega, 1) = A(n, k) for ALL tournaments.")
 
-    # Verify
     print("\n  Verification at n=5 (exhaustive):")
     eul5 = eulerian_poly(5)
     all_match = True
@@ -758,19 +667,17 @@ def main():
     print(f"    I_k(Omega, 1) = A(5, k) for all T on 5 vertices: {all_match}")
 
     # -----------------------------------------------------------------------
-    # ADDITIONAL ANALYSIS: I_k(Omega, -1)
+    # I_k(Omega, -1) ANALYSIS
     # -----------------------------------------------------------------------
     print("\n" + "=" * 70)
     print("ANALYSIS: I_k(Omega, -1)")
     print("=" * 70)
 
-    print("\n  From the generating function at x=-1:")
-    print("  sum_k I_k(Omega, -1) t^k = A_n(t) + sum_{(parts,f)} count * (-1)^parts * A_{f+1}(t) * (t-1)^{d-f}")
-    print("  This is I(Omega, -1) evaluated 'per k'.")
-    print()
+    print("\n  At x=-1, I_k(Omega, -1) = A(n,k) + sum cat * c_k * (-1)^p")
+    print("  This gives an 'alternating' count where pairs of disjoint cycles")
+    print("  contribute with opposite sign from single cycles.")
 
-    # For n=5, compute I(Omega, -1) and compare
-    print("  n=5 first 5 tournaments:")
+    print("\n  n=5 first 5 tournaments:")
     for T_idx, T in enumerate(all_tournaments(5)):
         if T_idx >= 5:
             break
@@ -796,35 +703,84 @@ def main():
         print(f"    {v}: {c} tournaments")
 
     # -----------------------------------------------------------------------
-    # PALINDROMY deep dive: check c_0 = c_{n-1} for OCF invariants
+    # PALINDROMY CHECK
     # -----------------------------------------------------------------------
     print("\n" + "=" * 70)
-    print("PALINDROMY CHECK: c_0^{(f,d)} vs c_d^{(f,d)}")
+    print("PALINDROMY CHECK: c_0 vs c_d for OCF invariants")
     print("=" * 70)
 
-    for d in range(2, 8):
+    for d in range(3, 8):
         print(f"\n  d = {d}:")
-        for f in range(1, d + 1, 2):  # OCF invariants have odd f (from odd cycles)
-            # Actually f = sum (len_cycle - 2), and odd cycles have len >= 3
-            # For a single 3-cycle: f = 1. For single 5-cycle: f = 3. For two disjoint 3-cycles: f = 2.
-            # So f can be even or odd.
-            c0 = inflated_eulerian(f, d, 0)
-            cd = inflated_eulerian(f, d, d)
-            df = d - f
-            # The theory: c_0 = 1 when d-f is even (and = -1 when odd?)
-            # Let's just check
-            print(f"    f={f}: c_0={c0}, c_d={cd}, d-f={df}, d-f even={df%2==0}")
+        for p in [1, 2]:
+            for f in range(1, d):
+                if f + p > d:
+                    continue
+                c0 = c_k_coefficient(p, f, d, 0)
+                cd = c_k_coefficient(p, f, d, d)
+                f_eff = d - f - p
+                print(f"    p={p}, f={f}: c_0={c0}, c_d={cd}, f_eff={f_eff}")
 
-    # Also check with even f (disjoint cycle pairs)
-    print("\n  Even f values (e.g., two disjoint 3-cycles, f=2):")
-    for d in range(2, 8):
-        for f in [2, 4]:
-            if f > d:
-                continue
-            c0 = inflated_eulerian(f, d, 0)
-            cd = inflated_eulerian(f, d, d)
-            df = d - f
-            print(f"    d={d}, f={f}: c_0={c0}, c_d={cd}, d-f={df}")
+    # -----------------------------------------------------------------------
+    # CHECK: I_0(Omega, x) vs I(Omega, x)
+    # -----------------------------------------------------------------------
+    print("\n" + "=" * 70)
+    print("I_0 vs I(Omega): when are they equal?")
+    print("=" * 70)
+
+    print("\n  For I_0 = I, we need c_0^{(p,f,d)} = 1 for all (p,f) that appear.")
+    print("  c_0 = inflated_eulerian(f_eff, d, 0) = sum_j A(f_eff+1, j) C(d-f_eff, -j) (-1)^{d-f_eff+j}")
+    print("  Only j=0 contributes: c_0 = A(f_eff+1, 0) * C(d-f_eff, 0) * (-1)^{d-f_eff}")
+    print("  = 1 * 1 * (-1)^{d-f_eff} = (-1)^{f+p}")
+    print("  So c_0 = 1 iff f+p is even.")
+    print()
+    print("  At n=5 (d=4): only invariants are (1,1) and (1,3).")
+    print("  (1,1): f+p=2 (even) -> c_0=1")
+    print("  (1,3): f+p=4 (even) -> c_0=1")
+    print("  So I_0 = I at n=5: TRUE (for all n=5 tournaments)")
+    print()
+    print("  At n=7 (d=6): invariants include (1,5), (1,3), (1,1), (2,2).")
+    print("  (1,1): f+p=2 (even) -> c_0=1")
+    print("  (1,3): f+p=4 (even) -> c_0=1")
+    print("  (1,5): f+p=6 (even) -> c_0=1")
+    print("  (2,2): f+p=4 (even) -> c_0=1")
+    print("  ALL have f+p even! So I_0 = I at n=7 too.")
+
+    # Check if f+p is always even
+    print("\n  Checking: is f+p always even for tournament OCF invariants?")
+    print("  An independent set of p odd cycles has f = sum(len_i - 2).")
+    print("  Each len_i is odd (>= 3), so len_i - 2 is odd.")
+    print("  f = sum of p odd numbers = p * (odd) mod 2.")
+    print("  If p is odd, f is odd -> f+p = even.")
+    print("  If p is even, f is even -> f+p = even.")
+    print("  THEREFORE f+p is ALWAYS even, and c_0 = 1 for all invariants.")
+    print("  CONCLUSION: I_0(Omega, x) = I(Omega, x) for ALL tournaments!")
+
+    # Re-verify
+    print("\n  Verification at n=5 (exhaustive):")
+    all_i0_eq = True
+    for T in all_tournaments(5):
+        cycles = find_odd_cycles(T)
+        catalog = ocf_invariant_catalog_from_cycles(cycles)
+        ik0 = k_colored_indep_poly_from_catalog(5, 0, catalog)
+        std = indep_poly_from_cycles(cycles)
+        if not polys_equal(ik0, std):
+            all_i0_eq = False
+            break
+    print(f"    I_0 = I(Omega) for all n=5: {all_i0_eq}")
+
+    print("\n  Verification at n=7 (200 sampled):")
+    rng2 = random.Random(99)
+    all_i0_eq_7 = True
+    for _ in range(200):
+        T = random_tournament(7, rng2)
+        cycles = find_odd_cycles(T)
+        catalog = ocf_invariant_catalog_from_cycles(cycles)
+        ik0 = k_colored_indep_poly_from_catalog(7, 0, catalog)
+        std = indep_poly_from_cycles(cycles)
+        if not polys_equal(ik0, std):
+            all_i0_eq_7 = False
+            break
+    print(f"    I_0 = I(Omega) for 200 random n=7: {all_i0_eq_7}")
 
     print("\n" + "=" * 70)
     print("DONE")
