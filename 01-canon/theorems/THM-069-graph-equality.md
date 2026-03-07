@@ -1,4 +1,4 @@
-# THM-067: Graph Equality for Cycle Deletion
+# THM-069: Graph Equality for Cycle Deletion
 
 **Type:** Theorem (PROVED)
 **Certainty:** 5 -- PROVED (algebraic, trivial proof)
