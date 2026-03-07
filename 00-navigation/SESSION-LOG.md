@@ -30,6 +30,23 @@ Entry format:
   - At n=15, non-circulant VT tournaments exist — these need testing
   - Web search for Babai-Kantor results on VT tournament automorphism groups
 
+## opus-2026-03-06-S26 (continued) — 2026-03-06 (even-r polynomial, THM-052 circulant scalar)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S26 (context limit)
+**Summary of work:**
+  (1) **Even-r polynomial decomposition M(r) = c_0 + c_2*r^2 + ... + c_{n-1}*r^{n-1}·I:** Proved c_{n-1} = (n-1)!·I universally at odd n. c_4 = 24I at n=5 (verified), c_6 = 720I at n=7 (verified).
+  (2) **H = tr(c_0) + 3·(#3-cycles)** at n=5 — verified ALL 12 iso classes. Derived from tr(c_2) = 12·t_3 - 30 and tr(c_4)/16 = 7.5.
+  (3) **c_2 eigenvalues determined by score sequence** (not full iso class). Classes within same score group share c_2 spectrum up to permutation. Only c_0 distinguishes iso classes within score groups.
+  (4) **THM-052 PROVED: Vertex-transitive tournaments have scalar M = (H/n)·I at odd n.** Proof via reflection-reversal bijection φ giving palindromic N(d,j). Extended from circulant to all vertex-transitive (verified Z/3×Z/3 at n=9).
+  (5) **IO reciprocity W(z)·W(-z) = 1 confirmed** independent from M(r) = M(-r) — different symmetries in different variables.
+  (6) **Blue pair analysis:** complement does NOT preserve M (path edges fixed). Self-paired classes at n=5: classes 8 and 10.
+**New contributions:** THM-052, c_2 spectrum analysis, H formula, even_parity_unification.py, blue_skeleton_even_r_synthesis.py, c2_spectrum_sharing.py, even_r_polynomial_full.py, c4_universal_proof.py, circulant_scalar_m_conjecture.py, circulant_scalar_proof.py, scalar_m_beyond_circulant.py, even_r_n7_circulant.py
+**Unresolved threads:**
+  - Prove H = tr(c_0) + f(t_3, t_5, ...) at general n
+  - Off-diagonal c_2 formula (not just score differences)
+  - Does scalar M imply vertex-transitive (converse of THM-052)?
+  - Extend even-r polynomial analysis to n=9
+
 ## opus-2026-03-06-S11b (continued) — 2026-03-06 (eigenvalue formula, spectral skeleton, perpendicularity)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S11b (context limit)
