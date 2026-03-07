@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S26 — 2026-03-07 (THM-061 Anti-Evaluation + W(r) Flip Analysis)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-06-S25h (context limit)
+**Summary of work:**
+  (1) **THM-061 (PROVED): W(-1/2) = (-1)^{n-1} * H(T) for all tournaments.** Elementary proof: W(-1/2) counts backward Ham paths with sign (-1)^{n-1}; reversing backward paths bijects with forward paths. Verified exhaustive n<=6, sampled n=7.
+  (2) **F_f(-1/2) = (-1)^f PROVED** via Eulerian formula: at r=-1/2, only k=f term survives since (r+1/2)=0, giving A(f+1,f)*(-1)^f = (-1)^f.
+  (3) **W(0) vanishing at n=5:** W(0) = 1 - t3 + 2*t5 = 0 for ALL n=5 tournaments with odd t3 (100%). This follows from the constraint: odd t3 forces t5 = (t3-1)/2, hence H = 3*t3 when t3 is odd.
+  (4) **Palindromic Eulerian distribution:** a_k(T) = a_{n-1-k}(T) for ALL tournaments (forward edge distribution is symmetric). Proof: reversal bijection. This is EQUIVALENT to r-parity of W(r) (THM-059 property iii).
+  (5) **W(r) flip analysis:** W(T) - W(flip(T)) = C_t3*dt3 + C_t5*dt5 (verified all 8 GS pairs at n=5). W(-r) ≠ W_flip(r) in general.
+  (6) **Skeleton spectral + Eulerian:** Silver ratio (1+sqrt2) eigenspaces are t3-independent. H projects strongly onto the 1+sqrt2 eigenspace. Degree = class size for skeleton adjacency.
+  (7) **Total sum formula:** sum_T W_T(0) = 2^{m-n+2} at odd n, 0 at even n. Only backbone-only permutations survive averaging.
+**New contributions:** THM-061-anti-evaluation.md, 8 computation scripts in 04-computation/
+**Unresolved threads:** W(0) vanishing pattern at n>5; algebraic proof of odd-t3 => t5=(t3-1)/2 at n=5; skeleton spectral structure at n=7; free position universality (opus's open question)
+
 ## opus-2026-03-07-S31 — 2026-03-07 (Master Polynomial PROVED: Eulerian Numbers + EGF)
 **Account:** opus
 **Continuation of:** opus-2026-03-06-S30 (context limit)
