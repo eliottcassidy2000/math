@@ -12,6 +12,38 @@ Strategy: represent each tournament as a bitmask of upper-triangle entries,
 precompute the permutation action on bitmasks, then find canonical forms
 by taking the minimum over all 5040 permuted bitmasks.
 
+RESULTS SUMMARY (computed 2026-03-07):
+=======================================
+1. Skeleton: 88 vertices (44 per bipartite side), 246 edges, connected, bipartite.
+   Bipartition by t3 parity (odd t3 vs even t3), 44-44 split.
+
+2. BINARY (0/1) skeleton eigenvalues:
+   - 88 eigenvalues in exact +/- pairs (bipartite), plus 2 zeros (rank=86)
+   - 43 distinct positive eigenvalues, largest = 6.985554, smallest = 0.075044
+   - Spectral gap: 6.985554 - 4.850379 = 2.135176
+   - Ratio lambda_2/lambda_1 = 0.694344
+
+3. WEIGHTED skeleton eigenvalues:
+   - 88 eigenvalues in exact +/- pairs, plus 8 zeros (rank=80)
+   - 40 distinct positive eigenvalues, largest = 7.347959, smallest = 0.145345
+   - Spectral gap: 7.347959 - 5.443934 = 1.904025
+
+4. ALGEBRAIC STRUCTURE (key finding):
+   - Binary: charpoly of B*B^T = x * p(x) where p(x) is IRREDUCIBLE over Q of degree 43
+     (43 is prime!). All 43 nonzero eigenvalues are conjugate algebraic integers of degree 43.
+     Product of nonzero sv^2 = 5235969600 = (2^3 * 3^3 * 5 * 67)^2 = 72360^2.
+   - Weighted: charpoly of B_w*B_w^T = x^4 * q(x) where q(x) is IRREDUCIBLE of degree 40.
+     All 40 nonzero eigenvalues are conjugate algebraic integers of degree 40.
+     Product of nonzero sv^2 = (2^8 * 3^4 * 7 * 967)^2 = 140361984^2.
+   - The silver ratio (1+sqrt2) from n=5 does NOT generalize. The eigenvalues at n=7
+     are algebraic of much higher degree and involve no simple radicals.
+
+5. EIGENVECTOR PROJECTIONS:
+   - Degree vector: 94.1% of energy in lambda_1 eigenspace (dominant)
+   - t3 vector: 83.7% in lambda_1, 1.9% in lambda_2, 6.7% in lambda_8
+   - H vector: 80.7% in lambda_1, 5.0% in lambda_2 (less concentrated)
+   - Degree is NOT an exact eigenvector (K*deg/deg ranges from 5.0 to 8.3)
+
 kind-pasteur-2026-03-07
 """
 import numpy as np
