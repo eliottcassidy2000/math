@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S11b (continued³) — 2026-03-06 (diagonal signed position + perpendicularity)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S11b (continued²) (context limit)
+**Summary of work:**
+  (1) **DIAGONAL SIGNED POSITION THEOREM:** M[v,v] = sum_P (-1)^{pos(v,P)} where sum is over all Ham paths. Verified all 12 iso classes at n=5. M[v,v] can be NEGATIVE (not a path count). "Defect vertex" = vertex with position bias far from H/n.
+  (2) **c_0 RANK STRUCTURE across H-classes at n=7:**
+    - H=189 (Paley): c_0 = 2.25·I (SCALAR, rank 0)
+    - H=175: c_0 = 0.25·I (SCALAR, rank 0)
+    - H=171: c_0 has rank-2 perturbation, 1 defect vertex with diag=-3.75 vs 0.25
+  (3) **PERPENDICULARITY CONFIRMED at n=7 (790 iso classes):**
+    Mean cosine of M-directions = -0.0485 (near 0 = perpendicular).
+    Low-H classes have positive cosine (aligned), high-H negative (anti-aligned).
+    Crossover (true perpendicularity) at H≈95-105 (near median).
+  (4) **ALL 43 H-maximizers at n=7 have M = 27·I** (scalar). Supports conjecture: max-H => VT => scalar M.
+  (5) **Defect count decreases with H** within score class (1,2,2,2,3) at n=5:
+    H=11: 2 defects, H=13: 1 defect, H=15: 0 defects (scalar).
+  (6) **M(r) symmetry for ALL r** verified: each c_{2k} individually symmetric (polynomial identity). Already proved by THM-030.
+  (7) **MISTAKE-012 corrected:** Blue pair ≠ tournament complement. Complement formula: M(T^c) = diag(M(T)) - offdiag(M(T)).
+**New contributions:** diagonal_signed_position_theorem.py, perpendicularity_cosine_n7.py, c0_concentration_theorem.py, rank2_signed_adjacency_n7.py
+**Unresolved threads:**
+  - Prove diagonal signed position theorem from IE formula
+  - Why does perpendicularity occur near median H? Is there a spectral explanation?
+  - Extend rank-2 structure to n=9
+
 ## opus-2026-03-06-S11b (continued²) — 2026-03-06 (rank-2 signed-adjacency theorem)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S11b (continued) (context limit)

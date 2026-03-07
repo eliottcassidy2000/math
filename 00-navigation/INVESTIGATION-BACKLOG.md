@@ -811,3 +811,32 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Key finding:** ALL position-uniform n=5 tournaments are self-complementary (64/64). No position-uniform tournaments exist at even n (n=4,6).
 **Open extension:** Prove for general vertex-transitive (non-circulant) tournaments. The proof uses circulant-specific translation symmetry. At n=15, non-circulant VT tournaments exist (Babai-Kantor doubly-regular tournaments).
 **Scripts:** `04-computation/palindromic_N_proof.py`, `04-computation/palindromic_N_posuniform.py`, `04-computation/palindromic_N_n9.py`, `04-computation/palindromic_N_n11.py`, `04-computation/selfcomp_posuniform_n7.py`
+
+### INV-074: Diagonal signed position theorem — VERIFIED n=5
+**Source:** opus-2026-03-06-S11b (continued³)
+**Status:** VERIFIED computationally at n=5 (all 12 iso classes).
+**What:** M[v,v] = sum_P (-1)^{pos(v,P)} where the sum is over all Hamiltonian paths P of T and pos(v,P) is the 0-indexed position of v in P. This means M[v,v] counts even-position appearances minus odd-position appearances. M[v,v] can be NEGATIVE (not a path count). For VT tournaments at odd n: M[v,v] = H/n. "Defect vertex" = vertex whose position distribution is biased relative to average.
+**Connection to THM-027:** The trace formula tr(M) = H(T) = sum_v sum_P (-1)^{pos(v,P)} = sum_P sum_v (-1)^{pos(v,P)} = sum_P 1 (at odd n, since alternating sum of 0..n-1 positions = 1). This reproves the trace formula.
+**Next step:** Prove from IE formula definition. Connect to defect vertex characterization.
+**Scripts:** `04-computation/diagonal_signed_position_theorem.py`
+
+### INV-075: Perpendicularity of M-directions across H-classes — CONFIRMED n=7
+**Source:** opus-2026-03-06-S11b (continued³)
+**Status:** CONFIRMED computationally at n=7 (790 iso classes).
+**What:** The non-scalar part of M (i.e., M - (H/n)*I) has a "direction" in matrix space. Measuring cosine similarity between these directions across iso classes shows:
+  - Low H (H<85): positive cosine (~0.5-0.8, aligned)
+  - Mid H (H≈85-105): near zero (perpendicular!)
+  - High H (H>105): negative cosine (anti-aligned)
+  - Overall mean cosine = -0.0485 (near perpendicular)
+The crossover (true perpendicularity) occurs near the MEDIAN H value. This means the non-scalar perturbation "rotates" continuously through eigenspace as H varies.
+**Connection:** This is the "perpendicularity" the user hypothesized in earlier sessions. It connects to the inverted-U of position variance and the grid symmetry structure.
+**Next step:** (1) Prove analytically why crossover occurs at median H. (2) Check at n=9. (3) Connect to the even cycle vanishing theorem (INV-053) which uses the same T↔T^op involution.
+**Scripts:** `04-computation/perpendicularity_cosine_n7.py`
+
+### INV-076: All H-maximizers have scalar M — VERIFIED n=5,7
+**Source:** opus-2026-03-06-S11b (continued³)
+**Status:** VERIFIED exhaustively at n=5 (both max-H classes) and n=7 (all 43 maximizers).
+**What:** Every tournament achieving max H has M = (H/n)*I (scalar transfer matrix). At n=7: all 43 maximizers have M = 27*I. At n=5: both H=15 classes (VT circulant and non-regular VT) have M = 3*I.
+**Conjecture:** For ALL odd n, the H-maximizer has scalar M. This is equivalent to saying H-maximizers are always vertex-transitive (or at least "position-uniform").
+**Connection:** Combines with THM-052 (circulant => scalar) and the Paley maximizer conjecture. If Paley maximizes H and Paley is circulant, then Paley gives scalar M. The deeper question is whether scalar M is NECESSARY for H-maximization.
+**Next step:** Verify at n=9 (need to find maximizers first).
