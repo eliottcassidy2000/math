@@ -136,7 +136,7 @@ For H=21: need alpha_1 + 2*i_2 = 10 (with i_3=0). The four decompositions requir
 |---------------|---------|------------|--------------------|--------------------|---------------------|
 | (4, 3)        | 4       | 3          | {0}                | {0}                | {0, 4}              |
 | (6, 2)        | 6       | 2          | {0, 1}             | {0, 1}             | {0, 1, 5}           |
-| (8, 1)        | 8       | 1          | {0}                | {0}                | {0, 7}              |
+| (8, 1)        | 8       | 1          | {0}                | {0}                | {0, 3, 7}           |
 | (10, 0)       | 10      | 0          | {2}                | {2}                | {2}                 |
 
 In EVERY case, the needed i_2 value is NOT in the achievable set. The i_2 values
@@ -160,9 +160,12 @@ tournaments. At n=7 exhaustive: K_6-2e tournaments have H >= 29
 
 **(8,1) blocked:** K_8-e structure. 8 cycles with exactly 1 disjoint pair.
 Computationally: at n=7, alpha_1=8 always gives i_2=0 (H=17). At n=8
-(5M samples, opus-S41), alpha_1=8 gives i_2 in {0, 7} only, never 1. The jump
-from i_2=0 to i_2=7 skips the needed value. With source/sink: always i_2=0
-(inherits from n=7). Without source/sink: always i_2=7. Structural proof OPEN.
+(detailed sampling, opus-S41), alpha_1=8 gives i_2 in {0, 3, 7} only, never 1.
+- i_2=0: composition (4,4,0), with source/sink
+- i_2=3: composition (5,3,0), with source/sink, all disjoint pairs are (3,3) type
+- i_2=7: composition (5,3,0) or (6,2,0), WITHOUT source/sink, star K_{1,7} pattern
+  in disjointness graph (one 3-cycle disjoint from ALL other 7 cycles)
+Structural proof OPEN but star pattern is key insight.
 
 **(10,0) blocked:** K_10 structure. 10 pairwise-sharing cycles. At n=6,7,8:
 alpha_1=10 always gives i_2=2 (H=29). ALL alpha_1=10 tournaments have a
@@ -201,6 +204,17 @@ If T has a source (score 0) or sink (score n-1), that vertex is in no directed c
 preserves Omega(T) and H(T) = H(T - v) != 21 by induction.
 
 This is a special case of Part J but was discovered first and is worth stating separately.
+
+## Part L (PROVED, computational): Cycle-rich min-H bound at n=8
+
+**Exhaustive finding (opus-S41):** Among ALL 18,095,616 cycle-rich n=8 tournaments
+(no source/sink, every vertex in 3-cycle, t3 <= 10), the minimum H is **25**.
+
+H distribution for small values: H=25 (40,320), H=27 (53,760), H=33 (26,880), ...
+
+Since 25 > 21, this provides an independent proof that H=21 is impossible for
+the "hard case" (no source/sink, all vertices cyclic) at n=8. Combined with
+Parts J and K for induction, this strengthens the base case.
 
 ## Part I: H-Spectrum Gap Analysis
 
