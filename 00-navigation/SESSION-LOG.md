@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S30 — 2026-03-07 (Factor-2 explained, u_T polynomial, tangent numbers, agent investigations)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S29
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, INVESTIGATION-BACKLOG.md, THM-065, THM-074, THM-002, THM-073, gs_specialization_check.py, typed_GT.py, bags_of_sticks.py, opus MSG-041
+**Summary of work:**
+  (1) **Factor-2 in OCF EXPLAINED.** ps_1(U_T)(1) = H(T) because: even-cycle permutations cancel (-1 from T-direction + 1 from T^op), odd-cycle perms contribute +1 from BOTH directions. The 2^psi in OCF = T + T^op contributions. Verified n=3,5.
+  (2) **u_T(m) = ODD polynomial in m.** Only odd powers appear (m, m^3, m^5,...). u_T(m) = m*Q_T(m^2). Coefficients = f-level weighted sums S_f from THM-065. Verified exhaustive n=5.
+  (3) **P_n(-2,0) = T_n exactly.** Base polynomial evaluates to tangent number at u=-2 (in addition to 2^m*T_n at u=0). P_n(u,0) interpolates: T_n at u=-2, 2^m*T_n at u=0, n! at u=2. Updated THM-074.
+  (4) **G_T is NOT a specialization of U_T** — confirmed by computation (transitive gives g1^5 = A_5(t), not a polynomial root) and background agent analysis.
+  (5) **H=21 still absent at n=8** — 200k random samples, gap between H=19 and H=23 persists.
+  (6) **Schweser-Stiebitz-Toft (2510.10659)** — agent found expository/historical only, no connections to our framework. One new paper to catalog: Ai et al. 2407.17051.
+  (7) **Bags-of-sticks/deletion-contraction** — agent confirmed dead end for alternative OCF proof. Edge-DC produces non-tournaments where OCF fails.
+  (8) **THM-065 updated** with A078408 OEIS identification and extended null_dim table to n=21.
+**New contributions:** factor2_explained.py, UT_to_GT_bridge.py, THM-065 update, THM-074 tangent number update
+**Unresolved threads:** H=21 permanent gap needs exhaustive n=8 check; u_T(m) root structure; Irving-Omar matrix algebra (agent hit rate limit); Ai et al. 2407.17051 to catalog
+
 ## kind-pasteur-2026-03-07-S29 — 2026-03-07 (THM-074 master decomposition, deep core review)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-05-S3
