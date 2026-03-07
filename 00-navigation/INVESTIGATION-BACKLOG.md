@@ -983,3 +983,15 @@ The crossover (true perpendicularity) occurs near the MEDIAN H value. This means
 **Status:** CONCEPTUAL. Skeleton = Ising model with antiferromagnetic coupling.
 **What:** SC classes have "spin" = (-1)^{t3}. GS flip edges connect opposite spins. At odd n: perfect Neel order (unfrustrated). At even n: frustrated (odd cycles). Connects tournament theory to statistical mechanics.
 **Next step:** Compute partition function Z(beta) = sum over SC of H(T)^beta. Check for phase transitions.
+
+### INV-088: Schweser-Stiebitz-Toft — Rédei revisited (expository)
+**Source:** arXiv:2510.10659 (Oct 2025, revised Feb 2026), found by web search opus-2026-03-07-S36
+**Status:** CATALOGED. Expository paper, likely low priority.
+**What:** Revisits the classical theorems of Rédei, Dirac, and Berge on Hamiltonian paths in tournaments. Exhibits the stronger theorems and explains connections between them. Does NOT mention independence polynomials, odd cycles, or conflict graphs.
+**Next step:** Skim for any novel structural insight about H(T) parity not already in our framework. Low priority.
+
+### INV-089: Irving-Omar authorship correction
+**Source:** opus-2026-03-07-S37 (this session)
+**Status:** CORRECTED in THM-002, CONJ-001, THM-070.
+**What:** arXiv:2412.10572 ("Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra") is by **Irving & Omar**, NOT Grinberg & Stanley. Their Corollary 20 restates Grinberg-Stanley's Theorem 1.39 + Lemma 6.5 from arXiv:2307.05569. The OCF result itself is correctly attributed to Grinberg-Stanley; only the paper authorship was wrong.
+**Remaining:** Some computation scripts and broadcast messages still reference "Grinberg-Stanley" for arXiv:2412.10572. These are historical and low priority to fix.

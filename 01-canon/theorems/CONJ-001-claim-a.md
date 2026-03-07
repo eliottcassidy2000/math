@@ -26,8 +26,8 @@ where the sum is over all directed odd cycles C through v, and μ(C) = I(Ω(T−
 **Claim A is a COROLLARY of OCF (THM-002) + Claim B (THM-003).**
 
 **Step 1:** OCF states H(T) = I(Omega(T), 2) for all tournaments T.
-OCF is now PROVED for all n — it is Corollary 20 of arXiv:2412.10572
-(Grinberg-Stanley, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", 2024),
+OCF is now PROVED for all n — it follows from Theorem 1.39 & Lemma 6.5 of arXiv:2307.05569
+(Grinberg & Stanley, 2023), restated as Corollary 20 in arXiv:2412.10572 (Irving & Omar, 2024),
 combined with the observation that for tournaments, the complement D̄ = D^op (converse),
 and ham(D^op) = ham(D) by path reversal. See THM-002 for full details.
 
@@ -78,6 +78,5 @@ These approaches attempted to prove Claim A directly. The actual proof goes thro
 
 ## Key References
 
-- Grinberg & Stanley, "The Rédei-Berge symmetric function of a directed graph", arXiv:2307.05569 (2023)
-- Grinberg & Stanley, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", arXiv:2412.10572 (2024)
-- Corollary 20 of arXiv:2412.10572 is the OCF formula in permutation-cycle language
+- Grinberg & Stanley, "The Rédei-Berge symmetric function of a directed graph", arXiv:2307.05569 (2023) — original OCF proof
+- Irving & Omar, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", arXiv:2412.10572 (2024) — Corollary 20 restates OCF via matrix algebra

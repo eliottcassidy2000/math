@@ -75,7 +75,7 @@ This was already known abstractly (INV-038 noted the clique property), but the c
 
 ## Dependencies
 
-- OCF: H(T) = I(Omega(T), 2) [Grinberg-Stanley, arXiv:2412.10572]
+- OCF: H(T) = I(Omega(T), 2) [Grinberg-Stanley, arXiv:2307.05569; Irving-Omar, arXiv:2412.10572]
 - THM-069: Graph equality Omega(T)\N[C] = Omega(T-v)|_{avoid C\{v}}
 - Claim B (THM-003): Used historically but NOT needed in this proof chain
 

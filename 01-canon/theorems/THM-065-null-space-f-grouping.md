@@ -20,9 +20,23 @@ Each OCF invariant I has a free-position count f_I = n - 1 - (sum of cycle sizes
 
 Since c_k^{(f,d)} depends only on f, the ratio coeff_k(I)/coeff_k(J) = 2^{parts(I)}/2^{parts(J)} is k-independent.
 
-### (ii) Null space
+### (ii) Null space dimension formula
 
-The null space of the map (invariants) -> (a_k) has dimension equal to (number of invariants) minus (number of distinct f-values).
+The null space of the map (invariants) -> (a_k) has dimension:
+
+**null_dim(n) = Q(n) - (n+1)/2**
+
+where Q(n) = A000009(n) = number of partitions of n into distinct parts, and (n+1)/2 = number of distinct f-values (one per even f in {0, 2, ..., n-3}).
+
+The number of OCF invariants (= partitions into odd parts >= 3 with sum <= n) equals Q(n) - 1.
+
+| n  | #types (Q(n)-1) | #f-values ((n-1)/2) | null_dim |
+|----|-----------------|---------------------|----------|
+| 5  | 2               | 2                   | 0        |
+| 7  | 4               | 3                   | 1        |
+| 9  | 7               | 4                   | 3        |
+| 11 | 11              | 5                   | 6        |
+| 13 | 17              | 6                   | 11       |
 
 At each f-level with invariants I_1, ..., I_r having parts p_1, ..., p_r, there are r-1 null vectors of the form:
 

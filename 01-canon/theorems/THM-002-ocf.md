@@ -25,7 +25,7 @@ where Ω(T) is the conflict graph on directed odd cycles of T (vertices = odd cy
 
 ### Proof 1: Via Grinberg-Stanley (external, all n)
 
-**Corollary 20 of arXiv:2412.10572** (Grinberg & Stanley, 2024) states:
+**Corollary 20 of arXiv:2412.10572** (Irving & Omar, 2024; attributed there to Grinberg & Stanley [Theorem 1.39 & Lemma 6.5 of arXiv:2307.05569]) states:
 
 > For a tournament D on [n]: ham(D̄) = Σ_{σ ∈ S(D), all cycles of σ have odd length} 2^{ψ(σ)}
 
@@ -77,7 +77,7 @@ Combined with base case H(transitive) = 1 = I(empty, 2) and arc-flip reachabilit
 
 ## Notes & History
 
-The formula H(T) = I(Ω(T), 2) was discovered independently in this project (2026) and proved computationally for n ≤ 8. It was subsequently found to be equivalent to Corollary 20 of Grinberg-Stanley (arXiv:2307.05569, 2023; arXiv:2412.10572, 2024), who proved it in full generality using the Rédei-Berge symmetric function and matrix algebra.
+The formula H(T) = I(Ω(T), 2) was discovered independently in this project (2026) and proved computationally for n ≤ 8. It was subsequently found to be equivalent to results of Grinberg & Stanley (arXiv:2307.05569, 2023), who proved it in full generality using the Rédei-Berge symmetric function. Irving & Omar (arXiv:2412.10572, 2024) give an alternative derivation via matrix algebra and state it explicitly as their Corollary 20 (attributed to Grinberg-Stanley).
 
 The formula connects tournament Hamiltonian path counting to:
 - Independence polynomials of conflict graphs
@@ -90,5 +90,5 @@ H(T) = I(Ω(T), 2) IS a valid closed-form identity where Ω(T) uses ALL directed
 
 ## Key References
 
-- Grinberg & Stanley, "The Rédei-Berge symmetric function of a directed graph", arXiv:2307.05569 (2023)
-- Grinberg & Stanley, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", arXiv:2412.10572 (2024), Corollary 20
+- Grinberg & Stanley, "The Rédei-Berge symmetric function of a directed graph", arXiv:2307.05569 (2023) — original proof (Theorem 1.39 & Lemma 6.5)
+- Irving & Omar, "Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra", arXiv:2412.10572 (2024) — re-derives via matrix algebra (Corollary 20, attributed to Grinberg-Stanley)

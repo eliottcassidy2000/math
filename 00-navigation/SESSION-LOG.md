@@ -13,6 +13,17 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S37 — 2026-03-07 (null space formula, Irving-Omar fix, exploration)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S36 (context limit continuation)
+**Summary of work:**
+  (1) **THM-065 updated with null space dimension formula:** null_dim(n) = Q(n) - (n+1)/2 where Q(n) = A000009(n). Verified for n=5,7,9,11,13.
+  (2) **Irving-Omar attribution fix:** arXiv:2412.10572 is by Irving & Omar, not Grinberg-Stanley. OCF result itself correctly attributed to Grinberg-Stanley (Thm 1.39 + Lemma 6.5 of arXiv:2307.05569). Fixed THM-002, CONJ-001, THM-070.
+  (3) **Cataloged new papers:** Schweser-Stiebitz-Toft arXiv:2510.10659 (expository, Rédei revisited). Added INV-088, INV-089.
+  (4) **OCF invariant counting:** Number of OCF invariant types at n = partitions into odd parts ≥ 3 with sum ≤ n. Equals A000009(n)-1. f-values = {0,2,...,n-3}, giving (n-1)/2 distinct values.
+**New contributions:** THM-065 update, INV-088, INV-089, attribution fixes
+**Unresolved threads:** degree-4 Fourier at n=9; bags-of-sticks OCF proof path; noncommutative deletion-contraction
+
 ## opus-2026-03-07-S35 (continued^2) — 2026-03-07 (PCD General Proof + OPCD)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35 (continued)
