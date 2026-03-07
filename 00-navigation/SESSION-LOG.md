@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35 (continued^2) — 2026-03-07 (PCD General Proof + OPCD)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35 (continued)
+**Summary of work:**
+  (1) **THM-068 PCD: PROVED AT ALL DEGREES, ALL ODD n.** Complete algebraic proof via block-placement. Key insight: all macro-items have ODD width, so start-position parity = macro-position parity. Constant descent sign cancels in ratio. Signed position sum factors through (-1)^{internal_offset}. Alternating sum = 1 for odd n-2k.
+  (2) **THM-072: Off-diagonal PCD (OPCD).** Mc_hat[a,b,S] characterized at even Walsh degrees. Interior vertices (deg_S >= 2) have zero rows/cols. Cross-block endpoint, endpoint-free, free-free entries follow 1:2:4 ratio pattern. Formula: 1/((n-2k)(n-2k-1)) scaled by block orientation factors.
+  (3) **Mc symmetry at even Walsh degrees PROVED.** Block-placement bijection (reverse macro-perm + flip orientations). Antisymmetric part lives ONLY at odd Walsh degrees.
+  (4) **Dimension reduction:** At n=5, H(T) on 1024-point hypercube has only 3 independent amplitude parameters (constant, t3 coeff, t5 coeff). Walsh spectrum: 91 nonzero coefficients but only 3 distinct amplitudes.
+  (5) Updated THM-068 from CONJECTURED to PROVED status.
+**New contributions:** THM-068 (upgraded to full proof), THM-072 (new, was THM-070 before renumbering)
+**Unresolved threads:** Full off-diagonal formula at general degree; rank = n-2k proof; relationship to Grinberg-Stanley OCF proof
+
 ## opus-2026-03-07-S36 — 2026-03-07 (THM-070 clean Claim A proof, Mitrovic-Stojadinovic, GS specialization)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S34 (context limit, then S36 continuation)

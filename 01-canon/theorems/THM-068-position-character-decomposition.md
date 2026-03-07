@@ -1,8 +1,8 @@
 # THM-068: Position Character Decomposition
 
 **Type:** Theorem
-**Certainty:** 5 -- PROVED (degree 2: algebraic all odd n; degree 4: exhaustive n=5)
-**Status:** PROVED at degree 2 (all odd n); PROVED at degree 4 (n=5); CONJECTURED general
+**Certainty:** 5 -- PROVED (algebraic, all degrees, all odd n)
+**Status:** PROVED
 **Added by:** opus-2026-03-07-S35
 **Tags:** #Walsh-Hadamard #transfer-matrix #position #diagonal #character
 
@@ -55,39 +55,120 @@ The Parseval energy at each Walsh degree level satisfies:
 
 This follows from sum_v (-1)^{2*[v in N(S)]} = n.
 
-### (vi) Connection to THM-053 and THM-069
+### (vi) Connection to THM-053 and THM-071
 
 This theorem bridges:
 - **THM-053** (M[v,v] = sum_P (-1)^{pos(v,P)}): the pos function is encoded in the highest Walsh degree (n-1), where the position character equals (-1)^{pos(v,path)} with no scaling.
-- **THM-069** (Walsh-Fourier diagonalization): H decomposes into pure Walsh degree components D_{2k}. The PCD refines this by showing M[v,v] decomposes identically, with each D_{2k} split into vertex-dependent signed components.
+- **THM-071** (Walsh-Fourier diagonalization): H decomposes into pure Walsh degree components D_{2k}. The PCD refines this by showing M[v,v] decomposes identically, with each D_{2k} split into vertex-dependent signed components.
 
 The scaling 1/(n-2k) increases from 1/n (degree 0) to 1 (top degree), meaning the highest Walsh degree carries the MOST per-vertex information about position parity, while lower degrees carry progressively averaged information.
 
 ---
 
-## Proof of degree-2 case (algebraic, all odd n)
+## Complete algebraic proof (all degrees, all odd n)
 
-For any fan pair S = {(a,b),(a,c)} with shared vertex a:
+### Setup
 
-**Step 1.** A permutation sigma contributes to M[v,v]_hat[S] iff its Hamiltonian path contains both edges of S. This forces vertex a to be interior with neighbors b and c.
+Let S be a Walsh monomial of degree 2k whose subgraph has r vertex-disjoint
+even-length path components P_{2a_1}, ..., P_{2a_r} with sum a_i = k.
 
-**Step 2.** For every valid sigma: desc(sigma, S) = 1 (one edge toward a, one away).
+Define: valid permutation sigma = one whose Hamiltonian path contains all edges of S.
 
-**Step 3.** Count valid sigma with a at position k (1 ≤ k ≤ n-2): Choose left/right for {b,c} (2 ways), distribute n-3 remaining vertices as (k-1) left + (n-2-k) right → count = 2*(n-3)! per position k, INDEPENDENT of k.
+The "master formula" is:
 
-**Step 4.** Raw signed sum for shared vertex a: R_a = 2*(n-3)! * sum_{k=1}^{n-2} (-1)^{k+1} = 2*(n-3)! (for odd n, alternating sum = 1).
+**M[v,v]_hat[S] = (1/2^{n-1}) sum_sigma (-1)^{pos(v,sigma) + desc(sigma,S)}**
 
-**Step 5.** Total valid permutations: 2*(n-2)!. So H_hat[S] = -2*(n-2)!/2^{n-1}.
+### Step 1: Valid permutation structure
 
-**Step 6.** M[a,a]_hat/H_hat = 2*(n-3)! / (-2*(n-2)!) = -1/(n-2). QED for shared vertex.
+Each component P_{2a_i} must appear as a consecutive block in the HP (it's a connected
+subpath). A valid permutation is determined by:
+- A **macro-permutation** of n-2k items: r blocks (of widths 2a_1+1, ..., 2a_r+1)
+  and n-2k-r free vertices (of width 1)
+- An **internal orientation** for each block (2 choices per block)
 
-**Step 7.** By trace constraint sum_v M[v,v]_hat = H_hat → M[v,v]_hat = H_hat/(n-2) for v ≠ a.
+Total valid perms = **2^r * (n-2k)!**
 
-## Proof of degree 0 and degree n-1 (algebraic)
+### Step 2: Constant descent sign
 
-Degree 0: M[v,v]_hat[∅] = E[M[v,v]] = E[H]/n by S_n symmetry. Trivial.
+For an even-length path P_{2a} on vertices v_0,...,v_{2a}:
+- Forward traversal gives desc = d
+- Reverse gives desc = 2a - d
+- (-1)^d = (-1)^{2a-d} since 2a is even
 
-Degree n-1: At n=5, exhaustively verified. The formula M[v,v]_hat = (-1)^{pos(v,path)} * H_hat follows from the same algebraic framework (permutation sums where all edges are in S, so the path IS the monomial).
+So both orientations give the same (-1)^{desc_i}. The macro-permutation does not
+affect which S-edges are traversed ascending vs descending. Therefore:
+
+**epsilon := (-1)^{desc(sigma,S)} is constant across all valid sigma.**
+
+(The value of epsilon depends on vertex labels but cancels in all ratios.)
+
+### Step 3: Odd-width parity lemma
+
+Every macro-item has **odd width**: blocks have width 2a_i+1 (odd), free vertices
+have width 1 (odd). Therefore the start position of the item at macro-position j is:
+
+**start(j) = sum of widths of items at positions 0,...,j-1 ≡ j (mod 2)**
+
+since each summand contributes 1 mod 2.
+
+For vertex v in block B_i at internal offset d (0-indexed from one endpoint):
+
+**pos(v) ≡ macro_pos(B_i) + d (mod 2)**
+
+For a free vertex w at macro-position j: pos(w) ≡ j (mod 2).
+
+### Step 4: Signed position sum
+
+Fix a vertex v in component i at internal offset d. For each macro-permutation,
+B_i is at some macro-position j among n-2k positions. There are (n-2k-1)!
+macro-perms with B_i at position j. Internal orientations contribute factor 2^r
+(and both orientations of B_i give the same parity since the path length is even).
+
+Raw signed sum for v:
+
+**R(v) = epsilon * 2^r * (n-2k-1)! * sum_{j=0}^{n-2k-1} (-1)^{j+d}**
+**     = epsilon * 2^r * (n-2k-1)! * (-1)^d * sum_{j=0}^{n-2k-1} (-1)^j**
+
+For odd n: n-2k is odd, so the alternating sum over n-2k terms equals 1.
+
+**R(v) = epsilon * 2^r * (n-2k-1)! * (-1)^d**
+
+For free vertices (d=0): R(w) = epsilon * 2^r * (n-2k-1)!.
+
+### Step 5: PCD formula
+
+The total H_hat * 2^{n-1} = sum_v R(v). Count: k negative vertices (odd d) contribute
+(-1) each, (n-k) positive/free vertices contribute (+1) each.
+
+**H_hat * 2^{n-1} = epsilon * 2^r * (n-2k-1)! * (n-2k) = epsilon * 2^r * (n-2k)!**
+
+Ratio: **R(v) / (H_hat * 2^{n-1}) = (-1)^d / (n-2k)**
+
+This gives: **M[v,v]_hat[S] = (-1)^{[v in N(S)]} * H_hat[S] / (n-2k)**
+
+where **N(S) = {vertices at odd internal offsets}**, with |N(S)| = sum a_i = k. **QED.**
+
+### Degree-specific instances
+
+**Degree 0 (k=0):** Trivially M[v,v]_hat = H_hat/n by S_n symmetry.
+
+**Degree 2 (k=1, P_2):** Single block of width 3. Center vertex has offset 1 (negative).
+R(center) = -epsilon*2*(n-3)!, R(other) = +epsilon*2*(n-3)!. Ratio = ∓1/(n-2).
+
+**Degree 4 (k=2):**
+- P_4: Single block of width 5. N = {offset 1, offset 3} = odd-position vertices.
+  Total = 2*(n-4)!. Ratio = ±1/(n-4).
+- P_2+P_2: Two blocks of width 3. N = {center of each wedge}.
+  Total = 4*(n-4)!. Ratio = ±1/(n-4).
+
+**Degree n-1 (k=(n-1)/2, top):** Single Hamiltonian path block.
+N = {odd-position vertices}. n-2k = 1, so ratio = ±1. No averaging.
+
+### Even-length component rule (proof)
+
+If S has an odd-length component P_L (L odd), then its two traversal directions
+give desc d and L-d with (-1)^d = -(-1)^{L-d}. Since both orientations appear
+equally in the sum, the contributions cancel exactly. Hence H_hat[S] = 0.
 
 ## Exhaustive verification (n=3, n=5)
 
@@ -96,6 +177,13 @@ Computed M[v,v] for all 2^m tournaments and all n vertices. Walsh-Hadamard trans
 2. At each degree 2k, all coefficients are ±H_hat[S]/(n-2k)
 3. The negative set has cardinality k
 4. The pattern counts match C(n,k)
+
+## Numerical verification of general proof
+
+Verified the algebraic formulas against permutation enumeration:
+- n=5: P2 (deg 2), P4 (deg 4) -- all pass
+- n=7: P2 (deg 2), P4 (deg 4), P2+P2 (deg 4), P6 (deg 6) -- all pass
+- n=9: P4+P2 (deg 6), P2+P2+P2 (deg 6), P6 (deg 6) -- all pass
 
 ---
 
