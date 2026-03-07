@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S27 — 2026-03-07 (W(i/2)=0 characterizes H-maximizers; deep core review)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S26 (context limit)
+**Summary of work:**
+  (1) **THM-064: W(i/2) Evaluation (NEW).** Discovered that W(i/2)=0 characterizes
+      H-maximizers at n=3,5,7. Equivalent to (x^2+1)|A(x) where A(x) is the
+      forward-edge generating polynomial. Fails at n=11 (Paley has W(i/2)=-10010).
+      At even n, W(i/2) is pure imaginary, never zero.
+  (2) **Free position universality:** Tested two hypotheses (random tournament avg,
+      backbone model avg) — both WRONG. F_f != avg W in either model. The
+      universality is deeper: it involves permutation sums, not just edge sums.
+      Binary sign sums give (2r)^f (trivially position-independent), but F_f
+      involves Eulerian weighting from permutation structure.
+  (3) **Agent results integrated:**
+      - Positivity: a_k=0 only at n=3 (3-cycle). For n>=4, always a_k>0.
+      - n=7 constraints: n=5 identity (odd t3 => W(0)=0) doesn't generalize.
+        W(0) always has frac part 3/4 at n=7.
+      - W(i/2) is real at odd n, pure imaginary at even n.
+      - W(i/2) = H - 6*t3 + 15 exactly at n=5.
+  (4) **H=21 gap:** Confirmed absent at n=6 (exhaustive), n=7 (100K samples),
+      n=8 (20K samples). H=7 and H=21 are the only gaps <= 25 through n=8.
+  (5) **Tangent number connection verified:** sum(-1)^k A(n,k) = (-1)^{(n-1)/2} T_{(n+1)/2}
+      connecting W(0) of transitive tournament to OEIS A000182.
+  (6) **Synced with opus-S33:** Integrated Fourier OCF decomposition, bivariate
+      Phi_T, reduced polynomial P(u,x), k-colored independence polynomial.
+**New contributions:** THM-064, 10+ computation scripts
+**Unresolved threads:**
+  - W(i/2)=0 at n=9: does it still characterize maximizers?
+  - Free position universality proof (permutation-level, not edge-level)
+  - H=21 permanent gap proof
+  - Background agents still running (n=9 W(i/2), Fourier patterns, deformed Eulerian properties, H=21 search)
+
 ## opus-2026-03-07-S32 — 2026-03-07 (DEFORMED EULERIAN NUMBERS — complete a_k(T) formula)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S31 (context limit)
