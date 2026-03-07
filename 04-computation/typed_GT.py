@@ -14,7 +14,12 @@ Special evaluations:
   G_T^typed(t; x, x, x, ...) = G_T(t, x)     [recover standard G_T]
   G_T^typed(0; y_3, y_5, ...) = I_typed(Omega; y_3, y_5, ...)  [typed IP]
   G_T^typed(t; 0, 0, ...) = A_n(t)             [Eulerian polynomial]
-  G_T^typed(t; 2, 2, ...) = E_T(t)             [tournament Eulerian]
+  G_T^typed(t; 2, 2, ...) = E_T^perm(t)         [all-permutation forward-edge poly, THM-062/063]
+
+NOTE on E_T naming collision:
+  E_T^perm(t) = sum over ALL n! permutations of t^{forward edges}  (computed by forward_edge_dist_dp)
+  E_T^ham(t)  = sum over Hamiltonian paths only of t^{descents}    (computed by direct_ET below)
+  G_T(t, 2) equals E_T^perm(t), NOT E_T^ham(t). These are different polynomials.
 
 Question: does this factor through U_T in some nice way?
 If U_T = sum c_lambda p_lambda, and we specialize p_k appropriately...
@@ -154,7 +159,12 @@ def compute_typed_GT(A, n, t_val, y_vals):
     return result
 
 def direct_ET(A, n, t_val):
-    """Direct computation of E_T(t) = sum_H t^{des(H)}."""
+    """Hamiltonian-path descent polynomial: sum over Hamiltonian paths of t^{des(H)}.
+
+    WARNING: This is E_T^ham(t), NOT E_T^perm(t). G_T(t,2) equals the
+    all-permutation forward-edge polynomial E_T^perm(t), not this function.
+    See THM-062/063 and forward_edge_dist_dp for the correct definition.
+    """
     total = 0
     for perm in permutations(range(n)):
         valid = all(A[perm[i]][perm[i+1]] == 1 for i in range(n-1))
@@ -180,13 +190,10 @@ def main():
         b = [(bits_int >> k) & 1 for k in range(m)]
         A = tournament_from_bits(n, b)
 
-        # Test 1: G_T^typed(t; 2,2,...) = E_T(t)
-        for t_val in [0, 1, 2, -1]:
-            typed_val = compute_typed_GT(A, n, t_val, {3: 2, 5: 2})
-            et_val = direct_ET(A, n, t_val)
-            if abs(typed_val - et_val) > 1e-10:
-                print(f"  FAIL (x=2): bits={bits_int}, t={t_val}: typed={typed_val}, ET={et_val}")
-                all_ok = False
+        # Test 1 removed: previously compared G_T^typed(t;2,2,...) against direct_ET,
+        # but direct_ET computes E_T^ham (Hamiltonian-path descents), while
+        # G_T(t,2) = E_T^perm (all-permutation forward edges). These differ.
+        # To test G_T(t,2), compare against forward_edge_dist_dp instead.
 
         # Test 2: G_T^typed(0; y3,y5) = I_typed(Omega; y3, y5)
         cycles = find_ALL_directed_odd_cycles(A, n)
