@@ -30,7 +30,7 @@ At n=7:
 - sum_P f^j for j=4 depends on MORE than t_3 (verified at n=5,7).
 
 Therefore:
-- **k=0:** tr(c_{n-1}) = n! (universal)
+- **k=0:** tr(c_{n-1}) = n! (universal) [CORRECTED: was (n-1)!, see MISTAKE-015]
 - **k=1:** tr(c_{n-3}) = 2(n-2)!(t_3 - C(n,3)/4) (depends only on t_3)
 - **k=2:** tr(c_{n-5}) depends on t_3 AND sum_P f^4 (the 4th moment of forward-arc count)
 
@@ -129,20 +129,24 @@ where bc = sum over 6-vertex subsets S of #{unordered partitions (T,T') of S int
 
 | Coefficient | Formula | Depends on |
 |-------------|---------|------------|
-| tr(c_6) | 5040 = 7! | universal |
+| tr(c_6) | 5040 = n! | universal |
 | tr(c_4) | 240*t_3 - 2100 | t_3 |
 | tr(c_2) | 24*bc - 60*t_3 + 12*t_5 + 231 | t_3, t_5, bc |
 | tr(c_0) | 2*t_3 - t_5 + 2*t_7 - 2*bc - 17/4 | t_3, t_5, t_7, bc |
 
+**CORRECTION (MISTAKE-015):** c_6 was previously listed as 720 = (n-1)! and c_0 constant as +253/4. The correct values are c_6 = 5040 = n! and c_0 constant = -17/4. Verified by direct computation (opus-S29) and by kind-pasteur-S25g independently.
+
 Using OCF: H = 1 + 2*(t_3 + t_5 + t_7) + 4*bc, so equivalently:
-tr(c_0) = H - c_2/4 - c_4/16 - c_6/64 = H - 6*bc + 15*t_3 - 3*t_5 - 231/4 - 15*t_3 + 2100/16 - 5040/64
-= H - 6*bc - 3*t_5 - 21/4.
+tr(c_0) = H - 6*bc - 3*t_5 - 21/4 (from c_0 + c_2/4 + c_4/16 + c_6/64 = H with c_6 = 5040).
 
 Substituting OCF: tr(c_0) = (1 + 2*t_3 + 2*t_5 + 2*t_7 + 4*bc) - 6*bc - 3*t_5 - 21/4
 = 2*t_3 - t_5 + 2*t_7 - 2*bc - 17/4.
 
-Verified: max error = 0.000000 over 100 random tournaments.
-Verified: c_0 + c_2/4 + c_4/16 + c_6/64 = H (exact).
+**CORRECTION (MISTAKE-015):** Previous version used c_6 = 720 giving c_0 constant = +253/4,
+but the verification script actually showed max error c_0 = 67.5 (not 0). The correct c_6 = 5040
+gives c_0 constant = -17/4. Independently confirmed by kind-pasteur-S25g.
+
+Verified: c_0 + c_2/4 + c_4/16 + c_6/64 = H (exact) with c_6 = 5040.
 
 ---
 
