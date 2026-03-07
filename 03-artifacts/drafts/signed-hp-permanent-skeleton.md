@@ -166,13 +166,23 @@ Why D_k mod 2^{n-1-k} is universal:
 
 **Result:** S mod 2^{n-1} = sum of (-1)^{n-1-k} 2^k (D_k mod 2^{n-1-k}).
 
-| n | S mod 2^{n-1} | c_0 fractional part |
-|---|---------------|---------------------|
-| 3 | 2 mod 4       | 1/2                 |
-| 5 | 0 mod 16      | 0 (integer!)        |
-| 7 | 48 mod 64     | 3/4                 |
+| n | S mod 2^{n-1} | c_0 fractional part | S=0 possible? |
+|---|---------------|---------------------|---------------|
+| 3 | 2 mod 4       | 1/2                 | NO            |
+| 5 | 0 mod 16      | 0 (integer!)        | YES           |
+| 7 | 48 mod 64     | 3/4                 | NO            |
+| 9 | 0 mod 256 (PREDICTED) | 0 (integer!) | YES (predicted) |
 
 **Corollary:** c_0 = S/2^{n-1} has fractional part that depends only on n. At n=5, c_0 is always an integer, making S=0 possible. At n=3 and n=7, c_0 is never integer, so S(T) ≠ 0 for ALL tournaments.
+
+**n=9 Prediction:** The three dominant contributions to S mod 256 are:
+- D_0 = 9! ≡ 128 mod 256
+- 2*D_1 = 9!*8 ≡ 0 mod 256
+- 2^6 * (D_6 mod 4) = 128 (assuming D_6 ≡ 2 mod 4, following the n=5,7 pattern)
+
+These sum to 128 + 128 = 256 ≡ 0 mod 256. If middle terms also vanish (as at n=5,7), then S ≡ 0 mod 256, making c_0 integer and S=0 possible.
+
+**Pattern:** S=0 possible at n ≡ 1 mod 4 (verified n=5, predicted n=9). S never 0 at n ≡ 3 mod 4 (verified n=3,7). Caution: this pattern may break at larger n due to middle-term contributions.
 
 ### Complement Invariance (PROVED)
 
@@ -184,9 +194,9 @@ The backbone tiling class size equals H(T) / |Aut(T)| by orbit-stabilizer.
 
 ## Open Questions
 
-1. **Prove D_k mod 2^{n-1-k} universal algebraically.** The key step: show that the tournament-dependent part of D_k is always divisible by 2^{n-1-k}.
+1. **Prove D_k mod 2^{n-1-k} universal algebraically.** The key step: show that the tournament-dependent part of D_k is always divisible by 2^{n-1-k}. Known: D_0 = n! (trivial), D_1 = n!*(n-1)/2 (edge count universal).
 
-2. **Predict S mod 2^8 at n=9.** Compute D_0 = 9!, D_1 = 9!*4, and verify D_k congruences.
+2. **Verify n=9 prediction computationally.** Need to check S mod 256 = 0 and whether S=0 actually occurs.
 
 3. **What determines S(T) at n=7?** Not a linear function of {t3, t5, t7, bc33}. What invariants are needed?
 
