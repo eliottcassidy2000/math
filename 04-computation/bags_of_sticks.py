@@ -96,7 +96,7 @@ def redei_berge_power_sum(n, edges):
     # X_bar for tournament = opposite tournament (complement edges)
     # For a tournament, edge_set union opp_edge_set = all pairs
     edge_set = set(edges)
-    opp_edges = set((j, i) for i in range(n) for j in range(n) if i != j and (i, j) not in edge_set)
+    opp_edges = set((j, i) for (i, j) in edge_set)  # T^op = reverse all arcs
 
     coeffs = defaultdict(int)  # lambda -> coefficient
 

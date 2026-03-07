@@ -997,3 +997,25 @@ The crossover (true perpendicularity) occurs near the MEDIAN H value. This means
 **Status:** CORRECTED in THM-002, CONJ-001, THM-070.
 **What:** arXiv:2412.10572 ("Revisiting The Rédei-Berge Symmetric Functions via Matrix Algebra") is by **Irving & Omar**, NOT Grinberg & Stanley. Their Corollary 20 restates Grinberg-Stanley's Theorem 1.39 + Lemma 6.5 from arXiv:2307.05569. The OCF result itself is correctly attributed to Grinberg-Stanley; only the paper authorship was wrong.
 **Remaining:** Some computation scripts and broadcast messages still reference "Grinberg-Stanley" for arXiv:2412.10572. These are historical and low priority to fix.
+
+### INV-090: Three equivalent H(T) formulas and the even-cycle cancellation
+**Source:** opus-2026-03-07-S37
+**Status:** VERIFIED computationally. Structural explanation needed.
+**What:** Three equivalent ways to compute H(T):
+1. **Direct**: count Hamiltonian paths (Held-Karp)
+2. **OCF = I(Ω(T), 2)**: sum over T-only disjoint odd cycle collections, weight 2^k
+3. **ps_1(U_T)(1)**: sum of ALL Rédei-Berge p-coefficients (uses T + T^op cycles, signed by (-1)^φ)
+
+KEY FINDINGS at n=7 (Paley):
+- All p-coefficients of U_T have ALL-ODD partitions (no even-part lambdas appear!)
+- Sum of coefficients = 189 = H(T) [ps_1 at m=1]
+- OCF specialization of FULL U_T = 433 ≠ H(T)
+- OCF specialization of T-ONLY part = 189 = H(T)
+- The "OCF specialization" (p_1→1, p_odd→2, p_even→0) is NOT how GS proves OCF
+- GS uses ps_1(U_T)(1) which uses ALL cycles, not just T-direction ones
+
+OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is this true for all tournaments? Omega constraint: (-1)^{n-l(λ)} symmetry forces sum over even-l terms = 0, but here they're individually zero. Is the all-odd support a coincidence of n=7 (Mersenne prime) or universal?
+
+**Mixed-direction findings at n=9:** Mixed T/T^op cycle pairs DO exist at n=9 (100+ per tournament). So U_T at n=9 WILL have even-part lambda contributions, but they must cancel in ps_1(1).
+**Scripts:** `04-computation/omega_constraint.py`, `mixed_sum_n9.py`, `ut_specialization_n9.py`
+**Next step:** (1) Compute U_T coefficients at n=9 to check if even-part terms appear. (2) Understand the cancellation mechanism algebraically. (3) Can this shed light on why OCF works?

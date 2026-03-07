@@ -40,7 +40,7 @@ from collections import defaultdict
 
 def redei_berge_coeffs(n, edges):
     edge_set = set(edges)
-    opp_edges = set((j, i) for i in range(n) for j in range(n) if i != j and (i, j) not in edge_set)
+    opp_edges = set((j, i) for (i, j) in edge_set)  # T^op = reverse all arcs
 
     coeffs = defaultdict(int)
 
