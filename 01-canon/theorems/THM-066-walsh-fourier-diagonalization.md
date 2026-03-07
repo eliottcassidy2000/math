@@ -72,6 +72,22 @@ This means:
 
 ---
 
+### (v) Sign rule for degree-4 coefficients (n=5)
+
+For each degree-4 Walsh monomial S (a Hamiltonian path P on K_5):
+
+**H_hat[S] = (-1)^{desc(P)} / 8**
+
+where desc(P) = number of edges in P that go from larger to smaller vertex
+when traversing from the smaller endpoint.
+
+This is well-defined because |P| = 4 (even), so both traversal directions
+give the same descent parity.
+
+At n=5: 34 paths have even descents (+1/8), 26 have odd descents (-1/8).
+
+---
+
 ## Walsh spectrum structure (n=5)
 
 - **Degree 0:** 1 nonzero coefficient = E[H] = 7.5
