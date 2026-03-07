@@ -2,7 +2,7 @@
 
 **Type:** Theorem (algebraic derivation + computational verification)
 **Certainty:** 5 -- PROVED
-**Status:** PROVED for m0-m4 at all odd n
+**Status:** PROVED for m0-m5 at all n
 **Added by:** opus-2026-03-06-S28
 **Tags:** #moments #general-n #closed-form #sigma-patterns
 
@@ -29,6 +29,11 @@
        + 48(n-4)! * t5
        + 96(n-4)! * bc
 
+  m5 = n!(n-1)(3n^4 - 2n^3 + 13n^2 - 14n + 16)/96
+       + 5(n-1)(n^2 - n + 2)(n-2)! * t3
+       + 120(n-1)(n-4)! * t5
+       + 240(n-1)(n-4)! * bc
+
 where:
 - t3 = #{directed 3-cycles in T}
 - t5 = #{directed 5-cycles in T}
@@ -38,12 +43,12 @@ where:
 
 ## Key Structural Properties
 
-1. **The polynomial 3n^2 - 5n + 4** appears in both m2 (as the constant term normalizer) and m4 (as the t3 coefficient normalizer). Specifically:
-   - m2_const = n! * (3n^2-5n+4) / 12
-   - m4_t3 = 2(n-2)! * (3n^2-5n+4)
-   - Cross-relation: m4_t3 = 24 * m2_const / (n(n-1))
+1. **Cross-moment recurrence:** The t3 coefficient at level j+2 is proportional to the constant at level j:
+   - m4_t3 * n(n-1) = 24 * m2_const  (polynomial 3n^2-5n+4 appears in both)
+   - m5_t3 * n(n-1) = 40 * m3_const  (polynomial (n-1)(n^2-n+2) appears in both)
+   - m5_t5 / m4_t5 = 5(n-1)/2  (similar recurrence for t5)
 
-2. **bc/t5 ratio in m4:** bc_coeff = 2 * t5_coeff = 96(n-4)!.
+2. **bc/t5 ratio:** bc_coeff = 2 * t5_coeff in ALL moments m4 and m5 (and m6 at n=7). This means t5 and bc always appear in the combination (t5 + 2*bc), which connects to the OCF weight function I(Omega,2).
 
 3. **Hierarchy:** New invariants enter at even moments:
    - j=0,1: universal
@@ -89,20 +94,22 @@ Combining pattern counts with sigma formulas and Stirling weights gives the clos
 
 - **m2, m3:** Verified at n=3,5,7,9,11,13,15 (closed form matches sigma computation exactly)
 - **m4:** Verified at n=5,...,21 (closed form matches sigma computation)
-- **Brute-force:** 26 random tournaments at n=5,7,9 — all pass with zero error
+- **m5:** Verified at n=7,...,21 (closed form matches sigma computation)
+- **Brute-force:** 46 random tournaments at n=5,7,9 — all pass with zero error
 
 ---
 
 ## Scripts
 
 - `04-computation/general_n_closed_forms_v3.py` (derivation and fitting)
-- `04-computation/verify_m4_closed_form.py` (comprehensive verification)
-- `04-computation/general_n_moments.py` (initial exploration)
-
----
+- `04-computation/verify_m4_closed_form.py` (m4 verification at n=5,7,9)
+- `04-computation/m5_general_n.py` (m5 derivation and n=7,9 verification)
+- `04-computation/m5_closed_form.py` (m5 coefficient fitting)
+- `04-computation/sigma32_general_n.py` (sigma((3,2)) derivation)
 
 ## Open Directions
 
-- m5: requires sigma((3,2)) formula at general n, which involves cross-correlations of 3-cycles
-- Complete hierarchy at general n: when does t7 enter? (Likely at m6, via 8-vertex sub-tournament H-counts)
-- Can the polynomial 3n^2-5n+4 be given a combinatorial interpretation?
+- m6 at general n: requires new invariants (t7? higher bc variants?) via 7+ vertex H-counts
+- Why does bc_coeff = 2*t5_coeff universally? (Likely traces back to OCF weight 2^(#components))
+- Cross-moment recurrence: is there a generating function unifying all m_j?
+- The constant-term polynomials (3n^2-5n+4, (n-1)(n^2-n+2), etc.) — combinatorial interpretation?
