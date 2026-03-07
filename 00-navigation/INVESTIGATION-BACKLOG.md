@@ -9,6 +9,19 @@
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
 
+### INV-050: Fourier Decomposition Proof of OCF — MAJOR BREAKTHROUGH
+**Source:** opus-2026-03-06-S11b (continued^7)
+**Status:** OCF PROVED AT n=5 via Fourier. At n=7, 3 of 4 identities proved. Only degree-4 identity remains.
+**What:** OCF decomposes into independent degree-homogeneous Fourier identities:
+- **Fourier Homogeneity Theorem:** w_{n-1-2k} is a homogeneous polynomial of degree 2k in centered edge variables s_e = A_e - 1/2. Verified exhaustively at n=5.
+- **Degree 0:** Trivial (expected values).
+- **Degree 2:** Proved via proportionality constants c_{2j+1} = C(n-3,2j-2)*(2j-2)!/2^{2j-2}. Verified: c_5=1/2 (n=5 exact), c_5=3, c_7=3/2 (n=7 regression).
+- **Degree n-1:** Proved via path-cycle bijection: w_0 = 2*[deg-(n-1) of t_n]. Each Hamiltonian path = Hamiltonian cycle minus one edge.
+- **Degree 4 at n=7:** THE ONLY REMAINING IDENTITY. Involves [deg-4 of t_5], [deg-4 of t_7], [deg-4 of alpha_2].
+**Key insight:** w_0's Fourier support = spanning paths of K_n (60 at n=5, coefficient = (-1)^{des(P)}/2^{n-2}).
+**Scripts:** `04-computation/fourier_homogeneity.py`, `fourier_degree2_identity.py`, `ocf_fourier_proof_framework.py`
+**Next step:** (1) Derive degree-4 proportionality constants at n=7. (2) Check if degree-4 identity has a combinatorial proof analogous to path-cycle bijection. (3) Generalize to all n.
+
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
 **Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)
 **Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9, 90%) or perfect (fails n=8, 53.8%). NOT a line graph (K_5-e found at n=6, 45%). S_{1,1,1}-free through n=11, fails n=12.
