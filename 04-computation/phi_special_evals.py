@@ -64,41 +64,74 @@ def phi_eval_frac(a_k, x, y):
 
 def indep_poly_coefficients(cycles):
     """Compute independence polynomial coefficients [alpha_0, alpha_1, ..., alpha_d]
-    for the conflict graph Omega(T)."""
+    for the conflict graph Omega(T).
+    Uses the fast method: independent sets = vertex-disjoint cycle collections.
+    Enumerates by size up to floor(n/3)."""
     m = len(cycles)
     if m == 0:
         return [1]
 
+    total_verts = len(set(v for c in cycles for v in c))
+    max_indep_size = total_verts // 3
+
     vsets = [frozenset(c) for c in cycles]
-    nbr = [0] * m
+    adj_bits = [0] * m
     for a in range(m):
         for b in range(a + 1, m):
             if vsets[a] & vsets[b]:
-                nbr[a] |= 1 << b
-                nbr[b] |= 1 << a
+                adj_bits[a] |= 1 << b
+                adj_bits[b] |= 1 << a
 
-    max_size = len(set(v for c in cycles for v in c)) // 3 + 1
-    counts = [0] * (max_size + 1)
-
-    for mask in range(1 << m):
-        ok = True
-        seen = 0
-        temp = mask
-        sz = 0
-        while temp:
-            v = (temp & -temp).bit_length() - 1
-            if nbr[v] & seen:
-                ok = False
-                break
-            seen |= 1 << v
-            temp &= temp - 1
-            sz += 1
-        if ok:
-            if sz < len(counts):
+    # For small m (<=22), use bitmask enumeration
+    if m <= 22:
+        counts = [0] * (max_indep_size + 1)
+        for mask in range(1 << m):
+            ok = True
+            seen = 0
+            temp = mask
+            sz = 0
+            while temp:
+                v = (temp & -temp).bit_length() - 1
+                if adj_bits[v] & seen:
+                    ok = False
+                    break
+                seen |= 1 << v
+                temp &= temp - 1
+                sz += 1
+            if ok and sz < len(counts):
                 counts[sz] += 1
-            else:
-                counts.extend([0] * (sz - len(counts) + 1))
-                counts[sz] = 1
+        while len(counts) > 1 and counts[-1] == 0:
+            counts.pop()
+        return counts
+
+    # For larger m, enumerate by size
+    counts = [1, m]  # size 0 and size 1
+
+    if max_indep_size >= 2:
+        pairs = []
+        for a in range(m):
+            for b in range(a + 1, m):
+                if not (adj_bits[a] & (1 << b)):
+                    pairs.append((a, b))
+        counts.append(len(pairs))
+
+        if max_indep_size >= 3:
+            triples = []
+            for a, b in pairs:
+                for c in range(b + 1, m):
+                    if not (adj_bits[a] & (1 << c)) and not (adj_bits[b] & (1 << c)):
+                        triples.append((a, b, c))
+            counts.append(len(triples))
+
+            if max_indep_size >= 4:
+                ct4 = 0
+                for a, b, c in triples:
+                    for d in range(c + 1, m):
+                        if (not (adj_bits[a] & (1 << d)) and
+                            not (adj_bits[b] & (1 << d)) and
+                            not (adj_bits[c] & (1 << d))):
+                            ct4 += 1
+                counts.append(ct4)
 
     while len(counts) > 1 and counts[-1] == 0:
         counts.pop()

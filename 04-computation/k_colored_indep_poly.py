@@ -175,11 +175,41 @@ def indep_poly_coefficients(adj):
 
 
 def indep_poly_from_cycles(cycles):
-    """Compute independence polynomial coefficients from cycle list."""
+    """Compute independence polynomial coefficients from cycle list.
+    Uses DP over cycles (keyed by used-vertex frozenset) to avoid 2^m brute force."""
     if not cycles:
         return [1]
-    cg = conflict_graph(cycles)
-    return indep_poly_coefficients(cg)
+
+    m = len(cycles)
+    vsets = [frozenset(c) for c in cycles]
+
+    # DP: dp[used_verts] = {size: count}
+    dp = {frozenset(): {0: 1}}
+    for i in range(m):
+        vs_i = vsets[i]
+        new_dp = {}
+        for used, sz_counts in dp.items():
+            if used not in new_dp:
+                new_dp[used] = {}
+            for sz, cnt in sz_counts.items():
+                new_dp[used][sz] = new_dp[used].get(sz, 0) + cnt
+            if not (used & vs_i):
+                new_used = used | vs_i
+                if new_used not in new_dp:
+                    new_dp[new_used] = {}
+                for sz, cnt in sz_counts.items():
+                    new_dp[new_used][sz + 1] = new_dp[new_used].get(sz + 1, 0) + cnt
+        dp = new_dp
+
+    # Aggregate over all used-vertex sets
+    coeffs_dict = defaultdict(int)
+    for used, sz_counts in dp.items():
+        for sz, cnt in sz_counts.items():
+            coeffs_dict[sz] += cnt
+
+    max_sz = max(coeffs_dict.keys()) if coeffs_dict else 0
+    result = [coeffs_dict.get(i, 0) for i in range(max_sz + 1)]
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -188,81 +218,71 @@ def indep_poly_from_cycles(cycles):
 
 def ocf_invariant_catalog(T):
     """Compute all OCF invariants for tournament T.
-
-    Returns a list of (parts, f, inv_value) tuples where:
-    - parts = number of independent cycles (size of the independent set)
-    - f = degrees of freedom = sum of (len(cycle) - 2) for cycles in the set
-    - inv_value = number of such independent sets (the invariant count)
-
-    The invariants are grouped by (parts, f) since different independent sets
-    of cycles with the same (parts, f) contribute identically via c_k.
-
-    For the OCF formula:
-      I(Omega, 2) = 1 + sum_{indep set S} 2^{|S|}
-                   = 1 + sum_k alpha_k * 2^k
-
-    The deformed Eulerian uses:
-      a_k = A(n,k) + sum over independent sets S of c_k^{(f_S, n-1)} * 2^{|S|}
-
-    where f_S = sum_{C in S} (|C| - 2).
-
-    We return the catalog grouped by (parts, f):
-      { (parts, f): count_of_independent_sets_with_these_params }
-    """
-    n = len(T)
+    Wrapper that finds cycles and delegates to ocf_invariant_catalog_from_cycles."""
     cycles = find_odd_cycles(T)
-    m = len(cycles)
-
-    if m == 0:
-        return {}
-
-    # Build conflict graph
-    vsets = [frozenset(c) for c in cycles]
-    adj_bits = [0] * m
-    for a in range(m):
-        for b in range(a + 1, m):
-            if vsets[a] & vsets[b]:
-                adj_bits[a] |= 1 << b
-                adj_bits[b] |= 1 << a
-
-    # Compute cycle lengths
-    cycle_lens = [len(c) for c in cycles]
-
-    # Enumerate all independent sets, recording (parts, f)
-    catalog = defaultdict(int)
-
-    for mask in range(1, 1 << m):
-        # Check independence
-        ok = True
-        seen = 0
-        temp = mask
-        while temp:
-            v = (temp & -temp).bit_length() - 1
-            if adj_bits[v] & seen:
-                ok = False
-                break
-            seen |= 1 << v
-            temp &= temp - 1
-        if not ok:
-            continue
-
-        # Compute parts and f for this independent set
-        parts = bin(mask).count('1')
-        f = 0
-        temp = mask
-        while temp:
-            v = (temp & -temp).bit_length() - 1
-            f += cycle_lens[v] - 2
-            temp &= temp - 1
-
-        catalog[(parts, f)] += 1
-
-    return catalog
+    return ocf_invariant_catalog_from_cycles(cycles)
 
 
 # ---------------------------------------------------------------------------
 # k-Colored Independence Polynomial
 # ---------------------------------------------------------------------------
+
+def ocf_invariant_catalog_from_cycles(cycles):
+    """Compute OCF invariant catalog from a pre-computed cycle list.
+    Returns { (parts, f): count } using DP."""
+    m = len(cycles)
+    if m == 0:
+        return {}
+
+    vsets = [frozenset(c) for c in cycles]
+    cycle_f = [len(c) - 2 for c in cycles]
+
+    dp = {frozenset(): {(0, 0): 1}}
+    for i in range(m):
+        vs_i = vsets[i]
+        f_i = cycle_f[i]
+        new_dp = {}
+        for used, pf_counts in dp.items():
+            if used not in new_dp:
+                new_dp[used] = {}
+            for pf, cnt in pf_counts.items():
+                new_dp[used][pf] = new_dp[used].get(pf, 0) + cnt
+            if not (used & vs_i):
+                new_used = used | vs_i
+                if new_used not in new_dp:
+                    new_dp[new_used] = {}
+                for (p, f), cnt in pf_counts.items():
+                    key = (p + 1, f + f_i)
+                    new_dp[new_used][key] = new_dp[new_used].get(key, 0) + cnt
+        dp = new_dp
+
+    catalog = defaultdict(int)
+    for used, pf_counts in dp.items():
+        for (p, f), cnt in pf_counts.items():
+            if p > 0:
+                catalog[(p, f)] += cnt
+    return catalog
+
+
+def k_colored_indep_poly_from_catalog(n, k, catalog):
+    """Compute I_k(Omega, x) from a pre-computed catalog.
+
+    I_k(Omega, x) = A(n,k) + sum_{(parts, f)} c_k^{(f, n-1)} * catalog[(parts,f)] * x^parts
+
+    Returns a list of coefficients [coeff_0, coeff_1, ...].
+    """
+    d = n - 1
+    max_parts = max((p for (p, f) in catalog), default=0)
+
+    poly = [0] * (max_parts + 1)
+    poly[0] = eulerian_number(n, k)
+
+    for (parts, f), count in catalog.items():
+        ck = inflated_eulerian(f, d, k)
+        poly[parts] += ck * count
+
+    return poly
+
 
 def k_colored_indep_poly(T, k):
     """Compute I_k(Omega(T), x) as a polynomial in x.
@@ -273,23 +293,8 @@ def k_colored_indep_poly(T, k):
     result[p] is the coefficient of x^p.
     """
     n = len(T)
-    d = n - 1  # dimension
     catalog = ocf_invariant_catalog(T)
-
-    # Find max parts
-    max_parts = 0
-    for (parts, f) in catalog:
-        max_parts = max(max_parts, parts)
-
-    # Build polynomial
-    poly = [0] * (max_parts + 1)
-    poly[0] = eulerian_number(n, k)
-
-    for (parts, f), count in catalog.items():
-        ck = inflated_eulerian(f, d, k)
-        poly[parts] += ck * count
-
-    return poly
+    return k_colored_indep_poly_from_catalog(n, k, catalog)
 
 
 def standard_indep_poly(T):
@@ -351,13 +356,17 @@ def run_single_tournament(T, label="", verbose=True):
     # Compute forward edge distribution
     a_dist = forward_edge_dist(T)
 
-    # Compute standard independence polynomial
-    std_poly = standard_indep_poly(T)
+    # Compute cycles once, reuse for both standard and k-colored
+    cycles = find_odd_cycles(T)
+    std_poly = indep_poly_from_cycles(cycles)
 
-    # Compute all I_k polynomials
+    # Compute catalog once, reuse for all k
+    catalog = ocf_invariant_catalog_from_cycles(cycles)
+
+    # Compute all I_k polynomials using shared catalog
     ik_polys = []
     for k in range(n):
-        ik = k_colored_indep_poly(T, k)
+        ik = k_colored_indep_poly_from_catalog(n, k, catalog)
         ik_polys.append(ik)
 
     # CHECK 1: I_k(Omega, 2) = a_k(T)
@@ -700,32 +709,17 @@ def main():
 
         for idx, T in enumerate(test_tournaments):
             d = n_test - 1
-            catalog = ocf_invariant_catalog(T)
+            cycles = find_odd_cycles(T)
+            catalog = ocf_invariant_catalog_from_cycles(cycles)
 
-            for x_val in [1, 2, -1, 3]:
-                for t_val in [1, 2, -1]:
-                    # LHS: sum_k I_k(Omega, x) * t^k
-                    lhs = 0
-                    for k in range(n_test):
-                        ik = k_colored_indep_poly(T, k)
-                        lhs += eval_poly(ik, x_val) * t_val**k
-
-                    # RHS: A_n(t) + sum_{(parts,f)} count * x^parts * A_{f+1}(t) * (t-1)^{d-f}
-                    # A_n(t) = sum_k A(n,k) t^k
-                    rhs = sum(eulerian_number(n_test, k) * t_val**k for k in range(n_test))
-                    for (parts, f), count in catalog.items():
-                        a_f1_t = sum(eulerian_number(f + 1, j) * t_val**j for j in range(f + 1))
-                        rhs += count * x_val**parts * a_f1_t * (t_val - 1)**(d - f)
-
-                    match = (lhs == rhs)
-                    if not match:
-                        print(f"    T#{idx}, x={x_val}, t={t_val}: LHS={lhs}, RHS={rhs} FAIL")
+            # Pre-compute all I_k polys
+            ik_polys_gf = [k_colored_indep_poly_from_catalog(n_test, k, catalog) for k in range(n_test)]
 
             # Just print pass/fail summary
             all_ok = True
             for x_val in [1, 2, -1, 3]:
                 for t_val in [1, 2, -1, 0]:
-                    lhs = sum(eval_poly(k_colored_indep_poly(T, k), x_val) * t_val**k for k in range(n_test))
+                    lhs = sum(eval_poly(ik_polys_gf[k], x_val) * t_val**k for k in range(n_test))
                     rhs = sum(eulerian_number(n_test, k) * t_val**k for k in range(n_test))
                     for (parts, f), count in catalog.items():
                         a_f1_t = sum(eulerian_number(f + 1, j) * t_val**j for j in range(f + 1))
@@ -752,8 +746,10 @@ def main():
     eul5 = eulerian_poly(5)
     all_match = True
     for T in all_tournaments(5):
+        cycles = find_odd_cycles(T)
+        catalog = ocf_invariant_catalog_from_cycles(cycles)
         for k in range(5):
-            ik = k_colored_indep_poly(T, k)
+            ik = k_colored_indep_poly_from_catalog(5, k, catalog)
             if eval_poly(ik, 1) != eul5[k]:
                 all_match = False
                 break
@@ -774,7 +770,7 @@ def main():
     print()
 
     # For n=5, compute I(Omega, -1) and compare
-    print("  n=5 exhaustive:")
+    print("  n=5 first 5 tournaments:")
     for T_idx, T in enumerate(all_tournaments(5)):
         if T_idx >= 5:
             break
@@ -782,20 +778,19 @@ def main():
         ip = indep_poly_from_cycles(cycles)
         i_minus1 = eval_poly(ip, -1)
 
-        ik_at_m1 = [eval_poly(k_colored_indep_poly(T, k), -1) for k in range(5)]
+        catalog = ocf_invariant_catalog_from_cycles(cycles)
+        ik_at_m1 = [eval_poly(k_colored_indep_poly_from_catalog(5, k, catalog), -1) for k in range(5)]
         sum_ik_m1 = sum(ik_at_m1)
 
         print(f"    T#{T_idx}: I(Omega,-1) = {i_minus1}, sum_k I_k(Omega,-1) = {sum_ik_m1}, "
               f"I_k(Omega,-1) = {ik_at_m1}")
 
-    # Check if sum_k I_k(Omega, -1) = I(Omega, -1) * something
-    # Actually sum_k I_k(Omega, -1) = A_n(1) + sum ... = n! + ...
-    # Not obvious. Let's check if it's always odd, always the same sign, etc.
-
     print("\n  n=5: Distribution of sum_k I_k(Omega, -1):")
     vals = defaultdict(int)
     for T in all_tournaments(5):
-        s = sum(eval_poly(k_colored_indep_poly(T, k), -1) for k in range(5))
+        cycles = find_odd_cycles(T)
+        catalog = ocf_invariant_catalog_from_cycles(cycles)
+        s = sum(eval_poly(k_colored_indep_poly_from_catalog(5, k, catalog), -1) for k in range(5))
         vals[s] += 1
     for v, c in sorted(vals.items()):
         print(f"    {v}: {c} tournaments")
