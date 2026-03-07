@@ -98,6 +98,23 @@ At n=3: A(x) = 3(1 + x^2) = 3(x - i)(x + i). Complete factorization.
 
 ---
 
+## Connection to Reduced Polynomial P(u, x) (THM-063)
+
+**THEOREM (kind-pasteur-S28):** W(i/2) = (-1)^m / 2^m * p_0(2), where m = (n-1)/2 and p_0(x) is the constant coefficient of the reduced polynomial P(u, x) = G_T(t, x) / t^m evaluated at u = t + 1/t.
+
+**Proof:** The palindromic forward-edge polynomial satisfies A(-i) = (-i)^{n-1} A(i). Since W(i/2) = ((-1+i)/2)^{n-1} A(-i) and P(0, 2) = A(i)/i^m, the ratio W(i/2)/P(0,2) = ((1+i)/2)^{n-1} * i^m = (-1)^m / 2^m.
+
+**Consequences:**
+- W(i/2) = 0 iff p_0(2) = 0 iff u divides P(u, 2) iff (t^2+1) divides E_T(t)
+- For Paley T_7: p_0(x) = 112(x-2)(x-68/7), so x=2 is a root and P(u,2) = u*(189u^2 + 504u + 756)
+- The leading coefficient p_m(x) = I(Omega(T), x) is ALWAYS the independence polynomial
+- The constant coefficient p_0(x) controls the "imaginary evaluation"
+- P(2, x) = n! for all x (universal constraint)
+
+This connects THM-064 (W(i/2) vanishing) with the trivariate GF framework of THM-063.
+
+---
+
 ## Open Questions
 
 1. **Why does W(i/2) = 0 characterize maximizers at n=3,5,7 but not n=11?** Is there a structural reason related to the number of independent OCF invariants?
