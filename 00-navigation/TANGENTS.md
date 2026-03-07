@@ -525,5 +525,17 @@ MAJOR: At n=5, "uniform position matrix" (P[v,k] = H/n for all v,k) is PERFECTLY
 **T163** #uniform-E-implies-scalar #fourier-flat | certainty: high (exhaustive n=5, sampled n=7) | source: kind-pasteur-2026-03-06-S25c
 "Uniform E" property (sum_{|S|=s} E_a(S+a) = e_s independent of a) IMPLIES M scalar, but is STRICTLY STRONGER. At n=5, only 24 tournaments (the regular H=15 ones = circulant) have uniform E, while 64 have scalar M. All circulant tournaments at n=5 have IDENTICAL e_s = [1,2,4,5,3]. At n=7, all circulant tournaments have uniform E but with different e_s depending on generating set. The Fourier transform of uniform E concentrates at mode 0, which directly gives M scalar via the convolution structure.
 
+**T164** #consecutive-position-formula #corrected #THM-050 | certainty: high (proved, verified n=3,4,5,6) | source: opus-2026-03-06-S26
+M[a,b] = Σ_j (-1)^j N(a,b,j) where N counts paths with {a,b} at consecutive positions {j,j+1}. CORRECTS kind-pasteur's directed formula which fails at n=3,4 and most of n=5. The symmetrized N = C(a,b,j)+C(b,a,j) works because M is symmetric but C is zero when A[a,b]=0. See THM-050.
+
+**T165** #reversal-identity #M-Top #THM-051 | certainty: high (proved, verified n=3,4,5) | source: opus-2026-03-06-S26
+M_{T^op}[a,a] = (-1)^{n-1} M_T[a,a] (diagonal); M_{T^op}[a,b] = (-1)^n M_T[a,b] (off-diagonal). At odd n: diagonal preserved, off-diagonal negated. Follows from path reversal + THM-050. See THM-051.
+
+**T166** #palindromic-N #scalar-M-characterization | certainty: high (exhaustive n=5) | source: opus-2026-03-06-S26
+N(a,b,j) palindromic (= N(a,b,n-2-j)) ⟺ M scalar at n=5. Palindromic N at odd n forces M[a,b]=0 automatically (alternating sum of palindrome vanishes). Self-complementary does NOT imply palindromic. Non-regular scalar class has N CONSTANT in j (stronger than palindromic).
+
+**T167** #IO-reciprocity #walk-GF #W-product | certainty: high (proved) | source: opus-2026-03-06-S26
+W(z)·W(-z) = 1 for ALL tournaments, where W(z) = det(I+zA^T)/det(I-zA) is the IO walk GF. Proof: det(I-z²(A²)^T) = det(I-z²A²). This is the commutative IO reciprocity. Analog of THM-030 symmetry at the generating function level.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.

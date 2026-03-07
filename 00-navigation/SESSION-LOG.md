@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S26 (continued) — 2026-03-06 (consecutive formula, reversal identity, IO)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S26 (context limit)
+**Summary of work:**
+  (1) **CORRECTED consecutive-position formula (THM-050):** kind-pasteur's formula M[a,b]=Σ(-1)^j C(a,b,j) FAILS at n=3,4 and most of n=5. The CORRECT formula uses N(a,b,j) = C(a,b,j)+C(b,a,j) (symmetrized). Proved via THM-030 symmetry: exactly one of A[a,b], A[b,a] is 1.
+  (2) **Reversal identity (THM-051):** M_{T^op}[a,a] = (-1)^{n-1} M_T[a,a]; M_{T^op}[a,b] = (-1)^n M_T[a,b] for a≠b. Proved from path reversal + THM-050.
+  (3) **Palindromic N ⟺ Scalar M at n=5:** N(a,b,j) palindromic iff M is scalar. Self-complementary does NOT imply palindromic.
+  (4) **D correction matrix:** D = M - sym(H_ab) has tr(D)=H, is NOT diagonal, ||D||/||M|| often >1. D is PSD only for scalar M classes.
+  (5) **Scalar M from consecutive formula:** For non-regular scalar [3,2,2,2,1], N constant in j. For Paley [2,2,2,2,2], N palindromic [1,2,2,1]. 8 scalar tilings at n=5.
+  (6) **IO walk GF:** W(z)·W(-z)=1 proved for all tournaments. W encodes cycle covers, M encodes signed paths.
+  (7) **M[a,a] ≠ H(V\{a}):** diagonal of transfer matrix is NOT sub-tournament path count.
+**New contributions:** THM-050, THM-051, consec_formula_correct.py, palindromic_n_scalar_m.py, d_correction_structure.py, io_multilinear_extraction.py, scalar_m_from_consec.py
+**Unresolved threads:**
+  - Prove palindromic N ⟺ scalar M at general n (not just n=5)
+  - Multilinear IO extraction: how to get M entries from W(z,x_1,...,x_n)
+  - Relationship between W(z)·W(-z)=1 and THM-030 symmetry at algebraic level
+
 ## kind-pasteur-2026-03-06-S25c (continued) — 2026-03-06 (NONHAM vanishing, proof chain)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S25c (context limit)
