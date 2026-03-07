@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S36 — 2026-03-07 (THM-070 clean Claim A proof, Mitrovic-Stojadinovic, GS specialization)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S34 (context limit, then S36 continuation)
+**Summary of work:**
+  (1) **THM-070: Clean Claim A from OCF (PROVED).** 4-step proof:
+      Through-v cycles form clique in Omega(T) → each indep set has at most one through-v cycle → graph equality gives f(C)=2mu(C) → Claim A. NO inclusion-exclusion needed.
+  (2) **Through-v clique theorem.** Any two cycles through v share vertex v, hence adjacent. This trivially makes higher-order IE terms zero.
+  (3) **THM-069 renumbering.** Fixed collision: graph equality = THM-069, Walsh-Fourier = THM-071.
+  (4) **GS OCF specialization verified.** p_1→1, p_{odd≥3}→2, p_even→0 gives H(T) from U_T coefficients. Confirmed for C_5 (H=15) and Paley T_7 (H=189).
+  (5) **Mitrovic-Stojadinovic paper analyzed (arXiv:2506.08841).** Key connections:
+      - X_{inc(P)} = omega(U_P) (chromatic = omega of Redei-Berge)
+      - Bags-of-sticks decomposition for U_X
+      - Their phi(sigma) = our S = sum(l_i-1)
+      - Noncommutative deletion-contraction for W_X
+      - Connects Stanley-Stembridge conjecture to h-positivity of U_P
+  (6) **Typed independence polynomial at n=7.** S=4 collision between (5,) and (3,3) types confirmed computationally. Only size-2 independent sets at n=7 are disjoint 3-cycle pairs.
+  (7) **INV-033 updated** with Mitrovic-Stojadinovic findings.
+**New contributions:** THM-070, typed indep scripts, GS specialization scripts, bags-of-sticks analysis
+**Unresolved threads:**
+  - Can bags-of-sticks decomposition give direct OCF proof?
+  - Degree-4 Fourier structure at n=9 (agent launched)
+  - Does noncommutative deletion-contraction on W_T prove Claim A directly?
+  - General null space dimension formula (agent working)
+
 ## kind-pasteur-2026-03-07-S28 (continued) — 2026-03-07 (P(u,x) hierarchy, Mersenne vanishing, H=21 gap, THM-065 n=9)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S28 (context continuation)
