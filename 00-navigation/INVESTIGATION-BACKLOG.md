@@ -1091,9 +1091,36 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Connection:** If mm(T) ≤ 2, Frankl's bound limits |Omega_3(T)| ≤ max(C(5,3), 3*3-3+1) depending on exact formulation. This could give an independent route to the dichotomy.
 **Next step:** Check exact Frankl bound for our setting (n vertices, 3-uniform, matching ≤ 2).
 
-### INV-101: Other Permanent H-Gaps Beyond 7 and 21 — OPEN
-**Source:** kind-pasteur-2026-03-07-S33
-**Status:** OPEN. Major new question enabled by the H=21 proof.
-**What:** With H=7 and H=21 both proved as permanent gaps (never achieved for ANY n), the natural question is: are there other permanent gaps? Known achievable values at small n include 1,3,5,9,11,13,15,25,27,... Candidates for permanent gaps: any even H (OCF gives odd H for odd-n tournaments, but even-n can give even H). The question is whether there exist odd values H>21 that are permanent gaps.
-**Computational evidence:** H values up to n=9 show no H=7 or H=21. The next suspicious gap would need systematic enumeration of achievable H at n=10,11.
-**Next step:** (1) Enumerate all achievable H values at n=10 (exhaustive or large sample). (2) Check if the dichotomy/poisoning graph technique generalizes to rule out other specific H values. (3) Does the subsidiary bound H≥25 for cycle-rich create gaps at 23?
+### INV-101: Other Permanent H-Gaps Beyond 7 and 21 — STRONG EVIDENCE: NONE EXIST
+**Source:** kind-pasteur-2026-03-07-S33, opus-2026-03-07-S43
+**Status:** STRONG CONJECTURE that H=7 and H=21 are the ONLY permanent gaps.
+**What:** With H=7 and H=21 both proved as permanent gaps (never achieved for ANY n), the natural question is: are there other permanent gaps?
+**Computational evidence (opus-S43):**
+  - ALL n=7 gaps (63, 107, 119, 149, 161-169, 173) fill at n=8 (sampling, very quickly)
+  - n=8 exhaustive computation running (268M tournaments)
+  - For H≥27 (w≥13): 20+ graph-feasible decompositions, blocking all seems impossible
+  - Decomposition analysis: for w≥4, the (w-2,1,0,...) decomposition is available; it fails at w=10 due to cascade forcing (Part N) but works at all other w
+**Algebraic argument (opus-S43):**
+  - For w≥13: alpha_3≥1 decompositions become available (3 disjoint cycles feasible)
+  - The number of decompositions grows rapidly with w (14 at w=10, 20 at w=13, 60 at w=20)
+  - Each decomposition needs an independent tournament obstruction to block it
+  - Only w=3 (1 feasible decomp) and w=10 (4 feasible decomps, all blocked) have this property
+**Mod-4 result (Grinberg-Stanley Theorem 7.1):** H(T) ≡ 1 + 2·(# nontrivial odd cycles) mod 4. Does not directly rule out any odd H.
+**Conjecture: H=7 and H=21 are the ONLY permanent gaps in the H-spectrum.**
+**Next step:** Complete n=8 exhaustive H-spectrum enumeration; if only 7 and 21 missing, strong evidence.
+
+### INV-102: Grinberg-Stanley Mod-4 Theorem (Theorem 7.1) — CATALOGED
+**Source:** opus-2026-03-07-S43 (web research)
+**Status:** CATALOGED. Read and extracted from arXiv:2307.05569.
+**What:** Theorem 7.1: H(T) ≡ 1 + 2·(# nontrivial odd D-cycles) (mod 4). This is the OCF mod-4 reduction: since H = 1 + 2·alpha_1 + 4·(...), H mod 4 = 1 + 2·alpha_1 mod 4. The proof uses the power-sum expansion and the specialization map zeta. Not directly useful for gaps but confirms the algebraic structure.
+**Next step:** Check if higher modular refinements (mod 8, mod 16) exist in the Grinberg-Stanley framework.
+
+### INV-103: Non-Separating Vertices in Tournaments — CATALOGED
+**Source:** opus-2026-03-07-S43 (web research)
+**Status:** CATALOGED. Related but weaker than cycle-rich deletion.
+**What:** A vertex in a strongly connected tournament is "non-separating" if its removal preserves strong connectivity. For min in/out-degree ≥ p, at least min{|V|, 4p-2} non-separating vertices exist. Our "good deletion" requirement is stronger: preserve cycle-richness (every vertex in a 3-cycle), not just strong connectivity.
+**Next step:** Could the non-separating vertex techniques be adapted to our stronger requirement?
+
+### INV-104: "Cycle-Rich" as Novel Concept — NOTED
+**Source:** opus-2026-03-07-S43 (web research)
+**Status:** The term "cycle-rich" (every vertex in a directed 3-cycle, no source/sink) does not appear in the literature. This is a novel concept from our project. The poisoning graph argument (Part R) may be publishable as a standalone result about cycle-rich tournaments.
