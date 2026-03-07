@@ -516,3 +516,34 @@ THM-059 corrected. The (j+1)^2 factor now has a combinatorial explanation via th
 - The numerical table and all computed F_j values were always correct
 - Only the stated recurrence formula was wrong
 - The OEIS A036969 identification may need clarification (different column conventions)
+
+---
+
+## MISTAKE-010: Missing 2^s Factor in M[a,b] Walsh Formula (THM-080)
+
+**Date discovered:** 2026-03-07 (S35c7)
+**Found by:** opus-2026-03-07-S35c7
+**Affects:** THM-080 Walsh formula for M[a,b]
+
+### What was assumed
+The Walsh coefficient hat{M[a,b]}[S] = (-1)^{asc(S)} * (n-2-d)!/2^{n-2}, with NO dependence on the number of components. This was described as a "fundamental simplification" compared to H.
+
+### Why it was wrong
+The formula was verified exhaustively only at n=5, where ALL valid monomials have s=0 (zero unrooted components). At n=5, the maximum degree is 3, and with only 3 interior vertices, there's no room for unrooted even-length components to coexist with rooted ones. So the 2^s factor was always 1, making it invisible.
+
+At n=7, degree-3 monomials like P1(a-rooted) + P2(unrooted) have s=1, and the formula without 2^s gives wrong reconstruction (16/20 failures).
+
+### The correct formula
+hat{M[a,b]}[S] = (-1)^{asc(S)} * **2^s** * (n-2-d)!/2^{n-2}
+
+where s = number of unrooted (even-length) components. Each unrooted component has 2 valid orientations in the HP (both giving the same chi_S sign), contributing a factor of 2. Rooted components have only 1 valid orientation (pinned at a or b).
+
+### Impact
+- THM-080 formula corrected with 2^s factor
+- Walsh proof of M[a,b]=M[b,a] symmetry still holds (2^s is symmetric in a,b)
+- H-M comparison now shows PARALLEL structure: H has 2^r (all components unrooted), M has 2^s (only unrooted components contribute orientations)
+- The "no r-dependence" claim was wrong; M DOES depend on component structure via s
+- n=7 reconstruction: 20/20 match with corrected formula
+
+### Lesson
+Always verify formulas at the NEXT size up before claiming generality. n=5 was too small to expose the s-dependence.
