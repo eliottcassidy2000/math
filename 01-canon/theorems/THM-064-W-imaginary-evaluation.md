@@ -60,11 +60,14 @@ Using W(i/2) = sum_j w_{n-1-2j} * (-1)^{(n-1)/2-j} / 2^{n-1-2j} at odd n:
 
 At n=3,5,7: **W(i/2) = 0 if and only if T is an H-maximizer.**
 
-### (vi) Failure at n=11
+### (vi) Failure at n=9 and n=11
 
-Paley T_11 (the H-maximizer with H = 95095) has W(i/2) = -10010, NOT zero.
+At n=9: The H-maximizer (circulant {1,2,3,5}, H=3357) has W(i/2) = 342, NOT zero.
+However, |W(i/2)| is minimized at the maximizer class. Corr(H, |W(i/2)|) = -0.845 across all n=9 tournaments.
 
-So W(i/2) = 0 does NOT characterize H-maximizers at all odd n.
+At n=11: Paley T_11 (the H-maximizer with H = 95095) has W(i/2) = -10010, NOT zero.
+
+So W(i/2) = 0 characterizes H-maximizers ONLY at n=3,5,7. At larger odd n, |W(i/2)| is minimized (but not zero) at maximizers.
 
 ### (vii) Even n: W(i/2) never vanishes
 
@@ -99,9 +102,9 @@ At n=3: A(x) = 3(1 + x^2) = 3(x - i)(x + i). Complete factorization.
 
 1. **Why does W(i/2) = 0 characterize maximizers at n=3,5,7 but not n=11?** Is there a structural reason related to the number of independent OCF invariants?
 
-2. **Does W(i/2) = 0 imply H = max for ALL odd n?** (One direction of the characterization.) That is: does the linear constraint always select the maximal H class? Verified at n=3,5,7 but unknown at n=9.
+2. **Does W(i/2) = 0 imply H = max for ALL odd n?** NO — fails at n=9 (maximizer has W(i/2) = 342). The vanishing characterization is specific to n=3,5,7.
 
-3. **Is |W(i/2)| monotonically related to H?** Computationally: at n=7, W(i/2) is always negative, and more negative for lower H. Is |W(i/2)| anti-correlated with H?
+3. **Is |W(i/2)| monotonically related to H?** Strong evidence: Corr(H, |W(i/2)|) = -0.845 at n=9. At n=7, W(i/2) is always negative, and more negative for lower H. The anti-correlation persists even when vanishing fails.
 
 4. **Other roots of unity:** Do higher roots of unity (cube roots, 5th roots) at r = e^{2*pi*i*k/m}/2 give additional constraints that help characterize maximizers?
 
@@ -111,3 +114,4 @@ At n=3: A(x) = 3(1 + x^2) = 3(x - i)(x + i). Complete factorization.
 
 - `04-computation/W_half_i_vanishing.py` -- Main verification
 - `04-computation/W_complex_evals.py` -- Complex evaluations and Parseval analysis
+- `04-computation/W_half_i_n9.py` -- n=9 evaluation showing failure of vanishing
