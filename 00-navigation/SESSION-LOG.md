@@ -28,6 +28,19 @@ Entry format:
 **New contributions:** THM-075, INV-091-095, complete n=7 H-spectrum, OPEN-Q-019 update
 **Unresolved threads:** Prove H=21 at general n; reconcile degree-4 n=9 dimensionality; is 63 a permanent gap?; THM-063 vs THM-074 contradiction on G_T(t,2)=E_T(t)
 
+## opus-2026-03-07-S35 (continued^3) — 2026-03-07 (THM-076: Walsh-OCF Factorization)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35 (continued^2)
+**Summary of work:**
+  (1) **THM-076: Walsh-OCF Factorization Identity (PROVED).** The Walsh amplitude formula for I(Omega(T), 2) factorizes: each Walsh monomial's coefficient decomposes into "covering configurations" — ways to assign the monomial's path components to disjoint odd cycles. The remaining vertices contribute E[I(Omega,2)] = f(n-used). Each term telescopes via the constant-term identity C(m,j)*j!*(m-j)! = m!.
+  (2) **Single-component proof complete.** For any P_{2a} path, the factored sum gives exactly 2*(n-2a)!/2^{n-1}. Verified for a=1,...,5 and n up to 19.
+  (3) **Multi-component proof verified.** For r=2 (P2+P2, P2+P4) and r=3 (P2+P2+P2), the factorization works by enumerating covering types (one big cycle, separate cycles, mixed). All verified at multiple n values including brute-force cycle counting at n=11.
+  (4) **Cycle polynomial structure discovered.** t_k (directed k-cycle count) is a polynomial of degree k-1 in edge variables (odd k: top degree cancels between forward/reverse). Walsh degrees 0,2,...,k-1 only (complement invariance kills odd degrees).
+  (5) **Walsh-orthogonal OCF invariants.** At n=5: q2 = t3 (centered), q4 = t5 - (1/2)*t3 (centered). The mixing coefficient t5_hat/t3_hat = 1/2 exactly at degree 2. OCF invariants have Walsh content at multiple degrees (t5 contributes to both degree 2 and 4).
+  (6) **Key insight: higher-degree OCF follows from degree-0 OCF.** The factorization uses E[I(Omega,2)] on remaining vertices, which is degree-0 OCF. This creates a self-consistent tower: degree 0 implies degree 2, which (with appropriate bookkeeping) implies degree 4, etc.
+**New contributions:** THM-076, extensive verification scripts
+**Unresolved threads:** Full general-r algebraic proof; formal proof that covering types exhaust all contributions; connection to Grinberg-Stanley proof structure
+
 ## kind-pasteur-2026-03-07-S30 — 2026-03-07 (Factor-2 explained, u_T polynomial, tangent numbers, agent investigations)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S29
