@@ -92,17 +92,31 @@ At n=7 (f=2, d=6): c_1^{(2,6)} = 0, making P_2(x) linear in x (the bc/alpha_2 te
 
 ## Connection to Tangent Numbers
 
-At u=0 (corresponding to t=i):
-  P_n(0, 0) = 2^{(n-1)/2} * T_n
+The base polynomial P_n(u,0) evaluates to tangent numbers at two special points:
 
-where T_n is the n-th tangent number (T_1=1, T_3=2, T_5=16, T_7=272, T_9=7936, ...).
+1. **At u=-2** (corresponding to t=-1):
+   P_n(-2, 0) = T_n  (the n-th tangent number exactly)
+   Equivalently: A_n(-1) = (-1)^{(n-1)/2} * T_n (classical result, Stanley EC1).
+
+2. **At u=0** (corresponding to t=i):
+   P_n(0, 0) = 2^{(n-1)/2} * T_n  (tangent number scaled by 2^m)
+   Equivalently: A_n(i) = (2i)^{(n-1)/2} * T_n.
+
+3. **At u=2** (corresponding to t=1):
+   P_n(2, 0) = n!  (all permutations)
+
+Tangent numbers: T_1=1, T_3=2, T_5=16, T_7=272, T_9=7936, T_11=353792.
 Verified for n=1,3,5,7,9,11,13.
 
-Equivalently: A_n(i) = (2i)^{(n-1)/2} * T_n.
+The base polynomial P_n(u,0) thus interpolates between T_n (alternating permutations)
+at u=-2 and n! (all permutations) at u=2, providing a direct link between
+tournament parity and classical enumerative combinatorics.
 
-This connects the base polynomial to alternating permutations and the sec/tan
-generating function, providing a link between tournament parity and classical
-enumerative combinatorics.
+**For the full P(u,x):** At u=2, all corrections vanish (via (u-2)^{S/2}), giving
+P(2,x) = n! universally. At u=-2, the corrections have factor (-4)^{S/2} = 2^S,
+giving P(-2, x) = T_n + sum_I c_I * x^|I| * T_{n-S_I} * 2^{S_I}. This is a
+"tangent-number weighted independence polynomial" — a new object connecting
+tournament cycle structure to alternating permutations.
 
 ## Connection to Null Space
 
