@@ -97,8 +97,50 @@ At n=5: sum_P f_(4) = H (since C(4,4)=1 position subset = all edges = Hamiltonia
 
 ---
 
+## Singleton Cancellation Lemma
+
+**Lemma.** For centered edge deviations s_i = A[p_i, p_{i+1}] - 1/2, if a position subset has an isolated position (not adjacent to any other selected position), then sum_P prod_{selected positions} s_i = 0.
+
+**Proof sketch:** The isolated position involves two vertices not constrained by other selections. Summing over all placements of these two vertices gives sum (A[a,b] - 1/2) = 0.
+
+Verified computationally at n=7: (3,1) and (2,1,1) patterns both give exactly 0.
+
+Consequence: At n=7, only 6 of 15 position 4-subsets contribute to tr(c_2).
+
+---
+
+## Exact Formula at n=7 (VERIFIED)
+
+**Theorem.** At n=7:
+
+tr(c_2) = 24*bc - 60*t_3 + 12*t_5 + 231
+
+where bc = sum over 6-vertex subsets S of #{unordered partitions (T,T') of S into two triples that are both directed 3-cycles}.
+
+**Derivation:**
+- (4,) contribution: 126 - 36*t_3 + 12*t_5 (uses OCF at n=5 recursively)
+- (2,2) contribution: 24*bc - 24*t_3 + 105 (complementary-triple structure)
+- All other patterns: 0 (singleton cancellation)
+- Total: 24*bc - 60*t_3 + 12*t_5 + 231
+
+**Consequence:** tr(c_0) = H - 6*bc - 3*t_5 + 249/4
+
+**Complete coefficient table at n=7:**
+
+| Coefficient | Formula | Depends on |
+|-------------|---------|------------|
+| tr(c_6) | 720 | universal |
+| tr(c_4) | 240*t_3 - 2100 | t_3 |
+| tr(c_2) | 24*bc - 60*t_3 + 12*t_5 + 231 | t_3, t_5, bc |
+| tr(c_0) | H - 6*bc - 3*t_5 + 249/4 | H, t_5, bc |
+
+Verified: max error = 0.000000 over 30 random tournaments.
+Verified: c_0 + c_2/4 + c_4/16 + c_6/64 = H (exact).
+
+---
+
 ## Scripts
 
 - `04-computation/algebraic_proof_cn3.py` (k=1 algebraic proof)
-- Sympy computation: Newton's identity reduction (in session notes)
-- Position decomposition at n=7 (in /tmp/f4_falling_decomposition.py)
+- `04-computation/coefficient_hierarchy_proof.py` (Newton identity + moment hierarchy)
+- `04-computation/trc2_exact_formula.py` (complete n=7 formula verification)
