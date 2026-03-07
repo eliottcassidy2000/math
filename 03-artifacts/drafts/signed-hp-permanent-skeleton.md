@@ -168,9 +168,21 @@ Why D_k mod 2^{n-1-k} is universal:
   - D_2 = Σ_S D_S. The non-adjacent contributions are universal. The adjacent contribution has parity depending on n mod 4 (via C(n,2) parity), ensuring D_2 mod 2^{n-3} is universal.
 - D_k for k ≥ 3: Similar decomposition; the tournament-dependent parts carry enough factors of 2 from the (n-k-1)! factor in the permutation count.
 
-**Pair-Partition Identity (PROVED).** For ANY tournament on m ≥ 4 vertices and any 4 distinct vertices {a,b,c,d}, summing A[a][b]·A[c][d] over all 24 permutations of (a,b,c,d) gives exactly 6. Proof: the 24 permutations partition into 3 pair-partitions {{a,b},{c,d}}, {{a,c},{b,d}}, {{a,d},{b,c}}. Each pair-partition contributes (A[x][y]+A[y][x])·(A[w][z]+A[z][w]) = 1·1 = 1 to the sum over 8 arrangements, but accounting for the 4 orderings of each pair gives 4 terms per partition. Actually: each of the 3 partitions contributes exactly 2 (since A[x][y]+A[y][x]=1 for both pairs, and each pair has 2 orderings giving 2×1=2). Total: 3×2 = 6. Verified computationally for all 2^6 = 64 tournaments on 4 vertices.
+### THM-I: k-fold Partition Identity (PROVED)
 
-**Consequence for D_S:** For non-adjacent positions (i,j) with |j-i| ≥ 2, the (n-4)! arrangements of the remaining n-4 vertices times 6 gives D_S = (n-4)!·6·C(n,4)/... = n!/4. This is tournament-independent.
+**Theorem.** For any tournament T on m ≥ 2k vertices and any 2k distinct vertices, the sum over all (2k)! permutations of Π_{i=1}^k A[P_{2i-1}][P_{2i}] equals (2k)!/2^k.
+
+**Proof.** Group the 2k slots into k pairs. For any perfect matching M of the 2k vertices, there are k! slot assignments and 2^k orderings within slots. Summing orderings within slot i: A[a_i][b_i]+A[b_i][a_i] = 1 (tournament axiom). Product over slots = 1. Each matching contributes k!. Number of matchings = (2k-1)!!. Total = (2k-1)!! × k! = (2k)!/2^k. QED.
+
+Verified computationally for k=1 through k=5 (700 tournaments, 0 failures).
+
+**Corollary (Master Identity).** D_S = n!/2^k for any set of k pairwise non-adjacent edge positions.
+
+**Proof.** The 2k vertices at non-adjacent positions are distinct. Sum over n! permutations: C(n,2k) choices of 2k vertices × (2k)!/2^k from the k-fold identity × (n-2k)! remaining arrangements = n!/2^k. QED.
+
+Verified at n=5 (k=1,2) and n=7 (k=1,2,3).
+
+**Consequence:** The tournament-dependent part of D_k comes ONLY from position sets with at least one adjacent pair (shared vertex). These carry extra factors of 2 from the constrained counting, providing the 2-adic structure needed for the universal congruence.
 
 **The n mod 4 chain:** C(n,2) even iff n ≡ 0,1 mod 4. When C(n,2) is even, the number of vertices with odd in-degree is even, which makes Σ in(v)·out(v) ≡ 0 mod 2, which makes the adjacent contributions to D_2 even, which makes D_2 mod 2^{n-3} universal with the "right" value for S ≡ 0 mod 2^{n-1}. When C(n,2) is odd (n ≡ 2,3 mod 4), the adjacent parity shifts, giving S ≢ 0.
 
