@@ -75,18 +75,60 @@ Decompositions:
 
 At n=7 exhaustive, NONE of the valid decompositions are achieved by any tournament.
 
+## Component Factorization Framework (key insight)
+
+**H(T) = product of I(C_i, 2) over connected components C_i of Omega(T).**
+
+This follows from I(G1 + G2, x) = I(G1, x) * I(G2, x) for disjoint graph union.
+
+Verified exhaustively: n=5 (1024 tournaments, 0 mismatches), n=6 (32768, 0 mismatches).
+
+### Proof strategy for H=21
+
+The factorization 21 = 3 * 7 requires a component with I(C, 2) = 7.
+
+**THM-029 generalized:** I(C, 2) = 7 is IMPOSSIBLE for any connected component C of
+any Omega(T). Proof: I(G, 2) = 7 for a connected graph G only if G = K_3 (complete
+graph on 3 vertices, giving I = 1+6 = 7). But K_3 as a component means 3 directed
+cycles all pairwise sharing vertices with no other cycle connected to them. This forces
+additional cycles (5-cycles via common vertex), expanding the component.
+
+Therefore: **H = 21 requires Omega(T) to have a SINGLE connected component with
+I(C, 2) = 21.** The factorization H = 3*7 is blocked.
+
+### Achievable component values
+
+Exhaustive check at n=6: the achievable I(C, 2) values for connected components are:
+{3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45}
+
+Neither 7 nor 21 is achievable as a component value at n=6.
+
+The only multi-component factorization at n=6 is (3, 3) -> H = 9.
+
+### Remaining proof target
+
+To complete the proof of H=21 impossibility, it suffices to show:
+
+**I(C, 2) != 21 for any connected component C of any Omega(T) at any n.**
+
+Connected graphs G with I(G, 2) = 21:
+1. K_{10} (10 vertices, clique): requires 10 pairwise-conflicting cycles. Forces 5-cycles.
+2. K_8 - edge (8 vertices, 1 non-edge): requires 8 cycles with exactly 1 disjoint pair.
+3. K_6 - matching (6 vertices, 2 non-edges): requires 6 cycles with 2 disjoint pairs.
+4. K_6 - P_3 (6 vertices, 2 non-edges as path): same alpha values as above.
+5. P_4 (4 vertices, path graph): requires 4 cycles in path configuration. Needs >= 8 vertices.
+
+Each case must be shown impossible as a connected component of Omega(T).
+
 ## Connection to THM-029 (H=7 impossibility)
 
 THM-029 proves H=7 is impossible via: alpha_1=3, alpha_2=0 forces common vertex
-forces 5-cycle forces alpha_1 >= 4.
-
-A similar approach for H=21 would need to show that EACH of the 4 valid decompositions
-(10,0), (8,1), (6,2), (4,3) leads to a contradiction. This is substantially harder
-because the decomposition space is larger.
+forces 5-cycle forces alpha_1 >= 4. In the component framework, this shows I(C,2) = 7
+is impossible for any component (K_3 is the only option, and it forces expansion).
 
 ## Open Questions
 
-1. Can the H=7 proof technique be extended to H=21?
-2. Are there other permanent gaps beyond 7 and 21?
-3. Is there a characterization of all achievable H values?
-4. Does the gap pattern relate to the multiplicative monoid structure?
+1. Can the component expansion argument be extended to rule out I(C,2)=21?
+2. Are 7 and 21 the ONLY permanent gaps? (Evidence suggests yes.)
+3. Is there a uniform characterization of impossible component values?
+4. Does every achievable odd integer occur as H(T) for sufficiently large n, except 7 and 21?
