@@ -75,3 +75,19 @@ The proof for circulant tournaments uses the reflection r: i→-i as the anti-au
 **Verified at n=9:** All 16 Z/3×Z/3 Cayley tournaments (vertex-transitive, NOT circulant) have scalar M = 351·I with H = 3159.
 
 **At prime n:** By Sylow's theorem, every transitive group on p elements contains a p-cycle, so vertex-transitive = circulant at prime n.
+
+## Converse: Scalar M does NOT imply vertex-transitive
+
+**Disproved at n=5 (opus-2026-03-06-S26):** There exists a tournament on 5 vertices with M = 3I that is NOT vertex-transitive.
+
+The counterexample is the "cone over C_3": vertices {1,2,3} form a 3-cycle, vertex 4 beats {1,2,3}, {1,2,3} all beat vertex 0, and 0 beats 4. This has |Aut| = 3 (Z/3Z on the middle), score sequence (1,2,2,2,3), and vertex orbits {0}, {1,2,3}, {4}.
+
+**Position-uniform characterization (opus-2026-03-06-S26):** At n=3,5, the exact characterization of scalar M is:
+
+    M = (H/n)*I  <=>  N[v,j] = H/n for all v,j  (position-uniform)
+
+where N[v,j] = number of Hamiltonian paths with vertex v at position j. Exhaustively verified: 64/1024 labeled tournaments on 5 vertices are position-uniform, all have scalar M, and vice versa.
+
+**Key structural difference:** For vertex-transitive tournaments, each even-r coefficient c_k is individually scalar. For non-VT position-uniform tournaments (like the cone over C_3), the individual c_k are NOT scalar — their off-diagonal parts cancel at r=1/2. Specifically: c_0 off-diagonal = 0.5 is cancelled by c_2 off-diagonal * 0.25 = -0.5.
+
+**At prime n=7:** No non-circulant position-uniform tournaments found (1000 random + 84 single-flips tested). Position-uniform likely = circulant = VT at prime n=7.
