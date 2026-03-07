@@ -802,3 +802,12 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **What:** Irving-Omar walk GF W_D(z) = det(I+zXA^T)/det(I-zXA) uses cycle covers (det/per), while M[a,b] uses path decomposition (E_a*B_b). M[a,b] ≠ H(a→b) (direct endpoint-conditioned count). W(-z,-r) = W(z,r) at commutative level (opus finding). No simple matrix expression of A gives M.
 **Key structural difference:** IO is multiplicative (det/per = products over cycles), M is additive (sum over subsets with inclusion-exclusion signs). Bridge might exist through Hopf algebra coproduct structure.
 **Next step:** (1) Express M[a,b] in terms of IO's det/per framework. (2) Check if deletion-contraction on M matches Mitrovic's W_X = W_{X\e} - W_{X/e}^up.
+
+### INV-073: Palindromic N => Scalar M for circulant tournaments — PROVED (THM-052)
+**Source:** kind-pasteur-2026-03-06-S25d, building on THM-050 (opus-S26), THM-051 (opus-S26)
+**Status:** PROVED for all circulant tournaments at odd n.
+**What:** For circulant T on Z/nZ, the consecutive-position count N(a,b,j) = f(b-a mod n, j) is palindromic: f(d,j) = f(d,n-2-j). The proof uses three ingredients: (1) translation symmetry gives f depends only on d, (2) N symmetry gives f(d)=f(n-d), (3) self-complementarity via sigma: i->-i gives f(d,j)=f(n-d,n-2-j). Combining (2)+(3): f(d,j)=f(d,n-2-j). At odd n, palindromic N forces alternating sum = 0, so M[a,b]=0 for a!=b. Combined with M[a,a]=H/n, gives M=(H/n)*I.
+**Verification:** n=5 (64/64 exhaustive pos-uniform), n=7 (8/8 circulant), n=9 (16/16), n=11 Paley, n=13 Paley.
+**Key finding:** ALL position-uniform n=5 tournaments are self-complementary (64/64). No position-uniform tournaments exist at even n (n=4,6).
+**Open extension:** Prove for general vertex-transitive (non-circulant) tournaments. The proof uses circulant-specific translation symmetry. At n=15, non-circulant VT tournaments exist (Babai-Kantor doubly-regular tournaments).
+**Scripts:** `04-computation/palindromic_N_proof.py`, `04-computation/palindromic_N_posuniform.py`, `04-computation/palindromic_N_n9.py`, `04-computation/palindromic_N_n11.py`, `04-computation/selfcomp_posuniform_n7.py`

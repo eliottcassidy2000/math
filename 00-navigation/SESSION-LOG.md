@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S25d — 2026-03-06 (THM-052: scalar M PROVED for circulants)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25c (context limit)
+**Summary of work:**
+  (1) **THM-052 PROVED: M=(H/n)*I for all circulant tournaments at odd n.** Clean algebraic proof using three ingredients: translation symmetry (N depends on d=b-a mod n), N-symmetry (f(d)=f(n-d)), self-complementarity via sigma: i->-i (f(d,j)=f(n-d,n-2-j)). Combining gives palindromic f(d,j)=f(d,n-2-j), which forces alternating sum=0 at odd n.
+  (2) **Exhaustive verification:** Position-uniform => palindromic N confirmed at n=5 (64/64), n=7 (8/8 circulant), n=9 (16/16 circulant), n=11 Paley, n=13 Paley.
+  (3) **Position-uniform => self-complementary at n=5:** ALL 64 position-uniform n=5 are SC. Not all are vertex-transitive (40/64 have |Aut|=3, not VT).
+  (4) **All circulant tournaments are SC:** Verified n=7 (8/8), n=9 (16/16). The map i->-i always gives self-complementarity for circulants.
+  (5) **Processed opus messages:** THM-050 (corrected consecutive formula), THM-051 (reversal identity), eigenvalue formula, F-C decomposition, palindromic landscape analysis.
+  (6) **H(T_13) = 1,579,968** computed. f(d,j) constant for Paley T_11 and T_13 (super-palindromic). f(2)=0 for T_13 (vertices 0,2 never adjacent in any path).
+**New contributions:** THM-052, palindromic_N_proof.py, palindromic_N_posuniform.py, palindromic_N_n9.py, palindromic_N_n11.py, palindromic_N_proof_attempt.py, selfcomp_posuniform_n7.py, INV-073
+**Unresolved threads:**
+  - Extend THM-052 to non-circulant vertex-transitive tournaments (need pair-orbit argument)
+  - The proof uses circulant-specific translation symmetry — what replaces this for general VT?
+  - At n=15, non-circulant VT tournaments exist — these need testing
+  - Web search for Babai-Kantor results on VT tournament automorphism groups
+
 ## opus-2026-03-06-S11b (continued) — 2026-03-06 (eigenvalue formula, spectral skeleton, perpendicularity)
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-03-06-S11b (context limit)
