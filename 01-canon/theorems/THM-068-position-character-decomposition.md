@@ -164,6 +164,18 @@ R(center) = -epsilon*2*(n-3)!, R(other) = +epsilon*2*(n-3)!. Ratio = ∓1/(n-2).
 **Degree n-1 (k=(n-1)/2, top):** Single Hamiltonian path block.
 N = {odd-position vertices}. n-2k = 1, so ratio = ±1. No averaging.
 
+### Corollary: Walsh Amplitude Formula
+
+From Step 5: **|H_hat[S]| = 2^r * (n-2k)! / 2^{n-1}**
+
+The Walsh amplitude depends ONLY on the number of path components r, not on
+the specific partition type. For fixed degree 2k:
+- Monomial types with more components have proportionally larger amplitudes
+- Ratio between types: |H_hat(r₁)| / |H_hat(r₂)| = 2^{r₁-r₂}
+
+Examples at n=7 degree 4: P₄ (r=1) has |H_hat| = 3/16, P₂+P₂ (r=2) has |H_hat| = 3/8.
+Verified at n=5,7,9 for all tested types (P₂, P₄, P₂+P₂, P₆, P₄+P₂, P₂+P₂+P₂).
+
 ### Even-length component rule (proof)
 
 If S has an odd-length component P_L (L odd), then its two traversal directions
