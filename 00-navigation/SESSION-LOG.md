@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S43 — 2026-03-07 (Bottleneck analysis, gap conjecture, web research)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S42 (via context compaction)
+**Summary of work:**
+  (1) **THM-079 Part S: Bottleneck Analysis.** All 20 no-good-deletion n=9 tournaments have identical structure: scores (1,1,1,4,4,4,7,7,7), mm=3, H=27, every vertex uniquely bottlenecked. Confirms dichotomy is trivially true.
+  (2) **n=10 good-deletion verified.** 0/192M cycle-rich n=10 tournaments lack good deletion. Strong evidence good deletion always exists for n≥10.
+  (3) **ALL n=7 H-gaps fill at n=8.** Gaps 63, 107, 119, 149, 161-169, 173 all found at n=8 within first few thousand samples. Only 7 and 21 remain missing.
+  (4) **H-gap conjecture formulated.** Strong evidence that H=7 and H=21 are the ONLY permanent gaps. For w≥13, 20+ decompositions available; blocking all seems impossible.
+  (5) **Grinberg-Stanley Theorem 7.1 extracted.** H(T) ≡ 1 + 2·(# nontrivial odd cycles) mod 4. Confirms OCF mod-4 structure. Does NOT rule out any specific odd H.
+  (6) **Co-bipartite analysis.** ind(G)≤2 does NOT imply co-bipartite (C_5 counterexample). Turán bound alpha_2 ≤ alpha_1²/4 is tight.
+  (7) **Web research (2 agents).** Cataloged: non-separating vertices in tournaments, cycle extension lemma (Ma-West-Yan), Chen-Chang 2025 extremal results, "cycle-rich" is novel concept.
+  (8) **Merged conflict with kind-pasteur-S33's PROVED dichotomy.** Their poisoning graph argument completes the H=21 proof. My bottleneck analysis added as Part S (supplementary).
+  (9) **Min-H for cycle-rich n=10.** Sampling found min H=75 (still dropping). Confirms cycle-rich tournaments have much higher H than 21.
+**New contributions:** THM-079 Part S; INV-101 updated; INV-102,103,104 added; h-gap conjecture; 8 new computation scripts
+**Unresolved threads:**
+  - Complete n=8 exhaustive H-spectrum (268M tournaments, interrupted by disk full)
+  - Formalize proof that H=7 and H=21 are the only gaps (would need to show for all w≠3,10 that at least one decomposition is achievable)
+  - Paley maximizer conjecture (OPEN-Q-013): submit H(T_p) data to OEIS?
+
 ## kind-pasteur-2026-03-07-S33 — 2026-03-07 (H=21 impossibility PROVED for all n)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S32 (context compacted)
