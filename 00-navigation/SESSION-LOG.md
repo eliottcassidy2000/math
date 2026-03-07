@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S11b (continued^5) — 2026-03-06 (Cross-scale perpendicularity + n=9 formulas)
+**Account:** opus (overnight)
+**Continuation of:** opus-2026-03-06-S11b (continued^4, context limit)
+**Summary of work:**
+  (1) **General tr(c_{n-5}) formula verified at n=9**: The decomposition into (4,) and (2,2) position patterns extends to all odd n, with coefficients following clean combinatorial formulas.
+  (2) **OCF cycle counting convention clarified**: alpha_k in I(Omega(T),2) counts independent sets of DIRECTED cycles weighted by Hamiltonian cycle counts on each vertex set. At n=9, a 5-vertex set can have MULTIPLE directed 5-cycles (critical correction).
+  (3) **EXACT c_2 formula at n=9**: c_2 = 462*t_3 - 60*t_5 + 12*t_7 - 120*bc33 + 24*bc35_w + 48*alpha_3 - 2640. Verified with zero error over 30 random tournaments.
+  (4) **Coefficient hierarchy at n=9**: c_8 universal, c_6 depends on t_3, c_4 depends on (t_3,t_5,bc33), c_2 depends on (t_3,t_5,t_7,bc33,bc35_w,alpha_3). Each level introduces new OCF invariants.
+  (5) **Perpendicularity explained**: At n=7, residual correlations between hierarchical invariants are EXACTLY ZERO (algebraic, not statistical). This is because t_5 enters via (4,) patterns and bc enters via (2,2) patterns — different position topologies.
+  (6) **Complete OCF decomposition at n=7**: H = 1 + 2*(t_3+t_5+t_7) + 4*bc, where t_7 (7-cycle count) was previously missing. c_0 = 2*t_3 - t_5 + 2*t_7 - 2*bc + 253/4.
+**New contributions:** Updated THM-055 with n=9 formulas, trc2_exact_n9.py
+**Unresolved threads:** c_0 formula at n=9 (needs more data), algebraic proof of singleton cancellation
+
 ## kind-pasteur-2026-03-06-S25f — 2026-03-06 (Grand Synthesis + W(r) Stratification + Pfaffian Duality)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S25e (context limit)

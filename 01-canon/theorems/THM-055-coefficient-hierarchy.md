@@ -132,10 +132,80 @@ where bc = sum over 6-vertex subsets S of #{unordered partitions (T,T') of S int
 | tr(c_6) | 720 | universal |
 | tr(c_4) | 240*t_3 - 2100 | t_3 |
 | tr(c_2) | 24*bc - 60*t_3 + 12*t_5 + 231 | t_3, t_5, bc |
-| tr(c_0) | H - 6*bc - 3*t_5 + 249/4 | H, t_5, bc |
+| tr(c_0) | 2*t_3 - t_5 + 2*t_7 - 2*bc + 253/4 | t_3, t_5, t_7, bc |
 
-Verified: max error = 0.000000 over 30 random tournaments.
+Using OCF: H = 1 + 2*(t_3 + t_5 + t_7) + 4*bc, so equivalently:
+tr(c_0) = H - 6*bc - 3*t_5 - 2*t_7 + 249/4... No, let me recompute:
+tr(c_0) = H - 6*bc - 3*t_5 + 249/4 (from c_0 + c_2/4 + c_4/16 + c_6/64 = H).
+
+Substituting OCF: tr(c_0) = (1 + 2*t_3 + 2*t_5 + 2*t_7 + 4*bc) - 6*bc - 3*t_5 + 249/4
+= 2*t_3 - t_5 + 2*t_7 - 2*bc + 253/4.
+
+Verified: max error = 0.000000 over 100 random tournaments.
 Verified: c_0 + c_2/4 + c_4/16 + c_6/64 = H (exact).
+
+---
+
+## New invariants at each level
+
+Each coefficient level introduces new tournament invariants from the OCF hierarchy:
+
+**At n=7:**
+- c_6: constant (no invariants)
+- c_4: introduces t_3
+- c_2: introduces t_5 via (4,) pattern AND bc33 via (2,2) pattern
+- c_0: introduces t_7 via the OCF relation
+
+**At n=9 (VERIFIED):**
+- c_8: constant
+- c_6: introduces t_3
+- c_4: introduces t_5 and bc33 (pairs of disjoint 3-cycles)
+- c_2: introduces t_7, bc35_w (weighted 3+5 cycle pairs), and alpha_3 (disjoint 3-cycle triples)
+- c_0: introduces t_9 and remaining OCF structure
+
+**n=9 exact formulas:**
+- c_8 = 362880 (= n!)
+- c_6 = 2*(n-2)!*(t_3 - C(n,3)/4) = 10080*t_3 - 211680
+- c_4 = -4200*t_3 + 240*t_5 + 480*bc33 + 40320
+- c_2 = 462*t_3 - 60*t_5 + 12*t_7 - 120*bc33 + 24*bc35_w + 48*alpha_3 - 2640
+
+where:
+- bc35_w = sum over disjoint pairs (C3, S5) of hc(S5) [weighted by 5-cycle count on S5]
+- alpha_3 = #{triples of pairwise disjoint directed 3-cycles using all 9 vertices}
+
+Verified: max error = 0.0000 over 30 random tournaments at n=9.
+
+**OCF cycle counting convention:** alpha_k in the OCF I(Omega(T), 2) = sum alpha_k * 2^k
+counts independent sets of DIRECTED cycles, where each vertex set S contributes
+hc(S) directed cycles. This means alpha_2 counts disjoint pairs weighted by
+the product of their Hamiltonian cycle counts on the respective vertex sets.
+
+At n=7: alpha_1 = t_3 + t_5 + t_7, alpha_2 = bc33 (since each 3-vertex set has hc=1).
+At n=9: alpha_1 = t_3 + t_5 + t_7 + t_9, alpha_2 = bc33 + bc35_w, alpha_3 = weighted triple count.
+
+**General formula for tr(c_{n-5}) at odd n >= 7 (VERIFIED at n=7,9):**
+
+tr(c_{n-5}) = (n-4)! * [C(n,5) - C(n-3,2)*t_3 + 2*t_5]
+             + (n-4)!/2 * [8*BC - 2*C(n-3,3)*t_3 + 5*C(n,6)]
+
+where BC generalizes bc to all 6-vertex subsets.
+
+At n=7: gives -60*t_3 + 12*t_5 + 24*bc + 231 (matches).
+At n=9: gives -4200*t_3 + 240*t_5 + 480*BC + 40320 (verified computationally).
+
+---
+
+## Moment hierarchy (exact linear formulas)
+
+All forward-arc moments are exact linear functions of (t_3, t_5, bc, H):
+- mu_0 = n! (universal)
+- mu_1 = C(n,2)*(n-1)! (universal)
+- mu_2 = 480*t_3 + 48720 (at n=7)
+- mu_3 = linear in t_3 (at n=7)
+- mu_4 = 27840*t_3 + 288*t_5 + 576*bc + 596064 (at n=7, EXACT)
+- mu_6 = 850080*t_3 + 40320*t_5 + 80640*bc + 720*H + 8636880 (at n=7)
+
+The coefficient of H appears first at mu_{n-1} = mu_6 (at n=7), with coefficient (n-1)!.
 
 ---
 
@@ -144,3 +214,5 @@ Verified: c_0 + c_2/4 + c_4/16 + c_6/64 = H (exact).
 - `04-computation/algebraic_proof_cn3.py` (k=1 algebraic proof)
 - `04-computation/coefficient_hierarchy_proof.py` (Newton identity + moment hierarchy)
 - `04-computation/trc2_exact_formula.py` (complete n=7 formula verification)
+- `04-computation/fourth_moment_analysis.py` (exact mu_4 formula)
+- `04-computation/trc2_exact_n9.py` (c_2 formula verification at n=9)
