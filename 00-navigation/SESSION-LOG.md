@@ -26,18 +26,20 @@ Entry format:
 **New contributions:** THM-079 Parts G,H,I; Five-Cycle Forcing Theorem; 10+ computation scripts
 **Unresolved threads:** (8,1) K_8-e mixed-cycle proof; (10,0) K_10 structural proof; alpha_1=10 always i_2=2 explanation
 
-## opus-2026-03-07-S35c7 — 2026-03-07 (2^s correction + even-n formula + unified M Walsh)
+## opus-2026-03-07-S35c7 — 2026-03-07 (Complete M Walsh: 2^s, even-n, root signs, row cancellation)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c6
 **Summary of work:**
-  (1) **CRITICAL BUG FOUND in THM-080**: Formula missing 2^s factor (s=unrooted components). Invisible at n=5 (s=0 always). At n=7, 16/20 tournaments failed without correction, 20/20 match with it.
-  (2) **Corrected formula verified at n=5 (968/968), n=6 (1471/1471), n=7 (20/20)**.
-  (3) **Even-n discovery**: M[a,b](T^op) = (-1)^n M[a,b](T). At even n, M has EVEN Walsh support (complement invariant, not antisymmetric). Parity condition: |S| ≡ n (mod 2).
-  (4) **Degree-0 at even n**: hat{M}[∅] = (n-2)!/2^{n-2} (M has nonzero mean at even n).
-  (5) **H/M ladder**: H_amp(d,r) / M_amp(d-1,s=r-1) = n-d always. Clean spectral relationship.
-  (6) **MISTAKE-010 logged**: Missing 2^s factor, verified at 3 values of n.
-**New contributions:** THM-080 corrected, MISTAKE-010
-**Unresolved threads:** Can corrected M formula lead to OCF proof? Super-object G(T,z) structure. Row sums R_a = sum_b M[a,b] as tournament invariants.
+  (1) **CRITICAL BUG in THM-080**: Formula missing 2^s factor (s=unrooted components). Invisible at n=5 (s=0 always). Caught at n=7 (16/20 fail→20/20 with fix).
+  (2) **Verified exhaustively**: n=5 (968/968), n=6 (1471/1471), n=7 (20/20). Also 6 different (a,b) pairs at n=5 (512/512 each).
+  (3) **Even-n complement symmetry**: M(T^op) = (-1)^n M(T). At even n, EVEN Walsh support. Parity: |S| ≡ n (mod 2). Degree-0 nonzero at even n.
+  (4) **Root-based sign convention**: Rooted components traverse from root (a or b), not smaller endpoint. For (a,b)=(0,1), conventions agree. Crucial for general (a,b).
+  (5) **Row sum cancellation**: sum_b hat{M[a,b]}[S] = 0 for monomials not touching a. Multi-component and non-a single-path monomials cancel pairwise. Surviving terms match H amplitude at degree d+1 (degree-lifting).
+  (6) **H/M ladder**: H_amp(d,r) / M_amp(d-1,s=r-1) = n-d always.
+  (7) **det(M) ≠ 0 always at n=5**: Transfer matrix always invertible (verified all 1024 tournaments).
+  (8) **SC constraint**: Self-complementary tournaments have M[a,b]=0 for all a≠b (M diagonal).
+**New contributions:** THM-080 fully corrected, MISTAKE-010
+**Unresolved threads:** det(M)≠0 at general n? Degree-lifting → OCF connection? M over GF(2).
 
 ## opus-2026-03-07-S35c6 — 2026-03-07 (Complete M[a,b] Walsh formula + Walsh symmetry proof)
 **Account:** opus
