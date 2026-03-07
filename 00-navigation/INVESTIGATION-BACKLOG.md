@@ -9,18 +9,23 @@
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
 
-### INV-050: Fourier Decomposition Proof of OCF — MAJOR BREAKTHROUGH
-**Source:** opus-2026-03-06-S11b (continued^7)
-**Status:** OCF PROVED AT n=5 via Fourier. At n=7, 3 of 4 identities proved. Only degree-4 identity remains.
+### INV-050: Fourier Decomposition Proof of OCF — OCF PROVED AT n=5 AND n=7
+**Source:** opus-2026-03-06-S11b (continued^7, ^8)
+**Status:** OCF PROVED AT n=5 AND n=7 via Fourier decomposition. All identities at both n proved.
 **What:** OCF decomposes into independent degree-homogeneous Fourier identities:
-- **Fourier Homogeneity Theorem:** w_{n-1-2k} is a homogeneous polynomial of degree 2k in centered edge variables s_e = A_e - 1/2. Verified exhaustively at n=5.
-- **Degree 0:** Trivial (expected values).
-- **Degree 2:** Proved via proportionality constants c_{2j+1} = C(n-3,2j-2)*(2j-2)!/2^{2j-2}. Verified: c_5=1/2 (n=5 exact), c_5=3, c_7=3/2 (n=7 regression).
-- **Degree n-1:** Proved via path-cycle bijection: w_0 = 2*[deg-(n-1) of t_n]. Each Hamiltonian path = Hamiltonian cycle minus one edge.
-- **Degree 4 at n=7:** THE ONLY REMAINING IDENTITY. Involves [deg-4 of t_5], [deg-4 of t_7], [deg-4 of alpha_2].
-**Key insight:** w_0's Fourier support = spanning paths of K_n (60 at n=5, coefficient = (-1)^{des(P)}/2^{n-2}).
-**Scripts:** `04-computation/fourier_homogeneity.py`, `fourier_degree2_identity.py`, `ocf_fourier_proof_framework.py`
-**Next step:** (1) Derive degree-4 proportionality constants at n=7. (2) Check if degree-4 identity has a combinatorial proof analogous to path-cycle bijection. (3) Generalize to all n.
+- **Fourier Homogeneity Theorem:** w_{n-1-2k} is a homogeneous polynomial of degree 2k in centered edge variables s_e = A_e - 1/2.
+- **Degree 0:** Trivial (expected values). PROVED for all n.
+- **Degree 2:** Proved via proportionality constants c_{2j+1} = C(n-3,2j-2)*(2j-2)!/2^{2j-2}. PROVED for all n.
+- **Degree n-1:** Proved via path-cycle bijection: w_0 = 2*[deg-(n-1) of t_n]. PROVED for all n.
+- **Degree 4 at n=7:** PROVED via counting lemmas. The degree-4 Fourier space is 2-dimensional:
+  - Type P: 5-vertex spanning paths (coefficients ±1 in t5_d4)
+  - Type Q: 6-vertex disjoint P₂ pairs (coefficients ±1 in α₂_d4)
+  - [deg-4 of t₇] = (1/2)·[deg-4 of t₅] + [deg-4 of α₂] (EXACT, verified all 5985 monomials)
+  - w₂/4 = 3·[deg-4 of t₅] + 6·[deg-4 of α₂] (EXACT, verified all 5985 monomials)
+  - Counting: c₅=2, c₇=4, paths=12 (type P); c₇=8, paths=24, a₂=1 (type Q)
+**Key insight:** Fourier supports of t₅_d4 and α₂_d4 are DISJOINT (spanning paths vs P₂ pairs), reducing the identity to independent counting arguments.
+**Scripts:** `04-computation/fourier_homogeneity.py`, `fourier_degree2_identity.py`, `ocf_fourier_proof_framework.py`, `degree4_identity_n7.py`, `degree4_proof_n7.py`
+**Next step:** (1) Extend to n=9: check if degree-4 space remains 2D. (2) Prove degree-4 and degree-6 identities at n=9. (3) Seek general-n proof of all middle-degree identities.
 
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
 **Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)

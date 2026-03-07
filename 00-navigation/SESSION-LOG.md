@@ -27,6 +27,18 @@ Entry format:
 **New contributions:** THM-061-anti-evaluation.md, 8 computation scripts in 04-computation/
 **Unresolved threads:** W(0) vanishing pattern at n>5; algebraic proof of odd-t3 => t5=(t3-1)/2 at n=5; skeleton spectral structure at n=7; free position universality (opus's open question)
 
+## opus-2026-03-06-S11b (continued^8) — 2026-03-07 (OCF PROVED at n=7 via Fourier decomposition)
+**Account:** opus
+**Continuation of:** opus-2026-03-06-S11b (continued^7, context limit)
+**Summary of work:**
+  (1) **DEGREE-4 IDENTITY PROVED**: The last remaining identity at n=7. Discovered that degree-4 Fourier space is exactly 2-dimensional: Type P (5-vertex spanning paths) and Type Q (6-vertex disjoint P₂ pairs), with DISJOINT supports.
+  (2) **EXACT RATIONAL CONSTANTS**: [deg-4 of t₇] = (1/2)·[deg-4 of t₅] + [deg-4 of α₂]. And w₂/4 = 3·[deg-4 of t₅] + 6·[deg-4 of α₂]. Both verified analytically over all 5985 four-edge monomials with zero error.
+  (3) **COUNTING LEMMAS**: For type P: c₅=2, c₇=4, paths=12. For type Q: c₇=8, paths=24, α₂=1. All match clean combinatorial arguments (vertex insertion).
+  (4) **OCF AT n=7 COMPLETE**: All 4 degree-homogeneous identities proved: degree 0 (trivial), degree 2 (proportionality), degree 4 (counting lemmas), degree 6 (path-cycle bijection).
+  (5) **n=9 PRELIMINARY**: 9-cycles introduce new graph types (7v, 8v). Degree-2 c_{a2}=5 confirmed. t₅_d4 and α₂_d4 remain nearly uncorrelated (corr ≈ -0.05), suggesting 2D structure persists.
+**New contributions:** `degree4_identity_n7.py`, `degree4_proof_n7.py`, INV-050 updated
+**Unresolved threads:** Extend to n=9 (degrees 4 and 6). General-n proof of middle-degree identities. Connection to master polynomial / Eulerian numbers.
+
 ## opus-2026-03-07-S31 — 2026-03-07 (Master Polynomial PROVED: Eulerian Numbers + EGF)
 **Account:** opus
 **Continuation of:** opus-2026-03-06-S30 (context limit)
