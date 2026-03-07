@@ -552,5 +552,17 @@ Paley T_7 has W(r)/7! = [1/320, 0, 1/80, 0, 1/4, 0, 1]. All non-trivial eigenval
 **T172** #five-lines-of-symmetry #grand-synthesis | certainty: medium | source: kind-pasteur-2026-03-06-S25f
 Five lines of symmetry converge at the Paley tournament: (1) tournament constraint t+t'=1, (2) self-converse T~T^op, (3) vertex-transitive Aut, (4) Paley/QR Legendre symbol, (5) spectral eigenvalue structure. The Paley tournament is the unique point where all five symmetries are simultaneously maximized.
 
+**T173** #W-hierarchy-exact #spectral-decomposition #n7-verified | certainty: high (0 error over 20 random samples) | source: kind-pasteur-2026-03-06-S25g
+COMPLETE W-coefficient hierarchy at n=7: w6=5040, w4=240*t3-2100, w2=-60*t3+12*t5+24*a2+231, w0=2*t3-t5+2*t7-2*a2-17/4. Each level adds ONE new cycle complexity. The hierarchy is the tournament's spectral decomposition. w_{n-3} = (n-2)!*[2*t3-C(n,3)/2] is CENTERED (zero mean over random tournaments). Penalty shift: H-w0 penalizes 3-cycles at n=5 but 5-cycles at n=7.
+
+**T174** #rooted-tournaments #A093934 #perspective-counting | certainty: high (exhaustive n=2..6) | source: kind-pasteur-2026-03-06-S25g
+P(n) = sum of vertex orbits across all tournament iso classes = # rooted tournament iso classes = OEIS A093934. Sequence: 2, 4, 12, 48, 296. Coincidence P(n)=2*(n-1)! for n<=5, FAILS at n=6. Orbit distributions: n=5 {1:1,3:4,5:7}, n=6 {2:5,4:10,6:41}.
+
+**T175** #renormalization-hierarchy #cycle-absorption #penalty-shift | certainty: medium (observed n=5,7) | source: kind-pasteur-2026-03-06-S25g
+The W-coefficient hierarchy acts like a renormalization flow: w_0 (UV, full cycle data) -> w_{n-1} (IR, universal). At each step, one cycle scale is "absorbed" by higher coefficients. The H-w_0 penalty shifts to higher-order cycles at larger n: at n=5 it penalizes t_3, at n=7 it penalizes t_5+alpha_2 (NOT t_3). This is because t_3 is fully absorbed by w_4 and w_2 at n=7.
+
+**T176** #simplex-cube-duality #tournament-geometry | certainty: low-medium | source: kind-pasteur-2026-03-06-S25g
+Tournament = vertex of C(n,2)-cube (label space) indexing (n-1)-simplex edges (index space). Ratio cube_dim/simplex_dim = n/2. The perpendicular maximizer = H maximized at cube equator. Self-converse map = cube reflection. Paired iso classes sit at opposite reflected corners.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.

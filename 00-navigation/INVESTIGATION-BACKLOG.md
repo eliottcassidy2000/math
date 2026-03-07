@@ -893,3 +893,38 @@ The crossover (true perpendicularity) occurs near the MEDIAN H value. This means
   - All non-trivial eigenvalues degenerate → scalar M → W coefficients have maximal symmetry
   - Paley requires p ≡ 3 (mod 4) (so -1 is not a QR)
 **Next step:** Compute W(r) for T_11 and T_3. Check if W/p! ratios have a closed form involving p.
+
+### INV-082: EXACT W-coefficient hierarchy — spectral decomposition of tournaments
+**Source:** kind-pasteur-S25g
+**Status:** VERIFIED at n=5 (exhaustive) and n=7 (20 random samples, 0 error)
+**What:** W(r) coefficients form a hierarchy: w_{n-1-2k} depends on cycle data of complexity k.
+  - w_{n-1} = n! (universal)
+  - w_{n-3} = (n-2)! * [2*t_3 - C(n,3)/2] (depends on t_3 only; CENTERED: zero mean over random T)
+  - w_{n-5} at n=7: -60*t_3 + 12*t_5 + 24*alpha_2 + 231
+  - w_0 at n=7: 2*t_3 - t_5 + 2*t_7 - 2*alpha_2 - 17/4
+  - Each level adds ONE new cycle complexity (t_{2k+1} or alpha_k)
+  - H - w_0 penalty SHIFTS to higher-order cycles at larger n
+  - n=5: H - w_0 = 3*t_3; n=7: H - w_0 = 3*t_5 + 6*alpha_2 + 21/4
+  - Analogous to spectral decomposition / renormalization group / characteristic classes
+**Next step:** Verify w_{n-3} = (n-2)! * [2*t_3 - C(n,3)/2] at n=9. Compute full hierarchy at n=9.
+
+### INV-083: Rooted tournaments = OEIS A093934
+**Source:** kind-pasteur-S25g
+**Status:** VERIFIED n=2 through 6
+**What:** P(n) = sum over iso classes of (# vertex orbits) = # rooted tournament iso classes.
+  - P(2)=2, P(3)=4, P(4)=12, P(5)=48, P(6)=296
+  - Matches OEIS A093934 (with offset)
+  - P(n) = 2*(n-1)! for n<=5 (coincidence), FAILS at n=6
+  - Orbit distributions: n=5 {1:1,3:4,5:7}, n=6 {2:5,4:10,6:41}
+**Next step:** Check A093934 description more carefully. Compute P(7) if feasible.
+
+### INV-084: W-coefficient hierarchy as Mobius inversion on cycle complex
+**Source:** kind-pasteur-S25g (creative synthesis)
+**Status:** CONJECTURED
+**What:** The W-coefficients can be viewed as evaluations of I(Omega, x) at different points.
+  - H = I(Omega, 2) (OCF, x=2)
+  - chi = I(Omega, -1) (Euler characteristic, x=-1)
+  - w_0 is an "intermediate" evaluation (not simply I(Omega, c) for some c)
+  - The hierarchy parallels Fourier decomposition, but REVERSED: high "frequencies" are simple
+  - Connects to renormalization: each level "integrates out" one cycle scale
+**Next step:** Determine if w_0 = I(Omega, c) for some specific c, or if it's genuinely different.
