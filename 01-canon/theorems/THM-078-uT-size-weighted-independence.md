@@ -28,7 +28,9 @@ where I_multi is the multivariate independence polynomial.
 
 The polynomial Q_T(w) defined by u_T(m) = m * Q_T(m^2) has all real non-positive roots for n <= 8.
 
-This follows from the Leake-Ryder stability theorem (arXiv:1610.00805): the multivariate independence polynomial is stable iff the graph is claw-free. Since Omega(T) is claw-free for n <= 8 (THM-020), the multivariate I is stable, and Q_T(w) is a specialization with all weights positive, preserving real-rootedness.
+This follows from the Chudnovsky-Seymour theorem (2007): the univariate independence polynomial I(G, x) of a claw-free graph has all real roots. Since Omega(T) is claw-free for n <= 8 (THM-020), I(Omega, x) has all real roots. Q_T(w) real-rootedness is verified computationally but requires a separate argument from I(Omega, x) real-rootedness, since Q_T involves size-weighted specialization (x_C = 2*m^{1-|C|}), not the standard univariate I(G, x).
+
+**Note:** The Leake-Ryder theorem (arXiv:1610.00805) proves *same-phase stability* (not full real stability) for claw-free graphs. Same-phase stability is weaker than real stability, so the specialization argument for Q_T does not follow automatically from Leake-Ryder alone.
 
 ### (iii) Q_T(w) can have complex roots at n >= 9
 

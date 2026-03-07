@@ -59,6 +59,26 @@ Connected graphs with I(G,2) = 21 for |V| ≤ 6:
 - |V| = 5: No connected graphs with I = 21.
 - |V| = 6: K_6 minus 2 edges (2 non-edges). I = 1+12+8 = 21. [OPEN]
 
+## Part C (PROVED): alpha_3 Elimination
+
+All decompositions with alpha_3 >= 1 are impossible.
+alpha_3 >= 1 means 3 mutually vertex-disjoint cycles, which forces alpha_2 >= 3
+(the 3 pairwise-disjoint pairs). Then 4*alpha_2 >= 12 and 8*alpha_3 >= 8,
+giving 4*alpha_2 + 8*alpha_3 >= 20, leaving at most 2*alpha_1 = 0.
+But alpha_1 >= 3 (the 3 cycles themselves), so 2*alpha_1 >= 6.
+Total >= 6+12+8 = 26 > 20. Contradiction.
+
+## Remaining Viable Decompositions
+
+Only 4 decompositions of alpha_1 + 2*alpha_2 = 10 remain:
+- (10, 0): 10 pairwise-conflicting cycles. Needs alpha_1=10, all pairs sharing vertex.
+- (8, 1): 8 cycles with exactly 1 disjoint pair.
+- (6, 2): 6 cycles with exactly 2 disjoint pairs.
+- (4, 3): 4 cycles with exactly 3 disjoint pairs.
+
+For (4,3): the star K_{1,3} subcase is ruled out (3 mutually disjoint leaves force alpha_3>=1).
+The P_4 subcase is ruled out by Part B. The triangle+isolated subcase remains open.
+
 ## Remaining Open Question
 
 Can Omega(T) be connected with I(Omega,2) = 21 via a K_6-minus-2-edges structure
