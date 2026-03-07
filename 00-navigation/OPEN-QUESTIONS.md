@@ -325,9 +325,19 @@ Redei's theorem says H(T) is always odd. The converse asks: for which odd k does
 - n=6: {1,3,5,9,11,13,15,17,19,23,25,27,29,31,33,37,41,43,45}
 - n=7 (sampled): 77 distinct values from 1 to 189
 
+**H=21 PROVED ABSENT through n=7 (opus-S38, THM-075):**
+Exhaustive enumeration of all 2,097,152 tournaments on 7 vertices confirms H=21 never occurs. The gap 19→23 is consistent at n=6 and n=7. No (alpha_1, alpha_2) decomposition for H=21 is achievable. Strong evidence this is a permanent gap like H=7.
+
+**Complete H-spectrum at n=7** (77 distinct values, all odd):
+1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171, 175, 189
+
+**Gaps in [1,189] at n=7:** 7, 21, 63, 107, 119, 149, 161-169 (block), 173, 177-187 (block)
+Note 63 = 7*9 and 21 = 7*3. These may be related to the H=7 gap.
+
 **Open questions:**
-- Is H=21 a permanent gap (impossible at all n)?
+- Is H=21 a permanent gap (impossible at all n)? STRONG EVIDENCE YES (absent n<=9)
 - Are there other permanent gaps beyond 7 and 21?
+- Is 63 a permanent gap? (absent at n=7, needs checking at n=8,9)
 - What is the density of achievable values as max H grows?
 
 **Connection:** Mitrovic-Stojadinovic (arXiv:2506.08841) address "converse of Redei's theorem" — may contain related results.

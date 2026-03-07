@@ -1017,5 +1017,36 @@ KEY FINDINGS at n=7 (Paley):
 OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is this true for all tournaments? Omega constraint: (-1)^{n-l(λ)} symmetry forces sum over even-l terms = 0, but here they're individually zero. Is the all-odd support a coincidence of n=7 (Mersenne prime) or universal?
 
 **Mixed-direction findings at n=9:** Mixed T/T^op cycle pairs DO exist at n=9 (100+ per tournament). So U_T at n=9 WILL have even-part lambda contributions, but they must cancel in ps_1(1).
+**RESOLVED (opus-S38 agent):** The all-odd support IS universal for tournaments (proved by Grinberg-Stanley Theorem 1.39). The factor 2^k in OCF is the **orientation multiplicity**: each odd cycle has exactly 2 directed orientations (T and T^op), both contributing sign +1 (since (-1)^{k-1}=+1 for odd k). An independent set of k cycles thus contributes 2^k copies. Even-part lambdas vanish because even cycles contribute opposite signs from T and T^op directions.
 **Scripts:** `04-computation/omega_constraint.py`, `mixed_sum_n9.py`, `ut_specialization_n9.py`
-**Next step:** (1) Compute U_T coefficients at n=9 to check if even-part terms appear. (2) Understand the cancellation mechanism algebraically. (3) Can this shed light on why OCF works?
+
+### INV-091: H=21 permanent gap — PROVED through n=7
+**Source:** opus-2026-03-07-S38, kind-pasteur-2026-03-07-S28
+**Status:** PROVED through n=7 (exhaustive). Strong conjecture for all n.
+**What:** H(T)=21 is never achieved by any tournament on n<=7 vertices. Exhaustive computation: 2,097,152 tournaments at n=7, zero with H=21. The gap 19→23 appears at both n=6 and n=7. OCF analysis: none of the valid (alpha_1,alpha_2) decompositions for H=21 are achievable.
+**Key structural insight:** At n=6, the achievable alpha_1 values jump in a way that skips all decompositions summing to H=21. The constraint is that certain cycle counts force additional cycles or disjoint pairs, pushing H past 21.
+**Scripts:** `04-computation/h21_n7_fast.py`, `04-computation/h21_theory_fixed.py`
+**Theorem:** THM-075
+**Next step:** (1) Prove H=21 impossibility at general n. (2) Characterize ALL permanent gaps. (3) Is {7, 21} the complete list, or are there more?
+
+### INV-092: Type-count sequence = A000009 (partitions into distinct parts)
+**Source:** opus-2026-03-07-S38 agent, kind-pasteur-S29
+**Status:** PROVED (bijective argument).
+**What:** The number of OCF cycle types at size n (multisets of odd parts >=3 summing to <=n, plus empty) equals A000009(n) = number of partitions into distinct parts. Bijection: remove all 1's from partition into odd parts. Null-dim sequence 0,0,1,3,6,11,19,29,44,65 is NOT in OEIS (likely novel).
+
+### INV-093: Tangent number connection proved
+**Source:** opus-2026-03-07-S38 agent, kind-pasteur-S29
+**Status:** PROVED.
+**What:** P_n(0,0) = 2^{(n-1)/2} * T_n where T_n is the n-th tangent number. Proof: P_n(u,0) = A_n(t)/t^{(n-1)/2} with u=t+1/t. Setting u=0 gives t=i, and A_n(i)/i^{(n-1)/2} = 2^{(n-1)/2} * T_n by the EGF of Eulerian polynomials evaluated at t=i.
+**Connection:** Hetyei (2017, arXiv:1704.07245) on "alternation acyclic tournaments" connects tournament counts to median Genocchi numbers (same family as tangent numbers).
+
+### INV-094: Mitrovic noncommutative deletion-contraction explored
+**Source:** opus-2026-03-07-S38, arXiv:2504.20968 (Mitrovic, Apr 2025)
+**Status:** EXPLORED. Not useful for OCF.
+**What:** W_X = W_{X\e} - W_{X/e}^up for the noncommutative Redei-Berge function. Edge contraction T/e is NOT a tournament (bidirectional edges possible). OCF fails for T\e and T/e. The deletion-contraction approach is useful for algebraic properties of U_T but not for proving OCF.
+**Scripts:** `04-computation/edge_deletion_contraction.py`
+
+### INV-095: Bags-of-sticks for OCF — DEAD END
+**Source:** opus-2026-03-07-S38 agent
+**Status:** CLOSED (dead end).
+**What:** The bags-of-sticks decomposition (Mitrovic-Stojadinovic Theorem 4.2) expresses U_X via inclusion-exclusion over edge deletions. Under OCF specialization, every bag of sticks contributes 1 (acyclic digraphs have empty Omega). So the decomposition reduces to: H(T) = sum of inclusion-exclusion coefficients, which is trivially true. No new information for OCF.

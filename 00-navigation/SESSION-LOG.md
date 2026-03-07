@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S38 — 2026-03-07 (H=21 gap proved n<=7, tangent number proof, Mitrovic DC explored)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S37
+**Summary of work:**
+  (1) **THM-075: H=21 permanent gap PROVED through n=7.** Exhaustive computation of all 2,097,152 tournaments at n=7 confirms H=21 never occurs. Complete H-spectrum at n=7 has 77 distinct values (all odd, range 1-189). OCF constraint analysis: none of the valid (alpha_1, alpha_2) decompositions for H=21 are achievable at n=6 or n=7. Fixed cycle counting bug (must count ALL directed cycles per vertex set, not just one).
+  (2) **Tangent number connection PROVED (INV-093).** P_n(0,0) = 2^{(n-1)/2} * T_n follows from evaluating Eulerian EGF at t=i. Agent found Hetyei (2017) paper connecting tournaments to median Genocchi numbers.
+  (3) **Type-count = A000009 (INV-092).** OCF cycle types at size n biject with partitions into distinct parts via removing 1's. Null-dim sequence not in OEIS (novel).
+  (4) **Mitrovic noncommutative deletion-contraction explored (INV-094).** W_X = W_{X\e} - W_{X/e}^up. Edge contraction T/e is NOT a tournament. OCF fails for T\e and T/e. Not useful for proving OCF.
+  (5) **Bags-of-sticks for OCF: DEAD END (INV-095).** Under OCF specialization, every bag of sticks contributes 1. Decomposition gives no new info.
+  (6) **Even-cycle cancellation explained.** Factor 2^k in OCF = orientation multiplicity. Each odd cycle has 2 directed orientations (T and T^op), both contributing sign +1.
+  (7) **GS-OCF bridge to P(u,x) analyzed.** U_T and P(u,x) are different objects encoding overlapping info. Neither is a specialization of the other. They share the independence polynomial as common shadow.
+  (8) **Degree-4 Fourier at n=9 re-analyzed.** Agent found 2D structure (same as n=7), contradicting S37's rank>>200 finding. Needs reconciliation.
+**New contributions:** THM-075, INV-091-095, complete n=7 H-spectrum, OPEN-Q-019 update
+**Unresolved threads:** Prove H=21 at general n; reconcile degree-4 n=9 dimensionality; is 63 a permanent gap?; THM-063 vs THM-074 contradiction on G_T(t,2)=E_T(t)
+
 ## kind-pasteur-2026-03-07-S30 — 2026-03-07 (Factor-2 explained, u_T polynomial, tangent numbers, agent investigations)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S29
