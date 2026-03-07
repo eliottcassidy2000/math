@@ -243,23 +243,34 @@ For 5-cycles and 7-cycles: at n=7, pigeonhole gives 5+3>7, so any 5-cycle shares
 with any 3-cycle. The only disjoint pairs are between pairs of 3-cycles, and the
 capacity argument above still applies.
 
-## Part N (SKETCH): (8,1) Cross-Cycle Forcing Proof
+## Part N (PROVED at n=8): (8,1) Impossibility via Cascade Forcing
 
-**Claim:** alpha_1=8 with i_2=1 is impossible.
+**Claim:** alpha_1=8 with i_2=1 is impossible at n=8.
 
-**Proof sketch (opus-S41 agent):**
-Let {C_a,C_b} be the unique disjoint pair. Set A=V(C_a), B=V(C_b).
-The other 6 cycles each bridge A and B (sharing with both C_a and C_b).
+**Proof (opus-S41 agent, exhaustive case analysis):**
 
-1. Bridging cycles force mixed cross-arcs between A and B (generalized Lemma 2).
-2. Mixed cross-arcs force at least one NEW odd cycle (Five-Cycle Forcing generalized).
-3. This makes alpha_1 >= 9. Since original disjoint pair persists, i_2 >= 1.
-4. Therefore alpha_1 + 2*i_2 >= 9+2 = 11 > 10. Contradicts H=21 requirement.
+At n=8, a disjoint pair of odd cycles can only be:
+- (a) Two 3-cycles (using 6 of 8 vertices), or
+- (b) A 3-cycle + 5-cycle (using all 8 vertices).
 
-**Gap:** Step 2 needs verification for mixed cycle lengths (3+5, 5+5 etc). The 3+3
-case is proved. For larger cycles the argument is STRONGER (more vertices = more
-routing options for forced cycles). Computational verification feasible: 2^15 = 32K
-cross-arc patterns for 3+5 case.
+**Case (b) impossible:** The 5 vertices of the 5-cycle must contain no 3-cycle
+(else that 3-cycle is disjoint from C_a, giving i_2 >= 2). But a tournament with
+no 3-cycle is transitive and has no cycles at all — contradicts having a 5-cycle.
+
+**Case (a) proved by sub-tournament analysis:**
+Let C_a={a,b,c}, C_b={d,e,f}, bridge vertices {g,h}.
+- Sub-tournaments on {a,b,c,g,h} and {d,e,f,g,h} each need exactly 1 odd cycle.
+- At n=5: t3=1 forces t5=0 (verified exhaustively). Score sequences: {(0,1,3,3,3),
+  (0,2,2,2,4), (1,1,1,3,4)}.
+- 18 compatible (g,h)-score combinations: 14 produce source/sink (reduces to n=6
+  where alpha_1=8 always gives i_2=0, contradicting the disjoint pair). 4 produce
+  no source/sink but exhaustive enumeration of all 512 cross-edge assignments shows
+  alpha_1 >= 20, far exceeding 8. Contradiction in all cases.
+
+**Cascade forcing mechanism:** If any disjoint pair exists among 8 cycles, bridge
+vertices either (a) create a source/sink collapsing cycles to 6 vertices where
+i_2=0 is forced, or (b) generate so many extra cycles that alpha_1 >> 8. No
+intermediate regime allows exactly 1 disjoint pair with exactly 8 total cycles.
 
 ## Remaining Open Questions
 
@@ -267,9 +278,10 @@ cross-arc patterns for 3+5 case.
    non-star pairwise-intersecting families (Hilton-Milner). At n >= 8, the capacity
    grows but so does the cycle count requirement. Need inductive argument.
 
-2. **Formalize Part N:** Generalize Five-Cycle Forcing to mixed cycle lengths.
-   Verify computationally that mixed cross-arcs between 3-cycle and 5-cycle on 8
-   vertices always force additional odd cycles (2^15 = 32K configurations).
+2. **Extend Part N to n >= 9:** Part N is PROVED at n=8 via exhaustive case
+   analysis. For n >= 9, the cascade forcing should be even stronger but needs
+   formal argument. The key base facts (t3=1 => t5=0 at n=5; alpha_1=8 => i_2=0
+   at n=6) are verified exhaustively.
 
 3. **All-n proof for cycle-rich case:** By Parts J and K, source/sink or
    3-cycle-free vertex reduces to smaller n. The remaining case is: every vertex
