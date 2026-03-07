@@ -179,20 +179,28 @@ Why D_k mod 2^{n-1-k} is universal:
 | n | S mod 2^{n-1} | c_0 fractional part | S=0 possible? |
 |---|---------------|---------------------|---------------|
 | 3 | 2 mod 4       | 1/2                 | NO            |
-| 5 | 0 mod 16      | 0 (integer!)        | YES           |
+| 5 | 0 mod 16      | 0 (integer!)        | YES (t3 odd)  |
 | 7 | 48 mod 64     | 3/4                 | NO            |
-| 9 | 0 mod 256 (PREDICTED) | 0 (integer!) | YES (predicted) |
+| 9 | {0, 128} mod 256 | {0, 1/2}         | YES (t3 even) |
 
-**Corollary:** c_0 = S/2^{n-1} has fractional part that depends only on n. At n=5, c_0 is always an integer, making S=0 possible. At n=3 and n=7, c_0 is never integer, so S(T) ≠ 0 for ALL tournaments.
+**n=9 VERIFIED (30 tournaments, 0 failures):**
+- S ≡ 0 mod 128 universally (v2(S) ≥ 7)
+- S mod 256 ∈ {0, 128}, determined by t3 parity: S ≡ 0 mod 256 iff t3 EVEN
+- S = 0 occurs in ~17% of random tournaments (5/30)
+- c_0 = S/256 is integer when t3 even, half-integer when t3 odd
 
-**n=9 Prediction:** The three dominant contributions to S mod 256 are:
-- D_0 = 9! ≡ 128 mod 256
-- 2*D_1 = 9!*8 ≡ 0 mod 256
-- 2^6 * (D_6 mod 4) = 128 (assuming D_6 ≡ 2 mod 4, following the n=5,7 pattern)
+**Corollary:** c_0 = S/2^{n-1} has fractional part depending on n and (at some n) on t3 parity:
+- n=3,7: c_0 is NEVER integer → S ≠ 0 for ALL tournaments
+- n=5: c_0 is ALWAYS integer → S = 0 possible (occurs iff t3 odd)
+- n=9: c_0 integer iff t3 even → S = 0 possible only for even-t3 tournaments
 
-These sum to 128 + 128 = 256 ≡ 0 mod 256. If middle terms also vanish (as at n=5,7), then S ≡ 0 mod 256, making c_0 integer and S=0 possible.
+**CORRECTION:** The earlier prediction that S ≡ 0 mod 256 universally was WRONG. The universal congruence is S ≡ 0 mod 128 (mod 2^7, not 2^8). The residue mod 256 splits into two classes by t3 parity.
 
-**Pattern:** S=0 possible at n ≡ 1 mod 4 (verified n=5, predicted n=9). S never 0 at n ≡ 3 mod 4 (verified n=3,7). Caution: this pattern may break at larger n due to middle-term contributions.
+**The t3 parity connection FLIPS between n=5 and n=9:**
+- n=5: S=0 possible for ODD t3
+- n=9: S=0 possible for EVEN t3
+
+**Pattern:** S=0 possible at n ≡ 1 mod 4 (verified n=5,9). S never 0 at n ≡ 3 mod 4 (verified n=3,7).
 
 ### Complement Invariance (PROVED)
 
