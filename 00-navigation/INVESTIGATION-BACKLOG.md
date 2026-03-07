@@ -859,3 +859,37 @@ The crossover (true perpendicularity) occurs near the MEDIAN H value. This means
 **Status:** VERIFIED at n=5 (exhaustive). CONFIRMED at n=21: F_21 non-SC has Anti=empty, M not scalar.
 **What:** Scalar M (M = (H/n)*I) holds iff Aut(T) union Anti(T) acts transitively on V. For the F_21 non-normal tournament: Aut=F_21 (transitive) but Anti=empty, so Aut+Anti = Aut alone. The conjecture predicts M not scalar, which is CONFIRMED by computation.
 **Next step:** Verify at n=7 (exhaustive).
+
+### INV-079: W(r) coefficient stratification by odd-cycle complexity
+**Source:** kind-pasteur-2026-03-06-S25f, opus-2026-03-06-S27 (THM-055)
+**Status:** PROVED (k=0,1), VERIFIED (k=2). Connected to Hopf algebra coproduct.
+**What:** W(r) = sum_P prod(r + s_e) has coefficients w_{n-1-2k} = sum_P e_{2k}(s_P).
+  - w_{n-1} = n! (universal)
+  - w_{n-3} = 2*(n-2)!*t_3 - const (depends on t_3 only — PROVED)
+  - w_{n-5} depends on t_3 AND the 4th moment of f_P (opus THM-055)
+  - At n=5: w_0 = -t_3 + 2*t_5 + 1 (EXACT, kind-pasteur verified exhaustive)
+**Key identity:** H = 1 + 2*(t_3 + t_5) at n=5 (OCF simplification since a_2=0)
+**Recursive Hopf structure:** overlap=3 contribution to w_{n-5} at n=7 uses OCF at n=5 on each 5-element sub-tournament. This is the Hopf algebra coproduct Delta([T]) evaluated on fibers.
+**Connection to THM-055:** e_{2k}(s_P) is a polynomial of degree 2k in f_P. All power sums p_{2l} are constant; only p_1 = f - (n-1)/2 varies. So everything reduces to moments of f_P.
+**Next step:** (1) Find explicit formula for w_0 at n=7 in terms of tournament invariants. (2) Prove the Hopf algebra recursion algebraically. (3) Determine whether the 4th moment has a cycle-theoretic interpretation.
+
+### INV-080: Pfaffian-path duality at even/odd n
+**Source:** kind-pasteur-2026-03-06-S25f (pfaffian_path_duality.py)
+**Status:** COMPUTATIONAL. Interesting correlations found.
+**What:** At even n: det(S) = Pf(S)^2 is a nonzero odd square. At odd n: det(S) = 0 but tr(M) = H > 0.
+  - n=4: det(S) is EXACTLY determined by t_3: det=1 if t_3 even, det=9 if t_3 odd
+  - n=6: det(S) is NOT determined by t_3 alone (needs finer invariants)
+  - |Pf| always odd (Fisher-Ryan), values in {1,3,5,...,n-1} at even n
+  - The Pfaffian and H are NOT functionally related but are both determined by S
+**Connections:** D_k classification (Zeng-You-Zhao 2025), Seidel tournament matrices (determinant gap phenomena)
+**Speculative:** Is there a formal duality: paths (odd n) ↔ cycle covers (even n)?
+**Next step:** (1) Check if det(S) at n=6 is determined by (t_3, t_5). (2) Investigate the eigenvalue connection between Pf and H.
+
+### INV-081: Paley tournament W(r) structure
+**Source:** kind-pasteur-2026-03-06-S25f (eigenvalue_W_connection.py)
+**Status:** COMPUTED at p=7.
+**What:** Paley T_7 has W(r)/7! = [1/320, 0, 1/80, 0, 1/4, 0, 1].
+  - Eigenvalues of A_Paley: (p-1)/2 = 3 (mult 1), (-1±sqrt(p))/2 (mult (p-1)/2 each)
+  - All non-trivial eigenvalues degenerate → scalar M → W coefficients have maximal symmetry
+  - Paley requires p ≡ 3 (mod 4) (so -1 is not a QR)
+**Next step:** Compute W(r) for T_11 and T_3. Check if W/p! ratios have a closed form involving p.

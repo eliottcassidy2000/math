@@ -537,5 +537,20 @@ N(a,b,j) palindromic (= N(a,b,n-2-j)) ⟺ M scalar at n=5. Palindromic N at odd 
 **T167** #IO-reciprocity #walk-GF #W-product | certainty: high (proved) | source: opus-2026-03-06-S26
 W(z)·W(-z) = 1 for ALL tournaments, where W(z) = det(I+zA^T)/det(I-zA) is the IO walk GF. Proof: det(I-z²(A²)^T) = det(I-z²A²). This is the commutative IO reciprocity. Analog of THM-030 symmetry at the generating function level.
 
+**T168** #W-coefficients-stratify #odd-cycle-complexity #n5-exact | certainty: high (exhaustive n=5) | source: kind-pasteur-2026-03-06-S25f
+W(r) coefficients stratify by odd-cycle complexity: w_{n-1}=n! (universal), w_{n-3}=2*(n-2)!*t_3-const (3-cycles), w_0=-t_3+2*t_5+1 at n=5 (5-cycles). At n=7, w_2 depends on finer invariants than (t_3,t_5). All odd-indexed coefficients are exactly 0. The OCF simplification H=1+2*(t_3+t_5) at n=5 follows from a_2=0 (no room for disjoint cycle pairs).
+
+**T169** #recursive-hopf-structure #coproduct-fibers #W-coefficients | certainty: high (verified n=7) | source: kind-pasteur-2026-03-06-S25f, opus-2026-03-06-S27
+The overlap=3 contribution to w_{n-5} at n=7 equals 6*sum_{|S|=5} chain_sum(T|_S) where chain_sum uses OCF at n=5 on each sub-tournament. This is the Hopf algebra coproduct Delta([T]) evaluated on fibers. Creates a RECURSIVE hierarchy: W(r) at n uses OCF at smaller n as building blocks. Connected to Mitrovic's deletion-contraction.
+
+**T170** #pfaffian-path-duality #even-odd-n #determinant-cycles | certainty: medium | source: kind-pasteur-2026-03-06-S25f
+At even n: det(S) = Pf(S)^2 ≠ 0, tr(M) = 0. At odd n: det(S) = 0, tr(M) = H ≠ 0. Paths dominate at odd n, cycles dominate at even n. At n=4: det(S) exactly determined by t_3 parity (det=9 iff t_3 odd, det=1 iff t_3 even). At n=6: needs finer invariants. Fisher-Ryan: det always odd perfect square.
+
+**T171** #paley-W-structure #eigenvalue-degeneracy #maximum-H | certainty: high (computed p=7) | source: kind-pasteur-2026-03-06-S25f
+Paley T_7 has W(r)/7! = [1/320, 0, 1/80, 0, 1/4, 0, 1]. All non-trivial eigenvalues degenerate ((-1±sqrt(7))/2, multiplicity 3 each). This maximal spectral degeneracy → scalar M → maximum H. The perpendicular maximizer phenomenon: maximum H corresponds to maximally degenerate M spectrum.
+
+**T172** #five-lines-of-symmetry #grand-synthesis | certainty: medium | source: kind-pasteur-2026-03-06-S25f
+Five lines of symmetry converge at the Paley tournament: (1) tournament constraint t+t'=1, (2) self-converse T~T^op, (3) vertex-transitive Aut, (4) Paley/QR Legendre symbol, (5) spectral eigenvalue structure. The Paley tournament is the unique point where all five symmetries are simultaneously maximized.
+
 **T044** #signed-adjacency #polynomial-identity #proof-strategy | certainty: high (verified n=3,4,5 as polynomial identity) | source: opus-2026-03-05-S4
 THE EVEN-ODD SPLIT IS A POLYNOMIAL IDENTITY (not just over {0,1}). D(x) = F(x)-G(x) where F counts T-paths using i->j by position, G counts T'-paths using j->i by position. Then D(-1) = 0 holds for REAL-VALUED arc variables with x=-1 as the UNIQUE universal root. Equivalent to B(L_i, R_j) = B(L_j, R_i) where B is the alternating subset convolution. B is sigma-invariant (p_w->1-q_w, q_w->1-p_w) and EVEN in s-variables. Since max s-degree is 2, OCF reduces to proving all s-degree-1 terms vanish: C_w + D_w = 0 for each w, where C_w = dB/dp_w, D_w = dB/dq_w. Clean proofs at n=3,4; for n>=5 the identity is global. See 03-artifacts/drafts/signed-adjacency-identity.md.

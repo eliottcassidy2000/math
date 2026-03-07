@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-06-S25f — 2026-03-06 (Grand Synthesis + W(r) Stratification + Pfaffian Duality)
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-03-06-S25e (context limit)
+**Files read:** grand-synthesis-S25f.md (prior context), SESSION-LOG.md, INVESTIGATION-BACKLOG.md, opus S27 scripts
+**Summary of work:**
+  (1) **Grand Synthesis document** (`03-artifacts/drafts/grand-synthesis-S25f.md`): Comprehensive map of all mathematical structures — 5 equivalent algebraic perspectives (independence polynomial, transfer matrix, symmetric functions, Hopf algebra, tiling geometry), 6 novel creative connections (Mobius inversion, perpendicular plane/Mobius strip, Steiner systems, Cayley transform, groups/SC boundary, 1729 mystery).
+  (2) **W(r) coefficient stratification** (`04-computation/W_coefficient_stratification.py`): Verified w_0 = -t_3 + 2*t_5 + 1 at n=5 (EXACT for all 11 iso classes). All odd-indexed W coefficients are exactly 0. W(r) stratifies tournament invariants by odd-cycle complexity.
+  (3) **W(r)/OCF connection** (`04-computation/W_ocf_connection_v4.py`): At n=5, H = 1 + 2*(total directed odd cycles) since a_2 = 0 (no room for disjoint cycle pairs). Fixed cycle enumeration bug (canonical form filter was wrong).
+  (4) **Recursive Hopf structure**: Discovered that overlap=3 contribution to w_{n-5} at n=7 uses OCF at n=5 as subroutine via the Hopf algebra coproduct. This creates a recursive hierarchy: W(r) coefficients at n use OCF at smaller n as building blocks.
+  (5) **Pfaffian-path duality** (`04-computation/pfaffian_path_duality.py`): At n=4, det(S) is exactly determined by t_3 (det=9 iff t_3 odd). At n=6, needs finer invariants. Path-cycle duality: odd n has H (paths survive), even n has Pf (cycles survive).
+  (6) **Paley tournament eigenvalue analysis**: Fixed Paley construction (requires p ≡ 3 mod 4). Paley T_7 has W(r)/7! = [1/320, 0, 1/80, 0, 1/4, 0, 1]. All non-trivial eigenvalues degenerate → scalar M.
+  (7) **Deep connections document** (`03-artifacts/drafts/deep-connections-S25f.md`): Extended analysis of W(r)=tr(M(r)), Cayley transform, Pfaffian structure, BIBD embedding, transfer matrix as random walk, Hopf algebra recursion, 1729 number theory.
+  (8) **Integrated opus S27 results**: THM-055 (coefficient hierarchy theorem) connects perfectly — e_{2k}(s_P) is polynomial in f_P, moments of f_P determine W coefficients.
+**New contributions:** INV-079 (W(r) stratification), INV-080 (Pfaffian-path duality), INV-081 (Paley W(r) structure), grand-synthesis-S25f.md, deep-connections-S25f.md
+**Unresolved threads:**
+  - Explicit formula for w_0 at n=7 (depends on finer invariants than (t_3, t_5))
+  - Prove Hopf algebra recursion algebraically
+  - Does the 4th moment of f_P have a cycle-theoretic interpretation?
+  - Compute W(r) for Paley T_11 and T_3
+  - Formal path-cycle duality between H and Pf(S)?
+
 ## opus-2026-03-06-S11b (continued^4) — 2026-03-06 (Coefficient Hierarchy Theorem)
 **Account:** opus
 **Continuation of:** opus-2026-03-06-S11b (continued^3)
