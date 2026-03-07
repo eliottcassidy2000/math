@@ -29,7 +29,8 @@
       "Bash(ls:*)",
       "Bash(pip3 install:*)",
       "Bash(kill 7000:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(python3:*)"
     ]
   },
   "hooks": {
