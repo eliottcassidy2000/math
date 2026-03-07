@@ -25,6 +25,26 @@ Entry format:
 **New contributions:** THM-081, Walsh-domain OCF identity, counting identity, bc33 Walsh derivation
 **Unresolved threads:** Prove counting identity algebraically (new OCF proof path); verify bc33 Walsh numerically at n=7; extend Walsh-domain OCF to n=7 fully; connect to transfer matrix M Walsh structure
 
+## opus-2026-03-07-S41 — 2026-03-07 (EXHAUSTIVE n=8 H=21 gap + Key Lemma + cycle-rich min-H)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S40
+**Summary of work:**
+  (1) **EXHAUSTIVE n=8 VERIFICATION.** All 268,435,456 tournaments checked — H=21 found: 0. Used bitwise-optimized C code (h21_exhaustive_n8_v3.c) with 3 pre-filters: source/sink, t3>10, vertex not in 3-cycle. Only 18M (6.7%) needed Held-Karp.
+  (2) **Key Lemma (Part J).** Vertex in no 3-cycle => vertex in no directed cycle of any length. Proof: if v has no 3-cycle, all cross-arcs go N-(v)->N+(v), creating layered structure with no return path.
+  (3) **Source/sink induction (Part K).** Vertex with score 0 or n-1 is in no cycle; removing preserves Omega(T). Enables induction from n<=8 base.
+  (4) **Cycle-rich min-H (Part L).** Among 18M cycle-rich n=8 tournaments (no src/sink, all in 3-cycle, t3<=10), min H = 25. Since 25 > 21, this independently proves H=21 impossible for the "hard case" at n=8.
+  (5) **i_2 distribution CORRECTED.** For alpha_1=8: i_2 in {0, 3, 7} (not {0, 7} as S40 reported). i_2=3 with composition (5,3,0) and source/sink. i_2=7 has STAR pattern: one 3-cycle disjoint from all 7 others.
+  (6) **5-cycle counting bug FIXED.** The p[0]>p[1] canonical form was wrong; replaced with min-vertex start.
+  (7) **n=9 sampling.** 0/2,000,000 random n=9 tournaments have H=21.
+  (8) **Decomposition analysis.** Graph-theoretic realizability: log-concavity, C(a1,2) bound, and Part C eliminate all but 4 decompositions. Parts D,F eliminate 2. Remaining: (10,0) and (8,1).
+**New contributions:** THM-079 Parts J,K,L; exhaustive n=8 result; 7 new computation scripts; i_2 correction
+**Unresolved threads:**
+  - STRUCTURAL PROOF for (8,1): i_2 never 1, achievable {0,3,7}. Star pattern K_{1,7} at i_2=7 is key. Agent found sub-tournament constraints but not full proof.
+  - STRUCTURAL PROOF for (10,0): i_2 always 2, never 0. All alpha_1=10 have source/sink (reduces to n=7), but need to prove this for all n.
+  - Can the cycle-rich min-H >= 25 bound be proved for n >= 9?
+  - H-spectrum exhaustive at n=8 (not just H=21 check) — would need ~8 hours
+  - Connection: I(K_n, 2) = 1+2n gives "complete graph" decompositions that are always blocked by tournament cycle-forcing
+
 ## opus-2026-03-07-S35c8 — 2026-03-07 (det(M)=0 at n=7, eigenvalue classification, regular M=scalar)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c7
