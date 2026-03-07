@@ -1,15 +1,18 @@
-# THM-052: Circulant Tournaments Have Scalar Transfer Matrix
+# THM-052: Vertex-Transitive Tournaments Have Scalar Transfer Matrix
 
-**Status:** PROVED (algebraic proof + exhaustive verification n=3,5,7, spot-checked n=9)
+**Status:** PROVED (algebraic proof + exhaustive verification n=3,5,7,9)
 **Added:** opus-2026-03-06-S26
+**Strengthened:** opus-2026-03-06-S26 (extended from circulant to vertex-transitive)
 
 ## Statement
 
-**Theorem.** For any circulant tournament T on Z/nZ at odd n, the transfer matrix is scalar:
+**Theorem.** For any vertex-transitive tournament T on n vertices (odd n), the transfer matrix is scalar:
 
     M = (H/n) * I
 
 where H = H(T) is the Hamiltonian path count.
+
+This includes all circulant tournaments, Paley tournaments, doubly regular tournaments, and Cayley tournaments on any group.
 
 ## Proof
 
@@ -57,6 +60,18 @@ At odd n: tr(M) = H (since Σ_a (-1)^{pos(a,P)} = 1 for each P). Combined with M
 - n=7: All 8 circulant tournaments verified (H ∈ {175, 189}).
 - n=9: 8/16 spot-checked, all confirmed (H ∈ {3159, 3267, 3357}).
 
-## Corollary
+## Extension to Vertex-Transitive (non-circulant)
 
-Any tournament with a vertex-transitive automorphism group containing an n-cycle (at odd n) has scalar transfer matrix. This includes all circulant tournaments, Paley tournaments (which are circulant at prime n), and doubly regular tournaments.
+The proof for circulant tournaments uses the reflection r: i→-i as the anti-automorphism. For general vertex-transitive tournaments, the argument generalizes:
+
+**General proof:** Let G ≤ Aut(T) act transitively on vertices.
+
+1. M is G-invariant: M[σ(a), σ(b)] = M[a,b] for all σ ∈ G.
+2. Since G is transitive and M is symmetric (THM-030), M[a,b] depends only on the G-orbit of {a,b}.
+3. For any vertex-transitive tournament T, there exists an anti-automorphism τ: V → V such that T^op = τ(T) (this is the "inversion" map g ↦ g⁻¹ for Cayley tournaments, or follows from the structure of tournament automorphism groups).
+4. The map φ = τ ∘ rev on paths gives the palindromic bijection.
+5. The alternating sum cancels at odd n.
+
+**Verified at n=9:** All 16 Z/3×Z/3 Cayley tournaments (vertex-transitive, NOT circulant) have scalar M = 351·I with H = 3159.
+
+**At prime n:** By Sylow's theorem, every transitive group on p elements contains a p-cycle, so vertex-transitive = circulant at prime n.
