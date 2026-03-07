@@ -147,7 +147,11 @@ S(T) = sum_P prod (2A[P_i][P_{i+1}] - 1) = sum_{k=0}^{n-1} (-1)^{n-1-k} * 2^k * 
 
 where D_k = sum_P C(forward(P), k), counting (permutation, k-edge-subset) pairs with all selected edges forward.
 
-**Key Lemma: D_k mod 2^{n-1-k} is UNIVERSAL** (verified n=3,5,7, all tournaments).
+**Key Lemma: D_S mod 2^{n-1-k} is UNIVERSAL for EVERY individual position set S of size k** (verified n=5 for k=1..4, n=7 for k=1..5, using 20-50 random tournaments per S).
+
+This is STRONGER than just D_k being universal — each summand is individually universal!
+
+**Proof mechanism:** For non-adjacent S, this follows from the k-fold partition identity (D_S = n!/2^k). For adjacent S, the shared vertices create counting factors involving score sequence sums (like Σ_v in(v)·out(v)), whose parity is determined by C(n,2) parity, making the residue tournament-independent.
 
 Verified values:
 | k | n=3 (mod 2^{2-k}) | n=5 (mod 2^{4-k}) | n=7 (mod 2^{6-k}) |
