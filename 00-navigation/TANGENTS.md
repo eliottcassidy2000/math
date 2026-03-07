@@ -572,3 +572,9 @@ Walsh coefficient of I(Omega(T),2) factorizes: each monomial decomposes into cyc
 
 **T178** #cycle-polynomial-degree #walsh-degree-bound #complement-invariance | certainty: high (proved) | source: opus-2026-03-07-S35c
 The cycle count t_k is a polynomial of degree k-1 in edge variables (odd k: top-degree terms cancel between forward/reverse directions). Complement invariance T→T^op kills all odd Walsh degrees. Combined: t_k has Walsh content at degrees 0,2,...,k-1. At n=5, t5_hat/t3_hat = 1/2 exactly at degree 2 (mixing coefficient). Walsh-orthogonal OCF invariants: q_{2j} = t_{2j+1} minus lower-degree projections.
+
+**T179** #direct-walsh-ocf-proof #contiguity #block-counting | certainty: high (PROVED) | source: opus-2026-03-07-S35c4
+NEW OCF PROOF via Walsh analysis (THM-077). hat{H}[S] computed directly from HP definition: internal vertices of even-length path components force contiguity in any HP. Both traversal directions give same sign product ((-1)^{2a}=1). Block counting gives 2^r*(n-2k)!. Combined with THM-076 (Walsh-OCF factorization for I side), proves H=I for ALL tournaments. The proof is ELEMENTARY — no algebraic machinery beyond Walsh basis. Key insight: the "contiguity constraint" is why OCF works — even-length fan pairs must appear as contiguous blocks in Hamiltonian paths.
+
+**T180** #egf-set-partition #covering-generating-function #hockey-stick | certainty: high (PROVED) | source: opus-2026-03-07-S35c4
+General-r Walsh-OCF factorization proved via EGF: the set partition generating function F(t,x) = (1+bt)/(1-at) where a=1/(1-x), b=1/(1+x). Extracting: G_r(x) = 2r!/((1-x)^r(1+x)). Half-weighted partial sum telescopes because S(j)=1/2 for all j (alternating sums). Final identity via hockey-stick: Sigma = (m+r)!/m!. Remarkably, Sigma depends ONLY on m and r, not on individual path sizes a_i.

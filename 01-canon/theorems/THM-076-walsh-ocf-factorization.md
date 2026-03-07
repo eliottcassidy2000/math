@@ -1,7 +1,7 @@
 # THM-076: Walsh-OCF Factorization Identity
 
-**Status:** PROVED (algebraic, all degrees, all odd n)
-**Author:** opus-2026-03-07-S35 (continued^3)
+**Status:** PROVED (algebraic, all r, all degrees, all odd n)
+**Author:** opus-2026-03-07-S35 (continued^3), general-r proof: opus-2026-03-07-S35 (continued^4)
 **Date:** 2026-03-07
 **Dependencies:** THM-068 (PCD), THM-071 (Walsh-Fourier), OCF (Grinberg-Stanley)
 
@@ -61,44 +61,65 @@ Count: (n-2a-1)/2 regular terms + 1 half-term = (n-2a)/2 effective terms
 
 Total: (n-2a)/2 * 4 * (n-2a-1)!/2^{n-1} = 2*(n-2a)!/2^{n-1}. QED.
 
-## Proof (multi-component, general r)
+## Proof (multi-component, general r) — COMPLETE
 
-For S = P_{2a_1} ∪ ... ∪ P_{2a_r} on disjoint vertex sets, the Walsh coefficient decomposes over **covering types**: ways to partition the r path components into groups, each covered by a single odd cycle.
+For S = P_{2a_1} ∪ ... ∪ P_{2a_r} on disjoint vertex sets with k = sum a_i, define m = n - 2k - r (extra vertex pool).
 
-A covering with g groups (g cycles in the independent set R, g <= r) has weight 2^g from the independence polynomial.
+**Step 1: Reduce to a combinatorial identity.**
 
-**Cycle counting for a group of s paths in one cycle:**
-- s paths have total p = sum(2a_{ij}+1) = 2(sum a_{ij}) + s path vertices
-- Cycle of size q >= p uses e = q - p extra vertices in s+1 gaps (between blocks)
-- Orientations: 2^s (each path traversed in 2 directions)
-- Cyclic block order: (s-1)! (fixing one block, permuting the rest)
-- Extra arrangements: C(e+s-1, s-1) * e! = multinomial distribution of e extras into s gaps, each ordered
+By the same fan-cycle factorization as r=1, the amplitude decomposes over set partitions π of [r] into g groups. After simplification (the (m-E)! from f(remaining) cancels with the multinomial denominator), each term in the sum equals:
 
-**Total directed cycles per group:** 2^s * (s-1)! * C(e+s-1, s-1) * e!
+term(e_1,...,e_g) = m! * prod_j [(e_j + s_j - 1)!/e_j!] * 2^{r+g-n+1}
 
-**Telescoping identity (for each group):**
-C(pool, e) * (arrangement factor) * (n'-q)! telescopes via the constant-term identity, giving a closed form proportional to pool! for each group.
+where s_j = |B_j| (group size), e_j = extra vertices in cycle j, with parity constraint e_j ≡ (1-s_j) mod 2, and the E=m term gets half weight.
 
-**Verified exactly:**
+The total becomes: |hat{I}[S]| = 2^{r-n+1} * m! * Sigma, where:
 
-r=2, P2+P2 at n=7:
-- Type A (one 7-cycle): 8 cycles, contribution 1/8
-- Type B (two 3-cycles): 4 pairs, contribution 1/4
-- Total: 3/8 = 2^2 * 3!/2^6 ✓
+Sigma = sum_π 2^{g_π} * sum_{(e_1,...,e_g)} [half-weight] prod_j (e_j+s_j-1)!/e_j!
 
-r=2, P2+P2 at n=9,11,13: all verified ✓
+**Step 2: EGF computation of Sigma.**
 
-r=2, P2+P4 at n=9: verified ✓
+Define the block weight generating function: for a group of size s,
 
-r=3, P2+P2+P2 at n=9:
-- Type A (one 9-cycle): 16 cycles, contribution 1/16
-- Type B: impossible (no room for 2+1 split)
-- Type C (three 3-cycles): 8 triples, contribution 1/8
-- Total: 3/16 = 2^3 * 3!/2^8 ✓
+g_s(x) = (s-1)!/2 * [1/(1-x)^s + (-1)^{s+1}/(1+x)^s]
 
-r=3, P2+P2+P2 at n=11 (brute-force verified 192 type-A cycles):
-- Type A: 1/4, Type B: 3/8, Type C: 5/16
-- Total: 15/16 = 2^3 * 5!/2^10 ✓
+(encodes the parity-constrained sum of Pochhammer terms).
+
+The set partition EGF is:
+
+F(t,x) = sum_{r>=0} G_r(x) * t^r/r! = exp(sum_{s>=1} 2*g_s(x) * t^s/s!)
+
+Computing the exponent: sum_{s>=1} 2*g_s(x)*t^s/s! = ln((1 + t/(1+x)) / (1 - t/(1-x)))
+
+Therefore F(t,x) = (1 + t/(1+x)) / (1 - t/(1-x)).
+
+Extracting: G_r(x) = r! * [t^r] F(t,x) = **2*r! / ((1-x)^r * (1+x))**.
+
+**Step 3: Half-weighted partial sum.**
+
+Sigma_r(m) = sum_{E=0}^{m-1} c_E + c_m/2, where c_E = [x^E] G_r(x).
+
+Using c_E = 2*r! * sum_{j=0}^E C(j+r-1,r-1)*(-1)^{E-j}, swap summation order:
+
+Sigma_r(m) = 2*r! * sum_{j=0}^m C(j+r-1,r-1) * S(j)
+
+where S(j) = sum_{E=j}^m w(E)*(-1)^{E-j}. A key calculation shows **S(j) = 1/2 for ALL j** (the alternating sum with half-weight endpoint always telescopes to 1/2).
+
+Therefore: Sigma_r(m) = r! * sum_{j=0}^m C(j+r-1,r-1) = r! * C(m+r, r) = **(m+r)!/m!**
+
+(using the hockey-stick identity for the last step).
+
+**Step 4: Final assembly.**
+
+|hat{I}[S]| = 2^{r-n+1} * m! * (m+r)!/m! = (m+r)! * 2^{r-n+1}
+
+Since m + r = n - 2k: = (n-2k)! * 2^{r-n+1} = **2^r * (n-2k)! / 2^{n-1}**. QED.
+
+**Verified computationally:**
+- r=1 through r=5, multiple path sizes, n up to 20
+- S(j) = 1/2 identity verified for m up to 9
+- Hockey-stick identity verified for r up to 5
+- Direct covering enumeration matches for r=2 (P2+P2, P2+P4), r=3 (P2+P2+P2, P2+P2+P4), r=4 (P2^4)
 
 ## Key Identity
 
