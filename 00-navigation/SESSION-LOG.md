@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35c9 — 2026-03-07 (THM-081 Walsh cycle formula, Walsh-domain OCF, counting identity)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c8
+**Summary of work:**
+  (1) **THM-081 PROVED: Walsh spectrum of directed cycle counts.** hat{t_k}[S] = (1/2^k) * sum_{C : S⊂edges(C)} (-1)^{asc(S,C)}. Derived analytically from first principles. Verified EXACTLY at n=5: max error 0.0 for both t3 and t5 across all 2^10 monomials.
+  (2) **Walsh-domain OCF verified.** hat{H}[S] = 2*hat{t3}[S] + 2*hat{t5}[S] at n=5 (where alpha_2=0). Exact match for all 1024 monomials. This reformulates OCF purely in spectral domain.
+  (3) **Counting identity discovered and verified.** sum_k (2/2^k) * N_k(S) = hat{H}[S] where N_k = signed count of k-cycles containing S. At n=5, degree-2 P2: all 30/30 pass. Degree-4: all 210/210 pass. Key finding: N_3 = -2 and N_5 = -4 for ALL P2 monomials at n=5 (uniform!).
+  (4) **bc33 Walsh at n=7 analytically derived.** hat{bc33}[P2] = 1/4 from product independence of disjoint cycle indicators. Full Walsh-domain OCF at n=7 degree 2: 2*(0.25+0.75+0.375) + 4*0.25 = 3.75 = hat{H}[P2]. Sampling verification launched (still running).
+  (5) **THM-081 theorem file created** in 01-canon/theorems/ with full proof, verification data, properties, and connection to THM-077.
+**New contributions:** THM-081, Walsh-domain OCF identity, counting identity, bc33 Walsh derivation
+**Unresolved threads:** Prove counting identity algebraically (new OCF proof path); verify bc33 Walsh numerically at n=7; extend Walsh-domain OCF to n=7 fully; connect to transfer matrix M Walsh structure
+
 ## opus-2026-03-07-S35c8 — 2026-03-07 (det(M)=0 at n=7, eigenvalue classification, regular M=scalar)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c7
