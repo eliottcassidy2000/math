@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35c11 — 2026-03-07 (Signed HP permanent deep investigation)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c10 (context compaction)
+**Summary of work:**
+  Major investigation of the signed HP permanent S(T) and its algebraic structure.
+
+**New contributions:**
+  - **THM-I: k-fold Partition Identity** — For any tournament and 2k vertices, sum over (2k)! perms of product of k edge indicators = (2k)!/2^k. Proof via perfect matching decomposition. Gives D_S = n!/2^k for non-adjacent position sets.
+  - **THM-J: Algebraic Criterion** — S mod 2^{n-1} is universal iff n-3 is a power of 2 (Legendre's formula: s_2(n-3)≤1). Universal: n=3,5,7,11,19... ; t3-dependent: n=9,13,15...
+  - **Pointwise D_S universality** — Every D_S mod 2^{n-1-k} is universal for ALL position sets, not just non-adjacent ones. Verified n=5 (k=1..4), n=7 (k=1..5).
+  - **n=9 verification** — S≡0 mod 128 universal, S mod 256 ∈ {0,128} depends on t3 parity. S=0 occurs ~17%. t3 parity flip between n=5 (odd) and n=9 (even).
+  - **D_k linearity** — D_2 and D_3 are EXACTLY linear in t3 at both n=5,7. D_4+ need higher cycle counts.
+  - **Perpendicularity verified** — c_0 nearly orthogonal to c_2 and c_4 at n=7 (R²=0.03). Variance dominated by c_4 layer.
+  - **c_0 = H - 3*t3** at n=5 exactly. c_0 = 0 iff H = 3*t3 iff t3 odd.
+
+**Unresolved threads:**
+  1. Complete algebraic proof of pointwise D_S universality for adjacent positions
+  2. What determines S(T)=0 at n=9 beyond t3 parity?
+  3. Why is D_3 exactly linear in t3? (verified but not proved algebraically)
+  4. Cross-scale structure: perpendicularity mechanism
+
 ## opus-2026-03-07-S43 — 2026-03-07 (Bottleneck analysis, gap conjecture, web research)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S42 (via context compaction)
