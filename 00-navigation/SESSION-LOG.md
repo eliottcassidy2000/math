@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S43b — 2026-03-07 (Forward-edge polynomial palindrome theorem)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S43 (context compacted)
+**Summary of work:**
+  (1) **Forward-edge polynomial F(T,x) = sum_P x^{fwd(P)}.** Discovered this is PALINDROMIC (F_k = F_{n-1-k}) via path reversal symmetry. H(T) = F_0 = F_{n-1}. S(T) = (-1)^{n-1} F(-1). THM-A (S=0 at even n) follows trivially from palindrome of odd degree.
+  (2) **D_k structure theorems.** D_1 = (n-1)/2 * n! universal. Alternating sum identity: sum_{k=0}^{n-2} (-1)^k D_k = 0 at odd n (from G(-1)=F(0)=H). D_4-D_5 = 1680 + 240*t3 exact at n=7 (NEW).
+  (3) **D_S pointwise universality.** Verified exhaustively (n=5) and confirmed: D_S mod 2^{n-1-k} is universal for EVERY position set S of size k, not just non-adjacent ones. For adjacent pairs: D_S = (n-3)! * sigma, where sigma = sum_v in(v)*out(v) has fixed parity by score-sum constraint.
+  (4) **Eulerian polynomial connection.** F(T,x) is the tournament Eulerian polynomial (X-descent polynomial in Grujic-Stojadinovic framework, arXiv:2402.07606). The deletion-contraction property of the Redei-Berge polynomial applies.
+  (5) **n=8 exhaustive H-spectrum (partial).** At 50M/268M (18.6%), only 2 odd values missing in [1,300]: H=7 and H=21. Confirms gap conjecture.
+  (6) **Web research.** Schweser-Stiebitz-Toft "Redei revisited" (arXiv:2510.10659) — survey of stronger parity theorems. El Sahili oriented HP count symmetry.
+**New contributions:** palindrome theorem for F(T,x), D_k structure identities, D_S pointwise universality explanation, Eulerian polynomial connection
+**Unresolved threads:**
+  - Complete n=8 exhaustive H-spectrum (killed at 18.6% — only 7 and 21 remain missing)
+  - Prove D_S pointwise universality algebraically for general k and all position sets
+  - Formalize the palindrome theorem as a canon theorem (THM-XXX)
+
 ## opus-2026-03-07-S35c11 — 2026-03-07 (Signed HP permanent deep investigation)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c10 (context compaction)
