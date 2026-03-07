@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-06-S26 — 2026-03-06 (tiling skeleton, spectral analysis, IO bridge, PSD)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S25 (ran out of context)
+**Summary of work:**
+  (1) **n=5 tiling skeleton analysis**: 64 tilings, 12 iso classes, delta_H always even (-6 to +12). The dH=+12 jump (Class 3->9) creates 6 new odd cycles with single arc flip. 4 self-flip pairs in classes 8 and 10.
+  (2) **n=5 spectral analysis**: M=(H/n)*I=3*I for classes 9,11 (both H=15). Off-diagonal sum = 0 for ALL classes (Sigma=0 at odd n). Self-flip pairs have identical eigenvalue spectra.
+  (3) **PSD classification**: Sharp threshold at n=5: H >= 13 implies PSD. All H < 13 are non-PSD. H(T) >= H(T-v) holds regardless of PSD status.
+  (4) **n=6 skeleton**: 1024 tilings, alpha_2 > 0 for 701/1024. Max alpha_2 = 4 (H=45). First n where full independence polynomial structure matters.
+  (5) **Irving-Omar bridge**: W(-z,-r) = W(z,r) at commutative level. M[a,b] != H(a->b). IO uses cycle covers (det/per), M uses path decomposition (E_a*B_b). Bridge through Hopf algebra coproduct structure.
+  (6) **Blue pair structure**: H+H(flip) not constant (10-30). Flip != T^op. M(flip) has no simple relationship to M(T).
+  (7) **Non-regular scalar M**: The [3,2,2,2,1] class at n=5 has M=3*I despite non-vertex-transitivity. Has Z/3 automorphism, uniform endpoint counts, uniform 3-cycle participation.
+**New contributions:** T158-T161, 8 computation scripts
+**Unresolved threads:**
+  - Characterize M=(H/n)*I precisely: "uniform position distribution" (T156/T158)
+  - Does PSD threshold exist at general odd n? What is it?
+  - Prove the IO reciprocity W(-z,-r)=W(z,r) implies even r-powers at noncommuting level
+  - Connect alpha_2 structure at n=6 to transfer matrix eigenvalues
+
 ## kind-pasteur-2026-03-06-S25c — 2026-03-06 (scalar M characterization, det(M) patterns)
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-03-06-S25b (context continuation)
