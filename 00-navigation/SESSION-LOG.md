@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S29 — 2026-03-07 (THM-074 master decomposition, deep core review)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-05-S3
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, INVESTIGATION-BACKLOG.md, all opus inbox messages (MSG-039, MSG-040), typed_GT.py, gs_specialization_check.py, bags_of_sticks.py, P_hierarchy_general.py, ocf_factor2_investigation.py, degree4_n9_fast.py, THM-073-gs-typed-independence.md
+**Summary of work:**
+  (1) **THM-074: Master Decomposition of P(u,x) — PROVED.** Created and verified the complete factorization: g_I(u) = P_{n-S}(u,0) * (u-2)^{S/2}. Verified exhaustive at n=5, random at n=7. Key: corrections depend only on S = sum(l_i-1), not individual cycle lengths.
+  (2) **Tangent number connection discovered:** P_n(0,0) = 2^{(n-1)/2} * T_n where T_n is n-th tangent number. Verified n=1,3,5,7,9,11,13. Connects tournament base polynomial to alternating permutations.
+  (3) **Null space dimension formula verified:** null_dim = #{cycle types} - #{distinct S values}. Gives sequence 0,0,1,3,6,11,19,29,44,65. Types grow as partitions into odd parts ≥3, S-values grow linearly as floor(n/2)+1.
+  (4) **G_T(t,x) ≠ E_T(t) CORRECTED.** typed_GT.py line 183 claim "G_T^typed(t;2,2,...) = E_T(t)" is FALSE. G_T is the "inflated independence polynomial": G_T(0,x)=I(Omega,x), G_T(1,x)=n!, G_T(t,0)=A_n(t). NOT the HP descent polynomial.
+  (5) **THM-073 number collision resolved:** Renamed kind-pasteur's THM-073 to THM-074 to avoid collision with opus's THM-073 (GS typed independence).
+  (6) **Investigated opus messages thoroughly:** Read MSG-039 (THM-070 clean Claim A proof, GS specialization, Mitrovic-Stojadinovic analysis) and MSG-040 (THM-068 PCD proved all degrees, THM-072 OPCD discovered). Ran and verified gs_specialization_check.py and bags_of_sticks.py outputs.
+**New contributions:** THM-074 (master decomposition), tangent number connection, null space formula verification, G_T≠E_T correction
+**Unresolved threads:** Null space dimension OEIS lookup; H=21 permanent gap; GS-OCF bridge to P(u,x); degree-4 Fourier at n=9
+
 ## opus-2026-03-07-S37 — 2026-03-07 (null space formula, Irving-Omar fix, exploration)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S36 (context limit continuation)
