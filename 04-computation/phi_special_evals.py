@@ -435,49 +435,50 @@ def print_report(results):
                 if all_collinear and slope != 0:
                     print(f"  AFFINE: {ev} = {slope} * I(Omega, {z}) + {intercept}")
 
-    # Final: look for ANY (a, b) with a+b != 0 such that Phi(a, b) = I(Omega, z)
-    # Try a systematic grid
+    # Final: look for ANY (a, b) such that Phi(a, b) = I(Omega, z)
+    # Try a systematic grid — use floats for speed, confirm with Fraction
     print(f"\n{'='*80}")
     print("SYSTEMATIC GRID SEARCH: Phi(a, b) = I(Omega, z)?")
     print(f"{'='*80}")
-    grid_vals = [Fraction(a, 2) for a in range(-4, 9)]  # -2, -3/2, ..., 4
+    grid_half = [a / 2.0 for a in range(-4, 9)]  # -2, -1.5, ..., 4
     found_any = False
     for z in [0, 1, 2, 3, -1]:
-        for xa in grid_vals:
-            for yb in grid_vals:
+        for xa in grid_half:
+            for yb in grid_half:
                 match = True
                 for r in results:
-                    phi_v = phi_eval_frac(r['a_k'], xa, yb)
-                    i_v = Fraction(r['I_at'][z])
-                    if phi_v != i_v:
+                    phi_v = phi_eval(r['a_k'], xa, yb)
+                    i_v = r['I_at'][z]
+                    if abs(phi_v - i_v) > 0.01:
                         match = False
                         break
                 if match:
-                    # Skip the known Phi(1,0) = I(Omega,2)
-                    if xa == 1 and yb == 0 and z == 2:
+                    # Confirm with exact arithmetic
+                    exact_match = True
+                    xa_f, yb_f = Fraction(int(xa * 2), 2), Fraction(int(yb * 2), 2)
+                    for r in results:
+                        phi_v = phi_eval_frac(r['a_k'], xa_f, yb_f)
+                        if phi_v != Fraction(r['I_at'][z]):
+                            exact_match = False
+                            break
+                    if not exact_match:
                         continue
-                    print(f"  *** FOUND: Phi({xa}, {yb}) = I(Omega, {z}) for ALL {len(results)} tournaments ***")
+                    # Skip known
+                    if int(xa*2) == 2 and int(yb*2) == 0 and z == 2:
+                        continue
+                    print(f"  *** FOUND: Phi({xa_f}, {yb_f}) = I(Omega, {z}) for ALL {len(results)} tournaments ***")
                     found_any = True
     if not found_any:
         print("  No new matches found on the grid (besides Phi(1,0) = I(Omega,2)).")
 
-    # Also search for Phi(a, b) / C = I(Omega, z) where C is a constant
+    # Check: Phi(a, b) always an integer on integer grid? Find constants.
     print(f"\n{'='*80}")
-    print("GRID SEARCH: Phi(a, b) / Phi(1,0) = I(Omega, z) / I(Omega, 2)?")
-    print(f"{'='*80}")
-    print("  (i.e., Phi(a,b)/H(T) = I(Omega,z)/H(T) => Phi(a,b) = I(Omega,z))")
-    print("  Already covered above.\n")
-
-    # Check: Phi(a, b) always an integer on integer grid?
-    print(f"{'='*80}")
-    print("INTEGRALITY CHECK on integer grid")
+    print("INTEGRALITY & CONSTANTS on integer grid")
     print(f"{'='*80}")
     for xa in range(-2, 5):
         for yb in range(-2, 5):
-            all_int = all(phi_eval(r['a_k'], xa, yb) == int(phi_eval(r['a_k'], xa, yb))
-                         for r in results)
             val_set = set(phi_eval(r['a_k'], xa, yb) for r in results)
-            if len(val_set) == 1 and xa + yb != 0:
+            if len(val_set) == 1:
                 print(f"  Phi({xa},{yb}) = {val_set.pop()} [CONST across all T]")
 
 
