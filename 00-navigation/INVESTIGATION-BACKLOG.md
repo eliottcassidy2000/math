@@ -25,7 +25,9 @@
   - Counting: c₅=2, c₇=4, paths=12 (type P); c₇=8, paths=24, a₂=1 (type Q)
 **Key insight:** Fourier supports of t₅_d4 and α₂_d4 are DISJOINT (spanning paths vs P₂ pairs), reducing the identity to independent counting arguments.
 **Scripts:** `04-computation/fourier_homogeneity.py`, `fourier_degree2_identity.py`, `ocf_fourier_proof_framework.py`, `degree4_identity_n7.py`, `degree4_proof_n7.py`
-**Next step:** (1) Extend to n=9: check if degree-4 space remains 2D. (2) Prove degree-4 and degree-6 identities at n=9. (3) Seek general-n proof of all middle-degree identities.
+**CRITICAL FINDING (opus-2026-03-07-S37):** At n=9, the degree-4 Fourier space has dimension **>> 200** (no saturation at 200 random tournaments with 300 probe monomials). Within the P4 type alone, coefficients are NOT proportional (117/126 vertex sets have non-constant |coeff|). The |coeff| values range from 1 to 27. This means the n=7 "two type" decomposition DOES NOT generalize. The Fourier approach is **infeasible at n=9** for middle degrees.
+**Scripts:** `04-computation/degree4_n9_rank.py`, `degree4_n9_rank2.py`, `degree4_n9_saturation.py`
+**Next step:** (1) The Fourier proof cannot extend to n>=9 for middle degrees. Focus on algebraic approaches (OCF already proved by Grinberg-Stanley). (2) The degree-0, degree-2, and degree-(n-1) identities still hold for all n and have clean proofs. Can they be combined differently?
 
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
 **Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)
