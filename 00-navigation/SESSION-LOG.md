@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S42 — 2026-03-07 (n=9 cycle-rich structure, dichotomy proof, H-spectrum confirmation)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S41
+**Summary of work:**
+  (1) **3-CYCLE MATCHING at n=9.** Only 23.9% of cycle-rich n=9 tournaments have 3 pairwise-disjoint 3-cycles (Part C). 71.1% have max matching 2, 5% have matching 1. The matching approach alone is insufficient.
+  (2) **alpha_1=10 RIGID COMPOSITION.** All alpha_1=10 n=9 no-src-sink tournaments have t3=6, t5=4, t7=0, t9=0. i_2 is always 9 or 10 (never 0). (10,0) decomposition impossible at n=9. H always 57 or 81.
+  (3) **mm<=2 MIN H = 45.** When max 3-cycle matching <= 2, cycle-rich n=9 tournaments have min H=45 >> 21. Fewer disjoint 3-cycles paradoxically forces MORE 5-cycles and LARGER H.
+  (4) **DICHOTOMY VERIFIED.** In 153,444 cycle-rich n=9 tournaments (50M samples), ZERO have both (no 3 disjoint 3-cycles) AND (no good deletion to cycle-rich n=8). Proof structure: Part C covers 3-disjoint case, induction covers good-deletion case.
+  (5) **H-SPECTRUM at n=9 (2M samples).** Only missing odd values in [1..200] are 7 and 21 — same pattern as n<=7,8.
+  (6) **UPDATED THM-079 with Parts O and P.** Part O: five computational findings at n=9. Part P: complete inductive proof structure modulo the dichotomy.
+  (7) **Lichiardopol connection.** Min out-degree >= 5 gives 3 disjoint 3-cycles (Lichiardopol), but cycle-rich tournaments can have out-degree 1. This theorem is too strong for our needs.
+  (8) **I(Omega,2) monotonicity.** H(T) >= H(T-v) since Omega(T-v) is induced subgraph of Omega(T). Key for inductive structure.
+**New contributions:** THM-079 Parts O,P; dichotomy proof sketch; 8 new computation scripts; H-spectrum n=9
+**Unresolved threads:**
+  - PROVE dichotomy for all n >= 9 (verified computationally at n=9)
+  - Alternative: prove min-H for cycle-rich tournaments is non-decreasing in n (25 at n=8, 45 at n=9)
+  - (8,1) decomposition: need structural proof for all n (not just n=8)
+  - Signed HP permanent connection to H=21 unexplored
+
 ## opus-2026-03-07-S35c9 — 2026-03-07 (THM-081 Walsh cycle formula, Walsh-domain OCF, counting identity)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c8

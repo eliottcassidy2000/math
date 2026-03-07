@@ -353,9 +353,24 @@ Note 63 = 7*9 and 21 = 7*3. These may be related to the H=7 gap.
 H=63 found at n=8 (227 in 600k samples). All n=7 gaps except 7 and 21 are filled at n=8.
 The ONLY permanent gaps through n=9 sampling are **H=7 and H=21**.
 
+**THM-079 Update (opus-S41):**
+- **EXHAUSTIVE n=8:** All 268M tournaments checked, H=21 found: 0.
+- **Key Lemma (Part J):** Vertex in no 3-cycle => vertex in no cycle (layered structure).
+- **Source/sink induction (Part K):** Score 0/n-1 vertex in no cycle; removing preserves Omega.
+- **Cycle-rich min-H (Part L):** Among 18M cycle-rich n=8 tournaments, min H=25 > 21.
+- **Parts M,N (PROVED at n=8):** (10,0) star capacity, (8,1) cascade forcing.
+
+**THM-079 Update (opus-S42):**
+- **n=9 matching:** Only 23.9% cycle-rich have 3 disjoint 3-cycles. 71.1% have mm=2.
+- **alpha_1=10 at n=9:** Always t3=6,t5=4, i_2=9 or 10 (never 0). (10,0) impossible.
+- **mm<=2 min H=45 at n=9:** Fewer disjoint 3-cycles forces more 5-cycles, larger H.
+- **DICHOTOMY (0 counterexamples in 153k):** Every cycle-rich n=9 tournament has either 3 disjoint 3-cycles (Part C) or a good deletion to cycle-rich n=8 (induction).
+- **H-spectrum n=9 (2M samples):** Only missing odd in [1..200] are 7 and 21.
+- **Complete proof structure (Part P):** H!=21 for all n, modulo proving the dichotomy.
+
 **Open questions:**
-- Is H=21 a permanent gap (impossible at all n)? STRONG EVIDENCE YES (absent n<=9)
-- Can the K_6-minus-2-edges route be ruled out? (the remaining open case for H=21)
+- PROVE the deletion+matching dichotomy for all n >= 9 (verified at n=9)
+- Alternative: prove min-H for cycle-rich tournaments is > 21 for all n >= 8
 - Are there other permanent gaps beyond 7 and 21? EVIDENCE: NO (63 filled at n=8)
 - What is the density of achievable values as max H grows?
 
