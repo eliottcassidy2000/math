@@ -127,6 +127,8 @@ static long long hamiltonian_paths(const unsigned char out[N]) {
 }
 
 int main() {
+    setvbuf(stderr, NULL, _IONBF, 0);
+    setvbuf(stdout, NULL, _IONBF, 0);
     long long h21_count = 0;
     long long skipped_src_sink = 0;
     long long skipped_high_t3 = 0;

@@ -1,7 +1,7 @@
 # THM-079: H=21 Component Reduction
 
-**Status:** PROVED (computational, n<=7 exhaustive + n=8 sampling; structural for Parts A-D)
-**Author:** opus-2026-03-07-S39
+**Status:** PROVED (computational, n<=8 exhaustive + n=9 sampling; structural for Parts A-D,F)
+**Author:** opus-2026-03-07-S39, opus-2026-03-07-S41
 **Date:** 2026-03-07
 **Dependencies:** THM-029 (H=7 impossibility)
 
@@ -106,11 +106,21 @@ At n=6 (exhaustive, 2160 tournaments with K_6-2e 3-cycle pattern):
   pass the sharing lemma test), but tournament forcing of 5-cycles provides
   the actual obstruction
 
-## Part G (PROVED, computational): H=21 impossible at n<=7
+## Part G (PROVED, computational): H=21 impossible at n<=8
 
-**Exhaustive verification (opus-S40):** H=21 never occurs among all 2,097,152
-tournaments on 7 vertices. Combined with n<=6 (also exhaustive), this confirms
-H=21 is impossible for all tournaments with n <= 7.
+**Exhaustive verification (opus-S40, S41):** H=21 never occurs among:
+- All 2,097,152 tournaments on 7 vertices (opus-S40)
+- All 268,435,456 tournaments on 8 vertices (opus-S41, h21_exhaustive_n8_v3.c)
+
+The n=8 exhaustive check used three pre-filters:
+1. Skip source/sink tournaments (31,719,424 skipped) — induction from n=7
+2. Skip t3 > 10 (218,589,056 skipped) — alpha_1 > 10 implies H > 21
+3. Skip tournaments with vertex not in any 3-cycle (31,360 skipped) — Key Lemma (Part J)
+Only 18,095,616 tournaments (6.7%) required Held-Karp computation.
+
+Combined with n<=6 (also exhaustive), H=21 is impossible for all n <= 8.
+
+Additionally, random sampling at n=9 (2,000,000 tournaments, opus-S41) found H=21: 0.
 
 At n=7, the H-spectrum has exactly two "permanent gap" values below 30: H=7 and H=21.
 H=35, H=39 are gaps at n=6 but achieved at n=7. H=63 is a gap at n=7 but achieved at n=8.
@@ -133,7 +143,8 @@ In EVERY case, the needed i_2 value is NOT in the achievable set. The i_2 values
 "jump" between discrete values, never hitting the H=21 target. This is verified:
 - n=5,6: exhaustive
 - n=7: exhaustive (2,097,152 tournaments)
-- n=8: 500,000 random samples
+- n=8: EXHAUSTIVE (268,435,456 tournaments, opus-S41)
+- n=9: 2,000,000 random samples (opus-S41)
 
 ### Structural explanations for each blocking:
 
@@ -149,12 +160,47 @@ tournaments. At n=7 exhaustive: K_6-2e tournaments have H >= 29
 
 **(8,1) blocked:** K_8-e structure. 8 cycles with exactly 1 disjoint pair.
 Computationally: at n=7, alpha_1=8 always gives i_2=0 (H=17). At n=8
-(500k samples), alpha_1=8 gives i_2 in {0, 7} only, never 1. The jump
-from i_2=0 to i_2=7 skips the needed value. Structural proof OPEN.
+(5M samples, opus-S41), alpha_1=8 gives i_2 in {0, 7} only, never 1. The jump
+from i_2=0 to i_2=7 skips the needed value. With source/sink: always i_2=0
+(inherits from n=7). Without source/sink: always i_2=7. Structural proof OPEN.
 
 **(10,0) blocked:** K_10 structure. 10 pairwise-sharing cycles. At n=6,7,8:
-alpha_1=10 always gives i_2=2 (H=29). The tournament structure always forces
-exactly 2 disjoint pairs among 10 odd cycles. Structural proof OPEN.
+alpha_1=10 always gives i_2=2 (H=29). ALL alpha_1=10 tournaments have a
+source or sink vertex (verified in 5M random n=8 samples, opus-S41 — every
+alpha_1=10 score sequence contains 0 or 7). So they reduce to n=7 by Part K.
+Structural proof OPEN for general n.
+
+## Part J (PROVED): Key Lemma — No 3-cycle implies no odd cycle
+
+**Lemma:** If a vertex v in a tournament T is not contained in any directed 3-cycle,
+then v is not contained in any directed cycle of any length.
+
+**Proof:** Suppose v is in no 3-cycle. Partition V \ {v} into:
+- N+(v) = {w : v -> w} (out-neighborhood)
+- N-(v) = {w : w -> v} (in-neighborhood)
+
+Claim: ALL arcs between N-(v) and N+(v) go from N-(v) to N+(v).
+
+Proof of claim: Suppose for contradiction that some u in N+(v) beats some w in N-(v),
+i.e., u -> w. Then w -> v -> u -> w is a directed 3-cycle containing v. Contradiction.
+
+So the tournament has a layered structure: N-(v) -> {v} -> N+(v), and also N-(v) -> N+(v).
+Every directed path from v goes into N+(v) and can never return to N-(v) (since all
+cross-arcs go N-(v) -> N+(v)). So no directed path from v can return to v. Therefore
+v is in no directed cycle of any length. QED.
+
+**Consequence for H=21 induction:** If T has n >= 8 vertices and some vertex v is in
+no 3-cycle, then Omega(T) = Omega(T - v) (deleting v doesn't remove any odd cycle).
+So H(T) = I(Omega(T), 2) = I(Omega(T-v), 2) = H(T-v). By induction on n
+(base case n <= 8 from Part G), H(T-v) != 21, so H(T) != 21.
+
+## Part K: Source/Sink Induction
+
+If T has a source (score 0) or sink (score n-1), that vertex is in no directed cycle
+(trivially — it has no in-arcs or no out-arcs). So by Part J's argument, removing it
+preserves Omega(T) and H(T) = H(T - v) != 21 by induction.
+
+This is a special case of Part J but was discovered first and is worth stating separately.
 
 ## Part I: H-Spectrum Gap Analysis
 
@@ -168,14 +214,20 @@ At n=8 (500k sample): the only odd values NOT seen in [1..200] are 7 and 21.
 ## Remaining Open Questions
 
 1. **General proof for (8,1):** Why does alpha_1=8 in tournaments always give
-   i_2 in {0, 7} but never i_2=1? Need structural argument.
+   i_2 in {0, 7} but never i_2=1? Need structural argument. Key observation:
+   the jump from 0 to 7 is very sharp — if ANY disjoint pair exists, there are
+   always at least 7 (suggesting a chain reaction of forced disjointness).
 
 2. **General proof for (10,0):** Why does alpha_1=10 always give i_2=2?
-   Possibly related to Ramsey-type properties of tournament cycle structure.
+   Key observation: ALL alpha_1=10 tournaments at n=8 have source/sink,
+   suggesting alpha_1=10 with no source/sink may be impossible.
 
-3. **All-n proof:** Need to show the i_2 jump pattern persists for all n,
-   not just n <= 8. The tournament forcing mechanism should be even stronger
-   at larger n (more vertices = more cycle-forming opportunities).
+3. **All-n proof for no-source/sink case:** By Parts J and K, any tournament with
+   source/sink or any vertex not in a 3-cycle reduces to smaller n by induction.
+   The remaining case is: every vertex in some 3-cycle, no source/sink. Need to
+   show H != 21 for this class. Computationally verified at n=8 (exhaustive) and
+   n=9 (2M samples). The "cycle-rich" structure of such tournaments may force H
+   too large (minimum H grows with cycle density).
 
 ## Scripts
 
@@ -191,3 +243,7 @@ At n=8 (500k sample): the only odd values NOT seen in [1..200] are 7 and 21.
 - `04-computation/h_vs_alpha_n8_sample.py` — alpha_1 vs H at n=8 (opus-S40)
 - `04-computation/k8e_focused_n8.py` — K_8-e i_2 analysis at n=8 (opus-S40)
 - `04-computation/i2_jump_pattern.py` — i_2 jump pattern at n=5,6 (opus-S40)
+- `04-computation/h21_alpha_structure_n7.py` — exhaustive alpha_1=8,10 at n=7 (opus-S41)
+- `04-computation/h21_targeted_n8_v2.py` — fixed 5-cycle counting, n=8 sampling (opus-S41)
+- `04-computation/h21_exhaustive_n8_v3.c` — fast exhaustive n=8 checker (opus-S41)
+- `04-computation/h21_induction_n9.py` — random n=9 sampling (opus-S41)
