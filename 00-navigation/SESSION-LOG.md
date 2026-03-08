@@ -13,6 +13,37 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S46d — 2026-03-07 (Cumulant Hierarchy Complete)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S46c
+**Summary of work:**
+  Resolved OPEN-Q-022 with complete kappa_4 formula (THM-093).
+  Discovered the universal coefficient conjecture: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k).
+  Confirmed kappa_6 introduces t7 at n=7.
+
+  **Major results:**
+  1. THM-093: kappa_4(T) = -(n+1)/120 + (2/C(n,4))*(t5 + 2*alpha_2) - 48/(n(n-1))^2 * t3^2
+     - Linear t3 coefficient is EXACTLY ZERO (proved algebraically)
+     - Constant term = Bernoulli value -(n+1)/120 (ratio kappa_4/kappa_2 = -1/10 universal)
+     - Verified exhaustively n=5,6; sampled n=7 (152 F-classes)
+  2. kappa_6 = (n+1)/252 + (2/C(n,6))*t7 - (4/49)*t3*(t5+2*a2) + (80/3087)*t3^3
+     - Verified at n=7 (149 F-classes)
+     - t7 (directed 7-cycles) is REQUIRED — confirms hierarchy prediction
+  3. Universal coefficient conjecture: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k)
+     - Verified k=1,2,3. Beautiful pattern connecting cumulants to binomial coefficients.
+  4. Cumulant-OCF bridge: the full cumulant set encodes OCF data in graded fashion.
+     Each kappa_{2k} captures 2*t_{2k+1}/C(n,2k) + nonlinear lower-level corrections.
+  5. Corrected THM-092 fwd4path formula: C(n,4) + 2(n-3)*t3, not 2(n-2)*t3.
+  6. Explored free cumulants — classical cumulants are the right framework (cleaner structure).
+  7. Bernoulli connection: Eulerian cumulants = (-1)^{k-1}(n+1)|B_{2k}|/(2k) for large n.
+
+**New contributions:** THM-093, OPEN-Q-022 resolved, OPEN-Q-023 added, THM-092 corrections
+**Unresolved threads:**
+  - Prove universal coefficient conjecture (OPEN-Q-023)
+  - Find generating function for tournament cumulant corrections
+  - Integrate web research (arXiv:2403.00966, arXiv:2309.07240)
+  - Connection to Ihara zeta function
+
 ## opus-2026-03-07-S46c — 2026-03-07 (Moment-Cycle Hierarchy)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S46b

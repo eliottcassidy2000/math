@@ -409,14 +409,37 @@ Is there a matrix whose determinant equals SF(T,x)?
 
 ---
 
-## OPEN-Q-022 🟢 Exact kappa_4 formula at general n
+## OPEN-Q-022 -- RESOLVED
 **What determines the fourth cumulant kappa_4(T)?**
 
-kappa_4 = E[(fwd-mu)^4] - 3*Var^2 is the excess kurtosis * sigma^4.
-At n=5: kappa_4 = f(t3, t5). At n=6: kappa_4 = f(t3, t5, alpha_2).
-What is the formula at general n? Does kappa_6 introduce t7?
+**RESOLVED by opus-2026-03-07-S46d (THM-093):**
 
-**Source:** opus-2026-03-07-S46c
+kappa_4(T) = -(n+1)/120 + (2/C(n,4))*(t5 + 2*alpha_2) - 48/(n(n-1))^2 * t3^2
+
+Key structural features:
+- Constant = Bernoulli B_4 value: -(n+1)/120
+- Linear t3 coefficient is EXACTLY ZERO (proved algebraically)
+- t3^2 coefficient = -3*(4/(n(n-1)))^2 from Var^2 expansion
+- t5 coefficient = 2/C(n,4), alpha_2 coefficient = 4/C(n,4)
+- Verified exhaustively at n=5,6, sampled at n=7 (152 F-classes)
+
+**kappa_6 introduces t7: YES.** Verified at n=7 (149 F-classes).
+kappa_6 = (n+1)/252 + (2/C(n,6))*t7 - (4/49)*t3*(t5+2*alpha_2) + (80/3087)*t3^3
+
+**Universal coefficient conjecture:** coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k).
+Verified for k=1,2,3.
+
+**Source:** opus-2026-03-07-S46d
+
+---
+
+## OPEN-Q-023 🟢 Prove the universal coefficient conjecture
+**Prove: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k) for all k.**
+
+Verified for k=1 (algebraic proof), k=2 (n=5,6,7 exhaustive/sampled), k=3 (n=7 sampled).
+The proof likely involves the cluster expansion: E[fwd^{2k}] involves clusters of 2k adjacent positions, each probing a (2k+1)-vertex sub-tournament. The 2/C(n,2k) arises from the probability of a specific (2k+1)-vertex subset appearing in a random cluster position.
+
+**Source:** opus-2026-03-07-S46d
 
 ---
 
