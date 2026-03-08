@@ -1,0 +1,234 @@
+======================================================================
+GAUSS SUM ANALYSIS FOR PALEY PRIMES
+======================================================================
+
+P_3: |QR|=1
+  Gauss sum g = 0.0000 + 1.7321i
+  |g| = 1.7321, √p = 1.7321
+  g² = -3.0 (expected -3 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 1)
+  QNR char sums: 1 distinct values (out of 1)
+  QR[0] = -0.5000+0.8660j
+  QNR[0] = -0.5000-0.8660j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+0.8660j, formula=-0.5000+0.8660j, match=True
+    k=2: χ(k)=-1, actual=-0.5000-0.8660j, formula=-0.5000-0.8660j, match=True
+
+P_7: |QR|=3
+  Gauss sum g = 0.0000 + 2.6458i
+  |g| = 2.6458, √p = 2.6458
+  g² = -7.0 (expected -7 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 3)
+  QNR char sums: 1 distinct values (out of 3)
+  QR[0] = -0.5000+1.3229j
+  QNR[0] = -0.5000-1.3229j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+1.3229j, formula=-0.5000+1.3229j, match=True
+    k=2: χ(k)=1, actual=-0.5000+1.3229j, formula=-0.5000+1.3229j, match=True
+    k=3: χ(k)=-1, actual=-0.5000-1.3229j, formula=-0.5000-1.3229j, match=True
+
+P_11: |QR|=5
+  Gauss sum g = 0.0000 + 3.3166i
+  |g| = 3.3166, √p = 3.3166
+  g² = -11.0 (expected -11 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 5)
+  QNR char sums: 1 distinct values (out of 5)
+  QR[0] = -0.5000+1.6583j
+  QNR[0] = -0.5000-1.6583j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+1.6583j, formula=-0.5000+1.6583j, match=True
+    k=2: χ(k)=-1, actual=-0.5000-1.6583j, formula=-0.5000-1.6583j, match=True
+    k=3: χ(k)=1, actual=-0.5000+1.6583j, formula=-0.5000+1.6583j, match=True
+
+P_19: |QR|=9
+  Gauss sum g = 0.0000 + 4.3589i
+  |g| = 4.3589, √p = 4.3589
+  g² = -19.0 (expected -19 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 9)
+  QNR char sums: 1 distinct values (out of 9)
+  QR[0] = -0.5000+2.1794j
+  QNR[0] = -0.5000-2.1794j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+2.1794j, formula=-0.5000+2.1794j, match=True
+    k=2: χ(k)=-1, actual=-0.5000-2.1794j, formula=-0.5000-2.1794j, match=True
+    k=3: χ(k)=-1, actual=-0.5000-2.1794j, formula=-0.5000-2.1794j, match=True
+
+P_23: |QR|=11
+  Gauss sum g = 0.0000 + 4.7958i
+  |g| = 4.7958, √p = 4.7958
+  g² = -23.0 (expected -23 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 11)
+  QNR char sums: 1 distinct values (out of 11)
+  QR[0] = -0.5000+2.3979j
+  QNR[0] = -0.5000-2.3979j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+2.3979j, formula=-0.5000+2.3979j, match=True
+    k=2: χ(k)=1, actual=-0.5000+2.3979j, formula=-0.5000+2.3979j, match=True
+    k=3: χ(k)=1, actual=-0.5000+2.3979j, formula=-0.5000+2.3979j, match=True
+
+P_31: |QR|=15
+  Gauss sum g = 0.0000 + 5.5678i
+  |g| = 5.5678, √p = 5.5678
+  g² = -31.0 (expected -31 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 15)
+  QNR char sums: 1 distinct values (out of 15)
+  QR[0] = -0.5000+2.7839j
+  QNR[0] = -0.5000-2.7839j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+2.7839j, formula=-0.5000+2.7839j, match=True
+    k=2: χ(k)=1, actual=-0.5000+2.7839j, formula=-0.5000+2.7839j, match=True
+    k=3: χ(k)=-1, actual=-0.5000-2.7839j, formula=-0.5000-2.7839j, match=True
+
+P_43: |QR|=21
+  Gauss sum g = 0.0000 + 6.5574i
+  |g| = 6.5574, √p = 6.5574
+  g² = -43.0 (expected -43 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 21)
+  QNR char sums: 1 distinct values (out of 21)
+  QR[0] = -0.5000+3.2787j
+  QNR[0] = -0.5000-3.2787j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+3.2787j, formula=-0.5000+3.2787j, match=True
+    k=2: χ(k)=-1, actual=-0.5000-3.2787j, formula=-0.5000-3.2787j, match=True
+    k=3: χ(k)=-1, actual=-0.5000-3.2787j, formula=-0.5000-3.2787j, match=True
+
+P_47: |QR|=23
+  Gauss sum g = -0.0000 + 6.8557i
+  |g| = 6.8557, √p = 6.8557
+  g² = -47.0 (expected -47 = -p since p≡3 mod 4)
+  QR char sums: 1 distinct values (out of 23)
+  QNR char sums: 1 distinct values (out of 23)
+  QR[0] = -0.5000+3.4278j
+  QNR[0] = -0.5000-3.4278j
+  Formula verification: Σ_QR ω^(ks) = (χ(k)·g - 1)/2:
+    k=1: χ(k)=1, actual=-0.5000+3.4278j, formula=-0.5000+3.4278j, match=True
+    k=2: χ(k)=1, actual=-0.5000+3.4278j, formula=-0.5000+3.4278j, match=True
+    k=3: χ(k)=1, actual=-0.5000+3.4278j, formula=-0.5000+3.4278j, match=True
+
+
+======================================================================
+WHY ALL EIGENSPACES GIVE SAME Ω DIMS
+======================================================================
+
+For C_p^S with S = QR(p), the junk matrix J_m(λ_k) depends on λ_k = ω^k.
+
+The entries of J_m involve sums of the form λ^shift for various shifts.
+The shifts come from merged steps: (s_i + s_{i+1}) mod p for s_i, s_{i+1} ∈ S.
+
+KEY OBSERVATION: For k ∈ QR, the map φ_k: s → ks is a bijection on QR.
+So φ_k permutes the step sequences, and the junk matrix J_m(ω^k) is
+obtained from J_m(ω) by permuting rows and columns.
+Hence ker(J_m(ω^k)) has the same dimension as ker(J_m(ω)).
+
+For k ∈ QNR: φ_k sends QR → QNR. But the step sequences use steps from QR,
+so this doesn't directly permute them. However, the junk face types
+involve merged steps in (QR+QR)∖QR, and for Paley, (QR+QR)∖QR = QNR.
+
+The map φ_k for k ∈ QNR sends:
+  QR → QNR (steps change)
+  QNR → QR (junk types change)
+
+This swaps the roles of steps and junk types, but the STRUCTURE of J_m
+is preserved because the additive structure of F_p respects this swap.
+
+More precisely: multiplication by k ∈ F_p* is an automorphism of (Z/pZ, +),
+and it maps QR-step-sequences bijectively to QNR-step-sequences.
+But QNR-step-sequences would be step sequences for the COMPLEMENT tournament!
+
+Since P_p is self-complementary (P_p ≅ P_p^op), the complement has the
+same path homology. So the QNR eigenspaces should give the same Ω dims.
+
+This is why ALL eigenspaces give the same Ω dims: QR eigenspaces are
+related by QR-multiplication (permutation), and QNR eigenspaces are
+related to QR eigenspaces by QNR-multiplication (complement swap +
+self-complementarity).
+
+======================================================================
+TOPOLOGY DIMENSION PREDICTION
+======================================================================
+
+For P_p, the Ω dims are the same at all eigenspaces.
+The total Betti numbers are β_d^total = p · β_d^(k=1) for d > 0
+(since k=0 contributes only to β_0), or more precisely:
+  β_0 = 1 (from k=0)
+  β_d = (p-1) · β_d^(k=1) for d > 0
+
+Wait, this assumes β_0^(k) = 0 for k ≠ 0. Let me verify.
+
+For P_7:
+  k=0: β = [1,0,0,0,0,0,0]
+  k≠0: β = [0,0,0,0,1,0,0]
+  Total: β = [1,0,0,0,6,0,0]
+
+So β_0^(k=0) = 1, β_0^(k≠0) = 0.
+And β_4^(k≠0) = 1 for each of 6 eigenspaces, giving β_4 = 6 = p-1.
+
+Prediction for P_11:
+  If the pattern holds, β_d = 10 for some d, and all other β = 0 (except β_0=1).
+  What d? For P_7, d = p-3 = 4. So d = 11-3 = 8?
+
+Alternative: d = (p-1)/2 - 1 = (p-3)/2.
+  P_7: d = 2 (no, it's d=4)
+  P_3: d = 0 (no, β_1=1 for k≠0, but wait P_3 has β=(1,1,0))
+
+Let me reconsider. For P_3: β = (1,1,0). That's β_0=1, β_1=1.
+  k=0: β=[1,0,0], k=1: β=[0,1,0], k=2: β=[0,1,0]? No...
+  P_3 has n=3, so only k=0,1,2. If β_1 = 1, then either one eigenspace
+  contributes β_1=1 or... let me check.
+
+Actually P_3: β = (1,1,0), so β_1 = 1, not p-1=2.
+So the P_3 → P_7 jump is: β_1=1 → β_4=6.
+
+P_3 is special: it's just the 3-cycle, which is topologically S^1.
+
+P_3: QR = [1]
+  k=0: λ=1.0000+0.0000j, M_1 = [0.0000+0.0000j], |M_1| = 0.0000
+  k=1: λ=-0.5000+0.8660j, M_1 = [-1.5000+0.8660j], |M_1| = 1.7321
+  k=2: λ=-0.5000-0.8660j, M_1 = [-1.5000-0.8660j], |M_1| = 1.7321
+
+P_3 analysis: β_1 = 1 from k=0 eigenspace (NOT from k≠0).
+This is because S = {1} has only 1 generator, so A_1 has only 1 step sequence.
+The Ω_1 = A_1 = {(1)} for each eigenspace, but:
+  k=0: λ=1, ∂_1 = 0, so ker(∂_1)=1, β_1=1
+  k≠0: λ≠1, ∂_1 = λ-1 ≠ 0, so ker(∂_1)=0, β_1=0
+
+So P_3 is fundamentally different from P_7.
+At P_7, the β comes from k≠0 eigenspaces.
+At P_3, the β comes from k=0.
+
+The transition happens because |S| grows: P_3 has |S|=1, P_7 has |S|=3.
+With more generators, higher-dimensional step sequences proliferate,
+and the non-trivial eigenspaces develop nontrivial homology.
+
+======================================================================
+DIMENSION FORMULA INVESTIGATION
+======================================================================
+P_7 Ω dims: [1, 3, 6, 9, 9, 6, 3]
+  Sum = 37
+  Alt sum = 1
+  Ratios: [3.0, 2.0, 1.5, 1.0, 0.6666666666666666, 0.5]
+
+  Boundary ranks (per eigenspace k≠0):
+  r = [1, 2, 4, 5, 3, 3]
+  Verify: dims = [1], [3-1=2], [6-2=4], [9-4=5], [9-5=4], [6-3=3], [3-3=0]
+
+KEY PATTERN:
+  Ω_m dims are symmetric around the midpoint (palindromic-ish):
+  [1, 3, 6, 9 | 9, 6, 3]
+
+  The boundary ranks are NOT symmetric:
+  [1, 2, 4, 5 | 3, 3]
+
+  The asymmetry at the "equator" (dim 3-4) creates β_4 = 1.
+
+  If Ω dims were perfectly symmetric and boundary ranks
+  were determined by exact sequences, we'd need Poincaré duality.
+  But we DON'T have a manifold — this is a directed graph!
+
+  The asymmetry of boundary ranks at the middle dimension is what
+  creates the non-trivial homology.
+
+P_7: |A_m|/Ω_m = ['1.0', '1.0', '1.5', '2.3', '4.3', '7.5', '9.0']
+P_7: Ω_m/|A_m| = ['1.000', '1.000', '0.667', '0.429', '0.231', '0.133', '0.111']
+
+Done.
