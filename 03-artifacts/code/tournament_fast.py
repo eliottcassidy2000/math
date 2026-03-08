@@ -478,54 +478,31 @@ def c3_regular(n):
 
 def c5_fast(T):
     """Count directed 5-cycles using trace formula. O(n^3).
-    Uses: c5 = (tr(A^5) - 5*tr(A^3) - 5*c3*n + 5*c3) / 10
-    Wait, that's for UNdirected. For directed 5-cycles in tournaments:
-    c5 = (1/10) * sum over 5-subsets of (#directed Ham cycles on subset).
 
-    Actually faster: count via adjacency matrix powers.
-    tr(A^k) counts closed walks of length k (with repetitions).
-    For tournaments, the number of DIRECTED k-cycles (vertex-set canonical,
-    rotation canonical) is:
-      c_k = (1/k) * [tr(A^k) - correction terms for shorter cycles]
+    By THM-096: tr(A^k) = k * c_k for k = 3, 5 in tournaments.
+    This is because closed walks of length <= 5 in tournaments are
+    always simple cycles (no vertex repetition possible, since
+    tournaments have no bidirectional edges and any closed walk
+    has length >= 3, so repeating a vertex requires length >= 6).
 
-    For k=5:
-      tr(A^5) counts all closed walks of length 5.
-      Subtract walks that revisit vertices.
-      Then divide by 5 (rotations).
+    Therefore: c_5 = tr(A^5) / 5.
+    Computed via matrix multiplication in O(n^3).
     """
     n = len(T)
     if n < 5:
         return 0
 
-    # Direct method: for each 5-subset, count directed Ham cycles
-    # O(C(n,5) * 5!) = O(n^5 * 120) but we can use DP per subset
-    count = 0
-    for verts in combinations(range(n), 5):
-        # DP on this 5-vertex subset
-        v = list(verts)
-        first = v[0]
-        # dp[mask][last] = # paths from first through mask ending at last
-        dp = [[0]*5 for _ in range(1 << 5)]
-        dp[1][0] = 1
-        for mask in range(1, 1 << 5):
-            if not (mask & 1):
-                continue
-            for last in range(5):
-                if not (mask & (1 << last)):
-                    continue
-                cnt = dp[mask][last]
-                if cnt == 0:
-                    continue
-                if bin(mask).count('1') == 5 and last != 0:
-                    if T[v[last]][v[0]]:
-                        count += cnt
-                    continue
-                for nxt in range(1, 5):
-                    if mask & (1 << nxt):
-                        continue
-                    if T[v[last]][v[nxt]]:
-                        dp[mask | (1 << nxt)][nxt] += cnt
-    return count
+    # A^2
+    A2 = [[sum(T[i][k] * T[k][j] for k in range(n))
+           for j in range(n)] for i in range(n)]
+    # A^4 = A^2 * A^2
+    A4 = [[sum(A2[i][k] * A2[k][j] for k in range(n))
+           for j in range(n)] for i in range(n)]
+    # A^5 = A^4 * A
+    A5 = [[sum(A4[i][k] * T[k][j] for k in range(n))
+           for j in range(n)] for i in range(n)]
+    tr5 = sum(A5[i][i] for i in range(n))
+    return tr5 // 5
 
 
 def is_doubly_regular(T):
