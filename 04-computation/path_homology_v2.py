@@ -21,20 +21,37 @@ from collections import defaultdict
 import random
 
 def enumerate_allowed_paths(A, n, p):
-    """All sequences of p+1 distinct vertices following directed edges."""
+    """All sequences of p+1 distinct vertices following directed edges.
+
+    Uses DFS along edges instead of testing all permutations.
+    Much faster for tournaments and sparse digraphs.
+    """
     if p < 0:
         return []
     if p == 0:
         return [(v,) for v in range(n)]
+
+    # Precompute adjacency lists
+    adj = [[] for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            if A[i][j] == 1:
+                adj[i].append(j)
+
     paths = []
-    for perm in permutations(range(n), p + 1):
-        ok = True
-        for i in range(p):
-            if A[perm[i]][perm[i+1]] != 1:
-                ok = False
-                break
-        if ok:
-            paths.append(perm)
+    stack = []  # (current_path_as_list, visited_bitmask)
+    for start in range(n):
+        stack.append(([start], 1 << start))
+        while stack:
+            path, visited = stack.pop()
+            if len(path) == p + 1:
+                paths.append(tuple(path))
+                continue
+            v = path[-1]
+            for u in adj[v]:
+                if not (visited & (1 << u)):
+                    stack.append((path + [u], visited | (1 << u)))
+
     return paths
 
 def boundary_coeffs(path):
