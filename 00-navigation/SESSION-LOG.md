@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-08-S43b — 2026-03-08 (β₂=0 Deep Structural Analysis)
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S43
+**Summary of work:**
+  Continued deep analysis of β₂=0 proof, exploring multiple approaches.
+
+  **Key discoveries (this sub-session):**
+  - DT face structure: (TT,?,?,TT) where ? depends on free a↔d edge
+  - DT boundaries DO have NT components when d→a — resolves Z₂ paradox
+  - DT-only deficit at n=6: ALWAYS exactly 1 (rk=9 in dim-10), score (1,2,2,3,3,4)/(2,2,2,3,3,3)
+  - Completing oriented graphs to tournaments ALWAYS kills β₂ (n=4 exhaustive)
+  - Edge removal creates β₂>0: unfillable 2-cycle always uses both endpoints
+  - Extension lemma FAILS: 50% of TT triples at n=4 have no DT extension
+  - Z₂ NOT in span(TT): 784/1024 at n=5 have NT components
+  - Relative homology H₂(T,T\v)=0: verified n=4,5 exhaustive, n=6 sampled
+  - β₁ can increase under vertex deletion, but ∃ always a good v
+
+  **New contributions:** THM-101, THM-102, HYP-222—226
+  **Unresolved:** Algebraic proof of β₂=0. Most promising: vertex deletion induction
+    (needs algebraic proof of H₂(T,T\v)=0) or DT boundary structure (needs showing
+    DT boundaries + cancellation span Z₂ for all n).
+
 ## opus-2026-03-08-S43 — 2026-03-08 (β₂=0 Proof Progress — DT+Cancellation Filling)
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S42
