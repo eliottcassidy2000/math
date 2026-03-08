@@ -1,0 +1,35 @@
+======================================================================
+RELATIVE MECHANISM: EXACT ker/im COMPUTATION
+======================================================================
+  ... 200/1024
+  ... 400/1024
+  ... 600/1024
+  ... 800/1024
+  ... 1000/1024
+
+  H₂^rel=0 iff i_* injective iff β₁(T\v) ≤ β₁(T)
+  Injective: 4280/5120 (83.6%)
+  Non-injective: 840/5120 (16.4%)
+
+  Cases with β₁(T\v) > β₁(T):
+  Count: 840
+
+  β₁(T\v) - β₁(T) distribution:
+    diff=-1: 440
+    diff=0: 3840
+    diff=1: 840
+
+======================================================================
+DOUBLE-CHECKING β₁ COMPUTATION
+======================================================================
+  T#4, v=4: β₁(T)=0, β₁(T\v)=1, scores_T=[1, 1, 2, 2, 4], scores_Tv=[1, 1, 2, 2]
+  T#6, v=4: β₁(T)=0, β₁(T\v)=1, scores_T=[1, 1, 2, 2, 4], scores_Tv=[1, 1, 2, 2]
+  T#9, v=1: β₁(T)=0, β₁(T\v)=1, scores_T=[0, 2, 2, 3, 3], scores_Tv=[1, 1, 2, 2]
+
+  Found 3 cases with β₁(T\v) > β₁(T)
+  This means either:
+  1. H₂^rel ≠ 0 (contradicts computation)
+  2. The LES argument has an error
+  3. GLMY LES works differently than simplicial LES
+
+Done.

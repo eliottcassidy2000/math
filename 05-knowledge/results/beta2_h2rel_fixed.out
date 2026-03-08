@@ -1,0 +1,33 @@
+======================================================================
+FIXED H₂^rel: vertex renumbering corrected
+======================================================================
+
+Test: bits=9, v=1
+  b1_T=0, b1_Tv=1, H2_rel=1
+  FIXED! ✓
+
+Systematic check: all n=5 (T,v) pairs
+  ... 200/1024, bugs=0
+  ... 400/1024, bugs=0
+  ... 600/1024, bugs=0
+  ... 800/1024, bugs=0
+  ... 1000/1024, bugs=0
+
+H₂^rel distribution (5120 pairs):
+  H₂^rel = 0: 4280
+  H₂^rel = 1: 840
+
+LES violations: 0
+ALL CONSISTENT WITH LES! ✓
+
+Breakdown by (β₁(T), β₁(T\v)):
+  β₁(T)=0, β₁(T\v)=0, H₂^rel=0: 2760
+  β₁(T)=0, β₁(T\v)=1, H₂^rel=1: 840
+  β₁(T)=1, β₁(T\v)=0, H₂^rel=0: 440
+  β₁(T)=1, β₁(T\v)=1, H₂^rel=0: 1080
+
+Is H₂^rel = max(0, β₁(T\v) - β₁(T)) always?
+  Exact match: 5120/5120
+  Mismatch: 0/5120
+
+Done.

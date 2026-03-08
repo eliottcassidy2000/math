@@ -1,0 +1,35 @@
+======================================================================
+CLEAN H₂^rel COMPUTATION (A-coordinates only)
+======================================================================
+
+Test case: bits=9, v=1
+  0 -> [1, 4]
+  1 -> []
+  2 -> [0, 1]
+  3 -> [0, 1, 2]
+  4 -> [1, 2, 3]
+  beta1(T)=0, beta1(T\v)=1
+  LES demands H2_rel >= 1
+  H2_rel (clean) = 0
+  Debug: {'d2T': 9, 'd3T': 4, 'd2Tv': 3, 'dim_ker_R2': 3, 'dim_im_R3': 3, 'rk_preimage': 4, 'null_dim': 6}
+
+======================================================================
+SYSTEMATIC: ALL n=5 (T,v) pairs
+======================================================================
+  BUG: bits=9, v=1, h2_rel=0, b1_T=0, b1_Tv=1, les_min=1
+  BUG: bits=10, v=2, h2_rel=0, b1_T=0, b1_Tv=1, les_min=1
+  BUG: bits=13, v=1, h2_rel=0, b1_T=0, b1_Tv=1, les_min=1
+  ... 200/1024, bugs=62
+  ... 400/1024, bugs=163
+  ... 600/1024, bugs=255
+  ... 800/1024, bugs=347
+  ... 1000/1024, bugs=423
+
+H2_rel distribution (5120 pairs):
+  H2_rel = 0: 4474
+  H2_rel = 1: 646
+
+LES consistency: Counter({'ok': 4694, 'violation': 426})
+STILL 426 violations!
+
+Done.

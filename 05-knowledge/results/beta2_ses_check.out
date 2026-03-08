@@ -1,0 +1,71 @@
+======================================================================
+DIRECT RELATIVE HOMOLOGY CHECK
+======================================================================
+  LES violation: T(scores=[1, 1, 2, 2, 4]), v=4, β₁(T)=0, β₁(T\v)=1, scores_Tv=[1, 1, 2, 2]
+    dims_T=[5, 10, 9, 4, 1], ranks_T=[0, 4, 6, 3, 1], betti_T=[1, 0, 0, 0, 0]
+    dims_Tv=[4, 6, 3, 1], ranks_Tv=[0, 3, 2, 1], betti_Tv=[1, 1, 0, 0]
+  LES violation: T(scores=[1, 1, 2, 2, 4]), v=4, β₁(T)=0, β₁(T\v)=1, scores_Tv=[1, 1, 2, 2]
+    dims_T=[5, 10, 9, 4, 1], ranks_T=[0, 4, 6, 3, 1], betti_T=[1, 0, 0, 0, 0]
+    dims_Tv=[4, 6, 3, 1], ranks_Tv=[0, 3, 2, 1], betti_Tv=[1, 1, 0, 0]
+  LES violation: T(scores=[0, 2, 2, 3, 3]), v=1, β₁(T)=0, β₁(T\v)=1, scores_Tv=[1, 1, 2, 2]
+    dims_T=[5, 10, 9, 4, 1], ranks_T=[0, 4, 6, 3, 1], betti_T=[1, 0, 0, 0, 0]
+    dims_Tv=[4, 6, 3, 1], ranks_Tv=[0, 3, 2, 1], betti_Tv=[1, 1, 0, 0]
+  LES violation: T(scores=[1, 1, 2, 3, 3]), v=2, β₁(T)=0, β₁(T\v)=1, scores_Tv=[1, 1, 2, 2]
+    dims_T=[5, 10, 9, 3, 0], ranks_T=[0, 4, 6, 3, 0], betti_T=[1, 0, 0, 0, 0]
+    dims_Tv=[4, 6, 3, 1], ranks_Tv=[0, 3, 2, 1], betti_Tv=[1, 1, 0, 0]
+  LES violation: T(scores=[1, 1, 2, 3, 3]), v=3, β₁(T)=0, β₁(T\v)=1, scores_Tv=[1, 1, 2, 2]
+    dims_T=[5, 10, 9, 3, 0], ranks_T=[0, 4, 6, 3, 0], betti_T=[1, 0, 0, 0, 0]
+    dims_Tv=[4, 6, 3, 1], ranks_Tv=[0, 3, 2, 1], betti_Tv=[1, 1, 0, 0]
+  ... 200/1024, LES violations so far: 141
+  ... 400/1024, LES violations so far: 331
+  ... 600/1024, LES violations so far: 492
+  ... 800/1024, LES violations so far: 676
+  ... 1000/1024, LES violations so far: 832
+
+  Total: 5120, LES apparent violations: 840
+
+  RESOLUTION: The LES of a pair in GLMY theory requires:
+  0 → Ω_*(Y) →^i Ω_*(X) →^π R_* → 0 to be EXACT.
+
+  We showed Ω_p(T\v) ⊆ Ω_p(T) (injection), and R_p is the quotient.
+  So the SES should be exact.
+
+  But maybe the BOUNDARY MAP on the quotient is NOT the naive quotient map.
+  In GLMY theory, the boundary maps ∂_p depend on the GRAPH structure.
+  The quotient boundary ∂^R might differ from the standard quotient.
+
+  Actually: the boundary ∂_p on Ω_p is independent of the graph — it's the
+  standard simplicial face map. The graph only affects WHICH paths are allowed
+  and WHICH elements are in Ω. So the SES of chain complexes IS exact, and
+  the standard LES of homology DOES apply.
+
+  This means our computation of H₂^rel = 0 must be WRONG, or β₁ computation
+  has errors. Let me check a specific case...
+
+  --- Checking specific LES violation case ---
+  T adjacency:
+    [0, 0, 0, 1, 0]
+    [1, 0, 0, 0, 0]
+    [1, 1, 0, 0, 0]
+    [0, 1, 1, 0, 0]
+    [1, 1, 1, 1, 0]
+  T\4 adjacency:
+    [0, 0, 0, 1]
+    [1, 0, 0, 0]
+    [1, 1, 0, 0]
+    [0, 1, 1, 0]
+  β(T) = [1, 0, 0, 0, 0]
+  β(T\v) = [1, 1, 0, 0]
+  Ω dims T = [5, 10, 9, 4, 1]
+  Ω dims T\v = [4, 6, 3, 1]
+
+  Ω_1(T): dim=10, Ω_1(T\v): dim=6, R_1=4
+    Embedding error: 0.00e+00, rank of embedding in Ω(T): 6
+
+  Ω_2(T): dim=9, Ω_2(T\v): dim=3, R_2=6
+    Embedding error: 1.11e-16, rank of embedding in Ω(T): 3
+
+  Ω_3(T): dim=4, Ω_3(T\v): dim=1, R_3=3
+    Embedding error: 0.00e+00, rank of embedding in Ω(T): 1
+
+Done.

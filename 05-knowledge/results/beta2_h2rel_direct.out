@@ -1,0 +1,84 @@
+======================================================================
+DIRECT H₂^rel COMPUTATION
+======================================================================
+
+T adjacency (v=4 beats everyone):
+  0 → [3]
+  1 → [0]
+  2 → [0, 1]
+  3 → [1, 2]
+  4 → [0, 1, 2, 3]
+
+T\4 adjacency:
+  0 → [3]
+  1 → [0]
+  2 → [0, 1]
+  3 → [1, 2]
+  Ω_0(T) = 5, Ω_0(T\v) = 4, R_0 = 1
+  Ω_1(T) = 10, Ω_1(T\v) = 6, R_1 = 4
+  Ω_2(T) = 9, Ω_2(T\v) = 3, R_2 = 6
+  Ω_3(T) = 4, Ω_3(T\v) = 1, R_3 = 3
+  Ω_4(T) = 1, Ω_4(T\v) = 0, R_4 = 1
+
+--- Building quotient complex ---
+  p=0: embed rank = 4 (should be 4)
+  p=0: R_0 dim = 0
+  p=1: embed rank = 6 (should be 6)
+  p=1: R_1 dim = 0
+  p=2: embed rank = 3 (should be 3)
+  p=2: R_2 dim = 0
+  p=3: embed rank = 1 (should be 1)
+  p=3: R_3 dim = 0
+
+--- Building boundary maps ---
+  ∂_1 in Ω-coords: (5, 10), rank = 4
+  ∂_2 in Ω-coords: (10, 9), rank = 6
+  ∂_3 in Ω-coords: (9, 4), rank = 3
+  ∂_4 in Ω-coords: (4, 1), rank = 1
+
+--- Computing H₂^R ---
+  ker(∂₂^R) = 0
+  rk(∂₃^R) = 0
+  H₂^R = 0
+
+  H₂^rel = 0 ✓
+  But then the LES gives 0 → H₂^rel → H₁(T\v) → H₁(T)
+  0 → 0 → 1 → 0 which is NOT exact!
+  Unless i_*: H₁(T\v) → H₁(T) is injective despite dim mismatch.
+  Wait: i_* could be injective even with β₁(T)=0 if im(i_*)=0.
+  But β₁(T\v)=1 and ker(i_*)=0 means i_* maps a 1-dim space injectively
+  into a 0-dim space — IMPOSSIBLE!
+
+  Cannot check ∂² = 0 (empty matrices)
+
+======================================================================
+ALTERNATIVE: DIRECT A-COORDINATE RELATIVE COMPLEX
+======================================================================
+
+  Embedding dims:
+    embed_1: (10, 6)
+    embed_2: (9, 3)
+    embed_3: (4, 1)
+
+  Preimage of Ω₁(T\v) under ∂₂:
+    System matrix M: (10, 15), rank = 9
+    Null space dim: 6
+    x-part rank: 6
+    dim Ω₂(T\v) = 3
+    dim ker(∂₂^R) = rk(embed2 ∪ preimage) - rk(embed2) = 6 - 3 = 3
+    dim im(∂₃^R) = rk(embed2 ∪ im∂₃) - rk(embed2) = 5 - 3 = 2
+    ∂₂∘∂₃ max entry: 3.89e-16
+
+  H₂^rel = ker - im = 3 - 2 = 1
+
+  *** H₂(T,T\v) = 1 ≠ 0 ***
+  The earlier claim of H₂^rel=0 was WRONG!
+  Consistent with LES: H₂^rel ≅ ker(i_*) where beta1(Tv) > beta1(T)
+
+======================================================================
+SYSTEMATIC CHECK: ALL n=5 (T,v) pairs
+======================================================================
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/beta2_h2rel_direct.py", line 495, in <module>
+    h2_rel_dist = Counter()
+NameError: name 'Counter' is not defined
