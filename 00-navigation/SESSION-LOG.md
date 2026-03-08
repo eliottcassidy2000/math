@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S38 — 2026-03-07 (GLMY Path Homology Deep Dive)
+**Account:** A
+**Continuation of:** opus-2026-03-07-S37 (Worpitzky investigation)
+**Summary of work:**
+  Deep investigation of GLMY path homology applied to tournaments and circulant digraphs.
+
+  **Major discoveries:**
+  1. **β_2=0 for ALL tournaments** — verified exhaustively n≤5, sampled n=6-8 (~5000 total). Algebraic proof structure: ker(∂_2) = im(∂_3) exactly, with Ω_2 = transitive triples, Ω_3 = doubly-transitive 4-paths.
+  2. **β_3=1 appears at n=7** (8.4% of tournaments) — first higher Betti number for tournaments. β_4=1 appears rarely at n=8.
+  3. **β_1 and β_3 are mutually exclusive** — tournaments are either S^1-like, S^3-like, or contractible, never both.
+  4. **Complement duality β(T) = β(T^op) PROVED** at n=5 (exhaustive 1024/1024), verified at n=6.
+  5. **S-phase (β_3=1) tournaments have highest H** — mean H=114.8 vs 75.3 for contractible. They also have the most 5-cycles (t5=24.4 vs 15.2).
+  6. **Circulant stability confirmed**: C_n^{1,3} gives torus T^2 for ALL n≥6 (tested through n=23).
+
+**New contributions:** path_homology_synthesis.md, 10+ computation scripts, HYP-301 through HYP-306
+**Unresolved threads:** Prove β_2=0 algebraically; test β_5 at n=9; prove complement duality
+
 ## opus-2026-03-07-S46f — 2026-03-07 (Deep Inquiry: Todd Class, β₂ Exactness, Real-Rootedness)
 **Account:** A
 **Continuation of:** opus-2026-03-07-S46e (context restart)

@@ -113,25 +113,49 @@ M_1(t) = [t^{γ_0} - 1, t^{γ_1} - 1, ..., t^{γ_{d-1}} - 1]
 **Strong stability theorem** (Tang-Yau 4.5): For "no wrap-around" S,
 the Betti numbers stabilize for large primes.
 
+### OCF-Topology Connection (Major Finding)
+
+**S-phase (β_3=1) tournaments have the most directed cycles and highest H:**
+
+| Phase | t3 | t5 | H (mean) | Transitivity ratio |
+|-------|-----|-----|----------|-------------------|
+| P (contractible) | 8.6 | 15.2 | 75.3 | 0.51 |
+| C (S^1) | 9.1 | 18.2 | 87.0 | 0.52 |
+| S (S^3) | **11.1** | **24.4** | **114.8** | **0.43** |
+
+Since OCF gives H = 1 + 2(t3+t5+t7) + 4·(disjoint pairs), the higher H of
+S-phase comes from having MORE odd cycles. The topological complexity (directed
+3-holes) correlates with cycle richness.
+
+**n=5 exhaustive**: C-phase H ∈ {9,11,15}, P-phase H ∈ {1,3,5,9,13}.
+H alone doesn't determine topology (H=9 appears in both phases).
+
 ### Conjectures
 
-- **HYP-301**: β_2(T) = 0 for ALL tournaments T
-- **HYP-302**: β_1(T) · β_3(T) = 0 for all tournaments (mutual exclusion)
-- **HYP-303**: β(T) = β(T^op) (complement invariance of path homology)
+- **HYP-301**: β_2(T) = 0 for ALL tournaments T (STRONGLY supported: verified n=3-8)
+- **HYP-302**: β_1(T) · β_3(T) = 0 for all tournaments (mutual exclusion, verified n=3-8)
+- **HYP-303**: β(T) = β(T^op) (complement invariance — PROVED at n=5, verified n=6-7)
 - **HYP-304**: For tournaments, β_p ∈ {0, 1} for all p ≥ 1
 - **HYP-305**: The complete digraph K_n has β = (1, 0, ..., 0, D_{n-1}) where D_{n-1} grows rapidly
+- **HYP-306**: S-phase proportion increases with n (0% at n≤6, 8% at n=7, 16% at n=8)
 
 ### Open Questions
-1. WHY does β_2=0 for tournaments? Algebraic proof?
-2. What exactly determines β_3=1 at n=7? Is there a cycle-count threshold?
-3. Does β_5 appear at n=9?
-4. Does the mutual exclusion β_1·β_3=0 hold generally?
-5. Connection to OCF: does β(T) carry information about H(T)?
-6. Can the Fourier decomposition be extended to "nearly circulant" tournaments?
+1. PROVE β_2=0 algebraically using the Ω_2/Ω_3 structure
+2. What exactly determines β_3=1? Not t3 alone — requires HIGH t5 and HIGH H
+3. Does β_5 appear at n=9? (Predicting: yes, for ~1-5% of tournaments)
+4. Does the mutual exclusion β_1·β_3=0 hold generally? (Likely a topological obstruction)
+5. Is the OCF-topology connection causal? Does high cycle count FORCE nontrivial topology?
+6. Can the complement duality β(T) = β(T^op) be proved from path reversal?
 
 ### Scripts
-- path_homology_v2.py (core implementation)
+- path_homology_v2.py (core implementation, validated)
 - path_homology_deep.py (Phase 1: exhaustive n≤5, sampling n=6,7)
 - path_homology_phase2.py (Phase 2: β_3 discovery, Euler char)
 - path_homology_phase3.py (Phase 3: cycle generators, correlates)
 - path_homology_phase4.py (Phase 4: complement duality, n=8, arc-flip)
+- path_homology_beta2_proof.py (β_2=0 algebraic analysis)
+- path_homology_n8.py, path_homology_n8_extended.py (n=8 exploration)
+- path_homology_phases.py (topological phase analysis)
+- path_homology_Hconnection.py (OCF-topology connection)
+- quick_stability.py (circulant stability verification)
+- path_homology_fourier.py (Fourier decomposition attempt — needs Ω fix)
