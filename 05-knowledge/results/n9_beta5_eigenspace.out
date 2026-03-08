@@ -1,0 +1,51 @@
+======================================================================
+FOCUSED: beta_5 EIGENSPACE DECOMPOSITION (Z_9 maximizer)
+======================================================================
+  A_0: 9 (0.0s)
+  A_1: 36 (0.0s)
+  A_2: 144 (0.0s)
+  A_3: 486 (0.0s)
+  A_4: 1386 (0.0s)
+  A_5: 3132 (0.0s)
+  A_6: 5310 (0.1s)
+  Om_4: dim=513 (14.2s)
+  Om_5: dim=666 (108.1s)
+  Om_6: dim=567 (511.1s)
+
+--- Boundary matrices ---
+  d_5: rank=323
+  d_6: rank=333
+
+  beta_5 = ker(d_5) - im(d_6) = 343 - 333 = 10
+
+======================================================================
+EIGENSPACE DECOMPOSITION OF beta_5
+======================================================================
+
+  Om_5 dim = 666, Om_5/9 = 74.0
+  Om_6 dim = 567, Om_6/9 = 63.0
+  k=0: Om5_dim=74, Om6_dim=63, ker(d5)=39, im(d6)=37, beta5=2
+  k=1: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=2: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=3: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=4: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=5: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=6: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=7: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+  k=8: Om5_dim=74, Om6_dim=63, ker(d5)=38, im(d6)=37, beta5=1
+
+  SUM of per-eigenspace beta_5 = 10
+  Expected: 10
+
+  Conjugation symmetry check:
+    b5(1) = 1, b5(8) = 1, equal=True
+    b5(2) = 1, b5(7) = 1, equal=True
+    b5(3) = 1, b5(6) = 1, equal=True
+    b5(4) = 1, b5(5) = 1, equal=True
+
+  By character order:
+    trivial (k=0): beta5 = 2
+    order 3 (k=3,6): beta5 = 1, 1
+    order 9 (k=1,2,4,5,7,8): beta5 = [1, 1, 1, 1, 1, 1]
+
+Total time: 811.1s
