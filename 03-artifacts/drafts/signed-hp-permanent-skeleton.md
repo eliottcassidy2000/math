@@ -287,6 +287,14 @@ Perpendicularity = Corr(c_0, H) ≈ 0 at large odd n. The mechanism:
 - At n=7: 36 ambiguous pairs in 500 samples
 - Eigenvalue structure at n=5: Perron eigenvalue ranges from 0 (transitive, H=1) to 2 (regular, H=15)
 
+### THM-M: M(r) symmetric for ALL r (VERIFIED n=5)
+
+The r-parameterized transfer matrix M(r)[a,b] is symmetric for EVERY value of r, not just r=1/2. This means each coefficient matrix c_{2k} in M(r) = sum c_{2k} r^{2k} is individually symmetric.
+
+Combined with THM-L (M(-r) = M(r) at odd n): EVERY entry of M(r) is an even polynomial in r. This is a MUCH STRONGER statement than just the trace being even.
+
+**Proof approach for symmetry:** If we can show M(r) is symmetric at n+1 points (interpolation), then the polynomial symmetry follows. At r=0: M(0) involves only the signed permanent structure. At r=1/2: M(1/2) gives the HP counts (the main conjecture).
+
 ### bits=all Tournament: H Recursion (VERIFIED)
 
 H(n) = 3, 5, 9, 17, 31, 57 for n=3,...,8.
