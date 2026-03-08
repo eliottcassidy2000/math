@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S41 (cont'd) — beta2 proof exploration deepened
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S41 (context overflow continuation)
+**Summary of work:**
+  Deep algebraic and combinatorial analysis of beta_2 = 0 conjecture (HYP-207).
+
+  **Key findings:**
+  - delta(J_2) under arc flip is FULLY LOCAL (only adjacent pairs change) with exact 3-category formula
+  - delta(dim Omega_2) + delta(beta_1) is NOT locally determined — arc-flip algebraic proof remains hard
+  - TT-span (Omega_2 = span of transitive triple paths) is FALSE at n>=6 (was true at n=5)
+  - J_2 != 3*c_3 in general (junk pairs can have A^2[a,c] > 1)
+  - DT ALONE fills ALL Z_2 at n=5 (no cancellation needed)
+  - DT+cancellation fills ALL Z_2 at n=5,6 (exhaustive), n=7,8 (sampled, 0 failures)
+  - DT deficit ONLY for scores (1,2,2,3,3,4) and (2,2,2,3,3,3) at n=6
+  - Max DT deficit grows slowly: 0 (n=5), 2 (n=6,7), 3 (n=8)
+  - All deficit cases have beta_1=0 at n=6
+  - Cancellation pairs are type '02' (bad face at positions 0,2)
+
+**New contributions:**
+  - HYP-235 through HYP-242 added to hypothesis index
+  - Scripts: beta2_deltaJ2_formula.py, beta2_tt_span_proof.py, beta2_filling_algebraic.py,
+    beta2_dt_n7_deficit.py, beta2_deficit_anatomy.py
+  - All results saved to 05-knowledge/results/
+
+**Unresolved threads:**
+  - Algebraic proof of DT+cancellation filling (why does it ALWAYS work?)
+  - Arc-flip invariance proof (delta(rk d_3) = delta(dim Omega_2) + delta(beta_1))
+  - Connecting map injectivity (HYP-231) — equivalent to beta_2=0 by LES
+
 ## opus-2026-03-07-S46g — 2026-03-08 (A000568 enumeration breakthrough)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S46f

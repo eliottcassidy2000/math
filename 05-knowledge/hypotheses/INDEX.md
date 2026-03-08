@@ -91,6 +91,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-236 | ALL Z_2 cycles use ALL n vertices | Exhaustive n=5 (3600/3600 cycles), sampled n=6 (5000 tournaments). Full vertex support | beta2_filling_structure.py |
 | HYP-237 | β_p = 0 for ALL p ≥ 2 at n=5 | Exhaustive 1024 tournaments: β₂=β₃=β₄=0 always. Only β₀=1, β₁∈{0,1} | beta2_simplex_deformation.py |
 | HYP-238 | χ = 1 - β₁ for all tournaments (Euler char from simplex deformation) | n=4: χ∈{0,1}, n=5: χ∈{0,1}, matches 1-β₁ exactly. NOT constant! | beta2_simplex_deformation.py |
+| HYP-239 | DT+cancellation fills ALL Z₂ for ALL tournaments | Exhaustive n=5 (DT alone), n=6 (960 need cancel). Sampled n=7 (3000), n=8 (1000). 0 failures | beta2_filling_algebraic.py |
+| HYP-240 | DT deficit only for scores (1,2,2,3,3,4) and (2,2,2,3,3,3) at n=6 | 720+240=960 deficit tours. All deficit cases have beta_1=0. Max deficit=2 | beta2_deficit_anatomy.py |
+| HYP-241 | Max DT deficit grows slowly: 0 (n=5), 2 (n=6,7), 3 (n=8) | Sampled. Cancellation ALWAYS covers deficit | beta2_dt_n7_deficit.py |
+| HYP-242 | TT-span for Omega_2 is FALSE at n>=6 | TRUE at n=5 (opus-S45), FAILS 94.6% at n=6 | beta2_tt_span_proof.py |
 
 ---
 
@@ -112,7 +116,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112
