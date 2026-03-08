@@ -849,7 +849,6 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Open extension:** Prove for general vertex-transitive (non-circulant) tournaments. The proof uses circulant-specific translation symmetry. At n=15, non-circulant VT tournaments exist (Babai-Kantor doubly-regular tournaments).
 **Scripts:** `04-computation/palindromic_N_proof.py`, `04-computation/palindromic_N_posuniform.py`, `04-computation/palindromic_N_n9.py`, `04-computation/palindromic_N_n11.py`, `04-computation/selfcomp_posuniform_n7.py`
 
-<<<<<<< Updated upstream
 ### INV-074: Diagonal signed position theorem — VERIFIED n=5
 **Source:** opus-2026-03-06-S11b (continued³)
 **Status:** VERIFIED computationally at n=5 (all 12 iso classes).
@@ -1252,3 +1251,46 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Source:** kind-pasteur-2026-03-07-S36
 **Status:** FIXED.
 **What:** opus-S46 created THM-082-flip-factorization-anti-palindrome.md, colliding with kind-pasteur's THM-082-deletion-contraction-ham-paths.md. Renamed opus's to THM-084. Also fixed Corollary 2 which incorrectly claimed H(T)=H(T') under arc flip (FALSE: H(T) != H(T') in general, deltas up to +-12 at n=5). Correct: F(T,1)=n!=F(T',1) trivially.
+
+### INV-123: Worpitzky Expansion of F(T,x) — PROVED (THM-084)
+**Source:** opus-2026-03-07-S46b
+**Status:** PROVED algebraically, verified n=3..7
+**What:** F(T,x)/(1-x)^n = sum a_m x^m where a_m is polynomial in m of degree n-1.
+  - Top 2 coefficients are UNIVERSAL: n and C(n,2)
+  - For transitive tournament: a_m = (m+1)^n - m^n (binomial coefficients)
+  - Deviation from binomial: delta_2 = 2(n-2)*t3, delta_3 = (n-2)(n-3)*t3
+  - At n=6, deeper coefficients need invariants beyond t3
+  - Spectral connection: delta_2 = 2(n-2)/3 * tr(A^3)
+**Analogy:** F(T,x) is an h*-vector; a_m is an Ehrhart-like polynomial. Transitive tournament corresponds to unit cube h*-vector.
+**Scripts:** `04-computation/worpitzky_coefficients.py`, `04-computation/worpitzky_deeper.py`
+
+### INV-124: Signed Forward-Edge Polynomial SF(T,x) — PROVED (THM-085b)
+**Source:** opus-2026-03-07-S46b
+**Status:** PROVED algebraically
+**What:** SF(T,x) = sum sgn(sigma) x^{fwd_T(sigma)} is palindromic with parity (-1)^{C(n,2)}.
+  - SF(T,1) = 0 always, so (x-1) | SF(T,x)
+  - Quotient SF/(x-1) is anti-palindromic
+  - At n=4: SF = c(T) * (x-1)^2(x+1) (since anti-palindromic of even degree has (x+1) factor)
+  - SF determines F at n<=5 but NOT at n>=6 (coarser invariant)
+**Connection:** SF is a "path immanant" for the sign character. F is the "path permanent."
+**Scripts:** `04-computation/signed_F_analysis.py`
+
+### INV-125: Forward-Edge Variance Formula — PROVED (THM-086)
+**Source:** opus-2026-03-07-S46b
+**Status:** PROVED
+**What:** Var[fwd] = (n+1)/12 + 4*t3/(n(n-1)). Exact formula.
+  - Non-adjacent forward indicators are UNCORRELATED (tournament completeness: C(n-2,2) edges always)
+  - Adjacent covariance = -1/12 + 2*t3/(n(n-1)(n-2))
+  - Directed 2-path count = C(n,3) + 2*t3
+  - At t3=0 (transitive): Var = (n+1)/12 = Eulerian variance
+**Scripts:** `04-computation/worpitzky_w_connection.py`
+
+### INV-126: Cross-Domain Connections for F(T,x)
+**Source:** opus-2026-03-07-S46b
+**Status:** EXPLORED
+**What:** Multiple connections between F(T,x) and other mathematical structures:
+  1. **q-analogue F(T,x,q):** q-marginal (inv distribution) is UNIVERSAL = [n]_q! for all T
+  2. **det(W(x)):** det((J-I)+(x-1)A) at x=1 = (-1)^{n-1}(n-1) for all T
+  3. **Descent algebra:** SF is the sign-character evaluation of the "tournament descent" element
+  4. **Worpitzky = Ehrhart:** a_m analogous to Ehrhart polynomial, F to h*-vector
+**Next step:** (1) Explore F(T,x,q) as bivariate polynomial. (2) Find polytope whose h*-vector is F(T,x). (3) Connect Worpitzky coefficients to W-polynomial hierarchy (INV-082).

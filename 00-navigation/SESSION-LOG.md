@@ -81,6 +81,26 @@ Entry format:
 **Summary of work:**
   Long-running overnight creative exploration. Generated and tested 20+ outlandish hypotheses about deep structure.
 
+## opus-2026-03-07-S46b — 2026-03-07 (Worpitzky Expansion, Signed F, Variance Formula)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S46
+**Summary of work:**
+  Continued autonomous creative exploration session. Major theoretical breakthroughs.
+
+  **Major results:**
+  1. **THM-084 (Worpitzky Expansion):** F(T,x)/(1-x)^n = sum a_m x^m where a_m is polynomial in m of degree n-1. Universal top coefficients: n and C(n,2). For transitive: a_m = (m+1)^n - m^n. Deviation from binomial: delta_2 = 2(n-2)*t3, delta_3 = (n-2)(n-3)*t3.
+  2. **THM-085 (Signed F Polynomial):** SF(T,x) = sum sgn(sigma) x^{fwd(sigma)} is palindromic with parity (-1)^{C(n,2)}. SF(T,1)=0 always. SF/(x-1) is anti-palindromic. At n=4: SF = c*(x-1)^2*(x+1).
+  3. **THM-086 (Variance Formula):** PROVED: Var[fwd] = (n+1)/12 + 4*t3/(n(n-1)). Clean proof via: (a) non-adjacent forward indicators are UNCORRELATED (tournament completeness), (b) adjacent covariance = -1/12 + 2*t3/(n(n-1)(n-2)), (c) directed 2-path count = C(n,3) + 2*t3.
+  4. **Cross-domain connections:** q-analogue F(T,x,q) with universal q-marginal; det(W(x)) universal at x=1; Ehrhart analogy (F as h*-vector); descent algebra interpretation.
+  5. **Integrated kind-pasteur-S35 results:** THM-082 (DC for H), THM-083 (DC for F(T,x)).
+
+**New contributions:** THM-084, THM-085, THM-086, INV-121 through INV-123
+**Unresolved threads:**
+  - What invariant determines Worpitzky coefficients beyond t3 at n=6?
+  - Background agent searching for the invariant (4-vertex subgraph types explored, not resolved)
+  - Formal proof of delta_2 via variance formula needs algebraic verification
+  - Connection between Worpitzky and W-hierarchy coefficients
+
 ## kind-pasteur-2026-03-07-S35 — 2026-03-07 (Deletion-Contraction Proofs, F(ω) Analysis)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S34 (concept map session)

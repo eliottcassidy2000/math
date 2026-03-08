@@ -380,6 +380,36 @@ The ONLY permanent gaps through n=9 sampling are **H=7 and H=21**.
 
 ---
 
+## OPEN-Q-015 🟢 Worpitzky deeper invariants at n>=6
+**What determines the 5th and 6th Worpitzky coefficients?**
+
+At n=6, the Worpitzky polynomial a_m(T) has coefficients that are:
+- Top 2: universal (n, C(n,2))
+- Next 2: determined by t3 (formula: delta_d = 2(n-2)*t3 at d=2, (n-2)(n-3)*t3 at d=3)
+- Bottom 2: NOT determined by t3 alone
+
+Background agent explored t4, t5, score sequence moments, 4-vertex subgraph types — none give exact formula. Linear regression with (t3, t4) has max error ~17.
+
+THM-086 proves the t3 dependence comes from Var[fwd], which involves only adjacent-step covariances. The deeper coefficients involve E[fwd^3], E[fwd^4], which depend on 3-step and 4-step correlations — these involve 4-paths and 5-paths in the tournament.
+
+**THM:** THM-084, THM-086
+**Source:** opus-2026-03-07-S46b
+
+---
+
+## OPEN-Q-016 🟢 Signed forward-edge polynomial SF(T,x) structure
+**What is the combinatorial meaning of SF(T,x)?**
+
+SF(T,x) = sum sgn(sigma) x^{fwd_T(sigma)} is palindromic and divisible by (x-1).
+At n=4: SF = c*(x-1)^2*(x+1) for some integer c. What is c combinatorially?
+At n>=6: SF is a COARSER invariant than F. What information does it lose?
+Is there a matrix whose determinant equals SF(T,x)?
+
+**THM:** THM-085
+**Source:** opus-2026-03-07-S46b
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.
