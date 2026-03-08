@@ -1,0 +1,28 @@
+======================================================================
+EXHAUSTIVE beta_2 ARC-FLIP INVARIANCE at n=6
+Total tournaments: 32768
+Total arc flips to check: 491520
+======================================================================
+
+Phase 1: Precomputing all 32768 tournaments...
+  5000/32768 (19s, ETA 108s)
+  10000/32768 (41s, ETA 93s)
+  15000/32768 (64s, ETA 76s)
+  20000/32768 (84s, ETA 54s)
+  25000/32768 (107s, ETA 33s)
+  30000/32768 (128s, ETA 12s)
+  Precomputed 32768 tournaments in 138s
+
+Phase 2: Checking all 491520 arc flips...
+  10000/32768 (0s), mismatches so far: 0
+  20000/32768 (1s), mismatches so far: 0
+  30000/32768 (1s), mismatches so far: 0
+
+  Total flips checked: 491520
+  Mismatches: 0
+  Time: 1s
+
+  *** CONFIRMED: beta_2 is arc-flip invariant at n=6 (EXHAUSTIVE) ***
+  beta_2 != 0 count: 0
+
+Done.

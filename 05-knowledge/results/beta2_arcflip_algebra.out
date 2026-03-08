@@ -1,0 +1,89 @@
+======================================================================
+ALGEBRAIC DECOMPOSITION OF ARC-FLIP at n=5
+======================================================================
+
+Classification by (dTT, dNT, dDim2, dZ2, drk3):
+  dTT=change in TT triples, dNT=change in NT-cancellation dim
+  dDim2=dTT+dNT, dZ2=change in ker(d2), drk3=change in rk(d3)
+
+  dTT=-3, dNT=+2 => dDim2=-1, dZ2=+0, drk3=+0: 160 flips [OK]
+  dTT=-2, dNT=+1 => dDim2=-1, dZ2=-1, drk3=-1: 240 flips [OK]
+  dTT=-2, dNT=+2 => dDim2=+0, dZ2=+0, drk3=+0: 480 flips [OK]
+  dTT=-2, dNT=+3 => dDim2=+1, dZ2=+2, drk3=+2: 240 flips [OK]
+  dTT=-1, dNT=+0 => dDim2=-1, dZ2=-1, drk3=-1: 480 flips [OK]
+  dTT=-1, dNT=+1 => dDim2=+0, dZ2=+0, drk3=+0: 1200 flips [OK]
+  dTT=-1, dNT=+1 => dDim2=+0, dZ2=+1, drk3=+1: 240 flips [OK]
+  dTT=-1, dNT=+2 => dDim2=+1, dZ2=+1, drk3=+1: 240 flips [OK]
+  dTT=-1, dNT=+2 => dDim2=+1, dZ2=+2, drk3=+2: 240 flips [OK]
+  dTT=+0, dNT=-1 => dDim2=-1, dZ2=-2, drk3=-2: 240 flips [OK]
+  dTT=+0, dNT=-1 => dDim2=-1, dZ2=+0, drk3=+0: 240 flips [OK]
+  dTT=+0, dNT=+0 => dDim2=+0, dZ2=-1, drk3=-1: 240 flips [OK]
+  dTT=+0, dNT=+0 => dDim2=+0, dZ2=+0, drk3=+0: 1760 flips [OK]
+  dTT=+0, dNT=+0 => dDim2=+0, dZ2=+1, drk3=+1: 240 flips [OK]
+  dTT=+0, dNT=+1 => dDim2=+1, dZ2=+0, drk3=+0: 240 flips [OK]
+  dTT=+0, dNT=+1 => dDim2=+1, dZ2=+2, drk3=+2: 240 flips [OK]
+  dTT=+1, dNT=-2 => dDim2=-1, dZ2=-2, drk3=-2: 240 flips [OK]
+  dTT=+1, dNT=-2 => dDim2=-1, dZ2=-1, drk3=-1: 240 flips [OK]
+  dTT=+1, dNT=-1 => dDim2=+0, dZ2=-1, drk3=-1: 240 flips [OK]
+  dTT=+1, dNT=-1 => dDim2=+0, dZ2=+0, drk3=+0: 1200 flips [OK]
+  dTT=+1, dNT=+0 => dDim2=+1, dZ2=+1, drk3=+1: 480 flips [OK]
+  dTT=+2, dNT=-3 => dDim2=-1, dZ2=-2, drk3=-2: 240 flips [OK]
+  dTT=+2, dNT=-2 => dDim2=+0, dZ2=+0, drk3=+0: 480 flips [OK]
+  dTT=+2, dNT=-1 => dDim2=+1, dZ2=+1, drk3=+1: 240 flips [OK]
+  dTT=+3, dNT=-2 => dDim2=+1, dZ2=+0, drk3=+0: 160 flips [OK]
+
+--- Checking if dNT = 0 always ---
+  dNT = 0 for all flips: False
+  SURPRISE: dNT is NOT always 0!
+  Cases where dNT != 0:
+    dTT=-3, dNT=+2, count=160
+    dTT=-2, dNT=+1, count=240
+    dTT=-2, dNT=+2, count=480
+    dTT=-2, dNT=+3, count=240
+    dTT=-1, dNT=+1, count=1200
+    dTT=-1, dNT=+1, count=240
+    dTT=-1, dNT=+2, count=240
+    dTT=-1, dNT=+2, count=240
+    dTT=+0, dNT=-1, count=240
+    dTT=+0, dNT=-1, count=240
+    dTT=+0, dNT=+1, count=240
+    dTT=+0, dNT=+1, count=240
+    dTT=+1, dNT=-2, count=240
+    dTT=+1, dNT=-2, count=240
+    dTT=+1, dNT=-1, count=240
+    dTT=+1, dNT=-1, count=1200
+    dTT=+2, dNT=-3, count=240
+    dTT=+2, dNT=-2, count=480
+    dTT=+2, dNT=-1, count=240
+    dTT=+3, dNT=-2, count=160
+
+--- Detailed TT gain/loss analysis ---
+
+======================================================================
+CRITICAL: delta(dim Omega_2) decomposition
+======================================================================
+dim(Omega_2) = |TT| + |NT cancellation dims|
+delta(dim Omega_2) = delta(TT) + delta(NT)
+delta(TT) = p_vu - p_uv (PROVED)
+Need: delta(NT cancellation) formula
+
+(dTT, dNT, dDim2) distribution:
+  dTT=-3, dNT=+2 => dDim2=-1: 160 flips
+  dTT=-2, dNT=+1 => dDim2=-1: 240 flips
+  dTT=-2, dNT=+2 => dDim2=+0: 480 flips
+  dTT=-2, dNT=+3 => dDim2=+1: 240 flips
+  dTT=-1, dNT=+0 => dDim2=-1: 480 flips
+  dTT=-1, dNT=+1 => dDim2=+0: 1440 flips
+  dTT=-1, dNT=+2 => dDim2=+1: 480 flips
+  dTT=+0, dNT=-1 => dDim2=-1: 480 flips
+  dTT=+0, dNT=+0 => dDim2=+0: 2240 flips
+  dTT=+0, dNT=+1 => dDim2=+1: 480 flips
+  dTT=+1, dNT=-2 => dDim2=-1: 480 flips
+  dTT=+1, dNT=-1 => dDim2=+0: 1440 flips
+  dTT=+1, dNT=+0 => dDim2=+1: 480 flips
+  dTT=+2, dNT=-3 => dDim2=-1: 240 flips
+  dTT=+2, dNT=-2 => dDim2=+0: 480 flips
+  dTT=+2, dNT=-1 => dDim2=+1: 240 flips
+  dTT=+3, dNT=-2 => dDim2=+1: 160 flips
+
+Done.
