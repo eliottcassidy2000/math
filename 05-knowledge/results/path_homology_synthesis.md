@@ -1,6 +1,6 @@
 # GLMY Path Homology of Tournaments and Circulant Digraphs — Synthesis
 
-## Session: opus-2026-03-07-S38
+## Sessions: opus-2026-03-07-S38, opus-2026-03-08-S39
 
 ### Background
 
@@ -24,6 +24,7 @@ to directed graphs. For a digraph G on n vertices:
 | 6 | ~1000 | ~940 (94%)  | ~60 (6%)      | 0               | 0     |
 | 7 | ~500  | ~410 (82%)  | ~48 (9.6%)    | ~42 (8.4%)      | 0     |
 | 8 | ~80   | ~66 (82%)   | ~1 (1.3%)     | ~13 (16%)       | β_4=1: rare |
+| 9 | 50    | 44 (88%)    | 0 (0%)        | 6 (12%)         | 0           |
 
 #### 2. β_2 = 0 ALWAYS for tournaments (HYP-301)
 Across ~5000 tournaments tested (n=3 through n=8), β_2 has NEVER been nonzero.
@@ -130,32 +131,74 @@ S-phase comes from having MORE odd cycles. The topological complexity (directed
 **n=5 exhaustive**: C-phase H ∈ {9,11,15}, P-phase H ∈ {1,3,5,9,13}.
 H alone doesn't determine topology (H=9 appears in both phases).
 
+### Session S39: Major New Results
+
+#### Fourier Decomposition v3 (CORRECT — 90/90 validated)
+Key fix: Ω_p is NOT span{individually ∂-invariant paths}. It's the kernel
+of the "junk projection" — chains where non-allowed boundary faces cancel.
+This gives Ω_p^(λ) = ker(J_p(λ)) where J_p is the junk coefficient matrix.
+
+#### Illegal Merged Steps F = (S+S)\S Controls Topology
+For C_n^S:
+- F = {(a+b) mod n : a,b ∈ S, a≠b, (a+b) mod n ∉ S ∪ {0}}
+- |F|=0 (S closed under addition): β_1 = n-1 (bidirected pair case)
+- |F|=max, L=∅ (no legal merges): highest-dimensional sphere topology
+- At n=7: |F|=3, |S|=3 → 6×S^4; |F|=1, |S|=2 → circle or torus
+
+#### Paley Tournament Path Homology (MAJOR FINDING)
+The Paley tournament P_p (p ≡ 3 mod 4 prime) has S = QR(p).
+- **P_3**: β=(1,1,0) — circle S^1
+- **P_7**: β=(1,0,0,0,6,0) — **6×S^4**! (Euler char χ=7)
+- **P_11**: β=(1,0,0,0,...) — contractible through dim 3
+- For QR(p): F = QNR(p) EXACTLY — illegal merges are the quadratic non-residues
+- Gauss sum connection: the character sum Σ_{s∈QR} λ^s controls eigenspace structure
+
+#### n=9 Tournament Results (50 samples, max_dim=3)
+- β=(1,0,0,0): 44 (88%) — contractible
+- β=(1,0,0,1): 6 (12%) — S^3
+- β=(1,1,...): 0 (0%) — **C-phase completely disappears!**
+- β_3=1 appears at t3 as low as 7 (not just high-t3 tournaments)
+
+#### Topology Census (n=5,7 prime circulants)
+n=5: 8 circles, 4 S^3, 2 β_1=6, 1 with 44×S^4
+n=7: 30 circles, 6 tori, 8 (6×S^4), 6 S^3, 3 (22×S^3), 3 β_1=8
+
 ### Conjectures
 
-- **HYP-301**: β_2(T) = 0 for ALL tournaments T (STRONGLY supported: verified n=3-8)
-- **HYP-302**: β_1(T) · β_3(T) = 0 for all tournaments (mutual exclusion, verified n=3-8)
+- **HYP-301**: β_2(T) = 0 for ALL tournaments T (verified n=3-9)
+- **HYP-302**: β_1(T) · β_3(T) = 0 for all tournaments (verified n=3-9)
 - **HYP-303**: β(T) = β(T^op) (complement invariance — PROVED at n=5, verified n=6-7)
 - **HYP-304**: For tournaments, β_p ∈ {0, 1} for all p ≥ 1
 - **HYP-305**: The complete digraph K_n has β = (1, 0, ..., 0, D_{n-1}) where D_{n-1} grows rapidly
-- **HYP-306**: S-phase proportion increases with n (0% at n≤6, 8% at n=7, 16% at n=8)
+- **HYP-306**: S-phase proportion increases with n (0% at n≤6, 8% at n=7, 16% at n=8, 12% at n=9)
+- **HYP-307**: C-phase (β_1=1) disappears for n ≥ 9 (0/50 at n=9)
+- **HYP-308**: For Paley tournaments P_p, β_p depends only on (p mod 4) and p
+- **HYP-309**: F = QNR for all Paley tournaments (verified p=3,7,11)
 
 ### Open Questions
 1. PROVE β_2=0 algebraically using the Ω_2/Ω_3 structure
-2. What exactly determines β_3=1? Not t3 alone — requires HIGH t5 and HIGH H
-3. Does β_5 appear at n=9? (Predicting: yes, for ~1-5% of tournaments)
-4. Does the mutual exclusion β_1·β_3=0 hold generally? (Likely a topological obstruction)
-5. Is the OCF-topology connection causal? Does high cycle count FORCE nontrivial topology?
-6. Can the complement duality β(T) = β(T^op) be proved from path reversal?
+2. What exactly determines β_3=1? At n=9, appears even at low t3
+3. Does β_5 appear at n=9? (Need max_dim≥5, too slow for brute force)
+4. Does the mutual exclusion β_1·β_3=0 hold generally?
+5. What is β(P_11), β(P_19) at full dimension?
+6. Is P_7 = 6×S^4 related to the Gauss sum |g| = √p?
+7. Does the QR-topology connection extend to p ≡ 1 mod 4?
 
 ### Scripts
 - path_homology_v2.py (core implementation, validated)
+- path_homology_fourier_v3.py (CORRECT Fourier decomposition, 90/90 validated)
+- path_homology_fourier.py (v1 Fourier, β_0 and β_1 only)
+- path_homology_fourier_v2.py (v2 Fourier, BUGGY — wrong Ω)
 - path_homology_deep.py (Phase 1: exhaustive n≤5, sampling n=6,7)
 - path_homology_phase2.py (Phase 2: β_3 discovery, Euler char)
 - path_homology_phase3.py (Phase 3: cycle generators, correlates)
 - path_homology_phase4.py (Phase 4: complement duality, n=8, arc-flip)
 - path_homology_beta2_proof.py (β_2=0 algebraic analysis)
 - path_homology_n8.py, path_homology_n8_extended.py (n=8 exploration)
+- path_homology_n9_fast.py (n=9 tournament β_3 check)
 - path_homology_phases.py (topological phase analysis)
 - path_homology_Hconnection.py (OCF-topology connection)
 - quick_stability.py (circulant stability verification)
-- path_homology_fourier.py (Fourier decomposition attempt — needs Ω fix)
+- topology_landscape.py (circulant topology census)
+- symbol_matrix_analysis.py (F vs topology analysis)
+- paley_path_homology.py (Paley tournament path homology)
