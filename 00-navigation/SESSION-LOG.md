@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S39b — 2026-03-07 (Trace Formulas + Spectral Analysis + MISTAKE-017)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S39 (trace formula session)
+**Summary of work:**
+  Extended trace formula framework, spectral H-maximizer analysis, and discovered critical error in DRT n=11 analysis.
+
+  **Major discoveries:**
+  1. **THM-096 extended to k=4**: tr(A^4) = 4*c_4 for all tournaments. Proof: no directed 2-cycles in tournaments. c4_fast() added to tournament_fast.py.
+  2. **THM-097 Alpha_2 Trace Formula**: alpha_2 = C(c3,2) - sum_v C(t3(v),2) + s2. Vertex-disjoint 3-cycle pairs computable in O(n^3). Implemented as alpha2_from_trace().
+  3. **H(T) polynomial at n=8,9**: Full trace formulas verified 100% at n=8 (100 tournaments) and n=9 (200 tournaments). O(n^5) complexity. At n=9: alpha_3 nonzero in 86%, H contribution breakdown: 56% alpha_1, 41% alpha_2, 2.3% alpha_3.
+  4. **MISTAKE-017**: "Non-Paley DRT at n=11" from {1,2,3,5,8} was NOT a tournament (S∩(-S)≠∅). All claims c3=44, c5=407, H=69311 are INVALID. Only Paley is a valid circulant DRT at n=11.
+  5. **Conference matrix characterization**: Paley uniquely satisfies S^2=-pI+J among DRTs. This gives zero skew spectral gap, characterizing the H-maximizer among regular tournaments.
+  6. **Paley T_11 complete cycle data**: c3=55, c5=594, c7=3960, c9=11055, c11=5505, alpha_1=21169.
+
+**New contributions:**
+  - THM-096 extended (k=3,4,5), THM-097 proved
+  - MISTAKE-017 logged, INV-068 corrected
+  - INV-140 (alpha_2 formula), INV-141 (polynomial H(T)), INV-142 (spectral characterization), INV-143 (DRT correction)
+  - Scripts: trace_cycle_k4.py, c6_correction_formula.py, c6_from_trace.py, trace_ocf_bridge.py, alpha2_formula.py, spectral_cycle_density.py, alpha2_n8_extension.py, h_from_trace_n8.py, alpha_structure_n9.py, h_polynomial_n9.py, spectral_h_maximizer.py
+
+**Unresolved threads:**
+  - Does a non-circulant DRT exist at n=11? (all groups of order 11 are Z_11)
+  - INV-055: Linial-Morgenstern spectral bounds — how do they relate to H-maximization?
+  - tr(A^5) on 5-vertex subtournaments gives MORE than c5 total — compound walks can occur on larger ambient tournament. Need careful accounting.
+  - Polynomial H(T) formula at general n: alpha_max grows, what's the complexity frontier?
+
 ## opus-2026-03-08-S39 — 2026-03-08 (Fourier v3 + Paley Tournaments)
 **Account:** A
 **Continuation of:** opus-2026-03-07-S38 (GLMY deep dive)

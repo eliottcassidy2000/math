@@ -1404,12 +1404,12 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **What:** Chaplin (2022) shows β₁ of random Erdős-Rényi digraphs has two phase transitions. Since tournaments are "density 1/2" digraphs, this places them in a specific regime. Could explain why ~30% of tournaments at n=5 have β₁>0.
 **Next step:** Check if their density threshold matches tournament β₁ fraction.
 
-### INV-137: THM-096 Trace-Cycle Identity — PROVED
+### INV-137: THM-096 Trace-Cycle Identity — PROVED (extended to k=3,4,5)
 **Source:** kind-pasteur-2026-03-07-S39b
 **Status:** PROVED
-**What:** tr(A^k) = k * c_k(T) for k=3,5 in any tournament. Proof: no bidirectional edges => closed walks of length <= 5 are simple cycles. Gives O(n^3) c_5 computation via matrix multiplication. Sharp: fails at k>=7 due to compound walks (3+4 sharing vertex). Correction for k=7 is complex (not just compound (3,4) walks).
-**Impact:** c5_fast() upgraded from O(n^5) subset-DP to O(n^3) matrix trace in tournament_fast.py. 2.8x speedup at n=7, grows to O(n^2) asymptotic improvement.
-**Scripts:** `trace_cycle_theorem.py`, `c7_correction_formula.py`
+**What:** tr(A^k) = k * c_k(T) for k=3,4,5 in any tournament. Extended to k=4 (no bidirectional edges => length-4 closed walks must be simple 4-cycles). Gives O(n^3) c_4 and c_5 computation via matrix multiplication. Sharp: fails at k>=6 (compound (3,3) walks at k=6). Correction for k=6 is NOT a simple polynomial in global cycle counts (tested and failed).
+**Impact:** c4_fast() and c5_fast() in tournament_fast.py. Speedups: 3.8x for c4, 5.4x for c5 at n=8.
+**Scripts:** `trace_cycle_k4.py`, `c6_correction_formula.py`, `c6_from_trace.py`
 
 ### INV-138: Björklund Cycle Cover — OCF Connection Tested (NEGATIVE)
 **Source:** kind-pasteur-2026-03-07-S39b
@@ -1422,3 +1422,29 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Status:** CLOSED (dead end)
 **What:** U_T is NOT h-positive for any non-transitive tournament. Only the transitive tournament (H=1) has h-positive U_T. This closes the Stanley-Stembridge connection for tournament Rédei-Berge functions. The e-positivity question from INV-051/052 is also resolved negatively.
 **Scripts:** `bjorklund_cycle_cover.py` (h-positivity test section)
+
+### INV-140: THM-097 Alpha_2 Trace Formula — PROVED
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** PROVED. O(n^3) computation of vertex-disjoint 3-cycle pairs.
+**What:** alpha_2(Omega_3) = C(c3,2) - sum_v C(t3(v),2) + s2, where t3(v) = (A^3)[v][v] and s2 = sum_{edges a->b} C((A^2)[b][a], 2). Proof via inclusion-exclusion on pair overlap counts. Valid for full Omega at n<=7 (since 5+3=8>7 prevents cross terms). Implemented as alpha2_from_trace() in tournament_fast.py.
+**Scripts:** `trace_ocf_bridge.py`, `alpha2_formula.py`
+
+### INV-141: H(T) Polynomial Trace Formula — VERIFIED n<=9
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** VERIFIED. 100% match at n=5,6 (exhaustive), n=7 (500), n=8 (100), n=9 (200).
+**What:** H(T) = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3, all computable from matrix trace data. At n<=7: O(n^3). At n=8: O(n^5) (cross terms). At n=9: O(n^5) with additional O(2^7*C(n,7)) for c7 and O(C(n,3)^3/6) for alpha_3. Timing: trace method 7x slower than DP at n=9 but POLYNOMIAL.
+**Key n=9 findings:** alpha_3 nonzero 86% of time (3+3+3=9). alpha_2(3,5) cross dominates alpha_2(3,3) by 2:1. H contribution: 56% alpha_1, 41% alpha_2, 2.3% alpha_3.
+**Scripts:** `h_from_trace_n8.py`, `h_polynomial_n9.py`, `alpha_structure_n9.py`
+
+### INV-142: Spectral Characterization of H-Maximizers — NEW FINDING
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** COMPUTED. Key structural finding.
+**What:** Paley T_p has the CONFERENCE MATRIX property: S^2 = -pI + J where S = A-A^T. This means ALL nonzero skew eigenvalues equal ±i*sqrt(p) (zero spectral gap). This property CHARACTERIZES Paley among DRTs at n=11 (non-Paley would fail). At n=7: Paley has zero spectral gap while other regular tournaments have gap 3.46-3.90. The general spectral correlation (|skew_max| vs H) is weak (-0.03) but among REGULAR tournaments, zero spectral gap → max H.
+**Also found:** tr(S^k) = 0 for ALL odd k in ALL tournaments (skew-symmetry). The adjacency spectrum does NOT distinguish DRTs (all have same eigenvalues), only the skew spectrum does. Paley's conference matrix property is a VERY strong constraint.
+**Scripts:** `spectral_h_maximizer.py`, `spectral_cycle_density.py`
+
+### INV-143: MISTAKE-017 — Invalid DRT at n=11 Corrected
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** CORRECTED
+**What:** The "non-Paley DRT" from {1,2,3,5,8} was NOT a valid tournament (S∩(-S)={3,8}≠∅). All claims about c3=44, c5=407, H=69311 were computed on a non-tournament digraph. The only valid circulant DRT at n=11 is Paley. Exhaustive search found exactly 2 valid (11,5,2)-difference sets in Z_11: QR and NQR, which give isomorphic tournaments.
+**Impact:** INV-068 corrected. MEMORY.md and TANGENTS.md updated.
