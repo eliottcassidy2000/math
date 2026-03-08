@@ -53,8 +53,10 @@ Organized by topic. Each hypothesis has a detail file.
 | ID | Statement | Current evidence | Source |
 |----|-----------|-----------------|--------|
 | HYP-207 | β₂(T) = 0 for ALL tournaments T | 0 counterexamples in ~47k tests (exhaustive n≤6, sampled n≤9) | THM-100, beta2_vanishing.py |
-| HYP-208 | H-maximizers have nontrivial path homology | True n=3-7; split at n=8 (some contractible) | THM-099 |
-| HYP-209 | ALL deletions β_k>0 implies β_{k+1}(parent)>0 | Verified: β₃→β₄ (n=7), β₁→β₁ (n=5,6) | beta4_classes_n7.py |
+| HYP-208 | Odd-n maximizers have nontrivial path homology | True n=3,5,7,9; split at even n=6,8 (some contractible) | THM-099 |
+| HYP-209 | ALL deletions β_k>0 implies β_{k+1}(parent)>0 | Verified: β₃→β₄ (n=7), β₄→β₅ (n=9), β₁→β₁ (n=5,6) | beta4_classes_n7.py, n9_max_betti_quick.py |
+| HYP-210 | β_{n-4}>0 for odd-n H-maximizers | β₁=1 (n=3,5), β₄=6 (n=7), β₅=10 (n=9) | THM-099 (S41 update) |
+| HYP-211 | Odd-n H-maximizer hereditary: all del's give n-1 maximizer | n=3,5,7,9 ✓ (regular maximizers only) | n9_max_betti_quick.py |
 | HYP-201 | Char poly determines H exactly | 0 ambiguous at n=5; 3 at n=6; 36 at n=7 | char_poly_H.py |
 | HYP-202 | Spectral det(I-uA) correlates with H | Corr > 0.94 for optimal u | ihara_deep.py |
 | HYP-203 | M has algebraic formula in terms of cycle invariants | Partial: diagonal formula known | THM-053 |

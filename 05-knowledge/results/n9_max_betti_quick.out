@@ -1,0 +1,19 @@
+Searching for H=3357 regular tournament on n=9...
+Found H=3357 at trial 71 (0.2s)
+
+Adjacency matrix:
+  0 0 1 0 0 0 1 1 1
+  1 0 0 0 1 0 1 1 0
+  0 1 0 0 0 1 0 1 1
+  1 1 1 0 1 0 0 0 0
+  1 0 1 0 0 1 1 0 0
+  1 1 0 1 0 0 0 0 1
+  0 0 1 1 0 1 0 1 0
+  0 0 0 1 1 1 0 0 1
+  0 1 0 1 1 0 1 0 0
+
+Eigenvalues: [1.7321, 2.2072, 3.1001, 4.3032]
+Spectral gap: 2.5712
+c3 = 30
+
+Computing Betti numbers (max_dim=5)...

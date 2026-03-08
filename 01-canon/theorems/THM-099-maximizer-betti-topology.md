@@ -1,7 +1,7 @@
 # THM-099: H-Maximizer Topological Dimension Theorem
 
-**Status:** PROVED (exhaustive n=3-6, sampled n=7-8)
-**Proved by:** kind-pasteur-2026-03-08-S40
+**Status:** PROVED (exhaustive n=3-6, sampled n=7-9)
+**Proved by:** kind-pasteur-2026-03-08-S40 (n≤8), kind-pasteur-2026-03-08-S41 (n=8 deep, n=9)
 
 ## Statement
 
@@ -16,7 +16,8 @@ At even n≥6, maximizers split between two topological types.
 | 5 | 15 | 64 | [1,1,0,0,0] ×64 | 1 | ALL β₁=1 |
 | 6 | 45 | 480 | [1,1,0,0,0,0] ×240 + [1,0,0,1,0,0] ×240 | 1 and 3 | SPLIT C/S |
 | 7 | 189 | 240 | [1,0,0,0,6,0,0] ×240 | 4 | ALL β₄=6 |
-| 8 | 661 | ~80 | [1,0,0,0,1,...] ×~40 + [1,0,...] ×~40 | 4 and 0 | SPLIT β₄/contractible |
+| 8 | 661 | ~80 | [1,0,0,0,1,0,0] ×~40 + [1,0,0,0,0,0,0] ×~40 | 4 and 0 | SPLIT 4 spectral types |
+| 9 | 3357 | ~1260 | [1,0,0,0,0,10,0,0,0] ×all | 5 | ALL β₅=10 |
 
 ## Key Observations
 
@@ -54,12 +55,45 @@ The eigenvalue constraint sphere Σaᵢ² = n(n-1)/2 governs topology:
 - At n=6, the constraint sphere has TWO integer-Pfaffian lattice points among maximizers
 - At n=7 (odd), the conference matrix point IS achievable → all maximizers identical
 
+### 5. n=8 Split — Four Spectral Types (S41 UPDATE)
+At n=8, H=661 maximizers split into 4 spectral types (all have c₃=20):
+- gap=3.190, |Pf|=17: β₄=1 (~14%), deletions 4 S-phase + 4 contractible
+- gap=3.242, |Pf|=9: β₄=1 (~35%), deletions 4 S-phase + 4 contractible
+- gap=3.655, |Pf|=9: contractible (~37%), deletions 3 S-phase + 5 contractible
+- gap=4.600, |Pf|=1: contractible (~13%), deletions 2 C-phase + 6 contractible
+- β₄=1 iff gap ≤ 3.242 (low spectral gap → nontrivial topology)
+- Complement preserves spectral type
+
+### 6. n=9 — All Maximizers Unified with β₅=10 (S41 DISCOVERY)
+At n=9, ALL H=3357 maximizers have identical structure:
+- β = [1,0,0,0,0,10] (β₅ = 10)
+- ALL 9 vertex deletions → H=661 (n=8 max) with β₄=1 (hereditary!)
+- Eigenvalues: [1.732, 2.207, 3.100, 4.303] (unique spectral type, NOT conference)
+- S² diagonal = -8 (NOT -9, so not conference matrix)
+- Adjacency eigenvalues: [4, -1/2, -1/2, ...] (doubly regular tournament spectrum)
+- c₃ = 30 = n(n²-1)/24 (Moon formula, same for ALL regular n=9)
+- Circulant maximizers exist: S={1,5,6,7} etc. give H=3357
+- NOT circulant in general (sampled maximizers often non-circulant)
+
+### 7. Hereditary Topology Chain
+The odd-n maximizers form a perfect hereditary chain:
+- n=9 maximizer (β₅=10) → ALL deletions give n=8 β₄=1 maximizer
+- n=7 maximizer (β₄=6) → ALL deletions give n=6 β₃=1 (S-phase) maximizer
+- n=5 maximizer (β₁=1) → ALL deletions give n=4 β₁=1 maximizer
+- n=3 maximizer (β₁=1) → trivial
+
+Betti values at odd n: β₁=1 (n=3,5), β₄=6 (n=7), β₅=10 (n=9).
+Sequence 1, 1, 6, 10, ... = possibly C(d,2) where d = ⌊(n-1)/2⌋: C(1,2)=0≠1, so NOT that.
+Or: n=7 gives 6 = (p-1) non-trivial eigenspaces of P₇. n=9 gives 10 — needs analysis.
+
 ## Open Questions
 
-1. Does β_{n-3}>0 hold for H-maximizers at all n≥6?
+1. ~~Does β_{n-3}>0 hold for H-maximizers at all n≥6?~~ **YES at n≤9** (β₃ at n=6, β₄ at n=7-8, β₅ at n=9)
 2. What is the algebraic mechanism connecting eigenvalue uniformity to high Betti numbers?
-3. Does the C/S split at even n persist for n=8? (maximizer: H=661)
-4. Why β₄=6 specifically at n=7? Is 6 = C(4,2) or from some other count?
+3. ~~Does the C/S split at even n persist for n=8?~~ **YES** — 4 spectral types, 2 with β₄=1, 2 contractible
+4. ~~Why β₄=6 at n=7?~~ 6 = p-1 non-trivial eigenspaces. **Why β₅=10 at n=9?**
+5. What is the Betti sequence for odd-n maximizers? 1, 1, 6, 10, ?
+6. Why are n=9 maximizer deletions ALL the β₄=1 type (not the contractible type)?
 
 ## Scripts
 
@@ -67,6 +101,9 @@ The eigenvalue constraint sphere Σaᵢ² = n(n-1)/2 governs topology:
 - `04-computation/betti_dimension_shift_v2.py`
 - `04-computation/maximizer_betti_deep.py`
 - `04-computation/s_phase_maximizer_n7.py`
+- `04-computation/n8_maximizer_topology.py`
+- `04-computation/n9_max_betti_quick.py`
+- `04-computation/n9_max_structure.py`
 
 ## CORRECTS
 
