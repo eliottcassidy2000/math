@@ -1,0 +1,85 @@
+======================================================================
+Z2 FORMULA AND BETA2=0 VERIFICATION: n=5
+======================================================================
+
+n=5: 1024 tournaments in 0s
+Z2 = |A2| - J2 - C(n-1,2) + c3 mismatches: 904/1024
+beta2=0 (rk_bd3 = dim_Z2) mismatches: 0/1024
+======================================================================
+Z2 FORMULA AND BETA2=0 VERIFICATION: n=6
+======================================================================
+  ... 10000/32768 (11s)
+  ... 20000/32768 (26s)
+  ... 30000/32768 (45s)
+
+n=6: 32768 tournaments in 50s
+Z2 = |A2| - J2 - C(n-1,2) + c3 mismatches: 32048/32768
+beta2=0 (rk_bd3 = dim_Z2) mismatches: 0/32768
+
+======================================================================
+VERIFICATION: n=7 (sampled)
+======================================================================
+  ... 1000/3000 (6s)
+  ... 2000/3000 (11s)
+  ... 3000/3000 (17s)
+
+n=7: 3000 samples in 17s
+Z2 formula mismatches: 2993/3000
+beta2=0 mismatches: 0/3000
+
+======================================================================
+COMBINATORIAL MEANING OF |A2| - J2
+======================================================================
+
+|A2| = # of allowed 2-paths (a,b,c) with a->b->c, all distinct
+
+J2 = # of pairs (a,c) with c->a AND some b with a->b->c
+   = # of "junk pairs" where the backward edge c->a is bridged
+
+A 2-path (a,b,c) has boundary:
+  bd(a,b,c) = (b,c) - (a,c) + (a,b)
+
+The face (a,c) is NOT an allowed 1-path iff c->a (backward).
+So Om2 = {u in A2 : for each backward pair (a,c), sum of coefficients = 0}
+
+Om2 = ker(P) where P is the junk projection matrix.
+Each junk pair (a,c) gives one row: P[(a,c), (a,b,c)] = -1 for each b.
+(Actually the sign is (-1)^1 = -1 from the d_1 face.)
+
+dim(Om2) = |A2| - rk(P) = |A2| - J2
+(Since each junk pair has at least one path, and the rows are independent.)
+
+rk(bd2|_Om2) counts:
+  = dim(im bd2 in Z1) = dim(B1)
+  = dim(Z1) - beta1 = C(n-1,2) - c3
+
+Z1 has a nice basis: for each pair {i,j}, the 'cycle difference'
+In a tournament, Z1 = ker(bd1) where bd1: edge (i,j) -> j - i
+dim(Z1) = C(n,2) - (n-1) = C(n-1,2)
+
+beta1 = c3 means: each 3-cycle contributes one independent
+element of Z1 that is NOT a boundary of any Om2 element.
+
+======================================================================
+EULER CHARACTERISTIC
+======================================================================
+
+n=5:
+  bits=0, scores=(0, 1, 2, 3, 4), c3=0
+    Om: 5, 10, 10, 5, 1
+    A:  5, 10, 10, 5, 1
+  bits=1, scores=(0, 1, 2, 3, 4), c3=0
+    Om: 5, 10, 10, 5, 1
+    A:  5, 10, 10, 5, 1
+  bits=10, scores=(1, 1, 2, 3, 3), c3=3
+    Om: 5, 10, 9, 3, 0
+    A:  5, 10, 16, 17, 9
+  bits=100, scores=(1, 1, 2, 3, 3), c3=3
+    Om: 5, 10, 9, 3, 0
+    A:  5, 10, 16, 17, 9
+  bits=500, scores=(0, 1, 2, 3, 4), c3=0
+    Om: 5, 10, 10, 5, 1
+    A:  5, 10, 10, 5, 1
+
+
+Done.

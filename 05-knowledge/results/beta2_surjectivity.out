@@ -1,0 +1,83 @@
+======================================================================
+SURJECTIVITY ANALYSIS: n=5
+======================================================================
+
+n=5: 0/1024 with beta2!=0
+DD-fills-Z_2: {np.True_: 1024}
+(dim_Z_2, rk_DD_boundary) distribution:
+  (np.int64(3), np.int64(3)): 640
+  (np.int64(4), np.int64(4)): 240
+  (np.int64(5), np.int64(5)): 144
+
+======================================================================
+SURJECTIVITY ANALYSIS: n=6
+======================================================================
+  ... 10000/32768 (19s), beta2!=0: 0
+  ... 20000/32768 (39s), beta2!=0: 0
+  ... 30000/32768 (60s), beta2!=0: 0
+
+n=6: Done in 65s
+beta2!=0: 0/32768
+DD-fills-Z_2: {np.True_: 31808, np.False_: 960}
+
+(dim_Z_2, rk_DD_boundary) distribution:
+  (np.int64(8), np.int64(8)): 560
+  (np.int64(9), np.int64(9)): 14400
+  (np.int64(10), np.int64(9)): 720
+  (np.int64(10), np.int64(10)): 8928
+  (np.int64(11), np.int64(9)): 240
+  (np.int64(11), np.int64(11)): 5520
+  (np.int64(12), np.int64(12)): 1440
+  (np.int64(13), np.int64(13)): 720
+  (np.int64(15), np.int64(15)): 240
+
+DD-deficit examples (DD doesn't fill Z_2):
+  bits=154, scores=(1, 2, 2, 3, 3, 4), Z_2=10, DD_rk=9, deficit=1, Om3=15, d3_rk=10, beta2=0
+  bits=213, scores=(1, 2, 2, 3, 3, 4), Z_2=10, DD_rk=9, deficit=1, Om3=15, d3_rk=10, beta2=0
+  bits=308, scores=(1, 2, 2, 3, 3, 4), Z_2=10, DD_rk=9, deficit=1, Om3=15, d3_rk=10, beta2=0
+  bits=332, scores=(1, 2, 2, 3, 3, 4), Z_2=10, DD_rk=9, deficit=1, Om3=15, d3_rk=10, beta2=0
+  bits=339, scores=(1, 2, 2, 3, 3, 4), Z_2=10, DD_rk=9, deficit=1, Om3=15, d3_rk=10, beta2=0
+
+======================================================================
+NON-DD CONTRIBUTION TO FILLING
+======================================================================
+
+  bits=154, scores=(1, 2, 2, 3, 3, 4)
+  |DD|=9, |non-DD|=42
+  dim(Om3)=15: pure_DD=2, mixed/pure_nonDD=13
+  non-DD breakdown: 02=15, 13=15, NN=12
+
+  bits=213, scores=(1, 2, 2, 3, 3, 4)
+  |DD|=9, |non-DD|=42
+  dim(Om3)=15: pure_DD=4, mixed/pure_nonDD=11
+  non-DD breakdown: 02=15, 13=15, NN=12
+
+  bits=308, scores=(1, 2, 2, 3, 3, 4)
+  |DD|=9, |non-DD|=42
+  dim(Om3)=15: pure_DD=6, mixed/pure_nonDD=9
+  non-DD breakdown: 02=15, 13=15, NN=12
+
+======================================================================
+SURJECTIVITY ANALYSIS: n=7 (sampled)
+======================================================================
+  ... 1000/5000 (6s), beta2!=0: 0, DD_fail: 80
+  ... 2000/5000 (12s), beta2!=0: 0, DD_fail: 179
+  ... 3000/5000 (18s), beta2!=0: 0, DD_fail: 263
+  ... 4000/5000 (24s), beta2!=0: 0, DD_fail: 335
+  ... 5000/5000 (29s), beta2!=0: 0, DD_fail: 414
+
+n=7: 5000 samples in 29s
+beta2!=0: 0/5000
+DD doesn't fill Z_2: 414/5000
+Max dim(Z_2): 29
+
+======================================================================
+SURJECTIVITY ANALYSIS: n=8 (sampled)
+======================================================================
+
+n=8: 1000 samples in 16s
+beta2!=0: 0/1000
+DD doesn't fill Z_2: 85/1000
+
+
+Done.
