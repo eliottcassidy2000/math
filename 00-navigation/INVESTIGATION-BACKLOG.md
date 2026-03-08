@@ -1091,7 +1091,7 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Connection:** If mm(T) ≤ 2, Frankl's bound limits |Omega_3(T)| ≤ max(C(5,3), 3*3-3+1) depending on exact formulation. This could give an independent route to the dichotomy.
 **Next step:** Check exact Frankl bound for our setting (n vertices, 3-uniform, matching ≤ 2).
 
-### INV-101: Other Permanent H-Gaps Beyond 7 and 21 — STRONG EVIDENCE: NONE EXIST
+### INV-101: Other Permanent H-Gaps Beyond 7 and 21 — CONFIRMED THROUGH n=8 EXHAUSTIVE
 **Source:** kind-pasteur-2026-03-07-S33, opus-2026-03-07-S43
 **Status:** STRONG CONJECTURE that H=7 and H=21 are the ONLY permanent gaps.
 **What:** With H=7 and H=21 both proved as permanent gaps (never achieved for ANY n), the natural question is: are there other permanent gaps?
@@ -1107,7 +1107,8 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
   - Only w=3 (1 feasible decomp) and w=10 (4 feasible decomps, all blocked) have this property
 **Mod-4 result (Grinberg-Stanley Theorem 7.1):** H(T) ≡ 1 + 2·(# nontrivial odd cycles) mod 4. Does not directly rule out any odd H.
 **Conjecture: H=7 and H=21 are the ONLY permanent gaps in the H-spectrum.**
-**Next step:** Complete n=8 exhaustive H-spectrum enumeration; if only 7 and 21 missing, strong evidence.
+**n=8 EXHAUSTIVE RESULT (opus-S45):** All 268,435,456 tournaments enumerated. Max H=661. Only missing odd values in [1,300]: H=7 and H=21. This CONFIRMS the conjecture through n=8. No new gaps appear. All n=7 gaps (63, 107, 119, etc.) fill at n=8.
+**Status:** STRONG EVIDENCE. Conjecture holds through n=8 exhaustive enumeration.
 
 ### INV-102: Grinberg-Stanley Mod-4 Theorem (Theorem 7.1) — CATALOGED
 **Source:** opus-2026-03-07-S43 (web research)
