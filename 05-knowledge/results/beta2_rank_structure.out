@@ -1,0 +1,242 @@
+======================================================================
+COMPLETE RANK STRUCTURE BY SCORE TYPE
+======================================================================
+
+n=4: 64 tournaments
+
+  Score (0, 1, 2, 3) (24 tournaments):
+    p=0: dim(Omega)=4, rank(d)=[0], ker=[4], im(d+1)=[np.int64(3)], beta=[np.int64(1)]
+    p=1: dim(Omega)=6, rank(d)=[np.int64(3)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=2: dim(Omega)=4, rank(d)=[np.int64(3)], ker=[np.int64(1)], im(d+1)=[np.int64(1)], beta=[np.int64(0)]
+    p=3: dim(Omega)=1, rank(d)=[np.int64(1)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+  Score (0, 2, 2, 2) (8 tournaments):
+    p=0: dim(Omega)=4, rank(d)=[0], ker=[4], im(d+1)=[np.int64(3)], beta=[np.int64(1)]
+    p=1: dim(Omega)=6, rank(d)=[np.int64(3)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=2: dim(Omega)=3, rank(d)=[np.int64(3)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+    p=3: dim(Omega)=0, rank(d)=[0], ker=[0], im(d+1)=[0], beta=[0]
+
+  Score (1, 1, 1, 3) (8 tournaments):
+    p=0: dim(Omega)=4, rank(d)=[0], ker=[4], im(d+1)=[np.int64(3)], beta=[np.int64(1)]
+    p=1: dim(Omega)=6, rank(d)=[np.int64(3)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=2: dim(Omega)=3, rank(d)=[np.int64(3)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+    p=3: dim(Omega)=0, rank(d)=[0], ker=[0], im(d+1)=[0], beta=[0]
+
+  Score (1, 1, 2, 2) (24 tournaments):
+    p=0: dim(Omega)=4, rank(d)=[0], ker=[4], im(d+1)=[np.int64(3)], beta=[np.int64(1)]
+    p=1: dim(Omega)=6, rank(d)=[np.int64(3)], ker=[np.int64(3)], im(d+1)=[np.int64(2)], beta=[np.int64(1)]
+    p=2: dim(Omega)=3, rank(d)=[np.int64(2)], ker=[np.int64(1)], im(d+1)=[np.int64(1)], beta=[np.int64(0)]
+    p=3: dim(Omega)=1, rank(d)=[np.int64(1)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+n=5: 1024 tournaments
+
+  Score (0, 1, 2, 3, 4) (120 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(6)], beta=[np.int64(0)]
+    p=2: dim(Omega)=10, rank(d)=[np.int64(6)], ker=[np.int64(4)], im(d+1)=[np.int64(4)], beta=[np.int64(0)]
+    p=3: dim(Omega)=5, rank(d)=[np.int64(4)], ker=[np.int64(1)], im(d+1)=[np.int64(1)], beta=[np.int64(0)]
+    p=4: dim(Omega)=1, rank(d)=[np.int64(1)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+  Score (0, 1, 3, 3, 3) (40 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(6)], beta=[np.int64(0)]
+    p=2: dim(Omega)=9, rank(d)=[np.int64(6)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=3: dim(Omega)=3, rank(d)=[np.int64(3)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+    p=4: dim(Omega)=0, rank(d)=[0], ker=[0], im(d+1)=[0], beta=[0]
+
+  Score (0, 2, 2, 2, 4) (40 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(6)], beta=[np.int64(0)]
+    p=2: dim(Omega)=9, rank(d)=[np.int64(6)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=3: dim(Omega)=3, rank(d)=[np.int64(3)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+    p=4: dim(Omega)=0, rank(d)=[0], ker=[0], im(d+1)=[0], beta=[0]
+
+  Score (0, 2, 2, 3, 3) (120 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(6)], beta=[np.int64(0)]
+    p=2: dim(Omega)=9, rank(d)=[np.int64(6)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=3: dim(Omega)=4, rank(d)=[np.int64(3)], ker=[np.int64(1)], im(d+1)=[np.int64(1)], beta=[np.int64(0)]
+    p=4: dim(Omega)=1, rank(d)=[np.int64(1)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+  Score (1, 1, 1, 3, 4) (40 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(6)], beta=[np.int64(0)]
+    p=2: dim(Omega)=9, rank(d)=[np.int64(6)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=3: dim(Omega)=3, rank(d)=[np.int64(3)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+    p=4: dim(Omega)=0, rank(d)=[0], ker=[0], im(d+1)=[0], beta=[0]
+
+  Score (1, 1, 2, 2, 4) (120 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(6)], beta=[np.int64(0)]
+    p=2: dim(Omega)=9, rank(d)=[np.int64(6)], ker=[np.int64(3)], im(d+1)=[np.int64(3)], beta=[np.int64(0)]
+    p=3: dim(Omega)=4, rank(d)=[np.int64(3)], ker=[np.int64(1)], im(d+1)=[np.int64(1)], beta=[np.int64(0)]
+    p=4: dim(Omega)=1, rank(d)=[np.int64(1)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+  Score (1, 1, 2, 3, 3) (240 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(5), np.int64(6)], beta=[np.int64(0), np.int64(1)]
+    p=2: dim(Omega)=9, rank(d)=[np.int64(5), np.int64(6)], ker=[np.int64(3), np.int64(4)], im(d+1)=[np.int64(3), np.int64(4)], beta=[np.int64(0)]
+    p=3: dim(Omega)=[3, 5], rank(d)=[np.int64(3), np.int64(4)], ker=[np.int64(0), np.int64(1)], im(d+1)=[0, np.int64(1)], beta=[np.int64(0)]
+    p=4: dim(Omega)=[0, 1], rank(d)=[0, np.int64(1)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+  Score (1, 2, 2, 2, 3) (280 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(5), np.int64(6)], beta=[np.int64(0), np.int64(1)]
+    p=2: dim(Omega)=[8, 9, 10], rank(d)=[np.int64(5), np.int64(6)], ker=[np.int64(3), np.int64(5)], im(d+1)=[np.int64(3), np.int64(5)], beta=[np.int64(0)]
+    p=3: dim(Omega)=[3, 4, 7], rank(d)=[np.int64(3), np.int64(5)], ker=[np.int64(0), np.int64(1), np.int64(2)], im(d+1)=[0, np.int64(1), np.int64(2)], beta=[np.int64(0)]
+    p=4: dim(Omega)=[0, 1, 2], rank(d)=[0, np.int64(1), np.int64(2)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+  Score (2, 2, 2, 2, 2) (24 tournaments):
+    p=0: dim(Omega)=5, rank(d)=[0], ker=[5], im(d+1)=[np.int64(4)], beta=[np.int64(1)]
+    p=1: dim(Omega)=10, rank(d)=[np.int64(4)], ker=[np.int64(6)], im(d+1)=[np.int64(5)], beta=[np.int64(1)]
+    p=2: dim(Omega)=10, rank(d)=[np.int64(5)], ker=[np.int64(5)], im(d+1)=[np.int64(5)], beta=[np.int64(0)]
+    p=3: dim(Omega)=10, rank(d)=[np.int64(5)], ker=[np.int64(5)], im(d+1)=[np.int64(5)], beta=[np.int64(0)]
+    p=4: dim(Omega)=5, rank(d)=[np.int64(5)], ker=[np.int64(0)], im(d+1)=[0], beta=[np.int64(0)]
+
+======================================================================
+ker(d2) vs im(d3) BY TOURNAMENT INVARIANTS
+======================================================================
+
+n=5: ker(d2) and im(d3) grouped by c3:
+
+  c3=0: 120 tournaments
+    dim(Omega_2)=[10], rank(d2)=[np.int64(6)], ker(d2)=[np.int64(4)]
+    dim(Omega_3)=[5], rank(d3)=[np.int64(4)]=im(d3)=[np.int64(4)]
+    ker(d2)==im(d3)? True
+
+  c3=1: 120 tournaments
+    dim(Omega_2)=[9], rank(d2)=[np.int64(6)], ker(d2)=[np.int64(3)]
+    dim(Omega_3)=[3], rank(d3)=[np.int64(3)]=im(d3)=[np.int64(3)]
+    ker(d2)==im(d3)? True
+
+  c3=2: 240 tournaments
+    dim(Omega_2)=[9], rank(d2)=[np.int64(6)], ker(d2)=[np.int64(3)]
+    dim(Omega_3)=[4], rank(d3)=[np.int64(3)]=im(d3)=[np.int64(3)]
+    ker(d2)==im(d3)? True
+
+  c3=3: 240 tournaments
+    dim(Omega_2)=[9], rank(d2)=[np.int64(5), np.int64(6)], ker(d2)=[np.int64(3), np.int64(4)]
+    dim(Omega_3)=[3, 5], rank(d3)=[np.int64(3), np.int64(4)]=im(d3)=[np.int64(3), np.int64(4)]
+    ker(d2)==im(d3)? True
+
+  c3=4: 280 tournaments
+    dim(Omega_2)=[8, 9, 10], rank(d2)=[np.int64(5), np.int64(6)], ker(d2)=[np.int64(3), np.int64(5)]
+    dim(Omega_3)=[3, 4, 7], rank(d3)=[np.int64(3), np.int64(5)]=im(d3)=[np.int64(3), np.int64(5)]
+    ker(d2)==im(d3)? True
+
+  c3=5: 24 tournaments
+    dim(Omega_2)=[10], rank(d2)=[np.int64(5)], ker(d2)=[np.int64(5)]
+    dim(Omega_3)=[10], rank(d3)=[np.int64(5)]=im(d3)=[np.int64(5)]
+    ker(d2)==im(d3)? True
+
+======================================================================
+FORMULA TESTS
+======================================================================
+
+n=5: ker(d2) vs c3:
+  c3=0: ker(d2) in [np.int64(4)]
+  c3=1: ker(d2) in [np.int64(3)]
+  c3=2: ker(d2) in [np.int64(3)]
+  c3=3: ker(d2) in [np.int64(3), np.int64(4)]
+  c3=4: ker(d2) in [np.int64(3), np.int64(5)]
+  c3=5: ker(d2) in [np.int64(5)]
+
+  ker(d2) == c3 for all? False
+
+n=4:
+  c3=0: ker(d2) in [np.int64(1)]
+  c3=1: ker(d2) in [np.int64(0)]
+  c3=2: ker(d2) in [np.int64(1)]
+  ker(d2) == c3 for all n=4? False
+
+======================================================================
+n=6: EXHAUSTIVE ker(d2) vs c3 CHECK
+======================================================================
+  MISMATCH at T#0: c3=0, ker(d2)=10
+  MISMATCH at T#1: c3=0, ker(d2)=10
+  MISMATCH at T#2: c3=1, ker(d2)=9
+  5000/32768 (27s), match so far: False
+  10000/32768 (56s), match so far: False
+  15000/32768 (79s), match so far: False
+  20000/32768 (98s), match so far: False
+  25000/32768 (120s), match so far: False
+  30000/32768 (138s), match so far: False
+
+n=6: (148s)
+  ker(d2) == c3 for ALL? False
+  Mismatches: 32768
+  c3=0: ker(d2) in [np.int64(10)]
+  c3=1: ker(d2) in [np.int64(9)]
+  c3=2: ker(d2) in [np.int64(8), np.int64(9)]
+  c3=3: ker(d2) in [np.int64(9)]
+  c3=4: ker(d2) in [np.int64(8), np.int64(9), np.int64(10)]
+  c3=5: ker(d2) in [np.int64(9), np.int64(10)]
+  c3=6: ker(d2) in [np.int64(9), np.int64(10), np.int64(11), np.int64(12)]
+  c3=7: ker(d2) in [np.int64(10), np.int64(11)]
+  c3=8: ker(d2) in [np.int64(11), np.int64(13), np.int64(15)]
+
+======================================================================
+im(d3) ANALYSIS
+======================================================================
+
+n=5: im(d3) vs c3:
+  c3=0: im(d3) in [np.int64(4)]
+  c3=1: im(d3) in [np.int64(3)]
+  c3=2: im(d3) in [np.int64(3)]
+  c3=3: im(d3) in [np.int64(3), np.int64(4)]
+  c3=4: im(d3) in [np.int64(3), np.int64(5)]
+  c3=5: im(d3) in [np.int64(5)]
+  im(d3) == c3 for all? False
+
+  If ker(d2) = im(d3) = c3 universally, then beta_2 = 0 follows!
+
+======================================================================
+RANK FORMULA: rank(d2) and rank(d3)
+======================================================================
+
+n=5: Rank(d2) = dim(Omega_2) - ker(d2) = dim(Omega_2) - c3
+  T#0: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#1: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#2: dim(O2)=9, c3=1, rank(d2)=6, check=6
+  T#3: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#4: dim(O2)=9, c3=2, rank(d2)=6, check=6
+  T#5: dim(O2)=9, c3=1, rank(d2)=6, check=6
+  T#6: dim(O2)=9, c3=2, rank(d2)=6, check=6
+  T#7: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#8: dim(O2)=9, c3=3, rank(d2)=5, check=5
+  T#9: dim(O2)=9, c3=2, rank(d2)=6, check=6
+  T#10: dim(O2)=9, c3=3, rank(d2)=6, check=6
+  T#11: dim(O2)=9, c3=1, rank(d2)=6, check=6
+  T#12: dim(O2)=10, c3=4, rank(d2)=5, check=5
+  T#13: dim(O2)=9, c3=2, rank(d2)=6, check=6
+  T#14: dim(O2)=9, c3=3, rank(d2)=5, check=5
+  T#15: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#16: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#17: dim(O2)=9, c3=1, rank(d2)=6, check=6
+  T#18: dim(O2)=10, c3=0, rank(d2)=6, check=6
+  T#19: dim(O2)=10, c3=0, rank(d2)=6, check=6
+
+n=5: rank(d3|Omega_3) = im(d3) = c3?
+  T#0: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#1: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#2: dim(O3)=3, rank(d3)=3, im(d3)=3, c3=1
+  T#3: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#4: dim(O3)=4, rank(d3)=3, im(d3)=3, c3=2
+  T#5: dim(O3)=3, rank(d3)=3, im(d3)=3, c3=1
+  T#6: dim(O3)=4, rank(d3)=3, im(d3)=3, c3=2
+  T#7: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#8: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=3
+  T#9: dim(O3)=4, rank(d3)=3, im(d3)=3, c3=2
+  T#10: dim(O3)=3, rank(d3)=3, im(d3)=3, c3=3
+  T#11: dim(O3)=3, rank(d3)=3, im(d3)=3, c3=1
+  T#12: dim(O3)=7, rank(d3)=5, im(d3)=5, c3=4
+  T#13: dim(O3)=4, rank(d3)=3, im(d3)=3, c3=2
+  T#14: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=3
+  T#15: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#16: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#17: dim(O3)=3, rank(d3)=3, im(d3)=3, c3=1
+  T#18: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+  T#19: dim(O3)=5, rank(d3)=4, im(d3)=4, c3=0
+
+
+Done.

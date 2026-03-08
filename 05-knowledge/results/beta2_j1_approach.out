@@ -1,0 +1,138 @@
+======================================================================
+j1 APPROACH TEST: exists v with j1=0 AND beta1(T\v)=1?
+======================================================================
+  NO j_1-GOOD V! n=4 T#0 scores=(0, 1, 2, 3) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+  NO j_1-GOOD V! n=4 T#1 scores=(0, 1, 2, 3) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+  NO j_1-GOOD V! n=4 T#3 scores=(0, 1, 2, 3) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+  NO j_1-GOOD V! n=4 T#4 scores=(1, 1, 2, 2) beta=[np.int64(1), np.int64(1), 0]
+    v=0: b1=0
+    v=1: j1!=0,b1=1
+    v=2: j1!=0,b1=1
+    v=3: b1=0
+  NO j_1-GOOD V! n=4 T#6 scores=(1, 1, 2, 2) beta=[np.int64(1), np.int64(1), 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: j1!=0,b1=1
+    v=3: j1!=0,b1=1
+
+n=4: 64 tournaments (0.1s)
+  Has j_1-good vertex: 16/64
+  No j_1-good vertex: 48/64
+  NO j_1-GOOD V! n=5 T#0 scores=(0, 1, 2, 3, 4) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+    v=4: b1=0
+  NO j_1-GOOD V! n=5 T#1 scores=(0, 1, 2, 3, 4) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+    v=4: b1=0
+  NO j_1-GOOD V! n=5 T#2 scores=(1, 1, 1, 3, 4) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+    v=4: b1=0
+  NO j_1-GOOD V! n=5 T#3 scores=(0, 1, 2, 3, 4) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+    v=4: b1=0
+  NO j_1-GOOD V! n=5 T#5 scores=(0, 2, 2, 2, 4) beta=[np.int64(1), 0, 0]
+    v=0: b1=0
+    v=1: b1=0
+    v=2: b1=0
+    v=3: b1=0
+    v=4: b1=0
+
+n=5: 1024 tournaments (5.1s)
+  Has j_1-good vertex: 480/1024
+  No j_1-good vertex: 544/1024
+
+======================================================================
+IS j_1: H_1(T\v) -> H_1(T) ALWAYS ZERO for tournaments?
+======================================================================
+  j_1 != 0: n=4 T#4 v=1 scores=(1, 1, 2, 2) beta_1(T\v)=1 beta_1(T)=1
+  j_1 != 0: n=4 T#4 v=2 scores=(1, 1, 2, 2) beta_1(T\v)=1 beta_1(T)=1
+  j_1 != 0: n=4 T#6 v=2 scores=(1, 1, 2, 2) beta_1(T\v)=1 beta_1(T)=1
+
+n=4: j_1 always zero (when beta_1(sub)>0)? False
+  Checks with beta_1(sub)>0: 64, nonzero: 48
+  (0.2s)
+  j_1 != 0: n=5 T#8 v=1 scores=(1, 1, 2, 3, 3) beta_1(T\v)=1 beta_1(T)=1
+  j_1 != 0: n=5 T#8 v=2 scores=(1, 1, 2, 3, 3) beta_1(T\v)=1 beta_1(T)=1
+  j_1 != 0: n=5 T#8 v=3 scores=(1, 1, 2, 3, 3) beta_1(T\v)=1 beta_1(T)=1
+
+n=5: j_1 always zero (when beta_1(sub)>0)? False
+  Checks with beta_1(sub)>0: 1920, nonzero: 1080
+  (4.4s)
+
+======================================================================
+RELATIVE H_2 DIMENSION CHECK
+======================================================================
+
+n=5: LES dimensions for each vertex deletion
+
+  T#0 scores=(0, 1, 2, 3, 4):
+    beta(T) = [np.int64(1), 0, 0, 0]
+    v=0 (d+=0): beta(T\v)=[np.int64(1), 0, 0]
+    v=1 (d+=1): beta(T\v)=[np.int64(1), 0, 0]
+    v=2 (d+=2): beta(T\v)=[np.int64(1), 0, 0]
+    v=3 (d+=3): beta(T\v)=[np.int64(1), 0, 0]
+    v=4 (d+=4): beta(T\v)=[np.int64(1), 0, 0]
+
+  T#76 scores=(2, 2, 2, 2, 2):
+    beta(T) = [np.int64(1), np.int64(1), 0, 0]
+    v=0 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+
+  T#341 scores=(2, 2, 2, 2, 2):
+    beta(T) = [np.int64(1), np.int64(1), 0, 0]
+    v=0 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): beta(T\v)=[np.int64(1), np.int64(1), 0]
+
+======================================================================
+COMPREHENSIVE: j_1 map for ALL (T, v) pairs at n=5,6
+======================================================================
+
+n=5: (4.3s)
+  j_1=0 when beta_1(sub)>0: 840
+  j_1!=0 when beta_1(sub)>0: 1080
+  j_1 UNIVERSALLY ZERO? False
+  FIRST j_1!=0: T#16 v=1 scores=(1, 1, 2, 3, 4, 4)
+  n=6: 5000/32768 (41s) zero=4886 nonzero=3053
+  n=6: 10000/32768 (83s) zero=10505 nonzero=6854
+  n=6: 15000/32768 (126s) zero=16416 nonzero=10480
+  n=6: 20000/32768 (167s) zero=21380 nonzero=13850
+  n=6: 25000/32768 (208s) zero=27485 nonzero=18001
+  n=6: 30000/32768 (250s) zero=32689 nonzero=21376
+
+n=6: (272s)
+  j_1=0 when beta_1(sub)>0: 35328
+  j_1!=0 when beta_1(sub)>0: 23040
+  j_1 UNIVERSALLY ZERO? False
+
+
+Done.
