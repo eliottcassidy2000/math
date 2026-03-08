@@ -1193,3 +1193,16 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Status:** EXPLORED. per(W(1)) = D_n (subfactorial) universally. F(T,x) = Hamiltonian path sum over W entries. per(W(x)) palindromic for certain tournament classes.
 **Scripts:** `04-computation/transfer_matrix_F_connection.py`, `04-computation/per_W_analysis.py`
 **Next step:** (1) Explore eigenvalues of W(x) at specific x values. (2) Connection to Irving-Omar det formula (INV-046). (3) Can det(I-zW) generating function extract F?
+
+### INV-117: Archer-Gessel-Graves-Liang Strong Tournament Descent Polynomial — RESEARCHED
+**Source:** opus-2026-03-07-S45 (background agent), Discrete Math 343 (2020)
+**Status:** RESEARCHED. Paper fully reviewed. t_n(u) = descent poly for strong tournaments. Palindromic, divisible by (1+u)^{floor(n/2)}. GF: U(x) = 1/(1-T(x)).
+**Connection:** Different statistic from F(T,x) (global descent vs path-local forward edges), but same palindromic structure. The (1+u)^{floor(n/2)} divisibility may connect to OCF factor-2 structures. The "Eulerian graphic GF" framework (q=(1+uy)/(1+y)) is the natural algebraic home for descent statistics on tournaments.
+**Notes:** `04-computation/gessel_strong_tournament_notes.md`
+**Next step:** (1) Compute t_n(u) at small n and compare to F(T,x) aggregates. (2) Check if the strong component decomposition gives new structural insights for H(T). (3) Test the (1+u)^{floor(n/2)} divisibility analogue for F(T,x).
+
+### INV-118: F(T,omega) mod 9 Universality — CONFIRMED NOVEL
+**Source:** opus-2026-03-07-S44/S45 (computational discovery + background agent literature search)
+**Status:** CONFIRMED NOVEL. Extensive literature search found NO prior work on roots-of-unity evaluations of F(T,x). Not a consequence of Grinberg-Stanley mod-4. Chebikin et al. studied cyclotomic factors of descent set polynomial Q_n but Phi_3 doesn't appear for n<=23.
+**What:** F(T,omega) ≡ 0 mod 9 at n=7 (all 5040 tournaments). Equivalently S_0 = sum_{k≡0 mod 3} F_k ≡ 0 mod 6.
+**Next step:** (1) Prove algebraically using OCF or Fourier decomposition. (2) Check at n=9,10. (3) Generalize: are there universal congruences for F(T,zeta_k) mod k^2?
