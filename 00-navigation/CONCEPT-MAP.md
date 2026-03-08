@@ -304,7 +304,11 @@
 
 **Connection to transfer matrix:** The contraction X/e produces a digraph on n-1 vertices. If we can track how M[a,b] changes under contraction, this could prove THM-030 (transfer matrix symmetry) inductively.
 
-**Status:** CONNECTION IDENTIFIED but NOT EXPLOITED. Most promising new algebraic lead per INV-033.
+**COMPUTATIONAL VERIFICATION (kind-pasteur-S34):** H(T) = H(T\e) + H(T/e) holds UNIVERSALLY — 100% at n=4 (384/384 edge tests) and n=5 (10240/10240). The contraction convention: w inherits IN-edges from tail u, OUT-edges from head v. This is the commutative specialization of Mitrovic's W_X = W_{X\e} - W_{X/e}↑ (sign change because W counts signed paths). The reverse convention (IN from head, OUT from tail) does NOT work.
+
+**Implications:** This gives an inductive proof framework: H(T) on n vertices reduces to Ham path counts on (n-1)-vertex digraphs. Combined with base cases, this could yield a new proof of OCF and potentially the H=21 impossibility.
+
+**Status:** VERIFIED COMPUTATIONALLY. Ready for algebraic proof (should follow from Mitrovic's theorem by specialization).
 
 #### 19. ACYCLIC COMPLEX OF TOURNAMENT ARCS
 **Idea:** The acyclic complex Acyc(T) = {arc subsets containing no directed cycle} is a simplicial complex. Its f-vector encodes the cycle structure.
@@ -328,6 +332,20 @@
 
 #### 21. GRUJIC-STOJADINOVIC: Redei-Berge Hopf Algebra (arXiv:2402.07606)
 **Established connection (not speculative):** The Redei-Berge symmetric function U_T generates a combinatorial Hopf algebra on digraphs. The induced Redei-Berge polynomial satisfies deletion-contraction (like chromatic polynomial). Berge's theorem on Hamiltonian path parity is a consequence of the reciprocity formula. Tournaments are closed under restriction and products, generating a Hopf subalgebra. The forward-edge polynomial F(T,x) is the X-descent polynomial in this framework. Palindrome F_k = F_{n-1-k} follows from path reversal symmetry.
+
+#### LEE-YANG ZEROS OF F(T,x) (opus S44 — MAJOR)
+**Discovery:** The forward-edge polynomial F(T,x) = Σ_P x^{fwd(P)} has zeros that come in RECIPROCAL PAIRS (palindrome: if r is a root, so is 1/r). Key findings:
+- Zeros cluster at angles ±2π/3 on the unit circle
+- H=9 at n=5: ALL zeros on the unit circle ("Lee-Yang tournament")
+- F(T,ω) is REAL at n=7 where ω = e^{2πi/3} (palindrome forces S₁=S₂)
+- F(T,i) is PURE IMAGINARY at n=7 (palindrome forces S₀=S₂)
+- F(T,ω) ≡ 0 mod 9 at n=7 (universal divisibility)
+- F(T,i) ≡ 0 mod 16i at n=7 (universal divisibility)
+- **Palindrome phase theorem:** F(ζ_k) lies on a fixed ray in C for all tournaments
+
+**Connection to statistical mechanics:** The Lee-Yang theorem says zeros of ferromagnetic Ising partition functions lie on |z|=1. F(T,x) is a partition function with "activity" x weighting forward edges. The zeros-on-unit-circle property at H=9 is EXACTLY Lee-Yang behavior. This suggests F(T,x) is a partition function of a ferromagnetic-like model.
+
+**Scripts:** f_poly_zeros_leeyang.py, f_poly_roots_of_unity.py
 
 #### 22. GLMY PATH HOMOLOGY OF TOURNAMENTS (Grigoryan-Lin-Muranov-Yau)
 **Established theory (2012+):** GLMY path homology is a homology theory specifically for digraphs. Defines a path complex where chains are formal sums of directed paths. Has Künneth formula, homotopy invariance, Mayer-Vietoris. Tang-Yau (2026, arXiv:2602.04140) compute path homology of circulant digraphs using Fourier decomposition — directly applicable to Paley tournaments T_p (which are circulant). Their "symbol-matrix recipe" uses the shift automorphism τ, and results depend on whether n is prime (exactly the Paley case!).
