@@ -1,0 +1,33 @@
+======================================================================
+DT DEFICIT ANALYSIS AT n=7 (5000 samples)
+======================================================================
+  ... 1000/5000 (1s)
+  ... 2000/5000 (2s)
+  ... 3000/5000 (3s)
+  ... 4000/5000 (4s)
+
+  n=7, 5000 samples (5s)
+  Trivial (Z_2=0): 0
+  beta_2 violations: 0
+
+  DT gap distribution:
+    gap=0: 4582 (91.6%)
+    gap=1: 385 (7.7%)
+    gap=2: 31 (0.6%)
+    gap=6: 2 (0.0%)
+
+  Now analyzing score patterns of high-deficit cases...
+
+  Found 14 cases with gap >= 2:
+    bits=1678964: scores=(2, 3, 3, 3, 3, 3, 4), Z2=25, rk(DT)=23, gap=2, |DT|=23, dim(O3)=53
+    bits=398896: scores=(2, 2, 3, 3, 3, 4, 4), Z2=24, rk(DT)=22, gap=2, |DT|=25, dim(O3)=50
+    bits=1460858: scores=(2, 2, 3, 3, 3, 4, 4), Z2=24, rk(DT)=22, gap=2, |DT|=25, dim(O3)=50
+    bits=152133: scores=(2, 2, 3, 3, 3, 4, 4), Z2=24, rk(DT)=22, gap=2, |DT|=25, dim(O3)=50
+    bits=1127501: scores=(2, 2, 3, 3, 3, 4, 4), Z2=24, rk(DT)=22, gap=2, |DT|=25, dim(O3)=50
+    bits=440562: scores=(2, 3, 3, 3, 3, 3, 4), Z2=25, rk(DT)=23, gap=2, |DT|=23, dim(O3)=53
+    bits=957269: scores=(2, 3, 3, 3, 3, 3, 4), Z2=25, rk(DT)=23, gap=2, |DT|=23, dim(O3)=53
+    bits=977114: scores=(2, 3, 3, 3, 3, 3, 4), Z2=25, rk(DT)=23, gap=2, |DT|=23, dim(O3)=53
+    bits=626236: scores=(2, 3, 3, 3, 3, 3, 4), Z2=25, rk(DT)=23, gap=2, |DT|=23, dim(O3)=53
+    bits=704914: scores=(2, 2, 3, 3, 3, 4, 4), Z2=24, rk(DT)=22, gap=2, |DT|=25, dim(O3)=50
+
+Done.

@@ -1,0 +1,38 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_relative_n7.py:44: SyntaxWarning: invalid escape sequence '\ '
+  Uses the quotient complex: C_p^rel = Omega_p(T) / Omega_p(T \ {v}).
+======================================================================
+RELATIVE HOMOLOGY H_2(T, T\v) AT n=7 (3000 samples)
+======================================================================
+  ... 500/3000 (10s), violations=0
+  ... 1000/3000 (20s), violations=0
+  ... 1500/3000 (30s), violations=0
+  ... 2000/3000 (40s), violations=0
+  ... 2500/3000 (50s), violations=0
+
+  n=7, 3000 samples (60s)
+  All v: H_2^rel=0: 3000/3000
+  Some v: H_2^rel>0: 0/3000
+  Max H_2^rel: 0
+
+======================================================================
+RELATIVE HOMOLOGY AT n=8 (500 samples)
+======================================================================
+  ... 100/500 (7s)
+  ... 200/500 (13s)
+  ... 300/500 (19s)
+  ... 400/500 (25s)
+
+  n=8, 500 samples (32s)
+  Violations: 0/500
+
+======================================================================
+RELATIVE HOMOLOGY AT n=9 (100 samples)
+======================================================================
+  ... 25/100 (4s)
+  ... 50/100 (7s)
+  ... 75/100 (10s)
+
+  n=9, 100 samples (14s)
+  Violations: 0/100
+
+Done.
