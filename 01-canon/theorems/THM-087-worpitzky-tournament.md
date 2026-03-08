@@ -1,4 +1,4 @@
-# THM-084: Worpitzky Expansion of F(T,x)
+# THM-087: Worpitzky Expansion of F(T,x)
 
 **Status:** PROVED (algebraic) + VERIFIED n=3..7
 **Proved by:** opus-2026-03-07-S46
@@ -39,6 +39,16 @@ satisfies:
 - d >= 4: depends on additional invariants beyond t3
 
 where t3(T) = number of directed 3-cycles in T.
+
+**(F)** [n=6 complete formula] At n=6, the full Worpitzky polynomial is:
+
+  a_m = 6m^5 + 15m^4 + (20+8t3)m^3 + (15+12t3)m^2 + (6+8t3+4t5+8alpha_2)m + (1+2t3+2t5+4alpha_2)
+
+where t5 = number of directed 5-cycles, alpha_2 = number of vertex-disjoint 3-cycle pairs = i_2(Omega(T)).
+
+**(G)** [Worpitzky-OCF connection] The constant term satisfies c_0(T) = H(T) = I(Omega(T), 2), the Hamiltonian path count. This equals 1 + 2(t3+t5) + 4*alpha_2 by the OCF (Grinberg-Stanley). Thus the Worpitzky polynomial is a **graded refinement of OCF**: the full polynomial encodes H(T) as its constant term, with each higher coefficient encoding progressively simpler cycle invariants.
+
+Verified exhaustively over all 2^15 = 32768 tournaments on 6 vertices (24 distinct F-classes).
 
 ---
 
@@ -93,6 +103,8 @@ This gives delta_2 = 2(n-2)*t3 after algebraic simplification.
 - (A)-(D): n=3,4,5,6,7 exhaustive/sampled
 - (E) d=2: n=4 (exact), n=5 (exact, all 8 F-classes), n=6 (exact, all 24 F-classes)
 - (E) d=3: n=4 (exact), n=5 (exact), n=6 (exact)
+- (F): n=6, all 24 F-classes, exact rational arithmetic (worpitzky_n6_invariants.py)
+- (G): n=6, c_0 = H(T) for all 24 F-classes
 
 ---
 
@@ -105,3 +117,7 @@ This gives delta_2 = 2(n-2)*t3 after algebraic simplification.
 3. **t3 determines middle Worpitzky coefficients:** The 3-cycle count of a tournament determines all Worpitzky coefficients except the lowest floor((n-3)/2) coefficients. At n<=5, t3 determines all but the constant term. At n=6, t3 determines all but the bottom 2 coefficients.
 
 4. **Connection to spectral theory:** Since tr(A^3) = 3*t3 (proved in tournament_spectral.py), the Worpitzky correction delta_2 = 2(n-2)/3 * tr(A^3). This gives a spectral formula for the Worpitzky coefficients.
+
+5. **Graded OCF:** The Worpitzky polynomial provides a graded decomposition of H(T). Each directed L-cycle contributes 2*C(n-L+1, n-L+1-j) to the deviation delta_j at level j. Each disjoint pair of 3-cycles contributes 4*C(n-5, n-5-j). The constant term collects all contributions to give the full OCF. This suggests the Worpitzky polynomial is the natural "graded lift" of the OCF identity.
+
+6. **c_0 = H(T) = a_0(T):** The Worpitzky polynomial evaluated at m=0 gives a_0 = sum_k F_k * C(n-1-k, n-1) = F_{n-1} = H(T). This is immediate: C(n-1-k, n-1) = 1 if k=n-1, 0 otherwise. So c_0 = H(T) is actually trivial from the definition. What is non-trivial is the OCF decomposition 1 + 2(t3+t5) + 4*alpha_2 = H(T).

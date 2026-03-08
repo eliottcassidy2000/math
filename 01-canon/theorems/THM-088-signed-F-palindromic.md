@@ -1,4 +1,4 @@
-# THM-085: Signed Forward-Edge Polynomial SF(T,x)
+# THM-088: Signed Forward-Edge Polynomial SF(T,x)
 
 **Status:** PROVED (algebraic)
 **Proved by:** opus-2026-03-07-S46

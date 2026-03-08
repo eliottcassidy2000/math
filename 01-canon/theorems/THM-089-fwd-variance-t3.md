@@ -1,4 +1,4 @@
-# THM-086: Forward-Edge Variance Formula
+# THM-089: Forward-Edge Variance Formula
 
 **Status:** PROVED
 **Proved by:** opus-2026-03-07-S46
