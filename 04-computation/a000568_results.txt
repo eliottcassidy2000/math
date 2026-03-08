@@ -36,15 +36,18 @@ Verified by two independent methods:
 2. C batch CRT (a000568_c_batch.c) — ~500s
 
 Performance comparison (Apple Silicon M1, 8 cores):
-  Method              | n=50  | n=60  | n=76  | n=80   | n=90
-  --------------------|-------|-------|-------|--------|-------
-  Fraction DP         | 11.5s |  ~85s | 259s  | 672s   | N/A
-  gmpy2 DP            |  7.9s |  35s  | 300s  | ~500s  | 1757s
-  C batch CRT         |  7.8s |  26s  | 314s  | OOM    | OOM
-  Numpy batch CRT     | 11.3s |  47s  | 346s  | N/A    | N/A
-  Parallel C+CRT (8c) |  23s  | 130s  | ~1500s| ~3000s | N/A
+  Method              | n=50  | n=60  | n=76  | n=80   | n=90   | n=100
+  --------------------|-------|-------|-------|--------|--------|--------
+  Int DP + GCD (best) |  4.5s |  19s  | 160s  | 276s   | 924s   | ~7200s*
+  gmpy2 DP            |  7.9s |  35s  | 229s  | 537s   | 1757s  | 14391s
+  Fraction DP         | 11.5s |  ~85s | 259s  | 672s   | N/A    | N/A
+  C batch CRT         |  7.8s |  26s  | 314s  | OOM    | OOM    | OOM
+  Numpy batch CRT     | 11.3s |  47s  | 346s  | N/A    | N/A    | N/A
+  Parallel C+CRT (8c) |  23s  | 130s  | ~1500s| ~3000s | N/A    | N/A
+  * estimated from scaling
 
-Best practical approach: gmpy2 DP for moderate n, Fraction DP for large n.
+Best practical approach: Integer DP with periodic GCD reduction (a000568_int_v2.py).
+~2x faster than gmpy2 DP for n≥80 by avoiding per-operation GCD overhead.
 C batch CRT wins for n≤60 but runs out of memory for n≥90.
 Parallel C per-prime CRT is slower than gmpy2 for n≥60 (too many primes needed).
 
