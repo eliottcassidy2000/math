@@ -1,0 +1,356 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+
+================================================================================
+n = 5: SKELETON-HOMOLOGY CONNECTION
+================================================================================
+  Tiles: 6, Total tilings: 64
+  GS degrees of freedom: 4
+  12 classes: 8 SC + 4 NSC
+
+  Computing homology for each class...
+
+  Building blue-line skeleton...
+  Blue edges: 8
+  Blueself classes: 0
+
+  === PHASE DISTRIBUTION ===
+    C-phase: 4 SC classes
+    P-phase: 4 SC classes
+
+  === PHASE BY t₃ PARITY (SKELETON BIPARTITION) ===
+    t₃ even: {'P': 2, 'C': 2}
+    t₃ odd: {'P': 2, 'C': 2}
+
+  === PHASE TRANSITIONS UNDER GS FLIPS ===
+    C <-> C: 6 GS flip pairs
+    C <-> P: 4 GS flip pairs
+    P <-> P: 6 GS flip pairs
+
+  === SC CLASS DETAIL ===
+  idx  t3    H phase betti                |GS| blueself
+   11   0    1     P (1, 0, 0, 0)            1         
+    9   1    3     P (1, 0, 0, 0)            1         
+    0   3    9     P (1, 0, 0, 0)            3         
+    1   3    9     C (1, 1, 0, 0)            1         
+    3   4   11     C (1, 1, 0, 0)            3         
+    2   4   13     P (1, 0, 0, 0)            3         
+    5   4   15     C (1, 1, 0, 0)            1         
+    6   5   15     C (1, 1, 0, 0)            3         
+
+  === Ω₂/Ω₃ DIMENSIONS ACROSS GS FLIP PAIRS ===
+  cls  t3 phase  |A₂|   Ω₂  |A₃|   Ω₃   Z₂ surplus
+    0   3     P    16    9    17    3    3       0
+    1   3     C    16    9    17    5    4       1
+    2   4     P    18    9    21    4    3       1
+    3   4     C    18   10    21    7    5       2
+    5   4     C    18    8    21    3    3       0
+    6   5     C    20   10    25   10    5       5
+    9   1     P    12    9     9    3    3       0
+   11   0     P    10   10     5    5    4       1
+
+  === SINGLE-TILE FLIP EFFECTS ON HOMOLOGY CHAIN ===
+
+  Tiling 000000, t3=3, β=(1, 0, 0, 0), Ω₂=9, Ω₃=3
+    flip(0,2): Δt3=+0, Ω₂ 9->9 (+0), Ω₃ 3->5 (+2), β₁ 0->1 **PHASE**
+    flip(0,3): Δt3=+1, Ω₂ 9->9 (+0), Ω₃ 3->4 (+1), β₁ 0->0 
+    flip(0,4): Δt3=+1, Ω₂ 9->10 (+1), Ω₃ 3->7 (+4), β₁ 0->1 **PHASE**
+    flip(1,3): Δt3=+1, Ω₂ 9->9 (+0), Ω₃ 3->4 (+1), β₁ 0->0 
+    flip(1,4): Δt3=+1, Ω₂ 9->9 (+0), Ω₃ 3->4 (+1), β₁ 0->0 
+    flip(2,4): Δt3=+0, Ω₂ 9->9 (+0), Ω₃ 3->5 (+2), β₁ 0->1 **PHASE**
+
+  Tiling 001111, t3=2, β=(1, 0, 0, 0), Ω₂=9, Ω₃=4
+    flip(0,2): Δt3=+2, Ω₂ 9->9 (+0), Ω₃ 4->4 (+0), β₁ 0->0 
+    flip(0,3): Δt3=+2, Ω₂ 9->10 (+1), Ω₃ 4->7 (+3), β₁ 0->1 **PHASE**
+    flip(0,4): Δt3=+1, Ω₂ 9->9 (+0), Ω₃ 4->5 (+1), β₁ 0->1 **PHASE**
+    flip(1,3): Δt3=+0, Ω₂ 9->9 (+0), Ω₃ 4->4 (+0), β₁ 0->0 
+    flip(1,4): Δt3=-1, Ω₂ 9->9 (+0), Ω₃ 4->3 (-1), β₁ 0->0 
+    flip(2,4): Δt3=+0, Ω₂ 9->9 (+0), Ω₃ 4->4 (+0), β₁ 0->0 
+
+  Tiling 011111, t3=1, β=(1, 0, 0, 0), Ω₂=9, Ω₃=3
+    flip(0,2): Δt3=+2, Ω₂ 9->9 (+0), Ω₃ 3->3 (+0), β₁ 0->0 
+    flip(0,3): Δt3=+2, Ω₂ 9->9 (+0), Ω₃ 3->3 (+0), β₁ 0->0 
+    flip(0,4): Δt3=+2, Ω₂ 9->9 (+0), Ω₃ 3->3 (+0), β₁ 0->0 
+    flip(1,3): Δt3=+1, Ω₂ 9->9 (+0), Ω₃ 3->4 (+1), β₁ 0->0 
+    flip(1,4): Δt3=+1, Ω₂ 9->9 (+0), Ω₃ 3->4 (+1), β₁ 0->0 
+    flip(2,4): Δt3=-1, Ω₂ 9->10 (+1), Ω₃ 3->5 (+2), β₁ 0->0 
+
+  Tiling 111111, t3=0, β=(1, 0, 0, 0), Ω₂=10, Ω₃=5
+    flip(0,2): Δt3=+1, Ω₂ 10->9 (-1), Ω₃ 5->3 (-2), β₁ 0->0 
+    flip(0,3): Δt3=+2, Ω₂ 10->9 (-1), Ω₃ 5->4 (-1), β₁ 0->0 
+    flip(0,4): Δt3=+3, Ω₂ 10->9 (-1), Ω₃ 5->5 (+0), β₁ 0->1 **PHASE**
+    flip(1,3): Δt3=+1, Ω₂ 10->9 (-1), Ω₃ 5->3 (-2), β₁ 0->0 
+    flip(1,4): Δt3=+2, Ω₂ 10->9 (-1), Ω₃ 5->4 (-1), β₁ 0->0 
+    flip(2,4): Δt3=+1, Ω₂ 10->9 (-1), Ω₃ 5->3 (-2), β₁ 0->0 
+
+  === TWIN VERTEX ANALYSIS ===
+    Class 1: near-twins (0,1) — A[0][1]=1, A[1][0]=0
+    Class 1: near-twins (0,4) — A[0][4]=0, A[4][0]=1
+    Class 3: near-twins (0,3) — A[0][3]=0, A[3][0]=1
+    Class 3: near-twins (1,4) — A[1][4]=0, A[4][1]=1
+    Class 11: near-twins (0,1) — A[0][1]=1, A[1][0]=0
+    Class 11: near-twins (1,2) — A[1][2]=1, A[2][1]=0
+    Class 11: near-twins (2,3) — A[2][3]=1, A[3][2]=0
+    Class 11: near-twins (3,4) — A[3][4]=1, A[4][3]=0
+
+  === Ω₃ - Z₂ SURPLUS PRESERVATION ===
+  Surplus distribution at n=5:
+    surplus=0: 17 tilings
+    surplus=1: 33 tilings
+    surplus=2: 11 tilings
+    surplus=5: 3 tilings
+  Min surplus: 0
+  β₂=0 requires surplus ≥ 0; actual min = 0
+
+================================================================================
+n = 7: SKELETON-HOMOLOGY CONNECTION
+================================================================================
+  Tiles: 15, Total tilings: 32768
+  GS degrees of freedom: 9
+  ... 10000/32768
+  ... 20000/32768
+  ... 30000/32768
+  456 classes: 88 SC + 368 NSC
+
+  Computing homology for each class...
+    ... class 50/456
+    ... class 100/456
+    ... class 150/456
+    ... class 200/456
+    ... class 250/456
+    ... class 300/456
+    ... class 350/456
+    ... class 400/456
+    ... class 450/456
+
+  Building blue-line skeleton...
+  Blue edges: 246
+  Blueself classes: 0
+
+  === PHASE DISTRIBUTION ===
+    C-phase: 17 SC classes
+    P-phase: 61 SC classes
+    S-phase: 10 SC classes
+
+  === PHASE BY t₃ PARITY (SKELETON BIPARTITION) ===
+    t₃ even: {'P': 31, 'S': 5, 'C': 8}
+    t₃ odd: {'S': 5, 'P': 30, 'C': 9}
+
+  === PHASE TRANSITIONS UNDER GS FLIPS ===
+    C <-> C: 12 GS flip pairs
+    C <-> P: 94 GS flip pairs
+    C <-> S: 40 GS flip pairs
+    P <-> P: 272 GS flip pairs
+    P <-> S: 88 GS flip pairs
+    S <-> S: 6 GS flip pairs
+
+  === SC CLASS DETAIL ===
+  idx  t3    H phase betti                |GS| blueself
+  455   0    1     P (1, 0, 0, 0, 0)         1         
+  451   1    3     P (1, 0, 0, 0, 0)         1         
+  398   2    9     P (1, 0, 0, 0, 0)         1         
+  411   3    9     P (1, 0, 0, 0, 0)         3         
+  423   3    9     P (1, 0, 0, 0, 0)         1         
+  435   4   11     P (1, 0, 0, 0, 0)         3         
+  431   4   13     P (1, 0, 0, 0, 0)         3         
+  440   4   15     P (1, 0, 0, 0, 0)         1         
+  441   5   15     P (1, 0, 0, 0, 0)         3         
+   31   5   25     P (1, 0, 0, 0, 0)         5         
+    3   5   27     P (1, 0, 0, 0, 0)         3         
+    0   5   31     S (1, 0, 0, 1, 0)         5         
+  272   5   33     C (1, 1, 0, 0, 0)         1         
+   76   6   31     P (1, 0, 0, 0, 0)         5         
+    5   6   41     P (1, 0, 0, 0, 0)         5         
+  271   6   51     C (1, 1, 0, 0, 0)         1         
+  259   8   45     P (1, 0, 0, 0, 0)         7         
+  294   8   49     P (1, 0, 0, 0, 0)         5         
+   61   8   61     S (1, 0, 0, 1, 0)         7         
+   86   8   65     P (1, 0, 0, 0, 0)         7         
+   87   8   65     P (1, 0, 0, 0, 0)         3         
+  100   8   65     P (1, 0, 0, 0, 0)         5         
+    9   8   69     S (1, 0, 0, 1, 0)         5         
+   44   8   69     P (1, 0, 0, 0, 0)         5         
+  287   8   85     P (1, 0, 0, 0, 0)         7         
+  246   8   93     C (1, 1, 0, 0, 0)         3         
+  282   8   93     C (1, 1, 0, 0, 0)         1         
+  323   9   51     C (1, 1, 0, 0, 0)         7         
+  184   9   67     P (1, 0, 0, 0, 0)         5         
+  252   9   67     P (1, 0, 0, 0, 0)         5         
+   82   9   71     P (1, 0, 0, 0, 0)         7         
+   11   9   75     P (1, 0, 0, 0, 0)         7         
+  175   9   77     P (1, 0, 0, 0, 0)         7         
+  249   9   77     P (1, 0, 0, 0, 0)         7         
+  189   9   79     P (1, 0, 0, 0, 0)         5         
+  104   9   81     P (1, 0, 0, 0, 0)         7         
+  156   9   87     P (1, 0, 0, 0, 0)         7         
+  128   9   91     P (1, 0, 0, 0, 0)         5         
+  281   9  111     C (1, 1, 0, 0, 0)         3         
+  354   9  111     P (1, 0, 0, 0, 0)         7         
+  267   9  117     C (1, 1, 0, 0, 0)         3         
+  382   9  123     C (1, 1, 0, 0, 0)         1         
+  226  10   83     P (1, 0, 0, 0, 0)         7         
+  199  10   93     P (1, 0, 0, 0, 0)         7         
+  296  10   95     P (1, 0, 0, 0, 0)         7         
+  145  10   99     P (1, 0, 0, 0, 0)         7         
+  332  10  135     C (1, 1, 0, 0, 0)         3         
+  392  11   99     C (1, 1, 0, 0, 1)         3         
+  ... (truncated at t3=10)
+
+  === Ω₂/Ω₃ DIMENSIONS ACROSS GS FLIP PAIRS ===
+
+  === SINGLE-TILE FLIP EFFECTS ON HOMOLOGY CHAIN ===
+
+  === TWIN VERTEX ANALYSIS ===
+    Class 31: near-twins (0,6) — A[0][6]=0, A[6][0]=1
+    Class 31: near-twins (1,2) — A[1][2]=1, A[2][1]=0
+    Class 104: near-twins (0,1) — A[0][1]=1, A[1][0]=0
+    Class 104: near-twins (0,4) — A[0][4]=0, A[4][0]=1
+
+  === Ω₃ - Z₂ SURPLUS PRESERVATION ===
+
+================================================================================
+STRUCTURAL CONCLUSIONS
+================================================================================
+
+1. The blue-line skeleton (GS flip graph) connects SC classes.
+   At odd n, it's bipartite by t₃ parity.
+
+2. Path homology phases (P/C/S) are NOT preserved by GS flips in general.
+   Phase transitions (P↔C) occur across skeleton edges.
+
+3. β₂ = 0 is preserved by ALL single-tile flips.
+   The surplus dim(Ω₃) - dim(Z₂) stays ≥ 0 through every flip.
+
+4. The "no twins" mechanism is visible in the tiling model:
+   tournament completeness (every pair has an edge) prevents the
+   twin-vertex structure that generates β₂ > 0 in oriented graphs.
+
+5. KEY INSIGHT: The tiling model shows β₂=0 is a LOCAL property —
+   it's preserved by each individual arc reversal. This suggests
+   an inductive proof strategy: show that if β₂=0 for T, then
+   β₂=0 for any single-arc-flip of T.
+

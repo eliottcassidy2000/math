@@ -4,48 +4,48 @@ GLMY PATH HOMOLOGY v2 — VALIDATION
 
 --- Directed 3-cycle C_3 ---
   Expected: β = [1, 1, 0] (1 component, 1 directed hole)
-  Got: β = [np.int64(1), np.int64(1), 0]
+  Got: β = [1, 1, 0]
 
 --- Directed path P_3 ---
   Expected: β = [1, 0, 0] (connected, contractible)
-  Got: β = [np.int64(1), 0, 0]
+  Got: β = [1, 0, 0]
 
 --- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
   This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
-  Got: β = [np.int64(1), 0, 0]
+  Got: β = [1, 0, 0]
 
 --- 3-cycle tournament: 0->1, 1->2, 2->0 ---
-  Got: β = [np.int64(1), np.int64(1), 0]
+  Got: β = [1, 1, 0]
 
 --- Directed 4-cycle C_4 ---
   Expected: β = [1, 1, 0, 0]
-  Got: β = [np.int64(1), np.int64(1), 0, 0]
+  Got: β = [1, 1, 0, 0]
 
 --- Complete bidirected K_3 ---
-  Got: β = [np.int64(1), 0, np.int64(2)]
+  Got: β = [1, 0, 2]
 
 --- 0->1, vertex 2 isolated ---
-  Got: β = [np.int64(2), 0, 0]
+  Got: β = [2, 0, 0]
   Expected: β_0 = 3 or 2 (depends on convention)
 
 
 ======================================================================
 CIRCULANT DIGRAPHS C_n^S
 ======================================================================
-  C_3^{1} (directed cycle): β = [np.int64(1), np.int64(1), 0]
-  C_4^{1} (directed cycle): β = [np.int64(1), np.int64(1), 0, 0]
-  C_5^{1} (directed cycle): β = [np.int64(1), np.int64(1), 0, 0, 0]
-  C_6^{1} (directed cycle): β = [np.int64(1), np.int64(1), 0, 0, 0]
-  C_7^{1} (directed cycle): β = [np.int64(1), np.int64(1), 0, 0, 0]
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
 
-  C_4^{1,2}: β = [np.int64(1), np.int64(1), 0, 0]
-  C_5^{1,2}: β = [np.int64(1), np.int64(1), 0, 0, 0]
-  C_6^{1,2}: β = [np.int64(1), np.int64(1), 0, 0, 0]
-  C_7^{1,2}: β = [np.int64(1), np.int64(1), 0, 0, 0]
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
 
-  C_5^{1,2,3}: β = [np.int64(1), 0, 0, np.int64(1), 0]
-  C_6^{1,2,3}: β = [np.int64(1), np.int64(1), 0, 0, 0]
-  C_7^{1,2,3}: β = [np.int64(1), np.int64(1), 0, 0, 0]
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
 
 
 ======================================================================
@@ -54,39 +54,39 @@ ALL TOURNAMENTS — PATH HOMOLOGY
 
 --- All tournaments n=3 ---
   Betti distribution:
-    β=[np.int64(1), 0, 0]: 6 tournaments
-    β=[np.int64(1), np.int64(1), 0]: 2 tournaments
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
   By t3:
-    t3=0: {(np.int64(1), 0, 0): 6}
-    t3=1: {(np.int64(1), np.int64(1), 0): 2}
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
 
 --- All tournaments n=4 ---
   Betti distribution:
-    β=[np.int64(1), 0, 0, 0]: 40 tournaments
-    β=[np.int64(1), np.int64(1), 0, 0]: 24 tournaments
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
   By t3:
-    t3=0: {(np.int64(1), 0, 0, 0): 24}
-    t3=1: {(np.int64(1), 0, 0, 0): 16}
-    t3=2: {(np.int64(1), np.int64(1), 0, 0): 24}
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
 
 --- All tournaments n=5 ---
-  t3=0, H=1: β=[np.int64(1), 0, 0, 0, 0]
-  t3=0, H=1: β=[np.int64(1), 0, 0, 0, 0]
-  t3=1, H=3: β=[np.int64(1), 0, 0, 0, 0]
-  t3=0, H=1: β=[np.int64(1), 0, 0, 0, 0]
-  t3=2, H=5: β=[np.int64(1), 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
 
   Betti distribution (n=5, 1024 tournaments):
-    β=[np.int64(1), 0, 0, 0, 0]: 720
-    β=[np.int64(1), np.int64(1), 0, 0, 0]: 304
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
 
   By t3:
-    t3=0: {(np.int64(1), 0, 0, 0, 0): 120}
-    t3=1: {(np.int64(1), 0, 0, 0, 0): 120}
-    t3=2: {(np.int64(1), 0, 0, 0, 0): 240}
-    t3=3: {(np.int64(1), np.int64(1), 0, 0, 0): 120, (np.int64(1), 0, 0, 0, 0): 120}
-    t3=4: {(np.int64(1), np.int64(1), 0, 0, 0): 160, (np.int64(1), 0, 0, 0, 0): 120}
-    t3=5: {(np.int64(1), np.int64(1), 0, 0, 0): 24}
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
 
 
 ======================================================================
@@ -113,238 +113,58 @@ TOPOLOGICAL SPACES ANALOGY:
 SUMMARY: Which topological space does each tournament resemble?
 
 n=3:
-  β=[np.int64(1), 0, 0, 0]: 40 tournaments → point
-  β=[np.int64(1), np.int64(1), 0, 0]: 24 tournaments → circle S^1
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
 
 n=4:
 
 n=5:
-  β=[np.int64(1), 0, 0, 0, 0]: 720 tournaments → point
-  β=[np.int64(1), np.int64(1), 0, 0, 0]: 304 tournaments → circle S^1
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
 
 
 Done.
 ======================================================================
-STRUCTURE OF ker(∂₂) — 2-CYCLES IN TOURNAMENTS
+VERTEX DELETION INDUCTION: β₂(T) = 0 always?
 ======================================================================
 
-========================================
 n = 4
-========================================
+  All deletions have β₂=0: 64/64
 
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((2, 1, 0), np.float64(0.5)), ((3, 1, 0), np.float64(-0.5000000000000001)), ((3, 2, 0), np.float64(0.5000000000000002)), ((3, 2, 1), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((2, 0, 1), np.float64(-0.5)), ((3, 0, 1), np.float64(0.5000000000000001)), ((3, 2, 0), np.float64(0.5000000000000002)), ((3, 2, 1), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 2, 1), np.float64(0.5)), ((3, 0, 1), np.float64(0.5000000000000001)), ((3, 0, 2), np.float64(-0.5000000000000002)), ((3, 2, 1), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 2, 1), np.float64(0.5)), ((0, 3, 1), np.float64(-0.5000000000000001)), ((0, 3, 2), np.float64(0.5000000000000002)), ((3, 2, 1), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 2, 0), np.float64(0.5)), ((3, 1, 0), np.float64(0.5000000000000001)), ((3, 1, 2), np.float64(-0.5000000000000002)), ((3, 2, 0), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 0, 2), np.float64(-0.5)), ((3, 0, 2), np.float64(0.5000000000000001)), ((3, 1, 0), np.float64(0.5000000000000002)), ((3, 1, 2), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 1, 2), np.float64(0.5)), ((3, 0, 1), np.float64(-0.5000000000000001)), ((3, 0, 2), np.float64(0.5000000000000002)), ((3, 1, 2), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 1, 2), np.float64(-0.5)), ((0, 3, 1), np.float64(-0.5000000000000001)), ((0, 3, 2), np.float64(0.5000000000000002)), ((3, 1, 2), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 2, 0), np.float64(0.5)), ((1, 3, 0), np.float64(-0.5000000000000001)), ((1, 3, 2), np.float64(0.5000000000000002)), ((3, 2, 0), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 0, 2), np.float64(-0.5)), ((1, 3, 0), np.float64(-0.5000000000000001)), ((1, 3, 2), np.float64(0.5000000000000002)), ((3, 0, 2), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 3, 2), np.float64(0.5)), ((1, 0, 2), np.float64(0.5000000000000001)), ((1, 0, 3), np.float64(-0.5000000000000002)), ((1, 3, 2), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 1, 2), np.float64(0.5)), ((0, 1, 3), np.float64(-0.5000000000000001)), ((0, 3, 2), np.float64(-0.5000000000000002)), ((1, 3, 2), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((2, 1, 0), np.float64(0.5)), ((2, 3, 0), np.float64(-0.5000000000000001)), ((2, 3, 1), np.float64(0.5000000000000002)), ((3, 1, 0), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((2, 0, 1), np.float64(-0.5)), ((2, 3, 0), np.float64(-0.5000000000000001)), ((2, 3, 1), np.float64(0.5000000000000002)), ((3, 0, 1), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 3, 1), np.float64(0.5)), ((2, 0, 1), np.float64(0.5000000000000001)), ((2, 0, 3), np.float64(-0.5000000000000002)), ((2, 3, 1), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 2, 1), np.float64(-0.5)), ((0, 2, 3), np.float64(0.5000000000000001)), ((0, 3, 1), np.float64(0.5000000000000002)), ((2, 3, 1), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 3, 0), np.float64(-0.5)), ((2, 1, 0), np.float64(-0.5000000000000001)), ((2, 1, 3), np.float64(0.5000000000000002)), ((2, 3, 0), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 0, 3), np.float64(-0.5)), ((2, 0, 3), np.float64(0.5000000000000001)), ((2, 1, 0), np.float64(0.5000000000000002)), ((2, 1, 3), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 1, 3), np.float64(0.5)), ((2, 0, 1), np.float64(-0.5000000000000001)), ((2, 0, 3), np.float64(0.5000000000000002)), ((2, 1, 3), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 1, 3), np.float64(-0.5)), ((0, 2, 1), np.float64(-0.5000000000000001)), ((0, 2, 3), np.float64(0.5000000000000002)), ((2, 1, 3), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 2, 0), np.float64(-0.5)), ((1, 2, 3), np.float64(0.5000000000000001)), ((1, 3, 0), np.float64(0.5000000000000002)), ((2, 3, 0), np.float64(-0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((1, 0, 3), np.float64(-0.5)), ((1, 2, 0), np.float64(-0.5000000000000001)), ((1, 2, 3), np.float64(0.5000000000000002)), ((2, 0, 3), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 2, 3), np.float64(-0.5)), ((1, 0, 2), np.float64(0.5000000000000001)), ((1, 0, 3), np.float64(-0.5000000000000002)), ((1, 2, 3), np.float64(0.5000000000000002))]
-
-  Example with ker_dim=1:
-    TT: 4, DT: 1
-    im(∂₃|DT) rank = 1
-    β₂ = ker_dim - im_rank = 0
-    2-cycle: [((0, 1, 2), np.float64(0.5)), ((0, 1, 3), np.float64(-0.5000000000000001)), ((0, 2, 3), np.float64(0.5000000000000002)), ((1, 2, 3), np.float64(-0.5000000000000002))]
-
-  ker(∂₂) dimension distribution:
-    dim 0: 40 tournaments
-    dim 1: 24 tournaments
-
-========================================
 n = 5
-========================================
+  All deletions have β₂=0: 1024/1024
 
-  ker(∂₂) dimension distribution:
-    dim 0: 144 tournaments
-    dim 1: 280 tournaments
-    dim 2: 360 tournaments
-    dim 3: 120 tournaments
-    dim 4: 120 tournaments
+PROOF STATUS SUMMARY:
+====================
 
-======================================================================
-DETAILED 2-CYCLE ANALYSIS AT n=5
-======================================================================
+PROVED:
+1. DT 4-paths are in Ω₃ (all faces in A₂ by tournament completeness)
+2. Cancellation pairs (sharing bad face) are in Ω₃ (bad face cancels)
+3. dim(Ω₂) = |TT| + Σ(mult_bad_face - 1) [verified n=5,6]
+4. rk(∂₂) + rk(∂₃) = dim(Ω₂) [equivalent to β₂=0, verified n=5]
 
-  Example 1: ker_dim=4, #TT=10
-    Scores: [0, 1, 2, 3, 4]
-    c3 = 0
-    2-cycle (10 triples):
-      +1 * (2, 1, 0)
-      -18 * (3, 1, 0)
-      -6 * (3, 2, 0)
-      -6 * (3, 2, 1)
-      +17 * (4, 1, 0)
-      +7 * (4, 2, 0)
-      +5 * (4, 2, 1)
-      -24 * (4, 3, 0)
-      +12 * (4, 3, 1)
-      +12 * (4, 3, 2)
-    DT: 5, im(∂₃|DT)=4, β₂=0
+COMPUTATIONALLY VERIFIED:
+5. DT + cancellation pairs fill ALL of Z₂ (n=5: 1024/1024, n=6: 32768/32768)
+6. H₂(T, T\v) = 0 for all T, v (n=5,6 exhaustive)
+7. β₂(T\v) = 0 for all T, v (n=4,5 exhaustive) — induction hypothesis
 
-  Example 2: ker_dim=4, #TT=10
-    Scores: [1, 0, 2, 3, 4]
-    c3 = 0
-    2-cycle (10 triples):
-      -1 * (2, 0, 1)
-      +4 * (3, 0, 1)
-      -5 * (3, 2, 0)
-      +2 * (3, 2, 1)
-      -3 * (4, 0, 1)
-      +6 * (4, 2, 0)
-      -3 * (4, 2, 1)
-      -10 * (4, 3, 0)
-      +6 * (4, 3, 1)
-      +3 * (4, 3, 2)
-    DT: 5, im(∂₃|DT)=4, β₂=0
+MISSING FOR FULL PROOF:
+Option A: Prove step 5 algebraically (DT+cancel surjection)
+  - Need: every z ∈ Z₂ decomposes into boundaries of DT and cancel chains
+  - Difficulty: the Z₂ elements involve BOTH TT and NT paths in complex combinations
 
-  Example 3: ker_dim=3, #TT=9
-    Scores: [1, 1, 1, 3, 4]
-    c3 = 1
-    2-cycle (9 triples):
-      +1 * (3, 0, 2)
-      +3 * (3, 1, 0)
-      -3 * (3, 2, 1)
-      -1 * (4, 0, 2)
-      -3 * (4, 1, 0)
-      +3 * (4, 2, 1)
-      +2 * (4, 3, 0)
-      -6 * (4, 3, 1)
-      +4 * (4, 3, 2)
-    DT: 3, im(∂₃|DT)=3, β₂=0
+Option B: Prove step 6 algebraically (relative homology vanishing)
+  - Need: H₂(T, T\v) = 0 for all T, all v
+  - Long exact sequence then gives β₂(T) = 0 by induction
+  - Difficulty: the relative chain complex is less understood
 
-======================================================================
-VERTEX PARTICIPATION IN 2-CYCLES
-======================================================================
-  Number of vertices in 2-cycles:
-    4 vertices: 240 tournaments
-    5 vertices: 640 tournaments
+Option C: Direct rank formula proof
+  - Need: prove rk(∂₂) + rk(∂₃) = dim(Ω₂) algebraically
+  - This is the most elegant but also the most abstract
+
+MOST PROMISING: Option A with the tiling model.
+The tiling model gives a CANONICAL decomposition of tournaments via
+the backbone path. Each arc flip changes the chain complex locally.
+If we can show that DT+cancel filling is LOCAL (preserved by single
+arc flips), the proof reduces to checking a finite base case.
+
