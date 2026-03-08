@@ -27,6 +27,7 @@ Your identity string (e.g. `alice`, `bob`, `desk-lab`) is your machine name for 
 3. `00-navigation/OPEN-QUESTIONS.md` — the live frontier of the research
 4. `00-navigation/SESSION-LOG.md` — last few entries only (what just happened)
 5. `00-navigation/TANGENTS.md` — scan briefly for relevant threads
+6. `05-knowledge/hypotheses/INDEX.md` — scan the hypothesis log to avoid re-testing dead ends
 
 Estimated reading time: ~5 minutes. Do not skip this.
 
@@ -97,10 +98,13 @@ As you work:
 - Log mistakes to `01-canon/MISTAKES.md`
 - Open court cases for disagreements, don't silently override existing claims
 - Update `00-navigation/INVESTIGATION-BACKLOG.md` when you make progress on any lead
+- **Save ALL script outputs** to `05-knowledge/results/` (see Best Practices)
+- **Log every hypothesis** to `05-knowledge/hypotheses/INDEX.md` (confirmed OR refuted)
+- **Update variable files** in `05-knowledge/variables/` when you discover new equations
 
 ---
 
-## Step 6: End-of-session — MANDATORY close-out (single command)
+## Step 7: End-of-session — MANDATORY close-out (single command)
 
 **This step is NOT optional.** Every session must end with a message sent to another agent AND a git push. The Stop hook will warn you if you skip this.
 
@@ -179,3 +183,59 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **The μ computation bug (MISTAKE-001) is not resolved.** Do not use `ind_poly_at_2_restricted()` from old scripts.
 - **The per-path identity fails for n≥6.** Do not treat it as a proof strategy for Claim A at general n.
 - **When in doubt about a computation, re-derive from definitions.** See `01-canon/definitions.md`.
+
+---
+
+## Best Practices (MANDATORY for all agents)
+
+These practices prevent wasted work and propagate knowledge across sessions.
+
+### 1. Never waste computation
+- **Save ALL script results.** When running a script, always capture output:
+  ```bash
+  python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
+  ```
+- **Never write scripts to /tmp.** Always save to `04-computation/`. If you wrote something to /tmp, copy it to the repo before session close.
+- **Store intermediate data.** If a computation takes >1 minute, save the result even if it seems unimportant now.
+
+### 2. Never waste ideas
+- **Log every hypothesis** in `05-knowledge/hypotheses/INDEX.md`, whether confirmed, refuted, or abandoned.
+- **Record WHY things fail**, not just THAT they fail. The failure mode is often more valuable than the hypothesis.
+- **Update the variable registry** in `05-knowledge/variables/INDEX.md` when you discover a new equation or relationship.
+- **Cross-link everything.** Every variable file should link to related variables, hypotheses, and theorems.
+
+### 3. Regular sync
+- **Pull before starting work:** `git fetch origin && git rebase origin/main`
+- **Push regularly during long sessions** (every 30-60 minutes or after major findings):
+  ```bash
+  git add -A && git commit -m "[instance-id]: checkpoint — [brief description]" && git push
+  ```
+- **Never let a session end without pushing.** Use `agents/finish_session.py`.
+
+### 4. Web research
+- **Use WebFetch with timeouts.** Always specify `timeout: 30000` (30 seconds) to prevent hangs.
+- **Use WebSearch freely** to check for existing results, related papers, and OEIS sequences before reinventing.
+- **Record what you find.** Add relevant references to `INVESTIGATION-BACKLOG.md`.
+
+### 5. Thinking strategies
+- **Try geometric/visual reasoning** alongside algebraic approaches. Tournament arcs can be visualized as oriented graphs; path counts have geometric meaning.
+- **Check small cases exhaustively** before generalizing. Patterns that hold at n=3,4,5 often break at n=6 or n=7.
+- **Look for involutions and symmetries.** Many proofs in this area use path-reversal, complement, or relabeling symmetries.
+- **Consider the simplest possible explanation first.** If something is always true computationally, the proof is likely short.
+
+### 6. Knowledge web maintenance
+- After confirming or refuting a hypothesis, update ALL of:
+  - `05-knowledge/hypotheses/INDEX.md`
+  - Related variable files in `05-knowledge/variables/`
+  - `00-navigation/INVESTIGATION-BACKLOG.md` (if related to an investigation)
+  - `01-canon/MISTAKES.md` (if the error is instructive)
+- **Do not duplicate information** — link instead. Each fact should live in one canonical place.
+
+### 7. Dead-end documentation
+- **Never just say "this doesn't work."** Document:
+  - What exact computation showed the failure
+  - At what n it first fails
+  - What the counterexample looks like
+  - Whether the hypothesis is "close to true" (fails rarely) or fundamentally wrong
+- Add to `05-knowledge/hypotheses/INDEX.md` with status REFUTED and the failure details.
+- This prevents future agents from wasting time on the same dead end.

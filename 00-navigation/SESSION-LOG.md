@@ -13,6 +13,39 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S36 — 2026-03-07 (Knowledge Web Infrastructure)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c11
+**Summary of work:**
+  META session: built persistent knowledge infrastructure per user request.
+
+  **New infrastructure:**
+  1. `05-knowledge/` directory with three subdirectories:
+     - `variables/` — Cross-referenced variable registry (H, M, W, t_k, c_k, Omega created)
+     - `hypotheses/` — Hypothesis log with 10 confirmed, 18 refuted, 3 open hypotheses cataloged
+     - `results/` — Script output storage (6 results captured this session)
+  2. `run_and_save.sh` — Helper script to run computations and auto-save outputs
+  3. `search_knowledge.sh` — Grep-based search across the entire knowledge web
+  4. Updated `CLAUDE.md` with 7 mandatory best practices:
+     - Never waste computation (save all outputs)
+     - Never waste ideas (log all hypotheses with WHY they fail)
+     - Regular sync (push every 30-60 min)
+     - Web research (WebFetch with timeouts)
+     - Thinking strategies (geometric, small cases, involutions)
+     - Knowledge web maintenance
+     - Dead-end documentation
+  5. Copied 14 scripts from /tmp to `04-computation/`
+  6. Added hypothesis log to warm-up sequence (Step 2 item 6)
+
+**New contributions:** 05-knowledge/ directory, CLAUDE.md best practices section, run_and_save.sh, search_knowledge.sh
+**Unresolved threads:** Variable registry needs more entries (alpha_k, bc33, mu, S(T), etc.); hypothesis detail files not yet created; bulk result capture needed for 848 scripts in 04-computation/
+
+## opus-2026-03-07-S35c11 — 2026-03-07 (W-F Mobius Transform, Perpendicularity Mechanism, M(r) Symmetry)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c10 (context compacted multiple times)
+**Summary of work:**
+  Long-running overnight creative exploration. Generated and tested 20+ outlandish hypotheses about deep structure.
+
 ## kind-pasteur-2026-03-07-S35 — 2026-03-07 (Deletion-Contraction Proofs, F(ω) Analysis)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S34 (concept map session)

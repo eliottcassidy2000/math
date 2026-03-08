@@ -1,0 +1,143 @@
+=== M(T) vs M(T^op) ===
+
+n=3:
+  trial 0: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[-1  1 -1]
+ [ 1  1  0]
+ [-1  0  1]]
+    M(T^op) = 
+[[-1 -1  1]
+ [-1  1  0]
+ [ 1  0  1]]
+  trial 1: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[-1 -1  1]
+ [-1  1  0]
+ [ 1  0  1]]
+    M(T^op) = 
+[[-1  1 -1]
+ [ 1  1  0]
+ [-1  0  1]]
+  trial 2: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[-1  1 -1]
+ [ 1  1  0]
+ [-1  0  1]]
+    M(T^op) = 
+[[-1 -1  1]
+ [-1  1  0]
+ [ 1  0  1]]
+  trial 3: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[ 1  0  1]
+ [ 0  1 -1]
+ [ 1 -1 -1]]
+    M(T^op) = 
+[[ 1  0 -1]
+ [ 0  1  1]
+ [-1  1 -1]]
+  trial 4: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[ 1  0  1]
+ [ 0  1 -1]
+ [ 1 -1 -1]]
+    M(T^op) = 
+[[ 1  0 -1]
+ [ 0  1  1]
+ [-1  1 -1]]
+
+n=4:
+  trial 0: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[-1  1  1  1]
+ [ 1  1  0  1]
+ [ 1  0 -1  1]
+ [ 1  1  1  1]]
+    M(T^op) = 
+[[ 1  1  1  1]
+ [ 1 -1  0  1]
+ [ 1  0  1  1]
+ [ 1  1  1 -1]]
+  trial 1: |M(T)-M(T^op)|=6.00e+00, |M(T)-M(T^op)^T|=6.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[ 1  0  0  1]
+ [ 0  1  0  1]
+ [ 0  0  1  1]
+ [ 1  1  1 -3]]
+    M(T^op) = 
+[[-1  0  0  1]
+ [ 0 -1  0  1]
+ [ 0  0 -1  1]
+ [ 1  1  1  3]]
+  trial 2: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[ 1  1 -1  0]
+ [ 1 -1  0  0]
+ [-1  0 -1  1]
+ [ 0  0  1  1]]
+    M(T^op) = 
+[[-1  1 -1  0]
+ [ 1  1  0  0]
+ [-1  0  1  1]
+ [ 0  0  1 -1]]
+  trial 3: |M(T)-M(T^op)|=6.00e+00, |M(T)-M(T^op)^T|=6.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[-1  0  0  1]
+ [ 0 -1  0  1]
+ [ 0  0 -1  1]
+ [ 1  1  1  3]]
+    M(T^op) = 
+[[ 1  0  0  1]
+ [ 0  1  0  1]
+ [ 0  0  1  1]
+ [ 1  1  1 -3]]
+  trial 4: |M(T)-M(T^op)|=2.00e+00, |M(T)-M(T^op)^T|=2.00e+00
+    Neither M=M^op nor M=M^op^T
+    M(T) = 
+[[ 1  0 -1  1]
+ [ 0  1  1  0]
+ [-1  1 -1  0]
+ [ 1  0  0 -1]]
+    M(T^op) = 
+[[-1  0 -1  1]
+ [ 0 -1  1  0]
+ [-1  1  1  0]
+ [ 1  0  0  1]]
+
+n=5:
+  trial 0: |M(T)-M(T^op)|=6.00e+00, |M(T)-M(T^op)^T|=6.00e+00
+    Neither M=M^op nor M=M^op^T
+  trial 1: |M(T)-M(T^op)|=4.00e+00, |M(T)-M(T^op)^T|=4.00e+00
+    Neither M=M^op nor M=M^op^T
+  trial 2: |M(T)-M(T^op)|=4.00e+00, |M(T)-M(T^op)^T|=4.00e+00
+    Neither M=M^op nor M=M^op^T
+
+
+=== PROOF PATH ===
+
+If M(T) = M(T^op)^T (anti-transposition), AND M(T) is symmetric (M = M^T),
+then M(T) = M(T^op).
+
+Conversely, if M(T) = M(T^op) and M(T) = M(T^op)^T,
+then M(T) = M(T)^T (symmetric).
+
+So: M(T) symmetric ⟺ M(T) = M(T^op)
+given that M(T) = M(T^op)^T always holds.
+
+If we can prove M(T) = M(T^op)^T algebraically (path reversal),
+then proving M(T) = M(T^op) (complement invariance) would complete
+the symmetry proof!
+
+And we already know W(T) = W(T^op) for odd n (trace level).
+The question is whether this extends to the FULL MATRIX level.
+
