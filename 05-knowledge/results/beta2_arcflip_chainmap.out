@@ -1,0 +1,255 @@
+======================================================================
+CHAIN-LEVEL ANALYSIS OF ARC-FLIP INVARIANCE
+======================================================================
+
+Searching for instructive examples at n=5...
+Precomputing all tournaments...
+  Done in 1.3s
+
+======================================================================
+ANALYSIS 1: How does Omega_2 relate between T and T'?
+======================================================================
+
+Found 9 delta types. Analyzing subspace overlap:
+
+  (dOm2=-1, db1=-1): flip 1->0
+    dim(Om2): 10 -> 9
+    Om2 intersection dim: 7 (of 10 and 9)
+    Om2 exclusive to T: 3
+    Om2 exclusive to T': 2
+    rk(d3): 5 -> 3 (d=-2)
+    beta: [np.int64(1), np.int64(1), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+  (dOm2=-1, db1=+0): flip 2->0
+    dim(Om2): 10 -> 9
+    Om2 intersection dim: 7 (of 10 and 9)
+    Om2 exclusive to T: 3
+    Om2 exclusive to T': 2
+    rk(d3): 4 -> 3 (d=-1)
+    beta: [np.int64(1), np.int64(0), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+  (dOm2=-1, db1=+1): flip 4->0
+    dim(Om2): 10 -> 9
+    Om2 intersection dim: 9 (of 10 and 9)
+    Om2 exclusive to T: 1
+    Om2 exclusive to T': 0
+    rk(d3): 4 -> 4 (d=+0)
+    beta: [np.int64(1), np.int64(0), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(1), np.int64(0), np.int64(0)]
+
+  (dOm2=+0, db1=-1): flip 1->0
+    dim(Om2): 9 -> 9
+    Om2 intersection dim: 6 (of 9 and 9)
+    Om2 exclusive to T: 3
+    Om2 exclusive to T': 3
+    rk(d3): 4 -> 3 (d=-1)
+    beta: [np.int64(1), np.int64(1), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+  (dOm2=+0, db1=+0): flip 1->0
+    dim(Om2): 10 -> 10
+    Om2 intersection dim: 7 (of 10 and 10)
+    Om2 exclusive to T: 3
+    Om2 exclusive to T': 3
+    rk(d3): 4 -> 4 (d=+0)
+    beta: [np.int64(1), np.int64(0), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+  (dOm2=+0, db1=+1): flip 4->3
+    dim(Om2): 9 -> 9
+    Om2 intersection dim: 6 (of 9 and 9)
+    Om2 exclusive to T: 3
+    Om2 exclusive to T': 3
+    rk(d3): 3 -> 4 (d=+1)
+    beta: [np.int64(1), np.int64(0), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(1), np.int64(0), np.int64(0)]
+
+  (dOm2=+1, db1=-1): flip 0->4
+    dim(Om2): 9 -> 10
+    Om2 intersection dim: 9 (of 9 and 10)
+    Om2 exclusive to T: 0
+    Om2 exclusive to T': 1
+    rk(d3): 4 -> 4 (d=+0)
+    beta: [np.int64(1), np.int64(1), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+  (dOm2=+1, db1=+0): flip 1->0
+    dim(Om2): 9 -> 10
+    Om2 intersection dim: 7 (of 9 and 10)
+    Om2 exclusive to T: 2
+    Om2 exclusive to T': 3
+    rk(d3): 3 -> 4 (d=+1)
+    beta: [np.int64(1), np.int64(0), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+  (dOm2=+1, db1=+1): flip 4->0
+    dim(Om2): 9 -> 10
+    Om2 intersection dim: 7 (of 9 and 10)
+    Om2 exclusive to T: 2
+    Om2 exclusive to T': 3
+    rk(d3): 3 -> 5 (d=+2)
+    beta: [np.int64(1), np.int64(0), np.int64(0), np.int64(0)] -> [np.int64(1), np.int64(1), np.int64(0), np.int64(0)]
+
+======================================================================
+ANALYSIS 2: Structure of d_3 change under arc flip
+======================================================================
+Looking at how im(d_3) changes in Z_2
+
+Example: bits=4, flip 4->3 to 3->4
+  beta(T): [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+  beta(T'): [np.int64(1), np.int64(1), np.int64(0), np.int64(0)]
+  dim Z_2(T): 3
+  dim Z_2(T'): 4
+  Z_2 intersection dim: 2
+  Z_2 exclusive to T: 1
+  Z_2 exclusive to T': 2
+
+======================================================================
+ANALYSIS 3: |A_p| (allowed path counts) under arc flip
+======================================================================
+(du-dv, dA2, dA3, dOm2, dOm3) distribution:
+  du-dv=-2: dA2=-6, dA3=-12, dOm2=+1, dOm3=+0, count=160
+  du-dv=-1: dA2=-4, dA3=-8, dOm2=-1, dOm3=-3, count=240
+  du-dv=-1: dA2=-4, dA3=-8, dOm2=+0, dOm3=+0, count=480
+  du-dv=-1: dA2=-4, dA3=-8, dOm2=+1, dOm3=+1, count=240
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=-1, dOm3=-6, count=120
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=-1, dOm3=-4, count=120
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=-1, dOm3=-2, count=240
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=+0, dOm3=-3, count=120
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=+0, dOm3=-1, count=1080
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=+0, dOm3=+1, count=240
+  du-dv=+0: dA2=-2, dA3=-4, dOm2=+1, dOm3=+2, count=480
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=-1, dOm3=-3, count=240
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=-1, dOm3=-1, count=240
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=+0, dOm3=-2, count=240
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=+0, dOm3=+0, count=1760
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=+0, dOm3=+2, count=240
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=+1, dOm3=+1, count=240
+  du-dv=+1: dA2=+0, dA3=+0, dOm2=+1, dOm3=+3, count=240
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=-1, dOm3=-2, count=480
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=+0, dOm3=-1, count=240
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=+0, dOm3=+1, count=1080
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=+0, dOm3=+3, count=120
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=+1, dOm3=+2, count=240
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=+1, dOm3=+4, count=120
+  du-dv=+2: dA2=+2, dA3=+4, dOm2=+1, dOm3=+6, count=120
+  du-dv=+3: dA2=+4, dA3=+8, dOm2=-1, dOm3=-1, count=240
+  du-dv=+3: dA2=+4, dA3=+8, dOm2=+0, dOm3=+0, count=480
+  du-dv=+3: dA2=+4, dA3=+8, dOm2=+1, dOm3=+3, count=240
+  du-dv=+4: dA2=+6, dA3=+12, dOm2=-1, dOm3=+0, count=160
+
+======================================================================
+ANALYSIS 4: delta(|A_2|) formula
+======================================================================
+delta(|A_2|) by (du, dv):
+  (du=1, dv=0): [0] -- DETERMINED
+  (du=1, dv=1): [-2] -- DETERMINED
+  (du=1, dv=2): [-4] -- DETERMINED
+  (du=1, dv=3): [-6] -- DETERMINED
+  (du=2, dv=0): [2] -- DETERMINED
+  (du=2, dv=1): [0] -- DETERMINED
+  (du=2, dv=2): [-2] -- DETERMINED
+  (du=2, dv=3): [-4] -- DETERMINED
+  (du=3, dv=0): [4] -- DETERMINED
+  (du=3, dv=1): [2] -- DETERMINED
+  (du=3, dv=2): [0] -- DETERMINED
+  (du=3, dv=3): [-2] -- DETERMINED
+  (du=4, dv=0): [6] -- DETERMINED
+  (du=4, dv=1): [4] -- DETERMINED
+  (du=4, dv=2): [2] -- DETERMINED
+  (du=4, dv=3): [0] -- DETERMINED
+  Determined: 16, Not: 0
+
+======================================================================
+ANALYSIS 5: Verify delta(|A_2|) = 2*(du - dv - 1) (HYP-228)
+======================================================================
+  Errors: 0
+  CONFIRMED: delta(|A_2|) = 2*(du - dv - 1)
+  Note: This is for allowed 2-paths, not TT triples
+
+======================================================================
+ANALYSIS 6: Rank-nullity tracking
+======================================================================
+For d_2: Om_2 -> Om_1: rk + nullity = dim(Om_2)
+nullity = dim(Z_2) = dim(Om_2) - rk(d_2)
+d_3: Om_3 -> Om_2: rk + nullity = dim(Om_3)
+beta_2 = dim(Z_2) - rk(d_3)
+
+We need: delta(beta_2) = 0
+  <=> delta(dim Z_2) = delta(rk d_3)
+  <=> delta(dim Om_2) - delta(rk d_2) = delta(rk d_3)
+  <=> delta(dim Om_2) + delta(beta_1) = delta(rk d_3)  [since drk2=-db1]
+
+Let's track delta(rk d_3) vs delta(dim Om_3) - delta(nullity d_3)
+(dOm2, dOm3, drk2, drk3, db1) distribution:
+  dOm2=-1, dOm3=-6, drk2=+1, drk3=-2, db1=-1 | dZ2=-2, dZ3=-4 | OK | count=120
+  dOm2=-1, dOm3=-4, drk2=+1, drk3=-2, db1=-1 | dZ2=-2, dZ3=-2 | OK | count=120
+  dOm2=-1, dOm3=-3, drk2=+1, drk3=-2, db1=-1 | dZ2=-2, dZ3=-1 | OK | count=480
+  dOm2=-1, dOm3=-2, drk2=+0, drk3=-1, db1=+0 | dZ2=-1, dZ3=-1 | OK | count=720
+  dOm2=-1, dOm3=-1, drk2=-1, drk3=+0, db1=+1 | dZ2=+0, dZ3=-1 | OK | count=240
+  dOm2=-1, dOm3=-1, drk2=+0, drk3=-1, db1=+0 | dZ2=-1, dZ3=+0 | OK | count=240
+  dOm2=-1, dOm3=+0, drk2=-1, drk3=+0, db1=+1 | dZ2=+0, dZ3=+0 | OK | count=160
+  dOm2=+0, dOm3=-3, drk2=+0, drk3=+0, db1=+0 | dZ2=+0, dZ3=-3 | OK | count=120
+  dOm2=+0, dOm3=-2, drk2=+1, drk3=-1, db1=-1 | dZ2=-1, dZ3=-1 | OK | count=240
+  dOm2=+0, dOm3=-1, drk2=+0, drk3=+0, db1=+0 | dZ2=+0, dZ3=-1 | OK | count=1080
+  dOm2=+0, dOm3=-1, drk2=+1, drk3=-1, db1=-1 | dZ2=-1, dZ3=+0 | OK | count=240
+  dOm2=+0, dOm3=+0, drk2=+0, drk3=+0, db1=+0 | dZ2=+0, dZ3=+0 | OK | count=2720
+  dOm2=+0, dOm3=+1, drk2=-1, drk3=+1, db1=+1 | dZ2=+1, dZ3=+0 | OK | count=240
+  dOm2=+0, dOm3=+1, drk2=+0, drk3=+0, db1=+0 | dZ2=+0, dZ3=+1 | OK | count=1080
+  dOm2=+0, dOm3=+2, drk2=-1, drk3=+1, db1=+1 | dZ2=+1, dZ3=+1 | OK | count=240
+  dOm2=+0, dOm3=+3, drk2=+0, drk3=+0, db1=+0 | dZ2=+0, dZ3=+3 | OK | count=120
+  dOm2=+1, dOm3=+0, drk2=+1, drk3=+0, db1=-1 | dZ2=+0, dZ3=+0 | OK | count=160
+  dOm2=+1, dOm3=+1, drk2=+0, drk3=+1, db1=+0 | dZ2=+1, dZ3=+0 | OK | count=240
+  dOm2=+1, dOm3=+1, drk2=+1, drk3=+0, db1=-1 | dZ2=+0, dZ3=+1 | OK | count=240
+  dOm2=+1, dOm3=+2, drk2=+0, drk3=+1, db1=+0 | dZ2=+1, dZ3=+1 | OK | count=720
+  dOm2=+1, dOm3=+3, drk2=-1, drk3=+2, db1=+1 | dZ2=+2, dZ3=+1 | OK | count=480
+  dOm2=+1, dOm3=+4, drk2=-1, drk3=+2, db1=+1 | dZ2=+2, dZ3=+2 | OK | count=120
+  dOm2=+1, dOm3=+6, drk2=-1, drk3=+2, db1=+1 | dZ2=+2, dZ3=+4 | OK | count=120
+
+======================================================================
+ANALYSIS 7: Can we express drk3 as dOm3 - dZ3?
+======================================================================
+Since drk3 = dOm2 + db1 (our target identity),
+this means dOm3 - dZ3 = dOm2 + db1
+=> dZ3 = dOm3 - dOm2 - db1
+=> delta(dim Z_3) = delta(dim Om_3) - delta(dim Om_2) - delta(beta_1)
+
+  Verification errors: 0
+  CONFIRMED: delta(Z_3) = delta(Om_3) - delta(Om_2) - delta(beta_1)
+  This is EQUIVALENT to beta_2=0 invariance, not an independent fact.
+
+======================================================================
+ANALYSIS 8: Are dim(Om_2) and dim(Om_3) determined by local data?
+======================================================================
+  delta(Om_2) determined by local data: 6/20
+  delta(Om_3) determined by local data: 6/20
+  NON-DETERMINED delta(Om_2) examples:
+    (du=1, dv=1, cout=0, cin=2, puv=0, pvu=1): [0, 1]
+    (du=1, dv=2, cout=0, cin=1, puv=0, pvu=2): [-1, 0, 1]
+    (du=2, dv=0, cout=0, cin=2, puv=1, pvu=0): [-1, 0]
+    (du=2, dv=1, cout=0, cin=1, puv=1, pvu=1): [-1, 0, 1]
+    (du=2, dv=2, cout=0, cin=0, puv=1, pvu=2): [-1, 0]
+    (du=2, dv=2, cout=1, cin=1, puv=0, pvu=1): [-1, 0, 1]
+    (du=2, dv=3, cout=1, cin=0, puv=0, pvu=2): [-1, 0, 1]
+    (du=3, dv=0, cout=0, cin=1, puv=2, pvu=0): [-1, 0, 1]
+    (du=3, dv=1, cout=0, cin=0, puv=2, pvu=1): [0, 1]
+    (du=3, dv=1, cout=1, cin=1, puv=1, pvu=0): [-1, 0, 1]
+    (du=3, dv=2, cout=1, cin=0, puv=1, pvu=1): [-1, 0, 1]
+    (du=3, dv=3, cout=2, cin=0, puv=0, pvu=1): [0, 1]
+    (du=4, dv=1, cout=1, cin=0, puv=2, pvu=0): [-1, 0, 1]
+    (du=4, dv=2, cout=2, cin=0, puv=1, pvu=0): [-1, 0]
+
+======================================================================
+ANALYSIS 9: dim(Om_2) vs |TT| (number of transitive triples)
+======================================================================
+TT count -> dim(Om_2) values:
+  |TT|=5: dim(Om_2)=10 (DETERMINED)
+  |TT|=6: dim(Om_2) in [8, 9, 10]
+  |TT|=7: dim(Om_2)=9 (DETERMINED)
+  |TT|=8: dim(Om_2)=9 (DETERMINED)
+  |TT|=9: dim(Om_2)=9 (DETERMINED)
+  |TT|=10: dim(Om_2)=10 (DETERMINED)
+
+  Check dim(Om_2) = |TT|/6 + something:
+  |TT|=5, |TT|/6=0.8, dim(Om_2) in [10], diff=[10]
+  |TT|=6, |TT|/6=1.0, dim(Om_2) in [8, 9, 10], diff=[7, 8, 9]
+  |TT|=7, |TT|/6=1.2, dim(Om_2) in [9], diff=[8]
+  |TT|=8, |TT|/6=1.3, dim(Om_2) in [9], diff=[8]
+  |TT|=9, |TT|/6=1.5, dim(Om_2) in [9], diff=[8]
+  |TT|=10, |TT|/6=1.7, dim(Om_2) in [10], diff=[9]
+
+Done.
