@@ -1,0 +1,81 @@
+======================================================================
+n=5 EXHAUSTIVE: Betti numbers by H value
+======================================================================
+Done in 0.5s
+
+n=5: beta_2 = beta_2 for maximizers?
+n-3 = 2
+
+  H=15 (64 tournaments):
+    beta=[1, 1, 0, 0, 0]: 64
+    score=(1, 2, 2, 2, 3): 40
+    score=(2, 2, 2, 2, 2): 24
+  H=13 (120 tournaments):
+    beta=[1, 0, 0, 0, 0]: 120
+    score=(1, 2, 2, 2, 3): 120
+  H=11 (120 tournaments):
+    beta=[1, 1, 0, 0, 0]: 120
+    score=(1, 2, 2, 2, 3): 120
+  H=9 (240 tournaments):
+    beta=[1, 1, 0, 0, 0]: 120
+    beta=[1, 0, 0, 0, 0]: 120
+    score=(1, 1, 2, 3, 3): 240
+  H=5 (240 tournaments):
+    beta=[1, 0, 0, 0, 0]: 240
+    score=(1, 1, 2, 2, 4): 120
+    score=(0, 2, 2, 3, 3): 120
+  H=3 (120 tournaments):
+    beta=[1, 0, 0, 0, 0]: 120
+    score=(1, 1, 1, 3, 4): 40
+    score=(0, 2, 2, 2, 4): 40
+    score=(0, 1, 3, 3, 3): 40
+  H=1 (120 tournaments):
+    beta=[1, 0, 0, 0, 0]: 120
+    score=(0, 1, 2, 3, 4): 120
+
+======================================================================
+n=6 RECAP: Betti numbers for H-maximizers
+======================================================================
+n=6: n-3 = 3
+H=45 maximizers: 240 tournaments, ALL have beta_3 > 0 (from THM-098)
+beta_3 = beta_3 > 0 — CONFIRMED
+
+======================================================================
+n=7: Full Betti spectrum by H class
+======================================================================
+Searched 50000 in 66.5s
+
+n=7: n-3 = 4
+
+HIGH H (>= 160):
+  H=189 (4 tournaments):
+    beta=[1, 0, 0, 0, 6, 0]: 4  [beta_4=6]
+  H=175 (20 tournaments):
+    beta=[1, 1, 0, 0, 0, 0]: 20  [beta_4=0]
+  H=171 (27 tournaments):
+    beta=[1, 0, 0, 0, 0, 0]: 27  [beta_4=0]
+
+LOW H (<= 30):
+  H=1 (137): 0 have beta_4>0, 0 have beta_3>0
+  H=3 (214): 0 have beta_4>0, 0 have beta_3>0
+  H=5 (497): 0 have beta_4>0, 0 have beta_3>0
+  H=9 (711): 0 have beta_4>0, 0 have beta_3>0
+  H=11 (358): 0 have beta_4>0, 0 have beta_3>0
+  H=13 (369): 0 have beta_4>0, 0 have beta_3>0
+  H=15 (722): 0 have beta_4>0, 63 have beta_3>0
+  H=17 (465): 0 have beta_4>0, 0 have beta_3>0
+  H=19 (470): 0 have beta_4>0, 0 have beta_3>0
+  H=23 (914): 0 have beta_4>0, 0 have beta_3>0
+  H=25 (603): 0 have beta_4>0, 0 have beta_3>0
+  H=27 (550): 0 have beta_4>0, 0 have beta_3>0
+  H=29 (1213): 0 have beta_4>0, 0 have beta_3>0
+
+======================================================================
+PALEY TOURNAMENTS: Betti spectrum
+======================================================================
+T_3: H=3, beta=[1, 1, 0, 0], n-3=0
+
+T_5 (cyclic with conn set {1,2}):
+H=15, beta=[1, 1, 0, 0, 0], n-3=2, beta_2=0
+
+T_7: H=189, beta=[1, 0, 0, 0, 6, 0, 0], n-3=4, beta_4=6

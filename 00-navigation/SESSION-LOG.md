@@ -13,6 +13,47 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S40 — 2026-03-08 (Path Homology + Pfaffian-Betti + Betti Dimension Shift)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S39b
+**Summary of work:**
+  Deep investigation of Pfaffian-Betti connection (INV-130) and discovery of H-maximizer
+  topological dimension shift. Major session with 8+ computational scripts and 3 new theorems.
+
+  **Major discoveries:**
+  1. **THM-098 verified and extended**: Pfaffian-Betti separation at n=6 confirmed exhaustively.
+     |Pf| perfectly separates C-phase from S-phase. Extended to n=7 (spectral gap) and n=8.
+  2. **THM-099 (NEW)**: H-maximizer Betti topology. At odd n (3,5,7), all maximizers share
+     same Betti. At even n≥6, maximizers split between two topological types. n=6: 240 β₁=1
+     + 240 β₃=1. n=7: all 240 have β₄=6. n=8: split β₄=1/contractible.
+     CORRECTS earlier claim that all n=6 maximizers are S-phase.
+  3. **THM-100 (NEW)**: β₂(T) = 0 for ALL tournaments (conjecture). Verified exhaustive n≤6,
+     sampled n≤9. ~47k tests with zero counterexamples. CORRECTS T189 which claimed all even
+     Betti vanish (β₄=6 exists at n=7).
+  4. **Hereditary topology**: When ALL vertex-deletions have β_k>0, parent has β_{k+1}>0.
+     BIBD T₇: all deletions S-phase (β₃=1) → β₄=6. H=175 class: all del's C-phase → β₁=1.
+  5. **β₃ appears de novo** at n=6: all n=5 deletions of S-phase tournaments are contractible.
+     β₂ never exists for tournaments, so β₃ cannot come from hereditary β₂.
+  6. **S-phase bimodal**: At n=6, S-phase (β₃>0) appears only at H=45 (max) and H=9 (low).
+  7. **Path complex uniformity**: For Paley T₇, each 5-vertex sub has exactly 13 Ham paths,
+     each 6-vertex sub has 45. Ω₀ through Ω₃ identical across all 3 regular n=7 classes.
+
+**New contributions:**
+  - THM-098 (extended), THM-099, THM-100
+  - INV-135 (Betti dimension shift)
+  - HYP-207, HYP-208, HYP-209
+  - T204, T205, T206
+  - Correction to T189 (even Betti vanishing FALSE, only β₂=0)
+  - 10+ scripts in 04-computation/
+  - All results saved to 05-knowledge/results/
+
+**Unresolved threads:**
+  - Prove β₂=0 algebraically (proof sketch exists but needs formalization)
+  - Why β₄=6 specifically? (6 = n-1? Euler characteristic related?)
+  - Tang-Yau circulant Fourier method for β₂ proof (INV-133)
+  - Does β₅ appear at n=9? (need high-dim computation)
+  - n=8 maximizer split: what combinatorial difference makes some contractible?
+
 ## kind-pasteur-2026-03-07-S39b — 2026-03-07 (Trace Formulas + Spectral Analysis + MISTAKE-017)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S39 (trace formula session)

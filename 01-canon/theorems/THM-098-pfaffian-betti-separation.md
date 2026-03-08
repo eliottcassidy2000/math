@@ -68,9 +68,13 @@ At n=8: |Pf| separation is NOT perfect but strongly correlated.
 
 ## Connection to OCF
 
-The S-phase tournaments have the highest H(T) on average (mean 28 vs 18 for P at n=6),
-consistent with near-degenerate eigenvalues corresponding to regular/near-regular tournaments.
-The Paley tournament (all eigenvalues equal, conference matrix) is the extreme S-phase endpoint.
+**CORRECTED (kind-pasteur-S40):** The H-maximizers at n=6 are NOT all S-phase.
+480 maximizers (H=45) split evenly: 240 C-phase (|Pf|=1, gap=√12) + 240 S-phase (|Pf|=7, gap≈1.646).
+Both have identical combinatorics (score (2,2,2,3,3,3), c₃=8). See THM-099 for full analysis.
+
+S-phase tournaments have high H *on average*, but the maximum is shared with C-phase.
+The Paley tournament T₇ (n=7, all eigenvalues √7) is S-phase at n=7 by earlier classification
+but actually has β₄=6 (not β₃>0), putting it beyond the S-phase category.
 
 ## Scripts
 

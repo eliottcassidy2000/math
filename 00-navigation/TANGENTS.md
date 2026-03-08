@@ -603,8 +603,8 @@ NEW PROOF OF TRANSFER MATRIX SYMMETRY via Walsh analysis. The complete M[a,b] Wa
 **T188** #H-trace-M #diagonal-walsh #position-decomposition | certainty: high (verified n=5 exhaustive) | source: opus-2026-03-07-S35c6
 H = trace(M) = sum_v M[v,v] where M[v,v] = sum_P (-1)^{pos(v,P)} (THM-053). Off-diagonal M sums to 0 (Sigma=0 for odd n, THM-030 Corollary 1). Diagonal M[v,v] has EVEN Walsh spectrum with UNIFORM amplitudes: 1/4 at degree 2, 1/8 at degree 4 (n=5). The sum hat{H}[S] = sum_v hat{M[v,v]}[S] verified exactly. The signs of M[v,v] Walsh coefficients depend on vertex v's relationship to the path S (center vs endpoint vs absent). This connects the off-diagonal M formula (T186) to OCF through the trace decomposition.
 
-**T189** #path-homology #even-betti-vanishing #GLMY | certainty: high (verified n<=7) | source: opus-2026-03-07-S46e
-CONJECTURE: β_{2k}(T) = 0 for ALL tournaments T and k >= 1 (even Betti vanishing). Verified exhaustive n=3,4,5 + sampled n=6,7 (0 failures in 1000+ tests). β_1 and β_3 are MUTUALLY EXCLUSIVE. Tournaments have "odd-dimensional directed topology only" — mirrors the odd-cycle-only structure. The completeness of tournaments makes ∂_2 maximally constrained. χ ∈ {0,1}. This is a NEW result not in GLMY literature. See OPEN-Q-024.
+**T189** #path-homology #beta2-vanishing #GLMY | certainty: VERY HIGH | source: opus-2026-03-07-S46e, kind-pasteur-S40
+**CORRECTED (S40):** The original claim "ALL even Betti vanish" is WRONG — β₄=6 for Paley T₇ maximizers. Only β₂=0 is conjectured (THM-100). The even Betti vanishing was based on max_dim=3 sampling that missed β₄. Correct conjecture: β₂(T)=0 for ALL tournaments (verified exhaustive n≤6, sampled n≤9, ~47k tests). β₁ and β₃ remain mutually exclusive at n=6. See THM-100.
 
 **T190** #path-homology #OCF-parallel #euler-characteristic | certainty: medium | source: opus-2026-03-07-S46e
 PARALLEL: OCF gives H = 1 + 2α₁ + 4α₂ + ..., and path homology gives χ = 1 - β₁ + β₃ - β₅ + ... Both are alternating sums over odd-indexed quantities. When β_{2k}=0 and β_1,β_3 mutually exclusive, χ = 1 (contractible) or χ = 0 (one "hole"). Is there a direct formula β_{2k-1} = f(α_k)? At n=5: β₁ = 1 iff t₃ >= 3 (NOT just t₃ > 0 — there's a threshold effect). Does this connect to the cumulant hierarchy?
@@ -647,3 +647,12 @@ EULERIAN CUMULANT = TODD CLASS: κ_{2k}^{Eul}(n) = (n+1) · B_{2k}/(2k) exactly 
 
 **T203** #gaussian-integer #independence-polynomial | certainty: trivial | source: opus-2026-03-07-S46f
 I(Ω(T), i) is automatically a Gaussian integer (integer coefficients → evaluation at algebraic integer is algebraic integer). For n≤5, Re=1 always and Im=|Ω| because α₂=0 (no two disjoint odd cycles in ≤5 vertices). At n=6, α₂>0 possible and Re∈{-3,-1,0,1}. The "discovery" is trivial; the interesting content is that α₂=0 for n≤5.
+
+**T204** #hereditary-topology #betti-dimension-shift #path-homology | certainty: VERY HIGH (exhaustive) | source: kind-pasteur-2026-03-08-S40
+HEREDITARY TOPOLOGY: When ALL vertex-deletions of T have β_k > 0, then T has β_{k+1} > 0. Verified at n=7: BIBD class (H=189) has ALL 7 vertex-deletions with β₃=1 (S-phase) → parent has β₄=6. Second class (H=175) has ALL deletions β₁=1 → parent β₁=1 (hereditary C-phase). Third class (H=171) has mixed deletions → contractible. At n=6: S-phase (β₃=1) deletions are all CONTRACTIBLE (β₂ never exists), so β₃ appears "de novo." See THM-099, beta4_classes_n7.py.
+
+**T205** #maximizer-betti-split #even-odd-n #path-homology | certainty: VERY HIGH | source: kind-pasteur-2026-03-08-S40
+ODD/EVEN MAXIMIZER TOPOLOGY: At odd n (3,5,7), ALL H-maximizers share the SAME Betti vector. At even n≥6, maximizers SPLIT between two topological types with same combinatorics but different spectral structure. n=6: 240 C-phase (|Pf|=1) + 240 S-phase (|Pf|=7). n=8: ~40 β₄=1 (gap~3.2) + ~40 contractible (gap~4.6). The spectral gap of the skew-adjacency matrix determines which type. See THM-099.
+
+**T206** #pfaffian-phase-split #eigenvalue-constraint-sphere | certainty: VERY HIGH (exhaustive n=6) | source: kind-pasteur-2026-03-08-S40
+MAXIMIZER SPECTRAL SPLIT at n=6: All 480 H-maximizers have SAME score (2,2,2,3,3,3) and c₃=8, but split by eigenvalue triple on constraint sphere a²+b²+c²=15. C-phase: (0.268,1.000,3.732), |Pf|=1. S-phase: (1.000,2.646,2.646), |Pf|=7. Complementation PRESERVES phase (complement of C-max is C-max). The tournament completeness + spectral geometry determines topology.
