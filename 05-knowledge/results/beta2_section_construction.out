@@ -1,0 +1,171 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+SECTION CONSTRUCTION: s: Z₂ → Ω₃ with ∂₃∘s = id
+======================================================================
+
+--- n = 4 ---
+  Total: 64, Trivial (Z₂=0): 16, Nontrivial: 48, Failures: 0
+  dim(Z₂) distribution: Counter({1: 48})
+  Section sparsity: mean=1.000, min=1.000, max=1.000
+
+--- n = 5 ---
+  Total: 1024, Trivial (Z₂=0): 0, Nontrivial: 1024, Failures: 0
+  dim(Z₂) distribution: Counter({3: 640, 4: 240, 5: 144})
+  Section sparsity: mean=1.000, min=1.000, max=1.000
+
+  Analyzing section structure at n=5...
+
+======================================================================
+DT-ONLY SECTION TEST
+Can we build s using ONLY DT 4-paths?
+======================================================================
+
+--- n = 5 ---
+  Nontrivial: 1024
+  DT-only success: 1024
+  DT-only fail: 0
+  DT alone fills Z₂: YES
+
+--- n = 6 (DT-only test) ---
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+  Nontrivial: 32768
+  DT-only success: 31808
+  DT-only fail: 960
+  Examples of DT-only failure:
+    idx=154: dim_Z2=10, rk(∂DT→Z₂)=9, |DT|=9, |A₃|=51
+    idx=213: dim_Z2=10, rk(∂DT→Z₂)=9, |DT|=9, |A₃|=51
+    idx=308: dim_Z2=10, rk(∂DT→Z₂)=9, |DT|=9, |A₃|=51
+    idx=332: dim_Z2=10, rk(∂DT→Z₂)=9, |DT|=9, |A₃|=51
+    idx=339: dim_Z2=10, rk(∂DT→Z₂)=9, |DT|=9, |A₃|=51
+
+Done.
