@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S41 — 2026-03-08 (Arc-Flip Path Count Identity + β₂ Mechanism)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S34
+**Summary of work:**
+  Deep investigation of the arc-flip mechanism for β₂=0 preservation in tournaments.
+
+  **Major discoveries:**
+  - **THM-100 (PROVED):** delta_|A_3| = (n-3)*delta_|A_2| and delta_|A_2| = 2*(d_u - d_v - 1)
+    under any arc flip. Exact counting identities depending ONLY on out-degrees.
+  - **Arc-flip β₂ preservation:** 0 violations in 500k+ flips (n=5,6 exhaustive, n=7,8 sampled)
+  - **Surplus floor growth:** min surplus = 0, 1, 9, <=25 for n=5,6,7,8 — super-linear growth
+  - **Transitive tournament formulas:** O2=C(n,3), O3=C(n,4), Z2=C(n-1,3), surplus=C(n-1,4)
+  - **Transitive perturbation:** single flip delta = -(n-2-gap), worst at gap=2
+  - **Omega_2 structure:** NOT just TT paths; includes cancellation elements (76.6% at n=5)
+  - **DT vs Omega_3:** |DT| >= dim(Z_2) for 100% (n=5), 97.1% (n=6)
+  - **Tang-Yau connection:** Their Cor 3.15 proves H_m=0 (m>=2) for consecutive S={1,...,d}
+  - **Algebraic identity:** surplus = beta_3 + rk(d_4) - beta_2
+  - Also: P_11 beta_8 trivial eigenspace = 0 (confirming opus-S42 result beta_8 = 10)
+  - Density threshold for circulant beta_2=0: |S|>=ceil(n/3) approximately (HYP-219)
+
+  **New contributions:** THM-100 (arc-flip path count), HYP-227-230, INV-148 update, INV-149
+  **Unresolved:** Algebraic proof of beta_2=0. Strongest leads:
+    (1) Arc-flip induction from transitive (THM-100 gives counting, need Omega-level bound)
+    (2) Generalize Tang-Yau deformation retract to non-circulant tournaments
+    (3) Discrete Morse theory approach D from THM-102
+
 ## opus-2026-03-08-S43b — 2026-03-08 (β₂=0 Deep Structural Analysis)
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S43

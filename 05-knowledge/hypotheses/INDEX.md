@@ -74,6 +74,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-220 | Arc-flip preserves β₂=0: surplus ≥ |drop| always | Exhaustive n=5 (10240 flips), n=6 (491520 flips), 0 violations | beta2_arcflip_proof.py |
 | HYP-221 | Surplus=0 stable: max_drop=0 from surplus=0 (n=5), surplus=1 (n=6) | Joint (δΩ₃,δZ₂) has δΩ₃≥δZ₂ always from tight cases | beta2_surplus_zero_stability.py |
 | HYP-222 | DT+cancellation fills Z₂ for ALL tournaments | Exhaustive n≤6 (1024+32768), 0 failures | THM-101, beta2_dt_cancel_filling.py |
+| HYP-227 | delta_\|A_3\| = (n-3)*delta_\|A_2\| under arc flip (THM-100) | PROVED algebraically; verified 0 violations n=4-9 | beta2_delta_ratio_proof.py |
+| HYP-228 | delta_\|A_2\| = 2(d_u - d_v - 1) under arc flip u->v | PROVED algebraically; verified 0 violations n=5-9 | beta2_delta_ratio_proof.py |
+| HYP-229 | Transitive tournament surplus = C(n-1,4) | Verified n=3-9. O2=C(n,3), O3=C(n,4), Z2=C(n-1,3) | beta2_min_surplus.py |
+| HYP-230 | Min surplus grows super-linearly: 0,1,9,<=25 for n=5,6,7,8 | Exact n=5,6; sampled n=7 (10k), n=8 (20k) | beta2_min_surplus.py |
 | HYP-223 | Completing oriented graph to tournament kills β₂ | Exhaustive n=4 (all 729 oriented graphs), always | beta2_twin_obstruction.py |
 | HYP-224 | Edge removal from tournament creates β₂>0 only if cycle uses both endpoints | 80/80 events at n=5: unfillable 2-cycle always involves u AND v | beta2_edge_removal_anatomy.py |
 | HYP-225 | DT-only deficit at n=6 is exactly 1 (rk=9 in dim-10 Z₂) | ALL 960 deficit cases: score (1,2,2,3,3,4) or (2,2,2,3,3,3), |DT|=9 | beta2_dt_deficit_analysis.py |
@@ -99,7 +103,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112

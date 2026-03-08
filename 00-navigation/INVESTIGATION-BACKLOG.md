@@ -1529,8 +1529,23 @@ The "surplus" = dim(Ω₃) - dim(Z₂) satisfies surplus ≥ |drop| ALWAYS.
 **Why completeness matters:** Non-tournament arc flips CAN create β₂>0 (seen in circulant digraphs).
 The tournament constraint ensures every pair of vertices has an arc, providing the intermediary
 vertices needed for Ω₃ chains.
-**Scripts:** beta2_arcflip_proof.py, beta2_surplus_zero_stability.py
-**Next step:** (1) Prove the key lemma algebraically (2) Try at n=7 by sampling (3) Identify exact counting formula for δΩ₃ and δZ₂ under arc flip
+**NEW FINDINGS (kind-pasteur-S41 continued):**
+- THM-100 PROVED: delta_|A_3| = (n-3)*delta_|A_2| exactly, for ALL tournaments, ALL arcs
+- delta_|A_2| = 2*(d_u - d_v - 1) depends ONLY on out-degrees
+- n=7 sampling (10k): 0 violations, min surplus = 9
+- n=8 sampling (20k): 0 violations, min surplus <= 25
+- Min surplus floor: 0, 1, 9, <=25 for n=5,6,7,8 — grows super-linearly
+- Transitive tournament: surplus = C(n-1,4). One-flip delta = -(n-2-gap)
+- DT paths: |DT| >= dim(Z_2) for 100% (n=5), 97.1% (n=6). Rest filled by cancellation
+- Omega_2 NOT just TT paths: dim(O2) > |TT| for 76.6% (n=5), 94.6% (n=6)
+- Tang-Yau Cor 3.15: H_m=0 for m>=2 when S={1,...,d} — applies to circulant tournaments
+- Algebraic identity: surplus = beta_3 + rk(d_4) - beta_2
+**Scripts:** beta2_arcflip_proof.py, beta2_surplus_zero_stability.py, beta2_arcflip_n7_sample.py,
+  beta2_arcflip_mechanism.py, beta2_arcflip_counting.py, beta2_delta_ratio_*.py,
+  beta2_min_surplus*.py, beta2_omega_ratio.py, beta2_injectivity_analysis.py, beta2_surplus_formula.py
+**Next step:** (1) Prove the key lemma: surplus(T') >= 0 for all arc flips, using THM-100
+  (2) Generalize Tang-Yau deformation retract to non-circulant tournaments
+  (3) Prove beta_2 = 0 by induction on number of flips from transitive
 
 ### INV-149: β₂=0 Density Threshold for Circulant Digraphs
 **Source:** kind-pasteur-2026-03-08-S41
