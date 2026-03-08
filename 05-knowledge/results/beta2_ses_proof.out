@@ -1,0 +1,187 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+RELATIVE HOMOLOGY H₂(R_*(v)) = H₂(T, T\v)
+======================================================================
+
+--- n = 4 ---
+  Total (tournament, vertex) pairs: 256
+  H₂(R_*(v)) distribution: {-1: 144, 0: 112}
+  Nonzero: 0
+  *** H₂(T, T\v) = 0 for ALL tournaments at n=4! ***
+
+  Detail distribution (dim_R2, dim_R3, ker∂₂^R, rk∂₃^R):
+    (2, 0, 0, 0): count=48, H₂=0
+    (2, 1, 0, 1): count=48, H₂=-1
+    (3, 0, 0, 0): count=16, H₂=0
+    (3, 1, 0, 1): count=96, H₂=-1
+    (3, 1, 1, 1): count=48, H₂=0
+
+--- n = 5 ---
+  Total (tournament, vertex) pairs: 5120
+  H₂(R_*(v)) distribution: {-3: 1280, -2: 3120, -1: 600, 0: 120}
+  Nonzero: 0
+  *** H₂(T, T\v) = 0 for ALL tournaments at n=5! ***
+
+  Detail distribution (dim_R2, dim_R3, ker∂₂^R, rk∂₃^R):
+    (5, 2, 0, 2): count=480, H₂=-2
+    (5, 2, 1, 2): count=120, H₂=-1
+    (5, 3, 0, 2): count=480, H₂=-2
+    (5, 3, 0, 3): count=80, H₂=-3
+    (5, 4, 0, 3): count=240, H₂=-3
+    (6, 2, 1, 2): count=240, H₂=-1
+    (6, 3, 0, 2): count=240, H₂=-2
+    (6, 3, 0, 3): count=240, H₂=-3
+    (6, 3, 1, 2): count=240, H₂=-1
+    (6, 3, 1, 3): count=240, H₂=-2
+    (6, 3, 2, 2): count=120, H₂=0
+    (6, 4, 0, 3): count=600, H₂=-3
+    (6, 4, 1, 3): count=1080, H₂=-2
+    (6, 6, 1, 4): count=120, H₂=-3
+    (7, 6, 2, 4): count=480, H₂=-2
+    (7, 9, 2, 4): count=120, H₂=-2
+
+--- n = 6 (sampled) ---
+  Tested: 3000
+  H₂ nonzero: 0
+  *** H₂(T, T\v) = 0 for all sampled n=6 tournaments! ***
+
+PROOF STRUCTURE:
+1. Base case: β₂(T) = 0 for n ≤ 3 (trivial) and n = 4 (exhaustive check: 4 classes)
+2. Induction step: Given β₂(T') = 0 for all (n-1)-tournaments:
+   - Short exact sequence: 0 → Ω_*(T\v) → Ω_*(T) → R_*(v) → 0
+   - Long exact sequence: 0 → H₂(T) → H₂(R_*(v)) → H₁(T\v) → ...
+   - If H₂(R_*(v)) = 0 for some v, then β₂(T) = 0. ✓
+   - REMAINING: Prove H₂(R_*(v)) = 0 algebraically.
+   
+The relative complex R_*(v) has a concrete description:
+   R_2(v): Ω₂ elements using vertex v (quotient by those not using v)
+   R_3(v): Ω₃ elements using vertex v
+   
+H₂(R_*(v)) = 0 means: every relative 2-cycle is a relative 3-boundary.
+
+Done.
