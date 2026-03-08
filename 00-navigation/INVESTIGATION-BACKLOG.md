@@ -1175,12 +1175,18 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Connection:** Via Mitrovic-Stojadinovic, Redei-Berge U_T connects to chromatic SF. If tournament poset is (3+1)-free, U_T inherits e-positivity.
 **Next step:** Check if tournament arc ordering posets are (3+1)-free. Investigate Hessenberg varieties approach.
 
-### INV-114: Flip Formula F(T,x) - F(T',x) = (x-1)*D(x) — VERIFIED n=4,5
-**Source:** opus-2026-03-07-S45 (computational discovery)
-**Status:** VERIFIED at n=4 (384/384) and n=5 (10240/10240). D(x) = G_uv(x) - G_vu(x) is anti-palindromic.
-**What:** For arc u->v in T, flip gives T'. The difference F(T)-F(T') factors as (x-1)*D(x). Also G_uv + G_vu = 2*F(T/e,x). Consequence: H(T) = H(T') under single arc flip (known, but this gives polynomial-level refinement).
-**Scripts:** `04-computation/f_poly_flip_formula.py`, `04-computation/flip_formula_D_analysis.py`
-**Next step:** (1) Prove algebraically using Redei-Berge. (2) Characterize D(x) — depends on global structure, not just local arc data. (3) Iterate: F(T)-F(T'') for multi-flip?
+### INV-114: Flip Formula F(T,x) - F(T',x) = (x-1)*D(x) — PROVED (THM-083)
+**Source:** opus-2026-03-07-S45 (computational discovery), kind-pasteur-2026-03-07-S35 (algebraic proof)
+**Status:** PROVED algebraically (THM-083). Verified at n=4,5 exhaustive.
+**What:** For arc u->v in T, flip gives T'. The difference F(T)-F(T') factors as (x-1)*D(x), where D = F(T/e) - F(T'/e') is anti-palindromic.
+**Key identities (THM-083):**
+  - F_T(x) = F_{T\e}(x) + (x-1) * F(T/e, x)  (polynomial deletion-contraction)
+  - G_{u,v}(x) = F(T/e, x)  (contraction = conditional path polynomial)
+  - D(x) = -x^{n-2} D(1/x)  (anti-palindromicity from tournament palindrome)
+  - H(T) - H(T') = D_{n-2}  (leading coefficient of D)
+**CORRECTION (kind-pasteur-S35):** H(T) ≠ H(T') under arc flip in general (deltas up to ±12 at n=5). The opus claim "H(T)=H(T')" was WRONG. The correct statement: F(T,1)=n!=F(T',1) (total permutation count).
+**CORRECTION (kind-pasteur-S35):** G_uv + G_vu = 2*F(T/e) only when T/e is a tournament (requires u,v to have identical profiles to other vertices). In general, G_uv + G_vu = F(T/e) + F(T'/e') which is palindromic but ≠ 2*F(T/e).
+**Scripts:** `04-computation/f_poly_flip_formula.py`, `04-computation/flip_formula_D_analysis.py`, `04-computation/poly_deletion_contraction.py`, `04-computation/flip_reduction_via_contraction.py`
 
 ### INV-115: Matroid Structure of Vertex-Disjoint Odd Cycles — BOUNDARY at n=5
 **Source:** opus-2026-03-07-S45 (computational discovery)
@@ -1207,3 +1213,24 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Status:** CONFIRMED NOVEL. Extensive literature search found NO prior work on roots-of-unity evaluations of F(T,x). Not a consequence of Grinberg-Stanley mod-4. Chebikin et al. studied cyclotomic factors of descent set polynomial Q_n but Phi_3 doesn't appear for n<=23.
 **What:** F(T,omega) ≡ 0 mod 9 at n=7 (all 5040 tournaments). Equivalently S_0 = sum_{k≡0 mod 3} F_k ≡ 0 mod 6.
 **Next step:** (1) Prove algebraically using OCF or Fourier decomposition. (2) Check at n=9,10. (3) Generalize: are there universal congruences for F(T,zeta_k) mod k^2?
+
+### INV-119: Deletion-Contraction for Hamiltonian Paths — PROVED (THM-082)
+**Source:** kind-pasteur-2026-03-07-S35
+**Status:** PROVED by clean bijection argument. Verified exhaustive n=4,5.
+**What:** For any digraph D with directed edge e=(u→v):
+  H(D) = H(D\e) + H(D/e)
+where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
+**Proof:** Ham paths not using e = H(D\e). Ham paths using e biject with Ham paths of D/e via collapsing ...→u→v→... to ...→w→...
+**Corollary:** Arc-flip H-difference reduces to contraction: H(T)-H(T') = H(T/e) - H(T'/e').
+**Key structural insight:** T/e and T'/e' differ ONLY in how w connects to other vertices (profile swap). If u,v have identical profiles, T/e = T'/e' and H(T) = H(T').
+**Connection to Mitrovic:** Commutative specialization of W_X = W_{X\e} - W_{X/e}↑ (arXiv:2504.20968).
+**Scripts:** `04-computation/deletion_contraction_test.py`, `04-computation/flip_reduction_via_contraction.py`
+
+### INV-120: Polynomial Deletion-Contraction for F(T,x) — PROVED (THM-083)
+**Source:** kind-pasteur-2026-03-07-S35
+**Status:** PROVED algebraically. Verified exhaustive n=4,5.
+**What:** F_T(x) = F_{T\e}(x) + (x-1) * F(T/e, x). Generalizes THM-082 to polynomial level.
+**Key identification:** G_{u,v}(x) = F(T/e, x) — the "conditional path polynomial" summing over permutations with u immediately before v equals the forward-edge polynomial of the contraction.
+**Flip formula as corollary:** F_T - F_{T'} = (x-1) * [F(T/e) - F(T'/e')], with D anti-palindromic.
+**Anti-palindromicity proof:** D(x) = -x^{n-2}D(1/x) follows from palindromicity of F_T, F_{T'}.
+**Scripts:** `04-computation/poly_deletion_contraction.py`

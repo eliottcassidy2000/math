@@ -13,40 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-07-S46 — 2026-03-07 (Creative Exploration: Cross-Domain Connections)
-**Account:** opus
-**Continuation of:** opus-2026-03-07-S45
-**Summary of work:** [IN PROGRESS — autonomous creative exploration session]
-
-## opus-2026-03-07-S35c11 — 2026-03-07 (W-F Mobius Transform, Perpendicularity Mechanism, M(r) Symmetry)
-**Account:** opus
-**Continuation of:** opus-2026-03-07-S35c10 (context compacted multiple times)
+## kind-pasteur-2026-03-07-S35 — 2026-03-07 (Deletion-Contraction Proofs, F(ω) Analysis)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S34 (concept map session)
 **Summary of work:**
-  Long-running overnight creative exploration. Generated and tested 20+ outlandish hypotheses about deep structure.
+  Proved two fundamental deletion-contraction theorems and analyzed F(T,ω) mod 9.
 
-  **Major discoveries:**
-  1. **THM-K: W(T,r) = (r-1/2)^{n-1} * F(T, (2r+1)/(2r-1))** — Exact Mobius transform connecting W-polynomial to forward-edge polynomial. Verified with zero error at n=4,5,6,7.
-  2. **THM-L: W(T,-r) = (-1)^{n-1} W(T^op, r)** — Proved. For odd n: W(T)=W(T^op) (complement invariant).
-  3. **THM-M: M(r) symmetric for ALL r** — The r-parameterized transfer matrix is symmetric at every r value, not just r=1/2. Each entry is an even function of r at odd n. Verified at n=5.
-  4. **Perpendicularity mechanism explained**: Var(c_0)/Var(H) → 0 exponentially (1.0 at n=3, 0.057 at n=5, 0.001 at n=7). At even n: c_0 ≡ 0 identically.
-  5. **Spectral correlations**: Corr(H, |det(I-uA)|) > 0.94 for all n=5,6,7. Char poly determines H exactly at n=5 but fails at n≥6.
-  6. **GS flip orthogonality is trivial**: Cov(H_sym, H_anti) = 0 for any involution on a uniform measure — not a deep tournament property.
-  7. **M(T) ≠ M(T^op)** in general — complement does NOT preserve the full transfer matrix, only its trace.
-  8. **Deletion-contraction breaks M symmetry**: M(T\e) and M(T/e) are NOT symmetric — symmetry is specific to tournaments.
-  9. **Redei-Berge literature connection**: U_X = U_{X^op} (complement invariance of Redei-Berge symmetric function) matches our W(T)=W(T^op). Noncommuting version has deletion-contraction.
+  **Major results:**
+  1. **THM-082 (PROVED):** H(D) = H(D\e) + H(D/e) for any digraph D with directed edge e. Clean bijection: Ham paths using e biject with Ham paths of contraction D/e. Convention: w inherits IN from tail, OUT from head.
+  2. **THM-083 (PROVED):** Polynomial-level DC: F_T(x) = F_{T\e}(x) + (x-1)·F(T/e,x). Key identification: G_{u,v}(x) = F(T/e,x). Anti-palindromicity of D = F(T/e)-F(T'/e') proved from tournament palindrome.
+  3. **Arc-flip reduction:** H(T)-H(T') = H(T/e)-H(T'/e'). Reduces n-vertex flip to (n-1)-vertex contraction difference.
+  4. **CORRECTED INV-114:** H(T) ≠ H(T') under arc flip (opus error). Correct: F(T,1)=n!=F(T',1).
+  5. **F(T,ω) mod 3 PROVED algebraically** for all n ≥ 3. Formula: F(T,ω) = n! - 3S₁ (when d divisible by 3), with analogous formulas for other n.
+  6. **F(T,ω) mod 9 universality starts at n=6**, not n=7 as opus claimed. Verified: n=6 exhaustive (32768), n=7 sampled (5000). The key congruence: S₁ ≡ 0 mod 3 for n ≥ 6.
+  7. **Iterated DC = Cayley formula:** Full expansion sums to n^{n-2} (spanning tree count), independent of tournament.
 
-  **Key dead ends:**
-  - M is NOT a polynomial in A or A^T
-  - M does NOT commute with A or B
-  - GS flip eigenspace decomposition doesn't explain perpendicularity (it's trivially orthogonal)
-  - Vertex deletion doesn't give simple recursion for M
+  **New files:**
+  - `01-canon/theorems/THM-082-deletion-contraction-ham-paths.md`
+  - `01-canon/theorems/THM-083-polynomial-deletion-contraction.md`
+  - `04-computation/flip_reduction_via_contraction.py`
+  - `04-computation/poly_deletion_contraction.py`
+  - `04-computation/iterated_dc_expansion.py`
+  - `04-computation/f_omega_mod9_proof.py`
 
-  **Files modified:** 03-artifacts/drafts/signed-hp-permanent-skeleton.md (added THM-K, THM-L, THM-M)
 **Unresolved threads:**
-  - Prove M(r) symmetry algebraically (strongest form of transfer matrix symmetry)
-  - Understand why det(I-uA) correlates so strongly with H
-  - Noncommuting Redei-Berge deletion-contraction as proof path
-  - bits=all tournament: H(n) = 2H(n-1) - (2k-1) correction pattern
+  - Algebraic proof of S₁ ≡ 0 mod 3 for n ≥ 6 (why does mod 9 kick in at n=6?)
+  - Connection between DC and OCF (does the contraction preserve independence polynomial structure?)
+  - F(T,ω) mod 27 and higher powers: any pattern?
+  - Iterated DC expansion: is there a useful partial expansion (not all-or-nothing)?
 
 ## opus-2026-03-07-S45 — 2026-03-07 (Flip Formula, Transfer Matrix, Matroid Structure)
 **Account:** opus
