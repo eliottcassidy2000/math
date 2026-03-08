@@ -1,0 +1,58 @@
+======================================================================
+LINK STRUCTURE OF THE QUOTIENT COMPLEX
+======================================================================
+
+Analyzing v=0 across all n=5 tournaments
+
+R_p dimensions (R₁, R₂, R₃): count
+  R=(4, 5, 2): 120
+  R=(4, 5, 3): 112
+  R=(4, 5, 4): 48
+  R=(4, 6, 2): 48
+  R=(4, 6, 3): 216
+  R=(4, 6, 4): 336
+  R=(4, 6, 6): 24
+  R=(4, 7, 6): 96
+  R=(4, 7, 9): 24
+
+2-path types through v=0:
+  {'end': 1, 'middle': 3, 'start': 4}: 96
+  {'end': 1, 'middle': 4, 'start': 1}: 24
+  {'end': 2, 'middle': 3, 'start': 5}: 96
+  {'end': 2, 'middle': 4, 'start': 2}: 96
+  {'end': 3, 'middle': 3}: 32
+  {'end': 3, 'middle': 3, 'start': 6}: 32
+  {'end': 3, 'middle': 4, 'start': 3}: 144
+  {'end': 4, 'middle': 3, 'start': 1}: 96
+  {'end': 4, 'middle': 4, 'start': 4}: 96
+  {'end': 5, 'middle': 3, 'start': 2}: 96
+  {'end': 5, 'middle': 4, 'start': 5}: 24
+  {'end': 6}: 64
+  {'end': 6, 'middle': 3, 'start': 3}: 32
+  {'middle': 3, 'start': 3}: 32
+  {'start': 6}: 64
+
+R₃ vs R₂:
+  R₃ ≥ R₂: 48/1024
+  R₃ < R₂: 976/1024
+
+======================================================================
+RELATIVE HOMOLOGY COMPUTATION
+======================================================================
+
+(H₂^rel, ker ∂₂^R, im ∂₃^R) at n=5, v=0:
+  H₂^R=0, ker=2, im=2: 216
+  H₂^R=0, ker=3, im=3: 496
+  H₂^R=0, ker=4, im=4: 144
+  H₂^R=1, ker=3, im=2: 168
+
+ker(∂₂^R) always equals im(∂₃^R)? False
+
+ker(∂₂^R) by out-degree of v=0:
+  d_out(v)=0: ker values = {3: 64}
+  d_out(v)=1: ker values = {2: 48, 3: 184, 4: 24}
+  d_out(v)=2: ker values = {2: 120, 3: 168, 4: 96}
+  d_out(v)=3: ker values = {2: 48, 3: 184, 4: 24}
+  d_out(v)=4: ker values = {3: 64}
+
+Done.
