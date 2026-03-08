@@ -30,7 +30,9 @@ The D_k hierarchy:
 ## Relationship to F-polynomial (THM-K)
 W(T,r) = (r - 1/2)^{n-1} * F(T, (2r+1)/(2r-1))
 
-This Mobius transform connects W (which is even in r at odd n) to F (which is palindromic: F_k = F_{n-1-k}).
+This Mobius transform connects W (which is even in r at odd n) to F.
+
+**CORRECTION (opus-S37):** F(T,x) is NOT palindromic in general. The correct relation is F_k(T) = F_{n-1-k}(T^op) (complement duality). F is palindromic only for self-complementary tournaments.
 
 ## Values
 W(T, 1/2) = H/2^{n-1} for any tournament.

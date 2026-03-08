@@ -1,0 +1,210 @@
+=== WORPITZKY EXPANSION OF F(T,x) ===
+
+
+============================================================
+n = 3
+============================================================
+Eulerian numbers A(2,k): [1, 1]
+Sum = 2 = 2
+
+Transitive: F = [0, 0, 1]
+  Worpitzky coeffs w = [1, 1, 0]
+
+Trial 0: F = [0, 1, 0], H = 1
+  Worpitzky coeffs w = [-1.0, 1.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 1: F = [0, 1, 0], H = 1
+  Worpitzky coeffs w = [-1.0, 1.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 2: F = [0, 1, 0], H = 1
+  Worpitzky coeffs w = [-1.0, 1.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+  Summary over 10 trials:
+    All non-negative: 0/10
+    All palindromic: 0/10
+    All integer: 10/10
+
+============================================================
+n = 4
+============================================================
+Eulerian numbers A(3,k): [1, 4, 1]
+Sum = 6 = 6
+
+Transitive: F = [0, 0, 0, 1]
+  Worpitzky coeffs w = [1, 4, 1, 0]
+
+Trial 0: F = [1, 2, 0, 0], H = 3
+  Worpitzky coeffs w = [1.0, -1.0, -1.0, 1.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? True
+
+Trial 1: F = [0, 1, 0, 0], H = 1
+  Worpitzky coeffs w = [1.0, -2.0, 1.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 2: F = [0, 0, 0, 1], H = 1
+  Worpitzky coeffs w = [1.0, 4.0, 1.0, 0.0]
+  All non-negative? True
+  Sum(w) = 6.00
+  Palindromic? False
+
+  Summary over 10 trials:
+    All non-negative: 1/10
+    All palindromic: 1/10
+    All integer: 10/10
+
+============================================================
+n = 5
+============================================================
+Eulerian numbers A(4,k): [1, 11, 11, 1]
+Sum = 24 = 24
+
+Transitive: F = [0, 0, 0, 0, 1]
+  Worpitzky coeffs w = [1, 11, 11, 1, 0]
+
+Trial 0: F = [0, 3, 8, 0, 0], H = 11
+  Worpitzky coeffs w = [5.0, 1.0, -17.0, 11.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 1: F = [0, 1, 6, 4, 0], H = 11
+  Worpitzky coeffs w = [1.0, -15.0, 3.0, 11.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 2: F = [0, 4, 1, 0, 0], H = 5
+  Worpitzky coeffs w = [-3.0, 11.0, -13.0, 5.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+  Summary over 10 trials:
+    All non-negative: 0/10
+    All palindromic: 0/10
+    All integer: 10/10
+
+============================================================
+n = 6
+============================================================
+Eulerian numbers A(5,k): [1, 26, 66, 26, 1]
+Sum = 120 = 120
+
+Transitive: F = [0, 0, 0, 0, 0, 1]
+  Worpitzky coeffs w = [1, 26, 66, 26, 1, 0]
+
+Trial 0: F = [0, 0, 8, 9, 0, 0], H = 17
+  Worpitzky coeffs w = [1.0, 34.0, -54.0, 2.0, 17.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 1: F = [0, 0, 7, 8, 0, 0], H = 15
+  Worpitzky coeffs w = [1.0, 30.0, -48.0, 2.0, 15.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 2: F = [0, 6, 9, 0, 0, 0], H = 15
+  Worpitzky coeffs w = [-3.0, -6.0, 36.0, -42.0, 15.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+  Summary over 5 trials:
+    All non-negative: 0/5
+    All palindromic: 0/5
+    All integer: 5/5
+
+============================================================
+n = 7
+============================================================
+Eulerian numbers A(6,k): [1, 57, 302, 302, 57, 1]
+Sum = 720 = 720
+
+Transitive: F = [0, 0, 0, 0, 0, 0, 1]
+  Worpitzky coeffs w = [1, 57, 302, 302, 57, 1, 0]
+
+Trial 0: F = [0, 0, 1, 4, 0, 0, 0], H = 5
+  Worpitzky coeffs w = [-3.0, -7.0, 34.0, -30.0, 1.0, 5.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 1: F = [0, 0, 6, 23, 14, 0, 0], H = 43
+  Worpitzky coeffs w = [-3.0, 85.0, 56.0, -312.0, 131.0, 43.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+Trial 2: F = [0, 8, 57, 42, 4, 0, 0], H = 111
+  Worpitzky coeffs w = [11.0, -137.0, 330.0, -182.0, -133.0, 111.0, 0.0]
+  All non-negative? False
+  Sum(w) = 0.00
+  Palindromic? False
+
+  Summary over 5 trials:
+    All non-negative: 0/5
+    All palindromic: 0/5
+    All integer: 5/5
+
+
+=== ALTERNATIVE: h*-VECTOR EXPANSION ===
+The h*-vector uses the basis {x^k * (1-x)^{n-1-k}} or similar.
+For Ehrhart theory, the h*-vector in the Worpitzky basis gives non-negative coeffs
+for lattice polytopes. Our F(T,x) is palindromic like the h-vector of a Gorenstein polytope.
+
+
+=== GAMMA EXPANSION ===
+For palindromic polynomials, the gamma expansion is:
+F(T,x) = sum_{k} gamma_k * x^k * (1+x)^{n-1-2k}
+gamma-positivity means all gamma_k >= 0.
+This is a STRONGER property than palindromicity + non-negativity.
+
+n = 3:
+  Trial 0: F=[1, 0, 0], gamma=[0.67, -2.33], err=1.00e+00
+    gamma-positive? False
+  Trial 1: F=[0, 1, 0], gamma=[0.0, 1.0], err=4.44e-16
+    gamma-positive? True
+  gamma-positive: 11/20
+
+n = 4:
+  Trial 0: F=[0, 0, 1, 0], gamma=[0.12, 0.13], err=5.21e-01
+    gamma-positive? True
+  Trial 1: F=[0, 3, 0, 0], gamma=[-0.35, 2.61], err=1.56e+00
+    gamma-positive? False
+  gamma-positive: 0/20
+
+n = 5:
+  Trial 0: F=[0, 6, 9, 0, 0], gamma=[0.54, -6.77, 31.73], err=1.24e+01
+    gamma-positive? False
+  Trial 1: F=[0, 4, 5, 0, 0], gamma=[0.36, -4.51, 20.15], err=8.29e+00
+    gamma-positive? False
+  gamma-positive: 3/20
+
+n = 6:
+  Trial 0: F=[0, 3, 22, 14, 2, 0], gamma=[0.13, -0.01, 17.21], err=4.46e+00
+    gamma-positive? False
+  Trial 1: F=[0, 5, 17, 18, 3, 0], gamma=[0.02, 2.74, 9.74], err=2.16e+00
+    gamma-positive? True
+  gamma-positive: 0/5
+
+n = 7:
+  Trial 0: F=[0, 0, 19, 42, 10, 0, 0], gamma=[-0.06, 1.36, -0.63, 52.17], err=1.59e+01
+    gamma-positive? False
+  Trial 1: F=[0, 0, 4, 34, 33, 5, 1], gamma=[1.23, -6.29, 63.04, -138.31], err=5.93e+01
+    gamma-positive? False
+  gamma-positive: 0/5

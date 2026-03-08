@@ -1,0 +1,212 @@
+======================================================================
+ROOTS OF F(T,x)
+======================================================================
+
+n=3, degree d=2:
+  F=[1, 0, 0], H=1
+    real roots: []
+    all real=True, all neg=True
+  F=[0, 1, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+  F=[1, 2, 0], H=3
+    real roots: ['-0.5000']
+    all real=True, all neg=True
+  F=[0, 1, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+  F=[0, 1, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+
+  SUMMARY: all real roots: 8/8
+  all negative real: 8/8
+  has x=0 root (F_0=0): 6/8
+
+n=4, degree d=3:
+  F=[1, 0, 0, 0], H=1
+    real roots: []
+    all real=True, all neg=True
+  F=[0, 1, 0, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+  F=[1, 2, 0, 0], H=3
+    real roots: ['-0.5000']
+    all real=True, all neg=True
+  F=[0, 1, 0, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+  F=[1, 4, 0, 0], H=5
+    real roots: ['-0.2500']
+    all real=True, all neg=True
+
+  SUMMARY: all real roots: 62/64
+  all negative real: 62/64
+  has x=0 root (F_0=0): 56/64
+
+n=5, degree d=4:
+  F=[1, 0, 0, 0, 0], H=1
+    real roots: []
+    all real=True, all neg=True
+  F=[0, 1, 0, 0, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+  F=[1, 2, 0, 0, 0], H=3
+    real roots: ['-0.5000']
+    all real=True, all neg=True
+  F=[0, 1, 0, 0, 0], H=1
+    real roots: ['0.0000']
+    all real=True, all neg=True
+  F=[1, 4, 0, 0, 0], H=5
+    real roots: ['-0.2500']
+    all real=True, all neg=True
+
+  SUMMARY: all real roots: 976/1024
+  all negative real: 976/1024
+  has x=0 root (F_0=0): 960/1024
+
+
+======================================================================
+LOG-CONCAVITY OF F_k
+======================================================================
+Check F_k^2 >= F_{k-1} * F_{k+1} for all k
+
+n=3:
+  Log-concave: 8/8
+
+n=4:
+  Log-concave: 64/64
+
+n=5:
+  Log-concave: 1020/1024
+
+
+======================================================================
+UNIMODALITY OF F_k
+======================================================================
+
+n=3:
+  Unimodal: 8/8
+
+n=4:
+  Unimodal: 64/64
+
+n=5:
+  Unimodal: 1024/1024
+
+
+======================================================================
+G(T,x) = F(T,x) + x^{n-1}F(T,1/x) = F(T,x) + F(T^op,x)
+======================================================================
+G is palindromic by construction. Study its properties.
+
+n=4:
+  G=[1, 0, 0, 1], gammas=[1, -3]
+    gamma nonneg: False
+  G=[0, 1, 1, 0], gammas=[0, 1]
+    gamma nonneg: True
+  G=[1, 2, 2, 1], gammas=[1, -1]
+    gamma nonneg: False
+  G=[0, 1, 1, 0], gammas=[0, 1]
+    gamma nonneg: True
+  G=[1, 4, 4, 1], gammas=[1, 1]
+    gamma nonneg: True
+
+  G all real roots: 58/64
+  G gamma-nonneg: 58/64
+
+n=5:
+  G=[1, 0, 0, 0, 1], gammas=[1, -4, 2]
+    gamma nonneg: False
+  G=[0, 1, 0, 1, 0], gammas=[0, 1, -2]
+    gamma nonneg: False
+  G=[1, 2, 0, 2, 1], gammas=[1, -2, -2]
+    gamma nonneg: False
+  G=[0, 1, 0, 1, 0], gammas=[0, 1, -2]
+    gamma nonneg: False
+  G=[1, 4, 0, 4, 1], gammas=[1, 0, -6]
+    gamma nonneg: False
+
+  G all real roots: 676/1024
+  G gamma-nonneg: 710/1024
+
+
+======================================================================
+D(T,x) = F(T,x) - F(T^op,x) [ANTI-PALINDROMIC PART]
+======================================================================
+D_k = F_k - F_{d-k}, so D_k + D_{d-k} = 0 (anti-palindromic)
+F = (G + D)/2 where G is palindromic and D is anti-palindromic
+
+n=4:
+  F=[1, 0, 0, 0], D=[1, 0, 0, -1], H=1
+  F=[0, 1, 0, 0], D=[0, 1, -1, 0], H=1
+  F=[1, 2, 0, 0], D=[1, 2, -2, -1], H=3
+  F=[0, 1, 0, 0], D=[0, 1, -1, 0], H=1
+  F=[1, 4, 0, 0], D=[1, 4, -4, -1], H=5
+
+  D at x=1: [0, 0, 0] (should all be 0)
+
+  D_0 = F_0 - F_d distribution: {-1: 8, 0: 48, 1: 8}
+
+n=5:
+  F=[1, 0, 0, 0, 0], D=[1, 0, 0, 0, -1], H=1
+  F=[0, 1, 0, 0, 0], D=[0, 1, 0, -1, 0], H=1
+  F=[1, 2, 0, 0, 0], D=[1, 2, 0, -2, -1], H=3
+  F=[0, 1, 0, 0, 0], D=[0, 1, 0, -1, 0], H=1
+  F=[1, 4, 0, 0, 0], D=[1, 4, 0, -4, -1], H=5
+
+  D at x=1: [0, 0, 0] (should all be 0)
+
+  D_0 = F_0 - F_d distribution: {-1: 64, 0: 896, 1: 64}
+  (D_0, D_1) has 35 distinct values
+
+  Does (D_0, D_1) determine H?
+    D_0=-1, D_1=-10: H in [11, 15]
+
+
+======================================================================
+F(T,x) FOR SPECIFIC TOURNAMENT FAMILIES
+======================================================================
+
+--- Transitive tournaments ---
+  n=3: F=[0, 0, 1], H=1
+  n=4: F=[0, 0, 0, 1], H=1
+  n=5: F=[0, 0, 0, 0, 1], H=1
+  n=6: F=[0, 0, 0, 0, 0, 1], H=1
+  n=7: F=[0, 0, 0, 0, 0, 0, 1], H=1
+
+--- Near-regular tournaments (n=5) ---
+  scores=(2,2,2,2,2): F=[1, 10, 4, 0, 0], H=15
+
+--- Maximum H tournaments ---
+  n=4: max H=5, F=[1, 4, 0, 0]
+  n=5: max H=15, F=[1, 8, 6, 0, 0]
+
+
+======================================================================
+F(T,x) VIA TRANSFER MATRIX
+======================================================================
+
+Define the x-weighted adjacency matrix M_x:
+  M_x[v,u] = A[v][u] * x^{[v < u]}
+
+Then F(T,x) = sum of all products along HPs = "permanent-like" computation.
+
+More precisely, F(T,x) can be computed via the DP:
+  dp[mask, v] = polynomial in x
+  dp[{v}, v] = 1
+  dp[mask|{u}, u] += dp[mask, v] * M_x[v,u]
+
+F(T,x) = sum_v dp[all, v]
+
+
+n=4:
+  T#0: F=[1, 0, 0, 0], F(1)=1, DP=1, match=True
+  T#0: F=[1, 0, 0, 0], F(2)=1, DP=1, match=True
+  T#1: F=[0, 1, 0, 0], F(1)=1, DP=1, match=True
+  T#1: F=[0, 1, 0, 0], F(2)=2, DP=2, match=True
+  T#2: F=[1, 2, 0, 0], F(1)=3, DP=3, match=True
+  T#2: F=[1, 2, 0, 0], F(2)=5, DP=5, match=True
+
+
+Done.

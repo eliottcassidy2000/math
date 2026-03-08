@@ -1,0 +1,359 @@
+======================================================================
+SECTION 1: F(T, m) AT POSITIVE INTEGERS
+======================================================================
+
+F(T, m) = sum_k F_k * m^k.
+At m=0: F(T,0) = F_0 = #{HPs with 0 ascents} = #{decreasing HPs}
+At m=1: F(T,1) = sum F_k = H = total HP count
+At m=2: F(T,2) = sum F_k * 2^k
+At m=-1: F(T,-1) = sum F_k * (-1)^k
+
+For the EULERIAN polynomial A_n(x):
+  A_n(0) = 1 (identity permutation has 0 ascents... wait, n=0 case)
+  Actually A(n,0) = 1 always (one perm with 0 ascents: n,n-1,...,1)
+  A_n(1) = n!
+  A_n(-1) = sum A(n,k)(-1)^k = 0 for n >= 2 (by inclusion-exclusion)
+
+For F(T,x), F(T,-1) = sum F_k (-1)^k. This is the "alternating sum"
+of the ascent distribution. It need not be 0.
+
+
+n=3:
+  Eulerian: A(3,k) = [1, 4, 1]
+  A(3,-1) = -2
+  T#0: F=[1, 0, 0], H=1
+    F(-1)=1, F(-2)=1, F(2)=1, F(3)=1
+  T#1: F=[0, 1, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+  T#2: F=[1, 2, 0], H=3
+    F(-1)=-1, F(-2)=-3, F(2)=5, F(3)=7
+  T#3: F=[0, 1, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+  T#4: F=[0, 1, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+
+  F(T,-1) distribution: {-1: 6, 1: 2}
+  Sum F(T,-1) over all T = -4
+  All F(-1) even? False
+
+n=4:
+  Eulerian: A(4,k) = [1, 11, 11, 1]
+  A(4,-1) = 0
+  T#0: F=[1, 0, 0, 0], H=1
+    F(-1)=1, F(-2)=1, F(2)=1, F(3)=1
+  T#1: F=[0, 1, 0, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+  T#2: F=[1, 2, 0, 0], H=3
+    F(-1)=-1, F(-2)=-3, F(2)=5, F(3)=7
+  T#3: F=[0, 1, 0, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+  T#4: F=[1, 4, 0, 0], H=5
+    F(-1)=-3, F(-2)=-7, F(2)=9, F(3)=13
+
+  F(T,-1) distribution: {-3: 5, -1: 27, 1: 27, 3: 5}
+  Sum F(T,-1) over all T = 0
+  All F(-1) even? False
+
+n=5:
+  Eulerian: A(5,k) = [1, 26, 66, 26, 1]
+  A(5,-1) = 16
+  T#0: F=[1, 0, 0, 0, 0], H=1
+    F(-1)=1, F(-2)=1, F(2)=1, F(3)=1
+  T#1: F=[0, 1, 0, 0, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+  T#2: F=[1, 2, 0, 0, 0], H=3
+    F(-1)=-1, F(-2)=-3, F(2)=5, F(3)=7
+  T#3: F=[0, 1, 0, 0, 0], H=1
+    F(-1)=-1, F(-2)=-2, F(2)=2, F(3)=3
+  T#4: F=[1, 4, 0, 0, 0], H=5
+    F(-1)=-3, F(-2)=-7, F(2)=9, F(3)=13
+
+  F(T,-1) distribution: {-9: 4, -7: 10, -5: 14, -3: 62, -1: 212, 1: 402, 3: 218, 5: 86, 7: 16}
+  Sum F(T,-1) over all T = 1024
+  All F(-1) even? False
+
+
+======================================================================
+SECTION 2: WORPITZKY COEFFICIENTS OF F(T,x)
+======================================================================
+
+Worpitzky identity: x^d = sum_{k=0}^{d} A(d,k) * C(x+k, d)
+
+So F(T,x) = sum_k w_k C(x+k, d) where d = n-1.
+
+Properties to check:
+1. w_k are always integers (known: yes)
+2. w_k >= 0? (known: no, can be negative)
+3. sum w_k = ? (at x=1: sum w_k C(1+k,d))
+4. w_0 = F(T,0) = F_0 (value at x=0, since C(k,d)=0 for k<d, C(d,d)=1 only for k=d)
+   Wait: C(0+k, d) = C(k,d) which is 0 for k < d and 1 for k = d.
+   So p(0) = w_d. Hence w_{d} = w_{n-1} = F_0.
+5. w_{n-1} = F_0 = #{decreasing HPs}
+
+
+n=3, d=2:
+  T#0: F=[1, 0, 0], w=[1, -2, 1], H=1
+  T#1: F=[0, 1, 0], w=[-1, 1, 0], H=1
+  T#2: F=[1, 2, 0], w=[-1, 0, 1], H=3
+  T#3: F=[0, 1, 0], w=[-1, 1, 0], H=1
+  T#4: F=[0, 1, 0], w=[-1, 1, 0], H=1
+  T#5: F=[0, 2, 1], w=[-1, 3, 0], H=3
+  T#6: F=[0, 1, 0], w=[-1, 1, 0], H=1
+  T#7: F=[0, 0, 1], w=[1, 1, 0], H=1
+
+  w_k ranges:
+    w_0: min=-1, max=1, mean=-0.5000
+    w_1: min=-2, max=3, mean=0.7500
+    w_2: min=0, max=1, mean=0.2500
+
+  Checking w_{n-2} = H - n*F_0:
+    H=1, F_0=1, w_{n-2}=-2, H-n*F_0=-2, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+    H=3, F_0=1, w_{n-2}=0, H-n*F_0=0, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+
+n=4, d=3:
+  T#0: F=[1, 0, 0, 0], w=[-1, 3, -3, 1], H=1
+  T#1: F=[0, 1, 0, 0], w=[1, -2, 1, 0], H=1
+  T#2: F=[1, 2, 0, 0], w=[1, -1, -1, 1], H=3
+  T#3: F=[0, 1, 0, 0], w=[1, -2, 1, 0], H=1
+  T#4: F=[1, 4, 0, 0], w=[3, -5, 1, 1], H=5
+  T#5: F=[0, 3, 0, 0], w=[3, -6, 3, 0], H=3
+  T#6: F=[1, 4, 0, 0], w=[3, -5, 1, 1], H=5
+  T#7: F=[0, 1, 0, 0], w=[1, -2, 1, 0], H=1
+
+  w_k ranges:
+    w_0: min=-3, max=3, mean=0.0000
+    w_1: min=-6, max=4, mean=-1.8750
+    w_2: min=-3, max=5, mean=2.5000
+    w_3: min=0, max=1, mean=0.1250
+
+  Checking w_{n-2} = H - n*F_0:
+    H=1, F_0=1, w_{n-2}=-3, H-n*F_0=-3, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+    H=3, F_0=1, w_{n-2}=-1, H-n*F_0=-1, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+    H=5, F_0=1, w_{n-2}=1, H-n*F_0=1, match=True
+
+n=5, d=4:
+  T#0: F=[1, 0, 0, 0, 0], w=[1, -4, 6, -4, 1], H=1
+  T#1: F=[0, 1, 0, 0, 0], w=[-1, 3, -3, 1, 0], H=1
+  T#2: F=[1, 2, 0, 0, 0], w=[-1, 2, 0, -2, 1], H=3
+  T#3: F=[0, 1, 0, 0, 0], w=[-1, 3, -3, 1, 0], H=1
+  T#4: F=[1, 4, 0, 0, 0], w=[-3, 8, -6, 0, 1], H=5
+  T#5: F=[0, 3, 0, 0, 0], w=[-3, 9, -9, 3, 0], H=3
+  T#6: F=[1, 4, 0, 0, 0], w=[-3, 8, -6, 0, 1], H=5
+  T#7: F=[0, 1, 0, 0, 0], w=[-1, 3, -3, 1, 0], H=1
+
+  w_k ranges:
+    w_0: min=-9, max=7, mean=1.0000
+    w_1: min=-27, max=26, mean=-3.6875
+    w_2: min=-28, max=41, mean=-3.0625
+    w_3: min=-4, max=15, mean=7.1875
+    w_4: min=0, max=1, mean=0.0625
+
+  Checking w_{n-2} = H - n*F_0:
+    H=1, F_0=1, w_{n-2}=-4, H-n*F_0=-4, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+    H=3, F_0=1, w_{n-2}=-2, H-n*F_0=-2, match=True
+    H=1, F_0=0, w_{n-2}=1, H-n*F_0=1, match=True
+    H=5, F_0=1, w_{n-2}=0, H-n*F_0=0, match=True
+
+
+======================================================================
+SECTION 3: WORPITZKY INVERSION FORMULA
+======================================================================
+
+The Worpitzky coefficients w_k can be obtained by:
+  w_k = sum_{j=0}^{d-k} (-1)^j C(d+1, j) * p(k-j)
+
+where p(x) = F(T,x) and d = n-1. This is the "Worpitzky inversion".
+
+Equivalently, w_k = Delta^d [p(x)] evaluated at x=k, where Delta is
+the forward difference operator. But the standard formula uses:
+
+  w_k = sum_{j=0}^{d} (-1)^{d-j} C(d, d-j) F(T, k+j-d+1)
+
+Wait, let me use the proper inversion. If p(x) = sum w_k C(x+k,d), then
+  w_k = sum_{j=0}^{d} (-1)^{d-j} C(d,j) * p(k-d+j)
+
+Let me verify this computationally.
+
+n=4: F=[0, 0, 0, 1], w=[1, 4, 1, 0]
+  x=0: F(x)=0, sum w_k C(x+k,3)=0
+  x=1: F(x)=1, sum w_k C(x+k,3)=1
+  x=2: F(x)=8, sum w_k C(x+k,3)=8
+  x=3: F(x)=27, sum w_k C(x+k,3)=27
+  x=4: F(x)=64, sum w_k C(x+k,3)=64
+  x=5: F(x)=125, sum w_k C(x+k,3)=125
+
+
+======================================================================
+SECTION 4: IS F(T,x) PALINDROMIC?
+======================================================================
+
+CRITICAL CHECK: Earlier analysis claimed F(T,x) is palindromic.
+F_k(T) = F_{n-1-k}(T) would mean #{HPs with k ascents} = #{HPs with k descents}.
+
+This IS true for the Eulerian polynomial (Worpitzky identity gives this).
+For a general tournament, this requires a bijection on HPs that swaps
+ascents and descents. The map P -> reverse(P) does this, but reverse(P)
+is a HP of T^op, not T. So F(T,x) = x^{n-1} F(T^op, 1/x).
+
+F(T,x) is palindromic iff T and T^op have the same HP structure, which
+happens iff T is "self-complementary" in some sense.
+
+  n=4, T#1: F=[1, 0, 0, 0], palindromic=False
+  n=4, T#2: F=[0, 1, 0, 0], palindromic=False
+  n=4, T#3: F=[1, 2, 0, 0], palindromic=False
+  n=4: palindromic F: 0/64
+  n=4: F=reversed(F) count: 0/64
+  n=5, T#1: F=[1, 0, 0, 0, 0], palindromic=False
+  n=5, T#2: F=[0, 1, 0, 0, 0], palindromic=False
+  n=5, T#3: F=[1, 2, 0, 0, 0], palindromic=False
+  n=5: palindromic F: 180/1024
+  n=5: F=reversed(F) count: 180/1024
+
+
+======================================================================
+SECTION 5: WORPITZKY COEFFICIENTS — DEEPER STRUCTURE
+======================================================================
+
+n=4:
+  Distinct w vectors: 18
+  Distinct F vectors: 18
+
+  w_{n-3} analysis (w_1):
+    C(2+0, 3) = 0
+    C(2+1, 3) = 1
+    C(2+2, 3) = 4
+    C(2+3, 3) = 10
+
+  For n=4: w_1 = F(2) - 4H + 6F_0 = 3F_0 - 2F_1 + 0F_2 + 4F_3
+    F=[1, 0, 0, 0], w_1=3, pred=3, match=True
+    F=[0, 1, 0, 0], w_1=-2, pred=-2, match=True
+    F=[1, 2, 0, 0], w_1=-1, pred=-1, match=True
+    F=[0, 1, 0, 0], w_1=-2, pred=-2, match=True
+    F=[1, 4, 0, 0], w_1=-5, pred=-5, match=True
+
+  w as function of F values at specific points:
+    F=[1, 0, 0, 0], w=[-1, 3, -3, 1], F(-1)=1, F(2)=1
+    F=[0, 1, 0, 0], w=[1, -2, 1, 0], F(-1)=-1, F(2)=2
+    F=[1, 2, 0, 0], w=[1, -1, -1, 1], F(-1)=-1, F(2)=5
+    F=[0, 1, 0, 0], w=[1, -2, 1, 0], F(-1)=-1, F(2)=2
+    F=[1, 4, 0, 0], w=[3, -5, 1, 1], F(-1)=-3, F(2)=9
+    F=[0, 3, 0, 0], w=[3, -6, 3, 0], F(-1)=-3, F(2)=6
+    F=[1, 4, 0, 0], w=[3, -5, 1, 1], F(-1)=-3, F(2)=9
+    F=[0, 1, 0, 0], w=[1, -2, 1, 0], F(-1)=-1, F(2)=2
+
+n=5:
+  Distinct w vectors: 144
+  Distinct F vectors: 144
+
+  w_{n-3} analysis (w_2):
+    C(2+0, 4) = 0
+    C(2+1, 4) = 0
+    C(2+2, 4) = 1
+    C(2+3, 4) = 5
+    C(2+4, 4) = 15
+
+  w as function of F values at specific points:
+    F=[1, 0, 0, 0, 0], w=[1, -4, 6, -4, 1], F(-1)=1, F(2)=1
+    F=[0, 1, 0, 0, 0], w=[-1, 3, -3, 1, 0], F(-1)=-1, F(2)=2
+    F=[1, 2, 0, 0, 0], w=[-1, 2, 0, -2, 1], F(-1)=-1, F(2)=5
+    F=[0, 1, 0, 0, 0], w=[-1, 3, -3, 1, 0], F(-1)=-1, F(2)=2
+    F=[1, 4, 0, 0, 0], w=[-3, 8, -6, 0, 1], F(-1)=-3, F(2)=9
+    F=[0, 3, 0, 0, 0], w=[-3, 9, -9, 3, 0], F(-1)=-3, F(2)=6
+    F=[1, 4, 0, 0, 0], w=[-3, 8, -6, 0, 1], F(-1)=-3, F(2)=9
+    F=[0, 1, 0, 0, 0], w=[-1, 3, -3, 1, 0], F(-1)=-1, F(2)=2
+
+
+======================================================================
+SECTION 6: WORPITZKY COEFFICIENTS AND OCF INVARIANTS
+======================================================================
+
+The OCF states H(T) = I(Omega(T), 2). The Worpitzky expansion gives
+a finer decomposition of F(T,x) than just H = F(T,1).
+
+QUESTION: Are the Worpitzky coefficients w_k of F(T,x) related to
+the transfer matrix M or the OCF invariants?
+
+Since w_{n-1} = F_0 and w_{n-2} = H - n*F_0, the first two "new"
+coefficients are F_0 and H. The next ones (w_{n-3}, etc.) carry
+additional information about the F-polynomial.
+
+
+n=5: Is w determined by (H, t3)?
+  Ambiguous: 8/8
+
+  Is F determined by (H, F_0, F(-1))?
+  Ambiguous: 31/58
+
+  Correlations:
+    Corr(w_0, H) = 0.2285, Corr(w_0, t3) = 0.2225
+    Corr(w_1, H) = -0.2306, Corr(w_1, t3) = -0.2245
+    Corr(w_2, H) = -0.1563, Corr(w_2, t3) = -0.1521
+    Corr(w_3, H) = 0.9589, Corr(w_3, t3) = 0.9333
+    Corr(w_4, H) = 0.1453, Corr(w_4, t3) = 0.1414
+
+
+======================================================================
+SECTION 7: ORDER POLYTOPE / P-PARTITION CONNECTION
+======================================================================
+
+For a POSET P, the order polytope O(P) = {x in [0,1]^n : x_i <= x_j if i < j in P}.
+Its Ehrhart polynomial is related to P-partitions.
+The h*-vector of O(P) equals the descent polynomial of linear extensions.
+
+A tournament T defines a COMPLETE BINARY RELATION (total, antisymmetric).
+If T is acyclic = transitive, it IS a total order (poset), and:
+  O(T) = {x : x_{sigma(1)} <= ... <= x_{sigma(n)}} (a simplex)
+  The only linear extension is sigma, so h* = x^{n-1} or x^0 depending.
+
+For a GENERAL tournament with cycles, T is not a poset.
+But we can still ask: what is F(T,m) for positive integers m?
+
+Idea: F(T,m) = sum_k F_k m^k counts HPs weighted by m^{ascents}.
+By the transfer matrix method (separate computation):
+  F(T,m) = #{(P, f) : P is HP of T, f:[n]->{1,...,m} weakly increasing along P
+            with strict increase at ascents}
+
+This is exactly Stanley's P-partition theory! Even though T isn't a poset,
+a HP defines a LABELED total order, and f is a (P,w)-partition.
+
+So: F(T,m) = sum over HPs P of (multiset coefficient related to m and ascents of P).
+
+
+n=4:
+
+  Tournament #0: F=[1, 0, 0, 0], H=1
+    m=1: F(T,m)=1, P-part=1 OK
+    m=2: F(T,m)=1, P-part=4 MISMATCH
+    m=3: F(T,m)=1, P-part=10 MISMATCH
+    m=4: F(T,m)=1, P-part=20 MISMATCH
+
+  Tournament #1: F=[0, 1, 0, 0], H=1
+    m=1: F(T,m)=1, P-part=0 MISMATCH
+    m=2: F(T,m)=2, P-part=1 MISMATCH
+    m=3: F(T,m)=3, P-part=4 MISMATCH
+    m=4: F(T,m)=4, P-part=10 MISMATCH
+
+  Tournament #2: F=[1, 2, 0, 0], H=3
+    m=1: F(T,m)=3, P-part=1 MISMATCH
+    m=2: F(T,m)=5, P-part=6 MISMATCH
+    m=3: F(T,m)=7, P-part=18 MISMATCH
+    m=4: F(T,m)=9, P-part=40 MISMATCH
+
+
+======================================================================
+SECTION 8: FINDING THE RIGHT P-PARTITION FORMULA
+======================================================================
+n=4: F=[0, 1, 0, 0], H=1
+  HP (0, 3, 2, 1), asc=1, desc=2
+    m=1: brute=0, matches: ['C(m-1+d-a,d)', 'C(m-1+desc,d)', 'C(m+asc-1,d)']
+    m=2: brute=1, matches: ['C(m-1+d-a,d)', 'C(m-1+desc,d)']
+    m=3: brute=5, matches: []
+
+
+Done.

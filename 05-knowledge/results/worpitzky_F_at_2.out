@@ -1,0 +1,250 @@
+======================================================================
+W^*(T,x) = REVERSED WORPITZKY POLYNOMIAL (h*-analog)
+======================================================================
+W^*(x) = sum_k w_{n-1-k} x^k
+GF: sum_m F(T,m) x^m = W^*(T,x) / (1-x)^n
+
+
+n=3:
+  T#1: F=[1, 0, 0], w*=[1, -2, 1], H=1, nonneg=False
+  T#2: F=[0, 1, 0], w*=[0, 1, -1], H=1, nonneg=False
+  T#3: F=[1, 2, 0], w*=[1, 0, -1], H=3, nonneg=False
+  T#4: F=[0, 1, 0], w*=[0, 1, -1], H=1, nonneg=False
+  T#5: F=[0, 1, 0], w*=[0, 1, -1], H=1, nonneg=False
+
+  w* nonneg: 1/8
+  w*_0 = F_0, w*_1 = H - n*F_0
+  w*_0: min=0, max=1
+  w*_1: min=-2, max=3
+  w*_2: min=-1, max=1
+
+n=4:
+  T#1: F=[1, 0, 0, 0], w*=[1, -3, 3, -1], H=1, nonneg=False
+  T#2: F=[0, 1, 0, 0], w*=[0, 1, -2, 1], H=1, nonneg=False
+  T#3: F=[1, 2, 0, 0], w*=[1, -1, -1, 1], H=3, nonneg=False
+  T#4: F=[0, 1, 0, 0], w*=[0, 1, -2, 1], H=1, nonneg=False
+  T#5: F=[1, 4, 0, 0], w*=[1, 1, -5, 3], H=5, nonneg=False
+
+  w* nonneg: 2/64
+  w*_0 = F_0, w*_1 = H - n*F_0
+  w*_0: min=0, max=1
+  w*_1: min=-3, max=5
+  w*_2: min=-6, max=4
+  w*_3: min=-3, max=3
+
+n=5:
+  T#1: F=[1, 0, 0, 0, 0], w*=[1, -4, 6, -4, 1], H=1, nonneg=False
+  T#2: F=[0, 1, 0, 0, 0], w*=[0, 1, -3, 3, -1], H=1, nonneg=False
+  T#3: F=[1, 2, 0, 0, 0], w*=[1, -2, 0, 2, -1], H=3, nonneg=False
+  T#4: F=[0, 1, 0, 0, 0], w*=[0, 1, -3, 3, -1], H=1, nonneg=False
+  T#5: F=[1, 4, 0, 0, 0], w*=[1, 0, -6, 8, -3], H=5, nonneg=False
+
+  w* nonneg: 4/1024
+  w*_0 = F_0, w*_1 = H - n*F_0
+  w*_0: min=0, max=1
+  w*_1: min=-4, max=15
+  w*_2: min=-28, max=41
+  w*_3: min=-27, max=26
+  w*_4: min=-9, max=7
+
+
+======================================================================
+F(T,2) = sum F_k * 2^k
+======================================================================
+
+n=3:
+  Is F(2) determined by H?
+    H=1: 3 distinct F(2) values: [1, 2, 4]
+    H=3: 2 distinct F(2) values: [5, 8]
+
+  F(2)/H ratios:
+    H=1: F(2)/H in [1.000, 4.000]
+    H=3: F(2)/H in [1.667, 2.667]
+
+  Linear fit F(2) = 2.0833*H + 0.8333*t3 + -2.0000*F0 + 0.4167
+  R^2 = 0.893333
+
+n=4:
+  Is F(2) determined by H?
+    H=1: 4 distinct F(2) values: [1, 2, 4, 8]
+    H=3: 6 distinct F(2) values: [5, 6, 8, 10, 12, 16]
+    H=5: 8 distinct F(2) values: [9, 11, 13, 14, 16, 20, 22, 24]
+
+  F(2)/H ratios:
+    H=1: F(2)/H in [1.000, 8.000]
+    H=3: F(2)/H in [1.667, 5.333]
+    H=5: F(2)/H in [1.800, 4.800]
+
+  Linear fit F(2) = 2.8021*H + 1.1208*t3 + -5.7000*F0 + 0.5604
+  R^2 = 0.821201
+
+n=5:
+  Is F(2) determined by H?
+    H=1: 5 distinct F(2) values: [1, 2, 4, 8, 16]
+    H=3: 9 distinct F(2) values: [5, 6, 8, 10, 12, 16, 20, 24, 32]
+    H=5: 18 distinct F(2) values: [9, 10, 11, 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36, 40, 44, 48]
+    H=9: 26 distinct F(2) values: [17, 21, 23, 24, 25, 26, 27, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 56, 60, 64, 68, 72, 80]
+    H=11: 28 distinct F(2) values: [21, 27, 29, 30, 32, 33, 34, 36, 37, 38, 39, 40, 44, 45, 46, 48, 52, 56, 58, 60, 62, 64, 66, 68, 72, 80, 84, 96]
+    H=13: 30 distinct F(2) values: [31, 33, 35, 37, 38, 39, 40, 41, 42, 44, 46, 48, 52, 54, 56, 58, 60, 64, 66, 68, 70, 72, 76, 80, 84, 86, 88, 92, 96, 100]
+    H=15: 16 distinct F(2) values: [37, 41, 48, 49, 50, 53, 60, 64, 66, 72, 84, 86, 88, 92, 104, 112]
+
+  F(2)/H ratios:
+    H=1: F(2)/H in [1.000, 16.000]
+    H=3: F(2)/H in [1.667, 10.667]
+    H=5: F(2)/H in [1.800, 9.600]
+    H=9: F(2)/H in [1.889, 8.889]
+    H=11: F(2)/H in [1.909, 8.727]
+    H=13: F(2)/H in [2.385, 7.692]
+    H=15: F(2)/H in [2.467, 7.467]
+
+  Linear fit F(2) = 4.6742*H + 0.0000*t3 + -19.9081*F0 + 0.0000
+  R^2 = 0.773030
+
+
+======================================================================
+F(T,x) AND F(T^op, x): COMPLEMENTARY RELATIONSHIP
+======================================================================
+F(T,x) = x^{n-1} F(T^op, 1/x)
+Equivalently: F_k(T) = F_{n-1-k}(T^op)
+
+
+n=4:
+  F(T)=[1, 0, 0, 0], F(T^op)=[0, 0, 0, 1], F_k(T)=F_{d-k}(T^op)? True
+  F(T)=[0, 1, 0, 0], F(T^op)=[0, 0, 1, 0], F_k(T)=F_{d-k}(T^op)? True
+  F(T)=[1, 2, 0, 0], F(T^op)=[0, 0, 2, 1], F_k(T)=F_{d-k}(T^op)? True
+  Verified: 20/20
+
+n=5:
+  F(T)=[1, 0, 0, 0, 0], F(T^op)=[0, 0, 0, 0, 1], F_k(T)=F_{d-k}(T^op)? True
+  F(T)=[0, 1, 0, 0, 0], F(T^op)=[0, 0, 0, 1, 0], F_k(T)=F_{d-k}(T^op)? True
+  F(T)=[1, 2, 0, 0, 0], F(T^op)=[0, 0, 0, 2, 1], F_k(T)=F_{d-k}(T^op)? True
+  Verified: 20/20
+
+
+======================================================================
+F(T,-1) = ALTERNATING SUM
+======================================================================
+
+F(T,-1) = sum_k F_k (-1)^k = #{even-ascent HPs} - #{odd-ascent HPs}
+
+By complementarity: F(T,-1) = (-1)^{d} F(T^op, -1)
+  - If d is even (n odd): F(T,-1) = F(T^op,-1)
+  - If d is odd (n even): F(T,-1) = -F(T^op,-1)
+
+At n=4 (d=3 odd): F(T,-1) = -F(T^op,-1), so they come in +/- pairs.
+Sum over all T of F(T,-1) = 0 (since T <-> T^op is a bijection). Verified!
+
+At n=5 (d=4 even): F(T,-1) = F(T^op,-1), so self-paired.
+Sum = A_5(-1) * 2^6 = 16 * 64 = 1024. Verified!
+
+======================================================================
+DEHN-SOMMERVILLE RELATIONS FOR W^*
+======================================================================
+
+For h*-vectors of Gorenstein polytopes: h*_k = h*_{d-k} (palindromic).
+This would mean w_{n-1-k} = w_k, i.e., w is palindromic.
+We know w is NOT palindromic in general. So F(T,x) does NOT come from
+a Gorenstein polytope.
+
+But what about the WEAKER condition: what linear relations hold among w_k?
+
+
+n=4:
+  Singular values of centered w matrix: [24.8617 15.9247  6.7355  2.2215]
+  Rank of w space: 4
+  This means w lives in a 4-dimensional affine subspace of R^4
+
+n=5:
+  Singular values of centered w matrix: [422.9518 198.9661 101.0047  56.0663   7.1364]
+  Rank of w space: 5
+  This means w lives in a 5-dimensional affine subspace of R^5
+
+
+======================================================================
+GF STRUCTURE: sum_m F(T,m) x^m = W^*(T,x) / (1-x)^n
+======================================================================
+
+n=4:
+  F=[0, 1, 0, 0], w=[1, -2, 1, 0], w*=[0, 1, -2, 1], H=1
+  W*(1) = 0 should = H = 1
+
+  Verifying F(T,m) = sum_k w*_k C(m+4-1-k, 4-1):
+    m=0: F(T,m)=0, sum w*_k C(m+3-k,3)=0
+    m=1: F(T,m)=1, sum w*_k C(m+3-k,3)=1
+    m=2: F(T,m)=2, sum w*_k C(m+3-k,3)=2
+    m=3: F(T,m)=3, sum w*_k C(m+3-k,3)=3
+    m=4: F(T,m)=4, sum w*_k C(m+3-k,3)=4
+    m=5: F(T,m)=5, sum w*_k C(m+3-k,3)=5
+
+  First terms of GF sum_m F(T,m) x^m:
+    m=0: F(T,m) = 0
+    m=1: F(T,m) = 1
+    m=2: F(T,m) = 2
+    m=3: F(T,m) = 3
+    m=4: F(T,m) = 4
+    m=5: F(T,m) = 5
+    m=6: F(T,m) = 6
+    m=7: F(T,m) = 7
+
+
+======================================================================
+w_0 AND F(T,-1)
+======================================================================
+
+n=3:
+  F=[1, 0, 0], w_0=1, (-1)^d*F(-1)=1, match=True
+  F=[0, 1, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[1, 2, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[0, 1, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[0, 1, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  So w_0 = (-1)^d F(-1) = (-1)^{n-1} F(-1)
+
+n=4:
+  F=[1, 0, 0, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[0, 1, 0, 0], w_0=1, (-1)^d*F(-1)=1, match=True
+  F=[1, 2, 0, 0], w_0=1, (-1)^d*F(-1)=1, match=True
+  F=[0, 1, 0, 0], w_0=1, (-1)^d*F(-1)=1, match=True
+  F=[1, 4, 0, 0], w_0=3, (-1)^d*F(-1)=3, match=True
+  So w_0 = (-1)^d F(-1) = (-1)^{n-1} F(-1)
+
+n=5:
+  F=[1, 0, 0, 0, 0], w_0=1, (-1)^d*F(-1)=1, match=True
+  F=[0, 1, 0, 0, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[1, 2, 0, 0, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[0, 1, 0, 0, 0], w_0=-1, (-1)^d*F(-1)=-1, match=True
+  F=[1, 4, 0, 0, 0], w_0=-3, (-1)^d*F(-1)=-3, match=True
+  So w_0 = (-1)^d F(-1) = (-1)^{n-1} F(-1)
+
+
+======================================================================
+COMPLETE STRUCTURE: w_k = Delta^d[F](k) = finite differences
+======================================================================
+
+The Worpitzky coefficients are related to FINITE DIFFERENCES.
+
+If F(T,x) = sum w_k C(x+k, d), then by the standard forward difference:
+  w_k = sum_{j=0}^{d} (-1)^{d-j} C(d, j) F(T, k+j-d)
+
+For k=0: w_0 = sum_j (-1)^{d-j} C(d,j) F(T, j-d)
+       = sum_j (-1)^{d-j} C(d,j) F(T, j-d)
+
+Let me verify this.
+
+n=4: F=[0, 1, 0, 0], w=[1, -2, 1, 0]
+  w_0 = 1, finite diff formula = 0
+  w_1 = -2, finite diff formula = 0
+  w_2 = 1, finite diff formula = 0
+  w_3 = 0, finite diff formula = 0
+
+  Matrix C(j+k, 3) for j,k = 0,...,3:
+    j=0: [0, 0, 0, 1]
+    j=1: [0, 0, 1, 4]
+    j=2: [0, 1, 4, 10]
+    j=3: [1, 4, 10, 20]
+
+  Back-substitution:
+    w_3 = F(0) = F_0 = 0
+    w_2 = F(1) - (d+1)*w_d = H - n*F_0 = 1 - 4*0 = 1
+
+
+Done.

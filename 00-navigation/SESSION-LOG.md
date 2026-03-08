@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S37 — 2026-03-07 (Worpitzky Deep Dive)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S36
+**Summary of work:**
+  Deep investigation of the forward-edge polynomial F(T,x) and its Worpitzky expansion.
+
+  **Key Results:**
+  1. **F_k(T) = F_{n-1-k}(T^op)** — complement duality (PROVED via path reversal)
+  2. **F(T,x) is NOT palindromic** in general (0/64 at n=4) — corrects earlier belief
+  3. **Sum_T F(T,x) = A_n(x) * 2^{C(n,2)-(n-1)}** — PROVED algebraically
+  4. **F(T,x) is ALWAYS unimodal** — conjecture with 100% evidence through n=8 (HYP-204)
+  5. **F(T,x) is almost always log-concave** — 4 exceptions out of 1024 at n=5 (HYP-205)
+  6. **Roots ~89% real** — stable rate at n=5-8 (HYP-206)
+  7. **Worpitzky structure**: w_{n-1}=F_0, w_{n-2}=H-nF_0, w_0=(-1)^{n-1}F(-1)
+  8. **GF**: sum_m F(T,m) x^m = W^*(T,x)/(1-x)^n
+  9. **Type B Eulerian "universality" was an ARTIFACT** of wrong W definition (HYP-119 REFUTED)
+
+  **Scripts created:** worpitzky_ehrhart.py, worpitzky_F_at_2.py, worpitzky_roots.py,
+    worpitzky_exceptions.py, worpitzky_n6_test.py (all with saved outputs)
+
+  **Knowledge base updates:**
+  - New variable file: F-polynomial.md
+  - Updated W-polynomial.md (corrected palindromicity claim)
+  - Hypothesis index: HYP-011,012,119,120,204,205,206 added
+  - Synthesis document: worpitzky_synthesis.md
+
+**New contributions:** HYP-011 (complement duality), HYP-012 (sum formula), HYP-204 (unimodality), HYP-205 (log-concavity), HYP-206 (real roots)
+**Unresolved threads:** Prove unimodality; interpret Worpitzky coefficients combinatorially; what determines F-shape beyond H
+
 ## opus-2026-03-07-S36 — 2026-03-07 (Knowledge Web Infrastructure)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c11

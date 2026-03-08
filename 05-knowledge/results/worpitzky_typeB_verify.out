@@ -1,0 +1,177 @@
+======================================================================
+CORRECTED VERIFICATION: W(T,r) = (H/2^{n-1}) * (2r+1)^{n-1} ?
+======================================================================
+
+n=3:
+  Trial 0, r=0.5: W=0.000000, H/2^2*(2r+1)^2=1.000000, MISMATCH!
+  Trial 0: H=1, r=1.7: W=2.6400, predicted=4.8400, match=False
+  Trial 1, r=0.5: W=0.000000, H/2^2*(2r+1)^2=1.000000, MISMATCH!
+  Trial 1: H=1, r=1.7: W=2.6400, predicted=4.8400, match=False
+  Trial 2, r=0.5: W=0.000000, H/2^2*(2r+1)^2=1.000000, MISMATCH!
+  Trial 2: H=1, r=1.7: W=2.6400, predicted=4.8400, match=False
+  Trial 3, r=0.5: W=0.000000, H/2^2*(2r+1)^2=1.000000, MISMATCH!
+  Trial 4, r=0.5: W=0.000000, H/2^2*(2r+1)^2=1.000000, MISMATCH!
+
+n=4:
+  Trial 0, r=0.5: W=0.000000, H/2^3*(2r+1)^3=5.000000, MISMATCH!
+  Trial 0: H=5, r=1.7: W=19.6800, predicted=53.2400, match=False
+  Trial 1, r=0.5: W=0.000000, H/2^3*(2r+1)^3=3.000000, MISMATCH!
+  Trial 1: H=3, r=1.7: W=14.7840, predicted=31.9440, match=False
+  Trial 2, r=0.5: W=0.000000, H/2^3*(2r+1)^3=1.000000, MISMATCH!
+  Trial 2: H=1, r=1.7: W=3.1680, predicted=10.6480, match=False
+  Trial 3, r=0.5: W=0.000000, H/2^3*(2r+1)^3=3.000000, MISMATCH!
+  Trial 4, r=0.5: W=0.000000, H/2^3*(2r+1)^3=1.000000, MISMATCH!
+
+n=5:
+  Trial 0, r=0.5: W=0.000000, H/2^4*(2r+1)^4=3.000000, MISMATCH!
+  Trial 0: H=3, r=1.7: W=38.3328, predicted=70.2768, match=False
+  Trial 1, r=0.5: W=0.000000, H/2^4*(2r+1)^4=5.000000, MISMATCH!
+  Trial 1: H=5, r=1.7: W=25.3440, predicted=117.1280, match=False
+  Trial 2, r=0.5: W=0.000000, H/2^4*(2r+1)^4=9.000000, MISMATCH!
+  Trial 2: H=9, r=1.7: W=59.0304, predicted=210.8304, match=False
+  Trial 3, r=0.5: W=0.000000, H/2^4*(2r+1)^4=9.000000, MISMATCH!
+  Trial 4, r=0.5: W=0.000000, H/2^4*(2r+1)^4=11.000000, MISMATCH!
+
+n=6:
+  Trial 0, r=0.5: W=0.000000, H/2^5*(2r+1)^5=19.000000, MISMATCH!
+  Trial 0: H=19, r=1.7: W=307.5917, predicted=979.1901, match=False
+  Trial 1, r=0.5: W=0.000000, H/2^5*(2r+1)^5=19.000000, MISMATCH!
+  Trial 1: H=19, r=1.7: W=207.0605, predicted=979.1901, match=False
+  Trial 2, r=0.5: W=0.000000, H/2^5*(2r+1)^5=25.000000, MISMATCH!
+  Trial 2: H=25, r=1.7: W=432.1152, predicted=1288.4080, match=False
+
+n=7:
+  Trial 0, r=0.5: W=0.000000, H/2^6*(2r+1)^6=127.000000, MISMATCH!
+  Trial 0: H=127, r=1.7: W=2738.2164, predicted=14399.2478, match=False
+  Trial 1, r=0.5: W=0.000000, H/2^6*(2r+1)^6=147.000000, MISMATCH!
+  Trial 1: H=147, r=1.7: W=3078.7976, predicted=16666.8459, match=False
+  Trial 2, r=0.5: W=0.000000, H/2^6*(2r+1)^6=3.000000, MISMATCH!
+  Trial 2: H=3, r=1.7: W=46.8357, predicted=340.1397, match=False
+
+
+======================================================================
+DETAILED CHECK: Does W(T,r) = (H/2^{n-1})*(2r+1)^{n-1}?
+======================================================================
+
+n=4:
+  H=1: W1(r=2.3) = 5.832000, W2(r=2.3) = 9.072000, predicted = 21.952000
+    -> W differs between tournaments with same H!
+
+n=5:
+  H=1: W1(r=2.3) = 10.497600, W2(r=2.3) = 16.329600, predicted = 61.465600
+    -> W differs between tournaments with same H!
+
+
+======================================================================
+TYPE B WORPITZKY IDENTITY CHECK
+======================================================================
+  T_B(2,k) = [1, 1]
+    x=0: LHS=1, (2x+1)^1=1, match=True
+    x=1: LHS=3, (2x+1)^1=3, match=True
+    x=2: LHS=5, (2x+1)^1=5, match=True
+    x=3: LHS=7, (2x+1)^1=7, match=True
+  T_B(3,k) = [1, 6, 1]
+    x=0: LHS=1, (2x+1)^2=1, match=True
+    x=1: LHS=9, (2x+1)^2=9, match=True
+    x=2: LHS=25, (2x+1)^2=25, match=True
+    x=3: LHS=49, (2x+1)^2=49, match=True
+  T_B(4,k) = [1, 23, 23, 1]
+    x=0: LHS=1, (2x+1)^3=1, match=True
+    x=1: LHS=27, (2x+1)^3=27, match=True
+    x=2: LHS=125, (2x+1)^3=125, match=True
+    x=3: LHS=343, (2x+1)^3=343, match=True
+  T_B(5,k) = [1, 76, 230, 76, 1]
+    x=0: LHS=1, (2x+1)^4=1, match=True
+    x=1: LHS=81, (2x+1)^4=81, match=True
+    x=2: LHS=625, (2x+1)^4=625, match=True
+    x=3: LHS=2401, (2x+1)^4=2401, match=True
+  T_B(6,k) = [1, 237, 1682, 1682, 237, 1]
+    x=0: LHS=1, (2x+1)^5=1, match=True
+    x=1: LHS=243, (2x+1)^5=243, match=True
+    x=2: LHS=3125, (2x+1)^5=3125, match=True
+    x=3: LHS=16807, (2x+1)^5=16807, match=True
+  T_B(7,k) = [1, 722, 10543, 23548, 10543, 722, 1]
+    x=0: LHS=1, (2x+1)^6=1, match=True
+    x=1: LHS=729, (2x+1)^6=729, match=True
+    x=2: LHS=15625, (2x+1)^6=15625, match=True
+    x=3: LHS=117649, (2x+1)^6=117649, match=True
+
+
+======================================================================
+FINAL DIRECT VERIFICATION
+======================================================================
+
+n=3:
+  Trial 0, r=0: W=-0.250000, predicted=0.250000, MISMATCH!
+  Trial 0, r=0.5: W=0.000000, predicted=1.000000, MISMATCH!
+  Trial 0, r=1.0: W=0.750000, predicted=2.250000, MISMATCH!
+  Trial 0, r=2.0: W=3.750000, predicted=6.250000, MISMATCH!
+  Trial 0, r=3.5: W=12.000000, predicted=16.000000, MISMATCH!
+  Trial 0, r=-1.7: W=2.640000, predicted=1.440000, MISMATCH!
+  Trial 1, r=0: W=-0.250000, predicted=0.250000, MISMATCH!
+  Trial 1, r=0.5: W=0.000000, predicted=1.000000, MISMATCH!
+  Trial 1, r=1.0: W=0.750000, predicted=2.250000, MISMATCH!
+  Trial 1, r=2.0: W=3.750000, predicted=6.250000, MISMATCH!
+  Trial 1, r=3.5: W=12.000000, predicted=16.000000, MISMATCH!
+  Trial 1, r=-1.7: W=2.640000, predicted=1.440000, MISMATCH!
+  Trial 2, r=0: W=-0.250000, predicted=0.250000, MISMATCH!
+  Trial 2, r=0.5: W=0.000000, predicted=1.000000, MISMATCH!
+  Trial 2, r=1.0: W=0.750000, predicted=2.250000, MISMATCH!
+  Trial 2, r=2.0: W=3.750000, predicted=6.250000, MISMATCH!
+  Trial 2, r=3.5: W=12.000000, predicted=16.000000, MISMATCH!
+  Trial 2, r=-1.7: W=2.640000, predicted=1.440000, MISMATCH!
+
+n=4:
+  Trial 0, r=0: W=0.125000, predicted=0.375000, MISMATCH!
+  Trial 0, r=0.5: W=0.000000, predicted=3.000000, MISMATCH!
+  Trial 0, r=1.0: W=0.875000, predicted=10.125000, MISMATCH!
+  Trial 0, r=-0.5: W=-1.000000, predicted=0.000000, MISMATCH!
+  Trial 0, r=2.0: W=14.625000, predicted=46.875000, MISMATCH!
+  Trial 0, r=3.5: W=99.000000, predicted=192.000000, MISMATCH!
+  Trial 0, r=-1.7: W=-22.264000, predicted=-5.184000, MISMATCH!
+  Trial 1, r=0.5: W=0.000000, predicted=1.000000, MISMATCH!
+  Trial 1, r=1.0: W=0.375000, predicted=3.375000, MISMATCH!
+  Trial 1, r=2.0: W=5.625000, predicted=15.625000, MISMATCH!
+  Trial 1, r=3.5: W=36.000000, predicted=64.000000, MISMATCH!
+  Trial 1, r=-1.7: W=-5.808000, predicted=-1.728000, MISMATCH!
+  Trial 2: H=1, W(T,r) = (H/2^3)*(2r+1)^3 for all tested r. EXACT!
+
+n=5:
+  Trial 0, r=0: W=0.312500, predicted=0.687500, MISMATCH!
+  Trial 0, r=0.5: W=0.000000, predicted=11.000000, MISMATCH!
+  Trial 0, r=1.0: W=5.062500, predicted=55.687500, MISMATCH!
+  Trial 0, r=2.0: W=137.812500, predicted=429.687500, MISMATCH!
+  Trial 0, r=3.5: W=1476.000000, predicted=2816.000000, MISMATCH!
+  Trial 0, r=-1.7: W=94.089600, predicted=22.809600, MISMATCH!
+  Trial 1, r=0: W=0.062500, predicted=0.687500, MISMATCH!
+  Trial 1, r=0.5: W=0.000000, predicted=11.000000, MISMATCH!
+  Trial 1, r=1.0: W=10.312500, predicted=55.687500, MISMATCH!
+  Trial 1, r=2.0: W=186.562500, predicted=429.687500, MISMATCH!
+  Trial 1, r=3.5: W=1740.000000, predicted=2816.000000, MISMATCH!
+  Trial 1, r=-1.7: W=69.801600, predicted=22.809600, MISMATCH!
+  Trial 2, r=0: W=-0.187500, predicted=0.312500, MISMATCH!
+  Trial 2, r=0.5: W=0.000000, predicted=5.000000, MISMATCH!
+  Trial 2, r=1.0: W=1.312500, predicted=25.312500, MISMATCH!
+  Trial 2, r=2.0: W=47.812500, predicted=195.312500, MISMATCH!
+  Trial 2, r=3.5: W=576.000000, predicted=1280.000000, MISMATCH!
+  Trial 2, r=-1.7: W=58.080000, predicted=10.368000, MISMATCH!
+
+n=6:
+  Trial 0, r=0: W=0.031250, predicted=0.531250, MISMATCH!
+  Trial 0, r=0.5: W=0.000000, predicted=17.000000, MISMATCH!
+  Trial 0, r=1.0: W=9.843750, predicted=129.093750, MISMATCH!
+  Trial 0, r=2.0: W=485.156250, predicted=1660.156250, MISMATCH!
+  Trial 0, r=3.5: W=8640.000000, predicted=17408.000000, MISMATCH!
+  Trial 0, r=-1.7: W=-197.936640, predicted=-42.301440, MISMATCH!
+  Trial 1, r=0: W=0.031250, predicted=0.468750, MISMATCH!
+  Trial 1, r=0.5: W=0.000000, predicted=15.000000, MISMATCH!
+  Trial 1, r=1.0: W=8.718750, predicted=113.906250, MISMATCH!
+  Trial 1, r=2.0: W=428.906250, predicted=1464.843750, MISMATCH!
+  Trial 1, r=3.5: W=7632.000000, predicted=15360.000000, MISMATCH!
+  Trial 1, r=-1.7: W=-174.240000, predicted=-37.324800, MISMATCH!
+  Trial 2, r=0: W=-0.093750, predicted=0.468750, MISMATCH!
+  Trial 2, r=0.5: W=0.000000, predicted=15.000000, MISMATCH!
+  Trial 2, r=1.0: W=3.093750, predicted=113.906250, MISMATCH!
+  Trial 2, r=2.0: W=265.781250, predicted=1464.843750, MISMATCH!
+  Trial 2, r=3.5: W=5832.000000, predicted=15360.000000, MISMATCH!
+  Trial 2, r=-1.7: W=-306.662400, predicted=-37.324800, MISMATCH!
