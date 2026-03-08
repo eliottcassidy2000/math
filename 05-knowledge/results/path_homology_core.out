@@ -1,0 +1,71 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+GLMY PATH HOMOLOGY — BASIC TESTS
+======================================================================
+
+--- Test 1: Directed 3-cycle ---
+  C_3: Betti = [0, 1, 0, 0]
+
+--- Test 2: Complete bidirected K_3 ---
+  K_3 bidirected: Betti = [0, 0, 2, 0]
+
+--- Test 3: Transitive tournament T_3 ---
+  Transitive T_3: Betti = [0, 0, 0, 0]
+
+--- Test 4: Tournament with 3-cycle ---
+  3-cycle tournament: Betti = [0, 1, 0, 0]
+
+--- Test 5: Directed 4-cycle ---
+  C_4: Betti = [0, 1, 0, 0]
+
+--- Test 6: Directed path 0->1->2->3 ---
+  P_4: Betti = [0, 0, 0, 0]
+
+
+======================================================================
+PATH HOMOLOGY OF TOURNAMENTS
+======================================================================
+
+--- All tournaments on n=3 ---
+  t3=0, H=1: β = [0, 0, 0]
+  t3=0, H=1: β = [0, 0, 0]
+  t3=1, H=3: β = [0, 1, 0]
+  t3=1, H=3: β = [0, 1, 0]
+
+  Betti number distribution:
+    β = [0, 0, 0]: 6 tournaments
+    β = [0, 1, 0]: 2 tournaments
+
+  By 3-cycle count:
+    t3=0: 6 tournaments, distinct β: [[0, 0, 0]]
+    t3=1: 2 tournaments, distinct β: [[0, 1, 0]]
+
+--- All tournaments on n=4 ---
+  t3=0, H=1: β = [0, 0, 0, 0]
+  t3=0, H=1: β = [0, 0, 0, 0]
+  t3=2, H=5: β = [0, 1, 0, 0]
+  t3=2, H=5: β = [0, 1, 0, 0]
+
+  Betti number distribution:
+    β = [0, 0, 0, 0]: 40 tournaments
+    β = [0, 1, 0, 0]: 24 tournaments
+
+  By 3-cycle count:
+    t3=0: 24 tournaments, distinct β: [[0, 0, 0, 0]]
+    t3=1: 16 tournaments, distinct β: [[0, 0, 0, 0]]
+    t3=2: 24 tournaments, distinct β: [[0, 1, 0, 0]]
+
+--- Sampled tournaments on n=5 ---
+  Trial 0: t3=3, H=9, β = [0, 1, 0, 0, 0]
+  Trial 1: t3=3, H=9, β = [0, 0, 0, 0, 0]
+  Trial 2: t3=2, H=5, β = [0, 0, 0, 0, 0]
+  Trial 3: t3=0, H=1, β = [0, 0, 0, 0, 0]
+  Trial 4: t3=1, H=3, β = [0, 0, 0, 0, 0]
+
+  Betti number distribution (50 samples):
+    β = [0, 0, 0, 0, 0]: 40
+    β = [0, 1, 0, 0, 0]: 10
+
+
+Done.
