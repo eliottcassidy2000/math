@@ -1,0 +1,70 @@
+======================================================================
+FINDING CONCRETE ARC-FLIP EXAMPLE (dOm2=0, db1=+1)
+======================================================================
+
+Example: bits=4, flip arc (4->3) to (3->4)
+  Scores T: [1, 1, 2, 2, 4]
+  Scores T': [1, 1, 2, 3, 3]
+  beta(T): [np.int64(1), np.int64(0), np.int64(0), np.int64(1)]
+  beta(T'): [np.int64(1), np.int64(1), np.int64(0), np.int64(1)]
+  dim(Om2): 9 -> 9 (delta=0)
+  rk(d2): 6 -> 5 (delta=-1)
+  dim(Z2): 3 -> 4
+  rk(d3): 3 -> 4 (delta=1)
+
+  TT triples T: 8
+  TT triples T': 7
+  Lost: [(4, 0, 3), (4, 3, 1), (4, 3, 2)]
+  Gained: [(3, 4, 1), (3, 4, 2)]
+  Stable: 5
+
+  T adjacency:
+    0 -> [3]
+    1 -> [0]
+    2 -> [0, 1]
+    3 -> [1, 2]
+    4 -> [0, 1, 2, 3]
+
+  T' adjacency:
+    0 -> [3]
+    1 -> [0]
+    2 -> [0, 1]
+    3 -> [1, 2, 4]
+    4 -> [0, 1, 2]
+
+  dim(Z_1) in T: 6
+  dim(Z_1) in T': 6
+  rk(d_2) in T: 6 => beta_1 = 0
+  rk(d_2) in T': 5 => beta_1 = 1
+
+  KEY: rk(d_2) decreases by 1, meaning one 1-boundary is 'lost'
+  And rk(d_3) increases by 1, meaning one 2-cycle is newly filled
+
+======================================================================
+EXAMPLE 2: dOm2=+1, db1=0 (dimension change, no beta_1 change)
+======================================================================
+
+Example: bits=8, flip arc (3->0) to (0->3)
+  beta(T): [np.int64(1), np.int64(1), np.int64(0), np.int64(1)]
+  beta(T'): [np.int64(1), np.int64(1), np.int64(0), np.int64(2)]
+  dim(Om2): 9 -> 10
+  dim(Z2): 4 -> 5
+  rk(d3): 4 -> 5
+  rk(d2): 5 -> 5
+  3-cycle killed: 3->0->4->3
+
+======================================================================
+COMPLETE DELTA CLASSIFICATION at n=5
+======================================================================
+(dOm2, db1, drk3, dZ2) with dZ2 = dOm2+db1 and drk3 = dZ2:
+  dOm2=-1, db1=-1 => dZ2=drk3=-2: 720 flips
+  dOm2=-1, db1=+0 => dZ2=drk3=-1: 960 flips
+  dOm2=-1, db1=+1 => dZ2=drk3=+0: 400 flips
+  dOm2=+0, db1=-1 => dZ2=drk3=-1: 480 flips
+  dOm2=+0, db1=+0 => dZ2=drk3=+0: 5120 flips
+  dOm2=+0, db1=+1 => dZ2=drk3=+1: 480 flips
+  dOm2=+1, db1=-1 => dZ2=drk3=+0: 400 flips
+  dOm2=+1, db1=+0 => dZ2=drk3=+1: 960 flips
+  dOm2=+1, db1=+1 => dZ2=drk3=+2: 720 flips
+
+Done.

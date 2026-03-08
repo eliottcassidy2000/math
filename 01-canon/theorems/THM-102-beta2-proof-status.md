@@ -96,6 +96,31 @@ The relative complex R_*(v) = Ω_*(T)/Ω_*(T\v) needs:
 
 **Status**: Caputi-Menara (arXiv:2503.06722) proves results for TRANSITIVE tournaments only. General case open.
 
+### F. Arc-Flip Invariance (NEW — Most Promising, S41)
+**Idea**: Prove β₂ = 0 by showing β₂ is invariant under arc flips, then using β₂(T_trans) = 0.
+
+**Discovery** (kind-pasteur-S41): Under ANY arc flip u→v to v→u in a tournament:
+  δ(dim Z₂) = δ(rk ∂₃) EXACTLY.
+
+This means β₂ = dim(Z₂) - rk(∂₃) is an **arc-flip invariant**.
+
+**Proof strategy**:
+1. β₂(T_trans) = 0 (transitive tournament = simplex, contractible) ✓
+2. Any tournament is reachable from T_trans by arc flips ✓
+3. β₂ is invariant under arc flips (HYP-233, to prove)
+4. Therefore β₂ = 0 for all tournaments.
+
+**Equivalent reformulation**: δ(rk ∂₃) = δ(dim Ω₂) + δ(β₁).
+Key structural facts:
+- dim(Z₁) = (n-1)(n-2)/2 is CONSTANT for all tournaments
+- δ(rk ∂₂) = -δ(β₁) (follows from constant dim(Z₁))
+- δ(dim Ω₂) = p_{vu} - p_{uv} (analytic formula, PROVED)
+- δ(β₁) is NON-LOCAL (depends on global tournament structure)
+
+**Status**: Verified exhaustive n=5 (10240 flips), sampled n=6 (15000), n=7 (2500), n=8 (500). 0 mismatches. N=6 exhaustive in progress.
+
+**Structural insight**: dim(Ω₂) = |TT triples| + |NT cancellation dimensions|. Under arc flip, TT triples and NT cancellation pairs rebalance to maintain β₂ = 0.
+
 ## Dead Ends for Algebraic Proof
 - Cone construction: all 2-cycles use all n vertices (S42)
 - TT subcomplex: not exact (S42)
@@ -129,8 +154,15 @@ The proof should formalize why there are "enough" DT paths and cancellation elem
 - `04-computation/beta2_local_to_global.py` — 4-vertex subset filling
 - `04-computation/beta2_ses_proof.py` — relative homology computation
 - `04-computation/beta2_relative_correct.py` — β₁ monotonicity
+- `04-computation/beta2_arcflip_exactness.py` — arc-flip invariance discovery (S41)
+- `04-computation/beta2_arcflip_invariance.py` — verification at n=7,8 (S41)
+- `04-computation/beta2_arcflip_mechanism.py` — algebraic mechanism analysis (S41)
+- `04-computation/beta2_arcflip_example.py` — concrete examples (S41)
+- `04-computation/beta2_arcflip_exhaustive_n6.py` — exhaustive n=6 verification (S41)
 
 ## See Also
 - THM-100 (original conjecture)
 - THM-101 (DT+cancel filling theorem)
-- HYP-207 through HYP-226 (related hypotheses)
+- HYP-207 through HYP-232 (related hypotheses)
+- HYP-233 (arc-flip invariance)
+- HYP-234 (proof via arc-flip invariance)

@@ -85,6 +85,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-226 | ∃ vertex v with β₁(T\v) ≤ β₁(T) for every tournament T | Exhaustive n=5 (1024/1024) | beta2_relative_correct.py |
 | HYP-231 | δ: H_2(T,T\v) → H_1(T\v) injective for all T,v (equiv to β₂=0 + induction) | Exhaustive n=4,5 (256+5120 pairs, 0 mismatches) | beta2_connecting_map.py |
 | HYP-232 | DT deficit gap ≤ 2 at n=7,8 | Gap distribution: n=7: 91.6% gap=0, 7.7% gap=1, 0.6% gap=2; n=8 similar | beta2_dt_deficit_n7.py |
+| HYP-233 | beta_2 is ARC-FLIP INVARIANT: delta(dim Z_2) = delta(rk d_3) under any arc flip | Exhaustive n=5 (10240 flips, 0 mismatches), sampled n=6 (15000), n=7 (2500), n=8 (500) | beta2_arcflip_exactness.py |
+| HYP-234 | beta_2 = 0 via arc-flip invariance: beta_2(T_trans)=0 + HYP-233 => beta_2=0 for all | PROOF STRATEGY. Equivalent to: delta(rk d_3) = delta(dim Omega_2) + delta(beta_1) | beta2_arcflip_mechanism.py |
 
 ---
 

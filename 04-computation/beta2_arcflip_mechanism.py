@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
 """
-beta2_arcflip_mechanism.py - Understand the algebraic mechanism of arc-flip β₂=0 preservation
+beta2_arcflip_mechanism.py - Understand WHY delta(Z_2) = delta(rk d_3)
 
-For an arc flip (u→v) → (v→u), track EXACTLY which allowed paths are lost/gained
-at each dimension, and how the Omega spaces and boundaries respond.
+Strategy: For each arc flip u->v to v->u, compute:
+1. The exact change in Omega_2 (TT triples gained/lost) -- KNOWN formula
+2. The exact change in Z_2 -- need to understand
+3. The exact change in rk(d_2) -- since dim(Z_2) = dim(Om_2) - rk(d_2)
+4. The exact change in rk(d_3)
 
-The key structural question: WHY does δΩ₃ ≥ δZ₂ always hold for tournaments?
+Key identity we want to prove:
+  delta(rk d_2) + delta(rk d_3) = delta(dim Omega_2)
 
-Strategy: decompose allowed paths into:
-  - Paths NOT using the flipped arc (unchanged)
-  - Paths using u→v (lost)
-  - Paths using v→u (gained)
+Since delta(dim Z_2) = delta(dim Om_2) - delta(rk d_2),
+and delta(rk d_3) = delta(dim Z_2) (our observation),
+this is equivalent to: delta(rk d_2) + delta(dim Z_2) = delta(dim Om_2)
+which is just the definition. So the nontrivial content is:
+  delta(rk d_3) = delta(dim Om_2) - delta(rk d_2)
 
-Then analyze how the Omega space and boundary maps change.
+Can we find closed forms for delta(rk d_2)?
 
 Author: kind-pasteur-2026-03-08-S41
 """
@@ -42,277 +47,232 @@ def build_adj(n, bits):
             idx += 1
     return A
 
-def compute_full_data(A, n, max_dim=4):
-    allowed = {}
-    for p in range(max_dim + 1):
-        allowed[p] = enumerate_allowed_paths(A, n, p)
-        if not allowed[p]:
-            break
-
-    omega_basis = {}
-    for p in range(max_dim):
-        if p not in allowed or not allowed[p]:
-            omega_basis[p] = np.zeros((0, 0))
-            continue
-        basis = compute_omega_basis(A, n, p, allowed[p],
-                                     allowed[p-1] if p >= 1 and p-1 in allowed else [])
-        omega_basis[p] = basis
+def compute_full_data(A, n):
+    """Compute full exactness data including beta_1."""
+    paths = {}
+    omega = {}
+    for p in range(5):
+        paths[p] = enumerate_allowed_paths(A, n, p)
+        if p == 0:
+            omega[p] = np.eye(n)
+        elif len(paths[p]) > 0 and len(paths[p-1]) > 0:
+            omega[p] = compute_omega_basis(A, n, p, paths[p], paths[p-1])
+        else:
+            omega[p] = np.zeros((max(1, len(paths[p])), 0))
 
     dims = {}
-    for p in range(max_dim):
-        dims[p] = omega_basis[p].shape[1] if omega_basis[p].ndim == 2 else 0
+    rks = {}
+    for p in range(5):
+        dims[p] = omega[p].shape[1] if omega[p].ndim == 2 else 0
 
-    # Compute Z_2 and im(d_3)
-    if dims.get(2, 0) == 0:
-        Z2 = 0
-    else:
-        bd2 = build_full_boundary_matrix(allowed[2], allowed[1] if 1 in allowed else [])
-        bd2_om = bd2 @ omega_basis[2]
-        S_v = np.linalg.svd(bd2_om, compute_uv=False)
-        rk2 = int(np.sum(np.abs(S_v) > 1e-8))
-        Z2 = dims[2] - rk2
+    for p in range(1, 5):
+        if dims[p] > 0 and dims[p-1] > 0:
+            bd = build_full_boundary_matrix(paths[p], paths[p-1])
+            bd_om = bd @ omega[p]
+            if p >= 2:
+                im_coords, _, _, _ = np.linalg.lstsq(omega[p-1], bd_om, rcond=None)
+                rks[p] = np.linalg.matrix_rank(im_coords, tol=1e-8)
+            else:
+                rks[p] = np.linalg.matrix_rank(bd_om, tol=1e-8)
+        else:
+            rks[p] = 0
 
-    if dims.get(3, 0) == 0 or 3 not in allowed or not allowed[3]:
-        im_d3 = 0
-    else:
-        bd3 = build_full_boundary_matrix(allowed[3], allowed[2] if 2 in allowed else [])
-        bd3_om = bd3 @ omega_basis[3]
-        S_v = np.linalg.svd(bd3_om, compute_uv=False)
-        im_d3 = int(np.sum(np.abs(S_v) > 1e-8))
+    betas = {}
+    for p in range(4):
+        z_p = dims[p] - rks.get(p, 0)
+        b_p = z_p - rks.get(p+1, 0)
+        betas[p] = b_p
 
-    return {
-        'allowed': allowed, 'omega_basis': omega_basis, 'dims': dims,
-        'Z2': Z2, 'im_d3': im_d3,
-        'beta2': Z2 - im_d3,
-        'surplus': dims.get(3, 0) - Z2
-    }
+    return dims, rks, betas
 
 
-def paths_using_arc(paths, u, v):
-    """Count/list paths that use the arc u→v."""
-    using = []
-    for p in paths:
-        for i in range(len(p) - 1):
-            if p[i] == u and p[i+1] == v:
-                using.append(p)
-                break
-    return using
+def flip_arc(bits, i, j, n):
+    idx = 0
+    for a in range(n):
+        for b in range(a+1, n):
+            if a == i and b == j:
+                return bits ^ (1 << idx)
+            idx += 1
+    return bits
 
+
+print("=" * 70)
+print("ARC-FLIP MECHANISM ANALYSIS")
+print("=" * 70)
 
 n = 5
 n_arcs = n*(n-1)//2
 total = 1 << n_arcs
 
-print("=" * 70)
-print(f"ARC-FLIP MECHANISM ANALYSIS AT n={n}")
-print("=" * 70)
-
-# For each surplus=0 tournament, analyze the exact path changes under each flip
-surplus0_bits = []
+print(f"\nPrecomputing n={n}...")
+t0 = time.time()
 all_data = {}
+for bits in range(total):
+    A = build_adj(n, bits)
+    all_data[bits] = compute_full_data(A, n)
+dt = time.time() - t0
+print(f"  Done in {dt:.1f}s")
+
+# Detailed delta analysis
+print(f"\n--- Detailed delta analysis ---")
+
+delta_tuples = Counter()
+delta_beta1_dist = Counter()
 
 for bits in range(total):
     A = build_adj(n, bits)
-    data = compute_full_data(A, n)
-    all_data[bits] = data
-    if data['surplus'] == 0:
-        surplus0_bits.append(bits)
+    d, r, b = all_data[bits]
 
-print(f"\n  Surplus=0 tournaments: {len(surplus0_bits)}")
-print(f"\n  Analyzing path-level changes under arc flips from surplus=0...")
+    for i in range(n):
+        for j in range(i+1, n):
+            bits2 = flip_arc(bits, i, j, n)
+            d2, r2, b2 = all_data[bits2]
 
-# Track: for each flip from surplus=0, how many allowed 3-paths and 4-paths
-# use the flipped arc?
-path_analysis = []
+            dOm2 = d2[2] - d[2]
+            dOm3 = d2[3] - d[3]
+            drk2 = r2[2] - r[2]
+            drk3 = r2[3] - r[3]
+            dZ2 = dOm2 - drk2
+            db1 = b2[1] - b[1]
+            db2 = b2[2] - b[2]
 
-for bits in surplus0_bits[:20]:  # Detailed analysis of first 20
-    A = build_adj(n, bits)
-    data_before = all_data[bits]
+            delta_tuples[(dOm2, drk2, dZ2, dOm3, drk3, db1)] += 1
+            delta_beta1_dist[db1] += 1
 
-    for u in range(n):
-        for v in range(n):
-            if u == v or A[u][v] == 0:
-                continue
+print("\nDelta tuple distribution (dOm2, drk2, dZ2, dOm3, drk3, db1):")
+for key, count in sorted(delta_tuples.items()):
+    dOm2, drk2, dZ2, dOm3, drk3, db1 = key
+    b2_check = dZ2 - drk3
+    print(f"  ({dOm2:+d}, {drk2:+d}, {dZ2:+d}, {dOm3:+d}, {drk3:+d}, {db1:+d}): "
+          f"count={count}, db2={b2_check}")
 
-            # Flip u→v to v→u
-            B = [row[:] for row in A]
-            B[u][v] = 0
-            B[v][u] = 1
+print(f"\ndelta(beta_1) distribution: {dict(sorted(delta_beta1_dist.items()))}")
 
-            # Recompute bits for B
-            bits_flip = 0
-            idx = 0
-            for i in range(n):
-                for j in range(i+1, n):
-                    if B[i][j] == 1:
-                        bits_flip |= (1 << idx)
-                    idx += 1
-
-            data_after = all_data[bits_flip]
-
-            # Count paths using the flipped arc at each dimension
-            lost2 = paths_using_arc(data_before['allowed'].get(2, []), u, v)
-            lost3 = paths_using_arc(data_before['allowed'].get(3, []), u, v)
-            gained2 = paths_using_arc(data_after['allowed'].get(2, []), v, u)
-            gained3 = paths_using_arc(data_after['allowed'].get(3, []), v, u)
-
-            delta_A2 = len(data_after['allowed'].get(2, [])) - len(data_before['allowed'].get(2, []))
-            delta_A3 = len(data_after['allowed'].get(3, [])) - len(data_before['allowed'].get(3, []))
-            delta_O2 = data_after['dims'].get(2, 0) - data_before['dims'].get(2, 0)
-            delta_O3 = data_after['dims'].get(3, 0) - data_before['dims'].get(3, 0)
-            delta_Z2 = data_after['Z2'] - data_before['Z2']
-
-            path_analysis.append({
-                'bits': bits, 'u': u, 'v': v,
-                'lost2': len(lost2), 'gained2': len(gained2), 'delta_A2': delta_A2,
-                'lost3': len(lost3), 'gained3': len(gained3), 'delta_A3': delta_A3,
-                'delta_O2': delta_O2, 'delta_O3': delta_O3, 'delta_Z2': delta_Z2,
-                'surplus_after': data_after['surplus']
-            })
-
-# Summarize
-print(f"\n  Total flips analyzed: {len(path_analysis)}")
-
-# Joint distribution of (lost3, gained3)
-lost_gained3 = Counter((d['lost3'], d['gained3']) for d in path_analysis)
-print(f"\n  (lost_3paths, gained_3paths) distribution:")
-for (l, g) in sorted(lost_gained3.keys()):
-    print(f"    ({l}, {g}): {lost_gained3[(l,g)]}")
-
-# Joint distribution of (lost2, gained2)
-lost_gained2 = Counter((d['lost2'], d['gained2']) for d in path_analysis)
-print(f"\n  (lost_2paths, gained_2paths) distribution:")
-for (l, g) in sorted(lost_gained2.keys()):
-    print(f"    ({l}, {g}): {lost_gained2[(l,g)]}")
-
-# Joint distribution of (delta_A2, delta_A3)
-delta_A = Counter((d['delta_A2'], d['delta_A3']) for d in path_analysis)
-print(f"\n  (delta_|A_2|, delta_|A_3|) distribution:")
-for (d2, d3) in sorted(delta_A.keys()):
-    print(f"    ({d2:+d}, {d3:+d}): {delta_A[(d2,d3)]}")
-
-# KEY: joint distribution of (delta_O3, delta_Z2, delta_O2)
-joint_OZ = Counter((d['delta_O3'], d['delta_Z2'], d['delta_O2']) for d in path_analysis)
-print(f"\n  (delta_O3, delta_Z2, delta_O2) distribution:")
-for (dO3, dZ2, dO2) in sorted(joint_OZ.keys()):
-    print(f"    ({dO3:+d}, {dZ2:+d}, {dO2:+d}): {joint_OZ[(dO3, dZ2, dO2)]}")
-
-# Now do full analysis: ALL tournaments, track flipped-arc vertex degree info
+# KEY: dim(Z_1) is constant for all tournaments on n vertices
 print(f"\n{'='*70}")
-print(f"FULL ANALYSIS: VERTEX DEGREE AND SURPLUS CHANGE")
-print(f"{'='*70}")
+print("KEY INSIGHT: dim(Z_1) is constant for tournaments")
+print("=" * 70)
+print("dim(Omega_1) = n(n-1)/2 (all arcs)")
+print("rk(d_1) = n-1 (tournament is strongly connected <=> beta_0=1, always)")
+print("dim(Z_1) = n(n-1)/2 - (n-1) = (n-1)(n-2)/2")
+print()
+print("Since rk(d_2) = dim(Z_1) - beta_1:")
+print("  delta(rk d_2) = -delta(beta_1)")
 
-# For each flip, record (out_degree(u), out_degree(v), surplus_before, surplus_after)
-degree_surplus = []
+# Verify
+errors_rk2 = 0
+for bits in range(total):
+    d, r, b = all_data[bits]
+    for i in range(n):
+        for j in range(i+1, n):
+            bits2 = flip_arc(bits, i, j, n)
+            d2, r2, b2 = all_data[bits2]
+            drk2 = r2[2] - r[2]
+            db1 = b2[1] - b[1]
+            if drk2 != -db1:
+                errors_rk2 += 1
+
+print(f"Verification: delta(rk d_2) = -delta(beta_1) errors: {errors_rk2}")
+
+# So beta_2 = 0 invariance <=> delta(rk d_3) = delta(dim Om_2) + delta(beta_1)
+print(f"\n{'='*70}")
+print("REFORMULATION: beta_2 invariance <=> delta(rk d_3) = delta(dim Om_2) + delta(beta_1)")
+print("=" * 70)
+
+errors_formula = 0
+for bits in range(total):
+    d, r, b = all_data[bits]
+    for i in range(n):
+        for j in range(i+1, n):
+            bits2 = flip_arc(bits, i, j, n)
+            d2, r2, b2 = all_data[bits2]
+            drk3 = r2[3] - r[3]
+            dOm2 = d2[2] - d[2]
+            db1 = b2[1] - b[1]
+            if drk3 != dOm2 + db1:
+                errors_formula += 1
+
+print(f"  Errors: {errors_formula}")
+
+# Now check: is delta(beta_1) determined by local data?
+print(f"\n{'='*70}")
+print("Is delta(beta_1) determined by local data?")
+print("=" * 70)
+
+db1_by_local = defaultdict(list)
 for bits in range(total):
     A = build_adj(n, bits)
-    data_before = all_data[bits]
+    d, r, b = all_data[bits]
+    scores = [sum(row) for row in A]
 
-    for u in range(n):
-        for v in range(n):
-            if u == v or A[u][v] == 0:
-                continue
+    for i in range(n):
+        for j in range(i+1, n):
+            bits2 = flip_arc(bits, i, j, n)
+            d2, r2, b2 = all_data[bits2]
+            db1 = b2[1] - b[1]
 
-            B = [row[:] for row in A]
-            B[u][v] = 0
-            B[v][u] = 1
-            bits_flip = 0
-            idx = 0
-            for i in range(n):
-                for j in range(i+1, n):
-                    if B[i][j] == 1:
-                        bits_flip |= (1 << idx)
-                    idx += 1
+            if A[i][j] == 1:
+                u, v = i, j
+            else:
+                u, v = j, i
 
-            data_after = all_data[bits_flip]
+            cout = sum(1 for w in range(n) if w != u and w != v and A[u][w] and A[v][w])
+            cin = sum(1 for w in range(n) if w != u and w != v and A[w][u] and A[w][v])
+            p_uv = sum(1 for w in range(n) if w != u and w != v and A[u][w] and A[w][v])
+            p_vu = sum(1 for w in range(n) if w != u and w != v and A[v][w] and A[w][u])
 
-            out_u = sum(A[u])
-            out_v = sum(A[v])
+            db1_by_local[(scores[u], scores[v], cout, cin, p_uv, p_vu)].append(db1)
 
-            degree_surplus.append({
-                'out_u': out_u, 'out_v': out_v,
-                'surplus_before': data_before['surplus'],
-                'surplus_after': data_after['surplus'],
-                'delta': data_after['surplus'] - data_before['surplus']
-            })
+non_det = 0
+for key in sorted(db1_by_local.keys()):
+    vals = db1_by_local[key]
+    val_set = set(vals)
+    if len(val_set) > 1:
+        non_det += 1
+        if non_det <= 5:
+            print(f"  {key}: values={dict(Counter(vals))}")
 
-# Minimum surplus by (out_u, out_v) pair
-min_delta_by_deg = defaultdict(lambda: float('inf'))
-count_by_deg = defaultdict(int)
-for d in degree_surplus:
-    key = (d['out_u'], d['out_v'])
-    min_delta_by_deg[key] = min(min_delta_by_deg[key], d['delta'])
-    count_by_deg[key] += 1
+print(f"\n  Non-deterministic: {non_det}/{len(db1_by_local)}")
 
-print(f"\n  Min delta surplus by (out_u, out_v):")
-for key in sorted(min_delta_by_deg.keys()):
-    print(f"    deg(u)={key[0]}, deg(v)={key[1]}: min_delta={min_delta_by_deg[key]}, count={count_by_deg[key]}")
-
-# Minimum surplus after flip, by starting surplus
-min_after_by_start = defaultdict(lambda: float('inf'))
-for d in degree_surplus:
-    min_after_by_start[d['surplus_before']] = min(
-        min_after_by_start[d['surplus_before']], d['surplus_after'])
-
-print(f"\n  Min surplus after flip, by starting surplus:")
-for s in sorted(min_after_by_start.keys()):
-    print(f"    surplus={s}: min_after={min_after_by_start[s]}")
-
-# Count 3-cycles through (u,v) before and after
+# Euler characteristic
 print(f"\n{'='*70}")
-print(f"3-CYCLE ANALYSIS: FLIPS THROUGH (u,v)")
-print(f"{'='*70}")
+print("EULER CHARACTERISTIC")
+print("=" * 70)
+chi_dist = Counter()
+for bits in range(total):
+    d, r, b = all_data[bits]
+    chi = sum((-1)**p * b[p] for p in range(4))
+    chi_dist[chi] += 1
+print(f"  chi distribution: {dict(sorted(chi_dist.items()))}")
 
-def count_3cycles_through_uv(A, n, u, v):
-    """Count 3-cycles using arc u→v."""
-    count = 0
-    for w in range(n):
-        if w == u or w == v:
-            continue
-        # u→v→w→u
-        if A[u][v] and A[v][w] and A[w][u]:
-            count += 1
-        # w→u→v→w
-        if A[w][u] and A[u][v] and A[v][w]:
-            count += 1
-    return count
+if len(chi_dist) == 1:
+    chi_val = list(chi_dist.keys())[0]
+    print(f"  chi is CONSTANT = {chi_val} for all tournaments!")
+    print(f"  beta_0 - beta_1 + beta_2 - beta_3 = {chi_val}")
+    print(f"  If beta_2 = 0: 1 - beta_1 - beta_3 = {chi_val}")
+    print(f"  So: beta_1 + beta_3 = {1 - chi_val}")
+else:
+    print("  chi is NOT constant")
 
-cycle_data = []
-for bits in surplus0_bits[:50]:
-    A = build_adj(n, bits)
-    for u in range(n):
-        for v in range(n):
-            if u == v or A[u][v] == 0:
-                continue
-            c3_through = count_3cycles_through_uv(A, n, u, v)
+# Check at n=6
+print(f"\n{'='*70}")
+print("EULER CHARACTERISTIC at n=6,7 (sampled)")
+print("=" * 70)
+import random
+random.seed(42)
 
-            B = [row[:] for row in A]
-            B[u][v] = 0
-            B[v][u] = 1
-            bits_flip = 0
-            idx = 0
-            for i in range(n):
-                for j in range(i+1, n):
-                    if B[i][j] == 1:
-                        bits_flip |= (1 << idx)
-                    idx += 1
+for n_test in [6, 7]:
+    n_arcs = n_test*(n_test-1)//2
+    samples = 2000 if n_test == 6 else 500
+    chi_dist = Counter()
 
-            c3_after_through = count_3cycles_through_uv(B, n, v, u)
+    for _ in range(samples):
+        bits = random.randint(0, (1 << n_arcs) - 1)
+        A = build_adj(n_test, bits)
+        _, _, b = compute_full_data(A, n_test)
+        chi = sum((-1)**p * b.get(p, 0) for p in range(n_test))
+        chi_dist[chi] += 1
 
-            data_after = all_data[bits_flip]
-            delta_surplus = data_after['surplus'] - all_data[bits]['surplus']
-
-            cycle_data.append({
-                'c3_before': c3_through,
-                'c3_after': c3_after_through,
-                'delta_surplus': delta_surplus
-            })
-
-# Joint distribution of (c3_through_before, c3_through_after, delta_surplus)
-c3_joint = Counter((d['c3_before'], d['c3_after'], d['delta_surplus'])
-                    for d in cycle_data)
-print(f"\n  (c3_through_before, c3_through_after, delta_surplus):")
-for key in sorted(c3_joint.keys()):
-    print(f"    ({key[0]}, {key[1]}, {key[2]:+d}): {c3_joint[key]}")
+    print(f"  n={n_test}: chi distribution ({samples} samples): {dict(sorted(chi_dist.items()))}")
 
 print("\nDone.")

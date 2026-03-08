@@ -1,98 +1,76 @@
 ======================================================================
-ARC-FLIP MECHANISM ANALYSIS AT n=5
+ARC-FLIP MECHANISM ANALYSIS
 ======================================================================
 
-  Surplus=0 tournaments: 280
+Precomputing n=5...
+  Done in 1.1s
 
-  Analyzing path-level changes under arc flips from surplus=0...
+--- Detailed delta analysis ---
 
-  Total flips analyzed: 200
+Delta tuple distribution (dOm2, drk2, dZ2, dOm3, drk3, db1):
+  (-1, -1, +0, -1, +0, +1): count=240, db2=0
+  (-1, -1, +0, +0, +0, +1): count=160, db2=0
+  (-1, +0, -1, -2, -1, +0): count=720, db2=0
+  (-1, +0, -1, -1, -1, +0): count=240, db2=0
+  (-1, +1, -2, -6, -2, -1): count=120, db2=0
+  (-1, +1, -2, -4, -2, -1): count=120, db2=0
+  (-1, +1, -2, -3, -2, -1): count=480, db2=0
+  (+0, -1, +1, +1, +1, +1): count=240, db2=0
+  (+0, -1, +1, +2, +1, +1): count=240, db2=0
+  (+0, +0, +0, -3, +0, +0): count=120, db2=0
+  (+0, +0, +0, -1, +0, +0): count=1080, db2=0
+  (+0, +0, +0, +0, +0, +0): count=2720, db2=0
+  (+0, +0, +0, +1, +0, +0): count=1080, db2=0
+  (+0, +0, +0, +3, +0, +0): count=120, db2=0
+  (+0, +1, -1, -2, -1, -1): count=240, db2=0
+  (+0, +1, -1, -1, -1, -1): count=240, db2=0
+  (+1, -1, +2, +3, +2, +1): count=480, db2=0
+  (+1, -1, +2, +4, +2, +1): count=120, db2=0
+  (+1, -1, +2, +6, +2, +1): count=120, db2=0
+  (+1, +0, +1, +1, +1, +0): count=240, db2=0
+  (+1, +0, +1, +2, +1, +0): count=720, db2=0
+  (+1, +1, +0, +0, +0, -1): count=160, db2=0
+  (+1, +1, +0, +1, +0, -1): count=240, db2=0
 
-  (lost_3paths, gained_3paths) distribution:
-    (0, 12): 4
-    (1, 9): 24
-    (2, 6): 55
-    (3, 3): 8
-    (3, 7): 7
-    (4, 4): 14
-    (4, 8): 14
-    (5, 1): 36
-    (5, 5): 6
-    (6, 2): 14
-    (7, 3): 3
-    (9, 1): 14
-    (12, 0): 1
-
-  (lost_2paths, gained_2paths) distribution:
-    (0, 6): 4
-    (1, 5): 24
-    (2, 4): 76
-    (3, 3): 28
-    (4, 2): 53
-    (5, 1): 14
-    (6, 0): 1
-
-  (delta_|A_2|, delta_|A_3|) distribution:
-    (-6, -12): 1
-    (-4, -8): 14
-    (-2, -4): 53
-    (+0, +0): 28
-    (+2, +4): 76
-    (+4, +8): 24
-    (+6, +12): 4
-
-  (delta_O3, delta_Z2, delta_O2) distribution:
-    (+0, +0, -1): 4
-    (+0, +0, +0): 46
-    (+0, +0, +1): 1
-    (+1, +0, +0): 83
-    (+1, +0, +1): 6
-    (+2, +1, +0): 14
-    (+2, +1, +1): 39
-    (+4, +2, +1): 7
+delta(beta_1) distribution: {np.int64(-1): 1600, np.int64(0): 7040, np.int64(1): 1600}
 
 ======================================================================
-FULL ANALYSIS: VERTEX DEGREE AND SURPLUS CHANGE
+KEY INSIGHT: dim(Z_1) is constant for tournaments
 ======================================================================
+dim(Omega_1) = n(n-1)/2 (all arcs)
+rk(d_1) = n-1 (tournament is strongly connected <=> beta_0=1, always)
+dim(Z_1) = n(n-1)/2 - (n-1) = (n-1)(n-2)/2
 
-  Min delta surplus by (out_u, out_v):
-    deg(u)=1, deg(v)=0: min_delta=0, count=160
-    deg(u)=1, deg(v)=1: min_delta=-1, count=480
-    deg(u)=1, deg(v)=2: min_delta=-1, count=480
-    deg(u)=1, deg(v)=3: min_delta=0, count=160
-    deg(u)=2, deg(v)=0: min_delta=-1, count=480
-    deg(u)=2, deg(v)=1: min_delta=-1, count=1440
-    deg(u)=2, deg(v)=2: min_delta=-4, count=1440
-    deg(u)=2, deg(v)=3: min_delta=-1, count=480
-    deg(u)=3, deg(v)=0: min_delta=0, count=480
-    deg(u)=3, deg(v)=1: min_delta=-1, count=1440
-    deg(u)=3, deg(v)=2: min_delta=-1, count=1440
-    deg(u)=3, deg(v)=3: min_delta=-1, count=480
-    deg(u)=4, deg(v)=0: min_delta=0, count=160
-    deg(u)=4, deg(v)=1: min_delta=0, count=480
-    deg(u)=4, deg(v)=2: min_delta=-1, count=480
-    deg(u)=4, deg(v)=3: min_delta=0, count=160
-
-  Min surplus after flip, by starting surplus:
-    surplus=0: min_after=0
-    surplus=1: min_after=0
-    surplus=2: min_after=0
-    surplus=5: min_after=1
+Since rk(d_2) = dim(Z_1) - beta_1:
+  delta(rk d_2) = -delta(beta_1)
+Verification: delta(rk d_2) = -delta(beta_1) errors: 0
 
 ======================================================================
-3-CYCLE ANALYSIS: FLIPS THROUGH (u,v)
+REFORMULATION: beta_2 invariance <=> delta(rk d_3) = delta(dim Om_2) + delta(beta_1)
 ======================================================================
+  Errors: 0
 
-  (c3_through_before, c3_through_after, delta_surplus):
-    (0, 0, +0): 17
-    (0, 2, +1): 143
-    (0, 2, +2): 19
-    (0, 4, +0): 51
-    (0, 6, +0): 9
-    (2, 0, +1): 131
-    (2, 2, +1): 68
-    (2, 4, +1): 19
-    (4, 0, +0): 38
-    (6, 0, +0): 5
+======================================================================
+Is delta(beta_1) determined by local data?
+======================================================================
+  (1, 1, 0, 2, 0, 1): values={np.int64(0): 360, np.int64(-1): 120}
+  (1, 2, 0, 1, 0, 2): values={np.int64(0): 360, np.int64(-1): 120}
+  (2, 0, 0, 2, 1, 0): values={np.int64(0): 360, np.int64(1): 120}
+  (2, 1, 0, 1, 1, 1): values={np.int64(0): 240, np.int64(-1): 360, np.int64(1): 360}
+  (2, 2, 1, 1, 0, 1): values={np.int64(0): 720, np.int64(-1): 240}
+
+  Non-deterministic: 12/20
+
+======================================================================
+EULER CHARACTERISTIC
+======================================================================
+  chi distribution: {np.int64(0): 304, np.int64(1): 720}
+  chi is NOT constant
+
+======================================================================
+EULER CHARACTERISTIC at n=6,7 (sampled)
+======================================================================
+  n=6: chi distribution (2000 samples): {np.int64(0): 299, np.int64(1): 1701}
+  n=7: chi distribution (500 samples): {np.int64(0): 52, np.int64(1): 448}
 
 Done.
