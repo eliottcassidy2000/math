@@ -656,3 +656,18 @@ ODD/EVEN MAXIMIZER TOPOLOGY: At odd n (3,5,7), ALL H-maximizers share the SAME B
 
 **T206** #pfaffian-phase-split #eigenvalue-constraint-sphere | certainty: VERY HIGH (exhaustive n=6) | source: kind-pasteur-2026-03-08-S40
 MAXIMIZER SPECTRAL SPLIT at n=6: All 480 H-maximizers have SAME score (2,2,2,3,3,3) and c₃=8, but split by eigenvalue triple on constraint sphere a²+b²+c²=15. C-phase: (0.268,1.000,3.732), |Pf|=1. S-phase: (1.000,2.646,2.646), |Pf|=7. Complementation PRESERVES phase (complement of C-max is C-max). The tournament completeness + spectral geometry determines topology.
+
+**T207** #beta5-n9 #path-homology #DRT-maximizer | certainty: VERY HIGH (verified multiple maximizers) | source: kind-pasteur-2026-03-08-S41
+β₅=10 AT n=9: ALL H=3357 maximizers have Betti vector [1,0,0,0,0,10,0,0,0]. This is the FIRST observation of β₅>0 for any tournament. The maximizer is a DRT (doubly regular, adjacency eigenvalues [4,-1/2×8]) but NOT a conference matrix (S²≠-9I+J). NOT Paley (9≡1 mod 4). Circulant maximizers exist: S={1,5,6,7} on Z₉ achieves H=3357 (6 out of 16 connection sets). All ~1260 maximizers have identical eigenvalue signature (1.732, 2.207, 3.100, 4.303). c₃=30=n(n²-1)/24 (same as ALL regular n=9). Scripts: n9_max_betti_quick.py, n9_max_structure.py.
+
+**T208** #hereditary-chain-n9 #deletion-topology #maximizer | certainty: VERY HIGH | source: kind-pasteur-2026-03-08-S41
+HEREDITARY TOPOLOGY EXTENDS TO n=9: ALL 9 vertex-deletions of the H=3357 maximizer give H=661 (n=8 max) with β₄=1. This extends the odd-n hereditary chain: n=9(β₅=10)→n=8(β₄=1), n=7(β₄=6)→n=6(β₃=1), n=5(β₁=1)→n=4(β₁=1), n=3(β₁=1)→n=2(trivial). At n=8, the β₄=1 deletions are specifically the LOW spectral gap type (gap≤3.242), NOT the contractible type. Scripts: n9_max_betti_quick.py.
+
+**T209** #betti-sequence-formula #triangular-numbers #path-homology | certainty: CONJECTURAL (n=7,9 only) | source: kind-pasteur-2026-03-08-S41
+BETTI SEQUENCE CONJECTURE: For odd-n H-maximizers with n≥7, β_{(n+1)/2} = C((n+1)/2, 2). Verified: n=7 gives β₄=C(4,2)=6 ✓, n=9 gives β₅=C(5,2)=10 ✓. Predictions: n=11→β₆=15, n=13→β₇=21. The top homological dimension is d=(n+1)/2, and the Betti number is the d-th triangular number. For n=3,5: d=1 and β₁=1≠C(1,2)=0 (degenerate). ALTERNATIVE: Opus conjectures β_{p-3}=p-1 for Paley primes, which gives β₄=6 at p=7 but β₈=10 at p=11. These predictions DIFFER at n=11: my formula gives β₆=15, opus gives β₈=10. Testing at n=11 (Paley T₁₁) would resolve this.
+
+**T210** #n8-four-spectral-types #maximizer-split #path-homology | certainty: VERY HIGH (sampled ~425 maximizers) | source: kind-pasteur-2026-03-08-S41
+n=8 MAXIMIZER FOUR-WAY SPLIT: H=661 maximizers split into 4 spectral types (all c₃=20): (1) gap=3.190/|Pf|=17: β₄=1 (~14%), del: 4 S-phase + 4 contractible. (2) gap=3.242/|Pf|=9: β₄=1 (~35%), del: 4 S-phase + 4 contractible. (3) gap=3.655/|Pf|=9: contractible (~37%), del: 3 S-phase + 5 contractible. (4) gap=4.600/|Pf|=1: contractible (~13%), del: 2 C-phase + 6 contractible. β₄=1 iff gap≤3.242. Complement preserves type. Scripts: n8_maximizer_topology.py.
+
+**T211** #DT-sufficiency-fails-n6 #beta2-proof #path-homology | certainty: VERY HIGH (exhaustive) | source: opus-2026-03-08-S41
+DT-SUFFICIENCY FAILS AT n=6 FOR β₂=0 PROOF: At n=4,5, doubly-transitive 4-paths (a→b→c→d with a→c, b→d) span all of ker(∂₂), proving β₂=0 directly. At n=6, ker(∂₂) has dim 10-11 but DT paths span only dim 9. Gap of 1-2 dimensions must be filled by im(∂₃) instead. β₂=0 still holds (verified exhaustive n≤6) but needs a different proof approach at n≥6. From beta2_n6_analysis.out.
