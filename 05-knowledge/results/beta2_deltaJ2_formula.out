@@ -1,0 +1,162 @@
+======================================================================
+ANALYSIS 1: delta(J_2) under arc flips at n=5
+======================================================================
+Total arc flips: 10240
+  NOT determined: (d_u=1, d_v=1, co=0, ci=2, a2_uv=0, a2_vu=1): delta_J2 in {-3, -2}
+  NOT determined: (d_u=1, d_v=2, co=0, ci=1, a2_uv=0, a2_vu=2): delta_J2 in {-5, -4, -3}
+  NOT determined: (d_u=2, d_v=0, co=0, ci=2, a2_uv=1, a2_vu=0): delta_J2 in {2, 3}
+  NOT determined: (d_u=2, d_v=1, co=0, ci=1, a2_uv=1, a2_vu=1): delta_J2 in {0, 1, -1}
+  NOT determined: (d_u=2, d_v=2, co=0, ci=0, a2_uv=1, a2_vu=2): delta_J2 in {-1, -2}
+  NOT determined: (d_u=2, d_v=2, co=1, ci=1, a2_uv=0, a2_vu=1): delta_J2 in {-3, -2, -1}
+  NOT determined: (d_u=2, d_v=3, co=1, ci=0, a2_uv=0, a2_vu=2): delta_J2 in {-5, -4, -3}
+  NOT determined: (d_u=3, d_v=0, co=0, ci=1, a2_uv=2, a2_vu=0): delta_J2 in {3, 4, 5}
+  NOT determined: (d_u=3, d_v=1, co=0, ci=0, a2_uv=2, a2_vu=1): delta_J2 in {1, 2}
+  NOT determined: (d_u=3, d_v=1, co=1, ci=1, a2_uv=1, a2_vu=0): delta_J2 in {1, 2, 3}
+  NOT determined: (d_u=3, d_v=2, co=1, ci=0, a2_uv=1, a2_vu=1): delta_J2 in {0, 1, -1}
+  NOT determined: (d_u=3, d_v=3, co=2, ci=0, a2_uv=0, a2_vu=1): delta_J2 in {-3, -2}
+  NOT determined: (d_u=4, d_v=1, co=1, ci=0, a2_uv=2, a2_vu=0): delta_J2 in {3, 4, 5}
+  NOT determined: (d_u=4, d_v=2, co=2, ci=0, a2_uv=1, a2_vu=0): delta_J2 in {2, 3}
+
+Non-determined by (d_u, d_v, co, ci, a2_uv, a2_vu): 14/20
+
+By (d_u, d_v, a2_uv, a2_vu):
+  (d_u=1, d_v=1, a2_uv=0, a2_vu=1): {-3: 120, -2: 360}
+  (d_u=1, d_v=2, a2_uv=0, a2_vu=2): {-5: 120, -4: 240, -3: 120}
+  (d_u=2, d_v=0, a2_uv=1, a2_vu=0): {3: 120, 2: 360}
+  (d_u=2, d_v=1, a2_uv=1, a2_vu=1): {0: 480, 1: 240, -1: 240}
+  (d_u=2, d_v=2, a2_uv=0, a2_vu=1): {-2: 480, -3: 240, -1: 240}
+  (d_u=2, d_v=2, a2_uv=1, a2_vu=2): {-1: 240, -2: 240}
+  (d_u=2, d_v=3, a2_uv=0, a2_vu=2): {-5: 120, -4: 240, -3: 120}
+  (d_u=3, d_v=0, a2_uv=2, a2_vu=0): {5: 120, 4: 240, 3: 120}
+  (d_u=3, d_v=1, a2_uv=1, a2_vu=0): {3: 240, 2: 480, 1: 240}
+  (d_u=3, d_v=1, a2_uv=2, a2_vu=1): {1: 240, 2: 240}
+  (d_u=3, d_v=2, a2_uv=1, a2_vu=1): {0: 480, 1: 240, -1: 240}
+  (d_u=3, d_v=3, a2_uv=0, a2_vu=1): {-2: 360, -3: 120}
+  (d_u=4, d_v=1, a2_uv=2, a2_vu=0): {5: 120, 4: 240, 3: 120}
+  (d_u=4, d_v=2, a2_uv=1, a2_vu=0): {3: 120, 2: 360}
+
+======================================================================
+ANALYSIS 2: Decomposing delta(J_2) into pair-level changes
+======================================================================
+Pairs ENTERING J_2: {'adj_v': 960, 'adj_u': 997, 'direct_uv': 1169}
+Pairs LEAVING J_2: {'adj_u': 761, 'adj_v': 761, 'direct_vu': 1005}
+Non-adjacent changes: enter=0, leave=0
+  ** J_2 changes are LOCAL (only adjacent pairs change) **
+
+======================================================================
+ANALYSIS 3: Exact formula for delta(J_2)
+======================================================================
+Verifying pair-level changes...
+
+Category A (u,v) enters J_2: 5920
+Category A (u,v) stays out: 4320
+Category B (v,u) leaves J_2: 5920
+Category B (v,u) stays in: 0
+Category C enters: 8640
+Category C leaves: 8640
+Category C net change distribution: {-6: 160, -4: 240, -3: 480, -2: 960, -1: 1920, 0: 2720, 1: 1920, 2: 960, 3: 480, 4: 240, 6: 160}
+
+======================================================================
+ANALYSIS 4: Category C — what changes A^2 threshold for non-{u,v} pairs?
+======================================================================
+Non-adjacent Category C changes: 0
+  ** CONFIRMED: ALL J_2 changes are local to {u,v} **
+
+======================================================================
+ANALYSIS 5: Exact delta(J_2) formula
+======================================================================
+
+Formula errors: 0
+  ** EXACT FORMULA VERIFIED for all n=5 arc flips **
+
+======================================================================
+ANALYSIS 6: delta(J_2) as function of local invariants
+======================================================================
+delta(J_2) distribution by (d_u, d_v):
+  (d_u=1, d_v=0): {0: 160}
+  (d_u=1, d_v=1): {-3: 120, -2: 360}
+  (d_u=1, d_v=2): {-5: 120, -4: 240, -3: 120}
+  (d_u=1, d_v=3): {-7: 160}
+  (d_u=2, d_v=0): {2: 360, 3: 120}
+  (d_u=2, d_v=1): {-1: 240, 0: 960, 1: 240}
+  (d_u=2, d_v=2): {-3: 240, -2: 720, -1: 480}
+  (d_u=2, d_v=3): {-5: 120, -4: 240, -3: 120}
+  (d_u=3, d_v=0): {3: 120, 4: 240, 5: 120}
+  (d_u=3, d_v=1): {1: 480, 2: 720, 3: 240}
+  (d_u=3, d_v=2): {-1: 240, 0: 960, 1: 240}
+  (d_u=3, d_v=3): {-3: 120, -2: 360}
+  (d_u=4, d_v=0): {7: 160}
+  (d_u=4, d_v=1): {3: 120, 4: 240, 5: 120}
+  (d_u=4, d_v=2): {2: 360, 3: 120}
+  (d_u=4, d_v=3): {0: 160}
+
+======================================================================
+ANALYSIS 7: delta(dim Omega_2) = delta(|A_2|) - delta(J_2)
+======================================================================
+delta(dim Omega_2) by (d_u, d_v):
+  (d_u=1, d_v=0): {0: 160}
+  (d_u=1, d_v=1): {0: 360, 1: 120}
+  (d_u=1, d_v=2): {-1: 120, 0: 240, 1: 120}
+  (d_u=1, d_v=3): {1: 160}
+  (d_u=2, d_v=0): {-1: 120, 0: 360}
+  (d_u=2, d_v=1): {-1: 240, 0: 960, 1: 240}
+  (d_u=2, d_v=2): {-1: 480, 0: 720, 1: 240}
+  (d_u=2, d_v=3): {-1: 120, 0: 240, 1: 120}
+  (d_u=3, d_v=0): {-1: 120, 0: 240, 1: 120}
+  (d_u=3, d_v=1): {-1: 240, 0: 720, 1: 480}
+  (d_u=3, d_v=2): {-1: 240, 0: 960, 1: 240}
+  (d_u=3, d_v=3): {0: 360, 1: 120}
+  (d_u=4, d_v=0): {-1: 160}
+  (d_u=4, d_v=1): {-1: 120, 0: 240, 1: 120}
+  (d_u=4, d_v=2): {-1: 120, 0: 360}
+  (d_u=4, d_v=3): {0: 160}
+
+delta(dim Omega_2) by (d_u - d_v):
+  d_u - d_v = -2: {1: 160}
+  d_u - d_v = -1: {-1: 240, 0: 480, 1: 240}
+  d_u - d_v = 0: {-1: 480, 0: 1440, 1: 480}
+  d_u - d_v = 1: {-1: 480, 0: 2240, 1: 480}
+  d_u - d_v = 2: {-1: 480, 0: 1440, 1: 480}
+  d_u - d_v = 3: {-1: 240, 0: 480, 1: 240}
+  d_u - d_v = 4: {-1: 160}
+
+======================================================================
+ANALYSIS 8: delta(beta_1) under arc flips at n=5
+======================================================================
+delta(beta_1) by (d_u, d_v):
+  (d_u=1, d_v=0): {np.int64(0): 160}
+  (d_u=1, d_v=1): {np.int64(-1): 120, np.int64(0): 360} <-- VARIES
+  (d_u=1, d_v=2): {np.int64(-1): 120, np.int64(0): 360} <-- VARIES
+  (d_u=1, d_v=3): {np.int64(-1): 160}
+  (d_u=2, d_v=0): {np.int64(0): 360, np.int64(1): 120} <-- VARIES
+  (d_u=2, d_v=1): {np.int64(-1): 360, np.int64(0): 720, np.int64(1): 360} <-- VARIES
+  (d_u=2, d_v=2): {np.int64(-1): 240, np.int64(0): 1200} <-- VARIES
+  (d_u=2, d_v=3): {np.int64(-1): 120, np.int64(0): 360} <-- VARIES
+  (d_u=3, d_v=0): {np.int64(0): 360, np.int64(1): 120} <-- VARIES
+  (d_u=3, d_v=1): {np.int64(0): 1200, np.int64(1): 240} <-- VARIES
+  (d_u=3, d_v=2): {np.int64(-1): 360, np.int64(0): 720, np.int64(1): 360} <-- VARIES
+  (d_u=3, d_v=3): {np.int64(-1): 120, np.int64(0): 360} <-- VARIES
+  (d_u=4, d_v=0): {np.int64(1): 160}
+  (d_u=4, d_v=1): {np.int64(0): 360, np.int64(1): 120} <-- VARIES
+  (d_u=4, d_v=2): {np.int64(0): 360, np.int64(1): 120} <-- VARIES
+  (d_u=4, d_v=3): {np.int64(0): 160}
+
+delta(dim Omega_2) + delta(beta_1) by (d_u, d_v):
+  (d_u=1, d_v=0): {np.int64(0): 160}
+  (d_u=1, d_v=1): {np.int64(-1): 120, np.int64(0): 240, np.int64(1): 120} <-- VARIES
+  (d_u=1, d_v=2): {np.int64(-2): 120, np.int64(0): 240, np.int64(1): 120} <-- VARIES
+  (d_u=1, d_v=3): {np.int64(0): 160}
+  (d_u=2, d_v=0): {np.int64(-1): 120, np.int64(0): 240, np.int64(1): 120} <-- VARIES
+  (d_u=2, d_v=1): {np.int64(-2): 120, np.int64(-1): 120, np.int64(0): 960, np.int64(1): 120, np.int64(2): 120} <-- VARIES
+  (d_u=2, d_v=2): {np.int64(-2): 240, np.int64(-1): 240, np.int64(0): 720, np.int64(1): 240} <-- VARIES
+  (d_u=2, d_v=3): {np.int64(-2): 120, np.int64(0): 240, np.int64(1): 120} <-- VARIES
+  (d_u=3, d_v=0): {np.int64(-1): 120, np.int64(0): 240, np.int64(2): 120} <-- VARIES
+  (d_u=3, d_v=1): {np.int64(-1): 240, np.int64(0): 720, np.int64(1): 240, np.int64(2): 240} <-- VARIES
+  (d_u=3, d_v=2): {np.int64(-2): 120, np.int64(-1): 120, np.int64(0): 960, np.int64(1): 120, np.int64(2): 120} <-- VARIES
+  (d_u=3, d_v=3): {np.int64(-1): 120, np.int64(0): 240, np.int64(1): 120} <-- VARIES
+  (d_u=4, d_v=0): {np.int64(0): 160}
+  (d_u=4, d_v=1): {np.int64(-1): 120, np.int64(0): 240, np.int64(2): 120} <-- VARIES
+  (d_u=4, d_v=2): {np.int64(-1): 120, np.int64(0): 240, np.int64(1): 120} <-- VARIES
+  (d_u=4, d_v=3): {np.int64(0): 160}
+
+Done.

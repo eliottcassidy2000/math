@@ -87,6 +87,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-232 | DT deficit gap ≤ 2 at n=7,8 | Gap distribution: n=7: 91.6% gap=0, 7.7% gap=1, 0.6% gap=2; n=8 similar | beta2_dt_deficit_n7.py |
 | HYP-233 | beta_2 is ARC-FLIP INVARIANT: delta(dim Z_2) = delta(rk d_3) under any arc flip | Exhaustive n=5 (10240 flips, 0 mismatches), sampled n=6 (15000), n=7 (2500), n=8 (500) | beta2_arcflip_exactness.py |
 | HYP-234 | beta_2 = 0 via arc-flip invariance: beta_2(T_trans)=0 + HYP-233 => beta_2=0 for all | PROOF STRATEGY. Equivalent to: delta(rk d_3) = delta(dim Omega_2) + delta(beta_1) | beta2_arcflip_mechanism.py |
+| HYP-235 | dim(Omega_2) = \|A_2\| - J_2 where J_2 = #{(a,c): c→a and A²[a,c]>0} | CONFIRMED exhaustive n=4,5,6. Junk pairs contribute exactly one linear constraint each | beta2_omega_formula.py |
+| HYP-236 | ALL Z_2 cycles use ALL n vertices | Exhaustive n=5 (3600/3600 cycles), sampled n=6 (5000 tournaments). Full vertex support | beta2_filling_structure.py |
+| HYP-237 | β_p = 0 for ALL p ≥ 2 at n=5 | Exhaustive 1024 tournaments: β₂=β₃=β₄=0 always. Only β₀=1, β₁∈{0,1} | beta2_simplex_deformation.py |
+| HYP-238 | χ = 1 - β₁ for all tournaments (Euler char from simplex deformation) | n=4: χ∈{0,1}, n=5: χ∈{0,1}, matches 1-β₁ exactly. NOT constant! | beta2_simplex_deformation.py |
 
 ---
 
