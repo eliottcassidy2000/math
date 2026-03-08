@@ -1,0 +1,188 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+CORRECT β_2 COMPUTATION
+======================================================================
+
+n=4: 64 tournaments (0.0s)
+  (ker_dim, dim_Ω_2, dim_Ω_3, β_2): count
+    (0, 3, 0, β_2=0): 16
+    (1, 3, 1, β_2=0): 24
+    (1, 4, 1, β_2=0): 24
+  β_2 = 0 for ALL? True
+
+n=5: 1024 tournaments (1.0s)
+  (ker_dim, dim_Ω_2, dim_Ω_3, β_2): count
+    (3, 8, 3, β_2=0): 40
+    (3, 9, 3, β_2=0): 240
+    (3, 9, 4, β_2=0): 360
+    (4, 9, 5, β_2=0): 120
+    (4, 10, 5, β_2=0): 120
+    (5, 10, 7, β_2=0): 120
+    (5, 10, 10, β_2=0): 24
+  β_2 = 0 for ALL? True
+
+--- n=6 exhaustive ---
+  ... 5000/32768 (28s)
+  ... 10000/32768 (53s)
+  ... 15000/32768 (82s)
+  ... 20000/32768 (108s)
+  ... 25000/32768 (136s)
+  ... 30000/32768 (160s)
+
+n=6: 32768 tournaments (173.9s)
+  β_2 = 0 for ALL? True
+
+
+======================================================================
+Ω_2: TRANSITIVE TRIPLES vs TRUE DIMENSION
+======================================================================
+
+n=5: dim(Ω_2) - |TT| distribution:
+  gap=0: 240 tournaments
+  gap=1: 240 tournaments
+  gap=2: 280 tournaments
+  gap=3: 120 tournaments
+  gap=4: 120 tournaments
+  gap=5: 24 tournaments
+
+The gap comes from non-TT pairs sharing a non-allowed face.
+Non-allowed face (a,c) appears in (a,b,c) when c→a.
+If multiple 2-paths share the same non-allowed face,
+we get cancellation chains.
+  |non-TT|=0, |non-A_1 faces|=0, multi=0, dim_Ω_2=10, |TT|=10
+  |non-TT|=0, |non-A_1 faces|=0, multi=0, dim_Ω_2=10, |TT|=10
+  |non-TT|=3, |non-A_1 faces|=3, multi=0, dim_Ω_2=9, |TT|=9
+  |non-TT|=0, |non-A_1 faces|=0, multi=0, dim_Ω_2=10, |TT|=10
+  |non-TT|=6, |non-A_1 faces|=5, multi=1, dim_Ω_2=9, |TT|=8
+  |non-TT|=3, |non-A_1 faces|=3, multi=0, dim_Ω_2=9, |TT|=9
+  |non-TT|=6, |non-A_1 faces|=5, multi=1, dim_Ω_2=9, |TT|=8
+  |non-TT|=0, |non-A_1 faces|=0, multi=0, dim_Ω_2=10, |TT|=10
+  |non-TT|=9, |non-A_1 faces|=7, multi=1, dim_Ω_2=9, |TT|=7
+  |non-TT|=6, |non-A_1 faces|=5, multi=1, dim_Ω_2=9, |TT|=8
+
+Done.
