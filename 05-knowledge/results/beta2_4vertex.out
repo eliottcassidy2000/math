@@ -1,0 +1,80 @@
+======================================================================
+4-VERTEX TOURNAMENT TYPES
+======================================================================
+  (0, 1, 2, 3): 24 tours, c3=0, |A2|=4, |A3|=1, DD=1, Om2=4, Om3=1
+  (0, 2, 2, 2): 8 tours, c3=1, |A2|=6, |A3|=3, DD=0, Om2=3, Om3=0
+  (1, 1, 1, 3): 8 tours, c3=1, |A2|=6, |A3|=3, DD=0, Om2=3, Om3=0
+  (1, 1, 2, 2): 24 tours, c3=2, |A2|=8, |A3|=5, DD=1, Om2=3, Om3=1
+
+======================================================================
+4-VERTEX CONTRIBUTIONS AT n=5
+======================================================================
+
+bits=0, scores=(0, 1, 2, 3, 4)
+  Global: Om2=10, Z2=4, Om3=5
+  (0, 1, 2, 3) ((0, 1, 2, 3)): 1 paths, 1 DD, Om3_proj=1
+  (0, 1, 2, 4) ((0, 1, 2, 3)): 1 paths, 1 DD, Om3_proj=1
+  (0, 1, 3, 4) ((0, 1, 2, 3)): 1 paths, 1 DD, Om3_proj=1
+  (0, 2, 3, 4) ((0, 1, 2, 3)): 1 paths, 1 DD, Om3_proj=1
+  (1, 2, 3, 4) ((0, 1, 2, 3)): 1 paths, 1 DD, Om3_proj=1
+
+bits=10, scores=(1, 1, 2, 3, 3)
+  Global: Om2=9, Z2=3, Om3=3
+  (0, 1, 2, 3) ((1, 1, 1, 3)): 3 paths, 0 DD, Om3_proj=0
+  (0, 1, 2, 4) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=1
+  (0, 1, 3, 4) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=1
+  (0, 2, 3, 4) ((0, 2, 2, 2)): 3 paths, 0 DD, Om3_proj=0
+  (1, 2, 3, 4) ((0, 1, 2, 3)): 1 paths, 1 DD, Om3_proj=1
+
+bits=341, scores=(2, 2, 2, 2, 2)
+  Global: Om2=10, Z2=5, Om3=10
+  (0, 1, 2, 3) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=4
+  (0, 1, 2, 4) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=4
+  (0, 1, 3, 4) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=4
+  (0, 2, 3, 4) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=4
+  (1, 2, 3, 4) ((1, 1, 2, 2)): 5 paths, 1 DD, Om3_proj=4
+
+======================================================================
+BETA2 OF 4-VERTEX SUBTOURNAMENTS
+======================================================================
+
+Verification: beta2=0 for ALL 4-vertex tournaments
+  CONFIRMED: beta2=0 for all 64 tournaments on 4 vertices
+
+======================================================================
+INDUCTION APPROACH
+======================================================================
+
+INDUCTION STRATEGY:
+- Base case: n=4, beta2=0 (verified all 64)
+- Inductive step: T on n vertices, assume beta2=0 for all (n-1)-vertex tournaments
+
+For each vertex v in T, T is a tournament on n-1 vertices.
+By induction, beta2(T) = 0.
+
+QUESTION: Can we lift from beta2(T)=0 to beta2(T)=0?
+
+The long exact sequence of the pair (T, T) gives:
+  ... -> H_2(T) -> H_2(T, T) -> H_1(T) -> H_1(T) -> ...
+
+For beta2(T)=0: need H_2(T) = 0, which means:
+  im(H_2(T, T) -> H_1(T)) = ker(H_1(T) -> H_1(T))
+
+This was explored before (HYP-231) and found to be equivalent to beta2=0.
+
+ALTERNATIVE: Use arc-flip induction.
+Start from transitive tournament (beta2=0 trivially).
+Each flip preserves beta2=0 (HYP-233, verified).
+Since any tournament is reachable from transitive by flips,
+beta2=0 for all tournaments.
+
+BUT: we need to PROVE that arc-flip preserves beta2=0,
+not just verify computationally.
+
+
+Transitive T_5: betti = [np.int64(1), 0, 0, 0, 0]
+Transitive T_6: betti = [np.int64(1), 0, 0, 0, 0, 0]
+Transitive T_7: betti = [np.int64(1), 0, 0, 0, 0, 0, 0]
+
+
+Done.

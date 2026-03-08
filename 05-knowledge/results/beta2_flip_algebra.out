@@ -1,0 +1,118 @@
+======================================================================
+ARC-FLIP ALGEBRA: n=5
+======================================================================
+Total flips analyzed: 5120
+delta_Z2 = delta_rk3 violations: 0/5120
+
+By (d_u, d_v):
+  d_u=1, d_v=0 (80 flips):
+    dA2=[0], dOm2=[0], dZ2=[np.int64(0)]
+    dOm3=[0], drk3=[np.int64(0)]
+    db1=[np.int64(0)]
+  d_u=1, d_v=1 (240 flips):
+    dA2=[-2], dOm2=[0, 1], dZ2=[np.int64(-1), np.int64(0), np.int64(1)]
+    dOm3=[-1, 1, 2], drk3=[np.int64(-1), np.int64(0), np.int64(1)]
+    db1=[np.int64(-1), np.int64(0)]
+  d_u=1, d_v=2 (240 flips):
+    dA2=[-4], dOm2=[-1, 0, 1], dZ2=[np.int64(-2), np.int64(0), np.int64(1)]
+    dOm3=[-3, 0, 1], drk3=[np.int64(-2), np.int64(0), np.int64(1)]
+    db1=[np.int64(-1), np.int64(0)]
+  d_u=1, d_v=3 (80 flips):
+    dA2=[-6], dOm2=[1], dZ2=[np.int64(0)]
+    dOm3=[0], drk3=[np.int64(0)]
+    db1=[np.int64(-1)]
+  d_u=2, d_v=0 (240 flips):
+    dA2=[2], dOm2=[-1, 0], dZ2=[np.int64(-1), np.int64(0), np.int64(1)]
+    dOm3=[-2, -1, 1], drk3=[np.int64(-1), np.int64(0), np.int64(1)]
+    db1=[np.int64(0), np.int64(1)]
+  d_u=2, d_v=1 (720 flips):
+    dA2=[0], dOm2=[-1, 0, 1], dZ2=[np.int64(-2), np.int64(-1), np.int64(0), np.int64(1), np.int64(2)]
+    dOm3=[-3, -2, -1, 0, 1, 2, 3], drk3=[np.int64(-2), np.int64(-1), np.int64(0), np.int64(1), np.int64(2)]
+    db1=[np.int64(-1), np.int64(0), np.int64(1)]
+  d_u=2, d_v=2 (720 flips):
+    dA2=[-2], dOm2=[-1, 0, 1], dZ2=[np.int64(-2), np.int64(-1), np.int64(0), np.int64(1)]
+    dOm3=[-6, -4, -3, -2, -1, 2], drk3=[np.int64(-2), np.int64(-1), np.int64(0), np.int64(1)]
+    db1=[np.int64(-1), np.int64(0)]
+  d_u=2, d_v=3 (240 flips):
+    dA2=[-4], dOm2=[-1, 0, 1], dZ2=[np.int64(-2), np.int64(0), np.int64(1)]
+    dOm3=[-3, 0, 1], drk3=[np.int64(-2), np.int64(0), np.int64(1)]
+    db1=[np.int64(-1), np.int64(0)]
+  d_u=3, d_v=0 (240 flips):
+    dA2=[4], dOm2=[-1, 0, 1], dZ2=[np.int64(-1), np.int64(0), np.int64(2)]
+    dOm3=[-1, 0, 3], drk3=[np.int64(-1), np.int64(0), np.int64(2)]
+    db1=[np.int64(0), np.int64(1)]
+  d_u=3, d_v=1 (720 flips):
+    dA2=[2], dOm2=[-1, 0, 1], dZ2=[np.int64(-1), np.int64(0), np.int64(1), np.int64(2)]
+    dOm3=[-2, 1, 2, 3, 4, 6], drk3=[np.int64(-1), np.int64(0), np.int64(1), np.int64(2)]
+    db1=[np.int64(0), np.int64(1)]
+  d_u=3, d_v=2 (720 flips):
+    dA2=[0], dOm2=[-1, 0, 1], dZ2=[np.int64(-2), np.int64(-1), np.int64(0), np.int64(1), np.int64(2)]
+    dOm3=[-3, -2, -1, 0, 1, 2, 3], drk3=[np.int64(-2), np.int64(-1), np.int64(0), np.int64(1), np.int64(2)]
+    db1=[np.int64(-1), np.int64(0), np.int64(1)]
+  d_u=3, d_v=3 (240 flips):
+    dA2=[-2], dOm2=[0, 1], dZ2=[np.int64(-1), np.int64(0), np.int64(1)]
+    dOm3=[-1, 1, 2], drk3=[np.int64(-1), np.int64(0), np.int64(1)]
+    db1=[np.int64(-1), np.int64(0)]
+  d_u=4, d_v=0 (80 flips):
+    dA2=[6], dOm2=[-1], dZ2=[np.int64(0)]
+    dOm3=[0], drk3=[np.int64(0)]
+    db1=[np.int64(1)]
+  d_u=4, d_v=1 (240 flips):
+    dA2=[4], dOm2=[-1, 0, 1], dZ2=[np.int64(-1), np.int64(0), np.int64(2)]
+    dOm3=[-1, 0, 3], drk3=[np.int64(-1), np.int64(0), np.int64(2)]
+    db1=[np.int64(0), np.int64(1)]
+  d_u=4, d_v=2 (240 flips):
+    dA2=[2], dOm2=[-1, 0], dZ2=[np.int64(-1), np.int64(0), np.int64(1)]
+    dOm3=[-2, -1, 1], drk3=[np.int64(-1), np.int64(0), np.int64(1)]
+    db1=[np.int64(0), np.int64(1)]
+  d_u=4, d_v=3 (80 flips):
+    dA2=[0], dOm2=[0], dZ2=[np.int64(0)]
+    dOm3=[0], drk3=[np.int64(0)]
+    db1=[np.int64(0)]
+
+======================================================================
+IDENTITY: dOm2 = drk2 + drk3
+======================================================================
+  CONFIRMED: dOm2 = drk2 + drk3 for all flips
+  (This is trivially true from dOm2 = dZ2 + drk2 and dZ2 = drk3)
+
+======================================================================
+IS drk2 LOCALLY DETERMINED?
+======================================================================
+drk2 should = -db1:
+  drk2=0, -db1=0, match=True
+  drk2=0, -db1=0, match=True
+  drk2=0, -db1=0, match=True
+  drk2=0, -db1=0, match=True
+  drk2=0, -db1=0, match=True
+
+db1 by (d_u, d_v):
+  d_u=1, d_v=0: db1 values = {np.int64(0): 80}
+  d_u=1, d_v=1: db1 values = {np.int64(-1): 60, np.int64(0): 180}
+  d_u=1, d_v=2: db1 values = {np.int64(-1): 60, np.int64(0): 180}
+  d_u=1, d_v=3: db1 values = {np.int64(-1): 80}
+  d_u=2, d_v=0: db1 values = {np.int64(0): 180, np.int64(1): 60}
+  d_u=2, d_v=1: db1 values = {np.int64(-1): 180, np.int64(0): 360, np.int64(1): 180}
+  d_u=2, d_v=2: db1 values = {np.int64(-1): 120, np.int64(0): 600}
+  d_u=2, d_v=3: db1 values = {np.int64(-1): 60, np.int64(0): 180}
+  d_u=3, d_v=0: db1 values = {np.int64(0): 180, np.int64(1): 60}
+  d_u=3, d_v=1: db1 values = {np.int64(0): 600, np.int64(1): 120}
+  d_u=3, d_v=2: db1 values = {np.int64(-1): 180, np.int64(0): 360, np.int64(1): 180}
+  d_u=3, d_v=3: db1 values = {np.int64(-1): 60, np.int64(0): 180}
+  d_u=4, d_v=0: db1 values = {np.int64(1): 80}
+  d_u=4, d_v=1: db1 values = {np.int64(0): 180, np.int64(1): 60}
+  d_u=4, d_v=2: db1 values = {np.int64(0): 180, np.int64(1): 60}
+  d_u=4, d_v=3: db1 values = {np.int64(0): 80}
+
+======================================================================
+dZ2 = dOm2 + db1?
+======================================================================
+  dZ2 = dOm2 + db1: True
+  Equivalently: delta(dim Z2) = delta(dim Om2) + delta(beta1)
+
+  So beta2=0 invariance under flip means:
+  delta(rk(bd3|_Om3)) = delta(dim(Om2)) + delta(beta1)
+  = delta(dim(Om2)) - delta(rk(bd2|_Om2))
+
+
+Done.
