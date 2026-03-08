@@ -1,0 +1,73 @@
+======================================================================
+n=6 EXHAUSTIVE: S-phase characterization
+======================================================================
+  10000/32768 (26.2s)
+  20000/32768 (53.1s)
+  30000/32768 (80.8s)
+
+Done in 87.7s
+S-phase: 320 tournaments
+C-phase: 4800 tournaments
+
+======================================================================
+S-PHASE DETAILED ANALYSIS
+======================================================================
+
+c3 distribution: {2: 80, 8: 240}
+c5 distribution: {0: 80, 12: 240}
+H distribution: {9: 80, 45: 240}
+
+Score sequences: {(1, 1, 1, 4, 4, 4): 80, (2, 2, 2, 3, 3, 3): 240}
+
+--- Cycle structure details ---
+
+c3=2: 80 tournaments
+  H=9, score=(1, 1, 1, 4, 4, 4), c5=0
+    vertices used by 3-cycles: {0, 1, 2, 3, 4, 5}
+    vertex-disjoint? True
+  H=9, score=(1, 1, 1, 4, 4, 4), c5=0
+    vertices used by 3-cycles: {0, 1, 2, 3, 4, 5}
+    vertex-disjoint? True
+  H=9, score=(1, 1, 1, 4, 4, 4), c5=0
+    vertices used by 3-cycles: {0, 1, 2, 3, 4, 5}
+    vertex-disjoint? True
+  H=9, score=(1, 1, 1, 4, 4, 4), c5=0
+    vertices used by 3-cycles: {0, 1, 2, 3, 4, 5}
+    vertex-disjoint? True
+  H=9, score=(1, 1, 1, 4, 4, 4), c5=0
+    vertices used by 3-cycles: {0, 1, 2, 3, 4, 5}
+    vertex-disjoint? True
+
+c3=8: 240 tournaments
+  H=45, score=(2, 2, 2, 3, 3, 3), c5=12
+    disjoint 3-cycle pairs: 1
+  H=45, score=(2, 2, 2, 3, 3, 3), c5=12
+    disjoint 3-cycle pairs: 1
+  H=45, score=(2, 2, 2, 3, 3, 3), c5=12
+    disjoint 3-cycle pairs: 1
+
+======================================================================
+C-PHASE ANALYSIS (for comparison)
+======================================================================
+
+c3 distribution: {4: 720, 5: 480, 6: 2160, 7: 480, 8: 960}
+Score sequences: {(1, 1, 2, 3, 4, 4): 720, (1, 1, 3, 3, 3, 4): 240, (1, 2, 2, 2, 4, 4): 240, (1, 2, 2, 3, 3, 4): 2160, (1, 2, 3, 3, 3, 3): 240, (2, 2, 2, 2, 3, 4): 240, (2, 2, 2, 3, 3, 3): 960}
+H distribution: {17: 720, 23: 1440, 27: 480, 33: 480, 37: 720, 41: 720, 45: 240}
+
+S-only scores: [(1, 1, 1, 4, 4, 4)]
+C-only scores: [(1, 1, 2, 3, 4, 4), (1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4), (1, 2, 2, 3, 3, 4), (1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 3, 4)]
+Common scores: [(2, 2, 2, 3, 3, 3)]
+
+======================================================================
+INDEPENDENCE NUMBER OF Omega_3
+======================================================================
+  c3=2, H=9, alpha(Omega_3)=2, score=(1, 1, 1, 4, 4, 4)
+  c3=2, H=9, alpha(Omega_3)=2, score=(1, 1, 1, 4, 4, 4)
+  c3=2, H=9, alpha(Omega_3)=2, score=(1, 1, 1, 4, 4, 4)
+  c3=2, H=9, alpha(Omega_3)=2, score=(1, 1, 1, 4, 4, 4)
+  c3=2, H=9, alpha(Omega_3)=2, score=(1, 1, 1, 4, 4, 4)
+  c3=8, H=45, alpha(Omega_3)=2, score=(2, 2, 2, 3, 3, 3)
+  c3=8, H=45, alpha(Omega_3)=2, score=(2, 2, 2, 3, 3, 3)
+  c3=8, H=45, alpha(Omega_3)=2, score=(2, 2, 2, 3, 3, 3)
+  c3=8, H=45, alpha(Omega_3)=2, score=(2, 2, 2, 3, 3, 3)
+  c3=8, H=45, alpha(Omega_3)=2, score=(2, 2, 2, 3, 3, 3)
