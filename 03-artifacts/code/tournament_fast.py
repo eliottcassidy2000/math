@@ -525,6 +525,44 @@ def c5_fast(T):
     return tr5 // 5
 
 
+def alpha2_from_trace(T):
+    """Compute alpha_2 (vertex-disjoint 3-cycle pairs) in O(n^3).
+
+    By THM-097:
+      alpha_2 = C(c_3, 2) - sum_v C(t_3(v), 2) + s_2
+    where s_2 = sum_{edges a->b} C((A^2)[b][a], 2).
+
+    For n <= 7, this equals alpha_2(Omega(T)) since no 5-cycle can
+    be disjoint from any 3-cycle.
+    """
+    n = len(T)
+    if n < 6:
+        return 0
+
+    scores = [sum(T[i]) for i in range(n)]
+    c3 = comb(n, 3) - sum(comb(s, 2) for s in scores)
+    if c3 < 2:
+        return 0
+
+    # A^2 matrix
+    A2 = [[sum(T[i][k] * T[k][j] for k in range(n))
+           for j in range(n)] for i in range(n)]
+
+    # t_3(v) = (A^3)[v][v] = sum_j A2[v][j] * T[j][v]
+    t3v = [sum(A2[v][j] * T[j][v] for j in range(n)) for v in range(n)]
+
+    # s_2 = sum over edges a->b of C(A2[b][a], 2)
+    s2 = 0
+    for a in range(n):
+        for b in range(n):
+            if a != b and T[a][b]:
+                eab = A2[b][a]
+                s2 += eab * (eab - 1) // 2
+
+    sum_ct3 = sum(t * (t - 1) // 2 for t in t3v)
+    return comb(c3, 2) - sum_ct3 + s2
+
+
 def is_doubly_regular(T):
     """Check if tournament T is doubly regular (DRT).
     Requires: (1) regular (all scores = (n-1)/2),
@@ -810,6 +848,11 @@ def self_test():
     assert c5_fast(T3t) == 0
     assert c5_fast(T5) == 2  # Rotational T_5: 2 directed Ham cycles on the single 5-subset
 
+    # alpha2_from_trace (small n)
+    assert alpha2_from_trace(T3c) == 0  # n=3, too small
+    assert alpha2_from_trace(T3t) == 0
+    assert alpha2_from_trace(T5) == 0   # n=5, max 1 disjoint 3-cycle (no pair)
+
     # is_doubly_regular
     assert not is_doubly_regular(T3t)  # transitive, not DRT
     assert is_doubly_regular(T3c)  # cyclic T_3 IS DRT (n=3 mod 4)
@@ -824,6 +867,20 @@ def self_test():
     assert is_doubly_regular(T7), "Paley T_7 should be DRT"
     assert c3_from_score(T7) == 14
     assert c5_fast(T7) == 42  # DRT class at n=7: c5=42
+
+    # alpha2_from_trace at n=7: Paley T_7 has alpha_2 = 7 (BIBD)
+    from itertools import combinations as _combinations
+    T7_cycles = []
+    for i in range(7):
+        for j in range(i+1, 7):
+            for k in range(j+1, 7):
+                if T7[i][j] and T7[j][k] and T7[k][i]:
+                    T7_cycles.append(frozenset([i,j,k]))
+                elif T7[i][k] and T7[k][j] and T7[j][i]:
+                    T7_cycles.append(frozenset([i,j,k]))
+    T7_alpha2 = sum(1 for a, b in _combinations(T7_cycles, 2) if not (a & b))
+    assert alpha2_from_trace(T7) == T7_alpha2
+    assert T7_alpha2 == 7  # BIBD arrangement
 
     print("All self-tests PASSED.")
 
