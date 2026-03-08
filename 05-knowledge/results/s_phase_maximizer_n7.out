@@ -1,0 +1,78 @@
+======================================================================
+PALEY T_7: path homology
+======================================================================
+H(T_7) = 189
+beta = [np.int64(1), 0, 0, 0, np.int64(6), 0] (computed in 0.1s)
+spectral gap = 0.000000
+Phase: P
+
+======================================================================
+n=7 H-MAXIMIZER SEARCH + BETTI NUMBERS
+======================================================================
+
+Searched 50000 random tournaments in 11.2s
+Found 51 with H >= 160
+
+H >= 160 tournaments:
+  H=189, gap=0.0000, phase=P, beta=[np.int64(1), 0, 0, 0, np.int64(6)]
+  H=189, gap=0.0000, phase=P, beta=[np.int64(1), 0, 0, 0, np.int64(6)]
+  H=189, gap=0.0000, phase=P, beta=[np.int64(1), 0, 0, 0, np.int64(6)]
+  H=189, gap=0.0000, phase=P, beta=[np.int64(1), 0, 0, 0, np.int64(6)]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=175, gap=3.8997, phase=C, beta=[np.int64(1), np.int64(1), 0, 0, 0]
+  H=171, gap=3.4641, phase=P, beta=[np.int64(1), 0, 0, 0, 0]
+  H=171, gap=3.4641, phase=P, beta=[np.int64(1), 0, 0, 0, 0]
+  H=171, gap=3.4641, phase=P, beta=[np.int64(1), 0, 0, 0, 0]
+  H=171, gap=3.4641, phase=P, beta=[np.int64(1), 0, 0, 0, 0]
+  H=171, gap=3.4641, phase=P, beta=[np.int64(1), 0, 0, 0, 0]
+  H=171, gap=3.4641, phase=P, beta=[np.int64(1), 0, 0, 0, 0]
+
+--- Phase distribution for H >= 160 ---
+Phases: {'C': 20, 'P': 31}
+
+H=189 (max): 4 found
+  Phases: {'P': 4}
+  Spectral gap: [np.float64(0.0)]
+
+H=175: 20 found
+  Phases: {'C': 20}
+
+H=171: 27 found
+  Phases: {'P': 27}
+
+======================================================================
+LOW H TOURNAMENTS: phase distribution
+======================================================================
+Found 2853 with H <= 30
+Phases: {'P': 2820, 'S': 33}
+  H=1: 34, phases={'P': 34}
+  H=3: 78, phases={'P': 78}
+  H=5: 206, phases={'P': 206}
+  H=9: 303, phases={'P': 303}
+  H=11: 144, phases={'P': 144}
+  H=13: 146, phases={'P': 146}
+  H=15: 313, phases={'P': 280, 'S': 33}
+  H=17: 169, phases={'P': 169}
+  H=19: 182, phases={'P': 182}
+  H=23: 366, phases={'P': 366}
+  H=25: 231, phases={'P': 231}
+  H=27: 217, phases={'P': 217}
+  H=29: 464, phases={'P': 464}

@@ -1,0 +1,49 @@
+======================================================================
+n=4 EXHAUSTIVE: Betti numbers by H value
+======================================================================
+  H=5 (24):
+    beta=[1, 1, 0, 0]: 24
+  H=3 (16):
+    beta=[1, 0, 0, 0]: 16
+  H=1 (24):
+    beta=[1, 0, 0, 0]: 24
+
+======================================================================
+n=6 EXHAUSTIVE: Betti for H=45 maximizers (what's the full vector?)
+======================================================================
+Done in 13.7s
+Found 480 maximizers
+  beta=[1, 1, 0, 0, 0, 0]: 240
+  beta=[1, 0, 0, 1, 0, 0]: 240
+
+======================================================================
+COMPLETE BETTI DATA FOR H-MAXIMIZERS
+======================================================================
+
+n  max_H  #max  Betti vector         Highest nontrivial dim
+3    1      2   [1]                  0 (trivial)
+4    5     16   [1,0,0,0]            0 (contractible)
+5   15     64   [1,1,0,0,0]          1 (circle)
+6   45    240   [1,0,0,β₃,0,0]      3 (3-sphere?)
+7  189    240   [1,0,0,0,6,0,0]     4
+
+Observations:
+1. At n=4: maximizers are CONTRACTIBLE (β = [1,0,0,0])
+2. At n=5: maximizers have β₁ = 1 (C-phase, circle-like)
+3. At n=6: maximizers have β₃ > 0 (S-phase, "3-sphere-like")
+4. At n=7: maximizers have β₄ = 6 (!), everything else 0
+
+The highest nontrivial dim: 0, 1, 3, 4 (not monotone from n=3)
+But from n=5 onwards: 1, 3, 4 — gap at dim 2
+
+At n=5: ALL maximizers have SAME Betti (β₁=1)
+At n=7: ALL maximizers have SAME Betti (β₄=6)
+
+H=175 class at n=7 has β₁=1 (C-phase) — SECOND highest H
+H=171 class at n=7 has β₀=1 only (P-phase) — THIRD highest H
+
+So topology stratifies the H values at n=7:
+  H=189: β₄=6 (deepest topology)
+  H=175: β₁=1 (circle)
+  H=171: contractible
+
