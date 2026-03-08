@@ -1462,16 +1462,24 @@ At n=7, all maximizers are conference-matrix (gap=0, eigenvalues all √7). Seco
 **What:** The "non-Paley DRT" from {1,2,3,5,8} was NOT a valid tournament (S∩(-S)={3,8}≠∅). All claims about c3=44, c5=407, H=69311 were computed on a non-tournament digraph. The only valid circulant DRT at n=11 is Paley. Exhaustive search found exactly 2 valid (11,5,2)-difference sets in Z_11: QR and NQR, which give isomorphic tournaments.
 **Impact:** INV-068 corrected. MEMORY.md and TANGENTS.md updated.
 
-### INV-144: Circulant Digraph Path Homology (arXiv 2602.04140, Feb 2026)
-**Source:** opus-2026-03-08-S40 (web search)
-**Status:** NEW — closely related to our S38-S40 work
+### INV-144: Circulant Digraph Path Homology (arXiv 2602.04140, Feb 2026) — CONJ 4.8 DISPROVED
+**Source:** opus-2026-03-08-S40 (web search), kind-pasteur-S41 (counterexample)
+**Status:** CONJECTURE 4.8 DISPROVED. New characterization found.
 **What:** Uses exactly our Fourier eigenspace decomposition approach for circulant digraphs. Key results:
 - Strong Stability (Thm 4.5): Betti numbers constant for large primes
-- Conjecture 4.8: H_m = 0 for m ≥ 3 under "no-wrap-around" condition
-- S={1,s} with s≠2 gives H_2 ≅ K (nonzero!)
+- ~~Conjecture 4.8: H_m = 0 for m >= 3 under "no-wrap-around" condition~~ **FALSE**
+- S={1,s} with s!=2 gives H_2 = K (nonzero!)
 - No results on tournaments or Paley specifically
-**Relevance:** Their Fourier decomposition matches our per-eigenspace approach. Their H_m vanishing conjecture is related to our β_2=0 for tournaments. The "no-wrap-around" condition is key — tournaments satisfy it when S∩(-S)=∅.
-**Next step:** Read full paper, compare with our results. Can their techniques prove β_2=0 for tournaments?
+**COUNTEREXAMPLES to Conj 4.8 (kind-pasteur-S41):**
+- C_8^{1,5}: |S|=2, S cap (-S) = empty, but beta_3=1, beta_4=1
+- C_8^{3,7}: same structure, also beta_3=1, beta_4=1
+- P_7 = C_7^{1,2,4}: tournament with beta_4=6
+- Z_9 = C_9^{1,5,6,7}: tournament with beta_5=10
+- Their conjecture may hold for |S|=1 only (directed cycles have beta=[1,1,0,...])
+**NEW FINDING (HYP-213):** For |S|=2, beta_2=0 iff {s1,s2} is "doubling-closed" (2s1=s2 or 2s2=s1 mod n). Perfect correlation at n=5,7,9,11,13. One exception at n=8 (s2-s1=n/2).
+**Relevance:** Their Fourier decomposition matches our per-eigenspace approach. For tournament beta_2=0, the mechanism is tournament completeness, NOT the Fourier structure.
+**Scripts:** tang_yau_counterexample.py, beta2_nonzero_analysis.py
+**Next step:** (1) Notify Tang-Yau of counterexamples. (2) Investigate whether their techniques prove beta_2=0 for tournaments specifically. (3) Generalize doubling-closure to larger |S|.
 
 ### INV-145: Ω_2 Structure — Cancellation Chains in Tournaments
 **Source:** opus-2026-03-08-S40

@@ -1,0 +1,37 @@
+======================================================================
+P_11 BETA_8 (SPARSE ORBIT-BASED EIGENSPACE)
+======================================================================
+
+--- Allowed paths ---
+  A_0: 11 (0.0s)
+  A_1: 55 (0.0s)
+  A_2: 275 (0.0s)
+  A_3: 1210 (0.0s)
+  A_4: 4730 (0.0s)
+  A_5: 15730 (0.0s)
+  A_6: 43670 (0.2s)
+  A_7: 96085 (1.0s)
+  A_8: 158345 (3.1s)
+  A_9: 173195 (6.4s)
+
+--- Orbits ---
+  dim 6: 3970 orbits (expect 43670/11 = 3970)
+  dim 7: 8735 orbits (expect 96085/11 = 8735)
+  dim 8: 14395 orbits (expect 158345/11 = 14395)
+  dim 9: 15745 orbits (expect 173195/11 = 15745)
+
+--- Sparse boundary matrices ---
+  d_7: (43670, 96085), nnz=478500 (0.3s)
+  d_8: (96085, 158345), nnz=870980 (0.5s)
+  d_9: (158345, 173195), nnz=1043900 (0.7s)
+
+======================================================================
+PER-EIGENSPACE beta_8
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p11_beta8_sparse.py", line 222, in <module>
+    V[p] = build_eigenspace_basis(orbits[p], len(allowed[p]), n, k)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p11_beta8_sparse.py", line 64, in build_eigenspace_basis
+    V = np.zeros((n_paths, n_orbits), dtype=complex)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 40.6 GiB for an array with shape (173195, 15745) and data type complex128

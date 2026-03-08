@@ -1,0 +1,25 @@
+======================================================================
+P_11 EIGENSPACE DECOMPOSITION: beta_8
+======================================================================
+
+--- Allowed paths ---
+  A_0: 11 (0.0s)
+  A_1: 55 (0.0s)
+  A_2: 275 (0.0s)
+  A_3: 1210 (0.0s)
+  A_4: 4730 (0.0s)
+  A_5: 15730 (0.0s)
+  A_6: 43670 (0.2s)
+  A_7: 96085 (1.0s)
+  A_8: 158345 (3.0s)
+  A_9: 173195 (6.5s)
+
+--- Shift matrices ---
+  sigma_6: (43670, 43670) (0.1s)
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p11_beta8_eigenspace.py", line 164, in <module>
+    sigma[p] = build_shift_matrix(allowed[p], n)
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p11_beta8_eigenspace.py", line 43, in build_shift_matrix
+    P = np.zeros((m, m), dtype=float)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 68.8 GiB for an array with shape (96085, 96085) and data type float64
