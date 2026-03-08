@@ -1,0 +1,122 @@
+======================================================================
+SIMPLICIAL HOLE FILLING BY DT_c + CANCEL
+======================================================================
+
+============================================================
+T#40 scores=(1, 2, 2, 2, 3), c₃=4, H₂^simp=1
+============================================================
+  TT triples: 6, trans4: 0
+  rk(∂₂^simp)=5, Z₂^simp=1, rk(∂₃^simp)=0
+
+  Simplicial cycle NOT in im(∂₃^simp):
+    -0.4082 * (1,3,0)
+    -0.4082 * (2,1,0)
+    -0.4082 * (3,2,0)
+    +0.4082 * (4,1,3)
+    +0.4082 * (4,2,1)
+    +0.4082 * (4,3,2)
+
+  Path filling error: 3.33e-16
+  Filling element:
+    -0.4082 * (4,3,2,0) [DT(d→a)]
+    -0.4082 * (4,2,1,0) [DT(d→a)]
+    -0.4082 * (4,1,3,0) [DT(d→a)]
+
+  Filling composition: DT_f=0, DT_c=3, non-DT=0
+
+  DT_c paths in the filling:
+    -0.4082 * (4,3,2,0) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (4,2,0) and (4,3,0)
+    -0.4082 * (4,2,1,0) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (4,1,0) and (4,2,0)
+    -0.4082 * (4,1,3,0) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (4,3,0) and (4,1,0)
+
+  Is the simplicial cycle in Z₂? ||∂₂(cycle)|| = 0.000000
+  ✓ Yes! The simplicial cycle IS in path Z₂.
+  So the simplicial hole in flag complex IS also a hole in path complex.
+  But path homology fills it via DT_c paths!
+
+============================================================
+T#69 scores=(1, 2, 2, 2, 3), c₃=4, H₂^simp=1
+============================================================
+  TT triples: 6, trans4: 0
+  rk(∂₂^simp)=5, Z₂^simp=1, rk(∂₃^simp)=0
+
+  Simplicial cycle NOT in im(∂₃^simp):
+    +0.4082 * (0,3,1)
+    +0.4082 * (2,0,1)
+    +0.4082 * (3,2,1)
+    -0.4082 * (4,0,3)
+    -0.4082 * (4,2,0)
+    -0.4082 * (4,3,2)
+
+  Path filling error: 2.22e-16
+  Filling element:
+    +0.4082 * (4,3,2,1) [DT(d→a)]
+    +0.4082 * (4,2,0,1) [DT(d→a)]
+    +0.4082 * (4,0,3,1) [DT(d→a)]
+
+  Filling composition: DT_f=0, DT_c=3, non-DT=0
+
+  DT_c paths in the filling:
+    +0.4082 * (4,3,2,1) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (4,2,1) and (4,3,1)
+    +0.4082 * (4,2,0,1) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (4,0,1) and (4,2,1)
+    +0.4082 * (4,0,3,1) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (4,3,1) and (4,0,1)
+
+  Is the simplicial cycle in Z₂? ||∂₂(cycle)|| = 0.000000
+  ✓ Yes! The simplicial cycle IS in path Z₂.
+  So the simplicial hole in flag complex IS also a hole in path complex.
+  But path homology fills it via DT_c paths!
+
+============================================================
+T#93 scores=(1, 2, 2, 2, 3), c₃=4, H₂^simp=1
+============================================================
+  TT triples: 6, trans4: 0
+  rk(∂₂^simp)=5, Z₂^simp=1, rk(∂₃^simp)=0
+
+  Simplicial cycle NOT in im(∂₃^simp):
+    -0.4082 * (0,1,4)
+    -0.4082 * (0,3,1)
+    -0.4082 * (0,4,3)
+    +0.4082 * (1,4,2)
+    +0.4082 * (3,1,2)
+    +0.4082 * (4,3,2)
+
+  Path filling error: 3.33e-16
+  Filling element:
+    +0.4082 * (0,4,3,2) [DT(d→a)]
+    +0.4082 * (0,3,1,2) [DT(d→a)]
+    +0.4082 * (0,1,4,2) [DT(d→a)]
+
+  Filling composition: DT_f=0, DT_c=3, non-DT=0
+
+  DT_c paths in the filling:
+    +0.4082 * (0,4,3,2) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (0,3,2) and (0,4,2)
+    +0.4082 * (0,3,1,2) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (0,1,2) and (0,3,2)
+    +0.4082 * (0,1,4,2) [DT_c: d→a]
+      Cycles: a→c→d→a and a→b→d→a
+      NT boundary faces: (0,4,2) and (0,1,2)
+
+  Is the simplicial cycle in Z₂? ||∂₂(cycle)|| = 0.000000
+  ✓ Yes! The simplicial cycle IS in path Z₂.
+  So the simplicial hole in flag complex IS also a hole in path complex.
+  But path homology fills it via DT_c paths!
+
+
+Total tournaments with flag H₂ > 0 at n=5, c₃=4: 40
+
+Done.
