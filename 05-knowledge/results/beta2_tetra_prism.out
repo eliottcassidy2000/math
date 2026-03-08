@@ -1,0 +1,192 @@
+======================================================================
+TETRAHEDRAL / PRISM CONNECTION TO β₂=0
+======================================================================
+
+DT path analysis:
+  T#0 (scores=[0, 1, 2, 3, 4]): DT(a→d)=5, DT(d→a)=0, non-DT=0
+  T#2 (scores=[1, 1, 1, 3, 4]): DT(a→d)=3, DT(d→a)=0, non-DT=6
+  T#8 (scores=[1, 1, 2, 3, 3]): DT(a→d)=2, DT(d→a)=3, non-DT=12
+  T#15 (scores=[0, 1, 2, 3, 4]): DT(a→d)=5, DT(d→a)=0, non-DT=0
+  T#31 (scores=[0, 1, 2, 3, 4]): DT(a→d)=5, DT(d→a)=0, non-DT=0
+
+======================================================================
+SIMPLICIAL STRUCTURE OF DT BOUNDARIES
+======================================================================
+
+Regular T (c₃=5): 10 Ω₃ elements
+  e0: [((0, 1, 2, 3), -0.41), ((0, 1, 2, 4), 0.527), ((0, 1, 3, 4), -0.527), ((0, 2, 3, 4), 0.527)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e1: [((0, 1, 2, 3), 0.832), ((0, 1, 2, 4), 0.216), ((0, 1, 3, 4), -0.216), ((0, 2, 3, 4), 0.216), ((1, 2, 3, 0), -0.237), ((1, 2, 4, 0), 0.237), ((1, 3, 4, 0), -0.237)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,3,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e2: [((2, 3, 4, 0), 1.0)]
+    (2,3,4,0): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e3: [((0, 1, 2, 3), -0.278), ((0, 1, 2, 4), -0.072), ((0, 1, 3, 4), 0.072), ((0, 2, 3, 4), -0.072), ((1, 2, 3, 0), -0.392), ((1, 2, 3, 4), -0.289), ((1, 2, 4, 0), 0.392), ((1, 3, 4, 0), -0.392), ((2, 3, 0, 1), -0.1), ((2, 3, 4, 1), 0.1), ((2, 4, 0, 1), 0.1), ((3, 0, 1, 2), 0.333), ((3, 4, 0, 2), 0.333), ((3, 4, 1, 2), -0.333)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,4): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,3,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,4,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,4,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,0,1,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,0,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,1,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e4: [((0, 1, 2, 3), -0.154), ((0, 1, 2, 4), -0.04), ((0, 1, 3, 4), 0.04), ((0, 2, 3, 4), -0.04), ((1, 2, 3, 0), -0.216), ((1, 2, 3, 4), 0.289), ((1, 2, 4, 0), 0.216), ((1, 3, 4, 0), -0.216), ((2, 3, 0, 1), -0.372), ((2, 3, 4, 1), 0.372), ((2, 4, 0, 1), 0.372), ((3, 0, 1, 2), -0.333), ((3, 4, 0, 2), -0.333), ((3, 4, 1, 2), 0.333)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,4): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,3,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,4,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,4,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,0,1,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,0,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,1,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e5: [((4, 0, 1, 2), 1.0)]
+    (4,0,1,2): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e6: [((0, 1, 2, 3), -0.108), ((0, 1, 2, 4), -0.028), ((0, 1, 3, 4), 0.028), ((0, 2, 3, 4), -0.028), ((1, 2, 3, 0), -0.152), ((1, 2, 3, 4), 0.5), ((1, 2, 4, 0), 0.152), ((1, 3, 4, 0), -0.152), ((2, 3, 0, 1), 0.236), ((2, 3, 4, 1), -0.236), ((2, 4, 0, 1), -0.236), ((3, 4, 0, 1), -0.408), ((4, 0, 1, 3), 0.333), ((4, 0, 2, 3), -0.333), ((4, 1, 2, 3), 0.333)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,4): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,3,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,4,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,4,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,0,1): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,0,1,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,0,2,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,1,2,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e7: [((0, 1, 2, 3), -0.108), ((0, 1, 2, 4), -0.028), ((0, 1, 3, 4), 0.028), ((0, 2, 3, 4), -0.028), ((1, 2, 3, 0), -0.152), ((1, 2, 3, 4), 0.5), ((1, 2, 4, 0), 0.152), ((1, 3, 4, 0), -0.152), ((2, 3, 0, 1), 0.236), ((2, 3, 4, 1), -0.236), ((2, 4, 0, 1), -0.236), ((3, 4, 0, 1), 0.408), ((4, 0, 1, 3), -0.333), ((4, 0, 2, 3), 0.333), ((4, 1, 2, 3), -0.333)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,4): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,3,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,4,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,4,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,0,1): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,0,1,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,0,2,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,1,2,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e8: [((3, 4, 0, 1), 0.816), ((4, 0, 1, 3), 0.333), ((4, 0, 2, 3), -0.333), ((4, 1, 2, 3), 0.333)]
+    (3,4,0,1): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,0,1,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,0,2,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (4,1,2,3): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+  e9: [((0, 1, 2, 3), 0.125), ((0, 1, 2, 4), 0.032), ((0, 1, 3, 4), -0.032), ((0, 2, 3, 4), 0.032), ((1, 2, 3, 0), 0.176), ((1, 2, 3, 4), 0.577), ((1, 2, 4, 0), -0.176), ((1, 3, 4, 0), 0.176), ((2, 3, 0, 1), -0.272), ((2, 3, 4, 1), 0.272), ((2, 4, 0, 1), 0.272), ((3, 0, 1, 2), 0.333), ((3, 4, 0, 2), 0.333), ((3, 4, 1, 2), -0.333)]
+    (0,1,2,3): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,2,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,1,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (0,2,3,4): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,3,4): DT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,2,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (1,3,4,0): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,3,4,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (2,4,0,1): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,0,1,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,0,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+    (3,4,1,2): nDT, d→a, faces: (abc)[TT] (bcd)[TT] (acd)[NT] (abd)[NT]
+
+======================================================================
+TILE POSITIONS OF DT PATHS
+======================================================================
+
+Grid(5) tiles for transitive T:
+  arc (0,2): grid (1,1), bary (0,0,2)
+  arc (0,3): grid (1,2), bary (0,1,1)
+  arc (0,4): grid (1,3), bary (0,2,0)
+  arc (1,3): grid (2,1), bary (1,0,1)
+  arc (1,4): grid (2,2), bary (1,1,0)
+  arc (2,4): grid (3,1), bary (2,0,0)
+
+DT paths and their free-edge tiles:
+  DT (0,1,2,3): free edge (0,3), grid (1,2), bary (0,1,1)
+  DT (0,1,2,4): free edge (0,4), grid (1,3), bary (0,2,0)
+  DT (0,1,3,4): free edge (0,4), grid (1,3), bary (0,2,0)
+  DT (0,2,3,4): free edge (0,4), grid (1,3), bary (0,2,0)
+  DT (1,2,3,4): free edge (1,4), grid (2,2), bary (1,1,0)
+
+|A₃| for transitive n=5: 5
+Paths: [(0, 1, 2, 3), (0, 1, 2, 4), (0, 1, 3, 4), (0, 2, 3, 4), (1, 2, 3, 4)]
+
+======================================================================
+PROOF SKETCH VIA TETRAHEDRAL DECOMPOSITION
+======================================================================
+
+OUTLINE: β₂=0 via simplicial acyclicity
+
+1. SIMPLICIAL STRUCTURE: Each DT 4-path (a,b,c,d) gives a
+   "simplicial tetrahedron" with boundary
+   ∂₃(a,b,c,d) = (b,c,d) - (a,c,d) + (a,b,d) - (a,b,c)
+   
+   This is exactly the boundary of a 3-simplex Δ³ = conv{a,b,c,d}.
+
+2. FACE STRUCTURE: For a DT path:
+   - 2 faces always TT: (a,b,c), (b,c,d)
+   - 2 faces depend on a↔d: (a,c,d), (a,b,d) — TT iff a→d
+   
+   The Z₂ choice (a→d vs d→a) is the "complement" direction.
+
+3. S₃ ACTION: The 3 barycentric coordinates (r',c',k') of the
+   free edge (a,d) in Grid(n) encode:
+   - r' = position of a
+   - c' = gap from a to d minus 2
+   - k' = remaining space after d
+   
+   S₃ permutes these, giving equivalent DT paths with permuted
+   internal structure.
+
+4. COVERING THEOREM (TO PROVE):
+   The DT tetrahedra COVER all 2-cycles in Ω₂.
+   Equivalently: the span of {∂₃(DT path)} = Z₂.
+   
+   This is where tournament completeness is essential:
+   - Every pair has an edge → enough DT paths exist
+   - The complete graph K_n has H₂=0 (contractible)
+   - Tournament is "half" of K_n but preserves acyclicity at level 2
+
+5. CONNECTION TO PRISM:
+   The S₃×Z₂ symmetry of Grid(n) corresponds to:
+   - S₃: permuting internal structure of DT paths
+   - Z₂: choosing a→d vs d→a (complement direction)
+   
+   This is the symmetry group of the triangular PRISM:
+   - Triangle face = 3 barycentric choices
+   - Prism height = 2 complement choices (a→d, d→a)
+   
+   The PRISM encodes all possible DT paths through a given
+   set of 4 vertices, and their boundary contributions.
+
+Verification: DT coverage of Z₂
+
+DT coverage sufficient: 1024/1024
+DT coverage insufficient: 0/1024
+
+Done.

@@ -1,0 +1,64 @@
+======================================================================
+DT COVERAGE OF Z₂ AT n=6
+======================================================================
+n=6, 32768 tournaments, 15 edges
+  FAIL: T#154 scores=[1, 2, 2, 3, 3, 4], Z₂=10, DT_rank=9, #DT=9
+  FAIL: T#213 scores=[1, 2, 2, 3, 3, 4], Z₂=10, DT_rank=9, #DT=9
+  FAIL: T#308 scores=[1, 2, 2, 3, 3, 4], Z₂=10, DT_rank=9, #DT=9
+  FAIL: T#332 scores=[1, 2, 2, 3, 3, 4], Z₂=10, DT_rank=9, #DT=9
+  FAIL: T#339 scores=[1, 2, 2, 3, 3, 4], Z₂=10, DT_rank=9, #DT=9
+  ... 2000/32768 (2s, ETA 38s), fails=42
+  ... 4000/32768 (5s, ETA 37s), fails=108
+  ... 6000/32768 (8s, ETA 34s), fails=148
+  ... 8000/32768 (10s, ETA 31s), fails=214
+  ... 10000/32768 (13s, ETA 29s), fails=283
+  ... 12000/32768 (16s, ETA 27s), fails=359
+  ... 14000/32768 (18s, ETA 24s), fails=411
+  ... 16000/32768 (21s, ETA 22s), fails=475
+  ... 18000/32768 (23s, ETA 19s), fails=512
+  ... 20000/32768 (26s, ETA 16s), fails=582
+  ... 22000/32768 (28s, ETA 14s), fails=647
+  ... 24000/32768 (31s, ETA 11s), fails=717
+  ... 26000/32768 (33s, ETA 9s), fails=788
+  ... 28000/32768 (36s, ETA 6s), fails=842
+  ... 30000/32768 (39s, ETA 4s), fails=890
+  ... 32000/32768 (41s, ETA 1s), fails=952
+
+Completed in 41.9s
+
+Z₂ dimension distribution:
+  Z₂ = 8: 560
+  Z₂ = 9: 14400
+  Z₂ = 10: 9648
+  Z₂ = 11: 5760
+  Z₂ = 12: 1440
+  Z₂ = 13: 720
+  Z₂ = 15: 240
+
+DT coverage:
+  Sufficient: 31808/32768
+  Insufficient: 960/32768
+
+DT rank excess over Z₂ (when sufficient and Z₂>0):
+  excess 0: 31808
+
+960 failures — analyzing:
+  T#154 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#213 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#308 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#332 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#339 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#425 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#668 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#691 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#810 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+  T#821 scores=[1, 2, 2, 3, 3, 4]: Z₂=10, DT_rank=9, #DT=9
+
+  Checking if full Ω₃ covers Z₂ in failure cases...
+    T#154: Z₂=10, B₂=10, β₂=0, full Ω₃ covers Z₂: True
+    T#213: Z₂=10, B₂=10, β₂=0, full Ω₃ covers Z₂: True
+    T#308: Z₂=10, B₂=10, β₂=0, full Ω₃ covers Z₂: True
+    T#332: Z₂=10, B₂=10, β₂=0, full Ω₃ covers Z₂: True
+    T#339: Z₂=10, B₂=10, β₂=0, full Ω₃ covers Z₂: True
+
+Done.

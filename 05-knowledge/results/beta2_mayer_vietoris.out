@@ -1,0 +1,124 @@
+======================================================================
+MAYER-VIETORIS ANALYSIS FOR ARC FLIPS
+======================================================================
+
+Test case: T#2, flip (0→2) to (2→0)
+  0 → [2]
+  1 → [0]
+  2 → [1]
+  3 → [0, 1, 2]
+  4 → [0, 1, 2, 3]
+
+Path classification (before flip):
+  p=0: total=5, shared=5, uses_uv=0
+  p=1: total=10, shared=9, uses_uv=1
+  p=2: total=12, shared=8, uses_uv=4
+  p=3: total=9, shared=4, uses_uv=5
+  p=4: total=3, shared=1, uses_uv=2
+
+Path classification (after flip):
+  p=0: total=5, shared=5, uses_vu=0
+  p=1: total=10, shared=9, uses_vu=1
+  p=2: total=10, shared=8, uses_vu=2
+  p=3: total=5, shared=4, uses_vu=1
+  p=4: total=1, shared=1, uses_vu=0
+
+Shared paths (using neither u→v nor v→u):
+  p=0: |shared| = 5 ✓
+  p=1: |shared| = 9 ✓
+  p=2: |shared| = 8 ✓
+  p=3: |shared| = 4 ✓
+  p=4: |shared| = 1 ✓
+
+======================================================================
+CHAIN COMPLEX COMPARISON
+======================================================================
+  Ω_0: T=5, T'=5, Δ=0
+  Ω_1: T=10, T'=10, Δ=0
+  Ω_2: T=9, T'=10, Δ=1
+  Ω_3: T=3, T'=5, Δ=2
+  Ω_4: T=0, T'=1, Δ=1
+
+  Z₂: T=3, T'=4, Δ=1
+  B₂: T=3, T'=4, Δ=1
+  β₂: T=0, T'=0
+
+======================================================================
+Ω₂ BASIS COMPARISON (in A₂ coordinates)
+======================================================================
+  |A₂(T)| = 12, |A₂(T')| = 10, |A₂(union)| = 14
+  A₂(T) only: {(0, 2, 1), (4, 0, 2), (3, 0, 2), (1, 0, 2)}
+  A₂(T') only: {(4, 2, 0), (3, 2, 0)}
+
+  New 2-paths (in T' but not T): [(3, 2, 0), (4, 2, 0)]
+  Lost 2-paths (in T but not T'): [(0, 2, 1), (1, 0, 2), (3, 0, 2), (4, 0, 2)]
+    (3, 2, 0): uses v→u: True
+    (4, 2, 0): uses v→u: True
+    (0, 2, 1): uses u→v: True
+    (1, 0, 2): uses u→v: True
+    (3, 0, 2): uses u→v: True
+    (4, 0, 2): uses u→v: True
+
+  |A₃(T)| = 9, |A₃(T')| = 5
+  New 3-paths: 1, Lost 3-paths: 5
+  Δ|A₃| = -4
+
+======================================================================
+BOUNDARY STRUCTURE OF LOST/GAINED PATHS
+======================================================================
+
+Lost 2-paths and their boundaries:
+  ∂(0,2,1) = +(2,1) - (0,1) + (0,2)
+    +(2,1): shared
+    -(0,1): neither
+    +(0,2): lost
+  ∂(1,0,2) = +(0,2) - (1,2) + (1,0)
+    +(0,2): lost
+    -(1,2): neither
+    +(1,0): shared
+  ∂(3,0,2) = +(0,2) - (3,2) + (3,0)
+    +(0,2): lost
+    -(3,2): shared
+    +(3,0): shared
+  ∂(4,0,2) = +(0,2) - (4,2) + (4,0)
+    +(0,2): lost
+    -(4,2): shared
+    +(4,0): shared
+
+Gained 2-paths and their boundaries:
+  ∂(3,2,0) = +(2,0) - (3,0) + (3,2)
+    +(2,0): new
+    -(3,0): shared
+    +(3,2): shared
+  ∂(4,2,0) = +(2,0) - (4,0) + (4,2)
+    +(2,0): new
+    -(4,0): shared
+    +(4,2): shared
+
+Lost 3-paths and their faces:
+  (3,0,2,1): faces [lost, shared, absent, lost]
+  (3,1,0,2): faces [lost, lost, absent, shared]
+  (4,0,2,1): faces [lost, shared, absent, lost]
+  (4,1,0,2): faces [lost, lost, absent, shared]
+  (4,3,0,2): faces [lost, lost, shared, shared]
+
+Gained 3-paths and their faces:
+  (4,3,2,0): faces [new, new, shared, shared]
+
+======================================================================
+BIJECTION SEARCH: lost ↔ gained
+======================================================================
+
+Swap σ: 0↔2
+
+Lost 2-paths → σ(lost):
+  (0, 2, 1) → (2, 0, 1): in gained? False
+  (1, 0, 2) → (1, 2, 0): in gained? False
+  (3, 0, 2) → (3, 2, 0): in gained? True
+  (4, 0, 2) → (4, 2, 0): in gained? True
+
+Gained 2-paths → σ(gained):
+  (3, 2, 0) → (3, 0, 2): in lost? True
+  (4, 2, 0) → (4, 0, 2): in lost? True
+
+Done.
