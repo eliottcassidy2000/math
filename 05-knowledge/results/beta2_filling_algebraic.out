@@ -1,0 +1,71 @@
+======================================================================
+ANALYSIS 1: Filling decomposition at n=5
+======================================================================
+No Z_2 cycle: 0
+DT alone fills Z_2: 1024
+Cancel needed and works: 0
+Cancel fails: 0
+
+Filling patterns (Z2, n_DT, rk_DT_fill, n_cancel, rk_cancel_fill):
+  Z2=3, DT=3, rk_DT=3, cancel=0, rk_DT+cancel=3, gap=0: 160
+  Z2=3, DT=3, rk_DT=3, cancel=1, rk_DT+cancel=3, gap=0: 240
+  Z2=3, DT=3, rk_DT=3, cancel=2, rk_DT+cancel=5, gap=0: 120
+  Z2=3, DT=3, rk_DT=3, cancel=4, rk_DT+cancel=7, gap=0: 120
+  Z2=4, DT=5, rk_DT=4, cancel=0, rk_DT+cancel=4, gap=0: 240
+  Z2=5, DT=5, rk_DT=5, cancel=6, rk_DT+cancel=8, gap=0: 120
+  Z2=5, DT=5, rk_DT=5, cancel=10, rk_DT+cancel=10, gap=0: 24
+
+======================================================================
+ANALYSIS 2: Filling decomposition at n=6
+======================================================================
+  ... 10000/32768 (28s)
+  ... 20000/32768 (58s)
+  ... 30000/32768 (91s)
+
+Completed in 99s
+No Z_2 cycle: 0
+DT alone fills Z_2: 31808
+Cancel needed and works: 960
+Cancel fails: 0
+DT deficit distribution: {np.int64(0): 31808, np.int64(1): 720, np.int64(2): 240}
+
+======================================================================
+ANALYSIS 3: Structure of cancellation pairs
+======================================================================
+
+n=5: Cases where DT alone fails — what do cancellation pairs look like?
+
+======================================================================
+ANALYSIS 4: DT path counts and structure
+======================================================================
+
+DT paths in transitive 4-tournament {0>1>2>3}:
+  DT: (0,1,2,3)
+
+
+DT count by 4-vertex sub-tournament type:
+  bits=0: total DT = 5
+
+======================================================================
+ANALYSIS 5: DT rank vs count at n=5
+======================================================================
+(|DT|, rk(DT boundary)) distribution:
+  |DT|=3, rk=3: 640
+  |DT|=5, rk=4: 240
+  |DT|=5, rk=5: 144
+
+======================================================================
+ANALYSIS 6: Formula for number of DT paths
+======================================================================
+Average |DT| by score sequence:
+  (0, 1, 2, 3, 4): avg |DT| = 5.0
+  (0, 1, 3, 3, 3): avg |DT| = 3.0
+  (0, 2, 2, 2, 4): avg |DT| = 3.0
+  (0, 2, 2, 3, 3): avg |DT| = 3.0
+  (1, 1, 1, 3, 4): avg |DT| = 3.0
+  (1, 1, 2, 2, 4): avg |DT| = 3.0
+  (1, 1, 2, 3, 3): avg |DT| = 4.0
+  (1, 2, 2, 2, 3): avg |DT| = 3.9
+  (2, 2, 2, 2, 2): avg |DT| = 5.0
+
+Done.

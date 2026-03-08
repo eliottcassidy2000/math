@@ -1,0 +1,173 @@
+======================================================================
+TEST 1: Omega_2 = TT-span at n=5 (exhaustive)
+======================================================================
+Violations: 784/1024
+
+(n_TT, dim Omega_2) distribution:
+  TT=5, Omega_2=10 (!=): 24
+  TT=6, Omega_2=8 (!=): 40
+  TT=6, Omega_2=9 (!=): 120
+  TT=6, Omega_2=10 (!=): 120
+  TT=7, Omega_2=9 (!=): 240
+  TT=8, Omega_2=9 (!=): 240
+  TT=9, Omega_2=9 (=): 120
+  TT=10, Omega_2=10 (=): 120
+
+======================================================================
+TEST 2: Omega_2 = TT-span at n=6 (exhaustive)
+======================================================================
+  ... 10000/32768 (2s), violations=9418
+  ... 20000/32768 (4s), violations=18890
+  ... 30000/32768 (7s), violations=28456
+
+Completed in 7s
+Violations: 31008/32768
+  FAILED: 31008 violations, max NT coeff = 0.833333
+    bits=4, scores=[1, 1, 2, 2, 4, 5], Om2=19, TT=18, NT=6, max_nt=0.500000
+    bits=6, scores=[1, 1, 2, 2, 4, 5], Om2=19, TT=18, NT=6, max_nt=0.500000
+    bits=8, scores=[1, 1, 2, 3, 3, 5], Om2=19, TT=17, NT=9, max_nt=0.666667
+    bits=9, scores=[0, 2, 2, 3, 3, 5], Om2=19, TT=18, NT=6, max_nt=0.500000
+    bits=10, scores=[1, 1, 2, 3, 3, 5], Om2=19, TT=17, NT=9, max_nt=0.500000
+
+Distinct (TT, dim Omega_2) patterns: 20
+  TT = dim Omega_2: 1760 (5.4%)
+  TT != dim Omega_2: 31008 (94.6%)
+  TT=12, Omega_2=21 (!=): 1680
+  TT=12, Omega_2=22 (!=): 720
+  TT=12, Omega_2=24 (!=): 240
+  TT=13, Omega_2=20 (!=): 1920
+  TT=13, Omega_2=21 (!=): 2880
+  TT=14, Omega_2=18 (!=): 720
+  TT=14, Omega_2=19 (!=): 2160
+  TT=14, Omega_2=20 (!=): 3600
+  TT=14, Omega_2=21 (!=): 2160
+  TT=15, Omega_2=18 (!=): 480
+  TT=15, Omega_2=19 (!=): 1440
+  TT=15, Omega_2=20 (!=): 1728
+  TT=16, Omega_2=18 (!=): 480
+  TT=16, Omega_2=19 (!=): 4320
+  TT=16, Omega_2=20 (!=): 1440
+  TT=17, Omega_2=19 (!=): 2880
+  TT=18, Omega_2=18 (=): 80
+  TT=18, Omega_2=19 (!=): 2160
+  TT=19, Omega_2=19 (=): 960
+  TT=20, Omega_2=20 (=): 720
+
+======================================================================
+TEST 3: Omega_2 = TT-span at n=7 (sampled)
+======================================================================
+  1000/5000 (0s), violations=992
+  2000/5000 (1s), violations=1988
+  3000/5000 (1s), violations=2981
+  4000/5000 (2s), violations=3975
+Done in 2s. Violations: 4967/5000
+
+======================================================================
+TEST 4: Omega_2 = TT-span at n=8 (sampled)
+======================================================================
+  500/2000 (0s), violations=500
+  1000/2000 (1s), violations=1000
+  1500/2000 (1s), violations=1500
+Done in 2s. Violations: 2000/2000
+
+======================================================================
+ANALYSIS: Why TT-span holds - constraint structure
+======================================================================
+
+n=5: checking dim(Omega_2) = |TT|:
+  MISMATCH: bits=4, scores=[1, 1, 2, 2, 4], TT=8, Om2=9
+
+n=6: checking dim(Omega_2) = |TT|:
+  ... 10000/32768 (2s), mismatches=9418
+  ... 20000/32768 (3s), mismatches=18890
+  ... 30000/32768 (5s), mismatches=28456
+
+  Completed in 5s. Mismatches: 31008/32768
+  FOUND 31008 mismatches!
+    bits=4, scores=[1, 1, 2, 2, 4, 5], TT=18, Om2=19, diff=1
+    bits=6, scores=[1, 1, 2, 2, 4, 5], TT=18, Om2=19, diff=1
+    bits=8, scores=[1, 1, 2, 3, 3, 5], TT=17, Om2=19, diff=2
+
+======================================================================
+KEY: dim(Omega_2) = |TT| = C(n,3) - 2*c_3
+======================================================================
+Formula verification:
+  |TT| = C(n,3) - c_3
+  |NT| = 3 * c_3
+  |A_2| = C(n,3) + 2*c_3
+
+  Verified |TT| = C(n,3)-c_3 and |NT| = 3*c_3 for 100 n=5 tournaments
+
+  If dim(Omega_2) = |TT|, then |A_2| - J_2 = |TT| = C(n,3) - c_3
+  So J_2 = |A_2| - |TT| = (C(n,3) + 2*c_3) - (C(n,3) - c_3) = 3*c_3 = |NT|
+  This means EVERY NT path is individually constrained (A^2[a,c] = 1 always?)
+  OR: the constraints kill exactly as many dimensions as there are NT paths
+
+Verifying J_2 = 3*c_3 at n=5:
+  MISMATCH: bits=4, J2=5, 3*c3=6
+
+Verifying J_2 = 3*c_3 at n=6:
+  MISMATCH: bits=4, scores=[1, 1, 2, 2, 4, 5], J2=5, 3*c3=6
+  MISMATCH: bits=6, scores=[1, 1, 2, 2, 4, 5], J2=5, 3*c3=6
+  MISMATCH: bits=8, scores=[1, 1, 2, 3, 3, 5], J2=7, 3*c3=9
+  ... 10000/32768 (0s), mismatches=9418
+  ... 20000/32768 (1s), mismatches=18890
+  ... 30000/32768 (1s), mismatches=28456
+
+  Completed in 1s. Mismatches: 31008/32768
+
+======================================================================
+PROOF SKETCH: Why dim(Omega_2) = C(n,3) - c_3
+======================================================================
+
+Claim: For any tournament T on n vertices, dim(Omega_2(T)) = C(n,3) - c_3(T).
+
+Proof:
+1. The allowed 2-paths A_2 consist of:
+   - TT paths: (a,b,c) with a->b, b->c, a->c (from transitive triples)
+   - NT paths: (a,b,c) with a->b, b->c, c->a (from directed 3-cycles)
+
+2. |TT| = C(n,3) - c_3, |NT| = 3*c_3, |A_2| = C(n,3) + 2*c_3.
+
+3. For a TT path (a,b,c), all boundary faces (b,c), (a,c), (a,b) are arcs.
+   So d(a,b,c) is in R_1 = Omega_1 automatically.
+   Therefore every TT path is in Omega_2.
+
+4. For an NT path (a,b,c) with c->a, the face (a,c) is NOT an arc.
+   So d(a,b,c) has a component outside R_1.
+   An NT path is in Omega_2 only if this "junk" component cancels.
+
+5. The junk cancellation constraint: for each junk pair (a,c) with c->a,
+   the sum of coefficients of all NT paths (a,w,c) through w must be 0.
+   Each such path is from a different 3-cycle through {a,c}.
+
+6. KEY CLAIM: J_2 = 3*c_3. This means:
+   - Every NT path has its junk face (a,c) with A^2[a,c] >= 1
+   - Each junk pair constraint removes exactly one dimension
+   - Total constraints = J_2 = 3*c_3 = |NT|
+   - So the NT paths contribute 0 additional dimensions to Omega_2
+
+7. But wait: J_2 counts distinct junk PAIRS, not paths.
+   If J_2 = 3*c_3 = |NT|, it means each NT path has a UNIQUE junk pair!
+   Equivalently: no two NT paths share the same junk pair.
+   Equivalently: for each reverse pair (a,c) with c->a and A^2[a,c]>0,
+   there is exactly ONE intermediate b with a->b->c.
+   This means A^2[a,c] = 1 for all junk pairs!
+
+8. A^2[a,c] = 1 for all (a,c) with c->a and A^2[a,c]>0?
+   This is a strong claim. Let me check...
+
+Checking A^2[a,c] = 1 for all junk pairs at n=5:
+  A^2 distribution for junk pairs: {1: 4320, 2: 1440, 3: 160}
+  VIOLATIONS: 1600
+
+Checking A^2[a,c] = 1 for all junk pairs at n=6:
+  ... 10000/32768 (0s), a2>1 found: 38265
+  ... 20000/32768 (1s), a2>1 found: 77848
+  ... 30000/32768 (1s), a2>1 found: 118971
+
+  Completed in 1s
+  A^2 distribution for junk pairs: {1: 207360, 2: 103680, 3: 23040, 4: 1920}
+  A^2 > 1 occurs for 128640 junk pairs at n=6
+
+Done.
