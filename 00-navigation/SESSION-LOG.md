@@ -15,6 +15,30 @@ Entry format:
 
 ## opus-2026-03-07-S46d — 2026-03-07 (Cumulant Hierarchy Complete)
 **Account:** opus
+## opus-2026-03-07-S46e (continued) — 2026-03-07
+**Account:** A
+**Continuation of:** opus-2026-03-07-S46e (context restart)
+**Summary of work:**
+  Continued path homology investigation and cross-domain connections.
+
+  **Major discoveries:**
+  1. PFAFFIAN-BETTI CONNECTION (EXHAUSTIVE n=6): β₁>0 ⟹ |Pf(S)| ∈ {1,3}; β₃>0 ⟹ |Pf(S)| ∈ {7,9}. Pfaffian completely separates β₁ from β₃! This is a spectral-topological connection: det(S) = Pf(S)² encodes signed cycle covers and constrains directed topology.
+  2. HIDDEN INVARIANT (EXHAUSTIVE n=5): Path homology β₁ is NOT determined by (F-poly, t₃, score, SC). The distinguishing feature is the cycle overlap pattern: β₁=1 iff 3-cycles form a "star" (share common edge); β₁=0 for heterogeneous overlaps.
+  3. MOD-2 CUMULANT COLLAPSE: THM-094 (F mod 2) + OCF at x=2≡0 mod 2 implies all integer moments vanish mod 2 for n≥3. Combined with THM-086 (mod 3), all moments vanish mod 6.
+  4. β₃ CORRELATES WITH HIGH H at n=7: mean H=121.5 for β₃>0 vs 76.2 for β=0 (expected 78.75).
+  5. F-POLYNOMIAL DOES NOT DETERMINE β: At n=5, F=[9,30,42,30,9] splits 120/120 between β₁=0 and β₁=1. At n=6, F=[45,117,198,198,117,45] appears in both β₃>0 and β₁>0.
+  6. THM-094 numbering conflict resolved: universal coefficient is now THM-095.
+
+**New contributions:** INV-130 (Pfaffian-Betti), INV-131 (hidden invariant), INV-132 (mod-2 collapse), T194-T196
+**Scripts:** spectral_betti_connection.py, pfaffian_betti_check.py, betti_hidden_invariant.py, f_poly_betti_deep.py, mod2_cumulant_connection.py, beta3_maximizer_n7.py, tournament_quasisym_betti.py, beta2_vanishing_proof_attempt.py
+**Unresolved threads:**
+  - Prove Pfaffian-Betti connection algebraically
+  - Extend hidden invariant criterion to n=6,7
+  - Prove β₂=0 for tournaments
+  - Verify Pfaffian separation at n=7,8
+
+---
+
 **Continuation of:** opus-2026-03-07-S46c
 **Summary of work:**
   Resolved OPEN-Q-022 with complete kappa_4 formula (THM-093).

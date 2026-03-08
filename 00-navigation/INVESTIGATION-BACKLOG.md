@@ -1325,7 +1325,7 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Scripts:** `path_homology_tournament_betti.py`, `even_betti_chain_complex.py`, `even_betti_quick.py`
 **Next step:** (1) Prove algebraically for β₂ = 0. (2) Investigate β₁/β₃ mutual exclusivity. (3) Check whether the Ω_p/A_p ratio has a closed form. (4) Try n=8 sampling.
 
-### INV-128: Universal Coefficient Theorem — PROVED (THM-094)
+### INV-128: Universal Coefficient Theorem — PROVED (THM-095)
 **Source:** opus-2026-03-07-S46e
 **Status:** PROVED
 **What:** coeff(t_{2k+1} in κ_{2k}) = 2/C(n, 2k) for all k. Proved via forward path formula + OCF + multinomial expansion. Resolves OPEN-Q-023.
@@ -1336,3 +1336,23 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Status:** CLARIFIED (dead end for direct application)
 **What:** arXiv:2309.07240 defines A_T(t) = sum over labelings of t^{des_T(sigma)} where des counts descents across ALL arcs. This has degree C(n,2), not n-1. The (1+t)^{floor(n/2)} divisibility applies to A_T(t), not to our F(T,x). The two polynomials encode different statistics (all-arc descents vs Hamiltonian-path forward edges).
 **Impact:** The Celano-Sieger-Spiro result cannot be directly applied to F(T,x). However, it establishes that tournaments have a universal structural constraint on A_T(t) depending only on n, which is analogous to our universal constraint on F(T,x) mod 3 (THM-086).
+
+### INV-130: Pfaffian-Betti Connection — EXHAUSTIVE at n=6
+**Source:** opus-2026-03-07-S46e
+**Status:** VERIFIED EXHAUSTIVE (32768 tournaments)
+**What:** The Pfaffian of the skew-adjacency matrix constrains path homology Betti numbers. At n=6 (exhaustive): β₁>0 ⟹ |Pf(S)| ∈ {1,3}; β₃>0 ⟹ |Pf(S)| ∈ {7,9}. The Pfaffian completely separates β₁ from β₃. Since Pf(S)² = det(S) counts signed perfect matchings, this connects directed topology to algebraic cycle invariants.
+**Scripts:** `pfaffian_betti_check.py`, `spectral_betti_connection.py`
+**Next step:** (1) Verify at n=7 sampling. (2) Prove the implication β₁>0 ⟹ |Pf| small algebraically. (3) Find exact threshold.
+
+### INV-131: Path Homology Hidden Invariant — Cycle Overlap Pattern
+**Source:** opus-2026-03-07-S46e
+**Status:** VERIFIED EXHAUSTIVE n=5
+**What:** Path homology β₁ is NOT determined by (F-polynomial, t₃, score sequence, strong connectivity). At n=5, the distinguishing invariant is the 3-cycle overlap pattern: β₁=1 iff all 3-cycles form a "star" (share a common edge); β₁=0 when cycle overlaps are heterogeneous. Two non-isomorphic tournament types with identical F-poly and t₃ have different β₁.
+**Scripts:** `betti_hidden_invariant.py`, `f_poly_betti_deep.py`
+**Next step:** (1) Formalize the overlap pattern criterion. (2) Check at n=6,7.
+
+### INV-132: Mod-2 Cumulant Collapse via OCF
+**Source:** opus-2026-03-07-S46e
+**Status:** VERIFIED
+**What:** THM-094 (F mod 2 universal) implies all integer moment sums n!·E[fwd^r] ≡ 0 mod 2 for n≥3. Root cause: OCF evaluates at x=2 ≡ 0 mod 2, so I(Ω,2) mod 2 = I(Ω,0) = 1, giving H ≡ 1 = Rédei. Combined with THM-086 (mod 3 zeros), all moments vanish mod 6 for n≥3.
+**Scripts:** `mod2_cumulant_connection.py`

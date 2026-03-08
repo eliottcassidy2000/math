@@ -613,7 +613,16 @@ PARALLEL: OCF gives H = 1 + 2α₁ + 4α₂ + ..., and path homology gives χ = 
 THM-086 (c_j = 0 mod 3 for j < val(n)) implies ALL integer moments M_r = n!·E[fwd^r] ≡ 0 mod 3 for ALL r, not just r < val(n). This is because Stirling numbers S(r,j)·j! are divisible by 3 for j >= 3, amplifying the mod 3 vanishing to all moments. The centered moments also satisfy 2^r·n!·μ_r ≡ 0 mod 3.
 
 **T192** #universal-coefficient #cumulant-hierarchy #PROVED | certainty: high (PROVED) | source: opus-2026-03-07-S46e
-THM-094: coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k). PROVED via forward path formula + OCF + multinomial expansion. The factor 2 comes from OCF (each directed cycle contributes 2 to I(Ω,2)), and 1/C(n,2k) comes from the (2k)!·(n-2k)/P(n,2k+1) counting. Resolves OPEN-Q-023.
+THM-095: coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k). PROVED via forward path formula + OCF + multinomial expansion. The factor 2 comes from OCF (each directed cycle contributes 2 to I(Ω,2)), and 1/C(n,2k) comes from the (2k)!·(n-2k)/P(n,2k+1) counting. Resolves OPEN-Q-023.
 
 **T193** #celano-sieger-spiro #descent-polynomial #NOT-same | certainty: high | source: opus-2026-03-07-S46e
 CLARIFICATION: The Celano-Sieger-Spiro polynomial A_T(t) (arXiv:2309.07240) is NOT the same as our F(T,x). A_T(t) counts descents across ALL arcs (degree C(n,2)), while F(T,x) counts forward edges along Hamiltonian paths (degree n-1). The (1+t)^{floor(n/2)} divisibility applies to A_T(t), not F(T,x). The two encode different statistics.
+
+**T194** #pfaffian #spectral #path-homology #betti | certainty: VERY HIGH (exhaustive n=6) | source: opus-2026-03-07-S46e
+PFAFFIAN-BETTI CONNECTION (EXHAUSTIVE n=6): The Pfaffian of the skew-adjacency matrix constrains path homology. β₁>0 requires |Pf(S)| ≤ 3; β₃>0 requires |Pf(S)| ≥ 7. At n=6: β₁>0 has |Pf|∈{1,3}, β₃>0 has |Pf|∈{7,9}, β=0 spans all {1,3,5,7,9}. The Pfaffian SEPARATES β₁ from β₃ completely. Since Pf(S)² = det(S) encodes signed cycle cover counting, this connects path homology to algebraic cycle invariants.
+
+**T195** #hidden-invariant #cycle-overlap #path-homology | certainty: high (exhaustive n=5) | source: opus-2026-03-07-S46e
+HIDDEN INVARIANT: Path homology β₁ is NOT determined by (F-poly, t₃, score, strong connectivity). At n=5, tournaments with t₃=3, score (1,1,2,3,3), identical F=[9,30,42,30,9] split 120/120 into β₁=0 vs β₁=1. The distinguishing feature is the CYCLE OVERLAP PATTERN: β₁=1 iff all 3-cycles share a common edge ("star" pattern); β₁=0 when cycles have heterogeneous overlaps. Path homology detects structural features invisible to standard invariants.
+
+**T196** #mod2 #OCF #redei #cumulant | certainty: high | source: opus-2026-03-07-S46e
+MOD-2 CUMULANT COLLAPSE: THM-094 (F mod 2 universal) implies n!·E[fwd^r] ≡ 0 mod 2 for all r≥1 and n≥3. This follows because OCF evaluates at x=2, and I(Ω,2) mod 2 = I(Ω,0) = 1 (independent of Ω), giving H ≡ 1 mod 2 = Rédei. The entire cumulant hierarchy collapses mod 2.

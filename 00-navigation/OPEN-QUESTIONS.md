@@ -436,7 +436,7 @@ Verified for k=1,2,3.
 ## OPEN-Q-023 -- RESOLVED
 **Prove: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k) for all k.**
 
-**RESOLVED by opus-2026-03-07-S46e (THM-094):**
+**RESOLVED by opus-2026-03-07-S46e (THM-095):**
 
 PROVED algebraically. The proof has 5 steps:
 1. Forward path formula: #fwd(2k+1)path = Σ_S H(T[S]) (OCF on subtournaments)
@@ -447,7 +447,7 @@ PROVED algebraically. The proof has 5 steps:
 
 Verified algebraically for k=1,2,3,4 and n up to 12.
 
-**Source:** opus-2026-03-07-S46e, THM-094
+**Source:** opus-2026-03-07-S46e, THM-095
 
 ---
 
