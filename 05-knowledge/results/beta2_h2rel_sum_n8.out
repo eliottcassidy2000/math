@@ -1,0 +1,25 @@
+======================================================================
+HYP-262 TEST: Σ h₂_rel at n=8 (sampled)
+======================================================================
+  n=8: 20/200 (9s) max_sum=2
+  n=8: 40/200 (18s) max_sum=2
+  n=8: 60/200 (26s) max_sum=3
+  n=8: 80/200 (35s) max_sum=3
+  n=8: 100/200 (44s) max_sum=3
+  n=8: 120/200 (53s) max_sum=3
+  n=8: 140/200 (62s) max_sum=3
+  n=8: 160/200 (75s) max_sum=3
+  n=8: 180/200 (88s) max_sum=3
+  n=8: 200/200 (100s) max_sum=3
+
+n=8: 200 tournaments in 100s
+  Σ h₂_rel (all v): {0: 169, 1: 25, 2: 4, 3: 2}
+  Σ h₂_rel (interior v): {0: 171, 1: 23, 2: 4, 3: 2}
+  Max Σ h₂_rel = 3
+  #vertices with h₂_rel>0: {0: 169, 1: 25, 2: 4, 3: 2}
+  d⁺(v) when h₂_rel>0: {0: 1, 1: 5, 2: 4, 3: 11, 4: 7, 5: 6, 6: 4, 7: 1}
+
+  ✓ HYP-262 HOLDS at n=8: Σ h₂_rel ≤ 3
+  Interior vertices: at least 6 = 6 > 3, so HYP-258 follows by pigeonhole
+
+Done.

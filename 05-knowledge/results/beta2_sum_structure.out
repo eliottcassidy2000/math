@@ -1,0 +1,49 @@
+======================================================================
+ALGEBRAIC STRUCTURE OF Σ h₂_rel
+======================================================================
+
+--- Part 1: Relative Euler characteristics ---
+n=5: 14s
+
+Σ h₂_rel → Σ χ_rel mapping:
+  Σ h₂_rel = 0: Σ χ_rel in {0, -25, -11, -7, -5, -2} (count=544)
+  Σ h₂_rel = 1: Σ χ_rel in {-4} (count=240)
+  Σ h₂_rel = 2: Σ χ_rel in {2} (count=120)
+  Σ h₂_rel = 3: Σ χ_rel in {-2} (count=120)
+
+Dimension patterns (d0_rel, d1_rel, d2_rel, d3_rel, h2_rel) → count:
+  (1, 4, 6, 4, 0) → 1680
+  (1, 4, 5, 2, 0) → 600
+  (1, 4, 6, 3, 1) → 600
+  (1, 4, 5, 3, 0) → 560
+  (1, 4, 6, 3, 0) → 480
+  (1, 4, 7, 6, 0) → 480
+  (1, 4, 5, 4, 0) → 240
+  (1, 4, 6, 2, 1) → 240
+  (1, 4, 6, 6, 0) → 120
+  (1, 4, 7, 9, 0) → 120
+
+--- Part 2: Counting v-paths in Ω₂ ---
+Interior vertices: #(v-paths in A₂) distribution by h₂_rel:
+  h₂_rel = 0: {6: 440, 8: 1200, 10: 1320, 12: 800, 14: 120}
+  h₂_rel = 1: {8: 240, 10: 360}
+
+--- Part 3: h₂_rel vs 3-cycles through v ---
+Interior vertices: #(3-cycles through v) by h₂_rel:
+  h₂_rel = 0: {0: 1640, 1: 2120, 2: 120}
+  h₂_rel = 1: {0: 240, 1: 360}
+
+--- Part 4: Σ h₂_rel as function of tournament invariants ---
+Σ h₂_rel vs t₃ (3-cycle count):
+  Σ=0: t₃ in {0: 120, 1: 120, 3: 120, 4: 160, 5: 24}
+  Σ=1: t₃ in {2: 240}
+  Σ=2: t₃ in {3: 120}
+  Σ=3: t₃ in {4: 120}
+
+Σ h₂_rel vs β₁(T):
+  Σ=0: β₁ in {0: 240, 1: 304}
+  Σ=1: β₁ in {0: 240}
+  Σ=2: β₁ in {0: 120}
+  Σ=3: β₁ in {0: 120}
+
+Done.
