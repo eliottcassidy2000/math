@@ -1,0 +1,72 @@
+======================================================================
+NON-DT OMEGA_3 ELEMENTS AT n=6
+======================================================================
+
+  bits=4, scores=(1, 1, 2, 2, 4, 5)
+    |A_3|=27, |DT|=11, dim(O3)=13
+    Basis 0: 1 nonzero (1 DT, 0 non-DT)
+    Basis 1: 1 nonzero (1 DT, 0 non-DT)
+    Basis 2: 1 nonzero (1 DT, 0 non-DT)
+    Basis 3: 1 nonzero (1 DT, 0 non-DT)
+    Basis 4: 4 nonzero (0 DT, 4 non-DT)
+      (4, 3, 1, 0): 0.5000 (NTD) [missing: 0->3]
+      (4, 3, 2, 0): -0.5000 (NTD) [missing: 0->3]
+      (5, 3, 1, 0): 0.5000 (NTD) [missing: 0->3]
+      (5, 3, 2, 0): -0.5000 (NTD) [missing: 0->3]
+
+  bits=6, scores=(1, 1, 2, 2, 4, 5)
+    |A_3|=27, |DT|=11, dim(O3)=13
+    Basis 0: 1 nonzero (1 DT, 0 non-DT)
+    Basis 1: 2 nonzero (0 DT, 2 non-DT)
+      (4, 0, 2, 1): -0.7071 (NTD) [missing: 1->0]
+      (4, 0, 3, 1): 0.7071 (NTD) [missing: 1->0]
+    Basis 2: 1 nonzero (1 DT, 0 non-DT)
+    Basis 3: 3 nonzero (1 DT, 2 non-DT)
+      (4, 0, 3, 2): 0.7071 (DT)
+      (5, 0, 2, 1): -0.5000 (NTD) [missing: 1->0]
+      (5, 0, 3, 1): 0.5000 (NTD) [missing: 1->0]
+    Basis 4: 3 nonzero (1 DT, 2 non-DT)
+      (4, 0, 3, 2): 0.7071 (DT)
+      (5, 0, 2, 1): 0.5000 (NTD) [missing: 1->0]
+      (5, 0, 3, 1): -0.5000 (NTD) [missing: 1->0]
+
+  bits=8, scores=(1, 1, 2, 3, 3, 5)
+    |A_3|=33, |DT|=12, dim(O3)=14
+    Basis 0: 1 nonzero (1 DT, 0 non-DT)
+    Basis 1: 1 nonzero (1 DT, 0 non-DT)
+    Basis 2: 1 nonzero (1 DT, 0 non-DT)
+    Basis 3: 1 nonzero (1 DT, 0 non-DT)
+    Basis 4: 1 nonzero (1 DT, 0 non-DT)
+
+  Total tournaments with dim(O3) > |DT|: 5 (of first 11)
+
+======================================================================
+DETAILED BOUNDARY ANALYSIS for bits=4
+======================================================================
+
+  dim(O3)=13, dim(O2)=19
+  Boundary matrix bd3_om shape: (24, 13)
+
+  Basis 4 (has non-DT): boundary on 10 2-paths:
+    (3, 1, 0): 1.0000 (NT)
+    (3, 2, 0): -1.0000 (NT)
+    (4, 1, 0): -0.5000 (TT)
+    (4, 2, 0): 0.5000 (TT)
+    (4, 3, 1): -0.5000 (TT)
+    (4, 3, 2): 0.5000 (TT)
+    (5, 1, 0): -0.5000 (TT)
+    (5, 2, 0): 0.5000 (TT)
+    (5, 3, 1): -0.5000 (TT)
+    (5, 3, 2): 0.5000 (TT)
+
+  Basis 5 (has non-DT): boundary on 8 2-paths:
+    (4, 1, 0): -0.5000 (TT)
+    (4, 2, 0): 0.5000 (TT)
+    (4, 3, 1): -0.5000 (TT)
+    (4, 3, 2): 0.5000 (TT)
+    (5, 1, 0): 0.5000 (TT)
+    (5, 2, 0): -0.5000 (TT)
+    (5, 3, 1): 0.5000 (TT)
+    (5, 3, 2): -0.5000 (TT)
+
+Done.
