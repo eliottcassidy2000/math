@@ -1,0 +1,15 @@
+======================================================================
+δ-INJECTIVITY AT n=7 (SAMPLED)
+======================================================================
+  50/200 (4s)
+  100/200 (7s)
+  150/200 (10s)
+  200/200 (12s)
+
+n=7: 200 samples in 12s
+  Interior checks: 37
+  Interior failures: 0
+  Some v works: 200/200
+  ✓ δ injective for ALL tested interior vertices at n=7
+
+Done.

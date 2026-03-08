@@ -1,0 +1,255 @@
+======================================================================
+ALGEBRAIC STRUCTURE OF δ FOR INTERIOR VERTICES
+======================================================================
+
+--- Part 1: Position structure of relative Z₂ generators ---
+
+--- Part 2: Detailed analysis of ONE interior case ---
+
+T#36 scores=[1, 2, 2, 1, 4]
+
+  v=0 (d+=1): d_rel=6
+    Relative basis 0:
+      -0.7071 * (1, 0, 3) [TT] (v@1)
+      +0.5000 * (2, 1, 3) [NT] (no v)
+      -0.5000 * (2, 0, 3) [NT] (v@1)
+    Relative basis 1:
+      -0.7071 * (1, 0, 3) [TT] (v@1)
+      -0.5000 * (2, 1, 3) [NT] (no v)
+      +0.5000 * (2, 0, 3) [NT] (v@1)
+    Relative basis 2:
+      +1.0000 * (4, 2, 0) [TT] (v@2)
+    Relative basis 3:
+      -1.0000 * (2, 1, 0) [TT] (v@2)
+    Relative basis 4:
+      +1.0000 * (4, 1, 0) [TT] (v@2)
+    Relative basis 5:
+      +1.0000 * (4, 0, 3) [TT] (v@1)
+
+    Connecting map δ images:
+    δ(rel_0) in Ω₁(T):
+      -1.2071 * (0, 3) (uses v)
+      +1.2071 * (1, 3) (T\v)
+      -0.7071 * (1, 0) (uses v)
+      +0.5000 * (2, 1) (T\v)
+      -0.5000 * (2, 0) (uses v)
+    δ(rel_1) in Ω₁(T):
+      -0.2071 * (0, 3) (uses v)
+      +0.2071 * (1, 3) (T\v)
+      -0.7071 * (1, 0) (uses v)
+      -0.5000 * (2, 1) (T\v)
+      +0.5000 * (2, 0) (uses v)
+    δ(rel_2) in Ω₁(T):
+      +1.0000 * (2, 0) (uses v)
+      +1.0000 * (4, 2) (T\v)
+      -1.0000 * (4, 0) (uses v)
+    δ(rel_3) in Ω₁(T):
+      -1.0000 * (1, 0) (uses v)
+      -1.0000 * (2, 1) (T\v)
+      +1.0000 * (2, 0) (uses v)
+    δ(rel_4) in Ω₁(T):
+      +1.0000 * (1, 0) (uses v)
+      +1.0000 * (4, 1) (T\v)
+      -1.0000 * (4, 0) (uses v)
+    δ(rel_5) in Ω₁(T):
+      +1.0000 * (0, 3) (uses v)
+      -1.0000 * (4, 3) (T\v)
+      +1.0000 * (4, 0) (uses v)
+
+  v=1 (d+=2): d_rel=6
+    Relative basis 0:
+      -0.7071 * (1, 0, 3) [TT] (v@0)
+      +0.5000 * (2, 1, 3) [NT] (v@1)
+      -0.5000 * (2, 0, 3) [NT] (no v)
+    Relative basis 1:
+      +1.0000 * (4, 2, 1) [TT] (v@2)
+    Relative basis 2:
+      -0.7071 * (1, 0, 3) [TT] (v@0)
+      -0.5000 * (2, 1, 3) [NT] (v@1)
+      +0.5000 * (2, 0, 3) [NT] (no v)
+    Relative basis 3:
+      +1.0000 * (4, 1, 3) [TT] (v@1)
+    Relative basis 4:
+      +1.0000 * (4, 1, 0) [TT] (v@1)
+    Relative basis 5:
+      -1.0000 * (2, 1, 0) [TT] (v@1)
+
+    Connecting map δ images:
+    δ(rel_0) in Ω₁(T):
+      -1.2071 * (0, 3) (T\v)
+      +1.2071 * (1, 3) (uses v)
+      -0.7071 * (1, 0) (uses v)
+      +0.5000 * (2, 1) (uses v)
+      -0.5000 * (2, 0) (T\v)
+    δ(rel_1) in Ω₁(T):
+      +1.0000 * (2, 1) (uses v)
+      +1.0000 * (4, 2) (T\v)
+      -1.0000 * (4, 1) (uses v)
+    δ(rel_2) in Ω₁(T):
+      -0.2071 * (0, 3) (T\v)
+      +0.2071 * (1, 3) (uses v)
+      -0.7071 * (1, 0) (uses v)
+      -0.5000 * (2, 1) (uses v)
+      +0.5000 * (2, 0) (T\v)
+    δ(rel_3) in Ω₁(T):
+      +1.0000 * (1, 3) (uses v)
+      -1.0000 * (4, 3) (T\v)
+      +1.0000 * (4, 1) (uses v)
+    δ(rel_4) in Ω₁(T):
+      +1.0000 * (1, 0) (uses v)
+      +1.0000 * (4, 1) (uses v)
+      -1.0000 * (4, 0) (T\v)
+    δ(rel_5) in Ω₁(T):
+      -1.0000 * (1, 0) (uses v)
+      -1.0000 * (2, 1) (uses v)
+      +1.0000 * (2, 0) (T\v)
+
+  v=2 (d+=2): d_rel=5
+    Relative basis 0:
+      +1.0000 * (4, 2, 1) [TT] (v@1)
+    Relative basis 1:
+      +1.0000 * (4, 2, 0) [TT] (v@1)
+    Relative basis 2:
+      -0.7071 * (2, 1, 3) [NT] (v@0)
+      +0.7071 * (2, 0, 3) [NT] (v@0)
+    Relative basis 3:
+      -1.0000 * (2, 1, 0) [TT] (v@0)
+    Relative basis 4:
+      -1.0000 * (4, 3, 2) [TT] (v@2)
+
+    Connecting map δ images:
+    δ(rel_0) in Ω₁(T):
+      +1.0000 * (2, 1) (uses v)
+      +1.0000 * (4, 2) (uses v)
+      -1.0000 * (4, 1) (T\v)
+    δ(rel_1) in Ω₁(T):
+      +1.0000 * (2, 0) (uses v)
+      +1.0000 * (4, 2) (uses v)
+      -1.0000 * (4, 0) (T\v)
+    δ(rel_2) in Ω₁(T):
+      +0.7071 * (0, 3) (T\v)
+      -0.7071 * (1, 3) (T\v)
+      -0.7071 * (2, 1) (uses v)
+      +0.7071 * (2, 0) (uses v)
+    δ(rel_3) in Ω₁(T):
+      -1.0000 * (1, 0) (T\v)
+      -1.0000 * (2, 1) (uses v)
+      +1.0000 * (2, 0) (uses v)
+    δ(rel_4) in Ω₁(T):
+      -1.0000 * (3, 2) (uses v)
+      -1.0000 * (4, 3) (T\v)
+      +1.0000 * (4, 2) (uses v)
+
+  v=3 (d+=1): d_rel=5
+    Relative basis 0:
+      -0.7071 * (1, 0, 3) [TT] (v@2)
+      -0.5000 * (2, 1, 3) [NT] (v@2)
+      +0.5000 * (2, 0, 3) [NT] (v@2)
+    Relative basis 1:
+      +0.7071 * (1, 0, 3) [TT] (v@2)
+      -0.5000 * (2, 1, 3) [NT] (v@2)
+      +0.5000 * (2, 0, 3) [NT] (v@2)
+    Relative basis 2:
+      +1.0000 * (4, 1, 3) [TT] (v@2)
+    Relative basis 3:
+      -1.0000 * (4, 3, 2) [TT] (v@1)
+    Relative basis 4:
+      +1.0000 * (4, 0, 3) [TT] (v@2)
+
+    Connecting map δ images:
+    δ(rel_0) in Ω₁(T):
+      -0.2071 * (0, 3) (uses v)
+      +0.2071 * (1, 3) (uses v)
+      -0.7071 * (1, 0) (T\v)
+      -0.5000 * (2, 1) (T\v)
+      +0.5000 * (2, 0) (T\v)
+    δ(rel_1) in Ω₁(T):
+      +1.2071 * (0, 3) (uses v)
+      -1.2071 * (1, 3) (uses v)
+      +0.7071 * (1, 0) (T\v)
+      -0.5000 * (2, 1) (T\v)
+      +0.5000 * (2, 0) (T\v)
+    δ(rel_2) in Ω₁(T):
+      +1.0000 * (1, 3) (uses v)
+      -1.0000 * (4, 3) (uses v)
+      +1.0000 * (4, 1) (T\v)
+    δ(rel_3) in Ω₁(T):
+      -1.0000 * (3, 2) (uses v)
+      -1.0000 * (4, 3) (uses v)
+      +1.0000 * (4, 2) (T\v)
+    δ(rel_4) in Ω₁(T):
+      +1.0000 * (0, 3) (uses v)
+      -1.0000 * (4, 3) (uses v)
+      +1.0000 * (4, 0) (T\v)
+
+======================================================================
+Part 3: STRUCTURAL THEOREM — Position mixing prevents δ=0
+======================================================================
+
+n=5 interior vertices with h2_rel > 0: 4480
+  Multi-position (v at 2+ positions): 4160
+  Single-position (v at 1 position): 320
+
+======================================================================
+Part 4: The source mechanism — WHY δ=0 for sources
+======================================================================
+
+T#36, v=4 (source)
+Arcs in T\v: [(0, 3), (1, 3), (1, 0), (2, 1), (2, 0), (3, 2)]
+
+Flow conservation matrix B (4 x 6):
+  vertex 0: [ 1.  0. -1.  0. -1.  0.]
+  vertex 1: [ 0.  1.  1. -1.  0.  0.]
+  vertex 2: [ 0.  0.  0.  1.  1. -1.]
+  vertex 3: [-1. -1.  0.  0.  0.  1.]
+
+Z₁(T\v) dim = 3
+B₁(T\v) dim = 3
+β₁(T\v) = Z₁ - B₁ = ...
+
+--- Key question: Is every balanced 1-chain on T\v a boundary? ---
+
+Z₁ basis in arc coordinates:
+  Z₁[0]: ['-0.336*0->3', '0.348*1->3', '-0.707*1->0', '-0.359*2->1', '0.371*2->0', '0.012*3->2']
+  Z₁[1]: ['0.600*0->3', '-0.360*1->3', '0.020*1->0', '-0.341*2->1', '0.580*2->0', '0.239*3->2']
+  Z₁[2]: ['0.166*0->3', '0.499*1->3', '0.005*1->0', '0.505*2->1', '0.160*2->0', '0.665*3->2']
+
+B₁ rank in Z₁ = 2
+β₁ = dim Z₁ - rk B₁ = 1
+
+--- Source v=4: TT triples (v,b,c) ---
+  Count: 6 (= C(4,2) = 6)
+
+======================================================================
+Part 5: INTERIOR VERTEX — Structural diversity
+======================================================================
+
+For source v: δ(relative cycle) is a BALANCED flow on ALL arcs of T\v
+  = a 1-cycle in T\v
+  Question: do these specific balanced flows always lie in B₁?
+  Answer: YES at n=5 (verified). Why?
+
+For interior v: δ(relative cycle) is a SIGNED mix from 3 position types
+  = more diverse, harder to be a pure cycle
+  The key structural difference makes δ injective.
+
+======================================================================
+Part 6: COUNTING ARGUMENT — dim H₂(T,T\v) vs dim H₁(T\v)
+======================================================================
+
+n=5: (h₂_rel, β₁(T\v)) distribution for interior v with h₂_rel > 0:
+  h₂_rel=1, β₁=1: 600 cases (injective possible: YES)
+
+======================================================================
+Part 7: n=6 dimension check
+======================================================================
+  200/1000 (8s)
+  400/1000 (15s)
+  600/1000 (23s)
+  800/1000 (30s)
+  1000/1000 (38s)
+
+n=6 (1000 samples): (h₂_rel, β₁(T\v)) for interior v with h₂_rel > 0:
+  h₂_rel=1, β₁=1: 482 cases (injective possible: YES)
+
+Done.

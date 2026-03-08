@@ -1,0 +1,12 @@
+======================================================================
+DIMENSION UNIVERSALITY: h₂_rel AND β₁(T\v)
+======================================================================
+
+n=5: 1024 tournaments in 9s
+  Total interior (T,v) pairs checked: 4480
+  (h₂_rel, β₁) distribution where h₂_rel > 0:
+    h₂_rel=1, β₁=1: 600 cases
+  ✓ h₂_rel ≤ β₁ always (δ-injectivity dimensionally possible)
+  ✓ ALWAYS h₂_rel = 1 and β₁ = 1 (1D → 1D map)
+  n=6: 5000/32768 (56s)
+  n=6: 10000/32768 (111s)

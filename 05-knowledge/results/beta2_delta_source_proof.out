@@ -1,0 +1,411 @@
+======================================================================
+SOURCE VERTEX δ-FAILURE: COMPLETE ANALYSIS
+======================================================================
+
+──────────────────────────────────────────────────
+T#36 v=4 d⁺=4 scores=[1, 2, 2, 1, 4]
+  A₂ total: 14, using v: 6, not: 8
+  Ω₂(T) dim: 9, Ω₂(T\v) dim: 3
+  Relative Ω₂ dim: 6
+  Rel basis 0: ['1.000*(4, 3, 2)']
+  Rel basis 1: ['1.000*(4, 2, 1)']
+  Rel basis 2: ['1.000*(4, 2, 0)']
+  Rel basis 3: ['1.000*(4, 1, 3)']
+  Rel basis 4: ['1.000*(4, 1, 0)']
+  Rel basis 5: ['1.000*(4, 0, 3)']
+
+  δ images (in Ω₁(T) arc coordinates):
+  δ(rel_0):
+    T\v part: ['1.000*(3, 2)']
+    v part: ['1.000*(4, 3)', '-1.000*(4, 2)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 1.000000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_1):
+    T\v part: ['1.000*(2, 1)']
+    v part: ['1.000*(4, 2)', '-1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_2):
+    T\v part: ['1.000*(2, 0)']
+    v part: ['1.000*(4, 2)', '-1.000*(4, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_3):
+    T\v part: ['1.000*(1, 3)']
+    v part: ['-1.000*(4, 3)', '1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_4):
+    T\v part: ['1.000*(1, 0)']
+    v part: ['1.000*(4, 1)', '-1.000*(4, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.500000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_5):
+    T\v part: ['1.000*(0, 3)']
+    v part: ['-1.000*(4, 3)', '1.000*(4, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+
+──────────────────────────────────────────────────
+T#37 v=4 d⁺=4 scores=[2, 1, 2, 1, 4]
+  A₂ total: 14, using v: 6, not: 8
+  Ω₂(T) dim: 9, Ω₂(T\v) dim: 3
+  Relative Ω₂ dim: 6
+  Rel basis 0: ['1.000*(4, 3, 2)']
+  Rel basis 1: ['1.000*(4, 2, 1)']
+  Rel basis 2: ['1.000*(4, 2, 0)']
+  Rel basis 3: ['1.000*(4, 1, 3)']
+  Rel basis 4: ['1.000*(4, 0, 3)']
+  Rel basis 5: ['1.000*(4, 0, 1)']
+
+  δ images (in Ω₁(T) arc coordinates):
+  δ(rel_0):
+    T\v part: ['1.000*(3, 2)']
+    v part: ['1.000*(4, 3)', '-1.000*(4, 2)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 1.000000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_1):
+    T\v part: ['1.000*(2, 1)']
+    v part: ['1.000*(4, 2)', '-1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_2):
+    T\v part: ['1.000*(2, 0)']
+    v part: ['1.000*(4, 2)', '-1.000*(4, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_3):
+    T\v part: ['1.000*(1, 3)']
+    v part: ['-1.000*(4, 3)', '1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_4):
+    T\v part: ['1.000*(0, 3)']
+    v part: ['-1.000*(4, 3)', '1.000*(4, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_5):
+    T\v part: ['1.000*(0, 1)']
+    v part: ['-1.000*(4, 1)', '1.000*(4, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.500000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+
+──────────────────────────────────────────────────
+T#387 v=1 d⁺=0 scores=[2, 0, 3, 2, 3]
+  A₂ total: 14, using v: 6, not: 8
+  Ω₂(T) dim: 9, Ω₂(T\v) dim: 3
+  Relative Ω₂ dim: 6
+  Rel basis 0: ['-1.000*(0, 2, 1)']
+  Rel basis 1: ['1.000*(3, 0, 1)']
+  Rel basis 2: ['1.000*(4, 3, 1)']
+  Rel basis 3: ['-1.000*(2, 3, 1)']
+  Rel basis 4: ['1.000*(2, 4, 1)']
+  Rel basis 5: ['1.000*(4, 0, 1)']
+
+  δ images (in Ω₁(T) arc coordinates):
+  δ(rel_0):
+    T\v part: ['-1.000*(0, 2)']
+    v part: ['1.000*(0, 1)', '-1.000*(2, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 1.000000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_1):
+    T\v part: ['1.000*(3, 0)']
+    v part: ['1.000*(0, 1)', '-1.000*(3, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_2):
+    T\v part: ['1.000*(4, 3)']
+    v part: ['1.000*(3, 1)', '-1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.500000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_3):
+    T\v part: ['-1.000*(2, 3)']
+    v part: ['1.000*(2, 1)', '-1.000*(3, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_4):
+    T\v part: ['1.000*(2, 4)']
+    v part: ['-1.000*(2, 1)', '1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_5):
+    T\v part: ['1.000*(4, 0)']
+    v part: ['1.000*(0, 1)', '-1.000*(4, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+
+──────────────────────────────────────────────────
+T#586 v=3 d⁺=4 scores=[2, 2, 1, 4, 1]
+  A₂ total: 14, using v: 6, not: 8
+  Ω₂(T) dim: 9, Ω₂(T\v) dim: 3
+  Relative Ω₂ dim: 6
+  Rel basis 0: ['1.000*(3, 2, 1)']
+  Rel basis 1: ['1.000*(3, 1, 4)']
+  Rel basis 2: ['1.000*(3, 1, 0)']
+  Rel basis 3: ['1.000*(3, 0, 4)']
+  Rel basis 4: ['1.000*(3, 0, 2)']
+  Rel basis 5: ['-1.000*(3, 4, 2)']
+
+  δ images (in Ω₁(T) arc coordinates):
+  δ(rel_0):
+    T\v part: ['1.000*(2, 1)']
+    v part: ['1.000*(3, 2)', '-1.000*(3, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 1.000000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_1):
+    T\v part: ['1.000*(1, 4)']
+    v part: ['-1.000*(3, 4)', '1.000*(3, 1)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_2):
+    T\v part: ['1.000*(1, 0)']
+    v part: ['1.000*(3, 1)', '-1.000*(3, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_3):
+    T\v part: ['1.000*(0, 4)']
+    v part: ['-1.000*(3, 4)', '1.000*(3, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.500000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_4):
+    T\v part: ['1.000*(0, 2)']
+    v part: ['-1.000*(3, 2)', '1.000*(3, 0)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+  δ(rel_5):
+    T\v part: ['-1.000*(4, 2)']
+    v part: ['-1.000*(3, 4)', '1.000*(3, 2)']
+    |v-part| = 2.000000
+    ∂₁ of T\v part: 1.000000 (should be ~0 for cycle)
+    Diff from B₁(T\v): 0.625000 (0 = IS a boundary)
+    => δ image is NOT a boundary (nonzero in H₁)
+
+======================================================================
+GENERAL SOURCE THEOREM
+======================================================================
+  SOURCE NOT IN B₁: T#4 v=4
+  SOURCE NOT IN B₁: T#6 v=4
+  SOURCE NOT IN B₁: T#20 v=4
+  SOURCE NOT IN B₁: T#21 v=4
+  SOURCE NOT IN B₁: T#33 v=4
+  SOURCE NOT IN B₁: T#34 v=4
+  SOURCE NOT IN B₁: T#35 v=4
+  SOURCE NOT IN B₁: T#36 v=4
+  SOURCE NOT IN B₁: T#37 v=4
+  SOURCE NOT IN B₁: T#38 v=4
+  SOURCE NOT IN B₁: T#49 v=4
+  SOURCE NOT IN B₁: T#53 v=4
+  SOURCE NOT IN B₁: T#79 v=0
+  SOURCE NOT IN B₁: T#111 v=0
+  SOURCE NOT IN B₁: T#120 v=1
+  SOURCE NOT IN B₁: T#124 v=1
+  SOURCE NOT IN B₁: T#130 v=4
+  SOURCE NOT IN B₁: T#134 v=4
+  SOURCE NOT IN B₁: T#145 v=4
+  SOURCE NOT IN B₁: T#146 v=4
+  SOURCE NOT IN B₁: T#147 v=4
+  SOURCE NOT IN B₁: T#148 v=4
+  SOURCE NOT IN B₁: T#149 v=4
+  SOURCE NOT IN B₁: T#150 v=4
+  SOURCE NOT IN B₁: T#162 v=4
+  SOURCE NOT IN B₁: T#163 v=4
+  SOURCE NOT IN B₁: T#177 v=4
+  SOURCE NOT IN B₁: T#179 v=4
+  SOURCE NOT IN B₁: T#207 v=0
+  SOURCE NOT IN B₁: T#223 v=0
+  SOURCE NOT IN B₁: T#248 v=1
+  SOURCE NOT IN B₁: T#250 v=1
+  SOURCE NOT IN B₁: T#287 v=0
+  SOURCE NOT IN B₁: T#303 v=0
+  SOURCE NOT IN B₁: T#319 v=0
+  SOURCE NOT IN B₁: T#335 v=0
+  SOURCE NOT IN B₁: T#351 v=0
+  SOURCE NOT IN B₁: T#367 v=0
+  SOURCE NOT IN B₁: T#370 v=1
+  SOURCE NOT IN B₁: T#372 v=1
+  SOURCE NOT IN B₁: T#374 v=1
+  SOURCE NOT IN B₁: T#376 v=1
+  SOURCE NOT IN B₁: T#378 v=1
+  SOURCE NOT IN B₁: T#380 v=1
+  SOURCE NOT IN B₁: T#392 v=2
+  SOURCE NOT IN B₁: T#396 v=2
+  SOURCE NOT IN B₁: T#415 v=0
+  SOURCE NOT IN B₁: T#424 v=2
+  SOURCE NOT IN B₁: T#425 v=2
+  SOURCE NOT IN B₁: T#449 v=2
+  SOURCE NOT IN B₁: T#452 v=2
+  SOURCE NOT IN B₁: T#453 v=2
+  SOURCE NOT IN B₁: T#456 v=2
+  SOURCE NOT IN B₁: T#457 v=2
+  SOURCE NOT IN B₁: T#460 v=2
+  SOURCE NOT IN B₁: T#479 v=0
+  SOURCE NOT IN B₁: T#481 v=2
+  SOURCE NOT IN B₁: T#489 v=2
+  SOURCE NOT IN B₁: T#498 v=1
+  SOURCE NOT IN B₁: T#506 v=1
+  SOURCE NOT IN B₁: T#520 v=3
+  SOURCE NOT IN B₁: T#522 v=3
+  SOURCE NOT IN B₁: T#536 v=3
+  SOURCE NOT IN B₁: T#537 v=3
+  SOURCE NOT IN B₁: T#559 v=0
+  SOURCE NOT IN B₁: T#577 v=3
+  SOURCE NOT IN B₁: T#578 v=3
+  SOURCE NOT IN B₁: T#579 v=3
+  SOURCE NOT IN B₁: T#584 v=3
+  SOURCE NOT IN B₁: T#585 v=3
+  SOURCE NOT IN B₁: T#586 v=3
+  SOURCE NOT IN B₁: T#593 v=3
+  SOURCE NOT IN B₁: T#601 v=3
+  SOURCE NOT IN B₁: T#623 v=0
+  SOURCE NOT IN B₁: T#628 v=1
+  SOURCE NOT IN B₁: T#636 v=1
+  SOURCE NOT IN B₁: T#671 v=0
+  SOURCE NOT IN B₁: T#687 v=0
+  SOURCE NOT IN B₁: T#703 v=0
+  SOURCE NOT IN B₁: T#719 v=0
+  SOURCE NOT IN B₁: T#735 v=0
+  SOURCE NOT IN B₁: T#751 v=0
+  SOURCE NOT IN B₁: T#754 v=1
+  SOURCE NOT IN B₁: T#756 v=1
+  SOURCE NOT IN B₁: T#758 v=1
+  SOURCE NOT IN B₁: T#760 v=1
+  SOURCE NOT IN B₁: T#762 v=1
+  SOURCE NOT IN B₁: T#764 v=1
+  SOURCE NOT IN B₁: T#770 v=3
+  SOURCE NOT IN B₁: T#778 v=3
+  SOURCE NOT IN B₁: T#785 v=3
+  SOURCE NOT IN B₁: T#786 v=3
+  SOURCE NOT IN B₁: T#787 v=3
+  SOURCE NOT IN B₁: T#792 v=3
+  SOURCE NOT IN B₁: T#793 v=3
+  SOURCE NOT IN B₁: T#794 v=3
+  SOURCE NOT IN B₁: T#815 v=0
+  SOURCE NOT IN B₁: T#831 v=0
+  SOURCE NOT IN B₁: T#834 v=3
+  SOURCE NOT IN B₁: T#835 v=3
+  SOURCE NOT IN B₁: T#849 v=3
+  SOURCE NOT IN B₁: T#851 v=3
+  SOURCE NOT IN B₁: T#884 v=1
+  SOURCE NOT IN B₁: T#886 v=1
+  SOURCE NOT IN B₁: T#900 v=2
+  SOURCE NOT IN B₁: T#908 v=2
+  SOURCE NOT IN B₁: T#927 v=0
+  SOURCE NOT IN B₁: T#929 v=2
+  SOURCE NOT IN B₁: T#932 v=2
+  SOURCE NOT IN B₁: T#933 v=2
+  SOURCE NOT IN B₁: T#936 v=2
+  SOURCE NOT IN B₁: T#937 v=2
+  SOURCE NOT IN B₁: T#940 v=2
+  SOURCE NOT IN B₁: T#959 v=0
+  SOURCE NOT IN B₁: T#964 v=2
+  SOURCE NOT IN B₁: T#965 v=2
+  SOURCE NOT IN B₁: T#993 v=2
+  SOURCE NOT IN B₁: T#997 v=2
+  SOURCE NOT IN B₁: T#1010 v=1
+  SOURCE NOT IN B₁: T#1014 v=1
+
+Source v with β₁(T\v) > 0: 120
+  δ image entirely in B₁: 0
+  δ image NOT in B₁: 120
+
+======================================================================
+REFINED QUESTION: Why does source δ land in B₁?
+======================================================================
+Checking the actual Ω₂ computation method...
+
+For source v:
+  ALL paths (v,b,c) are TT (since v→c automatically)
+  Ω₂ condition: ∂₁∘∂₂ = 0 is AUTOMATIC for TT paths
+  So relative Ω₂ = span{(v,b,c) : b→c in T\v} / Ω₂(T\v)
+  = ALL combinations of source-v TT triples
+
+For interior v:
+  Some paths (a,b,c) using v are NT (the skipped face is NOT an arc)
+  Ω₂ condition imposes NONTRIVIAL constraints on NT path coefficients
+  This couples the three position types and constrains relative Ω₂
+
+======================================================================
+NT/TT counts for interior vs source paths
+======================================================================
+
+Source vertex (d⁺=n-1):
+  TT=6, NT=0: 320 cases
+
+Interior vertex (1 ≤ d⁺ ≤ n-2):
+  TT=2, NT=12: 120 cases
+  TT=3, NT=9: 800 cases
+  TT=4, NT=6: 1680 cases
+  TT=5, NT=3: 1440 cases
+  TT=6, NT=0: 440 cases
+
+======================================================================
+KEY INSIGHT SUMMARY
+======================================================================
+
+For source v (d⁺=n-1):
+  - ALL paths through v are TT → Ω₂ condition is automatic
+  - v only at position 0 → limited boundary structure
+  - δ-image is a balanced flow on T\v → can land in B₁
+  - RESULT: δ can fail to be injective
+
+For interior v (1 ≤ d⁺ ≤ n-2):
+  - Some paths through v are NT → Ω₂ condition CONSTRAINS coefficients
+  - v at positions 0, 1, AND 2 → diverse boundary structure
+  - δ-image mixes contributions from all position types → harder to be 0
+  - RESULT: δ is always injective (HYP-249)
+
+The proof strategy should show:
+  (A) The Ω₂ constraint on NT paths using v COUPLES different positions
+  (B) This coupling prevents δ from mapping everything to B₁(T\v)
+  (C) Specifically: if δ(z) ∈ B₁, the NT coupling forces z ∈ im(∂₃^rel)
+
+This is analogous to how "mixed-type" constraints in linear programming
+prevent degeneracy — the diversity of constraint types ensures full rank.
+
+Done.
