@@ -1,0 +1,346 @@
+======================================================================
+TILING MODEL: SURPLUS TRACKING ALONG TILE FLIPS
+======================================================================
+
+======================================================================
+n = 5, m = 6 tiles, 2^m = 64 tilings
+======================================================================
+  Computed all 64 tilings in 0.2s
+
+  Surplus distribution:
+    surplus=0: 17 (26.6%)
+    surplus=1: 33 (51.6%)
+    surplus=2: 11 (17.2%)
+    surplus=5: 3 (4.7%)
+  Min surplus: 0
+
+  Single tile flip: δ(surplus) distribution:
+    δ(surplus)=-4: 9
+    δ(surplus)=-3: 9
+    δ(surplus)=-2: 5
+    δ(surplus)=-1: 123
+    δ(surplus)=0: 92
+    δ(surplus)=1: 123
+    δ(surplus)=2: 5
+    δ(surplus)=3: 9
+    δ(surplus)=4: 9
+
+  δ(surplus) vs δ|A₂| statistics:
+    δ|A₂|=-6: δ(surplus) range [0, 0], mean=0.00, count=2
+    δ|A₂|=-4: δ(surplus) range [-1, 0], mean=-0.33, count=24
+    δ|A₂|=-2: δ(surplus) range [-4, 1], mean=-1.11, count=94
+    δ|A₂|=0: δ(surplus) range [-1, 1], mean=0.00, count=144
+    δ|A₂|=2: δ(surplus) range [-1, 4], mean=1.11, count=94
+    δ|A₂|=4: δ(surplus) range [0, 1], mean=0.33, count=24
+    δ|A₂|=6: δ(surplus) range [0, 0], mean=0.00, count=2
+
+  GS tilings: 16 tilings, 4 free bits
+  GS surplus distribution:
+    surplus=0: 5
+    surplus=1: 5
+    surplus=2: 3
+    surplus=5: 3
+
+  Transitive tournament (all tiles=1):
+    surplus=1, Ω₂=10, Ω₃=5, Z₂=4, |TT|=10, |DT|=5
+
+  Minimum surplus tournament:
+    bits=0b0, surplus=0, scores=(1, 1, 2, 3, 3), t3=3
+
+  Path from transitive to min-surplus (6 steps):
+  step  surplus   δsurp   Ω₂   Ω₃   Z₂   δA₂   δA₃   TT   DT
+     0        1      +0   10    5    4    +0    +0   10    5
+     1        0      -1    9    3    3    +2    +4    9    3
+     2        1      +1    9    4    3    +2    +4    8    3
+     3        1      +0    9    5    4    +2    +4    7    5
+     4        0      -1    9    3    3    +0    +0    7    3
+     5        1      +1    9    5    4    +0    +0    7    5
+     6        0      -1    9    3    3    +0    +0    7    3
+
+======================================================================
+n = 6, m = 10 tiles, 2^m = 1024 tilings
+======================================================================
+  Computed all 1024 tilings in 11.9s
+
+  Surplus distribution:
+    surplus=1: 1 (0.1%)
+    surplus=3: 159 (15.5%)
+    surplus=4: 182 (17.8%)
+    surplus=5: 210 (20.5%)
+    surplus=6: 72 (7.0%)
+    surplus=7: 37 (3.6%)
+    surplus=8: 75 (7.3%)
+    surplus=9: 160 (15.6%)
+    surplus=10: 72 (7.0%)
+    surplus=15: 41 (4.0%)
+    surplus=18: 15 (1.5%)
+  Min surplus: 1
+
+  Single tile flip: δ(surplus) distribution:
+    δ(surplus)=-10: 50
+    δ(surplus)=-9: 60
+    δ(surplus)=-7: 42
+    δ(surplus)=-6: 268
+    δ(surplus)=-5: 450
+    δ(surplus)=-4: 522
+    δ(surplus)=-3: 450
+    δ(surplus)=-2: 918
+    δ(surplus)=-1: 1388
+    δ(surplus)=0: 1944
+    δ(surplus)=1: 1388
+    δ(surplus)=2: 918
+    δ(surplus)=3: 450
+    δ(surplus)=4: 522
+    δ(surplus)=5: 450
+    δ(surplus)=6: 268
+    δ(surplus)=7: 42
+    δ(surplus)=9: 60
+    δ(surplus)=10: 50
+
+  δ(surplus) vs δ|A₂| statistics:
+    δ|A₂|=-8: δ(surplus) range [0, 0], mean=0.00, count=8
+    δ|A₂|=-6: δ(surplus) range [-3, 0], mean=-1.11, count=144
+    δ|A₂|=-4: δ(surplus) range [-10, 1], mean=-3.08, count=896
+    δ|A₂|=-2: δ(surplus) range [-9, 2], mean=-2.10, count=2416
+    δ|A₂|=0: δ(surplus) range [-6, 6], mean=0.00, count=3312
+    δ|A₂|=2: δ(surplus) range [-2, 9], mean=2.10, count=2416
+    δ|A₂|=4: δ(surplus) range [-1, 10], mean=3.08, count=896
+    δ|A₂|=6: δ(surplus) range [0, 3], mean=1.11, count=144
+    δ|A₂|=8: δ(surplus) range [0, 0], mean=0.00, count=8
+
+  GS tilings: 64 tilings, 6 free bits
+  GS surplus distribution:
+    surplus=1: 1
+    surplus=3: 5
+    surplus=4: 10
+    surplus=5: 20
+    surplus=7: 3
+    surplus=8: 7
+    surplus=15: 9
+    surplus=18: 9
+
+  Transitive tournament (all tiles=1):
+    surplus=5, Ω₂=20, Ω₃=15, Z₂=10, |TT|=20, |DT|=15
+
+  Minimum surplus tournament:
+    bits=0b111111110, surplus=1, scores=(1, 1, 1, 4, 4, 4), t3=2
+
+  Path from transitive to min-surplus (2 steps):
+  step  surplus   δsurp   Ω₂   Ω₃   Z₂   δA₂   δA₃   TT   DT
+     0        5      +0   20   15   10    +0    +0   20   15
+     1        3      -2   19   12    9    +2    +6   19   12
+     2        1      -2   18    9    8    +2    +6   18    9
+
+======================================================================
+N=5 DEEP: HOW TILE FLIPS CHANGE THE CHAIN COMPLEX
+======================================================================
+
+  Flip effect (δΩ₂, δΩ₃, δZ₂, δsurplus) distribution:
+    (0, 0, 0, 0): 68 (17.7%)
+    (0, 1, 0, 1): 30 (7.8%)
+    (0, -1, 0, -1): 30 (7.8%)
+    (1, 3, 1, 2): 26 (6.8%)
+    (-1, -3, -1, -2): 26 (6.8%)
+    (-1, -5, -1, -4): 13 (3.4%)
+    (1, 5, 1, 4): 13 (3.4%)
+    (1, 2, 1, 1): 12 (3.1%)
+    (-1, -2, -1, -1): 12 (3.1%)
+    (0, 2, 0, 2): 11 (2.9%)
+    (0, -2, 0, -2): 11 (2.9%)
+    (1, 6, 1, 5): 10 (2.6%)
+    (-1, -6, -1, -5): 10 (2.6%)
+    (1, 4, 1, 3): 6 (1.6%)
+    (-1, -4, -1, -3): 6 (1.6%)
+    (2, 8, 2, 6): 5 (1.3%)
+    (-2, -8, -2, -6): 5 (1.3%)
+    (2, 7, 2, 5): 4 (1.0%)
+    (-2, -7, -2, -5): 4 (1.0%)
+    (-1, -7, -1, -6): 4 (1.0%)
+    (1, 7, 1, 6): 4 (1.0%)
+    (2, 6, 2, 4): 3 (0.8%)
+    (-1, -1, 0, -1): 3 (0.8%)
+    (0, 3, 1, 2): 3 (0.8%)
+    (-2, -6, -2, -4): 3 (0.8%)
+    (1, 5, 2, 3): 3 (0.8%)
+    (-1, 0, -1, 1): 3 (0.8%)
+    (-1, 0, 0, 0): 3 (0.8%)
+    (1, 1, 0, 1): 3 (0.8%)
+    (2, 2, 1, 1): 3 (0.8%)
+    (1, 0, 0, 0): 3 (0.8%)
+    (0, -3, -1, -2): 3 (0.8%)
+    (-2, -2, -1, -1): 3 (0.8%)
+    (-1, -5, -2, -3): 3 (0.8%)
+    (1, 0, 1, -1): 3 (0.8%)
+    (1, 7, 2, 5): 2 (0.5%)
+    (1, 8, 2, 6): 2 (0.5%)
+    (-1, -8, -2, -6): 2 (0.5%)
+    (-1, -7, -2, -5): 2 (0.5%)
+    (-1, 1, 0, 1): 1 (0.3%)
+    (1, 4, 2, 2): 1 (0.3%)
+    (0, 0, 1, -1): 1 (0.3%)
+    (-3, -7, -2, -5): 1 (0.3%)
+    (0, 0, -1, 1): 1 (0.3%)
+    (-2, -5, -2, -3): 1 (0.3%)
+    (0, 1, -1, 2): 1 (0.3%)
+    (3, 7, 2, 5): 1 (0.3%)
+    (1, -1, 0, -1): 1 (0.3%)
+    (2, 5, 2, 3): 1 (0.3%)
+    (0, -1, -1, 0): 1 (0.3%)
+    (-1, -8, -1, -7): 1 (0.3%)
+    (-3, -14, -4, -10): 1 (0.3%)
+    (1, 8, 1, 7): 1 (0.3%)
+    (-2, -6, -3, -3): 1 (0.3%)
+    (-1, -4, -2, -2): 1 (0.3%)
+    (-1, -6, -2, -4): 1 (0.3%)
+    (3, 14, 4, 10): 1 (0.3%)
+    (2, 6, 3, 3): 1 (0.3%)
+    (0, 1, 1, 0): 1 (0.3%)
+    (-1, -1, -1, 0): 1 (0.3%)
+    (1, 1, 1, 0): 1 (0.3%)
+    (0, -1, 1, -2): 1 (0.3%)
+    (1, 6, 2, 4): 1 (0.3%)
+
+  Checking if δ|Ω₂| depends only on δ|A₂| and δ(|TT|)...
+  (δTT, δA₂) → set of δΩ₂ values:
+    (-3, 6): [0, 1, 2]
+    (-2, 4): [-1, 0, 1, 2, 3]
+    (-1, 2): [-1, 0, 1, 2, 3]
+    (0, 0): [-1, 0, 1]
+    (1, -2): [-3, -2, -1, 0, 1]
+    (2, -4): [-3, -2, -1, 0, 1]
+    (3, -6): [-2, -1, 0]
+
+  Checking δΩ₂ = δ(TT) + δ(NT_cancel_dim)...
+  Violations of Ω₂ ≥ TT: 0
+
+======================================================================
+TILE FLIP = ARC FLIP: RELATING δ|A₂|, δ|A₃| TO δΩ₂, δΩ₃
+======================================================================
+
+  Tiles (non-backbone arcs): [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4)]
+
+  THM-100 verification: 46/384 correct
+
+  Seeking δΩ₂ formula in terms of (d_u, d_v, n)...
+
+  δΩ₂ by (d_u, d_v) [flipping arc u→v]:
+   (du,dv)    mean   min   max  #unique  values
+    (1, 1)   -0.30    -1     1        3  [-1, 0, 1]
+    (1, 2)   -0.50    -1     0        2  [-1, 0]
+    (1, 3)   -1.00    -1    -1        1  [-1]
+    (2, 0)    0.30    -1     1        3  [-1, 0, 1]
+    (2, 1)    0.00    -3     3        7  [-3, -2, -1, 0, 1, 2, 3]
+    (2, 2)   -0.27    -3     2        6  [-3, -2, -1, 0, 1, 2]
+    (2, 3)   -0.92    -2     0        3  [-2, -1, 0]
+    (3, 0)    0.50     0     1        2  [0, 1]
+    (3, 1)    0.27    -2     3        6  [-2, -1, 0, 1, 2, 3]
+    (3, 2)    0.00    -2     2        5  [-2, -1, 0, 1, 2]
+    (3, 3)   -0.50    -2     0        3  [-2, -1, 0]
+    (4, 0)    1.00     1     1        1  [1]
+    (4, 1)    0.92     0     2        3  [0, 1, 2]
+    (4, 2)    0.50     0     2        3  [0, 1, 2]
+
+  δΩ₃ by (d_u, d_v):
+   (du,dv)    mean   min   max  #unique  values
+    (1, 1)   -2.30    -6     3        7  [-6, -5, -4, -2, -1, 0, 3]
+    (1, 2)   -2.75    -8     0        7  [-8, -7, -6, -3, -2, -1, 0]
+    (1, 3)   -3.00    -3    -3        1  [-3]
+    (2, 0)    2.30    -3     6        7  [-3, 0, 1, 2, 4, 5, 6]
+    (2, 1)    0.00    -8     8       13  [-8, -7, -5, -3, -2, -1, 0, 1, 2, 3, 5, 7, 8]
+    (2, 2)   -1.28   -14     7       16  [-14, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 5, 6, 7]
+    (2, 3)   -2.75    -7     0        6  [-7, -6, -3, -2, -1, 0]
+    (3, 0)    2.75     0     8        7  [0, 1, 2, 3, 6, 7, 8]
+    (3, 1)    1.28    -7    14       16  [-7, -6, -5, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 14]
+    (3, 2)    0.00    -8     8       17  [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8]
+    (3, 3)   -1.70    -7     0        5  [-7, -4, -2, -1, 0]
+    (4, 0)    3.00     3     3        1  [3]
+    (4, 1)    2.75     0     7        6  [0, 1, 2, 3, 6, 7]
+    (4, 2)    1.70     0     7        5  [0, 1, 2, 4, 7]
+
+  δZ₂ by (d_u, d_v):
+   (du,dv)    mean   min   max  #unique
+    (1, 1)   -0.40    -2     1        4
+    (1, 2)   -0.58    -2     0        3
+    (1, 3)   -1.00    -1    -1        1
+    (2, 0)    0.40    -1     2        4
+    (2, 1)    0.00    -2     2        5
+    (2, 2)   -0.35    -4     2        6
+    (2, 3)   -1.17    -3     0        4
+    (3, 0)    0.58     0     2        3
+    (3, 1)    0.35    -2     4        6
+    (3, 2)    0.00    -2     2        5
+    (3, 3)   -0.50    -2     0        3
+    (4, 0)    1.00     1     1        1
+    (4, 1)    1.17     0     3        4
+    (4, 2)    0.50     0     2        3
+
+  δ(surplus) by (d_u, d_v):
+   (du,dv)    mean   min   max  #unique
+    (1, 1)   -1.90    -5     2        7
+    (1, 2)   -2.17    -6     0        5
+    (1, 3)   -2.00    -2    -2        1
+    (2, 0)    1.90    -2     5        7
+    (2, 1)    0.00    -6     6       11
+    (2, 2)   -0.93   -10     5       13
+    (2, 3)   -1.58    -5     0        5
+    (3, 0)    2.17     0     6        5
+    (3, 1)    0.93    -5    10       13
+    (3, 2)    0.00    -6     6       13
+    (3, 3)   -1.20    -5     0        4
+    (4, 0)    2.00     2     2        1
+    (4, 1)    1.58     0     5        5
+    (4, 2)    1.20     0     5        4
+
+======================================================================
+MONOTONICITY FROM TRANSITIVE TOURNAMENT
+======================================================================
+Can we reach every tournament from transitive by flips that never go negative?
+  n=5: Reachable from transitive (surplus≥0 at each step): 64/64 (100.0%)
+  *** ALL tilings reachable! surplus≥0 is CONNECTED. ***
+
+======================================================================
+BLUESELF/BLACKSELF STRUCTURE AND CHAIN COMPLEX
+======================================================================
+  n=5: GS tilings = 16, Blueself = 0
+
+  GS flip pairs: chain complex comparison
+           0b0 ↔   0b111111: Δtiles=6, surplus 3→3, β₁ 0→0, Ω₂ 19→19, Ω₃ 12→12
+         0b100 ↔   0b111011: Δtiles=6, surplus 8→5, β₁ 0→0, Ω₂ 21→20, Ω₃ 19→15
+        0b1000 ↔   0b110111: Δtiles=6, surplus 5→3, β₁ 0→0, Ω₂ 20→19, Ω₃ 15→12
+        0b1100 ↔   0b110011: Δtiles=6, surplus 10→5, β₁ 0→0, Ω₂ 21→20, Ω₃ 21→15
+       0b10010 ↔   0b101101: Δtiles=6, surplus 3→4, β₁ 1→0, Ω₂ 18→20, Ω₃ 12→14
+       0b10110 ↔   0b101001: Δtiles=6, surplus 4→5, β₁ 0→0, Ω₂ 20→20, Ω₃ 14→15
+       0b11010 ↔   0b100101: Δtiles=6, surplus 4→5, β₁ 1→0, Ω₂ 18→19, Ω₃ 13→14
+       0b11110 ↔   0b100001: Δtiles=6, surplus 5→3, β₁ 0→0, Ω₂ 19→19, Ω₃ 14→12
+
+======================================================================
+SURPLUS LOWER BOUND ANALYSIS
+======================================================================
+
+  n=5: surplus as function of TT/NT/DT counts
+  (TT, DT) pairs with smallest min surplus:
+    TT= 18, DT=  9: min_surplus=1, count=1
+    TT= 14, DT=  9: min_surplus=3, count=91
+    TT= 15, DT= 12: min_surplus=3, count=56
+    TT= 16, DT=  9: min_surplus=3, count=53
+    TT= 16, DT= 11: min_surplus=3, count=52
+    TT= 17, DT= 10: min_surplus=3, count=18
+    TT= 19, DT= 12: min_surplus=3, count=4
+    TT= 14, DT= 11: min_surplus=4, count=207
+    TT= 15, DT= 10: min_surplus=4, count=52
+    TT= 18, DT= 11: min_surplus=4, count=15
+
+  n=6: surplus as function of TT/NT/DT counts
+  (TT, DT) pairs with smallest min surplus:
+    TT= 18, DT=  9: min_surplus=1, count=1
+    TT= 14, DT=  9: min_surplus=3, count=91
+    TT= 15, DT= 12: min_surplus=3, count=56
+    TT= 16, DT=  9: min_surplus=3, count=53
+    TT= 16, DT= 11: min_surplus=3, count=52
+    TT= 17, DT= 10: min_surplus=3, count=18
+    TT= 19, DT= 12: min_surplus=3, count=4
+    TT= 14, DT= 11: min_surplus=4, count=207
+    TT= 15, DT= 10: min_surplus=4, count=52
+    TT= 18, DT= 11: min_surplus=4, count=15
+
+Done.
