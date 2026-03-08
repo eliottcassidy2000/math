@@ -23,3 +23,6 @@ scripts/logs/
 .idea/
 *.swp
 *~
+*.so
+a000568_c_test
+a000568_c_batch
