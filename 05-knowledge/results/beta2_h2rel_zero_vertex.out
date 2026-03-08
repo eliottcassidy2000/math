@@ -1,0 +1,11 @@
+======================================================================
+DOES EVERY T HAVE SOME INTERIOR v WITH h₂(T,T\v) = 0?
+======================================================================
+
+n=5: 1024 tournaments in 2s
+  No interior vertex: 0
+  Has SOME interior v with h₂_rel=0: 1024
+  ALL interior v have h₂_rel=1: 0
+  ✓ EVERY tournament has SOME interior v giving h₂_rel=0
+  => β₂=0 follows WITHOUT δ-injectivity!
+  n=6: 5000/32768 (43s)
