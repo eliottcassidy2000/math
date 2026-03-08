@@ -1,0 +1,201 @@
+======================================================================
+CANCEL PAIR STRUCTURE ANALYSIS
+======================================================================
+
+PART 1: n=6 deficit tournament analysis
+  ... 10000/32768 (12s)
+  ... 20000/32768 (23s)
+  ... 30000/32768 (35s)
+Completed in 39s
+Found 50 deficit cases
+
+Score distribution of deficit cases:
+  (1, 2, 2, 3, 3, 4): 42
+  (2, 2, 2, 3, 3, 3): 8
+
+  T#154 scores=(1, 2, 2, 3, 3, 4), c₃=6
+    deficit=1, Z₂=10, rk_DT=9
+    Uncovered Z₂ cycle (26 terms):
+      -0.1053 * (0, 2, 1) [NT]
+      +0.1404 * (0, 4, 2) [TT]
+      +0.0175 * (0, 4, 3) [NT]
+      +0.1053 * (0, 5, 1) [NT]
+      +0.1053 * (0, 5, 2) [TT]
+      -0.0175 * (0, 5, 3) [NT]
+      -0.1930 * (0, 5, 4) [TT]
+      -0.1579 * (1, 0, 2) [NT]
+      ... (26 total)
+    Useful cancel pairs (31):
+      ('02', 0, 3): (0, 5, 3, 2) - (0, 5, 3, 1), projection=0.2983
+      ('02', 0, 3): (0, 5, 3, 2) - (0, 4, 3, 1), projection=0.3158
+      ('02', 0, 1): (0, 5, 1, 4) - (0, 2, 1, 4), projection=-0.9124
+      ('13', 4, 1): (0, 4, 3, 1) - (0, 4, 2, 1), projection=-0.0175
+      ('13', 4, 1): (0, 4, 3, 1) - (5, 4, 3, 1), projection=-0.3158
+
+  T#213 scores=(1, 2, 2, 3, 3, 4), c₃=6
+    deficit=1, Z₂=10, rk_DT=9
+    Uncovered Z₂ cycle (26 terms):
+      -0.1404 * (0, 1, 3) [TT]
+      -0.0175 * (0, 1, 4) [NT]
+      +0.1053 * (0, 3, 2) [NT]
+      +0.1930 * (0, 5, 1) [TT]
+      -0.1053 * (0, 5, 2) [NT]
+      -0.1053 * (0, 5, 3) [TT]
+      +0.0175 * (0, 5, 4) [NT]
+      -0.0175 * (1, 3, 2) [NT]
+      ... (26 total)
+    Useful cancel pairs (31):
+      ('02', 0, 4): (0, 5, 4, 3) - (0, 5, 4, 2), projection=-0.2983
+      ('02', 0, 4): (0, 5, 4, 3) - (0, 1, 4, 2), projection=-0.3158
+      ('02', 0, 2): (0, 5, 2, 1) - (0, 3, 2, 1), projection=0.9124
+      ('13', 3, 1): (0, 3, 2, 1) - (4, 3, 2, 1), projection=-0.4738
+      ('13', 3, 1): (0, 3, 2, 1) - (5, 3, 2, 1), projection=0.5089
+
+  T#308 scores=(1, 2, 2, 3, 3, 4), c₃=6
+    deficit=1, Z₂=10, rk_DT=9
+    Uncovered Z₂ cycle (26 terms):
+      -0.1579 * (0, 3, 2) [NT]
+      +0.1579 * (0, 5, 2) [NT]
+      +0.1755 * (0, 5, 3) [TT]
+      -0.1755 * (1, 0, 3) [NT]
+      -0.1755 * (1, 0, 5) [TT]
+      -0.1930 * (1, 2, 0) [TT]
+      -0.5089 * (1, 5, 2) [TT]
+      +0.1755 * (1, 5, 3) [NT]
+      ... (26 total)
+    Useful cancel pairs (30):
+      ('02', 0, 4): (0, 5, 4, 3) - (0, 5, 4, 2), projection=0.3158
+      ('02', 0, 4): (0, 5, 4, 3) - (0, 5, 4, 1), projection=0.3509
+      ('13', 5, 1): (0, 5, 4, 1) - (0, 5, 3, 1), projection=0.2106
+      ('02', 0, 1): (0, 3, 1, 5) - (0, 3, 1, 2), projection=0.3158
+      ('13', 3, 5): (0, 3, 1, 5) - (4, 3, 1, 5), projection=0.3158
+
+  T#332 scores=(1, 2, 2, 3, 3, 4), c₃=6
+    deficit=1, Z₂=10, rk_DT=9
+    Uncovered Z₂ cycle (26 terms):
+      -0.0175 * (0, 3, 2) [NT]
+      +0.0175 * (0, 4, 2) [NT]
+      -0.1579 * (0, 4, 3) [TT]
+      -0.1404 * (1, 0, 3) [TT]
+      -0.0175 * (1, 0, 4) [NT]
+      +0.1053 * (1, 3, 2) [NT]
+      +0.1930 * (1, 5, 0) [TT]
+      -0.1053 * (1, 5, 2) [NT]
+      ... (26 total)
+    Useful cancel pairs (31):
+      ('02', 0, 2): (0, 4, 2, 1) - (0, 3, 2, 1), projection=-0.2106
+      ('02', 0, 1): (0, 4, 1, 5) - (0, 4, 1, 3), projection=0.6668
+      ('13', 3, 1): (0, 3, 2, 1) - (4, 3, 2, 1), projection=-0.3509
+      ('13', 3, 1): (0, 3, 2, 1) - (5, 3, 2, 1), projection=-0.0351
+      ('02', 1, 4): (1, 5, 4, 3) - (1, 5, 4, 2), projection=-0.2983
+
+  T#339 scores=(1, 2, 2, 3, 3, 4), c₃=6
+    deficit=1, Z₂=10, rk_DT=9
+    Uncovered Z₂ cycle (26 terms):
+      +0.1755 * (0, 1, 3) [NT]
+      +0.1755 * (0, 1, 5) [TT]
+      +0.1930 * (0, 2, 1) [TT]
+      +0.5089 * (0, 5, 2) [TT]
+      -0.1755 * (0, 5, 3) [NT]
+      +0.1579 * (1, 3, 2) [NT]
+      -0.1579 * (1, 5, 2) [NT]
+      -0.1755 * (1, 5, 3) [TT]
+      ... (26 total)
+    Useful cancel pairs (30):
+      ('02', 0, 4): (0, 5, 4, 3) - (0, 5, 4, 2), projection=-0.9826
+      ('02', 0, 4): (0, 5, 4, 3) - (0, 5, 4, 1), projection=-0.4738
+      ('13', 5, 1): (0, 5, 4, 1) - (0, 5, 2, 1), projection=0.9124
+      ('02', 0, 3): (0, 5, 3, 2) - (0, 1, 3, 2), projection=0.8422
+      ('13', 2, 5): (0, 2, 1, 5) - (3, 2, 1, 5), projection=-0.3509
+
+======================================================================
+PART 2: UNCOVERED CYCLE STRUCTURE
+======================================================================
+  Average TT fraction in uncovered cycles: 0.516
+  Min TT fraction: 0.400
+  Max TT fraction: 0.538
+
+  NT paths cannot have DT extensions (c→a blocks a→c requirement)
+  So cycles with NT terms can only be DT-filled via TT components
+
+  Uncovered cycles with NT terms: 50/50
+
+======================================================================
+PART 3: CANCEL PAIR MECHANISM
+======================================================================
+Cancel pairs of type 02 (bad face c→a) produce NT differences in A₂.
+This is WHY they can fill Z₂ directions that DT paths cannot!
+
+  Cancel pairs with NT boundary terms: 152/309
+
+======================================================================
+PART 4: DT BOUNDARY vs TT/NT DECOMPOSITION
+======================================================================
+
+For DT paths with d→a: boundary includes NT faces (a,c,d) and (a,b,d)
+For DT paths with a→d: ALL boundary faces are TT
+So DT paths with d→a provide NT contributions.
+
+n=5 DT paths by a↔d type:
+  a→d: 1920 (50.0%)
+  d→a: 1920 (50.0%)
+
+n=6 DT paths by a↔d type (2000 tournaments):
+  a→d: 11262 (50.3%)
+  d→a: 11130 (49.7%)
+
+======================================================================
+PART 5: ∂₃ IMAGE DECOMPOSITION
+======================================================================
+DT(a→d): pure TT boundary
+DT(d→a): TT + NT boundary (paired NT terms)
+Cancel:  NT differences (b-substitution)
+
+Z₂ = TT_part + NT_part
+TT_part covered by DT(a→d)
+NT_part covered by DT(d→a) + cancel
+
+======================================================================
+PART 6: DIMENSIONAL ANALYSIS
+======================================================================
+  T#2 scores=(1, 1, 1, 3, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=3, NT_in_A₂=3
+  T#4 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#5 scores=(0, 2, 2, 2, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=0, NT_in_A₂=3
+  T#6 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#8 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=4, DT(a→d)=2, DT(d→a)=3, cancel=8, NT_in_A₂=9
+  T#9 scores=(0, 2, 2, 3, 3), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#10 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=3, DT(a→d)=1, DT(d→a)=2, cancel=8, NT_in_A₂=9
+  T#11 scores=(0, 1, 3, 3, 3), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=3, NT_in_A₂=3
+  T#12 scores=(1, 2, 2, 2, 3), c₃=4: Z₂=5, DT(a→d)=1, DT(d→a)=4, cancel=10, NT_in_A₂=12
+  T#13 scores=(0, 2, 2, 3, 3), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#14 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=4, DT(a→d)=2, DT(d→a)=3, cancel=8, NT_in_A₂=9
+  T#17 scores=(1, 1, 1, 3, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=3, NT_in_A₂=3
+  T#20 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#21 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#22 scores=(0, 2, 2, 2, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=0, NT_in_A₂=3
+  T#24 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=4, DT(a→d)=2, DT(d→a)=3, cancel=8, NT_in_A₂=9
+  T#25 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=3, DT(a→d)=1, DT(d→a)=2, cancel=8, NT_in_A₂=9
+  T#26 scores=(0, 2, 2, 3, 3), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#27 scores=(0, 1, 3, 3, 3), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=3, NT_in_A₂=3
+  T#28 scores=(1, 2, 2, 2, 3), c₃=4: Z₂=5, DT(a→d)=1, DT(d→a)=4, cancel=10, NT_in_A₂=12
+  T#29 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=4, DT(a→d)=2, DT(d→a)=3, cancel=8, NT_in_A₂=9
+  T#30 scores=(0, 2, 2, 3, 3), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#32 scores=(0, 2, 2, 2, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=0, NT_in_A₂=3
+  T#33 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#34 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#35 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#36 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#37 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#38 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+  T#39 scores=(1, 1, 1, 3, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=3, NT_in_A₂=3
+  T#40 scores=(1, 2, 2, 2, 3), c₃=4: Z₂=3, DT(a→d)=0, DT(d→a)=3, cancel=6, NT_in_A₂=12
+  T#41 scores=(1, 2, 2, 2, 3), c₃=4: Z₂=3, DT(a→d)=0, DT(d→a)=3, cancel=8, NT_in_A₂=12
+  T#42 scores=(1, 2, 2, 2, 3), c₃=4: Z₂=3, DT(a→d)=0, DT(d→a)=3, cancel=8, NT_in_A₂=12
+  T#43 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=3, DT(a→d)=1, DT(d→a)=2, cancel=8, NT_in_A₂=9
+  T#44 scores=(1, 2, 2, 2, 3), c₃=4: Z₂=3, DT(a→d)=0, DT(d→a)=3, cancel=8, NT_in_A₂=12
+  T#45 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=3, DT(a→d)=1, DT(d→a)=2, cancel=8, NT_in_A₂=9
+  T#46 scores=(1, 1, 2, 3, 3), c₃=3: Z₂=3, DT(a→d)=1, DT(d→a)=2, cancel=8, NT_in_A₂=9
+  T#47 scores=(1, 1, 1, 3, 4), c₃=1: Z₂=3, DT(a→d)=3, DT(d→a)=0, cancel=3, NT_in_A₂=3
+  T#49 scores=(1, 1, 2, 2, 4), c₃=2: Z₂=3, DT(a→d)=2, DT(d→a)=1, cancel=4, NT_in_A₂=6
+
+Done.

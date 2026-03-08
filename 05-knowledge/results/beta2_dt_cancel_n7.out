@@ -1,0 +1,21 @@
+======================================================================
+DT+CANCEL FILLING AT n=7 (SAMPLED)
+======================================================================
+  ... 200/1000 (0s)
+  ... 400/1000 (1s)
+  ... 600/1000 (2s)
+  ... 800/1000 (2s)
+  ... 1000/1000 (3s)
+
+n=7: 1000 samples in 3s
+  Trivial (no Z₂): 0
+  DT alone fills Z₂: 920
+  DT fails, cancel fixes: 80
+  DT+cancel FAILS: 0
+  DT deficit distribution: {0: 920, 1: 74, 2: 6}
+
+  ✓ DT+cancel ALWAYS fills Z₂ at n=7 (1000 nontrivial tests)
+
+  DT alone success rate: 92.0%
+
+Done.

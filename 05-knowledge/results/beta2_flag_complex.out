@@ -1,0 +1,57 @@
+======================================================================
+FLAG COMPLEX H₂ FOR TOURNAMENTS
+======================================================================
+
+n=4: 64 tournaments in 0.0s
+  H₂ distribution: {0: 64}
+  ✓ H₂(flag complex) = 0 for ALL tournaments at n=4
+  H₂≠0: bits=40, scores=(1, 2, 2, 2, 3), c₃=4, H₂=1
+  H₂≠0: bits=69, scores=(1, 2, 2, 2, 3), c₃=4, H₂=1
+  H₂≠0: bits=93, scores=(1, 2, 2, 2, 3), c₃=4, H₂=1
+
+n=5: 1024 tournaments in 0.2s
+  H₂ distribution: {0: 984, 1: 40}
+  ✗ H₂(flag complex) ≠ 0 for 40 tournaments
+  H₂≠0: bits=88, scores=(2, 2, 2, 2, 3, 4), c₃=7, H₂=1
+  H₂≠0: bits=144, scores=(1, 2, 2, 3, 3, 4), c₃=6, H₂=1
+  H₂≠0: bits=146, scores=(1, 2, 2, 3, 3, 4), c₃=6, H₂=1
+  ... 10000/32768 (3s)
+  ... 20000/32768 (6s)
+  ... 30000/32768 (9s)
+
+n=6: 32768 tournaments in 9.7s
+  H₂ distribution: {0: 26288, 1: 6240, 2: 240}
+  ✗ H₂(flag complex) ≠ 0 for 6480 tournaments
+  H₂≠0: bits=1153556, scores=(2, 2, 2, 3, 3, 4, 5), c₃=10, H₂=1
+  H₂≠0: bits=1027150, scores=(2, 2, 3, 3, 3, 4, 4), c₃=12, H₂=2
+  H₂≠0: bits=124978, scores=(1, 2, 3, 3, 4, 4, 4), c₃=10, H₂=1
+
+n=7: 2000 tournaments in 1.0s
+  H₂ distribution: {0: 1243, 1: 561, 2: 160, 3: 33, 4: 3}
+  ✗ H₂(flag complex) ≠ 0 for 757 tournaments
+
+======================================================================
+PART 2: FLAG H₂ vs PATH β₂
+======================================================================
+
+Computing: dim(path Z₂) vs dim(simp Z₂) at n=5
+
+(path Z₂, simp Z₂) distribution at n=5:
+  path Z₂=3, simp Z₂=0: 120
+  path Z₂=3, simp Z₂=1: 160
+  path Z₂=3, simp Z₂=2: 240
+  path Z₂=3, simp Z₂=3: 120
+  path Z₂=4, simp Z₂=2: 120
+  path Z₂=4, simp Z₂=4: 120
+  path Z₂=5, simp Z₂=0: 24
+  path Z₂=5, simp Z₂=1: 120
+
+path Z₂ - simp Z₂ distribution:
+  diff=0: 240
+  diff=1: 240
+  diff=2: 280
+  diff=3: 120
+  diff=4: 120
+  diff=5: 24
+
+Done.
