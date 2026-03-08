@@ -244,67 +244,68 @@ def fourier_betti_v3(S_set, n, max_dim=4):
     return betti
 
 
-# ===== TEST: Compare v3 Fourier vs full computation =====
-print("=" * 70)
-print("FOURIER v3 (CORRECT Ω) vs FULL COMPUTATION")
-print("=" * 70)
-
-mismatches = 0
-total = 0
-
-for n in [3, 4, 5, 6, 7]:
-    print(f"\nn={n}:", flush=True)
-    for size in range(1, min(n, 4)):
-        for S in combinations(range(1, n), size):
-            S_set = set(S)
-
-            # Full computation
-            A = circulant_digraph(n, list(S))
-            max_d = min(n - 1, 5)
-            betti_full = path_betti_numbers(A, n, max_dim=max_d)
-
-            # Fourier computation
-            betti_fourier = fourier_betti_v3(S_set, n, max_dim=max_d)
-
-            total += 1
-            match = all(betti_full[p] == betti_fourier[p]
-                       for p in range(min(len(betti_full), len(betti_fourier))))
-            if not match:
-                mismatches += 1
-                print(f"  MISMATCH C_{n}^{S_set}: full={betti_full}, fourier={betti_fourier}")
-            elif any(b > 0 for b in betti_full[1:]):
-                print(f"  ✓ C_{n}^{S_set}: β={betti_full}")
-
-    print(f"  Checked {total} so far, {mismatches} mismatches", flush=True)
-
-print(f"\n\nTotal: {total} tested, {mismatches} mismatches")
-
-# ===== If correct, test large n =====
-if mismatches == 0:
-    print("\n\n" + "=" * 70)
-    print("FOURIER v3 VALIDATED! Testing large circulants...")
+if __name__ == '__main__':
+    # ===== TEST: Compare v3 Fourier vs full computation =====
+    print("=" * 70)
+    print("FOURIER v3 (CORRECT Ω) vs FULL COMPUTATION")
     print("=" * 70)
 
-    for n in [11, 13, 17, 19, 23]:
+    mismatches = 0
+    total = 0
+
+    for n in [3, 4, 5, 6, 7]:
         print(f"\nn={n}:", flush=True)
-        for size in range(1, 4):
+        for size in range(1, min(n, 4)):
             for S in combinations(range(1, n), size):
                 S_set = set(S)
-                betti = fourier_betti_v3(S_set, n, max_dim=min(n-1, 5))
-                if any(b > 0 for b in betti[2:]):
-                    print(f"  C_{n}^{S_set}: β={betti}")
 
-    # Test very large n for specific connection sets
-    print("\n\n" + "=" * 70)
-    print("LARGE N STABILITY TESTS")
-    print("=" * 70)
+                # Full computation
+                A = circulant_digraph(n, list(S))
+                max_d = min(n - 1, 5)
+                betti_full = path_betti_numbers(A, n, max_dim=max_d)
 
-    for S_list, label in [({1,2}, "S={1,2}"), ({1,3}, "S={1,3}"),
-                          ({1,2,3}, "S={1,2,3}"), ({1,2,4}, "S={1,2,4}")]:
-        print(f"\n{label}:")
-        for n in [29, 37, 41, 47, 53, 59, 67, 71]:
-            if max(S_list) < n:
-                betti = fourier_betti_v3(S_list, n, max_dim=min(n-1, 6))
-                print(f"  n={n}: β={betti}")
+                # Fourier computation
+                betti_fourier = fourier_betti_v3(S_set, n, max_dim=max_d)
 
-print("\nDone.")
+                total += 1
+                match = all(betti_full[p] == betti_fourier[p]
+                           for p in range(min(len(betti_full), len(betti_fourier))))
+                if not match:
+                    mismatches += 1
+                    print(f"  MISMATCH C_{n}^{S_set}: full={betti_full}, fourier={betti_fourier}")
+                elif any(b > 0 for b in betti_full[1:]):
+                    print(f"  ✓ C_{n}^{S_set}: β={betti_full}")
+
+        print(f"  Checked {total} so far, {mismatches} mismatches", flush=True)
+
+    print(f"\n\nTotal: {total} tested, {mismatches} mismatches")
+
+    # ===== If correct, test large n =====
+    if mismatches == 0:
+        print("\n\n" + "=" * 70)
+        print("FOURIER v3 VALIDATED! Testing large circulants...")
+        print("=" * 70)
+
+        for n in [11, 13, 17, 19, 23]:
+            print(f"\nn={n}:", flush=True)
+            for size in range(1, 4):
+                for S in combinations(range(1, n), size):
+                    S_set = set(S)
+                    betti = fourier_betti_v3(S_set, n, max_dim=min(n-1, 5))
+                    if any(b > 0 for b in betti[2:]):
+                        print(f"  C_{n}^{S_set}: β={betti}")
+
+        # Test very large n for specific connection sets
+        print("\n\n" + "=" * 70)
+        print("LARGE N STABILITY TESTS")
+        print("=" * 70)
+
+        for S_list, label in [({1,2}, "S={1,2}"), ({1,3}, "S={1,3}"),
+                              ({1,2,3}, "S={1,2,3}"), ({1,2,4}, "S={1,2,4}")]:
+            print(f"\n{label}:")
+            for n in [29, 37, 41, 47, 53, 59, 67, 71]:
+                if max(S_list) < n:
+                    betti = fourier_betti_v3(S_list, n, max_dim=min(n-1, 6))
+                    print(f"  n={n}: β={betti}")
+
+    print("\nDone.")
