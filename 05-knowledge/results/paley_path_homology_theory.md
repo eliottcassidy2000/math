@@ -126,13 +126,46 @@ For any tournament T, H_2^{path}(T) = 0.
 5. **β_2 = 0 verified with correct Ω_2**: Using compute_omega_basis for the
    TRUE Ω_2 and Ω_3, β_2 = 0 confirmed at n=4,5,6 (all), n=7 (sample).
 
+### β_2 = 0 Proof — Deeper Analysis (S41)
+
+6. **DT = {p ∈ A_3 : all faces in A_2}** (proved for n≤5).
+   This is the set of allowed 3-paths where every face is also allowed.
+   Equivalent to: (a,b,c,d) with a→b→c→d, a→c, b→d.
+
+7. **dim(Ω_2) = |TT| + Σ(mult-1)** where mult = multiplicity of each non-allowed
+   face among non-TT 2-paths. EXACT formula, verified 100% at n=5,6.
+
+8. **DT sufficiency FAILS at n=6**: For 960/32768 tournaments,
+   im(∂_3|DT) < ker(∂_2|Ω_2). The gap is 1 or 2.
+   - Gap=1 cases: 720, all have score (1,2,2,3,3,4), t3=6
+   - Gap=2 cases: 240, all have score (2,2,2,3,3,3), t3=8
+   Full Ω_3 (including cancellation 3-chains) STILL gives β_2=0.
+
+9. **Cancellation 3-chains are essential**: At n=6, Ω_3 \ DT contains
+   multi-term linear combinations (6-14 paths) where non-A_2 face terms
+   cancel. Their boundaries fill the remaining ker(∂_2) gap.
+
+10. **Cone construction**: Coning from a source vertex (out-deg n-1) kills ALL
+    2-cycles at n=5. But for non-source vertices, the residual is nonzero.
+    Multi-vertex cone needed for general tournaments.
+
+### Circulant Census at n=11 (S41)
+
+- 32 circulant tournaments on Z_11 with |S|=5
+- Paley S=[1,3,4,5,9]: β=[1,0,0,0,0] through dim 4, χ=1
+- NO other circulant has χ=11 (or even χ>1) through dim 4
+- At p=7: only Paley (and complement) had χ=p among circulants
+- Paley's sphere topology is unique among circulants
+
 ### Open Questions
-1. What are the full Ω dims for P_11? (dims 7-10 computing with randomized SVD)
+1. What are the full Ω dims for P_11? (Ω_7=690 known; Ω_8 computing)
 2. At which dimension d does β_d = p-1 for P_11?
 3. Is d = p-3 always, or does it vary?
 4. Why is P_7 palindromic but P_11 is not?
 5. Can the Gauss sum theory predict d directly?
 6. β_2 = 0 algebraic proof for general tournaments — WHAT APPROACH?
    - NOT simplicial acyclicity (simplicial H_2 can be nonzero)
-   - Need to use full Ω_3 including cancellation chains
-   - The "DT sufficiency" result (when correctly interpreted) may give a path
+   - NOT DT sufficiency alone (fails at n=6)
+   - Must use FULL Ω_3 including cancellation 3-chains
+   - Need homological argument working with chain complex directly
+   - Possible: spectral sequence, Mayer-Vietoris, or filtration argument

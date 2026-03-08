@@ -1,0 +1,1123 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+β_2 = 0 ANALYSIS AT n=6 (ALL 32768 TOURNAMENTS)
+======================================================================
+  FAILURE: T#155, ker=10, im_DT=9
+  FAILURE: T#214, ker=10, im_DT=9
+  FAILURE: T#309, ker=10, im_DT=9
+  FAILURE: T#333, ker=10, im_DT=9
+  FAILURE: T#340, ker=10, im_DT=9
+  FAILURE: T#426, ker=10, im_DT=9
+  FAILURE: T#669, ker=10, im_DT=9
+  FAILURE: T#692, ker=10, im_DT=9
+  FAILURE: T#811, ker=10, im_DT=9
+  FAILURE: T#822, ker=10, im_DT=9
+  FAILURE: T#851, ker=10, im_DT=9
+  FAILURE: T#970, ker=10, im_DT=9
+  FAILURE: T#1082, ker=10, im_DT=9
+  FAILURE: T#1108, ker=10, im_DT=9
+  FAILURE: T#1149, ker=10, im_DT=9
+  FAILURE: T#1174, ker=10, im_DT=9
+  FAILURE: T#1207, ker=10, im_DT=9
+  FAILURE: T#1243, ker=10, im_DT=9
+  FAILURE: T#1317, ker=10, im_DT=9
+  FAILURE: T#1333, ker=11, im_DT=9
+  FAILURE: T#1338, ker=11, im_DT=9
+  FAILURE: T#1340, ker=10, im_DT=9
+  FAILURE: T#1353, ker=10, im_DT=9
+  FAILURE: T#1364, ker=11, im_DT=9
+  FAILURE: T#1368, ker=10, im_DT=9
+  FAILURE: T#1369, ker=11, im_DT=9
+  FAILURE: T#1388, ker=10, im_DT=9
+  FAILURE: T#1397, ker=10, im_DT=9
+  FAILURE: T#1411, ker=10, im_DT=9
+  FAILURE: T#1427, ker=11, im_DT=9
+  FAILURE: T#1430, ker=11, im_DT=9
+  FAILURE: T#1438, ker=10, im_DT=9
+  FAILURE: T#1454, ker=10, im_DT=9
+  FAILURE: T#1459, ker=10, im_DT=9
+  FAILURE: T#1480, ker=10, im_DT=9
+  FAILURE: T#1497, ker=10, im_DT=9
+  FAILURE: T#1591, ker=10, im_DT=9
+  FAILURE: T#1722, ker=10, im_DT=9
+  FAILURE: T#1881, ker=10, im_DT=9
+  FAILURE: T#1892, ker=10, im_DT=9
+  FAILURE: T#1931, ker=10, im_DT=9
+  FAILURE: T#1942, ker=10, im_DT=9
+  FAILURE: T#2069, ker=10, im_DT=9
+  FAILURE: T#2122, ker=10, im_DT=9
+  FAILURE: T#2135, ker=10, im_DT=9
+  FAILURE: T#2181, ker=10, im_DT=9
+  FAILURE: T#2197, ker=11, im_DT=9
+  FAILURE: T#2203, ker=11, im_DT=9
+  FAILURE: T#2204, ker=10, im_DT=9
+  FAILURE: T#2370, ker=10, im_DT=9
+  FAILURE: T#2378, ker=11, im_DT=9
+  FAILURE: T#2395, ker=11, im_DT=9
+  FAILURE: T#2399, ker=10, im_DT=9
+  FAILURE: T#2406, ker=10, im_DT=9
+  FAILURE: T#2427, ker=10, im_DT=9
+  FAILURE: T#2473, ker=10, im_DT=9
+  FAILURE: T#2474, ker=11, im_DT=9
+  FAILURE: T#2486, ker=11, im_DT=9
+  FAILURE: T#2488, ker=10, im_DT=9
+  FAILURE: T#2550, ker=10, im_DT=9
+  FAILURE: T#2605, ker=10, im_DT=9
+  FAILURE: T#2612, ker=10, im_DT=9
+  FAILURE: T#2674, ker=10, im_DT=9
+  FAILURE: T#2700, ker=10, im_DT=9
+  FAILURE: T#2709, ker=10, im_DT=9
+  FAILURE: T#2729, ker=10, im_DT=9
+  FAILURE: T#2740, ker=11, im_DT=9
+  FAILURE: T#2744, ker=10, im_DT=9
+  FAILURE: T#2745, ker=11, im_DT=9
+  FAILURE: T#2756, ker=10, im_DT=9
+  FAILURE: T#2809, ker=10, im_DT=9
+  FAILURE: T#2823, ker=10, im_DT=9
+  FAILURE: T#2842, ker=10, im_DT=9
+  FAILURE: T#2851, ker=10, im_DT=9
+  FAILURE: T#2859, ker=11, im_DT=9
+  FAILURE: T#2874, ker=11, im_DT=9
+  FAILURE: T#2878, ker=10, im_DT=9
+  FAILURE: T#2890, ker=10, im_DT=9
+  FAILURE: T#2923, ker=10, im_DT=9
+  FAILURE: T#2956, ker=11, im_DT=9
+  FAILURE: T#2960, ker=10, im_DT=9
+  FAILURE: T#2961, ker=10, im_DT=9
+  FAILURE: T#2963, ker=11, im_DT=9
+  FAILURE: T#3027, ker=10, im_DT=9
+  FAILURE: T#3083, ker=10, im_DT=9
+  FAILURE: T#3215, ker=10, im_DT=9
+  FAILURE: T#3218, ker=10, im_DT=9
+  FAILURE: T#3234, ker=10, im_DT=9
+  FAILURE: T#3250, ker=11, im_DT=9
+  FAILURE: T#3255, ker=11, im_DT=9
+  FAILURE: T#3263, ker=10, im_DT=9
+  FAILURE: T#3306, ker=10, im_DT=9
+  FAILURE: T#3319, ker=10, im_DT=9
+  FAILURE: T#3337, ker=10, im_DT=9
+  FAILURE: T#3339, ker=11, im_DT=9
+  FAILURE: T#3351, ker=11, im_DT=9
+  FAILURE: T#3352, ker=10, im_DT=9
+  FAILURE: T#3436, ker=11, im_DT=9
+  FAILURE: T#3440, ker=10, im_DT=9
+  FAILURE: T#3441, ker=10, im_DT=9
+  FAILURE: T#3442, ker=11, im_DT=9
+  FAILURE: T#3564, ker=10, im_DT=9
+  FAILURE: T#3691, ker=10, im_DT=9
+  FAILURE: T#3752, ker=10, im_DT=9
+  FAILURE: T#3769, ker=10, im_DT=9
+  FAILURE: T#3863, ker=10, im_DT=9
+  FAILURE: T#3954, ker=10, im_DT=9
+  FAILURE: T#3980, ker=10, im_DT=9
+  FAILURE: T#4183, ker=10, im_DT=9
+  FAILURE: T#4314, ker=10, im_DT=9
+  FAILURE: T#4409, ker=10, im_DT=9
+  FAILURE: T#4454, ker=10, im_DT=9
+  FAILURE: T#4493, ker=10, im_DT=9
+  FAILURE: T#4500, ker=10, im_DT=9
+  FAILURE: T#4662, ker=10, im_DT=9
+  FAILURE: T#4698, ker=10, im_DT=9
+  FAILURE: T#4731, ker=10, im_DT=9
+  FAILURE: T#4756, ker=10, im_DT=9
+  FAILURE: T#4797, ker=10, im_DT=9
+  FAILURE: T#4823, ker=10, im_DT=9
+  FAILURE: T#4905, ker=10, im_DT=9
+  FAILURE: T#4918, ker=11, im_DT=9
+  FAILURE: T#4920, ker=10, im_DT=9
+  FAILURE: T#4921, ker=11, im_DT=9
+  FAILURE: T#4931, ker=10, im_DT=9
+  FAILURE: T#4947, ker=11, im_DT=9
+  FAILURE: T#4954, ker=11, im_DT=9
+  FAILURE: T#4958, ker=10, im_DT=9
+  FAILURE: T#4974, ker=10, im_DT=9
+  FAILURE: T#4979, ker=10, im_DT=9
+  FAILURE: T#4997, ker=10, im_DT=9
+  ... 5000/32768 (8s)
+  FAILURE: T#5012, ker=11, im_DT=9
+  FAILURE: T#5013, ker=11, im_DT=9
+  FAILURE: T#5020, ker=10, im_DT=9
+  FAILURE: T#5032, ker=10, im_DT=9
+  FAILURE: T#5049, ker=10, im_DT=9
+  FAILURE: T#5068, ker=10, im_DT=9
+  FAILURE: T#5077, ker=10, im_DT=9
+  FAILURE: T#5213, ker=10, im_DT=9
+  FAILURE: T#5236, ker=10, im_DT=9
+  FAILURE: T#5415, ker=10, im_DT=9
+  FAILURE: T#5434, ker=10, im_DT=9
+  FAILURE: T#5523, ker=10, im_DT=9
+  FAILURE: T#5574, ker=10, im_DT=9
+  FAILURE: T#5691, ker=10, im_DT=9
+  FAILURE: T#5750, ker=10, im_DT=9
+  FAILURE: T#5959, ker=10, im_DT=9
+  FAILURE: T#5978, ker=10, im_DT=9
+  FAILURE: T#6037, ker=10, im_DT=9
+  FAILURE: T#6052, ker=10, im_DT=9
+  FAILURE: T#6169, ker=10, im_DT=9
+  FAILURE: T#6217, ker=10, im_DT=9
+  FAILURE: T#6231, ker=11, im_DT=9
+  FAILURE: T#6232, ker=10, im_DT=9
+  FAILURE: T#6233, ker=11, im_DT=9
+  FAILURE: T#6278, ker=10, im_DT=9
+  FAILURE: T#6299, ker=10, im_DT=9
+  FAILURE: T#6501, ker=10, im_DT=9
+  FAILURE: T#6502, ker=11, im_DT=9
+  FAILURE: T#6522, ker=11, im_DT=9
+  FAILURE: T#6524, ker=10, im_DT=9
+  FAILURE: T#6530, ker=10, im_DT=9
+  FAILURE: T#6534, ker=11, im_DT=9
+  FAILURE: T#6551, ker=11, im_DT=9
+  FAILURE: T#6559, ker=10, im_DT=9
+  FAILURE: T#6570, ker=10, im_DT=9
+  FAILURE: T#6583, ker=10, im_DT=9
+  FAILURE: T#6650, ker=10, im_DT=9
+  FAILURE: T#6663, ker=10, im_DT=9
+  FAILURE: T#6735, ker=10, im_DT=9
+  FAILURE: T#6738, ker=10, im_DT=9
+  FAILURE: T#6754, ker=10, im_DT=9
+  FAILURE: T#6770, ker=11, im_DT=9
+  FAILURE: T#6779, ker=11, im_DT=9
+  FAILURE: T#6783, ker=10, im_DT=9
+  FAILURE: T#6886, ker=10, im_DT=9
+  FAILURE: T#6907, ker=10, im_DT=9
+  FAILURE: T#6917, ker=10, im_DT=9
+  FAILURE: T#6919, ker=11, im_DT=9
+  FAILURE: T#6939, ker=11, im_DT=9
+  FAILURE: T#6940, ker=10, im_DT=9
+  FAILURE: T#7080, ker=11, im_DT=9
+  FAILURE: T#7088, ker=10, im_DT=9
+  FAILURE: T#7089, ker=10, im_DT=9
+  FAILURE: T#7090, ker=11, im_DT=9
+  FAILURE: T#7144, ker=10, im_DT=9
+  FAILURE: T#7213, ker=10, im_DT=9
+  FAILURE: T#7220, ker=10, im_DT=9
+  FAILURE: T#7240, ker=10, im_DT=9
+  FAILURE: T#7257, ker=10, im_DT=9
+  FAILURE: T#7269, ker=10, im_DT=9
+  FAILURE: T#7284, ker=11, im_DT=9
+  FAILURE: T#7285, ker=11, im_DT=9
+  FAILURE: T#7292, ker=10, im_DT=9
+  FAILURE: T#7346, ker=10, im_DT=9
+  FAILURE: T#7364, ker=10, im_DT=9
+  FAILURE: T#7413, ker=10, im_DT=9
+  FAILURE: T#7435, ker=10, im_DT=9
+  FAILURE: T#7446, ker=10, im_DT=9
+  FAILURE: T#7459, ker=10, im_DT=9
+  FAILURE: T#7463, ker=11, im_DT=9
+  FAILURE: T#7478, ker=11, im_DT=9
+  FAILURE: T#7486, ker=10, im_DT=9
+  FAILURE: T#7496, ker=11, im_DT=9
+  FAILURE: T#7504, ker=10, im_DT=9
+  FAILURE: T#7505, ker=10, im_DT=9
+  FAILURE: T#7507, ker=11, im_DT=9
+  FAILURE: T#7558, ker=10, im_DT=9
+  FAILURE: T#7591, ker=10, im_DT=9
+  FAILURE: T#7635, ker=10, im_DT=9
+  FAILURE: T#7788, ker=10, im_DT=9
+  FAILURE: T#7797, ker=10, im_DT=9
+  FAILURE: T#7847, ker=10, im_DT=9
+  FAILURE: T#7963, ker=10, im_DT=9
+  FAILURE: T#8008, ker=10, im_DT=9
+  FAILURE: T#8114, ker=10, im_DT=9
+  FAILURE: T#8267, ker=10, im_DT=9
+  FAILURE: T#8278, ker=10, im_DT=9
+  FAILURE: T#8306, ker=10, im_DT=9
+  FAILURE: T#8334, ker=10, im_DT=9
+  FAILURE: T#8339, ker=10, im_DT=9
+  FAILURE: T#8358, ker=10, im_DT=9
+  FAILURE: T#8393, ker=10, im_DT=9
+  FAILURE: T#8406, ker=11, im_DT=9
+  FAILURE: T#8408, ker=10, im_DT=9
+  FAILURE: T#8409, ker=11, im_DT=9
+  FAILURE: T#8441, ker=10, im_DT=9
+  FAILURE: T#8455, ker=10, im_DT=9
+  FAILURE: T#8474, ker=10, im_DT=9
+  FAILURE: T#8490, ker=10, im_DT=9
+  FAILURE: T#8517, ker=10, im_DT=9
+  FAILURE: T#8525, ker=11, im_DT=9
+  FAILURE: T#8538, ker=11, im_DT=9
+  FAILURE: T#8540, ker=10, im_DT=9
+  FAILURE: T#8557, ker=10, im_DT=9
+  FAILURE: T#8590, ker=11, im_DT=9
+  FAILURE: T#8592, ker=10, im_DT=9
+  FAILURE: T#8593, ker=10, im_DT=9
+  FAILURE: T#8597, ker=11, im_DT=9
+  FAILURE: T#8629, ker=10, im_DT=9
+  FAILURE: T#8723, ker=10, im_DT=9
+  FAILURE: T#8746, ker=10, im_DT=9
+  FAILURE: T#8759, ker=10, im_DT=9
+  FAILURE: T#8835, ker=10, im_DT=9
+  FAILURE: T#8851, ker=11, im_DT=9
+  FAILURE: T#8861, ker=11, im_DT=9
+  FAILURE: T#8862, ker=10, im_DT=9
+  FAILURE: T#8994, ker=10, im_DT=9
+  FAILURE: T#9002, ker=11, im_DT=9
+  FAILURE: T#9021, ker=11, im_DT=9
+  FAILURE: T#9023, ker=10, im_DT=9
+  FAILURE: T#9060, ker=10, im_DT=9
+  FAILURE: T#9085, ker=10, im_DT=9
+  FAILURE: T#9161, ker=10, im_DT=9
+  FAILURE: T#9162, ker=11, im_DT=9
+  FAILURE: T#9172, ker=11, im_DT=9
+  FAILURE: T#9176, ker=10, im_DT=9
+  FAILURE: T#9204, ker=10, im_DT=9
+  FAILURE: T#9223, ker=10, im_DT=9
+  FAILURE: T#9263, ker=10, im_DT=9
+  FAILURE: T#9266, ker=10, im_DT=9
+  FAILURE: T#9314, ker=10, im_DT=9
+  FAILURE: T#9330, ker=11, im_DT=9
+  FAILURE: T#9341, ker=11, im_DT=9
+  FAILURE: T#9343, ker=10, im_DT=9
+  FAILURE: T#9444, ker=10, im_DT=9
+  FAILURE: T#9469, ker=10, im_DT=9
+  FAILURE: T#9475, ker=10, im_DT=9
+  FAILURE: T#9479, ker=11, im_DT=9
+  FAILURE: T#9501, ker=11, im_DT=9
+  FAILURE: T#9502, ker=10, im_DT=9
+  FAILURE: T#9672, ker=11, im_DT=9
+  FAILURE: T#9680, ker=10, im_DT=9
+  FAILURE: T#9681, ker=10, im_DT=9
+  FAILURE: T#9682, ker=11, im_DT=9
+  FAILURE: T#9704, ker=10, im_DT=9
+  FAILURE: T#9753, ker=10, im_DT=9
+  FAILURE: T#9769, ker=10, im_DT=9
+  FAILURE: T#9783, ker=11, im_DT=9
+  FAILURE: T#9784, ker=10, im_DT=9
+  FAILURE: T#9785, ker=11, im_DT=9
+  FAILURE: T#9860, ker=10, im_DT=9
+  FAILURE: T#9885, ker=10, im_DT=9
+  ... 10000/32768 (17s)
+  FAILURE: T#10083, ker=10, im_DT=9
+  FAILURE: T#10084, ker=11, im_DT=9
+  FAILURE: T#10106, ker=11, im_DT=9
+  FAILURE: T#10110, ker=10, im_DT=9
+  FAILURE: T#10114, ker=10, im_DT=9
+  FAILURE: T#10116, ker=11, im_DT=9
+  FAILURE: T#10135, ker=11, im_DT=9
+  FAILURE: T#10143, ker=10, im_DT=9
+  FAILURE: T#10186, ker=10, im_DT=9
+  FAILURE: T#10199, ker=10, im_DT=9
+  FAILURE: T#10234, ker=10, im_DT=9
+  FAILURE: T#10251, ker=10, im_DT=9
+  FAILURE: T#10278, ker=10, im_DT=9
+  FAILURE: T#10299, ker=10, im_DT=9
+  FAILURE: T#10307, ker=10, im_DT=9
+  FAILURE: T#10315, ker=11, im_DT=9
+  FAILURE: T#10333, ker=11, im_DT=9
+  FAILURE: T#10334, ker=10, im_DT=9
+  FAILURE: T#10402, ker=10, im_DT=9
+  FAILURE: T#10406, ker=11, im_DT=9
+  FAILURE: T#10429, ker=11, im_DT=9
+  FAILURE: T#10431, ker=10, im_DT=9
+  FAILURE: T#10660, ker=10, im_DT=9
+  FAILURE: T#10685, ker=10, im_DT=9
+  FAILURE: T#10693, ker=10, im_DT=9
+  FAILURE: T#10694, ker=11, im_DT=9
+  FAILURE: T#10700, ker=11, im_DT=9
+  FAILURE: T#10716, ker=10, im_DT=9
+  FAILURE: T#10732, ker=10, im_DT=9
+  FAILURE: T#10765, ker=10, im_DT=9
+  FAILURE: T#10789, ker=10, im_DT=9
+  FAILURE: T#10797, ker=11, im_DT=9
+  FAILURE: T#10811, ker=11, im_DT=9
+  FAILURE: T#10812, ker=10, im_DT=9
+  FAILURE: T#10820, ker=10, im_DT=9
+  FAILURE: T#10845, ker=10, im_DT=9
+  FAILURE: T#10946, ker=10, im_DT=9
+  FAILURE: T#10948, ker=11, im_DT=9
+  FAILURE: T#10971, ker=11, im_DT=9
+  FAILURE: T#10975, ker=10, im_DT=9
+  FAILURE: T#11171, ker=10, im_DT=9
+  FAILURE: T#11172, ker=11, im_DT=9
+  FAILURE: T#11182, ker=11, im_DT=9
+  FAILURE: T#11198, ker=10, im_DT=9
+  FAILURE: T#11206, ker=10, im_DT=9
+  FAILURE: T#11227, ker=10, im_DT=9
+  FAILURE: T#11246, ker=10, im_DT=9
+  FAILURE: T#11285, ker=10, im_DT=9
+  FAILURE: T#11311, ker=11, im_DT=9
+  FAILURE: T#11312, ker=10, im_DT=9
+  FAILURE: T#11313, ker=10, im_DT=9
+  FAILURE: T#11317, ker=11, im_DT=9
+  FAILURE: T#11491, ker=10, im_DT=9
+  FAILURE: T#11492, ker=11, im_DT=9
+  FAILURE: T#11510, ker=11, im_DT=9
+  FAILURE: T#11518, ker=10, im_DT=9
+  FAILURE: T#11524, ker=10, im_DT=9
+  FAILURE: T#11549, ker=10, im_DT=9
+  FAILURE: T#11586, ker=10, im_DT=9
+  FAILURE: T#11588, ker=11, im_DT=9
+  FAILURE: T#11599, ker=11, im_DT=9
+  FAILURE: T#11615, ker=10, im_DT=9
+  FAILURE: T#11727, ker=10, im_DT=9
+  FAILURE: T#11730, ker=10, im_DT=9
+  FAILURE: T#11766, ker=10, im_DT=9
+  FAILURE: T#11860, ker=10, im_DT=9
+  FAILURE: T#11881, ker=10, im_DT=9
+  FAILURE: T#11883, ker=11, im_DT=9
+  FAILURE: T#11892, ker=11, im_DT=9
+  FAILURE: T#11896, ker=10, im_DT=9
+  FAILURE: T#11912, ker=10, im_DT=9
+  FAILURE: T#11944, ker=11, im_DT=9
+  FAILURE: T#11952, ker=10, im_DT=9
+  FAILURE: T#11953, ker=10, im_DT=9
+  FAILURE: T#11955, ker=11, im_DT=9
+  FAILURE: T#11995, ker=10, im_DT=9
+  FAILURE: T#12011, ker=10, im_DT=9
+  FAILURE: T#12022, ker=10, im_DT=9
+  FAILURE: T#12044, ker=10, im_DT=9
+  FAILURE: T#12069, ker=10, im_DT=9
+  FAILURE: T#12071, ker=11, im_DT=9
+  FAILURE: T#12076, ker=11, im_DT=9
+  FAILURE: T#12092, ker=10, im_DT=9
+  FAILURE: T#12111, ker=10, im_DT=9
+  FAILURE: T#12135, ker=10, im_DT=9
+  FAILURE: T#12154, ker=10, im_DT=9
+  FAILURE: T#12183, ker=10, im_DT=9
+  FAILURE: T#12206, ker=10, im_DT=9
+  FAILURE: T#12211, ker=10, im_DT=9
+  FAILURE: T#12397, ker=10, im_DT=9
+  FAILURE: T#12488, ker=10, im_DT=9
+  FAILURE: T#12505, ker=10, im_DT=9
+  FAILURE: T#12567, ker=10, im_DT=9
+  FAILURE: T#12658, ker=10, im_DT=9
+  FAILURE: T#12686, ker=10, im_DT=9
+  FAILURE: T#12813, ker=10, im_DT=9
+  FAILURE: T#12943, ker=10, im_DT=9
+  FAILURE: T#12946, ker=10, im_DT=9
+  FAILURE: T#12994, ker=10, im_DT=9
+  FAILURE: T#13010, ker=11, im_DT=9
+  FAILURE: T#13015, ker=11, im_DT=9
+  FAILURE: T#13023, ker=10, im_DT=9
+  FAILURE: T#13034, ker=10, im_DT=9
+  FAILURE: T#13047, ker=10, im_DT=9
+  FAILURE: T#13065, ker=10, im_DT=9
+  FAILURE: T#13069, ker=11, im_DT=9
+  FAILURE: T#13079, ker=11, im_DT=9
+  FAILURE: T#13080, ker=10, im_DT=9
+  FAILURE: T#13166, ker=11, im_DT=9
+  FAILURE: T#13168, ker=10, im_DT=9
+  FAILURE: T#13169, ker=10, im_DT=9
+  FAILURE: T#13170, ker=11, im_DT=9
+  FAILURE: T#13294, ker=10, im_DT=9
+  FAILURE: T#13422, ker=10, im_DT=9
+  FAILURE: T#13427, ker=10, im_DT=9
+  FAILURE: T#13511, ker=10, im_DT=9
+  FAILURE: T#13597, ker=10, im_DT=9
+  FAILURE: T#13608, ker=10, im_DT=9
+  FAILURE: T#13778, ker=10, im_DT=9
+  FAILURE: T#13864, ker=10, im_DT=9
+  FAILURE: T#13881, ker=10, im_DT=9
+  FAILURE: T#13899, ker=10, im_DT=9
+  FAILURE: T#13910, ker=10, im_DT=9
+  FAILURE: T#13923, ker=10, im_DT=9
+  FAILURE: T#13939, ker=11, im_DT=9
+  FAILURE: T#13942, ker=11, im_DT=9
+  FAILURE: T#13950, ker=10, im_DT=9
+  FAILURE: T#13990, ker=10, im_DT=9
+  FAILURE: T#14034, ker=10, im_DT=9
+  FAILURE: T#14067, ker=10, im_DT=9
+  FAILURE: T#14093, ker=10, im_DT=9
+  FAILURE: T#14100, ker=10, im_DT=9
+  FAILURE: T#14120, ker=11, im_DT=9
+  FAILURE: T#14128, ker=10, im_DT=9
+  FAILURE: T#14129, ker=10, im_DT=9
+  FAILURE: T#14133, ker=11, im_DT=9
+  FAILURE: T#14149, ker=10, im_DT=9
+  FAILURE: T#14151, ker=11, im_DT=9
+  FAILURE: T#14164, ker=11, im_DT=9
+  FAILURE: T#14172, ker=10, im_DT=9
+  FAILURE: T#14212, ker=10, im_DT=9
+  FAILURE: T#14261, ker=10, im_DT=9
+  FAILURE: T#14279, ker=10, im_DT=9
+  FAILURE: T#14390, ker=10, im_DT=9
+  FAILURE: T#14441, ker=10, im_DT=9
+  FAILURE: T#14445, ker=11, im_DT=9
+  FAILURE: T#14454, ker=11, im_DT=9
+  FAILURE: T#14456, ker=10, im_DT=9
+  FAILURE: T#14472, ker=10, im_DT=9
+  FAILURE: T#14525, ker=10, im_DT=9
+  FAILURE: T#14536, ker=11, im_DT=9
+  FAILURE: T#14544, ker=10, im_DT=9
+  FAILURE: T#14545, ker=10, im_DT=9
+  FAILURE: T#14549, ker=11, im_DT=9
+  FAILURE: T#14573, ker=10, im_DT=9
+  FAILURE: T#14580, ker=10, im_DT=9
+  FAILURE: T#14606, ker=10, im_DT=9
+  FAILURE: T#14639, ker=10, im_DT=9
+  FAILURE: T#14659, ker=10, im_DT=9
+  FAILURE: T#14663, ker=11, im_DT=9
+  FAILURE: T#14670, ker=11, im_DT=9
+  FAILURE: T#14686, ker=10, im_DT=9
+  FAILURE: T#14695, ker=10, im_DT=9
+  FAILURE: T#14714, ker=10, im_DT=9
+  FAILURE: T#14743, ker=10, im_DT=9
+  FAILURE: T#14796, ker=10, im_DT=9
+  FAILURE: T#14805, ker=10, im_DT=9
+  FAILURE: T#14867, ker=10, im_DT=9
+  FAILURE: T#14927, ker=11, im_DT=9
+  FAILURE: T#14928, ker=10, im_DT=9
+  FAILURE: T#14929, ker=10, im_DT=9
+  FAILURE: T#14931, ker=11, im_DT=9
+  ... 15000/32768 (26s)
+  FAILURE: T#15077, ker=10, im_DT=9
+  FAILURE: T#15078, ker=11, im_DT=9
+  FAILURE: T#15092, ker=11, im_DT=9
+  FAILURE: T#15100, ker=10, im_DT=9
+  FAILURE: T#15110, ker=10, im_DT=9
+  FAILURE: T#15131, ker=10, im_DT=9
+  FAILURE: T#15138, ker=10, im_DT=9
+  FAILURE: T#15142, ker=11, im_DT=9
+  FAILURE: T#15151, ker=11, im_DT=9
+  FAILURE: T#15167, ker=10, im_DT=9
+  FAILURE: T#15279, ker=10, im_DT=9
+  FAILURE: T#15282, ker=10, im_DT=9
+  FAILURE: T#15348, ker=10, im_DT=9
+  FAILURE: T#15407, ker=10, im_DT=9
+  FAILURE: T#15573, ker=10, im_DT=9
+  FAILURE: T#15588, ker=10, im_DT=9
+  FAILURE: T#15670, ker=10, im_DT=9
+  FAILURE: T#15694, ker=10, im_DT=9
+  FAILURE: T#15699, ker=10, im_DT=9
+  FAILURE: T#15951, ker=10, im_DT=9
+  FAILURE: T#16051, ker=10, im_DT=9
+  FAILURE: T#16102, ker=10, im_DT=9
+  FAILURE: T#16172, ker=10, im_DT=9
+  FAILURE: T#16181, ker=10, im_DT=9
+  FAILURE: T#16212, ker=10, im_DT=9
+  FAILURE: T#16557, ker=10, im_DT=9
+  FAILURE: T#16588, ker=10, im_DT=9
+  FAILURE: T#16597, ker=10, im_DT=9
+  FAILURE: T#16667, ker=10, im_DT=9
+  FAILURE: T#16718, ker=10, im_DT=9
+  FAILURE: T#16818, ker=10, im_DT=9
+  FAILURE: T#17070, ker=10, im_DT=9
+  FAILURE: T#17075, ker=10, im_DT=9
+  FAILURE: T#17099, ker=10, im_DT=9
+  FAILURE: T#17181, ker=10, im_DT=9
+  FAILURE: T#17196, ker=10, im_DT=9
+  FAILURE: T#17362, ker=10, im_DT=9
+  FAILURE: T#17421, ker=10, im_DT=9
+  FAILURE: T#17487, ker=10, im_DT=9
+  FAILURE: T#17490, ker=10, im_DT=9
+  FAILURE: T#17602, ker=10, im_DT=9
+  FAILURE: T#17618, ker=11, im_DT=9
+  FAILURE: T#17627, ker=11, im_DT=9
+  FAILURE: T#17631, ker=10, im_DT=9
+  FAILURE: T#17638, ker=10, im_DT=9
+  FAILURE: T#17659, ker=10, im_DT=9
+  FAILURE: T#17669, ker=10, im_DT=9
+  FAILURE: T#17677, ker=11, im_DT=9
+  FAILURE: T#17691, ker=11, im_DT=9
+  FAILURE: T#17692, ker=10, im_DT=9
+  FAILURE: T#17838, ker=11, im_DT=9
+  FAILURE: T#17840, ker=10, im_DT=9
+  FAILURE: T#17841, ker=10, im_DT=9
+  FAILURE: T#17842, ker=11, im_DT=9
+  FAILURE: T#17902, ker=10, im_DT=9
+  FAILURE: T#17964, ker=10, im_DT=9
+  FAILURE: T#17973, ker=10, im_DT=9
+  FAILURE: T#18026, ker=10, im_DT=9
+  FAILURE: T#18055, ker=10, im_DT=9
+  FAILURE: T#18074, ker=10, im_DT=9
+  FAILURE: T#18083, ker=10, im_DT=9
+  FAILURE: T#18099, ker=11, im_DT=9
+  FAILURE: T#18106, ker=11, im_DT=9
+  FAILURE: T#18110, ker=10, im_DT=9
+  FAILURE: T#18130, ker=10, im_DT=9
+  FAILURE: T#18163, ker=10, im_DT=9
+  FAILURE: T#18189, ker=10, im_DT=9
+  FAILURE: T#18196, ker=10, im_DT=9
+  FAILURE: T#18220, ker=11, im_DT=9
+  FAILURE: T#18224, ker=10, im_DT=9
+  FAILURE: T#18225, ker=10, im_DT=9
+  FAILURE: T#18233, ker=11, im_DT=9
+  FAILURE: T#18244, ker=10, im_DT=9
+  FAILURE: T#18297, ker=10, im_DT=9
+  FAILURE: T#18313, ker=10, im_DT=9
+  FAILURE: T#18315, ker=11, im_DT=9
+  FAILURE: T#18324, ker=11, im_DT=9
+  FAILURE: T#18328, ker=10, im_DT=9
+  FAILURE: T#18379, ker=10, im_DT=9
+  FAILURE: T#18490, ker=10, im_DT=9
+  FAILURE: T#18508, ker=10, im_DT=9
+  FAILURE: T#18557, ker=10, im_DT=9
+  FAILURE: T#18597, ker=10, im_DT=9
+  FAILURE: T#18605, ker=11, im_DT=9
+  FAILURE: T#18618, ker=11, im_DT=9
+  FAILURE: T#18620, ker=10, im_DT=9
+  FAILURE: T#18636, ker=11, im_DT=9
+  FAILURE: T#18640, ker=10, im_DT=9
+  FAILURE: T#18641, ker=10, im_DT=9
+  FAILURE: T#18649, ker=11, im_DT=9
+  FAILURE: T#18669, ker=10, im_DT=9
+  FAILURE: T#18676, ker=10, im_DT=9
+  FAILURE: T#18702, ker=10, im_DT=9
+  FAILURE: T#18735, ker=10, im_DT=9
+  FAILURE: T#18779, ker=10, im_DT=9
+  FAILURE: T#18819, ker=10, im_DT=9
+  FAILURE: T#18827, ker=11, im_DT=9
+  FAILURE: T#18830, ker=11, im_DT=9
+  FAILURE: T#18846, ker=10, im_DT=9
+  FAILURE: T#18859, ker=10, im_DT=9
+  FAILURE: T#18870, ker=10, im_DT=9
+  FAILURE: T#18888, ker=10, im_DT=9
+  FAILURE: T#18905, ker=10, im_DT=9
+  FAILURE: T#18991, ker=10, im_DT=9
+  FAILURE: T#19161, ker=10, im_DT=9
+  FAILURE: T#19172, ker=10, im_DT=9
+  FAILURE: T#19258, ker=10, im_DT=9
+  FAILURE: T#19342, ker=10, im_DT=9
+  FAILURE: T#19347, ker=10, im_DT=9
+  FAILURE: T#19475, ker=10, im_DT=9
+  FAILURE: T#19599, ker=11, im_DT=9
+  FAILURE: T#19600, ker=10, im_DT=9
+  FAILURE: T#19601, ker=10, im_DT=9
+  FAILURE: T#19603, ker=11, im_DT=9
+  FAILURE: T#19689, ker=10, im_DT=9
+  FAILURE: T#19690, ker=11, im_DT=9
+  FAILURE: T#19700, ker=11, im_DT=9
+  FAILURE: T#19704, ker=10, im_DT=9
+  FAILURE: T#19722, ker=10, im_DT=9
+  FAILURE: T#19735, ker=10, im_DT=9
+  FAILURE: T#19746, ker=10, im_DT=9
+  FAILURE: T#19754, ker=11, im_DT=9
+  FAILURE: T#19759, ker=11, im_DT=9
+  FAILURE: T#19775, ker=10, im_DT=9
+  FAILURE: T#19823, ker=10, im_DT=9
+  FAILURE: T#19826, ker=10, im_DT=9
+  FAILURE: T#19956, ker=10, im_DT=9
+  ... 20000/32768 (35s)
+  FAILURE: T#20083, ker=10, im_DT=9
+  FAILURE: T#20111, ker=10, im_DT=9
+  FAILURE: T#20202, ker=10, im_DT=9
+  FAILURE: T#20264, ker=10, im_DT=9
+  FAILURE: T#20281, ker=10, im_DT=9
+  FAILURE: T#20372, ker=10, im_DT=9
+  FAILURE: T#20558, ker=10, im_DT=9
+  FAILURE: T#20563, ker=10, im_DT=9
+  FAILURE: T#20586, ker=10, im_DT=9
+  FAILURE: T#20615, ker=10, im_DT=9
+  FAILURE: T#20634, ker=10, im_DT=9
+  FAILURE: T#20658, ker=10, im_DT=9
+  FAILURE: T#20677, ker=10, im_DT=9
+  FAILURE: T#20693, ker=11, im_DT=9
+  FAILURE: T#20698, ker=11, im_DT=9
+  FAILURE: T#20700, ker=10, im_DT=9
+  FAILURE: T#20725, ker=10, im_DT=9
+  FAILURE: T#20747, ker=10, im_DT=9
+  FAILURE: T#20758, ker=10, im_DT=9
+  FAILURE: T#20774, ker=10, im_DT=9
+  FAILURE: T#20814, ker=11, im_DT=9
+  FAILURE: T#20816, ker=10, im_DT=9
+  FAILURE: T#20817, ker=10, im_DT=9
+  FAILURE: T#20825, ker=11, im_DT=9
+  FAILURE: T#20857, ker=10, im_DT=9
+  FAILURE: T#20873, ker=10, im_DT=9
+  FAILURE: T#20877, ker=11, im_DT=9
+  FAILURE: T#20886, ker=11, im_DT=9
+  FAILURE: T#20888, ker=10, im_DT=9
+  FAILURE: T#20909, ker=10, im_DT=9
+  FAILURE: T#21003, ker=10, im_DT=9
+  FAILURE: T#21039, ker=10, im_DT=9
+  FAILURE: T#21042, ker=10, im_DT=9
+  FAILURE: T#21154, ker=10, im_DT=9
+  FAILURE: T#21170, ker=11, im_DT=9
+  FAILURE: T#21181, ker=11, im_DT=9
+  FAILURE: T#21183, ker=10, im_DT=9
+  FAILURE: T#21220, ker=10, im_DT=9
+  FAILURE: T#21245, ker=10, im_DT=9
+  FAILURE: T#21251, ker=10, im_DT=9
+  FAILURE: T#21259, ker=11, im_DT=9
+  FAILURE: T#21277, ker=11, im_DT=9
+  FAILURE: T#21278, ker=10, im_DT=9
+  FAILURE: T#21452, ker=11, im_DT=9
+  FAILURE: T#21456, ker=10, im_DT=9
+  FAILURE: T#21457, ker=10, im_DT=9
+  FAILURE: T#21458, ker=11, im_DT=9
+  FAILURE: T#21484, ker=10, im_DT=9
+  FAILURE: T#21523, ker=10, im_DT=9
+  FAILURE: T#21542, ker=10, im_DT=9
+  FAILURE: T#21563, ker=10, im_DT=9
+  FAILURE: T#21571, ker=10, im_DT=9
+  FAILURE: T#21587, ker=11, im_DT=9
+  FAILURE: T#21597, ker=11, im_DT=9
+  FAILURE: T#21598, ker=10, im_DT=9
+  FAILURE: T#21794, ker=10, im_DT=9
+  FAILURE: T#21798, ker=11, im_DT=9
+  FAILURE: T#21821, ker=11, im_DT=9
+  FAILURE: T#21823, ker=10, im_DT=9
+  FAILURE: T#21924, ker=10, im_DT=9
+  FAILURE: T#21949, ker=10, im_DT=9
+  FAILURE: T#21957, ker=10, im_DT=9
+  FAILURE: T#21958, ker=11, im_DT=9
+  FAILURE: T#21972, ker=11, im_DT=9
+  FAILURE: T#21980, ker=10, im_DT=9
+  FAILURE: T#22004, ker=10, im_DT=9
+  FAILURE: T#22037, ker=10, im_DT=9
+  FAILURE: T#22053, ker=10, im_DT=9
+  FAILURE: T#22069, ker=11, im_DT=9
+  FAILURE: T#22075, ker=11, im_DT=9
+  FAILURE: T#22076, ker=10, im_DT=9
+  FAILURE: T#22084, ker=10, im_DT=9
+  FAILURE: T#22109, ker=10, im_DT=9
+  FAILURE: T#22338, ker=10, im_DT=9
+  FAILURE: T#22340, ker=11, im_DT=9
+  FAILURE: T#22363, ker=11, im_DT=9
+  FAILURE: T#22367, ker=10, im_DT=9
+  FAILURE: T#22435, ker=10, im_DT=9
+  FAILURE: T#22436, ker=11, im_DT=9
+  FAILURE: T#22454, ker=11, im_DT=9
+  FAILURE: T#22462, ker=10, im_DT=9
+  FAILURE: T#22470, ker=10, im_DT=9
+  FAILURE: T#22491, ker=10, im_DT=9
+  FAILURE: T#22518, ker=10, im_DT=9
+  FAILURE: T#22535, ker=10, im_DT=9
+  FAILURE: T#22570, ker=10, im_DT=9
+  FAILURE: T#22583, ker=10, im_DT=9
+  FAILURE: T#22626, ker=10, im_DT=9
+  FAILURE: T#22634, ker=11, im_DT=9
+  FAILURE: T#22653, ker=11, im_DT=9
+  FAILURE: T#22655, ker=10, im_DT=9
+  FAILURE: T#22659, ker=10, im_DT=9
+  FAILURE: T#22663, ker=11, im_DT=9
+  FAILURE: T#22685, ker=11, im_DT=9
+  FAILURE: T#22686, ker=10, im_DT=9
+  FAILURE: T#22884, ker=10, im_DT=9
+  FAILURE: T#22909, ker=10, im_DT=9
+  FAILURE: T#22984, ker=11, im_DT=9
+  FAILURE: T#22985, ker=10, im_DT=9
+  FAILURE: T#22986, ker=11, im_DT=9
+  FAILURE: T#23000, ker=10, im_DT=9
+  FAILURE: T#23016, ker=10, im_DT=9
+  FAILURE: T#23065, ker=10, im_DT=9
+  FAILURE: T#23087, ker=11, im_DT=9
+  FAILURE: T#23088, ker=10, im_DT=9
+  FAILURE: T#23089, ker=10, im_DT=9
+  FAILURE: T#23097, ker=11, im_DT=9
+  FAILURE: T#23267, ker=10, im_DT=9
+  FAILURE: T#23268, ker=11, im_DT=9
+  FAILURE: T#23290, ker=11, im_DT=9
+  FAILURE: T#23294, ker=10, im_DT=9
+  FAILURE: T#23300, ker=10, im_DT=9
+  FAILURE: T#23325, ker=10, im_DT=9
+  FAILURE: T#23426, ker=10, im_DT=9
+  FAILURE: T#23428, ker=11, im_DT=9
+  FAILURE: T#23439, ker=11, im_DT=9
+  FAILURE: T#23455, ker=10, im_DT=9
+  FAILURE: T#23503, ker=10, im_DT=9
+  FAILURE: T#23506, ker=10, im_DT=9
+  FAILURE: T#23546, ker=10, im_DT=9
+  FAILURE: T#23565, ker=10, im_DT=9
+  FAILURE: T#23593, ker=10, im_DT=9
+  FAILURE: T#23597, ker=11, im_DT=9
+  FAILURE: T#23607, ker=11, im_DT=9
+  FAILURE: T#23608, ker=10, im_DT=9
+  FAILURE: T#23684, ker=10, im_DT=9
+  FAILURE: T#23709, ker=10, im_DT=9
+  FAILURE: T#23746, ker=10, im_DT=9
+  FAILURE: T#23748, ker=11, im_DT=9
+  FAILURE: T#23767, ker=11, im_DT=9
+  FAILURE: T#23775, ker=10, im_DT=9
+  FAILURE: T#23907, ker=10, im_DT=9
+  FAILURE: T#23908, ker=11, im_DT=9
+  FAILURE: T#23918, ker=11, im_DT=9
+  FAILURE: T#23934, ker=10, im_DT=9
+  FAILURE: T#24010, ker=10, im_DT=9
+  FAILURE: T#24023, ker=10, im_DT=9
+  FAILURE: T#24046, ker=10, im_DT=9
+  FAILURE: T#24140, ker=10, im_DT=9
+  FAILURE: T#24172, ker=11, im_DT=9
+  FAILURE: T#24176, ker=10, im_DT=9
+  FAILURE: T#24177, ker=10, im_DT=9
+  FAILURE: T#24179, ker=11, im_DT=9
+  FAILURE: T#24212, ker=10, im_DT=9
+  FAILURE: T#24229, ker=10, im_DT=9
+  FAILURE: T#24231, ker=11, im_DT=9
+  FAILURE: T#24244, ker=11, im_DT=9
+  FAILURE: T#24252, ker=10, im_DT=9
+  FAILURE: T#24279, ker=10, im_DT=9
+  FAILURE: T#24295, ker=10, im_DT=9
+  FAILURE: T#24314, ker=10, im_DT=9
+  FAILURE: T#24328, ker=10, im_DT=9
+  FAILURE: T#24360, ker=11, im_DT=9
+  FAILURE: T#24361, ker=10, im_DT=9
+  FAILURE: T#24363, ker=11, im_DT=9
+  FAILURE: T#24376, ker=10, im_DT=9
+  FAILURE: T#24411, ker=10, im_DT=9
+  FAILURE: T#24430, ker=10, im_DT=9
+  FAILURE: T#24435, ker=10, im_DT=9
+  FAILURE: T#24463, ker=10, im_DT=9
+  FAILURE: T#24491, ker=10, im_DT=9
+  FAILURE: T#24502, ker=10, im_DT=9
+  FAILURE: T#24655, ker=10, im_DT=9
+  FAILURE: T#24761, ker=10, im_DT=9
+  FAILURE: T#24806, ker=10, im_DT=9
+  FAILURE: T#24922, ker=10, im_DT=9
+  FAILURE: T#24972, ker=10, im_DT=9
+  FAILURE: T#24981, ker=10, im_DT=9
+  ... 25000/32768 (44s)
+  FAILURE: T#25134, ker=10, im_DT=9
+  FAILURE: T#25178, ker=10, im_DT=9
+  FAILURE: T#25211, ker=10, im_DT=9
+  FAILURE: T#25262, ker=11, im_DT=9
+  FAILURE: T#25264, ker=10, im_DT=9
+  FAILURE: T#25265, ker=10, im_DT=9
+  FAILURE: T#25273, ker=11, im_DT=9
+  FAILURE: T#25283, ker=10, im_DT=9
+  FAILURE: T#25291, ker=11, im_DT=9
+  FAILURE: T#25306, ker=11, im_DT=9
+  FAILURE: T#25310, ker=10, im_DT=9
+  FAILURE: T#25323, ker=10, im_DT=9
+  FAILURE: T#25334, ker=10, im_DT=9
+  FAILURE: T#25356, ker=10, im_DT=9
+  FAILURE: T#25405, ker=10, im_DT=9
+  FAILURE: T#25423, ker=10, im_DT=9
+  FAILURE: T#25477, ker=10, im_DT=9
+  FAILURE: T#25484, ker=11, im_DT=9
+  FAILURE: T#25485, ker=11, im_DT=9
+  FAILURE: T#25500, ker=10, im_DT=9
+  FAILURE: T#25512, ker=10, im_DT=9
+  FAILURE: T#25529, ker=10, im_DT=9
+  FAILURE: T#25549, ker=10, im_DT=9
+  FAILURE: T#25556, ker=10, im_DT=9
+  FAILURE: T#25625, ker=10, im_DT=9
+  FAILURE: T#25679, ker=11, im_DT=9
+  FAILURE: T#25680, ker=10, im_DT=9
+  FAILURE: T#25681, ker=10, im_DT=9
+  FAILURE: T#25689, ker=11, im_DT=9
+  FAILURE: T#25829, ker=10, im_DT=9
+  FAILURE: T#25830, ker=11, im_DT=9
+  FAILURE: T#25850, ker=11, im_DT=9
+  FAILURE: T#25852, ker=10, im_DT=9
+  FAILURE: T#25862, ker=10, im_DT=9
+  FAILURE: T#25883, ker=10, im_DT=9
+  FAILURE: T#25986, ker=10, im_DT=9
+  FAILURE: T#25990, ker=11, im_DT=9
+  FAILURE: T#25999, ker=11, im_DT=9
+  FAILURE: T#26015, ker=10, im_DT=9
+  FAILURE: T#26031, ker=10, im_DT=9
+  FAILURE: T#26034, ker=10, im_DT=9
+  FAILURE: T#26106, ker=10, im_DT=9
+  FAILURE: T#26119, ker=10, im_DT=9
+  FAILURE: T#26186, ker=10, im_DT=9
+  FAILURE: T#26199, ker=10, im_DT=9
+  FAILURE: T#26210, ker=10, im_DT=9
+  FAILURE: T#26218, ker=11, im_DT=9
+  FAILURE: T#26235, ker=11, im_DT=9
+  FAILURE: T#26239, ker=10, im_DT=9
+  FAILURE: T#26245, ker=10, im_DT=9
+  FAILURE: T#26247, ker=11, im_DT=9
+  FAILURE: T#26267, ker=11, im_DT=9
+  FAILURE: T#26268, ker=10, im_DT=9
+  FAILURE: T#26470, ker=10, im_DT=9
+  FAILURE: T#26491, ker=10, im_DT=9
+  FAILURE: T#26536, ker=11, im_DT=9
+  FAILURE: T#26537, ker=10, im_DT=9
+  FAILURE: T#26538, ker=11, im_DT=9
+  FAILURE: T#26552, ker=10, im_DT=9
+  FAILURE: T#26600, ker=10, im_DT=9
+  FAILURE: T#26717, ker=10, im_DT=9
+  FAILURE: T#26732, ker=10, im_DT=9
+  FAILURE: T#26791, ker=10, im_DT=9
+  FAILURE: T#26810, ker=10, im_DT=9
+  FAILURE: T#27019, ker=10, im_DT=9
+  FAILURE: T#27078, ker=10, im_DT=9
+  FAILURE: T#27195, ker=10, im_DT=9
+  FAILURE: T#27246, ker=10, im_DT=9
+  FAILURE: T#27335, ker=10, im_DT=9
+  FAILURE: T#27354, ker=10, im_DT=9
+  FAILURE: T#27533, ker=10, im_DT=9
+  FAILURE: T#27556, ker=10, im_DT=9
+  FAILURE: T#27692, ker=10, im_DT=9
+  FAILURE: T#27701, ker=10, im_DT=9
+  FAILURE: T#27720, ker=10, im_DT=9
+  FAILURE: T#27737, ker=10, im_DT=9
+  FAILURE: T#27749, ker=10, im_DT=9
+  FAILURE: T#27756, ker=11, im_DT=9
+  FAILURE: T#27757, ker=11, im_DT=9
+  FAILURE: T#27772, ker=10, im_DT=9
+  FAILURE: T#27790, ker=10, im_DT=9
+  FAILURE: T#27795, ker=10, im_DT=9
+  FAILURE: T#27811, ker=10, im_DT=9
+  FAILURE: T#27815, ker=11, im_DT=9
+  FAILURE: T#27822, ker=11, im_DT=9
+  FAILURE: T#27838, ker=10, im_DT=9
+  FAILURE: T#27848, ker=11, im_DT=9
+  FAILURE: T#27849, ker=10, im_DT=9
+  FAILURE: T#27851, ker=11, im_DT=9
+  FAILURE: T#27864, ker=10, im_DT=9
+  FAILURE: T#27946, ker=10, im_DT=9
+  FAILURE: T#27972, ker=10, im_DT=9
+  FAILURE: T#28013, ker=10, im_DT=9
+  FAILURE: T#28038, ker=10, im_DT=9
+  FAILURE: T#28071, ker=10, im_DT=9
+  FAILURE: T#28107, ker=10, im_DT=9
+  FAILURE: T#28269, ker=10, im_DT=9
+  FAILURE: T#28276, ker=10, im_DT=9
+  FAILURE: T#28315, ker=10, im_DT=9
+  FAILURE: T#28360, ker=10, im_DT=9
+  FAILURE: T#28455, ker=10, im_DT=9
+  FAILURE: T#28586, ker=10, im_DT=9
+  FAILURE: T#28789, ker=10, im_DT=9
+  FAILURE: T#28815, ker=10, im_DT=9
+  FAILURE: T#28906, ker=10, im_DT=9
+  FAILURE: T#29000, ker=10, im_DT=9
+  FAILURE: T#29017, ker=10, im_DT=9
+  FAILURE: T#29078, ker=10, im_DT=9
+  FAILURE: T#29205, ker=10, im_DT=9
+  FAILURE: T#29327, ker=11, im_DT=9
+  FAILURE: T#29328, ker=10, im_DT=9
+  FAILURE: T#29329, ker=10, im_DT=9
+  FAILURE: T#29333, ker=11, im_DT=9
+  FAILURE: T#29417, ker=10, im_DT=9
+  FAILURE: T#29418, ker=11, im_DT=9
+  FAILURE: T#29430, ker=11, im_DT=9
+  FAILURE: T#29432, ker=10, im_DT=9
+  FAILURE: T#29450, ker=10, im_DT=9
+  FAILURE: T#29463, ker=10, im_DT=9
+  FAILURE: T#29506, ker=10, im_DT=9
+  FAILURE: T#29514, ker=11, im_DT=9
+  FAILURE: T#29519, ker=11, im_DT=9
+  FAILURE: T#29535, ker=10, im_DT=9
+  FAILURE: T#29551, ker=10, im_DT=9
+  FAILURE: T#29554, ker=10, im_DT=9
+  FAILURE: T#29686, ker=10, im_DT=9
+  FAILURE: T#29742, ker=10, im_DT=9
+  FAILURE: T#29806, ker=11, im_DT=9
+  FAILURE: T#29808, ker=10, im_DT=9
+  FAILURE: T#29809, ker=10, im_DT=9
+  FAILURE: T#29813, ker=11, im_DT=9
+  FAILURE: T#29846, ker=10, im_DT=9
+  FAILURE: T#29879, ker=10, im_DT=9
+  FAILURE: T#29891, ker=10, im_DT=9
+  FAILURE: T#29895, ker=11, im_DT=9
+  FAILURE: T#29910, ker=11, im_DT=9
+  FAILURE: T#29918, ker=10, im_DT=9
+  FAILURE: T#29927, ker=10, im_DT=9
+  FAILURE: T#29946, ker=10, im_DT=9
+  FAILURE: T#29960, ker=10, im_DT=9
+  ... 30000/32768 (52s)
+  FAILURE: T#30013, ker=10, im_DT=9
+  FAILURE: T#30024, ker=11, im_DT=9
+  FAILURE: T#30025, ker=10, im_DT=9
+  FAILURE: T#30029, ker=11, im_DT=9
+  FAILURE: T#30040, ker=10, im_DT=9
+  FAILURE: T#30060, ker=10, im_DT=9
+  FAILURE: T#30069, ker=10, im_DT=9
+  FAILURE: T#30095, ker=10, im_DT=9
+  FAILURE: T#30157, ker=10, im_DT=9
+  FAILURE: T#30164, ker=10, im_DT=9
+  FAILURE: T#30219, ker=10, im_DT=9
+  FAILURE: T#30281, ker=10, im_DT=9
+  FAILURE: T#30283, ker=11, im_DT=9
+  FAILURE: T#30295, ker=11, im_DT=9
+  FAILURE: T#30296, ker=10, im_DT=9
+  FAILURE: T#30342, ker=10, im_DT=9
+  FAILURE: T#30363, ker=10, im_DT=9
+  FAILURE: T#30370, ker=10, im_DT=9
+  FAILURE: T#30374, ker=11, im_DT=9
+  FAILURE: T#30391, ker=11, im_DT=9
+  FAILURE: T#30399, ker=10, im_DT=9
+  FAILURE: T#30565, ker=10, im_DT=9
+  FAILURE: T#30566, ker=11, im_DT=9
+  FAILURE: T#30572, ker=11, im_DT=9
+  FAILURE: T#30588, ker=10, im_DT=9
+  FAILURE: T#30634, ker=10, im_DT=9
+  FAILURE: T#30647, ker=10, im_DT=9
+  FAILURE: T#30700, ker=10, im_DT=9
+  FAILURE: T#30827, ker=10, im_DT=9
+  FAILURE: T#30838, ker=10, im_DT=9
+  FAILURE: T#30877, ker=10, im_DT=9
+  FAILURE: T#30888, ker=10, im_DT=9
+  FAILURE: T#31047, ker=10, im_DT=9
+  FAILURE: T#31178, ker=10, im_DT=9
+  FAILURE: T#31272, ker=10, im_DT=9
+  FAILURE: T#31289, ker=10, im_DT=9
+  FAILURE: T#31310, ker=10, im_DT=9
+  FAILURE: T#31315, ker=10, im_DT=9
+  FAILURE: T#31331, ker=10, im_DT=9
+  FAILURE: T#31339, ker=11, im_DT=9
+  FAILURE: T#31342, ker=11, im_DT=9
+  FAILURE: T#31358, ker=10, im_DT=9
+  FAILURE: T#31372, ker=10, im_DT=9
+  FAILURE: T#31381, ker=10, im_DT=9
+  FAILURE: T#31400, ker=11, im_DT=9
+  FAILURE: T#31401, ker=10, im_DT=9
+  FAILURE: T#31405, ker=11, im_DT=9
+  FAILURE: T#31416, ker=10, im_DT=9
+  FAILURE: T#31429, ker=10, im_DT=9
+  FAILURE: T#31431, ker=11, im_DT=9
+  FAILURE: T#31436, ker=11, im_DT=9
+  FAILURE: T#31452, ker=10, im_DT=9
+  FAILURE: T#31526, ker=10, im_DT=9
+  FAILURE: T#31562, ker=10, im_DT=9
+  FAILURE: T#31595, ker=10, im_DT=9
+  FAILURE: T#31620, ker=10, im_DT=9
+  FAILURE: T#31661, ker=10, im_DT=9
+  FAILURE: T#31687, ker=10, im_DT=9
+  FAILURE: T#31799, ker=10, im_DT=9
+  FAILURE: T#31918, ker=10, im_DT=9
+  FAILURE: T#31947, ker=10, im_DT=9
+  FAILURE: T#31958, ker=10, im_DT=9
+  FAILURE: T#32077, ker=10, im_DT=9
+  FAILURE: T#32100, ker=10, im_DT=9
+  FAILURE: T#32343, ker=10, im_DT=9
+  FAILURE: T#32429, ker=10, im_DT=9
+  FAILURE: T#32436, ker=10, im_DT=9
+  FAILURE: T#32460, ker=10, im_DT=9
+  FAILURE: T#32555, ker=10, im_DT=9
+  FAILURE: T#32614, ker=10, im_DT=9
+
+Done in 57.2s
+
+RESULTS:
+  Gap formula matches: 32768/32768
+  β_2 ≠ 0: 960/32768
+
+  (ker, |DT|): count
+    ker=8, |DT|=9: 560
+    ker=9, |DT|=9: 3600
+    ker=9, |DT|=10: 2880
+    ker=9, |DT|=11: 5040
+    ker=9, |DT|=12: 2880
+    ker=10, |DT|=9: 720
+    ker=10, |DT|=10: 1728
+    ker=10, |DT|=11: 4320
+    ker=10, |DT|=12: 1440
+    ker=10, |DT|=15: 1440
+    ker=11, |DT|=9: 240
+    ker=11, |DT|=11: 2160
+    ker=11, |DT|=12: 3360
+    ker=12, |DT|=15: 1440
+    ker=13, |DT|=15: 720
+    ker=15, |DT|=15: 240
+
+  ker ≤ |DT| always? False
+
+All done.

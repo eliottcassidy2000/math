@@ -1,0 +1,28 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Enumerating step sequences...
+  dim 0: 1
+  dim 1: 5
+  dim 2: 25
+  dim 3: 110
+  dim 4: 430
+  dim 5: 1430
+  dim 6: 3970
+  dim 7: 8735
+  dim 8: 14395
+  dim 9: 15745
+  dim 10: 8645
+
+--- Computing Ω dims 7-10 ---
+dim 7: 15230 junk types, 8735 seqs (0.2s)
+  Sparse J: 15230x8735, 26380 nonzeros (0.0s)
+  J^H J: 8735x8735, 1164MB (0.1s)
+Ω_7 = 690 (rank 8045/8735, 874.9s)
+  Smallest eigenvalues: [-2.59792188e-14 -2.04333711e-14 -1.91710468e-14 -1.73785971e-14
+ -1.68879635e-14]
+  Largest eigenvalues: [9.64116763 9.64116763 9.64116763]
+  Total time for dim 7: 875.3s
+
+dim 8: 35145 junk types, 14395 seqs (0.4s)
+  Sparse J: 35145x14395, 50375 nonzeros (0.1s)
+  J^H J: 14395x14395, 3162MB (0.1s)

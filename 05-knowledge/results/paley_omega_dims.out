@@ -1,0 +1,32 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+Ω DIMS FOR P_11 (single eigenspace k=1)
+======================================================================
+P_11: QR = [1, 3, 4, 5, 9]
+  enum dim 0: 1 seqs (0.0s)
+  enum dim 1: 5 seqs (0.0s)
+  enum dim 2: 25 seqs (0.0s)
+  enum dim 3: 110 seqs (0.0s)
+  enum dim 4: 430 seqs (0.0s)
+  enum dim 5: 1430 seqs (0.0s)
+  enum dim 6: 3970 seqs (0.0s)
+  enum dim 7: 8735 seqs (0.1s)
+  enum dim 8: 14395 seqs (0.1s)
+  enum dim 9: 15745 seqs (0.3s)
+  enum dim 10: 8645 seqs (0.3s)
+  junk dim 1: 0 types (0.0s)
+  junk dim 2: 5 types (0.0s)
+  sparse J dim 2: 15 nonzeros, shape (5, 25) (0.0s)
+  Ω_2 = 20 (rank 5/5, 0.0s)
+  junk dim 3: 40 types (0.0s)
+  sparse J dim 3: 120 nonzeros, shape (40, 110) (0.0s)
+  Ω_3 = 70 (rank 40/40, 0.0s)
+  junk dim 4: 250 types (0.1s)
+  sparse J dim 4: 690 nonzeros, shape (250, 430) (0.0s)
+  Ω_4 = 205 (rank 225/250, 5.2s)
+  junk dim 5: 1220 types (0.2s)
+  sparse J dim 5: 2970 nonzeros, shape (1220, 1430) (0.0s)
+  Ω_5 = 460 (rank 970/1220, 118.8s)
+  junk dim 6: 4890 types (0.3s)
+  sparse J dim 6: 10170 nonzeros, shape (4890, 3970) (0.2s)

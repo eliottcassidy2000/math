@@ -1,0 +1,19 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Enumerating step sequences...
+  dim 0: 1
+  dim 1: 5
+  dim 2: 25
+  dim 3: 110
+  dim 4: 430
+  dim 5: 1430
+  dim 6: 3970
+  dim 7: 8735
+  dim 8: 14395
+  dim 9: 15745
+  dim 10: 8645
+  dim 11: 0
+dim 7: 15230 junk types, 8735 seqs (0.2s)
+  Sparse J: 26380 nonzeros (0.1s)
+  Randomized rank: projecting to k=8735...
+  J@R computed: (15230, 8735), 2030MB (10.8s)
