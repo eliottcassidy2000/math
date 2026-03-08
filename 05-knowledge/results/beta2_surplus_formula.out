@@ -1,0 +1,71 @@
+======================================================================
+SURPLUS FORMULA SEARCH AT n=5
+======================================================================
+
+  Surplus by t3:
+    t3=0: surplus in [1]
+    t3=1: surplus in [0]
+    t3=2: surplus in [1]
+    t3=3: surplus in [0, 1]
+    t3=4: surplus in [0, 1, 2]
+    t3=5: surplus in [5]
+  Determined by t3: False
+
+  Surplus by TT:
+    TT=5: surplus in [5]
+    TT=6: surplus in [0, 1, 2]
+    TT=7: surplus in [0, 1]
+    TT=8: surplus in [1]
+    TT=9: surplus in [0]
+    TT=10: surplus in [1]
+
+  Surplus by DT:
+    DT=3: surplus in [0, 1]
+    DT=5: surplus in [1, 2, 5]
+
+  Surplus vs DT - TT:
+    surplus - (DT - TT): {3: 280, 4: 240, 5: 24, 6: 480}
+
+  Surplus by score sequence:
+    (1, 1, 2, 3, 3): surplus in [0, 1]
+    (1, 2, 2, 2, 3): surplus in [0, 1, 2]
+  Determined by score sequence: False
+
+  Testing formulas:
+    A2=10, A3=5, O2=10, O3=5, Z2=4, surplus=1, t3=0, TT=10, DT=5
+    A2=10, A3=5, O2=10, O3=5, Z2=4, surplus=1, t3=0, TT=10, DT=5
+    A2=12, A3=9, O2=9, O3=3, Z2=3, surplus=0, t3=1, TT=9, DT=3
+    A2=10, A3=5, O2=10, O3=5, Z2=4, surplus=1, t3=0, TT=10, DT=5
+    A2=14, A3=13, O2=9, O3=4, Z2=3, surplus=1, t3=2, TT=8, DT=3
+
+  O2 - TT by t3:
+    t3=0: O2-TT in [0]
+    t3=1: O2-TT in [0]
+    t3=2: O2-TT in [1]
+    t3=3: O2-TT in [2]
+    t3=4: O2-TT in [2, 3, 4]
+    t3=5: O2-TT in [5]
+
+  O3 - DT by t3:
+    t3=0: O3-DT in [0]
+    t3=1: O3-DT in [0]
+    t3=2: O3-DT in [1]
+    t3=3: O3-DT in [0]
+    t3=4: O3-DT in [0, 1, 2]
+    t3=5: O3-DT in [5]
+
+  O2 - TT distribution:
+    O2-TT=0: 240
+    O2-TT=1: 240
+    O2-TT=2: 280
+    O2-TT=3: 120
+    O2-TT=4: 120
+    O2-TT=5: 24
+
+  O3 - DT distribution:
+    O3-DT=0: 520
+    O3-DT=1: 360
+    O3-DT=2: 120
+    O3-DT=5: 24
+
+Done.

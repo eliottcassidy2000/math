@@ -1,0 +1,29 @@
+======================================================================
+OMEGA_2 vs A_2 vs TT at n=5
+======================================================================
+  bits=0: |A_2|=10, dim(O_2)=10, |TT|=10
+  bits=1: |A_2|=10, dim(O_2)=10, |TT|=10
+  bits=2: |A_2|=12, dim(O_2)=9, |TT|=9
+  bits=3: |A_2|=10, dim(O_2)=10, |TT|=10
+  bits=4: |A_2|=14, dim(O_2)=9, |TT|=8
+
+  dim(O_2) == |TT|: 240/1024 (23.4%)
+  dim(O_2) == |A_2|: 120/1024 (11.7%)
+
+  Checking Omega_2 basis structure for first 20 tournaments:
+  bits=4: dim(O2)=9, |TT|=8, |NTT|=6, O2 has NTT components: 2
+  bits=6: dim(O2)=9, |TT|=8, |NTT|=6, O2 has NTT components: 1
+  bits=8: dim(O2)=9, |TT|=7, |NTT|=9, O2 has NTT components: 3
+  bits=9: dim(O2)=9, |TT|=8, |NTT|=6, O2 has NTT components: 2
+  bits=10: dim(O2)=9, |TT|=7, |NTT|=9, O2 has NTT components: 3
+  bits=12: dim(O2)=10, |TT|=6, |NTT|=12, O2 has NTT components: 5
+  bits=13: dim(O2)=9, |TT|=8, |NTT|=6, O2 has NTT components: 2
+  bits=14: dim(O2)=9, |TT|=7, |NTT|=9, O2 has NTT components: 2
+
+======================================================================
+OMEGA_2 DIMENSION FORMULA
+======================================================================
+  n=5: O2=TT: 240/1024, O2>TT: 784/1024, max_diff=5
+  n=6: O2=TT: 1760/32768, O2>TT: 31008/32768, max_diff=12
+
+Done.
