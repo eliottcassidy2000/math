@@ -13,6 +13,36 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S35c11 — 2026-03-07 (W-F Mobius Transform, Perpendicularity Mechanism, M(r) Symmetry)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S35c10 (context compacted multiple times)
+**Summary of work:**
+  Long-running overnight creative exploration. Generated and tested 20+ outlandish hypotheses about deep structure.
+
+  **Major discoveries:**
+  1. **THM-K: W(T,r) = (r-1/2)^{n-1} * F(T, (2r+1)/(2r-1))** — Exact Mobius transform connecting W-polynomial to forward-edge polynomial. Verified with zero error at n=4,5,6,7.
+  2. **THM-L: W(T,-r) = (-1)^{n-1} W(T^op, r)** — Proved. For odd n: W(T)=W(T^op) (complement invariant).
+  3. **THM-M: M(r) symmetric for ALL r** — The r-parameterized transfer matrix is symmetric at every r value, not just r=1/2. Each entry is an even function of r at odd n. Verified at n=5.
+  4. **Perpendicularity mechanism explained**: Var(c_0)/Var(H) → 0 exponentially (1.0 at n=3, 0.057 at n=5, 0.001 at n=7). At even n: c_0 ≡ 0 identically.
+  5. **Spectral correlations**: Corr(H, |det(I-uA)|) > 0.94 for all n=5,6,7. Char poly determines H exactly at n=5 but fails at n≥6.
+  6. **GS flip orthogonality is trivial**: Cov(H_sym, H_anti) = 0 for any involution on a uniform measure — not a deep tournament property.
+  7. **M(T) ≠ M(T^op)** in general — complement does NOT preserve the full transfer matrix, only its trace.
+  8. **Deletion-contraction breaks M symmetry**: M(T\e) and M(T/e) are NOT symmetric — symmetry is specific to tournaments.
+  9. **Redei-Berge literature connection**: U_X = U_{X^op} (complement invariance of Redei-Berge symmetric function) matches our W(T)=W(T^op). Noncommuting version has deletion-contraction.
+
+  **Key dead ends:**
+  - M is NOT a polynomial in A or A^T
+  - M does NOT commute with A or B
+  - GS flip eigenspace decomposition doesn't explain perpendicularity (it's trivially orthogonal)
+  - Vertex deletion doesn't give simple recursion for M
+
+  **Files modified:** 03-artifacts/drafts/signed-hp-permanent-skeleton.md (added THM-K, THM-L, THM-M)
+**Unresolved threads:**
+  - Prove M(r) symmetry algebraically (strongest form of transfer matrix symmetry)
+  - Understand why det(I-uA) correlates so strongly with H
+  - Noncommuting Redei-Berge deletion-contraction as proof path
+  - bits=all tournament: H(n) = 2H(n-1) - (2k-1) correction pattern
+
 ## opus-2026-03-07-S45 — 2026-03-07 (Flip Formula, Transfer Matrix, Matroid Structure)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S44 (context compacted)
