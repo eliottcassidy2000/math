@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S46g — 2026-03-08 (A000568 enumeration breakthrough)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S46f
+**Summary of work:**
+  Discovered that direct enumeration of odd partitions is 250-1600x faster than DP
+  for computing A000568 (nonisomorphic tournaments on n nodes).
+
+  **Major achievements:**
+  - BREAKTHROUGH: a000568_enum.py — enumerate all odd partitions of n, sum 2^{t(λ)}/z_λ
+    with LCD-scaled integer accumulation. 250-1600x speedup over gmpy2 DP.
+  - Extended OEIS A000568 from n=76 to n=150 (74 new terms, 3102 digits)
+  - Complete b-file with 151 consecutive values a(0)-a(150)
+  - Also developed integer DP with GCD reduction (2x over gmpy2) and C enum + CRT
+  - a(89) computed (missing gap from prior session), a(100) completed (14391s gmpy2)
+
+  **Performance progression:**
+  | Method | n=100 time |
+  |--------|-----------|
+  | gmpy2 DP | 14391s (~4h) |
+  | Int DP + GCD | ~7200s |
+  | **Py enum + LCD** | **9.1s** |
+
+**New contributions:** a000568_enum.py, a000568_int_v2.py, a000568_c_enum.c, b000568.txt
+**Unresolved threads:** Push to n=200+ requires either faster enumeration (C) or algorithmic advance
+
 ## kind-pasteur-2026-03-08-S41 — 2026-03-08 (Arc-Flip Path Count Identity + β₂ Mechanism)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-08-S34
