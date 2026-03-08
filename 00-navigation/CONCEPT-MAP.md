@@ -418,7 +418,27 @@ The 2-adic valuation v₂((n-3)!) = (n-3) − s₂(n-3) where s₂ is binary dig
 
 ---
 
-## XI. SOFTWARE AND DATA
+## XII. CYCLE STRUCTURE AND H-DETERMINATION
+
+### Key Computational Finding (kind-pasteur-S34)
+| n | H determined by (c₃, c₅, ...)? | Explanation |
+|---|--------------------------------|-------------|
+| 5 | YES — H = 1 + 2(c₃ + c₅) | Omega(T) complete at n=5; all cycles share a vertex; α₁ = c₃ + c₅, α₂ = 0 |
+| 6 | NO — same (c₃, c₅) can give different H | α₂ depends on cycle PLACEMENT, not just counts; e.g. (c₃=2, c₅=0) gives H=5 or H=9 |
+| 7+ | NO — increasingly non-determined | Higher α_k encode cycle independence structure beyond count vector |
+
+**Fundamental insight:** H(T) = I(Omega(T), 2) encodes the **independence structure** of cycle placement, not just cycle counts. Two tournaments with identical (c₃, c₅, c₇) can have different H because the vertex-disjoint cycle pair count α₂ differs.
+
+### Cycle Zeta Function (Speculative — Novel Model)
+Define Z_T(x) = Π_{[C] prime cycle} (1 - x^|C|)^{-1} (Ihara-type). For tournaments, all cycles are odd. The connection:
+- log Z_T(x) = Σ_k (c_k/k) x^k (formal power series)
+- I(Omega, x) is NOT simply related to Z_T(x) because independence structure is finer than count structure
+- The "cycle Euler product" Π_C (1 + λ^{|C|}) would equal I(Omega, λ) IF cycles were pairwise independent — but they're not!
+- The gap between Π_C (1 + 2) and I(Omega, 2) measures "cycle interaction"
+
+---
+
+## XIII. SOFTWARE AND DATA
 
 ### Key Scripts
 | Script | Purpose | Status |
