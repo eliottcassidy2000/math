@@ -1,0 +1,53 @@
+======================================================================
+SURPLUS=0 STABILITY ANALYSIS AT n=5
+======================================================================
+
+  Surplus distribution:
+  surplus=0: 280 tournaments
+    t3 values: {1: 120, 3: 120, 4: 40}
+    scores: {(0, 1, 3, 3, 3): 40, (0, 2, 2, 2, 4): 40, (1, 1, 1, 3, 4): 40, (1, 1, 2, 3, 3): 120, (1, 2, 2, 2, 3): 40}
+    Example bits=2: O2=9, O3=3, Z2=3, t3=1, TT=9, score=(1, 1, 1, 3, 4)
+    Example bits=5: O2=9, O3=3, Z2=3, t3=1, TT=9, score=(0, 2, 2, 2, 4)
+    Example bits=10: O2=9, O3=3, Z2=3, t3=3, TT=7, score=(1, 1, 2, 3, 3)
+    Example bits=11: O2=9, O3=3, Z2=3, t3=1, TT=9, score=(0, 1, 3, 3, 3)
+    Example bits=17: O2=9, O3=3, Z2=3, t3=1, TT=9, score=(1, 1, 1, 3, 4)
+  surplus=1: 600 tournaments
+    t3 values: {0: 120, 2: 240, 3: 120, 4: 120}
+    scores: {(0, 1, 2, 3, 4): 120, (0, 2, 2, 3, 3): 120, (1, 1, 2, 2, 4): 120, (1, 1, 2, 3, 3): 120, (1, 2, 2, 2, 3): 120}
+  surplus=2: 120 tournaments
+    t3 values: {4: 120}
+    scores: {(1, 2, 2, 2, 3): 120}
+  surplus=5: 24 tournaments
+    t3 values: {5: 24}
+    scores: {(2, 2, 2, 2, 2): 24}
+
+======================================================================
+SURPLUS=0 FLIP ANALYSIS
+======================================================================
+  Total surplus=0 tournaments: 280
+  Total flips from surplus=0: 2800
+  Surplus after flip: {0: 640, 1: 2040, 2: 120}
+  Delta Omega_3: {0: 640, 1: 1320, 2: 720, 4: 120}
+  Delta Z_2:     {0: 1960, 1: 720, 2: 120}
+
+  Violations (delta_O3 < delta_Z2): 0
+
+  Z_2 increases: 840 (30.0%)
+    bits=2: t3=1, flip (0,2): dZ2=+1, dO3=+2
+    bits=2: t3=1, flip (1,0): dZ2=+1, dO3=+2
+    bits=2: t3=1, flip (2,1): dZ2=+1, dO3=+2
+    bits=5: t3=1, flip (0,3): dZ2=+1, dO3=+2
+    bits=5: t3=1, flip (2,0): dZ2=+1, dO3=+2
+    bits=5: t3=1, flip (3,2): dZ2=+1, dO3=+2
+    bits=10: t3=3, flip (0,2): dZ2=+1, dO3=+2
+    bits=10: t3=3, flip (3,0): dZ2=+1, dO3=+2
+    bits=10: t3=3, flip (3,2): dZ2=+2, dO3=+4
+    bits=11: t3=1, flip (0,4): dZ2=+1, dO3=+2
+
+  Joint (delta_O3, delta_Z2):
+    (+0, +0): 640
+    (+1, +0): 1320
+    (+2, +1): 720
+    (+4, +2): 120
+
+Done.

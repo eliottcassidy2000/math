@@ -1,0 +1,36 @@
+======================================================================
+ARC-FLIP PRESERVATION OF BETA_2 = 0
+======================================================================
+
+======================================================================
+n = 5
+======================================================================
+
+  Total flips analyzed: 10240
+  Min surplus after flip: 0
+  Beta_2 preservation: YES
+
+  Delta surplus distribution:
+    delta=-4: 120 (1.2%)
+    delta=-3: 120 (1.2%)
+    delta=-2: 120 (1.2%)
+    delta=-1: 2760 (27.0%)
+    delta=0: 4000 (39.1%)
+    delta=1: 2760 (27.0%)
+    delta=2: 120 (1.2%)
+    delta=3: 120 (1.2%)
+    delta=4: 120 (1.2%)
+
+  Surplus drops: 3120 (30.5%)
+  Max drop: -4
+  Always safe (surplus >= |drop|): True
+
+  By starting surplus:
+    surplus=0: 2800 flips, min_after=0, max_drop=0
+    surplus=1: 6000 flips, min_after=0, max_drop=-1
+    surplus=2: 1200 flips, min_after=0, max_drop=-2
+    surplus=5: 240 flips, min_after=1, max_drop=-4
+
+======================================================================
+n = 6
+======================================================================

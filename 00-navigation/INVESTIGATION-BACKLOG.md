@@ -1505,6 +1505,43 @@ Using J^H J + eigvalsh method for memory-efficient rank computation.
 - All eigenspaces have IDENTICAL Om_5 dim=74 and Om_6 dim=63
 - The difference: trivial has ker(∂_5)=39, non-trivial has ker(∂_5)=38
 **Key question:** Why does trivial eigenspace contribute extra at n=9? Is δ=2 because 9=3²? What is δ for n=11 (Paley, prime)?
-**Conjecture (HYP-212):** δ=0 for prime n, δ>0 for composite. If true, P_11 has β_8 = 10+0 = 10.
-**Scripts:** `04-computation/n9_beta5_eigenspace.py`, `04-computation/p7_eigenspace_verify.py`
-**Next step:** (1) Compute P_11 β_8 eigenspace decomposition. (2) Test another composite (n=15?). (3) Find algebraic reason for δ.
+**Conjecture (HYP-212):** δ=0 for prime n, δ>0 for composite. CONFIRMED for P_11: β_8 = 10 = p-1 + 0 (opus-S42 + kind-pasteur-S41 independent confirmation).
+**P_11 data (opus-S42):** Om dims (k≠0): [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]. β_8^(triv)=0 (kind-pasteur-S41 confirmed), β_8^(k≠0)=1 per eigenspace.
+**Scripts:** `04-computation/n9_beta5_eigenspace.py`, `04-computation/p7_eigenspace_verify.py`, `04-computation/p11_beta8_v5.py`
+**Next step:** (1) Test another composite (n=15?). (2) Find algebraic reason for δ. (3) Extend to P_13?
+
+### INV-148: Arc-Flip Induction Proof for β₂=0 — STRONGEST LEAD
+**Source:** kind-pasteur-2026-03-08-S41, opus-2026-03-08-S43 (arc-flip local invariance)
+**Status:** VERIFIED EXHAUSTIVELY n=5,6. Key structural mechanism identified.
+**What:** β₂=0 can potentially be proved by arc-flip induction:
+1. Base: transitive tournament (β₂=0 trivially)
+2. Step: flipping any arc preserves β₂=0
+The "surplus" = dim(Ω₃) - dim(Z₂) satisfies surplus ≥ |drop| ALWAYS.
+**Key findings (kind-pasteur-S41):**
+- n=5: 10240 arc flips, 0 violations. Surplus=0 cases: max_drop=0
+- n=6: 491520 arc flips, 0 violations. Surplus=1 cases (tightest): max_drop=0
+- Surplus=0 stability mechanism: joint (δΩ₃, δZ₂) = {(0,0), (1,0), (2,1), (4,2)} — always δΩ₃ ≥ δZ₂
+- "Every new Z₂ cycle comes with at least one new Ω₃ chain to fill it"
+- This is the 2-for-1 principle: tournament completeness ensures enough Ω₃ for every Z₂
+**Key lemma needed:** For any tournament T with arc (u,v), and T' = flip(T, u, v):
+  dim(Ω₃(T')) - dim(Z₂(T')) ≥ dim(Ω₃(T)) - dim(Z₂(T))  when starting surplus ≤ 1
+  (or more generally: surplus(T') ≥ 0)
+**Why completeness matters:** Non-tournament arc flips CAN create β₂>0 (seen in circulant digraphs).
+The tournament constraint ensures every pair of vertices has an arc, providing the intermediary
+vertices needed for Ω₃ chains.
+**Scripts:** beta2_arcflip_proof.py, beta2_surplus_zero_stability.py
+**Next step:** (1) Prove the key lemma algebraically (2) Try at n=7 by sampling (3) Identify exact counting formula for δΩ₃ and δZ₂ under arc flip
+
+### INV-149: β₂=0 Density Threshold for Circulant Digraphs
+**Source:** kind-pasteur-2026-03-08-S41
+**Status:** CHARACTERIZED. New conjecture (HYP-219).
+**What:** For C_n^S with S∩(-S)=∅, β₂=0 when |S| is large enough:
+- n=7: |S|≥3 (all β₂=0)
+- n=9: |S|≥4 (all β₂=0)
+- n=11: |S|≥4 (all β₂=0)
+- n=13: |S|≥5 (all β₂=0, 96/96 tested)
+- n=15: |S|=5 still has 15/201 failures; threshold at |S|≥6?
+- |S|=2 perfect characterization: β₂=0 iff has-doubling-pair (HYP-217)
+- Exceptions without doubling pair: coset structure (S = a + H for subgroup H)
+**Scripts:** beta2_doubling_closure_general.py, beta2_threshold_analysis.py
+**Next step:** (1) Find exact threshold formula (2) Prove for tournaments (|S|=(n-1)/2)

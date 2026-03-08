@@ -71,6 +71,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-217 | β₂=0 for |S|=2 circulants iff doubling-closed | β₂=0 iff 2s₁≡s₂ or 2s₂≡s₁ (mod n); PERFECT at n=5,7,9,11,13; one exception n=8 (s₂-s₁=n/2) | beta2_nonzero_analysis.py |
 | HYP-218 | Tang-Yau Conj 4.8 is FALSE | C₈^{1,5} has β₃=β₄=1 with S∩(-S)=∅; P₇ has β₄=6 | tang_yau_counterexample.py |
 | HYP-219 | β₂=0 density threshold: β₂(C_n^S)=0 for |S|≥⌈n/3⌉ | n=9:|S|≥4✓, n=11:|S|≥4✓, n=13:|S|≥5✓, n=15:|S|=5 has 15 exceptions | beta2_threshold_analysis.py |
+| HYP-220 | Arc-flip preserves β₂=0: surplus ≥ |drop| always | Exhaustive n=5 (10240 flips), n=6 (491520 flips), 0 violations | beta2_arcflip_proof.py |
+| HYP-221 | Surplus=0 stable: max_drop=0 from surplus=0 (n=5), surplus=1 (n=6) | Joint (δΩ₃,δZ₂) has δΩ₃≥δZ₂ always from tight cases | beta2_surplus_zero_stability.py |
 
 ---
 
@@ -92,7 +94,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112
