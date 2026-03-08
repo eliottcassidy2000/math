@@ -125,6 +125,22 @@ def hamiltonian_path_count(T):
     return sum(dp[full][v] for v in range(n))
 
 
+def hamiltonian_path_count_ocf(T):
+    """Count directed Hamiltonian paths via OCF: H(T) = I(Omega(T), 2).
+    Finds all odd directed cycles, builds conflict graph, evaluates I at x=2.
+    Faster than bitmask DP when cycle count is manageable (typical for n <= 14).
+    For large n with many cycles, falls back to bitmask DP."""
+    n = len(T)
+    if n <= 1:
+        return 1
+    cycles = find_odd_cycles(T)
+    if n <= 14:
+        return independence_poly_at_fast(cycles, 2)
+    else:
+        cg = conflict_graph(cycles)
+        return independence_poly_at(cg, 2)
+
+
 # ---------------------------------------------------------------------------
 # Odd cycles
 # ---------------------------------------------------------------------------

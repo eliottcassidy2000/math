@@ -275,6 +275,138 @@ def _count_indep_sets_of_size(adj_bits, m, size):
 
 
 # ===================================================================
+# 4b. Fast cycle finding via bitmask DP
+# ===================================================================
+
+def find_odd_cycles_dp(T):
+    """Find all directed odd cycles using bitmask DP.
+
+    Uses dp[(mask, v)] = # directed paths from min(mask) through exactly
+    the vertices in mask, ending at v. A cycle of length k exists when
+    there's an arc from v back to min(mask) and popcount(mask) = k.
+
+    Complexity: O(2^n * n) — much faster than permutation enumeration
+    for cycle lengths >= 7.
+
+    Returns: list of (vertex_tuple, count) where count is the number of
+    distinct directed cycles on that vertex set. Each directed cycle on
+    the same vertex set is a separate node in Omega(T).
+    """
+    n = len(T)
+    results = []  # list of vertex tuples (one per directed cycle)
+
+    for start in range(n):
+        # dp[mask][v] = # paths from start through mask ending at v
+        # Only consider masks containing start, where start is minimum
+        dp = [[0] * n for _ in range(1 << n)]
+        dp[1 << start][start] = 1
+
+        for mask in range(1 << start, 1 << n):
+            if not (mask & (1 << start)):
+                continue
+            # Ensure start is minimum in mask
+            if mask & ((1 << start) - 1):
+                continue
+            popcount = bin(mask).count('1')
+            for last in range(n):
+                if not (mask & (1 << last)):
+                    continue
+                cnt = dp[mask][last]
+                if cnt == 0:
+                    continue
+
+                # Try to close cycle (only for odd lengths >= 3)
+                if popcount >= 3 and popcount % 2 == 1 and last != start:
+                    if T[last][start]:
+                        # Found cnt directed cycles on this vertex set
+                        verts = tuple(i for i in range(n) if mask & (1 << i))
+                        for _ in range(cnt):
+                            results.append(verts)
+
+                # Extend path
+                if popcount < n:
+                    for nxt in range(start + 1, n):
+                        if mask & (1 << nxt):
+                            continue
+                        if T[last][nxt]:
+                            dp[mask | (1 << nxt)][nxt] += cnt
+
+        # Clear to save memory
+        dp = None
+
+    return results
+
+
+def hamiltonian_paths_ocf_fast(T):
+    """Compute H(T) via OCF using bitmask DP cycle finding.
+
+    Finds all odd directed cycles via bitmask DP (O(2^n * n)),
+    builds conflict graph, evaluates I(Omega, 2).
+
+    NOTE: For random tournaments, standard bitmask DP for H(T) is typically
+    faster because cycle-finding has the same O(2^n) cost plus independence
+    polynomial overhead. OCF is faster for STRUCTURED tournaments with
+    few odd cycles (e.g., near-transitive, Paley at small n, circulant).
+    """
+    n = len(T)
+    if n <= 1:
+        return 1
+
+    cycles = find_odd_cycles_dp(T)
+    if not cycles:
+        return 1
+
+    m = len(cycles)
+    vsets = [frozenset(c) for c in cycles]
+
+    # Build adjacency bitmasks for conflict graph
+    adj_bits = [0] * m
+    for a in range(m):
+        for b in range(a + 1, m):
+            if vsets[a] & vsets[b]:
+                adj_bits[a] |= 1 << b
+                adj_bits[b] |= 1 << a
+
+    max_indep = n // 3
+    total = 1 + 2 * m
+
+    if max_indep >= 2:
+        pairs = []
+        for a in range(m):
+            for b in range(a + 1, m):
+                if not (adj_bits[a] & (1 << b)):
+                    pairs.append((a, b))
+        total += 4 * len(pairs)
+
+        if max_indep >= 3:
+            triples = 0
+            for a, b in pairs:
+                for c in range(b + 1, m):
+                    if not (adj_bits[a] & (1 << c)) and not (adj_bits[b] & (1 << c)):
+                        triples += 1
+            total += 8 * triples
+
+            if max_indep >= 4:
+                quads = 0
+                for a, b in [(a, b) for a, b in pairs]:
+                    for c in range(b + 1, m):
+                        if not (adj_bits[a] & (1 << c)) and not (adj_bits[b] & (1 << c)):
+                            for d in range(c + 1, m):
+                                if (not (adj_bits[a] & (1 << d)) and
+                                    not (adj_bits[b] & (1 << d)) and
+                                    not (adj_bits[c] & (1 << d))):
+                                    quads += 1
+                total += 16 * quads
+
+                if max_indep >= 5:
+                    for size in range(5, max_indep + 1):
+                        count = _count_indep_sets_of_size(adj_bits, m, size)
+                        total += (2 ** size) * count
+
+    return total
+
+
+# ===================================================================
 # 5. Davis/Burnside formula for T(n)
 # ===================================================================
 
