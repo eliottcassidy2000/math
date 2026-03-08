@@ -287,6 +287,17 @@
 
 **Connection to loop quantum gravity:** The spin foam models of loop quantum gravity use labeled graphs and their amplitudes. A tournament with weighted arcs defines a spin foam amplitude. The independence polynomial I(Ω,x) at x=2 could be a partition function in this framework.
 
+#### 19. EHRHART THEORY: Independence Polytope of Omega(T)
+**Idea:** The independence polytope P_{Omega} of the conflict graph has vertices = characteristic vectors of independent sets. The Ehrhart polynomial of P_{Omega} is exactly I(Omega(T), x) evaluated at non-negative integers. So H(T) = I(Omega, 2) = |2P_{Omega} ∩ Z^n| counts lattice points in the second dilate. The Ehrhart reciprocity theorem: I(Omega, -x) = (-1)^dim * I_interior(Omega, x) connects I(Omega, -1) to interior lattice points.
+
+**Connection to parity:** H(T) = I(Omega, 2) is always odd. By Ehrhart theory, the h*-polynomial of P_{Omega} encodes the lattice-point distribution. Real-rootedness of I(Omega, x) (proved n<=8) implies unimodality of the h*-vector.
+
+#### 20. BIRKHOFF POLYTOPE: Tournament-Doubly Stochastic Connection
+**Idea:** A doubly stochastic matrix is a convex combination of non-identity permutation matrices iff its inner product with each generalized transitive tournament matrix is >= 1 (arXiv:2406.16284). This connects tournament matrices to the face structure of the Birkhoff polytope B_n. The permanent of a doubly stochastic matrix (van der Waerden conjecture, proved) gives lower bounds; tournament adjacency matrices A satisfy A + A^T = J - I, placing them in a specific affine slice of the Birkhoff polytope.
+
+#### 21. GRUJIC-STOJADINOVIC: Redei-Berge Hopf Algebra (arXiv:2402.07606)
+**Established connection (not speculative):** The Redei-Berge symmetric function U_T generates a combinatorial Hopf algebra on digraphs. The induced Redei-Berge polynomial satisfies deletion-contraction (like chromatic polynomial). Berge's theorem on Hamiltonian path parity is a consequence of the reciprocity formula. Tournaments are closed under restriction and products, generating a Hopf subalgebra. The forward-edge polynomial F(T,x) is the X-descent polynomial in this framework. Palindrome F_k = F_{n-1-k} follows from path reversal symmetry.
+
 ---
 
 ## VI. POLYNOMIAL OBJECTS
@@ -306,6 +317,9 @@
 | **D_k** | Σ_P C(forward(P), k) | D_k mod 2^{n−1−k} is universal | THM-H |
 | **k-fold partition identity** | Σ_{perms of 2k vertices} Π A[P_{2i-1}][P_{2i}] = (2k)!/2^k | PROVED (THM-I); key to universal congruence | opus-S35c11 |
 | **THM-J** (S universality criterion) | S mod 2^{n−1} is T-independent iff n−3 is 0 or 2^k | Via Legendre: v₂((n−3)!) = (n−3)−s₂(n−3); need s₂(n−3) ≤ 1 | opus-S35c11 |
+| **F(T,x)** (forward-edge polynomial) | Σ_P x^{fwd(P)} over all n! permutations | PALINDROMIC: F_k = F_{n−1−k} via path reversal | opus-S43b |
+| **Palindrome consequences** | H = F_0 = F_{n−1}; S = (−1)^{n−1}F(−1); D_1 = (n−1)/2·n! | Even n: F(−1)=0 ⟹ S=0 (Rédei). G(−1) = F(0) = H | opus-S43b |
+| **Eulerian polynomial connection** | F(T,x) = X-descent polynomial in Grujic-Stojadinovic Hopf | Connects to Redei-Berge Hopf algebra (arXiv:2402.07606) | opus-S43b |
 
 ---
 
@@ -333,9 +347,21 @@
 |-------|--------|--------|
 | H = 7 | IMPOSSIBLE for all n | THM-029: α₁=3 with i₂=0 forces extra cycles |
 | H = 21 | IMPOSSIBLE for all n | THM-079: Dichotomy + base cases |
-| H = 23 | OPEN — candidate gap | opus investigating (h23_achievability.c) |
+| H = 23 | ACHIEVABLE at n=6 | alpha=(1,11,0,0) or (1,9,1,0) — NOT a gap |
 | H even | IMPOSSIBLE at odd n | OCF: I(Ω,2) always odd when n odd |
 | H = 2 (mod 4) | OPEN at even n | Need systematic enumeration |
+
+### Alpha-Decomposition Constraints (kind-pasteur-S34)
+H = 1 + 2α₁ + 4α₂ + 8α₃ + ... where α_k = # independent sets of size k in Ω(T).
+
+| H | Required α-decompositions | Why impossible/possible |
+|---|--------------------------|------------------------|
+| 7 | (1,3,0,0) or (1,1,1,0) | THM-029: α₁=3 with i₂=0 ⟹ c₅≥1 ⟹ α₁≥4; (1,1,1,0) needs 1 cycle + 1 disjoint pair from 1 cycle = impossible |
+| 21 | 12 decompositions | All ruled out by THM-079 dichotomy |
+| 23 | (1,11,0,0), (1,9,1,0), etc. | ACHIEVABLE at n=6 |
+| n=5 | α₂ = 0 always (Ω complete) | I(Ω,2) = 1 + 2α₁ only |
+| n=6 | α₂ ∈ {0,1,2,4}; α₃ = 0 | First α₂ contribution appears |
+| n=7 | α₂ ∈ {0,1,...,7}; α₃ ∈ {0,1} | Full 3-level structure |
 
 ---
 
