@@ -1,0 +1,61 @@
+======================================================================
+REGULAR n=7 TOURNAMENT CLASSES: Path complex comparison
+======================================================================
+
+H=189:
+  Omega dims: [7, 21, 63, 147, 273, 315, 189, 0]
+  Betti: [1, 0, 0, 0, 6, 0, 0]
+  5-vertex sub H: {13: 21}
+  6-vertex sub H: {45: 7}
+  6-vertex sub Betti:
+    (0, 1, 2, 3, 4, 5): H=45, beta=[1, 0, 0, 1, 0]
+    (0, 1, 2, 3, 4, 6): H=45, beta=[1, 0, 0, 1, 0]
+    (0, 1, 2, 3, 5, 6): H=45, beta=[1, 0, 0, 1, 0]
+    (0, 1, 2, 4, 5, 6): H=45, beta=[1, 0, 0, 1, 0]
+    (0, 1, 3, 4, 5, 6): H=45, beta=[1, 0, 0, 1, 0]
+    (0, 2, 3, 4, 5, 6): H=45, beta=[1, 0, 0, 1, 0]
+    (1, 2, 3, 4, 5, 6): H=45, beta=[1, 0, 0, 1, 0]
+
+H=175:
+  Omega dims: [7, 21, 63, 147, 245, 287, 175, 0]
+  Betti: [1, 1, 0, 0, 0, 0, 0]
+  5-vertex sub H: {9: 7, 11: 7, 15: 7}
+  6-vertex sub H: {41: 7}
+  6-vertex sub Betti:
+    (0, 1, 2, 3, 4, 5): H=41, beta=[1, 1, 0, 0, 0]
+    (0, 1, 2, 3, 4, 6): H=41, beta=[1, 1, 0, 0, 0]
+    (0, 1, 2, 3, 5, 6): H=41, beta=[1, 1, 0, 0, 0]
+    (0, 1, 2, 4, 5, 6): H=41, beta=[1, 1, 0, 0, 0]
+    (0, 1, 3, 4, 5, 6): H=41, beta=[1, 1, 0, 0, 0]
+    (0, 2, 3, 4, 5, 6): H=41, beta=[1, 1, 0, 0, 0]
+    (1, 2, 3, 4, 5, 6): H=41, beta=[1, 1, 0, 0, 0]
+
+H=171:
+  Omega dims: [7, 21, 63, 147, 261, 303, 171, 0]
+  Betti: [1, 0, 0, 0, 0, 0, 0]
+  5-vertex sub H: {9: 3, 11: 6, 13: 6, 15: 6}
+  6-vertex sub H: {43: 6, 45: 1}
+  6-vertex sub Betti:
+    (0, 1, 2, 3, 4, 5): H=43, beta=[1, 0, 0, 0, 0]
+    (0, 1, 2, 3, 4, 6): H=43, beta=[1, 0, 0, 0, 0]
+    (0, 1, 2, 3, 5, 6): H=43, beta=[1, 0, 0, 0, 0]
+    (0, 1, 2, 4, 5, 6): H=43, beta=[1, 0, 0, 0, 0]
+    (0, 1, 3, 4, 5, 6): H=43, beta=[1, 0, 0, 0, 0]
+    (0, 2, 3, 4, 5, 6): H=43, beta=[1, 0, 0, 0, 0]
+    (1, 2, 3, 4, 5, 6): H=45, beta=[1, 1, 0, 0, 0]
+
+======================================================================
+KEY OBSERVATION
+======================================================================
+
+If H=189 (BIBD) has ALL 6-vertex sub-tournaments as H=45 maximizers,
+and 5-vertex sub-tournaments with specific H values, this constrains
+the path complex strongly.
+
+beta_4 = 6 means 6 independent 4-cycles in the path complex.
+The uniformity of the BIBD structure (vertex-transitive, all subtournaments
+identical) creates these topological features.
+
+The non-BIBD regular classes have heterogeneous subtournament structure,
+which kills the high-dimensional homology.
+

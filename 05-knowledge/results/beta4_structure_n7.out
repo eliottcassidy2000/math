@@ -1,0 +1,60 @@
+======================================================================
+PALEY T_7: Path complex structure
+======================================================================
+dim 0: 7 allowed paths
+dim 1: 21 allowed paths
+dim 2: 63 allowed paths
+dim 3: 147 allowed paths
+dim 4: 273 allowed paths
+dim 5: 315 allowed paths
+dim 6: 189 allowed paths
+dim 7: 0 allowed paths
+
+--- Boundary matrices ---
+partial_1: 7 x 21, rank = 6
+partial_2: 21 x 63, rank = 21
+partial_3: 63 x 147, rank = 63
+partial_4: 147 x 273, rank = 147
+partial_5: 273 x 315, rank = 267
+partial_6: 315 x 189, rank = 189
+
+--- Betti numbers (manual) ---
+beta_p = dim(ker partial_p) - dim(im partial_{p+1})
+      = (dim Omega_p - rank partial_p) - rank partial_{p+1}
+  beta_0 = 7 - 0 - 6 = 1
+  beta_1 = 21 - 6 - 21 = -6
+  beta_2 = 63 - 21 - 63 = -21
+  beta_3 = 147 - 63 - 147 = -63
+  beta_4 = 273 - 147 - 267 = -141
+  beta_5 = 315 - 267 - 189 = -141
+  beta_6 = 189 - 189 - 0 = 0
+
+======================================================================
+BETA_4 DECOMPOSITION
+======================================================================
+Omega_4: 273 allowed 4-paths (on 5 vertices each)
+Omega_5: 315 allowed 5-paths (on 6 vertices each)
+Omega_6: 189 allowed 6-paths (on 7 vertices = Ham paths)
+
+Distinct 5-vertex subsets with allowed 4-paths: 21
+Total 5-vertex subsets: 21
+4-paths per subset: {13: 21}
+
+Distinct 6-vertex subsets with allowed 5-paths: 7
+5-paths per subset: {45: 7}
+
+6-paths (Ham paths on 7 vertices): 189
+
+beta_4 = (273 - 147) - 267 = -141
+      = ker partial_4 (126) - im partial_5 (267)
+
+======================================================================
+NON-PALEY REGULAR n=7 TOURNAMENTS
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta4_structure_n7.py", line 199, in <module>
+    H = H_tournament(A, n)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta4_structure_n7.py", line 183, in H_tournament
+    dp[mask | (1 << nn)][u] += dp[mask][v] if (1 << nn) != (mask | (1 << u)) else 0
+    ~~^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
