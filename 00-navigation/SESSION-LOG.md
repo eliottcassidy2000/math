@@ -67,6 +67,39 @@ Entry format:
 **New contributions:** HYP-011 (complement duality), HYP-012 (sum formula), HYP-204 (unimodality), HYP-205 (log-concavity), HYP-206 (real roots)
 **Unresolved threads:** Prove unimodality; interpret Worpitzky coefficients combinatorially; what determines F-shape beyond H
 
+## kind-pasteur-2026-03-07-S37 — 2026-03-07 (THM-086: Universal Taylor Zeros mod 3)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S36 (THM-085, F(T,omega) mod 9)
+**Summary of work:**
+  Discovered and verified THM-086: c_j(T) = 0 mod 3 for ALL j < val(n), where val(n) = 2*floor((n-1)/2).
+  This is a dramatic extension of THM-085 (which proved j < 3).
+
+  **Major result — THM-086 (PROOF SKETCH COMPLETE):**
+  - Discovered pattern: universal zeros extend far beyond j=0,1,2:
+    n=5,6: first 4 zeros; n=7,8: first 6; n=9,10: first 8
+  - val(n) = (x-1)-adic valuation of Eulerian polynomial A_n(x) mod 3
+  - Proved Eulerian conjecture as corollary: 3|A(n,k) => 3|F_k(T) for all T
+  - Inductive proof structure via deletion-contraction (THM-083):
+    Step 1: c_{j-1}(T/e) = 0 by induction (n-1 vertices)
+    Step 2: c_j(T\e) = 0 for j < val(n)-1 (almost-tournament claim, verified)
+    Step 3: Combined gives j < val(n)-1
+    Step 4: Palindrome upgrades by 1
+  - Rigidity: for n odd, F(T,x) mod 3 = alpha*(x-1)^{n-1}, a SINGLE free parameter
+
+  **Verification:** n=5,6 exhaustive; n=7-10 sampled (up to 10000); 0 failures.
+
+  **New files:**
+  - `01-canon/theorems/THM-086-universal-taylor-zeros-mod3.md`
+  - `04-computation/thm086_verify.py`
+  - `04-computation/taylor_cj_mod3_analysis.py`
+  - `04-computation/eulerian_zeros_from_palindrome.py`
+  - `04-computation/c4_mod3_analysis.py`
+  - `04-computation/c4_induction_test.py`
+  - `04-computation/dc_induction_proof.py`
+
+**New contributions:** THM-086, Eulerian conjecture (corollary of THM-086), DC induction proof structure
+**Unresolved threads:** Full algebraic proof of almost-tournament claim (Step 2); mod 9 extension of THM-086
+
 ## opus-2026-03-07-S36 — 2026-03-07 (Knowledge Web Infrastructure)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c11

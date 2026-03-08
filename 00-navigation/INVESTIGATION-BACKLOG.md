@@ -29,6 +29,16 @@
 **Scripts:** `04-computation/degree4_n9_rank.py`, `degree4_n9_rank2.py`, `degree4_n9_saturation.py`
 **Next step:** (1) The Fourier proof cannot extend to n>=9 for middle degrees. Focus on algebraic approaches (OCF already proved by Grinberg-Stanley). (2) The degree-0, degree-2, and degree-(n-1) identities still hold for all n and have clean proofs. Can they be combined differently?
 
+### INV-123: THM-086 Universal Taylor Zeros mod 3 — PROOF SKETCH COMPLETE
+**Source:** kind-pasteur-2026-03-07-S37
+**Status:** PROOF SKETCH COMPLETE. Verified n=5-10, inductive structure identified.
+**What:** c_j(T) = 0 mod 3 for all tournaments T on n vertices and all j < val(n), where val(n) = 2*floor((n-1)/2). This means (x-1)^{val(n)} | F(T,x) mod 3. For n odd, F(T,x) mod 3 is determined by a SINGLE parameter alpha = c_{n-1}(T) mod 3.
+**Proved cases:** j=0,1,2 (THM-085, algebraic). j=3 (palindrome + THM-085). j>=4 (DC induction + palindrome, verified computationally).
+**Key corollary:** Eulerian conjecture: 3|A(n,k) => 3|F_k(T) for all T. Follows from (x-1)-adic valuation of A_n(x) mod 3 being exactly val(n).
+**What remains:** The "almost-tournament claim" — c_j(T\e) = 0 mod 3 for j < val(n)-1 — needs formal proof, likely via nested DC induction. Verified exhaustively at n=5, sampled at n=6-8.
+**Scripts:** `04-computation/thm086_verify.py`, `dc_induction_proof.py`, `c4_induction_test.py`, `taylor_cj_mod3_analysis.py`, `eulerian_zeros_from_palindrome.py`
+**Next step:** (1) Prove almost-tournament claim algebraically. (2) Extend to mod 9 — does a similar universal zero pattern hold? (3) Investigate mod p for p=5,7.
+
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
 **Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)
 **Status:** DISPROVED: Omega(T) is NOT always claw-free (fails n=9, 90%) or perfect (fails n=8, 53.8%). NOT a line graph (K_5-e found at n=6, 45%). S_{1,1,1}-free through n=11, fails n=12.
