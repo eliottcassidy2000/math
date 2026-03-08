@@ -1,0 +1,102 @@
+======================================================================
+BETA3=1 TOURNAMENT STRUCTURE: n=6
+======================================================================
+Total beta3>0: 320
+
+--- Score (1,1,1,4,4,4): 80 tournaments ---
+Count: 80
+c3 values: {2}
+
+Example: bits=87
+  [0, 1, 1, 1, 0, 1]  (out-deg=4)
+  [0, 0, 0, 1, 0, 0]  (out-deg=1)
+  [0, 1, 0, 0, 0, 0]  (out-deg=1)
+  [0, 0, 1, 0, 0, 0]  (out-deg=1)
+  [1, 1, 1, 1, 0, 0]  (out-deg=4)
+  [0, 1, 1, 1, 1, 0]  (out-deg=4)
+
+Low-outdeg vertices: [1, 2, 3], High-outdeg: [0, 4, 5]
+Edges from high to low:
+  0->1: 1
+  0->2: 1
+  0->3: 1
+  4->1: 1
+  4->2: 1
+  4->3: 1
+  5->1: 1
+  5->2: 1
+  5->3: 1
+Edges within low:
+  1->2: 0
+  1->3: 1
+  2->1: 1
+  2->3: 0
+  3->1: 0
+  3->2: 1
+Edges within high:
+  0->4: 0
+  0->5: 1
+  4->0: 1
+  4->5: 0
+  5->0: 0
+  5->4: 1
+
+Complement scores: (1, 1, 1, 4, 4, 4)
+
+
+--- Score (2,2,2,3,3,3): 240 tournaments ---
+Count: 240
+c3 values: {8}
+
+Example: bits=1332
+  [0, 0, 0, 1, 0, 1]  (out-deg=2)
+  [1, 0, 1, 0, 0, 1]  (out-deg=3)
+  [1, 0, 0, 0, 1, 0]  (out-deg=2)
+  [0, 1, 1, 0, 0, 0]  (out-deg=2)
+  [1, 1, 0, 1, 0, 0]  (out-deg=3)
+  [0, 0, 1, 1, 1, 0]  (out-deg=3)
+
+Total (2,2,2,3,3,3) tournaments: 2640
+
+Distinguishing properties:
+  c3 for beta3=1: {8: 240}
+  c3 for beta3=0: {8: 2400}
+
+======================================================================
+ISOMORPHISM CLASSES
+======================================================================
+
+(1,1,1,4,4,4) isomorphism classes:
+  Number of iso classes: 1
+  Size 80
+
+(2,2,2,3,3,3) beta3=1 iso classes:
+  Iso classes from first 30: 1
+  Size 30
+
+======================================================================
+STRUCTURAL ANALYSIS
+======================================================================
+
+(1,1,1,4,4,4) induced subtournaments:
+  bits=87: high_c3=1, low_c3=1, h->l=9, l->h=0
+  bits=356: high_c3=1, low_c3=1, h->l=9, l->h=0
+  bits=567: high_c3=1, low_c3=1, h->l=9, l->h=0
+  bits=866: high_c3=1, low_c3=1, h->l=9, l->h=0
+  bits=1278: high_c3=1, low_c3=1, h->l=9, l->h=0
+
+======================================================================
+COMPLEMENT AND REVERSAL
+======================================================================
+  bits=87: comp_scores=(1, 1, 1, 4, 4, 4), conv_scores=(1, 1, 1, 4, 4, 4)
+    complement in beta3=1: True
+    converse in beta3=1: True
+  bits=356: comp_scores=(1, 1, 1, 4, 4, 4), conv_scores=(1, 1, 1, 4, 4, 4)
+    complement in beta3=1: True
+    converse in beta3=1: True
+  bits=567: comp_scores=(1, 1, 1, 4, 4, 4), conv_scores=(1, 1, 1, 4, 4, 4)
+    complement in beta3=1: True
+    converse in beta3=1: True
+
+
+Done.
