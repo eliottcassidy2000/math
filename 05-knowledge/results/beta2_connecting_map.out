@@ -1,0 +1,14 @@
+======================================================================
+CONNECTING MAP INJECTIVITY CHECK
+Check: dim H_2(T,T\v) = dim ker(H_1(T\v)->H_1(T))
+======================================================================
+
+--- n=4 exhaustive ---
+  n=4: matches=256, mismatches=0 (0s)
+  delta injective for all: YES
+
+--- n=5 exhaustive ---
+  n=5: matches=5120, mismatches=0 (4s)
+  delta injective for all: YES
+
+Done.

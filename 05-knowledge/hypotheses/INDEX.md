@@ -48,6 +48,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-116 | Contiguous block decomposition | Dead end | - | T035 |
 | HYP-117 | Per-vertex decomposition of unmatched counts | Dead end | - | T045 |
 | HYP-118 | Cycle bijection under arc reversal | Dead end | - | MISTAKE-005 |
+| HYP-213 | H_2(T,T\v) = 0 for all tournaments T, all v | BUG in verification (MISTAKE-016); ker(d_2^rel) underestimated | n=4 | beta2_relative_debug.py |
 
 ### OPEN
 | ID | Statement | Current evidence | Source |
@@ -58,7 +59,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-210 | β_{n-4}>0 for odd-n H-maximizers | β₁=1 (n=3,5), β₄=6 (n=7), β₅=10 (n=9) | THM-099 (S41 update) |
 | HYP-211 | Odd-n H-maximizer hereditary: all del's give n-1 maximizer | n=3,5,7,9 ✓ (regular maximizers only) | n9_max_betti_quick.py |
 | HYP-212 | β_top = (n-1) + δ where δ=0 for prime n, δ>0 for composite | P₇: 6=6+0, Z₉: 10=8+2. Eigenspace decomposition: trivial gives δ, non-trivial each give 1 | n9_beta5_eigenspace.py |
-| HYP-213 | H_2(T,T\v) = 0 for all tournaments T, all vertices v | Exhaustive n=5,6 (verified 100%) | beta2_relative_homology.py |
+| HYP-213 | H_2(T,T\v) = 0 for all tournaments T, all vertices v | **REFUTED** — BUG in verification (MISTAKE-016). n=4: 16/256, n=5: 840/5120, n=6: 35328/196608 | beta2_relative_debug.py |
 | HYP-214 | Paley P_p has β_{p-3} = p-1 (d=p-3 pattern) | Verified p=7,11 | paley_path_homology_theory.md |
 | HYP-215 | DT alone fills all Z_2 at n=5 | 1024/1024 (100%) | beta2_hamiltonian_homotopy.py |
 | HYP-216 | Tight β_2 cases (surplus=1) = β_3=1 tournaments | 80/80 at n=6 (100%) | beta2_tight_cases.py |
@@ -82,6 +83,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-224 | Edge removal from tournament creates β₂>0 only if cycle uses both endpoints | 80/80 events at n=5: unfillable 2-cycle always involves u AND v | beta2_edge_removal_anatomy.py |
 | HYP-225 | DT-only deficit at n=6 is exactly 1 (rk=9 in dim-10 Z₂) | ALL 960 deficit cases: score (1,2,2,3,3,4) or (2,2,2,3,3,3), |DT|=9 | beta2_dt_deficit_analysis.py |
 | HYP-226 | ∃ vertex v with β₁(T\v) ≤ β₁(T) for every tournament T | Exhaustive n=5 (1024/1024) | beta2_relative_correct.py |
+| HYP-231 | δ: H_2(T,T\v) → H_1(T\v) injective for all T,v (equiv to β₂=0 + induction) | Exhaustive n=4,5 (256+5120 pairs, 0 mismatches) | beta2_connecting_map.py |
+| HYP-232 | DT deficit gap ≤ 2 at n=7,8 | Gap distribution: n=7: 91.6% gap=0, 7.7% gap=1, 0.6% gap=2; n=8 similar | beta2_dt_deficit_n7.py |
 
 ---
 

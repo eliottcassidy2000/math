@@ -578,3 +578,46 @@ Whether a non-circulant DRT exists at n=11 remains an open question. At prime or
 
 ### Lesson
 When constructing a circulant tournament from a connection set S ⊂ Z_p^*, ALWAYS verify S ∩ (-S mod p) = ∅. A (v,k,λ)-difference set is NOT automatically a valid tournament connection set.
+
+---
+
+## MISTAKE-016: Wrong formula for ker(d_2^rel) in relative homology
+
+**Date discovered:** 2026-03-08 (kind-pasteur-S41)
+**Found by:** kind-pasteur-S41, via manual computation contradicting script output
+**Affects:** beta2_relative_homology.py, beta2_relative_correct.py; HYP-213 verification
+
+### What was assumed
+The script `beta2_relative_homology.py` computed ker(∂_2^rel) as:
+  `(ker ∂_2 + V_2) / V_2`
+where V_2 = Ω_2(T\v) (non-v subspace of Ω_2).
+
+### Why it was wrong
+The correct formula for ker(∂_2^rel) in the quotient complex Ω_*/V_* is:
+  `∂_2^{-1}(V_1) / V_2`
+where V_1 = Ω_1(T\v) (non-v arcs). This is the preimage of V_1 modulo V_2.
+
+The wrong formula misses elements x ∈ Ω_2 whose boundary ∂_2(x) is NONZERO but lies entirely in V_1 (non-v arcs). Such elements are relative 2-cycles but NOT absolute 2-cycles.
+
+Concretely: P_v ∘ ∂_2(x) = 0 (projection of boundary onto v-arcs vanishes), but ∂_2(x) ≠ 0.
+
+### The correct framing
+ker(∂_2^rel) = dim(Ω_2) - rk(M) - dim(V_2), where M = ∂_2|_{Ω_2} restricted to rows of v-arcs.
+
+This correctly counts the preimage of V_1 in Ω_2.
+
+### Impact
+- **HYP-213 is REFUTED**: H_2(T, T\v) > 0 for many (T,v) pairs at n ≥ 4.
+  - n=4: 16/256 pairs (6.25%)
+  - n=5: 840/5120 pairs (16.4%)
+  - n=6: 35,328/196,608 pairs (18%)
+- The proposed inductive proof of β_2 = 0 via H_2(T,T\v) = 0 does NOT work.
+- However, β_2 = 0 itself is NOT affected — it remains computationally verified.
+- The connecting map δ: H_2(T,T\v) → H_1(T\v) is always injective (verified n=4,5), consistent with β_2 = 0 via the long exact sequence.
+
+### Lesson
+When computing relative homology H_*(X, A) via quotient complexes:
+1. ker(∂_p^{rel}) is NOT (ker ∂_p + C_*(A)) / C_*(A).
+2. ker(∂_p^{rel}) = ∂_p^{-1}(C_{p-1}(A)) / C_p(A).
+3. These differ whenever there are elements whose boundary is nonzero but lands in the sub-complex.
+4. Always verify relative homology against the long exact sequence.
