@@ -1,0 +1,69 @@
+======================================================================
+DT FILLING DEFICIT AT n=7 (sampled)
+======================================================================
+  500/3000 (4s), max_deficit=2, cancel_fails=0
+  1000/3000 (7s), max_deficit=2, cancel_fails=0
+  1500/3000 (11s), max_deficit=2, cancel_fails=0
+  2000/3000 (14s), max_deficit=2, cancel_fails=0
+  2500/3000 (18s), max_deficit=2, cancel_fails=0
+
+Done in 21s
+DT deficit distribution: {np.int64(0): 2721, np.int64(1): 257, np.int64(2): 22}
+Max deficit: 2
+Cancel fails: 0
+DT + cancellation fills ALL Z_2!
+
+High-deficit examples:
+  scores=(2, 2, 3, 3, 3, 4, 4), deficit=1, Z2=24, DT=25, rk_DT=23, Om3=50
+  scores=(2, 2, 3, 3, 3, 4, 4), deficit=2, Z2=24, DT=25, rk_DT=22, Om3=50
+
+======================================================================
+DT FILLING DEFICIT AT n=8 (sampled)
+======================================================================
+  200/1000 (4s), max_deficit=1, cancel_fails=0
+  400/1000 (7s), max_deficit=2, cancel_fails=0
+  600/1000 (11s), max_deficit=2, cancel_fails=0
+  800/1000 (16s), max_deficit=3, cancel_fails=0
+
+Done in 20s
+DT deficit distribution: {np.int64(0): 904, np.int64(1): 88, np.int64(2): 7, np.int64(3): 1}
+Max deficit: 3
+Cancel fails: 0
+DT + cancellation fills ALL Z_2 at n=8!
+
+======================================================================
+DT COUNT FORMULA
+======================================================================
+n=4 tournaments: c_3 by score sequence
+  (0, 1, 2, 3): c_3 in {0}
+  (0, 2, 2, 2): c_3 in {1}
+  (1, 1, 1, 3): c_3 in {1}
+  (1, 1, 2, 2): c_3 in {2}
+
+n=4: DT paths by (score, c_3)
+  ((0, 1, 2, 3), 0): avg DT = 1.0 (24 tournaments)
+  ((0, 2, 2, 2), 1): avg DT = 0.0 (8 tournaments)
+  ((1, 1, 1, 3), 1): avg DT = 0.0 (8 tournaments)
+  ((1, 1, 2, 2), 2): avg DT = 1.0 (24 tournaments)
+
+======================================================================
+KEY: DT paths per 4-vertex sub-tournament
+======================================================================
+
+Checking DT count per 4-vertex sub-tournament:
+  c_3=0: avg DT = 1.00 (24 tournaments)
+  c_3=1: avg DT = 0.00 (16 tournaments)
+  c_3=2: avg DT = 1.00 (24 tournaments)
+
+Does c_3 = 1 contribute DT paths?
+
+======================================================================
+FORMULA: |DT| as function of combinatorial invariants
+======================================================================
+  bits=0: |DT|=5, t4=5, non-trans contribution=0
+  bits=1: |DT|=5, t4=5, non-trans contribution=0
+  bits=2: |DT|=3, t4=3, non-trans contribution=0
+  bits=3: |DT|=5, t4=5, non-trans contribution=0
+  bits=4: |DT|=3, t4=2, non-trans contribution=1
+
+Done.
