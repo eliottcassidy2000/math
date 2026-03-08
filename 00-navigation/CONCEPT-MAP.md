@@ -178,6 +178,10 @@
 | **Matching theory** | 3-cycle matchings ↔ hypergraph matching | Strong | Frankl, Lichiardopol |
 | **Spectral graph theory** | Gauss sums in Paley tournament eigenvalues | Medium | T024 |
 | **Design theory (BIBD)** | Regular tournament 3-cycles as block designs | Strong | THM-027 |
+| **Walsh/Fourier analysis** | Spectral OCF: hat{H}[S] = Σ cycle Walsh terms; counting identity | Strong | THM-077, THM-081 |
+| **GLMY path homology** | Digraph homology; Tang-Yau Fourier on circulant digraphs | Medium | arXiv:2602.04140 |
+| **Root polytope / h*-polynomial** | Deletion-contraction monotonicity for digraph polytopes | Speculative | Kálmán-Tóthmérész 2024 |
+| **Oriented matroid circuits** | Tournament cycles = circuits of oriented matroid on K_n | Medium | arXiv:2501.00108 |
 
 ### Speculative / Novel Connections (kind-pasteur-S34)
 
@@ -325,6 +329,41 @@
 #### 21. GRUJIC-STOJADINOVIC: Redei-Berge Hopf Algebra (arXiv:2402.07606)
 **Established connection (not speculative):** The Redei-Berge symmetric function U_T generates a combinatorial Hopf algebra on digraphs. The induced Redei-Berge polynomial satisfies deletion-contraction (like chromatic polynomial). Berge's theorem on Hamiltonian path parity is a consequence of the reciprocity formula. Tournaments are closed under restriction and products, generating a Hopf subalgebra. The forward-edge polynomial F(T,x) is the X-descent polynomial in this framework. Palindrome F_k = F_{n-1-k} follows from path reversal symmetry.
 
+#### 22. GLMY PATH HOMOLOGY OF TOURNAMENTS (Grigoryan-Lin-Muranov-Yau)
+**Established theory (2012+):** GLMY path homology is a homology theory specifically for digraphs. Defines a path complex where chains are formal sums of directed paths. Has Künneth formula, homotopy invariance, Mayer-Vietoris. Tang-Yau (2026, arXiv:2602.04140) compute path homology of circulant digraphs using Fourier decomposition — directly applicable to Paley tournaments T_p (which are circulant). Their "symbol-matrix recipe" uses the shift automorphism τ, and results depend on whether n is prime (exactly the Paley case!).
+
+**Connection to OCF:** Path homology detects cycles in directed paths. The boundary map ∂ on 2-chains maps directed triangles → edges. The kernel and image of ∂ encode exactly the cycle structure that OCF uses. H_1(T) (first path homology) should relate to the cycle space of T — and thus to Ω(T) and α_1.
+
+**Testable conjecture:** rank(H_1(T)) = α_1(T) = # independent odd cycles? Or dim(H_1) = c_3(T)?
+
+**Status:** STRONG LEAD — path homology is the natural homological framework for directed cycles.
+
+#### 23. EXTENDED ROOT POLYTOPE AND DELETION-CONTRACTION (Kálmán-Tóthmérész 2024)
+**Paper:** arXiv:2409.18902. The extended root polytope of a directed graph has h*-polynomial coefficients that are MONOTONE under deletion and contraction: they never increase. This is a digraph version of the matroid minor monotonicity.
+
+**Connection:** The Mitrovic deletion-contraction for W_X (connection 19/DC framework) operates on the Rédei-Berge function. The Kálmán-Tóthmérész deletion-contraction operates on the h*-polynomial of the root polytope. If these two deletion-contraction relations are COMPATIBLE, the h*-polynomial of the root polytope of T should encode information about H(T).
+
+**Testable:** Compute the extended root polytope of small tournaments and check if its h*-polynomial relates to I(Ω(T), x).
+
+#### 24. CONVERSE INVARIANT DIGRAPH POLYNOMIALS (Ai-Gutin-Lei-Yeo-Zhou 2024)
+**Paper:** arXiv:2407.17051. Introduces a new digraph polynomial to give necessary conditions for an oriented graph to be converse invariant (# copies of D in T = # copies of -D for all tournaments T). They characterize which tree orientations are converse invariant.
+
+**Connection:** H(T) = H(T^op) means Hamiltonian paths are converse invariant. The authors' polynomial tests this for all substructures simultaneously. Their polynomial could encode the FULL structure that determines H, not just the path count.
+
+#### 25. SYMMETRIC EDGE POLYTOPES OF TOURNAMENTS
+**Background:** The symmetric edge polytope (SEP) of a graph G has vertices {e_i - e_j : ij ∈ E(G)} ∪ {e_j - e_i : ij ∈ E(G)}. For a tournament T, every edge appears in exactly ONE direction, so the SEP simplifies: vertices = {e_i - e_j : i→j in T}. This is a subset of the full K_n SEP.
+
+**Connection to Ehrhart:** Davis-Higashitani-Ohsugi (2024, arXiv:2401.03383) study generalized SEPs via regular matroids. The h*-polynomial is symmetric. The Ohsugi-Tsuchiya conjecture (γ-nonnegativity for graph SEPs) could constrain tournament arc structure.
+
+**Novel idea:** The volume of the tournament SEP might encode H(T). The symmetric edge polytope of K_n has volume n^{n-2} (Cayley formula analog). For tournament subpolytopes, the volume might factor through OCF.
+
+#### 26. ORIENTED MATROID CIRCUIT POLYTOPES
+**Background:** arXiv:2501.00108 (2025) studies polytopes from signed circuits of oriented matroids. A tournament defines an oriented matroid on the complete graph edges. The circuit polytope captures the cycle structure algebraically.
+
+**Connection:** The circuits of the tournament oriented matroid are exactly the DIRECTED CYCLES — the vertices of Ω(T). So the circuit polytope is a geometric realization of the cycle data that I(Ω,x) encodes combinatorially.
+
+**Testable:** Compute the circuit polytope for small tournament oriented matroids and check if Ehrhart polynomial = I(Ω, x) or a transform thereof.
+
 ---
 
 ## VI. POLYNOMIAL OBJECTS
@@ -337,7 +376,9 @@
 | **P(u, x)** | Reduced polynomial from G_T | p_m(x) = I(Ω(T), x) as leading coeff | S28 |
 | **Q_T(w)** | Size-weighted I.P.: u_T(√w)/√w | All real roots n≤8; fails n≥9 with I(Ω) | THM-078 |
 | **W(z)** | Walsh generating function | W(i/2) = (−2)^m p_0(2) | THM-064 |
-| **M[a,b]** (transfer matrix entry) | Σ_S (−1)^|S| E_a(S)·B_b(R\S) | Symmetric; Walsh spectrum has 2^s factors | THM-030, THM-080 |
+| **M[a,b]** (transfer matrix entry) | Σ_S (−1)^|S| E_a(S)·B_b(R\S) | Symmetric; Walsh spectrum has 2^s factors; det(M)≠0 at n=5 | THM-030, THM-080 |
+| **hat{t_k}[S]** (Walsh cycle spectrum) | (1/2^k) Σ_{k-cycles C⊇S} (−1)^{asc(S,C)} | Each cycle contributes ±1/2^k; sign from traversal geometry | THM-081 |
+| **hat{H}[S]** (Walsh of H) | (−1)^{asc(S)} · 2^r · (n−d)!/2^{n−1} | Spectral OCF: equals 2·hat{t3}[S] + 2·hat{t5}[S] + 4·hat{α₂}[S] + ... | THM-077, THM-081 |
 | **E_T^perm(t)** | All-permutation forward-edge polynomial | G_T(t; 2,2,...) specialization | S28 |
 | **S(T)** (signed HP permanent) | Σ_P Π B[P_i][P_{i+1}], B=2A−1 | S=0 at even n; S mod 2^{n−1} universal | THM-A through THM-H |
 | **W(r)** (W-polynomial) | tr(M(r)); only even r-powers | c_{n−1}=n!, c_{n−3} depends on t₃ | signed-hp-permanent-skeleton |
@@ -373,7 +414,7 @@
 | Value | Status | Method |
 |-------|--------|--------|
 | H = 7 | IMPOSSIBLE for all n | THM-029: α₁=3 with i₂=0 forces extra cycles |
-| H = 21 | IMPOSSIBLE for all n | THM-079: Dichotomy + base cases |
+| H = 21 | IMPOSSIBLE for all n | THM-079: Dichotomy + poisoning graph + base cases n≤8 exhaustive |
 | H = 23 | ACHIEVABLE at n=6 | alpha=(1,11,0,0) or (1,9,1,0) — NOT a gap |
 | H even | IMPOSSIBLE at odd n | OCF: I(Ω,2) always odd when n odd |
 | H = 2 (mod 4) | OPEN at even n | Need systematic enumeration |
@@ -442,6 +483,51 @@ The 2-adic valuation v₂((n-3)!) = (n-3) − s₂(n-3) where s₂ is binary dig
 | MISTAKE-011 | Paley at p ≡ 1 mod 4 | Only p ≡ 3 mod 4 |
 | MISTAKE-013 | VT ⟹ SC | FALSE at n=21 (Frobenius) |
 | MISTAKE-014 | Scalar M for all VT | Only SC VT at odd n |
+
+---
+
+## XI. WALSH/FOURIER ANALYSIS (opus S35c series — MAJOR)
+
+### Spectral OCF (THM-081)
+The Walsh spectrum of directed k-cycle count hat{t_k}[S] = (1/2^k) Σ_{C⊇S} (-1)^{asc(S,C)} where asc(S,C) counts edges in S traversed small→large by C. This transforms OCF into a SPECTRAL IDENTITY:
+
+hat{H}[S] = 2·hat{t3}[S] + 2·hat{t5}[S] + ... + 4·hat{α₂}[S] + 8·hat{α₃}[S] + ...
+
+**Counting identity (new proof path):** Equating THM-077 and THM-081:
+Σ_k (1/2^{k-1}) Σ_{C⊇S} (-1)^{asc(S,C)} = (-1)^{asc(S)} · 2^r · (n-d)!/2^{n-1}
+
+This is a PURELY COMBINATORIAL identity. Proving it algebraically gives a new, independent proof of OCF.
+
+**Key uniformity (n=5):** For every P2 monomial, signed 3-cycle count N₃ = -2 and signed 5-cycle count N₅ = -4. This uniformity suggests structural explanation.
+
+**Product independence:** Vertex-disjoint cycle k-tuples FACTOR in Walsh domain: E[I_{C₁}·I_{C₂}·χ_S] = E[I_{C₁}·χ_{S₁}]·E[I_{C₂}·χ_{S₂}]. Key for α₂ terms (bc33).
+
+### Transfer Matrix Walsh Spectrum (THM-080)
+hat{M[a,b]}[S] = (-1)^{asc_root} · 2^s · (n-2-d)!/2^{n-2}
+- s = number of unrooted even-length components (bug fix: was missing 2^s factor)
+- Parity: |S| ≡ n (mod 2) — odd support at odd n, even support at even n
+- Row sum cancellation: Σ_b hat{M[a,b]}[S] = 0 for monomials not touching a
+- det(M) ≠ 0 CONJECTURED (verified exhaustive n=5)
+- M[a,b](T^op) = (-1)^n · M[a,b](T)
+
+### Cycle-Rich Tournament Analysis
+| n | Min H (cycle-rich) | Growth | Method |
+|---|-------------------|--------|--------|
+| 8 | 25 | — | Exhaustive |
+| 9 | 45 | +20 | 153k sample |
+| 10 | 75 | +30 | 192M sample |
+
+**Definition (novel — not in literature):** T is *cycle-rich* if every vertex is in some directed 3-cycle (equivalently: no vertex with in-degree 0 or n-1 to all others). Key lemma: vertex in no 3-cycle ⟹ in no cycle of any odd length (layered structure).
+
+### H-Gap Conjecture (opus S43)
+**CONJECTURE:** H=7 and H=21 are the ONLY permanent gaps in the odd-integer H-spectrum.
+
+Evidence:
+- All n=7 gaps (63, 107, 119, 149, 161-169, 173) fill at n=8
+- n=8 partial exhaustive (18.6%): only H=7 and H=21 missing in [1, 300]
+- n=9 sampling (2M): only H=7 and H=21 missing in [1, 200]
+- For w ≥ 13, the number of graph-feasible alpha-decompositions (20+) makes blocking all of them seem impossible
+- Grinberg-Stanley Theorem 7.1: H(T) ≡ 1 + 2·(# odd cycles) mod 4
 
 ---
 
