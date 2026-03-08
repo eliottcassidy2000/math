@@ -1356,3 +1356,28 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Status:** VERIFIED
 **What:** THM-094 (F mod 2 universal) implies all integer moment sums n!·E[fwd^r] ≡ 0 mod 2 for n≥3. Root cause: OCF evaluates at x=2 ≡ 0 mod 2, so I(Ω,2) mod 2 = I(Ω,0) = 1, giving H ≡ 1 = Rédei. Combined with THM-086 (mod 3 zeros), all moments vanish mod 6 for n≥3.
 **Scripts:** `mod2_cumulant_connection.py`
+
+### INV-133: Tang-Yau Circulant Path Homology (arXiv:2602.04140)
+**Source:** opus-2026-03-07-S46e (web research)
+**Status:** NEW LEAD
+**What:** Tang-Yau (Feb 2026) compute GLMY Betti numbers of circulant digraphs using Fourier decomposition via shift automorphism. Additive structure of connection set S governs low-dimensional chains. Could be adapted to circulant tournaments (odd n, S={1,...,(n-1)/2}).
+**Next step:** Read paper. Check if their Fourier method can prove β₂=0 for tournament subclass.
+
+### INV-134: GLMY Torsion-Zeta Bridge
+**Source:** opus-2026-03-07-S46e (web research)
+**Status:** NEW LEAD
+**What:** Grigoryan-Muranov define Reidemeister/analytic torsion on digraphs via path homology Hodge Laplacian, proving Cheeger-Müller analogue. Torsion invariants are classically expressible through zeta-type regularized determinants. This could connect the Ihara/Bartholdi zeta of a tournament to its path homology.
+**References:** arXiv:2012.07302, grigor/torsion.pdf
+**Next step:** Investigate whether Bartholdi zeta of a tournament encodes path homology info.
+
+### INV-135: Asao — Transitive Tournaments Have Trivial Path Homology
+**Source:** opus-2026-03-07-S46e (web research, arXiv:2503.06722)
+**Status:** CONFIRMED (known)
+**What:** Asao (March 2025) proves transitive tournaments are "regularly diagonal" digraphs with vanishing reduced regular path homology. Confirms our computational finding that transitive tournaments have β=(1,0,...,0).
+**Impact:** Provides a published reference for one endpoint of the topological trichotomy.
+
+### INV-136: Chaplin — Random Digraph β₁ Phase Transitions
+**Source:** opus-2026-03-07-S46e (web research, arXiv:2111.13493)
+**Status:** NEW LEAD
+**What:** Chaplin (2022) shows β₁ of random Erdős-Rényi digraphs has two phase transitions. Since tournaments are "density 1/2" digraphs, this places them in a specific regime. Could explain why ~30% of tournaments at n=5 have β₁>0.
+**Next step:** Check if their density threshold matches tournament β₁ fraction.

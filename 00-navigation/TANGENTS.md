@@ -626,3 +626,12 @@ HIDDEN INVARIANT: Path homology β₁ is NOT determined by (F-poly, t₃, score,
 
 **T196** #mod2 #OCF #redei #cumulant | certainty: high | source: opus-2026-03-07-S46e
 MOD-2 CUMULANT COLLAPSE: THM-094 (F mod 2 universal) implies n!·E[fwd^r] ≡ 0 mod 2 for all r≥1 and n≥3. This follows because OCF evaluates at x=2, and I(Ω,2) mod 2 = I(Ω,0) = 1 (independent of Ω), giving H ≡ 1 mod 2 = Rédei. The entire cumulant hierarchy collapses mod 2.
+
+**T197** #ihara-zeta #torsion #path-homology | certainty: speculative | source: opus-2026-03-07-S46e (web)
+TORSION-ZETA BRIDGE: Grigoryan-Muranov (arXiv:2012.07302) define Reidemeister/analytic torsion on digraphs via GLMY path homology Hodge Laplacian. Torsion = regularized determinant of Laplacian = zeta-type object. For tournaments, the Bartholdi zeta function could encode path homology data. No one has computed Ihara/Bartholdi zeta specifically for tournaments.
+
+**T198** #circulant #fourier #path-homology | certainty: medium | source: opus-2026-03-07-S46e (web)
+CIRCULANT FOURIER METHOD: Tang-Yau (arXiv:2602.04140, Feb 2026) compute GLMY Betti numbers of circulant digraphs via Fourier decomposition. Circulant tournaments (Paley type at prime n) are a natural test case. Their method could prove β₂=0 for this subclass.
+
+**T199** #random-digraph #phase-transition #beta1 | certainty: medium | source: opus-2026-03-07-S46e (web)
+RANDOM DIGRAPH β₁ TRANSITIONS: Chaplin (arXiv:2111.13493) shows β₁ of Erdős-Rényi digraphs has two phase transitions. Tournaments at density=1/2 sit in a specific regime. At n=5: 304/1024 = 29.7% have β₁>0. This could be explained by Chaplin's framework.
