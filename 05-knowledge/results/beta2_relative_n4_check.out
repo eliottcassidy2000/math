@@ -1,0 +1,17 @@
+======================================================================
+RELATIVE HOMOLOGY AT n=3 and n=4
+======================================================================
+
+--- n=3 exhaustive ---
+  Total pairs: 24
+  H_2^rel > 0 violations: 0
+
+--- n=4 exhaustive ---
+  Total pairs: 256
+  H_2^rel > 0 violations: 0
+
+--- n=5 exhaustive ---
+  Total pairs: 5120
+  H_2^rel > 0 violations: 0
+
+Done.

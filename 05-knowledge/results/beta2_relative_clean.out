@@ -1,0 +1,121 @@
+======================================================================
+CLEAN RELATIVE COMPLEX ANALYSIS
+======================================================================
+
+--- n=5 exhaustive (1024 tournaments) ---
+
+  (d_v, dim_O2_rel, ker_d2_rel, im_d3_rel, H2_rel): count
+    d_v=0: dim_O2_rel=6, ker=2, im=2, H2_rel=0, count=120
+    d_v=0: dim_O2_rel=6, ker=3, im=3, H2_rel=0, count=200
+    d_v=1: dim_O2_rel=5, ker=2, im=2, H2_rel=0, count=240
+    d_v=1: dim_O2_rel=5, ker=3, im=3, H2_rel=0, count=160
+    d_v=1: dim_O2_rel=6, ker=2, im=2, H2_rel=0, count=240
+    d_v=1: dim_O2_rel=6, ker=3, im=3, H2_rel=0, count=520
+    d_v=1: dim_O2_rel=7, ker=4, im=4, H2_rel=0, count=120
+    d_v=2: dim_O2_rel=5, ker=2, im=2, H2_rel=0, count=600
+    d_v=2: dim_O2_rel=6, ker=2, im=2, H2_rel=0, count=120
+    d_v=2: dim_O2_rel=6, ker=3, im=3, H2_rel=0, count=720
+    d_v=2: dim_O2_rel=6, ker=4, im=4, H2_rel=0, count=120
+    d_v=2: dim_O2_rel=7, ker=4, im=4, H2_rel=0, count=360
+    d_v=3: dim_O2_rel=5, ker=2, im=2, H2_rel=0, count=240
+    d_v=3: dim_O2_rel=5, ker=3, im=3, H2_rel=0, count=160
+    d_v=3: dim_O2_rel=6, ker=2, im=2, H2_rel=0, count=240
+    d_v=3: dim_O2_rel=6, ker=3, im=3, H2_rel=0, count=520
+    d_v=3: dim_O2_rel=7, ker=4, im=4, H2_rel=0, count=120
+    d_v=4: dim_O2_rel=6, ker=2, im=2, H2_rel=0, count=120
+    d_v=4: dim_O2_rel=6, ker=3, im=3, H2_rel=0, count=200
+
+  FORMULAS for dim(Omega_p^rel) vs d_v at n=5:
+    d_v=0: {(4, 6, 4): 120, (4, 6, 3): 200}
+    d_v=1: {(4, 6, 4): 360, (4, 5, 2): 120, (4, 5, 3): 160, (4, 5, 4): 120, (4, 6, 3): 280, (4, 6, 2): 120, (4, 7, 6): 120}
+    d_v=2: {(4, 6, 4): 720, (4, 5, 3): 240, (4, 5, 2): 360, (4, 6, 6): 120, (4, 7, 6): 240, (4, 6, 3): 120, (4, 7, 9): 120}
+    d_v=3: {(4, 6, 4): 360, (4, 6, 3): 280, (4, 5, 4): 120, (4, 5, 3): 160, (4, 6, 2): 120, (4, 5, 2): 120, (4, 7, 6): 120}
+    d_v=4: {(4, 6, 4): 120, (4, 6, 3): 200}
+
+--- n=6 exhaustive (32768 tournaments) ---
+  ... 5000/32768 (66s), violations=0
+  ... 10000/32768 (139s), violations=0
+  ... 15000/32768 (215s), violations=0
+  ... 20000/32768 (283s), violations=0
+  ... 25000/32768 (360s), violations=0
+  ... 30000/32768 (430s), violations=0
+
+  Completed in 466s. H2_rel violations: 0
+
+  (d_v, dim_O2_rel, ker_d2_rel, im_d3_rel, H2_rel): count
+    d_v=0: dim_O2_rel=10, ker=5, im=5, H2_rel=0, count=1824
+    d_v=0: dim_O2_rel=10, ker=6, im=6, H2_rel=0, count=4320
+    d_v=1: dim_O2_rel=9, ker=5, im=5, H2_rel=0, count=2640
+    d_v=1: dim_O2_rel=9, ker=6, im=6, H2_rel=0, count=1920
+    d_v=1: dim_O2_rel=10, ker=5, im=5, H2_rel=0, count=3600
+    d_v=1: dim_O2_rel=10, ker=6, im=6, H2_rel=0, count=12240
+    d_v=1: dim_O2_rel=11, ker=6, im=6, H2_rel=0, count=2880
+    d_v=1: dim_O2_rel=11, ker=7, im=7, H2_rel=0, count=6480
+    d_v=1: dim_O2_rel=12, ker=8, im=8, H2_rel=0, count=960
+    d_v=2: dim_O2_rel=9, ker=5, im=5, H2_rel=0, count=6720
+    d_v=2: dim_O2_rel=10, ker=5, im=5, H2_rel=0, count=1440
+    d_v=2: dim_O2_rel=10, ker=6, im=6, H2_rel=0, count=19680
+    d_v=2: dim_O2_rel=11, ker=6, im=6, H2_rel=0, count=5040
+    d_v=2: dim_O2_rel=11, ker=7, im=7, H2_rel=0, count=12240
+    d_v=2: dim_O2_rel=11, ker=8, im=8, H2_rel=0, count=960
+    d_v=2: dim_O2_rel=12, ker=7, im=7, H2_rel=0, count=2160
+    d_v=2: dim_O2_rel=12, ker=8, im=8, H2_rel=0, count=11040
+    d_v=2: dim_O2_rel=13, ker=8, im=8, H2_rel=0, count=720
+    d_v=2: dim_O2_rel=13, ker=9, im=9, H2_rel=0, count=720
+    d_v=2: dim_O2_rel=14, ker=10, im=10, H2_rel=0, count=720
+    d_v=3: dim_O2_rel=9, ker=5, im=5, H2_rel=0, count=6720
+    d_v=3: dim_O2_rel=10, ker=5, im=5, H2_rel=0, count=1440
+    d_v=3: dim_O2_rel=10, ker=6, im=6, H2_rel=0, count=19680
+    d_v=3: dim_O2_rel=11, ker=6, im=6, H2_rel=0, count=5040
+    d_v=3: dim_O2_rel=11, ker=7, im=7, H2_rel=0, count=12240
+    d_v=3: dim_O2_rel=11, ker=8, im=8, H2_rel=0, count=960
+    d_v=3: dim_O2_rel=12, ker=7, im=7, H2_rel=0, count=2160
+    d_v=3: dim_O2_rel=12, ker=8, im=8, H2_rel=0, count=11040
+    d_v=3: dim_O2_rel=13, ker=8, im=8, H2_rel=0, count=720
+    d_v=3: dim_O2_rel=13, ker=9, im=9, H2_rel=0, count=720
+    d_v=3: dim_O2_rel=14, ker=10, im=10, H2_rel=0, count=720
+    d_v=4: dim_O2_rel=9, ker=5, im=5, H2_rel=0, count=2640
+    d_v=4: dim_O2_rel=9, ker=6, im=6, H2_rel=0, count=1920
+    d_v=4: dim_O2_rel=10, ker=5, im=5, H2_rel=0, count=3600
+    d_v=4: dim_O2_rel=10, ker=6, im=6, H2_rel=0, count=12240
+    d_v=4: dim_O2_rel=11, ker=6, im=6, H2_rel=0, count=2880
+    d_v=4: dim_O2_rel=11, ker=7, im=7, H2_rel=0, count=6480
+    d_v=4: dim_O2_rel=12, ker=8, im=8, H2_rel=0, count=960
+    d_v=5: dim_O2_rel=10, ker=5, im=5, H2_rel=0, count=1824
+    d_v=5: dim_O2_rel=10, ker=6, im=6, H2_rel=0, count=4320
+
+  FORMULAS for dim(Omega_p^rel) vs d_v at n=6:
+    d_v=0: 3 patterns, total=6144
+      (5, 10, 9): 4320 (70.3%)
+      (5, 10, 10): 1584 (25.8%)
+      (5, 10, 8): 240 (3.9%)
+    d_v=1: 16 patterns, total=30720
+      (5, 10, 9): 8640 (28.1%)
+      (5, 10, 8): 3600 (11.7%)
+      (5, 11, 11): 3600 (11.7%)
+      (5, 10, 10): 2880 (9.4%)
+      (5, 11, 13): 2160 (7.0%)
+    d_v=2: 26 patterns, total=61440
+      (5, 10, 10): 10800 (17.6%)
+      (5, 11, 13): 5760 (9.4%)
+      (5, 10, 9): 5280 (8.6%)
+      (5, 12, 16): 5040 (8.2%)
+      (5, 11, 11): 4320 (7.0%)
+    d_v=3: 26 patterns, total=61440
+      (5, 10, 10): 10800 (17.6%)
+      (5, 11, 13): 5760 (9.4%)
+      (5, 10, 9): 5280 (8.6%)
+      (5, 12, 16): 5040 (8.2%)
+      (5, 11, 11): 4320 (7.0%)
+    d_v=4: 16 patterns, total=30720
+      (5, 10, 9): 8640 (28.1%)
+      (5, 10, 8): 3600 (11.7%)
+      (5, 11, 11): 3600 (11.7%)
+      (5, 10, 10): 2880 (9.4%)
+      (5, 11, 13): 2160 (7.0%)
+    d_v=5: 3 patterns, total=6144
+      (5, 10, 9): 4320 (70.3%)
+      (5, 10, 10): 1584 (25.8%)
+      (5, 10, 8): 240 (3.9%)
+
+Done.
