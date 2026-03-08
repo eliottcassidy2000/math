@@ -1,0 +1,68 @@
+======================================================================
+INTERIOR DELTA-INJECTIVITY: EXHAUSTIVE VERIFICATION
+======================================================================
+
+n=5: 1024 tournaments in 5s
+  Interior vertex checks (with H2(T,T\v) > 0): 600
+  Interior failures: 0
+  Boundary (source/sink) checks: 240
+  Boundary failures: 0
+  H2(T,T\v) dimension distribution: {np.int64(1): 840}
+  beta1(T\v) when H2(T,T\v)>0: {np.int64(1): 840}
+  OK: delta INJECTIVE for ALL interior vertices at n=5
+  n=6: 5000/32768 (73s)
+  n=6: 10000/32768 (174s)
+  n=6: 15000/32768 (305s)
+  n=6: 20000/32768 (428s)
+  n=6: 25000/32768 (567s)
+  n=6: 30000/32768 (666s)
+
+n=6: 32768 tournaments in 706s
+  Interior vertex checks (with H2(T,T\v) > 0): 31680
+  Interior failures: 0
+  Boundary (source/sink) checks: 3648
+  Boundary failures: 1
+  H2(T,T\v) dimension distribution: {np.int64(1): 35328}
+  beta1(T\v) when H2(T,T\v)>0: {np.int64(1): 35328}
+  OK: delta INJECTIVE for ALL interior vertices at n=6
+
+======================================================================
+INTERIOR DELTA-INJECTIVITY: SAMPLING AT n=7
+======================================================================
+  100/500 done (7.7s), int_checks=67, fails=0
+  200/500 done (14.0s), int_checks=128, fails=0
+  300/500 done (19.9s), int_checks=207, fails=0
+  400/500 done (26.0s), int_checks=275, fails=0
+  500/500 done (32.1s), int_checks=342, fails=0
+
+n=7: 500 tournaments in 32s
+  Interior checks (with H2>0): 342
+  Interior failures: 0
+  H2(T,T\v) distribution: {np.int64(1): 342}
+  OK: delta INJECTIVE for ALL interior vertices at n=7
+
+======================================================================
+POSITION STRUCTURE: WHY INTERIOR DELTA WORKS
+======================================================================
+
+======================================================================
+V-ARC TYPE ANALYSIS (n=5 exhaustive)
+======================================================================
+Interior (d+, #pos0, #pos1, #pos2, h2_rel, delta_inj, beta1(T\v)):
+  d+=1, pos=(1,3,4), h2=1, d_inj=True, b1=1: 120 cases
+  d+=1, pos=(2,3,5), h2=1, d_inj=True, b1=1: 120 cases
+  d+=2, pos=(3,4,3), h2=1, d_inj=True, b1=1: 120 cases
+  d+=3, pos=(4,3,1), h2=1, d_inj=True, b1=1: 120 cases
+  d+=3, pos=(5,3,2), h2=1, d_inj=True, b1=1: 120 cases
+
+Source/sink (d+, #pos0, #pos1, #pos2, h2_rel, delta_inj, beta1(T\v)):
+  d+=0, pos=(0,0,6), h2=1, d_inj=True, b1=1: 120 cases
+  d+=4, pos=(6,0,0), h2=1, d_inj=True, b1=1: 120 cases
+
+======================================================================
+DIMENSION CONSTRAINT: H2(T,T\v) vs beta1(T\v)
+======================================================================
+(no output = all interior cases have h2_rel <= beta1(T\v))
+
+
+Done.
