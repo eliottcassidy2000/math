@@ -433,13 +433,48 @@ Verified for k=1,2,3.
 
 ---
 
-## OPEN-Q-023 🟢 Prove the universal coefficient conjecture
+## OPEN-Q-023 -- RESOLVED
 **Prove: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k) for all k.**
 
-Verified for k=1 (algebraic proof), k=2 (n=5,6,7 exhaustive/sampled), k=3 (n=7 sampled).
-The proof likely involves the cluster expansion: E[fwd^{2k}] involves clusters of 2k adjacent positions, each probing a (2k+1)-vertex sub-tournament. The 2/C(n,2k) arises from the probability of a specific (2k+1)-vertex subset appearing in a random cluster position.
+**RESOLVED by opus-2026-03-07-S46e (THM-094):**
 
-**Source:** opus-2026-03-07-S46d
+PROVED algebraically. The proof has 5 steps:
+1. Forward path formula: #fwd(2k+1)path = Σ_S H(T[S]) (OCF on subtournaments)
+2. Each (2k+1)-cycle contributes 2·t_{2k+1} (OCF coefficient 2, unique subset)
+3. Multinomial expansion: (2k)! · (n-2k) positions · 2/P(n,2k+1) = 2/C(n,2k)
+4. Hierarchy separation: lower moments don't contain t_{2k+1}
+5. Moment-to-cumulant preserves the coefficient
+
+Verified algebraically for k=1,2,3,4 and n up to 12.
+
+**Source:** opus-2026-03-07-S46e, THM-094
+
+---
+
+## OPEN-Q-024 🟢 Even Betti Vanishing for Tournament Path Homology
+**Prove: β_{2k}(T) = 0 for all k >= 1, for any tournament T.**
+
+GLMY path homology Betti numbers β_p of tournaments exhibit a striking pattern:
+- β_0 = 1 always (connected)
+- β_1 ∈ {0, 1} (directed 1-hole from 3-cycle structure)
+- β_2 = 0 ALWAYS (exhaustive n=3,4,5; sampled n=6,7; 0 failures in 1000+ tests)
+- β_3 ∈ {0, 1} (appears at n=6 (1.2%), n=7 (8-11%))
+- β_4 = 0 ALWAYS (sampled n=7; 0 failures)
+- β_1 and β_3 are MUTUALLY EXCLUSIVE (0/200 cases with both positive at n=7)
+- Euler characteristic χ ∈ {0, 1}: χ=1 if contractible, χ=0 if β_1=1 or β_3=1
+
+WHY: Tournaments have only ODD directed cycles. The completeness of the tournament
+(every pair connected) makes the GLMY boundary operator ∂_2 "maximally constrained,"
+forcing ker(∂_2)/im(∂_3) = 0. The dim(Ω_p)/|A_p| ratio drops to ~0.5 at p=2 for
+cycle-rich tournaments due to disallowed faces from cyclic triples.
+
+This appears to be a NEW result — not found in the GLMY literature or the recent
+Tang-Yau paper on circulant digraphs (arXiv:2602.04140).
+
+**Connection to OCF:** Both OCF and path homology χ are "alternating sums over
+odd-indexed quantities": H = 1 + 2α₁ + 4α₂ + ... and χ = 1 - β₁ + β₃ - β₅ + ...
+
+**Source:** opus-2026-03-07-S46e
 
 ---
 

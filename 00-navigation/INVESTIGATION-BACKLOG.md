@@ -1304,3 +1304,26 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
   3. **Descent algebra:** SF is the sign-character evaluation of the "tournament descent" element
   4. **Worpitzky = Ehrhart:** a_m analogous to Ehrhart polynomial, F to h*-vector
 **Next step:** (1) Explore F(T,x,q) as bivariate polynomial. (2) Find polytope whose h*-vector is F(T,x). (3) Connect Worpitzky coefficients to W-polynomial hierarchy (INV-082).
+
+### INV-127: GLMY Path Homology of Tournaments — EVEN BETTI VANISHING
+**Source:** opus-2026-03-07-S46e (path_homology_phase2.py output + new analysis)
+**Status:** CONJECTURE (strong numerical evidence)
+**What:** Tournaments have β_{2k} = 0 for all k >= 1 in GLMY path homology. Only odd Betti numbers can be nonzero. β₁ and β₃ are mutually exclusive. Euler characteristic χ ∈ {0, 1}.
+**Evidence:** Exhaustive n=3,4,5 (all 1024+64+8 tournaments); sampled n=6 (500), n=7 (600+). 0 failures.
+**Why:** The completeness of tournaments (every pair connected) makes Ω_p ⊂ A_p with ratio ~0.5 at p=2, constraining the chain complex. Transitive tournaments have Ω_p = A_p (ratio 1.0).
+**Not in literature:** Checked Tang-Yau (arXiv:2602.04140), GLMY papers — no prior result on tournament even Betti vanishing.
+**Connection to OCF:** Both H (via OCF) and χ (via path homology) are expressed as alternating sums over odd-indexed quantities.
+**Scripts:** `path_homology_tournament_betti.py`, `even_betti_chain_complex.py`, `even_betti_quick.py`
+**Next step:** (1) Prove algebraically for β₂ = 0. (2) Investigate β₁/β₃ mutual exclusivity. (3) Check whether the Ω_p/A_p ratio has a closed form. (4) Try n=8 sampling.
+
+### INV-128: Universal Coefficient Theorem — PROVED (THM-094)
+**Source:** opus-2026-03-07-S46e
+**Status:** PROVED
+**What:** coeff(t_{2k+1} in κ_{2k}) = 2/C(n, 2k) for all k. Proved via forward path formula + OCF + multinomial expansion. Resolves OPEN-Q-023.
+**Scripts:** `universal_coeff_proof.py`
+
+### INV-129: Celano-Sieger-Spiro A_T(t) — NOT same as F(T,x)
+**Source:** opus-2026-03-07-S46e (web research)
+**Status:** CLARIFIED (dead end for direct application)
+**What:** arXiv:2309.07240 defines A_T(t) = sum over labelings of t^{des_T(sigma)} where des counts descents across ALL arcs. This has degree C(n,2), not n-1. The (1+t)^{floor(n/2)} divisibility applies to A_T(t), not to our F(T,x). The two polynomials encode different statistics (all-arc descents vs Hamiltonian-path forward edges).
+**Impact:** The Celano-Sieger-Spiro result cannot be directly applied to F(T,x). However, it establishes that tournaments have a universal structural constraint on A_T(t) depending only on n, which is analogous to our universal constraint on F(T,x) mod 3 (THM-086).

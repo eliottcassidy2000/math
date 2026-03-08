@@ -602,3 +602,18 @@ NEW PROOF OF TRANSFER MATRIX SYMMETRY via Walsh analysis. The complete M[a,b] Wa
 
 **T188** #H-trace-M #diagonal-walsh #position-decomposition | certainty: high (verified n=5 exhaustive) | source: opus-2026-03-07-S35c6
 H = trace(M) = sum_v M[v,v] where M[v,v] = sum_P (-1)^{pos(v,P)} (THM-053). Off-diagonal M sums to 0 (Sigma=0 for odd n, THM-030 Corollary 1). Diagonal M[v,v] has EVEN Walsh spectrum with UNIFORM amplitudes: 1/4 at degree 2, 1/8 at degree 4 (n=5). The sum hat{H}[S] = sum_v hat{M[v,v]}[S] verified exactly. The signs of M[v,v] Walsh coefficients depend on vertex v's relationship to the path S (center vs endpoint vs absent). This connects the off-diagonal M formula (T186) to OCF through the trace decomposition.
+
+**T189** #path-homology #even-betti-vanishing #GLMY | certainty: high (verified n<=7) | source: opus-2026-03-07-S46e
+CONJECTURE: β_{2k}(T) = 0 for ALL tournaments T and k >= 1 (even Betti vanishing). Verified exhaustive n=3,4,5 + sampled n=6,7 (0 failures in 1000+ tests). β_1 and β_3 are MUTUALLY EXCLUSIVE. Tournaments have "odd-dimensional directed topology only" — mirrors the odd-cycle-only structure. The completeness of tournaments makes ∂_2 maximally constrained. χ ∈ {0,1}. This is a NEW result not in GLMY literature. See OPEN-Q-024.
+
+**T190** #path-homology #OCF-parallel #euler-characteristic | certainty: medium | source: opus-2026-03-07-S46e
+PARALLEL: OCF gives H = 1 + 2α₁ + 4α₂ + ..., and path homology gives χ = 1 - β₁ + β₃ - β₅ + ... Both are alternating sums over odd-indexed quantities. When β_{2k}=0 and β_1,β_3 mutually exclusive, χ = 1 (contractible) or χ = 0 (one "hole"). Is there a direct formula β_{2k-1} = f(α_k)? At n=5: β₁ = 1 iff t₃ >= 3 (NOT just t₃ > 0 — there's a threshold effect). Does this connect to the cumulant hierarchy?
+
+**T191** #mod3-moments #cumulant-divisibility | certainty: high (verified n=5) | source: opus-2026-03-07-S46e
+THM-086 (c_j = 0 mod 3 for j < val(n)) implies ALL integer moments M_r = n!·E[fwd^r] ≡ 0 mod 3 for ALL r, not just r < val(n). This is because Stirling numbers S(r,j)·j! are divisible by 3 for j >= 3, amplifying the mod 3 vanishing to all moments. The centered moments also satisfy 2^r·n!·μ_r ≡ 0 mod 3.
+
+**T192** #universal-coefficient #cumulant-hierarchy #PROVED | certainty: high (PROVED) | source: opus-2026-03-07-S46e
+THM-094: coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k). PROVED via forward path formula + OCF + multinomial expansion. The factor 2 comes from OCF (each directed cycle contributes 2 to I(Ω,2)), and 1/C(n,2k) comes from the (2k)!·(n-2k)/P(n,2k+1) counting. Resolves OPEN-Q-023.
+
+**T193** #celano-sieger-spiro #descent-polynomial #NOT-same | certainty: high | source: opus-2026-03-07-S46e
+CLARIFICATION: The Celano-Sieger-Spiro polynomial A_T(t) (arXiv:2309.07240) is NOT the same as our F(T,x). A_T(t) counts descents across ALL arcs (degree C(n,2)), while F(T,x) counts forward edges along Hamiltonian paths (degree n-1). The (1+t)^{floor(n/2)} divisibility applies to A_T(t), not F(T,x). The two encode different statistics.
