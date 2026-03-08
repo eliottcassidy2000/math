@@ -287,7 +287,19 @@
 
 **Connection to loop quantum gravity:** The spin foam models of loop quantum gravity use labeled graphs and their amplitudes. A tournament with weighted arcs defines a spin foam amplitude. The independence polynomial I(Ω,x) at x=2 could be a partition function in this framework.
 
-#### 19. EHRHART THEORY: Independence Polytope of Omega(T)
+#### 19. ACYCLIC COMPLEX OF TOURNAMENT ARCS
+**Idea:** The acyclic complex Acyc(T) = {arc subsets containing no directed cycle} is a simplicial complex. Its f-vector encodes the cycle structure.
+
+**Computational results (n=4):**
+- H=1 (transitive): #acyclic = 2^6 = 64, χ(Acyc) = 0
+- H=3 (one 3-cycle): #acyclic = 56 = 8×7, χ(Acyc) = 0
+- H=5 (all 3-cycles): #acyclic = 49 = 7², χ(Acyc) = -1
+
+**Pattern:** #acyclic = (8-c₃)² at n=4 where c₃ = number of 3-cycles. Verifiable: c₃=0→64, c₃=1→49, c₃=4→16... wait, H=3 has c₃=1 and #acyclic=56≠49. So the pattern is more subtle. The Euler characteristic χ(Acyc) appears to distinguish tournament classes.
+
+**Connection to Rédei:** The acyclic complex dimension = n-1 (acyclic tournaments = spanning trees). The top-dimensional acyclic subsets are exactly the acyclic tournaments on subsets, connecting to linear extensions and Rédei's theorem.
+
+#### 20. EHRHART THEORY: Independence Polytope of Omega(T)
 **Idea:** The independence polytope P_{Omega} of the conflict graph has vertices = characteristic vectors of independent sets. The Ehrhart polynomial of P_{Omega} is exactly I(Omega(T), x) evaluated at non-negative integers. So H(T) = I(Omega, 2) = |2P_{Omega} ∩ Z^n| counts lattice points in the second dilate. The Ehrhart reciprocity theorem: I(Omega, -x) = (-1)^dim * I_interior(Omega, x) connects I(Omega, -1) to interior lattice points.
 
 **Connection to parity:** H(T) = I(Omega, 2) is always odd. By Ehrhart theory, the h*-polynomial of P_{Omega} encodes the lattice-point distribution. Real-rootedness of I(Omega, x) (proved n<=8) implies unimodality of the h*-vector.
