@@ -36,15 +36,17 @@ Verified by two independent methods:
 2. C batch CRT (a000568_c_batch.c) — ~500s
 
 Performance comparison (Apple Silicon M1, 8 cores):
-  Method              | n=50  | n=60  | n=76  | n=80   | n=90   | n=100
-  --------------------|-------|-------|-------|--------|--------|--------
-  Int DP + GCD (best) |  4.5s |  19s  | 160s  | 276s   | 924s   | ~7200s*
-  gmpy2 DP            |  7.9s |  35s  | 229s  | 537s   | 1757s  | 14391s
-  Fraction DP         | 11.5s |  ~85s | 259s  | 672s   | N/A    | N/A
-  C batch CRT         |  7.8s |  26s  | 314s  | OOM    | OOM    | OOM
-  Numpy batch CRT     | 11.3s |  47s  | 346s  | N/A    | N/A    | N/A
-  Parallel C+CRT (8c) |  23s  | 130s  | ~1500s| ~3000s | N/A    | N/A
-  * estimated from scaling
+  Method              | n=50  | n=60  | n=76  | n=80   | n=90   | n=100  | n=120
+  --------------------|-------|-------|-------|--------|--------|--------|-------
+  Py enum + LCD ★     | 0.02s | 0.05s | 0.9s  | 1.3s   | 3.5s   | 9.1s   | 50s
+  C enum + CRT (8c)   | 0.3s  | 0.4s  | 1.1s  | 1.6s   | 5.2s   | 17.9s  | 150s
+  Int DP + GCD        |  4.5s |  19s  | 160s  | 276s   | 924s   | ~7200s | N/A
+  gmpy2 DP            |  7.9s |  35s  | 229s  | 537s   | 1757s  | 14391s | N/A
+  Fraction DP         | 11.5s |  ~85s | 259s  | 672s   | N/A    | N/A    | N/A
+
+  ★ = current fastest. Python direct enumeration of odd partitions with
+      LCD-scaled integer accumulation beats all other approaches by 100-1000x.
+      Bottleneck: number of odd partitions grows exponentially (~exp(π√(2n/3))).
 
 Best practical approach: Integer DP with periodic GCD reduction (a000568_int_v2.py).
 ~2x faster than gmpy2 DP for n≥80 by avoiding per-operation GCD overhead.
