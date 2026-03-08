@@ -1,0 +1,33 @@
+======================================================================
+P_11 BETA_8 (v4: SPARSE JUNK MATRIX)
+======================================================================
+
+--- Allowed paths ---
+  A_0: 11 (0.0s)
+  A_1: 55 (0.0s)
+  A_2: 275 (0.0s)
+  A_3: 1210 (0.0s)
+  A_4: 4730 (0.0s)
+  A_5: 15730 (0.0s)
+  A_6: 43670 (0.2s)
+  A_7: 96085 (1.0s)
+  A_8: 158345 (3.1s)
+  A_9: 173195 (6.6s)
+  A_10: 95095 (6.6s)
+
+--- Orbit computation ---
+  dim 6: 3970 orbits (0.4s)
+  dim 7: 8735 orbits (0.9s)
+  dim 8: 14395 orbits (1.6s)
+  dim 9: 15745 orbits (1.7s)
+
+======================================================================
+k=0 (TRIVIAL) EIGENSPACE
+======================================================================
+  d_7: B=(3970, 8735) nnz=43495, J=(15230, 8735) nnz=26380 (0.2s)
+  d_8: B=(8735, 14395) nnz=79175, J=(35145, 14395) nnz=50375 (0.4s)
+  d_9: B=(14395, 15745) nnz=94895, J=(52550, 15745) nnz=62550 (0.6s)
+
+  Computing beta_8^(0)...
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\scipy\sparse\linalg\_eigen\arpack\arpack.py:1581: RuntimeWarning: k >= N - 1 for N * N square matrix. Attempting to use scipy.linalg.eig instead.
+  ret = eigs(A, k, M=M, sigma=sigma, which=which, v0=v0,

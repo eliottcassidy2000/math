@@ -1,0 +1,134 @@
+======================================================================
+BETA_2 THRESHOLD ANALYSIS
+======================================================================
+
+======================================================================
+n = 13
+======================================================================
+
+  --- |S| = 2 ---
+  Tested: 30, beta_2=0: 6, beta_2>0: 24
+  Examples with beta_2 > 0:
+    S=(1, 3): b2=1, dp=False, AP=True, gen=True
+    S=(1, 4): b2=1, dp=False, AP=True, gen=True
+    S=(1, 5): b2=1, dp=False, AP=True, gen=True
+    S=(1, 6): b2=1, dp=False, AP=True, gen=True
+    S=(1, 8): b2=1, dp=False, AP=True, gen=True
+
+  --- |S| = 3 ---
+  Tested: 80, beta_2=0: 18, beta_2>0: 62
+  Examples with beta_2 > 0:
+    S=(1, 2, 5): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 6): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 9): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 10): b2=1, dp=True, AP=False, gen=True
+    S=(1, 3, 4): b2=1, dp=False, AP=False, gen=True
+
+  --- |S| = 4 ---
+  Tested: 120, beta_2=0: 90, beta_2>0: 30
+  Examples with beta_2 > 0:
+    S=(1, 2, 5, 6): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 6, 9): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 9, 10): b2=1, dp=True, AP=False, gen=True
+    S=(1, 3, 4, 6): b2=1, dp=True, AP=False, gen=True
+    S=(1, 3, 4, 11): b2=1, dp=False, AP=False, gen=True
+  beta_2=0 WITHOUT doubling pair (12 cases):
+    S=(1, 3, 4, 5): AP=False, gen=True
+    S=(1, 4, 5, 11): AP=False, gen=True
+    S=(1, 4, 6, 11): AP=False, gen=True
+    S=(1, 4, 10, 11): AP=False, gen=True
+    S=(1, 6, 8, 10): AP=False, gen=True
+    S=(1, 6, 8, 11): AP=False, gen=True
+    S=(1, 6, 9, 10): AP=False, gen=True
+    S=(1, 6, 10, 11): AP=False, gen=True
+    S=(2, 6, 8, 10): AP=False, gen=True
+    S=(2, 7, 8, 9): AP=False, gen=True
+
+  --- |S| = 5 ---
+  Tested: 96, beta_2=0: 96, beta_2>0: 0
+  beta_2=0 WITHOUT doubling pair (6 cases):
+    S=(1, 3, 4, 5, 11): AP=False, gen=True
+    S=(1, 4, 5, 6, 11): AP=False, gen=True
+    S=(1, 4, 6, 10, 11): AP=False, gen=True
+    S=(1, 6, 8, 9, 10): AP=False, gen=True
+    S=(1, 6, 8, 10, 11): AP=False, gen=True
+    S=(2, 6, 8, 9, 10): AP=False, gen=True
+
+======================================================================
+n = 15
+======================================================================
+
+  --- |S| = 2 ---
+  Tested: 42, beta_2=0: 6, beta_2>0: 36
+  Examples with beta_2 > 0:
+    S=(1, 3): b2=1, dp=False, AP=True, gen=True
+    S=(1, 4): b2=1, dp=False, AP=True, gen=True
+    S=(1, 5): b2=1, dp=False, AP=True, gen=True
+    S=(1, 6): b2=1, dp=False, AP=True, gen=True
+    S=(1, 7): b2=1, dp=False, AP=True, gen=True
+
+  --- |S| = 3 ---
+  Tested: 140, beta_2=0: 14, beta_2>0: 126
+  Examples with beta_2 > 0:
+    S=(1, 2, 5): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 6): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 7): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 10): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 11): b2=1, dp=True, AP=False, gen=True
+  beta_2=0 WITHOUT doubling pair (2 cases):
+    S=(1, 6, 11): AP=True, gen=True
+    S=(2, 7, 12): AP=True, gen=True
+
+  --- |S| = 4 ---
+  Tested: 201, beta_2=0: 92, beta_2>0: 108
+  Examples with beta_2 > 0:
+    S=(1, 2, 3, 7): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 3, 11): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 5, 6): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 5, 7): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 5, 12): b2=1, dp=True, AP=False, gen=True
+  beta_2=0 WITHOUT doubling pair (10 cases):
+    S=(1, 3, 4, 5): AP=False, gen=True
+    S=(1, 4, 5, 12): AP=False, gen=True
+    S=(1, 4, 7, 10): AP=True, gen=True
+    S=(1, 4, 7, 13): AP=False, gen=True
+    S=(1, 4, 10, 13): AP=False, gen=True
+    S=(1, 5, 6, 11): AP=False, gen=True
+    S=(1, 5, 7, 9): AP=False, gen=True
+    S=(1, 5, 12, 13): AP=False, gen=True
+    S=(1, 6, 10, 11): AP=False, gen=True
+    S=(1, 7, 10, 13): AP=False, gen=True
+
+  --- |S| = 5 ---
+  Tested: 201, beta_2=0: 185, beta_2>0: 15
+  Examples with beta_2 > 0:
+    S=(1, 2, 5, 6, 7): b2=1, dp=True, AP=False, gen=True
+    S=(1, 2, 10, 11, 12): b2=1, dp=True, AP=False, gen=True
+    S=(1, 3, 4, 6, 7): b2=1, dp=True, AP=False, gen=True
+    S=(1, 3, 4, 6, 13): b2=1, dp=True, AP=False, gen=True
+    S=(1, 3, 4, 9, 10): b2=1, dp=True, AP=False, gen=True
+  beta_2=0 WITHOUT doubling pair (27 cases):
+    S=(1, 3, 4, 5, 7): AP=False, gen=True
+    S=(1, 3, 4, 5, 13): AP=False, gen=True
+    S=(1, 3, 4, 7, 10): AP=False, gen=True
+    S=(1, 3, 4, 7, 13): AP=False, gen=True
+    S=(1, 3, 4, 10, 13): AP=False, gen=True
+    S=(1, 3, 5, 7, 13): AP=False, gen=True
+    S=(1, 3, 7, 10, 13): AP=False, gen=True
+    S=(1, 4, 5, 6, 7): AP=False, gen=True
+    S=(1, 4, 5, 6, 13): AP=False, gen=True
+    S=(1, 4, 5, 7, 9): AP=False, gen=True
+
+======================================================================
+ANALYSIS OF S=(1,4,7) AT n=9
+======================================================================
+  S = [1, 4, 7]
+  -S = [2, 5, 8]
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_threshold_analysis.py", line 176, in <module>
+    print(f"  S \u2229 (-S) = {sorted(S & neg_S(S, n))}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2229' in position 4: character maps to <undefined>
