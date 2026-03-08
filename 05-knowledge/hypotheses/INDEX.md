@@ -121,6 +121,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-261 | Source v: all v-paths are TT, v only at position 0; NT/Ω₂ coupling absent | PROVED algebraically. Source v→everyone, so (v,b,c) always TT. ∂₁∘∂₂=0 automatic for TT | beta2_delta_source_proof.py |
 | HYP-262 | **Σ_v h₂(T,T\v) ≤ 3 for ALL tournaments** | CONFIRMED: n=5 (max=3, exh.), n=6 (max=3, exh.), n=7 (max=3, 500 samples). UNIVERSAL BOUND! Gives HYP-258 by pigeonhole for n≥7 | beta2_h2rel_sum.py |
 | HYP-263 | β₁(T) > 0 ⟹ Σ h₂_rel = 0 (all vertices trivial) | CONFIRMED n=5: β₁=1 ⟹ all 304 tournaments have Σ=0. If T has a 1-cycle, no relative H₂ | beta2_h2rel_sum.py |
+| HYP-264 | "Good deletion" (∃v with β₁(T\v)=0) works for ALL tournaments | **REFUTED**: 24/1024 at n=5 (all regular), 960/32768 at n=6 (all (2,2,2,3,3,3)). Fraction decreases: ~1% n=7, ~0.1% n=8 | beta2_good_deletion.py |
+| HYP-265 | β₂(T)=0 for tournaments is NEW (not in GLMY literature) | Searched Burfitt-Cutler, Fu-Ivanov, Tang-Yau. No tournament-specific H₂ results. Tournaments are multisquare-free (Fu-Ivanov basis applies) | S42 literature search |
+| HYP-266 | dim(Ω_p) for regular n=5: [5,10,10,10,5,0] (symmetric, larger than simplex at p=3,4) | CONFIRMED. Extra Ω₃ elements exactly fill extra ker(d₂). Transitive=[5,10,10,5,1,0] | beta2_full_chain.py |
+| HYP-267 | χ(Ω_*) = 1 - β₁ for ALL tournaments (all higher β_p cancel in alternating sum) | CONFIRMED n=3,4,5 exhaustive. Implies β₂-β₃+β₄-...=0. Combined with HYP-249 gives consistency | beta2_full_chain.py |
 
 ---
 

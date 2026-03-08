@@ -1,0 +1,474 @@
+======================================================================
+EXPLICIT DELTA FOR REGULAR T at n=5
+======================================================================
+
+Tournament T#76, score=(2,2,2,2,2)
+Adjacency:
+  0 -> [3, 4]
+  1 -> [0, 4]
+  2 -> [0, 1]
+  3 -> [1, 2]
+  4 -> [2, 3]
+
+--- Vertex v=0, d+(v)=2 ---
+  beta1(T\v) = 1
+  H2(T,T\v) dim = 1
+  delta(z) is 1-cycle? True
+  delta(z) is boundary? True
+  => delta INJECTIVE: False
+  Relative 2-cycle z (by position of v):
+    pos0: 3 terms
+      (0, 4, 3): -0.327794
+      (0, 4, 2): -0.073035
+      (0, 3, 2): 0.073035
+    pos1: 3 terms
+      (1, 0, 4): 0.639234
+      (1, 0, 3): -0.400828
+      (2, 0, 4): -0.238406
+    pos2: 3 terms
+      (2, 1, 0): -0.17004
+      (3, 2, 0): 0.068366
+      (3, 1, 0): -0.068366
+    no_v: 2 terms
+      (1, 4, 3): 0.400828
+      (2, 1, 4): 0.238406
+  delta(z) image in H1(T\v):
+    (2, 1): 0.068366
+    (3, 2): 0.141401
+    (3, 1): -0.068366
+    (4, 3): 0.073035
+    (4, 2): -0.073035
+
+--- Vertex v=1, d+(v)=2 ---
+  beta1(T\v) = 1
+  H2(T,T\v) dim = 1
+  delta(z) is 1-cycle? True
+  delta(z) is boundary? True
+  => delta INJECTIVE: False
+  Relative 2-cycle z (by position of v):
+    pos0: 3 terms
+      (1, 4, 3): -0.075275
+      (1, 0, 4): 0.446283
+      (1, 0, 3): 0.075275
+    pos1: 3 terms
+      (2, 1, 4): 0.521557
+      (2, 1, 0): -0.472315
+      (3, 1, 0): -0.049242
+    pos2: 3 terms
+      (3, 2, 1): 0.039991
+      (4, 3, 1): 0.089233
+      (4, 2, 1): -0.089233
+    no_v: 2 terms
+      (2, 0, 4): -0.521557
+      (3, 2, 0): 0.049242
+  delta(z) image in H1(T\v):
+    (0, 4): -0.075275
+    (0, 3): 0.075275
+    (3, 2): 0.089233
+    (4, 3): 0.013958
+    (4, 2): -0.089233
+
+--- Vertex v=2, d+(v)=2 ---
+  beta1(T\v) = 1
+  H2(T,T\v) dim = 1
+  delta(z) is 1-cycle? True
+  delta(z) is boundary? True
+  => delta INJECTIVE: False
+  Relative 2-cycle z (by position of v):
+    pos0: 3 terms
+      (2, 1, 4): 0.500313
+      (2, 1, 0): -0.340677
+      (2, 0, 4): -0.500313
+    pos1: 3 terms
+      (3, 2, 1): -0.047501
+      (3, 2, 0): 0.159636
+      (4, 2, 1): -0.112135
+    pos2: 3 terms
+      (0, 4, 2): 0.351787
+      (0, 3, 2): -0.351787
+      (4, 3, 2): 0.239651
+    no_v: 2 terms
+      (3, 1, 0): -0.159636
+      (4, 3, 1): 0.112135
+  delta(z) image in H1(T\v):
+    (0, 4): -0.148527
+    (0, 3): -0.351787
+    (1, 4): 0.500313
+    (1, 0): -0.500313
+    (4, 3): 0.351787
+
+--- Vertex v=3, d+(v)=2 ---
+  beta1(T\v) = 1
+  H2(T,T\v) dim = 1
+  delta(z) is 1-cycle? True
+  delta(z) is boundary? True
+  => delta INJECTIVE: False
+  Relative 2-cycle z (by position of v):
+    pos0: 3 terms
+      (3, 2, 1): 0.29977
+      (3, 2, 0): -0.15422
+      (3, 1, 0): 0.15422
+    pos1: 3 terms
+      (0, 3, 2): -0.222786
+      (4, 3, 2): 0.077237
+      (4, 3, 1): 0.14555
+    pos2: 3 terms
+      (0, 4, 3): 0.328228
+      (1, 4, 3): -0.551015
+      (1, 0, 3): 0.551015
+    no_v: 2 terms
+      (0, 4, 2): 0.222786
+      (4, 2, 1): -0.14555
+  delta(z) image in H1(T\v):
+    (0, 4): 0.551015
+    (1, 4): -0.551015
+    (1, 0): 0.705235
+    (2, 1): 0.15422
+    (2, 0): -0.15422
+
+--- Vertex v=4, d+(v)=2 ---
+  beta1(T\v) = 1
+  H2(T,T\v) dim = 1
+  delta(z) is 1-cycle? True
+  delta(z) is boundary? True
+  => delta INJECTIVE: False
+  Relative 2-cycle z (by position of v):
+    pos0: 3 terms
+      (4, 3, 2): 0.30857
+      (4, 3, 1): 0.022035
+      (4, 2, 1): -0.022035
+    pos1: 3 terms
+      (0, 4, 3): -0.061274
+      (0, 4, 2): 0.330605
+      (1, 4, 3): -0.269331
+    pos2: 3 terms
+      (1, 0, 4): 0.223775
+      (2, 1, 4): 0.493105
+      (2, 0, 4): -0.493105
+    no_v: 2 terms
+      (0, 3, 2): -0.330605
+      (1, 0, 3): 0.269331
+  delta(z) image in H1(T\v):
+    (1, 0): 0.493105
+    (2, 1): 0.47107
+    (2, 0): -0.493105
+    (3, 2): -0.022035
+    (3, 1): 0.022035
+
+======================================================================
+DELTA FOR SOURCE/SINK VERTICES at n=5
+======================================================================
+  T#4 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#6 v=4 d+=4: INJ, b1(T\v)=1
+  T#9 v=1 d+=0: INJ, b1(T\v)=1
+  T#13 v=1 d+=0: INJ, b1(T\v)=1
+  T#20 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#21 v=4 d+=4: INJ, b1(T\v)=1
+  T#26 v=2 d+=0: INJ, b1(T\v)=1
+  T#30 v=2 d+=0: INJ, b1(T\v)=1
+  T#33 v=4 d+=4: INJ, b1(T\v)=1
+  T#34 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#35 v=4 d+=4: INJ, b1(T\v)=1
+  T#36 v=4 d+=4: INJ, b1(T\v)=1
+  T#37 v=4 d+=4: INJ, b1(T\v)=1
+  T#38 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#49 v=4 d+=4: INJ, b1(T\v)=1
+  T#53 v=4 d+=4: INJ, b1(T\v)=1
+  T#58 v=2 d+=0: INJ, b1(T\v)=1
+  T#59 v=2 d+=0: INJ, b1(T\v)=1
+  T#64 v=0 d+=0: INJ, b1(T\v)=1
+  T#79 v=0 d+=4: INJ, b1(T\v)=1
+  T#83 v=2 d+=0: INJ, b1(T\v)=1
+  T#86 v=2 d+=0: INJ, b1(T\v)=1
+  T#87 v=2 d+=0: INJ, b1(T\v)=1
+  T#90 v=2 d+=0: INJ, b1(T\v)=1
+  T#91 v=2 d+=0: INJ, b1(T\v)=1
+  T#94 v=2 d+=0: INJ, b1(T\v)=1
+  T#96 v=0 d+=0: INJ, b1(T\v)=1
+  T#111 v=0 d+=4: INJ, b1(T\v)=1
+  T#115 v=2 d+=0: INJ, b1(T\v)=1
+  T#120 v=1 d+=4: INJ, b1(T\v)=1
+  T#123 v=2 d+=0: INJ, b1(T\v)=1
+  T#124 v=1 d+=4: INJ, b1(T\v)=1
+  T#130 v=4 d+=4: INJ, b1(T\v)=1
+  T#134 v=4 d+=4: INJ, b1(T\v)=1
+  T#137 v=1 d+=0: INJ, b1(T\v)=1
+  T#139 v=1 d+=0: INJ, b1(T\v)=1
+  T#145 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#146 v=4 d+=4: INJ, b1(T\v)=1
+  T#147 v=4 d+=4: INJ, b1(T\v)=1
+  T#148 v=4 d+=4: INJ, b1(T\v)=1
+  T#149 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#150 v=4 d+=4: INJ, b1(T\v)=1
+  T#162 v=4 d+=4: INJ, b1(T\v)=1
+  T#163 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#172 v=3 d+=0: INJ, b1(T\v)=1
+  T#174 v=3 d+=0: INJ, b1(T\v)=1
+  T#177 v=4 d+=4: INJ, b1(T\v)=1
+  T#179 v=4 d+=4: NOT-INJ, b1(T\v)=1
+    BOUNDARY FAILURE!
+  T#188 v=3 d+=0: INJ, b1(T\v)=1
+  T#189 v=3 d+=0: INJ, b1(T\v)=1
+  T#192 v=0 d+=0: INJ, b1(T\v)=1
+  T#207 v=0 d+=4: INJ, b1(T\v)=1
+  T#208 v=0 d+=0: INJ, b1(T\v)=1
+  T#223 v=0 d+=4: INJ, b1(T\v)=1
+  T#229 v=3 d+=0: INJ, b1(T\v)=1
+  T#230 v=3 d+=0: INJ, b1(T\v)=1
+  T#231 v=3 d+=0: INJ, b1(T\v)=1
+  T#236 v=3 d+=0: INJ, b1(T\v)=1
+  T#237 v=3 d+=0: INJ, b1(T\v)=1
+  T#238 v=3 d+=0: INJ, b1(T\v)=1
+  T#245 v=3 d+=0: INJ, b1(T\v)=1
+  T#248 v=1 d+=4: INJ, b1(T\v)=1
+  T#250 v=1 d+=4: INJ, b1(T\v)=1
+  T#253 v=3 d+=0: INJ, b1(T\v)=1
+  T#259 v=1 d+=0: INJ, b1(T\v)=1
+  T#261 v=1 d+=0: INJ, b1(T\v)=1
+  T#263 v=1 d+=0: INJ, b1(T\v)=1
+  T#265 v=1 d+=0: INJ, b1(T\v)=1
+  T#267 v=1 d+=0: INJ, b1(T\v)=1
+  T#269 v=1 d+=0: INJ, b1(T\v)=1
+  T#272 v=0 d+=0: INJ, b1(T\v)=1
+  T#287 v=0 d+=4: INJ, b1(T\v)=1
+  T#288 v=0 d+=0: INJ, b1(T\v)=1
+  T#303 v=0 d+=4: INJ, b1(T\v)=1
+  T#304 v=0 d+=0: INJ, b1(T\v)=1
+  T#319 v=0 d+=4: INJ, b1(T\v)=1
+  T#320 v=0 d+=0: INJ, b1(T\v)=1
+  T#335 v=0 d+=4: INJ, b1(T\v)=1
+  T#336 v=0 d+=0: INJ, b1(T\v)=1
+  T#351 v=0 d+=4: INJ, b1(T\v)=1
+  T#352 v=0 d+=0: INJ, b1(T\v)=1
+  T#367 v=0 d+=4: INJ, b1(T\v)=1
+  T#370 v=1 d+=4: INJ, b1(T\v)=1
+  T#372 v=1 d+=4: INJ, b1(T\v)=1
+  T#374 v=1 d+=4: INJ, b1(T\v)=1
+  T#376 v=1 d+=4: INJ, b1(T\v)=1
+  T#378 v=1 d+=4: INJ, b1(T\v)=1
+  T#380 v=1 d+=4: INJ, b1(T\v)=1
+  T#387 v=1 d+=0: INJ, b1(T\v)=1
+  T#392 v=2 d+=4: INJ, b1(T\v)=1
+  T#395 v=1 d+=0: INJ, b1(T\v)=1
+  T#396 v=2 d+=4: INJ, b1(T\v)=1
+  T#400 v=0 d+=0: INJ, b1(T\v)=1
+  T#415 v=0 d+=4: INJ, b1(T\v)=1
+  T#422 v=3 d+=0: INJ, b1(T\v)=1
+  T#424 v=2 d+=4: INJ, b1(T\v)=1
+  T#425 v=2 d+=4: INJ, b1(T\v)=1
+  T#430 v=3 d+=0: INJ, b1(T\v)=1
+  T#437 v=3 d+=0: INJ, b1(T\v)=1
+  T#438 v=3 d+=0: INJ, b1(T\v)=1
+  T#439 v=3 d+=0: INJ, b1(T\v)=1
+  T#444 v=3 d+=0: INJ, b1(T\v)=1
+  T#445 v=3 d+=0: INJ, b1(T\v)=1
+  T#446 v=3 d+=0: INJ, b1(T\v)=1
+  T#449 v=2 d+=4: INJ, b1(T\v)=1
+  T#452 v=2 d+=4: INJ, b1(T\v)=1
+  T#453 v=2 d+=4: INJ, b1(T\v)=1
+  T#456 v=2 d+=4: INJ, b1(T\v)=1
+  T#457 v=2 d+=4: INJ, b1(T\v)=1
+  T#460 v=2 d+=4: INJ, b1(T\v)=1
+  T#464 v=0 d+=0: INJ, b1(T\v)=1
+  T#479 v=0 d+=4: INJ, b1(T\v)=1
+  T#481 v=2 d+=4: INJ, b1(T\v)=1
+  T#486 v=3 d+=0: INJ, b1(T\v)=1
+  T#487 v=3 d+=0: INJ, b1(T\v)=1
+  T#489 v=2 d+=4: INJ, b1(T\v)=1
+  T#498 v=1 d+=4: INJ, b1(T\v)=1
+  T#501 v=3 d+=0: INJ, b1(T\v)=1
+  T#503 v=3 d+=0: INJ, b1(T\v)=1
+  T#506 v=1 d+=4: INJ, b1(T\v)=1
+  T#517 v=1 d+=0: INJ, b1(T\v)=1
+  T#520 v=3 d+=4: INJ, b1(T\v)=1
+  T#522 v=3 d+=4: INJ, b1(T\v)=1
+  T#525 v=1 d+=0: INJ, b1(T\v)=1
+  T#534 v=2 d+=0: INJ, b1(T\v)=1
+  T#536 v=3 d+=4: INJ, b1(T\v)=1
+  T#537 v=3 d+=4: INJ, b1(T\v)=1
+  T#542 v=2 d+=0: INJ, b1(T\v)=1
+  T#544 v=0 d+=0: INJ, b1(T\v)=1
+  T#559 v=0 d+=4: INJ, b1(T\v)=1
+  T#563 v=2 d+=0: INJ, b1(T\v)=1
+  T#566 v=2 d+=0: INJ, b1(T\v)=1
+  T#567 v=2 d+=0: INJ, b1(T\v)=1
+  T#570 v=2 d+=0: INJ, b1(T\v)=1
+  T#571 v=2 d+=0: INJ, b1(T\v)=1
+  T#574 v=2 d+=0: INJ, b1(T\v)=1
+  T#577 v=3 d+=4: INJ, b1(T\v)=1
+  T#578 v=3 d+=4: INJ, b1(T\v)=1
+  T#579 v=3 d+=4: INJ, b1(T\v)=1
+  T#584 v=3 d+=4: INJ, b1(T\v)=1
+  T#585 v=3 d+=4: INJ, b1(T\v)=1
+  T#586 v=3 d+=4: INJ, b1(T\v)=1
+  T#593 v=3 d+=4: INJ, b1(T\v)=1
+  T#598 v=2 d+=0: INJ, b1(T\v)=1
+  T#599 v=2 d+=0: INJ, b1(T\v)=1
+  T#601 v=3 d+=4: INJ, b1(T\v)=1
+  T#608 v=0 d+=0: INJ, b1(T\v)=1
+  T#623 v=0 d+=4: INJ, b1(T\v)=1
+  T#627 v=2 d+=0: INJ, b1(T\v)=1
+  T#628 v=1 d+=4: INJ, b1(T\v)=1
+  T#631 v=2 d+=0: INJ, b1(T\v)=1
+  T#636 v=1 d+=4: INJ, b1(T\v)=1
+  T#643 v=1 d+=0: INJ, b1(T\v)=1
+  T#645 v=1 d+=0: INJ, b1(T\v)=1
+  T#647 v=1 d+=0: INJ, b1(T\v)=1
+  T#649 v=1 d+=0: INJ, b1(T\v)=1
+  T#651 v=1 d+=0: INJ, b1(T\v)=1
+  T#653 v=1 d+=0: INJ, b1(T\v)=1
+  T#656 v=0 d+=0: INJ, b1(T\v)=1
+  T#671 v=0 d+=4: INJ, b1(T\v)=1
+  T#672 v=0 d+=0: INJ, b1(T\v)=1
+  T#687 v=0 d+=4: INJ, b1(T\v)=1
+  T#688 v=0 d+=0: INJ, b1(T\v)=1
+  T#703 v=0 d+=4: INJ, b1(T\v)=1
+  T#704 v=0 d+=0: INJ, b1(T\v)=1
+  T#719 v=0 d+=4: INJ, b1(T\v)=1
+  T#720 v=0 d+=0: INJ, b1(T\v)=1
+  T#735 v=0 d+=4: INJ, b1(T\v)=1
+  T#736 v=0 d+=0: INJ, b1(T\v)=1
+  T#751 v=0 d+=4: INJ, b1(T\v)=1
+  T#754 v=1 d+=4: INJ, b1(T\v)=1
+  T#756 v=1 d+=4: INJ, b1(T\v)=1
+  T#758 v=1 d+=4: INJ, b1(T\v)=1
+  T#760 v=1 d+=4: INJ, b1(T\v)=1
+  T#762 v=1 d+=4: INJ, b1(T\v)=1
+  T#764 v=1 d+=4: INJ, b1(T\v)=1
+  T#770 v=3 d+=4: INJ, b1(T\v)=1
+  T#773 v=1 d+=0: INJ, b1(T\v)=1
+  T#775 v=1 d+=0: INJ, b1(T\v)=1
+  T#778 v=3 d+=4: INJ, b1(T\v)=1
+  T#785 v=3 d+=4: INJ, b1(T\v)=1
+  T#786 v=3 d+=4: INJ, b1(T\v)=1
+  T#787 v=3 d+=4: INJ, b1(T\v)=1
+  T#792 v=3 d+=4: INJ, b1(T\v)=1
+  T#793 v=3 d+=4: INJ, b1(T\v)=1
+  T#794 v=3 d+=4: INJ, b1(T\v)=1
+  T#800 v=0 d+=0: INJ, b1(T\v)=1
+  T#815 v=0 d+=4: INJ, b1(T\v)=1
+  T#816 v=0 d+=0: INJ, b1(T\v)=1
+  T#831 v=0 d+=4: INJ, b1(T\v)=1
+  T#834 v=3 d+=4: INJ, b1(T\v)=1
+  T#835 v=3 d+=4: INJ, b1(T\v)=1
+  T#844 v=4 d+=0: INJ, b1(T\v)=1
+  T#846 v=4 d+=0: INJ, b1(T\v)=1
+  T#849 v=3 d+=4: INJ, b1(T\v)=1
+  T#851 v=3 d+=4: INJ, b1(T\v)=1
+  T#860 v=4 d+=0: INJ, b1(T\v)=1
+  T#861 v=4 d+=0: INJ, b1(T\v)=1
+  T#873 v=4 d+=0: INJ, b1(T\v)=1
+  T#874 v=4 d+=0: INJ, b1(T\v)=1
+  T#875 v=4 d+=0: INJ, b1(T\v)=1
+  T#876 v=4 d+=0: INJ, b1(T\v)=1
+  T#877 v=4 d+=0: INJ, b1(T\v)=1
+  T#878 v=4 d+=0: INJ, b1(T\v)=1
+  T#884 v=1 d+=4: INJ, b1(T\v)=1
+  T#886 v=1 d+=4: INJ, b1(T\v)=1
+  T#889 v=4 d+=0: INJ, b1(T\v)=1
+  T#893 v=4 d+=0: INJ, b1(T\v)=1
+  T#899 v=1 d+=0: INJ, b1(T\v)=1
+  T#900 v=2 d+=4: INJ, b1(T\v)=1
+  T#903 v=1 d+=0: INJ, b1(T\v)=1
+  T#908 v=2 d+=4: INJ, b1(T\v)=1
+  T#912 v=0 d+=0: INJ, b1(T\v)=1
+  T#927 v=0 d+=4: INJ, b1(T\v)=1
+  T#929 v=2 d+=4: INJ, b1(T\v)=1
+  T#932 v=2 d+=4: INJ, b1(T\v)=1
+  T#933 v=2 d+=4: INJ, b1(T\v)=1
+  T#936 v=2 d+=4: INJ, b1(T\v)=1
+  T#937 v=2 d+=4: INJ, b1(T\v)=1
+  T#940 v=2 d+=4: INJ, b1(T\v)=1
+  T#944 v=0 d+=0: INJ, b1(T\v)=1
+  T#959 v=0 d+=4: INJ, b1(T\v)=1
+  T#964 v=2 d+=4: INJ, b1(T\v)=1
+  T#965 v=2 d+=4: INJ, b1(T\v)=1
+  T#970 v=4 d+=0: INJ, b1(T\v)=1
+  T#974 v=4 d+=0: INJ, b1(T\v)=1
+  T#985 v=4 d+=0: INJ, b1(T\v)=1
+  T#986 v=4 d+=0: INJ, b1(T\v)=1
+  T#987 v=4 d+=0: INJ, b1(T\v)=1
+  T#988 v=4 d+=0: INJ, b1(T\v)=1
+  T#989 v=4 d+=0: INJ, b1(T\v)=1
+  T#990 v=4 d+=0: INJ, b1(T\v)=1
+  T#993 v=2 d+=4: INJ, b1(T\v)=1
+  T#997 v=2 d+=4: INJ, b1(T\v)=1
+  T#1002 v=4 d+=0: INJ, b1(T\v)=1
+  T#1003 v=4 d+=0: INJ, b1(T\v)=1
+  T#1010 v=1 d+=4: INJ, b1(T\v)=1
+  T#1014 v=1 d+=4: INJ, b1(T\v)=1
+  T#1017 v=4 d+=0: INJ, b1(T\v)=1
+  T#1019 v=4 d+=0: INJ, b1(T\v)=1
+
+======================================================================
+DELTA IMAGE STRUCTURE BY VERTEX TYPE
+======================================================================
+
+Interior vertices (1 <= d+ <= n-2):
+  d+=1, pos=(p0=0,p1=2,p2=5), inj=True: 120 cases
+  d+=1, pos=(p0=0,p1=3,p2=3), inj=False: 120 cases
+  d+=1, pos=(p0=0,p1=3,p2=3), inj=True: 120 cases
+  d+=1, pos=(p0=0,p1=3,p2=5), inj=False: 120 cases
+  d+=2, pos=(p0=1,p1=3,p2=1), inj=False: 120 cases
+  d+=2, pos=(p0=1,p1=4,p2=1), inj=False: 120 cases
+  d+=2, pos=(p0=1,p1=4,p2=1), inj=True: 120 cases
+  d+=2, pos=(p0=1,p1=4,p2=3), inj=False: 120 cases
+  d+=2, pos=(p0=3,p1=3,p2=3), inj=False: 120 cases
+  d+=2, pos=(p0=3,p1=4,p2=0), inj=False: 1 cases
+  d+=2, pos=(p0=3,p1=4,p2=1), inj=False: 119 cases
+  d+=3, pos=(p0=2,p1=3,p2=0), inj=False: 1 cases
+  d+=3, pos=(p0=2,p1=3,p2=0), inj=True: 1 cases
+  d+=3, pos=(p0=3,p1=3,p2=0), inj=False: 119 cases
+  d+=3, pos=(p0=3,p1=3,p2=0), inj=True: 119 cases
+  d+=3, pos=(p0=5,p1=2,p2=0), inj=True: 120 cases
+  d+=3, pos=(p0=5,p1=3,p2=0), inj=False: 120 cases
+
+Boundary vertices (source/sink):
+  d+=0, pos=(p0=0,p1=0,p2=6), inj=True: 120 cases
+  d+=4, pos=(p0=4,p1=0,p2=0), inj=False: 8 cases
+  d+=4, pos=(p0=4,p1=0,p2=0), inj=True: 16 cases
+  d+=4, pos=(p0=5,p1=0,p2=0), inj=True: 4 cases
+  d+=4, pos=(p0=6,p1=0,p2=0), inj=True: 92 cases
+
+======================================================================
+POSITION MIXING ANALYSIS
+======================================================================
+
+For interior v: the relative 2-cycle ALWAYS has terms at all 3 positions.
+For source v: only pos-0 terms.
+For sink v: only pos-2 terms.
+
+The delta image for interior v comes from mixing all three positions,
+creating a 1-chain that cannot be a boundary in T\v.
+
+Let's verify this algebraic mechanism:
+
+  v=0, d+=2
+  delta(z) edges: [((2, 1), np.float64(0.068366)), ((3, 2), np.float64(0.141401)), ((3, 1), np.float64(-0.068366)), ((4, 3), np.float64(0.073035)), ((4, 2), np.float64(-0.073035))]
+  Number of edges in delta(z): 5
+
+  v=1, d+=2
+  delta(z) edges: [((0, 4), np.float64(-0.075275)), ((0, 3), np.float64(0.075275)), ((3, 2), np.float64(0.089233)), ((4, 3), np.float64(0.013958)), ((4, 2), np.float64(-0.089233))]
+  Number of edges in delta(z): 5
+
+  v=2, d+=2
+  delta(z) edges: [((0, 4), np.float64(-0.148527)), ((0, 3), np.float64(-0.351787)), ((1, 4), np.float64(0.500313)), ((1, 0), np.float64(-0.500313)), ((4, 3), np.float64(0.351787))]
+  Number of edges in delta(z): 5
+
+  v=3, d+=2
+  delta(z) edges: [((0, 4), np.float64(0.551015)), ((1, 4), np.float64(-0.551015)), ((1, 0), np.float64(0.705235)), ((2, 1), np.float64(0.15422)), ((2, 0), np.float64(-0.15422))]
+  Number of edges in delta(z): 5
+
+  v=4, d+=2
+  delta(z) edges: [((1, 0), np.float64(0.493105)), ((2, 1), np.float64(0.47107)), ((2, 0), np.float64(-0.493105)), ((3, 2), np.float64(-0.022035)), ((3, 1), np.float64(0.022035))]
+  Number of edges in delta(z): 5
+
+
+Done.
