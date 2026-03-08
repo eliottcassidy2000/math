@@ -14,3 +14,52 @@ Aut(P_11) = AGL(1, F_11) = {x -> ax+b : a in QR}, |Aut| = 55
   A_6: 43670 (0.2s)
   A_7: 96085 (1.0s)
   A_8: 158345 (3.1s)
+  A_9: 173195 (6.5s)
+  A_10: 95095 (6.6s)
+
+--- Full automorphism orbits ---
+  dim 6: 794 orbits (expect ~794, ratio=55.0) (1.6s)
+  dim 7: 1747 orbits (expect ~1747, ratio=55.0) (3.6s)
+  dim 8: 2879 orbits (expect ~2879, ratio=55.0) (6.4s)
+  dim 9: 3149 orbits (expect ~3149, ratio=55.0) (7.2s)
+  dim 7 orbit sizes: {55: 1747}
+  dim 8 orbit sizes: {55: 2879}
+  dim 9 orbit sizes: {55: 3149}
+
+--- Building orbit boundary matrices ---
+  d_7: B=(794x1747), J=(3046x1747) (0.4s)
+  d_8: B=(1747x2879), J=(7029x2879) (0.8s)
+  d_9: B=(2879x3149), J=(10510x3149) (1.1s)
+
+======================================================================
+TRIVIAL REPRESENTATION (k=0, full Aut)
+======================================================================
+  Om_7^(triv): dim=138 (rk J=1609) (1.8s)
+  Om_8^(triv): dim=90 (rk J=2789) (6.2s)
+  Om_9^(triv): dim=36 (rk J=3113) (9.1s)
+  Om_8 basis shape: (2879, 90)
+
+  Om_8^(triv) = 90, ker(d_8) = 30, im(d_9) = 30
+  beta_8^(triv) = 0
+
+======================================================================
+k=1 (QR-TYPE) EIGENSPACE
+======================================================================
+
+--- Cyclic orbit computation ---
+  dim 6: 3970 cyclic orbits (0.4s)
+  dim 7: 8735 cyclic orbits (0.9s)
+  dim 8: 14395 cyclic orbits (1.7s)
+  dim 9: 15745 cyclic orbits (1.8s)
+
+--- Building cyclic-orbit boundary for k=1 ---
+  d_7: B=((3970, 8735)), J=((15230, 8735)) (0.3s)
+  d_8: B=((8735, 14395)), J=((35145, 14395)) (0.5s)
+  d_9: B=((14395, 15745)), J=((52550, 15745)) (0.7s)
+
+--- Computing beta_8^(k=1) ---
+  J_8 shape: (35145, 14395), nnz=50375
+  Computing J_8^H @ J_8 (14395x14395)...
+  JHJ computed, shape (14395, 14395) (0.0s)
+  Computing eigenvalues of JHJ...
+  Om_8^(k=1) = 450 (rk J = 13945) (362.8s)
