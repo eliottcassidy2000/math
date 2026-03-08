@@ -1,0 +1,249 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+Ω₂ STRUCTURE: TT vs NT COMPONENTS
+======================================================================
+
+--- n = 5 ---
+  Total nontrivial (dim_Z2 > 0): 1024
+  Z₂ lies in span(TT): 240/1024
+  Z₂ has NT components: 784/1024
+  dim(Ω₂) distribution: {8: 40, 9: 720, 10: 264}
+  |TT| distribution: {5: 24, 6: 280, 7: 240, 8: 240, 9: 120, 10: 120}
+
+  Z₂ has NT components! Need to understand why DT still works.
+
+  Example with NT in Z₂:
+    Cycle 0: 7 TT + 2 NT terms
+      (3, 2, 1) [TT]: 0.6281
+      (3, 2, 0) [NT]: -0.3626
+      (3, 1, 0) [NT]: 0.3626
+      (2, 1, 0) [TT]: -0.3600
+      (4, 2, 1) [TT]: -0.2681
+      (4, 3, 1) [TT]: 0.2655
+      (4, 3, 2) [TT]: -0.2655
+      (4, 2, 0) [TT]: 0.0026
+    Cycle 1: 7 TT + 2 NT terms
+      (4, 2, 1) [TT]: -0.4970
+      (2, 1, 0) [TT]: 0.4246
+      (4, 3, 2) [TT]: -0.4054
+      (4, 3, 1) [TT]: 0.4054
+      (3, 2, 0) [NT]: 0.3331
+      (3, 1, 0) [NT]: -0.3331
+      (4, 1, 0) [TT]: -0.0915
+      (4, 2, 0) [TT]: 0.0915
+    Cycle 2: 7 TT + 2 NT terms
+      (4, 1, 0) [TT]: 0.5400
+      (4, 2, 0) [TT]: -0.5400
+      (2, 1, 0) [TT]: -0.3001
+      (4, 2, 1) [TT]: 0.2848
+      (4, 3, 1) [TT]: 0.2552
+      (4, 3, 2) [TT]: -0.2552
+      (3, 1, 0) [NT]: -0.2399
+      (3, 2, 0) [NT]: 0.2399
+
+  Example with NT in Z₂:
+    Cycle 0: 7 TT + 2 NT terms
+      (4, 2, 1) [TT]: -0.4327
+      (4, 3, 1) [TT]: 0.4327
+      (3, 2, 1) [TT]: 0.4084
+      (4, 0, 2) [TT]: -0.3979
+      (4, 0, 3) [TT]: 0.3979
+      (0, 3, 2) [TT]: -0.3737
+      (4, 3, 2) [TT]: -0.0348
+      (0, 2, 1) [NT]: 0.0243
+    Cycle 1: 7 TT + 2 NT terms
+      (4, 3, 2) [TT]: -0.6295
+      (4, 0, 2) [TT]: 0.3507
+      (4, 0, 3) [TT]: -0.3507
+      (3, 2, 1) [TT]: 0.3239
+      (0, 3, 2) [TT]: 0.3056
+      (4, 2, 1) [TT]: -0.2788
+      (4, 3, 1) [TT]: 0.2788
+      (0, 2, 1) [NT]: -0.0451
+    Cycle 2: 7 TT + 2 NT terms
+      (0, 2, 1) [NT]: -0.5453
+      (0, 3, 1) [NT]: 0.5453
+      (0, 3, 2) [TT]: -0.4087
+      (3, 2, 1) [TT]: 0.3582
+      (4, 2, 1) [TT]: 0.1871
+      (4, 3, 1) [TT]: -0.1871
+      (4, 0, 2) [TT]: 0.1367
+      (4, 0, 3) [TT]: -0.1367
+
+  Example with NT in Z₂:
+    Cycle 0: 7 TT + 3 NT terms
+      (4, 2, 0) [NT]: 0.5868
+      (4, 2, 1) [TT]: -0.4776
+      (2, 1, 0) [TT]: 0.4329
+      (4, 1, 0) [NT]: -0.4029
+      (4, 3, 0) [NT]: -0.1839
+      (3, 2, 0) [TT]: -0.1539
+      (4, 3, 2) [TT]: 0.1092
+      (4, 3, 1) [TT]: 0.0747
+    Cycle 1: 7 TT + 3 NT terms
+      (3, 1, 0) [TT]: 0.5040
+      (4, 3, 0) [NT]: 0.4990
+      (4, 1, 0) [NT]: -0.3800
+      (3, 2, 1) [TT]: 0.3543
+      (4, 3, 2) [TT]: -0.3493
+      (4, 2, 1) [TT]: -0.2303
+      (4, 3, 1) [TT]: -0.1497
+      (2, 1, 0) [TT]: -0.1240
+    Cycle 2: 7 TT + 3 NT terms
+      (4, 3, 2) [TT]: -0.5002
+      (3, 2, 0) [TT]: 0.4691
+      (4, 3, 1) [TT]: 0.4062
+      (3, 1, 0) [TT]: -0.3751
+      (4, 2, 1) [TT]: -0.3009
+      (2, 1, 0) [TT]: 0.2698
+      (4, 2, 0) [NT]: -0.1993
+      (4, 1, 0) [NT]: 0.1053
+    Cycle 3: 7 TT + 3 NT terms
+      (3, 2, 1) [TT]: 0.5210
+      (4, 3, 1) [TT]: 0.4550
+      (3, 2, 0) [TT]: -0.3952
+      (2, 1, 0) [TT]: -0.3528
+      (4, 3, 0) [NT]: -0.3292
+      (4, 1, 0) [NT]: 0.2867
+      (4, 2, 1) [TT]: -0.1683
+      (4, 3, 2) [TT]: -0.1258
+
+======================================================================
+n = 6: Z₂ ⊆ span(TT)?
+======================================================================
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+  Total nontrivial: 32768
+  Z₂ ⊆ span(TT): 1760/32768
+  Z₂ ⊄ span(TT): 31008/32768
+
+Done.

@@ -1,0 +1,273 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+EDGE REMOVAL ANATOMY: WHEN DOES β₂ APPEAR?
+======================================================================
+
+--- n = 5: exhaustive edge removal ---
+  Total creation events: 80
+
+  Analyzing unfillable 2-cycles:
+
+  Event 0: remove 4→3, β₂=1
+    T scores: (1, 1, 1, 3, 4), T-e scores: (1, 1, 1, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (4, 2, 1): 0.4082
+      (3, 1, 0): -0.4082
+      (4, 1, 0): 0.4082
+      (4, 0, 2): 0.4082
+      (3, 2, 1): -0.4082
+      (3, 0, 2): -0.4082
+
+  Event 1: remove 2→1, β₂=1
+    T scores: (0, 1, 3, 3, 3), T-e scores: (0, 0, 3, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (0, 4, 2): 0.4082
+      (3, 0, 2): 0.4082
+      (4, 3, 2): 0.4082
+      (4, 3, 1): -0.4082
+      (0, 4, 1): -0.4082
+      (3, 0, 1): -0.4082
+
+  Event 2: remove 4→3, β₂=1
+    T scores: (1, 1, 1, 3, 4), T-e scores: (1, 1, 1, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (4, 2, 0): -0.4082
+      (3, 1, 2): 0.4082
+      (4, 1, 2): -0.4082
+      (4, 0, 1): -0.4082
+      (3, 2, 0): 0.4082
+      (3, 0, 1): 0.4082
+
+  Event 3: remove 1→2, β₂=1
+    T scores: (0, 1, 3, 3, 3), T-e scores: (0, 0, 3, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (0, 4, 2): 0.4082
+      (3, 0, 2): 0.4082
+      (4, 3, 2): 0.4082
+      (4, 3, 1): -0.4082
+      (0, 4, 1): -0.4082
+      (3, 0, 1): -0.4082
+
+  Event 4: remove 4→0, β₂=1
+    T scores: (1, 1, 1, 3, 4), T-e scores: (1, 1, 1, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (0, 2, 1): -0.4082
+      (0, 3, 2): -0.4082
+      (4, 1, 3): 0.4082
+      (0, 1, 3): -0.4082
+      (4, 2, 1): 0.4082
+      (4, 3, 2): 0.4082
+
+  Event 5: remove 0→4, β₂=1
+    T scores: (1, 1, 1, 3, 4), T-e scores: (1, 1, 1, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (0, 2, 1): -0.4082
+      (0, 3, 2): -0.4082
+      (4, 1, 3): 0.4082
+      (0, 1, 3): -0.4082
+      (4, 2, 1): 0.4082
+      (4, 3, 2): 0.4082
+
+  Event 6: remove 4→1, β₂=1
+    T scores: (1, 1, 1, 3, 4), T-e scores: (1, 1, 1, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (1, 2, 0): -0.4082
+      (1, 3, 2): -0.4082
+      (4, 2, 0): 0.4082
+      (1, 0, 3): -0.4082
+      (4, 0, 3): 0.4082
+      (4, 3, 2): 0.4082
+
+  Event 7: remove 3→2, β₂=1
+    T scores: (0, 1, 3, 3, 3), T-e scores: (0, 0, 3, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (1, 0, 3): 0.4082
+      (0, 4, 3): 0.4082
+      (4, 1, 2): -0.4082
+      (4, 1, 3): 0.4082
+      (0, 4, 2): -0.4082
+      (1, 0, 2): -0.4082
+
+  Event 8: remove 2→0, β₂=1
+    T scores: (0, 1, 3, 3, 3), T-e scores: (0, 0, 3, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (1, 4, 2): 0.4082
+      (3, 1, 2): 0.4082
+      (4, 3, 2): 0.4082
+      (1, 4, 0): -0.4082
+      (3, 1, 0): -0.4082
+      (4, 3, 0): -0.4082
+
+  Event 9: remove 0→2, β₂=1
+    T scores: (0, 1, 3, 3, 3), T-e scores: (0, 0, 3, 3, 3)
+    Cycle 0: 6 terms, uses_u=True, uses_v=True, uses_(u,v)_pair=False
+      (1, 4, 2): 0.4082
+      (3, 1, 2): 0.4082
+      (4, 3, 2): 0.4082
+      (1, 4, 0): -0.4082
+      (3, 1, 0): -0.4082
+      (4, 3, 0): -0.4082
+
+  Does the unfillable 2-cycle always involve the removed edge?
+    Always involves both u AND v: True
+    Always has a 2-path containing both u and v: False
+
+======================================================================
+n = 4: exhaustive edge removal + 2-cycle anatomy
+======================================================================
+  Total creation events at n=4: 0
+
+======================================================================
+THE MECHANISM: WHY ADDING AN EDGE KILLS THE 2-CYCLE
+======================================================================
+
+When we remove edge u→v from tournament T:
+1. Some 2-paths through (u,v) are lost from A₂
+2. Some 3-paths through (u,v) are lost from A₃  
+3. The lost 3-paths may have been filling 2-cycles that used those 2-paths
+4. If the 2-cycle survives (still in ker ∂₂) but its filling is lost → β₂>0
+
+When we ADD the edge back:
+1. New 3-paths appear that go through the edge u→v
+2. These 3-paths have boundaries landing in Z₂
+3. The new boundaries fill the previously unfillable 2-cycle
+
+THIS IS EXACTLY the DT mechanism:
+- Adding u→v creates new DT paths (a,u,v,d) with a→v and u→d
+- These DT paths' boundaries cover the "gap" in Z₂
+
+PROOF STRATEGY: 
+- For β₂>0, there exists z ∈ Z₂ not in im(∂₃)
+- For any pair (u,v) in the tournament, the DT paths using u→v contribute
+  boundaries that "cover" part of Z₂
+- The UNION of all these contributions covers ALL of Z₂
+- This is because every 2-path (a,b,c) has potential "extensions" to DT paths
+  (w,a,b,c) with w→b (from tournament completeness) 
+  or (a,b,c,w) with b→w (from tournament completeness)
+
+Done.
