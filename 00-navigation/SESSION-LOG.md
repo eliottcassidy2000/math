@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-08-S41 — 2026-03-08 (β_2=0 Proof Exploration: Oriented Graphs & Twin Mechanism)
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S40/S41 (context overflow continuation)
+**Summary of work:**
+  Deep exploration of WHY β_2=0 for tournaments in GLMY path homology.
+
+  **Major findings:**
+  1. β_2 > 0 IS possible for oriented graphs (70/59049 at n=5, 0 at n=4)
+  2. ALL counterexamples have "twin vertices" — pairs with identical neighborhoods
+  3. Twin 2-cycles: z = Σ(path through a) - (path through b) where a,b are twins
+  4. Completing to ANY tournament kills β_2 (0 survivors among all completions)
+  5. Tournament COMPLETENESS (every pair has an edge) is the essential property
+  6. Subtournament DT boundaries fill all 2-cycles at n=5 (0 failures) but not n=6
+  7. Cancellation chains (non-DT paths sharing bad face) essential at n=6
+  8. Transitive tournament: Ω_k = C(n,k+1) exactly for n=3-9 (Pascal's triangle!)
+  9. rank(∂_2|Ω_2) = C(n,2) - n + 1 - β_1 (universal formula)
+  10. β_3=0 at n=5 for ALL tournaments; β_3=1 possible at n=7
+  11. χ = 1-β_1+β_3-... consistent with β_2=0 at n=7
+
+  **P_11 computation:** Ω_8 eigvalsh (14395×14395, 3.2GB) still running after ~2h.
+  Known so far: Ω_{0-7} = [1, 5, 20, 70, 205, 460, 700, 690] for k≠0 eigenspace.
+
+**New contributions:** 10 new scripts in 04-computation/beta2_*.py, omega_transitive.py
+  Updated paley_path_homology_theory.md with items 11-16
+**Unresolved threads:**
+  - P_11 Ω_8 computation still running
+  - Algebraic proof of β_2=0 not yet complete; twin mechanism gives intuition but not formal proof
+  - Literature search did not find prior β_2=0 result for tournaments
+
 ## opus-2026-03-07-S46f — 2026-03-08 (A000568 Speed Suite + a(80) Record)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S46f (context window overflow)
