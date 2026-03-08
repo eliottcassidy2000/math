@@ -1,0 +1,92 @@
+======================================================================
+TRANSITIVE TOURNAMENT PERTURBATION ANALYSIS
+======================================================================
+
+======================================================================
+n = 5
+======================================================================
+  Transitive: O2=10, O3=5, Z2=4, surplus=1
+
+  Single arc flips from transitive:
+    gap=1: 4 flips, surplus=[1], delta=[0]
+    gap=2: 3 flips, surplus=[0], delta=[-1]
+    gap=3: 2 flips, surplus=[1], delta=[0]
+    gap=4: 1 flips, surplus=[1], delta=[0]
+  Min surplus after 1 flip: 0
+
+  Two consecutive arc flips from transitive:
+    New min surplus=1: flip1=(0,1), flip2=(0,2)
+    New min surplus=0: flip1=(0,1), flip2=(0,3)
+  Min surplus after 2 flips: 0
+  Surplus distribution (bottom 5):
+    surplus=0: 30
+    surplus=1: 66
+    surplus=2: 4
+
+======================================================================
+n = 6
+======================================================================
+  Transitive: O2=20, O3=15, Z2=10, surplus=5
+
+  Single arc flips from transitive:
+    gap=1: 5 flips, surplus=[5], delta=[0]
+    gap=2: 4 flips, surplus=[3], delta=[-2]
+    gap=3: 3 flips, surplus=[4], delta=[-1]
+    gap=4: 2 flips, surplus=[5], delta=[0]
+    gap=5: 1 flips, surplus=[5], delta=[0]
+  Min surplus after 1 flip: 3
+
+  Two consecutive arc flips from transitive:
+    New min surplus=5: flip1=(0,1), flip2=(0,2)
+    New min surplus=3: flip1=(0,1), flip2=(0,3)
+    New min surplus=1: flip1=(0,2), flip2=(3,5)
+  Min surplus after 2 flips: 1
+  Surplus distribution (bottom 5):
+    surplus=1: 2
+    surplus=3: 74
+    surplus=4: 58
+    surplus=5: 79
+    surplus=7: 8
+
+======================================================================
+n = 7
+======================================================================
+  Transitive: O2=35, O3=35, Z2=20, surplus=15
+
+  Single arc flips from transitive:
+    gap=1: 6 flips, surplus=[15], delta=[0]
+    gap=2: 5 flips, surplus=[12], delta=[-3]
+    gap=3: 4 flips, surplus=[13], delta=[-2]
+    gap=4: 3 flips, surplus=[14], delta=[-1]
+    gap=5: 2 flips, surplus=[15], delta=[0]
+    gap=6: 1 flips, surplus=[15], delta=[0]
+  Min surplus after 1 flip: 12
+
+  Two consecutive arc flips from transitive:
+    New min surplus=15: flip1=(0,1), flip2=(0,2)
+    New min surplus=12: flip1=(0,1), flip2=(0,3)
+    New min surplus=9: flip1=(0,2), flip2=(3,5)
+  Min surplus after 2 flips: 9
+  Surplus distribution (bottom 5):
+    surplus=9: 6
+    surplus=10: 4
+    surplus=11: 6
+    surplus=12: 140
+    surplus=13: 100
+
+======================================================================
+n = 8
+======================================================================
+  Transitive: O2=56, O3=70, Z2=35, surplus=35
+
+  Single arc flips from transitive:
+    gap=1: 7 flips, surplus=[35], delta=[0]
+    gap=2: 6 flips, surplus=[31], delta=[-4]
+    gap=3: 5 flips, surplus=[32], delta=[-3]
+    gap=4: 4 flips, surplus=[33], delta=[-2]
+    gap=5: 3 flips, surplus=[34], delta=[-1]
+    gap=6: 2 flips, surplus=[35], delta=[0]
+    gap=7: 1 flips, surplus=[35], delta=[0]
+  Min surplus after 1 flip: 31
+
+Done.
