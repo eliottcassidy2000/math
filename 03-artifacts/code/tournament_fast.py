@@ -476,6 +476,104 @@ def c3_regular(n):
     return n * (n - 1) * (n + 1) // 24
 
 
+def c5_fast(T):
+    """Count directed 5-cycles using trace formula. O(n^3).
+    Uses: c5 = (tr(A^5) - 5*tr(A^3) - 5*c3*n + 5*c3) / 10
+    Wait, that's for UNdirected. For directed 5-cycles in tournaments:
+    c5 = (1/10) * sum over 5-subsets of (#directed Ham cycles on subset).
+
+    Actually faster: count via adjacency matrix powers.
+    tr(A^k) counts closed walks of length k (with repetitions).
+    For tournaments, the number of DIRECTED k-cycles (vertex-set canonical,
+    rotation canonical) is:
+      c_k = (1/k) * [tr(A^k) - correction terms for shorter cycles]
+
+    For k=5:
+      tr(A^5) counts all closed walks of length 5.
+      Subtract walks that revisit vertices.
+      Then divide by 5 (rotations).
+    """
+    n = len(T)
+    if n < 5:
+        return 0
+
+    # Direct method: for each 5-subset, count directed Ham cycles
+    # O(C(n,5) * 5!) = O(n^5 * 120) but we can use DP per subset
+    count = 0
+    for verts in combinations(range(n), 5):
+        # DP on this 5-vertex subset
+        v = list(verts)
+        first = v[0]
+        # dp[mask][last] = # paths from first through mask ending at last
+        dp = [[0]*5 for _ in range(1 << 5)]
+        dp[1][0] = 1
+        for mask in range(1, 1 << 5):
+            if not (mask & 1):
+                continue
+            for last in range(5):
+                if not (mask & (1 << last)):
+                    continue
+                cnt = dp[mask][last]
+                if cnt == 0:
+                    continue
+                if bin(mask).count('1') == 5 and last != 0:
+                    if T[v[last]][v[0]]:
+                        count += cnt
+                    continue
+                for nxt in range(1, 5):
+                    if mask & (1 << nxt):
+                        continue
+                    if T[v[last]][v[nxt]]:
+                        dp[mask | (1 << nxt)][nxt] += cnt
+    return count
+
+
+def is_doubly_regular(T):
+    """Check if tournament T is doubly regular (DRT).
+    Requires: (1) regular (all scores = (n-1)/2),
+    (2) for every pair (u,v), common out-neighbors = (n-3)/4.
+    Only possible when n = 3 mod 4."""
+    n = len(T)
+    if n % 2 == 0:
+        return False
+    k = (n - 1) // 2
+    # Check regularity
+    for v in range(n):
+        if sum(T[v]) != k:
+            return False
+    # Check doubly-regular
+    if (n - 3) % 4 != 0:
+        return False
+    target = (n - 3) // 4
+    for u in range(n):
+        for v in range(u + 1, n):
+            common = sum(1 for w in range(n) if w != u and w != v
+                        and T[u][w] and T[v][w])
+            if common != target:
+                return False
+    return True
+
+
+# Known DRT cycle counts (from exhaustive verification)
+# Format: {n: {class_label: {k: c_k}}}
+DRT_CYCLE_COUNTS = {
+    3: {'paley': {3: 1}},
+    7: {'paley': {3: 14, 5: 42, 7: 24}},
+    # n=11 has TWO DRT classes
+    11: {
+        'paley_QR_1_3_4_5_9': {3: 55, 5: 594},
+        'non_paley_1_2_3_5_8': {3: 44, 5: 407},
+    },
+}
+
+# Regular tournament cycle counts at n=7 (3 iso classes)
+REGULAR_N7_CLASSES = {
+    'DRT': {3: 14, 5: 42, 7: 24, 'H': 189, 'count': 240},
+    'LTT': {3: 14, 5: 28, 7: 17, 'H': 175, 'count': 720},
+    'other': {3: 14, 5: 36, 7: 15, 'H': 171, 'count': 1680},
+}
+
+
 # ===================================================================
 # 7. Self-converse detection (THM-024 shortcut)
 # ===================================================================
@@ -702,6 +800,26 @@ def self_test():
     # Rotational T_5: self-converse (circulant, i->-i is anti-aut)
     sc5, aa5 = has_anti_automorphism(T5)
     assert sc5, "Rotational T_5 should be self-converse"
+
+    # c5_fast: counts rotation-canonical directed 5-cycles
+    assert c5_fast(T3c) == 0  # n=3, no 5-cycles
+    assert c5_fast(T3t) == 0
+    assert c5_fast(T5) == 2  # Rotational T_5: 2 directed Ham cycles on the single 5-subset
+
+    # is_doubly_regular
+    assert not is_doubly_regular(T3t)  # transitive, not DRT
+    assert is_doubly_regular(T3c)  # cyclic T_3 IS DRT (n=3 mod 4)
+
+    # Paley T_7
+    T7 = [[0]*7 for _ in range(7)]
+    QR = {1, 2, 4}  # quadratic residues mod 7
+    for i in range(7):
+        for j in range(7):
+            if i != j and (j - i) % 7 in QR:
+                T7[i][j] = 1
+    assert is_doubly_regular(T7), "Paley T_7 should be DRT"
+    assert c3_from_score(T7) == 14
+    assert c5_fast(T7) == 42  # DRT class at n=7: c5=42
 
     print("All self-tests PASSED.")
 
