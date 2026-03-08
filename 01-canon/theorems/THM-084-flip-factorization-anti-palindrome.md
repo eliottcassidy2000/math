@@ -1,4 +1,5 @@
-# THM-082: Arc-Flip Factorization and Anti-Palindromicity of D(x)
+# THM-084: Arc-Flip Factorization and Anti-Palindromicity of D(x)
+# (Renumbered from THM-082 by kind-pasteur-S36 — THM-082 is deletion-contraction for Ham paths)
 
 **Type:** Theorem (proved algebraically)
 **Certainty:** 5 -- PROVED
@@ -120,16 +121,17 @@ Since D is anti-palindromic of degree n-2, D(1) = sum_k D_k = 0
 
 ---
 
-## Corollary 2: H(T) = H(T') under single arc flip
+## Corollary 2: F(T,1) = F(T',1) = n!
 
-H(T) - H(T') = F(T,1) - F(T',1) = (1-1) * D(1) = 0.
+F(T,1) - F(T',1) = (1-1) * D(1) = 0. Both evaluate to n! (total permutations).
 
-Therefore H(T) is invariant under any single arc reversal.
+**WARNING (kind-pasteur-S36):** This does NOT mean H(T) = H(T'). H(T) = [x^{n-1}]F(T,x)
+is the leading coefficient, NOT the evaluation at x=1. H(T) ≠ H(T') in general under
+arc flip (deltas up to ±12 at n=5). The correct leading-coefficient identity is:
+H(T) - H(T') = D_{n-2} = -D_0 (from anti-palindromicity), which is nonzero in general.
 
-**Remark:** This is well known -- it follows from the fact that every tournament
-has an odd number of Hamiltonian paths (Redei's theorem), and flipping one arc
-preserves the total count. But the polynomial factorization gives a stronger result:
-the entire polynomial difference factors through (x-1).
+The polynomial factorization F(T,x)-F(T',x) = (x-1)*D(x) gives (x-1)^2 | (F(T)-F(T'))
+(since D(1)=0), but the x^{n-1} coefficient is unconstrained by this.
 
 ---
 

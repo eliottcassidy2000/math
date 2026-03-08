@@ -1234,3 +1234,21 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Flip formula as corollary:** F_T - F_{T'} = (x-1) * [F(T/e) - F(T'/e')], with D anti-palindromic.
 **Anti-palindromicity proof:** D(x) = -x^{n-2}D(1/x) follows from palindromicity of F_T, F_{T'}.
 **Scripts:** `04-computation/poly_deletion_contraction.py`
+
+### INV-121: F(T,omega) mod 9 universality — PROVED (THM-085)
+**Source:** kind-pasteur-2026-03-07-S36 (extending S35 analysis)
+**Status:** PROVED algebraically. Complete proof via Taylor expansion.
+**What:** 9 | F(T,omega) for ALL tournaments on n >= 6 vertices. Proof:
+1. Taylor expansion F(T,x) = sum c_k (x-1)^k. Over F_3: x^3-1 = (x-1)^3.
+2. c_0 = n! (tournament-indep), c_1 = n!(n-1)/2 (tournament-INDEPENDENT!), both divisible by 3.
+3. c_2 = A_non + (n-2)!*dp(T), where A_non is tournament-independent and dp(T) = directed 2-path count. Both A_non and (n-2)! divisible by 3 for n >= 5, so c_2 = 0 mod 3 regardless of T.
+4. Therefore (x-1)^3 | F(T,x) mod 3 for n >= 5, giving S_r = 0 mod 3.
+5. Combined with v_3(n!) >= 2 for n >= 6: 9 | F(T,omega).
+**Additional:** Eulerian conjecture: 3|A(n,k) => 3|F_k(T) for all T (verified n=5-8). But this alone doesn't explain n=9,10 (where all A(n,k) = 1 mod 3); the Taylor proof covers all n.
+**Sharp:** n=5 has S_r=0 mod 3 but v_3(5!)=1 blocks mod 9. n=4 has c_2 NOT forced 0.
+**Scripts:** `04-computation/c2_mod3_proof.py`, `fk_mod3_conjecture.py`, `sr_mod3_n9_check.py`, `f_omega_mod27_analysis.py`
+
+### INV-122: THM-084 naming fix + Corollary 2 error
+**Source:** kind-pasteur-2026-03-07-S36
+**Status:** FIXED.
+**What:** opus-S46 created THM-082-flip-factorization-anti-palindrome.md, colliding with kind-pasteur's THM-082-deletion-contraction-ham-paths.md. Renamed opus's to THM-084. Also fixed Corollary 2 which incorrectly claimed H(T)=H(T') under arc flip (FALSE: H(T) != H(T') in general, deltas up to +-12 at n=5). Correct: F(T,1)=n!=F(T',1) trivially.

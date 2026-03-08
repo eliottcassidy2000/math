@@ -40,6 +40,41 @@ Entry format:
 **New contributions:** 05-knowledge/ directory, CLAUDE.md best practices section, run_and_save.sh, search_knowledge.sh
 **Unresolved threads:** Variable registry needs more entries (alpha_k, bc33, mu, S(T), etc.); hypothesis detail files not yet created; bulk result capture needed for 848 scripts in 04-computation/
 
+## kind-pasteur-2026-03-07-S36 — 2026-03-07 (THM-085: F(T,omega) mod 9 PROVED)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S35 (deletion-contraction, F(omega) initial analysis)
+**Summary of work:**
+  PROVED THM-085: 9 | F(T,omega) for ALL tournaments on n >= 6 vertices.
+
+  **Major result — THM-085 (PROVED):**
+  Complete algebraic proof via Taylor expansion around x=1. Key identity: over F_3, x^3-1 = (x-1)^3, so S_r = 0 mod 3 iff (x-1)^3 | F(T,x) mod 3.
+  - c_0 = n! (tournament-independent, 3|c_0 for n>=3)
+  - c_1 = n!(n-1)/2 (tournament-INDEPENDENT! Proved by position-symmetry argument)
+  - c_2 = A_non + (n-2)!*dp(T), where A_non is tournament-independent and dp(T) = directed 2-path count. Both A_non and (n-2)! divisible by 3 for n>=5.
+  - Therefore c_2 = 0 mod 3 regardless of tournament structure for n>=5.
+  - Combined with v_3(n!) >= 2 for n >= 6: 9 | F(T,omega) universally.
+
+  **Additional discoveries:**
+  - Individual F_k mod 3: when Eulerian number A(n,k) = 0 mod 3, then F_k(T) = 0 mod 3 for ALL T (verified n=5-8). But at n=9, ALL A(9,k) = 1 mod 3, so individual F_k are unconstrained — the Taylor proof is necessary.
+  - S_r = 0 mod 3 verified at n=9,10 (sampled) despite no individual F_k being forced 0. The Taylor expansion proof covers all n >= 5.
+  - Mod 27 is NOT universal at n=6,7 (41% and 34.5%).
+
+  **Housekeeping:**
+  - Fixed THM-082 naming collision (opus THM-082 -> THM-084)
+  - Fixed opus Corollary 2 error (H(T)=H(T') under arc flip is FALSE)
+
+  **New files:**
+  - `01-canon/theorems/THM-085-f-omega-mod9-universal.md`
+  - `04-computation/f_omega_mod27_analysis.py`
+  - `04-computation/fk_mod3_conjecture.py`
+  - `04-computation/sr_mod3_n9_check.py`
+  - `04-computation/c2_mod3_proof.py`
+
+**Unresolved threads:**
+  - Prove Eulerian conjecture: 3|A(n,k) => 3|F_k(T) for all T (verified computationally, no proof)
+  - F(T,omega) mod 27: when does universality start? Not at n=6,7. Need c_3 analysis.
+  - Opus THM-K/L/M (W-F Mobius, M(r) symmetry): integrate and verify
+
 ## opus-2026-03-07-S35c11 — 2026-03-07 (W-F Mobius Transform, Perpendicularity Mechanism, M(r) Symmetry)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S35c10 (context compacted multiple times)
