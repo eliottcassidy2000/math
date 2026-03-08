@@ -1,0 +1,49 @@
+======================================================================
+ARC FLIP EXACTNESS TRACKING
+======================================================================
+
+--- n=5 exhaustive ---
+  Precomputed 1024 tournaments in 1.0s
+  beta_2 != 0: 0
+
+  Delta (dim_Z2, rk_d3) distribution under arc flip:
+    (dZ2=-2, dim3=-2): 720 flips OK
+    (dZ2=-1, dim3=-1): 1440 flips OK
+    (dZ2=+0, dim3=+0): 5920 flips OK
+    (dZ2=+1, dim3=+1): 1440 flips OK
+    (dZ2=+2, dim3=+2): 720 flips OK
+
+  Mismatches (dZ2 != dim3): 0
+
+  Deltas by score difference (d_src - d_tgt):
+    score_diff=-2: N=160, avg(dOm2)=+1.00, avg(dOm3)=+0.00, avg(dZ2)=+0.00, avg(dim3)=+0.00
+    score_diff=-1: N=960, avg(dOm2)=+0.00, avg(dOm3)=-0.50, avg(dZ2)=-0.25, avg(dim3)=-0.25
+    score_diff=+0: N=2400, avg(dOm2)=+0.00, avg(dOm3)=-0.80, avg(dZ2)=-0.20, avg(dim3)=-0.20
+    score_diff=+1: N=3200, avg(dOm2)=+0.00, avg(dOm3)=+0.00, avg(dZ2)=+0.00, avg(dim3)=+0.00
+    score_diff=+2: N=2400, avg(dOm2)=+0.00, avg(dOm3)=+0.80, avg(dZ2)=+0.20, avg(dim3)=+0.20
+    score_diff=+3: N=960, avg(dOm2)=+0.00, avg(dOm3)=+0.50, avg(dZ2)=+0.25, avg(dim3)=+0.25
+    score_diff=+4: N=160, avg(dOm2)=-1.00, avg(dOm3)=+0.00, avg(dZ2)=+0.00, avg(dim3)=+0.00
+
+======================================================================
+n=6 SAMPLED (1000 tournaments, all arcs)
+======================================================================
+  ... 200/1000 (13s)
+  ... 400/1000 (26s)
+  ... 600/1000 (39s)
+  ... 800/1000 (52s)
+
+  Processed 1000 tournaments x 15 arcs = 15000 flips in 65s
+  Mismatches (dZ2 != dim3): 0
+
+  Delta distribution:
+    (dZ2=-4, dim3=-4): 39 OK
+    (dZ2=-3, dim3=-3): 65 OK
+    (dZ2=-2, dim3=-2): 797 OK
+    (dZ2=-1, dim3=-1): 3180 OK
+    (dZ2=+0, dim3=+0): 6703 OK
+    (dZ2=+1, dim3=+1): 3270 OK
+    (dZ2=+2, dim3=+2): 786 OK
+    (dZ2=+3, dim3=+3): 67 OK
+    (dZ2=+4, dim3=+4): 93 OK
+
+Done.
