@@ -1124,3 +1124,52 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 ### INV-104: "Cycle-Rich" as Novel Concept — NOTED
 **Source:** opus-2026-03-07-S43 (web research)
 **Status:** The term "cycle-rich" (every vertex in a directed 3-cycle, no source/sink) does not appear in the literature. This is a novel concept from our project. The poisoning graph argument (Part R) may be publishable as a standalone result about cycle-rich tournaments.
+
+### INV-105: Deletion-Contraction for H(T) — VERIFIED
+**Source:** kind-pasteur-2026-03-07-S34
+**Status:** VERIFIED COMPUTATIONALLY. H(T) = H(T\e) + H(T/e) holds 100% at n=4,5. Commutative specialization of Mitrovic's W_X = W_{X\e} - W_{X/e}↑ (arXiv:2504.20968).
+**Convention:** Contraction merges tail/head: w inherits IN from tail, OUT from head.
+**Next step:** Prove algebraically (should follow from Mitrovic by specialization). Use for inductive proof of Redei/OCF/H-gaps.
+
+### INV-106: GLMY Path Homology of Tournaments — IDENTIFIED
+**Source:** kind-pasteur-2026-03-07-S34 (web research)
+**Status:** IDENTIFIED. Tang-Yau (2026, arXiv:2602.04140) compute path homology of circulant digraphs using Fourier decomposition — directly applicable to Paley tournaments.
+**Key connection:** H_1(T) should relate to cycle space of T and thus to Omega(T) and alpha_1.
+**Next step:** Compute GLMY path homology for small tournaments (n=4,5). Check if rank(H_1) = alpha_1 or c_3.
+
+### INV-107: Extended Root Polytope Deletion-Contraction — IDENTIFIED
+**Source:** kind-pasteur-2026-03-07-S34 (web research). Kalman-Tothmeresz 2024, arXiv:2409.18902.
+**Status:** IDENTIFIED. h*-polynomial of extended root polytope is monotone under deletion-contraction.
+**Next step:** Compute root polytope for small tournament digraphs. Check if h* relates to I(Omega,x).
+
+### INV-108: Lee-Yang Zeros of F(T,x) — DISCOVERED (opus-S44)
+**Source:** opus-2026-03-07-S44
+**Status:** MAJOR DISCOVERY. F(T,x) zeros come in reciprocal pairs (palindrome). Cluster at ±2pi/3 on unit circle. H=9 at n=5: ALL zeros on unit circle.
+**Key findings:** F(T,omega) real at n=7, F(T,i) pure imaginary, universal divisibilities F(T,omega) = 0 mod 9 and F(T,i) = 0 mod 16i.
+**Next step:** Prove Lee-Yang property for specific tournament classes. Connect to phase transitions in statistical mechanics.
+
+### INV-109: Walsh/Fourier Spectral OCF — DISCOVERED (opus-S35c)
+**Source:** opus-2026-03-07-S35c9
+**Status:** MAJOR DISCOVERY. THM-081: hat{t_k}[S] = (1/2^k) sum (-1)^{asc(S,C)}. Counting identity provides new proof path for OCF.
+**Next step:** Prove counting identity algebraically for d=1 (single edge). Extend to n=7 (need hat{t7} and hat{bc35}).
+
+### INV-110: Ihara Zeta Function of Tournaments — TESTED
+**Source:** kind-pasteur-2026-03-07-S34
+**Status:** TESTED. z_inv(1/2) = det(I-A/2+(D-I)/4) strongly correlated with H (r=-0.95 at n=5) but NOT uniquely determined.
+**Conclusion:** Ihara zeta constrains H but doesn't determine it. Consistent with cycles constraining but not determining independence structure.
+
+### INV-111: p-adic Structure Beyond p=2 — TESTED
+**Source:** kind-pasteur-2026-03-07-S34
+**Status:** TESTED. H mod 3 = (1+2*alpha_1+alpha_2) mod 3 from OCF. At n=4: H mod 3 uniquely determined by c3 via (1+2c3) mod 3. H mod 7 = 0 impossible at n<=6, first achievable at n=7.
+**Next step:** Investigate H mod p for larger p. Is there a p-adic tower for p=3?
+
+### INV-112: Converse Invariant Digraph Polynomials — IDENTIFIED
+**Source:** kind-pasteur-2026-03-07-S34 (web research). Ai-Gutin-Lei-Yeo-Zhou 2024, arXiv:2407.17051.
+**Status:** IDENTIFIED. New digraph polynomial for converse invariance testing. H(T)=H(T^op) means Ham paths are converse invariant.
+**Next step:** Read the paper. Check if their polynomial gives new information about H(T).
+
+### INV-113: Stanley-Stembridge Resolution Implications — IDENTIFIED
+**Source:** kind-pasteur-2026-03-07-S34 (web research). Hikita 2024.
+**Status:** IDENTIFIED. Stanley-Stembridge (e-positivity of chromatic SF for 3+1-free posets) proved by Hikita 2024.
+**Connection:** Via Mitrovic-Stojadinovic, Redei-Berge U_T connects to chromatic SF. If tournament poset is (3+1)-free, U_T inherits e-positivity.
+**Next step:** Check if tournament arc ordering posets are (3+1)-free. Investigate Hessenberg varieties approach.

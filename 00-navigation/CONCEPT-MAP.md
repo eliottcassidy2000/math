@@ -476,6 +476,16 @@ The 2-adic valuation v₂((n-3)!) = (n-3) − s₂(n-3) where s₂ is binary dig
 - At non-universal n, does S depend on invariants beyond t₃?
 - Is there a p-adic analogue for odd primes p?
 
+### p-adic Structure for Odd Primes (kind-pasteur-S34)
+**H mod 3:** From OCF, H mod 3 = (1 + 2α₁ + α₂ + 2α₃ + ...) mod 3 (since 2^k mod 3 cycles 2,1,2,1,...).
+- At n=4: H mod 3 = (1 + 2c₃) mod 3 — UNIQUE per c₃. Formula: c₃=0→1, c₃=1→0, c₃=2→2
+- At n=5: H mod 3 = (1 + 2α₁) mod 3 — still unique since α₂=0 (Omega complete)
+- At n=6+: H mod 3 depends on both α₁ and α₂
+
+**H mod 7 = 0:** IMPOSSIBLE at n≤6 (all achievable H are {1,3,5,...,45}, none divisible by 7).
+Achievable at n=7: H=35, 49, 77, 91, 105, 133, 147, 175, 189 (~10.8% of tournaments).
+Note 189 = max H at n=7 = 27×7 (Paley). This parallels H=7 impossibility but is NOT a permanent gap.
+
 ---
 
 ## X. OEIS CONNECTIONS
@@ -660,3 +670,42 @@ This would be a categorification of the identity H = Σ 2^k α_k, lifting the nu
 | McKay tournament database | All tournaments to n=10; DRTs to n=23 | Verification |
 | OEIS A038375 | Max Hamiltonian paths | Paley maximizer conjecture |
 | arXiv | Papers | Literature connections |
+| `ihara_zeta_tournament.py` | Ihara-Bass determinant vs H | r=-0.95 correlation |
+| `padic_beyond_2_test.py` | H mod 3,5,7 structure | H mod 7=0 impossible at n≤6 |
+
+---
+
+## XV. NOVEL MODEL PROPOSALS (kind-pasteur-S34 brainstorm)
+
+These are speculative high-level connections proposed for future investigation. Sorted by estimated promise.
+
+### Tier 1: Strong theoretical motivation, testable
+
+| # | Model | Idea | Test |
+|---|-------|------|------|
+| 27 | **Tensor network contraction** | Tournament as tensor network: each vertex = rank-(n-1) tensor, edges = contractions. Contraction gives scalar ∝ H(T). Positive bias (every edge present) makes contraction tractable (Jiang-Chen-Schuch-Hangleiter 2024). | Compute tensor network value for small tournaments, compare to H |
+| 28 | **Kazhdan-Lusztig polynomials** | Ham paths are permutations. The Bruhat intervals [e, σ] for σ∈HamPaths(T) have K-L polynomials. Sum of K-L polynomials at q=1 over all Ham paths of T could equal H(T) or relate to I(Ω,x). | Compute K-L polynomials of Bruhat intervals for n=4,5 Ham paths |
+| 29 | **F_1 geometry** | Tournament as "variety over F_1" — the scheme of complete oriented graphs. Point counting: #T(F_q) might be a polynomial in q whose evaluation at q=1 gives H(T). Tits building of complete graph = apartment structure. | Check if any q-analog of H(T) specializes correctly |
+| 30 | **Galois group of I(Ω,x)** | The splitting field of I(Ω(T), x) over Q. For real-rooted (n≤8), all roots real, Galois group acts trivially on root order. At n=9 (complex roots), Galois group becomes interesting. | Compute Galois groups of I(Ω,x) for specific tournaments |
+| 31 | **Dimers on tournament graph** | The dimer partition function of a bipartite graph = permanent. Tournament adjacency matrix A has per(A) = # cycle covers. Irving-Omar: H(D) = Σ det(Ā[S])·per(A[S^c]). This det×per decomposition is a "mixed dimer" model. | Compute per(A) vs H(T) correlation |
+
+### Tier 2: Interesting analogy, needs more development
+
+| # | Model | Idea |
+|---|-------|------|
+| 32 | **Chern-Simons on tournament** | Tournament as flat connection on K_n; H(T) as holonomy. The Witten-Reshetikhin-Turaev invariant at level k=2 might reproduce OCF. |
+| 33 | **Floer homology** | Tournament flow polytope as symplectic manifold; pseudo-holomorphic curves = Ham paths; Floer differential counts paths with signs. |
+| 34 | **Langlands correspondence** | Tournament L-function L_T(s) via cycle data. For Paley T_p, L_{T_p}(s) might factor through Dirichlet L(s,χ_p). Functional equation from palindrome F(T,x) = x^{n-1}F(T,1/x). |
+| 35 | **Quandle structure** | Tournament defines a quandle-like operation: i◁j = "winner of i,j". Not a proper quandle (fails idempotence) but a "tournament rack". Counting invariants of the rack might encode H. |
+| 36 | **Hochschild homology** | Tournament algebra A_T = kQ/I where Q = tournament quiver, I = path relations. HH_*(A_T) captures cycle structure. Bar resolution gives chain complex whose Euler characteristic relates to H. |
+| 37 | **Schubert calculus** | Hamiltonian paths as Schubert cells in flag variety Fl(n). Tournament structure selects which cells contribute. H(T) = # cells in a Schubert subvariety defined by T. |
+| 38 | **Motivic measure** | Tournament as measure on permutation space. The motivic integral ∫ L^{-ord_T} dμ might compute I(Ω,x) or a motivic lift. |
+
+### Tier 3: Highly speculative, long-shot connections
+
+| # | Model | Idea |
+|---|-------|------|
+| 39 | **Quantum error correction** | Tournament codes (binary strings of length m encoding tournaments) as error-correcting codes. Weight enumerator relates to Hamming distribution of H. |
+| 40 | **Fractional cascades** | Tournament arc-flip graph as cascade lattice. The number of "downward paths" in the cascade = H(T). |
+| 41 | **Renormalization group** | Tournament coarsening (contract cycles into super-vertices) as RG flow. H(T) is an RG invariant. Fixed points = regular tournaments. |
+| 42 | **Random matrix universality** | Skew-adjacency eigenvalue distribution → GUE for random tournaments. Correlation functions of eigenvalues relate to cycle counts. Phase transition at eigenvalue gap ↔ H-gap. |
