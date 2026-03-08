@@ -1,367 +1,332 @@
+import os; os.environ['PYTHONIOENCODING'] = 'utf-8'
 #!/usr/bin/env python3
 """
-Test Open Problem 9 conjecture: alpha_1(T) = |C_3(T)| (mod 2) for all tournaments T.
+INV-011: Does the SCORE SEQUENCE determine H(T) mod 4?
 
-alpha_1(T) = number of independent pairs (vertex-disjoint pairs) of odd cycles
-              in the conflict graph Omega(T).
-|C_3(T)|   = number of directed 3-cycles in tournament T.
+Background:
+  OCF gives H(T) = I(Omega(T), 2) = 1 + 2*alpha_0 + 4*alpha_1 + ...
+  where alpha_k = number of independent sets of size k in the conflict graph.
+  So H(T) mod 4 = (1 + 2*alpha_0) mod 4, i.e. determined by parity of alpha_0.
+  alpha_0 = number of directed odd cycles (as vertex sets with a Hamiltonian cycle).
 
-Also computes H(T) = number of Hamiltonian paths via bitmask DP,
-and examines H(T) mod 4, mod 8, and score-sequence patterns.
+  At n=3,4: alpha_0 = c3 (only 3-cycles exist as odd cycles).
+  c3 is determined by score sequence via Moon's formula: c3 = C(n,3) - sum s_i*(s_i-1)/2.
+  So at n=3,4: score => c3 => alpha_0 mod 2 => H mod 4.
 
-Exhaustive for n=3,4,5,6; sampled for n=7.
+  At n>=5: 5-cycles contribute to alpha_0, so alpha_0 != c3 in general.
+  Question: does score still determine H mod 4?
+
+  DEEPER: does score determine alpha_1 = total odd-cycle count?
+  And is c3 constant within a score class? (Yes, by Moon's formula.)
+
+Tests:
+  n=3,4,5,6: exhaustive enumeration
+  n=7: sample 10000 random tournaments
+  For each score class, check constancy of H mod 4, c3, and alpha_0 (total odd cycles).
 """
 
 import sys
-from itertools import combinations
-from collections import defaultdict
+import os
 import random
+from collections import defaultdict
+from itertools import combinations, permutations
 
-def generate_all_tournaments(n):
-    """Generate all tournaments on n vertices as adjacency sets."""
-    edges = [(i, j) for i in range(n) for j in range(i+1, n)]
-    num_edges = len(edges)
-    for mask in range(1 << num_edges):
-        adj = [set() for _ in range(n)]
-        for k, (i, j) in enumerate(edges):
-            if mask & (1 << k):
-                adj[i].add(j)
-            else:
-                adj[j].add(i)
-        yield adj
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '03-artifacts', 'code'))
+from tournament_lib import (
+    tournament_from_bits, all_tournaments, hamiltonian_path_count,
+    find_odd_cycles, random_tournament
+)
 
-def count_ham_paths_bitmask(adj, n):
-    """Count Hamiltonian paths using bitmask DP. dp[mask][v] = # paths ending at v visiting mask."""
-    dp = [[0]*n for _ in range(1 << n)]
-    for v in range(n):
-        dp[1 << v][v] = 1
-    full = (1 << n) - 1
-    for mask in range(1, 1 << n):
-        for v in range(n):
-            if not (mask & (1 << v)):
-                continue
-            if dp[mask][v] == 0:
-                continue
-            for u in adj[v]:
-                if not (mask & (1 << u)):
-                    dp[mask | (1 << u)][u] += dp[mask][v]
-    return sum(dp[full])
 
-def find_all_odd_cycles(adj, n):
-    """Find all directed odd cycles as frozensets of vertices.
-    Enumerate all subsets of size 3,5,7,... and check if they form a directed cycle."""
-    cycles = set()
-    for size in range(3, n+1, 2):  # odd sizes only
-        for subset in combinations(range(n), size):
-            # Try all cyclic orderings of this subset
-            # A directed cycle on subset S exists if there's a permutation
-            # (v0, v1, ..., v_{k-1}) with edges v0->v1, v1->v2, ..., v_{k-1}->v0
-            # We use DFS to find all Hamiltonian cycles in the induced subgraph
-            s_list = list(subset)
-            s_set = frozenset(subset)
-            # Find directed Hamiltonian cycles in induced tournament on subset
-            # Fix first vertex to avoid counting rotations multiple times
-            first = s_list[0]
-            rest = s_list[1:]
-            # DFS
-            found = _has_directed_ham_cycle(adj, first, rest, s_set)
-            if found:
-                cycles.add(s_set)
-    return cycles
+def score_sequence(T):
+    """Return sorted score sequence (tuple of out-degrees)."""
+    n = len(T)
+    scores = sorted(sum(T[v]) for v in range(n))
+    return tuple(scores)
 
-def _has_directed_ham_cycle(adj, first, rest, s_set):
-    """Check if the induced tournament on s_set has a directed Hamiltonian cycle.
-    Fix first vertex, try all permutations of rest via DFS."""
-    # DFS: build path starting from first, must use all vertices in s_set, last must connect to first
-    stack = [(first, frozenset([first]))]
-    target_len = len(s_set)
-    while stack:
-        v, visited = stack.pop()
-        if len(visited) == target_len:
-            if first in adj[v]:
-                return True
-            continue
-        for u in adj[v]:
-            if u in s_set and u not in visited:
-                stack.append((u, visited | {u}))
-    return False
 
-def count_3cycles(adj, n):
-    """Count directed 3-cycles in tournament."""
+def count_3cycles(T):
+    """Count directed 3-cycles using Moon's formula: c3 = C(n,3) - sum s_i*(s_i-1)/2."""
+    n = len(T)
+    scores = [sum(T[v]) for v in range(n)]
+    return (n * (n - 1) * (n - 2) // 6) - sum(s * (s - 1) // 2 for s in scores)
+
+
+def count_odd_cycle_vertex_sets(T):
+    """Count the number of vertex subsets that support a directed odd cycle.
+    This is alpha_0 = |V(Omega(T))| = number of vertices in the conflict graph.
+    Each vertex set of odd size that contains a directed Hamiltonian cycle counts once."""
+    n = len(T)
     count = 0
-    for triple in combinations(range(n), 3):
-        i, j, k = triple
-        # Check both orientations of 3-cycle
-        if j in adj[i] and k in adj[j] and i in adj[k]:
-            count += 1
-        elif k in adj[i] and j in adj[k] and i in adj[j]:
-            count += 1
-    return count
-
-def build_conflict_graph(cycles):
-    """Build conflict graph: two odd cycles are adjacent iff they share a vertex."""
-    cycle_list = list(cycles)
-    m = len(cycle_list)
-    conflict_adj = [set() for _ in range(m)]
-    for i in range(m):
-        for j in range(i+1, m):
-            if cycle_list[i] & cycle_list[j]:  # share vertex
-                conflict_adj[i].add(j)
-                conflict_adj[j].add(i)
-    return cycle_list, conflict_adj
-
-def count_independent_pairs(conflict_adj, m):
-    """Count independent sets of size 2 in the conflict graph = pairs of non-adjacent vertices."""
-    count = 0
-    for i in range(m):
-        for j in range(i+1, m):
-            if j not in conflict_adj[i]:
+    for size in range(3, n + 1, 2):
+        for verts in combinations(range(n), size):
+            # Check if there's a directed Hamiltonian cycle on this vertex set
+            if _has_ham_cycle(T, verts):
                 count += 1
     return count
 
-def independence_polynomial_at_2(cycle_list, conflict_adj, m):
-    """Compute I(Omega, 2) = sum over all independent sets S of 2^|S|.
-    This equals H(T) the Hamiltonian path count (by the OCF).
-    We compute it to cross-check."""
-    # Enumerate all independent sets
-    # For small m this is feasible
-    if m > 25:
-        return None  # too large
-    total = 0
-    # Use inclusion via subset enumeration
-    # Independent set = subset with no two adjacent
-    for mask in range(1 << m):
-        subset = [i for i in range(m) if mask & (1 << i)]
-        # Check independence
-        indep = True
-        for idx, i in enumerate(subset):
-            for j in subset[idx+1:]:
-                if j in conflict_adj[i]:
-                    indep = False
-                    break
-            if not indep:
-                break
-        if indep:
-            total += (1 << len(subset))  # 2^|S|
-    return total
 
-def score_sequence(adj, n):
-    """Return sorted score sequence."""
-    scores = sorted([len(adj[v]) for v in range(n)])
-    return tuple(scores)
+def _has_ham_cycle(T, verts):
+    """Check if the induced tournament on verts has a directed Hamiltonian cycle.
+    Fix first vertex to avoid counting rotations."""
+    s = list(verts)
+    first = s[0]
+    rest = s[1:]
+    s_set = set(verts)
+    # DFS: build path from first through all vertices, last must have arc to first
+    stack = [(first, frozenset([first]))]
+    target_len = len(s)
+    while stack:
+        v, visited = stack.pop()
+        if len(visited) == target_len:
+            if T[v][first]:
+                return True
+            continue
+        for u in s_set:
+            if u not in visited and T[v][u]:
+                stack.append((u, visited | {u}))
+    return False
 
-def random_tournament(n):
-    """Generate a random tournament on n vertices."""
-    adj = [set() for _ in range(n)]
-    for i in range(n):
-        for j in range(i+1, n):
-            if random.random() < 0.5:
-                adj[i].add(j)
-            else:
-                adj[j].add(i)
-    return adj
 
-def analyze_tournament(adj, n, verbose=False):
-    """Analyze a single tournament. Returns dict of results."""
-    H = count_ham_paths_bitmask(adj, n)
-    c3 = count_3cycles(adj, n)
-    odd_cycles = find_all_odd_cycles(adj, n)
-    alpha_0 = len(odd_cycles)
-    cycle_list, conflict_adj = build_conflict_graph(odd_cycles)
-    m = len(cycle_list)
-    alpha_1 = count_independent_pairs(conflict_adj, m)
+def count_total_directed_odd_cycles(T):
+    """Count the total number of directed odd cycles (not vertex sets).
+    Each vertex set may support multiple directed cycles.
+    This uses find_odd_cycles from tournament_lib which returns all directed cycles
+    (canonical: min vertex first, eliminating rotations)."""
+    cycles = find_odd_cycles(T)
+    return len(cycles)
 
-    # Cross-check: H(T) should equal I(Omega, 2) if OCF holds
-    if m <= 20:
-        I2 = independence_polynomial_at_2(cycle_list, conflict_adj, m)
-    else:
-        I2 = None
 
-    scores = score_sequence(adj, n)
+def analyze_score_class(results_by_score):
+    """Analyze whether H mod 4, c3, alpha_0 are constant within each score class.
+    Returns a report dict."""
+    report = {}
+    for score_seq, entries in sorted(results_by_score.items()):
+        h_mod4_vals = set(e['H_mod4'] for e in entries)
+        c3_vals = set(e['c3'] for e in entries)
+        alpha0_vals = set(e['alpha0'] for e in entries)
+        total_cycles_vals = set(e['total_odd_cycles'] for e in entries)
 
-    conjecture_holds = (alpha_1 % 2) == (c3 % 2)
+        report[score_seq] = {
+            'count': len(entries),
+            'H_mod4_constant': len(h_mod4_vals) == 1,
+            'H_mod4_values': sorted(h_mod4_vals),
+            'c3_constant': len(c3_vals) == 1,
+            'c3_values': sorted(c3_vals),
+            'alpha0_constant': len(alpha0_vals) == 1,
+            'alpha0_values': sorted(alpha0_vals),
+            'total_odd_cycles_constant': len(total_cycles_vals) == 1,
+            'total_odd_cycles_values': sorted(total_cycles_vals),
+        }
+    return report
 
-    result = {
-        'H': H,
-        'c3': c3,
-        'alpha_0': alpha_0,
-        'alpha_1': alpha_1,
-        'I2': I2,
-        'scores': scores,
-        'conjecture_holds': conjecture_holds,
-        'H_mod4': H % 4,
-        'H_mod8': H % 8,
-    }
-
-    if verbose and not conjecture_holds:
-        print(f"  COUNTEREXAMPLE: scores={scores}, H={H}, c3={c3}, alpha_0={alpha_0}, alpha_1={alpha_1}")
-
-    return result
 
 def main():
     random.seed(42)
 
-    # Exhaustive tests
+    overall_h_mod4_fails = {}  # n -> list of score seqs where H mod 4 varies
+
+    # =========================================================================
+    # Exhaustive tests for n = 3, 4, 5, 6
+    # =========================================================================
     for n in range(3, 7):
-        print(f"\n{'='*60}")
-        print(f"n = {n}: Exhaustive test over all tournaments")
-        print(f"{'='*60}")
+        print(f"\n{'='*70}")
+        print(f"n = {n}: EXHAUSTIVE enumeration")
+        print(f"{'='*70}")
 
-        total = 0
-        counterexamples = 0
-        ocf_mismatches = 0
+        m = n * (n - 1) // 2
+        total_tournaments = 1 << m
+        print(f"Total tournaments: {total_tournaments}")
 
-        # Track distributions
-        h_mod4_dist = defaultdict(int)
-        h_mod8_dist = defaultdict(int)
-        score_stats = defaultdict(lambda: {'count': 0, 'conjecture_holds': 0,
-                                            'h_mod4': defaultdict(int),
-                                            'h_mod8': defaultdict(int),
-                                            'alpha1_parity': defaultdict(int),
-                                            'c3_parity': defaultdict(int)})
+        results_by_score = defaultdict(list)
 
-        for adj in generate_all_tournaments(n):
-            total += 1
-            r = analyze_tournament(adj, n, verbose=True)
+        for bits in range(total_tournaments):
+            T = tournament_from_bits(n, bits)
+            H = hamiltonian_path_count(T)
+            c3 = count_3cycles(T)
+            alpha0 = count_odd_cycle_vertex_sets(T)
+            total_odd = count_total_directed_odd_cycles(T)
+            ss = score_sequence(T)
 
-            if not r['conjecture_holds']:
-                counterexamples += 1
+            results_by_score[ss].append({
+                'H': H,
+                'H_mod4': H % 4,
+                'c3': c3,
+                'alpha0': alpha0,
+                'total_odd_cycles': total_odd,
+            })
 
-            if r['I2'] is not None and r['I2'] != r['H']:
-                ocf_mismatches += 1
+        report = analyze_score_class(results_by_score)
 
-            h_mod4_dist[r['H_mod4']] += 1
-            h_mod8_dist[r['H_mod8']] += 1
+        # Print summary
+        print(f"\nScore classes: {len(report)}")
+        print(f"{'Score':<30} {'Count':>6} {'c3':>10} {'alpha0':>15} {'#OddCyc':>15} {'H%4':>12} {'H%4 const?':>12}")
+        print("-" * 100)
 
-            ss = r['scores']
-            score_stats[ss]['count'] += 1
-            if r['conjecture_holds']:
-                score_stats[ss]['conjecture_holds'] += 1
-            score_stats[ss]['h_mod4'][r['H_mod4']] += 1
-            score_stats[ss]['h_mod8'][r['H_mod8']] += 1
-            score_stats[ss]['alpha1_parity'][r['alpha_1'] % 2] += 1
-            score_stats[ss]['c3_parity'][r['c3'] % 2] += 1
+        fails = []
+        for ss, info in sorted(report.items()):
+            c3_str = str(info['c3_values'][0]) if info['c3_constant'] else str(info['c3_values'])
+            a0_str = str(info['alpha0_values'][0]) if info['alpha0_constant'] else str(info['alpha0_values'])
+            tc_str = str(info['total_odd_cycles_values'][0]) if info['total_odd_cycles_constant'] else str(info['total_odd_cycles_values'])
+            hm4_str = str(info['H_mod4_values'][0]) if info['H_mod4_constant'] else str(info['H_mod4_values'])
+            const_str = "YES" if info['H_mod4_constant'] else "**NO**"
 
-        print(f"\nTotal tournaments: {total}")
-        print(f"Counterexamples to alpha_1 = c3 (mod 2): {counterexamples}")
-        print(f"OCF mismatches (I(Omega,2) != H): {ocf_mismatches}")
-        print(f"\nH mod 4 distribution: {dict(sorted(h_mod4_dist.items()))}")
-        print(f"H mod 8 distribution: {dict(sorted(h_mod8_dist.items()))}")
+            print(f"{str(ss):<30} {info['count']:>6} {c3_str:>10} {a0_str:>15} {tc_str:>15} {hm4_str:>12} {const_str:>12}")
 
-        print(f"\nBy score sequence:")
-        for ss in sorted(score_stats.keys()):
-            s = score_stats[ss]
-            print(f"  {ss}: count={s['count']}, conjecture_holds={s['conjecture_holds']}/{s['count']}, "
-                  f"H mod 4={dict(s['h_mod4'])}, H mod 8={dict(s['h_mod8'])}, "
-                  f"alpha1 par={dict(s['alpha1_parity'])}, c3 par={dict(s['c3_parity'])}")
+            if not info['H_mod4_constant']:
+                fails.append(ss)
 
-    # Sampled test for n=7
-    print(f"\n{'='*60}")
-    print(f"n = 7: Sampled test (1000 random tournaments)")
-    print(f"{'='*60}")
+        overall_h_mod4_fails[n] = fails
+
+        if fails:
+            print(f"\n*** H mod 4 VARIES within {len(fails)} score class(es)! ***")
+            for ss in fails:
+                entries = results_by_score[ss]
+                print(f"\n  Score {ss}:")
+                # Show all distinct (H, H%4, c3, alpha0, total_odd) combos
+                combos = defaultdict(int)
+                for e in entries:
+                    key = (e['H'], e['H_mod4'], e['c3'], e['alpha0'], e['total_odd_cycles'])
+                    combos[key] += 1
+                print(f"    {'H':>6} {'H%4':>5} {'c3':>5} {'alpha0':>7} {'#OddCyc':>8} {'count':>6}")
+                for (H, hm4, c3, a0, tc), cnt in sorted(combos.items()):
+                    print(f"    {H:>6} {hm4:>5} {c3:>5} {a0:>7} {tc:>8} {cnt:>6}")
+        else:
+            print(f"\n  H mod 4 is CONSTANT within every score class at n={n}.")
+
+        # Check the formula: H mod 4 = (1 + 2*c3) mod 4 ?
+        formula_holds = True
+        for ss, entries in results_by_score.items():
+            c3_val = entries[0]['c3']
+            predicted = (1 + 2 * c3_val) % 4
+            for e in entries:
+                if e['H_mod4'] != predicted:
+                    formula_holds = False
+                    break
+            if not formula_holds:
+                break
+
+        if formula_holds:
+            print(f"  Formula H mod 4 = (1 + 2*c3) mod 4 HOLDS at n={n}.")
+        else:
+            print(f"  Formula H mod 4 = (1 + 2*c3) mod 4 FAILS at n={n}.")
+
+        # Check: alpha0 mod 2 = c3 mod 2 within each score class?
+        alpha0_c3_parity = True
+        for ss, entries in results_by_score.items():
+            for e in entries:
+                if e['alpha0'] % 2 != e['c3'] % 2:
+                    alpha0_c3_parity = False
+                    break
+            if not alpha0_c3_parity:
+                break
+        print(f"  alpha0 mod 2 = c3 mod 2 for all tournaments: {alpha0_c3_parity}")
+
+    # =========================================================================
+    # Sampled test for n = 7
+    # =========================================================================
+    print(f"\n{'='*70}")
+    print(f"n = 7: SAMPLED (10000 random tournaments)")
+    print(f"{'='*70}")
 
     n = 7
-    total = 0
-    counterexamples = 0
-    ocf_mismatches = 0
-    h_mod4_dist = defaultdict(int)
-    h_mod8_dist = defaultdict(int)
+    num_samples = 10000
+    results_by_score = defaultdict(list)
 
-    num_samples = 1000
     for _ in range(num_samples):
-        adj = random_tournament(n)
-        total += 1
-        r = analyze_tournament(adj, n, verbose=True)
+        T = random_tournament(n)
+        H = hamiltonian_path_count(T)
+        c3 = count_3cycles(T)
+        alpha0 = count_odd_cycle_vertex_sets(T)
+        total_odd = count_total_directed_odd_cycles(T)
+        ss = score_sequence(T)
 
-        if not r['conjecture_holds']:
-            counterexamples += 1
+        results_by_score[ss].append({
+            'H': H,
+            'H_mod4': H % 4,
+            'c3': c3,
+            'alpha0': alpha0,
+            'total_odd_cycles': total_odd,
+        })
 
-        if r['I2'] is not None and r['I2'] != r['H']:
-            ocf_mismatches += 1
+    report = analyze_score_class(results_by_score)
 
-        h_mod4_dist[r['H_mod4']] += 1
-        h_mod8_dist[r['H_mod8']] += 1
+    print(f"\nScore classes seen: {len(report)}")
+    print(f"{'Score':<30} {'Count':>6} {'c3':>6} {'alpha0 const?':>14} {'H%4 values':>15} {'H%4 const?':>12}")
+    print("-" * 90)
 
-    print(f"\nTotal sampled: {total}")
-    print(f"Counterexamples to alpha_1 = c3 (mod 2): {counterexamples}")
-    print(f"OCF mismatches: {ocf_mismatches}")
-    print(f"H mod 4 distribution: {dict(sorted(h_mod4_dist.items()))}")
-    print(f"H mod 8 distribution: {dict(sorted(h_mod8_dist.items()))}")
+    fails_n7 = []
+    for ss, info in sorted(report.items()):
+        c3_str = str(info['c3_values'][0]) if info['c3_constant'] else str(info['c3_values'])
+        a0_const = "YES" if info['alpha0_constant'] else "NO"
+        hm4_str = str(info['H_mod4_values'])
+        const_str = "YES" if info['H_mod4_constant'] else "**NO**"
 
-    # Additional analysis: look at H mod 8 vs alpha_1 relationship
-    print(f"\n{'='*60}")
-    print(f"Detailed mod-8 analysis for n=5 (exhaustive)")
-    print(f"{'='*60}")
+        print(f"{str(ss):<30} {info['count']:>6} {c3_str:>6} {a0_const:>14} {hm4_str:>15} {const_str:>12}")
 
-    n = 5
-    for adj in generate_all_tournaments(n):
-        r = analyze_tournament(adj, n)
-        # H = 1 + 2*alpha_0 + 4*alpha_1 + ... (mod 8)
-        # So (H - 1) / 2 mod 2 = alpha_0 mod 2
-        # And (H - 1 - 2*alpha_0) / 4 mod 2 = alpha_1 mod 2
-        H = r['H']
-        a0 = r['alpha_0']
-        a1 = r['alpha_1']
-        c3 = r['c3']
+        if not info['H_mod4_constant']:
+            fails_n7.append(ss)
 
-        # Check: H mod 2 should always be 1 (Redei's theorem: H is odd)
-        assert H % 2 == 1, f"H={H} is even!"
+    overall_h_mod4_fails[7] = fails_n7
 
-        # Check: (H-1)/2 mod 2 should equal alpha_0 mod 2
-        h_alpha0_check = ((H - 1) // 2) % 2 == a0 % 2
+    if fails_n7:
+        print(f"\n*** H mod 4 VARIES within {len(fails_n7)} score class(es) at n=7! ***")
+        for ss in fails_n7[:5]:  # show at most 5
+            entries = results_by_score[ss]
+            print(f"\n  Score {ss} ({len(entries)} samples):")
+            combos = defaultdict(int)
+            for e in entries:
+                key = (e['H'], e['H_mod4'], e['c3'], e['alpha0'])
+                combos[key] += 1
+            print(f"    {'H':>6} {'H%4':>5} {'c3':>5} {'alpha0':>7} {'count':>6}")
+            for (H, hm4, c3, a0), cnt in sorted(combos.items())[:20]:
+                print(f"    {H:>6} {hm4:>5} {c3:>5} {a0:>7} {cnt:>6}")
+    else:
+        print(f"\n  H mod 4 is CONSTANT within every score class seen at n=7.")
 
-        # Check: extract alpha_1 from H
-        # H = I(Omega, 2) = sum_{k>=0} alpha_k * 2^k  (wait, not exactly)
-        # Actually I(Omega, x) = sum_{k>=0} alpha_k * x^k where alpha_k = # indep sets of size k
-        # So I(Omega, 2) = alpha_0_is + alpha_1_is*2 + alpha_2_is*4 + ...
-        # where alpha_k_is is the count of independent sets of size k
-        # Note: alpha_0_is = 1 (empty set), alpha_1_is = number of odd cycles, etc.
+    # Also check formula
+    formula_holds_n7 = True
+    for ss, entries in results_by_score.items():
+        c3_val = entries[0]['c3']
+        predicted = (1 + 2 * c3_val) % 4
+        for e in entries:
+            if e['H_mod4'] != predicted:
+                formula_holds_n7 = False
+                break
+        if not formula_holds_n7:
+            break
+    print(f"  Formula H mod 4 = (1 + 2*c3) mod 4: {'HOLDS' if formula_holds_n7 else 'FAILS'}")
 
-        # So H = 1 + (# odd cycles)*2 + (# indep pairs)*4 + ...
-        # H mod 2 = 1 (always)
-        # (H-1)/2 mod 2 = (# odd cycles) mod 2
-        # ((H-1)/2 - # odd cycles) / 2 mod 2 = ... wait
-        # H = 1 + 2*a0 + 4*a1 + 8*a2 + ...
-        # H mod 4 = 1 + 2*(a0 mod 2)  -- so H mod 4 is 1 or 3
-        # H mod 8 = 1 + 2*a0 + 4*(a1 mod 2)  -- but a0 can be > 1
-        # Actually H mod 8 = (1 + 2*a0 + 4*a1) mod 8
+    # alpha0 mod 2 = c3 mod 2?
+    alpha0_c3_n7 = True
+    for ss, entries in results_by_score.items():
+        for e in entries:
+            if e['alpha0'] % 2 != e['c3'] % 2:
+                alpha0_c3_n7 = False
+                break
+        if not alpha0_c3_n7:
+            break
+    print(f"  alpha0 mod 2 = c3 mod 2: {'HOLDS' if alpha0_c3_n7 else 'FAILS'}")
 
-        predicted_H_mod4 = (1 + 2 * a0) % 4
-        predicted_H_mod8 = (1 + 2 * a0 + 4 * a1) % 8
+    # =========================================================================
+    # GRAND SUMMARY
+    # =========================================================================
+    print(f"\n{'='*70}")
+    print("GRAND SUMMARY: Does score sequence determine H(T) mod 4?")
+    print(f"{'='*70}")
+    for n_val in sorted(overall_h_mod4_fails.keys()):
+        fails = overall_h_mod4_fails[n_val]
+        if fails:
+            print(f"  n={n_val}: **NO** -- {len(fails)} score class(es) with varying H mod 4")
+        else:
+            status = "EXHAUSTIVE" if n_val <= 6 else "SAMPLED (10000)"
+            print(f"  n={n_val}: YES (verified {status})")
 
-        scores = score_sequence(adj, n)
-        if H % 4 != predicted_H_mod4 or H % 8 != predicted_H_mod8:
-            print(f"  MISMATCH: scores={scores}, H={H}, a0={a0}, a1={a1}, "
-                  f"H%4={H%4} vs pred={predicted_H_mod4}, H%8={H%8} vs pred={predicted_H_mod8}")
+    print("\nKey insight: H = I(Omega,2) = 1 + 2*alpha_0 + 4*alpha_1 + ...")
+    print("So H mod 4 = (1 + 2*alpha_0) mod 4, determined by parity of alpha_0.")
+    print("If alpha_0 mod 2 = c3 mod 2 (and c3 is score-determined), then score => H mod 4.")
+    print("Done.")
 
-    print("H mod 8 = 1 + 2*alpha_0 + 4*alpha_1 (mod 8) check complete for n=5")
-
-    # Final summary: for n=5, print each tournament's key data
-    print(f"\n{'='*60}")
-    print(f"Full data table for n=4")
-    print(f"{'='*60}")
-    print(f"{'Scores':<20} {'H':>4} {'c3':>4} {'a0':>4} {'a1':>4} {'H%4':>4} {'H%8':>4} {'a1%2':>5} {'c3%2':>5} {'match':>6}")
-
-    n = 4
-    for adj in generate_all_tournaments(n):
-        r = analyze_tournament(adj, n)
-        scores = score_sequence(adj, n)
-        print(f"{str(scores):<20} {r['H']:>4} {r['c3']:>4} {r['alpha_0']:>4} {r['alpha_1']:>4} "
-              f"{r['H_mod4']:>4} {r['H_mod8']:>4} {r['alpha_1']%2:>5} {r['c3']%2:>5} "
-              f"{'YES' if r['conjecture_holds'] else 'NO':>6}")
-
-    print(f"\n{'='*60}")
-    print(f"Full data table for n=5")
-    print(f"{'='*60}")
-    print(f"{'Scores':<20} {'H':>4} {'c3':>4} {'a0':>4} {'a1':>4} {'H%4':>4} {'H%8':>4} {'a1%2':>5} {'c3%2':>5} {'match':>6}")
-
-    n = 5
-    for adj in generate_all_tournaments(n):
-        r = analyze_tournament(adj, n)
-        scores = score_sequence(adj, n)
-        print(f"{str(scores):<20} {r['H']:>4} {r['c3']:>4} {r['alpha_0']:>4} {r['alpha_1']:>4} "
-              f"{r['H_mod4']:>4} {r['H_mod8']:>4} {r['alpha_1']%2:>5} {r['c3']%2:>5} "
-              f"{'YES' if r['conjecture_holds'] else 'NO':>6}")
 
 if __name__ == '__main__':
     main()

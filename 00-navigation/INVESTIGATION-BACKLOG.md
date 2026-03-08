@@ -270,11 +270,20 @@
 **What:** Extend the Q-Lemma to complete mixed graphs, recovering Schweser-Stiebitz-Toft (2025) strengthening of Redei.
 **Next step:** Read arXiv:2510.10659 carefully. Understand what "complete mixed graph" means and how the Q-Lemma generalizes.
 
-### INV-011: Mod-4 score-sequence criterion (Open Problem 9 in paper)
+### INV-011: Mod-4 score-sequence criterion (Open Problem 9 in paper) — RESOLVED (NO)
 **Source:** oq:mod4_struct in tex
-**Status:** Conjectural. NOT tested computationally beyond small cases.
-**What:** Does alpha_1(T) (equiv H(T) mod 4) admit a score-sequence characterization? Moon's formula determines |C_3| from score sequence. Question: is alpha_1 = |C_3| (mod 2) in general?
-**Next step:** Test computationally at n=5,6,7. Extract alpha_1 and |C_3| for all tournaments.
+**Status:** RESOLVED NEGATIVELY (kind-pasteur-2026-03-07-S39b).
+**What:** Does score sequence determine H(T) mod 4?
+**Answer:** NO for n >= 5. The formula H mod 4 = (1 + 2·c3) mod 4 holds only for n <= 4.
+**Results:**
+- n=3,4: YES (exhaustive, H mod 4 constant within every score class)
+- n=5: NO — score (1,2,2,2,3) has H mod 4 in {1,3} (c5 varies within this class)
+- n=6: NO — 5/22 score classes have varying H mod 4
+- n=7: NO — 27/59 sampled score classes have varying H mod 4
+**Key insight:** H mod 4 = (1 + 2·alpha_0) mod 4 where alpha_0 = total odd cycle count.
+For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contribute to alpha_0 but c5 is NOT determined by score sequence (confirmed independently).
+**Also found:** c5 is NOT determined by (score, sum_d², edge_score_sum). Even (score, common_out_neighbor) pairs vary. c5 requires genuine graph structure beyond all local/pairwise statistics.
+**Scripts:** `04-computation/mod4_score_test.py`, `04-computation/c5_score_determination.py`
 
 ### INV-012: BlackSelf(8) exceptional class (Open Problem 7 in paper) — PARTIALLY RESOLVED
 **Source:** oq:n8 in tex
@@ -694,12 +703,13 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **DRT n=11 ANALYSIS (kind-pasteur S21):** Two DRT classes at n=11 (from (11,5,2)-difference sets): Paley QR={1,3,4,5,9} (H=95095, c3=55, c5=594, |Aut|=55) and non-Paley {1,2,3,5,8} (H=69311, c3=44, c5=407, |Aut|=11). Cycle counts are NOT invariant across different DRT classes — Paley strictly dominates. Savchenko's c_k invariance is within a single isomorphism class.
 **Next step:** (1) Obtain Savchenko's exact polynomial c_k formulas. (2) Test at n=19 or n=23 (multiple DRT classes). (3) Prove Paley maximizes H among ALL DRTs.
 
-### INV-054: Komarov-Mackey exact 5-cycle formula (arXiv:1410.6828, JGT 2017)
+### INV-054: Komarov-Mackey exact 5-cycle formula (arXiv:1410.6828, JGT 2017) — PARTIALLY INVESTIGATED
 **Source:** kind-pasteur-2026-03-06-S19 web search
-**Status:** NEW LEAD — MEDIUM PRIORITY
+**Status:** PARTIALLY INVESTIGATED (kind-pasteur-S39b). c5 is NOT score-determined.
 **What:** Exact formula for number of directed 5-cycles in any tournament in terms of edge score sequence. Maximum c5 ≈ (3/4)*C(n,5), achieved by almost all random tournaments. Lower bounds also proved.
-**Why it matters:** This formula, combined with our alpha_1 analysis, could give an exact expression for the directed 5-cycle contribution to H(T). At n=7, we showed Paley has 42 directed 5-cycles (2 per vertex set) — this may follow from the Komarov-Mackey formula + regularity.
-**Next step:** (1) Read the formula. (2) Apply it to Paley tournaments. (3) Check if it gives a closed form for alpha_1 contributions.
+**NEW FINDING (S39b):** c5 is NOT determined by score sequence, even combined with sum_d², edge_score, or common_out_neighbor statistics. At n=5, score (1,2,2,2,3) has c5 in {1,2,3}; at n=6, 9/22 score sequences have varying c5. The Komarov-Mackey formula likely involves CUBIC or higher-order graph statistics (e.g., directed walks of length 3+). For regular tournaments, c5 IS a class invariant (Savchenko, verified n=5,7).
+**Why it matters:** This rules out O(n²) c5 computation from scores alone. Cycle enumeration (O(n^5) for 5-cycles, or O(2^n) bitmask DP) remains necessary.
+**Next step:** (1) Read the exact Komarov-Mackey formula. (2) Identify which cubic invariant determines c5.
 
 ### INV-055: Linial-Morgenstern cycle density conjecture and extremal tournaments
 **Source:** kind-pasteur-2026-03-06-S19 web search; arXiv:2011.14142 (Ma-Tang), arXiv:1902.00572
