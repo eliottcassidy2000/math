@@ -1,0 +1,21 @@
+======================================================================
+δ-INJECTIVITY TEST FOR β₂=0 INDUCTION
+======================================================================
+
+n=4: 64 tournaments in 0s
+  H₂(T,T\v) > 0 for some v: 16
+  δ injective for ALL v: 16/16
+  δ injective for SOME v: 64/64
+  δ-injectivity failures (individual (T,v) pairs): 0
+  ✓ δ is injective for ALL T, ALL v at n=4
+
+n=5: 1024 tournaments in 9s
+  H₂(T,T\v) > 0 for some v: 480
+  δ injective for ALL v: 476/480
+  δ injective for SOME v: 1024/1024
+  δ-injectivity failures (individual (T,v) pairs): 4
+  ✗ δ fails for 4 (T,v) pairs
+  n=6: 5000/32768 (136s)
+  n=6: 10000/32768 (281s)
+  n=6: 15000/32768 (430s)
+  n=6: 20000/32768 (569s)

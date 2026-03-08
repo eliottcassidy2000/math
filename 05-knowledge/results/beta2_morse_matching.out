@@ -1,0 +1,89 @@
+======================================================================
+DISCRETE MORSE MATCHING FOR β₂=0
+======================================================================
+
+PART 1: Right-extension matching for Ω₂ → Ω₃
+--------------------------------------------------
+
+n=4: Right extensions per A₂ path:
+  0 extensions: 192 (50.0%)
+  1 extensions: 192 (50.0%)
+
+n=5: Right extensions per A₂ path:
+  0 extensions: 3840 (25.0%)
+  1 extensions: 7680 (50.0%)
+  2 extensions: 3840 (25.0%)
+
+n=6: Right extensions per A₂ path:
+  0 extensions: 122880 (12.5%)
+  1 extensions: 368640 (37.5%)
+  2 extensions: 368640 (37.5%)
+  3 extensions: 122880 (12.5%)
+
+======================================================================
+PART 2: Greedy right-extension matching on A₂ paths
+--------------------------------------------------
+
+n=4: Unmatched A₂ paths after greedy matching:
+  3 unmatched: 64 (100.0%)
+
+n=5: Unmatched A₂ paths after greedy matching:
+  0 unmatched: 24 (2.3%)
+  1 unmatched: 160 (15.6%)
+  2 unmatched: 310 (30.3%)
+  3 unmatched: 256 (25.0%)
+  4 unmatched: 72 (7.0%)
+  5 unmatched: 88 (8.6%)
+  6 unmatched: 114 (11.1%)
+
+======================================================================
+PART 3: Combined up+down matching
+--------------------------------------------------
+
+T#0 scores=(0, 1, 2, 3)
+  Ω₀=4, Ω₁=6, Ω₂=4, Ω₃=1
+  rk∂₁=3, rk∂₂=3, rk∂₃=1
+  β₁=0, z₂=1
+  Euler: 4 - 6 + 4 - 1 = 1
+  β₀=1, β₁=0, β₂=0, Z₃=0
+
+T#5 scores=(0, 2, 2, 2)
+  Ω₀=4, Ω₁=6, Ω₂=3, Ω₃=0
+  rk∂₁=3, rk∂₂=3, rk∂₃=0
+  β₁=0, z₂=0
+  Euler: 4 - 6 + 3 - 0 = 1
+  β₀=1, β₁=0, β₂=0, Z₃=0
+
+T#21 scores=(1, 1, 2, 2)
+  Ω₀=4, Ω₁=6, Ω₂=3, Ω₃=1
+  rk∂₁=3, rk∂₂=2, rk∂₃=1
+  β₁=1, z₂=1
+  Euler: 4 - 6 + 3 - 1 = 0
+  β₀=1, β₁=1, β₂=0, Z₃=0
+
+======================================================================
+PART 4: Explicit right inverse ∂₃⁻¹: Z₂ → Ω₃
+--------------------------------------------------
+n=5: Filling support sizes (in Ω₃ basis):
+  support=2: 1 (0.0%)
+  support=3: 839 (23.3%)
+  support=4: 1080 (30.0%)
+  support=5: 960 (26.7%)
+  support=7: 600 (16.7%)
+  support=10: 120 (3.3%)
+
+Single Ω₃ element fills Z₂ direction: 0/3600 (0.0%)
+
+======================================================================
+PART 5: Singular values of ∂₃ restricted to Z₂
+--------------------------------------------------
+n=5: Singular value analysis of ∂₃ in Ω₂ coords
+  Total: 1024 tournaments with Z₂>0
+  Min singular value: min=1.414214, mean=1.976950
+  Max singular value: max=2.516611, mean=2.278292
+  Condition ratio (σ_z2/σ_1): min=0.632456, mean=0.869175
+  z2=3: 640 tours, min_σ in [1.4142, 2.2361]
+  z2=4: 240 tours, min_σ in [2.2361, 2.2361]
+  z2=5: 144 tours, min_σ in [2.0000, 2.1602]
+
+Done.
