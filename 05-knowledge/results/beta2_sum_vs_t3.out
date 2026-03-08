@@ -21,3 +21,4 @@ n=5: 1024 tournaments in 8s
   ✗ Σ h₂_rel NOT determined by t₃ alone (2 overlapping pairs)
   n=6: 5000/32768 (101s)
   n=6: 10000/32768 (217s)
+  n=6: 15000/32768 (372s)
