@@ -1,0 +1,31 @@
+Found 4 H=661 tournaments
+
+--- Tournament 1 ---
+  max_dim=4: beta=[1, 0, 0, 0, 1] (0.7s)
+  max_dim=5: beta=[1, 0, 0, 0, 1, 0] (1.6s)
+  max_dim=6: beta=[1, 0, 0, 0, 1, 0, 0] (2.1s)
+  max_dim=7: beta=[1, 0, 0, 0, 1, 0, 0, 0] (2.0s)
+
+--- Tournament 2 ---
+  max_dim=4: beta=[1, 0, 0, 0, 0] (0.7s)
+  max_dim=5: beta=[1, 0, 0, 0, 0, 0] (1.6s)
+  max_dim=6: beta=[1, 0, 0, 0, 0, 0, 0] (2.0s)
+  max_dim=7: beta=[1, 0, 0, 0, 0, 0, 0, 0] (2.1s)
+
+--- Tournament 3 ---
+  max_dim=4: beta=[1, 0, 0, 0, 1] (0.6s)
+  max_dim=5: beta=[1, 0, 0, 0, 1, 0] (1.6s)
+  max_dim=6: beta=[1, 0, 0, 0, 1, 0, 0] (2.1s)
+  max_dim=7: beta=[1, 0, 0, 0, 1, 0, 0, 0] (2.0s)
+
+--- Tournament 4 ---
+  max_dim=4: beta=[1, 0, 0, 0, 0] (0.5s)
+  max_dim=5: beta=[1, 0, 0, 0, 0, 0] (1.5s)
+  max_dim=6: beta=[1, 0, 0, 0, 0, 0, 0] (2.0s)
+  max_dim=7: beta=[1, 0, 0, 0, 0, 0, 0, 0] (2.0s)
+
+--- Random tournament (for comparison) ---
+H=335
+  max_dim=4: beta=[1, 0, 0, 0, 0] (0.2s)
+  max_dim=5: beta=[1, 0, 0, 0, 0, 0] (0.5s)
+  max_dim=6: beta=[1, 0, 0, 0, 0, 0, 0] (0.6s)

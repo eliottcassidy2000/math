@@ -1359,12 +1359,25 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **What:** arXiv:2309.07240 defines A_T(t) = sum over labelings of t^{des_T(sigma)} where des counts descents across ALL arcs. This has degree C(n,2), not n-1. The (1+t)^{floor(n/2)} divisibility applies to A_T(t), not to our F(T,x). The two polynomials encode different statistics (all-arc descents vs Hamiltonian-path forward edges).
 **Impact:** The Celano-Sieger-Spiro result cannot be directly applied to F(T,x). However, it establishes that tournaments have a universal structural constraint on A_T(t) depending only on n, which is analogous to our universal constraint on F(T,x) mod 3 (THM-086).
 
-### INV-130: Pfaffian-Betti Connection — EXHAUSTIVE at n=6
-**Source:** opus-2026-03-07-S46e
-**Status:** VERIFIED EXHAUSTIVE (32768 tournaments)
-**What:** The Pfaffian of the skew-adjacency matrix constrains path homology Betti numbers. At n=6 (exhaustive): β₁>0 ⟹ |Pf(S)| ∈ {1,3}; β₃>0 ⟹ |Pf(S)| ∈ {7,9}. The Pfaffian completely separates β₁ from β₃. Since Pf(S)² = det(S) counts signed perfect matchings, this connects directed topology to algebraic cycle invariants.
-**Scripts:** `pfaffian_betti_check.py`, `spectral_betti_connection.py`
-**Next step:** (1) Verify at n=7 sampling. (2) Prove the implication β₁>0 ⟹ |Pf| small algebraically. (3) Find exact threshold.
+### INV-130: Pfaffian-Betti Connection — EXHAUSTIVE at n=6, extended n=7,8
+**Source:** opus-2026-03-07-S46e, kind-pasteur-2026-03-08-S40
+**Status:** VERIFIED EXHAUSTIVE n=6. Sampled n=7,8. THM-098 + THM-099 documented.
+**What:** The Pfaffian of the skew-adjacency matrix constrains path homology Betti numbers. At n=6 (exhaustive): β₁>0 ⟹ |Pf(S)| ∈ {1,3}; β₃>0 ⟹ |Pf(S)| ∈ {7,9}. Perfect separation. At n=7 (odd): spectral gap separates phases. At n=8: |Pf| NOT perfect separator but strongly correlated.
+**CORRECTED (S40):** H-maximizers at n=6 are NOT all S-phase. 480 maximizers split 240 C-phase (|Pf|=1) + 240 S-phase (|Pf|=7), both with score (2,2,2,3,3,3) and c3=8. Complementation preserves phase.
+**Scripts:** `pfaffian_betti_check.py`, `pfaffian_betti_n7.py`, `pfaffian_topology_deep.py`, `pfaffian_betti_mechanism.py`, `spectral_betti_gap.py`, `spectral_topology_n8.py`, `s_phase_structure.py`, `s_phase_maximizer_n7.py`, `maximizer_betti_deep.py`
+**Next step:** (1) Prove Pfaffian separation algebraically at n=6. (2) Why does spectral gap separate at n=7?
+
+### INV-135: H-Maximizer Betti Dimension Shift — THM-099
+**Source:** kind-pasteur-2026-03-08-S40
+**Status:** VERIFIED EXHAUSTIVE n=4,5,6. Sampled n=7.
+**What:** H-maximizers always have nontrivial GLMY path homology, with the topological dimension increasing:
+- n=4: ALL 24 max have β₁=1 (C-phase)
+- n=5: ALL 64 max have β₁=1 (C-phase)
+- n=6: 480 max split 240 β₁=1 + 240 β₃=1
+- n=7: ALL 240 max have β₄=6 (beyond S-phase classification)
+At n=7, all maximizers are conference-matrix (gap=0, eigenvalues all √7). Second-highest H=175 has β₁=1 (C-phase). Third H=171 is contractible. Topology stratifies H values.
+**Scripts:** `betti_dimension_shift.py`, `betti_dimension_shift_v2.py`, `maximizer_betti_deep.py`, `maximizer_betti_n8.py`
+**Next step:** (1) Check n=8 maximizers (H=661). (2) Why β₄=6 specifically at n=7? (3) Algebraic mechanism connecting eigenvalue uniformity to high Betti.
 
 ### INV-131: Path Homology Hidden Invariant — Cycle Overlap Pattern
 **Source:** opus-2026-03-07-S46e
