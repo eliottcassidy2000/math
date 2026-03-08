@@ -1,0 +1,76 @@
+======================================================================
+Ω₃ FORMULA: DT + NON-DT CANCELLATION
+======================================================================
+
+--- n = 4 ---
+  Formula checks:
+    DT + cancel1: 64/64
+    DT + cancel1+2: 64/64
+    DT + cancel2: 64/64
+    DT + cancel_combined: 64/64
+    DT + nonDT - #bf: 40/64
+
+--- n = 5 ---
+  Formula checks:
+    DT + cancel1: 224/1024
+    DT + cancel1+2: 160/1024
+    DT + cancel2: 224/1024
+    DT + cancel_combined: 160/1024
+    DT + nonDT - #bf: 320/1024
+
+  Bad face structure (one_bad, two_bad, #bf1, #bf2) → cancel_eff:
+    (0, 0, 0, 0): cancel_eff ∈ [0] (count=120)
+    (6, 0, 0, 3): cancel_eff ∈ [0] (count=40)
+    (6, 0, 3, 0): cancel_eff ∈ [0] (count=40)
+    (6, 0, 3, 3): cancel_eff ∈ [0] (count=40)
+    (6, 6, 5, 5): cancel_eff ∈ [0] (count=120)
+    (8, 2, 3, 5): cancel_eff ∈ [1] (count=120)
+    (8, 2, 5, 3): cancel_eff ∈ [1] (count=120)
+    (8, 8, 7, 7): cancel_eff ∈ [2] (count=120)
+    (10, 4, 5, 5): cancel_eff ∈ [0] (count=120)
+    (10, 10, 10, 10): cancel_eff ∈ [5] (count=24)
+    (12, 6, 8, 8): cancel_eff ∈ [1] (count=120)
+    (12, 6, 9, 9): cancel_eff ∈ [0] (count=40)
+
+======================================================================
+TESTING dim(Ω₃) = |A₃| - |distinct bad faces of A₃ paths|
+======================================================================
+
+  n = 4:
+    dim(Ω₃) = |A₃| - |distinct non-A₂ faces|: 40/64
+
+  n = 5:
+    dim(Ω₃) = |A₃| - |distinct non-A₂ faces|: 240/1024
+
+======================================================================
+UNIFIED FORMULA: dim(Ω_p) = |A_p| - |distinct non-A_{p-1} faces|
+======================================================================
+
+  n = 4:
+    p=2: dim(Ω_2) = |A_2| - |non-A_1 faces|: 64/64
+    p=3: dim(Ω_3) = |A_3| - |non-A_2 faces|: 40/64
+
+  n = 5:
+    p=2: dim(Ω_2) = |A_2| - |non-A_1 faces|: 1024/1024
+    p=3: dim(Ω_3) = |A_3| - |non-A_2 faces|: 240/1024
+
+======================================================================
+VERIFY FOR p=2,3,4 AT n=5
+======================================================================
+  p=2: 1024/1024
+  p=3: 240/1024
+    Mismatch: actual=4, predicted=2, |A_p|=13, |non-faces|=11
+    Mismatch: actual=4, predicted=2, |A_p|=13, |non-faces|=11
+    Mismatch: actual=5, predicted=-1, |A_p|=17, |non-faces|=18
+  p=4: 240/1024
+    Mismatch: actual=1, predicted=-1, |A_p|=5, |non-faces|=6
+    Mismatch: actual=1, predicted=-1, |A_p|=5, |non-faces|=6
+    Mismatch: actual=1, predicted=-5, |A_p|=9, |non-faces|=14
+
+======================================================================
+SURPLUS = dim(Ω₃) - Z₂ IN TERMS OF BAD FACES
+======================================================================
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/beta2_omega3_formula.py", line 404, in <module>
+    print(f"\n  If dim(Ω_p) = |A_p| - |BF_p| where BF_p = non-A_{p-1} faces of A_p paths,")
+TypeError: unsupported operand type(s) for -: 'tuple' and 'int'

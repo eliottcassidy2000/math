@@ -1,0 +1,120 @@
+======================================================================
+RELATIVE HOMOLOGY H₂(T, T\v) STRUCTURE
+======================================================================
+
+--- Relative complex dimensions for n=5 ---
+
+  R_0 = Ω_0(T) - Ω_0(T\v) dimension distribution:
+    dim=1: 5120
+
+  R_1 = Ω_1(T) - Ω_1(T\v) dimension distribution:
+    dim=4: 5120
+
+  R_2 = Ω_2(T) - Ω_2(T\v) dimension distribution:
+    dim=5: 1400
+    dim=6: 3120
+    dim=7: 600
+
+  R_3 = Ω_3(T) - Ω_3(T\v) dimension distribution:
+    dim=2: 840
+    dim=3: 1640
+    dim=4: 1920
+    dim=6: 600
+    dim=9: 120
+
+  Joint (R₂, R₃) distribution:
+    R₂=5, R₃=2: 600 (11.7%)
+    R₂=5, R₃=3: 560 (10.9%)
+    R₂=5, R₃=4: 240 (4.7%)
+    R₂=6, R₃=2: 240 (4.7%)
+    R₂=6, R₃=3: 1080 (21.1%)
+    R₂=6, R₃=4: 1680 (32.8%)
+    R₂=6, R₃=6: 120 (2.3%)
+    R₂=7, R₃=6: 480 (9.4%)
+    R₂=7, R₃=9: 120 (2.3%)
+
+======================================================================
+PATHS THROUGH v: WHAT MAKES THE RELATIVE COMPLEX
+======================================================================
+
+  2-paths through v: (TT, NT) distribution:
+    TT= 2, NT=12: 120 (2.3%)
+    TT= 3, NT= 9: 800 (15.6%)
+    TT= 4, NT= 6: 1680 (32.8%)
+    TT= 5, NT= 3: 1440 (28.1%)
+    TT= 6, NT= 0: 1080 (21.1%)
+
+  3-paths through v: (DT, nonDT) distribution:
+    DT= 2, nonDT= 6: 600 (11.7%)
+    DT= 2, nonDT=10: 720 (14.1%)
+    DT= 2, nonDT=14: 600 (11.7%)
+    DT= 3, nonDT= 3: 240 (4.7%)
+    DT= 3, nonDT= 7: 480 (9.4%)
+    DT= 3, nonDT=11: 240 (4.7%)
+    DT= 3, nonDT=15: 320 (6.2%)
+    DT= 4, nonDT= 0: 600 (11.7%)
+    DT= 4, nonDT= 8: 360 (7.0%)
+    DT= 4, nonDT=12: 720 (14.1%)
+    DT= 4, nonDT=16: 240 (4.7%)
+
+======================================================================
+POSITION OF v IN RELATIVE 2-CYCLES AND 3-CHAINS
+======================================================================
+
+  For vertex deletion:
+  - Each 2-path through v has exactly 1 face NOT through v
+  - Each 3-path through v has exactly 1 face NOT through v
+  - The 'non-v face' of position-i path is the face obtained by deleting v
+
+======================================================================
+KEY: H₂(T,T\v) = 0 ALGEBRAIC APPROACH
+======================================================================
+
+  Computing ker(∂₂^rel) dimensions...
+  R₃ ≥ R₂ (sufficient for H₂^rel=0 if ∂₃^rel injective): 240/5120 (4.7%)
+
+  Cases where R₃ < R₂:
+    scores=[0, 1, 2, 3, 4], v=0 (d_v=0): R₂=6, R₃=4
+    scores=[0, 1, 2, 3, 4], v=1 (d_v=1): R₂=6, R₃=4
+    scores=[0, 1, 2, 3, 4], v=2 (d_v=2): R₂=6, R₃=4
+    scores=[0, 1, 2, 3, 4], v=3 (d_v=3): R₂=6, R₃=4
+    scores=[0, 1, 2, 3, 4], v=4 (d_v=4): R₂=6, R₃=4
+
+  Total R₃ < R₂ cases: 4880/5120
+  (When R₃ < R₂, H₂^rel=0 requires ∂₃^rel to have nontrivial kernel)
+
+======================================================================
+PROOF STRUCTURE SUMMARY
+======================================================================
+
+To prove β₂(T) = 0 for all tournaments T:
+
+1. BASE CASE: n=3. Only 8 tournaments, all have β₂=0. ✓
+
+2. INDUCTIVE STEP: Assume β₂(T')=0 for all tournaments on <n vertices.
+   For tournament T on n vertices, pick any vertex v.
+   Long exact sequence:
+     H₂(T\v) → H₂(T) → H₂(T,T\v) → H₁(T\v) → H₁(T)
+       = 0         ?         ?
+
+   By induction: H₂(T\v) = 0.
+   Need to show: H₂(T,T\v) = 0.
+   Then: 0 → H₂(T) → 0, so H₂(T) = 0.
+
+3. RELATIVE HOMOLOGY: H₂(T,T\v) = 0.
+   The relative complex R_*(v) = Ω_*(T) / Ω_*(T\v).
+   H₂^rel = ker(∂₂^rel) / im(∂₃^rel).
+
+   Need: every relative 2-cycle is a relative 3-boundary.
+   Equivalently: rk(∂₃^rel) ≥ dim(ker ∂₂^rel).
+
+4. VERIFIED: H₂(T,T\v) = 0 exhaustive n≤6, sampled n=7-9.
+
+   KEY QUESTION: Why is H₂(T,T\v) always 0?
+
+   Possible approaches:
+   a) Show R₃ ≥ ker(∂₂^rel) dimension-wise
+   b) Construct an explicit section Z₂^rel → R₃
+   c) Use tournament completeness to show "enough" relative 3-chains exist
+
+Done.

@@ -1,0 +1,109 @@
+======================================================================
+ALGEBRAIC SURPLUS ANALYSIS
+======================================================================
+
+--- Testing dim(Ω₂) formula: |TT| + NT_cancel ---
+
+  n = 4:
+    Formula dim(Ω₂) = |TT| + |NT| - |bad_faces|: 64/64
+
+  n = 5:
+    Formula dim(Ω₂) = |TT| + |NT| - |bad_faces|: 1024/1024
+
+--- Testing Ω₃ individual elements ---
+
+  n = 4:
+    Individual 3-paths in Ω₃ by type (is_DT, a→d):
+      (False, False): 0
+      (False, True): 0
+      (True, False): 24
+      (True, True): 24
+
+  n = 5:
+    Individual 3-paths in Ω₃ by type (is_DT, a→d):
+      (False, False): 0
+      (False, True): 0
+      (True, False): 1920
+      (True, True): 1920
+
+======================================================================
+SEARCHING FOR EXACT SURPLUS FORMULA
+======================================================================
+
+  n = 5: exhaustive
+
+  Testing formulas for surplus:
+    dim(Ω₂) = TT + NT_cancel: True
+
+    rk(∂₂) variation by score sequence:
+      scores=(1, 1, 2, 3, 3): rk2 ∈ [5, 6]
+      scores=(1, 2, 2, 2, 3): rk2 ∈ [5, 6]
+
+    Formula matches (out of 1024):
+      any: 1024
+      super_DT - Z2 + DT_back: 520
+
+  dim(Ω₃) breakdown:
+    (super_DT=0, DT_back=3): Ω₃ ∈ [3, 4]
+    (super_DT=0, DT_back=5): Ω₃ ∈ [10]
+    (super_DT=1, DT_back=2): Ω₃ ∈ [3]
+    (super_DT=1, DT_back=4): Ω₃ ∈ [7]
+    (super_DT=2, DT_back=1): Ω₃ ∈ [4]
+    (super_DT=2, DT_back=3): Ω₃ ∈ [5]
+    (super_DT=3, DT_back=0): Ω₃ ∈ [3]
+    (super_DT=5, DT_back=0): Ω₃ ∈ [5]
+
+======================================================================
+δ(SURPLUS) DECOMPOSITION UNDER ARC FLIP
+======================================================================
+
+  δ(surplus) = δ(Ω₃) - δ(Ω₂) + δ(rk₂) decomposition:
+  d_u-d_v  mean_dOm3  mean_dOm2  mean_drk2  mean_dsurp  min_dsurp      N
+       -2       0.00       1.00       1.00        0.00          0    160
+       -1      -0.50       0.00       0.25       -0.25         -1    960
+        0      -0.80       0.00       0.20       -0.60         -4   2400
+        1       0.00       0.00       0.00        0.00         -1   3200
+        2       0.80       0.00      -0.20        0.60         -1   2400
+        3       0.50       0.00      -0.25        0.25          0    960
+        4       0.00      -1.00      -1.00        0.00          0    160
+
+  When surplus drops maximally, what's the tournament structure?
+  Maximum surplus drop in single flip: -4
+
+  Cases with largest surplus drops:
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 1→0 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 0→4 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 2→1 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 3→2 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 4→3 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 0→1 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 2→0 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 1→4 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 3→2 (d_u=2, d_v=2)
+    surplus 5→1 (drop=-4): scores=(2, 2, 2, 2, 2), flip 4→3 (d_u=2, d_v=2)
+
+  Surplus drop bounded by (surplus_before, d_u - d_v)?
+
+  Max drop by (surplus_before, d_u-d_v):
+     (surp,dd)  max_drop  min_after  count
+       (0, -2)         0          0     40
+       (0, -1)         0          0    240
+        (0, 0)         1          1    720
+        (0, 1)         0          0    560
+        (0, 2)         1          1    960
+        (0, 3)         0          0    240
+        (0, 4)         0          0     40
+       (1, -2)         0          1    120
+       (1, -1)         0          1    480
+        (1, 0)        -1          0   1080
+        (1, 1)        -1          0   2160
+        (1, 2)        -1          0   1320
+        (1, 3)         0          1    720
+        (1, 4)         0          1    120
+       (2, -1)        -1          1    240
+        (2, 0)        -2          0    360
+        (2, 1)        -1          1    480
+        (2, 2)         3          5    120
+        (5, 0)        -4          1    240
+
+Done.
