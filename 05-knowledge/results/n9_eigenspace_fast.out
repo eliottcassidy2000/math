@@ -1,0 +1,55 @@
+======================================================================
+EIGENSPACE DECOMPOSITION: n=9 CIRCULANT MAXIMIZER
+======================================================================
+Z_9, S=[1, 5, 6, 7], H=3357
+
+--- Allowed paths ---
+  dim 0: 9 (0.0s)
+  dim 1: 36 (0.0s)
+  dim 2: 144 (0.0s)
+  dim 3: 486 (0.0s)
+  dim 4: 1386 (0.0s)
+  dim 5: 3132 (0.0s)
+  dim 6: 5310 (0.0s)
+  dim 7: 5949 (0.0s)
+  dim 8: 3357 (0.1s)
+
+--- Omega (regular) paths ---
+  Om_0: 9 paths
+  Om_1: 36 paths
+  Om_2: 54 paths
+  Om_3: 90 paths
+  Om_4: 153 paths
+  Om_5: 207 paths
+  Om_6: 252 paths
+  Om_7: 216 paths
+  Om_8: 63 paths
+
+--- Boundary matrices ---
+  d_1: 9x36, rank=8
+  d_2: 36x54, rank=28
+  d_3: 54x90, rank=52
+  d_4: 90x153, rank=90
+  d_5: 153x207, rank=149
+  d_6: 207x252, rank=206
+  d_7: 252x216, rank=196
+  d_8: 216x63, rank=63
+
+--- Global Betti ---
+  b = [np.int64(1), np.int64(0), np.int64(-26), np.int64(-52), np.int64(-86), np.int64(-148), np.int64(-150), np.int64(-43), np.int64(0)]
+
+======================================================================
+EIGENSPACE BETTI NUMBERS (Z/9Z)
+======================================================================
+  k=0: Om_dims=[1, 4, 6, 10, 17, 23, 28, 24, 7], b=[1, 0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+SUMMARY
+======================================================================
+Expected: b = [1,0,0,0,0,10,0,0,0]
+Got:      b = [np.int64(1), np.int64(0), np.int64(-26), np.int64(-52), np.int64(-86), np.int64(-148), np.int64(-150), np.int64(-43), np.int64(0)]
+
+For P_7: 6 non-trivial eigenspaces each contribute b4=1.
+Question: How does Z_9 decompose b5=10?
+
+Total time: 51.5s
