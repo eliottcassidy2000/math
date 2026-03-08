@@ -1,0 +1,65 @@
+======================================================================
+ARC-FLIP PRESERVATION AT n=7 (SAMPLING)
+======================================================================
+  ... 100/500 (2s, 500 flips, 0 violations)
+  ... 200/500 (3s, 1000 flips, 0 violations)
+  ... 300/500 (5s, 1500 flips, 0 violations)
+  ... 400/500 (7s, 2000 flips, 0 violations)
+
+  Samples: 500, total flips: 2500
+  Violations (beta_2 != 0 after flip): 0
+  Min surplus (original): 9
+  Min surplus (after flip): 9
+  Safe (surplus >= |drop|): 2500/2500
+  Time: 8.4s
+
+  Surplus distribution:
+    surplus=9: 3 (0.6%)
+    surplus=11: 8 (1.6%)
+    surplus=12: 45 (9.0%)
+    surplus=13: 37 (7.4%)
+    surplus=14: 29 (5.8%)
+    surplus=15: 30 (6.0%)
+    surplus=16: 17 (3.4%)
+    surplus=17: 40 (8.0%)
+    surplus=18: 26 (5.2%)
+    surplus=19: 15 (3.0%)
+    surplus=20: 38 (7.6%)
+    surplus=21: 45 (9.0%)
+    surplus=22: 18 (3.6%)
+    surplus=23: 27 (5.4%)
+    surplus=24: 17 (3.4%)
+    surplus=25: 9 (1.8%)
+    surplus=26: 15 (3.0%)
+    surplus=27: 6 (1.2%)
+    surplus=28: 12 (2.4%)
+    surplus=29: 24 (4.8%)
+    surplus=30: 6 (1.2%)
+    surplus=31: 8 (1.6%)
+    surplus=32: 1 (0.2%)
+    surplus=33: 7 (1.4%)
+    surplus=34: 5 (1.0%)
+    surplus=35: 2 (0.4%)
+    surplus=36: 2 (0.4%)
+    surplus=37: 1 (0.2%)
+    surplus=38: 3 (0.6%)
+    surplus=39: 2 (0.4%)
+    surplus=41: 1 (0.2%)
+    surplus=43: 1 (0.2%)
+
+======================================================================
+HUNTING FOR TIGHT TOURNAMENTS (low surplus)
+======================================================================
+  New minimum surplus: 22 (O2=38, O3=45, Z2=23)
+  New minimum surplus: 15 (O2=35, O3=35, Z2=20)
+  New minimum surplus: 14 (O2=34, O3=33, Z2=19)
+  New minimum surplus: 13 (O2=35, O3=33, Z2=20)
+  New minimum surplus: 12 (O2=34, O3=31, Z2=19)
+  New minimum surplus: 11 (O2=34, O3=30, Z2=19)
+  New minimum surplus: 10 (O2=33, O3=28, Z2=18)
+  New minimum surplus: 9 (O2=33, O3=27, Z2=18)
+
+  Minimum surplus found: 9
+  Tight (surplus<=3): 0/2000
+
+Done. Total time: 13.9s

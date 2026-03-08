@@ -1,0 +1,31 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_arcflip_counting.py:25: SyntaxWarning: invalid escape sequence '\ '
+  A = out(u) \ {v} intersect in(v) \ {u}  — common neighbors w with u->w, w->v
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_arcflip_counting.py:60: SyntaxWarning: invalid escape sequence '\{'
+  """Compute the partition of V\{u,v} into A,B,C,D sets."""
+======================================================================
+ARC-FLIP COUNTING ANALYSIS AT n=5
+======================================================================
+
+  delta3/delta2 ratios: {2.0: 7040}
+  delta2=0 cases: 3200/10240
+  delta3 when delta2=0: {0: 3200}
+
+  Trying formula: lost2 = f(|A|, |B|, |C|, |D|)
+
+  # distinct (a,b,c,d) patterns: 20
+
+  Is lost2 determined by (|A|, |D|) only?
+    Determined by (|A|,|D|): False
+      a=0, d=0: lost2 in [3, 4, 5, 6]
+      a=0, d=1: lost2 in [3, 4, 5]
+      a=0, d=2: lost2 in [3, 4]
+      a=1, d=0: lost2 in [2, 3, 4]
+      a=1, d=1: lost2 in [2, 3]
+      a=2, d=0: lost2 in [1, 2]
+
+  delta3 = 2*delta2 exactly: 10240/10240 (100.0%)
+  delta3 - 2*delta2 distribution: {0: 10240}
+
+  Residual delta3 - 2*delta2 by (a,b,c,d):
+
+Done.
