@@ -83,17 +83,29 @@ The odd-n maximizers form a perfect hereditary chain:
 - n=3 maximizer (β₁=1) → trivial
 
 Betti values at odd n: β₁=1 (n=3,5), β₄=6 (n=7), β₅=10 (n=9).
-Sequence 1, 1, 6, 10, ... = possibly C(d,2) where d = ⌊(n-1)/2⌋: C(1,2)=0≠1, so NOT that.
-Or: n=7 gives 6 = (p-1) non-trivial eigenspaces of P₇. n=9 gives 10 — needs analysis.
+
+### 8. Eigenspace Decomposition of β₅=10 (S41 DISCOVERY)
+For the circulant Z₉ maximizer (S={1,5,6,7}), the Z/9Z eigenspace decomposition gives:
+- **Trivial eigenspace (k=0): β₅ = 2**
+- **Each non-trivial eigenspace (k=1,...,8): β₅ = 1**
+- **Total: 2 + 8×1 = 10** ✓
+
+Compare P₇: trivial gives β₄=0, each non-trivial (k=1,...,6) gives β₄=1, total 6.
+
+The structure is β = (n-1) + δ where δ=0 for prime n (P₇) and δ=2 for n=9.
+The extra 2 from the trivial eigenspace may relate to 9=3² having a Z₃ subgroup.
+All eigenspaces have identical Ω₅ dim = 74 and Ω₆ dim = 63, but the boundary ranks
+differ: trivial has ker(∂₅)=39 while non-trivial have ker(∂₅)=38.
 
 ## Open Questions
 
 1. ~~Does β_{n-3}>0 hold for H-maximizers at all n≥6?~~ **YES at n≤9** (β₃ at n=6, β₄ at n=7-8, β₅ at n=9)
 2. What is the algebraic mechanism connecting eigenvalue uniformity to high Betti numbers?
 3. ~~Does the C/S split at even n persist for n=8?~~ **YES** — 4 spectral types, 2 with β₄=1, 2 contractible
-4. ~~Why β₄=6 at n=7?~~ 6 = p-1 non-trivial eigenspaces. **Why β₅=10 at n=9?**
-5. What is the Betti sequence for odd-n maximizers? 1, 1, 6, 10, ?
+4. ~~Why β₄=6 at n=7?~~ 6 = p-1 non-trivial eigenspaces. ~~Why β₅=10 at n=9?~~ **RESOLVED**: 2 (trivial) + 8×1 (non-trivial) = 10
+5. What is the Betti sequence for odd-n maximizers? 1, 1, 6, 10, ? Prediction for n=11 (Paley): (p-1)+δ = 10+δ. If δ=0 (prime): β₈=10. If δ from our formula: β₆=15.
 6. Why are n=9 maximizer deletions ALL the β₄=1 type (not the contractible type)?
+7. **NEW**: Why does the trivial eigenspace contribute β₅=2 (not 0) at n=9? Is this because 9=3² (non-prime)?
 
 ## Scripts
 
@@ -104,6 +116,8 @@ Or: n=7 gives 6 = (p-1) non-trivial eigenspaces of P₇. n=9 gives 10 — needs 
 - `04-computation/n8_maximizer_topology.py`
 - `04-computation/n9_max_betti_quick.py`
 - `04-computation/n9_max_structure.py`
+- `04-computation/n9_beta5_eigenspace.py`
+- `04-computation/p7_eigenspace_verify.py`
 
 ## CORRECTS
 

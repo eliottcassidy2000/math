@@ -671,3 +671,9 @@ n=8 MAXIMIZER FOUR-WAY SPLIT: H=661 maximizers split into 4 spectral types (all 
 
 **T211** #DT-sufficiency-fails-n6 #beta2-proof #path-homology | certainty: VERY HIGH (exhaustive) | source: opus-2026-03-08-S41
 DT-SUFFICIENCY FAILS AT n=6 FOR β₂=0 PROOF: At n=4,5, doubly-transitive 4-paths (a→b→c→d with a→c, b→d) span all of ker(∂₂), proving β₂=0 directly. At n=6, ker(∂₂) has dim 10-11 but DT paths span only dim 9. Gap of 1-2 dimensions must be filled by im(∂₃) instead. β₂=0 still holds (verified exhaustive n≤6) but needs a different proof approach at n≥6. From beta2_n6_analysis.out.
+
+**T212** #tang-yau-counterexample #path-homology #circulant | certainty: VERY HIGH | source: kind-pasteur-2026-03-08-S41
+TANG-YAU CONJECTURE 4.8 IS FALSE: Tang-Yau (arXiv:2602.04140) conjecture H_m(C_n^S) = 0 for m >= 3 under no-wrap-around (S ∩ (-S) = ∅). COUNTEREXAMPLE: P₇ = C₇^{1,2,4} has S ∩ (-S) = ∅ (since -S = {3,5,6}) but β₄ = 6. Also Z₉ maximizer C₉^{1,5,6,7} has β₅ = 10. Both satisfy no-wrap-around but have large higher Betti numbers. The conjecture may hold for SMALL |S| (their examples have |S|=1,2) but fails for tournaments (|S| = (n-1)/2). Note: β₂ = 0 may still hold separately — our HYP-207.
+
+**T213** #betti-landscape-n9 #path-homology | certainty: HIGH (computed) | source: kind-pasteur-2026-03-08-S41
+N=9 BETTI LANDSCAPE FOR REGULAR TOURNAMENTS: H=3357 (max): β=[1,0,0,0,0,10]. H=3333: β=[1,0,0,0,5,0] (β₄=5). H=3303: β=[1,0,0,0,7,0] (β₄=7). H=3299: β=[1,0,0,0,1,1] (BOTH β₄ and β₅ nonzero!). H=3255: β=[1,0,0,1,0,0] (S-phase β₃=1). H=3075: β=[1,0,0,0,4,2] (β₄=4, β₅=2). β₃ and β₅ remain mutually exclusive but β₄ and β₅ can coexist. From betti_landscape_n9.out.
