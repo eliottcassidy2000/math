@@ -1,0 +1,44 @@
+======================================================================
+BETA_5 CHECK FOR n=9 TOURNAMENTS
+Sampling 500 random tournaments, Betti up to dim 7
+======================================================================
+
+Timing single Betti computation at n=9, max_dim=7...
+  Single computation: 115.20s, beta = [np.int64(1), 0, 0, 0, 0, 0, 0, 0]
+  Estimated total for 500: 960.0 min
+  WARNING: Very slow! Reducing max_dim to 5 and samples to 100.
+
+--- Phase 1: H-value survey (10000 random tournaments) ---
+  H survey done in 20.8s
+  H range: [25, 3255]
+  H mean: 1419.8, H std: 648.4
+
+  Top 20 unique H values:
+    #1: H=3255, t3=30, score=(4, 4, 4, 4, 4, 4, 4, 4, 4)
+    #2: H=3075, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #3: H=3069, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #4: H=3067, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #5: H=3065, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #6: H=3065, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #7: H=3063, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #8: H=3063, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #9: H=3061, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #10: H=3059, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #11: H=3055, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #12: H=3053, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #13: H=3047, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #14: H=3047, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #15: H=3043, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #16: H=3039, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #17: H=3037, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #18: H=3031, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #19: H=3025, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    #20: H=3023, t3=29, score=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+
+--- Phase 2: Betti computation (max_dim=5) ---
+
+  Computing Betti for top 20 H-maximizers...
+    #1: H=3255, t3=30, beta=[np.int64(1), 0, 0, np.int64(1), 0, 0] (117.5s)
+    #2: H=3075, t3=29, beta=[np.int64(1), 0, 0, 0, np.int64(4), np.int64(2)] (109.8s)
+    #3: H=3069, t3=29, beta=[np.int64(1), 0, 0, 0, np.int64(1), 0] (113.3s)
+    #4: H=3067, t3=29, beta=[np.int64(1), 0, 0, 0, 0, 0] (112.9s)

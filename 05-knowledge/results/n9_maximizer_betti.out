@@ -1,0 +1,55 @@
+======================================================================
+SEARCHING FOR n=9 MAXIMIZER (H=3357)
+======================================================================
+
+Phase 1a: Random regular tournaments...
+  trial 0: NEW MAX H=3275
+  0/100000 (0.0s), best H=3275, found 1 maximizers
+  trial 2: NEW MAX H=3333
+  trial 60: NEW MAX H=3357
+  10000/100000 (28.5s), best H=3357, found 132 maximizers
+  20000/100000 (60.7s), best H=3357, found 260 maximizers
+  30000/100000 (94.5s), best H=3357, found 411 maximizers
+  40000/100000 (121.8s), best H=3357, found 519 maximizers
+  50000/100000 (157.4s), best H=3357, found 630 maximizers
+  60000/100000 (192.4s), best H=3357, found 748 maximizers
+  70000/100000 (228.4s), best H=3357, found 880 maximizers
+  80000/100000 (264.1s), best H=3357, found 1003 maximizers
+  90000/100000 (295.3s), best H=3357, found 1135 maximizers
+
+Phase 1a done: best H=3357, 1267 maximizers found
+
+Phase 1b: Random general tournaments...
+  0/200000 (318.7s), best H=3357, found 1267 maximizers
+  50000/200000 (459.0s), best H=3357, found 1267 maximizers
+  100000/200000 (589.9s), best H=3357, found 1267 maximizers
+  150000/200000 (724.8s), best H=3357, found 1268 maximizers
+
+Phase 1b done: best H=3357, 1269 maximizers found
+
+======================================================================
+TOP TOURNAMENTS (H=3357)
+======================================================================
+Unique maximizers: 1243
+
+  [1] H=3357, score=(4, 4, 4, 4, 4, 4, 4, 4, 4), c3=30, gap=2.5712
+      eigenvalues: [1.7321, 2.2072, 3.1001, 4.3032]
+      Adjacency row sums: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+  [2] H=3357, score=(4, 4, 4, 4, 4, 4, 4, 4, 4), c3=30, gap=2.5712
+      eigenvalues: [1.7321, 2.2072, 3.1001, 4.3032]
+      Adjacency row sums: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+  [3] H=3357, score=(4, 4, 4, 4, 4, 4, 4, 4, 4), c3=30, gap=2.5712
+      eigenvalues: [1.7321, 2.2072, 3.1001, 4.3032]
+      Adjacency row sums: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+  [4] H=3357, score=(4, 4, 4, 4, 4, 4, 4, 4, 4), c3=30, gap=2.5712
+      eigenvalues: [1.7321, 2.2072, 3.1001, 4.3032]
+      Adjacency row sums: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+  [5] H=3357, score=(4, 4, 4, 4, 4, 4, 4, 4, 4), c3=30, gap=2.5712
+      eigenvalues: [1.7321, 2.2072, 3.1001, 4.3032]
+      Adjacency row sums: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Total time: 843.2s
