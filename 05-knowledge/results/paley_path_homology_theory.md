@@ -98,10 +98,41 @@ The character sum controls the junk matrix entries and hence the Ω dims.
 The uniform eigenspace structure follows from g being a single algebraic
 quantity that determines all character sums via the Legendre symbol.
 
+### β_2 = 0 for Tournaments — Structural Analysis (S40)
+
+**Theorem** (verified exhaustively through n=6, randomly at n=7):
+For any tournament T, H_2^{path}(T) = 0.
+
+**Key structural discoveries:**
+
+1. **Ω_2 ≠ span(transitive triples).** Ω_2 also includes "cancellation chains":
+   linear combinations of non-transitive 2-paths where non-allowed face terms
+   cancel. Example: (a,b₁,c) - (a,b₂,c) with c→a, where the -(a,c) terms cancel.
+   The gap dim(Ω_2) - |TT| ranges from 0 to 5 at n=5.
+
+2. **Cancellation chains never individually in ker(∂_2)** (0 out of 2649 at n=5).
+   But **mixed elements** (TT + cancellation parts) CAN be 2-cycles.
+   So ker(∂_2|Ω_2) > ker(∂_2|TT) for many tournaments.
+
+3. **DT 4-paths**: (a,b,c,d) with a→b→c→d AND a→c AND b→d.
+   - 4-clique DT (also a→d): always individually in Ω_3
+   - Non-clique DT (d→a): also individually in Ω_3 (all faces in A_2)
+   - DT ⊋ 4-clique paths; the extra non-clique DT paths are needed
+
+4. **Simplicial H_2 ≠ 0**: The simplicial complex of transitive subsets has
+   nontrivial H_2 for 40/1024 tournaments at n=5. But GLMY H_2 = 0 because
+   Ω_3 is larger than the simplicial 3-chain space.
+
+5. **β_2 = 0 verified with correct Ω_2**: Using compute_omega_basis for the
+   TRUE Ω_2 and Ω_3, β_2 = 0 confirmed at n=4,5,6 (all), n=7 (sample).
+
 ### Open Questions
-1. What are the full Ω dims for P_11? (dims 7-10 computing)
+1. What are the full Ω dims for P_11? (dims 7-10 computing with randomized SVD)
 2. At which dimension d does β_d = p-1 for P_11?
 3. Is d = p-3 always, or does it vary?
 4. Why is P_7 palindromic but P_11 is not?
 5. Can the Gauss sum theory predict d directly?
-6. β_2 = 0 algebraic proof for general tournaments
+6. β_2 = 0 algebraic proof for general tournaments — WHAT APPROACH?
+   - NOT simplicial acyclicity (simplicial H_2 can be nonzero)
+   - Need to use full Ω_3 including cancellation chains
+   - The "DT sufficiency" result (when correctly interpreted) may give a path
