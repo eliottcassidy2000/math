@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-08-S39 — 2026-03-08 (Fourier v3 + Paley Tournaments)
+**Account:** A
+**Continuation of:** opus-2026-03-07-S38 (GLMY deep dive)
+**Summary of work:**
+  Corrected Fourier decomposition (v3), Paley tournament path homology, n=9 exploration.
+
+  **Major discoveries:**
+  1. **Fourier v3 CORRECT** (90/90 validated): Fixed fundamental bug — Ω_p includes chains where non-allowed boundary faces cancel between different paths. Implemented as ker(junk_matrix).
+  2. **Paley P_7 = 6×S^4**: The Paley tournament on Z_7 (QR={1,2,4}) has β=(1,0,0,0,6,0). Each non-trivial eigenspace contributes β_4=1. Euler char χ=7=p.
+  3. **F = QNR for Paley**: The illegal merged steps are exactly the quadratic non-residues.
+  4. **Only Paley has χ=p**: All other circulant tournaments at p=7 have χ=0.
+  5. **n=9 tournaments**: 6/50 (12%) have β_3=1, 0/50 have β_1=1 (C-phase disappears!).
+  6. **Per-eigenspace Poincaré duality**: Ω dims [1,3,6,9,9,6,3] are palindromic.
+  7. **|F| controls topology**: |F|=max with L=∅ → highest-dim sphere; |F|=0 → β_1=n-1.
+
+**New contributions:** path_homology_fourier_v3.py, paley_path_homology.py, paley_gauss_analysis.py, topology_landscape.py, symbol_matrix_analysis.py, HYP-307 through HYP-309
+**Unresolved threads:**
+  - P_11, P_19 Betti numbers at higher dimensions (computation still running)
+  - β_5 at n=9 (need max_dim≥5, too slow)
+  - Prove β_2=0 for tournaments algebraically
+  - Gauss sum formula for Paley β_{(p-3)/2}
+
 ## opus-2026-03-07-S38 — 2026-03-07 (GLMY Path Homology Deep Dive)
 **Account:** A
 **Continuation of:** opus-2026-03-07-S37 (Worpitzky investigation)
