@@ -1,0 +1,38 @@
+======================================================================
+BETA1 DISTRIBUTION BY n
+======================================================================
+n=3: beta1 dist = {0: 6, np.int64(1): 2}
+n=4: beta1 dist = {0: 40, np.int64(1): 24}
+n=5: beta1 dist = {0: 720, np.int64(1): 304}
+n=6: beta1 dist = {0: 27968, np.int64(1): 4800}
+
+======================================================================
+INDUCTION FEASIBILITY
+======================================================================
+beta1 = 0 at n=3: base case for induction to n=4: NO
+beta1 = 0 at n=4: base for induction to n=5: NO
+beta1 = 0 at n=5 for ALL tournaments: NO (some have beta1=1)
+
+======================================================================
+N=6: SUBTOURNAMENT BETA1
+======================================================================
+n=6, 1000 samples:
+  ALL T\v have beta1=0: 267
+  SOME T\v have beta1=1: 733
+  Max # of v with beta1(T\v)=1: 6
+
+  Simple induction BREAKS at n=6!
+  Need to analyze the connecting map when beta1(T\v) != 0
+
+======================================================================
+H_1(T\v) -> H_1(T) INJECTIVITY CHECK AT n=6
+======================================================================
+Total (T, v) pairs with beta1(T\v) > 0: 833
+  H_1(T\v) -> H_1(T) injective: 314
+  H_1(T\v) -> H_1(T) NOT injective: 519
+
+  H_1 map is not always injective.
+  Need alternate approach for those 519 cases.
+
+
+Done.
