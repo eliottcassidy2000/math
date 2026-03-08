@@ -1,0 +1,38 @@
+======================================================================
+BETTI CONSISTENCY CHECK: Multiple H=3357 maximizers
+======================================================================
+  Maximizer #1: β = [1, 0, 0, 0, 0, 10] (428.7s)
+  Maximizer #2: β = [1, 0, 0, 0, 0, 10] (979.4s)
+  Maximizer #3: β = [1, 0, 0, 0, 0, 10] (1507.2s)
+
+======================================================================
+SECOND-TIER REGULAR TOURNAMENTS
+======================================================================
+Searching for non-max regular tournaments...
+  Found H=3275 at trial 0
+  Found H=3255 at trial 1
+  Found H=3333 at trial 4
+  Found H=3299 at trial 7
+  Found H=3249 at trial 8
+  Found H=3243 at trial 9
+  Found H=3281 at trial 11
+  Found H=3303 at trial 15
+  Found H=3297 at trial 21
+  Found H=3279 at trial 54
+  Found H=3267 at trial 290
+
+Distinct regular H values >= 3200 (excluding 3357): [3333, 3303, 3299, 3297, 3281, 3279, 3275, 3267, 3255, 3249, 3243]
+  H=3333: β = [1, 0, 0, 0, 5, 0] (676.0s)
+  H=3303: β = [1, 0, 0, 0, 7, 0] (492.0s)
+  H=3299: β = [1, 0, 0, 0, 1, 1] (637.5s)
+
+======================================================================
+β₃ AND β₅ COEXISTENCE CHECK
+======================================================================
+From prior data: H=3255 has β₃=1, H=3075 has β₅=2. Are these β₃ AND β₅ at once?
+β₃ would need S-phase (3-cycle structure), β₅ is higher-dimensional.
+From beta5_n9_check: H=3075 has β=[1,0,0,0,4,2] — β₃=0, β₅=2. So NO coexistence.
+H=3255 has β=[1,0,0,1,0,0] — β₃=1, β₅=0. Also NO coexistence.
+This preserves mutual exclusivity of odd Betti numbers at n=9.
+
+Total time: 3399.2s

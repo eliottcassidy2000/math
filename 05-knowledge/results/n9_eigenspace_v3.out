@@ -1,0 +1,66 @@
+======================================================================
+EIGENSPACE DECOMPOSITION v3: n=9 CIRCULANT MAXIMIZER
+======================================================================
+Z_9, S=[1, 5, 6, 7], H=3357
+
+--- Step 1: Allowed paths ---
+  A_0: 9 paths (0.0s)
+  A_1: 36 paths (0.0s)
+  A_2: 144 paths (0.0s)
+  A_3: 486 paths (0.0s)
+  A_4: 1386 paths (0.0s)
+  A_5: 3132 paths (0.0s)
+  A_6: 5310 paths (0.1s)
+  A_7: 5949 paths (0.4s)
+  A_8: 3357 paths (0.3s)
+
+--- Step 2: Omega bases ---
+  Om_0: dim=9 (from 9 paths) (0.0s)
+  Om_1: dim=36 (from 36 paths) (0.0s)
+  Om_2: dim=108 (from 144 paths) (0.0s)
+  Om_3: dim=270 (from 486 paths) (0.8s)
+  Om_4: dim=513 (from 1386 paths) (11.2s)
+  Om_5: dim=666 (from 3132 paths) (107.0s)
+  Om_6: dim=567 (from 5310 paths) (464.0s)
+  Om_7: dim=297 (from 5949 paths) (1266.7s)
+  Om_8: dim=63 (from 3357 paths) (301.8s)
+
+--- Step 3: Boundary matrices ---
+  d_1: rank=8
+  d_2: rank=28
+  d_3: rank=80
+  d_4: rank=190
+  d_5: rank=323
+  d_6: rank=333
+  d_7: rank=234
+  d_8: rank=63
+
+--- Step 4: Global Betti ---
+  b = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(10), np.int64(0), np.int64(0)]
+
+======================================================================
+EIGENSPACE DECOMPOSITION (Z/9Z)
+======================================================================
+  k=0: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[1, 0, 0, 0, 0, 2, 0, 0]
+  k=1: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=2: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=3: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=4: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=5: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=6: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=7: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+  k=8: Om_dims=[1, 4, 12, 30, 57, 74, 63, 33], b=[0, 0, 0, 0, 0, 1, 0, 0]
+
+======================================================================
+SUMMARY
+======================================================================
+Expected: b = [1,0,0,0,0,10,...] (from path_homology_v2)
+Got:      b = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(10), np.int64(0), np.int64(0)]
+
+For P_7: each non-trivial eigenspace (k=1..6) contributes b4=1.
+         trivial (k=0) contributes b0=1 only.
+
+For Z_9 maximizer: how does b5=10 distribute across k=0..8?
+  9 eigenspaces. If uniform: 10/9 not integer. Must be non-uniform.
+
+Total time: 2335.1s

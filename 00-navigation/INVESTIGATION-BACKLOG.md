@@ -155,7 +155,7 @@
 - **Cone theorem:** H(source_cone(T')) = H(sink_cone(T')) = H(T') for ALL T'. Proved: source must be first in every Ham path. Verified exhaustively through n'=6.
 - **Partial cones palindromic:** H(k) = H(n'-k) where k = out-degree of cone vertex. From self-converse symmetry.
 - **Circulant S={1}:** H(T_{n,{1}}) = n, order-2 recurrence. No circulant with |S|>=2 has low-order recurrence.
-- **Best circulant at n=9 gives H=3267 < 3357 = max.** H-maximizer at non-prime n is NOT circulant.
+- **CORRECTED (S41):** Circulant S={1,5,6,7} at n=9 DOES give H=3357 = max. Non-circulant maximizers also exist.
 **Next step:** (1) Find direct bijection between run decompositions and weighted interval packings. (2) Check if the transfer matrix for T_full has Tribonacci characteristic polynomial factor.
 
 ### INV-001: Prove transfer matrix symmetry for all n — PROVED (THM-030)
@@ -1486,3 +1486,17 @@ At n=7, all maximizers are conference-matrix (gap=0, eigenvalues all √7). Seco
 Inner sequence NOT palindromic: 460≠700, 700≠690. Contrasts with P_7's palindromic [3,6,9,9,6,3].
 Using J^H J + eigvalsh method for memory-efficient rank computation.
 **Next step:** Complete Ω_8, Ω_9, Ω_10 to determine Betti concentration dimension.
+
+### INV-147: Eigenspace Decomposition of β_top — Trivial vs Non-trivial Split
+**Source:** kind-pasteur-2026-03-08-S41
+**Status:** VERIFIED (P_7 and Z_9)
+**What:** For circulant maximizers, β_top decomposes across Z/nZ eigenspaces as:
+- P_7: trivial (k=0) gives β_4=0, each non-trivial (k=1..6) gives β_4=1, total = 6
+- Z_9 S={1,5,6,7}: trivial (k=0) gives β_5=2, each non-trivial (k=1..8) gives β_5=1, total = 2+8=10
+- Formula: β_top = (n-1) + δ, where δ=0 for prime n (P_7), δ=2 for n=9 (9=3²)
+- All eigenspaces have IDENTICAL Om_5 dim=74 and Om_6 dim=63
+- The difference: trivial has ker(∂_5)=39, non-trivial has ker(∂_5)=38
+**Key question:** Why does trivial eigenspace contribute extra at n=9? Is δ=2 because 9=3²? What is δ for n=11 (Paley, prime)?
+**Conjecture (HYP-212):** δ=0 for prime n, δ>0 for composite. If true, P_11 has β_8 = 10+0 = 10.
+**Scripts:** `04-computation/n9_beta5_eigenspace.py`, `04-computation/p7_eigenspace_verify.py`
+**Next step:** (1) Compute P_11 β_8 eigenspace decomposition. (2) Test another composite (n=15?). (3) Find algebraic reason for δ.

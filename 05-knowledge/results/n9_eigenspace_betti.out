@@ -1,0 +1,27 @@
+======================================================================
+EIGENSPACE DECOMPOSITION OF n=9 CIRCULANT MAXIMIZER
+======================================================================
+
+Circulant Z_9, S=[1, 5, 6, 7], H=3357
+Scores: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+Full Betti: [1, 0, 0, 0, 0, 10, 0, 0] (2306.0s)
+
+======================================================================
+CHAIN COMPLEX STRUCTURE
+======================================================================
+  dim 0: 9 allowed paths (0.0s)
+  dim 1: 36 allowed paths (0.0s)
+  dim 2: 144 allowed paths (0.0s)
+  dim 3: 486 allowed paths (0.0s)
+  dim 4: 1386 allowed paths (0.0s)
+  dim 5: 3132 allowed paths (0.0s)
+  dim 6: 5310 allowed paths (0.0s)
+  dim 7: 5949 allowed paths (0.0s)
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\n9_eigenspace_betti.py", line 171, in <module>
+    print(f"  \u2202_{d}: {B.shape[0]}×{B.shape[1]}, rank={np.linalg.matrix_rank(B)} ({time.time()-t1:.1f}s)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2202' in position 2: character maps to <undefined>
