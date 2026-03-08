@@ -1461,3 +1461,28 @@ At n=7, all maximizers are conference-matrix (gap=0, eigenvalues all √7). Seco
 **Status:** CORRECTED
 **What:** The "non-Paley DRT" from {1,2,3,5,8} was NOT a valid tournament (S∩(-S)={3,8}≠∅). All claims about c3=44, c5=407, H=69311 were computed on a non-tournament digraph. The only valid circulant DRT at n=11 is Paley. Exhaustive search found exactly 2 valid (11,5,2)-difference sets in Z_11: QR and NQR, which give isomorphic tournaments.
 **Impact:** INV-068 corrected. MEMORY.md and TANGENTS.md updated.
+
+### INV-144: Circulant Digraph Path Homology (arXiv 2602.04140, Feb 2026)
+**Source:** opus-2026-03-08-S40 (web search)
+**Status:** NEW — closely related to our S38-S40 work
+**What:** Uses exactly our Fourier eigenspace decomposition approach for circulant digraphs. Key results:
+- Strong Stability (Thm 4.5): Betti numbers constant for large primes
+- Conjecture 4.8: H_m = 0 for m ≥ 3 under "no-wrap-around" condition
+- S={1,s} with s≠2 gives H_2 ≅ K (nonzero!)
+- No results on tournaments or Paley specifically
+**Relevance:** Their Fourier decomposition matches our per-eigenspace approach. Their H_m vanishing conjecture is related to our β_2=0 for tournaments. The "no-wrap-around" condition is key — tournaments satisfy it when S∩(-S)=∅.
+**Next step:** Read full paper, compare with our results. Can their techniques prove β_2=0 for tournaments?
+
+### INV-145: Ω_2 Structure — Cancellation Chains in Tournaments
+**Source:** opus-2026-03-08-S40
+**Status:** DISCOVERED
+**What:** Ω_2 ≠ span(transitive triples). Non-transitive 2-paths with shared non-allowed faces form "cancellation chains" in Ω_2. Gap dim(Ω_2) - |TT| ranges 0-5 at n=5. Cancellation chains never individually in ker(∂_2), but mixed elements (TT + cancellation) can be 2-cycles.
+**Impact:** Previous β_2 analysis assumed Ω_2 = TT, which was incomplete. Corrected computation still gives β_2 = 0 through n=6 (exhaustive).
+
+### INV-146: P_11 Path Homology — Non-palindromic Ω Dims
+**Source:** opus-2026-03-08-S40
+**Status:** COMPUTING (dims 8-10 in progress)
+**What:** P_11 per-eigenspace Ω dims: [1, 5, 20, 70, 205, 460, 700, 690, ?, ?, ?].
+Inner sequence NOT palindromic: 460≠700, 700≠690. Contrasts with P_7's palindromic [3,6,9,9,6,3].
+Using J^H J + eigvalsh method for memory-efficient rank computation.
+**Next step:** Complete Ω_8, Ω_9, Ω_10 to determine Betti concentration dimension.
