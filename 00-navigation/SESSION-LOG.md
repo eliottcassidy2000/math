@@ -13,6 +13,42 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S44 — 2026-03-07 (Creative Inquisition: F(T,x) Deep Dive)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S43b (context compacted)
+**Summary of work:**
+  Extended creative exploration session focused on the forward-edge polynomial F(T,x).
+
+  **Major discoveries:**
+  1. **Palindrome Phase Theorem:** F(T, zeta_k) lies on a fixed ray at angle (n-1)*pi/k for any k-th root of unity. Special cases: F(omega) real when n≡1 mod 3, F(i) pure imaginary when n≡3 mod 4.
+  2. **Universal congruences at roots of unity:** F(T,omega) ≡ 0 mod 9 at n=7, Im(F(T,i)) ≡ 0 mod 16 at n=7. These are NEW universal congruences beyond the 2-adic tower.
+  3. **Lee-Yang zeros:** F(T,x) zeros come in reciprocal pairs (palindrome). At n=5 H=9: ALL zeros on unit circle. Angular distribution clusters at ±2pi/3, avoiding positive real axis.
+  4. **D_k enhanced universality:** D_2 mod 240 (not just mod 16) at n=7. Enhancement factor 15 = 3*5 comes from cancellation between adjacent and non-adjacent position contributions.
+  5. **Moment analysis:** mu_1, mu_2, mu_3 of fwd(P) depend ONLY on t3. mu_4+ depend on higher invariants. Odd centered moments vanish (cm_3=cm_5=0, palindrome symmetry).
+  6. **Complement symmetry:** beta_S = beta_{S^c} for ALL descent sets S (not just total counts F_k = F_{n-1-k}).
+  7. **Mahler measure:** When all zeros on unit circle, Mahler(F) = H exactly (Kronecker-like).
+  8. **F(T,x) evaluation table:** F(1+t) and F(1-t) share universal modulus (palindrome center at x=1).
+  9. **Pfaffian analysis:** Pf(2A-J+I) always odd at even n. Divides H at n=4 but not n=6.
+
+  **New files created:**
+  - `04-computation/f_poly_zeros_leeyang.py` — Lee-Yang zero analysis
+  - `04-computation/f_poly_roots_of_unity.py` — Roots of unity evaluation
+  - `04-computation/f_poly_mod3_structure.py` — Mod 3 structure / F(omega) analysis
+  - `04-computation/f_universal_congruences.py` — Systematic congruence search
+  - `04-computation/f_poly_representation_theory.py` — Aut(T), orbit counting
+  - `04-computation/tournament_markov_chain.py` — Spectral analysis
+  - `04-computation/pfaffian_H_connection.py` — Pfaffian vs H
+  - `04-computation/f_poly_moment_analysis.py` — Moments, cumulants, entropy
+  - `04-computation/f_poly_character_theory.py` — Descent set refinement
+  - `04-computation/palindrome_phase_theorem.py` — Formal verification
+
+**Unresolved threads:**
+  - F(T,omega) mod 9 universality: prove algebraically, extend to other n
+  - D_k enhancement factors: why 3*5 at n=7? Is there a general formula?
+  - Knot invariant interpretation of S(T) (web agent launched, results pending)
+  - Cover polynomial / Tutte polynomial connection (web agent launched)
+  - n=8 exhaustive H-spectrum still running
+
 ## kind-pasteur-2026-03-07-S34 (continued) — 2026-03-07 (Concept Map overnight session)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S34 (context compacted, continued overnight)
