@@ -114,6 +114,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-254 | χ_path(T) = 1 - β₁ (Euler char for n=5 tournaments) | CONFIRMED exhaustive n=5 (1024/1024). At n=6: χ = 1 - β₁ - β₃ + β₄ (200 samples, 0 mismatches) | beta2_exactness.py |
 | HYP-255 | β₂=0 verified at n=7 (2000 samples), n=8 (500), n=9 (100). 0 counterexamples. | Extends HYP-249. β₁ rate decreases: 4.3% at n=7, 0.6% at n=8 | beta2_n7_verify.py |
 | HYP-256 | Circulant tournaments have β_m=0 for m≥2 (proved by Fourier decomposition) | CONFIRMED via Tang-Yau-Hess arXiv:2602.04140, Corollary 3.15 for S={1,...,(n-1)/2} | Literature |
+| HYP-257 | dim H₂(T,T\v) ∈ {0,1} for all interior v | CONFIRMED exhaustive n=5,6; sampled n=7 (500). Always (h₂_rel, β₁) = (1,1) when nonzero | beta2_delta_dimensions.py |
+| HYP-258 | **Every tournament has interior v with H₂(T,T\v) = 0** | CONFIRMED exhaustive n=5 (1024/1024), n=6 (32768/32768). KEY PROOF STRATEGY: gives β₂=0 via LES without δ | beta2_h2rel_zero_vertex.py |
+| HYP-259 | δ: H₂(T,T\v) → H₁(T\v) injective for all interior v (1≤d⁺≤n-2) | CONFIRMED: n=5 exhaustive (0/600), n=6 exhaustive (0 interior failures), n=7 sampled (0/37) | beta2_delta_sourcesink.py, beta2_delta_n7.py |
+| HYP-260 | δ fails ONLY at source/sink vertices | CONFIRMED n=5 (4 boundary failures, 0 interior). All failures at d⁺∈{0,n-1} | beta2_delta_failures.py |
+| HYP-261 | Source v: all v-paths are TT, v only at position 0; NT/Ω₂ coupling absent | PROVED algebraically. Source v→everyone, so (v,b,c) always TT. ∂₁∘∂₂=0 automatic for TT | beta2_delta_source_proof.py |
 
 ---
 
@@ -135,7 +140,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112

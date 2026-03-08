@@ -1,0 +1,28 @@
+======================================================================
+HYP-251 AT n=7: Every T has interior v with h₂(T,T\v) = 0
+======================================================================
+  100/500 (19s) [zero: 100, nonzero: 0]
+  200/500 (33s) [zero: 200, nonzero: 0]
+  300/500 (53s) [zero: 300, nonzero: 0]
+  400/500 (72s) [zero: 400, nonzero: 0]
+  500/500 (90s) [zero: 500, nonzero: 0]
+
+n=7: 500 samples in 90s
+  Has interior v with h₂_rel=0: 500
+  ALL interior v have h₂_rel=1: 0
+  ✓ HYP-251 confirmed at n=7 (500 samples)
+
+Which d⁺(v) gives h₂_rel=0:
+  d⁺=1: 308 times
+  d⁺=2: 740 times
+  d⁺=3: 952 times
+  d⁺=4: 764 times
+  d⁺=5: 273 times
+
+How many interior v give h₂_rel=0 per tournament:
+  4 vertices: 23 tournaments
+  5 vertices: 89 tournaments
+  6 vertices: 216 tournaments
+  7 vertices: 172 tournaments
+
+Done.
