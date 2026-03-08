@@ -611,7 +611,14 @@ where A = adjacency matrix, D = degree matrix, r = |E| - |V| + 1.
 For tournaments: |E| = n(n-1)/2, D = diag(out-degrees), A = tournament adjacency.
 The Ihara zeta function DIRECTLY encodes the cycle counts c_k that feed into OCF via Ω(T).
 
-**Key question:** Does ζ_T(u) evaluated at specific u relate to I(Ω,x)? Since I(Ω,x) encodes independence structure (not just counts), the answer is likely "not directly" — but the log-derivative of ζ_T gives cycle counts, and these constrain H(T).
+**Key question:** Does zeta_T(u) evaluated at specific u relate to I(Omega,x)?
+
+**COMPUTATIONAL RESULTS (kind-pasteur-S34):**
+- z_inv(1/2) = det(I - A/2 + (D-I)/4) is STRONGLY correlated with H (r = -0.95 at n=5)
+- BUT z_inv is NOT uniquely determined by H (multiple values for same H when multiple score sequences exist)
+- At n=4: z_inv IS determined by H for transitive and regular, NOT for H=3
+- Adjacency real-part spectrum is mostly unique per H at n=5 (except H=9, H=15 with 2 spectra)
+- Conclusion: Ihara zeta CONSTRAINS H but does not DETERMINE it — consistent with cycle counts constraining but not determining independence structure
 
 ### Stanley-Stembridge Resolution (2024) — Implications
 Hikita proved the Stanley-Stembridge conjecture (2024): chromatic symmetric functions of (3+1)-free posets are e-positive. Via Mitrovic-Stojadinovic, the Rédei-Berge function U_T connects to chromatic symmetric functions. **If** the poset structure of tournament arc orderings is (3+1)-free, then U_T would inherit e-positivity, constraining the symmetric function decomposition and potentially the H(T) distribution.
