@@ -108,6 +108,12 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-248 | β₃ > 0 first at n=6: exactly 320/32768 tournaments (blow-up of C₃) | CONFIRMED exhaustive. Two iso classes: scores (1,1,1,4,4,4) [80, c₃=2] and (2,2,2,3,3,3) [240, c₃=8] | beta3_analysis.py |
 | HYP-249 | β₂(T) = 0 for ALL tournaments at ALL n | Extended HYP-207. Exhaustive n≤6, sampled n≤8 (0 failures). β₃,β₄ CAN be nonzero. β₂ is special. | beta2_surjectivity.py |
 | HYP-250 | DD paths alone fill Z₂ only at n=5; non-DD Ω₃ needed at n≥6 | n=5: 100% DD fills. n=6: 960/32768 need non-DD. n=7: ~8%. n=8: ~8.5% | beta2_surjectivity.py |
+| HYP-251 | Transitive tournament path complex = (n-1)-simplex: dim(Ω_p) = C(n,p+1) | CONFIRMED n=3-8. All betti=0 except β₀=1. Path chain complex isomorphic to simplicial chain complex of Δ^{n-1} | beta2_simplex_connection.py |
+| HYP-252 | dim(Ω₂) = \|A₂\| - n_bp where n_bp = # backward pairs with intermediaries | CONFIRMED exhaustive n=5 (1024/1024). Junk face constraints have independent rows | beta2_exactness.py |
+| HYP-253 | Edge removal creating β₂>0: always δ(Ω₃)=+3, δ(Z₂)=+2, δ(rk₃)=+3 | Exhaustive n=5: all 80 cases. Only scores (0,1,3,3,3) and (1,1,1,3,4) affected | beta2_edge_restore.py |
+| HYP-254 | χ_path(T) = 1 - β₁ (Euler char for n=5 tournaments) | CONFIRMED exhaustive n=5 (1024/1024). At n=6: χ = 1 - β₁ - β₃ + β₄ (200 samples, 0 mismatches) | beta2_exactness.py |
+| HYP-255 | β₂=0 verified at n=7 (2000 samples), n=8 (500), n=9 (100). 0 counterexamples. | Extends HYP-249. β₁ rate decreases: 4.3% at n=7, 0.6% at n=8 | beta2_n7_verify.py |
+| HYP-256 | Circulant tournaments have β_m=0 for m≥2 (proved by Fourier decomposition) | CONFIRMED via Tang-Yau-Hess arXiv:2602.04140, Corollary 3.15 for S={1,...,(n-1)/2} | Literature |
 
 ---
 

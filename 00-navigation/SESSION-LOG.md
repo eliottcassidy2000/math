@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S41 (cont'd #2) — simplex connection, LES induction, n7-9 verification
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S41 (2nd context overflow)
+**Summary of work:**
+  Continued deep investigation of beta_2=0 conjecture (HYP-207/249).
+
+  **Major discoveries:**
+  - TRANSITIVE TOURNAMENT = SIMPLEX (HYP-251): dim(Om_p) = C(n,p+1), path chain complex
+    isomorphic to (n-1)-simplex. Verified n=3-8. All betti=0 (contractible).
+  - OMEGA_2 FORMULA (HYP-252): dim(Om_2) = |A_2| - n_bp (# backward pairs with intermediaries).
+    Constraints are independent. Confirmed exhaustive n=5.
+  - EULER CHARACTERISTIC: chi = 1 - beta_1 at n=5 (confirmed 1024/1024). Varies (0 or 1).
+  - EXACTNESS: beta_2=0 for ALL n=5 tournaments (dim 2 ALWAYS exact, dim 1 sometimes not).
+  - EDGE REMOVAL PATTERN (HYP-253): ALL 80 removals creating beta2>0 at n=5 have identical
+    deltas: +3 to Om2, +2 to Z2, +3 to Om3, +3 to rk3. Only extreme-degree edges.
+  - N=7-9 VERIFICATION (HYP-255): 0 counterexamples in 2000+500+100 samples.
+  - CIRCULANT RESULT (HYP-256): beta_m=0 for m>=2 proved for circulant tournaments
+    by arXiv:2602.04140 via Fourier decomposition.
+  - LES INDUCTION ATTEMPT: H_1(T\v) -> H_1(T) not always injective (519/833 fail).
+    Simple LES induction breaks at n>=6. Need more subtle argument.
+  - "GOOD VERTEX" EXISTS: For every tournament at n=5 (1024/1024), n=6 (500/500),
+    n=7 (100/100), there exists a vertex v where H_1 map is injective.
+    But this alone doesn't prove beta_2=0 (LES gives H_2(T) = H_2(T,T\v) in that case).
+
+  **New scripts:** beta2_cone_construction.py, beta2_edge_restore.py, beta2_exactness.py,
+    beta2_simplex_connection.py, beta2_induction_les.py, beta2_good_vertex.py,
+    beta2_explicit_surj.py, beta2_n7_verify.py
+  **New hypotheses:** HYP-251 through HYP-256
+
+**Unresolved threads:**
+  - No algebraic proof of beta_2=0 yet — all approaches hit obstacles
+  - Arc-flip invariance verified but algebraic proof eludes
+  - Discrete Morse theory approach promising but not developed
+  - Burfitt-Cutler inductive elements (arXiv:2411.09501) not yet fully exploited
+
 ## kind-pasteur-2026-03-08-S41 (cont'd) — beta2 proof exploration deepened
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-08-S41 (context overflow continuation)
