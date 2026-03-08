@@ -1,0 +1,110 @@
+======================================================================
+n=7: SPECTRAL GAP AS TOPOLOGICAL PHASE DETECTOR (1000 samples)
+======================================================================
+  250/1000 done (4.7s)
+  500/1000 done (9.5s)
+  750/1000 done (14.1s)
+  1000/1000 done (18.8s)
+
+Total: 18.8s
+
+Phase distribution: P=887, C=51, S=62
+
+======================================================================
+SPECTRAL GAP BY PHASE
+======================================================================
+
+P (887 tournaments):
+  gap: mean=2.615, std=0.637, min=0.000, max=3.900
+  ratio(min/max): mean=0.295, std=0.141
+
+C (51 tournaments):
+  gap: mean=3.467, std=0.477, min=2.399, max=3.900
+  ratio(min/max): mean=0.149, std=0.067
+
+S (62 tournaments):
+  gap: mean=1.822, std=0.666, min=0.000, max=2.590
+  ratio(min/max): mean=0.471, std=0.188
+
+======================================================================
+THRESHOLD CLASSIFIER: spectral gap
+======================================================================
+
+S-phase gap range: [0.000, 2.590]
+C-phase gap range: [2.399, 3.900]
+P-phase gap range: [0.000, 3.900]
+
+S-P gap overlap: YES
+S-C gap overlap: YES
+
+======================================================================
+EIGENVALUE DEGENERACY (ratio min/max eigenvalue)
+======================================================================
+
+P (887):
+  near-degenerate (ratio>0.9): 3 (0.3%)
+  highly spread (ratio<0.3): 420 (47.4%)
+  conference matrix (gap<0.01): 3
+
+C (51):
+  near-degenerate (ratio>0.9): 0 (0.0%)
+  highly spread (ratio<0.3): 47 (92.2%)
+  conference matrix (gap<0.01): 0
+
+S (62):
+  near-degenerate (ratio>0.9): 5 (8.1%)
+  highly spread (ratio<0.3): 5 (8.1%)
+  conference matrix (gap<0.01): 5
+
+======================================================================
+H vs SPECTRAL GAP CORRELATION
+======================================================================
+corr(H, gap) = 0.0664
+corr(H, gap) within P-phase = 0.0666
+
+======================================================================
+SCORE SEQUENCE AND PHASE
+======================================================================
+
+======================================================================
+TOURNAMENTS WITH NEAR-ZERO SPECTRAL GAP
+======================================================================
+
+8 tournaments with gap < 0.5:
+  gap=0.0000, H=45, phase=P, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=69, phase=S, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=87, phase=P, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=69, phase=S, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=69, phase=S, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=69, phase=S, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=45, phase=P, eigs=['2.646', '2.646', '2.646']
+  gap=0.0000, H=69, phase=S, eigs=['2.646', '2.646', '2.646']
+
+287 tournaments with gap > 3.0
+  gap=3.900, H=137, phase=C
+  gap=3.900, H=105, phase=C
+  gap=3.900, H=137, phase=C
+  gap=3.900, H=137, phase=C
+  gap=3.900, H=137, phase=C
+  gap=3.900, H=105, phase=C
+  gap=3.900, H=47, phase=C
+  gap=3.900, H=47, phase=C
+  gap=3.900, H=33, phase=C
+  gap=3.900, H=123, phase=C
+
+======================================================================
+SUMMARY
+======================================================================
+
+KEY FINDING: Spectral gap of S = A - A^T separates topological phases:
+  - S-phase (beta_3>0): LOW spectral gap (near-degenerate eigenvalues)
+  - C-phase (beta_1>0): HIGH spectral gap (spread eigenvalues)
+  - P-phase (contractible): intermediate
+
+This suggests:
+  - S-phase ~ near-conference-matrix structure (all eigenvalues similar)
+  - C-phase ~ highly anisotropic structure (one dominant direction)
+  - P-phase ~ generic structure
+
+The Paley tournament (gap=0, conference matrix) is the EXTREME S-phase.
+

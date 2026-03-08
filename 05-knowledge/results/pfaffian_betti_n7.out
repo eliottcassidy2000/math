@@ -1,0 +1,177 @@
+======================================================================
+n=7: Pfaffian-Betti Connection (Sampling)
+======================================================================
+  100/500 done (2.0s)
+  200/500 done (3.8s)
+  300/500 done (5.6s)
+  400/500 done (7.4s)
+  500/500 done (9.3s)
+
+Total time: 9.3s
+
+======================================================================
+PHASE DISTRIBUTION
+======================================================================
+  P: 437 (87.4%)
+  C: 21 (4.2%)
+  S: 42 (8.4%)
+
+======================================================================
+SUB-PFAFFIAN (|Pf(S\v)|) BY PHASE
+======================================================================
+
+P (437 tournaments):
+  |Pf| value distribution: {np.int64(1): 1427, np.int64(3): 740, np.int64(5): 446, np.int64(7): 342, np.int64(9): 104}
+  Unique sorted |Pf| patterns: 11
+    (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(5), np.int64(5), np.int64(7)): 81
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3)): 77
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(5), np.int64(5)): 76
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(7), np.int64(7)): 58
+    (np.int64(1), np.int64(1), np.int64(5), np.int64(5), np.int64(7), np.int64(7), np.int64(9)): 55
+
+C (21 tournaments):
+  |Pf| value distribution: {np.int64(1): 113, np.int64(3): 30, np.int64(5): 2, np.int64(9): 2}
+  Unique sorted |Pf| patterns: 5
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)): 9
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3)): 7
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 3
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(9), np.int64(9)): 1
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(5), np.int64(5)): 1
+
+S (42 tournaments):
+  |Pf| value distribution: {np.int64(1): 97, np.int64(3): 44, np.int64(5): 52, np.int64(7): 72, np.int64(9): 29}
+  Unique sorted |Pf| patterns: 5
+    (np.int64(1), np.int64(1), np.int64(5), np.int64(5), np.int64(7), np.int64(7), np.int64(9)): 19
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(7), np.int64(7)): 10
+    (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(5), np.int64(5), np.int64(7)): 7
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(9), np.int64(9)): 5
+    (np.int64(7), np.int64(7), np.int64(7), np.int64(7), np.int64(7), np.int64(7), np.int64(7)): 1
+
+======================================================================
+SUM / PRODUCT OF SUB-PFAFFIANS BY PHASE
+======================================================================
+
+P (437 tournaments):
+  sum(Pf(S\v)) values: {np.int64(-35): 2, np.int64(-25): 2, np.int64(-23): 3, np.int64(-21): 7, np.int64(-19): 1, np.int64(-17): 7, np.int64(-15): 10, np.int64(-13): 10, np.int64(-11): 15, np.int64(-9): 18, np.int64(-7): 25, np.int64(-5): 25, np.int64(-3): 30, np.int64(-1): 45, np.int64(1): 45, np.int64(3): 36, np.int64(5): 24, np.int64(7): 36, np.int64(9): 27, np.int64(11): 11, np.int64(13): 12, np.int64(15): 13, np.int64(17): 11, np.int64(19): 5, np.int64(21): 6, np.int64(23): 6, np.int64(25): 2, np.int64(31): 2, np.int64(35): 1}
+  sum(|Pf(S\v)|) values: {np.int64(7): 28, np.int64(11): 77, np.int64(15): 29, np.int64(19): 76, np.int64(23): 58, np.int64(25): 81, np.int64(27): 28, np.int64(35): 55, np.int64(49): 5}
+
+C (21 tournaments):
+  sum(Pf(S\v)) values: {np.int64(-5): 1, np.int64(-3): 3, np.int64(-1): 7, np.int64(1): 4, np.int64(3): 3, np.int64(5): 3}
+  sum(|Pf(S\v)|) values: {np.int64(7): 9, np.int64(11): 7, np.int64(15): 3, np.int64(19): 1, np.int64(27): 1}
+
+S (42 tournaments):
+  sum(Pf(S\v)) values: {np.int64(-23): 2, np.int64(-21): 1, np.int64(-19): 1, np.int64(-17): 2, np.int64(-15): 3, np.int64(-11): 1, np.int64(-9): 5, np.int64(-7): 3, np.int64(-1): 3, np.int64(1): 3, np.int64(3): 3, np.int64(5): 1, np.int64(7): 2, np.int64(9): 1, np.int64(13): 2, np.int64(15): 2, np.int64(17): 3, np.int64(23): 1, np.int64(25): 1, np.int64(33): 1, np.int64(35): 1}
+  sum(|Pf(S\v)|) values: {np.int64(23): 10, np.int64(25): 7, np.int64(27): 5, np.int64(35): 19, np.int64(49): 1}
+
+======================================================================
+SKEW EIGENVALUE SPECTRUM BY PHASE
+======================================================================
+
+P (437 tournaments):
+  max|skew_eig|: mean=3.680, std=0.263
+  min|skew_eig|: mean=1.059, std=0.457
+  spectral gap (max-min): mean=2.621
+
+C (21 tournaments):
+  max|skew_eig|: mean=4.155, std=0.221
+  min|skew_eig|: mean=0.640, std=0.286
+  spectral gap (max-min): mean=3.515
+
+S (42 tournaments):
+  max|skew_eig|: mean=3.440, std=0.184
+  min|skew_eig|: mean=1.522, std=0.330
+  spectral gap (max-min): mean=1.918
+
+======================================================================
+H(T) AND c3 BY PHASE
+======================================================================
+
+P (437 tournaments):
+  H: mean=75.3, min=1, max=157
+  c3: mean=8.6, min=0, max=13
+
+C (21 tournaments):
+  H: mean=73.5, min=33, max=137
+  c3: mean=8.3, min=5, max=12
+
+S (42 tournaments):
+  H: mean=114.8, min=41, max=159
+  c3: mean=10.9, min=6, max=13
+
+======================================================================
+COFACTOR EXPANSION: sum Pf vs H
+======================================================================
+  H=  103, sum(Pf)=    31, ratio=0.3010
+  H=   91, sum(Pf)=    -1, ratio=-0.0110
+  H=   37, sum(Pf)=    35, ratio=0.9459
+  H=  137, sum(Pf)=     3, ratio=0.0219
+  H=  111, sum(Pf)=     5, ratio=0.0450
+  H=   37, sum(Pf)=     7, ratio=0.1892
+  H=   33, sum(Pf)=    -1, ratio=-0.0303
+  H=   91, sum(Pf)=     9, ratio=0.0989
+  H=  133, sum(Pf)=    -1, ratio=-0.0075
+  H=   53, sum(Pf)=    21, ratio=0.3962
+  H=  133, sum(Pf)=     5, ratio=0.0376
+  H=   17, sum(Pf)=    -7, ratio=-0.4118
+  H=   69, sum(Pf)=     7, ratio=0.1014
+  H=   49, sum(Pf)=     9, ratio=0.1837
+  H=  129, sum(Pf)=    -9, ratio=-0.0698
+  H=   37, sum(Pf)=     5, ratio=0.1351
+  H=  105, sum(Pf)=     7, ratio=0.0667
+  H=   59, sum(Pf)=    -3, ratio=-0.0508
+  H=   95, sum(Pf)=     1, ratio=0.0105
+  H=   93, sum(Pf)=     7, ratio=0.0753
+  H=  127, sum(Pf)=    -9, ratio=-0.0709
+  H=    5, sum(Pf)=    -7, ratio=-1.4000
+  H=  123, sum(Pf)=    -7, ratio=-0.0569
+  H=   31, sum(Pf)=    17, ratio=0.5484
+  H=   89, sum(Pf)=   -15, ratio=-0.1685
+  H=  117, sum(Pf)=     5, ratio=0.0427
+  H=   65, sum(Pf)=    -1, ratio=-0.0154
+  H=   15, sum(Pf)=    13, ratio=0.8667
+  H=  153, sum(Pf)=     3, ratio=0.0196
+  H=   81, sum(Pf)=    -1, ratio=-0.0123
+  H=  127, sum(Pf)=    33, ratio=0.2598
+  H=  121, sum(Pf)=    -1, ratio=-0.0083
+  H=   73, sum(Pf)=    -1, ratio=-0.0137
+  H=   69, sum(Pf)=     1, ratio=0.0145
+  H=   31, sum(Pf)=    -5, ratio=-0.1613
+  H=  137, sum(Pf)=   -11, ratio=-0.0803
+  H=  131, sum(Pf)=    -5, ratio=-0.0382
+  H=  139, sum(Pf)=   -15, ratio=-0.1079
+  H=  135, sum(Pf)=    17, ratio=0.1259
+  H=   67, sum(Pf)=     1, ratio=0.0149
+  H=   77, sum(Pf)=     3, ratio=0.0390
+  H=  113, sum(Pf)=     9, ratio=0.0796
+  H=  137, sum(Pf)=    -1, ratio=-0.0073
+  H=  109, sum(Pf)=    -9, ratio=-0.0826
+  H=   29, sum(Pf)=    -9, ratio=-0.3103
+  H=   33, sum(Pf)=    -5, ratio=-0.1515
+  H=   39, sum(Pf)=   -13, ratio=-0.3333
+  H=   71, sum(Pf)=   -23, ratio=-0.3239
+  H=  133, sum(Pf)=    -1, ratio=-0.0075
+  H=   69, sum(Pf)=    13, ratio=0.1884
+
+  Exact match sum(Pf) = ±H: 0/50
+
+  Signed cofactor: sum_v (-1)^v * Pf(S\v)
+  H=  103, signed_sum=     9, phase=P
+  H=   91, signed_sum=    13, phase=P
+  H=   37, signed_sum=     5, phase=P
+  H=  137, signed_sum=    17, phase=P
+  H=  111, signed_sum=     3, phase=P
+  H=   37, signed_sum=    -3, phase=P
+  H=   33, signed_sum=     1, phase=P
+  H=   91, signed_sum=    -1, phase=P
+  H=  133, signed_sum=    -7, phase=P
+  H=   53, signed_sum=    11, phase=P
+  H=  133, signed_sum=    -1, phase=P
+  H=   17, signed_sum=     7, phase=P
+  H=   69, signed_sum=    -7, phase=P
+  H=   49, signed_sum=    -5, phase=P
+  H=  129, signed_sum=    -7, phase=S
+  H=   37, signed_sum=     3, phase=P
+  H=  105, signed_sum=    -3, phase=P
+  H=   59, signed_sum=     7, phase=P
+  H=   95, signed_sum=    -1, phase=P
+  H=   93, signed_sum=    -7, phase=S
