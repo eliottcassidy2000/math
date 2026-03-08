@@ -58,6 +58,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-210 | β_{n-4}>0 for odd-n H-maximizers | β₁=1 (n=3,5), β₄=6 (n=7), β₅=10 (n=9) | THM-099 (S41 update) |
 | HYP-211 | Odd-n H-maximizer hereditary: all del's give n-1 maximizer | n=3,5,7,9 ✓ (regular maximizers only) | n9_max_betti_quick.py |
 | HYP-212 | β_top = (n-1) + δ where δ=0 for prime n, δ>0 for composite | P₇: 6=6+0, Z₉: 10=8+2. Eigenspace decomposition: trivial gives δ, non-trivial each give 1 | n9_beta5_eigenspace.py |
+| HYP-213 | H_2(T,T\v) = 0 for all tournaments T, all vertices v | Exhaustive n=5,6 (verified 100%) | beta2_relative_homology.py |
+| HYP-214 | Paley P_p has β_{p-3} = p-1 (d=p-3 pattern) | Verified p=7,11 | paley_path_homology_theory.md |
+| HYP-215 | DT alone fills all Z_2 at n=5 | 1024/1024 (100%) | beta2_hamiltonian_homotopy.py |
+| HYP-216 | Tight β_2 cases (surplus=1) = β_3=1 tournaments | 80/80 at n=6 (100%) | beta2_tight_cases.py |
 | HYP-201 | Char poly determines H exactly | 0 ambiguous at n=5; 3 at n=6; 36 at n=7 | char_poly_H.py |
 | HYP-202 | Spectral det(I-uA) correlates with H | Corr > 0.94 for optimal u | ihara_deep.py |
 | HYP-203 | M has algebraic formula in terms of cycle invariants | Partial: diagonal formula known | THM-053 |
@@ -85,7 +89,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112

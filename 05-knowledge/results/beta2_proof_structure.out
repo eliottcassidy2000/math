@@ -125,65 +125,172 @@ n=5:
 
 Done.
 ======================================================================
-PART 1: CONE FROM SOURCE VERTEX KILLS beta_2
+PART 1: EXPLICIT 2-CYCLE STRUCTURE (n=5)
 ======================================================================
-  Tournaments with source vertex: 320
-  Source cone fills all: 0/320
+Total 2-cycles (ker generators): 3600
 
-======================================================================
-PART 2: DO 2-CYCLES AVOID AT LEAST ONE VERTEX?
-======================================================================
+Cycle types (support_size, n_TT, n_nonTT, n_verts): count
+  (8, 8, 0, 5): 1
+  (9, 6, 3, 5): 120
+  (9, 7, 2, 5): 720
+  (9, 9, 0, 5): 359
+  (10, 6, 4, 5): 360
+  (10, 7, 3, 5): 480
+  (10, 10, 0, 5): 480
+  (11, 5, 6, 5): 360
+  (14, 6, 8, 5): 600
+  (15, 5, 10, 5): 120
 
-  n=5: 3600 total 2-cycles
-  Vertices avoided per cycle:
-    Avoids 0: 3600 (100.0%)
-  n=6: ... 0
-  n=6: ... 5000
-  n=6: ... 10000
-  n=6: ... 15000
-  n=6: ... 20000
-  n=6: ... 25000
-  n=6: ... 30000
+Examples:
+  T#436, verts=[0, 1, 2, 3, 4], support=8 (8 TT + 0 nonTT)
+    -1.0000 * (1, 2, 0)
+    +1.0000 * (1, 2, 3)
+    +0.2908 * (2, 0, 3)
+    -0.7092 * (2, 4, 0)
+    +0.7092 * (2, 4, 3)
+    -0.2908 * (4, 0, 3)
+    -1.0000 * (4, 1, 0)
+    +1.0000 * (4, 1, 3)
 
-  n=6: 324160 total 2-cycles
-  Vertices avoided per cycle:
-    Avoids 0: 324160 (100.0%)
-
-======================================================================
-PART 3: MULTI-VERTEX CONE (n=5)
-======================================================================
-For each 2-cycle z, can we find v not in support(z)
-such that v -> first vertex of every path in support(z)?
-  n=5: Multi-cone success: 0
-  n=5: Multi-cone failure: 1024
 
 ======================================================================
-PART 4: VERIFY CONE FORMULA d(s_v(z)) = z - s_v(dz)
+PART 2: FILLING CHAIN CONSTRUCTION (n=5)
 ======================================================================
-For z in ker d_2, dz = 0, so d(s_v(z)) should = z.
-This only works if z is supported on paths NOT using v
-AND v -> path[0] for every path in support.
 
-  T#0: ker_dim=4
+Filling types (support_size, n_DT, n_nonDT): count
+  (3, 3, 0): 840
+  (5, 3, 2): 720
+  (5, 5, 0): 960
+  (6, 3, 3): 360
+  (9, 5, 4): 600
+  (20, 5, 15): 120
 
-  T#1: ker_dim=4
+Examples:
 
-  T#2: ker_dim=3
+  T#0: cycle(10) → filling(5 = 5 DT + 0 nonDT)
+  Cycle z:
+    +0.0473 * (2, 1, 0)
+    +0.2977 * (3, 1, 0)
+    -0.1635 * (3, 2, 0)
+    +0.4992 * (3, 2, 1)
+    -0.3450 * (4, 1, 0)
+    +0.2108 * (4, 2, 0)
+    -0.5464 * (4, 2, 1)
+    +0.1341 * (4, 3, 0)
+    +0.2015 * (4, 3, 1)
+    -0.3356 * (4, 3, 2)
+  Filling w:
+    -0.1826 * (3, 2, 1, 0) [  ]
+    +0.2299 * (4, 2, 1, 0) [  ]
+    +0.1151 * (4, 3, 1, 0) [  ]
+    +0.0191 * (4, 3, 2, 0) [  ]
+    +0.3165 * (4, 3, 2, 1) [  ]
 
-  T#3: ker_dim=4
+  T#0: cycle(10) → filling(5 = 5 DT + 0 nonDT)
+  Cycle z:
+    +0.1863 * (2, 1, 0)
+    +0.2636 * (3, 1, 0)
+    -0.2232 * (3, 2, 0)
+    -0.2177 * (3, 2, 1)
+    -0.4499 * (4, 1, 0)
+    +0.4095 * (4, 2, 0)
+    +0.0314 * (4, 2, 1)
+    +0.0404 * (4, 3, 0)
+    -0.4813 * (4, 3, 1)
+    +0.4408 * (4, 3, 2)
+  Filling w:
+    -0.0166 * (3, 2, 1, 0) [  ]
+    +0.2029 * (4, 2, 1, 0) [  ]
+    +0.2470 * (4, 3, 1, 0) [  ]
+    -0.2066 * (4, 3, 2, 0) [  ]
+    -0.2342 * (4, 3, 2, 1) [  ]
 
-  T#4: ker_dim=3
+  T#0: cycle(10) → filling(5 = 5 DT + 0 nonDT)
+  Cycle z:
+    +0.4073 * (2, 1, 0)
+    -0.1286 * (3, 1, 0)
+    +0.5672 * (3, 2, 0)
+    -0.2832 * (3, 2, 1)
+    -0.2787 * (4, 1, 0)
+    -0.1599 * (4, 2, 0)
+    -0.1241 * (4, 2, 1)
+    +0.4386 * (4, 3, 0)
+    -0.1546 * (4, 3, 1)
+    -0.2840 * (4, 3, 2)
+  Filling w:
+    +0.2773 * (3, 2, 1, 0) [  ]
+    +0.1300 * (4, 2, 1, 0) [  ]
+    +0.1487 * (4, 3, 1, 0) [  ]
+    +0.2900 * (4, 3, 2, 0) [  ]
+    -0.0060 * (4, 3, 2, 1) [  ]
 
-  T#5: ker_dim=3
+  T#0: cycle(10) → filling(5 = 5 DT + 0 nonDT)
+  Cycle z:
+    +0.4440 * (2, 1, 0)
+    -0.4747 * (3, 1, 0)
+    +0.0411 * (3, 2, 0)
+    -0.1524 * (3, 2, 1)
+    +0.0307 * (4, 1, 0)
+    +0.4029 * (4, 2, 0)
+    -0.2916 * (4, 2, 1)
+    -0.4336 * (4, 3, 0)
+    +0.3223 * (4, 3, 1)
+    +0.1113 * (4, 3, 2)
+  Filling w:
+    +0.2225 * (3, 2, 1, 0) [  ]
+    +0.2216 * (4, 2, 1, 0) [  ]
+    -0.2523 * (4, 3, 1, 0) [  ]
+    -0.1813 * (4, 3, 2, 0) [  ]
+    +0.0701 * (4, 3, 2, 1) [  ]
 
-  T#6: ker_dim=3
+  T#1: cycle(10) → filling(5 = 5 DT + 0 nonDT)
+  Cycle z:
+    +0.0480 * (2, 0, 1)
+    -0.2485 * (3, 0, 1)
+    +0.2209 * (3, 2, 0)
+    +0.3517 * (3, 2, 1)
+    +0.2005 * (4, 0, 1)
+    -0.2689 * (4, 2, 0)
+    -0.3036 * (4, 2, 1)
+    +0.4694 * (4, 3, 0)
+    +0.1032 * (4, 3, 1)
+    -0.5726 * (4, 3, 2)
+  Filling w:
+    +0.0855 * (3, 2, 0, 1) [  ]
+    -0.0374 * (4, 2, 0, 1) [  ]
+    -0.1630 * (4, 3, 0, 1) [  ]
+    +0.3064 * (4, 3, 2, 0) [  ]
+    +0.2662 * (4, 3, 2, 1) [  ]
 
-  T#7: ker_dim=4
 
-  T#8: ker_dim=4
+======================================================================
+PART 3: SOURCE VERTEX CONE FILLING (n=5)
+======================================================================
+For vertex v with out-degree n-1 (source), can we fill ALL 2-cycles
+using 3-chains that 'cone' from v?
+  Source-vertex DT fills all 2-cycles: 480
+  Source-vertex DT insufficient: 544
 
-  T#9: ker_dim=3
 
-  T#10: ker_dim=3
+======================================================================
+PART 4: FOR EACH 2-CYCLE, WHICH VERTEX PAIRS PROVIDE DT FILLERS?
+======================================================================
+  DT-filled: 3600, NOT DT-filled: 0
+
+
+======================================================================
+PART 5: KEY THEOREM TEST
+======================================================================
+For each non-TT 2-path (a,b,c) with c→a (i.e., 3-cycle a→b→c→a),
+find ALL other non-TT 2-paths sharing a non-allowed face with (a,b,c).
+The difference of two such paths is in Ω_3 if they share the same bad face.
+  Bad-face group sizes (how many non-TT paths share same bad face):
+    size 1: 4320 groups
+    size 2: 1440 groups
+    size 3: 160 groups
+
+Key: if group size ≥ 2, pairwise differences are in Ω_3
+(because the non-allowed face cancels).
+This provides (size-1) independent Ω_3 elements per group.
 
 Done.

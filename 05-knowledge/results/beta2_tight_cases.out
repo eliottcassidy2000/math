@@ -1,0 +1,315 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+FINDING TIGHT CASES AT n=6
+======================================================================
+  ... 0
+  ... 10000
+  ... 20000
+  ... 30000
+
+Found 80 tight tournaments (surplus ≤ 2)
+
+======================================================================
+DETAILED ANALYSIS OF TIGHT CASES
+======================================================================
+
+--- Tournament #87, surplus=1 ---
+  Scores: [4, 1, 1, 1, 4, 4]
+  Adjacency matrix:
+    [0, 1, 1, 1, 0, 1]
+    [0, 0, 0, 1, 0, 0]
+    [0, 1, 0, 0, 0, 0]
+    [0, 0, 1, 0, 0, 0]
+    [1, 1, 1, 1, 0, 0]
+    [0, 1, 1, 1, 1, 0]
+  |A_2|=24, |A_3|=27
+  dim(Ω_2)=18, dim(Ω_3)=9
+  Z_2=8, surplus=1
+  Bad pairs (c→a): 15
+    (0,4): 1 paths through [5]
+    (1,2): 1 paths through [3]
+    (2,3): 1 paths through [1]
+  DT 4-paths: 9
+  Ω_3 basis vectors (9 total):
+    v0: (0, 5, 1, 3) (DT=1)
+    v1: (0, 5, 2, 1) (DT=1)
+    v2: (0, 5, 3, 2) (DT=1)
+    v3: (4, 0, 1, 3) (DT=1)
+    v4: (4, 0, 2, 1) (DT=1)
+    v5: (4, 0, 3, 2) (DT=1)
+    v6: (5, 4, 1, 3) (DT=1)
+    v7: (5, 4, 2, 1) (DT=1)
+    v8: (5, 4, 3, 2) (DT=1)
+  rank(∂_3|_{Ω_3})=8, ker(∂_3)=1
+  ker(∂_3) element: -0.33*(0, 5, 1, 3), -0.33*(0, 5, 2, 1), -0.33*(0, 5, 3, 2), -0.33*(4, 0, 1, 3), -0.33*(4, 0, 2, 1), -0.33*(4, 0, 3, 2) + 3 more
+  Ω_4=0, β_3=1
+
+--- Tournament #356, surplus=1 ---
+  Scores: [1, 4, 1, 1, 4, 4]
+  Adjacency matrix:
+    [0, 0, 0, 1, 0, 0]
+    [1, 0, 1, 1, 0, 1]
+    [1, 0, 0, 0, 0, 0]
+    [0, 0, 1, 0, 0, 0]
+    [1, 1, 1, 1, 0, 0]
+    [1, 0, 1, 1, 1, 0]
+  |A_2|=24, |A_3|=27
+  dim(Ω_2)=18, dim(Ω_3)=9
+  Z_2=8, surplus=1
+  Bad pairs (c→a): 15
+    (0,2): 1 paths through [3]
+    (1,4): 1 paths through [5]
+    (2,3): 1 paths through [0]
+    (3,0): 1 paths through [2]
+  DT 4-paths: 9
+  Ω_3 basis vectors (9 total):
+    v0: (4, 1, 3, 2) (DT=1)
+    v1: (1, 5, 2, 0) (DT=1)
+    v2: (1, 5, 3, 2) (DT=1)
+    v3: (5, 4, 0, 3) (DT=1)
+    v4: (1, 5, 0, 3) (DT=1)
+    v5: (4, 1, 0, 3) (DT=1)
+    v6: (4, 1, 2, 0) (DT=1)
+    v7: (5, 4, 2, 0) (DT=1)
+    v8: (5, 4, 3, 2) (DT=1)
+  rank(∂_3|_{Ω_3})=8, ker(∂_3)=1
+  ker(∂_3) element: 0.33*(1, 5, 0, 3), 0.33*(1, 5, 2, 0), 0.33*(1, 5, 3, 2), 0.33*(4, 1, 0, 3), 0.33*(4, 1, 2, 0), 0.33*(4, 1, 3, 2) + 3 more
+  Ω_4=0, β_3=1
+
+--- Tournament #567, surplus=1 ---
+  Scores: [4, 1, 1, 1, 4, 4]
+  Adjacency matrix:
+    [0, 1, 1, 1, 0, 1]
+    [0, 0, 1, 0, 0, 0]
+    [0, 0, 0, 1, 0, 0]
+    [0, 1, 0, 0, 0, 0]
+    [1, 1, 1, 1, 0, 0]
+    [0, 1, 1, 1, 1, 0]
+  |A_2|=24, |A_3|=27
+  dim(Ω_2)=18, dim(Ω_3)=9
+  Z_2=8, surplus=1
+  Bad pairs (c→a): 15
+    (0,4): 1 paths through [5]
+    (1,3): 1 paths through [2]
+    (2,1): 1 paths through [3]
+  DT 4-paths: 9
+  Ω_3 basis vectors (9 total):
+    v0: (0, 5, 1, 2) (DT=1)
+    v1: (0, 5, 2, 3) (DT=1)
+    v2: (0, 5, 3, 1) (DT=1)
+    v3: (4, 0, 1, 2) (DT=1)
+    v4: (4, 0, 2, 3) (DT=1)
+    v5: (4, 0, 3, 1) (DT=1)
+    v6: (5, 4, 1, 2) (DT=1)
+    v7: (5, 4, 2, 3) (DT=1)
+    v8: (5, 4, 3, 1) (DT=1)
+  rank(∂_3|_{Ω_3})=8, ker(∂_3)=1
+  ker(∂_3) element: 0.33*(0, 5, 1, 2), 0.33*(0, 5, 2, 3), 0.33*(0, 5, 3, 1), 0.33*(4, 0, 1, 2), 0.33*(4, 0, 2, 3), 0.33*(4, 0, 3, 1) + 3 more
+  Ω_4=0, β_3=1
+
+--- Tournament #866, surplus=1 ---
+  Scores: [1, 4, 1, 1, 4, 4]
+  Adjacency matrix:
+    [0, 0, 1, 0, 0, 0]
+    [1, 0, 1, 1, 0, 1]
+    [0, 0, 0, 1, 0, 0]
+    [1, 0, 0, 0, 0, 0]
+    [1, 1, 1, 1, 0, 0]
+    [1, 0, 1, 1, 1, 0]
+  |A_2|=24, |A_3|=27
+  dim(Ω_2)=18, dim(Ω_3)=9
+  Z_2=8, surplus=1
+  Bad pairs (c→a): 15
+    (0,3): 1 paths through [2]
+    (1,4): 1 paths through [5]
+    (2,0): 1 paths through [3]
+  DT 4-paths: 9
+  Ω_3 basis vectors (9 total):
+    v0: (4, 1, 3, 0) (DT=1)
+    v1: (1, 5, 2, 3) (DT=1)
+    v2: (1, 5, 3, 0) (DT=1)
+    v3: (5, 4, 0, 2) (DT=1)
+    v4: (1, 5, 0, 2) (DT=1)
+    v5: (4, 1, 0, 2) (DT=1)
+    v6: (4, 1, 2, 3) (DT=1)
+    v7: (5, 4, 2, 3) (DT=1)
+    v8: (5, 4, 3, 0) (DT=1)
+  rank(∂_3|_{Ω_3})=8, ker(∂_3)=1
+  ker(∂_3) element: 0.33*(1, 5, 0, 2), 0.33*(1, 5, 2, 3), 0.33*(1, 5, 3, 0), 0.33*(4, 1, 0, 2), 0.33*(4, 1, 2, 3), 0.33*(4, 1, 3, 0) + 3 more
+  Ω_4=0, β_3=1
+
+--- Tournament #1278, surplus=1 ---
+  Scores: [4, 4, 1, 1, 1, 4]
+  Adjacency matrix:
+    [0, 0, 1, 1, 1, 1]
+    [1, 0, 1, 1, 1, 0]
+    [0, 0, 0, 0, 1, 0]
+    [0, 0, 1, 0, 0, 0]
+    [0, 0, 0, 1, 0, 0]
+    [0, 1, 1, 1, 1, 0]
+  |A_2|=24, |A_3|=27
+  dim(Ω_2)=18, dim(Ω_3)=9
+  Z_2=8, surplus=1
+  Bad pairs (c→a): 15
+    (0,1): 1 paths through [5]
+    (1,5): 1 paths through [0]
+    (2,3): 1 paths through [4]
+    (3,4): 1 paths through [2]
+  DT 4-paths: 9
+  Ω_3 basis vectors (9 total):
+    v0: (0, 5, 2, 4) (DT=1)
+    v1: (0, 5, 3, 2) (DT=1)
+    v2: (0, 5, 4, 3) (DT=1)
+    v3: (5, 1, 2, 4) (DT=1)
+    v4: (5, 1, 3, 2) (DT=1)
+    v5: (5, 1, 4, 3) (DT=1)
+    v6: (1, 0, 2, 4) (DT=1)
+    v7: (1, 0, 3, 2) (DT=1)
+    v8: (1, 0, 4, 3) (DT=1)
+  rank(∂_3|_{Ω_3})=8, ker(∂_3)=1
+  ker(∂_3) element: -0.33*(0, 5, 2, 4), -0.33*(0, 5, 3, 2), -0.33*(0, 5, 4, 3), -0.33*(1, 0, 2, 4), -0.33*(1, 0, 3, 2), -0.33*(1, 0, 4, 3) + 3 more
+  Ω_4=0, β_3=1
+
+
+======================================================================
+STRUCTURAL PATTERNS IN TIGHT CASES
+='*70
+
+Score sequences in tight cases:
+  (1, 1, 1, 4, 4, 4): 80
+
+3-cycle counts in tight cases:
+  t3=2: 80
+
+
+======================================================================
+DT SUFFICIENCY vs TIGHTNESS
+======================================================================
+  Tight cases: DT-sufficient=80, DT-insufficient=0
+
+Done.

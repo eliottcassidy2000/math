@@ -125,65 +125,51 @@ n=5:
 
 Done.
 ======================================================================
-PART 1: CONE FROM SOURCE VERTEX KILLS beta_2
+RELATIVE CHAIN COMPLEX DIMENSIONS
 ======================================================================
-  Tournaments with source vertex: 320
-  Source cone fills all: 0/320
+n=5: Relative dimension patterns (dim_1^rel, dim_2^rel, dim_3^rel):
+  (4, 5, 2): 600
+  (4, 5, 3): 560
+  (4, 5, 4): 240
+  (4, 6, 2): 240
+  (4, 6, 3): 1080
+  (4, 6, 4): 1680
+  (4, 6, 6): 120
+  (4, 7, 6): 480
+  (4, 7, 9): 120
 
-======================================================================
-PART 2: DO 2-CYCLES AVOID AT LEAST ONE VERTEX?
-======================================================================
-
-  n=5: 3600 total 2-cycles
-  Vertices avoided per cycle:
-    Avoids 0: 3600 (100.0%)
-  n=6: ... 0
-  n=6: ... 5000
-  n=6: ... 10000
-  n=6: ... 15000
-  n=6: ... 20000
-  n=6: ... 25000
-  n=6: ... 30000
-
-  n=6: 324160 total 2-cycles
-  Vertices avoided per cycle:
-    Avoids 0: 324160 (100.0%)
 
 ======================================================================
-PART 3: MULTI-VERTEX CONE (n=5)
+RELATIVE COMPLEX EXACTNESS AT DIM 2
 ======================================================================
-For each 2-cycle z, can we find v not in support(z)
-such that v -> first vertex of every path in support(z)?
-  n=5: Multi-cone success: 0
-  n=5: Multi-cone failure: 1024
+
+  Exact: 5120, Non-exact: 0
+
 
 ======================================================================
-PART 4: VERIFY CONE FORMULA d(s_v(z)) = z - s_v(dz)
+WHY IS H_2^rel = 0? DIMENSION ANALYSIS
 ======================================================================
-For z in ker d_2, dz = 0, so d(s_v(z)) should = z.
-This only works if z is supported on paths NOT using v
-AND v -> path[0] for every path in support.
+n=5:
+  Case (a) ker_rel2=0 (no relative cycles): 0
+  Case (b) ker_rel2>0 (cycles exist, all filled): 5120
 
-  T#0: ker_dim=4
+  Is ker_rel2 ALWAYS 0? NO
 
-  T#1: ker_dim=4
 
-  T#2: ker_dim=3
+======================================================================
+CHECKING ker_rel2 AT n=6
+======================================================================
+  ... 0
+  ... 5000
+  ... 10000
+  ... 15000
+  ... 20000
+  ... 25000
+  ... 30000
 
-  T#3: ker_dim=4
-
-  T#4: ker_dim=3
-
-  T#5: ker_dim=3
-
-  T#6: ker_dim=3
-
-  T#7: ker_dim=4
-
-  T#8: ker_dim=4
-
-  T#9: ker_dim=3
-
-  T#10: ker_dim=3
+n=6:
+  Case (a) ker_rel2=0 (no relative cycles): 0
+  Case (b) ker_rel2>0 (cycles exist, all filled): 196608
+  Is ker_rel2 ALWAYS 0? NO
 
 Done.

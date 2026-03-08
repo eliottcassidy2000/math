@@ -13,6 +13,48 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-08-S42 — 2026-03-08 (P_11 Complete + β_2=0 Structural Depth)
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S41 (context overflow continuation)
+**Summary of work:**
+  Completed P_11 computation and deepened β_2=0 structural analysis.
+
+  **P_11 results (COMPLETE):**
+  - Ω dims (k≠0): [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+  - β_8 = 10 = p-1, concentrated at d = 8 = p-3
+  - Confirms d=p-3 pattern from P_7
+  - Homotopy type: ∨^{10} S^8, χ = 11 = p
+
+  **β_2=0 structural analysis:**
+  1. Rank surplus B_2 - Z_2 = 0 ALWAYS (n=5,6 exhaustive, n=7 sample)
+  2. Dimension surplus dim(Ω_3) - dim(Z_2) ≥ 1 always; minimum 1 at n=6
+  3. ALL 80 tight cases (surplus=1) at n=6 have score (1,1,1,4,4,4), t3=2, β_3=1
+  4. Tight cases = β_3 generators, NOT β_2 "near-failures"
+  5. DT alone fills all Z_2 at n=5 (1024/1024), even tight cases at n=6 (80/80)
+  6. Flag complex H_2 ≠ 0 for 40/1024 at n=5, but path β_2 = 0
+  7. TT subcomplex NOT exact (only 240/1024 at n=5)
+  8. ∂_3(DT) ⊄ TT — DT faces include non-TT paths (d→a causes non-TT face)
+  9. dim(Ω_2) = TT + Σ(mult-1) where mult = intermediaries per bad pair (CONFIRMED)
+  10. H_2(A_* projected) ≠ 0 and NOT a chain complex (∂∂≠0 for projected boundary)
+  11. Relative homology H_2(T,T\v)=0 confirmed for ALL (v,T) at n=5,6
+  12. Cone construction DEAD: all 2-cycles use ALL n vertices
+
+  **Dead ends for proof:**
+  - Cone construction (all vertices used)
+  - TT subcomplex (not exact)
+  - A_* projected complex (not ∂∂=0)
+  - Flag complex (H_2 can be nonzero)
+
+**New contributions:** Scripts: beta2_rank_surplus.py, beta2_dimension_formulas.py,
+  beta2_tight_cases.py, beta2_cycle_filling.py, beta2_hamiltonian_homotopy.py,
+  beta2_junk_matrix_proof.py. Updated paley_path_homology_theory.md with P_11 complete.
+**Unresolved threads:**
+  - Algebraic proof of β_2=0 remains OPEN
+  - Most promising lead: relative homology H_2(T,T\v)=0 gives inductive structure
+  - Need algebraic proof of WHY relative 3-boundaries fill all relative 2-cycles
+  - Spectral sequence approach (Caputi-Menara) not yet explored
+  - Literature search agent may have found relevant papers
+
 ## opus-2026-03-08-S41 — 2026-03-08 (β_2=0 Proof Exploration: Oriented Graphs & Twin Mechanism)
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S40/S41 (context overflow continuation)

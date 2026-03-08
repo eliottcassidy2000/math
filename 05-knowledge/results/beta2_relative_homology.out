@@ -125,65 +125,41 @@ n=5:
 
 Done.
 ======================================================================
-PART 1: CONE FROM SOURCE VERTEX KILLS beta_2
-======================================================================
-  Tournaments with source vertex: 320
-  Source cone fills all: 0/320
-
-======================================================================
-PART 2: DO 2-CYCLES AVOID AT LEAST ONE VERTEX?
+RELATIVE HOMOLOGY H_2(T, T\v)
 ======================================================================
 
-  n=5: 3600 total 2-cycles
-  Vertices avoided per cycle:
-    Avoids 0: 3600 (100.0%)
-  n=6: ... 0
-  n=6: ... 5000
-  n=6: ... 10000
-  n=6: ... 15000
-  n=6: ... 20000
-  n=6: ... 25000
-  n=6: ... 30000
+--- n=5 ---
+  Total tournaments: 1024
+  ∃v: H_2(T,T\v)=0: 1024/1024
+  ∀v: H_2(T,T\v)=0: 1024/1024
+  Max H_2^rel seen: 0
 
-  n=6: 324160 total 2-cycles
-  Vertices avoided per cycle:
-    Avoids 0: 324160 (100.0%)
+  H_2^rel patterns (sorted over v):
+    (0, 0, 0, 0, 0): 1024
+
+--- n=6 ---
+  ... 5000
+  ... 10000
+  ... 15000
+  ... 20000
+  ... 25000
+  ... 30000
+  Total tournaments: 32768
+  ∃v: H_2(T,T\v)=0: 32768/32768
+  ∀v: H_2(T,T\v)=0: 32768/32768
+  Max H_2^rel seen: 0
+
+  H_2^rel patterns (sorted over v):
+    (0, 0, 0, 0, 0, 0): 32768
+
 
 ======================================================================
-PART 3: MULTI-VERTEX CONE (n=5)
+CONNECTING HOMOMORPHISM δ: H_2(T,T\v) → H_1(T\v)
 ======================================================================
-For each 2-cycle z, can we find v not in support(z)
-such that v -> first vertex of every path in support(z)?
-  n=5: Multi-cone success: 0
-  n=5: Multi-cone failure: 1024
-
-======================================================================
-PART 4: VERIFY CONE FORMULA d(s_v(z)) = z - s_v(dz)
-======================================================================
-For z in ker d_2, dz = 0, so d(s_v(z)) should = z.
-This only works if z is supported on paths NOT using v
-AND v -> path[0] for every path in support.
-
-  T#0: ker_dim=4
-
-  T#1: ker_dim=4
-
-  T#2: ker_dim=3
-
-  T#3: ker_dim=4
-
-  T#4: ker_dim=3
-
-  T#5: ker_dim=3
-
-  T#6: ker_dim=3
-
-  T#7: ker_dim=4
-
-  T#8: ker_dim=4
-
-  T#9: ker_dim=3
-
-  T#10: ker_dim=3
+δ must be injective for H_2(T) = 0 (when H_2(T,T\v) ≠ 0)
+  n=5
+  H_2^rel = 0: 5120
+  H_2^rel > 0, dim H_1(T\v) ≥ H_2^rel: 0
+  H_2^rel > 0, dim H_1(T\v) < H_2^rel: 0
 
 Done.

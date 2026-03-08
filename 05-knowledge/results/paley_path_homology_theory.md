@@ -18,7 +18,7 @@ Properties:
 |---|-----|---|---------------|---|
 | 3 | {1} | (1,1,0) | S^1 (circle) | 0 |
 | 7 | {1,2,4} | (1,0,0,0,6,0) | ∨^6 S^4 | 7 |
-| 11 | {1,3,4,5,9} | Computing... | ? | predicted 11 |
+| 11 | {1,3,4,5,9} | (1,0,0,0,0,0,0,0,10,0,0) | ∨^{10} S^8 | 11 |
 
 ### Per-Eigenspace Decomposition
 
@@ -30,11 +30,15 @@ indexed by k = 0,...,p-1 with eigenvalue λ_k = ω^k (ω = e^{2πi/p}).
 - k=1,...,6: ALL have Ω dims = [1,3,6,9,9,6,3], β = (0,0,0,0,1,0,0)
 - Total: β = (1,0,0,0,6,0,0), χ = 7
 
-**P_11 (PARTIAL — dims 0-6 complete):**
+**P_11 (COMPLETE):**
 - All eigenspaces k=1,...,10 have the SAME Ω dims (proved theoretically)
-- Ω dims (k≠0) through dim 6: [1, 5, 20, 70, 205, 460, 700, ...]
-- IMPORTANT: Inner sequence [5,20,70,205,460,700,...] is NOT palindromic
+- Ω dims (k≠0): [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+- Inner sequence [5,20,70,205,460,700,690,450,180,30] is NOT palindromic
   (460 ≠ 700), unlike P_7's [3,6,9,9,6,3]
+- Ranks: [1, 4, 16, 54, 151, 309, 391, 299, 150, 30]
+- β per eigenspace: [0,0,0,0,0,0,0,0,1,0,0] — concentrated at d=8=p-3
+- Total: β_8 = 10 = p-1 (from 10 non-trivial eigenspaces)
+- χ = 1 per eigenspace, total χ = 11 = p ✓
 
 **P_3:**
 - Special case: β_1 = 1 comes from k=0 eigenspace (not k≠0)
@@ -191,10 +195,31 @@ For any tournament T, H_2^{path}(T) = 0.
     → their difference is in Ω_3 because the bad face cancels.
     Example: (0,1,4,3) - (0,5,4,3) ∈ Ω_3, both have bad face (0,4,3).
 
+### P_11 Confirmation of d=p-3 Pattern
+
+P_11 has β_8 = 10 = p-1, concentrated at d = 8 = p-3. Combined with P_7 (β_4 = 6 = p-1 at d = 4 = p-3), this confirms:
+
+**Conjecture (verified p=7,11):** For Paley tournament P_p (p ≡ 3 mod 4, p ≥ 7):
+- β_d = p-1 at d = p-3, β_d = 0 for d ≠ 0 and d ≠ p-3
+- Homotopy type: ∨^{p-1} S^{p-3}
+- χ = 1 + (p-1) = p
+
+### Relative Homology H_2(T,T\v) = 0 (S41)
+
+**Theorem** (verified exhaustively n=5,6):
+For any tournament T and any vertex v, H_2(T, T\v) = 0.
+
+This means the long exact sequence H_2(T\v) → H_2(T) → H_2(T,T\v) → H_1(T\v) gives:
+If β_2(T\v) = 0 by induction, then β_2(T) = 0.
+
+**Mechanism**: ker_rel2 > 0 always (relative 2-cycles EXIST), but im_3^{rel} always fills them completely. This is case (b), not (a).
+
+**Dead end**: Cone construction — ALL 2-cycles use ALL n vertices, so no vertex can serve as cone point.
+
 ### Open Questions
-1. What are the full Ω dims for P_11? (Ω_7=690 known; Ω_8 computing)
-2. At which dimension d does β_d = p-1 for P_11?
-3. Is d = p-3 always, or does it vary?
+1. ~~What are the full Ω dims for P_11?~~ ANSWERED: [1,5,20,70,205,460,700,690,450,180,30]
+2. ~~At which dimension d does β_d = p-1 for P_11?~~ ANSWERED: d=8=p-3
+3. Is d = p-3 always? Verified for p=7,11. Need p=19,23 for confidence.
 4. Why is P_7 palindromic but P_11 is not?
 5. Can the Gauss sum theory predict d directly?
 6. β_2 = 0 algebraic proof for general tournaments — WHAT APPROACH?
