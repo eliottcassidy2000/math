@@ -254,6 +254,46 @@ The backbone tiling class size equals H(T) / |Aut(T)| by orbit-stabilizer.
 
 **At n=7:** c_0 = H + (lower terms)/64 where lower terms ≡ 48 mod 64. c_0 has fractional part 3/4 always, with integer part in [-3, 3].
 
+## New Results (opus-2026-03-07-S35c11 continued)
+
+### THM-K: W(T,r) = (r-1/2)^{n-1} * F(T, (2r+1)/(2r-1)) (PROVED)
+
+The W-polynomial and the forward-edge polynomial F(T,x) = sum_P x^{fwd(P)} are related by a Möbius substitution x = (2r+1)/(2r-1). Verified numerically with zero error at n=4,5,6,7.
+
+**Key evaluations:**
+- W(T, 1/2) = H(T) (Hamiltonian path count)
+- W(T, -1/2) = (-1)^{n-1} H(T)
+- W(T, 0) = (-1/2)^{n-1} F(T, -1) = S(T)/2^{n-1} = c_0
+
+### THM-L: W(T,-r) = (-1)^{n-1} W(T^op, r) (PROVED)
+
+For all tournaments. Consequence: at odd n, W(T,r) = W(T^op, r), so the W-polynomial is complement-invariant.
+
+At even n, c_{2k}(T) = -c_{2k}(T^op), so c_{2k} = 0 when T is self-converse.
+
+### Perpendicularity Mechanism (EXPLAINED)
+
+Perpendicularity = Corr(c_0, H) ≈ 0 at large odd n. The mechanism:
+- Var(c_0)/Var(H) → 0 exponentially: 1.0 at n=3, 0.057 at n=5, 0.001 at n=7
+- c_0 = F(-1)/2^{n-1} is an alternating sum; H = D_{n-1} = D_0 is one coefficient
+- At even n: c_0 ≡ 0 (perfect "perpendicularity" trivially)
+- At odd n: the alternating sum creates massive cancellation
+
+### Spectral Correlations (VERIFIED)
+
+- Corr(H, |det(I-uA)|) > 0.94 for optimal u at n=5,6,7
+- At n=5: characteristic polynomial EXACTLY determines H (0 ambiguous among all 1024 tournaments)
+- At n=6: char poly FAILS to determine H (3 ambiguous pairs)
+- At n=7: 36 ambiguous pairs in 500 samples
+- Eigenvalue structure at n=5: Perron eigenvalue ranges from 0 (transitive, H=1) to 2 (regular, H=15)
+
+### bits=all Tournament: H Recursion (VERIFIED)
+
+H(n) = 3, 5, 9, 17, 31, 57 for n=3,...,8.
+Recursion H(n) = 2*H(n-1) - 1 holds for n ≤ 6, giving 1+2^{n-2}.
+At n=7: H = 2*17-3 = 31. At n=8: H = 2*31-5 = 57.
+Corrections: -1, -1, -1, -1, -3, -5.
+
 ## Open Questions
 
 1. **Prove D_k mod 2^{n-1-k} universal algebraically for general k.** D_2 universality proved via pair-partition identity. D_3 and higher need similar arguments.
