@@ -55,6 +55,13 @@ For n even: F(T,x) mod 3 = c_{n-2}(T)*(x-1)^{n-2} + c_{n-1}(T)*(x-1)^{n-1} mod 3
 Palindrome forces c_{n-1} = f(c_{n-2}) mod 3, leaving one free parameter.
 The resulting zero pattern in F_k mod 3 again matches the Eulerian zeros.
 
+**Why p=3 is special (S38 discovery):** The Eulerian conjecture holds for p=3 because
+val_3(n) = n-1 at odd n (single free parameter) and palindrome forces one parameter at
+even n. For p >= 5, val_p(n) < n-1, giving MULTIPLE free parameters in F(T,x) mod p.
+Different tournaments can have different alpha, beta, gamma, producing F_k != 0 mod p
+even where A(n,k) = 0 mod p. VERIFIED: the Eulerian conjecture FAILS for p=5 at n=7
+(F_1 and F_5 are NOT always 0 mod 5 despite A(7,1) = A(7,5) = 0 mod 5).
+
 ---
 
 ## Proof of Theorem A (partial)

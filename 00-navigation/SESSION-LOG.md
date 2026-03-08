@@ -44,6 +44,35 @@ Entry format:
   - Integrate web research (arXiv:2403.00966, arXiv:2309.07240)
   - Connection to Ihara zeta function
 
+## kind-pasteur-2026-03-07-S38 — 2026-03-07 (THM-094: F_k mod 2, mod-p generalization)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S37 (THM-086 universal Taylor zeros mod 3)
+**Summary of work:**
+  Discovered THM-094: F_k(T) = A(n,k) = C(n-1,k) mod 2 for ALL tournaments T.
+  Investigated mod-p generalization of THM-086 for all primes.
+
+  **Major results:**
+  1. THM-094 (PROOF SKETCH): F(T,x) mod 2 is completely tournament-independent!
+     Only 1 pattern per n. F(T,x) = (1+x)^{n-1} mod 2.
+     Proof: universal Taylor zeros (c_j=0 for j<n-1) + Rédei's theorem (F_{n-1} odd).
+  2. Mod-p generalization: For p>=5, universal Taylor zeros match Eulerian valuation
+     only for n >= p+2. Verified p=5 at n=7,8 (MATCH), fails at n=5,6.
+  3. Eulerian conjecture FAILS for p=5: at n=7, A(7,1)=A(7,5)=0 mod 5 but F_1, F_5
+     are NOT always 0 mod 5 (2518/3000 failures). Explained by multiple free parameters.
+  4. Almost-tournament formula: c_j(T\e) = c_j(T) - sum C(k-1,j-1)*N_uv[k],
+     reducing the almost-tournament claim to Taylor zeros of the adjacent-pair polynomial.
+  5. Processed inbox paper (Tang-Yau, path homology of circulant digraphs): LOW relevance.
+
+  **New files:**
+  - `01-canon/theorems/THM-094-fk-mod2-tournament-independent.md`
+  - `04-computation/fk_mod2_proof.py`
+  - `04-computation/taylor_zeros_mod_p.py`
+  - `04-computation/mod_p_general_conjecture.py`
+  - `04-computation/almost_tournament_structure.py`
+
+**New contributions:** THM-094, INV-124, mod-p generalization analysis, Eulerian conjecture failure for p>=5
+**Unresolved threads:** Algebraic proof of universal Taylor zeros mod 2; almost-tournament claim via N_uv
+
 ## opus-2026-03-07-S46c — 2026-03-07 (Moment-Cycle Hierarchy)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S46b

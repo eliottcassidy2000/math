@@ -37,7 +37,16 @@
 **Key corollary:** Eulerian conjecture: 3|A(n,k) => 3|F_k(T) for all T. Follows from (x-1)-adic valuation of A_n(x) mod 3 being exactly val(n).
 **What remains:** The "almost-tournament claim" — c_j(T\e) = 0 mod 3 for j < val(n)-1 — needs formal proof, likely via nested DC induction. Verified exhaustively at n=5, sampled at n=6-8.
 **Scripts:** `04-computation/thm086_verify.py`, `dc_induction_proof.py`, `c4_induction_test.py`, `taylor_cj_mod3_analysis.py`, `eulerian_zeros_from_palindrome.py`
-**Next step:** (1) Prove almost-tournament claim algebraically. (2) Extend to mod 9 — does a similar universal zero pattern hold? (3) Investigate mod p for p=5,7.
+**Next step:** (1) Prove almost-tournament claim algebraically (N_uv formula reduces it to Taylor zeros of the "adjacent pair" polynomial). (2) Extend to mod 9. (3) Mod p for p>=5 INVESTIGATED (S38): universal zeros match Eulerian val for n >= p+2 but Eulerian conjecture FAILS for p>=5 (multiple free parameters).
+
+### INV-124: THM-094 F_k mod 2 Tournament-Independent — PROOF SKETCH COMPLETE
+**Source:** kind-pasteur-2026-03-07-S38
+**Status:** PROOF SKETCH COMPLETE. Verified exhaustively n<=6, sampled n=7,8.
+**What:** F_k(T) = A(n,k) = C(n-1, k) mod 2 for ALL tournaments T. F(T,x) = (1+x)^{n-1} mod 2 is COMPLETELY tournament-independent. Proof via universal Taylor zeros mod 2 (c_j = 0 for j < n-1) + Redei's theorem (F_{n-1} = Hamiltonian path count is always odd). The mod-2 result is the strongest possible: individual F_k are determined, not just linear combinations.
+**Key insight:** p=2 is special because (1) val_2(A_n(x)) = n-1 (maximal), giving a single free parameter, and (2) Redei pins that parameter to 1.
+**Mod-p generalization (S38):** For p >= 5, universal Taylor zeros match Eulerian valuation only for n >= p+2. The Eulerian conjecture (p|A(n,k) => p|F_k(T)) FAILS for p=5 at n=7 because multiple free parameters in F(T,x) mod 5 allow different zero patterns.
+**Scripts:** `04-computation/fk_mod2_proof.py`, `taylor_zeros_mod_p.py`, `mod_p_general_conjecture.py`
+**Next step:** (1) Prove universal Taylor zeros mod 2 algebraically (c_j = 0 for j < n-1). (2) Is there an elementary proof not using THM-086 machinery?
 
 ### INV-032: Omega(T) structural properties — PARTIALLY DISPROVED
 **Source:** Web research opus-S5, opus-S7 (disproof), opus-S9 (line graph disproof), opus-S10 (structure analysis)
