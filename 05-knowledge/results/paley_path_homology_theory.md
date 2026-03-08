@@ -157,6 +157,40 @@ For any tournament T, H_2^{path}(T) = 0.
 - At p=7: only Paley (and complement) had χ=p among circulants
 - Paley's sphere topology is unique among circulants
 
+### β_2 = 0 for Oriented Graphs (S41 continued)
+
+11. **β_2 > 0 IS possible for oriented graphs (not tournaments)**:
+    - n=4: 0/729 oriented graphs have β_2 > 0
+    - n=5: 70/59049 oriented graphs have β_2 > 0
+    - ALL 70 have NO mutual edges (so tournament-like but incomplete)
+
+12. **Twin vertex mechanism**: All 40 examples with 1 missing pair share:
+    - Two "twin" vertices with IDENTICAL neighborhoods (same in/out-neighbors)
+    - Out-deg pattern: either both 3 (shared_out=3) or both 0 (shared_in=3)
+    - The 2-cycle is the DIFFERENCE of parallel paths: z = Σ(v_i,x,a) - (v_i,x,b)
+    - Ω_3 = 0 for the oriented graph (no 3-paths connecting the twins)
+    - Adding ANY edge between twins (completing to tournament) creates 3 DT paths → fills the hole
+
+13. **Tournament completeness is essential**: Adding any edge between twins kills β_2.
+    In tournaments, twins are impossible (one beats the other), so the "parallel path"
+    2-cycles cannot form. This is the KEY structural reason for β_2 = 0.
+
+14. **Subtournament DT decomposition**:
+    - n=5: ALL 3600 2-cycles filled by DT boundaries from 4-vertex subtournaments (0 failures)
+    - n=6: 314320/324160 filled by DT, 9840 failures (3%)
+    - Full Ω_3: 0 failures at n=6 (β_2=0 confirmed)
+
+15. **Chain complex dimension patterns** (n=5):
+    - Transitive tournament: Ω = [5,10,10,5,1] = [C(5,1),...,C(5,5)]
+    - Regular tournament (t3=5): Ω = [5,10,10,10,5] — palindromic!
+    - rank formula: rank(∂_2|Ω_2) = C(n,2) - n + 1 - β_1 always
+    - β_3 = 0 at n=5 for ALL tournaments (chain exact at Ω_2 AND Ω_3)
+
+16. **Cancellation chain mechanism at n=6**:
+    Two non-DT 3-paths sharing the same bad face, differing at one vertex position
+    → their difference is in Ω_3 because the bad face cancels.
+    Example: (0,1,4,3) - (0,5,4,3) ∈ Ω_3, both have bad face (0,4,3).
+
 ### Open Questions
 1. What are the full Ω dims for P_11? (Ω_7=690 known; Ω_8 computing)
 2. At which dimension d does β_d = p-1 for P_11?
@@ -167,5 +201,8 @@ For any tournament T, H_2^{path}(T) = 0.
    - NOT simplicial acyclicity (simplicial H_2 can be nonzero)
    - NOT DT sufficiency alone (fails at n=6)
    - Must use FULL Ω_3 including cancellation 3-chains
-   - Need homological argument working with chain complex directly
-   - Possible: spectral sequence, Mayer-Vietoris, or filtration argument
+   - Twin vertex mechanism: β_2>0 requires parallel paths through "twins"
+   - Tournament completeness prevents twins → prevents the problematic 2-cycles
+   - Possible proof: show that for ANY z ∈ ker(∂_2)∩Ω_2, the cancellation mechanism
+     (bad face sharing between non-DT paths) always provides enough Ω_3 elements
+   - Alternative: Mayer-Vietoris, spectral sequence, or vertex deletion induction

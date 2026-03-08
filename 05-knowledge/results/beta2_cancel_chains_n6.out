@@ -1,0 +1,367 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+CANCELLATION 3-CHAINS AT n=6
+======================================================================
+
+--- Tournament (DT gap = 1) ---
+  0 → [2, 4, 5]
+  1 → [0, 4]
+  2 → [1]
+  3 → [0, 1, 2]
+  4 → [2, 3]
+  5 → [1, 2, 3, 4]
+  out_deg=[3, 2, 1, 3, 2, 4], t3=6
+  dim(Ω_2)=20, ker(∂_2|Ω_2)=10, rank(∂_3|DT)=9
+  dim(Ω_3)=15, |DT|=9
+
+  Ω_3 basis: 6 DT elements, 9 cancellation elements
+
+  Cancellation element #1 (6 terms):
+    +0.3724 * (0, 4, 2, 1) [non-DT] [bad: [(0, 4, 1)]]
+    -0.3724 * (0, 4, 3, 1) [non-DT] [bad: [(0, 3, 1), (0, 4, 1)]]
+    +0.2050 * (0, 4, 3, 2) [non-DT] [bad: [(0, 3, 2)]]
+    -0.7071 * (0, 5, 2, 1) [DT]
+    +0.3724 * (0, 5, 3, 1) [non-DT] [bad: [(0, 3, 1)]]
+    -0.2050 * (0, 5, 3, 2) [non-DT] [bad: [(0, 3, 2)]]
+
+  Cancellation element #2 (9 terms):
+    -0.0783 * (0, 4, 2, 1) [non-DT] [bad: [(0, 4, 1)]]
+    +0.0783 * (0, 4, 3, 1) [non-DT] [bad: [(0, 3, 1), (0, 4, 1)]]
+    -0.4907 * (0, 4, 3, 2) [non-DT] [bad: [(0, 3, 2)]]
+    -0.4082 * (0, 5, 2, 1) [DT]
+    -0.0783 * (0, 5, 3, 1) [non-DT] [bad: [(0, 3, 1)]]
+    +0.4907 * (0, 5, 3, 2) [non-DT] [bad: [(0, 3, 2)]]
+    -0.3333 * (3, 0, 4, 2) [non-DT] [bad: [(3, 4, 2)]]
+    -0.3333 * (3, 1, 0, 2) [non-DT] [bad: [(3, 1, 2)]]
+    +0.3333 * (3, 1, 4, 2) [non-DT] [bad: [(3, 4, 2), (3, 1, 2)]]
+
+  Cancellation element #3 (14 terms):
+    -0.1993 * (0, 4, 2, 1) [non-DT] [bad: [(0, 4, 1)]]
+    +0.1993 * (0, 4, 3, 1) [non-DT] [bad: [(0, 3, 1), (0, 4, 1)]]
+    +0.2557 * (0, 4, 3, 2) [non-DT] [bad: [(0, 3, 2)]]
+    -0.1667 * (0, 5, 2, 1) [DT]
+    -0.1993 * (0, 5, 3, 1) [non-DT] [bad: [(0, 3, 1)]]
+    -0.2557 * (0, 5, 3, 2) [non-DT] [bad: [(0, 3, 2)]]
+    -0.2887 * (0, 5, 4, 3) [DT]
+    -0.1361 * (3, 0, 4, 2) [non-DT] [bad: [(3, 4, 2)]]
+    -0.1361 * (3, 1, 0, 2) [non-DT] [bad: [(3, 1, 2)]]
+    -0.5000 * (3, 1, 0, 4) [DT]
+    +0.1361 * (3, 1, 4, 2) [non-DT] [bad: [(3, 4, 2), (3, 1, 2)]]
+    -0.3333 * (5, 1, 0, 2) [non-DT] [bad: [(5, 0, 2), (5, 1, 2)]]
+    +0.3333 * (5, 1, 4, 2) [non-DT] [bad: [(5, 1, 2)]]
+    +0.3333 * (5, 3, 0, 2) [non-DT] [bad: [(5, 0, 2)]]
+
+  Non-DT path pairs with matching bad faces:
+    Bad face ((0, 4, 1),): 1 paths, coeff sum = 0.3724
+    Bad face ((0, 3, 1), (0, 4, 1)): 1 paths, coeff sum = -0.3724
+    Bad face ((0, 3, 2),): 2 paths, coeff sum = -0.0000
+    Bad face ((0, 3, 1),): 1 paths, coeff sum = 0.3724
+    Bad face ((0, 4, 1),): 1 paths, coeff sum = -0.0783
+    Bad face ((0, 3, 1), (0, 4, 1)): 1 paths, coeff sum = 0.0783
+    Bad face ((0, 3, 2),): 2 paths, coeff sum = 0.0000
+    Bad face ((0, 3, 1),): 1 paths, coeff sum = -0.0783
+    Bad face ((3, 4, 2),): 1 paths, coeff sum = -0.3333
+    Bad face ((3, 1, 2),): 1 paths, coeff sum = -0.3333
+    Bad face ((3, 4, 2), (3, 1, 2)): 1 paths, coeff sum = 0.3333
+    Bad face ((0, 4, 1),): 1 paths, coeff sum = -0.1993
+    Bad face ((0, 3, 1), (0, 4, 1)): 1 paths, coeff sum = 0.1993
+    Bad face ((0, 3, 2),): 2 paths, coeff sum = 0.0000
+    Bad face ((0, 3, 1),): 1 paths, coeff sum = -0.1993
+    Bad face ((3, 4, 2),): 1 paths, coeff sum = -0.1361
+    Bad face ((3, 1, 2),): 1 paths, coeff sum = -0.1361
+    Bad face ((3, 4, 2), (3, 1, 2)): 1 paths, coeff sum = 0.1361
+    Bad face ((5, 0, 2), (5, 1, 2)): 1 paths, coeff sum = -0.3333
+    Bad face ((5, 1, 2),): 1 paths, coeff sum = 0.3333
+    Bad face ((5, 0, 2),): 1 paths, coeff sum = 0.3333
+
+--- Tournament (DT gap = 1) ---
+  0 → [1, 3, 5]
+  1 → [3, 4]
+  2 → [0, 1]
+  3 → [2]
+  4 → [0, 2, 3]
+  5 → [1, 2, 3, 4]
+  out_deg=[3, 2, 2, 1, 3, 4], t3=6
+  dim(Ω_2)=20, ker(∂_2|Ω_2)=10, rank(∂_3|DT)=9
+  dim(Ω_3)=15, |DT|=9
+
+  Ω_3 basis: 6 DT elements, 9 cancellation elements
+
+  Cancellation element #1 (2 terms):
+    -0.7071 * (0, 1, 4, 3) [non-DT] [bad: [(0, 4, 3)]]
+    +0.7071 * (0, 5, 4, 3) [non-DT] [bad: [(0, 4, 3)]]
+
+  Cancellation element #2 (12 terms):
+    +0.1667 * (0, 1, 3, 2) [non-DT] [bad: [(0, 1, 2)]]
+    -0.1667 * (0, 1, 4, 2) [non-DT] [bad: [(0, 4, 2), (0, 1, 2)]]
+    -0.3536 * (0, 5, 1, 3) [DT]
+    -0.3536 * (0, 5, 1, 4) [DT]
+    +0.1667 * (0, 5, 4, 2) [non-DT] [bad: [(0, 4, 2)]]
+    +0.4082 * (1, 4, 3, 2) [DT]
+    -0.2357 * (4, 0, 1, 3) [non-DT] [bad: [(4, 1, 3)]]
+    -0.2357 * (4, 2, 0, 3) [non-DT] [bad: [(4, 2, 3)]]
+    +0.2357 * (4, 2, 1, 3) [non-DT] [bad: [(4, 1, 3), (4, 2, 3)]]
+    +0.3333 * (5, 2, 0, 1) [non-DT] [bad: [(5, 0, 1)]]
+    -0.3333 * (5, 4, 0, 1) [non-DT] [bad: [(5, 0, 1), (5, 4, 1)]]
+    +0.3333 * (5, 4, 2, 1) [non-DT] [bad: [(5, 4, 1)]]
+
+  Cancellation element #3 (12 terms):
+    +0.1361 * (0, 1, 3, 2) [non-DT] [bad: [(0, 1, 2)]]
+    -0.1361 * (0, 1, 4, 2) [non-DT] [bad: [(0, 4, 2), (0, 1, 2)]]
+    +0.1361 * (0, 5, 4, 2) [non-DT] [bad: [(0, 4, 2)]]
+    +0.0962 * (4, 0, 1, 3) [non-DT] [bad: [(4, 1, 3)]]
+    +0.7071 * (4, 2, 0, 1) [DT]
+    +0.0962 * (4, 2, 0, 3) [non-DT] [bad: [(4, 2, 3)]]
+    -0.0962 * (4, 2, 1, 3) [non-DT] [bad: [(4, 1, 3), (4, 2, 3)]]
+    -0.2041 * (5, 1, 3, 2) [non-DT] [bad: [(5, 1, 2)]]
+    +0.2041 * (5, 1, 4, 2) [non-DT] [bad: [(5, 1, 2)]]
+    +0.3333 * (5, 2, 0, 3) [non-DT] [bad: [(5, 0, 3), (5, 2, 3)]]
+    -0.3333 * (5, 2, 1, 3) [non-DT] [bad: [(5, 2, 3)]]
+    -0.3333 * (5, 4, 0, 3) [non-DT] [bad: [(5, 0, 3)]]
+
+  Non-DT path pairs with matching bad faces:
+    Bad face ((0, 4, 3),): 2 paths, coeff sum = 0.0000
+    Bad face ((0, 1, 2),): 1 paths, coeff sum = 0.1667
+    Bad face ((0, 4, 2), (0, 1, 2)): 1 paths, coeff sum = -0.1667
+    Bad face ((0, 4, 2),): 1 paths, coeff sum = 0.1667
+    Bad face ((4, 1, 3),): 1 paths, coeff sum = -0.2357
+    Bad face ((4, 2, 3),): 1 paths, coeff sum = -0.2357
+    Bad face ((4, 1, 3), (4, 2, 3)): 1 paths, coeff sum = 0.2357
+    Bad face ((5, 0, 1),): 1 paths, coeff sum = 0.3333
+    Bad face ((5, 0, 1), (5, 4, 1)): 1 paths, coeff sum = -0.3333
+    Bad face ((5, 4, 1),): 1 paths, coeff sum = 0.3333
+    Bad face ((0, 1, 2),): 1 paths, coeff sum = 0.1361
+    Bad face ((0, 4, 2), (0, 1, 2)): 1 paths, coeff sum = -0.1361
+    Bad face ((0, 4, 2),): 1 paths, coeff sum = 0.1361
+    Bad face ((4, 1, 3),): 1 paths, coeff sum = 0.0962
+    Bad face ((4, 2, 3),): 1 paths, coeff sum = 0.0962
+    Bad face ((4, 1, 3), (4, 2, 3)): 1 paths, coeff sum = -0.0962
+    Bad face ((5, 1, 2),): 2 paths, coeff sum = -0.0000
+    Bad face ((5, 0, 3), (5, 2, 3)): 1 paths, coeff sum = 0.3333
+    Bad face ((5, 2, 3),): 1 paths, coeff sum = -0.3333
+    Bad face ((5, 0, 3),): 1 paths, coeff sum = -0.3333
+
+
+Total DT-failure tournaments found: 960 (in 49s)
+
+
+======================================================================
+CANCELLATION CHAIN MECHANISM
+======================================================================
+For each pair of non-DT 3-paths sharing a bad face,
+check if their difference is in Ω_3.
+
+Non-DT 3-paths grouped by bad face:
+  Bad face ((0, 3, 2),): 2 paths
+    (0, 4, 3, 2)
+    (0, 5, 3, 2)
+  Bad face ((5, 4, 1),): 2 paths
+    (5, 4, 2, 1)
+    (5, 4, 3, 1)
+  Bad face ((0, 1, 4), (0, 2, 4)): 1 paths
+    (0, 2, 1, 4)
+  Bad face ((0, 4, 1),): 1 paths
+    (0, 4, 2, 1)
+  Bad face ((0, 3, 1), (0, 4, 1)): 1 paths
+    (0, 4, 3, 1)
+  Bad face ((0, 1, 4),): 1 paths
+    (0, 5, 1, 4)
+  Bad face ((0, 3, 1),): 1 paths
+    (0, 5, 3, 1)
+  Bad face ((1, 0, 3),): 1 paths
+    (1, 0, 4, 3)
+  Bad face ((1, 5, 2),): 1 paths
+    (1, 0, 5, 2)
+  Bad face ((1, 5, 3), (1, 0, 3)): 1 paths
+    (1, 0, 5, 3)
+  Bad face ((1, 5, 4),): 1 paths
+    (1, 0, 5, 4)
+  Bad face ((1, 3, 0), (1, 4, 0)): 1 paths
+    (1, 4, 3, 0)
+  Bad face ((1, 3, 2),): 1 paths
+    (1, 4, 3, 2)
+  Bad face ((2, 0, 4),): 1 paths
+    (2, 1, 0, 4)
+  Bad face ((2, 0, 5), (2, 1, 5)): 1 paths
+    (2, 1, 0, 5)
+  Bad face ((2, 4, 3), (2, 1, 3)): 1 paths
+    (2, 1, 4, 3)
+  Bad face ((3, 0, 1),): 1 paths
+    (3, 0, 2, 1)
+  Bad face ((3, 4, 2),): 1 paths
+    (3, 0, 4, 2)
+  Bad face ((3, 5, 1), (3, 0, 1)): 1 paths
+    (3, 0, 5, 1)
+  Bad face ((3, 5, 2),): 1 paths
+    (3, 0, 5, 2)
+  Bad face ((3, 5, 4),): 1 paths
+    (3, 0, 5, 4)
+  Bad face ((3, 1, 2),): 1 paths
+    (3, 1, 0, 2)
+  Bad face ((3, 1, 5),): 1 paths
+    (3, 1, 0, 5)
+  Bad face ((3, 4, 2), (3, 1, 2)): 1 paths
+    (3, 1, 4, 2)
+  Bad face ((3, 2, 0),): 1 paths
+    (3, 2, 1, 0)
+  Bad face ((3, 2, 4),): 1 paths
+    (3, 2, 1, 4)
+  Bad face ((4, 1, 0), (4, 2, 0)): 1 paths
+    (4, 2, 1, 0)
+  Bad face ((4, 0, 2),): 1 paths
+    (4, 3, 0, 2)
+  Bad face ((4, 0, 5), (4, 3, 5)): 1 paths
+    (4, 3, 0, 5)
+  Bad face ((4, 1, 0),): 1 paths
+    (4, 3, 1, 0)
+  Bad face ((5, 0, 2), (5, 1, 2)): 1 paths
+    (5, 1, 0, 2)
+  Bad face ((5, 0, 4),): 1 paths
+    (5, 1, 0, 4)
+  Bad face ((5, 1, 2),): 1 paths
+    (5, 1, 4, 2)
+  Bad face ((5, 1, 3),): 1 paths
+    (5, 1, 4, 3)
+  Bad face ((5, 2, 0),): 1 paths
+    (5, 2, 1, 0)
+  Bad face ((5, 2, 4),): 1 paths
+    (5, 2, 1, 4)
+  Bad face ((5, 0, 2),): 1 paths
+    (5, 3, 0, 2)
+  Bad face ((5, 0, 4), (5, 3, 4)): 1 paths
+    (5, 3, 0, 4)
+  Bad face ((5, 3, 4),): 1 paths
+    (5, 3, 1, 4)
+  Bad face ((5, 4, 0),): 1 paths
+    (5, 4, 3, 0)
+
+  Pairwise differences in Ω_3?
+    (0, 4, 3, 2) - (0, 5, 3, 2) ∈ Ω_3 ✓ (bad: ((0, 3, 2),))
+    (5, 4, 2, 1) - (5, 4, 3, 1) ∈ Ω_3 ✓ (bad: ((5, 4, 1),))
+
+Done.
