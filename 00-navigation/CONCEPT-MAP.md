@@ -569,7 +569,69 @@ Define Z_T(x) = Π_{[C] prime cycle} (1 - x^|C|)^{-1} (Ihara-type). For tourname
 
 ---
 
-## XIII. SOFTWARE AND DATA
+## XIII. DELETION-CONTRACTION THEOREM (kind-pasteur-S34 — NEW)
+
+### Theorem: H(T) = H(T\e) + H(T/e)
+For any tournament T and any directed edge e = (u→v):
+- **Deletion** T\e: remove edge e (digraph on same n vertices, one arc missing)
+- **Contraction** T/e: merge u,v into vertex w; w inherits IN-edges from u (tail), OUT-edges from v (head)
+- **H(T) = H(T\e) + H(T/e)** holds universally
+
+**Verified:** 100% at n=4 (384 edge tests) and n=5 (10240 edge tests).
+
+**Proof sketch:** A Hamiltonian path in T either uses edge e or doesn't.
+- Paths NOT using e: exactly the Hamiltonian paths of T\e
+- Paths using e (say ...→u→v→...): contracting e maps these bijectively to Ham paths of T/e
+  - The contraction preserves: in-edges to u become in-edges to w, out-edges from v become out-edges from w
+  - Every Ham path through e becomes a Ham path in the contracted digraph, and vice versa
+
+**Connection to Mitrovic:** This is the commutative specialization of W_X = W_{X\e} - W_{X/e}↑ from arXiv:2504.20968. The sign difference is because W counts SIGNED paths (via noncommuting variables).
+
+**Implications:**
+1. H(T) satisfies deletion-contraction like the chromatic polynomial — it's a "Tutte-type" invariant
+2. Induction on number of edges: every tournament reduces to smaller digraphs
+3. Could yield a new proof of Rédei's theorem (H always odd) by tracking parity through D-C
+4. Could yield a new proof of OCF by tracking independence polynomial through D-C
+
+### p-adic Structure Beyond 2 (Speculative)
+| Prime p | H(T) mod p | Known structure |
+|---------|------------|----------------|
+| 2 | Always odd (Rédei) | OCF: I(Ω,2) ≡ 1 mod 2 |
+| 3 | H mod 3 depends on c₃ | H ≡ 1 + 2c₃ mod 3 at n=5; need investigation |
+| 5 | Unknown | Check if v₅(H-1) has universal bounds |
+
+### Sandpile Group / Chip-Firing (Speculative)
+The sandpile group K(T) of a tournament T is the cokernel of the Laplacian L = D_out - A. |K(T)| = # spanning arborescences (Matrix-Tree theorem). The structure of K(T) as an abelian group could encode more than just its order. Connection: chip-firing dynamics on tournaments relate to Hamiltonian path enumeration through the recurrent configurations.
+
+### Ihara Zeta Function of Tournaments (Novel Connection)
+Define ζ_T(u) = Π_{[C] prime directed cycle} (1 - u^{|C|})^{-1}. By the Ihara-Bass formula:
+ζ_T(u)^{-1} = (1 - u²)^{r-1} det(I - Au + (D-I)u²)
+where A = adjacency matrix, D = degree matrix, r = |E| - |V| + 1.
+
+For tournaments: |E| = n(n-1)/2, D = diag(out-degrees), A = tournament adjacency.
+The Ihara zeta function DIRECTLY encodes the cycle counts c_k that feed into OCF via Ω(T).
+
+**Key question:** Does ζ_T(u) evaluated at specific u relate to I(Ω,x)? Since I(Ω,x) encodes independence structure (not just counts), the answer is likely "not directly" — but the log-derivative of ζ_T gives cycle counts, and these constrain H(T).
+
+### Stanley-Stembridge Resolution (2024) — Implications
+Hikita proved the Stanley-Stembridge conjecture (2024): chromatic symmetric functions of (3+1)-free posets are e-positive. Via Mitrovic-Stojadinovic, the Rédei-Berge function U_T connects to chromatic symmetric functions. **If** the poset structure of tournament arc orderings is (3+1)-free, then U_T would inherit e-positivity, constraining the symmetric function decomposition and potentially the H(T) distribution.
+
+**Status:** Connection needs investigation. Tournament posets are NOT necessarily (3+1)-free, so this may not directly apply. But the machinery (Hessenberg varieties, LLT polynomials) from Hikita's proof might still inform tournament theory.
+
+### Categorification of OCF (Speculative — Novel Model)
+**Idea:** Construct a bigraded vector space V_{i,j}(T) such that:
+- dim(V_{*,0}) = 1 (empty independent set)
+- dim(V_{*,k}) = α_k (independent sets of size k)
+- The "Euler characteristic" Σ_k 2^k α_k = H(T)
+- The differential d: V_{i,k} → V_{i+1,k-1} has homology encoding more refined invariants
+
+This would be a categorification of the identity H = Σ 2^k α_k, lifting the numerical equality to a chain complex. The homology groups would be new tournament invariants.
+
+**Connection to Khovanov:** Khovanov homology categorifies the Jones polynomial. OCF gives H(T) as a "Jones-like" evaluation of I(Ω,x) at x=2. A Khovanov-type construction for I(Ω,x) would categorify H(T).
+
+---
+
+## XIV. SOFTWARE AND DATA
 
 ### Key Scripts
 | Script | Purpose | Status |
@@ -581,6 +643,9 @@ Define Z_T(x) = Π_{[C] prime cycle} (1 - x^|C|)^{-1} (Ihara-type). For tourname
 | `h21_poisoning_graph.py` | Poisoning graph structure analysis | 51,280 mm=2 cases |
 | `interlacing_verify.py` | Clique-deletion interlacing | 0 failures n=5,...,8 |
 | `paley_deletion_test.py` | Paley hereditary maximizer | Verified p=3,7,11 |
+| `deletion_contraction_test.py` | H(T)=H(T\e)+H(T/e) | 100% at n=4,5 |
+| `f_poly_zeros_leeyang.py` | F(T,x) zeros in complex plane | Lee-Yang behavior |
+| `f_poly_roots_of_unity.py` | F(T,ω), F(T,i) evaluations | Universal divisibility |
 
 ### External Databases
 | Database | What | Used For |
