@@ -36,22 +36,27 @@ Verified by two independent methods:
 2. C batch CRT (a000568_c_batch.c) — ~500s
 
 Performance comparison (Apple Silicon M1, 8 cores):
-  Method              | n=50  | n=60  | n=76  | n=80   | n=90   | n=100  | n=120
-  --------------------|-------|-------|-------|--------|--------|--------|-------
-  Py enum + LCD ★     | 0.02s | 0.05s | 0.9s  | 1.3s   | 3.5s   | 9.1s   | 50s
-  C enum + CRT (8c)   | 0.3s  | 0.4s  | 1.1s  | 1.6s   | 5.2s   | 17.9s  | 150s
-  Int DP + GCD        |  4.5s |  19s  | 160s  | 276s   | 924s   | ~7200s | N/A
-  gmpy2 DP            |  7.9s |  35s  | 229s  | 537s   | 1757s  | 14391s | N/A
-  Fraction DP         | 11.5s |  ~85s | 259s  | 672s   | N/A    | N/A    | N/A
+  Method                 | n=76  | n=100  | n=150   | n=200    | n=250
+  -----------------------|-------|--------|---------|----------|--------
+  C+GMP v4 8T ★★        | 0.0s  | 0.2s   | 5.0s    | 200s     | (running)
+  C+GMP v3 8T           | 0.0s  | 0.2s   | 5.2s    | 200s     | —
+  C+GMP v1 1T           | 0.0s  | 0.4s   | 54.4s   | >30min   | —
+  Py enum + LCD ★       | 0.9s  | 9.1s   | 545s    | N/A      | N/A
+  C enum + CRT (8c)     | 1.1s  | 17.9s  | 2244s   | N/A      | N/A
+  Int DP + GCD          | 160s  | ~7200s | N/A     | N/A      | N/A
+  gmpy2 DP              | 229s  | 14391s | N/A     | N/A      | N/A
 
-  ★ = current fastest. Python direct enumeration of odd partitions with
-      LCD-scaled integer accumulation beats all other approaches by 100-1000x.
-      Bottleneck: number of odd partitions grows exponentially (~exp(π√(2n/3))).
+  ★★ = current fastest. C+GMP multi-threaded partition enumeration with:
+       - Precomputed k^m*m! factor table (avoids mpz_ui_pow_ui per leaf)
+       - Atomic work-queue for load-balanced thread distribution
+       - Bucket accumulation by t-value (avoids shifted additions)
+       Total speedup chain: gmpy2 DP → Py enum (250-1600x) → C+GMP 8T (10-100x more)
 
-Best practical approach: Integer DP with periodic GCD reduction (a000568_int_v2.py).
-~2x faster than gmpy2 DP for n≥80 by avoiding per-operation GCD overhead.
-C batch CRT wins for n≤60 but runs out of memory for n≥90.
-Parallel C per-prime CRT is slower than gmpy2 for n≥60 (too many primes needed).
+  Partition counts: n=100: 444K, n=150: 19.4M, n=200: 487M, n=250: ~5B (est)
+
+  CRT per-prime timings (single-threaded): n=100: 0.25s, n=150: 13.3s, n=200: 362s
+  CRT is only competitive when result has few digits (small n).
+  At large n, GMP enum wins because partition enumeration dominates, not bignum ops.
 
 a(81) = 374949872210439568499334760603558149483571663905786311382785925589295831968580495977162033060295945913501009447208231605253345625028565417084054908192318339536415487616921337193175872239451311319416378535149338067270503073320786392466570042412756101248708890253610622974752605499229711577153189211113316498592848238670629287421787570034691181095553274331745578111144146428349179470617552799135584412607640098260511369805713125185755876060058687475431688507751203806770690936646575322693334859226656103342094958022454996262451807828302606243449697370908186565541825363671448957015407394687382607799813553206310149811683184889914604692210049896986947812888913094865635397810915245974862314447337497473426805810666636441255185896012112399703877254843098557036259562348920108293094471797154396223179816922264395243097217172963420023499010720124389012524761088
 (855 digits, 557s gmpy2)
