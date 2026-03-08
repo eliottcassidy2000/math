@@ -1,0 +1,113 @@
+======================================================================
+EXTRA Ω₃ ELEMENTS BEYOND DT+CANCEL
+======================================================================
+
+Tournaments with extra Ω₃ elements: 144
+  Extra elements in Z₃ (kernel of ∂₃): 0
+  Extra elements NOT in Z₃: 144
+
+  DT+cancel fills Z₂: 144/144
+  DT+cancel FAILS to fill Z₂: 0/144
+
+Detailed examples:
+
+  T#41 scores=(1, 2, 2, 2, 3), c₃=4
+    Ω₃=4, DT=3, cancel=8
+    Z₂=3, rk_DT=3, rk_DT+cancel=9, rk(∂₃)=3
+    Extra in Z₃? False
+    Extra element paths:
+      +1.0000 * (4, 3, 2, 1) BAD13
+      +1.0000 * (4, 3, 0, 1) BAD02 BAD13
+      +1.0000 * (4, 2, 0, 1) BAD02
+
+  T#42 scores=(1, 2, 2, 2, 3), c₃=4
+    Ω₃=4, DT=3, cancel=8
+    Z₂=3, rk_DT=3, rk_DT+cancel=9, rk(∂₃)=3
+    Extra in Z₃? False
+    Extra element paths:
+      +1.0000 * (4, 3, 0, 2) BAD02
+      +1.0000 * (4, 1, 3, 2) BAD13
+      +1.0000 * (4, 1, 0, 2) BAD02 BAD13
+
+  T#44 scores=(1, 2, 2, 2, 3), c₃=4
+    Ω₃=4, DT=3, cancel=8
+    Z₂=3, rk_DT=3, rk_DT+cancel=9, rk(∂₃)=3
+    Extra in Z₃? False
+    Extra element paths:
+      +1.0000 * (4, 2, 1, 3) BAD13
+      +1.0000 * (4, 2, 0, 3) BAD02 BAD13
+      +1.0000 * (4, 1, 0, 3) BAD02
+
+  T#68 scores=(1, 2, 2, 2, 3), c₃=4
+    Ω₃=4, DT=3, cancel=8
+    Z₂=3, rk_DT=3, rk_DT+cancel=9, rk(∂₃)=3
+    Extra in Z₃? False
+    Extra element paths:
+      -1.0000 * (4, 3, 2, 0) BAD13
+      -1.0000 * (4, 3, 1, 0) BAD02 BAD13
+      -1.0000 * (4, 2, 1, 0) BAD02
+
+  T#74 scores=(1, 2, 2, 2, 3), c₃=4
+    Ω₃=4, DT=3, cancel=8
+    Z₂=3, rk_DT=3, rk_DT+cancel=9, rk(∂₃)=3
+    Extra in Z₃? False
+    Extra element paths:
+      +1.0000 * (3, 1, 4, 2) BAD02 BAD13
+      +1.0000 * (3, 1, 0, 2) BAD13
+      +1.0000 * (3, 0, 4, 2) BAD02
+
+Score distribution of extra cases:
+  (1, 2, 2, 2, 3): 120
+  (2, 2, 2, 2, 2): 24
+
+======================================================================
+KEY FINDING: DO EXTRAS MATTER FOR FILLING?
+======================================================================
+
+======================================================================
+PART 2: DT-FILLING DEFICIT STRUCTURE
+======================================================================
+
+At n=5: checking DT filling...
+  DT alone fills Z₂: 1024/1024
+  DT alone fails: 0/1024
+
+======================================================================
+PART 3: BOUNDARY IMAGE OF DT PATHS
+======================================================================
+
+Boundary of DT paths in Ω₂ coordinates:
+(Expressing ∂₃ of each DT path as a sum of Ω₂ basis elements)
+
+  T#0 scores=(0, 1, 2, 3, 4): dim(Ω₂)=10, dim(Z₂)=4, |DT|=5
+    DT(3,2,1,0) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,3,2,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,3,2,0) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,3,1,0) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,2,1,0) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+
+  T#1 scores=(0, 1, 2, 3, 4): dim(Ω₂)=10, dim(Z₂)=4, |DT|=5
+    DT(3,2,0,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, 1.0, -1.0, -1.0]
+    DT(4,3,2,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,3,2,0) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,3,0,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, 1.0, -1.0, -1.0]
+    DT(4,2,0,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, 1.0, -1.0, -1.0]
+
+  T#5 scores=(0, 2, 2, 2, 4): dim(Ω₂)=9, dim(Z₂)=3, |DT|=3
+    DT(4,3,2,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, 1.0, -1.0]
+    DT(4,2,0,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, 1.0, -1.0, -1.0]
+    DT(4,0,3,1) [a→d]: 4 Ω₂ components, coeffs = [1.0, -1.0, -1.0, 1.0]
+
+  T#100 scores=(1, 1, 2, 3, 3): dim(Ω₂)=9, dim(Z₂)=3, |DT|=3
+    DT(1,4,3,2) [d→a]: 3 Ω₂ components, coeffs = [-1.7071, 1.0, 0.2929]
+    DT(1,4,0,3) [a→d]: 6 Ω₂ components, coeffs = [-0.7071, -0.7071, 0.7071, -1.0, 0.7071, 1.0]
+    DT(2,1,0,3) [d→a]: 4 Ω₂ components, coeffs = [1.0, -1.0, -1.0, 1.0]
+
+======================================================================
+PART 4: BIPARTITE MATCHING PERSPECTIVE
+======================================================================
+
+For each n=5 tournament: column rank analysis of ∂₃|_DT → Z₂
+  ✓ At n=5, DT always fills Z₂ (confirmed for first 1024 tournaments)
+
+Done.

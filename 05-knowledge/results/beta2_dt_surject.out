@@ -1,0 +1,88 @@
+======================================================================
+DT SURJECTIVITY AND Ω₃ DECOMPOSITION
+======================================================================
+
+PART 1: Ω₃ decomposition check
+
+  n=4: 48 tournaments with Ω₃>0
+    Ω₃ = DT: 48
+    Ω₃ = DT+cancel: 0
+    Ω₃ ⊋ DT+cancel: 0
+
+  n=5: 1024 tournaments with Ω₃>0
+    Ω₃ = DT: 160
+    Ω₃ = DT+cancel: 720
+    Ω₃ ⊋ DT+cancel: 144
+
+======================================================================
+PART 2: dim(Ω₃) formula
+======================================================================
+
+  J₃ = n_non_dt - n_cancel: 160/1024
+  J₃ = n_bad_faces: 320/1024
+
+  J₃ distribution:
+    {0: 120, 6: 120, 9: 240, 12: 120, 14: 240, 15: 24, 17: 120, 18: 40}
+
+  J₃ by c₃:
+    c₃=0: J₃ ∈ [0] DET
+    c₃=1: J₃ ∈ [6] DET
+    c₃=2: J₃ ∈ [9] DET
+    c₃=3: J₃ ∈ [12, 14] 
+    c₃=4: J₃ ∈ [14, 17, 18] 
+    c₃=5: J₃ ∈ [15] DET
+
+  dim(Ω₃) = |DT| + n_cancel: 160/1024
+  dim(Ω₃) - |DT| distribution: {0: 520, 1: 360, 2: 120, 5: 24}
+
+  Computing rank of cancel subspace...
+    bits=4: Ω₃=4, DT=3, cancel_pairs=4, rk_cancel=4, excess=1
+    bits=6: Ω₃=4, DT=3, cancel_pairs=4, rk_cancel=4, excess=1
+    bits=9: Ω₃=4, DT=3, cancel_pairs=4, rk_cancel=4, excess=1
+    bits=12: Ω₃=7, DT=5, cancel_pairs=10, rk_cancel=10, excess=2
+    bits=13: Ω₃=4, DT=3, cancel_pairs=4, rk_cancel=4, excess=1
+
+======================================================================
+PART 3: WHY rk(∂₃) = dim(Z₂)
+======================================================================
+
+Verifying J₃ formula for n=5:
+  Errors in J₃ = C(n,4)+2(n-3)c₃-|A₂|+J₂+C(n-1,2)-β₁-dim(Z₃): 0/1024
+  ✓ Identity holds! (But it's circular — assumes β₂=0)
+
+  J₃ by (scores, c₃, β₁):
+    Determined by (scores, c₃, β₁): 10/11
+
+  J₃ by (c₃, β₁):
+    (c₃=0, β₁=0): J₃ ∈ [0] DET
+    (c₃=1, β₁=0): J₃ ∈ [6] DET
+    (c₃=2, β₁=0): J₃ ∈ [9] DET
+    (c₃=3, β₁=0): J₃ ∈ [14] DET
+    (c₃=3, β₁=1): J₃ ∈ [12] DET
+    (c₃=4, β₁=0): J₃ ∈ [17] DET
+    (c₃=4, β₁=1): J₃ ∈ [14, 18] 
+    (c₃=5, β₁=1): J₃ ∈ [15] DET
+
+======================================================================
+PART 4: Direct combinatorial formula for J₃
+======================================================================
+
+Counting non-A₂ faces of A₃ paths for n=5:
+  bits=4: J₃=9, #bad02=3, #bad13=8, total=11, diff=-2
+  bits=6: J₃=9, #bad02=3, #bad13=8, total=11, diff=-2
+  bits=8: J₃=12, #bad02=9, #bad13=9, total=18, diff=-6
+  bits=9: J₃=9, #bad02=8, #bad13=3, total=11, diff=-2
+  bits=10: J₃=14, #bad02=8, #bad13=8, total=16, diff=-2
+  bits=12: J₃=14, #bad02=9, #bad13=9, total=18, diff=-4
+  bits=13: J₃=9, #bad02=8, #bad13=3, total=11, diff=-2
+  bits=14: J₃=12, #bad02=9, #bad13=9, total=18, diff=-6
+
+J₃ = #distinct_bad02 + #distinct_bad13?
+  MISMATCH: bits=4, J₃=9, #bad02+#bad13=11
+  MISMATCH: bits=6, J₃=9, #bad02+#bad13=11
+  MISMATCH: bits=8, J₃=12, #bad02+#bad13=18
+  MISMATCH: bits=9, J₃=9, #bad02+#bad13=11
+  MISMATCH: bits=10, J₃=14, #bad02+#bad13=16
+  Match: 240, Mismatch: 784
+
+Done.
