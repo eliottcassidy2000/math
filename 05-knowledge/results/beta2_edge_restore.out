@@ -1,0 +1,182 @@
+======================================================================
+EDGE REMOVAL -> RESTORATION ANALYSIS
+======================================================================
+Total removals creating beta2>0: 80
+
+======================================================================
+OBSTRUCTION ANALYSIS
+======================================================================
+
+bits=2, remove 4->3 (d_u=4, d_v=3)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(4, 3, 0), (4, 3, 1), (4, 3, 2)]
+  Lost 2-paths: []
+  New 3-paths (3): [(4, 3, 0, 2), (4, 3, 1, 0), (4, 3, 2, 1)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(4, 3, 0), (4, 3, 1), (4, 3, 2)]
+  New 3-paths using u->v (3): [(4, 3, 0, 2), (4, 3, 1, 0), (4, 3, 2, 1)]
+
+bits=11, remove 2->1 (d_u=1, d_v=0)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(0, 2, 1), (3, 2, 1), (4, 2, 1)]
+  Lost 2-paths: []
+  New 3-paths (3): [(0, 4, 2, 1), (3, 0, 2, 1), (4, 3, 2, 1)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(0, 2, 1), (3, 2, 1), (4, 2, 1)]
+  New 3-paths using u->v (3): [(0, 4, 2, 1), (3, 0, 2, 1), (4, 3, 2, 1)]
+
+bits=17, remove 4->3 (d_u=4, d_v=3)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(4, 3, 0), (4, 3, 1), (4, 3, 2)]
+  Lost 2-paths: []
+  New 3-paths (3): [(4, 3, 0, 1), (4, 3, 1, 2), (4, 3, 2, 0)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(4, 3, 0), (4, 3, 1), (4, 3, 2)]
+  New 3-paths using u->v (3): [(4, 3, 0, 1), (4, 3, 1, 2), (4, 3, 2, 0)]
+
+bits=27, remove 1->2 (d_u=1, d_v=0)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(0, 1, 2), (3, 1, 2), (4, 1, 2)]
+  Lost 2-paths: []
+  New 3-paths (3): [(0, 4, 1, 2), (3, 0, 1, 2), (4, 3, 1, 2)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(0, 1, 2), (3, 1, 2), (4, 1, 2)]
+  New 3-paths using u->v (3): [(0, 4, 1, 2), (3, 0, 1, 2), (4, 3, 1, 2)]
+
+bits=39, remove 4->0 (d_u=4, d_v=3)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(4, 0, 1), (4, 0, 2), (4, 0, 3)]
+  Lost 2-paths: []
+  New 3-paths (3): [(4, 0, 1, 3), (4, 0, 2, 1), (4, 0, 3, 2)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(4, 0, 1), (4, 0, 2), (4, 0, 3)]
+  New 3-paths using u->v (3): [(4, 0, 1, 3), (4, 0, 2, 1), (4, 0, 3, 2)]
+
+bits=47, remove 0->4 (d_u=4, d_v=3)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(0, 4, 1), (0, 4, 2), (0, 4, 3)]
+  Lost 2-paths: []
+  New 3-paths (3): [(0, 4, 1, 3), (0, 4, 2, 1), (0, 4, 3, 2)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(0, 4, 1), (0, 4, 2), (0, 4, 3)]
+  New 3-paths using u->v (3): [(0, 4, 1, 3), (0, 4, 2, 1), (0, 4, 3, 2)]
+
+bits=52, remove 4->1 (d_u=4, d_v=3)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(4, 1, 0), (4, 1, 2), (4, 1, 3)]
+  Lost 2-paths: []
+  New 3-paths (3): [(4, 1, 0, 3), (4, 1, 2, 0), (4, 1, 3, 2)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(4, 1, 0), (4, 1, 2), (4, 1, 3)]
+  New 3-paths using u->v (3): [(4, 1, 0, 3), (4, 1, 2, 0), (4, 1, 3, 2)]
+
+bits=62, remove 3->2 (d_u=1, d_v=0)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(0, 3, 2), (1, 3, 2), (4, 3, 2)]
+  Lost 2-paths: []
+  New 3-paths (3): [(0, 4, 3, 2), (1, 0, 3, 2), (4, 1, 3, 2)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(0, 3, 2), (1, 3, 2), (4, 3, 2)]
+  New 3-paths using u->v (3): [(0, 4, 3, 2), (1, 0, 3, 2), (4, 1, 3, 2)]
+
+bits=80, remove 2->0 (d_u=1, d_v=0)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(1, 2, 0), (3, 2, 0), (4, 2, 0)]
+  Lost 2-paths: []
+  New 3-paths (3): [(1, 4, 2, 0), (3, 1, 2, 0), (4, 3, 2, 0)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(1, 2, 0), (3, 2, 0), (4, 2, 0)]
+  New 3-paths using u->v (3): [(1, 4, 2, 0), (3, 1, 2, 0), (4, 3, 2, 0)]
+
+bits=82, remove 0->2 (d_u=1, d_v=0)
+  T': Om2=6, Z2=1, Om3=0, rk3=0
+  T:  Om2=9, Z2=3, Om3=3, rk3=3
+  New 2-paths: [(1, 0, 2), (3, 0, 2), (4, 0, 2)]
+  Lost 2-paths: []
+  New 3-paths (3): [(1, 4, 0, 2), (3, 1, 0, 2), (4, 3, 0, 2)]...
+  Lost 3-paths (0)
+  delta Om2=3, delta Z2=2
+  delta Om3=3, delta rk3=3
+  beta2(T')=1, beta2(T)=0
+  New 2-paths using u->v: [(1, 0, 2), (3, 0, 2), (4, 0, 2)]
+  New 3-paths using u->v (3): [(1, 4, 0, 2), (3, 1, 0, 2), (4, 3, 0, 2)]
+
+
+Analyzed 10 cases
+
+======================================================================
+PATTERN ANALYSIS
+======================================================================
+  scores=(0, 1, 3, 3, 3), remove 1->0: 40 cases
+  scores=(1, 1, 1, 3, 4), remove 4->3: 40 cases
+
+======================================================================
+SCORES WITH NO beta2-CREATING REMOVALS
+======================================================================
+  (0, 1, 2, 3, 4): NEVER creates beta2>0 under edge removal
+  (0, 2, 2, 2, 4): NEVER creates beta2>0 under edge removal
+  (0, 2, 2, 3, 3): NEVER creates beta2>0 under edge removal
+  (1, 1, 2, 2, 4): NEVER creates beta2>0 under edge removal
+  (1, 1, 2, 3, 3): NEVER creates beta2>0 under edge removal
+  (1, 2, 2, 2, 3): NEVER creates beta2>0 under edge removal
+  (2, 2, 2, 2, 2): NEVER creates beta2>0 under edge removal
+  (0, 1, 3, 3, 3): CAN create beta2>0 under edge removal
+  (1, 1, 1, 3, 4): CAN create beta2>0 under edge removal
+
+======================================================================
+ESSENTIAL EDGE STRUCTURE
+======================================================================
+
+bits=0, scores=(0, 1, 2, 3, 4)
+  NO essential edges (all removals preserve beta2=0)
+
+bits=341, scores=(2, 2, 2, 2, 2)
+  No essential edges
+
+bits=10, scores=(1, 1, 2, 3, 3)
+  No essential edges
+
+bits=100, scores=(1, 1, 2, 3, 3)
+  No essential edges
+
+bits=512, scores=(0, 1, 2, 3, 4)
+  No essential edges
+
+
+Done.
