@@ -1,0 +1,240 @@
+======================================================================
+FULL OMEGA CHAIN COMPLEX DIMENSIONS
+======================================================================
+
+--- n=4 ---
+
+  Score (0, 1, 2, 3) (24 tournaments):
+    Omega dims: [4, 6, 4, 1, 0]
+    Betti: [np.int64(1), 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (0, 2, 2, 2) (8 tournaments):
+    Omega dims: [4, 6, 3, 0, 0]
+    Betti: [np.int64(1), 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (1, 1, 1, 3) (8 tournaments):
+    Omega dims: [4, 6, 3, 0, 0]
+    Betti: [np.int64(1), 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (1, 1, 2, 2) (24 tournaments):
+    Omega dims: [4, 6, 3, 1, 0]
+    Betti: [np.int64(1), np.int64(1), 0, 0]
+    Euler(omega): 0, Euler(betti): 0
+
+--- n=5 ---
+
+  Score (0, 1, 2, 3, 4) (120 tournaments):
+    Omega dims: [5, 10, 10, 5, 1, 0]
+    Betti: [np.int64(1), 0, 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (0, 1, 3, 3, 3) (40 tournaments):
+    Omega dims: [5, 10, 9, 3, 0, 0]
+    Betti: [np.int64(1), 0, 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (0, 2, 2, 2, 4) (40 tournaments):
+    Omega dims: [5, 10, 9, 3, 0, 0]
+    Betti: [np.int64(1), 0, 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (0, 2, 2, 3, 3) (120 tournaments):
+    Omega dims: [5, 10, 9, 4, 1, 0]
+    Betti: [np.int64(1), 0, 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (1, 1, 1, 3, 4) (40 tournaments):
+    Omega dims: [5, 10, 9, 3, 0, 0]
+    Betti: [np.int64(1), 0, 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (1, 1, 2, 2, 4) (120 tournaments):
+    Omega dims: [5, 10, 9, 4, 1, 0]
+    Betti: [np.int64(1), 0, 0, 0, 0]
+    Euler(omega): 1, Euler(betti): 1
+
+  Score (1, 1, 2, 3, 3) (240 tournaments):
+    Omega dims: [5, 10, 9, 3, 0, 0] x120
+    Omega dims: [5, 10, 9, 5, 1, 0] x120
+    Betti: [np.int64(1), 0, 0, 0, 0] x120
+    Betti: [np.int64(1), np.int64(1), 0, 0, 0] x120
+    Euler(omega): 0, Euler(betti): 0
+
+  Score (1, 2, 2, 2, 3) (280 tournaments):
+    Omega dims: [5, 10, 8, 3, 0, 0] x40
+    Omega dims: [5, 10, 9, 4, 1, 0] x120
+    Omega dims: [5, 10, 10, 7, 2, 0] x120
+    Betti: [np.int64(1), 0, 0, 0, 0] x120
+    Betti: [np.int64(1), np.int64(1), 0, 0, 0] x160
+    Euler(omega): 0, Euler(betti): 0
+
+  Score (2, 2, 2, 2, 2) (24 tournaments):
+    Omega dims: [5, 10, 10, 10, 5, 0]
+    Betti: [np.int64(1), np.int64(1), 0, 0, 0]
+    Euler(omega): 0, Euler(betti): 0
+
+======================================================================
+EXPLICIT 2-CYCLES AND 3-CHAIN FILLINGS (n=5)
+======================================================================
+
+Regular tournament T#76
+Adjacency:
+  0: 0 0 0 1 1
+  1: 1 0 0 0 1
+  2: 1 1 0 0 0
+  3: 0 1 1 0 0
+  4: 0 0 1 1 0
+
+dim(Omega_2) = 10
+dim(Omega_3) = 10
+rank(d_2) = 5, ker(d_2) = 5
+
+2-cycle generators (in A_2 coordinates):
+  z_0: 15 nonzero coefficients
+    (0, 4, 3): 0.1926
+    (0, 4, 2): -0.4279
+    (0, 3, 2): 0.4279
+    (1, 4, 3): 0.2353
+    (1, 0, 4): 0.3575
+    (1, 0, 3): -0.2353
+    (2, 1, 4): 0.1222
+    (2, 1, 0): -0.1185
+    (2, 0, 4): -0.1222
+    (3, 2, 1): -0.3196
+    ... and 5 more
+  z_1: 15 nonzero coefficients
+    (0, 4, 3): -0.6017
+    (0, 4, 2): 0.1483
+    (0, 3, 2): -0.1483
+    (1, 4, 3): 0.4534
+    (1, 0, 4): 0.3276
+    (1, 0, 3): -0.4534
+    (2, 1, 4): -0.1259
+    (2, 1, 0): 0.0425
+    (2, 0, 4): 0.1259
+    (3, 2, 1): 0.093
+    ... and 5 more
+  z_2: 15 nonzero coefficients
+    (0, 4, 3): -0.084
+    (0, 4, 2): 0.0573
+    (0, 3, 2): -0.0573
+    (1, 4, 3): 0.0267
+    (1, 0, 4): -0.0155
+    (1, 0, 3): -0.0267
+    (2, 1, 4): -0.0422
+    (2, 1, 0): 0.5323
+    (2, 0, 4): 0.0422
+    (3, 2, 1): -0.4637
+    ... and 5 more
+
+im(d_3) = 5
+beta_2 = ker - im = 5 - 5 = 0
+
+======================================================================
+CONE CONSTRUCTION: CAN WE FILL 2-CYCLES?
+======================================================================
+
+Cone vertex v=0:
+  2-paths coverable by cone: 8/20
+  2-cycle z_0: 15 nonzero, 6 in cone domain
+
+Cone vertex v=1:
+  2-paths coverable by cone: 8/20
+  2-cycle z_0: 15 nonzero, 6 in cone domain
+
+Cone vertex v=2:
+  2-paths coverable by cone: 8/20
+  2-cycle z_0: 15 nonzero, 6 in cone domain
+
+Cone vertex v=3:
+  2-paths coverable by cone: 8/20
+  2-cycle z_0: 15 nonzero, 6 in cone domain
+
+Cone vertex v=4:
+  2-paths coverable by cone: 8/20
+  2-cycle z_0: 15 nonzero, 6 in cone domain
+
+======================================================================
+IS dim(Omega_p) DETERMINED BY SCORE SEQUENCE?
+======================================================================
+  Score (0, 1, 2, 3, 4): 1 distinct Omega profiles (UNIQUE)
+  Score (0, 1, 3, 3, 3): 1 distinct Omega profiles (UNIQUE)
+  Score (0, 2, 2, 2, 4): 1 distinct Omega profiles (UNIQUE)
+  Score (0, 2, 2, 3, 3): 1 distinct Omega profiles (UNIQUE)
+  Score (1, 1, 1, 3, 4): 1 distinct Omega profiles (UNIQUE)
+  Score (1, 1, 2, 2, 4): 1 distinct Omega profiles (UNIQUE)
+  Score (1, 1, 2, 3, 3): 2 distinct Omega profiles (VARIES!)
+    [5, 10, 9, 3, 0, 0]
+    [5, 10, 9, 5, 1, 0]
+  Score (1, 2, 2, 2, 3): 3 distinct Omega profiles (VARIES!)
+    [5, 10, 8, 3, 0, 0]
+    [5, 10, 9, 4, 1, 0]
+    [5, 10, 10, 7, 2, 0]
+  Score (2, 2, 2, 2, 2): 1 distinct Omega profiles (UNIQUE)
+
+  Omega profile determined by score? False
+
+======================================================================
+EULER CHARACTERISTIC chi = sum (-1)^p dim(Omega_p)
+======================================================================
+
+n=3: chi distribution: {0: 2, 1: 6}
+  chi = 1 always? NO
+
+n=4: chi distribution: {0: 24, 1: 40}
+  chi = 1 always? NO
+
+n=5: chi distribution: {0: 304, 1: 720}
+  chi = 1 always? NO
+
+======================================================================
+RELATIONSHIP: beta_1, c3, ker(d_2), im(d_3)
+======================================================================
+
+n=5: (c3, beta_1) -> (dim_Omega2, ker_d2, dim_Omega3)
+  c3=0, b1=0: ([10], [np.int64(4)], [5]) [120 tours]
+  c3=1, b1=0: ([9], [np.int64(3)], [3]) [120 tours]
+  c3=2, b1=0: ([9], [np.int64(3)], [4]) [240 tours]
+  c3=3, b1=0: ([9], [np.int64(3)], [3]) [120 tours]
+  c3=3, b1=1: ([9], [np.int64(4)], [5]) [120 tours]
+  c3=4, b1=0: ([9], [np.int64(3)], [4]) [120 tours]
+  c3=4, b1=1: ([8, 10], [np.int64(3), np.int64(5)], [3, 7]) [160 tours]
+  c3=5, b1=1: ([10], [np.int64(5)], [10]) [24 tours]
+
+======================================================================
+FORMULA TEST: ker(d_2) = f(beta_1, n, c3)?
+======================================================================
+  c3=0, b1=0: ker_d2=4, C(5,4)=4, b1+C(n-1,3)=4
+  c3=0, b1=0: ker_d2=4, C(5,4)=4, b1+C(n-1,3)=4
+  c3=1, b1=0: ker_d2=3, C(5,4)=4, b1+C(n-1,3)=4
+  c3=0, b1=0: ker_d2=4, C(5,4)=4, b1+C(n-1,3)=4
+  c3=2, b1=0: ker_d2=3, C(5,4)=4, b1+C(n-1,3)=4
+
+  ker(d_2) = C(n,4) + beta_1 = 4 + beta_1? False
+  Checking other formulas...
+    c3=0, b1=0, ker=4
+    c3=0, b1=0, ker=4
+    c3=1, b1=0, ker=3
+    c3=0, b1=0, ker=4
+    c3=2, b1=0, ker=3
+    c3=1, b1=0, ker=3
+    c3=2, b1=0, ker=3
+    c3=0, b1=0, ker=4
+    c3=3, b1=1, ker=4
+    c3=2, b1=0, ker=3
+    c3=3, b1=0, ker=3
+    c3=1, b1=0, ker=3
+    c3=4, b1=1, ker=5
+    c3=2, b1=0, ker=3
+    c3=3, b1=1, ker=4
+    c3=0, b1=0, ker=4
+    c3=0, b1=0, ker=4
+    c3=1, b1=0, ker=3
+    c3=0, b1=0, ker=4
+    c3=0, b1=0, ker=4
+
+
+Done.
