@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S46c — 2026-03-07 (Moment-Cycle Hierarchy)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S46b
+**Summary of work:**
+  Integrated n=6 Worpitzky result (c_0 = H(T) = OCF) from S46b background agent.
+  Discovered the moment-cycle hierarchy explaining the graded Worpitzky structure.
+
+  **Major results:**
+  1. THM-091: fwd distribution is symmetric about (n-1)/2 for ALL tournaments (reversal argument).
+     All odd cumulants vanish: kappa_3 = kappa_5 = ... = 0.
+  2. THM-090: E[fwd^3] = A(n) + 6*t3/n (PROVED algebraically via zero skewness + THM-089).
+  3. THM-092: Moment-cycle hierarchy — E[fwd^r] depends on cycle invariants of tournaments
+     on <= r+1 vertices. Explains why Worpitzky coefficients have graded cycle structure.
+  4. E[fwd^4] exact formula: 287/10 + 27t3/5 + 2t5/5 (n=5); 619/10 + 82t3/15 + 2t5/15 + 4alpha_2/15 (n=6).
+  5. n=7 Worpitzky verified (156 F-classes): delta_4 = 10*t3, delta_3 = 20*t3,
+     delta_2 needs more invariants, c_0 = H(T) confirmed.
+  6. Renumbered THM-084/085/086 -> THM-087/088/089 to avoid collision with kind-pasteur.
+  7. Updated THM-087 with complete n=6 formula and OCF connection.
+
+**New contributions:** THM-090, THM-091, THM-092, OPEN-Q-020 (resolved), OPEN-Q-021, OPEN-Q-022
+**Unresolved threads:**
+  - Exact kappa_4 formula at general n (OPEN-Q-022)
+  - Verify moment hierarchy at n=7 for r=4
+  - Web research agents on Ehrhart/P-partition connections still running
+
 ## opus-2026-03-07-S37 — 2026-03-07 (Worpitzky Deep Dive)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S36

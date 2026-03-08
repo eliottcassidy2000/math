@@ -380,24 +380,23 @@ The ONLY permanent gaps through n=9 sampling are **H=7 and H=21**.
 
 ---
 
-## OPEN-Q-015 🟢 Worpitzky deeper invariants at n>=6
-**What determines the 5th and 6th Worpitzky coefficients?**
+## OPEN-Q-020 -- RESOLVED
+**What determines the Worpitzky coefficients beyond t3?**
 
-At n=6, the Worpitzky polynomial a_m(T) has coefficients that are:
-- Top 2: universal (n, C(n,2))
-- Next 2: determined by t3 (formula: delta_d = 2(n-2)*t3 at d=2, (n-2)(n-3)*t3 at d=3)
-- Bottom 2: NOT determined by t3 alone
+**RESOLVED by opus-2026-03-07-S46b/S46c:**
 
-Background agent explored t4, t5, score sequence moments, 4-vertex subgraph types — none give exact formula. Linear regression with (t3, t4) has max error ~17.
+At n=6 (exhaustive, 24 F-classes): delta_1 = 8*t3 + 4*t5 + 8*alpha_2, delta_0 = H-1 = 2*t3 + 2*t5 + 4*alpha_2 (= OCF). The Worpitzky polynomial is a GRADED REFINEMENT of OCF.
 
-THM-086 proves the t3 dependence comes from Var[fwd], which involves only adjacent-step covariances. The deeper coefficients involve E[fwd^3], E[fwd^4], which depend on 3-step and 4-step correlations — these involve 4-paths and 5-paths in the tournament.
+The mechanism: Worpitzky coefficients encode moments E[fwd^r], and these follow a moment-cycle hierarchy (THM-092). Zero skewness (THM-091) eliminates odd cumulants. Each even cumulant kappa_{2k} adds one level of cycle complexity (cycles on <=2k+1 vertices).
 
-**THM:** THM-084, THM-086
-**Source:** opus-2026-03-07-S46b
+At n=7 (156 F-classes sampled): delta_4 = 10*t3, delta_3 = 20*t3 confirmed. delta_2 needs invariants beyond t3.
+
+**THM:** THM-087 (F,G updated), THM-090, THM-091, THM-092
+**Source:** opus-2026-03-07-S46c
 
 ---
 
-## OPEN-Q-016 🟢 Signed forward-edge polynomial SF(T,x) structure
+## OPEN-Q-021 🟢 Signed forward-edge polynomial SF(T,x) structure
 **What is the combinatorial meaning of SF(T,x)?**
 
 SF(T,x) = sum sgn(sigma) x^{fwd_T(sigma)} is palindromic and divisible by (x-1).
@@ -405,8 +404,19 @@ At n=4: SF = c*(x-1)^2*(x+1) for some integer c. What is c combinatorially?
 At n>=6: SF is a COARSER invariant than F. What information does it lose?
 Is there a matrix whose determinant equals SF(T,x)?
 
-**THM:** THM-085
+**THM:** THM-088
 **Source:** opus-2026-03-07-S46b
+
+---
+
+## OPEN-Q-022 🟢 Exact kappa_4 formula at general n
+**What determines the fourth cumulant kappa_4(T)?**
+
+kappa_4 = E[(fwd-mu)^4] - 3*Var^2 is the excess kurtosis * sigma^4.
+At n=5: kappa_4 = f(t3, t5). At n=6: kappa_4 = f(t3, t5, alpha_2).
+What is the formula at general n? Does kappa_6 introduce t7?
+
+**Source:** opus-2026-03-07-S46c
 
 ---
 
