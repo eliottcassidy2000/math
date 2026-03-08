@@ -1,0 +1,117 @@
+======================================================================
+COMMON IN-NEIGHBOR CONDITION FOR Z₂ FILLING
+======================================================================
+
+==================================================
+n = 4 (64 tournaments)
+==================================================
+Total Z₂ basis elements: 48
+Total paths in Z₂ support: 192
+Paths WITH common in-neighbor: 48
+Paths WITHOUT common in-neighbor: 144
+Paths with FULL cone (v→a,v→b,v→c): 24
+Z₂ cycles where ALL paths have CIN: 0/48
+Z₂ cycles with SOME paths missing CIN: 48/48
+✗ 75.0% of Z₂ support paths lack common in-neighbor
+
+==================================================
+n = 5 (1024 tournaments)
+==================================================
+Total Z₂ basis elements: 3600
+Total paths in Z₂ support: 38155
+Paths WITH common in-neighbor: 15839
+Paths WITHOUT common in-neighbor: 22316
+Paths with FULL cone (v→a,v→b,v→c): 7799
+Z₂ cycles where ALL paths have CIN: 0/3600
+Z₂ cycles with SOME paths missing CIN: 3600/3600
+✗ 58.5% of Z₂ support paths lack common in-neighbor
+
+==================================================
+n = 6 (200 tournaments)
+==================================================
+Total Z₂ basis elements: 1962
+Total paths in Z₂ support: 46136
+Paths WITH common in-neighbor: 25268
+Paths WITHOUT common in-neighbor: 20868
+Paths with FULL cone (v→a,v→b,v→c): 14283
+Z₂ cycles where ALL paths have CIN: 0/1962
+Z₂ cycles with SOME paths missing CIN: 1962/1962
+✗ 45.2% of Z₂ support paths lack common in-neighbor
+
+======================================================================
+DETAILED ANALYSIS: PATHS WITHOUT COMMON IN-NEIGHBOR
+======================================================================
+
+Examples of paths in Z₂ without common in-neighbor:
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,3,2): coeff=0.4315
+  d_out(a=4)=4, d_out(b=3)=3
+  in(a)=[], in(b)=[4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,3,1): coeff=0.0846
+  d_out(a=4)=4, d_out(b=3)=3
+  in(a)=[], in(b)=[4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,3,0): coeff=-0.5161
+  d_out(a=4)=4, d_out(b=3)=3
+  in(a)=[], in(b)=[4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,2,1): coeff=-0.1000
+  d_out(a=4)=4, d_out(b=2)=2
+  in(a)=[], in(b)=[3, 4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,2,0): coeff=0.5315
+  d_out(a=4)=4, d_out(b=2)=2
+  in(a)=[], in(b)=[3, 4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,1,0): coeff=-0.0154
+  d_out(a=4)=4, d_out(b=1)=1
+  in(a)=[], in(b)=[2, 3, 4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,3,2): coeff=-0.0502
+  d_out(a=4)=4, d_out(b=3)=3
+  in(a)=[], in(b)=[4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,3,1): coeff=0.4096
+  d_out(a=4)=4, d_out(b=3)=3
+  in(a)=[], in(b)=[4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,3,0): coeff=-0.3593
+  d_out(a=4)=4, d_out(b=3)=3
+  in(a)=[], in(b)=[4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+  T#0 scores=(0, 1, 2, 3, 4)
+  Path (4,2,1): coeff=0.1992
+  d_out(a=4)=4, d_out(b=2)=2
+  in(a)=[], in(b)=[3, 4]
+  in(a) ∩ in(b) \ {a,b,c} = set()
+
+======================================================================
+LEFT vs RIGHT CONE COVERAGE
+======================================================================
+Total Z₂ cycles: 3600
+All paths have LEFT cone: 0/3600
+All paths have RIGHT cone: 0/3600
+All paths have LEFT or RIGHT cone: 120/3600
+
+✗ 3480 cycles have paths with NEITHER cone
+
+Done.

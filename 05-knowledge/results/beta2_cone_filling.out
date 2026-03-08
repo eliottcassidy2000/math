@@ -1,0 +1,83 @@
+======================================================================
+CONE FILLING ANALYSIS FOR Z₂ CYCLES
+======================================================================
+
+  T#5, v=0, z_idx=0: type2 defect max=0.494726
+    face (0, 2, 1): coeff=0.494726, v→b=0, b→v=1
+
+  T#5, v=2, z_idx=0: type2 defect max=0.094636
+    face (2, 3, 1): coeff=0.094636, v→b=0, b→v=1
+
+  T#5, v=3, z_idx=0: type2 defect max=0.350832
+    face (3, 0, 1): coeff=0.350832, v→b=0, b→v=1
+
+  T#100, v=2, z_idx=0: type2 defect max=0.567600
+    face (2, 3, 2): coeff=-0.452954, v→b=0, b→v=1
+    face (2, 4, 0): coeff=0.114645, v→b=0, b→v=1
+    face (2, 4, 2): coeff=0.452954, v→b=0, b→v=1
+    face (2, 4, 3): coeff=-0.567600, v→b=0, b→v=1
+
+  T#100, v=3, z_idx=0: type2 defect max=0.052244
+    face (3, 0, 3): coeff=-0.052244, v→b=0, b→v=1
+    face (3, 1, 0): coeff=-0.052244, v→b=0, b→v=1
+    face (3, 1, 3): coeff=0.052244, v→b=0, b→v=1
+
+  T#100, v=4, z_idx=0: type2 defect max=0.052244
+    face (4, 1, 0): coeff=-0.052244, v→b=0, b→v=1
+    face (4, 1, 3): coeff=0.052244, v→b=0, b→v=1
+
+  T#200, v=0, z_idx=0: type2 defect max=0.311265
+    face (0, 2, 0): coeff=-0.117791, v→b=0, b→v=1
+    face (0, 2, 1): coeff=-0.193474, v→b=0, b→v=1
+    face (0, 2, 3): coeff=0.311265, v→b=0, b→v=1
+    face (0, 3, 0): coeff=0.117791, v→b=0, b→v=1
+    face (0, 3, 1): coeff=0.193474, v→b=0, b→v=1
+
+  T#200, v=1, z_idx=0: type2 defect max=0.311265
+    face (1, 2, 0): coeff=-0.117791, v→b=0, b→v=1
+    face (1, 2, 1): coeff=-0.193474, v→b=0, b→v=1
+    face (1, 2, 3): coeff=0.311265, v→b=0, b→v=1
+    face (1, 3, 0): coeff=0.117791, v→b=0, b→v=1
+    face (1, 3, 1): coeff=0.193474, v→b=0, b→v=1
+
+  T#200, v=4, z_idx=0: type2 defect max=0.289348
+    face (4, 0, 4): coeff=0.289348, v→b=0, b→v=1
+    face (4, 1, 0): coeff=0.289348, v→b=0, b→v=1
+    face (4, 1, 4): coeff=-0.289348, v→b=0, b→v=1
+  ... 200/1024
+  ... 400/1024
+  ... 600/1024
+  ... 800/1024
+  ... 1000/1024
+
+======================================================================
+CONE DEFECT SUMMARY
+======================================================================
+Total (tournament, z, v) tests: 18000
+Type 1 defects (v,a,c) with c→a: 0 (should be 0)
+Type 2 defects (v,b,c) with b→v: 7318
+Type 2 zero (Z₂ kills it): 10682
+
+✓ Type 1 defects always vanish (Ω₂ constraint works!)
+
+✗ Type 2 defects survive in 7318 cases
+  Need corrections or different filling strategy
+
+======================================================================
+TESTING WEIGHTED CONE COMBINATION
+======================================================================
+  FAIL: bits=4, z_idx=0, scores=(1, 1, 2, 2, 4), err=1.00e+00
+    n_non_a2=3, rank(M_full)=5
+  FAIL: bits=4, z_idx=1, scores=(1, 1, 2, 2, 4), err=1.00e+00
+    n_non_a2=3, rank(M_full)=5
+  FAIL: bits=4, z_idx=2, scores=(1, 1, 2, 2, 4), err=1.00e+00
+    n_non_a2=3, rank(M_full)=5
+  ... 200/1024
+  ... 400/1024
+  ... 600/1024
+  ... 800/1024
+  ... 1000/1024
+
+Weighted cone: works=600, fails=3000
+
+Done.
