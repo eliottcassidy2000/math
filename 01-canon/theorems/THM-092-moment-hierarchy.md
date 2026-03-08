@@ -63,11 +63,14 @@ At n=7 (VERIFIED by sampling, 156 F-classes):
 
 1. **Graded OCF refinement (THM-087):** The Worpitzky polynomial provides a graded decomposition of H(T), with each level j encoding cycle invariants from the hierarchy.
 
-2. **Forward r-path formula:**
+2. **Forward r-path formula (CORRECTED S46d):**
    - #fwd2path = C(n,2)
    - #fwd3path = C(n,3) + 2*t3
-   - #fwd4path = C(n,4) + 2(n-2)*t3
-   These count ordered directed paths through all r+1 vertices of each (r+1)-subset.
+   - #fwd4path = C(n,4) + 2(n-3)*t3
+   - #fwd5path = C(n,5) + 2*C(n-3,2)*t3 + 2*t5
+   These count #{r-tuples of distinct vertices forming a directed (r-1)-path}.
+   The formula is: #fwd(r)path = sum_{S in C(V,r)} H(T[S]).
+   The t3 coefficient is 2*C(n-3, r-3) since each 3-cycle sits in C(n-3, r-3) r-subsets.
 
 3. **Cumulant interpretation:** The forward-edge distribution is fully characterized by even cumulants kappa_2, kappa_4, kappa_6, .... Each kappa_{2k} adds exactly one "level" of cycle complexity (cycles on 2k+1 or fewer vertices, plus their disjoint combinations).
 
