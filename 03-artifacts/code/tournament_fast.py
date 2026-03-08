@@ -476,10 +476,30 @@ def c3_regular(n):
     return n * (n - 1) * (n + 1) // 24
 
 
+def c4_fast(T):
+    """Count directed 4-cycles using trace formula. O(n^3).
+
+    By THM-096: tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
+    Therefore: c_4 = tr(A^4) / 4.
+    """
+    n = len(T)
+    if n < 4:
+        return 0
+
+    # A^2
+    A2 = [[sum(T[i][k] * T[k][j] for k in range(n))
+           for j in range(n)] for i in range(n)]
+    # A^4 = A^2 * A^2
+    A4 = [[sum(A2[i][k] * A2[k][j] for k in range(n))
+           for j in range(n)] for i in range(n)]
+    tr4 = sum(A4[i][i] for i in range(n))
+    return tr4 // 4
+
+
 def c5_fast(T):
     """Count directed 5-cycles using trace formula. O(n^3).
 
-    By THM-096: tr(A^k) = k * c_k for k = 3, 5 in tournaments.
+    By THM-096: tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
     This is because closed walks of length <= 5 in tournaments are
     always simple cycles (no vertex repetition possible, since
     tournaments have no bidirectional edges and any closed walk
@@ -777,6 +797,13 @@ def self_test():
     # Rotational T_5: self-converse (circulant, i->-i is anti-aut)
     sc5, aa5 = has_anti_automorphism(T5)
     assert sc5, "Rotational T_5 should be self-converse"
+
+    # c4_fast
+    assert c4_fast(T3c) == 0  # n=3, no 4-cycles
+    assert c4_fast(T3t) == 0
+    # At n=5, rotational T_5: count 4-cycles
+    T5_c4 = c4_fast(T5)
+    assert T5_c4 == 5  # rotational T_5 has 5 directed 4-cycles
 
     # c5_fast: counts rotation-canonical directed 5-cycles
     assert c5_fast(T3c) == 0  # n=3, no 5-cycles
