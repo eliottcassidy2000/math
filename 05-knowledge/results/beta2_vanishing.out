@@ -1,0 +1,51 @@
+======================================================================
+BETA_2 VANISHING CHECK
+======================================================================
+n=3: 0/8 with beta_2>0
+n=4: 0/64 with beta_2>0
+n=5: 0/1024 with beta_2>0 (previously verified)
+n=6: 0/32768 with beta_2>0 (previously verified)
+
+--- n=7 sampling ---
+n=7: 0/10000 with beta_2>0 (107.1s)
+
+--- n=8 sampling ---
+  1000/3000 (54.7s)
+  2000/3000 (109.5s)
+  3000/3000 (165.3s)
+n=8: 0/3000 with beta_2>0 (165.3s)
+
+--- n=9 sampling ---
+  100/500 (27.7s)
+  200/500 (57.5s)
+  300/500 (88.5s)
+  400/500 (118.1s)
+  500/500 (147.3s)
+n=9: 0/500 with beta_2>0 (147.3s)
+
+======================================================================
+SUMMARY
+======================================================================
+
+beta_2 = 0 for ALL tournaments tested:
+  n=3: exhaustive (8 tournaments)
+  n=4: exhaustive (64 tournaments)
+  n=5: exhaustive (1024 tournaments)
+  n=6: exhaustive (32768 tournaments)
+  n=7: 10000 random samples
+  n=8: 3000 random samples
+  n=9: 500 random samples
+
+CONJECTURE: beta_2(T) = 0 for every tournament T on n >= 3 vertices.
+
+Sketch of proof idea:
+In a tournament, every pair of vertices has an edge. This means every
+allowed 2-path a->b->c has the edge a->c or c->a present. So the
+boundary partial_2(a->b->c) = (b->c) - (a->c) + (a->b) involves
+only edges that exist. The tournament completeness ensures the
+2-chain groups are "too connected" for 2-dimensional holes.
+
+More precisely: the GLMY path complex at dimension 2 is acyclic because
+any 2-cycle can be "filled" using 3-paths (which always exist in
+tournaments since every 4-vertex subset has a Hamiltonian path).
+
