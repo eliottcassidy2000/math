@@ -635,3 +635,15 @@ CIRCULANT FOURIER METHOD: Tang-Yau (arXiv:2602.04140, Feb 2026) compute GLMY Bet
 
 **T199** #random-digraph #phase-transition #beta1 | certainty: medium | source: opus-2026-03-07-S46e (web)
 RANDOM DIGRAPH β₁ TRANSITIONS: Chaplin (arXiv:2111.13493) shows β₁ of Erdős-Rényi digraphs has two phase transitions. Tournaments at density=1/2 sit in a specific regime. At n=5: 304/1024 = 29.7% have β₁>0. This could be explained by Chaplin's framework.
+
+**T200** #beta2-exactness #chain-complex #tournament | certainty: VERY HIGH (exhaustive n≤5) | source: opus-2026-03-07-S46f
+β₂ = 0 FOR ALL TOURNAMENTS: The chain complex Ω₃→Ω₂→Ω₁ is EXACT at Ω₂. Verified exhaustively for n≤5 (all 1088 tournaments). Key structural facts: dim(Ω₂) = C(n,3) - t₃ (each transitive triple → one Ω₂ path), and ker(∂₂) = im(∂₃) always. Proof likely follows from local exactness on 4-subsets + gluing.
+
+**T201** #real-rootedness #independence-polynomial #claw-free | certainty: VERY HIGH (exhaustive n≤5, sampled n=6) | source: opus-2026-03-07-S46f
+ALL ROOTS OF I(Ω(T), x) ARE REAL AND NEGATIVE for all tournaments tested. Follows from claw-freeness of Ω(T) (THM-019, verified n≤8) + Chudnovsky-Seymour theorem. Most negative root seen: -13.93 at n=6. If Ω(T) is claw-free for all n (OPEN-Q-014), real-rootedness follows universally.
+
+**T202** #todd-class #bernoulli #eulerian-cumulants | certainty: HIGH (verified n≥3) | source: opus-2026-03-07-S46f
+EULERIAN CUMULANT = TODD CLASS: κ_{2k}^{Eul}(n) = (n+1) · B_{2k}/(2k) exactly for n≥2k+2. The CGF of des(σ) equals (n+1) · log(td(t)) where td = t/(1-e^{-t}) is the Todd genus. IMPORTANT CAVEAT: this is for the DESCENT distribution, NOT the tournament forward-edge distribution. The forward-edge distribution has variance n(n-1)(2n+5)/72 for the transitive tournament (= inversion variance), very different from (n+1)/12.
+
+**T203** #gaussian-integer #independence-polynomial | certainty: trivial | source: opus-2026-03-07-S46f
+I(Ω(T), i) is automatically a Gaussian integer (integer coefficients → evaluation at algebraic integer is algebraic integer). For n≤5, Re=1 always and Im=|Ω| because α₂=0 (no two disjoint odd cycles in ≤5 vertices). At n=6, α₂>0 possible and Re∈{-3,-1,0,1}. The "discovery" is trivial; the interesting content is that α₂=0 for n≤5.

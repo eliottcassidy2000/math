@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S46f — 2026-03-07 (Deep Inquiry: Todd Class, β₂ Exactness, Real-Rootedness)
+**Account:** A
+**Continuation of:** opus-2026-03-07-S46e (context restart)
+**Summary of work:**
+  Creative exploration session yielding several structural insights:
+
+  1. **Bernoulli-Todd CGF connection**: κ_{2k}^{Eulerian} = (n+1)·B_{2k}/(2k) EXACTLY for n≥2k+2. The Eulerian CGF = (n+1)·log(td(t)) where td is the Todd genus. CAVEAT: this applies to des(σ), NOT the tournament forward-edge fwd(σ). The two statistics have very different distributions (fwd for transitive tournament = inversions, variance n(n-1)(2n+5)/72 ≠ (n+1)/12).
+
+  2. **β₂=0 exactness verified** exhaustively for n≤5: ker(∂₂|_{Ω₂}) = im(∂₃|_{Ω₃}) always. dim(Ω₂) = C(n,3)-t₃. Proof strategy: local exactness on 4-subsets + Mayer-Vietoris gluing.
+
+  3. **All roots of I(Ω(T),x) are real and negative** (exhaustive n≤5, sampled n=6). Follows from THM-019 (claw-free) + Chudnovsky-Seymour for n≤8. Largest root approaches 0 as n grows.
+
+  4. **I(Ω,i) analysis**: trivially Gaussian integer. For n≤5, Re=1 always because α₂=0 (no disjoint cycle pairs). At n=6, α₂>0 breaks this.
+
+  5. **Corrected Bernoulli formula scope**: The Bernoulli base applies to Eulerian (descent) distribution only, not tournament fwd distribution. The tournament cumulant hierarchy THM-095 stands independently.
+
+**New contributions:** T200 (β₂ exactness), T201 (real-rootedness), T202 (Todd class caveat), T203 (Gaussian integer trivial)
+**Scripts:** bernoulli_tournament_connection.py, beta2_algebraic_proof.py, independence_poly_special_values.py, gaussian_integer_investigation.py, todd_class_tournament_cgf.py, pfaffian_structure.py
+**Unresolved threads:**
+  - Prove β₂=0 algebraically (need local-to-global argument)
+  - Is Ω(T) claw-free for ALL n? (would give universal real-rootedness)
+  - Pfaffian formula: does (t₃, score) determine |Pf|? (pfaffian_structure.py too slow)
+  - Todd class connection to path homology (speculative)
+
+---
+
 ## opus-2026-03-07-S46d — 2026-03-07 (Cumulant Hierarchy Complete)
 **Account:** opus
 ## opus-2026-03-07-S46e (continued) — 2026-03-07
