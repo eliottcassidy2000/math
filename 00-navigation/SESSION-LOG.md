@@ -13,6 +13,39 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-07-S34 (continued) — 2026-03-07 (Concept Map overnight session)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S34 (context compacted, continued overnight)
+**Summary of work:**
+  Comprehensive overnight concept mapping session. Built detailed database of ALL mathematical connections in the project.
+
+  **Major computational discoveries:**
+  (1) **Deletion-contraction VERIFIED:** H(T) = H(T\e) + H(T/e) holds 100% at n=4,5 (10624 total edge tests). Commutative specialization of Mitrovic's noncommuting identity. Convention: w inherits IN from tail, OUT from head.
+  (2) **p-adic structure beyond p=2:** H mod 3 = (1 + 2*alpha_1 + alpha_2) mod 3 from OCF. At n=4: H mod 3 uniquely determined by c3. H mod 7 = 0 impossible at n<=6, achievable at n=7.
+  (3) **Ihara zeta function:** z_inv(1/2) strongly correlated with H (r=-0.95 at n=5) but NOT uniquely determined. Cycle counts constrain but don't determine independence structure.
+  (4) **Permanent analysis:** per(A) = det(A) for tournament adjacency matrices at n=3,4,5. per(A) almost uniquely determined by H.
+
+  **Concept Map sections added:**
+  - XI. Walsh/Fourier Analysis (opus findings integrated)
+  - XIII. Deletion-Contraction Theorem
+  - XV. 16 Novel Model Proposals (tensor network, K-L, F_1 geometry, Galois groups, etc.)
+  - 10 new cross-field connections (GLMY, root polytope, oriented matroid, SEP, Lee-Yang, etc.)
+  - p-adic structure for odd primes
+  - H-Gap Conjecture section
+  - Cycle-rich min-H growth table
+
+  **New investigation leads:** INV-105 through INV-113 (9 new leads)
+
+  **Scripts created:** deletion_contraction_test.py, padic_beyond_2_test.py, ihara_zeta_tournament.py, permanent_dimer_test.py
+
+**New contributions:** Deletion-contraction theorem (verified), p-adic mod 3 formula, Ihara zeta correlation, permanent analysis, 16 novel model proposals, 9 new investigation leads
+**Unresolved threads:**
+  - Prove deletion-contraction algebraically (from Mitrovic specialization)
+  - Compute GLMY path homology for small tournaments
+  - Test tensor network contraction model
+  - Investigate Stanley-Stembridge implications for U_T
+  - Complete Irving-Omar decomposition verification (implementation bug)
+
 ## opus-2026-03-07-S43b — 2026-03-07 (Forward-edge polynomial palindrome theorem)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S43 (context compacted)
