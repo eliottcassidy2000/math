@@ -128,13 +128,21 @@
   - Mitrovic-Stojadinovic phi(pi) = sum_{gamma X-cycle} (len(gamma)-1) is EXACTLY our S = sum(l_i-1)!
 **Verified (S36):** OCF specialization p_1->1, p_{odd>=3}->2, p_{even}->0 gives H(T) from U_T.
 **NEW (Mitrovic, arXiv:2504.20968, April 2025):** Noncommutative Redei-Berge function W_X has deletion-contraction: W_X = W_{X\e} - W_{X/e}↑. Thm 3.16: cycle decomposition via inclusion-exclusion over cycle edges. Cor 3.12: tournament formula W_X = Σ(2^{ψ(σ)} p_{Type(σ)}) for odd-cycle permutations = exactly OCF.
+**h-POSITIVITY TEST (kind-pasteur-S39b):** h-positivity of U_T FAILS for all non-transitive tournaments. At n=3: 1/2 h-positive, n=4: 1/4, n=5: 1/11. Only the transitive tournament (H=1) is h-positive. The h(2,1) and h(2,2,1) coefficients are always negative for non-transitive. This is expected since tournament posets are NOT (3+1)-free in general, and Stanley-Stembridge conjecture requires (3+1)-freeness.
 **Next step:** (1) Express OCF via bags-of-sticks decomposition. (2) Check if deletion-contraction on W_T gives a direct proof of Claim A. (3) Explore chromatic function connection for imperfect Omega(T). (4) Study Thm 3.16 cycle decomposition for odd cycles.
 
-### INV-034: Björklund cycle cover reduction adapted for OCF
+### INV-034: Björklund cycle cover reduction adapted for OCF — TESTED (NEGATIVE for new identities)
 **Source:** Web research opus-S5, arXiv:1008.0541, arXiv:1301.7250
-**Status:** CONNECTION IDENTIFIED. NOT attempted.
-**What:** Björklund reduces Hamiltonian cycle counting to cycle cover counting via inclusion-exclusion and determinants. Could a directed version for Hamiltonian PATHS in tournaments reduce specifically to ODD cycle covers, yielding OCF? The characteristic-2 aspects are particularly relevant since Redei is a mod-2 statement.
-**Next step:** Study whether Björklund's labeled cycle cover approach specializes to odd cycle covers for tournaments.
+**Status:** TESTED (kind-pasteur-S39b). No new identity beyond OCF.
+**What:** Björklund reduces Hamiltonian cycle counting to cycle cover counting via inclusion-exclusion and determinants. Tested 6 formulations at n=3-6:
+1. Full-vertex all-odd CC weighted: FAILS (0%)
+2. Partial odd CC weighted by 2^k: MATCHES H(T) 100% — but this IS OCF
+3. Inclusion-exclusion sum (-1)^{n-|S|} perm(T[S]): FAILS (for paths)
+4. Irving-Omar odd traces: exploratory only
+5. perm(I + x*A): FAILS
+6. Odd permanent (unweighted): FAILS (0%)
+**Conclusion:** OCF = partial odd cycle cover polynomial at weight 2. This is a restatement, not a new identity. The Björklund approach doesn't give a new route to proving OCF.
+**Script:** `04-computation/bjorklund_cycle_cover.py`
 
 ### INV-035: Tribonacci structure — OCF for T_full family via interval graphs
 **Source:** opus-2026-03-05-S6 (Tribonacci web research), kind-pasteur-S11 (Tribonacci discovery)
@@ -711,7 +719,8 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **What:** Exact formula for number of directed 5-cycles in any tournament in terms of edge score sequence. Maximum c5 ≈ (3/4)*C(n,5), achieved by almost all random tournaments. Lower bounds also proved.
 **NEW FINDING (S39b):** c5 is NOT determined by score sequence, even combined with sum_d², edge_score, or common_out_neighbor statistics. At n=5, score (1,2,2,2,3) has c5 in {1,2,3}; at n=6, 9/22 score sequences have varying c5. The Komarov-Mackey formula likely involves CUBIC or higher-order graph statistics (e.g., directed walks of length 3+). For regular tournaments, c5 IS a class invariant (Savchenko, verified n=5,7).
 **Why it matters:** This rules out O(n²) c5 computation from scores alone. Cycle enumeration (O(n^5) for 5-cycles, or O(2^n) bitmask DP) remains necessary.
-**Next step:** (1) Read the exact Komarov-Mackey formula. (2) Identify which cubic invariant determines c5.
+**RESOLVED (S39b, THM-096):** c_5 = tr(A^5)/5 gives O(n^3) computation via matrix multiplication. This IS the "cubic invariant" — tr(A^5) is a sum over all length-5 closed walks, and THM-096 proves all such walks in tournaments are simple cycles (no vertex repetition possible for length <= 5).
+**Next step:** Read Komarov-Mackey formula to see if it matches tr(A^5)/5.
 
 ### INV-055: Linial-Morgenstern cycle density conjecture and extremal tournaments
 **Source:** kind-pasteur-2026-03-06-S19 web search; arXiv:2011.14142 (Ma-Tang), arXiv:1902.00572
@@ -1393,3 +1402,22 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 **Status:** NEW LEAD
 **What:** Chaplin (2022) shows β₁ of random Erdős-Rényi digraphs has two phase transitions. Since tournaments are "density 1/2" digraphs, this places them in a specific regime. Could explain why ~30% of tournaments at n=5 have β₁>0.
 **Next step:** Check if their density threshold matches tournament β₁ fraction.
+
+### INV-137: THM-096 Trace-Cycle Identity — PROVED
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** PROVED
+**What:** tr(A^k) = k * c_k(T) for k=3,5 in any tournament. Proof: no bidirectional edges => closed walks of length <= 5 are simple cycles. Gives O(n^3) c_5 computation via matrix multiplication. Sharp: fails at k>=7 due to compound walks (3+4 sharing vertex). Correction for k=7 is complex (not just compound (3,4) walks).
+**Impact:** c5_fast() upgraded from O(n^5) subset-DP to O(n^3) matrix trace in tournament_fast.py. 2.8x speedup at n=7, grows to O(n^2) asymptotic improvement.
+**Scripts:** `trace_cycle_theorem.py`, `c7_correction_formula.py`
+
+### INV-138: Björklund Cycle Cover — OCF Connection Tested (NEGATIVE)
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** TESTED (NEGATIVE for new identities)
+**What:** Tested 6 Björklund-style cycle cover formulations for OCF connections. Only Test 2 (partial odd cycle cover weighted by 2^{num_cycles}) matches OCF — but this IS OCF restated. No new route to proving OCF found. Permanent of A+I counts cycle covers but doesn't simplify OCF.
+**Scripts:** `bjorklund_cycle_cover.py`
+
+### INV-139: h-Positivity of U_T — CLOSED (fails for all non-transitive)
+**Source:** kind-pasteur-2026-03-07-S39b
+**Status:** CLOSED (dead end)
+**What:** U_T is NOT h-positive for any non-transitive tournament. Only the transitive tournament (H=1) has h-positive U_T. This closes the Stanley-Stembridge connection for tournament Rédei-Berge functions. The e-positivity question from INV-051/052 is also resolved negatively.
+**Scripts:** `bjorklund_cycle_cover.py` (h-positivity test section)
