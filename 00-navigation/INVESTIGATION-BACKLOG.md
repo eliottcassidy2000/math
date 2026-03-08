@@ -821,13 +821,14 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **Scripts:** h7_impossibility.py, alpha1_gaps.py, alpha1_gap3_proof.py, c3_forces_c5.py, redei_converse_fast.py
 **Theorem:** THM-029
 
-### INV-068: DRT non-uniqueness and Paley dominance at n=11 — NEW FINDING
-**Source:** kind-pasteur-2026-03-06-S21 (computation)
-**Status:** COMPUTED
-**What:** At n=11, exactly 2 DRT isomorphism classes exist (from (11,5,2)-difference sets). Paley (QR={1,3,4,5,9}) has H=95095, c3=55, c5=594, |Aut|=55. Non-Paley ({1,2,3,5,8}) has H=69311, c3=44, c5=407, |Aut|=11. Both are self-converse. Paley strictly dominates in ALL cycle counts.
-**Key insight:** "DRT" is NOT a single tournament — different DRTs can have different cycle counts and H values. Paley is the BEST DRT. This strengthens the Paley maximizer conjecture from "Paley maximizes among all tournaments" to "Paley maximizes even among DRTs."
-**Next step:** Test at n=19 and n=23 where more DRT classes exist.
-**Scripts:** drt_n11_analysis.py, drt_n11_verify.py, drt_n11_deeper.py
+### INV-068: DRT non-uniqueness and Paley dominance at n=11 — CORRECTED (MISTAKE-017)
+**Source:** kind-pasteur-2026-03-06-S21 (computation), CORRECTED kind-pasteur-2026-03-07-S39b
+**Status:** CORRECTED — previous "non-Paley DRT" was INVALID
+**What:** Previous claim of "2 DRT classes at n=11" was based on connection set {1,2,3,5,8} which is NOT a valid tournament (S ∩ (-S) = {3,8} ≠ ∅, creating bidirectional edges). ALL claims about "non-Paley DRT" cycle counts (c3=44, c5=407, H=69311) are INVALID (MISTAKE-017).
+**Corrected facts:** The only valid tournament (11,5,2)-difference sets in Z_11 are {1,3,4,5,9} (QR) and {2,6,7,8,10} (NQR), which give isomorphic Paley tournaments. There is no non-Paley circulant DRT at n=11. Whether a non-circulant DRT exists at n=11 remains open.
+**Paley T_11 correct data:** H=95095, c3=55, c5=594, c7=3960, c9=11055, c11=5505, |Aut|=55.
+**Next step:** (1) Check literature for non-circulant DRT existence at n=11 (all groups of order 11 are Z_11, so non-circulant DRT must be non-Cayley). (2) Test DRT uniqueness at n=23 where multiple constructions are known.
+**Scripts:** drt_n11_analysis.py (CONTAINS BUG — uses invalid connection set), drt_n11_verify.py (correction script)
 
 ### INV-069: Scalar M characterization — M=(H/n)*I ↔ H-maximizer at n=5, ↔ VT at n=7
 **Source:** kind-pasteur-2026-03-06-S25c (T156), opus-2026-03-06-S26 (T158)

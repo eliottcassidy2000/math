@@ -417,8 +417,8 @@ OCF does NOT hold for digraphs obtained by edge deletion or contraction from tou
 **T132** #alpha1-gap-3 #H7-impossible #converse-redei #structural | certainty: high (PROVED n=3-6 exhaustive) | source: kind-pasteur-2026-03-06-S21
 alpha_1 = 3 (exactly 3 directed odd cycles) is IMPOSSIBLE in any tournament. At c3<=2, alpha_1<=2 (no 5-cycles). At c3=3, the three cyclic triples always share a common vertex and span exactly 5 vertices; the induced subtournament has score (1,1,2,3,3) with forced c5>=1, so alpha_1>=4. Via OCF: H=7=1+2*3 requires alpha_1=3, so H=7 is an unachievable odd integer. H=21 also unachievable (similar structural constraints on alpha_k combinations).
 
-**T133** #DRT-n11-nonunique #paley-maximizes-among-DRT #difference-sets | certainty: high (COMPUTED) | source: kind-pasteur-2026-03-06-S21
-At n=11, there are exactly 2 DRT classes (from (11,5,2)-difference sets): Paley QR={1,3,4,5,9} (|Aut|=55, H=95095, c3=55, c5=594) and non-Paley {1,2,3,5,8} (|Aut|=11, H=69311, c3=44, c5=407). Both are self-converse. Paley has strictly MORE cycles at every length and strictly HIGHER H. Savchenko's c_k invariance is within a fixed DRT isomorphism class, NOT across all DRTs.
+**T133** #DRT-n11 #CORRECTED-MISTAKE-017 | certainty: CORRECTED (kind-pasteur-S39b) | source: kind-pasteur-2026-03-06-S21
+**CORRECTED:** The "non-Paley DRT" from {1,2,3,5,8} was NOT a valid tournament (S∩(-S)={3,8}≠∅, bidirectional edges). ALL claims about c3=44, c5=407, H=69311 are INVALID. The only valid circulant DRT at n=11 is Paley (QR={1,3,4,5,9}). Paley T_11: H=95095, c3=55, c5=594, c7=3960, c9=11055, c11=5505, |Aut|=55. Whether a non-circulant DRT exists at n=11 is open.
 
 **T134** #savchenko-odd-cycle-dominance #DRT-maximizes-odd-cycles | certainty: high (published result) | source: kind-pasteur-2026-03-06-S21 (Savchenko 2024)
 Savchenko proves c_m(DR_n) > c_m(RLT_n) for m = 1,2,3 mod 4 (including ALL odd m). For m = 0 mod 4, RLT eventually dominates (phase transition at n=39 for m=8). Since H(T) depends on odd cycles via OCF, DRT's odd-cycle dominance directly explains why DRT maximizes H. Combined with T133: among DRTs, Paley has the most cycles.

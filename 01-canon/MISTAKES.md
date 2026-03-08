@@ -547,3 +547,34 @@ where s = number of unrooted (even-length) components. Each unrooted component h
 
 ### Lesson
 Always verify formulas at the NEXT size up before claiming generality. n=5 was too small to expose the s-dependence.
+
+---
+
+## MISTAKE-017: "Non-Paley DRT at n=11" from invalid tournament connection set
+
+**Date discovered:** 2026-03-07
+**Found by:** kind-pasteur-2026-03-07-S39b
+**Affects:** INV-068, MEMORY.md DRT analysis section, TANGENTS.md DRT entry
+
+### What was assumed
+A "non-Paley DRT at n=11" was constructed using connection set {1,2,3,5,8} in Z_11 (circulant digraph). Claims: c3=44, c5=407, H=69311, |Aut|=11. "Paley strictly dominates in ALL cycle counts."
+
+### Why it was wrong
+The connection set {1,2,3,5,8} does NOT give a tournament. For a circulant tournament on Z_p, the connection set S must satisfy S ∩ (-S) = ∅ (so each pair {i,j} has exactly one directed arc). But {1,2,3,5,8} contains BOTH 3 and 8=11-3, and BOTH 1 and 10=11-1... wait, 10 is NOT in S. Let me re-check: -S = {11-s : s ∈ S} = {10, 9, 8, 6, 3}. S ∩ (-S) = {3, 8} ≠ ∅.
+
+So for any pair (i,j) where (j-i)%11 ∈ {3, 8}: BOTH T[i][j]=1 AND T[j][i]=1. The resulting digraph has bidirectional edges and is NOT a tournament. All computations (c3, c5, H, is_doubly_regular) were performed on a non-tournament digraph and are MEANINGLESS.
+
+### The correct framing
+An exhaustive search of all 32 valid tournament connection sets in Z_11 (choosing one from each pair (d, 11-d)) found exactly 2 that are (11,5,2)-difference sets: {1,3,4,5,9} (QR) and {2,6,7,8,10} (NQR). These give ISOMORPHIC tournaments (both Paley T_11). There is NO non-Paley circulant DRT at n=11.
+
+Whether a non-circulant DRT exists at n=11 remains an open question. At prime order p, all groups are Z_p, so all Cayley tournaments are circulant. A non-circulant DRT would need a different construction.
+
+### Impact
+- ALL claims about "non-Paley DRT at n=11" are INVALID
+- INV-068 "Paley dominance" finding needs complete re-evaluation
+- The claimed c3=44 was wrong — Moon's formula gives c3=55 for ALL regular n=11 tournaments
+- The claimed "Paley strictly dominates in all cycle counts" is unverifiable since no valid comparison tournament exists
+- MEMORY.md entry on DRT analysis at n=11 needs correction
+
+### Lesson
+When constructing a circulant tournament from a connection set S ⊂ Z_p^*, ALWAYS verify S ∩ (-S mod p) = ∅. A (v,k,λ)-difference set is NOT automatically a valid tournament connection set.
