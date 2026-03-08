@@ -1,0 +1,26 @@
+======================================================================
+OMEGA_3 TYPE DECOMPOSITION
+======================================================================
+NN contribution distribution: {0: 880, 1: 120, 5: 24}
+  MISMATCH: bits=41, NN=6, d1=6, d2=6, rk_C=6, pred=0, actual=1
+  MISMATCH: bits=42, NN=6, d1=6, d2=6, rk_C=6, pred=0, actual=1
+  MISMATCH: bits=44, NN=6, d1=6, d2=6, rk_C=6, pred=0, actual=1
+  MISMATCH: bits=68, NN=6, d1=6, d2=6, rk_C=6, pred=0, actual=1
+  MISMATCH: bits=74, NN=6, d1=6, d2=6, rk_C=6, pred=0, actual=1
+
+Mismatches (predicted vs actual NN contrib): 144/784
+
+======================================================================
+FORMULA CHECK at n=6
+======================================================================
+  MISMATCH at bits=73, scores=(1, 2, 2, 2, 3, 5): DD=9, c02=0, c13=3, NN_c=0, pred=12, actual=13
+  MISMATCH at bits=74, scores=(1, 2, 2, 2, 3, 5): DD=9, c02=0, c13=3, NN_c=0, pred=12, actual=13
+  MISMATCH at bits=76, scores=(1, 2, 2, 2, 3, 5): DD=9, c02=0, c13=3, NN_c=0, pred=12, actual=13
+  ... 10000/32768 (13s), mismatches=5077
+  ... 20000/32768 (23s), mismatches=10344
+  ... 30000/32768 (34s), mismatches=15814
+
+Done in 37s
+Mismatches at n=6: 17088/32768
+
+Done.

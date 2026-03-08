@@ -1,0 +1,33 @@
+======================================================================
+CORRECT OMEGA_3 FORMULA TEST
+======================================================================
+
+n=5: Mismatches: 0/1024
+  ** CORRECT FORMULA VERIFIED at n=5! **
+  dim(Omega_3) = |DD| + |non-DD| - rk(full constraint matrix)
+
+======================================================================
+FORMULA TEST at n=6
+======================================================================
+  ... 10000/32768 (12s), mismatches=0
+  ... 20000/32768 (25s), mismatches=0
+  ... 30000/32768 (39s), mismatches=0
+
+n=6: Done in 42s
+Mismatches: 0/32768
+  ** CORRECT FORMULA VERIFIED at n=6! **
+  dim(Omega_3) = |DD| + |non-DD| - rk(constraint matrix)
+  = |A_3| - rk(constraint matrix)
+  where constraint matrix has one row per invalid d_1/d_2 face
+  and one column per non-DD 3-path
+
+======================================================================
+CONSTRAINT MATRIX STRUCTURE
+======================================================================
+
+Rank reduction from cross-links at n=5:
+Rank reduction distribution: {np.int64(0): 120, np.int64(2): 360, np.int64(3): 120, np.int64(4): 120, np.int64(5): 24, np.int64(6): 160}
+  reduction=0: block-diagonal (no cross-link effect)
+  reduction>0: cross-links reduce constraints
+
+Done.
