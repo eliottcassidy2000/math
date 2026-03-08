@@ -1173,3 +1173,23 @@ OPEN: Why are the p-coefficients supported only on all-odd partitions at n=7? Is
 **Status:** IDENTIFIED. Stanley-Stembridge (e-positivity of chromatic SF for 3+1-free posets) proved by Hikita 2024.
 **Connection:** Via Mitrovic-Stojadinovic, Redei-Berge U_T connects to chromatic SF. If tournament poset is (3+1)-free, U_T inherits e-positivity.
 **Next step:** Check if tournament arc ordering posets are (3+1)-free. Investigate Hessenberg varieties approach.
+
+### INV-114: Flip Formula F(T,x) - F(T',x) = (x-1)*D(x) — VERIFIED n=4,5
+**Source:** opus-2026-03-07-S45 (computational discovery)
+**Status:** VERIFIED at n=4 (384/384) and n=5 (10240/10240). D(x) = G_uv(x) - G_vu(x) is anti-palindromic.
+**What:** For arc u->v in T, flip gives T'. The difference F(T)-F(T') factors as (x-1)*D(x). Also G_uv + G_vu = 2*F(T/e,x). Consequence: H(T) = H(T') under single arc flip (known, but this gives polynomial-level refinement).
+**Scripts:** `04-computation/f_poly_flip_formula.py`, `04-computation/flip_formula_D_analysis.py`
+**Next step:** (1) Prove algebraically using Redei-Berge. (2) Characterize D(x) — depends on global structure, not just local arc data. (3) Iterate: F(T)-F(T'') for multi-flip?
+
+### INV-115: Matroid Structure of Vertex-Disjoint Odd Cycles — BOUNDARY at n=5
+**Source:** opus-2026-03-07-S45 (computational discovery)
+**Status:** VERIFIED. Exchange axiom holds at n=5 (1024/1024) but FAILS at n>=6 (15360/32768 at n=6).
+**What:** Collections of vertex-disjoint odd directed cycles in T form the independent sets of a matroid if and only if n<=5. At n>=6, maximal independent sets can have different sizes.
+**Script:** `04-computation/gammoid_matroid_test.py`
+**Next step:** (1) Prove n<=5 case (small enough for case analysis). (2) Characterize failure at n=6 — which exchange pairs fail? (3) Relationship to Omega(T) perfectness boundary (perfect through n=7, fails n=8).
+
+### INV-116: Transfer Matrix W(x) and per(W) — EXPLORED
+**Source:** opus-2026-03-07-S45
+**Status:** EXPLORED. per(W(1)) = D_n (subfactorial) universally. F(T,x) = Hamiltonian path sum over W entries. per(W(x)) palindromic for certain tournament classes.
+**Scripts:** `04-computation/transfer_matrix_F_connection.py`, `04-computation/per_W_analysis.py`
+**Next step:** (1) Explore eigenvalues of W(x) at specific x values. (2) Connection to Irving-Omar det formula (INV-046). (3) Can det(I-zW) generating function extract F?

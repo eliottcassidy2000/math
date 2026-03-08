@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S45 — 2026-03-07 (Flip Formula, Transfer Matrix, Matroid Structure)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S44 (context compacted)
+**Summary of work:**
+  Autonomous creative exploration session. Discovered and verified several new structural results.
+
+  **Major discoveries:**
+  1. **Flip formula for F(T,x):** F(T,x) - F(T',x) = (x-1) * D(x) where T' flips arc u->v. D(x) = G_uv(x) - G_vu(x) is anti-palindromic. Verified 100% at n=4 (384/384) and n=5 (10240/10240).
+  2. **G_uv + G_vu = 2*F(T/e,x):** The sum of path polynomials through arc (u,v) in either direction equals twice the contraction polynomial. Verified 100% at n=4,5.
+  3. **Matroid boundary:** Vertex-disjoint odd cycles form a matroid at n=5 (1024/1024 pass exchange axiom) but NOT at n>=6 (15360/32768 fail at n=6). Clean threshold result.
+  4. **Transfer matrix W(x):** F(T,x) = sum over Hamiltonian paths of prod W[P[i]][P[i+1]] (verified). per(W(1)) = D_n (subfactorial) universally. per(W(x)) palindromic for certain tournament classes.
+  5. **Cover polynomial limitation:** Chung-Graham C(T;x,y) cannot recover F(T,x) because its x-variable counts paths in covers, not forward edges.
+  6. **D(x) structure:** Not determined by local arc data (score_u, score_v, common neighbors). Depends on global tournament structure.
+
+  **New files created:**
+  - `04-computation/f_poly_flip_formula.py` — Flip formula verification
+  - `04-computation/flip_formula_D_analysis.py` — D(x) structure analysis
+  - `04-computation/gammoid_matroid_test.py` — Matroid exchange axiom test
+  - `04-computation/transfer_matrix_F_connection.py` — Transfer matrix W(x) analysis
+  - `04-computation/per_W_analysis.py` — Permanent of W(x) analysis
+  - `04-computation/deletion_contraction_F_poly.py` — F(T,x) deletion-contraction attempts (v1-v3)
+
+**Unresolved threads:**
+  - Prove flip formula algebraically (verified computationally only)
+  - Characterize D(x) = G_uv - G_vu: what global invariants determine it?
+  - Gessel's graphic Eulerian generating function for tournaments (uninvestigated)
+  - Matroid at n=5: is this related to Omega(T) perfectness at n<=7?
+  - F(omega) mod 9 algebraic proof (agent launched, results unclear)
+
 ## opus-2026-03-07-S44 — 2026-03-07 (Creative Inquisition: F(T,x) Deep Dive)
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S43b (context compacted)
