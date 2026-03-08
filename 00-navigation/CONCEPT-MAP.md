@@ -171,7 +171,7 @@
 | **Representation theory** | Pin grid = staircase Young diagram δ_{n−2}; hook lengths all odd | Medium | T009 |
 | **Algebraic combinatorics** | U_T = Rédei-Berge symmetric function | Strong | Grinberg-Stanley |
 | **Chromatic polynomial theory** | Chromatic SF ≈ Rédei-Berge at poset level | Strong | Mitrovic-Stojadinovic |
-| **Hopf algebras** | Deletion-contraction for noncommuting W_X | Medium | Mitrovic 2025 |
+| **Hopf algebras / Deletion-contraction** | W_X = W_{X\e} - W_{X/e}↑ for noncommuting Redei-Berge | Strong | Mitrovic arXiv:2504.20968 |
 | **Number theory** | Paley tournaments via quadratic residues; 1729 appearance | Medium | T019, T025 |
 | **2-adic analysis** | H(T) mod 2^k tower from I(Ω,2^k) | Speculative | T007 |
 | **Plane partitions / ASMs** | 2^{m²} count; TSSCPP connection | Weak | T008 |
@@ -286,6 +286,21 @@
 **Idea:** A tournament defines a total preorder on pairs — exactly one of i→j or j→i holds, like a causal relation. In physics, causal sets are partially ordered sets modeling spacetime. A tournament is a "maximally connected" causal set. Hamiltonian paths are "world lines" visiting every event exactly once. The parity of H(T) (always odd, Rédei) is a "topological charge" of the causal structure.
 
 **Connection to loop quantum gravity:** The spin foam models of loop quantum gravity use labeled graphs and their amplitudes. A tournament with weighted arcs defines a spin foam amplitude. The independence polynomial I(Ω,x) at x=2 could be a partition function in this framework.
+
+#### DELETION-CONTRACTION FRAMEWORK (Mitrovic 2025 — KEY LEAD)
+**Paper:** arXiv:2504.20968 "The Redei-Berge function in noncommuting variables"
+
+**Core result:** The noncommuting Redei-Berge function W_X satisfies:
+- **Deletion-contraction:** W_X = W_{X\e} - W_{X/e}↑ for any edge e
+- **Cycle decomposition (Thm 3.16):** For edges e₁,...,e_k forming a cycle: W_X = Σ_{S⊆{e₁,...,e_k}, S≠∅} (-1)^{|S|-1} W_{X\S}
+- **Tournament formula (Cor 3.12):** W_X = Σ_{σ: all cycles odd} 2^{ψ(σ)} p_{Type(σ)} — THIS IS OCF!
+- **Contraction:** For e=(u,v), X/e merges u,v into vertex e with edges (w,e) iff (w,u)∈E, (e,w) iff (v,w)∈E
+
+**Why this matters:** Deletion-contraction gives an INDUCTIVE proof framework for OCF. The ordinary (commutative) Redei-Berge function does NOT satisfy deletion-contraction, but the noncommuting version does. Specializing to commutative variables at the end recovers all tournament results.
+
+**Connection to transfer matrix:** The contraction X/e produces a digraph on n-1 vertices. If we can track how M[a,b] changes under contraction, this could prove THM-030 (transfer matrix symmetry) inductively.
+
+**Status:** CONNECTION IDENTIFIED but NOT EXPLOITED. Most promising new algebraic lead per INV-033.
 
 #### 19. ACYCLIC COMPLEX OF TOURNAMENT ARCS
 **Idea:** The acyclic complex Acyc(T) = {arc subsets containing no directed cycle} is a simplicial complex. Its f-vector encodes the cycle structure.
