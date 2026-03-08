@@ -36,6 +36,31 @@ Entry format:
   - Is Ω(T) claw-free for ALL n? (would give universal real-rootedness)
   - Pfaffian formula: does (t₃, score) determine |Pf|? (pfaffian_structure.py too slow)
   - Todd class connection to path homology (speculative)
+## kind-pasteur-2026-03-07-S39 — 2026-03-07 (Tournament counting formulas A000568)
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-07-S38 (THM-094, mod-p)
+**Summary of work:**
+  Investigated the sequence T(n) = number of non-isomorphic tournaments (OEIS A000568):
+  1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056, ...
+
+  **Main results:**
+  1. Davis/Burnside formula: T(n) = sum_{lambda |- n, all parts odd} 2^{t(lambda)}/z(lambda)
+     where t(lambda) = (1/2)[sum a_r a_s gcd(r,s) - sum a_r], z(lambda) = prod r^{a_r} a_r!
+  2. Asymptotic: T(n) ~ 2^{C(n,2)}/n! with correction 1 + n(n-1)(n-2)/(3*4^{n-2}) + ...
+     Growth ratio T(n+1)/T(n) ~ 2^n/(n+1)
+  3. Strongly connected decomposition: SC(n) via OGF C(x) = 1 - 1/B(x) where B = OGF of T
+     SC fraction grows from 50% (n=3) to 98.8% (n=12)
+  4. Self-converse counts (A002785): 1,1,2,2,8,12,88,... verified exhaustively through n=6
+     T(n) and SC(n) have same parity; T(n) even for all n >= 3
+  5. Burnside decomposition by cycle type, small cases (n=1..6) worked out by hand
+  6. Even graphs equinumerous with tournaments (Glasby-Praeger-Royle 2023)
+  7. Computed T(n) through n=20, verified against OEIS
+
+**New files:**
+  - `04-computation/tournament_count_formulas.py` — comprehensive analysis
+
+**Unresolved threads:** Connection between tournament counting and F-polynomial structure;
+  whether Burnside formula has interplay with THM-094 (F_k mod 2)
 
 ---
 
