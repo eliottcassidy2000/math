@@ -1,0 +1,10 @@
+======================================================================
+SOURCE/SINK HYPOTHESIS FOR δ-INJECTIVITY
+======================================================================
+
+n=5: 1024 tournaments in 9s
+  Interior checks (1 ≤ d⁺ ≤ n-2): 600
+  Interior failures: 0
+  Boundary checks (source/sink): 240
+  Boundary failures: 4
+  ✓ δ is injective for ALL non-source/non-sink vertices at n=5
