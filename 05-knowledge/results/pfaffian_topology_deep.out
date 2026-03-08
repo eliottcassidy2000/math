@@ -1,0 +1,44 @@
+======================================================================
+n=6: EXHAUSTIVE Pf-Betti analysis (32768 tournaments)
+======================================================================
+  10000/32768 (25.6s)
+  20000/32768 (51.6s)
+  30000/32768 (78.7s)
+
+Total: 85.2s
+
+Phase counts: P=27648, C=4800, S=320
+
+P (27648):
+  |Pf| distribution: {1: 11520, 3: 6720, 5: 4608, 7: 3600, 9: 1200}
+  spectral gap: mean=2.674, min=1.268, max=3.464
+
+C (4800):
+  |Pf| distribution: {1: 3840, 3: 960}
+  spectral gap: mean=3.301, min=2.922, max=3.464
+
+S (320):
+  |Pf| distribution: {7: 240, 9: 80}
+  spectral gap: mean=1.551, min=1.268, max=1.646
+
+C-phase |Pf| values: [1, 3]
+S-phase |Pf| values: [7, 9]
+C intersect S: []
+CONFIRMED: |Pf| PERFECTLY SEPARATES C from S at n=6!
+
+======================================================================
+n=6: SPECTRAL GAP BY PHASE
+======================================================================
+
+P (27648):
+  gap: mean=2.674, std=0.586, min=1.268, max=3.464
+
+C (4800):
+  gap: mean=3.301, std=0.228, min=2.922, max=3.464
+
+S (320):
+  gap: mean=1.551, std=0.164, min=1.268, max=1.646
+
+C gap range: (np.float64(2.921625983055023), np.float64(3.4641016151377544))
+S gap range: (np.float64(1.2679491924311208), np.float64(1.645751311064597))
+SPECTRAL GAP also PERFECTLY SEPARATES C from S!
