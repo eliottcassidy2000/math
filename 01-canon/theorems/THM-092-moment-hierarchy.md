@@ -1,7 +1,7 @@
 # THM-092: Moment-Cycle Hierarchy for Forward-Edge Distribution
 
-**Status:** PROVED for r=0,1,2,3 (algebraic); VERIFIED for r=4 at n=5,6; CONJECTURED for general r
-**Proved by:** opus-2026-03-07-S46c
+**Status:** PROVED for r=0,1,2,3 (algebraic); VERIFIED for r=4 at n=5,6,7; kappa_6 at n=7; CONJECTURED for general r
+**Proved by:** opus-2026-03-07-S46c, opus-2026-03-07-S46d (kappa_4 general, kappa_6)
 **Scope:** All tournaments
 
 ---
@@ -73,12 +73,14 @@ At n=7 (VERIFIED by sampling, 156 F-classes):
 
 ---
 
-## Open Questions
+## Open Questions (updated S46d)
 
-1. What is the exact formula for kappa_4 at general n?
-2. Does kappa_6 introduce t7 (directed 7-cycles)?
+1. ~~What is the exact formula for kappa_4 at general n?~~ **RESOLVED:** See THM-093.
+2. ~~Does kappa_6 introduce t7 (directed 7-cycles)?~~ **YES.** Verified at n=7 (149 F-classes). kappa_6 = (n+1)/252 + (2/C(n,6))*t7 + nonlinear lower terms.
 3. Is there a generating function for the cumulant hierarchy?
 4. Does the hierarchy connect to the Fourier decomposition (INV-050)?
+5. **NEW:** Prove the universal coefficient conjecture: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k).
+6. **NEW:** What determines the nonlinear cross terms in kappa_{2k} for k >= 3?
 
 ---
 
