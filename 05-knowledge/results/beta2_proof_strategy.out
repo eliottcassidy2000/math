@@ -1,0 +1,138 @@
+======================================================================
+BETA2 ON NON-TOURNAMENTS
+======================================================================
+  C_3 (directed cycle): beta = [np.int64(1), np.int64(1), 0]
+  C_4 (directed cycle): beta = [np.int64(1), np.int64(1), 0, 0]
+  C_5 (directed cycle): beta = [np.int64(1), np.int64(1), 0, 0, 0]
+  C_6 (directed cycle): beta = [np.int64(1), np.int64(1), 0, 0, 0]
+  C_7 (directed cycle): beta = [np.int64(1), np.int64(1), 0, 0, 0]
+  C_8 (directed cycle): beta = [np.int64(1), np.int64(1), 0, 0, 0]
+
+Bidirectional complete graphs:
+  K_3 (bidirectional): beta = [np.int64(1), 0, np.int64(2)]
+  K_4 (bidirectional): beta = [np.int64(1), 0, 0, np.int64(9)]
+  K_5 (bidirectional): beta = [np.int64(1), 0, 0, 0, np.int64(44)]
+
+Random dense digraphs (edge prob=0.5):
+  n=5: beta2>0 in 21/200 random digraphs
+  n=6: beta2>0 in 47/200 random digraphs
+  n=7: beta2>0 in 45/200 random digraphs
+
+Almost-tournaments (remove one edge from tournament):
+  n=5: beta2>0 in 80 out of 20480 edge removals
+    bits=2, removed 4->3: beta=[np.int64(1), 0, np.int64(1)]
+    bits=11, removed 2->1: beta=[np.int64(1), 0, np.int64(1)]
+    bits=17, removed 4->3: beta=[np.int64(1), 0, np.int64(1)]
+
+======================================================================
+COMPLETENESS PROPERTY
+======================================================================
+
+Key property of tournaments for beta2=0:
+
+For any vertices a, c with c->a (backward pair),
+and any vertex d with c->d or d->c:
+
+If a->c does NOT hold (backward pair), the "junk face" (a,c,d) must cancel.
+
+In a tournament, for every such pair (a,c) with c->a:
+- A^2[a,c] = #{b : a->b->c} >= 0
+- If A^2[a,c] >= 1, we have at least one intermediary b
+- The cancellation requires: sum of coefficients of all (a,b,c,d) = 0
+
+The COMPLETENESS ensures every vertex is either beaten by a or by c,
+creating enough paths to cancel all junk faces.
+
+Similar for d_2 faces (a,b,d) with d->b.
+
+  A^2[0,1]=0 in bits=0: d_a=0, d_c=1
+  A^2[0,2]=0 in bits=0: d_a=0, d_c=2
+  A^2[0,3]=0 in bits=0: d_a=0, d_c=3
+  A^2[0,4]=0 in bits=0: d_a=0, d_c=4
+  A^2[1,2]=0 in bits=0: d_a=1, d_c=2
+  A^2[1,3]=0 in bits=0: d_a=1, d_c=3
+  A^2[1,4]=0 in bits=0: d_a=1, d_c=4
+  A^2[2,3]=0 in bits=0: d_a=2, d_c=3
+  A^2[2,4]=0 in bits=0: d_a=2, d_c=4
+  A^2[3,4]=0 in bits=0: d_a=3, d_c=4
+  bits=0: NOT all A^2 positive
+  A^2[0,2]=0 in bits=1: d_a=1, d_c=2
+  A^2[0,3]=0 in bits=1: d_a=1, d_c=3
+  A^2[0,4]=0 in bits=1: d_a=1, d_c=4
+  A^2[1,0]=0 in bits=1: d_a=0, d_c=1
+  A^2[1,2]=0 in bits=1: d_a=0, d_c=2
+  A^2[1,3]=0 in bits=1: d_a=0, d_c=3
+  A^2[1,4]=0 in bits=1: d_a=0, d_c=4
+  A^2[2,3]=0 in bits=1: d_a=2, d_c=3
+  A^2[2,4]=0 in bits=1: d_a=2, d_c=4
+  A^2[3,4]=0 in bits=1: d_a=3, d_c=4
+  bits=1: NOT all A^2 positive
+  A^2[0,3]=0 in bits=2: d_a=1, d_c=3
+  A^2[0,4]=0 in bits=2: d_a=1, d_c=4
+  A^2[1,3]=0 in bits=2: d_a=1, d_c=3
+  A^2[1,4]=0 in bits=2: d_a=1, d_c=4
+  A^2[2,3]=0 in bits=2: d_a=1, d_c=3
+  A^2[2,4]=0 in bits=2: d_a=1, d_c=4
+  A^2[3,4]=0 in bits=2: d_a=3, d_c=4
+  bits=2: NOT all A^2 positive
+  A^2[0,3]=0 in bits=3: d_a=2, d_c=3
+  A^2[0,4]=0 in bits=3: d_a=2, d_c=4
+  A^2[1,0]=0 in bits=3: d_a=0, d_c=2
+  A^2[1,2]=0 in bits=3: d_a=0, d_c=1
+  A^2[1,3]=0 in bits=3: d_a=0, d_c=3
+  A^2[1,4]=0 in bits=3: d_a=0, d_c=4
+  A^2[2,0]=0 in bits=3: d_a=1, d_c=2
+  A^2[2,3]=0 in bits=3: d_a=1, d_c=3
+  A^2[2,4]=0 in bits=3: d_a=1, d_c=4
+  A^2[3,4]=0 in bits=3: d_a=3, d_c=4
+  bits=3: NOT all A^2 positive
+  A^2[0,4]=0 in bits=4: d_a=1, d_c=4
+  A^2[1,2]=0 in bits=4: d_a=1, d_c=2
+  A^2[1,4]=0 in bits=4: d_a=1, d_c=4
+  A^2[2,4]=0 in bits=4: d_a=2, d_c=4
+  A^2[3,4]=0 in bits=4: d_a=2, d_c=4
+  bits=4: NOT all A^2 positive
+  A^2[0,4]=0 in bits=5: d_a=2, d_c=4
+  A^2[1,0]=0 in bits=5: d_a=0, d_c=2
+  A^2[1,2]=0 in bits=5: d_a=0, d_c=2
+  A^2[1,3]=0 in bits=5: d_a=0, d_c=2
+  A^2[1,4]=0 in bits=5: d_a=0, d_c=4
+  A^2[2,4]=0 in bits=5: d_a=2, d_c=4
+  A^2[3,4]=0 in bits=5: d_a=2, d_c=4
+  bits=5: NOT all A^2 positive
+  A^2[0,4]=0 in bits=6: d_a=2, d_c=4
+  A^2[1,4]=0 in bits=6: d_a=1, d_c=4
+  A^2[2,3]=0 in bits=6: d_a=1, d_c=2
+  A^2[2,4]=0 in bits=6: d_a=1, d_c=4
+  A^2[3,4]=0 in bits=6: d_a=2, d_c=4
+  bits=6: NOT all A^2 positive
+  A^2[0,4]=0 in bits=7: d_a=3, d_c=4
+  A^2[1,0]=0 in bits=7: d_a=0, d_c=3
+  A^2[1,2]=0 in bits=7: d_a=0, d_c=1
+  A^2[1,3]=0 in bits=7: d_a=0, d_c=2
+  A^2[1,4]=0 in bits=7: d_a=0, d_c=4
+  A^2[2,0]=0 in bits=7: d_a=1, d_c=3
+  A^2[2,3]=0 in bits=7: d_a=1, d_c=2
+  A^2[2,4]=0 in bits=7: d_a=1, d_c=4
+  A^2[3,0]=0 in bits=7: d_a=2, d_c=3
+  A^2[3,4]=0 in bits=7: d_a=2, d_c=4
+  bits=7: NOT all A^2 positive
+  A^2[1,2]=0 in bits=8: d_a=1, d_c=2
+  A^2[1,3]=0 in bits=8: d_a=1, d_c=3
+  A^2[2,3]=0 in bits=8: d_a=2, d_c=3
+  bits=8: NOT all A^2 positive
+  A^2[1,0]=0 in bits=9: d_a=0, d_c=2
+  A^2[1,2]=0 in bits=9: d_a=0, d_c=2
+  A^2[1,3]=0 in bits=9: d_a=0, d_c=3
+  A^2[1,4]=0 in bits=9: d_a=0, d_c=3
+  A^2[2,3]=0 in bits=9: d_a=2, d_c=3
+  bits=9: NOT all A^2 positive
+
+A^2[a,c]=0 rate for backward pairs at n=6:
+  Total backward pairs: 491520
+  A^2=0 cases: 155520 (31.6%)
+  A^2>0 cases: 336000
+  Note: A^2=0 means NO intermediate b exists - this is the transitive closure case
+
+
+Done.

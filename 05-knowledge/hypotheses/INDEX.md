@@ -89,7 +89,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-234 | beta_2 = 0 via arc-flip invariance: beta_2(T_trans)=0 + HYP-233 => beta_2=0 for all | PROOF STRATEGY. Equivalent to: delta(rk d_3) = delta(dim Omega_2) + delta(beta_1) | beta2_arcflip_mechanism.py |
 | HYP-235 | dim(Omega_2) = \|A_2\| - J_2 where J_2 = #{(a,c): c→a and A²[a,c]>0} | CONFIRMED exhaustive n=4,5,6. Junk pairs contribute exactly one linear constraint each | beta2_omega_formula.py |
 | HYP-236 | ALL Z_2 cycles use ALL n vertices | Exhaustive n=5 (3600/3600 cycles), sampled n=6 (5000 tournaments). Full vertex support | beta2_filling_structure.py |
-| HYP-237 | β_p = 0 for ALL p ≥ 2 at n=5 | Exhaustive 1024 tournaments: β₂=β₃=β₄=0 always. Only β₀=1, β₁∈{0,1} | beta2_simplex_deformation.py |
+| HYP-237 | β_p = 0 for ALL p ≥ 2 at ALL n | **REFUTED**: β₃=1 at n=6 (320/32768), β₄=1 at n=7. TRUE at n≤5. ONLY β₂=0 is universal (HYP-249) | beta3_analysis.py |
 | HYP-238 | χ = 1 - β₁ for all tournaments (Euler char from simplex deformation) | n=4: χ∈{0,1}, n=5: χ∈{0,1}, matches 1-β₁ exactly. NOT constant! | beta2_simplex_deformation.py |
 | HYP-239 | DT+cancellation fills ALL Z₂ for ALL tournaments | Exhaustive n=5 (DT alone), n=6 (960 need cancel). Sampled n=7 (1000: 920 DT+80 cancel), n=8 (1000: 896+104). 0 failures. DT rate: 100/97/92/90% | beta2_filling_algebraic.py, beta2_dt_cancel_n7.py |
 | HYP-240 | DT deficit only for scores (1,2,2,3,3,4) and (2,2,2,3,3,3) at n=6 | 720+240=960 deficit tours. All deficit cases have beta_1=0. Max deficit=2 | beta2_deficit_anatomy.py |
@@ -98,6 +98,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-243 | H₂(flag complex) = 0 for ALL tournaments | **REFUTED**: 40/1024 at n=5 (all c₃=4), 6480/32768 at n=6, up to H₂=4 at n=7 | beta2_flag_complex.py |
 | HYP-244 | DT_c flow conservation fills simplicial H₂ holes | n=5: 40/40 simplicial holes filled by exactly 3 DT_c paths; NT cancels via 3-cycle flow | beta2_simp_hole_filling.py |
 | HYP-245 | Ω₃ ⊋ DT+cancel extra elements never in Z₃ | 144/1024 n=5 tours have extras; ALL extras have nonzero ∂₃ | beta2_extra_omega3.py |
+| HYP-246 | dim(Ω₃) = |A₃| - rk(C) where C = constraint matrix with rows for invalid d₁/d₂ faces | CONFIRMED exhaustive n=5 (0/1024), n=6 (0/32768). C has cross-links from NN paths | beta2_omega3_correct.py |
+| HYP-247 | β₁ ≠ c₃ for tournament path homology | TRUE: β₁∈{0,1} at n=5 while c₃∈{0,...,5}. rk(bd₂\|_Ω₂) usually = C(n-1,2), not C(n-1,2)-c₃ | beta2_beta1_check.py |
+| HYP-248 | β₃ > 0 first at n=6: exactly 320/32768 tournaments (blow-up of C₃) | CONFIRMED exhaustive. Two iso classes: scores (1,1,1,4,4,4) [80, c₃=2] and (2,2,2,3,3,3) [240, c₃=8] | beta3_analysis.py |
+| HYP-249 | β₂(T) = 0 for ALL tournaments at ALL n | Extended HYP-207. Exhaustive n≤6, sampled n≤8 (0 failures). β₃,β₄ CAN be nonzero. β₂ is special. | beta2_surjectivity.py |
+| HYP-250 | DD paths alone fill Z₂ only at n=5; non-DD Ω₃ needed at n≥6 | n=5: 100% DD fills. n=6: 960/32768 need non-DD. n=7: ~8%. n=8: ~8.5% | beta2_surjectivity.py |
 
 ---
 

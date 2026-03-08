@@ -1,0 +1,76 @@
+======================================================================
+BETA2 ON COMPLETE ORIENTED GRAPHS
+======================================================================
+
+n=3: beta2>0 in 1/27 complete oriented graphs
+  betti=[np.int64(1), 0, np.int64(2)], bidirectional_edges=3
+    [0, 1, 1]
+    [1, 0, 1]
+    [1, 1, 0]
+
+n=4: beta2>0 in 24/729 complete oriented graphs
+  betti=[np.int64(1), 0, np.int64(1), 0], bidirectional_edges=3
+    [0, 1, 1, 0]
+    [1, 0, 1, 1]
+    [1, 1, 0, 1]
+    [1, 0, 0, 0]
+  betti=[np.int64(1), 0, np.int64(1), 0], bidirectional_edges=3
+    [0, 1, 1, 1]
+    [1, 0, 1, 0]
+    [1, 1, 0, 1]
+    [0, 1, 0, 0]
+  betti=[np.int64(1), 0, np.int64(1), 0], bidirectional_edges=3
+    [0, 1, 1, 0]
+    [1, 0, 1, 0]
+    [1, 1, 0, 1]
+    [1, 1, 0, 0]
+
+--- n=5 ---
+n=5: beta2>0 in 360/59049 complete oriented graphs
+
+By number of bidirectional edges:
+  bidir=0: 0/1024 (0.0%)
+  bidir=1: 0/5120 (0.0%)
+  bidir=2: 0/11520 (0.0%)
+  bidir=3: 240/15360 (1.6%)
+  bidir=4: 120/13440 (0.9%)
+  bidir=5: 0/8064 (0.0%)
+  bidir=6: 0/3360 (0.0%)
+  bidir=7: 0/960 (0.0%)
+  bidir=8: 0/180 (0.0%)
+  bidir=9: 0/20 (0.0%)
+  bidir=10: 0/1 (0.0%)
+
+======================================================================
+EDGE REMOVAL ANALYSIS: n=5
+======================================================================
+n=5: 80/10240 edge removals create beta2>0
+
+By (score, d_u, d_v) of removed edge u->v:
+  scores=(0, 1, 3, 3, 3), d_u=1, d_v=0: 40
+  scores=(1, 1, 1, 3, 4), d_u=4, d_v=3: 40
+
+======================================================================
+STRUCTURAL INSIGHT
+======================================================================
+
+SUMMARY:
+- Tournaments (0 bidirectional edges): beta2 = 0 ALWAYS
+- 1+ bidirectional edges: beta2 can be > 0
+- Removing an edge from a tournament: beta2 can be > 0
+
+This confirms: TOURNAMENT COMPLETENESS is essential for beta2=0.
+Not just "completeness" (both directions count) but the
+specific property that between each pair there is EXACTLY ONE edge.
+
+PROOF DIRECTION:
+The key constraint is that in a tournament, for any triple {a,b,c}:
+- Exactly 3 edges exist (one per pair)
+- Exactly 1 directed 3-path per ordering of 2 consecutive edges
+- The triple is either a 3-cycle or a transitive triple
+
+This forces enough "cancellation" in the chain complex to kill beta2.
+
+
+
+Done.
