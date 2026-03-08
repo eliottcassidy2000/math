@@ -8,3 +8,4 @@ n=5: 1024 tournaments in 9s
   Boundary checks (source/sink): 240
   Boundary failures: 4
   ✓ δ is injective for ALL non-source/non-sink vertices at n=5
+  n=6: 5000/32768 (184s)

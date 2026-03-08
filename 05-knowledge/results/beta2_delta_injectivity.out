@@ -19,3 +19,14 @@ n=5: 1024 tournaments in 9s
   n=6: 10000/32768 (281s)
   n=6: 15000/32768 (430s)
   n=6: 20000/32768 (569s)
+  n=6: 25000/32768 (718s)
+  n=6: 30000/32768 (877s)
+
+n=6: 32768 tournaments in 999s
+  H₂(T,T\v) > 0 for some v: 19488
+  δ injective for ALL v: 19487/19488
+  δ injective for SOME v: 32768/32768
+  δ-injectivity failures (individual (T,v) pairs): 1
+  ✗ δ fails for 1 (T,v) pairs
+
+Done.

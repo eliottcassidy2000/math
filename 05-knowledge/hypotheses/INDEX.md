@@ -98,6 +98,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-243 | H₂(flag complex) = 0 for ALL tournaments | **REFUTED**: 40/1024 at n=5 (all c₃=4), 6480/32768 at n=6, up to H₂=4 at n=7 | beta2_flag_complex.py |
 | HYP-244 | DT_c flow conservation fills simplicial H₂ holes | n=5: 40/40 simplicial holes filled by exactly 3 DT_c paths; NT cancels via 3-cycle flow | beta2_simp_hole_filling.py |
 | HYP-245 | Ω₃ ⊋ DT+cancel extra elements never in Z₃ | 144/1024 n=5 tours have extras; ALL extras have nonzero ∂₃ | beta2_extra_omega3.py |
+| HYP-246 | ∂₃∂₃ᵀ\|_{Z₂} = nI for transitive tournament | CONFIRMED n=4,5,6. λ=n dominant eigenvalue for all tournaments (68.9% at n=5, 43.9% at n=6) | beta2_laplacian.py, beta2_eigenvalue_n.py |
+| HYP-247 | ∂₃∂₃ᵀ\|_{Z₂} = nI for ALL n=4 tournaments | CONFIRMED exhaustive 64/64. Single eigenvalue 4 on Z₂ always | beta2_laplacian.py |
+| HYP-248 | δ: H₂(T,T\\v)→H₁(T\\v) injective for ALL (T,v) at n≥4 | FALSE: 4 failures n=5, 1 at n=6. BUT injective for SOME v in ALL T (100% at n=4,5,6) | beta2_delta_injectivity.py |
+| HYP-249 | δ injective for non-source/non-sink v (1≤d⁺≤n-2) | CONFIRMED n=5 (0/600 interior failures). All failures at d⁺=0 or d⁺=n-1 | beta2_delta_sourcesink.py |
+| HYP-250 | β₂=0 via LES induction: base β₂=0 at n=3, step uses δ-injectivity at interior v | PROOF STRATEGY. Reduces to HYP-249 for all n. Verified n=4,5,6 | beta2_delta_injectivity.py |
 | HYP-246 | dim(Ω₃) = |A₃| - rk(C) where C = constraint matrix with rows for invalid d₁/d₂ faces | CONFIRMED exhaustive n=5 (0/1024), n=6 (0/32768). C has cross-links from NN paths | beta2_omega3_correct.py |
 | HYP-247 | β₁ ≠ c₃ for tournament path homology | TRUE: β₁∈{0,1} at n=5 while c₃∈{0,...,5}. rk(bd₂\|_Ω₂) usually = C(n-1,2), not C(n-1,2)-c₃ | beta2_beta1_check.py |
 | HYP-248 | β₃ > 0 first at n=6: exactly 320/32768 tournaments (blow-up of C₃) | CONFIRMED exhaustive. Two iso classes: scores (1,1,1,4,4,4) [80, c₃=2] and (2,2,2,3,3,3) [240, c₃=8] | beta3_analysis.py |
@@ -124,7 +129,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112
