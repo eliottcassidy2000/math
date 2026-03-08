@@ -1,0 +1,215 @@
+======================================================================
+GOOD DELETION TEST: exists v with beta1(T\v) = 0?
+======================================================================
+
+n=4: 64 tournaments (0s)
+  Tournaments with NO good vertex: 0/64
+  Good vertex count distribution: {2: 24, 3: 16, 4: 24}
+  ==> EVERY tournament at n=4 has a good vertex!
+  NO GOOD V! T#76 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#105 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#202 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#217 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#284 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#298 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#313 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#326 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#341 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#355 scores=(2, 2, 2, 2, 2)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+
+n=5: 1024 tournaments (2s)
+  Tournaments with NO good vertex: 24/1024
+  Good vertex count distribution: {0: 24, 1: 120, 2: 280, 3: 120, 4: 240, 5: 240}
+  NO GOOD V! T#280 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#284 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#401 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#408 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#409 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#412 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#465 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#473 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#792 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+  NO GOOD V! T#794 scores=(2, 2, 2, 3, 3, 3)
+    v=0 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=1 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=2 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=3 (d+=2): betti=[np.int64(1), np.int64(1), 0]
+    v=4 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+    v=5 (d+=3): betti=[np.int64(1), np.int64(1), 0]
+
+n=6: 32768 tournaments (92s)
+  Tournaments with NO good vertex: 960/32768
+  Good vertex count distribution: {0: 960, 1: 1920, 2: 1920, 3: 4320, 4: 7200, 5: 7968, 6: 8480}
+
+======================================================================
+GOOD DELETION: SAMPLING AT n=7
+======================================================================
+  1000/5000 (6s), no_good=9
+  2000/5000 (12s), no_good=22
+  3000/5000 (18s), no_good=30
+  4000/5000 (24s), no_good=37
+  5000/5000 (30s), no_good=49
+
+n=7: 5000 samples (30s)
+  No good vertex: 49/5000
+  Good vertex count dist: {0: 49, 1: 72, 2: 99, 4: 280, 5: 710, 6: 1329, 7: 2461}
+
+======================================================================
+GOOD DELETION: SAMPLING AT n=8
+======================================================================
+  500/2000 (1s), no_good=0
+  NO GOOD V! bits=219827506 scores=(3, 3, 3, 3, 4, 4, 4, 4)
+  NO GOOD V! bits=26153615 scores=(2, 3, 3, 4, 4, 4, 4, 4)
+  1000/2000 (1s), no_good=2
+  1500/2000 (2s), no_good=2
+  2000/2000 (3s), no_good=2
+
+n=8: 2000 samples (3s)
+  No good vertex: 2/2000
+
+======================================================================
+WHICH TOURNAMENTS HAVE ALL beta1(T\v) = 1?
+======================================================================
+  n=5: T#76 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#105 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#202 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#217 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#284 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#298 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#313 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#326 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#341 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#355 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#410 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#467 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#556 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#613 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#668 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#682 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#697 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#710 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#725 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#739 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#806 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#821 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#918 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+  n=5: T#947 scores=(2, 2, 2, 2, 2) has ALL beta1(T\v)=1
+
+n=5: 24/1024 have all beta1(T\v)=1
+  n=6: T#280 scores=(2, 2, 2, 3, 3, 3)
+  n=6: T#284 scores=(2, 2, 2, 3, 3, 3)
+  n=6: T#401 scores=(2, 2, 2, 3, 3, 3)
+  n=6: T#408 scores=(2, 2, 2, 3, 3, 3)
+  n=6: T#409 scores=(2, 2, 2, 3, 3, 3)
+  n=6: 10000/32768 (8s), all_b1=268
+  n=6: 20000/32768 (16s), all_b1=568
+  n=6: 30000/32768 (25s), all_b1=904
+
+n=6: 960/32768 have all beta1(T\v)=1 (27s)
+
+
+Done.

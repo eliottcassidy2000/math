@@ -1,0 +1,84 @@
+======================================================================
+Q1: WHEN IS H2(T,T\v) > 0?
+======================================================================
+
+n=4 (64 tournaments, 0s):
+  (beta2_T, beta1(T\v), is_interior) -> count:
+    beta2=0, beta1(T\v)=0, EXT: 48
+    beta2=0, beta1(T\v)=0, INT: 144
+    beta2=0, beta1(T\v)=1, EXT: 16
+    beta2=0, beta1(T\v)=1, INT: 48
+
+n=5 (1024 tournaments, 4s):
+  (beta2_T, beta1(T\v), is_interior) -> count:
+    beta2=0, beta1(T\v)=0, EXT: 400
+    beta2=0, beta1(T\v)=0, INT: 2800
+    beta2=0, beta1(T\v)=1, EXT: 240
+    beta2=0, beta1(T\v)=1, INT: 1680
+
+n=6 (32768 tournaments, 189s):
+  (beta2_T, beta1(T\v), is_interior) -> count:
+    beta2=0, beta1(T\v)=0, EXT: 8640
+    beta2=0, beta1(T\v)=0, INT: 129600
+    beta2=0, beta1(T\v)=1, EXT: 3648
+    beta2=0, beta1(T\v)=1, INT: 54720
+
+======================================================================
+Q2: LES DIMENSION ANALYSIS
+======================================================================
+
+n=5: Full LES analysis
+  bits scores           b2T b1T b1Tv h2rel rk_delta rk_j
+     8 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+     8 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+     8 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    10 (1, 1, 2, 3, 3)    0   0    1     1             0
+    10 (1, 1, 2, 3, 3)    0   0    1     1             0
+    12 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+    12 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+    12 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+    12 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+    14 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    14 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    14 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    24 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    24 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    24 (1, 1, 2, 3, 3)    0   1    1     ?             ?
+    25 (1, 1, 2, 3, 3)    0   0    1     1             0
+    25 (1, 1, 2, 3, 3)    0   0    1     1             0
+    28 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+    28 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+    28 (1, 2, 2, 2, 3)    0   1    1     ?             ?
+
+... (1680 total interior cases with beta1(T\v)=1)
+
+======================================================================
+KEY INSIGHT: LES IMPLIES delta-injectivity <=> beta2(T)=0
+======================================================================
+
+From the LES with beta2(T\v) = 0:
+  0 -> H2(T) ->^alpha H2(T,T\v) ->^delta H1(T\v) ->^j H1(T) -> ...
+
+Exactness gives:
+  im(alpha) = ker(delta)
+  rk(alpha) = beta2(T)
+  rk(delta) = dim H2(T,T\v) - beta2(T)
+
+delta injective <=> ker(delta) = 0 <=> im(alpha) = 0 <=> beta2(T) = 0.
+
+So proving delta-injectivity for interior v IS proving beta2(T)=0.
+It's NOT a weaker statement — it's EQUIVALENT.
+
+The question is: can we prove it WITHOUT assuming beta2=0?
+
+
+======================================================================
+Q3: RANK OF j: H1(T\v) -> H1(T)
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_h2rel_characterize.py", line 378, in <module>
+    combined_check = np.hstack([b1_in_z1.T, z1_sub_in_z1T])
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\_core\shape_base.py", line 367, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 9 and the array at index 1 has size 6
