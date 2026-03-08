@@ -1,0 +1,63 @@
+======================================================================
+BETA_2 EXISTENCE CHECK at n=5,6
+======================================================================
+n=5: 0 tournaments with beta_2 > 0 (out of 1024)
+n=6: 0 tournaments with beta_2 > 0 (out of 32768) in 81.7s
+
+======================================================================
+S-PHASE DELETIONS at n=6
+======================================================================
+S-phase tournaments: 320
+ALL deletions have beta_2>0: 0
+ANY deletion has beta_2>0: 0
+
+Deletion Betti patterns:
+  [(1, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0)]: 320
+
+  H=9, beta=[1, 0, 0, 1, 0]
+    del v0: beta=[1, 0, 0, 0]
+    del v1: beta=[1, 0, 0, 0]
+    del v2: beta=[1, 0, 0, 0]
+    del v3: beta=[1, 0, 0, 0]
+    del v4: beta=[1, 0, 0, 0]
+    del v5: beta=[1, 0, 0, 0]
+
+  H=9, beta=[1, 0, 0, 1, 0]
+    del v0: beta=[1, 0, 0, 0]
+    del v1: beta=[1, 0, 0, 0]
+    del v2: beta=[1, 0, 0, 0]
+    del v3: beta=[1, 0, 0, 0]
+    del v4: beta=[1, 0, 0, 0]
+    del v5: beta=[1, 0, 0, 0]
+
+  H=9, beta=[1, 0, 0, 1, 0]
+    del v0: beta=[1, 0, 0, 0]
+    del v1: beta=[1, 0, 0, 0]
+    del v2: beta=[1, 0, 0, 0]
+    del v3: beta=[1, 0, 0, 0]
+    del v4: beta=[1, 0, 0, 0]
+    del v5: beta=[1, 0, 0, 0]
+
+======================================================================
+C-PHASE DELETIONS at n=6 (sample)
+======================================================================
+C-phase H=45 maximizers: 240
+
+Deletion Betti patterns:
+  [(1, 1, 0, 0), (1, 1, 0, 0), (1, 1, 0, 0), (1, 1, 0, 0), (1, 1, 0, 0), (1, 1, 0, 0)]: 240
+
+  H=45, beta=[1, 1, 0, 0, 0]
+    del v0: beta=[1, 1, 0, 0]
+    del v1: beta=[1, 1, 0, 0]
+    del v2: beta=[1, 1, 0, 0]
+    del v3: beta=[1, 1, 0, 0]
+    del v4: beta=[1, 1, 0, 0]
+    del v5: beta=[1, 1, 0, 0]
+
+  H=45, beta=[1, 1, 0, 0, 0]
+    del v0: beta=[1, 1, 0, 0]
+    del v1: beta=[1, 1, 0, 0]
+    del v2: beta=[1, 1, 0, 0]
+    del v3: beta=[1, 1, 0, 0]
+    del v4: beta=[1, 1, 0, 0]
+    del v5: beta=[1, 1, 0, 0]
