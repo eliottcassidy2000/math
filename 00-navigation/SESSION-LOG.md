@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-07-S46f — 2026-03-08 (A000568 Speed Suite + a(80) Record)
+**Account:** opus
+**Continuation of:** opus-2026-03-07-S46f (context window overflow)
+**Summary of work:**
+  Created comprehensive A000568 computation suite with multiple approaches:
+  1. **DP over odd partitions** (a000568_fast.py, a000568_speedup.py) — baseline Fraction arithmetic
+  2. **CRT-based mod-p DP** (a000568_crt.py) — critical bug found: used 7-bit primes labeled as 30-bit
+  3. **Numpy batch CRT** (a000568_batch_crt.py, v2) — vectorized over primes, one DP pass
+  4. **C implementation** (a000568_c_core.c, a000568_c_batch.c) — 18x faster per-prime DP
+  5. **gmpy2 DP** (a000568_gmpy2.py) — GMP-backed rationals, 1.3-1.4x over Python Fraction
+
+  **New result: a(80)** = 833-digit number, verified by Fraction DP (672s) and C batch CRT.
+  This extends OEIS beyond Briggs' a(76) record.
+
+  **Key finding:** State space explosion is the bottleneck (~814K states at n=80, peak at k=49).
+  CRT approaches trade arithmetic complexity for state-space traversal count; wins for n≤60
+  but loses for n≥70 due to memory overhead.
+
+  n=90 computation launched (gmpy2 DP), estimated 1-2 hours.
+
+**New contributions:** a000568_*.py, a000568_c_*.c, a000568_results.txt
+**Unresolved threads:**
+  - a(90) and a(100) computation in progress
+  - State space reduction (cross-value compression showed no benefit)
+  - OpenMP parallelization of C batch DP not attempted
+  - Memory-efficient C batch (pool allocation instead of per-entry malloc) not implemented
+
 ## kind-pasteur-2026-03-08-S40 — 2026-03-08 (Path Homology + Pfaffian-Betti + Betti Dimension Shift)
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-07-S39b
