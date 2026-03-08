@@ -1,0 +1,32 @@
+======================================================================
+Z_2 CYCLE STRUCTURE AT n=6 (sampled)
+======================================================================
+  1000/5000 (4s)
+  2000/5000 (9s)
+  3000/5000 (13s)
+  4000/5000 (17s)
+  Done in 22s
+
+dim(Z_2) distribution: {np.int64(8): 98, np.int64(9): 2177, np.int64(10): 1500, np.int64(11): 883, np.int64(12): 213, np.int64(13): 106, np.int64(15): 23}
+dim(Z_3) distribution: {np.int64(1): 14, np.int64(3): 1052, np.int64(4): 1078, np.int64(5): 1138, np.int64(6): 317, np.int64(7): 254, np.int64(8): 311, np.int64(9): 445, np.int64(10): 262, np.int64(15): 106, np.int64(18): 23}
+surplus distribution: {np.int64(1): 14, np.int64(3): 1052, np.int64(4): 1078, np.int64(5): 1138, np.int64(6): 317, np.int64(7): 254, np.int64(8): 311, np.int64(9): 445, np.int64(10): 262, np.int64(15): 106, np.int64(18): 23}
+beta_2 distribution: {np.int64(0): 5000}
+beta_1 distribution: {np.int64(0): 4318, np.int64(1): 682}
+min cycle support sizes: {6: 5000}
+
+beta_2 = 0 for ALL sampled tournaments!
+surplus >= 0 for ALL sampled tournaments!
+
+======================================================================
+FORMULA CHECK: dim(Z_2) = dim(Om_2) - rk(d_2) = dim(Om_2) - C(n-1,2) + beta_1
+======================================================================
+Checking dim(Z_2) = dim(Om_2) - C(n-1,2) + beta_1:
+  Errors: 0
+
+======================================================================
+EXHAUSTIVE n=5 cross-check
+======================================================================
+n=5 surplus: {np.int64(0): 280, np.int64(1): 600, np.int64(2): 120, np.int64(5): 24}
+n=5 cycle support: {5: 1024}
+
+Done.
