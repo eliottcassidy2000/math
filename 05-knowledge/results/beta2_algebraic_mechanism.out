@@ -1,0 +1,334 @@
+======================================================================
+CONSTRAINT STRUCTURE FOR beta_2 = 0
+======================================================================
+
+Example: T#8 scores=(1, 1, 2, 3, 3) beta=[np.int64(1), np.int64(1), 0, 0]
+  dim(A_2)=16, dim(Omega_2)=9, ker(d_2)=4
+  Allowed 2-paths (16):
+    (0, 4, 3) [3C]
+    (0, 4, 2) [3C]
+    (0, 4, 1) [3C]
+    (1, 0, 4) [3C]
+    (2, 1, 0) [TT]
+    (2, 0, 4) [3C]
+    (3, 2, 1) [TT]
+    (3, 2, 0) [TT]
+    (3, 1, 0) [TT]
+    (3, 0, 4) [3C]
+    (4, 3, 2) [TT]
+    (4, 3, 1) [TT]
+    (4, 3, 0) [3C]
+    (4, 2, 1) [TT]
+    (4, 2, 0) [3C]
+    (4, 1, 0) [3C]
+
+  Non-allowed 1-paths and mediators:
+    (0,1): c->a edge, mediators=[4]
+      2-path (0,4,1) at index 2
+    (0,2): c->a edge, mediators=[4]
+      2-path (0,4,2) at index 1
+    (0,3): c->a edge, mediators=[4]
+      2-path (0,4,3) at index 0
+    (1,4): c->a edge, mediators=[0]
+      2-path (1,0,4) at index 3
+    (2,4): c->a edge, mediators=[0]
+      2-path (2,0,4) at index 5
+    (3,4): c->a edge, mediators=[0]
+      2-path (3,0,4) at index 9
+    (4,0): c->a edge, mediators=[1, 2, 3]
+      2-path (4,1,0) at index 15
+      2-path (4,2,0) at index 14
+      2-path (4,3,0) at index 12
+
+  ker(d_2|Omega_2) generators (4 total):
+    Generator #1:
+      (2,1,0): +0.199761 [TT] triple=(0, 1, 2)
+      (3,2,1): -0.576680 [TT] triple=(1, 2, 3)
+      (3,2,0): +0.083074 [TT] triple=(0, 2, 3)
+      (3,1,0): -0.296471 [TT] triple=(0, 1, 3)
+      (4,3,2): +0.493606 [TT] triple=(2, 3, 4)
+      (4,3,1): -0.280210 [TT] triple=(1, 3, 4)
+      (4,3,0): -0.213397 [3C] triple=(0, 3, 4)
+      (4,2,1): +0.376919 [TT] triple=(1, 2, 4)
+      (4,2,0): +0.116687 [3C] triple=(0, 2, 4)
+      (4,1,0): +0.096709 [3C] triple=(0, 1, 4)
+    Generator #2:
+      (2,1,0): -0.522363 [TT] triple=(0, 1, 2)
+      (3,2,1): +0.227079 [TT] triple=(1, 2, 3)
+      (3,2,0): -0.531317 [TT] triple=(0, 2, 3)
+      (3,1,0): +0.255380 [TT] triple=(0, 1, 3)
+      (4,3,2): +0.304238 [TT] triple=(2, 3, 4)
+      (4,3,1): -0.028302 [TT] triple=(1, 3, 4)
+      (4,3,0): -0.275937 [3C] triple=(0, 3, 4)
+      (4,2,1): +0.295284 [TT] triple=(1, 2, 4)
+      (4,2,0): +0.008954 [3C] triple=(0, 2, 4)
+      (4,1,0): +0.266982 [3C] triple=(0, 1, 4)
+    Generator #3:
+      (2,1,0): +0.215847 [TT] triple=(0, 1, 2)
+      (3,2,1): +0.119575 [TT] triple=(1, 2, 3)
+      (3,2,0): -0.167397 [TT] triple=(0, 2, 3)
+      (3,1,0): -0.356977 [TT] triple=(0, 1, 3)
+      (4,3,2): +0.047822 [TT] triple=(2, 3, 4)
+      (4,3,1): +0.476552 [TT] triple=(1, 3, 4)
+      (4,3,0): -0.524374 [3C] triple=(0, 3, 4)
+      (4,2,1): -0.335422 [TT] triple=(1, 2, 4)
+      (4,2,0): +0.383244 [3C] triple=(0, 2, 4)
+      (4,1,0): +0.141130 [3C] triple=(0, 1, 4)
+    Generator #4:
+      (2,1,0): -0.201600 [TT] triple=(0, 1, 2)
+      (3,2,1): -0.039712 [TT] triple=(1, 2, 3)
+      (3,2,0): +0.287714 [TT] triple=(0, 2, 3)
+      (3,1,0): -0.345620 [TT] triple=(0, 1, 3)
+      (4,3,2): -0.248002 [TT] triple=(2, 3, 4)
+      (4,3,1): +0.305908 [TT] triple=(1, 3, 4)
+      (4,3,0): -0.057907 [3C] triple=(0, 3, 4)
+      (4,2,1): +0.241312 [TT] triple=(1, 2, 4)
+      (4,2,0): -0.489314 [3C] triple=(0, 2, 4)
+      (4,1,0): +0.547220 [3C] triple=(0, 1, 4)
+
+  Verify Omega constraints for generator #1:
+    (0,1): sum = 0.0000000000 [OK]
+    (0,2): sum = 0.0000000000 [OK]
+    (0,3): sum = 0.0000000000 [OK]
+    (1,4): sum = 0.0000000000 [OK]
+    (2,4): sum = 0.0000000000 [OK]
+    (3,4): sum = 0.0000000000 [OK]
+    (4,0): sum = 0.0000000000 [OK]
+
+  Verify Omega constraints for generator #2:
+    (0,1): sum = 0.0000000000 [OK]
+    (0,2): sum = 0.0000000000 [OK]
+    (0,3): sum = 0.0000000000 [OK]
+    (1,4): sum = 0.0000000000 [OK]
+    (2,4): sum = 0.0000000000 [OK]
+    (3,4): sum = 0.0000000000 [OK]
+    (4,0): sum = -0.0000000000 [OK]
+
+  Verify Omega constraints for generator #3:
+    (0,1): sum = 0.0000000000 [OK]
+    (0,2): sum = 0.0000000000 [OK]
+    (0,3): sum = 0.0000000000 [OK]
+    (1,4): sum = 0.0000000000 [OK]
+    (2,4): sum = 0.0000000000 [OK]
+    (3,4): sum = 0.0000000000 [OK]
+    (4,0): sum = 0.0000000000 [OK]
+
+  Verify Omega constraints for generator #4:
+    (0,1): sum = 0.0000000000 [OK]
+    (0,2): sum = 0.0000000000 [OK]
+    (0,3): sum = 0.0000000000 [OK]
+    (1,4): sum = 0.0000000000 [OK]
+    (2,4): sum = 0.0000000000 [OK]
+    (3,4): sum = 0.0000000000 [OK]
+    (4,0): sum = -0.0000000000 [OK]
+
+  d_2(generator #1) max component: 7.77e-16
+
+  d_2(generator #2) max component: 2.22e-16
+
+  d_2(generator #3) max component: 1.94e-16
+
+  d_2(generator #4) max component: 2.78e-16
+
+  dim(Omega_3)=5, dim(A_3)=17
+    Generator #1 in im(d_3|Omega_3)? err=3.61e-16
+    Filling w in Omega_3 (A_3 coords):
+      w[(3, 2, 1, 0)] = +0.231197
+      w[(4, 3, 2, 1)] = -0.345483
+      w[(4, 3, 2, 0)] = -0.148123
+      w[(4, 3, 1, 0)] = -0.065273
+      w[(4, 2, 1, 0)] = -0.031436
+    Generator #2 in im(d_3|Omega_3)? err=4.44e-16
+    Filling w in Omega_3 (A_3 coords):
+      w[(3, 2, 1, 0)] = -0.307228
+      w[(4, 3, 2, 1)] = -0.080149
+      w[(4, 3, 2, 0)] = -0.224089
+      w[(4, 3, 1, 0)] = -0.051847
+      w[(4, 2, 1, 0)] = -0.215135
+    Generator #3 in im(d_3|Omega_3)? err=2.22e-16
+    Filling w in Omega_3 (A_3 coords):
+      w[(3, 2, 1, 0)] = +0.057171
+      w[(4, 3, 2, 1)] = +0.176745
+      w[(4, 3, 2, 0)] = -0.224567
+      w[(4, 3, 1, 0)] = -0.299806
+      w[(4, 2, 1, 0)] = +0.158677
+    Generator #4 in im(d_3|Omega_3)? err=1.94e-16
+    Filling w in Omega_3 (A_3 coords):
+      w[(3, 2, 1, 0)] = +0.094289
+      w[(4, 3, 2, 1)] = +0.054577
+      w[(4, 3, 2, 0)] = +0.193425
+      w[(4, 3, 1, 0)] = -0.251331
+      w[(4, 2, 1, 0)] = -0.295889
+
+
+======================================================================
+DIMENSION COUNTING: WHY ker(d_2) = im(d_3)
+======================================================================
+
+n=5 exhaustive: ker(d_2) vs im(d_3) + invariants
+
+Grouped by score sequence:
+
+  scores=(0, 1, 2, 3, 4) (120 tournaments)
+    c3={0}
+    dim(A_2)={10}
+    dim(Omega_2)={10}
+    rank(d_2)={np.int64(6)}
+    ker(d_2)={np.int64(4)}
+    dim(Omega_3)={5}
+    im(d_3)={np.int64(4)}
+    #constraints={0}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(0, 1, 3, 3, 3) (40 tournaments)
+    c3={1}
+    dim(A_2)={12}
+    dim(Omega_2)={9}
+    rank(d_2)={np.int64(6)}
+    ker(d_2)={np.int64(3)}
+    dim(Omega_3)={3}
+    im(d_3)={np.int64(3)}
+    #constraints={3}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(0, 2, 2, 2, 4) (40 tournaments)
+    c3={1}
+    dim(A_2)={12}
+    dim(Omega_2)={9}
+    rank(d_2)={np.int64(6)}
+    ker(d_2)={np.int64(3)}
+    dim(Omega_3)={3}
+    im(d_3)={np.int64(3)}
+    #constraints={3}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(0, 2, 2, 3, 3) (120 tournaments)
+    c3={2}
+    dim(A_2)={14}
+    dim(Omega_2)={9}
+    rank(d_2)={np.int64(6)}
+    ker(d_2)={np.int64(3)}
+    dim(Omega_3)={4}
+    im(d_3)={np.int64(3)}
+    #constraints={5}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(1, 1, 1, 3, 4) (40 tournaments)
+    c3={1}
+    dim(A_2)={12}
+    dim(Omega_2)={9}
+    rank(d_2)={np.int64(6)}
+    ker(d_2)={np.int64(3)}
+    dim(Omega_3)={3}
+    im(d_3)={np.int64(3)}
+    #constraints={3}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(1, 1, 2, 2, 4) (120 tournaments)
+    c3={2}
+    dim(A_2)={14}
+    dim(Omega_2)={9}
+    rank(d_2)={np.int64(6)}
+    ker(d_2)={np.int64(3)}
+    dim(Omega_3)={4}
+    im(d_3)={np.int64(3)}
+    #constraints={5}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(1, 1, 2, 3, 3) (240 tournaments)
+    c3={3}
+    dim(A_2)={16}
+    dim(Omega_2)={9}
+    rank(d_2)={np.int64(5), np.int64(6)}
+    ker(d_2)={np.int64(3), np.int64(4)}
+    dim(Omega_3)={3, 5}
+    im(d_3)={np.int64(3), np.int64(4)}
+    #constraints={7}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(1, 2, 2, 2, 3) (280 tournaments)
+    c3={4}
+    dim(A_2)={18}
+    dim(Omega_2)={8, 9, 10}
+    rank(d_2)={np.int64(5), np.int64(6)}
+    ker(d_2)={np.int64(3), np.int64(5)}
+    dim(Omega_3)={3, 4, 7}
+    im(d_3)={np.int64(3), np.int64(5)}
+    #constraints={8, 9, 10}
+    beta_2 = ker-im = {np.int64(0)}
+
+  scores=(2, 2, 2, 2, 2) (24 tournaments)
+    c3={5}
+    dim(A_2)={20}
+    dim(Omega_2)={10}
+    rank(d_2)={np.int64(5)}
+    ker(d_2)={np.int64(5)}
+    dim(Omega_3)={10}
+    im(d_3)={np.int64(5)}
+    #constraints={10}
+    beta_2 = ker-im = {np.int64(0)}
+
+
+======================================================================
+FORMULA FOR dim(Omega_2)
+======================================================================
+
+n=5:
+  scores=(0, 1, 2, 3, 4): dim(A_2)=10=C(5,3)+2*0=10, dim(O_2)=10, #constr=0, dim_O2 = dim_A2 - #constr = 10
+  scores=(0, 1, 3, 3, 3): dim(A_2)=12=C(5,3)+2*1=12, dim(O_2)=9, #constr=3, dim_O2 = dim_A2 - #constr = 9
+  scores=(0, 2, 2, 2, 4): dim(A_2)=12=C(5,3)+2*1=12, dim(O_2)=9, #constr=3, dim_O2 = dim_A2 - #constr = 9
+  scores=(0, 2, 2, 3, 3): dim(A_2)=14=C(5,3)+2*2=14, dim(O_2)=9, #constr=5, dim_O2 = dim_A2 - #constr = 9
+  scores=(1, 1, 1, 3, 4): dim(A_2)=12=C(5,3)+2*1=12, dim(O_2)=9, #constr=3, dim_O2 = dim_A2 - #constr = 9
+  scores=(1, 1, 2, 2, 4): dim(A_2)=14=C(5,3)+2*2=14, dim(O_2)=9, #constr=5, dim_O2 = dim_A2 - #constr = 9
+  scores=(1, 1, 2, 3, 3): dim(A_2)=16=C(5,3)+2*3=16, dim(O_2)=9, #constr=7, dim_O2 = dim_A2 - #constr = 9
+  scores=(1, 2, 2, 2, 3): dim(A_2)=18=C(5,3)+2*4=18, dim(O_2)=10, #constr=8, dim_O2 = dim_A2 - #constr = 10
+  scores=(2, 2, 2, 2, 2): dim(A_2)=20=C(5,3)+2*5=20, dim(O_2)=10, #constr=10, dim_O2 = dim_A2 - #constr = 10
+
+
+======================================================================
+rank(d_2) FORMULA
+======================================================================
+
+n=5: rank(d_2) = (n-1)(n-2)/2 - beta_1 = 6 - beta_1
+  First 100: rank(d_2) = 6 - beta_1 CONFIRMED
+  ALL n=5: rank(d_2) = (n-1)(n-2)/2 - beta_1? True
+
+
+======================================================================
+BETA_2 = 0 EQUIVALENT CONDITION
+======================================================================
+
+n=5: beta_2=0 iff rank(d_3|O_3) = 4 + 2*c3 - #constraints + beta_1
+  scores=(0, 1, 2, 3, 4): c3=0, #constr=0, beta_1=0, predicted_im(d3)=4, actual_im(d3)=4, match=True
+  scores=(0, 1, 3, 3, 3): c3=1, #constr=3, beta_1=0, predicted_im(d3)=3, actual_im(d3)=3, match=True
+  scores=(0, 2, 2, 2, 4): c3=1, #constr=3, beta_1=0, predicted_im(d3)=3, actual_im(d3)=3, match=True
+  scores=(0, 2, 2, 3, 3): c3=2, #constr=5, beta_1=0, predicted_im(d3)=3, actual_im(d3)=3, match=True
+  scores=(1, 1, 1, 3, 4): c3=1, #constr=3, beta_1=0, predicted_im(d3)=3, actual_im(d3)=3, match=True
+  scores=(1, 1, 2, 2, 4): c3=2, #constr=5, beta_1=0, predicted_im(d3)=3, actual_im(d3)=3, match=True
+  scores=(1, 1, 2, 3, 3): c3=3, #constr=7, beta_1=1, predicted_im(d3)=4, actual_im(d3)=4, match=True
+  scores=(1, 2, 2, 2, 3): c3=4, #constr=8, beta_1=1, predicted_im(d3)=5, actual_im(d3)=5, match=True
+  scores=(2, 2, 2, 2, 2): c3=5, #constr=10, beta_1=1, predicted_im(d3)=5, actual_im(d3)=5, match=True
+
+
+======================================================================
+RATIO: rank(d_p) / dim(Omega_p) FOR DIFFERENT p
+======================================================================
+
+n=5: rank(d_p)/dim(Omega_p) statistics:
+  p=1: min=0.4000, max=0.4000, mean=0.4000, count=1024
+    ratio=0.400: 1024
+  p=2: min=0.5000, max=0.6667, mean=0.6208, count=1024
+    ratio=0.500: 144
+    ratio=0.556: 120
+    ratio=0.600: 120
+    ratio=0.625: 40
+    ratio=0.667: 600
+  p=3: min=0.5000, max=1.0000, mean=0.8200, count=1024
+    ratio=0.500: 24
+    ratio=0.714: 120
+    ratio=0.750: 360
+    ratio=0.800: 240
+    ratio=1.000: 280
+
+
+Done.

@@ -124,7 +124,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-264 | "Good deletion" (∃v with β₁(T\v)=0) works for ALL tournaments | **REFUTED**: 24/1024 at n=5 (all regular), 960/32768 at n=6 (all (2,2,2,3,3,3)). Fraction decreases: ~1% n=7, ~0.1% n=8 | beta2_good_deletion.py |
 | HYP-265 | β₂(T)=0 for tournaments is NEW (not in GLMY literature) | Searched Burfitt-Cutler, Fu-Ivanov, Tang-Yau. No tournament-specific H₂ results. Tournaments are multisquare-free (Fu-Ivanov basis applies) | S42 literature search |
 | HYP-266 | dim(Ω_p) for regular n=5: [5,10,10,10,5,0] (symmetric, larger than simplex at p=3,4) | CONFIRMED. Extra Ω₃ elements exactly fill extra ker(d₂). Transitive=[5,10,10,5,1,0] | beta2_full_chain.py |
-| HYP-267 | χ(Ω_*) = 1 - β₁ for ALL tournaments (all higher β_p cancel in alternating sum) | CONFIRMED n=3,4,5 exhaustive. Implies β₂-β₃+β₄-...=0. Combined with HYP-249 gives consistency | beta2_full_chain.py |
+| HYP-267 | χ(Ω_*) = 1 - β₁ for ALL tournaments | **REFUTED at n=7**: Paley T₇ has χ(Ω)=7, β₁=0, so χ≠1-β₁. Only holds when all β_p=0 for p≥2 (i.e. n≤5). At n≥7, β₃,β₄,β₅ can be nonzero and don't cancel. | beta_paley_verify.py |
 | HYP-268 | dim(A_2) = C(n,3) + 2*c₃ for ALL tournaments | CONFIRMED n=4,5 exhaustive. Each transitive triple gives 1 path, each 3-cycle gives 3 | beta2_omega_poincare.py |
 | HYP-269 | Ω₂ constraint rank = #{non-allowed (a,c) with mediators} | CONFIRMED n=5. Constraints from different (a,c) pairs use disjoint 2-path sets => automatically linearly independent | beta2_omega_poincare.py |
 | HYP-270 | Position cone (all 4 insertion positions) fills ker(d₂) from A₃ | CONFIRMED n=4,5. sum_{v,pos} w_{v,pos} s_v^{pos} = id on ker(d₂\|Ω₂). But image NOT in Ω₃! | beta2_homotopy_proof.py |
