@@ -1,0 +1,36 @@
+======================================================================
+SWAP CYCLE FILLING TEST
+======================================================================
+
+n=5: 120 swap cycles tested
+  All boundaries? True
+
+======================================================================
+n=6: SWAP CYCLE FILLING TEST
+======================================================================
+  5000/32768 (2s) tests=2777 all_ok=True
+  10000/32768 (5s) tests=6203 all_ok=True
+  15000/32768 (9s) tests=9765 all_ok=True
+  20000/32768 (11s) tests=12712 all_ok=True
+  25000/32768 (15s) tests=16568 all_ok=True
+  30000/32768 (17s) tests=19620 all_ok=True
+
+n=6 (18s): 21120 swap cycles tested
+  All boundaries? True
+
+======================================================================
+SWAP CYCLE EXISTENCE AND DIMENSION
+======================================================================
+n=5 swap cycle dimensions by score:
+  scores=(0, 1, 2, 3, 4): swap_dims=[0] (count=120)
+  scores=(0, 1, 3, 3, 3): swap_dims=[0] (count=40)
+  scores=(0, 2, 2, 2, 4): swap_dims=[0] (count=40)
+  scores=(0, 2, 2, 3, 3): swap_dims=[np.int64(0)] (count=120)
+  scores=(1, 1, 1, 3, 4): swap_dims=[0] (count=40)
+  scores=(1, 1, 2, 2, 4): swap_dims=[np.int64(0)] (count=120)
+  scores=(1, 1, 2, 3, 3): swap_dims=[np.int64(0)] (count=240)
+  scores=(1, 2, 2, 2, 3): swap_dims=[np.int64(0), np.int64(1)] (count=280)
+  scores=(2, 2, 2, 2, 2): swap_dims=[np.int64(0)] (count=24)
+
+
+Done.
