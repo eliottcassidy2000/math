@@ -1,340 +1,38 @@
-C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_relative_structure.py:6: SyntaxWarning: invalid escape sequence '\{'
-  Omega_p^rel = Omega_p(T) / Omega_p(T\{v})
 ======================================================================
-RELATIVE COMPLEX STRUCTURE
+n=5: RELATIVE CHAIN COMPLEX STRUCTURE
 ======================================================================
 
---- n=5 exhaustive ---
+n=5: 5120 (T,v) pairs
 
-  (d_v, rel_1, rel_2, rel_3, rk_d2_rel, rk_d3_rel): count
-    d_v=0: rel=(4,6,3), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=0: rel=(4,6,3), rk_d=(_, 3,3), H_2^rel=0, count=80
-    d_v=0: rel=(4,6,4), rk_d=(_, 3,3), H_2^rel=0, count=120
-    d_v=1: rel=(4,5,2), rk_d=(_, 3,2), H_2^rel=0, count=120
-    d_v=1: rel=(4,5,3), rk_d=(_, 2,3), H_2^rel=0, count=40
-    d_v=1: rel=(4,5,3), rk_d=(_, 3,2), H_2^rel=0, count=120
-    d_v=1: rel=(4,5,4), rk_d=(_, 2,3), H_2^rel=0, count=120
-    d_v=1: rel=(4,6,2), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=1: rel=(4,6,3), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=1: rel=(4,6,3), rk_d=(_, 3,3), H_2^rel=0, count=160
-    d_v=1: rel=(4,6,4), rk_d=(_, 3,3), H_2^rel=0, count=360
-    d_v=1: rel=(4,7,6), rk_d=(_, 3,4), H_2^rel=0, count=120
-    d_v=2: rel=(4,5,2), rk_d=(_, 3,2), H_2^rel=0, count=360
-    d_v=2: rel=(4,5,3), rk_d=(_, 3,2), H_2^rel=0, count=240
-    d_v=2: rel=(4,6,3), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=2: rel=(4,6,4), rk_d=(_, 3,3), H_2^rel=0, count=720
-    d_v=2: rel=(4,6,6), rk_d=(_, 2,4), H_2^rel=0, count=120
-    d_v=2: rel=(4,7,6), rk_d=(_, 3,4), H_2^rel=0, count=240
-    d_v=2: rel=(4,7,9), rk_d=(_, 3,4), H_2^rel=0, count=120
-    d_v=3: rel=(4,5,2), rk_d=(_, 3,2), H_2^rel=0, count=120
-    d_v=3: rel=(4,5,3), rk_d=(_, 2,3), H_2^rel=0, count=40
-    d_v=3: rel=(4,5,3), rk_d=(_, 3,2), H_2^rel=0, count=120
-    d_v=3: rel=(4,5,4), rk_d=(_, 2,3), H_2^rel=0, count=120
-    d_v=3: rel=(4,6,2), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=3: rel=(4,6,3), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=3: rel=(4,6,3), rk_d=(_, 3,3), H_2^rel=0, count=160
-    d_v=3: rel=(4,6,4), rk_d=(_, 3,3), H_2^rel=0, count=360
-    d_v=3: rel=(4,7,6), rk_d=(_, 3,4), H_2^rel=0, count=120
-    d_v=4: rel=(4,6,3), rk_d=(_, 3,2), H_2^rel=1, count=120
-    d_v=4: rel=(4,6,3), rk_d=(_, 3,3), H_2^rel=0, count=80
-    d_v=4: rel=(4,6,4), rk_d=(_, 3,3), H_2^rel=0, count=120
+  h₂_rel distribution: {0: 4280, 1: 840}
 
---- n=6 sample (5000 tournaments) ---
-
-  (d_v, rel_1, rel_2, rel_3, rk_d2_rel, rk_d3_rel): count
-    d_v=0: rel=(5,10,8), rk_d=(_, 4,5), H_2^rel=1, count=44
-    d_v=0: rel=(5,10,9), rk_d=(_, 4,5), H_2^rel=1, count=101
-    d_v=0: rel=(5,10,9), rk_d=(_, 4,6), H_2^rel=0, count=529
-    d_v=0: rel=(5,10,10), rk_d=(_, 4,5), H_2^rel=1, count=132
-    d_v=0: rel=(5,10,10), rk_d=(_, 4,6), H_2^rel=0, count=103
-    d_v=1: rel=(5,9,6), rk_d=(_, 4,5), H_2^rel=0, count=42
-    d_v=1: rel=(5,9,7), rk_d=(_, 4,5), H_2^rel=0, count=114
-    d_v=1: rel=(5,9,8), rk_d=(_, 4,5), H_2^rel=0, count=167
-    d_v=1: rel=(5,9,9), rk_d=(_, 3,6), H_2^rel=0, count=183
-    d_v=1: rel=(5,9,9), rk_d=(_, 4,5), H_2^rel=0, count=110
-    d_v=1: rel=(5,9,10), rk_d=(_, 3,6), H_2^rel=0, count=111
-    d_v=1: rel=(5,10,7), rk_d=(_, 4,5), H_2^rel=1, count=105
-    d_v=1: rel=(5,10,8), rk_d=(_, 4,5), H_2^rel=1, count=203
-    d_v=1: rel=(5,10,8), rk_d=(_, 4,6), H_2^rel=0, count=323
-    d_v=1: rel=(5,10,9), rk_d=(_, 4,5), H_2^rel=1, count=237
-    d_v=1: rel=(5,10,9), rk_d=(_, 4,6), H_2^rel=0, count=1114
-    d_v=1: rel=(5,10,10), rk_d=(_, 4,6), H_2^rel=0, count=456
-    d_v=1: rel=(5,11,9), rk_d=(_, 4,6), H_2^rel=1, count=112
-    d_v=1: rel=(5,11,10), rk_d=(_, 4,7), H_2^rel=0, count=119
-    d_v=1: rel=(5,11,11), rk_d=(_, 4,6), H_2^rel=1, count=119
-    d_v=1: rel=(5,11,11), rk_d=(_, 4,7), H_2^rel=0, count=430
-    d_v=1: rel=(5,11,12), rk_d=(_, 4,6), H_2^rel=1, count=116
-    d_v=1: rel=(5,11,12), rk_d=(_, 4,7), H_2^rel=0, count=228
-    d_v=1: rel=(5,11,13), rk_d=(_, 4,6), H_2^rel=1, count=103
-    d_v=1: rel=(5,11,13), rk_d=(_, 4,7), H_2^rel=0, count=197
-    d_v=1: rel=(5,12,14), rk_d=(_, 4,8), H_2^rel=0, count=42
-    d_v=1: rel=(5,12,15), rk_d=(_, 4,8), H_2^rel=0, count=113
-    d_v=2: rel=(5,9,7), rk_d=(_, 4,5), H_2^rel=0, count=525
-    d_v=2: rel=(5,9,8), rk_d=(_, 4,5), H_2^rel=0, count=407
-    d_v=2: rel=(5,9,9), rk_d=(_, 4,5), H_2^rel=0, count=101
-    d_v=2: rel=(5,10,7), rk_d=(_, 4,5), H_2^rel=1, count=108
-    d_v=2: rel=(5,10,8), rk_d=(_, 4,5), H_2^rel=1, count=117
-    d_v=2: rel=(5,10,8), rk_d=(_, 4,6), H_2^rel=0, count=437
-    d_v=2: rel=(5,10,9), rk_d=(_, 4,6), H_2^rel=0, count=783
-    d_v=2: rel=(5,10,10), rk_d=(_, 4,6), H_2^rel=0, count=1672
-    d_v=2: rel=(5,10,12), rk_d=(_, 4,6), H_2^rel=0, count=100
-    d_v=2: rel=(5,11,9), rk_d=(_, 4,6), H_2^rel=1, count=119
-    d_v=2: rel=(5,11,10), rk_d=(_, 4,6), H_2^rel=1, count=220
-    d_v=2: rel=(5,11,11), rk_d=(_, 4,6), H_2^rel=1, count=115
-    d_v=2: rel=(5,11,11), rk_d=(_, 4,7), H_2^rel=0, count=541
-    d_v=2: rel=(5,11,12), rk_d=(_, 4,7), H_2^rel=0, count=550
-    d_v=2: rel=(5,11,13), rk_d=(_, 4,6), H_2^rel=1, count=228
-    d_v=2: rel=(5,11,13), rk_d=(_, 4,7), H_2^rel=0, count=633
-    d_v=2: rel=(5,11,14), rk_d=(_, 3,8), H_2^rel=0, count=33
-    d_v=2: rel=(5,11,14), rk_d=(_, 4,6), H_2^rel=1, count=97
-    d_v=2: rel=(5,11,15), rk_d=(_, 3,8), H_2^rel=0, count=97
-    d_v=2: rel=(5,11,16), rk_d=(_, 4,7), H_2^rel=0, count=105
-    d_v=2: rel=(5,12,12), rk_d=(_, 4,7), H_2^rel=1, count=107
-    d_v=2: rel=(5,12,14), rk_d=(_, 4,8), H_2^rel=0, count=177
-    d_v=2: rel=(5,12,15), rk_d=(_, 4,7), H_2^rel=1, count=112
-    d_v=2: rel=(5,12,15), rk_d=(_, 4,8), H_2^rel=0, count=229
-    d_v=2: rel=(5,12,16), rk_d=(_, 4,7), H_2^rel=1, count=97
-    d_v=2: rel=(5,12,16), rk_d=(_, 4,8), H_2^rel=0, count=666
-    d_v=2: rel=(5,12,17), rk_d=(_, 4,8), H_2^rel=0, count=323
-    d_v=2: rel=(5,12,18), rk_d=(_, 4,8), H_2^rel=0, count=193
-    d_v=2: rel=(5,12,21), rk_d=(_, 4,8), H_2^rel=0, count=96
-    d_v=2: rel=(5,13,17), rk_d=(_, 4,8), H_2^rel=1, count=116
-    d_v=2: rel=(5,13,23), rk_d=(_, 4,9), H_2^rel=0, count=96
-    d_v=2: rel=(5,14,26), rk_d=(_, 4,10), H_2^rel=0, count=111
-    d_v=3: rel=(5,9,7), rk_d=(_, 4,5), H_2^rel=0, count=552
-    d_v=3: rel=(5,9,8), rk_d=(_, 4,5), H_2^rel=0, count=364
-    d_v=3: rel=(5,9,9), rk_d=(_, 4,5), H_2^rel=0, count=110
-    d_v=3: rel=(5,10,7), rk_d=(_, 4,5), H_2^rel=1, count=119
-    d_v=3: rel=(5,10,8), rk_d=(_, 4,5), H_2^rel=1, count=107
-    d_v=3: rel=(5,10,8), rk_d=(_, 4,6), H_2^rel=0, count=465
-    d_v=3: rel=(5,10,9), rk_d=(_, 4,6), H_2^rel=0, count=819
-    d_v=3: rel=(5,10,10), rk_d=(_, 4,6), H_2^rel=0, count=1689
-    d_v=3: rel=(5,10,12), rk_d=(_, 4,6), H_2^rel=0, count=108
-    d_v=3: rel=(5,11,9), rk_d=(_, 4,6), H_2^rel=1, count=108
-    d_v=3: rel=(5,11,10), rk_d=(_, 4,6), H_2^rel=1, count=221
-    d_v=3: rel=(5,11,11), rk_d=(_, 4,6), H_2^rel=1, count=115
-    d_v=3: rel=(5,11,11), rk_d=(_, 4,7), H_2^rel=0, count=561
-    d_v=3: rel=(5,11,12), rk_d=(_, 4,7), H_2^rel=0, count=552
-    d_v=3: rel=(5,11,13), rk_d=(_, 4,6), H_2^rel=1, count=210
-    d_v=3: rel=(5,11,13), rk_d=(_, 4,7), H_2^rel=0, count=641
-    d_v=3: rel=(5,11,14), rk_d=(_, 3,8), H_2^rel=0, count=42
-    d_v=3: rel=(5,11,14), rk_d=(_, 4,6), H_2^rel=1, count=119
-    d_v=3: rel=(5,11,15), rk_d=(_, 3,8), H_2^rel=0, count=113
-    d_v=3: rel=(5,11,16), rk_d=(_, 4,7), H_2^rel=0, count=120
-    d_v=3: rel=(5,12,12), rk_d=(_, 4,7), H_2^rel=1, count=117
-    d_v=3: rel=(5,12,14), rk_d=(_, 4,8), H_2^rel=0, count=168
-    d_v=3: rel=(5,12,15), rk_d=(_, 4,7), H_2^rel=1, count=103
-    d_v=3: rel=(5,12,15), rk_d=(_, 4,8), H_2^rel=0, count=213
-    d_v=3: rel=(5,12,16), rk_d=(_, 4,7), H_2^rel=1, count=119
-    d_v=3: rel=(5,12,16), rk_d=(_, 4,8), H_2^rel=0, count=657
-    d_v=3: rel=(5,12,17), rk_d=(_, 4,8), H_2^rel=0, count=332
-    d_v=3: rel=(5,12,18), rk_d=(_, 4,8), H_2^rel=0, count=215
-    d_v=3: rel=(5,12,21), rk_d=(_, 4,8), H_2^rel=0, count=96
-    d_v=3: rel=(5,13,17), rk_d=(_, 4,8), H_2^rel=1, count=107
-    d_v=3: rel=(5,13,23), rk_d=(_, 4,9), H_2^rel=0, count=96
-    d_v=3: rel=(5,14,26), rk_d=(_, 4,10), H_2^rel=0, count=111
-    d_v=4: rel=(5,9,6), rk_d=(_, 4,5), H_2^rel=0, count=42
-    d_v=4: rel=(5,9,7), rk_d=(_, 4,5), H_2^rel=0, count=117
-    d_v=4: rel=(5,9,8), rk_d=(_, 4,5), H_2^rel=0, count=142
-    d_v=4: rel=(5,9,9), rk_d=(_, 3,6), H_2^rel=0, count=183
-    d_v=4: rel=(5,9,9), rk_d=(_, 4,5), H_2^rel=0, count=101
-    d_v=4: rel=(5,9,10), rk_d=(_, 3,6), H_2^rel=0, count=111
-    d_v=4: rel=(5,10,7), rk_d=(_, 4,5), H_2^rel=1, count=106
-    d_v=4: rel=(5,10,8), rk_d=(_, 4,5), H_2^rel=1, count=233
-    d_v=4: rel=(5,10,8), rk_d=(_, 4,6), H_2^rel=0, count=302
-    d_v=4: rel=(5,10,9), rk_d=(_, 4,5), H_2^rel=1, count=237
-    d_v=4: rel=(5,10,9), rk_d=(_, 4,6), H_2^rel=0, count=1060
-    d_v=4: rel=(5,10,10), rk_d=(_, 4,6), H_2^rel=0, count=413
-    d_v=4: rel=(5,11,9), rk_d=(_, 4,6), H_2^rel=1, count=118
-    d_v=4: rel=(5,11,10), rk_d=(_, 4,7), H_2^rel=0, count=108
-    d_v=4: rel=(5,11,11), rk_d=(_, 4,6), H_2^rel=1, count=97
-    d_v=4: rel=(5,11,11), rk_d=(_, 4,7), H_2^rel=0, count=439
-    d_v=4: rel=(5,11,12), rk_d=(_, 4,6), H_2^rel=1, count=116
-    d_v=4: rel=(5,11,12), rk_d=(_, 4,7), H_2^rel=0, count=220
-    d_v=4: rel=(5,11,13), rk_d=(_, 4,6), H_2^rel=1, count=112
-    d_v=4: rel=(5,11,13), rk_d=(_, 4,7), H_2^rel=0, count=221
-    d_v=4: rel=(5,12,14), rk_d=(_, 4,8), H_2^rel=0, count=33
-    d_v=4: rel=(5,12,15), rk_d=(_, 4,8), H_2^rel=0, count=97
-    d_v=5: rel=(5,10,8), rk_d=(_, 4,5), H_2^rel=1, count=35
-    d_v=5: rel=(5,10,9), rk_d=(_, 4,5), H_2^rel=1, count=110
-    d_v=5: rel=(5,10,9), rk_d=(_, 4,6), H_2^rel=0, count=590
-    d_v=5: rel=(5,10,10), rk_d=(_, 4,5), H_2^rel=1, count=121
-    d_v=5: rel=(5,10,10), rk_d=(_, 4,6), H_2^rel=0, count=103
+  Detailed (d₂^rel, z₂^rel, b₂^rel, d₃^rel, β₁_sub, β₁_T, h₂^rel):
+    d₂r=5, z₂r=2, b₂r=2, d₃r=2, β₁s=0, β₁T=0, h₂r=0: 480
+    d₂r=5, z₂r=2, b₂r=2, d₃r=2, β₁s=1, β₁T=1, h₂r=0: 120
+    d₂r=5, z₂r=2, b₂r=2, d₃r=3, β₁s=0, β₁T=0, h₂r=0: 480
+    d₂r=5, z₂r=3, b₂r=3, d₃r=3, β₁s=0, β₁T=1, h₂r=0: 80
+    d₂r=5, z₂r=3, b₂r=3, d₃r=4, β₁s=0, β₁T=1, h₂r=0: 240
+    d₂r=6, z₂r=2, b₂r=2, d₃r=2, β₁s=1, β₁T=0, h₂r=1: 240
+    d₂r=6, z₂r=2, b₂r=2, d₃r=3, β₁s=1, β₁T=0, h₂r=1: 600
+    d₂r=6, z₂r=3, b₂r=3, d₃r=3, β₁s=0, β₁T=0, h₂r=0: 480
+    d₂r=6, z₂r=3, b₂r=3, d₃r=4, β₁s=0, β₁T=0, h₂r=0: 1320
+    d₂r=6, z₂r=3, b₂r=3, d₃r=4, β₁s=1, β₁T=1, h₂r=0: 360
+    d₂r=6, z₂r=4, b₂r=4, d₃r=6, β₁s=0, β₁T=1, h₂r=0: 120
+    d₂r=7, z₂r=4, b₂r=4, d₃r=6, β₁s=1, β₁T=1, h₂r=0: 480
+    d₂r=7, z₂r=4, b₂r=4, d₃r=9, β₁s=1, β₁T=1, h₂r=0: 120
 
 ======================================================================
-CHECK: Is Omega_2^rel = ker(d_2^rel) filled by im(d_3^rel)?
+n=6: h₂_rel DISTRIBUTION
 ======================================================================
+  5000/32768 (37s)
+  10000/32768 (76s)
+  15000/32768 (116s)
+  20000/32768 (153s)
+  25000/32768 (192s)
+  30000/32768 (231s)
 
-  n=5 exhaustive:
-    *** H_2^rel != 0: d_v=0, rel=(4,6,3), ker=3, im=2
-    d_v=0: ker=3, im fills exactly, count=80
-    d_v=0: ker=3, im fills exactly, count=120
-    d_v=1: ker=2, im fills exactly, count=120
-    d_v=1: ker=3, im fills exactly, count=40
-    d_v=1: ker=2, im fills exactly, count=120
-    d_v=1: ker=3, im fills exactly, count=120
-    *** H_2^rel != 0: d_v=1, rel=(4,6,2), ker=3, im=2
-    *** H_2^rel != 0: d_v=1, rel=(4,6,3), ker=3, im=2
-    d_v=1: ker=3, im fills exactly, count=160
-    d_v=1: ker=3, im fills exactly, count=360
-    d_v=1: ker=4, im fills exactly, count=120
-    d_v=2: ker=2, im fills exactly, count=360
-    d_v=2: ker=2, im fills exactly, count=240
-    *** H_2^rel != 0: d_v=2, rel=(4,6,3), ker=3, im=2
-    d_v=2: ker=3, im fills exactly, count=720
-    d_v=2: ker=4, im fills exactly, count=120
-    d_v=2: ker=4, im fills exactly, count=240
-    d_v=2: ker=4, im fills exactly, count=120
-    d_v=3: ker=2, im fills exactly, count=120
-    d_v=3: ker=3, im fills exactly, count=40
-    d_v=3: ker=2, im fills exactly, count=120
-    d_v=3: ker=3, im fills exactly, count=120
-    *** H_2^rel != 0: d_v=3, rel=(4,6,2), ker=3, im=2
-    *** H_2^rel != 0: d_v=3, rel=(4,6,3), ker=3, im=2
-    d_v=3: ker=3, im fills exactly, count=160
-    d_v=3: ker=3, im fills exactly, count=360
-    d_v=3: ker=4, im fills exactly, count=120
-    *** H_2^rel != 0: d_v=4, rel=(4,6,3), ker=3, im=2
-    d_v=4: ker=3, im fills exactly, count=80
-    d_v=4: ker=3, im fills exactly, count=120
-
-  n=6 sample:
-    *** H_2^rel != 0: d_v=0, rel=(5,10,8), ker=6, im=5
-    *** H_2^rel != 0: d_v=0, rel=(5,10,9), ker=6, im=5
-    d_v=0: ker=6, im fills exactly, count=529
-    *** H_2^rel != 0: d_v=0, rel=(5,10,10), ker=6, im=5
-    d_v=0: ker=6, im fills exactly, count=103
-    d_v=1: ker=5, im fills exactly, count=42
-    d_v=1: ker=5, im fills exactly, count=114
-    d_v=1: ker=5, im fills exactly, count=167
-    d_v=1: ker=6, im fills exactly, count=183
-    d_v=1: ker=5, im fills exactly, count=110
-    d_v=1: ker=6, im fills exactly, count=111
-    *** H_2^rel != 0: d_v=1, rel=(5,10,7), ker=6, im=5
-    *** H_2^rel != 0: d_v=1, rel=(5,10,8), ker=6, im=5
-    d_v=1: ker=6, im fills exactly, count=323
-    *** H_2^rel != 0: d_v=1, rel=(5,10,9), ker=6, im=5
-    d_v=1: ker=6, im fills exactly, count=1114
-    d_v=1: ker=6, im fills exactly, count=456
-    *** H_2^rel != 0: d_v=1, rel=(5,11,9), ker=7, im=6
-    d_v=1: ker=7, im fills exactly, count=119
-    *** H_2^rel != 0: d_v=1, rel=(5,11,11), ker=7, im=6
-    d_v=1: ker=7, im fills exactly, count=430
-    *** H_2^rel != 0: d_v=1, rel=(5,11,12), ker=7, im=6
-    d_v=1: ker=7, im fills exactly, count=228
-    *** H_2^rel != 0: d_v=1, rel=(5,11,13), ker=7, im=6
-    d_v=1: ker=7, im fills exactly, count=197
-    d_v=1: ker=8, im fills exactly, count=42
-    d_v=1: ker=8, im fills exactly, count=113
-    d_v=2: ker=5, im fills exactly, count=525
-    d_v=2: ker=5, im fills exactly, count=407
-    d_v=2: ker=5, im fills exactly, count=101
-    *** H_2^rel != 0: d_v=2, rel=(5,10,7), ker=6, im=5
-    *** H_2^rel != 0: d_v=2, rel=(5,10,8), ker=6, im=5
-    d_v=2: ker=6, im fills exactly, count=437
-    d_v=2: ker=6, im fills exactly, count=783
-    d_v=2: ker=6, im fills exactly, count=1672
-    d_v=2: ker=6, im fills exactly, count=100
-    *** H_2^rel != 0: d_v=2, rel=(5,11,9), ker=7, im=6
-    *** H_2^rel != 0: d_v=2, rel=(5,11,10), ker=7, im=6
-    *** H_2^rel != 0: d_v=2, rel=(5,11,11), ker=7, im=6
-    d_v=2: ker=7, im fills exactly, count=541
-    d_v=2: ker=7, im fills exactly, count=550
-    *** H_2^rel != 0: d_v=2, rel=(5,11,13), ker=7, im=6
-    d_v=2: ker=7, im fills exactly, count=633
-    d_v=2: ker=8, im fills exactly, count=33
-    *** H_2^rel != 0: d_v=2, rel=(5,11,14), ker=7, im=6
-    d_v=2: ker=8, im fills exactly, count=97
-    d_v=2: ker=7, im fills exactly, count=105
-    *** H_2^rel != 0: d_v=2, rel=(5,12,12), ker=8, im=7
-    d_v=2: ker=8, im fills exactly, count=177
-    *** H_2^rel != 0: d_v=2, rel=(5,12,15), ker=8, im=7
-    d_v=2: ker=8, im fills exactly, count=229
-    *** H_2^rel != 0: d_v=2, rel=(5,12,16), ker=8, im=7
-    d_v=2: ker=8, im fills exactly, count=666
-    d_v=2: ker=8, im fills exactly, count=323
-    d_v=2: ker=8, im fills exactly, count=193
-    d_v=2: ker=8, im fills exactly, count=96
-    *** H_2^rel != 0: d_v=2, rel=(5,13,17), ker=9, im=8
-    d_v=2: ker=9, im fills exactly, count=96
-    d_v=2: ker=10, im fills exactly, count=111
-    d_v=3: ker=5, im fills exactly, count=552
-    d_v=3: ker=5, im fills exactly, count=364
-    d_v=3: ker=5, im fills exactly, count=110
-    *** H_2^rel != 0: d_v=3, rel=(5,10,7), ker=6, im=5
-    *** H_2^rel != 0: d_v=3, rel=(5,10,8), ker=6, im=5
-    d_v=3: ker=6, im fills exactly, count=465
-    d_v=3: ker=6, im fills exactly, count=819
-    d_v=3: ker=6, im fills exactly, count=1689
-    d_v=3: ker=6, im fills exactly, count=108
-    *** H_2^rel != 0: d_v=3, rel=(5,11,9), ker=7, im=6
-    *** H_2^rel != 0: d_v=3, rel=(5,11,10), ker=7, im=6
-    *** H_2^rel != 0: d_v=3, rel=(5,11,11), ker=7, im=6
-    d_v=3: ker=7, im fills exactly, count=561
-    d_v=3: ker=7, im fills exactly, count=552
-    *** H_2^rel != 0: d_v=3, rel=(5,11,13), ker=7, im=6
-    d_v=3: ker=7, im fills exactly, count=641
-    d_v=3: ker=8, im fills exactly, count=42
-    *** H_2^rel != 0: d_v=3, rel=(5,11,14), ker=7, im=6
-    d_v=3: ker=8, im fills exactly, count=113
-    d_v=3: ker=7, im fills exactly, count=120
-    *** H_2^rel != 0: d_v=3, rel=(5,12,12), ker=8, im=7
-    d_v=3: ker=8, im fills exactly, count=168
-    *** H_2^rel != 0: d_v=3, rel=(5,12,15), ker=8, im=7
-    d_v=3: ker=8, im fills exactly, count=213
-    *** H_2^rel != 0: d_v=3, rel=(5,12,16), ker=8, im=7
-    d_v=3: ker=8, im fills exactly, count=657
-    d_v=3: ker=8, im fills exactly, count=332
-    d_v=3: ker=8, im fills exactly, count=215
-    d_v=3: ker=8, im fills exactly, count=96
-    *** H_2^rel != 0: d_v=3, rel=(5,13,17), ker=9, im=8
-    d_v=3: ker=9, im fills exactly, count=96
-    d_v=3: ker=10, im fills exactly, count=111
-    d_v=4: ker=5, im fills exactly, count=42
-    d_v=4: ker=5, im fills exactly, count=117
-    d_v=4: ker=5, im fills exactly, count=142
-    d_v=4: ker=6, im fills exactly, count=183
-    d_v=4: ker=5, im fills exactly, count=101
-    d_v=4: ker=6, im fills exactly, count=111
-    *** H_2^rel != 0: d_v=4, rel=(5,10,7), ker=6, im=5
-    *** H_2^rel != 0: d_v=4, rel=(5,10,8), ker=6, im=5
-    d_v=4: ker=6, im fills exactly, count=302
-    *** H_2^rel != 0: d_v=4, rel=(5,10,9), ker=6, im=5
-    d_v=4: ker=6, im fills exactly, count=1060
-    d_v=4: ker=6, im fills exactly, count=413
-    *** H_2^rel != 0: d_v=4, rel=(5,11,9), ker=7, im=6
-    d_v=4: ker=7, im fills exactly, count=108
-    *** H_2^rel != 0: d_v=4, rel=(5,11,11), ker=7, im=6
-    d_v=4: ker=7, im fills exactly, count=439
-    *** H_2^rel != 0: d_v=4, rel=(5,11,12), ker=7, im=6
-    d_v=4: ker=7, im fills exactly, count=220
-    *** H_2^rel != 0: d_v=4, rel=(5,11,13), ker=7, im=6
-    d_v=4: ker=7, im fills exactly, count=221
-    d_v=4: ker=8, im fills exactly, count=33
-    d_v=4: ker=8, im fills exactly, count=97
-    *** H_2^rel != 0: d_v=5, rel=(5,10,8), ker=6, im=5
-    *** H_2^rel != 0: d_v=5, rel=(5,10,9), ker=6, im=5
-    d_v=5: ker=6, im fills exactly, count=590
-    *** H_2^rel != 0: d_v=5, rel=(5,10,10), ker=6, im=5
-    d_v=5: ker=6, im fills exactly, count=103
-
-======================================================================
-FORMULA: dim(Omega_p^rel) as function of d_v?
-======================================================================
-
-  n=5:
-    d_v=0: VARIES, 2 patterns: [(4, 6, 3), (4, 6, 4)]...
-    d_v=1: VARIES, 7 patterns: [(4, 5, 2), (4, 5, 3), (4, 5, 4), (4, 6, 2), (4, 6, 3)]...
-    d_v=2: VARIES, 7 patterns: [(4, 5, 2), (4, 5, 3), (4, 6, 3), (4, 6, 4), (4, 6, 6)]...
-    d_v=3: VARIES, 7 patterns: [(4, 5, 2), (4, 5, 3), (4, 5, 4), (4, 6, 2), (4, 6, 3)]...
-    d_v=4: VARIES, 2 patterns: [(4, 6, 3), (4, 6, 4)]...
-
-  n=6:
-    d_v=0: VARIES, 3 patterns: [(5, 10, 8), (5, 10, 9), (5, 10, 10)]...
-    d_v=1: VARIES, 16 patterns: [(5, 9, 6), (5, 9, 7), (5, 9, 8), (5, 9, 9), (5, 9, 10)]...
-    d_v=2: VARIES, 26 patterns: [(5, 9, 7), (5, 9, 8), (5, 9, 9), (5, 10, 7), (5, 10, 8)]...
-    d_v=3: VARIES, 26 patterns: [(5, 9, 7), (5, 9, 8), (5, 9, 9), (5, 10, 7), (5, 10, 8)]...
-    d_v=4: VARIES, 16 patterns: [(5, 9, 6), (5, 9, 7), (5, 9, 8), (5, 9, 9), (5, 9, 10)]...
-    d_v=5: VARIES, 3 patterns: [(5, 10, 8), (5, 10, 9), (5, 10, 10)]...
+n=6: 196608 (T,v) pairs in 252s
+  h₂_rel distribution: {0: 161280, 1: 35328}
+  Violations (h₂_rel > 1): 0
 
 Done.

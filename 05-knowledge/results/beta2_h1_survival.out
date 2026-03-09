@@ -9,3 +9,9 @@ n=5: 1024 tournaments in 5s
 ======================================================================
 SUM OF h₂_rel OVER ALL VERTICES (including source/sink)
 ======================================================================
+
+n=5: 1024 tournaments in 9s
+  Σ h₂_rel (all v): {0: 544, 1: 240, 2: 120, 3: 120}
+  Σ h₂_rel (interior v): {0: 784, 2: 120, 3: 120}
+  Max Σ h₂_rel = 3
+  ✓ Σ h₂_rel < n for all T (trivially gives HYP-258)

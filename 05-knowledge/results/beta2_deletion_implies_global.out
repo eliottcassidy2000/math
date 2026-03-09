@@ -1,0 +1,49 @@
+======================================================================
+KEY CLAIM: β₁(T)>0 ∀v ==> β₁(T)>0
+Contrapositive: β₁(T)=0 ==> ∃v with β₁(T)=0
+======================================================================
+
+n=4: 64 tournaments in 0s
+  ##all_del_pos = 0
+  ##b1_zero = 40
+  Claim holds: ✓
+
+n=5: 1024 tournaments in 1s
+  ##all_del_pos = 24
+  ##b1_zero = 720
+  Claim holds: ✓
+  n=6: 5000/32768 (6s)
+  n=6: 10000/32768 (14s)
+  n=6: 15000/32768 (21s)
+  n=6: 20000/32768 (28s)
+  n=6: 25000/32768 (36s)
+  n=6: 30000/32768 (43s)
+
+n=6: 32768 tournaments in 46s
+  ##all_del_pos = 960
+  ##b1_zero = 27968
+  Claim holds: ✓
+  n=7: 1000/5000 (2s)
+  n=7: 2000/5000 (4s)
+  n=7: 3000/5000 (6s)
+  n=7: 4000/5000 (8s)
+  n=7: 5000/5000 (9s)
+
+n=7: 5000 tournaments in 9s
+  ##all_del_pos = 61
+  ##b1z_no_del = 0
+  Claim holds: ✓
+  n=8: 1000/2000 (3s)
+  n=8: 2000/2000 (5s)
+
+n=8: 2000 tournaments in 5s
+  ##all_del_pos = 6
+  ##b1z_no_del = 0
+  Claim holds: ✓
+
+n=9: 500 tournaments in 3s
+  ##all_del_pos = 0
+  ##b1z_no_del = 0
+  Claim holds: ✓
+
+Done.
