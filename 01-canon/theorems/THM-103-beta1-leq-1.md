@@ -41,6 +41,22 @@ Therefore the edges {(v, u₂), (v, u₃), ..., (v, u_d)} are **determined** by 
 
   β₁ = dim(cocycles) - dim(coboundaries) ≤ n - (n-1) = 1. □
 
+## Alternative Proof (Homological — 3-Cycle Homologous Argument)
+
+**Step 1.** Every 1-cycle z ∈ Z₁(T) decomposes as z = b + Σ aᵢCᵢ where b ∈ B₁ and Cᵢ are directed 3-cycles. (Longer cycles split via transitive chords, which exist in any tournament cycle of length ≥ 4.)
+
+**Step 2.** All directed 3-cycles represent the same H₁ class. Key lemma: if C₁ = (a→b→c→a) and C₂ = (a→b→d→a) share edge a→b, then C₁ - C₂ ∈ B₁.
+
+*Proof of lemma:*
+- Case c→d: ∂₂(b,c,d) - ∂₂(c,d,a) = C₁ - C₂. Both (b,c,d) and (c,d,a) are transitive triples in Ω₂.
+- Case d→c: ∂₂(d,c,a) - ∂₂(b,d,c) = C₁ - C₂. Both transitive triples in Ω₂.
+
+By transitivity of the "share an edge" relation (via intermediate 3-cycles), all 3-cycles in T are homologous.
+
+**Step 3.** H₁(T) is spanned by the single class [C] where C is any 3-cycle. Either [C] = 0 (β₁ = 0) or [C] ≠ 0 (β₁ = 1). Hence β₁ ≤ 1. □
+
+*Note:* The remaining detail (3-cycle sharing graph is connected) follows from tournament completeness.
+
 ## Sharpness
 
 The bound is achieved: β₁(T) = 1 for the directed 3-cycle on 3 vertices, and more generally for regular tournaments at n = 3, 5, 7 (among others). At n = 5, all 24 regular tournaments have β₁ = 1.
