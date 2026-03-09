@@ -1,0 +1,189 @@
+======================================================================
+POINCARE POLYNOMIAL: P(T,t) = sum dim(Omega_p) * t^p
+Transitive: P = ((1+t)^n - 1)/t
+======================================================================
+
+--- Part 1: Poincare polynomials for named tournaments ---
+
+  Transitive T_3:
+    Omega dims: [3, 3, 1]
+    Transitive: [3, 3, 1]
+    Ratios: ['1.000', '1.000', '1.000']
+    P(T,-1) = chi = 1
+    P(T,1) = sum dims = 7
+    P(trans,1) = 2^n - 1 = 7
+
+  Paley T_3:
+    Omega dims: [3, 3, np.int64(0)]
+    Transitive: [3, 3, 1]
+    Ratios: ['1.000', '1.000', '0.000']
+    P(T,-1) = chi = 0
+    P(T,1) = sum dims = 6
+    P(trans,1) = 2^n - 1 = 7
+
+  Random T_3:
+    Omega dims: [3, 3, 1]
+    Transitive: [3, 3, 1]
+    Ratios: ['1.000', '1.000', '1.000']
+    P(T,-1) = chi = 1
+    P(T,1) = sum dims = 7
+    P(trans,1) = 2^n - 1 = 7
+
+  Transitive T_5:
+    Omega dims: [5, 10, 10, 5, 1]
+    Transitive: [5, 10, 10, 5, 1]
+    Ratios: ['1.000', '1.000', '1.000', '1.000', '1.000']
+    P(T,-1) = chi = 1
+    P(T,1) = sum dims = 31
+    P(trans,1) = 2^n - 1 = 31
+
+  Random T_5:
+    Omega dims: [5, 10, np.int64(9), np.int64(5), np.int64(1)]
+    Transitive: [5, 10, 10, 5, 1]
+    Ratios: ['1.000', '1.000', '0.900', '1.000', '1.000']
+    P(T,-1) = chi = 0
+    P(T,1) = sum dims = 30
+    P(trans,1) = 2^n - 1 = 31
+
+  Transitive T_7:
+    Omega dims: [7, 21, 35, 35, 21, 7, 1]
+    Transitive: [7, 21, 35, 35, 21, 7, 1]
+    Ratios: ['1.000', '1.000', '1.000', '1.000', '1.000', '1.000', '1.000']
+    P(T,-1) = chi = 1
+    P(T,1) = sum dims = 127
+    P(trans,1) = 2^n - 1 = 127
+
+  Paley T_7:
+    Omega dims: [7, 21, np.int64(42), np.int64(63), np.int64(63), np.int64(42), np.int64(21)]
+    Transitive: [7, 21, 35, 35, 21, 7, 1]
+    Ratios: ['1.000', '1.000', '1.200', '1.800', '3.000', '6.000', '21.000']
+    P(T,-1) = chi = 7
+    P(T,1) = sum dims = 259
+    P(trans,1) = 2^n - 1 = 127
+
+  Random T_7:
+    Omega dims: [7, 21, np.int64(34), np.int64(31), np.int64(15), np.int64(3), np.int64(0)]
+    Transitive: [7, 21, 35, 35, 21, 7, 1]
+    Ratios: ['1.000', '1.000', '0.971', '0.886', '0.714', '0.429', '0.000']
+    P(T,-1) = chi = 1
+    P(T,1) = sum dims = 111
+    P(trans,1) = 2^n - 1 = 127
+
+======================================================================
+Part 2: P(T,1) = sum dim(Omega_p) distribution
+Transitive: P(trans,1) = 2^n - 1
+======================================================================
+
+  n=3: P(trans,1) = 7
+    avg P(T,1) = 6.8
+    min = 6, max = 7
+    ratio avg/trans = 0.9643
+
+  n=4: P(trans,1) = 15
+    avg P(T,1) = 14.1
+    min = 13, max = 15
+    ratio avg/trans = 0.9417
+
+  n=5: P(trans,1) = 31
+    avg P(T,1) = 29.4
+    min = 26, max = 40
+    ratio avg/trans = 0.9476
+
+  n=6: P(trans,1) = 63
+    avg P(T,1) = 65.1
+    min = 53, max = 114
+    ratio avg/trans = 1.0338
+
+  n=7: P(trans,1) = 127
+    avg P(T,1) = 151.0
+    min = 97, max = 265
+    ratio avg/trans = 1.1888
+
+======================================================================
+Part 3: I(Omega(T), x) vs P(T, t) — are they related?
+======================================================================
+
+  n=5, trial 0:
+    P(t) coeffs = [5, 10, 10, 5, 1], P(-1) = 1
+    I(x) coeffs = [1], I(-1) = 1
+    H = 1, I(2) = 1, match: True
+
+  n=5, trial 1:
+    P(t) coeffs = [5, 10, 10, 5, 1], P(-1) = 1
+    I(x) coeffs = [1], I(-1) = 1
+    H = 1, I(2) = 1, match: True
+
+  n=5, trial 2:
+    P(t) coeffs = [5, 10, np.int64(9), np.int64(3), np.int64(0)], P(-1) = 1
+    I(x) coeffs = [1, 1], I(-1) = 0
+    H = 3, I(2) = 3, match: True
+
+  n=5, trial 3:
+    P(t) coeffs = [5, 10, 10, 5, 1], P(-1) = 1
+    I(x) coeffs = [1], I(-1) = 1
+    H = 1, I(2) = 1, match: True
+
+  n=5, trial 4:
+    P(t) coeffs = [5, 10, np.int64(9), np.int64(4), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 2], I(-1) = -1
+    H = 5, I(2) = 5, match: True
+
+  n=6, trial 0:
+    P(t) coeffs = [6, 15, np.int64(19), np.int64(14), np.int64(6), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 6, 2], I(-1) = -3
+    H = 33, I(2) = 21, match: False
+
+  n=6, trial 1:
+    P(t) coeffs = [6, 15, 20, 15, 6, 1], P(-1) = 1
+    I(x) coeffs = [1], I(-1) = 1
+    H = 1, I(2) = 1, match: True
+
+  n=6, trial 2:
+    P(t) coeffs = [6, 15, np.int64(21), np.int64(20), np.int64(10), np.int64(2)], P(-1) = 0
+    I(x) coeffs = [1, 6], I(-1) = -5
+    H = 23, I(2) = 13, match: False
+
+  n=6, trial 3:
+    P(t) coeffs = [6, 15, np.int64(19), np.int64(14), np.int64(6), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 3], I(-1) = -2
+    H = 9, I(2) = 7, match: False
+
+  n=6, trial 4:
+    P(t) coeffs = [6, 15, np.int64(20), np.int64(15), np.int64(6), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 5], I(-1) = -4
+    H = 19, I(2) = 11, match: False
+
+  n=7, trial 0:
+    P(t) coeffs = [7, 21, np.int64(38), np.int64(47), np.int64(40), np.int64(21), np.int64(5)], P(-1) = 1
+    I(x) coeffs = [1, 10, 5], I(-1) = -4
+    H = 89, I(2) = 41, match: False
+
+  n=7, trial 1:
+    P(t) coeffs = [7, 21, np.int64(35), np.int64(36), np.int64(24), np.int64(10), np.int64(2)], P(-1) = 1
+    I(x) coeffs = [1, 7, 2], I(-1) = -4
+    H = 45, I(2) = 23, match: False
+
+  n=7, trial 2:
+    P(t) coeffs = [7, 21, np.int64(34), np.int64(31), np.int64(16), np.int64(5), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 8, 5], I(-1) = -2
+    H = 77, I(2) = 37, match: False
+
+  n=7, trial 3:
+    P(t) coeffs = [7, 21, np.int64(34), np.int64(31), np.int64(17), np.int64(6), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 5, 2], I(-1) = -2
+    H = 29, I(2) = 19, match: False
+
+  n=7, trial 4:
+    P(t) coeffs = [7, 21, np.int64(34), np.int64(34), np.int64(21), np.int64(7), np.int64(1)], P(-1) = 1
+    I(x) coeffs = [1, 4], I(-1) = -3
+    H = 17, I(2) = 9, match: False
+
+======================================================================
+Part 4: P(T,1)/(2^n - 1) ratio scaling
+======================================================================
+  n=3: avg ratio = 0.9643, range [0.8571, 1.0000]
+  n=4: avg ratio = 0.9417, range [0.8667, 1.0000]
+  n=5: avg ratio = 0.9476, range [0.8387, 1.2903]
+  n=6: avg ratio = 1.0338, range [0.8413, 1.8095]
+  n=7: avg ratio = 1.1888, range [0.7638, 2.0866]
+  n=8: avg ratio = 1.4917, range [0.8510, 3.0902]
