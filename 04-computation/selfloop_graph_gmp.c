@@ -8,7 +8,7 @@
  *
  * Also computes:
  *   A000666 (symmetric relations / graphs with self-loops, base=2)
- *   A002854 (digraphs with self-loops, base=2, directed pair orbits + num_cycles)
+ *   A000595 (binary relations / digraphs with self-loops, base=2, directed pair orbits + num_cycles)
  *
  * Mode 1 (undirected, symmetric relations):
  *   orbits = sum_{i<j} gcd(c_i,c_j) + sum floor(c_i/2) + num_cycles
@@ -23,7 +23,7 @@
  *
  * Usage: ./selfloop_graph_gmp <mode> <max_n>
  *   mode=1: A000666 (symmetric relations)
- *   mode=2: A002854 (reflexive relations on digraphs)
+ *   mode=2: A000595 (binary relations / digraphs with self-loops)
  *
  * Author: opus-2026-03-09-S50
  */
