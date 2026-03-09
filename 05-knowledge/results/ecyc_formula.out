@@ -1,0 +1,194 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\ecyc_formula.py:74: SyntaxWarning: invalid escape sequence '\ '
+  An arc u->v is acyclic iff N^+(v) \u2229 N^-(u) \ {u,v} = \u2205,
+======================================================================
+E_CYC FORMULA INVESTIGATION
+======================================================================
+
+--- Part 1: e_cyc as function of score sequence ---
+
+  n=5: e_cyc by score sequence:
+    scores=(0, 1, 2, 3, 4): c3=[0], e_cyc=[0], CONSTANT (120 tournaments)
+    scores=(0, 1, 3, 3, 3): c3=[1], e_cyc=[3], CONSTANT (40 tournaments)
+    scores=(0, 2, 2, 2, 4): c3=[1], e_cyc=[3], CONSTANT (40 tournaments)
+    scores=(0, 2, 2, 3, 3): c3=[2], e_cyc=[5], CONSTANT (120 tournaments)
+    scores=(1, 1, 1, 3, 4): c3=[1], e_cyc=[3], CONSTANT (40 tournaments)
+    scores=(1, 1, 2, 2, 4): c3=[2], e_cyc=[5], CONSTANT (120 tournaments)
+    scores=(1, 1, 2, 3, 3): c3=[3], e_cyc=[7], CONSTANT (240 tournaments)
+    scores=(1, 2, 2, 2, 3): c3=[4], e_cyc=[8, 9, 10], VARIES (280 tournaments)
+    scores=(2, 2, 2, 2, 2): c3=[5], e_cyc=[10], CONSTANT (24 tournaments)
+
+  n=6: e_cyc by score sequence:
+    scores=(0, 1, 2, 3, 4, 5): c3=[0], e_cyc=[0], CONSTANT (720 tournaments)
+    scores=(0, 1, 2, 4, 4, 4): c3=[1], e_cyc=[3], CONSTANT (240 tournaments)
+    scores=(0, 1, 3, 3, 3, 5): c3=[1], e_cyc=[3], CONSTANT (240 tournaments)
+    scores=(0, 1, 3, 3, 4, 4): c3=[2], e_cyc=[5], CONSTANT (720 tournaments)
+    scores=(0, 2, 2, 2, 4, 5): c3=[1], e_cyc=[3], CONSTANT (240 tournaments)
+    scores=(0, 2, 2, 3, 3, 5): c3=[2], e_cyc=[5], CONSTANT (720 tournaments)
+    scores=(0, 2, 2, 3, 4, 4): c3=[3], e_cyc=[7], CONSTANT (1440 tournaments)
+    scores=(0, 2, 3, 3, 3, 4): c3=[4], e_cyc=[8, 9, 10], VARIES (1680 tournaments)
+    scores=(0, 3, 3, 3, 3, 3): c3=[5], e_cyc=[10], CONSTANT (144 tournaments)
+    scores=(1, 1, 1, 3, 4, 5): c3=[1], e_cyc=[3], CONSTANT (240 tournaments)
+    scores=(1, 1, 1, 4, 4, 4): c3=[2], e_cyc=[6], CONSTANT (80 tournaments)
+    scores=(1, 1, 2, 2, 4, 5): c3=[2], e_cyc=[5], CONSTANT (720 tournaments)
+    scores=(1, 1, 2, 3, 3, 5): c3=[3], e_cyc=[7], CONSTANT (1440 tournaments)
+    scores=(1, 1, 2, 3, 4, 4): c3=[4], e_cyc=[9], CONSTANT (2880 tournaments)
+    scores=(1, 1, 3, 3, 3, 4): c3=[5], e_cyc=[10, 11, 12], VARIES (1680 tournaments)
+    scores=(1, 2, 2, 2, 3, 5): c3=[4], e_cyc=[8, 9, 10], VARIES (1680 tournaments)
+    scores=(1, 2, 2, 2, 4, 4): c3=[5], e_cyc=[10, 11, 12], VARIES (1680 tournaments)
+    scores=(1, 2, 2, 3, 3, 4): c3=[6], e_cyc=[11, 12, 13, 14], VARIES (8640 tournaments)
+    scores=(1, 2, 3, 3, 3, 3): c3=[7], e_cyc=[13, 14], VARIES (2400 tournaments)
+    scores=(2, 2, 2, 2, 2, 5): c3=[5], e_cyc=[10], CONSTANT (144 tournaments)
+    scores=(2, 2, 2, 2, 3, 4): c3=[7], e_cyc=[13, 14], VARIES (2400 tournaments)
+    scores=(2, 2, 2, 3, 3, 3): c3=[8], e_cyc=[12, 14, 15], VARIES (2640 tournaments)
+
+--- Part 2: Acyclic edge characterization ---
+
+  bits=0: scores=[0, 1, 2, 3, 4]
+    1->0: acyclic
+    2->0: cyclic(A^2=1)
+    2->1: acyclic
+    3->0: cyclic(A^2=2)
+    3->1: cyclic(A^2=1)
+    3->2: acyclic
+    4->0: cyclic(A^2=3)
+    4->1: cyclic(A^2=2)
+    4->2: cyclic(A^2=1)
+    4->3: acyclic
+    e_cyc=0, acyclic=4, total arcs=10
+    CHECK: e_cyc + acyclic = 4 = 10? NO
+
+  bits=1: scores=[1, 0, 2, 3, 4]
+    0->1: acyclic
+    2->0: acyclic
+    2->1: cyclic(A^2=1)
+    3->0: cyclic(A^2=1)
+    3->1: cyclic(A^2=2)
+    3->2: acyclic
+    4->0: cyclic(A^2=2)
+    4->1: cyclic(A^2=3)
+    4->2: cyclic(A^2=1)
+    4->3: acyclic
+    e_cyc=0, acyclic=4, total arcs=10
+    CHECK: e_cyc + acyclic = 4 = 10? NO
+
+  bits=2: scores=[1, 1, 1, 3, 4]
+    0->2: acyclic
+    1->0: acyclic
+    2->1: acyclic
+    3->0: cyclic(A^2=1)
+    3->1: cyclic(A^2=1)
+    3->2: cyclic(A^2=1)
+    4->0: cyclic(A^2=2)
+    4->1: cyclic(A^2=2)
+    4->2: cyclic(A^2=2)
+    4->3: acyclic
+    e_cyc=3, acyclic=4, total arcs=10
+    CHECK: e_cyc + acyclic = 7 = 10? NO
+
+  bits=3: scores=[2, 0, 1, 3, 4]
+    0->1: cyclic(A^2=1)
+    0->2: acyclic
+    2->1: acyclic
+    3->0: acyclic
+    3->1: cyclic(A^2=2)
+    3->2: cyclic(A^2=1)
+    4->0: cyclic(A^2=1)
+    4->1: cyclic(A^2=3)
+    4->2: cyclic(A^2=2)
+    4->3: acyclic
+    e_cyc=0, acyclic=4, total arcs=10
+    CHECK: e_cyc + acyclic = 4 = 10? NO
+
+  bits=4: scores=[1, 1, 2, 2, 4]
+    0->3: acyclic
+    1->0: acyclic
+    2->0: cyclic(A^2=1)
+    2->1: acyclic
+    3->1: cyclic(A^2=1)
+    3->2: acyclic
+    4->0: cyclic(A^2=2)
+    4->1: cyclic(A^2=2)
+    4->2: cyclic(A^2=1)
+    4->3: cyclic(A^2=1)
+    e_cyc=5, acyclic=4, total arcs=10
+    CHECK: e_cyc + acyclic = 9 = 10? NO
+
+--- Part 3: Acyclic = dominance edges ---
+
+  n=5: P(acyclic | s_u, s_v) for edge u->v:
+    (s_u=1, s_v=0): P(acyclic) = 1.0000 (160/160)
+    (s_u=1, s_v=1): P(acyclic) = 1.0000 (480/480)
+    (s_u=1, s_v=2): P(acyclic) = 1.0000 (480/480)
+    (s_u=1, s_v=3): P(acyclic) = 1.0000 (160/160)
+    (s_u=2, s_v=0): P(acyclic) = 0.0000 (0/480)
+    (s_u=2, s_v=1): P(acyclic) = 0.3333 (480/1440)
+    (s_u=2, s_v=2): P(acyclic) = 0.6667 (960/1440)
+    (s_u=2, s_v=3): P(acyclic) = 1.0000 (480/480)
+    (s_u=3, s_v=0): P(acyclic) = 0.0000 (0/480)
+    (s_u=3, s_v=1): P(acyclic) = 0.0000 (0/1440)
+    (s_u=3, s_v=2): P(acyclic) = 0.3333 (480/1440)
+    (s_u=3, s_v=3): P(acyclic) = 1.0000 (480/480)
+    (s_u=4, s_v=0): P(acyclic) = 0.0000 (0/160)
+    (s_u=4, s_v=1): P(acyclic) = 0.0000 (0/480)
+    (s_u=4, s_v=2): P(acyclic) = 0.0000 (0/480)
+    (s_u=4, s_v=3): P(acyclic) = 1.0000 (160/160)
+
+--- Part 4: sum A^2[u,v] over edges = 3*c3 ---
+  FAIL bits=0: sum(A^2)=10, 3*c3=0
+  FAIL bits=1: sum(A^2)=10, 3*c3=0
+  FAIL bits=2: sum(A^2)=9, 3*c3=3
+  FAIL bits=0: sum(A^2)=20, 3*c3=0
+  FAIL bits=1: sum(A^2)=20, 3*c3=0
+  FAIL bits=2: sum(A^2)=19, 3*c3=3
+
+--- Part 5: e_cyc vs sum(s_v^2) ---
+
+  n=5: e_cyc by (sum_s^2, c3):
+    ss2=20, c3=5: e_cyc=[10], CONST
+    ss2=22, c3=4: e_cyc=[8, 9, 10], VARIES
+    ss2=24, c3=3: e_cyc=[7], CONST
+    ss2=26, c3=2: e_cyc=[5], CONST
+    ss2=28, c3=1: e_cyc=[3], CONST
+    ss2=30, c3=0: e_cyc=[0], CONST
+
+  n=6: e_cyc by (sum_s^2, c3):
+    ss2=39, c3=8: e_cyc=[12, 14, 15], VARIES
+    ss2=41, c3=7: e_cyc=[13, 14], VARIES
+    ss2=43, c3=6: e_cyc=[11, 12, 13, 14], VARIES
+    ss2=45, c3=5: e_cyc=[10, 11, 12], VARIES
+    ss2=47, c3=4: e_cyc=[8, 9, 10], VARIES
+    ss2=49, c3=3: e_cyc=[7], CONST
+    ss2=51, c3=2: e_cyc=[5, 6], VARIES
+    ss2=53, c3=1: e_cyc=[3], CONST
+    ss2=55, c3=0: e_cyc=[0], CONST
+
+--- Part 6: What distinguishes e_cyc values within same c3? ---
+
+  c3=2, e_cyc=5: 2160 tournaments
+    scores=(0, 1, 3, 3, 4, 4): 720
+    scores=(0, 2, 2, 3, 3, 5): 720
+    scores=(1, 1, 2, 2, 4, 5): 720
+    5/5 samples share an edge between the 2 cycles
+
+  c3=2, e_cyc=6: 80 tournaments
+    scores=(1, 1, 1, 4, 4, 4): 80
+
+--- Part 7: e_cyc = 3*c3 - 3*(shared edges between cycle pairs) ---
+
+  Checking e_cyc vs min(3*c3, total_arcs):
+
+  n=5: e_cyc = min(3*c3, 10) in 304/1024 (29.7%)
+    FAIL bits=4: c3=2, e_cyc=5, min(3*c3,arcs)=6
+    FAIL bits=6: c3=2, e_cyc=5, min(3*c3,arcs)=6
+    FAIL bits=8: c3=3, e_cyc=7, min(3*c3,arcs)=9
+    FAIL bits=9: c3=2, e_cyc=5, min(3*c3,arcs)=6
+    FAIL bits=10: c3=3, e_cyc=7, min(3*c3,arcs)=9
+
+  n=6: e_cyc = min(3*c3, 15) in 3440/32768 (10.5%)
+    FAIL bits=4: c3=2, e_cyc=5, min(3*c3,arcs)=6
+    FAIL bits=6: c3=2, e_cyc=5, min(3*c3,arcs)=6
+    FAIL bits=8: c3=3, e_cyc=7, min(3*c3,arcs)=9
+    FAIL bits=9: c3=2, e_cyc=5, min(3*c3,arcs)=6
+    FAIL bits=10: c3=3, e_cyc=7, min(3*c3,arcs)=9
+
+DONE.

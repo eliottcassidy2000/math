@@ -1,0 +1,91 @@
+======================================================================
+DEFECT RATE U-SHAPE INVESTIGATION
+======================================================================
+
+--- n=5: Exhaustive (1024 tournaments) ---
+  Defect rates:
+    beta_0: 1.0000 (1024/1024)
+    beta_1: 0.2969 (304/1024)
+    beta_2: 0.0000 (0/1024)
+    beta_3: 0.0000 (0/1024)
+    beta_4: 0.0000 (0/1024)
+
+  Distinct Betti profiles: 2
+    [1, 0, 0, 0, 0]: 720 (70.3%)
+    [1, 1, 0, 0, 0]: 304 (29.7%)
+
+--- n=6: Exhaustive (32768 tournaments) ---
+  Defect rates:
+    beta_0: 1.0000 (32768/32768)
+    beta_1: 0.1465 (4800/32768)
+    beta_2: 0.0000 (0/32768)
+    beta_3: 0.0098 (320/32768)
+    beta_4: 0.0000 (0/32768)
+    beta_5: 0.0000 (0/32768)
+
+  Distinct Betti profiles: 3
+    [1, 0, 0, 0, 0, 0]: 27648 (84.4%)
+    [1, 1, 0, 0, 0, 0]: 4800 (14.6%)
+    [1, 0, 0, 1, 0, 0]: 320 (1.0%)
+
+--- n=7: Sampled (500 tournaments) ---
+  100/500 done
+  200/500 done
+  300/500 done
+  400/500 done
+  500/500 done
+
+  Defect rates:
+    beta_0: 1.0000 (500/500)
+    beta_1: 0.0580 (29/500)
+    beta_2: 0.0000 (0/500)
+    beta_3: 0.0720 (36/500)
+    beta_4: 0.0000 (0/500)
+    beta_5: 0.0000 (0/500)
+    beta_6: 0.0000 (0/500)
+
+  Distinct Betti profiles: 3
+    [1, 0, 0, 0, 0, 0, 0]: 435 (87.0%)
+    [1, 0, 0, 1, 0, 0, 0]: 36 (7.2%)
+    [1, 1, 0, 0, 0, 0, 0]: 29 (5.8%)
+
+--- Part 3: Even Betti vanishing at n=7 ---
+  beta_0 nonzero: 500 (always 1, expected)
+  beta_2 nonzero: 0 (THM-108+109 proves 0)
+  beta_4 nonzero: 0 (0 at n<=7?)
+  beta_6 nonzero: 0 (top dimension)
+
+--- Part 4: Seesaw beta_1 * beta_3 = 0 ---
+  Total seesaw violations: 0/500
+
+--- n=8: Sampled (100 tournaments, checking nonzero beta) ---
+  25/100 done
+  50/100 done
+  75/100 done
+  100/100 done
+
+  n=8 Defect rates:
+    beta_0: 1.0000 (100/100)
+    beta_1: 0.0100 (1/100)
+    beta_2: 0.0000 (0/100)
+    beta_3: 0.2100 (21/100)
+    beta_4: 0.0200 (2/100)
+    beta_5: 0.0000 (0/100)
+    beta_6: 0.0000 (0/100)
+    beta_7: 0.0000 (0/100)
+
+  Even Betti check:
+    beta_2: 0/100
+    beta_4: 2/100
+    beta_6: 0/100
+
+  Seesaw checks:
+
+  Distinct Betti profiles at n=8: 5
+    [1, 0, 0, 0, 0, 0, 0, 0]: 76 (76.0%)
+    [1, 0, 0, 1, 0, 0, 0, 0]: 21 (21.0%)
+    [1, 0, 0, 0, 1, 0, 0, 0]: 1 (1.0%)
+    [1, 0, 0, 0, 2, 0, 0, 0]: 1 (1.0%)
+    [1, 1, 0, 0, 0, 0, 0, 0]: 1 (1.0%)
+
+DONE.
