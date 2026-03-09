@@ -1,0 +1,48 @@
+======================================================================
+CLAIMS I & II TEST ON BETA_3+BETA_4 COEXISTENCE (mod-p exact)
+======================================================================
+
+--- Part 1: 3 confirmed coexistence tournaments (seed 11111) ---
+
+  Trial 498: bettis=(1, 0, 0, 1, 1, 0, 0, 0), score=(2, 2, 3, 4, 4, 4, 4, 5)
+    v=0: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=1: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=2: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=3: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+    v=4: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+    v=5: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=6: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+    v=7: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+
+  Trial 851: bettis=(1, 0, 0, 1, 1, 0, 0, 0), score=(2, 3, 3, 3, 3, 4, 5, 5)
+    v=0: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+    v=1: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=2: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=3: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=4: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+    v=5: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=6: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=7: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+
+  Trial 994: bettis=(1, 0, 0, 1, 1, 0, 0, 0), score=(2, 2, 2, 3, 4, 5, 5, 5)
+    v=0: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=1: b3(T\v)=1, b4(T)=1, rank(i_*)=0, H_3^rel=1 <== CLAIM I VIOLATION!
+    v=2: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+    v=3: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=4: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=5: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=6: b3(T\v)=0, b4(T)=1, H_3^rel=1 OK
+    v=7: b3(T\v)=1, b4(T)=1, rank(i_*)=1, H_3^rel=0 OK
+
+  CLAIM I (i_*-injectivity): VIOLATED
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\claims_test_coexistence.py", line 239, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\claims_test_coexistence.py", line 202, in main
+    print(f"  CLAIM II (H_3^rel \u2264 1):   {'HOLDS' if all_II_ok else 'VIOLATED'}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2264' in position 20: character maps to <undefined>

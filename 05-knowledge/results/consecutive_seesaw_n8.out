@@ -1,29 +1,7 @@
 ======================================================================
-CONSECUTIVE SEESAW VERIFICATION — MOD-P ARITHMETIC
-HYP-394: beta_k * beta_{k+1} = 0 for all k >= 1, all tournaments
+CONSECUTIVE SEESAW TEST AT n=8 (mod-p exact)
 ======================================================================
-
-  n=6: EXHAUSTIVE verified (S54 + above), 0 violations
-
---- n=7: sampling 500 tournaments ---
-  100/500, 3.5s, violations=0
-  200/500, 6.7s, violations=0
-  300/500, 10.7s, violations=0
-  400/500, 14.3s, violations=0
-  500/500, 18.3s, violations=0
-  Total: 500 in 18.3s, violations=0
-  Betti profiles (top 10):
-    (1, 0, 0, 0, 0, 0, 0): 438
-    (1, 0, 0, 1, 0, 0, 0): 33
-    (1, 1, 0, 0, 0, 0, 0): 28
-    (1, 0, 0, 0, 6, 0, 0): 1
-
---- n=8: sampling 2000 tournaments, max_p=7 ---
-  200/2000 checked, 140.5s, violations=0
-  400/2000 checked, 275.1s, violations=0
-  VIOLATION #1: profile=(1, 0, 0, 1, 1, 0, 0, 0), violations=[(3, 1, 1)]
-  600/2000 checked, 411.9s, violations=1
-  800/2000 checked, 556.2s, violations=1
-  1000/2000 checked, 698.5s, violations=1
-  1200/2000 checked, 840.7s, violations=1
-  1400/2000 checked, 969.4s, violations=1
+  500/5000, 218.0s (2/s), b3=83, b4=5, b3&b4=0, violations=0
+  1000/5000, 421.4s (2/s), b3=162, b4=8, b3&b4=0, violations=0
+  1500/5000, 630.9s (2/s), b3=261, b4=13, b3&b4=0, violations=0
+  2000/5000, 851.3s (2/s), b3=333, b4=14, b3&b4=0, violations=0

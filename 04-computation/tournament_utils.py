@@ -285,41 +285,44 @@ def rank_modp(matrix_rows, nrows, ncols, prime=RANK_PRIME):
 
 
 def _gauss_nullbasis_modp(M, nrows, ncols, prime):
-    """Gaussian elimination mod prime. Returns (rank, null_basis).
+    """Gaussian elimination mod prime using numpy. Returns (rank, null_basis).
     null_basis: list of lists, each of length ncols. Length = ncols - rank.
-    M is list of lists (modified in-place)."""
+    M can be list of lists (converted to numpy) or numpy array."""
+    if isinstance(M, list):
+        mat = np.array(M, dtype=np.int64) % prime
+    else:
+        mat = np.asarray(M, dtype=np.int64) % prime
     rank = 0
     pivot_cols = []
     for col in range(ncols):
-        pivot = -1
-        for row in range(rank, nrows):
-            if M[row][col] % prime != 0:
-                pivot = row
-                break
-        if pivot == -1:
+        # Find pivot in column
+        nonzero = np.where(mat[rank:nrows, col] != 0)[0]
+        if len(nonzero) == 0:
             continue
+        pivot = nonzero[0] + rank
         pivot_cols.append(col)
-        M[rank], M[pivot] = M[pivot], M[rank]
-        inv = pow(M[rank][col], prime - 2, prime)
-        for j in range(ncols):
-            M[rank][j] = (M[rank][j] * inv) % prime
-        for row in range(nrows):
-            if row != rank and M[row][col] % prime != 0:
-                factor = M[row][col]
-                for j in range(ncols):
-                    M[row][j] = (M[row][j] - factor * M[rank][j]) % prime
+        # Swap rows
+        if pivot != rank:
+            mat[[rank, pivot]] = mat[[pivot, rank]]
+        # Normalize pivot row
+        inv = pow(int(mat[rank, col]), prime - 2, prime)
+        mat[rank] = mat[rank] * inv % prime
+        # Eliminate all other rows (vectorized)
+        factors = mat[:nrows, col].copy()
+        factors[rank] = 0
+        nonzero_rows = np.where(factors != 0)[0]
+        if len(nonzero_rows) > 0:
+            mat[nonzero_rows] = (mat[nonzero_rows] - np.outer(factors[nonzero_rows], mat[rank])) % prime
         rank += 1
 
     # Build null space basis from RREF
     free_cols = [c for c in range(ncols) if c not in pivot_cols]
-    pivot_set = set(pivot_cols)
     null_basis = []
     for fc in free_cols:
         vec = [0] * ncols
         vec[fc] = 1
         for r, pc in enumerate(pivot_cols):
-            # Row r has pivot at column pc, so x[pc] = -sum(M[r][j]*x[j]) for free j
-            vec[pc] = (prime - M[r][fc]) % prime
+            vec[pc] = int((prime - mat[r, fc]) % prime)
         null_basis.append(vec)
     return rank, null_basis
 
@@ -337,7 +340,7 @@ def nullbasis_modp(matrix_rows, nrows, ncols, prime=RANK_PRIME):
 
 def _build_constraint_matrix(ap, p, prime):
     """Build the non-allowed constraint matrix P for Omega_p.
-    Returns (P_rows, nrows, ncols) where P_rows is list of lists mod prime."""
+    Returns (P_np, nrows, ncols) where P_np is numpy int64 array mod prime."""
     paths = ap.get(p, [])
     if not paths:
         return None, 0, 0
@@ -347,28 +350,27 @@ def _build_constraint_matrix(ap, p, prime):
     apm1_set = set(ap.get(p-1, []))
     non_allowed = {}
     na_count = 0
+    entries = []  # (row, col, sign) triples for sparse construction
     for j, path in enumerate(paths):
         for sign, face in boundary_faces(path):
             if len(set(face)) == len(face) and face not in apm1_set:
                 if face not in non_allowed:
                     non_allowed[face] = na_count
                     na_count += 1
+                entries.append((non_allowed[face], j, sign))
 
     if na_count == 0:
         return None, 0, len(paths)  # No constraints
 
-    P = [[0] * len(paths) for _ in range(na_count)]
-    for j, path in enumerate(paths):
-        for sign, face in boundary_faces(path):
-            if face in non_allowed:
-                row = non_allowed[face]
-                P[row][j] = (P[row][j] + sign) % prime
+    P = np.zeros((na_count, len(paths)), dtype=np.int64)
+    for row, col, sign in entries:
+        P[row, col] = (P[row, col] + sign) % prime
     return P, na_count, len(paths)
 
 
 def _build_boundary_matrix(ap, p, prime):
-    """Build boundary matrix d_p: A_p -> A_{p-1} as list of lists mod prime.
-    Returns (bd_rows, nrows, ncols)."""
+    """Build boundary matrix d_p: A_p -> A_{p-1} as numpy int64 array mod prime.
+    Returns (bd_np, nrows, ncols)."""
     paths_p = ap.get(p, [])
     paths_pm1 = ap.get(p-1, [])
     if not paths_p or not paths_pm1:
@@ -377,11 +379,11 @@ def _build_boundary_matrix(ap, p, prime):
     idx_prev = {path: i for i, path in enumerate(paths_pm1)}
     nrows = len(paths_pm1)
     ncols = len(paths_p)
-    bd = [[0] * ncols for _ in range(nrows)]
+    bd = np.zeros((nrows, ncols), dtype=np.int64)
     for j, path in enumerate(paths_p):
         for sign, face in boundary_faces(path):
             if face in idx_prev:
-                bd[idx_prev[face]][j] = (bd[idx_prev[face]][j] + sign) % prime
+                bd[idx_prev[face], j] = (bd[idx_prev[face], j] + sign) % prime
     return bd, nrows, ncols
 
 
@@ -429,14 +431,15 @@ def compute_betti_modp(A, n, target_p, max_p=None, prime=RANK_PRIME):
         """Compute rank of d_p restricted to Omega_p."""
         if p < 1 or omega_dim == 0 or not ap.get(p - 1, []):
             return 0
-        bd, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
-        if bd is None:
+        bd_np, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
+        if bd_np is None:
             return 0
         if omega_basis is not None:
-            composed = _matmul_modp(bd, omega_basis, bd_nrows, bd_ncols, omega_dim, prime)
-            return _gauss_rank_modp(composed, bd_nrows, omega_dim, prime)
+            basis_np = np.array(omega_basis, dtype=np.int64)
+            composed = bd_np @ basis_np.T % prime
+            return _gauss_rank_np(composed, prime)
         else:
-            return _gauss_rank_modp(bd, bd_nrows, bd_ncols, prime)
+            return _gauss_rank_np(bd_np.copy(), prime)
 
     omega_p_dim, omega_p_basis = get_omega(target_p)
     if omega_p_dim == 0:
@@ -481,10 +484,9 @@ def compute_betti_hybrid(A, n, target_p, max_p=None, prime=RANK_PRIME):
         """Compute rank of d_p restricted to Omega_p using numpy."""
         if p < 1 or omega_dim == 0 or not ap.get(p - 1, []):
             return 0
-        bd_list, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
-        if bd_list is None:
+        bd_np, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
+        if bd_np is None:
             return 0
-        bd_np = np.array(bd_list, dtype=np.int64)
         if omega_basis_np is not None:
             # bd_np @ omega_basis_np.T, then mod prime
             composed = bd_np @ omega_basis_np.T % prime
@@ -781,11 +783,10 @@ def full_chain_complex_modp(A, n, max_p=5, prime=RANK_PRIME):
         if omega_dims.get(p, 0) == 0 or not ap.get(p-1, []):
             ranks[p] = 0
             continue
-        bd_list, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
-        if bd_list is None:
+        bd_np, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
+        if bd_np is None:
             ranks[p] = 0
             continue
-        bd_np = np.array(bd_list, dtype=np.int64)
         N_p = omega_nullbases.get(p)
         if N_p is not None:
             # composed = bd_np @ N_p^T, then Gauss rank

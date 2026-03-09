@@ -1,0 +1,37 @@
+======================================================================
+PERFORMANCE PROFILING
+======================================================================
+
+--- n=8 breakdown ---
+  A_0: 8 paths
+  A_1: 28 paths
+  A_2: 74 paths
+  A_3: 160 paths
+  A_4: 274 paths
+  A_5: 346 paths
+  A_6: 288 paths
+  A_7: 117 paths
+
+  Path enumeration: 1.5ms
+  Constraint building: 5.7ms
+  Null basis: 75.8ms
+  Full chain complex: 95.0ms
+
+  Per-degree breakdown:
+    p=1: |A_p|=28, dim(Omega_p)=28, constraint=0.0ms
+    p=2: |A_p|=74, dim(Omega_p)=56, constraint=0.1ms
+    p=3: |A_p|=160, dim(Omega_p)=67, constraint=0.4ms
+    p=4: |A_p|=274, dim(Omega_p)=49, constraint=0.9ms
+    p=5: |A_p|=346, dim(Omega_p)=23, constraint=1.5ms
+    p=6: |A_p|=288, dim(Omega_p)=7, constraint=2.0ms
+
+--- Path enumeration scaling ---
+
+  Path enumeration scaling:
+    n=5: 0.1ms, 57 total paths
+    n=6: 0.3ms, 215 total paths
+    n=7: 0.6ms, 469 total paths
+    n=8: 1.1ms, 1295 total paths
+    n=9: 9.3ms, 10591 total paths
+
+DONE.
