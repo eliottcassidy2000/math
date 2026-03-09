@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-S48 — 2026-03-09: seesaw refuted, i_*-injectivity refuted, beta_3=2 at n=8,9, 2.2x speedup
+**Account:** A
+**Continuation of:** kind-pasteur-S47
+**Summary of work:**
+  Major session on path homology structure at n=8. KEY FINDINGS:
+  1. **2.2x speedup**: Numpy-vectorized `_gauss_nullbasis_modp` in tournament_utils.py (95ms→43.6ms at n=8)
+  2. **HYP-394 REFUTED**: Consecutive seesaw (beta_k*beta_{k+1}=0) fails at n=8 (beta_3=beta_4=1 coexists, ~0.15%)
+  3. **HYP-380 REFUTED**: i_*-injectivity fails at n=8. 13/5000 have rank(i_*)=0 when b3=b3(T\v)=1
+  4. **beta_3=2 CONFIRMED at n=8**: 4/5000 (0.08%), profile (1,0,0,2,0,0,0,0). ALSO at n=9: 1/2000 (0.05%)
+  5. **MISTAKE-018**: beta_3<=1 assumed universally, but fails at n>=8
+  6. **Proof architecture circularity**: "good vertex + Claim II" argument is circular — for good v, H_3^rel = b3(T)
+  7. SVD artifacts ruled out — coexistence confirmed by both SVD and mod-p methods
+**New contributions:** verify_svd_artifacts.py, consecutive_seesaw_n8.py, claims_test_coexistence.py,
+  claims_n8_extended.py, profile_bottleneck.py. HYP-371b/375/380/394/395/396 updated/refuted. MISTAKE-018.
+**Unresolved threads:**
+  - What bound replaces beta_3<=1 at n>=8? (beta_3<=2? growing?)
+  - Algebraic explanation for beta_3=2 at n=8 — what structural property allows it?
+  - Opus's HYP-398/399 (new→new boundary targeting) — potential n<=7 proof path
+
 ## opus-2026-03-09-S55 — rank(i_*) all degrees, new-boundary-targeting mechanism, seesaw refuted
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S54
