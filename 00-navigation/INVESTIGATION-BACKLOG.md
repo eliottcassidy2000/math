@@ -378,6 +378,35 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 **Open:** (1) Beta_2=0 is PROVED (THM-108+109). (2) Does generalized seesaw beta_{2k-1}*beta_{2k+1}=0 hold generally? (3) Onset of beta_6 (not seen at n<=8 in 600+ samples). (4) Why exactly 3-5 Betti profiles per n?
 **Scripts:** beta1_beta3_mediator.py, even_betti_quick_v2.py, beta4_investigation.py, beta_coexistence_analysis.py, beta2_algebraic_analysis.py, beta2_disjoint_support_proof.py, beta2_completeness_argument.py, beta2_exactness_proof.py, beta2_only_n9.py, omega2_exact_formula.py, defect_rate_ushape.py, ecyc_formula.py
 
+### INV-138: Beta_3 ≤ 1 Proof Architecture (LES Induction)
+**Source:** kind-pasteur-2026-03-09-S46
+**Status:** PROOF ARCHITECTURE COMPLETE. Both algebraic ingredients computationally verified. No algebraic proof yet.
+**What:** THM-110: beta_3(T) ≤ 1 for all tournaments T. Equivalent to rank near-saturation: rank(d_4) ≥ ker(d_3) - 1.
+**Proof strategy:** LES induction on n using pair (T, T\v):
+  ... → H_3(T\v) → H_3(T) → H_3(T,T\v) → H_2(T\v) = 0
+  Since H_2(T\v) = 0 (THM-108), map H_3(T) → H_3(T,T\v) is surjective.
+  Find v with beta_3(T\v) = 0. Then beta_3(T) = dim H_3(T,T\v).
+**Key ingredients verified:**
+1. Good vertex existence for beta_3: ∃v with beta_3(T\v)=0 when beta_3(T)>0.
+   - n=6: 320/320 exhaustive. beta_3 COMPLETELY fragile (ALL 6 deletions give 0).
+   - n=7: 34/34 sampled. 5-7 good vertices per tournament.
+   - n=8: 31/31 sampled.
+2. Relative H_3 bound: dim H_3(T,T\v) ≤ 1 ALWAYS.
+   - n=6: ALL 1920 pairs give dim=1 (exhaustive for beta_3>0).
+   - n=7: dim ∈ {0,1}. Max=1.
+3. LES isomorphism: beta_3(T\v)=0 ⟹ beta_3(T) = dim H_3(T,T\v). Perfect n=6 (1920/1920).
+**Additional findings:**
+4. Quotient proportionality: ALL ker(d_3) basis vectors project proportionally to H_3 (240/240 Type B at n=6).
+5. Cokernel direction varies by tournament (NOT universal).
+6. Two beta_3=1 types at n=6: Type A (scores 1,1,1,4,4,4, Omega_4=0, 80 tours) and Type B (2,2,2,3,3,3, ker_d3=7, 240 tours).
+7. H_3 generator: Type A uses 9 paths/9 vertex sets; Type B uses 36 paths/all 15=C(6,4) vertex sets.
+8. At n=7 (2000 samples): max beta_3 = 1. ker(d_3) ranges 10-46. When beta_3=1, rank(d_4) = ker(d_3)-1 always.
+9. Relative complex dims at n=6: two H_3=1 profiles. Type A: (d2,d3,d4)=(9,6,0). Type B specific: (12,14,8).
+10. Filling ratio f_2 nearly linear in c3 (from 1.0 to 1.08 at n=6). Higher f_p grow rapidly.
+**Scripts:** rank_near_saturation.py, beta3_homology_structure.py, beta3_les_analysis.py, beta3_good_vertex_and_relative_h3.py, beta3_proportionality_proof.py, relative_h3_structure.py, defect_ushape_filling_ratio.py
+**Next steps:** (1) PROVE good vertex existence algebraically (key open). (2) PROVE relative H_3 bound algebraically. (3) Investigate whether quotient proportionality can be proved directly. (4) Extend LES approach to beta_5.
+**NOTE:** HYP-342 (Boolean odd Betti) needs correction: TRUE for k=1,2 (beta_1,beta_3 ∈ {0,1}), but FALSE for k≥3 (beta_5=10 at n=9 Paley maximizer). The "Boolean" property is specific to beta_1 and beta_3.
+
 ---
 
 ## Priority C: References to investigate

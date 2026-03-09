@@ -40,7 +40,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-339 | Adjacent-odd seesaw: beta_{2k-1}*beta_{2k+1}=0 for ALL tournaments | PERFECT: 0 violations in 1500+ samples n=6-8. Includes β₁β₃, β₃β₅, β₅β₇ | kind-pasteur-S45 |
 | HYP-340 | At most one nonzero beta_p (p>=1) in generic tournament | 99.8% at n=7, 100% at n=8 (500 samples). Rare exceptions: [1,1,0,0,1,0,0] at n=7 (0.1%) | kind-pasteur-S45 |
 | HYP-341 | beta_4 onset at n=7 (not n=8) | beta_4=6 (Paley T_7) and beta_4=1 found at n=7 with 1000 samples (0.2%). Missed in earlier 200-sample runs | kind-pasteur-S45 |
-| HYP-342 | beta_{2k-1} in {0,1} for ALL k and ALL tournaments | EXHAUSTIVE n<=6, sampled n=7 (1000), n=8 (300). beta_1 in {0,1}, beta_3 in {0,1}, beta_5 in {0} at tested n. Odd Betti numbers are BOOLEAN | kind-pasteur-S45 |
+| HYP-342 | beta_{2k-1} in {0,1} for ALL k and ALL tournaments | PARTIALLY REFUTED: TRUE for k=1 (beta_1 in {0,1} PROVED) and k=2 (beta_3 in {0,1}, exhaustive n<=6, 2000 samples n=7). FALSE for k>=3: beta_5=10 at n=9 Paley maximizer (T209). Boolean property is SPECIFIC to beta_1 and beta_3 | kind-pasteur-S45, corrected S46 |
 | HYP-343 | rank(d_2) takes exactly 2 values: {n-1, n} | EXHAUSTIVE n=6: {9,10}. Sampled n=7: {14,15}. rank(d_2)=n-1 iff beta_1=1. Equivalent to HYP-320 | kind-pasteur-S45 |
 | HYP-344 | beta_3+beta_4 coexistence extremely rare at n=8 | 0/1000 in large sample (SVD crash after), 1/300 in separate run. Rate < 0.3%. When present: beta_5=0 always | kind-pasteur-S45 |
 | HYP-345 | beta_3>0 forces beta_4=0 in generic tournaments | 43/43 at n=8 in first test, but 1 counterexample in 300 (beta_3=beta_4=1). MOSTLY true but not universal | kind-pasteur-S45 |
