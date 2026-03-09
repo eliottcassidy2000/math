@@ -1,0 +1,165 @@
+======================================================================
+CHI_A IDENTITY: sum (-1)^p |A_p| = sum (-1)^{k-1} h_k
+h_k = sum_{|S|=k} H(T[S])
+======================================================================
+
+--- Part 1: h_k decomposition ---
+
+  n=3:
+    k=1: C(n,k)=3, avg excess = 0.00, avg h_k = 3.00
+    k=2: C(n,k)=3, avg excess = 0.00, avg h_k = 3.00
+    k=3: C(n,k)=1, avg excess = 0.50, avg h_k = 1.50
+    chi_A values: min=1, max=3, all odd: True
+    chi_A mod 2: always 1: True
+
+  n=4:
+    k=1: C(n,k)=4, avg excess = 0.00, avg h_k = 4.00
+    k=2: C(n,k)=6, avg excess = 0.00, avg h_k = 6.00
+    k=3: C(n,k)=4, avg excess = 2.00, avg h_k = 6.00
+    k=4: C(n,k)=1, avg excess = 2.00, avg h_k = 3.00
+    chi_A values: min=1, max=1, all odd: True
+    chi_A mod 2: always 1: True
+
+  n=5:
+    k=1: C(n,k)=5, avg excess = 0.00, avg h_k = 5.00
+    k=2: C(n,k)=10, avg excess = 0.00, avg h_k = 10.00
+    k=3: C(n,k)=10, avg excess = 4.26, avg h_k = 14.26
+    k=4: C(n,k)=5, avg excess = 8.52, avg h_k = 13.52
+    k=5: C(n,k)=1, avg excess = 5.40, avg h_k = 6.40
+    chi_A values: min=1, max=7, all odd: True
+    chi_A mod 2: always 1: True
+
+  n=6:
+    k=1: C(n,k)=6, avg excess = 0.00, avg h_k = 6.00
+    k=2: C(n,k)=15, avg excess = 0.00, avg h_k = 15.00
+    k=3: C(n,k)=20, avg excess = 10.01, avg h_k = 30.01
+    k=4: C(n,k)=15, avg excess = 30.03, avg h_k = 45.03
+    k=5: C(n,k)=6, avg excess = 39.06, avg h_k = 45.06
+    k=6: C(n,k)=1, avg excess = 21.74, avg h_k = 22.74
+    chi_A values: min=-15, max=1, all odd: True
+    chi_A mod 2: always 1: True
+
+  n=7:
+    k=1: C(n,k)=7, avg excess = 0.00, avg h_k = 7.00
+    k=2: C(n,k)=21, avg excess = 0.00, avg h_k = 21.00
+    k=3: C(n,k)=35, avg excess = 16.90, avg h_k = 51.90
+    k=4: C(n,k)=35, avg excess = 67.60, avg h_k = 102.60
+    k=5: C(n,k)=21, avg excess = 130.67, avg h_k = 151.67
+    k=6: C(n,k)=7, avg excess = 142.30, avg h_k = 149.30
+    k=7: C(n,k)=1, avg excess = 72.32, avg h_k = 73.32
+    chi_A values: min=1, max=29, all odd: True
+    chi_A mod 2: always 1: True
+
+======================================================================
+Part 2: chi_A = 1 + 2*c3 - excess_4 + excess_5 - ...
+======================================================================
+
+  n=3:
+    trial 0: c3=0, excesses=[0], chi_A=1
+    trial 1: c3=0, excesses=[0], chi_A=1
+    trial 2: c3=1, excesses=[2], chi_A=3
+    trial 3: c3=0, excesses=[0], chi_A=1
+    trial 4: c3=0, excesses=[0], chi_A=1
+    Verifying excess_3 = 2*c3 for all 8 samples... PASS
+
+  n=4:
+    trial 0: c3=0, excesses=[0, 0], chi_A=1
+    trial 1: c3=0, excesses=[0, 0], chi_A=1
+    trial 2: c3=1, excesses=[2, 2], chi_A=1
+    trial 3: c3=0, excesses=[0, 0], chi_A=1
+    trial 4: c3=2, excesses=[4, 4], chi_A=1
+    Verifying excess_3 = 2*c3 for all 64 samples... PASS
+
+  n=5:
+    trial 0: c3=0, excesses=[0, 0, 0], chi_A=1
+    trial 1: c3=0, excesses=[0, 0, 0], chi_A=1
+    trial 2: c3=1, excesses=[2, 4, 2], chi_A=1
+    trial 3: c3=0, excesses=[0, 0, 0], chi_A=1
+    trial 4: c3=2, excesses=[4, 8, 4], chi_A=1
+    Verifying excess_3 = 2*c3 for all 200 samples... PASS
+
+  n=6:
+    trial 0: c3=6, excesses=[12, 36, 48, 32], chi_A=-7
+    trial 1: c3=0, excesses=[0, 0, 0, 0], chi_A=1
+    trial 2: c3=6, excesses=[12, 36, 46, 22], chi_A=1
+    trial 3: c3=3, excesses=[6, 18, 20, 8], chi_A=1
+    trial 4: c3=5, excesses=[10, 30, 38, 18], chi_A=1
+    Verifying excess_3 = 2*c3 for all 200 samples... PASS
+
+  n=7:
+    trial 0: c3=10, excesses=[20, 80, 156, 172, 88], chi_A=13
+    trial 1: c3=7, excesses=[14, 56, 102, 100, 44], chi_A=5
+    trial 2: c3=8, excesses=[16, 64, 124, 140, 76], chi_A=13
+    trial 3: c3=5, excesses=[10, 40, 68, 64, 28], chi_A=3
+    trial 4: c3=4, excesses=[8, 32, 56, 48, 16], chi_A=1
+    Verifying excess_3 = 2*c3 for all 200 samples... PASS
+
+======================================================================
+Part 3: At n=4, chi_A = 1 iff H(T) = 2*c3 + 1
+======================================================================
+  VERIFIED: H(T_4) = 2*c3 + 1 for ALL 64 tournaments
+  This is equivalent to chi_A = 1 at n=4
+  Since c3 in {0, 1}: H in {1, 3} — but wait, c3=2 gives T_4 cyclic with H=5
+
+  c3 distribution at n=4: {0: 24, 1: 16, 2: 24}
+  H values: {0: 1, 1: 3, 2: 5}
+
+======================================================================
+Part 4: H vs 2*c3 + 1 at n=5
+======================================================================
+  H(T_5) = 2*c3 + 1: FAILS 544/1024 times (53.1%)
+
+======================================================================
+Part 5: Recursive formula via n=4 identity
+H(T[S_4]) = 2*c3(S_4) + 1 for ALL 4-subsets S_4
+excess_4 = 2 * sum_{|S|=4} c3(S) = 2 * c3 * (n-3)
+chi_A = 1 + 2*c3 - 2*c3*(n-3) + excess_5 - ...
+======================================================================
+
+  n=4:
+    trial 0: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 1: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 2: c3=1, excess_4=2, predicted=2, match=YES, chi_A=1
+    trial 3: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 4: c3=2, excess_4=4, predicted=4, match=YES, chi_A=1
+    trial 5: c3=1, excess_4=2, predicted=2, match=YES, chi_A=1
+    trial 6: c3=2, excess_4=4, predicted=4, match=YES, chi_A=1
+    trial 7: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 8: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 9: c3=1, excess_4=2, predicted=2, match=YES, chi_A=1
+
+  n=5:
+    trial 0: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 1: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 2: c3=1, excess_4=4, predicted=4, match=YES, chi_A=1
+    trial 3: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 4: c3=2, excess_4=8, predicted=8, match=YES, chi_A=1
+    trial 5: c3=1, excess_4=4, predicted=4, match=YES, chi_A=1
+    trial 6: c3=2, excess_4=8, predicted=8, match=YES, chi_A=1
+    trial 7: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 8: c3=3, excess_4=12, predicted=12, match=YES, chi_A=3
+    trial 9: c3=2, excess_4=8, predicted=8, match=YES, chi_A=1
+
+  n=6:
+    trial 0: c3=6, excess_4=36, predicted=36, match=YES, chi_A=-7
+    trial 1: c3=0, excess_4=0, predicted=0, match=YES, chi_A=1
+    trial 2: c3=6, excess_4=36, predicted=36, match=YES, chi_A=1
+    trial 3: c3=3, excess_4=18, predicted=18, match=YES, chi_A=1
+    trial 4: c3=5, excess_4=30, predicted=30, match=YES, chi_A=1
+    trial 5: c3=7, excess_4=42, predicted=42, match=YES, chi_A=1
+    trial 6: c3=6, excess_4=36, predicted=36, match=YES, chi_A=1
+    trial 7: c3=6, excess_4=36, predicted=36, match=YES, chi_A=-7
+    trial 8: c3=6, excess_4=36, predicted=36, match=YES, chi_A=-7
+    trial 9: c3=7, excess_4=42, predicted=42, match=YES, chi_A=-7
+
+  n=7:
+    trial 0: c3=10, excess_4=80, predicted=80, match=YES, chi_A=13
+    trial 1: c3=7, excess_4=56, predicted=56, match=YES, chi_A=5
+    trial 2: c3=8, excess_4=64, predicted=64, match=YES, chi_A=13
+    trial 3: c3=5, excess_4=40, predicted=40, match=YES, chi_A=3
+    trial 4: c3=4, excess_4=32, predicted=32, match=YES, chi_A=1
+    trial 5: c3=7, excess_4=56, predicted=56, match=YES, chi_A=9
+    trial 6: c3=10, excess_4=80, predicted=80, match=YES, chi_A=11
+    trial 7: c3=9, excess_4=72, predicted=72, match=YES, chi_A=13
+    trial 8: c3=9, excess_4=72, predicted=72, match=YES, chi_A=7
+    trial 9: c3=11, excess_4=88, predicted=88, match=YES, chi_A=17

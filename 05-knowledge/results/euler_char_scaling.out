@@ -1,0 +1,249 @@
+======================================================================
+EULER CHARACTERISTIC SCALING
+chi = sum (-1)^p dim(Omega_p)
+======================================================================
+
+--- Part 1: chi = sum (-1)^p dim(Omega_p) verification ---
+
+  n=3 (d=2), 8 samples:
+    chi distribution:
+      chi=0: 2 (25.0%)
+      chi=1: 6 (75.0%)
+    chi vs c3:
+      c3=0: avg_chi=1.000, chi in [1]
+    SC=True: avg_chi=0.000, range [0,0]
+    SC=False: avg_chi=1.000, range [1,1]
+    H statistics by chi:
+      chi=0: avg H=3.0, range [3,3]
+      chi=1: avg H=1.0, range [1,1]
+
+  n=4 (d=3), 64 samples:
+    chi distribution:
+      chi=0: 24 (37.5%)
+      chi=1: 40 (62.5%)
+    chi vs c3:
+      c3=0: avg_chi=1.000, chi in [1]
+      c3=1: avg_chi=1.000, chi in [np.int64(1)]
+      c3=2: avg_chi=0.000, chi in [np.int64(0)]
+    SC=True: avg_chi=0.000, range [0,0]
+    SC=False: avg_chi=1.000, range [1,1]
+    H statistics by chi:
+      chi=0: avg H=5.0, range [5,5]
+      chi=1: avg H=1.8, range [1,3]
+
+  n=5 (d=4), 300 samples:
+    chi distribution:
+      chi=0: 81 (27.0%)
+      chi=1: 219 (73.0%)
+    chi vs c3:
+      c3=0: avg_chi=1.000, chi in [1]
+      c3=1: avg_chi=1.000, chi in [np.int64(1)]
+      c3=2: avg_chi=1.000, chi in [np.int64(1)]
+      c3=3: avg_chi=0.515, chi in [np.int64(0), np.int64(1)]
+      c3=4: avg_chi=0.432, chi in [np.int64(0), np.int64(1)]
+      c3=5: avg_chi=0.000, chi in [np.int64(0)]
+    SC=True: avg_chi=0.453, range [0,1]
+    SC=False: avg_chi=1.000, range [1,1]
+    H statistics by chi:
+      chi=0: avg H=11.0, range [9,15]
+      chi=1: avg H=5.7, range [1,13]
+
+  n=6 (d=5), 300 samples:
+    chi distribution:
+      chi=0: 47 (15.7%)
+      chi=1: 253 (84.3%)
+    chi vs c3:
+      c3=0: avg_chi=1.000, chi in [1]
+      c3=1: avg_chi=1.000, chi in [np.int64(1)]
+      c3=2: avg_chi=1.000, chi in [np.int64(1)]
+      c3=3: avg_chi=1.000, chi in [np.int64(1)]
+      c3=4: avg_chi=0.880, chi in [np.int64(0), np.int64(1)]
+      c3=5: avg_chi=0.912, chi in [np.int64(0), np.int64(1)]
+      c3=6: avg_chi=0.745, chi in [np.int64(0), np.int64(1)]
+      c3=7: avg_chi=0.915, chi in [np.int64(0), np.int64(1)]
+      c3=8: avg_chi=0.375, chi in [np.int64(0), np.int64(1)]
+    SC=True: avg_chi=0.771, range [0,1]
+    SC=False: avg_chi=1.000, range [1,1]
+    H statistics by chi:
+      chi=0: avg H=29.4, range [17,45]
+      chi=1: avg H=21.3, range [1,43]
+
+  n=7 (d=6), 300 samples:
+    chi distribution:
+      chi=0: 39 (13.0%)
+      chi=1: 261 (87.0%)
+    chi vs c3:
+      c3=2: avg_chi=1.000, chi in [np.int64(1)]
+      c3=3: avg_chi=0.667, chi in [np.int64(0), np.int64(1)]
+      c3=4: avg_chi=1.000, chi in [np.int64(1)]
+      c3=5: avg_chi=1.000, chi in [np.int64(1)]
+      c3=6: avg_chi=0.920, chi in [np.int64(0), np.int64(1)]
+      c3=7: avg_chi=0.963, chi in [np.int64(0), np.int64(1)]
+      c3=8: avg_chi=0.725, chi in [np.int64(0), np.int64(1)]
+      c3=9: avg_chi=0.842, chi in [np.int64(0), np.int64(1)]
+      c3=10: avg_chi=0.938, chi in [np.int64(0), np.int64(1)]
+      c3=11: avg_chi=0.929, chi in [np.int64(0), np.int64(1)]
+      c3=12: avg_chi=0.690, chi in [np.int64(0), np.int64(1)]
+      c3=13: avg_chi=0.800, chi in [np.int64(0), np.int64(1)]
+    SC=True: avg_chi=0.844, range [0,1]
+    SC=False: avg_chi=0.968, range [0,1]
+    H statistics by chi:
+      chi=0: avg H=91.3, range [15,153]
+      chi=1: avg H=74.4, range [3,159]
+
+  n=8 (d=7), 300 samples:
+    chi distribution:
+      chi=0: 61 (20.3%)
+      chi=1: 236 (78.7%)
+      chi=2: 1 (0.3%)
+      chi=3: 1 (0.3%)
+      chi=6: 1 (0.3%)
+    chi vs c3:
+      c3=6: avg_chi=1.000, chi in [np.int64(1)]
+      c3=7: avg_chi=1.000, chi in [np.int64(1)]
+      c3=8: avg_chi=1.000, chi in [np.int64(1)]
+      c3=9: avg_chi=0.900, chi in [np.int64(0), np.int64(1)]
+      c3=10: avg_chi=0.929, chi in [np.int64(0), np.int64(1)]
+      c3=11: avg_chi=0.846, chi in [np.int64(0), np.int64(1)]
+      c3=12: avg_chi=0.875, chi in [np.int64(0), np.int64(1)]
+      c3=13: avg_chi=0.784, chi in [np.int64(0), np.int64(1)]
+      c3=14: avg_chi=0.821, chi in [np.int64(0), np.int64(1)]
+      c3=15: avg_chi=0.821, chi in [np.int64(0), np.int64(1)]
+      c3=16: avg_chi=0.769, chi in [np.int64(0), np.int64(1)]
+      c3=17: avg_chi=0.741, chi in [np.int64(0), np.int64(1), np.int64(2)]
+      c3=18: avg_chi=0.619, chi in [np.int64(0), np.int64(1)]
+      c3=19: avg_chi=0.417, chi in [np.int64(0), np.int64(1)]
+      c3=20: avg_chi=2.000, chi in [np.int64(0), np.int64(1), np.int64(3), np.int64(6)]
+    SC=True: avg_chi=0.795, range [0,6]
+    SC=False: avg_chi=1.000, range [1,1]
+
+======================================================================
+Part 2: Alternating sum of |A_p| vs chi(Omega)
+chi_A = sum (-1)^p |A_p|
+======================================================================
+
+  n=3: chi_A distribution:
+    chi_A=1: 6 (75.0%)
+    chi_A=3: 2 (25.0%)
+    chi_A range: [1, 3]
+    chi_Omega = chi_A: 6/8
+
+  n=4: chi_A distribution:
+    chi_A=1: 64 (100.0%)
+    chi_A = 1 ALWAYS! (tournament-independent)
+    chi_Omega = chi_A: 40/64
+
+  n=5: chi_A distribution:
+    chi_A=1: 116 (58.0%)
+    chi_A=3: 60 (30.0%)
+    chi_A=5: 18 (9.0%)
+    chi_A=7: 6 (3.0%)
+    chi_A range: [1, 7]
+    chi_Omega = chi_A: 116/200
+
+  n=6: chi_A distribution:
+    chi_A=-15: 2 (1.0%)
+    chi_A=-7: 36 (18.0%)
+    chi_A=-3: 55 (27.5%)
+    chi_A=1: 107 (53.5%)
+    chi_A range: [-15, 1]
+    chi_Omega = chi_A: 82/200
+
+  n=7: chi_A distribution:
+    chi_A=1: 48 (24.0%)
+    chi_A=3: 12 (6.0%)
+    chi_A=5: 12 (6.0%)
+    chi_A=7: 11 (5.5%)
+    chi_A=9: 11 (5.5%)
+    chi_A=11: 18 (9.0%)
+    chi_A=13: 18 (9.0%)
+    chi_A=15: 8 (4.0%)
+    chi_A=17: 13 (6.5%)
+    chi_A=19: 16 (8.0%)
+    chi_A=21: 7 (3.5%)
+    chi_A=23: 10 (5.0%)
+    chi_A=25: 7 (3.5%)
+    chi_A=27: 6 (3.0%)
+    chi_A=29: 3 (1.5%)
+    chi_A range: [1, 29]
+    chi_Omega = chi_A: 46/200
+
+  n=8: chi_A distribution:
+    chi_A=-119: 1 (0.5%)
+    chi_A=-111: 2 (1.0%)
+    chi_A=-107: 1 (0.5%)
+    chi_A=-103: 3 (1.5%)
+    chi_A=-99: 1 (0.5%)
+    chi_A=-95: 4 (2.0%)
+    chi_A=-91: 1 (0.5%)
+    chi_A=-87: 3 (1.5%)
+    chi_A=-83: 3 (1.5%)
+    chi_A=-79: 5 (2.5%)
+    chi_A=-75: 7 (3.5%)
+    chi_A=-71: 6 (3.0%)
+    chi_A=-67: 7 (3.5%)
+    chi_A=-63: 8 (4.0%)
+    chi_A=-59: 10 (5.0%)
+    chi_A=-55: 5 (2.5%)
+    chi_A=-51: 8 (4.0%)
+    chi_A=-47: 7 (3.5%)
+    chi_A=-43: 11 (5.5%)
+    chi_A=-39: 14 (7.0%)
+    chi_A=-35: 5 (2.5%)
+    chi_A=-31: 6 (3.0%)
+    chi_A=-27: 6 (3.0%)
+    chi_A=-23: 7 (3.5%)
+    chi_A=-19: 7 (3.5%)
+    chi_A=-15: 6 (3.0%)
+    chi_A=-11: 7 (3.5%)
+    chi_A=-7: 10 (5.0%)
+    chi_A=-3: 5 (2.5%)
+    chi_A=1: 34 (17.0%)
+    chi_A range: [-119, 1]
+    chi_Omega = chi_A: 33/200
+
+======================================================================
+Part 3: Simplicial Euler characteristic
+chi(Delta_{n-1}) = sum (-1)^p C(n,p+1) = 1
+======================================================================
+  n=2: chi(Delta_1) = sum (-1)^p C(2,p+1) = 1
+  n=3: chi(Delta_2) = sum (-1)^p C(3,p+1) = 1
+  n=4: chi(Delta_3) = sum (-1)^p C(4,p+1) = 1
+  n=5: chi(Delta_4) = sum (-1)^p C(5,p+1) = 1
+  n=6: chi(Delta_5) = sum (-1)^p C(6,p+1) = 1
+  n=7: chi(Delta_6) = sum (-1)^p C(7,p+1) = 1
+  n=8: chi(Delta_7) = sum (-1)^p C(8,p+1) = 1
+  n=9: chi(Delta_8) = sum (-1)^p C(9,p+1) = 1
+
+======================================================================
+Part 4: chi(T) - 1 distribution (topological defect)
+chi(T) = 1: topologically simplex-like (contractible)
+chi(T) = 0: homologically non-trivial
+======================================================================
+
+  n=3: defect = chi - 1:
+    defect=-1: 2 (25.0%) (beta_1=1 or beta_3=1)
+    defect=+0: 6 (75.0%) (simplex-like)
+
+  n=4: defect = chi - 1:
+    defect=-1: 24 (37.5%) (beta_1=1 or beta_3=1)
+    defect=+0: 40 (62.5%) (simplex-like)
+
+  n=5: defect = chi - 1:
+    defect=-1: 151 (30.2%) (beta_1=1 or beta_3=1)
+    defect=+0: 349 (69.8%) (simplex-like)
+
+  n=6: defect = chi - 1:
+    defect=-1: 79 (15.8%) (beta_1=1 or beta_3=1)
+    defect=+0: 421 (84.2%) (simplex-like)
+
+  n=7: defect = chi - 1:
+    defect=-1: 65 (13.0%) (beta_1=1 or beta_3=1)
+    defect=+0: 435 (87.0%) (simplex-like)
+
+  n=8: defect = chi - 1:
+    defect=-1: 107 (21.4%) (beta_1=1 or beta_3=1)
+    defect=+0: 388 (77.6%) (simplex-like)
+    defect=+1: 3 (0.6%)
+    defect=+2: 1 (0.2%)
+    defect=+5: 1 (0.2%)
