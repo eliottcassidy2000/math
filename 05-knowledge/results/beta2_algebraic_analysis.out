@@ -1,0 +1,90 @@
+======================================================================
+ALGEBRAIC ANALYSIS OF BETA_2 = 0
+======================================================================
+
+--- Part 1: Omega_2 constraint analysis ---
+
+  n=4:
+    trial 0: |A_2|=4, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 1: |A_2|=4, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 2: |A_2|=6, non-allowed faces=3, c3=1, backward_pairs_with_intermediate=3
+    trial 3: |A_2|=4, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 4: |A_2|=8, non-allowed faces=5, c3=2, backward_pairs_with_intermediate=5
+
+  n=5:
+    trial 0: |A_2|=10, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 1: |A_2|=10, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 2: |A_2|=12, non-allowed faces=3, c3=1, backward_pairs_with_intermediate=3
+    trial 3: |A_2|=10, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 4: |A_2|=14, non-allowed faces=5, c3=2, backward_pairs_with_intermediate=5
+
+  n=6:
+    trial 0: |A_2|=20, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 1: |A_2|=20, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 2: |A_2|=22, non-allowed faces=3, c3=1, backward_pairs_with_intermediate=3
+    trial 3: |A_2|=20, non-allowed faces=0, c3=0, backward_pairs_with_intermediate=0
+    trial 4: |A_2|=24, non-allowed faces=5, c3=2, backward_pairs_with_intermediate=5
+
+--- Part 2: Detailed constraint matrix at n=5 ---
+  trial 2: |A_2|=12, constraints=3, rank(P)=3, dim(Omega_2)=9, c3=1
+  trial 4: |A_2|=14, constraints=5, rank(P)=5, dim(Omega_2)=9, c3=2
+
+--- Part 3: Paths per constraint at n=6 ---
+  trial 0: c3=0, constraints=0, paths_per_constraint=[]
+  trial 1: c3=0, constraints=0, paths_per_constraint=[]
+  trial 100: c3=1, constraints=3, paths_per_constraint=[1, 1, 1]
+  trial 1000: c3=2, constraints=5, paths_per_constraint=[1, 1, 1, 1, 2]
+  trial 5000: c3=5, constraints=11, paths_per_constraint=[1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3]
+
+--- Part 4: Constraint ratio at Omega_p for various p ---
+
+  n=6:
+    p=1: |A_p|=15, NA_faces=0, ratio=0.000
+    p=2: |A_p|=30, NA_faces=10, ratio=0.333
+    p=3: |A_p|=45, NA_faces=30, ratio=0.667
+    p=4: |A_p|=40, NA_faces=45, ratio=1.125
+    p=5: |A_p|=15, NA_faces=25, ratio=1.667
+    p=1: |A_p|=15, NA_faces=0, ratio=0.000
+    p=2: |A_p|=32, NA_faces=13, ratio=0.406
+    p=3: |A_p|=51, NA_faces=45, ratio=0.882
+    p=4: |A_p|=56, NA_faces=81, ratio=1.446
+    p=5: |A_p|=31, NA_faces=65, ratio=2.097
+    p=1: |A_p|=15, NA_faces=0, ratio=0.000
+    p=2: |A_p|=22, NA_faces=3, ratio=0.136
+    p=3: |A_p|=21, NA_faces=9, ratio=0.429
+    p=4: |A_p|=12, NA_faces=9, ratio=0.750
+    p=5: |A_p|=3, NA_faces=3, ratio=1.000
+
+  n=7:
+    p=1: |A_p|=21, NA_faces=0, ratio=0.000
+    p=2: |A_p|=55, NA_faces=18, ratio=0.327
+    p=3: |A_p|=115, NA_faces=80, ratio=0.696
+    p=4: |A_p|=179, NA_faces=210, ratio=1.173
+    p=5: |A_p|=191, NA_faces=347, ratio=1.817
+    p=1: |A_p|=21, NA_faces=0, ratio=0.000
+    p=2: |A_p|=53, NA_faces=17, ratio=0.321
+    p=3: |A_p|=107, NA_faces=79, ratio=0.738
+    p=4: |A_p|=161, NA_faces=197, ratio=1.224
+    p=5: |A_p|=167, NA_faces=313, ratio=1.874
+    p=1: |A_p|=21, NA_faces=0, ratio=0.000
+    p=2: |A_p|=49, NA_faces=14, ratio=0.286
+    p=3: |A_p|=91, NA_faces=61, ratio=0.670
+    p=4: |A_p|=123, NA_faces=139, ratio=1.130
+    p=5: |A_p|=103, NA_faces=168, ratio=1.631
+
+  n=8:
+    p=1: |A_p|=28, NA_faces=0, ratio=0.000
+    p=2: |A_p|=82, NA_faces=22, ratio=0.268
+    p=3: |A_p|=200, NA_faces=126, ratio=0.630
+    p=4: |A_p|=386, NA_faces=410, ratio=1.062
+    p=5: |A_p|=558, NA_faces=886, ratio=1.588
+    p=1: |A_p|=28, NA_faces=0, ratio=0.000
+    p=2: |A_p|=66, NA_faces=11, ratio=0.167
+    p=3: |A_p|=120, NA_faces=61, ratio=0.508
+    p=4: |A_p|=164, NA_faces=151, ratio=0.921
+    p=5: |A_p|=160, NA_faces=225, ratio=1.406
+    p=1: |A_p|=28, NA_faces=0, ratio=0.000
+    p=2: |A_p|=94, NA_faces=27, ratio=0.287
+    p=3: |A_p|=260, NA_faces=141, ratio=0.542
+    p=4: |A_p|=570, NA_faces=524, ratio=0.919
+    p=5: |A_p|=950, NA_faces=1386, ratio=1.459

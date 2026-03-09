@@ -1,0 +1,30 @@
+======================================================================
+BETA COEXISTENCE AND ONSET ANALYSIS
+======================================================================
+
+--- Part 1: Finding exotic profiles at n=8 (2000 samples) ---
+  Trial 32: betti=[1, np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True, chi=-1
+  Trial 126: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=17, SC=True, chi=2
+  Trial 129: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True, chi=2
+  Trial 203: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True, chi=2
+  Trial 208: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True, chi=2
+  Trial 374: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=18, SC=True, chi=2
+  Trial 498: betti=[1, np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=17, SC=True, chi=1
+  500/2000 done, 7 exotic found
+  Trial 557: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5)), c3=17, SC=True, chi=2
+  Trial 639: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=18, SC=True, chi=2
+  Trial 655: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True, chi=2
+  Trial 734: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True, chi=2
+  Trial 772: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True, chi=2
+  Trial 789: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True, chi=2
+  Trial 838: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5)), c3=19, SC=True, chi=2
+  Trial 851: betti=[1, np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5)), c3=17, SC=True, chi=1
+  Trial 937: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True, chi=2
+  Trial 956: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5), np.int64(5)), c3=13, SC=True, chi=2
+  Trial 967: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=18, SC=True, chi=2
+  Trial 994: betti=[1, np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(5), np.int64(5)), c3=14, SC=True, chi=1
+  1000/2000 done, 19 exotic found
+  Trial 1007: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True, chi=2
+  Trial 1417: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True, chi=2
+  Trial 1472: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True, chi=2
+  1500/2000 done, 22 exotic found
