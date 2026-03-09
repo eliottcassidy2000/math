@@ -1,0 +1,81 @@
+======================================================================
+PART 1: B MATRIX STRUCTURE at n=5 (exhaustive)
+======================================================================
+n=5: 120 (T,v) cases
+  surplus: min=2, max=2
+  rank_B_swap: [np.int64(3)]
+  ker_dim: [1]
+  num_Tp: [4]
+
+  C*B analysis:
+  max |C*B|: 2.000000
+  Is C*B always zero? False
+
+  T' path types (P/Q classification):
+    ('P', 'P', 'Q'): 240
+    ('P', 'Q', 'Q'): 240
+
+  By (d_out, d_in):
+    (2,2): 120 cases, surplus=2-2, arcs_PQ=[4]
+
+======================================================================
+PART 2: RANK DECOMPOSITION ANALYSIS
+======================================================================
+
+n=5: rank decomposition holds for 120/120
+  (rank(B) = rank(proj_ker B) + rank(proj_im B))
+
+======================================================================
+PART 3: DOES im(B) SUBSET ker(C)?
+======================================================================
+  CB nonzero: n=5, v=0, max|CB|=2.0000
+  CB nonzero: n=5, v=0, max|CB|=2.0000
+  CB nonzero: n=5, v=0, max|CB|=2.0000
+
+n=5: C*B=0 for 0/120, nonzero for 120/120
+  CB nonzero: n=6, v=0, max|CB|=2.0000
+  CB nonzero: n=6, v=0, max|CB|=2.0000
+  CB nonzero: n=6, v=0, max|CB|=2.0000
+
+n=6: C*B=0 for 0/19200, nonzero for 19200/19200
+
+======================================================================
+PART 4: COLUMN STRUCTURE — B as 'boundary' in arc space
+======================================================================
+
+Each column of B_swap (for T' path (a,b,c)) is:
+  +2*delta_{(a,b) in arcs_PQ} - 2*delta_{(a,c) in arcs_PQ} + 2*delta_{(b,c) in arcs_PQ}
+
+This is the BOUNDARY MAP of a 1-chain in the bipartite graph G(P,Q)!
+
+Specifically: if we think of arcs_PQ as edges of a bipartite graph,
+then (a,b,c) defines a "2-simplex" with edges (a,b), (a,c), (b,c).
+The column is the (signed) boundary of this simplex restricted to arcs_PQ.
+
+KEY INSIGHT: B = 2 * (partial boundary of T' 2-paths in the bipartite arc graph)
+
+Example: n=5, v=2, |P|=1, |Q|=3, |arcs_PQ|=2
+P=[1], Q=[0, 3, 4]
+arcs_PQ = [(1, 0), (1, 3)]
+
+T' paths and their arc_PQ memberships:
+  (0,4,3) [QQQ]: hits=0, col=0
+  (0,4,1) [QQP]: hits=0, col=0
+  (1,3,0) [PQQ]: hits=2, col=+e_(1, 3)  -e_(1, 0)
+  (1,0,4) [PQQ]: hits=1, col=+e_(1, 0)
+  (3,0,4) [QQQ]: hits=0, col=0
+  (4,3,0) [QQQ]: hits=0, col=0
+  (4,1,3) [QPQ]: hits=1, col=+e_(1, 3)
+  (4,1,0) [QPQ]: hits=1, col=+e_(1, 0)
+
+======================================================================
+PART 5: Does im(B_swap) contain ker(C)?
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_B_structure.py", line 614, in <module>
+    print(f"n={n}: ker(C) \u2286 im(B_swap) for {contains}/{total}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2286' in position 12: character maps to <undefined>

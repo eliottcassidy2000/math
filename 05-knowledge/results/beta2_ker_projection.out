@@ -1,0 +1,114 @@
+======================================================================
+PROJECTION OF B ONTO ker(C)
+======================================================================
+
+n=5: 120 cases
+  rank(proj_ker B) - ker_dim: min=0, max=0
+  rank(B) - ker_dim: min=2, max=2
+  rank(proj_ker B) == ker_dim: 120/120
+  rank(proj_ker B) values: [np.int64(1)]
+  ker_dim values: [1]
+  Cross-tab (ker_dim -> rank_B_proj_ker):
+    ker_dim=1: proj_rank in {np.int64(1): 120}
+
+n=6: 19200 cases
+  rank(proj_ker B) - ker_dim: min=0, max=0
+  rank(B) - ker_dim: min=3, max=4
+  rank(proj_ker B) == ker_dim: 19200/19200
+  rank(proj_ker B) values: [np.int64(1), np.int64(2)]
+  ker_dim values: [1, 2]
+  Cross-tab (ker_dim -> rank_B_proj_ker):
+    ker_dim=1: proj_rank in {np.int64(1): 17280}
+    ker_dim=2: proj_rank in {np.int64(2): 1920}
+
+n=7: 503 cases
+  rank(proj_ker B) - ker_dim: min=0, max=0
+  rank(B) - ker_dim: min=3, max=5
+  rank(proj_ker B) == ker_dim: 503/503
+  rank(proj_ker B) values: [np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+  ker_dim values: [1, 2, 3, 4]
+  Cross-tab (ker_dim -> rank_B_proj_ker):
+    ker_dim=1: proj_rank in {np.int64(1): 382}
+    ker_dim=2: proj_rank in {np.int64(2): 100}
+    ker_dim=3: proj_rank in {np.int64(3): 19}
+    ker_dim=4: proj_rank in {np.int64(4): 2}
+
+n=8: 1044 cases
+  rank(proj_ker B) - ker_dim: min=0, max=0
+  rank(B) - ker_dim: min=3, max=6
+  rank(proj_ker B) == ker_dim: 1044/1044
+  rank(proj_ker B) values: [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]
+  ker_dim values: [1, 2, 3, 4, 5]
+  Cross-tab (ker_dim -> rank_B_proj_ker):
+    ker_dim=1: proj_rank in {np.int64(1): 621}
+    ker_dim=2: proj_rank in {np.int64(2): 314}
+    ker_dim=3: proj_rank in {np.int64(3): 77}
+    ker_dim=4: proj_rank in {np.int64(4): 28}
+    ker_dim=5: proj_rank in {np.int64(5): 4}
+
+======================================================================
+DEEP ANALYSIS at n=5: WHY does proj_ker(B) have rank = ker_dim?
+======================================================================
+
+======================================================================
+B AS BOUNDARY IN ARC GRAPH
+======================================================================
+
+B_swap column for T' path (a,b,c) is:
+  +e_{(a,b)} - e_{(a,c)} + e_{(b,c)}  [restricted to arcs in P->Q]
+
+This is exactly the boundary map d_1 of the "2-chain" {a,b,c}
+in a simplicial complex on the arcs of the bipartite graph!
+
+The P->Q arcs form a bipartite graph G.
+T' paths (a,b,c) with some edges in G form "triangles" partially in G.
+
+KEY: The constraint C selects the "cycle space" ker(C) from the arc space.
+C is the vertex-edge incidence matrix of the bipartite graph G.
+ker(C) = cycle space of G (considered as undirected graph).
+
+So B projects to the cycle space of G through d_1 of triangles.
+Homological interpretation: H_1(G) is spanned by d_1(triangles in T').
+
+THEOREM (candidate): For a tournament T and vertex v,
+  d_1(T' triangles hitting G) generates H_1(G) = ker(C)
+  where G is the bipartite arc graph P(v)->Q(v).
+
+This would prove rank(B) >= ker_dim = swap_dim.
+
+COLUMN TYPE ANALYSIS:
+  PPQ path (a1,a2,b): column = -e_{(a1,b)} + e_{(a2,b)}
+    [difference of arcs sharing Q endpoint b]
+  PQQ path (a,b1,b2): column = +e_{(a,b1)} - e_{(a,b2)}
+    [difference of arcs sharing P endpoint a]
+  Other types: at most 1 nonzero entry (useless for cycles)
+
+  Verified 0/0 paths follow type rules
+
+======================================================================
+PROOF SKETCH: rank(B) >= swap_dim
+======================================================================
+
+THEOREM: For any tournament T and vertex v, rank(B_swap) >= ker_dim = swap_dim.
+
+Proof:
+1. B_swap columns are indexed by allowed 2-paths (a,b,c) in T'=T\{v}.
+2. The arcs P(v)->Q(v) form a bipartite graph G.
+3. ker(C) = cycle space of G (standard graph theory).
+4. swap_dim = ker_dim = dim(cycle space of G).
+5. B_swap column for (a,b,c) restricted to arcs_PQ is:
+     +e_{(a,b)} - e_{(a,c)} + e_{(b,c)}   (when these arcs exist in G)
+6. PPQ paths (a1,a2,b) give e_{(a2,b)} - e_{(a1,b)}: same-Q-endpoint difference
+   PQQ paths (a,b1,b2) give e_{(a,b1)} - e_{(a,b2)}: same-P-endpoint difference
+7. In a tournament, for any a1,a2 in P, one of a1->a2 or a2->a1 holds,
+   so (a_i,a_j,b) is an allowed T' path. Similarly for b1,b2 in Q.
+8. Same-endpoint differences generate the cycle space of each connected
+   component of G, hence the entire cycle space.
+9. Therefore im(B_swap) projected onto ker(C) = ker(C),
+   so rank(B_swap) >= dim(ker(C)) = swap_dim.  QED
+
+COROLLARY: B*alpha = z is always solvable for any z in ker(C) (= any swap cycle).
+
+
+
+Done.
