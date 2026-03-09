@@ -44,6 +44,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-343 | rank(d_2) takes exactly 2 values: {n-1, n} | EXHAUSTIVE n=6: {9,10}. Sampled n=7: {14,15}. rank(d_2)=n-1 iff beta_1=1. Equivalent to HYP-320 | kind-pasteur-S45 |
 | HYP-344 | beta_3+beta_4 coexistence extremely rare at n=8 | 0/1000 in large sample (SVD crash after), 1/300 in separate run. Rate < 0.3%. When present: beta_5=0 always | kind-pasteur-S45 |
 | HYP-345 | beta_3>0 forces beta_4=0 in generic tournaments | 43/43 at n=8 in first test, but 1 counterexample in 300 (beta_3=beta_4=1). MOSTLY true but not universal | kind-pasteur-S45 |
+| HYP-346 | beta_4>0 requires self-complementary score sequence | ALL 25 beta_4>0 cases at n=8 (2000 samples) have SC scores. Very strong constraint | kind-pasteur-S45 |
+| HYP-347 | beta_1+beta_5 coexistence at n=8 | Found 1/2000: betti=[1,1,0,0,0,1,0,0], scores=(3,3,3,3,4,4,4,4), c3=20, chi=-1. Extremely rare | kind-pasteur-S45 |
+| HYP-348 | beta_3+beta_4 coexistence rate ~0.15% at n=8 | 3/2000 with profile [1,0,0,1,1,0,0,0]. All have SC scores | kind-pasteur-S45 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
