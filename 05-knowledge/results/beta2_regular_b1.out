@@ -1,0 +1,58 @@
+======================================================================
+b1 OF REGULAR TOURNAMENTS
+======================================================================
+
+n=5 (exhaustive):
+  b1=1: 24
+  n=7: 50/200 (1s)
+  n=7: 100/200 (1s)
+  n=7: 150/200 (1s)
+  n=7: 200/200 (2s)
+
+n=7 (200 regular tournaments sampled):
+  b1=0: 140 (70.0%)
+  b1=1: 60 (30.0%)
+
+n=9 (2 regular tournaments sampled):
+  b1=0: 2 (100.0%)
+
+======================================================================
+b1 MONOTONICITY FOR REGULAR TOURNAMENTS
+======================================================================
+  checked 50 (1s)
+
+n=7: 83 regular b1=0 tournaments checked (1s)
+  All have good vertex: 83/83
+  Sum distribution:
+    Sum=0: 9
+    Sum=1: 74
+
+======================================================================
+KAPPA>=2 + b1=0 SCORE DISTRIBUTION at n=7
+======================================================================
+  trial 2000, found 379 (1s)
+  trial 2500, found 478 (2s)
+
+n=7 (2s): 563 kappa>=2 + SC + b1=0
+  Score distribution:
+    (2, 2, 3, 3, 3, 4, 4): 337
+    (2, 2, 2, 3, 4, 4, 4): 126
+    (2, 3, 3, 3, 3, 3, 4): 100
+
+======================================================================
+VERTEX WITH MIN c3(v) - IS IT ALWAYS GOOD?
+======================================================================
+
+n=6: vertex with MAX c3(v) always good?
+  Good: 26192/27968 (93.6%)
+  Bad: 1776/27968 (6.4%)
+
+Alternative: vertex minimizing c3(T\v) = vertex maximizing c3(v)
+  (Same as above)
+
+Vertex closest to median degree:
+  Good: 23960/27968 (85.7%)
+  Bad: 4008/27968 (14.3%)
+
+
+Done.

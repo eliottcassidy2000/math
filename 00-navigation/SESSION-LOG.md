@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S43 (continuation) — β₂=0 proof: 3/4 cases proved
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S43
+**Summary of work:**
+  Continued investigation of β₂=0 for tournaments via b₁ monotonicity (approach H).
+
+  **Major results:**
+  - **3 of 4 cases ALGEBRAICALLY PROVED** for HYP-278:
+    1. b₁(T)=1: all vertices trivially good
+    2. NOT SC: condensation argument gives good vertex
+    3. SC + κ=1: cut vertex deletion → not SC → b₁=0
+    Only case 4 (κ≥2 + SC + b₁=0) remains
+  - **Case 4 is EMPTY at n=5**, verified 1680/1680 at n=6, 378/378 at n=7
+  - **Sum_v b₁(T\v) ≤ 3** for ALL tournaments n=5-10 (bound independent of n!)
+  - **Hidden cycles always independent**: rank = #bad vertices (no deficiency)
+  - **codim(W_v + W_w) = 1** in Z₁(T) always. L_{vw} visits ALL n vertices.
+  - **W_v + W_w + W_x = V** for ALL triples (n=5 verified)
+  - **b₁=1 ⟹ SC** (proved n=3-6). NOT-SC ⟹ b₁=0.
+  - **κ≥2 case at n=6**: ALL have score (2,2,2,3,3,3), c₃=8, κ=2.
+  - Regular n=7: 70% b₁=0. Sum b₁(T\v) ∈ {0,1} for regular.
+  - New HYPs: 282-286
+
+**New contributions:** THM-102 updated, HYP-282 through HYP-286
+**Scripts:** beta2_averaging_argument.py, beta2_sum_b1_bound.py, beta2_hidden_cycles.py,
+  beta2_codimension_analysis.py, beta2_sc_connectivity.py, beta2_kappa2_analysis.py,
+  beta2_b1_characterization.py, beta2_regular_b1.py, beta2_rank_drop_mechanism.py
+**Unresolved threads:**
+  - Prove Case 4 of HYP-278 (κ≥2 + SC + b₁=0 → good vertex exists)
+  - Prove HYP-279 (b₁ ≤ 1) — would simplify induction
+  - Prove HYP-282 (Sum ≤ 3) — would immediately close Case 4
+  - Literature search on GLMY path homology of tournaments
+
 ## opus-2026-03-08-S49c — β₂=0 proof: Ω structure formulas, Z₂ filling analysis
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S49

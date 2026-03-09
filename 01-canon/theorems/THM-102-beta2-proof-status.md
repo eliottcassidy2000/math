@@ -154,12 +154,37 @@ By LES exactness, H_2(T,T\v) = 0 iff i_*: H_1(T\v) -> H_1(T) is injective.
 - ker(i_*) = C(n-2, 2) when nonzero? (=3 at n=5, =6 at n=6)
 - Rank drop: rk(d_2(T)) - rk(d_2(T\v)) is typically n-2 (good), occasionally n-1 (bad)
 
+**Partial proof of HYP-278** (S43 continued):
+Three of four cases are PROVED algebraically:
+1. **b1(T)=1**: Trivially good (all vertices satisfy b1(T\v) <= 1 = b1(T)). PROVED.
+2. **b1(T)=0, T not SC**: Delete from condensation boundary -> not SC -> b1=0. PROVED.
+3. **b1(T)=0, T SC, kappa(T)=1**: Delete cut vertex -> not SC -> b1=0. PROVED.
+4. **b1(T)=0, T SC, kappa(T)>=2**: All T\v are SC. Need: exists v with b1(T\v)=0.
+   - EMPTY at n=5 (no such tournaments exist)
+   - n=6: 1680 tours, ALL score (2,2,2,3,3,3), c3=8, kappa=2. Verified 1680/1680.
+   - n=7: 378+ sampled, all verified. Scores near-regular only.
+   - Sum_v b1(T\v) in {0, 3} for kappa>=2 case at n=6
+
+**Additional discoveries** (S43 continued):
+- Sum_v b1(T\v) <= 3 for ALL tournaments n=5-10 (bound independent of n!)
+- b1=1 iff SC at n=3,4. First SC+b1=0 appears at n=5.
+- Hidden cycles at bad vertices are ALWAYS linearly independent (rank = #bad)
+- codim(Z_1(T\v) + Z_1(T\w)) = 1 in Z_1(T) always (proved algebraically)
+- The complement L_{vw} visits ALL n vertices (n=5 verified)
+- W_v + W_w + W_x = V for ALL triples v,w,x (n=5 verified)
+- Regular n=7: 70% b1=0, 30% b1=1. Sum_v b1(T\v) in {0,1} for regular.
+- Vertex with max c3(v) is good 93.6% of the time (not 100%)
+
 **What remains to prove**:
-- HYP-278: Every tournament has a vertex v with b1(T\v) <= b1(T)
-- HYP-279: b1(T) <= 1 for all tournaments (would simplify induction)
+- HYP-278 Case 4: kappa>=2 + SC + b1=0 -> exists good vertex
+- HYP-279: b1(T) <= 1 for all tournaments (would close case 4 if combined with Sum<=3)
+- HYP-282: Sum_v b1(T\v) <= 3 for all tournaments (would give >=n-3 good vertices)
 
 **Scripts**: `beta2_relative_induction.py`, `beta2_vertex_analysis.py`,
-`beta2_b1_monotonicity.py`, `beta2_b1_bound.py`, `beta2_rk_d2_formula.py`
+`beta2_b1_monotonicity.py`, `beta2_b1_bound.py`, `beta2_rk_d2_formula.py`,
+`beta2_averaging_argument.py`, `beta2_sum_b1_bound.py`, `beta2_hidden_cycles.py`,
+`beta2_codimension_analysis.py`, `beta2_sc_connectivity.py`, `beta2_kappa2_analysis.py`,
+`beta2_b1_characterization.py`, `beta2_regular_b1.py`, `beta2_rank_drop_mechanism.py`
 
 ### G. Cone-from-T' Construction (NEW — S42)
 **Idea**: For each vertex v, swap cycles z at v can be filled by

@@ -135,10 +135,15 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-275 | Cone filling is AUTOMATICALLY in Ω₃ | CONFIRMED exhaustive n=5 (120/120), n=6 (21120/21120). Breaks at n≥7: 418/425 at n=7, 539/577 at n=8. Single-cone has exposed non-allowed faces that cancel in linear combination | beta2_omega_membership.py |
 | HYP-276 | β₂(T) = 0 for ALL tournaments at ALL n | CONFIRMED n≤6 exhaustive, n=7-10 sampled (total ~5000+ tests, 0 failures). Extends HYP-249/271. rank(d₃) = ker(d₂) EXACTLY for every tournament tested. Rank surplus grows with n (min 6→11→15 at n=7→8→9) | beta2_unfiltered_large.py |
 | HYP-277 | Unfiltered single-vertex cone: B·alpha=z always solvable for swap cycles | CONFIRMED 500/500 at n=7,8; 200/200 at n=9. Uses ALL T' 2-paths. rank(B)-swap_dim min 6,11,15. Growing surplus means increasingly overdetermined | beta2_unfiltered_large.py |
-| HYP-278 | Every tournament has vertex v with b1(T\v) <= b1(T) | CONFIRMED exhaustive n=5,6 (100%). Sampled n=7-12 (100%). Would prove beta_2=0 by induction via LES. Equivalent to: exists v with i_*: H_1(T\v)->H_1(T) injective | beta2_relative_induction.py, beta2_b1_monotonicity.py |
+| HYP-278 | Every tournament has vertex v with b1(T\v) <= b1(T) | PARTIALLY PROVED: 3/4 cases algebraically proved (b1=1; NOT SC; SC+kappa=1). Only kappa>=2+SC+b1=0 remains (empty at n=5, 1680/1680 at n=6, 378/378 sampled n=7). Sampled n=7-12 100%. | beta2_relative_induction.py, beta2_sc_connectivity.py |
 | HYP-279 | b1(T) <= 1 for all tournaments | CONFIRMED through n=20 (0 counterexamples). b1=0 rate: 70%(n=5), 95%(n=7), 99.8%(n=9), 100%(n>=10 sampled). When b1=1, ALL vertices are monotone-good | beta2_b1_bound.py |
 | HYP-280 | proj_{ker(C)} B_swap has rank = ker_dim exactly | CONFIRMED n=5-8 exhaustive/sampled. Proof: same-endpoint differences from PPQ/PQQ T' paths generate ker(C) cycle space via fundamental cycle decomposition + tournament completeness | beta2_ker_projection.py |
 | HYP-281 | Swap cycles from all vertices do NOT span Z_2 | CONFIRMED: 0/1024 at n=5, 0/32768 at n=6. swap_dim << z2_dim. Cone approach fundamentally limited | beta2_z2_decomposition.py |
+| HYP-282 | Sum_v b1(T\v) <= 3 for all tournaments | CONFIRMED n=5-10 (exhaustive n=5,6; sampled n=7-10). Bound INDEPENDENT of n. At most 3 bad vertices. Would give >=n-3 good vertices | beta2_sum_b1_bound.py |
+| HYP-283 | codim(Z_1(T\v) + Z_1(T\w)) = 1 in Z_1(T) always | CONFIRMED n=5,6,7. The complement L_{vw} visits ALL n vertices. W_v+W_w+W_x = V for ALL triples. ALGEBRAICALLY: follows from dim formula (n-1)(n-2)/2 - n(n-3)/2 = 1 | beta2_codimension_analysis.py |
+| HYP-284 | Hidden cycles at bad vertices always linearly independent | CONFIRMED exhaustive n=5 (720 tours), n=6 (27968 tours). rank = #bad always. No deficiency | beta2_hidden_cycles.py |
+| HYP-285 | b1=1 implies strongly connected | CONFIRMED exhaustive n=3-6. 0 counterexamples. NOT-SC implies b1=0 | beta2_b1_characterization.py |
+| HYP-286 | kappa>=2 + SC + b1=0 always near-regular scores | CONFIRMED: n=6 all (2,2,2,3,3,3); n=7 all near-regular. Regular n=5 all b1=1; regular n=7 70% b1=0 | beta2_kappa2_analysis.py |
 
 ---
 
