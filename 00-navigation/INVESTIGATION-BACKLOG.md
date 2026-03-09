@@ -345,7 +345,22 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 11. Poincare polynomial P(T,1)/(2^n-1) grows with n — path complex exceeds simplex
 12. Surplus = excess_paths - rank(constraints) exactly (HYP-314)
 **Scripts:** dimensional_crossover.py, filling_ratio_formula.py, local_redei_investigation.py, euler_char_scaling.py, chi_A_identity.py, omega2_formula.py, betti_rate_scaling.py, poincare_polynomial.py, omega_parity_structure.py, beta5_onset_search.py
-**Next steps:** (1) Find beta_5 onset (check n=10-12, Paley). (2) Formula for filling ratio. (3) Prove beta_1*beta_3=0 (HYP-299). (4) Explain defect rate U-shape.
+**Next steps:** ~~(1) Find beta_5 onset~~ FOUND: beta_5 at n=8. ~~(3) Prove beta_1*beta_3=0~~ PROVED: THM-095 seesaw. (2) Formula for filling ratio. (4) Explain defect rate U-shape. (5) PROVE beta_2=0 algebraically (critical). (6) Investigate n=9 exotic profiles.
+
+### INV-137: Seesaw Mechanism and Tournament Homology Structure
+**Source:** kind-pasteur-2026-03-09-S45
+**Status:** MAJOR RESULTS. THM-095 and THM-096 established.
+**Key findings:**
+1. THM-095: beta_1*beta_3=0 via seesaw through beta_2=0. im(d_2) mediates: 2 values only.
+2. beta_2=0 for ALL tournaments (0/1000 at n=8). DEEPEST structural invariant.
+3. beta_4>0 at n=8 (~1.1%), values {1, 5}. Even Betti CAN appear, just not beta_2.
+4. beta_5 onset at n=8 (with beta_1=1). Profile [1,1,0,0,0,1,0,0], chi=-1.
+5. beta_3+beta_4 coexist at n=8 (~0.15%), chi=1.
+6. chi ranges over {-1, 0, 1, 2, 6} at n=8.
+7. Constraint ratio NA_faces/|A_p| < 1 for p=2 always (may explain beta_2=0).
+8. THM-096 corrected: simplicity holds for n<=7 only.
+**Open:** (1) Algebraic proof of beta_2=0. (2) Does beta_2=0 break at large n? (3) Onset of beta_6.
+**Scripts:** beta1_beta3_mediator.py, even_betti_quick_v2.py, beta4_investigation.py, beta_coexistence_analysis.py, beta2_algebraic_analysis.py
 
 ---
 

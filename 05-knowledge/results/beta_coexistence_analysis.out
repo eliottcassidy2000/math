@@ -28,3 +28,84 @@ BETA COEXISTENCE AND ONSET ANALYSIS
   Trial 1417: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True, chi=2
   Trial 1472: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True, chi=2
   1500/2000 done, 22 exotic found
+  Trial 1727: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True, chi=2
+  Trial 1735: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True, chi=2
+  Trial 1739: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5)), c3=19, SC=True, chi=2
+  Trial 1868: betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True, chi=2
+  2000/2000 done, 26 exotic found
+
+  Total exotic: 26/2000
+
+--- Part 2: Exotic case analysis ---
+  Profile types:
+    Nonzero at p=(4,): 22 cases
+    Nonzero at p=(3, 4): 3 cases
+    Nonzero at p=(1, 5): 1 cases
+
+  beta_4>0 cases (25):
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=17, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=18, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=17, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5)), c3=17, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=18, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5)), c3=17, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5), np.int64(5)), c3=13, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5)), c3=18, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), 0], scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(5), np.int64(5)), c3=14, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5)), c3=16, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5)), c3=19, SC=True
+    betti=[1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)], scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=19, SC=True
+
+  beta_1+beta_5 cases (1):
+    betti=[1, np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)], scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4)), c3=20, SC=True
+
+--- Part 3: Onset dimensions ---
+
+    beta_0: n=1 (trivial, always 1)
+    beta_1: n=3 (first 3-cycle)
+    beta_2: NEVER (conjecture: beta_2=0 for ALL tournaments)
+    beta_3: n=6 (first appearance, ~1% at n=6)
+    beta_4: n=8 (first appearance, ~0.5% at n=8)
+    beta_5: n=8 (first appearance, ~0.2% at n=8, WITH beta_1)
+
+    Pattern: onset of beta_p at n = ?
+    p:     0  1  2  3  4  5
+    onset: 1  3  -  6  8  8
+
+    The gap at beta_2 is striking. beta_2=0 is the DEEPEST invariant.
+    The seesaw mechanism (THM-095) depends on it.
+    
+
+--- Part 4: Constraint structure for Omega_2 ---
+  n=5: |A_2|=16, non-allowed faces=7
+    These are (a,c) pairs with c->a AND some b with a->b->c
+    Paths per NA face: min=1, max=3, avg=1.3
+  n=6: |A_2|=34, non-allowed faces=14
+    These are (a,c) pairs with c->a AND some b with a->b->c
+    Paths per NA face: min=1, max=3, avg=1.5
+  n=7: |A_2|=49, non-allowed faces=15
+    These are (a,c) pairs with c->a AND some b with a->b->c
+    Paths per NA face: min=1, max=4, avg=1.4
+
+--- Part 5: Why beta_2=0 at n=3 (exhaustive) ---
+    bits=0: scores=(np.int64(0), np.int64(1), np.int64(2)), |A_2|=1, dim(Omega_2)=1, |A_3|=0, beta_2=0
+    bits=1: scores=(np.int64(0), np.int64(1), np.int64(2)), |A_2|=1, dim(Omega_2)=1, |A_3|=0, beta_2=0
+    bits=2: scores=(np.int64(1), np.int64(1), np.int64(1)), |A_2|=3, dim(Omega_2)=0, |A_3|=0, beta_2=0
+    bits=3: scores=(np.int64(0), np.int64(1), np.int64(2)), |A_2|=1, dim(Omega_2)=1, |A_3|=0, beta_2=0
+    bits=4: scores=(np.int64(0), np.int64(1), np.int64(2)), |A_2|=1, dim(Omega_2)=1, |A_3|=0, beta_2=0
+    bits=5: scores=(np.int64(1), np.int64(1), np.int64(1)), |A_2|=3, dim(Omega_2)=0, |A_3|=0, beta_2=0
+    bits=6: scores=(np.int64(0), np.int64(1), np.int64(2)), |A_2|=1, dim(Omega_2)=1, |A_3|=0, beta_2=0
+    bits=7: scores=(np.int64(0), np.int64(1), np.int64(2)), |A_2|=1, dim(Omega_2)=1, |A_3|=0, beta_2=0
