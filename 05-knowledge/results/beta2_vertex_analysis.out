@@ -1,0 +1,56 @@
+======================================================================
+VERTEX CHARACTERIZATION at n=5
+======================================================================
+Good: 4280, Bad: 840
+
+By out-degree:
+  d_out=0: good=200/320 (62%)
+  d_out=1: good=1040/1280 (81%)
+  d_out=2: good=1800/1920 (94%)
+  d_out=3: good=1040/1280 (81%)
+  d_out=4: good=200/320 (62%)
+
+For BAD vertices:
+  b1(T\v) values: Counter({1: 840})
+  b1(T) values: Counter({np.int64(0): 840})
+  delta_b1 = b1(T\v)-b1(T): Counter({np.int64(1): 840})
+  ker(i_*) values: Counter({3: 840})
+
+Score sequences with bad vertices:
+  (1, 2, 2, 2, 3): 360/1400 bad
+  (1, 1, 2, 3, 3): 240/1200 bad
+  (1, 1, 2, 2, 4): 120/600 bad
+  (0, 2, 2, 3, 3): 120/600 bad
+
+b1(T\v) <= b1(T) vs goodness:
+  b1(T\v) <= b1(T): good=4280, bad=0
+  b1(T\v) > b1(T):  good=0, bad=840
+
+  => b1(T\v) <= b1(T) implies goodness? YES
+  => goodness implies b1(T\v) <= b1(T)? YES
+
+======================================================================
+DOES EVERY TOURNAMENT HAVE v WITH b1(T\v) <= b1(T)?
+======================================================================
+n=5 (0s): has_monotone=1024, no_monotone=0/1024
+n=6 (25s): has_monotone=32768, no_monotone=0/32768
+
+======================================================================
+ker(i_*) FORMULA at n=5
+======================================================================
+d_out=0: ker(i_*)=Counter({3: 120}), b1_Tv=Counter({1: 120})
+d_out=1: ker(i_*)=Counter({3: 240}), b1_Tv=Counter({1: 240})
+d_out=2: ker(i_*)=Counter({3: 120}), b1_Tv=Counter({1: 120})
+d_out=3: ker(i_*)=Counter({3: 240}), b1_Tv=Counter({1: 240})
+d_out=4: ker(i_*)=Counter({3: 120}), b1_Tv=Counter({1: 120})
+
+Detailed analysis of ONE bad (T,v) pair:
+T scores=(1, 1, 2, 2, 4), v=4, d_out=4
+P (out-nbrs of v) = [0, 1, 2, 3]
+Q (in-nbrs of v) = []
+b1(T\v) = 1, b1(T) = 0
+ker(i_*) = 3
+delta_b1 = 1
+
+
+Done.

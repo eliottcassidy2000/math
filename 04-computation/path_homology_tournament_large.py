@@ -84,14 +84,24 @@ def compute_path_homology(adj, max_dim=4, verbose=False):
                     if face in na_index:
                         M[na_index[face], j] += coeff
 
-            U, S, Vt = np.linalg.svd(M, full_matrices=True)
-            tol = 1e-10
-            rank = np.sum(S > tol)
-            if rank < num_paths:
-                kernel = Vt[rank:].T
-                omega_bases[dim] = kernel
-            else:
-                omega_bases[dim] = np.zeros((num_paths, 0))
+            try:
+                U, S, Vt = np.linalg.svd(M, full_matrices=True)
+                tol = 1e-10
+                rank = np.sum(S > tol)
+                if rank < num_paths:
+                    kernel = Vt[rank:].T
+                    omega_bases[dim] = kernel
+                else:
+                    omega_bases[dim] = np.zeros((num_paths, 0))
+            except np.linalg.LinAlgError:
+                # Fallback: use QR on M^T for kernel
+                Q, R = np.linalg.qr(M.T, mode='complete')
+                tol = 1e-10
+                rank = np.sum(np.abs(np.diag(R[:min(M.shape), :])) > tol) if min(M.shape) > 0 else 0
+                if rank < num_paths:
+                    omega_bases[dim] = Q[:, rank:]
+                else:
+                    omega_bases[dim] = np.zeros((num_paths, 0))
 
     for dim in range(max_dim + 1):
         odim = omega_bases[dim].shape[1] if (omega_bases[dim].ndim == 2 and omega_bases[dim].shape[1] > 0) else 0
@@ -167,7 +177,7 @@ if __name__ == "__main__":
 
     for n in [7, 8, 9]:
         n_samples = 500 if n <= 8 else 100
-        max_d = min(n-1, 5)
+        max_d = min(n-1, 4)  # Keep max_dim reasonable
 
         print("=" * 60)
         print(f"n={n}: Random sample ({n_samples} tournaments, max_dim={max_d})")

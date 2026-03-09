@@ -1,0 +1,46 @@
+======================================================================
+RELATIVE HOMOLOGY ANALYSIS
+======================================================================
+
+n=5 (3s): 1024 tournaments
+  (T,v) with i_* injective: 4280/5120
+  (T,v) with i_* NOT injective: 840/5120
+  Tournaments with SOME good v: 1024/1024
+  Tournaments with NO good v: 0/1024
+  ker(i_*) distribution: {3: 840}
+  n=6: 5000/32768 (41s) good=5000 bad=0
+  n=6: 10000/32768 (85s) good=10000 bad=0
+  n=6: 15000/32768 (131s) good=15000 bad=0
+  n=6: 20000/32768 (198s) good=20000 bad=0
+  n=6: 25000/32768 (283s) good=25000 bad=0
+  n=6: 30000/32768 (358s) good=30000 bad=0
+
+n=6 (397s): 32768 tournaments
+  (T,v) with i_* injective: 161280/196608
+  (T,v) with i_* NOT injective: 35328/196608
+  Tournaments with SOME good v: 32768/32768
+  Tournaments with NO good v: 0/32768
+  ker(i_*) distribution: {6: 35328}
+
+======================================================================
+n=7,8 SAMPLED
+======================================================================
+  n=7: 50/200 (0s) good=50 bad=0
+  n=7: 100/200 (1s) good=100 bad=0
+  n=7: 150/200 (1s) good=150 bad=0
+  n=7: 200/200 (1s) good=200 bad=0
+
+n=7 (1s): 200 tournaments
+  Has SOME good v: 200/200
+  ALL v bad: 0/200
+  n=8: 25/100 (0s) good=25 bad=0
+  n=8: 50/100 (1s) good=50 bad=0
+  n=8: 75/100 (1s) good=75 bad=0
+  n=8: 100/100 (2s) good=100 bad=0
+
+n=8 (2s): 100 tournaments
+  Has SOME good v: 100/100
+  ALL v bad: 0/100
+
+
+Done.
