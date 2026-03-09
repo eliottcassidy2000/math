@@ -34,7 +34,7 @@
 typedef enum {
     SEQ_A000568, SEQ_A000273, SEQ_A000595, SEQ_A000088,
     SEQ_A000666, SEQ_A001174, SEQ_A002785, SEQ_A000171,
-    SEQ_A003086,
+    SEQ_A003086, SEQ_A005639,
 } SeqType;
 
 static SeqType seq_type;
@@ -76,6 +76,7 @@ static int gcd_func(int a, int b) {
  */
 static long long compute_edges(int *pk, int *pm, int depth) {
     long long gcd_sum = 0;
+    long long gcd_sum_even = 0;  /* For A005639: only pairs with ≥1 even cycle */
     long long sum_v = 0, num_v = 0;
 
     for (int i = 0; i < depth; i++) {
@@ -83,9 +84,15 @@ static long long compute_edges(int *pk, int *pm, int depth) {
         sum_v += (long long)mr * r;
         num_v += mr;
         /* Same-part pairs: C(mr,2) * gcd(r,r) = C(mr,2) * r */
-        gcd_sum += (long long)mr * (mr - 1) / 2 * r;
-        for (int j = i + 1; j < depth; j++)
-            gcd_sum += (long long)mr * pm[j] * gcd_tab[pk[i]][pk[j]];
+        long long same = (long long)mr * (mr - 1) / 2 * r;
+        gcd_sum += same;
+        if (r % 2 == 0) gcd_sum_even += same;
+        for (int j = i + 1; j < depth; j++) {
+            long long cross = (long long)mr * pm[j] * gcd_tab[pk[i]][pk[j]];
+            gcd_sum += cross;
+            if (parts[pk[i]] % 2 == 0 || parts[pk[j]] % 2 == 0)
+                gcd_sum_even += cross;
+        }
     }
 
     long long self_term = 0;
@@ -123,6 +130,11 @@ static long long compute_edges(int *pk, int *pm, int depth) {
             case SEQ_A003086:
                 /* same as A000273: sum(v_i-1) handled below */
                 break;
+            case SEQ_A005639:
+                /* For even r: ((r-2)/4)*2 + 1; for odd r: 0 */
+                if (r % 2 == 0)
+                    self_term += (long long)mr * ((r - 2) / 4 * 2 + 1);
+                break;
         }
     }
 
@@ -153,6 +165,10 @@ static long long compute_edges(int *pk, int *pm, int depth) {
         case SEQ_A003086:
             /* 4*sum gcd(p_i,p_j) + sum(2*p_i - 1) with unscaled parts */
             edge_val = 4 * gcd_sum + 2 * sum_v - num_v;
+            break;
+        case SEQ_A005639:
+            /* Only cross pairs with ≥1 even cycle, plus self-term for even cycles */
+            edge_val = gcd_sum_even + self_term;
             break;
         default:
             edge_val = 0;
@@ -297,7 +313,7 @@ static void *thread_worker(void *arg) {
 
 int main(int argc, char *argv[]) {
     if (argc < 3) {
-        fprintf(stderr, "Usage: %s <seq: 568|273|595|88|666|1174|2785|171|3086> <n> [threads]\n", argv[0]);
+        fprintf(stderr, "Usage: %s <seq: 568|273|595|88|666|1174|2785|171|3086|5639> <n> [threads]\n", argv[0]);
         return 1;
     }
 
@@ -321,6 +337,7 @@ int main(int argc, char *argv[]) {
             if (n % 4 >= 2) { printf("a(%d) = 0\n", n); return 0; }
             break;
         case 3086: seq_type = SEQ_A003086; partition_target = n/2; odd_parts_only = 0; scale = 2; break;
+        case 5639: seq_type = SEQ_A005639; partition_target = n; odd_parts_only = 0; base_val = 3; break;
         default:
             fprintf(stderr, "Unknown sequence: %d\n", seq_id);
             return 1;
@@ -391,6 +408,9 @@ int main(int argc, char *argv[]) {
         case SEQ_A003086:
             /* 4*sum gcd + 2*sum_v - num_v ≤ 4*C(pt,2)*pt + 2*pt - 1 */
             max_t_val = 2 * pt * pt + pt + 1; break;
+        case SEQ_A005639:
+            /* gcd_sum_even + self_term ≤ pt*(pt-1)/2 + pt */
+            max_t_val = pt * (pt - 1) / 2 + pt + 1; break;
         default:
             max_t_val = pt * pt + 1;
     }
