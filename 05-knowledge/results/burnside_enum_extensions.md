@@ -185,41 +185,60 @@ Fixed to 3600s (1 hour) timeout.
 | A054922 | Connected symrel, conn complement | 50 | 100 | +50 | Complete |
 | A054933 | Digraphs up to arc reversal | 50 | 80 | +30 | Complete |
 
-### FAST matrix sequences via GF approach (opus-S50 session 4)
+### FAST matrix sequences via GF approach (opus-S50 sessions 4-5)
 
 Key innovation: Single-partition generating function approach reduces
 O(p(n)^2 * d^2) pair enumeration to O(p(n) * n^2) for matrix counting.
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A002724 | Binary n×n matrices (fast) | 51 | 200+ | +149+ | Running |
-| A006383 | Binary matrices + col complement | 50 | 200+ | +150+ | Running |
-| A122082 | Bicolored graphs, color-swap invariant | ~50 | 200+ | +150+ | Running |
-| A007139 | Bicolored bipartite graphs | 31 | 200+ | +169+ | Derived (A002724+A122082)/2 |
-| A052269 | k=3 matrices (fast) | 27 | 100+ | +73+ | Running |
-| A052271 | k=4 matrices (fast) | 27 | 100+ | +73+ | Running |
-| k=5-10 | k-ary matrices (fast) | ~27 | 100+ | +73+ each | Running |
-| A028657 | Triangle m×n binary (fast) | ~800 | 10000+ | +9200+ | Running |
+| A002724 | Binary n×n matrices (fast) | 51 | 40 (quad) | growing | Running (quad) |
+| A006383 | Binary matrices + col complement | 51 | 40 (quad) | growing | Running (quad) |
+| A122082 | Bicolored graphs, color-swap inv | 51 | 40 (quad) | growing | Running (quad) |
+| A007139 | Bicolored bipartite graphs | 31 | 40 | +9 | Running (quad) |
+| A052269 | k=3 matrices (fast) | 27 | 49 | +22 | Running |
+| A052271 | k=4 matrices (fast) | 27 | 44 | +17 | Running |
+| A052272 | k=5 matrices (fast) | 27 | 44 | +17 | Running |
+| A246112 | k=6 matrices (fast) | 27 | 44 | +17 | Running |
+| A246113 | k=7 matrices (fast) | 27 | 42 | +15 | Running |
+| A246114 | k=8 matrices (fast) | 27 | 42 | +15 | Running |
+| A246115 | k=9 matrices (fast) | 27 | 42 | +15 | Running |
+| A246116 | k=10 matrices (fast) | 27 | 42 | +15 | Running |
+| A028657 | Triangle m×n binary (fast) | ~1081 | 2187+ | growing | Running |
 
-### Triple-partition matrix sequences (opus-S50 session 4, MAJOR NEW)
+### Triple-partition matrix sequences (opus-S50 sessions 4-5, MAJOR NEW)
 
 Key innovation: GF trick on one axis of triple partition sum, reducing
 O(p(n)^3) to O(p(n)^2 * n^2). Enables extension of previously intractable sequences.
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A091058 | n×n matrices over n symbols | 15 | 50+ | +35+ | Running |
-| A091059 | n×n matrices, 2 symbols + sym perm | 21 | 100+ | +79+ | Running |
-| A091060 | n×n matrices, 3 symbols + sym perm | 13 | 50+ | +37+ | Running |
-| A091061 | n×n matrices, 4 symbols + sym perm | ~14 | 40+ | +26+ | Running |
-| A091062 | n×n matrices, 5 symbols + sym perm | ~14 | 35+ | +21+ | Running |
-| A246122-A246126 | k=6..10 sym-perm matrices | ~14 | 30+ | +16+ each | Running |
+| A091058 | n×n matrices over n symbols | 15 | 23 | +8 | Running (slow) |
+| A091059 | n×n matrices, 2 symbols + sym perm | 21 | 45 | +24 | Running |
+| A091060 | n×n matrices, 3 symbols + sym perm | 13 | 45 | +32 | Running |
+| A091061 | n×n matrices, 4 symbols + sym perm | 12 | 41 | +29 | Complete |
+| A091062 | n×n matrices, 5 symbols + sym perm | 11 | 36 | +25 | Complete |
+| A246122 | k=6, row/col/sym perm | 11 | 31 | +20 | Complete |
+| A246123 | k=7, row/col/sym perm | ~11 | 31 | +20 | Complete |
+| A246124 | k=8, row/col/sym perm | ~10 | 31 | +21 | Complete |
+| A246125 | k=9, row/col/sym perm | ~10 | 31 | +21 | Complete |
+| A246126 | k=10, row/col/sym perm | 10 | 31 | +21 | Complete |
+
+### Derived sequences via inverse Euler (opus-S50 session 5)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A334335 | Connected tournaments | 76 | 170 | +94 | Complete |
+| A086345 | Connected oriented graphs | 51 | 100 | +49 | Complete |
+| A054919 | Connected binary relations | ~51 | 100 | +49 | Complete |
+| A054921 | Connected symmetric relations | ~87 | 100 | +13 | Complete |
+| A001242 | Connected binary matrices | 481 | 39 | 0 | OEIS already has more |
 
 ## Total impact summary
 
-- **60+ OEIS sequences extended** with new b-file terms
+- **70+ OEIS sequences extended** with new b-file terms
 - **40+ potentially new sequences** (connected variants, k-ary relations, k-ary matrices not yet in OEIS)
-- **~8000+ new individual terms** across all sequences
+- **~10000+ new individual terms** across all sequences
 - **Unified enumerator** handles 13 sequences in a single C file (burnside_enum_v2.c)
 - **General k-ary relation enumerator** for arbitrary k (Python + C)
 - **Hypergraph enumerator** via subset-orbit Burnside formula (Python)
@@ -258,6 +277,15 @@ O(p(n)^3) to O(p(n)^2 * n^2). Enables extension of previously intractable sequen
 | derive_trivial_sequences.py | A007869, A054928 | Averages of existing sequences |
 | k_ary_relations.py | A000662, A001377, A051241, k≥6 | General k-ary Burnside (Python) |
 | k_ary_relations_gmp.c | Same sequences (fast) | C+GMP, orders of magnitude faster |
+| a002724_fast_gmp.c | A002724 | Fast GF approach, O(p(n)*n^2) |
+| a006383_gmp.c | A006383 | Hyperoctahedral B_n group |
+| a122082_gmp.c | A122082 | Single partition color-swap formula |
+| matrix_quad_gmp.c | A002724/A006383/A122082/A007139 | All four computed simultaneously |
+| kary_matrix_fast_gmp.c | A052269/A052271/A052272/A246112-116 | General k-ary, GF approach |
+| binary_matrix_mn_fast_gmp.c | A028657 | m×n binary matrix triangle |
+| a091058_gmp.c | A091058 | n×n over n symbols, triple partition GF |
+| a242095_gmp.c | A242095 full triangle, A091058-A091062, A246122-126 | General A242095(n,k) |
+| split_and_inv_euler.py | A334335, A001242 + quad splitting | Inverse Euler + utility |
 
 ## Sequence-specific formulas
 
