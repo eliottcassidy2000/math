@@ -6,14 +6,14 @@
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A000568 | Tournaments | 77 | 201 | +124 | Complete |
+| A000568 | Tournaments | 77 | 200+ | +123+ | Running (GMP, to 200) |
 | A002785 | Self-comp oriented graphs | 100 | 300 | +200 | Complete |
 | A000171 | Self-comp graphs | 100 | 439+ | +339+ | Running (to 500) |
 | A000273 | Digraphs | 65 | 101 | +36 | Complete |
-| A000595 | Binary relations | 51 | 100 | +49 | Complete |
-| A001174 | Oriented graphs | 50 | 100 | +50 | Complete |
+| A000595 | Binary relations | 51 | 200 | +149 | Running (GMP, to 200) |
+| A001174 | Oriented graphs | 50 | 200 | +150 | Running (GMP, to 200) |
 | A000088 | Simple graphs | 88 | 101 | +13 | Complete |
-| A000666 | Symmetric relations | 81 | 113 | +32 | Extending (to 130) |
+| A000666 | Symmetric relations | 81 | 200 | +119 | Running (GMP, to 200) |
 | A003086 | Self-comp digraphs | 80 | 100 | +20 | Complete |
 | A005639 | Self-converse oriented graphs | 50 | 80 | +30 | Complete |
 | A002499 | Self-converse digraphs | 50 | 80 | +30 | Complete |
@@ -23,8 +23,8 @@
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A000665 | 3-uniform hypergraphs | 29 | 81 | +52 | Complete |
-| A051240 | 4-uniform hypergraphs | 19 | 77+ | +58+ | Gaps at 66-69 |
+| A000665 | 3-uniform hypergraphs | 29 | 50+ | +21+ | GMP extending (at n=50) |
+| A051240 | 4-uniform hypergraphs | 19 | 77+ | +58+ | GMP added n=0..35 |
 | A051249 | 5-uniform hypergraphs | 16 | 64+ | +48+ | Gaps at 41-47 |
 | A309860 | 6-uniform hypergraphs | 15 | 60 | +45 | Complete |
 | A309861 | 7-uniform hypergraphs | ~15 | 43 | +28 | Complete |
@@ -48,8 +48,10 @@
 | A003085 | Weakly connected digraphs | 64 | 100 | +36 | Complete |
 | A051337 | Strongly connected tournaments | 50 | 200 | +150 | Complete |
 | A086345 | Connected oriented graphs | 51 | 100 | +49 | Complete |
-| A054919 | Connected binary relations | 51 | 98 | +47 | Complete |
+| A054919 | Connected binary relations | 51 | 81+ | +30+ | Updated (GMP) |
 | A054921 | Connected symmetric relations | 87 | 100 | +13 | Complete |
+| A002494 | Graphs w/o isolated nodes | 76 | 101 | +25 | Complete (GMP) |
+| A003190 | Connected 3-uniform HG | 12 | 48+ | +36+ | Updated (GMP) |
 | A003049 | Connected Eulerian graphs | 88 | 103 | +15 | Complete |
 
 ### k-ary relation sequences (new enumerator, opus-S50)
