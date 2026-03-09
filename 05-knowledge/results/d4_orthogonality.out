@@ -1,0 +1,40 @@
+======================================================================
+d_4 ORTHOGONALITY — KER/IM GROWTH ANALYSIS
+======================================================================
+    ker_d3(T) = 19 (7 old + 12 new)
+    ker_d3(T\v) = 7
+    rank(d_4): total=18, old=6, new_incr=12
+    beta_3 = 1 (should be 1)
+    ker_d3 growth: 12 new cycles from adding v
+    im(d_4) growth: 12 new boundaries from adding v
+    Growth balance: ker grows by 12, im grows by 12, delta_beta = 0
+  10/50, 6 bad verts, 4.0s
+  20/50, 16 bad verts, 8.8s
+  30/50, 21 bad verts, 15.8s
+  40/50, 28 bad verts, 19.4s
+  50/50, 34 bad verts, 22.9s
+  Done: 50 tours, 34 bad verts, 22.9s
+
+  KER/IM GROWTH ANALYSIS:
+
+  ker_d3 growth distribution (= im(d_4) growth):
+    +9: 2
+    +11: 6
+    +12: 5
+    +14: 1
+    +16: 1
+    +18: 1
+    +19: 18
+
+  ker_d3(T) decomposition:
+    old cycles in ker_T: {0: 7, 1: 3, 2: 1, 3: 4, 4: 11, 5: 3, 6: 1, 7: 4}
+    new cycles in ker_T: {9: 1, 10: 1, 11: 1, 12: 7, 15: 2, 16: 2, 18: 1, 19: 2, 20: 1, 21: 3, 22: 9, 23: 2, 24: 1, 25: 1}
+
+  INTERPRETATION:
+    delta_beta = 0 for BAD vertices means:
+    ker grows by K, im grows by K — perfectly balanced
+    Every new cycle (through v) is a boundary (through v)
+    The inherited H_3 generator is NOT a new cycle — it's OLD
+    So it cannot be killed by the new boundaries
+
+DONE.

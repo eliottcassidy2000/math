@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S55 — rank(i_*) all degrees, new-boundary-targeting mechanism, seesaw refuted
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S54
+**Summary of work:**
+  Major session on beta_3 proof architecture. KEY FINDINGS:
+  1. rank(i_*) computed at ALL degrees for beta_3=1 tournaments: perfectly universal
+     at n=7 (560 verts) and n=8 (120 verts). Only nonzero at p=0 (always 1) and
+     p=3 (1 for BAD, 0 for GOOD).
+  2. Relative Betti profiles: GOOD=(0,0,0,1,...), BAD=(0,...) — perfect at n=7,8.
+  3. MECHANISM DISCOVERED: "new boundaries never kill old cycles" (HYP-398).
+     im(d_4^new) ∩ old_ker_d3 ⊂ im(d_4^old) — 34/34 at n=7.
+     This is WHY i_*-injectivity works: old H_3 generator is protected.
+  4. Embedded H_3(T\v) generator IS H_3(T) generator mod boundaries (HYP-399).
+  5. Consecutive seesaw (HYP-394) REFUTED at n=8 by kind-pasteur (also my mod-p run).
+  6. CRITICAL: kind-pasteur-S48 found beta_3=2 at n=8! i_*-injectivity FAILS at n=8!
+     The proof architecture works ONLY at n≤7.
+  7. Updated THM-110 proof architecture to reflect n≤7 limitation.
+**New contributions:** istar_all_degrees.py, istar_n8_investigation.py,
+  d4_preimage_correct.py, new_boundary_targeting.py, quasi_iso_algebraic.py,
+  consecutive_seesaw_n8.py. HYP-398,399,400 added.
+**Unresolved threads:** Algebraic proof of HYP-398 (new→new targeting).
+  Understanding beta_3=2 at n=8. What bound replaces beta_3≤1 at n≥8?
+
 ## opus-2026-03-09-S51o — Triple-verified: β₁=0 indicators span full R^n, all e_i present
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51n

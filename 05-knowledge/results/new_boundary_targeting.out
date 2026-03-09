@@ -1,0 +1,27 @@
+======================================================================
+NEW BOUNDARY TARGETING ANALYSIS
+Do new d_4 boundaries kill old ker_d3 cycles?
+======================================================================
+    ker_d3(T\v) = 7
+    rank(d_4^old) = 6, rank(d_4^total) = 18
+    Old cycles killed by im(d_4^old): 6
+    Old cycles killed by im(d_4^total): 6
+    New boundaries kill 0 EXTRA old cycles
+  10/50, 6 bad verts, 4.1s
+  20/50, 16 bad verts, 8.8s
+  30/50, 21 bad verts, 15.7s
+  40/50, 28 bad verts, 19.3s
+  50/50, 34 bad verts, 22.7s
+  Done: 50 tours, 34 bad verts, 22.7s
+
+  KEY RESULT: Do new boundaries kill extra old cycles?
+    Extra old cycles killed by new boundaries: {0: 34}
+
+    *** CONFIRMED: New boundaries NEVER kill old cycles ***
+    This explains i_*-injectivity:
+    - Old H_3 generator is an old cycle
+    - im(d_4^old) kills ker_dim_Tv - 1 old cycles (leaving the generator)
+    - New boundaries add nothing to old cycle killing
+    - Therefore the old generator survives in H_3(T)
+
+DONE.

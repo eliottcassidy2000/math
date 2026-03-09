@@ -100,6 +100,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. FAILS at n=8: when rank(i_*)=0, H_4^rel=1 and H_3^rel=1. | opus-S54, updated kind-pasteur-S48 |
 | HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | Holds n=7 (560/560). FAILS at n=8: when rank(i_*)=0 and b4=0, H_4^rel=1 from LES. Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54, REFUTED kind-pasteur-S48 |
 | HYP-397 | CORRECTED: beta_3<=1 ONLY at n<=7. b3=2 possible at n=8 | beta_3=2 at n=8: profile (1,0,0,2,0,0,0,0), 4/5000 (0.08%). Good vertices always exist even for b3=2 tours. The "good vertex + Claim II" argument is CIRCULAR (H_3^rel=b3 for good vertex). beta_3<=1 proved exhaustively only at n<=7 | kind-pasteur-S48 |
+| HYP-398 | NEW BOUNDARIES TARGET ONLY NEW CYCLES: im(d_4^new) ∩ span(old ker_d3) ⊂ im(d_4^old) | n=7: 34/34 BAD vertices. New d_4 content (5-paths through v) never kills old cycles beyond what im(d_4^old) already kills. This is the MECHANISM for i_*-injectivity at n=7: old H_3 generator is protected. | opus-S55 |
+| HYP-399 | Embedded H_3(T\\v) generator = H_3(T) generator (mod boundaries) | n=7: 44/44 BAD vertices. The true H_3 generator of T\\v, when embedded in T, IS the H_3 generator of T (up to scalar, mod im(d_4)). H_3 is "inherited" from the deletion. | opus-S55 |
+| HYP-400 | rank(i_*^p) = 0 for all p >= 1 except p=3 for BAD vertices (n=7,8) | n=7: 560 vertices, n=8: 120 vertices. ALL rank(i_*) at all degrees match exactly. But this holds only when beta_3(T)=1 (not beta_3=2). | opus-S55 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

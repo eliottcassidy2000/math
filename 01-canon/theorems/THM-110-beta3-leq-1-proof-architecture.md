@@ -1,8 +1,11 @@
 # THM-110: beta_3 <= 1 for All Tournaments — Proof Architecture
 
-**Status:** PROVED EXHAUSTIVELY n≤7; algebraic proof identified (HYP-380/381)
-**Filed by:** kind-pasteur-2026-03-09-S46, updated opus-2026-03-09-S53
+**Status:** PROVED EXHAUSTIVELY n≤7; **FALSE at n=8** (beta_3=2 exists, HYP-397)
+**Filed by:** kind-pasteur-2026-03-09-S46, updated opus-2026-03-09-S53, S55
 **Depends on:** THM-098, THM-108 (beta_2=0), LES of pair (T, T\v)
+**CRITICAL UPDATE (kind-pasteur-S48):** beta_3=2 at n=8 with 0.08% frequency.
+i_*-injectivity FAILS at n=8 (HYP-380 refuted). The theorem beta_3≤1 holds
+ONLY for n≤7 and is NOT universal.
 
 ## Main Theorem (THM-098 for k=1)
 
