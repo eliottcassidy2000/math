@@ -1,0 +1,125 @@
+======================================================================
+beta_3 and beta_1 vs H-maximization at n=7
+======================================================================
+  ... 500 trials done
+  ... 1000 trials done
+  ... 1500 trials done
+  ... 2000 trials done
+  ... 2500 trials done
+  ... 3000 trials done
+  ... 3500 trials done
+  ... 4000 trials done
+  ... 4500 trials done
+  ... 5000 trials done
+
+Total: 5000 tournaments across 58 score classes
+
+======================================================================
+Score class analysis: beta_3>0 vs H rank
+======================================================================
+
+  (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(5), np.int64(5)): 3 samples, H in [15]...
+    max_H=15, min_H=15
+    beta_3>0: 3/3 at H=[15]
+    beta_3>0 only at max_H? YES
+
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(5), np.int64(5), np.int64(5)): 7 samples, H in [15]...
+    max_H=15, min_H=15
+    beta_3>0: 7/7 at H=[15]
+    beta_3>0 only at max_H? YES
+
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(5)): 88 samples, H in [25, 27, 29]...[29, 31, 33]
+    max_H=33, min_H=25
+    beta_3>0: 18/88 at H=[31]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 10/88 at H=[33]
+
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4), np.int64(5)): 51 samples, H in [33, 35, 41]...[41, 45, 51]
+    max_H=51, min_H=33
+    beta_3>0: 12/51 at H=[41]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 7/51 at H=[51]
+
+  (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5), np.int64(5)): 26 samples, H in [31, 41, 51]...
+    max_H=51, min_H=31
+    beta_1>0: 2/26 at H=[51]
+
+  (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5)): 142 samples, H in [37, 39, 43]...[55, 59, 69]
+    max_H=69, min_H=37
+    beta_1>0: 10/142 at H=[69]
+
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5), np.int64(5)): 52 samples, H in [33, 35, 41]...[41, 45, 51]
+    max_H=51, min_H=33
+    beta_3>0: 10/52 at H=[41]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 5/52 at H=[51]
+
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5), np.int64(5)): 157 samples, H in [37, 39, 43]...[55, 59, 69]
+    max_H=69, min_H=37
+    beta_1>0: 18/157 at H=[69]
+
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(5)): 525 samples, H in [45, 47, 49]...[77, 85, 93]
+    max_H=93, min_H=45
+    beta_3>0: 47/525 at H=[61, 67, 69]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 58/525 at H=[47, 93]
+
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(4), np.int64(4), np.int64(4)): 74 samples, H in [65, 69, 75]...[83, 89, 91]
+    max_H=91, min_H=65
+    beta_3>0: 19/74 at H=[81]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 3/74 at H=[69]
+
+  (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5)): 535 samples, H in [51, 65, 67]...[111, 117, 123]
+    max_H=123, min_H=51
+    beta_1>0: 40/535 at H=[51, 69, 111, 117, 123]
+
+  (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4)): 428 samples, H in [69, 79, 81]...[113, 115, 117]
+    max_H=117, min_H=69
+    beta_3>0: 19/428 at H=[91, 93]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 16/428 at H=[69, 91]
+
+  (np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(5)): 42 samples, H in [83, 93, 95]...[95, 99, 135]
+    max_H=135, min_H=83
+    beta_1>0: 2/42 at H=[135]
+
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4), np.int64(5)): 81 samples, H in [65, 69, 75]...[83, 89, 91]
+    max_H=91, min_H=65
+    beta_3>0: 9/81 at H=[81]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 3/81 at H=[69]
+
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(5)): 427 samples, H in [69, 79, 81]...[113, 115, 117]
+    max_H=117, min_H=69
+    beta_3>0: 34/427 at H=[91, 93]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 18/427 at H=[69, 91]
+
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(4)): 228 samples, H in [99, 105, 109]...[127, 129, 135]
+    max_H=135, min_H=99
+    beta_3>0: 40/228 at H=[123, 127, 129]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 12/228 at H=[99, 105]
+
+  (np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4)): 573 samples, H in [121, 123, 125]...[141, 143, 145]
+    max_H=145, min_H=121
+    beta_3>0: 117/573 at H=[129, 133, 135, 137, 141]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 22/573 at H=[123, 135, 137]
+
+  (np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): 169 samples, H in [147, 151, 153]...[155, 157, 159]
+    max_H=159, min_H=147
+    beta_3>0: 43/169 at H=[151, 153, 159]
+    beta_3>0 only at max_H? NO
+    beta_1>0: 12/169 at H=[151, 159]
+
+  (np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 7 samples, H in [171, 175, 189]...
+    max_H=189, min_H=171
+    beta_1>0: 2/7 at H=[175]
+
+======================================================================
+Global summary
+======================================================================
+beta_3>0: 378 total, 22/378 at score-class max H (5.8%)
+beta_1>0: 240 total, 88/240 at score-class max H (36.7%)

@@ -1,0 +1,43 @@
+======================================================================
+Full Betti vector analysis at n=7 (sampling)
+======================================================================
+  ... 200 trials done
+  ... 400 trials done
+  ... 600 trials done
+  ... 800 trials done
+  ... 1000 trials done
+  ... 1200 trials done
+  ... 1400 trials done
+  ... 1600 trials done
+  ... 1800 trials done
+  ... 2000 trials done
+
+Total with full Betti: 500
+
+Betti vector distribution:
+  [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), 0]: 439 (87.8%), chi=1
+  [np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)]: 34 (6.8%), chi=0
+  [np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]: 27 (5.4%), chi=0
+
+Chi distribution:
+  chi=0: 61 (12.2%)
+  chi=1: 439 (87.8%)
+
+Mutual exclusivity:
+  beta_1 > 0: 27/500 (5.4%)
+  beta_3 > 0: 34/500 (6.8%)
+  beta_4 > 0: 0/500 (0.0%)
+  beta_1 AND beta_3 > 0: 0
+  beta_1 AND beta_4 > 0: 0
+  beta_3 AND beta_4 > 0: 0
+
+======================================================================
+Regular tournament (3,3,3,3,3,3,3) Betti analysis
+======================================================================
+  ... 10 regular tournaments processed
+  ... 20 regular tournaments processed
+  ... 30 regular tournaments processed
+
+Regular tournament Betti by H:
+  H=171: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], chi=1, count=25
+  H=175: betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], chi=0, count=5
