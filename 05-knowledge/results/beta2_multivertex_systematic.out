@@ -1,0 +1,67 @@
+======================================================================
+PART 1: CAN SOME OTHER VERTEX FILL EACH SWAP CYCLE?
+======================================================================
+  n=7: 100/500 (0s) swaps=225 own=225 other=0 none=0
+  n=7: 200/500 (0s) swaps=424 own=424 other=0 none=0
+  n=7: 300/500 (0s) swaps=647 own=647 other=0 none=0
+  n=7: 400/500 (0s) swaps=833 own=833 other=0 none=0
+  n=7: 500/500 (0s) swaps=1041 own=1041 other=0 none=0
+
+n=7 (0s): 1041 swap cycles
+  Filled by own vertex: 1041 (100.0%)
+  Filled by other vertex: 0 (0.0%)
+  NOT filled by any single vertex: 0 (0.0%)
+  n=8: 100/500 (0s) swaps=511 own=511 other=0 none=0
+  n=8: 200/500 (0s) swaps=1073 own=1072 other=0 none=1
+  n=8: 300/500 (0s) swaps=1612 own=1611 other=0 none=1
+  n=8: 400/500 (0s) swaps=2155 own=2154 other=0 none=1
+  n=8: 500/500 (1s) swaps=2669 own=2668 other=0 none=1
+
+n=8 (1s): 2669 swap cycles
+  Filled by own vertex: 2668 (100.0%)
+  Filled by other vertex: 0 (0.0%)
+  NOT filled by any single vertex: 1 (0.0%)
+
+======================================================================
+PART 2: MULTI-VERTEX CONE RANK
+======================================================================
+  n=7: 50/200 (0s) ok=42 fail=0
+  n=7: 100/200 (0s) ok=85 fail=0
+  n=7: 150/200 (0s) ok=125 fail=0
+  n=7: 200/200 (0s) ok=162 fail=0
+
+n=7 (0s): multi-vertex cone OK=162/200, FAIL=0
+  n=8: 50/200 (0s) ok=48 fail=0
+  n=8: 100/200 (0s) ok=97 fail=0
+  n=8: 150/200 (1s) ok=145 fail=0
+  n=8: 200/200 (1s) ok=194 fail=0
+
+n=8 (1s): multi-vertex cone OK=194/200, FAIL=0
+  n=9: 12/50 (0s) ok=12 fail=0
+  n=9: 24/50 (0s) ok=23 fail=0
+  n=9: 36/50 (1s) ok=35 fail=0
+  n=9: 48/50 (1s) ok=47 fail=0
+
+n=9 (1s): multi-vertex cone OK=49/50, FAIL=0
+
+======================================================================
+PART 3: UNFILTERED CONE (ALL T' paths, not just v->a, c->v)
+======================================================================
+Even non-allowed cone paths may contribute correctly to B
+  n=7: 100/500 (0s) ok=100 fail=0
+  n=7: 200/500 (0s) ok=200 fail=0
+  n=7: 300/500 (0s) ok=300 fail=0
+  n=7: 400/500 (0s) ok=400 fail=0
+  n=7: 500/500 (0s) ok=500 fail=0
+
+n=7 (0s): unfiltered single-vertex cone OK=500/500, FAIL=0
+  n=8: 100/500 (0s) ok=100 fail=0
+  n=8: 200/500 (0s) ok=200 fail=0
+  n=8: 300/500 (1s) ok=300 fail=0
+  n=8: 400/500 (1s) ok=400 fail=0
+  n=8: 500/500 (1s) ok=500 fail=0
+
+n=8 (1s): unfiltered single-vertex cone OK=500/500, FAIL=0
+
+
+Done.

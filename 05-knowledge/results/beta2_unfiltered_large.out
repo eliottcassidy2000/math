@@ -1,0 +1,50 @@
+======================================================================
+PART 1: UNFILTERED CONE at n=9 (200 random)
+======================================================================
+  40/200 (1s) ok=40 fail=0 swaps=412
+  80/200 (2s) ok=80 fail=0 swaps=902
+  120/200 (3s) ok=120 fail=0 swaps=1380
+  160/200 (3s) ok=160 fail=0 swaps=1794
+  200/200 (4s) ok=200 fail=0 swaps=2205
+
+n=9 (4s): unfiltered cone OK=200/200, FAIL=0
+  Total swap cycles tested: 2205
+
+======================================================================
+PART 2: RANK SURPLUS ANALYSIS
+======================================================================
+
+n=7: 333 cases
+  Surplus (rank_B - swap_dim): min=6, max=12, mean=10.6
+  rank(B) >= swap_dim always? YES
+
+n=8: 699 cases
+  Surplus (rank_B - swap_dim): min=11, max=17, mean=14.8
+  rank(B) >= swap_dim always? YES
+
+n=9: 577 cases
+  Surplus (rank_B - swap_dim): min=15, max=23, mean=19.5
+  rank(B) >= swap_dim always? YES
+
+======================================================================
+PART 3: DIRECT BETA_2 at n=10 (50 random)
+======================================================================
+  n=10: 10/50 (1s)
+  n=10: 20/50 (2s)
+  n=10: 30/50 (2s)
+  n=10: 40/50 (3s)
+  n=10: 50/50 (4s)
+
+n=10 (4s): beta_2=0: 50/50, beta_2>0: 0
+
+======================================================================
+PART 4: DIMENSION ANALYSIS
+======================================================================
+n=5: |A_2|=16, dim(Om2)=9, rank(d2)=5, ker(d2)=4, dim(Om3)=5, rank(d3)=4, |T'_paths|=4
+n=6: |A_2|=30, dim(Om2)=20, rank(d2)=10, ker(d2)=10, dim(Om3)=20, rank(d3)=10, |T'_paths|=14
+n=7: |A_2|=55, dim(Om2)=37, rank(d2)=15, ker(d2)=22, dim(Om3)=40, rank(d3)=22, |T'_paths|=32
+n=8: |A_2|=82, dim(Om2)=60, rank(d2)=21, ker(d2)=39, dim(Om3)=84, rank(d3)=39, |T'_paths|=53
+n=9: |A_2|=132, dim(Om2)=99, rank(d2)=28, ker(d2)=71, dim(Om3)=209, rank(d3)=71, |T'_paths|=88
+
+
+Done.
