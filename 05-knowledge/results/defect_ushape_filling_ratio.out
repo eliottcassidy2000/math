@@ -1,0 +1,81 @@
+======================================================================
+DEFECT U-SHAPE AND FILLING RATIO ANALYSIS
+======================================================================
+
+--- Part 1: Filling ratio by n ---
+
+  n=5 (exhaustive):
+    f_1 = dim(Omega_1)/C(5,2): avg=1.0000, min=1.0000, max=1.0000
+    f_2 = dim(Omega_2)/C(5,3): avg=0.9219, min=0.8000, max=1.0000
+    f_3 = dim(Omega_3)/C(5,4): avg=0.8906, min=0.6000, max=2.0000
+  n=6: 5000/32768 done
+  n=6: 10000/32768 done
+  n=6: 15000/32768 done
+  n=6: 20000/32768 done
+  n=6: 25000/32768 done
+  n=6: 30000/32768 done
+
+  n=6 (exhaustive):
+    f_1 = dim(Omega_1)/C(6,2): avg=1.0000, min=1.0000, max=1.0000
+    f_2 = dim(Omega_2)/C(6,3): avg=0.9873, min=0.9000, max=1.2000
+    f_3 = dim(Omega_3)/C(6,4): avg=1.0352, min=0.6000, max=2.2000
+    f_4 = dim(Omega_4)/C(6,5): avg=1.1719, min=0.0000, max=4.5000
+  n=7: 100/500 done
+  n=7: 200/500 done
+  n=7: 300/500 done
+  n=7: 400/500 done
+  n=7: 500/500 done
+
+  n=7 (sampled 500):
+    f_1 = dim(Omega_1)/C(7,2): avg=1.0000, min=1.0000, max=1.0000
+    f_2 = dim(Omega_2)/C(7,3): avg=1.0429, min=0.9429, max=1.2286
+    f_3 = dim(Omega_3)/C(7,4): avg=1.1787, min=0.8000, max=2.2000
+    f_4 = dim(Omega_4)/C(7,5): avg=1.4323, min=0.5714, max=4.6667
+    f_5 = dim(Omega_5)/C(7,6): avg=1.8426, min=0.1429, max=9.0000
+
+--- Part 2: Filling ratio f_2 vs c3 at n=6 ---
+  c3 -> avg(f_2):
+    c3=0: avg=1.0000, min=1.0000, max=1.0000 (720 tours)
+    c3=1: avg=0.9500, min=0.9500, max=0.9500 (960 tours)
+    c3=2: avg=0.9482, min=0.9000, max=0.9500 (2240 tours)
+    c3=3: avg=0.9500, min=0.9500, max=0.9500 (2880 tours)
+    c3=4: avg=0.9577, min=0.9000, max=1.0000 (6240 tours)
+    c3=5: avg=0.9671, min=0.9000, max=1.0000 (3648 tours)
+    c3=6: avg=0.9917, min=0.9000, max=1.0500 (8640 tours)
+    c3=7: avg=1.0300, min=1.0000, max=1.0500 (4800 tours)
+    c3=8: avg=1.0773, min=1.0500, max=1.2000 (2640 tours)
+
+--- Part 3: Omega_2 = |A_2| - #constraints at n=5,6 ---
+
+  n=5:
+    c3=0: |A_2|={10} (expect 10, OK), dim(Omega_2)={10}, #constraints={0}
+    c3=1: |A_2|={12} (expect 12, OK), dim(Omega_2)={9}, #constraints={3}
+    c3=2: |A_2|={14} (expect 14, OK), dim(Omega_2)={9}, #constraints={5}
+    c3=3: |A_2|={16} (expect 16, OK), dim(Omega_2)={9}, #constraints={7}
+    c3=4: |A_2|={18} (expect 18, OK), dim(Omega_2)={8, 9, 10}, #constraints={8, 9, 10}
+    c3=5: |A_2|={20} (expect 20, OK), dim(Omega_2)={10}, #constraints={10}
+
+  n=6:
+    c3=0: |A_2|={20} (expect 20, OK), dim(Omega_2)={20}, #constraints={0}
+    c3=1: |A_2|={22} (expect 22, OK), dim(Omega_2)={19}, #constraints={3}
+    c3=2: |A_2|={24} (expect 24, OK), dim(Omega_2)={18, 19}, #constraints={5, 6}
+    c3=3: |A_2|={26} (expect 26, OK), dim(Omega_2)={19}, #constraints={7}
+    c3=4: |A_2|={28} (expect 28, OK), dim(Omega_2)={18, 19, 20}, #constraints={8, 9, 10}
+    c3=5: |A_2|={30} (expect 30, OK), dim(Omega_2)={18, 19, 20}, #constraints={10, 11, 12}
+    c3=6: |A_2|={32} (expect 32, OK), dim(Omega_2)={18, 19, 20, 21}, #constraints={11, 12, 13, 14}
+    c3=7: |A_2|={34} (expect 34, OK), dim(Omega_2)={20, 21}, #constraints={13, 14}
+    c3=8: |A_2|={36} (expect 36, OK), dim(Omega_2)={24, 21, 22}, #constraints={12, 14, 15}
+
+--- Part 4: Betti rate by n (the crossover / U-shape) ---
+  n=5: P(beta_1>0) = 29.7%, P(beta_3>0) ~ 72.7%
+  n=6: 5000/32768
+  n=6: 10000/32768
+  n=6: 15000/32768
+  n=6: 20000/32768
+  n=6: 25000/32768
+  n=6: 30000/32768
+  n=6: P(beta_1>0) = 14.6%, P(beta_3>0) ~ 100.0%
+  n=7: P(beta_1>0) = 5.4%, P(beta_3>0) ~ 100.0%
+  n=8: P(beta_1>0) = 1.0%, P(beta_3>0) ~ 100.0%
+
+DONE.
