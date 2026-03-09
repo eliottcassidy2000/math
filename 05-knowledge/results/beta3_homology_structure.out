@@ -1,0 +1,609 @@
+======================================================================
+H_3 HOMOLOGY STRUCTURE — WHY dim(H_3) <= 1?
+======================================================================
+
+--- Part 1: n=6 Type B analysis ---
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+
+  bits=1332:
+    ker(d_3)=7, im(d_4)=6, beta_3=1
+    dim(Om3)=18, dim(Om4)=9
+    Generator: 36 paths on 15 vertex sets
+    Signs: {-1: 27, 1: 9}
+    All quotient projections proportional: True
+    Abs coefficients: ['0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261']
+    Vertex coverage: 6/6
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+
+  bits=1337:
+    ker(d_3)=7, im(d_4)=6, beta_3=1
+    dim(Om3)=18, dim(Om4)=9
+    Generator: 36 paths on 15 vertex sets
+    Signs: {1: 27, -1: 9}
+    All quotient projections proportional: True
+    Abs coefficients: ['0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261']
+    Vertex coverage: 6/6
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+
+  bits=1363:
+    ker(d_3)=7, im(d_4)=6, beta_3=1
+    dim(Om3)=18, dim(Om4)=9
+    Generator: 36 paths on 15 vertex sets
+    Signs: {-1: 27, 1: 9}
+    All quotient projections proportional: True
+    Abs coefficients: ['0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261']
+    Vertex coverage: 6/6
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+
+  bits=1368:
+    ker(d_3)=7, im(d_4)=6, beta_3=1
+    dim(Om3)=18, dim(Om4)=9
+    Generator: 36 paths on 15 vertex sets
+    Signs: {-1: 27, 1: 9}
+    All quotient projections proportional: True
+    Abs coefficients: ['0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261']
+    Vertex coverage: 6/6
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+
+  bits=1426:
+    ker(d_3)=7, im(d_4)=6, beta_3=1
+    dim(Om3)=18, dim(Om4)=9
+    Generator: 36 paths on 15 vertex sets
+    Signs: {1: 27, -1: 9}
+    All quotient projections proportional: True
+    Abs coefficients: ['0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.089087', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.178174', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261', '0.267261']
+    Vertex coverage: 6/6
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+  ker(d_3) basis has 7 vectors, 7 project to nonzero quotient elements
+  All quotient projections proportional: True
+
+  Total Type B with beta_3=1: 240
+
+--- Part 2: n=6 Type A analysis ---
+
+  bits=87:
+    Om4=0, ker(d_3)=1
+
+  bits=356:
+    Om4=0, ker(d_3)=1
+
+  bits=567:
+    Om4=0, ker(d_3)=1
+
+  Total Type A with beta_3=1: 80
+
+--- Part 3: n=7 sampled ---
+  n=7: 100/500 done, 10 with beta_3>0
+  n=7: 200/500 done, 15 with beta_3>0
+  n=7: 300/500 done, 21 with beta_3>0
+  n=7: 400/500 done, 27 with beta_3>0
+  n=7: 500/500 done, 34 with beta_3>0
+
+  beta_3>0: 34
+  beta_3=1: 34
+  beta_3>1: 0
+
+--- Part 4: ker(d_3) dimensions at n=6 (exhaustive) ---
+  dim(ker(d_3)) distribution:
+    ker(d_3)=1: 80 (0.2%)
+    ker(d_3)=3: 6960 (21.2%)
+    ker(d_3)=4: 7200 (22.0%)
+    ker(d_3)=5: 7200 (22.0%)
+    ker(d_3)=6: 1920 (5.9%)
+    ker(d_3)=7: 1680 (5.1%)
+    ker(d_3)=8: 2160 (6.6%)
+    ker(d_3)=9: 2880 (8.8%)
+    ker(d_3)=10: 1728 (5.3%)
+    ker(d_3)=15: 720 (2.2%)
+    ker(d_3)=18: 240 (0.7%)
+
+--- Part 5: Generator path analysis for first Type B tournament ---
+  bits=1332, scores=(2, 2, 2, 3, 3, 3)
+  Generator in A_3 coordinates (63 total 3-paths):
+  Organized by vertex set (15 sets):
+    [0, 1, 2, 3]:   1->2->0->3:-0.2673,   1->0->3->2:0.0891,   3->1->2->0:-0.1782
+    [0, 1, 2, 4]:   1->2->4->0:-0.0891,   4->1->2->0:-0.0891
+    [0, 1, 2, 5]:   1->5->2->0:-0.0891,   1->0->5->2:-0.0891
+    [0, 1, 3, 4]:   4->3->1->0:-0.0891,   4->1->0->3:-0.0891
+    [0, 1, 3, 5]:   1->0->5->3:-0.0891,   5->3->1->0:0.2673
+    [0, 1, 4, 5]:   1->5->4->0:0.0891,   4->1->0->5:-0.1782,   5->4->1->0:-0.2673
+    [0, 2, 3, 4]:   2->4->0->3:-0.1782,   4->3->2->0:0.0891,   4->0->3->2:-0.2673
+    [0, 2, 3, 5]:   0->5->3->2:-0.1782,   5->3->2->0:-0.2673,   5->2->0->3:0.0891
+    [0, 2, 4, 5]:   4->0->5->2:0.2673,   5->2->4->0:-0.0891
+    [0, 3, 4, 5]:   4->0->5->3:-0.0891,   5->4->0->3:-0.0891
+    [1, 2, 3, 4]:   1->2->4->3:0.2673,   4->3->1->2:-0.0891
+    [1, 2, 3, 5]:   1->5->3->2:-0.0891,   5->3->1->2:-0.0891
+    [1, 2, 4, 5]:   1->5->2->4:-0.1782,   4->1->5->2:-0.2673,   5->4->1->2:0.0891
+    [1, 3, 4, 5]:   1->5->4->3:-0.2673,   4->1->5->3:0.0891,   5->4->3->1:-0.1782
+    [2, 3, 4, 5]:   5->4->3->2:-0.0891,   5->2->4->3:-0.0891
+
+  Subtournament analysis:
+    [0, 1, 2, 3]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=3, sum_coeffs=-0.3563
+    [0, 1, 2, 4]: sub_scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(2)], c3=1, #paths=2, sum_coeffs=-0.1782
+    [0, 1, 2, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(1), np.int64(3)], c3=1, #paths=2, sum_coeffs=-0.1782
+    [0, 1, 3, 4]: sub_scores=[np.int64(1), np.int64(1), np.int64(1), np.int64(3)], c3=1, #paths=2, sum_coeffs=-0.1782
+    [0, 1, 3, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=2, sum_coeffs=0.1782
+    [0, 1, 4, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=3, sum_coeffs=-0.3563
+    [0, 2, 3, 4]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=3, sum_coeffs=-0.3563
+    [0, 2, 3, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=3, sum_coeffs=-0.3563
+    [0, 2, 4, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=2, sum_coeffs=0.1782
+    [0, 3, 4, 5]: sub_scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(2)], c3=1, #paths=2, sum_coeffs=-0.1782
+    [1, 2, 3, 4]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=2, sum_coeffs=0.1782
+    [1, 2, 3, 5]: sub_scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(2)], c3=1, #paths=2, sum_coeffs=-0.1782
+    [1, 2, 4, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=3, sum_coeffs=-0.3563
+    [1, 3, 4, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2, #paths=3, sum_coeffs=-0.3563
+    [2, 3, 4, 5]: sub_scores=[np.int64(1), np.int64(1), np.int64(1), np.int64(3)], c3=1, #paths=2, sum_coeffs=-0.1782
+
+DONE.

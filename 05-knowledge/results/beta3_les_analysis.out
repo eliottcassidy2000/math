@@ -1,0 +1,46 @@
+======================================================================
+BETA_3 LES ANALYSIS — Towards proving beta_3 <= 1
+======================================================================
+
+--- Part 1: n=6 beta_3 deletion fragility ---
+  beta_3>0 tournaments: 320
+  All deletions have beta_3=0 (fragile): 320
+  Some deletion has beta_3>0 (survives): 0
+
+--- Part 2: n=7 beta_3 deletion fragility ---
+  trial=6: beta_3=1, scores=(1, 2, 3, 3, 4, 4, 4), del_b3=[0, 0, 0, 0, 0, 1, 0]
+  trial=21: beta_3=1, scores=(2, 2, 3, 3, 3, 4, 4), del_b3=[0, 0, 0, 0, 0, 1, 1]
+  trial=47: beta_3=1, scores=(2, 2, 3, 3, 3, 4, 4), del_b3=[0, 0, 0, 0, 1, 0, 0]
+  trial=58: beta_3=1, scores=(2, 2, 3, 3, 3, 4, 4), del_b3=[1, 1, 0, 0, 0, 0, 0]
+  trial=153: beta_3=1, scores=(2, 2, 2, 3, 4, 4, 4), del_b3=[0, 0, 0, 0, 0, 1, 0]
+  trial=177: beta_3=1, scores=(2, 2, 2, 3, 4, 4, 4), del_b3=[0, 0, 1, 0, 0, 0, 0]
+  trial=198: beta_3=1, scores=(1, 1, 2, 2, 5, 5, 5), del_b3=[0, 0, 0, 0, 1, 0, 1]
+  trial=205: beta_3=1, scores=(2, 2, 3, 3, 3, 4, 4), del_b3=[0, 0, 0, 0, 1, 1, 0]
+  trial=210: beta_3=1, scores=(1, 1, 2, 3, 4, 5, 5), del_b3=[0, 0, 0, 0, 1, 0, 0]
+  trial=232: beta_3=1, scores=(2, 2, 3, 3, 3, 4, 4), del_b3=[0, 0, 0, 0, 0, 0, 1]
+  trial=244: beta_3=1, scores=(2, 2, 3, 3, 3, 4, 4), del_b3=[1, 1, 0, 0, 0, 0, 0]
+
+  beta_3>0: 21
+  Fragile (all del beta_3=0): 10
+  Survives (some del beta_3>0): 11
+  Deletion beta_3 values: {0: 131, 1: 16}
+
+--- Part 3: Detailed deletion analysis at n=7 ---
+
+  beta_3>0: 44/500
+  #zeros among n deletions:
+    5 zeros: 4
+    6 zeros: 16
+    7 zeros: 24
+  Deletion profiles (sorted):
+    (0, 0, 0, 0, 0, 0, 0): 24
+    (0, 0, 0, 0, 0, 0, 1): 16
+    (0, 0, 0, 0, 0, 1, 1): 4
+
+--- Part 4: n=8 sampled ---
+
+  beta_3>0: 20
+  Fragile: 0
+  Survives: 20
+
+DONE.
