@@ -1,0 +1,260 @@
+======================================================================
+RANK-CRITICAL TRANSITIVE TRIPLES IN TOURNAMENT PATH HOMOLOGY
+======================================================================
+
+======================================================================
+n = 5
+======================================================================
+  ... processed 1000 tournaments (1.3s)
+
+Processed 1024 tournaments in 1.3s
+
+β₁ distribution: {0: 720, 1: 304}
+
+--- Section 1: Overall rank-critical statistics ---
+  #TTs range: [5, 10]
+  #rank-critical range: [0, 6]
+  Mean #rank-critical: 1.64
+  Mean fraction rank-critical: 0.2592
+
+  Distribution of #rank-critical TTs:
+    0 rank-critical: 400 tournaments
+    1 rank-critical: 240 tournaments
+    2 rank-critical: 120 tournaments
+    3 rank-critical: 120 tournaments
+    5 rank-critical: 24 tournaments
+    6 rank-critical: 120 tournaments
+
+--- Section 2: β₁=0 tournaments, by #bad vertices ---
+
+  #bad_vertices = 0: 120 tournaments
+    #TTs: mean=10.0, range=[10,10]
+    #rank-critical: mean=0.00, range=[0,0]
+    fraction RC: mean=0.0000
+    RC distribution: {0: 120}
+
+  #bad_vertices = 3: 120 tournaments
+    #TTs: mean=9.0, range=[9,9]
+    #rank-critical: mean=0.00, range=[0,0]
+    fraction RC: mean=0.0000
+    RC distribution: {0: 120}
+
+  #bad_vertices = 4: 240 tournaments
+    #TTs: mean=8.0, range=[8,8]
+    #rank-critical: mean=1.00, range=[1,1]
+    fraction RC: mean=0.1250
+    RC distribution: {1: 240}
+
+  #bad_vertices = 5: 240 tournaments
+    #TTs: mean=6.5, range=[6,7]
+    #rank-critical: mean=4.50, range=[3,6]
+    fraction RC: mean=0.7143
+    RC distribution: {3: 120, 6: 120}
+
+--- Section 2b: β₁=0, exactly 3 bad vertices (one 3-cycle) ---
+    rank_full=6 (expected 6), #TTs=9, #RC=0
+    rank_full=6 (expected 6), #TTs=9, #RC=0
+    rank_full=6 (expected 6), #TTs=9, #RC=0
+    rank_full=6 (expected 6), #TTs=9, #RC=0
+    rank_full=6 (expected 6), #TTs=9, #RC=0
+
+--- Section 2c: β₁=0, 0 bad vertices (transitive tournament) ---
+    rank_full=6, #TTs=10, #RC=0
+    rank_full=6, #TTs=10, #RC=0
+    rank_full=6, #TTs=10, #RC=0
+    rank_full=6, #TTs=10, #RC=0
+    rank_full=6, #TTs=10, #RC=0
+
+--- Section 3: Correlation between #RC and #bad_vertices ---
+  corr(#RC, #bad_vertices) = 0.4789
+  corr(#RC, t3) = 0.6525
+  corr(#RC, #TTs) = -0.6525
+
+--- Section 4: rank(∂₂|Ω₂) statistics ---
+  rank=5: 304 tournaments, β₁ dist: {1: 304}
+  rank=6: 720 tournaments, β₁ dist: {0: 720}
+
+  Verify: rank = C(n,2) - n + 1 - β₁ = 10 - 5 + 1 - β₁
+  Violations: 0/1024
+
+--- Section 5: β₁>0 tournaments ---
+  304 tournaments with β₁>0
+  #RC for β₁>0: mean=1.18, range=[0,5]
+  RC distribution: {0: 160, 2: 120, 5: 24}
+
+--- Section 5b: β₁>0 — arc flips that reduce β₁ ---
+  Tournament with t3=3, β₁=1:
+    Flips reducing β₁: [((0, 4), 0), ((4, 3), 0), ((1, 0), 0), ((2, 0), 0), ((4, 2), 0)]
+  Tournament with t3=4, β₁=1:
+    Flips reducing β₁: [((1, 0), 0), ((3, 1), 0), ((0, 4), 0), ((3, 2), 0), ((4, 2), 0)]
+  Tournament with t3=3, β₁=1:
+    Flips reducing β₁: [((1, 0), 0), ((2, 1), 0), ((0, 3), 0), ((3, 1), 0), ((0, 4), 0)]
+  Tournament with t3=3, β₁=1:
+    Flips reducing β₁: [((0, 4), 0), ((4, 3), 0), ((1, 0), 0), ((4, 1), 0), ((2, 0), 0)]
+  Tournament with t3=4, β₁=1:
+    Flips reducing β₁: [((3, 1), 0), ((0, 4), 0), ((4, 1), 0), ((2, 0), 0), ((3, 2), 0)]
+
+--- Section 6: #RC as function of rank and #TTs ---
+  (rank, #TTs) → #RC distribution:
+    rank=5, #TTs=5: n=24, #RC mean=5.00, range=[5,5]
+    rank=5, #TTs=6: n=160, #RC mean=1.50, range=[0,2]
+    rank=5, #TTs=7: n=120, #RC mean=0.00, range=[0,0]
+    rank=6, #TTs=6: n=120, #RC mean=6.00, range=[6,6]
+    rank=6, #TTs=7: n=120, #RC mean=3.00, range=[3,3]
+    rank=6, #TTs=8: n=240, #RC mean=1.00, range=[1,1]
+    rank=6, #TTs=9: n=120, #RC mean=0.00, range=[0,0]
+    rank=6, #TTs=10: n=120, #RC mean=0.00, range=[0,0]
+
+--- KEY: Is #rank-critical always equal to rank(∂₂)? ---
+  #RC == rank: 144/1024 (14.1%)
+  #RC < rank: 880 cases
+    #RC=0, rank=6, #TTs=10, β₁=0
+    #RC=0, rank=6, #TTs=10, β₁=0
+    #RC=0, rank=6, #TTs=9, β₁=0
+    #RC=0, rank=6, #TTs=10, β₁=0
+    #RC=1, rank=6, #TTs=8, β₁=0
+
+======================================================================
+n = 6
+======================================================================
+  ... processed 1000 tournaments (1.7s)
+  ... processed 2000 tournaments (3.3s)
+  ... processed 3000 tournaments (4.9s)
+  ... processed 4000 tournaments (6.5s)
+  ... processed 5000 tournaments (8.2s)
+  ... processed 6000 tournaments (10.0s)
+  ... processed 7000 tournaments (11.4s)
+  ... processed 8000 tournaments (12.8s)
+  ... processed 9000 tournaments (14.2s)
+  ... processed 10000 tournaments (15.5s)
+  ... processed 11000 tournaments (16.8s)
+  ... processed 12000 tournaments (18.1s)
+  ... processed 13000 tournaments (19.6s)
+  ... processed 14000 tournaments (20.9s)
+  ... processed 15000 tournaments (22.3s)
+  ... processed 16000 tournaments (23.9s)
+  ... processed 17000 tournaments (25.5s)
+  ... processed 18000 tournaments (26.9s)
+  ... processed 19000 tournaments (28.5s)
+  ... processed 20000 tournaments (29.9s)
+  ... processed 21000 tournaments (31.4s)
+  ... processed 22000 tournaments (32.8s)
+  ... processed 23000 tournaments (34.2s)
+  ... processed 24000 tournaments (35.5s)
+  ... processed 25000 tournaments (37.0s)
+  ... processed 26000 tournaments (38.4s)
+  ... processed 27000 tournaments (39.8s)
+  ... processed 28000 tournaments (41.3s)
+  ... processed 29000 tournaments (42.9s)
+  ... processed 30000 tournaments (44.3s)
+  ... processed 31000 tournaments (45.9s)
+  ... processed 32000 tournaments (47.4s)
+
+Processed 32768 tournaments in 48.7s
+
+β₁ distribution: {0: 27968, 1: 4800}
+
+--- Section 1: Overall rank-critical statistics ---
+  #TTs range: [12, 20]
+  #rank-critical range: [0, 3]
+  Mean #rank-critical: 1.08
+  Mean fraction rank-critical: 0.0798
+
+  Distribution of #rank-critical TTs:
+    0 rank-critical: 13088 tournaments
+    1 rank-critical: 8160 tournaments
+    2 rank-critical: 7200 tournaments
+    3 rank-critical: 4320 tournaments
+
+--- Section 2: β₁=0 tournaments, by #bad vertices ---
+
+  #bad_vertices = 0: 720 tournaments
+    #TTs: mean=20.0, range=[20,20]
+    #rank-critical: mean=0.00, range=[0,0]
+    fraction RC: mean=0.0000
+    RC distribution: {0: 720}
+
+  #bad_vertices = 3: 960 tournaments
+    #TTs: mean=19.0, range=[19,19]
+    #rank-critical: mean=0.00, range=[0,0]
+    fraction RC: mean=0.0000
+    RC distribution: {0: 960}
+
+  #bad_vertices = 4: 2160 tournaments
+    #TTs: mean=18.0, range=[18,18]
+    #rank-critical: mean=0.00, range=[0,0]
+    fraction RC: mean=0.0000
+    RC distribution: {0: 2160}
+
+  #bad_vertices = 5: 6528 tournaments
+    #TTs: mean=16.4, range=[15,17]
+    #rank-critical: mean=0.29, range=[0,1]
+    fraction RC: mean=0.0176
+    RC distribution: {0: 4608, 1: 1920}
+
+  #bad_vertices = 6: 17600 tournaments
+    #TTs: mean=14.0, range=[12,18]
+    #rank-critical: mean=1.72, range=[0,3]
+    fraction RC: mean=0.1273
+    RC distribution: {0: 2480, 1: 4320, 2: 6480, 3: 4320}
+
+--- Section 2b: β₁=0, exactly 3 bad vertices (one 3-cycle) ---
+    rank_full=10 (expected 10), #TTs=19, #RC=0
+    rank_full=10 (expected 10), #TTs=19, #RC=0
+    rank_full=10 (expected 10), #TTs=19, #RC=0
+    rank_full=10 (expected 10), #TTs=19, #RC=0
+    rank_full=10 (expected 10), #TTs=19, #RC=0
+
+--- Section 2c: β₁=0, 0 bad vertices (transitive tournament) ---
+    rank_full=10, #TTs=20, #RC=0
+    rank_full=10, #TTs=20, #RC=0
+    rank_full=10, #TTs=20, #RC=0
+    rank_full=10, #TTs=20, #RC=0
+    rank_full=10, #TTs=20, #RC=0
+
+--- Section 3: Correlation between #RC and #bad_vertices ---
+  corr(#RC, #bad_vertices) = 0.4578
+  corr(#RC, t3) = 0.6874
+  corr(#RC, #TTs) = -0.6874
+
+--- Section 4: rank(∂₂|Ω₂) statistics ---
+  rank=9: 4800 tournaments, β₁ dist: {1: 4800}
+  rank=10: 27968 tournaments, β₁ dist: {0: 27968}
+
+  Verify: rank = C(n,2) - n + 1 - β₁ = 15 - 6 + 1 - β₁
+  Violations: 0/32768
+
+--- Section 5: β₁>0 tournaments ---
+  4800 tournaments with β₁>0
+  #RC for β₁>0: mean=0.70, range=[0,2]
+  RC distribution: {0: 2160, 1: 1920, 2: 720}
+
+--- Section 6: #RC as function of rank and #TTs ---
+  (rank, #TTs) → #RC distribution:
+    rank=9, #TTs=12: n=960, #RC mean=1.50, range=[0,2]
+    rank=9, #TTs=13: n=480, #RC mean=1.00, range=[1,1]
+    rank=9, #TTs=14: n=2160, #RC mean=0.67, range=[0,1]
+    rank=9, #TTs=15: n=480, #RC mean=0.00, range=[0,0]
+    rank=9, #TTs=16: n=720, #RC mean=0.00, range=[0,0]
+    rank=10, #TTs=12: n=1680, #RC mean=2.57, range=[0,3]
+    rank=10, #TTs=13: n=4320, #RC mean=2.67, range=[2,3]
+    rank=10, #TTs=14: n=6480, #RC mean=1.33, range=[0,2]
+    rank=10, #TTs=15: n=3168, #RC mean=1.36, range=[0,2]
+    rank=10, #TTs=16: n=5520, #RC mean=0.35, range=[0,1]
+    rank=10, #TTs=17: n=2880, #RC mean=0.50, range=[0,1]
+    rank=10, #TTs=18: n=2240, #RC mean=0.00, range=[0,0]
+    rank=10, #TTs=19: n=960, #RC mean=0.00, range=[0,0]
+    rank=10, #TTs=20: n=720, #RC mean=0.00, range=[0,0]
+
+--- KEY: Is #rank-critical always equal to rank(∂₂)? ---
+  #RC == rank: 0/32768 (0.0%)
+  #RC < rank: 32768 cases
+    #RC=0, rank=10, #TTs=20, β₁=0
+    #RC=0, rank=10, #TTs=20, β₁=0
+    #RC=0, rank=10, #TTs=19, β₁=0
+    #RC=0, rank=10, #TTs=20, β₁=0
+    #RC=0, rank=10, #TTs=18, β₁=0
+
+======================================================================
+DONE
+======================================================================

@@ -1,0 +1,323 @@
+======================================================================
+FLIP OBSTRUCTION ANALYSIS
+3-cycles among bad vertices and beta_1 forcing
+======================================================================
+
+======================================================================
+n = 5  (exhaustive, 1024 tournaments)
+======================================================================
+
+Total tournaments: 1024
+  beta_1 = 0: 720
+  beta_1 >= 1: 304
+
+--- STEP 1 & 2: 3-cycle classification by bad vertex count ---
+
+  beta_1=0:
+    Distribution of #bad vertices in tournament:
+      0 bad vertices: 240 tournaments
+      1 bad vertices: 240 tournaments
+      2 bad vertices: 120 tournaments
+      3 bad vertices: 120 tournaments
+    3-cycles with k bad vertices:
+      k=0: 600 3-cycles
+      k=1: 480 3-cycles
+      k=2: 240 3-cycles
+
+  beta_1>=1:
+    Distribution of #bad vertices in tournament:
+      3 bad vertices: 160 tournaments
+      4 bad vertices: 120 tournaments
+      5 bad vertices: 24 tournaments
+    3-cycles with k bad vertices:
+      k=1: 480 3-cycles
+      k=2: 480 3-cycles
+      k=3: 160 3-cycles
+
+--- STEP 3: THE KEY TEST ---
+  beta_1=0 with all-bad 3-cycle: 0
+  beta_1>=1 with all-bad 3-cycle: 64
+  CONFIRMED: beta_1=0 => no 3-cycle has all 3 vertices bad
+
+--- STEP 4: Cocycle analysis (beta_1>=1, all-bad 3-cycles) ---
+
+  Tournament (first all-bad cycle: [1, 2, 3]):
+    Edges among cycle: 2->1, 1->3, 3->2
+    Bad vertices: [1, 2, 3]
+    T\1: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), 0.546), ((2, 0), -0.591), ((3, 2), 0.138), ((3, 0), -0.454), ((4, 3), 0.174), ((4, 2), 0.312)]
+    T\2: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), -0.843), ((1, 3), 0.025), ((1, 0), -0.222), ((3, 0), -0.247), ((4, 3), -0.287), ((4, 1), -0.311)]
+    T\3: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), 0.546), ((1, 0), -0.591), ((2, 1), 0.138), ((2, 0), -0.454), ((4, 2), 0.174), ((4, 1), 0.312)]
+    Full T: beta_1=1, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle: [((0, 4), -0.348), ((1, 3), 0.372), ((1, 0), 0.458), ((2, 1), -0.241), ((2, 0), 0.217), ((3, 2), -0.131), ((3, 0), 0.086), ((4, 3), -0.164)]
+
+  Tournament (first all-bad cycle: [0, 2, 3]):
+    Edges among cycle: 2->0, 0->3, 3->2
+    Bad vertices: [0, 2, 3]
+    T\0: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((1, 4), 0.546), ((2, 1), -0.591), ((3, 2), 0.138), ((3, 1), -0.454), ((4, 3), 0.174), ((4, 2), 0.312)]
+    T\2: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 3), -0.132), ((0, 1), -0.464), ((1, 4), -0.731), ((3, 1), -0.332), ((4, 3), -0.303), ((4, 0), -0.171)]
+    T\3: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 1), 0.009), ((1, 4), 0.997), ((2, 1), -0.0), ((2, 0), -0.01), ((4, 2), -0.052), ((4, 0), -0.061)]
+    Full T: beta_1=1, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle: [((0, 3), -0.084), ((0, 1), 0.191), ((1, 4), 0.779), ((2, 1), 0.268), ((2, 0), 0.077), ((3, 2), 0.007), ((3, 1), 0.274), ((4, 3), 0.224)]
+
+  Tournament (first all-bad cycle: [0, 1, 3]):
+    Edges among cycle: 1->0, 0->3, 3->1
+    Bad vertices: [0, 1, 2, 3, 4]
+    T\0: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((1, 4), 0.546), ((2, 1), -0.591), ((3, 2), 0.138), ((3, 1), -0.454), ((4, 3), 0.174), ((4, 2), 0.312)]
+    T\1: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), -0.024), ((0, 3), -0.131), ((2, 0), 0.923), ((3, 2), 0.29), ((4, 3), -0.107), ((4, 2), 0.184)]
+    T\3: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), 0.163), ((1, 4), 0.274), ((1, 0), 0.111), ((2, 1), -0.132), ((2, 0), -0.022), ((4, 2), 0.932)]
+    Full T: beta_1=1, dim(Z_1)=6, dim(B_1)=5
+
+  Tournament (first all-bad cycle: [1, 3, 4]):
+    Edges among cycle: 3->1, 1->4, 4->3
+    Bad vertices: [1, 3, 4]
+    T\1: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), -0.024), ((0, 3), -0.131), ((2, 0), 0.923), ((3, 2), 0.29), ((4, 3), -0.107), ((4, 2), 0.184)]
+    T\3: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), 0.246), ((0, 1), 0.372), ((1, 4), -0.125), ((1, 2), 0.297), ((2, 0), 0.72), ((4, 2), 0.423)]
+    T\4: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 3), 0.013), ((0, 1), -0.018), ((1, 2), -0.392), ((2, 0), -0.816), ((3, 2), -0.424), ((3, 1), -0.032)]
+    Full T: beta_1=1, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle: [((0, 4), 0.119), ((0, 3), 0.066), ((0, 1), -0.08), ((1, 4), 0.199), ((1, 2), 0.325), ((2, 0), -0.87), ((3, 2), 0.179), ((3, 1), -0.146)]
+
+  Tournament (first all-bad cycle: [0, 1, 3]):
+    Edges among cycle: 0->1, 3->0, 1->3
+    Bad vertices: [0, 1, 2, 3, 4]
+    T\0: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((1, 4), -0.024), ((1, 3), -0.131), ((2, 1), 0.923), ((3, 2), 0.29), ((4, 3), -0.107), ((4, 2), 0.184)]
+    T\1: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), 0.546), ((2, 0), -0.591), ((3, 2), 0.138), ((3, 0), -0.454), ((4, 3), 0.174), ((4, 2), 0.312)]
+    T\3: beta_1=1, dim(Omega_1)=6, dim(Z_1)=3, dim(B_1)=2
+      Rep cycle (in T): [((0, 4), -0.132), ((0, 1), -0.165), ((1, 4), 0.033), ((2, 1), 0.141), ((2, 0), 0.306), ((4, 2), 0.917)]
+    Full T: beta_1=1, dim(Z_1)=6, dim(B_1)=5
+
+--- STEP 5: Transitive bad triples (beta_1=0) & flip analysis ---
+  Tournaments with beta_1=0 and >=3 bad vertices: 120
+  Of those, triples forming transitive triple: 120
+
+  Flip results (flipping arc to create 3-cycle among bad vertices):
+    Flips that force beta_1>=1: 20
+    Flips that keep beta_1=0:   0
+
+  Detailed flip analysis (first 10):
+    Triple (1, 2, 4), edges: 2->1, 4->1, 4->2
+      All bad vertices in T: [1, 2, 4]
+      Flip 4->1: beta_1 becomes 1
+    Triple (2, 3, 4), edges: 3->2, 4->2, 4->3
+      All bad vertices in T: [2, 3, 4]
+      Flip 4->2: beta_1 becomes 1
+    Triple (1, 3, 4), edges: 1->3, 4->1, 4->3
+      All bad vertices in T: [1, 3, 4]
+      Flip 4->3: beta_1 becomes 1
+    Triple (0, 2, 4), edges: 2->0, 4->0, 4->2
+      All bad vertices in T: [0, 2, 4]
+      Flip 4->0: beta_1 becomes 1
+    Triple (0, 2, 3), edges: 0->2, 3->0, 3->2
+      All bad vertices in T: [0, 2, 3]
+      Flip 3->2: beta_1 becomes 1
+    Triple (0, 1, 3), edges: 0->1, 0->3, 3->1
+      All bad vertices in T: [0, 1, 3]
+      Flip 0->1: beta_1 becomes 1
+    Triple (2, 3, 4), edges: 3->2, 4->2, 4->3
+      All bad vertices in T: [2, 3, 4]
+      Flip 4->2: beta_1 becomes 1
+    Triple (1, 2, 3), edges: 1->2, 3->1, 3->2
+      All bad vertices in T: [1, 2, 3]
+      Flip 3->2: beta_1 becomes 1
+    Triple (1, 2, 4), edges: 1->2, 1->4, 4->2
+      All bad vertices in T: [1, 2, 4]
+      Flip 1->2: beta_1 becomes 1
+    Triple (0, 3, 4), edges: 0->3, 4->0, 4->3
+      All bad vertices in T: [0, 3, 4]
+      Flip 4->3: beta_1 becomes 1
+
+======================================================================
+n = 6  (exhaustive, 32768 tournaments)
+======================================================================
+
+Total tournaments: 32768
+  beta_1 = 0: 27968
+  beta_1 >= 1: 4800
+
+--- STEP 1 & 2: 3-cycle classification by bad vertex count ---
+
+  beta_1=0:
+    Distribution of #bad vertices in tournament:
+      0 bad vertices: 8480 tournaments
+      1 bad vertices: 7968 tournaments
+      2 bad vertices: 7200 tournaments
+      3 bad vertices: 4320 tournaments
+    3-cycles with k bad vertices:
+      k=0: 43680 3-cycles
+      k=1: 47520 3-cycles
+      k=2: 18720 3-cycles
+
+  beta_1>=1:
+    Distribution of #bad vertices in tournament:
+      4 bad vertices: 1920 tournaments
+      5 bad vertices: 1920 tournaments
+      6 bad vertices: 960 tournaments
+    3-cycles with k bad vertices:
+      k=1: 7680 3-cycles
+      k=2: 11520 3-cycles
+      k=3: 10080 3-cycles
+
+--- STEP 3: THE KEY TEST ---
+  beta_1=0 with all-bad 3-cycle: 0
+  beta_1>=1 with all-bad 3-cycle: 2640
+  CONFIRMED: beta_1=0 => no 3-cycle has all 3 vertices bad
+
+--- STEP 4: Cocycle analysis (beta_1>=1, all-bad 3-cycles) ---
+
+  Tournament (first all-bad cycle: [1, 2, 3]):
+    Edges among cycle: 2->1, 1->3, 3->2
+    Bad vertices: [1, 2, 3, 4]
+    T\1: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.02), ((2, 0), -0.061), ((3, 2), -0.361), ((3, 0), -0.422), ((4, 3), -0.093), ((4, 2), -0.454), ((4, 0), -0.515), ((5, 4), 0.358)]
+    T\2: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), -0.407), ((1, 3), -0.12), ((1, 0), 0.357), ((3, 0), 0.477), ((4, 3), -0.138), ((4, 1), -0.019), ((4, 0), 0.338), ((5, 4), 0.379)]
+    T\3: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.02), ((1, 0), -0.061), ((2, 1), -0.361), ((2, 0), -0.422), ((4, 2), -0.093), ((4, 1), -0.454), ((4, 0), -0.515), ((5, 4), 0.358)]
+    Full T: beta_1=1, dim(Z_1)=10, dim(B_1)=9
+
+  Tournament (first all-bad cycle: [1, 2, 3]):
+    Edges among cycle: 2->1, 1->3, 3->2
+    Bad vertices: [1, 2, 3, 4, 5]
+    T\1: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+    T\2: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+    T\3: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+    Full T: beta_1=1, dim(Z_1)=10, dim(B_1)=9
+
+  Tournament (first all-bad cycle: [1, 2, 4]):
+    Edges among cycle: 2->1, 1->4, 4->2
+    Bad vertices: [1, 2, 3, 4]
+    T\1: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.02), ((2, 0), -0.061), ((3, 2), -0.361), ((3, 0), -0.422), ((4, 3), -0.093), ((4, 2), -0.454), ((4, 0), -0.515), ((5, 4), 0.358)]
+    T\2: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), -0.348), ((1, 4), 0.372), ((1, 0), 0.458), ((3, 1), -0.241), ((3, 0), 0.217), ((4, 3), -0.131), ((4, 0), 0.086), ((5, 4), -0.164)]
+    T\4: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.02), ((1, 0), -0.061), ((2, 1), -0.361), ((2, 0), -0.422), ((3, 2), -0.093), ((3, 1), -0.454), ((3, 0), -0.515), ((5, 3), 0.358)]
+    Full T: beta_1=1, dim(Z_1)=10, dim(B_1)=9
+
+  Tournament (first all-bad cycle: [1, 3, 4]):
+    Edges among cycle: 3->1, 1->4, 4->3
+    Bad vertices: [1, 2, 3, 4]
+    T\1: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.02), ((2, 0), -0.061), ((3, 2), -0.361), ((3, 0), -0.422), ((4, 3), -0.093), ((4, 2), -0.454), ((4, 0), -0.515), ((5, 4), 0.358)]
+    T\3: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), -0.006), ((1, 4), 0.057), ((1, 2), -0.351), ((1, 0), 0.095), ((2, 0), 0.446), ((4, 2), -0.408), ((4, 0), 0.038), ((5, 4), -0.21)]
+    T\4: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), -0.407), ((1, 2), -0.12), ((1, 0), 0.357), ((2, 0), 0.477), ((3, 2), -0.138), ((3, 1), -0.019), ((3, 0), 0.338), ((5, 3), 0.379)]
+    Full T: beta_1=1, dim(Z_1)=10, dim(B_1)=9
+
+  Tournament (first all-bad cycle: [1, 3, 4]):
+    Edges among cycle: 3->1, 1->4, 4->3
+    Bad vertices: [1, 3, 4, 5]
+    T\1: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.007), ((0, 4), 0.074), ((0, 3), 0.128), ((2, 0), -0.96), ((3, 2), -0.154), ((4, 3), 0.054), ((4, 2), -0.1), ((5, 4), 0.067)]
+    T\3: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((2, 0), -1.0)]
+    T\4: beta_1=1, dim(Omega_1)=10, dim(Z_1)=6, dim(B_1)=5
+      Rep cycle (in T): [((0, 5), 0.27), ((0, 3), -0.211), ((0, 1), -0.212), ((1, 2), 0.348), ((2, 0), -0.341), ((3, 2), 0.347), ((3, 1), -0.001), ((5, 3), -0.48)]
+    Full T: beta_1=1, dim(Z_1)=10, dim(B_1)=9
+
+--- STEP 5: Transitive bad triples (beta_1=0) & flip analysis ---
+  Tournaments with beta_1=0 and >=3 bad vertices: 4320
+  Of those, triples forming transitive triple: 4320
+
+  Flip results (flipping arc to create 3-cycle among bad vertices):
+    Flips that force beta_1>=1: 20
+    Flips that keep beta_1=0:   0
+
+  Detailed flip analysis (first 10):
+    Triple (1, 4, 5), edges: 1->4, 5->1, 5->4
+      All bad vertices in T: [1, 4, 5]
+      Flip 5->4: beta_1 becomes 1
+    Triple (1, 4, 5), edges: 1->4, 5->1, 5->4
+      All bad vertices in T: [1, 4, 5]
+      Flip 5->4: beta_1 becomes 1
+    Triple (1, 2, 5), edges: 2->1, 5->1, 5->2
+      All bad vertices in T: [1, 2, 5]
+      Flip 5->1: beta_1 becomes 1
+    Triple (1, 2, 5), edges: 2->1, 5->1, 5->2
+      All bad vertices in T: [1, 2, 5]
+      Flip 5->1: beta_1 becomes 1
+    Triple (0, 2, 5), edges: 2->0, 5->0, 5->2
+      All bad vertices in T: [0, 2, 5]
+      Flip 5->0: beta_1 becomes 1
+    Triple (0, 3, 4), edges: 0->3, 4->0, 4->3
+      All bad vertices in T: [0, 3, 4]
+      Flip 4->3: beta_1 becomes 1
+    Triple (0, 1, 4), edges: 0->1, 0->4, 4->1
+      All bad vertices in T: [0, 1, 4]
+      Flip 0->1: beta_1 becomes 1
+    Triple (0, 2, 3), edges: 0->2, 3->0, 3->2
+      All bad vertices in T: [0, 2, 3]
+      Flip 3->2: beta_1 becomes 1
+    Triple (1, 2, 5), edges: 1->2, 1->5, 5->2
+      All bad vertices in T: [1, 2, 5]
+      Flip 1->2: beta_1 becomes 1
+    Triple (1, 2, 5), edges: 1->2, 1->5, 5->2
+      All bad vertices in T: [1, 2, 5]
+      Flip 1->2: beta_1 becomes 1
+
+======================================================================
+n = 7  (sampling 500 random tournaments)
+======================================================================
+  ...processed 100/500
+  ...processed 200/500
+  ...processed 500/500
+
+Results (n=7 sample):
+  beta_1=0: 479, beta_1>=1: 21
+
+  Bad vertex distribution:
+    beta_1=0:
+      0 bad: 258
+      1 bad: 107
+      2 bad: 84
+      3 bad: 30
+    beta_1>=1:
+      5 bad: 10
+      6 bad: 9
+      7 bad: 2
+
+  3-cycles by bad vertex count:
+    beta_1=0:
+      k=0: 950
+      k=1: 898
+      k=2: 253
+    beta_1>=1:
+      k=1: 50
+      k=2: 75
+      k=3: 49
+
+  KEY TEST:
+    beta_1=0 with all-bad 3-cycle: 0
+    beta_1>=1 with all-bad 3-cycle: 14
+
+  FLIP ANALYSIS (transitive bad triples, beta_1=0):
+    Flips forcing beta_1>=1: 30
+    Flips keeping beta_1=0:  0
+
+======================================================================
+SUMMARY OF FINDINGS
+======================================================================
+
+Key questions answered:
+1. Does beta_1=0 imply no 3-cycle has all 3 vertices bad?
+2. Does having an all-bad 3-cycle force beta_1>=1?
+3. If 3 bad vertices form a transitive triple, does flipping
+   one arc (to create a 3-cycle) force beta_1 >= 1?
+
+See detailed results above for each n.
+
+Done.

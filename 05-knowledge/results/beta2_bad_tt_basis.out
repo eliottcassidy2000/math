@@ -1,0 +1,202 @@
+  ... processed 500 tournaments
+  ... processed 1000 tournaments
+  ... processed 500 tournaments
+  ... processed 1000 tournaments
+  ... processed 1500 tournaments
+  ... processed 2000 tournaments
+  ... processed 2500 tournaments
+  ... processed 3000 tournaments
+  ... processed 3500 tournaments
+  ... processed 4000 tournaments
+  ... processed 4500 tournaments
+  ... processed 5000 tournaments
+  ... processed 5500 tournaments
+  ... processed 6000 tournaments
+  ... processed 6500 tournaments
+  ... processed 7000 tournaments
+  ... processed 7500 tournaments
+  ... processed 8000 tournaments
+  ... processed 8500 tournaments
+  ... processed 9000 tournaments
+  ... processed 9500 tournaments
+  ... processed 10000 tournaments
+  ... processed 10500 tournaments
+  ... processed 11000 tournaments
+  ... processed 11500 tournaments
+  ... processed 12000 tournaments
+  ... processed 12500 tournaments
+  ... processed 13000 tournaments
+  ... processed 13500 tournaments
+  ... processed 14000 tournaments
+  ... processed 14500 tournaments
+  ... processed 15000 tournaments
+  ... processed 15500 tournaments
+  ... processed 16000 tournaments
+  ... processed 16500 tournaments
+  ... processed 17000 tournaments
+  ... processed 17500 tournaments
+  ... processed 18000 tournaments
+  ... processed 18500 tournaments
+  ... processed 19000 tournaments
+  ... processed 19500 tournaments
+  ... processed 20000 tournaments
+  ... processed 20500 tournaments
+  ... processed 21000 tournaments
+  ... processed 21500 tournaments
+  ... processed 22000 tournaments
+  ... processed 22500 tournaments
+  ... processed 23000 tournaments
+  ... processed 23500 tournaments
+  ... processed 24000 tournaments
+  ... processed 24500 tournaments
+  ... processed 25000 tournaments
+  ... processed 25500 tournaments
+  ... processed 26000 tournaments
+  ... processed 26500 tournaments
+  ... processed 27000 tournaments
+  ... processed 27500 tournaments
+  ... processed 28000 tournaments
+  ... processed 28500 tournaments
+  ... processed 29000 tournaments
+  ... processed 29500 tournaments
+  ... processed 30000 tournaments
+  ... processed 30500 tournaments
+  ... processed 31000 tournaments
+  ... processed 31500 tournaments
+  ... processed 32000 tournaments
+  ... processed 32500 tournaments
+======================================================================
+GROK'S BAD-VERTEX TT BASIS CLAIM — EXHAUSTIVE TEST
+======================================================================
+
+======================================================================
+n = 5
+======================================================================
+
+Total tournaments: 1024
+β₁=0: 720
+β₁=1: 304
+
+--- TEST 1: β₁=0 tournaments, bad vertex structure ---
+
+  k_bad = 0: 240 tournaments
+
+  k_bad = 1: 240 tournaments
+
+  k_bad = 2: 120 tournaments
+    Bad verts transitive: 120/120
+
+  k_bad = 3: 120 tournaments
+    Bad verts transitive: 120/120
+    Bad verts have 3-cycle: 0/120
+    TT count among bad verts: min=0, max=1, mean=0.50
+
+    Rank-drop analysis (sample of 50):
+    Bad TTs in Ω₂ that drop rank: 20/20
+    Total rank-critical TTs: min=0, max=1, mean=0.40
+    Total TTs in tournament: min=0, max=5, mean=2.50
+    Bad TT is the ONLY critical TT: 20/50
+
+--- TEST 2: β₁=1 tournaments ---
+  Count: 304
+  Bad vertex counts: min=3, max=5, mean=3.55
+  Distribution: {3: 160, 4: 120, 5: 24}
+  Among those with ≥2 bad verts (304):
+    Bad sub-tournament transitive: 240
+    Bad sub-tournament has 3-cycle (SC): 64
+
+  Rank-drop analysis for β₁=1 (sample of 30):
+
+--- TEST 3: Pigeonhole — bad-TT uniqueness (k_bad=3, β₁=0) ---
+  Bad TT is uniquely rank-critical: 20/50
+  Bad TT is critical but not unique: 0/50
+  Bad TT is NOT rank-critical: 30/50
+
+--- TEST 4: Dual test — ker(∂₂^T) ---
+  β₁=0, k_bad=0: dim(ker(∂₂^T)) = {4} (from 10 samples)
+  β₁=0, k_bad=1: dim(ker(∂₂^T)) = {4} (from 10 samples)
+  β₁=0, k_bad=2: dim(ker(∂₂^T)) = {4} (from 10 samples)
+  β₁=0, k_bad=3: dim(ker(∂₂^T)) = {4} (from 10 samples)
+  β₁=1: dim(ker(∂₂^T)) = {5} (from 10 samples)
+
+======================================================================
+n = 6
+======================================================================
+
+Total tournaments: 32768
+β₁=0: 27968
+β₁=1: 4800
+
+--- TEST 1: β₁=0 tournaments, bad vertex structure ---
+
+  k_bad = 0: 8480 tournaments
+
+  k_bad = 1: 7968 tournaments
+
+  k_bad = 2: 7200 tournaments
+    Bad verts transitive: 7200/7200
+
+  k_bad = 3: 4320 tournaments
+    Bad verts transitive: 4320/4320
+    Bad verts have 3-cycle: 0/4320
+    TT count among bad verts: min=0, max=1, mean=0.50
+
+    Rank-drop analysis (sample of 50):
+    Bad TTs in Ω₂ that drop rank: 13/17
+    Total rank-critical TTs: min=0, max=1, mean=0.26
+    Total TTs in tournament: min=1, max=7, mean=3.78
+    Bad TT is the ONLY critical TT: 13/50
+
+--- TEST 2: β₁=1 tournaments ---
+  Count: 4800
+  Bad vertex counts: min=4, max=6, mean=4.80
+  Distribution: {4: 1920, 5: 1920, 6: 960}
+  Among those with ≥2 bad verts (4800):
+    Bad sub-tournament transitive: 2160
+    Bad sub-tournament has 3-cycle (SC): 2640
+
+  Rank-drop analysis for β₁=1 (sample of 30):
+
+--- TEST 3: Pigeonhole — bad-TT uniqueness (k_bad=3, β₁=0) ---
+  Bad TT is uniquely rank-critical: 13/50
+  Bad TT is critical but not unique: 0/50
+  Bad TT is NOT rank-critical: 37/50
+
+--- TEST 4: Dual test — ker(∂₂^T) ---
+  β₁=0, k_bad=0: dim(ker(∂₂^T)) = {5} (from 10 samples)
+  β₁=0, k_bad=1: dim(ker(∂₂^T)) = {5} (from 10 samples)
+  β₁=0, k_bad=2: dim(ker(∂₂^T)) = {5} (from 10 samples)
+  β₁=0, k_bad=3: dim(ker(∂₂^T)) = {5} (from 10 samples)
+  β₁=1: dim(ker(∂₂^T)) = {6} (from 10 samples)
+
+--- TEST 5: Hypothetical 4th bad vertex analysis ---
+  Checking 20 tournaments with k_bad=3...
+
+    T#0: bad=[1, 4, 5]
+      + v=0: bad∪{v} transitive=False, #TTs=2
+      + v=2: bad∪{v} transitive=False, #TTs=0
+      + v=3: bad∪{v} transitive=False, #TTs=0
+
+    T#1: bad=[1, 4, 5]
+      + v=0: bad∪{v} transitive=False, #TTs=2
+      + v=2: bad∪{v} transitive=False, #TTs=0
+      + v=3: bad∪{v} transitive=False, #TTs=0
+
+    T#2: bad=[1, 2, 5]
+      + v=0: bad∪{v} transitive=False, #TTs=1
+      + v=3: bad∪{v} transitive=False, #TTs=0
+      + v=4: bad∪{v} transitive=False, #TTs=0
+
+    T#3: bad=[1, 2, 5]
+      + v=0: bad∪{v} transitive=False, #TTs=1
+      + v=3: bad∪{v} transitive=False, #TTs=0
+      + v=4: bad∪{v} transitive=False, #TTs=0
+
+    T#4: bad=[0, 2, 5]
+      + v=1: bad∪{v} transitive=False, #TTs=0
+      + v=3: bad∪{v} transitive=False, #TTs=0
+      + v=4: bad∪{v} transitive=False, #TTs=0
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================

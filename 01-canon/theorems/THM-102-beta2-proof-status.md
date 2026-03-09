@@ -148,6 +148,19 @@ this gives ∃ good vertex for n ≥ 4, completing approach H if HYP-282 is prov
 **What remains**: Prove HYP-282 (Sum ≤ 3) or the weaker Sum < n. The algebraic
 proof of THM-103 doesn't directly yield the deletion bound.
 
+**New findings (S51 — rank-critical analysis)**:
+- rank(∂₂|Ω₂) = C(n,2) - n + 1 - β₁ (universal formula, verified n≤6)
+- dim(Z₁) = C(n,2) - (n-1) is UNIVERSAL for all n-vertex tournaments
+- Therefore β₁ depends ENTIRELY on rank(∂₂): β₁ = dim(Z₁) - rank(∂₂)
+- dim(ker(∂₂^T)) = n - 1 + β₁ (dual formula)
+- Bad-vertex TT is NOT rank-critical when β₁=0 (#bad=3): removing it from Ω₂ does NOT drop rank
+- Rank-critical TTs governed by redundancy = #TTs - rank; high redundancy → 0 RC TTs
+- #RC correlates with t₃ (r=0.69 at n=6), not directly with bad vertices (r=0.46)
+- Flip obstruction mechanism: arc flip changes MANY TTs simultaneously (global Ω₂ restructuring),
+  not just the single bad-vertex TT. The net effect reduces rank(∂₂) by 1.
+- β₁=0 with all-bad 3-cycle: ZERO instances at n=5,6,7 (flip obstruction confirmed)
+- β₁=1 minimum #bad: 3(n=5), 4(n=6), 5(n=7) — grows with n
+
 See THM-103 for the full proof.
 
 ### H. Inductive Proof via b1 Monotonicity (NEW — Most Promising, S43)

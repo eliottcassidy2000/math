@@ -69,6 +69,24 @@ Combined with HYP-282 (Σᵥ β₁(T\v) ≤ 3, verified n ≤ 10), this gives:
 
 If HYP-282 is proved, this closes the β₂ = 0 proof for n ≥ 4.
 
+## Rank-Critical Analysis (S51)
+
+**Universal formulas** (verified exhaustive n≤6):
+- dim(Z₁) = C(n,2) - (n-1) for ALL n-vertex tournaments (independent of T)
+- rank(∂₂|_{Ω₂}) = C(n,2) - n + 1 - β₁
+- dim(ker(∂₂^T)) = n - 1 + β₁
+- β₁ is ENTIRELY determined by rank(∂₂)
+
+**Rank-critical TTs**: A transitive triple τ is rank-critical if removing it from Ω₂ drops rank(∂₂).
+- #RC = 0 when redundancy (#TTs - rank) is large enough (≥3 at n=5, ≥8 at n=6)
+- With β₁=0 and #bad=3: #RC = 0 always. The bad-vertex TT is NOT rank-critical.
+- #RC correlates with t₃ (r=0.69 at n=6), not with #bad (r=0.46)
+- Pattern at n=5 (rank=6): #TTs=10→0RC, 9→0RC, 8→1RC, 7→3RC, 6→6RC
+
+**Flip obstruction mechanism**: Arc flip is NOT single-TT removal — it globally restructures Ω₂
+(many TTs added/removed). The flip among bad vertices reduces rank(∂₂) by 1 through this
+global effect, not through the bad-vertex TT being independently critical.
+
 ## Related
 
 - HYP-279: β₁(T) ≤ 1 (this theorem)

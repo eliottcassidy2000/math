@@ -186,6 +186,13 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-313 | Non-SC tournaments always have chi=1 at n <= 6 | CONFIRMED exhaustive. At n=7, first non-SC with chi=0 appears. | euler_char_scaling.py |
 | HYP-314 | surplus = excess_paths - rank(constraints) exactly for all p | CONFIRMED n=5-7 for p=2,3. Identity is algebraic: dim(Omega_p) = |A_p| - rank(P_p). | local_redei_investigation.py |
 | HYP-315 | corr(surplus, excess_H) increases with n at fixed p | CONFIRMED: p=2 correlation goes 0.53 (n=6) -> 0.87 (n=7). Cyclic content increasingly predicts Omega inflation. | local_redei_investigation.py |
+| HYP-329 | dim(Z₁) = C(n,2)-(n-1) universal for all tournaments | CONFIRMED exhaustive n=5,6,7. rank(∂₁)=n-1 always (complete underlying graph). β₁ depends entirely on rank(∂₂). Note: equivalent to HYP-318 | beta2_rank_critical.py |
+| HYP-330 | rank(∂₂\|Ω₂) = C(n,2)-n+1-β₁ | CONFIRMED exhaustive n=5 (1024/1024), n=6 (32768/32768). Zero violations. | beta2_rank_critical.py |
+| HYP-331 | dim(ker(∂₂^T)) = n-1+β₁ | CONFIRMED exhaustive n=5,6. Clean dual formula. | beta2_bad_tt_basis.py |
+| HYP-332 | Bad-vertex TT is rank-critical (removing drops rank(∂₂)) | REFUTED: with β₁=0 and #bad=3, 0 RC TTs at n=5 (120/120) and n=6 (960/960). Too much redundancy. | beta2_rank_critical.py |
+| HYP-333 | #RC=0 when redundancy (#TTs-rank) ≥ threshold | CONFIRMED: threshold=3 at n=5, =8 at n=6. Tournaments with 3 bad vertices always have high redundancy. | beta2_rank_critical.py |
+| HYP-334 | Flip obstruction: 3-cycle among ALL bad vertices forces β₁≥1 | CONFIRMED: 0 counterexamples at n=5 (720), n=6 (27968), n=7 (479). Flipping bad TT→3-cycle: 100% force β₁=1 | beta2_flip_deep.py |
+| HYP-335 | Minimum #bad when β₁=1 grows with n | CONFIRMED: min_bad=3(n=5), 4(n=6), 5(n=7). β₁=1 bad sub-tournament often SC (55% at n=6) | beta2_flip_deep.py |
 
 ---
 
@@ -207,7 +214,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261, HYP-262, HYP-263, HYP-278, HYP-279, HYP-282, HYP-287, HYP-288, HYP-289, HYP-290
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261, HYP-262, HYP-263, HYP-278, HYP-279, HYP-282, HYP-287, HYP-288, HYP-289, HYP-290, HYP-291, HYP-292, HYP-293, HYP-294, HYP-295, HYP-296, HYP-297, HYP-316, HYP-318, HYP-320, HYP-322, HYP-323, HYP-324, HYP-325, HYP-326, HYP-327, HYP-328, HYP-329, HYP-330, HYP-331, HYP-332, HYP-333, HYP-334, HYP-335
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112
