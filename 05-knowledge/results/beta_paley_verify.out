@@ -1,0 +1,30 @@
+Paley T_7 scores: [3, 3, 3, 3, 3, 3, 3] (all 3? True)
+
+Computing full Betti numbers (max_dim=6)...
+  beta = [np.int64(1), 0, 0, 0, np.int64(6), 0, 0]
+
+Independent Euler characteristic computation:
+  dim(A_p):     [7, 21, 63, 147, 273, 315, 189]
+  dim(Omega_p): [7, 21, 42, 63, 63, 42, 21]
+  chi(Omega) = 7
+  chi(A)     = 49
+  chi(betti) = 7
+  1 - beta_1 = 1
+
+Detailed rank analysis:
+  p=0: dim(O)=7, rank(d_p)=0, dim(A)=7
+  p=1: dim(O)=21, rank(d_p)=6 (tight:6), min_sv=3.04e-16, dim(A)=21
+  p=2: dim(O)=42, rank(d_p)=15 (tight:15), min_sv=5.61e-18, dim(A)=63
+  p=3: dim(O)=63, rank(d_p)=27 (tight:27), min_sv=6.91e-18, dim(A)=147
+  p=4: dim(O)=63, rank(d_p)=36 (tight:36), min_sv=4.38e-16, dim(A)=273
+  p=5: dim(O)=42, rank(d_p)=21 (tight:21), min_sv=2.68e-16, dim(A)=315
+  p=6: dim(O)=21, rank(d_p)=21 (tight:21), min_sv=2.28e+00, dim(A)=189
+
+
+Recompute betti with threshold 1e-6:
+  threshold=1e-08: beta=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(6), np.int64(0), np.int64(0)], chi=7
+  threshold=1e-06: beta=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(6), np.int64(0), np.int64(0)], chi=7
+  threshold=1e-10: beta=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(6), np.int64(0), np.int64(0)], chi=7
+
+
+Done.

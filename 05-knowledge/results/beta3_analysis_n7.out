@@ -1,0 +1,86 @@
+======================================================================
+FINDING beta_3 != 0 TOURNAMENTS AT n=7
+======================================================================
+  beta_3!=0 example #1: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(2, 2, 3, 3, 3, 4, 4), c3=12
+  beta_3!=0 example #2: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(1, 2, 3, 3, 4, 4, 4), c3=10
+  beta_3!=0 example #3: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(2, 2, 2, 3, 4, 4, 4), c3=11
+
+  Found 365 tournaments with beta_3!=0 (1162s)
+
+======================================================================
+DETAILED ANALYSIS OF beta_3!=0 TOURNAMENTS
+======================================================================
+
+--- Example #1: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(2, 2, 3, 3, 3, 4, 4), c3=12 ---
+  p=0: dim(A)=7, dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(A)=21, dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(A)=59, dim(Omega)=39, rank(d)=15, ker=24, im(d+1)=24, beta=0
+  p=3: dim(A)=131, dim(Omega)=50, rank(d)=24, ker=26, im(d+1)=25, beta=1
+  p=4: dim(A)=221, dim(Omega)=41, rank(d)=25, ker=16, im(d+1)=16, beta=0
+  p=5: dim(A)=243, dim(Omega)=20, rank(d)=16, ker=4, im(d+1)=0, beta=4
+  Omega dims: [7, 21, 39, 50, 41, 20]
+  A dims:     [7, 21, 59, 131, 221, 243]
+
+--- Example #2: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(1, 2, 3, 3, 4, 4, 4), c3=10 ---
+  p=0: dim(A)=7, dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(A)=21, dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(A)=55, dim(Omega)=37, rank(d)=15, ker=22, im(d+1)=22, beta=0
+  p=3: dim(A)=115, dim(Omega)=41, rank(d)=22, ker=19, im(d+1)=18, beta=1
+  p=4: dim(A)=181, dim(Omega)=27, rank(d)=18, ker=9, im(d+1)=9, beta=0
+  p=5: dim(A)=187, dim(Omega)=11, rank(d)=9, ker=2, im(d+1)=0, beta=2
+  Omega dims: [7, 21, 37, 41, 27, 11]
+  A dims:     [7, 21, 55, 115, 181, 187]
+
+--- Example #3: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(2, 2, 2, 3, 4, 4, 4), c3=11 ---
+  p=0: dim(A)=7, dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(A)=21, dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(A)=57, dim(Omega)=38, rank(d)=15, ker=23, im(d+1)=23, beta=0
+  p=3: dim(A)=123, dim(Omega)=45, rank(d)=23, ker=22, im(d+1)=21, beta=1
+  p=4: dim(A)=199, dim(Omega)=33, rank(d)=21, ker=12, im(d+1)=12, beta=0
+  p=5: dim(A)=223, dim(Omega)=14, rank(d)=12, ker=2, im(d+1)=0, beta=2
+  Omega dims: [7, 21, 38, 45, 33, 14]
+  A dims:     [7, 21, 57, 123, 199, 223]
+
+--- Example #4: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(2, 3, 3, 3, 3, 3, 4), c3=13 ---
+  p=0: dim(A)=7, dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(A)=21, dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(A)=61, dim(Omega)=40, rank(d)=15, ker=25, im(d+1)=25, beta=0
+  p=3: dim(A)=139, dim(Omega)=54, rank(d)=25, ker=29, im(d+1)=28, beta=1
+  p=4: dim(A)=243, dim(Omega)=45, rank(d)=28, ker=17, im(d+1)=17, beta=0
+  p=5: dim(A)=275, dim(Omega)=22, rank(d)=17, ker=5, im(d+1)=0, beta=5
+  Omega dims: [7, 21, 40, 54, 45, 22]
+  A dims:     [7, 21, 61, 139, 243, 275]
+
+--- Example #5: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0], scores=(2, 2, 2, 3, 4, 4, 4), c3=11 ---
+  p=0: dim(A)=7, dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(A)=21, dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(A)=57, dim(Omega)=38, rank(d)=15, ker=23, im(d+1)=23, beta=0
+  p=3: dim(A)=123, dim(Omega)=45, rank(d)=23, ker=22, im(d+1)=21, beta=1
+  p=4: dim(A)=199, dim(Omega)=33, rank(d)=21, ker=12, im(d+1)=12, beta=0
+  p=5: dim(A)=223, dim(Omega)=14, rank(d)=12, ker=2, im(d+1)=0, beta=2
+  Omega dims: [7, 21, 38, 45, 33, 14]
+  A dims:     [7, 21, 57, 123, 199, 223]
+
+--- COMPARISON: beta_3=0 tournament ---
+
+  beta=[np.int64(1), 0, 0, 0, 0, 0], scores=(2, 2, 2, 3, 3, 4, 5), c3=10
+    p=0: dim(O)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+    p=1: dim(O)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+    p=2: dim(O)=37, rank(d)=15, ker=22, im(d+1)=22, beta=0
+    p=3: dim(O)=40, rank(d)=22, ker=18, im(d+1)=18, beta=0
+    p=4: dim(O)=26, rank(d)=18, ker=8, im(d+1)=8, beta=0
+    p=5: dim(O)=9, rank(d)=8, ker=1, im(d+1)=0, beta=1
+    Omega dims: [7, 21, 37, 40, 26, 9]
+
+  beta=[np.int64(1), 0, 0, 0, 0, 0], scores=(1, 2, 2, 4, 4, 4, 4), c3=9
+    p=0: dim(O)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+    p=1: dim(O)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+    p=2: dim(O)=36, rank(d)=15, ker=21, im(d+1)=21, beta=0
+    p=3: dim(O)=38, rank(d)=21, ker=17, im(d+1)=17, beta=0
+    p=4: dim(O)=24, rank(d)=17, ker=7, im(d+1)=7, beta=0
+    p=5: dim(O)=8, rank(d)=7, ker=1, im(d+1)=0, beta=1
+    Omega dims: [7, 21, 36, 38, 24, 8]
+
+======================================================================
+TOURNAMENT PROPERTIES vs beta_3
+======================================================================
