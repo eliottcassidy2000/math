@@ -110,7 +110,7 @@ static long long count_fixed_ksubsets(int *cycles, int m, long long t, int k) {
 static void process_partition(int *pk, int *pm, int depth) {
     int num_cycles = 0;
     for (int i = 0; i < depth; i++) num_cycles += pm[i];
-    int cycles[128];
+    int cycles[512];
     int idx = 0;
     for (int i = 0; i < depth; i++)
         for (int j = 0; j < pm[i]; j++)

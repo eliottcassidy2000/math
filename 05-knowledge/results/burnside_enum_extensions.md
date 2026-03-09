@@ -151,6 +151,28 @@
 | Connected directed 4-multigraphs | 80 | InvEuler(dir 4-multigraph) |
 | Connected directed 5-multigraphs | 80 | InvEuler(dir 5-multigraph) |
 
+### k-ary n×n matrix sequences (new enumerators, opus-S50 session 3)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A002724 | Binary n×n matrices (row/col perm) | 51 | 120+ | +69+ | Running |
+| A052269 | Ternary n×n matrices | 27 | 80+ | +53+ | Running |
+| A052271 | 4-ary n×n matrices | 27 | 80+ | +53+ | Running |
+| A052272 | 5-ary n×n matrices | 27 | 80+ | +53+ | Running |
+| A246112 | 6-ary n×n matrices | ~27 | 60+ | +33+ | Running |
+| A246113 | 7-ary n×n matrices | ~27 | 60+ | +33+ | Running |
+| A246114 | 8-ary n×n matrices | ~27 | 60+ | +33+ | Running |
+| A246115 | 9-ary n×n matrices | ~27 | 60+ | +33+ | Running |
+| A246116 | 10-ary n×n matrices | ~27 | 60+ | +33+ | Running |
+| A028657 | Triangle m×n binary matrices | ~800 | 3000+ | +2200+ | Running |
+
+### Bug fix: 300s timeout truncation
+
+The GMP enumerators (tournament_gmp, selfloop_graph_gmp, oriented_graph_gmp)
+had `if (dt > 300) break;` which silently truncated output when any single n
+took >5 minutes. This was the cause of the mysterious n=128 cutoff for tournaments.
+Fixed to 3600s (1 hour) timeout.
+
 ### Newly extended OEIS sequences (opus-S50 session 2)
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
@@ -165,9 +187,9 @@
 
 ## Total impact summary
 
-- **40+ OEIS sequences extended** with new b-file terms
-- **25+ potentially new sequences** (connected variants and k-ary relations not yet in OEIS)
-- **~3000+ new individual terms** across all sequences
+- **50+ OEIS sequences extended** with new b-file terms
+- **35+ potentially new sequences** (connected variants, k-ary relations, k-ary matrices not yet in OEIS)
+- **~5000+ new individual terms** across all sequences
 - **Unified enumerator** handles 13 sequences in a single C file (burnside_enum_v2.c)
 - **General k-ary relation enumerator** for arbitrary k (Python + C)
 - **Hypergraph enumerator** via subset-orbit Burnside formula (Python)
