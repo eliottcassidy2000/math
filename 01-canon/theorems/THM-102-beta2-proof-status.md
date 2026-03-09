@@ -18,6 +18,9 @@
 | 7 | sampled | ~5000 | ~5000 | 0 |
 | 8 | sampled | ~5000 | ~5000 | 0 |
 | 9 | sampled | ~1000 | ~1000 | 0 |
+| 10 | sampled | 50 | 50 | 0 |
+
+**Additionally**: Paley T_7 and T_11 have β₂=0. rank(d₃) = ker(d₂) EXACTLY for all tested.
 
 ## Structural Discoveries
 
@@ -121,14 +124,36 @@ Key structural facts:
 
 **Structural insight**: dim(Ω₂) = |TT triples| + |NT cancellation dimensions|. Under arc flip, TT triples and NT cancellation pairs rebalance to maintain β₂ = 0.
 
+### G. Cone-from-T' Construction (NEW — S42)
+**Idea**: For each vertex v, swap cycles z at v can be filled by
+  w = Σ α_{abc} [(v,a,b,c) + (a,b,c,v)]
+where (a,b,c) ranges over allowed 2-paths in T' = T\{v}.
+
+**Key properties**:
+- T'-internal faces cancel: d₃(v,a,b,c) + d₃(a,b,c,v) has zero (a,b,c) component
+- The B matrix B·α = z is always solvable (unfiltered: ALL T' paths)
+- Filling is automatically in Ω₃ at n=5,6 (100%). Breaks slightly at n≥7 (~93-98%)
+- Rank surplus grows with n: min(rank(B) - swap_dim) = 2(n=5), 6(n=7), 11(n=8), 15(n=9)
+
+**Status**:
+- Unfiltered single-vertex: 500/500 at n=7,8; 200/200 at n=9. Zero failures.
+- Filtered (v→a, c→v only): fails 1/1000 at n=8 (too restrictive)
+- Multi-vertex (all v): ALWAYS works, including n=8 filtered failure case
+
+**Proof needs**: Show rank(B_unfiltered) ≥ swap_dim algebraically.
+
+**Scripts**: `beta2_filtered_cone.py`, `beta2_cone_failure.py`, `beta2_unfiltered_large.py`, `beta2_omega_membership.py`
+
 ## Dead Ends for Algebraic Proof
-- Cone construction: all 2-cycles use all n vertices (S42)
 - TT subcomplex: not exact (S42)
 - A_* projected complex: ∂∂ ≠ 0 (S42)
 - Flag/simplicial complex: path H₂=0 even when simplicial H₂≠0 (S41)
 - Extension lemma: 50% of TT triples at n=4 have NO DT extension (S43)
 - Z₂ ⊆ span(TT): FALSE, Z₂ has NT components (S43)
 - Euler characteristic: χ ≠ 1-β₁ when β₃>0 (S43)
+- Naive front/back cone: sign reversal prevents direct formula (S42)
+- Single-vertex filtered cone: fails at n=8 (too few valid T' paths) (S42)
+- LES via i_* injectivity: i_*: H_1(T\v)→H_1(T) rarely injective (S42)
 
 ## Key Open Question
 
