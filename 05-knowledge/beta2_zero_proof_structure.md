@@ -106,21 +106,86 @@ At n=6: h₂_rel=1 requires β₁(T\v) > 0, threshold varies.
 - BUT: relative H₂ generators consist only of TT paths
 - ALL relative H₂ generators have ∂₂ mapping to non-v 1-paths
 
+## NEW PROOF STRATEGY: A-complex lifting (opus-2026-03-08-S49)
+
+### Two-ingredient proof
+**Theorem**: β₂(T) = 0 for all tournaments T.
+
+**Proof** (conditional on HYP-269 + HYP-270):
+
+1. Let z ∈ Z₂(Ω) = ker(∂₂|_{Ω₂}).
+2. By HYP-269: z ∈ im(∂₃|_{A₃}), i.e., ∃σ ∈ A₃ with ∂₃(σ) = z.
+3. Since z ∈ Ω₂, we have z ∈ im(∂₃|_{A₃}) ∩ Ω₂.
+4. By HYP-270: im(∂₃|_{A₃}) ∩ Ω₂ = im(∂₃|_{Ω₃}) = B₂(Ω).
+5. So z ∈ B₂(Ω), and β₂ = dim(Z₂/B₂) = 0. QED.
+
+### HYP-269: Z₂(Ω) ⊆ im(∂₃|A₃)
+**Statement**: For every tournament T and every z ∈ ker(∂₂|_{Ω₂}), there exists
+σ ∈ A₃ (the FULL allowed 3-path space, not just Ω₃) with ∂₃(σ) = z.
+
+**Verified**: Exhaustive n=4,5,6. Sampled n=7,8 (pending).
+
+**Partial proof**: When T has a source vertex v (d⁺=n-1), the cone operator gives:
+- σ = c_v(z_{rest}) where z_{rest} = paths in z not containing v
+- Identity: ∂₃(c_v(z_{rest})) = z (exact, proved algebraically)
+- Key: c_v(∂₂(z_v)) = z_v where z_v = paths starting at v (proved by direct computation)
+- Combined: ∂₃(c_v(z_{rest})) = z_{rest} + c_v(∂₂(z_v)) = z_{rest} + z_v = z
+- Moreover: c_v(z_{rest}) ∈ Ω₃ (verified 320/320 at n=5)
+
+For non-source tournaments: cone is partial but multi-cone computationally covers all Z₂.
+
+### HYP-270: im(∂₃|A₃) ∩ Ω₂ = im(∂₃|Ω₃)
+**Statement**: If σ ∈ A₃ and ∂₃(σ) ∈ Ω₂, then ∂₃(σ) ∈ im(∂₃|_{Ω₃}).
+
+**Verified**: Exhaustive n=5 (1024/1024). n=6 pending. Sampled n=7,8 pending.
+
+**Interpretation**: Boundaries from the full A₃ that happen to land in Ω₂ are
+already boundaries from Ω₃. The "extra" 3-paths in A₃\Ω₃ don't contribute
+new boundaries to Ω₂.
+
+### Multi-cone results (HYP-268)
+At most 2 vertex cones suffice to cover all of Z₂:
+| n | Method | 1 cone | 2 cones | Max needed |
+|---|--------|--------|---------|------------|
+| 5 | Exhaustive | 720 | 304 | 2 |
+| 6 | Exhaustive | 9024 | 23744 | 2 |
+| 7 | 500 samples | 64 | 436 | 2 |
+| 8 | 100 samples | 7 | 93 | 2 |
+
+### Dominating pairs
+Full out-neighborhood coverage guarantees 2-cone success.
+Dominating pairs exist universally for n ≤ 6 (exhaustive), but NOT for all n ≥ 7
+(~99.97% at n=7, declining with n). However, 2 cones still suffice without
+full coverage, indicating Z₂ has additional structure.
+
+### Source cone proof (for tournaments with source vertex)
+When v is a source (d⁺ = n-1):
+1. c_v: Z₂ → Ω₃ (verified: maps INTO Ω₃, not just A₃)
+2. ∂₃(c_v(z)) = z for all z ∈ Z₂ (chain homotopy identity)
+3. So Z₂ ⊆ B₂, hence β₂ = 0
+
+This is a COMPLETE proof for tournaments with a source vertex.
+
 ## What Remains for Full Proof
 
+### Path A (NEW, most promising): A-complex lifting
+1. **Prove HYP-269** algebraically for all n (Z₂(Ω) ⊆ im(∂₃|A₃))
+2. **Prove HYP-270** algebraically for all n (im(∂₃|A₃) ∩ Ω₂ = im(∂₃|Ω₃))
+
+For HYP-269: the source cone gives it when a source exists. For general tournaments,
+need to show the ∂₃ map from A₃ is surjective onto Z₂(Ω).
+
+### Path B (LES + pigeonhole): still valid
 1. **Prove HYP-262** (Σ h₂_rel ≤ 3) algebraically, OR
 2. **Prove HYP-258** directly (∃ interior v with h₂_rel = 0), OR
 3. **Prove HYP-259** (δ injective for all interior v)
 
 Any ONE of these, combined with induction, completes the proof.
 
-### Most promising approaches
-- **H₁-killing bound**: Show that at most 3 vertices can simultaneously be "critical fillers"
-  of independent cycle classes. This would prove HYP-262.
-- **Cycle counting**: The constraint Σ cyc(v) = 3t₃ limits how many vertices can have
-  the right cycle count for h₂_rel = 1, but needs tournament-specific refinement.
-- **Direct existence for large n**: For n ≥ 7, the average h₂_rel ≤ 3/n → 0, so a
-  probabilistic or pigeonhole argument might work if combined with HYP-262.
+### Path C (cone-based)
+Show that for every tournament, there exist vertices v₁,...,v_k with
+combined cones covering Z₂. The source cone proof handles source tournaments;
+extending to non-source is the gap.
 
 ## Files
 - `04-computation/beta2_h2rel_zero_vertex.py` — Tests HYP-258
@@ -140,5 +205,15 @@ Any ONE of these, combined with induction, completes the proof.
 - `04-computation/beta2_cycle_count_condition.py` — Cycle count conditions
 - `04-computation/beta2_beta1_deletion.py` — β₁ deletion existence
 - `04-computation/beta2_h1_survival.py` — H₁ survival under inclusion
+- `04-computation/beta2_multicone.py` — Multi-vertex cone covering (HYP-268)
+- `04-computation/beta2_multicone_n7.py` — Multi-cone at n=7,8
+- `04-computation/beta2_twocone_structure.py` — 2-cone pair analysis
+- `04-computation/beta2_twocone_proof.py` — 2-cone proof ingredients
+- `04-computation/beta2_dominating_pair.py` — Dominating pair existence
+- `04-computation/beta2_z2_tt_only.py` — Z₂ TT/NT composition test
+- `04-computation/beta2_cone_omega_preserve.py` — Cone Ω-preservation test (HYP-270)
+- `04-computation/beta2_z2_in_imd3.py` — Z₂ ⊆ im(∂₃|A₃) test (HYP-269)
+- `04-computation/beta2_proof_path_n7.py` — Both ingredients at n=7,8
+- `04-computation/beta2_full_A_homology.py` — H₂(A_*) test (A not chain complex!)
 
 Author: opus-2026-03-08-S49

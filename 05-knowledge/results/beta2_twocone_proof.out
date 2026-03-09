@@ -1,0 +1,63 @@
+======================================================================
+TWO-CONE PROOF INGREDIENTS
+======================================================================
+
+Test 1: Out-neighborhood coverage vs cone success
+
+  Coverage → success table:
+    coverage=2, works=False: 160
+    coverage=3, works=False: 1440
+    coverage=4, works=False: 3240
+    coverage=4, works=True: 1080
+    coverage=5, works=True: 4320
+
+  Full coverage (all n vertices covered) → works: 4320
+  Full coverage → fails: 0
+
+======================================================================
+Test 2: PARTIAL CONE IDENTITY
+======================================================================
+
+For z ∈ Z₂, define z_v = restriction of z to paths cone-able by v.
+Then ∂₃(c_v(z_v)) = z_v - c_v(∂₂(z_v)).
+
+Since z is a cycle but z_v is NOT (in general), we get:
+∂₃(c_v(z_v)) = z_v - c_v(∂₂(z_v))
+r_v := z - ∂₃(c_v(z_v)) = z - z_v + c_v(∂₂(z_v)) = z_rest + c_v(∂₂(z_v))
+
+where z_rest = z - z_v = non-cone-able part.
+
+So the residual r_v involves:
+1. z_rest: paths in z that v can't cone
+2. c_v(∂₂(z_v)): correction from partial boundary
+
+If we apply a second cone c_w to r_v, we need to cover the residual.
+
+Tournament bits=41, scores=[2, 1, 2, 2, 3]
+  z2_dim = 3
+
+  z_0:
+    v=0: coneable=2, rest=9, ||residual||=1.0384, identity_check=1.67e-16
+    v=1: coneable=1, rest=10, ||residual||=1.1613, identity_check=1.67e-16
+    v=2: coneable=3, rest=8, ||residual||=0.9813, identity_check=1.71e-16
+    v=3: coneable=2, rest=9, ||residual||=0.8378, identity_check=1.67e-16
+    v=4: coneable=4, rest=7, ||residual||=0.2722, identity_check=3.05e-16
+
+  z_1:
+    v=0: coneable=2, rest=9, ||residual||=0.9802, identity_check=1.35e-16
+    v=1: coneable=1, rest=10, ||residual||=1.0026, identity_check=1.35e-16
+    v=2: coneable=3, rest=8, ||residual||=0.9610, identity_check=2.72e-16
+    v=3: coneable=2, rest=9, ||residual||=0.8032, identity_check=1.35e-16
+    v=4: coneable=4, rest=7, ||residual||=0.3909, identity_check=1.35e-16
+
+======================================================================
+Test 3: FIRST VERTEX COVERAGE
+======================================================================
+
+n=5: Number of distinct first vertices in Z₂:
+  2 first vertices: 40 tournaments
+  3 first vertices: 640 tournaments
+  4 first vertices: 320 tournaments
+  5 first vertices: 24 tournaments
+
+Done.

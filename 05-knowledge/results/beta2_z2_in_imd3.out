@@ -1,0 +1,26 @@
+======================================================================
+Z₂(Ω) ⊆ im(∂₃|A₃)? UNIVERSAL TEST
+======================================================================
+
+n=4: 64 tournaments in 0s
+  Z₂=0: 16
+  Z₂ ⊆ im(∂₃|A₃): 48
+  Z₂ ⊄ im(∂₃|A₃): 0
+  *** Z₂(Ω) ⊆ im(∂₃|A₃) CONFIRMED for all n=4 tournaments! ***
+
+n=5: 1024 tournaments in 1s
+  Z₂=0: 0
+  Z₂ ⊆ im(∂₃|A₃): 1024
+  Z₂ ⊄ im(∂₃|A₃): 0
+  *** Z₂(Ω) ⊆ im(∂₃|A₃) CONFIRMED for all n=5 tournaments! ***
+  n=6: 10000/32768 (36s)
+  n=6: 20000/32768 (72s)
+  n=6: 30000/32768 (110s)
+
+n=6: 32768 tournaments in 120s
+  Z₂=0: 0
+  Z₂ ⊆ im(∂₃|A₃): 32768
+  Z₂ ⊄ im(∂₃|A₃): 0
+  *** Z₂(Ω) ⊆ im(∂₃|A₃) CONFIRMED for all n=6 tournaments! ***
+
+Done.

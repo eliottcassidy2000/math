@@ -1,0 +1,32 @@
+======================================================================
+CONE OMEGA PRESERVATION TEST
+======================================================================
+
+Test 1: Chain homotopy ∂₃(c_v(z)) = z (A₂ level, source v)
+
+n=5: 1024 tournaments
+  Z₂ trivial: 0
+  Chain homotopy ∂₃(c_v(z))=z works (max outdegree v): 480
+  Chain homotopy fails: 544
+  c_v(Z₂) ⊆ Ω₃: 900
+  c_v(Z₂) ⊄ Ω₃: 124
+
+======================================================================
+Test 2: SOURCE VERTEX (d+=n-1) CONE
+======================================================================
+
+n=5: 320 with source, 704 without
+  Source cone: homotopy ok=320, fail=0
+  Source cone: c_v(Z₂) ⊆ Ω₃ = 320, ⊄ Ω₃ = 0
+
+======================================================================
+Test 3: im(∂₃|A₃) ∩ Ω₂ vs im(∂₃|Ω₃)
+======================================================================
+
+n=5: im(∂₃|Ω₃)∩Ω₂ == im(∂₃|A₃)∩Ω₂?
+  Match: 1024, Mismatch: 0
+
+Test 4: rank of ∂₃ restricted to Ω₃ vs projected from A₃
+  rk_omega == rk_A3_filtered for all tournaments: True
+
+Done.

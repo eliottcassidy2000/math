@@ -1,0 +1,47 @@
+======================================================================
+Z₂ ⊆ span(TT)? UNIVERSAL TEST
+======================================================================
+
+n=4: 64 tournaments in 0s
+  Z₂=0: 16
+  Z₂ pure TT: 24
+  Z₂ has NT: 24
+  Ω₂ has NT component: 24
+
+n=5: 1024 tournaments in 0s
+  Z₂=0: 0
+  Z₂ pure TT: 240
+  Z₂ has NT: 784
+  Ω₂ has NT component: 784
+
+n=6: 32768 tournaments in 25s
+  Z₂=0: 0
+  Z₂ pure TT: 1760
+  Z₂ has NT: 31008
+  Ω₂ has NT component: 31008
+
+======================================================================
+Ω₃ STRUCTURE: DOUBLY TRANSITIVE?
+======================================================================
+
+n=5: Ω₃ doubly-transitive: 240, has non-DT: 784
+
+======================================================================
+Z₂ CONSTRAINTS FOR PURE TT
+======================================================================
+
+For a TT path (a,b,c) with a→b→c, a→c:
+  ∂₂(a,b,c) = (b,c) - (a,c) + (a,b)
+  All three are edges in A₁.
+  For z = Σ α_{abc} (a,b,c) ∈ Z₂: Σ α_{abc} ∂₂(a,b,c) = 0 in Ω₁
+  This means: for each edge (i,j) ∈ A₁:
+    Σ_{c: (i,j,c) TT} α_{ijc} - Σ_{a: (a,i,j) TT} α_{aij} + Σ_{b: (i,b,j) TT} α_{ibj} = 0
+
+  Correct constraint for edge (i,j):
+    Σ_a α_{a,i,j} - Σ_b α_{i,b,j} + Σ_c α_{i,j,c} = 0
+    (sum over TT paths ending at ij) - (sum over TT paths with ij at ends) + (sum over TT paths starting at ij)
+
+  Transitive T₅: 10 TT paths out of 10 allowed 2-paths
+  Regular T₅: 5 TT, 15 NT out of 20 allowed 2-paths
+
+Done.

@@ -1,0 +1,40 @@
+======================================================================
+MULTI-VERTEX CONE COVERING OF ker(d₂)
+======================================================================
+
+n=5: 1024 tournaments in 2s
+  Minimum vertices needed distribution: {1: 720, 2: 304}
+  ALL tournaments: multi-cone covers Z₂!
+  n=6: 5000/32768 (17s)
+  n=6: 10000/32768 (36s)
+  n=6: 15000/32768 (54s)
+  n=6: 20000/32768 (71s)
+  n=6: 25000/32768 (87s)
+  n=6: 30000/32768 (102s)
+
+n=6: 32768 tournaments in 110s
+  Minimum vertices needed distribution: {1: 9024, 2: 23744}
+  ALL tournaments: multi-cone covers Z₂!
+
+======================================================================
+CONE RESIDUAL ANALYSIS
+======================================================================
+
+n=5: Analyzing cone residuals for single-cone failures
+
+  Total tournaments with Z₂ > 0: 1024
+  Cone rank patterns (sorted desc):
+    (4, 1, 0, 0, 0): 120
+    (3, 1, 1, 0, 0): 120
+    (4, 3, 1, 0, 0): 120
+    (3, 2, 1, 0, 0): 120
+    (3, 2, 1, 1, 0): 120
+    (4, 3, 2, 2, 1): 120
+    (2, 2, 2, 1, 1): 120
+    (3, 0, 0, 0, 0): 40
+    (3, 1, 1, 1, 0): 40
+    (2, 2, 2, 0, 0): 40
+    (3, 3, 1, 1, 1): 40
+    (3, 3, 3, 3, 3): 24
+
+Done.

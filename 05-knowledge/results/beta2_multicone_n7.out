@@ -1,0 +1,19 @@
+======================================================================
+MULTI-VERTEX CONE AT n=7,8 (SAMPLED)
+======================================================================
+  n=7: 100/500 (2s) max_needed=2
+  n=7: 200/500 (5s) max_needed=2
+  n=7: 300/500 (7s) max_needed=2
+  n=7: 400/500 (9s) max_needed=2
+  n=7: 500/500 (11s) max_needed=2
+
+n=7: 500 tournaments in 11s
+  Min vertices needed: {1: 64, 2: 436}
+  Max needed: 2
+  n=8: 100/100 (6s) max_needed=2
+
+n=8: 100 tournaments in 6s
+  Min vertices needed: {1: 7, 2: 93}
+  Max needed: 2
+
+Done.
