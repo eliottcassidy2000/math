@@ -1,0 +1,32 @@
+============================================================
+CORRELATION: dim(B₁/<Euler + ALL HPs>) vs #bad
+============================================================
+
+n=5 exhaustive (720 tournaments with β₁=0):
+
+(#bad, dim_R) → count:
+  #bad=0, dim(R)=2: 120
+  #bad=0, dim(R)=4: 120
+  #bad=1, dim(R)=1: 240
+  #bad=2, dim(R)=0: 120
+  #bad=3, dim(R)=0: 120
+
+dim(R)=2 AND #bad=3: 0
+dim(R)=2 total: 120
+#bad=3 total: 120
+NOT perfect match
+
+============================================================
+ALT: B₁ / <all individual HP-consecutive TT boundaries>
+============================================================
+n=5: dim(R) = {0: 560, 1: 40, 3: 120}
+Cross-tab:
+  #bad=0, dim(R)=0: 80
+  #bad=0, dim(R)=1: 40
+  #bad=0, dim(R)=3: 120
+  #bad=1, dim(R)=0: 240
+  #bad=2, dim(R)=0: 120
+  #bad=3, dim(R)=0: 120
+
+--- HP-consecutive TT coverage ---
+HP-consecutive TT coverage: min=30.00%, max=100.00%, mean=78.61%

@@ -1,0 +1,61 @@
+============================================================
+CHAIN-LEVEL i_* ANALYSIS: Hidden cycles in C₁(T)
+============================================================
+
+========================================
+n=5
+========================================
+
+  C₁ span by (#bad, span): {(1, 1): 240, (2, 2): 120, (3, 3): 120}
+  B₁ span by (#bad, span): {(1, 1): 240, (2, 2): 120, (3, 3): 120}
+
+========================================
+n=6
+========================================
+
+  C₁ span by (#bad, span): {(1, 1): 96, (2, 2): 47, (3, 3): 10}
+  B₁ span by (#bad, span): {(1, 1): 96, (2, 2): 47, (3, 3): 10}
+
+============================================================
+COMMON SUBSPACE TEST: Do lifts from different tournaments
+share a common ≤3D subspace of C₁(Kₙ)?
+============================================================
+
+n=5: 840 lifts from 480 tournaments
+Total span in universal C(5,2)=10 edge space: 6
+If ≤3: there IS a universal 3D subspace
+If >3: there is NOT
+Rank growth: [1, 2, 3, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]...
+Final rank: 6
+
+============================================================
+α=±1/√2 ANALYSIS: Does this constrain anything?
+============================================================
+
+Grok claims: Each ζ_bad has full support and α=±1/√2 coefficient on
+the bad-TT boundary. Since ||∂(bad-TT)|| = √3, we have:
+  ζ · ∂(bad-TT) = ±1/√2 * √3 = ±√(3/2)
+
+But this is about the INNER PRODUCT of a 1-form with a boundary.
+It constrains the projection, not the full vector.
+
+The 3 lifts z_v (one per bad vertex) are each:
+  z_v = (±1/√2) * ∂(bad-TT) + residual_v
+  where residual_v ⊥ ∂(bad-TT)
+
+The residuals span 2D (we showed rank 3 total = 1D bad-TT + 2D residual).
+The "pigeonhole" would need: residuals live in a fixed 2D space.
+But they DON'T live in a fixed space across tournaments!
+
+n=5 exhaustive: residual rank distribution = {3: 120}
+(Residuals = z_v minus bad-TT-direction projection)
+
+Sum of 3 lifts = 0: 0 tournaments
+Sum of 3 lifts ≠ 0: 120 tournaments
+(If sum=0 always, then lifts satisfy 1 linear relation, span ≤ 2)
+
+CONCLUSION:
+Grok's i_*-injectivity argument reduces to |bad|=Σ β₁(T\v) ≤ 3.
+But WHY Σ β₁(T\v) ≤ 3 is exactly HYP-282 — the open question.
+α=±1/√2 is a real structural finding but doesn't constrain the COUNT.
+The 'pigeonhole on ker(i_*)' has no well-defined 3D target space.

@@ -1,0 +1,47 @@
+============================================================
+TEST 1: R = B₁ / <Euler> (just sum of all ∂₂ columns)
+============================================================
+  n=5: tested=720, dim(R)={5: 720}
+  n=6: tested=500, dim(R)={9: 500}
+
+============================================================
+TEST 2: R = B₁ / <Euler + HP telescope (single HP)>
+============================================================
+  n=5: tested=720, dim(R)={2: 240, 3: 374, 4: 100, 5: 6}
+  n=6: tested=500, dim(R)={5: 164, 6: 257, 7: 79}
+
+============================================================
+TEST 3: R = B₁ / <Euler + ALL HP telescopes> (n=5 only)
+============================================================
+  n=5: tested=720, dim(R)={0: 600, 2: 120}
+
+============================================================
+TEST 4: WHAT subspace of B₁ gives codimension 3?
+============================================================
+
+If dim(R) = 3 means dim(B₁) - dim(generators ∩ B₁) = 3, then at n=5
+we need generators spanning dim(B₁)-3 = 6-3 = 3 dimensional subspace of B₁.
+What natural 3D subspace of B₁ works?
+
+
+Example: bits=41, bad=[1, 2, 4]
+  dim(B₁) = 6, need codim-3 subspace = 3D
+  If R = B₁ / <hidden lifts>: dim = 6 - 3 = 3
+  rank(non-bad TTs) = 5
+  codim of non-bad in B₁ = 1
+
+============================================================
+TEST 5: dim(ker(i_*)) for inclusion T\v → T
+Grok claims ker(i_*: H_1(T\v) → H_1(T)) gives 3D global space
+============================================================
+
+For β₁(T)=0: ker(i_*: H_1(T\v) → H_1(T)) = H_1(T\v)
+So dim(ker) = β₁(T\v) = 0 or 1
+Σ_v ker(i_*) = Σ_v β₁(T\v) = #bad ≤ 3
+This is just HYP-282 restated. Not a new mechanism.
+
+--- n=5 ---
+  Total tested: 720
+
+--- n=6 ---
+  Total tested: 200

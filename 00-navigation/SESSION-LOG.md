@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51j — Euler+HP quotient and i_*-kernel both refuted
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51i
+**Summary of work:**
+  Deep test of Grok's corrected claims. (1) R=B₁/<Euler + ALL HP telescopes>:
+  dim(R) ∈ {0,1,2,4} at n=5, NOT constant 3. #bad=3→dim(R)=0 (inverted!).
+  (2) i_*-injectivity ker(i_*) "3D global space": each ker is 0 or 1-dim,
+  no combined 3D target. Universal lift span=6=dim(B₁). Residual rank=3.
+  Both claims secretly assume |bad|≤3, which IS HYP-282 (the open question).
+**New contributions:** HYP-374b, HYP-374c (REFUTED), beta2_euler_hp_quotient.py, beta2_istar_ker_test.py
+**Unresolved threads:** HYP-282 algebraic proof; kind-pasteur's β₃≤1 proof architecture
+
 ## kind-pasteur-2026-03-09-S47 — i_*-injectivity verification, hereditary seesaw, chi_rel dichotomy
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-09-S46

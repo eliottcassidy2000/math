@@ -104,6 +104,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-361 | V-projection RC proof: mixed TTs span ≤2D in bad-edge subspace V | Mixed TTs span ALL 3D of V (rank=3). Each bad-edge has ≥1 mixed TT. Star-cocycle does NOT constrain to 2D. | n=5 (120/120 fail) | beta2_grok_rc_proof.py |
 | HYP-371 | C₁/B₁ quotient bounds #bad: alt sum ∈ B₁ ⟹ dep mod B₁ ⟹ #bad ≤ dim(C₁/B₁) | ALL lifts have rank 0 in C₁/B₁ (every z_v ∈ B₁!). Quotient sees nothing. Lifts are independent WITHIN B₁. Even if it worked, bound would be n-1, not 3. | n=5,6 (exhaustive) | beta2_quotient_rank.py |
 | HYP-374 | R = B₁/<Euler, HP 2-cycles, star annihilators> has dim(R)=3 (Grok claim) | Star generators = ALL TTs (every TT in some star), so dim(R)=0 for 97%, =1 for 3%. HP-only: varies 3-8. Coboundaries ⊥ B₁ (dim(B₁∩im(δ))=0). No "3D quotient" exists. | n=5 exhaustive, n=6 (500) | beta2_quotient_R.py |
+| HYP-374b | R = B₁/<Euler + ALL HP telescopes> has dim=3 (corrected Grok) | dim(R)∈{0,1,2,4} at n=5. #bad=3→dim(R)=0, #bad=0→dim(R)=2 or 4. INVERTED correlation. | n=5 exhaustive | beta2_euler_hp_quotient.py |
+| HYP-374c | i_*-injectivity: ζ_bad→3D ker(i_*), α=±1/√2 forces basis, |bad|≤3 pigeonhole | ker(i_*) per vertex is 0 or 1 dim. No 3D global space. Universal lift span=6=dim(B₁). Residual rank=3 (not 2). This IS HYP-282 restated. | n=5 exhaustive | beta2_istar_ker_test.py |
 | HYP-103 | M(T) = M(T^op)^T | Also fails | n=4 | reversal_proof_attempt.py |
 | HYP-104 | M is linear in A, A^T, A^2, etc. | No such combination works | n=4 | simple_pattern_search.py |
 | HYP-105 | M commutes with A | Fails | n=4 | M_functional_equation.py |
