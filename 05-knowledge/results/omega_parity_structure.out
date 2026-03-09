@@ -1,0 +1,122 @@
+======================================================================
+OMEGA PARITY STRUCTURE: dim(Omega_p) mod 2
+======================================================================
+
+  n=3 (d=2), 8 samples:
+    dim(Omega_p) mod 2 distribution:
+      p=0: even=0 (0.0%), odd=8 (100.0%), C(n,p+1)=3 (odd)
+      p=1: even=0 (0.0%), odd=8 (100.0%), C(n,p+1)=3 (odd)
+      p=2: even=2 (25.0%), odd=6 (75.0%), C(n,p+1)=1 (odd)
+    dim(Omega_p) mod 2 vector distribution:
+      [1, 1, 1]: 6 (75.0%)
+      [1, 1, np.int64(0)]: 2 (25.0%)
+
+  n=4 (d=3), 64 samples:
+    dim(Omega_p) mod 2 distribution:
+      p=0: even=64 (100.0%), odd=0 (0.0%), C(n,p+1)=4 (even)
+      p=1: even=64 (100.0%), odd=0 (0.0%), C(n,p+1)=6 (even)
+      p=2: even=24 (37.5%), odd=40 (62.5%), C(n,p+1)=4 (even)
+      p=3: even=16 (25.0%), odd=48 (75.0%), C(n,p+1)=1 (odd)
+    dim(Omega_p) mod 2 vector distribution:
+      [0, 0, 0, 1]: 24 (37.5%)
+      [0, 0, np.int64(1), np.int64(1)]: 24 (37.5%)
+      [0, 0, np.int64(1), np.int64(0)]: 16 (25.0%)
+
+  n=5 (d=4), 1024 samples:
+    dim(Omega_p) mod 2 distribution:
+      p=0: even=0 (0.0%), odd=1024 (100.0%), C(n,p+1)=5 (odd)
+      p=1: even=1024 (100.0%), odd=0 (0.0%), C(n,p+1)=10 (even)
+      p=2: even=304 (29.7%), odd=720 (70.3%), C(n,p+1)=10 (even)
+      p=3: even=384 (37.5%), odd=640 (62.5%), C(n,p+1)=5 (odd)
+      p=4: even=400 (39.1%), odd=624 (60.9%), C(n,p+1)=1 (odd)
+    dim(Omega_p) mod 2 vector distribution:
+      [1, 0, np.int64(1), np.int64(0), np.int64(1)]: 360 (35.2%)
+      [1, 0, np.int64(1), np.int64(1), np.int64(0)]: 240 (23.4%)
+      [1, 0, np.int64(0), np.int64(1), np.int64(0)]: 160 (15.6%)
+      [1, 0, 0, 1, 1]: 120 (11.7%)
+      [1, 0, np.int64(1), np.int64(1), np.int64(1)]: 120 (11.7%)
+
+  n=6 (d=5), 32768 samples:
+    dim(Omega_p) mod 2 distribution:
+      p=0: even=32768 (100.0%), odd=0 (0.0%), C(n,p+1)=6 (even)
+      p=1: even=0 (0.0%), odd=32768 (100.0%), C(n,p+1)=15 (odd)
+      p=2: even=12128 (37.0%), odd=20640 (63.0%), C(n,p+1)=20 (even)
+      p=3: even=17088 (52.1%), odd=15680 (47.9%), C(n,p+1)=15 (odd)
+      p=4: even=14240 (43.5%), odd=18528 (56.5%), C(n,p+1)=6 (even)
+      p=5: even=14720 (44.9%), odd=18048 (55.1%), C(n,p+1)=1 (odd)
+    dim(Omega_p) mod 2 vector distribution:
+      [0, 1, np.int64(1), np.int64(0), np.int64(1), np.int64(0)]: 6720 (20.5%)
+      [0, 1, np.int64(1), np.int64(1), np.int64(1), np.int64(1)]: 5760 (17.6%)
+      [0, 1, np.int64(1), np.int64(0), np.int64(0), np.int64(1)]: 4320 (13.2%)
+      [0, 1, 0, 1, 0, 1]: 3600 (11.0%)
+      [0, 1, np.int64(0), np.int64(1), np.int64(1), np.int64(0)]: 2640 (8.1%)
+
+  n=7 (d=6), 300 samples:
+    dim(Omega_p) mod 2 distribution:
+      p=0: even=0 (0.0%), odd=300 (100.0%), C(n,p+1)=7 (odd)
+      p=1: even=0 (0.0%), odd=300 (100.0%), C(n,p+1)=21 (odd)
+      p=2: even=160 (53.3%), odd=140 (46.7%), C(n,p+1)=35 (odd)
+      p=3: even=138 (46.0%), odd=162 (54.0%), C(n,p+1)=35 (odd)
+      p=4: even=175 (58.3%), odd=125 (41.7%), C(n,p+1)=21 (odd)
+      p=5: even=129 (43.0%), odd=171 (57.0%), C(n,p+1)=7 (odd)
+      p=6: even=171 (57.0%), odd=129 (43.0%), C(n,p+1)=1 (odd)
+    dim(Omega_p) mod 2 vector distribution:
+      [1, 1, np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(0)]: 28 (9.3%)
+      [1, 1, np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0)]: 25 (8.3%)
+      [1, 1, np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(1)]: 24 (8.0%)
+      [1, 1, np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(1)]: 22 (7.3%)
+      [1, 1, np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0)]: 22 (7.3%)
+
+======================================================================
+Part 2: |A_p| mod 2 = C(n,p+1) mod 2 (from local Redei)
+Proof: |A_p| = sum of C(n,p+1) ODD numbers => |A_p| = C(n,p+1) mod 2
+======================================================================
+  n=3: 0 violations out of 24 checks (PASS)
+  n=4: 0 violations out of 256 checks (PASS)
+  n=5: 0 violations out of 1000 checks (PASS)
+  n=6: 0 violations out of 1200 checks (PASS)
+  n=7: 0 violations out of 1400 checks (PASS)
+
+======================================================================
+Part 3: rank(P_p) mod 2 determines dim(Omega_p) mod 2
+dim(Omega_p) mod 2 = (C(n,p+1) + rank(P_p)) mod 2
+======================================================================
+
+  n=3:
+    p=1: rank even=8 (100.0%), rank odd=0 (0.0%)
+    p=2: rank even=6 (75.0%), rank odd=2 (25.0%)
+
+  n=4:
+    p=1: rank even=64 (100.0%), rank odd=0 (0.0%)
+    p=2: rank even=24 (37.5%), rank odd=40 (62.5%)
+    p=3: rank even=48 (75.0%), rank odd=16 (25.0%)
+
+  n=5:
+    p=1: rank even=200 (100.0%), rank odd=0 (0.0%)
+    p=2: rank even=59 (29.5%), rank odd=141 (70.5%)
+    p=3: rank even=131 (65.5%), rank odd=69 (34.5%)
+    p=4: rank even=127 (63.5%), rank odd=73 (36.5%)
+
+  n=6:
+    p=1: rank even=200 (100.0%), rank odd=0 (0.0%)
+    p=2: rank even=69 (34.5%), rank odd=131 (65.5%)
+    p=3: rank even=87 (43.5%), rank odd=113 (56.5%)
+    p=4: rank even=95 (47.5%), rank odd=105 (52.5%)
+    p=5: rank even=109 (54.5%), rank odd=91 (45.5%)
+
+  n=7:
+    p=1: rank even=200 (100.0%), rank odd=0 (0.0%)
+    p=2: rank even=90 (45.0%), rank odd=110 (55.0%)
+    p=3: rank even=104 (52.0%), rank odd=96 (48.0%)
+    p=4: rank even=85 (42.5%), rank odd=115 (57.5%)
+    p=5: rank even=112 (56.0%), rank odd=88 (44.0%)
+    p=6: rank even=94 (47.0%), rank odd=106 (53.0%)
+
+======================================================================
+Part 4: Is rank(P_2) mod 2 constant for each n?
+======================================================================
+  n=3: rank(P_2) mod 2 in {0, np.int64(1)} - VARIES
+  n=4: rank(P_2) mod 2 in {0, np.int64(1)} - VARIES
+  n=5: rank(P_2) mod 2 in {0, np.int64(1)} - VARIES
+  n=6: rank(P_2) mod 2 in {0, np.int64(1)} - VARIES
+  n=7: rank(P_2) mod 2 in {np.int64(0), np.int64(1)} - VARIES
