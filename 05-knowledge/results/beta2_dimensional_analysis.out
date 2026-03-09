@@ -1,0 +1,82 @@
+======================================================================
+DIMENSIONAL ANALYSIS OF BETA_2 = 0
+======================================================================
+
+--- n=4 ---
+  trial 0: c3=0, Omega=[4, 6, 4, 1], rank_constr=[0, 0, 0], chi_omega=1
+  trial 1: c3=0, Omega=[4, 6, 4, 1], rank_constr=[0, 0, 0], chi_omega=1
+  trial 2: c3=1, Omega=[4, 6, np.int64(3), np.int64(0)], rank_constr=[0, np.int64(3), np.int64(3)], chi_omega=1
+  chi_omega = 1 for ALL 64 tournaments: False
+
+--- n=5 ---
+  trial 0: c3=0, Omega=[5, 10, 10, 5, 1], rank_constr=[0, 0, 0, 0], chi_omega=1
+  trial 1: c3=0, Omega=[5, 10, 10, 5, 1], rank_constr=[0, 0, 0, 0], chi_omega=1
+  trial 2: c3=1, Omega=[5, 10, np.int64(9), np.int64(3), np.int64(0)], rank_constr=[0, np.int64(3), np.int64(6), np.int64(3)], chi_omega=1
+  trial 3: c3=0, Omega=[5, 10, 10, 5, 1], rank_constr=[0, 0, 0, 0], chi_omega=1
+  trial 4: c3=2, Omega=[5, 10, np.int64(9), np.int64(4), np.int64(1)], rank_constr=[0, np.int64(5), np.int64(9), np.int64(4)], chi_omega=1
+  trial 5: c3=1, Omega=[5, 10, np.int64(9), np.int64(3), np.int64(0)], rank_constr=[0, np.int64(3), np.int64(6), np.int64(3)], chi_omega=1
+  trial 6: c3=2, Omega=[5, 10, np.int64(9), np.int64(4), np.int64(1)], rank_constr=[0, np.int64(5), np.int64(9), np.int64(4)], chi_omega=1
+  trial 7: c3=0, Omega=[5, 10, 10, 5, 1], rank_constr=[0, 0, 0, 0], chi_omega=1
+  trial 8: c3=3, Omega=[5, 10, np.int64(9), np.int64(5), np.int64(1)], rank_constr=[0, np.int64(7), np.int64(12), np.int64(8)], chi_omega=0
+  trial 9: c3=2, Omega=[5, 10, np.int64(9), np.int64(4), np.int64(1)], rank_constr=[0, np.int64(5), np.int64(9), np.int64(4)], chi_omega=1
+  chi_omega = 1 for ALL 1024 tournaments: False
+
+--- n=6 ---
+  trial 0: c3=0, Omega=[6, 15, 20, 15, 6], rank_constr=[0, 0, 0, 0], chi_omega=2
+  trial 1: c3=0, Omega=[6, 15, 20, 15, 6], rank_constr=[0, 0, 0, 0], chi_omega=2
+  trial 2: c3=1, Omega=[6, 15, np.int64(19), np.int64(12), np.int64(3)], rank_constr=[0, np.int64(3), np.int64(9), np.int64(9)], chi_omega=1
+  chi_omega = 1 for ALL 32768 tournaments: False
+
+======================================================================
+VERIFICATION: chi(Omega) = 1 implies constraints on Omega dims
+======================================================================
+
+  n=4: sum_True (-1)^p dim(Omega_p) should be 3
+    FAIL: trial 4, n-C(n,2)+rest = 0
+    40/64 pass
+
+  n=5: sum_True (-1)^p dim(Omega_p) should be 6
+    153/200 pass
+
+  n=6: sum_True (-1)^p dim(Omega_p) should be 10
+    182/200 pass
+
+  n=7: sum_True (-1)^p dim(Omega_p) should be 15
+    171/200 pass
+
+======================================================================
+CHI_OMEGA AT n=8
+======================================================================
+  trial 14: chi_omega = 0, Omega = [8, 28, np.int64(60), np.int64(85), np.int64(76), np.int64(43), np.int64(14), np.int64(2)]
+  trial 16: chi_omega = 0, Omega = [8, 28, np.int64(64), np.int64(104), np.int64(112), np.int64(77), np.int64(30), np.int64(5)]
+  trial 31: chi_omega = 0, Omega = [8, 28, np.int64(63), np.int64(100), np.int64(105), np.int64(69), np.int64(25), np.int64(4)]
+  trial 34: chi_omega = 0, Omega = [8, 28, np.int64(55), np.int64(65), np.int64(46), np.int64(19), np.int64(3), np.int64(0)]
+  trial 39: chi_omega = 0, Omega = [8, 28, np.int64(64), np.int64(105), np.int64(117), np.int64(83), np.int64(32), np.int64(5)]
+  trial 42: chi_omega = 0, Omega = [8, 28, np.int64(55), np.int64(69), np.int64(52), np.int64(22), np.int64(4), np.int64(0)]
+  trial 47: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(119), np.int64(153), np.int64(129), np.int64(61), np.int64(12)]
+  trial 48: chi_omega = 0, Omega = [8, 28, np.int64(63), np.int64(100), np.int64(105), np.int64(71), np.int64(27), np.int64(4)]
+  trial 51: chi_omega = 0, Omega = [8, 28, np.int64(63), np.int64(104), np.int64(121), np.int64(91), np.int64(37), np.int64(6)]
+  trial 54: chi_omega = 0, Omega = [8, 28, np.int64(59), np.int64(82), np.int64(75), np.int64(44), np.int64(14), np.int64(2)]
+  trial 61: chi_omega = 0, Omega = [8, 28, np.int64(67), np.int64(122), np.int64(147), np.int64(101), np.int64(34), np.int64(5)]
+  trial 69: chi_omega = 0, Omega = [8, 28, np.int64(58), np.int64(80), np.int64(69), np.int64(37), np.int64(12), np.int64(2)]
+  trial 77: chi_omega = 0, Omega = [8, 28, np.int64(67), np.int64(126), np.int64(170), np.int64(143), np.int64(64), np.int64(12)]
+  trial 84: chi_omega = 0, Omega = [8, 28, np.int64(65), np.int64(113), np.int64(141), np.int64(122), np.int64(64), np.int64(15)]
+  trial 85: chi_omega = 0, Omega = [8, 28, np.int64(61), np.int64(92), np.int64(95), np.int64(63), np.int64(22), np.int64(3)]
+  trial 102: chi_omega = 0, Omega = [8, 28, np.int64(61), np.int64(94), np.int64(101), np.int64(71), np.int64(28), np.int64(5)]
+  trial 105: chi_omega = 0, Omega = [8, 28, np.int64(59), np.int64(84), np.int64(82), np.int64(53), np.int64(19), np.int64(3)]
+  trial 120: chi_omega = 0, Omega = [8, 28, np.int64(65), np.int64(113), np.int64(137), np.int64(105), np.int64(44), np.int64(8)]
+  trial 122: chi_omega = 2, Omega = [8, 28, np.int64(66), np.int64(116), np.int64(140), np.int64(115), np.int64(62), np.int64(15)]
+  trial 131: chi_omega = 0, Omega = [8, 28, np.int64(63), np.int64(99), np.int64(103), np.int64(68), np.int64(25), np.int64(4)]
+  trial 132: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(116), np.int64(133), np.int64(87), np.int64(29), np.int64(5)]
+  trial 139: chi_omega = 0, Omega = [8, 28, np.int64(61), np.int64(92), np.int64(94), np.int64(64), np.int64(26), np.int64(5)]
+  trial 140: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(119), np.int64(153), np.int64(129), np.int64(61), np.int64(12)]
+  trial 151: chi_omega = 6, Omega = [8, 28, np.int64(68), np.int64(127), np.int64(164), np.int64(138), np.int64(82), np.int64(23)]
+  trial 152: chi_omega = 0, Omega = [8, 28, np.int64(59), np.int64(82), np.int64(75), np.int64(44), np.int64(14), np.int64(2)]
+  trial 155: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(119), np.int64(150), np.int64(117), np.int64(48), np.int64(8)]
+  trial 159: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(119), np.int64(150), np.int64(117), np.int64(48), np.int64(8)]
+  trial 162: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(119), np.int64(154), np.int64(131), np.int64(63), np.int64(13)]
+  trial 167: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(116), np.int64(133), np.int64(87), np.int64(29), np.int64(5)]
+  trial 169: chi_omega = 0, Omega = [8, 28, np.int64(65), np.int64(111), np.int64(131), np.int64(106), np.int64(53), np.int64(12)]
+  trial 170: chi_omega = 0, Omega = [8, 28, np.int64(66), np.int64(116), np.int64(133), np.int64(87), np.int64(29), np.int64(5)]
+  trial 172: chi_omega = 0, Omega = [8, 28, np.int64(63), np.int64(102), np.int64(116), np.int64(86), np.int64(35), np.int64(6)]
+  trial 174: chi_omega = 2, Omega = [8, 28, np.int64(65), np.int64(111), np.int64(132), np.int64(108), np.int64(60), np.int64(16)]
