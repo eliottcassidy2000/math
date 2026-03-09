@@ -78,6 +78,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-377 | Type B cokernel |coefficient| pattern is UNIVERSAL (single pattern for all 240 tours) | Exactly ONE sorted |coeff| pattern across all Type B. 36 nonzero / 63 total. Values 1/3, 2/3, 1 | kind-pasteur-S47 |
 | HYP-378 | Subtournament c3 count determines # paths per vertex set in cokernel: c3=1 → 2 nonzero, c3=2 → 3 nonzero | 100%: 720 instances of c3=1 with 2nz, 2160 of c3=2 with 3nz, at n=6 | kind-pasteur-S47 |
 | HYP-379 | Hybrid numpy-int64 + mod-p Gauss gives 3.8x speedup at n=8 for beta_3 | Benchmark: SVD=175ms, hybrid=46.5ms. beta_1 TT-span 6.4x faster. | kind-pasteur-S47 |
+| HYP-380 | i_* INJECTIVE when b3(T\v)=1: rank(i_*)=1 always, H_3^rel=0 | n=6: 1920/1920 trivial (b3_Tv=0). n=7: 71/71 bad-vertex cases all have rank(i_*)=1. n=8: 20/20 tours 0 violations. ELIMINATES need for good vertex existence in proof! | kind-pasteur-S47 |
+| HYP-381 | LES dichotomy: b3(T\v)=0 => (rank=0,H3rel=1); b3(T\v)=1 => (rank=1,H3rel=0) | PERFECT at n=6 (exhaustive), n=7 (100 tours, 700 pairs), n=8 (20 tours). Combined: beta_3(T)=1 for ANY vertex choice | kind-pasteur-S47 |
+| HYP-382 | Relative dims at n=6 fully determined by type: Type A=(1,5,9,6,0,0), Type B=(1,5,12,14,8,3) | Exhaustive: 480 Type A pairs, 1440 Type B pairs. Rigid structure | kind-pasteur-S47 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

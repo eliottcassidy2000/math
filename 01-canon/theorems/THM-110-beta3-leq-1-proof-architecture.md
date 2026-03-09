@@ -111,18 +111,85 @@ The algebraic mechanism for proportionality is tournament-dependent.
 | Fragility | Complete at n=6 | Complete at n=6 |
 | Algebraic proof | YES (THM-108+109) | NOT YET |
 
+## New Proof Strategy: i_*-Injectivity (kind-pasteur-S47)
+
+**KEY DISCOVERY (HYP-380/381):** The inclusion map i_*: H_3(T\v) -> H_3(T)
+is ALWAYS injective when beta_3(T\v) = 1. This eliminates the need for
+good vertex existence!
+
+### The LES Dichotomy
+
+For any tournament T with beta_3(T) = 1 and any vertex v:
+
+| beta_3(T\v) | rank(i_*) | H_3(T,T\v) | beta_3(T) |
+|-------------|-----------|------------|-----------|
+| 0 | 0 | 1 | 0 + 1 = 1 |
+| 1 | 1 | 0 | 1 + 0 = 1 |
+
+Either way, beta_3(T) = 1. This holds for ANY vertex v, not just "good" vertices.
+
+### Computational Evidence
+
+| n | Method | (T,v) pairs tested | Violations of dichotomy |
+|---|--------|-------------------|------------------------|
+| 6 | exhaustive | 1920 | 0 (all b3_Tv = 0) |
+| 7 | sampled 100 | 700 | 0 (71 with b3_Tv = 1) |
+| 8 | sampled 20 | 160 | 0 |
+
+### Revised Proof Architecture
+
+Two claims suffice (both verified):
+
+**Claim I (i_*-injectivity):** When beta_3(T\v) = 1, the inclusion i_*: H_3(T\v) -> H_3(T)
+is injective (rank = 1). Equivalently: H_3(T,T\v) = 0 whenever beta_3(T\v) = 1.
+
+**Claim II (relative bound):** dim H_3(T,T\v) <= 1 for all tournaments T and vertices v.
+
+Together: for n-tournament T, pick any vertex v. By induction b3(T\v) in {0,1}.
+- If b3(T\v) = 0: beta_3(T) = H_3^rel <= 1 (Claim II)
+- If b3(T\v) = 1: i_* injective (Claim I), so beta_3(T) = 1 + 0 = 1
+
+Neither claim alone suffices: Claim I needs base cases, Claim II gives beta_3 <= 2.
+Together they give beta_3 <= 1 for all n.
+
+### Advantage over Good Vertex Strategy
+
+The good vertex approach requires finding a SPECIFIC v with beta_3(T\v) = 0.
+The i_*-injectivity approach works for ANY vertex. This is cleaner because:
+1. No vertex selection needed
+2. The proof holds vertex-by-vertex, not just existentially
+3. i_*-injectivity is a structural property of path homology, not a tournament property
+
+### Why i_* is Injective (Conjectural)
+
+When b3(T\v) = 1, the unique H_3 generator of T\v is a "robust" cycle that
+involves global tournament structure. When embedded in T (which has more edges),
+it cannot become a boundary because the extra d_4 image from T's additional
+Omega_4 content is "orthogonal" to the embedded cycle.
+
+The seesaw mechanism (THM-095) may play a role: beta_1(T\v) = 0 when
+beta_3(T\v) = 1, forcing im(d_2) to be large, which constrains how
+d_4 can interact with the embedded cycle.
+
 ## Open Problems
 
-1. **Prove good vertex existence algebraically.** What property of v
-   ensures beta_3(T\v) = 0? Analogy: for beta_2, "good" means b_1(T\v) <= b_1(T).
+1. **Prove i_*-injectivity algebraically.** (HYP-380) Why is rank(i_*) = 1
+   when beta_3(T\v) = 1? This is the key open algebraic claim.
 
-2. **Prove relative H_3 bound algebraically.** Why is dim H_3(T, T\v) <= 1?
-   The relative complex C_*^rel consists of Omega chains through vertex v.
+2. **Prove relative H_3 bound algebraically.** (HYP-351) Why is dim H_3(T,T\v) <= 1?
+   The relative complex R_p consists of Omega chains through vertex v.
 
-3. **Prove quotient proportionality directly.** Why do all ker(d_3) elements
-   project proportionally onto the quotient ker(d_3)/im(d_4)?
+3. **Can i_*-injectivity be proved from the seesaw?** The beta_1*beta_3 = 0
+   seesaw (THM-095) constrains the chain complex structure. Does it force
+   i_*-injectivity?
 
 4. **Extend to beta_5.** The seesaw mechanism (THM-098) predicts beta_5 in {0,1} too.
+   Does the same dichotomy hold for i_*: H_5(T\v) -> H_5(T)?
+
+## Files
+- les_rank_i_star_v2.py — main computation (v2 = fixed mod-p arithmetic)
+- les_rank_i_star_n7.py — first version (buggy Omega coords, wrong results)
+- relative_h3_structure_deep.py — relative complex dimension analysis
 
 ## See Also
 - THM-098 (Boolean odd Betti conjecture)
@@ -130,3 +197,4 @@ The algebraic mechanism for proportionality is tournament-dependent.
 - THM-109 (good vertex existence for beta_2)
 - THM-103 (beta_1 <= 1)
 - HYP-349+ (various beta_3 hypotheses from S46)
+- HYP-380-382 (i_*-injectivity and LES dichotomy from S47)

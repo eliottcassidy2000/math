@@ -1,0 +1,91 @@
+======================================================================
+i_* INJECTIVITY MECHANISM ANALYSIS
+======================================================================
+
+--- Detailed analysis of bad vertices at n=7 ---
+  ... 20 beta_3=1 found
+  ... 40 beta_3=1 found
+  ... 60 beta_3=1 found
+  ... 80 beta_3=1 found
+
+  Total: 100 beta_3=1 tours, 71 bad vertices, 629 good vertices
+
+--- Part 1: Omega dimension changes ---
+
+  BAD vertices (b3(T\v)=1):
+    delta_Om3: min=19, max=37, avg=28.3
+    delta_Om4: min=12, max=40, avg=25.8
+    dim_Om3_T: min=28, max=55, avg=44.0
+    dim_Om3_Tv: min=9, max=18, avg=15.7
+    dim_Om4_T: min=12, max=49, avg=32.5
+    dim_Om4_Tv: min=0, max=9, avg=6.7
+    ker_d3_T: min=10, max=30, avg=21.5
+    ker_d3_Tv: min=1, max=7, avg=5.5
+    rank_d3_T: min=18, max=25, avg=22.5
+    rank_d3_Tv: min=8, max=11, avg=10.2
+    rank_d4_T: min=9, max=29, avg=20.5
+    rank_d4_Tv: min=0, max=6, avg=4.5
+
+  GOOD vertices (b3(T\v)=0):
+    delta_Om3: min=15, max=42, avg=28.1
+    delta_Om4: min=7, max=43, avg=25.0
+    dim_Om3_T: min=28, max=55, avg=43.4
+    dim_Om3_Tv: min=12, max=21, avg=15.4
+    dim_Om4_T: min=12, max=49, avg=32.1
+    dim_Om4_Tv: min=3, max=15, avg=7.0
+    ker_d3_T: min=10, max=30, avg=21.2
+    ker_d3_Tv: min=3, max=10, avg=5.6
+    rank_d3_T: min=18, max=25, avg=22.2
+    rank_d3_Tv: min=9, max=11, avg=9.8
+    rank_d4_T: min=9, max=29, avg=20.2
+    rank_d4_Tv: min=3, max=10, avg=5.6
+
+--- Part 2: Growth analysis ---
+
+  BAD vertices:
+    delta(ker_d3) = ker_T - ker_Tv: Counter({19: 31, 11: 13, 12: 9, 9: 4, 16: 4, 18: 4, 23: 3, 22: 2, 14: 1})
+    delta(rank_d4) = rk4_T - rk4_Tv: Counter({19: 31, 11: 13, 12: 9, 9: 4, 16: 4, 18: 4, 23: 3, 22: 2, 14: 1})
+    delta(Omega_4):                   Counter({32: 31, 15: 13, 18: 9, 12: 4, 27: 4, 28: 4, 40: 3, 36: 2, 20: 1})
+    delta(b3) = b3_T - b3_Tv:        Counter({0: 71})
+    Consistency check (delta_ker - delta_rk4 - delta_b3): Counter({0: 71})
+
+  GOOD vertices:
+    delta(ker_d3) = ker_T - ker_Tv: Counter({14: 68, 17: 63, 20: 52, 13: 49, 21: 48, 9: 48, 18: 44, 19: 42, 12: 35, 16: 33, 8: 32, 15: 25, 10: 19, 22: 19, 25: 16, 11: 14, 6: 6, 23: 6, 24: 4, 7: 4, 26: 2})
+    delta(rank_d4) = rk4_T - rk4_Tv: Counter({13: 68, 16: 63, 19: 52, 12: 49, 20: 48, 8: 48, 17: 44, 18: 42, 11: 35, 15: 33, 7: 32, 14: 25, 9: 19, 21: 19, 24: 16, 10: 14, 5: 6, 22: 6, 23: 4, 6: 4, 25: 2})
+    delta(Omega_4):                   Counter({34: 66, 20: 56, 30: 46, 21: 34, 10: 32, 29: 31, 35: 30, 22: 29, 31: 26, 12: 26, 15: 23, 28: 22, 11: 20, 24: 16, 32: 15, 19: 15, 17: 15, 27: 13, 38: 12, 42: 12, 33: 10, 18: 9, 36: 9, 23: 8, 39: 8, 7: 6, 26: 6, 13: 6, 14: 6, 43: 6, 37: 6, 9: 4, 25: 4, 40: 2})
+    delta(b3) = b3_T - b3_Tv:        Counter({1: 629})
+    Consistency check (delta_ker - delta_rk4 - delta_b3): Counter({0: 629})
+
+--- Part 3: Seesaw connection ---
+  b1(T) and b1(T\v) values:
+
+  BAD vertices: (b1_T, b1_Tv) = Counter({(0, 0): 30})
+  GOOD vertices (sample): (b1_T, b1_Tv) = Counter({(0, 0): 100})
+
+  Seesaw (b1*b3=0) predicts: b3_T=1 => b1_T=0, b3_Tv=1 => b1_Tv=0
+
+--- Part 4: Exact growth pattern for bad vertices ---
+  For each bad vertex, the growth of ker(d_3) and rank(d_4):
+  Example 0: ker_d3: 7 -> 19 (+12), rank_d4: 6 -> 18 (+12), Om4: 9 -> 27 (+18)
+  Example 1: ker_d3: 7 -> 26 (+19), rank_d4: 6 -> 25 (+19), Om4: 9 -> 41 (+32)
+  Example 2: ker_d3: 7 -> 26 (+19), rank_d4: 6 -> 25 (+19), Om4: 9 -> 41 (+32)
+  Example 3: ker_d3: 7 -> 26 (+19), rank_d4: 6 -> 25 (+19), Om4: 9 -> 41 (+32)
+  Example 4: ker_d3: 7 -> 26 (+19), rank_d4: 6 -> 25 (+19), Om4: 9 -> 41 (+32)
+  Example 5: ker_d3: 7 -> 26 (+19), rank_d4: 6 -> 25 (+19), Om4: 9 -> 41 (+32)
+  Example 6: ker_d3: 7 -> 19 (+12), rank_d4: 6 -> 18 (+12), Om4: 9 -> 27 (+18)
+  Example 7: ker_d3: 7 -> 19 (+12), rank_d4: 6 -> 18 (+12), Om4: 9 -> 27 (+18)
+  Example 8: ker_d3: 1 -> 10 (+9), rank_d4: 0 -> 9 (+9), Om4: 0 -> 12 (+12)
+  Example 9: ker_d3: 1 -> 10 (+9), rank_d4: 0 -> 9 (+9), Om4: 0 -> 12 (+12)
+
+--- Part 5: Key pattern ---
+  delta(b3) = 0 for ALL bad vertices? True
+  This means: adding vertex v adds EQUAL amounts to ker(d3) and rank(d4)
+  delta_ker = delta_rank_d4 exactly
+  The 'new' kernel directions from v-paths are FULLY saturated by 'new' d4 boundaries
+  The ORIGINAL T\v cycle survives because it's orthogonal to the new content
+
+  For i_*-injectivity: the embedded T\v cycle is NOT in im(d_4^T)
+  This means: im(d_4^T) = im(d_4^{T\v}) + (v-paths contribution)
+  And: the v-paths contribution is disjoint from the T\v cycle space
+
+DONE.
