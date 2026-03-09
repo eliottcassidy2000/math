@@ -1,0 +1,39 @@
+======================================================================
+PART 1: Characterizing n=6 tournaments with beta_3 = 1
+======================================================================
+
+beta_3 > 0: 320/32768
+beta_1 > 0: 4800/32768
+BOTH beta_1 AND beta_3 > 0: 0/32768
+
+Score distribution of beta_3 = 1 tournaments:
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 240
+  (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)): 80
+
+H distribution of beta_3 = 1 tournaments:
+  H=9: 80
+  H=45: 240
+
+First 5 examples:
+  bits=87: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), H=9, c3=2, c5=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega_dims=[6, 15, 18, 9, 0, 0]
+  bits=356: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), H=9, c3=2, c5=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega_dims=[6, 15, 18, 9, 0, 0]
+  bits=567: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), H=9, c3=2, c5=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega_dims=[6, 15, 18, 9, 0, 0]
+  bits=866: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), H=9, c3=2, c5=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega_dims=[6, 15, 18, 9, 0, 0]
+  bits=1278: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), H=9, c3=2, c5=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega_dims=[6, 15, 18, 9, 0, 0]
+
+======================================================================
+PART 2: beta_3 vs max H within score class
+======================================================================
+  Score (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)): max_H_class=9, beta_3=1 H values: [9]
+  Score (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): max_H_class=45, beta_3=1 H values: [45]
+
+======================================================================
+PART 3: Omega dims palindromicity
+======================================================================
+Palindromic omega dims: 0/32768 (0.0%)
+Not palindromic: 32768/32768

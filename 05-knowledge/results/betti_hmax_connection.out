@@ -1,0 +1,57 @@
+======================================================================
+PART 1: n=5 exhaustive — Betti vs H-max
+======================================================================
+
+n=5: 1024 tournaments, 9 score classes
+
+Betti vector distribution:
+  [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]: 720
+  [np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0)]: 304
+
+beta_1 = 1 vs H-max within score class:
+  Score (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)): max_H=9, beta_1=1 H=[9], beta_1=0 H=[9], max in b1? True
+  Score (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)): max_H=15, beta_1=1 H=[11, 15], beta_1=0 H=[13], max in b1? True
+  Score (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)): max_H=15, beta_1=1 H=[15], beta_1=0 H=[], max in b1? True
+
+======================================================================
+PART 2: n=4 exhaustive
+======================================================================
+
+n=4: Betti vector distribution:
+  [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]: 40
+  [np.int64(1), np.int64(1), np.int64(0), np.int64(0)]: 24
+
+======================================================================
+PART 3: n=3 exhaustive
+======================================================================
+  bits=0: scores=(np.int64(0), np.int64(1), np.int64(2)), H=1, betti=[np.int64(1), np.int64(0), np.int64(0)], omega=[3, 3, 1]
+  bits=1: scores=(np.int64(0), np.int64(1), np.int64(2)), H=1, betti=[np.int64(1), np.int64(0), np.int64(0)], omega=[3, 3, 1]
+  bits=2: scores=(np.int64(1), np.int64(1), np.int64(1)), H=3, betti=[np.int64(1), np.int64(1), 0], omega=[3, 3, 0]
+  bits=3: scores=(np.int64(0), np.int64(1), np.int64(2)), H=1, betti=[np.int64(1), np.int64(0), np.int64(0)], omega=[3, 3, 1]
+  bits=4: scores=(np.int64(0), np.int64(1), np.int64(2)), H=1, betti=[np.int64(1), np.int64(0), np.int64(0)], omega=[3, 3, 1]
+  bits=5: scores=(np.int64(1), np.int64(1), np.int64(1)), H=3, betti=[np.int64(1), np.int64(1), 0], omega=[3, 3, 0]
+  bits=6: scores=(np.int64(0), np.int64(1), np.int64(2)), H=1, betti=[np.int64(1), np.int64(0), np.int64(0)], omega=[3, 3, 1]
+  bits=7: scores=(np.int64(0), np.int64(1), np.int64(2)), H=1, betti=[np.int64(1), np.int64(0), np.int64(0)], omega=[3, 3, 1]
+
+======================================================================
+SUMMARY: Higher Betti and H-maximization
+======================================================================
+n | beta_{n-3} | relation to H-max?
+3 | beta_0     | trivially 1 always
+4 | beta_1     | = 1 iff has 3-cycle (= H > 1)
+5 | beta_2     | always 0 (PROVED)
+6 | beta_3     | = 1 iff H = max in score class (320/32768)
+7 | beta_4     | = 6 iff H = 189 (Paley class, global max among regular)
+
+Pattern: beta_{n-3} > 0 picks out H-maximizers!
+But beta_2 = 0 breaks the sequence at n=5...
+
+Alternative: beta_{2*floor((n-1)/2)} > 0 picks out H-maximizers?
+n=3: beta_2 = 0 (transitive) or beta_2 = 0 (3-cycle)... no
+n=6: beta_3 = beta_{2*2} = beta_4? No, beta_3
+
+Or: the HIGHEST nonzero even Betti (after beta_0)?
+n=3: beta_0=1 always
+n=5: beta_0=1 always, all even betti = 0
+n=6: beta_0=1, beta_2=0, beta_4=0. Odd: beta_1,beta_3
+n=7: beta_0=1, beta_2=0, beta_4=6 or 0, beta_6=0

@@ -1,0 +1,57 @@
+======================================================================
+PART 1: Paley T_7 vertex deletion
+======================================================================
+T_7 - v0: scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)), H=45, c3=8, c5=12
+  betti = [np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+  omega_dims = [6, 15, 21, 18, 9, 3]
+
+======================================================================
+PART 2: n=6 H=45 score (2,2,2,3,3,3) — Betti analysis
+======================================================================
+n=6 H=45 score (2,2,2,3,3,3): 480 tournaments
+Betti distribution: {(np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)): 240, (np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)): 240}
+Omega dims distribution: {(6, 15, 24, 33, 27, 9): 240, (6, 15, 21, 18, 9, 3): 240}
+c3 distribution: {8: 480}
+
+======================================================================
+PART 3: Are H=45 tournaments isomorphic to Paley deletion?
+======================================================================
+Paley deletion scores: (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))
+Paley deletion c3=8, c5=12, H=45
+
+======================================================================
+PART 4: n=6 score (1,1,1,4,4,4) H=9 — structure
+======================================================================
+  bits=87: c3=2, c5=0, betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega=[6, 15, 18, 9, 0, 0]
+  bits=356: c3=2, c5=0, betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega=[6, 15, 18, 9, 0, 0]
+  bits=567: c3=2, c5=0, betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega=[6, 15, 18, 9, 0, 0]
+
+n=6 H=9 score (1,1,1,4,4,4): 80 tournaments
+Betti distribution: {(np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0): 80}
+Omega dims distribution: {(6, 15, 18, 9, 0, 0): 80}
+
+======================================================================
+PART 5: Max H per score class at n=6 and beta_3 status
+======================================================================
+  (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)): max_H=1, beta_3>0 at H=[]
+  (np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)): max_H=3, beta_3>0 at H=[]
+  (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)): max_H=3, beta_3>0 at H=[]
+  (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)): max_H=5, beta_3>0 at H=[]
+  (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)): max_H=3, beta_3>0 at H=[]
+  (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)): max_H=5, beta_3>0 at H=[]
+  (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): max_H=9, beta_3>0 at H=[]
+  (np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): max_H=15, beta_3>0 at H=[]
+  (np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): max_H=15, beta_3>0 at H=[]
+  (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)): max_H=3, beta_3>0 at H=[]
+  (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)): max_H=9, beta_3>0 at H=[9] <-- beta_3>0 = max_H!
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)): max_H=5, beta_3>0 at H=[]
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)): max_H=9, beta_3>0 at H=[]
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): max_H=17, beta_3>0 at H=[]
+  (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): max_H=27, beta_3>0 at H=[]
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)): max_H=15, beta_3>0 at H=[]
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)): max_H=27, beta_3>0 at H=[]
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)): max_H=37, beta_3>0 at H=[]
+  (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): max_H=37, beta_3>0 at H=[]
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)): max_H=15, beta_3>0 at H=[]
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)): max_H=37, beta_3>0 at H=[]
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): max_H=45, beta_3>0 at H=[45] <-- beta_3>0 = max_H!
