@@ -1,0 +1,44 @@
+======================================================================
+TRANSITIVE BAD SET: Verification at n=7,8
+======================================================================
+
+n=7 (sampled 5000): 4760 with b1=0
+  Bad count distribution: {1: 1260, 0: 2436, 2: 759, 3: 305}
+  Tournaments with >=2 bad: 1064
+  Bad set transitive: 1064/1064
+  Bad set has 3-cycle: 0/1064
+  Among 3-bad: top=max_score 227/305, bot=min_score 220/305
+
+n=8 (sampled 2000): 1980 with b1=0
+  Bad count distribution: {1: 315, 0: 1527, 3: 25, 2: 113}
+  Tournaments with >=2 bad: 138
+  Bad set transitive: 138/138
+  Bad set has 3-cycle: 0/138
+  Among 3-bad: top=max_score 18/25, bot=min_score 14/25
+
+======================================================================
+WHY TRANSITIVE: Domination direction analysis
+======================================================================
+
+Bad pair (v->w) domination patterns:
+  ('v:above=1,below=0', 'w:above=0,below=1'): 4320
+  ('v:above=0,below=0', 'w:above=0,below=1'): 2880
+  ('v:above=1,below=0', 'w:above=0,below=0'): 2880
+  ('v:above=2,below=0', 'w:above=0,below=1'): 2160
+  ('v:above=1,below=0', 'w:above=0,below=2'): 2160
+  ('v:above=0,below=0', 'w:above=0,below=2'): 2160
+  ('v:above=2,below=0', 'w:above=0,below=0'): 2160
+  ('v:above=2,below=0', 'w:above=0,below=2'): 1440
+
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_transitive_bad.py", line 363, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_transitive_bad.py", line 282, in main
+    print("STRUCTURAL ANALYSIS: Why \u2264 3 bad vertices?")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2264' in position 25: character maps to <undefined>

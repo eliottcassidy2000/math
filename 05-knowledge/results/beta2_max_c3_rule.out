@@ -1,0 +1,41 @@
+======================================================================
+MAX 3-CYCLE PARTICIPATION RULE: Always good vertex?
+======================================================================
+
+n=5 (exhaustive): 720 with b1=0, 480 have bad vertices
+  Any max-c3 vertex good:     720/720 = 100.0%
+  max_dom_c3 good: 360/480 (75.0%)
+  max_free_c3 good: 432/480 (90.0%)
+  max_product good: 440/480 (91.7%)
+  most_central good: 480/480 (100.0%)
+
+n=6 (exhaustive): 27968 with b1=0, 19488 have bad vertices
+  Any max-c3 vertex good:     27968/27968 = 100.0%
+  max_dom_c3 good: 10848/19488 (55.7%)
+  max_free_c3 good: 18880/19488 (96.9%)
+  max_product good: 15480/19488 (79.4%)
+  most_central good: 19488/19488 (100.0%)
+
+n=7 (sampled(5000)): 4757 with b1=0, 2357 have bad vertices
+  Any max-c3 vertex good:     4706/4757 = 98.9%
+  max_dom_c3 good: 1014/2357 (43.0%)
+  max_free_c3 good: 2323/2357 (98.6%)
+  max_product good: 1910/2357 (81.0%)
+  most_central good: 2230/2357 (94.6%)
+
+n=8 (sampled(2000)): 1969 with b1=0, 476 have bad vertices
+  Any max-c3 vertex good:     1948/1969 = 98.9%
+  max_dom_c3 good: 181/476 (38.0%)
+  max_free_c3 good: 467/476 (98.1%)
+  max_product good: 398/476 (83.6%)
+  most_central good: 475/476 (99.8%)
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_max_c3_rule.py", line 446, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_max_c3_rule.py", line 120, in main
+    sample_range = [rng.randint(0, total) for _ in range(nsamp)]
+                    ~~~~~~~~~~~^^^^^^^^^^
+  File "numpy/random/mtrand.pyx", line 794, in numpy.random.mtrand.RandomState.randint
+  File "numpy/random/_bounded_integers.pyx", line 2881, in numpy.random._bounded_integers._rand_int32
+ValueError: high is out of bounds for int32

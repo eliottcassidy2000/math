@@ -1,0 +1,60 @@
+======================================================================
+BAD TRIPLE STRUCTURE + NON-SC VERIFICATION
+======================================================================
+
+PART 1: Non-SC tournaments always have b1=0 for all deletions
+  n=6: 10448 non-SC tournaments
+  b1 != 0 among non-SC: 0
+  b1=0 and all deletions good: 6800/10448
+
+======================================================================
+PART 2: Structure of 3 bad vertices
+======================================================================
+
+n=5: 120 tournaments with exactly 3 bad vertices
+  3 bad vertices form a 3-cycle: 0/120
+  3 bad vertices form transitive: 120/120
+  Score patterns:
+    (np.int64(1), np.int64(2), np.int64(3)): 120
+
+n=6: 4320 tournaments with exactly 3 bad vertices
+  3 bad vertices form a 3-cycle: 0/4320
+  3 bad vertices form transitive: 4320/4320
+  Score patterns:
+    (np.int64(2), np.int64(2), np.int64(4)): 1440
+    (np.int64(1), np.int64(3), np.int64(3)): 1440
+    (np.int64(2), np.int64(3), np.int64(3)): 720
+    (np.int64(2), np.int64(2), np.int64(3)): 720
+
+======================================================================
+PART 3: Bad pairs — arc direction and domination
+======================================================================
+  Total bad pairs: 20160
+
+======================================================================
+PART 4: Connectivity vs bad count
+======================================================================
+
+n=6 SC tournaments with b1=0: 17520
+  kappa=1:
+    0 bad: 1440
+    1 bad: 4320
+    2 bad: 7200
+    3 bad: 2880
+  kappa=2:
+    0 bad: 240
+    3 bad: 1440
+
+======================================================================
+PART 5: Bad vertex = vertex that uniquely dominates a cycle?
+======================================================================
+  MISMATCH: bad=set(), uniq_dom={5}
+    scores=[np.int64(2), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(5)]
+  MISMATCH: bad=set(), uniq_dom={1}
+    scores=[np.int64(3), np.int64(0), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]
+  MISMATCH: bad=set(), uniq_dom={5}
+    scores=[np.int64(2), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(5)]
+
+  SC b1=0 tournaments: 17520
+  bad == uniq_dom: 13328
+  mismatch: 14640
