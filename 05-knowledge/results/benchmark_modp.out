@@ -1,0 +1,28 @@
+======================================================================
+BENCHMARK: mod-p vs SVD chain complex computation
+======================================================================
+
+--- Test 1: n=6 exhaustive correctness ---
+  n=6: 32768 tournaments, 0 mismatches, 161.0s (both methods)
+
+--- Test 2: n=7 speed comparison ---
+  n=7 (200 tours): mod-p 4.30s, SVD 4.75s, speedup 1.1x
+  Betti agreement: 200/200
+
+--- Test 3: n=8 speed comparison ---
+  n=8 (20 tours): mod-p 7.83s, SVD 9.40s, speedup 1.2x
+
+--- Test 4: Interesting Betti numbers ---
+  Found 151 interesting n=7 tournaments (b3>0 or b4>0)
+    trial=1: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=6: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=10: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=21: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=32: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=34: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=47: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=49: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=58: bettis=(1, 0, 0, 1, 0, 0, 0)
+    trial=90: bettis=(1, 0, 0, 1, 0, 0, 0)
+
+DONE.
