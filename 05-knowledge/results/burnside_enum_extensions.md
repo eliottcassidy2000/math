@@ -94,17 +94,45 @@
 | Connected self-converse oriented | 80 | InvEuler(A005639) |
 | Connected self-converse digraphs | 80 | InvEuler(A002499) |
 | Connected self-comp oriented | 299 | InvEuler(A002785) |
-| Connected symmetric reflexive | 109 | InvEuler(A000250) |
+| Connected symmetric reflexive | 111 | InvEuler(A000250) |
+| Connected 3-ary relations | 48 | InvEuler(A000662) |
+| Connected 4-ary relations | 26 | InvEuler(A001377) |
+| Connected 5-ary relations | 16 | InvEuler(A051241) |
+| Connected graphs even edges | 100 | InvEuler(A007869) |
+| Connected graphs odd edges | 100 | InvEuler(A054960) |
+| Connected digraphs even arcs | 100 | InvEuler(A054928) |
+| Connected half-binary-relations | 100 | InvEuler(A001173) |
+| Connected comp-pairs tournaments | 200 | InvEuler(A059735) |
+| Connected oriented, conn complement | 100 | 2*A086345 - A001174 |
+| Connected antisym, conn complement | 80 | 2*A101460 - A083670 |
+| Connected oriented up to arc reversal | 80 | InvEuler(A054934) |
+| Connected digraphs up to arc reversal | 80 | InvEuler(A054933) |
 | 6-ary relations on n nodes | 14 | Burnside on [n]^6 |
-| 7-ary relations on n nodes | ~12 | Burnside on [n]^7 |
+| 7-ary relations on n nodes | 10 | Burnside on [n]^7 |
+| 8-ary relations on n nodes | 7 | Burnside on [n]^8 |
+| 9-ary relations on n nodes | 5 | Burnside on [n]^9 |
+| 10-ary relations on n nodes | 5 | Burnside on [n]^10 |
+
+### Newly extended OEIS sequences (opus-S50 session 2)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A000612 | Hypergraphs on n nodes | 13 | 20+ | +7+ | Extending |
+| A003049 | Connected Euler graphs | 88 | 110 | +22 | Complete |
+| A054915 | Connected graphs, conn complement | 50 | 100 | +50 | Complete |
+| A054918 | Connected digraphs, conn complement | 50 | 100 | +50 | Complete |
+| A054920 | Connected binrel, conn complement | 50 | 100 | +50 | Complete |
+| A054922 | Connected symrel, conn complement | 50 | 100 | +50 | Complete |
+| A054933 | Digraphs up to arc reversal | 50 | 80 | +30 | Complete |
 
 ## Total impact summary
 
-- **33+ OEIS sequences extended** with new b-file terms
-- **12 potentially new sequences** (connected variants and k-ary relations not yet in OEIS)
-- **~2500+ new individual terms** across all sequences
+- **40+ OEIS sequences extended** with new b-file terms
+- **25+ potentially new sequences** (connected variants and k-ary relations not yet in OEIS)
+- **~3000+ new individual terms** across all sequences
 - **Unified enumerator** handles 13 sequences in a single C file (burnside_enum_v2.c)
-- **General k-ary relation enumerator** for arbitrary k (Python)
+- **General k-ary relation enumerator** for arbitrary k (Python + C)
+- **Hypergraph enumerator** via subset-orbit Burnside formula (Python)
 
 ## Key algorithmic features
 
@@ -133,6 +161,8 @@
 | a052283_gmp.c | A052283 triangle | Digraphs by arcs, directed pair orbit GF |
 | euler_transform.py | Derived sequences | InvEuler, OGF inversion |
 | derive_trivial_sequences.py | A007869, A054928 | Averages of existing sequences |
+| k_ary_relations.py | A000662, A001377, A051241, k≥6 | General k-ary Burnside (Python) |
+| k_ary_relations_gmp.c | Same sequences (fast) | C+GMP, orders of magnitude faster |
 
 ## Sequence-specific formulas
 
