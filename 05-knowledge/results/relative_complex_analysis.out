@@ -1,0 +1,77 @@
+======================================================================
+RELATIVE COMPLEX ANALYSIS
+======================================================================
+  ... trial 0 (found 0 b3=1 tours)
+
+  Found 50 beta_3=1 tournaments
+  GOOD vertices: 311
+  BAD vertices: 39
+
+======================================================================
+Relative complex dimension profiles
+======================================================================
+
+  GOOD vertices — relative dim profiles (dim(R_p) for p=0..6):
+    [1, 6, 19, 34, 34, 19, 4]: 26
+    [1, 6, 15, 18, 10, 3, 0]: 19
+    [1, 6, 18, 30, 29, 17, 4]: 14
+    [1, 6, 15, 19, 12, 4, 0]: 14
+    [1, 6, 19, 34, 34, 20, 5]: 12
+    [1, 6, 17, 26, 21, 9, 1]: 10
+    [1, 6, 16, 22, 15, 5, 0]: 10
+    [1, 6, 15, 19, 11, 3, 0]: 9
+    [1, 6, 16, 22, 14, 4, 0]: 9
+    [1, 6, 17, 26, 20, 8, 1]: 8
+
+  BAD vertices — relative dim profiles (dim(R_p) for p=0..6):
+    [1, 6, 18, 32, 32, 17, 4]: 14
+    [1, 6, 16, 22, 15, 4, 0]: 7
+    [1, 6, 16, 23, 18, 8, 2]: 6
+    [1, 6, 18, 31, 28, 13, 3]: 4
+    [1, 6, 19, 36, 36, 19, 5]: 4
+    [1, 6, 15, 19, 12, 3, 0]: 2
+    [1, 6, 19, 37, 40, 25, 8]: 1
+    [1, 6, 17, 26, 20, 6, 0]: 1
+
+======================================================================
+Relative Euler characteristic
+======================================================================
+  GOOD: chi_rel distribution = {-1: 311}
+  BAD: chi_rel distribution = {0: 39}
+
+======================================================================
+Key observation: R_3 dimension for bad vertices
+======================================================================
+  v=2: R_dims=[1, 6, 18, 32, 32, 17, 4], chi_rel=0
+  v=3: R_dims=[1, 6, 18, 32, 32, 17, 4], chi_rel=0
+  v=3: R_dims=[1, 6, 18, 32, 32, 17, 4], chi_rel=0
+  v=6: R_dims=[1, 6, 18, 32, 32, 17, 4], chi_rel=0
+  v=1: R_dims=[1, 6, 18, 32, 32, 17, 4], chi_rel=0
+
+======================================================================
+CONCLUSION
+======================================================================
+
+  The relative complex R_p has large dimensions (R_3 >> 0), but
+  H_3(R) = 0 for BAD vertices. This means the relative boundary
+  d_4^R: R_4 -> R_3 has image equal to ker(d_3^R).
+
+  The vanishing H_3(T,T) = 0 for BAD vertices is equivalent to
+  i_*-injectivity: the H_3 class of T\v survives inclusion into T.
+
+  From the LES (using H_2(T\v) = 0):
+    H_3(T,T\v) = coker(i_*: H_3(T\v) -> H_3(T))
+
+  So H_3(T,T\v) = 0 iff i_* is SURJECTIVE.
+  Since both H_3(T) and H_3(T\v) are 1-dimensional, surjective = isomorphism.
+
+  REMAINING QUESTION: Why does i_* map the unique generator of
+  H_3(T\v) to a nonzero element of H_3(T)?
+
+  The generator z of H_3(T\v) is a cycle: d_3(z) = 0 in T\v.
+  Embedded in T, it's still a cycle: d_3^T(i(z)) = 0.
+  The question: is i(z) a boundary? i.e., is i(z) in im(d_4^T)?
+
+  The new Omega_4 content of T (paths through v) could potentially
+  have d_4-images that hit i(z). But computationally, they don't.
+

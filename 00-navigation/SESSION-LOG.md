@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S54 — CONSECUTIVE SEESAW + LES decomposition for beta_3 proof
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S53
+**Summary of work:**
+  Deep investigation of WHY i_*: H_3(T\v) → H_3(T) is injective when both are 1-dim.
+
+  KEY DISCOVERIES:
+  1. **Saturation is tautological**: delta_ker3 = delta_im4 for bad vertices is just
+     a restatement of beta_3(T) = beta_3(T\v). Not a new mechanism.
+  2. **CONSECUTIVE SEESAW (HYP-394)**: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments.
+     Exhaustive n=6, sampled n=7 (3000). Zero violations. Extends adjacent-odd seesaw.
+  3. **LES reduction**: With consecutive seesaw, i_*-injectivity reduces to H_4(T,T\v)=0.
+     Full LES: 0 → H_4(T,T\v) --δ→ H_3(T\v)=F --i*→ H_3(T)=F → H_3(T,T\v) → 0
+     δ injective, im(δ)=ker(i_*). So i_* injective ⟺ H_4^rel=0.
+  4. **H_4(T,T\v)=0 verified** (HYP-396): 80 beta_3=1 tours at n=7, 560 (T,v) pairs.
+  5. **Relative ACYCLICITY** (HYP-395): Bad vertices have ALL H_p(T,T\v)=0.
+     The inclusion T\v → T is a quasi-isomorphism. Good vertices: only H_3^rel=F.
+  6. **Paley contrast**: For Paley T_7 (b3=0, b4=6, b3_Tv=1): H_4^rel=F, δ surjective,
+     kills H_3(T\v). The large H_4 is what enables the connecting map to work.
+
+  Also verified: embedded H_3(T\v) generator survives in T's Omega coords
+  (residual 0.813), representing nonzero class in H_3(T).
+
+  Numerical instability at n=8 (negative "Betti" from SVD precision) — needs
+  better numerics (mod-p) for verification at n=8.
+
+**New contributions:** HYP-394, HYP-395, HYP-396. Updated THM-110 proof architecture.
+**Scripts:** istar_mechanism_deep.py, saturation_mechanism.py, boundary_structure.py,
+  relative_complex_analysis.py, consecutive_seesaw.py, h4_relative_check.py
+**Unresolved threads:**
+  - Algebraic proof of H_4(T,T\v)=0 (Claim I)
+  - Algebraic proof of H_3(T,T\v)≤1 (Claim II)
+  - Algebraic proof of consecutive seesaw (Claim III)
+  - Extension to n=8 with mod-p numerics
+
 ## opus-2026-03-09-S51m — Grok's 3+β₁ formula refuted; max #bad = n when β₁=1
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51l

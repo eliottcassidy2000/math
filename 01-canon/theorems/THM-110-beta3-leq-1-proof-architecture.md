@@ -218,29 +218,94 @@ Corrected dichotomy:
 | 1 | 1 | 1 | 0 |
 | 0 | 1 | 0 | 0 | ← Paley case (H_4 mechanism) |
 
+## New LES Decomposition (opus-S54)
+
+### Consecutive Seesaw (HYP-394)
+
+**beta_k * beta_{k+1} = 0 for ALL k >= 1 and ALL tournaments.**
+
+Exhaustive at n=6, sampled n=7 (3000). Zero violations. Extends the adjacent-odd
+seesaw (beta_{2k-1} * beta_{2k+1} = 0) to ALL consecutive pairs.
+
+Key consequence: when beta_3(T) = 1, beta_4(T) = 0 (and vice versa).
+
+### Full LES Picture
+
+With consecutive seesaw + beta_2=0, when beta_3(T)=1 and beta_3(T\v)=1:
+
+    H_4(T\v)=0 → H_4(T)=0 → H_4(T,T\v) --δ--> H_3(T\v)=F --i*--> H_3(T)=F → H_3(T,T\v) → 0
+
+From exactness: δ is injective and im(δ) = ker(i_*). Therefore:
+
+    i_*-injectivity ⟺ H_4(T,T\v) = 0
+
+**Verified**: 80 beta_3=1 tournaments at n=7, 60 bad vertices: H_4(T,T\v) = 0 always (HYP-396).
+
+### Relative Acyclicity for Bad Vertices (HYP-395)
+
+When beta_3(T) = 1 and beta_3(T\v) = 1:
+- ALL relative homology H_p(T,T\v) = 0 for ALL p
+- The inclusion T\v → T is a QUASI-ISOMORPHISM
+- chi_rel = 0 (confirmed)
+
+When beta_3(T) = 1 and beta_3(T\v) = 0 (good vertex):
+- H_3(T,T\v) = F, all other H_p(T,T\v) = 0
+- chi_rel = -1 (confirmed)
+
+### Paley Contrast
+
+For Paley T_7: beta_3(T) = 0, beta_4(T) = 6, beta_3(T\v) = 1.
+- H_4(T,T\v) = F, δ is surjective, kills H_3(T\v)
+- i_* = 0 (target H_3(T) = 0)
+- The connecting map δ is the "Paley mechanism" that kills H_3
+
+### Three Open Claims for the Proof
+
+**Claim I (i_*-injectivity / HYP-380):** H_4(T,T\v) = 0 when beta_3(T\v) = 1
+and beta_3(T) >= 1. Equivalent to: the relative complex is exact at degree 4
+whenever the deletion has nonzero H_3.
+
+**Claim II (relative H_3 bound / HYP-351):** dim H_3(T,T\v) <= 1 for all T, v.
+
+**Claim III (consecutive seesaw / HYP-394):** beta_k * beta_{k+1} = 0.
+This is needed to reduce i_*-injectivity to H_4(T,T\v) = 0.
+
+Together: pick any v. By induction beta_3(T\v) in {0,1}.
+- If beta_3(T\v) = 0: beta_3(T) = H_3^rel <= 1 (Claim II)
+- If beta_3(T\v) = 1: Claim III gives beta_4(T\v) = 0, Claim I gives
+  H_4^rel = 0, so i_* is iso, beta_3(T) = 1 + H_3^rel. Claim I also
+  implies H_3^rel = 0, so beta_3(T) = 1.
+
 ## Open Problems
 
-1. **Prove i_*-injectivity algebraically.** (HYP-380) Why is rank(i_*) = 1
-   when beta_3(T\v) = 1 AND beta_3(T) ≥ 1? This is the key open algebraic claim.
+1. **Prove H_4(T,T\v) = 0 when beta_3(T\v) = 1.** (Claim I / HYP-380/396)
+   The key open algebraic claim. Equivalent to relative complex exactness at
+   degree 4 for beta_3 > 0 deletions.
 
-2. **Prove relative H_3 bound algebraically.** (HYP-351) Why is dim H_3(T,T\v) <= 1?
-   The relative complex R_p consists of Omega chains through vertex v.
+2. **Prove relative H_3 bound algebraically.** (Claim II / HYP-351) Why is
+   dim H_3(T,T\v) <= 1? The relative complex R_p has large dimensions
+   (R_3 ~ 30-36 at n=7) but H_3(R) <= 1.
 
-3. **Can i_*-injectivity be proved from the seesaw?** The beta_1*beta_3 = 0
-   seesaw (THM-095) constrains the chain complex structure. Does it force
-   i_*-injectivity?
+3. **Prove consecutive seesaw.** (Claim III / HYP-394) Why can't adjacent
+   Betti numbers both be nonzero? This extends the known adjacent-odd seesaw
+   beta_{2k-1} * beta_{2k+1} = 0.
 
 4. **Extend to beta_5.** The seesaw mechanism (THM-098) predicts beta_5 in {0,1} too.
    Does the same dichotomy hold for i_*: H_5(T\v) -> H_5(T)?
 
 5. **Characterize good-vertex-free tournaments at n=8.** At n=7, only Paley
-   lacks a good vertex. What happens at n=8? Paley tournaments exist at
-   n = p where p ≡ 3 (mod 4), so P(8) doesn't exist. Are there other exceptions?
+   lacks a good vertex. What happens at n=8?
 
 ## Files
 - les_rank_i_star_v2.py — main computation (v2 = fixed mod-p arithmetic)
 - les_rank_i_star_n7.py — first version (buggy Omega coords, wrong results)
 - relative_h3_structure_deep.py — relative complex dimension analysis
+- istar_mechanism_deep.py — chain complex dimension deltas (opus-S54)
+- saturation_mechanism.py — why delta_ker3 = delta_im4 for bad vertices (opus-S54)
+- boundary_structure.py — face structure of new d_4 boundaries (opus-S54)
+- relative_complex_analysis.py — relative complex dimension profiles (opus-S54)
+- consecutive_seesaw.py — beta_k * beta_{k+1} = 0 check (opus-S54)
+- h4_relative_check.py — H_4(T,T\v) = 0 verification (opus-S54)
 
 ## See Also
 - THM-098 (Boolean odd Betti conjecture)
@@ -249,3 +314,4 @@ Corrected dichotomy:
 - THM-103 (beta_1 <= 1)
 - HYP-349+ (various beta_3 hypotheses from S46)
 - HYP-380-382 (i_*-injectivity and LES dichotomy from S47)
+- HYP-394-396 (consecutive seesaw, relative acyclicity from S54)

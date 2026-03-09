@@ -95,6 +95,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-391 | 3-cycle count is constant per score sequence for beta_3=1 at n=7 | 12 score seqs observed, each with unique c3 count. Follows from Rédei formula c3 = C(n,3) - Σ C(d_i,2) | opus-S53 |
 | HYP-392 | Paley T_7 is the ONLY good-vertex-free tournament at n=7 (exhaustive) | 240/2097152 = all labelings of Paley. |Aut(T_7)|=21, 7!/21=240. All have beta_3=0. | opus-S53 |
 | HYP-393 | beta_3 ≤ 1 at n=7 EXHAUSTIVE (2,097,152 tournaments) | Case 1: 2,096,912 with good vertex → LES gives ≤1. Case 2: 240 Paley → beta_3=0 directly | opus-S53 |
+| HYP-394 | CONSECUTIVE SEESAW: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments | Exhaustive n=6 (0 violations), sampled n=7 (3000, 0 violations). Extends adjacent-odd seesaw to ALL consecutive pairs. When b3=1: b4=0 always. When b4>0 (Paley): b3=0. | opus-S54 |
+| HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. Inclusion is quasi-isomorphism. GOOD vertices have H_3^rel=1, all others 0. | opus-S54 |
+| HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | 80 tours n=7: 560/560 (all v). Equivalent to i_*-injectivity via LES (when combined with consecutive seesaw). Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

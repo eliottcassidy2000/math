@@ -1,0 +1,54 @@
+======================================================================
+BOUNDARY STRUCTURE: Old-face projection of new d_4
+======================================================================
+
+  Found: trial=11, v=2
+  T betti: [1, 0, 0, 1, 0, 0, 0]
+  T\v betti: [1, 0, 0, 1, 0, 0]
+
+  |d_3^T(embedded z)|: 1.08e-15
+  |z - im(d_4^T)| in Omega coords: 8.13e-01
+  => z survives: i_* is INJECTIVE
+
+  Omega_4(T) decomposition:
+    Total 4-paths: 221 (78 old, 143 new)
+    Omega_4 dim: 41
+    Omega_4 'new' weight per basis: ['0.62', '0.60', '0.86', '0.71', '0.37', '0.66', '0.45', '0.61', '0.62', '0.62', '0.59', '0.59', '0.99', '0.44', '0.67', '0.46', '0.58', '0.59', '1.00', '0.88', '0.87', '0.86', '0.75', '0.86', '0.75', '0.72', '0.66', '0.87', '0.43', '0.66', '0.56', '0.64', '0.59', '0.82', '0.88', '0.75', '0.87', '0.95', '0.71', '1.00', '1.00']
+
+  Projection of embedded z onto im(d_4^T):
+    |projection|: 0.582263
+    |perpendicular|: 0.813000
+    |z|: 1.000000
+
+  |z - im(d_4^{T\v} embedded)|: 1.00e+00
+  (should be large — z is NOT a boundary in T\v)
+
+  Image dimensions:
+    rank(d_4^T): 25
+    rank(d_4^{T\v}): 6
+
+  Correlation of d_4^T columns with z:
+    max |corr|: 0.405469
+    mean |corr|: 0.147465
+    # columns with |corr| > 0.01: 40
+
+  H_3(T) generator test:
+    |z projected onto H_3(T)|: 0.813000
+    |z perpendicular to H_3(T)|: 5.82e-01
+    |z|: 1.000000
+
+======================================================================
+Part 2: Face structure of new 5-paths
+======================================================================
+  Position of v in new 5-paths:
+    position 0: 29 paths
+    position 1: 31 paths
+    position 2: 23 paths
+    position 3: 31 paths
+    position 4: 29 paths
+
+  Old faces (4-paths avoiding v) from new 5-paths:
+    91 distinct old faces generated
+    Total old 4-paths in T: 78 (as raw paths)
+    Old faces in support of z: 36/91
+    z support size: 36 paths

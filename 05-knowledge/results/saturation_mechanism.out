@@ -1,0 +1,128 @@
+======================================================================
+SATURATION MECHANISM: Why delta_ker3 = delta_im4 for bad vertices
+======================================================================
+
+Part 1: H_3 generators at n=6 (Type B)
+  Found Type B: bits=1332
+  Omega dims: [6, 15, 21, 18, 9, 3]
+  Betti: [1, 0, 0, 1, 0, 0]
+  H_3 generator shape: (63, 1)
+  H_3 generator has 36 nonzero path coefficients
+    path (1, 0, 3, 2): 0.0891
+    path (1, 2, 0, 3): -0.2673
+    path (3, 1, 2, 0): -0.1782
+    path (1, 2, 4, 0): -0.0891
+    path (4, 1, 2, 0): -0.0891
+    path (1, 0, 5, 2): -0.0891
+    path (1, 5, 2, 0): -0.0891
+    path (4, 1, 0, 3): -0.0891
+    path (4, 3, 1, 0): -0.0891
+    path (1, 0, 5, 3): -0.0891
+    ... (36 total)
+
+======================================================================
+Part 2: Embedding H_3(T\v) into T's chain complex
+======================================================================
+
+  Moving to n=7 for bad-vertex analysis...
+    ... trial 0
+
+  BAD vertex found: trial=11, v=2
+  score(v)=3
+  T betti:   [1, 0, 0, 1, 0, 0, 0]
+  T\v betti: [1, 0, 0, 1, 0, 0]
+  H_3(T\v) generator: 36 nonzero paths
+  Mapped 36/36 paths into T
+  |d_3^T(embedded)|: 1.08e-15
+  |embed - im(d_4^T)|: 8.13e-01
+  => EMBEDDED H_3 SURVIVES (not in im(d_4))
+
+  Relative complex dimensions:
+    p=0: dim(T)=7, dim(T\v)=6, relative~=1
+    p=1: dim(T)=21, dim(T\v)=15, relative~=6
+    p=2: dim(T)=39, dim(T\v)=21, relative~=18
+    p=3: dim(T)=50, dim(T\v)=18, relative~=32
+    p=4: dim(T)=41, dim(T\v)=9, relative~=32
+    p=5: dim(T)=20, dim(T\v)=3, relative~=17
+    p=6: dim(T)=4, dim(T\v)=0, relative~=4
+  delta_ker3=19, delta_im4=19, diff=0
+
+======================================================================
+Part 3: Relative complex for ALL vertex types at n=7
+======================================================================
+    ... trial 0
+
+  Collected data from 30 beta_3=1 tournaments
+  GOOD vertices: 191
+  BAD vertices: 19
+
+  GOOD vertices — delta distributions:
+    p: (delta_dim, delta_rank) distribution
+    p=0: {(1, 0): 191}
+    p=1: {(6, 1): 191}
+    p=2: {(19, 5): 48, (18, 5): 47, (17, 5): 30, (16, 5): 28, (20, 5): 16}
+    p=3: {(34, 14): 21, (35, 14): 19, (22, 11): 13, (32, 13): 12, (30, 13): 12}
+    p=4: {(34, 19): 20, (15, 10): 10, (35, 20): 8, (30, 16): 7, (20, 13): 7}
+    p=5: {(19, 15): 24, (16, 13): 15, (5, 5): 14, (18, 14): 11, (8, 7): 9}
+    p=6: {(4, 4): 51, (3, 3): 41, (0, 0): 35, (1, 1): 21, (5, 5): 12}
+
+  BAD vertices — delta distributions:
+    p: (delta_dim, delta_rank) distribution
+    p=0: {(1, 0): 19}
+    p=1: {(6, 1): 19}
+    p=2: {(18, 5): 6, (15, 5): 4, (19, 5): 4, (16, 5): 3, (17, 5): 2}
+    p=3: {(32, 13): 5, (19, 10): 4, (26, 12): 2, (36, 14): 2, (23, 11): 2}
+    p=4: {(32, 19): 5, (12, 9): 4, (20, 14): 2, (36, 22): 2, (18, 12): 2}
+    p=5: {(17, 13): 5, (3, 3): 4, (6, 6): 2, (19, 14): 2, (8, 6): 2}
+    p=6: {(0, 0): 7, (4, 4): 5, (5, 5): 2, (2, 2): 2, (8, 8): 2}
+
+======================================================================
+Part 4: Algebraic interpretation
+======================================================================
+
+  SATURATION THEOREM (computed):
+
+  For beta_3(T) = 1 tournaments and any vertex v:
+
+  GOOD vertex (beta_3(T\v) = 0):
+    delta_ker3 = delta_im4 + 1
+    H_3(T, T\v) ≅ F  (1-dimensional)
+    H_3(T) ≅ H_3(T, T\v)  (isomorphism from LES)
+
+  BAD vertex (beta_3(T\v) = 1):
+    delta_ker3 = delta_im4  (SATURATION)
+    H_3(T, T\v) = 0
+    i_*: H_3(T\v) -> H_3(T) is an ISOMORPHISM
+
+  The saturation condition means: adding vertex v creates new
+  kernel in d_3 AND new image in d_4 in PERFECTLY EQUAL amounts.
+  No new homology is created — the H_3 class passes through.
+
+  This is equivalent to: the H_3 generator of T\v, when embedded
+  into T's chain complex, is NOT killed by the new d_4 boundaries.
+
+  ALGEBRAIC INTERPRETATION:
+  The new Omega_4 chains through v have their d_4-images in the
+  "new" part of Omega_3 (chains through v), NOT in the "old" part
+  (chains avoiding v). The boundary of a path through v always
+  involves at least one face through v (specifically, the face
+  obtained by removing v itself from the path).
+
+  Wait — this is exactly the RELATIVE COMPLEX structure!
+  The boundary map d_4: Omega_4 -> Omega_3 restricted to "new"
+  chains maps INTO the "new" Omega_3 space (plus the old space).
+  But the crucial point is that im(d_4) on new chains does NOT
+  hit the old H_3 generator.
+
+======================================================================
+Part 5: Does d_4(new chains) hit old Omega_3?
+======================================================================
+
+  BAD vertex v=2 (trial=11):
+  Omega_4: 221 paths (78 old, 143 new)
+  Omega_3: 131 paths (63 old, 68 new)
+  d_4(new Omega_4 -> old Omega_3) block: (63, 143), rank=63
+  => YES, d_4(new) has rank-63 overlap with old Omega_3
+  |H_3(T\v) - im(d_4^new)|: 2.52e-15
+  |H_3(T\v) - im(d_4^full)|: 4.36e-15
+  WARNING: H_3(T\v) IS in im(d_4^T)!

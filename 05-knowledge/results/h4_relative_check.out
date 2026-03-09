@@ -1,0 +1,56 @@
+======================================================================
+H_4(T,T\v) CHECK AND i_*-INJECTIVITY VIA LES
+======================================================================
+
+  Scanning n=7 tournaments...
+  ... trial 0 (found 0 b3=1)
+  ... trial 1000 (found 70 b3=1)
+
+  Results from 80 beta_3=1 tournaments:
+
+  GOOD vertices (500 total):
+    rank(i_*): {0: 500}
+    dim H_3(T,T\v): {1: 500}
+    dim H_4(T,T\v): {0: 500}
+    beta_4(T): {0: 500}
+    beta_4(T\v): {0: 500}
+
+  BAD vertices (60 total):
+    rank(i_*): {1: 60}
+    dim H_3(T,T\v): {0: 60}
+    dim H_4(T,T\v): {0: 60}
+    beta_4(T): {0: 60}
+    beta_4(T\v): {0: 60}
+
+======================================================================
+Part 2: Paley T_7
+======================================================================
+  Paley T_7 betti: [1, 0, 0, 0, 6, 0, 0]
+  v=0: b3_sub=1, rank(i_*)=0, H_3^rel=0, H_4^rel=1, b4_T=6, b4_sub=0
+  v=1: b3_sub=1, rank(i_*)=0, H_3^rel=0, H_4^rel=1, b4_T=6, b4_sub=0
+  v=2: b3_sub=1, rank(i_*)=0, H_3^rel=0, H_4^rel=1, b4_T=6, b4_sub=0
+
+======================================================================
+SUMMARY
+======================================================================
+
+  LES decomposition (b3(T)=1, consecutive seesaw):
+    H_4(T)=0, H_4(T\v)=0, H_2(T\v)=0
+
+  => 0 -> H_4(T,T\v) --δ--> H_3(T\v) --i*--> H_3(T) -> H_3(T,T\v) -> 0
+
+  For BAD vertex (b3(T\v)=1):
+    rank(i_*) = 1  =>  H_4(T,T\v) = 0, H_3(T,T\v) = 0
+    i_* is an ISOMORPHISM: H_3(T\v) ≅ H_3(T)
+
+  For GOOD vertex (b3(T\v)=0):
+    rank(i_*) = 0  =>  H_4(T,T\v) = 0, H_3(T,T\v) = F
+
+  For Paley (b3(T)=0, b3(T\v)=1):
+    rank(i_*) = 0  =>  H_4(T,T\v) = F (δ surjective, kills H_3)
+    The connecting map δ kills the H_3 of T\v
+
+  KEY INSIGHT: i_*-injectivity is equivalent to H_4(T,T\v) = 0.
+  The consecutive seesaw reduces this to a statement about the
+  connecting map δ at degree 4.
+

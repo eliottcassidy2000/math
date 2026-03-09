@@ -1,0 +1,143 @@
+======================================================================
+i_*-INJECTIVITY MECHANISM: Deep analysis
+======================================================================
+
+  Part 1: Chain complex data for beta_3=1 tournaments at n=6
+    ... 0/32768
+    ... 5000/32768
+    ... 10000/32768
+    ... 15000/32768
+    ... 20000/32768
+    ... 25000/32768
+    ... 30000/32768
+
+  Type A (1,1,1,4,4,4): 80 tournaments
+    Omega dims: [6, 15, 18, 9, 0, 0]
+    d_p ranks:  [5, 10, 8, 0, 0]
+    Betti:      [1, 0, 0, 1, 0, 0]
+    Path counts: [6, 15, 24, 27, 18, 9]
+
+  Type B (2,2,2,3,3,3): 240 tournaments
+    Omega dims: [6, 15, 21, 18, 9, 3]
+    d_p ranks:  [5, 10, 11, 6, 3]
+    Betti:      [1, 0, 0, 1, 0, 0]
+    Path counts: [6, 15, 36, 63, 78, 45]
+
+  Type A: 1 distinct dim profiles, 1 distinct rank profiles
+
+  Type B: 1 distinct dim profiles, 1 distinct rank profiles
+
+======================================================================
+Part 2: Deletion complex comparison
+======================================================================
+
+  Type B tournament (bits=1332):
+    T dims:  [6, 15, 21, 18, 9, 3]
+    T ranks: [5, 10, 11, 6, 3]
+    T betti: [1, 0, 0, 1, 0, 0]
+    T\0 (score_v=2): dims=[5, 10, 9, 4, 1], ranks=[4, 6, 3, 1], betti=[1, 0, 0, 0, 0]
+    T\1 (score_v=3): dims=[5, 10, 9, 4, 1], ranks=[4, 6, 3, 1], betti=[1, 0, 0, 0, 0]
+    T\2 (score_v=2): dims=[5, 10, 9, 4, 1], ranks=[4, 6, 3, 1], betti=[1, 0, 0, 0, 0]
+    T\3 (score_v=2): dims=[5, 10, 9, 4, 1], ranks=[4, 6, 3, 1], betti=[1, 0, 0, 0, 0]
+    T\4 (score_v=3): dims=[5, 10, 9, 4, 1], ranks=[4, 6, 3, 1], betti=[1, 0, 0, 0, 0]
+    T\5 (score_v=3): dims=[5, 10, 9, 4, 1], ranks=[4, 6, 3, 1], betti=[1, 0, 0, 0, 0]
+
+======================================================================
+Part 3: Delta dimensions (T vs T\v)
+======================================================================
+
+  Type A (bits=87):
+
+    Vertex v=0 (score=4):
+      p=0: dim(Omega_p^T)=6, dim(Omega_p^T\v)=5, delta_dim=1, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=1: dim(Omega_p^T)=15, dim(Omega_p^T\v)=10, delta_dim=5, rank(d_p^T)=5, rank(d_p^T\v)=4, delta_rank=1
+      p=2: dim(Omega_p^T)=18, dim(Omega_p^T\v)=9, delta_dim=9, rank(d_p^T)=10, rank(d_p^T\v)=6, delta_rank=4
+      p=3: dim(Omega_p^T)=9, dim(Omega_p^T\v)=3, delta_dim=6, rank(d_p^T)=8, rank(d_p^T\v)=3, delta_rank=5
+      p=4: dim(Omega_p^T)=0, dim(Omega_p^T\v)=0, delta_dim=0, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=5: dim(Omega_p^T)=0, dim(Omega_p^T\v)=0, delta_dim=0, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+
+    Vertex v=1 (score=1):
+      p=0: dim(Omega_p^T)=6, dim(Omega_p^T\v)=5, delta_dim=1, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=1: dim(Omega_p^T)=15, dim(Omega_p^T\v)=10, delta_dim=5, rank(d_p^T)=5, rank(d_p^T\v)=4, delta_rank=1
+      p=2: dim(Omega_p^T)=18, dim(Omega_p^T\v)=9, delta_dim=9, rank(d_p^T)=10, rank(d_p^T\v)=6, delta_rank=4
+      p=3: dim(Omega_p^T)=9, dim(Omega_p^T\v)=3, delta_dim=6, rank(d_p^T)=8, rank(d_p^T\v)=3, delta_rank=5
+      p=4: dim(Omega_p^T)=0, dim(Omega_p^T\v)=0, delta_dim=0, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=5: dim(Omega_p^T)=0, dim(Omega_p^T\v)=0, delta_dim=0, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+
+    Vertex v=2 (score=1):
+      p=0: dim(Omega_p^T)=6, dim(Omega_p^T\v)=5, delta_dim=1, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=1: dim(Omega_p^T)=15, dim(Omega_p^T\v)=10, delta_dim=5, rank(d_p^T)=5, rank(d_p^T\v)=4, delta_rank=1
+      p=2: dim(Omega_p^T)=18, dim(Omega_p^T\v)=9, delta_dim=9, rank(d_p^T)=10, rank(d_p^T\v)=6, delta_rank=4
+      p=3: dim(Omega_p^T)=9, dim(Omega_p^T\v)=3, delta_dim=6, rank(d_p^T)=8, rank(d_p^T\v)=3, delta_rank=5
+      p=4: dim(Omega_p^T)=0, dim(Omega_p^T\v)=0, delta_dim=0, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=5: dim(Omega_p^T)=0, dim(Omega_p^T\v)=0, delta_dim=0, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+
+  Type B (bits=1332):
+
+    Vertex v=0 (score=2):
+      p=0: dim(Omega_p^T)=6, dim(Omega_p^T\v)=5, delta_dim=1, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=1: dim(Omega_p^T)=15, dim(Omega_p^T\v)=10, delta_dim=5, rank(d_p^T)=5, rank(d_p^T\v)=4, delta_rank=1
+      p=2: dim(Omega_p^T)=21, dim(Omega_p^T\v)=9, delta_dim=12, rank(d_p^T)=10, rank(d_p^T\v)=6, delta_rank=4
+      p=3: dim(Omega_p^T)=18, dim(Omega_p^T\v)=4, delta_dim=14, rank(d_p^T)=11, rank(d_p^T\v)=3, delta_rank=8
+      p=4: dim(Omega_p^T)=9, dim(Omega_p^T\v)=1, delta_dim=8, rank(d_p^T)=6, rank(d_p^T\v)=1, delta_rank=5
+      p=5: dim(Omega_p^T)=3, dim(Omega_p^T\v)=0, delta_dim=3, rank(d_p^T)=3, rank(d_p^T\v)=0, delta_rank=3
+
+    Vertex v=1 (score=3):
+      p=0: dim(Omega_p^T)=6, dim(Omega_p^T\v)=5, delta_dim=1, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=1: dim(Omega_p^T)=15, dim(Omega_p^T\v)=10, delta_dim=5, rank(d_p^T)=5, rank(d_p^T\v)=4, delta_rank=1
+      p=2: dim(Omega_p^T)=21, dim(Omega_p^T\v)=9, delta_dim=12, rank(d_p^T)=10, rank(d_p^T\v)=6, delta_rank=4
+      p=3: dim(Omega_p^T)=18, dim(Omega_p^T\v)=4, delta_dim=14, rank(d_p^T)=11, rank(d_p^T\v)=3, delta_rank=8
+      p=4: dim(Omega_p^T)=9, dim(Omega_p^T\v)=1, delta_dim=8, rank(d_p^T)=6, rank(d_p^T\v)=1, delta_rank=5
+      p=5: dim(Omega_p^T)=3, dim(Omega_p^T\v)=0, delta_dim=3, rank(d_p^T)=3, rank(d_p^T\v)=0, delta_rank=3
+
+    Vertex v=2 (score=2):
+      p=0: dim(Omega_p^T)=6, dim(Omega_p^T\v)=5, delta_dim=1, rank(d_p^T)=0, rank(d_p^T\v)=0, delta_rank=0
+      p=1: dim(Omega_p^T)=15, dim(Omega_p^T\v)=10, delta_dim=5, rank(d_p^T)=5, rank(d_p^T\v)=4, delta_rank=1
+      p=2: dim(Omega_p^T)=21, dim(Omega_p^T\v)=9, delta_dim=12, rank(d_p^T)=10, rank(d_p^T\v)=6, delta_rank=4
+      p=3: dim(Omega_p^T)=18, dim(Omega_p^T\v)=4, delta_dim=14, rank(d_p^T)=11, rank(d_p^T\v)=3, delta_rank=8
+      p=4: dim(Omega_p^T)=9, dim(Omega_p^T\v)=1, delta_dim=8, rank(d_p^T)=6, rank(d_p^T\v)=1, delta_rank=5
+      p=5: dim(Omega_p^T)=3, dim(Omega_p^T\v)=0, delta_dim=3, rank(d_p^T)=3, rank(d_p^T\v)=0, delta_rank=3
+
+======================================================================
+Part 4: Saturation check (delta ker(d_3) vs delta im(d_4))
+======================================================================
+    ... trial 0
+    ... trial 300
+    ... trial 600
+
+  Found 50 beta_3=1 tournaments at n=7
+
+  GOOD vertices:
+    (delta_ker3, delta_im4): count
+    (6, 5): 3 (delta_beta3 = 1)
+    (7, 6): 2 (delta_beta3 = 1)
+    (8, 7): 19 (delta_beta3 = 1)
+    (9, 8): 25 (delta_beta3 = 1)
+    (10, 9): 12 (delta_beta3 = 1)
+    (11, 10): 19 (delta_beta3 = 1)
+    (12, 11): 12 (delta_beta3 = 1)
+    (13, 12): 16 (delta_beta3 = 1)
+    (14, 13): 34 (delta_beta3 = 1)
+    (15, 14): 13 (delta_beta3 = 1)
+    (16, 15): 19 (delta_beta3 = 1)
+    (17, 16): 22 (delta_beta3 = 1)
+    (18, 17): 7 (delta_beta3 = 1)
+    (19, 18): 12 (delta_beta3 = 1)
+    (20, 19): 43 (delta_beta3 = 1)
+    (21, 20): 26 (delta_beta3 = 1)
+    (22, 21): 10 (delta_beta3 = 1)
+    (23, 22): 3 (delta_beta3 = 1)
+    (24, 23): 6 (delta_beta3 = 1)
+    (25, 24): 4 (delta_beta3 = 1)
+    (26, 25): 4 (delta_beta3 = 1)
+
+  BAD vertices:
+    (delta_ker3, delta_im4): count
+    (9, 9): 2 (delta_beta3 = 0)
+    (11, 11): 7 (delta_beta3 = 0)
+    (12, 12): 6 (delta_beta3 = 0)
+    (14, 14): 1 (delta_beta3 = 0)
+    (18, 18): 4 (delta_beta3 = 0)
+    (19, 19): 14 (delta_beta3 = 0)
+    (22, 22): 4 (delta_beta3 = 0)
+    (23, 23): 1 (delta_beta3 = 0)
