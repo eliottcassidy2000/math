@@ -1,0 +1,42 @@
+=== Verifying c_4 closed-form v3 ===
+Tested 683 partitions for n=1..15: ALL OK [1.06s]
+
+=== Benchmark: Burnside vs closed-form for n=20 ===
+  Burnside:    1.559s for 627 partitions
+  Closed-form: 1.029s for 627 partitions
+  Speedup: 1.5x
+
+Done.
+
+n=15: 176 partitions, max L = 105
+  Worst partition: [(7, 1), (5, 1), (3, 1)]
+  High-L partitions (L > 10): 97
+  Burnside:    0.087s
+  Closed-form: 0.199s
+  Speedup: 0.4x
+  Worst-case single: Burnside 0.0109s, closed-form 0.0002s, speedup 44.8x
+
+n=20: 627 partitions, max L = 420
+  Worst partition: [(7, 1), (5, 1), (4, 1), (3, 1), (1, 1)]
+  High-L partitions (L > 42): 134
+  Burnside:    1.602s
+  Closed-form: 1.062s
+  Speedup: 1.5x
+  Worst-case single: Burnside 0.0630s, closed-form 0.0011s, speedup 58.2x
+
+n=25: 1958 partitions, max L = 1260
+  Worst partition: [(9, 1), (7, 1), (5, 1), (4, 1)]
+  High-L partitions (L > 126): 232
+  Burnside:    9.487s
+  Closed-form: 4.737s
+  Speedup: 2.0x
+  Worst-case single: Burnside 0.1305s, closed-form 0.0006s, speedup 203.8x
+
+n=30: 5604 partitions, max L = 4620
+  Worst partition: [(11, 1), (7, 1), (5, 1), (4, 1), (3, 1)]
+  High-L partitions (L > 462): 206
+  (Burnside on 20 high-L only)
+  Burnside:    0.800s
+  Closed-form: 0.095s
+  Speedup: 8.5x
+  Worst-case single: Burnside 0.3445s, closed-form 0.0004s, speedup 795.0x

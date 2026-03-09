@@ -1,0 +1,64 @@
+=== Verifying single-part formula for c_4 ===
+Single-part formula verified!
+
+=== Pair interaction terms for c_4 ===
+Testing c_4([(r,mr),(s,ms)]) = single(r,mr) + single(s,ms) + cross(r,s,mr,ms)
+  r=1 s=3 mr=1 ms=1: cross=1, g=1, L=3
+  r=1 s=4 mr=1 ms=1: cross=1, g=1, L=4
+  r=1 s=5 mr=1 ms=1: cross=2, g=1, L=5
+  r=1 s=6 mr=1 ms=1: cross=4, g=1, L=6
+  r=1 s=7 mr=1 ms=1: cross=5, g=1, L=7
+  r=2 s=3 mr=1 ms=1: cross=2, g=1, L=6
+  r=2 s=4 mr=1 ms=1: cross=4, g=2, L=4
+  r=2 s=5 mr=1 ms=1: cross=4, g=1, L=10
+  r=2 s=6 mr=1 ms=1: cross=11, g=2, L=6
+  r=2 s=7 mr=1 ms=1: cross=8, g=1, L=14
+  r=3 s=4 mr=1 ms=1: cross=4, g=1, L=12
+  r=3 s=5 mr=1 ms=1: cross=5, g=1, L=15
+  r=3 s=6 mr=1 ms=1: cross=20, g=3, L=6
+  r=3 s=7 mr=1 ms=1: cross=9, g=1, L=21
+  r=4 s=5 mr=1 ms=1: cross=7, g=1, L=20
+  r=4 s=6 mr=1 ms=1: cross=20, g=2, L=12
+  r=4 s=7 mr=1 ms=1: cross=12, g=1, L=28
+  r=5 s=6 mr=1 ms=1: cross=12, g=1, L=30
+  r=5 s=7 mr=1 ms=1: cross=13, g=1, L=35
+  r=6 s=7 mr=1 ms=1: cross=18, g=1, L=42
+
+=== Cross term for single cycles: c_4_cross(r, s) ===
+  r=1 s=3: cross=1 = c13:1 + c22:0 + c31:0, g=1
+  r=1 s=4: cross=1 = c13:1 + c22:0 + c31:0, g=1
+  r=1 s=5: cross=2 = c13:2 + c22:0 + c31:0, g=1
+  r=1 s=6: cross=4 = c13:4 + c22:0 + c31:0, g=1
+  r=1 s=7: cross=5 = c13:5 + c22:0 + c31:0, g=1
+  r=1 s=8: cross=7 = c13:7 + c22:0 + c31:0, g=1
+  r=1 s=9: cross=10 = c13:10 + c22:0 + c31:0, g=1
+  r=2 s=3: cross=2 = c13:1 + c22:1 + c31:0, g=1
+  r=2 s=4: cross=4 = c13:2 + c22:2 + c31:0, g=2
+  r=2 s=5: cross=4 = c13:2 + c22:2 + c31:0, g=1
+  r=2 s=6: cross=11 = c13:8 + c22:3 + c31:0, g=2
+  r=2 s=7: cross=8 = c13:5 + c22:3 + c31:0, g=1
+  r=2 s=8: cross=18 = c13:14 + c22:4 + c31:0, g=2
+  r=2 s=9: cross=14 = c13:10 + c22:4 + c31:0, g=1
+  r=3 s=4: cross=4 = c13:1 + c22:2 + c31:1, g=1
+  r=3 s=5: cross=5 = c13:2 + c22:2 + c31:1, g=1
+  r=3 s=6: cross=20 = c13:10 + c22:9 + c31:1, g=3
+  r=3 s=7: cross=9 = c13:5 + c22:3 + c31:1, g=1
+  r=3 s=8: cross=12 = c13:7 + c22:4 + c31:1, g=1
+  r=3 s=9: cross=43 = c13:30 + c22:12 + c31:1, g=3
+  r=4 s=5: cross=7 = c13:2 + c22:4 + c31:1, g=1
+  r=4 s=6: cross=20 = c13:8 + c22:10 + c31:2, g=2
+  r=4 s=7: cross=12 = c13:5 + c22:6 + c31:1, g=1
+  r=4 s=8: cross=56 = c13:28 + c22:24 + c31:4, g=4
+  r=4 s=9: cross=19 = c13:10 + c22:8 + c31:1, g=1
+  r=5 s=6: cross=12 = c13:4 + c22:6 + c31:2, g=1
+  r=5 s=7: cross=13 = c13:5 + c22:6 + c31:2, g=1
+  r=5 s=8: cross=17 = c13:7 + c22:8 + c31:2, g=1
+  r=5 s=9: cross=20 = c13:10 + c22:8 + c31:2, g=1
+  r=6 s=7: cross=18 = c13:5 + c22:9 + c31:4, g=1
+  r=6 s=8: cross=42 = c13:14 + c22:20 + c31:8, g=2
+  r=6 s=9: cross=76 = c13:30 + c22:36 + c31:10, g=3
+  r=7 s=8: cross=24 = c13:7 + c22:12 + c31:5, g=1
+  r=7 s=9: cross=27 = c13:10 + c22:12 + c31:5, g=1
+  r=8 s=9: cross=33 = c13:10 + c22:16 + c31:7, g=1
+
+Done phase 1.

@@ -1,0 +1,2017 @@
+=== Verifying c_4 closed-form against Burnside reference ===
+  MISMATCH n=4 [(3, 1), (1, 1)]: ref=1 cf=0
+  MISMATCH n=5 [(4, 1), (1, 1)]: ref=2 cf=1
+  MISMATCH n=5 [(3, 1), (2, 1)]: ref=2 cf=1
+  MISMATCH n=5 [(3, 1), (1, 2)]: ref=3 cf=1
+  MISMATCH n=5 [(2, 2), (1, 1)]: ref=3 cf=1
+  MISMATCH n=6 [(5, 1), (1, 1)]: ref=3 cf=1
+  MISMATCH n=6 [(4, 1), (2, 1)]: ref=5 cf=3
+  MISMATCH n=6 [(4, 1), (1, 2)]: ref=5 cf=3
+  MISMATCH n=6 [(3, 1), (2, 1), (1, 1)]: ref=5 cf=1
+  MISMATCH n=6 [(3, 1), (1, 3)]: ref=7 cf=4
+  MISMATCH n=6 [(2, 2), (1, 2)]: ref=9 cf=5
+  MISMATCH n=7 [(6, 1), (1, 1)]: ref=7 cf=3
+  MISMATCH n=7 [(5, 1), (2, 1)]: ref=5 cf=3
+  MISMATCH n=7 [(5, 1), (1, 2)]: ref=7 cf=3
+  MISMATCH n=7 [(4, 1), (3, 1)]: ref=5 cf=4
+  MISMATCH n=7 [(4, 1), (2, 1), (1, 1)]: ref=11 cf=3
+  MISMATCH n=7 [(4, 1), (1, 3)]: ref=11 cf=8
+  MISMATCH n=7 [(3, 1), (2, 1), (1, 2)]: ref=11 cf=4
+  MISMATCH n=7 [(3, 1), (2, 2)]: ref=9 cf=7
+  MISMATCH n=7 [(3, 1), (1, 4)]: ref=15 cf=11
+  MISMATCH n=7 [(3, 2), (1, 1)]: ref=13 cf=5
+  MISMATCH n=7 [(2, 2), (1, 3)]: ref=21 cf=15
+  MISMATCH n=7 [(2, 3), (1, 1)]: ref=19 cf=9
+  MISMATCH n=8 [(7, 1), (1, 1)]: ref=10 cf=5
+  MISMATCH n=8 [(6, 1), (2, 1)]: ref=14 cf=6
+  MISMATCH n=8 [(6, 1), (1, 2)]: ref=14 cf=6
+  MISMATCH n=8 [(5, 1), (3, 1)]: ref=6 cf=4
+  MISMATCH n=8 [(5, 1), (2, 1), (1, 1)]: ref=10 cf=3
+  MISMATCH n=8 [(5, 1), (1, 3)]: ref=14 cf=8
+  MISMATCH n=8 [(4, 1), (3, 1), (1, 1)]: ref=10 cf=4
+  MISMATCH n=8 [(4, 1), (2, 1), (1, 2)]: ref=22 cf=8
+  MISMATCH n=8 [(4, 1), (2, 2)]: ref=22 cf=18
+  MISMATCH n=8 [(4, 1), (1, 4)]: ref=22 cf=18
+  MISMATCH n=8 [(3, 1), (2, 1), (1, 3)]: ref=22 cf=12
+  MISMATCH n=8 [(3, 1), (2, 2), (1, 1)]: ref=18 cf=7
+  MISMATCH n=8 [(3, 1), (1, 5)]: ref=30 cf=25
+  MISMATCH n=8 [(3, 2), (2, 1)]: ref=18 cf=10
+  MISMATCH n=8 [(3, 2), (1, 2)]: ref=26 cf=10
+  MISMATCH n=8 [(2, 2), (1, 4)]: ref=42 cf=34
+  MISMATCH n=8 [(2, 3), (1, 2)]: ref=38 cf=18
+  MISMATCH n=9 [(8, 1), (1, 1)]: ref=17 cf=10
+  MISMATCH n=9 [(7, 1), (2, 1)]: ref=13 cf=8
+  MISMATCH n=9 [(7, 1), (1, 2)]: ref=18 cf=8
+  MISMATCH n=9 [(6, 1), (3, 1)]: ref=23 cf=13
+  MISMATCH n=9 [(6, 1), (2, 1), (1, 1)]: ref=24 cf=6
+  MISMATCH n=9 [(6, 1), (1, 3)]: ref=25 cf=13
+  MISMATCH n=9 [(5, 1), (4, 1)]: ref=9 cf=7
+  MISMATCH n=9 [(5, 1), (3, 1), (1, 1)]: ref=12 cf=4
+  MISMATCH n=9 [(5, 1), (2, 1), (1, 2)]: ref=19 cf=7
+  MISMATCH n=9 [(5, 1), (2, 2)]: ref=16 cf=12
+  MISMATCH n=9 [(5, 1), (1, 4)]: ref=26 cf=18
+  MISMATCH n=9 [(4, 1), (3, 1), (2, 1)]: ref=18 cf=8
+  MISMATCH n=9 [(4, 1), (3, 1), (1, 2)]: ref=19 cf=8
+  MISMATCH n=9 [(4, 1), (2, 1), (1, 3)]: ref=40 cf=20
+  MISMATCH n=9 [(4, 1), (2, 2), (1, 1)]: ref=39 cf=18
+  MISMATCH n=9 [(4, 1), (1, 5)]: ref=41 cf=36
+  MISMATCH n=9 [(4, 2), (1, 1)]: ref=34 cf=20
+  MISMATCH n=9 [(3, 1), (2, 1), (1, 4)]: ref=41 cf=28
+  MISMATCH n=9 [(3, 1), (2, 2), (1, 2)]: ref=34 cf=14
+  MISMATCH n=9 [(3, 1), (2, 3)]: ref=31 cf=28
+  MISMATCH n=9 [(3, 1), (1, 6)]: ref=56 cf=50
+  MISMATCH n=9 [(3, 2), (2, 1), (1, 1)]: ref=33 cf=10
+  MISMATCH n=9 [(3, 2), (1, 3)]: ref=46 cf=22
+  MISMATCH n=9 [(2, 2), (1, 5)]: ref=76 cf=66
+  MISMATCH n=9 [(2, 3), (1, 3)]: ref=69 cf=39
+  MISMATCH n=9 [(2, 4), (1, 1)]: ref=66 cf=38
+  MISMATCH n=10 [(9, 1), (1, 1)]: ref=24 cf=14
+  MISMATCH n=10 [(8, 1), (2, 1)]: ref=28 cf=14
+  MISMATCH n=10 [(8, 1), (1, 2)]: ref=28 cf=14
+  MISMATCH n=10 [(7, 1), (3, 1)]: ref=14 cf=9
+  MISMATCH n=10 [(7, 1), (2, 1), (1, 1)]: ref=22 cf=8
+  MISMATCH n=10 [(7, 1), (1, 3)]: ref=30 cf=15
+  MISMATCH n=10 [(6, 1), (4, 1)]: ref=24 cf=16
+  MISMATCH n=10 [(6, 1), (3, 1), (1, 1)]: ref=40 cf=13
+  MISMATCH n=10 [(6, 1), (2, 1), (1, 2)]: ref=40 cf=12
+  MISMATCH n=10 [(6, 1), (2, 2)]: ref=40 cf=24
+  MISMATCH n=10 [(6, 1), (1, 4)]: ref=42 cf=26
+  MISMATCH n=10 [(5, 1), (4, 1), (1, 1)]: ref=16 cf=7
+  MISMATCH n=10 [(5, 1), (3, 1), (2, 1)]: ref=16 cf=8
+  MISMATCH n=10 [(5, 1), (3, 1), (1, 2)]: ref=22 cf=8
+  MISMATCH n=10 [(5, 1), (2, 1), (1, 3)]: ref=34 cf=17
+  MISMATCH n=10 [(5, 1), (2, 2), (1, 1)]: ref=28 cf=12
+  MISMATCH n=10 [(5, 1), (1, 5)]: ref=46 cf=36
+  MISMATCH n=10 [(4, 1), (3, 1), (2, 1), (1, 1)]: ref=32 cf=10
+  MISMATCH n=10 [(4, 1), (3, 1), (1, 3)]: ref=34 cf=18
+  MISMATCH n=10 [(4, 1), (3, 2)]: ref=26 cf=24
+  MISMATCH n=10 [(4, 1), (2, 1), (1, 4)]: ref=68 cf=42
+  MISMATCH n=10 [(4, 1), (2, 2), (1, 2)]: ref=66 cf=28
+  MISMATCH n=10 [(4, 1), (2, 3)]: ref=66 cf=60
+  MISMATCH n=10 [(4, 1), (1, 6)]: ref=72 cf=66
+  MISMATCH n=10 [(4, 2), (2, 1)]: ref=56 cf=28
+  MISMATCH n=10 [(4, 2), (1, 2)]: ref=56 cf=28
+  MISMATCH n=10 [(3, 1), (2, 1), (1, 5)]: ref=72 cf=56
+  MISMATCH n=10 [(3, 1), (2, 2), (1, 3)]: ref=60 cf=31
+  MISMATCH n=10 [(3, 1), (2, 3), (1, 1)]: ref=54 cf=28
+  MISMATCH n=10 [(3, 1), (1, 7)]: ref=98 cf=91
+  MISMATCH n=10 [(3, 2), (2, 1), (1, 2)]: ref=56 cf=18
+  MISMATCH n=10 [(3, 2), (2, 2)]: ref=46 cf=30
+  MISMATCH n=10 [(3, 2), (1, 4)]: ref=76 cf=44
+  MISMATCH n=10 [(3, 3), (1, 1)]: ref=72 cf=42
+  MISMATCH n=10 [(2, 2), (1, 6)]: ref=128 cf=116
+  MISMATCH n=10 [(2, 3), (1, 4)]: ref=116 cf=76
+  MISMATCH n=10 [(2, 4), (1, 2)]: ref=110 cf=54
+  MISMATCH n=11 [(10, 1), (1, 1)]: ref=34 cf=22
+  MISMATCH n=11 [(9, 1), (2, 1)]: ref=28 cf=18
+  MISMATCH n=11 [(9, 1), (1, 2)]: ref=38 cf=18
+  MISMATCH n=11 [(8, 1), (3, 1)]: ref=22 cf=15
+  MISMATCH n=11 [(8, 1), (2, 1), (1, 1)]: ref=44 cf=14
+  MISMATCH n=11 [(8, 1), (1, 3)]: ref=44 cf=23
+  MISMATCH n=11 [(7, 1), (4, 1)]: ref=18 cf=13
+  MISMATCH n=11 [(7, 1), (3, 1), (1, 1)]: ref=24 cf=9
+  MISMATCH n=11 [(7, 1), (2, 1), (1, 2)]: ref=36 cf=13
+  MISMATCH n=11 [(7, 1), (2, 2)]: ref=30 cf=20
+  MISMATCH n=11 [(7, 1), (1, 4)]: ref=48 cf=28
+  MISMATCH n=11 [(6, 1), (5, 1)]: ref=16 cf=12
+  MISMATCH n=11 [(6, 1), (4, 1), (1, 1)]: ref=38 cf=16
+  MISMATCH n=11 [(6, 1), (3, 1), (2, 1)]: ref=60 cf=20
+  MISMATCH n=11 [(6, 1), (3, 1), (1, 2)]: ref=64 cf=20
+  MISMATCH n=11 [(6, 1), (2, 1), (1, 3)]: ref=64 cf=26
+  MISMATCH n=11 [(6, 1), (2, 2), (1, 1)]: ref=62 cf=24
+  MISMATCH n=11 [(6, 1), (1, 5)]: ref=68 cf=48
+  MISMATCH n=11 [(5, 1), (4, 1), (2, 1)]: ref=26 cf=12
+  MISMATCH n=11 [(5, 1), (4, 1), (1, 2)]: ref=28 cf=12
+  MISMATCH n=11 [(5, 1), (3, 1), (2, 1), (1, 1)]: ref=28 cf=9
+  MISMATCH n=11 [(5, 1), (3, 1), (1, 3)]: ref=38 cf=18
+  MISMATCH n=11 [(5, 1), (3, 2)]: ref=28 cf=24
+  MISMATCH n=11 [(5, 1), (2, 1), (1, 4)]: ref=58 cf=36
+  MISMATCH n=11 [(5, 1), (2, 2), (1, 2)]: ref=48 cf=20
+  MISMATCH n=11 [(5, 1), (2, 3)]: ref=44 cf=38
+  MISMATCH n=11 [(5, 1), (1, 6)]: ref=78 cf=66
+  MISMATCH n=11 [(5, 2), (1, 1)]: ref=66 cf=42
+  MISMATCH n=11 [(4, 1), (3, 1), (2, 1), (1, 2)]: ref=54 cf=20
+  MISMATCH n=11 [(4, 1), (3, 1), (2, 2)]: ref=52 cf=33
+  MISMATCH n=11 [(4, 1), (3, 1), (1, 4)]: ref=58 cf=37
+  MISMATCH n=11 [(4, 1), (3, 2), (1, 1)]: ref=44 cf=24
+  MISMATCH n=11 [(4, 1), (2, 1), (1, 5)]: ref=110 cf=78
+  MISMATCH n=11 [(4, 1), (2, 2), (1, 3)]: ref=106 cf=51
+  MISMATCH n=11 [(4, 1), (2, 3), (1, 1)]: ref=104 cf=60
+  MISMATCH n=11 [(4, 1), (1, 7)]: ref=120 cf=113
+  MISMATCH n=11 [(4, 2), (3, 1)]: ref=44 cf=30
+  MISMATCH n=11 [(4, 2), (2, 1), (1, 1)]: ref=88 cf=28
+  MISMATCH n=11 [(4, 2), (1, 3)]: ref=88 cf=46
+  MISMATCH n=11 [(3, 1), (2, 1), (1, 6)]: ref=120 cf=101
+  MISMATCH n=11 [(3, 1), (2, 2), (1, 4)]: ref=100 cf=62
+  MISMATCH n=11 [(3, 1), (2, 3), (1, 2)]: ref=90 cf=41
+  MISMATCH n=11 [(3, 1), (2, 4)]: ref=86 cf=82
+  MISMATCH n=11 [(3, 1), (1, 8)]: ref=162 cf=154
+  MISMATCH n=11 [(3, 2), (2, 1), (1, 3)]: ref=90 cf=37
+  MISMATCH n=11 [(3, 2), (2, 2), (1, 1)]: ref=74 cf=30
+  MISMATCH n=11 [(3, 2), (1, 5)]: ref=120 cf=80
+  MISMATCH n=11 [(3, 3), (2, 1)]: ref=84 cf=54
+  MISMATCH n=11 [(3, 3), (1, 2)]: ref=114 cf=54
+  MISMATCH n=11 [(2, 2), (1, 7)]: ref=204 cf=190
+  MISMATCH n=11 [(2, 3), (1, 5)]: ref=184 cf=134
+  MISMATCH n=11 [(2, 4), (1, 3)]: ref=174 cf=90
+  MISMATCH n=11 [(2, 5), (1, 1)]: ref=170 cf=110
+  MISMATCH n=12 [(11, 1), (1, 1)]: ref=45 cf=30
+  MISMATCH n=12 [(10, 1), (2, 1)]: ref=51 cf=27
+  MISMATCH n=12 [(10, 1), (1, 2)]: ref=51 cf=27
+  MISMATCH n=12 [(9, 1), (3, 1)]: ref=57 cf=27
+  MISMATCH n=12 [(9, 1), (2, 1), (1, 1)]: ref=43 cf=18
+  MISMATCH n=12 [(9, 1), (1, 3)]: ref=57 cf=27
+  MISMATCH n=12 [(8, 1), (4, 1)]: ref=67 cf=39
+  MISMATCH n=12 [(8, 1), (3, 1), (1, 1)]: ref=35 cf=15
+  MISMATCH n=12 [(8, 1), (2, 1), (1, 2)]: ref=67 cf=21
+  MISMATCH n=12 [(8, 1), (2, 2)]: ref=67 cf=39
+  MISMATCH n=12 [(8, 1), (1, 4)]: ref=67 cf=39
+  MISMATCH n=12 [(7, 1), (5, 1)]: ref=19 cf=14
+  MISMATCH n=12 [(7, 1), (4, 1), (1, 1)]: ref=29 cf=13
+  MISMATCH n=12 [(7, 1), (3, 1), (2, 1)]: ref=29 cf=14
+  MISMATCH n=12 [(7, 1), (3, 1), (1, 2)]: ref=39 cf=14
+  MISMATCH n=12 [(7, 1), (2, 1), (1, 3)]: ref=57 cf=25
+  MISMATCH n=12 [(7, 1), (2, 2), (1, 1)]: ref=47 cf=20
+  MISMATCH n=12 [(7, 1), (1, 5)]: ref=75 cf=50
+  MISMATCH n=12 [(6, 1), (5, 1), (1, 1)]: ref=27 cf=12
+  MISMATCH n=12 [(6, 1), (4, 1), (2, 1)]: ref=59 cf=23
+  MISMATCH n=12 [(6, 1), (4, 1), (1, 2)]: ref=59 cf=23
+  MISMATCH n=12 [(6, 1), (3, 1), (2, 1), (1, 1)]: ref=91 cf=26
+  MISMATCH n=12 [(6, 1), (3, 1), (1, 3)]: ref=97 cf=36
+  MISMATCH n=12 [(6, 1), (3, 2)]: ref=93 cf=73
+  MISMATCH n=12 [(6, 1), (2, 1), (1, 4)]: ref=99 cf=51
+  MISMATCH n=12 [(6, 1), (2, 2), (1, 2)]: ref=95 cf=35
+  MISMATCH n=12 [(6, 1), (2, 3)]: ref=95 cf=71
+  MISMATCH n=12 [(6, 1), (1, 6)]: ref=107 cf=83
+  MISMATCH n=12 [(5, 1), (4, 1), (3, 1)]: ref=23 cf=14
+  MISMATCH n=12 [(5, 1), (4, 1), (2, 1), (1, 1)]: ref=43 cf=14
+  MISMATCH n=12 [(5, 1), (4, 1), (1, 3)]: ref=47 cf=24
+  MISMATCH n=12 [(5, 1), (3, 1), (2, 1), (1, 2)]: ref=47 cf=17
+  MISMATCH n=12 [(5, 1), (3, 1), (2, 2)]: ref=39 cf=25
+  MISMATCH n=12 [(5, 1), (3, 1), (1, 4)]: ref=63 cf=37
+  MISMATCH n=12 [(5, 1), (3, 2), (1, 1)]: ref=47 cf=24
+  MISMATCH n=12 [(5, 1), (2, 1), (1, 5)]: ref=95 cf=68
+  MISMATCH n=12 [(5, 1), (2, 2), (1, 3)]: ref=79 cf=39
+  MISMATCH n=12 [(5, 1), (2, 3), (1, 1)]: ref=71 cf=38
+  MISMATCH n=12 [(5, 1), (1, 7)]: ref=127 cf=113
+  MISMATCH n=12 [(5, 2), (2, 1)]: ref=75 cf=51
+  MISMATCH n=12 [(5, 2), (1, 2)]: ref=99 cf=51
+  MISMATCH n=12 [(4, 1), (3, 1), (2, 1), (1, 3)]: ref=87 cf=41
+  MISMATCH n=12 [(4, 1), (3, 1), (2, 2), (1, 1)]: ref=83 cf=37
+  MISMATCH n=12 [(4, 1), (3, 1), (1, 5)]: ref=95 cf=69
+  MISMATCH n=12 [(4, 1), (3, 2), (2, 1)]: ref=63 cf=33
+  MISMATCH n=12 [(4, 1), (3, 2), (1, 2)]: ref=71 cf=33
+  MISMATCH n=12 [(4, 1), (2, 1), (1, 6)]: ref=171 cf=133
+  MISMATCH n=12 [(4, 1), (2, 2), (1, 4)]: ref=163 cf=91
+  MISMATCH n=12 [(4, 1), (2, 3), (1, 2)]: ref=159 cf=77
+  MISMATCH n=12 [(4, 1), (2, 4)]: ref=159 cf=151
+  MISMATCH n=12 [(4, 1), (1, 8)]: ref=191 cf=183
+  MISMATCH n=12 [(4, 2), (3, 1), (1, 1)]: ref=69 cf=30
+  MISMATCH n=12 [(4, 2), (2, 1), (1, 2)]: ref=133 cf=41
+  MISMATCH n=12 [(4, 2), (2, 2)]: ref=133 cf=77
+  MISMATCH n=12 [(4, 2), (1, 4)]: ref=133 cf=77
+  MISMATCH n=12 [(3, 1), (2, 1), (1, 7)]: ref=191 cf=169
+  MISMATCH n=12 [(3, 1), (2, 2), (1, 5)]: ref=159 cf=112
+  MISMATCH n=12 [(3, 1), (2, 3), (1, 3)]: ref=143 cf=71
+  MISMATCH n=12 [(3, 1), (2, 4), (1, 1)]: ref=135 cf=82
+  MISMATCH n=12 [(3, 1), (1, 9)]: ref=255 cf=246
+  MISMATCH n=12 [(3, 2), (2, 1), (1, 4)]: ref=139 cf=71
+  MISMATCH n=12 [(3, 2), (2, 2), (1, 2)]: ref=115 cf=43
+  MISMATCH n=12 [(3, 2), (2, 3)]: ref=103 cf=79
+  MISMATCH n=12 [(3, 2), (1, 6)]: ref=183 cf=135
+  MISMATCH n=12 [(3, 3), (2, 1), (1, 1)]: ref=129 cf=54
+  MISMATCH n=12 [(3, 3), (1, 3)]: ref=171 cf=81
+  MISMATCH n=12 [(2, 2), (1, 8)]: ref=311 cf=295
+  MISMATCH n=12 [(2, 3), (1, 6)]: ref=279 cf=219
+  MISMATCH n=12 [(2, 4), (1, 4)]: ref=263 cf=151
+  MISMATCH n=12 [(2, 5), (1, 2)]: ref=255 cf=135
+  MISMATCH n=13 [(12, 1), (1, 1)]: ref=62 cf=43
+  MISMATCH n=13 [(11, 1), (2, 1)]: ref=50 cf=35
+  MISMATCH n=13 [(11, 1), (1, 2)]: ref=65 cf=35
+  MISMATCH n=13 [(10, 1), (3, 1)]: ref=40 cf=28
+  MISMATCH n=13 [(10, 1), (2, 1), (1, 1)]: ref=73 cf=27
+  MISMATCH n=13 [(10, 1), (1, 3)]: ref=74 cf=38
+  MISMATCH n=13 [(9, 1), (4, 1)]: ref=34 cf=24
+  MISMATCH n=13 [(9, 1), (3, 1), (1, 1)]: ref=83 cf=27
+  MISMATCH n=13 [(9, 1), (2, 1), (1, 2)]: ref=64 cf=24
+  MISMATCH n=13 [(9, 1), (2, 2)]: ref=53 cf=33
+  MISMATCH n=13 [(9, 1), (1, 4)]: ref=83 cf=43
+  MISMATCH n=13 [(8, 1), (5, 1)]: ref=28 cf=21
+  MISMATCH n=13 [(8, 1), (4, 1), (1, 1)]: ref=97 cf=39
+  MISMATCH n=13 [(8, 1), (3, 1), (2, 1)]: ref=53 cf=21
+  MISMATCH n=13 [(8, 1), (3, 1), (1, 2)]: ref=54 cf=21
+  MISMATCH n=13 [(8, 1), (2, 1), (1, 3)]: ref=99 cf=37
+  MISMATCH n=13 [(8, 1), (2, 2), (1, 1)]: ref=98 cf=39
+  MISMATCH n=13 [(8, 1), (1, 5)]: ref=100 cf=65
+  MISMATCH n=13 [(7, 1), (6, 1)]: ref=26 cf=21
+  MISMATCH n=13 [(7, 1), (5, 1), (1, 1)]: ref=31 cf=14
+  MISMATCH n=13 [(7, 1), (4, 1), (2, 1)]: ref=41 cf=19
+  MISMATCH n=13 [(7, 1), (4, 1), (1, 2)]: ref=46 cf=19
+  MISMATCH n=13 [(7, 1), (3, 1), (2, 1), (1, 1)]: ref=46 cf=15
+  MISMATCH n=13 [(7, 1), (3, 1), (1, 3)]: ref=61 cf=26
+  MISMATCH n=13 [(7, 1), (3, 2)]: ref=43 cf=33
+  MISMATCH n=13 [(7, 1), (2, 1), (1, 4)]: ref=88 cf=47
+  MISMATCH n=13 [(7, 1), (2, 2), (1, 2)]: ref=73 cf=29
+  MISMATCH n=13 [(7, 1), (2, 3)]: ref=66 cf=51
+  MISMATCH n=13 [(7, 1), (1, 6)]: ref=115 cf=85
+  MISMATCH n=13 [(6, 1), (5, 1), (2, 1)]: ref=41 cf=18
+  MISMATCH n=13 [(6, 1), (5, 1), (1, 2)]: ref=44 cf=18
+  MISMATCH n=13 [(6, 1), (4, 1), (3, 1)]: ref=81 cf=35
+  MISMATCH n=13 [(6, 1), (4, 1), (2, 1), (1, 1)]: ref=88 cf=27
+  MISMATCH n=13 [(6, 1), (4, 1), (1, 3)]: ref=89 cf=39
+  MISMATCH n=13 [(6, 1), (3, 1), (2, 1), (1, 2)]: ref=133 cf=43
+  MISMATCH n=13 [(6, 1), (3, 1), (2, 2)]: ref=128 cf=58
+  MISMATCH n=13 [(6, 1), (3, 1), (1, 4)]: ref=142 cf=64
+  MISMATCH n=13 [(6, 1), (3, 2), (1, 1)]: ref=138 cf=73
+  MISMATCH n=13 [(6, 1), (2, 1), (1, 5)]: ref=149 cf=91
+  MISMATCH n=13 [(6, 1), (2, 2), (1, 3)]: ref=142 cf=60
+  MISMATCH n=13 [(6, 1), (2, 3), (1, 1)]: ref=139 cf=71
+  MISMATCH n=13 [(6, 1), (1, 7)]: ref=164 cf=136
+  MISMATCH n=13 [(6, 2), (1, 1)]: ref=123 cf=85
+  MISMATCH n=13 [(5, 1), (4, 1), (3, 1), (1, 1)]: ref=38 cf=15
+  MISMATCH n=13 [(5, 1), (4, 1), (2, 1), (1, 2)]: ref=69 cf=25
+  MISMATCH n=13 [(5, 1), (4, 1), (2, 2)]: ref=66 cf=40
+  MISMATCH n=13 [(5, 1), (4, 1), (1, 4)]: ref=76 cf=46
+  MISMATCH n=13 [(5, 1), (4, 2)]: ref=55 cf=51
+  MISMATCH n=13 [(5, 1), (3, 1), (2, 1), (1, 3)]: ref=76 cf=35
+  MISMATCH n=13 [(5, 1), (3, 1), (2, 2), (1, 1)]: ref=63 cf=27
+  MISMATCH n=13 [(5, 1), (3, 1), (1, 5)]: ref=101 cf=69
+  MISMATCH n=13 [(5, 1), (3, 2), (2, 1)]: ref=56 cf=33
+  MISMATCH n=13 [(5, 1), (3, 2), (1, 2)]: ref=75 cf=33
+  MISMATCH n=13 [(5, 1), (2, 1), (1, 6)]: ref=150 cf=118
+  MISMATCH n=13 [(5, 1), (2, 2), (1, 4)]: ref=125 cf=73
+  MISMATCH n=13 [(5, 1), (2, 3), (1, 2)]: ref=112 cf=52
+  MISMATCH n=13 [(5, 1), (2, 4)]: ref=107 cf=99
+  MISMATCH n=13 [(5, 1), (1, 8)]: ref=199 cf=183
+  MISMATCH n=13 [(5, 2), (3, 1)]: ref=77 cf=53
+  MISMATCH n=13 [(5, 2), (2, 1), (1, 1)]: ref=110 cf=51
+  MISMATCH n=13 [(5, 2), (1, 3)]: ref=143 cf=71
+  MISMATCH n=13 [(4, 1), (3, 1), (2, 1), (1, 4)]: ref=135 cf=77
+  MISMATCH n=13 [(4, 1), (3, 1), (2, 2), (1, 2)]: ref=128 cf=55
+  MISMATCH n=13 [(4, 1), (3, 1), (2, 3)]: ref=125 cf=97
+  MISMATCH n=13 [(4, 1), (3, 1), (1, 6)]: ref=150 cf=119
+  MISMATCH n=13 [(4, 1), (3, 2), (2, 1), (1, 1)]: ref=97 cf=37
+  MISMATCH n=13 [(4, 1), (3, 2), (1, 3)]: ref=110 cf=54
+  MISMATCH n=13 [(4, 1), (3, 3)]: ref=100 cf=97
+  MISMATCH n=13 [(4, 1), (2, 1), (1, 7)]: ref=257 cf=213
+  MISMATCH n=13 [(4, 1), (2, 2), (1, 5)]: ref=242 cf=153
+  MISMATCH n=13 [(4, 1), (2, 3), (1, 3)]: ref=235 cf=115
+  MISMATCH n=13 [(4, 1), (2, 4), (1, 1)]: ref=232 cf=151
+  MISMATCH n=13 [(4, 1), (1, 9)]: ref=292 cf=283
+  MISMATCH n=13 [(4, 2), (3, 1), (2, 1)]: ref=104 cf=41
+  MISMATCH n=13 [(4, 2), (3, 1), (1, 2)]: ref=105 cf=41
+  MISMATCH n=13 [(4, 2), (2, 1), (1, 3)]: ref=194 cf=70
+  MISMATCH n=13 [(4, 2), (2, 2), (1, 1)]: ref=193 cf=77
+  MISMATCH n=13 [(4, 2), (1, 5)]: ref=195 cf=125
+  MISMATCH n=13 [(4, 3), (1, 1)]: ref=184 cf=129
+  MISMATCH n=13 [(3, 1), (2, 1), (1, 8)]: ref=292 cf=267
+  MISMATCH n=13 [(3, 1), (2, 2), (1, 6)]: ref=243 cf=187
+  MISMATCH n=13 [(3, 1), (2, 3), (1, 4)]: ref=218 cf=123
+  MISMATCH n=13 [(3, 1), (2, 4), (1, 2)]: ref=205 cf=103
+  MISMATCH n=13 [(3, 1), (2, 5)]: ref=200 cf=195
+  MISMATCH n=13 [(3, 1), (1, 10)]: ref=385 cf=375
+  MISMATCH n=13 [(3, 2), (2, 1), (1, 5)]: ref=208 cf=125
+  MISMATCH n=13 [(3, 2), (2, 2), (1, 3)]: ref=173 cf=73
+  MISMATCH n=13 [(3, 2), (2, 3), (1, 1)]: ref=154 cf=79
+  MISMATCH n=13 [(3, 2), (1, 7)]: ref=271 cf=215
+  MISMATCH n=13 [(3, 3), (2, 1), (1, 2)]: ref=190 cf=70
+  MISMATCH n=13 [(3, 3), (2, 2)]: ref=157 cf=97
+  MISMATCH n=13 [(3, 3), (1, 4)]: ref=247 cf=127
+  MISMATCH n=13 [(3, 4), (1, 1)]: ref=241 cf=165
+  MISMATCH n=13 [(2, 2), (1, 9)]: ref=457 cf=439
+  MISMATCH n=13 [(2, 3), (1, 7)]: ref=408 cf=338
+  MISMATCH n=13 [(2, 4), (1, 5)]: ref=383 cf=243
+  MISMATCH n=13 [(2, 5), (1, 3)]: ref=370 cf=190
+  MISMATCH n=13 [(2, 6), (1, 1)]: ref=365 cf=255
+  MISMATCH n=14 [(13, 1), (1, 1)]: ref=77 cf=55
+  MISMATCH n=14 [(12, 1), (2, 1)]: ref=87 cf=49
+  MISMATCH n=14 [(12, 1), (1, 2)]: ref=87 cf=49
+  MISMATCH n=14 [(11, 1), (3, 1)]: ref=51 cf=36
+  MISMATCH n=14 [(11, 1), (2, 1), (1, 1)]: ref=71 cf=35
+  MISMATCH n=14 [(11, 1), (1, 3)]: ref=91 cf=46
+  MISMATCH n=14 [(10, 1), (4, 1)]: ref=67 cf=43
+  MISMATCH n=14 [(10, 1), (3, 1), (1, 1)]: ref=59 cf=28
+  MISMATCH n=14 [(10, 1), (2, 1), (1, 2)]: ref=103 cf=35
+  MISMATCH n=14 [(10, 1), (2, 2)]: ref=103 cf=55
+  MISMATCH n=14 [(10, 1), (1, 4)]: ref=105 cf=57
+  MISMATCH n=14 [(9, 1), (5, 1)]: ref=35 cf=25
+  MISMATCH n=14 [(9, 1), (4, 1), (1, 1)]: ref=51 cf=24
+  MISMATCH n=14 [(9, 1), (3, 1), (2, 1)]: ref=91 cf=35
+  MISMATCH n=14 [(9, 1), (3, 1), (1, 2)]: ref=117 cf=35
+  MISMATCH n=14 [(9, 1), (2, 1), (1, 3)]: ref=93 cf=38
+  MISMATCH n=14 [(9, 1), (2, 2), (1, 1)]: ref=77 cf=33
+  MISMATCH n=14 [(9, 1), (1, 5)]: ref=119 cf=69
+  MISMATCH n=14 [(8, 1), (6, 1)]: ref=55 cf=41
+  MISMATCH n=14 [(8, 1), (5, 1), (1, 1)]: ref=43 cf=21
+  MISMATCH n=14 [(8, 1), (4, 1), (2, 1)]: ref=137 cf=49
+  MISMATCH n=14 [(8, 1), (4, 1), (1, 2)]: ref=137 cf=49
+  MISMATCH n=14 [(8, 1), (3, 1), (2, 1), (1, 1)]: ref=79 cf=23
+  MISMATCH n=14 [(8, 1), (3, 1), (1, 3)]: ref=81 cf=35
+  MISMATCH n=14 [(8, 1), (3, 2)]: ref=57 cf=43
+  MISMATCH n=14 [(8, 1), (2, 1), (1, 4)]: ref=143 cf=65
+  MISMATCH n=14 [(8, 1), (2, 2), (1, 2)]: ref=141 cf=51
+  MISMATCH n=14 [(8, 1), (2, 3)]: ref=141 cf=99
+  MISMATCH n=14 [(8, 1), (1, 6)]: ref=147 cf=105
+  MISMATCH n=14 [(7, 1), (6, 1), (1, 1)]: ref=41 cf=21
+  MISMATCH n=14 [(7, 1), (5, 1), (2, 1)]: ref=37 cf=20
+  MISMATCH n=14 [(7, 1), (5, 1), (1, 2)]: ref=49 cf=20
+  MISMATCH n=14 [(7, 1), (4, 1), (3, 1)]: ref=37 cf=21
+  MISMATCH n=14 [(7, 1), (4, 1), (2, 1), (1, 1)]: ref=63 cf=21
+  MISMATCH n=14 [(7, 1), (4, 1), (1, 3)]: ref=71 cf=33
+  MISMATCH n=14 [(7, 1), (3, 1), (2, 1), (1, 2)]: ref=71 cf=24
+  MISMATCH n=14 [(7, 1), (3, 1), (2, 2)]: ref=59 cf=34
+  MISMATCH n=14 [(7, 1), (3, 1), (1, 4)]: ref=93 cf=48
+  MISMATCH n=14 [(7, 1), (3, 2), (1, 1)]: ref=67 cf=33
+  MISMATCH n=14 [(7, 1), (2, 1), (1, 5)]: ref=133 cf=83
+  MISMATCH n=14 [(7, 1), (2, 2), (1, 3)]: ref=111 cf=50
+  MISMATCH n=14 [(7, 1), (2, 3), (1, 1)]: ref=99 cf=51
+  MISMATCH n=14 [(7, 1), (1, 7)]: ref=173 cf=138
+  MISMATCH n=14 [(6, 1), (5, 1), (3, 1)]: ref=59 cf=28
+  MISMATCH n=14 [(6, 1), (5, 1), (2, 1), (1, 1)]: ref=63 cf=20
+  MISMATCH n=14 [(6, 1), (5, 1), (1, 3)]: ref=69 cf=32
+  MISMATCH n=14 [(6, 1), (4, 1), (3, 1), (1, 1)]: ref=117 cf=41
+  MISMATCH n=14 [(6, 1), (4, 1), (2, 1), (1, 2)]: ref=129 cf=43
+  MISMATCH n=14 [(6, 1), (4, 1), (2, 2)]: ref=129 cf=65
+  MISMATCH n=14 [(6, 1), (4, 1), (1, 4)]: ref=131 cf=67
+  MISMATCH n=14 [(6, 1), (4, 2)]: ref=107 cf=91
+  MISMATCH n=14 [(6, 1), (3, 1), (2, 1), (1, 3)]: ref=189 cf=74
+  MISMATCH n=14 [(6, 1), (3, 1), (2, 2), (1, 1)]: ref=181 cf=70
+  MISMATCH n=14 [(6, 1), (3, 1), (1, 5)]: ref=203 cf=108
+  MISMATCH n=14 [(6, 1), (3, 2), (2, 1)]: ref=183 cf=87
+  MISMATCH n=14 [(6, 1), (3, 2), (1, 2)]: ref=197 cf=87
+  MISMATCH n=14 [(6, 1), (2, 1), (1, 6)]: ref=219 cf=151
+  MISMATCH n=14 [(6, 1), (2, 2), (1, 4)]: ref=207 cf=103
+  MISMATCH n=14 [(6, 1), (2, 3), (1, 2)]: ref=201 cf=89
+  MISMATCH n=14 [(6, 1), (2, 4)]: ref=201 cf=169
+  MISMATCH n=14 [(6, 1), (1, 8)]: ref=245 cf=213
+  MISMATCH n=14 [(6, 2), (2, 1)]: ref=173 cf=97
+  MISMATCH n=14 [(6, 2), (1, 2)]: ref=173 cf=97
+  MISMATCH n=14 [(5, 1), (4, 1), (3, 1), (2, 1)]: ref=55 cf=24
+  MISMATCH n=14 [(5, 1), (4, 1), (3, 1), (1, 2)]: ref=61 cf=24
+  MISMATCH n=14 [(5, 1), (4, 1), (2, 1), (1, 3)]: ref=107 cf=48
+  MISMATCH n=14 [(5, 1), (4, 1), (2, 2), (1, 1)]: ref=101 cf=44
+  MISMATCH n=14 [(5, 1), (4, 1), (1, 5)]: ref=119 cf=82
+  MISMATCH n=14 [(5, 1), (4, 2), (1, 1)]: ref=83 cf=51
+  MISMATCH n=14 [(5, 1), (3, 1), (2, 1), (1, 4)]: ref=119 cf=67
+  MISMATCH n=14 [(5, 1), (3, 1), (2, 2), (1, 2)]: ref=99 cf=41
+  MISMATCH n=14 [(5, 1), (3, 1), (2, 3)]: ref=89 cf=69
+  MISMATCH n=14 [(5, 1), (3, 1), (1, 6)]: ref=157 cf=119
+  MISMATCH n=14 [(5, 1), (3, 2), (2, 1), (1, 1)]: ref=87 cf=35
+  MISMATCH n=14 [(5, 1), (3, 2), (1, 3)]: ref=115 cf=54
+  MISMATCH n=14 [(5, 1), (3, 3)]: ref=103 cf=97
+  MISMATCH n=14 [(5, 1), (2, 1), (1, 7)]: ref=229 cf=192
+  MISMATCH n=14 [(5, 1), (2, 2), (1, 5)]: ref=191 cf=127
+  MISMATCH n=14 [(5, 1), (2, 3), (1, 3)]: ref=171 cf=84
+  MISMATCH n=14 [(5, 1), (2, 4), (1, 1)]: ref=161 cf=99
+  MISMATCH n=14 [(5, 1), (1, 9)]: ref=301 cf=283
+  MISMATCH n=14 [(5, 2), (4, 1)]: ref=87 cf=63
+  MISMATCH n=14 [(5, 2), (3, 1), (1, 1)]: ref=113 cf=53
+  MISMATCH n=14 [(5, 2), (2, 1), (1, 2)]: ref=157 cf=63
+  MISMATCH n=14 [(5, 2), (2, 2)]: ref=131 cf=83
+  MISMATCH n=14 [(5, 2), (1, 4)]: ref=201 cf=105
+  MISMATCH n=14 [(4, 1), (3, 1), (2, 1), (1, 5)]: ref=203 cf=133
+  MISMATCH n=14 [(4, 1), (3, 1), (2, 2), (1, 3)]: ref=191 cf=91
+  MISMATCH n=14 [(4, 1), (3, 1), (2, 3), (1, 1)]: ref=185 cf=103
+  MISMATCH n=14 [(4, 1), (3, 1), (1, 7)]: ref=229 cf=193
+  MISMATCH n=14 [(4, 1), (3, 2), (2, 1), (1, 2)]: ref=145 cf=55
+  MISMATCH n=14 [(4, 1), (3, 2), (2, 2)]: ref=135 cf=77
+  MISMATCH n=14 [(4, 1), (3, 2), (1, 4)]: ref=165 cf=91
+  MISMATCH n=14 [(4, 1), (3, 3), (1, 1)]: ref=149 cf=97
+  MISMATCH n=14 [(4, 1), (2, 1), (1, 8)]: ref=375 cf=325
+  MISMATCH n=14 [(4, 1), (2, 2), (1, 6)]: ref=349 cf=243
+  MISMATCH n=14 [(4, 1), (2, 3), (1, 4)]: ref=337 cf=179
+  MISMATCH n=14 [(4, 1), (2, 4), (1, 2)]: ref=331 cf=177
+  MISMATCH n=14 [(4, 1), (2, 5)]: ref=331 cf=321
+  MISMATCH n=14 [(4, 1), (1, 10)]: ref=431 cf=421
+  MISMATCH n=14 [(4, 2), (3, 1), (2, 1), (1, 1)]: ref=153 cf=45
+  MISMATCH n=14 [(4, 2), (3, 1), (1, 3)]: ref=155 cf=66
+  MISMATCH n=14 [(4, 2), (3, 2)]: ref=109 cf=81
+  MISMATCH n=14 [(4, 2), (2, 1), (1, 4)]: ref=275 cf=119
+  MISMATCH n=14 [(4, 2), (2, 2), (1, 2)]: ref=273 cf=97
+  MISMATCH n=14 [(4, 2), (2, 3)]: ref=273 cf=189
+  MISMATCH n=14 [(4, 2), (1, 6)]: ref=279 cf=195
+  MISMATCH n=14 [(4, 3), (2, 1)]: ref=257 cf=147
+  MISMATCH n=14 [(4, 3), (1, 2)]: ref=257 cf=147
+  MISMATCH n=14 [(3, 1), (2, 1), (1, 9)]: ref=431 cf=403
+  MISMATCH n=14 [(3, 1), (2, 2), (1, 7)]: ref=359 cf=294
+  MISMATCH n=14 [(3, 1), (2, 3), (1, 5)]: ref=321 cf=203
+  MISMATCH n=14 [(3, 1), (2, 4), (1, 3)]: ref=301 cf=150
+  MISMATCH n=14 [(3, 1), (2, 5), (1, 1)]: ref=291 cf=195
+  MISMATCH n=14 [(3, 1), (1, 11)]: ref=561 cf=550
+  MISMATCH n=14 [(3, 2), (2, 1), (1, 6)]: ref=303 cf=205
+  MISMATCH n=14 [(3, 2), (2, 2), (1, 4)]: ref=253 cf=125
+  MISMATCH n=14 [(3, 2), (2, 3), (1, 2)]: ref=225 cf=99
+  MISMATCH n=14 [(3, 2), (2, 4)]: ref=211 cf=179
+  MISMATCH n=14 [(3, 2), (1, 8)]: ref=391 cf=327
+  MISMATCH n=14 [(3, 3), (2, 1), (1, 3)]: ref=271 cf=106
+  MISMATCH n=14 [(3, 3), (2, 2), (1, 1)]: ref=225 cf=97
+  MISMATCH n=14 [(3, 3), (1, 5)]: ref=347 cf=197
+  MISMATCH n=14 [(3, 4), (2, 1)]: ref=263 cf=187
+  MISMATCH n=14 [(3, 4), (1, 2)]: ref=339 cf=187
+  MISMATCH n=14 [(2, 2), (1, 10)]: ref=651 cf=631
+  MISMATCH n=14 [(2, 3), (1, 8)]: ref=579 cf=499
+  MISMATCH n=14 [(2, 4), (1, 6)]: ref=541 cf=373
+  MISMATCH n=14 [(2, 5), (1, 4)]: ref=521 cf=281
+  MISMATCH n=14 [(2, 6), (1, 2)]: ref=511 cf=291
+  MISMATCH n=15 [(14, 1), (1, 1)]: ref=99 cf=73
+  MISMATCH n=15 [(13, 1), (2, 1)]: ref=83 cf=61
+  MISMATCH n=15 [(13, 1), (1, 2)]: ref=105 cf=61
+  MISMATCH n=15 [(12, 1), (3, 1)]: ref=117 cf=62
+  MISMATCH n=15 [(12, 1), (2, 1), (1, 1)]: ref=119 cf=49
+  MISMATCH n=15 [(12, 1), (1, 3)]: ref=119 cf=62
+  MISMATCH n=15 [(11, 1), (4, 1)]: ref=57 cf=42
+  MISMATCH n=15 [(11, 1), (3, 1), (1, 1)]: ref=73 cf=36
+  MISMATCH n=15 [(11, 1), (2, 1), (1, 2)]: ref=99 cf=42
+  MISMATCH n=15 [(11, 1), (2, 2)]: ref=83 cf=53
+  MISMATCH n=15 [(11, 1), (1, 4)]: ref=125 cf=65
+  MISMATCH n=15 [(10, 1), (5, 1)]: ref=143 cf=83
+  MISMATCH n=15 [(10, 1), (4, 1), (1, 1)]: ref=93 cf=43
+  MISMATCH n=15 [(10, 1), (3, 1), (2, 1)]: ref=83 cf=35
+  MISMATCH n=15 [(10, 1), (3, 1), (1, 2)]: ref=85 cf=35
+  MISMATCH n=15 [(10, 1), (2, 1), (1, 3)]: ref=143 cf=53
+  MISMATCH n=15 [(10, 1), (2, 2), (1, 1)]: ref=141 cf=55
+  MISMATCH n=15 [(10, 1), (1, 5)]: ref=147 cf=87
+  MISMATCH n=15 [(9, 1), (6, 1)]: ref=93 cf=63
+  MISMATCH n=15 [(9, 1), (5, 1), (1, 1)]: ref=53 cf=25
+  MISMATCH n=15 [(9, 1), (4, 1), (2, 1)]: ref=65 cf=31
+  MISMATCH n=15 [(9, 1), (4, 1), (1, 2)]: ref=75 cf=31
+  MISMATCH n=15 [(9, 1), (3, 1), (2, 1), (1, 1)]: ref=127 cf=38
+  MISMATCH n=15 [(9, 1), (3, 1), (1, 3)]: ref=161 cf=53
+  MISMATCH n=15 [(9, 1), (3, 2)]: ref=159 cf=99
+  MISMATCH n=15 [(9, 1), (2, 1), (1, 4)]: ref=133 cf=63
+  MISMATCH n=15 [(9, 1), (2, 2), (1, 2)]: ref=111 cf=43
+  MISMATCH n=15 [(9, 1), (2, 3)]: ref=99 cf=69
+  MISMATCH n=15 [(9, 1), (1, 6)]: ref=169 cf=109
+  MISMATCH n=15 [(8, 1), (7, 1)]: ref=39 cf=32
+  MISMATCH n=15 [(8, 1), (6, 1), (1, 1)]: ref=79 cf=41
+  MISMATCH n=15 [(8, 1), (5, 1), (2, 1)]: ref=63 cf=28
+  MISMATCH n=15 [(8, 1), (5, 1), (1, 2)]: ref=65 cf=28
+  MISMATCH n=15 [(8, 1), (4, 1), (3, 1)]: ref=109 cf=51
+  MISMATCH n=15 [(8, 1), (4, 1), (2, 1), (1, 1)]: ref=189 cf=57
+  MISMATCH n=15 [(8, 1), (4, 1), (1, 3)]: ref=189 cf=71
+  MISMATCH n=15 [(8, 1), (3, 1), (2, 1), (1, 2)]: ref=115 cf=35
+  MISMATCH n=15 [(8, 1), (3, 1), (2, 2)]: ref=113 cf=56
+  MISMATCH n=15 [(8, 1), (3, 1), (1, 4)]: ref=119 cf=60
+  MISMATCH n=15 [(8, 1), (3, 2), (1, 1)]: ref=85 cf=43
+  MISMATCH n=15 [(8, 1), (2, 1), (1, 5)]: ref=203 cf=109
+  MISMATCH n=15 [(8, 1), (2, 2), (1, 3)]: ref=199 cf=78
+  MISMATCH n=15 [(8, 1), (2, 3), (1, 1)]: ref=197 cf=99
+  MISMATCH n=15 [(8, 1), (1, 7)]: ref=213 cf=164
+  MISMATCH n=15 [(7, 1), (6, 1), (2, 1)]: ref=57 cf=28
+  MISMATCH n=15 [(7, 1), (6, 1), (1, 2)]: ref=63 cf=28
+  MISMATCH n=15 [(7, 1), (5, 1), (3, 1)]: ref=39 cf=22
+  MISMATCH n=15 [(7, 1), (5, 1), (2, 1), (1, 1)]: ref=57 cf=21
+  MISMATCH n=15 [(7, 1), (5, 1), (1, 3)]: ref=75 cf=34
+  MISMATCH n=15 [(7, 1), (4, 1), (3, 1), (1, 1)]: ref=57 cf=22
+  MISMATCH n=15 [(7, 1), (4, 1), (2, 1), (1, 2)]: ref=95 cf=33
+  MISMATCH n=15 [(7, 1), (4, 1), (2, 2)]: ref=89 cf=50
+  MISMATCH n=15 [(7, 1), (4, 1), (1, 4)]: ref=107 cf=58
+  MISMATCH n=15 [(7, 1), (4, 2)]: ref=73 cf=63
+  MISMATCH n=15 [(7, 1), (3, 1), (2, 1), (1, 3)]: ref=107 cf=44
+  MISMATCH n=15 [(7, 1), (3, 1), (2, 2), (1, 1)]: ref=89 cf=36
+  MISMATCH n=15 [(7, 1), (3, 1), (1, 5)]: ref=139 cf=84
+  MISMATCH n=15 [(7, 1), (3, 2), (2, 1)]: ref=77 cf=43
+  MISMATCH n=15 [(7, 1), (3, 2), (1, 2)]: ref=101 cf=43
+  MISMATCH n=15 [(7, 1), (2, 1), (1, 6)]: ref=197 cf=138
+  MISMATCH n=15 [(7, 1), (2, 2), (1, 4)]: ref=165 cf=87
+  MISMATCH n=15 [(7, 1), (2, 3), (1, 2)]: ref=147 cf=66
+  MISMATCH n=15 [(7, 1), (2, 4)]: ref=139 cf=119
+  MISMATCH n=15 [(7, 1), (1, 8)]: ref=255 cf=215
+  MISMATCH n=15 [(7, 2), (1, 1)]: ref=195 cf=143
+  MISMATCH n=15 [(6, 1), (5, 1), (4, 1)]: ref=57 cf=34
+  MISMATCH n=15 [(6, 1), (5, 1), (3, 1), (1, 1)]: ref=89 cf=31
+  MISMATCH n=15 [(6, 1), (5, 1), (2, 1), (1, 2)]: ref=95 cf=32
+  MISMATCH n=15 [(6, 1), (5, 1), (2, 2)]: ref=91 cf=49
+  MISMATCH n=15 [(6, 1), (5, 1), (1, 4)]: ref=105 cf=57
+  MISMATCH n=15 [(6, 1), (4, 1), (3, 1), (2, 1)]: ref=161 cf=59
+  MISMATCH n=15 [(6, 1), (4, 1), (3, 1), (1, 2)]: ref=165 cf=59
+  MISMATCH n=15 [(6, 1), (4, 1), (2, 1), (1, 3)]: ref=185 cf=74
+  MISMATCH n=15 [(6, 1), (4, 1), (2, 2), (1, 1)]: ref=183 cf=73
+  MISMATCH n=15 [(6, 1), (4, 1), (1, 5)]: ref=189 cf=111
+  MISMATCH n=15 [(6, 1), (4, 2), (1, 1)]: ref=151 cf=91
+  MISMATCH n=15 [(6, 1), (3, 1), (2, 1), (1, 4)]: ref=263 cf=123
+  MISMATCH n=15 [(6, 1), (3, 1), (2, 2), (1, 2)]: ref=251 cf=99
+  MISMATCH n=15 [(6, 1), (3, 1), (2, 3)]: ref=245 cf=145
+  MISMATCH n=15 [(6, 1), (3, 1), (1, 6)]: ref=285 cf=173
+  MISMATCH n=15 [(6, 1), (3, 2), (2, 1), (1, 1)]: ref=253 cf=99
+  MISMATCH n=15 [(6, 1), (3, 2), (1, 3)]: ref=273 cf=118
+  MISMATCH n=15 [(6, 1), (3, 3)]: ref=267 cf=237
+  MISMATCH n=15 [(6, 1), (2, 1), (1, 7)]: ref=315 cf=237
+  MISMATCH n=15 [(6, 1), (2, 2), (1, 5)]: ref=295 cf=169
+  MISMATCH n=15 [(6, 1), (2, 3), (1, 3)]: ref=285 cf=129
+  MISMATCH n=15 [(6, 1), (2, 4), (1, 1)]: ref=281 cf=169
+  MISMATCH n=15 [(6, 1), (1, 9)]: ref=357 cf=321
+  MISMATCH n=15 [(6, 2), (3, 1)]: ref=233 cf=123
+  MISMATCH n=15 [(6, 2), (2, 1), (1, 1)]: ref=235 cf=97
+  MISMATCH n=15 [(6, 2), (1, 3)]: ref=237 cf=123
+  MISMATCH n=15 [(5, 1), (4, 1), (3, 1), (2, 1), (1, 1)]: ref=85 cf=30
+  MISMATCH n=15 [(5, 1), (4, 1), (3, 1), (1, 3)]: ref=95 cf=44
+  MISMATCH n=15 [(5, 1), (4, 1), (3, 2)]: ref=69 cf=53
+  MISMATCH n=15 [(5, 1), (4, 1), (2, 1), (1, 4)]: ref=161 cf=87
+  MISMATCH n=15 [(5, 1), (4, 1), (2, 2), (1, 2)]: ref=151 cf=63
+  MISMATCH n=15 [(5, 1), (4, 1), (2, 3)]: ref=147 cf=109
+  MISMATCH n=15 [(5, 1), (4, 1), (1, 6)]: ref=181 cf=137
+  MISMATCH n=15 [(5, 1), (4, 2), (2, 1)]: ref=121 cf=63
+  MISMATCH n=15 [(5, 1), (4, 2), (1, 2)]: ref=123 cf=63
+  MISMATCH n=15 [(5, 1), (3, 1), (2, 1), (1, 5)]: ref=181 cf=118
+  MISMATCH n=15 [(5, 1), (3, 1), (2, 2), (1, 3)]: ref=151 cf=71
+  MISMATCH n=15 [(5, 1), (3, 1), (2, 3), (1, 1)]: ref=135 cf=72
+  MISMATCH n=15 [(5, 1), (3, 1), (1, 7)]: ref=237 cf=193
+  MISMATCH n=15 [(5, 1), (3, 2), (2, 1), (1, 2)]: ref=131 cf=50
+  MISMATCH n=15 [(5, 1), (3, 2), (2, 2)]: ref=109 cf=67
+  MISMATCH n=15 [(5, 1), (3, 2), (1, 4)]: ref=171 cf=91
+  MISMATCH n=15 [(5, 1), (3, 3), (1, 1)]: ref=153 cf=97
+  MISMATCH n=15 [(5, 1), (2, 1), (1, 8)]: ref=339 cf=297
+  MISMATCH n=15 [(5, 1), (2, 2), (1, 6)]: ref=283 cf=207
+  MISMATCH n=15 [(5, 1), (2, 3), (1, 4)]: ref=253 cf=139
+  MISMATCH n=15 [(5, 1), (2, 4), (1, 2)]: ref=237 cf=121
+  MISMATCH n=15 [(5, 1), (2, 5)]: ref=231 cf=221
+  MISMATCH n=15 [(5, 1), (1, 10)]: ref=441 cf=421
+  MISMATCH n=15 [(5, 2), (4, 1), (1, 1)]: ref=125 cf=63
+  MISMATCH n=15 [(5, 2), (3, 1), (2, 1)]: ref=125 cf=65
+  MISMATCH n=15 [(5, 2), (3, 1), (1, 2)]: ref=161 cf=65
+  MISMATCH n=15 [(5, 2), (2, 1), (1, 3)]: ref=219 cf=90
+  MISMATCH n=15 [(5, 2), (2, 2), (1, 1)]: ref=183 cf=83
+  MISMATCH n=15 [(5, 2), (1, 5)]: ref=277 cf=157
+  MISMATCH n=15 [(4, 1), (3, 1), (2, 1), (1, 6)]: ref=297 cf=215
+  MISMATCH n=15 [(4, 1), (3, 1), (2, 2), (1, 4)]: ref=277 cf=150
+  MISMATCH n=15 [(4, 1), (3, 1), (2, 3), (1, 2)]: ref=267 cf=131
+  MISMATCH n=15 [(4, 1), (3, 1), (2, 4)]: ref=263 cf=226
+  MISMATCH n=15 [(4, 1), (3, 1), (1, 8)]: ref=339 cf=298
+  MISMATCH n=15 [(4, 1), (3, 2), (2, 1), (1, 3)]: ref=211 cf=91
+  MISMATCH n=15 [(4, 1), (3, 2), (2, 2), (1, 1)]: ref=195 cf=85
+  MISMATCH n=15 [(4, 1), (3, 2), (1, 5)]: ref=241 cf=149
+  MISMATCH n=15 [(4, 1), (3, 3), (2, 1)]: ref=185 cf=114
+  MISMATCH n=15 [(4, 1), (3, 3), (1, 2)]: ref=215 cf=114
+  MISMATCH n=15 [(4, 1), (2, 1), (1, 9)]: ref=533 cf=477
+  MISMATCH n=15 [(4, 1), (2, 2), (1, 7)]: ref=491 cf=368
+  MISMATCH n=15 [(4, 1), (2, 3), (1, 5)]: ref=471 cf=275
+  MISMATCH n=15 [(4, 1), (2, 4), (1, 3)]: ref=461 cf=234
+  MISMATCH n=15 [(4, 1), (2, 5), (1, 1)]: ref=457 cf=321
+  MISMATCH n=15 [(4, 1), (1, 11)]: ref=617 cf=606
+  MISMATCH n=15 [(4, 2), (3, 1), (2, 1), (1, 2)]: ref=219 cf=66
+  MISMATCH n=15 [(4, 2), (3, 1), (2, 2)]: ref=217 cf=105
+  MISMATCH n=15 [(4, 2), (3, 1), (1, 4)]: ref=223 cf=109
+  MISMATCH n=15 [(4, 2), (3, 2), (1, 1)]: ref=157 cf=81
+  MISMATCH n=15 [(4, 2), (2, 1), (1, 5)]: ref=381 cf=193
+  MISMATCH n=15 [(4, 2), (2, 2), (1, 3)]: ref=377 cf=141
+  MISMATCH n=15 [(4, 2), (2, 3), (1, 1)]: ref=375 cf=189
+  MISMATCH n=15 [(4, 2), (1, 7)]: ref=391 cf=293
+  MISMATCH n=15 [(4, 3), (3, 1)]: ref=205 cf=150
+  MISMATCH n=15 [(4, 3), (2, 1), (1, 1)]: ref=351 cf=147
+  MISMATCH n=15 [(4, 3), (1, 3)]: ref=351 cf=186
+  MISMATCH n=15 [(3, 1), (2, 1), (1, 10)]: ref=617 cf=586
+  MISMATCH n=15 [(3, 1), (2, 2), (1, 8)]: ref=515 cf=441
+  MISMATCH n=15 [(3, 1), (2, 3), (1, 6)]: ref=459 cf=318
+  MISMATCH n=15 [(3, 1), (2, 4), (1, 4)]: ref=429 cf=229
+  MISMATCH n=15 [(3, 1), (2, 5), (1, 2)]: ref=413 cf=226
+  MISMATCH n=15 [(3, 1), (2, 6)]: ref=407 cf=401
+  MISMATCH n=15 [(3, 1), (1, 12)]: ref=793 cf=781
+  MISMATCH n=15 [(3, 2), (2, 1), (1, 7)]: ref=431 cf=318
+  MISMATCH n=15 [(3, 2), (2, 2), (1, 5)]: ref=361 cf=205
+  MISMATCH n=15 [(3, 2), (2, 3), (1, 3)]: ref=321 cf=144
+  MISMATCH n=15 [(3, 2), (2, 4), (1, 1)]: ref=299 cf=179
+  MISMATCH n=15 [(3, 2), (1, 9)]: ref=551 cf=479
+  MISMATCH n=15 [(3, 3), (2, 1), (1, 4)]: ref=377 cf=167
+  MISMATCH n=15 [(3, 3), (2, 2), (1, 2)]: ref=315 cf=119
+  MISMATCH n=15 [(3, 3), (2, 3)]: ref=279 cf=189
+  MISMATCH n=15 [(3, 3), (1, 6)]: ref=477 cf=297
+  MISMATCH n=15 [(3, 4), (2, 1), (1, 1)]: ref=365 cf=187
+  MISMATCH n=15 [(3, 4), (1, 3)]: ref=463 cf=235
+  MISMATCH n=15 [(2, 2), (1, 11)]: ref=903 cf=881
+  MISMATCH n=15 [(2, 3), (1, 9)]: ref=801 cf=711
+  MISMATCH n=15 [(2, 4), (1, 7)]: ref=745 cf=549
+  MISMATCH n=15 [(2, 5), (1, 5)]: ref=715 cf=415
+  MISMATCH n=15 [(2, 6), (1, 3)]: ref=699 cf=369
+  MISMATCH n=15 [(2, 7), (1, 1)]: ref=693 cf=511
+  MISMATCH n=16 [(15, 1), (1, 1)]: ref=122 cf=91
+  MISMATCH n=16 [(14, 1), (2, 1)]: ref=132 cf=80
+  MISMATCH n=16 [(14, 1), (1, 2)]: ref=132 cf=80
+  MISMATCH n=16 [(13, 1), (3, 1)]: ref=84 cf=62
+  MISMATCH n=16 [(13, 1), (2, 1), (1, 1)]: ref=112 cf=61
+  MISMATCH n=16 [(13, 1), (1, 3)]: ref=140 cf=74
+  MISMATCH n=16 [(12, 1), (4, 1)]: ref=158 cf=82
+  MISMATCH n=16 [(12, 1), (3, 1), (1, 1)]: ref=158 cf=62
+  MISMATCH n=16 [(12, 1), (2, 1), (1, 2)]: ref=160 cf=58
+  MISMATCH n=16 [(12, 1), (2, 2)]: ref=160 cf=84
+  MISMATCH n=16 [(12, 1), (1, 4)]: ref=160 cf=84
+  MISMATCH n=16 [(11, 1), (5, 1)]: ref=58 cf=43
+  MISMATCH n=16 [(11, 1), (4, 1), (1, 1)]: ref=80 cf=42
+  MISMATCH n=16 [(11, 1), (3, 1), (2, 1)]: ref=80 cf=43
+  MISMATCH n=16 [(11, 1), (3, 1), (1, 2)]: ref=102 cf=43
+  MISMATCH n=16 [(11, 1), (2, 1), (1, 3)]: ref=136 cf=58
+  MISMATCH n=16 [(11, 1), (2, 2), (1, 1)]: ref=114 cf=53
+  MISMATCH n=16 [(11, 1), (1, 5)]: ref=170 cf=95
+  MISMATCH n=16 [(10, 1), (6, 1)]: ref=80 cf=56
+  MISMATCH n=16 [(10, 1), (5, 1), (1, 1)]: ref=192 cf=83
+  MISMATCH n=16 [(10, 1), (4, 1), (2, 1)]: ref=128 cf=52
+  MISMATCH n=16 [(10, 1), (4, 1), (1, 2)]: ref=128 cf=52
+  MISMATCH n=16 [(10, 1), (3, 1), (2, 1), (1, 1)]: ref=116 cf=37
+  MISMATCH n=16 [(10, 1), (3, 1), (1, 3)]: ref=120 cf=51
+  MISMATCH n=16 [(10, 1), (3, 2)]: ref=84 cf=60
+  MISMATCH n=16 [(10, 1), (2, 1), (1, 4)]: ref=196 cf=84
+  MISMATCH n=16 [(10, 1), (2, 2), (1, 2)]: ref=192 cf=68
+  MISMATCH n=16 [(10, 1), (2, 3)]: ref=192 cf=120
+  MISMATCH n=16 [(10, 1), (1, 6)]: ref=204 cf=132
+  MISMATCH n=16 [(9, 1), (7, 1)]: ref=46 cf=36
+  MISMATCH n=16 [(9, 1), (6, 1), (1, 1)]: ref=128 cf=63
+  MISMATCH n=16 [(9, 1), (5, 1), (2, 1)]: ref=60 cf=32
+  MISMATCH n=16 [(9, 1), (5, 1), (1, 2)]: ref=78 cf=32
+  MISMATCH n=16 [(9, 1), (4, 1), (3, 1)]: ref=102 cf=43
+  MISMATCH n=16 [(9, 1), (4, 1), (2, 1), (1, 1)]: ref=94 cf=33
+  MISMATCH n=16 [(9, 1), (4, 1), (1, 3)]: ref=108 cf=47
+  MISMATCH n=16 [(9, 1), (3, 1), (2, 1), (1, 2)]: ref=174 cf=52
+  MISMATCH n=16 [(9, 1), (3, 1), (2, 2)]: ref=146 cf=64
+  MISMATCH n=16 [(9, 1), (3, 1), (1, 4)]: ref=218 cf=84
+  MISMATCH n=16 [(9, 1), (3, 2), (1, 1)]: ref=216 cf=99
+  MISMATCH n=16 [(9, 1), (2, 1), (1, 5)]: ref=188 cf=103
+  MISMATCH n=16 [(9, 1), (2, 2), (1, 3)]: ref=158 cf=66
+  MISMATCH n=16 [(9, 1), (2, 3), (1, 1)]: ref=140 cf=69
+  MISMATCH n=16 [(9, 1), (1, 7)]: ref=238 cf=168
+  MISMATCH n=16 [(8, 1), (7, 1), (1, 1)]: ref=58 cf=32
+  MISMATCH n=16 [(8, 1), (6, 1), (2, 1)]: ref=112 cf=50
+  MISMATCH n=16 [(8, 1), (6, 1), (1, 2)]: ref=112 cf=50
+  MISMATCH n=16 [(8, 1), (5, 1), (3, 1)]: ref=52 cf=30
+  MISMATCH n=16 [(8, 1), (5, 1), (2, 1), (1, 1)]: ref=92 cf=30
+  MISMATCH n=16 [(8, 1), (5, 1), (1, 3)]: ref=96 cf=44
+  MISMATCH n=16 [(8, 1), (4, 1), (3, 1), (1, 1)]: ref=152 cf=55
+  MISMATCH n=16 [(8, 1), (4, 1), (2, 1), (1, 2)]: ref=256 cf=80
+  MISMATCH n=16 [(8, 1), (4, 1), (2, 2)]: ref=256 cf=108
+  MISMATCH n=16 [(8, 1), (4, 1), (1, 4)]: ref=256 cf=108
+  MISMATCH n=16 [(8, 1), (4, 2)]: ref=254 cf=198
+  MISMATCH n=16 [(8, 1), (3, 1), (2, 1), (1, 3)]: ref=164 cf=60
+  MISMATCH n=16 [(8, 1), (3, 1), (2, 2), (1, 1)]: ref=160 cf=60
+  MISMATCH n=16 [(8, 1), (3, 1), (1, 5)]: ref=172 cf=100
+  MISMATCH n=16 [(8, 1), (3, 2), (2, 1)]: ref=116 cf=54
+  MISMATCH n=16 [(8, 1), (3, 2), (1, 2)]: ref=124 cf=54
+  MISMATCH n=16 [(8, 1), (2, 1), (1, 6)]: ref=284 cf=174
+  MISMATCH n=16 [(8, 1), (2, 2), (1, 4)]: ref=276 cf=124
+  MISMATCH n=16 [(8, 1), (2, 3), (1, 2)]: ref=272 cf=118
+  MISMATCH n=16 [(8, 1), (2, 4)]: ref=272 cf=216
+  MISMATCH n=16 [(8, 1), (1, 8)]: ref=304 cf=248
+  MISMATCH n=16 [(7, 1), (6, 1), (3, 1)]: ref=76 cf=38
+  MISMATCH n=16 [(7, 1), (6, 1), (2, 1), (1, 1)]: ref=84 cf=30
+  MISMATCH n=16 [(7, 1), (6, 1), (1, 3)]: ref=94 cf=44
+  MISMATCH n=16 [(7, 1), (5, 1), (4, 1)]: ref=46 cf=29
+  MISMATCH n=16 [(7, 1), (5, 1), (3, 1), (1, 1)]: ref=60 cf=23
+  MISMATCH n=16 [(7, 1), (5, 1), (2, 1), (1, 2)]: ref=86 cf=31
+  MISMATCH n=16 [(7, 1), (5, 1), (2, 2)]: ref=72 cf=43
+  MISMATCH n=16 [(7, 1), (5, 1), (1, 4)]: ref=112 cf=59
+  MISMATCH n=16 [(7, 1), (4, 1), (3, 1), (2, 1)]: ref=76 cf=32
+  MISMATCH n=16 [(7, 1), (4, 1), (3, 1), (1, 2)]: ref=86 cf=32
+  MISMATCH n=16 [(7, 1), (4, 1), (2, 1), (1, 3)]: ref=140 cf=58
+  MISMATCH n=16 [(7, 1), (4, 1), (2, 2), (1, 1)]: ref=130 cf=54
+  MISMATCH n=16 [(7, 1), (4, 1), (1, 5)]: ref=158 cf=98
+  MISMATCH n=16 [(7, 1), (4, 2), (1, 1)]: ref=106 cf=63
+  MISMATCH n=16 [(7, 1), (3, 1), (2, 1), (1, 4)]: ref=158 cf=79
+  MISMATCH n=16 [(7, 1), (3, 1), (2, 2), (1, 2)]: ref=132 cf=51
+  MISMATCH n=16 [(7, 1), (3, 1), (2, 3)]: ref=118 cf=83
+  MISMATCH n=16 [(7, 1), (3, 1), (1, 6)]: ref=204 cf=139
+  MISMATCH n=16 [(7, 1), (3, 2), (2, 1), (1, 1)]: ref=114 cf=45
+  MISMATCH n=16 [(7, 1), (3, 2), (1, 3)]: ref=148 cf=66
+  MISMATCH n=16 [(7, 1), (3, 3)]: ref=128 cf=113
+  MISMATCH n=16 [(7, 1), (2, 1), (1, 7)]: ref=286 cf=218
+  MISMATCH n=16 [(7, 1), (2, 2), (1, 5)]: ref=240 cf=145
+  MISMATCH n=16 [(7, 1), (2, 3), (1, 3)]: ref=214 cf=100
+  MISMATCH n=16 [(7, 1), (2, 4), (1, 1)]: ref=200 cf=119
+  MISMATCH n=16 [(7, 1), (1, 9)]: ref=368 cf=323
+  MISMATCH n=16 [(7, 2), (2, 1)]: ref=208 cf=156
+  MISMATCH n=16 [(7, 2), (1, 2)]: ref=260 cf=156
+  MISMATCH n=16 [(6, 1), (5, 1), (4, 1), (1, 1)]: ref=84 cf=36
+  MISMATCH n=16 [(6, 1), (5, 1), (3, 1), (2, 1)]: ref=120 cf=45
+  MISMATCH n=16 [(6, 1), (5, 1), (3, 1), (1, 2)]: ref=130 cf=45
+  MISMATCH n=16 [(6, 1), (5, 1), (2, 1), (1, 3)]: ref=140 cf=57
+  MISMATCH n=16 [(6, 1), (5, 1), (2, 2), (1, 1)]: ref=132 cf=53
+  MISMATCH n=16 [(6, 1), (5, 1), (1, 5)]: ref=156 cf=97
+  MISMATCH n=16 [(6, 1), (5, 2)]: ref=104 cf=96
+  MISMATCH n=16 [(6, 1), (4, 1), (3, 1), (2, 1), (1, 1)]: ref=222 cf=77
+  MISMATCH n=16 [(6, 1), (4, 1), (3, 1), (1, 3)]: ref=228 cf=92
+  MISMATCH n=16 [(6, 1), (4, 1), (3, 2)]: ref=218 cf=134
+  MISMATCH n=16 [(6, 1), (4, 1), (2, 1), (1, 4)]: ref=260 cf=124
+  MISMATCH n=16 [(6, 1), (4, 1), (2, 2), (1, 2)]: ref=256 cf=100
+  MISMATCH n=16 [(6, 1), (4, 1), (2, 3)]: ref=256 cf=164
+  MISMATCH n=16 [(6, 1), (4, 1), (1, 6)]: ref=268 cf=176
+  MISMATCH n=16 [(6, 1), (4, 2), (2, 1)]: ref=210 cf=106
+  MISMATCH n=16 [(6, 1), (4, 2), (1, 2)]: ref=210 cf=106
+  MISMATCH n=16 [(6, 1), (3, 1), (2, 1), (1, 5)]: ref=360 cf=195
+  MISMATCH n=16 [(6, 1), (3, 1), (2, 2), (1, 3)]: ref=342 cf=149
+  MISMATCH n=16 [(6, 1), (3, 1), (2, 3), (1, 1)]: ref=332 cf=163
+  MISMATCH n=16 [(6, 1), (3, 1), (1, 7)]: ref=394 cf=265
+  MISMATCH n=16 [(6, 1), (3, 2), (2, 1), (1, 2)]: ref=342 cf=130
+  MISMATCH n=16 [(6, 1), (3, 2), (2, 2)]: ref=326 cf=154
+  MISMATCH n=16 [(6, 1), (3, 2), (1, 4)]: ref=370 cf=170
+  MISMATCH n=16 [(6, 1), (3, 3), (1, 1)]: ref=364 cf=237
+  MISMATCH n=16 [(6, 1), (2, 1), (1, 8)]: ref=444 cf=356
+  MISMATCH n=16 [(6, 1), (2, 2), (1, 6)]: ref=412 cf=264
+  MISMATCH n=16 [(6, 1), (2, 3), (1, 4)]: ref=396 cf=196
+  MISMATCH n=16 [(6, 1), (2, 4), (1, 2)]: ref=388 cf=196
+  MISMATCH n=16 [(6, 1), (2, 5)]: ref=388 cf=348
+  MISMATCH n=16 [(6, 1), (1, 10)]: ref=508 cf=468
+  MISMATCH n=16 [(6, 2), (4, 1)]: ref=210 cf=134
+  MISMATCH n=16 [(6, 2), (3, 1), (1, 1)]: ref=314 cf=123
+  MISMATCH n=16 [(6, 2), (2, 1), (1, 2)]: ref=314 cf=114
+  MISMATCH n=16 [(6, 2), (2, 2)]: ref=314 cf=162
+  MISMATCH n=16 [(6, 2), (1, 4)]: ref=318 cf=166
+  MISMATCH n=16 [(5, 1), (4, 1), (3, 1), (2, 1), (1, 2)]: ref=128 cf=49
+  MISMATCH n=16 [(5, 1), (4, 1), (3, 1), (2, 2)]: ref=120 cf=67
+  MISMATCH n=16 [(5, 1), (4, 1), (3, 1), (1, 4)]: ref=144 cf=79
+  MISMATCH n=16 [(5, 1), (4, 1), (3, 2), (1, 1)]: ref=104 cf=55
+  MISMATCH n=16 [(5, 1), (4, 1), (2, 1), (1, 5)]: ref=236 cf=147
+  MISMATCH n=16 [(5, 1), (4, 1), (2, 2), (1, 3)]: ref=220 cf=101
+  MISMATCH n=16 [(5, 1), (4, 1), (2, 3), (1, 1)]: ref=212 cf=115
+  MISMATCH n=16 [(5, 1), (4, 1), (1, 7)]: ref=268 cf=217
+  MISMATCH n=16 [(5, 1), (4, 2), (3, 1)]: ref=98 cf=66
+  MISMATCH n=16 [(5, 1), (4, 2), (2, 1), (1, 1)]: ref=174 cf=67
+  MISMATCH n=16 [(5, 1), (4, 2), (1, 3)]: ref=178 cf=90
+  MISMATCH n=16 [(5, 1), (3, 1), (2, 1), (1, 6)]: ref=268 cf=194
+  MISMATCH n=16 [(5, 1), (3, 1), (2, 2), (1, 4)]: ref=224 cf=122
+  MISMATCH n=16 [(5, 1), (3, 1), (2, 3), (1, 2)]: ref=200 cf=94
+  MISMATCH n=16 [(5, 1), (3, 1), (2, 4)]: ref=188 cf=162
+  MISMATCH n=16 [(5, 1), (3, 1), (1, 8)]: ref=348 cf=298
+  MISMATCH n=16 [(5, 1), (3, 2), (2, 1), (1, 3)]: ref=192 cf=82
+  MISMATCH n=16 [(5, 1), (3, 2), (2, 2), (1, 1)]: ref=160 cf=71
+  MISMATCH n=16 [(5, 1), (3, 2), (1, 5)]: ref=248 cf=149
+  MISMATCH n=16 [(5, 1), (3, 3), (2, 1)]: ref=170 cf=114
+  MISMATCH n=16 [(5, 1), (3, 3), (1, 2)]: ref=220 cf=114
+  MISMATCH n=16 [(5, 1), (2, 1), (1, 9)]: ref=488 cf=441
+  MISMATCH n=16 [(5, 1), (2, 2), (1, 7)]: ref=408 cf=320
+  MISMATCH n=16 [(5, 1), (2, 3), (1, 5)]: ref=364 cf=223
+  MISMATCH n=16 [(5, 1), (2, 4), (1, 3)]: ref=340 cf=170
+  MISMATCH n=16 [(5, 1), (2, 5), (1, 1)]: ref=328 cf=221
+  MISMATCH n=16 [(5, 1), (1, 11)]: ref=628 cf=606
+  MISMATCH n=16 [(5, 2), (4, 1), (2, 1)]: ref=152 cf=76
+  MISMATCH n=16 [(5, 2), (4, 1), (1, 2)]: ref=176 cf=76
+  MISMATCH n=16 [(5, 2), (3, 1), (2, 1), (1, 1)]: ref=176 cf=67
+  MISMATCH n=16 [(5, 2), (3, 1), (1, 3)]: ref=224 cf=92
+  MISMATCH n=16 [(5, 2), (3, 2)]: ref=156 cf=108
+  MISMATCH n=16 [(5, 2), (2, 1), (1, 4)]: ref=300 cf=136
+  MISMATCH n=16 [(5, 2), (2, 2), (1, 2)]: ref=252 cf=100
+  MISMATCH n=16 [(5, 2), (2, 3)]: ref=224 cf=152
+  MISMATCH n=16 [(5, 2), (1, 6)]: ref=376 cf=232
+  MISMATCH n=16 [(5, 3), (1, 1)]: ref=364 cf=273
+  MISMATCH n=16 [(4, 1), (3, 1), (2, 1), (1, 7)]: ref=424 cf=330
+  MISMATCH n=16 [(4, 1), (3, 1), (2, 2), (1, 5)]: ref=392 cf=238
+  MISMATCH n=16 [(4, 1), (3, 1), (2, 3), (1, 3)]: ref=376 cf=186
+  MISMATCH n=16 [(4, 1), (3, 1), (2, 4), (1, 1)]: ref=368 cf=234
+  MISMATCH n=16 [(4, 1), (3, 1), (1, 9)]: ref=488 cf=442
+  MISMATCH n=16 [(4, 1), (3, 2), (2, 1), (1, 4)]: ref=300 cf=150
+  MISMATCH n=16 [(4, 1), (3, 2), (2, 2), (1, 2)]: ref=276 cf=114
+  MISMATCH n=16 [(4, 1), (3, 2), (2, 3)]: ref=264 cf=178
+  MISMATCH n=16 [(4, 1), (3, 2), (1, 6)]: ref=344 cf=234
+  MISMATCH n=16 [(4, 1), (3, 3), (2, 1), (1, 1)]: ref=260 cf=120
+  MISMATCH n=16 [(4, 1), (3, 3), (1, 3)]: ref=302 cf=152
+  MISMATCH n=16 [(4, 1), (3, 4)]: ref=290 cf=286
+  MISMATCH n=16 [(4, 1), (2, 1), (1, 10)]: ref=740 cf=678
+  MISMATCH n=16 [(4, 1), (2, 2), (1, 8)]: ref=676 cf=536
+  MISMATCH n=16 [(4, 1), (2, 3), (1, 6)]: ref=644 cf=410
+  MISMATCH n=16 [(4, 1), (2, 4), (1, 4)]: ref=628 cf=328
+  MISMATCH n=16 [(4, 1), (2, 5), (1, 2)]: ref=620 cf=358
+  MISMATCH n=16 [(4, 1), (2, 6)]: ref=620 cf=608
+  MISMATCH n=16 [(4, 1), (1, 12)]: ref=860 cf=848
+  MISMATCH n=16 [(4, 2), (3, 1), (2, 1), (1, 3)]: ref=306 cf=108
+  MISMATCH n=16 [(4, 2), (3, 1), (2, 2), (1, 1)]: ref=302 cf=113
+  MISMATCH n=16 [(4, 2), (3, 1), (1, 5)]: ref=314 cf=175
+  MISMATCH n=16 [(4, 2), (3, 2), (2, 1)]: ref=214 cf=98
+  MISMATCH n=16 [(4, 2), (3, 2), (1, 2)]: ref=222 cf=98
+  MISMATCH n=16 [(4, 2), (2, 1), (1, 6)]: ref=518 cf=298
+  MISMATCH n=16 [(4, 2), (2, 2), (1, 4)]: ref=510 cf=214
+  MISMATCH n=16 [(4, 2), (2, 3), (1, 2)]: ref=506 cf=218
+  MISMATCH n=16 [(4, 2), (2, 4)]: ref=506 cf=394
+  MISMATCH n=16 [(4, 2), (1, 8)]: ref=538 cf=426
+  MISMATCH n=16 [(4, 3), (3, 1), (1, 1)]: ref=282 cf=150
+  MISMATCH n=16 [(4, 3), (2, 1), (1, 2)]: ref=470 cf=172
+  MISMATCH n=16 [(4, 3), (2, 2)]: ref=470 cf=250
+  MISMATCH n=16 [(4, 3), (1, 4)]: ref=470 cf=250
+  MISMATCH n=16 [(3, 1), (2, 1), (1, 11)]: ref=860 cf=826
+  MISMATCH n=16 [(3, 1), (2, 2), (1, 9)]: ref=720 cf=637
+  MISMATCH n=16 [(3, 1), (2, 3), (1, 7)]: ref=640 cf=476
+  MISMATCH n=16 [(3, 1), (2, 4), (1, 5)]: ref=596 cf=347
+  MISMATCH n=16 [(3, 1), (2, 5), (1, 3)]: ref=572 cf=294
+  MISMATCH n=16 [(3, 1), (2, 6), (1, 1)]: ref=560 cf=401
+  MISMATCH n=16 [(3, 1), (1, 13)]: ref=1092 cf=1079
+  MISMATCH n=16 [(3, 2), (2, 1), (1, 8)]: ref=600 cf=472
+  MISMATCH n=16 [(3, 2), (2, 2), (1, 6)]: ref=504 cf=320
+  MISMATCH n=16 [(3, 2), (2, 3), (1, 4)]: ref=448 cf=220
+  MISMATCH n=16 [(3, 2), (2, 4), (1, 2)]: ref=416 cf=208
+  MISMATCH n=16 [(3, 2), (2, 5)]: ref=400 cf=360
+  MISMATCH n=16 [(3, 2), (1, 10)]: ref=760 cf=680
+  MISMATCH n=16 [(3, 3), (2, 1), (1, 5)]: ref=514 cf=259
+  MISMATCH n=16 [(3, 3), (2, 2), (1, 3)]: ref=432 cf=168
+  MISMATCH n=16 [(3, 3), (2, 3), (1, 1)]: ref=382 cf=189
+  MISMATCH n=16 [(3, 3), (1, 7)]: ref=644 cf=434
+  MISMATCH n=16 [(3, 4), (2, 1), (1, 2)]: ref=494 cf=214
+  MISMATCH n=16 [(3, 4), (2, 2)]: ref=414 cf=262
+  MISMATCH n=16 [(3, 4), (1, 4)]: ref=618 cf=314
+  MISMATCH n=16 [(3, 5), (1, 1)]: ref=610 cf=455
+  MISMATCH n=16 [(2, 2), (1, 12)]: ref=1224 cf=1200
+  MISMATCH n=16 [(2, 3), (1, 10)]: ref=1084 cf=984
+  MISMATCH n=16 [(2, 4), (1, 8)]: ref=1004 cf=780
+  MISMATCH n=16 [(2, 5), (1, 6)]: ref=960 cf=600
+  MISMATCH n=16 [(2, 6), (1, 4)]: ref=936 cf=496
+  MISMATCH n=16 [(2, 7), (1, 2)]: ref=924 cf=560
+  MISMATCH n=17 [(16, 1), (1, 1)]: ref=151 cf=116
+  MISMATCH n=17 [(15, 1), (2, 1)]: ref=129 cf=98
+  MISMATCH n=17 [(15, 1), (1, 2)]: ref=160 cf=98
+  MISMATCH n=17 [(14, 1), (3, 1)]: ref=107 cf=81
+  MISMATCH n=17 [(14, 1), (2, 1), (1, 1)]: ref=172 cf=80
+  MISMATCH n=17 [(14, 1), (1, 3)]: ref=173 cf=95
+  MISMATCH n=17 [(13, 1), (4, 1)]: ref=91 cf=69
+  MISMATCH n=17 [(13, 1), (3, 1), (1, 1)]: ref=114 cf=62
+  MISMATCH n=17 [(13, 1), (2, 1), (1, 2)]: ref=149 cf=69
+  MISMATCH n=17 [(13, 1), (2, 2)]: ref=126 cf=82
+  MISMATCH n=17 [(13, 1), (1, 4)]: ref=184 cf=96
+  MISMATCH n=17 [(12, 1), (5, 1)]: ref=77 cf=58
+  MISMATCH n=17 [(12, 1), (4, 1), (1, 1)]: ref=206 cf=82
+  MISMATCH n=17 [(12, 1), (3, 1), (2, 1)]: ref=208 cf=72
+  MISMATCH n=17 [(12, 1), (3, 1), (1, 2)]: ref=209 cf=72
+  MISMATCH n=17 [(12, 1), (2, 1), (1, 3)]: ref=212 cf=78
+  MISMATCH n=17 [(12, 1), (2, 2), (1, 1)]: ref=211 cf=84
+  MISMATCH n=17 [(12, 1), (1, 5)]: ref=213 cf=118
+  MISMATCH n=17 [(11, 1), (6, 1)]: ref=67 cf=52
+  MISMATCH n=17 [(11, 1), (5, 1), (1, 1)]: ref=82 cf=43
+  MISMATCH n=17 [(11, 1), (4, 1), (2, 1)]: ref=96 cf=50
+  MISMATCH n=17 [(11, 1), (4, 1), (1, 2)]: ref=111 cf=50
+  MISMATCH n=17 [(11, 1), (3, 1), (2, 1), (1, 1)]: ref=111 cf=44
+  MISMATCH n=17 [(11, 1), (3, 1), (1, 3)]: ref=140 cf=59
+  MISMATCH n=17 [(11, 1), (3, 2)]: ref=98 cf=68
+  MISMATCH n=17 [(11, 1), (2, 1), (1, 4)]: ref=185 cf=86
+  MISMATCH n=17 [(11, 1), (2, 2), (1, 2)]: ref=156 cf=64
+  MISMATCH n=17 [(11, 1), (2, 3)]: ref=139 cf=94
+  MISMATCH n=17 [(11, 1), (1, 6)]: ref=230 cf=140
+  MISMATCH n=17 [(10, 1), (7, 1)]: ref=59 cf=47
+  MISMATCH n=17 [(10, 1), (6, 1), (1, 1)]: ref=110 cf=56
+  MISMATCH n=17 [(10, 1), (5, 1), (2, 1)]: ref=246 cf=95
+  MISMATCH n=17 [(10, 1), (5, 1), (1, 2)]: ref=253 cf=95
+  MISMATCH n=17 [(10, 1), (4, 1), (3, 1)]: ref=104 cf=54
+  MISMATCH n=17 [(10, 1), (4, 1), (2, 1), (1, 1)]: ref=173 cf=56
+  MISMATCH n=17 [(10, 1), (4, 1), (1, 3)]: ref=174 cf=72
+  MISMATCH n=17 [(10, 1), (3, 1), (2, 1), (1, 2)]: ref=160 cf=50
+  MISMATCH n=17 [(10, 1), (3, 1), (2, 2)]: ref=157 cf=73
+  MISMATCH n=17 [(10, 1), (3, 1), (1, 4)]: ref=167 cf=79
+  MISMATCH n=17 [(10, 1), (3, 2), (1, 1)]: ref=119 cf=60
+  MISMATCH n=17 [(10, 1), (2, 1), (1, 5)]: ref=266 cf=132
+  MISMATCH n=17 [(10, 1), (2, 2), (1, 3)]: ref=259 cf=97
+  MISMATCH n=17 [(10, 1), (2, 3), (1, 1)]: ref=256 cf=120
+  MISMATCH n=17 [(10, 1), (1, 7)]: ref=281 cf=197
+  MISMATCH n=17 [(9, 1), (8, 1)]: ref=57 cf=47
+  MISMATCH n=17 [(9, 1), (7, 1), (1, 1)]: ref=68 cf=36
+  MISMATCH n=17 [(9, 1), (6, 1), (2, 1)]: ref=160 cf=73
+  MISMATCH n=17 [(9, 1), (6, 1), (1, 2)]: ref=173 cf=73
+  MISMATCH n=17 [(9, 1), (5, 1), (3, 1)]: ref=104 cf=44
+  MISMATCH n=17 [(9, 1), (5, 1), (2, 1), (1, 1)]: ref=87 cf=33
+  MISMATCH n=17 [(9, 1), (5, 1), (1, 3)]: ref=112 cf=48
+  MISMATCH n=17 [(9, 1), (4, 1), (3, 1), (1, 1)]: ref=141 cf=46
+  MISMATCH n=17 [(9, 1), (4, 1), (2, 1), (1, 2)]: ref=134 cf=46
+  MISMATCH n=17 [(9, 1), (4, 1), (2, 2)]: ref=123 cf=65
+  MISMATCH n=17 [(9, 1), (4, 1), (1, 4)]: ref=153 cf=75
+  MISMATCH n=17 [(9, 1), (4, 2)]: ref=100 cf=80
+  MISMATCH n=17 [(9, 1), (3, 1), (2, 1), (1, 3)]: ref=235 cf=80
+  MISMATCH n=17 [(9, 1), (3, 1), (2, 2), (1, 1)]: ref=198 cf=70
+  MISMATCH n=17 [(9, 1), (3, 1), (1, 5)]: ref=292 cf=132
+  MISMATCH n=17 [(9, 1), (3, 2), (2, 1)]: ref=231 cf=114
+  MISMATCH n=17 [(9, 1), (3, 2), (1, 2)]: ref=288 cf=114
+  MISMATCH n=17 [(9, 1), (2, 1), (1, 6)]: ref=263 cf=163
+  MISMATCH n=17 [(9, 1), (2, 2), (1, 4)]: ref=222 cf=106
+  MISMATCH n=17 [(9, 1), (2, 3), (1, 2)]: ref=197 cf=85
+  MISMATCH n=17 [(9, 1), (2, 4)]: ref=184 cf=144
+  MISMATCH n=17 [(9, 1), (1, 8)]: ref=332 cf=252
+  MISMATCH n=17 [(8, 1), (7, 1), (2, 1)]: ref=80 cf=40
+  MISMATCH n=17 [(8, 1), (7, 1), (1, 2)]: ref=85 cf=40
+  MISMATCH n=17 [(8, 1), (6, 1), (3, 1)]: ref=132 cf=62
+  MISMATCH n=17 [(8, 1), (6, 1), (2, 1), (1, 1)]: ref=155 cf=54
+  MISMATCH n=17 [(8, 1), (6, 1), (1, 3)]: ref=156 cf=70
+  MISMATCH n=17 [(8, 1), (5, 1), (4, 1)]: ref=122 cf=61
+  MISMATCH n=17 [(8, 1), (5, 1), (3, 1), (1, 1)]: ref=77 cf=31
+  MISMATCH n=17 [(8, 1), (5, 1), (2, 1), (1, 2)]: ref=132 cf=43
+  MISMATCH n=17 [(8, 1), (5, 1), (2, 2)]: ref=129 cf=66
+  MISMATCH n=17 [(8, 1), (5, 1), (1, 4)]: ref=139 cf=72
+  MISMATCH n=17 [(8, 1), (4, 1), (3, 1), (2, 1)]: ref=207 cf=72
+  MISMATCH n=17 [(8, 1), (4, 1), (3, 1), (1, 2)]: ref=208 cf=72
+  MISMATCH n=17 [(8, 1), (4, 1), (2, 1), (1, 3)]: ref=341 cf=121
+  MISMATCH n=17 [(8, 1), (4, 1), (2, 2), (1, 1)]: ref=340 cf=124
+  MISMATCH n=17 [(8, 1), (4, 1), (1, 5)]: ref=342 cf=164
+  MISMATCH n=17 [(8, 1), (4, 2), (1, 1)]: ref=335 cf=198
+  MISMATCH n=17 [(8, 1), (3, 1), (2, 1), (1, 4)]: ref=230 cf=102
+  MISMATCH n=17 [(8, 1), (3, 1), (2, 2), (1, 2)]: ref=223 cf=80
+  MISMATCH n=17 [(8, 1), (3, 1), (2, 3)]: ref=220 cf=138
+  MISMATCH n=17 [(8, 1), (3, 1), (1, 6)]: ref=245 cf=160
+  MISMATCH n=17 [(8, 1), (3, 2), (2, 1), (1, 1)]: ref=164 cf=58
+  MISMATCH n=17 [(8, 1), (3, 2), (1, 3)]: ref=177 cf=79
+  MISMATCH n=17 [(8, 1), (3, 3)]: ref=151 cf=130
+  MISMATCH n=17 [(8, 1), (2, 1), (1, 7)]: ref=392 cf=266
+  MISMATCH n=17 [(8, 1), (2, 2), (1, 5)]: ref=377 cf=194
+  MISMATCH n=17 [(8, 1), (2, 3), (1, 3)]: ref=370 cf=160
+  MISMATCH n=17 [(8, 1), (2, 4), (1, 1)]: ref=367 cf=216
+  MISMATCH n=17 [(8, 1), (1, 9)]: ref=427 cf=364
+  MISMATCH n=17 [(8, 2), (1, 1)]: ref=302 cf=232
+  MISMATCH n=17 [(7, 1), (6, 1), (4, 1)]: ref=74 cf=45
+  MISMATCH n=17 [(7, 1), (6, 1), (3, 1), (1, 1)]: ref=111 cf=41
+  MISMATCH n=17 [(7, 1), (6, 1), (2, 1), (1, 2)]: ref=122 cf=43
+  MISMATCH n=17 [(7, 1), (6, 1), (2, 2)]: ref=115 cf=62
+  MISMATCH n=17 [(7, 1), (6, 1), (1, 4)]: ref=137 cf=72
+  MISMATCH n=17 [(7, 1), (5, 1), (4, 1), (1, 1)]: ref=69 cf=30
+  MISMATCH n=17 [(7, 1), (5, 1), (3, 1), (2, 1)]: ref=69 cf=32
+  MISMATCH n=17 [(7, 1), (5, 1), (3, 1), (1, 2)]: ref=90 cf=33
+  MISMATCH n=17 [(7, 1), (5, 1), (2, 1), (1, 3)]: ref=127 cf=53
+  MISMATCH n=17 [(7, 1), (5, 1), (2, 2), (1, 1)]: ref=106 cf=45
+  MISMATCH n=17 [(7, 1), (5, 1), (1, 5)]: ref=164 cf=99
+  MISMATCH n=17 [(7, 1), (5, 2)]: ref=108 cf=98
+  MISMATCH n=17 [(7, 1), (4, 1), (3, 1), (2, 1), (1, 1)]: ref=112 cf=38
+  MISMATCH n=17 [(7, 1), (4, 1), (3, 1), (1, 3)]: ref=127 cf=54
+  MISMATCH n=17 [(7, 1), (4, 1), (3, 2)]: ref=91 cf=64
+  MISMATCH n=17 [(7, 1), (4, 1), (2, 1), (1, 4)]: ref=202 cf=100
+  MISMATCH n=17 [(7, 1), (4, 1), (2, 2), (1, 2)]: ref=187 cf=74
+  MISMATCH n=17 [(7, 1), (4, 1), (2, 3)]: ref=180 cf=124
+  MISMATCH n=17 [(7, 1), (4, 1), (1, 6)]: ref=229 cf=158
+  MISMATCH n=17 [(7, 1), (4, 2), (2, 1)]: ref=147 cf=76
+  MISMATCH n=17 [(7, 1), (4, 2), (1, 2)]: ref=152 cf=76
+  MISMATCH n=17 [(7, 1), (3, 1), (2, 1), (1, 5)]: ref=229 cf=134
+  MISMATCH n=17 [(7, 1), (3, 1), (2, 2), (1, 3)]: ref=192 cf=83
+  MISMATCH n=17 [(7, 1), (3, 1), (2, 3), (1, 1)]: ref=171 cf=86
+  MISMATCH n=17 [(7, 1), (3, 1), (1, 7)]: ref=294 cf=219
+  MISMATCH n=17 [(7, 1), (3, 2), (2, 1), (1, 2)]: ref=165 cf=61
+  MISMATCH n=17 [(7, 1), (3, 2), (2, 2)]: ref=138 cf=80
+  MISMATCH n=17 [(7, 1), (3, 2), (1, 4)]: ref=212 cf=106
+  MISMATCH n=17 [(7, 1), (3, 3), (1, 1)]: ref=184 cf=113
+  MISMATCH n=17 [(7, 1), (2, 1), (1, 8)]: ref=407 cf=330
+  MISMATCH n=17 [(7, 1), (2, 2), (1, 6)]: ref=342 cf=230
+  MISMATCH n=17 [(7, 1), (2, 3), (1, 4)]: ref=305 cf=158
+  MISMATCH n=17 [(7, 1), (2, 4), (1, 2)]: ref=284 cf=142
+  MISMATCH n=17 [(7, 1), (2, 5)]: ref=275 cf=250
+  MISMATCH n=17 [(7, 1), (1, 10)]: ref=520 cf=470
+  MISMATCH n=17 [(7, 2), (3, 1)]: ref=210 cf=158
+  MISMATCH n=17 [(7, 2), (2, 1), (1, 1)]: ref=275 cf=156
+  MISMATCH n=17 [(7, 2), (1, 3)]: ref=340 cf=184
+  MISMATCH n=17 [(6, 1), (5, 1), (4, 1), (2, 1)]: ref=119 cf=49
+  MISMATCH n=17 [(6, 1), (5, 1), (4, 1), (1, 2)]: ref=122 cf=49
+  MISMATCH n=17 [(6, 1), (5, 1), (3, 1), (2, 1), (1, 1)]: ref=170 cf=57
+  MISMATCH n=17 [(6, 1), (5, 1), (3, 1), (1, 3)]: ref=185 cf=73
+  MISMATCH n=17 [(6, 1), (5, 1), (3, 2)]: ref=173 cf=115
+  MISMATCH n=17 [(6, 1), (5, 1), (2, 1), (1, 4)]: ref=202 cf=99
+  MISMATCH n=17 [(6, 1), (5, 1), (2, 2), (1, 2)]: ref=189 cf=73
+  MISMATCH n=17 [(6, 1), (5, 1), (2, 3)]: ref=184 cf=123
+  MISMATCH n=17 [(6, 1), (5, 1), (1, 6)]: ref=227 cf=157
+  MISMATCH n=17 [(6, 1), (5, 2), (1, 1)]: ref=147 cf=96
+  MISMATCH n=17 [(6, 1), (4, 1), (3, 1), (2, 1), (1, 2)]: ref=301 cf=113
+  MISMATCH n=17 [(6, 1), (4, 1), (3, 1), (2, 2)]: ref=296 cf=138
+  MISMATCH n=17 [(6, 1), (4, 1), (3, 1), (1, 4)]: ref=310 cf=144
+  MISMATCH n=17 [(6, 1), (4, 1), (3, 2), (1, 1)]: ref=294 cf=146
+  MISMATCH n=17 [(6, 1), (4, 1), (2, 1), (1, 5)]: ref=359 cf=198
+  MISMATCH n=17 [(6, 1), (4, 1), (2, 2), (1, 3)]: ref=352 cf=150
+  MISMATCH n=17 [(6, 1), (4, 1), (2, 3), (1, 1)]: ref=349 cf=176
+  MISMATCH n=17 [(6, 1), (4, 1), (1, 7)]: ref=374 cf=268
+  MISMATCH n=17 [(6, 1), (4, 2), (3, 1)]: ref=241 cf=123
+  MISMATCH n=17 [(6, 1), (4, 2), (2, 1), (1, 1)]: ref=286 cf=114
+  MISMATCH n=17 [(6, 1), (4, 2), (1, 3)]: ref=287 cf=139
+  MISMATCH n=17 [(6, 1), (3, 1), (2, 1), (1, 6)]: ref=486 cf=296
+  MISMATCH n=17 [(6, 1), (3, 1), (2, 2), (1, 4)]: ref=459 cf=225
+  MISMATCH n=17 [(6, 1), (3, 1), (2, 3), (1, 2)]: ref=444 cf=206
+  MISMATCH n=17 [(6, 1), (3, 1), (2, 4)]: ref=437 cf=307
+  MISMATCH n=17 [(6, 1), (3, 1), (1, 8)]: ref=537 cf=391
+  MISMATCH n=17 [(6, 1), (3, 2), (2, 1), (1, 3)]: ref=454 cf=184
+  MISMATCH n=17 [(6, 1), (3, 2), (2, 2), (1, 1)]: ref=431 cf=178
+  MISMATCH n=17 [(6, 1), (3, 2), (1, 5)]: ref=493 cf=248
+  MISMATCH n=17 [(6, 1), (3, 3), (2, 1)]: ref=446 cf=261
+  MISMATCH n=17 [(6, 1), (3, 3), (1, 2)]: ref=485 cf=261
+  MISMATCH n=17 [(6, 1), (2, 1), (1, 9)]: ref=614 cf=516
+  MISMATCH n=17 [(6, 1), (2, 2), (1, 7)]: ref=565 cf=395
+  MISMATCH n=17 [(6, 1), (2, 3), (1, 5)]: ref=540 cf=296
+  MISMATCH n=17 [(6, 1), (2, 4), (1, 3)]: ref=527 cf=255
+  MISMATCH n=17 [(6, 1), (2, 5), (1, 1)]: ref=522 cf=348
+  MISMATCH n=17 [(6, 1), (1, 11)]: ref=707 cf=663
+  MISMATCH n=17 [(6, 2), (5, 1)]: ref=152 cf=114
+  MISMATCH n=17 [(6, 2), (4, 1), (1, 1)]: ref=279 cf=134
+  MISMATCH n=17 [(6, 2), (3, 1), (2, 1)]: ref=407 cf=142
+  MISMATCH n=17 [(6, 2), (3, 1), (1, 2)]: ref=414 cf=142
+  MISMATCH n=17 [(6, 2), (2, 1), (1, 3)]: ref=413 cf=151
+  MISMATCH n=17 [(6, 2), (2, 2), (1, 1)]: ref=410 cf=162
+  MISMATCH n=17 [(6, 2), (1, 5)]: ref=420 cf=230
+  MISMATCH n=17 [(5, 1), (4, 1), (3, 1), (2, 1), (1, 3)]: ref=188 cf=85
+  MISMATCH n=17 [(5, 1), (4, 1), (3, 1), (2, 2), (1, 1)]: ref=175 cf=78
+  MISMATCH n=17 [(5, 1), (4, 1), (3, 1), (1, 5)]: ref=213 cf=134
+  MISMATCH n=17 [(5, 1), (4, 1), (3, 2), (2, 1)]: ref=134 cf=71
+  MISMATCH n=17 [(5, 1), (4, 1), (3, 2), (1, 2)]: ref=153 cf=71
+  MISMATCH n=17 [(5, 1), (4, 1), (2, 1), (1, 6)]: ref=338 cf=234
+  MISMATCH n=17 [(5, 1), (4, 1), (2, 2), (1, 4)]: ref=313 cf=163
+  MISMATCH n=17 [(5, 1), (4, 1), (2, 3), (1, 2)]: ref=300 cf=144
+  MISMATCH n=17 [(5, 1), (4, 1), (2, 4)]: ref=295 cf=245
+  MISMATCH n=17 [(5, 1), (4, 1), (1, 8)]: ref=387 cf=329
+  MISMATCH n=17 [(5, 1), (4, 2), (3, 1), (1, 1)]: ref=142 cf=68
+  MISMATCH n=17 [(5, 1), (4, 2), (2, 1), (1, 2)]: ref=245 cf=89
+  MISMATCH n=17 [(5, 1), (4, 2), (2, 2)]: ref=242 cf=130
+  MISMATCH n=17 [(5, 1), (4, 2), (1, 4)]: ref=252 cf=136
+  MISMATCH n=17 [(5, 1), (4, 3)]: ref=227 cf=221
+  MISMATCH n=17 [(5, 1), (3, 1), (2, 1), (1, 7)]: ref=387 cf=302
+  MISMATCH n=17 [(5, 1), (3, 1), (2, 2), (1, 5)]: ref=324 cf=200
+  MISMATCH n=17 [(5, 1), (3, 1), (2, 3), (1, 3)]: ref=289 cf=140
+  MISMATCH n=17 [(5, 1), (3, 1), (2, 4), (1, 1)]: ref=270 cf=166
+  MISMATCH n=17 [(5, 1), (3, 1), (1, 9)]: ref=498 cf=442
+  MISMATCH n=17 [(5, 1), (3, 2), (2, 1), (1, 4)]: ref=275 cf=136
+  MISMATCH n=17 [(5, 1), (3, 2), (2, 2), (1, 2)]: ref=230 cf=94
+  MISMATCH n=17 [(5, 1), (3, 2), (2, 3)]: ref=205 cf=144
+  MISMATCH n=17 [(5, 1), (3, 2), (1, 6)]: ref=352 cf=234
+  MISMATCH n=17 [(5, 1), (3, 3), (2, 1), (1, 1)]: ref=241 cf=117
+  MISMATCH n=17 [(5, 1), (3, 3), (1, 3)]: ref=308 cf=152
+  MISMATCH n=17 [(5, 1), (3, 4)]: ref=294 cf=286
+  MISMATCH n=17 [(5, 1), (2, 1), (1, 10)]: ref=685 cf=633
+  MISMATCH n=17 [(5, 1), (2, 2), (1, 8)]: ref=574 cf=474
+  MISMATCH n=17 [(5, 1), (2, 3), (1, 6)]: ref=511 cf=343
+  MISMATCH n=17 [(5, 1), (2, 4), (1, 4)]: ref=476 cf=252
+  MISMATCH n=17 [(5, 1), (2, 5), (1, 2)]: ref=457 cf=253
+  MISMATCH n=17 [(5, 1), (2, 6)]: ref=450 cf=438
+  MISMATCH n=17 [(5, 1), (1, 12)]: ref=872 cf=848
+  MISMATCH n=17 [(5, 2), (4, 1), (3, 1)]: ref=141 cf=79
+  MISMATCH n=17 [(5, 2), (4, 1), (2, 1), (1, 1)]: ref=210 cf=80
+  MISMATCH n=17 [(5, 2), (4, 1), (1, 3)]: ref=243 cf=105
+  MISMATCH n=17 [(5, 2), (3, 1), (2, 1), (1, 2)]: ref=243 cf=85
+  MISMATCH n=17 [(5, 2), (3, 1), (2, 2)]: ref=204 cf=108
+  MISMATCH n=17 [(5, 2), (3, 1), (1, 4)]: ref=306 cf=138
+  MISMATCH n=17 [(5, 2), (3, 2), (1, 1)]: ref=216 cf=108
+  MISMATCH n=17 [(5, 2), (2, 1), (1, 5)]: ref=405 cf=206
+  MISMATCH n=17 [(5, 2), (2, 2), (1, 3)]: ref=342 cf=138
+  MISMATCH n=17 [(5, 2), (2, 3), (1, 1)]: ref=303 cf=152
+  MISMATCH n=17 [(5, 2), (1, 7)]: ref=504 cf=336
+  MISMATCH n=17 [(5, 3), (2, 1)]: ref=385 cf=294
+  MISMATCH n=17 [(5, 3), (1, 2)]: ref=476 cf=294
+  MISMATCH n=17 [(4, 1), (3, 1), (2, 1), (1, 8)]: ref=592 cf=486
+  MISMATCH n=17 [(4, 1), (3, 1), (2, 2), (1, 6)]: ref=543 cf=362
+  MISMATCH n=17 [(4, 1), (3, 1), (2, 3), (1, 4)]: ref=518 cf=274
+  MISMATCH n=17 [(4, 1), (3, 1), (2, 4), (1, 2)]: ref=505 cf=274
+  MISMATCH n=17 [(4, 1), (3, 1), (2, 5)]: ref=500 cf=454
+  MISMATCH n=17 [(4, 1), (3, 1), (1, 10)]: ref=685 cf=634
+  MISMATCH n=17 [(4, 1), (3, 2), (2, 1), (1, 5)]: ref=418 cf=238
+  MISMATCH n=17 [(4, 1), (3, 2), (2, 2), (1, 3)]: ref=383 cf=169
+  MISMATCH n=17 [(4, 1), (3, 2), (2, 3), (1, 1)]: ref=364 cf=190
+  MISMATCH n=17 [(4, 1), (3, 2), (1, 7)]: ref=481 cf=353
+  MISMATCH n=17 [(4, 1), (3, 3), (2, 1), (1, 2)]: ref=358 cf=149
+  MISMATCH n=17 [(4, 1), (3, 3), (2, 2)]: ref=325 cf=186
+  MISMATCH n=17 [(4, 1), (3, 3), (1, 4)]: ref=415 cf=216
+  MISMATCH n=17 [(4, 1), (3, 4), (1, 1)]: ref=397 cf=286
+  MISMATCH n=17 [(4, 1), (2, 1), (1, 11)]: ref=1006 cf=938
+  MISMATCH n=17 [(4, 1), (2, 2), (1, 9)]: ref=913 cf=756
+  MISMATCH n=17 [(4, 1), (2, 3), (1, 7)]: ref=864 cf=592
+  MISMATCH n=17 [(4, 1), (2, 4), (1, 5)]: ref=839 cf=466
+  MISMATCH n=17 [(4, 1), (2, 5), (1, 3)]: ref=826 cf=438
+  MISMATCH n=17 [(4, 1), (2, 6), (1, 1)]: ref=821 cf=608
+  MISMATCH n=17 [(4, 1), (1, 13)]: ref=1171 cf=1158
+  MISMATCH n=17 [(4, 2), (3, 1), (2, 1), (1, 4)]: ref=419 cf=176
+  MISMATCH n=17 [(4, 2), (3, 1), (2, 2), (1, 2)]: ref=412 cf=146
+  MISMATCH n=17 [(4, 2), (3, 1), (2, 3)]: ref=409 cf=248
+  MISMATCH n=17 [(4, 2), (3, 1), (1, 6)]: ref=434 cf=270
+  MISMATCH n=17 [(4, 2), (3, 2), (2, 1), (1, 1)]: ref=295 cf=106
+  MISMATCH n=17 [(4, 2), (3, 2), (1, 3)]: ref=308 cf=136
+  MISMATCH n=17 [(4, 2), (3, 3)]: ref=260 cf=218
+  MISMATCH n=17 [(4, 2), (2, 1), (1, 7)]: ref=693 cf=441
+  MISMATCH n=17 [(4, 2), (2, 2), (1, 5)]: ref=678 cf=322
+  MISMATCH n=17 [(4, 2), (2, 3), (1, 3)]: ref=671 cf=281
+  MISMATCH n=17 [(4, 2), (2, 4), (1, 1)]: ref=668 cf=394
+  MISMATCH n=17 [(4, 2), (1, 9)]: ref=728 cf=602
+  MISMATCH n=17 [(4, 3), (3, 1), (2, 1)]: ref=380 cf=172
+  MISMATCH n=17 [(4, 3), (3, 1), (1, 2)]: ref=381 cf=172
+  MISMATCH n=17 [(4, 3), (2, 1), (1, 3)]: ref=618 cf=226
+  MISMATCH n=17 [(4, 3), (2, 2), (1, 1)]: ref=617 cf=250
+  MISMATCH n=17 [(4, 3), (1, 5)]: ref=619 cf=344
+  MISMATCH n=17 [(4, 4), (1, 1)]: ref=604 cf=464
+  MISMATCH n=17 [(3, 1), (2, 1), (1, 12)]: ref=1171 cf=1134
+  MISMATCH n=17 [(3, 1), (2, 2), (1, 10)]: ref=984 cf=892
+  MISMATCH n=17 [(3, 1), (2, 3), (1, 8)]: ref=873 cf=686
+  MISMATCH n=17 [(3, 1), (2, 4), (1, 6)]: ref=810 cf=512
+  MISMATCH n=17 [(3, 1), (2, 5), (1, 4)]: ref=775 cf=406
+  MISMATCH n=17 [(3, 1), (2, 6), (1, 2)]: ref=756 cf=444
+  MISMATCH n=17 [(3, 1), (2, 7)]: ref=749 cf=742
+  MISMATCH n=17 [(3, 1), (1, 14)]: ref=1470 cf=1456
+  MISMATCH n=17 [(3, 2), (2, 1), (1, 9)]: ref=819 cf=676
+  MISMATCH n=17 [(3, 2), (2, 2), (1, 7)]: ref=690 cf=478
+  MISMATCH n=17 [(3, 2), (2, 3), (1, 5)]: ref=613 cf=334
+  MISMATCH n=17 [(3, 2), (2, 4), (1, 3)]: ref=568 cf=272
+  MISMATCH n=17 [(3, 2), (2, 5), (1, 1)]: ref=543 cf=360
+  MISMATCH n=17 [(3, 2), (1, 11)]: ref=1028 cf=940
+  MISMATCH n=17 [(3, 3), (2, 1), (1, 6)]: ref=689 cf=389
+  MISMATCH n=17 [(3, 3), (2, 2), (1, 4)]: ref=582 cf=250
+  MISMATCH n=17 [(3, 3), (2, 3), (1, 2)]: ref=515 cf=219
+  MISMATCH n=17 [(3, 3), (2, 4)]: ref=476 cf=356
+  MISMATCH n=17 [(3, 3), (1, 8)]: ref=856 cf=616
+  MISMATCH n=17 [(3, 4), (2, 1), (1, 3)]: ref=655 cf=273
+  MISMATCH n=17 [(3, 4), (2, 2), (1, 1)]: ref=552 cf=262
+  MISMATCH n=17 [(3, 4), (1, 5)]: ref=810 cf=430
+  MISMATCH n=17 [(3, 5), (2, 1)]: ref=645 cf=490
+  MISMATCH n=17 [(3, 5), (1, 2)]: ref=800 cf=490
+  MISMATCH n=17 [(2, 2), (1, 13)]: ref=1626 cf=1600
+  MISMATCH n=17 [(2, 3), (1, 11)]: ref=1439 cf=1329
+  MISMATCH n=17 [(2, 4), (1, 9)]: ref=1328 cf=1076
+  MISMATCH n=17 [(2, 5), (1, 7)]: ref=1265 cf=845
+  MISMATCH n=17 [(2, 6), (1, 5)]: ref=1230 cf=680
+  MISMATCH n=17 [(2, 7), (1, 3)]: ref=1211 cf=665
+  MISMATCH n=17 [(2, 8), (1, 1)]: ref=1204 cf=924
+  MISMATCH n=18 [(17, 1), (1, 1)]: ref=180 cf=140
+  MISMATCH n=18 [(16, 1), (2, 1)]: ref=194 cf=124
+  MISMATCH n=18 [(16, 1), (1, 2)]: ref=194 cf=124
+  MISMATCH n=18 [(15, 1), (3, 1)]: ref=204 cf=113
+  MISMATCH n=18 [(15, 1), (2, 1), (1, 1)]: ref=168 cf=98
+  MISMATCH n=18 [(15, 1), (1, 3)]: ref=206 cf=113
+  MISMATCH n=18 [(14, 1), (4, 1)]: ref=154 cf=102
+  MISMATCH n=18 [(14, 1), (3, 1), (1, 1)]: ref=142 cf=81
+  MISMATCH n=18 [(14, 1), (2, 1), (1, 2)]: ref=222 cf=90
+  MISMATCH n=18 [(14, 1), (2, 2)]: ref=222 cf=118
+  MISMATCH n=18 [(14, 1), (1, 4)]: ref=224 cf=120
+  MISMATCH n=18 [(13, 1), (5, 1)]: ref=92 cf=70
+  MISMATCH n=18 [(13, 1), (4, 1), (1, 1)]: ref=122 cf=69
+  MISMATCH n=18 [(13, 1), (3, 1), (2, 1)]: ref=122 cf=70
+  MISMATCH n=18 [(13, 1), (3, 1), (1, 2)]: ref=152 cf=70
+  MISMATCH n=18 [(13, 1), (2, 1), (1, 3)]: ref=196 cf=87
+  MISMATCH n=18 [(13, 1), (2, 2), (1, 1)]: ref=166 cf=82
+  MISMATCH n=18 [(13, 1), (1, 5)]: ref=240 cf=130
+  MISMATCH n=18 [(12, 1), (6, 1)]: ref=266 cf=156
+  MISMATCH n=18 [(12, 1), (5, 1), (1, 1)]: ref=106 cf=58
+  MISMATCH n=18 [(12, 1), (4, 1), (2, 1)]: ref=266 cf=94
+  MISMATCH n=18 [(12, 1), (4, 1), (1, 2)]: ref=266 cf=94
+  MISMATCH n=18 [(12, 1), (3, 1), (2, 1), (1, 1)]: ref=270 cf=78
+  MISMATCH n=18 [(12, 1), (3, 1), (1, 3)]: ref=272 cf=94
+  MISMATCH n=18 [(12, 1), (3, 2)]: ref=268 cf=158
+  MISMATCH n=18 [(12, 1), (2, 1), (1, 4)]: ref=278 cf=112
+  MISMATCH n=18 [(12, 1), (2, 2), (1, 2)]: ref=276 cf=98
+  MISMATCH n=18 [(12, 1), (2, 3)]: ref=276 cf=162
+  MISMATCH n=18 [(12, 1), (1, 6)]: ref=282 cf=168
+  MISMATCH n=18 [(11, 1), (7, 1)]: ref=70 cf=55
+  MISMATCH n=18 [(11, 1), (6, 1), (1, 1)]: ref=94 cf=52
+  MISMATCH n=18 [(11, 1), (5, 1), (2, 1)]: ref=90 cf=51
+  MISMATCH n=18 [(11, 1), (5, 1), (1, 2)]: ref=114 cf=51
+  MISMATCH n=18 [(11, 1), (4, 1), (3, 1)]: ref=90 cf=52
+  MISMATCH n=18 [(11, 1), (4, 1), (2, 1), (1, 1)]: ref=132 cf=52
+  MISMATCH n=18 [(11, 1), (4, 1), (1, 3)]: ref=152 cf=68
+  MISMATCH n=18 [(11, 1), (3, 1), (2, 1), (1, 2)]: ref=152 cf=55
+  MISMATCH n=18 [(11, 1), (3, 1), (2, 2)]: ref=128 cf=69
+  MISMATCH n=18 [(11, 1), (3, 1), (1, 4)]: ref=190 cf=87
+  MISMATCH n=18 [(11, 1), (3, 2), (1, 1)]: ref=136 cf=68
+  MISMATCH n=18 [(11, 1), (2, 1), (1, 5)]: ref=250 cf=130
+  MISMATCH n=18 [(11, 1), (2, 2), (1, 3)]: ref=212 cf=89
+  MISMATCH n=18 [(11, 1), (2, 3), (1, 1)]: ref=188 cf=94
+  MISMATCH n=18 [(11, 1), (1, 7)]: ref=310 cf=205
+  MISMATCH n=18 [(10, 1), (8, 1)]: ref=106 cf=82
+  MISMATCH n=18 [(10, 1), (7, 1), (1, 1)]: ref=84 cf=47
+  MISMATCH n=18 [(10, 1), (6, 1), (2, 1)]: ref=150 cf=66
+  MISMATCH n=18 [(10, 1), (6, 1), (1, 2)]: ref=150 cf=66
+  MISMATCH n=18 [(10, 1), (5, 1), (3, 1)]: ref=206 cf=97
+  MISMATCH n=18 [(10, 1), (5, 1), (2, 1), (1, 1)]: ref=318 cf=105
+  MISMATCH n=18 [(10, 1), (5, 1), (1, 3)]: ref=328 cf=121
+  MISMATCH n=18 [(10, 1), (4, 1), (3, 1), (1, 1)]: ref=142 cf=56
+  MISMATCH n=18 [(10, 1), (4, 1), (2, 1), (1, 2)]: ref=232 cf=74
+  MISMATCH n=18 [(10, 1), (4, 1), (2, 2)]: ref=232 cf=104
+  MISMATCH n=18 [(10, 1), (4, 1), (1, 4)]: ref=234 cf=106
+  MISMATCH n=18 [(10, 1), (4, 2)]: ref=190 cf=142
+  MISMATCH n=18 [(10, 1), (3, 1), (2, 1), (1, 3)]: ref=218 cf=77
+  MISMATCH n=18 [(10, 1), (3, 1), (2, 2), (1, 1)]: ref=212 cf=77
+  MISMATCH n=18 [(10, 1), (3, 1), (1, 5)]: ref=230 cf=123
+  MISMATCH n=18 [(10, 1), (3, 2), (2, 1)]: ref=156 cf=72
+  MISMATCH n=18 [(10, 1), (3, 2), (1, 2)]: ref=166 cf=72
+  MISMATCH n=18 [(10, 1), (2, 1), (1, 6)]: ref=358 cf=202
+  MISMATCH n=18 [(10, 1), (2, 2), (1, 4)]: ref=346 cf=146
+  MISMATCH n=18 [(10, 1), (2, 3), (1, 2)]: ref=340 cf=140
+  MISMATCH n=18 [(10, 1), (2, 4)]: ref=340 cf=244
+  MISMATCH n=18 [(10, 1), (1, 8)]: ref=384 cf=288
+  MISMATCH n=18 [(9, 1), (8, 1), (1, 1)]: ref=82 cf=47
+  MISMATCH n=18 [(9, 1), (7, 1), (2, 1)]: ref=76 cf=44
+  MISMATCH n=18 [(9, 1), (7, 1), (1, 2)]: ref=98 cf=44
+  MISMATCH n=18 [(9, 1), (6, 1), (3, 1)]: ref=228 cf=95
+  MISMATCH n=18 [(9, 1), (6, 1), (2, 1), (1, 1)]: ref=212 cf=79
+  MISMATCH n=18 [(9, 1), (6, 1), (1, 3)]: ref=230 cf=95
+  MISMATCH n=18 [(9, 1), (5, 1), (4, 1)]: ref=70 cf=42
+  MISMATCH n=18 [(9, 1), (5, 1), (3, 1), (1, 1)]: ref=144 cf=47
+  MISMATCH n=18 [(9, 1), (5, 1), (2, 1), (1, 2)]: ref=124 cf=44
+  MISMATCH n=18 [(9, 1), (5, 1), (2, 2)]: ref=104 cf=58
+  MISMATCH n=18 [(9, 1), (5, 1), (1, 4)]: ref=158 cf=76
+  MISMATCH n=18 [(9, 1), (4, 1), (3, 1), (2, 1)]: ref=166 cf=61
+  MISMATCH n=18 [(9, 1), (4, 1), (3, 1), (1, 2)]: ref=192 cf=61
+  MISMATCH n=18 [(9, 1), (4, 1), (2, 1), (1, 3)]: ref=188 cf=73
+  MISMATCH n=18 [(9, 1), (4, 1), (2, 2), (1, 1)]: ref=172 cf=69
+  MISMATCH n=18 [(9, 1), (4, 1), (1, 5)]: ref=214 cf=119
+  MISMATCH n=18 [(9, 1), (4, 2), (1, 1)]: ref=140 cf=80
+  MISMATCH n=18 [(9, 1), (3, 1), (2, 1), (1, 4)]: ref=314 cf=126
+  MISMATCH n=18 [(9, 1), (3, 1), (2, 2), (1, 2)]: ref=266 cf=92
+  MISMATCH n=18 [(9, 1), (3, 1), (2, 3)]: ref=236 cf=128
+  MISMATCH n=18 [(9, 1), (3, 1), (1, 6)]: ref=388 cf=202
+  MISMATCH n=18 [(9, 1), (3, 2), (2, 1), (1, 1)]: ref=306 cf=120
+  MISMATCH n=18 [(9, 1), (3, 2), (1, 3)]: ref=378 cf=147
+  MISMATCH n=18 [(9, 1), (3, 3)]: ref=374 cf=284
+  MISMATCH n=18 [(9, 1), (2, 1), (1, 7)]: ref=364 cf=249
+  MISMATCH n=18 [(9, 1), (2, 2), (1, 5)]: ref=308 cf=168
+  MISMATCH n=18 [(9, 1), (2, 3), (1, 3)]: ref=274 cf=121
+  MISMATCH n=18 [(9, 1), (2, 4), (1, 1)]: ref=254 cf=144
+  MISMATCH n=18 [(9, 1), (1, 9)]: ref=458 cf=368
+  MISMATCH n=18 [(8, 1), (7, 1), (3, 1)]: ref=68 cf=42
+  MISMATCH n=18 [(8, 1), (7, 1), (2, 1), (1, 1)]: ref=114 cf=42
+  MISMATCH n=18 [(8, 1), (7, 1), (1, 3)]: ref=122 cf=58
+  MISMATCH n=18 [(8, 1), (6, 1), (4, 1)]: ref=196 cf=94
+  MISMATCH n=18 [(8, 1), (6, 1), (3, 1), (1, 1)]: ref=180 cf=68
+  MISMATCH n=18 [(8, 1), (6, 1), (2, 1), (1, 2)]: ref=212 cf=72
+  MISMATCH n=18 [(8, 1), (6, 1), (2, 2)]: ref=212 cf=102
+  MISMATCH n=18 [(8, 1), (6, 1), (1, 4)]: ref=214 cf=104
+  MISMATCH n=18 [(8, 1), (5, 1), (4, 1), (1, 1)]: ref=168 cf=65
+  MISMATCH n=18 [(8, 1), (5, 1), (3, 1), (2, 1)]: ref=106 cf=42
+  MISMATCH n=18 [(8, 1), (5, 1), (3, 1), (1, 2)]: ref=112 cf=42
+  MISMATCH n=18 [(8, 1), (5, 1), (2, 1), (1, 3)]: ref=186 cf=70
+  MISMATCH n=18 [(8, 1), (5, 1), (2, 2), (1, 1)]: ref=180 cf=70
+  MISMATCH n=18 [(8, 1), (5, 1), (1, 5)]: ref=198 cf=116
+  MISMATCH n=18 [(8, 1), (5, 2)]: ref=126 cf=112
+  MISMATCH n=18 [(8, 1), (4, 1), (3, 1), (2, 1), (1, 1)]: ref=278 cf=88
+  MISMATCH n=18 [(8, 1), (4, 1), (3, 1), (1, 3)]: ref=280 cf=105
+  MISMATCH n=18 [(8, 1), (4, 1), (3, 2)]: ref=198 cf=110
+  MISMATCH n=18 [(8, 1), (4, 1), (2, 1), (1, 4)]: ref=448 cf=184
+  MISMATCH n=18 [(8, 1), (4, 1), (2, 2), (1, 2)]: ref=446 cf=162
+  MISMATCH n=18 [(8, 1), (4, 1), (2, 3)]: ref=446 cf=238
+  MISMATCH n=18 [(8, 1), (4, 1), (1, 6)]: ref=452 cf=244
+  MISMATCH n=18 [(8, 1), (4, 2), (2, 1)]: ref=436 cf=218
+  MISMATCH n=18 [(8, 1), (4, 2), (1, 2)]: ref=436 cf=218
+  MISMATCH n=18 [(8, 1), (3, 1), (2, 1), (1, 5)]: ref=318 cf=166
+  MISMATCH n=18 [(8, 1), (3, 1), (2, 2), (1, 3)]: ref=306 cf=120
+  MISMATCH n=18 [(8, 1), (3, 1), (2, 3), (1, 1)]: ref=300 cf=144
+  MISMATCH n=18 [(8, 1), (3, 1), (1, 7)]: ref=344 cf=246
+  MISMATCH n=18 [(8, 1), (3, 2), (2, 1), (1, 2)]: ref=228 cf=78
+  MISMATCH n=18 [(8, 1), (3, 2), (2, 2)]: ref=218 cf=108
+  MISMATCH n=18 [(8, 1), (3, 2), (1, 4)]: ref=248 cf=122
+  MISMATCH n=18 [(8, 1), (3, 3), (1, 1)]: ref=212 cf=130
+  MISMATCH n=18 [(8, 1), (2, 1), (1, 8)]: ref=534 cf=392
+  MISMATCH n=18 [(8, 1), (2, 2), (1, 6)]: ref=508 cf=294
+  MISMATCH n=18 [(8, 1), (2, 3), (1, 4)]: ref=496 cf=230
+  MISMATCH n=18 [(8, 1), (2, 4), (1, 2)]: ref=490 cf=244
+  MISMATCH n=18 [(8, 1), (2, 5)]: ref=490 cf=420
+  MISMATCH n=18 [(8, 1), (1, 10)]: ref=590 cf=520
+  MISMATCH n=18 [(8, 2), (2, 1)]: ref=388 cf=248
+  MISMATCH n=18 [(8, 2), (1, 2)]: ref=388 cf=248
+  MISMATCH n=18 [(7, 1), (6, 1), (5, 1)]: ref=60 cf=40
+  MISMATCH n=18 [(7, 1), (6, 1), (4, 1), (1, 1)]: ref=106 cf=47
+  MISMATCH n=18 [(7, 1), (6, 1), (3, 1), (2, 1)]: ref=144 cf=56
+  MISMATCH n=18 [(7, 1), (6, 1), (3, 1), (1, 2)]: ref=158 cf=56
+  MISMATCH n=18 [(7, 1), (6, 1), (2, 1), (1, 3)]: ref=174 cf=70
+  MISMATCH n=18 [(7, 1), (6, 1), (2, 2), (1, 1)]: ref=162 cf=66
+  MISMATCH n=18 [(7, 1), (6, 1), (1, 5)]: ref=196 cf=116
+  MISMATCH n=18 [(7, 1), (5, 1), (4, 1), (2, 1)]: ref=90 cf=41
+  MISMATCH n=18 [(7, 1), (5, 1), (4, 1), (1, 2)]: ref=102 cf=41
+  MISMATCH n=18 [(7, 1), (5, 1), (3, 1), (2, 1), (1, 1)]: ref=102 cf=36
+  MISMATCH n=18 [(7, 1), (5, 1), (3, 1), (1, 3)]: ref=132 cf=55
+  MISMATCH n=18 [(7, 1), (5, 1), (3, 2)]: ref=94 cf=65
+  MISMATCH n=18 [(7, 1), (5, 1), (2, 1), (1, 4)]: ref=184 cf=91
+  MISMATCH n=18 [(7, 1), (5, 1), (2, 2), (1, 2)]: ref=154 cf=61
+  MISMATCH n=18 [(7, 1), (5, 1), (2, 3)]: ref=138 cf=97
+  MISMATCH n=18 [(7, 1), (5, 1), (1, 6)]: ref=236 cf=159
+  MISMATCH n=18 [(7, 1), (5, 2), (1, 1)]: ref=152 cf=98
+  MISMATCH n=18 [(7, 1), (4, 1), (3, 1), (2, 1), (1, 2)]: ref=162 cf=58
+  MISMATCH n=18 [(7, 1), (4, 1), (3, 1), (2, 2)]: ref=150 cf=78
+  MISMATCH n=18 [(7, 1), (4, 1), (3, 1), (1, 4)]: ref=184 cf=92
+  MISMATCH n=18 [(7, 1), (4, 1), (3, 2), (1, 1)]: ref=132 cf=66
+  MISMATCH n=18 [(7, 1), (4, 1), (2, 1), (1, 5)]: ref=286 cf=164
+  MISMATCH n=18 [(7, 1), (4, 1), (2, 2), (1, 3)]: ref=264 cf=114
+  MISMATCH n=18 [(7, 1), (4, 1), (2, 3), (1, 1)]: ref=252 cf=130
+  MISMATCH n=18 [(7, 1), (4, 1), (1, 7)]: ref=326 cf=244
+  MISMATCH n=18 [(7, 1), (4, 2), (3, 1)]: ref=122 cf=79
+  MISMATCH n=18 [(7, 1), (4, 2), (2, 1), (1, 1)]: ref=206 cf=80
+  MISMATCH n=18 [(7, 1), (4, 2), (1, 3)]: ref=214 cf=105
+  MISMATCH n=18 [(7, 1), (3, 1), (2, 1), (1, 6)]: ref=326 cf=215
+  MISMATCH n=18 [(7, 1), (3, 1), (2, 2), (1, 4)]: ref=274 cf=137
+  MISMATCH n=18 [(7, 1), (3, 1), (2, 3), (1, 2)]: ref=244 cf=109
+  MISMATCH n=18 [(7, 1), (3, 1), (2, 4)]: ref=228 cf=183
+  MISMATCH n=18 [(7, 1), (3, 1), (1, 8)]: ref=416 cf=331
+  MISMATCH n=18 [(7, 1), (3, 2), (2, 1), (1, 3)]: ref=234 cf=95
+  MISMATCH n=18 [(7, 1), (3, 2), (2, 2), (1, 1)]: ref=196 cf=84
+  MISMATCH n=18 [(7, 1), (3, 2), (1, 5)]: ref=298 cf=168
+  MISMATCH n=18 [(7, 1), (3, 3), (2, 1)]: ref=202 cf=131
+  MISMATCH n=18 [(7, 1), (3, 3), (1, 2)]: ref=258 cf=131
+  MISMATCH n=18 [(7, 1), (2, 1), (1, 9)]: ref=568 cf=482
+  MISMATCH n=18 [(7, 1), (2, 2), (1, 7)]: ref=478 cf=349
+  MISMATCH n=18 [(7, 1), (2, 3), (1, 5)]: ref=426 cf=246
+  MISMATCH n=18 [(7, 1), (2, 4), (1, 3)]: ref=396 cf=193
+  MISMATCH n=18 [(7, 1), (2, 5), (1, 1)]: ref=380 cf=250
+  MISMATCH n=18 [(7, 1), (1, 11)]: ref=720 cf=665
+  MISMATCH n=18 [(7, 2), (4, 1)]: ref=224 cf=172
+  MISMATCH n=18 [(7, 2), (3, 1), (1, 1)]: ref=278 cf=158
+  MISMATCH n=18 [(7, 2), (2, 1), (1, 2)]: ref=358 cf=172
+  MISMATCH n=18 [(7, 2), (2, 2)]: ref=304 cf=200
+  MISMATCH n=18 [(7, 2), (1, 4)]: ref=438 cf=230
+  MISMATCH n=18 [(6, 1), (5, 1), (4, 1), (3, 1)]: ref=148 cf=66
+  MISMATCH n=18 [(6, 1), (5, 1), (4, 1), (2, 1), (1, 1)]: ref=168 cf=59
+  MISMATCH n=18 [(6, 1), (5, 1), (4, 1), (1, 3)]: ref=174 cf=76
+  MISMATCH n=18 [(6, 1), (5, 1), (3, 1), (2, 1), (1, 2)]: ref=236 cf=85
+  MISMATCH n=18 [(6, 1), (5, 1), (3, 1), (2, 2)]: ref=224 cf=105
+  MISMATCH n=18 [(6, 1), (5, 1), (3, 1), (1, 4)]: ref=258 cf=119
+  MISMATCH n=18 [(6, 1), (5, 1), (3, 2), (1, 1)]: ref=240 cf=121
+  MISMATCH n=18 [(6, 1), (5, 1), (2, 1), (1, 5)]: ref=286 cf=163
+  MISMATCH n=18 [(6, 1), (5, 1), (2, 2), (1, 3)]: ref=266 cf=113
+  MISMATCH n=18 [(6, 1), (5, 1), (2, 3), (1, 1)]: ref=256 cf=129
+  MISMATCH n=18 [(6, 1), (5, 1), (1, 7)]: ref=324 cf=243
+  MISMATCH n=18 [(6, 1), (5, 2), (2, 1)]: ref=178 cf=110
+  MISMATCH n=18 [(6, 1), (5, 2), (1, 2)]: ref=204 cf=110
+  MISMATCH n=18 [(6, 1), (4, 1), (3, 1), (2, 1), (1, 3)]: ref=402 cf=171
+  MISMATCH n=18 [(6, 1), (4, 1), (3, 1), (2, 2), (1, 1)]: ref=394 cf=168
+  MISMATCH n=18 [(6, 1), (4, 1), (3, 1), (1, 5)]: ref=416 cf=220
+  MISMATCH n=18 [(6, 1), (4, 1), (3, 2), (2, 1)]: ref=376 cf=178
+  MISMATCH n=18 [(6, 1), (4, 1), (3, 2), (1, 2)]: ref=390 cf=178
+  MISMATCH n=18 [(6, 1), (4, 1), (2, 1), (1, 6)]: ref=488 cf=302
+  MISMATCH n=18 [(6, 1), (4, 1), (2, 2), (1, 4)]: ref=476 cf=228
+  MISMATCH n=18 [(6, 1), (4, 1), (2, 3), (1, 2)]: ref=470 cf=216
+  MISMATCH n=18 [(6, 1), (4, 1), (2, 4)]: ref=470 cf=350
+  MISMATCH n=18 [(6, 1), (4, 1), (1, 8)]: ref=514 cf=394
+  MISMATCH n=18 [(6, 1), (4, 2), (3, 1), (1, 1)]: ref=320 cf=135
+  MISMATCH n=18 [(6, 1), (4, 2), (2, 1), (1, 2)]: ref=384 cf=144
+  MISMATCH n=18 [(6, 1), (4, 2), (2, 2)]: ref=384 cf=192
+  MISMATCH n=18 [(6, 1), (4, 2), (1, 4)]: ref=386 cf=194
+  MISMATCH n=18 [(6, 1), (4, 3)]: ref=356 cf=332
+  MISMATCH n=18 [(6, 1), (3, 1), (2, 1), (1, 7)]: ref=648 cf=433
+  MISMATCH n=18 [(6, 1), (3, 1), (2, 2), (1, 5)]: ref=608 cf=333
+  MISMATCH n=18 [(6, 1), (3, 1), (2, 3), (1, 3)]: ref=586 cf=279
+  MISMATCH n=18 [(6, 1), (3, 1), (2, 4), (1, 1)]: ref=574 cf=331
+  MISMATCH n=18 [(6, 1), (3, 1), (1, 9)]: ref=722 cf=559
+  MISMATCH n=18 [(6, 1), (3, 2), (2, 1), (1, 4)]: ref=594 cf=266
+  MISMATCH n=18 [(6, 1), (3, 2), (2, 2), (1, 2)]: ref=562 cf=228
+  MISMATCH n=18 [(6, 1), (3, 2), (2, 3)]: ref=544 cf=296
+  MISMATCH n=18 [(6, 1), (3, 2), (1, 6)]: ref=648 cf=358
+  MISMATCH n=18 [(6, 1), (3, 3), (2, 1), (1, 1)]: ref=582 cf=279
+  MISMATCH n=18 [(6, 1), (3, 3), (1, 3)]: ref=634 cf=313
+  MISMATCH n=18 [(6, 1), (3, 4)]: ref=626 cf=586
+  MISMATCH n=18 [(6, 1), (2, 1), (1, 10)]: ref=834 cf=726
+  MISMATCH n=18 [(6, 1), (2, 2), (1, 8)]: ref=762 cf=570
+  MISMATCH n=18 [(6, 1), (2, 3), (1, 6)]: ref=724 cf=436
+  MISMATCH n=18 [(6, 1), (2, 4), (1, 4)]: ref=704 cf=352
+  MISMATCH n=18 [(6, 1), (2, 5), (1, 2)]: ref=694 cf=386
+  MISMATCH n=18 [(6, 1), (2, 6)]: ref=694 cf=646
+  MISMATCH n=18 [(6, 1), (1, 12)]: ref=964 cf=916
+  MISMATCH n=18 [(6, 2), (5, 1), (1, 1)]: ref=208 cf=114
+  MISMATCH n=18 [(6, 2), (4, 1), (2, 1)]: ref=366 cf=152
+  MISMATCH n=18 [(6, 2), (4, 1), (1, 2)]: ref=366 cf=152
+  MISMATCH n=18 [(6, 2), (3, 1), (2, 1), (1, 1)]: ref=526 cf=154
+  MISMATCH n=18 [(6, 2), (3, 1), (1, 3)]: ref=536 cf=183
+  MISMATCH n=18 [(6, 2), (3, 2)]: ref=530 cf=310
+  MISMATCH n=18 [(6, 2), (2, 1), (1, 4)]: ref=536 cf=212
+  MISMATCH n=18 [(6, 2), (2, 2), (1, 2)]: ref=530 cf=186
+  MISMATCH n=18 [(6, 2), (2, 3)]: ref=530 cf=302
+  MISMATCH n=18 [(6, 2), (1, 6)]: ref=548 cf=320
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 1), (2, 1), (1, 4)]: ref=270 cf=143
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 1), (2, 2), (1, 2)]: ref=250 cf=109
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 1), (2, 3)]: ref=240 cf=165
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 1), (1, 6)]: ref=308 cf=215
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 2), (2, 1), (1, 1)]: ref=192 cf=81
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 2), (1, 3)]: ref=220 cf=105
+  MISMATCH n=18 [(5, 1), (4, 1), (3, 3)]: ref=192 cf=169
+  MISMATCH n=18 [(5, 1), (4, 1), (2, 1), (1, 7)]: ref=474 cf=355
+  MISMATCH n=18 [(5, 1), (4, 1), (2, 2), (1, 5)]: ref=436 cf=255
+  MISMATCH n=18 [(5, 1), (4, 1), (2, 3), (1, 3)]: ref=416 cf=201
+  MISMATCH n=18 [(5, 1), (4, 1), (2, 4), (1, 1)]: ref=406 cf=253
+  MISMATCH n=18 [(5, 1), (4, 1), (1, 9)]: ref=546 cf=481
+  MISMATCH n=18 [(5, 1), (4, 2), (3, 1), (2, 1)]: ref=196 cf=86
+  MISMATCH n=18 [(5, 1), (4, 2), (3, 1), (1, 2)]: ref=202 cf=86
+  MISMATCH n=18 [(5, 1), (4, 2), (2, 1), (1, 3)]: ref=338 cf=133
+  MISMATCH n=18 [(5, 1), (4, 2), (2, 2), (1, 1)]: ref=332 cf=138
+  MISMATCH n=18 [(5, 1), (4, 2), (1, 5)]: ref=350 cf=206
+  MISMATCH n=18 [(5, 1), (4, 3), (1, 1)]: ref=308 cf=221
+  MISMATCH n=18 [(5, 1), (3, 1), (2, 1), (1, 8)]: ref=546 cf=450
+  MISMATCH n=18 [(5, 1), (3, 1), (2, 2), (1, 6)]: ref=458 cf=312
+  MISMATCH n=18 [(5, 1), (3, 1), (2, 3), (1, 4)]: ref=408 cf=216
+  MISMATCH n=18 [(5, 1), (3, 1), (2, 4), (1, 2)]: ref=380 cf=198
+  MISMATCH n=18 [(5, 1), (3, 1), (2, 5)]: ref=366 cf=334
+  MISMATCH n=18 [(5, 1), (3, 1), (1, 10)]: ref=696 cf=634
+  MISMATCH n=18 [(5, 1), (3, 2), (2, 1), (1, 5)]: ref=386 cf=218
+  MISMATCH n=18 [(5, 1), (3, 2), (2, 2), (1, 3)]: ref=324 cf=141
+  MISMATCH n=18 [(5, 1), (3, 2), (2, 3), (1, 1)]: ref=288 cf=150
+  MISMATCH n=18 [(5, 1), (3, 2), (1, 7)]: ref=490 cf=353
+  MISMATCH n=18 [(5, 1), (3, 3), (2, 1), (1, 2)]: ref=334 cf=142
+  MISMATCH n=18 [(5, 1), (3, 3), (2, 2)]: ref=280 cf=174
+  MISMATCH n=18 [(5, 1), (3, 3), (1, 4)]: ref=422 cf=216
+  MISMATCH n=18 [(5, 1), (3, 4), (1, 1)]: ref=402 cf=286
+  MISMATCH n=18 [(5, 1), (2, 1), (1, 11)]: ref=940 cf=883
+  MISMATCH n=18 [(5, 1), (2, 2), (1, 9)]: ref=790 cf=678
+  MISMATCH n=18 [(5, 1), (2, 3), (1, 7)]: ref=702 cf=507
+  MISMATCH n=18 [(5, 1), (2, 4), (1, 5)]: ref=652 cf=374
+  MISMATCH n=18 [(5, 1), (2, 5), (1, 3)]: ref=624 cf=323
+  MISMATCH n=18 [(5, 1), (2, 6), (1, 1)]: ref=610 cf=438
+  MISMATCH n=18 [(5, 1), (1, 13)]: ref=1184 cf=1158
+  MISMATCH n=18 [(5, 2), (4, 1), (3, 1), (1, 1)]: ref=196 cf=81
+  MISMATCH n=18 [(5, 2), (4, 1), (2, 1), (1, 2)]: ref=286 cf=102
+  MISMATCH n=18 [(5, 2), (4, 1), (2, 2)]: ref=260 cf=132
+  MISMATCH n=18 [(5, 2), (4, 1), (1, 4)]: ref=330 cf=154
+  MISMATCH n=18 [(5, 2), (4, 2)]: ref=210 cf=162
+  MISMATCH n=18 [(5, 2), (3, 1), (2, 1), (1, 3)]: ref=330 cf=123
+  MISMATCH n=18 [(5, 2), (3, 1), (2, 2), (1, 1)]: ref=278 cf=112
+  MISMATCH n=18 [(5, 2), (3, 1), (1, 5)]: ref=412 cf=208
+  MISMATCH n=18 [(5, 2), (3, 2), (2, 1)]: ref=234 cf=126
+  MISMATCH n=18 [(5, 2), (3, 2), (1, 2)]: ref=294 cf=126
+  MISMATCH n=18 [(5, 2), (2, 1), (1, 6)]: ref=540 cf=306
+  MISMATCH n=18 [(5, 2), (2, 2), (1, 4)]: ref=458 cf=202
+  MISMATCH n=18 [(5, 2), (2, 3), (1, 2)]: ref=406 cf=176
+  MISMATCH n=18 [(5, 2), (2, 4)]: ref=376 cf=280
+  MISMATCH n=18 [(5, 2), (1, 8)]: ref=668 cf=476
+  MISMATCH n=18 [(5, 3), (3, 1)]: ref=388 cf=297
+  MISMATCH n=18 [(5, 3), (2, 1), (1, 1)]: ref=500 cf=294
+  MISMATCH n=18 [(5, 3), (1, 3)]: ref=612 cf=339
+  MISMATCH n=18 [(4, 1), (3, 1), (2, 1), (1, 9)]: ref=810 cf=692
+  MISMATCH n=18 [(4, 1), (3, 1), (2, 2), (1, 7)]: ref=738 cf=530
+  MISMATCH n=18 [(4, 1), (3, 1), (2, 3), (1, 5)]: ref=700 cf=402
+  MISMATCH n=18 [(4, 1), (3, 1), (2, 4), (1, 3)]: ref=680 cf=352
+  MISMATCH n=18 [(4, 1), (3, 1), (2, 5), (1, 1)]: ref=670 cf=464
+  MISMATCH n=18 [(4, 1), (3, 1), (1, 11)]: ref=940 cf=884
+  MISMATCH n=18 [(4, 1), (3, 2), (2, 1), (1, 6)]: ref=572 cf=362
+  MISMATCH n=18 [(4, 1), (3, 2), (2, 2), (1, 4)]: ref=522 cf=256
+  MISMATCH n=18 [(4, 1), (3, 2), (2, 3), (1, 2)]: ref=494 cf=232
+  MISMATCH n=18 [(4, 1), (3, 2), (2, 4)]: ref=480 cf=366
+  MISMATCH n=18 [(4, 1), (3, 2), (1, 8)]: ref=660 cf=514
+  MISMATCH n=18 [(4, 1), (3, 3), (2, 1), (1, 3)]: ref=484 cf=206
+  MISMATCH n=18 [(4, 1), (3, 3), (2, 2), (1, 1)]: ref=438 cf=198
+  MISMATCH n=18 [(4, 1), (3, 3), (1, 5)]: ref=560 cf=312
+  MISMATCH n=18 [(4, 1), (3, 4), (2, 1)]: ref=456 cf=314
+  MISMATCH n=18 [(4, 1), (3, 4), (1, 2)]: ref=532 cf=314
+  MISMATCH n=18 [(4, 1), (2, 1), (1, 12)]: ref=1342 cf=1268
+  MISMATCH n=18 [(4, 1), (2, 2), (1, 10)]: ref=1212 cf=1038
+  MISMATCH n=18 [(4, 1), (2, 3), (1, 8)]: ref=1140 cf=830
+  MISMATCH n=18 [(4, 1), (2, 4), (1, 6)]: ref=1102 cf=656
+  MISMATCH n=18 [(4, 1), (2, 5), (1, 4)]: ref=1082 cf=568
+  MISMATCH n=18 [(4, 1), (2, 6), (1, 2)]: ref=1072 cf=658
+  MISMATCH n=18 [(4, 1), (2, 7)]: ref=1072 cf=1058
+  MISMATCH n=18 [(4, 1), (1, 14)]: ref=1562 cf=1548
+  MISMATCH n=18 [(4, 2), (3, 1), (2, 1), (1, 5)]: ref=564 cf=276
+  MISMATCH n=18 [(4, 2), (3, 1), (2, 2), (1, 3)]: ref=552 cf=209
+  MISMATCH n=18 [(4, 2), (3, 1), (2, 3), (1, 1)]: ref=546 cf=260
+  MISMATCH n=18 [(4, 2), (3, 1), (1, 7)]: ref=590 cf=401
+  MISMATCH n=18 [(4, 2), (3, 2), (2, 1), (1, 2)]: ref=400 cf=138
+  MISMATCH n=18 [(4, 2), (3, 2), (2, 2)]: ref=390 cf=186
+  MISMATCH n=18 [(4, 2), (3, 2), (1, 4)]: ref=420 cf=200
+  MISMATCH n=18 [(4, 2), (3, 3), (1, 1)]: ref=352 cf=218
+  MISMATCH n=18 [(4, 2), (2, 1), (1, 8)]: ref=914 cf=630
+  MISMATCH n=18 [(4, 2), (2, 2), (1, 6)]: ref=888 cf=472
+  MISMATCH n=18 [(4, 2), (2, 3), (1, 4)]: ref=876 cf=384
+  MISMATCH n=18 [(4, 2), (2, 4), (1, 2)]: ref=870 cf=434
+  MISMATCH n=18 [(4, 2), (2, 5)]: ref=870 cf=730
+  MISMATCH n=18 [(4, 2), (1, 10)]: ref=970 cf=830
+  MISMATCH n=18 [(4, 3), (3, 1), (2, 1), (1, 1)]: ref=504 cf=178
+  MISMATCH n=18 [(4, 3), (3, 1), (1, 3)]: ref=506 cf=220
+  MISMATCH n=18 [(4, 3), (3, 2)]: ref=358 cf=248
+  MISMATCH n=18 [(4, 3), (2, 1), (1, 4)]: ref=800 cf=314
+  MISMATCH n=18 [(4, 3), (2, 2), (1, 2)]: ref=798 cf=284
+  MISMATCH n=18 [(4, 3), (2, 3)]: ref=798 cf=468
+  MISMATCH n=18 [(4, 3), (1, 6)]: ref=804 cf=474
+  MISMATCH n=18 [(4, 4), (2, 1)]: ref=776 cf=496
+  MISMATCH n=18 [(4, 4), (1, 2)]: ref=776 cf=496
+  MISMATCH n=18 [(3, 1), (2, 1), (1, 13)]: ref=1562 cf=1522
+  MISMATCH n=18 [(3, 1), (2, 2), (1, 11)]: ref=1318 cf=1217
+  MISMATCH n=18 [(3, 1), (2, 3), (1, 9)]: ref=1168 cf=958
+  MISMATCH n=18 [(3, 1), (2, 4), (1, 7)]: ref=1080 cf=733
+  MISMATCH n=18 [(3, 1), (2, 5), (1, 5)]: ref=1030 cf=570
+  MISMATCH n=18 [(3, 1), (2, 6), (1, 3)]: ref=1002 cf=537
+  MISMATCH n=18 [(3, 1), (2, 7), (1, 1)]: ref=988 cf=742
+  MISMATCH n=18 [(3, 1), (1, 15)]: ref=1940 cf=1925
+  MISMATCH n=18 [(3, 2), (2, 1), (1, 10)]: ref=1098 cf=940
+  MISMATCH n=18 [(3, 2), (2, 2), (1, 8)]: ref=928 cf=688
+  MISMATCH n=18 [(3, 2), (2, 3), (1, 6)]: ref=824 cf=494
+  MISMATCH n=18 [(3, 2), (2, 4), (1, 4)]: ref=762 cf=378
+  MISMATCH n=18 [(3, 2), (2, 5), (1, 2)]: ref=726 cf=400
+  MISMATCH n=18 [(3, 2), (2, 6)]: ref=708 cf=660
+  MISMATCH n=18 [(3, 2), (1, 12)]: ref=1366 cf=1270
+  MISMATCH n=18 [(3, 3), (2, 1), (1, 7)]: ref=910 cf=565
+  MISMATCH n=18 [(3, 3), (2, 2), (1, 5)]: ref=772 cf=372
+  MISMATCH n=18 [(3, 3), (2, 3), (1, 3)]: ref=684 cf=285
+  MISMATCH n=18 [(3, 3), (2, 4), (1, 1)]: ref=630 cf=356
+  MISMATCH n=18 [(3, 3), (1, 9)]: ref=1122 cf=852
+  MISMATCH n=18 [(3, 4), (2, 1), (1, 4)]: ref=854 cf=370
+  MISMATCH n=18 [(3, 4), (2, 2), (1, 2)]: ref=724 cf=296
+  MISMATCH n=18 [(3, 4), (2, 3)]: ref=640 cf=412
+  MISMATCH n=18 [(3, 4), (1, 6)]: ref=1046 cf=590
+  MISMATCH n=18 [(3, 5), (2, 1), (1, 1)]: ref=840 cf=490
+  MISMATCH n=18 [(3, 5), (1, 3)]: ref=1030 cf=565
+  MISMATCH n=18 [(2, 2), (1, 14)]: ref=2122 cf=2094
+  MISMATCH n=18 [(2, 3), (1, 12)]: ref=1878 cf=1758
+  MISMATCH n=18 [(2, 4), (1, 10)]: ref=1728 cf=1448
+  MISMATCH n=18 [(2, 5), (1, 8)]: ref=1640 cf=1160
+  MISMATCH n=18 [(2, 6), (1, 6)]: ref=1590 cf=930
+  MISMATCH n=18 [(2, 7), (1, 4)]: ref=1562 cf=834
+  MISMATCH n=18 [(2, 8), (1, 2)]: ref=1548 cf=988
+  MISMATCH n=19 [(18, 1), (1, 1)]: ref=218 cf=172
+  MISMATCH n=19 [(17, 1), (2, 1)]: ref=188 cf=148
+  MISMATCH n=19 [(17, 1), (1, 2)]: ref=228 cf=148
+  MISMATCH n=19 [(16, 1), (3, 1)]: ref=160 cf=125
+  MISMATCH n=19 [(16, 1), (2, 1), (1, 1)]: ref=246 cf=124
+  MISMATCH n=19 [(16, 1), (1, 3)]: ref=246 cf=141
+  MISMATCH n=19 [(15, 1), (4, 1)]: ref=138 cf=107
+  MISMATCH n=19 [(15, 1), (3, 1), (1, 1)]: ref=260 cf=113
+  MISMATCH n=19 [(15, 1), (2, 1), (1, 2)]: ref=216 cf=107
+  MISMATCH n=19 [(15, 1), (2, 2)]: ref=184 cf=122
+  MISMATCH n=19 [(15, 1), (1, 4)]: ref=262 cf=138
+  MISMATCH n=19 [(14, 1), (5, 1)]: ref=116 cf=90
+  MISMATCH n=19 [(14, 1), (4, 1), (1, 1)]: ref=198 cf=102
+  MISMATCH n=19 [(14, 1), (3, 1), (2, 1)]: ref=184 cf=90
+  MISMATCH n=19 [(14, 1), (3, 1), (1, 2)]: ref=186 cf=90
+  MISMATCH n=19 [(14, 1), (2, 1), (1, 3)]: ref=284 cf=112
+  MISMATCH n=19 [(14, 1), (2, 2), (1, 1)]: ref=282 cf=118
+  MISMATCH n=19 [(14, 1), (1, 5)]: ref=288 cf=158
+  MISMATCH n=19 [(13, 1), (6, 1)]: ref=102 cf=80
+  MISMATCH n=19 [(13, 1), (5, 1), (1, 1)]: ref=124 cf=70
+  MISMATCH n=19 [(13, 1), (4, 1), (2, 1)]: ref=140 cf=78
+  MISMATCH n=19 [(13, 1), (4, 1), (1, 2)]: ref=162 cf=78
+  MISMATCH n=19 [(13, 1), (3, 1), (2, 1), (1, 1)]: ref=162 cf=71
+  MISMATCH n=19 [(13, 1), (3, 1), (1, 3)]: ref=200 cf=88
+  MISMATCH n=19 [(13, 1), (3, 2)]: ref=142 cf=98
+  MISMATCH n=19 [(13, 1), (2, 1), (1, 4)]: ref=256 cf=118
+  MISMATCH n=19 [(13, 1), (2, 2), (1, 2)]: ref=218 cf=94
+  MISMATCH n=19 [(13, 1), (2, 3)]: ref=194 cf=128
+  MISMATCH n=19 [(13, 1), (1, 6)]: ref=312 cf=180
+  MISMATCH n=19 [(12, 1), (7, 1)]: ref=90 cf=71
+  MISMATCH n=19 [(12, 1), (6, 1), (1, 1)]: ref=340 cf=156
+  MISMATCH n=19 [(12, 1), (5, 1), (2, 1)]: ref=142 cf=67
+  MISMATCH n=19 [(12, 1), (5, 1), (1, 2)]: ref=144 cf=67
+  MISMATCH n=19 [(12, 1), (4, 1), (3, 1)]: ref=332 cf=116
+  MISMATCH n=19 [(12, 1), (4, 1), (2, 1), (1, 1)]: ref=340 cf=102
+  MISMATCH n=19 [(12, 1), (4, 1), (1, 3)]: ref=340 cf=120
+  MISMATCH n=19 [(12, 1), (3, 1), (2, 1), (1, 2)]: ref=346 cf=98
+  MISMATCH n=19 [(12, 1), (3, 1), (2, 2)]: ref=344 cf=127
+  MISMATCH n=19 [(12, 1), (3, 1), (1, 4)]: ref=350 cf=131
+  MISMATCH n=19 [(12, 1), (3, 2), (1, 1)]: ref=346 cf=158
+  MISMATCH n=19 [(12, 1), (2, 1), (1, 5)]: ref=362 cf=164
+  MISMATCH n=19 [(12, 1), (2, 2), (1, 3)]: ref=358 cf=129
+  MISMATCH n=19 [(12, 1), (2, 3), (1, 1)]: ref=356 cf=162
+  MISMATCH n=19 [(12, 1), (1, 7)]: ref=372 cf=239
+  MISMATCH n=19 [(11, 1), (8, 1)]: ref=82 cf=67
+  MISMATCH n=19 [(11, 1), (7, 1), (1, 1)]: ref=98 cf=55
+  MISMATCH n=19 [(11, 1), (6, 1), (2, 1)]: ref=114 cf=61
+  MISMATCH n=19 [(11, 1), (6, 1), (1, 2)]: ref=130 cf=61
+  MISMATCH n=19 [(11, 1), (5, 1), (3, 1)]: ref=92 cf=53
+  MISMATCH n=19 [(11, 1), (5, 1), (2, 1), (1, 1)]: ref=124 cf=52
+  MISMATCH n=19 [(11, 1), (5, 1), (1, 3)]: ref=156 cf=69
+  MISMATCH n=19 [(11, 1), (4, 1), (3, 1), (1, 1)]: ref=124 cf=53
+  MISMATCH n=19 [(11, 1), (4, 1), (2, 1), (1, 2)]: ref=180 cf=66
+  MISMATCH n=19 [(11, 1), (4, 1), (2, 2)]: ref=164 cf=87
+  MISMATCH n=19 [(11, 1), (4, 1), (1, 4)]: ref=206 cf=99
+  MISMATCH n=19 [(11, 1), (4, 2)]: ref=134 cf=104
+  MISMATCH n=19 [(11, 1), (3, 1), (2, 1), (1, 3)]: ref=206 cf=79
+  MISMATCH n=19 [(11, 1), (3, 1), (2, 2), (1, 1)]: ref=174 cf=71
+  MISMATCH n=19 [(11, 1), (3, 1), (1, 5)]: ref=256 cf=131
+  MISMATCH n=19 [(11, 1), (3, 2), (2, 1)]: ref=148 cf=80
+  MISMATCH n=19 [(11, 1), (3, 2), (1, 2)]: ref=186 cf=80
+  MISMATCH n=19 [(11, 1), (2, 1), (1, 6)]: ref=336 cf=195
+  MISMATCH n=19 [(11, 1), (2, 2), (1, 4)]: ref=286 cf=132
+  MISMATCH n=19 [(11, 1), (2, 3), (1, 2)]: ref=254 cf=111
+  MISMATCH n=19 [(11, 1), (2, 4)]: ref=236 cf=176
+  MISMATCH n=19 [(11, 1), (1, 8)]: ref=416 cf=296
+  MISMATCH n=19 [(10, 1), (9, 1)]: ref=78 cf=66
+  MISMATCH n=19 [(10, 1), (8, 1), (1, 1)]: ref=142 cf=82
+  MISMATCH n=19 [(10, 1), (7, 1), (2, 1)]: ref=112 cf=56
+  MISMATCH n=19 [(10, 1), (7, 1), (1, 2)]: ref=118 cf=56
+  MISMATCH n=19 [(10, 1), (6, 1), (3, 1)]: ref=166 cf=78
+  MISMATCH n=19 [(10, 1), (6, 1), (2, 1), (1, 1)]: ref=200 cf=70
+  MISMATCH n=19 [(10, 1), (6, 1), (1, 3)]: ref=202 cf=88
+  MISMATCH n=19 [(10, 1), (5, 1), (4, 1)]: ref=280 cf=129
+  MISMATCH n=19 [(10, 1), (5, 1), (3, 1), (1, 1)]: ref=270 cf=102
+  MISMATCH n=19 [(10, 1), (5, 1), (2, 1), (1, 2)]: ref=406 cf=131
+  MISMATCH n=19 [(10, 1), (5, 1), (2, 2)]: ref=398 cf=156
+  MISMATCH n=19 [(10, 1), (5, 1), (1, 4)]: ref=420 cf=164
+  MISMATCH n=19 [(10, 1), (4, 1), (3, 1), (2, 1)]: ref=190 cf=70
+  MISMATCH n=19 [(10, 1), (4, 1), (3, 1), (1, 2)]: ref=192 cf=70
+  MISMATCH n=19 [(10, 1), (4, 1), (2, 1), (1, 3)]: ref=308 cf=109
+  MISMATCH n=19 [(10, 1), (4, 1), (2, 2), (1, 1)]: ref=306 cf=112
+  MISMATCH n=19 [(10, 1), (4, 1), (1, 5)]: ref=312 cf=158
+  MISMATCH n=19 [(10, 1), (4, 2), (1, 1)]: ref=250 cf=142
+  MISMATCH n=19 [(10, 1), (3, 1), (2, 1), (1, 4)]: ref=294 cf=122
+  MISMATCH n=19 [(10, 1), (3, 1), (2, 2), (1, 2)]: ref=284 cf=98
+  MISMATCH n=19 [(10, 1), (3, 1), (2, 3)]: ref=280 cf=160
+  MISMATCH n=19 [(10, 1), (3, 1), (1, 6)]: ref=314 cf=188
+  MISMATCH n=19 [(10, 1), (3, 2), (2, 1), (1, 1)]: ref=212 cf=76
+  MISMATCH n=19 [(10, 1), (3, 2), (1, 3)]: ref=228 cf=99
+  MISMATCH n=19 [(10, 1), (3, 3)]: ref=190 cf=154
+  MISMATCH n=19 [(10, 1), (2, 1), (1, 7)]: ref=478 cf=300
+  MISMATCH n=19 [(10, 1), (2, 2), (1, 5)]: ref=458 cf=220
+  MISMATCH n=19 [(10, 1), (2, 3), (1, 3)]: ref=448 cf=184
+  MISMATCH n=19 [(10, 1), (2, 4), (1, 1)]: ref=444 cf=244
+  MISMATCH n=19 [(10, 1), (1, 9)]: ref=520 cf=412
+  MISMATCH n=19 [(9, 1), (8, 1), (2, 1)]: ref=106 cf=56
+  MISMATCH n=19 [(9, 1), (8, 1), (1, 2)]: ref=116 cf=56
+  MISMATCH n=19 [(9, 1), (7, 1), (3, 1)]: ref=122 cf=56
+  MISMATCH n=19 [(9, 1), (7, 1), (2, 1), (1, 1)]: ref=108 cf=45
+  MISMATCH n=19 [(9, 1), (7, 1), (1, 3)]: ref=138 cf=62
+  MISMATCH n=19 [(9, 1), (6, 1), (4, 1)]: ref=184 cf=97
+  MISMATCH n=19 [(9, 1), (6, 1), (3, 1), (1, 1)]: ref=300 cf=104
+  MISMATCH n=19 [(9, 1), (6, 1), (2, 1), (1, 2)]: ref=278 cf=99
+  MISMATCH n=19 [(9, 1), (6, 1), (2, 2)]: ref=264 cf=120
+  MISMATCH n=19 [(9, 1), (6, 1), (1, 4)]: ref=302 cf=132
+  MISMATCH n=19 [(9, 1), (5, 1), (4, 1), (1, 1)]: ref=100 cf=43
+  MISMATCH n=19 [(9, 1), (5, 1), (3, 1), (2, 1)]: ref=156 cf=59
+  MISMATCH n=19 [(9, 1), (5, 1), (3, 1), (1, 2)]: ref=196 cf=62
+  MISMATCH n=19 [(9, 1), (5, 1), (2, 1), (1, 3)]: ref=174 cf=68
+  MISMATCH n=19 [(9, 1), (5, 1), (2, 2), (1, 1)]: ref=146 cf=60
+  MISMATCH n=19 [(9, 1), (5, 1), (1, 5)]: ref=220 cf=120
+  MISMATCH n=19 [(9, 1), (5, 2)]: ref=136 cf=116
+  MISMATCH n=19 [(9, 1), (4, 1), (3, 1), (2, 1), (1, 1)]: ref=224 cf=71
+  MISMATCH n=19 [(9, 1), (4, 1), (3, 1), (1, 3)]: ref=258 cf=91
+  MISMATCH n=19 [(9, 1), (4, 1), (3, 2)]: ref=250 cf=142
+  MISMATCH n=19 [(9, 1), (4, 1), (2, 1), (1, 4)]: ref=260 cf=118
+  MISMATCH n=19 [(9, 1), (4, 1), (2, 2), (1, 2)]: ref=238 cf=90
+  MISMATCH n=19 [(9, 1), (4, 1), (2, 3)]: ref=226 cf=144
+  MISMATCH n=19 [(9, 1), (4, 1), (1, 6)]: ref=296 cf=184
+  MISMATCH n=19 [(9, 1), (4, 2), (2, 1)]: ref=184 cf=94
+  MISMATCH n=19 [(9, 1), (4, 2), (1, 2)]: ref=194 cf=94
+  MISMATCH n=19 [(9, 1), (3, 1), (2, 1), (1, 5)]: ref=416 cf=195
+  MISMATCH n=19 [(9, 1), (3, 1), (2, 2), (1, 3)]: ref=354 cf=134
+  MISMATCH n=19 [(9, 1), (3, 1), (2, 3), (1, 1)]: ref=314 cf=137
+  MISMATCH n=19 [(9, 1), (3, 1), (1, 7)]: ref=512 cf=300
+  MISMATCH n=19 [(9, 1), (3, 2), (2, 1), (1, 2)]: ref=400 cf=145
+  MISMATCH n=19 [(9, 1), (3, 2), (2, 2)]: ref=340 cf=166
+  MISMATCH n=19 [(9, 1), (3, 2), (1, 4)]: ref=490 cf=202
+  MISMATCH n=19 [(9, 1), (3, 3), (1, 1)]: ref=486 cf=284
+  MISMATCH n=19 [(9, 1), (2, 1), (1, 8)]: ref=498 cf=368
+  MISMATCH n=19 [(9, 1), (2, 2), (1, 6)]: ref=422 cf=258
+  MISMATCH n=19 [(9, 1), (2, 3), (1, 4)]: ref=376 cf=182
+  MISMATCH n=19 [(9, 1), (2, 4), (1, 2)]: ref=348 cf=168
+  MISMATCH n=19 [(9, 1), (2, 5)]: ref=334 cf=284
+  MISMATCH n=19 [(9, 1), (1, 10)]: ref=624 cf=524
+  MISMATCH n=19 [(9, 2), (1, 1)]: ref=432 cf=340
+  MISMATCH n=19 [(8, 1), (7, 1), (4, 1)]: ref=142 cf=74
+  MISMATCH n=19 [(8, 1), (7, 1), (3, 1), (1, 1)]: ref=98 cf=43
+  MISMATCH n=19 [(8, 1), (7, 1), (2, 1), (1, 2)]: ref=160 cf=56
+  MISMATCH n=19 [(8, 1), (7, 1), (2, 2)]: ref=154 cf=81
+  MISMATCH n=19 [(8, 1), (7, 1), (1, 4)]: ref=172 cf=89
+  MISMATCH n=19 [(8, 1), (6, 1), (5, 1)]: ref=102 cf=64
+  MISMATCH n=19 [(8, 1), (6, 1), (4, 1), (1, 1)]: ref=260 cf=102
+  MISMATCH n=19 [(8, 1), (6, 1), (3, 1), (2, 1)]: ref=238 cf=88
+  MISMATCH n=19 [(8, 1), (6, 1), (3, 1), (1, 2)]: ref=242 cf=88
+  MISMATCH n=19 [(8, 1), (6, 1), (2, 1), (1, 3)]: ref=286 cf=107
+  MISMATCH n=19 [(8, 1), (6, 1), (2, 2), (1, 1)]: ref=284 cf=110
+  MISMATCH n=19 [(8, 1), (6, 1), (1, 5)]: ref=290 cf=156
+  MISMATCH n=19 [(8, 1), (5, 1), (4, 1), (2, 1)]: ref=226 cf=83
+  MISMATCH n=19 [(8, 1), (5, 1), (4, 1), (1, 2)]: ref=228 cf=83
+  MISMATCH n=19 [(8, 1), (5, 1), (3, 1), (2, 1), (1, 1)]: ref=150 cf=48
+  MISMATCH n=19 [(8, 1), (5, 1), (3, 1), (1, 3)]: ref=160 cf=66
+  MISMATCH n=19 [(8, 1), (5, 1), (3, 2)]: ref=114 cf=77
+  MISMATCH n=19 [(8, 1), (5, 1), (2, 1), (1, 4)]: ref=258 cf=115
+  MISMATCH n=19 [(8, 1), (5, 1), (2, 2), (1, 2)]: ref=248 cf=91
+  MISMATCH n=19 [(8, 1), (5, 1), (2, 3)]: ref=244 cf=153
+  MISMATCH n=19 [(8, 1), (5, 1), (1, 6)]: ref=278 cf=181
+  MISMATCH n=19 [(8, 1), (5, 2), (1, 1)]: ref=174 cf=112
+  MISMATCH n=19 [(8, 1), (4, 1), (3, 1), (2, 1), (1, 2)]: ref=368 cf=123
+  MISMATCH n=19 [(8, 1), (4, 1), (3, 1), (2, 2)]: ref=366 cf=154
+  MISMATCH n=19 [(8, 1), (4, 1), (3, 1), (1, 4)]: ref=372 cf=158
+  MISMATCH n=19 [(8, 1), (4, 1), (3, 2), (1, 1)]: ref=266 cf=118
+  MISMATCH n=19 [(8, 1), (4, 1), (2, 1), (1, 5)]: ref=582 cf=274
+  MISMATCH n=19 [(8, 1), (4, 1), (2, 2), (1, 3)]: ref=578 cf=226
+  MISMATCH n=19 [(8, 1), (4, 1), (2, 3), (1, 1)]: ref=576 cf=262
+  MISMATCH n=19 [(8, 1), (4, 1), (1, 7)]: ref=592 cf=354
+  MISMATCH n=19 [(8, 1), (4, 2), (3, 1)]: ref=358 cf=221
+  MISMATCH n=19 [(8, 1), (4, 2), (2, 1), (1, 1)]: ref=560 cf=234
+  MISMATCH n=19 [(8, 1), (4, 2), (1, 3)]: ref=560 cf=261
+  MISMATCH n=19 [(8, 1), (3, 1), (2, 1), (1, 6)]: ref=434 cf=258
+  MISMATCH n=19 [(8, 1), (3, 1), (2, 2), (1, 4)]: ref=414 cf=185
+  MISMATCH n=19 [(8, 1), (3, 1), (2, 3), (1, 2)]: ref=404 cf=174
+  MISMATCH n=19 [(8, 1), (3, 1), (2, 4)]: ref=400 cf=293
+  MISMATCH n=19 [(8, 1), (3, 1), (1, 8)]: ref=476 cf=365
+  MISMATCH n=19 [(8, 1), (3, 2), (2, 1), (1, 3)]: ref=312 cf=118
+  MISMATCH n=19 [(8, 1), (3, 2), (2, 2), (1, 1)]: ref=296 cf=116
+  MISMATCH n=19 [(8, 1), (3, 2), (1, 5)]: ref=342 cf=188
+  MISMATCH n=19 [(8, 1), (3, 3), (2, 1)]: ref=262 cf=149
+  MISMATCH n=19 [(8, 1), (3, 3), (1, 2)]: ref=292 cf=149
+  MISMATCH n=19 [(8, 1), (2, 1), (1, 9)]: ref=718 cf=560
+  MISMATCH n=19 [(8, 1), (2, 2), (1, 7)]: ref=676 cf=431
+  MISMATCH n=19 [(8, 1), (2, 3), (1, 5)]: ref=656 cf=334
+  MISMATCH n=19 [(8, 1), (2, 4), (1, 3)]: ref=646 cf=305
+  MISMATCH n=19 [(8, 1), (2, 5), (1, 1)]: ref=642 cf=420
+  MISMATCH n=19 [(8, 1), (1, 11)]: ref=802 cf=725
+  MISMATCH n=19 [(8, 2), (3, 1)]: ref=320 cf=250
+  MISMATCH n=19 [(8, 2), (2, 1), (1, 1)]: ref=492 cf=248
+  MISMATCH n=19 [(8, 2), (1, 3)]: ref=492 cf=282
+  MISMATCH n=19 [(7, 1), (6, 1), (5, 1), (1, 1)]: ref=88 cf=41
+  MISMATCH n=19 [(7, 1), (6, 1), (4, 1), (2, 1)]: ref=144 cf=61
+  MISMATCH n=19 [(7, 1), (6, 1), (4, 1), (1, 2)]: ref=150 cf=61
+  MISMATCH n=19 [(7, 1), (6, 1), (3, 1), (2, 1), (1, 1)]: ref=200 cf=68
+  MISMATCH n=19 [(7, 1), (6, 1), (3, 1), (1, 3)]: ref=220 cf=86
+  MISMATCH n=19 [(7, 1), (6, 1), (3, 2)]: ref=200 cf=129
+  MISMATCH n=19 [(7, 1), (6, 1), (2, 1), (1, 4)]: ref=244 cf=115
+  MISMATCH n=19 [(7, 1), (6, 1), (2, 2), (1, 2)]: ref=226 cf=87
+  MISMATCH n=19 [(7, 1), (6, 1), (2, 3)]: ref=218 cf=141
+  MISMATCH n=19 [(7, 1), (6, 1), (1, 6)]: ref=276 cf=181
+  MISMATCH n=19 [(7, 1), (6, 2)]: ref=174 cf=164
+  MISMATCH n=19 [(7, 1), (5, 1), (4, 1), (3, 1)]: ref=82 cf=43
+  MISMATCH n=19 [(7, 1), (5, 1), (4, 1), (2, 1), (1, 1)]: ref=130 cf=47
+  MISMATCH n=19 [(7, 1), (5, 1), (4, 1), (1, 3)]: ref=148 cf=65
+  MISMATCH n=19 [(7, 1), (5, 1), (3, 1), (2, 1), (1, 2)]: ref=148 cf=53
+  MISMATCH n=19 [(7, 1), (5, 1), (3, 1), (2, 2)]: ref=124 cf=67
+  MISMATCH n=19 [(7, 1), (5, 1), (3, 1), (1, 4)]: ref=190 cf=93
+  MISMATCH n=19 [(7, 1), (5, 1), (3, 2), (1, 1)]: ref=136 cf=67
+  MISMATCH n=19 [(7, 1), (5, 1), (2, 1), (1, 5)]: ref=262 cf=150
+  MISMATCH n=19 [(7, 1), (5, 1), (2, 2), (1, 3)]: ref=220 cf=95
+  MISMATCH n=19 [(7, 1), (5, 1), (2, 3), (1, 1)]: ref=196 cf=100
+  MISMATCH n=19 [(7, 1), (5, 1), (1, 7)]: ref=334 cf=245
+  MISMATCH n=19 [(7, 1), (5, 2), (2, 1)]: ref=166 cf=112
+  MISMATCH n=19 [(7, 1), (5, 2), (1, 2)]: ref=210 cf=112
+  MISMATCH n=19 [(7, 1), (4, 1), (3, 1), (2, 1), (1, 3)]: ref=230 cf=96
+  MISMATCH n=19 [(7, 1), (4, 1), (3, 1), (2, 2), (1, 1)]: ref=212 cf=89
+  MISMATCH n=19 [(7, 1), (4, 1), (3, 1), (1, 5)]: ref=262 cf=151
+  MISMATCH n=19 [(7, 1), (4, 1), (3, 2), (2, 1)]: ref=164 cf=83
+  MISMATCH n=19 [(7, 1), (4, 1), (3, 2), (1, 2)]: ref=188 cf=83
+  MISMATCH n=19 [(7, 1), (4, 1), (2, 1), (1, 6)]: ref=398 cf=256
+  MISMATCH n=19 [(7, 1), (4, 1), (2, 2), (1, 4)]: ref=366 cf=179
+  MISMATCH n=19 [(7, 1), (4, 1), (2, 3), (1, 2)]: ref=348 cf=160
+  MISMATCH n=19 [(7, 1), (4, 1), (2, 4)]: ref=340 cf=267
+  MISMATCH n=19 [(7, 1), (4, 1), (1, 8)]: ref=456 cf=363
+  MISMATCH n=19 [(7, 1), (4, 2), (3, 1), (1, 1)]: ref=172 cf=81
+  MISMATCH n=19 [(7, 1), (4, 2), (2, 1), (1, 2)]: ref=284 cf=103
+  MISMATCH n=19 [(7, 1), (4, 2), (2, 2)]: ref=278 cf=146
+  MISMATCH n=19 [(7, 1), (4, 2), (1, 4)]: ref=296 cf=154
+  MISMATCH n=19 [(7, 1), (4, 3)]: ref=258 cf=243
+  MISMATCH n=19 [(7, 1), (3, 1), (2, 1), (1, 7)]: ref=456 cf=329
+  MISMATCH n=19 [(7, 1), (3, 1), (2, 2), (1, 5)]: ref=384 cf=219
+  MISMATCH n=19 [(7, 1), (3, 1), (2, 3), (1, 3)]: ref=342 cf=157
+  MISMATCH n=19 [(7, 1), (3, 1), (2, 4), (1, 1)]: ref=318 cf=187
+  MISMATCH n=19 [(7, 1), (3, 1), (1, 9)]: ref=578 cf=483
+  MISMATCH n=19 [(7, 1), (3, 2), (2, 1), (1, 4)]: ref=326 cf=152
+  MISMATCH n=19 [(7, 1), (3, 2), (2, 2), (1, 2)]: ref=274 cf=108
+  MISMATCH n=19 [(7, 1), (3, 2), (2, 3)]: ref=244 cf=162
+  MISMATCH n=19 [(7, 1), (3, 2), (1, 6)]: ref=412 cf=258
+  MISMATCH n=19 [(7, 1), (3, 3), (2, 1), (1, 1)]: ref=280 cf=134
+  MISMATCH n=19 [(7, 1), (3, 3), (1, 3)]: ref=354 cf=171
+  MISMATCH n=19 [(7, 1), (3, 4)]: ref=332 cf=312
+  MISMATCH n=19 [(7, 1), (2, 1), (1, 10)]: ref=778 cf=683
+  MISMATCH n=19 [(7, 1), (2, 2), (1, 8)]: ref=656 cf=510
+  MISMATCH n=19 [(7, 1), (2, 3), (1, 6)]: ref=584 cf=371
+  MISMATCH n=19 [(7, 1), (2, 4), (1, 4)]: ref=542 cf=278
+  MISMATCH n=19 [(7, 1), (2, 5), (1, 2)]: ref=518 cf=283
+  MISMATCH n=19 [(7, 1), (2, 6)]: ref=508 cf=478
+  MISMATCH n=19 [(7, 1), (1, 12)]: ref=978 cf=918
+  MISMATCH n=19 [(7, 2), (5, 1)]: ref=226 cf=174
+  MISMATCH n=19 [(7, 2), (4, 1), (1, 1)]: ref=294 cf=172
+  MISMATCH n=19 [(7, 2), (3, 1), (2, 1)]: ref=294 cf=174
+  MISMATCH n=19 [(7, 2), (3, 1), (1, 2)]: ref=362 cf=174
+  MISMATCH n=19 [(7, 2), (2, 1), (1, 3)]: ref=460 cf=207
+  MISMATCH n=19 [(7, 2), (2, 2), (1, 1)]: ref=392 cf=200
+  MISMATCH n=19 [(7, 2), (1, 5)]: ref=558 cf=298
+  MISMATCH n=19 [(6, 1), (5, 1), (4, 1), (3, 1), (1, 1)]: ref=204 cf=78
+  MISMATCH n=19 [(6, 1), (5, 1), (4, 1), (2, 1), (1, 2)]: ref=234 cf=86
+  MISMATCH n=19 [(6, 1), (5, 1), (4, 1), (2, 2)]: ref=230 cf=113
+  MISMATCH n=19 [(6, 1), (5, 1), (4, 1), (1, 4)]: ref=244 cf=121
+  MISMATCH n=19 [(6, 1), (5, 1), (4, 2)]: ref=188 cf=146
+  MISMATCH n=19 [(6, 1), (5, 1), (3, 1), (2, 1), (1, 3)]: ref=322 cf=133
+  MISMATCH n=19 [(6, 1), (5, 1), (3, 1), (2, 2), (1, 1)]: ref=304 cf=126
+  MISMATCH n=19 [(6, 1), (5, 1), (3, 1), (1, 5)]: ref=354 cf=188
+  MISMATCH n=19 [(6, 1), (5, 1), (3, 2), (2, 1)]: ref=300 cf=146
+  MISMATCH n=19 [(6, 1), (5, 1), (3, 2), (1, 2)]: ref=326 cf=146
+  MISMATCH n=19 [(6, 1), (5, 1), (2, 1), (1, 6)]: ref=398 cf=255
+  MISMATCH n=19 [(6, 1), (5, 1), (2, 2), (1, 4)]: ref=368 cf=178
+  MISMATCH n=19 [(6, 1), (5, 1), (2, 3), (1, 2)]: ref=352 cf=159
+  MISMATCH n=19 [(6, 1), (5, 1), (2, 4)]: ref=346 cf=266
+  MISMATCH n=19 [(6, 1), (5, 1), (1, 8)]: ref=454 cf=362
+  MISMATCH n=19 [(6, 1), (5, 2), (3, 1)]: ref=210 cf=123
+  MISMATCH n=19 [(6, 1), (5, 2), (2, 1), (1, 1)]: ref=242 cf=114
+  MISMATCH n=19 [(6, 1), (5, 2), (1, 3)]: ref=278 cf=141
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 1), (2, 1), (1, 4)]: ref=530 cf=256
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 1), (2, 2), (1, 2)]: ref=518 cf=224
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 1), (2, 3)]: ref=512 cf=298
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 1), (1, 6)]: ref=552 cf=326
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 2), (2, 1), (1, 1)]: ref=490 cf=210
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 2), (1, 3)]: ref=510 cf=234
+  MISMATCH n=19 [(6, 1), (4, 1), (3, 3)]: ref=498 cf=376
+  MISMATCH n=19 [(6, 1), (4, 1), (2, 1), (1, 7)]: ref=654 cf=443
+  MISMATCH n=19 [(6, 1), (4, 1), (2, 2), (1, 5)]: ref=634 cf=340
+  MISMATCH n=19 [(6, 1), (4, 1), (2, 3), (1, 3)]: ref=624 cf=289
+  MISMATCH n=19 [(6, 1), (4, 1), (2, 4), (1, 1)]: ref=620 cf=366
+  MISMATCH n=19 [(6, 1), (4, 1), (1, 9)]: ref=696 cf=562
+  MISMATCH n=19 [(6, 1), (4, 2), (3, 1), (2, 1)]: ref=416 cf=168
+  MISMATCH n=19 [(6, 1), (4, 2), (3, 1), (1, 2)]: ref=420 cf=168
+  MISMATCH n=19 [(6, 1), (4, 2), (2, 1), (1, 3)]: ref=508 cf=200
+  MISMATCH n=19 [(6, 1), (4, 2), (2, 2), (1, 1)]: ref=506 cf=208
+  MISMATCH n=19 [(6, 1), (4, 2), (1, 5)]: ref=512 cf=276
+  MISMATCH n=19 [(6, 1), (4, 3), (1, 1)]: ref=466 cf=332
+  MISMATCH n=19 [(6, 1), (3, 1), (2, 1), (1, 8)]: ref=854 cf=614
+  MISMATCH n=19 [(6, 1), (3, 1), (2, 2), (1, 6)]: ref=796 cf=480
+  MISMATCH n=19 [(6, 1), (3, 1), (2, 3), (1, 4)]: ref=764 cf=388
+  MISMATCH n=19 [(6, 1), (3, 1), (2, 4), (1, 2)]: ref=746 cf=390
+  MISMATCH n=19 [(6, 1), (3, 1), (2, 5)]: ref=738 cf=578
+  MISMATCH n=19 [(6, 1), (3, 1), (1, 10)]: ref=958 cf=778
+  MISMATCH n=19 [(6, 1), (3, 2), (2, 1), (1, 5)]: ref=768 cf=382
+  MISMATCH n=19 [(6, 1), (3, 2), (2, 2), (1, 3)]: ref=724 cf=309
+  MISMATCH n=19 [(6, 1), (3, 2), (2, 3), (1, 1)]: ref=698 cf=332
+  MISMATCH n=19 [(6, 1), (3, 2), (1, 7)]: ref=842 cf=507
+  MISMATCH n=19 [(6, 1), (3, 3), (2, 1), (1, 2)]: ref=748 cf=327
+  MISMATCH n=19 [(6, 1), (3, 3), (2, 2)]: ref=706 cf=366
+  MISMATCH n=19 [(6, 1), (3, 3), (1, 4)]: ref=816 cf=398
+  MISMATCH n=19 [(6, 1), (3, 4), (1, 1)]: ref=808 cf=586
+  MISMATCH n=19 [(6, 1), (2, 1), (1, 11)]: ref=1114 cf=996
+  MISMATCH n=19 [(6, 1), (2, 2), (1, 9)]: ref=1012 cf=798
+  MISMATCH n=19 [(6, 1), (2, 3), (1, 7)]: ref=956 cf=624
+  MISMATCH n=19 [(6, 1), (2, 4), (1, 5)]: ref=926 cf=494
+  MISMATCH n=19 [(6, 1), (2, 5), (1, 3)]: ref=910 cf=468
+  MISMATCH n=19 [(6, 1), (2, 6), (1, 1)]: ref=904 cf=646
+  MISMATCH n=19 [(6, 1), (1, 13)]: ref=1290 cf=1238
+  MISMATCH n=19 [(6, 2), (5, 1), (2, 1)]: ref=276 cf=130
+  MISMATCH n=19 [(6, 2), (5, 1), (1, 2)]: ref=280 cf=130
+  MISMATCH n=19 [(6, 2), (4, 1), (3, 1)]: ref=464 cf=187
+  MISMATCH n=19 [(6, 2), (4, 1), (2, 1), (1, 1)]: ref=472 cf=160
+  MISMATCH n=19 [(6, 2), (4, 1), (1, 3)]: ref=474 cf=191
+  MISMATCH n=19 [(6, 2), (3, 1), (2, 1), (1, 2)]: ref=670 cf=191
+  MISMATCH n=19 [(6, 2), (3, 1), (2, 2)]: ref=662 cf=242
+  MISMATCH n=19 [(6, 2), (3, 1), (1, 4)]: ref=684 cf=250
+  MISMATCH n=19 [(6, 2), (3, 2), (1, 1)]: ref=678 cf=310
+  MISMATCH n=19 [(6, 2), (2, 1), (1, 5)]: ref=688 cf=302
+  MISMATCH n=19 [(6, 2), (2, 2), (1, 3)]: ref=678 cf=238
+  MISMATCH n=19 [(6, 2), (2, 3), (1, 1)]: ref=674 cf=302
+  MISMATCH n=19 [(6, 2), (1, 7)]: ref=708 cf=442
+  MISMATCH n=19 [(6, 3), (1, 1)]: ref=654 cf=516
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 1), (2, 1), (1, 5)]: ref=380 cf=229
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 1), (2, 2), (1, 3)]: ref=350 cf=165
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 1), (2, 3), (1, 1)]: ref=334 cf=181
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 1), (1, 7)]: ref=436 cf=329
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 2), (2, 1), (1, 2)]: ref=270 cf=111
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 2), (2, 2)]: ref=248 cf=138
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 2), (1, 4)]: ref=310 cf=162
+  MISMATCH n=19 [(5, 1), (4, 1), (3, 3), (1, 1)]: ref=268 cf=172
+  MISMATCH n=19 [(5, 1), (4, 1), (2, 1), (1, 8)]: ref=652 cf=518
+  MISMATCH n=19 [(5, 1), (4, 1), (2, 2), (1, 6)]: ref=596 cf=384
+  MISMATCH n=19 [(5, 1), (4, 1), (2, 3), (1, 4)]: ref=566 cf=292
+  MISMATCH n=19 [(5, 1), (4, 1), (2, 4), (1, 2)]: ref=550 cf=294
+  MISMATCH n=19 [(5, 1), (4, 1), (2, 5)]: ref=544 cf=482
+  MISMATCH n=19 [(5, 1), (4, 1), (1, 10)]: ref=754 cf=682
+  MISMATCH n=19 [(5, 1), (4, 2), (3, 1), (2, 1), (1, 1)]: ref=272 cf=97
+  MISMATCH n=19 [(5, 1), (4, 2), (3, 1), (1, 3)]: ref=282 cf=124
+  MISMATCH n=19 [(5, 1), (4, 2), (3, 2)]: ref=200 cf=140
+  MISMATCH n=19 [(5, 1), (4, 2), (2, 1), (1, 4)]: ref=458 cf=204
+  MISMATCH n=19 [(5, 1), (4, 2), (2, 2), (1, 2)]: ref=448 cf=172
+  MISMATCH n=19 [(5, 1), (4, 2), (2, 3)]: ref=444 cf=278
+  MISMATCH n=19 [(5, 1), (4, 2), (1, 6)]: ref=478 cf=306
+  MISMATCH n=19 [(5, 1), (4, 3), (2, 1)]: ref=410 cf=244
+  MISMATCH n=19 [(5, 1), (4, 3), (1, 2)]: ref=412 cf=244
+  MISMATCH n=19 [(5, 1), (3, 1), (2, 1), (1, 9)]: ref=754 cf=647
+  MISMATCH n=19 [(5, 1), (3, 1), (2, 2), (1, 7)]: ref=634 cf=466
+  MISMATCH n=19 [(5, 1), (3, 1), (2, 3), (1, 5)]: ref=564 cf=329
+  MISMATCH n=19 [(5, 1), (3, 1), (2, 4), (1, 3)]: ref=524 cf=264
+  MISMATCH n=19 [(5, 1), (3, 1), (2, 5), (1, 1)]: ref=502 cf=339
+  MISMATCH n=19 [(5, 1), (3, 1), (1, 11)]: ref=952 cf=884
+  MISMATCH n=19 [(5, 1), (3, 2), (2, 1), (1, 6)]: ref=532 cf=335
+  MISMATCH n=19 [(5, 1), (3, 2), (2, 2), (1, 4)]: ref=448 cf=218
+  MISMATCH n=19 [(5, 1), (3, 2), (2, 3), (1, 2)]: ref=398 cf=183
+  MISMATCH n=19 [(5, 1), (3, 2), (2, 4)]: ref=370 cf=290
+  MISMATCH n=19 [(5, 1), (3, 2), (1, 8)]: ref=670 cf=514
+  MISMATCH n=19 [(5, 1), (3, 3), (2, 1), (1, 3)]: ref=454 cf=194
+  MISMATCH n=19 [(5, 1), (3, 3), (2, 2), (1, 1)]: ref=382 cf=180
+  MISMATCH n=19 [(5, 1), (3, 3), (1, 5)]: ref=568 cf=312
+  MISMATCH n=19 [(5, 1), (3, 4), (2, 1)]: ref=430 cf=314
+  MISMATCH n=19 [(5, 1), (3, 4), (1, 2)]: ref=538 cf=314
+  MISMATCH n=19 [(5, 1), (2, 1), (1, 12)]: ref=1264 cf=1202
+  MISMATCH n=19 [(5, 1), (2, 2), (1, 10)]: ref=1066 cf=942
+  MISMATCH n=19 [(5, 1), (2, 3), (1, 8)]: ref=946 cf=724
+  MISMATCH n=19 [(5, 1), (2, 4), (1, 6)]: ref=876 cf=544
+  MISMATCH n=19 [(5, 1), (2, 5), (1, 4)]: ref=836 cf=438
+  MISMATCH n=19 [(5, 1), (2, 6), (1, 2)]: ref=814 cf=482
+  MISMATCH n=19 [(5, 1), (2, 7)]: ref=806 cf=792
+  MISMATCH n=19 [(5, 1), (1, 14)]: ref=1576 cf=1548
+  MISMATCH n=19 [(5, 2), (4, 1), (3, 1), (2, 1)]: ref=232 cf=100
+  MISMATCH n=19 [(5, 2), (4, 1), (3, 1), (1, 2)]: ref=268 cf=100
+  MISMATCH n=19 [(5, 2), (4, 1), (2, 1), (1, 3)]: ref=384 cf=146
+  MISMATCH n=19 [(5, 2), (4, 1), (2, 2), (1, 1)]: ref=348 cf=140
+  MISMATCH n=19 [(5, 2), (4, 1), (1, 5)]: ref=442 cf=228
+  MISMATCH n=19 [(5, 2), (4, 2), (1, 1)]: ref=282 cf=162
+  MISMATCH n=19 [(5, 2), (3, 1), (2, 1), (1, 4)]: ref=442 cf=186
+  MISMATCH n=19 [(5, 2), (3, 1), (2, 2), (1, 2)]: ref=374 cf=138
+  MISMATCH n=19 [(5, 2), (3, 1), (2, 3)]: ref=332 cf=200
+  MISMATCH n=19 [(5, 2), (3, 1), (1, 6)]: ref=548 cf=308
+  MISMATCH n=19 [(5, 2), (3, 2), (2, 1), (1, 1)]: ref=316 cf=130
+  MISMATCH n=19 [(5, 2), (3, 2), (1, 3)]: ref=394 cf=166
+  MISMATCH n=19 [(5, 2), (3, 3)]: ref=324 cf=252
+  MISMATCH n=19 [(5, 2), (2, 1), (1, 7)]: ref=712 cf=443
+  MISMATCH n=19 [(5, 2), (2, 2), (1, 5)]: ref=606 cf=298
+  MISMATCH n=19 [(5, 2), (2, 3), (1, 3)]: ref=538 cf=229
+  MISMATCH n=19 [(5, 2), (2, 4), (1, 1)]: ref=496 cf=280
+  MISMATCH n=19 [(5, 2), (1, 9)]: ref=876 cf=660
+  MISMATCH n=19 [(5, 3), (4, 1)]: ref=410 cf=319
+  MISMATCH n=19 [(5, 3), (3, 1), (1, 1)]: ref=504 cf=297
+  MISMATCH n=19 [(5, 3), (2, 1), (1, 2)]: ref=640 cf=319
+  MISMATCH n=19 [(5, 3), (2, 2)]: ref=546 cf=364
+  MISMATCH n=19 [(5, 3), (1, 4)]: ref=776 cf=412
+  MISMATCH n=19 [(4, 1), (3, 1), (2, 1), (1, 10)]: ref=1088 cf=958
+  MISMATCH n=19 [(4, 1), (3, 1), (2, 2), (1, 8)]: ref=986 cf=751
+  MISMATCH n=19 [(4, 1), (3, 1), (2, 3), (1, 6)]: ref=930 cf=578
+  MISMATCH n=19 [(4, 1), (3, 1), (2, 4), (1, 4)]: ref=900 cf=475
+  MISMATCH n=19 [(4, 1), (3, 1), (2, 5), (1, 2)]: ref=884 cf=518
+  MISMATCH n=19 [(4, 1), (3, 1), (2, 6)]: ref=878 cf=823
+  MISMATCH n=19 [(4, 1), (3, 1), (1, 12)]: ref=1264 cf=1203
+  MISMATCH n=19 [(4, 1), (3, 2), (2, 1), (1, 7)]: ref=770 cf=530
+  MISMATCH n=19 [(4, 1), (3, 2), (2, 2), (1, 5)]: ref=700 cf=382
+  MISMATCH n=19 [(4, 1), (3, 2), (2, 3), (1, 3)]: ref=660 cf=310
+  MISMATCH n=19 [(4, 1), (3, 2), (2, 4), (1, 1)]: ref=638 cf=382
+  MISMATCH n=19 [(4, 1), (3, 2), (1, 9)]: ref=890 cf=726
+  MISMATCH n=19 [(4, 1), (3, 3), (2, 1), (1, 4)]: ref=644 cf=297
+  MISMATCH n=19 [(4, 1), (3, 3), (2, 2), (1, 2)]: ref=582 cf=241
+  MISMATCH n=19 [(4, 1), (3, 3), (2, 3)]: ref=546 cf=339
+  MISMATCH n=19 [(4, 1), (3, 3), (1, 6)]: ref=744 cf=447
+  MISMATCH n=19 [(4, 1), (3, 4), (2, 1), (1, 1)]: ref=602 cf=322
+  MISMATCH n=19 [(4, 1), (3, 4), (1, 3)]: ref=700 cf=375
+  MISMATCH n=19 [(4, 1), (3, 5)]: ref=686 cf=681
+  MISMATCH n=19 [(4, 1), (2, 1), (1, 13)]: ref=1760 cf=1680
+  MISMATCH n=19 [(4, 1), (2, 2), (1, 11)]: ref=1584 cf=1393
+  MISMATCH n=19 [(4, 1), (2, 3), (1, 9)]: ref=1482 cf=1134
+  MISMATCH n=19 [(4, 1), (2, 4), (1, 7)]: ref=1426 cf=907
+  MISMATCH n=19 [(4, 1), (2, 5), (1, 5)]: ref=1396 cf=756
+  MISMATCH n=19 [(4, 1), (2, 6), (1, 3)]: ref=1380 cf=765
+  MISMATCH n=19 [(4, 1), (2, 7), (1, 1)]: ref=1374 cf=1058
+  MISMATCH n=19 [(4, 1), (1, 15)]: ref=2046 cf=2031
+  MISMATCH n=19 [(4, 2), (3, 1), (2, 1), (1, 6)]: ref=748 cf=415
+  MISMATCH n=19 [(4, 2), (3, 1), (2, 2), (1, 4)]: ref=728 cf=308
+  MISMATCH n=19 [(4, 2), (3, 1), (2, 3), (1, 2)]: ref=718 cf=307
+  MISMATCH n=19 [(4, 2), (3, 1), (2, 4)]: ref=714 cf=504
+  MISMATCH n=19 [(4, 2), (3, 1), (1, 8)]: ref=790 cf=576
+  MISMATCH n=19 [(4, 2), (3, 2), (2, 1), (1, 3)]: ref=534 cf=199
+  MISMATCH n=19 [(4, 2), (3, 2), (2, 2), (1, 1)]: ref=518 cf=202
+  MISMATCH n=19 [(4, 2), (3, 2), (1, 5)]: ref=564 cf=296
+  MISMATCH n=19 [(4, 2), (3, 3), (2, 1)]: ref=440 cf=244
+  MISMATCH n=19 [(4, 2), (3, 3), (1, 2)]: ref=470 cf=244
+  MISMATCH n=19 [(4, 2), (2, 1), (1, 9)]: ref=1190 cf=874
+  MISMATCH n=19 [(4, 2), (2, 2), (1, 7)]: ref=1148 cf=672
+  MISMATCH n=19 [(4, 2), (2, 3), (1, 5)]: ref=1128 cf=534
+  MISMATCH n=19 [(4, 2), (2, 4), (1, 3)]: ref=1118 cf=520
+  MISMATCH n=19 [(4, 2), (2, 5), (1, 1)]: ref=1114 cf=730
+  MISMATCH n=19 [(4, 2), (1, 11)]: ref=1274 cf=1120
+  MISMATCH n=19 [(4, 3), (3, 1), (2, 1), (1, 2)]: ref=658 cf=214
+  MISMATCH n=19 [(4, 3), (3, 1), (2, 2)]: ref=656 cf=295
+  MISMATCH n=19 [(4, 3), (3, 1), (1, 4)]: ref=662 cf=299
+  MISMATCH n=19 [(4, 3), (3, 2), (1, 1)]: ref=472 cf=248
+  MISMATCH n=19 [(4, 3), (2, 1), (1, 5)]: ref=1022 cf=442
+  MISMATCH n=19 [(4, 3), (2, 2), (1, 3)]: ref=1018 cf=357
+  MISMATCH n=19 [(4, 3), (2, 3), (1, 1)]: ref=1016 cf=468
+  MISMATCH n=19 [(4, 3), (1, 7)]: ref=1032 cf=647
+  MISMATCH n=19 [(4, 4), (3, 1)]: ref=640 cf=500
+  MISMATCH n=19 [(4, 4), (2, 1), (1, 1)]: ref=984 cf=496
+  MISMATCH n=19 [(4, 4), (1, 3)]: ref=984 cf=564
+  MISMATCH n=19 [(3, 1), (2, 1), (1, 14)]: ref=2046 cf=2003
+  MISMATCH n=19 [(3, 1), (2, 2), (1, 12)]: ref=1734 cf=1624
+  MISMATCH n=19 [(3, 1), (2, 3), (1, 10)]: ref=1536 cf=1303
+  MISMATCH n=19 [(3, 1), (2, 4), (1, 8)]: ref=1416 cf=1020
+  MISMATCH n=19 [(3, 1), (2, 5), (1, 6)]: ref=1346 cf=795
+  MISMATCH n=19 [(3, 1), (2, 6), (1, 4)]: ref=1306 cf=688
+  MISMATCH n=19 [(3, 1), (2, 7), (1, 2)]: ref=1284 cf=799
+  MISMATCH n=19 [(3, 1), (2, 8)]: ref=1276 cf=1268
+  MISMATCH n=19 [(3, 1), (1, 16)]: ref=2516 cf=2500
+  MISMATCH n=19 [(3, 2), (2, 1), (1, 11)]: ref=1448 cf=1275
+  MISMATCH n=19 [(3, 2), (2, 2), (1, 9)]: ref=1228 cf=960
+  MISMATCH n=19 [(3, 2), (2, 3), (1, 7)]: ref=1090 cf=709
+  MISMATCH n=19 [(3, 2), (2, 4), (1, 5)]: ref=1006 cf=534
+  MISMATCH n=19 [(3, 2), (2, 5), (1, 3)]: ref=956 cf=487
+  MISMATCH n=19 [(3, 2), (2, 6), (1, 1)]: ref=928 cf=660
+  MISMATCH n=19 [(3, 2), (1, 13)]: ref=1786 cf=1682
+  MISMATCH n=19 [(3, 3), (2, 1), (1, 8)]: ref=1186 cf=796
+  MISMATCH n=19 [(3, 3), (2, 2), (1, 6)]: ref=1010 cf=542
+  MISMATCH n=19 [(3, 3), (2, 3), (1, 4)]: ref=896 cf=394
+  MISMATCH n=19 [(3, 3), (2, 4), (1, 2)]: ref=824 cf=396
+  MISMATCH n=19 [(3, 3), (2, 5)]: ref=782 cf=632
+  MISMATCH n=19 [(3, 3), (1, 10)]: ref=1452 cf=1152
+  MISMATCH n=19 [(3, 4), (2, 1), (1, 5)]: ref=1098 cf=512
+  MISMATCH n=19 [(3, 4), (2, 2), (1, 3)]: ref=936 cf=370
+  MISMATCH n=19 [(3, 4), (2, 3), (1, 1)]: ref=828 cf=412
+  MISMATCH n=19 [(3, 4), (1, 7)]: ref=1334 cf=802
+  MISMATCH n=19 [(3, 5), (2, 1), (1, 2)]: ref=1076 cf=531
+  MISMATCH n=19 [(3, 5), (2, 2)]: ref=916 cf=606
+  MISMATCH n=19 [(3, 5), (1, 4)]: ref=1306 cf=686
+  MISMATCH n=19 [(3, 6), (1, 1)]: ref=1296 cf=1020
+  MISMATCH n=19 [(2, 2), (1, 15)]: ref=2726 cf=2696
+  MISMATCH n=19 [(2, 3), (1, 13)]: ref=2414 cf=2284
+  MISMATCH n=19 [(2, 4), (1, 11)]: ref=2216 cf=1908
+  MISMATCH n=19 [(2, 5), (1, 9)]: ref=2096 cf=1556
+  MISMATCH n=19 [(2, 6), (1, 7)]: ref=2026 cf=1256
+  MISMATCH n=19 [(2, 7), (1, 5)]: ref=1986 cf=1076
+  MISMATCH n=19 [(2, 8), (1, 3)]: ref=1964 cf=1124
+  MISMATCH n=19 [(2, 9), (1, 1)]: ref=1956 cf=1548
+Tested 2086 partitions for n=1..19: 2009 ERRORS [4.19s]
+
+=== Computing A051240 values ===
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/a051240_closedform_v2.py", line 351, in <module>
+    result, nparts = a_4uniform(n)
+TypeError: cannot unpack non-iterable int object

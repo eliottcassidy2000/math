@@ -1,0 +1,9 @@
+=== Verifying c_4 closed-form v3 ===
+Tested 683 partitions for n=1..15: ALL OK [0.80s]
+
+=== Benchmark: Burnside vs closed-form for n=20 ===
+  Burnside:    1.482s for 627 partitions
+  Closed-form: 1.158s for 627 partitions
+  Speedup: 1.3x
+
+Done.
