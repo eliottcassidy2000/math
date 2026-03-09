@@ -1,0 +1,284 @@
+========================================================================
+VALIDATION: Cocycle space dimensions
+========================================================================
+3-cycle: edges=3, dim Z¹=3, dim B¹=2, β¹=1
+TT₃:    edges=3, dim Z¹=2, dim B¹=2, β¹=0
+
+n=4 β₁ distribution:
+  {0: 40, 1: 24}
+
+n=5 β₁ distribution:
+  {0: 720, 1: 304}
+
+Cross-validation with path_homology_v2 at n=4:
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+  All 64 tournaments agree: cohom β₁ = homol β₁. Good.
+
+========================================================================
+COCYCLE RESTRICTION MAP ANALYSIS — n=5
+========================================================================
+
+========================================================================
+RESULTS FOR n=5
+========================================================================
+Total tournaments: 1024
+Tournaments with β₁=0: 720
+
+Vertex deletions from β₁=0 tournaments:
+  Bad vertices (β₁(T\v) ≥ 1): 840
+  Good vertices (β₁(T\v) = 0): 2760
+
+--- BAD VERTICES ---
+  res_v surjective:     0  (correct: should be 0)
+  res_v NOT surjective: 840
+  Image ⊆ Z¹(T\v) failures: 0  (should be 0)
+  Image ⊆ B¹(T\v): 840 / 840  (should be ALL)
+
+  Kernel dim distribution: {1: 840}
+  Cokernel dim distribution: {1: 840}
+
+  Full dimension profile (Z¹_T, B¹_T, Z¹_sub, B¹_sub, im, ker):
+    (4, 4, 4, 3, 3, 1): 840 cases
+
+--- GOOD VERTICES ---
+  res_v surjective:     2760
+  res_v NOT surjective: 0
+
+  Kernel dim distribution: {1: 2760}
+  Cokernel dim distribution: {0: 2760}
+
+  Full dimension profile (Z¹_T, B¹_T, Z¹_sub, B¹_sub, im, ker):
+    (4, 4, 3, 3, 3, 1): 2760 cases
+
+========================================================================
+DETAILED EXAMPLES — BAD VERTICES
+========================================================================
+
+  Tournament mask=4, delete vertex v=4
+    β₁(T) = 0
+    β₁(T\v) = 1
+    dim Z¹(T) = 4, dim B¹(T) = 4
+    dim Z¹(T\v) = 4, dim B¹(T\v) = 3
+    |edges(T)| = 10, |edges(T\v)| = 6
+    dim res_v(Z¹(T)) = 3
+    dim ker(res_v) = 1
+    dim coker = 1
+    Surjective: False
+    Image ⊆ Z¹(T\v): True
+    Image ⊆ B¹(T\v): True
+
+  Tournament mask=6, delete vertex v=4
+    β₁(T) = 0
+    β₁(T\v) = 1
+    dim Z¹(T) = 4, dim B¹(T) = 4
+    dim Z¹(T\v) = 4, dim B¹(T\v) = 3
+    |edges(T)| = 10, |edges(T\v)| = 6
+    dim res_v(Z¹(T)) = 3
+    dim ker(res_v) = 1
+    dim coker = 1
+    Surjective: False
+    Image ⊆ Z¹(T\v): True
+    Image ⊆ B¹(T\v): True
+
+  Tournament mask=9, delete vertex v=1
+    β₁(T) = 0
+    β₁(T\v) = 1
+    dim Z¹(T) = 4, dim B¹(T) = 4
+    dim Z¹(T\v) = 4, dim B¹(T\v) = 3
+    |edges(T)| = 10, |edges(T\v)| = 6
+    dim res_v(Z¹(T)) = 3
+    dim ker(res_v) = 1
+    dim coker = 1
+    Surjective: False
+    Image ⊆ Z¹(T\v): True
+    Image ⊆ B¹(T\v): True
+
+  Tournament mask=10, delete vertex v=2
+    β₁(T) = 0
+    β₁(T\v) = 1
+    dim Z¹(T) = 4, dim B¹(T) = 4
+    dim Z¹(T\v) = 4, dim B¹(T\v) = 3
+    |edges(T)| = 10, |edges(T\v)| = 6
+    dim res_v(Z¹(T)) = 3
+    dim ker(res_v) = 1
+    dim coker = 1
+    Surjective: False
+    Image ⊆ Z¹(T\v): True
+    Image ⊆ B¹(T\v): True
+
+  Tournament mask=10, delete vertex v=3
+    β₁(T) = 0
+    β₁(T\v) = 1
+    dim Z¹(T) = 4, dim B¹(T) = 4
+    dim Z¹(T\v) = 4, dim B¹(T\v) = 3
+    |edges(T)| = 10, |edges(T\v)| = 6
+    dim res_v(Z¹(T)) = 3
+    dim ker(res_v) = 1
+    dim coker = 1
+    Surjective: False
+    Image ⊆ Z¹(T\v): True
+    Image ⊆ B¹(T\v): True
+
+========================================================================
+SANITY CHECK: n=4
+========================================================================
+β₁=0 tournaments: 40
+Bad vertices: 16, surjective: 0
+Good vertices: 144, surjective: 144
+
+========================================================================
+SAMPLE CHECK: n=6 (first 500 tournaments)
+========================================================================
+Tested 501 tournaments, 432 with β₁=0
+Bad vertices: 375, surjective: 0
+Good vertices: 2217, surjective: 2217
+
+========================================================================
+CONCLUSION
+========================================================================
+
+1. res_v surjective for bad vertices: 0 / 840
+   CONFIRMED: res_v is NEVER surjective for bad vertices
+
+2. Image in B1(T-v) for bad vertices: 840 / 840
+   CONFIRMED: image always lands in B1(T-v)
+
+3. Image in Z1(T-v) failures: 0
+   CONFIRMED: restriction always preserves cocycles
+
+ALGEBRAIC PROOF (verified computationally):
+  Given b1(T) = 0 and b1(T-v) = 1:
+  (a) Z1(T) = B1(T)                           [b1 = 0]
+  (b) res_v(B1(T)) <= B1(T-v)                 [restriction of coboundary = coboundary]
+  (c) So res_v(Z1(T)) <= B1(T-v) < Z1(T-v)    [B1 < Z1 since b1(T-v) = 1]
+  (d) Therefore res_v is NOT surjective.        QED
+
+  The previous agent's claim of surjectivity was INCORRECT.
+  The obstruction has dimension = b1(T-v).
+
+Done.
