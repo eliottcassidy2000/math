@@ -53,7 +53,7 @@ Organized by topic. Each hypothesis has a detail file.
 ### OPEN
 | ID | Statement | Current evidence | Source |
 |----|-----------|-----------------|--------|
-| HYP-207 | β₂(T) = 0 for ALL tournaments T | 0 counterexamples in ~47k tests (exhaustive n≤6, sampled n≤9) | THM-100, beta2_vanishing.py |
+| HYP-207 | β₂(T) = 0 for ALL tournaments T | 0 counterexamples: exhaustive n≤6, sampled n=7-10 (5000+ tests). Cone-from-T' construction + unfiltered B always solvable | THM-100, beta2_vanishing.py, beta2_filtered_cone.py |
 | HYP-208 | Odd-n maximizers have nontrivial path homology | True n=3,5,7,9; split at even n=6,8 (some contractible) | THM-099 |
 | HYP-209 | ALL deletions β_k>0 implies β_{k+1}(parent)>0 | Verified: β₃→β₄ (n=7), β₄→β₅ (n=9), β₁→β₁ (n=5,6) | beta4_classes_n7.py, n9_max_betti_quick.py |
 | HYP-210 | β_{n-4}>0 for odd-n H-maximizers | β₁=1 (n=3,5), β₄=6 (n=7), β₅=10 (n=9) | THM-099 (S41 update) |
@@ -131,6 +131,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-271 | β₂=0 extended: confirmed n=7 (2000 samples), n=8 (500), n=9 (100). Zero failures. | Extends HYP-255. β₃≠0 at n≥7 (8.2% at n=7, 19.2% at n=8). β₂ is dimension-specific! | beta2_large_n_sample.py |
 | HYP-272 | Paley T₇ has β₄=6, Betti=[1,0,0,0,6,0]. Most extreme non-vanishing at n=7 | CONFIRMED. Random n=7 never has β₄≠0 (0/2000). Paley structure creates 4-dimensional holes | beta2_large_n_sample.py |
 | HYP-273 | im(d₃\|Ω₃) ≠ im(d₃\|A₃) for most tournaments | CONFIRMED: 904/1024 at n=5, 32048/32768 at n=6. Ω₃ restriction loses most of A₃ image. Yet β₂=0 persists. | beta2_omega3_filling.py |
+| HYP-274 | Cone-from-T' fills all swap cycles: w = Σα[(v,a,b,c)+(a,b,c,v)] | Exhaustive n=5,6 (0 failures). Filtered version fails 1/1000 at n=8. UNFILTERED works 500/500 at n=7,8,9. Multi-vertex always works | beta2_filtered_cone.py, beta2_cone_failure.py |
+| HYP-275 | Cone filling is AUTOMATICALLY in Ω₃ | CONFIRMED exhaustive n=5 (120/120), n=6 (21120/21120). Breaks at n≥7: 418/425 at n=7, 539/577 at n=8. Single-cone has exposed non-allowed faces that cancel in linear combination | beta2_omega_membership.py |
+| HYP-276 | β₂(T) = 0 for ALL tournaments at ALL n | CONFIRMED n≤6 exhaustive, n=7-10 sampled (total ~5000+ tests, 0 failures). Extends HYP-249/271. rank(d₃) = ker(d₂) EXACTLY for every tournament tested. Rank surplus grows with n (min 6→11→15 at n=7→8→9) | beta2_unfiltered_large.py |
+| HYP-277 | Unfiltered single-vertex cone: B·α=z always solvable for swap cycles | CONFIRMED 500/500 at n=7,8; 200/200 at n=9. Uses ALL T' 2-paths. rank(B)-swap_dim min 6,11,15. Growing surplus means increasingly overdetermined | beta2_unfiltered_large.py |
 
 ---
 

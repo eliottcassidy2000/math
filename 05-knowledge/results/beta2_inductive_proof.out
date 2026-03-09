@@ -1,0 +1,16 @@
+======================================================================
+PART 1: DELTA INJECTIVITY FOR INTERIOR VERTICES
+======================================================================
+For each tournament, for each interior vertex v (1<=d+<=n-2),
+check if delta: H_2(T,T\v) -> H_1(T\v) is injective.
+(Equiv: all H_1(T\v) cycles remain non-trivial in H_1(T))
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_inductive_proof.py", line 317, in <module>
+    h2_rel, inj, b1_Tv, b1_T = compute_relative_h2_and_delta(A, n, v)
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_inductive_proof.py", line 234, in compute_relative_h2_and_delta
+    combined = np.hstack([D1_T_om, ker_in_T])
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\_core\shape_base.py", line 367, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 7 and the array at index 1 has size 21

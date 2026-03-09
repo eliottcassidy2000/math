@@ -1,0 +1,54 @@
+======================================================================
+PART 1: H_1 INJECTIVITY at n=5 (EXHAUSTIVE)
+======================================================================
+n=5: 1024 tournaments, 4480 interior (T,v) pairs
+  i_* injective: 1080/4480
+  i_* NOT injective: 3400/4480
+  Tournaments with SOME interior v having inj i_*: 304/1024
+
+======================================================================
+PART 2: H_1 INJECTIVITY at n=6 (EXHAUSTIVE)
+======================================================================
+  FAIL T#0 v=1: b1_Tv=6, b1_T=10, ker=6, scores=(0, 1, 2, 3, 4, 5)
+  FAIL T#0 v=2: b1_Tv=6, b1_T=10, ker=6, scores=(0, 1, 2, 3, 4, 5)
+  FAIL T#0 v=3: b1_Tv=6, b1_T=10, ker=6, scores=(0, 1, 2, 3, 4, 5)
+  FAIL T#0 v=4: b1_Tv=6, b1_T=10, ker=6, scores=(0, 1, 2, 3, 4, 5)
+  FAIL T#1 v=0: b1_Tv=6, b1_T=10, ker=6, scores=(0, 1, 2, 3, 4, 5)
+  5000/32768 (13s) inj_ok=3053 inj_fail=24666
+  10000/32768 (27s) inj_ok=6854 inj_fail=49209
+  15000/32768 (41s) inj_ok=10480 inj_fail=74055
+  20000/32768 (54s) inj_ok=13850 inj_fail=98500
+  25000/32768 (68s) inj_ok=18001 inj_fail=123024
+  30000/32768 (82s) inj_ok=21376 inj_fail=147621
+
+n=6 (89s): 32768 tournaments, 184320 interior pairs
+  i_* injective: 23040/184320
+  i_* NOT injective: 161280/184320
+  Tournaments with SOME interior v having inj i_*: 4800/32768
+
+======================================================================
+PART 3: H_1 INJECTIVITY at n=7,8 (sampled)
+======================================================================
+  n=7: 125/500 (1s) ok=28 fail=821
+  n=7: 250/500 (2s) ok=57 fail=1632
+  n=7: 375/500 (2s) ok=79 fail=2460
+  n=7: 500/500 (3s) ok=118 fail=3271
+
+n=7 (3s): 3389 interior pairs
+  i_* injective: 118/3389
+  i_* NOT injective: 3271/3389
+  ALL interior v inj: 21/500
+  NO interior v inj: 479/500
+  n=8: 50/200 (1s) ok=0 fail=391
+  n=8: 100/200 (1s) ok=0 fail=784
+  n=8: 150/200 (2s) ok=14 fail=1161
+  n=8: 200/200 (3s) ok=14 fail=1554
+
+n=8 (3s): 1568 interior pairs
+  i_* injective: 14/1568
+  i_* NOT injective: 1554/1568
+  ALL interior v inj: 2/200
+  NO interior v inj: 198/200
+
+
+Done.
