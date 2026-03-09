@@ -124,6 +124,32 @@ Key structural facts:
 
 **Structural insight**: dim(Ω₂) = |TT triples| + |NT cancellation dimensions|. Under arc flip, TT triples and NT cancellation pairs rebalance to maintain β₂ = 0.
 
+### I. THM-103: β₁(T) ≤ 1 for All Tournaments (PROVED, S50)
+**Status**: COMPLETE ALGEBRAIC PROOF.
+
+**Proof** (star constraint argument): For each vertex v, take a Hamiltonian path
+u₁→...→u_d in out(v) (exists by classical theorem). Each consecutive triple
+(v, uᵢ, uᵢ₊₁) is transitive, giving cocycle constraint w(v,uᵢ₊₁) = w(v,uᵢ) + w(uᵢ,uᵢ₊₁).
+This eliminates d⁺(v)-1 edge variables. Different vertices give disjoint eliminated sets.
+Total eliminated: C(n,2)-n. Free cocycle variables: ≤ n. Coboundaries: n-1. Hence β₁ ≤ 1.
+
+**Consequence for β₂ proof**: Combined with Sum_v β₁(T\v) ≤ 3 (HYP-282, verified n≤10),
+this gives ∃ good vertex for n ≥ 4, completing approach H if HYP-282 is proved.
+
+**Additional findings (S50)**:
+- Bad vertices form transitive triples (verified 100% n=5,6,7)
+- 3-cycle among bad vertices forces β₁(T)≥1 (flip obstruction)
+- Hidden cycle z_v uses ALL n-1 vertices (global, not local)
+- rank_drop(v) = (n-2) + β₁(T\v) exact identity
+- At n=5: #bad = max(0, t₃-1) exact formula
+- TT constraints are the ONLY cocycle constraints (IC always redundant)
+- Cocycle restriction res_v: Z¹(T)→Z¹(T\v) is NOT surjective for bad v (proved algebraically)
+
+**What remains**: Prove HYP-282 (Sum ≤ 3) or the weaker Sum < n. The algebraic
+proof of THM-103 doesn't directly yield the deletion bound.
+
+See THM-103 for the full proof.
+
 ### H. Inductive Proof via b1 Monotonicity (NEW — Most Promising, S43)
 **Idea**: Prove beta_2 = 0 by induction on n using the LES of (T, T\v).
 

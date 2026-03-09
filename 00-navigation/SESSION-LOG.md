@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-08-S50 — β₁ ≤ 1 PROVED, filler vertex analysis, cocycle structure
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S49c
+**Summary of work:**
+  Proved THM-103 (β₁(T) ≤ 1 for all tournaments) via star constraint argument in path cohomology. Investigated filler vertex structure, transitive triple mechanism for bad vertices, cocycle restriction maps.
+
+  **Major results:**
+  - **THM-103 PROVED**: β₁(T) ≤ 1 for all tournaments. Algebraic proof via Hamiltonian paths in out-neighborhoods giving C(n,2)-n independent cocycle constraints. Clean, elementary, valid for all n.
+  - **Bad vertex structure**: Bad vertices always form transitive triple (100% n=5,6,7). 3-cycle among bad vertices forces β₁(T)≥1 (flip obstruction). Hidden cycle z_v uses ALL n-1 vertices.
+  - **Filler vertex analysis**: Critical vertices in β₁(T)=0 tournaments with Σ=3 always form transitive (not cyclic) configuration. Filling chains always route through deleted vertex.
+  - **rank_drop identity**: rank_drop(v) = (n-2) + β₁(T\v) exact.
+  - **At n=5**: #bad = max(0, t₃-1) exact formula.
+  - **Cocycle structure**: TT constraints are ONLY constraints (intransitive cancellations always redundant). res_v NOT surjective for bad v (proved algebraically — contradicts buggy agent claims of surjectivity).
+  - **Case 4 NOT empty**: SC+κ≥2+β₁=0 exists at n≥6 (1680 at n=6). Cannot shortcut via SC⟹β₁=1.
+
+**New contributions:** THM-103 (β₁≤1 proof), updated THM-102 with approach I
+**Scripts:** beta2_filler_vertex_analysis.py, beta2_four_bad_analysis.py, beta2_transitive_mechanism.py, beta2_flip_obstruction_proof.py, beta2_rank_sum_constraint.py, beta1_structure_analysis.py, beta1_upper_bound.py, beta1_final_proof.py, beta1_cocycle_restriction.py, beta1_restriction_check.py, beta1_kernel_structure.py, beta1_intransitive_constraints.py, beta2_case4_deep.py, +more
+**Unresolved threads:**
+  - Prove HYP-282 (Sum_v β₁(T\v) ≤ 3) or weaker Sum < n — this closes β₂=0
+  - The algebraic mechanism preventing 4 bad vertices is understood (transitive triple + flip obstruction) but not yet a proof
+  - Cocycle restriction map properties need careful homology/cohomology distinction
+
 ## kind-pasteur-2026-03-08-S43 (continuation) — β₂=0 proof: 3/4 cases proved
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-08-S43
