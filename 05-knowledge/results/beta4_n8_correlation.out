@@ -1,0 +1,32 @@
+======================================================================
+beta_4 vs H correlation for n=8 SC-score tournaments
+======================================================================
+  ... 25 SC-score tournaments processed (2111 total trials)
+  ... 50 SC-score tournaments processed (4499 total trials)
+  ... 75 SC-score tournaments processed (6451 total trials)
+  ... 100 SC-score tournaments processed (8128 total trials)
+  ... 125 SC-score tournaments processed (10220 total trials)
+  ... 150 SC-score tournaments processed (12469 total trials)
+  ... 175 SC-score tournaments processed (14716 total trials)
+  ... 200 SC-score tournaments processed (16625 total trials)
+
+Total: 200 SC-score tournaments from 16625 trials
+
+beta_4 by H value:
+  H=627: 8 tournaments, beta_4>0 in 0/8 (0.0%), max_beta_4=0
+  H=629: 1 tournaments, beta_4>0 in 0/1 (0.0%), max_beta_4=0
+  H=631: 8 tournaments, beta_4>0 in 0/8 (0.0%), max_beta_4=0
+  H=637: 2 tournaments, beta_4>0 in 0/2 (0.0%), max_beta_4=0
+  H=639: 7 tournaments, beta_4>0 in 0/7 (0.0%), max_beta_4=0
+  H=641: 22 tournaments, beta_4>0 in 0/22 (0.0%), max_beta_4=0
+  H=643: 21 tournaments, beta_4>0 in 0/21 (0.0%), max_beta_4=0
+  H=645: 11 tournaments, beta_4>0 in 0/11 (0.0%), max_beta_4=0
+  H=649: 10 tournaments, beta_4>0 in 0/10 (0.0%), max_beta_4=0
+  H=651: 22 tournaments, beta_4>0 in 0/22 (0.0%), max_beta_4=0
+  H=653: 25 tournaments, beta_4>0 in 5/25 (20.0%), max_beta_4=1
+  H=657: 34 tournaments, beta_4>0 in 16/34 (47.1%), max_beta_4=5
+  H=659: 9 tournaments, beta_4>0 in 0/9 (0.0%), max_beta_4=0
+  H=661: 20 tournaments, beta_4>0 in 11/20 (55.0%), max_beta_4=1
+
+H=661: beta_4>0 in 11/20
+H!=661: beta_4>0 in 21/180

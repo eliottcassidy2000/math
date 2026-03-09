@@ -1,0 +1,65 @@
+======================================================================
+Finding multiple H=661 tournaments at n=8
+Checking beta_5 (= beta_{n-3}) for each
+======================================================================
+  #1: beta_5=0, dim(Omega_5)=162 (trial 1876)
+  #2: beta_5=0, dim(Omega_5)=162 (trial 2325)
+  #3: beta_5=0, dim(Omega_5)=153 (trial 2668)
+  #4: beta_5=0, dim(Omega_5)=162 (trial 5185)
+  #5: beta_5=0, dim(Omega_5)=132 (trial 5386)
+  #6: beta_5=0, dim(Omega_5)=132 (trial 5815)
+  #7: beta_5=0, dim(Omega_5)=162 (trial 7108)
+  #8: beta_5=0, dim(Omega_5)=223 (trial 7141)
+  #9: beta_5=0, dim(Omega_5)=132 (trial 7649)
+  #10: beta_5=0, dim(Omega_5)=132 (trial 12047)
+  #11: beta_5=0, dim(Omega_5)=153 (trial 12310)
+  #12: beta_5=0, dim(Omega_5)=162 (trial 13440)
+  #13: beta_5=0, dim(Omega_5)=162 (trial 13518)
+  #14: beta_5=0, dim(Omega_5)=153 (trial 16257)
+  #15: beta_5=0, dim(Omega_5)=132 (trial 16752)
+  #16: beta_5=0, dim(Omega_5)=162 (trial 19637)
+  #17: beta_5=0, dim(Omega_5)=132 (trial 20583)
+  #18: beta_5=0, dim(Omega_5)=162 (trial 21838)
+  #19: beta_5=0, dim(Omega_5)=132 (trial 26175)
+  #20: beta_5=0, dim(Omega_5)=162 (trial 28621)
+
+Total trials: 28621
+H=661 found: 20
+beta_5 values: [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+dim(Omega_5) values: [162, 162, 153, 162, 132, 132, 162, 223, 132, 132, 153, 162, 162, 153, 132, 162, 132, 162, 132, 162]
+beta_5 distribution: {np.int64(0): 20}
+Omega_5 dim distribution: {132: 7, 153: 3, 162: 9, 223: 1}
+
+======================================================================
+Full Betti for first 3 H=661 tournaments
+======================================================================
+  #1: betti = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+        omega = [8, 28, 68, 130, 179, 162, 86, 20]
+        chi = 1
+  #2: betti = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+        omega = [8, 28, 68, 130, 179, 162, 86, 20]
+        chi = 1
+  #3: betti = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+        omega = [8, 28, 68, 129, 173, 153, 87, 24]
+        chi = 2
+
+======================================================================
+H distribution for score (3, 3, 3, 3, 4, 4, 4, 4)
+======================================================================
+H values found (from 564 SC-score tournaments):
+  H=621: 1
+  H=627: 14
+  H=629: 7
+  H=631: 37
+  H=633: 5
+  H=637: 7
+  H=639: 25
+  H=641: 61
+  H=643: 52
+  H=645: 21
+  H=649: 28
+  H=651: 70
+  H=653: 83
+  H=657: 81
+  H=659: 25
+  H=661: 47 <-- MAX

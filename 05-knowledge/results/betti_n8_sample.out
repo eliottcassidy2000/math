@@ -1,0 +1,46 @@
+======================================================================
+PART 1: Searching for n=8 H-maximizer (H=661)
+======================================================================
+  trial 0: H=117, scores=(np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5), np.int64(6))
+  trial 1: H=139, scores=(np.int64(0), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5))
+  trial 2: H=219, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(6))
+  trial 3: H=311, scores=(np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5))
+  trial 5: H=427, scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5))
+  trial 6: H=595, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5))
+  trial 43: H=661, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4))
+  ... 1000 trials done, max H so far: 661
+  ... 2000 trials done, max H so far: 661
+  ... 3000 trials done, max H so far: 661
+  ... 4000 trials done, max H so far: 661
+  ... 5000 trials done, max H so far: 661
+
+Best found: H=661, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(4))
+
+Computing Betti numbers for best tournament (H=661)...
+  betti = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  omega_dims = [8, 28, 68, 130, 179, 162, 86, 20]
+  chi = 1
+
+======================================================================
+PART 3: Random n=8 — beta structure (5 samples)
+======================================================================
+
+  trial 0: H=415, scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5))
+  betti (up to p=5) = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  omega_dims (up to p=5) = [8, 28, 66, 121, 161, 139]
+
+  trial 1: H=491, scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(5))
+  betti (up to p=5) = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  omega_dims (up to p=5) = [8, 28, 63, 98, 99, 61]
+
+  trial 2: H=303, scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(6))
+  betti (up to p=5) = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  omega_dims (up to p=5) = [8, 28, 64, 110, 137, 110]
+
+  trial 3: H=89, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(5), np.int64(7))
+  betti (up to p=5) = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  omega_dims (up to p=5) = [8, 28, 59, 89, 101, 79]
+
+  trial 4: H=499, scores=(np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5))
+  betti (up to p=5) = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  omega_dims (up to p=5) = [8, 28, 65, 119, 159, 138]
