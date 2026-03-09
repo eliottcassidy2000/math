@@ -1,0 +1,78 @@
+
+============================================================
+n=5: CONSTRUCTING QUOTIENT R = B₁ / <generators>
+============================================================
+
+  Tournament bits=0
+  dim(B₁)=6, #generators=11
+  rank(generators in B₁)=6
+  dim(R) = 0
+
+  Tournament bits=1
+  dim(B₁)=6, #generators=11
+  rank(generators in B₁)=6
+  dim(R) = 0
+
+  Tournament bits=2
+  dim(B₁)=6, #generators=9
+  rank(generators in B₁)=6
+  dim(R) = 0
+
+Tested: 720
+dim(R) distribution: {0: 698, 1: 22}
+*** dim(R) varies: {0, 1} ***
+
+============================================================
+n=6: CONSTRUCTING QUOTIENT R = B₁ / <generators>
+============================================================
+
+  Tournament bits=0
+  dim(B₁)=10, #generators=16
+  rank(generators in B₁)=10
+  dim(R) = 0
+
+  Tournament bits=1
+  dim(B₁)=10, #generators=16
+  rank(generators in B₁)=10
+  dim(R) = 0
+
+  Tournament bits=2
+  dim(B₁)=10, #generators=14
+  rank(generators in B₁)=10
+  dim(R) = 0
+
+Tested: 200
+dim(R) distribution: {0: 196, 1: 4}
+*** dim(R) varies: {0, 1} ***
+
+============================================================
+REFINED: WHAT IS THE MINIMAL QUOTIENT?
+============================================================
+
+The star elements are ALL TTs with a fixed first vertex.
+So "all star generators" = ALL TT boundaries (every TT is in some star).
+That means the generators span ALL of B₁, giving dim(R) = 0.
+
+This is too strong — we need a SUBSET of star constraints.
+Let me check: what if we use ONLY the HP-consecutive TTs?
+
+
+--- n=5: HP-consecutive TTs only ---
+  Tested: 720
+  dim(R) with HP-TTs only: {3: 240, 4: 374, 5: 100, 6: 6}
+
+--- n=6: HP-consecutive TTs only ---
+  Tested: 500
+  dim(R) with HP-TTs only: {6: 164, 7: 257, 8: 79}
+
+--- Coboundaries as generators ---
+
+--- n=5 ---
+  Tested: 720
+  dim(B₁ / (B₁∩im(δ))) = dim R: {6: 720}
+  (This is B₁ modulo its intersection with coboundaries)
+
+--- n=6 ---
+  Tested: 500
+  dim(B₁ / (B₁∩im(δ))) = dim R: {10: 500}
+  (This is B₁ modulo its intersection with coboundaries)

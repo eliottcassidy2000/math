@@ -81,6 +81,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-380 | i_* INJECTIVE when b3(T\v)=1: rank(i_*)=1 always, H_3^rel=0 | n=6: 1920/1920 trivial (b3_Tv=0). n=7: 71/71 bad-vertex cases all have rank(i_*)=1. n=8: 20/20 tours 0 violations. ELIMINATES need for good vertex existence in proof! | kind-pasteur-S47 |
 | HYP-381 | LES dichotomy: b3(T\v)=0 => (rank=0,H3rel=1); b3(T\v)=1 => (rank=1,H3rel=0) | PERFECT at n=6 (exhaustive), n=7 (100 tours, 700 pairs), n=8 (20 tours). Combined: beta_3(T)=1 for ANY vertex choice | kind-pasteur-S47 |
 | HYP-382 | Relative dims at n=6 fully determined by type: Type A=(1,5,9,6,0,0), Type B=(1,5,12,14,8,3) | Exhaustive: 480 Type A pairs, 1440 Type B pairs. Rigid structure | kind-pasteur-S47 |
+| HYP-383 | Bad vertices have δ(β₃)=0: adding v adds EQUAL kernel and im(d_4) | n=7: 71/71 bad vertices. Perfect saturation — T\v cycle orthogonal to new v-paths content | kind-pasteur-S47 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
@@ -92,6 +93,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-102 | M(T) = M(T^op) | Fails for generic tournaments | n=4 | reversal_proof_attempt.py |
 | HYP-361 | V-projection RC proof: mixed TTs span ≤2D in bad-edge subspace V | Mixed TTs span ALL 3D of V (rank=3). Each bad-edge has ≥1 mixed TT. Star-cocycle does NOT constrain to 2D. | n=5 (120/120 fail) | beta2_grok_rc_proof.py |
 | HYP-371 | C₁/B₁ quotient bounds #bad: alt sum ∈ B₁ ⟹ dep mod B₁ ⟹ #bad ≤ dim(C₁/B₁) | ALL lifts have rank 0 in C₁/B₁ (every z_v ∈ B₁!). Quotient sees nothing. Lifts are independent WITHIN B₁. Even if it worked, bound would be n-1, not 3. | n=5,6 (exhaustive) | beta2_quotient_rank.py |
+| HYP-374 | R = B₁/<Euler, HP 2-cycles, star annihilators> has dim(R)=3 (Grok claim) | Star generators = ALL TTs (every TT in some star), so dim(R)=0 for 97%, =1 for 3%. HP-only: varies 3-8. Coboundaries ⊥ B₁ (dim(B₁∩im(δ))=0). No "3D quotient" exists. | n=5 exhaustive, n=6 (500) | beta2_quotient_R.py |
 | HYP-103 | M(T) = M(T^op)^T | Also fails | n=4 | reversal_proof_attempt.py |
 | HYP-104 | M is linear in A, A^T, A^2, etc. | No such combination works | n=4 | simple_pattern_search.py |
 | HYP-105 | M commutes with A | Fails | n=4 | M_functional_equation.py |

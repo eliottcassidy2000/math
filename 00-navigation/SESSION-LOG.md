@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51i — Quotient R refuted; i_*-injectivity breakthrough from kind-pasteur
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51h
+**Summary of work:**
+  Tested Grok's claim: R = B₁/<Euler, HP 2-cycles, star annihilators> has dim(R)=3.
+  REFUTED (HYP-374): Star generators = ALL TTs (every TT belongs to some vertex star),
+  so they span all of B₁ giving dim(R)=0 for 97% of tournaments. HP-only quotient varies
+  3-8. Coboundaries have ZERO intersection with B₁. No "specific 3D quotient" exists.
+  Also reviewed kind-pasteur-S47's i_*-injectivity mechanism (HYP-380-383): perfect
+  saturation pattern for bad vertices — δ(β₃)=0 when b3(T\v)=1 (kernel and im(d_4)
+  grow equally). This is a much more promising direction than Grok's quotient approaches.
+**New contributions:** HYP-374 (REFUTED), HYP-383 (noted from kind-pasteur), beta2_quotient_R.py
+**Unresolved threads:** i_*-injectivity proof; |bad|≤3 algebraic proof
+
 ## opus-2026-03-09-S51h — B₁ subspace analysis: lifts span 3D but no structural bound
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51g
