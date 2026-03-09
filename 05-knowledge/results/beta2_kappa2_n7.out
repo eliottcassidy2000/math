@@ -1,0 +1,93 @@
+TEST 1: Can ALL vertices be bad?
+==================================================
+  n=5: 0/720 have all vertices bad
+  n=6: 0/27968 have all vertices bad
+  n=7: 0/4778 have all vertices bad
+  n=8: 0/1974 have all vertices bad
+
+TEST 2: Domination count per cycle
+==================================================
+
+  n=5 (total cycles in b1=0 tournaments: 1440):
+    dom=0: 360 (25.0%)
+    dom=1: 960 (66.7%)
+    dom=2: 120 (8.3%)
+
+  n=6 (total cycles in b1=0 tournaments: 134560):
+    dom=0: 42240 (31.4%)
+    dom=1: 69120 (51.4%)
+    dom=2: 21600 (16.1%)
+    dom=3: 1600 (1.2%)
+
+TEST 3: Counting argument for |BAD| < n
+==================================================
+  bits=152: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=156: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=209: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=217: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=268: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=276: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=281: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=282: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=312: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=316: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=337: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=344: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=345: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=348: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=393: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=396: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=400: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=403: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=404: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=405: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=410: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=413: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=433: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=441: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=457: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=467: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=469: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=472: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=664: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=666: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=689: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=697: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=778: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=786: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=793: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=796: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=817: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=824: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=825: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=826: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=856: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=858: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=905: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=906: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=912: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=914: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=915: bad_f=[3, 4, 5], good_f=[1, 2, 2], sum_f=17
+  bits=917: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=923: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=924: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=937: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=947: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=949: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=952: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+  bits=977: bad_f=[3, 4, 5], good_f=[0, 1, 2], sum_f=15
+  bits=985: bad_f=[3, 4, 4], good_f=[0, 2, 2], sum_f=15
+
+TEST 4: f(v) for bad vs good vertices
+==================================================
+  f(v) for BAD vertices:
+    f=3: 17760
+    f=4: 14400
+    f=5: 3168
+  f(v) for GOOD vertices:
+    f=0: 86400
+    f=1: 23040
+    f=2: 23040
+
+  min f(bad) = 3, max f(good) = 2
+  Strict separation? True

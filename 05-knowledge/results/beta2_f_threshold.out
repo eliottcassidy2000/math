@@ -1,0 +1,91 @@
+============================================================
+f(v) THRESHOLD TEST: f(bad) >= n-3 > f(good)?
+============================================================
+
+n=5 (exhaustive), threshold=n-3=2
+  b1=0 tournaments: 720
+  Total bad vertices: 840, good: 2760
+  Bad with f < 2: 0 (VIOLATIONS)
+  Good with f >= 2: 0
+  min f(bad) = 2
+  max f(good) = 0
+  STRICT SEPARATION: True
+
+n=6 (exhaustive), threshold=n-3=3
+  b1=0 tournaments: 27968
+  Total bad vertices: 35328, good: 132480
+  Bad with f < 3: 0 (VIOLATIONS)
+  Good with f >= 3: 0
+  min f(bad) = 3
+  max f(good) = 2
+  STRICT SEPARATION: True
+
+n=7 (sampled(5000)), threshold=n-3=4
+  b1=0 tournaments: 4760
+  Total bad vertices: 3693, good: 29627
+  Bad with f < 4: 0 (VIOLATIONS)
+  Good with f >= 4: 4625
+  min f(bad) = 4
+  max f(good) = 5
+  STRICT SEPARATION: False
+
+n=8 (sampled(2000)), threshold=n-3=5
+  b1=0 tournaments: 1980
+  Total bad vertices: 616, good: 15224
+  Bad with f < 5: 0 (VIOLATIONS)
+  Good with f >= 5: 3445
+  min f(bad) = 5
+  max f(good) = 9
+  STRICT SEPARATION: False
+
+============================================================
+f(v) DISTRIBUTION at n=7
+============================================================
+  BAD vertex f distribution:
+    f=4: 1376
+    f=6: 1466
+    f=8: 822
+  GOOD vertex f distribution:
+    f=0: 12493
+    f=1: 4642
+    f=2: 3331
+    f=3: 4517
+    f=4: 3153
+    f=5: 1590
+
+============================================================
+COUNT OF VERTICES WITH f >= n-3
+============================================================
+
+  n=5, threshold=2:
+    0 vertices with f >= 2: 240 (33.3%)
+    1 vertices with f >= 2: 240 (33.3%)
+    2 vertices with f >= 2: 120 (16.7%)
+    3 vertices with f >= 2: 120 (16.7%)
+
+  n=6, threshold=3:
+    0 vertices with f >= 3: 8480 (30.3%)
+    1 vertices with f >= 3: 7968 (28.5%)
+    2 vertices with f >= 3: 7200 (25.7%)
+    3 vertices with f >= 3: 4320 (15.4%)
+
+  n=7, threshold=4:
+    0 vertices with f >= 4: 1464 (30.9%)
+    1 vertices with f >= 4: 1148 (24.2%)
+    2 vertices with f >= 4: 850 (17.9%)
+    3 vertices with f >= 4: 405 (8.5%)
+    4 vertices with f >= 4: 440 (9.3%)
+    5 vertices with f >= 4: 213 (4.5%)
+    6 vertices with f >= 4: 182 (3.8%)
+    7 vertices with f >= 4: 43 (0.9%)
+
+  n=8, threshold=5:
+    0 vertices with f >= 5: 671 (33.9%)
+    1 vertices with f >= 5: 457 (23.1%)
+    2 vertices with f >= 5: 255 (12.9%)
+    3 vertices with f >= 5: 159 (8.0%)
+    4 vertices with f >= 5: 147 (7.4%)
+    5 vertices with f >= 5: 120 (6.1%)
+    6 vertices with f >= 5: 77 (3.9%)
+    7 vertices with f >= 5: 68 (3.4%)
+    8 vertices with f >= 5: 23 (1.2%)

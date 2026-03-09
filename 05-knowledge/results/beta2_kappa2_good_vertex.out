@@ -1,0 +1,47 @@
+======================================================================
+SC kappa>=2 GOOD VERTEX ANALYSIS
+======================================================================
+
+n=6: 1680 SC kappa>=2 b1=0 tournaments
+Bad count distribution: {3: 1440, 0: 240}
+All have score (2,2,2,3,3,3)
+
+Analyzing the 3-bad-vertex case:
+
+  (bad_scores, good_scores) -> count:
+    bad=(2, 3, 3), good=(2, 2, 3): 720
+    bad=(2, 2, 3), good=(2, 3, 3): 720
+
+  (bad_c3, good_c3) -> count:
+    bad=(3, 4, 4), good=(4, 4, 5): 1440
+
+  Score-based bad characterization:
+  (bad with score 2, bad with score 3): count
+    (1, 2): 720
+    (2, 1): 720
+
+======================================================================
+UNIQUE DOMINATION DIRECTION IN TRANSITIVE BAD TRIPLE
+======================================================================
+
+  (top(above,below), mid(above,below), bot(above,below)): count
+    top=(1, 0), mid=(0, 0), bot=(0, 1): 1440
+
+======================================================================
+BAD TRIPLE = vertices of a specific 3-cycle?
+======================================================================
+  Bad triple forms a 3-cycle: 0/1440
+  Bad triple is transitive: 1440/1440
+
+======================================================================
+DOMINATION CHAIN STRUCTURE
+======================================================================
+  Domination chain exists: 1440/1440
+  No chain: 0
+
+======================================================================
+NUMBER OF CONNECTED COMPONENTS vs BAD COUNT
+======================================================================
+  1 components:
+    0 bad: 240
+    3 bad: 1440
