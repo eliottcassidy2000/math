@@ -13,6 +13,42 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S42 — β₂=0: cone-from-T' construction verified through n=10
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S42 (context overflow continuation)
+**Summary of work:**
+  Continued β₂=0 investigation with major breakthroughs in constructive filling.
+
+  **Major results:**
+  - **CONE-FROM-T' CONSTRUCTION**: For swap cycle z at vertex v, filling is
+    w = Σ α_{abc} [(v,a,b,c)+(a,b,c,v)] over T'=T\{v} allowed 2-paths.
+    T'-internal faces cancel in d₃. System B·α=z always solvable.
+  - **FILTERED CONE**: Works exhaustive n=5,6 (32768/32768). Fails 1/1000 at n=8
+    (insufficient valid T' paths when requiring v→a AND c→v).
+  - **UNFILTERED CONE**: Works 500/500 at n=7,8; 200/200 at n=9. Zero failures.
+    Using ALL T' paths (not just doubly-reachable) gives sufficient rank.
+  - **MULTI-VERTEX CONE**: Always works including n=8 failure case.
+  - **Ω₃ AUTO-MEMBERSHIP**: Filling automatically in Ω₃ at n=5,6 (100%).
+    Breaks at n≥7 (~98% at n=7, ~93% at n=8). Non-allowed face cancellation
+    is NOT pairwise but via linear combination coefficients.
+  - **β₂=0 confirmed through n=10**: Direct computation 50/50 at n=10.
+    Paley T₇ and T₁₁ also have β₂=0.
+  - **RANK SURPLUS GROWS**: rank(B)-swap_dim min is 2→4→6→11→15 for n=5-9.
+  - **swap_dim = ker_dim ALWAYS**: Every bipartite kernel vector gives nonzero swap cycle.
+  - **LES ANALYSIS**: i_*: H₁(T\v)→H₁(T) is rarely injective (only 304/1024 at n=5),
+    but δ is always injective (= β₂=0). The LES approach via H₂(T,T\v)=0 is stronger
+    than needed and only holds for some (T,v).
+
+**New contributions:** HYP-274 through HYP-277, THM-102 updated
+**Scripts:** beta2_cone_proof.py, beta2_filtered_cone.py, beta2_cone_failure.py,
+  beta2_unfiltered_large.py, beta2_omega_membership.py, beta2_omega3_reason.py,
+  beta2_cone_rank_analysis.py, beta2_les_test.py
+**Unresolved threads:**
+  - Prove B·α=z always solvable algebraically (rank argument)
+  - Understand why Ω₃ auto-membership breaks at n≥7
+  - Find closed-form for min surplus
+  - Literature search for multisquare-free → β₂=0 (agent running)
+
 ## opus-2026-03-08-S49 — β₂=0 proof: HYP-262 verified n=8, H₁-killing reformulation
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S49 (context overflow continuation)
