@@ -1,0 +1,54 @@
+======================================================================
+FREE-MULTIDOM EDGE LEMMA: Does the condition always hold?
+======================================================================
+
+n=5 (exhaustive): 720 with b1=0
+  free-multidom edge EXISTS: 0 (0.0%)
+  free-multidom edge ABSENT: 600
+    of those, good vertex exists: 600
+    of those, ALL bad (counterex): 0
+
+n=6 (exhaustive): 27968 with b1=0
+  free-multidom edge EXISTS: 5760 (20.6%)
+  free-multidom edge ABSENT: 21488
+    of those, good vertex exists: 21488
+    of those, ALL bad (counterex): 0
+
+n=7 (sampled(10000)): 9501 with b1=0
+  free-multidom edge EXISTS: 4734 (49.8%)
+  free-multidom edge ABSENT: 4741
+    of those, good vertex exists: 4741
+    of those, ALL bad (counterex): 0
+
+n=8 (sampled(5000)): 4938 with b1=0
+  free-multidom edge EXISTS: 3480 (70.5%)
+  free-multidom edge ABSENT: 1458
+    of those, good vertex exists: 1458
+    of those, ALL bad (counterex): 0
+
+n=9 (sampled(2000)): 1991 with b1=0
+  free-multidom edge EXISTS: 1560 (78.4%)
+  free-multidom edge ABSENT: 431
+    of those, good vertex exists: 431
+    of those, ALL bad (counterex): 0
+
+n=10 (sampled(1000)): 999 with b1=0
+  free-multidom edge EXISTS: 841 (84.2%)
+  free-multidom edge ABSENT: 158
+    of those, good vertex exists: 158
+    of those, ALL bad (counterex): 0
+
+======================================================================
+PART 2: Structure when no free-multidom edge
+--------------------------------------------------
+
+n=6 (exhaustive): No free-multidom edge cases
+  (free, unique_dom, multi_dom, udom_adj_free) distribution:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_free_multidom_edge.py", line 387, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_free_multidom_edge.py", line 254, in main
+    for k, v in sorted(structures.items()):
+                ~~~~~~^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'tuple'

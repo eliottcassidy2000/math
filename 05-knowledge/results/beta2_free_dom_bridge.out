@@ -1,0 +1,93 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_free_dom_bridge.py:59: SyntaxWarning: invalid escape sequence '\{'
+  freed(v) spans V\{v} and is connected.
+======================================================================
+FREE-DOM BRIDGE: Precise characterization via freed set
+======================================================================
+
+PART 1: Verification of freed-set characterization
+--------------------------------------------------
+n=5 (exhaustive): 3000 match, 0 mismatch
+n=6 (exhaustive): 163488 match, 0 mismatch
+  MISMATCH at n=7: v=0, predicted=True, actual=False
+    freed=5 cycles, spans=6, conn=True
+  MISMATCH at n=7: v=1, predicted=True, actual=False
+    freed=4 cycles, spans=6, conn=True
+  MISMATCH at n=7: v=5, predicted=True, actual=False
+    freed=4 cycles, spans=6, conn=True
+n=7 (sampled(5000)): 30187 match, 3035 mismatch
+
+======================================================================
+PART 2: Free cycle graph properties
+--------------------------------------------------
+
+n=6 (exhaustive):
+  all_v_F_ok=False: 27248
+  bad=0: 7760
+  bad=1: 7968
+  bad=2: 7200
+  bad=3: 4320
+  f_connected=False: 11408
+  f_connected=True: 15840
+  f_span=0: 11168
+  f_span=3: 4320
+  f_span=4: 2880
+  f_span=5: 5760
+  f_span=6: 3120
+
+n=7 (sampled(5000)):
+  all_v_F_ok=False: 4711
+  all_v_F_ok=True: 18
+  bad=0: 2432
+  bad=1: 1269
+  bad=2: 736
+  bad=3: 292
+  f_connected=False: 1746
+  f_connected=True: 2983
+  f_span=0: 1440
+  f_span=3: 611
+  f_span=4: 619
+  f_span=5: 609
+  f_span=6: 642
+  f_span=7: 808
+
+n=8 (sampled(2000)):
+  all_v_F_ok=False: 1964
+  all_v_F_ok=True: 11
+  bad=0: 1544
+  bad=1: 298
+  bad=2: 102
+  bad=3: 31
+  f_connected=False: 737
+  f_connected=True: 1238
+  f_span=0: 441
+  f_span=3: 247
+  f_span=4: 202
+  f_span=5: 242
+  f_span=6: 281
+  f_span=7: 244
+  f_span=8: 318
+
+======================================================================
+PART 3: Does F\v spanning+connected imply v is bad?
+--------------------------------------------------
+  n=5: F\v spans+connected => v bad: 120 yes, 0 no
+  n=6: F\v spans+connected => v bad: 14400 yes, 0 no
+  n=7: F\v spans+connected => v bad: 1975 yes, 1442 no
+
+======================================================================
+PART 4: v bad implies F\v spans n-1?
+--------------------------------------------------
+  n=5: v bad => F\v spans n-1: 120 yes, 720 no
+    NOT TRUE: bad vertex can exist without F\v spanning
+  n=6: v bad => F\v spans n-1: 14400 yes, 20928 no
+    NOT TRUE: bad vertex can exist without F\v spanning
+  n=7: v bad => F\v spans n-1: 1985 yes, 1685 no
+    NOT TRUE: bad vertex can exist without F\v spanning
+
+======================================================================
+PART 5: Freed-set counting at n=6
+--------------------------------------------------
+  Free cycle count distribution: {0: 11168, 1: 4320, 2: 3120, 3: 4320, 4: 2880, 5: 1440}
+  Unique-dom per vertex distribution: {0: 119520, 3: 1920, 1: 24480, 4: 1440, 2: 15840, 5: 288}
+  |freed(v)| for BAD v: {3: 17760, 4: 14400, 5: 3168}
+  |freed(v)| for GOOD v: {0: 82080, 1: 23040, 2: 23040}

@@ -1,0 +1,47 @@
+======================================================================
+ISOLATION ANALYSIS: freed set must be isolated from remaining dom
+======================================================================
+
+PART 1: Verify bad = freed set isolated
+--------------------------------------------------
+n=5 (exhaustive): 3000 match, 0 mismatch
+n=6 (exhaustive): 163488 match, 0 mismatch
+n=7 (sampled(5000)): 33222 match, 0 mismatch
+
+======================================================================
+PART 2: Isolation edge count (freed-to-dom edges in restricted graph)
+--------------------------------------------------
+
+n=6 (exhaustive):
+  BAD vertices - isolation edges: {0: 35328}
+  GOOD vertices - isolation edges: {0: 82080, 2: 46080}
+  Max isolation edges for BAD: 0
+  Min isolation edges > 0 for GOOD: 2
+
+n=7 (sampled(5000)):
+  BAD vertices - isolation edges: {0: 3617}
+  GOOD vertices - isolation edges: {0: 12500, 3: 6220, 4: 6109, 5: 4407, 6: 250}
+  Max isolation edges for BAD: 0
+  Min isolation edges > 0 for GOOD: 3
+
+n=8 (sampled(2000)):
+  BAD vertices - isolation edges: {0: 595}
+  GOOD vertices - isolation edges: {0: 4405, 4: 2380, 6: 3103, 8: 3795, 10: 754, 12: 674, 14: 94}
+  Max isolation edges for BAD: 0
+  Min isolation edges > 0 for GOOD: 4
+
+======================================================================
+PART 3: Selection rule: max isolation edges
+--------------------------------------------------
+  n=5 (exhaustive): 312/480 (65.0%)
+  n=6 (exhaustive): 18880/19488 (96.9%)
+  n=7 (sampled(10000)): 4685/4723 (99.2%)
+  n=8 (sampled(5000)): 1158/1161 (99.7%)
+  n=9 (sampled(2000)): 140/140 (100.0%) ***
+
+======================================================================
+PART 4: Combined selection rule
+--------------------------------------------------
+n=7: max_iso=4626/4656 (99.4%), combo=4656/4656 (100.0%)
+n=8: max_iso=1147/1151 (99.7%), combo=1151/1151 (100.0%)
+n=9: max_iso=153/154 (99.4%), combo=154/154 (100.0%)
