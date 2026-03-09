@@ -1,0 +1,40 @@
+======================================================================
+BENCHMARK: Old SVD vs New Mod-p Path Homology Computation
+======================================================================
+
+--- Part 1: Correctness check at n=6 (all 32768 tournaments) ---
+  5000/32768 checked...
+  10000/32768 checked...
+  15000/32768 checked...
+  20000/32768 checked...
+  25000/32768 checked...
+  30000/32768 checked...
+  Checked all 32768: beta_3 mismatches=0, beta_1 mismatches=0
+  Total time: 195.7s
+
+--- Part 2: Speed comparison at n=7 (200 random tournaments) ---
+  beta_3 old SVD:    3.23s (200 tours)
+  beta_3 pure mod-p: 7.31s (200 tours)
+  beta_3 hybrid:     1.80s (200 tours)
+  Speedup pure:   0.44x
+  Speedup hybrid: 1.79x
+  Matches pure: 200/200, hybrid: 200/200
+
+  beta_1 old SVD:   0.43s (200 tours)
+  beta_1 new TT:    0.07s (200 tours)
+  Speedup: 6.42x
+  Matches: 200/200
+
+--- Part 3: full_chain_complex timing at n=7 ---
+  full_chain_complex (numpy SVD): 0.93s for 50 tours
+  Per tournament: 19ms
+  All bettis mod-p:               6.31s for 50 tours
+  Per tournament: 126ms
+
+--- Part 4: Per-tournament time scaling ---
+  n=5: hybrid=0.3ms, SVD=0.3ms, ratio=1.08x (100 samples)
+  n=6: hybrid=1.7ms, SVD=2.0ms, ratio=1.14x (100 samples)
+  n=7: hybrid=9.3ms, SVD=16.9ms, ratio=1.82x (100 samples)
+  n=8: hybrid=46.5ms, SVD=175.2ms, ratio=3.77x (20 samples)
+
+DONE.

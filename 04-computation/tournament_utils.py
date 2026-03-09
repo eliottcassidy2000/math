@@ -250,14 +250,265 @@ def _gauss_rank_modp(M, nrows, ncols, prime):
     return rank
 
 
+def _gauss_rank_np(M_np, prime):
+    """Gaussian elimination mod prime using numpy int64 arrays. Returns rank.
+    M_np: numpy int64 array (modified in-place). Much faster than list version."""
+    nrows, ncols = M_np.shape
+    rank = 0
+    for col in range(ncols):
+        # Find pivot in column
+        nonzero = np.where(M_np[rank:, col] != 0)[0]
+        if len(nonzero) == 0:
+            continue
+        pivot = nonzero[0] + rank
+        # Swap rows
+        if pivot != rank:
+            M_np[[rank, pivot]] = M_np[[pivot, rank]]
+        # Normalize pivot row
+        inv = pow(int(M_np[rank, col]), prime - 2, prime)
+        M_np[rank] = M_np[rank] * inv % prime
+        # Eliminate all other rows (vectorized)
+        factors = M_np[:, col].copy()
+        factors[rank] = 0
+        nonzero_rows = np.where(factors != 0)[0]
+        if len(nonzero_rows) > 0:
+            # Subtract factor * pivot_row from each nonzero row
+            M_np[nonzero_rows] = (M_np[nonzero_rows] - np.outer(factors[nonzero_rows], M_np[rank])) % prime
+        rank += 1
+    return rank
+
+
 def rank_modp(matrix_rows, nrows, ncols, prime=RANK_PRIME):
     """Compute rank of integer matrix mod prime."""
     M = [[(x % prime) for x in row] for row in matrix_rows]
     return _gauss_rank_modp(M, nrows, ncols, prime)
 
 
+def _gauss_nullbasis_modp(M, nrows, ncols, prime):
+    """Gaussian elimination mod prime. Returns (rank, null_basis).
+    null_basis: list of lists, each of length ncols. Length = ncols - rank.
+    M is list of lists (modified in-place)."""
+    rank = 0
+    pivot_cols = []
+    for col in range(ncols):
+        pivot = -1
+        for row in range(rank, nrows):
+            if M[row][col] % prime != 0:
+                pivot = row
+                break
+        if pivot == -1:
+            continue
+        pivot_cols.append(col)
+        M[rank], M[pivot] = M[pivot], M[rank]
+        inv = pow(M[rank][col], prime - 2, prime)
+        for j in range(ncols):
+            M[rank][j] = (M[rank][j] * inv) % prime
+        for row in range(nrows):
+            if row != rank and M[row][col] % prime != 0:
+                factor = M[row][col]
+                for j in range(ncols):
+                    M[row][j] = (M[row][j] - factor * M[rank][j]) % prime
+        rank += 1
+
+    # Build null space basis from RREF
+    free_cols = [c for c in range(ncols) if c not in pivot_cols]
+    pivot_set = set(pivot_cols)
+    null_basis = []
+    for fc in free_cols:
+        vec = [0] * ncols
+        vec[fc] = 1
+        for r, pc in enumerate(pivot_cols):
+            # Row r has pivot at column pc, so x[pc] = -sum(M[r][j]*x[j]) for free j
+            vec[pc] = (prime - M[r][fc]) % prime
+        null_basis.append(vec)
+    return rank, null_basis
+
+
+def nullbasis_modp(matrix_rows, nrows, ncols, prime=RANK_PRIME):
+    """Compute null space basis of integer matrix mod prime.
+    Returns (rank, null_basis) where null_basis is list of lists."""
+    M = [[(x % prime) for x in row] for row in matrix_rows]
+    return _gauss_nullbasis_modp(M, nrows, ncols, prime)
+
+
 # ============================================================
-# Betti number computation (fast version using mod-p rank)
+# Fully mod-p Betti number computation (no numpy SVD)
+# ============================================================
+
+def _build_constraint_matrix(ap, p, prime):
+    """Build the non-allowed constraint matrix P for Omega_p.
+    Returns (P_rows, nrows, ncols) where P_rows is list of lists mod prime."""
+    paths = ap.get(p, [])
+    if not paths:
+        return None, 0, 0
+    if p == 0:
+        return None, 0, len(paths)  # No constraints, Omega_0 = all vertices
+
+    apm1_set = set(ap.get(p-1, []))
+    non_allowed = {}
+    na_count = 0
+    for j, path in enumerate(paths):
+        for sign, face in boundary_faces(path):
+            if len(set(face)) == len(face) and face not in apm1_set:
+                if face not in non_allowed:
+                    non_allowed[face] = na_count
+                    na_count += 1
+
+    if na_count == 0:
+        return None, 0, len(paths)  # No constraints
+
+    P = [[0] * len(paths) for _ in range(na_count)]
+    for j, path in enumerate(paths):
+        for sign, face in boundary_faces(path):
+            if face in non_allowed:
+                row = non_allowed[face]
+                P[row][j] = (P[row][j] + sign) % prime
+    return P, na_count, len(paths)
+
+
+def _build_boundary_matrix(ap, p, prime):
+    """Build boundary matrix d_p: A_p -> A_{p-1} as list of lists mod prime.
+    Returns (bd_rows, nrows, ncols)."""
+    paths_p = ap.get(p, [])
+    paths_pm1 = ap.get(p-1, [])
+    if not paths_p or not paths_pm1:
+        return None, 0, 0
+
+    idx_prev = {path: i for i, path in enumerate(paths_pm1)}
+    nrows = len(paths_pm1)
+    ncols = len(paths_p)
+    bd = [[0] * ncols for _ in range(nrows)]
+    for j, path in enumerate(paths_p):
+        for sign, face in boundary_faces(path):
+            if face in idx_prev:
+                bd[idx_prev[face]][j] = (bd[idx_prev[face]][j] + sign) % prime
+    return bd, nrows, ncols
+
+
+def _matmul_modp(A_mat, B_basis, nrows, ncols, nbasis_vecs, prime):
+    """Compute A_mat @ B_basis^T mod prime (pure Python fallback).
+    A_mat: nrows x ncols (list of lists).
+    B_basis: list of nbasis_vecs vectors, each length ncols.
+    Returns: nrows x nbasis_vecs matrix (list of lists)."""
+    result = [[0] * nbasis_vecs for _ in range(nrows)]
+    for i in range(nrows):
+        for k in range(nbasis_vecs):
+            s = 0
+            for j in range(ncols):
+                s += A_mat[i][j] * B_basis[k][j]
+            result[i][k] = s % prime
+    return result
+
+
+def compute_betti_modp(A, n, target_p, max_p=None, prime=RANK_PRIME):
+    """Compute beta_{target_p} using FULLY mod-p arithmetic. No numpy SVD.
+
+    Key fact: d_p maps Omega_p into Omega_{p-1} (GLMY theorem).
+    So rank(d_p|_{Omega_p}) = rank(bd_p @ N_p) where N_p = null basis of constraints.
+    No projection needed.
+
+    beta_p = ker(d_p) - rank(d_{p+1})
+           = (dim(Omega_p) - rank(bd_p @ N_p)) - rank(bd_{p+1} @ N_{p+1})
+    """
+    if max_p is None:
+        max_p = target_p + 2
+    max_p = min(max_p, n - 1)
+
+    ap = enumerate_all_allowed(A, n, max_p)
+
+    def get_omega(p):
+        """Returns (dim, null_basis_or_None)."""
+        P, na_rows, na_cols = _build_constraint_matrix(ap, p, prime)
+        if P is None:
+            return len(ap.get(p, [])), None  # Omega = full space
+        rank_P, nbasis = _gauss_nullbasis_modp(P, na_rows, na_cols, prime)
+        dim = na_cols - rank_P
+        return dim, (nbasis if dim > 0 else None)
+
+    def boundary_rank(p, omega_dim, omega_basis):
+        """Compute rank of d_p restricted to Omega_p."""
+        if p < 1 or omega_dim == 0 or not ap.get(p - 1, []):
+            return 0
+        bd, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
+        if bd is None:
+            return 0
+        if omega_basis is not None:
+            composed = _matmul_modp(bd, omega_basis, bd_nrows, bd_ncols, omega_dim, prime)
+            return _gauss_rank_modp(composed, bd_nrows, omega_dim, prime)
+        else:
+            return _gauss_rank_modp(bd, bd_nrows, bd_ncols, prime)
+
+    omega_p_dim, omega_p_basis = get_omega(target_p)
+    if omega_p_dim == 0:
+        return 0
+
+    rank_dp = boundary_rank(target_p, omega_p_dim, omega_p_basis)
+    ker_dp = omega_p_dim - rank_dp
+    if ker_dp == 0:
+        return 0
+
+    omega_p1_dim, omega_p1_basis = get_omega(target_p + 1)
+    rank_dp1 = boundary_rank(target_p + 1, omega_p1_dim, omega_p1_basis)
+
+    return ker_dp - rank_dp1
+
+
+def compute_betti_hybrid(A, n, target_p, max_p=None, prime=RANK_PRIME):
+    """Compute beta_{target_p} using hybrid approach:
+    numpy int64 for matrix multiply + vectorized Gauss elimination.
+    Best of both worlds: numpy speed + integer exactness.
+
+    beta_p = (dim(Omega_p) - rank(bd_p @ N_p)) - rank(bd_{p+1} @ N_{p+1})
+    """
+    if max_p is None:
+        max_p = target_p + 2
+    max_p = min(max_p, n - 1)
+
+    ap = enumerate_all_allowed(A, n, max_p)
+
+    def get_omega_np(p):
+        """Returns (dim, null_basis_np_or_None). Basis as numpy int64 array."""
+        P, na_rows, na_cols = _build_constraint_matrix(ap, p, prime)
+        if P is None:
+            return len(ap.get(p, [])), None
+        rank_P, nbasis = _gauss_nullbasis_modp(P, na_rows, na_cols, prime)
+        dim = na_cols - rank_P
+        if dim > 0 and nbasis:
+            return dim, np.array(nbasis, dtype=np.int64)
+        return dim, None
+
+    def boundary_rank_np(p, omega_dim, omega_basis_np):
+        """Compute rank of d_p restricted to Omega_p using numpy."""
+        if p < 1 or omega_dim == 0 or not ap.get(p - 1, []):
+            return 0
+        bd_list, bd_nrows, bd_ncols = _build_boundary_matrix(ap, p, prime)
+        if bd_list is None:
+            return 0
+        bd_np = np.array(bd_list, dtype=np.int64)
+        if omega_basis_np is not None:
+            # bd_np @ omega_basis_np.T, then mod prime
+            composed = bd_np @ omega_basis_np.T % prime
+            return _gauss_rank_np(composed, prime)
+        else:
+            return _gauss_rank_np(bd_np % prime, prime)
+
+    omega_p_dim, omega_p_basis = get_omega_np(target_p)
+    if omega_p_dim == 0:
+        return 0
+
+    rank_dp = boundary_rank_np(target_p, omega_p_dim, omega_p_basis)
+    ker_dp = omega_p_dim - rank_dp
+    if ker_dp == 0:
+        return 0
+
+    omega_p1_dim, omega_p1_basis = get_omega_np(target_p + 1)
+    rank_dp1 = boundary_rank_np(target_p + 1, omega_p1_dim, omega_p1_basis)
+
+    return ker_dp - rank_dp1
+
+
+# ============================================================
+# Betti number computation (numpy SVD version — original)
 # ============================================================
 
 def compute_betti_fast(A, n, target_p, max_p=None):
@@ -395,8 +646,13 @@ def compute_beta1_fast(A, n):
 
 
 def compute_beta3_fast(A, n):
-    """Compute beta_3 using the standard chain complex."""
+    """Compute beta_3 using the standard chain complex (numpy SVD fallback)."""
     return compute_betti_fast(A, n, 3, max_p=5)
+
+
+def compute_beta3_hybrid(A, n):
+    """Compute beta_3 using hybrid numpy-int64 + mod-p Gauss (fastest)."""
+    return compute_betti_hybrid(A, n, 3, max_p=5)
 
 
 # ============================================================
