@@ -1,0 +1,19 @@
+======================================================================
+beta_1, beta_3 at n=8: mutual exclusivity check
+======================================================================
+  ... 50 trials done
+  ... 100 trials done
+  ... 150 trials done
+  ... 200 trials done
+  ... 250 trials done
+  ... 300 trials done
+
+Total: 300
+beta_1 > 0: 2/300 (0.7%)
+beta_3 > 0: 53/300 (17.7%)
+beta_1 AND beta_3 > 0: 0/300
+max beta_1: 1
+max beta_3: 1
+
+beta_1 distribution: {np.int64(0): 298, np.int64(1): 2}
+beta_3 distribution: {np.int64(0): 247, np.int64(1): 53}

@@ -155,7 +155,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-295 | β₁ and β₃ mutually exclusive at n=6 AND n=7 | CONFIRMED exhaustive n=6 (0/32768), sampled n=7 (0/500). Also β₁,β₄ and β₃,β₄ mutually exclusive at n=7. Only 3 Betti vectors at n=7: [1,0,...,0], [1,1,0,...,0], [1,0,0,1,0,...,0] (plus Paley [1,0,0,0,0,0,6]) | betti_n7_full.py |
 | HYP-296 | chi ∈ {0,1} for non-Paley tournaments at n ≤ 7 | CONFIRMED: n=5,6 exhaustive, n=7 sampled (500). chi=0 iff β₁=1 or β₃=1. Paley T_7: chi=7=n (the exception). n=8: chi ∈ {1,2} sampled (some H=661 have chi=2 from β₄=1) | betti_n7_full.py, beta5_n8_multi.py |
 | HYP-297 | β₃>0 does NOT imply H-max within score class at n=7 | CONFIRMED: only 5.8% (22/378) of β₃>0 at n=7 are at score-class max H. β₃>0 spreads across multiple H values. The n=6 correspondence (HYP-291) is anomalous. | beta3_n7_hmax.py |
-| HYP-298 | Three canonical Betti vectors at n=6,7: trivial [1,0,...], hole [1,1,0,...], high-β₃ [1,0,0,1,0,...] | CONFIRMED: n=6 has 84.4%, 14.6%, 1.0%. n=7 has 87.8%, 5.4%, 6.8%. Plus Paley exceptional vector. β₂ always 0 (THM-108/109). | betti_n7_full.py |
+| HYP-298 | Three canonical Betti vectors at n=6,7,8: trivial [1,0,...], hole [1,1,0,...], high-β₃ [1,0,0,1,0,...] | CONFIRMED: n=6 (84.4/14.6/1.0%), n=7 (87.8/5.4/6.8%), n=8 (~82/0.7/17.7%). β₁ dominance flips to β₃ dominance at n=8. β₂=0 always. | betti_n7_full.py, beta1_beta3_n8.py |
+| HYP-299 | β₁ * β₃ = 0 for ALL tournaments (mutual exclusivity) | CONFIRMED: n=6 (0/32768 exhaustive), n=7 (0/500 sampled), n=8 (0/300 sampled). β₁ and β₃ never both positive. Equivalently chi = 1 - β₁ - β₃ >= 0 for generic tournaments. | beta1_beta3_exclusion.py, beta1_beta3_n8.py |
+| HYP-300 | β₁, β₃ each bounded by 1 for all tournaments | CONFIRMED: n=5-8 sampled/exhaustive. max(β₁)=1, max(β₃)=1 always. β₄ can be > 1 (up to 6 for Paley T₇, up to 5 at n=8). | betti_n7_full.py, beta1_beta3_n8.py |
+| HYP-301 | β₁>0 requires strong connectivity | CONFIRMED exhaustive n=6: 100% of β₁>0 are SC. β₃>0 does NOT require SC (75% SC at n=6). β₁ detects "1-holes" only in SC tournaments. | beta1_beta3_exclusion.py |
 
 ---
 

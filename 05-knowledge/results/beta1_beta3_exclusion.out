@@ -1,0 +1,77 @@
+======================================================================
+Structural characterization of beta_1>0 and beta_3>0 at n=6
+======================================================================
+
+Total: 32768
+beta_1>0: 4800 (14.6%)
+beta_3>0: 320 (1.0%)
+trivial: 27648 (84.4%)
+
+--- Strong connectivity ---
+beta_1>0 SC: 4800/4800 (100.0%)
+beta_3>0 SC: 240/320 (75.0%)
+trivial SC: 17280/27648 (62.5%)
+
+--- Vertex connectivity (kappa) ---
+beta_1>0: kappa dist = {1: 3840, 2: 960}
+beta_3>0: kappa dist = {0: 80, 2: 240}
+trivial: kappa dist = {0: 10368, 1: 15840, 2: 1440}
+
+--- 3-cycle counts ---
+beta_1>0: c3 range [4, 8], mean=6.1
+beta_3>0: c3 range [2, 8], mean=6.5
+trivial: c3 range [0, 8], mean=4.8
+
+--- Score distributions ---
+
+beta_1>0 score classes:
+  (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): 720
+  (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): 240
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)): 240
+  (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)): 2160
+  (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 240
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)): 240
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 960
+
+beta_3>0 score classes:
+  (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)): 80
+  (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 240
+
+--- Omega dims ---
+
+beta_1>0 Omega dim patterns (top 5):
+  [6, 15, 21, 20, 10, 2]: 1440
+  [6, 15, 19, 15, 6, 1]: 720
+  [6, 15, 18, 13, 5, 1]: 720
+  [6, 15, 22, 28, 22, 7]: 720
+  [6, 15, 18, 12, 3, 0]: 480
+
+beta_3>0 Omega dim patterns (top 5):
+  [6, 15, 21, 18, 9, 3]: 240
+  [6, 15, 18, 9, 0, 0]: 80
+
+======================================================================
+Key structural comparison: beta_1 vs beta_3
+======================================================================
+
+beta_1>0 examples:
+  bits=16: scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)), c3=4, kappa=1
+    betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[6, 15, 19, 15, 6, 1]
+    directed 3-cycles: 4
+  bits=24: scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), c3=6, kappa=1
+    betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[6, 15, 21, 20, 10, 2]
+    directed 3-cycles: 6
+  bits=28: scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), c3=6, kappa=1
+    betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[6, 15, 21, 20, 10, 2]
+    directed 3-cycles: 6
+
+beta_3>0 examples:
+  bits=87: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), c3=2, kappa=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega=[6, 15, 18, 9, 0, 0]
+    directed 3-cycles: 2
+  bits=356: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), c3=2, kappa=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega=[6, 15, 18, 9, 0, 0]
+    directed 3-cycles: 2
+  bits=567: scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)), c3=2, kappa=0
+    betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0], omega=[6, 15, 18, 9, 0, 0]
+    directed 3-cycles: 2
