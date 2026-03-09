@@ -199,7 +199,7 @@ def main():
         all_II_ok = all_II_ok and II_ok
 
     print(f"\n  CLAIM I (i_*-injectivity): {'HOLDS' if all_I_ok else 'VIOLATED'}")
-    print(f"  CLAIM II (H_3^rel ≤ 1):   {'HOLDS' if all_II_ok else 'VIOLATED'}")
+    print(f"  CLAIM II (H_3^rel <= 1):   {'HOLDS' if all_II_ok else 'VIOLATED'}")
 
     # Part 2: Search for more coexistence cases and test them
     print(f"\n--- Part 2: Search for more coexistence + test ---")
@@ -230,7 +230,7 @@ def main():
     print(f"\n{'='*70}")
     print(f"FINAL VERDICT:")
     print(f"  CLAIM I (i_*-injectivity): {'HOLDS' if all_I_ok else 'VIOLATED'}")
-    print(f"  CLAIM II (H_3^rel ≤ 1):   {'HOLDS' if all_II_ok else 'VIOLATED'}")
+    print(f"  CLAIM II (H_3^rel <= 1):   {'HOLDS' if all_II_ok else 'VIOLATED'}")
     print(f"{'='*70}")
     print("\nDONE.")
 

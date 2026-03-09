@@ -78,8 +78,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-377 | Type B cokernel |coefficient| pattern is UNIVERSAL (single pattern for all 240 tours) | Exactly ONE sorted |coeff| pattern across all Type B. 36 nonzero / 63 total. Values 1/3, 2/3, 1 | kind-pasteur-S47 |
 | HYP-378 | Subtournament c3 count determines # paths per vertex set in cokernel: c3=1 → 2 nonzero, c3=2 → 3 nonzero | 100%: 720 instances of c3=1 with 2nz, 2160 of c3=2 with 3nz, at n=6 | kind-pasteur-S47 |
 | HYP-379 | Hybrid numpy-int64 + mod-p Gauss gives 3.8x speedup at n=8 for beta_3 | Benchmark: SVD=175ms, hybrid=46.5ms. beta_1 TT-span 6.4x faster. | kind-pasteur-S47 |
-| HYP-380 | i_* INJECTIVE when b3(T)=1 AND b3(T\v)=1: rank(i_*)=1, H_3^rel=0 | n=7: 71/71 cases. n=8: 20/20 tours. EXCEPTION: Paley T_7 has b3=0, b3_Tv=1, rank(i_*)=0 (opus-S53). Applies only when b3(T)>=1 | kind-pasteur-S47, corrected opus-S53 |
-| HYP-381 | LES dichotomy: b3(T\v)=0 => (rank=0,H3rel=1); b3(T\v)=1 => (rank=1,H3rel=0) | PERFECT at n=6 (exhaustive), n=7 (100 tours, 700 pairs), n=8 (20 tours). Combined: beta_3(T)=1 for ANY vertex choice | kind-pasteur-S47 |
+| HYP-380 | i_* INJECTIVE when b3(T)=1 AND b3(T\v)=1: rank(i_*)=1, H_3^rel=0 | **REFUTED at n=8** (kind-pasteur-S48): rank(i_*)=0 found even with b4=0. Trials 613,627,877/5000 (seed 12345). Holds n<=7 only. NOT needed for beta_3<=1 proof (good vertex + Claim II suffices) | kind-pasteur-S47, REFUTED kind-pasteur-S48 |
+| HYP-381 | LES dichotomy: b3(T\v)=0 => (rank=0,H3rel=1); b3(T\v)=1 => (rank=1,H3rel=0) | **PARTIALLY REFUTED at n=8**: bad vertex half fails (rank=0 possible). Good vertex half STILL HOLDS. n<=7: perfect. n=8: good vertex part still works | kind-pasteur-S47, updated kind-pasteur-S48 |
 | HYP-382 | Relative dims at n=6 fully determined by type: Type A=(1,5,9,6,0,0), Type B=(1,5,12,14,8,3) | Exhaustive: 480 Type A pairs, 1440 Type B pairs. Rigid structure | kind-pasteur-S47 |
 | HYP-383 | Bad vertices have δ(β₃)=0: adding v adds EQUAL kernel and im(d_4) | n=7: 71/71 bad vertices. Perfect saturation — T\v cycle orthogonal to new v-paths content | kind-pasteur-S47 |
 | HYP-384 | Restriction res: Z₁(T)→⊕_v H₁(T\v) is SURJECTIVE (coker=0) for all β₁=0 tournaments | n=5 exhaustive (480/480), n=6 (85/85). rank(res)=#bad exactly. Each hidden cycle is detected by restriction. | beta2_global_les_test.py |
@@ -97,14 +97,16 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-392 | Paley T_7 is the ONLY good-vertex-free tournament at n=7 (exhaustive) | 240/2097152 = all labelings of Paley. |Aut(T_7)|=21, 7!/21=240. All have beta_3=0. | opus-S53 |
 | HYP-393 | beta_3 ≤ 1 at n=7 EXHAUSTIVE (2,097,152 tournaments) | Case 1: 2,096,912 with good vertex → LES gives ≤1. Case 2: 240 Paley → beta_3=0 directly | opus-S53 |
 | HYP-394 | CONSECUTIVE SEESAW: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments | **REFUTED at n=8** (kind-pasteur-S48): 3/2000 have beta_3=1 AND beta_4=1, confirmed by BOTH SVD and mod-p. Holds exhaustively n=6, sampled n=7 (3000). FAILS at n=8 (~0.15% rate). The opus proof architecture (LES reduction to H_4^rel=0) still works at n≤7 but not n≥8. | opus-S54, REFUTED kind-pasteur-S48 |
-| HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. Inclusion is quasi-isomorphism. GOOD vertices have H_3^rel=1, all others 0. | opus-S54 |
-| HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | 80 tours n=7: 560/560 (all v). NOT equivalent to i_*-injectivity at n=8 since consecutive seesaw FAILS (HYP-394 refuted). Needs independent verification at n=8. Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54, updated kind-pasteur-S48 |
+| HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. FAILS at n=8: when rank(i_*)=0, H_4^rel=1 and H_3^rel=1. | opus-S54, updated kind-pasteur-S48 |
+| HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | Holds n=7 (560/560). FAILS at n=8: when rank(i_*)=0 and b4=0, H_4^rel=1 from LES. Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54, REFUTED kind-pasteur-S48 |
+| HYP-397 | MINIMAL PROOF: beta_3<=1 via good vertex + Claim II (no i_*-injectivity needed) | For good vertex v: b3(T) <= dim H_3(T,T\v) <= 1. Only needs: (a) good vertex exists, (b) H_3^rel<=1 for good vertices. BOTH verified n<=8. Does NOT need Claims I or III. | kind-pasteur-S48 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|
 | HYP-101 | Per-path identity holds for all n | 3-cycle-only formula misses longer cycles | n=6 | MISTAKE |
-| HYP-394 | Consecutive seesaw: beta_k * beta_{k+1} = 0 for ALL k>=1 | beta_3=1 AND beta_4=1 at n=8, confirmed mod-p exact (3/2000). Holds n≤7 only | n=8 | opus-S54 (stated), kind-pasteur-S48 (refuted) |
+| HYP-380 | i_* injective when b3(T)=b3(T\v)=1 | rank(i_*)=0 at n=8 even with b4=0 (trials 613,627,877). Holds n<=7 only | n=8 | kind-pasteur-S47 (stated), kind-pasteur-S48 (refuted) |
+| HYP-394 | Consecutive seesaw: beta_k * beta_{k+1} = 0 for ALL k>=1 | beta_3=1 AND beta_4=1 at n=8, confirmed mod-p exact (3/2000). Holds n<=7 only | n=8 | opus-S54 (stated), kind-pasteur-S48 (refuted) |
 | HYP-317 | Even Betti numbers vanish: beta_{2k}=0 for k>=1 | beta_4>0 at n=8 (~0.5%), values 1 and 5 | n=8 | kind-pasteur-S45 |
 | HYP-319 | Tournament path homology simplicity: one odd hole max | beta_1+beta_5 coexist at n=8, chi=-1 | n=8 | kind-pasteur-S45 |
 | HYP-321 | chi(T) in {0,1} for all tournaments | chi=-1 at n=8 (beta_1=beta_5=1), chi=2,6 (beta_4>0) | n=8 | kind-pasteur-S45 |
