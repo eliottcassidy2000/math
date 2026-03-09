@@ -34,7 +34,7 @@
 typedef enum {
     SEQ_A000568, SEQ_A000273, SEQ_A000595, SEQ_A000088,
     SEQ_A000666, SEQ_A001174, SEQ_A002785, SEQ_A000171,
-    SEQ_A003086, SEQ_A005639,
+    SEQ_A003086, SEQ_A005639, SEQ_A002499, SEQ_A002854,
 } SeqType;
 
 static SeqType seq_type;
@@ -78,11 +78,13 @@ static long long compute_edges(int *pk, int *pm, int depth) {
     long long gcd_sum = 0;
     long long gcd_sum_even = 0;  /* For A005639: only pairs with ≥1 even cycle */
     long long sum_v = 0, num_v = 0;
+    int has_odd_part = 0;
 
     for (int i = 0; i < depth; i++) {
         int r = parts[pk[i]], mr = pm[i];
         sum_v += (long long)mr * r;
         num_v += mr;
+        if (r % 2 == 1) has_odd_part = 1;
         /* Same-part pairs: C(mr,2) * gcd(r,r) = C(mr,2) * r */
         long long same = (long long)mr * (mr - 1) / 2 * r;
         gcd_sum += same;
@@ -135,6 +137,17 @@ static long long compute_edges(int *pk, int *pm, int depth) {
                 if (r % 2 == 0)
                     self_term += (long long)mr * ((r - 2) / 4 * 2 + 1);
                 break;
+            case SEQ_A002499:
+                /* v\2 + (if v even: (v-2)\4*2+1, else 0) */
+                if (r % 2 == 0)
+                    self_term += (long long)mr * (r / 2 + (r - 2) / 4 * 2 + 1);
+                else
+                    self_term += (long long)mr * (r / 2);  /* = (r-1)/2 */
+                break;
+            case SEQ_A002854:
+                /* floor(r/2) - 1 per cycle */
+                self_term += (long long)mr * (r / 2 - 1);
+                break;
         }
     }
 
@@ -169,6 +182,14 @@ static long long compute_edges(int *pk, int *pm, int depth) {
         case SEQ_A005639:
             /* Only cross pairs with ≥1 even cycle, plus self-term for even cycles */
             edge_val = gcd_sum_even + self_term;
+            break;
+        case SEQ_A002499:
+            /* gcd*2 for even pairs, gcd*1 for odd pairs = gcd_sum + gcd_sum_even */
+            edge_val = gcd_sum + gcd_sum_even + self_term;
+            break;
+        case SEQ_A002854:
+            /* gcd_sum + sum(floor(r/2)-1)*m + [has odd part] */
+            edge_val = gcd_sum + self_term + has_odd_part;
             break;
         default:
             edge_val = 0;
@@ -313,7 +334,7 @@ static void *thread_worker(void *arg) {
 
 int main(int argc, char *argv[]) {
     if (argc < 3) {
-        fprintf(stderr, "Usage: %s <seq: 568|273|595|88|666|1174|2785|171|3086|5639> <n> [threads]\n", argv[0]);
+        fprintf(stderr, "Usage: %s <seq: 568|273|595|88|666|1174|2785|171|3086|5639|2499|2854> <n> [threads]\n", argv[0]);
         return 1;
     }
 
@@ -338,6 +359,8 @@ int main(int argc, char *argv[]) {
             break;
         case 3086: seq_type = SEQ_A003086; partition_target = n/2; odd_parts_only = 0; scale = 2; break;
         case 5639: seq_type = SEQ_A005639; partition_target = n; odd_parts_only = 0; base_val = 3; break;
+        case 2499: seq_type = SEQ_A002499; partition_target = n; odd_parts_only = 0; break;
+        case 2854: seq_type = SEQ_A002854; partition_target = n; odd_parts_only = 0; break;
         default:
             fprintf(stderr, "Unknown sequence: %d\n", seq_id);
             return 1;
@@ -411,6 +434,12 @@ int main(int argc, char *argv[]) {
         case SEQ_A005639:
             /* gcd_sum_even + self_term ≤ pt*(pt-1)/2 + pt */
             max_t_val = pt * (pt - 1) / 2 + pt + 1; break;
+        case SEQ_A002499:
+            /* gcd_sum + gcd_sum_even + self ≤ 2*C(pt,2)*pt + 2*pt */
+            max_t_val = pt * pt + pt + 1; break;
+        case SEQ_A002854:
+            /* gcd_sum + self + 1 ≤ C(pt,2)*pt + pt/2 + 1 */
+            max_t_val = pt * (pt - 1) / 2 + pt / 2 + 2; break;
         default:
             max_t_val = pt * pt + 1;
     }
