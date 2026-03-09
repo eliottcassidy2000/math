@@ -1,0 +1,694 @@
+======================================================================
+β₂=0 PROOF INVESTIGATION: Why can't there be 4 bad vertices?
+======================================================================
+Date: 2026-03-08
+
+
+######################################################################
+# n = 5 (exhaustive)
+######################################################################
+
+======================================================================
+ANALYSIS 1: Tournaments with β₁(T)=0 and exactly 3 bad vertices (n=5, exhaustive)
+======================================================================
+
+Total checked: 1024
+Total with β₁(T)=0: 720
+Max bad vertices seen: 3
+
+Σ distribution (among β₁(T)=0 tournaments):
+  Σ = 0: 240 tournaments (33.3%)
+  Σ = 1: 240 tournaments (33.3%)
+  Σ = 2: 120 tournaments (16.7%)
+  Σ = 3: 120 tournaments (16.7%)
+
+--- Detailed analysis of 3-bad-vertex cases ---
+Found 120 tournaments with exactly 3 bad vertices
+
+  Example 1: bad vertices = [1, 2, 4]
+    Full scores: (1, 2, 2, 2, 3)
+    Bad vertex scores in T: [1, 2, 3]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_1 (H₁ gen of T\1): [(0.335789, (0, 4)), (0.706814, (2, 0)), (0.35928, (3, 2)), (-0.371025, (3, 0)), (-0.011746, (4, 3)), (0.347534, (4, 2))]
+    z_2 (H₁ gen of T\2): [(0.335789, (0, 4)), (-0.706814, (0, 1)), (-0.35928, (1, 3)), (-0.371025, (3, 0)), (-0.011746, (4, 3)), (0.347534, (4, 1))]
+    z_4 (H₁ gen of T\4): [(0.707107, (0, 1)), (0.353553, (1, 3)), (-0.353553, (2, 1)), (0.353553, (2, 0)), (0.353553, (3, 0))]
+    Edge overlaps between generators:
+      z_1 ∩ z_2: 3 edges: {(0, 4), (3, 0), (4, 3)}
+      z_1 ∩ z_4: 2 edges: {(2, 0), (3, 0)}
+      z_2 ∩ z_4: 3 edges: {(0, 1), (1, 3), (3, 0)}
+
+  Example 2: bad vertices = [2, 3, 4]
+    Full scores: (1, 2, 2, 2, 3)
+    Bad vertex scores in T: [1, 2, 3]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_2 (H₁ gen of T\2): [(-0.335789, (0, 4)), (0.35928, (1, 3)), (-0.706814, (1, 0)), (0.371025, (3, 0)), (0.011746, (4, 3)), (-0.347534, (4, 1))]
+    z_3 (H₁ gen of T\3): [(0.335789, (0, 4)), (0.371025, (0, 2)), (0.706814, (1, 0)), (0.35928, (2, 1)), (-0.011746, (4, 2)), (0.347534, (4, 1))]
+    z_4 (H₁ gen of T\4): [(0.335789, (0, 2)), (-0.35928, (1, 3)), (0.706814, (1, 0)), (0.347534, (2, 1)), (0.011746, (3, 2)), (-0.371025, (3, 0))]
+    Edge overlaps between generators:
+      z_2 ∩ z_3: 3 edges: {(1, 0), (0, 4), (4, 1)}
+      z_2 ∩ z_4: 3 edges: {(1, 0), (1, 3), (3, 0)}
+      z_3 ∩ z_4: 3 edges: {(1, 0), (0, 2), (2, 1)}
+
+  Example 3: bad vertices = [1, 3, 4]
+    Full scores: (1, 2, 2, 2, 3)
+    Bad vertex scores in T: [2, 1, 3]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_1 (H₁ gen of T\1): [(0.335789, (0, 4)), (0.371025, (0, 3)), (0.706814, (2, 0)), (0.35928, (3, 2)), (-0.011746, (4, 3)), (0.347534, (4, 2))]
+    z_3 (H₁ gen of T\3): [(0.335789, (0, 4)), (0.706814, (1, 0)), (0.35928, (2, 1)), (-0.371025, (2, 0)), (-0.011746, (4, 2)), (0.347534, (4, 1))]
+    z_4 (H₁ gen of T\4): [(-0.335789, (0, 3)), (0.347534, (1, 3)), (-0.706814, (1, 0)), (-0.35928, (2, 1)), (0.371025, (2, 0)), (0.011746, (3, 2))]
+    Edge overlaps between generators:
+      z_1 ∩ z_3: 3 edges: {(2, 0), (0, 4), (4, 2)}
+      z_1 ∩ z_4: 3 edges: {(3, 2), (0, 3), (2, 0)}
+      z_3 ∩ z_4: 3 edges: {(1, 0), (2, 0), (2, 1)}
+
+  Example 4: bad vertices = [0, 2, 4]
+    Full scores: (1, 2, 2, 2, 3)
+    Bad vertex scores in T: [1, 2, 3]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_0 (H₁ gen of T\0): [(0.335789, (1, 4)), (0.706814, (2, 1)), (0.35928, (3, 2)), (-0.371025, (3, 1)), (-0.011746, (4, 3)), (0.347534, (4, 2))]
+    z_2 (H₁ gen of T\2): [(0.335789, (0, 3)), (-0.35928, (1, 4)), (0.706814, (1, 0)), (0.347534, (3, 1)), (0.011746, (4, 3)), (-0.371025, (4, 0))]
+    z_4 (H₁ gen of T\4): [(0.335789, (0, 3)), (0.706814, (1, 0)), (0.35928, (2, 1)), (-0.371025, (2, 0)), (-0.011746, (3, 2)), (0.347534, (3, 1))]
+    Edge overlaps between generators:
+      z_0 ∩ z_2: 3 edges: {(3, 1), (1, 4), (4, 3)}
+      z_0 ∩ z_4: 3 edges: {(3, 1), (3, 2), (2, 1)}
+      z_2 ∩ z_4: 3 edges: {(3, 1), (1, 0), (0, 3)}
+
+  Example 5: bad vertices = [0, 2, 3]
+    Full scores: (1, 2, 2, 2, 3)
+    Bad vertex scores in T: [2, 1, 3]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_0 (H₁ gen of T\0): [(0.335789, (1, 4)), (0.706814, (2, 1)), (0.35928, (3, 2)), (-0.371025, (3, 1)), (-0.011746, (4, 3)), (0.347534, (4, 2))]
+    z_2 (H₁ gen of T\2): [(-0.335789, (0, 4)), (0.347534, (1, 4)), (-0.706814, (1, 0)), (-0.35928, (3, 1)), (0.371025, (3, 0)), (0.011746, (4, 3))]
+    z_3 (H₁ gen of T\3): [(0.335789, (0, 4)), (0.371025, (0, 2)), (-0.347534, (1, 4)), (0.706814, (1, 0)), (0.35928, (2, 1)), (-0.011746, (4, 2))]
+    Edge overlaps between generators:
+      z_0 ∩ z_2: 3 edges: {(3, 1), (1, 4), (4, 3)}
+      z_0 ∩ z_3: 3 edges: {(4, 2), (2, 1), (1, 4)}
+      z_2 ∩ z_3: 3 edges: {(1, 0), (0, 4), (1, 4)}
+
+  Summary:
+    Transitive subtournament on bad verts: 120/120 (100.0%)
+    Sub score distributions: {(0, 1, 2): 120}
+
+======================================================================
+ANALYSIS 2: Can arc flips create a 4th bad vertex? (n=5)
+======================================================================
+
+  Total arc-flip attempts: 200
+  Successes (4+ bad): 0
+  Failure breakdown:
+    flip breaks β₁(T)=0: 100 (50.0%)
+    only 2 bad: 60 (30.0%)
+    only 1 bad: 40 (20.0%)
+
+======================================================================
+ANALYSIS 3: Mechanism analysis (n=5)
+======================================================================
+
+  --- Example 1 ---
+  Bad vertices: [1, 2, 4]
+  Good vertices: [0, 3]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {1,2}: β = [1, 1]
+    T \ {1,4}: β = [1, 0]
+    T \ {2,4}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=1: out=[3], in=[0, 2, 4]
+    v=2: out=[0, 1], in=[3, 4]
+    v=4: out=[1, 2, 3], in=[0]
+    Common out-nbrs of 1,2: []
+    Common in-nbrs of 1,2: [4]
+    Common out-nbrs of 1,4: [3]
+    Common in-nbrs of 1,4: [0]
+    Common out-nbrs of 2,4: [1]
+    Common in-nbrs of 2,4: []
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 9
+    |A₂| = 18 (transitive triples)
+    z_1 ∈ im(∂₂) of T? False
+    z_2 ∈ im(∂₂) of T? False
+    z_4 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Example 2 ---
+  Bad vertices: [2, 3, 4]
+  Good vertices: [0, 1]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {2,3}: β = [1, 1]
+    T \ {2,4}: β = [1, 0]
+    T \ {3,4}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=2: out=[1], in=[0, 3, 4]
+    v=3: out=[0, 2], in=[1, 4]
+    v=4: out=[1, 2, 3], in=[0]
+    Common out-nbrs of 2,3: []
+    Common in-nbrs of 2,3: [4]
+    Common out-nbrs of 2,4: [1]
+    Common in-nbrs of 2,4: [0]
+    Common out-nbrs of 3,4: [2]
+    Common in-nbrs of 3,4: []
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 9
+    |A₂| = 18 (transitive triples)
+    z_2 ∈ im(∂₂) of T? False
+    z_3 ∈ im(∂₂) of T? False
+    z_4 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? True
+
+  --- Example 3 ---
+  Bad vertices: [1, 3, 4]
+  Good vertices: [0, 2]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {1,3}: β = [1, 1]
+    T \ {1,4}: β = [1, 1]
+    T \ {3,4}: β = [1, 0]
+
+  Neighborhood patterns of bad vertices:
+    v=1: out=[0, 3], in=[2, 4]
+    v=3: out=[2], in=[0, 1, 4]
+    v=4: out=[1, 2, 3], in=[0]
+    Common out-nbrs of 1,3: []
+    Common in-nbrs of 1,3: [4]
+    Common out-nbrs of 1,4: [3]
+    Common in-nbrs of 1,4: []
+    Common out-nbrs of 3,4: [2]
+    Common in-nbrs of 3,4: [0]
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 9
+    |A₂| = 18 (transitive triples)
+    z_1 ∈ im(∂₂) of T? False
+    z_3 ∈ im(∂₂) of T? False
+    z_4 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Global statistics across all 3-bad examples ---
+    Transitive sub on bad verts: 120/120
+    3-cycle sub on bad verts: 0/120
+
+  --- Good vertex β₁ analysis ---
+    β₁(T\v) for good v: {0: 40}
+
+======================================================================
+EXHAUSTIVE SEARCH for 4+ bad vertices with β₁(T)=0 (n=5)
+======================================================================
+  ... checked 1000 tournaments, 699 with β₁=0, max_bad=3
+
+  Total checked: 1024
+  β₁=0 count: 720
+  Maximum bad vertices: 3
+  Σ distribution:
+    Σ=0: 240
+    Σ=1: 240
+    Σ=2: 120
+    Σ=3: 120
+
+n=5 done. Elapsed: 4.8s
+
+######################################################################
+# n = 6 (exhaustive)
+######################################################################
+
+======================================================================
+ANALYSIS 1: Tournaments with β₁(T)=0 and exactly 3 bad vertices (n=6, exhaustive)
+======================================================================
+
+Total checked: 32768
+Total with β₁(T)=0: 27968
+Max bad vertices seen: 3
+
+Σ distribution (among β₁(T)=0 tournaments):
+  Σ = 0: 8480 tournaments (30.3%)
+  Σ = 1: 7968 tournaments (28.5%)
+  Σ = 2: 7200 tournaments (25.7%)
+  Σ = 3: 4320 tournaments (15.4%)
+
+--- Detailed analysis of 3-bad-vertex cases ---
+Found 4320 tournaments with exactly 3 bad vertices
+
+  Example 1: bad vertices = [1, 4, 5]
+    Full scores: (2, 2, 2, 2, 3, 4)
+    Bad vertex scores in T: [2, 2, 4]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_1 (H₁ gen of T\1): [(0.387147, (0, 5)), (-0.207718, (0, 4)), (0.402274, (2, 0)), (0.65132, (3, 2)), (-0.222844, (3, 0)), (0.11689, (4, 3)), (-0.221871, (4, 2)), (0.102736, (5, 4)), (0.311586, (5, 3)), (-0.027175, (5, 2))]
+    z_4 (H₁ gen of T\4): [(-0.489576, (0, 5)), (-0.305285, (1, 0)), (0.427766, (2, 1)), (-0.374955, (2, 0)), (-0.022081, (3, 2)), (-0.346332, (3, 1)), (0.190664, (3, 0)), (-0.177748, (5, 3)), (0.074892, (5, 2)), (-0.38672, (5, 1))]
+    z_5 (H₁ gen of T\5): [(-0.422971, (0, 4)), (0.535792, (1, 4)), (-0.575078, (1, 0)), (0.242966, (2, 1)), (0.010401, (2, 0)), (0.067547, (3, 2)), (-0.282252, (3, 1)), (0.141706, (3, 0)), (-0.072999, (4, 3)), (0.185821, (4, 2))]
+    Edge overlaps between generators:
+      z_1 ∩ z_4: 6 edges: {(2, 0), (3, 0), (0, 5), (5, 3), (3, 2), (5, 2)}
+      z_1 ∩ z_5: 6 edges: {(0, 4), (4, 3), (2, 0), (4, 2), (3, 0), (3, 2)}
+      z_4 ∩ z_5: 6 edges: {(2, 1), (3, 1), (2, 0), (3, 0), (1, 0), (3, 2)}
+
+  Example 2: bad vertices = [1, 4, 5]
+    Full scores: (2, 2, 2, 2, 3, 4)
+    Bad vertex scores in T: [2, 2, 4]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_1 (H₁ gen of T\1): [(0.66407, (0, 5)), (-0.363776, (0, 4)), (-0.448028, (0, 3)), (-0.147734, (2, 0)), (-0.098173, (3, 2)), (0.046447, (4, 3)), (-0.153261, (4, 2)), (0.256961, (5, 4)), (0.303408, (5, 3)), (0.1037, (5, 2))]
+    z_4 (H₁ gen of T\4): [(0.387147, (0, 5)), (-0.207718, (0, 3)), (0.402274, (1, 0)), (0.65132, (2, 1)), (-0.222844, (2, 0)), (0.11689, (3, 2)), (-0.221871, (3, 1)), (0.102736, (5, 3)), (0.311586, (5, 2)), (-0.027175, (5, 1))]
+    z_5 (H₁ gen of T\5): [(0.373971, (0, 4)), (-0.703025, (0, 3)), (0.114141, (1, 4)), (-0.342886, (1, 0)), (-0.127298, (2, 1)), (0.013833, (2, 0)), (-0.200605, (3, 2)), (-0.101447, (3, 1)), (0.400972, (4, 3)), (0.08714, (4, 2))]
+    Edge overlaps between generators:
+      z_1 ∩ z_4: 6 edges: {(0, 3), (2, 0), (0, 5), (5, 3), (3, 2), (5, 2)}
+      z_1 ∩ z_5: 6 edges: {(0, 4), (4, 3), (0, 3), (2, 0), (4, 2), (3, 2)}
+      z_4 ∩ z_5: 6 edges: {(2, 1), (3, 1), (0, 3), (2, 0), (1, 0), (3, 2)}
+
+  Example 3: bad vertices = [1, 2, 5]
+    Full scores: (2, 2, 2, 2, 3, 4)
+    Bad vertex scores in T: [2, 2, 4]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_1 (H₁ gen of T\1): [(-0.489576, (0, 5)), (-0.305285, (2, 0)), (0.427766, (3, 2)), (-0.374955, (3, 0)), (-0.022081, (4, 3)), (-0.346332, (4, 2)), (0.190664, (4, 0)), (-0.177748, (5, 4)), (0.074892, (5, 3)), (-0.38672, (5, 2))]
+    z_2 (H₁ gen of T\2): [(0.163331, (0, 5)), (-0.687593, (0, 1)), (-0.490051, (1, 4)), (-0.266301, (1, 3)), (-0.293594, (3, 0)), (-0.055938, (4, 3)), (-0.230668, (4, 0)), (0.203446, (5, 4)), (0.028644, (5, 3)), (-0.068759, (5, 1))]
+    z_5 (H₁ gen of T\5): [(0.018307, (0, 1)), (0.730023, (1, 4)), (-0.420147, (1, 3)), (0.29157, (2, 1)), (-0.125296, (2, 0)), (-0.060634, (3, 2)), (-0.07197, (3, 0)), (0.287542, (4, 3)), (0.226908, (4, 2)), (0.215573, (4, 0))]
+    Edge overlaps between generators:
+      z_1 ∩ z_2: 6 edges: {(4, 0), (4, 3), (5, 4), (3, 0), (0, 5), (5, 3)}
+      z_1 ∩ z_5: 6 edges: {(4, 0), (4, 3), (2, 0), (4, 2), (3, 0), (3, 2)}
+      z_2 ∩ z_5: 6 edges: {(0, 1), (4, 0), (4, 3), (1, 4), (3, 0), (1, 3)}
+
+  Example 4: bad vertices = [1, 2, 5]
+    Full scores: (2, 2, 2, 2, 3, 4)
+    Bad vertex scores in T: [2, 2, 4]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_1 (H₁ gen of T\1): [(0.387147, (0, 5)), (-0.207718, (0, 4)), (0.402274, (2, 0)), (0.65132, (3, 2)), (-0.222844, (3, 0)), (0.11689, (4, 3)), (-0.221871, (4, 2)), (0.102736, (5, 4)), (0.311586, (5, 3)), (-0.027175, (5, 2))]
+    z_2 (H₁ gen of T\2): [(0.442573, (0, 5)), (-0.625526, (0, 4)), (0.07651, (0, 1)), (0.521569, (1, 4)), (-0.180514, (1, 3)), (-0.106444, (3, 0)), (0.031118, (4, 3)), (0.135075, (5, 4)), (0.042952, (5, 3)), (0.264546, (5, 1))]
+    z_5 (H₁ gen of T\5): [(-0.363355, (0, 4)), (0.7132, (0, 1)), (0.13506, (1, 4)), (0.428406, (1, 3)), (-0.149734, (2, 1)), (0.234558, (2, 0)), (0.201844, (3, 2)), (0.115287, (3, 0)), (-0.111275, (4, 3)), (-0.11702, (4, 2))]
+    Edge overlaps between generators:
+      z_1 ∩ z_2: 6 edges: {(0, 4), (4, 3), (5, 4), (3, 0), (0, 5), (5, 3)}
+      z_1 ∩ z_5: 6 edges: {(0, 4), (4, 3), (2, 0), (4, 2), (3, 0), (3, 2)}
+      z_2 ∩ z_5: 6 edges: {(0, 1), (0, 4), (4, 3), (1, 4), (3, 0), (1, 3)}
+
+  Example 5: bad vertices = [0, 2, 5]
+    Full scores: (2, 2, 2, 2, 3, 4)
+    Bad vertex scores in T: [2, 2, 4]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_0 (H₁ gen of T\0): [(-0.489576, (1, 5)), (-0.305285, (2, 1)), (0.427766, (3, 2)), (-0.374955, (3, 1)), (-0.022081, (4, 3)), (-0.346332, (4, 2)), (0.190664, (4, 1)), (-0.177748, (5, 4)), (0.074892, (5, 3)), (-0.38672, (5, 2))]
+    z_2 (H₁ gen of T\2): [(0.626492, (0, 4)), (-0.14701, (0, 3)), (-0.415518, (1, 5)), (0.38335, (1, 0)), (-0.194128, (3, 1)), (0.03395, (4, 3)), (0.16196, (4, 1)), (-0.430582, (5, 4)), (-0.081068, (5, 3)), (0.096131, (5, 0))]
+    z_5 (H₁ gen of T\5): [(0.387147, (0, 4)), (-0.207718, (0, 3)), (0.402274, (1, 0)), (0.65132, (2, 1)), (-0.222844, (2, 0)), (0.11689, (3, 2)), (-0.221871, (3, 1)), (0.102736, (4, 3)), (0.311586, (4, 2)), (-0.027175, (4, 1))]
+    Edge overlaps between generators:
+      z_0 ∩ z_2: 6 edges: {(4, 3), (3, 1), (1, 5), (5, 4), (5, 3), (4, 1)}
+      z_0 ∩ z_5: 6 edges: {(2, 1), (4, 3), (3, 1), (4, 2), (3, 2), (4, 1)}
+      z_2 ∩ z_5: 6 edges: {(0, 4), (4, 3), (3, 1), (0, 3), (1, 0), (4, 1)}
+
+  Summary:
+    Transitive subtournament on bad verts: 4320/4320 (100.0%)
+    Sub score distributions: {(0, 1, 2): 4320}
+
+======================================================================
+ANALYSIS 2: Can arc flips create a 4th bad vertex? (n=6)
+======================================================================
+
+  Total arc-flip attempts: 300
+  Successes (4+ bad): 0
+  Failure breakdown:
+    only 2 bad: 105 (35.0%)
+    flip breaks β₁(T)=0: 63 (21.0%)
+    same 3 bad vertices: 40 (13.3%)
+    only 1 bad: 36 (12.0%)
+    3 bad but different set: 36 (12.0%)
+    only 0 bad: 20 (6.7%)
+
+======================================================================
+ANALYSIS 3: Mechanism analysis (n=6)
+======================================================================
+
+  --- Example 1 ---
+  Bad vertices: [1, 4, 5]
+  Good vertices: [0, 2, 3]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {1,4}: β = [1, 1]
+    T \ {1,5}: β = [1, 1]
+    T \ {4,5}: β = [1, 0]
+
+  Neighborhood patterns of bad vertices:
+    v=1: out=[0, 4], in=[2, 3, 5]
+    v=4: out=[2, 3], in=[0, 1, 5]
+    v=5: out=[1, 2, 3, 4], in=[0]
+    Common out-nbrs of 1,4: []
+    Common in-nbrs of 1,4: [5]
+    Common out-nbrs of 1,5: [4]
+    Common in-nbrs of 1,5: []
+    Common out-nbrs of 4,5: [2, 3]
+    Common in-nbrs of 4,5: [0]
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 21
+    |A₂| = 34 (transitive triples)
+    z_1 ∈ im(∂₂) of T? False
+    z_4 ∈ im(∂₂) of T? False
+    z_5 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Example 2 ---
+  Bad vertices: [1, 4, 5]
+  Good vertices: [0, 2, 3]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {1,4}: β = [1, 1]
+    T \ {1,5}: β = [1, 1]
+    T \ {4,5}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=1: out=[0, 4], in=[2, 3, 5]
+    v=4: out=[2, 3], in=[0, 1, 5]
+    v=5: out=[1, 2, 3, 4], in=[0]
+    Common out-nbrs of 1,4: []
+    Common in-nbrs of 1,4: [5]
+    Common out-nbrs of 1,5: [4]
+    Common in-nbrs of 1,5: []
+    Common out-nbrs of 4,5: [2, 3]
+    Common in-nbrs of 4,5: [0]
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 21
+    |A₂| = 34 (transitive triples)
+    z_1 ∈ im(∂₂) of T? False
+    z_4 ∈ im(∂₂) of T? False
+    z_5 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Example 3 ---
+  Bad vertices: [1, 2, 5]
+  Good vertices: [0, 3, 4]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {1,2}: β = [1, 1]
+    T \ {1,5}: β = [1, 0]
+    T \ {2,5}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=1: out=[3, 4], in=[0, 2, 5]
+    v=2: out=[0, 1], in=[3, 4, 5]
+    v=5: out=[1, 2, 3, 4], in=[0]
+    Common out-nbrs of 1,2: []
+    Common in-nbrs of 1,2: [5]
+    Common out-nbrs of 1,5: [3, 4]
+    Common in-nbrs of 1,5: [0]
+    Common out-nbrs of 2,5: [1]
+    Common in-nbrs of 2,5: []
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 21
+    |A₂| = 34 (transitive triples)
+    z_1 ∈ im(∂₂) of T? False
+    z_2 ∈ im(∂₂) of T? False
+    z_5 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Global statistics across all 3-bad examples ---
+    Transitive sub on bad verts: 4320/4320
+    3-cycle sub on bad verts: 0/4320
+
+  --- Good vertex β₁ analysis ---
+    β₁(T\v) for good v: {0: 60}
+
+======================================================================
+EXHAUSTIVE SEARCH for 4+ bad vertices with β₁(T)=0 (n=6)
+======================================================================
+  ... checked 1000 tournaments, 862 with β₁=0, max_bad=3
+  ... checked 2000 tournaments, 1771 with β₁=0, max_bad=3
+  ... checked 3000 tournaments, 2634 with β₁=0, max_bad=3
+  ... checked 4000 tournaments, 3465 with β₁=0, max_bad=3
+  ... checked 5000 tournaments, 4351 with β₁=0, max_bad=3
+  ... checked 6000 tournaments, 5225 with β₁=0, max_bad=3
+  ... checked 7000 tournaments, 6023 with β₁=0, max_bad=3
+  ... checked 8000 tournaments, 6913 with β₁=0, max_bad=3
+  ... checked 9000 tournaments, 7784 with β₁=0, max_bad=3
+  ... checked 10000 tournaments, 8563 with β₁=0, max_bad=3
+  ... checked 11000 tournaments, 9361 with β₁=0, max_bad=3
+  ... checked 12000 tournaments, 10162 with β₁=0, max_bad=3
+  ... checked 13000 tournaments, 11032 with β₁=0, max_bad=3
+  ... checked 14000 tournaments, 11897 with β₁=0, max_bad=3
+  ... checked 15000 tournaments, 12821 with β₁=0, max_bad=3
+  ... checked 16000 tournaments, 13638 with β₁=0, max_bad=3
+  ... checked 17000 tournaments, 14519 with β₁=0, max_bad=3
+  ... checked 18000 tournaments, 15343 with β₁=0, max_bad=3
+  ... checked 19000 tournaments, 16292 with β₁=0, max_bad=3
+  ... checked 20000 tournaments, 17109 with β₁=0, max_bad=3
+  ... checked 21000 tournaments, 18019 with β₁=0, max_bad=3
+  ... checked 22000 tournaments, 18791 with β₁=0, max_bad=3
+  ... checked 23000 tournaments, 19564 with β₁=0, max_bad=3
+  ... checked 24000 tournaments, 20336 with β₁=0, max_bad=3
+  ... checked 25000 tournaments, 21261 with β₁=0, max_bad=3
+  ... checked 26000 tournaments, 22116 with β₁=0, max_bad=3
+  ... checked 27000 tournaments, 22927 with β₁=0, max_bad=3
+  ... checked 28000 tournaments, 23831 with β₁=0, max_bad=3
+  ... checked 29000 tournaments, 24710 with β₁=0, max_bad=3
+  ... checked 30000 tournaments, 25552 with β₁=0, max_bad=3
+  ... checked 31000 tournaments, 26381 with β₁=0, max_bad=3
+  ... checked 32000 tournaments, 27291 with β₁=0, max_bad=3
+
+  Total checked: 32768
+  β₁=0 count: 27968
+  Maximum bad vertices: 3
+  Σ distribution:
+    Σ=0: 8480
+    Σ=1: 7968
+    Σ=2: 7200
+    Σ=3: 4320
+
+n=6 done. Elapsed: 282.6s
+
+######################################################################
+# n = 7 (sampled: 5000 random tournaments)
+######################################################################
+
+======================================================================
+ANALYSIS 1: Tournaments with β₁(T)=0 and exactly 3 bad vertices (n=7, sampled 5000)
+======================================================================
+
+Total checked: 5000
+Total with β₁(T)=0: 4758
+Max bad vertices seen: 3
+
+Σ distribution (among β₁(T)=0 tournaments):
+  Σ = 0: 2417 tournaments (50.8%)
+  Σ = 1: 1258 tournaments (26.4%)
+  Σ = 2: 798 tournaments (16.8%)
+  Σ = 3: 285 tournaments (6.0%)
+
+--- Detailed analysis of 3-bad-vertex cases ---
+Found 285 tournaments with exactly 3 bad vertices
+
+  Example 1: bad vertices = [2, 3, 5]
+    Full scores: (2, 2, 3, 3, 3, 4, 4)
+    Bad vertex scores in T: [3, 4, 2]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_2 (H₁ gen of T\2): [(0.527406, (0, 6)), (-0.517567, (0, 5)), (0.176779, (0, 4)), (0.237865, (1, 6)), (-0.174286, (1, 3)), (-0.05082, (1, 0)), (0.105752, (3, 5)), (-0.159857, (3, 4)), (0.237438, (3, 0)), (0.138869, (4, 5)), (0.012444, (4, 1)), (0.000316, (5, 1)), (0.273261, (6, 5)), (0.134391, (6, 4)), (0.357619, (6, 3))]
+    z_3 (H₁ gen of T\3): [(0.543742, (0, 6)), (-0.560503, (0, 5)), (0.262884, (0, 4)), (0.150166, (1, 6)), (-0.062251, (1, 2)), (0.031768, (1, 0)), (-0.20975, (2, 6)), (-0.138782, (2, 4)), (0.214355, (2, 0)), (0.177829, (4, 5)), (0.082999, (4, 1)), (-0.071926, (5, 2)), (0.036685, (5, 1)), (0.347433, (6, 5)), (0.136725, (6, 4))]
+    z_5 (H₁ gen of T\5): [(0.574158, (0, 6)), (-0.434668, (0, 4)), (0.34735, (1, 6)), (-0.168259, (1, 3)), (-0.138677, (1, 2)), (-0.005609, (1, 0)), (-0.243999, (2, 6)), (0.0267, (2, 4)), (0.083913, (2, 0)), (0.03199, (3, 4)), (0.00529, (3, 2)), (0.061186, (3, 0)), (0.034805, (4, 1)), (0.410782, (6, 4)), (0.266726, (6, 3))]
+    Edge overlaps between generators:
+      z_2 ∩ z_3: 10 edges: {(0, 4), (6, 5), (6, 4), (5, 1), (0, 6), (4, 5), (0, 5), (1, 0), (1, 6), (4, 1)}
+      z_2 ∩ z_5: 10 edges: {(1, 3), (0, 4), (3, 4), (6, 4), (0, 6), (3, 0), (1, 0), (1, 6), (6, 3), (4, 1)}
+      z_3 ∩ z_5: 10 edges: {(2, 4), (1, 2), (0, 4), (2, 0), (6, 4), (0, 6), (2, 6), (1, 0), (1, 6), (4, 1)}
+
+  Example 2: bad vertices = [0, 1, 5]
+    Full scores: (2, 2, 3, 3, 3, 4, 4)
+    Bad vertex scores in T: [3, 4, 3]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_0 (H₁ gen of T\0): [(0.520132, (1, 6)), (-0.534962, (1, 5)), (0.40343, (1, 4)), (-0.250827, (1, 3)), (-0.058032, (2, 3)), (0.137773, (2, 1)), (-0.178432, (3, 6)), (-0.054563, (3, 5)), (-0.075864, (3, 4)), (0.03608, (4, 6)), (0.131537, (4, 2)), (-0.282323, (5, 6)), (-0.159949, (5, 4)), (-0.147253, (5, 2)), (0.095457, (6, 2))]
+    z_1 (H₁ gen of T\1): [(0.54304, (0, 5)), (-0.358149, (0, 2)), (-0.177804, (2, 3)), (0.439617, (3, 6)), (-0.506688, (3, 5)), (-0.074366, (3, 4)), (-0.036367, (3, 0)), (-0.14526, (4, 6)), (-0.013336, (4, 2)), (0.159323, (4, 0)), (-0.070167, (5, 6)), (0.075093, (5, 4)), (0.031426, (5, 2)), (0.162255, (6, 2)), (0.061935, (6, 0))]
+    z_5 (H₁ gen of T\5): [(0.66686, (0, 2)), (-0.289326, (0, 1)), (0.347252, (1, 6)), (-0.332248, (1, 4)), (-0.152771, (1, 3)), (0.155434, (2, 3)), (0.151559, (2, 1)), (-0.162843, (3, 6)), (0.023328, (3, 4)), (0.142178, (3, 0)), (-0.123332, (4, 6)), (-0.2416, (4, 2)), (0.056012, (4, 0)), (-0.118267, (6, 2)), (0.179344, (6, 0))]
+    Edge overlaps between generators:
+      z_0 ∩ z_1: 10 edges: {(6, 2), (3, 4), (5, 4), (4, 6), (4, 2), (2, 3), (5, 6), (3, 6), (3, 5), (5, 2)}
+      z_0 ∩ z_5: 10 edges: {(6, 2), (2, 1), (3, 4), (4, 6), (1, 4), (4, 2), (2, 3), (3, 6), (1, 6), (1, 3)}
+      z_1 ∩ z_5: 10 edges: {(6, 2), (4, 0), (3, 4), (4, 6), (4, 2), (3, 0), (2, 3), (0, 2), (3, 6), (6, 0)}
+
+  Example 3: bad vertices = [0, 1, 5]
+    Full scores: (2, 2, 3, 3, 3, 4, 4)
+    Bad vertex scores in T: [4, 3, 2]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_0 (H₁ gen of T\0): [(-0.608564, (1, 6)), (0.346622, (1, 4)), (-0.203046, (1, 3)), (-0.014478, (2, 4)), (-0.536078, (2, 1)), (-0.037434, (3, 5)), (-0.1962, (3, 2)), (0.200083, (4, 6)), (0.07492, (4, 5)), (0.057142, (4, 3)), (-0.158767, (5, 2)), (0.071091, (5, 1)), (-0.125163, (6, 5)), (-0.087729, (6, 3)), (-0.195589, (6, 2))]
+    z_1 (H₁ gen of T\1): [(0.554286, (0, 6)), (-0.08929, (0, 5)), (-0.010743, (0, 3)), (-0.563565, (2, 4)), (0.361854, (2, 0)), (0.089495, (3, 5)), (-0.05495, (3, 2)), (-0.328295, (4, 6)), (-0.219704, (4, 5)), (-0.107965, (4, 3)), (0.092399, (4, 0)), (-0.110907, (5, 2)), (0.108592, (6, 5)), (0.153253, (6, 3)), (-0.035854, (6, 2))]
+    z_5 (H₁ gen of T\5): [(0.320472, (0, 6)), (-0.202599, (0, 3)), (0.368575, (0, 1)), (-0.388525, (1, 6)), (0.526572, (1, 4)), (0.141878, (1, 3)), (-0.082759, (2, 4)), (-0.08865, (2, 1)), (0.370727, (2, 0)), (0.188033, (3, 2)), (0.071474, (4, 6)), (0.256619, (4, 3)), (0.11572, (4, 0)), (-0.007865, (6, 3)), (0.011285, (6, 2))]
+    Edge overlaps between generators:
+      z_0 ∩ z_1: 10 edges: {(2, 4), (6, 2), (6, 5), (4, 3), (4, 6), (4, 5), (3, 2), (6, 3), (3, 5), (5, 2)}
+      z_0 ∩ z_5: 10 edges: {(2, 4), (6, 2), (2, 1), (4, 3), (4, 6), (1, 4), (1, 6), (3, 2), (6, 3), (1, 3)}
+      z_1 ∩ z_5: 10 edges: {(2, 4), (4, 0), (6, 2), (4, 3), (0, 3), (2, 0), (4, 6), (0, 6), (3, 2), (6, 3)}
+
+  Example 4: bad vertices = [0, 1, 5]
+    Full scores: (2, 2, 3, 3, 3, 4, 4)
+    Bad vertex scores in T: [3, 3, 4]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_0 (H₁ gen of T\0): [(0.308053, (1, 6)), (-0.454331, (1, 3)), (0.44463, (2, 4)), (-0.559222, (2, 1)), (-0.113607, (3, 5)), (-0.172313, (3, 4)), (-0.030438, (3, 2)), (-0.041804, (4, 6)), (0.265561, (4, 1)), (-0.048559, (5, 4)), (-0.052449, (5, 2)), (0.147383, (5, 1)), (0.159982, (6, 5)), (0.137972, (6, 3)), (-0.031705, (6, 2))]
+    z_1 (H₁ gen of T\1): [(0.620447, (0, 4)), (-0.031729, (0, 3)), (-0.045113, (0, 2)), (-0.359539, (2, 4)), (0.444984, (3, 5)), (-0.136318, (3, 4)), (-0.207941, (3, 2)), (0.068406, (4, 6)), (-0.056185, (5, 4)), (0.04968, (5, 2)), (0.310184, (5, 0)), (-0.141304, (6, 5)), (0.132453, (6, 3)), (-0.156165, (6, 2)), (0.233422, (6, 0))]
+    z_5 (H₁ gen of T\5): [(0.549221, (0, 4)), (-0.491422, (0, 3)), (0.2377, (0, 2)), (0.335411, (1, 6)), (0.036181, (1, 3)), (0.041315, (1, 0)), (-0.144927, (2, 4)), (0.284213, (2, 1)), (-0.209553, (3, 4)), (-0.02707, (3, 2)), (0.066047, (4, 6)), (0.128694, (4, 1)), (0.218617, (6, 3)), (-0.071343, (6, 2)), (0.254184, (6, 0))]
+    Edge overlaps between generators:
+      z_0 ∩ z_1: 10 edges: {(2, 4), (6, 2), (3, 4), (6, 5), (5, 4), (4, 6), (3, 2), (6, 3), (3, 5), (5, 2)}
+      z_0 ∩ z_5: 10 edges: {(1, 3), (2, 4), (6, 2), (2, 1), (3, 4), (4, 6), (1, 6), (3, 2), (6, 3), (4, 1)}
+      z_1 ∩ z_5: 10 edges: {(2, 4), (6, 2), (0, 4), (3, 4), (0, 3), (4, 6), (0, 2), (6, 0), (3, 2), (6, 3)}
+
+  Example 5: bad vertices = [2, 4, 5]
+    Full scores: (2, 2, 3, 3, 3, 4, 4)
+    Bad vertex scores in T: [4, 3, 2]
+    Subtournament on bad verts transitive? True
+    Sub score seq: (0, 1, 2)
+    z_2 (H₁ gen of T\2): [(0.254771, (0, 6)), (-0.172415, (0, 5)), (0.144142, (0, 1)), (-0.673557, (1, 6)), (0.52671, (1, 5)), (-0.025915, (3, 4)), (-0.122171, (3, 1)), (0.152122, (3, 0)), (0.125715, (4, 6)), (-0.168818, (4, 1)), (0.074376, (4, 0)), (0.057188, (5, 4)), (0.134935, (5, 3)), (-0.162171, (6, 5)), (-0.130898, (6, 3))]
+    z_4 (H₁ gen of T\4): [(0.204523, (0, 6)), (-0.272865, (0, 5)), (0.498079, (0, 1)), (-0.405875, (1, 6)), (0.440707, (1, 5)), (0.18834, (1, 2)), (0.059937, (2, 6)), (-0.108109, (2, 5)), (0.344722, (2, 0)), (0.108211, (3, 2)), (-0.274908, (3, 1)), (0.085016, (3, 0)), (0.02154, (5, 3)), (-0.038193, (6, 5)), (-0.103222, (6, 3))]
+    z_5 (H₁ gen of T\5): [(-0.44714, (0, 6)), (0.452198, (0, 1)), (0.659533, (1, 6)), (-0.121111, (1, 2)), (-0.327366, (2, 6)), (0.079843, (2, 4)), (0.039892, (2, 0)), (0.011128, (3, 4)), (-0.08652, (3, 2)), (0.024194, (3, 1)), (-0.065268, (3, 0)), (-0.001494, (4, 6)), (0.06203, (4, 1)), (0.030435, (4, 0)), (-0.116466, (6, 3))]
+    Edge overlaps between generators:
+      z_2 ∩ z_4: 10 edges: {(0, 1), (6, 5), (1, 5), (3, 1), (0, 6), (3, 0), (0, 5), (5, 3), (1, 6), (6, 3)}
+      z_2 ∩ z_5: 10 edges: {(0, 1), (4, 0), (3, 4), (3, 1), (4, 6), (0, 6), (3, 0), (1, 6), (6, 3), (4, 1)}
+      z_4 ∩ z_5: 10 edges: {(0, 1), (1, 2), (3, 1), (2, 0), (0, 6), (3, 0), (2, 6), (1, 6), (3, 2), (6, 3)}
+
+  Summary:
+    Transitive subtournament on bad verts: 285/285 (100.0%)
+    Sub score distributions: {(0, 1, 2): 285}
+
+======================================================================
+ANALYSIS 2: Can arc flips create a 4th bad vertex? (n=7)
+======================================================================
+
+  Total arc-flip attempts: 210
+  Successes (4+ bad): 0
+  Failure breakdown:
+    only 2 bad: 58 (27.6%)
+    only 1 bad: 55 (26.2%)
+    same 3 bad vertices: 36 (17.1%)
+    only 0 bad: 27 (12.9%)
+    flip breaks β₁(T)=0: 25 (11.9%)
+    3 bad but different set: 9 (4.3%)
+
+======================================================================
+ANALYSIS 3: Mechanism analysis (n=7)
+======================================================================
+
+  --- Example 1 ---
+  Bad vertices: [2, 3, 5]
+  Good vertices: [0, 1, 4, 6]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {2,3}: β = [1, 1]
+    T \ {2,5}: β = [1, 1]
+    T \ {3,5}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=2: out=[0, 4, 6], in=[1, 3, 5]
+    v=3: out=[0, 2, 4, 5], in=[1, 6]
+    v=5: out=[1, 2], in=[0, 3, 4, 6]
+    Common out-nbrs of 2,3: [0, 4]
+    Common in-nbrs of 2,3: [1]
+    Common out-nbrs of 2,5: []
+    Common in-nbrs of 2,5: [3]
+    Common out-nbrs of 3,5: [2]
+    Common in-nbrs of 3,5: [6]
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 38
+    |A₂| = 59 (transitive triples)
+    z_2 ∈ im(∂₂) of T? False
+    z_3 ∈ im(∂₂) of T? False
+    z_5 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Example 2 ---
+  Bad vertices: [0, 1, 5]
+  Good vertices: [2, 3, 4, 6]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {0,1}: β = [1, 1]
+    T \ {0,5}: β = [1, 1]
+    T \ {1,5}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=0: out=[1, 2, 5], in=[3, 4, 6]
+    v=1: out=[3, 4, 5, 6], in=[0, 2]
+    v=5: out=[2, 4, 6], in=[0, 1, 3]
+    Common out-nbrs of 0,1: [5]
+    Common in-nbrs of 0,1: []
+    Common out-nbrs of 0,5: [2]
+    Common in-nbrs of 0,5: [3]
+    Common out-nbrs of 1,5: [4, 6]
+    Common in-nbrs of 1,5: [0]
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 39
+    |A₂| = 59 (transitive triples)
+    z_0 ∈ im(∂₂) of T? True
+      Filling of z_0: [(-0.0668, (0, 5, 6)), (-0.0527, (0, 5, 4)), (0.0259, (0, 5, 2)), (0.0154, (0, 2, 3)), (0.027, (0, 2, 1)), (0.0668, (0, 1, 6)), (-0.0397, (0, 1, 5)), (0.0527, (0, 1, 4)), (-0.0154, (0, 1, 3)), (0.0624, (1, 6, 2))]
+    z_1 ∈ im(∂₂) of T? True
+      Filling of z_1: [(0.0385, (0, 5, 6)), (0.0496, (0, 5, 4)), (0.1735, (0, 5, 2)), (-0.0539, (0, 2, 3)), (-0.0681, (0, 2, 1)), (-0.0385, (0, 1, 6)), (-0.0897, (0, 1, 5)), (-0.0496, (0, 1, 4)), (0.0539, (0, 1, 3)), (0.024, (1, 6, 2))]
+    z_5 ∈ im(∂₂) of T? True
+      Filling of z_5: [(-0.0238, (0, 5, 6)), (0.0154, (0, 5, 4)), (-0.0397, (0, 5, 2)), (0.0987, (0, 2, 3)), (0.1708, (0, 2, 1)), (0.0238, (0, 1, 6)), (0.0093, (0, 1, 5)), (-0.0154, (0, 1, 4)), (-0.0987, (0, 1, 3)), (0.0449, (1, 6, 2))]
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? True
+
+  --- Example 3 ---
+  Bad vertices: [0, 1, 5]
+  Good vertices: [2, 3, 4, 6]
+
+  β₁ after deleting pairs of bad vertices:
+    T \ {0,1}: β = [1, 1]
+    T \ {0,5}: β = [1, 1]
+    T \ {1,5}: β = [1, 1]
+
+  Neighborhood patterns of bad vertices:
+    v=0: out=[1, 3, 5, 6], in=[2, 4]
+    v=1: out=[3, 4, 6], in=[0, 2, 5]
+    v=5: out=[1, 2], in=[0, 3, 4, 6]
+    Common out-nbrs of 0,1: [3, 6]
+    Common in-nbrs of 0,1: [2]
+    Common out-nbrs of 0,5: [1]
+    Common in-nbrs of 0,5: [4]
+    Common out-nbrs of 1,5: []
+    Common in-nbrs of 1,5: [0]
+
+  Ω₂ filling analysis:
+    dim(Ω₂) = 39
+    |A₂| = 59 (transitive triples)
+    z_0 ∈ im(∂₂) of T? False
+    z_1 ∈ im(∂₂) of T? True
+      Filling of z_1: [(0.0688, (0, 6, 5)), (0.0946, (0, 6, 3)), (0.0441, (0, 6, 2)), (-0.0129, (0, 5, 2)), (-0.1246, (0, 5, 1)), (-0.0066, (0, 3, 5)), (-0.0313, (0, 3, 2)), (-0.1247, (0, 1, 6)), (-0.0541, (0, 1, 3)), (0.0203, (1, 6, 5))]
+    z_5 ∈ im(∂₂) of T? False
+
+    z_sum (sum of all 3 generators) ∈ im(∂₂)? False
+
+  --- Global statistics across all 3-bad examples ---
+    Transitive sub on bad verts: 285/285
+    3-cycle sub on bad verts: 0/285
+
+  --- Good vertex β₁ analysis ---
+    β₁(T\v) for good v: {0: 80}
+
+  Checking max Σ in n=7 sample...
+  Max bad vertices in n=7 sample: 3
+  Full Σ distribution: {0: 2417, 1: 1258, 2: 798, 3: 285}
+
+n=7 done. Elapsed: 79.4s
+
+======================================================================
+SUMMARY
+======================================================================
+
+Key findings to report:
+1. Is the subtournament on 3 bad vertices ALWAYS transitive?
+2. How do the H₁ generators relate to each other?
+3. What prevents a 4th bad vertex from appearing?
+4. What is the mechanism?
+
+
+Total elapsed: 366.8s

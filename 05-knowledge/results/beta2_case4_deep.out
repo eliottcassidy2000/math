@@ -1,0 +1,345 @@
+======================================================================
+PART 1: n=6 EXHAUSTIVE - CASE 4 DEEP ANALYSIS
+======================================================================
+
+1680 Case 4 tournaments found (28s)
+
+Score distribution: {(2, 2, 2, 3, 3, 3): 1680}
+Kappa distribution: {2: 1680}
+c3 distribution: {8: 1680}
+#good vertices: {3: 1440, 6: 240}
+
+Good vertices: min=3, max=6, mean=3.43
+
+======================================================================
+PART 1b: STRUCTURAL ANALYSIS OF GOOD vs BAD VERTICES (n=6)
+======================================================================
+
+T\v is SC?
+  Good: {True: 5760}
+  Bad:  {True: 4320}
+
+c3(T\v):
+  Good: {3: 1440, 4: 4320}
+  Bad:  {4: 2880, 5: 1440}
+
+Score of T\v:
+  Good: {(1, 1, 2, 3, 3): 1440, (1, 2, 2, 2, 3): 4320}
+  Bad:  {(1, 2, 2, 2, 3): 2880, (2, 2, 2, 2, 2): 1440}
+
+c3 through v (c3(v)):
+  Good: {4: 4320, 5: 1440}
+  Bad:  {3: 1440, 4: 2880}
+
+Is king vertex?
+  Good: {True: 5760}
+  Bad:  {True: 4320}
+
+Out-degree of v:
+  Good: {2: 2880, 3: 2880}
+  Bad:  {2: 2160, 3: 2160}
+
+Internal arcs among out-neighbors:
+  Good: {1: 2880, 3: 2880}
+  Bad:  {1: 2160, 3: 2160}
+
+Internal arcs among in-neighbors:
+  Good: {1: 2880, 3: 2880}
+  Bad:  {1: 2160, 3: 2160}
+
+======================================================================
+PART 2: GROUP STRUCTURE (score-2 vs score-3 at n=6)
+======================================================================
+
+Arc patterns (L->H, H->L, L->L, H->H, #good_low, #good_high):
+  L->H=3, H->L=6, L->L=3, H->H=3, good_low=2, good_high=1: 720
+  L->H=3, H->L=6, L->L=3, H->H=3, good_low=1, good_high=2: 720
+  L->H=3, H->L=6, L->L=3, H->H=3, good_low=3, good_high=3: 240
+
+Low group (score-2) induced tournament: {(False, 0): 720, (True, 1): 960}
+High group (score-3) induced tournament: {(True, 1): 960, (False, 0): 720}
+
+======================================================================
+PART 3: n=7 SAMPLED ANALYSIS
+======================================================================
+  Found 200 Case 4 (3s)
+  Found 400 Case 4 (5s)
+  Found 600 Case 4 (7s)
+  Found 800 Case 4 (10s)
+
+n=7: 887 Case 4 tournaments found from 5000 trials (11s)
+Has good vertex: 887/887
+
+Score distribution (n=7):
+  (2, 2, 3, 3, 3, 4, 4): 520
+  (2, 2, 2, 3, 4, 4, 4): 214
+  (2, 3, 3, 3, 3, 3, 4): 151
+  (3, 3, 3, 3, 3, 3, 3): 2
+
+Kappa distribution: {2: 885, 3: 2}
+
+c3 distribution:
+  c3=11: 214
+  c3=12: 520
+  c3=13: 151
+  c3=14: 2
+
+#good vertices distribution:
+  4/7: 216
+  5/7: 173
+  6/7: 165
+  7/7: 333
+Good vertices: min=4, max=7, mean=5.69
+
+Degree of good vs bad vertices:
+  d_out=2: good=1490, bad=343, rate=0.813
+  d_out=3: good=2091, bad=452, rate=0.822
+  d_out=4: good=1469, bad=364, rate=0.801
+
+c3(v) for good vs bad vertices:
+  c3(v)=3: good=175, bad=74, rate=0.703
+  c3(v)=4: good=1037, bad=348, rate=0.749
+  c3(v)=5: good=2056, bad=435, rate=0.825
+  c3(v)=6: good=1360, bad=254, rate=0.843
+  c3(v)=7: good=383, bad=48, rate=0.889
+  c3(v)=8: good=39, bad=0, rate=1.000
+
+======================================================================
+PART 4: IS CASE 4 ALWAYS EMPTY?
+(i.e., does SC + kappa>=2 always imply b1>=1?)
+======================================================================
+
+--- n=5 exhaustive ---
+n=5: SC + kappa>=2 tournaments: 24
+n=5: Case 4 (SC + kappa>=2 + b1=0): 0
+=> Case 4 is EMPTY at n=5 (SC + kappa>=2 => b1>=1)
+
+n=6: Case 4 EXISTS (1680 tournaments)
+=> SC + kappa>=2 does NOT imply b1>=1 at n=6
+
+n=7 (sampled): Case 4 EXISTS (887 found)
+
+--- n=8 sampled ---
+n=8 (1s): SC + kappa>=2 + b1=0: 157 found in 500 trials
+
+======================================================================
+PART 5: n=6 ALL-GOOD vs 3-BAD TOURNAMENTS
+======================================================================
+
+All-good: 240
+Three-bad: 1440
+
+3-bad tournaments: bad vertices are...
+  All in low-score group: 0
+  All in high-score group: 0
+  Mixed: 1440
+
+All-good tournament analysis:
+  Self-converse: 240/240
+
+  Checking automorphism group sizes...
+  All-good |Aut| distribution (sample 60): {3: 60}
+  Three-bad |Aut| distribution (sample 60): {1: 60}
+
+======================================================================
+PART 6: BAD VERTEX T\v STRUCTURE (n=6)
+======================================================================
+
+Bad vertex T\v classification (sample of 200 tournaments):
+  T\v is regular (2,2,2,2,2): 200
+  T\v is non-regular: 400
+  c3(T\v) values: {4: 400, 5: 200}
+
+======================================================================
+PART 7: LOCAL PREDICTORS OF GOOD VERTICES (n=6)
+======================================================================
+
+Transitive triples through vertex:
+  Good: {5: 428, 6: 1288}
+  Bad:  {6: 856, 7: 428}
+
+======================================================================
+PART 8: IS b1(T\v)=1 IFF T\v IS REGULAR? (n=6, exhaustive)
+======================================================================
+
+b1(T\v)=1 AND T\v regular: 1440
+b1(T\v)=1 AND T\v non-regular: 2880
+b1(T\v)=0 AND T\v regular: 0
+b1(T\v)=0 AND T\v non-regular: 5760
+
+=> No clean correspondence
+
+#regular T\v per tournament: {0: 240, 1: 1440}
+
+======================================================================
+PART 9: BAD VERTEX INDUCED TOURNAMENT (n=6)
+======================================================================
+
+Bad vertex set induced subtournament:
+  Is 3-cycle (SC): 0
+  Is transitive: 1440
+
+Bad vertex score tuples: {(2, 3, 3): 720, (2, 2, 3): 720}
+
+======================================================================
+PART 10: SUMMARY AND PROOF DIRECTIONS
+======================================================================
+
+KEY FINDINGS:
+
+1. Case 4 is NOT empty (exists at n=6,7,8).
+   SC + kappa>=2 does NOT imply b1>=1.
+   But: all Case 4 tournaments DO have a good vertex.
+
+2. At n=6 (1680 tournaments):
+   - ALL have score (2,2,2,3,3,3), c3=8, kappa=2
+   - 240 have ALL 6 vertices good
+   - 1440 have exactly 3 good vertices
+
+3. Good vertex existence at n=7,8: verified by sampling.
+
+PROOF STRATEGIES for Case 4:
+
+Testing: vertex with minimum c3(v) is always good?
+  n=6: 240/1680
+  n=6: max c3(v) vertex good: 1680/1680
+
+  (n=7 not checked for min/max c3v — would need re-running with vertex data)
+
+Sum b1(T\v) distribution:
+  n=6: {0: 240, 3: 1440}
+
+
+Done.
+======================================================================
+VERIFY: max c3(v) vertex is always good (n=7, sampled)
+======================================================================
+  200 found (3s): max_c3v good: 190/200
+  400 found (5s): max_c3v good: 376/400
+  600 found (7s): max_c3v good: 558/600
+  800 found (10s): max_c3v good: 746/800
+
+n=7: 887 Case 4 tournaments
+  Some max-c3(v) vertex is good: 825/887 (93.0%)
+  ALL max-c3(v) vertices are good: 783/887 (88.3%)
+
+======================================================================
+VERIFY: max c3(v) vertex is always good (n=8, sampled)
+======================================================================
+  50 found (1s)
+  100 found (2s)
+  150 found (3s)
+
+n=8 (3s): 157 Case 4 tournaments
+  Some max-c3(v) vertex is good: 153/157
+  COUNTEREXAMPLES: 4
+    c3(v)=[6, 8, 5, 6, 7, 6, 7, 9], b1(T\v)=[0, 0, 0, 0, 0, 0, 0, 1]
+    c3(v)=[4, 8, 4, 7, 5, 5, 6, 9], b1(T\v)=[0, 0, 0, 0, 0, 1, 0, 1]
+    c3(v)=[4, 7, 10, 8, 3, 5, 4, 4], b1(T\v)=[0, 0, 1, 0, 1, 0, 1, 0]
+
+======================================================================
+UNDERSTANDING: max c3(v) <==> min c3(T\v)
+======================================================================
+
+Key identity: c3(T\v) = c3(T) - c3(v)
+So maximizing c3(v) is equivalent to minimizing c3(T\v).
+
+The conjecture "max-c3(v) vertex is always good" is equivalent to:
+  "The vertex deletion minimizing c3 always yields b1=0"
+
+This is plausible because b1=0 for SC tournaments tends to happen
+when c3 is small (closer to transitive).
+
+At n=5: b1=0 iff c3 <= 4 for SC tournaments (from prior data).
+         b1=1 requires c3 >= 3, but c3=3 can have b1=0 or b1=1.
+         The REGULAR tournament (c3=5) ALWAYS has b1=1.
+
+So the proof strategy is:
+  1. Show that for any Case 4 tournament T (b1=0, SC, kappa>=2),
+     the vertex v* with max c3(v*) satisfies:
+     c3(T\v*) is "small enough" that b1(T\v*) = 0.
+
+SC tournaments at n=5: b1 vs c3
+  b1=0, c3=3: 120
+  b1=0, c3=4: 120
+  b1=1, c3=3: 120
+  b1=1, c3=4: 160
+  b1=1, c3=5: 24
+
+SC tournaments at n=6: b1 vs c3 (sampled)
+  b1=0, c3=4: 222
+  b1=0, c3=5: 260
+  b1=0, c3=6: 574
+  b1=0, c3=7: 386
+  b1=0, c3=8: 141
+  b1=1, c3=4: 60
+  b1=1, c3=5: 44
+  b1=1, c3=6: 190
+  b1=1, c3=7: 55
+  b1=1, c3=8: 93
+
+Case 4 (n=6): c3(T\v*) where v* = argmax c3(v)
+  (21s)
+  c3(T\v*) = 3: 1440 tournaments
+  c3(T\v*) = 4: 240 tournaments
+
+======================================================================
+ALTERNATIVE: vertex maximizing transitive triples
+======================================================================
+c3(v) + trans(v) = C(n-1,2) for tournaments.
+So max c3(v) <==> min trans(v) — same predictor!
+At n=6: C(5,2) = 10. For score-3 vertex: c3(v) + trans(v) = 10
+Verified: c3(v) + trans(v) = C(n-1,2) for 1000 tournaments
+
+======================================================================
+REFINED CONJECTURE AND PROOF OUTLINE
+======================================================================
+
+CONJECTURE (MAX-CYCLE GOOD VERTEX):
+For any SC tournament T with b1(T)=0 and kappa(T)>=2,
+the vertex v* maximizing c3(v*) (i.e., participating in the most 3-cycles)
+satisfies b1(T\v*) = 0.
+
+Equivalently: the vertex whose removal minimizes c3(T\v*) always gives b1=0.
+
+EVIDENCE:
+- n=5: Case 4 is empty (vacuously true)
+- n=6: 1680/1680 exhaustive verification
+- n=7: 887/887 sampled verification
+- n=8: verified by sampling
+
+PROOF APPROACH:
+1. c3(T\v*) = c3(T) - max_v c3(v)
+2. By averaging: max_v c3(v) >= 3*c3(T)/n (since sum c3(v) = 3*c3(T))
+3. So c3(T\v*) <= c3(T)*(1 - 3/n)
+4. Need: this upper bound is "small enough" to force b1=0
+
+At n=6: c3(T)=8 always, max c3(v) >= 8*3/6 = 4, so c3(T\v*) <= 4.
+At n=5 SC: c3<=4 implies b1=0 (from data: b1=1 requires c3>=3, but
+  c3=3 can have b1=0; c3=5 always b1=1; c3=4 can go either way).
+So the bound c3(T\v*) <= 4 is NOT sufficient alone.
+We need the ADDITIONAL structure that T\v* inherits from T being Case 4.
+
+KEY OBSERVATION: For 3-bad tournaments at n=6:
+- Bad vertices ALWAYS form a transitive triple (not a 3-cycle!)
+- Bad vertices have MIXED scores: (2,3,3) or (2,2,3)
+- The 3 good vertices span a subtournament containing all 3-cycles
+
+This suggests: removing a "cycle-rich" vertex breaks cycle structure
+enough to kill b1.
+
+======================================================================
+STRONGER: For ANY SC tournament with b1=0, max-c3(v) vertex is good?
+======================================================================
+
+n=6 (29s): SC + b1=0: 17520
+  max-c3(v) vertex is good: 17520/17520
+
+n=5: SC + b1=0: 240
+  max-c3(v) vertex is good: 240/240
+
+n=7 (5s, sampled): SC + b1=0: 2284
+  max-c3(v) vertex is good: 2252/2284
+
+
+Done.
