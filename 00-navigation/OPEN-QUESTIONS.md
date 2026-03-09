@@ -452,29 +452,34 @@ Verified algebraically for k=1,2,3,4 and n up to 12.
 ---
 
 ## OPEN-Q-024 🟢 Even Betti Vanishing for Tournament Path Homology
-**Prove: β_{2k}(T) = 0 for all k >= 1, for any tournament T.**
+**Prove: beta_{2k}(T) = 0 for all k >= 1, for any tournament T.**
 
-GLMY path homology Betti numbers β_p of tournaments exhibit a striking pattern:
-- β_0 = 1 always (connected)
-- β_1 ∈ {0, 1} (directed 1-hole from 3-cycle structure)
-- β_2 = 0 ALWAYS (exhaustive n=3,4,5; sampled n=6,7; 0 failures in 1000+ tests)
-- β_3 ∈ {0, 1} (appears at n=6 (1.2%), n=7 (8-11%))
-- β_4 = 0 ALWAYS (sampled n=7; 0 failures)
-- β_1 and β_3 are MUTUALLY EXCLUSIVE (0/200 cases with both positive at n=7)
-- Euler characteristic χ ∈ {0, 1}: χ=1 if contractible, χ=0 if β_1=1 or β_3=1
+**UPDATE (kind-pasteur-S43): beta_2 = 0 PROVED (THM-108 + THM-109).**
 
-WHY: Tournaments have only ODD directed cycles. The completeness of the tournament
-(every pair connected) makes the GLMY boundary operator ∂_2 "maximally constrained,"
-forcing ker(∂_2)/im(∂_3) = 0. The dim(Ω_p)/|A_p| ratio drops to ~0.5 at p=2 for
-cycle-rich tournaments due to disallowed faces from cyclic triples.
+Proof via strong induction using LES of (T, T\v):
+- Base case n=5 verified exhaustively (720/720)
+- Induction step: good-vertex existence (THM-109)
+- Case 2 (free cycles exist): Lemma A (free adj dom) + Lemma B → n-5 good vertices for n≥6
+- Case 3 (all dominated): **Extreme Score Lemma** (ALGEBRAIC) — bad vertex has score 0
+  or n-1, hence in no 3-cycle, hence blocks other bad vertices. At most 1 bad.
+- Comprehensive verification: 0 failures at n = 4-10
 
-This appears to be a NEW result — not found in the GLMY literature or the recent
-Tang-Yau paper on circulant digraphs (arXiv:2602.04140).
+GLMY path homology Betti numbers beta_p of tournaments:
+- beta_0 = 1 always (connected)
+- beta_1 in {0, 1} (directed 1-hole from 3-cycle structure)
+- beta_2 = 0 ALWAYS --- **PROVED** (THM-108 + THM-109)
+- beta_3 in {0, 1} (appears at n=6 (1.2%), n=7 (8-11%))
+- **beta_4 NOT always 0**: Paley T_7 has beta_4 = 6 (THM-099). Very rare among random
+  tournaments (~0.01% at n=7), so missed by sampling. CORRECTS earlier claim.
+- beta_1 and beta_3 are MUTUALLY EXCLUSIVE (0/200 cases with both positive at n=7)
+- Omega_p dimensions for Paley T_7: 7, 21, 42, 63, 63, 42, 21 (palindromic!)
 
-**Connection to OCF:** Both OCF and path homology χ are "alternating sums over
-odd-indexed quantities": H = 1 + 2α₁ + 4α₂ + ... and χ = 1 - β₁ + β₃ - β₅ + ...
+REMAINING OPEN:
+- Characterize which tournaments have beta_4 > 0 (appears linked to H-maximizers)
+- Is beta_6 = 0 for all tournaments? (0/300 at n=7)
+- Prove beta_2k = 0 for k >= some threshold, or find more counterexamples
 
-**Source:** opus-2026-03-07-S46e
+**Source:** opus-2026-03-07-S46e, kind-pasteur-2026-03-08-S43
 
 ---
 
