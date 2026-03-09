@@ -1,0 +1,28 @@
+======================================================================
+PART 1: OMEGA_3 CHECK AT n=5 (exhaustive)
+======================================================================
+n=5: 120 swap cycles tested
+  Naive filling in Omega_3: 120/120
+  Omega_3-projected filling works: 120/120
+  Failures: 0
+
+======================================================================
+PART 2: CORRECT APPROACH - solve in Omega_3 directly
+======================================================================
+Instead of cone-from-T', solve d_3|_{Omega_3} * c = z
+This is what beta_2=0 actually requires.
+The cone-from-T' insight: im(d_3|_{Omega_3}) >= swap cycle space
+
+n=5: Checking im(d_3|_Omega_3) vs ker(d_2|_Omega_2)
+  beta_2 = 0: 1024/1024
+
+======================================================================
+PART 3: COLUMN SPACE RELATIONSHIP
+======================================================================
+For each v, the B_fill columns live in a specific subspace of A_2.
+Key question: does col(B_fill) intersected with Omega_2 cover
+all swap cycles?
+  T#12 v=0: B cols in im(d3|_Om3): 0/4, rank(d3|_Om3)=5, dim_Om3=7
+
+
+Done.

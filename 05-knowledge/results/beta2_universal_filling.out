@@ -1,0 +1,51 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_universal_filling.py:8: SyntaxWarning: invalid escape sequence '\{'
+  where (a1,a2,a3) are ALLOWED 3-element paths in T' = T\{v}
+======================================================================
+FILLING ANALYSIS: WHAT 3-PATHS ARE USED?
+======================================================================
+T#12, v=0, P=[3, 4], Q=[1, 2]
+
+  3-paths in T' (not involving v):
+    Allowed 2-paths in T': [(3, 2, 1), (4, 3, 2), (4, 3, 1), (4, 2, 1)]
+
+  Filling 3-paths:
+    (0, 4, 3, 2): +0.250000 = v + (4, 3, 2) [in T'? True]
+    (0, 4, 3, 1): -0.250000 = v + (4, 3, 1) [in T'? True]
+    (0, 4, 2, 1): -0.250000 = v + (4, 2, 1) [in T'? True]
+    (0, 3, 2, 1): +0.250000 = v + (3, 2, 1) [in T'? True]
+    (3, 2, 1, 0): +0.250000 = (3, 2, 1) + v [in T'? True]
+    (4, 3, 2, 0): +0.250000 = (4, 3, 2) + v [in T'? True]
+    (4, 3, 1, 0): -0.250000 = (4, 3, 1) + v [in T'? True]
+    (4, 2, 1, 0): -0.250000 = (4, 2, 1) + v [in T'? True]
+
+
+======================================================================
+CONE FROM T' THROUGH v: d_3 ANALYSIS
+======================================================================
+
+Numerical test: cone construction for T#12, v=0
+  T' vertices: [1, 2, 3, 4]
+  Allowed 2-paths in T' (4): [(3, 2, 1), (4, 3, 2), (4, 3, 1), (4, 2, 1)]
+
+  Boundary matrix B shape: (18, 4)
+  B nonzero pattern check (T' paths should cancel):
+  (Empty = good, means T' parts cancel)
+
+  Solve B @ alpha = z: err = 2.22e-16
+  SUCCESS! The cone-from-T' construction works!
+  Alpha coefficients:
+    alpha[(3,2,1)] = +0.250000
+    alpha[(4,3,2)] = +0.250000
+    alpha[(4,3,1)] = -0.250000
+    alpha[(4,2,1)] = -0.250000
+  w in Omega_3? err = 1.67e-16
+
+======================================================================
+CONE-FROM-T' TEST FOR ALL n=5
+======================================================================
+
+n=5: 120 swap cycles, 120 success, 0 fail
+  Cone-from-T' works for ALL? YES
+
+
+Done.

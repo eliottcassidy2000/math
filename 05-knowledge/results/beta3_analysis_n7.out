@@ -84,3 +84,108 @@ DETAILED ANALYSIS OF beta_3!=0 TOURNAMENTS
 ======================================================================
 TOURNAMENT PROPERTIES vs beta_3
 ======================================================================
+
+beta_3 by c3:
+  c3=0: beta_3=0: 12, beta_3!=0: 0 (0.0%)
+  c3=1: beta_3=0: 30, beta_3!=0: 0 (0.0%)
+  c3=2: beta_3=0: 58, beta_3!=0: 0 (0.0%)
+  c3=3: beta_3=0: 71, beta_3!=0: 9 (11.2%)
+  c3=4: beta_3=0: 174, beta_3!=0: 0 (0.0%)
+  c3=5: beta_3=0: 212, beta_3!=0: 29 (12.0%)
+  c3=6: beta_3=0: 417, beta_3!=0: 57 (12.0%)
+  c3=7: beta_3=0: 451, beta_3!=0: 0 (0.0%)
+  c3=8: beta_3=0: 629, beta_3!=0: 89 (12.4%)
+  c3=9: beta_3=0: 662, beta_3!=0: 52 (7.3%)
+  c3=10: beta_3=0: 856, beta_3!=0: 102 (10.6%)
+  c3=11: beta_3=0: 534, beta_3!=0: 92 (14.7%)
+  c3=12: beta_3=0: 405, beta_3!=0: 221 (35.3%)
+  c3=13: beta_3=0: 117, beta_3!=0: 79 (40.3%)
+  c3=14: beta_3=0: 7, beta_3!=0: 0 (0.0%)
+
+beta_3 by score (top 10 most common with beta_3!=0):
+  scores=(2, 2, 3, 3, 3, 4, 4): beta_3=0: 405, beta_3!=0: 221 (35.3%)
+  scores=(2, 2, 2, 3, 4, 4, 4): beta_3=0: 209, beta_3!=0: 92 (30.6%)
+  scores=(1, 2, 2, 3, 4, 4, 5): beta_3=0: 454, beta_3!=0: 89 (16.4%)
+  scores=(2, 3, 3, 3, 3, 3, 4): beta_3=0: 117, beta_3!=0: 79 (40.3%)
+  scores=(1, 2, 3, 3, 4, 4, 4): beta_3=0: 427, beta_3!=0: 63 (12.9%)
+  scores=(2, 2, 2, 3, 3, 4, 5): beta_3=0: 394, beta_3!=0: 39 (9.0%)
+  scores=(1, 1, 2, 4, 4, 4, 5): beta_3=0: 39, beta_3!=0: 30 (43.5%)
+  scores=(1, 1, 2, 3, 4, 5, 5): beta_3=0: 108, beta_3!=0: 29 (21.2%)
+  scores=(1, 2, 2, 2, 4, 5, 5): beta_3=0: 46, beta_3!=0: 27 (37.0%)
+  scores=(1, 2, 2, 4, 4, 4, 4): beta_3=0: 54, beta_3!=0: 27 (33.3%)
+
+======================================================================
+PALEY T_7 DETAILED ANALYSIS
+======================================================================
+  Paley T_7: beta=[np.int64(1), 0, 0, 0, np.int64(6), 0], scores=(3, 3, 3, 3, 3, 3, 3), c3=14
+  p=0: dim(A)=7, dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(A)=21, dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(A)=63, dim(Omega)=42, rank(d)=15, ker=27, im(d+1)=27, beta=0
+  p=3: dim(A)=147, dim(Omega)=63, rank(d)=27, ker=36, im(d+1)=36, beta=0
+  p=4: dim(A)=273, dim(Omega)=63, rank(d)=36, ker=27, im(d+1)=21, beta=6
+  p=5: dim(A)=315, dim(Omega)=42, rank(d)=21, ker=21, im(d+1)=0, beta=21
+  Omega dims: [7, 21, 42, 63, 63, 42]
+  A dims:     [7, 21, 63, 147, 273, 315]
+
+======================================================================
+DIMENSION-SPECIFIC ANALYSIS: p=2 vs p=3
+======================================================================
+
+For beta_3 != 0 examples:
+
+  Example #1: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=24 = 39, dim(Omega_2)=39, exact=True
+    p=3: rank(d_3)=24 + rank(d_4)=25 = 49, dim(Omega_3)=50, exact=False
+    p=4: rank(d_4)=25 + rank(d_5)=16 = 41, dim(Omega_4)=41, exact=True
+
+  Example #2: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=22 = 37, dim(Omega_2)=37, exact=True
+    p=3: rank(d_3)=22 + rank(d_4)=18 = 40, dim(Omega_3)=41, exact=False
+    p=4: rank(d_4)=18 + rank(d_5)=9 = 27, dim(Omega_4)=27, exact=True
+
+  Example #3: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=23 = 38, dim(Omega_2)=38, exact=True
+    p=3: rank(d_3)=23 + rank(d_4)=21 = 44, dim(Omega_3)=45, exact=False
+    p=4: rank(d_4)=21 + rank(d_5)=12 = 33, dim(Omega_4)=33, exact=True
+
+  Example #4: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=25 = 40, dim(Omega_2)=40, exact=True
+    p=3: rank(d_3)=25 + rank(d_4)=28 = 53, dim(Omega_3)=54, exact=False
+    p=4: rank(d_4)=28 + rank(d_5)=17 = 45, dim(Omega_4)=45, exact=True
+
+  Example #5: beta=[np.int64(1), 0, 0, np.int64(1), 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=23 = 38, dim(Omega_2)=38, exact=True
+    p=3: rank(d_3)=23 + rank(d_4)=21 = 44, dim(Omega_3)=45, exact=False
+    p=4: rank(d_4)=21 + rank(d_5)=12 = 33, dim(Omega_4)=33, exact=True
+
+For beta_3 = 0 comparison:
+
+  beta=[np.int64(1), 0, 0, 0, 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=22 = 37, dim(Omega_2)=37, exact=True
+    p=3: rank(d_3)=22 + rank(d_4)=18 = 40, dim(Omega_3)=40, exact=True
+    p=4: rank(d_4)=18 + rank(d_5)=8 = 26, dim(Omega_4)=26, exact=True
+
+  beta=[np.int64(1), 0, 0, 0, 0, 0]
+    p=2: rank(d_2)=15 + rank(d_3)=21 = 36, dim(Omega_2)=36, exact=True
+    p=3: rank(d_3)=21 + rank(d_4)=17 = 38, dim(Omega_3)=38, exact=True
+    p=4: rank(d_4)=17 + rank(d_5)=7 = 24, dim(Omega_4)=24, exact=True
+
+======================================================================
+n=6: EXHAUSTIVE beta_3 CHECK
+======================================================================
+  beta_3!=0: T#87 scores=(1, 1, 1, 4, 4, 4) beta=[np.int64(1), 0, 0, np.int64(1), 0]
+  beta_3!=0: T#356 scores=(1, 1, 1, 4, 4, 4) beta=[np.int64(1), 0, 0, np.int64(1), 0]
+  beta_3!=0: T#567 scores=(1, 1, 1, 4, 4, 4) beta=[np.int64(1), 0, 0, np.int64(1), 0]
+  5000/32768 (39s) b2_nz=0 b3_nz=43
+  10000/32768 (81s) b2_nz=0 b3_nz=94
+  15000/32768 (128s) b2_nz=0 b3_nz=152
+  20000/32768 (155s) b2_nz=0 b3_nz=194
+  25000/32768 (179s) b2_nz=0 b3_nz=249
+  30000/32768 (201s) b2_nz=0 b3_nz=296
+
+n=6: (212s)
+  beta_2 != 0: 0/32768
+  beta_3 != 0: 320/32768
+
+
+Done.
