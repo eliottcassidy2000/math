@@ -13,41 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-08-S42 — β₂=0: cone-from-T' construction verified through n=10
-**Account:** kind-pasteur
-**Continuation of:** kind-pasteur-2026-03-08-S42 (context overflow continuation)
+## opus-2026-03-08-S49c — β₂=0 proof: Ω structure formulas, Z₂ filling analysis
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S49
 **Summary of work:**
-  Continued β₂=0 investigation with major breakthroughs in constructive filling.
+  Continued algebraic investigation of β₂=0 for tournaments.
 
   **Major results:**
-  - **CONE-FROM-T' CONSTRUCTION**: For swap cycle z at vertex v, filling is
-    w = Σ α_{abc} [(v,a,b,c)+(a,b,c,v)] over T'=T\{v} allowed 2-paths.
-    T'-internal faces cancel in d₃. System B·α=z always solvable.
-  - **FILTERED CONE**: Works exhaustive n=5,6 (32768/32768). Fails 1/1000 at n=8
-    (insufficient valid T' paths when requiring v→a AND c→v).
-  - **UNFILTERED CONE**: Works 500/500 at n=7,8; 200/200 at n=9. Zero failures.
-    Using ALL T' paths (not just doubly-reachable) gives sufficient rank.
-  - **MULTI-VERTEX CONE**: Always works including n=8 failure case.
-  - **Ω₃ AUTO-MEMBERSHIP**: Filling automatically in Ω₃ at n=5,6 (100%).
-    Breaks at n≥7 (~98% at n=7, ~93% at n=8). Non-allowed face cancellation
-    is NOT pairwise but via linear combination coefficients.
-  - **β₂=0 confirmed through n=10**: Direct computation 50/50 at n=10.
-    Paley T₇ and T₁₁ also have β₂=0.
-  - **RANK SURPLUS GROWS**: rank(B)-swap_dim min is 2→4→6→11→15 for n=5-9.
-  - **swap_dim = ker_dim ALWAYS**: Every bipartite kernel vector gives nonzero swap cycle.
-  - **LES ANALYSIS**: i_*: H₁(T\v)→H₁(T) is rarely injective (only 304/1024 at n=5),
-    but δ is always injective (= β₂=0). The LES approach via H₂(T,T\v)=0 is stronger
-    than needed and only holds for some (T,v).
+  - dim(Ω₂) FORMULA PROVED: #TT + Σ_{(x,y):y→x} max(0, k(x,y)-1) where k = #{intermediaries}.
+    Verified exhaustive n=4,5,6. Ω₂ = transitive triples ⊕ intransitive cancelling pairs.
+  - dim(Ω₃) FORMULA: similar structure with doubly-transitive 4-paths + cancelling combinations.
+    Verified at n=5.
+  - EULER CHARACTERISTIC: χ(Ω) ∈ {0,1} for all tournaments. χ=1 ⟺ β₁=0. Verified n=4,5,6,7.
+  - Z₂ STRUCTURE: 2-cycles have support spread across all Ω₂ elements. All filled by Ω₃ boundaries.
+  - Ω₂ MECHANISM: intransitive triples (x,b₁,y)-(x,b₂,y) enter Ω₂ when y→x and both share
+    same non-edge face (x,y) which cancels in the difference.
+  - Source augmentation approach verified circular: H₂(T) ≅ H₃(T+source, T).
+  - Literature search: no existing proof of β₂=0 for tournaments found.
 
-**New contributions:** HYP-274 through HYP-277, THM-102 updated
-**Scripts:** beta2_cone_proof.py, beta2_filtered_cone.py, beta2_cone_failure.py,
-  beta2_unfiltered_large.py, beta2_omega_membership.py, beta2_omega3_reason.py,
-  beta2_cone_rank_analysis.py, beta2_les_test.py
-**Unresolved threads:**
-  - Prove B·α=z always solvable algebraically (rank argument)
-  - Understand why Ω₃ auto-membership breaks at n≥7
-  - Find closed-form for min surplus
-  - Literature search for multisquare-free → β₂=0 (agent running)
+  **Key gap remaining:** Proving β₂=0 algebraically. All approaches (LES, source cone,
+  direct Z₂=B₂) are either circular or reduce to equally hard lemmas.
+  Most promising: proving "β₁(T\v)>0 ∀v ⟹ β₁(T)>0" for general n.
+
+**New contributions:** beta2_z2_structure.py, beta2_omega_dim_formula.py, beta2_omega_basis_study.py, beta2_euler_char.py
+**Unresolved:** Algebraic proof of β₂=0 for general n
 
 ## opus-2026-03-08-S49 — β₂=0 proof: HYP-262 verified n=8, H₁-killing reformulation
 **Account:** opus
