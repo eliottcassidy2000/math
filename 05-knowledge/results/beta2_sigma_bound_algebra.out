@@ -1,0 +1,84 @@
+======================================================================
+Σ h₂_rel vs Σ β₁(T\v) ANALYSIS
+======================================================================
+
+n=5: 1024 tournaments in 3s
+
+  β₁(T) distribution: {0: 720, 1: 304}
+
+  Joint (Σβ₁(T\v), Σh₂_rel):
+    Σβ₁=0, Σh₂_rel=0: 240 tournaments (rate=0.00)
+    Σβ₁=1, Σh₂_rel=1: 240 tournaments (rate=1.00)
+    Σβ₁=2, Σh₂_rel=2: 120 tournaments (rate=1.00)
+    Σβ₁=3, Σh₂_rel=0: 160 tournaments (rate=0.00)
+    Σβ₁=3, Σh₂_rel=3: 120 tournaments (rate=1.00)
+    Σβ₁=4, Σh₂_rel=0: 120 tournaments (rate=0.00)
+    Σβ₁=5, Σh₂_rel=0: 24 tournaments (rate=0.00)
+
+  (Σh₂_rel, dim Z₂):
+    Σh₂_rel=0, z2_dim=3: 160
+    Σh₂_rel=0, z2_dim=4: 240
+    Σh₂_rel=0, z2_dim=5: 144
+    Σh₂_rel=1, z2_dim=3: 240
+    Σh₂_rel=2, z2_dim=3: 120
+    Σh₂_rel=3, z2_dim=3: 120
+
+  (Σh₂_rel, dim Ω₂):
+    Σh₂_rel=0, d₂=8: 40
+    Σh₂_rel=0, d₂=9: 240
+    Σh₂_rel=0, d₂=10: 264
+    Σh₂_rel=1, d₂=9: 240
+    Σh₂_rel=2, d₂=9: 120
+    Σh₂_rel=3, d₂=9: 120
+  n=6: 5000/32768 (26s)
+  n=6: 10000/32768 (53s)
+  n=6: 15000/32768 (81s)
+  n=6: 20000/32768 (108s)
+  n=6: 25000/32768 (136s)
+  n=6: 30000/32768 (162s)
+
+n=6: 32768 tournaments in 177s
+
+  β₁(T) distribution: {0: 27968, 1: 4800}
+
+  Joint (Σβ₁(T\v), Σh₂_rel):
+    Σβ₁=0, Σh₂_rel=0: 8480 tournaments (rate=0.00)
+    Σβ₁=1, Σh₂_rel=1: 7968 tournaments (rate=1.00)
+    Σβ₁=2, Σh₂_rel=2: 7200 tournaments (rate=1.00)
+    Σβ₁=3, Σh₂_rel=3: 4320 tournaments (rate=1.00)
+    Σβ₁=4, Σh₂_rel=0: 1920 tournaments (rate=0.00)
+    Σβ₁=5, Σh₂_rel=0: 1920 tournaments (rate=0.00)
+    Σβ₁=6, Σh₂_rel=0: 960 tournaments (rate=0.00)
+
+  (Σh₂_rel, dim Z₂):
+    Σh₂_rel=0, z2_dim=8: 80
+    Σh₂_rel=0, z2_dim=9: 7920
+    Σh₂_rel=0, z2_dim=10: 2160
+    Σh₂_rel=0, z2_dim=11: 720
+    Σh₂_rel=0, z2_dim=12: 1440
+    Σh₂_rel=0, z2_dim=13: 720
+    Σh₂_rel=0, z2_dim=15: 240
+    Σh₂_rel=1, z2_dim=8: 480
+    Σh₂_rel=1, z2_dim=9: 5760
+    Σh₂_rel=1, z2_dim=10: 1728
+    Σh₂_rel=2, z2_dim=9: 720
+    Σh₂_rel=2, z2_dim=10: 5760
+    Σh₂_rel=2, z2_dim=11: 720
+    Σh₂_rel=3, z2_dim=11: 4320
+
+  (Σh₂_rel, dim Ω₂):
+    Σh₂_rel=0, d₂=18: 1280
+    Σh₂_rel=0, d₂=19: 7440
+    Σh₂_rel=0, d₂=20: 1920
+    Σh₂_rel=0, d₂=21: 1680
+    Σh₂_rel=0, d₂=22: 720
+    Σh₂_rel=0, d₂=24: 240
+    Σh₂_rel=1, d₂=18: 480
+    Σh₂_rel=1, d₂=19: 5760
+    Σh₂_rel=1, d₂=20: 1728
+    Σh₂_rel=2, d₂=19: 720
+    Σh₂_rel=2, d₂=20: 5760
+    Σh₂_rel=2, d₂=21: 720
+    Σh₂_rel=3, d₂=21: 4320
+
+Done.
