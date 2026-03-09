@@ -35,6 +35,7 @@ typedef enum {
     SEQ_A000568, SEQ_A000273, SEQ_A000595, SEQ_A000088,
     SEQ_A000666, SEQ_A001174, SEQ_A002785, SEQ_A000171,
     SEQ_A003086, SEQ_A005639, SEQ_A002499, SEQ_A002854,
+    SEQ_A083670,
 } SeqType;
 
 static SeqType seq_type;
@@ -120,6 +121,7 @@ static long long compute_edges(int *pk, int *pm, int depth) {
                 self_term += (long long)mr * (r / 2 + 1);
                 break;
             case SEQ_A001174:
+            case SEQ_A083670:
                 /* sum floor((v_i-1)/2) */
                 self_term += (long long)mr * ((r - 1) / 2);
                 break;
@@ -167,6 +169,7 @@ static long long compute_edges(int *pk, int *pm, int depth) {
             edge_val = gcd_sum + self_term;
             break;
         case SEQ_A001174:
+        case SEQ_A083670:
             edge_val = gcd_sum + self_term;
             break;
         case SEQ_A002785:
@@ -210,6 +213,11 @@ static void compute_extra(mpz_t result, int *pm, int depth) {
         for (int i = 0; i < depth; i++) total_parts += pm[i];
         mpz_set_ui(result, global_n);
         mpz_mul_2exp(result, result, 2 * total_parts);  /* n * 4^(#parts) */
+    }
+    if (seq_type == SEQ_A083670) {
+        int total_parts = 0;
+        for (int i = 0; i < depth; i++) total_parts += pm[i];
+        mpz_mul_2exp(result, result, total_parts);  /* 2^(#cycles) for self-loops */
     }
 }
 
@@ -334,7 +342,7 @@ static void *thread_worker(void *arg) {
 
 int main(int argc, char *argv[]) {
     if (argc < 3) {
-        fprintf(stderr, "Usage: %s <seq: 568|273|595|88|666|1174|2785|171|3086|5639|2499|2854> <n> [threads]\n", argv[0]);
+        fprintf(stderr, "Usage: %s <seq: 568|273|595|88|666|1174|2785|171|3086|5639|2499|2854|83670> <n> [threads]\n", argv[0]);
         return 1;
     }
 
@@ -361,6 +369,7 @@ int main(int argc, char *argv[]) {
         case 5639: seq_type = SEQ_A005639; partition_target = n; odd_parts_only = 0; base_val = 3; break;
         case 2499: seq_type = SEQ_A002499; partition_target = n; odd_parts_only = 0; break;
         case 2854: seq_type = SEQ_A002854; partition_target = n; odd_parts_only = 0; break;
+        case 83670: seq_type = SEQ_A083670; partition_target = n; odd_parts_only = 0; base_val = 3; break;
         default:
             fprintf(stderr, "Unknown sequence: %d\n", seq_id);
             return 1;
@@ -440,6 +449,9 @@ int main(int argc, char *argv[]) {
         case SEQ_A002854:
             /* gcd_sum + self + 1 ≤ C(pt,2)*pt + pt/2 + 1 */
             max_t_val = pt * (pt - 1) / 2 + pt / 2 + 2; break;
+        case SEQ_A083670:
+            /* same pair orbits as A001174 */
+            max_t_val = pt * (pt - 1) / 2 + pt + 1; break;
         default:
             max_t_val = pt * pt + 1;
     }
