@@ -1,0 +1,220 @@
+======================================================================
+CAN b1(T)=0 WITH ALL b1(T\v)=1?
+======================================================================
+
+If b1(T)=0, HYP-278 reduces to: NOT ALL of b1(T\v) are 1.
+i.e., there exists v with b1(T\v) = 0.
+
+Testing this exhaustively at n=5,6 and sampled at larger n.
+
+
+n=5 (1s):
+  b1=0 tournaments: 720/1024
+  b1=1 tournaments: 304/1024
+  Among b1=0: ALL T\v have b1=0: 240/720
+  Among b1=0: ALL T\v have b1=1: 0/720 (none)
+  Sum(b1(T\v)) distribution for b1=0 tournaments:
+    Sum=0: 240
+    Sum=1: 240
+    Sum=2: 120
+    Sum=3: 120
+
+n=6 (71s):
+  b1=0 tournaments: 27968/32768
+  b1=1 tournaments: 4800/32768
+  Among b1=0: ALL T\v have b1=0: 8480/27968
+  Among b1=0: ALL T\v have b1=1: 0/27968 (none)
+  Sum(b1(T\v)) distribution for b1=0 tournaments:
+    Sum=0: 8480
+    Sum=1: 7968
+    Sum=2: 7200
+    Sum=3: 4320
+
+======================================================================
+SAMPLED VERIFICATION at n=7-12
+======================================================================
+  n=7: trial 125/500 (0s)
+  n=7: trial 375/500 (1s)
+  n=7: trial 500/500 (2s)
+n=7 (2s): b1=0 tested: 479
+  All b1(T\v)=1: 0/479
+  Some b1(T\v)=0: 479/479
+  Min fraction of good vertices: 0.571
+  n=8: trial 50/200 (0s)
+  n=8: trial 100/200 (0s)
+  n=8: trial 150/200 (1s)
+  n=8: trial 200/200 (1s)
+n=8 (1s): b1=0 tested: 198
+  All b1(T\v)=1: 0/198
+  Some b1(T\v)=0: 198/198
+  Min fraction of good vertices: 0.625
+  n=9: trial 25/100 (0s)
+  n=9: trial 50/100 (1s)
+  n=9: trial 75/100 (1s)
+  n=9: trial 100/100 (2s)
+n=9 (2s): b1=0 tested: 100
+  All b1(T\v)=1: 0/100
+  Some b1(T\v)=0: 100/100
+  Min fraction of good vertices: 0.889
+  n=10: trial 12/50 (1s)
+  n=10: trial 24/50 (2s)
+  n=10: trial 36/50 (2s)
+  n=10: trial 48/50 (3s)
+n=10 (3s): b1=0 tested: 50
+  All b1(T\v)=1: 0/50
+  Some b1(T\v)=0: 50/50
+  Min fraction of good vertices: 0.900
+  n=11: trial 7/30 (2s)
+  n=11: trial 14/30 (3s)
+  n=11: trial 21/30 (5s)
+  n=11: trial 28/30 (6s)
+n=11 (6s): b1=0 tested: 30
+  All b1(T\v)=1: 0/30
+  Some b1(T\v)=0: 30/30
+  Min fraction of good vertices: 1.000
+  n=12: trial 3/15 (1s)
+  n=12: trial 6/15 (1s)
+  n=12: trial 9/15 (2s)
+  n=12: trial 12/15 (2s)
+  n=12: trial 15/15 (3s)
+n=12 (3s): b1=0 tested: 15
+  All b1(T\v)=1: 0/15
+  Some b1(T\v)=0: 15/15
+  Min fraction of good vertices: 1.000
+
+======================================================================
+FRACTION OF GOOD VERTICES WHEN b1(T)=0
+======================================================================
+At what rate do b1(T\v)=0 vertices appear in b1(T)=0 tournaments?
+
+n=5: 720 tournaments with b1=0
+  #good vertices | count | fraction
+  2/5            |   120 | 0.1667
+  3/5            |   120 | 0.1667
+  4/5            |   240 | 0.3333
+  5/5            |   240 | 0.3333
+  MINIMUM good vertices: 2/5
+
+n=6: 27968 tournaments with b1=0
+  #good vertices | count | fraction
+  3/6            |  4320 | 0.1545
+  4/6            |  7200 | 0.2574
+  5/6            |  7968 | 0.2849
+  6/6            |  8480 | 0.3032
+  MINIMUM good vertices: 3/6
+
+======================================================================
+SUM_v b1(T\v) FORMULA
+======================================================================
+
+Sum_v b1(T\v) = Sum_v [(n-2)(n-3)/2 - rk(d_2(T\v))]
+              = n*(n-2)(n-3)/2 - Sum_v rk(d_2(T\v))
+
+rk(d_2(T)) = (n-1)(n-2)/2 - b1(T)
+
+Sum_v drop(v) = n*rk(d_2(T)) - Sum_v rk(d_2(T\v))
+              = n*[(n-1)(n-2)/2 - b1] - [n*(n-2)(n-3)/2 - Sum_v b1(T\v)]
+              = n(n-2)[(n-1)-(n-3)]/2 - n*b1 + Sum_v b1(T\v)
+              = n(n-2) - n*b1 + Sum_v b1(T\v)
+
+So Sum_v b1(T\v) = Sum_v drop(v) - n(n-2) + n*b1
+
+For b1=0: Sum_v b1(T\v) = Sum_v drop(v) - n(n-2) = #bad_vertices
+
+Let's verify and see if there's a nice formula for Sum_v b1(T\v).
+
+
+n=5: Sum_v b1(T\v) distribution for b1(T)=0:
+  Sum=0: 240
+  Sum=1: 240
+  Sum=2: 120
+  Sum=3: 120
+  Mean: 1.167
+  Max: 3
+
+  By score sequence:
+    (0, 1, 2, 3, 4): sum in {0} (count=120)
+    (0, 1, 3, 3, 3): sum in {0} (count=40)
+    (0, 2, 2, 2, 4): sum in {0} (count=40)
+    (0, 2, 2, 3, 3): sum in {1} (count=120)
+    (1, 1, 1, 3, 4): sum in {0} (count=40)
+    (1, 1, 2, 2, 4): sum in {1} (count=120)
+    (1, 1, 2, 3, 3): sum in {2} (count=120)
+    (1, 2, 2, 2, 3): sum in {3} (count=120)
+
+n=6: Sum_v b1(T\v) distribution for b1(T)=0:
+  Sum=0: 8480
+  Sum=1: 7968
+  Sum=2: 7200
+  Sum=3: 4320
+  Mean: 1.263
+  Max: 3
+
+  By score sequence:
+    (0, 1, 2, 3, 4, 5): sum in {0} (count=720)
+    (0, 1, 2, 4, 4, 4): sum in {0} (count=240)
+    (0, 1, 3, 3, 3, 5): sum in {0} (count=240)
+    (0, 1, 3, 3, 4, 4): sum in {0} (count=720)
+    (0, 2, 2, 2, 4, 5): sum in {0} (count=240)
+    (0, 2, 2, 3, 3, 5): sum in {0} (count=720)
+    (0, 2, 2, 3, 4, 4): sum in {0, 1} (count=1440)
+    (0, 2, 3, 3, 3, 4): sum in {0, 1} (count=1680)
+    (0, 3, 3, 3, 3, 3): sum in {1} (count=144)
+    (1, 1, 1, 3, 4, 5): sum in {0} (count=240)
+    (1, 1, 1, 4, 4, 4): sum in {0} (count=80)
+    (1, 1, 2, 2, 4, 5): sum in {0} (count=720)
+    (1, 1, 2, 3, 3, 5): sum in {0, 1} (count=1440)
+    (1, 1, 2, 3, 4, 4): sum in {0, 1} (count=2160)
+    (1, 1, 3, 3, 3, 4): sum in {1, 2} (count=1440)
+    (1, 2, 2, 2, 3, 5): sum in {0, 1} (count=1680)
+    (1, 2, 2, 2, 4, 4): sum in {1, 2} (count=1440)
+    (1, 2, 2, 3, 3, 4): sum in {0, 1, 2} (count=6480)
+    (1, 2, 3, 3, 3, 3): sum in {2, 3} (count=2160)
+    (2, 2, 2, 2, 2, 5): sum in {1} (count=144)
+    (2, 2, 2, 2, 3, 4): sum in {2, 3} (count=2160)
+    (2, 2, 2, 3, 3, 3): sum in {0, 3} (count=1680)
+
+======================================================================
+3-CYCLE COUNT AND b1
+======================================================================
+
+n=5:
+  c3 | b1=0 | b1=1 | frac_b1_0
+    0 |   120 |     0 | 1.0000
+    1 |   120 |     0 | 1.0000
+    2 |   240 |     0 | 1.0000
+    3 |   120 |   120 | 0.5000
+    4 |   120 |   160 | 0.4286
+    5 |     0 |    24 | 0.0000
+
+n=6:
+  c3 | b1=0 | b1=1 | frac_b1_0
+    0 |   720 |     0 | 1.0000
+    1 |   960 |     0 | 1.0000
+    2 |  2240 |     0 | 1.0000
+    3 |  2880 |     0 | 1.0000
+    4 |  5520 |   720 | 0.8846
+    5 |  3168 |   480 | 0.8684
+    6 |  6480 |  2160 | 0.7500
+    7 |  4320 |   480 | 0.9000
+    8 |  1680 |   960 | 0.6364
+
+n=7:
+  c3 | b1=0 | b1=1 | frac_b1_0
+    0 |     3 |     0 | 1.0000
+    1 |     2 |     0 | 1.0000
+    2 |     5 |     0 | 1.0000
+    3 |     4 |     0 | 1.0000
+    4 |    14 |     0 | 1.0000
+    5 |    18 |     3 | 0.8571
+    6 |    43 |     0 | 1.0000
+    7 |    47 |     4 | 0.9216
+    8 |    62 |     4 | 0.9394
+    9 |    51 |     5 | 0.9107
+   10 |    91 |     3 | 0.9681
+   11 |    68 |     0 | 1.0000
+   12 |    61 |     2 | 0.9683
+   13 |    10 |     0 | 1.0000
+
+
+Done.

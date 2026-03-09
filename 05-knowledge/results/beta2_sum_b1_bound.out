@@ -1,0 +1,171 @@
+======================================================================
+SUM_v b1(T\v) vs TOURNAMENT INVARIANTS
+======================================================================
+
+n=5 (1s): 720 b1=0 tournaments
+  Max Sum_v b1(T\v): 3
+  n-2 = 3
+  floor(n/2) = 2
+  Sum=0: 240
+  Sum=1: 240
+  Sum=2: 120
+  Sum=3: 120
+
+  Bad vertex degree distribution:
+    d_out=0: 120
+    d_out=1: 240
+    d_out=2: 120
+    d_out=3: 240
+    d_out=4: 120
+
+  Good vertex degree distribution:
+    d_out=0: 200
+    d_out=1: 640
+    d_out=2: 1080
+    d_out=3: 640
+    d_out=4: 200
+
+  c3 through bad vertices: Counter({0: 480, 1: 360})
+  c3 through good vertices: Counter({0: 1680, 1: 1080})
+
+  c3(v) vs goodness:
+    c3(v)=0: good=1680, bad=480, good_rate=0.778
+    c3(v)=1: good=1080, bad=360, good_rate=0.750
+
+n=6 (71s): 27968 b1=0 tournaments
+  Max Sum_v b1(T\v): 3
+  n-2 = 4
+  floor(n/2) = 3
+  Sum=0: 8480
+  Sum=1: 7968
+  Sum=2: 7200
+  Sum=3: 4320
+
+  Bad vertex degree distribution:
+    d_out=0: 1824
+    d_out=1: 6480
+    d_out=2: 9360
+    d_out=3: 9360
+    d_out=4: 6480
+    d_out=5: 1824
+
+  Good vertex degree distribution:
+    d_out=0: 4320
+    d_out=1: 19680
+    d_out=2: 42240
+    d_out=3: 42240
+    d_out=4: 19680
+    d_out=5: 4320
+
+  c3 through bad vertices: Counter({1: 23040, 0: 6528, 2: 5760})
+  c3 through good vertices: Counter({1: 67200, 0: 35040, 2: 30240})
+
+  c3(v) vs goodness:
+    c3(v)=0: good=35040, bad=6528, good_rate=0.843
+    c3(v)=1: good=67200, bad=23040, good_rate=0.745
+    c3(v)=2: good=30240, bad=5760, good_rate=0.840
+
+======================================================================
+SUM_v b1(T\v) BOUND at n=7,8 (sampled)
+======================================================================
+  n=7: trial 500/1000 (3s)
+  n=7: trial 750/1000 (4s)
+  n=7: trial 1000/1000 (5s)
+
+n=7 (5s): 951 b1=0 tournaments tested
+  Max Sum_v b1(T\v): 3
+  n-2 = 5, floor(n/2) = 3
+  Distribution:
+    Sum=0: 479 (50.4%)
+    Sum=1: 256 (26.9%)
+    Sum=2: 159 (16.7%)
+    Sum=3: 57 (6.0%)
+  n=8: trial 125/500 (1s)
+  n=8: trial 250/500 (2s)
+  n=8: trial 375/500 (3s)
+
+n=8 (4s): 496 b1=0 tournaments tested
+  Max Sum_v b1(T\v): 3
+  n-2 = 6, floor(n/2) = 4
+  Distribution:
+    Sum=0: 380 (76.6%)
+    Sum=1: 72 (14.5%)
+    Sum=2: 31 (6.2%)
+    Sum=3: 13 (2.6%)
+  n=9: trial 50/200 (1s)
+  n=9: trial 100/200 (1s)
+  n=9: trial 150/200 (2s)
+  n=9: trial 200/200 (3s)
+
+n=9 (3s): 200 b1=0 tournaments tested
+  Max Sum_v b1(T\v): 3
+  n-2 = 7, floor(n/2) = 4
+  Distribution:
+    Sum=0: 180 (90.0%)
+    Sum=1: 17 (8.5%)
+    Sum=2: 2 (1.0%)
+    Sum=3: 1 (0.5%)
+  n=10: trial 25/100 (2s)
+  n=10: trial 50/100 (3s)
+  n=10: trial 75/100 (5s)
+  n=10: trial 100/100 (7s)
+
+n=10 (7s): 100 b1=0 tournaments tested
+  Max Sum_v b1(T\v): 1
+  n-2 = 8, floor(n/2) = 5
+  Distribution:
+    Sum=0: 97 (97.0%)
+    Sum=1: 3 (3.0%)
+
+======================================================================
+SUM_v b1(T\v) vs c3 (3-CYCLE COUNT)
+======================================================================
+
+n=5:
+  c3 | Sum distribution
+    0 | 0:120
+    1 | 0:120
+    2 | 1:240
+    3 | 2:120
+    4 | 3:120
+
+n=6:
+  c3 | Sum distribution
+    0 | 0:720
+    1 | 0:960
+    2 | 0:2240
+    3 | 0:1440, 1:1440
+    4 | 0:2160, 1:3360
+    5 | 1:1728, 2:1440
+    6 | 0:720, 1:1440, 2:4320
+    7 | 2:1440, 3:2880
+    8 | 0:240, 3:1440
+
+======================================================================
+STRUCTURAL ANALYSIS OF BAD VERTICES at n=6
+======================================================================
+Bad vertex patterns (d_out(v), score(T\v), c3(T\v)):
+  (2, (1, 2, 2, 2, 3), 4): 5040
+  (3, (1, 2, 2, 2, 3), 4): 5040
+  (2, (1, 1, 2, 3, 3), 3): 3600
+  (4, (1, 2, 2, 2, 3), 4): 3600
+  (1, (1, 2, 2, 2, 3), 4): 3600
+  (3, (1, 1, 2, 3, 3), 3): 3600
+  (1, (1, 1, 2, 3, 3), 3): 2160
+  (4, (1, 1, 2, 3, 3), 3): 2160
+  (5, (1, 2, 2, 2, 3), 4): 960
+  (0, (1, 2, 2, 2, 3), 4): 960
+  (5, (1, 1, 2, 3, 3), 3): 720
+  (0, (1, 1, 2, 3, 3), 3): 720
+  (4, (2, 2, 2, 2, 2), 5): 720
+  (1, (2, 2, 2, 2, 2), 5): 720
+  (2, (2, 2, 2, 2, 2), 5): 720
+  (3, (2, 2, 2, 2, 2), 5): 720
+  (5, (2, 2, 2, 2, 2), 5): 144
+  (0, (2, 2, 2, 2, 2), 5): 144
+
+  b1(T\v)=1 always correlates with c3(T\v) >= ?
+  c3(T\v) range for bad: 3 to 5
+
+
+Done.

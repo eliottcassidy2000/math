@@ -1,0 +1,78 @@
+======================================================================
+RANK DROP MECHANISM at n=5
+======================================================================
+n=5: good=4280, bad=840
+
+GOOD vertices:
+  drop values: Counter({3: 3840, 2: 440})
+  dim_R2: Counter({6: 2280, 5: 1400, 7: 600})
+  emb_injects: Counter({np.True_: 4280})
+  im(d2_Tv) subset im(d2_T): Counter({np.True_: 4280})
+
+BAD vertices:
+  drop values: Counter({4: 840})
+  dim_R2: Counter({6: 840})
+  emb_injects: Counter({np.True_: 840})
+  im(d2_Tv) subset im(d2_T): Counter({np.True_: 840})
+
+======================================================================
+DETAILED BAD VERTEX EXAMPLE
+======================================================================
+T scores=[1, 1, 2, 2, 4], v=4, d_out=4
+  dim_O2(T)=9, dim_O2(T\v)=3
+  dim_R2=6
+  rk_d2(T)=6, rk_d2(T\v)=2
+  drop=4, threshold=3
+  emb_injects=True
+  im(d2_Tv) subset im(d2_T): True
+  P(v)=[0, 1, 2, 3], Q(v)=[]
+  #2-paths involving v: 6/14
+
+======================================================================
+STRUCTURAL CAUSE OF BAD VERTICES
+======================================================================
+
+MECHANISM:
+  Bad vertex v (drop = n-1): There exist 1-cycles z in Z_1(T\v) that:
+  - Are NOT boundaries in T\v (z not in im(d_2(T\v)))
+  - ARE boundaries in T (z in im(d_2(T))) via v-involving 2-chains
+
+  These are exactly the elements of ker(i_*: H_1(T\v) -> H_1(T)).
+  By LES: dim(ker(i_*)) = dim(H_2(T,T\v)) - beta_2(T).
+  If beta_2(T) = 0: dim(ker(i_*)) = dim(H_2(T,T\v)).
+
+  So: drop = n-2 + dim(ker(i_*)) = n-2 + dim(H_2(T,T\v))
+  Bad means: H_2(T,T\v) != 0.
+
+  BUT: we can't ALWAYS have H_2(T,T\v) = 0 for all v.
+  The key is: there EXISTS v with H_2(T,T\v) = 0.
+
+  This is HYP-278: exists v with b1(T\v) <= b1(T).
+
+======================================================================
+SCORE ANALYSIS OF BAD VERTICES
+======================================================================
+n=5: 840 bad vertices
+Position in sorted degree order (0=min, 4=max):
+  position 0: 300 (35.7%)
+  position 1: 100 (11.9%)
+  position 2: 40 (4.8%)
+  position 3: 100 (11.9%)
+  position 4: 300 (35.7%)
+
+======================================================================
+TIGHTNESS: FRACTION OF GOOD VERTICES
+======================================================================
+
+n=5:
+  b1=0: avg good frac = 0.7667, min = 0.4000
+    distribution: {0.4: 120, 0.6: 120, 0.8: 240, 1.0: 240}
+  b1=1: avg good frac = 1.0000, min = 1.0000
+
+n=6:
+  b1=0: avg good frac = 0.7895, min = 0.5000
+    distribution: {0.5: 4320, 0.67: 7200, 0.83: 7968, 1.0: 8480}
+  b1=1: avg good frac = 1.0000, min = 1.0000
+
+
+Done.

@@ -124,6 +124,43 @@ Key structural facts:
 
 **Structural insight**: dim(Ω₂) = |TT triples| + |NT cancellation dimensions|. Under arc flip, TT triples and NT cancellation pairs rebalance to maintain β₂ = 0.
 
+### H. Inductive Proof via b1 Monotonicity (NEW — Most Promising, S43)
+**Idea**: Prove beta_2 = 0 by induction on n using the LES of (T, T\v).
+
+**LES**: 0 = H_2(T\v) -> H_2(T) -> H_2(T,T\v) -> H_1(T\v) -> H_1(T)
+By induction, H_2(T\v) = 0. So H_2(T) injects into H_2(T,T\v).
+H_2(T,T\v) = 0 iff delta: H_2(T,T\v) -> H_1(T\v) is injective.
+By LES exactness, H_2(T,T\v) = 0 iff i_*: H_1(T\v) -> H_1(T) is injective.
+
+**KEY EQUIVALENCE** (S43): i_* is injective iff b1(T\v) <= b1(T).
+
+**Proof strategy**:
+1. Base case: n <= 4, beta_2 = 0 trivially (no 2-cycles). DONE.
+2. Induction step: Assume beta_2(T') = 0 for all (n-1)-vertex tournaments.
+3. For n-vertex tournament T, find vertex v with b1(T\v) <= b1(T).
+4. Then H_2(T,T\v) = 0, so H_2(T) injects into 0, giving beta_2(T) = 0.
+
+**Computational verification**:
+- n=5: 1024/1024 tournaments have a good vertex (exhaustive)
+- n=6: 32768/32768 tournaments have a good vertex (exhaustive)
+- n=7-12: 100% (sampled, 500-20 trials each)
+
+**Structural discoveries** (S43):
+- **b1(T) in {0, 1}** for ALL tournaments (verified n<=20, zero b1>=2)
+- b1=0 rate: 62%(n=4), 70%(n=5), 85%(n=6), 95%(n=7), 99.2%(n=8), 100%(n>=10 sampled)
+- When b1(T)=1: ALL n vertices are good (b1(T\v) <= 1 = b1(T))
+- When b1(T)=0: most vertices are good (e.g., 84% at n=5, 82% at n=6)
+- Bad vertices: delta_b1 = +1 always (b1 increases by exactly 1)
+- ker(i_*) = C(n-2, 2) when nonzero? (=3 at n=5, =6 at n=6)
+- Rank drop: rk(d_2(T)) - rk(d_2(T\v)) is typically n-2 (good), occasionally n-1 (bad)
+
+**What remains to prove**:
+- HYP-278: Every tournament has a vertex v with b1(T\v) <= b1(T)
+- HYP-279: b1(T) <= 1 for all tournaments (would simplify induction)
+
+**Scripts**: `beta2_relative_induction.py`, `beta2_vertex_analysis.py`,
+`beta2_b1_monotonicity.py`, `beta2_b1_bound.py`, `beta2_rk_d2_formula.py`
+
 ### G. Cone-from-T' Construction (NEW — S42)
 **Idea**: For each vertex v, swap cycles z at v can be filled by
   w = Σ α_{abc} [(v,a,b,c) + (a,b,c,v)]
@@ -153,7 +190,9 @@ where (a,b,c) ranges over allowed 2-paths in T' = T\{v}.
 - Euler characteristic: χ ≠ 1-β₁ when β₃>0 (S43)
 - Naive front/back cone: sign reversal prevents direct formula (S42)
 - Single-vertex filtered cone: fails at n=8 (too few valid T' paths) (S42)
-- LES via i_* injectivity: i_*: H_1(T\v)→H_1(T) rarely injective (S42)
+- LES via i_* injectivity AT EVERY v: fails ~16-18% of (T,v) pairs (S42/S43)
+  But EXISTS good v always (S43, verified n<=12): approach H is correct strategy
+- Cone-from-T' as full Z_2 filler: swap cycles DON'T span Z_2 (0/1024 at n=5, S43)
 
 ## Key Open Question
 
