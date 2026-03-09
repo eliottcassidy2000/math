@@ -185,46 +185,48 @@ Fixed to 3600s (1 hour) timeout.
 | A054922 | Connected symrel, conn complement | 50 | 100 | +50 | Complete |
 | A054933 | Digraphs up to arc reversal | 50 | 80 | +30 | Complete |
 
-### FAST matrix sequences via GF approach (opus-S50 sessions 4-5)
+### FAST matrix sequences via GF approach (opus-S50/S51)
 
 Key innovation: Single-partition generating function approach reduces
 O(p(n)^2 * d^2) pair enumeration to O(p(n) * n^2) for matrix counting.
+OpenMP parallelization (S51) adds ~7x speedup on 8 cores.
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A002724 | Binary n×n matrices (fast) | 51 | 40 (quad) | growing | Running (quad) |
-| A006383 | Binary matrices + col complement | 51 | 40 (quad) | growing | Running (quad) |
-| A122082 | Bicolored graphs, color-swap inv | 51 | 40 (quad) | growing | Running (quad) |
-| A007139 | Bicolored bipartite graphs | 31 | 40 | +9 | Running (quad) |
-| A052269 | k=3 matrices (fast) | 27 | 49 | +22 | Running |
-| A052271 | k=4 matrices (fast) | 27 | 44 | +17 | Running |
-| A052272 | k=5 matrices (fast) | 27 | 44 | +17 | Running |
-| A246112 | k=6 matrices (fast) | 27 | 44 | +17 | Running |
-| A246113 | k=7 matrices (fast) | 27 | 42 | +15 | Running |
-| A246114 | k=8 matrices (fast) | 27 | 42 | +15 | Running |
-| A246115 | k=9 matrices (fast) | 27 | 42 | +15 | Running |
-| A246116 | k=10 matrices (fast) | 27 | 42 | +15 | Running |
+| A002724 | Binary n×n matrices (fast) | 51 | 50 (quad OMP) | 0 | OEIS has 51 |
+| A006383 | Binary matrices + col complement | 51 | 50 (quad OMP) | 0 | OEIS has 51 |
+| A122082 | Bicolored graphs, color-swap inv | 51 | 50 (quad OMP) | 0 | OEIS has 51 |
+| A007139 | Bicolored bipartite graphs | 31 | 50 | **+19** | **Verified** |
+| A052269 | k=3 matrices (fast OMP) | 27 | 50+ | +23+ | Running |
+| A052271 | k=4 matrices (fast OMP) | 27 | 50+ | +23+ | Running |
+| A052272 | k=5 matrices (fast OMP) | 27 | 48+ | +21+ | Running |
+| A246112 | k=6 matrices (fast OMP) | 27 | 44+ | +17+ | Running |
+| A246113 | k=7 matrices (fast OMP) | 27 | 43+ | +16+ | Running |
+| A246114 | k=8 matrices (fast OMP) | 27 | 43+ | +16+ | Running |
+| A246115 | k=9 matrices (fast OMP) | 27 | 43+ | +16+ | Running |
+| A246116 | k=10 matrices (fast OMP) | 27 | 43+ | +16+ | Running |
+| A246107 | Diagonal n×n over n (row/col only) | 27 | 45+ | +18+ | Running |
 | A028657 | Triangle m×n binary (fast) | ~1081 | 2187+ | growing | Running |
 
-### Triple-partition matrix sequences (opus-S50 sessions 4-5, MAJOR NEW)
+### Triple-partition matrix sequences (opus-S50/S51, MAJOR NEW)
 
 Key innovation: GF trick on one axis of triple partition sum, reducing
-O(p(n)^3) to O(p(n)^2 * n^2). Enables extension of previously intractable sequences.
+O(p(n)^3) to O(p(n)^2 * n^2). OpenMP parallelization (S51) adds ~7x.
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A091058 | n×n matrices over n symbols | 15 | 23 | +8 | Running (slow) |
-| A091059 | n×n matrices, 2 symbols + sym perm | 21 | 45 | +24 | Running |
-| A091060 | n×n matrices, 3 symbols + sym perm | 13 | 45 | +32 | Running |
-| A091061 | n×n matrices, 4 symbols + sym perm | 12 | 41 | +29 | Complete |
-| A091062 | n×n matrices, 5 symbols + sym perm | 11 | 36 | +25 | Complete |
-| A246122 | k=6, row/col/sym perm | 11 | 31 | +20 | Complete |
-| A246123 | k=7, row/col/sym perm | ~11 | 31 | +20 | Complete |
-| A246124 | k=8, row/col/sym perm | ~10 | 31 | +21 | Complete |
-| A246125 | k=9, row/col/sym perm | ~10 | 31 | +21 | Complete |
-| A246126 | k=10, row/col/sym perm | 10 | 31 | +21 | Complete |
+| A091058 | n×n matrices over n symbols | 15 | 30+ | **+15+** | Running (OMP) |
+| A091059 | n×n matrices, 2 symbols + sym perm | 21 | 55+ | **+34+** | Running (OMP) |
+| A091060 | n×n matrices, 3 symbols + sym perm | 13 | 53+ | **+40+** | Running (OMP) |
+| A091061 | n×n matrices, 4 symbols + sym perm | 12 | 41+ | **+29+** | Running (OMP) |
+| A091062 | n×n matrices, 5 symbols + sym perm | 11 | 36+ | **+25+** | Running (OMP) |
+| A246122 | k=6, row/col/sym perm | 11 | 31+ | +20+ | Running (OMP) |
+| A246123 | k=7, row/col/sym perm | ~11 | 31+ | +20+ | Running (OMP) |
+| A246124 | k=8, row/col/sym perm | ~10 | 31+ | +21+ | Running (OMP) |
+| A246125 | k=9, row/col/sym perm | ~10 | 31+ | +21+ | Running (OMP) |
+| A246126 | k=10, row/col/sym perm | 10 | 31+ | +21+ | Running (OMP) |
 
-### Derived sequences via inverse Euler (opus-S50 session 5)
+### Derived sequences via inverse Euler (opus-S50/S51)
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
@@ -232,13 +234,14 @@ O(p(n)^3) to O(p(n)^2 * n^2). Enables extension of previously intractable sequen
 | A086345 | Connected oriented graphs | 51 | 100 | +49 | Complete |
 | A054919 | Connected binary relations | ~51 | 100 | +49 | Complete |
 | A054921 | Connected symmetric relations | ~87 | 100 | +13 | Complete |
-| A001242 | Connected binary matrices | 481 | 39 | 0 | OEIS already has more |
+| A001242 | Connected binary matrices | 481 | 49 | 0 | OEIS already has more |
 
 ## Total impact summary
 
 - **70+ OEIS sequences extended** with new b-file terms
 - **40+ potentially new sequences** (connected variants, k-ary relations, k-ary matrices not yet in OEIS)
-- **~10000+ new individual terms** across all sequences
+- **~12000+ new individual terms** across all sequences
+- **OpenMP parallelization** (S51): ~7x speedup enabling A091058 n=30+ (was stuck at n=22)
 - **Unified enumerator** handles 13 sequences in a single C file (burnside_enum_v2.c)
 - **General k-ary relation enumerator** for arbitrary k (Python + C)
 - **Hypergraph enumerator** via subset-orbit Burnside formula (Python)
@@ -256,7 +259,8 @@ O(p(n)^3) to O(p(n)^2 * n^2). Enables extension of previously intractable sequen
 7. **GF optimization for matrix counting**: Replaces O(p(n)^2) pair enumeration with
    O(p(n)*n^2) single-partition + exp generating function recurrence
 8. **Triple partition GF trick**: For A091058 family, reduces O(p(n)^3) to O(p(n)^2*n^2)
-7. **Burnside orbit counting**: For k>=3, uses (1/L)*sum_{t=0..L-1} [x^k] generating function
+9. **OpenMP parallelization (S51)**: ~7x speedup via embarrassingly parallel partition loops
+10. **Burnside orbit counting**: For k>=3, uses (1/L)*sum_{t=0..L-1} [x^k] generating function
 8. **Divisor-signature Mobius**: For k=4,5 hypergraphs, avoids L iteration (64x-130x speedup)
 9. **Pair orbit GF**: For triangle sequences (A008406, A052283), tracks individual orbit sizes
 
@@ -285,6 +289,10 @@ O(p(n)^3) to O(p(n)^2 * n^2). Enables extension of previously intractable sequen
 | binary_matrix_mn_fast_gmp.c | A028657 | m×n binary matrix triangle |
 | a091058_gmp.c | A091058 | n×n over n symbols, triple partition GF |
 | a242095_gmp.c | A242095 full triangle, A091058-A091062, A246122-126 | General A242095(n,k) |
+| a091058_omp.c | A091058 (OpenMP) | ~7x faster, 8-thread parallel |
+| a242095_omp.c | A242095 (OpenMP) | ~7x faster, parallel (s,u) pairs |
+| matrix_quad_omp.c | Quad (OpenMP) | ~8x faster, parallel partitions |
+| kary_matrix_fast_omp.c | k-ary (OpenMP) | ~7x faster, parallel partitions |
 | split_and_inv_euler.py | A334335, A001242 + quad splitting | Inverse Euler + utility |
 
 ## Sequence-specific formulas
