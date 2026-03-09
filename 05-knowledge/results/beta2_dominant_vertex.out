@@ -1,0 +1,61 @@
+======================================================================
+b1 vs #FREE COMPONENTS
+======================================================================
+
+n=4: 64 match, 0 mismatch
+
+n=5: 1024 match, 0 mismatch
+
+======================================================================
+n=6 EXHAUSTIVE
+======================================================================
+n=6 (8s): 32768 match, 0 mismatch
+
+======================================================================
+SAMPLED n=7,8
+======================================================================
+n=7 (0s, 500 trials): 500 match, 0 mismatch
+n=8 (0s, 200 trials): 200 match, 0 mismatch
+
+======================================================================
+FREE COMPONENT COUNT DISTRIBUTION
+======================================================================
+
+n=5: #free_components distribution: {0: 720, 1: 304}
+  Max free components: 1
+
+n=6: #free_components distribution: {0: 27968, 1: 4800}
+  Max free components: 1
+
+======================================================================
+FREE COMPONENT ANALYSIS: WHY AT MOST 1?
+======================================================================
+n=5: External vertex score patterns for free cycles:
+  External scores (1, 1): 360
+  External scores (1, 2): 720
+  External scores (2, 2): 360
+
+======================================================================
+DISJOINT FREE CYCLES AT n=6
+======================================================================
+  DISJOINT FREE: bits=280
+    C1=(0, 4, 2), C2=(1, 5, 3)
+    C1 in component 0 (size 8)
+    C2 in component 0 (size 8)
+    b1=1
+  DISJOINT FREE: bits=284
+    C1=(0, 3, 2), C2=(1, 5, 4)
+    C1 in component 0 (size 8)
+    C2 in component 0 (size 8)
+    b1=1
+  DISJOINT FREE: bits=344
+    C1=(0, 4, 3), C2=(1, 5, 2)
+    C1 in component 0 (size 8)
+    C2 in component 0 (size 8)
+    b1=0
+
+n=6: 2640 tournaments with disjoint free cycles
+  (out of 16560 with >= 2 free cycles)
+
+
+Done.
