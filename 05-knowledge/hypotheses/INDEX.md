@@ -47,6 +47,13 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-346 | beta_4>0 requires self-complementary score sequence | ALL 25 beta_4>0 cases at n=8 (2000 samples) have SC scores. Very strong constraint | kind-pasteur-S45 |
 | HYP-347 | beta_1+beta_5 coexistence at n=8 | Found 1/2000: betti=[1,1,0,0,0,1,0,0], scores=(3,3,3,3,4,4,4,4), c3=20, chi=-1. Extremely rare | kind-pasteur-S45 |
 | HYP-348 | beta_3+beta_4 coexistence rate ~0.15% at n=8 | 3/2000 with profile [1,0,0,1,1,0,0,0]. All have SC scores | kind-pasteur-S45 |
+| HYP-349 | rank(d_4) gap = ker(d_3) - rank(d_4) is always 0 or 1 | Exhaustive n=6 (32448 gap=0, 320 gap=1). Sampled n=7 (925/75), n=8 (255/45). Equivalent to beta_3 in {0,1} | kind-pasteur-S46 |
+| HYP-350 | Good vertex existence for beta_3: exists v with beta_3(T\v)=0 when beta_3(T)>0 | Exhaustive n=6 (320/320), sampled n=7 (34/34), n=8 (31/31). 100% at all tested n | kind-pasteur-S46 |
+| HYP-351 | dim H_3(T,T\v) <= 1 for ALL tournaments T and ALL vertices v | Exhaustive n=6: ALL 1920 pairs give dim=1 (for beta_3>0 T). n=7: dim in {0,1}. Max dim=1 | kind-pasteur-S46 |
+| HYP-352 | LES isomorphism: beta_3(T\v)=0 implies beta_3(T) = dim H_3(T,T\v) | n=6 exhaustive: 1920/1920 perfect match. Follows from H_2(T\v)=0 + LES exactness | kind-pasteur-S46 |
+| HYP-353 | beta_3 completely fragile at n=6: ALL 6 deletions give beta_3=0 | 320/320 exhaustive. At n=7: 24/44 fragile, 16/44 have 1 surviving, 4/44 have 2 surviving | kind-pasteur-S46 |
+| HYP-354 | Quotient proportionality: all ker(d_3) basis vectors project proportionally to H_3 | Exhaustive n=6 Type B (240/240). Cokernel vector in ker(d_3) has dim 7 at n=6, varies by tournament | kind-pasteur-S46 |
+| HYP-355 | H_3 generator at n=6 Type B uses ALL C(6,4)=15 vertex 4-subsets (36 paths) | 240/240 Type B. Type A uses 9 paths on 9 subsets. Structure rigid within isomorphism class | kind-pasteur-S46 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
@@ -227,7 +234,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261, HYP-262, HYP-263, HYP-278, HYP-279, HYP-282, HYP-287, HYP-288, HYP-289, HYP-290, HYP-291, HYP-292, HYP-293, HYP-294, HYP-295, HYP-296, HYP-297, HYP-316, HYP-318, HYP-320, HYP-322, HYP-323, HYP-324, HYP-325, HYP-326, HYP-327, HYP-328, HYP-329, HYP-330, HYP-331, HYP-332, HYP-333, HYP-334, HYP-335
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261, HYP-262, HYP-263, HYP-278, HYP-279, HYP-282, HYP-287, HYP-288, HYP-289, HYP-290, HYP-291, HYP-292, HYP-293, HYP-294, HYP-295, HYP-296, HYP-297, HYP-316, HYP-318, HYP-320, HYP-322, HYP-323, HYP-324, HYP-325, HYP-326, HYP-327, HYP-328, HYP-329, HYP-330, HYP-331, HYP-332, HYP-333, HYP-334, HYP-335, HYP-349, HYP-350, HYP-351, HYP-352, HYP-353, HYP-354, HYP-355
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112
