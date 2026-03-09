@@ -13,6 +13,37 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S53 — EXHAUSTIVE beta_3≤1 at n=7; Paley exception discovered
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S52
+**Summary of work:**
+  Major computational session proving beta_3(T) ≤ 1 EXHAUSTIVELY at n=7 (2,097,152 tournaments).
+
+  1. **Score obstruction fails** (HYP-387): 4 score sequences at n=7 are compatible
+     with all 7 deletions having beta_3=1. Score alone can't rule out beta_3=2.
+
+  2. **Paley T_7 discovery** (HYP-388,392): EXHAUSTIVE check reveals 240 tournaments
+     without a good vertex (all deletions have beta_3=1). ALL are labelings of Paley T_7
+     (|Aut|=21, 7!/21=240). But beta_3(T_7)=0! Betti=[1,0,0,0,6,0,0].
+
+  3. **EXHAUSTIVE proof at n=7** (HYP-393): Two-case structure:
+     - Case 1 (2,096,912): Good vertex exists → LES gives beta_3 ≤ 1
+     - Case 2 (240 = Paley): Direct computation → beta_3 = 0
+
+  4. **Iso class characterization** (HYP-389): Exactly 2 isomorphism classes of
+     beta_3=1 at n=6: Type A (80 tours, score 1,1,1,4,4,4) and Type B (240 tours,
+     score 2,2,2,3,3,3).
+
+  5. **Aligned with kind-pasteur-S47**: HYP-380 (i_*-injectivity) provides the algebraic
+     key. Updated proof architecture with Paley correction: i_* has rank 0 (not 1) when
+     beta_3(T)=0 and beta_3(T\v)=1 (Paley case).
+**New contributions:** HYP-387-393, 8 new scripts, exhaustive n=7 verification
+**Scripts:** beta3_score_obstruction.py, beta3_compatible_scores.py, beta3_regular7_deep.py,
+  beta3_les_constraint.py, beta3_score_vertex_relation.py, beta3_score_vertex_n7.py,
+  beta3_seesaw_approach.py, beta3_1_structure_n6.py, beta3_1_isoclass_n7.py,
+  beta3_good_vertex_exhaustive_n7.py, beta3_paley_verify.py
+**Unresolved threads:** Algebraic proof of i_*-injectivity (HYP-380); extension to n=8+
+
 ## opus-2026-03-09-S51i — Quotient R refuted; i_*-injectivity breakthrough from kind-pasteur
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51h
