@@ -1,0 +1,63 @@
+======================================================================
+PART 1: FILTERED CONE at n=5 (EXHAUSTIVE)
+======================================================================
+
+n=5 (0s): 120 swap cycles
+  OK: 1024/1024, Failures: 0
+
+======================================================================
+PART 2: FILTERED CONE at n=6 (EXHAUSTIVE)
+======================================================================
+  5000/32768 (1s) tested=2777 ok=5000 fail=0
+  10000/32768 (3s) tested=6203 ok=10000 fail=0
+  15000/32768 (4s) tested=9765 ok=15000 fail=0
+  20000/32768 (5s) tested=12712 ok=20000 fail=0
+  25000/32768 (7s) tested=16568 ok=25000 fail=0
+  30000/32768 (8s) tested=19620 ok=30000 fail=0
+
+n=6 (9s): 21120 swap cycles
+  OK: 32768/32768, Failures: 0
+
+======================================================================
+PART 3: FILTERED CONE at n=7 (500 random + Paley)
+======================================================================
+  100/500 (0s) tested=225 ok=100 fail=0
+  200/500 (0s) tested=424 ok=200 fail=0
+  300/500 (0s) tested=647 ok=300 fail=0
+  400/500 (0s) tested=833 ok=400 fail=0
+  500/500 (0s) tested=1041 ok=500 fail=0
+
+n=7 (0s): 1048 swap cycles
+  OK: 500/500 random, Paley=OK
+  Failures: 0
+
+  Paley details:
+    v=0: valid=12, rank=10, B_err=3.89e-16, d3_err=4.44e-16
+    v=1: valid=12, rank=10, B_err=6.11e-16, d3_err=6.11e-16
+    v=2: valid=12, rank=10, B_err=1.11e-15, d3_err=1.11e-15
+
+======================================================================
+PART 4: RANK SURPLUS at n=5,6
+======================================================================
+
+n=5: 120 cases with swap cycles
+  rank(B) - swap_dim: min=2, max=2, mean=2.0
+  ALL rank(B) >= swap_dim? YES
+
+  Top patterns (swap_dim, #valid_Tp, rank_B):
+    (1, 4, 3): 120  surplus=2
+
+n=6: 19200 cases with swap cycles
+  rank(B) - swap_dim: min=2, max=5, mean=4.5
+  ALL rank(B) >= swap_dim? YES
+
+  Top patterns (swap_dim, #valid_Tp, rank_B):
+    (1, 8, 6): 5760  surplus=5
+    (1, 6, 5): 4320  surplus=4
+    (1, 7, 6): 4320  surplus=5
+    (2, 9, 6): 1920  surplus=4
+    (1, 4, 3): 1440  surplus=2
+    (1, 9, 6): 1440  surplus=5
+
+
+Done.
