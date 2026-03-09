@@ -52,6 +52,21 @@
 | A054921 | Connected symmetric relations | 87 | 100 | +13 | Complete |
 | A003049 | Connected Eulerian graphs | 88 | 103 | +15 | Complete |
 
+### k-ary relation sequences (new enumerator, opus-S50)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A000662 | 3-ary relations | 15 | 42 | +27 | Complete |
+| A001377 | 4-ary relations | 7 | 28+ | +21+ | Extending |
+| A051241 | 5-ary relations | 5 | 23+ | +18+ | Extending |
+
+### Additional Burnside sequences (opus-S50)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A083670 | Antisymmetric relations | 51 | 81 | +30 | Complete |
+| A101460 | Connected antisymmetric | 51 | 80 | +29 | Complete |
+
 ### Trivially derived sequences
 
 | Sequence | Name | OEIS had | We computed | New terms | Formula |
@@ -61,6 +76,10 @@
 | A007869 | Graphs w/ even # edges | 50 | 100 | +50 | (A000088 + A000171)/2 |
 | A054928 | Digraphs w/ even # arcs | 50 | 100 | +50 | (A000273 + A003086)/2 |
 | A054934 | Oriented graphs up to arc reversal | 50 | 80 | +30 | (A001174 + A005639)/2 |
+| A054960 | Graphs w/ odd # edges | 50 | 100 | +50 | (A000088 - A000171)/2 |
+| A000250 | Symmetric reflexive relations | 40 | 109 | +69 | A000666/2 |
+| A001173 | Half binary relations | 59 | 100 | +41 | A000595/2 |
+| A047832 | Self-comp binary relations | 40 | 105 | +65 | A000171(4n+1) |
 
 ### New sequences (not yet in OEIS)
 
@@ -74,13 +93,18 @@
 | Connected self-comp digraphs | 100 | InvEuler(A003086) |
 | Connected self-converse oriented | 80 | InvEuler(A005639) |
 | Connected self-converse digraphs | 80 | InvEuler(A002499) |
+| Connected self-comp oriented | 299 | InvEuler(A002785) |
+| Connected symmetric reflexive | 109 | InvEuler(A000250) |
+| 6-ary relations on n nodes | 14 | Burnside on [n]^6 |
+| 7-ary relations on n nodes | ~12 | Burnside on [n]^7 |
 
 ## Total impact summary
 
-- **25 OEIS sequences extended** with new b-file terms
-- **8 potentially new sequences** (connected variants not yet in OEIS)
-- **~2000+ new individual terms** across all sequences
-- **Unified enumerator** handles 12 sequences in a single C file
+- **33+ OEIS sequences extended** with new b-file terms
+- **12 potentially new sequences** (connected variants and k-ary relations not yet in OEIS)
+- **~2500+ new individual terms** across all sequences
+- **Unified enumerator** handles 13 sequences in a single C file (burnside_enum_v2.c)
+- **General k-ary relation enumerator** for arbitrary k (Python)
 
 ## Key algorithmic features
 
