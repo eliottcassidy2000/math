@@ -59,6 +59,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-358 | Good vertex selection rule: max c3(v) gives beta_3(T\v)=0 at 97.7% | n=7: 43/44 success. Bad vertices have LOW c3(v) (1-4 vs good's 4-7). Intuition: removing the most cyclic vertex disrupts H_3 | kind-pasteur-S46 |
 | HYP-359 | Bad-vertex TT always rank-critical (for ALL n, not just zero-redundancy) | Exhaustive n=5 (120/120), n=6 (4320/4320). At n=6 redundancy=2-3 but bad-TT still RC. Witness: global 1-form w vanishing on all non-bad columns. | beta2_badtt_rc_n6.py |
 | HYP-360 | At n=6 #bad=3: exactly 3 TTs are RC (1 BAD + 2 MIXED), rest redundant | Exhaustive: BAD=1.00 RC, MIXED=1.33 RC avg, GOOD=0.67 RC avg. Total RC=3.00 = redundancy complement | beta2_rc_mechanism.py |
+| HYP-362 | Witness cocycle ζ = H₁ generator of flipped tournament T' | CONFIRMED 100%: n=5 (120/120), n=6 (200/200 sampled). ζ normalized to ⟨ζ,∂_bad⟩=1 is EXACTLY the H₁ class emerging after flip. | beta2_witness_cocycle.py |
+| HYP-363 | #bad = Σ_v β₁(T\v) when β₁(T)=0 | CONFIRMED exhaustive n=5 (720/720), n=6 (27968/27968). Each bad vertex contributes exactly 1 to the sum. | beta2_witness_cocycle.py |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

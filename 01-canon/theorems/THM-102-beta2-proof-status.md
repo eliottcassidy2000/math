@@ -171,8 +171,13 @@ proof of THM-103 doesn't directly yield the deletion bound.
   mixed TTs span all of V (rank 3, not ≤2). Bad-TT proj lies inside mixed span.
   The star-cocycle constraint does NOT restrict mixed TTs to dim ≤ 2.
   Rank-criticality depends on the FULL edge-space structure, not just bad edges.
-- **Witness cocycle**: There exists a global 1-form w (supported on ALL edges) that
+- **Witness cocycle ζ**: There exists a global 1-form ζ (supported on ALL edges) that
   evaluates to 0 on all non-bad-TT columns and ≠0 on the bad-TT column.
+- **ζ = H₁ of flipped T** (HYP-362): ζ is EXACTLY the H₁ generator of the tournament
+  obtained by flipping the source→sink edge among bad vertices. Verified 100% at n=5,6.
+  This means RC = "the would-be H₁ class already distinguishes the bad-TT column."
+- **|bad| ≤ 3 reduces to HYP-282**: #bad = Σ_v β₁(T\v) when β₁=0 (exact identity,
+  HYP-363). So proving Σ_v β₁(T\v) ≤ 3 (HYP-282) immediately gives |bad| ≤ 3.
 
 See THM-103 for the full proof.
 

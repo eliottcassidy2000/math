@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51c — Witness cocycle ζ = H₁ of flipped T
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51b
+**Summary of work:**
+  Deep analysis of witness cocycle ζ that certifies bad-TT rank-criticality.
+
+  **Major findings:**
+  - **ζ = H₁ of flipped T** (HYP-362): 100% match at n=5 (120/120), n=6 (200/200)
+    The witness cocycle is literally the homology class that would emerge after flipping
+  - **#bad = Σ_v β₁(T\v) when β₁=0** (HYP-363): exact identity, 0 violations n=5,6
+  - **|bad| ≤ 3 reduces to HYP-282**: proving Σ β₁(T\v) ≤ 3 gives |bad| ≤ 3 for free
+  - ζ has exactly 1 independent direction (rank_drop=1 always for #bad=3)
+  - ζ is NOT a 1-cocycle of T (only of T minus bad-TT)
+
+**New contributions:** HYP-362, HYP-363, updated THM-102
+**Unresolved threads:** Prove HYP-282 (Σ β₁(T\v) ≤ 3) algebraically; this closes |bad|≤3
+
 ## opus-2026-03-09-S51 — Flip obstruction deep dive + rank-criticality at n=6
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S50 (context continuation)
