@@ -159,6 +159,20 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-299 | β₁ * β₃ = 0 for ALL tournaments (mutual exclusivity) | CONFIRMED: n=6 (0/32768 exhaustive), n=7 (0/500 sampled), n=8 (0/300 sampled). β₁ and β₃ never both positive. Equivalently chi = 1 - β₁ - β₃ >= 0 for generic tournaments. | beta1_beta3_exclusion.py, beta1_beta3_n8.py |
 | HYP-300 | β₁, β₃ each bounded by 1 for all tournaments | CONFIRMED: n=5-8 sampled/exhaustive. max(β₁)=1, max(β₃)=1 always. β₄ can be > 1 (up to 6 for Paley T₇, up to 5 at n=8). | betti_n7_full.py, beta1_beta3_n8.py |
 | HYP-301 | β₁>0 requires strong connectivity | CONFIRMED exhaustive n=6: 100% of β₁>0 are SC. β₃>0 does NOT require SC (75% SC at n=6). β₁ detects "1-holes" only in SC tournaments. | beta1_beta3_exclusion.py |
+| HYP-302 | Transitive tournament path complex = simplex: dim(Omega_p) = C(n,p+1), chi=1 | CONFIRMED n=3-8. Filling ratio f_p = 1.0 at all p for transitive. All Betti vanish except beta_0=1. | simplex_filling_analysis.py |
+| HYP-303 | Filling ratio f_p = dim(Omega_p)/C(n,p+1) > 1 for p >= 3 at n >= 6 | CONFIRMED: f_3 = 1.048 (n=6), 1.157 (n=7), 1.283 (n=8). Cyclic content inflates beyond simplex. | filling_ratio_formula.py |
+| HYP-304 | H(T_4) = 2*c3 + 1 for ALL 4-vertex tournaments | CONFIRMED exhaustive (64/64). Clean identity: H(transitive)=1, H(cyclic)=3, H(regular)=5. | chi_A_identity.py |
+| HYP-305 | excess_4 = 2*c3*(n-3) for ALL tournaments on n vertices | CONFIRMED n=4-7 exhaustive/sampled. Each 3-cycle in (n-3) 4-subsets; H(T_4) identity gives 2 per cycle. | chi_A_identity.py |
+| HYP-306 | chi_A = sum(-1)^p \|A_p\| is ALWAYS ODD | CONFIRMED n=3-7. All tournaments at all n have odd chi_A. | chi_A_identity.py |
+| HYP-307 | chi_A = 1 at n=4 for ALL tournaments (tournament-independent) | CONFIRMED exhaustive (64/64). Perfect cancellation: 2*c3 - 2*c3 = 0. | chi_A_identity.py |
+| HYP-308 | dim(Omega_2) is NOT determined by c3 alone at n >= 5 | CONFIRMED: (c3=4, score=(1,2,2,2,3)) at n=5 gives Omega_2 in {8,9,10}. Geometric arrangement matters. | omega2_formula.py |
+| HYP-309 | dim(Omega_2) is NOT determined by (c3, score) at n >= 5 | CONFIRMED: same (c3, score) at n=5,6 gives different Omega_2 values. Path complex encodes more than cycle/score data. | omega2_formula.py |
+| HYP-310 | Dimensional crossover: P(beta_1>0) peaks then decays; P(beta_3>0) grows monotonically from d=5 | CONFIRMED: P(b1>0) = 25%, 37.5%, 25%, 15.8%, 5.4%, 1.7% for n=3-8. P(b3>0) = 0, 0.98%, 8.7%, 18.7% for n=5-8. Crossover at d=6. | dimensional_crossover.py |
+| HYP-311 | beta_3 fragility: beta_3>0 disappears under ANY vertex deletion at n=6 | CONFIRMED exhaustive. All 320 beta_3>0 tournaments at n=6 have trivial betti for all 6 deletions. beta_1 can survive deletion (robust). | simplex_face_restriction.py |
+| HYP-312 | chi(T) in {0,1} for ALL tournaments at n <= 7 | CONFIRMED: n=3-7 exhaustive/sampled. chi=0 iff beta_1=1 or beta_3=1. Breaks at n=8 (chi up to 6 from beta_4). | euler_char_scaling.py |
+| HYP-313 | Non-SC tournaments always have chi=1 at n <= 6 | CONFIRMED exhaustive. At n=7, first non-SC with chi=0 appears. | euler_char_scaling.py |
+| HYP-314 | surplus = excess_paths - rank(constraints) exactly for all p | CONFIRMED n=5-7 for p=2,3. Identity is algebraic: dim(Omega_p) = |A_p| - rank(P_p). | local_redei_investigation.py |
+| HYP-315 | corr(surplus, excess_H) increases with n at fixed p | CONFIRMED: p=2 correlation goes 0.53 (n=6) -> 0.87 (n=7). Cyclic content increasingly predicts Omega inflation. | local_redei_investigation.py |
 
 ---
 
@@ -190,6 +204,9 @@ HYP-011, HYP-012, HYP-119, HYP-120, HYP-204, HYP-205, HYP-206
 
 ### Spectral
 HYP-201, HYP-202
+
+### Dimensional meta-patterns (simplex perspective)
+HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310, HYP-311, HYP-312, HYP-313, HYP-314, HYP-315
 
 ---
 
