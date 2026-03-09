@@ -327,6 +327,26 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 **Results:** H mod 4 ≡ 1+2*alpha_1 (mod 4) via OCF. At n=3,4 this equals 1+2*c3 (mod 4) exactly. At n≥5 the c3 formula breaks (5-cycles contribute to alpha_1). H mod 2^k approaches uniform on odd residues as n grows.
 **Impact:** OPEN-Q-008 partially resolved. No deeper 2-adic structure at level of H(T). The mod-4 structure is fully explained by alpha_1 parity via OCF.
 
+### INV-136: Dimensional Meta-Patterns (Tournament = Simplex Orientation)
+**Source:** kind-pasteur-2026-03-09-S44
+**Status:** IN PROGRESS. Core data collected n=3-10.
+**What:** Framing tournaments as binary relations on simplices (T_n = orientation of Delta_{n-1}). Systematic study of how homological invariants scale with dimension d=n-1.
+**Key findings:**
+1. Transitive tournament = contractible simplex: dim(Omega_p) = C(n,p+1) (HYP-302)
+2. Filling ratio f_p = dim(Omega_p)/C(n,p+1) inflates at high p for n>=6 (HYP-303)
+3. H(T_4) = 2*c3+1 for ALL 4-vertex tournaments (HYP-304)
+4. excess_4 = 2*c3*(n-3) universally (HYP-305)
+5. P(beta_1>0) decays exponentially ~exp(-0.755n) (HYP-310)
+6. P(beta_3>0) grows: 0->0.4->7.2->19->23% for n=5-9, may saturate ~25%
+7. Beta_5 NOT YET observed at n=7,8,9 — onset unknown
+8. Chi(T) in {0,1} for n<=7; chi up to 6 at n=8 (HYP-312)
+9. dim(Omega_2) NOT determined by (c3, score) (HYP-308/309)
+10. |A_p| mod 2 = C(n,p+1) mod 2 via local Redei
+11. Poincare polynomial P(T,1)/(2^n-1) grows with n — path complex exceeds simplex
+12. Surplus = excess_paths - rank(constraints) exactly (HYP-314)
+**Scripts:** dimensional_crossover.py, filling_ratio_formula.py, local_redei_investigation.py, euler_char_scaling.py, chi_A_identity.py, omega2_formula.py, betti_rate_scaling.py, poincare_polynomial.py, omega_parity_structure.py, beta5_onset_search.py
+**Next steps:** (1) Find beta_5 onset (check n=10-12, Paley). (2) Formula for filling ratio. (3) Prove beta_1*beta_3=0 (HYP-299). (4) Explain defect rate U-shape.
+
 ---
 
 ## Priority C: References to investigate
