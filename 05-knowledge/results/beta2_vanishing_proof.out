@@ -1,0 +1,68 @@
+======================================================================
+BETA_2 VANISHING: WHY?
+======================================================================
+
+============================================================
+n=5: Detailed chain complex analysis for beta_2
+============================================================
+
+  1024 tournaments checked, ALL beta_2 = 0: True
+
+  ker(d_2) distribution: [np.int64(3), np.int64(4), np.int64(5)]
+  im(d_3) distribution: [np.int64(3), np.int64(4), np.int64(5)]
+  dim(Omega_2) distribution: [8, 9, 10]
+  rank(d_2) distribution: [np.int64(5), np.int64(6)]
+
+  (ker(d_2), im(d_3)) pairs:
+    (3, 3): 640 times, beta_2 = 0
+    (4, 4): 240 times, beta_2 = 0
+    (5, 5): 144 times, beta_2 = 0
+
+============================================================
+n=6: Detailed chain complex analysis for beta_2
+============================================================
+
+  32768 tournaments checked, ALL beta_2 = 0: True
+
+  ker(d_2) distribution: [np.int64(8), np.int64(9), np.int64(10), np.int64(11), np.int64(12), np.int64(13), np.int64(15)]
+  im(d_3) distribution: [np.int64(8), np.int64(9), np.int64(10), np.int64(11), np.int64(12), np.int64(13), np.int64(15)]
+  dim(Omega_2) distribution: [18, 19, 20, 21, 22, 24]
+  rank(d_2) distribution: [np.int64(9), np.int64(10)]
+
+  (ker(d_2), im(d_3)) pairs:
+    (8, 8): 560 times, beta_2 = 0
+    (9, 9): 14400 times, beta_2 = 0
+    (10, 10): 9648 times, beta_2 = 0
+    (11, 11): 5760 times, beta_2 = 0
+    (12, 12): 1440 times, beta_2 = 0
+    (13, 13): 720 times, beta_2 = 0
+    (15, 15): 240 times, beta_2 = 0
+
+======================================================================
+Part 3: THE BIG PICTURE
+======================================================================
+
+If all even Betti vanish (beta_0 = 1 excepted, beta_2 = beta_4 = ... = 0):
+
+  chi = 1 - beta_1 - beta_3 - beta_5 - ...
+
+Observed: chi in {0, 1} at n <= 7.
+  chi = 0 <=> exactly ONE odd beta = 1
+  chi = 1 <=> all beta = 0
+
+Combined with seesaw (adjacent odd bettis exclusive):
+  AT MOST ONE odd beta is nonzero, and when nonzero it equals 1.
+
+This means the path homology of a tournament is EXTRAORDINARILY SIMPLE:
+  H_p(T) = Z  for exactly one odd p (or none)
+  H_0(T) = Z  always (connected)
+  All other H_p = 0
+
+The tournament path homology is either CONTRACTIBLE or has a
+SINGLE odd-dimensional hole of size 1.
+
+Verification at n=7 (sampled):
+  2000 random n=7 tournaments:
+    [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), 0]: 1745 (87.2%), chi=1, type=contractible
+    [np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)]: 151 (7.5%), chi=0, type=H_3=Z^1
+    [np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]: 104 (5.2%), chi=0, type=H_1=Z^1

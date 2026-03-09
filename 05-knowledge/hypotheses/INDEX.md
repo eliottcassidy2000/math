@@ -24,6 +24,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-010 | Every SC tournament has involution anti-aut | Moon's theorem + Cauchy | THM-024 |
 | HYP-011 | F_k(T) = F_{n-1-k}(T^op) complement duality | Path reversal maps ascents to descents | worpitzky_F_at_2.py |
 | HYP-012 | Sum_T F(T,x) = A_n(x) * 2^{C(n,2)-(n-1)} | Each perm is HP of 2^{extra} tournaments | worpitzky_restricted_eulerian.py |
+| HYP-316 | beta_1*beta_3=0 for all tournaments (seesaw) | im(d_2) mediator: drops by 1 for beta_1>0, saturated for beta_3>0 | kind-pasteur-S45 |
+| HYP-317 | Even Betti numbers vanish: beta_{2k}=0 for k>=1 | Exhaustive n<=6, sampled n<=8: zero violations | kind-pasteur-S45 |
+| HYP-318 | ker(d_1) = C(n,2)-n+1 constant for all tournaments | im(d_1)=n-1 since tournaments weakly connected (Redei) | kind-pasteur-S45 |
+| HYP-319 | Tournament path homology simplicity: at most one odd hole | Seesaw + even vanishing + chi constraint | kind-pasteur-S45 |
+| HYP-320 | beta_1 in {0,1} only (never >1) | im(d_2) takes exactly 2 values, gap = 1 | kind-pasteur-S45 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
