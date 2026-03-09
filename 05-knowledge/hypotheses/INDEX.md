@@ -144,6 +144,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-284 | Hidden cycles at bad vertices always linearly independent | CONFIRMED exhaustive n=5 (720 tours), n=6 (27968 tours). rank = #bad always. No deficiency | beta2_hidden_cycles.py |
 | HYP-285 | b1=1 implies strongly connected | CONFIRMED exhaustive n=3-6. 0 counterexamples. NOT-SC implies b1=0 | beta2_b1_characterization.py |
 | HYP-286 | kappa>=2 + SC + b1=0 always near-regular scores | CONFIRMED: n=6 all (2,2,2,3,3,3); n=7 all near-regular. Regular n=5 all b1=1; regular n=7 70% b1=0 | beta2_kappa2_analysis.py |
+| HYP-287 | Bad vertices always form transitive tournament (never 3-cycle) | CONFIRMED: n=5 (0/120 cycles), n=6 (0/4320), n=7 (0/1064 all transitive), n=8 (0/138). |BAD|<=3 and always transitive ordering | beta2_bad_triple_structure.py, beta2_transitive_bad.py |
+| HYP-288 | f(v) >= n-3 necessary for v to be bad (f = freed cycle count) | CONFIRMED: n=5-8, 0 violations. Strict separation at n=5,6 (min_bad_f > max_good_f). Overlap at n>=7. | beta2_f_threshold.py |
+| HYP-289 | Domination direction in transitive bad triple: top=(above,0), mid=(0,0), bot=(0,below) | CONFIRMED 100% at n=6 kappa>=2 (1440/1440). Top uniquely dominates from above only, bot from below only, mid has no unique domination | beta2_kappa2_good_vertex.py |
+| HYP-290 | Coverage(u) < n-1 for some u in every b1=0 tournament | TRUE at n=5,6 (exhaustive). FALSE at n>=7: 17/4746 have all full coverage. Approach insufficient. | beta2_coverage.py |
 
 ---
 
@@ -165,7 +169,7 @@ HYP-005, HYP-101, HYP-108, HYP-115, HYP-116, HYP-117, HYP-118
 HYP-109, HYP-110, HYP-111
 
 ### Path homology / topology
-HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261, HYP-262, HYP-263
+HYP-207, HYP-208, HYP-209, HYP-210, HYP-211, HYP-212, HYP-213, HYP-214, HYP-215, HYP-216, HYP-217, HYP-218, HYP-219, HYP-220, HYP-221, HYP-222, HYP-223, HYP-224, HYP-225, HYP-226, HYP-227, HYP-228, HYP-229, HYP-230, HYP-231, HYP-232, HYP-233, HYP-234, HYP-235, HYP-236, HYP-237, HYP-238, HYP-239, HYP-240, HYP-241, HYP-242, HYP-243, HYP-244, HYP-245, HYP-246, HYP-247, HYP-248, HYP-249, HYP-250, HYP-257, HYP-258, HYP-259, HYP-260, HYP-261, HYP-262, HYP-263, HYP-278, HYP-279, HYP-282, HYP-287, HYP-288, HYP-289, HYP-290
 
 ### Self-complementary / blueself
 HYP-009, HYP-010, HYP-112

@@ -1,0 +1,179 @@
+======================================================================
+TWO-MECHANISM PROOF: good vertex = safe from both mechanisms
+======================================================================
+
+n=5 (exhaustive): 720 tournaments with b1=0
+  Safe vertex exists: 600/720 (83.3%)
+  No safe vertex: 0/720
+  Safe and actually GOOD: 1200
+  Safe but actually BAD: 0 (0 = approach valid so far)
+  Mechanism 2 bad set sizes: {3: 120, 2: 240, 1: 240}
+
+n=6 (exhaustive): 27968 tournaments with b1=0
+  Safe vertex exists: 26448/27968 (94.6%)
+  No safe vertex: 800/27968
+  Safe and actually GOOD: 95040
+  Safe but actually BAD: 1440 *** DISPROVES APPROACH ***
+  Mechanism 2 bad set sizes: {3: 960, 2: 3600, 1: 10080, 5: 480, 0: 12048, 6: 80}
+
+n=7 (sampled(10000)): 9501 tournaments with b1=0
+  Safe vertex exists: 9460/9501 (99.6%)
+  No safe vertex: 15/9501
+  Safe and actually GOOD: 41780
+  Safe but actually BAD: 619 *** DISPROVES APPROACH ***
+  Mechanism 2 bad set sizes: {0: 7702, 1: 1251, 5: 78, 4: 161, 2: 212, 3: 61, 6: 10}
+
+n=8 (sampled(5000)): 4938 tournaments with b1=0
+  Safe vertex exists: 4925/4938 (99.7%)
+  No safe vertex: 13/4938
+  Safe and actually GOOD: 24416
+  Safe but actually BAD: 211 *** DISPROVES APPROACH ***
+  Mechanism 2 bad set sizes: {0: 4733, 1: 114, 4: 38, 2: 12, 3: 37, 5: 2, 7: 2}
+
+n=9 (sampled(2000)): 1991 tournaments with b1=0
+  Safe vertex exists: 1989/1991 (99.9%)
+  No safe vertex: 2/1991
+  Safe and actually GOOD: 10593
+  Safe but actually BAD: 36 *** DISPROVES APPROACH ***
+  Mechanism 2 bad set sizes: {0: 1972, 3: 13, 1: 2, 4: 1, 2: 2, 7: 1}
+
+n=10 (sampled(1000)): 999 tournaments with b1=0
+  Safe vertex exists: 998/999 (99.9%)
+  No safe vertex: 1/999
+  Safe and actually GOOD: 5498
+  Safe but actually BAD: 9 *** DISPROVES APPROACH ***
+  Mechanism 2 bad set sizes: {0: 996, 3: 2, 5: 1}
+
+======================================================================
+PART 2: Analyzing cases where 'safe' vertex is bad
+--------------------------------------------------
+
+  n=7: SAFE vertex 1 is BAD!
+    m1_bad={3, 4}, m2_bad=set(), safe={0, 1, 2, 5, 6}
+    #cycles through v: 6
+    free not through v: 4
+    dominated not through v: 2
+    RESTRICTED FREE COMP: 4 cycles, verts=[0, 2, 3, 4, 5, 6]
+
+  n=7: SAFE vertex 2 is BAD!
+    m1_bad={1, 5}, m2_bad=set(), safe={0, 2, 3, 4, 6}
+    #cycles through v: 6
+    free not through v: 4
+    dominated not through v: 2
+    RESTRICTED FREE COMP: 4 cycles, verts=[0, 1, 3, 4, 5, 6]
+
+  n=7: SAFE vertex 6 is BAD!
+    m1_bad={0, 5}, m2_bad=set(), safe={1, 2, 3, 4, 6}
+    #cycles through v: 6
+    free not through v: 4
+    dominated not through v: 1
+    RESTRICTED FREE COMP: 4 cycles, verts=[0, 1, 2, 3, 4, 5]
+
+  n=7: SAFE vertex 6 is BAD!
+    m1_bad={1, 2}, m2_bad=set(), safe={0, 3, 4, 5, 6}
+    #cycles through v: 7
+    free not through v: 4
+    dominated not through v: 1
+    RESTRICTED FREE COMP: 4 cycles, verts=[0, 1, 2, 3, 4, 5]
+
+  n=7: SAFE vertex 5 is BAD!
+    m1_bad={1, 4}, m2_bad=set(), safe={0, 2, 3, 5, 6}
+    #cycles through v: 6
+    free not through v: 4
+    dominated not through v: 2
+    RESTRICTED FREE COMP: 4 cycles, verts=[0, 1, 2, 3, 4, 6]
+
+  n=8: SAFE vertex 5 is BAD!
+    m1_bad={2, 4}, m2_bad=set(), safe={0, 1, 3, 5, 6, 7}
+    #cycles through v: 7
+    free not through v: 5
+    dominated not through v: 2
+    RESTRICTED FREE COMP: 5 cycles, verts=[0, 1, 2, 3, 4, 6, 7]
+
+  n=8: SAFE vertex 6 is BAD!
+    m1_bad={2, 3}, m2_bad=set(), safe={0, 1, 4, 5, 6, 7}
+    #cycles through v: 6
+    free not through v: 5
+    dominated not through v: 4
+    RESTRICTED FREE COMP: 5 cycles, verts=[0, 1, 2, 3, 4, 5, 7]
+
+  n=8: SAFE vertex 0 is BAD!
+    m1_bad={6}, m2_bad=set(), safe={0, 1, 2, 3, 4, 5, 7}
+    #cycles through v: 7
+    free not through v: 5
+    dominated not through v: 4
+    RESTRICTED FREE COMP: 5 cycles, verts=[1, 2, 3, 4, 5, 6, 7]
+
+  n=8: SAFE vertex 0 is BAD!
+    m1_bad={6, 7}, m2_bad=set(), safe={0, 1, 2, 3, 4, 5}
+    #cycles through v: 7
+    free not through v: 5
+    dominated not through v: 4
+    RESTRICTED FREE COMP: 5 cycles, verts=[1, 2, 3, 4, 5, 6, 7]
+
+  n=8: SAFE vertex 6 is BAD!
+    m1_bad={1, 3}, m2_bad=set(), safe={0, 2, 4, 5, 6, 7}
+    #cycles through v: 7
+    free not through v: 5
+    dominated not through v: 2
+    RESTRICTED FREE COMP: 5 cycles, verts=[0, 1, 2, 3, 4, 5, 7]
+
+======================================================================
+PART 3: Component-internal bridge analysis
+--------------------------------------------------
+  bits=152: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[1], inter_bridge_dom=[1], bad=[1, 4, 5]
+  bits=156: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[1], inter_bridge_dom=[1], bad=[1, 4, 5]
+  bits=209: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[2], inter_bridge_dom=[2], bad=[1, 2, 5]
+  bits=217: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[2], inter_bridge_dom=[2], bad=[1, 2, 5]
+  bits=268: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[2], inter_bridge_dom=[2], bad=[0, 2, 5]
+  bits=276: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[0], inter_bridge_dom=[0], bad=[0, 3, 4]
+  bits=281: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[4], inter_bridge_dom=[4], bad=[0, 1, 4]
+  bits=282: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[0], inter_bridge_dom=[0], bad=[0, 2, 3]
+  bits=312: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[5], inter_bridge_dom=[5], bad=[1, 2, 5]
+  bits=316: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[5], inter_bridge_dom=[5], bad=[1, 2, 5]
+  bits=337: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[1], inter_bridge_dom=[1], bad=[1, 3, 4]
+  bits=344: #dom=3, #free=5, #bridge_dom=3
+    inter_all_dom=[], inter_bridge_dom=[], bad=[1, 3, 5]
+  bits=345: #dom=3, #free=5, #bridge_dom=3
+    inter_all_dom=[], inter_bridge_dom=[], bad=[1, 2, 4]
+  bits=348: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[1], inter_bridge_dom=[1], bad=[1, 3, 4]
+  bits=393: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[0], inter_bridge_dom=[0], bad=[0, 4, 5]
+  bits=396: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[2], inter_bridge_dom=[2], bad=[0, 2, 5]
+  bits=400: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[4], inter_bridge_dom=[4], bad=[0, 1, 4]
+  bits=403: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[5], inter_bridge_dom=[5], bad=[0, 2, 5]
+  bits=404: #dom=3, #free=5, #bridge_dom=3
+    inter_all_dom=[], inter_bridge_dom=[], bad=[0, 2, 4]
+  bits=405: #dom=3, #free=5, #bridge_dom=3
+    inter_all_dom=[], inter_bridge_dom=[], bad=[0, 3, 5]
+  bits=410: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[0], inter_bridge_dom=[0], bad=[0, 2, 3]
+  bits=413: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[3], inter_bridge_dom=[3], bad=[0, 1, 3]
+  bits=433: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[1], inter_bridge_dom=[1], bad=[1, 2, 3]
+  bits=441: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[1], inter_bridge_dom=[1], bad=[1, 2, 3]
+  bits=457: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[0], inter_bridge_dom=[0], bad=[0, 4, 5]
+  bits=467: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[5], inter_bridge_dom=[5], bad=[0, 2, 5]
+  bits=469: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[0], inter_bridge_dom=[0], bad=[0, 3, 4]
+  bits=472: #dom=3, #free=4, #bridge_dom=3
+    inter_all_dom=[3], inter_bridge_dom=[3], bad=[0, 1, 3]

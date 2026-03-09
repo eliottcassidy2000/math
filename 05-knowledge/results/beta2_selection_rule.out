@@ -1,0 +1,203 @@
+
+======================================================================
+TESTING SELECTION RULES AT n=6
+======================================================================
+  19488 tournaments with >= 1 bad vertex
+  max_c3: 19488/19488 (100.0%) ***
+  min_f: 19488/19488 (100.0%) ***
+  max_c3_break_score: 19488/19488 (100.0%) ***
+  max_c3_break_dom: 19488/19488 (100.0%) ***
+  min_unique_dom_break_c3: 19488/19488 (100.0%) ***
+  min_f_break_c3: 19488/19488 (100.0%) ***
+  zero_unique_dom_max_c3: 19488/19488 (100.0%) ***
+  max_free_thru: 18880/19488 (96.9%)
+  min_unique_dom: 18120/19488 (93.0%)
+  min_dom_balance: 18120/19488 (93.0%)
+  min_delta_comp: 14256/19488 (73.2%)
+  min_dom_thru: 13080/19488 (67.1%)
+  max_multi_dom_thru: 12240/19488 (62.8%)
+  max_dom_thru: 10848/19488 (55.7%)
+  max_score: 10284/19488 (52.8%)
+  min_score: 10284/19488 (52.8%)
+  max_dom_thru_minus_free_thru: 8208/19488 (42.1%)
+  min_c3: 6960/19488 (35.7%)
+  min_free_thru: 6640/19488 (34.1%)
+  max_dom_above: 4400/19488 (22.6%)
+  max_dom_below: 4400/19488 (22.6%)
+  max_unique_dom: 480/19488 (2.5%)
+  max_f: 0/19488 (0.0%)
+
+======================================================================
+TESTING SELECTION RULES AT n=7
+======================================================================
+  2324 tournaments with >= 1 bad vertex
+  min_f: 2319/2324 (99.8%)
+  min_f_break_c3: 2312/2324 (99.5%)
+  max_free_thru: 2290/2324 (98.5%)
+  min_unique_dom_break_c3: 2240/2324 (96.4%)
+  zero_unique_dom_max_c3: 2240/2324 (96.4%)
+  max_c3_break_score: 2231/2324 (96.0%)
+  min_unique_dom: 2211/2324 (95.1%)
+  max_c3: 2210/2324 (95.1%)
+  min_dom_balance: 2201/2324 (94.7%)
+  max_c3_break_dom: 2142/2324 (92.2%)
+  min_dom_thru: 1982/2324 (85.3%)
+  min_delta_comp: 1979/2324 (85.2%)
+  min_score: 1601/2324 (68.9%)
+  max_score: 1555/2324 (66.9%)
+  min_c3: 1443/2324 (62.1%)
+  max_multi_dom_thru: 1299/2324 (55.9%)
+  max_dom_thru: 1012/2324 (43.5%)
+  min_free_thru: 921/2324 (39.6%)
+  max_dom_thru_minus_free_thru: 850/2324 (36.6%)
+  max_dom_below: 751/2324 (32.3%)
+  max_dom_above: 735/2324 (31.6%)
+  max_unique_dom: 221/2324 (9.5%)
+  max_f: 136/2324 (5.9%)
+
+======================================================================
+TESTING SELECTION RULES AT n=8
+======================================================================
+  453 tournaments with >= 1 bad vertex
+  min_f: 450/453 (99.3%)
+  max_free_thru: 449/453 (99.1%)
+  min_f_break_c3: 449/453 (99.1%)
+  min_unique_dom: 428/453 (94.5%)
+  min_unique_dom_break_c3: 428/453 (94.5%)
+  zero_unique_dom_max_c3: 428/453 (94.5%)
+  min_dom_balance: 428/453 (94.5%)
+  max_c3_break_score: 426/453 (94.0%)
+  max_c3: 421/453 (92.9%)
+  min_dom_thru: 415/453 (91.6%)
+  min_delta_comp: 413/453 (91.2%)
+  max_c3_break_dom: 406/453 (89.6%)
+  min_score: 363/453 (80.1%)
+  min_c3: 356/453 (78.6%)
+  max_score: 349/453 (77.0%)
+  max_multi_dom_thru: 229/453 (50.6%)
+  min_free_thru: 202/453 (44.6%)
+  max_dom_below: 198/453 (43.7%)
+  max_dom_above: 172/453 (38.0%)
+  max_dom_thru: 168/453 (37.1%)
+  max_dom_thru_minus_free_thru: 144/453 (31.8%)
+  max_unique_dom: 83/453 (18.3%)
+  max_f: 63/453 (13.9%)
+
+======================================================================
+PART 2: Analyze failures of best rules at n=7
+--------------------------------------------------
+
+max_dom_thru: 2629 failures
+  Failure 1: selected=0 (BAD), bad={0, 5}
+    v=0: c3=4, score=3, dom_thru=3, unique_dom=1, f=4, delta_comp=1 [BAD] <-- SELECTED
+    v=1: c3=4, score=1, dom_thru=1, unique_dom=0, f=1, delta_comp=0 [GOOD]
+    v=2: c3=4, score=3, dom_thru=2, unique_dom=0, f=2, delta_comp=0 [GOOD]
+    v=3: c3=7, score=4, dom_thru=3, unique_dom=0, f=0, delta_comp=0 [GOOD]
+    v=4: c3=2, score=5, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=5: c3=3, score=2, dom_thru=3, unique_dom=2, f=6, delta_comp=0 [BAD]
+    v=6: c3=3, score=3, dom_thru=2, unique_dom=0, f=3, delta_comp=0 [GOOD]
+  Failure 2: selected=1 (BAD), bad={1}
+    v=0: c3=2, score=4, dom_thru=2, unique_dom=1, f=4, delta_comp=0 [GOOD]
+    v=1: c3=5, score=2, dom_thru=4, unique_dom=2, f=4, delta_comp=0 [BAD] <-- SELECTED
+    v=2: c3=3, score=2, dom_thru=3, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=3: c3=4, score=5, dom_thru=2, unique_dom=1, f=2, delta_comp=0 [GOOD]
+    v=4: c3=3, score=2, dom_thru=2, unique_dom=0, f=2, delta_comp=0 [GOOD]
+    v=5: c3=4, score=4, dom_thru=2, unique_dom=0, f=1, delta_comp=0 [GOOD]
+    v=6: c3=6, score=2, dom_thru=3, unique_dom=0, f=0, delta_comp=0 [GOOD]
+  Failure 3: selected=5 (BAD), bad={3, 5}
+    v=0: c3=2, score=3, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=1: c3=2, score=1, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=2: c3=7, score=2, dom_thru=3, unique_dom=0, f=0, delta_comp=0 [GOOD]
+    v=3: c3=2, score=5, dom_thru=1, unique_dom=3, f=6, delta_comp=0 [BAD]
+    v=4: c3=5, score=4, dom_thru=1, unique_dom=0, f=0, delta_comp=0 [GOOD]
+    v=5: c3=4, score=4, dom_thru=4, unique_dom=0, f=4, delta_comp=0 [BAD] <-- SELECTED
+    v=6: c3=2, score=2, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+
+max_c3: 209 failures
+  Failure 1: selected=6 (BAD), bad={1, 2, 6}
+    v=0: c3=4, score=4, dom_thru=1, unique_dom=0, f=5, delta_comp=0 [GOOD]
+    v=1: c3=4, score=3, dom_thru=3, unique_dom=1, f=8, delta_comp=0 [BAD]
+    v=2: c3=4, score=2, dom_thru=2, unique_dom=2, f=8, delta_comp=0 [BAD]
+    v=3: c3=6, score=4, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=4: c3=5, score=3, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=5: c3=6, score=2, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=6: c3=7, score=3, dom_thru=3, unique_dom=0, f=4, delta_comp=1 [BAD] <-- SELECTED
+  Failure 2: selected=5 (BAD), bad={0, 5, 6}
+    v=0: c3=3, score=2, dom_thru=2, unique_dom=2, f=8, delta_comp=0 [BAD]
+    v=1: c3=4, score=4, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=2: c3=6, score=4, dom_thru=1, unique_dom=0, f=2, delta_comp=0 [GOOD]
+    v=3: c3=6, score=2, dom_thru=1, unique_dom=0, f=2, delta_comp=0 [GOOD]
+    v=4: c3=4, score=2, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=5: c3=7, score=3, dom_thru=4, unique_dom=0, f=4, delta_comp=0 [BAD] <-- SELECTED
+    v=6: c3=3, score=4, dom_thru=2, unique_dom=2, f=8, delta_comp=0 [BAD]
+  Failure 3: selected=2 (BAD), bad={2, 3, 4}
+    v=0: c3=5, score=3, dom_thru=1, unique_dom=0, f=5, delta_comp=0 [GOOD]
+    v=1: c3=6, score=2, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=2: c3=7, score=3, dom_thru=2, unique_dom=0, f=4, delta_comp=1 [BAD] <-- SELECTED
+    v=3: c3=5, score=3, dom_thru=3, unique_dom=1, f=8, delta_comp=0 [BAD]
+    v=4: c3=5, score=3, dom_thru=3, unique_dom=1, f=8, delta_comp=0 [BAD]
+    v=5: c3=6, score=4, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=6: c3=5, score=3, dom_thru=1, unique_dom=0, f=5, delta_comp=0 [GOOD]
+
+min_unique_dom_break_c3: 160 failures
+  Failure 1: selected=6 (BAD), bad={1, 2, 6}
+    v=0: c3=4, score=4, dom_thru=1, unique_dom=0, f=5, delta_comp=0 [GOOD]
+    v=1: c3=4, score=3, dom_thru=3, unique_dom=1, f=8, delta_comp=0 [BAD]
+    v=2: c3=4, score=2, dom_thru=2, unique_dom=2, f=8, delta_comp=0 [BAD]
+    v=3: c3=6, score=4, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=4: c3=5, score=3, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=5: c3=6, score=2, dom_thru=1, unique_dom=0, f=3, delta_comp=0 [GOOD]
+    v=6: c3=7, score=3, dom_thru=3, unique_dom=0, f=4, delta_comp=1 [BAD] <-- SELECTED
+  Failure 2: selected=5 (BAD), bad={0, 5, 6}
+    v=0: c3=3, score=2, dom_thru=2, unique_dom=2, f=8, delta_comp=0 [BAD]
+    v=1: c3=4, score=4, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=2: c3=6, score=4, dom_thru=1, unique_dom=0, f=2, delta_comp=0 [GOOD]
+    v=3: c3=6, score=2, dom_thru=1, unique_dom=0, f=2, delta_comp=0 [GOOD]
+    v=4: c3=4, score=2, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=5: c3=7, score=3, dom_thru=4, unique_dom=0, f=4, delta_comp=0 [BAD] <-- SELECTED
+    v=6: c3=3, score=4, dom_thru=2, unique_dom=2, f=8, delta_comp=0 [BAD]
+  Failure 3: selected=2 (BAD), bad={2, 3, 4}
+    v=0: c3=5, score=3, dom_thru=1, unique_dom=0, f=5, delta_comp=0 [GOOD]
+    v=1: c3=6, score=2, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=2: c3=7, score=3, dom_thru=2, unique_dom=0, f=4, delta_comp=1 [BAD] <-- SELECTED
+    v=3: c3=5, score=3, dom_thru=3, unique_dom=1, f=8, delta_comp=0 [BAD]
+    v=4: c3=5, score=3, dom_thru=3, unique_dom=1, f=8, delta_comp=0 [BAD]
+    v=5: c3=6, score=4, dom_thru=1, unique_dom=0, f=4, delta_comp=0 [GOOD]
+    v=6: c3=5, score=3, dom_thru=1, unique_dom=0, f=5, delta_comp=0 [GOOD]
+
+======================================================================
+PART 3: Cascading rules at n=7,8
+--------------------------------------------------
+  n=7: cascade 4582/4621 (99.16%)
+  n=8: cascade 1146/1149 (99.74%)
+
+======================================================================
+PART 4: Advanced composite rules
+--------------------------------------------------
+
+n=7:
+  min_f: 4609/4621 (99.7%)
+  min_unique+delta: 4525/4621 (97.9%)
+  max_c3-unique: 4461/4621 (96.5%)
+  max_dom-unique: 3158/4621 (68.3%)
+  max_multi_dom: 2530/4621 (54.8%)
+  max_in_multidom: 2530/4621 (54.8%)
+  max_dom_thru: 1992/4621 (43.1%)
+
+n=8:
+  min_f: 1146/1149 (99.7%)
+  min_unique+delta: 1143/1149 (99.5%)
+  max_c3-unique: 1084/1149 (94.3%)
+  max_dom-unique: 804/1149 (70.0%)
+  max_multi_dom: 605/1149 (52.7%)
+  max_in_multidom: 605/1149 (52.7%)
+  max_dom_thru: 428/1149 (37.2%)
+
+n=9:
+  min_unique+delta: 151/151 (100.0%) ***
+  min_f: 150/151 (99.3%)
+  max_c3-unique: 134/151 (88.7%)
+  max_dom-unique: 100/151 (66.2%)
+  max_multi_dom: 78/151 (51.7%)
+  max_in_multidom: 78/151 (51.7%)
+  max_dom_thru: 46/151 (30.5%)

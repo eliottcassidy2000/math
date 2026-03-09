@@ -1,0 +1,299 @@
+======================================================================
+PROOF: |BAD| <= 3 via domination structure analysis
+======================================================================
+
+PART 1: Mechanism for middle vertex badness
+--------------------------------------------------
+Middle vertex mechanism distribution:
+  free_not_mid=3: 1440
+  unique_mid_dom=0: 1440
+  unknown: 1440
+
+======================================================================
+PART 2: Why 4 bad vertices are impossible
+--------------------------------------------------
+
+--- n=6 ---
+  Analyzed 11520 tournaments with >= 2 bad
+  bridge_bad: 5760
+  bridge_free_not_v=3: 4320
+  bridge_free_not_v=4: 1440
+  n_bad=2: 7200
+  n_bad=3: 4320
+  avg shared free cycles per bad pair: 1.79
+
+--- n=7 ---
+  Analyzed 630 tournaments with >= 2 bad
+  bridge_bad: 299
+  bridge_free_not_v=4: 188
+  bridge_free_not_v=6: 92
+  bridge_free_not_v=8: 19
+  n_bad=2: 459
+  n_bad=3: 171
+  avg shared free cycles per bad pair: 3.28
+
+======================================================================
+PART 3: Counting freed-cycle vertex incidences
+--------------------------------------------------
+
+bits=152, bad=[1, 4, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 0), (4, 1), (5, 2)]
+  #multi_dom=0
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=4: #freed=3, span=[0, 1, 2, 3, 5]
+  bad v=5: #freed=4, span=[0, 1, 2, 3, 4]
+
+bits=156, bad=[1, 4, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 0), (4, 1), (5, 2)]
+  #multi_dom=0
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=4: #freed=4, span=[0, 1, 2, 3, 5]
+  bad v=5: #freed=5, span=[0, 1, 2, 3, 4]
+
+bits=209, bad=[1, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 1), (2, 0), (3, 0), (4, 0), (5, 2)]
+  #multi_dom=0
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=4, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=4, span=[0, 1, 2, 3, 4]
+
+bits=217, bad=[1, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 1), (2, 0), (3, 0), (4, 0), (5, 2)]
+  #multi_dom=0
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=3, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=5, span=[0, 1, 2, 3, 4]
+
+bits=268, bad=[0, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 1), (1, 0), (2, 0), (3, 0), (4, 0), (5, 2)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=4, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=4, span=[0, 1, 2, 3, 4]
+
+bits=276, bad=[0, 3, 4]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 1), (4, 2), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=3: #freed=4, span=[0, 1, 2, 4, 5]
+  bad v=4: #freed=5, span=[0, 1, 2, 3, 5]
+
+bits=281, bad=[0, 1, 4]
+  #free=4, #unique_dom per vertex: [(0, 1), (1, 2), (2, 0), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=4: #freed=4, span=[0, 1, 2, 3, 5]
+
+bits=282, bad=[0, 2, 3]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 2), (3, 1), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=5, span=[0, 1, 3, 4, 5]
+  bad v=3: #freed=4, span=[0, 1, 2, 4, 5]
+
+bits=312, bad=[1, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 1), (2, 2), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=5, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=3, span=[0, 1, 2, 3, 4]
+
+bits=316, bad=[1, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 1), (2, 2), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=4, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=4, span=[0, 1, 2, 3, 4]
+
+bits=337, bad=[1, 3, 4]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 1), (4, 2), (5, 0)]
+  #multi_dom=0
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=3: #freed=4, span=[0, 1, 2, 4, 5]
+  bad v=4: #freed=5, span=[0, 1, 2, 3, 5]
+
+bits=344, bad=[1, 3, 5]
+  #free=5, #unique_dom per vertex: [(0, 0), (1, 1), (2, 0), (3, 1), (4, 0), (5, 0)]
+  #multi_dom=1
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=3: #freed=5, span=[0, 1, 2, 4, 5]
+  bad v=5: #freed=3, span=[0, 1, 2, 3, 4]
+
+bits=345, bad=[1, 2, 4]
+  #free=5, #unique_dom per vertex: [(0, 0), (1, 1), (2, 0), (3, 0), (4, 1), (5, 0)]
+  #multi_dom=1
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=3, span=[0, 1, 3, 4, 5]
+  bad v=4: #freed=5, span=[0, 1, 2, 3, 5]
+
+bits=348, bad=[1, 3, 4]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 2), (4, 1), (5, 0)]
+  #multi_dom=0
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=3: #freed=5, span=[0, 1, 2, 4, 5]
+  bad v=4: #freed=4, span=[0, 1, 2, 3, 5]
+
+bits=393, bad=[0, 4, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 0), (4, 1), (5, 2)]
+  #multi_dom=0
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=4: #freed=3, span=[0, 1, 2, 3, 5]
+  bad v=5: #freed=4, span=[0, 1, 2, 3, 4]
+
+bits=396, bad=[0, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 1), (1, 0), (2, 0), (3, 0), (4, 0), (5, 2)]
+  #multi_dom=0
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=3, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=5, span=[0, 1, 2, 3, 4]
+
+bits=400, bad=[0, 1, 4]
+  #free=4, #unique_dom per vertex: [(0, 2), (1, 1), (2, 0), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=4: #freed=4, span=[0, 1, 2, 3, 5]
+
+bits=403, bad=[0, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 1), (1, 0), (2, 2), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=5, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=3, span=[0, 1, 2, 3, 4]
+
+bits=404, bad=[0, 2, 4]
+  #free=5, #unique_dom per vertex: [(0, 1), (1, 0), (2, 0), (3, 0), (4, 1), (5, 0)]
+  #multi_dom=1
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=3, span=[0, 1, 3, 4, 5]
+  bad v=4: #freed=5, span=[0, 1, 2, 3, 5]
+
+bits=405, bad=[0, 3, 5]
+  #free=5, #unique_dom per vertex: [(0, 1), (1, 0), (2, 0), (3, 1), (4, 0), (5, 0)]
+  #multi_dom=1
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=3: #freed=5, span=[0, 1, 2, 4, 5]
+  bad v=5: #freed=3, span=[0, 1, 2, 3, 4]
+
+bits=410, bad=[0, 2, 3]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 2), (3, 1), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=4, span=[0, 1, 3, 4, 5]
+  bad v=3: #freed=3, span=[0, 1, 2, 4, 5]
+
+bits=413, bad=[0, 1, 3]
+  #free=4, #unique_dom per vertex: [(0, 2), (1, 1), (2, 0), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=4, span=[1, 2, 3, 4, 5]
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=3: #freed=4, span=[0, 1, 2, 4, 5]
+
+bits=433, bad=[1, 2, 3]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 2), (3, 1), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=1: #freed=3, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=5, span=[0, 1, 3, 4, 5]
+  bad v=3: #freed=4, span=[0, 1, 2, 4, 5]
+
+bits=441, bad=[1, 2, 3]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 2), (3, 1), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=2: #freed=4, span=[0, 1, 3, 4, 5]
+  bad v=3: #freed=3, span=[0, 1, 2, 4, 5]
+
+bits=457, bad=[0, 4, 5]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 0), (4, 1), (5, 2)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=4: #freed=4, span=[0, 1, 2, 3, 5]
+  bad v=5: #freed=5, span=[0, 1, 2, 3, 4]
+
+bits=467, bad=[0, 2, 5]
+  #free=4, #unique_dom per vertex: [(0, 1), (1, 0), (2, 2), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=2: #freed=4, span=[0, 1, 3, 4, 5]
+  bad v=5: #freed=4, span=[0, 1, 2, 3, 4]
+
+bits=469, bad=[0, 3, 4]
+  #free=4, #unique_dom per vertex: [(0, 0), (1, 0), (2, 0), (3, 2), (4, 1), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=3: #freed=5, span=[0, 1, 2, 4, 5]
+  bad v=4: #freed=4, span=[0, 1, 2, 3, 5]
+
+bits=472, bad=[0, 1, 3]
+  #free=4, #unique_dom per vertex: [(0, 1), (1, 2), (2, 0), (3, 0), (4, 0), (5, 0)]
+  #multi_dom=0
+  bad v=0: #freed=3, span=[1, 2, 3, 4, 5]
+  bad v=1: #freed=4, span=[0, 2, 3, 4, 5]
+  bad v=3: #freed=4, span=[0, 1, 2, 4, 5]
+
+======================================================================
+PART 5: Bridge vertex — how does deletion create b1=1?
+--------------------------------------------------
+Averages over 1 tournaments:
+Raw totals (divide by #tours for averages):
+  bot_dom_not_v: 1440
+  bot_free_not_v: 5040
+  bot_newly_freed: 1440
+  bot_thru_v: 5040
+  mid_dom_not_v: 1440
+  mid_free_not_v: 4320
+  mid_newly_freed: 0
+  mid_thru_v: 5760
+  top_dom_not_v: 1440
+  top_free_not_v: 5040
+  top_newly_freed: 1440
+  top_thru_v: 5040
+
+======================================================================
+PART 6: Component structure change upon vertex deletion
+--------------------------------------------------
+Analyzed 1440 SC kappa>=2 tournaments with 3 bad vertices
+  bot_free_comps_Tv: total=1440, avg=1.00
+  bot_n_comps_T: total=1440, avg=1.00
+  bot_n_comps_Tv: total=1440, avg=1.00
+  mid_free_comps_Tv: total=1440, avg=1.00
+  mid_n_comps_T: total=1440, avg=1.00
+  mid_n_comps_Tv: total=2880, avg=2.00
+  top_free_comps_Tv: total=1440, avg=1.00
+  top_n_comps_T: total=1440, avg=1.00
+  top_n_comps_Tv: total=1440, avg=1.00
+
+======================================================================
+PART 7: Exhaustive/sampled search for 4+ bad vertices
+--------------------------------------------------
+
+  n=5 (exhaustive): max bad = 3
+    0 bad: 240
+    1 bad: 240
+    2 bad: 120
+    3 bad: 120
+
+  n=6 (exhaustive): max bad = 3
+    0 bad: 8480
+    1 bad: 7968
+    2 bad: 7200
+    3 bad: 4320
+
+  n=7 (sampled(10000)): max bad = 3
+    0 bad: 4784
+    1 bad: 2626
+    2 bad: 1524
+    3 bad: 548
+
+  n=8 (sampled(5000)): max bad = 3
+    0 bad: 3814
+    1 bad: 791
+    2 bad: 262
+    3 bad: 62
+
+  n=9 (sampled(2000)): max bad = 3
+    0 bad: 1822
+    1 bad: 142
+    2 bad: 25
+    3 bad: 5

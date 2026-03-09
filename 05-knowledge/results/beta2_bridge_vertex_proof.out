@@ -1,0 +1,187 @@
+======================================================================
+BRIDGE VERTEX ANALYSIS: Component splitting mechanism
+======================================================================
+
+PART 1: Component change upon bad vertex deletion
+--------------------------------------------------
+
+n=6 (exhaustive): 19488 tournaments with bad vertices
+  Bad vertex types (unique_dom, delta_components):
+    unique_dom=0, delta_comp=0: 4320
+    unique_dom=0, delta_comp=1: 1440
+    unique_dom=1, delta_comp=0: 11520
+    unique_dom=1, delta_comp=1: 1440
+    unique_dom=2, delta_comp=0: 11520
+    unique_dom=2, delta_comp=1: 1440
+    unique_dom=3, delta_comp=0: 1920
+    unique_dom=4, delta_comp=0: 1440
+    unique_dom=5, delta_comp=0: 288
+  Position breakdown:
+    top:
+      unique_dom=0, delta_comp=0: 720
+      unique_dom=1, delta_comp=0: 5760
+      unique_dom=1, delta_comp=1: 720
+      unique_dom=2, delta_comp=0: 4320
+    mid:
+      unique_dom=0, delta_comp=0: 2880
+      unique_dom=0, delta_comp=1: 1440
+    bot:
+      unique_dom=0, delta_comp=0: 720
+      unique_dom=1, delta_comp=0: 5760
+      unique_dom=1, delta_comp=1: 720
+      unique_dom=2, delta_comp=0: 4320
+
+n=7 (sampled(5000)): 2324 tournaments with bad vertices
+  Bad vertex types (unique_dom, delta_components):
+    unique_dom=0, delta_comp=0: 292
+    unique_dom=0, delta_comp=1: 297
+    unique_dom=1, delta_comp=0: 480
+    unique_dom=1, delta_comp=1: 239
+    unique_dom=2, delta_comp=0: 1019
+    unique_dom=2, delta_comp=1: 415
+    unique_dom=3, delta_comp=0: 295
+    unique_dom=3, delta_comp=1: 152
+    unique_dom=4, delta_comp=0: 311
+    unique_dom=4, delta_comp=1: 43
+    unique_dom=5, delta_comp=0: 57
+    unique_dom=6, delta_comp=0: 62
+    unique_dom=8, delta_comp=0: 31
+  Position breakdown:
+    top:
+      unique_dom=0, delta_comp=0: 57
+      unique_dom=0, delta_comp=1: 49
+      unique_dom=1, delta_comp=0: 222
+      unique_dom=1, delta_comp=1: 122
+      unique_dom=2, delta_comp=0: 366
+      unique_dom=2, delta_comp=1: 63
+      unique_dom=3, delta_comp=0: 117
+      unique_dom=4, delta_comp=0: 68
+    mid:
+      unique_dom=0, delta_comp=0: 149
+      unique_dom=0, delta_comp=1: 156
+    bot:
+      unique_dom=0, delta_comp=0: 71
+      unique_dom=0, delta_comp=1: 43
+      unique_dom=1, delta_comp=0: 258
+      unique_dom=1, delta_comp=1: 117
+      unique_dom=2, delta_comp=0: 366
+      unique_dom=2, delta_comp=1: 50
+      unique_dom=3, delta_comp=0: 99
+      unique_dom=4, delta_comp=0: 60
+
+n=8 (sampled(2000)): 453 tournaments with bad vertices
+  Bad vertex types (unique_dom, delta_components):
+    unique_dom=0, delta_comp=0: 20
+    unique_dom=0, delta_comp=1: 82
+    unique_dom=0, delta_comp=2: 1
+    unique_dom=1, delta_comp=0: 25
+    unique_dom=1, delta_comp=1: 42
+    unique_dom=2, delta_comp=0: 89
+    unique_dom=2, delta_comp=1: 75
+    unique_dom=2, delta_comp=2: 1
+    unique_dom=3, delta_comp=0: 62
+    unique_dom=3, delta_comp=1: 64
+    unique_dom=3, delta_comp=2: 1
+    unique_dom=4, delta_comp=0: 49
+    unique_dom=4, delta_comp=1: 43
+    unique_dom=4, delta_comp=2: 2
+    unique_dom=5, delta_comp=0: 15
+    unique_dom=6, delta_comp=0: 20
+    unique_dom=6, delta_comp=1: 9
+    unique_dom=8, delta_comp=0: 10
+    unique_dom=9, delta_comp=0: 2
+    unique_dom=12, delta_comp=0: 2
+    unique_dom=13, delta_comp=0: 2
+  Position breakdown:
+    top:
+      unique_dom=0, delta_comp=0: 5
+      unique_dom=0, delta_comp=1: 16
+      unique_dom=0, delta_comp=2: 1
+      unique_dom=1, delta_comp=0: 9
+      unique_dom=1, delta_comp=1: 22
+      unique_dom=2, delta_comp=0: 35
+      unique_dom=2, delta_comp=1: 10
+      unique_dom=3, delta_comp=0: 12
+      unique_dom=3, delta_comp=1: 8
+      unique_dom=4, delta_comp=0: 15
+      unique_dom=4, delta_comp=1: 1
+      unique_dom=6, delta_comp=0: 4
+    mid:
+      unique_dom=0, delta_comp=0: 3
+      unique_dom=0, delta_comp=1: 22
+    bot:
+      unique_dom=0, delta_comp=0: 6
+      unique_dom=0, delta_comp=1: 9
+      unique_dom=1, delta_comp=0: 16
+      unique_dom=1, delta_comp=1: 20
+      unique_dom=2, delta_comp=0: 31
+      unique_dom=2, delta_comp=1: 20
+      unique_dom=3, delta_comp=0: 16
+      unique_dom=3, delta_comp=1: 3
+      unique_dom=4, delta_comp=0: 14
+      unique_dom=4, delta_comp=1: 1
+      unique_dom=6, delta_comp=0: 2
+
+======================================================================
+PART 2: Two bad vertices - are both 'bridges' ever?
+--------------------------------------------------
+
+n=5 (exhaustive):
+  2-bad tournaments: 120
+    both bridge: 0
+    one bridge: 0
+    no bridge: 120
+  3-bad tournaments: 120
+    0 bridges: 120
+
+n=6 (exhaustive):
+  2-bad tournaments: 7200
+    both bridge: 0
+    one bridge: 1440
+    no bridge: 5760
+  3-bad tournaments: 4320
+    0 bridges: 2880
+    1 bridges: 1440
+
+n=7 (sampled(5000)):
+  2-bad tournaments: 752
+    both bridge: 89
+    one bridge: 229
+    no bridge: 434
+  3-bad tournaments: 294
+    0 bridges: 139
+    1 bridges: 130
+    2 bridges: 25
+
+======================================================================
+PART 3: Anatomy of the cycle graph split
+--------------------------------------------------
+  bits=344: mid=5, components after removing mid's cycles:
+    free: 3 cycles, verts=[0, 1, 2, 3, 4]
+    mixed: 1 cycles, verts=[1, 2, 3]
+  bits=345: mid=2, components after removing mid's cycles:
+    free: 3 cycles, verts=[0, 1, 3, 4, 5]
+    mixed: 1 cycles, verts=[1, 4, 5]
+  bits=404: mid=2, components after removing mid's cycles:
+    free: 3 cycles, verts=[0, 1, 3, 4, 5]
+    mixed: 1 cycles, verts=[0, 4, 5]
+  bits=405: mid=5, components after removing mid's cycles:
+    free: 3 cycles, verts=[0, 1, 2, 3, 4]
+    mixed: 1 cycles, verts=[0, 2, 3]
+
+Split anatomy distribution:
+  (('free', 3), ('mixed', 1)): 1440
+
+======================================================================
+PART 4: Are mid's cycles the ONLY bridge between free and dominated parts?
+--------------------------------------------------
+
+  (If no '*** OTHER BRIDGES' message, mid's cycles are the ONLY free-dom bridge)
+
+======================================================================
+PART 5: n=7 verification of bridge structure
+--------------------------------------------------
+n=7: 171 tournaments with 3 bad vertices
+  Bridge count distribution: {2: 15, 1: 77, 0: 79}
+  Mid is only free-dom bridge: 171/171
+  Other bridges exist: 0/171
