@@ -1,0 +1,89 @@
+======================================================================
+EXACT FORMULA FOR dim(Omega_2)
+======================================================================
+
+--- Part 1: Exhaustive check dim(Omega_2) = C(n,3) + 2*c3 - e_cyc ---
+  n=4: CONFIRMED #NA = e_cyc for all 64 tournaments
+  n=5: CONFIRMED #NA = e_cyc for all 1024 tournaments
+  n=6: CONFIRMED #NA = e_cyc for all 32768 tournaments
+
+--- Part 2: e_cyc vs c3 relationship ---
+
+  n=5: e_cyc grouped by c3:
+    c3 |  min |  max |   mean |               values
+     0 |    0 |    0 |    0.0 | [0]
+     1 |    3 |    3 |    3.0 | [3]
+     2 |    5 |    5 |    5.0 | [5]
+     3 |    7 |    7 |    7.0 | [7]
+     4 |    8 |   10 |    8.7 | [8, 9, 10]
+     5 |   10 |   10 |   10.0 | [10]
+
+  n=6: e_cyc grouped by c3:
+    c3 |  min |  max |   mean |               values
+     0 |    0 |    0 |    0.0 | [0]
+     1 |    3 |    3 |    3.0 | [3]
+     2 |    5 |    6 |    5.0 | [5, 6]
+     3 |    7 |    7 |    7.0 | [7]
+     4 |    8 |   10 |    8.8 | [8, 9, 10]
+     5 |   10 |   12 |   10.7 | [10, 11, 12]
+     6 |   11 |   14 |   12.2 | [11, 12, 13, 14]
+     7 |   13 |   14 |   13.4 | [13, 14]
+     8 |   12 |   15 |   14.5 | [12, 14, 15]
+
+--- Part 3: e_cyc / (total arcs) ratio ---
+  n=5: total arcs=10, e_cyc range=[0,10], mean=5.8, transitive e_cyc=0
+  n=6: total arcs=15, e_cyc range=[0,15], mean=10.2, transitive e_cyc=0
+  n=7: total arcs=21, e_cyc range=[3,21], mean=15.9, transitive e_cyc=0
+
+--- Part 4: dim(Omega_2) = C(n,3) + 2*c3 - e_cyc ---
+
+  n=5: dim(Omega_2) = 10 + 2*c3 - e_cyc
+    c3=0, e_cyc=0: dim(Omega_2)=10, count=120
+    c3=1, e_cyc=3: dim(Omega_2)=9, count=120
+    c3=2, e_cyc=5: dim(Omega_2)=9, count=240
+    c3=3, e_cyc=7: dim(Omega_2)=9, count=240
+    c3=4, e_cyc=8: dim(Omega_2)=10, count=120
+    c3=4, e_cyc=9: dim(Omega_2)=9, count=120
+    c3=4, e_cyc=10: dim(Omega_2)=8, count=40
+    c3=5, e_cyc=10: dim(Omega_2)=10, count=24
+
+  n=6: dim(Omega_2) = 20 + 2*c3 - e_cyc
+    c3=0, e_cyc=0: dim(Omega_2)=20, count=720
+    c3=1, e_cyc=3: dim(Omega_2)=19, count=960
+    c3=2, e_cyc=5: dim(Omega_2)=19, count=2160
+    c3=2, e_cyc=6: dim(Omega_2)=18, count=80
+    c3=3, e_cyc=7: dim(Omega_2)=19, count=2880
+    c3=4, e_cyc=8: dim(Omega_2)=20, count=1440
+    c3=4, e_cyc=9: dim(Omega_2)=19, count=4320
+    c3=4, e_cyc=10: dim(Omega_2)=18, count=480
+    c3=5, e_cyc=10: dim(Omega_2)=20, count=1728
+    c3=5, e_cyc=11: dim(Omega_2)=19, count=1440
+    c3=5, e_cyc=12: dim(Omega_2)=18, count=480
+    c3=6, e_cyc=11: dim(Omega_2)=21, count=2160
+    c3=6, e_cyc=12: dim(Omega_2)=20, count=3600
+    c3=6, e_cyc=13: dim(Omega_2)=19, count=2160
+    c3=6, e_cyc=14: dim(Omega_2)=18, count=720
+    c3=7, e_cyc=13: dim(Omega_2)=21, count=2880
+    c3=7, e_cyc=14: dim(Omega_2)=20, count=1920
+    c3=8, e_cyc=12: dim(Omega_2)=24, count=240
+    c3=8, e_cyc=14: dim(Omega_2)=22, count=720
+    c3=8, e_cyc=15: dim(Omega_2)=21, count=1680
+
+--- Part 5: Defect rate U-shape at n=7,8 ---
+
+  n=7: Computing full Betti vectors for 200 tournaments...
+    trial 0: betti=[1, 0, 0, 0, 0, 0, 0]
+    trial 50: betti=[1, 0, 0, 0, 0, 0, 0]
+    trial 100: betti=[1, 0, 0, 0, 0, 0, 0]
+    trial 150: betti=[1, 0, 0, 1, 0, 0, 0]
+
+  n=7: Defect rates (P(beta_p > 0)):
+    p=0: rate=1.000 (200/200), avg dim(Omega_p)=7.0
+    p=1: rate=0.035 (7/200), avg dim(Omega_p)=21.0
+    p=2: rate=0.000 (0/200), avg dim(Omega_p)=36.6
+    p=3: rate=0.060 (12/200), avg dim(Omega_p)=41.6
+    p=4: rate=0.000 (0/200), avg dim(Omega_p)=31.0
+    p=5: rate=0.000 (0/200), avg dim(Omega_p)=13.7
+    p=6: rate=0.000 (0/200), avg dim(Omega_p)=2.7
+
+DONE.

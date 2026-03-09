@@ -1,0 +1,50 @@
+======================================================================
+NA FACE DISTRIBUTION FOR 3-PATHS
+======================================================================
+
+--- Part 1: Per-tournament distribution of NA faces per 3-path ---
+  n=5: exact 25/50/25 in 0/1024 tournaments
+    trial 0: 5/0/0 out of 5 (100.0/0.0/0.0%)
+    trial 1: 5/0/0 out of 5 (100.0/0.0/0.0%)
+    trial 2: 3/6/0 out of 9 (33.3/66.7/0.0%)
+    trial 3: 5/0/0 out of 5 (100.0/0.0/0.0%)
+    trial 4: 3/8/2 out of 13 (23.1/61.5/15.4%)
+  n=6: exact 25/50/25 in 0/32768 tournaments
+    trial 0: 15/0/0 out of 15 (100.0/0.0/0.0%)
+    trial 1: 15/0/0 out of 15 (100.0/0.0/0.0%)
+    trial 2: 12/9/0 out of 21 (57.1/42.9/0.0%)
+    trial 3: 15/0/0 out of 15 (100.0/0.0/0.0%)
+    trial 4: 11/14/2 out of 27 (40.7/51.9/7.4%)
+
+--- Part 2: Algebraic explanation ---
+
+    For a 3-path (a,b,c,d) with a->b->c->d:
+      NA iff c->a:  depends on edge (a,c)
+      NA iff d->b:  depends on edge (b,d)
+
+    These are two DIFFERENT edges. In a random tournament, they're independent.
+    But for a FIXED tournament, the set of 3-paths is correlated with edges.
+
+    However: summing over ALL 3-paths, each 3-path has two "skip" edges:
+    (a,c) = "inner skip" and (b,d) = "outer skip".
+    Each skip is independently forward or backward.
+
+    The key question: does the existence of the 3-path (a->b->c->d) correlate
+    with the direction of (a,c) or (b,d)?
+    
+--- Part 3: Correlation between skip directions and path existence ---
+  trial 0: P(a->c|3-path)=1.000, P(b->d|3-path)=1.000, P(fwd|random)=0.500, |A_3|=15
+  trial 1: P(a->c|3-path)=1.000, P(b->d|3-path)=1.000, P(fwd|random)=0.500, |A_3|=15
+  trial 2: P(a->c|3-path)=1.000, P(b->d|3-path)=0.571, P(fwd|random)=0.500, |A_3|=21
+  trial 3: P(a->c|3-path)=1.000, P(b->d|3-path)=1.000, P(fwd|random)=0.500, |A_3|=15
+  trial 4: P(a->c|3-path)=0.889, P(b->d|3-path)=0.444, P(fwd|random)=0.500, |A_3|=27
+
+--- Part 4: Checking per-tournament deviation from 25/50/25 ---
+  n=5: max deviation from 25% for '0 NA' class: 0.750000
+  NOT exact — deviates by up to 0.7500
+
+--- Part 5: Per-tournament exactness at n=7,8 ---
+  n=7: max deviation from 25%: 0.318627
+  n=8: max deviation from 25%: 0.208333
+
+DONE.
