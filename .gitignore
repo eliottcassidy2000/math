@@ -26,3 +26,4 @@ scripts/logs/
 *.so
 a000568_c_test
 a000568_c_batch
+04-computation/b*.txt
