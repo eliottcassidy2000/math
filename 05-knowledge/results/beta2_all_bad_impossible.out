@@ -1,0 +1,24 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_all_bad_impossible.py:81: SyntaxWarning: invalid escape sequence '\{'
+  from V\{u,v}.
+PROOF ATTEMPT: Not all vertices can be bad
+============================================================
+n=6: 4320 tournaments with exactly 3 bad vertices
+
+Count of unique dominators of cycles through u:
+  0: 54
+  1: 946
+  2: 200
+
+Max unique-dominators across all vertices: 2
+n-1 = 5
+If max < n-1, then not all vertices can be bad!
+
+============================================================
+UNIQUE DOMINATOR COUNT: bad vs good vertices
+============================================================
+BAD vertices - #{unique dominators of cycles through v}:
+  1: 8640
+  2: 4320
+GOOD vertices - #{unique dominators of cycles through v}:
+  0: 1440
+  1: 11520
