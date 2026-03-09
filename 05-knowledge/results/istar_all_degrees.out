@@ -1,0 +1,51 @@
+======================================================================
+RANK(i_*) AT ALL DEGREES — BETA_3=1 TOURNAMENTS
+======================================================================
+
+--- n=7, sampling 80 beta_3=1 tournaments ---
+  10/80 found, 10.3s
+  20/80 found, 18.9s
+  30/80 found, 28.2s
+  40/80 found, 36.6s
+  50/80 found, 45.0s
+  60/80 found, 52.2s
+  70/80 found, 62.8s
+  80/80 found, 74.2s
+  Done: 80 tournaments, 560 vertex records, 74.2s
+
+  GOOD vertices (516):
+    p=0: rank(i_*)={1: 516}, b_p(T) range=[1,1], b_p(T\v) range=[1,1]
+    p=1: rank(i_*)={0: 516}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=2: rank(i_*)={0: 516}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=3: rank(i_*)={0: 516}, b_p(T) range=[1,1], b_p(T\v) range=[0,0]
+    p=4: rank(i_*)={0: 516}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=5: rank(i_*)={0: 516}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=6: rank(i_*)={0: 516}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+
+  BAD vertices (44):
+    p=0: rank(i_*)={1: 44}, b_p(T) range=[1,1], b_p(T\v) range=[1,1]
+    p=1: rank(i_*)={0: 44}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=2: rank(i_*)={0: 44}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=3: rank(i_*)={1: 44}, b_p(T) range=[1,1], b_p(T\v) range=[1,1]
+    p=4: rank(i_*)={0: 44}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=5: rank(i_*)={0: 44}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+    p=6: rank(i_*)={0: 44}, b_p(T) range=[0,0], b_p(T\v) range=[0,0]
+
+  Relative Betti profiles H_*(T,T\v):
+    GOOD: (0, 0, 0, 1, 0, 0, 0): 516
+    BAD: (0, 0, 0, 0, 0, 0, 0): 44
+
+  CLAIM VERIFICATION:
+    H_4(T,T\v) = 0 violations: 0
+    H_3(T,T\v) > 1 violations: 0
+
+  RANK(i_*) UNIVERSALITY CHECK:
+    p=0: GOOD i_* in {1}, BAD i_* in {1}
+    p=1: GOOD i_* in {0}, BAD i_* in {0}
+    p=2: GOOD i_* in {0}, BAD i_* in {0}
+    p=3: GOOD i_* in {0}, BAD i_* in {1}
+    p=4: GOOD i_* in {0}, BAD i_* in {0}
+    p=5: GOOD i_* in {0}, BAD i_* in {0}
+    p=6: GOOD i_* in {0}, BAD i_* in {0}
+
+DONE.
