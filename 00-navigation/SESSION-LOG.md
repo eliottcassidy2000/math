@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-08-S43f — Betti number investigation: n=7,8 full analysis, mutual exclusivity
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S43 (sixth continuation)
+**Summary of work:**
+  Comprehensive investigation of GLMY path homology Betti numbers at n=7 and n=8. Extended earlier n=6 results to test pattern robustness.
+
+  **Major results:**
+  - **beta_{n-3} pattern REFUTED at n=8**: beta_5=0 for ALL 20 H=661 (max) tournaments. beta_4>0 concentrates at high H (55% at 661, 47% at 657) but not exclusive.
+  - **beta_3 NOT H-max at n=7**: Only 5.8% (22/378) of beta_3>0 at score-class max H. The n=6 correspondence (HYP-291) is anomalous.
+  - **Three canonical Betti vectors persist n=6-8**: [1,0,...], [1,1,0,...], [1,0,0,1,0,...]. Same structure at all n.
+  - **HYP-299: beta_1 * beta_3 = 0 for ALL tournaments** (theorem candidate): Confirmed exhaustive n=6 (0/32768), sampled n=7 (0/500), n=8 (0/300). ZERO cooccurrences.
+  - **Dominance flip**: beta_1>0 dominates at n=6 (14.6%), roughly equal at n=7 (5.4% vs 6.8%), beta_3>0 dominates at n=8 (17.7% vs 0.7%).
+  - **beta_1 requires SC**: 100% of beta_1>0 are strongly connected (n=6 exhaustive). beta_3>0 does NOT require SC (75% SC).
+  - **chi in {0,1} for non-Paley** through n=7. At n=8: chi in {1,2} (beta_4 can contribute).
+
+**New contributions:** HYP-297 through HYP-301, refutation of HYP-293
+**Scripts:** beta5_n8_multi.py, beta4_n8_correlation.py, betti_n7_full.py, beta3_n7_hmax.py, beta1_beta3_exclusion.py, beta1_beta3_n8.py
+**Unresolved threads:**
+  - Prove HYP-299 (beta_1 * beta_3 = 0) algebraically
+  - Explain WHY chi in {0,1} for non-Paley tournaments
+  - Investigate what structural property separates beta_1>0 from beta_3>0 tournaments
+  - The dominance flip (beta_1 -> beta_3 as n grows) needs explanation
+
 ## opus-2026-03-08-S50 — β₁ ≤ 1 PROVED, filler vertex analysis, cocycle structure
 **Account:** opus
 **Continuation of:** opus-2026-03-08-S49c
