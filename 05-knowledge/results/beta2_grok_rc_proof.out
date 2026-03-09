@@ -1,0 +1,84 @@
+
+============================================================
+n=5: EXHAUSTIVE TEST OF GROK'S RC PROOF
+============================================================
+  Bad vertices: [1, 2, 4], Bad-TT: (4, 2, 1)
+  Bad edges: [(2, 1), (4, 1), (4, 2)]
+  Bad-TT proj: [ 1. -1.  1.] (support=3)
+  Good TTs all zero: True (1 good TTs)
+  Mixed TTs all single-edge: True (4 mixed TTs)
+  Mixed rank: 3
+  Bad proj outside mixed span: False
+    Mixed TT (0, 4, 1): proj=[0. 1. 0.]
+    Mixed TT (2, 0, 1): proj=[-1.  0.  0.]
+    Mixed TT (4, 1, 3): proj=[0. 1. 0.]
+    Mixed TT (4, 3, 2): proj=[ 0.  0. -1.]
+
+Total tournaments with β₁=0, #bad=3: 120
+
+Grok's claims:
+  1. Bad-TT has full support (3): 0 violations
+  2. Good TTs project to 0: 0 violations
+  3. Mixed TTs are single-edge: 0 violations
+  4. Mixed rank ≤ 2: 240 violations
+  5. Bad proj outside mixed span: 120 violations
+
+Mixed rank distribution: rank=3: 240
+Bad support distribution: support=3: 120
+
+*** FAILURES at bits: [41, 42, 44, 68, 74] ***
+  Bad vertices: [1, 2, 4], Bad-TT: (4, 2, 1)
+  Bad edges: [(2, 1), (4, 1), (4, 2)]
+  Bad-TT proj: [ 1. -1.  1.] (support=3)
+  Good TTs all zero: True (1 good TTs)
+  Mixed TTs all single-edge: True (4 mixed TTs)
+  Mixed rank: 3
+  Bad proj outside mixed span: False
+    Mixed TT (0, 4, 1): proj=[0. 1. 0.]
+    Mixed TT (2, 0, 1): proj=[-1.  0.  0.]
+    Mixed TT (4, 1, 3): proj=[0. 1. 0.]
+    Mixed TT (4, 3, 2): proj=[ 0.  0. -1.]
+
+============================================================
+n=6: EXHAUSTIVE TEST OF GROK'S RC PROOF
+============================================================
+  Bad vertices: [1, 4, 5], Bad-TT: (5, 1, 4)
+  Bad edges: [(1, 4), (5, 1), (5, 4)]
+  Bad-TT proj: [ 1.  1. -1.] (support=3)
+  Good TTs all zero: True (6 good TTs)
+  Mixed TTs all single-edge: True (6 mixed TTs)
+  Mixed rank: 3
+  Bad proj outside mixed span: False
+    Mixed TT (0, 5, 4): proj=[0. 0. 1.]
+    Mixed TT (1, 0, 4): proj=[-1.  0.  0.]
+    Mixed TT (5, 2, 1): proj=[ 0. -1.  0.]
+    Mixed TT (5, 3, 1): proj=[ 0. -1.  0.]
+    Mixed TT (5, 4, 2): proj=[0. 0. 1.]
+    Mixed TT (5, 4, 3): proj=[0. 0. 1.]
+
+Total tournaments with β₁=0, #bad=3: 4320
+
+Grok's claims:
+  1. Bad-TT has full support (3): 0 violations
+  2. Good TTs project to 0: 0 violations
+  3. Mixed TTs are single-edge: 0 violations
+  4. Mixed rank ≤ 2: 8640 violations
+  5. Bad proj outside mixed span: 4320 violations
+
+Mixed rank distribution: rank=3: 8640
+Bad support distribution: support=3: 4320
+
+*** FAILURES at bits: [152, 156, 209, 217, 268] ***
+  Bad vertices: [1, 4, 5], Bad-TT: (5, 1, 4)
+  Bad edges: [(1, 4), (5, 1), (5, 4)]
+  Bad-TT proj: [ 1.  1. -1.] (support=3)
+  Good TTs all zero: True (6 good TTs)
+  Mixed TTs all single-edge: True (6 mixed TTs)
+  Mixed rank: 3
+  Bad proj outside mixed span: False
+    Mixed TT (0, 5, 4): proj=[0. 0. 1.]
+    Mixed TT (1, 0, 4): proj=[-1.  0.  0.]
+    Mixed TT (5, 2, 1): proj=[ 0. -1.  0.]
+    Mixed TT (5, 3, 1): proj=[ 0. -1.  0.]
+    Mixed TT (5, 4, 2): proj=[0. 0. 1.]
+    Mixed TT (5, 4, 3): proj=[0. 0. 1.]

@@ -1,0 +1,97 @@
+Tournament bits=41
+  Bad vertices: [1, 2, 4]
+  Edges: [(0, 1), (0, 4), (1, 3), (2, 0), (2, 1), (3, 0), (3, 2), (4, 1), (4, 2), (4, 3)]
+  TTs: [(0, 4, 1), (2, 0, 1), (3, 2, 0), (4, 1, 3), (4, 2, 1), (4, 3, 2)]
+  Bad-TT index: 4, TT=(4, 2, 1)
+  #TTs=6, rank=6, redundancy=0
+
+  Full ∂₂ matrix (rows=edges, cols=TTs):
+    (0, 1): TT0((0, 4, 1))=-1, TT1((2, 0, 1))=1
+    (0, 4): TT0((0, 4, 1))=1
+    (1, 3): TT3((4, 1, 3))=1
+    (2, 0): TT1((2, 0, 1))=1, TT2((3, 2, 0))=1
+    (2, 1): TT1((2, 0, 1))=-1, TT4((4, 2, 1))=1
+    (3, 0): TT2((3, 2, 0))=-1
+    (3, 2): TT2((3, 2, 0))=1, TT5((4, 3, 2))=1
+    (4, 1): TT0((0, 4, 1))=1, TT3((4, 1, 3))=1, TT4((4, 2, 1))=-1
+    (4, 2): TT4((4, 2, 1))=1, TT5((4, 3, 2))=-1
+    (4, 3): TT3((4, 1, 3))=-1, TT5((4, 3, 2))=1
+
+  TT classification:
+    TT0 (0, 4, 1) [MIXED]: (0, 1)=-1, (0, 4)=1, (4, 1)=1
+    TT1 (2, 0, 1) [MIXED]: (0, 1)=1, (2, 0)=1, (2, 1)=-1
+    TT2 (3, 2, 0) [GOOD]: (2, 0)=1, (3, 0)=-1, (3, 2)=1
+    TT3 (4, 1, 3) [MIXED]: (1, 3)=1, (4, 1)=1, (4, 3)=-1
+    TT4 (4, 2, 1) [BAD]: (2, 1)=1, (4, 1)=-1, (4, 2)=1 ← BAD-TT
+    TT5 (4, 3, 2) [MIXED]: (3, 2)=1, (4, 2)=-1, (4, 3)=1
+
+  rank(∂₂) = 6
+  rank(∂₂ without bad-TT) = 5
+  dim(left null of ∂₂\bad-TT) = 5
+
+  Witness cocycle w (sees bad-TT but not others):
+    w(0, 1) = 0.2000
+    w(0, 4) = 0.4000
+    w(1, 3) = 0.4000
+    w(2, 0) = 0.2000
+    w(2, 1) = 0.4000
+    w(3, 0) = 0.4000
+    w(3, 2) = 0.2000
+    w(4, 1) = -0.2000
+    w(4, 2) = 0.4000
+    w(4, 3) = 0.2000
+  w · bad-TT-col = 1.0000
+  max |w · other-col| = 4.72e-16
+
+
+============================================================
+KEY INSIGHT: WHY PROJECTION ARGUMENT FAILS
+============================================================
+
+At n=5: redundancy=0 means ALL columns are needed (trivially RC).
+Grok's projection is unnecessary — the full matrix is already tight.
+
+At n=6: redundancy=2-3, so NOT all TTs are RC.
+The question is WHY the bad-TT is STILL RC.
+
+The V-projection argument fails because mixed TTs span all of V.
+Mixed TTs touching each of the 3 bad edges provide e_xy, e_yz, e_xz
+individually, spanning all 3D. No star-cocycle constraint prevents this.
+
+The real mechanism must involve the FULL boundary structure, not just
+the bad-edge projection.
+
+============================================================
+n=6: WHICH TTs ARE rank-critical? (detailed example)
+============================================================
+  Bad: [1, 4, 5], #TTs=13, rank=10, redundancy=3
+  Rank-critical (3):
+    TT0 (0, 5, 4) [MIXED]
+    TT1 (1, 0, 4) [MIXED]
+    TT7 (5, 1, 4) [BAD]
+  NOT rank-critical (10):
+    TT2 (2, 1, 0) [GOOD]
+    TT3 (3, 1, 0) [GOOD]
+    TT4 (3, 2, 0) [GOOD]
+    TT5 (3, 2, 1) [GOOD]
+    TT6 (4, 3, 2) [GOOD]
+    TT8 (5, 2, 1) [MIXED]
+    TT9 (5, 3, 1) [MIXED]
+    TT10 (5, 3, 2) [GOOD]
+    TT11 (5, 4, 2) [MIXED]
+    TT12 (5, 4, 3) [MIXED]
+
+  RC types: {'BAD': 1, 'MIXED': 2}
+  Non-RC types: {'GOOD': 6, 'MIXED': 4}
+
+============================================================
+n=6: AGGREGATE — which TT types are RC vs non-RC?
+============================================================
+Total tournaments: 4320
+RC counts by type: {'MIXED': 5760, 'BAD': 4320, 'GOOD': 2880}
+Non-RC counts by type: {'GOOD': 23040, 'MIXED': 18720}
+
+Per-tournament averages:
+  BAD: 1.00 RC, 0.00 non-RC (total 1.00)
+  MIXED: 1.33 RC, 4.33 non-RC (total 5.67)
+  GOOD: 0.67 RC, 5.33 non-RC (total 6.00)

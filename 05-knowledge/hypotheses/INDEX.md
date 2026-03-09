@@ -57,6 +57,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-356 | beta_1=1 forces rank(d_4) = ker(d_3) exactly (perfect saturation, gap=0) | n=6: 4800/4800 (100%), n=7: 27/27 (100%). ker(d_3) ranges 3-18 (n=6) and 12-49 (n=7) but gap ALWAYS 0 when beta_1=1. This IS the seesaw: extra Omega_4 content fills extra ker(d_3) | kind-pasteur-S46 |
 | HYP-357 | ker(d_3) = dim(Omega_3) - dim(Omega_2) + rank(d_2) (seesaw formula) | Exact formula, verified 32768/32768 at n=6. Follows from beta_2=0 (THM-108): rank(d_3)=ker(d_2) | kind-pasteur-S46 |
 | HYP-358 | Good vertex selection rule: max c3(v) gives beta_3(T\v)=0 at 97.7% | n=7: 43/44 success. Bad vertices have LOW c3(v) (1-4 vs good's 4-7). Intuition: removing the most cyclic vertex disrupts H_3 | kind-pasteur-S46 |
+| HYP-359 | Bad-vertex TT always rank-critical (for ALL n, not just zero-redundancy) | Exhaustive n=5 (120/120), n=6 (4320/4320). At n=6 redundancy=2-3 but bad-TT still RC. Witness: global 1-form w vanishing on all non-bad columns. | beta2_badtt_rc_n6.py |
+| HYP-360 | At n=6 #bad=3: exactly 3 TTs are RC (1 BAD + 2 MIXED), rest redundant | Exhaustive: BAD=1.00 RC, MIXED=1.33 RC avg, GOOD=0.67 RC avg. Total RC=3.00 = redundancy complement | beta2_rc_mechanism.py |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
@@ -66,6 +68,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-319 | Tournament path homology simplicity: one odd hole max | beta_1+beta_5 coexist at n=8, chi=-1 | n=8 | kind-pasteur-S45 |
 | HYP-321 | chi(T) in {0,1} for all tournaments | chi=-1 at n=8 (beta_1=beta_5=1), chi=2,6 (beta_4>0) | n=8 | kind-pasteur-S45 |
 | HYP-102 | M(T) = M(T^op) | Fails for generic tournaments | n=4 | reversal_proof_attempt.py |
+| HYP-361 | V-projection RC proof: mixed TTs span ≤2D in bad-edge subspace V | Mixed TTs span ALL 3D of V (rank=3). Each bad-edge has ≥1 mixed TT. Star-cocycle does NOT constrain to 2D. | n=5 (120/120 fail) | beta2_grok_rc_proof.py |
 | HYP-103 | M(T) = M(T^op)^T | Also fails | n=4 | reversal_proof_attempt.py |
 | HYP-104 | M is linear in A, A^T, A^2, etc. | No such combination works | n=4 | simple_pattern_search.py |
 | HYP-105 | M commutes with A | Fails | n=4 | M_functional_equation.py |

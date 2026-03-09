@@ -156,12 +156,23 @@ proof of THM-103 doesn't directly yield the deletion bound.
 - Bad-vertex TT IS rank-critical when β₁=0 and #bad=3: #TTs=rank (zero redundancy), removing it drops rank by 1 (CORRECTED)
 - Rank-critical TTs governed by redundancy = #TTs - rank; high redundancy → 0 RC TTs
 - #RC correlates with t₃ (r=0.69 at n=6), not directly with bad vertices (r=0.46)
-- Flip obstruction mechanism (CORRECTED): with #bad=3, #TTs=rank (zero redundancy).
-  Flipping transitive edge removes EXACTLY 1 TT (the bad-vertex TT), creates 0 new (n=5).
-  Since ALL TTs are rank-critical at zero redundancy, rank drops by 1, β₁ goes 0→1.
+- Flip obstruction mechanism: flipping transitive edge among bad vertices removes exactly 1 TT,
+  creates 0 new, drops rank by 1, β₁ goes 0→1.
 - #bad vs t₃ (n=5): #bad=0↔t₃∈{0,1}, #bad=1↔t₃=2, #bad=2↔t₃=3, #bad=3↔t₃=4
 - β₁=0 with all-bad 3-cycle: ZERO instances at n=5,6,7 (flip obstruction confirmed)
 - β₁=1 minimum #bad: 3(n=5), 4(n=6), 5(n=7) — grows with n
+- **Bad-vertex TT rank-criticality** (exhaustive n=5,6):
+  - n=5: redundancy=0, all TTs are RC (trivially)
+  - n=6: redundancy∈{2,3}, exactly 3 TTs are RC per tournament
+    - BAD-TT: ALWAYS RC (4320/4320 = 100%)
+    - MIXED: avg 1.33 RC out of 5.67 total; GOOD: avg 0.67 RC out of 6.00 total
+  - Bad-TT is RC even with nontrivial redundancy — mechanism is NOT "all TTs RC"
+- **V-projection argument FAILS**: projecting ∂₂ columns onto 3D bad-edge subspace V,
+  mixed TTs span all of V (rank 3, not ≤2). Bad-TT proj lies inside mixed span.
+  The star-cocycle constraint does NOT restrict mixed TTs to dim ≤ 2.
+  Rank-criticality depends on the FULL edge-space structure, not just bad edges.
+- **Witness cocycle**: There exists a global 1-form w (supported on ALL edges) that
+  evaluates to 0 on all non-bad-TT columns and ≠0 on the bad-TT column.
 
 See THM-103 for the full proof.
 
