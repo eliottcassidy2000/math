@@ -1,0 +1,99 @@
+======================================================================
+BRIDGE PATTERN ANALYSIS
+======================================================================
+
+bits=80: 2 components, 1 free
+  Component 0 (FREE): [(0, 5, 1), (0, 5, 4), (0, 5, 3), (0, 5, 2)]
+  Component 1 (dominated): [(1, 3, 2)]
+  Free cycle (0,5,1) = 0->5->1->0
+    v=2: pattern=(1, 0, 1), bridges=['ab']
+    v=3: pattern=(1, 0, 0), bridges=['ab']
+    v=4: pattern=(1, 0, 1), bridges=['ab']
+  Dominated cycle (1, 3, 2): ['0 sub', '4 dom', '5 dom']
+
+bits=88: 2 components, 1 free
+  Component 0 (FREE): [(0, 4, 1), (0, 4, 3), (0, 5, 3), (0, 5, 2), (0, 4, 2), (0, 5, 1)]
+  Component 1 (dominated): [(1, 3, 2)]
+  Free cycle (0,4,1) = 0->4->1->0
+    v=2: pattern=(1, 0, 1), bridges=['ab']
+    v=3: pattern=(1, 0, 0), bridges=['ab']
+    v=5: pattern=(0, 1, 1), bridges=['ca']
+  Dominated cycle (1, 3, 2): ['0 sub', '4 dom', '5 dom']
+
+bits=144: 2 components, 1 free
+  Component 0 (FREE): [(0, 5, 1), (0, 5, 4), (0, 5, 3), (0, 5, 2)]
+  Component 1 (dominated): [(1, 4, 2), (1, 4, 3)]
+  Free cycle (0,5,1) = 0->5->1->0
+    v=2: pattern=(1, 0, 1), bridges=['ab']
+    v=3: pattern=(1, 0, 1), bridges=['ab']
+    v=4: pattern=(1, 0, 0), bridges=['ab']
+  Dominated cycle (1, 4, 2): ['0 sub', '5 dom']
+  Dominated cycle (1, 4, 3): ['0 sub', '5 dom']
+
+n=6: 1680 tournaments with multi-component + free component
+
+======================================================================
+MAX FREE COMPONENTS (SAMPLED)
+======================================================================
+n=7: max_fc=1, dist={0: 1899, 1: 101}
+n=8: max_fc=1, dist={0: 992, 1: 8}
+n=9: max_fc=1, dist={0: 499, 1: 1}
+n=10: max_fc=0, dist={0: 200}
+
+======================================================================
+PROVING AT MOST 1 FREE COMPONENT
+======================================================================
+
+Detailed analysis of disconnected free+dominated cases:
+  Checked 1680 tournaments with free+dominated disconnected components
+
+======================================================================
+STRUCTURAL: WHO DOMINATES THE ISOLATED CYCLES?
+======================================================================
+n=6: Dominator location for dominated cycles:
+  ('dom', False): 11880
+  ('dom', True): 17400
+  ('sub', False): 11880
+  ('sub', True): 17400
+
+======================================================================
+PROOF SKETCH
+======================================================================
+
+THEOREM: In any tournament T on n >= 4 vertices, b1(T) <= 1.
+
+PROOF SKETCH:
+
+Step 1: b1 = #{free components of 3-cycle graph}
+  (Verified computationally n<=8, follows from THM-103 + THM-104 + THM-105)
+
+Step 2: At most 1 free component.
+  Suppose for contradiction that FC1 and FC2 are two free components.
+
+  By THM-106 (bridge theorem): for any free cycle C in FC1 and any
+  vertex v not in C, there exists a 3-cycle containing v that shares
+  an edge with C. This cycle is in FC1's component.
+
+  Therefore: every vertex of the tournament appears in some cycle
+  of FC1's component. Similarly for FC2.
+
+  But FC1 and FC2 are DISJOINT components. So FC2's cycles share
+  no edges with FC1's cycles. Yet all vertices of FC2's cycles are
+  also in FC1's cycles (from step above). This means FC1 and FC2
+  share vertices but not edges.
+
+  CLAIM: If two 3-cycles share 2+ vertices, they share a directed edge.
+  (Two vertices determine a unique directed edge in a tournament.)
+
+  So FC2's cycles can share at most 1 vertex with any single FC1 cycle.
+  But the vertex overlap ensures: each FC2 cycle vertex is in some FC1
+  cycle, creating edge-sharing opportunities via intermediate cycles.
+
+  [Remaining: complete the proof that edge-sharing chains always exist]
+
+Step 3: Therefore b1 <= 1. Combined with Sum_v b1(T) <= 3 when b1=0,
+  good vertex always exists, and beta_2 = 0 by induction.
+
+
+
+Done.
