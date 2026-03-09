@@ -1,0 +1,71 @@
+======================================================================
+BETA_3 SEESAW MECHANISM — Why beta_1*beta_3=0
+======================================================================
+
+--- Part 1: Chain complex by beta_1 at n=6 (exhaustive) ---
+
+  beta_1 = 0 (27968 tournaments):
+    Omega_0: min=6, max=6, avg=6.0
+    Omega_1: min=15, max=15, avg=15.0
+    Omega_2: min=18, max=21, avg=19.7
+    Omega_3: min=9, max=21, avg=14.9
+    Omega_4: min=0, max=15, avg=6.5
+    Omega_5: min=0, max=5, avg=1.2
+    rank(d_1): min=5, max=5, avg=5.0
+    rank(d_2): min=10, max=10, avg=10.0
+    rank(d_3): min=8, max=11, avg=9.7
+    rank(d_4): min=0, max=10, avg=5.3
+    rank(d_5): min=0, max=5, avg=1.2
+    ker(d_3): min=1, max=10, avg=5.3
+    rank(d_4): min=0, max=10, avg=5.3
+    beta_3: Counter({0: 27648, 1: 320})
+
+  beta_1 = 1 (4800 tournaments):
+    Omega_0: min=6, max=6, avg=6.0
+    Omega_1: min=15, max=15, avg=15.0
+    Omega_2: min=18, max=24, avg=20.1
+    Omega_3: min=12, max=33, avg=18.9
+    Omega_4: min=3, max=27, avg=10.2
+    Omega_5: min=0, max=9, avg=2.4
+    rank(d_1): min=5, max=5, avg=5.0
+    rank(d_2): min=9, max=9, avg=9.0
+    rank(d_3): min=9, max=15, avg=11.2
+    rank(d_4): min=3, max=18, avg=7.8
+    rank(d_5): min=0, max=9, avg=2.4
+    ker(d_3): min=3, max=18, avg=7.8
+    rank(d_4): min=3, max=18, avg=7.8
+    beta_3: Counter({0: 4800})
+
+--- Part 2: Seesaw equation verification ---
+  ker(d_3) = dim(Omega_3) - ker(d_2) formula: OK=32768, FAIL=0
+
+--- Part 3: ker(d_3) shift from beta_1 ---
+
+  beta_1=0 (27968 tours):
+    Omega_3: 9-21
+    ker(d_3): 1-10
+    rank(d_4): 0-10
+    Omega_4: 0-15
+    beta_3: Counter({0: 27648, 1: 320})
+
+  beta_1=1 (4800 tours):
+    Omega_3: 12-33
+    ker(d_3): 3-18
+    rank(d_4): 3-18
+    Omega_4: 3-27
+    beta_3: Counter({0: 4800})
+
+--- Part 4: Does beta_1=1 force ker(d_3)=0? ---
+  ker(d_3) when beta_1=1: {3: 480, 4: 720, 5: 720, 6: 480, 8: 1440, 15: 720, 18: 240}
+
+--- Part 5: Chain complex by beta_1 at n=7 (sampled) ---
+  beta_1=0 (473 tours):
+    Omega_3: 28-64
+    ker(d_3): 10-38
+    beta_3: Counter({0: 439, 1: 34})
+  beta_1=1 (27 tours):
+    Omega_3: 31-77
+    ker(d_3): 12-49
+    beta_3: Counter({0: 27})
+
+DONE.
