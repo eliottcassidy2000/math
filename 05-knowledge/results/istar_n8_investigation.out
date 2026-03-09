@@ -1,0 +1,53 @@
+======================================================================
+RANK(i_*) AT ALL DEGREES — n=8 INVESTIGATION
+======================================================================
+
+--- Phase 1: beta_3=1 tournaments at n=8 ---
+  5/30 beta_3=1 found (17 trials), 0 with b4>0, 30.6s
+  10/30 beta_3=1 found (55 trials), 0 with b4>0, 79.6s
+  15/30 beta_3=1 found (92 trials), 0 with b4>0, 129.7s
+  20/30 beta_3=1 found (116 trials), 0 with b4>0, 156.7s
+  25/30 beta_3=1 found (138 trials), 0 with b4>0, 194.3s
+  30/30 beta_3=1 found (165 trials), 0 with b4>0, 237.5s
+  Done: 30 tournaments (165 trials), 120 vertex records, 237.5s
+  beta_3=beta_4=1 tournaments: 0
+
+  GOOD vertices (85):
+    p=0: rank(i_*)={1: 85}
+    p=1: rank(i_*)={0: 85}
+    p=2: rank(i_*)={0: 85}
+    p=3: rank(i_*)={0: 85}
+    p=4: rank(i_*)={0: 85}
+    p=5: rank(i_*)={0: 85}
+    p=6: rank(i_*)={0: 85}
+    p=7: rank(i_*)={0: 85}
+
+  BAD vertices (35):
+    p=0: rank(i_*)={1: 35}
+    p=1: rank(i_*)={0: 35}
+    p=2: rank(i_*)={0: 35}
+    p=3: rank(i_*)={1: 35}
+    p=4: rank(i_*)={0: 35}
+    p=5: rank(i_*)={0: 35}
+    p=6: rank(i_*)={0: 35}
+    p=7: rank(i_*)={0: 35}
+
+  Relative Betti profiles H_*(T,T\v):
+    GOOD: (0, 0, 0, 1, 0, 0, 0, 0): 85
+    BAD: (0, 0, 0, 0, 0, 0, 0, 0): 35
+
+  CLAIM VERIFICATION:
+    H_4(T,T\v) = 0 violations: 0
+    H_3(T,T\v) > 1 violations: 0
+
+  RANK(i_*) UNIVERSALITY:
+    p=0: GOOD i_* in {1}, BAD i_* in {1}
+    p=1: GOOD i_* in {0}, BAD i_* in {0}
+    p=2: GOOD i_* in {0}, BAD i_* in {0}
+    p=3: GOOD i_* in {0}, BAD i_* in {1}
+    p=4: GOOD i_* in {0}, BAD i_* in {0}
+    p=5: GOOD i_* in {0}, BAD i_* in {0}
+    p=6: GOOD i_* in {0}, BAD i_* in {0}
+    p=7: GOOD i_* in {0}, BAD i_* in {0}
+
+DONE.

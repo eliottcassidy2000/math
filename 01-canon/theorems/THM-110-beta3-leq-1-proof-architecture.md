@@ -220,14 +220,15 @@ Corrected dichotomy:
 
 ## New LES Decomposition (opus-S54)
 
-### Consecutive Seesaw (HYP-394)
+### Consecutive Seesaw (HYP-394) — REFUTED at n=8
 
-**beta_k * beta_{k+1} = 0 for ALL k >= 1 and ALL tournaments.**
+~~beta_k * beta_{k+1} = 0 for ALL k >= 1 and ALL tournaments.~~
 
-Exhaustive at n=6, sampled n=7 (3000). Zero violations. Extends the adjacent-odd
-seesaw (beta_{2k-1} * beta_{2k+1} = 0) to ALL consecutive pairs.
+Holds exhaustively n=6, sampled n=7 (3000+). **FAILS at n=8**: beta_3=beta_4=1
+exists (~0.15% rate, confirmed mod-p by kind-pasteur-S48 and opus-S55).
 
-Key consequence: when beta_3(T) = 1, beta_4(T) = 0 (and vice versa).
+**However, the proof architecture does NOT need the consecutive seesaw.**
+See "Simplified Proof Architecture" below.
 
 ### Full LES Picture
 
@@ -259,42 +260,82 @@ For Paley T_7: beta_3(T) = 0, beta_4(T) = 6, beta_3(T\v) = 1.
 - i_* = 0 (target H_3(T) = 0)
 - The connecting map δ is the "Paley mechanism" that kills H_3
 
-### Three Open Claims for the Proof
+### Simplified Proof Architecture (opus-S55)
 
-**Claim I (i_*-injectivity / HYP-380):** H_4(T,T\v) = 0 when beta_3(T\v) = 1
-and beta_3(T) >= 1. Equivalent to: the relative complex is exact at degree 4
-whenever the deletion has nonzero H_3.
+**KEY INSIGHT:** The proof only needs TWO claims, not three.
+Claim III (consecutive seesaw) is REFUTED and NOT NEEDED.
+
+**Claim I (i_*-injectivity / HYP-380):** When beta_3(T) >= 1 and beta_3(T\v) = 1,
+the map i_*: H_3(T\v) -> H_3(T) has rank 1 (injective).
 
 **Claim II (relative H_3 bound / HYP-351):** dim H_3(T,T\v) <= 1 for all T, v.
 
-**Claim III (consecutive seesaw / HYP-394):** beta_k * beta_{k+1} = 0.
-This is needed to reduce i_*-injectivity to H_4(T,T\v) = 0.
+**Proof of beta_3 <= 1 from Claims I + II:**
 
-Together: pick any v. By induction beta_3(T\v) in {0,1}.
-- If beta_3(T\v) = 0: beta_3(T) = H_3^rel <= 1 (Claim II)
-- If beta_3(T\v) = 1: Claim III gives beta_4(T\v) = 0, Claim I gives
-  H_4^rel = 0, so i_* is iso, beta_3(T) = 1 + H_3^rel. Claim I also
-  implies H_3^rel = 0, so beta_3(T) = 1.
+Induction on n. Base case n <= 5: beta_3 = 0.
 
-## Open Problems
+For n-vertex tournament T, pick ANY vertex v. By induction beta_3(T\v) in {0,1}.
 
-1. **Prove H_4(T,T\v) = 0 when beta_3(T\v) = 1.** (Claim I / HYP-380/396)
-   The key open algebraic claim. Equivalent to relative complex exactness at
-   degree 4 for beta_3 > 0 deletions.
+**Case A: beta_3(T\v) = 0.**
+LES: 0 -> H_3(T) -> H_3(T,T\v) -> H_2(T\v) = 0.
+So beta_3(T) = dim H_3(T,T\v) <= 1 by Claim II.
 
-2. **Prove relative H_3 bound algebraically.** (Claim II / HYP-351) Why is
-   dim H_3(T,T\v) <= 1? The relative complex R_p has large dimensions
-   (R_3 ~ 30-36 at n=7) but H_3(R) <= 1.
+**Case B: beta_3(T\v) = 1.**
+LES: H_3(T\v) ->^{i_*} H_3(T) -> H_3(T,T\v) -> H_2(T\v) = 0.
+From exactness: beta_3(T) = rank(i_*) + dim H_3(T,T\v).
+If beta_3(T) = 0: nothing to prove.
+If beta_3(T) >= 1: Claim I gives rank(i_*) = 1, so
+  dim H_3(T,T\v) = beta_3(T) - 1.
+  Claim II gives beta_3(T) - 1 <= 1, so beta_3(T) <= 2.
 
-3. **Prove consecutive seesaw.** (Claim III / HYP-394) Why can't adjacent
-   Betti numbers both be nonzero? This extends the known adjacent-odd seesaw
-   beta_{2k-1} * beta_{2k+1} = 0.
+  BUT: our computation shows H_3(T,T\v) = 0 for BAD vertices (not just <= 1).
+  If we can show H_3(T,T\v) = 0 when i_* is injective (rank 1),
+  then beta_3(T) = 1 exactly.
 
-4. **Extend to beta_5.** The seesaw mechanism (THM-098) predicts beta_5 in {0,1} too.
+**Refined Claim I' (BAD vertex acyclicity / HYP-395):**
+When beta_3(T) >= 1 and beta_3(T\v) = 1, ALL H_p(T,T\v) = 0.
+i.e., inclusion T\v -> T is a quasi-isomorphism.
+
+With Claim I' instead of Claim I:
+  Case B gives beta_3(T) = 1 + 0 = 1. DONE.
+
+**Computational verification (opus-S55):**
+- n=7: 80 tournaments, 560 vertices. ALL rank(i_*) values match predicted.
+  GOOD: H_rel = (0,0,0,1,...), BAD: H_rel = (0,...). 0 violations.
+- n=8: 30 tournaments, 120 vertices. Same perfect results. 0 violations.
+  (Including 4 vertices checked per tournament — all 8 would be ideal.)
+
+### What Remains for a Complete Proof
+
+Only TWO algebraic claims need proof:
+
+1. **Claim I' (BAD vertex quasi-iso):** When b3(T)>=1 and b3(T\v)=1,
+   the inclusion i: T\v -> T induces isomorphisms on ALL H_p.
+   (Stronger than just rank(i_*^3) = 1, but computationally verified.)
+
+2. **Claim II (relative H_3 bound):** dim H_3(T,T\v) <= 1.
+   (Only needed for GOOD vertices where b3(T\v) = 0.)
+
+## Open Problems (updated opus-S55)
+
+1. **Prove BAD vertex quasi-iso algebraically.** (Claim I' / HYP-395)
+   When b3(T)>=1 and b3(T\v)=1, inclusion is a quasi-iso: all H_p(T,T\v)=0.
+   Verified n=7 (80 tours, 73 bad verts), n=8 (30 tours, 35 bad verts).
+   The consecutive seesaw is NOT needed for this — the key fact is that
+   beta_p(T\v) = 0 for p >= 4 (by induction on the beta_{p-2} <= 1 chain).
+
+2. **Prove relative H_3 bound algebraically.** (Claim II / HYP-351)
+   dim H_3(T,T\v) <= 1 for GOOD vertices. The relative complex R_p has large
+   dims (R_3 ~ 30-36 at n=7) but H_3(R) <= 1 always.
+
+3. **Extend to beta_5.** The seesaw mechanism (THM-098) predicts beta_5 in {0,1} too.
    Does the same dichotomy hold for i_*: H_5(T\v) -> H_5(T)?
 
-5. **Characterize good-vertex-free tournaments at n=8.** At n=7, only Paley
+4. **Characterize good-vertex-free tournaments at n=8.** At n=7, only Paley
    lacks a good vertex. What happens at n=8?
+
+5. **Understand beta_3=beta_4=1 coexistence.** Rare (~0.15% at n=8).
+   Does the proof architecture work for these? (Preliminary: YES at n=8.)
 
 ## Files
 - les_rank_i_star_v2.py — main computation (v2 = fixed mod-p arithmetic)
@@ -306,6 +347,9 @@ Together: pick any v. By induction beta_3(T\v) in {0,1}.
 - relative_complex_analysis.py — relative complex dimension profiles (opus-S54)
 - consecutive_seesaw.py — beta_k * beta_{k+1} = 0 check (opus-S54)
 - h4_relative_check.py — H_4(T,T\v) = 0 verification (opus-S54)
+- istar_all_degrees.py — rank(i_*) at ALL degrees p, n=7 (opus-S55)
+- istar_n8_investigation.py — rank(i_*) at ALL degrees p, n=8 (opus-S55)
+- istar_b3b4_coexist.py — beta_3=beta_4=1 case study (opus-S55)
 
 ## See Also
 - THM-098 (Boolean odd Betti conjecture)
