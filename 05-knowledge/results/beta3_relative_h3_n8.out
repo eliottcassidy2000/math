@@ -1,0 +1,17 @@
+
+======================================================================
+n = 8: sampled verification of H_3(T, T\v) <= 1
+======================================================================
+  ... 0/100, max H_3 relative: 0
+    NEW MAX: H_3(T,T\v)=1 at trial=2, v=0
+  ... 20/100, max H_3 relative: 1
+  ... 40/100, max H_3 relative: 1
+  ... 60/100, max H_3 relative: 1
+  ... 80/100, max H_3 relative: 1
+
+  Total (T,v) pairs: 800
+  H_3(T, T\v) distribution: {0: 692, 1: 108}
+  Max H_3(T, T\v): 1
+  Violations (>1): 0
+
+  *** H_3(T, T\v) <= 1 CONFIRMED for all sampled n=8 pairs ***

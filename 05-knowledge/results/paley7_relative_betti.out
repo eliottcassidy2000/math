@@ -1,0 +1,49 @@
+======================================================================
+PALEY T_7: RELATIVE BETTI NUMBERS
+======================================================================
+
+Paley T_7 adjacency matrix:
+  [0, 1, 1, 0, 1, 0, 0]
+  [0, 0, 1, 1, 0, 1, 0]
+  [0, 0, 0, 1, 1, 0, 1]
+  [1, 0, 0, 0, 1, 1, 0]
+  [0, 1, 0, 0, 0, 1, 1]
+  [1, 0, 1, 0, 0, 0, 1]
+  [1, 1, 0, 1, 0, 0, 0]
+
+Computing absolute and relative Betti for v=0...
+
+  Absolute Betti (T_7): [1, 0, 0, 0, 6, 0, 0]
+  dim(Omega_p): [7, 21, 42, 63, 63, 42, 21]
+
+  Relative H_p(T_7, T_7\0): [0, 0, 0, 0, 7, 0, 0]
+  dim(R_p): [1, 6, 21, 45, 54, 39, 21]
+
+  CRITICAL CHECK:
+    beta_4(T_7) = 6
+    H_4(T_7, T_7\0) = 7
+    beta_4(T_7\0) = ? (need to compute for T_6)
+    beta(T_7\0) = [1, 0, 0, 1, 0, 0]
+
+  Checking all vertices (should be identical by vertex-transitivity):
+    v=0: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+    v=1: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+    v=2: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+    v=3: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+    v=4: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+    v=5: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+    v=6: H_p(T,T\v) = [0, 0, 0, 0, 7, 0, 0]
+
+======================================================================
+KEY OBSERVATIONS
+======================================================================
+
+  1. H_{odd}(T_7, T_7\v) = [0, 0, 0]
+     All <= 1? True
+
+  2. H_{even}(T_7, T_7\v) = [0, 7, 0]
+     Any > 1? True
+
+  3. This confirms the ODD/EVEN DICHOTOMY:
+     H_{odd}(T, T\v) <= 1 => beta_{odd} <= 1 (Boolean)
+     H_{even}(T, T\v) can be large => beta_{even} can be large

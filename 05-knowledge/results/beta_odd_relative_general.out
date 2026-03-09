@@ -1,0 +1,48 @@
+======================================================================
+GENERAL RELATIVE ODD BETTI: H_{2k+1}(T, T\v) <= 1?
+======================================================================
+
+======================================================================
+n = 7
+======================================================================
+  ... 0/200
+  ... 50/200
+  ... 100/200
+  ... 150/200
+
+  H_1(T, T\v) distribution: {0: 1388, 1: 12}
+  Max: 1, Violations (>1): 0
+
+  H_3(T, T\v) distribution: {0: 1299, 1: 101}
+  Max: 1, Violations (>1): 0
+
+  H_5(T, T\v) distribution: {0: 1400}
+  Max: 0, Violations (>1): 0
+
+  --- Even relative Betti (for comparison) ---
+  H_2(T, T\v) distribution: {0: 315, 1: 35}
+  Max: 1
+  H_4(T, T\v) distribution: {0: 350}
+  Max: 0
+  H_6(T, T\v) distribution: {0: 350}
+  Max: 0
+
+======================================================================
+n = 8
+======================================================================
+  ... 0/100
+  ... 50/100
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/beta_odd_relative_general.py", line 260, in <module>
+    main()
+  File "/Users/e/Documents/GitHub/math/04-computation/beta_odd_relative_general.py", line 226, in main
+    rel_betti = compute_all_relative_betti(T, n, v, max_p=max_p)
+  File "/Users/e/Documents/GitHub/math/04-computation/beta_odd_relative_general.py", line 93, in compute_all_relative_betti
+    omega_T = build_omega(all_T, max_p)
+  File "/Users/e/Documents/GitHub/math/04-computation/beta_odd_relative_general.py", line 84, in build_omega
+    U, S, Vt = np.linalg.svd(na_mat, full_matrices=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/linalg/_linalg.py", line 1812, in svd
+    u, s, vh = gufunc(a, signature=signature)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/linalg/_linalg.py", line 113, in _raise_linalgerror_svd_nonconvergence
+    raise LinAlgError("SVD did not converge")
+numpy.linalg.LinAlgError: SVD did not converge

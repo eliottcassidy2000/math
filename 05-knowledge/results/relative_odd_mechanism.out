@@ -1,0 +1,92 @@
+======================================================================
+RELATIVE COMPLEX STRUCTURE: WHY H_{odd}(T,T\v) <= 1?
+======================================================================
+
+n = 6: exhaustive analysis of relative complex dimensions
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+======================================================================
+RELATIVE COMPLEX STATISTICS
+======================================================================
+
+  Level p=0:
+    dim(R_p): min=1, max=1, mean=1.0
+    ker(d_p^rel): min=1, max=1, mean=1.0
+    im(d_1^rel): min=1, max=1, mean=1.0
+    H_p(T,T\v): {0: 196608}
+    gap = ker - im: {0: 196608}
+    deficiency (gap when ker>0): {0: 196608}
+
+  Level p=1:
+    dim(R_p): min=5, max=5, mean=5.0
+    ker(d_p^rel): min=4, max=4, mean=4.0
+    im(d_2^rel): min=3, max=4, mean=4.0
+    H_p(T,T\v): {0: 190848, 1: 5760}
+    gap = ker - im: {0: 190848, 1: 5760}
+    deficiency (gap when ker>0): {0: 190848, 1: 5760}
+
+  Level p=2:
+    dim(R_p): min=9, max=14, mean=10.5
+    ker(d_p^rel): min=5, max=10, mean=6.6
+    im(d_3^rel): min=5, max=10, mean=6.4
+    H_p(T,T\v): {0: 161280, 1: 35328}
+    gap = ker - im: {0: 161280, 1: 35328}
+    deficiency (gap when ker>0): {0: 161280, 1: 35328}
+
+  Level p=3:
+    dim(R_p): min=6, max=26, mean=11.1
+    ker(d_p^rel): min=1, max=16, mean=4.7
+    im(d_4^rel): min=0, max=16, mean=4.7
+    H_p(T,T\v): {0: 194688, 1: 1920}
+    gap = ker - im: {0: 194688, 1: 1920}
+    deficiency (gap when ker>0): {0: 194688, 1: 1920}
+
+  Level p=4:
+    dim(R_p): min=0, max=25, mean=6.1
+    ker(d_p^rel): min=0, max=9, mean=1.4
+    im(d_5^rel): min=0, max=9, mean=1.4
+    H_p(T,T\v): {0: 196608}
+    gap = ker - im: {0: 196608}
+    deficiency (gap when ker>0): {0: 147168}
+
+  Level p=5:
+    dim(R_p): min=0, max=9, mean=1.4
+    ker(d_p^rel): min=0, max=0, mean=0.0
+    im(d_6^rel): min=0, max=0, mean=0.0
+    H_p(T,T\v): {0: 196608}
+    gap = ker - im: {0: 196608}
+
+======================================================================
+ODD-LEVEL RELATIVE HOMOLOGY ANALYSIS
+======================================================================
+
+  H_1(T, T\v):
+    Distribution: {0: 190848, 1: 5760}
+    When H_1 > 0 (5760 cases):
+      dim(R_1): {5: 5760}
+      ker(d_1^rel): {4: 5760}
+      im(d_2^rel): {3: 5760}
+
+  H_3(T, T\v):
+    Distribution: {0: 194688, 1: 1920}
+    When H_3 > 0 (1920 cases):
+      dim(R_3): {6: 480, 14: 1440}
+      ker(d_3^rel): {1: 480, 6: 1440}
+      im(d_4^rel): {0: 480, 5: 1440}
+
+  H_5(T, T\v):
+    Distribution: {0: 196608}
+
+======================================================================
+EVEN-LEVEL RELATIVE HOMOLOGY (for comparison)
+======================================================================
+
+  H_2(T, T\v):
+    Distribution: {0: 161280, 1: 35328}
+    When H_2 > 0 (35328 cases):
+      ker(d_2^rel): {6: 13728, 7: 15840, 8: 4320, 9: 1440}

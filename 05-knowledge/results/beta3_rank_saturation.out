@@ -1,0 +1,175 @@
+======================================================================
+BETA_3 RANK SATURATION ANALYSIS
+Goal: show im(d_4) = ker(d_3) or ker(d_3)-1 always
+======================================================================
+
+======================================================================
+n = 5
+======================================================================
+Method: exhaustive
+
+  beta_3 distribution: {0: 1024}
+  gap = ker(d_3) - im(d_4) distribution: {0: 1024}
+
+  dim(Omega_3): min=3, max=10, mean=4.5
+  dim(Omega_4): min=0, max=5, mean=0.9
+
+  rank(d_3): min=3, max=5
+  rank(d_4): min=0, max=5
+
+  --- rank saturation analysis ---
+  Saturation deficit (ker_d3 - rk_d4 = beta_3): {0: 1024}
+
+======================================================================
+n = 6
+======================================================================
+Method: exhaustive
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  beta_3 distribution: {0: 32448, 1: 320}
+  gap = ker(d_3) - im(d_4) distribution: {0: 32448, 1: 320}
+
+  dim(Omega_3): min=9, max=33, mean=15.5
+  dim(Omega_4): min=0, max=27, mean=7.0
+  dim(Omega_5): min=0, max=9, mean=1.4
+
+  rank(d_3): min=8, max=15
+  rank(d_4): min=0, max=18
+  rank(d_5): min=0, max=9
+
+  --- beta_3 > 0 cases (320) ---
+    Case 1: omega_dims=[6, 15, 18, 9, 0, 0]
+      ranks=[5, 10, 8, 0, 0]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=1, im(d4)=0, gap=1
+    Case 2: omega_dims=[6, 15, 18, 9, 0, 0]
+      ranks=[5, 10, 8, 0, 0]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=1, im(d4)=0, gap=1
+    Case 3: omega_dims=[6, 15, 18, 9, 0, 0]
+      ranks=[5, 10, 8, 0, 0]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=1, im(d4)=0, gap=1
+    Case 4: omega_dims=[6, 15, 18, 9, 0, 0]
+      ranks=[5, 10, 8, 0, 0]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=1, im(d4)=0, gap=1
+    Case 5: omega_dims=[6, 15, 18, 9, 0, 0]
+      ranks=[5, 10, 8, 0, 0]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=1, im(d4)=0, gap=1
+    Case 6: omega_dims=[6, 15, 21, 18, 9, 3]
+      ranks=[5, 10, 11, 6, 3]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=7, im(d4)=6, gap=1
+    Case 7: omega_dims=[6, 15, 21, 18, 9, 3]
+      ranks=[5, 10, 11, 6, 3]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=7, im(d4)=6, gap=1
+    Case 8: omega_dims=[6, 15, 21, 18, 9, 3]
+      ranks=[5, 10, 11, 6, 3]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=7, im(d4)=6, gap=1
+    Case 9: omega_dims=[6, 15, 21, 18, 9, 3]
+      ranks=[5, 10, 11, 6, 3]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=7, im(d4)=6, gap=1
+    Case 10: omega_dims=[6, 15, 21, 18, 9, 3]
+      ranks=[5, 10, 11, 6, 3]
+      betti=[1, 0, 0, 1, 0, 0]
+      ker(d3)=7, im(d4)=6, gap=1
+    ... (310 more)
+
+    Gap distribution among beta_3>0: {1: 320}
+    ker(d_3) values among beta_3>0: {1: 80, 7: 240}
+
+    rank(d_4) / dim(Omega_4) ratios:
+      dim(O4)=0
+      dim(O4)=0
+      dim(O4)=0
+      dim(O4)=0
+      dim(O4)=0
+
+  --- rank saturation analysis ---
+  Saturation deficit (ker_d3 - rk_d4 = beta_3): {0: 32448, 1: 320}
+
+======================================================================
+n = 7
+======================================================================
+Method: sampled (500)
+  ... 100/500
+  ... 200/500
+  ... 300/500
+  ... 400/500
+
+  beta_3 distribution: {0: 462, 1: 38}
+  gap = ker(d_3) - im(d_4) distribution: {0: 462, 1: 38}
+
+  dim(Omega_3): min=28, max=75, mean=40.9
+  dim(Omega_4): min=12, max=89, mean=29.6
+  dim(Omega_5): min=1, max=57, mean=12.6
+
+  rank(d_3): min=18, max=29
+  rank(d_4): min=9, max=46
+  rank(d_5): min=1, max=43
+
+  --- beta_3 > 0 cases (38) ---
+    Case 1: omega_dims=[7, 21, 39, 50, 41, 20, 4]
+      ranks=[6, 15, 24, 25, 16, 4]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=26, im(d4)=25, gap=1
+    Case 2: omega_dims=[7, 21, 39, 50, 41, 20, 4]
+      ranks=[6, 15, 24, 25, 16, 4]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=26, im(d4)=25, gap=1
+    Case 3: omega_dims=[7, 21, 39, 50, 41, 20, 4]
+      ranks=[6, 15, 24, 25, 16, 4]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=26, im(d4)=25, gap=1
+    Case 4: omega_dims=[7, 21, 39, 52, 45, 21, 3]
+      ranks=[6, 15, 24, 27, 18, 3]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=28, im(d4)=27, gap=1
+    Case 5: omega_dims=[7, 21, 39, 50, 42, 21, 4]
+      ranks=[6, 15, 24, 25, 17, 4]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=26, im(d4)=25, gap=1
+    Case 6: omega_dims=[7, 21, 36, 38, 24, 9, 1]
+      ranks=[6, 15, 21, 16, 8, 1]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=17, im(d4)=16, gap=1
+    Case 7: omega_dims=[7, 21, 39, 49, 37, 16, 3]
+      ranks=[6, 15, 24, 24, 13, 3]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=25, im(d4)=24, gap=1
+    Case 8: omega_dims=[7, 21, 39, 49, 37, 16, 3]
+      ranks=[6, 15, 24, 24, 13, 3]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=25, im(d4)=24, gap=1
+    Case 9: omega_dims=[7, 21, 40, 54, 45, 22, 5]
+      ranks=[6, 15, 25, 28, 17, 5]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=29, im(d4)=28, gap=1
+    Case 10: omega_dims=[7, 21, 40, 54, 45, 21, 4]
+      ranks=[6, 15, 25, 28, 17, 4]
+      betti=[1, 0, 0, 1, 0, 0, 0]
+      ker(d3)=29, im(d4)=28, gap=1
+    ... (28 more)
+
+    Gap distribution among beta_3>0: {1: 38}
+    ker(d_3) values among beta_3>0: {10: 1, 12: 5, 14: 2, 15: 1, 17: 6, 19: 3, 22: 2, 25: 3, 26: 7, 28: 2, 29: 5, 30: 1}
+
+    rank(d_4) / dim(Omega_4) ratios:
+      rk(d4)=25, dim(O4)=41, ratio=0.610
+      rk(d4)=25, dim(O4)=41, ratio=0.610
+      rk(d4)=25, dim(O4)=41, ratio=0.610
+      rk(d4)=27, dim(O4)=45, ratio=0.600
+      rk(d4)=25, dim(O4)=42, ratio=0.595
+
+  --- rank saturation analysis ---
+  Saturation deficit (ker_d3 - rk_d4 = beta_3): {0: 462, 1: 38}

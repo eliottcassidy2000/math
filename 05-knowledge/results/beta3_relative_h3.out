@@ -1,0 +1,33 @@
+======================================================================
+RELATIVE H_3(T, T\v) COMPUTATION
+Is dim H_3(T, T\v) <= 1 for all (T,v)?
+======================================================================
+
+n = 6: exhaustive
+  ... 5000/32768, max H_3 relative so far: 1
+  ... 10000/32768, max H_3 relative so far: 1
+  ... 15000/32768, max H_3 relative so far: 1
+  ... 20000/32768, max H_3 relative so far: 1
+  ... 25000/32768, max H_3 relative so far: 1
+  ... 30000/32768, max H_3 relative so far: 1
+
+  H_3(T, T\v) distribution: {0: 194688, 1: 1920}
+  Max H_3(T, T\v): 1
+  Violations (>1): 0
+
+  *** H_3(T, T\v) <= 1 CONFIRMED for all n=6 (T,v) pairs ***
+  This gives beta_3(T) <= beta_3(T\v) + 1 by LES
+  Combined with beta_3 = 0 at n<=5 (base), gives beta_3 <= 1 for all n
+  (modulo verification at n>=7)
+
+======================================================================
+n = 7: sampled
+  ... 50/200, max H_3 relative: 1
+  ... 100/200, max H_3 relative: 1
+  ... 150/200, max H_3 relative: 1
+
+  H_3(T, T\v) distribution: {0: 1299, 1: 101}
+  Max H_3(T, T\v): 1
+  Violations (>1): 0
+
+  *** H_3(T, T\v) <= 1 CONFIRMED for all sampled n=7 (T,v) pairs ***

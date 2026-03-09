@@ -69,6 +69,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-369 | Bad vertices biased toward HP endpoints (positions 0, n-1) | CONFIRMED n=5,6: endpoints ~30% overrepresented vs uniform. | beta2_redei_telescope.py |
 | HYP-370 | All hidden cycle lifts z_v ∈ B₁ = im(∂₂) | CONFIRMED exhaustive n=5 (480/480), n=6 (1000/1000): rank_C₁/B₁ = 0 for ALL. Each z_v is a linear combination of TT boundaries. The quotient C₁/B₁ sees NOTHING — lifts are independent WITHIN B₁, not outside it. | beta2_quotient_rank.py |
 
+| HYP-359 | EXACT: H_3(T,T\v) = beta_3(T) - rank(i_*) when beta_2=0 | LES + beta_2(T\v)=0 gives delta=0, j_* surjective. Exact, not inequality. Verified n=6 exhaustive | opus-S52 |
+| HYP-360 | beta_3(T)=2 impossible: requires ALL deletions beta_3=1, never occurs | n=7: max 2/7 deletions have beta_3=1 (300 samples). n=8: 0/100 have all-beta_3-positive deletions | opus-S52 |
+| HYP-361 | Relative dim(R_1)=n-1 always, ker(d_1^rel)=n-2 always | R_1 = arcs incident to v (fixed for tournaments). d_1^rel has rank 1 (projects to R_0={v}). | opus-S52 |
+
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|

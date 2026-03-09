@@ -1,0 +1,56 @@
+======================================================================
+GOOD VERTEX ANALYSIS: Can we prove beta_3 <= 1?
+======================================================================
+
+--- Part 1: n=7 sampled ---
+  ... trial 0/200
+  ... trial 50/200
+  ... trial 100/200
+  ... trial 150/200
+
+  Tournaments with beta_3 = 1: 16
+  Has good vertex (min(b3_sub + h3_rel) <= 1): 16/16
+  Worst min sum: 1
+  Simultaneous beta_3(T\v)=1 AND H_3(T,T\v)=1: 0 vertex-pairs
+
+======================================================================
+--- Part 2: n=6 exhaustive ---
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  Tournaments with beta_3 = 1: 320
+  Has good vertex: 320/320
+  Worst min sum: 1
+  Simultaneous beta_3(T\v)=1 AND H_3(T,T\v)=1: 0
+
+  (beta_3(T\v), H_3(T,T\v)) distribution:
+    (0, 1): 1920
+
+======================================================================
+--- Part 3: n=8 sampled ---
+  ... trial 0/50
+  ... trial 10/50
+  ... trial 20/50
+  ... trial 30/50
+  ... trial 40/50
+
+  Tournaments with beta_3 = 1: 9
+  Has good vertex: 9/9
+  Worst min sum: 1
+  Simultaneous cases: 1
+
+======================================================================
+SEESAW INTERACTION WITH GOOD VERTEX
+======================================================================
+
+By adjacent-odd seesaw: beta_1 * beta_3 = 0.
+So if beta_3(T) = 1, then beta_1(T) = 0.
+Question: does beta_1(T\v) = 0 also hold for some/all v?
+If so, the LES at level 1 simplifies.
+
+  When beta_3(T)=1 at n=6, (beta_1(T\v), beta_3(T\v)) distribution:
+    (0, 0): 1920

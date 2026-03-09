@@ -1,0 +1,86 @@
+======================================================================
+RELATIVE STAR STRUCTURE ANALYSIS
+======================================================================
+
+n = 6: v-dependent path counts
+
+  v-dependent path counts A_p^v (raw, before Omega quotient):
+    (d_in, d_out) | A_0^v | A_1^v |   A_2^v |   A_3^v |   A_4^v
+  ----------------+-------+-------+---------+---------+--------
+           (2, 3) |     1.0 |     5.0 |    16.0 |    33.0 |    42.0
+           (3, 2) |     1.0 |     5.0 |    16.0 |    33.0 |    42.0
+           (4, 1) |     1.0 |     5.0 |    14.0 |    27.0 |    33.0
+           (5, 0) |     1.0 |     5.0 |    10.0 |    15.0 |    15.0
+
+======================================================================
+LEVEL 2 BOUNDARY MAP ANALYSIS
+======================================================================
+
+    For H_1(T,T\v) <= 1, we need im(d_2^rel) >= n-3 (= 3 at n=6).
+    Since ker(d_1^rel) = n-2 (= 4 at n=6), and dim(R_1) = n-1 (= 5 at n=6),
+    exactly 1 dimension is killed by d_1^rel (maps to R_0).
+
+    H_1 = (n-2) - im(d_2^rel).
+    H_1 = 0 iff im(d_2^rel) = n-2.
+    H_1 = 1 iff im(d_2^rel) = n-3.
+    
+  ... 0/32768
+  ... 8000/32768
+  ... 16000/32768
+  ... 24000/32768
+  ... 32000/32768
+
+  dim(Omega_2^v) by (d_in, d_out) of v:
+    (0, 5): mean=10.0, min=10, max=10, n=1024
+    (1, 4): mean=9.1, min=9, max=10, n=5120
+    (2, 3): mean=9.0, min=8, max=11, n=10240
+    (3, 2): mean=9.0, min=8, max=11, n=10240
+    (4, 1): mean=9.1, min=9, max=10, n=5120
+    (5, 0): mean=10.0, min=10, max=10, n=1024
+
+======================================================================
+WHEN IS H_1(T,T\v) = 1?
+======================================================================
+
+  Correlating H_1(T,T\v) with out-degree of v:
+  Testing: is H_1(T,T\v) = 1 iff v is source (d_out=5) or sink (d_out=0)?
+  n=6: sources/sinks per tournament: 0 or 1 source, 0 or 1 sink
+  Total (T,v) with d_out ∈ {0, 5}: 12288
+  H_1 = 1 cases from mechanism data: 5760
+  Match: NO
+
+  Source/sink count (12288) ≠ H_1=1 count (5760)
+  Investigating what d_out values give H_1 = 1...
+
+  (Skipping detailed H_1 computation — focus on H_3 mechanism)
+
+======================================================================
+H_3 STRUCTURAL ANALYSIS
+======================================================================
+
+  At n=6, H_3(T,T\v) = 1 occurs 1920 times.
+  Two structural types based on dim(R_3):
+    Type 1: dim(R_3)=6, ker=1, im=0 — 480 cases
+    Type 2: dim(R_3)=14, ker=6, im=5 — 1440 cases
+  Total: 1920 = 320 × 6 (i.e., 320 tournaments × 6 vertices)
+  But from good_vertex: all have beta_3(T\v)=0 for ALL v
+  So H_3(T,T\v) = beta_3(T) for these. All 320 have beta_3=1.
+  1920 = 320 × 6 confirms: H_3=1 for ALL vertex pairs of beta_3=1 tournaments.
+
+  KEY INSIGHT: For beta_3=1 tournaments, H_3(T,T\v) = 1 for ALL v.
+  This means beta_3(T) = H_3(T,T\v) + rank(i_*) = 1 + 0 = 1
+  where rank(i_*) = 0 because beta_3(T\v) = 0.
+  Consistent with the exact equation.
+
+  Score sequences of the 320 beta_3=1 tournaments:
+  Total tournaments by score: 22 distinct sequences
+    (1, 2, 2, 3, 3, 4): 8640 tournaments
+    (1, 1, 2, 3, 4, 4): 2880 tournaments
+    (2, 2, 2, 3, 3, 3): 2640 tournaments
+    (2, 2, 2, 2, 3, 4): 2400 tournaments
+    (1, 2, 3, 3, 3, 3): 2400 tournaments
+    (1, 2, 2, 2, 3, 5): 1680 tournaments
+    (1, 2, 2, 2, 4, 4): 1680 tournaments
+    (0, 2, 3, 3, 3, 4): 1680 tournaments
+    (1, 1, 3, 3, 3, 4): 1680 tournaments
+    (1, 1, 2, 3, 3, 5): 1440 tournaments

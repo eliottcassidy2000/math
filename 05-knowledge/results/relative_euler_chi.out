@@ -1,0 +1,94 @@
+======================================================================
+EULER CHARACTERISTIC OF TOURNAMENTS AND RELATIVE COMPLEXES
+======================================================================
+
+======================================================================
+n = 4
+======================================================================
+
+  Euler characteristic chi = sum (-1)^p beta_p:
+    Distribution: {0: 24, 1: 40}
+
+  Omega Euler characteristic = sum (-1)^p dim(Omega_p):
+    Distribution: {0: 24, 1: 40}
+
+  Betti profiles (beta_0, beta_1, ..., beta_3):
+    (1, 0, 0, 0): 40 (chi=1)
+    (1, 1, 0, 0): 24 (chi=0)
+
+======================================================================
+n = 5
+======================================================================
+
+  Euler characteristic chi = sum (-1)^p beta_p:
+    Distribution: {0: 304, 1: 720}
+
+  Omega Euler characteristic = sum (-1)^p dim(Omega_p):
+    Distribution: {0: 304, 1: 720}
+
+  Betti profiles (beta_0, beta_1, ..., beta_4):
+    (1, 0, 0, 0, 0): 720 (chi=1)
+    (1, 1, 0, 0, 0): 304 (chi=0)
+
+======================================================================
+n = 6
+======================================================================
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  Euler characteristic chi = sum (-1)^p beta_p:
+    Distribution: {0: 5120, 1: 27648}
+
+  Omega Euler characteristic = sum (-1)^p dim(Omega_p):
+    Distribution: {0: 5120, 1: 27648}
+
+  Betti profiles (beta_0, beta_1, ..., beta_5):
+    (1, 0, 0, 0, 0, 0): 27648 (chi=1)
+    (1, 1, 0, 0, 0, 0): 4800 (chi=0)
+    (1, 0, 0, 1, 0, 0): 320 (chi=0)
+
+======================================================================
+RELATIVE EULER CHARACTERISTIC: chi(T) - chi(T\v)
+======================================================================
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  chi(T) distribution: {0: 5120, 1: 27648}
+  chi(T\v) distribution: {0: 9728, 1: 23040}
+  chi(T) - chi(T\v) distribution: {-1: 1280, 0: 25600, 1: 5888}
+
+======================================================================
+SIMPLIFICATION: IF ALL beta_even = 0
+======================================================================
+
+    beta_0 = 1 always.
+    beta_2 = 0 (THM-108).
+    beta_4 can be > 0 (Paley T_7 has beta_4 = 6).
+
+    But at n <= 6: beta_4 = 0 (no 4-cycles in Omega).
+    So chi(T) = 1 - beta_1 + 0 - beta_3 + 0 - beta_5 = 1 - beta_1 - beta_3 - beta_5.
+
+    By seesaw: beta_1 * beta_3 = 0, so at most one of beta_1, beta_3 is nonzero.
+
+    chi(T) = 1 - max(beta_1, beta_3) - beta_5 (at n <= 6).
+
+    If chi is constant (= 1):
+      max(beta_1, beta_3) + beta_5 = 0, so all = 0.
+    If chi varies but is ≥ 0:
+      max(beta_1, beta_3) + beta_5 ≤ 1.
+      Since beta_5 ≥ 0 and max(beta_1, beta_3) ≤ 1:
+      This would imply max(beta_1, beta_3) ∈ {0, 1} and beta_5 = 0 when nonzero.
+    
+  Checking if chi = 1 always:
+    n=3: chi values = [0, 1]
+    n=4: chi values = [0, 1]
+    n=5: chi values = [0, 1]
+    n=6: chi values = [0, 1]

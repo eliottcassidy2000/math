@@ -13,75 +13,48 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-09-S51f — C₁/B₁ quotient argument REFUTED
+## opus-2026-03-09-S52 — beta_3 obstruction + exact LES equation + good vertex analysis
 **Account:** opus
-**Continuation of:** opus-2026-03-09-S51e
+**Continuation of:** opus-2026-03-09-S51 (continued from context summary)
 **Summary of work:**
-  Tested Grok's C₁/B₁ quotient bound for #bad. REFUTED: ALL hidden cycle lifts z_v
-  lie entirely in B₁ = im(∂₂) (rank 0 in C₁/B₁). The quotient sees nothing.
-  Lifts are independent WITHIN B₁, not outside it. Each z_v = Σ c_j · ∂₂(TT_j),
-  with bad-vertex TT appearing in every decomposition.
-  Even if the quotient argument worked, dim(C₁/B₁) = n-1, giving bound n-1, not 3.
-**New contributions:** HYP-370, HYP-371 (refuted)
-**Unresolved threads:** WHY #bad ≤ 3 remains OPEN — need argument within B₁, not C₁/B₁
+  Deep analysis of beta_3 ≤ 1 proof via LES + relative homology.
+  7 new scripts, 3 new hypotheses (HYP-359..361), updated THM-110 and THM-111.
 
-## opus-2026-03-09-S51e — Rédei telescoping test + non-bad redundancy
-**Account:** opus
-**Continuation of:** opus-2026-03-09-S51d
-**Summary of work:**
-  Tested Grok's Rédei HP telescoping argument. Alternating sum IS in im(∂₂) (HYP-367)
-  but this doesn't force dependency — being exact ≠ being zero. Non-bad vertices at n=5
-  have zero redundancy when #bad=3 (HYP-368). Bad verts biased toward HP endpoints (HYP-369).
-**New contributions:** HYP-367-369
-**Unresolved threads:** WHY #bad ≤ 3 — neither the ζ-multiplicity nor Rédei telescope gives it
+  **Major discoveries:**
+  - **EXACT EQUATION (HYP-359)**: H_3(T,T\v) = beta_3(T) - rank(i_*: H_3(T\v) → H_3(T))
+    Derived from beta_2 = 0 (both T and T\v are tournaments → beta_2 = 0 → delta = 0 → j_* surjective).
+    This is an EQUALITY, not merely an inequality.
+  - **beta_3=2 OBSTRUCTION (HYP-360)**: If beta_3(T)=2, then ALL n vertex-deletions must have
+    beta_3=1 AND i_* injective AND H_3(T,T\v)=1. At n=7: max 2/7 deletions have beta_3=1.
+    beta_3=2 never observed (n=7: 0/500, n=8: 0/100).
+  - **Good vertex confirmed**: n=6 exhaustive: ALL 320 beta_3=1 tournaments have beta_3(T\v)=0
+    for ALL vertices. n=7: min(beta_3(T\v))=0 for ALL 500 samples.
+  - **Relative complex mechanism**: dim(R_1)=n-1 always, ker(d_1^rel)=n-2 always.
+    At n=6: H_1 gap always 0 or 1, H_3 gap always 0 or 1.
+    Two types of H_3=1: dim(R_3)=6/ker=1/im=0 and dim(R_3)=14/ker=6/im=5.
+  - **Euler characteristic**: chi(T) ∈ {0,1} at n≤6, extending to generic n=7.
+    chi = 1 - beta_1 - beta_3 when beta_{even>0} = 0.
+    Confirms existing HYP-312, HYP-296.
 
-## opus-2026-03-09-S51d — HYP-282 obstruction space analysis
-**Account:** opus
-**Continuation of:** opus-2026-03-09-S51c
-**Summary of work:**
-  Tested Grok's claim that HYP-282 is "resolved" via ζ-multiplicity. Framework correct
-  but algebraic proof incomplete. Hidden cycle lifts span exactly #bad dims (HYP-364).
-  z_v defects purely local (HYP-365). coker(res_v)=1 always (HYP-366).
-  HYP-282 confirmed at n=7,8 (sampled). WHY dim≤3 still open.
-**New contributions:** HYP-364-366, updated THM-102
-**Unresolved threads:** Prove dim(obstruction space) ≤ 3 algebraically
+  **Proof status for beta_3 ≤ 1 (THM-110):**
+  Two independent routes to beta_3 ≤ 1, each verified computationally:
+  1. H_3(T,T\v) ≤ 1 + induction → beta_3 ≤ 2, refined by good vertex → beta_3 ≤ 1
+  2. Exact equation + all-deletions-beta_3=1 impossible → beta_3 ≠ 2 → beta_3 ≤ 1
 
-## opus-2026-03-09-S51c — Witness cocycle ζ = H₁ of flipped T
-**Account:** opus
-**Continuation of:** opus-2026-03-09-S51b
-**Summary of work:**
-  Deep analysis of witness cocycle ζ that certifies bad-TT rank-criticality.
+**New contributions:**
+  - THM-110 updated with exact equation and obstruction analysis
+  - THM-111 (odd/even relative dichotomy) — created last sub-session
+  - HYP-359, HYP-360, HYP-361
+  - Scripts: beta3_good_vertex.py, beta3_obstruction.py, relative_odd_mechanism.py,
+    relative_star_structure.py, relative_euler_chi.py, chi_tournament.py
+  - All outputs saved to 05-knowledge/results/
 
-  **Major findings:**
-  - **ζ = H₁ of flipped T** (HYP-362): 100% match at n=5 (120/120), n=6 (200/200)
-    The witness cocycle is literally the homology class that would emerge after flipping
-  - **#bad = Σ_v β₁(T\v) when β₁=0** (HYP-363): exact identity, 0 violations n=5,6
-  - **|bad| ≤ 3 reduces to HYP-282**: proving Σ β₁(T\v) ≤ 3 gives |bad| ≤ 3 for free
-  - ζ has exactly 1 independent direction (rank_drop=1 always for #bad=3)
-  - ζ is NOT a 1-cocycle of T (only of T minus bad-TT)
-
-**New contributions:** HYP-362, HYP-363, updated THM-102
-**Unresolved threads:** Prove HYP-282 (Σ β₁(T\v) ≤ 3) algebraically; this closes |bad|≤3
-
-## opus-2026-03-09-S51 — Flip obstruction deep dive + rank-criticality at n=6
-**Account:** opus
-**Continuation of:** opus-2026-03-08-S50 (context continuation)
-**Summary of work:**
-  Deep investigation of flip obstruction mechanism for β₂=0 proof, collaborating with Grok.
-  Created 8+ scripts, confirmed/corrected multiple hypotheses.
-
-  **Major findings:**
-  - **Bad-vertex TT ALWAYS rank-critical**: Exhaustive at n=5 (120/120) and n=6 (4320/4320)
-  - **n=6 has nonzero redundancy**: #bad=3 → redundancy∈{2,3}, NOT zero like n=5
-    - 2880 with (#TTs=13, red=3), 1440 with (#TTs=12, red=2)
-  - **Bad vertices ALWAYS form TT** (never 3-cycle) — 100% at n=5,6
-  - **Flip is surgical**: removes exactly 1 TT, creates 0 new, drops rank by 1
-  - **Corrected multiple bugs**: wrong "bad vertex" definition in scripts, wrong flip (all 3 edges vs 1)
-  - **#bad vs t₃**: perfect correlation at n=5 (#bad=3↔t₃=4), extends at n=6 (#bad=3→t₃∈{7,8})
-  - **Universal formulas confirmed**: dim(Z₁), rank(∂₂|Ω₂), dim(ker(∂₂^T))
-
-**New contributions:** Updated THM-103 (rank-critical section), HYP-329-335, 8 scripts + outputs
-**Unresolved threads:** Prove |bad|≤3 algebraically; extend rank-criticality proof to general n
+**Unresolved threads:**
+  - Algebraic proof of H_3(T,T\v) ≤ 1 (key claim)
+  - Algebraic proof of good vertex existence
+  - Extension to H_5(T,T\v) ≤ 1 at larger n
+  - Why is relative complex homology Boolean at odd levels?
+  - HYP-342 correction: Boolean odd Betti only for k=1,2 (beta_5=10 for Paley n=9)
 
 ## kind-pasteur-2026-03-09-S46 — Beta_3 <= 1 proof architecture + seesaw quantification
 **Account:** kind-pasteur

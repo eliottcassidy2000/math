@@ -1,0 +1,80 @@
+======================================================================
+BETA_3 STRUCTURAL CHARACTERIZATION
+======================================================================
+
+n = 6: exhaustive scan
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  beta_3=0: 32448
+  beta_3=1: 320
+
+======================================================================
+BETA_3=1 TOURNAMENT CHARACTERIZATION
+======================================================================
+
+  Tournament bits=87
+    Scores: (1, 1, 1, 4, 4, 4)
+    t3=2, t5=0
+    SC: False, #SCCs: 2
+    SCC sizes: [3, 3]
+    beta_3(T\v): [0, 0, 0, 0, 0, 0]
+    Adjacency:
+      [0, 1, 1, 1, 0, 1]
+      [0, 0, 0, 1, 0, 0]
+      [0, 1, 0, 0, 0, 0]
+      [0, 0, 1, 0, 0, 0]
+      [1, 1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+
+  Strongly connected: 240/320
+  NOT strongly connected: 80/320
+  SCC size distributions: Counter({(3, 3): 80})
+
+  Cycle structure:
+    t3 values: {2: 80, 8: 240}
+    t5 values: {0: 80, 12: 240}
+
+======================================================================
+VERTEX DELETION: beta_3 monotonicity
+======================================================================
+  #good vertices distribution (beta_3(T\v) <= beta_3(T)):
+    6 good: 320
+
+  max beta_3(T\v) distribution:
+    max=0: 320
+
+  EVERY beta_3=1 tournament has a good vertex: True
+
+======================================================================
+DELETION FROM beta_3=0: can beta_3 increase?
+======================================================================
+  beta_3=0 tournaments where some T\v has beta_3>0: 0/1000
+  (n-1=5 can have beta_3=0)
+
+  NOTE: At n-1=5, beta_3 is ALWAYS 0 (verified exhaustive above)
+  So the good-vertex question for beta_3 at n=6 is trivially satisfied.
+  The NON-TRIVIAL question starts at n=7 (where beta_3=1 exists at n-1=6).
+
+======================================================================
+n = 7: SAMPLED VERTEX DELETION ANALYSIS
+======================================================================
+  Found 50 beta_3=1 tournaments in 683 attempts
+  Rate: 0.0732
+    Tournament 1: scores=(2, 2, 3, 3, 3, 4, 4), t3=12, good=5, bad=2
+    Tournament 2: scores=(2, 2, 3, 3, 3, 4, 4), t3=12, good=5, bad=2
+    Tournament 3: scores=(2, 2, 3, 3, 3, 4, 4), t3=12, good=6, bad=1
+    Tournament 4: scores=(2, 2, 3, 3, 3, 4, 4), t3=12, good=7, bad=0
+    Tournament 5: scores=(2, 2, 2, 3, 4, 4, 4), t3=11, good=7, bad=0
+
+  #good vertex distribution at n=7:
+    5 good: 6
+    6 good: 27
+    7 good: 17
+
+  EVERY beta_3=1 n=7 tournament has a good vertex: True
+  Minimum #good vertices: 5

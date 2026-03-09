@@ -26,4 +26,17 @@ scripts/logs/
 *.so
 a000568_c_test
 a000568_c_batch
-04-computation/b*.txt
+04-computation/*_err*.txt
+04-computation/*_gmp
+04-computation/*_gmp_enum
+*.o
+
+# Large computation output files (>100MB)
+04-computation/b000612_c.txt
+04-computation/b000612_c_clean.txt
+04-computation/b000612_c_clean2.txt
+04-computation/b_10ary_c.txt
+04-computation/b_6ary_c.txt
+04-computation/b_7ary_c.txt
+04-computation/b_8ary_c.txt
+04-computation/b_9ary_c.txt

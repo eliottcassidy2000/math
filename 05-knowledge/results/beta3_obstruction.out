@@ -1,0 +1,85 @@
+======================================================================
+BETA_3 OBSTRUCTION ANALYSIS
+======================================================================
+
+--- n=7: Checking if beta_3 can equal 2 ---
+  ... 0/500
+  ... 100/500
+  ... 200/500
+  ... 300/500
+  ... 400/500
+
+  beta_3 distribution: {0: 462, 1: 38}
+  min(beta_3(T\v)) over v: {0: 500}
+  All deletions have beta_3 >= 1: 0/500
+
+  KEY: beta_3 = 2 ever? NO
+
+======================================================================
+--- n=8: Checking if beta_3 can equal 2 ---
+  ... 0/100
+  ... 20/100
+  ... 40/100
+  ... 60/100
+  ... 80/100
+
+  beta_3 distribution: {0: 82, 1: 18}
+  min(beta_3(T\v)): {0: 100}
+  All deletions have beta_3 >= 1: 0/100
+
+======================================================================
+THEORETICAL FRAMEWORK
+======================================================================
+
+    EXACT EQUATION (from LES + beta_2 = 0):
+    ========================================
+    H_3(T,T\v) = beta_3(T) - rank(i_*: H_3(T\v) -> H_3(T))
+
+    PROOF STRATEGY for beta_3 <= 1:
+    ================================
+    By induction on n (base: beta_3 = 0 for n <= 5).
+
+    For n-vertex tournament T:
+    beta_3(T) = H_3(T,T\v) + rank(i_*)
+              <= 1 + beta_3(T\v) <= 1 + 1 = 2.
+
+    For beta_3(T) = 2, need ALL v to have:
+      (a) beta_3(T\v) = 1
+      (b) i_*: H_3(T\v) -> H_3(T) injective
+      (c) H_3(T,T\v) = 1
+
+    This is an EXTREMELY strong condition.
+    Computationally: NEVER observed.
+
+    POSSIBLE PROOF ROUTES:
+    ======================
+    1. Show beta_3(T\v) = 1 for all v is impossible
+       (i.e., some deletion must have beta_3 = 0).
+
+    2. Show that when beta_3(T\v) = 1, the inclusion
+       i_*: H_3(T\v) -> H_3(T) must be zero.
+
+    3. Show H_3(T,T\v) = 1 AND beta_3(T\v) = 1 implies
+       something contradictory about the LES at lower levels.
+
+    4. Use the seesaw: beta_1 * beta_3 = 0. If beta_3(T) >= 1,
+       then beta_1(T) = 0. Combine with LES at level 1.
+    
+
+======================================================================
+ROUTE 1: Can all deletions of an n=7 tournament have beta_3 = 1?
+======================================================================
+
+  n=6: 320 tournaments with beta_3 = 1 (out of 32768)
+  Fraction: 0.0098
+
+  n=7 sampled: number of deletions with beta_3 = 1 per tournament
+  Distribution of #deletions with beta_3 = 1:
+    0 deletions: 278 tournaments
+    1 deletions: 16 tournaments
+    2 deletions: 6 tournaments
+
+  Maximum #deletions with beta_3 = 1: 2
+  ALL deletions (7/7) with beta_3 = 1: 0 times
+
+  CONCLUSION: OBSTRUCTION FOUND
