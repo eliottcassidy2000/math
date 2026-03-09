@@ -1,0 +1,32 @@
+======================================================================
+SVD vs MOD-P VERIFICATION OF S45 COEXISTENCE
+======================================================================
+
+  Regenerating n=8 tournaments with seed=11111...
+  Checking trials: [498, 851, 994]
+
+  --- Trial 498 ---
+  Score: (2, 2, 3, 4, 4, 4, 4, 5)
+  MOD-P bettis:  (1, 0, 0, 1, 1, 0, 0, 0)
+  SVD bettis:    (1, 0, 0, 1, 1, 0, 0, 0)
+  BOTH METHODS AGREE: coexistence is REAL (b3=1, b4=1)
+
+  --- Trial 851 ---
+  Score: (2, 3, 3, 3, 3, 4, 5, 5)
+  MOD-P bettis:  (1, 0, 0, 1, 1, 0, 0, 0)
+  SVD bettis:    (1, 0, 0, 1, 1, 0, 0, 0)
+  BOTH METHODS AGREE: coexistence is REAL (b3=1, b4=1)
+
+  --- Trial 994 ---
+  Score: (2, 2, 2, 3, 4, 5, 5, 5)
+  MOD-P bettis:  (1, 0, 0, 1, 1, 0, 0, 0)
+  SVD bettis:    (1, 0, 0, 1, 1, 0, 0, 0)
+  BOTH METHODS AGREE: coexistence is REAL (b3=1, b4=1)
+
+
+  --- Additional 200 random n=8 comparisons ---
+
+  Mismatches: 0/200
+  SVD agrees perfectly with mod-p at n=8
+
+DONE.

@@ -96,14 +96,15 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-391 | 3-cycle count is constant per score sequence for beta_3=1 at n=7 | 12 score seqs observed, each with unique c3 count. Follows from Rédei formula c3 = C(n,3) - Σ C(d_i,2) | opus-S53 |
 | HYP-392 | Paley T_7 is the ONLY good-vertex-free tournament at n=7 (exhaustive) | 240/2097152 = all labelings of Paley. |Aut(T_7)|=21, 7!/21=240. All have beta_3=0. | opus-S53 |
 | HYP-393 | beta_3 ≤ 1 at n=7 EXHAUSTIVE (2,097,152 tournaments) | Case 1: 2,096,912 with good vertex → LES gives ≤1. Case 2: 240 Paley → beta_3=0 directly | opus-S53 |
-| HYP-394 | CONSECUTIVE SEESAW: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments | Exhaustive n=6 (0 violations), sampled n=7 (3000, 0 violations). Extends adjacent-odd seesaw to ALL consecutive pairs. When b3=1: b4=0 always. When b4>0 (Paley): b3=0. | opus-S54 |
+| HYP-394 | CONSECUTIVE SEESAW: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments | **REFUTED at n=8** (kind-pasteur-S48): 3/2000 have beta_3=1 AND beta_4=1, confirmed by BOTH SVD and mod-p. Holds exhaustively n=6, sampled n=7 (3000). FAILS at n=8 (~0.15% rate). The opus proof architecture (LES reduction to H_4^rel=0) still works at n≤7 but not n≥8. | opus-S54, REFUTED kind-pasteur-S48 |
 | HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. Inclusion is quasi-isomorphism. GOOD vertices have H_3^rel=1, all others 0. | opus-S54 |
-| HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | 80 tours n=7: 560/560 (all v). Equivalent to i_*-injectivity via LES (when combined with consecutive seesaw). Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54 |
+| HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | 80 tours n=7: 560/560 (all v). NOT equivalent to i_*-injectivity at n=8 since consecutive seesaw FAILS (HYP-394 refuted). Needs independent verification at n=8. Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54, updated kind-pasteur-S48 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|
 | HYP-101 | Per-path identity holds for all n | 3-cycle-only formula misses longer cycles | n=6 | MISTAKE |
+| HYP-394 | Consecutive seesaw: beta_k * beta_{k+1} = 0 for ALL k>=1 | beta_3=1 AND beta_4=1 at n=8, confirmed mod-p exact (3/2000). Holds n≤7 only | n=8 | opus-S54 (stated), kind-pasteur-S48 (refuted) |
 | HYP-317 | Even Betti numbers vanish: beta_{2k}=0 for k>=1 | beta_4>0 at n=8 (~0.5%), values 1 and 5 | n=8 | kind-pasteur-S45 |
 | HYP-319 | Tournament path homology simplicity: one odd hole max | beta_1+beta_5 coexist at n=8, chi=-1 | n=8 | kind-pasteur-S45 |
 | HYP-321 | chi(T) in {0,1} for all tournaments | chi=-1 at n=8 (beta_1=beta_5=1), chi=2,6 (beta_4>0) | n=8 | kind-pasteur-S45 |
