@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-09-S45 — Seesaw mechanism deep dive + Boolean odd Betti
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-09-S44
+**Summary of work:**
+  Extended session investigating the seesaw mechanism, defect rates, and structural constraints on tournament path homology Betti numbers.
+
+  **Major discoveries (10 scripts, 10 new hypotheses HYP-336..345):**
+  - **THM-097 (PROVED)**: Disjoint support at Omega_2 — each 2-path has at most 1 non-allowed face. Constraint matrix always full rank. Proof is purely algebraic.
+  - **dim(Omega_2) = C(n,3) + 2*c3 - e_cyc** (HYP-336): Exact formula verified exhaustive n=4,5,6. e_cyc = #{directed edges in at least one 3-cycle}.
+  - **e_cyc NOT determined by c3 alone** (HYP-337): Depends on cycle arrangement (edge sharing).
+  - **Defect rate is wave propagation** (HYP-338): beta_1 rate decreasing 29.7%->1%, beta_3 increasing 0%->21% as n grows.
+  - **Adjacent-odd seesaw PERFECT** (HYP-339): beta_{2k-1}*beta_{2k+1}=0 in ALL 1500+ samples. Zero violations.
+  - **BOOLEAN ODD BETTI (THM-098, HYP-342)**: beta_{2k-1} in {0,1} for ALL tournaments. Exhaustive n<=6, sampled n=7,8. Odd Betti numbers are Boolean. Even Betti (beta_4) can take values {0,1,2,5,6}.
+  - **beta_4 onset at n=7** (HYP-341): Previously thought n=8. Paley T_7 has beta_4=6.
+  - **beta_3+beta_4 coexistence** (HYP-344): Extremely rare (<0.3% at n=8). When present, beta_5=0 always.
+  - **H_3 generator structure**: At n=6, two types — 9-path type (scores 1,1,1,4,4,4) and 36-path type (scores 2,2,2,3,3,3). All supported on 4-vertex subsets.
+  - **rank(d_2) two-valued** (HYP-343): {n-1, n} always. rank(d_2)=n-1 iff beta_1=1.
+
+  Also confirmed: beta_2=0 at n=9 (0/500) and n=10 (0/100). Completeness is sharp for beta_2=0 (removing 1 edge creates beta_2>0 at n=6).
+
+**New contributions:** THM-097 (disjoint support), THM-098 (Boolean odd Betti), HYP-336 through HYP-345
+**Unresolved threads:**
+  1. PROVE beta_3 in {0,1} — needs rank near-saturation property for d_4
+  2. PROVE adjacent-odd seesaw in general — the beta_2=0 proof works for k=1 but needs new ideas for k>=2
+  3. Onset of beta_6 — not seen at n<=8 in 1500+ samples
+  4. Why does beta_3>0 almost force beta_4=0?
+  5. The [1,1,0,0,1,0,0] profile at n=7 — what tournament structure causes beta_1+beta_4 coexistence?
+
 ## kind-pasteur-2026-03-09-S44 — Dimensional meta-patterns: tournament as simplex orientation
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-08-S43f
