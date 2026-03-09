@@ -125,7 +125,7 @@ int main(int argc, char **argv) {
 
         mpz_clear(result);
         mpz_clear(fact_n);
-        if (dt > 300) { fprintf(stderr, "Stopping\n"); break; }
+        if (dt > 3600) { fprintf(stderr, "Stopping\n"); break; }
     }
     return 0;
 }
