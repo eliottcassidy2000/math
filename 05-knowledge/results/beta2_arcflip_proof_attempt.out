@@ -1,0 +1,535 @@
+======================================================================
+PATH COUNTING FORMULA: D|A3| = (n-3) * D|A2|
+======================================================================
+
+n=5: 200 arc flips tested
+  Mismatches (D3 != (n-3)*D2): 0
+  Ratio distribution:
+    both=0: 65
+    2.0: 135
+  Expected ratio: n-3 = 2
+
+n=6: 100 arc flips tested
+  Mismatches (D3 != (n-3)*D2): 0
+  Ratio distribution:
+    both=0: 32
+    3.0: 68
+  Expected ratio: n-3 = 3
+
+n=7: 50 arc flips tested
+  Mismatches (D3 != (n-3)*D2): 0
+  Ratio distribution:
+    both=0: 10
+    4.0: 40
+  Expected ratio: n-3 = 4
+
+======================================================================
+FULL DIMENSION ANALYSIS UNDER ARC FLIP
+======================================================================
+
+n=5: Dbeta2=0 verified: 100/100
+
+n=6: Dbeta2=0 verified: 50/50
+
+======================================================================
+DECOMPOSING D(dim Om2)
+======================================================================
+
+n=5: ABCD partition vs dimension changes
+   (a,b,c,d)  DOm2 Dbeta1   DZ2   Drk3  count
+  (0,0,0,3)        0     0     0      0       7
+  (0,0,1,2)        0     0     0      0      25
+  (0,0,2,1)        0     0     0      0      16
+  (0,0,3,0)        0     0     0      0       8
+  (0,1,0,2)        0    -1    -1     -1       6
+  (0,1,0,2)        0     0     0      0       5
+  (0,1,0,2)        1     0     1      1       4
+  (0,1,1,1)       -1    -1    -2     -2      17
+  (0,1,1,1)        0     0     0      0      28
+  (0,1,1,1)        1     0     1      1       8
+  (0,1,2,0)        0    -1    -1     -1      10
+  (0,1,2,0)        0     0     0      0      24
+  (0,1,2,0)        1     0     1      1       8
+  (0,2,0,1)       -1    -1    -2     -2       9
+  (0,2,0,1)        0     0     0      0       9
+  (0,2,0,1)        1     0     1      1       6
+  (0,2,1,0)       -1    -1    -2     -2       3
+  (0,2,1,0)        0     0     0      0      13
+  (0,2,1,0)        1     0     1      1       3
+  (0,3,0,0)        1    -1     0      0       6
+  (1,0,0,2)       -1     0    -1     -1       8
+  (1,0,0,2)        0     0     0      0       8
+  (1,0,0,2)        0     1     1      1       6
+  (1,0,1,1)       -1     0    -1     -1      11
+  (1,0,1,1)        0     0     0      0      26
+  (1,0,1,1)        1     1     2      2      11
+  (1,0,2,0)       -1     0    -1     -1       6
+  (1,0,2,0)        0     0     0      0       8
+  (1,0,2,0)        0     1     1      1       3
+  (1,1,0,1)       -1    -1    -2     -2       3
+  (1,1,0,1)       -1     1     0      0       1
+  (1,1,0,1)        0    -1    -1     -1       7
+  (1,1,0,1)        0     0     0      0      14
+  (1,1,0,1)        0     1     1      1       7
+  (1,1,0,1)        1    -1     0      0       1
+  (1,1,0,1)        1     1     2      2       4
+  (1,1,1,0)       -1    -1    -2     -2       2
+  (1,1,1,0)       -1     1     0      0       6
+  (1,1,1,0)        0    -1    -1     -1       2
+  (1,1,1,0)        0     0     0      0      17
+  (1,1,1,0)        0     1     1      1       7
+  (1,1,1,0)        1    -1     0      0       7
+  (1,1,1,0)        1     1     2      2       9
+  (1,2,0,0)       -1     0    -1     -1      10
+  (1,2,0,0)        0     0     0      0      14
+  (2,0,0,1)       -1     0    -1     -1       3
+  (2,0,0,1)        0     0     0      0      16
+  (2,0,0,1)        1     1     2      2       4
+  (2,0,1,0)       -1     0    -1     -1       8
+  (2,0,1,0)        0     0     0      0      11
+  (2,0,1,0)        1     1     2      2       3
+  (2,1,0,0)        0     0     0      0      16
+  (2,1,0,0)        1     0     1      1      14
+  (3,0,0,0)       -1     1     0      0      12
+
+======================================================================
+TESTING: D(dim Om2) = f(a,b,c,d)?
+======================================================================
+Formula check: D(# 2-paths) = 2(a-b)?
+  (No output means formula is correct)
+
+======================================================================
+D(dim Om2) vs D(# allowed 2-paths)
+======================================================================
+  dim(Om2)=9, #paths2=12
+  n=6: dim(Om2)=20, #paths2=32
+
+======================================================================
+KEY IDENTITY: D(rk d3) = 2(a-b) + Dbeta1
+======================================================================
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-7, a=0, b=3, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-7, a=0, b=3, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-7, a=0, b=3, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-7, a=0, b=3, Dbeta1=-1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-7, a=0, b=3, Dbeta1=-1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-1, a=1, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-7, a=0, b=3, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=3, a=1, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-4, a=0, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=2, a=1, b=0, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=-3, a=0, b=1, Dbeta1=-1
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=5, a=2, b=0, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=2, a=2, b=1, Dbeta1=0
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=1, b=2, Dbeta1=0
+  FAIL: Drk3=2, 2(a-b)+Dbeta1=1, a=1, b=1, Dbeta1=1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=7, a=3, b=0, Dbeta1=1
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+
+n=5: D(rk d3) = 2(a-b) + Dbeta1: 110/500
+  FAIL: Drk3=1, 2(a-b)+Dbeta1=4, a=2, b=0, Dbeta1=0
+  FAIL: Drk3=-2, 2(a-b)+Dbeta1=-5, a=0, b=2, Dbeta1=-1
+  FAIL: Drk3=0, 2(a-b)+Dbeta1=-2, a=0, b=1, Dbeta1=0
+
+n=6: D(rk d3) = 2(a-b) + Dbeta1: 41/200
+  FAIL: Drk3=-3, 2(a-b)+Dbeta1=-2
+  FAIL: Drk3=-1, 2(a-b)+Dbeta1=0
+  FAIL: Drk3=-6, 2(a-b)+Dbeta1=-7
+
+n=7: D(rk d3) = 2(a-b) + Dbeta1: 16/100
+
+======================================================================
+PROOF ATTEMPT SUMMARY
+======================================================================
+
+If D(rk d3) = 2(a-b) + Dbeta1 for all tournaments and all arc flips,
+then beta2 is arc-flip invariant, hence beta2(T) = beta2(T_trans) = 0 for all T.
+
+The formula says:
+  D(rk d3) = D(dim Om2) + Dbeta1
+            = D(dim Om2) - D(rk d2)
+
+This is equivalent to:
+  D(rk d3) + D(rk d2) = D(dim Om2)
+
+I.e., the TOTAL rank change in d2 and d3 exactly matches the dimension change of Om2.
+This means: new dimensions in Om2 are either captured by d2 (become boundaries)
+or by d3 (get filled by Om3), with no new cycles left uncovered.
+
+EQUIVALENT: beta2 = dim(Om2) - rk(d2) - rk(d3) is invariant under arc flip.
+
+
+
+Done.
