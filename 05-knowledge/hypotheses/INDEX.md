@@ -64,6 +64,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-364 | Hidden cycle lifts span exactly #bad dimensions (never more) | CONFIRMED n=5 (480/480), n=6 (19488/19488). dim(lift span) = #bad always. | beta2_hyp282_test.py |
 | HYP-365 | Hidden cycle z_v defects are purely local: only TTs involving v violated | CONFIRMED n=5: 100% of nonzero defects involve v. z_v is cocycle of T\v → trivially satisfies non-v TTs. | beta2_why_3_max.py |
 | HYP-366 | coker(res_v) = 1 for ALL bad vertices (exactly 1 missing cocycle direction) | CONFIRMED exhaustive n=5 (840/840 instances), n=6 (405/405 sampled). | beta2_hyp282_test.py |
+| HYP-367 | Alternating sum of 3 hidden cycle lifts ∈ im(∂₂) (1-boundary) | CONFIRMED: z₁-z₂+z₃ is in im(∂₂) but NOT a coboundary. Being exact doesn't force dependency. | beta2_redei_telescope.py |
+| HYP-368 | Non-bad vertex subtournaments have zero redundancy when #bad=3 (n=5) | CONFIRMED exhaustive n=5: 240/240 non-bad T\\w have redundancy=0. At n=6: mixed (0,1,2). | beta2_redei_telescope.py |
+| HYP-369 | Bad vertices biased toward HP endpoints (positions 0, n-1) | CONFIRMED n=5,6: endpoints ~30% overrepresented vs uniform. | beta2_redei_telescope.py |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51e — Rédei telescoping test + non-bad redundancy
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51d
+**Summary of work:**
+  Tested Grok's Rédei HP telescoping argument. Alternating sum IS in im(∂₂) (HYP-367)
+  but this doesn't force dependency — being exact ≠ being zero. Non-bad vertices at n=5
+  have zero redundancy when #bad=3 (HYP-368). Bad verts biased toward HP endpoints (HYP-369).
+**New contributions:** HYP-367-369
+**Unresolved threads:** WHY #bad ≤ 3 — neither the ζ-multiplicity nor Rédei telescope gives it
+
 ## opus-2026-03-09-S51d — HYP-282 obstruction space analysis
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51c

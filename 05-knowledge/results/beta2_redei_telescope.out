@@ -1,0 +1,133 @@
+============================================================
+BAD VERTEX POSITIONS IN HAMILTONIAN PATH
+============================================================
+
+--- n=5 ---
+Total with bad verts: 480
+Bad vertex HP positions (position → count):
+  pos 0: 220
+  pos 1: 128
+  pos 2: 126
+  pos 3: 130
+  pos 4: 236
+Bad vertices consecutive in HP (#bad=3):
+  consecutive=False: 98
+  consecutive=True: 22
+Gap patterns between bad vertices (#bad=3):
+  gaps=(1, 1): 22
+  gaps=(1, 2): 36
+  gaps=(1, 3): 2
+  gaps=(2, 1): 34
+  gaps=(2, 2): 24
+  gaps=(3, 1): 2
+
+--- n=6 ---
+Total with bad verts: 19488
+Bad vertex HP positions (position → count):
+  pos 0: 6672
+  pos 1: 5360
+  pos 2: 5336
+  pos 3: 5382
+  pos 4: 5434
+  pos 5: 7144
+Bad vertices consecutive in HP (#bad=3):
+  consecutive=False: 3816
+  consecutive=True: 504
+Gap patterns between bad vertices (#bad=3):
+  gaps=(1, 1): 504
+  gaps=(1, 2): 708
+  gaps=(1, 3): 530
+  gaps=(1, 4): 64
+  gaps=(2, 1): 716
+  gaps=(2, 2): 706
+  gaps=(2, 3): 270
+  gaps=(3, 1): 538
+  gaps=(3, 2): 222
+  gaps=(4, 1): 62
+
+============================================================
+P-EXTENSION LIFT: STRUCTURE OF HIDDEN CYCLES ALONG HP
+============================================================
+
+Tournament bits=41, bad=[1, 2, 4]
+HP: 4 → 3 → 2 → 0 → 1
+Bad positions in HP: [4, 2, 0]
+HP edges: [(4, 3), (3, 2), (2, 0), (0, 1)]
+  z_1 on HP edges: ['0.3536', '0.0000', '0.3536', '0.0000']
+  z_2 on HP edges: ['0.3536', '0.0000', '0.0000', '0.3536']
+  z_4 on HP edges: ['0.0000', '-0.3536', '-0.0000', '-0.3536']
+
+  Alternating sum z_1 - z_2 + z_4:
+    ((0, 1)): -0.707107
+    ((0, 4)): 0.353553
+    ((1, 3)): -1.060660
+    ((2, 0)): 0.353553
+    ((2, 1)): -0.353553
+    ((3, 0)): -0.707107
+    ((3, 2)): -0.353553
+    ((4, 2)): 0.353553
+  Norm of alternating sum: 1.658312
+  Alternating sum is coboundary: False
+  Alternating sum is in im(∂₂): True
+
+  Pairwise sums:
+    z_1 + z_2: norm=1.8028, coboundary=False
+    z_1 + z_4: norm=1.3229, coboundary=False
+    z_2 + z_4: norm=0.8660, coboundary=False
+
+Tournament bits=42, bad=[2, 3, 4]
+HP: 4 → 3 → 2 → 1 → 0
+Bad positions in HP: [2, 1, 0]
+HP edges: [(4, 3), (3, 2), (2, 1), (1, 0)]
+  z_2 on HP edges: ['0.3536', '0.0000', '0.0000', '0.3536']
+  z_3 on HP edges: ['0.0000', '0.0000', '0.3536', '0.7071']
+  z_4 on HP edges: ['0.0000', '0.3536', '0.7071', '0.3536']
+
+  Alternating sum z_2 - z_3 + z_4:
+    ((0, 4)): 0.353553
+    ((1, 3)): 0.353553
+    ((2, 1)): 0.353553
+    ((3, 0)): 0.353553
+    ((3, 2)): 0.353553
+    ((4, 3)): 0.353553
+  Norm of alternating sum: 0.866025
+  Alternating sum is coboundary: False
+  Alternating sum is in im(∂₂): True
+
+  Pairwise sums:
+    z_2 + z_3: norm=1.8028, coboundary=False
+    z_2 + z_4: norm=1.5000, coboundary=False
+    z_3 + z_4: norm=1.8028, coboundary=False
+
+============================================================
+HYPOTHETICAL 4th BAD VERTEX: DEPENDENCY TEST
+============================================================
+
+Since #bad is always ≤ 3, we can't directly test with 4 bad vertices.
+Instead: for each tournament with #bad=3, check whether adding ANY
+non-bad vertex's hidden cycle would create a dependency.
+
+For non-bad vertex w (β₁(T\w)=0): the "hidden cycle" z_w = 0.
+So trivially, {z_v1, z_v2, z_v3, z_w=0} has rank 3 ≤ 3.
+
+The REAL question: is there a structural reason why β₁(T\w) CAN'T be 1
+for a 4th vertex w when 3 vertices are already bad?
+
+Approach: for #bad=3 tournaments, check the RANK of ∂₂ restricted to
+T\w for each non-bad w. How close is it to having β₁=1?
+
+
+Total #bad=3 tournaments: 120
+Redundancy of T\w for non-bad w (margin to β₁=1):
+  (redundancy = #TTs - rank in T\w)
+  redundancy=0: 240 instances
+
+  redundancy=0 means ALL TTs of T\w are rank-critical
+  Higher redundancy = harder to create β₁=1 by removing 1 TT
+
+--- n=6 (first 500) ---
+Total #bad=3 tournaments: 500
+Redundancy of T\w for non-bad w:
+  redundancy=0: 826 instances
+  redundancy=1: 326 instances
+  redundancy=2: 348 instances
