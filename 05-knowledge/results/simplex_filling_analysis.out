@@ -1,0 +1,142 @@
+======================================================================
+SIMPLEX FILLING ANALYSIS
+Transitive = contractible simplex. Cycles = topological twists.
+======================================================================
+
+--- Part 1: Average filling ratio f_p = <Omega_p> / C(n,p+1) ---
+(Transitive: f_p = 1.0 for all p)
+
+  n=3 (d=2), 8 samples:
+    p=0: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=1: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=2: f_Ap=1.2500 (expect 1.50), f_Omega=0.8750, Omega/Ap=0.7000
+
+  n=4 (d=3), 64 samples:
+    p=0: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=1: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=2: f_Ap=1.5547 (expect 1.50), f_Omega=0.8359, Omega/Ap=0.5377
+    p=3: f_Ap=3.2188 (expect 3.00), f_Omega=0.7969, Omega/Ap=0.2476
+
+  n=5 (d=4), 200 samples:
+    p=0: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=1: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=2: f_Ap=1.4950 (expect 1.50), f_Omega=0.9180, Omega/Ap=0.6140
+    p=3: f_Ap=2.9800 (expect 3.00), f_Omega=0.8750, Omega/Ap=0.2936
+    p=4: f_Ap=7.4400 (expect 7.50), f_Omega=0.9100, Omega/Ap=0.1223
+
+  n=6 (d=5), 200 samples:
+    p=0: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=1: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=2: f_Ap=1.5005 (expect 1.50), f_Omega=0.9877, Omega/Ap=0.6583
+    p=3: f_Ap=3.0020 (expect 3.00), f_Omega=1.0483, Omega/Ap=0.3492
+    p=4: f_Ap=7.5100 (expect 7.50), f_Omega=1.2008, Omega/Ap=0.1599
+    p=5: f_Ap=22.7400 (expect 22.50), f_Omega=1.4450, Omega/Ap=0.0635
+
+  n=7 (d=6), 200 samples:
+    p=0: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=1: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=2: f_Ap=1.4829 (expect 1.50), f_Omega=1.0394, Omega/Ap=0.7010
+    p=3: f_Ap=2.9314 (expect 3.00), f_Omega=1.1746, Omega/Ap=0.4007
+    p=4: f_Ap=7.2224 (expect 7.50), f_Omega=1.4331, Omega/Ap=0.1984
+    p=5: f_Ap=21.3286 (expect 22.50), f_Omega=1.8500, Omega/Ap=0.0867
+    p=6: f_Ap=73.3200 (expect 78.75), f_Omega=2.4400, Omega/Ap=0.0333
+
+  n=8 (d=7), 200 samples:
+    p=0: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=1: f_Ap=1.0000 (expect 1.00), f_Omega=1.0000, Omega/Ap=1.0000
+    p=2: f_Ap=1.4914 (expect 1.50), f_Omega=1.0860, Omega/Ap=0.7281
+    p=3: f_Ap=2.9657 (expect 3.00), f_Omega=1.3074, Omega/Ap=0.4408
+    p=4: f_Ap=7.3714 (expect 7.50), f_Omega=1.6977, Omega/Ap=0.2303
+    p=5: f_Ap=21.9614 (expect 22.50), f_Omega=2.3332, Omega/Ap=0.1062
+    p=6: f_Ap=76.2475 (expect 78.75), f_Omega=3.3394, Omega/Ap=0.0438
+    p=7: f_Ap=302.8400 (expect 315.00), f_Omega=4.9400, Omega/Ap=0.0163
+
+======================================================================
+Part 2: Paths per vertex set at each dimension
+Transitive: exactly 1 path per set. Cyclic: > 1.
+======================================================================
+
+  Transitive T_5:
+    p=0: |A_p|=5, vsets=5/5, paths/vset={1: 5}, Omega=5, f=1.000
+    p=1: |A_p|=10, vsets=10/10, paths/vset={1: 10}, Omega=10, f=1.000
+    p=2: |A_p|=10, vsets=10/10, paths/vset={1: 10}, Omega=10, f=1.000
+    p=3: |A_p|=5, vsets=5/5, paths/vset={1: 5}, Omega=5, f=1.000
+    p=4: |A_p|=1, vsets=1/1, paths/vset={1: 1}, Omega=1, f=1.000
+
+  Random T_5:
+    p=0: |A_p|=5, vsets=5/5, paths/vset={1: 5}, Omega=5, f=1.000
+    p=1: |A_p|=10, vsets=10/10, paths/vset={1: 10}, Omega=10, f=1.000
+    p=2: |A_p|=16, vsets=10/10, paths/vset={1: 7, 3: 3}, Omega=9, f=0.900
+    p=3: |A_p|=17, vsets=5/5, paths/vset={1: 2, 5: 3}, Omega=5, f=1.000
+    p=4: |A_p|=9, vsets=1/1, paths/vset={9: 1}, Omega=1, f=1.000
+
+  Transitive T_7:
+    p=0: |A_p|=7, vsets=7/7, paths/vset={1: 7}, Omega=7, f=1.000
+    p=1: |A_p|=21, vsets=21/21, paths/vset={1: 21}, Omega=21, f=1.000
+    p=2: |A_p|=35, vsets=35/35, paths/vset={1: 35}, Omega=35, f=1.000
+    p=3: |A_p|=35, vsets=35/35, paths/vset={1: 35}, Omega=35, f=1.000
+    p=4: |A_p|=21, vsets=21/21, paths/vset={1: 21}, Omega=21, f=1.000
+    p=5: |A_p|=7, vsets=7/7, paths/vset={1: 7}, Omega=7, f=1.000
+    p=6: |A_p|=1, vsets=1/1, paths/vset={1: 1}, Omega=1, f=1.000
+
+  Paley T_7:
+    p=0: |A_p|=7, vsets=7/7, paths/vset={1: 7}, Omega=7, f=1.000
+    p=1: |A_p|=21, vsets=21/21, paths/vset={1: 21}, Omega=21, f=1.000
+    p=2: |A_p|=63, vsets=35/35, paths/vset={1: 21, 3: 14}, Omega=42, f=1.200
+    p=3: |A_p|=147, vsets=35/35, paths/vset={3: 14, 5: 21}, Omega=63, f=1.800
+    p=4: |A_p|=273, vsets=21/21, paths/vset={13: 21}, Omega=63, f=3.000
+    p=5: |A_p|=315, vsets=7/7, paths/vset={45: 7}, Omega=42, f=6.000
+    p=6: |A_p|=189, vsets=1/1, paths/vset={189: 1}, Omega=21, f=21.000
+
+  Random T_7:
+    p=0: |A_p|=7, vsets=7/7, paths/vset={1: 7}, Omega=7, f=1.000
+    p=1: |A_p|=21, vsets=21/21, paths/vset={1: 21}, Omega=21, f=1.000
+    p=2: |A_p|=49, vsets=35/35, paths/vset={1: 28, 3: 7}, Omega=34, f=0.971
+    p=3: |A_p|=91, vsets=35/35, paths/vset={1: 16, 3: 10, 5: 9}, Omega=31, f=0.886
+    p=4: |A_p|=127, vsets=21/21, paths/vset={1: 3, 3: 4, 5: 6, 9: 6, 13: 1, 15: 1}, Omega=15, f=0.714
+    p=5: |A_p|=119, vsets=7/7, paths/vset={5: 1, 9: 2, 15: 1, 23: 1, 27: 1, 31: 1}, Omega=3, f=0.429
+    p=6: |A_p|=55, vsets=1/1, paths/vset={55: 1}, Omega=0, f=0.000
+
+======================================================================
+Part 3: Universal filling curve f(t) where t = p/(n-1)?
+======================================================================
+
+  n=4: t = p/(n-1), f = <Omega_p> / C(n,p+1)
+    t=0.000 (p=0): f=1.0000
+    t=0.333 (p=1): f=1.0000
+    t=0.667 (p=2): f=0.8359
+    t=1.000 (p=3): f=0.7969
+
+  n=5: t = p/(n-1), f = <Omega_p> / C(n,p+1)
+    t=0.000 (p=0): f=1.0000
+    t=0.250 (p=1): f=1.0000
+    t=0.500 (p=2): f=0.9160
+    t=0.750 (p=3): f=0.8600
+    t=1.000 (p=4): f=0.9000
+
+  n=6: t = p/(n-1), f = <Omega_p> / C(n,p+1)
+    t=0.000 (p=0): f=1.0000
+    t=0.200 (p=1): f=1.0000
+    t=0.400 (p=2): f=0.9890
+    t=0.600 (p=3): f=1.0587
+    t=0.800 (p=4): f=1.2200
+    t=1.000 (p=5): f=1.4500
+
+  n=7: t = p/(n-1), f = <Omega_p> / C(n,p+1)
+    t=0.000 (p=0): f=1.0000
+    t=0.167 (p=1): f=1.0000
+    t=0.333 (p=2): f=1.0340
+    t=0.500 (p=3): f=1.1571
+    t=0.667 (p=4): f=1.4005
+    t=0.833 (p=5): f=1.7943
+    t=1.000 (p=6): f=2.3200
+
+  n=8: t = p/(n-1), f = <Omega_p> / C(n,p+1)
+    t=0.000 (p=0): f=1.0000
+    t=0.143 (p=1): f=1.0000
+    t=0.286 (p=2): f=1.0807
+    t=0.429 (p=3): f=1.2830
+    t=0.571 (p=4): f=1.6250
+    t=0.714 (p=5): f=2.1621
+    t=0.857 (p=6): f=2.9813
+    t=1.000 (p=7): f=4.2100
