@@ -1,0 +1,38 @@
+======================================================================
+PART 1: Poincare duality at n=5 (exhaustive)
+======================================================================
+n=5: 1024 tournaments
+  Betti palindrome (PD): 0, not: 1024
+  Omega palindrome: 24, not: 1000
+  Euler char chi: {np.int64(0): 304, np.int64(1): 720}
+
+======================================================================
+PART 2: n=6 sampled
+======================================================================
+  PD FAILS: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[6, 15, 20, 15, 6, 1]
+  PD FAILS: betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), 0], omega=[6, 15, 18, 12, 3, 0]
+  PD FAILS: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), 0], omega=[6, 15, 19, 12, 3, 0]
+n=6 (500 random):
+  Betti palindrome (PD): 0, not: 500
+  Omega palindrome: 0, not: 500
+  Euler char chi: {np.int64(0): 84, np.int64(1): 416}
+
+======================================================================
+PART 3: Specific n=7 tournaments
+======================================================================
+Paley T_7: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(6), np.int64(0), np.int64(0)], omega=[7, 21, 42, 63, 63, 42, 21]
+  PD: False, Omega palindrome: False, chi: 7
+
+Circulant S={1, 2, 3}: H=175
+  betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[7, 21, 42, 77, 98, 63, 14]
+  PD: False, Omega palindrome: False, chi: 0
+
+Random n=7 tournaments:
+  PD FAILS: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+
+======================================================================
+PART 4: Euler characteristic formula
+======================================================================
+chi = sum (-1)^p beta_p. For Paley T_7: chi = 1+0-0+0+6-0+0 = 7 = n
+Does chi = 1 or chi = n or something else?
+n=5: chi values: {np.int64(0): 304, np.int64(1): 720}

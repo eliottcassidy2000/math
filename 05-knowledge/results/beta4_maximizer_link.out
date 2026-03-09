@@ -1,0 +1,46 @@
+======================================================================
+PART 1: n=6 exhaustive — all Betti numbers
+======================================================================
+n=6: 32768 tournaments
+  [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]: 27648 (84.4%)
+  [np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]: 4800 (14.6%)
+  [np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0]: 320 (1.0%)
+
+======================================================================
+PART 2: n=7 Paley — Euler characteristic and Poincare polynomial
+======================================================================
+Paley T_7:
+  betti = [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(6), np.int64(0), np.int64(0)]
+  omega_dims = [7, 21, 42, 63, 63, 42, 21]
+  Euler char chi = 7
+  total Betti = 7
+  Poincare poly P(t) = 1*t^0 + 6*t^4
+
+======================================================================
+PART 3: Omega dims for the 3 regular classes at n=7
+======================================================================
+  H=175: betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[7, 21, 42, 77, 98, 63, 14]
+  H=171: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], omega=[7, 21, 42, 66, 66, 33, 6]
+  H=189: betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(6), np.int64(0), np.int64(0)], omega=[7, 21, 42, 63, 63, 42, 21]
+
+======================================================================
+PART 4: Detailed ker/im analysis for Paley T_7 at p=4
+======================================================================
+  p=0: dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(Omega)=42, rank(d)=15, ker=27, im(d+1)=27, beta=0
+  p=3: dim(Omega)=63, rank(d)=27, ker=36, im(d+1)=36, beta=0
+  p=4: dim(Omega)=63, rank(d)=36, ker=27, im(d+1)=21, beta=6
+  p=5: dim(Omega)=42, rank(d)=21, ker=21, im(d+1)=21, beta=0
+  p=6: dim(Omega)=21, rank(d)=21, ker=0, im(d+1)=0, beta=0
+
+======================================================================
+PART 5: Same analysis for H=171 regular tournament
+======================================================================
+  p=0: dim(Omega)=7, rank(d)=0, ker=7, im(d+1)=6, beta=1
+  p=1: dim(Omega)=21, rank(d)=6, ker=15, im(d+1)=15, beta=0
+  p=2: dim(Omega)=42, rank(d)=15, ker=27, im(d+1)=27, beta=0
+  p=3: dim(Omega)=66, rank(d)=27, ker=39, im(d+1)=39, beta=0
+  p=4: dim(Omega)=66, rank(d)=39, ker=27, im(d+1)=27, beta=0
+  p=5: dim(Omega)=33, rank(d)=27, ker=6, im(d+1)=6, beta=0
+  p=6: dim(Omega)=6, rank(d)=6, ker=0, im(d+1)=0, beta=0
