@@ -1,0 +1,66 @@
+======================================================================
+WHY IS CONE FILLING IN OMEGA_3?
+======================================================================
+
+For each non-allowed 2-path (x,y,z), check what contributions
+the cone 3-paths make. A 3-path (p0,p1,p2,p3) has 2-faces:
+  +face_0 = (p1,p2,p3)
+  -face_1 = (p0,p2,p3)
+  +face_2 = (p0,p1,p3)
+  -face_3 = (p0,p1,p2)
+
+======================================================================
+PART 2: SYSTEMATIC - non-allowed face contributions
+======================================================================
+
+Non-allowed face contribution patterns:
+  ('back', 1, -1, 'no_partner', 0, 'exposed')
+  ('back', 2, 1, 'no_partner', 0, 'exposed')
+  ('front', 1, -1, 'no_partner', 0, 'exposed')
+  ('front', 2, 1, 'no_partner', 0, 'exposed')
+
+======================================================================
+PART 3: CLASSIFY NON-ALLOWED FACES
+======================================================================
+Faces of (v,a,b,c): (a,b,c) [T'], (v,b,c), (v,a,c), (v,a,b)
+Faces of (a,b,c,v): (b,c,v), (a,c,v), (a,b,v), (a,b,c) [T']
+
+Non-allowed = not in A_2 = some consecutive pair missing arc
+For tournament: (x,y,z) non-allowed iff A[x][y]=0 or A[y][z]=0
+
+v-faces of front: (v,b,c), (v,a,c), (v,a,b)
+  (v,x,y) non-allowed iff A[v][x]=0 or A[x][y]=0
+  Since v -> a (always), v -> b? v -> c?
+
+v-faces of back: (b,c,v), (a,c,v), (a,b,v)
+  (x,y,v) non-allowed iff A[x][y]=0 or A[y][v]=0
+  Since c -> v (always), b -> v? a -> v?
+
+n=5 face allowedness:
+  (b,c,v) sign=+1: allowed=7680, non-allowed=0 (0.0%)
+  (a,c,v) sign=-1: allowed=3840, non-allowed=3840 (50.0%)
+  (a,b,v) sign=+1: allowed=3840, non-allowed=3840 (50.0%)
+  (v,b,c) sign=-1: allowed=3840, non-allowed=3840 (50.0%)
+  (v,a,c) sign=+1: allowed=3840, non-allowed=3840 (50.0%)
+  (v,a,b) sign=-1: allowed=7680, non-allowed=0 (0.0%)
+
+======================================================================
+PART 4: NON-ALLOWED FACE CANCELLATION ANALYSIS
+======================================================================
+n=5: Non-allowed face pairs that cancel: 0
+n=5: Exposed non-allowed faces: 15360
+
+Exposed non-allowed face examples:
+  front (0,3,2,1): face=(0, 2, 1), sign=-
+  front (1,0,3,2): face=(1, 3, 2), sign=-
+  front (1,0,3,2): face=(1, 0, 2), sign=+
+  back (1,0,3,2): face=(0, 2, 1), sign=-
+  front (2,1,0,3): face=(2, 1, 3), sign=+
+  back (2,1,0,3): face=(1, 3, 2), sign=-
+  back (2,1,0,3): face=(1, 0, 2), sign=+
+  back (3,2,1,0): face=(2, 1, 3), sign=+
+  back (0,3,2,1): face=(3, 2, 0), sign=+
+  front (1,0,3,2): face=(1, 3, 2), sign=-
+
+
+Done.

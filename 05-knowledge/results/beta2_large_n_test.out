@@ -1,0 +1,70 @@
+======================================================================
+PART 1: DIRECT BETA_2 COMPUTATION
+======================================================================
+  n=8: 200/1000 (2s) zero=200 nonzero=0
+  n=8: 400/1000 (4s) zero=400 nonzero=0
+  n=8: 600/1000 (5s) zero=600 nonzero=0
+  n=8: 800/1000 (7s) zero=800 nonzero=0
+  n=8: 1000/1000 (9s) zero=1000 nonzero=0
+
+n=8 (9s): beta_2=0: 1000/1000, beta_2>0: 0
+  n=9: 40/200 (1s) zero=40 nonzero=0
+  n=9: 80/200 (3s) zero=80 nonzero=0
+  n=9: 120/200 (4s) zero=120 nonzero=0
+  n=9: 160/200 (6s) zero=160 nonzero=0
+  n=9: 200/200 (7s) zero=200 nonzero=0
+
+n=9 (7s): beta_2=0: 200/200, beta_2>0: 0
+  Paley T_7: beta_2 = 0
+  Paley T_11: beta_2 = 0
+
+======================================================================
+PART 2: FILTERED CONE at n=8 (1000 random)
+======================================================================
+  200/1000 (0s) tested=989 ok=200 fail=0
+  400/1000 (1s) tested=2102 ok=400 fail=0
+  600/1000 (1s) tested=3128 ok=600 fail=0
+  800/1000 (1s) tested=4117 ok=800 fail=0
+  FAIL trial 925: scores=(3, 3, 3, 3, 4, 4, 4, 4)
+  1000/1000 (2s) tested=5209 ok=999 fail=1
+
+n=8 (2s): 5209 swap cycles
+  OK: 999/1000, Failures: 1
+  Surplus min=4, max=14, mean=11.7
+
+======================================================================
+PART 3: FILTERED CONE at n=9 (100 random)
+======================================================================
+  20/100 (0s) tested=205 ok=20 fail=0
+  40/100 (0s) tested=405 ok=40 fail=0
+  60/100 (0s) tested=623 ok=60 fail=0
+  80/100 (0s) tested=834 ok=80 fail=0
+  100/100 (0s) tested=1041 ok=100 fail=0
+
+n=9 (0s): 1041 swap cycles
+  OK: 100/100, Failures: 0
+
+======================================================================
+PART 4: OMEGA_3 AUTO-MEMBERSHIP at n=7,8
+======================================================================
+  n=7: 40/200 (0s) tested=81
+  n=7: 80/200 (0s) tested=154
+  n=7: 120/200 (0s) tested=261
+  n=7: 160/200 (0s) tested=336
+  n=7: 200/200 (1s) tested=425
+
+n=7 (1s): 425 fillings checked
+  Auto in Omega_3: 418/425
+  NOT in Omega_3: 6/425
+  n=8: 20/100 (0s) tested=100
+  n=8: 40/100 (1s) tested=221
+  n=8: 60/100 (2s) tested=323
+  n=8: 80/100 (3s) tested=456
+  n=8: 100/100 (4s) tested=577
+
+n=8 (4s): 577 fillings checked
+  Auto in Omega_3: 539/577
+  NOT in Omega_3: 38/577
+
+
+Done.
