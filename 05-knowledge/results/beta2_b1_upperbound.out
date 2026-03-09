@@ -1,0 +1,111 @@
+======================================================================
+b1 AND rk(d2) FOR ALL TOURNAMENTS
+======================================================================
+
+n=3 (0s): total=8, dim_Z1=(n-1)(n-2)/2=1
+  b1 distribution: {0: 6, 1: 2}
+  rk(d2) distribution: {0: 2, 1: 6}
+  dim(Om_2) distribution: {0: 2, 1: 6}
+  Need rk(d2) >= 0 for b1 <= 1
+
+n=4 (0s): total=64, dim_Z1=(n-1)(n-2)/2=3
+  b1 distribution: {0: 40, 1: 24}
+  rk(d2) distribution: {2: 24, 3: 40}
+  dim(Om_2) distribution: {3: 40, 4: 24}
+  Need rk(d2) >= 2 for b1 <= 1
+
+n=5 (0s): total=1024, dim_Z1=(n-1)(n-2)/2=6
+  b1 distribution: {0: 720, 1: 304}
+  rk(d2) distribution: {5: 304, 6: 720}
+  dim(Om_2) distribution: {8: 40, 9: 720, 10: 264}
+  Need rk(d2) >= 5 for b1 <= 1
+
+n=6 (24s): total=32768, dim_Z1=(n-1)(n-2)/2=10
+  b1 distribution: {0: 27968, 1: 4800}
+  rk(d2) distribution: {9: 4800, 10: 27968}
+  dim(Om_2) distribution: {18: 1760, 19: 13920, 20: 9408, 21: 6720, 22: 720, 24: 240}
+  Need rk(d2) >= 9 for b1 <= 1
+
+======================================================================
+SAMPLED b1 AT LARGER n
+======================================================================
+
+n=7: 200 trials, dim_Z1=15
+  b1 distribution: {0: 193, 1: 7}
+  rk(d2): min=14, max=15, need >= 14
+  rk(d2) deficit from dim_Z1: 1
+
+n=8: 200 trials, dim_Z1=21
+  b1 distribution: {0: 198, 1: 2}
+  rk(d2): min=20, max=21, need >= 20
+  rk(d2) deficit from dim_Z1: 1
+
+n=9: 200 trials, dim_Z1=28
+  b1 distribution: {0: 200}
+  rk(d2): min=28, max=28, need >= 27
+  rk(d2) deficit from dim_Z1: 0
+
+n=10: 200 trials, dim_Z1=36
+  b1 distribution: {0: 200}
+  rk(d2): min=36, max=36, need >= 35
+  rk(d2) deficit from dim_Z1: 0
+
+n=12: 166 trials, dim_Z1=55
+  b1 distribution: {0: 166}
+  rk(d2): min=55, max=55, need >= 54
+  rk(d2) deficit from dim_Z1: 0
+
+n=15: 133 trials, dim_Z1=91
+  b1 distribution: {0: 133}
+  rk(d2): min=91, max=91, need >= 90
+  rk(d2) deficit from dim_Z1: 0
+
+n=20: 100 trials, dim_Z1=171
+  b1 distribution: {0: 100}
+  rk(d2): min=171, max=171, need >= 170
+  rk(d2) deficit from dim_Z1: 0
+
+======================================================================
+ALGEBRAIC ANALYSIS OF rk(d2)
+======================================================================
+
+n=4 example with b1=1:
+  bits=4
+  Adjacency: [[0, 0, 0, 1], [1, 0, 0, 0], [1, 1, 0, 0], [0, 1, 1, 0]]
+  dims: {'dim_O1': 6, 'dim_O2': 3, 'rk_d1': 3, 'rk_d2': 2, 'dim_Z1': 3, 'b1': 1, 'dim_Z1_expected': 3}
+  Scores: [1, 1, 2, 2]
+
+  Z_1 basis (in Om_1 coords, dim=1):
+    z_0: [((0, 3), np.float64(0.3821259287802661)), ((1, 0), np.float64(0.012492487784878575)), ((2, 1), np.float64(-0.574724663666024)), ((2, 0), np.float64(0.36963344099538753)), ((3, 2), np.float64(-0.2050912226706364)), ((3, 1), np.float64(0.5872171514509025))]...
+
+  Image of d_2 in Z_1 (rank should be 2):
+    rank = 1, dim(Z_1) = 1, corank = 0
+
+======================================================================
+b1=1 COKERNEL ANALYSIS (n=5)
+======================================================================
+
+n=5: 304 tournaments with b1=1
+  Cokernel structures:
+    Z1=1,rk_d2=1,corank=0: 304
+
+======================================================================
+dim(Om_2) vs TOURNAMENT INVARIANTS
+======================================================================
+
+n=5: (score, dim_O2, rk_d2, b1) => count
+  score=(0, 1, 2, 3, 4), dim_O2=10, rk_d2=6, b1=0: 120
+  score=(0, 1, 3, 3, 3), dim_O2=9, rk_d2=6, b1=0: 40
+  score=(0, 2, 2, 2, 4), dim_O2=9, rk_d2=6, b1=0: 40
+  score=(0, 2, 2, 3, 3), dim_O2=9, rk_d2=6, b1=0: 120
+  score=(1, 1, 1, 3, 4), dim_O2=9, rk_d2=6, b1=0: 40
+  score=(1, 1, 2, 2, 4), dim_O2=9, rk_d2=6, b1=0: 120
+  score=(1, 1, 2, 3, 3), dim_O2=9, rk_d2=5, b1=1: 120
+  score=(1, 1, 2, 3, 3), dim_O2=9, rk_d2=6, b1=0: 120
+  score=(1, 2, 2, 2, 3), dim_O2=8, rk_d2=5, b1=1: 40
+  score=(1, 2, 2, 2, 3), dim_O2=9, rk_d2=6, b1=0: 120
+  score=(1, 2, 2, 2, 3), dim_O2=10, rk_d2=5, b1=1: 120
+  score=(2, 2, 2, 2, 2), dim_O2=10, rk_d2=5, b1=1: 24
+
+
+Done.

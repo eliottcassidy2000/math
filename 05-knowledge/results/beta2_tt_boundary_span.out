@@ -1,0 +1,131 @@
+======================================================================
+TT BOUNDARY RANK IN Z_1
+======================================================================
+
+n=3 (0s): dim_Z1=1
+  (deficit, SC, c3) => count
+  deficit=0, SC=False, c3=0: 6
+  deficit=1, SC=True, c3=1: 2
+
+n=4 (0s): dim_Z1=3
+  (deficit, SC, c3) => count
+  deficit=0, SC=False, c3=0: 24
+  deficit=0, SC=False, c3=1: 16
+  deficit=1, SC=True, c3=2: 24
+
+n=5 (0s): dim_Z1=6
+  (deficit, SC, c3) => count
+  deficit=0, SC=False, c3=0: 120
+  deficit=0, SC=False, c3=1: 120
+  deficit=0, SC=False, c3=2: 240
+  deficit=0, SC=True, c3=3: 120
+  deficit=0, SC=True, c3=4: 120
+  deficit=1, SC=True, c3=3: 120
+  deficit=1, SC=True, c3=4: 160
+  deficit=1, SC=True, c3=5: 24
+
+n=6 (8s): dim_Z1=10
+  (deficit, SC, c3) => count
+  deficit=0, SC=False, c3=0: 720
+  deficit=0, SC=False, c3=1: 960
+  deficit=0, SC=False, c3=2: 2240
+  deficit=0, SC=False, c3=3: 2880
+  deficit=0, SC=False, c3=4: 3360
+  deficit=0, SC=False, c3=5: 288
+  deficit=0, SC=True, c3=4: 2160
+  deficit=0, SC=True, c3=5: 2880
+  deficit=0, SC=True, c3=6: 6480
+  deficit=0, SC=True, c3=7: 4320
+  deficit=0, SC=True, c3=8: 1680
+  deficit=1, SC=True, c3=4: 720
+  deficit=1, SC=True, c3=5: 480
+  deficit=1, SC=True, c3=6: 2160
+  deficit=1, SC=True, c3=7: 480
+  deficit=1, SC=True, c3=8: 960
+
+======================================================================
+b1 DETERMINANTS
+======================================================================
+
+At n=5: num_TT vs deficit
+  #TT=5, deficit=1: 24
+  #TT=6, deficit=0: 120
+  #TT=6, deficit=1: 160
+  #TT=7, deficit=0: 120
+  #TT=7, deficit=1: 120
+  #TT=8, deficit=0: 240
+  #TT=9, deficit=0: 120
+  #TT=10, deficit=0: 120
+
+======================================================================
+SAMPLED AT LARGER n
+======================================================================
+
+n=7: 71 trials, dim_Z1=15, C(n,3)=35
+  deficit distribution: {0: 70, 1: 1}
+  b1 <= 1: True
+
+n=8: 62 trials, dim_Z1=21, C(n,3)=56
+  deficit distribution: {0: 62}
+  b1 <= 1: True
+
+n=9: 55 trials, dim_Z1=28, C(n,3)=84
+  deficit distribution: {0: 55}
+  b1 <= 1: True
+
+n=10: 50 trials, dim_Z1=36, C(n,3)=120
+  deficit distribution: {0: 50}
+  b1 <= 1: True
+
+n=15: 33 trials, dim_Z1=91, C(n,3)=455
+  deficit distribution: {0: 33}
+  b1 <= 1: True
+
+======================================================================
+WHEN #TT >= dim_Z1, IS rk = dim_Z1?
+======================================================================
+n=5: #TT = C(n,3) - c_3 verified for all tournaments
+
+======================================================================
+#TT vs dim_Z1
+======================================================================
+
+n=5: dim_Z1=6, C(n,3)=10
+  #TT = C(n,3) - c_3 >= dim_Z1 iff c_3 <= 4
+  Max c_3 = C(n,3)/4 = 2.5 (regular tournament)
+
+n=6: dim_Z1=10, C(n,3)=20
+  #TT = C(n,3) - c_3 >= dim_Z1 iff c_3 <= 10
+  Max c_3 = C(n,3)/4 = 5.0 (regular tournament)
+
+n=7: dim_Z1=15, C(n,3)=35
+  #TT = C(n,3) - c_3 >= dim_Z1 iff c_3 <= 20
+  Max c_3 = C(n,3)/4 = 8.8 (regular tournament)
+
+======================================================================
+Sum_v b1(T\v) ANALYSIS
+======================================================================
+
+n=5 (1s): Sum_v b1(T\v)
+  Sum=0: 240
+  Sum=1: 240
+  Sum=2: 120
+  Sum=3: 280
+  Sum=4: 120
+  Sum=5: 24
+  Max sum: 5
+  Sum <= 3: False
+
+n=6 (28s): Sum_v b1(T\v)
+  Sum=0: 8480
+  Sum=1: 7968
+  Sum=2: 7200
+  Sum=3: 4320
+  Sum=4: 1920
+  Sum=5: 1920
+  Sum=6: 960
+  Max sum: 6
+  Sum <= 3: False
+
+
+Done.
