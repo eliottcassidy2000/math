@@ -1,0 +1,49 @@
+======================================================================
+RELATIVE BETTI NUMBERS — EXACT COMPUTATION
+======================================================================
+
+--- Part 1: n=7 chi(T) for beta_3=1 tours ---
+  20 beta_3=1 found, 6.2s
+  40 beta_3=1 found, 14.5s
+  60 beta_3=1 found, 20.9s
+  80 beta_3=1 found, 28.0s
+
+  Checked 100 beta_3=1 tournaments in 32.7s
+
+  chi(T) distribution for beta_3=1:
+    chi=0: 100
+
+  (b3_Tv, chi(T\v)) distribution:
+    (0, 1): 629
+    (1, 0): 71
+
+  (b3_Tv, chi_rel) distribution:
+    (0, -1): 629
+    (1, 0): 71
+
+  Betti vectors of T\v:
+    (1, 0, 0, 0, 0, 0): 629
+    (1, 0, 0, 1, 0, 0): 71
+
+  Relative dimension profiles (top 10):
+    (1, 6, 19, 34, 34, 19, 4): 39, chi_rel=-1
+    (1, 6, 15, 18, 10, 3, 0): 32, chi_rel=-1
+    (1, 6, 18, 30, 29, 17, 4): 31, chi_rel=-1
+    (1, 6, 18, 32, 32, 17, 4): 31, chi_rel=0
+    (1, 6, 15, 19, 12, 4, 0): 26, chi_rel=-1
+    (1, 6, 17, 26, 21, 9, 1): 24, chi_rel=-1
+    (1, 6, 17, 26, 20, 8, 1): 21, chi_rel=-1
+    (1, 6, 15, 19, 11, 3, 0): 20, chi_rel=-1
+    (1, 6, 18, 31, 30, 16, 3): 19, chi_rel=-1
+    (1, 6, 18, 28, 22, 10, 2): 17, chi_rel=-1
+
+--- Part 2: Algebraic structure ---
+  For beta_3(T)=1 tournaments:
+    chi(T) always = [0]
+    chi(T) = 0 CONFIRMED at n=7
+    => For good vertices: chi_rel = 0 - chi(T\v) = -1
+    => For bad vertices:  chi_rel = 0 - chi(T\v) = 0
+    => H_3^rel = |chi_rel| (if concentration holds)
+    This gives the FULL dichotomy from chi alone!
+
+DONE.
