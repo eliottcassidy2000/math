@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51m — Grok's 3+β₁ formula refuted; max #bad = n when β₁=1
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51l
+**Summary of work:**
+  Tested Grok's claim: #bad ≤ 3+β₁(T) via "compat-subspace S of dim 3+β₁."
+  REFUTED (HYP-385b): n=5 β₁=1 gives #bad=5 > 3+1=4 (24 tournaments).
+  n=6 β₁=1: #bad=6=n > 4. When β₁=1, ALL vertices can be bad.
+  Also: β₁=1 forces #bad ≥ n-2 (min #bad = 3 at n=5, 4 at n=6).
+  There is no "compat-subspace" factorization of ANY fixed dimension.
+**New contributions:** HYP-385b (REFUTED)
+**Unresolved threads:** WHY β₁=0 ⟹ #bad≤3; seesaw mechanism
+
 ## opus-2026-03-09-S51l — BREAKTHROUGH: #bad≤3 specific to β₁=0; β₁=1 allows #bad=5
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51k
