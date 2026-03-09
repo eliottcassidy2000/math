@@ -1,0 +1,47 @@
+======================================================================
+VERTEX CONNECTIVITY OF SC + b1=0 TOURNAMENTS
+======================================================================
+
+n=5 (0s): 240 SC + b1=0 tournaments
+  kappa=1: 240 (100.0%)
+  Case 2a (kappa=1, cut vertex exists): 240
+  Case 2b (kappa>=2, NO cut vertex): 0
+
+n=6 (14s): 17520 SC + b1=0 tournaments
+  kappa=1: 15840 (90.4%)
+  kappa=2: 1680 (9.6%)
+  Case 2a (kappa=1, cut vertex exists): 15840
+  Case 2b (kappa>=2, NO cut vertex): 1680
+
+======================================================================
+KAPPA >= 2 + SC + b1=0: GOOD VERTEX EXISTS?
+======================================================================
+
+n=5: 0 SC + b1=0 + kappa>=2 tournaments
+  Has good vertex: 0/0
+  No good vertex: 0/0
+
+n=6: checking...
+  checked 1000 (9s)
+
+n=6 (16s): 1680 SC + b1=0 + kappa>=2 tournaments
+  Has good vertex: 1680/1680
+  No good vertex: 0/1680
+
+======================================================================
+BREAKDOWN: SC + b1=0 - HOW DOES GOOD VERTEX ARISE?
+======================================================================
+
+n=5 (1s):
+  SC+b1=0: good via not-SC deletion: 240
+  b1=0,not-SC: good via condensation: 480
+  b1=1: trivially good: 304
+
+n=6 (22s):
+  SC+b1=0: good via not-SC deletion: 15840
+  SC+b1=0,all-del-SC: good via SC+b1=0 deletion: 1680
+  b1=0,not-SC: good via condensation: 10448
+  b1=1: trivially good: 4800
+
+
+Done.
