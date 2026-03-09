@@ -25,15 +25,19 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-011 | F_k(T) = F_{n-1-k}(T^op) complement duality | Path reversal maps ascents to descents | worpitzky_F_at_2.py |
 | HYP-012 | Sum_T F(T,x) = A_n(x) * 2^{C(n,2)-(n-1)} | Each perm is HP of 2^{extra} tournaments | worpitzky_restricted_eulerian.py |
 | HYP-316 | beta_1*beta_3=0 for all tournaments (seesaw) | im(d_2) mediator: drops by 1 for beta_1>0, saturated for beta_3>0 | kind-pasteur-S45 |
-| HYP-317 | Even Betti numbers vanish: beta_{2k}=0 for k>=1 | Exhaustive n<=6, sampled n<=8: zero violations | kind-pasteur-S45 |
 | HYP-318 | ker(d_1) = C(n,2)-n+1 constant for all tournaments | im(d_1)=n-1 since tournaments weakly connected (Redei) | kind-pasteur-S45 |
-| HYP-319 | Tournament path homology simplicity: at most one odd hole | Seesaw + even vanishing + chi constraint | kind-pasteur-S45 |
 | HYP-320 | beta_1 in {0,1} only (never >1) | im(d_2) takes exactly 2 values, gap = 1 | kind-pasteur-S45 |
+| HYP-322 | beta_2=0 for all tournaments | Exhaustive n<=6, 1000 samples n=7,8: 0 violations | kind-pasteur-S45 |
+| HYP-323 | beta_5 first appears at n=8 | betti=[1,1,0,0,0,1,0,0] found at n=8 (~0.2%) | kind-pasteur-S45 |
+| HYP-324 | beta_4 can be >1 (value 5 observed at n=8) | Near-regular c3=20 tournament | kind-pasteur-S45 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|
 | HYP-101 | Per-path identity holds for all n | 3-cycle-only formula misses longer cycles | n=6 | MISTAKE |
+| HYP-317 | Even Betti numbers vanish: beta_{2k}=0 for k>=1 | beta_4>0 at n=8 (~0.5%), values 1 and 5 | n=8 | kind-pasteur-S45 |
+| HYP-319 | Tournament path homology simplicity: one odd hole max | beta_1+beta_5 coexist at n=8, chi=-1 | n=8 | kind-pasteur-S45 |
+| HYP-321 | chi(T) in {0,1} for all tournaments | chi=-1 at n=8 (beta_1=beta_5=1), chi=2,6 (beta_4>0) | n=8 | kind-pasteur-S45 |
 | HYP-102 | M(T) = M(T^op) | Fails for generic tournaments | n=4 | reversal_proof_attempt.py |
 | HYP-103 | M(T) = M(T^op)^T | Also fails | n=4 | reversal_proof_attempt.py |
 | HYP-104 | M is linear in A, A^T, A^2, etc. | No such combination works | n=4 | simple_pattern_search.py |

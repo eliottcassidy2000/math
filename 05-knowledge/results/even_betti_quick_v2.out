@@ -1,0 +1,27 @@
+EVEN BETTI VANISHING + BETA_3*BETA_5 CHECK
+
+--- n=7: beta_2, beta_4 (500 samples) ---
+  100/500, violations: 0
+  200/500, violations: 0
+  300/500, violations: 0
+  400/500, violations: 0
+  500/500, violations: 0
+  Result: 0 violations
+
+--- n=8: beta_2, beta_4, beta_6 (200 samples) ---
+  50/200, violations: 0
+  100/200, violations: 0
+  VIOLATION: trial 122, beta_4 = 1
+  150/200, violations: 1
+  VIOLATION: trial 151, beta_4 = 5
+  VIOLATION: trial 174, beta_4 = 1
+  200/200, violations: 3
+  Result: 3 violations
+
+--- n=8: beta_3*beta_5 mutual exclusivity (300 samples) ---
+  100/300: b3>0=19, b5>0=0, both=0
+  200/300: b3>0=35, b5>0=0, both=0
+  300/300: b3>0=49, b5>0=0, both=0
+
+  RESULT: beta_3>0=49, beta_5>0=0, both>0=0
+  beta_3*beta_5 = 0 CONFIRMED (extends seesaw to next pair)
