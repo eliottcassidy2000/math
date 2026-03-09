@@ -1,0 +1,516 @@
+======================================================================
+BETA_1 DELETION BOUND VIA 3-CYCLE COUNTING
+======================================================================
+
+======================================================================
+STEP 1: EXACT CONDITION FOR beta_1=1
+======================================================================
+
+  n=3:
+    t3=0: {0: 6}
+    t3=1: {1: 2}
+    First t3 with beta_1=1: 1
+
+  n=4:
+    t3=0: {0: 24}
+    t3=1: {0: 16}
+    t3=2: {1: 24}
+    First t3 with beta_1=1: 2
+
+  n=5:
+    t3=0: {0: 120}
+    t3=1: {0: 120}
+    t3=2: {0: 240}
+    t3=3: {1: 120, 0: 120}
+    t3=4: {1: 160, 0: 120}
+    t3=5: {1: 24}
+    First t3 with beta_1=1: 3
+    WARNING: t3=3 has mixed beta_1 values: {1: 120, 0: 120}
+    WARNING: t3=4 has mixed beta_1 values: {1: 160, 0: 120}
+
+  n=6:
+    t3=0: {0: 720}
+    t3=1: {0: 960}
+    t3=2: {0: 2240}
+    t3=3: {0: 2880}
+    t3=4: {0: 5520, 1: 720}
+    t3=5: {0: 3168, 1: 480}
+    t3=6: {1: 2160, 0: 6480}
+    t3=7: {1: 480, 0: 4320}
+    t3=8: {1: 960, 0: 1680}
+    First t3 with beta_1=1: 4
+    WARNING: t3=4 has mixed beta_1 values: {0: 5520, 1: 720}
+    WARNING: t3=5 has mixed beta_1 values: {0: 3168, 1: 480}
+    WARNING: t3=6 has mixed beta_1 values: {1: 2160, 0: 6480}
+    WARNING: t3=7 has mixed beta_1 values: {1: 480, 0: 4320}
+    WARNING: t3=8 has mixed beta_1 values: {1: 960, 0: 1680}
+
+======================================================================
+STEP 2: beta_1 AT n=4
+======================================================================
+
+  At n=4: C(4,3) = 4 triples. Each is either TT or 3-cycle.
+  t3 ∈ {0, 1, 2}  (t3=3 and t3=4 are impossible at n=4).
+
+  Wait — let me verify the possible t3 values at n=4.
+  By the relation: t3 = C(n,3) - TT/6 ... no.
+  Actually: each unordered triple {a,b,c} is either a transitive triple or a 3-cycle.
+  TT + t3 = C(n,3). At n=4: TT + t3 = 4.
+  t3 ∈ {0, 1, 2, 3, 4}? Or is there a constraint?
+
+  For n=4: scores are (s0, s1, s2, s3) with sum = C(4,2)=6.
+  t3 = C(n,3) - sum C(s_i, 2) ... no, that's not right either.
+  t3 = (C(n,2)*n/6 - sum s_i(s_i-1)(s_i-2)/6)... hmm.
+
+  Actually: t3 = (C(n,3) - sum_v C(s_v^+, 2)) = C(n,3) - sum_v C(out-degree_v, 2).
+  No, the standard formula is:
+  t3 = C(n,3) - sum_v C(s_v, 2) where s_v = out-degree of v, and this counts TT.
+  Wait: sum_v C(s_v, 2) = # transitive triples. So t3 = C(n,3) - sum_v C(s_v, 2).
+
+  At n=4, scores sum to 6. Score sequences: (0,1,2,3), (0,2,2,2), (1,1,1,3), (1,1,2,2).
+  
+  scores=(0, 1, 2, 3), t3=0, TT=4, sum C(s,2)=4, count=24
+  scores=(0, 2, 2, 2), t3=1, TT=3, sum C(s,2)=3, count=8
+  scores=(1, 1, 1, 3), t3=1, TT=3, sum C(s,2)=3, count=8
+  scores=(1, 1, 2, 2), t3=2, TT=2, sum C(s,2)=2, count=24
+
+======================================================================
+STEP 3: 3-CYCLE COUNTING UNDER DELETION
+======================================================================
+
+  For a 3-cycle {a,b,c} in T, it contributes to t3(T\v) iff v ∉ {a,b,c}.
+  So t3(T\v) = t3(T) - #{3-cycles through v}.
+
+  Let c(v) = #{3-cycles through v}. Then t3(T\v) = t3(T) - c(v).
+
+  Now: sum_v c(v) = 3 * t3(T) (each 3-cycle contributes to 3 vertex counts).
+
+  For beta_1(T\v) = 1, we need t3(T\v) >= threshold(n-1).
+  At n-1=4: threshold = 2.
+  So: beta_1(T\v)=1 iff t3(T) - c(v) >= 2, i.e., c(v) <= t3(T) - 2.
+
+  The number of "bad" vertices = #{v : c(v) <= t3(T) - 2}.
+
+  Claim: when beta_1(T)=0, this count is at most 3.
+  
+  Verifying: beta_1(T\v)=1 iff t3(T\v)=2 at n=5 (T\v has 4 vertices):
+  Match: 3600, Mismatch: 0
+
+  At n=6: checking beta_1(T\v)=1 condition on 5-vertex subtournaments:
+  t3(T\v) when beta_1=1: {3: 2159, 4: 2884, 5: 426}
+  t3(T\v) when beta_1=0: {0: 4523, 1: 4440, 2: 8290, 3: 3840, 4: 3438}
+
+======================================================================
+STEP 4: 3-CYCLE DISTRIBUTION CONSTRAINT
+======================================================================
+
+  At n=5, beta_1(T)=0 requires t3(T) <= 4 (since t3=5 => beta_1=1).
+
+  Actually, let me re-check: at n=5, beta_1=0 occurs for t3 in {0,1,2,3,4}.
+  But not ALL tournaments with t3=3 or t3=4 have beta_1=0.
+
+  The key constraint: when beta_1(T)=0 at n=5:
+  - 0 bad vertices: t3 ∈ {0,1} (no subtournament can have t3_sub=2)
+  - 1 bad vertex: t3=2
+  - 2 bad vertices: t3=3
+  - 3 bad vertices: t3=4
+
+  This is EXACTLY: # bad vertices = max(0, t3(T) - 1).
+  Let me verify this formula.
+  
+  VERIFIED: # bad vertices = max(0, t3-1) for all n=5 tournaments with beta_1=0
+
+======================================================================
+STEP 5: c(v) DISTRIBUTION (3-cycles through v)
+======================================================================
+
+  n=5:
+    t3=3, c(v)=[3, 2, 1, 1, 2], t3(T\v)=[0, 1, 2, 2, 1], betas=[0, 0, 1, 1, 0]
+
+  All n=5, t3=4, beta_1=0 (3 bad):
+    c(v)=[3, 2, 2, 3, 2], t3(T\v)=[1, 2, 2, 1, 2], betas=[0, 1, 1, 0, 1]
+    c(v)=[3, 3, 2, 2, 2], t3(T\v)=[1, 1, 2, 2, 2], betas=[0, 0, 1, 1, 1]
+    c(v)=[3, 2, 3, 2, 2], t3(T\v)=[1, 2, 1, 2, 2], betas=[0, 1, 0, 1, 1]
+    c(v)=[2, 3, 2, 3, 2], t3(T\v)=[2, 1, 2, 1, 2], betas=[1, 0, 1, 0, 1]
+    c(v)=[2, 3, 2, 2, 3], t3(T\v)=[2, 1, 2, 2, 1], betas=[1, 0, 1, 1, 0]
+    c(v)=[2, 2, 3, 2, 3], t3(T\v)=[2, 2, 1, 2, 1], betas=[1, 1, 0, 1, 0]
+    c(v)=[3, 3, 2, 2, 2], t3(T\v)=[1, 1, 2, 2, 2], betas=[0, 0, 1, 1, 1]
+    c(v)=[3, 2, 2, 2, 3], t3(T\v)=[1, 2, 2, 2, 1], betas=[0, 1, 1, 1, 0]
+    c(v)=[3, 2, 2, 3, 2], t3(T\v)=[1, 2, 2, 1, 2], betas=[0, 1, 1, 0, 1]
+    c(v)=[2, 3, 3, 2, 2], t3(T\v)=[2, 1, 1, 2, 2], betas=[1, 0, 0, 1, 1]
+    Total: 120 tournaments
+
+======================================================================
+STEP 6: GENERAL THRESHOLD ANALYSIS
+======================================================================
+
+  CONJECTURE (from data):
+  beta_1(T) = 1 iff the tournament has "too many" 3-cycles.
+
+  More precisely, for n-vertex tournaments:
+  - n=3: beta_1=1 iff t3=1 (= the 3-cycle tournament)
+  - n=4: beta_1=1 iff t3=2
+  - n=5: beta_1=1 iff t3 ∈ {3(some), 4(some), 5(all)} — NOT a clean threshold
+
+  Wait, at n=5 it's NOT a clean threshold! t3=3 has BOTH beta_1=0 and 1.
+
+  So the condition for beta_1=1 is NOT simply t3 ≥ threshold.
+  It depends on the STRUCTURE, not just the count.
+
+  But for DELETION, we need: t3(T\v) ≥ threshold(n-1).
+  At (n-1)=4: threshold = 2 (clean).
+  At (n-1)=5: threshold involves a structural condition, not just t3.
+
+  Let me check: at n=6, is beta_1(T\v)=1 determined by t3(T\v)?
+  
+  n=5: beta_1 values by t3:
+    t3=0: {0: 120}
+    t3=1: {0: 120}
+    t3=2: {0: 240}
+    t3=3: {1: 120, 0: 120}
+    t3=4: {1: 160, 0: 120}
+    t3=5: {1: 24}
+
+  n=5: What distinguishes beta_1=0 from beta_1=1 at same t3?
+    t3=3:
+      beta_1=0 score sequences: {(1, 1, 2, 3, 3): 120}
+      beta_1=1 score sequences: {(1, 1, 2, 3, 3): 120}
+    t3=4:
+      beta_1=0 score sequences: {(1, 2, 2, 2, 3): 120}
+      beta_1=1 score sequences: {(1, 2, 2, 2, 3): 160}
+
+======================================================================
+STEP 7: THE PROOF APPROACH
+======================================================================
+
+  CRITICAL REALIZATION:
+
+  The deletion bound sum_v beta_1(T\v) <= 3 for beta_1(T)=0 at n=5,6
+  seems to follow from DIMENSIONAL constraints.
+
+  At n=5:
+  - beta_1(T)=0 means dim(B_1(T)) = 6
+  - For each v: dim(B_1(T\v)) = 3 - beta_1(T\v)
+  - pi_v(B_1(T)) = R^6 (surjective, since pi_v is injective on B_1)
+  Wait — pi_v maps R^10 -> R^6 and B_1(T) has dimension 6.
+  pi_v(B_1(T)) has dimension 6 in R^6. So pi_v(B_1(T)) = R^6. ✓
+
+  Now: B_1(T\v) ⊂ R^6 with dimension 3 - beta_1(T\v).
+  B_1(T\v) = {d2(p) : p ∈ Omega_2(T\v)} ⊂ pi_v(B_1(T)).
+
+  Since pi_v(B_1(T)) = R^6 = full space, the constraint B_1(T\v) ⊂ pi_v(B_1(T))
+  is vacuous! It doesn't help.
+
+  THE REAL CONSTRAINT must come from Omega_2 structure.
+
+  NEW APPROACH: Think about dim(Omega_2(T)) and dim(Omega_2(T\v)).
+
+  For tournaments:
+  |A_2(T)| = # 2-paths a->b->c in T
+  Omega_2(T) = subspace of A_2 where boundaries have no non-allowed faces
+  dim(B_1(T)) = rank(d2|_{Omega_2(T)})
+
+  The key: Omega_2 is constrained by the tournament's 3-cycle structure.
+  Each 3-cycle triple contributes to the "obstruction" of Omega_2.
+
+  For the deletion: when we remove v, the 3-cycles that REMAIN are exactly
+  the 3-cycles not through v. The obstruction at (n-1) level comes from these.
+
+  At n-1=4: obstruction occurs iff the subtournament has t3_sub = 2.
+  The 4-vertex subtournament has C(4,3)=4 triples; t3_sub=2 means
+  exactly half are 3-cycles.
+  
+
+======================================================================
+STEP 8: CORE COMBINATORIAL BOUND
+======================================================================
+
+  COMBINATORIAL ANALYSIS at n=5:
+
+  sum_v c(v) = 3 * t3. Threshold: c(v) <= t3 - 2 for bad.
+
+  If 4 vertices are bad (c(v) <= t3-2 each):
+  sum of their c(v) <= 4(t3-2) = 4t3 - 8
+  Remaining vertex: c(v5) >= 3t3 - (4t3-8) = 8 - t3
+
+  For t3 ≤ 4 (needed for beta_1(T)=0 at n=5):
+  c(v5) >= 8 - t3 >= 4.
+
+  But c(v) counts 3-cycles through v. v appears in C(4,2)=6 triples.
+  So c(v) <= 6 at n=5. So c(v5) >= 4 is possible.
+
+  But ALSO: each bad vertex has c(v) <= t3-2 <= 2.
+  And each 3-cycle involves exactly 3 vertices.
+
+  Let's think about it as a hypergraph. The 3-cycles form a
+  3-uniform hypergraph on {0,1,2,3,4}. Each vertex's degree is c(v).
+
+  For 4 bad vertices {a,b,c,d}: c(a),c(b),c(c),c(d) <= t3-2.
+  The remaining vertex e has c(e) = 3*t3 - c(a)-c(b)-c(c)-c(d) >= 3t3 - 4(t3-2) = 8-t3.
+
+  Now the 3-cycles through e involve e and 2 of {a,b,c,d}.
+  There are C(4,2)=6 such potential triples. c(e) of these are actual 3-cycles.
+
+  The 3-cycles NOT through e form the 3-cycles in T\e.
+  t3(T\e) = t3 - c(e) <= t3 - (8-t3) = 2t3 - 8.
+  For t3 <= 4: t3(T\e) <= 0.
+
+  But t3(T\e) >= 0, so t3(T\e) = 0 for t3 = 4, meaning T\e is... well,
+  t3(T\e) = t3 - c(e) = 4 - c(e).
+  And c(e) >= 8 - t3 = 4 (for t3=4).
+  So c(e) = 4 and t3(T\e) = 0.
+
+  But we need: the 3-cycles among {a,b,c,d} have t3({a,b,c,d}) = 0.
+  That means T\e is a tournament on 4 vertices with NO 3-cycles — transitive!
+  But also each of a,b,c,d has c(v) <= 2.
+
+  Let me check if this is possible.
+  With t3=4 and c(e)=4: 4 cycles, all through e.
+  Remaining 4 vertices form a transitive tournament (t3=0).
+  Each of a,b,c,d has c(v) = #{3-cycles through v involving e} + #{3-cycles among a,b,c,d through v}.
+  Since t3({a,b,c,d})=0, the second term is 0.
+  So c(v) = #{3-cycles through v and e} for v in {a,b,c,d}.
+
+  These 3-cycles are of the form {e,v,w} for w in {a,b,c,d}\{v}.
+  For each v, c(v) = #{w in {a,b,c,d}\{v} : {e,v,w} is a 3-cycle}.
+
+  Total: sum_{v in {a,b,c,d}} c(v) = sum_{v} #{w : {e,v,w} is 3-cycle}
+  Each 3-cycle {e,v,w} contributes to c(v) AND c(w). So sum c(v) = 2*c(e) = 8.
+  Average c(v) = 2. For all to be <= 2, need c(v) = 2 for each.
+
+  Is this achievable? With 4 3-cycles through e and 4 other vertices,
+  and each pair {v,w} from {a,b,c,d} is in at most one 3-cycle (with e).
+
+  Wait: C(4,2)=6 pairs. 4 of these 6 are 3-cycles (with e).
+  Each vertex v in {a,b,c,d} is in 3 pairs from C(4,2).
+  c(v) = # of those 3 pairs that are 3-cycles.
+  sum c(v) = 2*4 = 8. Average = 2. Max min possible?
+
+  By double counting: 4 pairs chosen from 6. Each vertex in 3 pairs.
+  Want each vertex in exactly 2 chosen pairs.
+  4 vertices, 2 each = 8/2 = 4 pairs chosen. ✓
+
+  Can we choose 4 pairs from {a,b,c,d} such that each vertex is in exactly 2?
+  This is a 2-regular graph on 4 vertices = a 4-cycle!
+  So the 4 3-cycles form a "cycle" pattern: {e,a,b}, {e,b,c}, {e,c,d}, {e,d,a}.
+
+  Now: does such a tournament actually exist? And does it have beta_1(T)=0?
+  If beta_1(T)=1 for ALL t3=4 tournaments with this structure, then 4 bad vertices
+  is impossible because beta_1(T)=0 fails!
+  
+  n=5, t3=4, beta_1=0 tournaments:
+    scores=(2, 1, 2, 2, 3), c(v)=[3, 2, 2, 3, 2], bad=[1, 2, 4]
+    scores=(2, 2, 1, 2, 3), c(v)=[3, 3, 2, 2, 2], bad=[2, 3, 4]
+    scores=(2, 2, 2, 1, 3), c(v)=[3, 2, 3, 2, 2], bad=[1, 3, 4]
+    scores=(1, 2, 2, 2, 3), c(v)=[2, 3, 2, 3, 2], bad=[0, 2, 4]
+    scores=(2, 2, 1, 3, 2), c(v)=[2, 3, 2, 2, 3], bad=[0, 2, 3]
+    scores=(3, 1, 2, 2, 2), c(v)=[2, 2, 3, 2, 3], bad=[0, 1, 3]
+    scores=(2, 2, 1, 2, 3), c(v)=[3, 3, 2, 2, 2], bad=[2, 3, 4]
+    scores=(2, 2, 1, 3, 2), c(v)=[3, 2, 2, 2, 3], bad=[1, 2, 3]
+    scores=(2, 3, 1, 2, 2), c(v)=[3, 2, 2, 3, 2], bad=[1, 2, 4]
+    scores=(2, 2, 2, 1, 3), c(v)=[2, 3, 3, 2, 2], bad=[0, 3, 4]
+  Total: 120
+
+  n=5, t3=5, beta_1=0: 0 (expected 0)
+
+======================================================================
+STEP 9: THE ACTUAL OBSTRUCTION
+======================================================================
+
+  KEY OBSERVATION: For n=5 tournaments with t3=4 and beta_1=0,
+  the c(v) distribution always has exactly one vertex with c(v) >= 3.
+  That one vertex is "good" (t3-c(v) <= 1 < 2), leaving 3 bad vertices.
+
+  If there were 4 bad vertices, we'd need ALL c(v) <= 2.
+  That requires a vertex e with c(e) >= 4 (from sum = 12, four vertices contributing ≤ 8).
+  But then T\e has t3(T\e) = 4-4 = 0, so e is good.
+  And the 4th "candidate bad" vertex must have c(v) ≤ 2, but e is the one with c(e)=4.
+  So e is NOT bad (c(e)=4 > t3-2=2), and we have at most 3 bad among {a,b,c,d}.
+
+  Wait — but we assumed {a,b,c,d} are all bad. The contradiction is:
+  if 4 are bad with c(v) ≤ 2, then the 5th must have c(v) ≥ 4,
+  and the 5th is NOT bad (c(v)=4 > 2). So exactly 4 are bad.
+  But we need to check: can ALL FOUR actually be bad?
+
+  The constraint: the {a,b,c,d} subtournament must have t3=0.
+  And the {e,v,w} 3-cycles form a 2-regular graph on {a,b,c,d}.
+  2-regular on 4 vertices = 4-cycle.
+
+  So T\e is transitive on 4 vertices (t3=0, beta_1=0).
+  T\a: 3-cycles = those not through a = t3 - c(a) = 4-2 = 2. So beta_1(T\a)=1.
+  Similarly for b,c,d: t3(T\v)=2, beta_1=1.
+
+  So we WOULD have 4 bad vertices. But does such a tournament exist with beta_1(T)=0?
+
+  The answer from data: NO! All t3=4 tournaments with beta_1=0 have c(v) values
+  with min(c) ≥ ... let me check.
+  
+  Detailed c(v) for n=5, t3=4, beta_1=0:
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 2, 3, 3, 2], min=2, max=3, t3_sub=[2, 2, 1, 1, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 2, 2, 3, 3], min=2, max=3, t3_sub=[2, 2, 2, 1, 1]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 3, 3, 2, 2], min=2, max=3, t3_sub=[2, 1, 1, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[2, 2, 3, 2, 3], min=2, max=3, t3_sub=[2, 2, 1, 2, 1]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 3, 2, 3, 2], min=2, max=3, t3_sub=[2, 1, 2, 1, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    c(v)=[3, 3, 2, 2, 2], min=2, max=3, t3_sub=[1, 1, 2, 2, 2]
+    c(v)=[3, 2, 2, 3, 2], min=2, max=3, t3_sub=[1, 2, 2, 1, 2]
+
+  Detailed c(v) for n=5, t3=4, beta_1=1:
+    c(v)=[4, 2, 2, 2, 2], min=2, max=4, t3_sub=[0, 2, 2, 2, 2]
+    c(v)=[4, 2, 2, 2, 2], min=2, max=4, t3_sub=[0, 2, 2, 2, 2]
+    c(v)=[3, 2, 2, 2, 3], min=2, max=3, t3_sub=[1, 2, 2, 2, 1]
+    c(v)=[4, 2, 2, 2, 2], min=2, max=4, t3_sub=[0, 2, 2, 2, 2]
+    c(v)=[2, 3, 2, 2, 3], min=2, max=3, t3_sub=[2, 1, 2, 2, 1]
+    c(v)=[2, 4, 2, 2, 2], min=2, max=4, t3_sub=[2, 0, 2, 2, 2]
+    c(v)=[2, 2, 2, 2, 4], min=2, max=4, t3_sub=[2, 2, 2, 2, 0]
+    c(v)=[2, 2, 2, 2, 4], min=2, max=4, t3_sub=[2, 2, 2, 2, 0]
+    c(v)=[2, 4, 2, 2, 2], min=2, max=4, t3_sub=[2, 0, 2, 2, 2]
+    c(v)=[3, 2, 3, 2, 2], min=2, max=3, t3_sub=[1, 2, 1, 2, 2]
+    Total: 160
+
+======================================================================
+STEP 10: PROOF SKETCH
+======================================================================
+
+  THEOREM: For any tournament T on n≥4 vertices with beta_1(T)=0,
+  sum_v beta_1(T\v) ≤ 3.
+
+  PROOF APPROACH (verified computationally at n=5,6):
+
+  Step 1: beta_1(T\v) ∈ {0,1} (since T\v is a tournament on n-1 vertices).
+
+  Step 2: beta_1(T\v)=1 iff t3(T\v) ≥ threshold(n-1).
+  At n-1=4: threshold = 2 (clean; beta_1=1 iff t3=2).
+  At n-1≥5: the condition is more structural, but t3(T\v) ≥ threshold is necessary.
+
+  Step 3: t3(T\v) = t3(T) - c(v) where c(v) = #{3-cycles through v}.
+
+  Step 4: If beta_1(T)=0, then t3(T) is bounded:
+  - At n=5: t3 ≤ 4 (t3=5 forces beta_1=1)
+  - At n=6: t3 ≤ some bound
+
+  Step 5: The bound on the number of "bad" vertices comes from:
+  - 3*t3 = sum c(v)  (each 3-cycle counted 3 times)
+  - Bad: c(v) ≤ t3 - threshold(n-1)
+  - At most 3 can satisfy this given the constraint sum c(v) = 3*t3.
+
+  The algebraic constraint: if k vertices are "bad" with c(v) ≤ t3 - θ each,
+  sum(bad c(v)) ≤ k(t3-θ)
+  sum(good c(v)) ≥ 3t3 - k(t3-θ) = (3-k)t3 + kθ
+  (n-k) good vertices must absorb this.
+
+  For this to work with beta_1(T)=0 (which bounds t3 from above),
+  at most 3 vertices can be bad.
+  

@@ -1,0 +1,579 @@
+======================================================================
+BETA_1 DELETION BOUND — PROOF ANALYSIS
+======================================================================
+
+======================================================================
+OBSERVATION 1: beta_1 values for subtournaments
+======================================================================
+  n=4: beta_1 values: {0: 40, 1: 24} (64 total)
+  n=5: beta_1 values: {0: 720, 1: 304} (1024 total)
+  n=6: beta_1 values: {0: 27968, 1: 4800} (32768 total)
+
+======================================================================
+OBSERVATION 2: beta_1 vs t3 (3-cycle count)
+======================================================================
+
+  n=4:
+    t3=0: {0: 24}
+    t3=1: {0: 16}
+    t3=2: {1: 24}
+
+  n=5:
+    t3=0: {0: 120}
+    t3=1: {0: 120}
+    t3=2: {0: 240}
+    t3=3: {1: 120, 0: 120}
+    t3=4: {1: 160, 0: 120}
+    t3=5: {1: 24}
+
+======================================================================
+OBSERVATION 3: beta_1(T\v)=1 iff t3(T\v) >= threshold?
+======================================================================
+  n=5: t3(T\v) when beta_1(T\v)=1: {2: 840}
+  n=5: t3(T\v) when beta_1(T\v)=0: {0: 1560, 1: 1200}
+
+======================================================================
+CORE IDENTITY: rank_drop(v) = (n-2) + beta_1(T\v)
+======================================================================
+
+  We KNOW (from data):
+  - dim(Z_1(T)) = C(n-1,2) for ALL tournaments on n vertices
+  - When beta_1(T)=0: dim(B_1(T)) = C(n-1,2)
+  - dim(B_1(T\v)) = C(n-2,2) - beta_1(T\v)
+
+  So rank_drop(v) := dim(B_1(T)) - dim(B_1(T\v))
+                    = C(n-1,2) - C(n-2,2) + beta_1(T\v)
+                    = (n-2) + beta_1(T\v)
+
+  Now sum_v rank_drop(v) = n(n-2) + sum_v beta_1(T\v)
+
+  Question: What is sum_v rank_drop(v)?
+  
+
+  n=5: sum_v rank_drop(v) analysis
+    sum rank_drop distribution: {15: 240, 16: 240, 17: 120, 18: 120}
+    Expected: n*(n-2) + sum_beta = 15 + sum_beta
+    sum_beta=0: sum_rank_drops always = 15? True (expected 15)
+    sum_beta=1: sum_rank_drops always = 16? True (expected 16)
+    sum_beta=2: sum_rank_drops always = 17? True (expected 17)
+    sum_beta=3: sum_rank_drops always = 18? True (expected 18)
+
+======================================================================
+PROJECTION: dim(B_1(T)|_{T\v edges}) vs dim(B_1(T\v))
+======================================================================
+
+  B_1(T) lives in R^{n(n-1)} (all edges of T).
+  Projecting to T\v edges (restricting to the (n-1)(n-2) edges not involving v):
+
+  Let pi_v: R^{n(n-1)} -> R^{(n-1)(n-2)} be this projection.
+
+  Then pi_v(B_1(T)) is a subspace of Z_1(T\v) (since boundaries project to cycles).
+  And B_1(T\v) ⊂ pi_v(B_1(T)) (since 2-paths of T\v are also 2-paths of T).
+
+  So: dim(B_1(T\v)) <= dim(pi_v(B_1(T))) <= dim(Z_1(T\v)) = C(n-2,2)
+
+  The "gap" is: dim(pi_v(B_1(T))) - dim(B_1(T\v))
+  This gap = # boundaries through v that project to NEW cycles in T\v.
+  
+
+  n=5: Projection analysis
+
+    Tournament idx=10, betas=[0, 0, 1, 1, 0]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+
+    Tournament idx=25, betas=[0, 1, 0, 1, 0]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+
+    Tournament idx=41, betas=[0, 1, 1, 0, 1]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+
+    Tournament idx=42, betas=[0, 0, 1, 1, 1]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+
+    Tournament idx=43, betas=[0, 0, 1, 0, 1]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+
+    Tournament idx=44, betas=[0, 1, 0, 1, 1]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+
+    Tournament idx=45, betas=[0, 1, 0, 0, 1]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+
+    Tournament idx=46, betas=[0, 0, 0, 1, 1]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+
+    Tournament idx=60, betas=[0, 1, 0, 1, 0]
+    v=0: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=1: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=2: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+    v=3: dim(pi_v(B1(T)))=6, dim(B1(T\v))=2, gap=4, beta1(T\v)=1 ***
+    v=4: dim(pi_v(B1(T)))=6, dim(B1(T\v))=3, gap=3, beta1(T\v)=0
+
+======================================================================
+3-CYCLE CONNECTION: What makes beta_1=1?
+======================================================================
+
+  At n=4: beta_1=1 iff t3=2 (the maximum). These are the "rotational" tournaments.
+  At n=4, a tournament with t3=2 has exactly one non-trivial 1-cycle (the "alternating flow").
+
+  beta_1 measures how many independent directed cycles exist that are NOT boundaries.
+  A cycle z ∈ Z_1 is a boundary iff it equals d2(c) for some 2-chain c in Omega_2.
+
+  For a tournament, d2(a,b,c) involves edges:
+  - (a,b), (a,c) or (c,a), (b,c): depends on whether {a,b,c} is TT or 3-cycle.
+
+  For a 3-CYCLE (a,b,c) with a->b->c->a:
+  The allowed 2-path is (a,b,c) (since a->b->c and c->a is also an edge).
+  d2(a,b,c) = (b,c) - (c,a) + (a,b) = the 3-cycle itself!
+
+  Wait — that means every 3-cycle IS a boundary. So beta_1 should be 0?
+
+  No! The issue is that (a,b,c) might NOT be in Omega_2.
+  Omega_2 = {u in A_2 : d_2(u) in A_1}. For tournaments, every edge is in A_1,
+  so the condition is that all faces of the 2-path are edges.
+
+  Actually, for a 2-path (a,b,c): faces are (b,c), (a,c), (a,b).
+  In a tournament, either a->c or c->a. If c->a, then face (a,c) is NOT an edge,
+  but (c,a) IS. The boundary formula gives d2(a,b,c) = (b,c) - (a,c) + (a,b).
+  But (a,c) is not an allowed path — it's in the WRONG direction!
+
+  So (a,c) appears in the boundary with a minus sign. If c->a in T,
+  then (a,c) is not an edge of T, so this face is "non-allowed."
+
+  The condition for (a,b,c) to be in Omega_2 is that d2(a,b,c) has no component
+  on non-allowed 1-paths. So ALL faces must be edges.
+
+  For (a,b,c) where a->b->c:
+  - Face (b,c): always an edge (since b->c)
+  - Face (a,c): an edge iff a->c (transitive triple)
+  - Face (a,b): always an edge (since a->b)
+
+  So (a,b,c) is in Omega_2 iff {a,b,c} is a TRANSITIVE TRIPLE with a->b->c and a->c.
+
+  WAIT — but I also saw 3-cycle 2-paths in the data. Let me re-check.
+
+  For a 3-cycle a->b->c->a, the 2-path (a,b,c) has:
+  - Face (b,c): edge (b->c) ✓
+  - Face (a,c): NOT an edge (c->a, not a->c). ✗
+
+  But d2(a,b,c) = (b,c) - (a,c) + (a,b). The face (a,c) is non-allowed.
+  So... (a,b,c) is NOT in Omega_2 when {a,b,c} is a 3-cycle?
+
+  That contradicts my earlier understanding. Let me check this computationally.
+  
+  Checking Omega_2 membership for n=4:
+
+    Tournament idx=4, t3=2
+    Allowed 2-paths (A_2): [(0, 3, 2), (0, 3, 1), (1, 0, 3), (2, 1, 0), (2, 0, 3), (3, 2, 1), (3, 2, 0), (3, 1, 0)]
+    dim(Omega_2) = 3
+    Omega_2 basis vectors (in A_2 coords):
+      basis 0: [((3, 2, 1), 1.0)]
+      basis 1: [((2, 1, 0), 0.7071067811865475), ((3, 2, 0), 0.5000000000000001), ((3, 1, 0), -0.4999999999999999)]
+      basis 2: [((2, 1, 0), 0.7071067811865475), ((3, 2, 0), -0.4999999999999999), ((3, 1, 0), 0.5000000000000001)]
+    path (0, 3, 2): 3cyc, faces: (3,2)=✓ (0,2)=✗ (0,3)=✓
+    path (0, 3, 1): 3cyc, faces: (3,1)=✓ (0,1)=✗ (0,3)=✓
+    path (1, 0, 3): 3cyc, faces: (0,3)=✓ (1,3)=✗ (1,0)=✓
+    path (2, 1, 0): TT, faces: (1,0)=✓ (2,0)=✓ (2,1)=✓
+    path (2, 0, 3): 3cyc, faces: (0,3)=✓ (2,3)=✗ (2,0)=✓
+    path (3, 2, 1): TT, faces: (2,1)=✓ (3,1)=✓ (3,2)=✓
+    path (3, 2, 0): 3cyc, faces: (2,0)=✓ (3,0)=✗ (3,2)=✓
+    path (3, 1, 0): 3cyc, faces: (1,0)=✓ (3,0)=✗ (3,1)=✓
+
+    Tournament idx=6, t3=2
+    Allowed 2-paths (A_2): [(0, 3, 2), (0, 3, 1), (0, 2, 1), (1, 0, 3), (1, 0, 2), (2, 1, 0), (3, 2, 1), (3, 1, 0)]
+    dim(Omega_2) = 3
+    Omega_2 basis vectors (in A_2 coords):
+      basis 0: [((0, 3, 2), 0.7071067811865475), ((0, 3, 1), 0.5000000000000001), ((0, 2, 1), -0.4999999999999999)]
+      basis 1: [((3, 2, 1), 1.0)]
+      basis 2: [((0, 3, 2), 0.7071067811865475), ((0, 3, 1), -0.4999999999999999), ((0, 2, 1), 0.5000000000000001)]
+    path (0, 3, 2): TT, faces: (3,2)=✓ (0,2)=✓ (0,3)=✓
+    path (0, 3, 1): 3cyc, faces: (3,1)=✓ (0,1)=✗ (0,3)=✓
+    path (0, 2, 1): 3cyc, faces: (2,1)=✓ (0,1)=✗ (0,2)=✓
+    path (1, 0, 3): 3cyc, faces: (0,3)=✓ (1,3)=✗ (1,0)=✓
+    path (1, 0, 2): 3cyc, faces: (0,2)=✓ (1,2)=✗ (1,0)=✓
+    path (2, 1, 0): 3cyc, faces: (1,0)=✓ (2,0)=✗ (2,1)=✓
+    path (3, 2, 1): TT, faces: (2,1)=✓ (3,1)=✓ (3,2)=✓
+    path (3, 1, 0): 3cyc, faces: (1,0)=✓ (3,0)=✗ (3,1)=✓
+
+======================================================================
+OMEGA_2 STRUCTURE: What's actually in Omega_2?
+======================================================================
+
+  From the computation above, we can see that:
+  - A 2-path (a,b,c) with a->b->c is in A_2 (it follows edges)
+  - Its faces are (b,c), (a,c), (a,b)
+  - In a tournament, (b,c) and (a,b) are always edges
+  - But (a,c): if a->c (TT), then (a,c) ∈ A_1 and (a,b,c) ∈ Omega_2
+             if c->a (3-cycle), then (a,c) ∉ A_1, so d2(a,b,c) has a non-allowed component
+
+  For 3-cycle paths, (a,b,c) is NOT individually in Omega_2.
+  BUT: a LINEAR COMBINATION of 3-cycle paths might be in Omega_2
+  (the non-allowed components cancel).
+
+  This is the key to dim(Omega_2) < |A_2|!
+
+  Let me understand: when does a 3-cycle 2-path (a,b,c) have its non-allowed
+  face cancel with another 2-path's non-allowed face?
+
+  Path (a,b,c) with c->a: non-allowed face is (a,c) with coefficient -1
+  Path (c,b,a) with a->c: this requires c->b->a in T and checking (c,a) face
+  Wait, that's a different path. Let me think systematically.
+  
+
+  n=4, idx=4, t3=2
+  Non-allowed faces shared by 2-paths:
+    Face (0, 2):
+      path (0, 3, 2) contributes -1 * (0, 2)
+    Face (0, 1):
+      path (0, 3, 1) contributes -1 * (0, 1)
+    Face (1, 3):
+      path (1, 0, 3) contributes -1 * (1, 3)
+    Face (2, 3):
+      path (2, 0, 3) contributes -1 * (2, 3)
+    Face (3, 0):
+      path (3, 2, 0) contributes -1 * (3, 0)
+      path (3, 1, 0) contributes -1 * (3, 0)
+
+  n=4, idx=6, t3=2
+  Non-allowed faces shared by 2-paths:
+    Face (0, 1):
+      path (0, 3, 1) contributes -1 * (0, 1)
+      path (0, 2, 1) contributes -1 * (0, 1)
+    Face (1, 3):
+      path (1, 0, 3) contributes -1 * (1, 3)
+    Face (1, 2):
+      path (1, 0, 2) contributes -1 * (1, 2)
+    Face (2, 0):
+      path (2, 1, 0) contributes -1 * (2, 0)
+    Face (3, 0):
+      path (3, 1, 0) contributes -1 * (3, 0)
+
+======================================================================
+CRITICAL DIMENSION IDENTITY
+======================================================================
+
+  For a tournament on n vertices:
+
+  dim(Z_1) = C(n-1, 2) always.
+
+  PROOF SKETCH:
+  Z_1 = ker(d_1: Omega_1 -> Omega_0).
+  For tournaments, Omega_1 = A_1 = all n(n-1) directed edges.
+  Omega_0 = all n vertices.
+  d_1(a,b) = (b) - (a), so d_1 is the incidence matrix.
+
+  dim(Z_1) = n(n-1) - rank(d_1) = n(n-1) - (n-1) = (n-1)(n-1) - ...
+  Wait: rank of incidence matrix of complete directed graph on n vertices.
+  d_1 maps R^{n(n-1)} -> R^n. rank(d_1) = n-1 (connected graph).
+  So dim(Z_1) = n(n-1) - (n-1) = (n-1)^2.
+
+  But we observed dim(Z_1) = C(n-1,2) = (n-1)(n-2)/2.
+
+  (n-1)^2 ≠ C(n-1,2) in general. So something is wrong.
+
+  Wait — Omega_1 might NOT be all of A_1 for a tournament!
+  Let me check.
+  
+
+  n=4:
+    |A_1| values: {6}
+    dim(Omega_1) values: {6}
+    n(n-1) = 12, (n-1)^2 = 9, C(n-1,2) = 3
+    C(n-1,2) + (n-1) = 6
+
+  n=5:
+    |A_1| values: {10}
+    dim(Omega_1) values: {10}
+    n(n-1) = 20, (n-1)^2 = 16, C(n-1,2) = 6
+    C(n-1,2) + (n-1) = 10
+
+======================================================================
+UNDERSTANDING Omega_1 FOR TOURNAMENTS
+======================================================================
+
+  Omega_1 = {u ∈ A_1 : d_1(u) ∈ A_0}
+  For a tournament, A_1 = all directed edges, A_0 = all vertices.
+  d_1(i,j) = (j) - (i), which is always in A_0.
+  So Omega_1 = A_1 for all tournaments.
+
+  Then dim(Z_1) = dim(ker(d_1)) = n(n-1) - rank(d_1).
+  For a tournament (strongly connected or not), the incidence matrix d_1
+  has rank n-1 if the underlying undirected graph is connected.
+  A tournament is always connected, so rank(d_1) = n-1.
+
+  dim(Z_1) = n(n-1) - (n-1) = (n-1)(n+1-1) = (n-1)^2.
+
+  But we measured dim(Z_1) = C(n-1,2) = (n-1)(n-2)/2.
+
+  CONTRADICTION. Unless dim(Omega_1) ≠ n(n-1).
+  Let me re-measure.
+  
+  n=3 transitive: |A_1|=3, dim(Om1)=3, dim(Z1)=1, n(n-1)=6, rank(d1)=2
+    C(n-1,2)=1, (n-1)^2=4
+  n=4 transitive: |A_1|=6, dim(Om1)=6, dim(Z1)=3, n(n-1)=12, rank(d1)=3
+    C(n-1,2)=3, (n-1)^2=9
+
+  Direct check: is Omega_1 = A_1?
+    n=3: Omega_1 = A_1 for all tournaments? dim(Om1)=3, |A_1|=3
+    n=4: Omega_1 = A_1 for all tournaments? dim(Om1)=6, |A_1|=6
+  n=3: dim(Om1)=3, C(n,2)=3, n(n-1)=6
+  n=4: dim(Om1)=6, C(n,2)=6, n(n-1)=12
+  n=5: dim(Om1)=10, C(n,2)=10, n(n-1)=20
+
+======================================================================
+THE ACTUAL CONSTRAINT ON SUM_V BETA_1(T\v)
+======================================================================
+
+  EMPIRICAL FACTS (verified n=5,6):
+  1. beta_1(T) ∈ {0, 1} for all tournaments
+  2. When beta_1(T)=0: sum_v beta_1(T\v) <= 3
+  3. When beta_1(T)=0: each beta_1(T\v) ∈ {0, 1}
+  4. The bad vertices (beta_1(T\v)=1) number at most 3
+
+  KEY PATTERNS at n=5 (720 tournaments with beta_1=0):
+  - 0 bad vertices: 240 (33.3%)
+  - 1 bad vertex: 240 (33.3%)
+  - 2 bad vertices: 120 (16.7%)
+  - 3 bad vertices: 120 (16.7%)
+
+  These are EXACT fractions: 240/720 = 1/3, etc.
+  Total: 240 + 240 + 120 + 120 = 720. ✓
+
+  At n=6 (27968 tournaments with beta_1=0):
+  - 0 bad: 8480
+  - 1 bad: 7968
+  - 2 bad: 7200
+  - 3 bad: 4320
+  Total: 27968. ✓
+
+  CONJECTURE: sum_v beta_1(T\v) <= 3 for ALL n.
+  Moreover: beta_1(T) <= 1 for all tournaments.
+
+  If beta_1(T) <= 1 for all tournaments, then:
+  At n=4: beta_1 ∈ {0,1} — verified.
+  At n=5: beta_1 ∈ {0,1} — verified.
+  At n=6: beta_1 ∈ {0,1} — verified.
+
+  PROOF IDEA for beta_1 <= 1:
+  beta_1 counts independent 1-cycles not bounding 2-chains.
+  In a tournament, the "uncovered" cycle comes from the structure of Omega_2.
+
+  The constraint dim(Omega_2) < |A_2| creates a cokernel.
+  The cokernel dimension is |A_2| - dim(Omega_2).
+  But not all of this cokernel contributes to beta_1.
+
+  The deficiency is: beta_1 = dim(Z_1) - dim(B_1)
+  = dim(Z_1) - rank(d2|_{Omega_2})
+  = dim(Z_1) - (dim(Omega_2) - dim(ker(d2|_{Omega_2})))
+  
+
+======================================================================
+UNDERSTANDING DIM(OMEGA_1) — THE KEY
+======================================================================
+  n=3: |A_1| for transitive = 3, C(n,2)=3
+  n=4: |A_1| for transitive = 6, C(n,2)=6
+  n=5: |A_1| for transitive = 10, C(n,2)=10
+
+  AH! For a TOURNAMENT, |A_1| = C(n,2) (not n(n-1)).
+  Because for each pair {a,b}, exactly one of a->b or b->a holds.
+
+  So the 1-chain space A_1 has dimension C(n,2).
+  d_1: R^{C(n,2)} -> R^n. rank(d_1) = n-1.
+
+  dim(Z_1) = C(n,2) - (n-1) = n(n-1)/2 - (n-1) = (n-1)(n-2)/2 = C(n-1,2).
+
+  THIS CONFIRMS: dim(Z_1) = C(n-1,2) for all tournaments. ✓
+  
+
+======================================================================
+DELETION BOUND: THE ALGEBRA
+======================================================================
+
+  For T on n vertices with beta_1(T) = 0:
+
+  dim(B_1(T)) = dim(Z_1(T)) = C(n-1,2)
+
+  For T\v on (n-1) vertices:
+  dim(Z_1(T\v)) = C(n-2,2)
+  dim(B_1(T\v)) = C(n-2,2) - beta_1(T\v)
+
+  |A_1(T)| = C(n,2)
+  |A_1(T\v)| = C(n-1,2)
+
+  Now B_1(T) ⊂ R^{C(n,2)} (subspace of dimension C(n-1,2)).
+  B_1(T\v) ⊂ R^{C(n-1,2)} (subspace of dimension C(n-2,2) - beta_1(T\v)).
+
+  The edges of T partition: C(n,2) = C(n-1,2) + (n-1).
+  (C(n-1,2) edges of T\v, plus (n-1) edges incident to v.)
+
+  Projection: pi_v: R^{C(n,2)} -> R^{C(n-1,2)} drops the v-edges.
+
+  pi_v(B_1(T)) ⊂ Z_1(T\v) and B_1(T\v) ⊂ pi_v(B_1(T)).
+
+  KEY: dim(ker(pi_v|_{B_1(T)})) = dim(B_1(T)) - dim(pi_v(B_1(T)))
+
+  = C(n-1,2) - dim(pi_v(B_1(T)))
+
+  The kernel consists of elements of B_1(T) supported entirely on v-edges.
+  But a 1-cycle supported on v-edges must have: for each vertex u ≠ v,
+  the flow in equals flow out. Since v-edges are v->u or u->v (for each u),
+  a cycle on v-edges would need each u to have equal in/out flow from v.
+  But the v-edges form a "star" — a bipartite structure — so the only
+  cycle on v-edges is the zero cycle. Therefore ker(pi_v|_{B_1(T)}) = 0!
+
+  Wait, not quite. An element of B_1(T) supported on v-edges:
+  z = sum c_e * e where e involves v. For z ∈ Z_1: d_1(z) = 0.
+  d_1(z) = sum_u c_{v,u} * (u - v) + sum_u c_{u,v} * (v - u)
+  = sum_u (c_{v,u} - c_{u,v}) * (u - v)
+
+  For z ∈ Z_1: coefficient of each vertex must be zero.
+  Coefficient of u (for u ≠ v): c_{v,u} - c_{u,v} (from edges involving u)
+  Wait — but these are tournament edges. For each u, exactly ONE of (v,u) or (u,v)
+  exists as an edge. So c_{v,u} or c_{u,v} is defined but not both.
+
+  Actually, the edge space A_1 for a tournament has basis {(a,b) : a->b in T}.
+  An element z = sum c_{a,b} (a,b) where the sum is over edges a->b.
+  d_1(z) = sum c_{a,b} ((b) - (a)) = 0
+  means: for each vertex w, sum_{a: a->w} c_{a,w} - sum_{b: w->b} c_{w,b} = 0.
+
+  For z supported on v-edges only:
+  For w ≠ v: the terms involving w are either c_{v,w} (if v->w) or -c_{w,v} (if w->v).
+  So for each w ≠ v: either c_{v,w} = 0 (if v->w) or c_{w,v} = 0 (if w->v).
+  This means ALL coefficients are zero. So z = 0.
+
+  THEREFORE: ker(pi_v|_{B_1(T)}) = 0, so pi_v is injective on B_1(T).
+
+  dim(pi_v(B_1(T))) = dim(B_1(T)) = C(n-1,2).
+
+  But pi_v(B_1(T)) ⊂ R^{C(n-1,2)} and dim(Z_1(T\v)) = C(n-2,2).
+
+  So we need: C(n-1,2) ≤ C(n-1,2). That's trivially true but not useful.
+
+  Wait — pi_v(B_1(T)) has dimension C(n-1,2) as a subspace of R^{C(n-1,2)}?
+  That would mean pi_v(B_1(T)) = R^{C(n-1,2)}, i.e., the projection spans everything.
+  But B_1(T) ⊂ Z_1(T) (where dim(Z_1(T)) = C(n-1,2)).
+  And Z_1(T) is a PROPER subspace of R^{C(n,2)}.
+
+  pi_v(Z_1(T)): the projection of Z_1(T) into R^{C(n-1,2)}.
+  Is pi_v injective on Z_1(T)?
+  ker(pi_v|_{Z_1(T)}) = Z_1(T) ∩ {elements supported on v-edges} = {0} (same argument).
+
+  So dim(pi_v(Z_1(T))) = C(n-1,2) = dim(R^{C(n-1,2)}).
+  This means pi_v(Z_1(T)) = R^{C(n-1,2)}!
+
+  So pi_v(B_1(T)) = pi_v(Z_1(T)) = R^{C(n-1,2)} ⊃ Z_1(T\v).
+
+  That means B_1(T\v) ⊂ pi_v(B_1(T)) ∩ Z_1(T\v) = Z_1(T\v)
+  (which is obvious) and dim(pi_v(B_1(T)) ∩ Z_1(T\v)) = C(n-2,2).
+
+  Hmm, this doesn't immediately give the constraint. Let me think differently.
+  
+
+  Verifying pi_v injective on Z_1(T) at n=5:
+    Tournament idx=0: pi_v injective on Z_1 for all v ✓
+
+======================================================================
+THE RIGHT APPROACH: DECOMPOSING B_1(T)
+======================================================================
+
+  Since pi_v is injective on B_1(T), we can work in the projected space.
+
+  pi_v(B_1(T)) has dimension C(n-1,2) in R^{C(n-1,2)}.
+  So pi_v(B_1(T)) = R^{C(n-1,2)}.
+
+  B_1(T\v) has dimension C(n-2,2) - beta_1(T\v) inside Z_1(T\v).
+  Z_1(T\v) has dimension C(n-2,2) inside R^{C(n-1,2)}.
+
+  So B_1(T\v) is a codimension beta_1(T\v) subspace of Z_1(T\v).
+
+  Now sum_v beta_1(T\v) = sum_v (dim(Z_1(T\v)) - dim(B_1(T\v)))
+                         = n * C(n-2,2) - sum_v dim(B_1(T\v))
+
+  We need: sum_v dim(B_1(T\v)) >= n*C(n-2,2) - 3.
+
+  Equivalently: sum_v codim_{Z_1(T\v)}(B_1(T\v)) <= 3.
+
+  The codimension measures how many "missing" boundary generators there are
+  when we restrict to T\v.
+  
+
+  n=5: n*C(n-2,2) = 15
+    deficit = 1
+
+  n=6: n*C(n-2,2) = 36
+
+======================================================================
+FINAL: THE 3-CYCLE ARGUMENT
+======================================================================
+
+  KEY INSIGHT: At n=4, beta_1(T)=1 iff t3(T)=2 (all 4 triples are 3-cycles
+  is impossible; max t3=4 at n=4 but wait, C(4,3)=4 triples, and t3=2 already
+  gives beta_1=1).
+
+  Actually at n=4: t3=0 or 1 => beta_1=0, t3=2 => beta_1=1.
+
+  At n=5: beta_1(T\v)=1 requires t3(T\v) >= 2 (i.e., the sub-tournament
+  on 4 vertices has at least 2 three-cycles).
+
+  Now: T on 5 vertices, beta_1(T)=0. When does T\v have t3>=2?
+
+  Each 3-cycle in T\v is also a 3-cycle in T (that avoids v).
+  Total 3-cycles in T avoiding v: t3 - #(3-cycles through v).
+
+  For beta_1(T\v)=1: we need t3(T\v) >= 2.
+
+  A 3-cycle through v involves v and 2 other vertices.
+  There are C(n-1,2) possible pairs for these 2 vertices.
+
+  If all 3-cycles in T go through 3 specific vertices a,b,c,
+  then T\a, T\b, T\c could each still have 3-cycles (that avoid a,b,c resp.),
+  but there's a limit to how many 3-cycles can be distributed.
+
+  THE CONSTRAINT: For beta_1(T)=0, we need B_1(T) = Z_1(T).
+  This requires enough transitive triples to generate all of Z_1.
+  If too many triples are 3-cycles, Omega_2 shrinks and B_1 loses rank.
+
+  Specifically: each 3-cycle triple {a,b,c} removes one transitive-triple
+  2-path from A_2 and replaces it with 3-cycle 2-paths that are NOT individually
+  in Omega_2. The Omega_2 condition creates dependencies.
+  
+  n=4: t3 threshold for beta_1=1:
+    t3=2: beta_1=1
+
+  n=5: t3 distribution for beta_1=0 tournaments by # bad vertices:
+    0 bad vertices: t3 distribution = {0: 120, 1: 120}
+    1 bad vertices: t3 distribution = {2: 240}
+    2 bad vertices: t3 distribution = {3: 120}
+    3 bad vertices: t3 distribution = {4: 120}
