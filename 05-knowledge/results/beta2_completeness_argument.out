@@ -1,0 +1,50 @@
+======================================================================
+COMPLETENESS AND BETA_2: TESTING NON-TOURNAMENTS
+======================================================================
+
+--- Part 1: Random oriented graphs on n=6 ---
+  trial 128: beta_2=1, beta_1=0, edges=12
+  trial 312: beta_2=1, beta_1=0, edges=12
+  trial 318: beta_2=1, beta_1=0, edges=13
+  trial 358: beta_2=1, beta_1=0, edges=12
+  trial 460: beta_2=1, beta_1=0, edges=12
+  beta_2 > 0 in 5/500 random oriented graphs (1.0%)
+
+--- Part 2: Dense random digraphs on n=6 (every pair has at least one edge) ---
+  beta_2 > 0 in 0/500 dense random digraphs
+
+--- Part 3: Almost-tournaments on n=6 (1 edge removed) ---
+  beta_2 > 0 in 13/500 almost-tournaments
+
+--- Part 4: Tournament + 1 mutual edge on n=6 ---
+  beta_2 > 0 in 0/500 tournament+mutual-edge
+
+--- Part 5: Complete bidirectional graph on n=5,6 ---
+  n=5: Complete bidirectional: bettis=[1, 0, 0, 0, 44]
+  n=6: Complete bidirectional: bettis=[1, 0, 0, 0, 0, 265]
+
+--- Part 6: Exhaustive check of COMPLETE ORIENTED graphs at n=4 ---
+  n=4 tournaments: beta_2>0 in 0/64
+
+--- Part 7: Complete digraphs (with possible mutual edges) at n=4 ---
+    beta_2=1, edges=9, mutual_pairs=3
+    beta_2=1, edges=9, mutual_pairs=3
+    beta_2=1, edges=9, mutual_pairs=3
+    beta_2=1, edges=9, mutual_pairs=3
+    beta_2=1, edges=9, mutual_pairs=3
+  n=4 complete digraphs: beta_2>0 in 24/729
+
+--- Part 8: Sparse random digraphs at n=5 ---
+  n=5 sparse (p=0.3): beta_2>0 in 14/500
+
+--- SUMMARY ---
+
+    beta_2 = 0 for ALL tournaments (complete oriented, exactly one edge per pair).
+    beta_2 > 0 occurs in:
+    - Sparse digraphs (missing edges allow cycles)
+    - Dense digraphs with mutual edges (bidirectional pairs create new topology)
+    - Almost-tournaments (removing even 1 edge can break beta_2=0)
+
+    The COMPLETENESS + ANTISYMMETRY of tournaments is essential.
+    
+DONE.
