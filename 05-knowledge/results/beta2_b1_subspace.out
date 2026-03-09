@@ -1,0 +1,36 @@
+============================================================
+B₁ SUBSPACE STRUCTURE: WHERE DO HIDDEN CYCLES LIVE?
+============================================================
+
+========================================
+n=5: dim(B₁) = C(n,2)-(n-1) = 6
+========================================
+
+  Lifts always span 3 out of dim(B₁) = 6
+  Fraction: 50.00%
+
+========================================
+n=6: dim(B₁) = C(n,2)-(n-1) = 10
+========================================
+
+  Lifts always span 3 out of dim(B₁) = 10
+  Fraction: 30.00%
+
+============================================================
+DECOMPOSITION: z_v = α_v · ∂(bad-TT) + w_v
+Where w_v ∈ span(non-bad TT boundaries)
+============================================================
+
+n=5 exhaustive:
+z_v = α_v · ∂(bad-TT) + w_v decomposition
+Rank of residuals {w_v}: {3: 120}
+
+n=6 (500 sampled):
+Rank of residuals {w_v}: {3: 28}
+
+INTERPRETATION:
+If residual rank = 2: lifts span 1D (bad-TT dir) + 2D (residual) = 3D total.
+The 3 lifts are: α₁·b + w₁, α₂·b + w₂, α₃·b + w₃
+where b = ∂(bad-TT) and w₁,w₂,w₃ span 2D (one relation among residuals).
+This would mean the "3D subspace" is real but structured as 1D + 2D.
+

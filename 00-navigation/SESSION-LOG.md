@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51h — B₁ subspace analysis: lifts span 3D but no structural bound
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51g
+**Summary of work:**
+  Tested Grok's "3D global residual subspace of B₁" claim. The lifts DO span exactly
+  3D inside B₁ (dim 6 at n=5, dim 10 at n=6). But this is trivially true (#bad=3 lifts
+  span #bad dims). The decomposition z_v = α_v·∂(bad-TT) + w_v gives residuals that
+  ALSO span 3D (bad-TT dir is not orthogonal to residuals — entangled). No evidence of
+  a structural 3D bound on B₁. Grok's "HP telescoping + Euler bounds image to 3D" lacks
+  a testable mechanism. The |bad|≤3 problem remains open.
+**New contributions:** beta2_b1_subspace.py analysis
+**Unresolved threads:** Algebraic proof of |bad|≤3 / HYP-282
+
 ## opus-2026-03-09-S51g — Bad-TT coefficient structure: α = ±1/√2 universal
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51f
