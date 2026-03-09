@@ -1,0 +1,30 @@
+======================================================================
+EXTENDED CLAIMS TEST AT n=8 (mod-p exact)
+======================================================================
+  CLAIM I VIOLATION: trial=613, v=5, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(2, 3, 3, 4, 4, 4, 4, 4)
+  CLAIM I VIOLATION: trial=627, v=2, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(3, 3, 3, 3, 4, 4, 4, 4)
+  CLAIM I VIOLATION: trial=877, v=6, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(2, 3, 3, 4, 4, 4, 4, 4)
+  CLAIM I VIOLATION: trial=1447, v=6, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(2, 2, 3, 4, 4, 4, 4, 5)
+  CLAIM I VIOLATION: trial=1792, v=5, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(3, 3, 3, 3, 4, 4, 4, 4)
+  CLAIM I VIOLATION: trial=2103, v=4, b3=1, b3_Tv=1, rank(i_*)=0, b4=1 [COEXIST], score=(2, 2, 3, 3, 4, 4, 5, 5)
+  CLAIM I VIOLATION: trial=2433, v=3, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(3, 3, 3, 3, 3, 4, 4, 5)
+  CLAIM I VIOLATION: trial=2597, v=7, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(2, 2, 3, 4, 4, 4, 4, 5)
+  CLAIM I VIOLATION: trial=2607, v=7, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(3, 3, 3, 3, 4, 4, 4, 4)
+  CLAIM I VIOLATION: trial=2876, v=5, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(3, 3, 3, 3, 3, 4, 4, 5)
+  CLAIM I VIOLATION: trial=3377, v=5, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(2, 2, 3, 4, 4, 4, 4, 5)
+  CLAIM I VIOLATION: trial=3991, v=6, b3=1, b3_Tv=1, rank(i_*)=0, b4=1 [COEXIST], score=(2, 2, 2, 3, 4, 5, 5, 5)
+  CLAIM I VIOLATION: trial=4096, v=1, b3=1, b3_Tv=1, rank(i_*)=0, b4=0, score=(2, 2, 3, 4, 4, 4, 4, 5)
+  5000/5000, 717.0s, b3_tours=867, coexist=3, CI_viol=13, CII_viol=28, no_good=0
+
+======================================================================
+RESULTS (5000 tournaments, 867 with b3>0, 717.0s)
+  Coexistence (b3>0 & b4>0): 3
+  Claim I violations (i_* not injective): 13
+  Claim II violations (H_3^rel > 1): 28
+  Missing good vertex: 0
+
+  VERDICT:
+    Claim I: VIOLATED
+    Claim II: VIOLATED
+    Good vertex always exists: YES
+DONE.

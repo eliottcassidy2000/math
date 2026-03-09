@@ -40,7 +40,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-339 | Adjacent-odd seesaw: beta_{2k-1}*beta_{2k+1}=0 for ALL tournaments | PERFECT: 0 violations in 1500+ samples n=6-8. Includes β₁β₃, β₃β₅, β₅β₇ | kind-pasteur-S45 |
 | HYP-340 | At most one nonzero beta_p (p>=1) in generic tournament | 99.8% at n=7, 100% at n=8 (500 samples). Rare exceptions: [1,1,0,0,1,0,0] at n=7 (0.1%) | kind-pasteur-S45 |
 | HYP-341 | beta_4 onset at n=7 (not n=8) | beta_4=6 (Paley T_7) and beta_4=1 found at n=7 with 1000 samples (0.2%). Missed in earlier 200-sample runs | kind-pasteur-S45 |
-| HYP-342 | beta_{2k-1} in {0,1} for ALL k and ALL tournaments | PARTIALLY REFUTED: TRUE for k=1 (beta_1 in {0,1} PROVED) and k=2 (beta_3 in {0,1}, exhaustive n<=6, 2000 samples n=7). FALSE for k>=3: beta_5=10 at n=9 Paley maximizer (T209). Boolean property is SPECIFIC to beta_1 and beta_3 | kind-pasteur-S45, corrected S46 |
+| HYP-342 | beta_{2k-1} in {0,1} for ALL k and ALL tournaments | FURTHER REFUTED (S48): beta_3=2 at n=8 (0.08%). Boolean property ONLY holds for k=1 (beta_1 in {0,1} PROVED) and n<=7 for k=2. FALSE for k=2 at n>=8 and k>=3. | kind-pasteur-S45, corrected S46, S48 |
 | HYP-343 | rank(d_2) takes exactly 2 values: {n-1, n} | EXHAUSTIVE n=6: {9,10}. Sampled n=7: {14,15}. rank(d_2)=n-1 iff beta_1=1. Equivalent to HYP-320 | kind-pasteur-S45 |
 | HYP-344 | beta_3+beta_4 coexistence extremely rare at n=8 | 0/1000 in large sample (SVD crash after), 1/300 in separate run. Rate < 0.3%. When present: beta_5=0 always | kind-pasteur-S45 |
 | HYP-345 | beta_3>0 forces beta_4=0 in generic tournaments | 43/43 at n=8 in first test, but 1 counterexample in 300 (beta_3=beta_4=1). MOSTLY true but not universal | kind-pasteur-S45 |
@@ -71,9 +71,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-372 | z_v MUST use bad-TT boundary (can't be expressed without it) | CONFIRMED 100%: n=5 (360/360), n=6 (84/84). Removing bad-TT column makes z_v inexpressible. Consistent with RC. | beta2_badtt_coeff.py |
 | HYP-373 | Bad-TT coefficient |α_bad| = 1/√2 universal for all z_v | CONFIRMED n=5 (120 tournaments, all α = ±0.707107). |α_bad|/max|α| = 1.0 always. Sign pattern not determined by TT position. | beta2_badtt_coeff.py |
 | HYP-371a | EXACT: H_3(T,T\v) = beta_3(T) - rank(i_*) when beta_2=0 | LES + beta_2(T\v)=0 gives delta=0, j_* surjective. Exact, not inequality. Verified n=6 exhaustive | opus-S52 |
-| HYP-371b | beta_3(T)=2 impossible: requires ALL deletions beta_3=1, never occurs | n=7: max 2/7 deletions have beta_3=1 (300 samples). n=8: 0/100 have all-beta_3-positive deletions | opus-S52 |
+| HYP-371b | beta_3(T)=2 impossible: requires ALL deletions beta_3=1, never occurs | **REFUTED at n=8** (kind-pasteur-S48): beta_3=2 CONFIRMED, profile (1,0,0,2,0,0,0,0), 4/5000 (0.08%). Scores: (2,3,3,3,4,4,4,5) and (3,3,3,3,4,4,4,4). All have good vertices. | opus-S52, REFUTED kind-pasteur-S48 |
 | HYP-371c | Relative dim(R_1)=n-1 always, ker(d_1^rel)=n-2 always | R_1 = arcs incident to v (fixed for tournaments). d_1^rel has rank 1 (projects to R_0={v}). | opus-S52 |
-| HYP-375 | beta_3 <= 1 at n=9 (200 random samples, 0 violations) | Distribution {0:165, 1:35}. hybrid method 0.245s/tour. | kind-pasteur-S47 |
+| HYP-375 | beta_3 <= 1 at n=9 (200 random samples, 0 violations) | **REFUTED at n=8** (kind-pasteur-S48): b3=2 occurs at n=8 (4/5000=0.08%). 200 samples insufficient to detect. Re-checking n=9 with more samples. beta_3<=1 proved ONLY at n<=7 | kind-pasteur-S47, REFUTED kind-pasteur-S48 |
 | HYP-376 | 3 * H_3 cokernel generator has INTEGER coefficients in {-3,...,3} at n=6 | ALL 240 Type B tours: 3*coker rounds to exact integers. Multiplied by 3 = integer coefficients {-3,-2,-1,0,1,2,3} | kind-pasteur-S47 |
 | HYP-377 | Type B cokernel |coefficient| pattern is UNIVERSAL (single pattern for all 240 tours) | Exactly ONE sorted |coeff| pattern across all Type B. 36 nonzero / 63 total. Values 1/3, 2/3, 1 | kind-pasteur-S47 |
 | HYP-378 | Subtournament c3 count determines # paths per vertex set in cokernel: c3=1 → 2 nonzero, c3=2 → 3 nonzero | 100%: 720 instances of c3=1 with 2nz, 2160 of c3=2 with 3nz, at n=6 | kind-pasteur-S47 |
@@ -99,7 +99,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-394 | CONSECUTIVE SEESAW: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments | **REFUTED at n=8** (kind-pasteur-S48): 3/2000 have beta_3=1 AND beta_4=1, confirmed by BOTH SVD and mod-p. Holds exhaustively n=6, sampled n=7 (3000). FAILS at n=8 (~0.15% rate). The opus proof architecture (LES reduction to H_4^rel=0) still works at n≤7 but not n≥8. | opus-S54, REFUTED kind-pasteur-S48 |
 | HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. FAILS at n=8: when rank(i_*)=0, H_4^rel=1 and H_3^rel=1. | opus-S54, updated kind-pasteur-S48 |
 | HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | Holds n=7 (560/560). FAILS at n=8: when rank(i_*)=0 and b4=0, H_4^rel=1 from LES. Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54, REFUTED kind-pasteur-S48 |
-| HYP-397 | MINIMAL PROOF: beta_3<=1 via good vertex + Claim II (no i_*-injectivity needed) | For good vertex v: b3(T) <= dim H_3(T,T\v) <= 1. Only needs: (a) good vertex exists, (b) H_3^rel<=1 for good vertices. BOTH verified n<=8. Does NOT need Claims I or III. | kind-pasteur-S48 |
+| HYP-397 | CORRECTED: beta_3<=1 ONLY at n<=7. b3=2 possible at n=8 | beta_3=2 at n=8: profile (1,0,0,2,0,0,0,0), 4/5000 (0.08%). Good vertices always exist even for b3=2 tours. The "good vertex + Claim II" argument is CIRCULAR (H_3^rel=b3 for good vertex). beta_3<=1 proved exhaustively only at n<=7 | kind-pasteur-S48 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
