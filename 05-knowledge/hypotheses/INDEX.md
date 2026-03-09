@@ -82,6 +82,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-381 | LES dichotomy: b3(T\v)=0 => (rank=0,H3rel=1); b3(T\v)=1 => (rank=1,H3rel=0) | PERFECT at n=6 (exhaustive), n=7 (100 tours, 700 pairs), n=8 (20 tours). Combined: beta_3(T)=1 for ANY vertex choice | kind-pasteur-S47 |
 | HYP-382 | Relative dims at n=6 fully determined by type: Type A=(1,5,9,6,0,0), Type B=(1,5,12,14,8,3) | Exhaustive: 480 Type A pairs, 1440 Type B pairs. Rigid structure | kind-pasteur-S47 |
 | HYP-383 | Bad vertices have δ(β₃)=0: adding v adds EQUAL kernel and im(d_4) | n=7: 71/71 bad vertices. Perfect saturation — T\v cycle orthogonal to new v-paths content | kind-pasteur-S47 |
+| HYP-384 | Restriction res: Z₁(T)→⊕_v H₁(T\v) is SURJECTIVE (coker=0) for all β₁=0 tournaments | n=5 exhaustive (480/480), n=6 (85/85). rank(res)=#bad exactly. Each hidden cycle is detected by restriction. | beta2_global_les_test.py |
 | HYP-387 | Score obstruction fails for beta_3=2 at n=7: 4 score seqs compatible | (2,2,2,3,4,4,4), (2,2,3,3,3,4,4), (2,3,3,3,3,3,4), (3,3,3,3,3,3,3) all allow all-deletions-beta_3=1 | opus-S53 |
 | HYP-388 | Only Paley T_7 has all 7 deletions with beta_3=1 (EXHAUSTIVE) | 240/2097152 = all labelings of Paley. Betti=[1,0,0,0,6,0,0], all deletions=[1,0,0,1,0,0]. beta_3(T_7)=0 (not 2!) | opus-S53 |
 | HYP-389 | Exactly 2 iso classes of beta_3=1 at n=6 | Type A: score(1,1,1,4,4,4), 80 tours, 2 c3, not SC. Type B: score(2,2,2,3,3,3), 240 tours, 8 c3, SC | opus-S53 |
@@ -106,6 +107,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-374 | R = B₁/<Euler, HP 2-cycles, star annihilators> has dim(R)=3 (Grok claim) | Star generators = ALL TTs (every TT in some star), so dim(R)=0 for 97%, =1 for 3%. HP-only: varies 3-8. Coboundaries ⊥ B₁ (dim(B₁∩im(δ))=0). No "3D quotient" exists. | n=5 exhaustive, n=6 (500) | beta2_quotient_R.py |
 | HYP-374b | R = B₁/<Euler + ALL HP telescopes> has dim=3 (corrected Grok) | dim(R)∈{0,1,2,4} at n=5. #bad=3→dim(R)=0, #bad=0→dim(R)=2 or 4. INVERTED correlation. | n=5 exhaustive | beta2_euler_hp_quotient.py |
 | HYP-374c | i_*-injectivity: ζ_bad→3D ker(i_*), α=±1/√2 forces basis, |bad|≤3 pigeonhole | ker(i_*) per vertex is 0 or 1 dim. No 3D global space. Universal lift span=6=dim(B₁). Residual rank=3 (not 2). This IS HYP-282 restated. | n=5 exhaustive | beta2_istar_ker_test.py |
+| HYP-374d | Global LES: ker(δ₃) has rank 3 exact from "Euler+HP-acyclic" | Tested: res: Z₁→⊕H₁(T\v) has rank=#bad (not fixed), ker=dim(Z₁)-#bad (varies: 3-9). coker=0 ALWAYS (surjective). No fixed 3D kernel exists. The "3" is just 6-3=dim(Z₁)-#bad at n=5; at n=6 it's 7. | n=5,6 exhaustive | beta2_global_les_test.py |
 | HYP-103 | M(T) = M(T^op)^T | Also fails | n=4 | reversal_proof_attempt.py |
 | HYP-104 | M is linear in A, A^T, A^2, etc. | No such combination works | n=4 | simple_pattern_search.py |
 | HYP-105 | M commutes with A | Fails | n=4 | M_functional_equation.py |

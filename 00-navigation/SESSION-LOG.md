@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51k — Global LES ker(δ₃)=3 refuted; surjectivity discovered
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51j
+**Summary of work:**
+  Tested Grok's "global LES with ker(δ₃)=3" claim. Computed restriction map
+  res: Z₁(T) → ⊕_v H₁(T\v). Results: rank(res) = #bad exactly (not fixed 3),
+  ker(res) = dim(Z₁)-#bad (varies 3-9), coker(res) = 0 ALWAYS (surjective!).
+  The "3" Grok cites is 6-3=dim(Z₁)-#bad at n=5; at n=6 it's 10-3=7.
+  POSITIVE finding: surjectivity (HYP-384) means restriction perfectly detects
+  all hidden cycles. But doesn't constrain #bad — that's still HYP-282.
+**New contributions:** HYP-374d (REFUTED), HYP-384 (CONFIRMED), beta2_global_les_test.py
+**Unresolved threads:** HYP-282 algebraic proof; surjectivity proof
+
 ## opus-2026-03-09-S51j — Euler+HP quotient and i_*-kernel both refuted
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51i

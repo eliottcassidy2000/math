@@ -1,0 +1,108 @@
+============================================================
+TEST 1: Global restriction map at H₁ level
+When β₁(T)=0: H₁(T)=0, so res is trivially 0→⊕_v H₁(T\v)
+This gives NO constraint on Σ β₁(T\v).
+============================================================
+
+β₁(T)=0 ⟹ H₁(T)=0 ⟹ res: 0→⊕H₁(T\v) has ker=0, coker=⊕H₁(T\v)
+No 3D constraint possible from this direction.
+
+============================================================
+TEST 2: H₂(T, T\v) dimensions for each vertex v
+LES: H₂(T) → H₂(T,T\v) → H₁(T\v) → H₁(T)
+When β₂=β₁=0: H₂(T,T\v) ≅ H₁(T\v)
+============================================================
+
+--- n=5 ---
+  Σ_v dim H₂(T,T\v) = Σ_v β₁(T\v) = #bad (trivially)
+  Distribution of #bad: {0: 240, 1: 240, 2: 120, 3: 120}
+
+--- n=6 ---
+  Σ_v dim H₂(T,T\v) = Σ_v β₁(T\v) = #bad (trivially)
+  Distribution of #bad: {0: 147, 1: 96, 2: 47, 3: 10}
+
+============================================================
+TEST 3: Chain-level restriction map
+res: Z₁(T) → ⊕_v Z₁(T\v) / ⊕_v B₁(T\v)
+= Z₁(T) → ⊕_v H₁(T\v)
+============================================================
+
+--- n=5 ---
+
+  ker(res) by (#bad, dim): {(1, 5): 240, (2, 4): 120, (3, 3): 120}
+  coker(res) by (#bad, dim): {(1, 0): 240, (2, 0): 120, (3, 0): 120}
+
+--- n=6 ---
+
+  ker(res) by (#bad, dim): {(1, 9): 58, (2, 8): 23, (3, 7): 4}
+  coker(res) by (#bad, dim): {(1, 0): 58, (2, 0): 23, (3, 0): 4}
+
+============================================================
+TEST 4: Restriction from B₁(T) → ⊕_v H₁(T\v)
+When β₁=0: B₁=Z₁, so this should match TEST 3
+============================================================
+When β₁(T)=0: B₁(T) = Z₁(T), so res: B₁→⊕H₁ = res: Z₁→⊕H₁
+No new information.
+
+============================================================
+TEST 5: Which quantities are FIXED (independent of tournament)?
+============================================================
+
+--- n=5 ---
+  #bad: [0, 1, 2, 3] [VARIES]
+  coker_res: [0] [FIXED]
+  dim_B1: [6] [FIXED]
+  dim_Z1: [6] [FIXED]
+  ker_res: [3, 4, 5] [VARIES]
+  rank_res: [1, 2, 3] [VARIES]
+  rank_res_from_B1: [] [VARIES]
+  (dim_Z₁ = C(n,2)-(n-1) = 6 always)
+  (dim_B₁ = dim_Z₁ - β₁ = 6 when β₁=0)
+
+--- n=6 ---
+  #bad: [0, 1, 2, 3] [VARIES]
+  coker_res: [0] [FIXED]
+  dim_B1: [10] [FIXED]
+  dim_Z1: [10] [FIXED]
+  ker_res: [7, 8, 9] [VARIES]
+  rank_res: [1, 2, 3] [VARIES]
+  rank_res_from_B1: [] [VARIES]
+  (dim_Z₁ = C(n,2)-(n-1) = 10 always)
+  (dim_B₁ = dim_Z₁ - β₁ = 10 when β₁=0)
+
+============================================================
+TEST 6: Vertex-star decomposition of C₂(T)
+Each TT (a,b,c) belongs to the star of vertex a.
+Group TT boundaries by their star-vertex.
+============================================================
+
+Example: bits=41, bad=[1, 2, 4]
+  Star(v=0): 1 TTs, rank=1
+  Star(v=1): 0 TTs, rank=0 [BAD]
+  Star(v=2): 1 TTs, rank=1 [BAD]
+  Star(v=3): 1 TTs, rank=1
+  Star(v=4): 3 TTs, rank=3 [BAD]
+  rank(non-bad stars) = 2
+  rank(bad stars) = 4
+  rank(all) = 6
+  codim(non-bad stars in B₁) = 4
+
+============================================================
+TEST 7: Where does '3' come from?
+============================================================
+  n=4: dim(Z₁)=dim(B₁)=3, n-2=2, C(n-1,2)=3
+  n=5: dim(Z₁)=dim(B₁)=6, n-2=3, C(n-1,2)=6
+  n=6: dim(Z₁)=dim(B₁)=10, n-2=4, C(n-1,2)=10
+  n=7: dim(Z₁)=dim(B₁)=15, n-2=5, C(n-1,2)=15
+  n=8: dim(Z₁)=dim(B₁)=21, n-2=6, C(n-1,2)=21
+
+Observation:
+  - dim(B₁) = C(n,2) - (n-1) = (n-1)(n-2)/2
+  - This is C(n-1, 2).
+  - #bad ≤ 3 holds for ALL n tested (5-10).
+  - 3 is NOT C(n-1,2) - something for general n.
+  - 3 = C(3,2) = the number of edges in the bad triple.
+  - Or: 3 = the number of vertices in a triangle.
+  - The constraint is NOT from a fixed-dim linear algebra argument
+    unless the target space is truly 3D for all n.
+
