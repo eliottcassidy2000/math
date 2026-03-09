@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-08-S49 — β₂=0 proof: HYP-262 verified n=8, H₁-killing reformulation
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S49 (context overflow continuation)
+**Summary of work:**
+  Deep investigation of β₂=0 for tournaments in GLMY path homology.
+
+  **Major results:**
+  - HYP-262 (Σ h₂_rel ≤ 3) verified at n=8 (200 samples). Bound is tight.
+  - H₁-KILLING REFORMULATION: Σ h₂_rel = Σ_v dim(ker(i*_v)) — counts how many
+    vertices "fill" a cycle class when removed. Critical for understanding bound.
+  - KEY IDENTITY: n·β₂ = Σ h₂_rel - Σ β₁(T\v) + Σ rk(i*)
+  - Z₂ DIMENSION BOUND: At n=5, Σ=3 iff dim(Z₂)=3 (minimum). Z₂≥4 ⟹ Σ=0.
+  - WORST CASE ANATOMY: At n=5 Σ=3 is a single isomorphism class (120 tournaments).
+    3 critical vertices (cyc=2, scores {1,2,3}), 2 non-critical (cyc=3, scores {2,2}).
+  - CONE CONTRACTION: Works perfectly from source vertex. Fails for non-source.
+    Single-vertex cone covers 600/1024 tournaments at n=5.
+  - β₁ vs t₃: β₁>0 does NOT correspond to t₃>0. At n=4: β₁=1 iff t₃=2 exactly.
+  - Relative Ω₂: NT paths CAN contribute (dim(Ω₂) ≠ #TT), but relative H₂
+    generators are always TT paths.
+  - β₁(T)>0 ⟹ Σ=0 confirmed exhaustively at n=5,6 (HYP-263).
+
+**New contributions:**
+  - ~15 new computation scripts in 04-computation/beta2_*.py
+  - Updated proof structure document: 05-knowledge/beta2_zero_proof_structure.md
+  - All results saved to 05-knowledge/results/
+
+**Unresolved threads:**
+  - Algebraic proof of HYP-262 (Σ ≤ 3) still open
+  - Z₂ dimension vs Σ relationship at n=6 (computation running)
+  - n=6 cycle-count condition (computation running)
+  - Need to prove: for n ≥ 7, at most 3 vertices can be "critical fillers"
+
 ## kind-pasteur-2026-03-08-S41 (cont'd #2) — simplex connection, LES induction, n7-9 verification
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-08-S41 (2nd context overflow)
