@@ -1,0 +1,171 @@
+======================================================================
+RANK NEAR-SATURATION ANALYSIS
+Why is rank(d_4) always = ker(d_3) or ker(d_3)-1?
+======================================================================
+
+--- Part 1: n=6 exhaustive ---
+  n=6: 5000/32768 done, 43 with beta_3>0
+  n=6: 10000/32768 done, 94 with beta_3>0
+  n=6: 15000/32768 done, 152 with beta_3>0
+  n=6: 20000/32768 done, 194 with beta_3>0
+  n=6: 25000/32768 done, 249 with beta_3>0
+  n=6: 30000/32768 done, 296 with beta_3>0
+
+  RESULTS n=6:
+  Total tournaments: 32768
+  Gap distribution (ker(d_3) - rank(d_4)):
+    gap=0: 32448 (99.0%)
+    gap=1: 320 (1.0%)
+  beta_3>0 (gap>0): 320
+
+  Gap=1 cases (320 tournaments):
+    scores (2, 2, 2, 3, 3, 3): 240
+    scores (1, 1, 1, 4, 4, 4): 80
+
+  Omega dimension profiles for gap=1:
+    dims[0..5]=(6, 15, 21, 18, 9, 3): 240
+    dims[0..5]=(6, 15, 18, 9, 0, 0): 80
+
+  Boundary rank profiles for gap=1:
+    (rk_d1, rk_d2, rk_d3, rk_d4)=(5, 10, 11, 6): 240
+    (rk_d1, rk_d2, rk_d3, rk_d4)=(5, 10, 8, 0): 80
+
+--- Part 2: n=7 sampled ---
+  n=7: 200/1000 done
+  n=7: 400/1000 done
+  n=7: 600/1000 done
+  n=7: 800/1000 done
+  n=7: 1000/1000 done
+
+  RESULTS n=7:
+  Gap distribution:
+    gap=0: 925 (92.5%)
+    gap=1: 75 (7.5%)
+
+  Gap=1 cases (75 tournaments):
+    scores (2, 2, 3, 3, 3, 4, 4): 27
+    scores (2, 2, 2, 3, 3, 4, 5): 9
+    scores (1, 2, 2, 3, 4, 4, 5): 8
+    scores (2, 2, 2, 3, 4, 4, 4): 8
+    scores (1, 2, 3, 3, 4, 4, 4): 5
+    scores (2, 3, 3, 3, 3, 3, 4): 5
+    scores (1, 1, 2, 3, 4, 5, 5): 4
+    scores (1, 1, 2, 4, 4, 4, 5): 4
+    scores (2, 2, 2, 2, 4, 4, 5): 2
+    scores (1, 2, 2, 4, 4, 4, 4): 2
+    scores (1, 1, 2, 2, 5, 5, 5): 1
+
+  Omega dimension profiles for gap=1:
+    dims[0..6]=(7, 21, 39, 50, 41, 20, 4): 19
+    dims[0..6]=(7, 21, 37, 44, 35, 17, 3): 10
+    dims[0..6]=(7, 21, 37, 41, 27, 11, 2): 9
+    dims[0..6]=(7, 21, 36, 38, 24, 9, 1): 9
+    dims[0..6]=(7, 21, 34, 31, 15, 4, 0): 8
+    dims[0..6]=(7, 21, 39, 52, 45, 21, 3): 4
+    dims[0..6]=(7, 21, 40, 55, 49, 28, 8): 3
+    dims[0..6]=(7, 21, 39, 50, 42, 21, 4): 2
+    dims[0..6]=(7, 21, 40, 54, 45, 21, 4): 2
+    dims[0..6]=(7, 21, 39, 52, 46, 25, 6): 2
+
+--- Part 3: When is Omega_4 = 0 at n=6? ---
+  Omega_4 = 0: 0/32768 (0.0%)
+  Of those with Omega_4=0, beta_3>0: 0
+
+--- Part 4: Omega_4 dimension when beta_3=1 at n=6 ---
+  dim(Omega_4) distribution for beta_3=1:
+    dim(Omega_4)=0: 80
+    dim(Omega_4)=9: 240
+
+--- Part 5: n=8 sampled ---
+  n=8: 100/300 done
+  n=8: 200/300 done
+  n=8: 300/300 done
+
+  RESULTS n=8:
+  Gap distribution:
+    gap=0: 255 (85.0%)
+    gap=1: 45 (15.0%)
+
+--- Part 6: Cokernel element structure at n=6 ---
+
+  bits=1332, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({-1: 27, 1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=1337, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({1: 27, -1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=1363, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({-1: 27, 1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=1368, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({-1: 27, 1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=1426, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({1: 27, -1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=1429, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({1: 27, -1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=2196, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({1: 27, -1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=2202, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({1: 27, -1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=2377, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({-1: 27, 1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+  bits=2394, scores=(2, 2, 2, 3, 3, 3)
+  dims: Om3=18, Om4=9
+  ker(d3)=7, rank(d4)=6
+  Cokernel element: 36 nonzero 3-paths
+  Vertex sets: 15 (sizes: Counter({4: 15}))
+  Signs: Counter({1: 27, -1: 9})
+  Vertices used: [0, 1, 2, 3, 4, 5] (6/6)
+
+DONE.
