@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-09-S44 — Dimensional meta-patterns: tournament as simplex orientation
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-08-S43f
+**Summary of work:**
+  Long exploration session framing tournaments as binary relations on simplices (dimension d=n-1). Investigated how homological invariants change across dimensions.
+
+  **Major discoveries (13 scripts, 14 new hypotheses HYP-302..315):**
+  - **Transitive = contractible simplex**: dim(Omega_p) = C(n,p+1) exactly, chi=1 always (HYP-302)
+  - **Filling ratio inflation**: f_p = dim(Omega_p)/C(n,p+1) > 1 for p>=3 at n>=6. At n=8, f_7 = 4.9! (HYP-303)
+  - **H(T_4) = 2*c3 + 1**: Clean identity for ALL 4-vertex tournaments (HYP-304)
+  - **excess_4 = 2*c3*(n-3)**: Universal formula from H(T_4) identity (HYP-305)
+  - **chi_A = sum(-1)^p|A_p| always ODD, = 1 at n=4** (HYP-306/307)
+  - **Dimensional crossover**: P(beta_1>0) ~ exp(-0.755n), P(beta_3>0) grows to ~23% at n=9 (HYP-310)
+  - **beta_3 fragility**: beta_3>0 vanishes under ANY vertex deletion at n=6 (HYP-311)
+  - **chi(T) in {0,1} for n<=7**, breaks at n=8 (HYP-312)
+  - **Omega_2 NOT c3-determined**: Same (c3, score) gives different dim(Omega_2) at n>=5 (HYP-308/309)
+  - **|A_p| mod 2 = C(n,p+1) mod 2**: From local Redei (each subtournament has odd # Ham paths)
+  - **Poincare polynomial P(T,1)/(2^n-1) grows with n**: Path complex exceeds simplex at n>=6
+  - **Survival fraction**: s_p = dim(Omega_p)/|A_p| decays as ~2^p/(p+1)! but above transitive baseline
+  - **Defect rate U-shaped**: 30%(n=5)->13%(n=7)->23%(n=9) as beta_3 replaces beta_1
+  - **beta_5 not observed**: 0/200 at n=9, Paley T_7 has beta_5=0, Paley T_11 OOM
+
+**New contributions:** HYP-302..315, INV-136. Scripts: dimensional_crossover.py, filling_ratio_formula.py, local_redei_investigation.py, euler_char_scaling.py, chi_A_identity.py, omega2_formula.py, betti_rate_scaling.py, poincare_polynomial.py, omega_parity_structure.py, beta5_onset_search.py
+**Unresolved threads:** (1) beta_5 onset dimension unknown (need sparse SVD for n>=10). (2) Prove beta_1*beta_3=0 (HYP-299). (3) Formula for filling ratio. (4) Explain defect rate U-shape.
+
 ## kind-pasteur-2026-03-08-S43f — Betti number investigation: n=7,8 full analysis, mutual exclusivity
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-08-S43 (sixth continuation)

@@ -1,0 +1,19 @@
+BETA_5 ONSET SEARCH (partial — Paley T_11 OOM at beta_5)
+
+Paley T_7:
+  beta_1 = 0
+  beta_3 = 0
+  beta_5 = 0
+  (Note: beta_4 = 6 from previous work — nonzero Betti at EVEN index)
+
+Paley T_11:
+  beta_1 = 0
+  beta_3 = 0
+  beta_5 = OOM (constraint matrix 53790x53790, needs 21.6 GiB)
+
+Random n=9 (200 samples, from betti_rate_scaling.py):
+  beta_5 = 0 for all 200 samples
+
+Conclusion: beta_5 has NOT been observed at n <= 11 for random or Paley tournaments.
+Paley T_7 nonzero Betti is at beta_4 (even), not beta_5 (odd).
+Need sparse SVD or iterative methods for Paley T_11.
