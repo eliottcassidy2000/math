@@ -1,0 +1,168 @@
+======================================================================
+FILLING RATIO DECOMPOSITION: f_p = s_p * (p+1)!/2^p
+s_p = dim(Omega_p) / |A_p|  (survival fraction)
+======================================================================
+
+  n=3 (d=2), 8 samples:
+    p |    |A_p| |  Omega_p | C(n,p+1) | (p+1)!/2^p |      s_p |      f_p | s_p theory
+  ----+----------+----------+----------+------------+----------+----------+-----------
+    0 |      3.0 |      3.0 |        3 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    1 |      3.0 |      3.0 |        3 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    2 |      1.2 |      0.9 |        1 |       1.50 |   0.7000 |   0.8750 |     0.6667
+
+  n=4 (d=3), 64 samples:
+    p |    |A_p| |  Omega_p | C(n,p+1) | (p+1)!/2^p |      s_p |      f_p | s_p theory
+  ----+----------+----------+----------+------------+----------+----------+-----------
+    0 |      4.0 |      4.0 |        4 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    1 |      6.0 |      6.0 |        6 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    2 |      6.2 |      3.3 |        4 |       1.50 |   0.5377 |   0.8359 |     0.6667
+    3 |      3.2 |      0.8 |        1 |       3.00 |   0.2476 |   0.7969 |     0.3333
+
+  n=5 (d=4), 200 samples:
+    p |    |A_p| |  Omega_p | C(n,p+1) | (p+1)!/2^p |      s_p |      f_p | s_p theory
+  ----+----------+----------+----------+------------+----------+----------+-----------
+    0 |      5.0 |      5.0 |        5 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    1 |     10.0 |     10.0 |       10 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    2 |     14.9 |      9.2 |       10 |       1.50 |   0.6140 |   0.9180 |     0.6667
+    3 |     14.9 |      4.4 |        5 |       3.00 |   0.2936 |   0.8750 |     0.3333
+    4 |      7.4 |      0.9 |        1 |       7.50 |   0.1223 |   0.9100 |     0.1333
+
+  n=6 (d=5), 200 samples:
+    p |    |A_p| |  Omega_p | C(n,p+1) | (p+1)!/2^p |      s_p |      f_p | s_p theory
+  ----+----------+----------+----------+------------+----------+----------+-----------
+    0 |      6.0 |      6.0 |        6 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    1 |     15.0 |     15.0 |       15 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    2 |     30.0 |     19.8 |       20 |       1.50 |   0.6583 |   0.9877 |     0.6667
+    3 |     45.0 |     15.7 |       15 |       3.00 |   0.3492 |   1.0483 |     0.3333
+    4 |     45.1 |      7.2 |        6 |       7.50 |   0.1599 |   1.2008 |     0.1333
+    5 |     22.7 |      1.4 |        1 |      22.50 |   0.0635 |   1.4450 |     0.0444
+
+  n=7 (d=6), 200 samples:
+    p |    |A_p| |  Omega_p | C(n,p+1) | (p+1)!/2^p |      s_p |      f_p | s_p theory
+  ----+----------+----------+----------+------------+----------+----------+-----------
+    0 |      7.0 |      7.0 |        7 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    1 |     21.0 |     21.0 |       21 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    2 |     51.9 |     36.4 |       35 |       1.50 |   0.7010 |   1.0394 |     0.6667
+    3 |    102.6 |     41.1 |       35 |       3.00 |   0.4007 |   1.1746 |     0.3333
+    4 |    151.7 |     30.1 |       21 |       7.50 |   0.1984 |   1.4331 |     0.1333
+    5 |    149.3 |     12.9 |        7 |      22.50 |   0.0867 |   1.8500 |     0.0444
+    6 |     73.3 |      2.4 |        1 |      78.75 |   0.0333 |   2.4400 |     0.0127
+
+  n=8 (d=7), 200 samples:
+    p |    |A_p| |  Omega_p | C(n,p+1) | (p+1)!/2^p |      s_p |      f_p | s_p theory
+  ----+----------+----------+----------+------------+----------+----------+-----------
+    0 |      8.0 |      8.0 |        8 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    1 |     28.0 |     28.0 |       28 |       1.00 |   1.0000 |   1.0000 |     1.0000
+    2 |     83.5 |     60.8 |       56 |       1.50 |   0.7281 |   1.0860 |     0.6667
+    3 |    207.6 |     91.5 |       70 |       3.00 |   0.4408 |   1.3074 |     0.3333
+    4 |    412.8 |     95.1 |       56 |       7.50 |   0.2303 |   1.6977 |     0.1333
+    5 |    614.9 |     65.3 |       28 |      22.50 |   0.1062 |   2.3332 |     0.0444
+    6 |    610.0 |     26.7 |        8 |      78.75 |   0.0438 |   3.3394 |     0.0127
+    7 |    302.8 |      4.9 |        1 |     315.00 |   0.0163 |   4.9400 |     0.0032
+
+======================================================================
+Part 2: Normalized filling — f_p * 2^p / (p+1)! = s_p * C(n,p+1) / C(n,p+1) = s_p
+If s_p ~ 2^p / (p+1)! then f_p ~ 1 (simplex-like)
+If s_p > 2^p / (p+1)! then f_p > 1 (inflated)
+======================================================================
+
+======================================================================
+Part 3: Non-allowed face count (constraints on Omega_p)
+======================================================================
+
+  n=3:
+    p=1: avg non-allowed faces = 0.0, total possible (p-1)-seqs = 3, na/total = 0.0000
+    p=2: avg non-allowed faces = 0.4, total possible (p-1)-seqs = 6, na/total = 0.0625
+
+  n=4:
+    p=1: avg non-allowed faces = 0.0, total possible (p-1)-seqs = 4, na/total = 0.0000
+    p=2: avg non-allowed faces = 2.9, total possible (p-1)-seqs = 12, na/total = 0.2396
+    p=3: avg non-allowed faces = 3.3, total possible (p-1)-seqs = 24, na/total = 0.1387
+
+  n=5:
+    p=1: avg non-allowed faces = 0.0, total possible (p-1)-seqs = 5, na/total = 0.0000
+    p=2: avg non-allowed faces = 5.8, total possible (p-1)-seqs = 20, na/total = 0.2885
+    p=3: avg non-allowed faces = 13.1, total possible (p-1)-seqs = 60, na/total = 0.2190
+    p=4: avg non-allowed faces = 11.2, total possible (p-1)-seqs = 120, na/total = 0.0929
+
+  n=6:
+    p=1: avg non-allowed faces = 0.0, total possible (p-1)-seqs = 6, na/total = 0.0000
+    p=2: avg non-allowed faces = 10.3, total possible (p-1)-seqs = 30, na/total = 0.3418
+    p=3: avg non-allowed faces = 35.0, total possible (p-1)-seqs = 120, na/total = 0.2913
+    p=4: avg non-allowed faces = 59.4, total possible (p-1)-seqs = 360, na/total = 0.1650
+    p=5: avg non-allowed faces = 45.9, total possible (p-1)-seqs = 720, na/total = 0.0637
+
+  n=7:
+    p=1: avg non-allowed faces = 0.0, total possible (p-1)-seqs = 7, na/total = 0.0000
+    p=2: avg non-allowed faces = 15.5, total possible (p-1)-seqs = 42, na/total = 0.3695
+    p=3: avg non-allowed faces = 69.5, total possible (p-1)-seqs = 210, na/total = 0.3308
+    p=4: avg non-allowed faces = 174.1, total possible (p-1)-seqs = 840, na/total = 0.2072
+    p=5: avg non-allowed faces = 259.4, total possible (p-1)-seqs = 2520, na/total = 0.1029
+    p=6: avg non-allowed faces = 181.9, total possible (p-1)-seqs = 5040, na/total = 0.0361
+
+  n=8:
+    p=1: avg non-allowed faces = 0.0, total possible (p-1)-seqs = 8, na/total = 0.0000
+    p=2: avg non-allowed faces = 22.7, total possible (p-1)-seqs = 56, na/total = 0.4054
+    p=3: avg non-allowed faces = 126.4, total possible (p-1)-seqs = 336, na/total = 0.3761
+    p=4: avg non-allowed faces = 422.3, total possible (p-1)-seqs = 1680, na/total = 0.2514
+    p=5: avg non-allowed faces = 943.9, total possible (p-1)-seqs = 6720, na/total = 0.1405
+    p=6: avg non-allowed faces = 1327.4, total possible (p-1)-seqs = 20160, na/total = 0.0658
+    p=7: avg non-allowed faces = 905.1, total possible (p-1)-seqs = 40320, na/total = 0.0224
+
+======================================================================
+Part 4: Cyclic content — paths per vertex set distribution
+======================================================================
+
+  n=5, p=2: avg paths-per-vertex-set distribution:
+    1 paths: 7.6 vertex sets
+    3 paths: 2.4 vertex sets
+
+  n=5, p=3: avg paths-per-vertex-set distribution:
+    1 paths: 1.4 vertex sets
+    3 paths: 1.4 vertex sets
+    5 paths: 2.1 vertex sets
+
+  n=5, p=4: avg paths-per-vertex-set distribution:
+    1 paths: 0.1 vertex sets
+    3 paths: 0.2 vertex sets
+    5 paths: 0.3 vertex sets
+    9 paths: 0.3 vertex sets
+    11 paths: 0.0 vertex sets
+    13 paths: 0.1 vertex sets
+    15 paths: 0.1 vertex sets
+
+  n=7, p=2: avg paths-per-vertex-set distribution:
+    1 paths: 26.7 vertex sets
+    3 paths: 8.3 vertex sets
+
+  n=7, p=3: avg paths-per-vertex-set distribution:
+    1 paths: 14.6 vertex sets
+    3 paths: 9.0 vertex sets
+    5 paths: 11.5 vertex sets
+
+  n=7, p=4: avg paths-per-vertex-set distribution:
+    1 paths: 2.8 vertex sets
+    3 paths: 2.1 vertex sets
+    5 paths: 5.2 vertex sets
+    9 paths: 4.7 vertex sets
+    11 paths: 2.4 vertex sets
+    13 paths: 2.4 vertex sets
+    15 paths: 1.4 vertex sets
+
+  n=8, p=2: avg paths-per-vertex-set distribution:
+    1 paths: 42.8 vertex sets
+    3 paths: 13.2 vertex sets
+
+  n=8, p=3: avg paths-per-vertex-set distribution:
+    1 paths: 26.6 vertex sets
+    3 paths: 18.0 vertex sets
+    5 paths: 25.4 vertex sets
+
+  n=8, p=4: avg paths-per-vertex-set distribution:
+    1 paths: 6.9 vertex sets
+    3 paths: 6.3 vertex sets
+    5 paths: 13.2 vertex sets
+    9 paths: 13.2 vertex sets
+    11 paths: 6.9 vertex sets
+    13 paths: 6.2 vertex sets
+    15 paths: 3.3 vertex sets

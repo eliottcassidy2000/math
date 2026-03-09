@@ -1,0 +1,277 @@
+======================================================================
+LOCAL RÉDEI: Hamiltonian path counts on subtournaments
+Every subtournament has ODD # of Ham paths (by Rédei)
+======================================================================
+
+--- Part 1: H(T[S]) distribution for random tournaments ---
+
+  n=4, k=3: 256 subsets (64 tours x C(4,3)=4)
+    H=1: 185 (72.3%)
+    H=3: 71 (27.7%)
+
+  n=4, k=4: 64 subsets (64 tours x C(4,4)=1)
+    H=1: 25 (39.1%)
+    H=3: 14 (21.9%)
+    H=5: 25 (39.1%)
+
+  n=5, k=3: 1000 subsets (100 tours x C(5,3)=10)
+    H=1: 740 (74.0%)
+    H=3: 260 (26.0%)
+
+  n=5, k=4: 500 subsets (100 tours x C(5,4)=5)
+    H=1: 207 (41.4%)
+    H=3: 116 (23.2%)
+    H=5: 177 (35.4%)
+
+  n=5, k=5: 100 subsets (100 tours x C(5,5)=1)
+    H=1: 16 (16.0%)
+    H=3: 15 (15.0%)
+    H=5: 24 (24.0%)
+    H=9: 22 (22.0%)
+    H=11: 8 (8.0%)
+    H=13: 10 (10.0%)
+    H=15: 5 (5.0%)
+
+  n=6, k=3: 2000 subsets (100 tours x C(6,3)=20)
+    H=1: 1484 (74.2%)
+    H=3: 516 (25.8%)
+
+  n=6, k=4: 1500 subsets (100 tours x C(6,4)=15)
+    H=1: 601 (40.1%)
+    H=3: 343 (22.9%)
+    H=5: 556 (37.1%)
+
+  n=6, k=5: 600 subsets (100 tours x C(6,5)=6)
+    H=1: 59 (9.8%)
+    H=3: 62 (10.3%)
+    H=5: 169 (28.2%)
+    H=9: 134 (22.3%)
+    H=11: 68 (11.3%)
+    H=13: 77 (12.8%)
+    H=15: 31 (5.2%)
+
+  n=6, k=6: 100 subsets (100 tours x C(6,6)=1)
+    H=1: 5 (5.0%)
+    H=3: 2 (2.0%)
+    H=5: 6 (6.0%)
+    H=9: 8 (8.0%)
+    H=11: 1 (1.0%)
+    H=13: 7 (7.0%)
+    H=15: 5 (5.0%)
+    H=17: 2 (2.0%)
+    H=19: 1 (1.0%)
+    H=23: 9 (9.0%)
+    H=25: 7 (7.0%)
+    H=29: 12 (12.0%)
+    H=31: 1 (1.0%)
+    H=33: 10 (10.0%)
+    H=37: 16 (16.0%)
+    H=41: 1 (1.0%)
+    H=43: 6 (6.0%)
+    H=45: 1 (1.0%)
+
+  n=7, k=3: 3500 subsets (100 tours x C(7,3)=35)
+    H=1: 2687 (76.8%)
+    H=3: 813 (23.2%)
+
+  n=7, k=4: 3500 subsets (100 tours x C(7,4)=35)
+    H=1: 1316 (37.6%)
+    H=3: 860 (24.6%)
+    H=5: 1324 (37.8%)
+
+  n=7, k=5: 2100 subsets (100 tours x C(7,5)=21)
+    H=1: 223 (10.6%)
+    H=3: 236 (11.2%)
+    H=5: 488 (23.2%)
+    H=9: 517 (24.6%)
+    H=11: 253 (12.0%)
+    H=13: 253 (12.0%)
+    H=15: 130 (6.2%)
+
+  n=7, k=6: 700 subsets (100 tours x C(7,6)=7)
+    H=1: 11 (1.6%)
+    H=3: 11 (1.6%)
+    H=5: 43 (6.1%)
+    H=9: 62 (8.9%)
+    H=11: 45 (6.4%)
+    H=13: 35 (5.0%)
+    H=15: 46 (6.6%)
+    H=17: 29 (4.1%)
+    H=19: 42 (6.0%)
+    H=23: 73 (10.4%)
+    H=25: 30 (4.3%)
+    H=27: 8 (1.1%)
+    H=29: 68 (9.7%)
+    H=31: 37 (5.3%)
+    H=33: 46 (6.6%)
+    H=37: 78 (11.1%)
+    H=41: 8 (1.1%)
+    H=43: 18 (2.6%)
+    H=45: 10 (1.4%)
+
+  n=8, k=3: 5600 subsets (100 tours x C(8,3)=56)
+    H=1: 4250 (75.9%)
+    H=3: 1350 (24.1%)
+
+  n=8, k=4: 7000 subsets (100 tours x C(8,4)=70)
+    H=1: 2632 (37.6%)
+    H=3: 1726 (24.7%)
+    H=5: 2642 (37.7%)
+
+  n=8, k=5: 5600 subsets (100 tours x C(8,5)=56)
+    H=1: 691 (12.3%)
+    H=3: 683 (12.2%)
+    H=5: 1306 (23.3%)
+    H=9: 1371 (24.5%)
+    H=11: 614 (11.0%)
+    H=13: 606 (10.8%)
+    H=15: 329 (5.9%)
+
+  n=8, k=6: 2800 subsets (100 tours x C(8,6)=28)
+    H=1: 67 (2.4%)
+    H=3: 85 (3.0%)
+    H=5: 171 (6.1%)
+    H=9: 256 (9.1%)
+    H=11: 126 (4.5%)
+    H=13: 117 (4.2%)
+    H=15: 198 (7.1%)
+    H=17: 111 (4.0%)
+    H=19: 123 (4.4%)
+    H=23: 250 (8.9%)
+    H=25: 118 (4.2%)
+    H=27: 34 (1.2%)
+    H=29: 266 (9.5%)
+    H=31: 119 (4.2%)
+    H=33: 222 (7.9%)
+    H=37: 284 (10.1%)
+    H=41: 60 (2.1%)
+    H=43: 145 (5.2%)
+    H=45: 48 (1.7%)
+
+======================================================================
+Part 2: dim(Omega_p) vs sum_{|S|=p+1} H(T[S])
+If Omega_p = C(n,p+1), all subsets have H=1 (transitive-like)
+Surplus = dim(Omega_p) - C(n,p+1)
+Total H = sum_{|S|=p+1} H(T[S])
+Excess H = Total H - C(n,p+1) = sum of (H(T[S])-1)
+======================================================================
+
+  n=5, p=2: correlation(surplus, excess_H) = -0.2358
+    surplus range: [-2, 0]
+    excess_H range: [0, 10]
+    (excess_H -> surplus) mapping:
+      excess_H=0: surplus=0 (deterministic)
+      excess_H=2: surplus=-1 (deterministic)
+      excess_H=4: surplus=-1 (deterministic)
+      excess_H=6: surplus=-1 (deterministic)
+      excess_H=8: surplus in [np.int64(-2), np.int64(-1), np.int64(0)] (55 samples)
+      excess_H=10: surplus=0 (deterministic)
+
+  n=5, p=3: correlation(surplus, excess_H) = 0.2533
+    surplus range: [-2, 5]
+    excess_H range: [0, 20]
+    (excess_H -> surplus) mapping:
+      excess_H=0: surplus=0 (deterministic)
+      excess_H=4: surplus=-2 (deterministic)
+      excess_H=8: surplus=-1 (deterministic)
+      excess_H=12: surplus in [np.int64(-2), np.int64(0)] (56 samples)
+      excess_H=16: surplus in [np.int64(-2), np.int64(-1), np.int64(2)] (52 samples)
+      excess_H=20: surplus=5 (deterministic)
+
+  n=6, p=2: correlation(surplus, excess_H) = 0.5311
+    surplus range: [-2, 4]
+    excess_H range: [0, 16]
+    (excess_H -> surplus) mapping:
+      excess_H=0: surplus=0 (deterministic)
+      excess_H=2: surplus=-1 (deterministic)
+      excess_H=4: surplus=-1 (deterministic)
+      excess_H=6: surplus=-1 (deterministic)
+      excess_H=8: surplus in [np.int64(-2), np.int64(-1), np.int64(0)] (31 samples)
+      excess_H=10: surplus in [np.int64(-2), np.int64(-1), np.int64(0)] (17 samples)
+      excess_H=12: surplus in [np.int64(-2), np.int64(-1), np.int64(0), np.int64(1)] (66 samples)
+      excess_H=14: surplus in [np.int64(0), np.int64(1)] (29 samples)
+      excess_H=16: surplus in [np.int64(1), np.int64(2), np.int64(4)] (13 samples)
+
+  n=6, p=3: correlation(surplus, excess_H) = 0.5679
+    surplus range: [-4, 13]
+    excess_H range: [0, 48]
+    (excess_H -> surplus) mapping:
+      excess_H=0: surplus=0 (deterministic)
+      excess_H=6: surplus=-3 (deterministic)
+      excess_H=12: surplus=-2 (deterministic)
+      excess_H=18: surplus in [np.int64(-3), np.int64(-1)] (13 samples)
+      excess_H=24: surplus in [np.int64(-4), np.int64(-3), np.int64(-2), np.int64(0), np.int64(2)] (34 samples)
+      excess_H=30: surplus in [np.int64(-2), np.int64(0), np.int64(5)] (23 samples)
+      excess_H=36: surplus in [np.int64(-3), np.int64(-2), np.int64(-1), np.int64(0), np.int64(1), np.int64(4), np.int64(5)] (60 samples)
+      excess_H=42: surplus in [np.int64(0), np.int64(2), np.int64(5), np.int64(6)] (36 samples)
+      excess_H=48: surplus in [np.int64(3), np.int64(5), np.int64(13)] (11 samples)
+
+  n=7, p=2: correlation(surplus, excess_H) = 0.8683
+    surplus range: [-2, 6]
+    excess_H range: [4, 26]
+    (excess_H -> surplus) mapping:
+      excess_H=4: surplus=-1 (deterministic)
+      excess_H=6: surplus in [np.int64(-2), np.int64(-1)] (5 samples)
+      excess_H=8: surplus in [np.int64(-1), np.int64(0)] (10 samples)
+      excess_H=10: surplus in [np.int64(-2), np.int64(-1), np.int64(0)] (12 samples)
+      excess_H=12: surplus in [np.int64(-2), np.int64(-1), np.int64(0), np.int64(1)] (21 samples)
+      excess_H=14: surplus in [np.int64(-2), np.int64(-1), np.int64(0), np.int64(1)] (18 samples)
+      excess_H=16: surplus in [np.int64(-1), np.int64(0), np.int64(1), np.int64(2)] (24 samples)
+      excess_H=18: surplus in [np.int64(-1), np.int64(0), np.int64(1), np.int64(2), np.int64(3)] (27 samples)
+      excess_H=20: surplus in [np.int64(1), np.int64(2), np.int64(3)] (29 samples)
+      excess_H=22: surplus in [np.int64(2), np.int64(3), np.int64(4), np.int64(5)] (27 samples)
+      excess_H=24: surplus in [np.int64(3), np.int64(4), np.int64(5), np.int64(6)] (17 samples)
+      excess_H=26: surplus in [np.int64(5), np.int64(6)] (7 samples)
+
+  n=7, p=3: correlation(surplus, excess_H) = 0.7674
+    surplus range: [-8, 32]
+    excess_H range: [8, 104]
+    (excess_H -> surplus) mapping:
+      excess_H=8: surplus=-4 (deterministic)
+      excess_H=16: surplus=-3 (deterministic)
+      excess_H=24: surplus in [np.int64(-4), np.int64(-2)] (3 samples)
+      excess_H=32: surplus in [np.int64(-6), np.int64(-3), np.int64(2)] (4 samples)
+      excess_H=40: surplus in [np.int64(-4), np.int64(-3), np.int64(0), np.int64(5)] (8 samples)
+      excess_H=48: surplus in [np.int64(-8), np.int64(-4), np.int64(-2), np.int64(-1), np.int64(0), np.int64(1)] (14 samples)
+      excess_H=56: surplus in [np.int64(-5), np.int64(-4), np.int64(-2), np.int64(0), np.int64(2), np.int64(3), np.int64(4), np.int64(6)] (21 samples)
+      excess_H=64: surplus in [np.int64(-4), np.int64(-2), np.int64(-1), np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(9), np.int64(15), np.int64(22)] (29 samples)
+      excess_H=72: surplus in [np.int64(-6), np.int64(-3), np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(12)] (31 samples)
+      excess_H=80: surplus in [np.int64(-2), np.int64(1), np.int64(2), np.int64(3), np.int64(5), np.int64(7), np.int64(8), np.int64(9), np.int64(10), np.int64(12), np.int64(15), np.int64(16), np.int64(23)] (39 samples)
+      excess_H=88: surplus in [np.int64(6), np.int64(8), np.int64(9), np.int64(10), np.int64(11), np.int64(12), np.int64(13), np.int64(15), np.int64(17), np.int64(19), np.int64(20), np.int64(21), np.int64(24)] (25 samples)
+      excess_H=96: surplus in [np.int64(11), np.int64(15), np.int64(17), np.int64(18), np.int64(21), np.int64(22), np.int64(23), np.int64(29), np.int64(30)] (20 samples)
+      excess_H=104: surplus in [np.int64(18), np.int64(19), np.int64(32)] (4 samples)
+
+======================================================================
+Part 3: Omega_p = |A_p| - rank(constraints)
+surplus = excess_paths - rank = (|A_p| - C) - rank
+======================================================================
+
+  n=5, p=2:
+    avg |A_p| - C = 5.2, avg rank = 6.0, avg surplus = -0.8
+    Identity: surplus = excess_paths - rank: True
+    avg survival = surplus/excess = -0.2083
+
+  n=5, p=3:
+    avg |A_p| - C = 9.4, avg rank = 9.9, avg surplus = -0.6
+    Identity: surplus = excess_paths - rank: True
+    avg survival = surplus/excess = -0.1142
+
+  n=6, p=2:
+    avg |A_p| - C = 10.3, avg rank = 10.5, avg surplus = -0.2
+    Identity: surplus = excess_paths - rank: True
+    avg survival = surplus/excess = -0.0478
+
+  n=6, p=3:
+    avg |A_p| - C = 29.1, avg rank = 28.5, avg surplus = 0.6
+    Identity: surplus = excess_paths - rank: True
+    avg survival = surplus/excess = -0.0258
+
+  n=7, p=2:
+    avg |A_p| - C = 16.3, avg rank = 15.1, avg surplus = 1.2
+    Identity: surplus = excess_paths - rank: True
+    avg survival = surplus/excess = 0.0405
+
+  n=7, p=3:
+    avg |A_p| - C = 70.2, avg rank = 63.4, avg surplus = 6.7
+    Identity: surplus = excess_paths - rank: True
+    avg survival = surplus/excess = 0.0712
