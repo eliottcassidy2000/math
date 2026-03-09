@@ -13,6 +13,36 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-09-S47 — i_*-injectivity verification, hereditary seesaw, chi_rel dichotomy
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-09-S46
+**Summary of work:**
+  Deep computational investigation of the LES approach to beta_3 ≤ 1. Five new scripts, all major findings confirmed.
+
+  1. **Relative complex structure** (relative_h3_structure_deep.py): Two rigid R_p profiles at n=6.
+     Type A (480 pairs): rel_dims=(1,5,9,6,0,0). Type B (1440 pairs): rel_dims=(1,5,12,14,8,3).
+
+  2. **rank(i_*) computation** (les_rank_i_star_v2.py): Fixed mod-p arithmetic (v1 was buggy).
+     Perfect dichotomy: b3(T\v)=1 => rank(i_*)=1 (71/71 at n=7, 20/20 at n=8). HYP-380 confirmed.
+
+  3. **Saturation mechanism** (istar_injectivity_mechanism.py): Bad vertices have
+     delta(ker_d3) = delta(rank_d4) EXACTLY. Good vertices: delta(ker_d3) = delta(rank_d4) + 1.
+
+  4. **chi_rel dichotomy** (relative_euler_char.py): chi_rel = -1 for good vertices, 0 for bad.
+     Constant across ALL (T,v) pairs tested at n=6 and n=7. HYP-391 confirmed.
+
+  5. **Hereditary seesaw** (beta1_deletion_constraint.py): beta_3(T)=1 => beta_1(T\v)=0 for ALL v.
+     Zero violations at n=6 exhaustive and n=7 sampled. HYP-390 confirmed.
+
+  6. **HYP-380 correction**: Per opus-S53's Paley discovery, i_*-injectivity only applies when
+     beta_3(T) >= 1. Updated INDEX.md accordingly.
+
+**New contributions:** HYP-380-383, HYP-390-392, THM-110 proof architecture update
+**Scripts:** relative_h3_structure_deep.py, les_rank_i_star_v2.py, istar_injectivity_mechanism.py,
+  relative_euler_char.py, beta1_deletion_constraint.py
+**Unresolved threads:** Algebraic proof of i_*-injectivity (HYP-380); algebraic proof of H_3^rel ≤ 1;
+  extension to beta_5; good-vertex-free classification at n=8
+
 ## opus-2026-03-09-S53 — EXHAUSTIVE beta_3≤1 at n=7; Paley exception discovered
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S52
