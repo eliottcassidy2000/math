@@ -621,3 +621,44 @@ When computing relative homology H_*(X, A) via quotient complexes:
 2. ker(∂_p^{rel}) = ∂_p^{-1}(C_{p-1}(A)) / C_p(A).
 3. These differ whenever there are elements whose boundary is nonzero but lands in the sub-complex.
 4. Always verify relative homology against the long exact sequence.
+
+---
+
+## MISTAKE-018: beta_3 <= 1 Assumed for All Tournaments
+
+**Date discovered:** 2026-03-09 (kind-pasteur-S48)
+**Found by:** kind-pasteur-S48 via extended sampling at n=8 (5000 random tournaments)
+**Affects:** THM-110 proof architecture, HYP-371b, HYP-375, HYP-342, HYP-380, HYP-393 scope
+
+### What was assumed
+Multiple hypotheses and proof strategies assumed beta_3 <= 1 for ALL tournaments:
+- HYP-371b: "beta_3=2 impossible"
+- HYP-375: "beta_3 <= 1 at n=9"
+- THM-110 proof architecture: Claims I, II, III designed to prove beta_3 <= 1
+- The opus exhaustive proof at n=7 was incorrectly assumed to generalize
+
+### Why it was wrong
+beta_3 = 2 DOES occur at n=8. Four examples found in 5000 random tournaments (rate ~0.08%):
+- Profile: (1, 0, 0, 2, 0, 0, 0, 0) — two independent H_3 generators
+- Scores: (2,3,3,3,4,4,4,5) and (3,3,3,3,4,4,4,4) — near-regular
+- Confirmed by BOTH max_p=5 and max_p=7 in full_chain_complex_modp (mod-p exact)
+- All b3=2 tournaments have good vertices (b3(T\v)=0 for some v)
+
+Previous sampling (200 at n=9, 100 at n=8) was insufficient to detect 0.08% rate.
+
+### The correct framing
+- beta_3 <= 1 is proved ONLY at n <= 7 (exhaustive, HYP-393)
+- beta_3 = 2 at n=8 (confirmed, 4/5000)
+- beta_3 may grow further at n >= 9
+
+### Impact
+- THM-110 proof architecture is valid ONLY at n <= 7
+- Claims I (i_*-injectivity) also FAIL at n=8 (13 violations in 5000 trials, even with b4=0)
+- Claim III (consecutive seesaw) FAILS at n=8 (beta_3+beta_4 coexistence)
+- The beta_3 <= 1 bound is a SMALL-n PHENOMENON, not a universal property
+
+### Lesson
+1. Small sample sizes (100-200) cannot detect 0.1% phenomena. Use 5000+ for rare events.
+2. Properties proved exhaustively at n<=7 do NOT automatically extend to n>=8.
+3. n=8 is a critical threshold where many path homology structural properties break down:
+   consecutive seesaw, i_*-injectivity, beta_3<=1, bad vertex acyclicity.
