@@ -1,0 +1,63 @@
+======================================================================
+GENERALIZED SEESAW INVESTIGATION
+======================================================================
+
+--- Part 1: n=8, 500 tournaments ---
+  100/500 done
+  200/500 done
+  300/500 done
+  400/500 done
+  500/500 done
+
+  n=8 Betti profiles (4 distinct):
+    [1, 0, 0, 0, 0, 0, 0, 0]: 400 (80.0%)
+    [1, 0, 0, 1, 0, 0, 0, 0]: 92 (18.4%)
+    [1, 1, 0, 0, 0, 0, 0, 0]: 4 (0.8%)
+    [1, 0, 0, 0, 1, 0, 0, 0]: 4 (0.8%)
+
+  Coexistence matrix (pairs that are simultaneously nonzero):
+
+--- Part 2: Adjacent-odd seesaw checks ---
+  beta_1*beta_3 = 0: 500/500 satisfied (100.0%)
+  beta_3*beta_5 = 0: 500/500 satisfied (100.0%)
+  beta_5*beta_7 = 0: 500/500 satisfied (100.0%)
+
+--- Part 3: Non-adjacent seesaw checks ---
+  beta_1*beta_5 = 0: 500/500 satisfied (100.0%)
+  beta_3*beta_7 = 0: 500/500 satisfied (100.0%)
+  beta_1*beta_7 = 0: 500/500 satisfied (100.0%)
+
+--- Part 4: Even/Odd coexistence ---
+
+--- Part 5: n=7, 1000 tournaments ---
+  200/1000 done
+  400/1000 done
+  600/1000 done
+  800/1000 done
+  1000/1000 done
+
+  n=7 Betti profiles (5 distinct):
+    [1, 0, 0, 0, 0, 0, 0]: 853 (85.3%)
+    [1, 0, 0, 1, 0, 0, 0]: 93 (9.3%)
+    [1, 1, 0, 0, 0, 0, 0]: 52 (5.2%)
+    [1, 0, 0, 0, 6, 0, 0]: 1 (0.1%)
+    [1, 1, 0, 0, 1, 0, 0]: 1 (0.1%)
+
+--- Part 6: n=6, exhaustive ---
+
+  n=6 Betti profiles (3 distinct):
+    [1, 0, 0, 0, 0, 0]: 27648 (84.4%)
+    [1, 1, 0, 0, 0, 0]: 4800 (14.6%)
+    [1, 0, 0, 1, 0, 0]: 320 (1.0%)
+
+======================================================================
+SUMMARY: Coexistence rules at n=8
+======================================================================
+1. beta_1*beta_3 = 0 ALWAYS (THM-095 seesaw)
+2. beta_3*beta_5 = 0 ALWAYS (tested, 500 samples)
+3. beta_1*beta_5 coexist?  NO
+4. beta_4 coexists with beta_3?  NO
+5. beta_4 coexists with beta_1?  NO
+6. Even+Odd coexist? Check profiles above.
+
+DONE.

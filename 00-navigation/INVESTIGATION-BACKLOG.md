@@ -368,8 +368,15 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 14. 3-path NA face distribution: exactly 25%/50%/25% for 0/1/2 faces (very clean, universal).
 15. At level 4: paths can have multiple NA faces => overlapping constraint rows => rank deficit => beta_4 possible.
 16. Complete bidirectional graph: beta_2=0, homology at top dimension only.
-**Open:** (1) Algebraic proof of beta_2=0 (disjoint support is necessary but not sufficient). (2) Does beta_2=0 break at large n? Very unlikely given n=10 confirmation. (3) Onset of beta_6 (not seen at n=9 in limited samples).
-**Scripts:** beta1_beta3_mediator.py, even_betti_quick_v2.py, beta4_investigation.py, beta_coexistence_analysis.py, beta2_algebraic_analysis.py, beta2_disjoint_support_proof.py, beta2_completeness_argument.py, beta2_exactness_proof.py, beta2_only_n9.py
+**S45 defect rate analysis (omega2_exact_formula.py, defect_rate_ushape.py, ecyc_formula.py):**
+17. dim(Omega_2) = C(n,3) + 2*c3 - e_cyc EXACTLY (exhaustive n=4,5,6). e_cyc = #{directed edges in ≥1 three-cycle}.
+18. e_cyc NOT determined by c3 alone — depends on cycle arrangement (edge sharing). Constant for most score seqs, varies near-regular.
+19. Defect rate is WAVE PROPAGATION, not U-shape: beta_1 rate decreasing (29.7%→1%), beta_3 increasing (0%→21%), beta_4 appears at n=8 (2%).
+20. beta_4 CAN be nonzero (values 1,2 at n=8) — "all even beta vanish" is FALSE. Only beta_2=0 always.
+21. Only 3-5 distinct Betti profiles per n. Extremely constrained.
+22. beta_3*beta_5=0 at n<=8 (trivially since beta_5 rarely nonzero). Generalized seesaw needs testing at n>=10.
+**Open:** (1) Beta_2=0 is PROVED (THM-108+109). (2) Does generalized seesaw beta_{2k-1}*beta_{2k+1}=0 hold generally? (3) Onset of beta_6 (not seen at n<=8 in 600+ samples). (4) Why exactly 3-5 Betti profiles per n?
+**Scripts:** beta1_beta3_mediator.py, even_betti_quick_v2.py, beta4_investigation.py, beta_coexistence_analysis.py, beta2_algebraic_analysis.py, beta2_disjoint_support_proof.py, beta2_completeness_argument.py, beta2_exactness_proof.py, beta2_only_n9.py, omega2_exact_formula.py, defect_rate_ushape.py, ecyc_formula.py
 
 ---
 
