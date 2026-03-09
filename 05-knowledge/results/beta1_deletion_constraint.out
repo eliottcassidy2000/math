@@ -1,0 +1,44 @@
+======================================================================
+BETA_1 DELETION CONSTRAINT FOR BETA_3=1 TOURNAMENTS
+======================================================================
+
+--- Part 1: n=6 exhaustive ---
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  n=6: 320 tournaments with beta_3=1
+  beta_1(T\v) distribution for beta_3=1 tours: {0: 1920}
+  Violations (b1(T\v) > 0): 0
+  chi(T) distribution: {0: 320}
+
+  (b1_Tv, b3_Tv, chi_Tv) distribution:
+    (0, 0, 1): 1920
+
+  For comparison, beta_3=0 tours (sample):
+  beta_1(T\v) distribution: {0: 136320, 1: 58368}
+
+--- Part 2: n=7 sampled ---
+  ... 20 beta_3=1 found
+  ... 40 beta_3=1 found
+  ... 60 beta_3=1 found
+  ... 80 beta_3=1 found
+
+  n=7: 100 tournaments with beta_3=1
+  (b1_Tv, b3_Tv) distribution:
+    (0, 0): 629
+    (0, 1): 71
+  Violations (b1(T\v) > 0): 0
+
+--- Part 3: Summary ---
+  CONFIRMED: beta_1(T\v) = 0 for ALL vertices of beta_3=1 tournaments!
+  This is STRONGER than the seesaw (which only says b1*b3=0 per tournament)
+  It says: if b3(T)=1, then ALL deletions have b1=0
+  This forces H_2(T,T\v) = 0 for ALL vertices (from LES)
+  Combined with H_0^rel = 0, H_1^rel = 0, the relative complex simplifies to:
+    H_p^rel = 0 for p != 3, and H_3^rel in {0,1}
+
+DONE.

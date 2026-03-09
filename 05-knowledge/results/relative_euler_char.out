@@ -1,0 +1,67 @@
+======================================================================
+RELATIVE EULER CHARACTERISTIC ANALYSIS
+======================================================================
+
+--- Part 1: Relative Euler characteristic at n=6 ---
+  ... 5000/32768
+  ... 10000/32768
+  ... 15000/32768
+  ... 20000/32768
+  ... 25000/32768
+  ... 30000/32768
+
+  Relative chi for beta_3=1 tours: {-1: 1920}
+  Relative chi for beta_3=0 tours (sample): {-1: 5760, 0: 153600, 1: 35328}
+
+--- Part 2: Interpretation ---
+
+  bits=87, v=0, score=(np.int8(1), np.int8(1), np.int8(1), np.int8(4), np.int8(4), np.int8(4))
+    R_p dims: [1, 5, 9, 6, 0, 0, 0]
+    chi_rel = -1
+    b3_T=1, b3_Tv=0
+
+  bits=87, v=1, score=(np.int8(1), np.int8(1), np.int8(1), np.int8(4), np.int8(4), np.int8(4))
+    R_p dims: [1, 5, 9, 6, 0, 0, 0]
+    chi_rel = -1
+    b3_T=1, b3_Tv=0
+
+  bits=87, v=2, score=(np.int8(1), np.int8(1), np.int8(1), np.int8(4), np.int8(4), np.int8(4))
+    R_p dims: [1, 5, 9, 6, 0, 0, 0]
+    chi_rel = -1
+    b3_T=1, b3_Tv=0
+
+  bits=87, v=3, score=(np.int8(1), np.int8(1), np.int8(1), np.int8(4), np.int8(4), np.int8(4))
+    R_p dims: [1, 5, 9, 6, 0, 0, 0]
+    chi_rel = -1
+    b3_T=1, b3_Tv=0
+
+  bits=87, v=4, score=(np.int8(1), np.int8(1), np.int8(1), np.int8(4), np.int8(4), np.int8(4))
+    R_p dims: [1, 5, 9, 6, 0, 0, 0]
+    chi_rel = -1
+    b3_T=1, b3_Tv=0
+
+--- Part 3: n=7 chi_rel analysis ---
+  ... 10 beta_3=1 found
+  ... 20 beta_3=1 found
+  ... 30 beta_3=1 found
+  ... 40 beta_3=1 found
+
+  n=7 chi_rel for BAD vertices (b3_Tv=1): {0: 34}
+  n=7 chi_rel for GOOD vertices (b3_Tv=0): {-1: 316}
+
+--- Part 4: Key observation ---
+  From LES: sum_p (-1)^p H_p^rel = chi_rel
+  If H_0^rel = 1, H_1^rel = 0, H_2^rel = 0 (from beta_2=0 and LES),
+  then: H_3^rel - H_4^rel + H_5^rel - ... = chi_rel - 1
+  For beta_3=1, H_3^rel in {0,1}:
+    If H_3^rel = 1: -H_4^rel + H_5^rel - ... = chi_rel - 2
+    If H_3^rel = 0: -H_4^rel + H_5^rel - ... = chi_rel - 1
+
+  H_0(T,T\v) should be 1 (T connected, T\v connected, one component difference)
+  H_1(T,T\v) and H_2(T,T\v) from LES:
+    ... H_1(T) = 0 (most T, since beta_3=1 => beta_1=0 by seesaw)
+    ... H_1(T\v) = 0 (mostly, since beta_3_Tv >= 0)
+    LES: H_1(T\v) -> H_1(T) -> H_1(T,T\v) -> H_0(T\v) -> H_0(T)
+    H_0(T\v) = 1, H_0(T) = 1 => connecting map H_1(T,T\v) -> H_0(T\v)
+
+DONE.
