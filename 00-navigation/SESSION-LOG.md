@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51l — BREAKTHROUGH: #bad≤3 specific to β₁=0; β₁=1 allows #bad=5
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51k
+**Summary of work:**
+  Definitive test of Grok's "fixed 3D image" claim. Key discovery: #bad ≤ 3
+  holds ONLY when β₁(T)=0. At n=5 exhaustive: β₁=1 allows #bad∈{3,4,5}.
+  At n=6: #bad up to 6 when β₁=1. This PROVES no "structural 3D" exists in
+  the map res: Z₁→⊕H₁(T\v) — it has rank=#bad for ALL tournaments.
+  The constraint is β₁-specific: β₁(T)=0 forces #bad≤3 through the homological
+  seesaw, not through any fixed-dimensional factorization.
+  Also computed Gram matrices and support overlaps for hidden cycle lifts.
+**New contributions:** HYP-374d (REFUTED), HYP-385 (CONFIRMED — #bad≤3 is β₁-specific)
+**Unresolved threads:** WHY does β₁=0 force #bad≤3? Seesaw + combinatorial argument needed.
+
 ## opus-2026-03-09-S51k — Global LES ker(δ₃)=3 refuted; surjectivity discovered
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51j

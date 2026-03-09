@@ -83,6 +83,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-382 | Relative dims at n=6 fully determined by type: Type A=(1,5,9,6,0,0), Type B=(1,5,12,14,8,3) | Exhaustive: 480 Type A pairs, 1440 Type B pairs. Rigid structure | kind-pasteur-S47 |
 | HYP-383 | Bad vertices have δ(β₃)=0: adding v adds EQUAL kernel and im(d_4) | n=7: 71/71 bad vertices. Perfect saturation — T\v cycle orthogonal to new v-paths content | kind-pasteur-S47 |
 | HYP-384 | Restriction res: Z₁(T)→⊕_v H₁(T\v) is SURJECTIVE (coker=0) for all β₁=0 tournaments | n=5 exhaustive (480/480), n=6 (85/85). rank(res)=#bad exactly. Each hidden cycle is detected by restriction. | beta2_global_les_test.py |
+| HYP-385 | #bad ≤ 3 is SPECIFIC to β₁(T)=0; β₁=1 allows #bad=4,5,6 | n=5 EXHAUSTIVE: β₁=1 has #bad∈{3,4,5}. n=6 sampled: #bad up to 6 when β₁=1. The constraint is NOT structural on the map res (which has rank=#bad for ANY tournament). β₁=0 is the essential hypothesis. | beta2_image_dim_test.py |
 | HYP-387 | Score obstruction fails for beta_3=2 at n=7: 4 score seqs compatible | (2,2,2,3,4,4,4), (2,2,3,3,3,4,4), (2,3,3,3,3,3,4), (3,3,3,3,3,3,3) all allow all-deletions-beta_3=1 | opus-S53 |
 | HYP-388 | Only Paley T_7 has all 7 deletions with beta_3=1 (EXHAUSTIVE) | 240/2097152 = all labelings of Paley. Betti=[1,0,0,0,6,0,0], all deletions=[1,0,0,1,0,0]. beta_3(T_7)=0 (not 2!) | opus-S53 |
 | HYP-389 | Exactly 2 iso classes of beta_3=1 at n=6 | Type A: score(1,1,1,4,4,4), 80 tours, 2 c3, not SC. Type B: score(2,2,2,3,3,3), 240 tours, 8 c3, SC | opus-S53 |

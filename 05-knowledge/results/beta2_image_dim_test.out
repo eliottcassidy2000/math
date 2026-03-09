@@ -1,0 +1,2422 @@
+============================================================
+DEFINITIVE: rank(res: Z₁→⊕H₁(T\v)) = #bad
+============================================================
+
+The map res: Z₁(T) → ⊕_v H₁(T\v) sends a 1-cycle z to its
+projection onto H₁(T\v) for each v.
+
+Since H₁(T\v) is 0 or 1-dimensional:
+  ⊕_v H₁(T\v) = R^{#bad}
+
+The map res picks out the H₁ component for each bad vertex.
+If the hidden cycle lifts are independent in Z₁ (which they are),
+then rank(res) = #bad.
+
+IMAGE dim = #bad. NOT a fixed 3.
+The only way IMAGE ≤ 3 is if #bad ≤ 3, which is circular.
+
+
+--- n=5 ---
+  Tested: 720
+  #bad distribution: {0: 240, 1: 240, 2: 120, 3: 120}
+  #bad ≤ 3 always ✓ (but this IS HYP-282, not a proof)
+
+--- n=6 ---
+  Tested: 500
+  #bad distribution: {0: 140, 1: 142, 2: 145, 3: 73}
+  #bad ≤ 3 always ✓ (but this IS HYP-282, not a proof)
+
+--- n=7 ---
+  Tested: 100
+  #bad distribution: {0: 50, 1: 22, 2: 20, 3: 8}
+  #bad ≤ 3 always ✓ (but this IS HYP-282, not a proof)
+
+============================================================
+TEST 2: Cross-vertex Gram matrix of hidden cycle lifts
+============================================================
+n=5 Gram matrix patterns (normalized, upper triangle):
+  (-0.125, -0.625, 0.625): 15 tournaments
+  (0.625, 0.125, 0.625): 13 tournaments
+  (-0.625, 0.625, -0.125): 12 tournaments
+  (-0.625, -0.625, 0.125): 10 tournaments
+  (-0.625, -0.125, 0.625): 10 tournaments
+  (0.625, -0.625, -0.125): 9 tournaments
+  (0.625, 0.625, 0.125): 9 tournaments
+  (0.125, -0.625, -0.625): 9 tournaments
+  (-0.625, 0.125, -0.625): 9 tournaments
+  (0.625, -0.125, -0.625): 8 tournaments
+  (0.125, 0.625, 0.625): 8 tournaments
+  (-0.125, 0.625, -0.625): 8 tournaments
+
+============================================================
+TEST 3: Edge support overlap between hidden cycle lifts
+============================================================
+n=5 support patterns:
+  Sizes=(5, 5, 5), pairwise overlaps=(3, 1, 3), triple=1: 40
+  Sizes=(5, 5, 5), pairwise overlaps=(3, 3, 1), triple=1: 40
+  Sizes=(5, 5, 5), pairwise overlaps=(1, 3, 3), triple=1: 40
+
+============================================================
+THE REAL QUESTION: Why is #bad ≤ 3?
+============================================================
+
+Every mechanism Grok proposes reduces to:
+  "The image is ≤ 3D" ⟸ "#bad ≤ 3" (circular)
+
+What would a NON-circular proof look like?
+It would need to show: from the STRUCTURE of tournaments alone,
+without counting bad vertices, some space has dim ≤ 3.
+
+Candidates for such a space:
+1. A quotient/kernel that is 3D regardless of T — REFUTED (varies)
+2. A fixed subspace of B₁ — REFUTED (depends on T)
+3. A combinatorial constraint (like: 4 vertices can't all have β₁=1
+   in their complement deletions) — THIS is what needs proving
+
+The combinatorial approach: if {v₁,v₂,v₃,v₄} are all bad, then
+T\v₁,...,T\v₄ all have β₁=1. Can we derive a contradiction from
+the structure of these 4 tournaments?
+
+At n=5: T\vᵢ has 4 vertices, so it's a 4-tournament.
+A 4-tournament has β₁=1 iff it's the 4-cycle (exactly 1 of 3 iso classes).
+Having 4 bad vertices means FOUR different 4-vertex subsets are 4-cycles.
+But C(5,4) = 5, so at most 5 possible 4-cycles. Can 4 coexist?
+
+n=5 exhaustive: #bad (= # of 4-cycle deletions) distribution:
+  {0: 240, 1: 240, 2: 120, 3: 120}
+  Max #bad = 3
+  Total β₁=0 tournaments: 720
+
+n=5: Bad vertex sets (for tournaments with some bad vertex):
+  Size distribution: {1: 240, 2: 120, 3: 120}
+
+  3-bad triples:
+    (0, 1, 2): 12 tournaments
+    (0, 1, 3): 12 tournaments
+    (0, 1, 4): 12 tournaments
+    (0, 2, 3): 12 tournaments
+    (0, 2, 4): 12 tournaments
+    (0, 3, 4): 12 tournaments
+    (1, 2, 3): 12 tournaments
+    (1, 2, 4): 12 tournaments
+    (1, 3, 4): 12 tournaments
+    (2, 3, 4): 12 tournaments
+
+n=5: 3-bad vertices form a TT: 120, form a 3-cycle: 0
+(We already know: always TT, never 3-cycle)
+
+============================================================
+TEST 5: Can 4 different 4-subsets all be 4-cycles?
+============================================================
+  FOUND: bits=12, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 0 0
+    1 1 0 0 0
+    0 1 1 0 0
+    0 1 1 1 0
+  FOUND: bits=28, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 0
+    1 0 0 0 0
+    0 1 1 0 0
+    0 1 1 1 0
+  FOUND: bits=57, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 0
+    1 0 0 0 0
+    1 0 1 0 0
+    0 1 1 1 0
+  FOUND: bits=70, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 1 0 0 0
+    0 1 1 0 0
+    1 0 1 1 0
+  FOUND: bits=72, #bad=4, β₁(T)=1
+    0 0 0 0 1
+    1 0 0 0 1
+    1 1 0 0 0
+    1 1 1 0 0
+    0 0 1 1 0
+  FOUND: bits=73, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 0 0 1
+    1 1 0 0 0
+    1 1 1 0 0
+    0 0 1 1 0
+  FOUND: bits=76, #bad=5, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 0 1
+    1 1 0 0 0
+    0 1 1 0 0
+    0 0 1 1 0
+  FOUND: bits=78, #bad=4, β₁(T)=1
+    0 0 1 1 1
+    1 0 0 0 1
+    0 1 0 0 0
+    0 1 1 0 0
+    0 0 1 1 0
+  FOUND: bits=97, #bad=4, β₁(T)=1
+    0 1 0 0 0
+    0 0 0 1 1
+    1 1 0 0 0
+    1 0 1 0 0
+    1 0 1 1 0
+  FOUND: bits=99, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 1
+    0 1 0 0 0
+    1 0 1 0 0
+    1 0 1 1 0
+  FOUND: bits=105, #bad=5, β₁(T)=1
+    0 1 0 0 1
+    0 0 0 1 1
+    1 1 0 0 0
+    1 0 1 0 0
+    0 0 1 1 0
+  FOUND: bits=108, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 1 1
+    1 1 0 0 0
+    0 0 1 0 0
+    0 0 1 1 0
+  FOUND: bits=109, #bad=4, β₁(T)=1
+    0 1 0 1 1
+    0 0 0 1 1
+    1 1 0 0 0
+    0 0 1 0 0
+    0 0 1 1 0
+  FOUND: bits=121, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 1
+    1 0 0 0 0
+    1 0 1 0 0
+    0 0 1 1 0
+  FOUND: bits=138, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 0 0
+    0 1 0 1 0
+    1 1 0 0 0
+    0 1 1 1 0
+  FOUND: bits=170, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 1 0
+    1 0 0 0 0
+    0 1 1 1 0
+  FOUND: bits=185, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 0
+    1 0 0 1 0
+    1 0 0 0 0
+    0 1 1 1 0
+  FOUND: bits=198, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 1 0 1 0
+    0 1 0 0 0
+    1 0 1 1 0
+  FOUND: bits=200, #bad=4, β₁(T)=1
+    0 0 0 0 1
+    1 0 0 0 1
+    1 1 0 1 0
+    1 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=201, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 0 0 1
+    1 1 0 1 0
+    1 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=202, #bad=5, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 0 1
+    0 1 0 1 0
+    1 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=206, #bad=4, β₁(T)=1
+    0 0 1 1 1
+    1 0 0 0 1
+    0 1 0 1 0
+    0 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=209, #bad=4, β₁(T)=1
+    0 1 0 0 0
+    0 0 1 0 1
+    1 0 0 1 0
+    1 1 0 0 0
+    1 0 1 1 0
+  FOUND: bits=213, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 0
+    1 0 1 1 0
+  FOUND: bits=217, #bad=5, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 0 1
+    1 0 0 1 0
+    1 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=218, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 1 0 1
+    0 0 0 1 0
+    1 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=219, #bad=4, β₁(T)=1
+    0 1 1 0 1
+    0 0 1 0 1
+    0 0 0 1 0
+    1 1 0 0 0
+    0 0 1 1 0
+  FOUND: bits=249, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 1
+    1 0 0 1 0
+    1 0 0 0 0
+    0 0 1 1 0
+  FOUND: bits=277, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 0
+    1 0 0 0 1
+    0 1 1 0 0
+    1 1 0 1 0
+  FOUND: bits=280, #bad=4, β₁(T)=1
+    0 0 0 0 1
+    1 0 1 0 0
+    1 0 0 0 1
+    1 1 1 0 0
+    0 1 0 1 0
+  FOUND: bits=282, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 1 0 0
+    0 0 0 0 1
+    1 1 1 0 0
+    0 1 0 1 0
+  FOUND: bits=284, #bad=5, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 0
+    1 0 0 0 1
+    0 1 1 0 0
+    0 1 0 1 0
+  FOUND: bits=285, #bad=4, β₁(T)=1
+    0 1 0 1 1
+    0 0 1 0 0
+    1 0 0 0 1
+    0 1 1 0 0
+    0 1 0 1 0
+  FOUND: bits=290, #bad=4, β₁(T)=1
+    0 0 1 0 0
+    1 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+    1 1 0 1 0
+  FOUND: bits=294, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 1 0
+    0 1 0 0 1
+    0 0 1 0 0
+    1 1 0 1 0
+  FOUND: bits=297, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 0 1 0
+    1 1 0 0 1
+    1 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=298, #bad=5, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=299, #bad=4, β₁(T)=1
+    0 1 1 0 1
+    0 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=309, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 1 0
+    1 0 0 0 1
+    0 0 1 0 0
+    1 1 0 1 0
+  FOUND: bits=312, #bad=4, β₁(T)=1
+    0 0 0 0 1
+    1 0 1 1 0
+    1 0 0 0 1
+    1 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=313, #bad=5, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 0
+    1 0 0 0 1
+    1 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=314, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 1 1 0
+    0 0 0 0 1
+    1 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=317, #bad=4, β₁(T)=1
+    0 1 0 1 1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 0 1 0 0
+    0 1 0 1 0
+  FOUND: bits=323, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 0 1
+    0 1 0 0 1
+    1 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=324, #bad=4, β₁(T)=1
+    0 0 0 1 0
+    1 0 0 0 1
+    1 1 0 0 1
+    0 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=326, #bad=5, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 1 0 0 1
+    0 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=327, #bad=4, β₁(T)=1
+    0 1 1 1 0
+    0 0 0 0 1
+    0 1 0 0 1
+    0 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=332, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 0 1
+    1 1 0 0 1
+    0 1 1 0 0
+    0 0 0 1 0
+  FOUND: bits=339, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 0 1
+    0 0 0 0 1
+    1 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=340, #bad=4, β₁(T)=1
+    0 0 0 1 0
+    1 0 1 0 1
+    1 0 0 0 1
+    0 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=341, #bad=5, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 1
+    1 0 0 0 1
+    0 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=343, #bad=4, β₁(T)=1
+    0 1 1 1 0
+    0 0 1 0 1
+    0 0 0 0 1
+    0 1 1 0 0
+    1 0 0 1 0
+  FOUND: bits=348, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 1
+    1 0 0 0 1
+    0 1 1 0 0
+    0 0 0 1 0
+  FOUND: bits=354, #bad=4, β₁(T)=1
+    0 0 1 0 0
+    1 0 0 1 1
+    0 1 0 0 1
+    1 0 1 0 0
+    1 0 0 1 0
+  FOUND: bits=355, #bad=5, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 1
+    0 1 0 0 1
+    1 0 1 0 0
+    1 0 0 1 0
+  FOUND: bits=358, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 1 1
+    0 1 0 0 1
+    0 0 1 0 0
+    1 0 0 1 0
+  FOUND: bits=361, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 0 1 1
+    1 1 0 0 1
+    1 0 1 0 0
+    0 0 0 1 0
+  FOUND: bits=363, #bad=4, β₁(T)=1
+    0 1 1 0 1
+    0 0 0 1 1
+    0 1 0 0 1
+    1 0 1 0 0
+    0 0 0 1 0
+  FOUND: bits=394, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 0 0
+    0 1 0 1 1
+    1 1 0 0 0
+    0 1 0 1 0
+  FOUND: bits=402, #bad=4, β₁(T)=1
+    0 0 1 0 0
+    1 0 1 0 0
+    0 0 0 1 1
+    1 1 0 0 0
+    1 1 0 1 0
+  FOUND: bits=403, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 0 0
+    0 0 0 1 1
+    1 1 0 0 0
+    1 1 0 1 0
+  FOUND: bits=410, #bad=5, β₁(T)=1
+    0 0 1 0 1
+    1 0 1 0 0
+    0 0 0 1 1
+    1 1 0 0 0
+    0 1 0 1 0
+  FOUND: bits=412, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 0
+    1 0 0 1 1
+    0 1 0 0 0
+    0 1 0 1 0
+  FOUND: bits=414, #bad=4, β₁(T)=1
+    0 0 1 1 1
+    1 0 1 0 0
+    0 0 0 1 1
+    0 1 0 0 0
+    0 1 0 1 0
+  FOUND: bits=426, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 1 1
+    1 0 0 0 0
+    0 1 0 1 0
+  FOUND: bits=465, #bad=4, β₁(T)=1
+    0 1 0 0 0
+    0 0 1 0 1
+    1 0 0 1 1
+    1 1 0 0 0
+    1 0 0 1 0
+  FOUND: bits=467, #bad=5, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 0 1
+    0 0 0 1 1
+    1 1 0 0 0
+    1 0 0 1 0
+  FOUND: bits=469, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 1
+    1 0 0 1 1
+    0 1 0 0 0
+    1 0 0 1 0
+  FOUND: bits=474, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 1 0 1
+    0 0 0 1 1
+    1 1 0 0 0
+    0 0 0 1 0
+  FOUND: bits=475, #bad=4, β₁(T)=1
+    0 1 1 0 1
+    0 0 1 0 1
+    0 0 0 1 1
+    1 1 0 0 0
+    0 0 0 1 0
+  FOUND: bits=483, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 1
+    0 1 0 1 1
+    1 0 0 0 0
+    1 0 0 1 0
+  FOUND: bits=499, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 1 1
+    0 0 0 1 1
+    1 0 0 0 0
+    1 0 0 1 0
+  FOUND: bits=524, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 0 0
+    1 1 0 0 0
+    0 1 1 0 1
+    0 1 1 0 0
+  FOUND: bits=540, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 0
+    1 0 0 0 0
+    0 1 1 0 1
+    0 1 1 0 0
+  FOUND: bits=548, #bad=4, β₁(T)=1
+    0 0 0 1 0
+    1 0 0 1 0
+    1 1 0 0 0
+    0 0 1 0 1
+    1 1 1 0 0
+  FOUND: bits=549, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 0 1 0
+    1 1 0 0 0
+    0 0 1 0 1
+    1 1 1 0 0
+  FOUND: bits=554, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 0
+    1 0 1 0 1
+    0 1 1 0 0
+  FOUND: bits=556, #bad=5, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 1 0
+    1 1 0 0 0
+    0 0 1 0 1
+    0 1 1 0 0
+  FOUND: bits=558, #bad=4, β₁(T)=1
+    0 0 1 1 1
+    1 0 0 1 0
+    0 1 0 0 0
+    0 0 1 0 1
+    0 1 1 0 0
+  FOUND: bits=597, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 1
+    1 0 0 0 0
+    0 1 1 0 1
+    1 0 1 0 0
+  FOUND: bits=609, #bad=4, β₁(T)=1
+    0 1 0 0 0
+    0 0 0 1 1
+    1 1 0 0 0
+    1 0 1 0 1
+    1 0 1 0 0
+  FOUND: bits=611, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 1
+    0 1 0 0 0
+    1 0 1 0 1
+    1 0 1 0 0
+  FOUND: bits=613, #bad=5, β₁(T)=1
+    0 1 0 1 0
+    0 0 0 1 1
+    1 1 0 0 0
+    0 0 1 0 1
+    1 0 1 0 0
+  FOUND: bits=620, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 1 1
+    1 1 0 0 0
+    0 0 1 0 1
+    0 0 1 0 0
+  FOUND: bits=621, #bad=4, β₁(T)=1
+    0 1 0 1 1
+    0 0 0 1 1
+    1 1 0 0 0
+    0 0 1 0 1
+    0 0 1 0 0
+  FOUND: bits=629, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 1 1
+    1 0 0 0 0
+    0 0 1 0 1
+    1 0 1 0 0
+  FOUND: bits=660, #bad=4, β₁(T)=1
+    0 0 0 1 0
+    1 0 1 0 0
+    1 0 0 1 0
+    0 1 0 0 1
+    1 1 1 0 0
+  FOUND: bits=662, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 1 0 0
+    0 0 0 1 0
+    0 1 0 0 1
+    1 1 1 0 0
+  FOUND: bits=665, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 0 0
+    1 0 0 1 0
+    1 1 0 0 1
+    0 1 1 0 0
+  FOUND: bits=668, #bad=5, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 0
+    1 0 0 1 0
+    0 1 0 0 1
+    0 1 1 0 0
+  FOUND: bits=669, #bad=4, β₁(T)=1
+    0 1 0 1 1
+    0 0 1 0 0
+    1 0 0 1 0
+    0 1 0 0 1
+    0 1 1 0 0
+  FOUND: bits=675, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 0
+    0 1 0 1 0
+    1 0 0 0 1
+    1 1 1 0 0
+  FOUND: bits=680, #bad=4, β₁(T)=1
+    0 0 0 0 1
+    1 0 0 1 0
+    1 1 0 1 0
+    1 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=682, #bad=5, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 1 0
+    1 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=683, #bad=4, β₁(T)=1
+    0 1 1 0 1
+    0 0 0 1 0
+    0 1 0 1 0
+    1 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=684, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 0 1 0
+    1 1 0 1 0
+    0 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=691, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 1 0
+    0 0 0 1 0
+    1 0 0 0 1
+    1 1 1 0 0
+  FOUND: bits=696, #bad=4, β₁(T)=1
+    0 0 0 0 1
+    1 0 1 1 0
+    1 0 0 1 0
+    1 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=697, #bad=5, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 0
+    1 0 0 1 0
+    1 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=699, #bad=4, β₁(T)=1
+    0 1 1 0 1
+    0 0 1 1 0
+    0 0 0 1 0
+    1 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=700, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 1 0
+    1 0 0 1 0
+    0 0 0 0 1
+    0 1 1 0 0
+  FOUND: bits=706, #bad=4, β₁(T)=1
+    0 0 1 0 0
+    1 0 0 0 1
+    0 1 0 1 0
+    1 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=709, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 0 0 1
+    1 1 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=710, #bad=5, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 1 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=711, #bad=4, β₁(T)=1
+    0 1 1 1 0
+    0 0 0 0 1
+    0 1 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=714, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 0 1
+    0 1 0 1 0
+    1 1 0 0 1
+    0 0 1 0 0
+  FOUND: bits=724, #bad=4, β₁(T)=1
+    0 0 0 1 0
+    1 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=725, #bad=5, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=726, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 1 0 1
+    0 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 0
+  FOUND: bits=729, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 0 1
+    1 0 0 1 0
+    1 1 0 0 1
+    0 0 1 0 0
+  FOUND: bits=733, #bad=4, β₁(T)=1
+    0 1 0 1 1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 1
+    0 0 1 0 0
+  FOUND: bits=738, #bad=4, β₁(T)=1
+    0 0 1 0 0
+    1 0 0 1 1
+    0 1 0 1 0
+    1 0 0 0 1
+    1 0 1 0 0
+  FOUND: bits=739, #bad=5, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 1
+    0 1 0 1 0
+    1 0 0 0 1
+    1 0 1 0 0
+  FOUND: bits=741, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 0 1 1
+    1 1 0 1 0
+    0 0 0 0 1
+    1 0 1 0 0
+  FOUND: bits=743, #bad=4, β₁(T)=1
+    0 1 1 1 0
+    0 0 0 1 1
+    0 1 0 1 0
+    0 0 0 0 1
+    1 0 1 0 0
+  FOUND: bits=746, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 1
+    0 1 0 1 0
+    1 0 0 0 1
+    0 0 1 0 0
+  FOUND: bits=774, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 0
+    0 1 0 0 1
+    0 1 1 0 1
+    1 1 0 0 0
+  FOUND: bits=804, #bad=4, β₁(T)=1
+    0 0 0 1 0
+    1 0 0 1 0
+    1 1 0 0 1
+    0 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=805, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 0 1 0
+    1 1 0 0 1
+    0 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=806, #bad=5, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 1 0
+    0 1 0 0 1
+    0 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=810, #bad=4, β₁(T)=1
+    0 0 1 0 1
+    1 0 0 1 0
+    0 1 0 0 1
+    1 0 1 0 1
+    0 1 0 0 0
+  FOUND: bits=814, #bad=4, β₁(T)=1
+    0 0 1 1 1
+    1 0 0 1 0
+    0 1 0 0 1
+    0 0 1 0 1
+    0 1 0 0 0
+  FOUND: bits=817, #bad=4, β₁(T)=1
+    0 1 0 0 0
+    0 0 1 1 0
+    1 0 0 0 1
+    1 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=821, #bad=5, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 1 0
+    1 0 0 0 1
+    0 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=822, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 1 1 0
+    0 0 0 0 1
+    0 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=823, #bad=4, β₁(T)=1
+    0 1 1 1 0
+    0 0 1 1 0
+    0 0 0 0 1
+    0 0 1 0 1
+    1 1 0 0 0
+  FOUND: bits=825, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 0
+    1 0 0 0 1
+    1 0 1 0 1
+    0 1 0 0 0
+  FOUND: bits=838, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 1 0 0 1
+    0 1 1 0 1
+    1 0 0 0 0
+  FOUND: bits=853, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 0 1
+    1 0 0 0 1
+    0 1 1 0 1
+    1 0 0 0 0
+  FOUND: bits=885, #bad=4, β₁(T)=1
+    0 1 0 1 0
+    0 0 1 1 1
+    1 0 0 0 1
+    0 0 1 0 1
+    1 0 0 0 0
+  FOUND: bits=902, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 0
+    0 1 0 1 1
+    0 1 0 0 1
+    1 1 0 0 0
+  FOUND: bits=914, #bad=4, β₁(T)=1
+    0 0 1 0 0
+    1 0 1 0 0
+    0 0 0 1 1
+    1 1 0 0 1
+    1 1 0 0 0
+  FOUND: bits=915, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 0 0
+    0 0 0 1 1
+    1 1 0 0 1
+    1 1 0 0 0
+  FOUND: bits=918, #bad=5, β₁(T)=1
+    0 0 1 1 0
+    1 0 1 0 0
+    0 0 0 1 1
+    0 1 0 0 1
+    1 1 0 0 0
+  FOUND: bits=924, #bad=4, β₁(T)=1
+    0 0 0 1 1
+    1 0 1 0 0
+    1 0 0 1 1
+    0 1 0 0 1
+    0 1 0 0 0
+  FOUND: bits=926, #bad=4, β₁(T)=1
+    0 0 1 1 1
+    1 0 1 0 0
+    0 0 0 1 1
+    0 1 0 0 1
+    0 1 0 0 0
+  FOUND: bits=945, #bad=4, β₁(T)=1
+    0 1 0 0 0
+    0 0 1 1 0
+    1 0 0 1 1
+    1 0 0 0 1
+    1 1 0 0 0
+  FOUND: bits=947, #bad=5, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 1 0
+    0 0 0 1 1
+    1 0 0 0 1
+    1 1 0 0 0
+  FOUND: bits=950, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 1 1 0
+    0 0 0 1 1
+    0 0 0 0 1
+    1 1 0 0 0
+  FOUND: bits=951, #bad=4, β₁(T)=1
+    0 1 1 1 0
+    0 0 1 1 0
+    0 0 0 1 1
+    0 0 0 0 1
+    1 1 0 0 0
+  FOUND: bits=953, #bad=4, β₁(T)=1
+    0 1 0 0 1
+    0 0 1 1 0
+    1 0 0 1 1
+    1 0 0 0 1
+    0 1 0 0 0
+  FOUND: bits=966, #bad=4, β₁(T)=1
+    0 0 1 1 0
+    1 0 0 0 1
+    0 1 0 1 1
+    0 1 0 0 1
+    1 0 0 0 0
+  FOUND: bits=995, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 0 1 1
+    0 1 0 1 1
+    1 0 0 0 1
+    1 0 0 0 0
+  FOUND: bits=1011, #bad=4, β₁(T)=1
+    0 1 1 0 0
+    0 0 1 1 1
+    0 0 0 1 1
+    1 0 0 0 1
+    1 0 0 0 0
+If nothing printed: no tournament (even with β₁>0) has #bad≥4 at n=5
+
+--- n=6 (sampled) ---
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=5, β₁(T)=1
+  FOUND: #bad=6, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  FOUND: #bad=4, β₁(T)=1
+  Tested 10000, found #bad≥4: 1444
