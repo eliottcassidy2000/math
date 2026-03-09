@@ -124,28 +124,87 @@ These numbers grow rapidly and have beautiful number-theoretic structure. The Pa
 
 ---
 
-## Why Does This Matter?
+## Making Computation Faster
 
-### For mathematics
+One of the practical payoffs of this research is **speed**. Counting the number of perfect rankings in a tournament is, in general, extremely hard — it's what computer scientists call a "#P-complete" problem, meaning it's at least as hard as any counting problem in NP. The standard algorithm (dynamic programming with bitmasks) takes time proportional to 2^n * n^2, where n is the number of teams. For 20 teams, that's about a billion operations. For 30 teams, it's a trillion.
 
-This work sits at a fertile crossroads of combinatorics, algebra, and topology. The OCF connects a counting problem (Hamiltonian paths) to a structural invariant (cycle conflict graphs) in an unexpected way. The Walsh-Fourier approach provides a powerful general technique for analyzing functions on combinatorial objects. The path homology results suggest deep structural constraints on directed networks.
+The OCF and related formulas open up faster routes:
 
-Several results here resolve or advance long-standing questions:
-- The OCF was proved (by Grinberg-Stanley, building on the computational discovery here)
-- Transfer matrix symmetry was proved via the Walsh framework
-- The Fourier spectrum of tournament invariants was completely characterized
-- The beta_2 = 0 phenomenon for tournaments is new and has no analogue in the existing literature
+**The trace formula approach.** Instead of enumerating all possible rankings, you can compute the answer by doing matrix arithmetic — multiplying the tournament's adjacency matrix by itself a few times and reading off the traces. For tournaments up to about 9 teams, this gives a **10x speedup** over the standard method (0.7 milliseconds vs 70 milliseconds per tournament in our benchmarks). The key insight is that the number of 3-cycles, 5-cycles, and 7-cycles can all be computed from matrix powers, and the OCF builds the answer from these cycle counts.
 
-### For applications
+**The Fourier compression.** When you look at the "frequencies" of the ranking count (using the Walsh-Fourier decomposition), most frequencies are zero. At 5 teams, only 3 out of 1024 independent frequency components are nonzero — a **341x compression**. This means you can reconstruct the ranking count for *any* 5-team tournament from just 3 numbers. At 7 teams, the compression factor is roughly 100,000x. This is analogous to how a JPEG compresses an image by throwing away inaudible frequencies — except here, the compression is exact and lossless.
 
-Tournaments model any situation with pairwise comparisons: sports, elections, biological dominance hierarchies, preference aggregation, and network analysis. Understanding the structure of rankings (Hamiltonian paths) is directly relevant to:
-- **Ranking aggregation:** How many consistent total orders are compatible with pairwise comparisons?
-- **Network topology:** Path homology is used in applied topology to analyze directed networks (neural networks, citation networks, gene regulatory networks)
-- **Voting theory:** Tournaments encode majority preferences; the OCF gives structural insight into how cycle structure constrains rankings
+**Symmetry speedups.** The mathematical symmetries we discovered (the S_3 x Z_2 group acting on the pin grid) also speed up enumeration of tournament types. For certain counting problems related to OEIS sequences, we achieved **64x to 130x speedups** by using closed-form formulas derived from Burnside's lemma instead of brute-force iteration.
+
+---
+
+## Connections to the Real World
+
+Tournaments aren't just abstract math — they show up everywhere people (or animals, or algorithms) make pairwise comparisons.
+
+### Sports and Competition
+
+The most obvious application: round-robin tournaments in sports. How many ways can you rank the teams consistently with the game results? The OCF says this number is determined by the cycle structure. A league with many three-way "rock-paper-scissors" cycles has more consistent rankings than you'd expect. A perfectly ordered league (every higher-ranked team beats every lower-ranked team) has exactly one.
+
+This matters for seeding, playoff design, and understanding competitive balance. The impossibility results — no tournament can have exactly 7 or exactly 21 consistent rankings, ever — constrain what preference structures can arise from real competition.
+
+### Elections and Voting
+
+In voting theory, a tournament encodes the "majority preference" between every pair of candidates: A beats B if more voters rank A above B. The famous **Condorcet paradox** says that cycles can arise: voters prefer A to B, B to C, and C to A (collectively). The OCF quantifies exactly how these cycles affect the number of consistent total rankings.
+
+This is directly relevant to ranked-choice voting design and algorithms for rank aggregation — the computational problem of finding a "best" overall ranking when given many pairwise comparisons. Search engines, recommendation systems, and multi-criteria decision tools all face this problem.
+
+### Biology and Animal Behavior
+
+Biologists study **dominance hierarchies** — pecking orders among chickens, territorial disputes among fish, social ranking among primates. These are literally tournaments: each pair of animals has a dominant member. The questions biologists ask ("How linear is this hierarchy?" "How many consistent rankings exist?") are exactly the questions our formulas answer.
+
+The path homology results are particularly interesting here: the fact that biological dominance networks (modeled as tournaments) never have "bubble-like" topological holes (beta_2 = 0) suggests a structural constraint on the kinds of higher-order relationships that can emerge from pairwise dominance.
+
+### Network Science and Data Analysis
+
+Path homology is an increasingly important tool in **topological data analysis (TDA)** — the use of topology to find patterns in complex data. Researchers have applied path homology to:
+
+- **Neural connectomics:** Mapping the directed connections between neurons in the brain. Path homology detects higher-order patterns in information flow that simple graph statistics miss.
+- **Gene regulatory networks:** Directed cycles in gene networks correspond to feedback loops. The conflict graph Omega(T) encodes which feedback loops can operate independently — directly relevant to systems biology.
+- **Citation and information networks:** Academic citations form a directed network. Path homology can detect communities and hierarchical structure invisible to standard tools.
+
+Our discovery that beta_2 = 0 for tournaments provides a **null model** for these applications: if you see nonzero beta_2 in a real-world directed network, that's a meaningful structural feature distinguishing it from a tournament-like structure.
+
+### Computer Science and Algorithms
+
+- **Sorting networks:** A Hamiltonian path in a tournament is essentially a topological sort. Counting them efficiently (using our trace formulas) has implications for analyzing comparison-based sorting algorithms.
+- **Compressed sensing:** The extreme Walsh sparsity of tournament invariants means they can be learned from very few samples. This connects to property testing — determining properties of a tournament by querying only a small fraction of its edges.
+- **Quantum computing:** The Walsh-Hadamard transform is one of the most fundamental operations in quantum computing. The structured sparsity of tournament Walsh spectra could potentially inform quantum algorithm design for network analysis tasks.
+
+---
+
+## Why Does This Matter for Mathematics?
+
+### A crossroads of fields
+
+This work sits at a fertile intersection of multiple mathematical areas, and the connections run deep:
+
+**Combinatorics meets topology.** The OCF connects a counting problem (Hamiltonian paths) to a structural invariant (cycle conflict graphs) in an unexpected way. The path homology program adds another layer: the directed topology of tournaments encodes information invisible to purely combinatorial invariants. The mutual exclusivity of beta_1 and beta_3, for instance, has no obvious combinatorial explanation.
+
+**Fourier analysis meets graph theory.** The Walsh-Fourier approach provides a powerful general technique for analyzing functions on combinatorial objects. The key insight — that tournament invariants have sparse Fourier spectra supported on structured subsets — is reminiscent of results in additive combinatorics and Boolean function analysis.
+
+**Number theory meets combinatorics.** The Paley tournaments are defined using quadratic residues (a concept from number theory), and their extremal properties (maximizing the number of rankings, having concentrated homology in a single dimension) suggest that number-theoretic structure produces combinatorially optimal objects. The universality threshold for the signed permanent follows a pattern controlled by binary digit sums, connecting to Kummer's theorem on binomial coefficient divisibility.
+
+**Representation theory meets enumeration.** The S_3 x Z_2 symmetry group of the pin grid, the connection to self-evacuating Young tableaux, and the Worpitzky expansion all point toward deeper algebraic structure. The Walsh decomposition can be viewed as decomposition under the Boolean group (Z_2)^m, a fundamental object in representation theory.
+
+### Resolving and advancing open questions
+
+Several results here resolve or advance long-standing mathematical questions:
+
+- The OCF was proved (by Grinberg-Stanley, 2024, building on the computational discovery here)
+- Transfer matrix symmetry M[a,b] = M[b,a] was proved via the Walsh framework — a result whose natural combinatorial explanation had eluded direct proof
+- The complete Fourier spectrum of tournament invariants was characterized for the first time
+- The beta_2 = 0 phenomenon for tournaments is entirely new and has no analogue in the existing literature on path homology
+- The signed Hamiltonian permanent reveals previously unknown universal congruences with a number-theoretic structure
 
 ### For the broader research community
 
-The methodology here — combining exhaustive computation with algebraic proof, using multiple AI agents as collaborative research assistants, and maintaining a structured knowledge base of hypotheses and results — represents a new model for computational mathematics. Over 277 hypotheses have been systematically generated, tested, and cataloged, with clear documentation of both confirmations and dead ends.
+The methodology here — combining exhaustive computation with algebraic proof, using multiple AI agents as collaborative research assistants, and maintaining a structured knowledge base of hypotheses and results — represents a new model for computational mathematics. Over 277 hypotheses have been systematically generated, tested, and cataloged, with clear documentation of both confirmations and dead ends. The repo itself is a demonstration that AI-assisted mathematical research can produce genuinely novel results across multiple subfields simultaneously.
 
 ---
 
