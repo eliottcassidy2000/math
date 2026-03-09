@@ -1,0 +1,22 @@
+======================================================================
+CORRECTED d_4 PREIMAGE — USING TRUE H_3 GENERATORS
+======================================================================
+    z (true H_3 gen) in im(d_4^T)? False
+    z proportional to H_3(T) gen? True
+    rank(d_4) = 18, ker(d_3) = 19
+  10/60, 6 bad verts, 3.9s
+  20/60, 16 bad verts, 8.6s
+  30/60, 21 bad verts, 15.5s
+  40/60, 28 bad verts, 19.2s
+  50/60, 34 bad verts, 22.7s
+  60/60, 44 bad verts, 27.8s
+  Done: 60 tours, 44 bad verts, 27.8s
+
+  CORRECTED RESULTS:
+    z (true H_3(T\v) gen) in im(d_4^T): 0/44
+    z proportional to H_3(T) gen: 44/44
+
+    *** i_*-INJECTIVITY CONFIRMED: z never becomes a boundary ***
+    *** EMBEDDED z IS the H_3(T) generator (up to scalar) ***
+
+DONE.

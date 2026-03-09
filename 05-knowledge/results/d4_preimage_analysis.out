@@ -1,0 +1,33 @@
+======================================================================
+d_4 PREIMAGE ANALYSIS — WHY z ∉ im(d_4^T)?
+======================================================================
+
+--- n=7: beta_3=1 tournaments, BAD vertices ---
+    Omega dims: Omega_3=41, Omega_4=27
+    rank(d_4^total)=18, rank(d_4^old)=6, new increment=12
+    z in im(d_4^total)? True
+    z in im(d_4^old)? True
+    A-paths: 78 old, 103 new 5-paths
+  10/50, 6 bad verts, 4.1s
+  20/50, 16 bad verts, 9.3s
+  30/50, 21 bad verts, 16.6s
+  40/50, 28 bad verts, 20.5s
+  50/50, 34 bad verts, 24.2s
+  Done: 50 tournaments, 34 bad vertex records, 24.2s
+
+  KEY QUESTION: Does z ever fall in im(d_4^old)?
+    z in im(d_4^old): 25/34
+    z in im(d_4^total): 25/34
+
+  Rank analysis:
+    rank(d_4^old) distribution: {6: 25, 0: 9}
+    rank(d_4^total) distribution: {18: 5, 25: 18, 9: 2, 11: 6, 22: 1, 24: 1, 14: 1}
+    new increment distribution: {12: 5, 19: 18, 9: 2, 11: 6, 16: 1, 18: 1, 14: 1}
+
+  New paths add NOTHING to d_4 image: 0/34
+
+  Omega dimensions:
+    Omega_3(T): {41: 5, 50: 18, 28: 2, 31: 6, 46: 1, 49: 1, 35: 1}
+    Omega_4(T): {27: 5, 41: 18, 12: 2, 15: 6, 36: 1, 37: 1, 20: 1}
+
+DONE.
