@@ -1,0 +1,97 @@
+======================================================================
+b1 MONOTONICITY VERIFICATION
+======================================================================
+  n=7: 125/500 (1s) good=125 bad=0
+  n=7: 250/500 (1s) good=250 bad=0
+  n=7: 375/500 (2s) good=375 bad=0
+  n=7: 500/500 (3s) good=500 bad=0
+
+n=7 (3s): 500/500 have monotone v
+  Max delta (worst increase): 1
+  Min #good vertices in any tournament: 4
+  n=8: 75/300 (1s) good=75 bad=0
+  n=8: 150/300 (2s) good=150 bad=0
+  n=8: 225/300 (2s) good=225 bad=0
+  n=8: 300/300 (3s) good=300 bad=0
+
+n=8 (3s): 300/300 have monotone v
+  Max delta (worst increase): 1
+  Min #good vertices in any tournament: 5
+  n=9: 50/200 (1s) good=50 bad=0
+  n=9: 100/200 (2s) good=100 bad=0
+  n=9: 150/200 (3s) good=150 bad=0
+  n=9: 200/200 (3s) good=200 bad=0
+
+n=9 (3s): 200/200 have monotone v
+  Max delta (worst increase): 1
+  Min #good vertices in any tournament: 6
+  n=10: 25/100 (1s) good=25 bad=0
+  n=10: 50/100 (2s) good=50 bad=0
+  n=10: 75/100 (3s) good=75 bad=0
+  n=10: 100/100 (4s) good=100 bad=0
+
+n=10 (4s): 100/100 have monotone v
+  Max delta (worst increase): 1
+  Min #good vertices in any tournament: 9
+  n=11: 12/50 (1s) good=12 bad=0
+  n=11: 24/50 (3s) good=24 bad=0
+  n=11: 36/50 (6s) good=36 bad=0
+  n=11: 48/50 (9s) good=48 bad=0
+
+n=11 (9s): 50/50 have monotone v
+  Max delta (worst increase): 1
+  Min #good vertices in any tournament: 10
+  n=12: 5/20 (2s) good=5 bad=0
+  n=12: 10/20 (3s) good=10 bad=0
+  n=12: 15/20 (4s) good=15 bad=0
+  n=12: 20/20 (5s) good=20 bad=0
+
+n=12 (5s): 20/20 have monotone v
+  Max delta (worst increase): 0
+  Min #good vertices in any tournament: 12
+
+======================================================================
+DELTA DISTRIBUTION at n=7
+======================================================================
+Overall delta distribution:
+  delta=-1: 29
+  delta=0: 3106
+  delta=1: 365
+
+Delta by out-degree:
+  d_out=0: neg=0 zero=44 pos=13 (good_rate=0.772)
+  d_out=1: neg=10 zero=265 pos=37 (good_rate=0.881)
+  d_out=2: neg=1 zero=749 pos=87 (good_rate=0.896)
+  d_out=3: neg=3 zero=968 pos=116 (good_rate=0.893)
+  d_out=4: neg=5 zero=750 pos=81 (good_rate=0.903)
+  d_out=5: neg=10 zero=281 pos=26 (good_rate=0.918)
+  d_out=6: neg=0 zero=49 pos=5 (good_rate=0.907)
+
+======================================================================
+RANK DROP ANALYSIS: rk(d_2(T)) - rk(d_2(T\v))
+======================================================================
+
+b1(T\v) <= b1(T) iff rk(d_2(T)) - rk(d_2(T\v)) <= n-2.
+
+What is rk(d_2(T)) - rk(d_2(T\v)) typically?
+
+n=7: 1400 (T,v) pairs
+  Rank drop distribution:
+    drop=4: 10 (GOOD)
+    drop=5: 1225 (GOOD)
+    drop=6: 165 (BAD)
+
+  Threshold: drop <= 5 is good
+  Good: 1235, Bad: 165
+
+  Good drops by d_out:
+    d_out=0: good=16/23 (70%)
+    d_out=1: good=107/126 (85%)
+    d_out=2: good=289/328 (88%)
+    d_out=3: good=397/441 (90%)
+    d_out=4: good=294/337 (87%)
+    d_out=5: good=112/123 (91%)
+    d_out=6: good=20/22 (91%)
+
+
+Done.

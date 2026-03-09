@@ -1,0 +1,56 @@
+============================================================
+PATH HOMOLOGY OF SMALL TOURNAMENTS
+============================================================
+
+--- n=3: Transitive tournament ---
+Adjacency: 0->1, 0->2, 1->2
+Multisquare-free: True
+  dim 0: 3 allowed 0-paths
+  dim 1: 3 allowed 1-paths
+  dim 2: 1 allowed 2-paths
+  dim 3: 0 allowed 3-paths
+  dim 4: 0 allowed 4-paths
+  Omega_1: dimension 3
+  Omega_2: dimension 1
+  H_0: beta_0 = 1
+  H_1: ker=1, im=1, beta_1 = 0
+  H_2: ker=0, im=0, beta_2 = 0
+  H_3 = 0 (Omega_3 = 0)
+Betti numbers: {0: np.int64(1), 1: np.int64(0), 2: np.int64(0), 3: 0}
+
+--- n=3: Cyclic tournament ---
+Adjacency: 0->1, 1->2, 2->0
+Multisquare-free: True
+  dim 0: 3 allowed 0-paths
+  dim 1: 3 allowed 1-paths
+  dim 2: 3 allowed 2-paths
+  dim 3: 3 allowed 3-paths
+  dim 4: 3 allowed 4-paths
+  Omega_1: dimension 3
+  Omega_2: dimension 0
+  Omega_3: dimension 0
+  Omega_4: dimension 0
+  H_0: beta_0 = 1
+  H_1: ker=1, im=0, beta_1 = 1
+  H_2 = 0 (Omega_2 = 0)
+  H_3 = 0 (Omega_3 = 0)
+Betti numbers: {0: np.int64(1), 1: np.int64(1), 2: 0, 3: 0}
+
+--- n=4: All tournaments ---
+Total 4-vertex tournaments: 64
+Multisquare-free: 64
+
+Betti number distributions:
+  (beta_0,...,beta_3) = (np.int64(1), np.int64(0), np.int64(0), np.int64(0)): 40 tournaments (40 MSF)
+  (beta_0,...,beta_3) = (np.int64(1), np.int64(1), np.int64(0), np.int64(0)): 24 tournaments (24 MSF)
+
+--- n=5: All tournaments ---
+Total 5-vertex tournaments: 1024
+Multisquare-free: 704
+
+Betti number distributions:
+  (beta_0,...,beta_3) = (np.int64(1), np.int64(0), np.int64(0), np.int64(0)): 720 tournaments (560 MSF)
+  (beta_0,...,beta_3) = (np.int64(1), np.int64(1), np.int64(0), np.int64(0)): 304 tournaments (144 MSF)
+
+All n=4 tournaments have beta_2 = 0: True
+All n=5 tournaments have beta_2 = 0: True

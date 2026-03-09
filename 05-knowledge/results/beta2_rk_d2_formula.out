@@ -1,0 +1,62 @@
+======================================================================
+rk(d_2) FORMULA SEARCH
+======================================================================
+
+n=4: 64 tournaments
+  dim(Z_1) = 3 (constant)
+  rk(d_2): min=2, max=3, dist=Counter({3: 40, 2: 24})
+  b1: min=0, max=1, dist=Counter({0: 40, 1: 24})
+  dim(Omega_2): min=3, max=4
+  Example: b1=0, c3=0
+
+n=5: 1024 tournaments
+  dim(Z_1) = 6 (constant)
+  rk(d_2): min=5, max=6, dist=Counter({6: 720, 5: 304})
+  b1: min=0, max=1, dist=Counter({0: 720, 1: 304})
+  dim(Omega_2): min=8, max=10
+  Example: b1=0, c3=0
+
+n=6: 32768 tournaments
+  dim(Z_1) = 10 (constant)
+  rk(d_2): min=9, max=10, dist=Counter({10: 27968, 9: 4800})
+  b1: min=0, max=1, dist=Counter({0: 27968, 1: 4800})
+  dim(Omega_2): min=18, max=24
+  Example: b1=0, c3=0
+
+======================================================================
+RANK DROP: rk(d_2(T)) - rk(d_2(T\v))
+======================================================================
+n=5: dim(Z_1(T))=6, dim(Z_1(T\v))=3
+  Threshold for b1 monotonicity: drop <= 3
+
+Drop distribution by d_out:
+  d_out=0: {3: 200, 4: 120}, good=200/320
+  d_out=1: {2: 160, 3: 880, 4: 240}, good=1040/1280
+  d_out=2: {2: 120, 3: 1680, 4: 120}, good=1800/1920
+  d_out=3: {2: 160, 3: 880, 4: 240}, good=1040/1280
+  d_out=4: {3: 200, 4: 120}, good=200/320
+
+======================================================================
+dim(Omega_2) ANALYSIS
+======================================================================
+  BAD: v=4, d_out=4, scores=[1, 1, 2, 2, 4]
+    dim_O2(T)=9, dim_O2(T\v)=3, delta_O2=6
+    rk_d2(T)=6, rk_d2(T\v)=2, drop=4
+    b1(T)=0, b1(T\v)=1
+
+======================================================================
+b1 AS FUNCTION OF TOURNAMENT STRUCTURE
+======================================================================
+n=5: b1 as function of c3 (number of directed 3-cycles):
+  c3=0: b1 in [0]
+  c3=1: b1 in [0]
+  c3=2: b1 in [0]
+  c3=3: b1 in [0, 1]
+  c3=4: b1 in [0, 1]
+  c3=5: b1 in [1]
+
+  b1=0: c3 range [0, 4]
+  b1>0: c3 range [3, 5]
+
+
+Done.

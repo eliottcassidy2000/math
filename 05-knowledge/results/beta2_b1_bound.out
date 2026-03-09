@@ -1,0 +1,72 @@
+======================================================================
+b1(T) BOUND FOR TOURNAMENTS
+======================================================================
+
+n=7 (1.2s, 1000 samples):
+  dim(Z_1) = 15
+  b1 distribution: {0: 951, 1: 49}
+  max b1 = 1
+  b1 <= 1: YES
+
+n=8 (0.9s, 500 samples):
+  dim(Z_1) = 21
+  b1 distribution: {0: 496, 1: 4}
+  max b1 = 1
+  b1 <= 1: YES
+
+n=9 (1.6s, 300 samples):
+  dim(Z_1) = 28
+  b1 distribution: {0: 300}
+  max b1 = 0
+  b1 <= 1: YES
+
+n=10 (3.4s, 200 samples):
+  dim(Z_1) = 36
+  b1 distribution: {0: 200}
+  max b1 = 0
+  b1 <= 1: YES
+
+n=11 (2.5s, 100 samples):
+  dim(Z_1) = 45
+  b1 distribution: {0: 100}
+  max b1 = 0
+  b1 <= 1: YES
+
+n=12 (1.0s, 50 samples):
+  dim(Z_1) = 55
+  b1 distribution: {0: 50}
+  max b1 = 0
+  b1 <= 1: YES
+
+n=15 (1.9s, 20 samples):
+  dim(Z_1) = 91
+  b1 distribution: {0: 20}
+  max b1 = 0
+  b1 <= 1: YES
+
+n=20 (9.8s, 10 samples):
+  dim(Z_1) = 171
+  b1 distribution: {0: 10}
+  max b1 = 0
+  b1 <= 1: YES
+
+======================================================================
+b1 = 0 RATE
+======================================================================
+n=7: b1=0: 1899/2000 (95.0%), b1=1: 101/2000 (5.0%), b1>1: 0/2000
+n=8: b1=0: 992/1000 (99.2%), b1=1: 8/1000 (0.8%), b1>1: 0/1000
+n=9: b1=0: 499/500 (99.8%), b1=1: 1/500 (0.2%), b1>1: 0/500
+n=10: b1=0: 200/200 (100.0%), b1=1: 0/200 (0.0%), b1>1: 0/200
+
+======================================================================
+b1=1 TOURNAMENTS: WHICH VERTICES REDUCE b1?
+======================================================================
+  b1=1 case: scores=[1, 2, 2, 4, 4, 4, 4], #good_v (b1 non-increasing)=7
+  b1=1 case: scores=[1, 1, 3, 3, 4, 4, 5], #good_v (b1 non-increasing)=7
+  b1=1 case: scores=[1, 2, 2, 4, 4, 4, 4], #good_v (b1 non-increasing)=7
+
+n=7: 101 tournaments with b1=1
+  Distribution of #good_vertices: {7: 101}
+
+
+Done.
