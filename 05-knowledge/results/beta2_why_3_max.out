@@ -1,0 +1,128 @@
+============================================================
+SUPPORT STRUCTURE OF HIDDEN CYCLES
+============================================================
+
+Tournament bits=41, bad=[1, 2, 4]
+  Hidden cycle z_1:
+    Support: 5 edges (0 on 5 edges touching v=1)
+    Zero edges: [(0, 1), (1, 3), (2, 1), (3, 2), (4, 1)]
+      z_1((0, 4)) = 0.7071
+      z_1((2, 0)) = 0.3536
+      z_1((3, 0)) = 0.3536
+      z_1((4, 2)) = 0.3536
+      z_1((4, 3)) = 0.3536
+  Hidden cycle z_2:
+    Support: 5 edges (0 on 5 edges touching v=2)
+    Zero edges: [(2, 0), (2, 1), (3, 2), (4, 1), (4, 2)]
+      z_2((0, 1)) = 0.3536
+      z_2((0, 4)) = 0.3536
+      z_2((1, 3)) = 0.3536
+      z_2((3, 0)) = 0.7071
+      z_2((4, 3)) = 0.3536
+  Hidden cycle z_4:
+    Support: 5 edges (0 on 5 edges touching v=4)
+    Zero edges: [(0, 4), (2, 0), (4, 1), (4, 2), (4, 3)]
+      z_4((0, 1)) = -0.3536
+      z_4((1, 3)) = -0.7071
+      z_4((2, 1)) = -0.3536
+      z_4((3, 0)) = -0.3536
+      z_4((3, 2)) = -0.3536
+
+Tournament bits=42, bad=[2, 3, 4]
+  Hidden cycle z_2:
+    Support: 5 edges (0 on 5 edges touching v=2)
+    Zero edges: [(0, 2), (1, 3), (2, 1), (3, 2), (4, 2)]
+      z_2((0, 4)) = 0.7071
+      z_2((1, 0)) = 0.3536
+      z_2((3, 0)) = 0.3536
+      z_2((4, 1)) = 0.3536
+      z_2((4, 3)) = 0.3536
+  Hidden cycle z_3:
+    Support: 5 edges (0 on 5 edges touching v=3)
+    Zero edges: [(1, 3), (3, 0), (3, 2), (4, 2), (4, 3)]
+      z_3((0, 2)) = 0.3536
+      z_3((0, 4)) = 0.3536
+      z_3((1, 0)) = 0.7071
+      z_3((2, 1)) = 0.3536
+      z_3((4, 1)) = 0.3536
+  Hidden cycle z_4:
+    Support: 5 edges (0 on 5 edges touching v=4)
+    Zero edges: [(0, 4), (3, 0), (4, 1), (4, 2), (4, 3)]
+      z_4((0, 2)) = 0.3536
+      z_4((1, 0)) = 0.3536
+      z_4((1, 3)) = 0.3536
+      z_4((2, 1)) = 0.7071
+      z_4((3, 2)) = 0.3536
+
+============================================================
+n=7,8: SAMPLED Σ_v β₁(T\v) DISTRIBUTION
+============================================================
+
+--- n=7 ---
+(β₁(T), Σ_v β₁(T\v)) → count:
+  β₁=0, Σ=0: 2461
+  β₁=0, Σ=1: 1329
+  β₁=0, Σ=2: 710
+  β₁=0, Σ=3: 280
+  β₁=1, Σ=5: 99
+  β₁=1, Σ=6: 72
+  β₁=1, Σ=7: 49
+Max Σ when β₁=0: 3
+*** HYP-282 HOLDS at n=7 (sampled) ***
+
+--- n=8 ---
+(β₁(T), Σ_v β₁(T\v)) → count:
+  β₁=0, Σ=0: 1519
+  β₁=0, Σ=1: 310
+  β₁=0, Σ=2: 120
+  β₁=0, Σ=3: 29
+  β₁=1, Σ=6: 17
+  β₁=1, Σ=7: 3
+  β₁=1, Σ=8: 2
+Max Σ when β₁=0: 3
+*** HYP-282 HOLDS at n=8 (sampled) ***
+
+============================================================
+WHY ≤ 3: ALGEBRAIC STRUCTURE
+============================================================
+
+Key observations:
+1. Each hidden cycle z_v has ZERO on all edges touching v
+2. z_v is supported on C(n-1,2) edges (the edges of T\v)
+3. For 4 bad vertices v₁,...,v₄, each z_vᵢ misses n-1 edges
+
+But the total edge space has C(n,2) = n(n-1)/2 dimensions.
+The 4 lifts together span ≤ C(n,2) dimensions.
+
+CRITICAL: z_v is NOT arbitrary — it's an H₁ cocycle of T\v.
+It satisfies ALL TT constraints of T\v.
+When lifted, it satisfies TT constraints for ALL TTs not involving v.
+The ONLY TT constraint it might violate is those involving v.
+
+For β₁(T)=0, ALL cocycles of T are coboundaries.
+So z_v (lifted) is NOT a cocycle of T.
+The "defect" of z_v = its failure to satisfy TTs involving v.
+
+For 4 bad vertices: each z_vᵢ fails at TTs involving vᵢ.
+BUT: the TTs involving v₁,...,v₄ overlap heavily.
+This might force a dependency among the defects.
+
+Let's check: for each lift z_v, compute ⟨z_v, ∂₂(τ)⟩ for each TT τ.
+
+
+Example: bits=41, bad=[1, 2, 4]
+TTs: [(0, 4, 1), (2, 0, 1), (3, 2, 0), (4, 1, 3), (4, 2, 1), (4, 3, 2)]
+  z_1 defects (nonzero only):
+    TT(0, 4, 1): 0.7071 (involves v)
+    TT(2, 0, 1): 0.3536 (involves v)
+    TT(4, 1, 3): -0.3536 (involves v)
+    TT(4, 2, 1): 0.3536 (involves v)
+  z_2 defects (nonzero only):
+    TT(2, 0, 1): 0.3536 (involves v)
+    TT(3, 2, 0): -0.7071 (involves v)
+    TT(4, 3, 2): 0.3536 (involves v)
+  z_4 defects (nonzero only):
+    TT(0, 4, 1): 0.3536 (involves v)
+    TT(4, 1, 3): -0.7071 (involves v)
+    TT(4, 2, 1): -0.3536 (involves v)
+    TT(4, 3, 2): -0.3536 (involves v)

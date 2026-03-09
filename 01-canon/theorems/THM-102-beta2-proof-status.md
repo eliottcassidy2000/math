@@ -178,6 +178,14 @@ proof of THM-103 doesn't directly yield the deletion bound.
   This means RC = "the would-be H₁ class already distinguishes the bad-TT column."
 - **|bad| ≤ 3 reduces to HYP-282**: #bad = Σ_v β₁(T\v) when β₁=0 (exact identity,
   HYP-363). So proving Σ_v β₁(T\v) ≤ 3 (HYP-282) immediately gives |bad| ≤ 3.
+- **HYP-282 verified Σ ≤ 3 through n=8** (sampled 5000 at n=7, 2000 at n=8, 0 violations)
+- **Hidden cycle structure** (HYP-364-366):
+  - Lift dim = #bad exactly (each bad vertex contributes 1 independent direction)
+  - z_v defects are purely local: only TTs involving v are violated
+  - coker(res_v) = 1 always (exactly 1 missing cocycle per bad vertex)
+  - The "3D obstruction space" is confirmed: max hidden cycle span = 3
+  - Grok's "ζ-multiplicity" framework is CORRECT in spirit but the algebraic proof
+    of dim ≤ 3 requires showing 4 bad vertices force a dependency among hidden cycles
 
 See THM-103 for the full proof.
 

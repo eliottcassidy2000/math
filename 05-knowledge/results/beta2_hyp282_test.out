@@ -1,0 +1,58 @@
+============================================================
+APPROACH 1: LIFTING H₁ GENERATORS
+============================================================
+
+--- n=5 ---
+Tested: 480
+Dimension of lift span: {1: 240, 2: 120, 3: 120}
+
+--- n=6 ---
+Tested: 19488
+Dimension of lift span: {1: 7968, 2: 7200, 3: 4320}
+
+============================================================
+APPROACH 2: RESTRICTION MAP ANALYSIS
+============================================================
+
+When β₁(T)=0: Z¹(T) = coboundaries (dim n-1).
+Restriction res_v: Z¹(T) → Z¹(T\v) maps cocycles to cocycles.
+For bad v: β₁(T\v)=1, so Z¹(T\v) has dim (n-2)+1 = n-1.
+Coboundaries of T\v have dim n-2.
+res_v maps (n-1)-dim space into (n-1)-dim space.
+H¹(T\v) = 1-dim, so res_v CANNOT cover the H¹ direction.
+
+Key: dim(coker(res_v)) = ?
+
+
+--- n=5 ---
+Tested: 720
+  coker(res_v) dim = 1: 840 instances
+
+--- n=6 ---
+Tested: 500
+  coker(res_v) dim = 1: 405 instances
+
+============================================================
+APPROACH 3: OBSTRUCTION SPACE DIMENSION
+============================================================
+
+For β₁(T)=0, each bad vertex v contributes a "hidden cycle" z_v ∈ Z¹(T\v)
+that is NOT in im(res_v). The question: do these hidden cycles live in a
+space of dimension ≤ 3?
+
+More precisely: consider the UNION of all Z¹(T\v) for bad v.
+Map each to a common ambient space (e.g., R^{all edges of T}).
+How many independent dimensions do the hidden cycles span?
+
+
+--- n=5 ---
+Tested: 720
+Dimension of hidden cycle span: {0: 240, 1: 240, 2: 120, 3: 120}
+Maximum dimension: 3
+*** CONFIRMS |bad| ≤ 3 mechanism: hidden cycles span ≤ 3D ***
+
+--- n=6 ---
+Tested: 1000
+Dimension of hidden cycle span: {0: 445, 1: 315, 2: 179, 3: 61}
+Maximum dimension: 3
+*** CONFIRMS |bad| ≤ 3 mechanism: hidden cycles span ≤ 3D ***

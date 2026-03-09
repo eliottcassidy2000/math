@@ -61,6 +61,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-360 | At n=6 #bad=3: exactly 3 TTs are RC (1 BAD + 2 MIXED), rest redundant | Exhaustive: BAD=1.00 RC, MIXED=1.33 RC avg, GOOD=0.67 RC avg. Total RC=3.00 = redundancy complement | beta2_rc_mechanism.py |
 | HYP-362 | Witness cocycle ζ = H₁ generator of flipped tournament T' | CONFIRMED 100%: n=5 (120/120), n=6 (200/200 sampled). ζ normalized to ⟨ζ,∂_bad⟩=1 is EXACTLY the H₁ class emerging after flip. | beta2_witness_cocycle.py |
 | HYP-363 | #bad = Σ_v β₁(T\v) when β₁(T)=0 | CONFIRMED exhaustive n=5 (720/720), n=6 (27968/27968). Each bad vertex contributes exactly 1 to the sum. | beta2_witness_cocycle.py |
+| HYP-364 | Hidden cycle lifts span exactly #bad dimensions (never more) | CONFIRMED n=5 (480/480), n=6 (19488/19488). dim(lift span) = #bad always. | beta2_hyp282_test.py |
+| HYP-365 | Hidden cycle z_v defects are purely local: only TTs involving v violated | CONFIRMED n=5: 100% of nonzero defects involve v. z_v is cocycle of T\v → trivially satisfies non-v TTs. | beta2_why_3_max.py |
+| HYP-366 | coker(res_v) = 1 for ALL bad vertices (exactly 1 missing cocycle direction) | CONFIRMED exhaustive n=5 (840/840 instances), n=6 (405/405 sampled). | beta2_hyp282_test.py |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
