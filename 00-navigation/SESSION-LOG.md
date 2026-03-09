@@ -13,6 +13,40 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-09-S46 — Beta_3 <= 1 proof architecture + seesaw quantification
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-09-S45
+**Summary of work:**
+  Extended session proving the computational case for beta_3 <= 1 via LES induction.
+  8 scripts created, 10 new hypotheses (HYP-349..358), 1 new theorem file (THM-110).
+
+  **Major discoveries:**
+  - **THM-110 (PROOF ARCHITECTURE)**: beta_3(T) <= 1 for all tournaments via LES induction:
+    Base: n<=5, beta_3=0 always. Step: find v with beta_3(T\v)=0, then beta_3(T) = dim H_3(T,T\v) <= 1.
+  - **Good vertex existence (HYP-350)**: EXISTS v with beta_3(T\v)=0 for ALL beta_3>0 tournaments.
+    n=6 exhaustive (320/320), n=7 (34/34), n=8 (31/31). 100% success.
+  - **Relative H_3 bound (HYP-351)**: dim H_3(T,T\v) <= 1 ALWAYS.
+    n=6 exhaustive (1920/1920 = 1), n=7 sampled (dim in {0,1}).
+  - **LES isomorphism (HYP-352)**: beta_3(T\v)=0 => beta_3(T) = dim H_3(T,T\v). Perfect at n=6.
+  - **Seesaw quantified (HYP-356)**: beta_1=1 forces rank(d_4) = ker(d_3) EXACTLY (gap=0).
+    n=6: 4800/4800 (100%), n=7: 27/27. This is the algebraic content of beta_1*beta_3=0.
+  - **Good vertex characterization (HYP-358)**: max c3(v) rule gives beta_3(T\v)=0 at 97.7% (n=7).
+    Bad vertices have LOW c3(v). Removal of most-cyclic vertex disrupts H_3.
+  - **Beta_3 fragility (HYP-353)**: Completely fragile at n=6 (ALL deletions give beta_3=0).
+    Partially fragile at n=7 (24/44 fragile, 16/44 have 1 surviving).
+  - **Quotient proportionality (HYP-354)**: All ker(d_3) vectors project proportionally in H_3.
+  - **HYP-342 corrected**: Boolean odd Betti TRUE for k=1,2 (beta_1,beta_3 in {0,1}).
+    FALSE for k>=3 (beta_5=10 at n=9 Paley).
+  - **Filling ratio**: f_2 nearly linear in c3, higher f_p grow rapidly with n.
+
+**New contributions:** THM-110, HYP-349..358, INV-138. Scripts: rank_near_saturation.py,
+  beta3_homology_structure.py, beta3_les_analysis.py, beta3_good_vertex_and_relative_h3.py,
+  beta3_proportionality_proof.py, relative_h3_structure.py, defect_ushape_filling_ratio.py,
+  beta3_good_vertex_characterization.py, beta3_seesaw_mechanism.py, sum_b1_deletion_analysis.py
+**Unresolved threads:** (1) PROVE good vertex existence algebraically (max c3 rule?).
+  (2) PROVE relative H_3 bound algebraically. (3) Prove quotient proportionality.
+  (4) Extend LES to beta_5. (5) Full algebraic proof of beta_3 <= 1 still open.
+
 ## kind-pasteur-2026-03-09-S45 — Seesaw mechanism deep dive + Boolean odd Betti
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-09-S44

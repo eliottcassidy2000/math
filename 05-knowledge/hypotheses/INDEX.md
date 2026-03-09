@@ -54,6 +54,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-353 | beta_3 completely fragile at n=6: ALL 6 deletions give beta_3=0 | 320/320 exhaustive. At n=7: 24/44 fragile, 16/44 have 1 surviving, 4/44 have 2 surviving | kind-pasteur-S46 |
 | HYP-354 | Quotient proportionality: all ker(d_3) basis vectors project proportionally to H_3 | Exhaustive n=6 Type B (240/240). Cokernel vector in ker(d_3) has dim 7 at n=6, varies by tournament | kind-pasteur-S46 |
 | HYP-355 | H_3 generator at n=6 Type B uses ALL C(6,4)=15 vertex 4-subsets (36 paths) | 240/240 Type B. Type A uses 9 paths on 9 subsets. Structure rigid within isomorphism class | kind-pasteur-S46 |
+| HYP-356 | beta_1=1 forces rank(d_4) = ker(d_3) exactly (perfect saturation, gap=0) | n=6: 4800/4800 (100%), n=7: 27/27 (100%). ker(d_3) ranges 3-18 (n=6) and 12-49 (n=7) but gap ALWAYS 0 when beta_1=1. This IS the seesaw: extra Omega_4 content fills extra ker(d_3) | kind-pasteur-S46 |
+| HYP-357 | ker(d_3) = dim(Omega_3) - dim(Omega_2) + rank(d_2) (seesaw formula) | Exact formula, verified 32768/32768 at n=6. Follows from beta_2=0 (THM-108): rank(d_3)=ker(d_2) | kind-pasteur-S46 |
+| HYP-358 | Good vertex selection rule: max c3(v) gives beta_3(T\v)=0 at 97.7% | n=7: 43/44 success. Bad vertices have LOW c3(v) (1-4 vs good's 4-7). Intuition: removing the most cyclic vertex disrupts H_3 | kind-pasteur-S46 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
