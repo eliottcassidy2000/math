@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51g — Bad-TT coefficient structure: α = ±1/√2 universal
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51f
+**Summary of work:**
+  Tested Grok's B₁-proof via bad-TT coefficient ubiquity. KEY FINDINGS:
+  - z_v MUST use bad-TT boundary — CANNOT be expressed without it (HYP-372, 100%)
+  - Bad-TT coefficient |α| = 1/√2 UNIVERSAL for all z_v, all tournaments (HYP-373)
+  - Sign pattern is NOT determined by TT position — all 8 sign patterns occur
+  - Grok's "3D subspace" claim is wrong: there's 1 bad-TT contributing 1D, not 3D
+  - But α≠0 ubiquity CONFIRMS RC from a new angle: z_v has essential bad-TT component
+**New contributions:** HYP-372, HYP-373
+**Unresolved threads:** WHY #bad ≤ 3 still OPEN — bad-TT ubiquity doesn't bound #bad
+
 ## opus-2026-03-09-S52 — beta_3 obstruction + exact LES equation + good vertex analysis
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51 (continued from context summary)

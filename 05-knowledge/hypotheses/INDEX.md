@@ -68,6 +68,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-368 | Non-bad vertex subtournaments have zero redundancy when #bad=3 (n=5) | CONFIRMED exhaustive n=5: 240/240 non-bad T\\w have redundancy=0. At n=6: mixed (0,1,2). | beta2_redei_telescope.py |
 | HYP-369 | Bad vertices biased toward HP endpoints (positions 0, n-1) | CONFIRMED n=5,6: endpoints ~30% overrepresented vs uniform. | beta2_redei_telescope.py |
 | HYP-370 | All hidden cycle lifts z_v ∈ B₁ = im(∂₂) | CONFIRMED exhaustive n=5 (480/480), n=6 (1000/1000): rank_C₁/B₁ = 0 for ALL. Each z_v is a linear combination of TT boundaries. The quotient C₁/B₁ sees NOTHING — lifts are independent WITHIN B₁, not outside it. | beta2_quotient_rank.py |
+| HYP-372 | z_v MUST use bad-TT boundary (can't be expressed without it) | CONFIRMED 100%: n=5 (360/360), n=6 (84/84). Removing bad-TT column makes z_v inexpressible. Consistent with RC. | beta2_badtt_coeff.py |
+| HYP-373 | Bad-TT coefficient |α_bad| = 1/√2 universal for all z_v | CONFIRMED n=5 (120 tournaments, all α = ±0.707107). |α_bad|/max|α| = 1.0 always. Sign pattern not determined by TT position. | beta2_badtt_coeff.py |
 | HYP-371a | EXACT: H_3(T,T\v) = beta_3(T) - rank(i_*) when beta_2=0 | LES + beta_2(T\v)=0 gives delta=0, j_* surjective. Exact, not inequality. Verified n=6 exhaustive | opus-S52 |
 | HYP-371b | beta_3(T)=2 impossible: requires ALL deletions beta_3=1, never occurs | n=7: max 2/7 deletions have beta_3=1 (300 samples). n=8: 0/100 have all-beta_3-positive deletions | opus-S52 |
 | HYP-371c | Relative dim(R_1)=n-1 always, ker(d_1^rel)=n-2 always | R_1 = arcs incident to v (fixed for tournaments). d_1^rel has rank 1 (projects to R_0={v}). | opus-S52 |

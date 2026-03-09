@@ -1,0 +1,58 @@
+============================================================
+BAD-TT COEFFICIENT IN z_v = Σ α_j ∂₂(TT_j)
+============================================================
+
+--- n=5 ---
+Total decompositions: 360
+α_bad ≠ 0: 360 (100.0%)
+α_bad = 0: 0 (0.0%)
+|α_bad|/max|α|: mean=1.0000, min=1.0000
+
+--- n=6 ---
+Total decompositions: 84
+α_bad ≠ 0: 84 (100.0%)
+α_bad = 0: 0 (0.0%)
+|α_bad|/max|α|: mean=1.0000, min=1.0000
+
+============================================================
+IS THE TT-BOUNDARY DECOMPOSITION UNIQUE?
+============================================================
+
+When redundancy > 0, the decomposition z_v = Σ α_j ∂(TT_j) is NOT unique.
+The null space of ∂₂ (right null space) gives freedom in choosing coefficients.
+Grok's α_{v,bad-TT}≠0 claim might depend on the choice of decomposition.
+
+Question: Is α_bad ALWAYS nonzero, or can we choose coefficients to make it 0?
+This is equivalent to: can z_v be written ONLY using non-bad TT boundaries?
+
+
+--- n=5 ---
+z_v CAN avoid bad-TT: 0
+z_v MUST use bad-TT: 360
+MUST use rate: 100.0%
+*** z_v REQUIRES bad-TT boundary — consistent with RC! ***
+
+--- n=6 ---
+z_v CAN avoid bad-TT: 0
+z_v MUST use bad-TT: 84
+MUST use rate: 100.0%
+*** z_v REQUIRES bad-TT boundary — consistent with RC! ***
+
+============================================================
+TT-BOUNDARY SUBSPACE STRUCTURE
+============================================================
+
+Example: bits=41, bad=[1, 2, 4], #TTs=6
+  1-bad TTs (1): ∂₂-rank = 1
+    TT(3, 2, 0)
+  2-bad TTs (4): ∂₂-rank = 4
+    TT(0, 4, 1)
+    TT(2, 0, 1)
+    TT(4, 1, 3)
+    TT(4, 3, 2)
+  3-bad TTs (1): ∂₂-rank = 1
+    TT(4, 2, 1)
+  Full ∂₂ rank: 6
+  dim(B₁) = 6
+  Rank without 3-bad TT: 5
+  Rank drop when removing bad-TT: 1
