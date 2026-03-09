@@ -34,11 +34,12 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-326 | beta_2=0 at n=9 (0/500) and n=10 (0/100) | Extends HYP-249/276. Now confirmed n<=10 | kind-pasteur-S45 |
 | HYP-327 | Removing 1 edge from tournament can create beta_2>0 | 13/500 at n=6 (2.6%). Completeness is SHARP condition | kind-pasteur-S45 |
 | HYP-328 | 3-path NA face distribution converges to 25/50/25 | NOT per-tournament (transitive=100/0/0). Average over ensemble only. Max dev: 0.75(n=5)->0.21(n=8) | kind-pasteur-S45 |
-| HYP-329 | dim(Omega_2) = C(n,3) + 2*c3 - e_cyc | PROVED: THM-097 gives dim=|A2|-#NA; |A2|=C(n,3)+2*c3 (HYP-268); #NA = e_cyc (edges in 3-cycles). Exhaustive n=4,5,6 | kind-pasteur-S45 |
-| HYP-330 | e_cyc NOT determined by c3 alone | Multiple e_cyc values per c3 at n=5,6 (depends on cycle arrangement/sharing) | kind-pasteur-S45 |
-| HYP-331 | Defect rate wave: beta_1 decreasing, beta_3 increasing with n | n=5: (29.7%,0%), n=6: (14.6%,1%), n=7: (5.8%,7.2%), n=8: (1%,21%) | kind-pasteur-S45 |
-| HYP-332 | beta_3*beta_5=0 for all tournaments n<=8 | 0 violations in 600+ samples n=7,8. Trivially true since beta_5=0 at n<=7 | kind-pasteur-S45 |
-| HYP-333 | Only 3-5 distinct Betti profiles per n | n=5:2, n=6:3, n=7:3, n=8:5 profiles. Extremely constrained | kind-pasteur-S45 |
+| HYP-336 | dim(Omega_2) = C(n,3) + 2*c3 - e_cyc | PROVED: THM-097 gives dim=|A2|-#NA; |A2|=C(n,3)+2*c3 (HYP-268); #NA = e_cyc (edges in 3-cycles). Exhaustive n=4,5,6 | kind-pasteur-S45 |
+| HYP-337 | e_cyc NOT determined by c3 alone | Multiple e_cyc values per c3 at n=5,6 (depends on cycle arrangement/sharing) | kind-pasteur-S45 |
+| HYP-338 | Defect rate wave: beta_1 decreasing, beta_3 increasing with n | n=5: (29.7%,0%), n=6: (14.6%,1%), n=7: (5.8%,7.2%), n=8: (1%,21%) | kind-pasteur-S45 |
+| HYP-339 | Adjacent-odd seesaw: beta_{2k-1}*beta_{2k+1}=0 for ALL tournaments | PERFECT: 0 violations in 1500+ samples n=6-8. Includes β₁β₃, β₃β₅, β₅β₇ | kind-pasteur-S45 |
+| HYP-340 | At most one nonzero beta_p (p>=1) in generic tournament | 99.8% at n=7, 100% at n=8 (500 samples). Rare exceptions: [1,1,0,0,1,0,0] at n=7 (0.1%) | kind-pasteur-S45 |
+| HYP-341 | beta_4 onset at n=7 (not n=8) | beta_4=6 (Paley T_7) and beta_4=1 found at n=7 with 1000 samples (0.2%). Missed in earlier 200-sample runs | kind-pasteur-S45 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
