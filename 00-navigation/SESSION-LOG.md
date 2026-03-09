@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51n — Compat-subspace S dim=3 EXHAUSTIVELY refuted; span = full R^n
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51m
+**Summary of work:**
+  Definitive test: bad indicator d(T)=(β₁(T\v₁),...,β₁(T\vₙ)) spans ALL of R^n,
+  not Grok's claimed 3D subspace. n=5: dim=5 (26 distinct patterns), n=6: dim=6
+  (42 patterns), n=7: dim=7 (64 patterns). ALL subsets of size ≤3 appear as bad
+  sets at n=5,6. Every vertex, pair, triple can be bad. No "3 global relations
+  from H₁(T)=0" constrain the indicator. β₁(T)=0 is a SINGLE rank condition on
+  the chain complex, not "3 relations" on deletion homology.
+**New contributions:** HYP-385c (REFUTED), beta2_compat_subspace_test.py
+**Unresolved threads:** WHY β₁=0 ⟹ #bad≤3 remains genuinely open
+
 ## opus-2026-03-09-S54 — CONSECUTIVE SEESAW + LES decomposition for beta_3 proof
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S53
