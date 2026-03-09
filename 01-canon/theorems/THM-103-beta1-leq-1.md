@@ -79,13 +79,21 @@ If HYP-282 is proved, this closes the β₂ = 0 proof for n ≥ 4.
 
 **Rank-critical TTs**: A transitive triple τ is rank-critical if removing it from Ω₂ drops rank(∂₂).
 - #RC = 0 when redundancy (#TTs - rank) is large enough (≥3 at n=5, ≥8 at n=6)
-- With β₁=0 and #bad=3: redundancy=0, ALL TTs are RC including bad-vertex TT (CORRECTED from earlier erroneous claim)
 - #RC correlates with t₃ (r=0.69 at n=6), not with #bad (r=0.46)
 - Pattern at n=5 (rank=6): #TTs=10→0RC, 9→0RC, 8→1RC, 7→3RC, 6→6RC
 
-**Flip obstruction mechanism**: Arc flip is NOT single-TT removal — it globally restructures Ω₂
-(many TTs added/removed). The flip among bad vertices reduces rank(∂₂) by 1 through this
-global effect, not through the bad-vertex TT being independently critical.
+**Bad-vertex TT is ALWAYS rank-critical** (verified exhaustive n=5,6):
+- At n=5: #bad=3 ⟹ redundancy=0 (ALL TTs are RC, including bad-vertex TT)
+- At n=6: #bad=3 ⟹ redundancy∈{2,3} (NOT zero!), but bad-vertex TT is STILL RC
+  - 4320 total: 2880 with (#TTs=13, red=3), 1440 with (#TTs=12, red=2)
+  - 100% bad-vertex TT rank-critical despite nontrivial redundancy
+- Bad vertices ALWAYS form a TT (never a 3-cycle) — verified 100% at n=5,6
+
+**Flip obstruction mechanism**: Flipping the source→sink edge of the bad-vertex TT:
+- Destroys exactly 1 TT (the bad-vertex TT), creates 0 new TTs
+- Drops rank(∂₂) by exactly 1 (because the bad-vertex TT is rank-critical)
+- Creates a 3-cycle among the 3 bad vertices, giving β₁ = 1
+- This is a SURGICAL operation, not a global restructuring
 
 ## Related
 

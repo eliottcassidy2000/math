@@ -212,8 +212,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-329 | dim(Z₁) = C(n,2)-(n-1) universal for all tournaments | CONFIRMED exhaustive n=5,6,7. rank(∂₁)=n-1 always (complete underlying graph). β₁ depends entirely on rank(∂₂). Note: equivalent to HYP-318 | beta2_rank_critical.py |
 | HYP-330 | rank(∂₂\|Ω₂) = C(n,2)-n+1-β₁ | CONFIRMED exhaustive n=5 (1024/1024), n=6 (32768/32768). Zero violations. | beta2_rank_critical.py |
 | HYP-331 | dim(ker(∂₂^T)) = n-1+β₁ | CONFIRMED exhaustive n=5,6. Clean dual formula. | beta2_bad_tt_basis.py |
-| HYP-332 | Bad-vertex TT is rank-critical (removing drops rank(∂₂)) | CONFIRMED (corrected): #bad=3 → t₃=4, #TTs=6=rank, zero redundancy, ALL TTs are RC. Earlier REFUTED claim was due to bug in rank-critical script (wrong #bad grouping). Direct verification: 120/120 at n=5, 50/50 at n=6. | beta2_cascade_correct.py |
-| HYP-333 | #RC=0 when redundancy (#TTs-rank) ≥ threshold | CONFIRMED: threshold=3 at n=5, =8 at n=6. Tournaments with 3 bad vertices always have high redundancy. | beta2_rank_critical.py |
+| HYP-332 | Bad-vertex TT is rank-critical (removing drops rank(∂₂)) | CONFIRMED exhaustive n=5,6: n=5 (120/120), n=6 (4320/4320). At n=5: zero redundancy (all TTs RC). At n=6: redundancy∈{2,3} but bad-TT STILL RC. Bad verts always form TT, never 3-cycle. | beta2_badtt_rc_n6.py |
+| HYP-333 | #RC=0 when redundancy (#TTs-rank) ≥ threshold | CONFIRMED: threshold=3 at n=5, =8 at n=6. Note: #bad=3 at n=5→redundancy=0, at n=6→redundancy∈{2,3} (nonzero). | beta2_rank_critical.py |
 | HYP-334 | Flip obstruction: 3-cycle among ALL bad vertices forces β₁≥1 | CONFIRMED: 0 counterexamples at n=5 (720), n=6 (27968), n=7 (479). Flipping bad TT→3-cycle: 100% force β₁=1 | beta2_flip_deep.py |
 | HYP-335 | Minimum #bad when β₁=1 grows with n | CONFIRMED: min_bad=3(n=5), 4(n=6), 5(n=7). β₁=1 bad sub-tournament often SC (55% at n=6) | beta2_flip_deep.py |
 

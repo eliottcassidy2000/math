@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51 — Flip obstruction deep dive + rank-criticality at n=6
+**Account:** opus
+**Continuation of:** opus-2026-03-08-S50 (context continuation)
+**Summary of work:**
+  Deep investigation of flip obstruction mechanism for β₂=0 proof, collaborating with Grok.
+  Created 8+ scripts, confirmed/corrected multiple hypotheses.
+
+  **Major findings:**
+  - **Bad-vertex TT ALWAYS rank-critical**: Exhaustive at n=5 (120/120) and n=6 (4320/4320)
+  - **n=6 has nonzero redundancy**: #bad=3 → redundancy∈{2,3}, NOT zero like n=5
+    - 2880 with (#TTs=13, red=3), 1440 with (#TTs=12, red=2)
+  - **Bad vertices ALWAYS form TT** (never 3-cycle) — 100% at n=5,6
+  - **Flip is surgical**: removes exactly 1 TT, creates 0 new, drops rank by 1
+  - **Corrected multiple bugs**: wrong "bad vertex" definition in scripts, wrong flip (all 3 edges vs 1)
+  - **#bad vs t₃**: perfect correlation at n=5 (#bad=3↔t₃=4), extends at n=6 (#bad=3→t₃∈{7,8})
+  - **Universal formulas confirmed**: dim(Z₁), rank(∂₂|Ω₂), dim(ker(∂₂^T))
+
+**New contributions:** Updated THM-103 (rank-critical section), HYP-329-335, 8 scripts + outputs
+**Unresolved threads:** Prove |bad|≤3 algebraically; extend rank-criticality proof to general n
+
 ## kind-pasteur-2026-03-09-S46 — Beta_3 <= 1 proof architecture + seesaw quantification
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-09-S45

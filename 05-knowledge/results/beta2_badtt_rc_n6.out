@@ -1,0 +1,15 @@
+T1: bad=[1, 4, 5], #TTs=13, rank=10, redundancy=3, bad-TT RC=True
+T2: bad=[1, 4, 5], #TTs=13, rank=10, redundancy=3, bad-TT RC=True
+T3: bad=[1, 2, 5], #TTs=13, rank=10, redundancy=3, bad-TT RC=True
+T4: bad=[1, 2, 5], #TTs=13, rank=10, redundancy=3, bad-TT RC=True
+T5: bad=[0, 2, 5], #TTs=13, rank=10, redundancy=3, bad-TT RC=True
+
+=== SUMMARY n=6 ===
+Total with beta1=0 and #bad=3: 4320
+Bad vertices form TT: 4320
+Bad vertices NOT TT: 0
+Bad-vertex TT is rank-critical: 4320
+Bad-vertex TT is NOT rank-critical: 0
+Total #bad=3 at n=6: 4320
+Redundancy histogram: {2: 1440, 3: 2880}
+#TTs histogram: {12: 1440, 13: 2880}
