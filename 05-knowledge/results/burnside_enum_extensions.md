@@ -8,13 +8,16 @@
 |----------|------|----------|-------------|-----------|--------|
 | A000568 | Tournaments | 77 | 201 | +124 | Complete |
 | A002785 | Self-comp oriented graphs | 100 | 300 | +200 | Complete |
-| A000171 | Self-comp graphs | 100 | 404 | +304 | Complete |
+| A000171 | Self-comp graphs | 100 | 404+ | +304+ | Running (to 500) |
 | A000273 | Digraphs | 65 | 100 | +35 | Complete |
 | A000595 | Binary relations | 51 | 100 | +49 | Complete |
-| A001174 | Oriented graphs | 50 | 80 | +30 | Complete |
+| A001174 | Oriented graphs | 50 | 80→100 | +30→+50 | Extending |
 | A000088 | Simple graphs | 88 | 96 | +8 | Complete |
 | A000666 | Symmetric relations | 81 | 96 | +15 | Complete |
 | A003086 | Self-comp digraphs | 80 | 100 | +20 | Complete |
+| A005639 | Self-converse oriented graphs | 50 | 80 | +30 | Complete |
+| A002499 | Self-converse digraphs | 50 | 80 | +30 | Complete |
+| A002854 | Two-graphs / Euler graphs | 88 | 120 | +32 | Running |
 
 ### k-uniform hypergraph sequences
 
@@ -34,7 +37,7 @@
 
 | Sequence | Name | OEIS had | We computed | New entries | Status |
 |----------|------|----------|-------------|-------------|--------|
-| A008406 | Graphs by edges | rows 1-20 (1350) | rows 1-50 | +many | Running |
+| A008406 | Graphs by edges | rows 1-20 (1350) | rows 1-35+ | +many | Running (to 50) |
 | A052283 | Digraphs by arcs | rows 0-20 (2681) | rows 1-30 (9020) | +6340 | Complete |
 
 ### Derived sequences via inverse Euler transform (euler_transform.py)
@@ -54,6 +57,9 @@
 |----------|------|----------|-------------|-----------|---------|
 | A059735 | Complementary pairs tournaments | 50 | 200 | +150 | (A000568 + A002785)/2 |
 | A334335 | InvEuler(A000568) | 76 | 200 | +124 | InvEuler(A000568) |
+| A007869 | Graphs w/ even # edges | 50 | 95 | +45 | (A000088 + A000171)/2 |
+| A054928 | Digraphs w/ even # arcs | 50 | 100 | +50 | (A000273 + A003086)/2 |
+| A054934 | Oriented graphs up to arc reversal | 50 | 80 | +30 | (A001174 + A005639)/2 |
 
 ### New sequences (not yet in OEIS)
 
@@ -62,6 +68,10 @@
 | Connected 3-uniform hypergraphs | 80 | InvEuler(A000665) |
 | Connected 4-uniform hypergraphs | 47 | InvEuler(A051240) |
 | Connected 5-uniform hypergraphs | 40 | InvEuler(A051249) |
+| Connected 6-uniform hypergraphs | 35 | InvEuler(A309860) |
+| Connected self-comp digraphs | 100 | InvEuler(A003086) |
+| Connected self-converse oriented | 80 | InvEuler(A005639) |
+| Connected self-converse digraphs | 80 | InvEuler(A002499) |
 
 ## Key algorithmic features
 
@@ -69,7 +79,7 @@
 2. **Bucket accumulation**: Group LCD/z contributions by t-value, shift by 2^t at end
 3. **Atomic work queue**: Load-balanced multi-threading via C11 atomics
 4. **Precomputed factors**: km_fac[pi][m] = k^m * m! avoids repeated GMP calls
-5. **Unified framework**: Single C file handles 9 different OEIS sequences
+5. **Unified framework**: Single C file handles 12 different OEIS sequences
 6. **General k-uniform**: New general enumerator for any k-uniform hypergraphs
 7. **Burnside orbit counting**: For k≥3, uses (1/L)*sum_{t=0..L-1} [x^k] generating function
 8. **Divisor-signature Mobius**: For k=4,5 hypergraphs, avoids L iteration (64x-130x speedup)
@@ -79,7 +89,7 @@
 
 | File | Sequences | Notes |
 |------|-----------|-------|
-| burnside_enum_v2.c | 9 core sequences (incl. A003086) | Compressed partition, base-2 and base-3 |
+| burnside_enum_v2.c | 12 sequences (A000568/273/595/88/666/1174/2785/171/3086/5639/2499/2854) | Compressed partition, base-2 and base-3 |
 | a000665_gmp_enum.c | A000665 only | Specialized k=3 with closed-form edges |
 | a002785_gmp_enum.c | A002785 only | Self-comp oriented graphs |
 | k_uniform_gmp_enum.c | Any k-uniform | General, uses Burnside orbit counting |
@@ -89,6 +99,7 @@
 | a008406_gmp.c | A008406 triangle | Graphs by edges, pair orbit GF |
 | a052283_gmp.c | A052283 triangle | Digraphs by arcs, directed pair orbit GF |
 | euler_transform.py | Derived sequences | InvEuler, OGF inversion |
+| derive_trivial_sequences.py | A007869, A054928 | Averages of existing sequences |
 
 ## Sequence-specific formulas
 
@@ -105,6 +116,9 @@ All core sequences use: a(n) = (1/n!) * sum_{p partition} permcount(scale*p) * b
 | A002785 | n/2 | odd only | 2 | 2 | 2*sum_{i<j} gcd + sum v_i |
 | A000171 | n/4 | all | 4 | 2 | 4*sum_{i<j} gcd + 2*sum v_i |
 | A003086 | n/2 | all | 2 | 2 | 4*sum_{i<j} gcd + 2*sum v_i - #v |
+| A005639 | n | all | 1 | 3 | gcd_even + self_even (see code) |
+| A002499 | n | all | 1 | 2 | gcd + gcd_even + self_2499 |
+| A002854 | n | all | 1 | 2 | gcd + self(floor(r/2)-1) + [has_odd_part] |
 
 For k-uniform hypergraphs (k≥3): edges = orbits of k-subsets, computed via Burnside on cyclic group.
 

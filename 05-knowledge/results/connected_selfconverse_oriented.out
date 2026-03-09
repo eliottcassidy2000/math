@@ -1,0 +1,13 @@
+=== Connected self-converse oriented graphs (InvEuler A005639) ===
+Computed 80 terms (n=1..80)
+  b(1) = 1
+  b(2) = 1
+  b(3) = 3
+  b(4) = 12
+  b(5) = 81
+  b(6) = 727
+  b(7) = 11484
+  b(8) = 252240
+  b(9) = 10173482
+  b(10) = 587293728
+  Saved 80 values to b_connected_selfconverse_oriented.txt
