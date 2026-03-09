@@ -1,0 +1,79 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\omega_palindrome_mechanism.py:52: SyntaxWarning: invalid escape sequence '\{'
+  (v_0,...,v_p) \u2192 the "complementary" path on V\{v_0,...,v_p}.
+======================================================================
+Paley T_7: detailed |A_p| and dim(Omega_p) analysis
+======================================================================
+
+p=0: |A_p|=7, dim(Omega_p)=7
+  Vertex sets: 7 (= C(7,1)=7)
+  Paths per vertex set: {1: 7}
+  Omega constraint rank: 0
+
+p=1: |A_p|=21, dim(Omega_p)=21
+  Vertex sets: 21 (= C(7,2)=21)
+  Paths per vertex set: {1: 21}
+  Omega constraint rank: 0
+
+p=2: |A_p|=63, dim(Omega_p)=42
+  Vertex sets: 35 (= C(7,3)=35)
+  Paths per vertex set: {1: 21, 3: 14}
+  Omega constraint rank: 21
+
+p=3: |A_p|=147, dim(Omega_p)=63
+  Vertex sets: 35 (= C(7,4)=35)
+  Paths per vertex set: {3: 14, 5: 21}
+  Omega constraint rank: 84
+
+p=4: |A_p|=273, dim(Omega_p)=63
+  Vertex sets: 21 (= C(7,5)=21)
+  Paths per vertex set: {13: 21}
+  Omega constraint rank: 210
+
+p=5: |A_p|=315, dim(Omega_p)=42
+  Vertex sets: 7 (= C(7,6)=7)
+  Paths per vertex set: {45: 7}
+  Omega constraint rank: 273
+
+p=6: |A_p|=189, dim(Omega_p)=21
+  Vertex sets: 1 (= C(7,7)=1)
+  Paths per vertex set: {189: 1}
+  Omega constraint rank: 168
+
+======================================================================
+Complement map analysis
+======================================================================
+
+Does each (n-1-p)-element complement have a unique Ham path in Paley?
+  p=0 (comp size 7): comp Ham path counts: {45: 7}
+  p=1 (comp size 6): comp Ham path counts: {13: 21}
+  p=2 (comp size 5): comp Ham path counts: {3: 14, 5: 21}
+  p=3 (comp size 4): comp Ham path counts: {1: 21, 3: 14}
+  p=4 (comp size 3): comp Ham path counts: {1: 21}
+  p=5 (comp size 2): comp Ham path counts: {1: 7}
+  p=6 (comp size 1): comp Ham path counts: {1: 1}
+
+======================================================================
+Palindrome pattern: dim(Omega_p) = dim(Omega_{n-2-p})?
+======================================================================
+Paley T_7 omega = [7, 21, 42, 63, 63, 42, 21]
+Index: p=0,1,2,3,4,5,6
+n-2-p: 5,4,3,2,1,0,-1
+Omega_-1: 42,63,63,42,21,7,_
+NOT palindromic with shift. Let's check p vs n-1-p:
+Omega_0 vs Omega_6: 7 vs 21 - NO
+Omega_1 vs Omega_5: 21 vs 42 - NO
+Omega_2 vs Omega_4: 42 vs 63 - NO
+So the palindrome is in the LATTER half only?
+Actually [7,21,42,63|63,42,21] - symmetry at the midpoint p=3!
+dim(Omega_p) = dim(Omega_0) for p >= 3: 63=63, 42=42, 21=21
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\omega_palindrome_mechanism.py", line 276, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\omega_palindrome_mechanism.py", line 221, in main
+    print(f"But p < 3 does NOT match: 7\u226021, 21\u226042, 42\u226063")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2260' in position 27: character maps to <undefined>

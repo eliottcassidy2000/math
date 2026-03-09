@@ -148,6 +148,12 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-288 | f(v) >= n-3 necessary for v to be bad (f = freed cycle count) | CONFIRMED: n=5-8, 0 violations. Strict separation at n=5,6 (min_bad_f > max_good_f). Overlap at n>=7. | beta2_f_threshold.py |
 | HYP-289 | Domination direction in transitive bad triple: top=(above,0), mid=(0,0), bot=(0,below) | CONFIRMED 100% at n=6 kappa>=2 (1440/1440). Top uniquely dominates from above only, bot from below only, mid has no unique domination | beta2_kappa2_good_vertex.py |
 | HYP-290 | Coverage(u) < n-1 for some u in every b1=0 tournament | TRUE at n=5,6 (exhaustive). FALSE at n>=7: 17/4746 have all full coverage. Approach insufficient. | beta2_coverage.py |
+| HYP-291 | β₃>0 at n=6 iff H = max in score class | CONFIRMED exhaustive 32768/32768. β₃=1 at (1,1,1,4,4,4) H=9 and (2,2,2,3,3,3) H=45 — both are score-class maxima. 0 violations. | beta3_n6_characterization.py |
+| HYP-292 | β₄>0 at n=7 iff H=189 (Paley/BIBD class) among regular | CONFIRMED: 6/6 H=189 have β₄=6, 52/52 others β₄=0 (exhaustive regular sampling). β₄>0 EXACTLY picks out H-maximizers within regular tournaments | beta4_characterization.py |
+| HYP-293 | β_{n-3}>0 ↔ H-maximizer within score class (general n) | n=6: CONFIRMED (β₃↔H-max). n=7: CONFIRMED for regular (β₄↔H=189). n=5: β₂=0 always (vacuously true?). Pattern: highest nonzero odd Betti detects H-maximizers | betti_hmax_connection.py |
+| HYP-294 | Paley T_7 deletion has β₃=1 at n=6 | CONFIRMED: T_7-v has scores (2,2,2,3,3,3), H=45, β₃=1. Exactly half of H=45 tours have β₃=1 (240/480); the other 240 have β₁=1 instead. The β₃=1 ones ARE the Paley deletions | beta3_paley_deletion.py |
+| HYP-295 | β₁ and β₃ mutually exclusive at n=6 | CONFIRMED exhaustive: 0/32768 have both β₁>0 and β₃>0. chi = 1 - β₁ - β₃ ∈ {0,1} | beta3_n6_characterization.py |
+| HYP-296 | chi ∈ {0,1} for n ≤ 6 but chi=7 for Paley T_7 | CONFIRMED: chi(Betti)={0,1} exhaustive n=5,6. Paley T_7: chi=7=n. Paley breaks the binary pattern | euler_char_analysis.py |
 
 ---
 
