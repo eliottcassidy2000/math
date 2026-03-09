@@ -1,0 +1,84 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_alldom_proof_algebraic.py:8: SyntaxWarning: invalid escape sequence '\{'
+  - freed(v) must be connected and span V\{v} (by isolation characterization)
+======================================================================
+STEP 1: Bad vertex in all-dom case has score 0 or n-1
+======================================================================
+n=4 (exhaustive): extreme=16, non-extreme=0
+n=5 (exhaustive): extreme=240, non-extreme=0
+n=6 (exhaustive): extreme=3648, non-extreme=0
+n=7 (sampled(10000)): extreme=307, non-extreme=0
+n=8 (sampled(5000)): extreme=27, non-extreme=0
+n=9 (sampled(2000)): extreme=3, non-extreme=0
+
+======================================================================
+STEP 2: Score 0 or n-1 => not in any 3-cycle (trivial)
+======================================================================
+This is trivially true:
+  score 0: v loses to all, so v->x never happens => no cycle through v
+  score n-1: v beats all, so x->v never happens => no cycle through v
+Verification:
+  n=5: violations = 0
+  n=6: violations = 0
+  n=7: violations = 0
+
+======================================================================
+STEP 3: v in no cycle => freed(w) can't span V\{w} for w != v
+======================================================================
+If v is in no 3-cycle, vertex v cannot appear in any cycle.
+freed(w) uses only cycle vertices, so can't include v.
+Thus freed(w) spans at most V\{v,w}, which has n-2 < n-1 vertices.
+n=5 (exhaustive): no extreme-score vertices with freed sets
+n=6 (exhaustive): no extreme-score vertices with freed sets
+n=7 (sampled(10000)): no extreme-score vertices with freed sets
+n=8 (sampled(3000)): no extreme-score vertices with freed sets
+
+======================================================================
+FULL ALGEBRAIC PROOF VERIFICATION
+======================================================================
+Claim: all-dominated + b1=0 => at most 1 bad vertex
+Proof: bad => extreme score => not in cycle => other can't be bad
+
+n=4 (exhaustive): 16 all-dom tournaments
+  at most 1 bad: 16, 2+ bad: 0
+  Step 1 (extreme score): verified=16, fails=0
+
+n=5 (exhaustive): 360 all-dom tournaments
+  at most 1 bad: 360, 2+ bad: 0
+  Step 1 (extreme score): verified=240, fails=0
+
+n=6 (exhaustive): 11168 all-dom tournaments
+  at most 1 bad: 11168, 2+ bad: 0
+  Step 1 (extreme score): verified=3648, fails=0
+
+n=7 (sampled(10000)): 2799 all-dom tournaments
+  at most 1 bad: 2799, 2+ bad: 0
+  Step 1 (extreme score): verified=334, fails=0
+
+n=8 (sampled(5000)): 1174 all-dom tournaments
+  at most 1 bad: 1174, 2+ bad: 0
+  Step 1 (extreme score): verified=28, fails=0
+
+n=9 (sampled(2000)): 412 all-dom tournaments
+  at most 1 bad: 412, 2+ bad: 0
+  Step 1 (extreme score): verified=2, fails=0
+
+n=10 (sampled(1000)): 151 all-dom tournaments
+  at most 1 bad: 151, 2+ bad: 0
+  Step 1 (extreme score): verified=0, fails=0
+
+======================================================================
+BONUS: Why freed(v) connected + spanning => extreme score
+======================================================================
+freed(v) has cycles in W+ = {u:v->u} and W- = {u:u->v}
+Cycles in W+ share no vertices with cycles in W- (partition)
+No shared vertices => no shared edges => not adjacent
+freed(v) connected => all in one side
+freed(v) spanning V\{v} = W+ u W- => other side empty
+=> score = 0 or n-1
+
+n=5 (exhaustive): 240 bad vertices
+  all freed in W+: 120, all in W-: 120, mixed: 0
+n=6 (exhaustive): 3648 bad vertices
+  all freed in W+: 1824, all in W-: 1824, mixed: 0
+n=7 (sampled(10000)): 312 bad vertices
+  all freed in W+: 149, all in W-: 163, mixed: 0

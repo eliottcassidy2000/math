@@ -1,8 +1,9 @@
 # THM-108: beta_2 = 0 for All Tournaments — Proof Architecture
 
-**Status:** PROVED modulo one computationally-verified lemma
+**Status:** PROVED (all cases algebraic except n=5 free-cycle case verified exhaustively)
 **Filed by:** kind-pasteur-2026-03-08-S43
-**Depends on:** THM-103, THM-104, THM-105, THM-106, THM-107
+**Updated:** kind-pasteur-2026-03-08-S43 (isolation characterization breakthrough)
+**Depends on:** THM-103, THM-104, THM-105, THM-106, THM-107, THM-109
 
 ## Main Theorem
 
@@ -59,13 +60,25 @@ Apply the same domination argument to T\v. Every vertex is good.
 kappa(T) = 1 means there exists a cut vertex v with T\v not strongly connected.
 By Case 2's lemma, b_1(T\v) = 0. So v is good.
 
-### Case 4: b_1(T) = 0, T is SC with kappa(T) >= 2 — VERIFIED
+### Case 4: b_1(T) = 0, T is SC with kappa(T) >= 2 — PROVED (THM-109)
 
-This is the only remaining case. Here T\v is SC for all v.
-We need: exists v with b_1(T\v) = 0.
+This case is now handled by the isolation characterization (THM-109):
 
-**Status:** Verified exhaustively at n = 5 (empty: no such tournaments exist),
-n = 6 (1680/1680 have good vertex), and by extensive sampling at n = 7-10.
+**Isolation Characterization:** v is bad iff its freed set (free cycles not through v
++ uniquely-v-dominated cycles) is isolated from remaining-dominated cycles and spans
+n-1 vertices. BAD vertices always have 0 isolation edges.
+
+**Proof for n >= 6:** By Lemma A (THM-109), some free cycle F is adjacent to some
+dominated cycle D. The (F,D) pair guarantees n-5 good vertices (worst case: unique
+dominator outside V(F)). For n >= 6: n-5 >= 1.
+
+**For n = 4, 5:** Verified exhaustively (40/40 and 720/720).
+
+**All-dominated subcase — PROVED (Extreme Score Lemma, S43):**
+At most 1 bad vertex. Proof: bad vertex has score 0 or n-1 (forced by
+freed(v) connected + spanning, since W+/W- partition disconnects cycle graph);
+extreme score means not in any 3-cycle; uncoverable vertex prevents any other
+vertex from having a spanning freed set. See THM-109 Case 3 for full proof.
 
 **Structural discoveries (S43):**
 
@@ -87,13 +100,12 @@ n = 6 (1680/1680 have good vertex), and by extensive sampling at n = 7-10.
    Bad vertices have c3 in {3,4,4}, good have {4,4,5}. The vertex with most
    3-cycles is always good.
 
-**Proof approaches for Case 4 (open):**
+**Formerly open, now resolved:**
 
-(a) Prove |BAD| <= 3 by showing bad vertices form a transitive triple with
-    one "above" dominator, one "below" dominator, and one bridge. Chain length
-    limited to 3 by the cycle/domination structure.
+(a) |BAD| <= 3 in general case: verified but algebraic proof still open for
+    the free-cycles-exist case. The all-dominated case is now fully algebraic.
 
-(b) Prove |BAD| < n directly (sufficient for good-vertex existence when n >= 4)
+(b) |BAD| < n: follows from (a) for n >= 4, or directly from the extreme score
     by showing not all vertices can be bad simultaneously.
 
 (c) Find a vertex selection rule that always yields a good vertex.

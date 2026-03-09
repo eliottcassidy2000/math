@@ -1,0 +1,124 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\beta2_alldom_atmost1bad.py:9: SyntaxWarning: invalid escape sequence '\{'
+  v bad => freed(v) = {C : dom(C) = {v}} is isolated, connected, spans V\{v}
+======================================================================
+PART 1: Two-bad-vertex structure in all-dominated case
+======================================================================
+
+n=5 (exhaustive): 0 bad: 120, 1 bad: 240, 2+ bad: 0
+
+n=6 (exhaustive): 0 bad: 7520, 1 bad: 3648, 2+ bad: 0
+
+n=7 (sampled(10000)): 0 bad: 2497, 1 bad: 307, 2+ bad: 0
+
+n=8 (sampled(3000)): 0 bad: 643, 1 bad: 10, 2+ bad: 0
+
+======================================================================
+PART 2: Structure of bad vertex in all-dominated case
+======================================================================
+
+n=5 (exhaustive): 240 bad vertices in all-dominated case
+  freed count: min=2, max=2, avg=2.0
+  freed span: min=4, max=4, avg=4.0
+  freed connected: 240, not connected: 0
+  dom type: {'above': 120, 'below': 120}
+  score: min=0, max=4, avg=2.0
+  score dist: {np.int64(0): 120, np.int64(4): 120}
+
+n=6 (exhaustive): 3648 bad vertices in all-dominated case
+  freed count: min=3, max=5, avg=3.6
+  freed span: min=5, max=5, avg=5.0
+  freed connected: 3648, not connected: 0
+  dom type: {'above': 1824, 'below': 1824}
+  score: min=0, max=5, avg=2.5
+  score dist: {np.int64(0): 1824, np.int64(5): 1824}
+
+n=7 (sampled(10000)): 354 bad vertices in all-dominated case
+  freed count: min=4, max=8, avg=5.6
+  freed span: min=6, max=6, avg=6.0
+  freed connected: 354, not connected: 0
+  dom type: {'above': 182, 'below': 172}
+  score: min=0, max=6, avg=3.1
+  score dist: {np.int64(0): 172, np.int64(6): 182}
+
+======================================================================
+PART 3: Unique dominator distribution when v is bad (all-dom)
+======================================================================
+
+n=5 (exhaustive): 240 bad vertices
+  Cycles with dom={w} (w!=v, |dom|=1): min=0, max=0, avg=0.0
+  Cycles with v in dom, |dom|>=2: min=0, max=0, avg=0.0
+  #Other unique dominators: min=0, max=0, avg=0.0
+
+n=6 (exhaustive): 3648 bad vertices
+  Cycles with dom={w} (w!=v, |dom|=1): min=0, max=0, avg=0.0
+  Cycles with v in dom, |dom|>=2: min=0, max=1, avg=0.1
+  #Other unique dominators: min=0, max=0, avg=0.0
+
+n=7 (sampled(10000)): 314 bad vertices
+  Cycles with dom={w} (w!=v, |dom|=1): min=0, max=0, avg=0.0
+  Cycles with v in dom, |dom|>=2: min=0, max=2, avg=0.5
+  #Other unique dominators: min=0, max=0, avg=0.0
+
+======================================================================
+PART 4: Hypothetical two-bad analysis — freed-freed adjacency
+======================================================================
+
+n=5 (exhaustive): 240 tournaments with exactly 1 bad vertex
+  freed(v) adj ALL freed(w): 0
+  freed(v) adj SOME freed(w): 0
+  freed(v) adj NO freed(w): 0
+
+n=6 (exhaustive): 3648 tournaments with exactly 1 bad vertex
+  freed(v) adj ALL freed(w): 0
+  freed(v) adj SOME freed(w): 0
+  freed(v) adj NO freed(w): 0
+
+n=7 (sampled(10000)): 331 tournaments with exactly 1 bad vertex
+  freed(v) adj ALL freed(w): 0
+  freed(v) adj SOME freed(w): 0
+  freed(v) adj NO freed(w): 0
+
+n=8 (sampled(3000)): 23 tournaments with exactly 1 bad vertex
+  freed(v) adj ALL freed(w): 0
+  freed(v) adj SOME freed(w): 0
+  freed(v) adj NO freed(w): 0
+
+======================================================================
+PART 5: Two spanning connected freed sets MUST be adjacent
+======================================================================
+n=5 (exhaustive): 0 pairs tested, 0 adjacent, 0 NOT adjacent
+n=6 (exhaustive): 0 pairs tested, 0 adjacent, 0 NOT adjacent
+n=7 (sampled(10000)): 0 pairs tested, 0 adjacent, 0 NOT adjacent
+
+======================================================================
+PART 6: freed(v) vs freed(w) adjacency in restricted(v) graph
+======================================================================
+If v is bad, freed(v) ISOLATED from remaining-dom including freed(w)\v
+So freed(v) NOT adj to freed(w)\v in restricted(v).
+Question: Can this hold for BOTH v and w simultaneously?
+
+n=5 (exhaustive): 360 all-dom tours, 0 with BOTH conditions met and spanning
+
+n=6 (exhaustive): 11168 all-dom tours, 0 with BOTH conditions met and spanning
+
+n=7 (sampled(10000)): 2761 all-dom tours, 0 with BOTH conditions met and spanning
+
+======================================================================
+PART 7: Freed(v) size vs total cycles when v is bad (all-dom)
+======================================================================
+
+n=5 (exhaustive): 240 bad vertices
+  freed fraction: min=1.000, max=1.000, avg=1.000
+  total restricted cycles: min=2, max=2, avg=2.0
+
+n=6 (exhaustive): 3648 bad vertices
+  freed fraction: min=0.750, max=1.000, avg=0.967
+  total restricted cycles: min=3, max=5, avg=3.7
+
+n=7 (sampled(10000)): 296 bad vertices
+  freed fraction: min=0.667, max=1.000, avg=0.912
+  total restricted cycles: min=4, max=8, avg=6.1
+
+n=8 (sampled(3000)): 18 bad vertices
+  freed fraction: min=0.556, max=1.000, avg=0.842
+  total restricted cycles: min=5, max=12, avg=8.8
