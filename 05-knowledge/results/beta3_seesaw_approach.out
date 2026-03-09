@@ -1,0 +1,29 @@
+======================================================================
+SEESAW + LES APPROACH: structural constraints on beta_3=2
+======================================================================
+
+  Exhaustive n=6 analysis...
+    ... 0/32768
+    ... 5000/32768
+    ... 10000/32768
+    ... 15000/32768
+    ... 20000/32768
+    ... 25000/32768
+    ... 30000/32768
+
+  (beta_3, strongly_connected) distribution at n=6:
+    beta_3=0, SC=False: 10368
+    beta_3=0, SC=True: 22080
+    beta_3=1, SC=False: 80
+    beta_3=1, SC=True: 240
+
+  For beta_3=1 tournaments: #deletions that are strongly connected:
+    0/6 SC: 80
+    6/6 SC: 240
+
+======================================================================
+EULER CHARACTERISTIC ANALYSIS
+======================================================================
+
+  Sampling chi at n=7...
+  Chi distribution at n=7: {0: 37, 1: 263}

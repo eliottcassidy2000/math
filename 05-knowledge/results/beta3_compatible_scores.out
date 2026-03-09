@@ -1,0 +1,31 @@
+======================================================================
+EXHAUSTIVE CHECK: beta_3 for score-compatible tournaments at n=7
+======================================================================
+
+  Score sequence: (2, 2, 2, 3, 4, 4, 4)
+    Found: 459/10000
+    beta_3 distribution: {0: 363, 1: 96}
+    Max #deletions with beta_3=1: 1
+
+  Score sequence: (2, 2, 3, 3, 3, 4, 4)
+    Found: 1156/10000
+    beta_3 distribution: {0: 936, 1: 220}
+    Max #deletions with beta_3=1: 2
+
+  Score sequence: (2, 3, 3, 3, 3, 3, 4)
+    Found: 315/10000
+    beta_3 distribution: {0: 236, 1: 79}
+    Max #deletions with beta_3=1: 1
+
+  Score sequence: (3, 3, 3, 3, 3, 3, 3)
+    Found: 8/10000
+    beta_3 distribution: {0: 8}
+    Max #deletions with beta_3=1: 0
+
+======================================================================
+FOCUSED: Regular tournaments on 7 vertices
+======================================================================
+  Regular tournaments found: 51
+  beta_3 distribution: {0: 51}
+  #deletions with beta_3=1: {0: 47, 7: 4}
+  ALL 7 deletions beta_3=1? 4

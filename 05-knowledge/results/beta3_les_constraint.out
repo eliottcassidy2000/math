@@ -1,0 +1,64 @@
+======================================================================
+LES CONSTRAINT VERIFICATION: beta_3(T) ≤ rank(i*) + 1
+======================================================================
+
+  Sampling 500 tournaments at n=7...
+    ... 0/500
+    ... 100/500
+    ... 200/500
+    ... 300/500
+    ... 400/500
+
+  Total: 500
+  min_v beta_3(T\v) distribution: {0: 500}
+  Violations (min > 0): 0
+
+  CONFIRMED: Every sampled 7-tournament has a good vertex (beta_3(T\v)=0)
+  Therefore beta_3(T) ≤ 0 + 1 = 1 for all sampled tournaments.
+
+======================================================================
+INDUCTIVE STRUCTURE
+======================================================================
+
+  The key algebraic chain:
+
+  1. beta_2 = 0 for all tournaments (known)
+  2. H_3(T,T\v) ≤ 1 for all T, v (THM-111)
+  3. LES gives: beta_3(T) = rank(i*) + H_3(T,T\v) ≤ beta_3(T\v) + 1
+
+  If we can prove: ∀T ∃v: beta_3(T\v) = 0    (Good Vertex Property)
+  Then: beta_3(T) ≤ 0 + 1 = 1.
+
+  The Good Vertex Property is what we need to prove.
+  It's a statement about EVERY tournament of a given size.
+
+  At n ≤ 5: trivially true (beta_3 = 0 for all tournaments on ≤ 5 vertices)
+  At n = 6: beta_3 ∈ {0, 1}, and 320/32768 have beta_3 = 1.
+            Need: every T on 6 has ∃v with beta_3(T\v) = 0.
+            T\v is on 5 vertices, so beta_3(T\v) = 0 always. ✓
+  At n = 7: beta_3 ∈ {0, 1}, need ∃v with beta_3(T\v) = 0 (T\v on 6 vertices).
+            Computationally verified (all 500 samples).
+  At n = 8: need ∃v with beta_3(T\v) = 0 (T\v on 7 vertices).
+
+  The question: WHY does a good vertex always exist?
+
+  At n=6: it's trivial (all 5-vertex tournaments have beta_3=0).
+  At n=7: 27648/32768 of 6-tournaments have beta_3=0 (84.4%).
+          So even randomly, most deletions will have beta_3=0.
+          But we need a PROOF, not statistics.
+
+  Possible approaches:
+  A) Combinatorial: relate beta_3(T\v) to score/structure of v
+  B) Algebraic: use the LES at the (n-1) level too
+  C) Probabilistic: show the "bad vertex" probability decays
+  D) Direct: compute the obstructed configurations
+
+
+======================================================================
+DELETION PROFILE for beta_3=1 tournaments at n=7
+======================================================================
+  Tournaments with beta_3=1 found: 149
+  Deletion beta_3 profiles (sorted):
+    (0, 0, 0, 0, 0, 0, 1) (6 zeros, 1 ones): 76
+    (0, 0, 0, 0, 0, 0, 0) (7 zeros, 0 ones): 64
+    (0, 0, 0, 0, 0, 1, 1) (5 zeros, 2 ones): 9

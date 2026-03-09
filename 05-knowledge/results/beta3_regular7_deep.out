@@ -1,0 +1,142 @@
+======================================================================
+DEEP ANALYSIS: Regular tournaments on 7 vertices
+Finding those with ALL deletions having beta_3=1
+======================================================================
+
+  Found special tournament #1 (bits=1332762)
+    Betti numbers: [1, 0, 0, 0, 6, 0, 0]
+    Adjacency matrix:
+      [0, 0, 1, 0, 1, 1, 0]
+      [1, 0, 0, 0, 0, 1, 1]
+      [0, 1, 0, 0, 1, 0, 1]
+      [1, 1, 1, 0, 0, 0, 0]
+      [0, 1, 0, 1, 0, 1, 0]
+      [0, 0, 1, 1, 0, 0, 1]
+      [1, 0, 0, 1, 1, 0, 0]
+    Isomorphic to Paley T_7? True
+    T\0: betti = [1, 0, 0, 1, 0, 0]
+    T\1: betti = [1, 0, 0, 1, 0, 0]
+    T\2: betti = [1, 0, 0, 1, 0, 0]
+    T\3: betti = [1, 0, 0, 1, 0, 0]
+    T\4: betti = [1, 0, 0, 1, 0, 0]
+    T\5: betti = [1, 0, 0, 1, 0, 0]
+    T\6: betti = [1, 0, 0, 1, 0, 0]
+
+  Found special tournament #2 (bits=904462)
+    Betti numbers: [1, 0, 0, 0, 6, 0, 0]
+    Adjacency matrix:
+      [0, 0, 1, 1, 1, 0, 0]
+      [1, 0, 0, 0, 1, 0, 1]
+      [0, 1, 0, 1, 0, 0, 1]
+      [0, 1, 0, 0, 1, 1, 0]
+      [0, 0, 1, 0, 0, 1, 1]
+      [1, 1, 1, 0, 0, 0, 0]
+      [1, 0, 0, 1, 0, 1, 0]
+    Isomorphic to Paley T_7? True
+    T\0: betti = [1, 0, 0, 1, 0, 0]
+    T\1: betti = [1, 0, 0, 1, 0, 0]
+    T\2: betti = [1, 0, 0, 1, 0, 0]
+    T\3: betti = [1, 0, 0, 1, 0, 0]
+    T\4: betti = [1, 0, 0, 1, 0, 0]
+    T\5: betti = [1, 0, 0, 1, 0, 0]
+    T\6: betti = [1, 0, 0, 1, 0, 0]
+
+  Found special tournament #3 (bits=1782414)
+    Betti numbers: [1, 0, 0, 0, 6, 0, 0]
+    Adjacency matrix:
+      [0, 0, 1, 1, 1, 0, 0]
+      [1, 0, 0, 1, 0, 1, 0]
+      [0, 1, 0, 0, 1, 1, 0]
+      [0, 0, 1, 0, 0, 1, 1]
+      [0, 1, 0, 1, 0, 0, 1]
+      [1, 0, 0, 0, 1, 0, 1]
+      [1, 1, 1, 0, 0, 0, 0]
+    Isomorphic to Paley T_7? True
+    T\0: betti = [1, 0, 0, 1, 0, 0]
+    T\1: betti = [1, 0, 0, 1, 0, 0]
+    T\2: betti = [1, 0, 0, 1, 0, 0]
+    T\3: betti = [1, 0, 0, 1, 0, 0]
+    T\4: betti = [1, 0, 0, 1, 0, 0]
+    T\5: betti = [1, 0, 0, 1, 0, 0]
+    T\6: betti = [1, 0, 0, 1, 0, 0]
+
+  Found special tournament #4 (bits=1907561)
+    Betti numbers: [1, 0, 0, 0, 6, 0, 0]
+    Adjacency matrix:
+      [0, 1, 0, 0, 1, 0, 1]
+      [0, 0, 1, 0, 1, 1, 0]
+      [1, 0, 0, 1, 1, 0, 0]
+      [1, 1, 0, 0, 0, 1, 0]
+      [0, 0, 0, 1, 0, 1, 1]
+      [1, 0, 1, 0, 0, 0, 1]
+      [0, 1, 1, 1, 0, 0, 0]
+    Isomorphic to Paley T_7? True
+    T\0: betti = [1, 0, 0, 1, 0, 0]
+    T\1: betti = [1, 0, 0, 1, 0, 0]
+    T\2: betti = [1, 0, 0, 1, 0, 0]
+    T\3: betti = [1, 0, 0, 1, 0, 0]
+    T\4: betti = [1, 0, 0, 1, 0, 0]
+    T\5: betti = [1, 0, 0, 1, 0, 0]
+    T\6: betti = [1, 0, 0, 1, 0, 0]
+
+  Found special tournament #5 (bits=1677940)
+    Betti numbers: [1, 0, 0, 0, 6, 0, 0]
+    Adjacency matrix:
+      [0, 0, 0, 1, 0, 1, 1]
+      [1, 0, 1, 0, 0, 1, 0]
+      [1, 0, 0, 1, 1, 0, 0]
+      [0, 1, 0, 0, 1, 1, 0]
+      [1, 1, 0, 0, 0, 0, 1]
+      [0, 0, 1, 0, 1, 0, 1]
+      [0, 1, 1, 1, 0, 0, 0]
+    Isomorphic to Paley T_7? True
+    T\0: betti = [1, 0, 0, 1, 0, 0]
+    T\1: betti = [1, 0, 0, 1, 0, 0]
+    T\2: betti = [1, 0, 0, 1, 0, 0]
+    T\3: betti = [1, 0, 0, 1, 0, 0]
+    T\4: betti = [1, 0, 0, 1, 0, 0]
+    T\5: betti = [1, 0, 0, 1, 0, 0]
+    T\6: betti = [1, 0, 0, 1, 0, 0]
+
+  Found special tournament #6 (bits=647404)
+    Betti numbers: [1, 0, 0, 0, 6, 0, 0]
+    Adjacency matrix:
+      [0, 0, 0, 1, 1, 0, 1]
+      [1, 0, 1, 1, 0, 0, 0]
+      [1, 0, 0, 0, 0, 1, 1]
+      [0, 0, 1, 0, 1, 1, 0]
+      [0, 1, 1, 0, 0, 0, 1]
+      [1, 1, 0, 0, 1, 0, 0]
+      [0, 1, 0, 1, 0, 1, 0]
+    Isomorphic to Paley T_7? True
+    T\0: betti = [1, 0, 0, 1, 0, 0]
+    T\1: betti = [1, 0, 0, 1, 0, 0]
+    T\2: betti = [1, 0, 0, 1, 0, 0]
+    T\3: betti = [1, 0, 0, 1, 0, 0]
+    T\4: betti = [1, 0, 0, 1, 0, 0]
+    T\5: betti = [1, 0, 0, 1, 0, 0]
+    T\6: betti = [1, 0, 0, 1, 0, 0]
+
+  Total regular tournaments sampled: 57
+  Special tournaments (all deletions beta_3=1): 6
+
+======================================================================
+LES ANALYSIS for special tournaments
+='*70
+
+  For these T: beta_3(T)=0, beta_3(T\v)=1 for all v.
+
+  LES: ... → H_4(T,T\v) →δ H_3(T\v) →i* H_3(T) → H_3(T,T\v) → H_2(T\v) → ...
+                            Z=1           0            ?             0
+
+  Since H_3(T)=0, the map i*: H_3(T\v)→H_3(T) is zero.
+  Exactness at H_3(T\v): im(δ) = ker(i*) = H_3(T\v) = Z.
+  So δ: H_4(T,T\v) → H_3(T\v) is SURJECTIVE.
+
+  Since H_3(T)=0 and H_2(T\v)=0:
+  H_3(T,T\v) = 0 (sandwiched between zero maps).
+
+  This means the relative 3-homology vanishes even though
+  the absolute 3-homology of the subcomplex is nontrivial!
+  The connecting map from relative H_4 does all the work.
+
