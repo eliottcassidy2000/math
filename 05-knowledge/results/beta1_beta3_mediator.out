@@ -1,0 +1,136 @@
+======================================================================
+BETA_1 * BETA_3 = 0: im(d_2) MEDIATOR HYPOTHESIS
+======================================================================
+
+============================================================
+n=6
+============================================================
+
+  Total: 32768, beta_1>0: 4800, beta_3>0: 320, both>0: 0
+
+  im(d_2) for beta_1>0: [np.int64(9)]
+  im(d_2) for beta_3>0: [np.int64(10)]
+  im(d_2) for trivial: [np.int64(10)]
+
+  im(d_2) overlap between b1>0 and b3>0: NONE (disjoint!)
+  im(d_2) overlap between b1>0 and triv: NONE
+  im(d_2) overlap between b3>0 and triv: {np.int64(10)}
+
+  Transitive im(d_2) would be: ker(d_1) = C(n,2) - (n-1) = 10
+
+  ker(d_1) for beta_1>0: [np.int64(10)]
+  ker(d_3) for beta_1>0: [np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(8), np.int64(15), np.int64(18)]
+  dim(Omega_2) for beta_1>0: [18, 19, 20, 21, 22, 24]
+
+  ker(d_1) for beta_3>0: [np.int64(10)]
+  ker(d_3) for beta_3>0: [np.int64(1), np.int64(7)]
+  dim(Omega_2) for beta_3>0: [18, 21]
+
+  Verification: im(d_2) = dim(Omega_2) - im(d_3) for beta_1>0: True
+
+  ker(d_1) values across ALL tournaments:
+    beta_1>0: [np.int64(10)]
+    beta_3>0: [np.int64(10)]
+
+============================================================
+n=7
+============================================================
+  500/2000: b1=29, b3=36
+  1000/2000: b1=47, b3=75
+  1500/2000: b1=81, b3=111
+  2000/2000: b1=104, b3=146
+
+  Total: 2000, beta_1>0: 104, beta_3>0: 146, both>0: 0
+
+  im(d_2) for beta_1>0: [np.int64(14)]
+  im(d_2) for beta_3>0: [np.int64(15)]
+  im(d_2) for trivial: [np.int64(15)]
+
+  im(d_2) overlap between b1>0 and b3>0: NONE (disjoint!)
+  im(d_2) overlap between b1>0 and triv: NONE
+  im(d_2) overlap between b3>0 and triv: {np.int64(15)}
+
+  Transitive im(d_2) would be: ker(d_1) = C(n,2) - (n-1) = 15
+
+  ker(d_1) for beta_1>0: [np.int64(15)]
+  ker(d_3) for beta_1>0: [np.int64(11), np.int64(12), np.int64(13), np.int64(14), np.int64(15), np.int64(17), np.int64(18), np.int64(19), np.int64(20), np.int64(21)]
+  dim(Omega_2) for beta_1>0: [32, 33, 34, 36, 37, 38, 39, 40, 42, 43]
+
+  ker(d_1) for beta_3>0: [np.int64(15)]
+  ker(d_3) for beta_3>0: [np.int64(10), np.int64(12), np.int64(14), np.int64(15), np.int64(17), np.int64(19), np.int64(22), np.int64(23), np.int64(25), np.int64(26)]
+  dim(Omega_2) for beta_3>0: [33, 34, 35, 36, 37, 38, 39, 40]
+
+  Verification: im(d_2) = dim(Omega_2) - im(d_3) for beta_1>0: True
+
+  ker(d_1) values across ALL tournaments:
+    beta_1>0: [np.int64(15)]
+    beta_3>0: [np.int64(15)]
+
+============================================================
+n=8
+============================================================
+  500/2000: b1=7, b3=100
+  1000/2000: b1=9, b3=192
+  1500/2000: b1=14, b3=275
+  2000/2000: b1=20, b3=369
+
+  Total: 2000, beta_1>0: 20, beta_3>0: 369, both>0: 0
+
+  im(d_2) for beta_1>0: [np.int64(20)]
+  im(d_2) for beta_3>0: [np.int64(21)]
+  im(d_2) for trivial: [np.int64(21)]
+
+  im(d_2) overlap between b1>0 and b3>0: NONE (disjoint!)
+  im(d_2) overlap between b1>0 and triv: NONE
+  im(d_2) overlap between b3>0 and triv: {np.int64(21)}
+
+  Transitive im(d_2) would be: ker(d_1) = C(n,2) - (n-1) = 21
+
+  ker(d_1) for beta_1>0: [np.int64(21)]
+  ker(d_3) for beta_1>0: [np.int64(31), np.int64(32), np.int64(35), np.int64(37), np.int64(39), np.int64(41), np.int64(42), np.int64(46), np.int64(47), np.int64(50)]
+  dim(Omega_2) for beta_1>0: [53, 54, 55, 56, 58, 59, 60, 61, 62, 64]
+
+  ker(d_1) for beta_3>0: [np.int64(21)]
+  ker(d_3) for beta_3>0: [np.int64(30), np.int64(31), np.int64(33), np.int64(34), np.int64(35), np.int64(36), np.int64(37), np.int64(38), np.int64(39), np.int64(40)]
+  dim(Omega_2) for beta_3>0: [55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
+
+  Verification: im(d_2) = dim(Omega_2) - im(d_3) for beta_1>0: True
+
+  ker(d_1) values across ALL tournaments:
+    beta_1>0: [np.int64(21)]
+    beta_3>0: [np.int64(21)]
+
+======================================================================
+ALGEBRAIC INTERPRETATION
+======================================================================
+
+At n=6:
+  ker(d_1) = 10 always (= C(6,2) - 5 = 10, since all n=6 are SC? No...)
+  Actually: ker(d_1) = dim(Omega_1) - im(d_1) = 15 - im(d_1)
+
+  For beta_1 > 0: im(d_2) = 9, ker(d_1) = 10, so beta_1 = 10 - 9 = 1
+  For beta_3 > 0: im(d_2) = 10, ker(d_1) = 10, so beta_1 = 10 - 10 = 0
+
+  The KEY is: why does beta_3>0 force im(d_2) = 10 (maximal)?
+
+  Hypothesis: beta_3>0 means ker(d_3) > im(d_4), which means d_3 has
+  a larger kernel, which means im(d_3) is smaller, which forces
+  im(d_2) = dim(Omega_2) - im(d_3) to be larger (since beta_2=0).
+
+  In the chain Omega_3 -d3-> Omega_2 -d2-> Omega_1:
+  - beta_2=0 means ker(d_2) = im(d_3) exactly
+  - So rank(d_2|Omega_2) = dim(Omega_2) - im(d_3)
+  - If im(d_3) drops (due to beta_3>0 stealing kernel from d_3),
+    then im(d_2) increases!
+  - And im(d_2) increasing makes beta_1 = ker(d_1) - im(d_2) smaller.
+
+  This is a SEESAW EFFECT through the exact sequence at Omega_2!
+  beta_3 up => ker(d_3) up => im(d_3) down => im(d_2) up => beta_1 down
+
+  The constraint is: beta_2 = 0.
+  If beta_2 were nonzero, the seesaw would have slack and both could
+  be nonzero simultaneously.
+
+  THEOREM CANDIDATE: If beta_2(T) = 0 for all tournaments T on n vertices,
+  then beta_1 * beta_3 = 0 for all such T.
+

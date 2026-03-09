@@ -1,0 +1,105 @@
+======================================================================
+BETA_1 * BETA_3 = 0: Proof investigation
+======================================================================
+
+  n=6: 4800 beta_1>0, 320 beta_3>0, 27648 trivial
+
+--- Chain complex structure comparison ---
+
+  beta_1 > 0 (4800 tours):
+    Omega dims distribution (top 5):
+      [6, 15, 21, 20, 10, 2]: 17
+      [6, 15, 19, 15, 6, 1]: 12
+      [6, 15, 18, 12, 3, 0]: 6
+      [6, 15, 18, 13, 5, 1]: 5
+      [6, 15, 20, 17, 6, 0]: 4
+    ker(d_p) distribution (top 5):
+      [6, np.int64(10), np.int64(12), np.int64(8), np.int64(2), np.int64(0)]: 17
+      [6, np.int64(10), np.int64(10), np.int64(5), np.int64(1), np.int64(0)]: 12
+      [6, np.int64(10), np.int64(9), np.int64(3), np.int64(0), 0]: 6
+      [6, np.int64(10), np.int64(9), np.int64(4), np.int64(1), np.int64(0)]: 5
+      [6, np.int64(10), np.int64(11), np.int64(6), np.int64(0), 0]: 4
+    im(d_{p+1}) distribution (top 5):
+      [np.int64(5), np.int64(9), np.int64(12), np.int64(8), np.int64(2), 0]: 17
+      [np.int64(5), np.int64(9), np.int64(10), np.int64(5), np.int64(1), 0]: 12
+      [np.int64(5), np.int64(9), np.int64(9), np.int64(3), 0, 0]: 6
+      [np.int64(5), np.int64(9), np.int64(9), np.int64(4), np.int64(1), 0]: 5
+      [np.int64(5), np.int64(9), np.int64(11), np.int64(6), 0, 0]: 4
+
+  beta_3 > 0 (320 tours):
+    Omega dims distribution (top 5):
+      [6, 15, 21, 18, 9, 3]: 30
+      [6, 15, 18, 9, 0, 0]: 20
+    ker(d_p) distribution (top 5):
+      [6, np.int64(10), np.int64(11), np.int64(7), np.int64(3), np.int64(0)]: 30
+      [6, np.int64(10), np.int64(8), np.int64(1), 0, 0]: 20
+    im(d_{p+1}) distribution (top 5):
+      [np.int64(5), np.int64(10), np.int64(11), np.int64(6), np.int64(3), 0]: 30
+      [np.int64(5), np.int64(10), np.int64(8), 0, 0, 0]: 20
+
+  trivial (first 100) (100 tours):
+    Omega dims distribution (top 5):
+      [6, 15, 19, 12, 3, 0]: 15
+      [6, 15, 20, 15, 6, 1]: 14
+      [6, 15, 19, 13, 5, 1]: 11
+      [6, 15, 19, 14, 6, 1]: 7
+      [6, 15, 20, 17, 9, 2]: 3
+    ker(d_p) distribution (top 5):
+      [6, np.int64(10), np.int64(9), np.int64(3), np.int64(0), 0]: 15
+      [6, np.int64(10), np.int64(10), np.int64(5), np.int64(1), np.int64(0)]: 14
+      [6, np.int64(10), np.int64(9), np.int64(4), np.int64(1), np.int64(0)]: 11
+      [6, np.int64(10), np.int64(9), np.int64(5), np.int64(1), np.int64(0)]: 7
+      [6, np.int64(10), np.int64(10), np.int64(7), np.int64(2), np.int64(0)]: 3
+    im(d_{p+1}) distribution (top 5):
+      [np.int64(5), np.int64(10), np.int64(9), np.int64(3), 0, 0]: 15
+      [np.int64(5), np.int64(10), np.int64(10), np.int64(5), np.int64(1), 0]: 14
+      [np.int64(5), np.int64(10), np.int64(9), np.int64(4), np.int64(1), 0]: 11
+      [np.int64(5), np.int64(10), np.int64(9), np.int64(5), np.int64(1), 0]: 7
+      [np.int64(5), np.int64(10), np.int64(10), np.int64(7), np.int64(2), 0]: 3
+
+--- Part 3: Structural difference ---
+
+  beta_1>0 tours:
+    bits=16: Omega=[6, 15, 19, 15, 6, 1], ker=[6, np.int64(10), np.int64(10), np.int64(5), np.int64(1), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(10), np.int64(5), np.int64(1), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=24: Omega=[6, 15, 21, 20, 10, 2], ker=[6, np.int64(10), np.int64(12), np.int64(8), np.int64(2), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(12), np.int64(8), np.int64(2), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=28: Omega=[6, 15, 21, 20, 10, 2], ker=[6, np.int64(10), np.int64(12), np.int64(8), np.int64(2), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(12), np.int64(8), np.int64(2), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=30: Omega=[6, 15, 19, 15, 6, 1], ker=[6, np.int64(10), np.int64(10), np.int64(5), np.int64(1), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(10), np.int64(5), np.int64(1), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=48: Omega=[6, 15, 19, 15, 6, 1], ker=[6, np.int64(10), np.int64(10), np.int64(5), np.int64(1), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(10), np.int64(5), np.int64(1), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=56: Omega=[6, 15, 21, 20, 10, 2], ker=[6, np.int64(10), np.int64(12), np.int64(8), np.int64(2), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(12), np.int64(8), np.int64(2), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=60: Omega=[6, 15, 21, 20, 10, 2], ker=[6, np.int64(10), np.int64(12), np.int64(8), np.int64(2), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(12), np.int64(8), np.int64(2), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=61: Omega=[6, 15, 19, 15, 6, 1], ker=[6, np.int64(10), np.int64(10), np.int64(5), np.int64(1), np.int64(0)], im=[np.int64(5), np.int64(9), np.int64(10), np.int64(5), np.int64(1), 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+    bits=80: Omega=[6, 15, 18, 12, 3, 0], ker=[6, np.int64(10), np.int64(9), np.int64(3), np.int64(0), 0], im=[np.int64(5), np.int64(9), np.int64(9), np.int64(3), 0, 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), 0]
+    bits=88: Omega=[6, 15, 20, 17, 6, 0], ker=[6, np.int64(10), np.int64(11), np.int64(6), np.int64(0), 0], im=[np.int64(5), np.int64(9), np.int64(11), np.int64(6), 0, 0], betti=[np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), 0]
+
+  beta_3>0 tours:
+    bits=87: Omega=[6, 15, 18, 9, 0, 0], ker=[6, np.int64(10), np.int64(8), np.int64(1), 0, 0], im=[np.int64(5), np.int64(10), np.int64(8), 0, 0, 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0]
+    bits=356: Omega=[6, 15, 18, 9, 0, 0], ker=[6, np.int64(10), np.int64(8), np.int64(1), 0, 0], im=[np.int64(5), np.int64(10), np.int64(8), 0, 0, 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0]
+    bits=567: Omega=[6, 15, 18, 9, 0, 0], ker=[6, np.int64(10), np.int64(8), np.int64(1), 0, 0], im=[np.int64(5), np.int64(10), np.int64(8), 0, 0, 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0]
+    bits=866: Omega=[6, 15, 18, 9, 0, 0], ker=[6, np.int64(10), np.int64(8), np.int64(1), 0, 0], im=[np.int64(5), np.int64(10), np.int64(8), 0, 0, 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0]
+    bits=1278: Omega=[6, 15, 18, 9, 0, 0], ker=[6, np.int64(10), np.int64(8), np.int64(1), 0, 0], im=[np.int64(5), np.int64(10), np.int64(8), 0, 0, 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), 0, 0]
+    bits=1332: Omega=[6, 15, 21, 18, 9, 3], ker=[6, np.int64(10), np.int64(11), np.int64(7), np.int64(3), np.int64(0)], im=[np.int64(5), np.int64(10), np.int64(11), np.int64(6), np.int64(3), 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+    bits=1337: Omega=[6, 15, 21, 18, 9, 3], ker=[6, np.int64(10), np.int64(11), np.int64(7), np.int64(3), np.int64(0)], im=[np.int64(5), np.int64(10), np.int64(11), np.int64(6), np.int64(3), 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+    bits=1363: Omega=[6, 15, 21, 18, 9, 3], ker=[6, np.int64(10), np.int64(11), np.int64(7), np.int64(3), np.int64(0)], im=[np.int64(5), np.int64(10), np.int64(11), np.int64(6), np.int64(3), 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+    bits=1368: Omega=[6, 15, 21, 18, 9, 3], ker=[6, np.int64(10), np.int64(11), np.int64(7), np.int64(3), np.int64(0)], im=[np.int64(5), np.int64(10), np.int64(11), np.int64(6), np.int64(3), 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+    bits=1426: Omega=[6, 15, 21, 18, 9, 3], ker=[6, np.int64(10), np.int64(11), np.int64(7), np.int64(3), np.int64(0)], im=[np.int64(5), np.int64(10), np.int64(11), np.int64(6), np.int64(3), 0], betti=[np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+
+--- Part 4: Why beta_1=1 forces beta_3=0 ---
+  beta_1>0: ker(d_3)-im(d_4) values: [np.int64(0)]
+  beta_3>0: ker(d_3)-im(d_4) values: [np.int64(1)]
+
+  beta_1>0: ALWAYS ker(d_3) = im(d_4)? True
+  beta_3>0: ALWAYS ker(d_1) = im(d_2)? True
+
+--- Part 5: im(d_2) comparison ---
+  beta_1>0: im(d_2) values: [np.int64(9)], always = 9? True
+  beta_3>0: im(d_2) values: [np.int64(10)]
+  trivial: im(d_2) values: [np.int64(10)]
+
+--- Part 6: Correlation between im(d_2) and ker(d_3) ---
+  im(d_2)=9: 4800 tours, P(b1>0)=100.0%, P(b3>0)=0.0%, avg ker(d_3)=7.8, avg im(d_4)=7.8
+  im(d_2)=10: 820 tours, P(b1>0)=0.0%, P(b3>0)=39.0%, avg ker(d_3)=5.0, avg im(d_4)=4.6
+
+--- Part 7: Strong connectivity role ---
+  beta_1>0: 100.0% SC
+  beta_3>0: 75.0% SC
+  trivial:  62.5% SC
