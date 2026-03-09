@@ -1,0 +1,49 @@
+======================================================================
+BETA_3 COKERNEL FORMULA SEARCH
+======================================================================
+
+--- Part 1: Integer cokernel vs local features ---
+  Collected 15120 path-coefficient pairs from 240 Type B tournaments
+
+--- Part 2: Coefficient vs features ---
+  (c3, abc_cycle, bcd_cycle, back_edges) -> coefficient distribution:
+    (1, 0, 1, 1): {np.int64(-1): 702, np.int64(0): 720, np.int64(1): 738}
+    (1, 1, 0, 1): {np.int64(-1): 702, np.int64(0): 720, np.int64(1): 738}
+    (2, 0, 0, 1): {np.int64(-2): 702, np.int64(-1): 351, np.int64(1): 369, np.int64(2): 738}
+    (2, 0, 1, 2): {np.int64(-3): 351, np.int64(0): 1440, np.int64(3): 369}
+    (2, 1, 0, 2): {np.int64(-3): 351, np.int64(0): 1440, np.int64(3): 369}
+    (2, 1, 1, 2): {np.int64(-1): 738, np.int64(0): 720, np.int64(1): 702}
+    (2, 1, 1, 3): {np.int64(-3): 369, np.int64(0): 1440, np.int64(3): 351}
+
+--- Part 3: Finer features ---
+  (c3, abc_cycle, bcd_cycle) -> coefficient distribution:
+    (1, 0, 1): {np.int64(-1): 702, np.int64(0): 720, np.int64(1): 738} (n=2160)
+    (1, 1, 0): {np.int64(-1): 702, np.int64(0): 720, np.int64(1): 738} (n=2160)
+    (2, 0, 0): {np.int64(-2): 702, np.int64(-1): 351, np.int64(1): 369, np.int64(2): 738} (n=2160)
+    (2, 0, 1): {np.int64(-3): 351, np.int64(0): 1440, np.int64(3): 369} (n=2160)
+    (2, 1, 0): {np.int64(-3): 351, np.int64(0): 1440, np.int64(3): 369} (n=2160)
+    (2, 1, 1): {np.int64(-3): 369, np.int64(-1): 738, np.int64(0): 2160, np.int64(1): 702, np.int64(3): 351} (n=4320)
+
+--- Part 4: Testing specific formulas ---
+  abc+bcd-1: 5373/15120 = 35.5%
+  2abc+bcd-1: 3249/15120 = 21.5%
+  abc-bcd: 3600/15120 = 23.8%
+  back-2: 5355/15120 = 35.4%
+
+--- Part 5: Nonzero coefficient analysis ---
+  8640 nonzero out of 15120 total
+  Nonzero (c3, abc_cycle, bcd_cycle, back_edges) -> coefficient:
+    (1, 0, 1, 1): {np.int64(-1): 702, np.int64(1): 738}
+    (1, 1, 0, 1): {np.int64(-1): 702, np.int64(1): 738}
+    (2, 0, 0, 1): {np.int64(-2): 702, np.int64(-1): 351, np.int64(1): 369, np.int64(2): 738}
+    (2, 0, 1, 2): {np.int64(-3): 351, np.int64(3): 369}
+    (2, 1, 0, 2): {np.int64(-3): 351, np.int64(3): 369}
+    (2, 1, 1, 2): {np.int64(-1): 738, np.int64(1): 702}
+    (2, 1, 1, 3): {np.int64(-3): 369, np.int64(3): 351}
+
+--- Part 6: Sign determination ---
+  Distinct sign patterns (sorted nonzero coefficients):
+    (np.int64(-3), np.int64(-3), np.int64(-3), np.int64(-3), np.int64(-3), np.int64(-3), np.int64(-2), np.int64(-2), np.int64(-2), np.int64(-2), np.int64(-2), np.int64(-2), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3)): 16
+    (np.int64(-3), np.int64(-3), np.int64(-3), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(-1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 8
+
+DONE.

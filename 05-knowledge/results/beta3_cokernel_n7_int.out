@@ -1,0 +1,35 @@
+======================================================================
+BETA_3 COKERNEL INTEGER STRUCTURE AT n=7
+======================================================================
+  #1: no small integer multiplier found (omega4=35, ker_d3=22)
+    Ratios: [np.float64(-1.0), np.float64(-0.3749), np.float64(-0.3035), np.float64(-0.2512), np.float64(-0.2503), np.float64(-0.2392), np.float64(-0.2173), np.float64(-0.1941), np.float64(-0.1631), np.float64(-0.1575), np.float64(-0.1533), np.float64(-0.1329), np.float64(-0.1172), np.float64(-0.0989), np.float64(-0.0916)]
+  #2: no small integer multiplier found (omega4=27, ker_d3=19)
+    Ratios: [np.float64(-1.0), np.float64(-0.7252), np.float64(-0.6786), np.float64(-0.5693), np.float64(-0.5159), np.float64(-0.4841), np.float64(-0.4598), np.float64(-0.4413), np.float64(-0.3641), np.float64(-0.3463), np.float64(-0.3372), np.float64(-0.3298), np.float64(-0.3214), np.float64(-0.2897), np.float64(-0.2885)]
+  #3: no small integer multiplier found (omega4=24, ker_d3=17)
+    Ratios: [np.float64(-1.0), np.float64(-0.3187), np.float64(-0.2982), np.float64(-0.2596), np.float64(-0.257), np.float64(-0.2095), np.float64(-0.1954), np.float64(-0.1476), np.float64(-0.0652), np.float64(-0.0523), np.float64(-0.049), np.float64(-0.0405), np.float64(-0.0396), np.float64(-0.0318), np.float64(-0.0262)]
+  #4: no small integer multiplier found (omega4=41, ker_d3=26)
+    Ratios: [np.float64(-1.0), np.float64(-0.5), np.float64(-0.3214), np.float64(-0.2857), np.float64(-0.2286), np.float64(-0.1964), np.float64(-0.1429), np.float64(-0.1286), np.float64(0.1286), np.float64(0.1429), np.float64(0.1964), np.float64(0.2143), np.float64(0.2286), np.float64(0.2571), np.float64(0.2857)]
+  #5: no small integer multiplier found (omega4=24, ker_d3=17)
+    Ratios: [np.float64(-1.0), np.float64(-0.6855), np.float64(-0.6669), np.float64(-0.6429), np.float64(-0.576), np.float64(-0.5724), np.float64(-0.4524), np.float64(-0.4276), np.float64(-0.424), np.float64(-0.3714), np.float64(-0.365), np.float64(-0.3571), np.float64(-0.3447), np.float64(-0.3429), np.float64(-0.3331)]
+  #6: no small integer multiplier found (omega4=24, ker_d3=17)
+    Ratios: [np.float64(-1.0), np.float64(-0.6855), np.float64(-0.6669), np.float64(-0.6429), np.float64(-0.576), np.float64(-0.5724), np.float64(-0.4524), np.float64(-0.4276), np.float64(-0.424), np.float64(-0.3714), np.float64(-0.365), np.float64(-0.3571), np.float64(-0.3447), np.float64(-0.3429), np.float64(-0.3331)]
+  #7: no small integer multiplier found (omega4=41, ker_d3=26)
+    Ratios: [np.float64(-1.0), np.float64(-0.7295), np.float64(-0.5451), np.float64(-0.5319), np.float64(-0.4415), np.float64(-0.3836), np.float64(-0.375), np.float64(-0.3468), np.float64(-0.3401), np.float64(-0.3252), np.float64(-0.323), np.float64(-0.3015), np.float64(-0.2757), np.float64(-0.2709), np.float64(-0.2705)]
+  #8: no small integer multiplier found (omega4=42, ker_d3=26)
+    Ratios: [np.float64(-1.0), np.float64(-0.3116), np.float64(-0.2298), np.float64(-0.2206), np.float64(-0.2159), np.float64(-0.0992), np.float64(-0.0631), np.float64(-0.0431), np.float64(-0.0352), np.float64(-0.0338), np.float64(-0.0166), np.float64(-0.0143), np.float64(-0.0063), np.float64(0.0063), np.float64(0.0143)]
+  #9: no small integer multiplier found (omega4=41, ker_d3=26)
+    Ratios: [np.float64(-1.0), np.float64(-0.5), np.float64(-0.3214), np.float64(-0.2857), np.float64(-0.2286), np.float64(-0.1964), np.float64(-0.1429), np.float64(-0.1286), np.float64(0.1286), np.float64(0.1429), np.float64(0.1964), np.float64(0.2143), np.float64(0.2286), np.float64(0.2571), np.float64(0.2857)]
+  #10: no small integer multiplier found (omega4=45, ker_d3=29)
+    Ratios: [np.float64(-1.0), np.float64(-0.7314), np.float64(-0.4416), np.float64(-0.3965), np.float64(-0.3822), np.float64(-0.3679), np.float64(-0.3677), np.float64(-0.3654), np.float64(-0.3607), np.float64(-0.356), np.float64(-0.2762), np.float64(-0.2692), np.float64(-0.2686), np.float64(-0.2553), np.float64(-0.25)]
+
+  Total found: 50 beta_3=1 from 660 random n=7 tournaments
+
+  Integer multiplier distribution:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_cokernel_n7_int.py", line 154, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_cokernel_n7_int.py", line 142, in main
+    for m, c in sorted(mult_dist.items()):
+                ~~~~~~^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'NoneType'
