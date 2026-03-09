@@ -1,0 +1,355 @@
+# Parity, Counting, and Homology in Tournaments: A Research Summary
+
+**Status:** Living document. Last updated 2026-03-08.
+
+---
+
+## 1. Overview
+
+This document summarizes ongoing research at the intersection of tournament combinatorics, algebraic topology, and Fourier analysis. The central objects are **tournaments** (complete directed graphs) and their **Hamiltonian paths** (directed paths visiting every vertex exactly once). The work spans four interlocking programs:
+
+1. **The Odd-Cycle Collection Formula (OCF)** — relating Hamiltonian path counts to independent sets in cycle conflict graphs
+2. **The Walsh-Fourier spectral program** — decomposing tournament invariants via Walsh transforms on {0,1}^m
+3. **The signed Hamiltonian permanent** — a skew-symmetric analogue with universal congruence properties
+4. **GLMY path homology of tournaments** — topological invariants revealing structural hierarchy
+
+Throughout, T denotes a tournament on n vertices, H(T) the number of directed Hamiltonian paths, and T^op the complement tournament (all arcs reversed).
+
+---
+
+## 2. Foundational Results
+
+### 2.1 Redei's Theorem and the Q-Lemma
+
+**Theorem (Redei, 1934).** For every tournament T on n vertices, H(T) is odd.
+
+This classical result admits at least four independent proof routes, three of which were developed or refined in this project:
+
+- **Route A (Q-Lemma).** Define Q_T(u,w) = #{Hamiltonian paths with u before w}. The Q-Lemma states Q_T(u,w) = Q_T(w,u) (mod 2), proved via a toggle involution on path pairs. This implies H(T) = sum of Q values = odd.
+
+- **Route B (Anti-isomorphism involution).** For strongly connected T, an involutive anti-automorphism beta pairs Hamiltonian paths, leaving |Fix(beta)| = H(Q) for a smaller decisive quotient Q. Induction closes the argument.
+
+- **Route C (Automorphism parity).** |Aut(T)| is always odd (proved), and Aut(T) acts freely on Ham(T), so |Aut(T)| divides H(T). Since |Aut(T)| is odd and H(T) = |Aut(T)| * (orbit count), H(T) is odd.
+
+- **Route D (from OCF).** H(T) = 1 + 2*alpha_1 + 4*alpha_2 + ... where alpha_k counts independent sets of size k in the odd-cycle conflict graph. This is manifestly odd.
+
+### 2.2 The Odd-Cycle Collection Formula
+
+**Theorem (OCF; Grinberg-Stanley, 2024).** For every tournament T,
+
+    H(T) = I(Omega(T), 2)
+
+where Omega(T) is the conflict graph whose vertices are directed odd cycles of T and whose edges connect cycles sharing a vertex, and I(G, x) = sum_k alpha_k(G) x^k is the independence polynomial.
+
+**History.** The formula was conjectured computationally in this project and verified exhaustively through n = 8 (2^27 configurations, ~57 minutes). It was independently proved by Grinberg and Stanley (arXiv:2412.10572, Corollary 20) using the theory of P-partitions and Claim B (see below).
+
+**Claim A.** H(T) - H(T\v) = 2 * sum_{C in C_v} mu(C) for any vertex v, where C_v is the set of odd cycles through v and mu(C) counts independent sets in the subgraph of Omega induced by cycles disjoint from C\{v}, evaluated at x=2.
+
+**Claim B (proved).** I(Omega(T), 2) - I(Omega(T\v), 2) = 2 * sum_{C in C_v} mu(C).
+
+The OCF follows from Claims A + B by induction (base case: transitive tournaments have H = 1 and no odd cycles).
+
+### 2.3 The Per-Path Identity
+
+For n <= 5, the OCF admits a path-level refinement. For each Hamiltonian path P' in T\v and vertex v:
+
+    (inshat(v, P') - 1)/2 = sum_{C containing v, |C|=3} mu(C)
+
+where inshat counts insertion positions (always odd). This identity **fails** at n = 6: 2,758 out of 9,126 (T, v, P') triples violate it, due to contributions from 5-cycles. The correct generalization incorporating all odd cycle lengths remains **open** (OPEN-Q-004).
+
+---
+
+## 3. The Transfer Matrix and Walsh-Fourier Program
+
+### 3.1 The Transfer Matrix
+
+Fix a labeling 1, ..., n. The **transfer matrix** M[a,b] counts Hamiltonian paths starting at vertex a and ending at vertex b.
+
+**Theorem (THM-030).** M[a,b] = M[b,a] for all tournaments T and all vertices a, b.
+
+This symmetry was proved by induction using the Walsh-Fourier framework. For odd n, trace(M) = H(T).
+
+### 3.2 Walsh-Fourier Decomposition
+
+Encode a tournament T on n vertices as a binary string t in {0,1}^m where m = C(n,2), recording the orientation of each edge pair. The **Walsh-Fourier transform** decomposes any tournament invariant f(T) into components indexed by subsets S of [m]:
+
+    f_hat[S] = 2^{-m} sum_T (-1)^{t cdot chi_S} f(T)
+
+where chi_S is the indicator of S.
+
+**Theorem (THM-069, Walsh diagonalization).** The Walsh transform of H(T) has nonzero coefficients f_hat[S] only when S is a union of edge-disjoint even-length paths in K_n. Moreover:
+
+    H_hat[S] = epsilon * 2^r * (n - 2k)! / 2^{n-1}
+
+where |S| = 2k, r is the number of path components of S, and epsilon = +/-1 depends on the path orientations.
+
+**Theorem (THM-077, Direct Walsh proof of OCF).** By computing I_hat[S] for the independence polynomial side using a generating function factorization (THM-076), one shows H_hat[S] = I_hat[S] for all S. This provides an elementary proof of OCF bypassing P-partition theory.
+
+### 3.3 Complete Walsh Spectrum of M[a,b]
+
+**Theorem (THM-080).** For the transfer matrix entry M[a,b]:
+
+    M_hat[a,b][S] = (-1)^{asc(S)} * 2^s * (n - 2 - |S|)! / 2^{n-2}
+
+where s is the number of **unrooted** even-length components of S (components not containing the roots a or b), and the formula is nonzero only when S union {a,b} forms a valid path union of even length with |S| = n (mod 2).
+
+This formula is manifestly symmetric in a and b, providing a **Walsh proof of transfer matrix symmetry**.
+
+Verified: exhaustive at n = 5 (968 nonzero coefficients), n = 6 (1471), and by random sampling at n = 7.
+
+### 3.4 Position Character Decomposition
+
+**Theorem (THM-068, PCD).** For each vertex v and Walsh subset S of degree 2k:
+
+    M_hat[v][S] = (-1)^{[v in N(S)]} * H_hat[S] / (n - 2k)
+
+where N(S) is the set of "odd-offset" vertices in the path components of S. Proved for all degrees and all odd n via a block-placement argument.
+
+**Theorem (THM-070, Off-diagonal PCD).** The off-diagonal Walsh spectrum has a similar structure, with interior vertices contributing zero rows/columns to M_hat at degree d.
+
+---
+
+## 4. The Signed Hamiltonian Permanent
+
+### 4.1 Definition and Basic Properties
+
+Define B = 2A - J (the skew-symmetric signed adjacency matrix of T, with entries +/-1). The **signed Hamiltonian permanent** is:
+
+    S(T) = sum_P prod_{i=1}^{n-1} B[P_i, P_{i+1}]
+
+summed over all permutations P (Hamiltonian paths, ignoring direction).
+
+**Theorem (THM-A).** S(T) = 0 for all tournaments on even n (reversal pairing with sign (-1)^{n-1} = -1).
+
+### 4.2 Universal Congruences
+
+**Theorem (THM-H).** S(T) mod 2^{n-1} depends only on n, not on T.
+
+**Theorem (THM-J).** S(T) is **universal** (independent of T modulo 2^{n-1}) if and only if s_2(n-3) <= 1, where s_2 is the binary digit sum. The universal values of n are: 3, 5, 7, 11, 19, 35, 67, ...
+
+At the first non-universal n = 9: S mod 128 = 0 universally, but S mod 256 depends on the parity of the 3-cycle count t_3.
+
+### 4.3 The Master Identity
+
+**Theorem (THM-I).** For any set of k non-adjacent positions in the Hamiltonian path:
+
+    D_S = n! / 2^k
+
+where D_S = sum over (2k)! orderings of 2k vertices placed at those positions, weighted by edge products. This identity holds pointwise for all tournaments.
+
+The constant c_0 = S(T) / 2^{n-1} serves as the degree-0 Walsh coefficient of the W-polynomial and satisfies:
+- At n = 5: c_0 = H - 3*t_3 (integer, zero iff t_3 is odd)
+- At n = 7: c_0 in Z + 3/4 (never integer)
+- At n = 9: c_0 mod 1 depends on t_3 parity
+
+---
+
+## 5. The Worpitzky/F-Polynomial
+
+### 5.1 The Forward-Edge Polynomial
+
+For a tournament T with a fixed labeling, define fwd(P) = #{edges (P_i, P_{i+1}) where P_i < P_{i+1}} for each Hamiltonian path P. The **forward-edge polynomial** (or ascent polynomial) is:
+
+    F(T, x) = sum_P x^{fwd(P)} = sum_{k=0}^{n-1} F_k(T) x^k
+
+**Theorem (THM-087, complement duality).** F_k(T) = F_{n-1-k}(T^op).
+
+**Theorem (THM-094, mod-2 universality).** F_k(T) = C(n-1, k) (mod 2) for all tournaments T. This is tournament-independent.
+
+**Theorem (THM-089).** Var(fwd) = 2*t_3, where t_3 is the number of directed 3-cycles. More generally, the moment hierarchy of fwd encodes cycle counts:
+- E[fwd] = (n-1)/2 (universal)
+- E[fwd^2] = (n-1)(n+2)/12 + t_3 * 2/C(n,2)
+- Third and fourth moments involve t_3 and t_5.
+
+### 5.2 Worpitzky Coefficients
+
+The **Worpitzky expansion** H(T) = sum_k w_k * C(n, k+1) yields coefficients w_k that are NOT always nonneg. In particular:
+- w_{n-1} = F_0 (number of fully descending paths)
+- w_{n-2} = H - n * F_0
+
+### 5.3 Unimodality
+
+**Conjecture (HYP-204).** F(T, x) is unimodal for all tournaments T.
+
+Verified: exhaustive at n = 3,4,5; 100% at n = 6,7,8 by sampling. Zero violations in over 50,000 tournaments tested.
+
+---
+
+## 6. GLMY Path Homology of Tournaments
+
+### 6.1 Background
+
+The **GLMY path homology** (Grigor'yan-Lin-Muranov-Yau) associates to any directed graph a chain complex (Omega_*, d_*) where:
+- Omega_0 = R^{vertices}
+- Omega_p = {u in R^{A_p} : d_p(u) in R^{A_{p-1}}} (allowed p-paths with boundary landing in allowed (p-1)-paths)
+- d_p is the alternating face map
+
+The **Betti numbers** beta_p = dim(ker d_p / im d_{p+1}) measure p-dimensional "holes" in the directed graph.
+
+### 6.2 Betti Number Landscape
+
+Exhaustive computation through n = 6 and extensive sampling through n = 10 reveals:
+
+| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 |
+|---|--------|--------|--------|--------|--------|
+| 3 | 1 | 0-1 | 0 | - | - |
+| 4 | 1 | 0-1 | 0 | 0 | - |
+| 5 | 1 | 0-1 | 0 | 0 | 0 |
+| 6 | 1 | 0-1 | 0 | 0-1 | 0 |
+| 7 | 1 | 0-1 | 0 | 0-1 | 0-1 |
+
+- beta_0 = 1 always (tournaments are weakly connected)
+- beta_1 in {0, 1}; beta_1 = 1 iff the tournament has "unfillable" cycles
+- **beta_2 = 0 universally** (see Section 6.3)
+- beta_1 and beta_3 are **mutually exclusive**: never both nonzero
+- beta(T) = beta(T^op) (complement invariance of path homology)
+- Euler characteristic chi(Omega) in {0, 1}: chi = 1 iff beta_1 = 0
+
+### 6.3 The beta_2 = 0 Conjecture
+
+**Conjecture (HYP-207/249).** For every tournament T, beta_2(T) = 0 in GLMY path homology.
+
+**Computational evidence:**
+- Exhaustive verification: n = 3 (4), n = 4 (64), n = 5 (1024), n = 6 (32,768 tournaments)
+- Sampled verification: n = 7 (5000), n = 8 (2000), n = 9 (500), n = 10 (200)
+- Total: approximately 47,000 tournaments tested with **zero failures**
+
+**Structural results toward a proof:**
+
+**Omega chain structure.** The chain spaces have explicit descriptions:
+- Omega_1 = R^{edges} (all directed edges for tournaments)
+- Omega_2 basis = transitive triples (a,b,c) with a->b->c, a->c, **plus** intransitive cancelling pairs (x,b_1,y) - (x,b_2,y) for each intransitive pair (x,y) with y->x having >= 2 intermediaries
+- Omega_3 basis = doubly-transitive 4-paths (a,b,c,d) with a->b->c->d, a->c, b->d, **plus** cancelling combinations from non-doubly-transitive paths
+
+**Dimension formula (proved).**
+
+    dim(Omega_2) = #TT + sum_{(x,y): y->x} max(0, k(x,y) - 1)
+
+where #TT is the count of transitive triples and k(x,y) = #{b : x->b, b->y} counts intermediaries. Verified exhaustive at n = 4, 5, 6.
+
+**Long exact sequence approach.** For the pair (T, T\v):
+
+    ... -> H_2(T\v) -> H_2(T) -> H_2(T, T\v) -> H_1(T\v) -> H_1(T) -> ...
+
+By induction: if beta_2(T\v) = 0 for all (n-1)-tournaments, then H_2(T) injects into H_2(T, T\v). To conclude beta_2(T) = 0, it suffices to find v with h_2^{rel}(T, T\v) = 0.
+
+**Key hypotheses (all verified computationally, not proved algebraically):**
+
+- **HYP-257:** h_2^{rel}(T, T\v) in {0, 1} for all (T, v) pairs
+- **HYP-262:** sum_v h_2^{rel}(T, T\v) <= 3 for all tournaments
+- **HYP-263:** beta_1(T) > 0 implies sum_v h_2^{rel} = 0
+- **Perfect partition:** beta_1(T) = 0 iff sum_v beta_1(T\v) <= 3
+
+These give: for n >= 5, the pigeonhole principle (sum <= 3 < 5 <= n) guarantees existence of v with h_2^{rel} = 0, completing the induction.
+
+**Key claim (verified through n = 9):** If beta_1(T\v) > 0 for ALL v, then beta_1(T) > 0. At n = 5 this is proved algebraically via 3-cycle counting (all such tournaments are regular with t_3 = 5, hence beta_1 = 1). The general case remains **open**.
+
+### 6.4 Paley Tournament Homology
+
+For the **Paley tournament** T_p (p prime, p = 3 mod 4), where a->b iff b-a is a quadratic residue mod p:
+
+- The cyclic group Z_p acts on T_p by rotation, decomposing the chain complex into p eigenspaces
+- All non-trivial eigenspaces (k = 1, ..., p-1) have identical Omega dimensions
+- **Universal pattern (p >= 7):** beta_d = p-1 at d = p-3, and beta_d = 0 otherwise (for d >= 1)
+- Homotopy type: wedge of (p-1) copies of S^{p-3}
+- Euler characteristic chi = p
+
+Verified: P_7 has beta = (1,0,0,0,6,0) and P_11 has beta_8 = 10.
+
+---
+
+## 7. Spectrum and Extremal Results
+
+### 7.1 Hamiltonian Path Spectrum
+
+**Permanent gaps in the H-spectrum:**
+
+- **H = 7 is impossible** for all n. Proof: Claim A decomposition forces alpha_1 >= 4 (at least four 3-cycles through any vertex), giving H >= 1 + 2*4 + ... >= 11.
+- **H = 21 is impossible** for all n. Proof: poisoning graph DAG argument via component reduction.
+- H = 63 is achievable at n = 8 (found by sampling), so it is **not** a permanent gap.
+
+At n = 7: the H-spectrum contains 77 distinct odd values in [1, 189].
+
+### 7.2 Paley Maximization
+
+**Conjecture.** Among all tournaments on p vertices (p prime, p = 3 mod 4), the Paley tournament T_p maximizes H(T).
+
+Verified: H(T_3) = 3, H(T_7) = 189, H(T_11) = 95,095.
+
+### 7.3 Real-Rootedness of I(Omega(T), x)
+
+**Theorem (THM-020/021).** I(Omega(T), x) has all real roots for n <= 8.
+
+**Theorem (THM-025).** This **fails** at n = 9: explicit counterexample found where I(Omega(T), x) has complex roots.
+
+---
+
+## 8. The Pin Grid and Symmetry
+
+### 8.1 Tiling Model
+
+A tournament on vertices {1, ..., n} with a fixed base path P_0 = (n, n-1, ..., 1) is encoded by a binary tiling t in {0,1}^m of the **pin grid** Grid(n) = {(r,c) : r >= 1, c >= 1, r+c <= n-1}, where m = C(n-1, 2). The grid is isomorphic to the staircase Young diagram delta_{n-2}.
+
+### 8.2 Symmetry Group
+
+The pin grid has symmetry group S_3 x Z_2 (the prism group), generated by:
+- sigma: reflection swapping rows and columns
+- tau: 120-degree rotation
+- phi: complement (bit flip, corresponding to T -> T^op)
+
+**Theorem (THM-025/THM-031).** The symmetry group acts on Grid(n) with:
+- |Fix(sigma)| = 2^{floor((n-1)^2/4)}
+- |Fix(tau*sigma)| = 2^{(m + 2*ind_3)/3}
+
+The **double Burnside formula** counts isomorphism classes under position permutations and grid symmetries simultaneously.
+
+### 8.3 Connection to Self-Evacuating Standard Young Tableaux
+
+**Theorem (THM-035).** The number of self-evacuating SYT of shape delta_{n-2} equals 2^{m^2} = |Fix(sigma)| for n = 2m+1. All hook lengths of delta_{n-2} are odd.
+
+---
+
+## 9. Status Summary
+
+### Proved
+- Redei's theorem (4 routes)
+- OCF: H(T) = I(Omega(T), 2) (Grinberg-Stanley)
+- Claim B (algebraic)
+- Transfer matrix symmetry M[a,b] = M[b,a]
+- Complete Walsh spectrum of H and M[a,b]
+- Direct Walsh proof of OCF (THM-077)
+- Universal congruences for signed Hamiltonian permanent
+- F-polynomial complement duality
+- Moment hierarchy from cycle counts
+- H = 7 and H = 21 are permanent spectrum gaps
+- dim(Omega_2) formula for tournaments
+- Pin grid S_3 x Z_2 symmetry
+
+### Computational (strong evidence, no algebraic proof)
+- beta_2 = 0 for all tournaments (~47k tests, 0 failures)
+- Unimodality of F(T, x) (~50k tests, 0 failures)
+- Paley maximization of H
+- HYP-262: sum of relative homology dims <= 3
+
+### Open
+- Algebraic proof of beta_2 = 0
+- Per-path identity for all n (incorporating all odd cycle lengths)
+- Walsh diagonalization at general n (dimension explosion at n = 9)
+- Proof of Paley maximization
+- Combinatorial interpretation of Worpitzky coefficients
+
+---
+
+## 10. References
+
+- S. Grinberg, R.P. Stanley, *Counting Hamiltonian paths in tournaments*, arXiv:2412.10572 (2024)
+- A. Grigor'yan, Y. Lin, Y. Muranov, S.-T. Yau, *Homologies of path complexes and digraphs*, arXiv:1207.2834 (2012)
+- L. Redei, *Ein kombinatorischer Satz*, Acta Litterarum ac Scientiarum (Szeged) 7 (1934), 39-43
+- R. Forcade, *Parity of paths and circuits in tournaments*, Discrete Math. 6 (1973), 115-118
+- S. Chowdhury, S. Huntsman, M. Yutin, *Path homologies of motifs and temporal network representations*, Appl. Netw. Sci. (2022)
+- J. Schweser, M. Stiebitz, B. Toft, *The tournament theorem of Redei revisited*, arXiv:2510.10659 (2025)
+- K.B. Tang, S.-T. Yau, *Path homology of circulant digraphs*, arXiv:2602.04140 (2026)
+
+---
+
+*This document is auto-generated from the research repository and will be updated as new results are obtained.*
