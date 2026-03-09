@@ -1,0 +1,53 @@
+============================================================
+RANK OF HIDDEN CYCLE LIFTS: C₁ vs C₁/B₁
+============================================================
+
+--- n=5 ---
+dim(C₁) = 10
+dim(C₁/B₁) = 4 when β₁=0
+Tested: 720
+(#bad, rank_C₁, rank_{C₁/B₁}) → count:
+  #bad=1, rank_C₁=1, rank_C₁/B₁=0: 240
+  #bad=2, rank_C₁=2, rank_C₁/B₁=0: 120
+  #bad=3, rank_C₁=3, rank_C₁/B₁=0: 120
+
+--- n=6 ---
+dim(C₁) = 15
+dim(C₁/B₁) = 5 when β₁=0
+Tested: 1000
+(#bad, rank_C₁, rank_{C₁/B₁}) → count:
+  #bad=1, rank_C₁=1, rank_C₁/B₁=0: 315
+  #bad=2, rank_C₁=2, rank_C₁/B₁=0: 179
+  #bad=3, rank_C₁=3, rank_C₁/B₁=0: 61
+
+============================================================
+LIFTS MOD B₁: DETAILED STRUCTURE (n=5)
+============================================================
+
+Tournament bits=41, bad=[1, 2, 4]
+dim(B₁) = 6, dim(C₁/B₁) = 4
+
+  z_1 mod B₁ (nonzero components):
+  norm in B₁⊥: 0.000000
+  norm in B₁: 1.000000
+
+  z_2 mod B₁ (nonzero components):
+  norm in B₁⊥: 0.000000
+  norm in B₁: 1.000000
+
+  z_4 mod B₁ (nonzero components):
+  norm in B₁⊥: 0.000000
+  norm in B₁: 1.000000
+
+  Pairwise angles in C₁/B₁:
+    z_1 · z_2 / norms = 0.000000
+    z_1 · z_4 / norms = -0.000000
+    z_2 · z_4 / norms = -0.000000
+
+  Rank of 3 lifts mod B₁ = 0
+  (If rank=2, then ONE relation exists among the 3 lifts mod B₁)
+  Null relation: -0.3459·z_1 + -0.0164·z_2 + -0.3628·z_4 = 0 mod B₁
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/beta2_quotient_rank.py", line 259, in <module>
+    cos_alt = abs(np.dot(alt_norm, null_norm))
+ValueError: shapes (3,) and (10,) not aligned: 3 (dim 0) != 10 (dim 0)

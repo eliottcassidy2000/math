@@ -67,6 +67,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-367 | Alternating sum of 3 hidden cycle lifts ∈ im(∂₂) (1-boundary) | CONFIRMED: z₁-z₂+z₃ is in im(∂₂) but NOT a coboundary. Being exact doesn't force dependency. | beta2_redei_telescope.py |
 | HYP-368 | Non-bad vertex subtournaments have zero redundancy when #bad=3 (n=5) | CONFIRMED exhaustive n=5: 240/240 non-bad T\\w have redundancy=0. At n=6: mixed (0,1,2). | beta2_redei_telescope.py |
 | HYP-369 | Bad vertices biased toward HP endpoints (positions 0, n-1) | CONFIRMED n=5,6: endpoints ~30% overrepresented vs uniform. | beta2_redei_telescope.py |
+| HYP-370 | All hidden cycle lifts z_v ∈ B₁ = im(∂₂) | CONFIRMED exhaustive n=5 (480/480), n=6 (1000/1000): rank_C₁/B₁ = 0 for ALL. Each z_v is a linear combination of TT boundaries. The quotient C₁/B₁ sees NOTHING — lifts are independent WITHIN B₁, not outside it. | beta2_quotient_rank.py |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
@@ -77,6 +78,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-321 | chi(T) in {0,1} for all tournaments | chi=-1 at n=8 (beta_1=beta_5=1), chi=2,6 (beta_4>0) | n=8 | kind-pasteur-S45 |
 | HYP-102 | M(T) = M(T^op) | Fails for generic tournaments | n=4 | reversal_proof_attempt.py |
 | HYP-361 | V-projection RC proof: mixed TTs span ≤2D in bad-edge subspace V | Mixed TTs span ALL 3D of V (rank=3). Each bad-edge has ≥1 mixed TT. Star-cocycle does NOT constrain to 2D. | n=5 (120/120 fail) | beta2_grok_rc_proof.py |
+| HYP-371 | C₁/B₁ quotient bounds #bad: alt sum ∈ B₁ ⟹ dep mod B₁ ⟹ #bad ≤ dim(C₁/B₁) | ALL lifts have rank 0 in C₁/B₁ (every z_v ∈ B₁!). Quotient sees nothing. Lifts are independent WITHIN B₁. Even if it worked, bound would be n-1, not 3. | n=5,6 (exhaustive) | beta2_quotient_rank.py |
 | HYP-103 | M(T) = M(T^op)^T | Also fails | n=4 | reversal_proof_attempt.py |
 | HYP-104 | M is linear in A, A^T, A^2, etc. | No such combination works | n=4 | simple_pattern_search.py |
 | HYP-105 | M commutes with A | Fails | n=4 | M_functional_equation.py |

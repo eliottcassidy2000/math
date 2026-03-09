@@ -13,6 +13,18 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S51f — C₁/B₁ quotient argument REFUTED
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S51e
+**Summary of work:**
+  Tested Grok's C₁/B₁ quotient bound for #bad. REFUTED: ALL hidden cycle lifts z_v
+  lie entirely in B₁ = im(∂₂) (rank 0 in C₁/B₁). The quotient sees nothing.
+  Lifts are independent WITHIN B₁, not outside it. Each z_v = Σ c_j · ∂₂(TT_j),
+  with bad-vertex TT appearing in every decomposition.
+  Even if the quotient argument worked, dim(C₁/B₁) = n-1, giving bound n-1, not 3.
+**New contributions:** HYP-370, HYP-371 (refuted)
+**Unresolved threads:** WHY #bad ≤ 3 remains OPEN — need argument within B₁, not C₁/B₁
+
 ## opus-2026-03-09-S51e — Rédei telescoping test + non-bad redundancy
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S51d
