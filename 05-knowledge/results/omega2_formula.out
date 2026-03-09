@@ -1,0 +1,137 @@
+======================================================================
+OMEGA_2 FORMULA: dim(Omega_2) in terms of tournament invariants
+======================================================================
+
+  n=3 (d=2), 8 samples:
+    |A_2| = C(n,3) + 2*c3 = 1 + 2*c3
+    c3=0: Omega_2 in [1], |A_2|=1, rank in [0], count=6
+    Omega_2 is a function of c3 alone
+
+  n=4 (d=3), 64 samples:
+    |A_2| = C(n,3) + 2*c3 = 4 + 2*c3
+    c3=0: Omega_2 in [4], |A_2|=4, rank in [0], count=24
+    c3=1: Omega_2 in [np.int64(3)], |A_2|=6, rank in [np.int64(3)], count=16
+    c3=2: Omega_2 in [np.int64(3)], |A_2|=8, rank in [np.int64(5)], count=24
+    Omega_2 is a function of c3 alone
+    Linear fit: Omega_2 ~ -0.5000*c3 + 3.8750, max residual=0.3750
+    Quadratic fit: max residual=0.0000
+
+  n=5 (d=4), 1024 samples:
+    |A_2| = C(n,3) + 2*c3 = 10 + 2*c3
+    c3=0: Omega_2 in [10], |A_2|=10, rank in [0], count=120
+    c3=1: Omega_2 in [np.int64(9)], |A_2|=12, rank in [np.int64(3)], count=120
+    c3=2: Omega_2 in [np.int64(9)], |A_2|=14, rank in [np.int64(5)], count=240
+    c3=3: Omega_2 in [np.int64(9)], |A_2|=16, rank in [np.int64(7)], count=240
+    c3=4: Omega_2 in [np.int64(8), np.int64(9), np.int64(10)], |A_2|=18, rank in [np.int64(8), np.int64(9), np.int64(10)], count=280
+    c3=5: Omega_2 in [np.int64(10)], |A_2|=20, rank in [np.int64(10)], count=24
+    Omega_2 is NOT a function of c3 alone
+    Linear fit: Omega_2 ~ -0.0625*c3 + 9.3750, max residual=1.1250
+    Quadratic fit: max residual=1.3125
+
+  n=6 (d=5), 32768 samples:
+    |A_2| = C(n,3) + 2*c3 = 20 + 2*c3
+    c3=0: Omega_2 in [20], |A_2|=20, rank in [0], count=720
+    c3=1: Omega_2 in [np.int64(19)], |A_2|=22, rank in [np.int64(3)], count=960
+    c3=2: Omega_2 in [np.int64(18), np.int64(19)], |A_2|=24, rank in [np.int64(5), np.int64(6)], count=2240
+    c3=3: Omega_2 in [np.int64(19)], |A_2|=26, rank in [np.int64(7)], count=2880
+    c3=4: Omega_2 in [np.int64(18), np.int64(19), np.int64(20)], |A_2|=28, rank in [np.int64(8), np.int64(9), np.int64(10)], count=6240
+    c3=5: Omega_2 in [np.int64(18), np.int64(19), np.int64(20)], |A_2|=30, rank in [np.int64(10), np.int64(11), np.int64(12)], count=3648
+    c3=6: Omega_2 in [np.int64(18), np.int64(19), np.int64(20), np.int64(21)], |A_2|=32, rank in [np.int64(11), np.int64(12), np.int64(13), np.int64(14)], count=8640
+    c3=7: Omega_2 in [np.int64(20), np.int64(21)], |A_2|=34, rank in [np.int64(13), np.int64(14)], count=4800
+    c3=8: Omega_2 in [np.int64(21), np.int64(22), np.int64(24)], |A_2|=36, rank in [np.int64(12), np.int64(14), np.int64(15)], count=2640
+    Omega_2 is NOT a function of c3 alone
+    Linear fit: Omega_2 ~ 0.3125*c3 + 18.1836, max residual=3.3164
+    Quadratic fit: max residual=2.5061
+
+  n=7 (d=6), 500 samples:
+    |A_2| = C(n,3) + 2*c3 = 35 + 2*c3
+    c3=2: Omega_2 in [np.int64(34)], |A_2|=39, rank in [np.int64(5)], count=5
+    c3=3: Omega_2 in [np.int64(33), np.int64(34)], |A_2|=41, rank in [np.int64(7), np.int64(8)], count=9
+    c3=4: Omega_2 in [np.int64(33), np.int64(34), np.int64(35)], |A_2|=43, rank in [np.int64(8), np.int64(9), np.int64(10)], count=16
+    c3=5: Omega_2 in [np.int64(33), np.int64(34), np.int64(35)], |A_2|=45, rank in [np.int64(10), np.int64(11), np.int64(12)], count=24
+    c3=6: Omega_2 in [np.int64(33), np.int64(34), np.int64(35), np.int64(36)], |A_2|=47, rank in [np.int64(11), np.int64(12), np.int64(13), np.int64(14)], count=44
+    c3=7: Omega_2 in [np.int64(33), np.int64(34), np.int64(35), np.int64(36)], |A_2|=49, rank in [np.int64(13), np.int64(14), np.int64(15), np.int64(16)], count=49
+    c3=8: Omega_2 in [np.int64(33), np.int64(34), np.int64(35), np.int64(36), np.int64(37), np.int64(39)], |A_2|=51, rank in [np.int64(12), np.int64(14), np.int64(15), np.int64(16), np.int64(17), np.int64(18)], count=70
+    c3=9: Omega_2 in [np.int64(32), np.int64(33), np.int64(34), np.int64(35), np.int64(36), np.int64(37), np.int64(38)], |A_2|=53, rank in [np.int64(15), np.int64(16), np.int64(17), np.int64(18), np.int64(19), np.int64(20), np.int64(21)], count=78
+    c3=10: Omega_2 in [np.int64(35), np.int64(36), np.int64(37), np.int64(38), np.int64(40)], |A_2|=55, rank in [np.int64(15), np.int64(17), np.int64(18), np.int64(19), np.int64(20)], count=82
+    c3=11: Omega_2 in [np.int64(37), np.int64(38), np.int64(39), np.int64(40)], |A_2|=57, rank in [np.int64(17), np.int64(18), np.int64(19), np.int64(20)], count=62
+    c3=12: Omega_2 in [np.int64(38), np.int64(39), np.int64(40), np.int64(41), np.int64(43)], |A_2|=59, rank in [np.int64(16), np.int64(18), np.int64(19), np.int64(20), np.int64(21)], count=48
+    c3=13: Omega_2 in [np.int64(40), np.int64(41)], |A_2|=61, rank in [np.int64(20), np.int64(21)], count=12
+    Omega_2 is NOT a function of c3 alone
+    Linear fit: Omega_2 ~ 0.6485*c3 + 30.8086, max residual=4.6450
+    Quadratic fit: max residual=4.2876
+
+  n=8 (d=7), 500 samples:
+    |A_2| = C(n,3) + 2*c3 = 56 + 2*c3
+    c3=5: Omega_2 in [np.int64(55)], |A_2|=66, rank in [np.int64(11)], count=4
+    c3=6: Omega_2 in [np.int64(54), np.int64(55), np.int64(56)], |A_2|=68, rank in [np.int64(12), np.int64(13), np.int64(14)], count=5
+    c3=7: Omega_2 in [np.int64(55), np.int64(56), np.int64(57)], |A_2|=70, rank in [np.int64(13), np.int64(14), np.int64(15)], count=6
+    c3=8: Omega_2 in [np.int64(55), np.int64(56), np.int64(57)], |A_2|=72, rank in [np.int64(15), np.int64(16), np.int64(17)], count=14
+    c3=9: Omega_2 in [np.int64(55), np.int64(56), np.int64(57), np.int64(58), np.int64(59)], |A_2|=74, rank in [np.int64(15), np.int64(16), np.int64(17), np.int64(18), np.int64(19)], count=17
+    c3=10: Omega_2 in [np.int64(55), np.int64(56), np.int64(57), np.int64(58), np.int64(59)], |A_2|=76, rank in [np.int64(17), np.int64(18), np.int64(19), np.int64(20), np.int64(21)], count=38
+    c3=11: Omega_2 in [np.int64(55), np.int64(56), np.int64(57), np.int64(58), np.int64(59), np.int64(60), np.int64(61)], |A_2|=78, rank in [np.int64(17), np.int64(18), np.int64(19), np.int64(20), np.int64(21), np.int64(22), np.int64(23)], count=28
+    c3=12: Omega_2 in [np.int64(55), np.int64(56), np.int64(57), np.int64(58), np.int64(59), np.int64(60), np.int64(61), np.int64(62), np.int64(64)], |A_2|=80, rank in [np.int64(16), np.int64(18), np.int64(19), np.int64(20), np.int64(21), np.int64(22), np.int64(23), np.int64(24), np.int64(25)], count=48
+    c3=13: Omega_2 in [np.int64(56), np.int64(57), np.int64(58), np.int64(59), np.int64(60), np.int64(61)], |A_2|=82, rank in [np.int64(21), np.int64(22), np.int64(23), np.int64(24), np.int64(25), np.int64(26)], count=60
+    c3=14: Omega_2 in [np.int64(56), np.int64(58), np.int64(59), np.int64(60), np.int64(61), np.int64(62), np.int64(63), np.int64(65)], |A_2|=84, rank in [np.int64(19), np.int64(21), np.int64(22), np.int64(23), np.int64(24), np.int64(25), np.int64(26), np.int64(28)], count=46
+    c3=15: Omega_2 in [np.int64(59), np.int64(60), np.int64(61), np.int64(62), np.int64(63), np.int64(64)], |A_2|=86, rank in [np.int64(22), np.int64(23), np.int64(24), np.int64(25), np.int64(26), np.int64(27)], count=55
+    c3=16: Omega_2 in [np.int64(60), np.int64(61), np.int64(62), np.int64(63), np.int64(64), np.int64(65)], |A_2|=88, rank in [np.int64(23), np.int64(24), np.int64(25), np.int64(26), np.int64(27), np.int64(28)], count=68
+    c3=17: Omega_2 in [np.int64(62), np.int64(63), np.int64(64), np.int64(65), np.int64(66), np.int64(67)], |A_2|=90, rank in [np.int64(23), np.int64(24), np.int64(25), np.int64(26), np.int64(27), np.int64(28)], count=39
+    c3=18: Omega_2 in [np.int64(64), np.int64(65), np.int64(66), np.int64(67)], |A_2|=92, rank in [np.int64(25), np.int64(26), np.int64(27), np.int64(28)], count=41
+    c3=19: Omega_2 in [np.int64(66), np.int64(67), np.int64(68)], |A_2|=94, rank in [np.int64(26), np.int64(27), np.int64(28)], count=25
+    c3=20: Omega_2 in [np.int64(68), np.int64(69)], |A_2|=96, rank in [np.int64(27), np.int64(28)], count=5
+    Omega_2 is NOT a function of c3 alone
+    Linear fit: Omega_2 ~ 0.8958*c3 + 48.4155, max residual=7.5845
+    Quadratic fit: max residual=5.3171
+
+======================================================================
+Part 2: What determines Omega_2 beyond c3?
+======================================================================
+
+  n=5, c3=4: Omega_2 in [np.int64(8), np.int64(9), np.int64(10)]
+    Omega_2=8: 40 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], 40)]
+    Omega_2=9: 120 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], 120)]
+    Omega_2=10: 120 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], 120)]
+
+  n=6, c3=2: Omega_2 in [np.int64(18), np.int64(19)]
+    Omega_2=18: 80 tours, top scores: [([np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)], 80)]
+    Omega_2=19: 2160 tours, top scores: [([np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)], 720), ([np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)], 720), ([np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)], 720)]
+
+  n=6, c3=4: Omega_2 in [np.int64(18), np.int64(19), np.int64(20)]
+    Omega_2=18: 480 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)], 240), ([np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)], 240)]
+    Omega_2=19: 4320 tours, top scores: [([np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)], 2880), ([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)], 720), ([np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)], 720)]
+    Omega_2=20: 1440 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)], 720), ([np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)], 720)]
+
+  n=6, c3=5: Omega_2 in [np.int64(18), np.int64(19), np.int64(20)]
+    Omega_2=18: 480 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)], 240), ([np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)], 240)]
+    Omega_2=19: 1440 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)], 720), ([np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)], 720)]
+    Omega_2=20: 1728 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)], 720), ([np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)], 720), ([np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)], 144)]
+
+  n=6, c3=6: Omega_2 in [np.int64(18), np.int64(19), np.int64(20), np.int64(21)]
+    Omega_2=18: 720 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)], 720)]
+    Omega_2=19: 2160 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)], 2160)]
+    Omega_2=20: 3600 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)], 3600)]
+    Omega_2=21: 2160 tours, top scores: [([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)], 2160)]
+
+  n=6, c3=7: Omega_2 in [np.int64(20), np.int64(21)]
+    Omega_2=20: 1920 tours, top scores: [([np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)], 960), ([np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)], 960)]
+    Omega_2=21: 2880 tours, top scores: [([np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)], 1440), ([np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)], 1440)]
+
+  n=6, c3=8: Omega_2 in [np.int64(21), np.int64(22), np.int64(24)]
+    Omega_2=21: 1680 tours, top scores: [([np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)], 1680)]
+    Omega_2=22: 720 tours, top scores: [([np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)], 720)]
+    Omega_2=24: 240 tours, top scores: [([np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)], 240)]
+
+======================================================================
+Part 3: Is Omega_2 determined by (c3, score)?
+======================================================================
+  n=5, (c3=4, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]): Omega_2 in [np.int64(8), np.int64(9), np.int64(10)]
+  n=5: Omega_2 is NOT determined by (c3, score)
+  n=6, (c3=4, score=[np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]): Omega_2 in [np.int64(18), np.int64(19), np.int64(20)]
+  n=6, (c3=4, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)]): Omega_2 in [np.int64(18), np.int64(19), np.int64(20)]
+  n=6, (c3=5, score=[np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]): Omega_2 in [np.int64(18), np.int64(19), np.int64(20)]
+  n=6, (c3=5, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]): Omega_2 in [np.int64(18), np.int64(19), np.int64(20)]
+  n=6, (c3=6, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)]): Omega_2 in [np.int64(18), np.int64(19), np.int64(20), np.int64(21)]
+  n=6, (c3=7, score=[np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]): Omega_2 in [np.int64(20), np.int64(21)]
+  n=6, (c3=7, score=[np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)]): Omega_2 in [np.int64(20), np.int64(21)]
+  n=6, (c3=8, score=[np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]): Omega_2 in [np.int64(21), np.int64(22), np.int64(24)]
+  n=6: Omega_2 is NOT determined by (c3, score)
