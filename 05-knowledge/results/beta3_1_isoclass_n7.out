@@ -1,0 +1,73 @@
+======================================================================
+beta_3=1 ISOMORPHISM CLASSES at n=7
+======================================================================
+
+  Sampling 3000 tournaments at n=7...
+    ... 0/3000
+    ... 500/3000
+    ... 1000/3000
+    ... 1500/3000
+    ... 2000/3000
+    ... 2500/3000
+
+  Found 215 beta_3=1 tournaments
+
+  Score sequence distribution:
+    (1, 1, 2, 2, 5, 5, 5): 4 tournaments
+      3-cycle counts: {3: 4}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 1, 1): 4}
+      Deletion scores when beta_3=1:
+        (1, 1, 1, 4, 4, 4): 8
+    (1, 1, 2, 3, 4, 5, 5): 6 tournaments
+      3-cycle counts: {5: 6}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 1): 6}
+      Deletion scores when beta_3=1:
+        (1, 1, 1, 4, 4, 4): 6
+    (1, 1, 2, 4, 4, 4, 5): 7 tournaments
+      3-cycle counts: {6: 7}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 1): 7}
+      Deletion scores when beta_3=1:
+        (1, 1, 1, 4, 4, 4): 7
+    (1, 2, 2, 2, 4, 5, 5): 7 tournaments
+      3-cycle counts: {6: 7}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 1): 7}
+      Deletion scores when beta_3=1:
+        (1, 1, 1, 4, 4, 4): 7
+    (1, 2, 2, 3, 4, 4, 5): 25 tournaments
+      3-cycle counts: {8: 25}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 18, (0, 0, 0, 0, 0, 0, 1): 7}
+      Deletion scores when beta_3=1:
+        (1, 1, 1, 4, 4, 4): 7
+    (1, 2, 2, 4, 4, 4, 4): 5 tournaments
+      3-cycle counts: {9: 5}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 5}
+    (1, 2, 3, 3, 4, 4, 4): 11 tournaments
+      3-cycle counts: {10: 11}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 5, (0, 0, 0, 0, 0, 0, 1): 6}
+      Deletion scores when beta_3=1:
+        (2, 2, 2, 3, 3, 3): 6
+    (2, 2, 2, 2, 4, 4, 5): 8 tournaments
+      3-cycle counts: {9: 8}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 8}
+    (2, 2, 2, 3, 3, 4, 5): 13 tournaments
+      3-cycle counts: {10: 13}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 7, (0, 0, 0, 0, 0, 0, 1): 6}
+      Deletion scores when beta_3=1:
+        (2, 2, 2, 3, 3, 3): 6
+    (2, 2, 2, 3, 4, 4, 4): 33 tournaments
+      3-cycle counts: {11: 33}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 14, (0, 0, 0, 0, 0, 0, 1): 19}
+      Deletion scores when beta_3=1:
+        (2, 2, 2, 3, 3, 3): 19
+    (2, 2, 3, 3, 3, 4, 4): 66 tournaments
+      3-cycle counts: {12: 66}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 19, (0, 0, 0, 0, 0, 0, 1): 31, (0, 0, 0, 0, 0, 1, 1): 16}
+      Deletion scores when beta_3=1:
+        (2, 2, 2, 3, 3, 3): 63
+    (2, 3, 3, 3, 3, 3, 4): 30 tournaments
+      3-cycle counts: {13: 30}
+      Deletion beta_3 profiles: {(0, 0, 0, 0, 0, 0, 0): 5, (0, 0, 0, 0, 0, 0, 1): 25}
+      Deletion scores when beta_3=1:
+        (2, 2, 2, 3, 3, 3): 25
+
+  Estimated P(beta_3=1) at n=7: 215/3000 = 0.0717

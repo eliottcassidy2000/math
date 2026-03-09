@@ -48,7 +48,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-347 | beta_1+beta_5 coexistence at n=8 | Found 1/2000: betti=[1,1,0,0,0,1,0,0], scores=(3,3,3,3,4,4,4,4), c3=20, chi=-1. Extremely rare | kind-pasteur-S45 |
 | HYP-348 | beta_3+beta_4 coexistence rate ~0.15% at n=8 | 3/2000 with profile [1,0,0,1,1,0,0,0]. All have SC scores | kind-pasteur-S45 |
 | HYP-349 | rank(d_4) gap = ker(d_3) - rank(d_4) is always 0 or 1 | Exhaustive n=6 (32448 gap=0, 320 gap=1). Sampled n=7 (925/75), n=8 (255/45). Equivalent to beta_3 in {0,1} | kind-pasteur-S46 |
-| HYP-350 | Good vertex existence for beta_3: exists v with beta_3(T\v)=0 when beta_3(T)>0 | Exhaustive n=6 (320/320), sampled n=7 (34/34), n=8 (31/31). 100% at all tested n | kind-pasteur-S46 |
+| HYP-350 | Good vertex existence for beta_3: exists v with beta_3(T\v)=0 when beta_3(T)>0 | TRUE when beta_3>0. But FAILS unconditionally: Paley T_7 has beta_3=0 with NO good vertex (240 counterexamples at n=7). Good vertex holds for non-Paley n=7 (exhaustive) | kind-pasteur-S46, corrected opus-S53 |
 | HYP-351 | dim H_3(T,T\v) <= 1 for ALL tournaments T and ALL vertices v | Exhaustive n=6: ALL 1920 pairs give dim=1 (for beta_3>0 T). n=7: dim in {0,1}. Max dim=1 | kind-pasteur-S46 |
 | HYP-352 | LES isomorphism: beta_3(T\v)=0 implies beta_3(T) = dim H_3(T,T\v) | n=6 exhaustive: 1920/1920 perfect match. Follows from H_2(T\v)=0 + LES exactness | kind-pasteur-S46 |
 | HYP-353 | beta_3 completely fragile at n=6: ALL 6 deletions give beta_3=0 | 320/320 exhaustive. At n=7: 24/44 fragile, 16/44 have 1 surviving, 4/44 have 2 surviving | kind-pasteur-S46 |
@@ -82,6 +82,13 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-381 | LES dichotomy: b3(T\v)=0 => (rank=0,H3rel=1); b3(T\v)=1 => (rank=1,H3rel=0) | PERFECT at n=6 (exhaustive), n=7 (100 tours, 700 pairs), n=8 (20 tours). Combined: beta_3(T)=1 for ANY vertex choice | kind-pasteur-S47 |
 | HYP-382 | Relative dims at n=6 fully determined by type: Type A=(1,5,9,6,0,0), Type B=(1,5,12,14,8,3) | Exhaustive: 480 Type A pairs, 1440 Type B pairs. Rigid structure | kind-pasteur-S47 |
 | HYP-383 | Bad vertices have δ(β₃)=0: adding v adds EQUAL kernel and im(d_4) | n=7: 71/71 bad vertices. Perfect saturation — T\v cycle orthogonal to new v-paths content | kind-pasteur-S47 |
+| HYP-387 | Score obstruction fails for beta_3=2 at n=7: 4 score seqs compatible | (2,2,2,3,4,4,4), (2,2,3,3,3,4,4), (2,3,3,3,3,3,4), (3,3,3,3,3,3,3) all allow all-deletions-beta_3=1 | opus-S53 |
+| HYP-388 | Only Paley T_7 has all 7 deletions with beta_3=1 (EXHAUSTIVE) | 240/2097152 = all labelings of Paley. Betti=[1,0,0,0,6,0,0], all deletions=[1,0,0,1,0,0]. beta_3(T_7)=0 (not 2!) | opus-S53 |
+| HYP-389 | Exactly 2 iso classes of beta_3=1 at n=6 | Type A: score(1,1,1,4,4,4), 80 tours, 2 c3, not SC. Type B: score(2,2,2,3,3,3), 240 tours, 8 c3, SC | opus-S53 |
+| HYP-390 | Score alone cannot predict beta_3(T\v): every score 0-6 has P(beta_3=1)>0 at n=7 | Sampled: all scores have 1-2% rate of beta_3=1 in deletion. No "guaranteed good" score | opus-S53 |
+| HYP-391 | 3-cycle count is constant per score sequence for beta_3=1 at n=7 | 12 score seqs observed, each with unique c3 count. Follows from Rédei formula c3 = C(n,3) - Σ C(d_i,2) | opus-S53 |
+| HYP-392 | Paley T_7 is the ONLY good-vertex-free tournament at n=7 (exhaustive) | 240/2097152 = all labelings of Paley. |Aut(T_7)|=21, 7!/21=240. All have beta_3=0. | opus-S53 |
+| HYP-393 | beta_3 ≤ 1 at n=7 EXHAUSTIVE (2,097,152 tournaments) | Case 1: 2,096,912 with good vertex → LES gives ≤1. Case 2: 240 Paley → beta_3=0 directly | opus-S53 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

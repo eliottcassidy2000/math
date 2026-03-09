@@ -1,0 +1,34 @@
+======================================================================
+PALEY T_7 VERIFICATION
+======================================================================
+
+  Canonical Paley T_7: beta_3 = 0
+
+  Checking all 7!/|Aut(T_7)| = 240 labelings...
+  Total distinct labelings: 240
+  beta_3 distribution: {0: 240}
+
+  *** ALL Paley labelings have beta_3 = 0 ***
+  Combined with good vertex for non-Paley: beta_3 <= 1 EXHAUSTIVE at n=7
+
+  Complement Paley (reverse all arcs):
+  beta_3(T_7^op) = 0
+
+======================================================================
+EXHAUSTIVE PROOF STRUCTURE at n=7
+======================================================================
+
+  For any tournament T on 7 vertices:
+
+  CASE 1: T has a good vertex v (beta_3(T\v) = 0).
+    By LES: beta_3(T) = rank(i*) + H_3(T,T\v) = 0 + H_3(T,T\v) ≤ 1.
+    (Uses: beta_2=0, H_3(T,T\v) ≤ 1)
+    This covers 2,097,152 - 240 = 2,096,912 tournaments.
+
+  CASE 2: T has NO good vertex (all deletions have beta_3=1).
+    EXHAUSTIVE: exactly 240 such tournaments exist, ALL isomorphic to Paley T_7.
+    Direct computation: beta_3(T_7) = 0.
+    (The mechanism: beta_4(T_7) = 6, connecting map kills all H_3.)
+
+  Therefore: beta_3(T) ≤ 1 for ALL tournaments on 7 vertices. QED.
+

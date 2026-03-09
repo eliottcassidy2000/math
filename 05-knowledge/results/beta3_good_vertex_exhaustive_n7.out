@@ -1,0 +1,1955 @@
+======================================================================
+EXHAUSTIVE GOOD VERTEX CHECK at n=7
+Total tournaments: 2,097,152
+======================================================================
+
+  Step 1: Precomputing beta_3 for all n=6 tournaments...
+    ... 0/32768
+    ... 5000/32768
+    ... 10000/32768
+    ... 15000/32768
+    ... 20000/32768
+    ... 25000/32768
+    ... 30000/32768
+  Done in 61.1s. beta_3=1 count: 320
+
+  Step 2: Checking all 2,097,152 tournaments for good vertex...
+    ... 0/2,097,152 (0s, 0/s, ETA 0s)
+    !!! VIOLATION at bits=85298, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=85609, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=87281, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=87590, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=91306, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=91493, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=140596, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=140969, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=152180, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=153235, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=158314, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=159059, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=175345, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=175654, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=182962, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=183893, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=189157, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=189590, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 200,000/2,097,152 (2s, 93613/s, ETA 20s)
+    !!! VIOLATION at bits=207980, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=208291, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=213676, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=214421, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=219875, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=220246, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=314737, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=314922, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=316594, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=317029, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=320745, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=320806, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=398769, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=398892, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 400,000/2,097,152 (4s, 95301/s, ETA 18s)
+    !!! VIOLATION at bits=416114, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=417355, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=418156, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=419211, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=433268, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=433827, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=442804, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=444045, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=453091, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=453710, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=466153, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=466214, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=477610, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=478541, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=479717, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=480398, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=537969, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=538154, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=545586, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=546393, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=549737, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=550170, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=566456, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=567077, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=576120, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=577299, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=586342, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=586963, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=597112, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=597795, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 600,000/2,097,152 (6s, 94570/s, ETA 16s)
+    !!! VIOLATION at bits=606648, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=608013, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=618979, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=619598, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=626097, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=626220, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=645362, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=646727, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=647404, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=648583, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=660152, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=661269, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=665976, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=667403, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=684374, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=684747, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=690996, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=691865, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=700660, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=702087, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=714970, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=715591, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=723881, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=724252, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=735466, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=736583, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=741596, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=742279, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=760486, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=761045, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=764389, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=765070, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=772502, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=772813, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 800,000/2,097,152 (9s, 93599/s, ETA 14s)
+    !!! VIOLATION at bits=832620, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=832931, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=836396, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=837017, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=842595, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=842842, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=892074, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=892261, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=903657, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=904462, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=905638, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=906445, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=924458, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=925017, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=930281, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=931086, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=938394, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=938829, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=955301, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=955548, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=964966, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=965835, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=969052, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=969611, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 1,000,000/2,097,152 (11s, 93926/s, ETA 12s)
+    !!! VIOLATION at bits=1127540, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1128099, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1131316, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1132185, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1141603, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1141850, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1158322, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1158757, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1166065, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1166870, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1172134, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1172693, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1190706, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1191513, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1192689, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1193494, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 1,200,000/2,097,152 (13s, 94110/s, ETA 10s)
+    !!! VIOLATION at bits=1204890, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1205077, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1254309, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1254556, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1260134, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1260755, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1264220, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1264531, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1324338, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1324649, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1332081, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1332762, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1336106, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1336665, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1354872, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1355555, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1360568, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1361685, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1372899, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1373270, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1381560, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1382181, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1395064, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1396491, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 1,400,000/2,097,152 (15s, 94141/s, ETA 7s)
+    !!! VIOLATION at bits=1405286, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1406155, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1412404, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1412777, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1429748, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1431175, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1435882, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1436999, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1448568, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1449747, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1450424, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1451789, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1470931, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1471054, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1477553, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1478172, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1489138, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1490503, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1499356, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1500039, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1510188, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1510809, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1519852, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1521031, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1530074, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1530695, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1546981, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1547414, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1550758, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1551565, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1558997, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1559182, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 1,600,000/2,097,152 (17s, 94154/s, ETA 5s)
+    !!! VIOLATION at bits=1616753, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1617434, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1618610, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1619541, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1630937, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1630998, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1643441, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1644060, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1653106, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1654347, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1663324, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1663883, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1677940, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1678995, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1679796, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1681037, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1698259, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1698382, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1776345, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1776406, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1780122, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1780557, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1782229, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1782414, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 1,800,000/2,097,152 (19s, 94164/s, ETA 3s)
+    !!! VIOLATION at bits=1876905, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1877276, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1882730, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1883475, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1888860, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1889171, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1907561, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1907994, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1913258, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1914189, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1921497, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1921806, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1938092, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1938837, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1943916, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1944971, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1956182, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=1956555, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    ... 2,000,000/2,097,152 (21s, 94613/s, ETA 1s)
+    !!! VIOLATION at bits=2005658, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=2005845, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=2009561, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=2009870, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=2011542, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+    !!! VIOLATION at bits=2011853, scores=(3, 3, 3, 3, 3, 3, 3)
+      T\0: beta_3=1
+      T\1: beta_3=1
+      T\2: beta_3=1
+      T\3: beta_3=1
+      T\4: beta_3=1
+      T\5: beta_3=1
+      T\6: beta_3=1
+
+  Done in 22.3s
+  Checked: 2,097,152
+  Score filter short-circuits: 1,941,296
+  VIOLATIONS (no good vertex): 240
+
+  !!! 240 VIOLATIONS FOUND !!!
+  The good vertex property FAILS at n=7.

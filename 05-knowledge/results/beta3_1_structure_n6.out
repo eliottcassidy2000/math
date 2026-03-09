@@ -1,0 +1,86 @@
+======================================================================
+STRUCTURAL CHARACTERIZATION of beta_3=1 tournaments at n=6
+======================================================================
+  Scanning 0/32768...
+  Scanning 5000/32768...
+  Scanning 10000/32768...
+  Scanning 15000/32768...
+  Scanning 20000/32768...
+  Scanning 25000/32768...
+  Scanning 30000/32768...
+
+  Total beta_3=1 tournaments: 320
+
+  3-cycle counts by score:
+    score=(1, 1, 1, 4, 4, 4), 3-cycles=2: 80 tournaments
+    score=(2, 2, 2, 3, 3, 3), 3-cycles=8: 240 tournaments
+
+  Computing isomorphism classes...
+
+  Score (1, 1, 1, 4, 4, 4):
+    80 tournaments in 1 isomorphism classes
+    Class 1: 3-cycles=2, vertex scores=[4, 1, 1, 1, 4, 4]
+      Allowed paths by level: [6, 15, 24, 27, 18, 9]
+      Adjacency matrix:
+        [0, 1, 1, 1, 0, 1]
+        [0, 0, 0, 1, 0, 0]
+        [0, 1, 0, 0, 0, 0]
+        [0, 0, 1, 0, 0, 0]
+        [1, 1, 1, 1, 0, 0]
+        [0, 1, 1, 1, 1, 0]
+
+  Score (2, 2, 2, 3, 3, 3):
+    240 tournaments in 1 isomorphism classes
+    Class 1: 3-cycles=8, vertex scores=[2, 3, 2, 2, 3, 3]
+      Allowed paths by level: [6, 15, 36, 63, 78, 45]
+      Adjacency matrix:
+        [0, 0, 0, 1, 0, 1]
+        [1, 0, 1, 0, 0, 1]
+        [1, 0, 0, 0, 1, 0]
+        [0, 1, 1, 0, 0, 0]
+        [1, 1, 0, 1, 0, 0]
+        [0, 0, 1, 1, 1, 0]
+
+======================================================================
+STRUCTURAL ANALYSIS
+======================================================================
+
+  Score (1, 1, 1, 4, 4, 4):
+    Low (score 1): [1, 2, 3]
+    High (score 4): [0, 4, 5]
+      T[1][0] = 0 (low→high)
+      T[1][4] = 0 (low→high)
+      T[1][5] = 0 (low→high)
+      T[2][0] = 0 (low→high)
+      T[2][4] = 0 (low→high)
+      T[2][5] = 0 (low→high)
+      T[3][0] = 0 (low→high)
+      T[3][4] = 0 (low→high)
+      T[3][5] = 0 (low→high)
+    Internal arcs among low:
+      T[1][2] = 0
+      T[1][3] = 1
+      T[2][1] = 1
+      T[2][3] = 0
+      T[3][1] = 0
+      T[3][2] = 1
+    Internal arcs among high:
+      T[0][4] = 0
+      T[0][5] = 1
+      T[4][0] = 1
+      T[4][5] = 0
+      T[5][0] = 0
+      T[5][4] = 1
+
+  Score (2, 2, 2, 3, 3, 3):
+    Low (score 2): [0, 2, 3]
+    High (score 3): [1, 4, 5]
+      T[0][1] = 0 (low→high)
+      T[0][4] = 0 (low→high)
+      T[0][5] = 1 (low→high)
+      T[2][1] = 0 (low→high)
+      T[2][4] = 1 (low→high)
+      T[2][5] = 0 (low→high)
+      T[3][1] = 1 (low→high)
+      T[3][4] = 0 (low→high)
+      T[3][5] = 0 (low→high)
