@@ -1,0 +1,1128 @@
+β₁ TRANSITIVE MECHANISM INVESTIGATION
+======================================================================
+Goal: Understand why bad vertices form transitive triples
+      and prove Σ_v β₁(T\v) ≤ 3 when β₁(T)=0
+
+
+######################################################################
+# EXHAUSTIVE ANALYSIS: n=5
+######################################################################
+
+======================================================================
+Tournament #41: n=5, β₁(T)=0, bad vertices=[1, 2, 4]
+======================================================================
+Bad vertices transitive? True
+  2→1
+  4→1
+  4→2
+
+  z_1 (generator of H₁(T\1)):
+    = +0.4751*(0→4) +1*(2→0) -0.5249*(3→0) +0.5083*(3→2) +0.4917*(4→2) -0.0166*(4→3)
+    vertices used: [0, 2, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_2 (generator of H₁(T\2)):
+    = -1*(0→1) +0.4751*(0→4) -0.5083*(1→3) -0.5249*(3→0) +0.4917*(4→1) -0.0166*(4→3)
+    vertices used: [0, 1, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_4 (generator of H₁(T\4)):
+    = +1*(0→1) +0.5*(1→3) +0.5*(2→0) -0.5*(2→1) +0.5*(3→0)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 5
+
+--- Filling chains in T ---
+  c_1: 12 terms, uses v=1? True, vertices: [0, 1, 2, 3, 4]
+  c_2: 12 terms, uses v=2? True, vertices: [0, 1, 2, 3, 4]
+  c_4: 11 terms, uses v=4? True, vertices: [0, 1, 2, 3, 4]
+
+--- Generator comparisons ---
+
+  Comparing z_1 and z_2:
+    2→1 (b beats a)
+    z_1 on T\{1,2}: 3 edges
+    z_2 on T\{1,2}: 3 edges
+    z_1-z_2 restricted: 0 nonzero edges
+    *** z_1 = z_2 on common edges! ***
+
+  Comparing z_1 and z_4:
+    4→1 (b beats a)
+    z_1 on T\{1,4}: 3 edges
+    z_4 on T\{1,4}: 2 edges
+    z_1-z_4 restricted: 3 nonzero edges
+    z_1-z_4 is NOT a boundary in T\{1,4} (residual 4.25e-01)
+    β₁(T\{1,4}) = 0
+
+  Comparing z_2 and z_4:
+    4→2 (b beats a)
+    z_2 on T\{2,4}: 3 edges
+    z_4 on T\{2,4}: 3 edges
+    z_2-z_4 restricted: 3 nonzero edges
+    Ω₂(T\{2,4}) = 0, cannot be boundary
+    β₁(T\{2,4}) = 1
+
+--- Dimension analysis ---
+  v=1:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=2:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=4:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+
+======================================================================
+Tournament #42: n=5, β₁(T)=0, bad vertices=[2, 3, 4]
+======================================================================
+Bad vertices transitive? True
+  3→2
+  4→2
+  4→3
+
+  z_2 (generator of H₁(T\2)):
+    = -0.4751*(0→4) -1*(1→0) +0.5083*(1→3) +0.5249*(3→0) -0.4917*(4→1) +0.0166*(4→3)
+    vertices used: [0, 1, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_3 (generator of H₁(T\3)):
+    = +0.5249*(0→2) +0.4751*(0→4) +1*(1→0) +0.5083*(2→1) +0.4917*(4→1) -0.0166*(4→2)
+    vertices used: [0, 1, 2, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_4 (generator of H₁(T\4)):
+    = +0.4751*(0→2) +1*(1→0) -0.5083*(1→3) +0.4917*(2→1) -0.5249*(3→0) +0.0166*(3→2)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 6
+
+--- Filling chains in T ---
+  c_2: 12 terms, uses v=2? True, vertices: [0, 1, 2, 3, 4]
+  c_3: 12 terms, uses v=3? True, vertices: [0, 1, 2, 3, 4]
+  c_4: 12 terms, uses v=4? True, vertices: [0, 1, 2, 3, 4]
+
+--- Generator comparisons ---
+
+  Comparing z_2 and z_3:
+    3→2 (b beats a)
+    z_2 on T\{2,3}: 3 edges
+    z_3 on T\{2,3}: 3 edges
+    z_2-z_3 restricted: 3 nonzero edges
+    Ω₂(T\{2,3}) = 0, cannot be boundary
+    β₁(T\{2,3}) = 1
+
+  Comparing z_2 and z_4:
+    4→2 (b beats a)
+    z_2 on T\{2,4}: 3 edges
+    z_4 on T\{2,4}: 3 edges
+    z_2-z_4 restricted: 3 nonzero edges
+    z_2-z_4 is NOT a boundary in T\{2,4} (residual 7.90e-01)
+    β₁(T\{2,4}) = 0
+
+  Comparing z_3 and z_4:
+    4→3 (b beats a)
+    z_3 on T\{3,4}: 3 edges
+    z_4 on T\{3,4}: 3 edges
+    z_3-z_4 restricted: 2 nonzero edges
+    Ω₂(T\{3,4}) = 0, cannot be boundary
+    β₁(T\{3,4}) = 1
+
+--- Dimension analysis ---
+  v=2:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=3:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=4:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+
+======================================================================
+Tournament #44: n=5, β₁(T)=0, bad vertices=[1, 3, 4]
+======================================================================
+Bad vertices transitive? True
+  1→3
+  4→1
+  4→3
+
+  z_1 (generator of H₁(T\1)):
+    = +0.5249*(0→3) +0.4751*(0→4) +1*(2→0) +0.5083*(3→2) +0.4917*(4→2) -0.0166*(4→3)
+    vertices used: [0, 2, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_3 (generator of H₁(T\3)):
+    = +0.4751*(0→4) +1*(1→0) -0.5249*(2→0) +0.5083*(2→1) +0.4917*(4→1) -0.0166*(4→2)
+    vertices used: [0, 1, 2, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_4 (generator of H₁(T\4)):
+    = -0.4751*(0→3) -1*(1→0) +0.4917*(1→3) +0.5249*(2→0) -0.5083*(2→1) +0.0166*(3→2)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 6
+
+--- Filling chains in T ---
+  c_1: 12 terms, uses v=1? True, vertices: [0, 1, 2, 3, 4]
+  c_3: 12 terms, uses v=3? True, vertices: [0, 1, 2, 3, 4]
+  c_4: 12 terms, uses v=4? True, vertices: [0, 1, 2, 3, 4]
+
+--- Generator comparisons ---
+
+  Comparing z_1 and z_3:
+    1→3 (a beats b)
+    z_1 on T\{1,3}: 3 edges
+    z_3 on T\{1,3}: 3 edges
+    z_1-z_3 restricted: 2 nonzero edges
+    Ω₂(T\{1,3}) = 0, cannot be boundary
+    β₁(T\{1,3}) = 1
+
+  Comparing z_1 and z_4:
+    4→1 (b beats a)
+    z_1 on T\{1,4}: 3 edges
+    z_4 on T\{1,4}: 3 edges
+    z_1-z_4 restricted: 3 nonzero edges
+    Ω₂(T\{1,4}) = 0, cannot be boundary
+    β₁(T\{1,4}) = 1
+
+  Comparing z_3 and z_4:
+    4→3 (b beats a)
+    z_3 on T\{3,4}: 3 edges
+    z_4 on T\{3,4}: 3 edges
+    z_3-z_4 restricted: 3 nonzero edges
+    z_3-z_4 is NOT a boundary in T\{3,4} (residual 7.90e-01)
+    β₁(T\{3,4}) = 0
+
+--- Dimension analysis ---
+  v=1:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=3:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=4:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+
+======================================================================
+Tournament #68: n=5, β₁(T)=0, bad vertices=[0, 2, 4]
+======================================================================
+Bad vertices transitive? True
+  2→0
+  4→0
+  4→2
+
+  z_0 (generator of H₁(T\0)):
+    = +0.4751*(1→4) +1*(2→1) -0.5249*(3→1) +0.5083*(3→2) +0.4917*(4→2) -0.0166*(4→3)
+    vertices used: [1, 2, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_2 (generator of H₁(T\2)):
+    = +0.4751*(0→3) +1*(1→0) -0.5083*(1→4) +0.4917*(3→1) -0.5249*(4→0) +0.0166*(4→3)
+    vertices used: [0, 1, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_4 (generator of H₁(T\4)):
+    = +0.4751*(0→3) +1*(1→0) -0.5249*(2→0) +0.5083*(2→1) +0.4917*(3→1) -0.0166*(3→2)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 6
+
+--- Filling chains in T ---
+  c_0: 12 terms, uses v=0? True, vertices: [0, 1, 2, 3, 4]
+  c_2: 12 terms, uses v=2? True, vertices: [0, 1, 2, 3, 4]
+  c_4: 11 terms, uses v=4? True, vertices: [0, 1, 2, 3, 4]
+
+--- Generator comparisons ---
+
+  Comparing z_0 and z_2:
+    2→0 (b beats a)
+    z_0 on T\{0,2}: 3 edges
+    z_2 on T\{0,2}: 3 edges
+    z_0-z_2 restricted: 3 nonzero edges
+    Ω₂(T\{0,2}) = 0, cannot be boundary
+    β₁(T\{0,2}) = 1
+
+  Comparing z_0 and z_4:
+    4→0 (b beats a)
+    z_0 on T\{0,4}: 3 edges
+    z_4 on T\{0,4}: 3 edges
+    z_0-z_4 restricted: 3 nonzero edges
+    z_0-z_4 is NOT a boundary in T\{0,4} (residual 4.16e-01)
+    β₁(T\{0,4}) = 0
+
+  Comparing z_2 and z_4:
+    4→2 (b beats a)
+    z_2 on T\{2,4}: 3 edges
+    z_4 on T\{2,4}: 3 edges
+    z_2-z_4 restricted: 0 nonzero edges
+    *** z_2 = z_4 on common edges! ***
+
+--- Dimension analysis ---
+  v=0:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=2:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=4:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+
+======================================================================
+Tournament #74: n=5, β₁(T)=0, bad vertices=[0, 2, 3]
+======================================================================
+Bad vertices transitive? True
+  0→2
+  3→0
+  3→2
+
+  z_0 (generator of H₁(T\0)):
+    = +0.4751*(1→4) +1*(2→1) -0.5249*(3→1) +0.5083*(3→2) +0.4917*(4→2) -0.0166*(4→3)
+    vertices used: [1, 2, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_2 (generator of H₁(T\2)):
+    = -0.4751*(0→4) -1*(1→0) +0.4917*(1→4) +0.5249*(3→0) -0.5083*(3→1) +0.0166*(4→3)
+    vertices used: [0, 1, 3, 4] (4 of 4)
+    #nonzero edges: 6
+
+  z_3 (generator of H₁(T\3)):
+    = +0.5249*(0→2) +0.4751*(0→4) +1*(1→0) -0.4917*(1→4) +0.5083*(2→1) -0.0166*(4→2)
+    vertices used: [0, 1, 2, 4] (4 of 4)
+    #nonzero edges: 6
+
+--- Filling chains in T ---
+  c_0: 12 terms, uses v=0? True, vertices: [0, 1, 2, 3, 4]
+  c_2: 12 terms, uses v=2? True, vertices: [0, 1, 2, 3, 4]
+  c_3: 12 terms, uses v=3? True, vertices: [0, 1, 2, 3, 4]
+
+--- Generator comparisons ---
+
+  Comparing z_0 and z_2:
+    0→2 (a beats b)
+    z_0 on T\{0,2}: 3 edges
+    z_2 on T\{0,2}: 3 edges
+    z_0-z_2 restricted: 3 nonzero edges
+    Ω₂(T\{0,2}) = 0, cannot be boundary
+    β₁(T\{0,2}) = 1
+
+  Comparing z_0 and z_3:
+    3→0 (b beats a)
+    z_0 on T\{0,3}: 3 edges
+    z_3 on T\{0,3}: 3 edges
+    z_0-z_3 restricted: 3 nonzero edges
+    Ω₂(T\{0,3}) = 0, cannot be boundary
+    β₁(T\{0,3}) = 1
+
+  Comparing z_2 and z_3:
+    3→2 (b beats a)
+    z_2 on T\{2,3}: 3 edges
+    z_3 on T\{2,3}: 3 edges
+    z_2-z_3 restricted: 3 nonzero edges
+    z_2-z_3 is NOT a boundary in T\{2,3} (residual 8.44e-01)
+    β₁(T\{2,3}) = 0
+
+--- Dimension analysis ---
+  v=0:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=2:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+  v=3:
+    T: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 6, 'β₁': 0, '|Ω₂|': 9}
+    T\v: {'|A₁|': 6, 'dim_Ω₁': 6, 'dim_Z₁': 3, 'dim_B₁': 2, 'β₁': 1, '|Ω₂|': 3}
+
+======================================================================
+SUMMARY for n=5
+======================================================================
+Total tournaments with β₁=0: 720
+Bad vertex count distribution: {0: 240, 1: 240, 2: 120, 3: 120}
+Transitive bad sets: 480
+Non-transitive bad sets: 0
+
+Generator z_v vertex counts (for bad v in β₁=0 tournaments):
+  Uses 4 vertices: 360 times
+
+Filling chain c_v uses vertex v: 360/360 (100.0%)
+
+######################################################################
+# ALGEBRAIC MECHANISM DEEP DIVE: n=5
+######################################################################
+
+============================================================
+Example 1: bad = [1, 2, 4]
+============================================================
+Adjacency among bad vertices:
+
+  2→1
+  4→1  4→2
+  z_1 (generator of H₁(T\1)):
+    = +0.4751*(0→4) +1*(2→0) -0.5249*(3→0) +0.5083*(3→2) +0.4917*(4→2) -0.0166*(4→3)
+    vertices used: [0, 2, 3, 4] (4 of 4)
+    #nonzero edges: 6
+  z_2 (generator of H₁(T\2)):
+    = -1*(0→1) +0.4751*(0→4) -0.5083*(1→3) -0.5249*(3→0) +0.4917*(4→1) -0.0166*(4→3)
+    vertices used: [0, 1, 3, 4] (4 of 4)
+    #nonzero edges: 6
+  z_4 (generator of H₁(T\4)):
+    = +1*(0→1) +0.5*(1→3) +0.5*(2→0) -0.5*(2→1) +0.5*(3→0)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 5
+
+--- Structural comparison ---
+
+  z_1 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: +0*(0→4)
+    Edge involving bad: +1*(2→0)
+    Edge involving bad: +1*(3→2)
+    Edge involving bad: +0*(4→2)
+    Edge involving bad: -0*(4→3)
+
+  z_2 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: -1*(0→1)
+    Edge involving bad: +0*(0→4)
+    Edge involving bad: -1*(1→3)
+    Edge involving bad: +0*(4→1)
+    Edge involving bad: -0*(4→3)
+
+  z_4 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: +1*(0→1)
+    Edge involving bad: +0*(1→3)
+    Edge involving bad: +0*(2→0)
+    Edge involving bad: -1*(2→1)
+
+--- Sum z_a + z_b + z_c on common edges ---
+  Common edges: 1
+  Nonzero in sum: 1
+    -0.5499*(3→0)
+
+--- Pairwise analysis ---
+
+  Comparing z_1 and z_2:
+    2→1 (b beats a)
+    z_1 on T\{1,2}: 3 edges
+    z_2 on T\{1,2}: 3 edges
+    z_1-z_2 restricted: 0 nonzero edges
+    *** z_1 = z_2 on common edges! ***
+
+  Comparing z_1 and z_4:
+    4→1 (b beats a)
+    z_1 on T\{1,4}: 3 edges
+    z_4 on T\{1,4}: 2 edges
+    z_1-z_4 restricted: 3 nonzero edges
+    z_1-z_4 is NOT a boundary in T\{1,4} (residual 4.25e-01)
+    β₁(T\{1,4}) = 0
+
+  Comparing z_2 and z_4:
+    4→2 (b beats a)
+    z_2 on T\{2,4}: 3 edges
+    z_4 on T\{2,4}: 3 edges
+    z_2-z_4 restricted: 3 nonzero edges
+    Ω₂(T\{2,4}) = 0, cannot be boundary
+    β₁(T\{2,4}) = 1
+
+--- Filling chains ---
+  c_1: 6 terms through bad vertex 2
+  c_1: 7 terms through bad vertex 4
+  c_1: 7 terms through v=1 itself
+  c_2: 7 terms through bad vertex 1
+  c_2: 7 terms through bad vertex 4
+  c_2: 6 terms through v=2 itself
+  c_4: 7 terms through bad vertex 1
+  c_4: 5 terms through bad vertex 2
+  c_4: 7 terms through v=4 itself
+
+============================================================
+Example 2: bad = [2, 3, 4]
+============================================================
+Adjacency among bad vertices:
+
+  3→2
+  4→2  4→3
+  z_2 (generator of H₁(T\2)):
+    = -0.4751*(0→4) -1*(1→0) +0.5083*(1→3) +0.5249*(3→0) -0.4917*(4→1) +0.0166*(4→3)
+    vertices used: [0, 1, 3, 4] (4 of 4)
+    #nonzero edges: 6
+  z_3 (generator of H₁(T\3)):
+    = +0.5249*(0→2) +0.4751*(0→4) +1*(1→0) +0.5083*(2→1) +0.4917*(4→1) -0.0166*(4→2)
+    vertices used: [0, 1, 2, 4] (4 of 4)
+    #nonzero edges: 6
+  z_4 (generator of H₁(T\4)):
+    = +0.4751*(0→2) +1*(1→0) -0.5083*(1→3) +0.4917*(2→1) -0.5249*(3→0) +0.0166*(3→2)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 6
+
+--- Structural comparison ---
+
+  z_2 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: -0*(0→4)
+    Edge involving bad: +1*(1→3)
+    Edge involving bad: +1*(3→0)
+    Edge involving bad: -0*(4→1)
+    Edge involving bad: +0*(4→3)
+
+  z_3 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: +1*(0→2)
+    Edge involving bad: +0*(0→4)
+    Edge involving bad: +1*(2→1)
+    Edge involving bad: +0*(4→1)
+    Edge involving bad: -0*(4→2)
+
+  z_4 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: +0*(0→2)
+    Edge involving bad: -1*(1→3)
+    Edge involving bad: +0*(2→1)
+    Edge involving bad: -1*(3→0)
+    Edge involving bad: +0*(3→2)
+
+--- Sum z_a + z_b + z_c on common edges ---
+  Common edges: 1
+  Nonzero in sum: 1
+    +1.0*(1→0)
+
+--- Pairwise analysis ---
+
+  Comparing z_2 and z_3:
+    3→2 (b beats a)
+    z_2 on T\{2,3}: 3 edges
+    z_3 on T\{2,3}: 3 edges
+    z_2-z_3 restricted: 3 nonzero edges
+    Ω₂(T\{2,3}) = 0, cannot be boundary
+    β₁(T\{2,3}) = 1
+
+  Comparing z_2 and z_4:
+    4→2 (b beats a)
+    z_2 on T\{2,4}: 3 edges
+    z_4 on T\{2,4}: 3 edges
+    z_2-z_4 restricted: 3 nonzero edges
+    z_2-z_4 is NOT a boundary in T\{2,4} (residual 7.90e-01)
+    β₁(T\{2,4}) = 0
+
+  Comparing z_3 and z_4:
+    4→3 (b beats a)
+    z_3 on T\{3,4}: 3 edges
+    z_4 on T\{3,4}: 3 edges
+    z_3-z_4 restricted: 2 nonzero edges
+    Ω₂(T\{3,4}) = 0, cannot be boundary
+    β₁(T\{3,4}) = 1
+
+--- Filling chains ---
+  c_2: 6 terms through bad vertex 3
+  c_2: 7 terms through bad vertex 4
+  c_2: 7 terms through v=2 itself
+  c_3: 7 terms through bad vertex 2
+  c_3: 7 terms through bad vertex 4
+  c_3: 6 terms through v=3 itself
+  c_4: 7 terms through bad vertex 2
+  c_4: 6 terms through bad vertex 3
+  c_4: 7 terms through v=4 itself
+
+============================================================
+Example 3: bad = [1, 3, 4]
+============================================================
+Adjacency among bad vertices:
+  1→3
+
+  4→1  4→3
+  z_1 (generator of H₁(T\1)):
+    = +0.5249*(0→3) +0.4751*(0→4) +1*(2→0) +0.5083*(3→2) +0.4917*(4→2) -0.0166*(4→3)
+    vertices used: [0, 2, 3, 4] (4 of 4)
+    #nonzero edges: 6
+  z_3 (generator of H₁(T\3)):
+    = +0.4751*(0→4) +1*(1→0) -0.5249*(2→0) +0.5083*(2→1) +0.4917*(4→1) -0.0166*(4→2)
+    vertices used: [0, 1, 2, 4] (4 of 4)
+    #nonzero edges: 6
+  z_4 (generator of H₁(T\4)):
+    = -0.4751*(0→3) -1*(1→0) +0.4917*(1→3) +0.5249*(2→0) -0.5083*(2→1) +0.0166*(3→2)
+    vertices used: [0, 1, 2, 3] (4 of 4)
+    #nonzero edges: 6
+
+--- Structural comparison ---
+
+  z_1 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: +1*(0→3)
+    Edge involving bad: +0*(0→4)
+    Edge involving bad: +1*(3→2)
+    Edge involving bad: +0*(4→2)
+    Edge involving bad: -0*(4→3)
+
+  z_3 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: +0*(0→4)
+    Edge involving bad: +1*(1→0)
+    Edge involving bad: +1*(2→1)
+    Edge involving bad: +0*(4→1)
+    Edge involving bad: -0*(4→2)
+
+  z_4 decomposition:
+    Edges not involving other bad: 1
+    Edge involving bad: -0*(0→3)
+    Edge involving bad: -1*(1→0)
+    Edge involving bad: +0*(1→3)
+    Edge involving bad: -1*(2→1)
+    Edge involving bad: +0*(3→2)
+
+--- Sum z_a + z_b + z_c on common edges ---
+  Common edges: 1
+  Nonzero in sum: 1
+    +1.0*(2→0)
+
+--- Pairwise analysis ---
+
+  Comparing z_1 and z_3:
+    1→3 (a beats b)
+    z_1 on T\{1,3}: 3 edges
+    z_3 on T\{1,3}: 3 edges
+    z_1-z_3 restricted: 2 nonzero edges
+    Ω₂(T\{1,3}) = 0, cannot be boundary
+    β₁(T\{1,3}) = 1
+
+  Comparing z_1 and z_4:
+    4→1 (b beats a)
+    z_1 on T\{1,4}: 3 edges
+    z_4 on T\{1,4}: 3 edges
+    z_1-z_4 restricted: 3 nonzero edges
+    Ω₂(T\{1,4}) = 0, cannot be boundary
+    β₁(T\{1,4}) = 1
+
+  Comparing z_3 and z_4:
+    4→3 (b beats a)
+    z_3 on T\{3,4}: 3 edges
+    z_4 on T\{3,4}: 3 edges
+    z_3-z_4 restricted: 3 nonzero edges
+    z_3-z_4 is NOT a boundary in T\{3,4} (residual 7.90e-01)
+    β₁(T\{3,4}) = 0
+
+--- Filling chains ---
+  c_1: 7 terms through bad vertex 3
+  c_1: 7 terms through bad vertex 4
+  c_1: 6 terms through v=1 itself
+  c_3: 6 terms through bad vertex 1
+  c_3: 7 terms through bad vertex 4
+  c_3: 7 terms through v=3 itself
+  c_4: 6 terms through bad vertex 1
+  c_4: 7 terms through bad vertex 3
+  c_4: 7 terms through v=4 itself
+
+######################################################################
+# EXHAUSTIVE ANALYSIS: n=6
+######################################################################
+
+======================================================================
+Tournament #152: n=6, β₁(T)=0, bad vertices=[1, 4, 5]
+======================================================================
+Bad vertices transitive? True
+  1→4
+  5→1
+  5→4
+
+
+  z_4 (generator of H₁(T\4)):
+    = -1*(0→5) -0.6236*(1→0) -0.7659*(2→0) +0.8737*(2→1) +0.3894*(3→0) -0.7074*(3→1) -0.0451*(3→2) -0.7899*(5→1) +0.153*(5→2) -0.3631*(5→3)
+    vertices used: [0, 1, 2, 3, 5] (5 of 5)
+    #nonzero edges: 10
+
+
+--- Filling chains in T ---
+  c_4: 28 terms, uses v=4? True, vertices: [0, 1, 2, 3, 4, 5]
+
+--- Dimension analysis ---
+  v=1:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 10}
+  v=4:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 9}
+  v=5:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 10}
+
+======================================================================
+Tournament #156: n=6, β₁(T)=0, bad vertices=[1, 4, 5]
+======================================================================
+Bad vertices transitive? True
+  1→4
+  5→1
+  5→4
+
+  z_1 (generator of H₁(T\1)):
+    = -0.6747*(0→3) -0.5478*(0→4) +1*(0→5) -0.2225*(2→0) -0.1478*(3→2) -0.2308*(4→2) +0.0699*(4→3) +0.1562*(5→2) +0.4569*(5→3) +0.3869*(5→4)
+    vertices used: [0, 2, 3, 4, 5] (5 of 5)
+    #nonzero edges: 10
+
+
+
+--- Filling chains in T ---
+  c_1: 28 terms, uses v=1? True, vertices: [0, 1, 2, 3, 4, 5]
+
+--- Dimension analysis ---
+  v=1:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 9}
+  v=4:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 10}
+  v=5:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 10}
+
+======================================================================
+Tournament #209: n=6, β₁(T)=0, bad vertices=[1, 2, 5]
+======================================================================
+Bad vertices transitive? True
+  2→1
+  5→1
+  5→2
+
+  z_1 (generator of H₁(T\1)):
+    = -1*(0→5) -0.6236*(2→0) -0.7659*(3→0) +0.8737*(3→2) +0.3894*(4→0) -0.7074*(4→2) -0.0451*(4→3) -0.7899*(5→2) +0.153*(5→3) -0.3631*(5→4)
+    vertices used: [0, 2, 3, 4, 5] (5 of 5)
+    #nonzero edges: 10
+
+
+
+--- Filling chains in T ---
+  c_1: 28 terms, uses v=1? True, vertices: [0, 1, 2, 3, 4, 5]
+
+--- Dimension analysis ---
+  v=1:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 9}
+  v=2:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 10}
+  v=5:
+    T: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 10, 'β₁': 0, '|Ω₂|': 21}
+    T\v: {'|A₁|': 10, 'dim_Ω₁': 10, 'dim_Z₁': 6, 'dim_B₁': 5, 'β₁': 1, '|Ω₂|': 10}
+
+======================================================================
+SUMMARY for n=6
+======================================================================
+Total tournaments with β₁=0: 27968
+Bad vertex count distribution: {0: 8480, 1: 7968, 2: 7200, 3: 4320}
+Transitive bad sets: 19488
+Non-transitive bad sets: 0
+
+Generator z_v vertex counts (for bad v in β₁=0 tournaments):
+  Uses 5 vertices: 4320 times
+
+Filling chain c_v uses vertex v: 4320/4320 (100.0%)
+
+######################################################################
+# ALGEBRAIC MECHANISM DEEP DIVE: n=6
+######################################################################
+
+============================================================
+Example 1: bad = [1, 4, 5]
+============================================================
+Adjacency among bad vertices:
+  1→4
+
+  5→1  5→4
+  z_4 (generator of H₁(T\4)):
+    = -1*(0→5) -0.6236*(1→0) -0.7659*(2→0) +0.8737*(2→1) +0.3894*(3→0) -0.7074*(3→1) -0.0451*(3→2) -0.7899*(5→1) +0.153*(5→2) -0.3631*(5→3)
+    vertices used: [0, 1, 2, 3, 5] (5 of 5)
+    #nonzero edges: 10
+
+============================================================
+Example 2: bad = [1, 4, 5]
+============================================================
+Adjacency among bad vertices:
+  1→4
+
+  5→1  5→4
+  z_1 (generator of H₁(T\1)):
+    = -0.6747*(0→3) -0.5478*(0→4) +1*(0→5) -0.2225*(2→0) -0.1478*(3→2) -0.2308*(4→2) +0.0699*(4→3) +0.1562*(5→2) +0.4569*(5→3) +0.3869*(5→4)
+    vertices used: [0, 2, 3, 4, 5] (5 of 5)
+    #nonzero edges: 10
+
+============================================================
+Example 3: bad = [1, 2, 5]
+============================================================
+Adjacency among bad vertices:
+
+  2→1
+  5→1  5→2
+  z_1 (generator of H₁(T\1)):
+    = -1*(0→5) -0.6236*(2→0) -0.7659*(3→0) +0.8737*(3→2) +0.3894*(4→0) -0.7074*(4→2) -0.0451*(4→3) -0.7899*(5→2) +0.153*(5→3) -0.3631*(5→4)
+    vertices used: [0, 2, 3, 4, 5] (5 of 5)
+    #nonzero edges: 10
+
+######################################################################
+# SAMPLED ANALYSIS: n=7, 100 targets
+######################################################################
+
+======================================================================
+Tournament sample-4: n=7, β₁(T)=0, bad vertices=[2, 3, 5]
+======================================================================
+Bad vertices transitive? True
+  3→2
+  5→2
+  3→5
+
+
+
+
+--- Filling chains in T ---
+
+--- Dimension analysis ---
+  v=2:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 38}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 20}
+  v=3:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 38}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 22}
+  v=5:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 38}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 18}
+
+======================================================================
+Tournament sample-9: n=7, β₁(T)=0, bad vertices=[0, 1, 5]
+======================================================================
+Bad vertices transitive? True
+  0→1
+  0→5
+  1→5
+
+
+
+
+--- Filling chains in T ---
+
+--- Dimension analysis ---
+  v=0:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 39}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 21}
+  v=1:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 39}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 18}
+  v=5:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 39}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 22}
+
+======================================================================
+Tournament sample-32: n=7, β₁(T)=0, bad vertices=[0, 1, 5]
+======================================================================
+Bad vertices transitive? True
+  0→1
+  0→5
+  5→1
+
+
+
+
+--- Filling chains in T ---
+
+--- Dimension analysis ---
+  v=0:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 39}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 22}
+  v=1:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 39}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 21}
+  v=5:
+    T: {'|A₁|': 21, 'dim_Ω₁': 21, 'dim_Z₁': 15, 'dim_B₁': 15, 'β₁': 0, '|Ω₂|': 39}
+    T\v: {'|A₁|': 15, 'dim_Ω₁': 15, 'dim_Z₁': 10, 'dim_B₁': 9, 'β₁': 1, '|Ω₂|': 20}
+  ... 50/100 β₁=0 tournaments found (51 attempts)
+  ... 100/100 β₁=0 tournaments found (101 attempts)
+
+======================================================================
+SUMMARY for n=7 (sampled)
+======================================================================
+Total tournaments with β₁=0: 100 (from 101 random)
+Bad vertex count distribution: {0: 54, 1: 21, 2: 17, 3: 8}
+Transitive bad sets: 46
+Non-transitive bad sets: 0
+
+
+######################################################################
+# FINAL SUMMARY
+######################################################################
+
+n=5 bad count distribution: {0: 240, 1: 240, 2: 120, 3: 120}
+n=6 bad count distribution: {0: 8480, 1: 7968, 2: 7200, 3: 4320}
+n=7 bad count distribution: {0: 54, 1: 21, 2: 17, 3: 8}
+
+Done.
+β₁ TRANSITIVE MECHANISM — PART 2: INTEGER GENERATORS & DIMENSION ANALYSIS
+======================================================================
+
+######################################################################
+# DIMENSION DROP ANALYSIS: n=5
+######################################################################
+
+--- Example 1: bad = [1, 2, 4] ---
+  T: |A₁|=10, |Ω₂|=9, dim(B₁)=6, C(n-1,2)=6
+  v=0 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 3
+  v=1 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=2 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=3 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 1
+  v=4 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 1
+
+  Transitive ordering: 4 → 2 → 1
+    (source=4 beats both, sink=1 loses to both)
+    Score of 1: 1 total, 1 vs non-bad
+    Score of 2: 2 total, 1 vs non-bad
+    Score of 4: 3 total, 1 vs non-bad
+    3-cycles involving 1 (with non-bad): 1
+    3-cycles involving 2 (with non-bad): 0
+    3-cycles involving 4 (with non-bad): 1
+
+  Cross-edge pattern (bad→non-bad):
+    4: -0 +3 
+    2: +0 -3 
+    1: -0 +3 
+
+--- Example 2: bad = [2, 3, 4] ---
+  T: |A₁|=10, |Ω₂|=9, dim(B₁)=6, C(n-1,2)=6
+  v=0 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 3
+  v=1 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 2
+  v=2 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=3 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=4 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+
+  Transitive ordering: 4 → 3 → 2
+    (source=4 beats both, sink=2 loses to both)
+    Score of 2: 1 total, 1 vs non-bad
+    Score of 3: 2 total, 1 vs non-bad
+    Score of 4: 3 total, 1 vs non-bad
+    3-cycles involving 2 (with non-bad): 1
+    3-cycles involving 3 (with non-bad): 0
+    3-cycles involving 4 (with non-bad): 1
+
+  Cross-edge pattern (bad→non-bad):
+    4: -0 +1 
+    3: +0 -1 
+    2: -0 +1 
+
+--- Example 3: bad = [1, 3, 4] ---
+  T: |A₁|=10, |Ω₂|=9, dim(B₁)=6, C(n-1,2)=6
+  v=0 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 3
+  v=1 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=2 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 2
+  v=3 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 3
+  v=4 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 1
+
+  Transitive ordering: 4 → 1 → 3
+    (source=4 beats both, sink=3 loses to both)
+    Score of 1: 2 total, 1 vs non-bad
+    Score of 3: 1 total, 1 vs non-bad
+    Score of 4: 3 total, 1 vs non-bad
+    3-cycles involving 1 (with non-bad): 0
+    3-cycles involving 3 (with non-bad): 1
+    3-cycles involving 4 (with non-bad): 1
+
+  Cross-edge pattern (bad→non-bad):
+    4: -0 +2 
+    1: +0 -2 
+    3: -0 +2 
+
+--- Example 4: bad = [0, 2, 4] ---
+  T: |A₁|=10, |Ω₂|=9, dim(B₁)=6, C(n-1,2)=6
+  v=0 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=1 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 3
+  v=2 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 1
+  v=3 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 2
+  v=4 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+
+  Transitive ordering: 4 → 2 → 0
+    (source=4 beats both, sink=0 loses to both)
+    Score of 0: 1 total, 1 vs non-bad
+    Score of 2: 2 total, 1 vs non-bad
+    Score of 4: 3 total, 1 vs non-bad
+    3-cycles involving 0 (with non-bad): 1
+    3-cycles involving 2 (with non-bad): 0
+    3-cycles involving 4 (with non-bad): 1
+
+  Cross-edge pattern (bad→non-bad):
+    4: -1 +3 
+    2: +1 -3 
+    0: -1 +3 
+
+--- Example 5: bad = [0, 2, 3] ---
+  T: |A₁|=10, |Ω₂|=9, dim(B₁)=6, C(n-1,2)=6
+  v=0 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=1 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 2
+  v=2 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 2
+  v=3 [BAD]: β₁=1, dim(B₁)=2/3, |Ω₂(T\v)|=3, 2-paths thru v: 10, pure non-v Ω₂: 1
+  v=4 [ok]: β₁=0, dim(B₁)=3/3, |Ω₂(T\v)|=3, 2-paths thru v: 12, pure non-v Ω₂: 3
+
+  Transitive ordering: 3 → 0 → 2
+    (source=3 beats both, sink=2 loses to both)
+    Score of 0: 2 total, 1 vs non-bad
+    Score of 2: 1 total, 1 vs non-bad
+    Score of 3: 3 total, 1 vs non-bad
+    3-cycles involving 0 (with non-bad): 0
+    3-cycles involving 2 (with non-bad): 1
+    3-cycles involving 3 (with non-bad): 1
+
+  Cross-edge pattern (bad→non-bad):
+    3: +1 -4 
+    0: -1 +4 
+    2: +1 -4 
+
+  (Analyzed 6 examples)
+
+######################################################################
+# AGGREGATE DIMENSION ANALYSIS: n=5
+######################################################################
+
+Bad vertices (β₁(T\v)=1):
+  dim(Ω₂) distribution: Counter({3: 840})
+  dim(B₁) distribution: Counter({2: 840})
+
+Non-bad vertices (β₁(T\v)=0):
+  dim(Ω₂) distribution: Counter({3: 960, 4: 600})
+  dim(B₁) distribution: Counter({3: 1560})
+
+  expected dim(Z₁) = C(3,2) = 3
+  Bad: dim(B₁) should be 2 (one less)
+  Non-bad: dim(B₁) should be 3 (full)
+
+######################################################################
+# SCORE SEQUENCE ANALYSIS: n=5
+######################################################################
+
+Score distribution of bad vertices: {1: 120, 2: 120, 3: 120}
+
+Role × full score:
+  ('mid', 2): 120
+  ('sink', 1): 120
+  ('source', 3): 120
+
+######################################################################
+# 3-CYCLE OBSTRUCTION TEST: n=5
+######################################################################
+
+  bad=[1, 2, 4], source=4, mid=2, sink=1
+  Original: β₁(T)=0
+  Flipped 4→1: β₁(T')=1
+
+  bad=[2, 3, 4], source=4, mid=3, sink=2
+  Original: β₁(T)=0
+  Flipped 4→2: β₁(T')=1
+
+  bad=[1, 3, 4], source=4, mid=1, sink=3
+  Original: β₁(T)=0
+  Flipped 4→3: β₁(T')=1
+
+  bad=[0, 2, 4], source=4, mid=2, sink=0
+  Original: β₁(T)=0
+  Flipped 4→0: β₁(T')=1
+
+  bad=[0, 2, 3], source=3, mid=0, sink=2
+  Original: β₁(T)=0
+  Flipped 3→2: β₁(T')=1
+
+  bad=[0, 1, 3], source=0, mid=3, sink=1
+  Original: β₁(T)=0
+  Flipped 0→1: β₁(T')=1
+
+  bad=[2, 3, 4], source=4, mid=3, sink=2
+  Original: β₁(T)=0
+  Flipped 4→2: β₁(T')=1
+
+  bad=[1, 2, 3], source=3, mid=1, sink=2
+  Original: β₁(T)=0
+  Flipped 3→2: β₁(T')=1
+
+  bad=[1, 2, 4], source=1, mid=4, sink=2
+  Original: β₁(T)=0
+  Flipped 1→2: β₁(T')=1
+
+  bad=[0, 3, 4], source=4, mid=0, sink=3
+  Original: β₁(T)=0
+  Flipped 4→3: β₁(T')=1
+
+  Total with 3 bad: 120
+  After flipping source→sink to create 3-cycle:
+    Still β₁=0: 0
+    Now β₁≥1: 120
+
+######################################################################
+# AGGREGATE DIMENSION ANALYSIS: n=6
+######################################################################
+
+Bad vertices (β₁(T\v)=1):
+  dim(Ω₂) distribution: Counter({10: 17568, 9: 12960, 8: 4800})
+  dim(B₁) distribution: Counter({5: 35328})
+
+Non-bad vertices (β₁(T\v)=0):
+  dim(Ω₂) distribution: Counter({9: 74400, 10: 7200})
+  dim(B₁) distribution: Counter({6: 81600})
+
+  expected dim(Z₁) = C(4,2) = 6
+  Bad: dim(B₁) should be 5 (one less)
+  Non-bad: dim(B₁) should be 6 (full)
+
+######################################################################
+# SCORE SEQUENCE ANALYSIS: n=6
+######################################################################
+
+Score distribution of bad vertices: {1: 1440, 2: 5040, 3: 5040, 4: 1440}
+
+Role × full score:
+  ('mid', 2): 2160
+  ('mid', 3): 2160
+  ('sink', 1): 1440
+  ('sink', 2): 2880
+  ('source', 3): 2880
+  ('source', 4): 1440
+
+######################################################################
+# 3-CYCLE OBSTRUCTION TEST: n=6
+######################################################################
+
+  bad=[1, 4, 5], source=5, mid=1, sink=4
+  Original: β₁(T)=0
+  Flipped 5→4: β₁(T')=1
+
+  bad=[1, 4, 5], source=5, mid=1, sink=4
+  Original: β₁(T)=0
+  Flipped 5→4: β₁(T')=1
+
+  bad=[1, 2, 5], source=5, mid=2, sink=1
+  Original: β₁(T)=0
+  Flipped 5→1: β₁(T')=1
+
+  bad=[1, 2, 5], source=5, mid=2, sink=1
+  Original: β₁(T)=0
+  Flipped 5→1: β₁(T')=1
+
+  bad=[0, 2, 5], source=5, mid=2, sink=0
+  Original: β₁(T)=0
+  Flipped 5→0: β₁(T')=1
+
+  bad=[0, 3, 4], source=4, mid=0, sink=3
+  Original: β₁(T)=0
+  Flipped 4→3: β₁(T')=1
+
+  bad=[0, 1, 4], source=0, mid=4, sink=1
+  Original: β₁(T)=0
+  Flipped 0→1: β₁(T')=1
+
+  bad=[0, 2, 3], source=3, mid=0, sink=2
+  Original: β₁(T)=0
+  Flipped 3→2: β₁(T')=1
+
+  bad=[1, 2, 5], source=1, mid=5, sink=2
+  Original: β₁(T)=0
+  Flipped 1→2: β₁(T')=1
+
+  bad=[1, 2, 5], source=1, mid=5, sink=2
+  Original: β₁(T)=0
+  Flipped 1→2: β₁(T')=1
+
+  Total with 3 bad: 4320
+  After flipping source→sink to create 3-cycle:
+    Still β₁=0: 0
+    Now β₁≥1: 4320
+
+
+Done.
