@@ -1,0 +1,45 @@
+======================================================================
+BETA_3 GOOD VERTEX & RELATIVE H_3 — Key ingredients for beta_3 <= 1
+======================================================================
+
+--- Part 1: Good vertex existence at n=6 (exhaustive) ---
+  beta_3>0 tournaments: 320
+  Has good vertex (beta_3(T\v)=0): 320
+  NO good vertex: 0
+
+--- Part 2: Good vertex existence at n=7 (sampled) ---
+  n=7: 400/500 done, 27 with beta_3>0
+
+  beta_3>0: 34/500
+  Has good vertex: 34
+  NO good vertex: 0
+  #good vertices distribution: {5: 7, 6: 11, 7: 16}
+
+--- Part 3: Good vertex existence at n=8 (sampled) ---
+
+  beta_3>0: 31/200
+  Has good vertex: 31
+  NO good vertex: 0
+  #good vertices distribution: {4: 1, 5: 2, 6: 23, 7: 5}
+
+--- Part 4: dim H_3(T, T\v) at n=6 (exhaustive for beta_3>0) ---
+  H_3(T,T\v) distribution (all v, all T with beta_3>0):
+    dim=1: 1920
+  H_3(T,T\v) when beta_3(T\v)=0:
+    dim=1: 1920
+  Max dim H_3(T,T\v): 1
+
+--- Part 5: dim H_3(T, T\v) at n=7 (sampled) ---
+  n=7: 200/200 done, 21 with beta_3>0
+
+  beta_3>0: 21/200
+  H_3(T,T\v) distribution:
+    dim=0: 14
+    dim=1: 133
+  H_3(T,T\v) when beta_3(T\v)=0:
+    dim=1: 133
+
+--- Part 6: LES isomorphism check at n=6 ---
+  LES isomorphism (beta_3(T\v)=0 => beta_3=H_3^rel): OK=1920, FAIL=0
+
+DONE.
