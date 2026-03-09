@@ -1,0 +1,147 @@
+======================================================================
+BETA_3 COKERNEL DEEP STRUCTURE
+======================================================================
+
+--- Part 1: Vertex set properties vs cokernel at n=6 (Type B) ---
+
+  First Type B example (bits=1332):
+    (0, 1, 2, 3): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (0, 3, 1, 2): coeff=0.0000 (x3=0.0000)
+      (1, 2, 0, 3): coeff=1.0000 (x3=3.0000)
+      (1, 0, 3, 2): coeff=-0.3333 (x3=-1.0000)
+      (2, 0, 3, 1): coeff=-0.0000 (x3=-0.0000)
+      (3, 1, 2, 0): coeff=0.6667 (x3=2.0000)
+    (0, 1, 2, 4): c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)), HP=3, #paths=3
+      (1, 2, 4, 0): coeff=0.3333 (x3=1.0000)
+      (2, 4, 1, 0): coeff=0.0000 (x3=0.0000)
+      (4, 1, 2, 0): coeff=0.3333 (x3=1.0000)
+    (0, 1, 2, 5): c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)), HP=3, #paths=3
+      (1, 5, 2, 0): coeff=0.3333 (x3=1.0000)
+      (1, 2, 0, 5): coeff=0.0000 (x3=0.0000)
+      (1, 0, 5, 2): coeff=0.3333 (x3=1.0000)
+    (0, 1, 3, 4): c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)), HP=3, #paths=3
+      (4, 3, 1, 0): coeff=0.3333 (x3=1.0000)
+      (4, 1, 0, 3): coeff=0.3333 (x3=1.0000)
+      (4, 0, 3, 1): coeff=0.0000 (x3=0.0000)
+    (0, 1, 3, 5): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (0, 5, 3, 1): coeff=0.0000 (x3=0.0000)
+      (0, 3, 1, 5): coeff=0.0000 (x3=0.0000)
+      (1, 0, 5, 3): coeff=0.3333 (x3=1.0000)
+      (3, 1, 0, 5): coeff=0.0000 (x3=0.0000)
+      (5, 3, 1, 0): coeff=-1.0000 (x3=-3.0000)
+    (0, 1, 4, 5): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (0, 5, 4, 1): coeff=0.0000 (x3=0.0000)
+      (1, 5, 4, 0): coeff=-0.3333 (x3=-1.0000)
+      (1, 0, 5, 4): coeff=0.0000 (x3=0.0000)
+      (4, 1, 0, 5): coeff=0.6667 (x3=2.0000)
+      (5, 4, 1, 0): coeff=1.0000 (x3=3.0000)
+    (0, 2, 3, 4): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (0, 3, 2, 4): coeff=0.0000 (x3=0.0000)
+      (2, 4, 0, 3): coeff=0.6667 (x3=2.0000)
+      (3, 2, 4, 0): coeff=0.0000 (x3=0.0000)
+      (4, 3, 2, 0): coeff=-0.3333 (x3=-1.0000)
+      (4, 0, 3, 2): coeff=1.0000 (x3=3.0000)
+    (0, 2, 3, 5): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (0, 5, 3, 2): coeff=0.6667 (x3=2.0000)
+      (2, 0, 5, 3): coeff=0.0000 (x3=0.0000)
+      (3, 2, 0, 5): coeff=-0.0000 (x3=-0.0000)
+      (5, 3, 2, 0): coeff=1.0000 (x3=3.0000)
+      (5, 2, 0, 3): coeff=-0.3333 (x3=-1.0000)
+    (0, 2, 4, 5): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (0, 5, 2, 4): coeff=-0.0000 (x3=-0.0000)
+      (2, 4, 0, 5): coeff=-0.0000 (x3=-0.0000)
+      (2, 0, 5, 4): coeff=0.0000 (x3=0.0000)
+      (4, 0, 5, 2): coeff=-1.0000 (x3=-3.0000)
+      (5, 2, 4, 0): coeff=0.3333 (x3=1.0000)
+    (0, 3, 4, 5): c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)), HP=3, #paths=3
+      (0, 5, 4, 3): coeff=0.0000 (x3=0.0000)
+      (4, 0, 5, 3): coeff=0.3333 (x3=1.0000)
+      (5, 4, 0, 3): coeff=0.3333 (x3=1.0000)
+    (1, 2, 3, 4): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (1, 2, 4, 3): coeff=-1.0000 (x3=-3.0000)
+      (2, 4, 3, 1): coeff=0.0000 (x3=0.0000)
+      (3, 2, 4, 1): coeff=0.0000 (x3=0.0000)
+      (3, 1, 2, 4): coeff=0.0000 (x3=0.0000)
+      (4, 3, 1, 2): coeff=0.3333 (x3=1.0000)
+    (1, 2, 3, 5): c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)), HP=3, #paths=3
+      (1, 5, 3, 2): coeff=0.3333 (x3=1.0000)
+      (3, 1, 5, 2): coeff=0.0000 (x3=0.0000)
+      (5, 3, 1, 2): coeff=0.3333 (x3=1.0000)
+    (1, 2, 4, 5): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (1, 5, 2, 4): coeff=0.6667 (x3=2.0000)
+      (2, 4, 1, 5): coeff=0.0000 (x3=0.0000)
+      (4, 1, 5, 2): coeff=1.0000 (x3=3.0000)
+      (5, 4, 1, 2): coeff=-0.3333 (x3=-1.0000)
+      (5, 2, 4, 1): coeff=0.0000 (x3=0.0000)
+    (1, 3, 4, 5): c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5, #paths=5
+      (1, 5, 4, 3): coeff=1.0000 (x3=3.0000)
+      (3, 1, 5, 4): coeff=0.0000 (x3=0.0000)
+      (4, 3, 1, 5): coeff=0.0000 (x3=0.0000)
+      (4, 1, 5, 3): coeff=-0.3333 (x3=-1.0000)
+      (5, 4, 3, 1): coeff=0.6667 (x3=2.0000)
+    (2, 3, 4, 5): c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)), HP=3, #paths=3
+      (5, 4, 3, 2): coeff=0.3333 (x3=1.0000)
+      (5, 3, 2, 4): coeff=0.0000 (x3=0.0000)
+      (5, 2, 4, 3): coeff=0.3333 (x3=1.0000)
+
+  Total Type B: 240
+
+--- Part 2: Paths per vertex set vs subtournament type ---
+  c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)): paths per vset = {3: 720}
+  c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)): paths per vset = {3: 720}
+  c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)): paths per vset = {5: 2160}
+
+--- Part 3: 3x cokernel — integer structure ---
+  Example 0: 3*coker integer? True, values: [-3, -1, 1, 2, 3]
+  Example 1: 3*coker integer? True, values: [-3, -2, -1, 1, 3]
+  Example 2: 3*coker integer? True, values: [-3, -1, 1, 2, 3]
+  Example 3: 3*coker integer? True, values: [-3, -2, -1, 1, 3]
+  Example 4: 3*coker integer? True, values: [-3, -2, -1, 1, 3]
+
+--- Part 4: Sign pattern analysis ---
+
+  Example 0 (bits=1332), scores=[2, 3, 2, 2, 3, 3]:
+  Positive coefficients (27):
+    Forward-edge dist: {1: 18, 2: 9}, c3 dist: {2: 15, 1: 12}
+  Negative coefficients (9):
+    Forward-edge dist: {1: 6, 2: 3}, c3 dist: {2: 9}
+
+  Example 1 (bits=1337), scores=[3, 2, 2, 3, 2, 3]:
+  Positive coefficients (9):
+    Forward-edge dist: {1: 6, 2: 3}, c3 dist: {2: 9}
+  Negative coefficients (27):
+    Forward-edge dist: {2: 9, 1: 18}, c3 dist: {1: 12, 2: 15}
+
+  Example 2 (bits=1363), scores=[3, 2, 2, 2, 3, 3]:
+  Positive coefficients (27):
+    Forward-edge dist: {1: 18, 2: 9}, c3 dist: {2: 15, 1: 12}
+  Negative coefficients (9):
+    Forward-edge dist: {1: 6, 2: 3}, c3 dist: {2: 9}
+
+--- Part 5: Testing cycle chain hypothesis ---
+  |d_3(coker)| = 1.28e-15
+
+--- Part 6: Omega_3 paths per vertex set (Type B) ---
+  dim(Omega_3) = 18, dim(A_3) = 63
+  Number of allowed 3-paths per vertex set:
+    (0, 1, 2, 3): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (0, 1, 2, 4): 3 paths, c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)), HP=3
+    (0, 1, 2, 5): 3 paths, c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)), HP=3
+    (0, 1, 3, 4): 3 paths, c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)), HP=3
+    (0, 1, 3, 5): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (0, 1, 4, 5): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (0, 2, 3, 4): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (0, 2, 3, 5): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (0, 2, 4, 5): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (0, 3, 4, 5): 3 paths, c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)), HP=3
+    (1, 2, 3, 4): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (1, 2, 3, 5): 3 paths, c3=1, scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2)), HP=3
+    (1, 2, 4, 5): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (1, 3, 4, 5): 5 paths, c3=2, scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2)), HP=5
+    (2, 3, 4, 5): 3 paths, c3=1, scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3)), HP=3
+
+--- Part 7: Sign universality check ---
+  c3=1: |sum| distribution = {np.float64(0.6667): 1440}
+  c3=2: |sum| distribution = {np.float64(1.3333): 1440, np.float64(0.6667): 720}
+
+DONE.
