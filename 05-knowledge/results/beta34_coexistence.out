@@ -1,0 +1,20 @@
+======================================================================
+BETA_3 + BETA_4 COEXISTENCE INVESTIGATION
+======================================================================
+  500/2000: 0 coexistence cases found
+  1000/2000: 0 coexistence cases found
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta34_coexistence.py", line 252, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta34_coexistence.py", line 165, in main
+    bv = compute_betti_vector(A, n)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta34_coexistence.py", line 95, in compute_betti_vector
+    U, S, Vt = np.linalg.svd(P, full_matrices=True)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\linalg\_linalg.py", line 1862, in svd
+    u, s, vh = gufunc(a, signature=signature)
+               ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\linalg\_linalg.py", line 172, in _raise_linalgerror_svd_nonconvergence
+    raise LinAlgError("SVD did not converge")
+numpy.linalg.LinAlgError: SVD did not converge

@@ -1,0 +1,64 @@
+======================================================================
+BETTI VALUE CONSTRAINTS
+======================================================================
+
+--- n=5: Exhaustive (1024 tournaments) ---
+  Value sets:
+    beta_0: [1]
+    beta_1: [0, 1]
+    beta_2: [0]
+    beta_3: [0]
+    beta_4: [0]
+
+--- n=6: Exhaustive (32768 tournaments) ---
+  Value sets:
+    beta_0: [1]
+    beta_1: [0, 1]
+    beta_2: [0]
+    beta_3: [0, 1]
+    beta_4: [0]
+    beta_5: [0]
+
+--- n=7: Sampled (500 tournaments) ---
+  100/500 done
+  200/500 done
+  300/500 done
+  400/500 done
+  500/500 done
+  Value sets:
+    beta_0: [1]
+    beta_1: [0, 1]
+    beta_2: [0]
+    beta_3: [0, 1]
+    beta_4: [0]
+    beta_5: [0]
+    beta_6: [0]
+
+--- n=8: Sampled (200 tournaments) ---
+  100/200 done
+  200/200 done
+  Value sets:
+    beta_0: [1]
+    beta_1: [0, 1]
+    beta_2: [0]
+    beta_3: [0, 1]
+    beta_4: [0, 1, 2]
+    beta_5: [0]
+    beta_6: [0]
+    beta_7: [0]
+
+--- Part 3: beta_3 value distribution ---
+  n=7: 200/1000 done
+  n=7: 400/1000 done
+  n=7: 600/1000 done
+  n=7: 800/1000 done
+  n=7: 1000/1000 done
+  n=7: beta_3 distribution:
+    beta_3=0: 913/1000 (91.3%)
+    beta_3=1: 87/1000 (8.7%)
+  n=8: 200/300 done
+  n=8: beta_3 distribution:
+    beta_3=0: 248/300 (82.7%)
+    beta_3=1: 52/300 (17.3%)
+
+DONE.
