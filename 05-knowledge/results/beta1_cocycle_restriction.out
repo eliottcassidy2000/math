@@ -1,0 +1,325 @@
+  ... processed 5000/32768 tournaments
+  ... processed 20000/32768 tournaments
+  ... processed 25000/32768 tournaments
+  ... processed 30000/32768 tournaments
+======================================================================
+β₁ COCYCLE RESTRICTION ANALYSIS
+Investigating: β₁(T)=0 => ∃v: β₁(T\v)=0
+======================================================================
+
+======================================================================
+n=5 EXHAUSTIVE
+======================================================================
+
+Total tournaments: 1024
+  β₁=0: 720
+  β₁=1: 304
+
+Among β₁(T)=0 tournaments, distribution of #bad vertices:
+  #bad=0: 240 tournaments
+  #bad=1: 240 tournaments
+  #bad=2: 120 tournaments
+  #bad=3: 120 tournaments
+  Maximum #bad: 3
+
+  GOOD: No tournament has all 5 vertices bad (max=3)
+  => Theorem holds at n=5: β₁(T)=0 => ∃v: β₁(T\v)=0
+
+--- Detailed analysis of max-bad examples (first 5) ---
+
+Example 1 (score seq = (1, 2, 2, 2, 3)):
+    v=1: NON-extendable cocycle (vars=4, cons=4)
+    v=2: NON-extendable cocycle (vars=4, cons=4)
+    v=4: NON-extendable cocycle (vars=4, cons=4)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=2: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+
+Example 2 (score seq = (1, 2, 2, 2, 3)):
+    v=2: NON-extendable cocycle (vars=4, cons=4)
+    v=3: NON-extendable cocycle (vars=4, cons=4)
+    v=4: NON-extendable cocycle (vars=4, cons=4)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=0
+  v=2: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=3: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=4: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+
+Example 3 (score seq = (1, 2, 2, 2, 3)):
+    v=1: NON-extendable cocycle (vars=4, cons=4)
+    v=3: NON-extendable cocycle (vars=4, cons=4)
+    v=4: NON-extendable cocycle (vars=4, cons=4)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=2: β₁(T\v)=0
+  v=3: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=4: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+
+Example 4 (score seq = (1, 2, 2, 2, 3)):
+    v=0: NON-extendable cocycle (vars=4, cons=4)
+    v=2: NON-extendable cocycle (vars=4, cons=4)
+    v=4: NON-extendable cocycle (vars=4, cons=4)
+  v=0: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=1: β₁(T\v)=0
+  v=2: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+
+Example 5 (score seq = (1, 2, 2, 2, 3)):
+    v=0: NON-extendable cocycle (vars=4, cons=4)
+    v=2: NON-extendable cocycle (vars=4, cons=4)
+    v=3: NON-extendable cocycle (vars=4, cons=4)
+  v=0: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=1: β₁(T\v)=0
+  v=2: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=3: β₁(T\v)=1, extendable=False, rank_res=3, im_in_Z=True, im_in_B=True
+  v=4: β₁(T\v)=0
+
+
+======================================================================
+n=6 EXHAUSTIVE
+======================================================================
+
+Total tournaments: 32768
+  β₁=0: 27968
+  β₁=1: 4800
+
+Among β₁(T)=0 tournaments, distribution of #bad vertices:
+  #bad=0: 8480 tournaments
+  #bad=1: 7968 tournaments
+  #bad=2: 7200 tournaments
+  #bad=3: 4320 tournaments
+  Maximum #bad: 3
+
+  GOOD: No tournament has all 6 vertices bad (max=3)
+  => Theorem holds at n=6: β₁(T)=0 => ∃v: β₁(T\v)=0
+
+--- Detailed analysis of max-bad examples at n=6 (first 5) ---
+
+Example 1 (score seq = (2, 2, 2, 2, 3, 4)):
+    v=1: NON-extendable cocycle (vars=5, cons=7)
+    v=4: NON-extendable cocycle (vars=5, cons=6)
+    v=5: NON-extendable cocycle (vars=5, cons=7)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=2: β₁(T\v)=0
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=5: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+
+Example 2 (score seq = (2, 2, 2, 2, 3, 4)):
+    v=1: NON-extendable cocycle (vars=5, cons=6)
+    v=4: NON-extendable cocycle (vars=5, cons=7)
+    v=5: NON-extendable cocycle (vars=5, cons=8)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=2: β₁(T\v)=0
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=5: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+
+Example 3 (score seq = (2, 2, 2, 2, 3, 4)):
+    v=1: NON-extendable cocycle (vars=5, cons=6)
+    v=2: NON-extendable cocycle (vars=5, cons=7)
+    v=5: NON-extendable cocycle (vars=5, cons=7)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=2: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=0
+  v=5: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+
+Example 4 (score seq = (2, 2, 2, 2, 3, 4)):
+    v=1: NON-extendable cocycle (vars=5, cons=7)
+    v=2: NON-extendable cocycle (vars=5, cons=6)
+    v=5: NON-extendable cocycle (vars=5, cons=8)
+  v=0: β₁(T\v)=0
+  v=1: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=2: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=0
+  v=5: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+
+Example 5 (score seq = (2, 2, 2, 2, 3, 4)):
+    v=0: NON-extendable cocycle (vars=5, cons=6)
+    v=2: NON-extendable cocycle (vars=5, cons=7)
+    v=5: NON-extendable cocycle (vars=5, cons=7)
+  v=0: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=1: β₁(T\v)=0
+  v=2: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+  v=3: β₁(T\v)=0
+  v=4: β₁(T\v)=0
+  v=5: β₁(T\v)=1, ext=False, rk_res=4, im⊂Z=True, im⊂B=True
+
+
+======================================================================
+RESTRICTION MAP DIMENSION ANALYSIS
+======================================================================
+
+For β₁(T)=0 tournaments: Z¹(T) has dim = n-1 = dim(B¹(T)).
+For β₁(T\v)=1: Z¹(T\v) has dim = n-1, B¹(T\v) has dim = n-2.
+Question: what is rank(res_v|_{Z¹(T)})?
+
+n=5 restriction map ranks (all β₁=0 tournaments with bad vertices):
+  Rank distribution of res_v|_Z¹(T) (over all bad (T,v) pairs):
+    rank=3: 840 cases
+
+  Image properties (all bad pairs):
+    Total bad (T,v) pairs: 840
+    Image ⊂ Z¹(T\v): 840/840
+    Image ⊂ B¹(T\v): 840/840
+    (If image ⊂ B¹ always, then res_v kills H¹ => non-trivial cocycle is NOT extendable)
+
+
+======================================================================
+KEY STRUCTURAL TEST
+======================================================================
+When β₁(T)=0: does res_v: Z¹(T) → Z¹(T\v) always have image ⊂ B¹(T\v)?
+This would mean: every cocycle on T restricts to a COBOUNDARY on T\v.
+Contrapositive: if some cocycle restricts to non-coboundary, β₁(T) > 0.
+
+  n=5: CONFIRMED — res_v(Z¹(T)) ⊂ B¹(T\v) for all v, all β₁=0 tournaments
+  n=6: CONFIRMED — res_v(Z¹(T)) ⊂ B¹(T\v) for all v (27968 tournaments)
+
+
+======================================================================
+EXTENSION ANALYSIS
+======================================================================
+For each bad vertex v in a β₁=0 tournament:
+  The non-trivial cocycle w_v of T\v — is it extendable to T?
+  (Should NOT be, since β₁(T)=0.)
+
+  n=5 (all bad (T,v) pairs):
+    Extendable: 0
+    Non-extendable: 840
+    All non-trivial cocycles on T\v are non-extendable when β₁(T)=0.
+
+
+======================================================================
+COCYCLE / COBOUNDARY DIMENSIONS
+======================================================================
+For β₁(T)=0: dim Z¹(T) = dim B¹(T) = n-1.
+For each vertex v:
+  dim Z¹(T\v) = ? and dim B¹(T\v) = n-2.
+  β₁(T\v) = dim Z¹(T\v) - (n-2)
+
+
+n=5:
+  dim Z¹(T\v) distribution (over all β₁(T)=0 tournaments, all v):
+    dim=3 (β₁=0): 2760 cases
+    dim=4 (β₁=1): 840 cases
+
+n=6:
+  dim Z¹(T\v) distribution (over all β₁(T)=0 tournaments, all v):
+    dim=4 (β₁=0): 132480 cases
+    dim=5 (β₁=1): 35328 cases
+
+
+======================================================================
+COMPATIBILITY ANALYSIS FOR MAX-BAD TOURNAMENTS
+======================================================================
+When multiple vertices are bad, examine the non-trivial cocycles.
+
+
+n=5, max_bad=3:
+
+  Example 1 (score seq=(1, 2, 2, 2, 3)):
+    Bad vertices: [1, 2, 4]
+    Good vertices: [0, 3]
+    Pairwise cocycle comparison on shared edges:
+      v=1, v=2: shared edges between T\1 and T\2
+      v=1, v=4: shared edges between T\1 and T\4
+      v=2, v=4: shared edges between T\2 and T\4
+
+  Example 2 (score seq=(1, 2, 2, 2, 3)):
+    Bad vertices: [2, 3, 4]
+    Good vertices: [0, 1]
+    Pairwise cocycle comparison on shared edges:
+      v=2, v=3: shared edges between T\2 and T\3
+      v=2, v=4: shared edges between T\2 and T\4
+      v=3, v=4: shared edges between T\3 and T\4
+
+  Example 3 (score seq=(1, 2, 2, 2, 3)):
+    Bad vertices: [1, 3, 4]
+    Good vertices: [0, 2]
+    Pairwise cocycle comparison on shared edges:
+      v=1, v=3: shared edges between T\1 and T\3
+      v=1, v=4: shared edges between T\1 and T\4
+      v=3, v=4: shared edges between T\3 and T\4
+
+n=6, max_bad=3:
+
+  Example 1 (score seq=(2, 2, 2, 2, 3, 4)):
+    Bad vertices: [1, 4, 5]
+    Good vertices: [0, 2, 3]
+    Pairwise cocycle comparison on shared edges:
+      v=1, v=4: shared edges between T\1 and T\4
+      v=1, v=5: shared edges between T\1 and T\5
+      v=4, v=5: shared edges between T\4 and T\5
+
+  Example 2 (score seq=(2, 2, 2, 2, 3, 4)):
+    Bad vertices: [1, 4, 5]
+    Good vertices: [0, 2, 3]
+    Pairwise cocycle comparison on shared edges:
+      v=1, v=4: shared edges between T\1 and T\4
+      v=1, v=5: shared edges between T\1 and T\5
+      v=4, v=5: shared edges between T\4 and T\5
+
+  Example 3 (score seq=(2, 2, 2, 2, 3, 4)):
+    Bad vertices: [1, 2, 5]
+    Good vertices: [0, 3, 4]
+    Pairwise cocycle comparison on shared edges:
+      v=1, v=2: shared edges between T\1 and T\2
+      v=1, v=5: shared edges between T\1 and T\5
+      v=2, v=5: shared edges between T\2 and T\5
+
+
+======================================================================
+TRANSITIVE TRIPLE ANALYSIS
+======================================================================
+For bad vs good vertices in β₁=0 tournaments:
+  How many transitive triples have v as INTERIOR vertex?
+  (These are the constraints that v adds to T\v.)
+
+
+n=5:
+  Good vertices (β₁(T\v)=0) — interior triple count:
+    mean=1.74, min=0, max=4
+  Bad vertices (β₁(T\v)=1) — interior triple count:
+    mean=1.14, min=0, max=2
+
+n=6:
+  Good vertices (β₁(T\v)=0) — interior triple count:
+    mean=2.61, min=0, max=6
+  Bad vertices (β₁(T\v)=1) — interior triple count:
+    mean=2.24, min=0, max=4
+
+
+======================================================================
+SUMMARY
+======================================================================
+
+Results:
+  n=5: max #bad = 3 out of 5 vertices
+  n=6: max #bad = 3 out of 6 vertices
+
+Key findings:
+  1. β₁(T)=0 => NOT all vertices are bad (verified n=5,6)
+     => ∃v: β₁(T\v) = 0 when β₁(T) = 0
+
+  2. Restriction map res_v: Z¹(T) → C¹(T\v):
+     - Image ALWAYS lands in Z¹(T\v) (cocycles restrict to cocycles)
+     - When β₁(T)=0: image ⊂ B¹(T\v) for ALL v
+       (cocycles on T become coboundaries on T\v)
+     - This means the non-trivial H¹(T\v) class is NOT in the image of res_v
+
+  3. Non-trivial cocycle on T\v:
+     - Never extendable to a cocycle on T when β₁(T)=0
+     - The v-interior transitive triple constraints block extension
+
+  4. Transitive triple structure:
+     - Good vertices tend to have MORE interior triples (more constraints)
+     - Bad vertices have FEWER interior triples (weaker constraints)
+
