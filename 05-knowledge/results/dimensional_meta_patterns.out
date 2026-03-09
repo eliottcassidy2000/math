@@ -1,0 +1,201 @@
+======================================================================
+DIMENSIONAL META-PATTERNS: Tournament = Binary Relation on Simplex
+Dimension d = n-1. Tracking homological invariants vs d.
+======================================================================
+
+============================================================
+d = 2 (n = 3): 3 edges, 2^3 = 8 tournaments
+============================================================
+  Mode: exhaustive
+
+  Betti vector distribution (top 5):
+    [1, 0, 0]: 6 (75.0%), chi=1
+    [1, 1, 0]: 2 (25.0%), chi=0
+
+  Euler characteristic distribution:
+    chi=0: 2 (25.0%)
+    chi=1: 6 (75.0%)
+
+  Max beta_p across all tournaments:
+    max beta_0 = 1
+    max beta_1 = 1
+    max beta_2 = 0
+    P(beta_1 > 0) = 2/8 (25.00%)
+    P(beta_2 > 0) = 0/8 (0.00%)
+
+  Average dim(Omega_p) / C(n,p+1):
+    p=0: avg|A_p|=3.0 (1.00*C), avg Omega_p=3.0 (1.000*C)
+    p=1: avg|A_p|=3.0 (1.00*C), avg Omega_p=3.0 (1.000*C)
+    p=2: avg|A_p|=1.5 (1.50*C), avg Omega_p=0.8 (0.750*C)
+
+============================================================
+d = 3 (n = 4): 6 edges, 2^6 = 64 tournaments
+============================================================
+  Mode: exhaustive
+
+  Betti vector distribution (top 5):
+    [1, 0, 0, 0]: 40 (62.5%), chi=1
+    [1, 1, 0, 0]: 24 (37.5%), chi=0
+
+  Euler characteristic distribution:
+    chi=0: 24 (37.5%)
+    chi=1: 40 (62.5%)
+
+  Max beta_p across all tournaments:
+    max beta_0 = 1
+    max beta_1 = 1
+    max beta_2 = 0
+    max beta_3 = 0
+    P(beta_1 > 0) = 24/64 (37.50%)
+    P(beta_2 > 0) = 0/64 (0.00%)
+    P(beta_3 > 0) = 0/64 (0.00%)
+
+  Average dim(Omega_p) / C(n,p+1):
+    p=0: avg|A_p|=4.0 (1.00*C), avg Omega_p=4.0 (1.000*C)
+    p=1: avg|A_p|=6.0 (1.00*C), avg Omega_p=6.0 (1.000*C)
+    p=2: avg|A_p|=6.0 (1.50*C), avg Omega_p=3.4 (0.844*C)
+    p=3: avg|A_p|=3.0 (3.00*C), avg Omega_p=0.8 (0.750*C)
+
+============================================================
+d = 4 (n = 5): 10 edges, 2^10 = 1024 tournaments
+============================================================
+  Mode: exhaustive
+
+  Betti vector distribution (top 5):
+    [1, 0, 0, 0, 0]: 720 (70.3%), chi=1
+    [1, 1, 0, 0, 0]: 304 (29.7%), chi=0
+
+  Euler characteristic distribution:
+    chi=0: 304 (29.7%)
+    chi=1: 720 (70.3%)
+
+  Max beta_p across all tournaments:
+    max beta_0 = 1
+    max beta_1 = 1
+    max beta_2 = 0
+    max beta_3 = 0
+    max beta_4 = 0
+    P(beta_1 > 0) = 304/1024 (29.69%)
+    P(beta_2 > 0) = 0/1024 (0.00%)
+    P(beta_3 > 0) = 0/1024 (0.00%)
+
+  Average dim(Omega_p) / C(n,p+1):
+    p=0: avg|A_p|=5.0 (1.00*C), avg Omega_p=5.0 (1.000*C)
+    p=1: avg|A_p|=10.0 (1.00*C), avg Omega_p=10.0 (1.000*C)
+    p=2: avg|A_p|=15.0 (1.50*C), avg Omega_p=9.2 (0.922*C)
+    p=3: avg|A_p|=15.0 (3.00*C), avg Omega_p=4.5 (0.891*C)
+    p=4: avg|A_p|=7.5 (7.50*C), avg Omega_p=0.9 (0.938*C)
+
+============================================================
+d = 5 (n = 6): 15 edges, 2^15 = 32768 tournaments
+============================================================
+  Mode: exhaustive
+
+  Betti vector distribution (top 5):
+    [1, 0, 0, 0, 0, 0]: 27648 (84.4%), chi=1
+    [1, 1, 0, 0, 0, 0]: 4800 (14.6%), chi=0
+    [1, 0, 0, 1, 0, 0]: 320 (1.0%), chi=0
+
+  Euler characteristic distribution:
+    chi=0: 5120 (15.6%)
+    chi=1: 27648 (84.4%)
+
+  Max beta_p across all tournaments:
+    max beta_0 = 1
+    max beta_1 = 1
+    max beta_2 = 0
+    max beta_3 = 1
+    max beta_4 = 0
+    P(beta_1 > 0) = 4800/32768 (14.65%)
+    P(beta_2 > 0) = 0/32768 (0.00%)
+    P(beta_3 > 0) = 320/32768 (0.98%)
+
+  Average dim(Omega_p) / C(n,p+1):
+    p=0: avg|A_p|=6.0 (1.00*C), avg Omega_p=6.0 (1.000*C)
+    p=1: avg|A_p|=15.0 (1.00*C), avg Omega_p=15.0 (1.000*C)
+    p=2: avg|A_p|=30.0 (1.50*C), avg Omega_p=19.7 (0.987*C)
+    p=3: avg|A_p|=45.0 (3.00*C), avg Omega_p=15.5 (1.035*C)
+    p=4: avg|A_p|=45.0 (7.50*C), avg Omega_p=7.0 (1.172*C)
+    p=5: avg|A_p|=22.5 (22.50*C), avg Omega_p=1.4 (1.406*C)
+
+============================================================
+d = 6 (n = 7): 21 edges, 2^21 = 2097152 tournaments
+============================================================
+  Mode: sampled (500)
+
+  Betti vector distribution (top 5):
+    [1, 0, 0, 0, 0, 0, 0]: 435 (87.0%), chi=1
+    [1, 0, 0, 1, 0, 0, 0]: 36 (7.2%), chi=0
+    [1, 1, 0, 0, 0, 0, 0]: 29 (5.8%), chi=0
+
+  Euler characteristic distribution:
+    chi=0: 65 (13.0%)
+    chi=1: 435 (87.0%)
+
+  Max beta_p across all tournaments:
+    max beta_0 = 1
+    max beta_1 = 1
+    max beta_2 = 0
+    max beta_3 = 1
+    max beta_4 = 0
+    P(beta_1 > 0) = 29/500 (5.80%)
+    P(beta_2 > 0) = 0/500 (0.00%)
+    P(beta_3 > 0) = 36/500 (7.20%)
+
+  Average dim(Omega_p) / C(n,p+1):
+    p=0: avg|A_p|=7.0 (1.00*C), avg Omega_p=7.0 (1.000*C)
+    p=1: avg|A_p|=21.0 (1.00*C), avg Omega_p=21.0 (1.000*C)
+    p=2: avg|A_p|=52.3 (1.49*C), avg Omega_p=36.4 (1.041*C)
+    p=3: avg|A_p|=104.2 (2.98*C), avg Omega_p=41.1 (1.173*C)
+    p=4: avg|A_p|=155.3 (7.40*C), avg Omega_p=29.9 (1.423*C)
+    p=5: avg|A_p|=154.3 (22.04*C), avg Omega_p=12.8 (1.824*C)
+
+============================================================
+d = 7 (n = 8): 28 edges, 2^28 = 268435456 tournaments
+============================================================
+  Mode: sampled (500)
+
+  Betti vector distribution (top 5):
+    [1, 0, 0, 0, 0, 0, 0, 0]: 388 (77.6%), chi=1
+    [1, 0, 0, 1, 0, 0, 0, 0]: 100 (20.0%), chi=0
+    [1, 1, 0, 0, 0, 0, 0, 0]: 7 (1.4%), chi=0
+    [1, 0, 0, 0, 1, 0, 0, 0]: 3 (0.6%), chi=2
+    [1, 0, 0, 0, 2, 0, 0, 0]: 1 (0.2%), chi=3
+
+  Euler characteristic distribution:
+    chi=0: 107 (21.4%)
+    chi=1: 388 (77.6%)
+    chi=2: 3 (0.6%)
+    chi=3: 1 (0.2%)
+    chi=6: 1 (0.2%)
+
+  Max beta_p across all tournaments:
+    max beta_0 = 1
+    max beta_1 = 1
+    max beta_2 = 0
+    max beta_3 = 1
+    max beta_4 = 5
+    P(beta_1 > 0) = 7/500 (1.40%)
+    P(beta_2 > 0) = 0/500 (0.00%)
+    P(beta_3 > 0) = 100/500 (20.00%)
+    P(beta_4 > 0) = 5/500 (1.00%)
+
+  Average dim(Omega_p) / C(n,p+1):
+    p=0: avg|A_p|=8.0 (1.00*C), avg Omega_p=8.0 (1.000*C)
+    p=1: avg|A_p|=28.0 (1.00*C), avg Omega_p=28.0 (1.000*C)
+    p=2: avg|A_p|=83.7 (1.50*C), avg Omega_p=60.8 (1.086*C)
+    p=3: avg|A_p|=208.7 (2.98*C), avg Omega_p=91.5 (1.306*C)
+    p=4: avg|A_p|=416.2 (7.43*C), avg Omega_p=94.6 (1.689*C)
+    p=5: avg|A_p|=622.2 (22.22*C), avg Omega_p=64.5 (2.302*C)
+
+======================================================================
+SUMMARY: Homological rates across dimensions
+======================================================================
+d  | P(b1>0)  | P(b3>0)  | P(trivial) | chi range  | max b1 | max b3
+---|----------|----------|------------|------------|--------|-------
+ 2 |   25.00% |    0.00% |     75.00% | [0, 1] |      1 |     0
+ 3 |   37.50% |    0.00% |     62.50% | [0, 1] |      1 |     0
+ 4 |   29.69% |    0.00% |     70.31% | [0, 1] |      1 |     0
+ 5 |   14.65% |    0.98% |     84.38% | [0, 1] |      1 |     1
+ 6 |    5.80% |    7.20% |     87.00% | [0, 1] |      1 |     1
+ 7 |    1.40% |   20.00% |     77.60% | [0, 1, 2, 3, 6] |      1 |     1
