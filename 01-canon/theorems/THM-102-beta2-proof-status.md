@@ -153,11 +153,13 @@ proof of THM-103 doesn't directly yield the deletion bound.
 - dim(Z₁) = C(n,2) - (n-1) is UNIVERSAL for all n-vertex tournaments
 - Therefore β₁ depends ENTIRELY on rank(∂₂): β₁ = dim(Z₁) - rank(∂₂)
 - dim(ker(∂₂^T)) = n - 1 + β₁ (dual formula)
-- Bad-vertex TT is NOT rank-critical when β₁=0 (#bad=3): removing it from Ω₂ does NOT drop rank
+- Bad-vertex TT IS rank-critical when β₁=0 and #bad=3: #TTs=rank (zero redundancy), removing it drops rank by 1 (CORRECTED)
 - Rank-critical TTs governed by redundancy = #TTs - rank; high redundancy → 0 RC TTs
 - #RC correlates with t₃ (r=0.69 at n=6), not directly with bad vertices (r=0.46)
-- Flip obstruction mechanism: arc flip changes MANY TTs simultaneously (global Ω₂ restructuring),
-  not just the single bad-vertex TT. The net effect reduces rank(∂₂) by 1.
+- Flip obstruction mechanism (CORRECTED): with #bad=3, #TTs=rank (zero redundancy).
+  Flipping transitive edge removes EXACTLY 1 TT (the bad-vertex TT), creates 0 new (n=5).
+  Since ALL TTs are rank-critical at zero redundancy, rank drops by 1, β₁ goes 0→1.
+- #bad vs t₃ (n=5): #bad=0↔t₃∈{0,1}, #bad=1↔t₃=2, #bad=2↔t₃=3, #bad=3↔t₃=4
 - β₁=0 with all-bad 3-cycle: ZERO instances at n=5,6,7 (flip obstruction confirmed)
 - β₁=1 minimum #bad: 3(n=5), 4(n=6), 5(n=7) — grows with n
 

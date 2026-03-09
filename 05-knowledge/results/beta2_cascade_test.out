@@ -1,0 +1,316 @@
+================================================================================
+BETA-2 CASCADE TEST: Flip Obstruction Mechanism
+================================================================================
+
+================================================================================
+PART 1: n=5 EXHAUSTIVE — All tournaments with β₁=0 and 3 bad vertices
+================================================================================
+Total n=5 tournaments: 1024
+Candidates (β₁=0, 3 bad): 120
+
+Analyzed: 120 tournaments
+
+--- First 10 detailed results ---
+
+T2: triple=(0, 2, 1), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 1, 2] -> [0, 1, 2]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(3, 0, 2), (3, 1, 0), (3, 2, 1), (4, 0, 2), (4, 1, 0), (4, 2, 1)]
+  C (created TTs): [(3, 0, 1), (3, 1, 2), (3, 2, 0), (4, 0, 1), (4, 1, 2), (4, 2, 0)]
+  Star v=0: out [2]->[1], TTs rooted: 0->0, changed=True
+  Star v=2: out [1]->[0], TTs rooted: 0->0, changed=True
+  Star v=1: out [0]->[2], TTs rooted: 0->0, changed=True
+
+T5: triple=(0, 3, 2), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 2, 3] -> [0, 2, 3]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 3, 1), (2, 0, 1), (3, 2, 1), (4, 0, 3), (4, 2, 0), (4, 3, 2)]
+  C (created TTs): [(0, 2, 1), (2, 3, 1), (3, 0, 1), (4, 0, 2), (4, 2, 3), (4, 3, 0)]
+  Star v=0: out [1, 3]->[1, 2], TTs rooted: 1->1, changed=True
+  Star v=3: out [1, 2]->[0, 1], TTs rooted: 1->1, changed=True
+  Star v=2: out [0, 1]->[1, 3], TTs rooted: 1->1, changed=True
+
+T11: triple=(0, 4, 3), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 3, 4] -> [0, 3, 4]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 4, 1), (0, 4, 2), (3, 0, 1), (3, 0, 2), (4, 3, 1), (4, 3, 2)]
+  C (created TTs): [(0, 3, 1), (0, 3, 2), (3, 4, 1), (3, 4, 2), (4, 0, 1), (4, 0, 2)]
+  Star v=0: out [1, 2, 4]->[1, 2, 3], TTs rooted: 3->3, changed=True
+  Star v=4: out [1, 2, 3]->[0, 1, 2], TTs rooted: 3->3, changed=True
+  Star v=3: out [0, 1, 2]->[1, 2, 4], TTs rooted: 3->3, changed=True
+
+T17: triple=(0, 1, 2), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 1, 2] -> [0, 1, 2]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(3, 0, 1), (3, 1, 2), (3, 2, 0), (4, 0, 1), (4, 1, 2), (4, 2, 0)]
+  C (created TTs): [(3, 0, 2), (3, 1, 0), (3, 2, 1), (4, 0, 2), (4, 1, 0), (4, 2, 1)]
+  Star v=0: out [1]->[2], TTs rooted: 0->0, changed=True
+  Star v=1: out [2]->[0], TTs rooted: 0->0, changed=True
+  Star v=2: out [0]->[1], TTs rooted: 0->0, changed=True
+
+T22: triple=(0, 3, 1), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 1, 3] -> [0, 1, 3]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 3, 2), (1, 0, 2), (3, 1, 2), (4, 0, 3), (4, 1, 0), (4, 3, 1)]
+  C (created TTs): [(0, 1, 2), (1, 3, 2), (3, 0, 2), (4, 0, 1), (4, 1, 3), (4, 3, 0)]
+  Star v=0: out [2, 3]->[1, 2], TTs rooted: 1->1, changed=True
+  Star v=3: out [1, 2]->[0, 2], TTs rooted: 1->1, changed=True
+  Star v=1: out [0, 2]->[2, 3], TTs rooted: 1->1, changed=True
+
+T27: triple=(0, 4, 3), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 3, 4] -> [0, 3, 4]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 4, 1), (0, 4, 2), (3, 0, 1), (3, 0, 2), (4, 3, 1), (4, 3, 2)]
+  C (created TTs): [(0, 3, 1), (0, 3, 2), (3, 4, 1), (3, 4, 2), (4, 0, 1), (4, 0, 2)]
+  Star v=0: out [1, 2, 4]->[1, 2, 3], TTs rooted: 3->3, changed=True
+  Star v=4: out [1, 2, 3]->[0, 1, 2], TTs rooted: 3->3, changed=True
+  Star v=3: out [0, 1, 2]->[1, 2, 4], TTs rooted: 3->3, changed=True
+
+T32: triple=(1, 3, 2), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [1, 2, 3] -> [1, 2, 3]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(1, 3, 0), (2, 1, 0), (3, 2, 0), (4, 1, 3), (4, 2, 1), (4, 3, 2)]
+  C (created TTs): [(1, 2, 0), (2, 3, 0), (3, 1, 0), (4, 1, 2), (4, 2, 3), (4, 3, 1)]
+  Star v=1: out [0, 3]->[0, 2], TTs rooted: 1->1, changed=True
+  Star v=3: out [0, 2]->[0, 1], TTs rooted: 1->1, changed=True
+  Star v=2: out [0, 1]->[0, 3], TTs rooted: 1->1, changed=True
+
+T39: triple=(1, 3, 2), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [1, 2, 3] -> [1, 2, 3]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 1, 3), (0, 2, 1), (0, 3, 2), (4, 1, 3), (4, 2, 1), (4, 3, 2)]
+  C (created TTs): [(0, 1, 2), (0, 2, 3), (0, 3, 1), (4, 1, 2), (4, 2, 3), (4, 3, 1)]
+  Star v=1: out [3]->[2], TTs rooted: 0->0, changed=True
+  Star v=3: out [2]->[1], TTs rooted: 0->0, changed=True
+  Star v=2: out [1]->[3], TTs rooted: 0->0, changed=True
+
+T47: triple=(1, 3, 2), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [1, 2, 3] -> [1, 2, 3]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 1, 3), (0, 2, 1), (0, 3, 2), (4, 1, 3), (4, 2, 1), (4, 3, 2)]
+  C (created TTs): [(0, 1, 2), (0, 2, 3), (0, 3, 1), (4, 1, 2), (4, 2, 3), (4, 3, 1)]
+  Star v=1: out [3]->[2], TTs rooted: 0->0, changed=True
+  Star v=3: out [2]->[1], TTs rooted: 0->0, changed=True
+  Star v=2: out [1]->[3], TTs rooted: 0->0, changed=True
+
+T51: triple=(0, 1, 3), β=[1, 0, 0] -> β'=[1, 0, 0]
+  Bad: [0, 1, 3] -> [0, 1, 3]
+  TTs: 9 -> 9
+  |D|=6, |C|=6, |K|=3
+  dim(B_old)=6, dim(B_new)=6, dim(B_kept)=3
+  Rank drop: 0
+  Destroyed indep (relative to K): 3
+  Created indep (relative to K): 3
+  Destroyed TTs redundant given K: [False, False, False, False, False, False]
+  Created TTs redundant given K: [False, False, False, False, False, False]
+  D (destroyed TTs): [(0, 1, 2), (1, 3, 2), (3, 0, 2), (4, 0, 1), (4, 1, 3), (4, 3, 0)]
+  C (created TTs): [(0, 3, 2), (1, 0, 2), (3, 1, 2), (4, 0, 3), (4, 1, 0), (4, 3, 1)]
+  Star v=0: out [1, 2]->[2, 3], TTs rooted: 1->1, changed=True
+  Star v=1: out [2, 3]->[0, 2], TTs rooted: 1->1, changed=True
+  Star v=3: out [0, 2]->[1, 2], TTs rooted: 1->1, changed=True
+
+
+--- AGGREGATE STATISTICS (n=5) ---
+
+Betti change distribution:
+  [1, 0, 0] -> [1, 0, 0]: 120
+
+dim(B_old) distribution: {6: 120}
+dim(B_new) distribution: {6: 120}
+dim(B_kept) distribution: {3: 120}
+Rank drop (dim_old - dim_new): {0: 120}
+
+Destroyed-TT independence (relative to kept):
+  Distribution: {3: 120}
+  Total destroyed TTs: 720
+  Redundant given K: 0 (0.0%)
+
+Created-TT independence (relative to kept):
+  Distribution: {3: 120}
+  Total created TTs: 720
+  Redundant given K: 0 (0.0%)
+
+--- KEY QUESTION: Is dim(B_kept) = dim(B_old)? ---
+  Yes: 0/120
+  (If yes: destroyed TTs contribute NOTHING new to boundary space)
+
+--- KEY QUESTION: Is dim(B_old) = dim(B_new) + 1? ---
+  Yes: 0/120
+
+--- NET MECHANISM ---
+  T2: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T5: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T11: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T17: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T22: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T27: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T32: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T39: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T47: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+  T51: destroyed_indep=3, created_indep=3, net=0, rank_change=0
+
+--- H₁ GENERATOR OF T' ---
+Found H₁ generator for 0/120 tournaments
+H₁ generator edge-support sizes: {}
+
+
+================================================================================
+PART 2: n=6 SAMPLE — 50 tournaments with β₁=0 and 3 bad vertices
+================================================================================
+  Found 10/50 (after 154 attempts)
+  Found 20/50 (after 424 attempts)
+  Found 30/50 (after 685 attempts)
+  Found 40/50 (after 956 attempts)
+  Found 50/50 (after 1431 attempts)
+
+Found 50 qualifying n=6 tournaments after 1431 attempts
+
+--- AGGREGATE STATISTICS (n=6) ---
+Betti change distribution:
+  [1, 0, 0] -> [1, 0, 0]: 50
+
+dim(B_old) distribution: {10: 50}
+dim(B_new) distribution: {10: 50}
+dim(B_kept) distribution: {7: 50}
+Rank drop: {0: 50}
+Destroyed indep: {3: 50}
+Created indep: {3: 50}
+
+KEY: dim(B_kept) = dim(B_old)? 0/50
+KEY: rank drop = 1? 0/50
+
+--- First 5 detailed (n=6) ---
+
+T19: triple=(2, 5, 4), β=[1, 0, 0] -> β'=[1, 0, 0]
+  |D|=9, |C|=9, |K|=10
+  dim(B_old)=10, dim(B_new)=10, dim(B_kept)=7
+  Destroyed indep: 3, Created indep: 3
+  Destroyed redundant: [False, False, False, False, False, False, False, False, False]
+  Created redundant: [False, False, False, False, False, False, False, False, False]
+
+T21: triple=(0, 1, 4), β=[1, 0, 0] -> β'=[1, 0, 0]
+  |D|=9, |C|=9, |K|=10
+  dim(B_old)=10, dim(B_new)=10, dim(B_kept)=7
+  Destroyed indep: 3, Created indep: 3
+  Destroyed redundant: [False, False, False, False, False, False, False, False, False]
+  Created redundant: [False, False, False, False, False, False, False, False, False]
+
+T30: triple=(1, 4, 3), β=[1, 0, 0] -> β'=[1, 0, 0]
+  |D|=9, |C|=9, |K|=10
+  dim(B_old)=10, dim(B_new)=10, dim(B_kept)=7
+  Destroyed indep: 3, Created indep: 3
+  Destroyed redundant: [False, False, False, False, False, False, False, False, False]
+  Created redundant: [False, False, False, False, False, False, False, False, False]
+
+T37: triple=(0, 3, 2), β=[1, 0, 0] -> β'=[1, 0, 0]
+  |D|=9, |C|=9, |K|=10
+  dim(B_old)=10, dim(B_new)=10, dim(B_kept)=7
+  Destroyed indep: 3, Created indep: 3
+  Destroyed redundant: [False, False, False, False, False, False, False, False, False]
+  Created redundant: [False, False, False, False, False, False, False, False, False]
+
+T40: triple=(2, 4, 5), β=[1, 0, 0] -> β'=[1, 0, 0]
+  |D|=9, |C|=9, |K|=10
+  dim(B_old)=10, dim(B_new)=10, dim(B_kept)=7
+  Destroyed indep: 3, Created indep: 3
+  Destroyed redundant: [False, False, False, False, False, False, False, False, False]
+  Created redundant: [False, False, False, False, False, False, False, False, False]
+
+
+================================================================================
+VERDICT: Testing Grok's Claim
+================================================================================
+
+Grok's claim: "Star constraints propagate the dependence across adjacent TTs
+in the low-dim space (≤3 basis), making pre-flip indep generator Q-redundant
+while new TTs absorb into higher filtration."
+
+This predicts:
+1. Destroyed TTs are boundary-redundant given kept TTs (star propagation)
+2. Created TTs add NO new boundary dimensions (absorb into higher filtration)
+3. The net effect is a rank drop of exactly 1 in im(∂₂)
+
+EVIDENCE FROM n=5:
+  Prediction 1 (destroyed redundant given K): False
+    Counterexamples: 120
+    T2: destroyed_redundant=[False, False, False, False, False, False]
+    T5: destroyed_redundant=[False, False, False, False, False, False]
+    T11: destroyed_redundant=[False, False, False, False, False, False]
+  Prediction 2 (created redundant given K): False
+    Counterexamples: 120
+    T2: created_redundant=[False, False, False, False, False, False]
+    T5: created_redundant=[False, False, False, False, False, False]
+    T11: created_redundant=[False, False, False, False, False, False]
+  Prediction 3 (rank drop = 1): False
+    Rank drops observed: [0]
+
+  ACTUAL MECHANISM:
+    dim(B_kept) = dim(B_old) always? False
+    dim(B_kept) = dim(B_new) always? False
+    dim(B_kept) < dim(B_old) always? True
+    dim(B_kept) < dim(B_new) always? True
+
+Done.

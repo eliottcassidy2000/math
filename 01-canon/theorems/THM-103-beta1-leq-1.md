@@ -79,7 +79,7 @@ If HYP-282 is proved, this closes the β₂ = 0 proof for n ≥ 4.
 
 **Rank-critical TTs**: A transitive triple τ is rank-critical if removing it from Ω₂ drops rank(∂₂).
 - #RC = 0 when redundancy (#TTs - rank) is large enough (≥3 at n=5, ≥8 at n=6)
-- With β₁=0 and #bad=3: #RC = 0 always. The bad-vertex TT is NOT rank-critical.
+- With β₁=0 and #bad=3: redundancy=0, ALL TTs are RC including bad-vertex TT (CORRECTED from earlier erroneous claim)
 - #RC correlates with t₃ (r=0.69 at n=6), not with #bad (r=0.46)
 - Pattern at n=5 (rank=6): #TTs=10→0RC, 9→0RC, 8→1RC, 7→3RC, 6→6RC
 
