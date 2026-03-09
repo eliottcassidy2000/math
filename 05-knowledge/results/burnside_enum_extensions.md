@@ -8,16 +8,16 @@
 |----------|------|----------|-------------|-----------|--------|
 | A000568 | Tournaments | 77 | 201 | +124 | Complete |
 | A002785 | Self-comp oriented graphs | 100 | 300 | +200 | Complete |
-| A000171 | Self-comp graphs | 100 | 424+ | +324+ | Running (to 500) |
+| A000171 | Self-comp graphs | 100 | 439+ | +339+ | Running (to 500) |
 | A000273 | Digraphs | 65 | 101 | +36 | Complete |
 | A000595 | Binary relations | 51 | 100 | +49 | Complete |
 | A001174 | Oriented graphs | 50 | 100 | +50 | Complete |
 | A000088 | Simple graphs | 88 | 101 | +13 | Complete |
-| A000666 | Symmetric relations | 81 | 101+ | +20+ | Extending (to 120) |
+| A000666 | Symmetric relations | 81 | 113 | +32 | Extending (to 130) |
 | A003086 | Self-comp digraphs | 80 | 100 | +20 | Complete |
 | A005639 | Self-converse oriented graphs | 50 | 80 | +30 | Complete |
 | A002499 | Self-converse digraphs | 50 | 80 | +30 | Complete |
-| A002854 | Two-graphs / Euler graphs | 88 | 103+ | +15+ | Extending (to 120) |
+| A002854 | Two-graphs / Euler graphs | 88 | 113 | +25 | Extending (to 130) |
 
 ### k-uniform hypergraph sequences
 
@@ -56,9 +56,14 @@
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A000662 | 3-ary relations | 15 | 42 | +27 | Complete |
-| A001377 | 4-ary relations | 7 | 28+ | +21+ | Extending |
-| A051241 | 5-ary relations | 5 | 23+ | +18+ | Extending |
+| A000662 | 3-ary relations | 15 | 48 | +33 | Complete |
+| A001377 | 4-ary relations | 7 | 26 | +19 | Complete |
+| A051241 | 5-ary relations | 5 | 16 | +11 | Complete |
+| (new) | 6-ary relations | 0 | 26 | +26 | Complete |
+| (new) | 7-ary relations | 0 | 16 | +16 | Complete |
+| (new) | 8-ary relations | 0 | 13 | +13 | Complete |
+| (new) | 9-ary relations | 0 | 11 | +11 | Complete |
+| (new) | 10-ary relations | 0 | 9 | +9 | Complete |
 
 ### Additional Burnside sequences (opus-S50)
 
@@ -77,9 +82,30 @@
 | A054928 | Digraphs w/ even # arcs | 50 | 100 | +50 | (A000273 + A003086)/2 |
 | A054934 | Oriented graphs up to arc reversal | 50 | 80 | +30 | (A001174 + A005639)/2 |
 | A054960 | Graphs w/ odd # edges | 50 | 100 | +50 | (A000088 - A000171)/2 |
-| A000250 | Symmetric reflexive relations | 40 | 109 | +69 | A000666/2 |
+| A000250 | Symmetric reflexive relations | 40 | 113 | +73 | A000666/2 |
 | A001173 | Half binary relations | 59 | 100 | +41 | A000595/2 |
-| A047832 | Self-comp binary relations | 40 | 105 | +65 | A000171(4n+1) |
+| A047832 | Self-comp binary relations | 40 | 99 | +59 | A000171(4n+1) |
+
+### k-multigraph sequences (new enumerators, opus-S50)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A004102 | 2-multigraphs (signed graphs) | 51 | 81 | +30 | Complete |
+| A053400 | 3-multigraphs | 50 | 81 | +31 | Complete |
+| A053420 | 4-multigraphs | 50 | 81 | +31 | Complete |
+| A053421 | 5-multigraphs | 50 | 81 | +31 | Complete |
+| A053465 | Connected 2-multigraphs | 51 | 80 | +29 | Complete |
+| A053467 | Directed 2-multigraphs | 40 | 81 | +41 | Complete |
+| A053468 | Directed 3-multigraphs | 40 | 81 | +41 | Complete |
+
+### Hypergraph sequences (a000612_gmp.c)
+
+| Sequence | Name | OEIS had | We computed | New terms | Status |
+|----------|------|----------|-------------|-----------|--------|
+| A000612 | Hypergraphs on n nodes | 13 | 31 (n=0..30) | +18 | Complete |
+| A003180 | 2*A000612 | 12 | 21 | +9 | Complete |
+| A055621 | A000612 differences | 13 | 20 | +7 | Complete |
+| A323819 | Connected covering set-systems | 13 | 16 | +3 | Complete |
 
 ### New sequences (not yet in OEIS)
 
@@ -107,11 +133,21 @@
 | Connected antisym, conn complement | 80 | 2*A101460 - A083670 |
 | Connected oriented up to arc reversal | 80 | InvEuler(A054934) |
 | Connected digraphs up to arc reversal | 80 | InvEuler(A054933) |
-| 6-ary relations on n nodes | 14 | Burnside on [n]^6 |
-| 7-ary relations on n nodes | 10 | Burnside on [n]^7 |
-| 8-ary relations on n nodes | 7 | Burnside on [n]^8 |
-| 9-ary relations on n nodes | 5 | Burnside on [n]^9 |
-| 10-ary relations on n nodes | 5 | Burnside on [n]^10 |
+| 6-ary relations on n nodes | 26 | C+GMP on [n]^6 |
+| 7-ary relations on n nodes | 16 | C+GMP on [n]^7 |
+| 8-ary relations on n nodes | 13 | C+GMP on [n]^8 |
+| 9-ary relations on n nodes | 11 | C+GMP on [n]^9 |
+| 10-ary relations on n nodes | 9 | C+GMP on [n]^10 |
+| Connected hypergraphs | 17 | InvEuler(A000612) |
+| Connected 3-multigraphs | 80 | InvEuler(A053400) |
+| Connected 4-multigraphs | 80 | InvEuler(A053420) |
+| Connected 5-multigraphs | 80 | InvEuler(A053421) |
+| Connected directed 2-multigraphs | 80 | InvEuler(A053467) |
+| Connected directed 3-multigraphs | 80 | InvEuler(A053468) |
+| Directed 4-multigraphs | 81 | directed_multigraph_gmp base=5 |
+| Directed 5-multigraphs | 81 | directed_multigraph_gmp base=6 |
+| Connected directed 4-multigraphs | 80 | InvEuler(dir 4-multigraph) |
+| Connected directed 5-multigraphs | 80 | InvEuler(dir 5-multigraph) |
 
 ### Newly extended OEIS sequences (opus-S50 session 2)
 
