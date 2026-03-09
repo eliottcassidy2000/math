@@ -1,0 +1,27 @@
+======================================================================
+BETA_2 ONLY CHECK AT n=9, n=10
+======================================================================
+
+--- n=9: 500 samples ---
+  50/500: violations=0
+  100/500: violations=0
+  150/500: violations=0
+  200/500: violations=0
+  250/500: violations=0
+  300/500: violations=0
+  350/500: violations=0
+  400/500: violations=0
+  450/500: violations=0
+  500/500: violations=0
+  n=9: beta_2>0 in 0/500
+
+--- n=10: 100 samples ---
+  50/100: violations=0
+  100/100: violations=0
+  n=10: beta_2>0 in 0/100
+
+--- Disjoint support check at n=9 ---
+  n=9: |A_2|=130, checking disjoint support...
+  Disjoint support verified for 100 random n=9 tournaments
+
+DONE.

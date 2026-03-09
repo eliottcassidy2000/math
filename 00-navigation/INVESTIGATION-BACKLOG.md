@@ -359,8 +359,17 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 6. chi ranges over {-1, 0, 1, 2, 6} at n=8.
 7. Constraint ratio NA_faces/|A_p| < 1 for p=2 always (may explain beta_2=0).
 8. THM-096 corrected: simplicity holds for n<=7 only.
-**Open:** (1) Algebraic proof of beta_2=0. (2) Does beta_2=0 break at large n? (3) Onset of beta_6.
-**Scripts:** beta1_beta3_mediator.py, even_betti_quick_v2.py, beta4_investigation.py, beta_coexistence_analysis.py, beta2_algebraic_analysis.py
+**S45 continuation updates:**
+9. THM-097 (PROVED): Disjoint support at Omega_2 — each 2-path has at most 1 non-allowed face. Constraint matrix always full rank. dim(Omega_2) = |A_2| - #NA_faces exactly.
+10. Completeness is SHARP: removing 1 edge from tournament creates beta_2>0 (13/500 at n=6).
+11. beta_2=0 confirmed at n=9 (0/500) and n=10 (0/100). Disjoint support verified at n=9.
+12. H_1(A-complex) is NOT always 0 (only for transitive tournaments). Omega restriction is essential.
+13. rank(d_3) is NOT a simple function of c3 (multiple values per c3 class).
+14. 3-path NA face distribution: exactly 25%/50%/25% for 0/1/2 faces (very clean, universal).
+15. At level 4: paths can have multiple NA faces => overlapping constraint rows => rank deficit => beta_4 possible.
+16. Complete bidirectional graph: beta_2=0, homology at top dimension only.
+**Open:** (1) Algebraic proof of beta_2=0 (disjoint support is necessary but not sufficient). (2) Does beta_2=0 break at large n? Very unlikely given n=10 confirmation. (3) Onset of beta_6 (not seen at n=9 in limited samples).
+**Scripts:** beta1_beta3_mediator.py, even_betti_quick_v2.py, beta4_investigation.py, beta_coexistence_analysis.py, beta2_algebraic_analysis.py, beta2_disjoint_support_proof.py, beta2_completeness_argument.py, beta2_exactness_proof.py, beta2_only_n9.py
 
 ---
 

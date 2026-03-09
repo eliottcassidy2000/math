@@ -30,6 +30,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-322 | beta_2=0 for all tournaments | Exhaustive n<=6, 1000 samples n=7,8: 0 violations | kind-pasteur-S45 |
 | HYP-323 | beta_5 first appears at n=8 | betti=[1,1,0,0,0,1,0,0] found at n=8 (~0.2%) | kind-pasteur-S45 |
 | HYP-324 | beta_4 can be >1 (value 5 observed at n=8) | Near-regular c3=20 tournament | kind-pasteur-S45 |
+| HYP-325 | THM-097: Disjoint support at Omega_2 (PROVED) | Each 2-path has at most 1 NA face => constraint matrix full rank | kind-pasteur-S45 |
+| HYP-326 | beta_2=0 at n=9 (0/500) and n=10 (0/100) | Extends HYP-249/276. Now confirmed n<=10 | kind-pasteur-S45 |
+| HYP-327 | Removing 1 edge from tournament can create beta_2>0 | 13/500 at n=6 (2.6%). Completeness is SHARP condition | kind-pasteur-S45 |
+| HYP-328 | 3-path has 0,1,2 NA faces in 25/50/25% ratio (universal) | Exactly 25% each for 0 and 2, 50% for 1, at all tested n | kind-pasteur-S45 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
