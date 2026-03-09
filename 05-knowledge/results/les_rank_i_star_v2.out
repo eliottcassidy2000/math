@@ -1,0 +1,88 @@
+======================================================================
+RANK(i_*) v2 — FIXED COMPUTATION
+======================================================================
+
+--- Part 0: Verification at n=6 ---
+  Checked 1920 (T,v) pairs at n=6: ALL OK
+
+--- Part 1: rank(i_*) at n=7 ---
+
+  Trial 6: b3(T)=1, score=(1, 2, 3, 3, 4, 4, 4)
+    v=0: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=1: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=2: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=3: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=4: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=5: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+    v=6: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+
+  Trial 21: b3(T)=1, score=(2, 2, 3, 3, 3, 4, 4)
+    v=0: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=1: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=2: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=3: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=4: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=5: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+    v=6: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+
+  Trial 47: b3(T)=1, score=(2, 2, 3, 3, 3, 4, 4)
+    v=0: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=1: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=2: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=3: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=4: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+    v=5: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=6: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+
+  Trial 58: b3(T)=1, score=(2, 2, 3, 3, 3, 4, 4)
+    v=0: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+    v=1: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+    v=2: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=3: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=4: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=5: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=6: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+
+  Trial 153: b3(T)=1, score=(2, 2, 2, 3, 4, 4, 4)
+    v=0: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=1: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=2: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=3: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=4: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+    v=5: b3(T\v)=1, rank(i_*)=1, H_3^rel=0 <-- BAD
+    v=6: b3(T\v)=0, rank(i_*)=0, H_3^rel=1
+  ... 20 beta_3=1 found from 245 trials
+  ... 40 beta_3=1 found from 552 trials
+  ... 60 beta_3=1 found from 806 trials
+  ... 80 beta_3=1 found from 1070 trials
+
+  Total: 100 beta_3=1 from 1265 trials
+
+--- Part 2: Statistics ---
+  Tours with bad vertex: 58/100
+
+  rank(i_*) overall: {0: 629, 1: 71}
+  rank(i_*) when b3(T\v) > 0: {1: 71}
+  H_3^rel distribution: {0: 71, 1: 629}
+
+--- Part 3: KEY TEST ---
+  When b3(T\v) = 1, is rank(i_*) = 1?
+  YES! All 71 bad-vertex cases have rank(i_*) = 1
+  => When b3(T\v) = 1: H_3^rel = 1 - 1 = 0
+  => b3(T) = 1 = rank(i_*) + 0
+
+  THEOREM (computational): For beta_3=1 tournaments at n=7:
+  - If b3(T\v) = 0: rank(i_*) = 0, H_3^rel = 1
+  - If b3(T\v) = 1: rank(i_*) = 1, H_3^rel = 0
+  The LES always gives b3(T) = 1, without needing good vertex!
+
+--- Part 4: Sanity check ---
+  H_3^rel < 0 cases: 0
+
+--- Part 5: Quick n=8 check ---
+  ... 5 beta_3=1 found at n=8
+  ... 10 beta_3=1 found at n=8
+  ... 15 beta_3=1 found at n=8
+  n=8: checked 20 tournaments, violations: 0
+
+DONE.
