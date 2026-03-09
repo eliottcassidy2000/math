@@ -1,0 +1,651 @@
+======================================================================
+n=5 SC TOURNAMENTS: b1 vs c3 DETAILED
+======================================================================
+
+n=5 SC: (score, c3, b1) => count
+  score=(1, 1, 2, 3, 3), c3=3, b1=0: 120
+  score=(1, 1, 2, 3, 3), c3=3, b1=1: 120
+  score=(1, 2, 2, 2, 3), c3=4, b1=0: 120
+  score=(1, 2, 2, 2, 3), c3=4, b1=1: 160
+  score=(2, 2, 2, 2, 2), c3=5, b1=1: 24
+
+======================================================================
+SCORE (1,2,2,2,3) at n=5: b1 vs c3
+======================================================================
+
+n=5, score (1,2,2,2,3), c3=4:
+  bits=12, b1=1, SC=True
+  bits=28, b1=1, SC=True
+  bits=40, b1=1, SC=True
+  bits=41, b1=0, SC=True
+  bits=42, b1=0, SC=True
+  bits=44, b1=0, SC=True
+  bits=57, b1=1, SC=True
+  bits=68, b1=0, SC=True
+  bits=69, b1=1, SC=True
+  bits=70, b1=1, SC=True
+  bits=72, b1=1, SC=True
+  bits=73, b1=1, SC=True
+  bits=74, b1=0, SC=True
+  bits=77, b1=0, SC=True
+  bits=78, b1=1, SC=True
+  bits=85, b1=0, SC=True
+  bits=89, b1=0, SC=True
+  bits=92, b1=0, SC=True
+  bits=93, b1=1, SC=True
+  bits=97, b1=1, SC=True
+  bits=99, b1=1, SC=True
+  bits=101, b1=0, SC=True
+  bits=104, b1=0, SC=True
+  bits=106, b1=1, SC=True
+  bits=107, b1=0, SC=True
+  bits=108, b1=1, SC=True
+  bits=109, b1=1, SC=True
+  bits=121, b1=1, SC=True
+  bits=138, b1=1, SC=True
+  bits=152, b1=1, SC=True
+  bits=153, b1=0, SC=True
+  bits=154, b1=0, SC=True
+  bits=156, b1=0, SC=True
+  bits=170, b1=1, SC=True
+  bits=185, b1=1, SC=True
+  bits=194, b1=0, SC=True
+  bits=195, b1=1, SC=True
+  bits=198, b1=1, SC=True
+  bits=200, b1=1, SC=True
+  bits=201, b1=1, SC=True
+  bits=203, b1=0, SC=True
+  bits=204, b1=0, SC=True
+  bits=206, b1=1, SC=True
+  bits=209, b1=1, SC=True
+  bits=211, b1=0, SC=True
+  bits=213, b1=1, SC=True
+  bits=216, b1=0, SC=True
+  bits=218, b1=1, SC=True
+  bits=219, b1=1, SC=True
+  bits=220, b1=1, SC=True
+  bits=221, b1=0, SC=True
+  bits=227, b1=0, SC=True
+  bits=233, b1=0, SC=True
+  bits=234, b1=0, SC=True
+  bits=235, b1=1, SC=True
+  bits=249, b1=1, SC=True
+  bits=262, b1=0, SC=True
+  bits=266, b1=0, SC=True
+  bits=268, b1=0, SC=True
+  bits=270, b1=1, SC=True
+  bits=276, b1=0, SC=True
+  bits=277, b1=1, SC=True
+  bits=278, b1=1, SC=True
+  bits=280, b1=1, SC=True
+  bits=281, b1=0, SC=True
+  bits=282, b1=1, SC=True
+  bits=285, b1=1, SC=True
+  bits=286, b1=0, SC=True
+  bits=290, b1=1, SC=True
+  bits=291, b1=0, SC=True
+  bits=294, b1=1, SC=True
+  bits=296, b1=0, SC=True
+  bits=297, b1=1, SC=True
+  bits=299, b1=1, SC=True
+  bits=300, b1=1, SC=True
+  bits=302, b1=0, SC=True
+  bits=305, b1=0, SC=True
+  bits=307, b1=1, SC=True
+  bits=309, b1=1, SC=True
+  bits=312, b1=1, SC=True
+  bits=314, b1=1, SC=True
+  bits=315, b1=0, SC=True
+  bits=316, b1=0, SC=True
+  bits=317, b1=1, SC=True
+  bits=322, b1=0, SC=True
+  bits=323, b1=1, SC=True
+  bits=324, b1=1, SC=True
+  bits=325, b1=0, SC=True
+  bits=327, b1=1, SC=True
+  bits=330, b1=1, SC=True
+  bits=332, b1=1, SC=True
+  bits=334, b1=0, SC=True
+  bits=337, b1=0, SC=True
+  bits=339, b1=1, SC=True
+  bits=340, b1=1, SC=True
+  bits=342, b1=0, SC=True
+  bits=343, b1=1, SC=True
+  bits=345, b1=1, SC=True
+  bits=348, b1=1, SC=True
+  bits=349, b1=0, SC=True
+  bits=353, b1=0, SC=True
+  bits=354, b1=1, SC=True
+  bits=357, b1=1, SC=True
+  bits=358, b1=1, SC=True
+  bits=359, b1=0, SC=True
+  bits=361, b1=1, SC=True
+  bits=362, b1=0, SC=True
+  bits=363, b1=1, SC=True
+  bits=369, b1=1, SC=True
+  bits=371, b1=0, SC=True
+  bits=373, b1=0, SC=True
+  bits=377, b1=0, SC=True
+  bits=394, b1=1, SC=True
+  bits=402, b1=1, SC=True
+  bits=403, b1=1, SC=True
+  bits=406, b1=0, SC=True
+  bits=408, b1=0, SC=True
+  bits=409, b1=1, SC=True
+  bits=411, b1=0, SC=True
+  bits=412, b1=1, SC=True
+  bits=414, b1=1, SC=True
+  bits=426, b1=1, SC=True
+  bits=435, b1=0, SC=True
+  bits=441, b1=0, SC=True
+  bits=442, b1=0, SC=True
+  bits=443, b1=1, SC=True
+  bits=450, b1=1, SC=True
+  bits=451, b1=0, SC=True
+  bits=454, b1=0, SC=True
+  bits=458, b1=0, SC=True
+  bits=465, b1=1, SC=True
+  bits=466, b1=0, SC=True
+  bits=469, b1=1, SC=True
+  bits=470, b1=1, SC=True
+  bits=471, b1=0, SC=True
+  bits=473, b1=0, SC=True
+  bits=474, b1=1, SC=True
+  bits=475, b1=1, SC=True
+  bits=483, b1=1, SC=True
+  bits=499, b1=1, SC=True
+  bits=524, b1=1, SC=True
+  bits=540, b1=1, SC=True
+  bits=548, b1=1, SC=True
+  bits=549, b1=1, SC=True
+  bits=550, b1=0, SC=True
+  bits=552, b1=0, SC=True
+  bits=553, b1=1, SC=True
+  bits=554, b1=1, SC=True
+  bits=557, b1=0, SC=True
+  bits=558, b1=1, SC=True
+  bits=565, b1=0, SC=True
+  bits=569, b1=0, SC=True
+  bits=572, b1=0, SC=True
+  bits=573, b1=1, SC=True
+  bits=580, b1=1, SC=True
+  bits=581, b1=0, SC=True
+  bits=582, b1=0, SC=True
+  bits=588, b1=0, SC=True
+  bits=597, b1=1, SC=True
+  bits=609, b1=1, SC=True
+  bits=611, b1=1, SC=True
+  bits=612, b1=0, SC=True
+  bits=614, b1=1, SC=True
+  bits=615, b1=0, SC=True
+  bits=617, b1=0, SC=True
+  bits=620, b1=1, SC=True
+  bits=621, b1=1, SC=True
+  bits=629, b1=1, SC=True
+  bits=646, b1=0, SC=True
+  bits=650, b1=0, SC=True
+  bits=652, b1=0, SC=True
+  bits=654, b1=1, SC=True
+  bits=660, b1=1, SC=True
+  bits=661, b1=0, SC=True
+  bits=662, b1=1, SC=True
+  bits=664, b1=0, SC=True
+  bits=665, b1=1, SC=True
+  bits=666, b1=1, SC=True
+  bits=669, b1=1, SC=True
+  bits=670, b1=0, SC=True
+  bits=674, b1=0, SC=True
+  bits=675, b1=1, SC=True
+  bits=678, b1=1, SC=True
+  bits=680, b1=1, SC=True
+  bits=681, b1=0, SC=True
+  bits=683, b1=1, SC=True
+  bits=684, b1=1, SC=True
+  bits=686, b1=0, SC=True
+  bits=689, b1=0, SC=True
+  bits=691, b1=1, SC=True
+  bits=693, b1=1, SC=True
+  bits=696, b1=1, SC=True
+  bits=698, b1=0, SC=True
+  bits=699, b1=1, SC=True
+  bits=700, b1=1, SC=True
+  bits=701, b1=0, SC=True
+  bits=706, b1=1, SC=True
+  bits=707, b1=0, SC=True
+  bits=708, b1=0, SC=True
+  bits=709, b1=1, SC=True
+  bits=711, b1=1, SC=True
+  bits=714, b1=1, SC=True
+  bits=716, b1=1, SC=True
+  bits=718, b1=0, SC=True
+  bits=721, b1=0, SC=True
+  bits=723, b1=1, SC=True
+  bits=724, b1=1, SC=True
+  bits=726, b1=1, SC=True
+  bits=727, b1=0, SC=True
+  bits=729, b1=1, SC=True
+  bits=732, b1=0, SC=True
+  bits=733, b1=1, SC=True
+  bits=737, b1=0, SC=True
+  bits=738, b1=1, SC=True
+  bits=741, b1=1, SC=True
+  bits=742, b1=0, SC=True
+  bits=743, b1=1, SC=True
+  bits=745, b1=1, SC=True
+  bits=746, b1=1, SC=True
+  bits=747, b1=0, SC=True
+  bits=753, b1=1, SC=True
+  bits=755, b1=0, SC=True
+  bits=757, b1=0, SC=True
+  bits=761, b1=0, SC=True
+  bits=774, b1=1, SC=True
+  bits=788, b1=1, SC=True
+  bits=789, b1=0, SC=True
+  bits=790, b1=0, SC=True
+  bits=796, b1=0, SC=True
+  bits=802, b1=0, SC=True
+  bits=803, b1=1, SC=True
+  bits=804, b1=1, SC=True
+  bits=805, b1=1, SC=True
+  bits=807, b1=0, SC=True
+  bits=810, b1=1, SC=True
+  bits=812, b1=0, SC=True
+  bits=814, b1=1, SC=True
+  bits=817, b1=1, SC=True
+  bits=819, b1=0, SC=True
+  bits=820, b1=0, SC=True
+  bits=822, b1=1, SC=True
+  bits=823, b1=1, SC=True
+  bits=825, b1=1, SC=True
+  bits=828, b1=1, SC=True
+  bits=829, b1=0, SC=True
+  bits=838, b1=1, SC=True
+  bits=853, b1=1, SC=True
+  bits=867, b1=0, SC=True
+  bits=869, b1=0, SC=True
+  bits=870, b1=0, SC=True
+  bits=871, b1=1, SC=True
+  bits=885, b1=1, SC=True
+  bits=902, b1=1, SC=True
+  bits=914, b1=1, SC=True
+  bits=915, b1=1, SC=True
+  bits=916, b1=0, SC=True
+  bits=917, b1=1, SC=True
+  bits=919, b1=0, SC=True
+  bits=922, b1=0, SC=True
+  bits=924, b1=1, SC=True
+  bits=926, b1=1, SC=True
+  bits=930, b1=1, SC=True
+  bits=931, b1=0, SC=True
+  bits=934, b1=0, SC=True
+  bits=938, b1=0, SC=True
+  bits=945, b1=1, SC=True
+  bits=946, b1=0, SC=True
+  bits=949, b1=0, SC=True
+  bits=950, b1=1, SC=True
+  bits=951, b1=1, SC=True
+  bits=953, b1=1, SC=True
+  bits=954, b1=1, SC=True
+  bits=955, b1=0, SC=True
+  bits=966, b1=1, SC=True
+  bits=979, b1=0, SC=True
+  bits=981, b1=0, SC=True
+  bits=982, b1=0, SC=True
+  bits=983, b1=1, SC=True
+  bits=995, b1=1, SC=True
+  bits=1011, b1=1, SC=True
+
+======================================================================
+n=7 KAPPA>=2: BAD VERTEX STRUCTURE
+======================================================================
+  Found 100 (1s)
+  Found 200 (2s)
+  Found 300 (3s)
+  Found 400 (4s)
+  Found 500 (5s)
+  Found 600 (6s)
+  Found 700 (7s)
+  Found 800 (8s)
+
+n=7: 887 kappa>=2 + SC + b1=0 tournaments (9s)
+
+Sum_v b1(T\v) distribution:
+  Sum=0: 333
+  Sum=1: 165
+  Sum=2: 173
+  Sum=3: 216
+
+Bad vertex patterns:
+  0 bad, pattern=none: 333
+  1 bad, pattern=single: 165
+  2 bad, pattern=trans: 173
+  3 bad, pattern=trans: 216
+
+c3(T\v) at BAD vertices:
+  c3=4: 8
+  c3=5: 51
+  c3=6: 367
+  c3=7: 161
+  c3=8: 572
+
+c3(T\v) at GOOD vertices:
+  c3=4: 141
+  c3=5: 308
+  c3=6: 1504
+  c3=7: 1756
+  c3=8: 1341
+
+Score of T\v at BAD:
+  (2, 2, 2, 3, 3, 3): 572
+  (1, 2, 2, 3, 3, 4): 367
+  (2, 2, 2, 2, 3, 4): 93
+  (1, 2, 3, 3, 3, 3): 68
+  (1, 2, 2, 2, 4, 4): 26
+  (1, 1, 3, 3, 3, 4): 25
+  (1, 1, 2, 3, 4, 4): 8
+
+Score of T\v at GOOD:
+  (1, 2, 2, 3, 3, 4): 1504
+  (2, 2, 2, 3, 3, 3): 1341
+  (1, 2, 3, 3, 3, 3): 891
+  (2, 2, 2, 2, 3, 4): 865
+  (1, 1, 3, 3, 3, 4): 154
+  (1, 2, 2, 2, 4, 4): 154
+  (1, 1, 2, 3, 4, 4): 141
+
+======================================================================
+AVERAGING ARGUMENT VIA c3
+======================================================================
+
+At n=6 kappa>=2: c3(T)=8 always
+  avg c3(v) = 3*8/6 = 4
+  max c3(v) >= 4, so min c3(T\v) <= 4
+  From data: c3(T\v)<=4 => GOOD (verified 100%)
+  Therefore: good vertex always exists at n=6!
+
+BUT: c3(T\v)=4 can be BAD (2880 cases at n=6)
+This means the c3 averaging argument is NOT sufficient.
+
+Re-examination: at n=6 kappa>=2, c3(T\v)=4:
+  Good: 4320, Bad: 2880
+  Key: at n=5, score (1,2,2,2,3), c3=4 has both b1=0 (120) and b1=1 (120)
+  And score (2,2,2,2,2), c3=4 has b1=0 (120) and b1=1 (40)
+
+======================================================================
+SC + c3=5 at n=5: b1 ALWAYS 1?
+======================================================================
+
+Variance of c3(v) at n=6 kappa>=2:
+  max_c3v=4 at bits=1332, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=1337, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=1363, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=1368, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=1426, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=1429, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2196, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2202, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2377, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2394, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2473, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2485, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2739, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2744, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2858, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2873, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2955, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=2962, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=3249, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=3254, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=3338, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=3350, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=3435, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=3441, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=4917, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=4920, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=4946, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=4953, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=5011, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=5012, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6230, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6232, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6501, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6521, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6533, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6550, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6769, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6778, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6918, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=6938, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7079, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7089, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7283, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7284, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7462, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7477, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7495, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=7506, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8405, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8408, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8524, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8537, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8589, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8596, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8850, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=8860, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9001, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9020, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9161, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9171, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9329, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9340, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9478, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9500, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9671, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9681, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9782, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=9784, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10083, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10105, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10115, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10134, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10314, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10332, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10405, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10428, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10693, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10699, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10796, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10810, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10947, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=10970, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11171, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11181, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11310, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11316, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11491, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11509, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11587, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11598, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11882, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11891, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11943, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=11954, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=12070, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=12075, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13009, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13014, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13068, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13078, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13165, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13169, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13938, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=13941, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14119, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14132, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14150, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14163, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14444, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14453, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14535, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14548, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14662, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14669, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14926, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=14930, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=15077, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=15091, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=15141, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=15150, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=17617, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=17626, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=17676, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=17690, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=17837, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=17841, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18098, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18105, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18219, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18232, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18314, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18323, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18604, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18617, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18635, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18648, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18826, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=18829, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=19598, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=19602, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=19689, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=19699, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=19753, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=19758, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=20692, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=20697, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=20813, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=20824, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=20876, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=20885, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21169, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21180, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21258, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21276, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21451, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21457, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21586, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21596, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21797, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21820, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21957, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=21971, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22068, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22074, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22339, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22362, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22435, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22453, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22633, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22652, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22662, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22684, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22983, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=22985, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23086, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23096, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23267, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23289, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23427, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23438, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23596, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23606, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23747, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23766, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23907, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=23917, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=24171, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=24178, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=24230, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=24243, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=24359, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=24362, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25261, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25272, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25290, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25305, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25483, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25484, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25678, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25688, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25829, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25849, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25989, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=25998, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=26217, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=26234, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=26246, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=26266, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=26535, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=26537, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=27755, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=27756, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=27814, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=27821, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=27847, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=27850, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29326, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29332, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29417, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29429, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29513, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29518, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29805, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29812, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29894, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=29909, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30023, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30028, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30282, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30294, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30373, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30390, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30565, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=30571, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=31338, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=31341, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=31399, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=31404, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=31430, c3_vs=[4, 4, 4, 4, 4, 4]
+  max_c3v=4 at bits=31435, c3_vs=[4, 4, 4, 4, 4, 4]
+
+max c3(v) distribution (kappa>=2, n=6, 17s):
+  max c3(v)=4: 240
+  max c3(v)=5: 1440
+
+If max c3(v) >= 5 always: c3(T\v) <= 3 for some v => b1(T\v)=0 => good vertex!
+
+======================================================================
+PIGEONHOLE: max c3(v) >= 5 when c3(T)=8, n=6?
+======================================================================
+Checking if c3(v)=4 for all v is achievable with c3(T)=8:
+
+======================================================================
+n=5 REGULAR (2,2,2,2,2): b1 vs c3 vs isomorphism type
+======================================================================
+
+n=5 regular tournaments: 24
+  b1=1, c3=5: 24
+
+Are all n=5 regular tournaments b1=1?
+  YES: True
+  All 24 regular n=5 tournaments have b1=1.
+
+======================================================================
+KAPPA>=2 at n=6: T\v regular?
+======================================================================
+
+Number of regular T\v (kappa>=2, n=6):
+  0 regular deletions: 240
+  1 regular deletions: 1440
+
+
+Done.
