@@ -8,16 +8,16 @@
 |----------|------|----------|-------------|-----------|--------|
 | A000568 | Tournaments | 77 | 201 | +124 | Complete |
 | A002785 | Self-comp oriented graphs | 100 | 300 | +200 | Complete |
-| A000171 | Self-comp graphs | 100 | 404+ | +304+ | Running (to 500) |
-| A000273 | Digraphs | 65 | 100 | +35 | Complete |
+| A000171 | Self-comp graphs | 100 | 424+ | +324+ | Running (to 500) |
+| A000273 | Digraphs | 65 | 101 | +36 | Complete |
 | A000595 | Binary relations | 51 | 100 | +49 | Complete |
-| A001174 | Oriented graphs | 50 | 80→100 | +30→+50 | Extending |
-| A000088 | Simple graphs | 88 | 96 | +8 | Complete |
-| A000666 | Symmetric relations | 81 | 96 | +15 | Complete |
+| A001174 | Oriented graphs | 50 | 100 | +50 | Complete |
+| A000088 | Simple graphs | 88 | 101 | +13 | Complete |
+| A000666 | Symmetric relations | 81 | 101+ | +20+ | Extending (to 120) |
 | A003086 | Self-comp digraphs | 80 | 100 | +20 | Complete |
 | A005639 | Self-converse oriented graphs | 50 | 80 | +30 | Complete |
 | A002499 | Self-converse digraphs | 50 | 80 | +30 | Complete |
-| A002854 | Two-graphs / Euler graphs | 88 | 120 | +32 | Running |
+| A002854 | Two-graphs / Euler graphs | 88 | 103+ | +15+ | Extending (to 120) |
 
 ### k-uniform hypergraph sequences
 
@@ -44,12 +44,13 @@
 
 | Sequence | Name | OEIS had | We computed | New terms | Status |
 |----------|------|----------|-------------|-----------|--------|
-| A001349 | Connected graphs | 76 | 96 | +20 | Complete |
+| A001349 | Connected graphs | 76 | 100 | +24 | Complete |
 | A003085 | Weakly connected digraphs | 64 | 100 | +36 | Complete |
 | A051337 | Strongly connected tournaments | 50 | 200 | +150 | Complete |
-| A086345 | Connected oriented graphs | 51 | 80 | +29 | Complete |
+| A086345 | Connected oriented graphs | 51 | 100 | +49 | Complete |
 | A054919 | Connected binary relations | 51 | 98 | +47 | Complete |
-| A054921 | Connected symmetric relations | 87 | 96 | +9 | Complete |
+| A054921 | Connected symmetric relations | 87 | 100 | +13 | Complete |
+| A003049 | Connected Eulerian graphs | 88 | 103 | +15 | Complete |
 
 ### Trivially derived sequences
 
@@ -57,7 +58,7 @@
 |----------|------|----------|-------------|-----------|---------|
 | A059735 | Complementary pairs tournaments | 50 | 200 | +150 | (A000568 + A002785)/2 |
 | A334335 | InvEuler(A000568) | 76 | 200 | +124 | InvEuler(A000568) |
-| A007869 | Graphs w/ even # edges | 50 | 95 | +45 | (A000088 + A000171)/2 |
+| A007869 | Graphs w/ even # edges | 50 | 100 | +50 | (A000088 + A000171)/2 |
 | A054928 | Digraphs w/ even # arcs | 50 | 100 | +50 | (A000273 + A003086)/2 |
 | A054934 | Oriented graphs up to arc reversal | 50 | 80 | +30 | (A001174 + A005639)/2 |
 
@@ -69,9 +70,17 @@
 | Connected 4-uniform hypergraphs | 47 | InvEuler(A051240) |
 | Connected 5-uniform hypergraphs | 40 | InvEuler(A051249) |
 | Connected 6-uniform hypergraphs | 35 | InvEuler(A309860) |
+| Connected 7-uniform hypergraphs | 28 | InvEuler(A309861) |
 | Connected self-comp digraphs | 100 | InvEuler(A003086) |
 | Connected self-converse oriented | 80 | InvEuler(A005639) |
 | Connected self-converse digraphs | 80 | InvEuler(A002499) |
+
+## Total impact summary
+
+- **25 OEIS sequences extended** with new b-file terms
+- **8 potentially new sequences** (connected variants not yet in OEIS)
+- **~2000+ new individual terms** across all sequences
+- **Unified enumerator** handles 12 sequences in a single C file
 
 ## Key algorithmic features
 
@@ -81,7 +90,7 @@
 4. **Precomputed factors**: km_fac[pi][m] = k^m * m! avoids repeated GMP calls
 5. **Unified framework**: Single C file handles 12 different OEIS sequences
 6. **General k-uniform**: New general enumerator for any k-uniform hypergraphs
-7. **Burnside orbit counting**: For k≥3, uses (1/L)*sum_{t=0..L-1} [x^k] generating function
+7. **Burnside orbit counting**: For k>=3, uses (1/L)*sum_{t=0..L-1} [x^k] generating function
 8. **Divisor-signature Mobius**: For k=4,5 hypergraphs, avoids L iteration (64x-130x speedup)
 9. **Pair orbit GF**: For triangle sequences (A008406, A052283), tracks individual orbit sizes
 
@@ -120,7 +129,7 @@ All core sequences use: a(n) = (1/n!) * sum_{p partition} permcount(scale*p) * b
 | A002499 | n | all | 1 | 2 | gcd + gcd_even + self_2499 |
 | A002854 | n | all | 1 | 2 | gcd + self(floor(r/2)-1) + [has_odd_part] |
 
-For k-uniform hypergraphs (k≥3): edges = orbits of k-subsets, computed via Burnside on cyclic group.
+For k-uniform hypergraphs (k>=3): edges = orbits of k-subsets, computed via Burnside on cyclic group.
 
 For triangle sequences:
 - A008406: GF(x) = prod over pair orbits of (1 + x^{orbit_size})
