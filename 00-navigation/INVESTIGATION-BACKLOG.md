@@ -11,11 +11,17 @@
 
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50
-**Status:** NEW — needs investigation. February 2026.
-**What:** Tang-Yau develop a "symbol-matrix" approach to GLMY path homology for circulant digraphs using Fourier decomposition on the shift automorphism. Provides computable Betti number formulas, with dependence on whether n is prime or composite. Since Paley tournaments T_p are circulant digraphs (vertex set Z_p, connection set QR(p)), this method DIRECTLY applies to computing β_k(T_p) for all k.
-**Why important:** Our Fourier eigenspace code (paley_fourier_betti.py) independently implements a similar idea but for a different purpose. Tang-Yau may have already proved top vanishing (THM-124) for circulant digraphs! Or their formula could give exact Betti numbers for T_7, T_11, etc.
-**Next step:** (1) Fetch arXiv:2602.04140 and check their results. (2) See if their Theorem applies to Paley T_p specifically. (3) Check if they have top vanishing as a corollary. (4) Cross-reference with our Omega dimension palindrome observation.
-**Priority:** HIGH — directly computable results for Paley tournaments.
+**Status:** INVESTIGATED (kind-pasteur-2026-03-10-S50). February 2026.
+**What:** Tang-Yau develop a "symbol-matrix" approach to GLMY path homology for circulant digraphs using Fourier decomposition on the shift automorphism. Provides computable Betti number formulas, with dependence on whether n is prime or composite.
+**Key findings (from paper fetch):**
+- Main theorems: C→_5^{1,2} and C→_n^{1,s} with s≠2 have β_1=1,β_2=1, otherwise β_1=1.
+- Symbol matrix M_m(t) reduces rank to evaluating Laurent polynomials at roots of unity.
+- Stability theorem (Thm 1.4): for large primes p∉Q+(S), Betti numbers stabilize.
+- DOES NOT compute Betti numbers for Paley T_p (connection sets of size (p-1)/2).
+- DOES NOT have Omega palindrome or top vanishing results for arbitrary connection sets.
+**Impact:** The symbol-matrix framework is the right tool for T_p, but they leave Paley application open. The Stability Theorem (Thm 1.4) implies our pattern β_6(T_p)=p-1 holds for ALL large p∉Q+(QR_p). Computing Q+(QR_p) would be the key step.
+**Next step:** Apply Tang-Yau symbol matrix to T_7 and T_11 explicitly. Compute Q+(QR_p) to see when stabilization kicks in.
+**Priority:** MEDIUM — framework established but Paley case not handled.
 
 ### INV-136: Schweser-Stiebitz-Toft (arXiv:2510.10659): Redei's Theorem Revisited (Oct 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50
