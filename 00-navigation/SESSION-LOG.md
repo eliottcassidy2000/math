@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S56 — 2026-03-09: cancellation mechanism, HYP-398⟺i_*-injectivity, Euler characteristic
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S55
+**Summary of work:**
+  Deep session on boundary cancellation mechanism and Euler characteristic structure.
+  1. **HYP-398 at n=8 reconciled**: kind-pasteur-S49 tested ALL vertices (GOOD+BAD), found failures at GOOD vertices. Our istar_failure_n8.py (767 BAD vertices) finds 5 failures (~0.65%), EXACTLY at rank(i_*)=0 vertices. HYP-404: HYP-398 ⟺ rank(i_*)=1 is exact equivalence.
+  2. **Cancellation mechanism** (HYP-405): For n=7 BAD vertices, old-face projection of new d_4 boundaries stays in im(d_4) 26/28 times. In 2/28 cases, new-face component cancels exactly. Full boundary always in im(d_4).
+  3. **b4=0 for b3=1** (HYP-406): 500 samples each at n=7,8 — b4(T)=0 always when b3(T)=1.
+  4. **Euler characteristic** (HYP-407): chi ∈ {0,1,7} at n=7. chi=0 when b1>0 or b3>0. At n=8: chi ∈ {0,1,2,3}.
+  5. **HYP-398 holds for b3=2 at n=8**: targeting_n8.py found 8/8 BAD vertices with extra_kills=0 for b3=2 tournaments. But the sample is small.
+**New contributions:** targeting_n8.py, istar_failure_n8.py, cancellation_mechanism.py,
+  boundary_decomposition.py, old_face_analysis.py, h4_relative.py, seesaw_mechanism_n7.py,
+  euler_char_n7.py, chi_check.py, chi_all_n7.py, high_betti_n7.py, beta3_growth.py.
+  HYP-404,405,406,407 added. HYP-398 reconciled.
+**Unresolved threads:**
+  - Algebraic proof of HYP-398 for n≤7 (the cancellation mechanism is computational, need proof)
+  - beta3_growth.py: n=9+ survey incomplete
+  - What algebraic property distinguishes rank(i_*)=0 vs rank(i_*)=1 at n=8?
+
 ## kind-pasteur-S48 — 2026-03-09: seesaw refuted, i_*-injectivity refuted, beta_3=2 at n=8,9, 2.2x speedup
 **Account:** A
 **Continuation of:** kind-pasteur-S47
