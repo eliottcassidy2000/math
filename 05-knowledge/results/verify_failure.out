@@ -21,3 +21,8 @@ VERIFY n=8 FAILURES WITH TWO METHODS
   ... 1100 checked, 4 failures, 1100/1100 agree
   ... 1200 checked, 4 failures, 1200/1200 agree
   ... 1300 checked, 4 failures, 1300/1300 agree
+
+  FAILURE #5: method1=0, method2=0, agree=True, is_cycle=True, b3_T=1, b3_Tv=1
+
+  FAILURE #6: method1=0, method2=0, agree=True, is_cycle=True, b3_T=1, b3_Tv=1
+  ... 1400 checked, 6 failures, 1400/1400 agree

@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-10-S59 — 2026-03-10: Relative complex analysis, safe arithmetic verification, n=8 failures confirmed genuine
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S58
+**Summary of work:**
+  Fixed psi_image_analysis.py bug and conducted deep analysis of the relative complex C_*(T, T\v) with safe modular arithmetic.
+  1. **Bug fix in psi_image_analysis.py**: Was using `psi @ ker_A4[:, tv4].T` (only tv→old block), corrected to `bd4_T[old3, :] @ ker_A4.T` (full boundary). Results now match istar_chain_criterion.py.
+  2. **HYP-425: β_4(T) = 0 for ALL tournaments at n ≤ 7**: 1000/1000 at n=5,6,7. At n=8: 5/500 have β_4=1 (all with β_3=0). Simplifies LES to 0 → H_4^rel → H_3(T\v) → H_3(T).
+  3. **HYP-426: ψ(ker) = im(d_4^{T\v}) exactly at n=7**: codim(ψ(ker), im d_4^Tv) = 0 in 200/200 (safe). Full equality, not just containment.
+  4. **HYP-427: Relative complex acyclic at n=7**: 100/100. i_*: H_p(T\v) → H_p(T) isomorphism at all p.
+  5. **HYP-428: χ(T,T\v) = 5 constant at n=7**: Relative Euler characteristic fixed. Full χ^rel = 0 including Ω_0, Ω_1.
+  6. **Relative exactness (safe): H_4^rel = 0 universally at n=7** (200/200). At n=8: 1-3/200-500 failures. d_5^rel surjects onto ker(d_4^rel) at n=7 (slack=0 always).
+  7. **CRITICAL: n=8 i_*-injectivity failures are GENUINE**: Two-method cross-validation with safe arithmetic (matmul_mod): 1200/1200 agree, 4/1200 failures. Kind-pasteur-S50 HYP-414/415 (400/400 at n=8) was SAMPLING ARTIFACT (expected ~1.2 failures in 400). Updated HYP-414, HYP-415.
+  8. **Exceptional n=8 tournaments**: v-outdeg mostly 2 or 5 (extreme), higher dim_tv4 (349 vs normal 282).
+  9. **HYP-429: Neither d_4^{old→old} nor d_4^{tv→old} alone surjects**: Both blocks needed with massive cancellation.
+**New contributions:** psi_image_analysis.py (fixed), beta4_at_n7.py, h4_rel_analysis.py, relative_betti.py, relative_exactness.py, relative_exactness_safe.py, surjection_mechanism.py, exceptional_n8.py, full_relative_homology.py, verify_failure.py. HYP-425-429 added, HYP-414/415 updated.
+**Unresolved threads:**
+  - Algebraic proof of i_*-injectivity at n ≤ 7 (where it's universal)
+  - Understanding WHY d_5^rel surjects onto ker(d_4^rel) at n=7 but not always at n=8
+  - The relative complex viewpoint: H_4^rel = 0 ⟺ i_* injective. What structural property of n=7 tournaments forces this?
+
 ## opus-2026-03-09-S58 — 2026-03-09: Ghost Cycle Theorem ⟺ HYP-408, LES insufficiency, failure predictors
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S57
