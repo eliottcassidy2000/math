@@ -1,0 +1,7 @@
+======================================================================
+i_*-INJECTIVITY FAILURE ANALYSIS AT n=8
+======================================================================
+  FAILURE #1: trial=614, v=5, b4=0, extra_kills=1, scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
+  FAILURE #2: trial=628, v=2, b4=0, extra_kills=1, scores=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
+  FAILURE #3: trial=878, v=6, b4=0, extra_kills=1, scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
+  FAILURE #4: trial=1448, v=6, b4=0, extra_kills=1, scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5))

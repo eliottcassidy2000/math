@@ -1,0 +1,20 @@
+======================================================================
+H_4 RELATIVE HOMOLOGY — WHY IS H_4(T,T\v) = 0?
+======================================================================
+
+--- Phase 1: b4 distribution for b3=1 tournaments ---
+
+  n=7:
+  n=7: 500 b3=1 tournaments, b4 dist: {0: 500}, 147.2s
+
+  n=8:
+  n=8: 500 b3=1 tournaments, b4 dist: {0: 500}, 526.1s
+
+--- Phase 2: b4(T) and b4(T\v) for BAD vertices ---
+
+  n=7:
+  n=7: 200 b3=1 tours
+    b4(T) dist: {0: 200}
+    b4(T\v) for BAD v: {0: 143}
+
+  n=8:
