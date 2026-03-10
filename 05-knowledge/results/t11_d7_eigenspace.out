@@ -24,14 +24,20 @@ Diff seqs enumerated in 0.0s
   k=1: Omega_6=700 (4.7s)... Omega_7=690 (49.2s)... rk(d7)=390 im=390 beta6=1 [254.0s / 510.1s total]
   k=2: Omega_6=700 (4.8s)... Omega_7=690 (48.6s)... rk(d7)=390 im=390 beta6=1 [260.9s / 771.0s total]
   k=3: Omega_6=700 (5.1s)... Omega_7=690 (49.7s)... rk(d7)=390 im=390 beta6=1 [227.3s / 998.6s total]
-  k=4: Omega_6=700 (4.5s)... Omega_7=690 (44.0s)...44, in <module>
-    main()
-    ~~~~^^
-  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_eigenspace.py", line 276, in main
+  k=4: Omega_6=700 (4.5s)... Omega_7=690 (44.0s)... rk(d7)=390 im=390 beta6=1 [220.5s / 1219.1s total]
+  k=5: Omega_6=700 (4.9s)... Omega_7=690 (45.8s)... rk(d7)=390 im=390 beta6=1 [226.1s / 1445.2s total]
+  k=6: Omega_6=700 (4.6s)... Omega_7=690 (45.3s)... rk(d7)=390 im=390 beta6=1 [221.9s / 1667.0s total]
+  k=7: Omega_6=700 (4.8s)... Omega_7=690 (45.7s)... rk(d7)=390 im=390 beta6=1 [229.8s / 1896.9s total]
+  k=8: Omega_6=700 (5.1s)... Omega_7=690 (45.7s)... rk(d7)=390 im=390 beta6=1 [200.0s / 2093.8s total]
+  k=9: Omega_6=700 (4.4s)... Omega_7=690 (43.5s)... rk(d7)=390 im=390 beta6=1 [198.6s / 2292.4s total]
+  k=10: Omega_6=700 (4.7s)... Omega_7=690 (37.1s)...d7_eigenspace.py", line 276, in main
     basis_7, face_data_7 = compute_omega_basis(
                            ~~~~~~~~~~~~~~~~~~~^
         diff_seqs, allowed, 7, omega_k, p)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_eigenspace.py", line 153, in compute_omega_basis
-    C = np.zeros((n_junk, n_Am), dtype=np.int64)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_eigenspace.py", line 164, in compute_omega_basis
+    basis = gauss_nullbasis_mod(C, PRIME)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_eigenspace.py", line 87, in gauss_nullbasis_mod
+    C = C.copy() % prime
+        ~~~~~~~~~^~~~~~~
 numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1015. MiB for an array with shape (15230, 8735) and data type int64

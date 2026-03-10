@@ -1,0 +1,24 @@
+======================================================================
+T_11 BETA_5 VERIFICATION
+======================================================================
+p=11, QR=[1, 3, 4, 5, 9], PRIME=89, omega_p=78
+
+Prediction (HYP-443):
+  rk(d_5^(k=0))=150 => ker(d_5^(k=0))=310 => beta_5^(k=0)=310-305=5
+  rk(d_5^(k!=0))=151 => ker(d_5^(k!=0))=309 => beta_5^(k!=0)=309-309=0
+
+Enumerated in 0.0s
+
+Known rk(d_6): k=0 -> 305, k!=0 -> 309
+
+Computing rk(d_5^(k))...
+  k=0: Omega4=205 Omega5=460 rk(d5)=150 ker(d5)=310 rk(d6)=305 beta5=5 [0.7s]
+  k=1: Omega4=205 Omega5=460 rk(d5)=151 ker(d5)=309 rk(d6)=309 beta5=0 [0.7s]
+
+Expected: k=0 -> beta5=5, k!=0 -> beta5=0
+
+Cross-checking rk(d_6) with small prime...
+  k=0: Omega5=460 Omega6=700 rk(d6)=305 (expected 305) [5.5s]
+  k=1: Omega5=460 Omega6=700 rk(d6)=309 (expected 309) [5.8s]
+
+DONE.

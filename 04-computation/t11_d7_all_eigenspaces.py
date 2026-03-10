@@ -258,7 +258,7 @@ def main():
     for k in range(1, p):
         ker_d6[k] = 391
 
-    print(f"\nKnown ker(d6): k=0 → 395, k!=0 → 391")
+    print(f"\nKnown ker(d6): k=0 -> 395, k!=0 -> 391")
     print(f"Previously computed: k=0: beta_6=5, k=1: beta_6=1, k=2: beta_6=1")
     print(f"This script verifies k=3..10 using small prime {prime}")
     print()

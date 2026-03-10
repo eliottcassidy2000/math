@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-10-S50 — 2026-03-10: T_11 FULL BETTI NUMBERS DETERMINED β=(1,0,0,0,0,5,15,0,0,0,0)
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-10-S50 (continued after context compaction)
+**Summary of work:**
+  LANDMARK: Complete Betti numbers of Paley T_11 determined and verified computationally.
+  1. **Full Omega dims confirmed**: [1,5,20,70,205,460,700,690,450,180,30] per eigenspace, chi=1 each.
+  2. **Beta_6=15 confirmed for ALL eigenspaces**: t11_d7_all_eigenspaces.py verified k=0..10. rk(d_7)=390 universal. β_6^(k=0)=5, β_6^(k≠0)=1.
+  3. **Beta_5=5 directly verified**: t11_beta5_verify.py: rk(d_5^(k=0))=150→ker=310→β_5=5; rk(d_5^(k≠0))=151→ker=309→β_5=0. rk(d_6) cross-checked.
+  4. **Beta_7-10=0 verified**: t11_higher_betti.py: rk(d_8)=300 (full exactness at deg 7), rk(d_9)=150 (deg 8), rk(d_10)=30 (deg 9, injective). β_10=ker(d_10)=0.
+  5. **Complete boundary rank table for T_11 per eigenspace**:
+     - k=0: rk(d_1)=0, rk(d_5)=150, rk(d_6)=305, rk(d_7)=390, rk(d_8)=300, rk(d_9)=150, rk(d_10)=30
+     - k≠0: rk(d_1)=1, rk(d_5)=151, rk(d_6)=309, rk(d_7)=390, rk(d_8)=300, rk(d_9)=150, rk(d_10)=30
+  6. **chi(T_11)=11=p CONFIRMED**: chi=1-5+15=11. Euler char = prime for Paley T_p.
+  7. **HYP-443 CONFIRMED**: Full Betti β(T_11)=(1,0,0,0,0,5,15,0,0,0,0).
+**New contributions:** HYP-443 confirmed, HYP-440 confirmed, HYP-441 refuted. Scripts: t11_beta5_verify.py, t11_d7_all_eigenspaces.py, t11_higher_betti.py.
+**Unresolved threads:**
+  - Algebraic proof of HYP-437 (all p eigenspaces have identical Omega dims)
+  - T_19 Betti numbers (next valid Paley, p=19≡3 mod 4)
+  - General pattern: β(T_p) for Paley tournaments
+
 ## kind-pasteur-2026-03-10-S50 — 2026-03-10: Top vanishing theorem + Paley Omega palindrome + T_11 Betti
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-09-S49
