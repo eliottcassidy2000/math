@@ -1,0 +1,18 @@
+======================================================================
+BETA_3=2 LES ANALYSIS AT n=8
+======================================================================
+
+--- Finding beta_3=2 and beta_3=1 examples ---
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_2_les_analysis.py", line 237, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_2_les_analysis.py", line 195, in main
+    b3 = fast_beta3_nullbasis(A, n)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\fast_beta3.py", line 210, in fast_beta3_nullbasis
+    rank_P4, nbasis4 = _gauss_nullbasis_modp(P4, na4, nc4, prime)
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 294, in _gauss_nullbasis_modp
+    mat = np.asarray(M, dtype=np.int64) % prime
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 2.21 MiB for an array with shape (560, 518) and data type int64

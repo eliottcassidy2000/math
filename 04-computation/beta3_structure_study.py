@@ -236,6 +236,8 @@ def main():
     n = 8
     rng = np.random.RandomState(12345)
 
+    from fast_beta3 import fast_beta3_nullbasis
+
     # First pass: find all beta_3=2 tournaments
     print("\n--- Phase 1: Extracting beta_3=2 tournaments ---")
     b3_2_tours = []
@@ -244,8 +246,7 @@ def main():
     t0 = time.time()
     for trial in range(5000):
         A = random_tournament(n, rng)
-        res = full_chain_complex_modp(A, n, max_p=5)
-        b3 = res['bettis'].get(3, 0)
+        b3 = fast_beta3_nullbasis(A, n)
 
         if b3 == 2:
             b3_2_tours.append((trial, A.copy()))

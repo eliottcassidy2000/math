@@ -17,6 +17,7 @@ sys.path.insert(0, '.')
 sys.stdout.reconfigure(line_buffering=True)
 
 from tournament_utils import random_tournament, full_chain_complex_modp
+from fast_beta3 import fast_beta3_nullbasis
 
 
 def search_max_beta3(n, n_trials, seed=42):
@@ -32,8 +33,7 @@ def search_max_beta3(n, n_trials, seed=42):
     t0 = time.time()
     for trial in range(n_trials):
         A = random_tournament(n, rng)
-        res = full_chain_complex_modp(A, n, max_p=5)
-        b3 = res['bettis'].get(3, 0)
+        b3 = fast_beta3_nullbasis(A, n)
 
         b3_dist[b3] = b3_dist.get(b3, 0) + 1
         if b3 > 0:
@@ -42,12 +42,9 @@ def search_max_beta3(n, n_trials, seed=42):
         if b3 > max_b3:
             max_b3 = b3
             max_b3_scores = [tuple(sorted([int(sum(A[i])) for i in range(n)]))]
-            # Also get full profile
             if b3 > 1:
-                res_full = full_chain_complex_modp(A, n, max_p=7)
-                profile = tuple(res_full['bettis'].get(p, 0) for p in range(n))
                 print(f"  NEW MAX beta_3={b3} at trial {trial}! "
-                      f"score={max_b3_scores[-1]}, profile={profile}")
+                      f"score={max_b3_scores[-1]}")
         elif b3 == max_b3 and b3 > 1:
             score = tuple(sorted([int(sum(A[i])) for i in range(n)]))
             max_b3_scores.append(score)

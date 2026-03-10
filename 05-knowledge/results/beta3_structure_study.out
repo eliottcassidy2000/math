@@ -3,15 +3,185 @@ BETA_3=2 STRUCTURAL ANALYSIS AT n=8
 ======================================================================
 
 --- Phase 1: Extracting beta_3=2 tournaments ---
-Traceback (most recent call last):
-  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_structure_study.py", line 318, in <module>
-    main()
-    ~~~~^^
-  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_structure_study.py", line 247, in main
-    res = full_chain_complex_modp(A, n, max_p=5)
-  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 767, in full_chain_complex_modp
-    P, na_rows, na_cols = _build_constraint_matrix(ap, p, prime)
-                          ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 365, in _build_constraint_matrix
-    P = np.zeros((na_count, len(paths)), dtype=np.int64)
-numpy._core._exceptions._ArrayMemoryError: Unable to allocate 7.95 MiB for an array with shape (1234, 844) and data type int64
+  Found beta_3=2 at trial 973
+  1000/5000, 31.1s, found 1 beta_3=2
+  Found beta_3=2 at trial 1179
+  Found beta_3=2 at trial 1202
+  2000/5000, 60.4s, found 3 beta_3=2
+  Found beta_3=2 at trial 2064
+  3000/5000, 91.5s, found 4 beta_3=2
+  4000/5000, 123.1s, found 4 beta_3=2
+  5000/5000, 154.4s, found 4 beta_3=2
+
+Found 4 beta_3=2 tournaments in 5000 trials
+
+--- Phase 2: Deep structural analysis ---
+
+============================================================
+  BETA_3=2 (trial 973)
+============================================================
+  Score sequence: [2, 3, 3, 3, 4, 4, 4, 5]
+  Score variance: 0.750
+  Betti profile: (1, 0, 0, 2, 0, 0, 0, 0)
+  Cycle counts: c3=18, c5=68, c7=90
+  Omega: alpha = [1, 176, 52, 0]
+  H(T) = I(Omega, 2) = 561
+
+  Vertex deletion analysis:
+    v=0 (out=4): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=1 (out=3): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=2 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=3 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=4 (out=5): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=5 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=6 (out=2): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=7 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+
+  Good vertices: [2, 3, 4, 5, 6, 7] (6/8)
+  Bad vertices:  [0, 1] (2/8)
+  Bits encoding: 192006326
+
+============================================================
+  BETA_3=2 (trial 1179)
+============================================================
+  Score sequence: [3, 3, 3, 3, 4, 4, 4, 4]
+  Score variance: 0.250
+  Betti profile: (1, 0, 0, 2, 0, 0, 0, 0)
+  Cycle counts: c3=20, c5=78, c7=96
+  Omega: alpha = [1, 194, 58, 0]
+  H(T) = I(Omega, 2) = 621
+
+  Vertex deletion analysis:
+    v=0 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=1 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=2 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=3 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=4 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=5 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=6 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=7 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+
+  Good vertices: [0, 1, 2, 3, 4, 5, 6, 7] (8/8)
+  Bad vertices:  [] (0/8)
+  Bits encoding: 171486820
+
+============================================================
+  BETA_3=2 (trial 1202)
+============================================================
+  Score sequence: [3, 3, 3, 3, 4, 4, 4, 4]
+  Score variance: 0.250
+  Betti profile: (1, 0, 0, 2, 0, 0, 0, 0)
+  Cycle counts: c3=20, c5=78, c7=96
+  Omega: alpha = [1, 194, 58, 0]
+  H(T) = I(Omega, 2) = 621
+
+  Vertex deletion analysis:
+    v=0 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=1 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=2 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=3 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=4 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=5 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=6 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=7 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+
+  Good vertices: [0, 1, 2, 3, 4, 5, 6, 7] (8/8)
+  Bad vertices:  [] (0/8)
+  Bits encoding: 68776434
+
+============================================================
+  BETA_3=2 (trial 2064)
+============================================================
+  Score sequence: [2, 3, 3, 3, 4, 4, 4, 5]
+  Score variance: 0.750
+  Betti profile: (1, 0, 0, 2, 0, 0, 0, 0)
+  Cycle counts: c3=18, c5=68, c7=90
+  Omega: alpha = [1, 176, 52, 0]
+  H(T) = I(Omega, 2) = 561
+
+  Vertex deletion analysis:
+    v=0 (out=3): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=1 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=2 (out=5): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=3 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=4 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=5 (out=4): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=6 (out=2): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=7 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+
+  Good vertices: [1, 2, 3, 4, 6, 7] (6/8)
+  Bad vertices:  [0, 5] (2/8)
+  Bits encoding: 110016568
+
+--- Phase 3: Comparison with beta_3=1 tournaments ---
+
+============================================================
+  BETA_3=1 (trial 3)
+============================================================
+  Score sequence: [2, 2, 3, 4, 4, 4, 4, 5]
+  Score variance: 1.000
+  Betti profile: (1, 0, 0, 1, 0, 0, 0, 0)
+  Cycle counts: c3=17, c5=52, c7=75
+  Omega: alpha = [1, 144, 52, 0]
+  H(T) = I(Omega, 2) = 497
+
+  Vertex deletion analysis:
+    v=0 (out=5): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=1 (out=2): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=2 (out=4): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=3 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=4 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=5 (out=2): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=6 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=7 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+
+  Good vertices: [0, 1, 3, 4, 5, 6, 7] (7/8)
+  Bad vertices:  [2] (1/8)
+  Bits encoding: 136025135
+
+============================================================
+  BETA_3=1 (trial 5)
+============================================================
+  Score sequence: [2, 3, 3, 3, 4, 4, 4, 5]
+  Score variance: 0.750
+  Betti profile: (1, 0, 0, 1, 0, 0, 0, 0)
+  Cycle counts: c3=18, c5=59, c7=79
+  Omega: alpha = [1, 156, 51, 0]
+  H(T) = I(Omega, 2) = 517
+
+  Vertex deletion analysis:
+    v=0 (out=5): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=1 (out=3): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=2 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=3 (out=3): b3=1, b4=0, betti=(1, 0, 0, 1, 0, 0, 0) [BAD]
+    v=4 (out=2): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=5 (out=3): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=6 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+    v=7 (out=4): b3=0, b4=0, betti=(1, 0, 0, 0, 0, 0, 0) [GOOD]
+
+  Good vertices: [0, 2, 4, 5, 6, 7] (6/8)
+  Bad vertices:  [1, 3] (2/8)
+  Bits encoding: 16020317
+
+======================================================================
+SUMMARY
+======================================================================
+
+beta_3=2 tournaments (4):
+  [0] scores=[2, 3, 3, 3, 4, 4, 4, 5], c3=18, c5=68, H=561, alpha=[1, 176, 52, 0], #good=6, #bad=2
+  [1] scores=[3, 3, 3, 3, 4, 4, 4, 4], c3=20, c5=78, H=621, alpha=[1, 194, 58, 0], #good=8, #bad=0
+  [2] scores=[3, 3, 3, 3, 4, 4, 4, 4], c3=20, c5=78, H=621, alpha=[1, 194, 58, 0], #good=8, #bad=0
+  [3] scores=[2, 3, 3, 3, 4, 4, 4, 5], c3=18, c5=68, H=561, alpha=[1, 176, 52, 0], #good=6, #bad=2
+
+beta_3=1 comparison (2):
+  [0] scores=[2, 2, 3, 4, 4, 4, 4, 5], c3=17, c5=52, H=497, alpha=[1, 144, 52, 0], #good=7, #bad=1
+  [1] scores=[2, 3, 3, 3, 4, 4, 4, 5], c3=18, c5=59, H=517, alpha=[1, 156, 51, 0], #good=6, #bad=2
+
+--- Structural patterns in beta_3=2 ---
+  Score distributions: {(2, 3, 3, 3, 4, 4, 4, 5): 2, (3, 3, 3, 3, 4, 4, 4, 4): 2}
+  c3 range: 18-20
+  c5 range: 68-78
+  Good vertices: 6-8
+  Bad vertices:  0-2
+
+DONE.
