@@ -1,0 +1,72 @@
+======================================================================
+HYP-398 TEST: NEW BOUNDARIES TARGET ONLY NEW CYCLES
+======================================================================
+
+--- Phase 1: n=8, finding beta_3=2 tournaments ---
+  Found beta_3=2 at trial 973, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+  Found beta_3=2 at trial 1179, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  Found beta_3=2 at trial 1202, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  Found 3 b3=2 and 2 b3=1 in 38.1s
+
+============================================================
+TESTING HYP-398 ON BETA_3=2 TOURNAMENTS (n=8)
+============================================================
+
+  Trial 973, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+    dim(Omega_3) = 104, dim(Omega_4) = 112
+    |A_3| = 250, |A_4| = 552
+    v=0(out=4): HOLDS [BAD(b3=1)] old_rk=131, combined_rk=131, new_kills=0
+    v=1(out=3): HOLDS [BAD(b3=1)] old_rk=131, combined_rk=131, new_kills=0
+    v=2(out=3): HOLDS [GOOD] old_rk=123, combined_rk=123, new_kills=0
+    v=3(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=4(out=5): HOLDS [GOOD] old_rk=115, combined_rk=115, new_kills=0
+    v=5(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=6(out=2): HOLDS [GOOD] old_rk=115, combined_rk=115, new_kills=0
+    v=7(out=4): HOLDS [GOOD] old_rk=123, combined_rk=123, new_kills=0
+
+  Trial 1179, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+    dim(Omega_3) = 137, dim(Omega_4) = 192
+    |A_3| = 270, |A_4| = 612
+    v=0(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=1(out=4): HOLDS [GOOD] old_rk=147, combined_rk=147, new_kills=0
+    v=2(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=3(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=4(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=5(out=3): HOLDS [GOOD] old_rk=147, combined_rk=147, new_kills=0
+    v=6(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=7(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+
+  Trial 1202, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+    dim(Omega_3) = 137, dim(Omega_4) = 192
+    |A_3| = 270, |A_4| = 612
+    v=0(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=1(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=2(out=3): HOLDS [GOOD] old_rk=147, combined_rk=147, new_kills=0
+    v=3(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=4(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=5(out=4): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=6(out=3): **FAILS** [GOOD] old_rk=130, combined_rk=131, new_kills=1
+    v=7(out=4): HOLDS [GOOD] old_rk=147, combined_rk=147, new_kills=0
+
+============================================================
+TESTING HYP-398 ON BETA_3=1 TOURNAMENTS (n=8, comparison)
+============================================================
+
+  Trial 3, scores=[2, 2, 3, 4, 4, 4, 4, 5]
+    dim(Omega_3) = 120, dim(Omega_4) = 160
+    v=0(out=5): **FAILS** [GOOD] new_kills=1
+    v=1(out=2): HOLDS [GOOD] new_kills=0
+    v=2(out=4): HOLDS [BAD(b3=1)] new_kills=0
+    v=3(out=4): HOLDS [GOOD] new_kills=0
+    v=4(out=3): **FAILS** [GOOD] new_kills=2
+    v=5(out=2): **FAILS** [GOOD] new_kills=2
+    v=6(out=4): HOLDS [GOOD] new_kills=0
+    v=7(out=4): **FAILS** [GOOD] new_kills=2
+
+======================================================================
+SUMMARY
+  HYP-398 holds at n=7 (34/34 BAD vertices, opus-S55)
+  Question: does HYP-398 FAIL at n=8 for beta_3=2 tournaments?
+  If yes: new 5-paths through v kill old 3-cycles => beta_3 can exceed 1
+======================================================================
+DONE.

@@ -100,17 +100,18 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. FAILS at n=8: when rank(i_*)=0, H_4^rel=1 and H_3^rel=1. | opus-S54, updated kind-pasteur-S48 |
 | HYP-396 | H_4(T,T\v) = 0 for ALL vertices of beta_3=1 tournaments | Holds n=7 (560/560). FAILS at n=8: when rank(i_*)=0 and b4=0, H_4^rel=1 from LES. Paley T_7: H_4^rel=1 (exception, b3(T)=0) | opus-S54, REFUTED kind-pasteur-S48 |
 | HYP-397 | CORRECTED: beta_3<=1 ONLY at n<=7. b3=2 possible at n=8 | beta_3=2 at n=8: profile (1,0,0,2,0,0,0,0), 4/5000 (0.08%). Good vertices always exist even for b3=2 tours. The "good vertex + Claim II" argument is CIRCULAR (H_3^rel=b3 for good vertex). beta_3<=1 proved exhaustively only at n<=7 | kind-pasteur-S48 |
-| HYP-398 | NEW BOUNDARIES TARGET ONLY NEW CYCLES: im(d_4^new) ∩ span(old ker_d3) ⊂ im(d_4^old) | n=7: 34/34 BAD vertices. New d_4 content (5-paths through v) never kills old cycles beyond what im(d_4^old) already kills. This is the MECHANISM for i_*-injectivity at n=7: old H_3 generator is protected. | opus-S55 |
+| HYP-398 | NEW BOUNDARIES TARGET ONLY NEW CYCLES: im(d_4^new) ∩ span(old ker_d3) ⊂ im(d_4^old) | **REFUTED at n=8** (kind-pasteur-S49): Fails for BOTH b3=2 (6/8 vertices, new_kills=1) AND b3=1 (4/8 vertices, new_kills=1-2). HOLDS at n=7 (34/34). The failure means new 5-paths through v DO kill old 3-cycles, explaining why beta_3 can exceed 1 | opus-S55, REFUTED kind-pasteur-S49 |
 | HYP-399 | Embedded H_3(T\\v) generator = H_3(T) generator (mod boundaries) | n=7: 44/44 BAD vertices. The true H_3 generator of T\\v, when embedded in T, IS the H_3 generator of T (up to scalar, mod im(d_4)). H_3 is "inherited" from the deletion. | opus-S55 |
 | HYP-400 | rank(i_*^p) = 0 for all p >= 1 except p=3 for BAD vertices (n=7,8) | n=7: 560 vertices, n=8: 120 vertices. ALL rank(i_*) at all degrees match exactly. But this holds only when beta_3(T)=1 (not beta_3=2). | opus-S55 |
 | HYP-401 | Claim II FAILS at n=8: dim H_3(T,T\v) = 2 for all-good beta_3=2 tournaments | beta_3=2 with ALL 8 deletions b3=0 (score 3,3,3,3,4,4,4,4) => H_3(T,T\v)=b3(T)=2 for every v. Claim II (H_3^rel<=1) was backbone of n<=7 proof. Fails EXACTLY when beta_3=2. | kind-pasteur-S49 |
-| HYP-402 | beta_3 <= 2 at n=9 (search in progress, 800/3000 so far max=1) | n=8: max=2 (4/5000=0.08%). n=9: 800/3000 sampled, max=1 so far. Either beta_3<=1 at n=9 or beta_3=2 very rare | kind-pasteur-S49 |
+| HYP-402 | beta_3 <= 2 for ALL n (floor(n/4) bound) | n=8: max=2 (0.07%), n=9: max=2 (0.07%), consistent with floor(n/4). beta_3=2 has SC score at n=9 | kind-pasteur-S49 |
 | HYP-403 | Two structural types of beta_3=2 at n=8: all-good (SC score) and mixed (non-SC score) | All-good: score (3,3,3,3,4,4,4,4), 8/8 good vertices. Mixed: score (2,3,3,3,4,4,4,5), 6/8 good + 2/8 bad. Both types confirmed in 5000-sample run | kind-pasteur-S49 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|
 | HYP-101 | Per-path identity holds for all n | 3-cycle-only formula misses longer cycles | n=6 | MISTAKE |
+| HYP-398 | New boundaries target only new cycles | Fails for BOTH b3=2 (6/8 vertices) AND b3=1 (4/8 vertices) at n=8. new_kills=1 per failing vertex. Holds at n=7. | n=8 | opus-S55 (stated), kind-pasteur-S49 (refuted) |
 | HYP-380 | i_* injective when b3(T)=b3(T\v)=1 | rank(i_*)=0 at n=8 even with b4=0 (trials 613,627,877). Holds n<=7 only | n=8 | kind-pasteur-S47 (stated), kind-pasteur-S48 (refuted) |
 | HYP-394 | Consecutive seesaw: beta_k * beta_{k+1} = 0 for ALL k>=1 | beta_3=1 AND beta_4=1 at n=8, confirmed mod-p exact (3/2000). Holds n<=7 only | n=8 | opus-S54 (stated), kind-pasteur-S48 (refuted) |
 | HYP-317 | Even Betti numbers vanish: beta_{2k}=0 for k>=1 | beta_4>0 at n=8 (~0.5%), values 1 and 5 | n=8 | kind-pasteur-S45 |
