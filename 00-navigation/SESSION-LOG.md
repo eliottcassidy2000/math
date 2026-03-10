@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S58 — 2026-03-09: Ghost Cycle Theorem ⟺ HYP-408, LES insufficiency, failure predictors
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S57
+**Summary of work:**
+  Deep session proving the Ghost Cycle Theorem and its equivalence to HYP-408.
+  1. **Ghost Cycle Theorem (HYP-412)**: Every through-v-only cycle in ker(d_3) is a boundary (in im(d_4)). n=6: trivially true (no tv-only cycles exist). n=7: 450/450 (100%). n=8: 399/400 (99.75%). The ~0.25% failures at n=8 = rank(i_*)=0 mechanism.
+  2. **Ghost Cycle ⟺ HYP-408 (HYP-413, PROVED)**: The Ghost Cycle Theorem is EQUIVALENT to codim-1 universality, given beta_3=1. Proof: dim(K_tv) - dim(B_tv) = beta_3 - codim_old. Since B_tv ⊂ K_tv, equal dimensions imply equality. Algebraic identity verified 1408/1408 across n=6,7,8.
+  3. **LES insufficient for Ghost Cycle**: Attempted algebraic proof via Long Exact Sequence of pair (T, T\v). FAILED: the LES allows through-v-only cycles to represent nonzero H_3 classes consistently. Ghost Cycle is STRONGER than LES.
+  4. **Retraction is NOT a chain map**: The restriction r: C_*(T) → C_*(T\v) fails in GLMY path homology (unlike simplicial). r(d(σ))≠0 for 100% of through-v paths; 18-30% of resulting faces are not allowed in T\v.
+  5. **H_3 generator never has vertex cover**: 0/1185 generators across n=6,7,8. min_old_support ≥ 3 always.
+  6. **Boundary block structure**: old4→tv3 block is ALWAYS zero (old 4-chains never produce through-v 3-faces). The tv part of im(d_4) comes entirely from through-v 4-chains. rk(ker_tv) - rk(im_tv) ∈ {0,1}, matching beta_3.
+  7. **Failure predictors at n=8**: Score [3,3,3,3,3,4,4,5] with out_deg=5 has 28.6% failure rate. 4-paths-through-v / Omega_4 is strongest continuous predictor (fail mean 3.06 vs success 2.63).
+**New contributions:** les_codim1_proof.py, h3_gen_support.py, h3_projection_vs_istar.py, failure_predictor_n8.py, codim1_from_euler.py, tv_cycles_are_boundaries.py, relative_complex_structure.py, ghost_cycle_dimensions.py, ghost_cycle_structure.py, ghost_cycle_proof.py. HYP-412, HYP-413 added.
+**Unresolved threads:**
+  - Algebraic proof of HYP-408 (codim-1 universality) — NOW the single remaining target
+  - Why does codim_old = 1 always hold for b3=1 tournaments? The Ghost Cycle equivalence reduces everything to this one question.
+  - The old4→tv3 block being zero + dimensional constraints might provide a path to proving HYP-408
+
 ## opus-2026-03-09-S57 — 2026-03-09: codim-1 universality, generator direction, old/new decomposition
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S56

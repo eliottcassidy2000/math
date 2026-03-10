@@ -114,6 +114,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-409 | im(d_4^{T\v}) ⊂ im(d_4^T)\_old\_proj universally | 200/200 at n=7, 122/122 at n=8. Boundaries of T\v embed into old-coordinate boundaries of T. | opus-S57 |
 | HYP-410 | rank(i_*)=0 iff old-projection of embedded H_3(T\v) gen ∈ im(d_4^T)\_old\_proj | Confirmed: all failures have emb\_old\_in\_im\_old=True; all successes have False. Combined with HYP-408 (codim=1), i_*-injectivity reduces to a single linear condition. | opus-S57 |
 | HYP-411 | Failure vertices have H_3(T) generator concentrated on through-v paths | Failures: 12-18 through-v path support vs success mean 9.3. Jaccard similarity of gen supports: fail 0.000-0.038 vs success mean 0.048. When H_3(T) gen relies heavily on v-paths, the embedded gen (which avoids v-paths) misaligns. | opus-S57 |
+| HYP-412 | Ghost Cycle Theorem: every through-v-only cycle in ker(d_3) is in im(d_4), for b3=1 tournaments at n≤7 | n=6: trivially (no tv-only cycles). n=7: 450/450 (100%). n=8: 399/400 (99.75%). The ~0.25% failure at n=8 = rank(i_*)=0 mechanism. | opus-S58 |
+| HYP-413 | Ghost Cycle ⟺ HYP-408: Ghost Cycle Theorem is EQUIVALENT to codim-1 universality, given beta_3=1 | PROVED: dim(K_tv)-dim(B_tv) = beta_3 - codim_old. Since B_tv ⊂ K_tv, equal dims ⟹ equal subspaces. Verified algebraic identity 1408/1408 across n=6,7,8. | opus-S58 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
