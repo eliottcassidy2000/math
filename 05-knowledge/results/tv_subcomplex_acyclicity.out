@@ -1,0 +1,69 @@
+
+======================================================================
+TV SUBCOMPLEX ANALYSIS AT n=7
+======================================================================
+  Progress: 50 pairs, 9.8s
+  Progress: 100 pairs, 23.3s
+  Progress: 150 pairs, 31.3s
+  Progress: 200 pairs, 43.1s
+
+  Total: 201 (T,v) pairs, 43.1s
+
+  MODIFIED TV COMPLEX (d_tv o d_tv = 0?):
+    Chain complex condition: 0/201 OK
+    Total dd failures: 402
+
+  TV-ONLY OMEGA DIMENSIONS:
+    V_tv[2]: mean=14.2, min=13, max=16
+    V_tv[3]: mean=20.6, min=14, max=26
+    V_tv[4]: mean=19.9, min=7, max=30
+    V_tv[5]: mean=12.0, min=2, max=21
+
+  RANK(i_*) ANALYSIS:
+    rank(i_*) distribution: {0: 179, 1: 22}
+    b3(T\v) distribution: {0: 179, 1: 22}
+    K_tv dimension distribution: {0: 106, 1: 48, 2: 15, 3: 25, 4: 7}
+
+  CRITICAL CASES:
+    rank(i_*)=0 AND K_tv>0: 87
+    rank(i_*)=1 AND K_tv>0: 8
+    rank(i_*)=0 AND K_tv=0: 92
+    rank(i_*)=1 AND K_tv=0: 14
+
+  CROSS-TABULATION (rank(i_*) x b3(T\v)):
+    i_*=0, b3_Tv=0: 179
+    i_*=1, b3_Tv=1: 22
+
+======================================================================
+TV SUBCOMPLEX ANALYSIS AT n=8
+======================================================================
+  Progress: 50 pairs, 44.3s
+
+  Total: 81 (T,v) pairs, 63.5s
+
+  MODIFIED TV COMPLEX (d_tv o d_tv = 0?):
+    Chain complex condition: 0/81 OK
+    Total dd failures: 162
+
+  TV-ONLY OMEGA DIMENSIONS:
+    V_tv[2]: mean=20.7, min=19, max=23
+    V_tv[3]: mean=40.9, min=30, max=52
+    V_tv[4]: mean=56.8, min=29, max=83
+    V_tv[5]: mean=51.5, min=18, max=87
+
+  RANK(i_*) ANALYSIS:
+    rank(i_*) distribution: {0: 59, 1: 22}
+    b3(T\v) distribution: {0: 59, 1: 22}
+    K_tv dimension distribution: {0: 17, 1: 14, 2: 8, 3: 10, 4: 9, 5: 12, 6: 2, 7: 4, 8: 2, 9: 2, 10: 1}
+
+  CRITICAL CASES:
+    rank(i_*)=0 AND K_tv>0: 47
+    rank(i_*)=1 AND K_tv>0: 17
+    rank(i_*)=0 AND K_tv=0: 12
+    rank(i_*)=1 AND K_tv=0: 5
+
+  CROSS-TABULATION (rank(i_*) x b3(T\v)):
+    i_*=0, b3_Tv=0: 59
+    i_*=1, b3_Tv=1: 22
+
+DONE.

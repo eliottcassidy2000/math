@@ -1,0 +1,68 @@
+
+======================================================================
+H_3 GENERATOR STRUCTURE ANALYSIS AT n=7 (Case 2: b3(T\v)=0)
+======================================================================
+  Progress: 50 Case 2 pairs, 2.6s
+  Progress: 100 Case 2 pairs, 6.8s
+  Progress: 150 Case 2 pairs, 11.5s
+  Progress: 200 Case 2 pairs, 14.9s
+  Progress: 250 Case 2 pairs, 18.1s
+  Progress: 300 Case 2 pairs, 20.5s
+
+  Total: 303 Case 2, 33 Case 1, 20.5s
+
+  OLD COMPONENT IS ZERO: 0/303 (NEVER)
+
+  OLD FRACTION: mean=0.410, min=0.167, max=0.810
+
+  SUPPORT SIZES:
+    old: mean=8.7
+    tv: mean=12.6
+
+  OLD COMPONENT IS CYCLE IN T\v: 0/303
+    Old component boundary nonzero entries: mean=8.5
+
+  TV COMPONENT BOUNDARY:
+    spillover to old 2-faces: mean=8.5
+    tv 2-face boundary: mean=0.0
+
+  V POSITION IN SUPPORT PATHS: {0: 926, 1: 954, 2: 973, 3: 955}
+  OUT-DEGREE: dist={5: 21, 2: 91, 3: 83, 4: 89, 1: 19}
+  K_tv dimension: dist={0: 154, 1: 74, 2: 29, 3: 30, 4: 16}
+
+  CASES WITH K_tv > 0: 149/303
+    Old fraction: mean=0.416
+    Old support: mean=9.9
+
+======================================================================
+H_3 GENERATOR STRUCTURE ANALYSIS AT n=8 (Case 2: b3(T\v)=0)
+======================================================================
+  Progress: 50 Case 2 pairs, 19.9s
+  Progress: 100 Case 2 pairs, 46.3s
+
+  Total: 100 Case 2, 36 Case 1, 46.3s
+
+  OLD COMPONENT IS ZERO: 0/100 (NEVER)
+
+  OLD FRACTION: mean=0.467, min=0.238, max=0.833
+
+  SUPPORT SIZES:
+    old: mean=12.0
+    tv: mean=13.6
+
+  OLD COMPONENT IS CYCLE IN T\v: 0/100
+    Old component boundary nonzero entries: mean=9.3
+
+  TV COMPONENT BOUNDARY:
+    spillover to old 2-faces: mean=9.3
+    tv 2-face boundary: mean=0.0
+
+  V POSITION IN SUPPORT PATHS: {0: 314, 1: 344, 2: 355, 3: 347}
+  OUT-DEGREE: dist={4: 26, 1: 5, 5: 23, 3: 27, 2: 17, 6: 2}
+  K_tv dimension: dist={3: 19, 0: 22, 6: 7, 1: 11, 4: 11, 10: 3, 8: 3, 5: 9, 2: 7, 9: 2, 7: 6}
+
+  CASES WITH K_tv > 0: 78/100
+    Old fraction: mean=0.448
+    Old support: mean=12.0
+
+DONE.
