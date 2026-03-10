@@ -1,0 +1,104 @@
+BETA_{n-2} INVESTIGATION
+============================================================
+
+============================================================
+BETA_{n-2} = BETA_3 AT n=5
+============================================================
+  200 tournaments, 0.3s
+
+  beta_3 distribution: {0: 200}
+  beta_4 distribution: {0: 200}
+  beta_2 distribution: {0: 200}
+
+  beta_3 nonzero rate: 0.0% (0/200)
+  beta_3 mean: 0.00, max: 0
+
+  dim(Omega_4): min=0, max=0, mean=0.0
+  dim(Omega_3): min=0, max=0, mean=0.0
+
+  Correlation: beta_3 vs dim(Omega_4) (HP count):
+    HP=0: mean_beta_3=0.00, nonzero=0/200
+
+  Sample Betti sequences:
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0}
+    {0: 1, 1: 1, 2: 0, 3: 0, 4: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0}
+    {0: 1, 1: 1, 2: 0, 3: 0, 4: 0}
+
+============================================================
+BETA_{n-2} = BETA_4 AT n=6
+============================================================
+  200 tournaments, 0.8s
+
+  beta_4 distribution: {0: 200}
+  beta_5 distribution: {0: 200}
+  beta_3 distribution: {0: 196, 1: 4}
+
+  beta_4 nonzero rate: 0.0% (0/200)
+  beta_4 mean: 0.00, max: 0
+
+  dim(Omega_5): min=0, max=0, mean=0.0
+  dim(Omega_4): min=0, max=0, mean=0.0
+
+  Correlation: beta_4 vs dim(Omega_5) (HP count):
+    HP=0: mean_beta_4=0.00, nonzero=0/200
+
+  Sample Betti sequences:
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+
+============================================================
+BETA_{n-2} = BETA_5 AT n=7
+============================================================
+  200 tournaments, 3.6s
+
+  beta_5 distribution: {0: 200}
+  beta_6 distribution: {0: 200}
+  beta_4 distribution: {0: 200}
+
+  beta_5 nonzero rate: 0.0% (0/200)
+  beta_5 mean: 0.00, max: 0
+
+  dim(Omega_6): min=0, max=0, mean=0.0
+  dim(Omega_5): min=0, max=0, mean=0.0
+
+  Correlation: beta_5 vs dim(Omega_6) (HP count):
+    HP=0: mean_beta_5=0.00, nonzero=0/200
+
+  Sample Betti sequences:
+    {0: 1, 1: 0, 2: 0, 3: 1, 4: 0, 5: 0, 6: 0}
+    {0: 1, 1: 0, 2: 0, 3: 1, 4: 0, 5: 0, 6: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+
+============================================================
+BETA_{n-2} = BETA_6 AT n=8
+============================================================
+  300 tournaments, 56.8s
+
+  beta_6 distribution: {0: 300}
+  beta_7 distribution: {0: 300}
+  beta_5 distribution: {0: 300}
+
+  beta_6 nonzero rate: 0.0% (0/300)
+  beta_6 mean: 0.00, max: 0
+
+  dim(Omega_7): min=0, max=0, mean=0.0
+  dim(Omega_6): min=0, max=0, mean=0.0
+
+  Correlation: beta_6 vs dim(Omega_7) (HP count):
+    HP=0: mean_beta_6=0.00, nonzero=0/300
+
+  Sample Betti sequences:
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}
+    {0: 1, 1: 0, 2: 0, 3: 1, 4: 0, 5: 0, 6: 0, 7: 0}
+    {0: 1, 1: 0, 2: 0, 3: 1, 4: 0, 5: 0, 6: 0, 7: 0}
+    {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}
+
+DONE.

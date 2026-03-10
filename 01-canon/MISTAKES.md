@@ -707,3 +707,31 @@ The `matmul_mod()` function in tournament_utils.py automatically chunks the inne
 1. NEVER chain numpy `@` without intermediate `% PRIME` when PRIME ≈ 2^31
 2. Use `matmul_mod()` from tournament_utils.py for all modular matrix arithmetic
 3. When two equivalent computations disagree, suspect numerical issues before mathematical failure
+
+## MISTAKE-020: Truncated Chain Complex Gives False Betti Numbers at Top Degree
+
+**Date discovered:** 2026-03-10
+**Found by:** kind-pasteur-S50
+
+### What was assumed
+Using `full_chain_complex_modp(A, n, max_p=6)` for n=8 tournaments, opus-S59 reported β_6 nonzero for 89.8% of tournaments (HYP-420), with values ranging 1-25.
+
+### Why it was wrong
+With `max_p=6`, the computation gives β_6 = ker(d_6) - ranks.get(7, 0). Since degree 7 is not computed, `ranks.get(7, 0)` returns 0. The reported "β_6" is actually just dim(ker d_6), NOT the true Betti number.
+
+With `max_p=7` (full complex): d_7 is injective on Omega_7, and rk(d_7) = ker(d_6) EXACTLY for all 50 tested tournaments. True β_6 = 0 always.
+
+### The correct framing
+The Betti number at the highest computed degree is always an UPPER BOUND (missing the image from the next degree). For n-vertex tournaments, always use `max_p=n-1` to get correct Betti numbers, especially at degrees n-2 and n-1.
+
+Correct results: β_{n-1} = β_{n-2} = 0 for ALL tournaments at n=3-8 (HYP-423, HYP-424). The top boundary map d_{n-1} is always injective.
+
+### Impact
+- HYP-420 is FALSE. β_{n-2} is NOT generically nonzero at n=8.
+- The "β_6 among β_3=1" distribution in opus's beta4_at_n7.out is entirely artifactual.
+- All lower-degree Betti numbers (β_0 through β_5) from that computation are correct.
+
+### Lesson
+1. ALWAYS use max_p=n-1 when computing Betti numbers to avoid truncation artifacts
+2. Betti at the max computed degree is an UPPER BOUND (Betti at max_deg-1 and below are exact)
+3. When β at max_deg seems surprisingly large/nonzero, check if im(d_{max_deg+1}) is missing

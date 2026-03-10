@@ -42,3 +42,4 @@ PALEY TOURNAMENT FOURIER BETTI NUMBERS
   deg 6: 3970 diff-seqs, 43670 paths
   deg 7: 8735 diff-seqs, 96085 paths
   deg 8: 14395 diff-seqs, 158345 paths
+  k=0: betti=[1, 0, 0, 0, 0, 5, 5, 0, 150] nonzero=[(5, 5), (6, 5), (8, 150)]

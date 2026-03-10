@@ -122,14 +122,17 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-417 | H_3 generator old component is NEVER zero for β₃(T)=1 tournaments | 0/403 at n=7 (Case 2: β₃(T\v)=0). Every H_3 class has nontrivial old-path support. D_{3,tv→tv}(z_tv)=0 always; old component NOT a cycle in T\v. | kind-pasteur-S50 |
 | HYP-418 | Paley T_7 Fourier structure: each non-trivial eigenspace k=1,...,6 contributes exactly 1 to β_4=6 | Verified by Fourier eigenspace decomposition. Trivial eigenspace (k=0) has β=[1,0,0,0,0,0,0]. All 6 non-trivial eigenspaces identical β=[0,0,0,0,1,0,0]. | kind-pasteur-S50 |
 | HYP-419 | T_3 Fourier: only trivial eigenspace (k=0) has nonzero Betti: β=[1,1,0] | Verified. k=1,2 contribute nothing. | kind-pasteur-S50 |
-| HYP-420 | β_{n-2} generically nonzero at n=8: 449/500 (89.8%) tournaments have β_6>0 | opus-S59 beta4_at_n7.py. Values range 0 to 25. Contrasts with β_5=0 always at n=8. | opus-S59 |
+| HYP-420 | ~~β_{n-2} generically nonzero at n=8~~ | **REFUTED** (kind-pasteur-S50): opus used max_deg=6, missing im(d_7). With max_deg=7: β_6=0 for ALL 50/50 (rk(d_7)=ker(d_6) exactly). β_{n-2}=0 for ALL n<=8. | kind-pasteur-S50 |
 | HYP-421 | H_4^rel = 0 universally at n=7 (200/200), FAILS at n=8 (2/300 have H_4^rel=1) | Relative exactness at degree 4. At n=8, slack = ker(d_4^rel) - rk(d_5^rel) can be 1. | opus-S59 |
 | HYP-422 | ψ(ker) escapes im(d_4^Tv) at n=8: 5/800 cases (0.625%) with rk(ψ) = rk(d4Tv)+1 | These are EXACTLY the codim-0 cases (codim(ψ(ker), ker d_3^Tv) = 0 instead of 1). Breaks HYP-408 at n=8. | opus-S59 |
+| HYP-423 | TOP INJECTIVITY: d_{n-1} injective on Omega_{n-1} for ALL tournaments | 1772/1772 (n=3-8). rk(d_{n-1})=dim(Omega_{n-1}) always. Consequence: β_{n-1}=β_{n-2}=0 universally. Also ker(d_{n-2})=dim(Omega_{n-1}). | kind-pasteur-S50 |
+| HYP-424 | TOP VANISHING: β_{n-1}=β_{n-2}=0 for ALL tournaments on n>=3 vertices | Follows from HYP-423. Verified n=3-8 (1772 samples, 0 failures). Sharp: β_{n-3} CAN be nonzero (β_3 at n=6, β_4 at n=7 Paley). | kind-pasteur-S50 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|
 | HYP-101 | Per-path identity holds for all n | 3-cycle-only formula misses longer cycles | n=6 | MISTAKE |
+| HYP-420 | β_{n-2} generically nonzero at n=8 | Opus used max_deg=6 (missing im(d_7)). With max_deg=7: β_6=0 for ALL 50/50. rk(d_7)=ker(d_6) exactly (top exactness). Artifact of truncated complex. | n=8 (all) | kind-pasteur-S50 |
 | HYP-398 | New boundaries target only new cycles | REFUTED at n=8: fails for GOOD vertices (high rate) and ~0.65% of BAD vertices (exactly rank(i_*)=0 cases). Holds universally at n≤7. See HYP-404 for exact equivalence. | n=8 | opus-S55 (stated), kind-pasteur-S49 (refuted), opus-S56 (reconciled) |
 | HYP-380 | i_* injective when b3(T)=b3(T\v)=1 | rank(i_*)=0 at n=8 even with b4=0 (trials 613,627,877). Holds n<=7 only | n=8 | kind-pasteur-S47 (stated), kind-pasteur-S48 (refuted) |
 | HYP-394 | Consecutive seesaw: beta_k * beta_{k+1} = 0 for ALL k>=1 | beta_3=1 AND beta_4=1 at n=8, confirmed mod-p exact (3/2000). Holds n<=7 only | n=8 | opus-S54 (stated), kind-pasteur-S48 (refuted) |

@@ -1,0 +1,49 @@
+BETA_6 AT n=8: UPPER BOUND vs EXACT
+============================================================
+  trial=0: b6_ub=1, b6_exact=0, omega6=7, ker6=1, rk6=6, omega7=1, rk7=1
+  trial=1: b6_ub=6, b6_exact=0, omega6=33, ker6=6, rk6=27, omega7=6, rk7=6
+  trial=2: b6_ub=1, b6_exact=0, omega6=11, ker6=1, rk6=10, omega7=1, rk7=1
+  trial=3: b6_ub=2, b6_exact=0, omega6=14, ker6=2, rk6=12, omega7=2, rk7=2
+  trial=4: b6_ub=3, b6_exact=0, omega6=19, ker6=3, rk6=16, omega7=3, rk7=3
+  trial=5: b6_ub=6, b6_exact=0, omega6=33, ker6=6, rk6=27, omega7=6, rk7=6
+  trial=6: b6_ub=14, b6_exact=0, omega6=60, ker6=14, rk6=46, omega7=14, rk7=14
+  trial=7: b6_ub=4, b6_exact=0, omega6=24, ker6=4, rk6=20, omega7=4, rk7=4
+  trial=8: b6_ub=7, b6_exact=0, omega6=37, ker6=7, rk6=30, omega7=7, rk7=7
+  trial=9: b6_ub=0, b6_exact=0, omega6=6, ker6=0, rk6=6, omega7=0, rk7=0
+  trial=10: b6_ub=6, b6_exact=0, omega6=36, ker6=6, rk6=30, omega7=6, rk7=6
+  trial=11: b6_ub=8, b6_exact=0, omega6=39, ker6=8, rk6=31, omega7=8, rk7=8
+  trial=12: b6_ub=4, b6_exact=0, omega6=27, ker6=4, rk6=23, omega7=4, rk7=4
+  trial=13: b6_ub=1, b6_exact=0, omega6=8, ker6=1, rk6=7, omega7=1, rk7=1
+  trial=14: b6_ub=3, b6_exact=0, omega6=18, ker6=3, rk6=15, omega7=3, rk7=3
+  trial=15: b6_ub=2, b6_exact=0, omega6=12, ker6=2, rk6=10, omega7=2, rk7=2
+  trial=16: b6_ub=3, b6_exact=0, omega6=17, ker6=3, rk6=14, omega7=3, rk7=3
+  trial=17: b6_ub=3, b6_exact=0, omega6=20, ker6=3, rk6=17, omega7=3, rk7=3
+  trial=18: b6_ub=1, b6_exact=0, omega6=10, ker6=1, rk6=9, omega7=1, rk7=1
+  trial=19: b6_ub=2, b6_exact=0, omega6=16, ker6=2, rk6=14, omega7=2, rk7=2
+  trial=20: b6_ub=10, b6_exact=0, omega6=47, ker6=10, rk6=37, omega7=10, rk7=10
+  trial=21: b6_ub=1, b6_exact=0, omega6=7, ker6=1, rk6=6, omega7=1, rk7=1
+  trial=24: b6_ub=1, b6_exact=0, omega6=10, ker6=1, rk6=9, omega7=1, rk7=1
+  trial=25: b6_ub=1, b6_exact=0, omega6=7, ker6=1, rk6=6, omega7=1, rk7=1
+  trial=26: b6_ub=2, b6_exact=0, omega6=14, ker6=2, rk6=12, omega7=2, rk7=2
+  trial=27: b6_ub=4, b6_exact=0, omega6=31, ker6=4, rk6=27, omega7=4, rk7=4
+  trial=28: b6_ub=2, b6_exact=0, omega6=21, ker6=2, rk6=19, omega7=2, rk7=2
+  trial=29: b6_ub=1, b6_exact=0, omega6=9, ker6=1, rk6=8, omega7=1, rk7=1
+  trial=30: b6_ub=1, b6_exact=0, omega6=8, ker6=1, rk6=7, omega7=1, rk7=1
+  trial=31: b6_ub=5, b6_exact=0, omega6=27, ker6=5, rk6=22, omega7=5, rk7=5
+  trial=32: b6_ub=1, b6_exact=0, omega6=8, ker6=1, rk6=7, omega7=1, rk7=1
+  trial=33: b6_ub=9, b6_exact=0, omega6=52, ker6=9, rk6=43, omega7=9, rk7=9
+  trial=35: b6_ub=8, b6_exact=0, omega6=41, ker6=8, rk6=33, omega7=8, rk7=8
+  trial=37: b6_ub=3, b6_exact=0, omega6=18, ker6=3, rk6=15, omega7=3, rk7=3
+  trial=38: b6_ub=2, b6_exact=0, omega6=14, ker6=2, rk6=12, omega7=2, rk7=2
+  trial=39: b6_ub=13, b6_exact=0, omega6=60, ker6=13, rk6=47, omega7=13, rk7=13
+  trial=40: b6_ub=1, b6_exact=0, omega6=7, ker6=1, rk6=6, omega7=1, rk7=1
+  trial=41: b6_ub=1, b6_exact=0, omega6=7, ker6=1, rk6=6, omega7=1, rk7=1
+  trial=42: b6_ub=5, b6_exact=0, omega6=32, ker6=5, rk6=27, omega7=5, rk7=5
+  trial=43: b6_ub=20, b6_exact=0, omega6=86, ker6=20, rk6=66, omega7=20, rk7=20
+  trial=47: b6_ub=1, b6_exact=0, omega6=9, ker6=1, rk6=8, omega7=1, rk7=1
+  trial=48: b6_ub=12, b6_exact=0, omega6=61, ker6=12, rk6=49, omega7=12, rk7=12
+  trial=49: b6_ub=15, b6_exact=0, omega6=77, ker6=15, rk6=62, omega7=15, rk7=15
+
+  All 50 trials complete.
+
+DONE.
