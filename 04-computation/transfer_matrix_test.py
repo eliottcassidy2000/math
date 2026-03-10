@@ -1,3 +1,9 @@
+# ⚠️ WARNING: This script assumed the transfer matrix M = [[1,0],[0,-1]],
+# which is WRONG. Exhaustive check at n=4 shows widespread failures.
+# M[a,b] values vary widely depending on the tournament (observed: -3 to +3 at n=5).
+# The symmetry M[a,b] = M[b,a] IS true, but individual entries are NOT 0 or ±1.
+# See MISTAKE-011a.
+
 #!/usr/bin/env python3
 """
 Verify the transfer matrix identity:

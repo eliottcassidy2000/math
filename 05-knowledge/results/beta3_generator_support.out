@@ -1,0 +1,91 @@
+======================================================================
+H_3 GENERATOR VERTEX SUPPORT ANALYSIS
+======================================================================
+
+--- Finding beta_3=2 tournaments at n=8 ---
+  Found b3=2 at trial 973, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+  Found b3=2 at trial 1179, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  Found b3=2 at trial 1202, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  Found b3=2 at trial 2064, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+
+Found 4 beta_3=2 tournaments
+
+============================================================
+H_3 GENERATOR ANALYSIS
+============================================================
+
+  Trial 973, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+    Found 2 H_3 generators
+    Generator 1 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Generator 2 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Intersection: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Union: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Disjoint? False
+    Generator 1: 28 nonzero paths
+    Generator 2: 25 nonzero paths
+    Missing vertices: [] (0 uncovered)
+
+  Trial 1179, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+    Found 2 H_3 generators
+    Generator 1 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Generator 2 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Intersection: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Union: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Disjoint? False
+    Generator 1: 39 nonzero paths
+    Generator 2: 28 nonzero paths
+    Missing vertices: [] (0 uncovered)
+
+  Trial 1202, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+    Found 2 H_3 generators
+    Generator 1 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Generator 2 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Intersection: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Union: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Disjoint? False
+    Generator 1: 33 nonzero paths
+    Generator 2: 45 nonzero paths
+    Missing vertices: [] (0 uncovered)
+
+  Trial 2064, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+    Found 2 H_3 generators
+    Generator 1 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Generator 2 support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Intersection: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Union: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Disjoint? False
+    Generator 1: 28 nonzero paths
+    Generator 2: 28 nonzero paths
+    Missing vertices: [] (0 uncovered)
+
+============================================================
+BETA_3=1 COMPARISON
+============================================================
+
+  Trial 3, scores=[2, 2, 3, 4, 4, 4, 4, 5], b3=1
+    Generator support: [0, 1, 2, 3, 4, 5, 6, 7] (8 vertices)
+    Nonzero paths: 34
+    Missing vertices: [] (0)
+
+  Trial 5, scores=[2, 3, 3, 3, 4, 4, 4, 5], b3=1
+    Generator support: [0, 2, 3, 4, 5, 6, 7] (7 vertices)
+    Nonzero paths: 33
+    Missing vertices: [1] (1)
+
+============================================================
+FLOOR(n/4) HYPOTHESIS
+============================================================
+If generators can be chosen with disjoint 4-vertex support,
+then beta_3 <= floor(n/4) (pigeonhole).
+
+  Trial 973 (scores=[2, 3, 3, 3, 4, 4, 4, 5]): |supp1|=8, |supp2|=8, overlap=8
+    OVERLAPPING — BUT generators may be refocusable
+  Trial 1179 (scores=[3, 3, 3, 3, 4, 4, 4, 4]): |supp1|=8, |supp2|=8, overlap=8
+    OVERLAPPING — BUT generators may be refocusable
+  Trial 1202 (scores=[3, 3, 3, 3, 4, 4, 4, 4]): |supp1|=8, |supp2|=8, overlap=8
+    OVERLAPPING — BUT generators may be refocusable
+  Trial 2064 (scores=[2, 3, 3, 3, 4, 4, 4, 5]): |supp1|=8, |supp2|=8, overlap=8
+    OVERLAPPING — BUT generators may be refocusable
+
+======================================================================
+DONE.

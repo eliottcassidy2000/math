@@ -3,7 +3,7 @@
 mod2_cumulant_connection.py - What does THM-094 (F mod 2) imply for cumulants?
 
 THM-094 (kind-pasteur): F(T,x) = (1+x)^{n-1} mod 2 for ALL tournaments.
-THM-095 (opus-S46e): coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k).
+THM-117 (opus-S46e): coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k).
 
 QUESTION: Does the mod-2 universality of F imply anything about cumulants mod 2?
 
@@ -131,7 +131,7 @@ THM-094 (F mod 2 universal) implies that ALL integer moment sums
   Σ_k k^r · F_k(T) ≡ Σ_k k^r · C(n-1,k) mod 2
 are tournament-independent mod 2.
 
-Combined with THM-095 (2/C(n,2k) coefficient), this means:
+Combined with THM-117 (2/C(n,2k) coefficient), this means:
 - The cumulant hierarchy's t₃ dependence enters at order 2 in 2-adic valuation
   (the coefficient 2/C(n,2k) contributes exactly one factor of 2)
 - The mod-2 universality "zeroes out" all tournament-dependent terms

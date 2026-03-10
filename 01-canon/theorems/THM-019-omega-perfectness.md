@@ -88,16 +88,16 @@ Verified exhaustively at n=5 and in n=6 sample.
 
 ## Significance
 
-If Omega(T) is always perfect, then by the **Chudnovsky-Seymour theorem** (claw-free
-perfect graphs have independence polynomials with all real roots), the all-real-roots
-property would follow. This would give:
-- Positivity of I(Omega(T), x) for x > 0 (alternative proof of Redei)
-- Log-concavity of independence polynomial coefficients
-- Strong constraints on the distribution of vertex-disjoint odd cycle collections
+**DISPROVED at n>=8.** Perfectness fails for 53.8% of random n=8 tournaments (induced C5 in Omega).
+The significance section below is historical context only.
+
+Despite the failure of perfectness, the key consequences remain valid through other means:
+- **Real roots of I(Omega(T), x):** PROVED for n<=8 via claw-freeness (THM-020), but DISPROVED at n>=9 (THM-025 counterexample). Perfectness was not needed for the n<=8 proof.
+- **Positivity of I(Omega(T), x) for x > 0:** Follows from OCF (H(T) >= 1 by Redei's theorem), independent of perfectness.
+- **Log-concavity:** Verified computationally but does not require perfectness.
 
 **Connection to Grinberg-Stanley:** The Grinberg-Stanley proof of OCF (arXiv:2412.10572)
-does not use perfectness of Omega(T). If perfectness is proved, it would give structural
-insight into WHY the OCF formula works, beyond the algebraic proof.
+does not use perfectness of Omega(T). OCF is fully established without it.
 
 **Claw-freeness (RESOLVED):** Omega(T) is claw-free for n<=8 (vertex counting: 3 pairwise
 disjoint odd cycles + 1 touching all three requires >= 9 vertices). Fails at n>=9
@@ -105,15 +105,12 @@ disjoint odd cycles + 1 touching all three requires >= 9 vertices). Fails at n>=
 
 ---
 
-## Proof Approaches
+## Former Proof Approaches (MOOT — perfectness DISPROVED at n>=8)
 
-1. **Via Strong Perfect Graph Theorem (SPGT):** Show Omega(T) has no odd hole >= 5
-   and no odd antihole >= 5 as induced subgraphs. This requires understanding which
-   cycle-intersection patterns can occur in tournaments.
+These approaches are no longer relevant since perfectness fails at n=8 (53.8% of tournaments have induced C5 in Omega).
 
-2. **Via claw-freeness:** Show Omega(T) has no induced K_{1,3}. If three odd cycles
-   C1, C2, C3 are pairwise vertex-disjoint but all intersect a fourth cycle C0,
-   derive a contradiction from tournament structure.
+1. **Via SPGT:** Omega(T) DOES have odd holes (C5) at n>=8. Approach invalid.
 
-3. **Direct construction:** Show that the clique cover number equals the independence
-   number for every induced subgraph of Omega(T).
+2. **Via claw-freeness:** Omega(T) is claw-free for n<=8 but has claws at n>=9. This gives perfectness at n<=7 (claw-free + no odd antihole) but cannot extend further.
+
+3. **Direct construction:** Not viable since the statement is false at n>=8.

@@ -6,7 +6,7 @@ and its relationship to the trivariate GF G_T(t,x).
 Key facts:
 - I(Omega, x) = I_typed(x, x, x, ...) [specialization]
 - U_T = sum_{S indep} 2^|S| * prod p_{len(c)} * p_1^{n-sum_len} [GS-OCF bridge]
-- G_T(0, x) = I(Omega, x) [THM-063]
+- G_T(0, x) = I(Omega, x) [THM-114]
 
 Question: Can we extend G_T to separate cycle types?
   G_T(t, y_3, y_5, ...) = A_n(t) + sum_{I: indep sets} prod_{c in I} y_{len(c)} * g_I(t)

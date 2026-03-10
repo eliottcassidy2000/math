@@ -126,7 +126,7 @@ n = 6
 # We know from exhaustive: H=45 maximizers have beta_3>0
 # n-3 = 3, so beta_{n-3} = beta_3 > 0 — CONFIRMED
 print(f"n=6: n-3 = {n-3}")
-print(f"H=45 maximizers: 240 tournaments, ALL have beta_3 > 0 (from THM-098)")
+print(f"H=45 maximizers: 240 tournaments, ALL have beta_3 > 0 (from THM-120)")
 print(f"beta_{n-3} = beta_3 > 0 — CONFIRMED")
 
 # ===== n=7 detailed: Betti spectrum by H class =====

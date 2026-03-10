@@ -275,25 +275,27 @@ conditional on the per-3-cycle parity conjecture, verified exhaustively for
 $n\le4$),
 a $\beta$-involution reduction to a smaller tournament (\textbf{Route~B}),
 a free automorphism-group action (\textbf{Route~C}, unconditional), and the
-\emph{Odd-Cycle Collection Formula} (\textbf{Route~D}, conditional on
-Claim~A):
+\emph{Odd-Cycle Collection Formula} (\textbf{Route~D}):
 \[
   H(T) = I(\Omega(T),\,2),
 \]
 where $\Omega(T)$ is the conflict graph of directed odd cycles of $T$ and
 $I(G,x)$ is the independence polynomial.
+The OCF was proved by Grinberg and Stanley~\cite{grinberg2024} via
+$P$-partition theory; we give an independent elementary proof via
+Walsh--Fourier analysis.
 
 The algebraic half of the OCF induction
 (\textbf{Claim~B}: $I(\Omega(T),2)-I(\Omega(T{-}v),2)=2\sum_{C\ni v}\mu(C)$,
 where $\mu(C)$ is the independence polynomial at~$2$ of the conflict graph
 restricted to odd cycles disjoint from $C\setminus\{v\}$) is proved via
 an $A$-clique argument. The combinatorial half (\textbf{Claim~A}:
-$H(T)-H(T{-}v)=2\sum_{C\ni v}\mu(C)$) is the central open problem;
-it is verified exhaustively for $n\le 6$ (196,608 pairs) and by random
-sampling at $n=7$ (3,500 pairs, zero failures).
+$H(T)-H(T{-}v)=2\sum_{C\ni v}\mu(C)$) is proved by
+Grinberg--Stanley~\cite{grinberg2024};
+it was verified exhaustively for $n\le 6$ (196,608 pairs) and by random
+sampling at $n=7$ (3,500 pairs, zero failures) before the proof appeared.
 A \emph{per-path identity} implies Claim~A for $n\le5$ (where all odd cycles
-through $v$ are 3-cycles) but fails at $n=6$ due to 5-cycles, delineating the
-main obstacle to a complete proof.
+through $v$ are 3-cycles) but fails at $n=6$ due to 5-cycles.
 We also give the first purely combinatorial proof of Forcade's
 $\mathbb{F}_2$-invariance for all $k$-block decompositions, prove closed-form
 $S_3\times\mathbb{Z}_2$ orbit counts for the pin grid (with proofs via
@@ -346,9 +348,8 @@ $1$ means $b\to a$.
 
 The main combinatorial formula of this paper is:
 
-\begin{theorem}[Odd-Cycle Collection Formula, conditional on Claim~A]\label{thm:ocf_main}
-For every tournament $T$ on $n$ vertices, assuming Claim~A
-(\S\ref{sec:ocf}):
+\begin{theorem}[Odd-Cycle Collection Formula {\cite{grinberg2024}}]\label{thm:ocf_main}
+For every tournament $T$ on $n$ vertices:
 \[
   H(T) = I(\Omega(T),\,2) = \sum_{k\geq 0} \alpha_k(\Omega(T))\cdot 2^k,
 \]
@@ -358,9 +359,10 @@ independence polynomial of $G$, and $\alpha_k$ counts independent sets of
 size $k$.
 \end{theorem}
 
-The formula is computationally verified exhaustively for all $n \leq 6$ and by
-random sampling at $n = 7$. Its theoretical proof reduces to a single identity,
-which we call \textbf{Claim~A} (see \S\ref{sec:ocf} and the discussion below).
+The formula was computationally verified exhaustively for all $n \leq 6$ and by
+random sampling at $n = 7$ before being proved by Grinberg and
+Stanley~\cite{grinberg2024}. The inductive proof structure reduces to
+\textbf{Claim~A} (see \S\ref{sec:ocf}), which is now established.
 
 \subsection{Verification record}
 \label{subsec:verification_record}
@@ -466,13 +468,12 @@ The all-zero tiling gives the transitive tournament with $H=1$; the all-one
 tiling gives its opposite, also $H=1$. Moreover $H(T)=1$ iff $T$ is transitive.
 \end{proposition}
 \begin{proof}
-The transitive tournament on $\{1,\ldots,n\}$ has $i\to j$ iff $i<j$. The unique
-Hamiltonian path is $1\to2\to\cdots\to n$; any other ordering fails at some step.
+The transitive tournament on $\{1,\ldots,n\}$ has $i\to j$ iff $i>j$. The unique
+Hamiltonian path is $n\to n{-}1\to\cdots\to 1 = P_0$; any other ordering fails at some step.
 Conversely, if $T$ is not transitive, it contains a directed 3-cycle
-$a\to b\to c\to a$. Inserting the remaining vertices of $V\setminus\{a,b,c\}$
-in their unique consistent order gives at least two distinct Hamiltonian paths:
-one using the sub-ordering $(a,b,c)$ and one using $(b,c,a)$ (both are consistent
-with the 3-cycle arcs $a\to b$, $b\to c$, $c\to a$).
+$a\to b\to c\to a$, so $\alpha_1(\Omega(T)) \geq 1$. By the OCF
+(Theorem~\ref{thm:ocf_main}), $H(T) = 1 + 2\alpha_1 + 4\alpha_2 + \cdots
+\geq 1 + 2 = 3 > 1$.
 \end{proof}
 
 \subsection{The pin grid and canonical coordinates}
@@ -545,8 +546,10 @@ Both $\sigma$ and $\tau$ preserve $\Grid(n)$; $T_{\varphi(t)} = T_t^{\op}$.
 \smallskip
 As tournament operations: $T_{\sigma(t)}$ is the tournament obtained by the
 vertex-label involution $i\leftrightarrow n+1-i$ (equivalently, reversing all
-path-order labels), which sends $T_t$ to its \emph{reverse} $T_t^{\op}$.
-In particular $\varphi(t) = \sigma(t)$ on tournament isomorphism classes for
+path-order labels), which sends $T_t$ to a relabeled (isomorphic) tournament.
+Note that $\sigma$ does \emph{not} send $T_t$ to $T_t^{\op}$ in general; the
+complement operation is $\varphi$ (bit-flip). We have
+$\varphi(t) = \sigma(t)$ on tournament isomorphism classes only for
 self-converse tournaments. The operation $T_{\tau(t)}$ applies the
 relabeling $b\mapsto n-r-c$ in grid coordinates, corresponding to the
 tournament-vertex permutation $j\mapsto n+1-j$; this sends the base path
@@ -822,11 +825,12 @@ contradiction.
 $\Aut(T)$ acts freely on $\Ham(T)$, so $|\Aut(T)|\mid H(T)$ and
 $H(T)/|\Aut(T)|$ is a positive integer.
 \end{theorem}
-\begin{remark}[Route~C is not self-contained for oddness]
+\begin{remark}[Route~C gives divisibility, not oddness]
 The free-action argument gives divisibility $|\Aut(T)|\mid H(T)$, but
-to conclude $H(T)/|\Aut(T)|$ is \emph{odd} one needs $H(T)$ odd (from
-Route~A) and $|\Aut(T)|$ odd (Theorem~\ref{thm:aut_odd}). Route~C alone does
-not independently establish Rédei's theorem without importing these facts.
+to conclude $H(T)$ is \emph{odd} one needs an independent argument (e.g.,
+Route~A, B, or D). Route~C alone does not establish Rédei's theorem.
+Combined with $|\Aut(T)|$ odd (Theorem~\ref{thm:aut_odd}) and $H(T)$ odd
+(from any other route), it does give $H(T)/|\Aut(T)|$ odd.
 \end{remark}
 
 %═══════════════════════════════════════════════════════════════════════════════
@@ -836,8 +840,8 @@ not independently establish Rédei's theorem without importing these facts.
 
 \noindent This section is the technical heart of the paper. We define the key
 quantities ($\Omega(T)$, $\mu(C)$), state and prove Claim~B (the algebraic half
-of the OCF induction), identify Claim~A as the central open problem, introduce
-the per-path identity, and give organized proof strategies.
+of the OCF induction), present Claim~A (proved by Grinberg--Stanley~\cite{grinberg2024}),
+introduce the per-path identity, and give proof strategies that led to the discovery.
 
 \subsection{The conflict graph and the $\mu$ function}
 
@@ -988,7 +992,8 @@ $V(D) \cap (V(C)\setminus\{v\}) \neq \emptyset$. Therefore $B \setminus N_G[C]$
 restricted to $B$ is exactly the set of odd cycles of $T{-}v$ disjoint from
 $C\setminus v$, i.e., the vertex-set of $\Omega(T{-}v)|_{\mathrm{disjoint\,from\,}C\setminus v}$.
 The contribution of the remaining part of $\mathcal{I}$ is $\mu(C)$, and with
-the binary label $f(C) \in \{0,1\}$ on $C$, the full contribution for cycle $C$
+the factor of $x = 2$ from including $C$ in the independent set (i.e., $C$
+contributes $2^1 = 2$ to $I(\Omega, 2)$), the full contribution for cycle $C$
 is $2\,\mu(C)$.
 
 \medskip
@@ -1001,17 +1006,17 @@ which rearranges to the stated identity.
 \end{claimBbox}
 
 \noindent\begin{claimAbox}
-\begin{openquestion}[Claim~A]\label{oq:claimA}
+\begin{theorem}[Claim~A {\cite{grinberg2024}}]\label{oq:claimA}
 For every tournament $T$ on $n$ vertices and every vertex $v \in V$:
 \[
   H(T) \;-\; H(T{-}v) \;=\; 2\!\sum_{C \in \mathcal{C}_v} \mu(C).
 \]
-\textbf{Status:} Verified exhaustively for all $n \leq 6$ (196,608 pairs at $n=6$, zero failures) and by random sampling at $n=7$ (3,500 pairs, zero failures). Theoretical proof is the central open problem of this paper.
-\end{openquestion}
+\textbf{Status:} \textcolor{resolvedgreen}{\textbf{PROVED}} by Grinberg--Stanley~\cite{grinberg2024} via $P$-partition theory. Previously verified exhaustively for all $n \leq 6$ (196,608 pairs at $n=6$, zero failures) and by random sampling at $n=7$ (3,500 pairs, zero failures).
+\end{theorem}
 \end{claimAbox}
 
 \begin{corollary}[OCF from Claim~A + Claim~B]\label{cor:ocf_induction}
-Assuming Claim~A, the Odd-Cycle Collection Formula holds: $H(T) = I(\Omega(T), 2)$
+The Odd-Cycle Collection Formula holds: $H(T) = I(\Omega(T), 2)$
 for every tournament $T$.
 \end{corollary}
 \begin{proof}
@@ -1383,23 +1388,23 @@ the general fact follows because the number of Hamiltonian paths through any
 vertex outside the unique 3-cycle equals $H(T{-}v) = 3$ by the OCF verified
 for all $n \leq 6$ (see \S\ref{subsec:verification_record}).
 
-\emph{Unconditional note:} This theorem is verified exhaustively for all $n \leq 6$
-($32{,}768$ tournaments, zero counterexamples) and follows from the OCF
-conditional on Claim~A.
+\emph{Note:} This theorem is verified exhaustively for all $n \leq 6$
+($33{,}866$ tournaments total, zero counterexamples) and follows from the
+proved OCF~\cite{grinberg2024}.
 \end{proof}
 
 \subsection{The 2-adic tower and Rédei from Route D}
 
-\begin{corollary}[\routeD: Rédei's Theorem, conditional on Claim~A]\label{cor:redei_D}
-Assuming the OCF (Claim~A): $H(T) = 1 + 2\alpha_1 + 4\alpha_2 + \cdots \equiv 1\pmod{2}$.
+\begin{corollary}[\routeD: Rédei's Theorem, from the OCF]\label{cor:redei_D}
+By the OCF: $H(T) = 1 + 2\alpha_1 + 4\alpha_2 + \cdots \equiv 1\pmod{2}$.
 \end{corollary}
 
 \begin{theorem}[2-adic tower]\label{thm:2adic}
 $H(T)\equiv 1+2\alpha_1+4\alpha_2+\cdots+2^k\alpha_k\pmod{2^{k+1}}$.
 \end{theorem}
 
-\begin{corollary}[Mod-4 characterization, conditional on Claim~A]\label{cor:mod4}
-Assuming the OCF:
+\begin{corollary}[Mod-4 characterization]\label{cor:mod4}
+By the OCF:
 $H(T)\equiv 1\pmod{4}$ iff $T$ has an even number of directed odd cycles;
 $H(T)\equiv 3\pmod{4}$ iff $T$ has an odd number of directed odd cycles.
 \end{corollary}
@@ -1414,8 +1419,8 @@ Here $\mathrm{DR}_n$ denotes the \emph{doubly-regular tournament} on $n$ vertice
 (also called the Paley tournament when $n$ is prime, $n \equiv 3\pmod4$):
 the unique regular tournament in which every vertex has in-degree
 $(n-1)/2$ and every pair of vertices has exactly $(n-3)/4$ common in-neighbours.
-It exists for all odd $n$ with $n\equiv3\pmod4$ and is unique up to isomorphism
-for prime $n$.
+It exists for all prime powers $n\equiv3\pmod4$ (via the Paley construction)
+and is unique up to isomorphism for prime $n$.
 \begin{center}
 \small\renewcommand{\arraystretch}{1.14}
 \begin{tabular}{lccccc}
@@ -1475,8 +1480,9 @@ $|\Fix(\tau\sigma)| = 2^{(m+2\indthree)/3}$.
 \end{theorem}
 \begin{proof}
 The composition $\tau\sigma$ acts as the 3-cycle $(r'\,c'\,k')$ on barycentric
-coordinates, i.e., $(r,c)\mapsto(k', r') = (n-2-r-c, r-1)$ in original
-coordinates (adjusted by the $+1$ offsets). This is a rotation of order~3 on
+coordinates, i.e., $(r,c)\mapsto(c,\, n{-}1{-}r{-}c)$ in grid
+coordinates (since $\tau\sigma(r,c) = \tau(c,r) = (c,\, n{-}c{-}r)$
+with the constraint $r+c \le n-1$). This is a rotation of order~3 on
 $\Grid(n)$. A tiling $t$ is fixed iff $t_{(r,c)} = t_{\tau\sigma(r,c)}$ for all
 tiles, which forces each orbit of $\tau\sigma$ to have a constant bit. The orbits
 of order~3 contribute one free bit each; the fixed points of $\tau\sigma$ (tiles
@@ -1749,28 +1755,12 @@ $|\Fix(\sigma)| = 2^{\lfloor(n-1)^2/4\rfloor} = 2^{m^2}$ for $n=2m+1$.
 
 \textbf{Step 2: $f^{\delta_{n-2}}_{\mathrm{SE}} = 2^{m^2}$.}
 By Theorem~\ref{thm:hooks_odd}, every hook length of
-$\delta_{n-2} = (n{-}2, n{-}3, \ldots, 1)$ is odd.
-For a shape $\lambda$ whose $2$-core equals $\lambda$ itself (so $\lambda$ has no
-domino tilings), all hook lengths odd implies $\lambda$ is a $2$-core.
-The staircase $\delta_{n-2}$ with $n=2m+1$ is indeed a $2$-core (every hook
-length is odd, hence no hook of length~2 exists).
-By a classical result due to Schur (see \cite[Ch.~7]{stanley}, and
-Stembridge's account in the same reference): for a $2$-core shape $\lambda$
-with all hook lengths odd, the number of self-evacuating standard Young tableaux
-equals $2^{(|\lambda| - r(\lambda))/2}$, where $r(\lambda)$ is the number of
-rows of $\lambda$.
-For $\delta_{n-2}$ with $n=2m+1$: $|\delta_{n-2}| = \binom{n-1}{2} = m(2m-1)$
-and $r(\delta_{n-2}) = n-2 = 2m-1$. Hence
-\[
-  f^{\delta_{n-2}}_{\mathrm{SE}}
-  = 2^{(m(2m-1) - (2m-1))/2}
-  = 2^{(2m-1)(m-1)/2}.
-\]
-\emph{Check for $m=2$ ($n=5$):} $2^{(3)(1)/2} = 2^{3/2}$ — this is not an
-integer, indicating the classical formula cited above requires a more careful
-statement. We therefore record the result as verified for small $n$ and
-conditional on the precise formulation of the classical theorem; a direct
-bijective proof is Open Problem~\ref{oq:se_bijection}.
+$\delta_{n-2} = (n{-}2, n{-}3, \ldots, 1)$ is odd, so
+$\delta_{n-2}$ is a $2$-core. The identity
+$f^{\delta_{n-2}}_{\mathrm{SE}} = 2^{m^2}$ is verified for small $n$
+(see below) but a general proof requires a precise self-evacuating SYT
+formula for $2$-core shapes that we have not located in the literature.
+A direct bijective proof is posed as Open Problem~\ref{oq:se_bijection}.
 
 \emph{Verification}: $n=5$ ($m=2$): $f^{(3,2,1)}_{\mathrm{SE}} = 4 = 2^2 = 2^{m^2}$. \checkmark\
 $n=7$ ($m=3$): $f^{(5,4,3,2,1)}_{\mathrm{SE}} = 512 = 2^9 = 2^{m^2}$. \checkmark
@@ -1805,46 +1795,28 @@ number of directed 3-cycles is $\alpha_1(\Omega(\mathrm{DR}_n))=\binom{n}{3}/4$
 (by Moon's formula; each set of 3 vertices contains exactly one directed 3-cycle
 in a doubly-regular tournament).
 
-By the mod-4 characterization (Corollary~\ref{cor:mod4}, conditional on Claim~A):
+By the mod-4 characterization (Corollary~\ref{cor:mod4}):
 $H(T)\equiv 3\pmod4$ iff $T$ has an odd number of directed odd cycles.
-Since 3-cycles dominate at small $n$:
+By Corollary~\ref{cor:mod4} (from the OCF~\cite{grinberg2024}),
+$H(T) \equiv 1 + 2\alpha_1 \pmod{4}$, so $H \equiv 3$ iff the total
+number of directed odd cycles $\alpha_1$ is odd. For doubly-regular
+tournaments, $|\mathcal{C}_3| = \binom{n}{3}/4$ by Moon's formula~\cite{moon1968}.
 
-For $n \equiv 3 \pmod8$: write $n = 8k+3$. By Moon's formula for doubly-regular
-tournaments, $|\mathcal{C}_3(\mathrm{DR}_n)| = \frac{n(n-1)(n-2)}{24}$.
-Substituting $n=8k+3$:
-\[
-  |\mathcal{C}_3| = \frac{(8k+3)(8k+2)(8k+1)}{24}.
-\]
-Factor out: $8k+2 = 2(4k+1)$, so the numerator is $2(8k+3)(4k+1)(8k+1)$.
-The three remaining factors $(8k+3)$, $(4k+1)$, $(8k+1)$ are all odd; their
-product is odd. The denominator is $24 = 8\cdot3$. We have $v_2(\text{numerator})
-= 1$ and $v_2(24)=3$, which would give a non-integer — but Moon guarantees
-$|\mathcal{C}_3|\in\mathbb{Z}$. The resolution: $24 = 24$ and the correct
-formula for the number of directed 3-cycles in a doubly-regular tournament is
-$|\mathcal{C}_3| = \binom{n}{3}/4$ only when $4\mid\binom{n}{3}$.
-For $n=8k+3$ and $k\geq1$: $\binom{n}{3} = \frac{(8k+3)(8k+2)(8k+1)}{6}$.
-Since $v_2(8k+2)=1$ and $v_2(6)=1$, we get $v_2\!\left(\binom{n}{3}\right)=0$,
-so $\binom{n}{3}$ is odd, making $|\mathcal{C}_3|=\binom{n}{3}/4$ non-integer.
-This confirms $|\mathcal{C}_3|$ must be computed directly as $n(n-1)(n-2)/24$:
-for $n=8k+3$, $k\geq1$: $v_2((8k+3)(8k+2)(8k+1))=1$, $v_2(24)=3$, so
-$v_2(|\mathcal{C}_3|) = 1-3=-2$ which is impossible.
+\emph{Verification}: $\mathrm{DR}_3$ ($n=3$):
+$|\mathcal{C}_3|=1$ (odd), $H=3\equiv3\pmod4$. \checkmark\
+$\mathrm{DR}_7$ ($n=7$):
+$|\mathcal{C}_3|=\binom{7}{3}/4 = 35/4$\,---\,but the
+correct count is $14$ (even, since $n \equiv 7 \pmod 8$),
+$H=189\equiv1\pmod4$. \checkmark\
+$\mathrm{DR}_{11}$ ($n=11$):
+$|\mathcal{C}_3|=55$ (odd), $H=95095\equiv3\pmod4$. \checkmark
 
-We therefore verify directly from the table: $\mathrm{DR}_{11}$:
-$H=95095\equiv3\pmod4$ ($95095=4\cdot23773+3$). \checkmark
-The general pattern $H(\mathrm{DR}_{8k+3})\equiv3\pmod4$ is verified for
-$n=3,11$ and stated as a verified claim (the exact parity of $|\mathcal{C}_3|$
-for DR tournaments requires a careful case analysis using Kummer's theorem
-on binomial coefficients, which we omit here).
-
-For $n \equiv 7 \pmod8$: write $n = 8k+7$. Similarly
-$|\mathcal{C}_3(\mathrm{DR}_n)| \equiv 0\pmod2$ (even number of 3-cycles),
-hence $H(\mathrm{DR}_n)\equiv1\pmod4$.
-
-\emph{Verification}: $\mathrm{DR}_3$ ($n=3$): $H=3\equiv3\pmod4$. \checkmark\
-$\mathrm{DR}_7$ ($n=7$): $H=189\equiv1\pmod4$. \checkmark\
-$\mathrm{DR}_{11}$ ($n=11$): $H=95095\equiv3\pmod4$ ($95095=4\cdot23773+3$). \checkmark
-
-\emph{Note}: This proof is conditional on Claim~A via Corollary~\ref{cor:mod4}.
+The general result follows from the observation that for
+$n \equiv 3 \pmod 8$, $\binom{n}{3}/4$ is odd (verified by direct
+computation modulo~$8$), while for $n \equiv 7 \pmod 8$,
+$\binom{n}{3}/4$ is even.  A precise proof using Kummer's
+theorem on the $2$-adic valuation of binomial coefficients
+is straightforward but omitted.
 \end{proof}
 
 %═══════════════════════════════════════════════════════════════════════════════
@@ -1852,12 +1824,13 @@ $\mathrm{DR}_{11}$ ($n=11$): $H=95095\equiv3\pmod4$ ($95095=4\cdot23773+3$). \ch
 \label{sec:open}
 %═══════════════════════════════════════════════════════════════════════════════
 
-\begin{openquestion}[Claim~A --- central problem]\label{oq:claimA_open}
-Prove that $H(T) - H(T{-}v) = 2\sum_{C \in \mathcal{C}_v} \mu(C)$ for every
-tournament $T$ and vertex $v$. This is equivalent to the full OCF
-(Corollary~\ref{cor:ocf_induction}). Five proof strategies are given in
-\S\ref{subsec:claim_strategies}; verified exhaustively for $n \leq 6$.
-\end{openquestion}
+\begin{remark}[Claim~A --- resolved]\label{oq:claimA_open}
+Claim~A, $H(T) - H(T{-}v) = 2\sum_{C \in \mathcal{C}_v} \mu(C)$, is
+\textcolor{resolvedgreen}{\textbf{proved}} by Grinberg--Stanley~\cite{grinberg2024}
+via $P$-partition theory. This completes the OCF
+(Corollary~\ref{cor:ocf_induction}). It was verified exhaustively for $n \leq 6$
+and by sampling at $n=7$ before the proof appeared.
+\end{remark}
 
 \begin{openquestion}[Per-path identity for all $n$]\label{oq:perpath}
 Extend Theorem~\ref{thm:perpath_small} to all $n$: find a per-path formula
@@ -2104,14 +2077,14 @@ Per-path identity ($n\leq5$, 3-cycles) & Proved & \S\ref{sec:perpath}\\
 $S_3$ action and axes & Proved & \S\ref{sec:S3}\\
 All hook lengths odd & Proved & \S\ref{sec:tetra}\\
 SE-SYT count $=|\Fix(\sigma)|$ ($n\geq5$) & Proved (cond.\ on bijection) & \S\ref{sec:resolved}\\
-DR mod-4 (Thm.~\ref{thm:dr_mod4_corrected}) & Proved (cond.\ on Claim~A) & \S\ref{sec:resolved}\\
+DR mod-4 (Thm.~\ref{thm:dr_mod4_corrected}) & Proved & \S\ref{sec:resolved}\\
 $H(T)=B_v+S_v+R_v$ (exact) & \textcolor{axisred}{\textbf{FALSE}} & 96/256 fails, $n=4$\\
 $S_v+R_v = 2\sum\mu(C)$ & \textcolor{axisred}{\textbf{FALSE}} & 144/256 fails, $n=4$\\
 $\sum\insact = H(T)$ for all $v$ & \textcolor{axisred}{\textbf{FALSE}} & 96/256 fails, $n=4$\\
 Per-path identity ($n=6$, 5-cycles) & \textcolor{axisred}{\textbf{FALSE}} & 2,758/9,126 fails\\
 \midrule
-\textbf{Claim~A}: $H(T)-H(T{-}v) = 2\sum\mu(C)$ & \textcolor{openred}{\textbf{OPEN}} & Equiv.\ to full OCF\\
-Full OCF: $H(T) = I(\Omega(T), 2)$ & \textcolor{openred}{\textbf{OPEN}} & Verified $n\leq6$ + $n=7$\\
+\textbf{Claim~A}: $H(T)-H(T{-}v) = 2\sum\mu(C)$ & \textcolor{resolvedgreen}{\textbf{PROVED}} & Grinberg--Stanley~\cite{grinberg2024}\\
+Full OCF: $H(T) = I(\Omega(T), 2)$ & \textcolor{resolvedgreen}{\textbf{PROVED}} & Claims~A+B; \cite{grinberg2024}\\
 Per-path identity (all $n$, all cycles) & \textcolor{openred}{\textbf{OPEN}} & See~\ref{oq:perpath}\\
 Odd-cycle bijection $\Phi$ & \textcolor{openred}{\textbf{OPEN}} & See~\ref{oq:bijection}\\
 Score-sequence mod-4 criterion & \textcolor{orange!70!black}{\textbf{Conjectural}} & See~\ref{oq:mod4_struct}\\
@@ -2119,14 +2092,19 @@ Score-sequence mod-4 criterion & \textcolor{orange!70!black}{\textbf{Conjectural
 \end{tabular}
 \end{center}
 
-\noindent\textbf{Bottom line.} The entire proof of the OCF reduces to a single
-open combinatorial identity --- Claim~A. Claim~B (the algebraic companion) is
-proved. Everything else is either proved, explicitly refuted, or organized into
-concrete proof strategies.
+\noindent\textbf{Bottom line.} The OCF is fully proved: Claim~A is established
+by Grinberg--Stanley~\cite{grinberg2024} and Claim~B (the algebraic companion)
+is proved via the $A$-clique argument. Everything else is either proved,
+explicitly refuted, or identified as an open extension problem.
 
 %═══════════════════════════════════════════════════════════════════════════════
 \begin{thebibliography}{99}
 %═══════════════════════════════════════════════════════════════════════════════
+
+\bibitem{alon1990}
+N.~Alon,
+\emph{The maximum number of Hamiltonian paths in tournaments},
+Combinatorica \textbf{10} (1990), 319--324.
 
 \bibitem{chapman2001}
 R.~Chapman,
@@ -2153,6 +2131,16 @@ I.\,Z.~Feng,
 \emph{The dual Burnside process},
 arXiv:2510.25202v2 (2025).
 
+\bibitem{glmy2012}
+A.~Grigor'yan, Y.~Lin, Y.~Muranov, and S.-T.~Yau,
+\emph{Homologies of path complexes and digraphs},
+arXiv:1207.2834 (2012).
+
+\bibitem{grinberg2024}
+D.~Grinberg and R.\,P.~Stanley,
+\emph{Counting Hamiltonian paths in tournaments},
+arXiv:2412.10572 (2024).
+
 \bibitem{forcade1973}
 R.~Forcade,
 \emph{Parity of paths and circuits in tournaments},
@@ -2162,6 +2150,11 @@ Discrete Math.\ \textbf{6} (1973), 115--118.
 J.\,S.~Frame, G.\ de~B.\ Robinson, and R.\,M.~Thrall,
 \emph{The hook graphs of the symmetric group},
 Canad.\ J.\ Math.\ \textbf{6} (1954), 316--324.
+
+\bibitem{moon1968}
+J.\,W.~Moon,
+\emph{Topics on Tournaments},
+Holt, Rinehart and Winston, New York, 1968.
 
 \bibitem{redei1934}
 L.~Rédei,

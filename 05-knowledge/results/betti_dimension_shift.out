@@ -37,7 +37,7 @@ n-3 = 2
 n=6 RECAP: Betti numbers for H-maximizers
 ======================================================================
 n=6: n-3 = 3
-H=45 maximizers: 240 tournaments, ALL have beta_3 > 0 (from THM-098)
+H=45 maximizers: 240 tournaments, ALL have beta_3 > 0 (from THM-120, was THM-098)
 beta_3 = beta_3 > 0 — CONFIRMED
 
 ======================================================================

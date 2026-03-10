@@ -1,6 +1,6 @@
 # THM-102: β₂ = 0 for Tournaments — Proof Status
 
-**Status:** COMPUTATIONALLY VERIFIED, ALGEBRAIC PROOF INCOMPLETE
+**Status:** PROVED — see THM-108/109 for the complete proof.
 **Filed by:** opus-2026-03-08-S43
 
 ## Statement
@@ -247,7 +247,7 @@ Three of four cases are PROVED algebraically:
 
 **NEW DISCOVERIES (kind-pasteur-S43 continued)**:
 
-#### TT Boundary Spanning Theorem (THM-103)
+#### TT Boundary Spanning Theorem (THM-122, was THM-103)
 **PROVED**: TT (transitive triple) boundaries span ALL of im(d_2).
 NT (non-transitive) elements of Omega_2 contribute NOTHING to im(d_2).
 This means: b1 = dim(Z_1) - rk(TT boundary matrix in Z_1).

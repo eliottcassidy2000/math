@@ -479,7 +479,7 @@ def c3_regular(n):
 def c4_fast(T):
     """Count directed 4-cycles using trace formula. O(n^3).
 
-    By THM-096: tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
+    By THM-118: tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
     Therefore: c_4 = tr(A^4) / 4.
     """
     n = len(T)
@@ -499,7 +499,7 @@ def c4_fast(T):
 def c5_fast(T):
     """Count directed 5-cycles using trace formula. O(n^3).
 
-    By THM-096: tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
+    By THM-118: tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
     This is because closed walks of length <= 5 in tournaments are
     always simple cycles (no vertex repetition possible, since
     tournaments have no bidirectional edges and any closed walk

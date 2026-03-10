@@ -35,7 +35,7 @@ The restriction to T−v must be done BEFORE checking cycles. Any cycle-finding 
 - **Paper's Claim B verification:** Needs confirmation — Claim B involves I(Ω,2) directly
 - **The verification table in the paper (0 failures for Claim A at n≤6):** Stated to be valid
 
-⚠️ **UNRESOLVED:** It is not fully clear which code path the paper used for Claim A verification at n=6. If sum_mu() was used, the 0-failure count may not be reliable. This is the subject of DISC-001 in 02-court/active/.
+**RESOLVED** (DISC-001, closed by kind-pasteur-2026-03-05-S3): Independent verification using tournament_lib.py confirms the paper's results are valid. See 02-court/resolved/DISC-001-mu-bug-vs-verification.md.
 
 ### Lesson
 When computing μ(C) for any cycle C in T:
@@ -628,13 +628,13 @@ When computing relative homology H_*(X, A) via quotient complexes:
 
 **Date discovered:** 2026-03-09 (kind-pasteur-S48)
 **Found by:** kind-pasteur-S48 via extended sampling at n=8 (5000 random tournaments)
-**Affects:** THM-110 proof architecture, HYP-371b, HYP-375, HYP-342, HYP-380, HYP-393 scope
+**Affects:** THM-123 (was THM-110) proof architecture, HYP-371b, HYP-375, HYP-342, HYP-380, HYP-393 scope
 
 ### What was assumed
 Multiple hypotheses and proof strategies assumed beta_3 <= 1 for ALL tournaments:
 - HYP-371b: "beta_3=2 impossible"
 - HYP-375: "beta_3 <= 1 at n=9"
-- THM-110 proof architecture: Claims I, II, III designed to prove beta_3 <= 1
+- THM-123 proof architecture: Claims I, II, III designed to prove beta_3 <= 1
 - The opus exhaustive proof at n=7 was incorrectly assumed to generalize
 
 ### Why it was wrong
@@ -652,7 +652,7 @@ Previous sampling (200 at n=9, 100 at n=8) was insufficient to detect 0.08% rate
 - beta_3 may grow further at n >= 9
 
 ### Impact
-- THM-110 proof architecture is valid ONLY at n <= 7
+- THM-123 proof architecture is valid ONLY at n <= 7
 - Claims I (i_*-injectivity) also FAIL at n=8 (13 violations in 5000 trials, even with b4=0)
 - Claim III (consecutive seesaw) FAILS at n=8 (beta_3+beta_4 coexistence)
 - The beta_3 <= 1 bound is a SMALL-n PHENOMENON, not a universal property

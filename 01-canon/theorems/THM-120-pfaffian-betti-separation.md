@@ -1,4 +1,4 @@
-# THM-098: Pfaffian-Betti Separation at n=6
+# THM-120: Pfaffian-Betti Separation at n=6
 
 **Status:** PROVED (exhaustive computation, 32768 tournaments)
 **Proved by:** kind-pasteur-2026-03-08-S40 (exhaustive verification), opus-2026-03-07-S46e (initial discovery)

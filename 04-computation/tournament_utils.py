@@ -598,7 +598,7 @@ def compute_betti_fast(A, n, target_p, max_p=None):
 
 
 def compute_beta1_fast(A, n):
-    """Fast beta_1 computation using TT-boundary span (THM-103).
+    """Fast beta_1 computation using TT-boundary span (THM-122).
 
     beta_1 = dim(Z_1) - rank(d_2|_Omega_2)
            = C(n,2) - (n-1) - rank(bd_TT)

@@ -18,7 +18,7 @@ H(T) = I(Omega(T), 2) = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
 ### Pillar 2: The Cumulant-Cycle Hierarchy
 kappa_{2k}(T) = Bernoulli_constant + (2/C(n,2k)) * t_{2k+1} + nonlinear lower terms
 
-**Universal Coefficient Theorem (THM-095, PROVED):**
+**Universal Coefficient Theorem (THM-117, PROVED):**
 coeff(t_{2k+1} in kappa_{2k}) = 2/C(n, 2k)
 
 The even cumulants of the forward-edge distribution form a graded hierarchy:
@@ -60,7 +60,7 @@ All three pillars express the same fundamental fact: tournaments have ODD-ONLY s
 
 ## Key Results of This Session
 
-1. **THM-095 (PROVED):** Universal coefficient 2/C(n,2k) in the cumulant hierarchy
+1. **THM-117 (PROVED):** Universal coefficient 2/C(n,2k) in the cumulant hierarchy
 2. **OPEN-Q-024 (NEW):** Even Betti vanishing conjecture for tournaments
 3. **Mutual exclusivity:** beta_1 and beta_3 never both positive
 4. **Grinberg-Stanley connection:** Factor 2 traced through all three pillars

@@ -50,4 +50,4 @@ Full proof in LaTeX paper §claim_strategies (subsec:scaffold).
 
 ## Notes & History
 
-Claim B being proved while Claim A remains open is the central asymmetry of the paper. The OCF formula requires both: Claim B gives I(Ω(T),2) satisfies the right recurrence; Claim A gives H(T) satisfies the same recurrence; together they imply H(T) = I(Ω(T),2) by induction.
+Claim A is PROVED (Grinberg-Stanley, arXiv:2412.10572). OCF is therefore fully established. The OCF formula requires both: Claim B gives I(Omega(T),2) satisfies the right recurrence; Claim A gives H(T) satisfies the same recurrence; together they imply H(T) = I(Omega(T),2) by induction.

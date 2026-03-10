@@ -1,4 +1,4 @@
-# THM-052: Scalar Transfer Matrix for Circulant Tournaments at Odd n
+# THM-113: Scalar Transfer Matrix for Circulant Tournaments at Odd n
 
 **Status:** PROVED (algebraic proof + exhaustive/DP verification n=5,7,9,11,13)
 **Added:** kind-pasteur-2026-03-06-S25d

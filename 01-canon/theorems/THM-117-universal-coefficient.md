@@ -1,4 +1,4 @@
-# THM-095: Universal Coefficient Theorem for Cumulant-Cycle Hierarchy
+# THM-117: Universal Coefficient Theorem for Cumulant-Cycle Hierarchy
 
 **Status:** PROVED (algebraic + numerical verification)
 **Proved by:** opus-2026-03-07-S46e

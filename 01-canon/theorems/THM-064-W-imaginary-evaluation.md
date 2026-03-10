@@ -98,7 +98,7 @@ At n=3: A(x) = 3(1 + x^2) = 3(x - i)(x + i). Complete factorization.
 
 ---
 
-## Connection to Reduced Polynomial P(u, x) (THM-063)
+## Connection to Reduced Polynomial P(u, x) (THM-114)
 
 **THEOREM (kind-pasteur-S28):** W(i/2) = (-1)^m / 2^m * p_0(2), where m = (n-1)/2 and p_0(x) is the constant coefficient of the reduced polynomial P(u, x) = G_T(t, x) / t^m evaluated at u = t + 1/t.
 
@@ -111,7 +111,7 @@ At n=3: A(x) = 3(1 + x^2) = 3(x - i)(x + i). Complete factorization.
 - The constant coefficient p_0(x) controls the "imaginary evaluation"
 - P(2, x) = n! for all x (universal constraint)
 
-This connects THM-064 (W(i/2) vanishing) with the trivariate GF framework of THM-063.
+This connects THM-064 (W(i/2) vanishing) with the trivariate GF framework of THM-114.
 
 ---
 

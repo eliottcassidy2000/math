@@ -121,6 +121,6 @@ differ: trivial has ker(∂₅)=39 while non-trivial have ker(∂₅)=38.
 
 ## CORRECTS
 
-This theorem CORRECTS the claim in THM-098 that "ALL H-maximizers at n=6 are S-phase."
-In fact, 240/480 are S-phase and 240/480 are C-phase. THM-098's Pfaffian separation
+This theorem CORRECTS the claim in THM-120 (was THM-098) that "ALL H-maximizers at n=6 are S-phase."
+In fact, 240/480 are S-phase and 240/480 are C-phase. THM-120's Pfaffian separation
 (C: |Pf|∈{1,3}, S: |Pf|∈{7,9}) remains correct.

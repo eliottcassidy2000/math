@@ -196,7 +196,7 @@ The Eulerian base:
 
 GENERAL FORMULA: κ_{2k}^{Eul} = (n+1) · B_{2k} / (2k)
 
-The cycle corrections (from THM-095):
+The cycle corrections (from THM-117):
   Δκ₂ = (2/C(n,2)) · t₃
   Δκ₄ = (2/C(n,4)) · (t₅ + 2α₂) - 48/(n(n-1))² · t₃²
   Δκ₆ = (2/C(n,6)) · t₇ + [nonlinear in t₃, t₅, α₂]
@@ -205,7 +205,7 @@ STRUCTURAL INSIGHT:
   κ_{2k}(T) = (n+1) · B_{2k}/(2k) + 2·t_{2k+1}/C(n,2k) + [nonlinear lower]
 
 The FIRST term is universal (Bernoulli), depends only on n.
-The SECOND term is the leading cycle correction (THM-095), depends on T.
+The SECOND term is the leading cycle correction (THM-117), depends on T.
 The remaining terms are nonlinear combinations of lower cycle invariants.
 
 This means: the Bernoulli numbers govern the "base topology" of tournaments,

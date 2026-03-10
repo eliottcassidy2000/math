@@ -3,7 +3,7 @@ import os; os.environ['PYTHONIOENCODING'] = 'utf-8'
 c7_correction_formula.py
 kind-pasteur-2026-03-07-S39b
 
-Extend THM-096 to k=7: find the correction term for compound walks.
+Extend THM-118 to k=7: find the correction term for compound walks.
 
 tr(A^7) = 7*c_7 + correction
 

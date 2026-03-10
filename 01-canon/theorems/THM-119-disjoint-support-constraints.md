@@ -1,4 +1,4 @@
-# THM-097: Disjoint Support Constraint Property at Omega_2
+# THM-119: Disjoint Support Constraint Property at Omega_2
 
 **Status:** PROVED (pure algebraic, no computation needed)
 **Author:** kind-pasteur-S45 (2026-03-09)

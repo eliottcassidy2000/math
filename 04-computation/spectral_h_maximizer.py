@@ -1,3 +1,8 @@
+# ⚠️ WARNING: The connection set {1,2,3,5,8} does NOT give a tournament on Z_11
+# because S ∩ (-S mod 11) = {3,8} ≠ ∅. All results for this "DRT" are INVALID.
+# The ONLY valid circulant DRT at n=11 is the Paley tournament (QR={1,3,4,5,9}).
+# See MISTAKE-017.
+
 import os; os.environ['PYTHONIOENCODING'] = 'utf-8'
 """
 spectral_h_maximizer.py
@@ -16,7 +21,7 @@ Key questions:
 4. At n=11 (two DRT classes): what spectral property distinguishes them?
 
 Using the fact that for tournament A:
-  tr(A^k) = k*c_k for k=3,4,5 (THM-096)
+  tr(A^k) = k*c_k for k=3,4,5 (THM-118)
   tr((A-A^T)^k) = tr(S^k) where S is the skew-adjacency matrix
   For odd k: tr(S^k) = 2*tr(A^k) - ... (relates to cycle counts)
 """

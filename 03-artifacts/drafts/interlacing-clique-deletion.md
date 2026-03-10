@@ -129,7 +129,7 @@ The key lemma needed: For Omega(T), re-adding a cycle c to Omega(T)\{c} preserve
 2. Check whether single-cycle re-addition preserves real roots
 3. Look for a common interlacing framework (Marcus-Spielman-Srivastava style)
 4. Investigate whether the specific eigenvalue structure of Omega(T) forces interlacing
-5. Connect to the Irving-Omar Cayley transform approach (T065)
+5. Connect to the Irving-Omar Cayley transform approach (T215)
 
 ---
 
@@ -139,4 +139,4 @@ The key lemma needed: For Omega(T), re-adding a cycle c to Omega(T)\{c} preserve
 - THM-020 (claw-free proof for n<=8)
 - THM-021 (discriminant proof for n<=8)
 - T084 (interlacing tangent)
-- T065 (Irving-Omar Cayley transform)
+- T215 (Irving-Omar Cayley transform)

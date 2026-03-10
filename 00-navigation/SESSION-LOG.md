@@ -88,7 +88,7 @@ Entry format:
   5. Consecutive seesaw (HYP-394) REFUTED at n=8 by kind-pasteur (also my mod-p run).
   6. CRITICAL: kind-pasteur-S48 found beta_3=2 at n=8! i_*-injectivity FAILS at n=8!
      The proof architecture works ONLY at n≤7.
-  7. Updated THM-110 proof architecture to reflect n≤7 limitation.
+  7. Updated THM-123 (was THM-110) proof architecture to reflect n≤7 limitation.
 **New contributions:** istar_all_degrees.py, istar_n8_investigation.py,
   d4_preimage_correct.py, new_boundary_targeting.py, quasi_iso_algebraic.py,
   consecutive_seesaw_n8.py. HYP-398,399,400 added.
@@ -147,7 +147,7 @@ Entry format:
   Numerical instability at n=8 (negative "Betti" from SVD precision) — needs
   better numerics (mod-p) for verification at n=8.
 
-**New contributions:** HYP-394, HYP-395, HYP-396. Updated THM-110 proof architecture.
+**New contributions:** HYP-394, HYP-395, HYP-396. Updated THM-123 (was THM-110) proof architecture.
 **Scripts:** istar_mechanism_deep.py, saturation_mechanism.py, boundary_structure.py,
   relative_complex_analysis.py, consecutive_seesaw.py, h4_relative_check.py
 **Unresolved threads:**
@@ -392,7 +392,7 @@ Entry format:
   Extended session investigating the seesaw mechanism, defect rates, and structural constraints on tournament path homology Betti numbers.
 
   **Major discoveries (10 scripts, 10 new hypotheses HYP-336..345):**
-  - **THM-097 (PROVED)**: Disjoint support at Omega_2 — each 2-path has at most 1 non-allowed face. Constraint matrix always full rank. Proof is purely algebraic.
+  - **THM-119 (was THM-097) (PROVED)**: Disjoint support at Omega_2 — each 2-path has at most 1 non-allowed face. Constraint matrix always full rank. Proof is purely algebraic.
   - **dim(Omega_2) = C(n,3) + 2*c3 - e_cyc** (HYP-336): Exact formula verified exhaustive n=4,5,6. e_cyc = #{directed edges in at least one 3-cycle}.
   - **e_cyc NOT determined by c3 alone** (HYP-337): Depends on cycle arrangement (edge sharing).
   - **Defect rate is wave propagation** (HYP-338): beta_1 rate decreasing 29.7%->1%, beta_3 increasing 0%->21% as n grows.
@@ -405,7 +405,7 @@ Entry format:
 
   Also confirmed: beta_2=0 at n=9 (0/500) and n=10 (0/100). Completeness is sharp for beta_2=0 (removing 1 edge creates beta_2>0 at n=6).
 
-**New contributions:** THM-097 (disjoint support), THM-098 (Boolean odd Betti), HYP-336 through HYP-345
+**New contributions:** THM-119 (disjoint support, was THM-097), THM-098 (Boolean odd Betti), HYP-336 through HYP-345
 **Unresolved threads:**
   1. PROVE beta_3 in {0,1} — needs rank near-saturation property for d_4
   2. PROVE adjacent-odd seesaw in general — the beta_2=0 proof works for k=1 but needs new ideas for k>=2
@@ -668,7 +668,7 @@ Entry format:
   Deep investigation of the arc-flip mechanism for β₂=0 preservation in tournaments.
 
   **Major discoveries:**
-  - **THM-100 (PROVED):** delta_|A_3| = (n-3)*delta_|A_2| and delta_|A_2| = 2*(d_u - d_v - 1)
+  - **THM-121 (was THM-100, arc-flip path count) (PROVED):** delta_|A_3| = (n-3)*delta_|A_2| and delta_|A_2| = 2*(d_u - d_v - 1)
     under any arc flip. Exact counting identities depending ONLY on out-degrees.
   - **Arc-flip β₂ preservation:** 0 violations in 500k+ flips (n=5,6 exhaustive, n=7,8 sampled)
   - **Surplus floor growth:** min surplus = 0, 1, 9, <=25 for n=5,6,7,8 — super-linear growth
@@ -681,9 +681,9 @@ Entry format:
   - Also: P_11 beta_8 trivial eigenspace = 0 (confirming opus-S42 result beta_8 = 10)
   - Density threshold for circulant beta_2=0: |S|>=ceil(n/3) approximately (HYP-219)
 
-  **New contributions:** THM-100 (arc-flip path count), HYP-227-230, INV-148 update, INV-149
+  **New contributions:** THM-121 (arc-flip path count, was THM-100), HYP-227-230, INV-148 update, INV-149
   **Unresolved:** Algebraic proof of beta_2=0. Strongest leads:
-    (1) Arc-flip induction from transitive (THM-100 gives counting, need Omega-level bound)
+    (1) Arc-flip induction from transitive (THM-121 gives counting, need Omega-level bound)
     (2) Generalize Tang-Yau deformation retract to non-circulant tournaments
     (3) Discrete Morse theory approach D from THM-102
 
@@ -854,7 +854,7 @@ Entry format:
   topological dimension shift. Major session with 8+ computational scripts and 3 new theorems.
 
   **Major discoveries:**
-  1. **THM-098 verified and extended**: Pfaffian-Betti separation at n=6 confirmed exhaustively.
+  1. **THM-120 (was THM-098) verified and extended**: Pfaffian-Betti separation at n=6 confirmed exhaustively.
      |Pf| perfectly separates C-phase from S-phase. Extended to n=7 (spectral gap) and n=8.
   2. **THM-099 (NEW)**: H-maximizer Betti topology. At odd n (3,5,7), all maximizers share
      same Betti. At even n≥6, maximizers split between two topological types. n=6: 240 β₁=1
@@ -872,7 +872,7 @@ Entry format:
      each 6-vertex sub has 45. Ω₀ through Ω₃ identical across all 3 regular n=7 classes.
 
 **New contributions:**
-  - THM-098 (extended), THM-099, THM-100
+  - THM-120 (was THM-098, Pfaffian), THM-099, THM-100
   - INV-135 (Betti dimension shift)
   - HYP-207, HYP-208, HYP-209
   - T204, T205, T206
@@ -894,7 +894,7 @@ Entry format:
   Extended trace formula framework, spectral H-maximizer analysis, and discovered critical error in DRT n=11 analysis.
 
   **Major discoveries:**
-  1. **THM-096 extended to k=4**: tr(A^4) = 4*c_4 for all tournaments. Proof: no directed 2-cycles in tournaments. c4_fast() added to tournament_fast.py.
+  1. **THM-118 (was THM-096) extended to k=4**: tr(A^4) = 4*c_4 for all tournaments. Proof: no directed 2-cycles in tournaments. c4_fast() added to tournament_fast.py.
   2. **THM-097 Alpha_2 Trace Formula**: alpha_2 = C(c3,2) - sum_v C(t3(v),2) + s2. Vertex-disjoint 3-cycle pairs computable in O(n^3). Implemented as alpha2_from_trace().
   3. **H(T) polynomial at n=8,9**: Full trace formulas verified 100% at n=8 (100 tournaments) and n=9 (200 tournaments). O(n^5) complexity. At n=9: alpha_3 nonzero in 86%, H contribution breakdown: 56% alpha_1, 41% alpha_2, 2.3% alpha_3.
   4. **MISTAKE-017**: "Non-Paley DRT at n=11" from {1,2,3,5,8} was NOT a tournament (S∩(-S)≠∅). All claims c3=44, c5=407, H=69311 are INVALID. Only Paley is a valid circulant DRT at n=11.
@@ -902,7 +902,7 @@ Entry format:
   6. **Paley T_11 complete cycle data**: c3=55, c5=594, c7=3960, c9=11055, c11=5505, alpha_1=21169.
 
 **New contributions:**
-  - THM-096 extended (k=3,4,5), THM-097 proved
+  - THM-118 extended (k=3,4,5), THM-097 proved
   - MISTAKE-017 logged, INV-068 corrected
   - INV-140 (alpha_2 formula), INV-141 (polynomial H(T)), INV-142 (spectral characterization), INV-143 (DRT correction)
   - Scripts: trace_cycle_k4.py, c6_correction_formula.py, c6_from_trace.py, trace_ocf_bridge.py, alpha2_formula.py, spectral_cycle_density.py, alpha2_n8_extension.py, h_from_trace_n8.py, alpha_structure_n9.py, h_polynomial_n9.py, spectral_h_maximizer.py
@@ -966,7 +966,7 @@ Entry format:
 
   4. **I(Ω,i) analysis**: trivially Gaussian integer. For n≤5, Re=1 always because α₂=0 (no disjoint cycle pairs). At n=6, α₂>0 breaks this.
 
-  5. **Corrected Bernoulli formula scope**: The Bernoulli base applies to Eulerian (descent) distribution only, not tournament fwd distribution. The tournament cumulant hierarchy THM-095 stands independently.
+  5. **Corrected Bernoulli formula scope**: The Bernoulli base applies to Eulerian (descent) distribution only, not tournament fwd distribution. The tournament cumulant hierarchy THM-117 stands independently.
 
 **New contributions:** T200 (β₂ exactness), T201 (real-rootedness), T202 (Todd class caveat), T203 (Gaussian integer trivial)
 **Scripts:** bernoulli_tournament_connection.py, beta2_algebraic_proof.py, independence_poly_special_values.py, gaussian_integer_investigation.py, todd_class_tournament_cgf.py, pfaffian_structure.py
@@ -1017,7 +1017,7 @@ Entry format:
   3. MOD-2 CUMULANT COLLAPSE: THM-094 (F mod 2) + OCF at x=2≡0 mod 2 implies all integer moments vanish mod 2 for n≥3. Combined with THM-086 (mod 3), all moments vanish mod 6.
   4. β₃ CORRELATES WITH HIGH H at n=7: mean H=121.5 for β₃>0 vs 76.2 for β=0 (expected 78.75).
   5. F-POLYNOMIAL DOES NOT DETERMINE β: At n=5, F=[9,30,42,30,9] splits 120/120 between β₁=0 and β₁=1. At n=6, F=[45,117,198,198,117,45] appears in both β₃>0 and β₁>0.
-  6. THM-094 numbering conflict resolved: universal coefficient is now THM-095.
+  6. THM-094 numbering conflict resolved: universal coefficient is now THM-117 (was THM-095).
 
 **New contributions:** INV-130 (Pfaffian-Betti), INV-131 (hidden invariant), INV-132 (mod-2 collapse), T194-T196
 **Scripts:** spectral_betti_connection.py, pfaffian_betti_check.py, betti_hidden_invariant.py, f_poly_betti_deep.py, mod2_cumulant_connection.py, beta3_maximizer_n7.py, tournament_quasisym_betti.py, beta2_vanishing_proof_attempt.py
@@ -1624,7 +1624,7 @@ Entry format:
   (7) **GS-OCF bridge to P(u,x) analyzed.** U_T and P(u,x) are different objects encoding overlapping info. Neither is a specialization of the other. They share the independence polynomial as common shadow.
   (8) **Degree-4 Fourier at n=9 re-analyzed.** Agent found 2D structure (same as n=7), contradicting S37's rank>>200 finding. Needs reconciliation.
 **New contributions:** THM-075, INV-091-095, complete n=7 H-spectrum, OPEN-Q-019 update
-**Unresolved threads:** Prove H=21 at general n; reconcile degree-4 n=9 dimensionality; is 63 a permanent gap?; THM-063 vs THM-074 contradiction on G_T(t,2)=E_T(t)
+**Unresolved threads:** Prove H=21 at general n; reconcile degree-4 n=9 dimensionality; is 63 a permanent gap?; THM-114 (was THM-063) vs THM-074 contradiction on G_T(t,2)=E_T(t)
 
 ## opus-2026-03-07-S35 (continued^3) — 2026-03-07 (THM-076: Walsh-OCF Factorization)
 **Account:** opus
@@ -1777,7 +1777,7 @@ Entry format:
 **Account:** opus
 **Continuation of:** opus-2026-03-07-S32 (context limit, then S33 continuation)
 **Summary of work:**
-  (1) **THM-063: Trivariate GF G_T(t,x) (PROVED).** The generating function
+  (1) **THM-114 (was THM-063): Trivariate GF G_T(t,x) (PROVED).** The generating function
       G_T(t,x) = A_n(t) + sum_I x^{parts} I(T) A_{f+1}(t)(t-1)^{d-f}
       has clean special evaluations:
       - G_T(t,0) = A_n(t) [Eulerian poly, T-independent]
@@ -1800,7 +1800,7 @@ Entry format:
   (7) **Bilinear structure:** G_T is NOT a product A_n(t)*I(Omega,x).
       Delta = G_T - A_n*I vanishes on both axes, equals -n!*(I-1) at t=1.
       N_T(t,2) = E_T(t)/A_n(t) smoothly interpolates from H to 1.
-**New contributions:** THM-063-trivariate-gf.md, 10+ computation scripts
+**New contributions:** THM-114-trivariate-gf.md, 10+ computation scripts
 **Unresolved threads:**
   - General n formula for p_j(x) coefficients in the reduced polynomial
   - Does the null space structure persist/grow at n=9? (more null vectors?)

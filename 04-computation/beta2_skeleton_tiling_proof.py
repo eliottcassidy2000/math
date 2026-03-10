@@ -3,7 +3,7 @@
 beta2_skeleton_tiling_proof.py — Connect skeleton structure to β₂=0 proof
 
 KEY IDEA: The β₂=0 theorem is equivalent to surplus := dim(Ω₃) - dim(Z₂) ≥ 0.
-The arc-flip identity (THM-100) gives:
+The arc-flip identity (THM-121) gives:
   δ|A₃| = (n-3) · δ|A₂| under any single arc flip.
 
 The tiling model provides a BACKBONE PATH p₀→p₁→...→p_{n-1}.
@@ -422,7 +422,7 @@ for bits in range(total):
         expected_da2 = 2 * (du - dv - 1)
         actual_da2 = d2['A2'] - d['A2']
 
-        # THM-100: δ|A₃| = (n-3) * δ|A₂|
+        # THM-121: δ|A₃| = (n-3) * δ|A₂|
         expected_da3 = (n - 3) * actual_da2
         actual_da3 = d2['A3'] - d['A3']
 
@@ -430,7 +430,7 @@ for bits in range(total):
         if expected_da2 == actual_da2 and expected_da3 == actual_da3:
             formula_check += 1
 
-print(f"\n  THM-100 verification: {formula_check}/{formula_total} correct")
+print(f"\n  THM-121 verification: {formula_check}/{formula_total} correct")
 
 # === CRITICAL: δΩ₂ FORMULA ===
 print(f"\n  Seeking δΩ₂ formula in terms of (d_u, d_v, n)...")

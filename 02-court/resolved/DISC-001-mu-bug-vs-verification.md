@@ -1,6 +1,6 @@
 # DISC-001: μ Computation Bug vs. Paper's 0-Failure Verification Claim
 
-**Status:** ACTIVE
+**Status:** RESOLVED
 **Opened:** SYSTEM-2026-03-05-S1
 **Claim in dispute:** Whether the paper's 0-failure verification of Claim A at n=6 (196,608 pairs) is fully reliable given the confirmed bug in `ind_poly_at_2_restricted()` (MISTAKE-001).
 **Resolution:** *pending*

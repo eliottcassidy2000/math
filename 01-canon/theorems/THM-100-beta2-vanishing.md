@@ -1,6 +1,6 @@
 # THM-100: β₂ Vanishing for Tournaments
 
-**Status:** CONJECTURE (exhaustive n≤6, sampled n≤9)
+**Status:** PROVED for all tournaments (THM-108/109, kind-pasteur-S43). Proof by induction + LES + isolation characterization.
 **Proposed by:** kind-pasteur-2026-03-08-S40
 
 ## Statement

@@ -1,4 +1,4 @@
-# THM-030: Key Identity and Even r-Powers of the Transfer Matrix
+# THM-112: Key Identity and Even r-Powers of the Transfer Matrix
 
 **Status:** PROVED (inductive proof, computationally verified m=2..6)
 **Added:** opus-2026-03-06-S25

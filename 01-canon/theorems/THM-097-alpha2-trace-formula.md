@@ -51,7 +51,7 @@ Note: T[b][a]=1 would mean the shared edge is b->a, giving the same formula with
 
 ## Computational Consequence
 
-Combined with THM-096 (c_3, c_5 via trace), this gives an O(n^3) formula for H(T) at n <= 7:
+Combined with THM-118 (c_3, c_5 via trace), this gives an O(n^3) formula for H(T) at n <= 7:
 
 H(T) = 1 + 2*(c_3 + c_5 + c_7) + 4*alpha_2
 
@@ -63,7 +63,7 @@ At n >= 8: need additional terms for alpha_3 and for 5-cycle contributions to al
 
 ## Extension to n >= 8
 
-At n = 8: vertex-disjoint (5-cycle, 3-cycle) pairs can exist (5+3=8 vertices). Computing these disjoint pairs requires knowing both the 5-cycles and the 3-cycles and checking disjointness — currently O(n^5) for 5-cycle enumeration. With THM-096 giving c_5 = tr(A^5)/5, we know the COUNT but not the vertex sets. Extending this to alpha_2 at n >= 8 requires either:
+At n = 8: vertex-disjoint (5-cycle, 3-cycle) pairs can exist (5+3=8 vertices). Computing these disjoint pairs requires knowing both the 5-cycles and the 3-cycles and checking disjointness — currently O(n^5) for 5-cycle enumeration. With THM-118 giving c_5 = tr(A^5)/5, we know the COUNT but not the vertex sets. Extending this to alpha_2 at n >= 8 requires either:
 1. A formula for the number of disjoint (3-cycle, 5-cycle) pairs in terms of matrix entries, or
 2. Fall back to cycle enumeration for 5-cycles.
 

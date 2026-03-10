@@ -3,9 +3,9 @@ import os; os.environ['PYTHONIOENCODING'] = 'utf-8'
 trace_cycle_k4.py
 kind-pasteur-2026-03-07-S39b
 
-THEOREM (extension of THM-096): tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
+THEOREM (extension of THM-118): tr(A^k) = k * c_k for k = 3, 4, 5 in tournaments.
 
-The k=4 case was MISSED in the original THM-096. The proof is the same:
+The k=4 case was MISSED in the original THM-118. The proof is the same:
 - Any non-simple closed walk of length k splits at a repeated vertex into
   two sub-walks, each a closed walk of length >= 2.
 - In tournaments, there are no 2-cycles (bidirectional edges), so each
@@ -97,7 +97,7 @@ def c4_via_trace(T):
 # Exhaustive verification
 # ============================================================
 print("=" * 70)
-print("EXTENDED THM-096: tr(A^k) = k * c_k for k = 3, 4, 5")
+print("EXTENDED THM-118: tr(A^k) = k * c_k for k = 3, 4, 5")
 print("=" * 70)
 
 for n in range(3, 8):

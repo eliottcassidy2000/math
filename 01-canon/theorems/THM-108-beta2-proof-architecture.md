@@ -3,7 +3,7 @@
 **Status:** PROVED (all cases algebraic except n=5 free-cycle case verified exhaustively)
 **Filed by:** kind-pasteur-2026-03-08-S43
 **Updated:** kind-pasteur-2026-03-08-S43 (isolation characterization breakthrough)
-**Depends on:** THM-103, THM-104, THM-105, THM-106, THM-107, THM-109
+**Depends on:** THM-122 (TT span), THM-103 (β₁≤1), THM-104, THM-105, THM-106, THM-107, THM-109
 
 ## Main Theorem
 
@@ -115,7 +115,7 @@ vertex from having a spanning freed set. See THM-109 Case 3 for full proof.
 
 ## Supporting Theorems (all PROVED)
 
-- **THM-103 (TT Boundary Span):** im(d_2) = span of TT boundaries. NT contributes nothing.
+- **THM-122 (TT Boundary Span):** im(d_2) = span of TT boundaries. NT contributes nothing.
 - **THM-104 (Cycle Sum Equality):** Edge-sharing 3-cycles have equal TT-cocycle sums.
 - **THM-105 (Dominant Vertex Forcing):** Dominated cycles have zero cocycle sum.
 - **THM-106 (Free Cycle Bridge):** Every external vertex of a free cycle creates a bridge.

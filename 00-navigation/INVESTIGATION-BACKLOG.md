@@ -109,7 +109,7 @@
 - n=6: 0/480 hereditary (non-regular)
 - n=7: 240/240 hereditary (all regular)
 
-**R-minimization theorem (NEW, S18g):** The H-maximizer minimizes R(T) = sum_v H(T-v)/H(T) among all tournaments. Proved algebraically: R(T) = n - E_weighted[|U(S)|] where E is over independent sets of Omega(T) weighted by 2^{|S|}, and |U(S)| = total vertices covered. Confirmed exhaustively n=3-6, checking n=7.
+**R-minimization conjecture (NEW, S18g, REFUTED at n=7 — see OPEN-Q-017):** The H-maximizer was conjectured to minimize R(T) = sum_v H(T-v)/H(T). Formula R(T) = n - E_weighted[|U(S)|] is PROVED. But R-minimization FAILS at n=7: a tournament with H=123 has R=1.585 < R(max)=5/3. Valid only at n=3-6.
 
 **Key insight:** Being hereditary (R = n*H_{n-1}/H_n for regular maximizers) is NOT the same as minimizing R. The non-regular n=5 maximizers have LOWER R (1.4) than regular ones (5/3 ≈ 1.667) despite not being hereditary.
 **Next step:** (1) Verify R-minimization at n=7 (running). (2) Prove R-minimization from OCF. (3) Test if regular n=9 maximizers are hereditary.
@@ -159,7 +159,7 @@
 **Next step:** (1) Find direct bijection between run decompositions and weighted interval packings. (2) Check if the transfer matrix for T_full has Tribonacci characteristic polynomial factor.
 
 ### INV-001: Prove transfer matrix symmetry for all n — PROVED (THM-030)
-**Source:** T045, T103 (tangents), symmetry_check.py, symbolic_symmetry_proof.py
+**Source:** T214, T103 (tangents), symmetry_check.py, symbolic_symmetry_proof.py
 **Status:** PROVED FOR ALL n by induction (kind-pasteur-2026-03-06-S25). Verified computationally m=2,...,6 all (a,b) pairs.
 **What:** M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) is always symmetric. This is STRONGER than the even-odd split.
 **BREAKTHROUGH (opus-S4):** M[a,b]-M[b,a] = 0 as a polynomial in the arc variables t_{ij} AFTER applying the tournament constraint T[j,i]=1-T[i,j]. With independent arc variables the difference is NONZERO (12 terms at n=4, 48 at n=5). The tournament constraint is essential and sufficient.
@@ -360,7 +360,7 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 7. Constraint ratio NA_faces/|A_p| < 1 for p=2 always (may explain beta_2=0).
 8. THM-096 corrected: simplicity holds for n<=7 only.
 **S45 continuation updates:**
-9. THM-097 (PROVED): Disjoint support at Omega_2 — each 2-path has at most 1 non-allowed face. Constraint matrix always full rank. dim(Omega_2) = |A_2| - #NA_faces exactly.
+9. THM-119 (was THM-097) (PROVED): Disjoint support at Omega_2 — each 2-path has at most 1 non-allowed face. Constraint matrix always full rank. dim(Omega_2) = |A_2| - #NA_faces exactly.
 10. Completeness is SHARP: removing 1 edge from tournament creates beta_2>0 (13/500 at n=6).
 11. beta_2=0 confirmed at n=9 (0/500) and n=10 (0/100). Disjoint support verified at n=9.
 12. H_1(A-complex) is NOT always 0 (only for transitive tournaments). Omega restriction is essential.
@@ -381,7 +381,7 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 ### INV-138: Beta_3 ≤ 1 Proof Architecture (LES Induction)
 **Source:** kind-pasteur-2026-03-09-S46
 **Status:** PROOF ARCHITECTURE COMPLETE. Both algebraic ingredients computationally verified. No algebraic proof yet.
-**What:** THM-110: beta_3(T) ≤ 1 for all tournaments T. Equivalent to rank near-saturation: rank(d_4) ≥ ker(d_3) - 1.
+**What:** THM-123 (was THM-110): beta_3(T) ≤ 1 for all tournaments T. Equivalent to rank near-saturation: rank(d_4) ≥ ker(d_3) - 1.
 **Proof strategy:** LES induction on n using pair (T, T\v):
   ... → H_3(T\v) → H_3(T) → H_3(T,T\v) → H_2(T\v) = 0
   Since H_2(T\v) = 0 (THM-108), map H_3(T) → H_3(T,T\v) is surjective.
@@ -486,10 +486,10 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 **Sequence:** H/|Aut| = 1 (p=3), 9 (p=7), 1729 (p=11), 6857869865 (p=19).
 **Next step:** Submit H(P(p)) values and H(P(p))/|Aut| sequence to OEIS. Compute H(P(31)) if feasible (2^31*31 DP — ~66B ops, might take hours).
 
-### INV-025: Integrality conjecture C(p,k) | c_k(T_p) for k >= (p+1)/2
+### INV-025: Integrality conjecture C(p,k) | c_k(T_p) for k >= (p+3)/2
 **Source:** T036/T153 (tangents), OPEN-Q-013 table
 **Status:** VERIFIED at p=7 (kind-pasteur-S39b). Previously observed at p=11.
-**What:** For Paley primes p = 3 mod 4, the cycle count c_k(T_p) is divisible by C(p,k) when k >= (p+1)/2.
+**What:** For Paley primes p = 3 mod 4, the cycle count c_k(T_p) is divisible by C(p,k) when k >= (p+3)/2. (CORRECTED from (p+1)/2: at p=11, c_6=1595 is NOT divisible by C(11,6)=462, but c_7=3960 IS divisible by C(11,7)=330.)
 **Results at p=7:** c_3=14 (C(7,3)=35 does NOT divide, but k=3 < 4 = (p+1)/2), c_5=42 (C(7,5)=21 DIVIDES, quotient=2), c_7=24 (C(7,7)=1 trivially divides). Conjecture HOLDS.
 **Explanation:** Aut(T_p) = Z_p acts on k-subsets, partitioning them into orbits of size p (except the full vertex set which is fixed). Each k-subset orbit has the same cycle count by symmetry. So c_k = p * (cycle count per orbit) when k < p, giving p | c_k. For C(p,k) divisibility: the orbit structure under the full Aut group (which has order p*(p-1)/2 for Paley) should give the stronger divisibility.
 **Next step:** Verify at p=19. Prove C(p,k) divisibility from Aut(T_p) orbit counting.
@@ -676,8 +676,8 @@ For n <= 4, alpha_0 = c3 which is score-determined. For n >= 5, 5-cycles contrib
 - [DONE] Ballot sequence bijective proof for C(L-2, 2k-1) (opus-S5)
 - [DONE] Hard-core lattice gas: lambda=2 is non-perturbative regime (opus-S5)
 - [DONE] Alpha_1 ≡ c_3 (mod 2) conjecture DISPROVED (opus-S5)
-- [DONE] Conflict graph catalog: Omega(T) is always PERFECT (opus-S5, exhaustive n<=6)
-- [DONE] Omega(T) is always CLAW-FREE (opus-S5, exhaustive n<=6, sampled n=7,8)
+- [DONE] Conflict graph catalog: Omega(T) is PERFECT for n<=7, FAILS at n>=8 (53.8% have C5 in Omega_3). See OPEN-Q-014.
+- [DONE] Omega(T) is CLAW-FREE for n<=8, FAILS at n>=9 (90%). See OPEN-Q-014.
 - [DONE] Web research: 9 new connections documented in web-research-connections.md (opus-S5)
 - [DEAD] Per-vertex decomposition of unmatched counts (T045)
 - [DEAD] Cycle bijection under arc reversal (MISTAKE-005)
@@ -790,7 +790,7 @@ Key finding: c8(DRT_n) is INDEPENDENT of which DRT is chosen. Phase transition a
   - Other Regular: 1680 tours, dc={3:14, 5:36, 7:15}, H=171
 Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes directed 5-cycles and 7-cycles. LTT has "diametrically opposite" properties per Savchenko.
 **EXTENDED (kind-pasteur S21):** Savchenko (2024) proves c_m(DR_n) > c_m(RLT_n) for ALL m = 1,2,3 mod 4 (including all odd m). Only m = 0 mod 4 has the phase transition. This directly explains DRT's H-maximization via OCF.
-**DRT n=11 ANALYSIS (kind-pasteur S21):** Two DRT classes at n=11 (from (11,5,2)-difference sets): Paley QR={1,3,4,5,9} (H=95095, c3=55, c5=594, |Aut|=55) and non-Paley {1,2,3,5,8} (H=69311, c3=44, c5=407, |Aut|=11). Cycle counts are NOT invariant across different DRT classes — Paley strictly dominates. Savchenko's c_k invariance is within a single isomorphism class.
+**DRT n=11 ANALYSIS (kind-pasteur S21, CORRECTED S39b per MISTAKE-017):** The connection set {1,2,3,5,8} is NOT a valid tournament (S∩(-S)={3,8}≠∅). The ONLY valid circulant DRT at n=11 is the Paley tournament QR={1,3,4,5,9} (H=95095, c3=55, c5=594, |Aut|=55). All claims about "non-Paley DRT" H=69311, c3=44 were computed on an invalid digraph. Whether a non-circulant DRT exists at n=11 remains open.
 **Next step:** (1) Obtain Savchenko's exact polynomial c_k formulas. (2) Test at n=19 or n=23 (multiple DRT classes). (3) Prove Paley maximizes H among ALL DRTs.
 
 ### INV-054: Komarov-Mackey exact 5-cycle formula (arXiv:1410.6828, JGT 2017) — PARTIALLY INVESTIGATED
@@ -799,7 +799,7 @@ Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes 
 **What:** Exact formula for number of directed 5-cycles in any tournament in terms of edge score sequence. Maximum c5 ≈ (3/4)*C(n,5), achieved by almost all random tournaments. Lower bounds also proved.
 **NEW FINDING (S39b):** c5 is NOT determined by score sequence, even combined with sum_d², edge_score, or common_out_neighbor statistics. At n=5, score (1,2,2,2,3) has c5 in {1,2,3}; at n=6, 9/22 score sequences have varying c5. The Komarov-Mackey formula likely involves CUBIC or higher-order graph statistics (e.g., directed walks of length 3+). For regular tournaments, c5 IS a class invariant (Savchenko, verified n=5,7).
 **Why it matters:** This rules out O(n²) c5 computation from scores alone. Cycle enumeration (O(n^5) for 5-cycles, or O(2^n) bitmask DP) remains necessary.
-**RESOLVED (S39b, THM-096):** c_5 = tr(A^5)/5 gives O(n^3) computation via matrix multiplication. This IS the "cubic invariant" — tr(A^5) is a sum over all length-5 closed walks, and THM-096 proves all such walks in tournaments are simple cycles (no vertex repetition possible for length <= 5).
+**RESOLVED (S39b, THM-118):** c_5 = tr(A^5)/5 gives O(n^3) computation via matrix multiplication. This IS the "cubic invariant" — tr(A^5) is a sum over all length-5 closed walks, and THM-118 proves all such walks in tournaments are simple cycles (no vertex repetition possible for length <= 5).
 **Next step:** Read Komarov-Mackey formula to see if it matches tr(A^5)/5.
 
 ### INV-055: Linial-Morgenstern cycle density conjecture and extremal tournaments
@@ -1437,7 +1437,7 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 - **Dimension formula**: rank(d₃) = ker(d₂) EXACTLY for every tournament tested (n=5-9).
 **Next step:** (1) Prove B·α=z always solvable algebraically (rank argument). (2) Prove Ω₃ membership of filling. (3) Try inductive proof using LES of pair (T, T\v). (4) Check if result follows from multisquare-free property (Fu-Ivanov).
 
-### INV-128: Universal Coefficient Theorem — PROVED (THM-095)
+### INV-128: Universal Coefficient Theorem — PROVED (THM-117)
 **Source:** opus-2026-03-07-S46e
 **Status:** PROVED
 **What:** coeff(t_{2k+1} in κ_{2k}) = 2/C(n, 2k) for all k. Proved via forward path formula + OCF + multinomial expansion. Resolves OPEN-Q-023.
@@ -1451,7 +1451,7 @@ where D\e = deletion, D/e = contraction (w inherits IN from u, OUT from v).
 
 ### INV-130: Pfaffian-Betti Connection — EXHAUSTIVE at n=6, extended n=7,8
 **Source:** opus-2026-03-07-S46e, kind-pasteur-2026-03-08-S40
-**Status:** VERIFIED EXHAUSTIVE n=6. Sampled n=7,8. THM-098 + THM-099 documented.
+**Status:** VERIFIED EXHAUSTIVE n=6. Sampled n=7,8. THM-120 (was THM-098) + THM-099 documented.
 **What:** The Pfaffian of the skew-adjacency matrix constrains path homology Betti numbers. At n=6 (exhaustive): β₁>0 ⟹ |Pf(S)| ∈ {1,3}; β₃>0 ⟹ |Pf(S)| ∈ {7,9}. Perfect separation. At n=7 (odd): spectral gap separates phases. At n=8: |Pf| NOT perfect separator but strongly correlated.
 **CORRECTED (S40):** H-maximizers at n=6 are NOT all S-phase. 480 maximizers split 240 C-phase (|Pf|=1) + 240 S-phase (|Pf|=7), both with score (2,2,2,3,3,3) and c3=8. Complementation preserves phase.
 **Scripts:** `pfaffian_betti_check.py`, `pfaffian_betti_n7.py`, `pfaffian_topology_deep.py`, `pfaffian_betti_mechanism.py`, `spectral_betti_gap.py`, `spectral_topology_n8.py`, `s_phase_structure.py`, `s_phase_maximizer_n7.py`, `maximizer_betti_deep.py`
@@ -1507,7 +1507,7 @@ At n=7, all maximizers are conference-matrix (gap=0, eigenvalues all √7). Seco
 **What:** Chaplin (2022) shows β₁ of random Erdős-Rényi digraphs has two phase transitions. Since tournaments are "density 1/2" digraphs, this places them in a specific regime. Could explain why ~30% of tournaments at n=5 have β₁>0.
 **Next step:** Check if their density threshold matches tournament β₁ fraction.
 
-### INV-137: THM-096 Trace-Cycle Identity — PROVED (extended to k=3,4,5)
+### INV-137: THM-118 Trace-Cycle Identity — PROVED (extended to k=3,4,5)
 **Source:** kind-pasteur-2026-03-07-S39b
 **Status:** PROVED
 **What:** tr(A^k) = k * c_k(T) for k=3,4,5 in any tournament. Extended to k=4 (no bidirectional edges => length-4 closed walks must be simple 4-cycles). Gives O(n^3) c_4 and c_5 computation via matrix multiplication. Sharp: fails at k>=6 (compound (3,3) walks at k=6). Correction for k=6 is NOT a simple polynomial in global cycle counts (tested and failed).
@@ -1620,7 +1620,7 @@ The "surplus" = dim(Ω₃) - dim(Z₂) satisfies surplus ≥ |drop| ALWAYS.
 The tournament constraint ensures every pair of vertices has an arc, providing the intermediary
 vertices needed for Ω₃ chains.
 **NEW FINDINGS (kind-pasteur-S41 continued):**
-- THM-100 PROVED: delta_|A_3| = (n-3)*delta_|A_2| exactly, for ALL tournaments, ALL arcs
+- THM-121 (was THM-100) PROVED: delta_|A_3| = (n-3)*delta_|A_2| exactly, for ALL tournaments, ALL arcs
 - delta_|A_2| = 2*(d_u - d_v - 1) depends ONLY on out-degrees
 - n=7 sampling (10k): 0 violations, min surplus = 9
 - n=8 sampling (20k): 0 violations, min surplus <= 25
@@ -1633,7 +1633,7 @@ vertices needed for Ω₃ chains.
 **Scripts:** beta2_arcflip_proof.py, beta2_surplus_zero_stability.py, beta2_arcflip_n7_sample.py,
   beta2_arcflip_mechanism.py, beta2_arcflip_counting.py, beta2_delta_ratio_*.py,
   beta2_min_surplus*.py, beta2_omega_ratio.py, beta2_injectivity_analysis.py, beta2_surplus_formula.py
-**Next step:** (1) Prove the key lemma: surplus(T') >= 0 for all arc flips, using THM-100
+**Next step:** (1) Prove the key lemma: surplus(T') >= 0 for all arc flips, using THM-121
   (2) Generalize Tang-Yau deformation retract to non-circulant tournaments
   (3) Prove beta_2 = 0 by induction on number of flips from transitive
 

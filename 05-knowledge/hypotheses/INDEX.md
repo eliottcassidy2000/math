@@ -12,7 +12,7 @@ Organized by topic. Each hypothesis has a detail file.
 ### CONFIRMED
 | ID | Statement | Why it works | Source |
 |----|-----------|-------------|--------|
-| HYP-001 | M[a,b] = M[b,a] (transfer matrix symmetric) | Unknown mechanism; verified n<=8 | INV-001 |
+| HYP-001 | M[a,b] = M[b,a] (transfer matrix symmetric) | PROVED by induction (THM-030, kind-pasteur-S25) | INV-001 |
 | HYP-002 | H(T) = H(T^op) | Even-r structure of W; THM-L | opus-S35c11 |
 | HYP-003 | M(r) symmetric for ALL r, not just r=1/2 | Unknown; verified n<=5 | opus-S35c11 |
 | HYP-004 | W(T,r) = (r-1/2)^{n-1} F(T, (2r+1)/(2r-1)) | Mobius transform; THM-K | opus-S35c11 |
@@ -24,23 +24,23 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-010 | Every SC tournament has involution anti-aut | Moon's theorem + Cauchy | THM-024 |
 | HYP-011 | F_k(T) = F_{n-1-k}(T^op) complement duality | Path reversal maps ascents to descents | worpitzky_F_at_2.py |
 | HYP-012 | Sum_T F(T,x) = A_n(x) * 2^{C(n,2)-(n-1)} | Each perm is HP of 2^{extra} tournaments | worpitzky_restricted_eulerian.py |
-| HYP-316 | beta_1*beta_3=0 for all tournaments (seesaw) | im(d_2) mediator: drops by 1 for beta_1>0, saturated for beta_3>0 | kind-pasteur-S45 |
+| HYP-316 | beta_1*beta_3=0 (seesaw) — PROVED for n<=7 only | im(d_2) mediator: drops by 1 for beta_1>0, saturated for beta_3>0. Open for n>=8. | kind-pasteur-S45 |
 | HYP-318 | ker(d_1) = C(n,2)-n+1 constant for all tournaments | im(d_1)=n-1 since tournaments weakly connected (Redei) | kind-pasteur-S45 |
 | HYP-320 | beta_1 in {0,1} only (never >1) | im(d_2) takes exactly 2 values, gap = 1 | kind-pasteur-S45 |
 | HYP-322 | beta_2=0 for all tournaments | Exhaustive n<=6, 1000 samples n=7,8: 0 violations | kind-pasteur-S45 |
 | HYP-323 | beta_5 first appears at n=8 | betti=[1,1,0,0,0,1,0,0] found at n=8 (~0.2%) | kind-pasteur-S45 |
 | HYP-324 | beta_4 can be >1 (value 5 observed at n=8) | Near-regular c3=20 tournament | kind-pasteur-S45 |
-| HYP-325 | THM-097: Disjoint support at Omega_2 (PROVED) | Each 2-path has at most 1 NA face => constraint matrix full rank | kind-pasteur-S45 |
+| HYP-325 | THM-119: Disjoint support at Omega_2 (PROVED) | Each 2-path has at most 1 NA face => constraint matrix full rank | kind-pasteur-S45 |
 | HYP-326 | beta_2=0 at n=9 (0/500) and n=10 (0/100) | Extends HYP-249/276. Now confirmed n<=10 | kind-pasteur-S45 |
 | HYP-327 | Removing 1 edge from tournament can create beta_2>0 | 13/500 at n=6 (2.6%). Completeness is SHARP condition | kind-pasteur-S45 |
 | HYP-328 | 3-path NA face distribution converges to 25/50/25 | NOT per-tournament (transitive=100/0/0). Average over ensemble only. Max dev: 0.75(n=5)->0.21(n=8) | kind-pasteur-S45 |
-| HYP-336 | dim(Omega_2) = C(n,3) + 2*c3 - e_cyc | PROVED: THM-097 gives dim=|A2|-#NA; |A2|=C(n,3)+2*c3 (HYP-268); #NA = e_cyc (edges in 3-cycles). Exhaustive n=4,5,6 | kind-pasteur-S45 |
+| HYP-336 | dim(Omega_2) = C(n,3) + 2*c3 - e_cyc | PROVED: THM-119 gives dim=|A2|-#NA; |A2|=C(n,3)+2*c3 (HYP-268); #NA = e_cyc (edges in 3-cycles). Exhaustive n=4,5,6 | kind-pasteur-S45 |
 | HYP-337 | e_cyc NOT determined by c3 alone | Multiple e_cyc values per c3 at n=5,6 (depends on cycle arrangement/sharing) | kind-pasteur-S45 |
 | HYP-338 | Defect rate wave: beta_1 decreasing, beta_3 increasing with n | n=5: (29.7%,0%), n=6: (14.6%,1%), n=7: (5.8%,7.2%), n=8: (1%,21%) | kind-pasteur-S45 |
 | HYP-339 | Adjacent-odd seesaw: beta_{2k-1}*beta_{2k+1}=0 for ALL tournaments | PERFECT: 0 violations in 1500+ samples n=6-8. Includes β₁β₃, β₃β₅, β₅β₇ | kind-pasteur-S45 |
 | HYP-340 | At most one nonzero beta_p (p>=1) in generic tournament | 99.8% at n=7, 100% at n=8 (500 samples). Rare exceptions: [1,1,0,0,1,0,0] at n=7 (0.1%) | kind-pasteur-S45 |
 | HYP-341 | beta_4 onset at n=7 (not n=8) | beta_4=6 (Paley T_7) and beta_4=1 found at n=7 with 1000 samples (0.2%). Missed in earlier 200-sample runs | kind-pasteur-S45 |
-| HYP-342 | beta_{2k-1} in {0,1} for ALL k and ALL tournaments | FURTHER REFUTED (S48): beta_3=2 at n=8 (0.08%). Boolean property ONLY holds for k=1 (beta_1 in {0,1} PROVED) and n<=7 for k=2. FALSE for k=2 at n>=8 and k>=3. | kind-pasteur-S45, corrected S46, S48 |
+| ~~HYP-342~~ | ~~beta_{2k-1} in {0,1} for ALL k~~ | **MOVED TO REFUTED**: beta_3=2 at n=8. Boolean only holds for k=1. See REFUTED section. | kind-pasteur-S48 |
 | HYP-343 | rank(d_2) takes exactly 2 values: {n-1, n} | EXHAUSTIVE n=6: {9,10}. Sampled n=7: {14,15}. rank(d_2)=n-1 iff beta_1=1. Equivalent to HYP-320 | kind-pasteur-S45 |
 | HYP-344 | beta_3+beta_4 coexistence extremely rare at n=8 | 0/1000 in large sample (SVD crash after), 1/300 in separate run. Rate < 0.3%. When present: beta_5=0 always | kind-pasteur-S45 |
 | HYP-345 | beta_3>0 forces beta_4=0 in generic tournaments | 43/43 at n=8 in first test, but 1 counterexample in 300 (beta_3=beta_4=1). MOSTLY true but not universal | kind-pasteur-S45 |
@@ -92,9 +92,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-390 | HEREDITARY SEESAW: beta_3(T)=1 => beta_1(T\v)=0 for ALL vertices v | n=6 exhaustive: 1920/1920, n=7: 700/700. STRONGER than seesaw (b1*b3=0 per tournament). Forces H_2(T,T\v)=0 for ALL v | kind-pasteur-S47 |
 | HYP-391 | chi_rel DICHOTOMY: good vertex => chi_rel=-1, bad vertex => chi_rel=0 | n=6: 1920/1920 chi_rel=-1 (all good). n=7: 316/316 good=-1, 34/34 bad=0. Follows from chi(T\v)=1 for good, 0 for bad | kind-pasteur-S47 |
 | HYP-392 | Relative complex concentrated in degree 3: H_p^rel=0 for p!=3 when beta_3(T)=1 | H_0^rel=0 (i_* iso on H_0), H_1^rel=0 (j_* surj from H_1=0), H_2^rel=0 (beta_1_Tv=0), higher=0 at tested n. Forces H_3^rel = -chi_rel | kind-pasteur-S47 |
-| HYP-390 | Score alone cannot predict beta_3(T\v): every score 0-6 has P(beta_3=1)>0 at n=7 | Sampled: all scores have 1-2% rate of beta_3=1 in deletion. No "guaranteed good" score | opus-S53 |
-| HYP-391 | 3-cycle count is constant per score sequence for beta_3=1 at n=7 | 12 score seqs observed, each with unique c3 count. Follows from Rédei formula c3 = C(n,3) - Σ C(d_i,2) | opus-S53 |
-| HYP-392 | Paley T_7 is the ONLY good-vertex-free tournament at n=7 (exhaustive) | 240/2097152 = all labelings of Paley. |Aut(T_7)|=21, 7!/21=240. All have beta_3=0. | opus-S53 |
+| HYP-404 | Score alone cannot predict beta_3(T\v): every score 0-6 has P(beta_3=1)>0 at n=7 | Sampled: all scores have 1-2% rate of beta_3=1 in deletion. No "guaranteed good" score | opus-S53 |
+| HYP-405 | 3-cycle count is constant per score sequence for beta_3=1 at n=7 | 12 score seqs observed, each with unique c3 count. Follows from Rédei formula c3 = C(n,3) - Σ C(d_i,2) | opus-S53 |
+| HYP-406 | Paley T_7 is the ONLY good-vertex-free tournament at n=7 (exhaustive) | 240/2097152 = all labelings of Paley. |Aut(T_7)|=21, 7!/21=240. All have beta_3=0. | opus-S53 |
 | HYP-393 | beta_3 ≤ 1 at n=7 EXHAUSTIVE (2,097,152 tournaments) | Case 1: 2,096,912 with good vertex → LES gives ≤1. Case 2: 240 Paley → beta_3=0 directly | opus-S53 |
 | HYP-394 | CONSECUTIVE SEESAW: beta_k * beta_{k+1} = 0 for ALL k≥1, ALL tournaments | **REFUTED at n=8** (kind-pasteur-S48): 3/2000 have beta_3=1 AND beta_4=1, confirmed by BOTH SVD and mod-p. Holds exhaustively n=6, sampled n=7 (3000). FAILS at n=8 (~0.15% rate). The opus proof architecture (LES reduction to H_4^rel=0) still works at n≤7 but not n≥8. | opus-S54, REFUTED kind-pasteur-S48 |
 | HYP-395 | BAD vertex ACYCLICITY: H_p(T,T\v) = 0 for ALL p when b3(T)=1 and b3(T\v)=1 | 80 b3=1 tournaments at n=7: 60/60 bad vertices have ALL relative homology = 0. FAILS at n=8: when rank(i_*)=0, H_4^rel=1 and H_3^rel=1. | opus-S54, updated kind-pasteur-S48 |
@@ -177,7 +177,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-220 | Arc-flip preserves β₂=0: surplus ≥ |drop| always | Exhaustive n=5 (10240 flips), n=6 (491520 flips), 0 violations | beta2_arcflip_proof.py |
 | HYP-221 | Surplus=0 stable: max_drop=0 from surplus=0 (n=5), surplus=1 (n=6) | Joint (δΩ₃,δZ₂) has δΩ₃≥δZ₂ always from tight cases | beta2_surplus_zero_stability.py |
 | HYP-222 | DT+cancellation fills Z₂ for ALL tournaments | Exhaustive n≤6 (1024+32768), 0 failures | THM-101, beta2_dt_cancel_filling.py |
-| HYP-227 | delta_\|A_3\| = (n-3)*delta_\|A_2\| under arc flip (THM-100) | PROVED algebraically; verified 0 violations n=4-9 | beta2_delta_ratio_proof.py |
+| HYP-227 | delta_\|A_3\| = (n-3)*delta_\|A_2\| under arc flip (THM-121) | PROVED algebraically; verified 0 violations n=4-9 | beta2_delta_ratio_proof.py |
 | HYP-228 | delta_\|A_2\| = 2(d_u - d_v - 1) under arc flip u->v | PROVED algebraically; verified 0 violations n=5-9 | beta2_delta_ratio_proof.py |
 | HYP-229 | Transitive tournament surplus = C(n-1,4) | Verified n=3-9. O2=C(n,3), O3=C(n,4), Z2=C(n-1,3) | beta2_min_surplus.py |
 | HYP-230 | Min surplus grows super-linearly: 0,1,9,<=25 for n=5,6,7,8 | Exact n=5,6; sampled n=7 (10k), n=8 (20k) | beta2_min_surplus.py |

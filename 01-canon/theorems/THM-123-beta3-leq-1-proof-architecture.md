@@ -1,4 +1,4 @@
-# THM-110: beta_3 <= 1 for All Tournaments — Proof Architecture
+# THM-123: beta_3 <= 1 for All Tournaments — Proof Architecture
 
 **Status:** PROVED EXHAUSTIVELY n≤7; **FALSE at n=8** (beta_3=2 exists, HYP-397)
 **Filed by:** kind-pasteur-2026-03-09-S46, updated opus-2026-03-09-S53, S55

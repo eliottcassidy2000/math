@@ -15,11 +15,11 @@ H(T) = number of Hamiltonian paths in tournament T on n vertices.
 | 2 | 1 | 1 | 1 | trivial |
 | 3 | 1 | 3 | 2 | `04-computation/tournament_lib.py` |
 | 4 | 1 | 5 | 4 | exhaustive |
-| 5 | 1 | 13 | 12 | exhaustive |
-| 6 | 1 | 45 | 56 | exhaustive |
-| 7 | 1 | 201 | 456 | exhaustive; max at Paley T_7 |
-| 8 | 1 | 761 | 6880 | `04-computation/bench_n8.py` |
-| 9 | 1 | 3441 | - | sampled |
+| 5 | 1 | 15 | 12 | exhaustive; OEIS A038375 |
+| 6 | 1 | 45 | 56 | exhaustive; OEIS A038375 |
+| 7 | 1 | 189 | 456 | exhaustive; max at Paley T_7; OEIS A038375 |
+| 8 | 1 | 661 | 6880 | exhaustive; SC maximizer; OEIS A038375 |
+| 9 | 1 | 3357 | - | sampled; OEIS A038375 |
 
 ## Key equations
 

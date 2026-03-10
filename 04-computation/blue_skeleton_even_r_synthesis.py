@@ -1,3 +1,10 @@
+# ⚠️ WARNING: This script conflates the tiling blue pair (flipping only non-path
+# arcs) with the tournament complement (flipping ALL arcs). The claim that
+# "BLUE PAIR HAS SAME TRANSFER MATRIX at odd n" is WRONG. M(T') ≠ M(T) in
+# general for either construction. The correct formula for the complement is:
+# M(T^c)[a,a] = M(T)[a,a] and M(T^c)[a,b] = -M(T)[a,b] for a≠b.
+# See MISTAKE-012.
+
 #!/usr/bin/env python3
 """
 SYNTHESIS: Blue pairs, even r-powers, and POS on the tiling skeleton.

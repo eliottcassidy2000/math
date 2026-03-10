@@ -1,4 +1,4 @@
-# THM-095: Arc-Flip Contraction Reduction
+# THM-116: Arc-Flip Contraction Reduction
 
 **Status:** PROVED
 **Proved by:** kind-pasteur-2026-03-07-S39b
@@ -46,7 +46,7 @@ since H(T \ e) = H(T' \ e'). □
 
 ## Auxiliary Results
 
-### THM-095a: Contraction Tournament Criterion
+### THM-116a: Contraction Tournament Criterion
 
 T/e (contraction of arc u -> v in tournament T) is itself a tournament if and only if u and v have identical out-neighborhoods on V \ {u,v}:
 
@@ -58,7 +58,7 @@ T[v][x] + (1 - T[u][x]) = 1, i.e., T[v][x] = T[u][x].
 
 Verified exhaustively at n=4,5 (0 errors). □
 
-### THM-095b: Contraction Tournament Probability
+### THM-116b: Contraction Tournament Probability
 
 The probability that T/e is a tournament (over uniform random tournament T and uniform random arc e) is (1/2)^{n-2}, achieved when all n-2 other vertices are beaten by both u and v, or both beat them.
 

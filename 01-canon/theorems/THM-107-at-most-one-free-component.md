@@ -2,7 +2,7 @@
 
 **Status:** PROVED (algebraically)
 **Filed by:** kind-pasteur-2026-03-08-S43
-**Depends on:** THM-103 (TT span), THM-104 (cycle sum equality), THM-105 (dominant vertex forcing), THM-106 (free cycle bridge)
+**Depends on:** THM-122 (TT span), THM-104 (cycle sum equality), THM-105 (dominant vertex forcing), THM-106 (free cycle bridge)
 
 ## Statement
 
@@ -15,7 +15,7 @@ A cycle C = {a,b,c} is **dominated** if some external vertex d satisfies d->a, d
 **b_1(T) <= 1** for all tournaments T, where b_1 = dim H_1(T) in GLMY path homology.
 
 This follows because:
-- b_1 = #{free components} (by THM-103 + THM-104 + THM-105)
+- b_1 = #{free components} (by THM-122 + THM-104 + THM-105)
 - #{free components} <= 1 (this theorem)
 
 ## Proof
@@ -85,6 +85,6 @@ Max free components always = 0 or 1.
 
 ## See Also
 - THM-102 (beta_2 proof status)
-- THM-103 (TT boundaries span im(d_2))
+- THM-122 (TT boundaries span im(d_2))
 - THM-106 (free cycle bridge theorem)
 - HYP-279 (b_1 <= 1, now PROVED as corollary)

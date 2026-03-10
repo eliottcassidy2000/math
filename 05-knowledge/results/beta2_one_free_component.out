@@ -65,7 +65,7 @@ THEOREM: In any tournament T on n >= 4 vertices, b1(T) <= 1.
 PROOF SKETCH:
 
 Step 1: b1 = #{free components of 3-cycle graph}
-  (Verified computationally n<=8, follows from THM-103 + THM-104 + THM-105)
+  (Verified computationally n<=8, follows from THM-122 + THM-104 + THM-105)
 
 Step 2: At most 1 free component.
   Suppose for contradiction that FC1 and FC2 are two free components.

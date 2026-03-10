@@ -1,4 +1,4 @@
-# THM-096: Trace-Cycle Identity for Tournaments
+# THM-118: Trace-Cycle Identity for Tournaments
 
 **Status:** PROVED
 **Proved by:** kind-pasteur-2026-03-07-S39b

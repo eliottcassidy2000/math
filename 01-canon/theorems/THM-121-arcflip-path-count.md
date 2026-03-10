@@ -1,4 +1,4 @@
-# THM-100: Arc-Flip Allowed Path Count Formulas
+# THM-121: Arc-Flip Allowed Path Count Formulas
 
 **Status:** PROVED (algebraic counting)
 **Filed:** kind-pasteur-2026-03-08-S41

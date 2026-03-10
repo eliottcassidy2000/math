@@ -1,6 +1,9 @@
 # THM-110: β₃(T) ≤ 1 for All Tournaments
 
-**Status:** PROVED (conditional on H_3(T,T\v) ≤ 1, verified exhaustive n≤6, sampled n≤8)
+> **NOTE:** This file's status is OUTDATED. β₃ = 2 exists at n=8 (MISTAKE-018, 0.08% rate).
+> See **THM-123-beta3-leq-1-proof-architecture.md** for the correct status.
+
+**Status:** FALSE at n>=8 (MISTAKE-018: beta_3=2 exists at n=8, 0.08% rate). Valid only for n<=7.
 **Filed by:** opus-2026-03-09-S52
 **Depends on:** THM-108 (β₂ = 0), THM-109 (good vertex existence for β₂)
 

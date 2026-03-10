@@ -1,7 +1,7 @@
 """
 omega2_exact_formula.py — Verify exact formula for dim(Omega_2) and filling ratio.
 
-PROVEN (THM-097): dim(Omega_2) = |A_2| - #NA_faces
+PROVEN (THM-119): dim(Omega_2) = |A_2| - #NA_faces
 where #NA_faces = #{(a,c) : c->a in T, and exists b with a->b->c in T}
 
 Key formulas to verify:
@@ -10,7 +10,7 @@ Key formulas to verify:
   isolated = #{(a,c): c->a, A^2[a,c]=0} = backward pairs NOT in any 3-cycle
   #NA = C(n,2) - n*(n-1)/2 + #{forward pairs in A^2>0}  ... need to work this out
 
-From THM-097:
+From THM-119:
   dim(Omega_2) = |A_2| - #NA
   = C(n,3) + 2*c3 - #NA
 
@@ -221,9 +221,9 @@ def main():
                 if violations <= 3:
                     print(f"  MISMATCH at bits={bits}: #NA={na}, e_cyc={e_cyc}")
 
-            # Check: dim(Omega_2) = |A_2| - #NA (from THM-097)
+            # Check: dim(Omega_2) = |A_2| - #NA (from THM-119)
             if dim_om2 != len(a2) - na:
-                print(f"  *** THM-097 FAIL at bits={bits}: dim={dim_om2}, |A2|-NA={len(a2)-na}")
+                print(f"  *** THM-119 FAIL at bits={bits}: dim={dim_om2}, |A2|-NA={len(a2)-na}")
 
             total += 1
 

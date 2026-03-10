@@ -1,8 +1,8 @@
 # THM-020: Real Roots of I(Omega(T), x)
 
-**Type:** Theorem (n<=8), Conjecture (general n)
-**Certainty:** 5 — PROVED for n<=8 via Chudnovsky-Seymour; computationally verified
-**Status:** PROVED for n<=8. Open for n>=9.
+**Type:** PROVED for n<=8, DISPROVED at n>=9 (THM-025 counterexample).
+**Certainty:** 5 — PROVED for n<=8 via Chudnovsky-Seymour; DISPROVED at n>=9.
+**Status:** PROVED for n<=8. DISPROVED at n>=9 (THM-025).
 **Added by:** kind-pasteur-2026-03-05-S13
 **Tags:** #omega #independence-polynomial #real-roots #claw-free #chudnovsky-seymour
 

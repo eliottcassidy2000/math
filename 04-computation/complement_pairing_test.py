@@ -1,3 +1,8 @@
+# ⚠️ WARNING: This script uses QR mod p for p ≡ 1 (mod 4), which does NOT
+# produce a tournament (S ∩ (-S) ≠ ∅ gives bidirectional edges).
+# Results for those primes are INVALID. See MISTAKE-011b.
+# Valid Paley tournaments require p ≡ 3 (mod 4).
+
 #!/usr/bin/env python3
 """
 TEST: Does the complement pairing E_a(S+a)*B_b(R+b) = E_a(R+a)*B_b(S+b)

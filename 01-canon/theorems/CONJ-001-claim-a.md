@@ -4,7 +4,7 @@
 **Certainty:** 5 — PROVED for all n
 **Status:** PROVED
 **Last reviewed:** kind-pasteur-2026-03-05-S12
-**Disputes:** RESOLVED (DISC-001 moot; OCF proved externally)
+**Disputes:** RESOLVED (02-court/resolved/DISC-001 moot; OCF proved externally)
 **Tags:** #claim-a #proved #vertex-deletion #hamiltonian-paths #grinberg-stanley
 
 ---

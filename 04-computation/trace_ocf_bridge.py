@@ -135,7 +135,7 @@ print("=" * 70)
 print("TRACE-OCF BRIDGE: per-vertex trace data and OCF")
 print("=" * 70)
 
-# Key identity from THM-096:
+# Key identity from THM-118:
 # (A^3)[v][v] = t_3(v) = # directed 3-cycles through v
 # (A^5)[v][v] = t_5(v) = # directed 5-cycles through v
 # Sum: sum_v t_k(v) = k * c_k (each k-cycle counted k times)

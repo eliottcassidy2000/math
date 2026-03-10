@@ -38,17 +38,19 @@ this gives Claim A. See CONJ-001, THM-002.
 
 ---
 
-## OPEN-Q-004 🟡
+## OPEN-Q-004 🟢
 **Find a correct per-path formula for all n**
 
 The 3-cycle-only formula (per-path identity) fails for n≥6. The natural generalization summing over all odd cycles overcounts. The maximal-embedding-only formula also fails. Is there a formula of the form Σ_{cycles C, (non-v consecutive in P')} f(C, P') = (inshat−1)/2 that works for all n?
 
+**Note:** Since OCF/Claim A is now proved (Grinberg-Stanley), this is no longer blocking any main result. Downgraded from 🟡 to 🟢.
+
 ---
 
-## OPEN-Q-005 🟡
+## OPEN-Q-005 -- RESOLVED
 **Combinatorial proof of the C(L-2, 2k-1) distribution (THM-007)**
 
-The number of internal signature patterns giving exactly k Type-II positions within an L-cycle embedding window is C(L-2, 2k-1). This is proved (verified computationally). A bijective proof connecting this to ballot sequences or Dyck paths is missing. See TANGENT T001.
+**RESOLVED (INV-029, opus-S5):** Bijective proof found. See INV-029 in INVESTIGATION-BACKLOG.md.
 
 ---
 
@@ -126,7 +128,7 @@ See THM-019 (corrected), `04-computation/omega_c5_test.py`, `04-computation/omeg
 
 ---
 
-## OPEN-Q-010 🟡
+## OPEN-Q-010 -- RESOLVED (NEGATIVE)
 **Per-path formula including 3-cycles AND 5-cycles at n=7**
 
 At n=7, mu(5-cycle) = 1 always (V\{v + 4 cycle vertices} has 2 vertices, no odd cycles). So 5-cycle contributions are "trivially weighted" just like 3-cycles at n<=5. A per-path formula summing over both 3-cycle and 5-cycle embeddings (each with their mu weights) might work at n=7. Test computationally.
@@ -436,7 +438,7 @@ Verified for k=1,2,3.
 ## OPEN-Q-023 -- RESOLVED
 **Prove: coeff(t_{2k+1}) in kappa_{2k} = 2/C(n, 2k) for all k.**
 
-**RESOLVED by opus-2026-03-07-S46e (THM-095):**
+**RESOLVED by opus-2026-03-07-S46e (THM-117, was THM-095):**
 
 PROVED algebraically. The proof has 5 steps:
 1. Forward path formula: #fwd(2k+1)path = Σ_S H(T[S]) (OCF on subtournaments)
@@ -447,7 +449,7 @@ PROVED algebraically. The proof has 5 steps:
 
 Verified algebraically for k=1,2,3,4 and n up to 12.
 
-**Source:** opus-2026-03-07-S46e, THM-095
+**Source:** opus-2026-03-07-S46e, THM-117
 
 ---
 

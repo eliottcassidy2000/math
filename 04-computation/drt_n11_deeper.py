@@ -1,3 +1,8 @@
+# ⚠️ WARNING: The connection set {1,2,3,5,8} does NOT give a tournament on Z_11
+# because S ∩ (-S mod 11) = {3,8} ≠ ∅. All results for this "DRT" are INVALID.
+# The ONLY valid circulant DRT at n=11 is the Paley tournament (QR={1,3,4,5,9}).
+# See MISTAKE-017.
+
 #!/usr/bin/env python3
 """Deeper analysis of DRTs at n=11."""
 import sys, os

@@ -1,3 +1,8 @@
+⚠️ OUTDATED: This result used only 1000 samples at n=8, insufficient to detect
+beta_3=2 which occurs at ~0.08% rate. Later runs with 5000 samples (beta3_bound_search.out,
+beta3_generator_support.out) found beta_3=2 at n=8 (4/5000 tournaments). See MISTAKE-018.
+The conclusion "beta_3 <= 1 verified" below is FALSE.
+
 beta3_large_n_hybrid.py
 Using compute_betti_hybrid (numpy int64 + mod-p Gauss)
 Verifying beta_3 <= 1 at n=8 and n=9

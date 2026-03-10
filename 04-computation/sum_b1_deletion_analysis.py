@@ -96,7 +96,7 @@ def compute_b1_fast(A, n):
     Actually, for speed, use the rank formula:
     b1 = dim(Z_1) - rank(d_2) where dim(Z_1) = C(n,2) - (n-1)
 
-    d_2 is the boundary map restricted to TT triples only (THM-103 says
+    d_2 is the boundary map restricted to TT triples only (THM-122 says
     TT boundaries span all of im(d_2)).
     """
     # Build TT triples

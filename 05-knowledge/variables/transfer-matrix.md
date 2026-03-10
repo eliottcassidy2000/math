@@ -19,7 +19,7 @@ where weights use prod(r + s_e).
 
 | Property | Status | Verified through | Source |
 |----------|--------|-----------------|--------|
-| M is symmetric: M[a,b] = M[b,a] | VERIFIED | n=8 (7500+ tests) | THM-M, opus-S35 |
+| M is symmetric: M[a,b] = M[b,a] | PROVED for all n | induction (THM-030) | kind-pasteur-S25 |
 | M(r) symmetric for ALL r | VERIFIED | n=5 | opus-S35c11 |
 | tr(M) = H for odd n | VERIFIED | n=7 | THM-053 |
 | M[a,a] = sum_P (-1)^{pos(a,P)} | PROVED | all n | THM-053 |
@@ -52,8 +52,8 @@ All diagonal entries are ODD (verified by M_n7_structure.py).
 - tr(c_{n-3}) = 2*(n-2)!*(t_3 - C(n,3)/4) — THM-054
 - Coefficient hierarchy: each level adds OCF invariants — THM-055
 
-## Highest priority
-PROVING M is symmetric would prove OCF. This is INV-001.
+## Status
+M symmetry is PROVED for all n by induction (THM-030, kind-pasteur-S25). OCF is also independently proved (Grinberg-Stanley, arXiv:2412.10572).
 
 ## Tags
 #transfer-matrix #symmetry #core #proof-target #INV-001

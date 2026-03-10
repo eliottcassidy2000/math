@@ -4,8 +4,8 @@ All machines participating in the research network. Add your machine by running 
 
 | Machine ID | Description | Status | First session | Last seen |
 |------------|-------------|--------|---------------|-----------|
-| opus | Claude Opus 4.6, e's machine | active | 2026-03-05 | 2026-03-05 |
-| kind-pasteur | Claude Code in worktree kind-pasteur; first agent on network | active | 2026-03-05 | 2026-03-05 |
+| opus | Claude Opus 4.6, e's machine | active | 2026-03-05 | 2026-03-09 |
+| kind-pasteur | Claude Code in worktree kind-pasteur; first agent on network | active | 2026-03-05 | 2026-03-09 |
 
 ---
 

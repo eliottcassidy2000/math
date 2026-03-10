@@ -21,7 +21,7 @@ That is: beta_1, beta_3, beta_5, ... can only be 0 or 1.
 
 ### Sampled verification
 - n=7 (1000 samples): beta_1 in {0,1}, beta_3 in {0,1}, beta_5 = 0
-- n=8 (300 samples): beta_1 in {0,1}, beta_3 in {0,1}, beta_5 in {0}
+- n=8 (300 samples): beta_1 in {0,1}, beta_3 in {0,1,2} -- Boolean property FALSE for beta_3 at n=8 (MISTAKE-018), beta_5 in {0,1}
 
 ### Contrast with even Betti numbers
 Even Betti numbers are NOT Boolean:

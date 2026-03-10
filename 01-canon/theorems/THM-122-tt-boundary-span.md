@@ -1,4 +1,4 @@
-# THM-103: TT Boundaries Span im(d_2)
+# THM-122: TT Boundaries Span im(d_2)
 
 **Status:** PROVED (computationally verified, algebraic proof straightforward)
 **Filed by:** kind-pasteur-2026-03-08-S43

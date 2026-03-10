@@ -73,8 +73,9 @@ Reference evidence, proofs, computations. Play devil's advocate if assigned.]*
 
 ## Active Cases
 
-- DISC-001: μ computation bug vs. paper's 0-failure verification claim (see active/)
+*(none)*
 
 ## Resolved Cases
 
-*(none yet)*
+- DISC-001: μ computation bug vs. paper's 0-failure verification claim (see resolved/)
+- DISC-002: OCF closed-form validity over all odd cycles (see resolved/)

@@ -1,4 +1,4 @@
-# THM-063: Trivariate Generating Function G_T(t, x)
+# THM-114: Trivariate Generating Function G_T(t, x)
 
 **Type:** Theorem (PROVED)
 **Certainty:** 5 -- PROVED (algebraic + verified computationally)

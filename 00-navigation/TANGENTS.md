@@ -84,8 +84,8 @@ Claim A is verified at n=7 by random sampling (3,500 pairs, 0 failures). Full ex
 **T015** #failure-characterization #n6 | certainty: high (RESOLVED) | source: MASTER_FINDINGS F5, FINAL_FINDINGS
 RESOLVED: The per-path identity fails iff some Type-II position has mu > 1, iff V\{v,a,b} contains a 3-cycle in T-v. See THM-009. The ~30% failure rate corresponds to the probability that complement vertices form a 3-cycle.
 
-**T021** #arc-reversal-invariance #sum-equality #key-step | certainty: high (key open problem) | source: file.txt
-Arc-reversal invariance D(T,v) = D(T',v) is the key unproved step. Requires showing sum_{C: i->j in C} H(T[V\V(C)]) = sum_{C': j->i in C'} H(T'[V\V(C')]). This is a SUM equality, not a bijection. Both sides can be expressed in terms of path-pairs in T_0 (T with arc (i,j) deleted), since T[V\V(C)] = T'[V\V(C)] when V(C) contains both i and j. See OPEN-Q-009.
+**T021** #arc-reversal-invariance #sum-equality | certainty: high (RESOLVED) | source: file.txt
+RESOLVED: Arc-reversal invariance is no longer a "key unproved step" since OCF is proved by Grinberg-Stanley (arXiv:2412.10572). The structural question (sum equality under arc flips) remains of independent interest. See OPEN-Q-009 (resolved).
 
 ---
 
@@ -164,7 +164,7 @@ I(Omega(T), 2) counts "2-colored vertex-disjoint odd cycle collections" in T. At
 **T047** #bracket-structure #subset-convolution #proof-strategy | certainty: high (algebraically verified) | source: opus-2026-03-05-S3
 KEY ALGEBRAIC INSIGHT for OCF proof. The subset convolution integrand B(u,w) = T[u][i]*T[j][w] - T[u][j]*T[i][w] has a 4-way type structure. Classifying V\{i,j} into M- (s=-1), M+ (s=+1), Z1 (s=0, beats both), Z0 (s=0, beaten by both): the bracket table is {M-: (1,0,0,1), M+: (0,-1,0,-1), Z1: (1,-1,0,0), Z0: (0,0,0,0)}. CRITICAL: Z0 rows and Z1 columns are ALL ZERO. This means vertices beaten by both i,j are invisible in u-position, vertices beating both are invisible in w-position. Delta_H = sum_S sum_{u in S, w in R} B(u,w)*h_end(S,u)*h_start(R,w) has only 6 nonzero bracket types. See bracket_structure.py.
 
-**T045** #transfer-matrix-symmetry #bilinear-form #proof-strategy | certainty: high (verified n=4,...,8, 7500+ tests) | source: opus-2026-03-05-S4b
+**T214** #transfer-matrix-symmetry #bilinear-form #proof-strategy | certainty: high (verified n=4,...,8, 7500+ tests) | source: opus-2026-03-05-S4b
 MAJOR DISCOVERY: The transfer matrix M[a,b] = sum_S (-1)^|S| E_a(S)*B_b(M\S) for a,b in {i,j} is ALWAYS SYMMETRIC. This means sum (-1)^|S| E_i(S)*B_j(R) = sum (-1)^|S| E_j(S)*B_i(R) — each cross-term individually agrees, not just their difference. The Even-Odd Split Lemma (T040/T044) is a COROLLARY: the off-diagonal symmetry implies the difference vanishes. This connects to Feng's Dual Burnside framework where Q=AB is symmetric when the underlying structure satisfies detailed balance. Proving M is symmetric would prove OCF. See 04-computation/symmetry_check.py and 03-artifacts/drafts/paper-connections.md.
 
 **T046** #tournament-representations #flip-classes #rank #proof-strategy | certainty: medium | source: opus-2026-03-05-S4b
@@ -248,7 +248,7 @@ Knuth's "Claude's Cycles" paper (Feb 2026): decomposing K_{m^3} into 3 Hamiltoni
 **T073** #irving-omar-schur #not-positive #barrier | certainty: high (published) | source: kind-pasteur-2026-03-05-S15
 Irving-Omar (arXiv:2412.10572, Prop 21): The Schur expansion of U_D is NOT always positive for digraphs with cycles. Example: a 4-vertex tree gives negative s_{(2,2)} coefficient. Schur-positivity holds only for ACYCLIC digraphs (Prop 23). This is a BARRIER: cannot prove real-rootedness of I(Omega(T),x) via Schur-positivity of the Redei-Berge function. However, Corollary 20 CONFIRMS our OCF: ham(D-bar) = sum_{sigma, all odd cycles} 2^{psi(sigma)}.
 
-**T065** #irving-omar #cayley-transform #real-roots #matrix-algebra | certainty: medium | source: opus-2026-03-05-S12
+**T215** #irving-omar #cayley-transform #real-roots #matrix-algebra | certainty: medium | source: opus-2026-03-05-S12
 Irving-Omar (arXiv:2412.10572) Corollary 20 proves OCF via matrix algebra: ham(D_bar) = sum over odd-cycle permutations of 2^{psi(sigma)}, derived from exp(sum_k tr(A^k) p_k/k). The ODD-cycle extraction uses arctanh-like splitting: sum_{k odd} tr(A^k)/k = (1/2)*tr(log((I+zA)/(I-zA))). This is the CAYLEY TRANSFORM of zA. For tournaments A = (J-I)/2 + S (S skew-symmetric), so the Cayley transform maps to an orthogonal-like structure. CREATIVE LEAD: If I(Omega(T), x) can be expressed as a determinant involving the Cayley transform of the tournament matrix, real roots would follow from the spectral theory of orthogonal/unitary matrices. The eigenvalues of P(p) are {(p-1)/2, (-1 +/- i*sqrt(p))/2} (Gauss sums), and alpha_3(P(11))/|Aut| = 21 = |Aut(P(7))| — suggesting deep number-theoretic structure in the independence polynomial coefficients.
 
 **T074** #discriminant #turan #real-roots #elementary | certainty: high (PROVED for n<=8) | source: opus-2026-03-06-S15
@@ -613,7 +613,7 @@ PARALLEL: OCF gives H = 1 + 2α₁ + 4α₂ + ..., and path homology gives χ = 
 THM-086 (c_j = 0 mod 3 for j < val(n)) implies ALL integer moments M_r = n!·E[fwd^r] ≡ 0 mod 3 for ALL r, not just r < val(n). This is because Stirling numbers S(r,j)·j! are divisible by 3 for j >= 3, amplifying the mod 3 vanishing to all moments. The centered moments also satisfy 2^r·n!·μ_r ≡ 0 mod 3.
 
 **T192** #universal-coefficient #cumulant-hierarchy #PROVED | certainty: high (PROVED) | source: opus-2026-03-07-S46e
-THM-095: coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k). PROVED via forward path formula + OCF + multinomial expansion. The factor 2 comes from OCF (each directed cycle contributes 2 to I(Ω,2)), and 1/C(n,2k) comes from the (2k)!·(n-2k)/P(n,2k+1) counting. Resolves OPEN-Q-023.
+THM-117 (was THM-095): coeff(t_{2k+1} in κ_{2k}) = 2/C(n,2k). PROVED via forward path formula + OCF + multinomial expansion. The factor 2 comes from OCF (each directed cycle contributes 2 to I(Ω,2)), and 1/C(n,2k) comes from the (2k)!·(n-2k)/P(n,2k+1) counting. Resolves OPEN-Q-023.
 
 **T193** #celano-sieger-spiro #descent-polynomial #NOT-same | certainty: high | source: opus-2026-03-07-S46e
 CLARIFICATION: The Celano-Sieger-Spiro polynomial A_T(t) (arXiv:2309.07240) is NOT the same as our F(T,x). A_T(t) counts descents across ALL arcs (degree C(n,2)), while F(T,x) counts forward edges along Hamiltonian paths (degree n-1). The (1+t)^{floor(n/2)} divisibility applies to A_T(t), not F(T,x). The two encode different statistics.

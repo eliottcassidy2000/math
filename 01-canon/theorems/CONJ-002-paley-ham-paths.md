@@ -26,7 +26,7 @@ where |Aut(T_p)| = p(p−1)/2.
 | 3 | 3 | 1 | 3 | 3 | ✓ |
 | 7 | 21 | 9 | 189 | 189 | ✓ |
 | 11 | 55 | 81 | 4455 | **95095** | REFUTED |
-| 19 | 171 | 3^8=6561 | 1,121,931 | unknown | open |
+| 19 | 171 | 3^8=6561 | 1,121,931 | 1,172,695,746,915 | REFUTED |
 
 *Note: p=5 gives H(T₅) = 15 = 5·3 = |Aut(T₅)|·3^1. ✓*
 
@@ -60,7 +60,9 @@ The c₉ constraint (c₉ ≤ 258) was violated by a factor of ~43.
 | 10 | 10681 | 11 | 971 | YES |
 | 11 | 5505 | 1 | 5505 | YES |
 
-**Structural observation**: c_k(T_11)/C(11,k) is an integer for k >= 6 = (p+1)/2. This appears to be a genuine structural theorem about Paley tournaments (see TANGENTS).
+**Structural observation**: c_k(T_11)/C(11,k) is an integer for k >= 7 = (p+3)/2. Note c_6=1595 is NOT divisible by C(11,6)=462 (1595/462 = 145/42). The correct integrality threshold is k >= (p+3)/2, not (p+1)/2.
+
+**p=19 data**: H(T_19) = 1,172,695,746,915, |Aut|=171, H/|Aut|=6,857,869,865.
 
 **OCF verification for T_11** (other.txt, cross-confirmed with H=95095):
   95095 = 1 + 2*(55+594+3960+11055+5505) + 4*10879 + 8*1155

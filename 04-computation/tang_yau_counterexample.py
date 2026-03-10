@@ -1,3 +1,8 @@
+# ⚠️ WARNING: This script uses QR mod p for p ≡ 1 (mod 4), which does NOT
+# produce a tournament (S ∩ (-S) ≠ ∅ gives bidirectional edges).
+# Results for those primes are INVALID. See MISTAKE-011b.
+# Valid Paley tournaments require p ≡ 3 (mod 4).
+
 #!/usr/bin/env python3
 """
 tang_yau_counterexample.py - Test Tang-Yau Conjecture 4.8

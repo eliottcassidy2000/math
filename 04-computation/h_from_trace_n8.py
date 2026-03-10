@@ -58,7 +58,7 @@ def c7_via_subtournaments(T):
         # At k=7 on 7 vertices: the only non-simple walks would be (3,4) compound.
         # But 3+4-1=6 <= 7, so these CAN exist! So tr(A^7) != 7*c_7 at n=7.
         # Hmm, this means we can't use tr(A^7)/7 directly. Need the correction.
-        # Actually wait: THM-096 says tr(A^k) = k*c_k for k=3,4,5 ONLY.
+        # Actually wait: THM-118 says tr(A^k) = k*c_k for k=3,4,5 ONLY.
         # At k=7 on 7 vertices, the correction is needed.
 
         # Use subset DP instead

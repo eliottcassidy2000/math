@@ -2,7 +2,7 @@
 
 **Type:** Theorem (partial) / Strong Conjecture
 **Certainty:** 4 -- PROVED for n <= 7, strong evidence for all n
-**Status:** PROVED through n=7 (exhaustive), conjectured for all n
+**Status:** PROVED through n=7 (exhaustive), conjectured for all n. See THM-079-h21-component-reduction.md for the complete proof framework for ALL n.
 **Added by:** opus-2026-03-07-S38
 **Tags:** #converse-redei #h-spectrum #permanent-gap #ocf
 

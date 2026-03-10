@@ -1,6 +1,6 @@
-# THM-075: H=21 Permanent Gap Conjecture
+# THM-115: H=21 Permanent Gap Conjecture
 
-**Status:** CONJECTURED (exhaustive through n=7, sampling through n=9)
+**Status:** CONJECTURED (exhaustive through n=7, sampling through n=9). See THM-079-h21-component-reduction.md for the complete proof framework for ALL n.
 **Discovered by:** kind-pasteur-2026-03-07-S31
 
 ## Statement

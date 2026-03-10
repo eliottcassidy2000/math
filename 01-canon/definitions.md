@@ -46,7 +46,7 @@ Last reviewed: SYSTEM-2026-03-05-S1
 
 **T−v**: the tournament T with vertex v and all incident arcs removed.
 
-**Claim A** (central open problem): H(T) − H(T−v) = 2 Σ_{C∋v} μ(C), summing over all directed odd cycles C through v.
+**Claim A** (PROVED — Grinberg-Stanley, arXiv:2412.10572; see CONJ-001): H(T) − H(T−v) = 2 Σ_{C∋v} μ(C), summing over all directed odd cycles C through v.
 
 **Claim B** (proved): I(Ω(T), 2) − I(Ω(T−v), 2) = 2 Σ_{C∋v} μ(C).
 
@@ -72,7 +72,7 @@ Last reviewed: SYSTEM-2026-03-05-S1
 
 ## Key Identities (Reference)
 
-- inshat(v, P') is always odd (verified n≤6).
+- inshat(v, P') is always odd (proved for all n — inshat = 1 + 2*#TypeII, Lemma 5.3 in paper).
 - (inshat(v,P') − 1)/2 = #{Type-II positions in P'} [algebraic identity, THM-004]
 - #{Type-II positions in P'} = #{directed 3-cycles (v,a,b) : (a,b) consecutive in P'} [bijection, THM-005]
 - insact(v, P') = B_v(P') + S_v(P') [proved, THM verified n≤6]

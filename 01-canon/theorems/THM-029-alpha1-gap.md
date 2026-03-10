@@ -1,6 +1,6 @@
 # THM-029: H=7 Impossibility (corrected)
 
-**Status:** VERIFIED (exhaustive n=3 through n=6, sampling n=7,8)
+**Status:** PROVED for all n.
 **Added:** kind-pasteur-2026-03-06-S21
 **Corrected:** kind-pasteur-2026-03-06-S22 (alpha_1=3 achievable at n>=7)
 

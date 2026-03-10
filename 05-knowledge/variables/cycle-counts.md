@@ -32,7 +32,7 @@ Appear in higher-order OCF decomposition. Values at n=7:
 - **c_2 at n=7:** c_2 = 24*bc33 - 60*t_3 + 12*t_5 + 231
 - **c_0 at n=7:** c_0 = 2*t_3 - t_5 + 2*t_7 - 2*bc33 + 253/4
 - **c_2 at n=9:** c_2 = 462*t_3 - 60*t_5 + 12*t_7 - 120*bc33 + 24*bc35_w + 48*a3 - 2640
-- **H at n=7:** H = 1 + 2*(t_3 + t_5 + t_7) + 4*bc33 [approximate; needs verification]
+- **H at n=7:** H = 1 + 2*(t_3 + t_5 + t_7) + 4*bc33 [EXACT — proved via OCF, THM-002]
 - **Char poly connection:** tr(A^3) = 3*t_3
 
 ## Relationships

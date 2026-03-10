@@ -21,7 +21,7 @@
 **What survives at n=8:**
 - H_0 = Z always
 - beta_2 = 0 always (=> THM-095 seesaw beta_1*beta_3=0 is safe)
-- beta_1 in {0,1}, beta_3 in {0,1}
+- beta_1 in {0,1}, beta_3 in {0,1,2} (MISTAKE-018: beta_3=2 found at 0.08% rate)
 - beta_1 and beta_3 never both nonzero
 
 **What breaks at n=8:**
@@ -82,9 +82,8 @@ Since at most one odd beta is 1: chi in {0, 1}.
 1. **Prove even-Betti vanishing algebraically.** This is the main gap.
    Why does ker(d_{2k}) = im(d_{2k+1}) exactly for all tournaments?
 
-2. **Does beta_5 ever appear?** Not found at n <= 9 (500+ samples).
-   If so, when? The onset pattern beta_1 at n=3, beta_3 at n=6 suggests
-   beta_5 at n=9 or later, but 500 random n=9 found zero.
+2. **beta_5 onset at n=8** (HYP-323, kind-pasteur-S45). The onset pattern is:
+   beta_1 at n=3, beta_3 at n=6, beta_5 at n=8.
 
 3. **Does the simplicity extend to n >= 9?** The real-roots counterexample
    (THM-025) at n=9 suggests pathology may arise. Does homology simplicity

@@ -1,8 +1,8 @@
 # THM-052: Vertex-Transitive Tournaments Have Scalar Transfer Matrix
 
-**Status:** PROVED (algebraic proof + exhaustive verification n=3,5,7,9)
+**Status:** FALSE for general VT tournaments (MISTAKE-013/014: Frobenius F_21 counterexample at n=21). Valid only for self-converse VT tournaments. See THM-113-circulant-scalar-M.md for the correct scope.
 **Added:** opus-2026-03-06-S26
-**Strengthened:** opus-2026-03-06-S26 (extended from circulant to vertex-transitive)
+**Strengthened:** opus-2026-03-06-S26 (extended from circulant to vertex-transitive — LATER DISPROVED for non-SC VT)
 
 ## Statement
 

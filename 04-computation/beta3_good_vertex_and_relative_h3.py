@@ -1,3 +1,7 @@
+# ⚠️ WARNING: This script assumes beta_3 ≤ 1 for all tournaments, which is
+# FALSE at n=8 (beta_3=2 found in 0.08% of tournaments). See MISTAKE-018.
+# Results are valid only for n ≤ 7.
+
 """
 beta3_good_vertex_and_relative_h3.py — Two key ingredients for beta_3 <= 1 proof
 
