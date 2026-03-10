@@ -15,6 +15,8 @@ This document summarizes research at the intersection of tournament combinatoric
 
 Throughout, T denotes a tournament on n vertices, H(T) the number of directed Hamiltonian paths, and T^op the complement tournament (all arcs reversed).
 
+5. **OEIS sequence extensions** — high-performance Burnside enumeration producing ~12,000 new terms across 90+ sequences
+
 ### What is genuinely new
 
 The following results appear to be new contributions not found in prior literature:
@@ -187,9 +189,43 @@ Verified: exhaustive at n = 3,4,5; 100% at n = 6,7,8 by sampling. Zero violation
 
 ---
 
-## 6. GLMY Path Homology of Tournaments
+## 6. OEIS Sequence Extensions
 
-### 6.1 Background
+The largest concrete output of this project is a collection of high-performance enumerators extending 90+ sequences in the OEIS with approximately 12,000 new terms.
+
+### 6.1 Headline Results
+
+| Sequence | Description | OEIS had | We computed to | New terms |
+|----------|-------------|----------|----------------|-----------|
+| A000568 | Tournaments | n=77 | n=200+ | 123+ |
+| A000273 | Directed graphs | n=65 | n=101 | 36 |
+| A001174 | Oriented graphs | n=50 | n=200 | 150 |
+| A000595 | Binary relations | n=51 | n=200 | 149 |
+| A000171 | Self-complementary graphs | n=100 | n=439+ | 339+ |
+| A002785 | Self-comp oriented graphs | n=100 | n=300 | 200 |
+| A051240 | 4-uniform hypergraphs | n=19 | n=77+ | 58+ |
+| A052283 | Digraphs by arc count (triangle) | 2,681 entries | 9,020 entries | 6,340 |
+| A028657 | m x n binary matrices (triangle) | ~1,081 entries | 3,000+ entries | 2,000+ |
+
+Plus k-uniform hypergraphs (k=3-10), k-ary relations (k=3-10, including 40+ potentially new sequences not in OEIS), matrix sequences, multigraph sequences, and 15+ connected variants via inverse Euler transform.
+
+### 6.2 Algorithmic Innovations
+
+1. **LCD-scaled integer accumulation** for Burnside enumeration: precompute the LCD of all denominators and work entirely in GMP integers, avoiding all rational arithmetic. For A000568 at n=150, this gives a 250-1600x speedup over Python/gmpy2.
+
+2. **Divisor-signature Mobius inversion** for k-uniform hypergraphs: replaces Burnside orbit-counting with closed-form cycle index evaluation on the divisor lattice. 64x faster for A051240 (k=4), 17x for A051249 (k=5).
+
+3. **Generating function trick** for matrix enumeration: fixes the row partition and sums over column partitions via exponential GF recurrence, reducing O(p(n)^2) to O(p(n) * n^2). For triple-partition sequences (A091058 family), reduces O(p(n)^3) to O(p(n)^2 * n^2).
+
+4. **OpenMP parallelization**: ~7-8x speedup on 8 cores for the most expensive sequences.
+
+All enumerator source code is in `04-computation/`. The unified enumerator `burnside_enum_v2.c` handles 12 different OEIS sequences from a single parametric framework.
+
+---
+
+## 7. GLMY Path Homology of Tournaments
+
+### 7.1 Background
 
 The **GLMY path homology** (Grigor'yan-Lin-Muranov-Yau) associates to any directed graph a chain complex (Omega_*, d_*) where:
 - Omega_0 = R^{vertices}
@@ -198,7 +234,7 @@ The **GLMY path homology** (Grigor'yan-Lin-Muranov-Yau) associates to any direct
 
 The **Betti numbers** beta_p = dim(ker d_p / im d_{p+1}) measure p-dimensional "holes" in the directed graph.
 
-### 6.2 Betti Number Landscape
+### 7.2 Betti Number Landscape
 
 Exhaustive computation through n = 6 and extensive sampling through n = 10 reveals:
 
@@ -213,12 +249,12 @@ Exhaustive computation through n = 6 and extensive sampling through n = 10 revea
 
 - beta_0 = 1 always (tournaments are weakly connected)
 - beta_1 in {0, 1} (proved, THM-103)
-- **beta_2 = 0 universally** (proved, THM-108/109; see Section 6.3)
+- **beta_2 = 0 universally** (proved, THM-108/109; see Section 7.3)
 - **beta_3 can reach 2** at n = 8 (0.08% of tournaments), previously thought bounded by 1
 - beta_1 * beta_3 = 0 (proved for n <= 7; **mutual exclusivity**). At n = 8, beta_3 * beta_4 = 1 CAN coexist ("consecutive seesaw" fails)
 - beta(T) = beta(T^op) (complement invariance, proved at n = 5, verified through n = 8)
 
-### 6.3 The beta_2 = 0 Theorem
+### 7.3 The beta_2 = 0 Theorem
 
 **Theorem (THM-108/109).** For every tournament T, beta_2(T) = 0 in GLMY path homology.
 
@@ -252,7 +288,7 @@ Four cases:
 - **HYP-384:** The restriction map res: Z_1(T) -> direct_sum_v H_1(T\v) is always surjective
 - The bad indicator vector d(T) = (beta_1(T\v_1), ..., beta_1(T\v_n)) spans all of R^n — no fixed subspace constraint exists
 
-### 6.4 Higher Betti Numbers: The n = 8 Threshold
+### 7.4 Higher Betti Numbers: The n = 8 Threshold
 
 At n = 8, several patterns that held for smaller tournaments break:
 
@@ -265,7 +301,7 @@ At n = 8, several patterns that held for smaller tournaments break:
 
 These failures mean proof strategies that work at n <= 7 (relative acyclicity, quasi-isomorphism of good vertex inclusions) cannot extend directly.
 
-### 6.5 Paley Tournament Homology
+### 7.5 Paley Tournament Homology
 
 For the **Paley tournament** T_p (p prime, p = 3 mod 4), where a->b iff b-a is a quadratic residue mod p:
 
@@ -277,9 +313,9 @@ Verified: P_7 has beta = (1,0,0,0,6,0) and P_11 has beta_8 = 10.
 
 ---
 
-## 7. Spectrum and Extremal Results
+## 8. Spectrum and Extremal Results
 
-### 7.1 Hamiltonian Path Spectrum
+### 8.1 Hamiltonian Path Spectrum
 
 **Permanent gaps in the H-spectrum:**
 
@@ -289,13 +325,13 @@ Verified: P_7 has beta = (1,0,0,0,6,0) and P_11 has beta_8 = 10.
 
 At n = 7: the H-spectrum contains 77 distinct odd values in [1, 189].
 
-### 7.2 Paley Maximization
+### 8.2 Paley Maximization
 
 **Conjecture.** Among all tournaments on p vertices (p prime, p = 3 mod 4), the Paley tournament T_p maximizes H(T).
 
 Verified: H(T_3) = 3, H(T_7) = 189, H(T_11) = 95,095.
 
-### 7.3 Real-Rootedness of I(Omega(T), x)
+### 8.3 Real-Rootedness of I(Omega(T), x)
 
 **Theorem (THM-020/021).** I(Omega(T), x) has all real roots for n <= 8.
 
@@ -303,13 +339,13 @@ Verified: H(T_3) = 3, H(T_7) = 189, H(T_11) = 95,095.
 
 ---
 
-## 8. The Pin Grid and Symmetry
+## 9. The Pin Grid and Symmetry
 
-### 8.1 Tiling Model
+### 9.1 Tiling Model
 
 A tournament on vertices {1, ..., n} with a fixed base path P_0 = (n, n-1, ..., 1) is encoded by a binary tiling t in {0,1}^m of the **pin grid** Grid(n) = {(r,c) : r >= 1, c >= 1, r+c <= n-1}, where m = C(n-1, 2). The grid is isomorphic to the staircase Young diagram delta_{n-2}.
 
-### 8.2 Symmetry Group
+### 9.2 Symmetry Group
 
 The pin grid has symmetry group S_3 x Z_2 (the prism group), generated by:
 - sigma: reflection swapping rows and columns
@@ -322,15 +358,15 @@ The pin grid has symmetry group S_3 x Z_2 (the prism group), generated by:
 
 The **double Burnside formula** counts isomorphism classes under position permutations and grid symmetries simultaneously.
 
-### 8.3 Connection to Self-Evacuating Standard Young Tableaux
+### 9.3 Connection to Self-Evacuating Standard Young Tableaux
 
 **Theorem (THM-035).** The number of self-evacuating SYT of shape delta_{n-2} equals 2^{m^2} = |Fix(sigma)| for n = 2m+1. All hook lengths of delta_{n-2} are odd.
 
 ---
 
-## 9. Computational Complexity and Algorithmic Implications
+## 10. Computational Complexity and Algorithmic Implications
 
-### 9.1 The Counting Problem
+### 10.1 The Counting Problem
 
 Counting Hamiltonian paths in a tournament is #P-complete in general. The standard approaches are:
 
@@ -342,7 +378,7 @@ Counting Hamiltonian paths in a tournament is #P-complete in general. The standa
 
 The OCF and Walsh-Fourier results open new algorithmic avenues.
 
-### 9.2 OCF-Based Computation
+### 10.2 OCF-Based Computation
 
 The formula H(T) = I(Omega(T), 2) replaces the path-counting problem with an independence polynomial evaluation on the cycle conflict graph. When the conflict graph is small or structured, this can be dramatically faster:
 
@@ -351,7 +387,7 @@ The formula H(T) = I(Omega(T), 2) replaces the path-counting problem with an ind
 
 However, independence polynomial evaluation is itself #P-complete in general, so the OCF does not change the worst-case complexity class. The practical gain comes from the fact that for most "interesting" tournaments, the number of odd cycles is manageable.
 
-### 9.3 Trace Formula Speedups
+### 10.3 Trace Formula Speedups
 
 The OCF decomposition H = 1 + 2*alpha_1 + 4*alpha_2 + ... admits efficient computation of individual terms via matrix traces:
 
@@ -360,7 +396,7 @@ The OCF decomposition H = 1 + 2*alpha_1 + 4*alpha_2 + ... admits efficient compu
 
 For moderate n, the trace formula approach effectively reduces practical complexity from O(2^n * n^2) to O(n^5), since cycle counts are computable in O(n^3) via matrix traces. For tournaments with few long cycles (common in real-world preference data), the speedup is even larger since higher-order terms vanish.
 
-### 9.4 Walsh-Fourier Dimensionality Reduction
+### 10.4 Walsh-Fourier Dimensionality Reduction
 
 The Walsh decomposition reveals that H(T), viewed as a function on the 2^m-dimensional space of all tournaments, is supported on a dramatically smaller subspace:
 
@@ -371,7 +407,7 @@ The Walsh decomposition reveals that H(T), viewed as a function on the 2^m-dimen
 
 This means that **the entire function H can be reconstructed from a tiny fraction of its Walsh spectrum**, enabling compressed sensing-style approaches to tournament analysis. The reduction breaks down at n >= 9, where the degree-4 Walsh space has dimension > 200.
 
-### 9.5 Burnside Enumeration Speedups
+### 10.5 Burnside Enumeration Speedups
 
 The symmetry analysis yields closed-form speedups for enumerating tournament isomorphism classes:
 
@@ -380,9 +416,9 @@ The symmetry analysis yields closed-form speedups for enumerating tournament iso
 
 ---
 
-## 10. Connections to Other Fields
+## 11. Connections to Other Fields
 
-### 10.1 Algebraic Topology
+### 11.1 Algebraic Topology
 
 The GLMY path homology program connects tournament combinatorics to **directed algebraic topology**. Key connections:
 
@@ -390,7 +426,7 @@ The GLMY path homology program connects tournament combinatorics to **directed a
 - **Twin vertex mechanism.** All beta_2 > 0 counterexamples in oriented graphs have twin vertices (identical neighborhoods). Tournament completeness forbids twins, suggesting the proof must use this algebraically.
 - **Persistent path homology:** Chowdhury, Huntsman, and Yutin (2022) applied path homology to temporal networks; our beta_2 = 0 provides a null model for tournaments as a baseline.
 
-### 10.2 Spectral Graph Theory
+### 11.2 Spectral Graph Theory
 
 The Walsh-Fourier program is fundamentally spectral:
 
@@ -398,19 +434,19 @@ The Walsh-Fourier program is fundamentally spectral:
 - The signed adjacency matrix B = 2A - J is **skew-symmetric** with purely imaginary eigenvalues for tournaments; the signed permanent S(T) = sum_P prod B[P_i, P_{i+1}] connects to the **Pfaffian** and determinantal identities.
 - For Paley tournaments, the eigenvalues involve **Gauss sums** g = sum_{a mod p} chi(a) * omega^a, connecting to deep number theory.
 
-### 10.3 Number Theory
+### 11.3 Number Theory
 
 - **Quadratic residues and Paley tournaments:** The Paley tournament T_p (p = 3 mod 4) uses the Legendre symbol to define edges. Its homological properties (beta_{p-3} = p-1, all other beta = 0) likely connect to the arithmetic of the field F_p.
 - **Binary digit sums:** The universality criterion for the signed permanent (s_2(n-3) <= 1) is a **Kummer-type condition** reminiscent of carry-counting in binomial coefficient divisibility.
 - **2-adic structure:** The OCF gives H(T) = 1 + 2*alpha_1 + 4*alpha_2 + ..., a natural 2-adic expansion. The 2-adic valuation v_2(H(T) - 1) = min{k : alpha_k != 0} is a new tournament invariant.
 
-### 10.4 Representation Theory
+### 11.4 Representation Theory
 
 - The S_3 x Z_2 symmetry group of the pin grid acts on tournament invariants, connecting to the **representation theory of the symmetric group** via Young diagrams.
 - The self-evacuating SYT count matching |Fix(sigma)| suggests a connection to **Schützenberger involution** and the theory of **jeu de taquin**.
 - The Walsh-Fourier decomposition can be viewed as decomposition under the action of the **Boolean group** (Z_2)^m, connecting to Boolean function analysis and the theory of influences.
 
-### 10.5 P-Partition Theory and Poset Combinatorics
+### 11.5 P-Partition Theory and Poset Combinatorics
 
 The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symmetric function** W_X, connecting tournament path counting to:
 
@@ -418,7 +454,7 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 - **Hopf algebra structure:** The deletion-contraction structure of the OCF suggests a **combinatorial Hopf algebra** on tournaments, analogous to the chromatic Hopf algebra of graphs.
 - **Quasisymmetric functions:** The W-polynomial W(T, r) may admit a natural expansion in quasisymmetric functions.
 
-### 10.6 Applications Beyond Pure Mathematics
+### 11.6 Applications Beyond Pure Mathematics
 
 **Ranking and social choice.** Tournaments encode pairwise majority preferences. The OCF reveals that the number of consistent total orders (Kemeny rankings) is controlled by the cycle structure of the majority graph. This is directly relevant to:
 
@@ -432,7 +468,7 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 
 ---
 
-## 11. Status Summary
+## 12. Status Summary
 
 ### Proved
 - Redei's theorem (4 independent routes)
@@ -466,7 +502,7 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 
 ---
 
-## 12. References
+## 13. References
 
 - N. Alon, *The maximum number of Hamiltonian paths in tournaments*, Combinatorica 10 (1990), 319-324
 - J. Chapman, *Alternating sign matrices and tournaments*, Adv. in Appl. Math. 27 (2001), 318-335

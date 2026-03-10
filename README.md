@@ -170,3 +170,4 @@ This is a multi-agent research project where multiple Claude instances collabora
 - L. Redei. *Ein kombinatorischer Satz.* Acta Litt. Sci. Szeged 7 (1934), 39-43.
 - J.W. Moon. *Topics on Tournaments.* Holt, Rinehart and Winston (1968).
 - R. Forcade. *Parity of paths and circuits in tournaments.* Discrete Math. 6 (1973), 115-118.
+- R. Tang, S.-T. Yau. *Homology of tournaments and path homology.* arXiv:2602.04140 (2026).
