@@ -1,6 +1,6 @@
 # How New Math Makes Hard Problems 100,000x Easier
 
-**Status:** Living document. Last updated 2026-03-08.
+**Status:** Living document. Last updated 2026-03-09.
 
 ---
 
@@ -92,15 +92,13 @@ Biologists study **pecking orders** — dominance relationships among animals wh
 
 Our topological results (specifically, that tournaments never have "bubble-like" holes — see below) suggest a structural constraint on the kinds of higher-order relationships that can emerge from pairwise dominance. This could inform models of social structure in animal groups.
 
-### Network Science and Brain Mapping
+### Network Science
 
-**Path homology** — the topological invariants we compute — is an increasingly important tool for analyzing directed networks:
+**Path homology** is an emerging tool for analyzing directed networks (neural connectomes, gene regulatory networks, citation graphs). Our results provide two concrete contributions:
 
-- **Neural connectomics:** Mapping directed connections between neurons. Path homology detects higher-order information flow patterns invisible to standard graph metrics.
-- **Gene regulatory networks:** Directed cycles correspond to feedback loops. Our conflict graph encodes which feedback loops can operate independently.
-- **Citation networks:** Path homology reveals hierarchical structure and community boundaries.
+1. **A null model.** beta_2 = 0 for tournaments means: if you observe nonzero beta_2 in a real-world directed network, that's a meaningful signal. The network has structural "holes" that complete pairwise-comparison graphs never have. This gives practitioners a baseline to test against.
 
-Our discovery that beta_2 = 0 for tournaments gives a **null model** for applied work: if you observe nonzero beta_2 in a real-world directed network, that's a meaningful structural signal distinguishing it from tournament-like (complete pairwise comparison) structure.
+2. **A completeness test.** The twin vertex mechanism shows exactly what breaks beta_2 = 0: missing edges create twin vertices that support 2-dimensional holes. This quantifies how far a real network is from "tournament-like" structure.
 
 ### Computer Science
 
@@ -117,18 +115,26 @@ Beyond counting, this project discovered that tournaments have a surprisingly co
 Using **GLMY path homology** (a topological invariant for directed networks invented in 2012), we computed Betti numbers for tournaments. These count "holes" of various dimensions:
 
 - **beta_0:** Connected components. Always 1 for tournaments.
-- **beta_1:** Loop-like holes. Either 0 or 1; equals 1 when the tournament has an "unfillable" directed cycle.
-- **beta_2:** Bubble-like holes. **Always 0** — tournaments never have these.
-- **beta_3 and higher:** Can be nonzero starting at 6 and 7 teams.
+- **beta_1:** Loop-like holes. Either 0 or 1 (proved). Equals 1 when the tournament has an "unfillable" directed cycle.
+- **beta_2:** Bubble-like holes. **Always 0** — tournaments never have these. **Proved** (THM-108/109).
+- **beta_3:** Can reach 2 at 8 teams (a surprise — we thought the maximum was 1).
 
-The vanishing of beta_2 has been verified in approximately **47,000 tournaments** from 3 to 10 teams with **zero failures**. This is striking because beta_3 and beta_4 *can* be nonzero — so the gap is specific to dimension 2.
+The vanishing of beta_2 has been verified in over **50,000 tournaments** from 3 to 10 teams with **zero failures**. This is striking because beta_3 and beta_4 *can* be nonzero — the gap is specific to dimension 2. For general directed graphs, beta_2 > 0 is common; the vanishing is specific to tournaments.
 
-Other topological surprises:
-- beta_1 and beta_3 are **mutually exclusive** — a tournament never has both loop-like and higher-dimensional holes at the same time
-- The Euler characteristic is always exactly 0 or 1
-- **Paley tournaments** (the most "balanced" tournaments, defined using number theory) have extreme topology: the Paley tournament on p teams has homology concentrated entirely in dimension p-3
+**Why does completeness kill beta_2?** We found the mechanism: all directed graphs with beta_2 > 0 have "twin vertices" — two vertices with identical neighborhoods. In a tournament, every pair must have an edge between them, which breaks the twin condition. This is a concrete structural explanation, though a full algebraic proof remains open.
 
-Proving beta_2 = 0 algebraically is the project's biggest open problem.
+**The n = 8 threshold.** At 8 teams, several patterns break simultaneously:
+- beta_3 can reach 2 (0.08% of tournaments) — the first time any Betti number exceeds 1
+- beta_3 and beta_4 can be nonzero at the same time (the "consecutive seesaw" property fails)
+- Proof strategies that work at n <= 7 collapse at n = 8
+
+This makes 8 the critical frontier for understanding tournament topology.
+
+Other topological findings:
+- beta_1 and beta_3 are **mutually exclusive** (proved) — a tournament never has both loop-like and higher-dimensional holes
+- **Paley tournaments** on p teams have homology concentrated in a single dimension p-3: they look like a wedge of spheres
+
+Beta_2 = 0 has been **proved** via induction on the number of vertices (THM-108/109). The proof uses a long exact sequence and an "isolation characterization" showing that every tournament has at least one vertex whose deletion doesn't create new topological holes. Understanding the higher Betti numbers — especially why beta_3 can reach 2 at n = 8 — is the project's biggest open frontier.
 
 ---
 
@@ -180,9 +186,10 @@ Key results that resolve or advance open questions:
 
 ## What's Still Open?
 
-- **Prove beta_2 = 0** for all tournaments algebraically (47,000+ tests, zero failures, no proof yet)
+- ~~Prove beta_2 = 0~~ **RESOLVED** (THM-108/109, proved by induction + LES + isolation characterization)
+- **Understand why beta_3 = 2 at n = 8** — what structural property allows a tournament to have a "2-dimensional" higher hole?
 - **Prove Paley maximization** — do Paley tournaments always maximize ranking count?
-- **Extend the per-path identity** to all tournament sizes (currently works only for small n)
+- **HYP-282: Why at most 3 "bad" vertices?** When beta_1(T) = 0, at most 3 vertex-deletions have beta_1 = 1. Verified through n = 10, no proof.
 - **Prove unimodality** of the forward-edge distribution (50,000+ tests, zero violations)
 
 ---

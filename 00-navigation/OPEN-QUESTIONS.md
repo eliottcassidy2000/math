@@ -468,13 +468,16 @@ GLMY path homology Betti numbers beta_p of tournaments:
 - beta_0 = 1 always (connected)
 - beta_1 in {0, 1} (directed 1-hole from 3-cycle structure)
 - beta_2 = 0 ALWAYS --- **PROVED** (THM-108 + THM-109)
-- beta_3 in {0, 1} (appears at n=6 (1.2%), n=7 (8-11%))
-- **beta_4 NOT always 0**: Paley T_7 has beta_4 = 6 (THM-099). Very rare among random
-  tournaments (~0.01% at n=7), so missed by sampling. CORRECTS earlier claim.
-- beta_1 and beta_3 are MUTUALLY EXCLUSIVE (0/200 cases with both positive at n=7)
+- beta_3 in {0, 1, **2**}: appears at n=6 (1.2%), n=7 (8-11%), **n=8 (beta_3=2 at 0.08%)**
+- **beta_4 NOT always 0**: Paley T_7 has beta_4 = 6 (THM-099). At n=8: beta_3*beta_4=1 can coexist (~0.15%)
+- beta_1 and beta_3 are MUTUALLY EXCLUSIVE (proved n<=7, verified n=8)
+- **Consecutive seesaw (beta_k*beta_{k+1}=0) REFUTED at n=8** (HYP-394, kind-pasteur-S48)
+- **i_*-injectivity REFUTED at n=8** (HYP-380, kind-pasteur-S48): rank(i_*)=0 when b3=b3(T\v)=1
 - Omega_p dimensions for Paley T_7: 7, 21, 42, 63, 63, 42, 21 (palindromic!)
 
 REMAINING OPEN:
+- **What bound replaces beta_3 <= 1 at n >= 8?** (beta_3=2 confirmed at n=8,9)
+- **Prove beta_1 * beta_3 = 0 for all n** (currently n <= 7 only)
 - Characterize which tournaments have beta_4 > 0 (appears linked to H-maximizers)
 - Is beta_6 = 0 for all tournaments? (0/300 at n=7)
 - Prove beta_2k = 0 for k >= some threshold, or find more counterexamples
