@@ -123,3 +123,37 @@ Testing HYP-398 for beta_3=1 and beta_3=2 tournaments
 
   b3=1 #30: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
     v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=2 #1: bettis=(1, 0, 0, 2, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=2 #2: bettis=(1, 0, 0, 2, 0, 0, 0, 0), scores=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
+
+  b3=2 #3: bettis=(1, 0, 0, 2, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=2 #4: bettis=(1, 0, 0, 2, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=2 #5: bettis=(1, 0, 0, 2, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  Total: 19639 checked, 3252.7s
+
+======================================================================
+RESULTS FOR beta_3=1 (61 BAD vertices):
+  Extra old kills: {0: 61}
+  rank(i_*): {1: 61}
+  *** HYP-398 CONFIRMED at n=8 for beta_3=1 ***
+
+RESULTS FOR beta_3=2 (8 BAD vertices):
+  Extra old kills: {0: 8}
+  rank(i_*): {1: 8}
+  b3(T\v) values: {1: 8}
+  *** HYP-398 HOLDS even for beta_3=2! ***
+
+DONE.

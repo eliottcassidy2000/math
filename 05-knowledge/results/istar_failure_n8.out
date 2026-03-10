@@ -5,3 +5,26 @@ i_*-INJECTIVITY FAILURE ANALYSIS AT n=8
   FAILURE #2: trial=628, v=2, b4=0, extra_kills=1, scores=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
   FAILURE #3: trial=878, v=6, b4=0, extra_kills=1, scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
   FAILURE #4: trial=1448, v=6, b4=0, extra_kills=1, scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+  FAILURE #5: trial=1793, v=5, b4=0, extra_kills=1, scores=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4))
+
+  Total: 2000 checked, 350 b3=1, 1155.2s
+
+======================================================================
+RESULTS:
+  Injective (rank_i*=1): 762
+  Failure (rank_i*=0): 5
+
+  FAILURE ANALYSIS:
+    extra_kills distribution: {1: 5}
+    b4(T) distribution: {0: 5}
+    b4(T\v) distribution: {0: 5}
+    b4_T=0, b4_Tv=0, rank_old=27, rank_total=71, killed_by_old=27, killed_by_total=28, extra=1
+    b4_T=0, b4_Tv=0, rank_old=27, rank_total=81, killed_by_old=27, killed_by_total=28, extra=1
+    b4_T=0, b4_Tv=0, rank_old=27, rank_total=71, killed_by_old=27, killed_by_total=28, extra=1
+    b4_T=0, b4_Tv=0, rank_old=21, rank_total=57, killed_by_old=21, killed_by_total=22, extra=1
+    b4_T=0, b4_Tv=0, rank_old=27, rank_total=81, killed_by_old=27, killed_by_total=28, extra=1
+
+  INJECTIVE ANALYSIS:
+    extra_kills distribution: {0: 762}
+
+DONE.

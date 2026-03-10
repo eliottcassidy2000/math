@@ -18,3 +18,20 @@ H_4 RELATIVE HOMOLOGY — WHY IS H_4(T,T\v) = 0?
     b4(T\v) for BAD v: {0: 143}
 
   n=8:
+  n=8: 200 b3=1 tours
+    b4(T) dist: {0: 200}
+    b4(T\v) for BAD v: {0: 431}
+
+======================================================================
+INTERPRETATION:
+  At n=7: b4(T)=0 for ALL b3=1 tours (seesaw).
+  Also b4(T\v)=0 for all BAD vertices (n-1=6, b4 vanishes at n=6).
+  So LES gives: 0 → H_4(T,T\v) → H_3(T\v) → H_3(T)
+  And H_4(T,T\v) = ker(i_*) = 0 iff i_* injective.
+
+  At n=8: b4(T) can be 1 when b3=1 (coexistence ~0.15%).
+  And b4(T\v) can be nonzero at n=7 (Paley T_7 has b4=6).
+  The LES becomes more complex with nonzero H_4 terms.
+  rank(i_*)=0 means H_4(T,T\v)=1 even when b4(T)=b4(T\v)=0.
+
+DONE.
