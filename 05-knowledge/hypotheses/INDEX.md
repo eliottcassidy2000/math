@@ -49,7 +49,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-348 | beta_3+beta_4 coexistence rate ~0.15% at n=8 | 3/2000 with profile [1,0,0,1,1,0,0,0]. All have SC scores | kind-pasteur-S45 |
 | HYP-349 | rank(d_4) gap = ker(d_3) - rank(d_4) is always 0 or 1 | Exhaustive n=6 (32448 gap=0, 320 gap=1). Sampled n=7 (925/75), n=8 (255/45). Equivalent to beta_3 in {0,1} | kind-pasteur-S46 |
 | HYP-350 | Good vertex existence for beta_3: exists v with beta_3(T\v)=0 when beta_3(T)>0 | TRUE when beta_3>0. But FAILS unconditionally: Paley T_7 has beta_3=0 with NO good vertex (240 counterexamples at n=7). Good vertex holds for non-Paley n=7 (exhaustive) | kind-pasteur-S46, corrected opus-S53 |
-| HYP-351 | dim H_3(T,T\v) <= 1 for ALL tournaments T and ALL vertices v | Exhaustive n=6: ALL 1920 pairs give dim=1 (for beta_3>0 T). n=7: dim in {0,1}. Max dim=1 | kind-pasteur-S46 |
+| HYP-351 | dim H_3(T,T\v) <= 1 for ALL tournaments T and ALL vertices v | **REFUTED at n=8** (HYP-401): dim=2 for all-good beta_3=2 tournaments. Exhaustive n=6: ALL 1920 pairs dim=1. n=7: dim in {0,1}. FAILS n>=8 | kind-pasteur-S46, REFUTED kind-pasteur-S49 |
 | HYP-352 | LES isomorphism: beta_3(T\v)=0 implies beta_3(T) = dim H_3(T,T\v) | n=6 exhaustive: 1920/1920 perfect match. Follows from H_2(T\v)=0 + LES exactness | kind-pasteur-S46 |
 | HYP-353 | beta_3 completely fragile at n=6: ALL 6 deletions give beta_3=0 | 320/320 exhaustive. At n=7: 24/44 fragile, 16/44 have 1 surviving, 4/44 have 2 surviving | kind-pasteur-S46 |
 | HYP-354 | Quotient proportionality: all ker(d_3) basis vectors project proportionally to H_3 | Exhaustive n=6 Type B (240/240). Cokernel vector in ker(d_3) has dim 7 at n=6, varies by tournament | kind-pasteur-S46 |
@@ -103,6 +103,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-398 | NEW BOUNDARIES TARGET ONLY NEW CYCLES: im(d_4^new) ∩ span(old ker_d3) ⊂ im(d_4^old) | n=7: 34/34 BAD vertices. New d_4 content (5-paths through v) never kills old cycles beyond what im(d_4^old) already kills. This is the MECHANISM for i_*-injectivity at n=7: old H_3 generator is protected. | opus-S55 |
 | HYP-399 | Embedded H_3(T\\v) generator = H_3(T) generator (mod boundaries) | n=7: 44/44 BAD vertices. The true H_3 generator of T\\v, when embedded in T, IS the H_3 generator of T (up to scalar, mod im(d_4)). H_3 is "inherited" from the deletion. | opus-S55 |
 | HYP-400 | rank(i_*^p) = 0 for all p >= 1 except p=3 for BAD vertices (n=7,8) | n=7: 560 vertices, n=8: 120 vertices. ALL rank(i_*) at all degrees match exactly. But this holds only when beta_3(T)=1 (not beta_3=2). | opus-S55 |
+| HYP-401 | Claim II FAILS at n=8: dim H_3(T,T\v) = 2 for all-good beta_3=2 tournaments | beta_3=2 with ALL 8 deletions b3=0 (score 3,3,3,3,4,4,4,4) => H_3(T,T\v)=b3(T)=2 for every v. Claim II (H_3^rel<=1) was backbone of n<=7 proof. Fails EXACTLY when beta_3=2. | kind-pasteur-S49 |
+| HYP-402 | beta_3 <= 2 at n=9 (search in progress, 800/3000 so far max=1) | n=8: max=2 (4/5000=0.08%). n=9: 800/3000 sampled, max=1 so far. Either beta_3<=1 at n=9 or beta_3=2 very rare | kind-pasteur-S49 |
+| HYP-403 | Two structural types of beta_3=2 at n=8: all-good (SC score) and mixed (non-SC score) | All-good: score (3,3,3,3,4,4,4,4), 8/8 good vertices. Mixed: score (2,3,3,3,4,4,4,5), 6/8 good + 2/8 bad. Both types confirmed in 5000-sample run | kind-pasteur-S49 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
