@@ -1,0 +1,53 @@
+
+======================================================================
+CODIM-1 UNIVERSALITY DEEP ANALYSIS AT n=7
+======================================================================
+  Progress: 100 BAD vertices, 44.9s
+  Progress: 150 BAD vertices, 68.8s
+  Progress: 150 BAD vertices, 69.1s
+  Progress: 200 BAD vertices, 92.6s
+  200 BAD vertices (0 fail, 200 succ), 92.6s
+
+  TEST 1: rk(ker(d3_T)_old) vs dim(ker(d3_Tv))
+    difference distribution: {9: 18, 11: 36, 12: 32, 13: 5, 15: 10, 17: 17, 18: 23, 19: 40, 20: 10, 21: 9}
+
+  TEST 2: span(ker(d3_T)_old) = span(emb ker(d3_Tv))?
+    YES: 0/200 (0.0%)
+      MISMATCH: rk_ker_T_old=19, rk_emb_old=7, rk_union=19, rank_istar=1
+
+  TEST 3: im(d4_Tv) ⊂ im(d4_T)_old?
+    YES: 200/200 (100.0%)
+
+  Rank comparisons:
+    rk(d4_T) mean=19.7
+    rk(d4_Tv) mean=4.2
+    rk(im_T_old) mean=19.3
+    rk(emb_im_Tv) mean=4.2
+
+======================================================================
+CODIM-1 UNIVERSALITY DEEP ANALYSIS AT n=8
+======================================================================
+  Progress: 50 BAD vertices, 43.3s
+  Progress: 100 BAD vertices, 94.8s
+  122 BAD vertices (1 fail, 121 succ), 116.4s
+
+  TEST 1: rk(ker(d3_T)_old) vs dim(ker(d3_Tv))
+    difference distribution: {20: 1, 22: 5, 24: 7, 25: 5, 26: 4, 27: 3, 29: 4, 30: 7, 31: 2, 32: 9, 33: 2, 34: 9, 35: 11, 36: 8, 37: 13, 38: 2, 39: 5, 40: 5, 41: 8, 42: 1, 43: 5, 44: 1, 45: 1, 46: 1, 48: 1, 51: 2}
+
+  TEST 2: span(ker(d3_T)_old) = span(emb ker(d3_Tv))?
+    YES: 0/122 (0.0%)
+      MISMATCH: rk_ker_T_old=47, rk_emb_old=17, rk_union=47, rank_istar=1
+
+  TEST 3: im(d4_Tv) ⊂ im(d4_T)_old?
+    YES: 122/122 (100.0%)
+
+  Rank comparisons:
+    rk(d4_T) mean=57.4
+    rk(d4_Tv) mean=21.0
+    rk(im_T_old) mean=55.1
+    rk(emb_im_Tv) mean=21.0
+
+  FAILURE details:
+    out=2: rk_ker_T_old=56, dim_ker_Tv=22, same_span=False, im_Tv_in_im_T=True
+
+DONE.

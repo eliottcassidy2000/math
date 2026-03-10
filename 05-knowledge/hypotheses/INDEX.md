@@ -110,6 +110,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-405 | Cancellation mechanism: old-face proj of new d_4 almost always in im(d_4) | n=7: 26/28 BAD vertices, old-face proj stays in im(d_4). 2/28 cases: old-face reaches H_3 direction but new-face cancels exactly. Full boundary always in im(d_4) (28/28). | opus-S56 |
 | HYP-406 | b4(T)=0 for ALL b3=1 tournaments at n=7 AND n=8 (500 samples each) | Seesaw b3*b4=0 holds in the b3=1 stratum even at n=8 (where coexistence exists at 0.15%). The 500-sample test misses the rare coexistence. | opus-S56 |
 | HYP-407 | chi(T) ∈ {0, 1, 7} at n=7. chi=0 iff b1>0 or b3>0. chi=7 iff Paley (b4=6) | 5000 samples. chi=1 (87.6%), chi=0 (12.3%), chi=7 (0.02%). At n=8: chi ∈ {0,1,2,3}. chi>1 from b4>0 only. | opus-S56 |
+| HYP-408 | Codim-1 universality: codim(im(d_4^T)\_old\_proj, ker(d_3^T)\_old\_proj) = 1 for ALL b3=1 tournaments and ALL BAD vertices | 300/300 at n=7, 150/150 at n=8. The old-projection of H_3(T) is always 1-dimensional. | opus-S57 |
+| HYP-409 | im(d_4^{T\v}) ⊂ im(d_4^T)\_old\_proj universally | 200/200 at n=7, 122/122 at n=8. Boundaries of T\v embed into old-coordinate boundaries of T. | opus-S57 |
+| HYP-410 | rank(i_*)=0 iff old-projection of embedded H_3(T\v) gen ∈ im(d_4^T)\_old\_proj | Confirmed: all failures have emb\_old\_in\_im\_old=True; all successes have False. Combined with HYP-408 (codim=1), i_*-injectivity reduces to a single linear condition. | opus-S57 |
+| HYP-411 | Failure vertices have H_3(T) generator concentrated on through-v paths | Failures: 12-18 through-v path support vs success mean 9.3. Jaccard similarity of gen supports: fail 0.000-0.038 vs success mean 0.048. When H_3(T) gen relies heavily on v-paths, the embedded gen (which avoids v-paths) misaligns. | opus-S57 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

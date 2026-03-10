@@ -1,0 +1,52 @@
+
+======================================================================
+CODIMENSION ANALYSIS AT n=7
+======================================================================
+  Progress: 100 BAD vertices, 43.7s
+  Progress: 200 BAD vertices, 90.2s
+  Progress: 200 BAD vertices, 90.4s
+  Progress: 300 BAD vertices, 138.9s
+  300 BAD vertices, 0 failures, 138.9s
+
+  --- Old-coordinate codimension ---
+  codim(im_old_proj, ker_old_proj): {1: 300}
+
+  rk_ker_old_proj: mean=20.5
+  rk_im_old_proj:  mean=19.5
+
+  emb_old IN im_old_proj: 0/300 (0.0%)
+
+  --- SUCCESSES (sample) ---
+    out_deg=1: codim_old=1, rk_ker_old=19, rk_im_old=18, emb_old_in_im=False
+    out_deg=2: codim_old=1, rk_ker_old=26, rk_im_old=25, emb_old_in_im=False
+    out_deg=3: codim_old=1, rk_ker_old=26, rk_im_old=25, emb_old_in_im=False
+    out_deg=2: codim_old=1, rk_ker_old=25, rk_im_old=24, emb_old_in_im=False
+    out_deg=3: codim_old=1, rk_ker_old=26, rk_im_old=25, emb_old_in_im=False
+
+======================================================================
+CODIMENSION ANALYSIS AT n=8
+======================================================================
+  Progress: 100 BAD vertices, 92.9s
+  150 BAD vertices, 1 failures, 135.7s
+
+  --- Old-coordinate codimension ---
+  codim(im_old_proj, ker_old_proj): {1: 150}
+
+  rk_ker_old_proj: mean=56.0
+  rk_im_old_proj:  mean=55.0
+
+  emb_old IN im_old_proj: 1/150 (0.7%)
+
+  --- FAILURES ---
+    out_deg=2: codim_old=1, rk_ker_old=56, rk_im_old=55, emb_old_in_im=True
+
+  --- SUCCESSES (sample) ---
+    out_deg=4: codim_old=1, rk_ker_old=47, rk_im_old=46, emb_old_in_im=False
+    out_deg=4: codim_old=1, rk_ker_old=47, rk_im_old=46, emb_old_in_im=False
+    out_deg=3: codim_old=1, rk_ker_old=54, rk_im_old=53, emb_old_in_im=False
+    out_deg=4: codim_old=1, rk_ker_old=56, rk_im_old=55, emb_old_in_im=False
+    out_deg=4: codim_old=1, rk_ker_old=62, rk_im_old=61, emb_old_in_im=False
+
+  codim_old — fail: [1], succ mean: 1.00
+
+DONE.
