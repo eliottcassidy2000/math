@@ -1,0 +1,68 @@
+
+======================================================================
+OLD/NEW DECOMPOSITION OF ker(d_3) AT n=7
+======================================================================
+  Progress: 100 BAD vertices, 55.2s
+  Progress: 150 BAD vertices, 84.4s
+  Progress: 150 BAD vertices, 84.8s
+  Progress: 200 BAD vertices, 113.5s
+  200 BAD vertices collected from 3794 tournaments, 113.5s
+  Failures: 0, Successes: 200
+
+  --- Dimension decomposition (all BAD vertices) ---
+  dim ker(d3):   min=10, max=30, mean=20.7
+  rk(d4):        min=9, max=29, mean=19.7
+  rk(d4_old):    min=0, max=6, mean=4.2
+  rk(d4_new):    min=9, max=27, mean=18.9
+  rk(d4_old)+rk(d4_new) vs rk(d4):
+    difference: min=0, max=6, mean=3.34
+    (>0 means old and new boundaries OVERLAP)
+
+  n_old_ker (ker(d3) vectors with pure old support):
+    min=0, max=7, mean=3.0
+    total dim_ker: mean=20.7
+    fraction old: 0.131
+
+  Omega_4 old/new split:
+    old omega4: mean=5.9
+    new omega4: mean=25.0
+    total: mean=30.9
+
+  Embedded H3(Tv) gen IN im(d4_old): 0/200 (0.0%)
+
+======================================================================
+OLD/NEW DECOMPOSITION OF ker(d_3) AT n=8
+======================================================================
+  Progress: 50 BAD vertices, 48.9s
+  Progress: 100 BAD vertices, 104.3s
+  100 BAD vertices collected from 262 tournaments, 104.3s
+  Failures: 1, Successes: 99
+
+  --- Dimension decomposition (all BAD vertices) ---
+  dim ker(d3):   min=36, max=87, mean=58.5
+  rk(d4):        min=35, max=86, mean=57.5
+  rk(d4_old):    min=11, max=28, mean=20.9
+  rk(d4_new):    min=29, max=85, mean=54.1
+  rk(d4_old)+rk(d4_new) vs rk(d4):
+    difference: min=6, max=26, mean=17.50
+    (>0 means old and new boundaries OVERLAP)
+
+  n_old_ker (ker(d3) vectors with pure old support):
+    min=0, max=27, mean=13.8
+    total dim_ker: mean=58.5
+    fraction old: 0.240
+
+  Omega_4 old/new split:
+    old omega4: mean=31.3
+    new omega4: mean=79.0
+    total: mean=110.3
+
+  Embedded H3(Tv) gen IN im(d4_old): 0/100 (0.0%)
+
+  --- FAILURE-specific decomposition ---
+    trial=174, v=6, out_deg=2
+      dim_ker=58, rk_d4=57, rk_old=21, rk_new=55
+      n_old_ker=20, emb_in_old=False
+      old+new overlap = 19
+
+DONE.

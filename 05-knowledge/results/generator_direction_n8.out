@@ -1,0 +1,76 @@
+======================================================================
+GENERATOR DIRECTION ANALYSIS: H_3(T) vs embedded H_3(T\v)
+======================================================================
+  2000 checked, 5 failures, 50 success samples, 810.2s
+
+============================================================
+FAILURES — generator direction
+============================================================
+
+  Failure #1: trial=614, v=5, out_deg=2
+    dim_ker(d3)=72, rk(d4)=71
+    H3(T) gen support: 34 paths
+    Emb H3(Tv) gen support: 5 paths
+    Overlap: 1, Union: 38, Jaccard: 0.026
+    H3(T) gen on through-v paths: 18
+    H3(T) gen on non-through-v: 16
+    Emb gen on through-v (should=0): 0
+    Total 3-paths: 260, through-v: 129
+
+  Failure #2: trial=628, v=2, out_deg=3
+    dim_ker(d3)=82, rk(d4)=81
+    H3(T) gen support: 30 paths
+    Emb H3(Tv) gen support: 5 paths
+    Overlap: 1, Union: 34, Jaccard: 0.029
+    H3(T) gen on through-v paths: 18
+    H3(T) gen on non-through-v: 12
+    Emb gen on through-v (should=0): 0
+    Total 3-paths: 270, through-v: 139
+
+  Failure #3: trial=878, v=6, out_deg=2
+    dim_ker(d3)=72, rk(d4)=71
+    H3(T) gen support: 49 paths
+    Emb H3(Tv) gen support: 5 paths
+    Overlap: 2, Union: 52, Jaccard: 0.038
+    H3(T) gen on through-v paths: 18
+    H3(T) gen on non-through-v: 31
+    Emb gen on through-v (should=0): 0
+    Total 3-paths: 260, through-v: 129
+
+  Failure #4: trial=1448, v=6, out_deg=2
+    dim_ker(d3)=58, rk(d4)=57
+    H3(T) gen support: 20 paths
+    Emb H3(Tv) gen support: 8 paths
+    Overlap: 0, Union: 28, Jaccard: 0.000
+    H3(T) gen on through-v paths: 12
+    H3(T) gen on non-through-v: 8
+    Emb gen on through-v (should=0): 0
+    Total 3-paths: 240, through-v: 125
+
+  Failure #5: trial=1793, v=5, out_deg=4
+    dim_ker(d3)=82, rk(d4)=81
+    H3(T) gen support: 33 paths
+    Emb H3(Tv) gen support: 5 paths
+    Overlap: 1, Union: 37, Jaccard: 0.027
+    H3(T) gen on through-v paths: 18
+    H3(T) gen on non-through-v: 15
+    Emb gen on through-v (should=0): 0
+    Total 3-paths: 270, through-v: 139
+
+============================================================
+SUCCESSES — generator direction (summary)
+============================================================
+  Jaccard similarity: min=0.000, max=0.152, mean=0.048
+  H3(T) gen support: min=13, max=43, mean=27.2
+  Emb gen support: min=5, max=9, mean=5.6
+  Overlap: min=0, max=5, mean=1.5
+  H3(T) gen through-v: min=0, max=24, mean=9.3
+
+============================================================
+COMPARISON: Failures vs Successes
+============================================================
+  Jaccard — fail: ['0.026', '0.029', '0.038', '0.000', '0.027'], succ mean: 0.048
+  H3(T) through-v — fail: [18, 18, 18, 12, 18], succ mean: 9.3
+  H3(T) support — fail: [34, 30, 49, 20, 33], succ mean: 27.2
+
+DONE.

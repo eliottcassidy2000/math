@@ -1,0 +1,7 @@
+======================================================================
+OUT-DEGREE vs i_* FAILURE CORRELATION AT n=8
+======================================================================
+  Progress: 200 BAD vertices, 1 failures, 204.5s
+  Progress: 600 BAD vertices, 3 failures, 552.1s
+  Progress: 1200 BAD vertices, 11 failures, 1159.8s
+  Progress: 1600 BAD vertices, 14 failures, 1557.2s
