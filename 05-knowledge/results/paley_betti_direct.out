@@ -1,0 +1,25 @@
+PALEY TOURNAMENT BETTI NUMBERS (DIRECT METHOD)
+============================================================
+
+--- T_3 ---
+
+--- T_7 ---
+  max_deg=3 (0.0s): b0=1, b1=0, b2=0, b3<=36
+    Omega dims: [7, 21, 42, 63]
+  max_deg=4 (0.0s): b0=1, b1=0, b2=0, b3=0, b4<=27
+    Omega dims: [7, 21, 42, 63, 63]
+  max_deg=5 (0.0s): b0=1, b1=0, b2=0, b3=0, b4=6, b5<=21
+    Omega dims: [7, 21, 42, 63, 63, 42]
+  max_deg=6 (0.0s): b0=1, b1=0, b2=0, b3=0, b4=6, b5=0, b6<=0
+    Omega dims: [7, 21, 42, 63, 63, 42, 21]
+
+--- T_11 ---
+  max_deg=3 (0.5s): b0=1, b1=0, b2=0, b3<=595
+    Omega dims: [11, 55, 220, 770]
+  max_deg=4 (21.0s): b0=1, b1=0, b2=0, b3=0, b4<=1660
+    Omega dims: [11, 55, 220, 770, 2255]
+  max_deg=5 (419.8s): b0=1, b1=0, b2=0, b3=0, b4=0, b5<=3400
+    Omega dims: [11, 55, 220, 770, 2255, 5060]
+    STOPPING: too slow for max_deg=6
+
+DONE.

@@ -132,6 +132,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-427 | Relative complex C_*(T, T\v) acyclic at n=7 for b3=b3_Tv=1 | All β_p^rel = 0 for all p. 100/100. Inclusion T\v ↪ T is a homology equivalence. Equivalent to i_*-injectivity since only β_3 is nonzero. | opus-S59 |
 | HYP-428 | χ(T, T\v) = 5 constant for all b3=1 n=7 tournaments | 100/100 (including C_0, C_1 terms). Full χ^rel = 0 when including Ω_0, Ω_1. At n=8, χ^rel varies (7-21). | opus-S59 |
 | HYP-429 | Neither d_4^{old→old} nor d_4^{tv→old} alone surjects onto im(d_4^{T\v}) | 0/200 at n=7, 0/300 at n=8 for either block alone. The surjection requires interplay between both blocks with massive cancellation (rk_oo≈9, rk_to≈9, but rk_combined≈4 at n=7). | opus-S59 |
+| HYP-430 | Paley T_11: β_0-4 = (1,0,0,0,0) exact, β_5 ≤ 3400 | Direct computation via full_chain_complex_modp with increasing max_deg. max_deg=5 took 420s. Omega dims=[11,55,220,770,2255,5060]. First nonzero β beyond β_0 is at degree ≥ 5. | kind-pasteur-S50 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

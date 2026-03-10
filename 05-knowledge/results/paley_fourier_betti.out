@@ -43,3 +43,15 @@ PALEY TOURNAMENT FOURIER BETTI NUMBERS
   deg 7: 8735 diff-seqs, 96085 paths
   deg 8: 14395 diff-seqs, 158345 paths
   k=0: betti=[1, 0, 0, 0, 0, 5, 5, 0, 150] nonzero=[(5, 5), (6, 5), (8, 150)]
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_fourier_betti.py", line 281, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_fourier_betti.py", line 271, in main
+    bettis = fourier_betti(p, max_deg)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_fourier_betti.py", line 240, in fourier_betti
+    d_mp1_on_omega = matmul_mod(BD_al_mp1, ob_mp1.T, PRIME)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 47, in matmul_mod
+    C = (C + A[:, start:end] @ B[start:end, :]) % prime
+         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 30.0 MiB for an array with shape (8735, 450) and data type int64

@@ -1,0 +1,857 @@
+================================================================================
+TOP INJECTIVITY ANALYSIS: Why is d_{n-1} injective on Omega_{n-1}?
+================================================================================
+
+################################################################################
+# n = 4
+################################################################################
+
+Mode: EXHAUSTIVE, 64 tournaments
+
+--- SUMMARY for n=4 ---
+Tournaments analyzed: 64
+d_{n-1} INJECTIVE on Omega_{n-1}: 64/64 (100.0%)
+
+--- Hamiltonian path counts ---
+  Min: 1, Max: 5, Mean: 3.0
+
+--- Omega_{n-1} dimensions ---
+  Min: 0, Max: 1, Mean: 0.8
+  Distribution: [(1, 48), (0, 16)]
+  Omega = 0 (empty): 16/64
+  Omega = all Ham paths (unconstrained): 24/64
+
+--- Constraint structure ---
+  Constraint rank distribution: [(0, 24), (4, 24), (3, 16)]
+  Non-allowed face types: min=0, max=6, mean=3.0
+
+--- Face allowedness for Hamiltonian paths ---
+  Paths with ALL faces allowed: total 48, dist per tournament: [(1, 48), (0, 16)]
+  Non-allowed face count distribution (across all paths):
+    0 non-allowed faces: 48 paths
+    1 non-allowed faces: 96 paths
+    2 non-allowed faces: 48 paths
+
+--- Which face indices are non-allowed? ---
+    face_1: non-allowed 96 times
+    face_2: non-allowed 96 times
+
+--- face_0 analysis ---
+  face_0 (remove v_0) is allowed: 192 paths
+  face_0 is NOT allowed: 0 paths
+  face_0 injective on ALL Ham paths: 64/64
+  face_{n-1} injective on ALL Ham paths: 64/64
+
+  ** TRIVIAL FACT: face_0 is ALWAYS injective on Hamiltonian paths **
+  Reason: A Ham path uses ALL n vertices. Removing v_0 gives (v_1,...,v_3).
+  This determines which vertex was v_0 (the missing one). So face_0 is injective.
+  Similarly, face_i is injective on Ham paths for ANY fixed i.
+
+--- DETAILED Omega_{n-1} ANALYSIS (first 5 examples) ---
+
+  Tournament 0:
+    Ham paths: 1, Omega dim: 1
+    Type: unconstrained
+    All Hamiltonian paths are in Omega (no constraints)
+
+  Tournament 1:
+    Ham paths: 1, Omega dim: 1
+    Type: unconstrained
+    All Hamiltonian paths are in Omega (no constraints)
+
+  Tournament 2:
+    Ham paths: 3, Omega dim: 0
+    Type: empty
+
+  Tournament 4:
+    Ham paths: 5, Omega dim: 1
+    Type: constrained
+    Constraints: 6, rank=4
+    Basis vectors:
+      v0: 1 paths, coefficients: [(4, 1)]
+        coeff=1: path=(3, 2, 1, 0)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 6:
+    Ham paths: 5, Omega dim: 1
+    Type: constrained
+    Constraints: 6, rank=4
+    Basis vectors:
+      v0: 1 paths, coefficients: [(0, 1)]
+        coeff=1: path=(0, 3, 2, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+--- NON-ALLOWED FACE PAIRING (first 5 examples) ---
+
+  Tournament 0:
+    Num non-allowed face types: 0
+
+  Tournament 1:
+    Num non-allowed face types: 0
+
+  Tournament 2:
+    Num non-allowed face types: 3
+    Contributor dist: {1: 3}
+    Sign patterns: {(1,): 3}
+    Face index dist: {2: 3}
+
+  Tournament 4:
+    Num non-allowed face types: 6
+    Contributor dist: {1: 6}
+    Sign patterns: {(-1,): 3, (1,): 3}
+    Face index dist: {1: 3, 2: 3}
+
+  Tournament 6:
+    Num non-allowed face types: 6
+    Contributor dist: {1: 6}
+    Sign patterns: {(-1,): 3, (1,): 3}
+    Face index dist: {1: 3, 2: 3}
+
+################################################################################
+# n = 5
+################################################################################
+
+Mode: EXHAUSTIVE, 1024 tournaments
+
+--- SUMMARY for n=5 ---
+Tournaments analyzed: 1024
+d_{n-1} INJECTIVE on Omega_{n-1}: 1024/1024 (100.0%)
+
+--- Hamiltonian path counts ---
+  Min: 1, Max: 15, Mean: 7.5
+
+--- Omega_{n-1} dimensions ---
+  Min: 0, Max: 5, Mean: 0.9
+  Distribution: [(1, 600), (0, 280), (2, 120), (5, 24)]
+  Omega = 0 (empty): 280/1024
+  Omega = all Ham paths (unconstrained): 120/1024
+
+--- Constraint structure ---
+  Constraint rank distribution: [(4, 240), (9, 240), (0, 120), (3, 120), (8, 120), (12, 120), (15, 40), (10, 24)]
+  Non-allowed face types: min=0, max=27, mean=11.2
+
+--- Face allowedness for Hamiltonian paths ---
+  Paths with ALL faces allowed: total 960, dist per tournament: [(1, 600), (0, 280), (2, 120), (5, 24)]
+  Non-allowed face count distribution (across all paths):
+    0 non-allowed faces: 960 paths
+    1 non-allowed faces: 2880 paths
+    2 non-allowed faces: 2880 paths
+    3 non-allowed faces: 960 paths
+
+--- Which face indices are non-allowed? ---
+    face_1: non-allowed 3840 times
+    face_2: non-allowed 3840 times
+    face_3: non-allowed 3840 times
+
+--- face_0 analysis ---
+  face_0 (remove v_0) is allowed: 7680 paths
+  face_0 is NOT allowed: 0 paths
+  face_0 injective on ALL Ham paths: 1024/1024
+  face_{n-1} injective on ALL Ham paths: 1024/1024
+
+  ** TRIVIAL FACT: face_0 is ALWAYS injective on Hamiltonian paths **
+  Reason: A Ham path uses ALL n vertices. Removing v_0 gives (v_1,...,v_4).
+  This determines which vertex was v_0 (the missing one). So face_0 is injective.
+  Similarly, face_i is injective on Ham paths for ANY fixed i.
+
+--- DETAILED Omega_{n-1} ANALYSIS (first 5 examples) ---
+
+  Tournament 0:
+    Ham paths: 1, Omega dim: 1
+    Type: unconstrained
+    All Hamiltonian paths are in Omega (no constraints)
+
+  Tournament 1:
+    Ham paths: 1, Omega dim: 1
+    Type: unconstrained
+    All Hamiltonian paths are in Omega (no constraints)
+
+  Tournament 2:
+    Ham paths: 3, Omega dim: 0
+    Type: empty
+
+  Tournament 4:
+    Ham paths: 5, Omega dim: 1
+    Type: constrained
+    Constraints: 6, rank=4
+    Basis vectors:
+      v0: 1 paths, coefficients: [(0, 1)]
+        coeff=1: path=(4, 3, 2, 1, 0)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 6:
+    Ham paths: 5, Omega dim: 1
+    Type: constrained
+    Constraints: 6, rank=4
+    Basis vectors:
+      v0: 1 paths, coefficients: [(4, 1)]
+        coeff=1: path=(4, 0, 3, 2, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+--- NON-ALLOWED FACE PAIRING (first 5 examples) ---
+
+  Tournament 0:
+    Num non-allowed face types: 0
+
+  Tournament 1:
+    Num non-allowed face types: 0
+
+  Tournament 2:
+    Num non-allowed face types: 3
+    Contributor dist: {1: 3}
+    Sign patterns: {(-1,): 3}
+    Face index dist: {3: 3}
+
+  Tournament 4:
+    Num non-allowed face types: 6
+    Contributor dist: {1: 6}
+    Sign patterns: {(-1,): 3, (1,): 3}
+    Face index dist: {3: 3, 2: 3}
+
+  Tournament 6:
+    Num non-allowed face types: 6
+    Contributor dist: {1: 6}
+    Sign patterns: {(-1,): 3, (1,): 3}
+    Face index dist: {3: 3, 2: 3}
+
+################################################################################
+# n = 6
+################################################################################
+
+Mode: SAMPLED, 100 tournaments
+
+--- SUMMARY for n=6 ---
+Tournaments analyzed: 100
+d_{n-1} INJECTIVE on Omega_{n-1}: 100/100 (100.0%)
+
+--- Hamiltonian path counts ---
+  Min: 1, Max: 43, Mean: 22.2
+
+--- Omega_{n-1} dimensions ---
+  Min: 0, Max: 7, Mean: 1.5
+  Distribution: [(1, 47), (0, 25), (2, 11), (7, 7), (3, 6), (4, 4)]
+  Omega = 0 (empty): 25/100
+  Omega = all Ham paths (unconstrained): 1/100
+
+--- Constraint structure ---
+  Constraint rank distribution: [(34, 11), (36, 10), (4, 8), (9, 8), (3, 8), (8, 6), (29, 5), (32, 5), (22, 5), (12, 5)]
+  Non-allowed face types: min=0, max=92, mean=44.9
+
+--- Face allowedness for Hamiltonian paths ---
+  Paths with ALL faces allowed: total 152, dist per tournament: [(1, 47), (0, 25), (2, 11), (7, 7), (3, 6), (4, 4)]
+  Non-allowed face count distribution (across all paths):
+    0 non-allowed faces: 152 paths
+    1 non-allowed faces: 542 paths
+    2 non-allowed faces: 768 paths
+    3 non-allowed faces: 602 paths
+    4 non-allowed faces: 152 paths
+
+--- Which face indices are non-allowed? ---
+    face_1: non-allowed 1160 times
+    face_2: non-allowed 1108 times
+    face_3: non-allowed 1091 times
+    face_4: non-allowed 1133 times
+
+--- face_0 analysis ---
+  face_0 (remove v_0) is allowed: 2216 paths
+  face_0 is NOT allowed: 0 paths
+  face_0 injective on ALL Ham paths: 100/100
+  face_{n-1} injective on ALL Ham paths: 100/100
+
+  ** TRIVIAL FACT: face_0 is ALWAYS injective on Hamiltonian paths **
+  Reason: A Ham path uses ALL n vertices. Removing v_0 gives (v_1,...,v_5).
+  This determines which vertex was v_0 (the missing one). So face_0 is injective.
+  Similarly, face_i is injective on Ham paths for ANY fixed i.
+
+--- DETAILED Omega_{n-1} ANALYSIS (first 5 examples) ---
+
+  Tournament 0:
+    Ham paths: 37, Omega dim: 1
+    Type: constrained
+    Constraints: 76, rank=36
+    Basis vectors:
+      v0: 1 paths, coefficients: [(26, 1)]
+        coeff=1: path=(4, 3, 0, 5, 1, 2)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 1:
+    Ham paths: 27, Omega dim: 0
+    Type: empty
+
+  Tournament 2:
+    Ham paths: 31, Omega dim: 0
+    Type: empty
+
+  Tournament 3:
+    Ham paths: 5, Omega dim: 1
+    Type: constrained
+    Constraints: 6, rank=4
+    Basis vectors:
+      v0: 1 paths, coefficients: [(4, 1)]
+        coeff=1: path=(3, 4, 0, 2, 5, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 4:
+    Ham paths: 33, Omega dim: 4
+    Type: constrained
+    Constraints: 68, rank=29
+    Basis vectors:
+      v0: 1 paths, coefficients: [(3, 1)]
+        coeff=1: path=(0, 4, 2, 1, 5, 3)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v1: 1 paths, coefficients: [(8, 1)]
+        coeff=1: path=(0, 2, 1, 5, 3, 4)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v2: 1 paths, coefficients: [(9, 1)]
+        coeff=1: path=(0, 1, 5, 3, 4, 2)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v3: 1 paths, coefficients: [(21, 1)]
+        coeff=1: path=(3, 0, 4, 2, 1, 5)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+--- NON-ALLOWED FACE PAIRING (first 5 examples) ---
+
+  Tournament 0:
+    Num non-allowed face types: 76
+    Contributor dist: {1: 76}
+    Sign patterns: {(-1,): 38, (1,): 38}
+    Face index dist: {1: 19, 2: 18, 3: 19, 4: 20}
+
+  Tournament 1:
+    Num non-allowed face types: 57
+    Contributor dist: {1: 57}
+    Sign patterns: {(1,): 27, (-1,): 30}
+    Face index dist: {2: 15, 3: 15, 4: 12, 1: 15}
+
+  Tournament 2:
+    Num non-allowed face types: 65
+    Contributor dist: {1: 65}
+    Sign patterns: {(-1,): 33, (1,): 32}
+    Face index dist: {1: 17, 3: 16, 4: 16, 2: 16}
+
+  Tournament 3:
+    Num non-allowed face types: 6
+    Contributor dist: {1: 6}
+    Sign patterns: {(-1,): 3, (1,): 3}
+    Face index dist: {3: 3, 4: 3}
+
+  Tournament 4:
+    Num non-allowed face types: 68
+    Contributor dist: {1: 68}
+    Sign patterns: {(1,): 36, (-1,): 32}
+    Face index dist: {2: 17, 4: 19, 3: 15, 1: 17}
+
+################################################################################
+# n = 7
+################################################################################
+
+Mode: SAMPLED, 100 tournaments
+
+--- SUMMARY for n=7 ---
+Tournaments analyzed: 100
+d_{n-1} INJECTIVE on Omega_{n-1}: 100/100 (100.0%)
+
+--- Hamiltonian path counts ---
+  Min: 9, Max: 155, Mean: 80.0
+
+--- Omega_{n-1} dimensions ---
+  Min: 0, Max: 14, Mean: 2.5
+  Distribution: [(1, 29), (2, 20), (0, 17), (4, 13), (3, 7), (5, 7), (7, 1), (13, 1), (14, 1), (6, 1)]
+  Omega = 0 (empty): 17/100
+  Omega = all Ham paths (unconstrained): 0/100
+
+--- Constraint structure ---
+  Constraint rank distribution: [(80, 5), (9, 4), (36, 4), (125, 4), (53, 3), (48, 3), (88, 2), (90, 2), (84, 2), (40, 2)]
+  Non-allowed face types: min=14, max=427, mean=200.2
+
+--- Face allowedness for Hamiltonian paths ---
+  Paths with ALL faces allowed: total 246, dist per tournament: [(1, 29), (2, 20), (0, 17), (4, 13), (3, 7), (5, 7), (7, 1), (13, 1), (14, 1), (6, 1)]
+  Non-allowed face count distribution (across all paths):
+    0 non-allowed faces: 246 paths
+    1 non-allowed faces: 1230 paths
+    2 non-allowed faces: 2516 paths
+    3 non-allowed faces: 2534 paths
+    4 non-allowed faces: 1203 paths
+    5 non-allowed faces: 269 paths
+
+--- Which face indices are non-allowed? ---
+    face_1: non-allowed 4004 times
+    face_2: non-allowed 4002 times
+    face_3: non-allowed 4018 times
+    face_4: non-allowed 3995 times
+    face_5: non-allowed 4002 times
+
+--- face_0 analysis ---
+  face_0 (remove v_0) is allowed: 7998 paths
+  face_0 is NOT allowed: 0 paths
+  face_0 injective on ALL Ham paths: 100/100
+  face_{n-1} injective on ALL Ham paths: 100/100
+
+  ** TRIVIAL FACT: face_0 is ALWAYS injective on Hamiltonian paths **
+  Reason: A Ham path uses ALL n vertices. Removing v_0 gives (v_1,...,v_6).
+  This determines which vertex was v_0 (the missing one). So face_0 is injective.
+  Similarly, face_i is injective on Ham paths for ANY fixed i.
+
+--- DETAILED Omega_{n-1} ANALYSIS (first 5 examples) ---
+
+  Tournament 0:
+    Ham paths: 55, Omega dim: 0
+    Type: empty
+
+  Tournament 1:
+    Ham paths: 91, Omega dim: 3
+    Type: constrained
+    Constraints: 225, rank=88
+    Basis vectors:
+      v0: 1 paths, coefficients: [(69, 1)]
+        coeff=1: path=(5, 0, 6, 2, 3, 1, 4)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v1: 1 paths, coefficients: [(76, 1)]
+        coeff=1: path=(5, 0, 2, 3, 1, 4, 6)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v2: 1 paths, coefficients: [(81, 1)]
+        coeff=1: path=(5, 0, 1, 4, 6, 2, 3)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 2:
+    Ham paths: 79, Omega dim: 1
+    Type: constrained
+    Constraints: 189, rank=78
+    Basis vectors:
+      v0: 1 paths, coefficients: [(26, 1)]
+        coeff=1: path=(3, 4, 2, 6, 0, 5, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 3:
+    Ham paths: 91, Omega dim: 1
+    Type: constrained
+    Constraints: 241, rank=90
+    Basis vectors:
+      v0: 1 paths, coefficients: [(39, 1)]
+        coeff=1: path=(3, 5, 0, 4, 2, 6, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+  Tournament 4:
+    Ham paths: 89, Omega dim: 5
+    Type: constrained
+    Constraints: 222, rank=84
+    Basis vectors:
+      v0: 1 paths, coefficients: [(8, 1)]
+        coeff=1: path=(0, 2, 6, 3, 4, 5, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v1: 1 paths, coefficients: [(16, 1)]
+        coeff=1: path=(2, 6, 3, 4, 5, 0, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v2: 1 paths, coefficients: [(35, 1)]
+        coeff=1: path=(3, 4, 0, 2, 6, 5, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v3: 1 paths, coefficients: [(62, 1)]
+        coeff=1: path=(4, 0, 2, 6, 3, 5, 1)
+      Starting vertices: set()
+      face_0 shared: N/A
+      v4: 1 paths, coefficients: [(83, 1)]
+        coeff=1: path=(6, 3, 4, 5, 0, 1, 2)
+      Starting vertices: set()
+      face_0 shared: N/A
+
+--- NON-ALLOWED FACE PAIRING (first 5 examples) ---
+
+  Tournament 0:
+    Num non-allowed face types: 135
+    Contributor dist: {1: 135}
+    Sign patterns: {(-1,): 77, (1,): 58}
+    Face index dist: {1: 23, 2: 29, 5: 26, 3: 28, 4: 29}
+
+  Tournament 1:
+    Num non-allowed face types: 225
+    Contributor dist: {1: 225}
+    Sign patterns: {(1,): 87, (-1,): 138}
+    Face index dist: {2: 44, 3: 46, 5: 48, 4: 43, 1: 44}
+
+  Tournament 2:
+    Num non-allowed face types: 189
+    Contributor dist: {1: 189}
+    Sign patterns: {(-1,): 110, (1,): 79}
+    Face index dist: {1: 35, 2: 40, 4: 39, 5: 38, 3: 37}
+
+  Tournament 3:
+    Num non-allowed face types: 241
+    Contributor dist: {1: 241}
+    Sign patterns: {(-1,): 144, (1,): 97}
+    Face index dist: {1: 49, 2: 48, 5: 51, 4: 49, 3: 44}
+
+  Tournament 4:
+    Num non-allowed face types: 222
+    Contributor dist: {1: 222}
+    Sign patterns: {(-1,): 133, (1,): 89}
+    Face index dist: {1: 46, 3: 44, 4: 44, 5: 43, 2: 45}
+
+
+================================================================================
+DEEP INVESTIGATION: WHY d_{n-1} is injective
+================================================================================
+
+KEY INSIGHT: face_i is injective on Hamiltonian paths for ANY fixed i.
+This is trivial: a Hamiltonian path visits ALL n vertices, so removing
+any single vertex v_i determines a unique (n-1)-path on the remaining
+vertices. Since the remaining vertices and their ORDER uniquely determine
+the original path (the missing vertex must be v_i, placed at position i),
+face_i is injective.
+
+BUT this does NOT directly imply d_{n-1} is injective, because:
+  d_{n-1}(P) = face_0(P) - face_1(P) + face_2(P) - ...
+is an ALTERNATING SUM of faces. Two different paths P,P' could
+potentially have d(P) = d(P') even though face_0(P) != face_0(P'),
+if the other faces conspire to cancel.
+
+The real question is: on Omega_{n-1} (the constrained subspace where
+d lands in allowed paths), does this cancellation happen?
+
+
+--- Kernel analysis for n=4 ---
+  Tournaments with ker(d_{n-1}) > 0: 0/64
+  d_{n-1} injective on Omega_{n-1} for ALL: True
+
+--- Kernel analysis for n=5 ---
+  Tournaments with ker(d_{n-1}) > 0: 0/1024
+  d_{n-1} injective on Omega_{n-1} for ALL: True
+
+--- Kernel analysis for n=6 ---
+  Tournaments with ker(d_{n-1}) > 0: 0/100
+  d_{n-1} injective on Omega_{n-1} for ALL: True
+
+--- Kernel analysis for n=7 ---
+  Tournaments with ker(d_{n-1}) > 0: 0/100
+  d_{n-1} injective on Omega_{n-1} for ALL: True
+
+
+================================================================================
+STRUCTURAL ANALYSIS: Why non-allowed faces force injectivity
+================================================================================
+
+--- n=5: Detailed face type analysis ---
+
+  Tournament 0 (n=5):
+  Ham paths: 1
+    Path (4, 3, 2, 1, 0): ALL faces allowed
+
+  Tournament 1 (n=5):
+  Ham paths: 1
+    Path (4, 3, 2, 0, 1): ALL faces allowed
+
+  Tournament 2 (n=5):
+  Ham paths: 3
+    Path (4, 3, 2, 1, 0): 1 non-allowed faces
+      face_3 = (4, 3, 2, 0): NOT allowed because [(2, 2, 0, 'arc goes v->u not u->v')]
+    Path (4, 3, 1, 0, 2): 1 non-allowed faces
+      face_3 = (4, 3, 1, 2): NOT allowed because [(2, 1, 2, 'arc goes v->u not u->v')]
+    Path (4, 3, 0, 2, 1): 1 non-allowed faces
+      face_3 = (4, 3, 0, 1): NOT allowed because [(2, 0, 1, 'arc goes v->u not u->v')]
+
+  Tournament 3 (n=5):
+  Ham paths: 1
+    Path (4, 3, 0, 2, 1): ALL faces allowed
+
+  Tournament 4 (n=5):
+  Ham paths: 5
+    Path (4, 3, 2, 1, 0): ALL faces allowed
+    Path (4, 2, 1, 0, 3): 1 non-allowed faces
+      face_3 = (4, 2, 1, 3): NOT allowed because [(2, 1, 3, 'arc goes v->u not u->v')]
+    Path (4, 2, 0, 3, 1): 2 non-allowed faces
+      face_2 = (4, 2, 3, 1): NOT allowed because [(1, 2, 3, 'arc goes v->u not u->v')]
+      face_3 = (4, 2, 0, 1): NOT allowed because [(2, 0, 1, 'arc goes v->u not u->v')]
+    Path (4, 1, 0, 3, 2): 2 non-allowed faces
+      face_2 = (4, 1, 3, 2): NOT allowed because [(1, 1, 3, 'arc goes v->u not u->v')]
+      face_3 = (4, 1, 0, 2): NOT allowed because [(2, 0, 2, 'arc goes v->u not u->v')]
+    Path (4, 0, 3, 2, 1): 1 non-allowed faces
+      face_2 = (4, 0, 2, 1): NOT allowed because [(1, 0, 2, 'arc goes v->u not u->v')]
+
+--- n=6: Detailed face type analysis ---
+
+  Tournament 0 (n=6):
+  Ham paths: 37
+    Path (0, 5, 2, 4, 1, 3): 3 non-allowed faces
+      face_1 = (0, 2, 4, 1, 3): NOT allowed because [(0, 0, 2, 'arc goes v->u not u->v')]
+      face_2 = (0, 5, 4, 1, 3): NOT allowed because [(1, 5, 4, 'arc goes v->u not u->v')]
+      face_3 = (0, 5, 2, 1, 3): NOT allowed because [(2, 2, 1, 'arc goes v->u not u->v')]
+    Path (0, 5, 1, 3, 2, 4): 2 non-allowed faces
+      face_2 = (0, 5, 3, 2, 4): NOT allowed because [(1, 5, 3, 'arc goes v->u not u->v')]
+      face_4 = (0, 5, 1, 3, 4): NOT allowed because [(3, 3, 4, 'arc goes v->u not u->v')]
+    Path (0, 5, 1, 2, 4, 3): 2 non-allowed faces
+      face_3 = (0, 5, 1, 4, 3): NOT allowed because [(2, 1, 4, 'arc goes v->u not u->v')]
+      face_4 = (0, 5, 1, 2, 3): NOT allowed because [(3, 2, 3, 'arc goes v->u not u->v')]
+    Path (0, 1, 3, 5, 2, 4): 3 non-allowed faces
+      face_1 = (0, 3, 5, 2, 4): NOT allowed because [(0, 0, 3, 'arc goes v->u not u->v')]
+      face_2 = (0, 1, 5, 2, 4): NOT allowed because [(1, 1, 5, 'arc goes v->u not u->v')]
+      face_4 = (0, 1, 3, 5, 4): NOT allowed because [(3, 5, 4, 'arc goes v->u not u->v')]
+    Path (0, 1, 3, 2, 4, 5): 3 non-allowed faces
+      face_1 = (0, 3, 2, 4, 5): NOT allowed because [(0, 0, 3, 'arc goes v->u not u->v')]
+      face_3 = (0, 1, 3, 4, 5): NOT allowed because [(2, 3, 4, 'arc goes v->u not u->v')]
+      face_4 = (0, 1, 3, 2, 5): NOT allowed because [(3, 2, 5, 'arc goes v->u not u->v')]
+    Path (0, 1, 2, 4, 3, 5): 3 non-allowed faces
+      face_1 = (0, 2, 4, 3, 5): NOT allowed because [(0, 0, 2, 'arc goes v->u not u->v')]
+      face_2 = (0, 1, 4, 3, 5): NOT allowed because [(1, 1, 4, 'arc goes v->u not u->v')]
+      face_3 = (0, 1, 2, 3, 5): NOT allowed because [(2, 2, 3, 'arc goes v->u not u->v')]
+    Path (1, 3, 5, 2, 4, 0): 2 non-allowed faces
+      face_1 = (1, 5, 2, 4, 0): NOT allowed because [(0, 1, 5, 'arc goes v->u not u->v')]
+      face_3 = (1, 3, 5, 4, 0): NOT allowed because [(2, 5, 4, 'arc goes v->u not u->v')]
+    Path (1, 3, 2, 4, 0, 5): 1 non-allowed faces
+      face_2 = (1, 3, 4, 0, 5): NOT allowed because [(1, 3, 4, 'arc goes v->u not u->v')]
+    ... (29 more paths)
+
+  Tournament 1 (n=6):
+  Ham paths: 27
+    Path (0, 4, 2, 1, 5, 3): 1 non-allowed faces
+      face_2 = (0, 4, 1, 5, 3): NOT allowed because [(1, 4, 1, 'arc goes v->u not u->v')]
+    Path (0, 2, 1, 4, 5, 3): 1 non-allowed faces
+      face_2 = (0, 2, 4, 5, 3): NOT allowed because [(1, 2, 4, 'arc goes v->u not u->v')]
+    Path (0, 1, 4, 2, 5, 3): 1 non-allowed faces
+      face_2 = (0, 1, 2, 5, 3): NOT allowed because [(1, 1, 2, 'arc goes v->u not u->v')]
+    Path (1, 5, 3, 0, 4, 2): 2 non-allowed faces
+      face_2 = (1, 5, 0, 4, 2): NOT allowed because [(1, 5, 0, 'arc goes v->u not u->v')]
+      face_3 = (1, 5, 3, 4, 2): NOT allowed because [(2, 3, 4, 'arc goes v->u not u->v')]
+    Path (1, 4, 5, 3, 0, 2): 2 non-allowed faces
+      face_3 = (1, 4, 5, 0, 2): NOT allowed because [(2, 5, 0, 'arc goes v->u not u->v')]
+      face_4 = (1, 4, 5, 3, 2): NOT allowed because [(3, 3, 2, 'arc goes v->u not u->v')]
+    Path (1, 4, 3, 0, 2, 5): 2 non-allowed faces
+      face_2 = (1, 4, 0, 2, 5): NOT allowed because [(1, 4, 0, 'arc goes v->u not u->v')]
+      face_3 = (1, 4, 3, 2, 5): NOT allowed because [(2, 3, 2, 'arc goes v->u not u->v')]
+    Path (1, 4, 2, 5, 3, 0): 2 non-allowed faces
+      face_1 = (1, 2, 5, 3, 0): NOT allowed because [(0, 1, 2, 'arc goes v->u not u->v')]
+      face_4 = (1, 4, 2, 5, 0): NOT allowed because [(3, 5, 0, 'arc goes v->u not u->v')]
+    Path (1, 4, 2, 3, 0, 5): 3 non-allowed faces
+      face_1 = (1, 2, 3, 0, 5): NOT allowed because [(0, 1, 2, 'arc goes v->u not u->v')]
+      face_3 = (1, 4, 2, 0, 5): NOT allowed because [(2, 2, 0, 'arc goes v->u not u->v')]
+      face_4 = (1, 4, 2, 3, 5): NOT allowed because [(3, 3, 5, 'arc goes v->u not u->v')]
+    ... (19 more paths)
+
+  Tournament 2 (n=6):
+  Ham paths: 31
+    Path (0, 2, 5, 1, 3, 4): 1 non-allowed faces
+      face_1 = (0, 5, 1, 3, 4): NOT allowed because [(0, 0, 5, 'arc goes v->u not u->v')]
+    Path (0, 2, 4, 5, 1, 3): 2 non-allowed faces
+      face_1 = (0, 4, 5, 1, 3): NOT allowed because [(0, 0, 4, 'arc goes v->u not u->v')]
+      face_3 = (0, 2, 4, 1, 3): NOT allowed because [(2, 4, 1, 'arc goes v->u not u->v')]
+    Path (0, 2, 3, 4, 5, 1): 2 non-allowed faces
+      face_3 = (0, 2, 3, 5, 1): NOT allowed because [(2, 3, 5, 'arc goes v->u not u->v')]
+      face_4 = (0, 2, 3, 4, 1): NOT allowed because [(3, 4, 1, 'arc goes v->u not u->v')]
+    Path (0, 2, 1, 4, 5, 3): 3 non-allowed faces
+      face_1 = (0, 1, 4, 5, 3): NOT allowed because [(0, 0, 1, 'arc goes v->u not u->v')]
+      face_3 = (0, 2, 1, 5, 3): NOT allowed because [(2, 1, 5, 'arc goes v->u not u->v')]
+      face_4 = (0, 2, 1, 4, 3): NOT allowed because [(3, 4, 3, 'arc goes v->u not u->v')]
+    Path (0, 2, 1, 3, 4, 5): 2 non-allowed faces
+      face_1 = (0, 1, 3, 4, 5): NOT allowed because [(0, 0, 1, 'arc goes v->u not u->v')]
+      face_4 = (0, 2, 1, 3, 5): NOT allowed because [(3, 3, 5, 'arc goes v->u not u->v')]
+    Path (1, 4, 5, 0, 2, 3): 2 non-allowed faces
+      face_1 = (1, 5, 0, 2, 3): NOT allowed because [(0, 1, 5, 'arc goes v->u not u->v')]
+      face_3 = (1, 4, 5, 2, 3): NOT allowed because [(2, 5, 2, 'arc goes v->u not u->v')]
+    Path (1, 4, 0, 2, 5, 3): 2 non-allowed faces
+      face_2 = (1, 4, 2, 5, 3): NOT allowed because [(1, 4, 2, 'arc goes v->u not u->v')]
+      face_3 = (1, 4, 0, 5, 3): NOT allowed because [(2, 0, 5, 'arc goes v->u not u->v')]
+    Path (1, 3, 4, 5, 0, 2): 2 non-allowed faces
+      face_2 = (1, 3, 5, 0, 2): NOT allowed because [(1, 3, 5, 'arc goes v->u not u->v')]
+      face_4 = (1, 3, 4, 5, 2): NOT allowed because [(3, 5, 2, 'arc goes v->u not u->v')]
+    ... (23 more paths)
+
+  Tournament 3 (n=6):
+  Ham paths: 5
+    Path (3, 4, 5, 1, 0, 2): 2 non-allowed faces
+      face_3 = (3, 4, 5, 0, 2): NOT allowed because [(2, 5, 0, 'arc goes v->u not u->v')]
+      face_4 = (3, 4, 5, 1, 2): NOT allowed because [(3, 1, 2, 'arc goes v->u not u->v')]
+    Path (3, 4, 2, 5, 1, 0): 1 non-allowed faces
+      face_4 = (3, 4, 2, 5, 0): NOT allowed because [(3, 5, 0, 'arc goes v->u not u->v')]
+    Path (3, 4, 2, 1, 0, 5): 2 non-allowed faces
+      face_3 = (3, 4, 2, 0, 5): NOT allowed because [(2, 2, 0, 'arc goes v->u not u->v')]
+      face_4 = (3, 4, 2, 1, 5): NOT allowed because [(3, 1, 5, 'arc goes v->u not u->v')]
+    Path (3, 4, 1, 0, 2, 5): 1 non-allowed faces
+      face_3 = (3, 4, 1, 2, 5): NOT allowed because [(2, 1, 2, 'arc goes v->u not u->v')]
+    Path (3, 4, 0, 2, 5, 1): ALL faces allowed
+
+  Tournament 4 (n=6):
+  Ham paths: 33
+    Path (0, 5, 4, 2, 1, 3): 2 non-allowed faces
+      face_2 = (0, 5, 2, 1, 3): NOT allowed because [(1, 5, 2, 'arc goes v->u not u->v')]
+      face_4 = (0, 5, 4, 2, 3): NOT allowed because [(3, 2, 3, 'arc goes v->u not u->v')]
+    Path (0, 5, 4, 1, 3, 2): 3 non-allowed faces
+      face_2 = (0, 5, 1, 3, 2): NOT allowed because [(1, 5, 1, 'arc goes v->u not u->v')]
+      face_3 = (0, 5, 4, 3, 2): NOT allowed because [(2, 4, 3, 'arc goes v->u not u->v')]
+      face_4 = (0, 5, 4, 1, 2): NOT allowed because [(3, 1, 2, 'arc goes v->u not u->v')]
+    Path (0, 5, 3, 4, 2, 1): 1 non-allowed faces
+      face_1 = (0, 3, 4, 2, 1): NOT allowed because [(0, 0, 3, 'arc goes v->u not u->v')]
+    Path (0, 4, 2, 1, 5, 3): ALL faces allowed
+    Path (0, 4, 1, 5, 3, 2): 2 non-allowed faces
+      face_2 = (0, 4, 5, 3, 2): NOT allowed because [(1, 4, 5, 'arc goes v->u not u->v')]
+      face_4 = (0, 4, 1, 5, 2): NOT allowed because [(3, 5, 2, 'arc goes v->u not u->v')]
+    Path (0, 4, 1, 3, 2, 5): 3 non-allowed faces
+      face_2 = (0, 4, 3, 2, 5): NOT allowed because [(1, 4, 3, 'arc goes v->u not u->v')]
+      face_3 = (0, 4, 1, 2, 5): NOT allowed because [(2, 1, 2, 'arc goes v->u not u->v')]
+      face_4 = (0, 4, 1, 3, 5): NOT allowed because [(3, 3, 5, 'arc goes v->u not u->v')]
+    Path (0, 2, 5, 4, 1, 3): 3 non-allowed faces
+      face_2 = (0, 2, 4, 1, 3): NOT allowed because [(1, 2, 4, 'arc goes v->u not u->v')]
+      face_3 = (0, 2, 5, 1, 3): NOT allowed because [(2, 5, 1, 'arc goes v->u not u->v')]
+      face_4 = (0, 2, 5, 4, 3): NOT allowed because [(3, 4, 3, 'arc goes v->u not u->v')]
+    Path (0, 2, 5, 3, 4, 1): 2 non-allowed faces
+      face_2 = (0, 2, 3, 4, 1): NOT allowed because [(1, 2, 3, 'arc goes v->u not u->v')]
+      face_4 = (0, 2, 5, 3, 1): NOT allowed because [(3, 3, 1, 'arc goes v->u not u->v')]
+    ... (25 more paths)
+
+
+================================================================================
+OMEGA_{n-1} DIMENSION PATTERNS
+================================================================================
+
+--- n=4 ---
+  Total: 64
+  Omega_{n-1} = 0: 16 (25.0%)
+  Omega_{n-1} = #Ham (unconstrained): 24 (37.5%)
+  beta_{n-1} = 0: 64 (100.0%)
+  Omega_{n-1} dimension distribution: [(1, 48), (0, 16)]
+  rank(d_{n-1}) distribution: [(1, 48), (0, 16)]
+  beta_{n-1} distribution: [(0, 64)]
+  rank(d_{n-1}) == omega_dim for ALL: True
+
+--- n=5 ---
+  Total: 1024
+  Omega_{n-1} = 0: 280 (27.3%)
+  Omega_{n-1} = #Ham (unconstrained): 120 (11.7%)
+  beta_{n-1} = 0: 1024 (100.0%)
+  Omega_{n-1} dimension distribution: [(1, 600), (0, 280), (2, 120), (5, 24)]
+  rank(d_{n-1}) distribution: [(1, 600), (0, 280), (2, 120), (5, 24)]
+  beta_{n-1} distribution: [(0, 1024)]
+  rank(d_{n-1}) == omega_dim for ALL: True
+
+--- n=6 ---
+  Total: 200
+  Omega_{n-1} = 0: 50 (25.0%)
+  Omega_{n-1} = #Ham (unconstrained): 5 (2.5%)
+  beta_{n-1} = 0: 200 (100.0%)
+  Omega_{n-1} dimension distribution: [(1, 86), (0, 50), (2, 28), (3, 19), (4, 8), (7, 7), (9, 1), (5, 1)]
+  rank(d_{n-1}) distribution: [(1, 86), (0, 50), (2, 28), (3, 19), (4, 8), (7, 7), (9, 1), (5, 1)]
+  beta_{n-1} distribution: [(0, 200)]
+  rank(d_{n-1}) == omega_dim for ALL: True
+
+--- n=7 ---
+  Total: 200
+  Omega_{n-1} = 0: 29 (14.5%)
+  Omega_{n-1} = #Ham (unconstrained): 1 (0.5%)
+  beta_{n-1} = 0: 200 (100.0%)
+  Omega_{n-1} dimension distribution: [(1, 68), (2, 36), (0, 29), (4, 21), (3, 20), (5, 10), (6, 5), (7, 4), (10, 3), (13, 1), (14, 1), (11, 1), (8, 1)]
+  rank(d_{n-1}) distribution: [(1, 68), (2, 36), (0, 29), (4, 21), (3, 20), (5, 10), (6, 5), (7, 4), (10, 3), (13, 1), (14, 1), (11, 1), (8, 1)]
+  beta_{n-1} distribution: [(0, 200)]
+  rank(d_{n-1}) == omega_dim for ALL: True
+
+
+================================================================================
+WHAT MAKES A FACE NON-ALLOWED?
+================================================================================
+
+A Hamiltonian path P = (v_0, v_1, ..., v_{n-1}) has arcs v_i -> v_{i+1}.
+Face_i(P) = (v_0, ..., v_{i-1}, v_{i+1}, ..., v_{n-1}).
+
+Face_i(P) is an allowed (n-2)-path iff v_{i-1} -> v_{i+1} (when i > 0 and i < n-1).
+- face_0(P) = (v_1, ..., v_{n-1}): always allowed iff v_1 -> v_2 -> ... -> v_{n-1},
+  which is ALWAYS TRUE since P is a path with those arcs.
+- face_{n-1}(P) = (v_0, ..., v_{n-2}): similarly always allowed.
+- face_i(P) for 0 < i < n-1: allowed iff v_{i-1} -> v_{i+1} in the tournament.
+  This is the "shortcut" condition: removing v_i, can we go directly from v_{i-1} to v_{i+1}?
+
+
+--- Verification for n=5 ---
+  face_0 allowed: 7680/7680 (should be ALL)
+  face_{n-1} allowed: 7680/7680 (should be ALL)
+  Interior face shortcut condition matches: 23040/23040 (should be ALL)
+
+--- Verification for n=6 ---
+  face_0 allowed: 744/744 (should be ALL)
+  face_{n-1} allowed: 744/744 (should be ALL)
+  Interior face shortcut condition matches: 2976/2976 (should be ALL)
+
+
+================================================================================
+THE MECHANISM: Shortcut structure and d_{n-1} injectivity
+================================================================================
+
+SUMMARY OF FINDINGS:
+
+1. face_0(P) and face_{n-1}(P) are ALWAYS allowed for Hamiltonian paths.
+   - face_0(P) = (v_1,...,v_{n-1}) is allowed because v_1->v_2->...->v_{n-1} are
+     consecutive arcs of P, hence already directed arcs.
+   - Similarly for face_{n-1}(P) = (v_0,...,v_{n-2}).
+
+2. face_i(P) for 0 < i < n-1 is allowed iff v_{i-1} -> v_{i+1} (shortcut arc exists).
+   - Non-allowed interior face means v_{i+1} -> v_{i-1} (shortcut goes BACKWARD).
+
+3. Omega_{n-1} constraint: sum (-1)^i face_i(P) must have no non-allowed components.
+   - Since face_0 and face_{n-1} are ALWAYS allowed, the constraint is on interior faces.
+   - P is in Omega_{n-1} iff: for each non-allowed face_i(P), there exist other
+     Hamiltonian paths Q with face_j(Q) = face_i(P) (same non-allowed face) and
+     the signed contributions cancel.
+
+4. The TRIVIALITY argument for face injectivity:
+   Any face_i is injective on the set of Hamiltonian paths, because a Hamiltonian
+   path uses all n vertices, so removing vertex v_i yields a unique sequence of the
+   remaining n-1 vertices, which determines the original path.
+
+5. WHY d_{n-1} is injective on Omega_{n-1}:
+
+
+  n=4: Exhaustive kernel computation
+    d_{n-1} is injective on Omega_{n-1} for ALL 64 tournaments
+
+  n=5: Exhaustive kernel computation
+    d_{n-1} is injective on Omega_{n-1} for ALL 1024 tournaments
+
+  n=7: 500 random tournaments
+    beta_6 > 0 (= ker(d_6) > 0): 0/500
+
+  n=8: 100 random tournaments
+    beta_7 > 0 (= ker(d_7) > 0): 0/100
+
+
+================================================================================
+CONCLUSION
+================================================================================
+
+The analysis shows:
+
+1. face_0 and face_{n-1} are ALWAYS allowed for Hamiltonian paths (trivially,
+   since the sub-path inherits consecutive arcs from the original path).
+
+2. face_i for 0 < i < n-1 is allowed iff v_{i-1} -> v_{i+1} (shortcut exists).
+   Non-allowed faces correspond to "backward shortcuts" v_{i+1} -> v_{i-1}.
+
+3. face_i is injective on the SET of Hamiltonian paths for any fixed i
+   (trivially, since all n vertices are used).
+
+4. d_{n-1} is injective on Omega_{n-1} for ALL tested tournaments at n=4..8.
+   Since beta_{n-1} = ker(d_{n-1}|_{Omega_{n-1}}) (no d_n map since n-1 is top degree),
+   this is equivalent to beta_{n-1} = 0.
+
+5. The mechanism: In Omega_{n-1}, elements are linear combinations of Hamiltonian
+   paths where non-allowed interior faces cancel. The boundary map d sends each
+   such element to a sum of (n-2)-paths. Because face_0 is both:
+     (a) always allowed (so it always contributes to the image), AND
+     (b) injective on individual paths,
+   the face_0 components cannot cancel completely in d(omega_element) unless the
+   omega_element itself is zero. This is because face_0 maps different Hamiltonian
+   paths to DIFFERENT allowed (n-2)-paths, so the face_0 part of d(sum c_j P_j)
+   is sum c_j face_0(P_j), which is nonzero whenever any c_j is nonzero.
+

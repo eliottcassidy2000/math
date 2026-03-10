@@ -3,11 +3,47 @@
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-06-S10
-**Last web research:** kind-pasteur-2026-03-07-S33 (Lichiardopol, Chen-Chang disjoint cycles, Frankl Erdos matching)
+**Last web research:** kind-pasteur-2026-03-10-S50 (Tang-Yau circulant path homology, Schweser-Stiebitz-Toft Redei revisited, Mitrovic NC Redei, Satake DRT)
 
 ---
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
+
+### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
+**Source:** Web research kind-pasteur-2026-03-10-S50
+**Status:** NEW — needs investigation. February 2026.
+**What:** Tang-Yau develop a "symbol-matrix" approach to GLMY path homology for circulant digraphs using Fourier decomposition on the shift automorphism. Provides computable Betti number formulas, with dependence on whether n is prime or composite. Since Paley tournaments T_p are circulant digraphs (vertex set Z_p, connection set QR(p)), this method DIRECTLY applies to computing β_k(T_p) for all k.
+**Why important:** Our Fourier eigenspace code (paley_fourier_betti.py) independently implements a similar idea but for a different purpose. Tang-Yau may have already proved top vanishing (THM-124) for circulant digraphs! Or their formula could give exact Betti numbers for T_7, T_11, etc.
+**Next step:** (1) Fetch arXiv:2602.04140 and check their results. (2) See if their Theorem applies to Paley T_p specifically. (3) Check if they have top vanishing as a corollary. (4) Cross-reference with our Omega dimension palindrome observation.
+**Priority:** HIGH — directly computable results for Paley tournaments.
+
+### INV-136: Schweser-Stiebitz-Toft (arXiv:2510.10659): Redei's Theorem Revisited (Oct 2025)
+**Source:** Web research kind-pasteur-2026-03-10-S50
+**Status:** NEW — needs investigation.
+**What:** Reexamines Redei's 1934 theorem (H(T) is odd) alongside Dirac and Berge's stronger results. February 2026 revision. Could contain new perspectives on parity of H(T) directly relevant to the project.
+**Next step:** Fetch arXiv:2510.10659 and check for new parity results or connections to OCF.
+
+### INV-137: Satake (arXiv:2502.12090): Cyclotomic Nearly-Doubly-Regular Tournaments (Feb 2025)
+**Source:** Web research kind-pasteur-2026-03-10-S50
+**Status:** NEW — needs investigation.
+**What:** Constructs new cyclotomic nearly-doubly-regular tournaments using almost difference sets. Conditionally confirms (Hardy-Littlewood conjecture F) Savchenko's conjecture on infinitely many DRTs with canonical spectrum. Relevant to DRT analysis and H-maximization.
+**Next step:** Check if any NDRTs at p=23 or beyond have H values we can compare.
+
+### INV-138: Ren (arXiv:2504.15126): Path Independence Complexes of Digraphs (Apr 2025)
+**Source:** Web research kind-pasteur-2026-03-10-S50
+**Status:** NEW — needs investigation.
+**What:** Studies "path independence complexes" of digraphs with canonical embeddings and Shannon capacity consequences. The "path independence complex" concept may be related to our Omega(T) conflict graph.
+**Next step:** Check whether "path independence complex" is the same as or related to Omega(T). If so, their results on Shannon capacity might give new information.
+
+### INV-139: Tang-Yau (arXiv:2402.05682): Cellular Homology of Digraphs (Feb 2024)
+**Source:** Web research kind-pasteur-2026-03-10-S50
+**Status:** NEW — background.
+**What:** Introduces cellular chain complexes for digraphs using admissible minimal paths. Connects to GLMY under strongly regular conditions.
+
+### INV-140: Hepworth-Roff (arXiv:2404.06689): Magnitude-Path Spectral Sequence (Apr 2024)
+**Source:** Web research kind-pasteur-2026-03-10-S50
+**Status:** NEW — background.
+**What:** The MPSS connects magnitude homology (page 1) to path homology (page 2). Bigraded path homology satisfies Kunneth, Mayer-Vietoris, excision. Could provide extra structure for tournament path homology via the bigraded version.
 
 ### INV-050: Fourier Decomposition Proof of OCF — OCF PROVED AT n=5 AND n=7
 **Source:** opus-2026-03-06-S11b (continued^7, ^8)
