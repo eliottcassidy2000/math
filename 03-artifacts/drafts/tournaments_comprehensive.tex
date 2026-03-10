@@ -184,8 +184,8 @@ source code are available in the repository.
 \toprule
 Sequence & Description & OEIS had & We computed & New \\
 \midrule
-A000568 & Tournaments & 76 & 200+ & 120+ \\
-A000273 & Digraphs & 64 & 101 & 37 \\
+A000568 & Tournaments & 77 & 200+ & 123+ \\
+A000273 & Digraphs & 65 & 101 & 36 \\
 A001174 & Oriented graphs & 50 & 200 & 150 \\
 A000595 & Binary relations & 51 & 200 & 149 \\
 A000171 & Self-comp graphs & 100 & 439+ & 339+ \\
@@ -243,8 +243,7 @@ via matrix powers)
 \item $\alpha_2$ computable from per-vertex cycle counts via inclusion-exclusion ($O(n^3)$)
 \end{itemize}
 
-At $n = 9$, this gives a $100\times$ speedup: 0.7ms per tournament versus 70ms
-for Held--Karp.
+For moderate $n$, the cycle-counting operations are polynomial-time ($O(n^3)$ via matrix traces) while Held--Karp is exponential ($O(2^n n^2)$), giving significant practical speedups.
 
 \subsection{Spectrum gaps}
 

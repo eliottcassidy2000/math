@@ -16,8 +16,8 @@ We wrote 77 C/GMP programs and 1550+ Python scripts. The C enumerators use Burns
 
 | Sequence | What it counts | Previously known | We computed to | New terms |
 |----------|---------------|-----------------|----------------|-----------|
-| A000568 | Tournaments | n = 76 | n = 200+ | 120+ |
-| A000273 | Directed graphs | n = 64 | n = 101 | 37 |
+| A000568 | Tournaments | n = 77 | n = 200+ | 123+ |
+| A000273 | Directed graphs | n = 65 | n = 101 | 36 |
 | A001174 | Oriented graphs | n = 50 | n = 200 | 150 |
 | A000595 | Binary relations | n = 51 | n = 200 | 149 |
 | A000666 | Symmetric relations | n = 81 | n = 200 | 119 |
@@ -150,7 +150,7 @@ where H(T) counts directed Hamiltonian paths, Omega(T) is the odd-cycle conflict
 
 This gives H(T) = 1 + 2a_1 + 4a_2 + 8a_3 + ... where a_k counts collections of k vertex-disjoint odd cycles. Since the leading term is 1 and the rest is even, this immediately implies Redei's 1934 theorem (H(T) is always odd).
 
-**Practical speedup:** The OCF replaces the O(2^n * n^2) Held-Karp dynamic programming algorithm with O(n^5) trace formulas for moderate n. At n = 9, this is **100x faster** (0.7ms vs 70ms per tournament). For sparse tournaments with few long cycles, the advantage is even larger.
+**Practical speedup:** The OCF replaces the O(2^n * n^2) Held-Karp dynamic programming algorithm with O(n^5) trace formulas for moderate n. For moderate n, the OCF approach is significantly faster than Held-Karp DP — the cycle-counting operations are polynomial-time (O(n^3) via matrix traces) while the DP is exponential (O(2^n * n^2)). The advantage grows with structure: tournaments with few long cycles can be processed even faster, since higher-order terms in the OCF expansion vanish.
 
 **Verified exhaustively through n = 8** (2^27 = 134 million configurations, 57 minutes on 4 cores).
 

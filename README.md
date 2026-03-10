@@ -27,8 +27,8 @@ Additionally, **40+ potentially new sequences** have been computed (connected k-
 
 | Sequence | Description | OEIS had | We computed to | New terms |
 |----------|-------------|----------|----------------|-----------|
-| **A000568** | Tournaments on n nodes | n=76 | n=200+ | **120+** |
-| **A000273** | Directed graphs | n=64 | n=101 | **37** |
+| **A000568** | Tournaments on n nodes | n=77 | n=200+ | **123+** |
+| **A000273** | Directed graphs | n=65 | n=101 | **36** |
 | **A001174** | Oriented graphs | n=50 | n=200 | **150** |
 | **A000595** | Binary relations | n=51 | n=200 | **149** |
 | **A000171** | Self-complementary graphs | n=100 | n=439+ | **339+** |
@@ -78,7 +78,7 @@ All enumerator source code is in `04-computation/`. See `05-knowledge/results/bu
 
 where H(T) counts directed Hamiltonian paths, Omega(T) is the odd-cycle conflict graph, and I(G, x) is the independence polynomial. This gives H(T) = 1 + 2a_1 + 4a_2 + ... where a_k counts collections of k vertex-disjoint odd cycles.
 
-**Practical impact:** Replaces O(2^n * n^2) Held-Karp DP with O(n^5) trace formulas for moderate n. Benchmarked 100x speedup at n=9.
+**Practical impact:** Replaces O(2^n * n^2) Held-Karp DP with O(n^5) trace formulas for moderate n.
 
 **What's new here:** We give an independent elementary proof (THM-077) via Walsh-Fourier analysis, bypassing the P-partition theory used by Grinberg-Stanley. We also compute the complete Walsh spectrum (below).
 

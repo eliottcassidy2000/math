@@ -355,7 +355,7 @@ The OCF decomposition H = 1 + 2*alpha_1 + 4*alpha_2 + ... admits efficient compu
 - **alpha_1 (odd cycle count):** t_3 = C(n,3) - sum_v C(s_v, 2) by Moon's formula [O(n^2)]; t_5 = tr(A^5)/10 - correction terms [O(n^3 via matrix multiplication)]; t_7 similarly.
 - **alpha_2 (disjoint cycle pairs):** Computable from vertex-wise cycle counts using inclusion-exclusion [O(n^3) for 3-cycle pairs].
 
-For n <= 9, the trace formula approach yields a **100x speedup** over standard DP (0.7ms vs 70ms per tournament in benchmarks), effectively reducing practical complexity from O(2^n * n^2) to O(n^5) for moderate n. For tournaments with few long cycles (common in real-world preference data), the speedup can be even larger since higher-order terms vanish.
+For moderate n, the trace formula approach effectively reduces practical complexity from O(2^n * n^2) to O(n^5), since cycle counts are computable in O(n^3) via matrix traces. For tournaments with few long cycles (common in real-world preference data), the speedup is even larger since higher-order terms vanish.
 
 ### 9.4 Walsh-Fourier Dimensionality Reduction
 
