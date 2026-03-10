@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-09-S57 — 2026-03-09: codim-1 universality, generator direction, old/new decomposition
+**Account:** opus
+**Continuation of:** opus-2026-03-09-S56
+**Summary of work:**
+  Deep algebraic investigation of WHY i_*-injectivity holds at n=7 and fails at n=8. Major structural results:
+  1. **HYP-408 (Codim-1 universality)**: codim(im(d_4^T)_old_proj, ker(d_3^T)_old_proj) = 1 ALWAYS for b3=1 tournaments with BAD vertices. Tested 300/300 at n=7, 150/150 at n=8. The old-projection of H_3(T) is universally 1-dimensional.
+  2. **HYP-409 (im(d_4^{T\v}) ⊂ im(d_4^T)_old)**: T\v boundaries embed into T boundaries on old coords. 200/200 at n=7, 122/122 at n=8.
+  3. **HYP-410 (i_* criterion)**: rank(i_*)=0 iff old-projection of embedded H_3(T\v) gen ∈ im(d_4^T)_old_proj. The i_*-injectivity question reduces to a single linear condition.
+  4. **HYP-411 (direction mismatch)**: Failure vertices have H_3(T) gen concentrated on through-v paths. Jaccard similarity of supports: fail 0.00-0.04 vs success mean 0.05.
+  5. **Single-face theorem**: Every through-v 4-path has exactly 1 old face in boundary (the v-deletion face). Verified 100 tournaments n=7, 50 at n=8.
+  6. **No orphan faces**: ALL old 3-paths in A_3(T) embed into A_3(T\v). n_orphan=0 universally.
+  7. **V-deletion faces never cycles**: The v-deletion face of a through-v Omega_4 vector is NEVER in ker(d_3^{T\v}). rk_old_face_in_ker=0 at both n=7 and n=8.
+  8. **Old/new decomposition**: At n=7, rk(d_4_old)≈4.2, rk(d_4_new)≈18.9, overlap≈3.3. At n=8: rk_old≈20.9, rk_new≈54.1, overlap≈17.5. The overlap grows dramatically.
+  9. **Generator direction analysis**: At n=8 failures, H_3(T) gen has 12-18 through-v components (vs success mean 9.3), and embedded gen has only 5-8 support paths.
+**New contributions:** h4_relative_mechanism.py, failure_structure_n8.py, omega_dim_comparison.py, generator_direction_n8.py, n7_injectivity_proof.py, outdeg_failure_correlation.py, codim_analysis.py, codim1_universality.py, new_bdy_old_proj.py, single_face_structure.py, reachability_test.py, orphan_face_mechanism.py. HYP-408,409,410,411 added.
+**Unresolved threads:**
+  - WHY does i_* always succeed at n=7? The codim-1 universality reduces it to: why can't new boundaries projected to old coords reach the H_3(T\v) direction? The single-face + no-cycles results narrow this further.
+  - The "old projection doesn't commute with cycle condition" phenomenon needs formalization
+  - Out-degree correlation: partial data (14/1600 failures at n=8) — 3 scripts cut short, needs larger sample
+  - Algebraic proof of HYP-408 (codim=1 universality) — this is a potentially provable structural theorem
+
 ## opus-2026-03-09-S56 — 2026-03-09: cancellation mechanism, HYP-398⟺i_*-injectivity, Euler characteristic
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S55
