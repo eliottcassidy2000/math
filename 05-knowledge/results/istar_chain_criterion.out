@@ -1,0 +1,33 @@
+
+======================================================================
+CHAIN-LEVEL CRITERION FOR rank(i_*) AT n=7
+======================================================================
+  200 BAD (T,v) pairs, 60.8s
+  ψ(ker(d4^tvtv)) reaches H_3(T\v): 0/200
+  rank(i_*) = 0: 0/200
+  Criterion matches: 200/200
+  ψ(ker) ⊂ ker(d_3^Tv): 200/200
+  dim_ker_d4_tvtv: min=3, max=26, mean=16.8
+  rk_psi_ker: min=0, max=6, mean=4.6
+  extra_directions: min=0, max=0, mean=0.0
+
+======================================================================
+CHAIN-LEVEL CRITERION FOR rank(i_*) AT n=8
+======================================================================
+  800 BAD (T,v) pairs, 345.5s
+  ψ(ker(d4^tvtv)) reaches H_3(T\v): 5/800
+  rank(i_*) = 0: 5/800
+  Criterion matches: 800/800
+  ψ(ker) ⊂ ker(d_3^Tv): 800/800
+  dim_ker_d4_tvtv: min=22, max=137, mean=71.9
+  rk_psi_ker: min=9, max=29, mean=20.9
+  extra_directions: min=0, max=1, mean=0.0
+
+  --- rank(i_*)=0 cases ---
+    psi_reaches=True, extra=1, dim_ker_tvtv=98, rk_psi=28, psi_in_ker=True
+    psi_reaches=True, extra=1, dim_ker_tvtv=114, rk_psi=28, psi_in_ker=True
+    psi_reaches=True, extra=1, dim_ker_tvtv=98, rk_psi=28, psi_in_ker=True
+    psi_reaches=True, extra=1, dim_ker_tvtv=69, rk_psi=22, psi_in_ker=True
+    psi_reaches=True, extra=1, dim_ker_tvtv=114, rk_psi=28, psi_in_ker=True
+
+DONE.

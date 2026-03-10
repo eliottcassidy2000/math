@@ -1,0 +1,65 @@
+
+======================================================================
+TV-ONLY CYCLE BLOCK STRUCTURE AT n=7
+======================================================================
+  504 (T,v) pairs, 16.9s
+
+  Has tv-only Omega_3: 504/504
+  dim_omega3_tv_only: min=14, max=26, mean=20.6
+    distribution: {14: 6, 15: 3, 16: 34, 17: 36, 18: 44, 19: 63, 20: 45, 21: 83, 22: 65, 23: 28, 24: 50, 25: 20, 26: 27}
+  dim_K_tv: min=0, max=4, mean=0.9
+    distribution: {0: 273, 1: 111, 2: 51, 3: 52, 4: 17}
+  dim_B_tv: min=0, max=4, mean=0.9
+    distribution: {0: 273, 1: 111, 2: 41, 3: 58, 4: 21}
+  rk_phi: min=14, max=22, mean=19.5
+    distribution: {14: 6, 15: 3, 16: 34, 17: 36, 18: 55, 19: 100, 20: 93, 21: 122, 22: 55}
+  rk_d3_tv_tv: min=9, max=15, mean=12.3
+    distribution: {9: 5, 10: 52, 11: 70, 12: 133, 13: 158, 14: 74, 15: 12}
+  rk_full_d3_tv: min=14, max=23, mean=19.8
+    distribution: {14: 6, 15: 3, 16: 34, 17: 36, 18: 44, 19: 94, 20: 66, 21: 101, 22: 108, 23: 12}
+  dim_ker_phi: min=0, max=6, mean=1.2
+    distribution: {0: 273, 1: 102, 2: 12, 3: 38, 4: 58, 5: 12, 6: 9}
+
+  Ghost Cycle (K_tv = B_tv): 490/504
+
+  rk_phi + rk_d3_tv_tv vs rk_full_d3_tv:
+    (rk_phi + rk_dtv) - rk_full: {9: 5, 10: 52, 11: 90, 12: 169, 13: 163, 14: 25}
+
+  K_tv via block = K_tv direct: 504/504
+
+  Fraction of tv-only Omega killed by:
+    φ (v-del faces): min=0.769, max=1.000, mean=0.951
+    d_3^{tv→tv}: min=0.520, max=0.786, mean=0.600
+    full d_3:     min=0.846, max=1.000, mean=0.963
+
+======================================================================
+TV-ONLY CYCLE BLOCK STRUCTURE AT n=8
+======================================================================
+  304 (T,v) pairs, 34.0s
+
+  Has tv-only Omega_3: 304/304
+  dim_omega3_tv_only: min=28, max=53, mean=40.8
+  dim_K_tv: min=0, max=10, mean=3.0
+    distribution: {0: 65, 1: 54, 2: 28, 3: 43, 4: 32, 5: 29, 6: 21, 7: 12, 8: 10, 9: 4, 10: 6}
+  dim_B_tv: min=0, max=10, mean=3.0
+    distribution: {0: 65, 1: 54, 2: 27, 3: 39, 4: 36, 5: 30, 6: 19, 7: 13, 8: 10, 9: 5, 10: 6}
+  rk_phi: min=28, max=43, mean=37.1
+  rk_d3_tv_tv: min=16, max=24, mean=19.4
+    distribution: {16: 22, 17: 21, 18: 42, 19: 73, 20: 67, 21: 42, 22: 23, 23: 12, 24: 2}
+  rk_full_d3_tv: min=28, max=44, mean=37.9
+  dim_ker_phi: min=0, max=13, mean=3.8
+    distribution: {0: 65, 1: 52, 2: 18, 3: 13, 4: 37, 5: 34, 6: 26, 7: 13, 8: 12, 9: 13, 10: 7, 11: 4, 12: 4, 13: 6}
+
+  Ghost Cycle (K_tv = B_tv): 293/304
+
+  rk_phi + rk_d3_tv_tv vs rk_full_d3_tv:
+    (rk_phi + rk_dtv) - rk_full: {16: 23, 17: 35, 18: 66, 19: 110, 20: 54, 21: 16}
+
+  K_tv via block = K_tv direct: 304/304
+
+  Fraction of tv-only Omega killed by:
+    φ (v-del faces): min=0.750, max=1.000, mean=0.915
+    d_3^{tv→tv}: min=0.415, max=0.586, mean=0.478
+    full d_3:     min=0.808, max=1.000, mean=0.933
+
+DONE.
