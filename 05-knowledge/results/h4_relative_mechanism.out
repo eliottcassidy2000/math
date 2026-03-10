@@ -1,0 +1,73 @@
+======================================================================
+H_4^rel MECHANISM: WHY IS H_4(T,T\v)=0 AT n=7?
+======================================================================
+
+============================================================
+n = 7
+============================================================
+
+  Trial 4, v=1, scores=[1, 1, 2, 2, 5, 5, 5]
+    dim(Ω_3^rel) = 19, dim(Ω_4^rel) = 12, dim(Ω_5^rel) = 3
+    dim_ker_d3(T)=10, dim_ker_d3(T\v)=1
+    rk(d_4)=9, rk(combined)=10, rank(i_*)=1
+    H_4^rel = 0
+    rk(d_4^T)=9, rk(d_4^Tv)=0
+    rk(d_5^T)=3, rk(d_5^Tv)=0
+
+  Trial 4, v=4, scores=[1, 1, 2, 2, 5, 5, 5]
+    dim(Ω_3^rel) = 19, dim(Ω_4^rel) = 12, dim(Ω_5^rel) = 3
+    dim_ker_d3(T)=10, dim_ker_d3(T\v)=1
+    rk(d_4)=9, rk(combined)=10, rank(i_*)=1
+    H_4^rel = 0
+    rk(d_4^T)=9, rk(d_4^Tv)=0
+    rk(d_5^T)=3, rk(d_5^Tv)=0
+
+  Trial 15, v=4, scores=[2, 2, 3, 3, 3, 4, 4]
+    dim(Ω_3^rel) = 32, dim(Ω_4^rel) = 32, dim(Ω_5^rel) = 17
+    dim_ker_d3(T)=26, dim_ker_d3(T\v)=7
+    rk(d_4)=25, rk(combined)=26, rank(i_*)=1
+    H_4^rel = 6
+    rk(d_4^T)=25, rk(d_4^Tv)=6
+    rk(d_5^T)=16, rk(d_5^Tv)=3
+
+  n=7: 101 BAD vertices analyzed, 32.6s
+  H_4^rel distribution: {0: 24, 6: 77}
+  rank(i_*) distribution: {1: 101}
+  dim(Ω_4^rel): min=12, max=40, mean=26.3
+  dim(Ω_5^rel): min=3, max=25, mean=12.7
+
+============================================================
+n = 8
+============================================================
+
+  Trial 3, v=2, scores=[2, 2, 3, 4, 4, 4, 4, 5]
+    dim(Ω_3^rel) = 70, dim(Ω_4^rel) = 118, dim(Ω_5^rel) = 120
+    dim_ker_d3(T)=75, dim_ker_d3(T\v)=26
+    rk(d_4)=74, rk(combined)=75, rank(i_*)=1
+    H_4^rel = 25
+    rk(d_4^T)=74, rk(d_4^Tv)=25
+    rk(d_5^T)=86, rk(d_5^Tv)=17
+
+  Trial 5, v=1, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+    dim(Ω_3^rel) = 69, dim(Ω_4^rel) = 116, dim(Ω_5^rel) = 112
+    dim_ker_d3(T)=76, dim_ker_d3(T\v)=28
+    rk(d_4)=75, rk(combined)=76, rank(i_*)=1
+    H_4^rel = 27
+    rk(d_4^T)=75, rk(d_4^Tv)=27
+    rk(d_5^T)=87, rk(d_5^Tv)=19
+
+  Trial 5, v=3, scores=[2, 3, 3, 3, 4, 4, 4, 5]
+    dim(Ω_3^rel) = 71, dim(Ω_4^rel) = 120, dim(Ω_5^rel) = 116
+    dim_ker_d3(T)=76, dim_ker_d3(T\v)=26
+    rk(d_4)=75, rk(combined)=76, rank(i_*)=1
+    H_4^rel = 25
+    rk(d_4^T)=75, rk(d_4^Tv)=25
+    rk(d_5^T)=87, rk(d_5^Tv)=17
+
+  n=8: 50 BAD vertices analyzed, 28.1s
+  H_4^rel distribution: {9: 1, 11: 2, 14: 2, 16: 3, 18: 7, 21: 3, 22: 4, 24: 6, 25: 11, 27: 2, 28: 8, 29: 1}
+  rank(i_*) distribution: {1: 50}
+  dim(Ω_4^rel): min=41, max=126, mean=78.5
+  dim(Ω_5^rel): min=25, max=123, mean=66.8
+
+DONE.

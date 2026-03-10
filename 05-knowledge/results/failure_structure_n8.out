@@ -1,0 +1,129 @@
+======================================================================
+STRUCTURAL ANALYSIS OF rank(i_*)=0 FAILURES AT n=8
+Matching istar_failure_n8.py exactly (seed 12345)
+======================================================================
+  FAILURE #1: checked=614, v=5, scores=[2, 3, 3, 4, 4, 4, 4, 4], b3_T=1, b3_Tv=1
+  FAILURE #2: checked=628, v=2, scores=[3, 3, 3, 3, 4, 4, 4, 4], b3_T=1, b3_Tv=1
+  FAILURE #3: checked=878, v=6, scores=[2, 3, 3, 4, 4, 4, 4, 4], b3_T=1, b3_Tv=1
+  FAILURE #4: checked=1448, v=6, scores=[2, 2, 3, 4, 4, 4, 4, 5], b3_T=1, b3_Tv=1
+  FAILURE #5: checked=1793, v=5, scores=[3, 3, 3, 3, 4, 4, 4, 4], b3_T=1, b3_Tv=1
+
+  Total: 2000 checked, 350 b3=1, 5 failures, 10 success samples, 647.2s
+
+============================================================
+FAILURE DETAILS
+============================================================
+
+  Failure #1: trial=614, v=5
+    scores = [2, 3, 3, 4, 4, 4, 4, 4]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 12, 0]
+    bettis(T\v) = [1, 0, 0, 1, 0, 0, 0]
+    Ω(T) = [8, 28, 66, 117, 141, 113, 55, 0]
+    Ω(T\v) = [7, 21, 39, 52, 45, 21, 3]
+    Ω_3(T)=117, Ω_3(T\v)=52, Ω_4(T)=141, Ω_4(T\v)=45
+    rank(i_*)=0, rk(d_4)=71, dim_ker_d3Tv=28
+    out_deg(v)=2
+    All BAD vertices in this tournament:
+      v=1 (out=3): b3_Tv=1, rank(i_*)=1 [ok]
+      v=3 (out=3): b3_Tv=1, rank(i_*)=1 [ok]
+      v=5 (out=2): b3_Tv=1, rank(i_*)=0 [FAIL]
+
+  Failure #2: trial=628, v=2
+    scores = [3, 3, 3, 3, 4, 4, 4, 4]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 14, 0]
+    bettis(T\v) = [1, 0, 0, 1, 0, 0, 0]
+    Ω(T) = [8, 28, 68, 129, 167, 140, 68, 0]
+    Ω(T\v) = [7, 21, 39, 52, 45, 21, 3]
+    Ω_3(T)=129, Ω_3(T\v)=52, Ω_4(T)=167, Ω_4(T\v)=45
+    rank(i_*)=0, rk(d_4)=81, dim_ker_d3Tv=28
+    out_deg(v)=3
+    All BAD vertices in this tournament:
+      v=2 (out=3): b3_Tv=1, rank(i_*)=0 [FAIL]
+      v=7 (out=4): b3_Tv=1, rank(i_*)=1 [ok]
+
+  Failure #3: trial=878, v=6
+    scores = [2, 3, 3, 4, 4, 4, 4, 4]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 12, 0]
+    bettis(T\v) = [1, 0, 0, 1, 0, 0, 0]
+    Ω(T) = [8, 28, 66, 117, 141, 113, 55, 0]
+    Ω(T\v) = [7, 21, 39, 52, 45, 21, 3]
+    Ω_3(T)=117, Ω_3(T\v)=52, Ω_4(T)=141, Ω_4(T\v)=45
+    rank(i_*)=0, rk(d_4)=71, dim_ker_d3Tv=28
+    out_deg(v)=2
+    All BAD vertices in this tournament:
+      v=2 (out=3): b3_Tv=1, rank(i_*)=1 [ok]
+      v=4 (out=3): b3_Tv=1, rank(i_*)=1 [ok]
+      v=6 (out=2): b3_Tv=1, rank(i_*)=0 [FAIL]
+
+  Failure #4: trial=1448, v=6
+    scores = [2, 2, 3, 4, 4, 4, 4, 5]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 4, 0]
+    bettis(T\v) = [1, 0, 0, 1, 0, 0, 0]
+    Ω(T) = [8, 28, 63, 100, 104, 69, 26, 0]
+    Ω(T\v) = [7, 21, 37, 44, 35, 17, 3]
+    Ω_3(T)=100, Ω_3(T\v)=44, Ω_4(T)=104, Ω_4(T\v)=35
+    rank(i_*)=0, rk(d_4)=57, dim_ker_d3Tv=22
+    out_deg(v)=2
+    All BAD vertices in this tournament:
+      v=0 (out=3): b3_Tv=1, rank(i_*)=1 [ok]
+      v=6 (out=2): b3_Tv=1, rank(i_*)=0 [FAIL]
+      v=7 (out=2): b3_Tv=1, rank(i_*)=1 [ok]
+
+  Failure #5: trial=1793, v=5
+    scores = [3, 3, 3, 3, 4, 4, 4, 4]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 14, 0]
+    bettis(T\v) = [1, 0, 0, 1, 0, 0, 0]
+    Ω(T) = [8, 28, 68, 129, 167, 140, 68, 0]
+    Ω(T\v) = [7, 21, 39, 52, 45, 21, 3]
+    Ω_3(T)=129, Ω_3(T\v)=52, Ω_4(T)=167, Ω_4(T\v)=45
+    rank(i_*)=0, rk(d_4)=81, dim_ker_d3Tv=28
+    out_deg(v)=4
+    All BAD vertices in this tournament:
+      v=0 (out=3): b3_Tv=1, rank(i_*)=1 [ok]
+      v=5 (out=4): b3_Tv=1, rank(i_*)=0 [FAIL]
+
+============================================================
+SUCCESS EXAMPLES (for comparison)
+============================================================
+
+  Success #1: trial=4, v=2
+    scores = [2, 2, 3, 4, 4, 4, 4, 5]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 15, 0]
+    Ω_3(T)=120, Ω_3(T\v)=50, Ω_4(T)=160
+    rank(i_*)=1, rk(d_4)=74
+
+  Success #2: trial=6, v=1
+    scores = [2, 3, 3, 3, 4, 4, 4, 5]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 11, 0]
+    Ω_3(T)=121, Ω_3(T\v)=52, Ω_4(T)=162
+    rank(i_*)=1, rk(d_4)=75
+
+  Success #3: trial=6, v=3
+    scores = [2, 3, 3, 3, 4, 4, 4, 5]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 11, 0]
+    Ω_3(T)=121, Ω_3(T\v)=50, Ω_4(T)=162
+    rank(i_*)=1, rk(d_4)=75
+
+  Success #4: trial=11, v=1
+    scores = [2, 3, 3, 3, 3, 4, 5, 5]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 7, 0]
+    Ω_3(T)=112, Ω_3(T\v)=50, Ω_4(T)=133
+    rank(i_*)=1, rk(d_4)=67
+
+  Success #5: trial=11, v=5
+    scores = [2, 3, 3, 3, 3, 4, 5, 5]
+    bettis(T) = [1, 0, 0, 1, 0, 0, 7, 0]
+    Ω_3(T)=112, Ω_3(T\v)=41, Ω_4(T)=133
+    rank(i_*)=1, rk(d_4)=67
+
+============================================================
+STATISTICAL COMPARISON
+============================================================
+  Ω_3(T) — fail: [117, 129, 117, 100, 129], mean=118.4
+  Ω_3(T) — succ: mean=109.5 (n=10)
+  Ω_4(T) — fail: [141, 167, 141, 104, 167], mean=144.0
+  Ω_4(T) — succ: mean=129.9
+  Ω_4/Ω_3 — fail: ['1.21', '1.29', '1.21', '1.04', '1.29']
+  Ω_4/Ω_3 — succ: mean=1.18
+
+DONE.
