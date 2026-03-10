@@ -21,8 +21,8 @@ Throughout, T denotes a tournament on n vertices, H(T) the number of directed Ha
 
 The following results appear to be new contributions not found in prior literature:
 
-- **Walsh-Fourier spectrum of H(T) and M[a,b]**: Complete closed-form formulas (THM-069, THM-080). No prior work computes the full Walsh spectrum of tournament path counts.
-- **Direct Walsh proof of OCF** (THM-077): An elementary proof of H(T) = I(Omega(T), 2) that bypasses P-partition theory entirely.
+- **Walsh-Fourier spectrum of H(T) and M[a,b]**: Complete closed-form formulas (THM-071, THM-080). No prior work computes the full Walsh spectrum of tournament path counts.
+- **Direct Walsh proof of OCF** (THM-077): An elementary proof of H(T) = I(Omega(T), 2) for odd n that bypasses P-partition theory entirely.
 - **beta_2 = 0 for tournaments**: No vanishing result of this kind exists in the path homology literature. **Proved** (THM-108/109) via induction, long exact sequence, and isolation characterization.
 - **Twin vertex mechanism**: The structural explanation for WHY beta_2 vanishes — completeness forbids the twin vertices that all beta_2 > 0 oriented graphs require.
 - **beta_3 = 2 at n = 8**: The first Betti number exceeding 1 in tournament path homology.
@@ -91,13 +91,13 @@ Encode a tournament T on n vertices as a binary string t in {0,1}^m where m = C(
 
 where chi_S is the indicator of S.
 
-**Theorem (THM-069, Walsh diagonalization).** The Walsh transform of H(T) has nonzero coefficients f_hat[S] only when S is a union of edge-disjoint even-length paths in K_n. Moreover:
+**Theorem (THM-071, Walsh diagonalization).** The Walsh transform of H(T) has nonzero coefficients f_hat[S] only when S is a union of edge-disjoint even-length paths in K_n. Moreover:
 
     H_hat[S] = epsilon * 2^r * (n - 2k)! / 2^{n-1}
 
 where |S| = 2k, r is the number of path components of S, and epsilon = +/-1 depends on the path orientations.
 
-**Theorem (THM-077, Direct Walsh proof of OCF).** By computing I_hat[S] for the independence polynomial side using a generating function factorization (THM-076), one shows H_hat[S] = I_hat[S] for all S. This provides an elementary proof of OCF bypassing P-partition theory.
+**Theorem (THM-077, Direct Walsh proof of OCF).** By computing I_hat[S] for the independence polynomial side using a generating function factorization (THM-076), one shows H_hat[S] = I_hat[S] for all S. This provides an elementary proof of OCF for odd n, bypassing P-partition theory. (Even n requires a separate argument due to Walsh parity constraints.)
 
 ### 3.3 Complete Walsh Spectrum of M[a,b]
 
@@ -119,7 +119,7 @@ Verified: exhaustive at n = 5 (968 nonzero coefficients), n = 6 (1471), and by r
 
 where N(S) is the set of "odd-offset" vertices in the path components of S. Proved for all degrees and all odd n via a block-placement argument.
 
-**Theorem (THM-070, Off-diagonal PCD).** The off-diagonal Walsh spectrum has a similar structure, with interior vertices contributing zero rows/columns to M_hat at degree d.
+**Theorem (THM-072, Off-diagonal PCD).** The off-diagonal Walsh spectrum has a similar structure, with interior vertices contributing zero rows/columns to M_hat at degree d.
 
 ---
 
@@ -170,9 +170,9 @@ For a tournament T with a fixed labeling, define fwd(P) = #{edges (P_i, P_{i+1})
 
 **Theorem (THM-094, mod-2 universality).** F_k(T) = C(n-1, k) (mod 2) for all tournaments T. This is tournament-independent.
 
-**Theorem (THM-089).** Var(fwd) = 2*t_3, where t_3 is the number of directed 3-cycles. More generally, the moment hierarchy of fwd encodes cycle counts:
+**Theorem (THM-089).** Var(fwd) = (n+1)/12 + 4*t_3/(n(n-1)), where t_3 is the number of directed 3-cycles. The variance decomposes into a universal term (n+1)/12 plus a tournament-dependent correction proportional to the 3-cycle count. More generally:
 - E[fwd] = (n-1)/2 (universal)
-- E[fwd^2] = (n-1)(n+2)/12 + t_3 * 2/C(n,2)
+- E[fwd^2] = (n-1)(3n+2)/12 + 4*t_3/(n(n-1))
 - Third and fourth moments involve t_3 and t_5.
 
 ### 5.2 Worpitzky Coefficients
@@ -251,7 +251,7 @@ Exhaustive computation through n = 6 and extensive sampling through n = 10 revea
 - beta_1 in {0, 1} (proved, THM-103)
 - **beta_2 = 0 universally** (proved, THM-108/109; see Section 7.3)
 - **beta_3 can reach 2** at n = 8 (0.08% of tournaments), previously thought bounded by 1
-- beta_1 * beta_3 = 0 (proved for n <= 7; **mutual exclusivity**). At n = 8, beta_3 * beta_4 = 1 CAN coexist ("consecutive seesaw" fails)
+- beta_1 * beta_3 = 0 (**proved for all n**; THM-095 + THM-108/109). At n = 8, beta_3 * beta_4 = 1 CAN coexist ("consecutive seesaw" fails)
 - beta(T) = beta(T^op) (complement invariance, proved at n = 5, verified through n = 8)
 
 ### 7.3 The beta_2 = 0 Theorem
@@ -459,12 +459,12 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 **Ranking and social choice.** Tournaments encode pairwise majority preferences. The OCF reveals that the number of consistent total orders (Kemeny rankings) is controlled by the cycle structure of the majority graph. This is directly relevant to:
 
 - **Condorcet paradox quantification:** The OCF gives exact counts of paradox-resolving rankings.
-- **Algorithm design for preference aggregation:** The trace formula speedups (Section 9.3) could accelerate rank aggregation in practical systems (recommendation engines, search ranking, multi-criteria decision making).
+- **Algorithm design for preference aggregation:** The trace formula speedups (Section 10.3) could accelerate rank aggregation in practical systems (recommendation engines, search ranking, multi-criteria decision making).
 - **Voting theory:** The impossibility of H = 7 and H = 21 constrains which preference structures can arise from pairwise majorities.
 
 **Network science.** Path homology is an emerging tool for analyzing directed networks (neural connectomes, citation graphs, gene regulatory networks). The beta_2 = 0 result provides a **null model**: any directed network with nonzero beta_2 is structurally different from a tournament (complete pairwise comparison graph). The twin vertex mechanism gives a concrete criterion — beta_2 > 0 requires missing edges that create identical-neighborhood vertex pairs.
 
-**Computer science.** The Walsh sparsity of H (Section 9.4) implies tournament invariants can be **learned from few samples** — relevant to property testing in the Boolean function analysis framework. The 341x compression at n = 5 and ~100,000x at n = 7 are exact, not approximate.
+**Computer science.** The Walsh sparsity of H (Section 10.4) implies tournament invariants can be **learned from few samples** — relevant to property testing in the Boolean function analysis framework. The 341x compression at n = 5 and ~100,000x at n = 7 are exact, not approximate.
 
 ---
 
@@ -475,12 +475,12 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 - OCF: H(T) = I(Omega(T), 2) (Grinberg-Stanley 2024; also THM-077 via Walsh)
 - Claim B (algebraic companion to OCF)
 - Transfer matrix symmetry M[a,b] = M[b,a] (via Walsh)
-- Complete Walsh spectrum of H(T) and M[a,b] (THM-069, THM-080)
+- Complete Walsh spectrum of H(T) and M[a,b] (THM-071, THM-080)
 - Position Character Decomposition — all degrees, all odd n (THM-068)
 - Universal congruences for signed Hamiltonian permanent (THM-H, THM-I, THM-J)
 - **beta_2 = 0 for all tournaments** (THM-108/109, induction + LES + isolation characterization)
 - beta_1 <= 1 for all tournaments (THM-103)
-- beta_1 * beta_3 = 0 — mutual exclusivity (THM-095, proved n <= 7)
+- beta_1 * beta_3 = 0 — mutual exclusivity (THM-095, proved for all n)
 - rank(d_2) = C(n,2) - n + 1 - beta_1 (universal formula)
 - F-polynomial complement duality, moment hierarchy, mod-2 universality
 - H = 7 and H = 21 are permanent spectrum gaps
@@ -495,7 +495,7 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 ### Open
 - **Understanding beta_3 = 2** at n = 8 — what structural property allows Betti numbers > 1?
 - **HYP-282** — why at most 3 "bad" vertices when beta_1 = 0? (verified n <= 10, no proof)
-- **Prove beta_1 * beta_3 = 0 for all n** — currently proved only through n = 7
+- ~~**Prove beta_1 * beta_3 = 0 for all n**~~ — RESOLVED: proved for all n via THM-095 + THM-108/109
 - Per-path identity for all n (incorporating all odd cycle lengths)
 - Proof of Paley maximization
 - What bound replaces beta_3 <= 1 at n >= 8?

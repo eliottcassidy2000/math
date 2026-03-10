@@ -216,7 +216,7 @@ For every tournament $T$, $H(T) = I(\Omega(T), 2)$.
 
 This gives $H(T) = 1 + 2\alpha_1 + 4\alpha_2 + \cdots$, immediately implying
 R\'edei's theorem. The formula was conjectured computationally and verified
-exhaustively through $n = 8$ ($2^{27}$ configurations). Grinberg and Stanley
+exhaustively through $n = 8$ (fixing one arc and varying the remaining $\binom{8}{2}-1 = 27$, giving $2^{27}$ configurations; combined with relabeling invariance this covers all tournaments). Grinberg and Stanley
 proved it using P-partition theory~\cite{GrinbergStanley2024}. We give an
 independent proof via Walsh--Fourier analysis in Section~\ref{sec:walsh}.
 
@@ -272,7 +272,7 @@ for each subset $S \subseteq [m]$.
 
 \subsection{Complete spectrum of $H(T)$}
 
-\begin{theorem}[THM-069, Walsh diagonalization]\label{thm:walshH}
+\begin{theorem}[THM-071, Walsh diagonalization]\label{thm:walshH}
 The Walsh coefficient $\hat{H}[S]$ is nonzero if and only if $S$ is a union
 of edge-disjoint even-length paths in $K_n$. In that case,
 \[
@@ -425,7 +425,7 @@ $\rank(\partial_2|_{\Omega_2}) = \binom{n}{2} - n + 1 - \beta_1(T)$.
 \end{theorem}
 
 \begin{theorem}[Mutual exclusivity, THM-095]
-$\beta_1(T) \cdot \beta_3(T) = 0$ for all tournaments on $n \leq 7$.
+$\beta_1(T) \cdot \beta_3(T) = 0$ for all tournaments $T$ on all $n \geq 3$.
 \end{theorem}
 
 \subsection{The $n = 8$ threshold}
@@ -527,9 +527,8 @@ What structural property allows $\beta_3 = 2$ at $n = 8$? What bound replaces
 $\beta_3 \leq 1$ for $n \geq 8$?
 \end{openquestion}
 
-\begin{openquestion}
-Prove $\beta_1(T) \cdot \beta_3(T) = 0$ for all $n$ (currently proved through $n = 7$).
-\end{openquestion}
+% Open Question 3 removed: beta_1 * beta_3 = 0 is now PROVED for all n
+% (THM-095 conditional on beta_2=0 which is proved by THM-108/109)
 
 \begin{openquestion}
 Among all tournaments on $p$ vertices ($p$ prime, $p \equiv 3 \pmod{4}$),
@@ -557,7 +556,7 @@ All results have been verified computationally:
 \toprule
 Result & Method & Scale & Status \\
 \midrule
-OCF: $H = I(\Omega, 2)$ & Exhaustive & $n \leq 8$ ($2^{27}$) & 0 failures \\
+OCF: $H = I(\Omega, 2)$ & Exhaustive & $n \leq 8$ ($2^{27}$, one arc fixed) & 0 failures \\
 $\beta_2 = 0$ & Exhaustive + sampling & $n \leq 10$ (50k+) & 0 failures \\
 Walsh spectrum of $H$ & Exhaustive & $n \leq 6$; sampled $n = 7$ & 0 failures \\
 Walsh spectrum of $M$ & Exhaustive & $n \leq 6$; sampled $n = 7$ & 0 failures \\

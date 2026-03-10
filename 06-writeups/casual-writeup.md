@@ -10,7 +10,7 @@ The largest concrete output of this project is a collection of **high-performanc
 
 ### What we computed
 
-We wrote 77 C/GMP programs and 1550+ Python scripts. The C enumerators use Burnside's lemma with various optimizations (LCD-scaled integer accumulation, divisor-signature Mobius inversion, generating function tricks, OpenMP parallelization). Here are the highlights:
+We wrote 68 C/GMP programs and 1560+ Python scripts. The C enumerators use Burnside's lemma with various optimizations (LCD-scaled integer accumulation, divisor-signature Mobius inversion, generating function tricks, OpenMP parallelization). Here are the highlights:
 
 **Graphs, digraphs, and oriented graphs:**
 
@@ -107,7 +107,7 @@ The proof is by strong induction using the long exact sequence of (T, T\v). The 
 
 **Other proved results:**
 - beta_1 in {0, 1} for all tournaments (THM-103)
-- beta_1 * beta_3 = 0: 1-holes and 3-holes never coexist (proved n <= 7)
+- beta_1 * beta_3 = 0: 1-holes and 3-holes never coexist (proved for all n; THM-095 + THM-108)
 - HYP-282: when beta_1 = 0, at most 3 vertex-deletions create a new 1-cycle (verified through n = 10, no proof)
 - Paley tournaments T_p have homology concentrated in dimension p-3 (T_7: beta_4 = 6, T_11: beta_8 = 10)
 
@@ -127,7 +127,7 @@ Encode a tournament on n vertices as a binary string of length m = C(n,2), one b
 
 ### What we proved
 
-**Theorem (THM-069).** The Walsh coefficients of the Hamiltonian path count H(T) have closed form:
+**Theorem (THM-071).** The Walsh coefficients of the Hamiltonian path count H(T) have closed form:
 
     H_hat[S] = epsilon * 2^r * (n - 2k)! / 2^{n-1}
 
@@ -142,7 +142,7 @@ This means H(T), as a function on 2^m tournaments, is supported on a tiny subspa
 
 **Theorem (THM-080).** The transfer matrix M[a,b] (counting Hamiltonian paths from a to b) has a similarly explicit Walsh formula, manifestly symmetric in a and b. This gives a **Fourier proof of M[a,b] = M[b,a]** — a result we also proved independently.
 
-**Theorem (THM-077).** Direct Walsh proof of the OCF: by computing the Walsh coefficients of both sides (H(T) and I(Omega(T), 2)) and showing they match term by term, we get an elementary proof of H(T) = I(Omega(T), 2) that bypasses the P-partition theory used by Grinberg and Stanley.
+**Theorem (THM-077).** Direct Walsh proof of the OCF: by computing the Walsh coefficients of both sides (H(T) and I(Omega(T), 2)) and showing they match term by term, we get an elementary proof of H(T) = I(Omega(T), 2) for odd n that bypasses the P-partition theory used by Grinberg and Stanley. (Even n requires separate treatment.)
 
 ---
 
@@ -200,7 +200,7 @@ The Paley tournament T_p (p prime, p = 3 mod 4) appears to maximize H(T) among a
 | Directory | What's in it |
 |-----------|-------------|
 | `00-navigation/` | Session log (300+ entries), open questions, investigation backlog, tangents |
-| `01-canon/` | 130+ theorem files, definitions, 18 documented mistakes |
+| `01-canon/` | 112 theorem files, definitions, 18 documented mistakes |
 | `02-court/` | Formal dispute resolution between research agents |
 | `03-artifacts/` | Original OCF/Redei paper draft (`parity_tournaments_fixed.tex`, 2189 lines) |
 | `04-computation/` | 1,550 Python scripts + 77 C/GMP enumerators + output files |
@@ -220,7 +220,7 @@ This is a multi-agent research project where multiple Claude instances collabora
 
 1. **Why at most 3 bad vertices?** When beta_1(T) = 0, at most 3 vertex-deletions have beta_1 = 1. Verified through n = 10, no proof. (HYP-282)
 2. **Why does beta_3 reach 2 at n = 8?** What structural property allows a tournament to have a 2-dimensional higher hole?
-3. **Prove beta_1 * beta_3 = 0 for all n.** Currently proved only through n = 7.
+3. ~~**Prove beta_1 * beta_3 = 0 for all n.**~~ RESOLVED: proved for all n via THM-095 (seesaw mechanism conditional on beta_2=0, which is proved by THM-108/109).
 4. **Prove F(T, x) is unimodal.** 50,000+ tests, zero violations.
 5. **Prove Paley maximality.** Does T_p always maximize H(T) at Paley primes?
 6. **Per-path identity for all n.** The 3-cycle formula works at n <= 5 but fails at n = 6 due to 5-cycles. The correct generalization incorporating all odd cycle lengths is unknown.

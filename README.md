@@ -80,11 +80,11 @@ where H(T) counts directed Hamiltonian paths, Omega(T) is the odd-cycle conflict
 
 **Practical impact:** Replaces O(2^n * n^2) Held-Karp DP with O(n^5) trace formulas for moderate n.
 
-**What's new here:** We give an independent elementary proof (THM-077) via Walsh-Fourier analysis, bypassing the P-partition theory used by Grinberg-Stanley. We also compute the complete Walsh spectrum (below).
+**What's new here:** We give an independent elementary proof (THM-077) via Walsh-Fourier analysis, bypassing the P-partition theory used by Grinberg-Stanley. (The Walsh proof currently covers odd n; even n requires separate treatment due to Walsh parity constraints.) We also compute the complete Walsh spectrum (below).
 
 ### Walsh-Fourier Spectrum of Tournament Invariants
 
-**Theorem (THM-069).** The Walsh-Fourier transform of H(T) has closed form:
+**Theorem (THM-071).** The Walsh-Fourier transform of H(T) has closed form:
 
     H_hat[S] = epsilon * 2^r * (n - 2k)! / 2^{n-1}
 
@@ -102,7 +102,7 @@ This is a new vanishing result with no prior analogue. For general directed grap
 
 **Additional proved results:**
 - beta_1(T) in {0, 1} for all tournaments (THM-103)
-- beta_1 * beta_3 = 0: mutual exclusivity of 1-holes and 3-holes (proved n <= 7)
+- beta_1 * beta_3 = 0: mutual exclusivity of 1-holes and 3-holes (proved for all n; THM-095 conditional on beta_2=0 which is proved by THM-108/109)
 - Rank formula: rank(d_2) = C(n,2) - n + 1 - beta_1(T)
 
 **New discoveries:** beta_3 first appears at n=6 (1% of tournaments), reaches 2 at n=8. beta_4 onset at n=7, reaching 6 for the Paley tournament T_7. beta_5 first appears at n=8. The "defect wave" pattern: beta_1 prevalence drops (29.7% -> 14.6% -> 5.8% -> 1%) while beta_3 rises (0% -> 1% -> 7.2% -> 21%) as n grows.
@@ -120,15 +120,15 @@ This is a new vanishing result with no prior analogue. For general directed grap
 
 **Theorem (THM-H).** S(T) mod 2^{n-1} depends only on n, not on the tournament.
 
-**Theorem (THM-J).** Full universality (S(T) independent of T) holds iff s_2(n-3) <= 1, where s_2 is the binary digit sum. Universal n: 3, 5, 7, 11, 19, 35, 67, ...
+**Theorem (THM-J).** Full universality (S(T) independent of T) holds iff s_2(n-3) <= 1, where s_2 is the binary digit sum. Universal odd n: 3, 5, 7, 11, 19, 35, 67, ... (At even n, S(T) = 0 for all T by THM-A.)
 
 ### H-Spectrum Gaps
 
-**Theorem (THM-079).** H(T) = 7 and H(T) = 21 are impossible for any tournament on any number of vertices. These are the only permanent gaps in [1, 200] through n = 9.
+**Theorem (THM-029/THM-079).** H(T) = 7 (THM-029) and H(T) = 21 (THM-079) are impossible for any tournament on any number of vertices. These are the only permanent gaps in [1, 200] (all other odd values achieved at some n <= 8).
 
 ### Paley Tournament Maximality
 
-**Conjecture (verified through n = 11).** Among all tournaments on p vertices (p prime, p = 3 mod 4), the Paley tournament maximizes H(T). Matches OEIS A038375 at p = 3, 7, 11.
+**Conjecture (verified exhaustively at p = 3, 7; consistent at p = 11).** Among all tournaments on p vertices (p prime, p = 3 mod 4), the Paley tournament maximizes H(T). Matches OEIS A038375 at p = 3, 7.
 
 ---
 
