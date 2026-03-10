@@ -20,6 +20,33 @@ from functools import lru_cache
 # (avoids floating-point SVD issues entirely)
 RANK_PRIME = 2**31 - 1  # Mersenne prime 2147483647
 
+
+def matmul_mod(A, B, prime=None):
+    """Safe matrix multiplication A @ B mod prime, avoiding int64 overflow.
+
+    With prime ≈ 2^31, naive A @ B can overflow int64 when intermediate
+    dot products exceed 2^63. This function reduces after each chunk of
+    the inner dimension to prevent overflow.
+
+    ALWAYS use this instead of (A @ B % prime) when either matrix
+    could have entries close to prime.
+    """
+    if prime is None:
+        prime = RANK_PRIME
+    A = np.asarray(A, dtype=np.int64) % prime
+    B = np.asarray(B, dtype=np.int64) % prime
+    n, k = A.shape
+    _, m = B.shape
+    # Max safe inner dimension: floor((2^63-1) / (prime-1)^2)
+    max_chunk = max(1, (2**63 - 1) // ((prime - 1) * (prime - 1)))
+    if k <= max_chunk:
+        return A @ B % prime
+    C = np.zeros((n, m), dtype=np.int64)
+    for start in range(0, k, max_chunk):
+        end = min(start + max_chunk, k)
+        C = (C + A[:, start:end] @ B[start:end, :]) % prime
+    return C
+
 # ============================================================
 # Tournament representation
 # ============================================================

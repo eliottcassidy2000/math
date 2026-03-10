@@ -1,0 +1,14 @@
+======================================================================
+OVERFLOW VERIFICATION AT n=7
+======================================================================
+
+  Total: 602 pairs
+  tv_omega @ ob3 OVERFLOW: 0/602
+  Ktv_B mismatch (safe vs unsafe): 0/602
+
+  Ghost Cycle (SAFE): 602/602
+  Ghost Cycle (UNSAFE method B): 602/602
+  d3o overflow: 0/602
+  Ktv_A mismatch (safe vs unsafe): 0/602
+
+DONE.

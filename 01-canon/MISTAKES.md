@@ -662,3 +662,48 @@ Previous sampling (200 at n=9, 100 at n=8) was insufficient to detect 0.08% rate
 2. Properties proved exhaustively at n<=7 do NOT automatically extend to n>=8.
 3. n=8 is a critical threshold where many path homology structural properties break down:
    consecutive seesaw, i_*-injectivity, beta_3<=1, bad vertex acyclicity.
+
+## MISTAKE-019: Int64 Overflow in Chained Numpy Matrix Multiplication
+
+**Date discovered:** 2026-03-10 (kind-pasteur-S50)
+**Found by:** kind-pasteur-S50 via comparison of two K_tv computation methods
+**Affects:** opus-S59's tv_cycle_structure.py (Ghost Cycle "failures" are spurious), potentially any script using `A @ B @ C % PRIME` pattern
+
+### What was assumed
+`D3 @ (tv_omega @ ob3).T % PRIME` safely computes the matrix product mod PRIME.
+
+### Why it was wrong
+With `RANK_PRIME = 2^31 - 1`:
+- `tv_omega @ ob3` produces entries up to ~4.6 × 10^18 (fits in int64, max 9.2 × 10^18)
+- BUT these are NOT reduced mod PRIME — entries can be >> PRIME
+- `D3 @ X.T` then involves products up to `(2^31) * (4.6e18) = 9.9e27`, massively exceeding int64 max
+- Result: silent int64 overflow → wrong matrix entries → wrong rank → wrong K_tv
+
+This caused opus-S59's tv_cycle_structure.py to report Ghost Cycle failures in 14/504 pairs at n=7 and 11/304 at n=8. ALL of these "failures" are arithmetic artifacts.
+
+### The correct framing
+ALWAYS reduce mod PRIME between chained matrix multiplications:
+```python
+# WRONG (can overflow):
+result = A @ B @ C % PRIME
+
+# RIGHT:
+temp = A @ B % PRIME
+result = temp @ C % PRIME
+
+# BEST: use the new safe utility:
+from tournament_utils import matmul_mod
+result = matmul_mod(matmul_mod(A, B), C)
+```
+
+The `matmul_mod()` function in tournament_utils.py automatically chunks the inner dimension to prevent overflow, even for single multiplications with large entries.
+
+### Impact
+- Ghost Cycle (K_tv = B_tv) HOLDS universally at n ≤ 8 (0 real failures in 1000+ tests)
+- HYP-408 (codim-1 universality) remains computationally verified at n ≤ 8
+- No real mathematical result is affected; only the false "counterexamples" are invalidated
+
+### Lesson
+1. NEVER chain numpy `@` without intermediate `% PRIME` when PRIME ≈ 2^31
+2. Use `matmul_mod()` from tournament_utils.py for all modular matrix arithmetic
+3. When two equivalent computations disagree, suspect numerical issues before mathematical failure

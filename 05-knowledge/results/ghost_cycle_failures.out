@@ -1,0 +1,28 @@
+
+======================================================================
+GHOST CYCLE FAILURE ANALYSIS AT n=7
+======================================================================
+
+  Total: 602 pairs, Ghost Cycle: 602/602, 34.1s
+
+  FAILURES: 0/602
+
+  CROSS-TAB: codim x b3_Tv
+    b3_Tv=0: codim={1: 540}, ghost_cycle=540/540
+    b3_Tv=1: codim={1: 62}, ghost_cycle=62/62
+
+======================================================================
+GHOST CYCLE FAILURE ANALYSIS AT n=8
+======================================================================
+  Progress: 200 pairs, 0 failures, 57.1s
+  Progress: 400 pairs, 0 failures, 120.1s
+
+  Total: 400 pairs, Ghost Cycle: 400/400, 120.1s
+
+  FAILURES: 0/400
+
+  CROSS-TAB: codim x b3_Tv
+    b3_Tv=0: codim={1: 298}, ghost_cycle=298/298
+    b3_Tv=1: codim={1: 102}, ghost_cycle=102/102
+
+DONE.
