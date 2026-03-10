@@ -4,3 +4,65 @@ FAST SEARCH FOR beta_3=beta_4=1 TOURNAMENTS (n=8)
 
 --- Phase 1: Finding beta_3*beta_4 > 0 tournaments ---
   FOUND (seed=2, trial=59): bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 3, 3, 4, 4, 5, 5)
+  FOUND (seed=4, trial=80): bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 3, 3, 4, 4, 5, 5)
+  FOUND (seed=8, trial=125): bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 2, 3, 4, 5, 5, 5)
+  2000 checked, 3 found, 1389.1s
+  4000 checked, 3 found, 2710.1s
+  FOUND (seed=21, trial=134): bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 2, 3, 4, 5, 5, 5)
+  FOUND (seed=26, trial=127): bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 2, 3, 4, 5, 5, 5)
+
+  Phase 1 done: 5400 checked, 5 found, 3776.3s
+
+--- Phase 2: rank(i_*^3) analysis ---
+
+  Tournament #1: bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 3, 3, 4, 4, 5, 5)
+    v=0: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=1: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=2: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=0, BAD
+    v=3: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=4: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=5: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=6: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=7: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+
+  Tournament #2: bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 3, 3, 4, 4, 5, 5)
+    v=0: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=1: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=2: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=3: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=4: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=0, BAD
+    v=5: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=6: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=7: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+
+  Tournament #3: bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 2, 3, 4, 5, 5, 5)
+    v=0: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=0, BAD
+    v=1: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=2: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=3: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=4: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=5: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=6: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=7: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+
+  Tournament #4: bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 2, 3, 4, 5, 5, 5)
+    v=0: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=1: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=0, BAD
+    v=2: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=3: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=4: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=5: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=6: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=7: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+
+  Tournament #5: bettis=(1, 0, 0, 1, 1, 0, 0, 0), scores=(2, 2, 2, 3, 4, 5, 5, 5)
+    v=0: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=1: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=2: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=3: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=4: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=1, BAD
+    v=5: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+    v=6: b(T\v)=(1, 0, 0, 1, 0, 0, 0, 0), rank(i_*^3)=0, BAD
+    v=7: b(T\v)=(1, 0, 0, 0, 0, 0, 0, 0), rank(i_*^3)=0, GOOD
+
+DONE.
