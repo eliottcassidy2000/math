@@ -1,0 +1,70 @@
+
+======================================================================
+GHOST CYCLE DIMENSIONAL ANALYSIS AT n=7
+======================================================================
+  504 (T,v) pairs, 19.5s
+
+  Has tv-only cycles: 231/504
+
+  --- DIMENSIONS (cases with tv-only cycles) ---
+  dim_omega3: min=35, max=55, mean=48.9
+    distribution: {35: 1, 38: 9, 41: 8, 44: 45, 45: 3, 46: 5, 49: 5, 50: 78, 52: 42, 54: 14, 55: 21}
+  dim_omega4: min=20, max=49, mean=40.1
+    distribution: {20: 1, 24: 9, 27: 8, 33: 3, 35: 45, 36: 5, 37: 5, 41: 68, 42: 10, 45: 42, 46: 14, 49: 21}
+  dim_ker_d3: min=15, max=30, mean=25.4
+    distribution: {15: 1, 17: 9, 19: 8, 22: 48, 23: 5, 25: 5, 26: 78, 28: 42, 29: 14, 30: 21}
+  dim_im_d4: min=14, max=29, mean=24.4
+    distribution: {14: 1, 16: 9, 18: 8, 21: 48, 22: 5, 24: 5, 25: 78, 27: 42, 28: 14, 29: 21}
+  dim_tv_only_ker: min=1, max=4, mean=2.0
+    distribution: {1: 111, 2: 41, 3: 58, 4: 21}
+  dim_tv_only_im_d4: min=1, max=4, mean=2.0
+    distribution: {1: 111, 2: 41, 3: 58, 4: 21}
+  dim_tv_only_omega4: min=14, max=30, mean=24.3
+  containment_gap: min=0, max=0, mean=0.0
+    distribution: {0: 231}
+
+  dim(tv-only ker) <= dim(tv-only im_d4): 231/231
+  Actually contained in im(d_4): 231/231
+
+  beta_3 (codim): Counter({1: 231})
+
+  dim(tv-only ker)/dim(ker): min=0.033, max=0.154, mean=0.077
+  dim(im_d4)/dim(ker): min=0.933, max=0.967, mean=0.960
+
+  --- DIMENSIONS (cases WITHOUT tv-only cycles) ---
+  dim_omega3: mean=39.9
+  dim_ker_d3: mean=18.5
+
+======================================================================
+GHOST CYCLE DIMENSIONAL ANALYSIS AT n=8
+======================================================================
+  304 (T,v) pairs, 46.0s
+
+  Has tv-only cycles: 239/304
+
+  --- DIMENSIONS (cases with tv-only cycles) ---
+  dim_omega3: min=72, max=124, mean=103.5
+  dim_omega4: min=56, max=163, mean=117.3
+  dim_ker_d3: min=36, max=78, mean=61.2
+  dim_im_d4: min=35, max=77, mean=60.2
+  dim_tv_only_ker: min=1, max=10, mean=3.8
+    distribution: {1: 54, 2: 27, 3: 39, 4: 36, 5: 30, 6: 19, 7: 13, 8: 10, 9: 5, 10: 6}
+  dim_tv_only_im_d4: min=1, max=10, mean=3.8
+    distribution: {1: 54, 2: 27, 3: 39, 4: 36, 5: 30, 6: 19, 7: 13, 8: 10, 9: 5, 10: 6}
+  dim_tv_only_omega4: min=31, max=87, mean=60.9
+  containment_gap: min=0, max=0, mean=0.0
+    distribution: {0: 239}
+
+  dim(tv-only ker) <= dim(tv-only im_d4): 239/239
+  Actually contained in im(d_4): 239/239
+
+  beta_3 (codim): Counter({1: 239})
+
+  dim(tv-only ker)/dim(ker): min=0.014, max=0.154, mean=0.061
+  dim(im_d4)/dim(ker): min=0.972, max=0.987, mean=0.983
+
+  --- DIMENSIONS (cases WITHOUT tv-only cycles) ---
+  dim_omega3: mean=87.0
+  dim_ker_d3: mean=47.9
+
+DONE.

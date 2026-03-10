@@ -1,0 +1,58 @@
+
+======================================================================
+BOUNDARY DECOMPOSITION AT n=7
+======================================================================
+  301 pairs, 10.7s
+
+  old4->tv3 block nonzero: 0/301 (should be 0)
+  tv4->old3 nonzero entries: min=30, max=124, mean=92.2
+
+  --- Cases with tv-only cycles: 146 ---
+  dim_tv_only_ker: min=1, max=4, mean=1.9
+  rk_im_tv_proj: min=13, max=24, mean=18.1
+  rk_ker_tv_proj: min=14, max=25, mean=19.0
+
+  rk(ker_tv) - rk(im_tv): {0: 8, 1: 138}
+
+  d_3 restricted tv3->old2:
+    rk_d3_tv_to_old2: min=24, max=36, mean=32.1
+    rk_d3_tv_to_tv2: min=23, max=29, mean=25.4
+    n_tv3: min=64, max=88, mean=73.8
+    n_old2: min=24, max=36, mean=32.1
+    n_tv2: min=23, max=29, mean=25.4
+
+  rk(d3_tv_old2)/n_tv3: min=0.333, max=0.529, mean=0.438
+  dim(tv3 with zero old-boundary): min=32, max=56, mean=41.7
+  dim(tv-only ker(d_3)): mean=1.9
+  Ratio tv_ker_dim / dim_tv_only_ker:
+    min=12.00, max=48.00, mean=27.76
+
+======================================================================
+BOUNDARY DECOMPOSITION AT n=8
+======================================================================
+  200 pairs, 23.7s
+
+  old4->tv3 block nonzero: 0/200 (should be 0)
+  tv4->old3 nonzero entries: min=128, max=265, mean=198.6
+
+  --- Cases with tv-only cycles: 150 ---
+  dim_tv_only_ker: min=1, max=10, mean=3.8
+  rk_im_tv_proj: min=23, max=56, mean=38.5
+  rk_ker_tv_proj: min=24, max=56, mean=39.2
+
+  rk(ker_tv) - rk(im_tv): {0: 37, 1: 113}
+
+  d_3 restricted tv3->old2:
+    rk_d3_tv_to_old2: min=45, max=61, mean=54.3
+    rk_d3_tv_to_tv2: min=27, max=39, mean=33.6
+    n_tv3: min=87, max=145, mean=117.3
+    n_old2: min=45, max=61, mean=54.3
+    n_tv2: min=27, max=39, mean=33.6
+
+  rk(d3_tv_old2)/n_tv3: min=0.333, max=0.655, mean=0.467
+  dim(tv3 with zero old-boundary): min=30, max=90, mean=63.0
+  dim(tv-only ker(d_3)): mean=3.8
+  Ratio tv_ker_dim / dim_tv_only_ker:
+    min=8.00, max=70.00, mean=24.81
+
+DONE.
