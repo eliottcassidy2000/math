@@ -1,0 +1,42 @@
+
+======================================================================
+THROUGH-v CYCLE TEST AT n=6
+======================================================================
+  1002 (tournament, vertex) pairs, 42.5s
+
+  Has through-v-only cycle: 0/1002
+
+  dim(through-v-only cycles) distribution: {0: 1002}
+
+  dim(ker_d3) - dim(π(ker_d3)) distribution: {0: 1002}
+  (This is the number of ker(d_3) directions killed by old-projection)
+
+======================================================================
+THROUGH-v CYCLE TEST AT n=7
+======================================================================
+  1001 (tournament, vertex) pairs, 27.7s
+
+  Has through-v-only cycle: 450/1001
+  EXAMPLES:
+    trial=1, v=1: dim_ker=22, dim_old_proj=21, dim_tv_only=1
+
+  dim(through-v-only cycles) distribution: {0: 551, 1: 215, 2: 93, 3: 105, 4: 35, 5: 2}
+
+  dim(ker_d3) - dim(π(ker_d3)) distribution: {0: 551, 1: 215, 2: 93, 3: 105, 4: 35, 5: 2}
+  (This is the number of ker(d_3) directions killed by old-projection)
+
+======================================================================
+THROUGH-v CYCLE TEST AT n=8
+======================================================================
+  304 (tournament, vertex) pairs, 25.8s
+
+  Has through-v-only cycle: 239/304
+  EXAMPLES:
+    trial=3, v=0: dim_ker=47, dim_old_proj=44, dim_tv_only=3
+
+  dim(through-v-only cycles) distribution: {0: 65, 1: 54, 2: 27, 3: 39, 4: 36, 5: 30, 6: 19, 7: 13, 8: 10, 9: 5, 10: 6}
+
+  dim(ker_d3) - dim(π(ker_d3)) distribution: {0: 65, 1: 54, 2: 27, 3: 39, 4: 36, 5: 30, 6: 19, 7: 13, 8: 10, 9: 5, 10: 6}
+  (This is the number of ker(d_3) directions killed by old-projection)
+
+DONE.

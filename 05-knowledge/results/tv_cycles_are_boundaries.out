@@ -1,0 +1,31 @@
+
+======================================================================
+THROUGH-v-ONLY CYCLES = BOUNDARIES? AT n=6
+======================================================================
+  1002 pairs, 43.4s
+  Has through-v-only cycles: 0/1002
+
+  n_tv_only distribution: {0: 1002}
+
+======================================================================
+THROUGH-v-ONLY CYCLES = BOUNDARIES? AT n=7
+======================================================================
+  1001 pairs, 31.7s
+  Has through-v-only cycles: 450/1001
+  Of those, ALL are boundaries: 450/450
+  ✓ ALL through-v-only cycles are boundaries!
+
+  n_tv_only distribution: {0: 551, 1: 215, 2: 93, 3: 105, 4: 35, 5: 2}
+
+======================================================================
+THROUGH-v-ONLY CYCLES = BOUNDARIES? AT n=8
+======================================================================
+  504 pairs, 57.7s
+  Has through-v-only cycles: 400/504
+  Of those, ALL are boundaries: 399/400
+  COUNTEREXAMPLE FOUND!
+    n_tv_only=10, extra=1, dim_ker=87, rk_d4=86
+
+  n_tv_only distribution: {0: 104, 1: 92, 2: 42, 3: 58, 4: 62, 5: 48, 6: 35, 7: 23, 8: 16, 9: 12, 10: 11, 12: 1}
+
+DONE.
