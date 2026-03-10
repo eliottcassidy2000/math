@@ -1,0 +1,55 @@
+
+======================================================================
+ORPHAN FACE ANALYSIS AT n=7
+======================================================================
+  Progress: 100, 47.7s
+  Progress: 150, 72.3s
+  Progress: 150, 72.6s
+  Progress: 200, 96.7s
+  200 BAD vertices (0 fail), 96.7s
+
+  Orphan old 3-paths:
+    n_orphan: mean=0.0
+    n_embedded: mean=52.4
+    orphan fraction: mean=0.000
+
+  im(d_4^T) rank on different coord sets:
+    old (all): mean=19.3
+    embedded only: mean=19.3
+    orphan only: mean=0.0
+
+  Embedded gen has orphan-coord components: 0/200
+
+  SUCCESSES (sample):
+    out=1: orphan_frac=0.000, rk_old=18, rk_emb=18, rk_orph=0, gen_orphan=0
+    out=2: orphan_frac=0.000, rk_old=25, rk_emb=25, rk_orph=0, gen_orphan=0
+    out=3: orphan_frac=0.000, rk_old=25, rk_emb=25, rk_orph=0, gen_orphan=0
+
+======================================================================
+ORPHAN FACE ANALYSIS AT n=8
+======================================================================
+  Progress: 50, 45.0s
+  Progress: 100, 99.7s
+  122 BAD vertices (1 fail), 123.1s
+
+  Orphan old 3-paths:
+    n_orphan: mean=0.0
+    n_embedded: mean=117.7
+    orphan fraction: mean=0.000
+
+  im(d_4^T) rank on different coord sets:
+    old (all): mean=55.1
+    embedded only: mean=55.1
+    orphan only: mean=0.0
+
+  Embedded gen has orphan-coord components: 0/122
+
+  FAILURES:
+    out=2: orphan_frac=0.000, rk_old=55, rk_emb=55, rk_orph=0, gen_orphan=0
+
+  SUCCESSES (sample):
+    out=4: orphan_frac=0.000, rk_old=46, rk_emb=46, rk_orph=0, gen_orphan=0
+    out=4: orphan_frac=0.000, rk_old=46, rk_emb=46, rk_orph=0, gen_orphan=0
+    out=3: orphan_frac=0.000, rk_old=53, rk_emb=53, rk_orph=0, gen_orphan=0
+
+DONE.
