@@ -238,7 +238,7 @@ O(p(n)^3) to O(p(n)^2 * n^2). OpenMP parallelization (S51) adds ~7x.
 
 ## Total impact summary
 
-- **70+ OEIS sequences extended** with new b-file terms
+- **88 OEIS sequences extended** with new b-file terms (unique A-numbers count)
 - **40+ potentially new sequences** (connected variants, k-ary relations, k-ary matrices not yet in OEIS)
 - **~12000+ new individual terms** across all sequences
 - **OpenMP parallelization** (S51): ~7x speedup enabling A091058 n=30+ (was stuck at n=22)
