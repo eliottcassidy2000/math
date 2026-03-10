@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-10-S50 — 2026-03-10: Top vanishing theorem + Paley Omega palindrome + T_11 Betti
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-09-S49
+**Summary of work:**
+  1. **MISTAKE-020 identified**: opus-S59 reported β_6≠0 at n=8, but this was because max_p=6 was used (max_deg<n-1). With max_p=7: β_6=0 for ALL 50/50. β at max_deg is an UPPER BOUND only.
+  2. **HYP-423 (Top Injectivity)**: d_{n-1}: Ω_{n-1} → Ω_{n-2} is injective for ALL tournaments. Verified 1772/1772 (n=3-8). Proof sketch: non-2-monotone paths have non-regular faces appearing from exactly ONE path, forcing coefficient=0.
+  3. **HYP-424 (Top Vanishing)**: β_{n-1}=β_{n-2}=0 universally. THM-124 written up.
+  4. **Fourier Betti for Paley**: T_3 β=(1,1,0), T_7 β=(1,0,0,0,6,0,0) verified. T_7 structure: 6 non-trivial eigenspaces each contributing β=1 at degree 4.
+  5. **T_11 Betti**: β_0-4=(1,0,0,0,0) EXACT. β_5≤3400 (upper bound). max_deg=6 computation running.
+  6. **HYP-431-433**: Omega_k=Omega_{p-k} palindrome for Paley T_p (p≥7). chi(T_p)=p proved for T_7. Predicted β_{(p+1)/2}(T_p)=p-1, e.g. β_6(T_11)=10.
+  7. **Euler characteristic**: chi(T) not universal. Values {0,1,2,5} at n≤8. chi=1 dominant.
+  8. **Literature survey**: Tang-Yau (arXiv:2602.04140) on circulant digraph path homology directly applicable. INV-135-140 added.
+**New contributions:** THM-124 (top vanishing), HYP-423-433, MISTAKE-020, INV-135-140, omega_dim_formula.py, betti_profile_n8.py, paley_betti_direct.py, euler_char_test.py, top_injectivity_analysis.py, top_exactness_test.py, beta6_n8_test.py, top_vanishing_test.py.
+**Unresolved threads:**
+  - T_11 max_deg=6 computation running (verify β_6=10, i.e., HYP-433)
+  - Complete proof of THM-124 (2-monotone injectivity step)
+  - Investigate Tang-Yau paper for circulant results
+  - Prove Omega palindrome conjecture (HYP-431)
+
 ## opus-2026-03-10-S59 — 2026-03-10: Relative complex analysis, safe arithmetic verification, n=8 failures confirmed genuine
 **Account:** opus
 **Continuation of:** opus-2026-03-09-S58

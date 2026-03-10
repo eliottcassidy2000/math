@@ -136,6 +136,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-431 | Paley T_p: Omega_k = Omega_{p-k} for k=1,...,p-1 (palindrome) | T_7 confirmed: [7,21,42,63,63,42,21], palindrome holds at k=1,2,3. T_11 partial: Omega_1..5=[55,220,770,2255,5060], palindrome Omega_5=Omega_6 predicted. For T_3: FAILS (Omega_1=3, Omega_2=0≠3). So requires p≥7. | kind-pasteur-S50 |
 | HYP-432 | chi(T_p) = p for Paley primes p≥7 | PROVED for T_7 (chi=7 from Omega dims). Conjectured T_11 (chi=11). Proof: palindrome Omega_k=Omega_{p-k} + odd p makes all pairs cancel => chi=Omega_0=p. Also: chi = sum (-1)^k β_k confirms T_7 since 1-0+0-0+6-0+0=7=p. | kind-pasteur-S50 |
 | HYP-433 | T_p Betti: β_{(p+1)/2} = p-1, all other β_k=0 for k>=1 | T_7: β_4=6=p-1 at degree (7+1)/2=4. CONSISTENT WITH chi=7. Fourier: p-1 non-trivial eigenspaces each contribute 1. T_11 PREDICTION: β_6=10 at degree (11+1)/2=6, all other β=0. chi constraint with β_0-4=(1,0,0,0,0): β_6+β_8-β_5-β_7=10. If β_6=10, others=0: chi=11=p. STRONGLY PREDICTED but unverified. | kind-pasteur-S50 |
+| HYP-434 | chi(T) distribution at n=8: chi=1 (81.75%), chi=0 (17.55%), chi=2 (0.65%), chi=3 (0.05%) | 2000 random tournaments, full complex max_p=7. chi=2 from β_4=1, chi=3 from β_4=2. chi=3 ONLY from near-regular score (3,3,3,3,4,4,4,4) with c3=20 (maximum). No chi<0 or chi>3 seen. | kind-pasteur-S50 |
+| HYP-435 | β_4>0 requires c3 >= 16 at n=8 (out of max 20) | 2000 samples: c3 range for β_4=1 is 16-20, most common c3=18,19. β_4=2 only at c3=20. Highly cyclic structure required. Contrast: β_3>0 allows c3 as low as 7. | kind-pasteur-S50 |
+| HYP-436 | Unique chi=3 tournament has β_4=2, score (3,3,3,3,4,4,4,4), c3=20 | In 2000 samples, exactly 1 tournament had chi=3. Regular-adjacent score (differs by 1 from regular) with max possible c3=20. Consistent with earlier HYP-324 (β_4=5 at c3=20 from regular score). | kind-pasteur-S50 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

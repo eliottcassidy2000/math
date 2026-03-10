@@ -19,3 +19,24 @@ PALEY TOURNAMENT BETTI PATTERNS
   First nonzero at degree 4 (= p-3)
 
 --- T_11 (Paley, p = 3 mod 4) ---
+  Betti (up to deg 6): {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 5, 6: 4305}
+  Euler char: 4301
+  Time: 5123.66s
+  Duality b_k = b_{p-2-k}: False
+  Nonzero b_k (k>0): [(5, 5), (6, 4305)]
+  First nonzero at degree 5 (= p-6)
+
+--- T_19 (Paley, p = 3 mod 4) ---
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_betti_pattern.py", line 115, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_betti_pattern.py", line 82, in main
+    cc = full_chain_complex_modp(A, p, max_deg)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 799, in full_chain_complex_modp
+    rank_P, nbasis = _gauss_nullbasis_modp(P, na_rows, na_cols, prime)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 349, in _gauss_nullbasis_modp
+    vec = [0] * ncols
+          ~~~~^~~~~~~
+MemoryError

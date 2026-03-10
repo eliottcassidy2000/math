@@ -57,3 +57,40 @@ PALEY TOURNAMENT PATH HOMOLOGY
     All orbits have size 7 (as expected for vertex-transitive)
 
 --- T_11 (Paley tournament, p=11) ---
+  Betti numbers: {0: 1, 1: 0, 2: 0, 3: 0, 4: 0, 5: 5, 6: 4305}
+  Euler char: 4301
+  Time: 5057.69s
+
+  Fourier orbit analysis:
+  QR set S = [1, 3, 4, 5, 9], d = 5
+  deg 0: 11 paths, 1 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+  deg 1: 55 paths, 5 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+  deg 2: 275 paths, 25 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+  deg 3: 1210 paths, 110 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+  deg 4: 4730 paths, 430 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+  deg 5: 15730 paths, 1430 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+  deg 6: 43670 paths, 3970 difference orbits, orbit sizes: [11]
+    All orbits have size 11 (as expected for vertex-transitive)
+
+--- T_13 (Paley tournament, p=13) ---
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_betti.py", line 298, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_betti.py", line 268, in main
+    cc, elapsed = compute_paley_betti(p, max_deg)
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\paley_betti.py", line 61, in compute_paley_betti
+    cc = full_chain_complex_modp(A, n, max_deg)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 794, in full_chain_complex_modp
+    P, na_rows, na_cols = _build_constraint_matrix(ap, p, prime)
+                          ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 392, in _build_constraint_matrix
+    P = np.zeros((na_count, len(paths)), dtype=np.int64)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 135. GiB for an array with shape (175344, 102960) and data type int64
