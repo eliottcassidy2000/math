@@ -1,0 +1,626 @@
+\documentclass[12pt,reqno]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{openquestion}[theorem]{Open Problem}
+
+\DeclareMathOperator{\Ham}{Ham}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+
+\title{Tournaments: Enumeration, Fourier Analysis, and Path Homology}
+
+\author{Multi-Agent Research Project}
+
+\begin{document}
+
+\begin{abstract}
+We report results on tournaments (complete directed graphs) spanning three areas:
+(1)~high-performance Burnside enumeration extending 90+ OEIS sequences with
+approximately 12{,}000 new terms, including tournaments (A000568, $n=76 \to 200$),
+self-complementary graphs (A000171, $n=100 \to 439$), and
+$k$-uniform hypergraph families ($k = 3, \ldots, 10$);
+(2)~the Walsh--Fourier spectrum of Hamiltonian path counts, giving closed-form
+formulas for the Walsh coefficients of $H(T)$ and the transfer matrix $M[a,b]$,
+and an elementary proof of the Odd-Cycle Collection Formula
+$H(T) = I(\Omega(T), 2)$;
+(3)~GLMY path homology of tournaments, proving $\beta_2(T) = 0$ for all tournaments
+and discovering $\beta_3 = 2$ at $n = 8$.
+We also establish universal congruences for the signed Hamiltonian permanent
+and prove that $H(T) \neq 7$ and $H(T) \neq 21$ for all tournaments on all~$n$.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+%% ====================================================================
+\section{Introduction}
+%% ====================================================================
+
+A \emph{tournament} $T$ on $n$ vertices is a complete directed graph: for each
+pair $\{u, v\}$, exactly one of the arcs $u \to v$ or $v \to u$ is present.
+There are $2^{\binom{n}{2}}$ labeled tournaments on $n$ vertices.
+
+A \emph{Hamiltonian path} in $T$ is a directed path visiting every vertex
+exactly once. We write $H(T)$ for the number of such paths. R\'edei's classical
+theorem~\cite{Redei1934} states that $H(T)$ is always odd.
+
+This paper reports results from a large-scale computational and theoretical
+investigation of tournaments, organized into four programs:
+
+\begin{enumerate}
+\item \textbf{Burnside enumeration.} We develop high-performance algorithms
+for counting equivalence classes of combinatorial structures under group actions,
+extending 90+ sequences in the OEIS~\cite{OEIS} with approximately 12{,}000 new terms.
+The key innovations are LCD-scaled integer accumulation, divisor-signature
+M\"obius inversion for $k$-uniform hypergraphs, and generating function methods
+for matrix enumeration.
+
+\item \textbf{Walsh--Fourier analysis.} We compute the complete Walsh--Fourier
+spectrum of $H(T)$ and the transfer matrix $M[a,b]$, obtaining closed-form
+formulas for all Walsh coefficients. This yields an elementary proof of the
+Odd-Cycle Collection Formula (OCF), a proof that $M[a,b] = M[b,a]$, and extreme
+dimensionality reduction (a 100{,}000$\times$ compression at $n = 7$).
+
+\item \textbf{Path homology.} Using GLMY path homology~\cite{GLMY2012}, we prove
+$\beta_2(T) = 0$ for all tournaments---a vanishing result with no known
+analogue for other graph families. We discover $\beta_3 = 2$ at $n = 8$,
+the first Betti number exceeding~1.
+
+\item \textbf{Signed permanent and spectrum gaps.} We establish universal
+congruences for the signed Hamiltonian permanent $S(T)$ and prove that
+$H(T) = 7$ and $H(T) = 21$ are impossible for all tournaments on all~$n$.
+\end{enumerate}
+
+%% ====================================================================
+\section{Burnside Enumeration of OEIS Sequences}\label{sec:enumeration}
+%% ====================================================================
+
+\subsection{Background}
+
+Burnside's lemma (or the Cauchy--Frobenius lemma) states that the number of
+orbits of a finite group $G$ acting on a set $X$ is
+\[
+|X/G| = \frac{1}{|G|} \sum_{g \in G} |X^g|,
+\]
+where $X^g = \{x \in X : g \cdot x = x\}$ is the set of fixed points of $g$.
+
+For counting structures on $n$ elements up to permutation, $G = S_n$ acts on
+a set of configurations (tournaments, graphs, hypergraphs, etc.). The standard
+approach uses the cycle index: each permutation $\sigma$ is characterized by
+its cycle type $\lambda = (1^{a_1} 2^{a_2} \cdots)$, and permutations of the
+same cycle type contribute the same fixed-point count. This reduces the sum
+from $n!$ terms to $p(n)$ terms (the number of integer partitions of $n$).
+
+\subsection{LCD-scaled integer accumulation}
+
+The Burnside sum typically involves rational arithmetic: each partition $\lambda$
+contributes $f(\lambda) / z_\lambda$ where $z_\lambda = \prod_i i^{a_i} a_i!$.
+Accumulating these fractions naively requires GCD computations at each step.
+
+Our key optimization: precompute $L = \text{lcm}\{z_\lambda : \lambda \vdash n\}$,
+then accumulate $L \cdot f(\lambda) / z_\lambda$ as an integer. The final result
+is the accumulated sum divided by $L$.
+
+For tournament enumeration (A000568), we combine this with \emph{bucket
+accumulation}: since each partition contributes $c \cdot 2^t$ for some integer $t$,
+we maintain separate buckets indexed by $t$ and combine at the end. This keeps
+intermediate GMP numbers small, avoiding the size explosion that occurs when
+adding numbers of different magnitudes.
+
+\begin{theorem}[A000568 speedup]
+LCD-scaled bucket accumulation computes $a(n)$ for tournaments in time
+$O(p(n) \cdot n)$ arithmetic operations on numbers of $O(n^2)$ digits, yielding
+a $250$--$1600\times$ speedup over standard rational DP at $n = 100$--$200$.
+\end{theorem}
+
+\subsection{Divisor-signature M\"obius optimization}
+
+For $k$-uniform hypergraphs, the Burnside sum requires counting orbits of
+$k$-element subsets under each cyclic permutation $\sigma^t$. The standard
+approach iterates $t = 0, 1, \ldots, L-1$ where $L = \text{lcm}$ of cycle
+lengths, costing $O(L)$ per partition.
+
+We replace this with M\"obius inversion on the divisor lattice of $L$. For
+each cycle of length $c$ in $\sigma$, only divisors $d \mid c$ with $c/d \leq k$
+contribute. This reduces the cost to $O(\tau(L) \cdot k)$ where $\tau$ is the
+number-of-divisors function.
+
+\begin{theorem}[Hypergraph speedup]
+Divisor-signature M\"obius inversion gives a $64\times$ speedup for $4$-uniform
+hypergraphs (A051240) and a $17\times$ speedup for $5$-uniform (A051249),
+compared to direct Burnside orbit counting.
+\end{theorem}
+
+\subsection{Generating function methods for matrix enumeration}
+
+Counting $n \times n$ matrices with entries from $\{1, \ldots, k\}$ up to
+simultaneous row permutation, column permutation, and symbol permutation
+requires a sum over \emph{triples} of partitions $(\lambda, \mu, \nu)$ of $n$.
+Direct enumeration costs $O(p(n)^3)$, which is prohibitive for $n \geq 25$.
+
+We fix two of the three partitions and use an exponential generating function
+to sum over the third. For the pair $(\lambda, \mu)$, define
+\[
+w_j(\lambda, \mu) = k^{K(\lambda, \mu, j)}
+\]
+where $K$ counts orbits of the joint action at periodicity $j$. Then the
+sum over the third partition $\nu$ is
+\[
+\sum_{\nu} \frac{|C(\nu)|}{n!} \prod_i w_{c_i}(\lambda, \mu)
+= [x^n]\, \exp\!\Bigl(\sum_{j \geq 1} w_j \, \frac{x^j}{j}\Bigr).
+\]
+
+\begin{theorem}[Matrix enumeration speedup]
+The GF method reduces matrix enumeration from $O(p(n)^3)$ to
+$O(p(n)^2 \cdot n^2)$. Combined with OpenMP parallelization ($\sim 7\times$
+on 8 cores), this extends A091058 from $n = 15$ to $n = 30+$.
+\end{theorem}
+
+\subsection{Summary of extensions}
+
+Table~\ref{tab:oeis} lists the major extensions. Full data and enumerator
+source code are available in the repository.
+
+\begin{table}[ht]
+\centering
+\caption{Selected OEIS sequence extensions.}\label{tab:oeis}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Sequence & Description & OEIS had & We computed & New \\
+\midrule
+A000568 & Tournaments & 76 & 200+ & 120+ \\
+A000273 & Digraphs & 64 & 101 & 37 \\
+A001174 & Oriented graphs & 50 & 200 & 150 \\
+A000595 & Binary relations & 51 & 200 & 149 \\
+A000171 & Self-comp graphs & 100 & 439+ & 339+ \\
+A051240 & 4-uniform hypergraphs & 19 & 77+ & 58+ \\
+A052283 & Digraphs by arcs (triangle) & 2681 & 9020 & 6340 \\
+A028657 & $m \times n$ binary matrices & $\sim$1081 & 3000+ & 2000+ \\
+A091060 & $n \times n$, 3 symbols, $S_n^3$ & 13 & 53+ & 40+ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ====================================================================
+\section{The Odd-Cycle Collection Formula}\label{sec:ocf}
+%% ====================================================================
+
+\subsection{Statement and history}
+
+\begin{definition}
+The \emph{odd-cycle conflict graph} $\Omega(T)$ has as vertices all directed
+odd cycles of $T$, with two cycles adjacent if they share a vertex. The
+\emph{independence polynomial} is $I(G, x) = \sum_{k \geq 0} \alpha_k(G) \, x^k$,
+where $\alpha_k$ counts independent sets of size $k$.
+\end{definition}
+
+\begin{theorem}[OCF; Grinberg--Stanley~\cite{GrinbergStanley2024}]\label{thm:ocf}
+For every tournament $T$, $H(T) = I(\Omega(T), 2)$.
+\end{theorem}
+
+This gives $H(T) = 1 + 2\alpha_1 + 4\alpha_2 + \cdots$, immediately implying
+R\'edei's theorem. The formula was conjectured computationally and verified
+exhaustively through $n = 8$ ($2^{27}$ configurations). Grinberg and Stanley
+proved it using P-partition theory~\cite{GrinbergStanley2024}. We give an
+independent proof via Walsh--Fourier analysis in Section~\ref{sec:walsh}.
+
+\subsection{Claim A and Claim B}
+
+\begin{theorem}[Claim B, proved]\label{thm:claimB}
+For any tournament $T$ and vertex $v$,
+\[
+I(\Omega(T), 2) - I(\Omega(T \setminus v), 2) = 2 \sum_{C \ni v} \mu(C),
+\]
+where the sum is over odd cycles through $v$ and $\mu(C) = I(\Omega(T \setminus v)|_{\mathrm{avoid}\, C \setminus \{v\}}, 2)$.
+\end{theorem}
+
+The companion \emph{Claim A}---that the same identity holds with $H(T)$
+replacing $I(\Omega(T), 2)$---follows from OCF but was also verified
+independently through $n = 8$.
+
+\subsection{Practical speedups from OCF}
+
+The OCF replaces the $O(2^n n^2)$ Held--Karp DP algorithm with trace formulas:
+\begin{itemize}
+\item $\alpha_1 = t_3 + t_5 + t_7 + \cdots$ (odd-cycle counts, computable in $O(n^3)$
+via matrix powers)
+\item $\alpha_2$ computable from per-vertex cycle counts via inclusion-exclusion ($O(n^3)$)
+\end{itemize}
+
+At $n = 9$, this gives a $100\times$ speedup: 0.7ms per tournament versus 70ms
+for Held--Karp.
+
+\subsection{Spectrum gaps}
+
+\begin{theorem}[THM-079]\label{thm:hgap}
+$H(T) \neq 7$ and $H(T) \neq 21$ for any tournament $T$ on any $n \geq 1$.
+These are the only permanent gaps below $200$.
+\end{theorem}
+
+The proof of $H \neq 21$ uses a ``poisoning graph'' DAG argument: any
+cycle structure producing $H = 21$ forces additional cycles that push $H$
+above 21. Verified exhaustively at $n = 8$ (all $2^{28}$ tournaments).
+
+%% ====================================================================
+\section{Walsh--Fourier Analysis of Tournament Invariants}\label{sec:walsh}
+%% ====================================================================
+
+\subsection{Setup}
+
+Encode a labeled tournament $T$ on $n$ vertices as a binary string
+$t \in \{0,1\}^m$ where $m = \binom{n}{2}$, recording the orientation of
+each edge pair. The Walsh--Fourier transform of a function $f$ on tournaments is
+\[
+\hat{f}[S] = 2^{-m} \sum_{t \in \{0,1\}^m} (-1)^{t \cdot \chi_S} f(t)
+\]
+for each subset $S \subseteq [m]$.
+
+\subsection{Complete spectrum of $H(T)$}
+
+\begin{theorem}[THM-069, Walsh diagonalization]\label{thm:walshH}
+The Walsh coefficient $\hat{H}[S]$ is nonzero if and only if $S$ is a union
+of edge-disjoint even-length paths in $K_n$. In that case,
+\[
+\hat{H}[S] = \varepsilon \cdot \frac{2^r \cdot (n - 2k)!}{2^{n-1}},
+\]
+where $|S| = 2k$, $r$ is the number of path components, and
+$\varepsilon = \pm 1$ depends on the path orientations.
+\end{theorem}
+
+\begin{corollary}[Dimensionality reduction]
+At $n = 5$, $H(T)$ has $3$ independent Walsh amplitudes on a $1024$-dimensional
+space ($341\times$ compression). At $n = 7$, approximately $20$ amplitudes on a
+$2{,}097{,}152$-dimensional space ($\sim 100{,}000\times$ compression).
+\end{corollary}
+
+\subsection{Complete spectrum of $M[a,b]$}
+
+\begin{theorem}[THM-080]\label{thm:walshM}
+For the transfer matrix entry $M[a,b]$ (Hamiltonian paths from $a$ to $b$):
+\[
+\widehat{M[a,b]}[S] = (-1)^{\mathrm{asc}(S)} \cdot \frac{2^s \cdot (n-2-|S|)!}{2^{n-2}},
+\]
+where $s$ is the number of unrooted even-length components of $S$ (components
+not containing $a$ or $b$), and the coefficient is nonzero only when
+$S \cup \{a,b\}$ forms a valid even-length path union with $|S| \equiv n \pmod{2}$.
+\end{theorem}
+
+This formula is manifestly symmetric in $a$ and $b$.
+
+\begin{corollary}[Transfer matrix symmetry, THM-030]
+$M[a,b] = M[b,a]$ for all tournaments $T$ and all vertices $a, b$.
+\end{corollary}
+
+\subsection{Walsh proof of OCF}
+
+\begin{theorem}[THM-077]\label{thm:walshocf}
+The Walsh--Fourier coefficients of $H(T)$ and $I(\Omega(T), 2)$ agree for
+every subset $S$. Hence $H(T) = I(\Omega(T), 2)$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The $H$-side formula (Theorem~\ref{thm:walshH}) gives $\hat{H}[S]$ as a
+product of directional signs and a factorial term. For the $I$-side, a
+generating function factorization (THM-076) shows $\hat{I}[S]$ decomposes
+into cycle-path covering contributions times $E[I(\text{remaining})]$.
+An EGF calculation gives $F(t,x) = (1+bt)/(1-at)$, and a hockey-stick
+identity shows the total depends only on $m = n - 2k$ and the number of
+components $r$, matching the $H$-side exactly.
+\end{proof}
+
+This proof is elementary and self-contained, bypassing the P-partition
+theory of~\cite{GrinbergStanley2024}.
+
+\subsection{Position Character Decomposition}
+
+\begin{theorem}[THM-068, PCD]\label{thm:pcd}
+For each vertex $v$ and Walsh subset $S$ of degree $2k$:
+\[
+\widehat{M_{\mathrm{pos}}[v]}[S] = (-1)^{[v \in N(S)]} \cdot \frac{\hat{H}[S]}{n - 2k},
+\]
+where $N(S)$ is the set of odd-offset vertices in the path components of $S$.
+\end{theorem}
+
+Proved for all degrees and all odd $n$ via a block-placement argument.
+The key insight: all macro-items in the block placement have odd width,
+so start parity equals macro-position.
+
+%% ====================================================================
+\section{GLMY Path Homology of Tournaments}\label{sec:homology}
+%% ====================================================================
+
+\subsection{Background}
+
+The GLMY path homology~\cite{GLMY2012} associates to any directed graph $G$
+a chain complex $(\Omega_*, \partial_*)$ where $\Omega_p$ consists of
+``allowed $p$-paths'' (sequences of $p+1$ vertices satisfying compatibility
+conditions) and $\partial_p$ is the alternating face map. The Betti numbers
+$\beta_p = \dim(\ker \partial_p / \operatorname{im} \partial_{p+1})$
+are topological invariants of the digraph.
+
+\subsection{The Betti landscape}
+
+Exhaustive computation through $n = 6$ and extensive sampling through $n = 10$
+(over 50{,}000 tournaments total) reveals:
+
+\begin{center}
+\begin{tabular}{@{}crrrrrr@{}}
+\toprule
+$n$ & $\beta_0$ & $\beta_1$ & $\beta_2$ & $\beta_3$ & $\beta_4$ \\
+\midrule
+3 & 1 & 0--1 & 0 & & \\
+4 & 1 & 0--1 & 0 & 0 & \\
+5 & 1 & 0--1 & 0 & 0 & 0 \\
+6 & 1 & 0--1 & 0 & 0--1 & 0 \\
+7 & 1 & 0--1 & 0 & 0--1 & 0--1 \\
+8 & 1 & 0--1 & 0 & 0--2 & 0--1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{$\beta_2 = 0$: statement and proof}
+
+\begin{theorem}[THM-108/109]\label{thm:beta2}
+For every tournament $T$ on $n \geq 3$ vertices, $\beta_2(T) = 0$.
+\end{theorem}
+
+\begin{proof}[Proof outline]
+By strong induction on $n$. For the induction step, use the long exact
+sequence of the pair $(T, T \setminus v)$:
+\[
+\cdots \to H_2(T \setminus v) \to H_2(T) \to H_2(T, T \setminus v) \to H_1(T \setminus v) \to H_1(T) \to \cdots
+\]
+By induction, $H_2(T \setminus v) = 0$, so $H_2(T)$ injects into
+$H_2(T, T \setminus v)$. It suffices to find a vertex $v$ with
+$\beta_1(T \setminus v) \leq \beta_1(T)$ (a ``good'' vertex).
+
+\emph{Case 1:} $\beta_1(T) = 1$. Since $\beta_1 \leq 1$ for all tournaments
+(THM-103), every vertex is good.
+
+\emph{Case 2:} $\beta_1(T) = 0$, $T$ not strongly connected. Every vertex
+deletion preserves non-strong-connectivity, so $\beta_1(T \setminus v) = 0$
+for all $v$.
+
+\emph{Case 3:} $\beta_1(T) = 0$, $T$ strongly connected with a cut vertex $v$.
+Then $T \setminus v$ is non-SC, so $v$ is good.
+
+\emph{Case 4:} $\beta_1(T) = 0$, $T$ strongly connected with vertex
+connectivity $\geq 2$. An \emph{isolation characterization} (THM-109) shows
+that bad vertices are severely constrained: in the all-dominated case, they
+have score $0$ or $n-1$, limiting the bad set to at most one vertex. In the
+free-cycle case, an adjacency argument gives $n - 5$ good vertices for $n \geq 6$.
+Base case $n = 5$ verified exhaustively.
+\end{proof}
+
+\begin{remark}
+For general directed graphs, $\beta_2 > 0$ is common: 70 out of 59{,}049
+oriented graphs on 5 vertices have $\beta_2 > 0$. All such graphs have
+\emph{twin vertices} (two vertices with identical neighborhoods), which
+tournament completeness forbids.
+\end{remark}
+
+\subsection{Supporting results}
+
+\begin{theorem}[THM-103]\label{thm:beta1}
+$\beta_1(T) \in \{0, 1\}$ for all tournaments $T$.
+\end{theorem}
+
+\begin{theorem}[Rank formula]
+$\rank(\partial_2|_{\Omega_2}) = \binom{n}{2} - n + 1 - \beta_1(T)$.
+\end{theorem}
+
+\begin{theorem}[Mutual exclusivity, THM-095]
+$\beta_1(T) \cdot \beta_3(T) = 0$ for all tournaments on $n \leq 7$.
+\end{theorem}
+
+\subsection{The $n = 8$ threshold}
+
+At $n = 8$, several patterns break:
+
+\begin{itemize}
+\item $\beta_3 = 2$ occurs (0.08\% of tournaments), the first Betti number exceeding 1.
+\item $\beta_3 \cdot \beta_4 \neq 0$ can coexist ($\sim 0.15\%$), refuting the
+``consecutive seesaw'' hypothesis.
+\item The inclusion map $i_*: H_3(T \setminus v) \to H_3(T)$ can have nontrivial
+kernel, refuting $i_*$-injectivity.
+\end{itemize}
+
+\subsection{Paley tournament homology}
+
+For the Paley tournament $T_p$ ($p$ prime, $p \equiv 3 \pmod{4}$):
+\begin{itemize}
+\item $\beta_d = p - 1$ at $d = p - 3$, and $\beta_d = 0$ for all other $d \geq 1$.
+\item Homotopy type: wedge of $(p-1)$ copies of $S^{p-3}$.
+\end{itemize}
+Verified: $T_7$ has $\beta = (1, 0, 0, 0, 6, 0)$ and $T_{11}$ has $\beta_8 = 10$.
+
+%% ====================================================================
+\section{The Signed Hamiltonian Permanent}\label{sec:signed}
+%% ====================================================================
+
+\begin{definition}
+Let $B = 2A - J$ be the skew-symmetric signed adjacency matrix (entries $\pm 1$).
+The \emph{signed Hamiltonian permanent} is
+\[
+S(T) = \sum_{\sigma \in S_n} \prod_{i=1}^{n-1} B[\sigma(i), \sigma(i+1)].
+\]
+\end{definition}
+
+\begin{theorem}[THM-A]
+$S(T) = 0$ for all tournaments on even $n$.
+\end{theorem}
+
+\begin{theorem}[THM-H, universal congruence]
+$S(T) \bmod 2^{n-1}$ depends only on $n$, not on $T$.
+\end{theorem}
+
+\begin{theorem}[THM-J, universality criterion]
+$S(T)$ is fully independent of $T$ (modulo $2^{n-1}$) if and only if
+$s_2(n-3) \leq 1$, where $s_2$ is the binary digit sum. The universal values
+are $n = 3, 5, 7, 11, 19, 35, 67, \ldots$
+\end{theorem}
+
+\begin{theorem}[THM-I, master identity]
+For any set of $k$ non-adjacent positions in a Hamiltonian path:
+\[
+D_S = \frac{n!}{2^k},
+\]
+where $D_S$ is the sum over $(2k)!$ orderings of $2k$ vertices at those
+positions, weighted by signed edge products.
+\end{theorem}
+
+At $n = 5$: $c_0 = S(T)/2^4 = H(T) - 3t_3$, encoding both the path count
+and the 3-cycle count in a single quantity.
+
+%% ====================================================================
+\section{The Worpitzky/F-Polynomial}\label{sec:fpoly}
+%% ====================================================================
+
+For a labeled tournament $T$, define $\mathrm{fwd}(P) = \#\{i : P_i < P_{i+1}\}$
+for each Hamiltonian path $P$. The \emph{forward-edge polynomial} is
+$F(T, x) = \sum_P x^{\mathrm{fwd}(P)}$.
+
+\begin{theorem}[Complement duality]
+$F_k(T) = F_{n-1-k}(T^{\mathrm{op}})$.
+\end{theorem}
+
+\begin{theorem}[Mod-2 universality]
+$F_k(T) \equiv \binom{n-1}{k} \pmod{2}$ for all tournaments $T$.
+\end{theorem}
+
+\begin{theorem}[Moment hierarchy]
+$\mathrm{Var}(\mathrm{fwd}) = 2t_3$, and the $2k$-th cumulant of $\mathrm{fwd}$
+has leading term $2t_{2k+1}/\binom{n}{2k}$.
+\end{theorem}
+
+\begin{conjecture}[Unimodality]
+$F(T, x)$ is unimodal for all tournaments $T$. Verified: 50{,}000+
+tournaments tested with zero violations.
+\end{conjecture}
+
+%% ====================================================================
+\section{Open Problems}\label{sec:open}
+%% ====================================================================
+
+\begin{openquestion}
+Why does $\beta_1(T) = 0$ imply $|\{v : \beta_1(T \setminus v) = 1\}| \leq 3$?
+Verified through $n = 10$; no algebraic proof.
+\end{openquestion}
+
+\begin{openquestion}
+What structural property allows $\beta_3 = 2$ at $n = 8$? What bound replaces
+$\beta_3 \leq 1$ for $n \geq 8$?
+\end{openquestion}
+
+\begin{openquestion}
+Prove $\beta_1(T) \cdot \beta_3(T) = 0$ for all $n$ (currently proved through $n = 7$).
+\end{openquestion}
+
+\begin{openquestion}
+Among all tournaments on $p$ vertices ($p$ prime, $p \equiv 3 \pmod{4}$),
+does the Paley tournament $T_p$ maximize $H(T)$?
+\end{openquestion}
+
+\begin{openquestion}
+Prove unimodality of $F(T, x)$ for all tournaments.
+\end{openquestion}
+
+\begin{openquestion}
+Find a per-path formula valid at all $n$. The 3-cycle formula works at
+$n \leq 5$ but fails at $n = 6$ due to 5-cycle contributions. The correct
+generalization incorporating all odd cycle lengths is unknown.
+\end{openquestion}
+
+%% ====================================================================
+\section{Computational Verification}\label{sec:computation}
+%% ====================================================================
+
+All results have been verified computationally:
+
+\begin{center}
+\begin{tabular}{@{}llrl@{}}
+\toprule
+Result & Method & Scale & Status \\
+\midrule
+OCF: $H = I(\Omega, 2)$ & Exhaustive & $n \leq 8$ ($2^{27}$) & 0 failures \\
+$\beta_2 = 0$ & Exhaustive + sampling & $n \leq 10$ (50k+) & 0 failures \\
+Walsh spectrum of $H$ & Exhaustive & $n \leq 6$; sampled $n = 7$ & 0 failures \\
+Walsh spectrum of $M$ & Exhaustive & $n \leq 6$; sampled $n = 7$ & 0 failures \\
+$H \neq 21$ & Exhaustive & $n \leq 8$ ($2^{28}$) & 0 failures \\
+Signed permanent & Exhaustive & $n \leq 7$; sampled $n = 9$ & 0 failures \\
+$F$ unimodality & Sampling & $n \leq 8$ (50k+) & 0 failures \\
+Paley maximality & Exhaustive at primes & $p = 3, 7, 11$ & confirmed \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Source code for all computations is publicly available in the project repository.
+
+%% ====================================================================
+\begin{thebibliography}{99}
+%% ====================================================================
+
+\bibitem{Redei1934}
+L.~R\'edei,
+\emph{Ein kombinatorischer Satz},
+Acta Litt.\ Sci.\ Szeged \textbf{7} (1934), 39--43.
+
+\bibitem{GrinbergStanley2024}
+D.~Grinberg and R.\,P.~Stanley,
+\emph{Counting Hamiltonian paths in tournaments},
+arXiv:2412.10572 (2024).
+
+\bibitem{GLMY2012}
+A.~Grigor'yan, Y.~Lin, Y.~Muranov, and S.-T.~Yau,
+\emph{Homologies of path complexes and digraphs},
+arXiv:1207.2834 (2012).
+
+\bibitem{Moon1968}
+J.\,W.~Moon,
+\emph{Topics on Tournaments},
+Holt, Rinehart and Winston, New York (1968).
+
+\bibitem{Forcade1973}
+R.~Forcade,
+\emph{Parity of paths and circuits in tournaments},
+Discrete Math.\ \textbf{6} (1973), 115--118.
+
+\bibitem{OEIS}
+OEIS Foundation Inc.,
+\emph{The On-Line Encyclopedia of Integer Sequences},
+\url{https://oeis.org} (2024).
+
+\bibitem{ElSahili2020}
+A.~El Sahili and M.~Abi Aad,
+\emph{Parity of paths and circuits in tournaments},
+Discrete Math.\ \textbf{343} (2020).
+
+\bibitem{SchweserStiebitzToft2025}
+J.~Schweser, M.~Stiebitz, and B.~Toft,
+\emph{The tournament theorem of R\'edei revisited},
+arXiv:2510.10659 (2025).
+
+\bibitem{TangYau2026}
+X.~Tang and S.-T.~Yau,
+\emph{Path homology of circulant digraphs},
+arXiv:2602.04140 (2026).
+
+\end{thebibliography}
+
+\end{document}

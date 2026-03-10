@@ -145,7 +145,8 @@ This is a new vanishing result with no prior analogue. For general directed grap
 
 ### Key Files
 
-- `03-artifacts/drafts/parity_tournaments_fixed.tex` — main paper draft (2,189 lines)
+- `03-artifacts/drafts/tournaments_comprehensive.tex` — comprehensive paper (enumeration + Walsh + homology)
+- `03-artifacts/drafts/parity_tournaments_fixed.tex` — original OCF/Rédei paper draft (2,189 lines)
 - `04-computation/burnside_enum_v2.c` — unified graph/digraph enumerator (12 OEIS sequences)
 - `04-computation/path_homology_v2.py` — GLMY path homology computation
 - `05-knowledge/results/burnside_enum_extensions.md` — complete OEIS extension catalog
