@@ -1,0 +1,37 @@
+======================================================================
+T_11 BOUNDARY d_7 EIGENSPACE COMPUTATION
+======================================================================
+p=11, QR=[1, 3, 4, 5, 9]
+omega_p = 298192073
+
+Key question: What is rank(d_7^(k)) for each eigenspace k?
+This determines beta_6^(k) = ker(d_6^(k)) - im(d_7^(k))
+  ker(d_6^(k=0)) = 395
+  ker(d_6^(k!=0)) = 391
+
+Diff seqs enumerated in 0.0s
+  deg 0: 1 seqs
+  deg 1: 5 seqs
+  deg 2: 25 seqs
+  deg 3: 110 seqs
+  deg 4: 430 seqs
+  deg 5: 1430 seqs
+  deg 6: 3970 seqs
+  deg 7: 8735 seqs
+  deg 8: 14395 seqs
+
+  k=0: Omega_6=700 (4.7s)... Omega_7=690 (48.9s)... rk(d7)=390 im=390 beta6=5 [256.1s / 256.1s total]
+  k=1: Omega_6=700 (4.7s)... Omega_7=690 (49.2s)... rk(d7)=390 im=390 beta6=1 [254.0s / 510.1s total]
+  k=2: Omega_6=700 (4.8s)... Omega_7=690 (48.6s)... rk(d7)=390 im=390 beta6=1 [260.9s / 771.0s total]
+  k=3: Omega_6=700 (5.1s)... Omega_7=690 (49.7s)... rk(d7)=390 im=390 beta6=1 [227.3s / 998.6s total]
+  k=4: Omega_6=700 (4.5s)... Omega_7=690 (44.0s)...44, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_eigenspace.py", line 276, in main
+    basis_7, face_data_7 = compute_omega_basis(
+                           ~~~~~~~~~~~~~~~~~~~^
+        diff_seqs, allowed, 7, omega_k, p)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_eigenspace.py", line 153, in compute_omega_basis
+    C = np.zeros((n_junk, n_Am), dtype=np.int64)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1015. MiB for an array with shape (15230, 8735) and data type int64

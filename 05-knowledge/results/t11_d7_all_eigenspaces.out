@@ -1,0 +1,15 @@
+======================================================================
+T_11 BOUNDARY d_7 ALL EIGENSPACES (small prime 89)
+======================================================================
+p=11, QR=[1, 3, 4, 5, 9], PRIME=89, omega_p=78
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_all_eigenspaces.py", line 320, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t11_d7_all_eigenspaces.py", line 261, in main
+    print(f"\nKnown ker(d6): k=0 \u2192 395, k!=0 \u2192 391")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 21: character maps to <undefined>
