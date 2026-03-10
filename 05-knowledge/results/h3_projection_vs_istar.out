@@ -1,0 +1,64 @@
+
+======================================================================
+PROJECTION COEFFICIENT ANALYSIS AT n=7
+======================================================================
+  25 BAD vertices (0 fail), 11.6s
+
+  H_3(T) old support for deleted vertex v:
+    SUCCESSES: min=3, max=24, mean=13.0
+
+  Fraction of H_3(T) support through v:
+    SUCCESSES: min=0.000, max=0.700, mean=0.376
+
+  Min old support across all vertices:
+    min=3, max=7, mean=5.4
+    distribution: {3: 4, 4: 2, 5: 3, 6: 11, 7: 5}
+
+======================================================================
+PROJECTION COEFFICIENT ANALYSIS AT n=8
+======================================================================
+  Progress: 400 BAD vertices, 373.8s
+  Progress: 600 BAD vertices, 569.4s
+  767 BAD vertices (5 fail), 719.0s
+
+  H_3(T) old support for deleted vertex v:
+    FAILURES: [16, 12, 31, 8, 15]
+    SUCCESSES: min=3, max=37, mean=15.5
+
+  Fraction of H_3(T) support through v:
+    FAILURES: ['0.529', '0.600', '0.367', '0.600', '0.545']
+    SUCCESSES: min=0.000, max=0.824, mean=0.364
+
+  Min old support across all vertices:
+    min=3, max=20, mean=7.5
+    distribution: {3: 48, 4: 46, 5: 154, 6: 69, 7: 106, 8: 88, 9: 85, 10: 70, 11: 31, 12: 22, 13: 20, 14: 14, 16: 2, 17: 5, 18: 3, 20: 4}
+
+  Failure rate by H_3(T) old support for v:
+    old_support=3: 0/5 (0.00%)
+    old_support=5: 0/15 (0.00%)
+    old_support=6: 0/8 (0.00%)
+    old_support=7: 0/35 (0.00%)
+    old_support=8: 1/27 (3.70%)
+    old_support=9: 0/45 (0.00%)
+    old_support=10: 0/27 (0.00%)
+    old_support=11: 0/44 (0.00%)
+    old_support=12: 1/32 (3.12%)
+    old_support=13: 0/63 (0.00%)
+    old_support=14: 0/42 (0.00%)
+    old_support=15: 1/46 (2.17%)
+    old_support=16: 1/37 (2.70%)
+    old_support=17: 0/68 (0.00%)
+    old_support=18: 0/36 (0.00%)
+    old_support=19: 0/38 (0.00%)
+    old_support=20: 0/37 (0.00%)
+    old_support=21: 0/41 (0.00%)
+    old_support=22: 0/24 (0.00%)
+    old_support=23: 0/24 (0.00%)
+    old_support=24: 0/15 (0.00%)
+    old_support=25: 0/24 (0.00%)
+    old_support=26: 0/7 (0.00%)
+    old_support=27: 0/7 (0.00%)
+    old_support=28: 0/5 (0.00%)
+    old_support=31: 1/6 (16.67%)
+
+DONE.

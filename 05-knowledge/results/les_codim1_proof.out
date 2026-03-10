@@ -1,0 +1,49 @@
+======================================================================
+LES AND RETRACTION ANALYSIS
+======================================================================
+
+--- RETRACTION CHAIN MAP CHECK ---
+
+n=7:
+  p=2: 30 checks, avg through-v=23, r(d(σ))≠0: 1.000, all faces in T\v: 0.823
+  p=3: 30 checks, avg through-v=65, r(d(σ))≠0: 1.000, all faces in T\v: 0.749
+  p=4: 30 checks, avg through-v=127, r(d(σ))≠0: 1.000, all faces in T\v: 0.704
+  p=5: 30 checks, avg through-v=159, r(d(σ))≠0: 1.000, all faces in T\v: 0.670
+
+n=8:
+  p=2: 30 checks, avg through-v=33, r(d(σ))≠0: 1.000, all faces in T\v: 0.824
+  p=3: 30 checks, avg through-v=112, r(d(σ))≠0: 1.000, all faces in T\v: 0.747
+  p=4: 30 checks, avg through-v=288, r(d(σ))≠0: 1.000, all faces in T\v: 0.701
+  p=5: 30 checks, avg through-v=541, r(d(σ))≠0: 1.000, all faces in T\v: 0.662
+
+
+--- LES DIMENSION ANALYSIS ---
+
+n=7:
+  100 BAD vertices, 42.0s
+  b_0(T): {1: 100}
+  b_0(T\v): {1: 100}
+  b_3(T): {1: 100}
+  b_3(T\v): {1: 100}
+  chi_rel distribution: {0: 100}
+
+  LES prediction: when b4=b2=0,
+  b_4^rel = b3(Tv) - rk(i_*), b_3^rel = b3(T) - rk(i_*)
+  Since b3(T)=b3(Tv)=1: b_4^rel = b_3^rel = 1-rk(i_*)
+  So b_4^rel=b_3^rel ∈ {0,1} and they're equal.
+
+n=8:
+  100 BAD vertices, 89.1s
+  b_0(T): {1: 100}
+  b_0(T\v): {1: 100}
+  b_3(T): {1: 100}
+  b_3(T\v): {1: 100}
+  b_6(T): {1: 9, 2: 9, 3: 9, 4: 15, 5: 11, 6: 10, 7: 5, 8: 14, 9: 5, 10: 3, 12: 3, 13: 1, 15: 2, 16: 2, 23: 2}
+  chi_rel distribution: {1: 9, 2: 9, 3: 9, 4: 15, 5: 11, 6: 10, 7: 5, 8: 14, 9: 5, 10: 3, 12: 3, 13: 1, 15: 2, 16: 2, 23: 2}
+
+  LES prediction: when b4=b2=0,
+  b_4^rel = b3(Tv) - rk(i_*), b_3^rel = b3(T) - rk(i_*)
+  Since b3(T)=b3(Tv)=1: b_4^rel = b_3^rel = 1-rk(i_*)
+  So b_4^rel=b_3^rel ∈ {0,1} and they're equal.
+
+DONE.
