@@ -1,0 +1,40 @@
+======================================================================
+VERIFICATION: Through-v 4-paths have exactly 1 old face
+======================================================================
+  CONFIRMED: Every through-v 4-path has exactly 1 old face in boundary
+
+======================================================================
+DETAILED OLD-FACE ANALYSIS AT n=7
+======================================================================
+  Progress: 100, 46.2s
+  Progress: 150, 70.4s
+  150 BAD vertices, 70.4s
+
+  Old faces always in A_3(Tv): False
+    miss rate: mean=0.218
+
+  new_old_face ⊂ im(d_4^Tv): 42/150
+  extra rank over im(d_4^Tv): min=0, max=26, mean=14.0
+
+  New Omega_4 vectors: mean=25.5
+  Of those, old-face image in ker(d_3^Tv): mean=3.6
+  Fraction in ker: mean=0.154
+
+======================================================================
+DETAILED OLD-FACE ANALYSIS AT n=8
+======================================================================
+  Progress: 50, 44.9s
+  Progress: 100, 99.1s
+  100 BAD vertices, 99.1s
+
+  Old faces always in A_3(Tv): False
+    miss rate: mean=0.254
+
+  new_old_face ⊂ im(d_4^Tv): 0/100
+  extra rank over im(d_4^Tv): min=22, max=70, mean=41.3
+
+  New Omega_4 vectors: mean=79.0
+  Of those, old-face image in ker(d_3^Tv): mean=12.9
+  Fraction in ker: mean=0.162
+
+DONE.
