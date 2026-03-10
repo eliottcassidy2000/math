@@ -116,6 +116,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-411 | Failure vertices have H_3(T) generator concentrated on through-v paths | Failures: 12-18 through-v path support vs success mean 9.3. Jaccard similarity of gen supports: fail 0.000-0.038 vs success mean 0.048. When H_3(T) gen relies heavily on v-paths, the embedded gen (which avoids v-paths) misaligns. | opus-S57 |
 | HYP-412 | Ghost Cycle Theorem: every through-v-only cycle in ker(d_3) is in im(d_4), for b3=1 tournaments at n≤7 | n=6: trivially (no tv-only cycles). n=7: 450/450 (100%). n=8: 399/400 (99.75%). The ~0.25% failure at n=8 = rank(i_*)=0 mechanism. | opus-S58 |
 | HYP-413 | Ghost Cycle ⟺ HYP-408: Ghost Cycle Theorem is EQUIVALENT to codim-1 universality, given beta_3=1 | PROVED: dim(K_tv)-dim(B_tv) = beta_3 - codim_old. Since B_tv ⊂ K_tv, equal dims ⟹ equal subspaces. Verified algebraic identity 1408/1408 across n=6,7,8. | opus-S58 |
+| HYP-414 | rank(i_*: H_3(T\v)→H_3(T)) = β₃(T\v) exactly, for β₃(T)=1 tournaments | 602/602 at n=7 (all vertices), 400/400 at n=8. Both Case 1 (β₃(T\v)=1: rank=1) and Case 2 (β₃(T\v)=0: rank=0). | kind-pasteur-S50 |
+| HYP-415 | Ghost Cycle holds universally (WITH safe arithmetic): K_tv = B_tv for ALL β₃(T)=1 pairs | 602/602 n=7, 400/400 n=8 with safe modular arithmetic. Opus-S59's 14 "failures" at n=7 were caused by int64 overflow (MISTAKE-019). 0 real failures. | kind-pasteur-S50 |
+| HYP-416 | Block triangularity: D_{old→tv} = 0 and P_{old→tv} = 0 universally in boundary and constraint matrices | D_to=0: old p-paths have only old (p-1)-faces. P_to=0: old (p-1)-face non-allowedness only involves old p-paths. 301/301 n=7, 104/104 n=8. | kind-pasteur-S50 |
+| HYP-417 | H_3 generator old component is NEVER zero for β₃(T)=1 tournaments | 0/403 at n=7 (Case 2: β₃(T\v)=0). Every H_3 class has nontrivial old-path support. D_{3,tv→tv}(z_tv)=0 always; old component NOT a cycle in T\v. | kind-pasteur-S50 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
