@@ -1,0 +1,55 @@
+FINDING EXCEPTIONAL n=8 TOURNAMENTS WITH rank(i_*)=0
+======================================================================
+  trial 1000, found 2 exceptional, 100 normal
+  trial 2000, found 3 exceptional, 100 normal
+  trial 3000, found 4 exceptional, 100 normal
+  trial 4000, found 7 exceptional, 100 normal
+  trial 5000, found 10 exceptional, 100 normal
+  trial 6000, found 11 exceptional, 100 normal
+  trial 7000, found 13 exceptional, 100 normal
+  trial 8000, found 15 exceptional, 100 normal
+  trial 9000, found 17 exceptional, 100 normal
+  trial 10000, found 17 exceptional, 100 normal
+
+  Found 20 exceptional cases in 1764.1s
+
+======================================================================
+EXCEPTIONAL (rank i_* = 0):
+======================================================================
+  Score sequences: {(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5)): 2, (np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4)): 4, (np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(5), np.int8(5)): 3, (np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5)): 3, (np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5)): 4, (np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4)): 1, (np.int8(2), np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(5), np.int8(5), np.int8(5)): 3}
+  Score sequences T\v: {(np.int8(1), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4)): 2, (np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4)): 8, (np.int8(2), np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(5)): 3, (np.int8(1), np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(5)): 4, (np.int8(1), np.int8(2), np.int8(2), np.int8(2), np.int8(4), np.int8(5), np.int8(5)): 2, (np.int8(1), np.int8(1), np.int8(2), np.int8(4), np.int8(4), np.int8(4), np.int8(5)): 1}
+  Out-degree of v: {np.int8(2): 9, np.int8(4): 1, np.int8(5): 10}
+  dim_Omega4: min=63, max=167, mean=110.2
+  dim_Omega5: min=29, max=140, mean=78.8
+  dim_tv4: min=319, max=399, mean=348.6
+  n_paths_3: min=210, max=270, mean=242.0
+  n_paths_4: min=424, max=618, mean=524.9
+  n_paths_5: min=640, max=1046, mean=850.7
+
+======================================================================
+NORMAL (rank i_* = 1):
+======================================================================
+  Score sequences (top 5): {(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5)): 19, (np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5)): 13, (np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5), np.int8(5)): 10, (np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5)): 10, (np.int8(1), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(6)): 8}
+  Out-degree of v: {np.int8(1): 4, np.int8(2): 16, np.int8(3): 22, np.int8(4): 39, np.int8(5): 17, np.int8(6): 2}
+  dim_Omega4: min=56, max=196, mean=110.1
+  dim_Omega5: min=27, max=185, mean=79.4
+  dim_tv4: min=173, max=383, mean=282.3
+  n_paths_3: min=180, max=270, mean=226.8
+  n_paths_4: min=326, max=604, mean=469.2
+  n_paths_5: min=450, max=1020, mean=732.1
+
+======================================================================
+ARE EXCEPTIONAL TOURNAMENTS ISOMORPHIC?
+======================================================================
+  #0: score_seq=(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5)), v-outdeg=2, Ω4=104, Ω5=69
+  #1: score_seq=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4)), v-outdeg=2, Ω4=144, Ω5=120
+  #2: score_seq=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4)), v-outdeg=2, Ω4=141, Ω5=113
+  #3: score_seq=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(5), np.int8(5)), v-outdeg=5, Ω4=104, Ω5=69
+  #4: score_seq=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4)), v-outdeg=2, Ω4=144, Ω5=120
+  #5: score_seq=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5)), v-outdeg=5, Ω4=141, Ω5=113
+  #6: score_seq=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(5), np.int8(5)), v-outdeg=5, Ω4=104, Ω5=69
+  #7: score_seq=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5)), v-outdeg=5, Ω4=82, Ω5=46
+  #8: score_seq=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5)), v-outdeg=5, Ω4=141, Ω5=113
+  #9: score_seq=(np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(4)), v-outdeg=2, Ω4=144, Ω5=120
+
+DONE.

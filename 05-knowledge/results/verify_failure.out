@@ -1,0 +1,23 @@
+VERIFY n=8 FAILURES WITH TWO METHODS
+======================================================================
+
+  FAILURE #1: method1=0, method2=0, agree=True, is_cycle=True, b3_T=1, b3_Tv=1
+  ... 100 checked, 1 failures, 100/100 agree
+  ... 200 checked, 1 failures, 200/200 agree
+
+  FAILURE #2: method1=0, method2=0, agree=True, is_cycle=True, b3_T=1, b3_Tv=1
+  ... 300 checked, 2 failures, 300/300 agree
+
+  FAILURE #3: method1=0, method2=0, agree=True, is_cycle=True, b3_T=1, b3_Tv=1
+  ... 400 checked, 3 failures, 400/400 agree
+  ... 500 checked, 3 failures, 500/500 agree
+  ... 600 checked, 3 failures, 600/600 agree
+  ... 700 checked, 3 failures, 700/700 agree
+
+  FAILURE #4: method1=0, method2=0, agree=True, is_cycle=True, b3_T=1, b3_Tv=1
+  ... 800 checked, 4 failures, 800/800 agree
+  ... 900 checked, 4 failures, 900/900 agree
+  ... 1000 checked, 4 failures, 1000/1000 agree
+  ... 1100 checked, 4 failures, 1100/1100 agree
+  ... 1200 checked, 4 failures, 1200/1200 agree
+  ... 1300 checked, 4 failures, 1300/1300 agree
