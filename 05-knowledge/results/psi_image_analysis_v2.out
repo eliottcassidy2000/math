@@ -1,0 +1,39 @@
+
+======================================================================
+ψ IMAGE vs im(d_4^Tv) AT n=7
+======================================================================
+  200 BAD (T,v) pairs, 70.9s
+  ψ(ker) ⊂ im(d_4^Tv): 200/200
+  dim_ker_d4_rel: min=3, max=26, mean=16.8
+  rk_psi: min=0, max=6, mean=4.6
+  rk_d4_Tv: min=0, max=6, mean=4.6
+  rk_ker_d3_Tv: min=1, max=7, mean=5.6
+
+  rk(ψ(ker))/rk(im d_4^Tv): min=0.000, max=1.000, mean=0.765
+  rk(ψ(ker))/rk(ker d_3^Tv): min=0.000, max=0.857, mean=0.656
+
+  ψ(ker) directions in H_3(T\v): {0: 200}
+
+======================================================================
+ψ IMAGE vs im(d_4^Tv) AT n=8
+======================================================================
+  800 BAD (T,v) pairs, 476.1s
+  ψ(ker) ⊂ im(d_4^Tv): 795/800
+  dim_ker_d4_rel: min=22, max=137, mean=71.9
+  rk_psi: min=9, max=29, mean=20.9
+  rk_d4_Tv: min=9, max=29, mean=20.9
+  rk_ker_d3_Tv: min=10, max=30, mean=21.9
+
+  rk(ψ(ker))/rk(im d_4^Tv): min=1.000, max=1.048, mean=1.000
+  rk(ψ(ker))/rk(ker d_3^Tv): min=0.900, max=1.000, mean=0.951
+
+  ψ(ker) directions in H_3(T\v): {0: 795, 1: 5}
+
+  --- Cases where ψ reaches H_3 ---
+    rk_psi=28, rk_d4Tv=27, dim_ker_rel=98
+    rk_psi=28, rk_d4Tv=27, dim_ker_rel=114
+    rk_psi=28, rk_d4Tv=27, dim_ker_rel=98
+    rk_psi=22, rk_d4Tv=21, dim_ker_rel=69
+    rk_psi=28, rk_d4Tv=27, dim_ker_rel=114
+
+DONE.

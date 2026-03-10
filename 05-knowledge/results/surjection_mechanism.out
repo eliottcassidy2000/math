@@ -1,0 +1,36 @@
+
+======================================================================
+SURJECTION MECHANISM AT n=7
+======================================================================
+  200 (T,v) pairs, 57.4s
+
+  old→old alone surjects onto im(d_4^Tv): 0/200
+  tv→old alone surjects onto im(d_4^Tv): 0/200
+  rk_psi_ker: min=0, max=6, mean=4.2
+  rk_oo: min=3, max=17, mean=9.4
+  rk_to: min=3, max=15, mean=8.5
+  rk_im_d4_Tv: min=0, max=6, mean=4.2
+  dim_ker_tvtv: min=3, max=26, mean=15.4
+  n_old4_in_ker: min=0, max=9, mean=6.2
+
+  Overlap (rk_oo + rk_to > rk_psi): 200/200
+  Pure old-only ker vectors: {0: 59, 7: 2, 8: 18, 9: 121}
+
+======================================================================
+SURJECTION MECHANISM AT n=8
+======================================================================
+  300 (T,v) pairs, 116.8s
+
+  old→old alone surjects onto im(d_4^Tv): 0/300
+  tv→old alone surjects onto im(d_4^Tv): 0/300
+  rk_psi_ker: min=9, max=29, mean=20.7
+  rk_oo: min=16, max=77, mean=38.8
+  rk_to: min=12, max=76, mean=34.5
+  rk_im_d4_Tv: min=9, max=29, mean=20.7
+  dim_ker_tvtv: min=26, max=135, mean=70.8
+  n_old4_in_ker: min=12, max=48, mean=31.9
+
+  Overlap (rk_oo + rk_to > rk_psi): 300/300
+  Pure old-only ker vectors: {12: 4, 14: 4, 15: 27, 16: 1, 17: 2, 18: 8, 20: 5, 21: 2, 22: 1, 23: 8, 24: 33, 25: 5, 26: 3, 27: 22, 30: 1, 32: 6, 33: 10, 34: 9, 35: 15, 36: 13, 37: 8, 38: 4, 39: 6, 40: 9, 41: 33, 42: 15, 43: 8, 44: 6, 45: 21, 46: 9, 48: 2}
+
+DONE.

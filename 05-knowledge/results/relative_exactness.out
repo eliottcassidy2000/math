@@ -1,0 +1,40 @@
+
+======================================================================
+RELATIVE EXACTNESS AT DEGREE 4, n=7
+======================================================================
+  200 (T,v) pairs, 58.6s
+
+  H_4^rel dimension: {0: 200}
+  dim_C4_rel: min=12, max=40, mean=24.6
+  dim_C5_rel: min=3, max=25, mean=11.7
+  rk_d4_rel: min=9, max=23, mean=15.5
+  rk_d5_rel: min=3, max=17, mean=9.1
+  dim_ker_d4_rel: min=3, max=17, mean=9.1
+  rk_d5_total: min=3, max=20, mean=11.2
+  rk_d4_total: min=9, max=29, mean=19.7
+
+  rk(d_5^rel)/dim(ker d_4^rel): min=1.000, max=1.000, mean=1.000
+  Slack (ker - im): {0: 200}
+
+======================================================================
+RELATIVE EXACTNESS AT DEGREE 4, n=8
+======================================================================
+  300 (T,v) pairs, 146.9s
+
+  H_4^rel dimension: {0: 298, 1: 2}
+  dim_C4_rel: min=31, max=155, mean=73.1
+  dim_C5_rel: min=15, max=165, mean=60.5
+  rk_d4_rel: min=19, max=61, mean=35.2
+  rk_d5_rel: min=12, max=94, mean=38.0
+  dim_ker_d4_rel: min=12, max=94, mean=38.0
+  rk_d5_total: min=17, max=110, mean=50.1
+  rk_d4_total: min=30, max=86, mean=55.8
+
+  rk(d_5^rel)/dim(ker d_4^rel): min=0.971, max=1.000, mean=1.000
+  Slack (ker - im): {0: 298, 1: 2}
+
+  --- H_4^rel > 0 cases ---
+    h4_rel=1, dim_ker=34, rk_d5_rel=33
+    h4_rel=1, dim_ker=55, rk_d5_rel=54
+
+DONE.
