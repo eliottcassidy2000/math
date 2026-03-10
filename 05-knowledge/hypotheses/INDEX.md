@@ -133,6 +133,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-428 | χ(T, T\v) = 5 constant for all b3=1 n=7 tournaments | 100/100 (including C_0, C_1 terms). Full χ^rel = 0 when including Ω_0, Ω_1. At n=8, χ^rel varies (7-21). | opus-S59 |
 | HYP-429 | Neither d_4^{old→old} nor d_4^{tv→old} alone surjects onto im(d_4^{T\v}) | 0/200 at n=7, 0/300 at n=8 for either block alone. The surjection requires interplay between both blocks with massive cancellation (rk_oo≈9, rk_to≈9, but rk_combined≈4 at n=7). | opus-S59 |
 | HYP-430 | Paley T_11: β_0-4 = (1,0,0,0,0) exact, β_5 ≤ 3400 | Direct computation via full_chain_complex_modp with increasing max_deg. max_deg=5 took 420s. Omega dims=[11,55,220,770,2255,5060]. First nonzero β beyond β_0 is at degree ≥ 5. | kind-pasteur-S50 |
+| HYP-431 | Paley T_p: Omega_k = Omega_{p-k} for k=1,...,p-1 (palindrome) | T_7 confirmed: [7,21,42,63,63,42,21], palindrome holds at k=1,2,3. T_11 partial: Omega_1..5=[55,220,770,2255,5060], palindrome Omega_5=Omega_6 predicted. For T_3: FAILS (Omega_1=3, Omega_2=0≠3). So requires p≥7. | kind-pasteur-S50 |
+| HYP-432 | chi(T_p) = p for Paley primes p≥7 | PROVED for T_7 (chi=7 from Omega dims). Conjectured T_11 (chi=11). Proof: palindrome Omega_k=Omega_{p-k} + odd p makes all pairs cancel => chi=Omega_0=p. Also: chi = sum (-1)^k β_k confirms T_7 since 1-0+0-0+6-0+0=7=p. | kind-pasteur-S50 |
+| HYP-433 | T_p Betti: β_{(p+1)/2} = p-1, all other β_k=0 for k>=1 | T_7: β_4=6=p-1 at degree (7+1)/2=4. CONSISTENT WITH chi=7. Fourier: p-1 non-trivial eigenspaces each contribute 1. T_11 PREDICTION: β_6=10 at degree (11+1)/2=6, all other β=0. chi constraint with β_0-4=(1,0,0,0,0): β_6+β_8-β_5-β_7=10. If β_6=10, others=0: chi=11=p. STRONGLY PREDICTED but unverified. | kind-pasteur-S50 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

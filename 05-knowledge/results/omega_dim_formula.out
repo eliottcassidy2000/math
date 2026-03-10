@@ -1,0 +1,112 @@
+OMEGA DIMENSION FORMULA FOR PALEY TOURNAMENTS
+============================================================
+
+============================================================
+T_3 Omega dimension analysis
+============================================================
+n=3, d=1
+Expected Omega_0 = 3
+Expected Omega_1 = C(3,2) = 3
+Expected Omega_2 = p*d*(d-1) = 3*1*0 = 0
+
+Computation time: 0.0s
+
+Omega dims: [3, 3, 0]
+
+Omega_k / p:
+  k=0: 3/3 = 1.0000  | Omega_2 = 0 (DIFF)
+  k=1: 3/3 = 1.0000
+  k=2: 0/3 = 0.0000
+
+Palindrome check (Omega_k = Omega_{p-1-k}):
+  HOLDS for all k in [1, p-2]!
+
+Euler characteristic chi = 0
+Sum of Omega_k = 6
+
+Formula search (Omega_k / p values):
+  [1.0, 1.0, 0.0]
+  Ratios between consecutive: [1.0, 0.0]
+
+============================================================
+T_7 Omega dimension analysis
+============================================================
+n=7, d=3
+Expected Omega_0 = 7
+Expected Omega_1 = C(7,2) = 21
+Expected Omega_2 = p*d*(d-1) = 7*3*2 = 42
+
+Computation time: 0.0s
+
+Omega dims: [7, 21, 42, 63, 63, 42, 21]
+
+Omega_k / p:
+  k=0: 7/7 = 1.0000  | Omega_6 = 21 (DIFF)
+  k=1: 21/7 = 3.0000  | Omega_5 = 42 (DIFF)
+  k=2: 42/7 = 6.0000  | Omega_4 = 63 (DIFF)
+  k=3: 63/7 = 9.0000
+  k=4: 63/7 = 9.0000
+  k=5: 42/7 = 6.0000
+  k=6: 21/7 = 3.0000
+
+Palindrome check (Omega_k = Omega_{p-1-k}):
+  FAILS at k=1: Omega_1=21 != Omega_5=42
+  FAILS at k=2: Omega_2=42 != Omega_4=63
+  FAILS at k=4: Omega_4=63 != Omega_2=42
+  FAILS at k=5: Omega_5=42 != Omega_1=21
+
+Euler characteristic chi = 7
+Sum of Omega_k = 259
+
+Formula search (Omega_k / p values):
+  [1.0, 3.0, 6.0, 9.0, 9.0, 6.0, 3.0]
+  Ratios between consecutive: [3.0, 2.0, 1.5, 1.0, 0.6666666666666666, 0.5]
+
+============================================================
+T_11 partial computation (max_deg = 9 to check palindrome)
+(NOTE: max_deg=p-1=10 required for full computation; this may take hours)
+Instead: verify partial results from paley_betti_direct.py output
+
+T_11 predicted Omega dims (known + palindrome):
+  Omega_0 = 11 (measured)
+  Omega_1 = 55 (measured)
+  Omega_2 = 220 (measured)
+  Omega_3 = 770 (measured)
+  Omega_4 = 2255 (measured)
+  Omega_5 = 5060 (measured)
+  Omega_6 = 2255 (palindrome)
+  Omega_7 = 770 (palindrome)
+  Omega_8 = 220 (palindrome)
+  Omega_9 = 55 (palindrome)
+  Omega_10 = 11 (palindrome)
+
+Formula check T_11 (p=11, d=5):
+  Omega_0 = 11 (= p = 11)
+  Omega_1 = 55 (= C(p,2) = 55)
+  Omega_2 = 220 (= p*d*(d-1) = 11*5*4 = 220)
+  Omega_3 = 770 = 770/11 * p = 70.0 * p
+    70 = C(8,4) = 70
+    70 = C(2d, d) = C(10,5) = 252
+    Formula Omega_3 = p * C(2d, d)? = 2772
+  Omega_4 = 2255 = 2255/11 * p = 205.0 * p
+
+General formula attempt:
+  T_7 (p=7, d=3): Omega_k/7 = 1, 3, 6, 9, 9, 6, 3
+    = C(2d, d)*? ... let's see
+    k=0: 1 = C(0,0) = C(1,0) = C(2,0) = C(3,0) = C(4,0) = C(5,0)
+    k=1: 3 = C(3,1)
+    k=2: 6 = C(4,2)
+    k=3: 9
+    k=4: 9
+    k=5: 6 = C(6,5)
+    k=6: 3
+
+  T_11 (p=11, d=5): Omega_k/11 = 1, 5, 20, 70, 205, 460
+    k=0: 1 = C(0,0) = C(0,0)
+    k=1: 5 = C(5,1) = C(5,4)
+    k=2: 20
+    k=3: 70
+    k=4: 205
+    k=5: 460
+
+DONE.
