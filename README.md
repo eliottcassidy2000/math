@@ -105,14 +105,16 @@ This is a new vanishing result with no prior analogue. For general directed grap
 - beta_1 * beta_3 = 0: mutual exclusivity of 1-holes and 3-holes (proved n <= 7)
 - Rank formula: rank(d_2) = C(n,2) - n + 1 - beta_1(T)
 
-**New discovery at n=8:** beta_3 can reach 2 (0.08% of tournaments). This is the first Betti number exceeding 1 and refutes the conjecture beta_k <= 1 for k >= 1.
+**New discoveries:** beta_3 first appears at n=6 (1% of tournaments), reaches 2 at n=8. beta_4 onset at n=7, reaching 6 for the Paley tournament T_7. beta_5 first appears at n=8. The "defect wave" pattern: beta_1 prevalence drops (29.7% -> 14.6% -> 5.8% -> 1%) while beta_3 rises (0% -> 1% -> 7.2% -> 21%) as n grows.
 
-| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 |
-|---|--------|--------|--------|--------|--------|
-| 3 | 1 | 0-1 | 0 | - | - |
-| 5 | 1 | 0-1 | 0 | 0 | 0 |
-| 7 | 1 | 0-1 | 0 | 0-1 | 0-1 |
-| 8 | 1 | 0-1 | 0 | 0-2 | 0-1 |
+| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 | beta_5 |
+|---|--------|--------|--------|--------|--------|--------|
+| 3 | 1 | 0-1 | 0 | - | - | - |
+| 4 | 1 | 0-1 | 0 | 0 | - | - |
+| 5 | 1 | 0-1 | 0 | 0 | 0 | - |
+| 6 | 1 | 0-1 | 0 | 0-1 | 0 | 0 |
+| 7 | 1 | 0-1 | 0 | 0-1 | 0-6 | 0 |
+| 8 | 1 | 0-1 | 0 | 0-2 | 0-5 | 0-1 |
 
 ### Signed Hamiltonian Permanent
 

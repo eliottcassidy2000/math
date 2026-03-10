@@ -82,12 +82,14 @@ The second major program studies the **topology** of tournaments using GLMY path
 
 We computed Betti numbers (topological invariants counting "holes" of each dimension) for over 50,000 tournaments from n = 3 to n = 10. The landscape:
 
-| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 |
-|---|--------|--------|--------|--------|--------|
-| 3 | 1 | 0-1 | 0 | - | - |
-| 5 | 1 | 0-1 | 0 | 0 | 0 |
-| 7 | 1 | 0-1 | 0 | 0-1 | 0-1 |
-| 8 | 1 | 0-1 | 0 | 0-2 | 0-1 |
+| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 | beta_5 |
+|---|--------|--------|--------|--------|--------|--------|
+| 3 | 1 | 0-1 | 0 | - | - | - |
+| 4 | 1 | 0-1 | 0 | 0 | - | - |
+| 5 | 1 | 0-1 | 0 | 0 | 0 | - |
+| 6 | 1 | 0-1 | 0 | 0-1 | 0 | 0 |
+| 7 | 1 | 0-1 | 0 | 0-1 | 0-6 | 0 |
+| 8 | 1 | 0-1 | 0 | 0-2 | 0-5 | 0-1 |
 
 **beta_2 = 0 for all tournaments (proved, THM-108/109).** This is a new vanishing theorem with no analogue in the path homology literature. For general directed graphs, beta_2 > 0 is common — 70 out of 59,049 oriented graphs at n = 5 have it. The vanishing is specific to tournaments.
 
@@ -95,13 +97,19 @@ The proof is by strong induction using the long exact sequence of (T, T\v). The 
 
 **Why completeness matters.** We found the mechanism: every oriented graph with beta_2 > 0 has "twin vertices" (two vertices with identical neighborhoods). In a tournament, every pair has an edge between them, which breaks the twin condition. Tournament completeness is the essential property.
 
-**beta_3 = 2 at n = 8 (discovered).** This was unexpected. All Betti numbers were at most 1 for n <= 7. At n = 8, 0.08% of tournaments have beta_3 = 2 — the first instance of a Betti number exceeding 1. This also breaks the "consecutive seesaw" pattern (beta_k * beta_{k+1} = 0) that held through n = 7.
+**beta_3 onset at n = 6.** beta_3 first appears at n = 6 (320/32768 tournaments, ~1%), with exactly 2 isomorphism classes. At n = 7, 7.2% have beta_3 = 1.
+
+**beta_4 onset at n = 7.** beta_4 reaches 6 for the Paley tournament T_7 — the largest Betti number observed for any tournament at any n. At n = 8, beta_4 max drops to 5.
+
+**beta_3 = 2 at n = 8.** This was unexpected. At n = 8, 0.08% of tournaments have beta_3 = 2. This also breaks the "consecutive seesaw" pattern (beta_k * beta_{k+1} = 0) that held through n = 7: about 0.15% of n = 8 tournaments have both beta_3 = 1 and beta_4 = 1.
+
+**Defect wave.** beta_1 prevalence drops (29.7% -> 14.6% -> 5.8% -> 1%) while beta_3 rises (0% -> 1% -> 7.2% -> 21%) as n grows from 5 to 8. The two "defects" trade off.
 
 **Other proved results:**
 - beta_1 in {0, 1} for all tournaments (THM-103)
 - beta_1 * beta_3 = 0: 1-holes and 3-holes never coexist (proved n <= 7)
 - HYP-282: when beta_1 = 0, at most 3 vertex-deletions create a new 1-cycle (verified through n = 10, no proof)
-- Paley tournaments T_p have homology concentrated in dimension p-3: they look like wedges of spheres
+- Paley tournaments T_p have homology concentrated in dimension p-3 (T_7: beta_4 = 6, T_11: beta_8 = 10)
 
 ### Practical implications
 
@@ -152,7 +160,7 @@ This gives H(T) = 1 + 2a_1 + 4a_2 + 8a_3 + ... where a_k counts collections of k
 
 **Practical speedup:** The OCF replaces the O(2^n * n^2) Held-Karp dynamic programming algorithm with O(n^5) trace formulas for moderate n. For moderate n, the OCF approach is significantly faster than Held-Karp DP — the cycle-counting operations are polynomial-time (O(n^3) via matrix traces) while the DP is exponential (O(2^n * n^2)). The advantage grows with structure: tournaments with few long cycles can be processed even faster, since higher-order terms in the OCF expansion vanish.
 
-**Verified exhaustively through n = 8** (2^27 = 134 million configurations, 57 minutes on 4 cores).
+**Verified exhaustively through n = 8** (fixing one arc and varying the remaining C(8,2)-1 = 27, giving 2^27 = 134 million configurations; combined with relabeling invariance this covers all tournaments. 57 minutes on 4 cores).
 
 ### H-spectrum gaps
 

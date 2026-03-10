@@ -202,18 +202,18 @@ The **Betti numbers** beta_p = dim(ker d_p / im d_{p+1}) measure p-dimensional "
 
 Exhaustive computation through n = 6 and extensive sampling through n = 10 reveals:
 
-| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 |
-|---|--------|--------|--------|--------|--------|
-| 3 | 1 | 0-1 | 0 | - | - |
-| 4 | 1 | 0-1 | 0 | 0 | - |
-| 5 | 1 | 0-1 | 0 | 0 | 0 |
-| 6 | 1 | 0-1 | 0 | 0-1 | 0 |
-| 7 | 1 | 0-1 | 0 | 0-1 | 0-1 |
-| 8 | 1 | 0-1 | 0 | 0-2 | 0-1 |
+| n | beta_0 | beta_1 | beta_2 | beta_3 | beta_4 | beta_5 |
+|---|--------|--------|--------|--------|--------|--------|
+| 3 | 1 | 0-1 | 0 | - | - | - |
+| 4 | 1 | 0-1 | 0 | 0 | - | - |
+| 5 | 1 | 0-1 | 0 | 0 | 0 | - |
+| 6 | 1 | 0-1 | 0 | 0-1 | 0 | 0 |
+| 7 | 1 | 0-1 | 0 | 0-1 | 0-6 | 0 |
+| 8 | 1 | 0-1 | 0 | 0-2 | 0-5 | 0-1 |
 
 - beta_0 = 1 always (tournaments are weakly connected)
 - beta_1 in {0, 1} (proved, THM-103)
-- **beta_2 = 0 universally** (see Section 6.3) — the central open conjecture
+- **beta_2 = 0 universally** (proved, THM-108/109; see Section 6.3)
 - **beta_3 can reach 2** at n = 8 (0.08% of tournaments), previously thought bounded by 1
 - beta_1 * beta_3 = 0 (proved for n <= 7; **mutual exclusivity**). At n = 8, beta_3 * beta_4 = 1 CAN coexist ("consecutive seesaw" fails)
 - beta(T) = beta(T^op) (complement invariance, proved at n = 5, verified through n = 8)
@@ -257,8 +257,11 @@ Four cases:
 At n = 8, several patterns that held for smaller tournaments break:
 
 - **beta_3 = 2 exists** (0.08% of tournaments at n = 8, 0.05% at n = 9). Previously all beta_k were at most 1 for k >= 1.
-- **Consecutive seesaw fails:** beta_3 * beta_4 = 1 can coexist at n = 8 (~0.15%), though beta_1 * beta_3 = 0 still holds.
+- **beta_4 reaches 6 at n = 7** (Paley tournament T_7) and 5 at n = 8. beta_4 > 0 requires self-complementary score sequence (100% of 2000 samples, HYP-346).
+- **beta_5 first appears at n = 8** (~0.2%, HYP-323). One rare case has beta_1 = beta_5 = 1, giving Euler characteristic chi = -1.
+- **Consecutive seesaw fails:** beta_3 * beta_4 = 1 can coexist at n = 8 (~0.15%), though beta_1 * beta_3 = 0 still holds. The **adjacent-odd seesaw** (beta_{2k-1} * beta_{2k+1} = 0, HYP-339) remains verified through n = 8.
 - **i_*-injectivity fails:** The inclusion map H_3(T\v) -> H_3(T) has nontrivial kernel for some (T, v) at n = 8.
+- **Defect wave** (HYP-338): beta_1 prevalence drops (29.7% -> 14.6% -> 5.8% -> 1%) while beta_3 prevalence rises (0% -> 1% -> 7.2% -> 21%) as n grows from 5 to 8.
 
 These failures mean proof strategies that work at n <= 7 (relative acyclicity, quasi-isomorphism of good vertex inclusions) cannot extend directly.
 
