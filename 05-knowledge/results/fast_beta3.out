@@ -1,0 +1,28 @@
+======================================================================
+FAST BETA_3 BENCHMARK
+======================================================================
+
+--- n=7 ---
+  Block method:  10.3ms avg
+  Null method:   7.3ms avg
+  Speedup:       0.71x
+  Mismatches:    0/50
+
+--- n=8 ---
+  Block method:  34.9ms avg
+  Null method:   27.0ms avg
+  Speedup:       0.77x
+  Mismatches:    0/50
+
+--- n=9 ---
+  Block method:  167.2ms avg
+  Null method:   119.9ms avg
+  Speedup:       0.72x
+  Mismatches:    0/20
+
+--- Comparison with full_chain_complex_modp ---
+  n=8: fast_beta3=36.3ms, full_chain=68.3ms, speedup=1.88x, mismatches=0
+  n=9: fast_beta3=198.0ms, full_chain=631.5ms, speedup=3.19x, mismatches=0
+
+======================================================================
+DONE.

@@ -1,0 +1,106 @@
+======================================================================
+N=9 SPEEDUP ANALYSIS
+======================================================================
+
+--- Detailed profiling at n=8 ---
+
+  n=8 profile (single tournament):
+    adj_lists: 0.017ms
+    boundary_p3: 0.331ms
+    boundary_p4: 0.699ms
+    boundary_p5: 0.900ms
+    compose_p3: 0.368ms
+    compose_p4: 0.884ms
+    compose_p5: 0.876ms
+    constraint_p2: 0.106ms
+    constraint_p3: 0.298ms
+    constraint_p4: 0.748ms
+    constraint_p5: 1.5ms
+    enum_p0: 0.001ms
+    enum_p1: 0.016ms
+    enum_p2: 0.032ms
+    enum_p3: 0.338ms
+    enum_p4: 0.134ms
+    enum_p5: 0.236ms
+    enum_p6: 0.286ms
+    enum_p7: 0.315ms
+    gauss_p2: 0.499ms
+    gauss_p3: 2.5ms
+    gauss_p4: 5.8ms
+    gauss_p5: 8.5ms
+    omega_dim_p2: 56
+    omega_dim_p3: 67
+    omega_dim_p4: 49
+    omega_dim_p5: 23
+    rank_bd_p3: 0.819ms
+    rank_bd_p4: 0.655ms
+    rank_bd_p5: 0.335ms
+    total_enum: 1.4ms
+    |A_0|: 8
+    |A_1|: 28
+    |A_2|: 74
+    |A_3|: 160
+    |A_4|: 274
+    |A_5|: 346
+    |A_6|: 288
+    |A_7|: 117
+
+--- Detailed profiling at n=9 ---
+
+  n=9 profile (single tournament):
+    adj_lists: 0.017ms
+    boundary_p3: 0.928ms
+    boundary_p4: 2.7ms
+    boundary_p5: 7.9ms
+    compose_p3: 3.8ms
+    compose_p4: 39.4ms
+    compose_p5: 172.1ms
+    constraint_p2: 0.172ms
+    constraint_p3: 0.659ms
+    constraint_p4: 4.2ms
+    constraint_p5: 11.3ms
+    enum_p0: 0.001ms
+    enum_p1: 0.014ms
+    enum_p2: 0.037ms
+    enum_p3: 0.115ms
+    enum_p4: 0.332ms
+    enum_p5: 0.854ms
+    enum_p6: 1.5ms
+    enum_p7: 2.4ms
+    gauss_p2: 0.927ms
+    gauss_p3: 10.3ms
+    gauss_p4: 57.3ms
+    gauss_p5: 228.7ms
+    omega_dim_p2: 96
+    omega_dim_p3: 186
+    omega_dim_p4: 250
+    omega_dim_p5: 230
+    rank_bd_p3: 2.0ms
+    rank_bd_p4: 4.4ms
+    rank_bd_p5: 5.0ms
+    total_enum: 5.3ms
+    |A_0|: 9
+    |A_1|: 36
+    |A_2|: 128
+    |A_3|: 390
+    |A_4|: 994
+    |A_5|: 1988
+    |A_6|: 2920
+    |A_7|: 2805
+
+--- Full chain complex timing ---
+  n=8: avg 143.4ms per tournament
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\speedup_n9.py", line 248, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\speedup_n9.py", line 233, in main
+    full_chain_complex_modp(A, n, max_p=min(n-1, 7))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 772, in full_chain_complex_modp
+    rank_P, nbasis = _gauss_nullbasis_modp(P, na_rows, na_cols, prime)
+                     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 294, in _gauss_nullbasis_modp
+    mat = np.asarray(M, dtype=np.int64) % prime
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 282. MiB for an array with shape (9893, 3733) and data type int64

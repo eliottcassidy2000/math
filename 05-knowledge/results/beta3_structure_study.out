@@ -1,0 +1,17 @@
+======================================================================
+BETA_3=2 STRUCTURAL ANALYSIS AT n=8
+======================================================================
+
+--- Phase 1: Extracting beta_3=2 tournaments ---
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_structure_study.py", line 318, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beta3_structure_study.py", line 247, in main
+    res = full_chain_complex_modp(A, n, max_p=5)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 767, in full_chain_complex_modp
+    P, na_rows, na_cols = _build_constraint_matrix(ap, p, prime)
+                          ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tournament_utils.py", line 365, in _build_constraint_matrix
+    P = np.zeros((na_count, len(paths)), dtype=np.int64)
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 7.95 MiB for an array with shape (1234, 844) and data type int64
