@@ -5,3 +5,14 @@ chi=11 constraint: beta_6 + beta_8 - beta_5 - beta_7 = 10
 
 
 --- max_deg = 6 ---
+  Time: 5359.6s
+  EXACT: b0=1, b1=0, b2=0, b3=0, b4=0, b5=5
+  UB: b6<=4305
+  Omega dims: [11, 55, 220, 770, 2255, 5060, 7700]
+  chi from bettis (0..5): -4
+  chi from omega (0..6): 4301
+
+--- max_deg = 7 ---
+  ERROR after 198.7s: Unable to allocate 120. GiB for an array with shape (167530, 96085) and data type int64
+
+DONE.
