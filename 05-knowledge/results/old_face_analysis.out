@@ -1,0 +1,33 @@
+======================================================================
+OLD FACE ANALYSIS — DETAILED FACE STRUCTURE
+======================================================================
+    Old faces: 92 in A_3(T\v), 0 NOT in A_3(T\v)
+    No old face: 11
+    v positions in new 5-paths: {0: 8, 1: 15, 2: 12, 3: 18, 4: 50}
+    ker_d3(T\v) dim = 7, rank(d_4^Tv) = 6
+    rank of new-old-proj in ker(d_3): 7
+    rank of d_4(T\v) in ker(d_3): 6
+    combined rank: 7
+    NEW KILLS in ker(d_3): 1
+  10/40, 6 bad verts, 4.1s
+  20/40, 16 bad verts, 8.9s
+  30/40, 21 bad verts, 15.9s
+  40/40, 28 bad verts, 19.6s
+
+  Done: 40 tours, 28 bad verts, 19.6s
+
+======================================================================
+RESULTS
+======================================================================
+
+  Old faces NOT in A_3(T\v): 0
+  => ALL old faces of new 5-paths are in A_3(T\v)!
+
+  New kills in ker(d_3(T\v)): {1: 28}
+
+  HYP-398 fails via this route: 28/28
+
+  rank(new-old-proj in ker_d3): Counter({7: 20, 1: 4, 6: 3, 5: 1})
+  rank(d_4_Tv in ker_d3):       Counter({6: 24, 0: 4})
+
+DONE.

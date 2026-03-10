@@ -1,0 +1,28 @@
+======================================================================
+CANCELLATION MECHANISM — OLD+NEW FACE DECOMPOSITION
+======================================================================
+    Omega_4: 19 new, 8 old
+    rank(im d_4 in ker_d3) = 19, ker_dim = 19
+    full boundaries in im(d_4)? True
+    Old-face proj of new d_4 adds 0 dims beyond im(d_4)
+    Old-face proj of old d_4: rank = 6
+    New adds beyond old d_4 old-proj: 12
+    Old-face proj stays within im(d_4)
+  10/40, 6 bad verts, 4.2s
+  20/40, 16 bad verts, 9.2s
+  30/40, 21 bad verts, 16.6s
+  40/40, 28 bad verts, 20.5s
+
+  Done: 40 tours, 28 bad verts, 20.5s
+
+  KEY QUESTION: Does old-face proj of new d_4 reach beyond im(d_4)?
+    old_adds distribution: {0: 26, 1: 2}
+
+    Old-face proj reaches beyond im(d_4) in 2/28 cases
+    But full boundary stays in im(d_4): 28/28
+    => New-face components CANCEL the old-face excess
+
+  Old-face proj of old d_4 vs new d_4:
+    New adds beyond old d4 old-proj: {9: 2, 11: 2, 12: 5, 15: 1, 17: 1, 18: 5, 19: 11, 20: 1}
+
+DONE.

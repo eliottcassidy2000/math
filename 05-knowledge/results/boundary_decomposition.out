@@ -1,0 +1,33 @@
+======================================================================
+BOUNDARY DECOMPOSITION — OLD/NEW FACE STRUCTURE
+======================================================================
+    A_3: 63 old + 52 new = 115
+    A_4: 78 old + 103 new = 181
+    Omega_4: 8 old + 19 new
+    Raw old proj of new A_4 boundaries: rank = 63
+    #old faces per new 5-path: {np.int64(0): 11, np.int64(1): 92}
+    Omega old proj of new Omega_4: rank = 17
+    Omega old proj of old Omega_4: rank = 6
+    Combined old proj: rank = 18
+    New adds to old projection: 12
+  10/40, 6 bad verts, 4.8s
+  20/40, 16 bad verts, 10.5s
+  30/40, 21 bad verts, 18.6s
+  40/40, 28 bad verts, 23.0s
+
+  Done: 40 tours, 28 bad verts, 23.0s
+
+======================================================================
+RESULTS
+======================================================================
+
+  #old faces per new A_4 path: {np.int64(0): 674, np.int64(1): 2840}
+
+  Raw old projection rank: {27: 4, 63: 24}
+  Omega old proj of new: {9: 2, 11: 2, 16: 3, 17: 2, 19: 1, 20: 1, 23: 5, 25: 12}
+  New adds to old (old proj): {9: 2, 11: 2, 12: 5, 15: 1, 17: 1, 18: 5, 19: 12}
+
+  New adds to old in 28/28 cases
+  (HYP-398 could still hold at ker_d3 level)
+
+DONE.

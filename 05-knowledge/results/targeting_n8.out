@@ -1,0 +1,125 @@
+======================================================================
+NEW BOUNDARY TARGETING AT n=8
+Testing HYP-398 for beta_3=1 and beta_3=2 tournaments
+======================================================================
+
+  b3=1 #1: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #2: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #3: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #4: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(5), np.int8(5), np.int8(5))
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #5: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(6))
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #6: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(5), np.int8(5), np.int8(5))
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #7: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(2), np.int8(3), np.int8(5), np.int8(5), np.int8(5), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #8: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #9: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=5: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #10: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=5: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #11: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=5: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #12: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #13: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #14: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #15: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #16: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(5), np.int8(5))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #17: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(6))
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #18: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(5), np.int8(5), np.int8(5))
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #19: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(6))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=5: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #20: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=0: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #21: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #22: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=5: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #23: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(5), np.int8(6))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=5: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #24: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #25: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5))
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #26: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=6: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #27: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(6))
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=4: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #28: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=3: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #29: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(1), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(4), np.int8(4), np.int8(5))
+    v=2: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+    v=7: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
+
+  b3=1 #30: bettis=(1, 0, 0, 1, 0, 0, 0, 0), scores=(np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4), np.int8(4), np.int8(5), np.int8(5))
+    v=1: b3_Tv=1, rank_i*=1, extra_kills=0 [OK]
