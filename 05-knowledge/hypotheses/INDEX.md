@@ -110,7 +110,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-405 | Cancellation mechanism: old-face proj of new d_4 almost always in im(d_4) | n=7: 26/28 BAD vertices, old-face proj stays in im(d_4). 2/28 cases: old-face reaches H_3 direction but new-face cancels exactly. Full boundary always in im(d_4) (28/28). | opus-S56 |
 | HYP-406 | b4(T)=0 for ALL b3=1 tournaments at n=7 AND n=8 (500 samples each) | Seesaw b3*b4=0 holds in the b3=1 stratum even at n=8 (where coexistence exists at 0.15%). The 500-sample test misses the rare coexistence. | opus-S56 |
 | HYP-407 | chi(T) ∈ {0, 1, 7} at n=7. chi=0 iff b1>0 or b3>0. chi=7 iff Paley (b4=6) | 5000 samples. chi=1 (87.6%), chi=0 (12.3%), chi=7 (0.02%). At n=8: chi ∈ {0,1,2,3}. chi>1 from b4>0 only. | opus-S56 |
-| HYP-408 | Codim-1 universality: codim(im(d_4^T)\_old\_proj, ker(d_3^T)\_old\_proj) = 1 for ALL b3=1 tournaments and ALL BAD vertices | 300/300 at n=7, 150/150 at n=8. The old-projection of H_3(T) is always 1-dimensional. | opus-S57 |
+| HYP-408 | Codim-1 universality: codim(im(d_4^T)\_old\_proj, ker(d_3^T)\_old\_proj) = 1 for ALL b3=1 tournaments and ALL BAD vertices | **PARTIALLY REFUTED at n=8** (opus-S59): holds 300/300 at n=7. At n=8: 397/400 codim=1, but 3/400 codim=0 (HYP-422). Codim-0 cases = ψ escaping im(d_4^Tv). UNIVERSAL at n≤7 only. | opus-S57, updated opus-S59 |
 | HYP-409 | im(d_4^{T\v}) ⊂ im(d_4^T)\_old\_proj universally | 200/200 at n=7, 122/122 at n=8. Boundaries of T\v embed into old-coordinate boundaries of T. | opus-S57 |
 | HYP-410 | rank(i_*)=0 iff old-projection of embedded H_3(T\v) gen ∈ im(d_4^T)\_old\_proj | Confirmed: all failures have emb\_old\_in\_im\_old=True; all successes have False. Combined with HYP-408 (codim=1), i_*-injectivity reduces to a single linear condition. | opus-S57 |
 | HYP-411 | Failure vertices have H_3(T) generator concentrated on through-v paths | Failures: 12-18 through-v path support vs success mean 9.3. Jaccard similarity of gen supports: fail 0.000-0.038 vs success mean 0.048. When H_3(T) gen relies heavily on v-paths, the embedded gen (which avoids v-paths) misaligns. | opus-S57 |
@@ -120,6 +120,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-415 | Ghost Cycle holds universally (WITH safe arithmetic): K_tv = B_tv for ALL β₃(T)=1 pairs | 602/602 n=7, 400/400 n=8 with safe modular arithmetic. Opus-S59's 14 "failures" at n=7 were caused by int64 overflow (MISTAKE-019). 0 real failures. | kind-pasteur-S50 |
 | HYP-416 | Block triangularity: D_{old→tv} = 0 and P_{old→tv} = 0 universally in boundary and constraint matrices | D_to=0: old p-paths have only old (p-1)-faces. P_to=0: old (p-1)-face non-allowedness only involves old p-paths. 301/301 n=7, 104/104 n=8. | kind-pasteur-S50 |
 | HYP-417 | H_3 generator old component is NEVER zero for β₃(T)=1 tournaments | 0/403 at n=7 (Case 2: β₃(T\v)=0). Every H_3 class has nontrivial old-path support. D_{3,tv→tv}(z_tv)=0 always; old component NOT a cycle in T\v. | kind-pasteur-S50 |
+| HYP-418 | Paley T_7 Fourier structure: each non-trivial eigenspace k=1,...,6 contributes exactly 1 to β_4=6 | Verified by Fourier eigenspace decomposition. Trivial eigenspace (k=0) has β=[1,0,0,0,0,0,0]. All 6 non-trivial eigenspaces identical β=[0,0,0,0,1,0,0]. | kind-pasteur-S50 |
+| HYP-419 | T_3 Fourier: only trivial eigenspace (k=0) has nonzero Betti: β=[1,1,0] | Verified. k=1,2 contribute nothing. | kind-pasteur-S50 |
+| HYP-420 | β_{n-2} generically nonzero at n=8: 449/500 (89.8%) tournaments have β_6>0 | opus-S59 beta4_at_n7.py. Values range 0 to 25. Contrasts with β_5=0 always at n=8. | opus-S59 |
+| HYP-421 | H_4^rel = 0 universally at n=7 (200/200), FAILS at n=8 (2/300 have H_4^rel=1) | Relative exactness at degree 4. At n=8, slack = ker(d_4^rel) - rk(d_5^rel) can be 1. | opus-S59 |
+| HYP-422 | ψ(ker) escapes im(d_4^Tv) at n=8: 5/800 cases (0.625%) with rk(ψ) = rk(d4Tv)+1 | These are EXACTLY the codim-0 cases (codim(ψ(ker), ker d_3^Tv) = 0 instead of 1). Breaks HYP-408 at n=8. | opus-S59 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

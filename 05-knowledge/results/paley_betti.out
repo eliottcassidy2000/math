@@ -1,0 +1,59 @@
+======================================================================
+PALEY TOURNAMENT PATH HOMOLOGY
+======================================================================
+
+--- T_3 (Paley tournament, p=3) ---
+  Betti numbers: {0: 1, 1: 1, 2: 0}
+  Euler char: 0
+  Time: 0.00s
+
+  Fourier orbit analysis:
+  QR set S = [1], d = 1
+  deg 0: 3 paths, 1 difference orbits, orbit sizes: [3]
+    All orbits have size 3 (as expected for vertex-transitive)
+  deg 1: 3 paths, 1 difference orbits, orbit sizes: [3]
+    All orbits have size 3 (as expected for vertex-transitive)
+  deg 2: 3 paths, 1 difference orbits, orbit sizes: [3]
+    All orbits have size 3 (as expected for vertex-transitive)
+
+--- T_5 (Paley tournament, p=5) ---
+  Betti numbers: {0: 1, 1: 6, 2: 0, 3: 0, 4: 0}
+  Euler char: -5
+  Time: 0.00s
+
+  Fourier orbit analysis:
+  QR set S = [1, 4], d = 2
+  deg 0: 5 paths, 1 difference orbits, orbit sizes: [5]
+    All orbits have size 5 (as expected for vertex-transitive)
+  deg 1: 10 paths, 2 difference orbits, orbit sizes: [5]
+    All orbits have size 5 (as expected for vertex-transitive)
+  deg 2: 10 paths, 2 difference orbits, orbit sizes: [5]
+    All orbits have size 5 (as expected for vertex-transitive)
+  deg 3: 10 paths, 2 difference orbits, orbit sizes: [5]
+    All orbits have size 5 (as expected for vertex-transitive)
+  deg 4: 10 paths, 2 difference orbits, orbit sizes: [5]
+    All orbits have size 5 (as expected for vertex-transitive)
+
+--- T_7 (Paley tournament, p=7) ---
+  Betti numbers: {0: 1, 1: 0, 2: 0, 3: 0, 4: 6, 5: 0, 6: 0}
+  Euler char: 7
+  Time: 0.03s
+
+  Fourier orbit analysis:
+  QR set S = [1, 2, 4], d = 3
+  deg 0: 7 paths, 1 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+  deg 1: 21 paths, 3 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+  deg 2: 63 paths, 9 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+  deg 3: 147 paths, 21 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+  deg 4: 273 paths, 39 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+  deg 5: 315 paths, 45 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+  deg 6: 189 paths, 27 difference orbits, orbit sizes: [7]
+    All orbits have size 7 (as expected for vertex-transitive)
+
+--- T_11 (Paley tournament, p=11) ---

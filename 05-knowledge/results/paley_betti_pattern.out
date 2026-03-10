@@ -1,0 +1,21 @@
+======================================================================
+PALEY TOURNAMENT BETTI PATTERNS
+======================================================================
+
+--- T_3 (Paley, p = 3 mod 4) ---
+  Betti (up to deg 2): {0: 1, 1: 1, 2: 0}
+  Euler char: 0
+  Time: 0.00s
+  Duality b_k = b_{p-2-k}: True
+  Nonzero b_k (k>0): [(1, 1)]
+  First nonzero at degree 1 (= p-2)
+
+--- T_7 (Paley, p = 3 mod 4) ---
+  Betti (up to deg 6): {0: 1, 1: 0, 2: 0, 3: 0, 4: 6, 5: 0, 6: 0}
+  Euler char: 7
+  Time: 0.04s
+  Duality b_k = b_{p-2-k}: False
+  Nonzero b_k (k>0): [(4, 6)]
+  First nonzero at degree 4 (= p-3)
+
+--- T_11 (Paley, p = 3 mod 4) ---

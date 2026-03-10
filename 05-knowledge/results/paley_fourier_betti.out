@@ -1,0 +1,44 @@
+======================================================================
+PALEY TOURNAMENT FOURIER BETTI NUMBERS
+======================================================================
+
+--- T_3 ---
+  omega = 1513477735, omega^3 = 1 (mod 2147483647)
+  deg 0: 1 diff-seqs, 3 paths
+  deg 1: 1 diff-seqs, 3 paths
+  deg 2: 1 diff-seqs, 3 paths
+  k=0: betti=[1, 1, 0] nonzero=[(1, 1)]
+  RESULT: bettis = {0: 1, 1: 1, 2: 0}
+  Euler char = 0
+  Time: 0.0s
+
+--- T_7 ---
+  omega = 1752599774, omega^7 = 1 (mod 2147483647)
+  deg 0: 1 diff-seqs, 7 paths
+  deg 1: 3 diff-seqs, 21 paths
+  deg 2: 9 diff-seqs, 63 paths
+  deg 3: 21 diff-seqs, 147 paths
+  deg 4: 39 diff-seqs, 273 paths
+  deg 5: 45 diff-seqs, 315 paths
+  deg 6: 27 diff-seqs, 189 paths
+  k=1: betti=[0, 0, 0, 0, 1, 0, 0] nonzero=[(4, 1)]
+  k=2: betti=[0, 0, 0, 0, 1, 0, 0] nonzero=[(4, 1)]
+  k=3: betti=[0, 0, 0, 0, 1, 0, 0] nonzero=[(4, 1)]
+  k=4: betti=[0, 0, 0, 0, 1, 0, 0] nonzero=[(4, 1)]
+  k=5: betti=[0, 0, 0, 0, 1, 0, 0] nonzero=[(4, 1)]
+  k=6: betti=[0, 0, 0, 0, 1, 0, 0] nonzero=[(4, 1)]
+  RESULT: bettis = {0: 1, 1: 0, 2: 0, 3: 0, 4: 6, 5: 0, 6: 0}
+  Euler char = 7
+  Time: 0.0s
+
+--- T_11 ---
+  omega = 298192073, omega^11 = 1 (mod 2147483647)
+  deg 0: 1 diff-seqs, 11 paths
+  deg 1: 5 diff-seqs, 55 paths
+  deg 2: 25 diff-seqs, 275 paths
+  deg 3: 110 diff-seqs, 1210 paths
+  deg 4: 430 diff-seqs, 4730 paths
+  deg 5: 1430 diff-seqs, 15730 paths
+  deg 6: 3970 diff-seqs, 43670 paths
+  deg 7: 8735 diff-seqs, 96085 paths
+  deg 8: 14395 diff-seqs, 158345 paths
