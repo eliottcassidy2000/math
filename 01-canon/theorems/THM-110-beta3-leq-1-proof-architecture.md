@@ -319,6 +319,40 @@ Only TWO algebraic claims need proof:
 2. **Claim II (relative H_3 bound):** dim H_3(T,T\v) <= 1.
    (Only needed for GOOD vertices where b3(T\v) = 0.)
 
+## New Findings (opus-S56): Cancellation Mechanism and Euler Characteristic
+
+### HYP-398 ⟺ i_*-injectivity (HYP-404)
+
+At n=8, tested 2000 tournaments (seed 12345):
+- 762 injective BAD vertices: ALL have extra_kills=0 (HYP-398 holds)
+- 5 non-injective BAD vertices: ALL have extra_kills=1 (HYP-398 fails)
+- The equivalence is EXACT: HYP-398 holds iff i_* injective.
+
+### Boundary Decomposition (HYP-405)
+
+Each new 5-path through v has boundary = old_faces + new_faces.
+The old-face component, projected to ker(d_3^T):
+- n=7: 26/28 cases stays WITHIN im(d_4) already
+- n=7: 2/28 cases escapes, but new-face component cancels exactly
+- Full boundary always stays in im(d_4) (28/28) — as required
+
+### Euler Characteristic Constraint
+
+chi(T) = sum(-1)^p * beta_p.
+At n=7: chi ∈ {0, 1, 7}. For b3=1: chi=0, so b4-b5+b6=0.
+With b5=b6=0 (adjacent-odd seesaw + small n): b4=0.
+
+This gives an ALGEBRAIC ROUTE to proving b3*b4=0 at n=7:
+IF we can show chi(T)=0 whenever b3≥1, AND b5=b6=0 when b3≥1,
+THEN b4=0 follows. But proving chi(T)=0 when b3≥1 is nontrivial.
+
+### b4(T)=0 in b3=1 Stratum (HYP-406)
+
+Verified 500 b3=1 tournaments at BOTH n=7 and n=8: b4=0 always.
+The b3*b4 coexistence at n=8 (0.15%) is missed by 500 samples but
+exists. The seesaw holds for MOST b3=1 tournaments, failing only
+for the rarest cases.
+
 ## Open Problems (updated opus-S55)
 
 1. **Prove BAD vertex quasi-iso algebraically.** (Claim I' / HYP-395)
@@ -353,6 +387,12 @@ Only TWO algebraic claims need proof:
 - istar_all_degrees.py — rank(i_*) at ALL degrees p, n=7 (opus-S55)
 - istar_n8_investigation.py — rank(i_*) at ALL degrees p, n=8 (opus-S55)
 - istar_b3b4_coexist.py — beta_3=beta_4=1 case study (opus-S55)
+- targeting_n8.py — HYP-398 at n=8 for b3=1 and b3=2 (opus-S56)
+- istar_failure_n8.py — analysis of rank(i_*)=0 cases (opus-S56)
+- cancellation_mechanism.py — old+new face cancellation (opus-S56)
+- boundary_decomposition.py — old/new face structure (opus-S56)
+- h4_relative.py — H_4(T,T\v) analysis (opus-S56)
+- euler_char_n7.py — chi distribution (opus-S56)
 
 ## See Also
 - THM-098 (Boolean odd Betti conjecture)

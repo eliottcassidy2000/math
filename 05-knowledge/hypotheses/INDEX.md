@@ -106,6 +106,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-401 | Claim II FAILS at n=8: dim H_3(T,T\v) = 2 for all-good beta_3=2 tournaments | beta_3=2 with ALL 8 deletions b3=0 (score 3,3,3,3,4,4,4,4) => H_3(T,T\v)=b3(T)=2 for every v. Claim II (H_3^rel<=1) was backbone of n<=7 proof. Fails EXACTLY when beta_3=2. | kind-pasteur-S49 |
 | HYP-402 | beta_3 <= 2 for ALL n (floor(n/4) bound) | n=8: max=2 (0.07%), n=9: max=2 (0.07%), consistent with floor(n/4). beta_3=2 has SC score at n=9 | kind-pasteur-S49 |
 | HYP-403 | Two structural types of beta_3=2 at n=8: all-good (SC score) and mixed (non-SC score) | All-good: score (3,3,3,3,4,4,4,4), 8/8 good vertices. Mixed: score (2,3,3,3,4,4,4,5), 6/8 good + 2/8 bad. Both types confirmed in 5000-sample run | kind-pasteur-S49 |
+| HYP-404 | HYP-398 ⟺ i_*-injectivity: extra_kills=0 iff rank(i_*)=1 at n=8 | 762 injective BAD vertices: ALL extra_kills=0. 5 non-injective: ALL extra_kills=1. The equivalence is exact. extra_kills=1 means new d_4 kills exactly the H_3(T\v) generator. | opus-S56 |
+| HYP-405 | Cancellation mechanism: old-face proj of new d_4 almost always in im(d_4) | n=7: 26/28 BAD vertices, old-face proj stays in im(d_4). 2/28 cases: old-face reaches H_3 direction but new-face cancels exactly. Full boundary always in im(d_4) (28/28). | opus-S56 |
+| HYP-406 | b4(T)=0 for ALL b3=1 tournaments at n=7 AND n=8 (500 samples each) | Seesaw b3*b4=0 holds in the b3=1 stratum even at n=8 (where coexistence exists at 0.15%). The 500-sample test misses the rare coexistence. | opus-S56 |
+| HYP-407 | chi(T) ∈ {0, 1, 7} at n=7. chi=0 iff b1>0 or b3>0. chi=7 iff Paley (b4=6) | 5000 samples. chi=1 (87.6%), chi=0 (12.3%), chi=7 (0.02%). At n=8: chi ∈ {0,1,2,3}. chi>1 from b4>0 only. | opus-S56 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
