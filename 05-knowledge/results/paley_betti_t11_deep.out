@@ -1,0 +1,7 @@
+PALEY T_11 DEEP BETTI COMPUTATION (max_deg up to 7)
+============================================================
+Goal: Verify HYP-433 prediction beta_6(T_11) = 10
+chi=11 constraint: beta_6 + beta_8 - beta_5 - beta_7 = 10
+
+
+--- max_deg = 6 ---
