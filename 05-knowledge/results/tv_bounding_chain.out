@@ -1,0 +1,30 @@
+======================================================================
+BOUNDING CHAIN ANALYSIS AT n=7
+======================================================================
+  Progress: 20 pairs with K_tv>0, 2.3s
+  Progress: 40 pairs with K_tv>0, 5.4s
+  Progress: 60 pairs with K_tv>0, 8.4s
+  Progress: 80 pairs with K_tv>0, 10.9s
+  Progress: 100 pairs with K_tv>0, 13.3s
+
+  Total: 102 (T,v) with K_tv>0, 197 basis vectors, 13.4s
+
+  IN IMAGE (z in im(d_4)): 197/197
+  OLD COMPONENTS NEEDED: 74/197
+  PURE TV SOLUTION EXISTS: 123/197
+
+  BOUNDING CHAIN STRUCTURE:
+    w_old nonzero entries: mean=0.8, min=0, max=7
+    w_tv nonzero entries: mean=5.4, min=2, max=21
+    spillover nonzero: mean=2.3, min=0, max=18
+
+  K_tv dimension dist: {1: 50, 2: 20, 3: 21, 4: 11}
+  b3(T\v) dist: {0: 98, 1: 4}
+
+  ALL bounding chains are mixed (old+tv): False
+  Verify failures: 0
+  NOT in image: 0
+
+  OLD FRACTION in bounding chain: mean=0.075, min=0.000, max=0.500
+
+DONE.

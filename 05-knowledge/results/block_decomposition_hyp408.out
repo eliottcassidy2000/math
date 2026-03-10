@@ -1,0 +1,112 @@
+
+======================================================================
+BLOCK DECOMPOSITION ANALYSIS AT n=7
+======================================================================
+  Progress: 100 pairs, 21.6s
+  Progress: 200 pairs, 47.2s
+  Progress: 300 pairs, 63.6s
+
+  Total: 301 (T,v) pairs, 63.6s
+
+  CODIM DISTRIBUTION: {1: 301}
+
+  BLOCK TRIANGULARITY:
+    D3_to nonzero: 0/301 (should be 0)
+    D4_to nonzero: 0/301 (should be 0)
+
+  CONSTRAINT MATRIX P3:
+    P3_to nonzero: 0/301 (block triangularity?)
+    P3_oo rank: mean=34.7
+    P3_tt rank: mean=32.2
+
+  OMEGA_3 DECOMPOSITION:
+    dim(Omega_3): mean=44.5
+    pure old: mean=15.3
+    pure tv: mean=20.7
+    mixed: mean=8.5
+
+  RAW PATH COUNTS (deg 3):
+    old: mean=50.4
+    tv: mean=67.2
+  RAW PATH COUNTS (deg 4):
+    old: mean=53.6
+    tv: mean=133.9
+
+  KEY RANKS:
+    rk(pi_old(K)): mean=21.0
+    rk(pi_old(B)): mean=20.0
+    rk(pi_tv(K)): mean=16.2
+    rk(pi_tv(B)): mean=15.3
+
+  THROUGH-V-ONLY DIMENSIONS:
+    dim(K_tv): dist={0: 155, 1: 76, 2: 29, 3: 26, 4: 15}
+    dim(B_tv): dist={0: 155, 1: 76, 2: 29, 3: 26, 4: 15}
+    K_tv - B_tv: dist={0: 301}
+
+  RANK IDENTITY SEARCH:
+    b3(T\v): dist={0: 272, 1: 29}
+    rk_pi_K = dim_K - K_tv: True
+    rk_pi_B = rk_im_d4 - B_tv: True
+    rk_pi_K_tv + rk_pi_K >= dim_K: True
+
+  OMEGA STRUCTURE vs CODIM:
+    codim=1 (301 cases):
+      dim_K=22.0, rk_im_d4=21.0
+      K_tv=0.9, B_tv=0.9
+      mixed_omega3=8.5
+
+======================================================================
+BLOCK DECOMPOSITION ANALYSIS AT n=8
+======================================================================
+  Progress: 100 pairs, 76.4s
+
+  Total: 104 (T,v) pairs, 77.2s
+
+  CODIM DISTRIBUTION: {1: 104}
+
+  BLOCK TRIANGULARITY:
+    D3_to nonzero: 0/104 (should be 0)
+    D4_to nonzero: 0/104 (should be 0)
+
+  CONSTRAINT MATRIX P3:
+    P3_to nonzero: 0/104 (block triangularity?)
+    P3_oo rank: mean=68.8
+    P3_tt rank: mean=47.9
+
+  OMEGA_3 DECOMPOSITION:
+    dim(Omega_3): mean=99.2
+    pure old: mean=41.6
+    pure tv: mean=40.5
+    mixed: mean=17.1
+
+  RAW PATH COUNTS (deg 3):
+    old: mean=111.9
+    tv: mean=111.9
+  RAW PATH COUNTS (deg 4):
+    old: mean=171.9
+    tv: mean=286.5
+
+  KEY RANKS:
+    rk(pi_old(K)): mean=54.8
+    rk(pi_old(B)): mean=53.8
+    rk(pi_tv(K)): mean=36.7
+    rk(pi_tv(B)): mean=36.0
+
+  THROUGH-V-ONLY DIMENSIONS:
+    dim(K_tv): dist={3: 17, 0: 29, 6: 7, 1: 11, 5: 13, 4: 11, 10: 3, 8: 4, 2: 7, 9: 1, 7: 1}
+    dim(B_tv): dist={3: 17, 0: 29, 6: 7, 1: 11, 5: 13, 4: 11, 10: 3, 8: 4, 2: 7, 9: 1, 7: 1}
+    K_tv - B_tv: dist={0: 104}
+
+  RANK IDENTITY SEARCH:
+    b3(T\v): dist={0: 75, 1: 29}
+    rk_pi_K = dim_K - K_tv: True
+    rk_pi_B = rk_im_d4 - B_tv: True
+    rk_pi_K_tv + rk_pi_K >= dim_K: True
+
+  OMEGA STRUCTURE vs CODIM:
+    codim=1 (104 cases):
+      dim_K=57.7, rk_im_d4=56.7
+      K_tv=2.9, B_tv=2.9
+      mixed_omega3=17.1
+
+DONE.
