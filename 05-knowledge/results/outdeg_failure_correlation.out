@@ -5,3 +5,57 @@ OUT-DEGREE vs i_* FAILURE CORRELATION AT n=8
   Progress: 600 BAD vertices, 3 failures, 552.1s
   Progress: 1200 BAD vertices, 11 failures, 1159.8s
   Progress: 1600 BAD vertices, 14 failures, 1557.2s
+
+  TOTAL: 5160 tournaments, 919 with b3=1, 2001 BAD vertices, 17 failures (0.85%), 1917.6s
+
+============================================================
+FAILURE RATE BY OUT-DEGREE
+============================================================
+  out_deg=1: 0/39 fail (0.00%)
+  out_deg=2: 9/325 fail (2.77%)
+  out_deg=3: 1/633 fail (0.16%)
+  out_deg=4: 1/643 fail (0.16%)
+  out_deg=5: 6/305 fail (1.97%)
+  out_deg=6: 0/56 fail (0.00%)
+
+============================================================
+FAILURE RATE BY IN-DEGREE
+============================================================
+  in_deg=1: 0/56 fail (0.00%)
+  in_deg=2: 6/305 fail (1.97%)
+  in_deg=3: 1/643 fail (0.16%)
+  in_deg=4: 1/633 fail (0.16%)
+  in_deg=5: 9/325 fail (2.77%)
+  in_deg=6: 0/39 fail (0.00%)
+
+============================================================
+DIRECTION ANALYSIS (failure cases)
+============================================================
+  out_deg=2: n_embedded_ker=22, n_in_im_d4=22, dim_ker_d3Tv=22, rk_d4=57
+  out_deg=2: n_embedded_ker=15, n_in_im_d4=15, dim_ker_d3Tv=15, rk_d4=48
+  out_deg=2: n_embedded_ker=28, n_in_im_d4=28, dim_ker_d3Tv=28, rk_d4=71
+  out_deg=3: n_embedded_ker=28, n_in_im_d4=28, dim_ker_d3Tv=28, rk_d4=81
+  out_deg=4: n_embedded_ker=28, n_in_im_d4=28, dim_ker_d3Tv=28, rk_d4=81
+  out_deg=5: n_embedded_ker=22, n_in_im_d4=22, dim_ker_d3Tv=22, rk_d4=57
+  out_deg=5: n_embedded_ker=22, n_in_im_d4=22, dim_ker_d3Tv=22, rk_d4=57
+  out_deg=5: n_embedded_ker=28, n_in_im_d4=28, dim_ker_d3Tv=28, rk_d4=71
+
+============================================================
+SCORE SEQUENCE ANALYSIS
+============================================================
+  Failure score sequences:
+    [2, 3, 3, 4, 4, 4, 4, 4]: 4 failures
+    [2, 3, 3, 3, 3, 4, 5, 5]: 3 failures
+    [2, 2, 3, 3, 4, 4, 5, 5]: 3 failures
+    [3, 3, 3, 3, 4, 4, 4, 4]: 2 failures
+    [3, 3, 3, 3, 3, 4, 4, 5]: 2 failures
+    [2, 2, 3, 4, 4, 4, 4, 5]: 2 failures
+    [2, 2, 2, 3, 4, 5, 5, 5]: 1 failures
+
+============================================================
+PATHS THROUGH v ANALYSIS
+============================================================
+  Failures: paths_through_v / total_paths_3:
+    min=0.496, max=0.605, mean=0.525
+
+DONE.
