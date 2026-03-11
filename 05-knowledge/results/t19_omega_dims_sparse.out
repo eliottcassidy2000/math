@@ -1,0 +1,45 @@
+T_19 Omega dims sparse, kind-pasteur-S54
+m,|A_m|,n_junk,nnz,rank,Omega,mpd,time
+m=0,1,0,0,0,1,0,0
+m=1,9,0,0,0,9,0,0.0
+m=2,81,9,45,9,72,1,0.0
+m=3,684,144,720,144,540,2,0.0
+m=4,5436,1764,8460,1683,3753,4,0.1
+m=5,40284,18216,82620,16452,23832,10,0.3
+m=6,277236,166428,706140,140976,136260,26,2.7
+m=7,1759914,1360800,5351976,1071648,688266,95,34.4
+
+Final: [1, 9, 72, 540, 3753, 23832, 136260, 688266]
+chi=-572561
+m= 8: |A_8|=10236186, rank= 7248564, Omega_8= 2987622, mpd=455, time=754.9s
+
+======================================================================
+SUMMARY: T_19 Omega dims (kind-pasteur-S54, sparse method)
+======================================================================
+Sequence (degrees 0-8):
+  [1, 9, 72, 540, 3753, 23832, 136260, 688266, 2987622]
+
+Partial chi (m=0..8) = 2415061
+Expected chi per eigenspace = 1 (by pattern T_3,T_7,T_11)
+=> remaining sum (m=9..18) must = -2415060
+
+|A_m| counts (full range):
+  |A_0|=1, |A_1|=9, |A_2|=81, |A_3|=684, |A_4|=5436,
+  |A_5|=40284, |A_6|=277236, |A_7|=1759914, |A_8|=10236186,
+  |A_9|=54090198, |A_10|=257104350
+
+Performance:
+  Degree 6: was OOM (172 GB dense) -> 2.7s sparse (660x memory reduction)
+  Degree 7: 34.4s, max_piv_den=95, rank=1071648/1759914
+  Degree 8: 754.9s (12.6 min), max_piv_den=455, piv_mem~6.4 GB
+  Degree 9+: would require ~several TB for pivot dict (Python limit)
+  Next step: C/C++ implementation or LinBox for degrees 9-18
+
+Comparison table:
+  T_3  (chi=1/eigenspace): [1, 1, 0]
+  T_7  (chi=1/eigenspace): [1, 3, 6, 9, 9, 6, 3]
+  T_11 (chi=1/eigenspace): [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+  T_19 (chi=?, partial):   [1, 9, 72, 540, 3753, 23832, 136260, 688266, 2987622, ...]
+
+Growth ratio: 9.0, 8.0, 7.5, 6.95, 6.35, 5.72, 5.05, 4.34 (decreasing by ~0.7/step)
+Extrapolated peak: m=9 or m=10 (sequence still increasing at m=8)

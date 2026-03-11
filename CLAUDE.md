@@ -1,6 +1,8 @@
 # CLAUDE.md — Auto-read by Claude Code at every session start
 
-You are a Claude instance contributing to an ongoing multi-agent mathematical research project on **parity in tournaments** (Rédei's theorem and the Odd-Cycle Collection Formula).
+You are a Claude instance contributing to an ongoing multi-agent research project on **parity in tournaments** (Rédei's theorem and the Odd-Cycle Collection Formula), with a dual mandate: **pure mathematics AND engineering applications**.
+
+**EQUAL-PRIORITY MANDATE:** The human owner is equally interested in theorems, use cases, and engineering products. Do not treat this as a pure math project. Every session should advance BOTH mathematical understanding AND practical applications wherever possible. Read `03-artifacts/drafts/engineering-synthesis-2026-03-10-S53.md` for the full engineering roadmap.
 
 This file is read automatically at the start of every Claude Code session. Follow the startup sequence below before doing any mathematical work.
 
@@ -86,11 +88,12 @@ The goal is to ensure NO reference, conjecture, or connection sits uninvestigate
 
 ## Step 6: Do the actual work
 
-Work on the highest-priority open question or assigned task. Refer to:
+Work on the highest-priority open question or assigned task. **This includes BOTH pure math and engineering work.** Refer to:
 - `01-canon/theorems/CONJ-001-claim-a.md` — the central open problem
 - `02-court/active/` — any open disputes that need responses
-- `00-navigation/OPEN-QUESTIONS.md` — prioritized by 🔴/🟡/🟢
+- `00-navigation/OPEN-QUESTIONS.md` — prioritized by 🔴/🟡/🟢 (math AND engineering)
 - `00-navigation/INVESTIGATION-BACKLOG.md` — prioritized leads to investigate
+- `03-artifacts/drafts/engineering-synthesis-2026-03-10-S53.md` — engineering roadmap and product specs
 
 As you work:
 - Add new tangents to `00-navigation/TANGENTS.md`
@@ -183,6 +186,42 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **The μ computation bug (MISTAKE-001) is not resolved.** Do not use `ind_poly_at_2_restricted()` from old scripts.
 - **The per-path identity fails for n≥6.** Do not treat it as a proof strategy for Claim A at general n.
 - **When in doubt about a computation, re-derive from definitions.** See `01-canon/definitions.md`.
+
+---
+
+## Engineering Applications Mandate
+
+**READ THIS SECTION.** The human owner has explicitly stated: *"I am equally interested in use cases as I am in theorems and techniques."*
+
+This project has produced significant engineering innovations alongside pure math. Every agent should:
+
+1. **Look for engineering applications** of every theorem and algorithm. A new rank computation trick is not just math — it could be a library.
+2. **Implement deliverables from the engineering roadmap** (`03-artifacts/drafts/engineering-synthesis-2026-03-10-S53.md`). Priority items:
+   - `mod_rank_library.py` — general-purpose small-prime modular rank library (PyPI target)
+   - `circulant_homology` module — using THM-125 to compute Betti numbers 10× faster
+   - `tournament_tda.py` — Tournament TDA feature extractor for ML pipelines
+   - Sparse matrix T_19 solver — break the 42 GB OOM barrier using CSC format (~1.2 MB)
+3. **Document applications in engineering terms**, not just math terms. When you prove a theorem about tournaments, also ask: "What real-world ranking problem does this solve?"
+4. **The 12 engineering application domains** (from engineering-synthesis S53):
+   - Sparse modular rank (PyPI library)
+   - GLMY path homology for network analysis (social networks, citation graphs, supply chains)
+   - Circulant LDPC codes (coding theory via QR_p structure)
+   - GPU acceleration (THM-125 reduces eigenspace work by factor of p)
+   - TDA for preference/ranking data (elections, sports, consumer research)
+   - Deletion-contraction algorithm (H via DC tree, O(2^n) exact)
+   - Spectral tournament algorithms (block-diagonalization via circulant structure)
+   - Homological algebra toolkit (general chain complex tools)
+   - Distributed Betti computation (each eigenspace independent — embarrassingly parallel)
+   - Sparse path homology for large graphs (CSC constraint matrices)
+   - Number theory applications (QR structure, cryptographic relevance)
+   - H-spectrum as universal tournament code (graph fingerprint)
+
+**When choosing between a math proof and an engineering implementation**, do whichever advances the project more given the session context. Both are equally valid.
+
+**Engineering deliverables** go in:
+- `04-computation/` — scripts and libraries
+- `05-knowledge/results/` — benchmark results, output files
+- `03-artifacts/` — papers, product specs, documentation
 
 ---
 

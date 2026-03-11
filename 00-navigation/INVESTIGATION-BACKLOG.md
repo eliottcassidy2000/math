@@ -4,10 +4,37 @@
 
 **Last full repo scour:** opus-2026-03-06-S10
 **Last web research:** kind-pasteur-2026-03-10-S50 (Tang-Yau circulant path homology, Schweser-Stiebitz-Toft Redei revisited, Mitrovic NC Redei, Satake DRT)
+**Last engineering update:** kind-pasteur-2026-03-10-S54 (sparse T_19 Omega computation, CLAUDE.md engineering mandate)
 
 ---
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
+
+### INV-141: T_19 Full Omega Dims — Degrees 9-18 Pending (Engineering Priority)
+**Source:** kind-pasteur-2026-03-10-S54
+**Status:** PARTIALLY COMPUTED. Degrees 0-8 done: [1,9,72,540,3753,23832,136260,688266,2987622].
+**What:** Complete the T_19 Omega dim sequence to degrees 0-18. Degree 9+ requires C/C++ or LinBox.
+**Key constraint:** chi per eigenspace = 1 (expected). Partial chi through m=8 is 2415061. Remaining (m=9..18) must sum to -2415060 alternating.
+**Blocking issue:** Python dict-based pivot storage needs ~TB RAM for degree 9 (pivot density grows: max 10→26→95→455 at degrees 5→6→7→8).
+**Next steps:**
+  1. Implement in C/C++ (or use SageMath/LinBox) for degree 9+
+  2. Or prove palindrome conjecture: Omega_{18-m} = Omega_m (gives free half via symmetry). T_7 IS palindromic; T_11 is NOT. T_19 unknown.
+  3. Use chi constraint to check partial palindrome: if Omega_9 ≈ 12.95M (extrapolating ratio 4.34→3.6), check if sum through m=18 = 1.
+**Priority:** MEDIUM (engineering interest, pattern understanding)
+**Scripts:** t19_omega_dims_sparse.py, results at 05-knowledge/results/t19_omega_dims_sparse.out
+
+### INV-142: Engineering Product: mod_rank Library (PyPI Target)
+**Source:** kind-pasteur-2026-03-10-S53 (synthesis), S54 (update)
+**Status:** PARTLY DONE. mod_rank_library.py exists with core functions. Needs: pytest test suite, benchmark suite, README, PyPI packaging.
+**What:** General-purpose small-prime modular rank library. Key functions: gauss_rank_uint8, gauss_rank_nullbasis_uint8, certified_rank, betti_number_from_boundary_ranks. Memory table: T_11 deg 9 (52550×15745) = 6.6 GB int64 → 827 MB uint8.
+**Engineering value:** Useful for any combinatorics/topology computation over finite fields with large sparse matrices.
+**Next steps:** Add pytest tests, write README, benchmark vs dense/scipy, create setup.py
+
+### INV-143: Engineering Product: circulant_homology Python Module
+**Source:** kind-pasteur-2026-03-10-S54
+**Status:** IMPLEMENTED. circulant_homology.py has CirculantHomology and PaleyHomology classes.
+**What:** Clean API for computing Omega dims and Betti numbers of circulant tournaments. Uses sparse column reduction (THM-125 eigenspace identity gives n× speedup). Verified for T_3, T_7, T_11.
+**Next steps:** Verify betti_numbers() against known T_11 results, add Betti verification test, document API.
 
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50

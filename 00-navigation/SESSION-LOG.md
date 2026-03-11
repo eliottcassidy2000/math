@@ -13,6 +13,40 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-10-S54 — 2026-03-10: Engineering implementations + T_19 degrees 6-8
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-10-S53
+**Summary of work:**
+  Two-part session driven by user request: "implement engineering products AND edit files so
+  future Claudes consider applications equally to math theorems."
+
+  PART 1 — ENGINEERING MANDATE (CLAUDE.md edits):
+  - Updated CLAUDE.md project description to explicitly state dual mandate (math + engineering)
+  - Added "Engineering Applications Mandate" section listing all 12 application domains
+  - Updated Step 6 to reference engineering synthesis document as equal priority
+
+  PART 2 — SPARSE T_19 COMPUTATION (key engineering deliverable):
+  - Wrote t19_omega_dims_sparse.py using sparse column reduction over F_191
+  - Broke the 172 GB OOM barrier at T_19 degree 6: now runs in 2.7s (660x memory reduction)
+  - Computed T_19 Omega dims for degrees 0-8 (was only 0-5 with dense method):
+    [1, 9, 72, 540, 3753, 23832, 136260, 688266, 2987622]
+  - Degree 8 ran in 12.6 minutes using 6.4 GB RAM (max pivot density 455)
+  - Degrees 9+ hit Python memory ceiling (pivot dict ~TB scale), need C/C++
+
+**New contributions:**
+  - t19_omega_dims_sparse.py — sparse column reduction implementation
+  - HYP-449 (sparse=dense rank verification), HYP-450 (T_19 partial Omega dims),
+    HYP-451 (T_19 |A_m| sequence through m=10)
+  - Updated paley-homology.md memory with T_19 results
+  - Results: 05-knowledge/results/t19_omega_dims_sparse.out
+
+**Unresolved threads:**
+  - T_19 degrees 9-18 require C/C++ or LinBox implementation
+  - The partial chi through m=8 is 2415061; remaining sum must be -2415060 for chi=1
+  - Implement remaining engineering products from S53 synthesis (mod_rank library, circulant_homology)
+  - OPEN: Is T_19 Omega sequence palindromic (like T_7) or not (like T_11)?
+
 ## kind-pasteur-2026-03-10-S53 — 2026-03-10: Full synthesis + engineering applications deep-dive
 
 **Account:** kind-pasteur
