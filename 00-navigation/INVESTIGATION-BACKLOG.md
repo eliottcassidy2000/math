@@ -20,8 +20,8 @@
 - DOES NOT compute Betti numbers for Paley T_p (connection sets of size (p-1)/2).
 - DOES NOT have Omega palindrome or top vanishing results for arbitrary connection sets.
 **Impact:** The symbol-matrix framework is the right tool for T_p, but they leave Paley application open. The Stability Theorem (Thm 1.4) implies our pattern β_6(T_p)=p-1 holds for ALL large p∉Q+(QR_p). Computing Q+(QR_p) would be the key step.
-**Next step:** Apply Tang-Yau symbol matrix to T_7 and T_11 explicitly. Compute Q+(QR_p) to see when stabilization kicks in.
-**Priority:** MEDIUM — framework established but Paley case not handled.
+**Next step (UPDATED S52):** COMPLETED. Tang-Yau symbol matrix applied to T_7 (deg 2-5) and T_11 (deg 2-5). Key discovery: Q+(QR_p) is EMPTY (not just "avoids p-th roots" — ALL t values work equally). Symbol matrix M_m(t) is CONSTANT (THM-125: proven algebraically). Eigenspace identity is trivial consequence. New open: prove Q+(QR_p) empty algebraically for all p.
+**Priority:** CLOSED for computational part. Algebraic proof is Priority B.
 
 ### INV-136: Schweser-Stiebitz-Toft (arXiv:2510.10659): Redei's Theorem Revisited (Oct 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50

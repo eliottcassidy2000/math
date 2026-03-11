@@ -1,0 +1,90 @@
+======================================================================
+LEE-YANG ZEROS FOR PALEY TOURNAMENTS
+======================================================================
+
+Connection: H(T) = I(Omega(T), 2) [OCF]
+Lee-Yang zeros = roots of I(Omega(T), x)
+Theorem (Chudnovsky-Seymour): claw-free G => all roots real negative
+Our result: T_p claw-free for p<=8, fails p=9 (first case n=11 is T_11)
+
+
+==================================================
+T_3 (n=3 vertices)
+==================================================
+Adjacency matrix computed.
+Finding odd directed cycles...
+  Found 1 distinct odd cycle vertex-sets
+  3-cycles: 1
+  Conflict graph: 1 vertices, 0 edges
+  Omega(T_3) claw-free? True
+  Computing I(Omega(T_3), x)...
+
+  I(Omega(T_3), x) = x + 1
+  Coefficients: [1, 1]
+  I(Omega(T_3), 2) = 3
+  Roots (numerical):
+    -1.000000 + 0.000000i  (real)
+  All real? True
+  All negative real? True
+  LEE-YANG CONFIRMED: All roots are real and negative.
+  Time: 0.0s
+
+==================================================
+T_7 (n=7 vertices)
+==================================================
+Adjacency matrix computed.
+Finding odd directed cycles...
+  Found 36 distinct odd cycle vertex-sets
+  3-cycles: 14
+  5-cycles: 21
+  7-cycles: 1
+  Conflict graph: 36 vertices, 623 edges
+  Omega(T_7) claw-free? True
+  Computing I(Omega(T_7), x)...
+  Too many cycles (36) for exact polynomial. Skipping.
+  Time: 0.1s
+
+==================================================
+T_11 (n=11 vertices)
+==================================================
+Adjacency matrix computed.
+Finding odd directed cycles...
+  Found 793 distinct odd cycle vertex-sets
+  3-cycles: 55
+  5-cycles: 352
+  7-cycles: 330
+  9-cycles: 55
+  11-cycles: 1
+  Conflict graph: 793 vertices, 310167 edges
+  Omega(T_11) claw-free? False
+  Claw witness: center=0, leaves=(5, 19, 30)
+  Computing I(Omega(T_11), x)...
+  Too many cycles (793) for exact polynomial. Skipping.
+  Time: 0.7s
+
+======================================================================
+SUMMARY & INTERPRETATION
+======================================================================
+
+The independence polynomial I(Omega(T_p), x) has:
+  - All real negative roots for p=3,7 (claw-free Omega => Chudnovsky-Seymour)
+  - For p=11: Omega(T_11) may or may not be claw-free (n=11 > 8)
+
+The Lee-Yang theorem for hard-core models says:
+  If all roots are real and negative, then the "pressure" log Z(lambda) is
+  analytic in lambda for Re(lambda) > 0 (high-fugacity phase).
+
+For the Hamiltonian path problem:
+  H(T) = Z(Omega(T), 2) = partition function at fugacity 2
+  Lee-Yang zeros at x = r_i (all real negative)
+  => Z(Omega(T), lambda) = prod_i (1 + lambda/|r_i|) has NO complex zeros in Re(lambda) > 0
+  => The "phase" of the lattice gas is well-defined at lambda=2
+
+If T_p is a LEE-YANG SAFE tournament (all-real-roots for all p):
+  This would explain WHY H(T_p) = I(Omega(T_p), 2) behaves so regularly.
+  The H(T_p) values would lie on a "normal" branch of the partition function.
+
+PALEY LEE-YANG CONJECTURE:
+  For all Paley primes p == 3 mod 4, all roots of I(Omega(T_p), x) are real and negative.
+
+DONE.

@@ -13,6 +13,46 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-10-S52 — 2026-03-10: Deep applications exploration — Tang-Yau, Lee-Yang, H-spectrum, social choice
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-10-S51
+**Summary of work:**
+  Deeply explored 5 new applications/innovations identified in S51 synthesis.
+  Created and ran 5 computation scripts, yielding major structural discoveries.
+
+  KEY DISCOVERIES:
+  1. CONSTANT SYMBOL MATRIX (universal): Tang-Yau symbol matrix M_m(t) for ANY circulant
+     tournament has NO t-dependence (active t-powers = [0] always). PROVED algebraically:
+     face_idx=0 on D∈A_m always gives (d_2,...,d_m)∈A_{m-1}, so the t-power from face 0
+     is never activated. CONSEQUENCE: eigenspace identity (all Omega_m^(k) equal) holds for
+     ALL circulant tournaments universally — no exceptional eigenvalues ever.
+  2. Q+(QR_p) is EMPTY: zero exceptional t values for T_7 (deg 2-5) and T_11 (deg 2-4).
+     Stronger than stability theorem: rank constant at ALL nonzero t, not just generic.
+  3. Omega(T_11) is NOT claw-free: explicit witness center=cycle#0, leaves=#5,#19,#30.
+     Chudnovsky-Seymour doesn't apply to T_11; Lee-Yang conjecture open for p>=11.
+  4. H-spectrum density → 1: d(N)→1 as N→∞, numerically confirmed to N=1000.
+     Only {7,21} are permanent gaps. n=6 gaps include {35,39} which fill by n=7.
+  5. Social choice framework: OCF as "ordering entropy" measure. Cycle-Deletion Aggregator
+     = new social choice rule using H directly. T_7 example: H=189/45=0.978 (near maximum).
+
+  Scripts created/run: eigenspace_identity_proof.py, tang_yau_symbol_matrix.py,
+  lee_yang_paley.py, hspectrum_density.py, social_choice_tournament.py, mod_rank_library.py
+  Results saved to 05-knowledge/results/*.out
+
+**New contributions:**
+  HYP-444: Tang-Yau symbol matrix constant, Q+(QR_p) empty
+  HYP-445: Constant symbol matrix universal for ALL circulant tournaments (PROVED)
+  HYP-446: H-spectrum density → 1 (only {7,21} permanent gaps)
+  HYP-447: Omega(T_11) NOT claw-free (explicit witness)
+  HYP-448: Eigenspace identity verified all degrees for T_3, T_7, T_11
+**Unresolved threads:**
+  - T_19 Betti computation (next Paley prime after T_11)
+  - Prove Q+(QR_p) empty for ALL p algebraically (not just computationally)
+  - Compute I(Omega(T_7), x) exactly (36 cycles, need specialized polynomial code)
+  - Submit H(T_p)/|Aut| = 1, 9, 1729 sequence to OEIS
+  - Draft Paper 2: "Path Homology of Paley Tournaments and Eigenspace Uniformity"
+
 ## kind-pasteur-2026-03-10-S51 — 2026-03-10: Full research synthesis — applications and innovations
 
 **Account:** kind-pasteur

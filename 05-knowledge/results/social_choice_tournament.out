@@ -1,0 +1,150 @@
+
+======================================================================
+EXAMPLE 1: 5-TEAM SPORTS ROUND-ROBIN
+======================================================================
+Teams: Arrows, Bears, Cubs, Ducks, Eagles
+
+
+============================================================
+5-Team Round-Robin (Transitive with A-B-C cycle)
+============================================================
+Options (5): ['Arrows', 'Bears', 'Cubs', 'Ducks', 'Eagles']
+
+Win counts (Copeland scores):
+  Arrows              : 3/4 wins
+  Bears               : 3/4 wins
+  Cubs                : 3/4 wins
+  Ducks               : 1/4 wins
+  Eagles              : 0/4 wins
+
+No Condorcet winner (cyclic preferences exist)
+
+OCF Analysis:
+  3-cycles: 1, 5-cycles: 0
+  Total odd cycles: 1
+  H(T) exact: 3
+  OCF: H = 1×1 + 1×2 = 3
+  OCF verified: 3 = 3 [OK]
+
+Interpretation:
+  H(T) = 3 consistent linear orderings
+  More orderings = MORE ambiguity / LESS decisiveness
+  Minimum possible H = 1 (totally transitive = perfect ranking)
+  H for this n = 1: perfect transitivity
+
+  3-cycle count = 1 (Condorcet paradoxes)
+  Disjoint cycle pairs = 0 (compound paradoxes)
+  Cycles exist but all share vertices: SIMPLE preference cycles
+
+  H/H_max = 3/15 = 0.200
+
+======================================================================
+EXAMPLE 2: 6-CANDIDATE ELECTION (COMPLEX PREFERENCES)
+======================================================================
+
+============================================================
+6-Candidate Election
+============================================================
+Options (6): ['Alice', 'Bob', 'Carol', 'Dave', 'Eve', 'Frank']
+
+Win counts (Copeland scores):
+  Alice               : 3/5 wins
+  Dave                : 3/5 wins
+  Eve                 : 3/5 wins
+  Bob                 : 2/5 wins
+  Carol               : 2/5 wins
+  Frank               : 2/5 wins
+
+No Condorcet winner (cyclic preferences exist)
+
+OCF Analysis:
+  3-cycles: 8, 5-cycles: 6
+  Total odd cycles: 14
+  H(T) exact: 41
+  OCF: H = 1×1 + 14×2 + 2×4 = 37
+  OCF MISMATCH: exact=41, OCF=37
+
+Interpretation:
+  H(T) = 41 consistent linear orderings
+  More orderings = MORE ambiguity / LESS decisiveness
+  Minimum possible H = 1 (totally transitive = perfect ranking)
+  H for this n = 1: perfect transitivity
+
+  3-cycle count = 14 (Condorcet paradoxes)
+  Disjoint cycle pairs = 2 (compound paradoxes)
+  Disjoint cycles: COMPOUND preference inconsistency
+
+  H/H_max = 41/45 = 0.911
+  => Highly ambiguous preferences (near maximum)
+
+======================================================================
+EXAMPLE 3: PALEY T_7 (OPTIMAL TOURNAMENT CODE)
+======================================================================
+T_7 = Paley tournament on 7 vertices, QR_7 = {1,2,4}
+Arc u->v if (v-u) mod 7 in {1,2,4}
+
+============================================================
+Paley T_7 (Maximum H Tournament)
+============================================================
+Options (7): ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v6']
+
+Win counts (Copeland scores):
+  v0                  : 3/6 wins
+  v1                  : 3/6 wins
+  v2                  : 3/6 wins
+  v3                  : 3/6 wins
+  v4                  : 3/6 wins
+  v5                  : 3/6 wins
+  v6                  : 3/6 wins
+
+No Condorcet winner (cyclic preferences exist)
+
+OCF Analysis:
+  3-cycles: 14, 5-cycles: 21
+  Total odd cycles: 35
+  H(T) exact: 189
+
+Interpretation:
+  H(T) = 189 consistent linear orderings
+  More orderings = MORE ambiguity / LESS decisiveness
+  Minimum possible H = 1 (totally transitive = perfect ranking)
+  H for this n = 1: perfect transitivity
+
+======================================================================
+SOCIAL CHOICE INTERPRETATION OF OCF
+======================================================================
+
+The Odd-Cycle Collection Formula H(T) = I(Omega(T), 2) gives a
+PRINCIPLED, MULTI-SCALE MEASURE of preference inconsistency:
+
+Level 0: H = 1 (alpha_k = 0 for all k > 0)
+  => Perfectly transitive preferences. Unique "correct" ranking exists.
+
+Level 1: H > 1, alpha_1 > 0, alpha_2 = 0
+  => Some 3-cycles exist, but they all "interfere" with each other.
+  => Multiple valid orderings, but bounded inconsistency.
+  => H = 1 + 2*alpha_1 (linear in cycle count)
+
+Level 2: H >> 1, alpha_2 > 0
+  => Compound inconsistency: disjoint cycles that reinforce each other.
+  => H = 1 + 2*alpha_1 + 4*alpha_2 + ... (quadratic growth possible)
+  => Much more ambiguity: exponential in number of disjoint cycles.
+
+RECOMMENDATION RULE based on OCF:
+  Given competing preferences, select the option v that minimizes H(T-v).
+  This is the vertex whose removal MOST reduces the ordering entropy.
+  Equivalently: pick v such that H(T) - H(T-v) = 2*Sigma_{C containing v} mu(C)
+  is LARGEST -- the vertex most "responsible" for cyclic inconsistency.
+
+This is a NEW social choice rule: the "Cycle-Deletion Aggregator."
+Unlike Borda (linear) or Condorcet (pairwise), it explicitly accounts for
+higher-order cyclic preference structures via the independence polynomial.
+
+COMPARISON TO EXISTING METHODS:
+  Method     | Accounts for cycles | Unique winner | H(T) invariant
+  Condorcet  | No (binary)         | Sometimes     | No
+  Borda      | No (linear)         | Always        | No
+  Kemeny     | Implicitly          | Sometimes     | Minimizes inversions
+  OCF-based  | Yes (all orders)    | Always        | Yes (uses H directly)
+
+DONE.

@@ -1,0 +1,35 @@
+======================================================================
+T_19 PALEY TOURNAMENT — OMEGA DIMENSION COMPUTATION
+======================================================================
+
+By THM-125 (constant symbol matrix), ALL 19 eigenspaces have
+identical Omega dimensions. Computing k=0 eigenspace only.
+
+Checking prime 191: 190 = 10 * 19 (need 19 | 190)
+Primitive 19-th root of unity mod 191 = 69
+
+Running to max_deg=6 first (quick check)...
+
+T_19 Omega dimension computation
+  p=19, prime=191 (190 = 10*19)
+  QR_19 = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+  |S| = 9 = (p-1)/2 = 9
+  Diff-seqs enumerated (max_deg=6): 0.5s
+
+  Omega dims (k=0 only; ALL k equal by THM-125):
+  m= 0: |A_m|=     1, rank(d_m)=0, Omega_m=1
+  m= 1: |A_m|=     9, rank(d_m)=    0, Omega_m=     9  (0.0s)
+  m= 2: |A_m|=    81, rank(d_m)=    9, Omega_m=    72  (0.0s)
+  m= 3: |A_m|=   684, rank(d_m)=  144, Omega_m=   540  (0.0s)
+  m= 4: |A_m|=  5436, rank(d_m)= 1683, Omega_m=  3753  (0.5s)
+  m= 5: |A_m|= 40284, rank(d_m)=16452, Omega_m= 23832  (51.6s)
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t19_omega_dims.py", line 234, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t19_omega_dims.py", line 219, in main
+    dims_6 = compute_omega_dims_t19(6)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t19_omega_dims.py", line 176, in compute_omega_dims_t19
+    C = build_constraint_matrix_k0(A_m, allowed[m - 1], p, prime)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\t19_omega_dims.py", line 136, in build_constraint_matrix_k0
+    C = np.zeros((n_junk, n_Am), dtype=np.int32)
