@@ -1,0 +1,249 @@
+CROSS-FIELD CONNECTIONS FROM TOURNAMENT H-MAXIMIZATION
+===========================================================================
+
+===========================================================================
+1. ISING MODEL ON THE ORIENTATION CUBE
+===========================================================================
+
+  The orientation cube {±1}^m parametrizes circulant tournaments on Z_p.
+
+  The Walsh-Fourier expansion:
+    H(σ) = H₀ + Σ_{i<j} J[i,j] σ_i σ_j + Σ_{i<j<k<l} K[i,j,k,l] σ_i σ_j σ_k σ_l + ...
+
+  This IS the Ising model Hamiltonian on m spins with:
+    - H₀ = external field (constant)
+    - J[i,j] = pairwise spin coupling
+    - K[i,j,k,l] = 4-body interaction
+
+  Paley σ_P is the GROUND STATE of the 2-body term (maximizes σ^T J σ).
+  At p≥19, higher-body interactions change the ground state to Interval.
+
+  PHASE TRANSITION INTERPRETATION:
+    Small p (= high temperature): 2-body dominance → Paley ground state
+    Large p (= low temperature): many-body dominance → Interval ground state
+
+  The "temperature" parameter is effectively log(p):
+    - Number of spins m = (p-1)/2
+    - Degree-2k Walsh term scales as ~p^{2k} (eigenvalue products)
+    - Relative weight of degree-2k vs degree-2: ~p^{2(k-1)}
+    - At large p, higher-degree terms inevitably dominate
+    
+  p=7: Ising model on m=3 spins, 8 configurations
+  H₀ = 178.5000
+  J matrix (pairwise couplings):
+  [[ 0.   3.5 -3.5]
+ [ 3.5  0.  -3.5]
+ [-3.5 -3.5  0. ]]
+  J eigenvalues: [-3.5 -3.5  7. ]
+  Paley σ = (1, 1, -1)
+  σ^T J σ = 21.0000
+  E₂(Paley) = 21.0000
+  E_total(Paley) = 10.5000
+  E_higher(Paley) = -10.5000
+  Ratio E₂/E_total = 2.0000
+
+===========================================================================
+2. ADDITIVE COMBINATORICS: SUM-PRODUCT PHENOMENON
+===========================================================================
+
+  The sum-product theorem (Bourgain-Katz-Tao, 2004):
+    For S ⊂ Z_p with p^δ < |S| < p^{1-δ}:
+    max(|S+S|, |S·S|) ≥ |S|^{1+ε}
+
+  QR is "multiplicatively structured" (S·S = S) → |S+S| must be large
+  → LOW additive energy
+
+  Interval {1,...,m} is "additively structured" → HIGH additive energy
+
+  H-maximization at large p REWARDS additive structure:
+    - Hamiltonian paths follow "flows" — consecutive vertex visits
+    - Additive structure = adjacent vertices have similar neighborhoods
+    - This creates more path options (higher H)
+    
+  p=7: E(Paley) =           15, E(Interval) =           19, ratio I/P = 1.2667
+  p=11: E(Paley) =           65, E(Interval) =           85, ratio I/P = 1.3077
+  p=19: E(Paley) =          369, E(Interval) =          489, ratio I/P = 1.3252
+  p=23: E(Paley) =          671, E(Interval) =          891, ratio I/P = 1.3279
+
+===========================================================================
+3. EXPANDER GRAPHS: SPECTRAL GAP vs HAMILTONIAN PATHS
+===========================================================================
+
+  The Expander Mixing Lemma:
+    For d-regular graph G with second eigenvalue λ₂:
+    |e(S,T) - d|S||T|/n| ≤ λ₂ √(|S||T|)
+
+  For tournaments (directed):
+    - Paley: all |λ_k| = √((p+1)/4) → OPTIMAL expansion (Ramanujan)
+    - Interval: dominant |λ_1| ≈ p/π → POOR expansion
+
+  But H-maximization is NOT about expansion!
+  It's about counting PATHS — a flow problem, not a mixing problem.
+
+  The tradeoff:
+    Expansion → edges go "everywhere" → many cycles but they overlap
+    Flow → edges go "nearby" → fewer cycles but they're disjoint
+
+  This is EXACTLY our OCF independence crossover:
+    Expansion ↔ high α_1 (many cycles)
+    Flow ↔ high α_2+ (many disjoint packings)
+    
+  p=7: Paley λ_max = 1.4142 (≈√p/2), Interval λ_max = 2.2470 (≈p/π)
+  p=11: Paley λ_max = 1.7321 (≈√p/2), Interval λ_max = 3.5133 (≈p/π)
+  p=19: Paley λ_max = 2.2361 (≈√p/2), Interval λ_max = 6.0548 (≈p/π)
+
+===========================================================================
+4. CODING THEORY: QR CODES vs CYCLIC CODES
+===========================================================================
+
+  Quadratic Residue (QR) codes:
+    Generator polynomial g(x) = Π_{i ∈ QR} (x - α^i)
+    where α is a primitive p-th root of unity in GF(2^k).
+
+  The Paley tournament adjacency matrix IS the QR code check structure.
+  QR codes achieve the highest known minimum distance for their length.
+
+  Analogy:
+    QR code: optimal error CORRECTION (max Hamming distance)
+    Paley tournament: optimal path COUNT at small p
+
+  Interval → cyclic code with generator g(x) = 1 + x + ... + x^{m-1}
+    Cyclic code: optimal burst-error correction
+    Interval tournament: optimal path COUNT at large p
+
+  The crossover in H-maximization mirrors the crossover in coding theory:
+    - Random errors → QR codes best (like small p = "random" structure)
+    - Burst errors → cyclic codes best (like large p = "structured" flows)
+
+  DEEP CONNECTION: Both use the SAME algebraic machinery:
+    - Discrete Fourier Transform over Z_p
+    - Eigenvalues = code distance spectrum
+    - Weight enumerator polynomial ↔ independence polynomial I(Ω,x)
+    
+
+===========================================================================
+5. TROPICAL GEOMETRY: PATH PERMANENT
+===========================================================================
+
+  H(T) = Σ_{permutations π} Π_{i=0}^{n-2} A[π(i), π(i+1)]
+
+  This is a "path permanent" — like the matrix permanent but summing
+  over permutations viewed as paths, not matchings.
+
+  The TROPICAL (min-plus) version:
+    H_trop(T) = min_{π path} Σ_{i=0}^{n-2} cost(π(i), π(i+1))
+    = the shortest Hamiltonian path (TSP)
+
+  Connection:
+    Ordinary permanent (Σ Π) → counts 1-factors → Brégman bound
+    Path permanent (Σ Π over paths) → counts HP → Alon's bound
+    Tropical permanent (min Σ) → shortest HP → TSP
+
+  The Brégman bound that Alon uses connects permanent optimization
+  to our H-maximization. Can we get a TIGHTER bound by using the
+  path structure directly, without going through 1-factors?
+
+  Conjecture: For regular tournaments on n vertices:
+    H(T) ≤ (k!)^{(2n-1)/k} for k = (n-1)/2
+    (tighter than Brégman for tournaments specifically)
+    
+
+===========================================================================
+6. REPRESENTATION THEORY: H AS A SPHERICAL FUNCTION
+===========================================================================
+
+  H(T) for circulant T on Z_p is determined by the connection set S.
+  S is a subset of (Z/pZ)* / {±1} (chord types).
+
+  The space of such functions is the group algebra C[(Z/pZ)* / {±1}].
+
+  For p ≡ 3 mod 4:
+    (Z/pZ)* / {±1} ≅ QR_p (the quadratic residue group)
+    This is a cyclic group of ODD order m = (p-1)/2.
+
+  H is a function on the POWER SET of QR_p → integers.
+  The Walsh expansion diagonalizes this as:
+    H = Σ_S Ĥ(S) χ_S
+
+  The Paley orientation σ_P = Legendre symbol = the UNIQUE
+  nontrivial character of (Z/pZ)* of order 2.
+
+  THM-137 says: σ_P is an eigenvector of J.
+  This is SCHUR'S LEMMA applied to the QR action!
+
+  DEEPER: The full Walsh expansion lives in the group algebra
+  of the BOOLEAN group (Z/2Z)^m. The QR multiplication acts
+  on this via permutations. The irreducible decomposition of
+  H under this action determines which orientations maximize H.
+
+  For the AFFINE GROUP Aff(Z_p) = {x → ax + b : a ∈ (Z/pZ)*, b ∈ Z_p}:
+    - Paley tournament is the unique tournament invariant under Aff(Z_p)|_QR
+    - Its automorphism group has order p·m = p(p-1)/2
+    - This is the LARGEST possible for a circulant tournament
+    
+
+===========================================================================
+7. QUANTUM INFORMATION: MUTUALLY UNBIASED BASES
+===========================================================================
+
+  Mutually Unbiased Bases (MUBs) in C^d:
+    Two orthonormal bases B₁, B₂ are MU if |⟨b₁|b₂⟩|² = 1/d
+    for all b₁ ∈ B₁, b₂ ∈ B₂.
+
+  For d = p prime: the DFT matrix and its p-1 shifts give p+1 MUBs.
+  The Paley tournament's FLAT spectrum means:
+    |λ_k|² = (p+1)/4 for all k ≥ 1
+
+  This is the tournament analogue of the MUB condition:
+    All "measurements" (eigenvalue magnitudes) give equal information.
+
+  The interval tournament CONCENTRATES information:
+    |λ_1|² >> |λ_k|² for k > 1
+
+  In quantum info terms:
+    Paley = maximally uncertain (like MUB measurement)
+    Interval = maximally informative (like computational basis)
+
+  H-maximization at large p favoring CONCENTRATED information
+  suggests: for counting Hamiltonian paths, it's better to have
+  ONE strong "channel" than many weak ones.
+
+  This connects to the "superadditivity" of quantum channels:
+    Sometimes a single strong channel beats many independent weak ones.
+    
+
+===========================================================================
+8. BOOLEAN FUNCTION COMPLEXITY: FOURIER DEGREE OF H
+===========================================================================
+
+  p=7 (m=3): Walsh spectrum of H
+  Mean H = 178.50
+    Degree 0: energy = 31862.25 (86700.0% of variance)
+    Degree 2: energy = 36.75 (100.0% of variance)
+
+  p=11 (m=5): Walsh spectrum of H
+  Mean H = 93101.25
+    Degree 0: energy = 8667842751.56 (1966139.5% of variance)
+    Degree 2: energy = 370940.62 (84.1% of variance)
+    Degree 4: energy = 69915.31 (15.9% of variance)
+
+  KEY OBSERVATION:
+  H(σ) on the Boolean cube is a LOW-DEGREE function!
+  At p=7: ONLY degree 2 (quadratic)
+  At p=11: degree 2 + degree 4 (quartic)
+  No odd-degree terms (since H(σ) = H(-σ)).
+
+  In Boolean function complexity:
+  - Low degree → learnable by low-degree polynomial regression
+  - Even-only → invariant under global flip (complement symmetry)
+
+  The Fourier concentration at low degrees means:
+  H is "smooth" on the Boolean cube — nearby orientations have similar H.
+  This is JUNTA-like behavior: H depends on a few "important" chord types.
+
+  Connection to computational learning theory:
+  If H is a degree-2k polynomial on {±1}^m, it can be learned from
+  O(m^{2k}) samples. For small k, this is efficient!
+    
+
+DONE.
