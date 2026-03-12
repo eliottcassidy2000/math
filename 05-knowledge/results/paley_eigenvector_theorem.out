@@ -1,0 +1,285 @@
+======================================================================
+PALEY EIGENVECTOR THEOREM — ALGEBRAIC STRUCTURE
+======================================================================
+
+THEOREM: At p = 3 mod 4, the Paley orientation sigma_P is an eigenvector
+of the interaction matrix J with the largest eigenvalue.
+
+PROOF SKETCH:
+  The interaction matrix J lives on the space of chord type pairs.
+  J[i,j] measures how the orientation of chord i interacts with chord j
+  in determining H.
+
+  For CIRCULANT tournaments, there's a hidden multiplicative symmetry:
+  If a is a QR mod p, then multiplying all chord types by a (mod p)
+  is an automorphism of the Paley tournament.
+
+  This means J is EQUIVARIANT under the action of (Z/pZ)*/QR on chord types.
+
+  The QR subgroup acts by permutation on {1,...,m} (chord types):
+    a * k mod p -> either k' or p-k' (where 1 <= k' <= m)
+  with a sign flip when a*k > m.
+
+  The Legendre symbol chi defines the character of QR on this space:
+    sigma_P[k] = chi(k)  (for k = 1,...,m)
+
+  Since chi is a multiplicative character of (Z/pZ)*, and J is equivariant
+  under QR multiplication, sigma_P (= chi restricted to {1,...,m})
+  must be an eigenvector of J.
+
+
+p=7: Paley sigma = [ 1  1 -1]
+  Legendre values chi(k) for k=1,...,3:
+    chi(1) = 1
+    chi(2) = 1
+    chi(3) = -1
+  sigma_P[k] = chi(k)? YES
+
+p=11: Paley sigma = [ 1 -1  1  1  1]
+  Legendre values chi(k) for k=1,...,5:
+    chi(1) = 1
+    chi(2) = -1
+    chi(3) = 1
+    chi(4) = 1
+    chi(5) = 1
+  sigma_P[k] = chi(k)? YES
+
+======================================================================
+J MATRIX EQUIVARIANCE UNDER QR MULTIPLICATION
+======================================================================
+
+p=7:
+J matrix:
+[[ 0.   3.5 -3.5]
+ [ 3.5  0.  -3.5]
+ [-3.5 -3.5  0. ]]
+
+Multiplicative equivariance check:
+  a = 1:
+    perm = [1, 2, 3], signs = [1, 1, 1]
+    Equivariance: 3/3
+  a = 2:
+    perm = [2, 3, 1], signs = [1, -1, -1]
+    Equivariance: 3/3
+  a = 4:
+    perm = [3, 1, 2], signs = [-1, 1, -1]
+    Equivariance: 3/3
+
+p=11:
+J matrix:
+[[   0.     -8.25  272.25  272.25    8.25]
+ [  -8.25    0.   -272.25   -8.25 -272.25]
+ [ 272.25 -272.25    0.      8.25    8.25]
+ [ 272.25   -8.25    8.25    0.    272.25]
+ [   8.25 -272.25    8.25  272.25    0.  ]]
+
+Multiplicative equivariance check:
+  a = 1:
+    perm = [1, 2, 3, 4, 5], signs = [1, 1, 1, 1, 1]
+    Equivariance: 10/10
+  a = 3:
+    perm = [3, 5, 2, 1, 4], signs = [1, -1, -1, 1, 1]
+    Equivariance: 10/10
+  a = 4:
+    perm = [4, 3, 1, 5, 2], signs = [1, -1, 1, 1, -1]
+    Equivariance: 10/10
+  a = 5:
+    perm = [5, 1, 4, 2, 3], signs = [1, -1, 1, -1, 1]
+    Equivariance: 10/10
+  a = 9:
+    perm = [2, 4, 5, 3, 1], signs = [-1, -1, 1, 1, 1]
+    Equivariance: 10/10
+
+======================================================================
+EIGENVALUE DECOMPOSITION OF J
+======================================================================
+
+p=7:
+  Eigenvalues of J: [-3.5 -3.5  7. ]
+  Top eigenvalue: 7.0000
+  Top eigenvector: [-0.57735027 -0.57735027  0.57735027]
+  sigma_P / ||sigma_P||: [ 0.57735027  0.57735027 -0.57735027]
+  Alignment |<v_top, sigma_P>| = 1.000000 (1.0 = perfect)
+  lambda_max / m = 2.3333
+  lambda_max * 2 / (m*(m-1)) = 2.3333
+
+  All eigenpairs:
+    lambda =    -3.5000, v = [-0.8165, 0.4082, -0.4082], <v, sigma_P> = 0.0000
+    lambda =    -3.5000, v = [0.0000, 0.7071, 0.7071], <v, sigma_P> = 0.0000
+    lambda =     7.0000, v = [-0.5774, -0.5774, 0.5774], <v, sigma_P> = -1.0000
+
+p=11:
+  Eigenvalues of J: [-435.41097303 -435.41097303  154.91097303  154.91097303  561.        ]
+  Top eigenvalue: 561.0000
+  Top eigenvector: [-0.4472136  0.4472136 -0.4472136 -0.4472136 -0.4472136]
+  sigma_P / ||sigma_P||: [ 0.4472136 -0.4472136  0.4472136  0.4472136  0.4472136]
+  Alignment |<v_top, sigma_P>| = 1.000000 (1.0 = perfect)
+  lambda_max / m = 112.2000
+  lambda_max * 2 / (m*(m-1)) = 56.1000
+
+  All eigenpairs:
+    lambda =  -435.4110, v = [0.6289, -0.2580, -0.5481, -0.4695, 0.1307], <v, sigma_P> = 0.0000
+    lambda =  -435.4110, v = [-0.0669, -0.5774, -0.3155, 0.4238, -0.6188], <v, sigma_P> = 0.0000
+    lambda =   154.9110, v = [-0.0000, 0.3717, -0.6015, 0.6015, 0.3717], <v, sigma_P> = -0.0000
+    lambda =   154.9110, v = [-0.6325, -0.5117, -0.1954, -0.1954, 0.5117], <v, sigma_P> = 0.0000
+    lambda =   561.0000, v = [-0.4472, 0.4472, -0.4472, -0.4472, -0.4472], <v, sigma_P> = -1.0000
+
+======================================================================
+PREDICTING J FROM EIGENVALUE STRUCTURE
+======================================================================
+
+HYPOTHESIS: J[i,j] depends on chord types i,j through the
+interaction of the corresponding eigenvalue modes.
+
+For circulant tournament T(sigma), the eigenvalue at frequency k is:
+  lambda_k(sigma) = sum_{j=1}^{m} sigma_j * omega^{jk} * delta_j
+where delta_j encodes the "chord contribution" and omega = e^{2pi i/p}.
+
+H is expressible in terms of these eigenvalues through:
+  H = sum of permanent-like terms involving lambda_k.
+
+The degree-2 Walsh coefficient hat{H}({i,j}) measures:
+  d^2 H / (d sigma_i d sigma_j)  at the uniform point.
+
+If H = f(lambda_1,...,lambda_m), then:
+  hat{H}({i,j}) involves d lambda_k / d sigma_i * d lambda_k / d sigma_j * d^2 f/d lambda_k^2
+  summed over k, with cross-terms.
+
+This is related to the FISHER INFORMATION of H with respect to sigma.
+
+
+p=7: Testing eigenvalue-derivative formula for J
+  T matrix (sin-sin inner products):
+  Diagonal: ['3.50', '3.50', '3.50']
+  Expected: 3.50 * I
+
+  J ~ alpha * T_chi:
+    alpha = 570223208633473.625000
+    relative error = 0.978670
+    Poor fit, need different structure
+
+  J ~ alpha * T (uniform weight):
+    alpha = -1331198354347517.000000, relative error = 0.960513
+
+p=11: Testing eigenvalue-derivative formula for J
+  T matrix (sin-sin inner products):
+  Diagonal: ['5.50', '5.50', '5.50', '5.50', '5.50']
+  Expected: 5.50 * I
+
+  J ~ alpha * T_chi:
+    alpha = -86226838800653136.000000
+    relative error = 0.820442
+    Poor fit, need different structure
+
+  J ~ alpha * T (uniform weight):
+    alpha = -31322021846559776.000000, relative error = 0.981469
+
+======================================================================
+CROSSOVER: WHEN DOES THE EIGENVECTOR PROPERTY STOP MATTERING?
+======================================================================
+
+At p=7,11: Paley sigma is the top eigenvector of J, AND Paley maximizes H.
+The degree-2 terms dominate.
+
+At p=19: We can't compute the full orientation cube (2^9 = 512 orientations,
+each needing Held-Karp on a 19-vertex graph ~ seconds per evaluation).
+But we know Interval beats Paley, so either:
+
+  (a) Paley sigma is STILL the top eigenvector of J at p=19,
+      but the degree-4+ terms override the degree-2 advantage, OR
+
+  (b) Paley sigma is NOT the top eigenvector at p=19.
+
+ANALYSIS:
+  At p=7: H = H0 + H2 (degree 2 only, m=3 too small for degree 4 with even constraint)
+  At p=11: H = H0 + H2 + H4. Paley: H2=1402.5, H4=591.25 (both positive).
+           Interval: H2=280.5, H4=-354.75.
+  At p=19 (predicted): H4 and H6+ terms grow relative to H2.
+           The quartic correction might favor Interval.
+
+The GROWTH RATES:
+  H2 contribution ~ quadratic in m ~ p^2 / 4
+  H4 contribution ~ quartic in m ~ p^4 / 16
+  For the RATIO H4/H2 to flip the winner, we need the quartic
+  Interval advantage to exceed the quadratic Paley advantage.
+
+From p=11 data:
+  H2 advantage of Paley = 1402.5 - 280.5 = 1122
+  H4 advantage of Paley = 591.25 - (-354.75) = 946
+  So the quartic terms already HELP Paley at p=11.
+
+But the ABSOLUTE values at p=11:
+  H0 = 93101.25 (dominates, ~99.7% of H)
+  H2: max 1402.5 (~1.5%)
+  H4: max 591.25 (~0.6%)
+
+Prediction for p=19:
+  The H0 term (mean H over all orientations) grows as ~ (p-1)!
+  The degree-2 advantage grows as ~ p^2
+  The degree-4 terms can grow as ~ p^4
+  But the crossover involves the RELATIVE sign of higher terms.
+
+
+p=19: Targeted orientation evaluation
+Paley sigma = [1, -1, -1, 1, 1, 1, 1, -1, 1]
+Paley QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+
+Computing H for 47 orientations at p=19...
+  Paley: H = 1172695746915 (29.1s)
+  Interval: H = 1184212824763 (29.3s)
+
+Ranked (top 20):
+  #1:                  Interval: H =   1184212824763, diff = +11517077848
+  #2:                     Paley: H =   1172695746915, diff =         +0
+  #3:            Paley_flip_1_7: H =   1170808019243, diff = -1887727672
+  #4:            Paley_flip_1_8: H =   1170808019243, diff = -1887727672
+  #5:            Paley_flip_2_3: H =   1170808019243, diff = -1887727672
+  #6:            Paley_flip_2_5: H =   1170808019243, diff = -1887727672
+  #7:            Paley_flip_3_5: H =   1170808019243, diff = -1887727672
+  #8:            Paley_flip_4_6: H =   1170808019243, diff = -1887727672
+  #9:            Paley_flip_4_9: H =   1170808019243, diff = -1887727672
+  #10:            Paley_flip_6_9: H =   1170808019243, diff = -1887727672
+  #11:            Paley_flip_7_8: H =   1170808019243, diff = -1887727672
+  #12:            Paley_flip_1_3: H =   1167859801669, diff = -4835945246
+  #13:            Paley_flip_1_6: H =   1167859801669, diff = -4835945246
+  #14:            Paley_flip_2_6: H =   1167859801669, diff = -4835945246
+  #15:            Paley_flip_2_7: H =   1167859801669, diff = -4835945246
+  #16:            Paley_flip_3_9: H =   1167859801669, diff = -4835945246
+  #17:            Paley_flip_4_5: H =   1167859801669, diff = -4835945246
+  #18:            Paley_flip_4_7: H =   1167859801669, diff = -4835945246
+  #19:            Paley_flip_5_8: H =   1167859801669, diff = -4835945246
+  #20:            Paley_flip_8_9: H =   1167859801669, diff = -4835945246
+
+Paley H = 1172695746915
+Interval H = 1184212824763
+
+Paley is LOCAL max on orientation cube? True
+  No single flip improves H (Paley IS a local max)
+
+Gradient of H at Paley (finite differences):
+  dH/d(sigma_1) =     -8847145332 (flip chord 1)
+  dH/d(sigma_2) =     -8847145332 (flip chord 2)
+  dH/d(sigma_3) =     -8847145332 (flip chord 3)
+  dH/d(sigma_4) =     -8847145332 (flip chord 4)
+  dH/d(sigma_5) =     -8847145332 (flip chord 5)
+  dH/d(sigma_6) =     -8847145332 (flip chord 6)
+  dH/d(sigma_7) =     -8847145332 (flip chord 7)
+  dH/d(sigma_8) =     -8847145332 (flip chord 8)
+  dH/d(sigma_9) =     -8847145332 (flip chord 9)
+
+Approximate Hessian (from double flips):
+  Diagonal (single-flip H losses):
+    chord 1:   -8847145332.0
+    chord 2:   -8847145332.0
+    chord 3:   -8847145332.0
+    chord 4:   -8847145332.0
+    chord 5:   -8847145332.0
+    chord 6:   -8847145332.0
+    chord 7:   -8847145332.0
+    chord 8:   -8847145332.0
+    chord 9:   -8847145332.0
+
+  Hessian eigenvalues: [-1.43273369e+10 -1.43273369e+10 -1.25800520e+10 -1.25800520e+10
+ -1.14889693e+10 -1.14889693e+10 -8.93580386e+09 -8.93580386e+09
+  1.50400162e+10]
+  All negative? False (local max requires all <= 0)
