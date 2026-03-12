@@ -33,26 +33,58 @@ For Paley (P) vs Interval (I) tournaments:
 
 3. **Phase transition at p ~ 13-19**: the alpha_2+ advantage overtakes alpha_1
 
-## Quantitative Data
+## Quantitative Data (COMPLETE for p=7,11; partial p=19)
 
-| p | alpha_1(P) | alpha_1(I) | higher(P) | higher(I) | H(P) | H(I) | Winner |
-|---|-----------|-----------|-----------|-----------|------|------|--------|
-| 7 | 80 | 59 | 28 | 56 | 189 | 175 | Paley |
-| 11 | 21169 | 18397 | 52756 | 56232 | 95095 | 93027 | Paley |
-| 19 | ? | ? | ? | ? | 1.173T | 1.184T | Interval |
-| 23 | ? | ? | ? | ? | 15.76Q | 16.01Q | Interval |
+### Full alpha decomposition
 
-At p=7:
-- Paley alpha_1 advantage: 2*(80-59) = 42
-- Interval alpha_2+ advantage: 56 - 28 = 28
-- Net: Paley wins by 14
+**p=7 (VERIFIED):**
 
-At p=11:
-- Paley alpha_1 advantage: 2*(21169-18397) = 5544
-- Interval alpha_2+ advantage: 56232 - 52756 = 3476
-- Net: Paley wins by 2068
+| | alpha_0 | alpha_1 | alpha_2 | alpha_3 | H |
+|---|---------|---------|---------|---------|-----|
+| Paley | 1 | 80 | 7 | 0 | 189 |
+| Interval | 1 | 59 | 14 | 0 | 175 |
+| Delta (P-I) | 0 | +21 | -7 | 0 | +14 |
 
-At p=19: Interval wins by ~11.5B (net). The alpha_2+ advantage has overtaken.
+OCF: H = 1 + 2(80) + 4(7) = 189 (Paley), 1 + 2(59) + 4(14) = 175 (Interval).
+
+**p=11 (VERIFIED):**
+
+| | alpha_0 | alpha_1 | alpha_2 | alpha_3 | alpha_4 | H |
+|---|---------|---------|---------|---------|---------|-------|
+| Paley | 1 | 21169 | 10879 | 1155 | 0 | 95095 |
+| Interval | 1 | 18397 | 11110 | 1474 | 0 | 93027 |
+| Delta (P-I) | 0 | +2772 | -231 | -319 | 0 | +2068 |
+
+OCF verified: 1+2(21169)+4(10879)+8(1155) = 95095, 1+2(18397)+4(11110)+8(1474) = 93027.
+
+**p=19 (alpha_1 COMPUTED, alpha_2+ from H):**
+
+| | alpha_1 | 2*alpha_1 | higher | H |
+|---|---------|-----------|--------|------|
+| Paley | 130,965,270,477 | 261,930,540,954 | 910,765,205,960 | 1,172,695,746,915 |
+| Interval | (computing) | | | 1,184,212,824,763 |
+
+**p=19 cycle counts by length (Paley):**
+c_3=285, c_5=11628, c_7=424080, c_9=12156390, c_11=249208902,
+c_13=3280900392, c_15=23662379790, c_17=69401425077, c_19=34358763933
+
+### Ising advantage decomposition
+
+| p | D1 = 2*Delta_alpha1 | D2 = 4*Delta_alpha2 | D3 = 8*Delta_alpha3 | H(P)-H(I) |
+|---|---------------------|---------------------|---------------------|------------|
+| 7 | +42 | -28 | 0 | +14 |
+| 11 | +5544 | -924 | -2552 | +2068 |
+| 19 | (pending) | | | -11,517,077,848 |
+
+### Higher-order dominance (fraction of H from alpha_2+)
+
+| p | 2*alpha_1/H (Paley) | higher/H (Paley) |
+|---|---------------------|------------------|
+| 7 | 84.7% | 14.8% |
+| 11 | 44.5% | 55.5% |
+| 19 | 22.3% | 77.7% |
+
+The many-body terms grow from 15% to 78% of H as p increases from 7 to 19.
 
 ## Ising Interpretation
 
@@ -90,6 +122,10 @@ So Paley's cycles are more "tangled" (share vertices), while Interval's are "ali
 
 ## Scripts
 
+- `04-computation/alpha_decomp_p11_full.py` — complete alpha_j verification at p=11
+- `04-computation/alpha_decomp_p19_fast.py` — cycle counts at p=19 via circulant symmetry
 - `04-computation/trace_H_analytic.py` — cycle count comparison
 - `04-computation/thm136_all_k_proof.py` — trace alternation for all k
+- `05-knowledge/results/alpha_decomp_p11_full.out` — verified p=11 decomposition
+- `05-knowledge/results/alpha_decomp_p19_fast.out` — p=19 cycle counts
 - `05-knowledge/results/ising_phase_transition.out` — Hessian analysis (opus)

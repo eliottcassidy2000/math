@@ -1,0 +1,56 @@
+p=11, QR=[1, 3, 4, 5, 9], Int=[1, 2, 3, 4, 5]
+Known: H(Paley)=95095, H(Interval)=93027
+  k=3: DONE. 165 subsets, 55 directed 3-cycles, 0.0s
+  k=5: DONE. 462 subsets, 594 directed 5-cycles, 0.0s
+  k=7: DONE. 330 subsets, 3960 directed 7-cycles, 0.0s
+  k=9: DONE. 55 subsets, 11055 directed 9-cycles, 0.0s
+  k=11: DONE. 1 subsets, 5505 directed 11-cycles, 0.0s
+
+============================================================
+Paley: alpha_1 = 21169
+  Building compatibility structure...
+  Done (50.4s)
+  alpha_2 = 10879
+  Computing alpha_3...
+  alpha_3 = 1155 (0.1s)
+  Computing alpha_4...
+  alpha_4 = 0 (0.1s)
+
+  H = 1 + 2*21169 + 4*10879 + 8*1155 + 16*0
+    = 95095
+  H (known) = 95095
+  Match: True
+
+  Ising decomposition:
+    alpha_0 = 1
+    2*alpha_1 = 42338
+    4*alpha_2 = 43516
+    8*alpha_3 = 9240
+    16*alpha_4 = 0
+  k=3: DONE. 165 subsets, 55 directed 3-cycles, 0.0s
+  k=5: DONE. 462 subsets, 484 directed 5-cycles, 0.0s
+  k=7: DONE. 330 subsets, 3399 directed 7-cycles, 0.0s
+  k=9: DONE. 55 subsets, 9350 directed 9-cycles, 0.0s
+  k=11: DONE. 1 subsets, 5109 directed 11-cycles, 0.0s
+
+============================================================
+Interval: alpha_1 = 18397
+  Building compatibility structure...
+  Done (38.1s)
+  alpha_2 = 11110
+  Computing alpha_3...
+  alpha_3 = 1474 (0.2s)
+  Computing alpha_4...
+  alpha_4 = 0 (0.1s)
+
+  H = 1 + 2*18397 + 4*11110 + 8*1474 + 16*0
+    = 93027
+  H (known) = 93027
+  Match: True
+
+  Ising decomposition:
+    alpha_0 = 1
+    2*alpha_1 = 36794
+    4*alpha_2 = 44440
+    8*alpha_3 = 11792
+    16*alpha_4 = 0

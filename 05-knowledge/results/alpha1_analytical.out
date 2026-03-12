@@ -1,0 +1,148 @@
+======================================================================
+CYCLE COUNT RATIOS: Paley / Interval
+======================================================================
+
+  p=7:
+    c_3: P=      14, I=      14, P/I=1.0000, P-I=     0
+    c_5: P=      42, I=      28, P/I=1.5000, P-I=    14
+    c_7: P=      24, I=      17, P/I=1.4118, P-I=     7
+    alpha_1: P=80, I=59, ratio=1.3559
+
+  p=11:
+    c_3: P=      55, I=      55, P/I=1.0000, P-I=     0
+    c_5: P=     594, I=     484, P/I=1.2273, P-I=   110
+    c_7: P=    3960, I=    3399, P/I=1.1650, P-I=   561
+    c_9: P=   11055, I=    9350, P/I=1.1824, P-I=  1705
+    c_11: P=    5505, I=    5109, P/I=1.0775, P-I=   396
+    alpha_1: P=21169, I=18397, ratio=1.1507
+
+======================================================================
+TRACE vs CYCLE CORRECTION ANALYSIS
+======================================================================
+
+  tr(A^k) = k * c_k + correction_k
+  correction_k = closed walks of length k that revisit vertices
+
+  p=7, Paley:
+    k        tr(A^k)/k           c_k    correction  corr/tr%
+    3             14.0            14           0.0     0.00%
+    5             42.0            42          -0.0    -0.00%
+    7            318.0            24         294.0    92.45%
+
+  p=7, Interval:
+    k        tr(A^k)/k           c_k    correction  corr/tr%
+    3             14.0            14           0.0     0.00%
+    5             28.0            28          -0.0    -0.00%
+    7            395.0            17         378.0    95.70%
+
+  p=11, Paley:
+    k        tr(A^k)/k           c_k    correction  corr/tr%
+    3             55.0            55           0.0     0.00%
+    5            594.0           594           0.0     0.00%
+    7          11220.0          3960        7260.0    64.71%
+    9         216938.3         11055      205883.3    94.90%
+   11        4438890.0          5505     4433385.0    99.88%
+
+  p=11, Interval:
+    k        tr(A^k)/k           c_k    correction  corr/tr%
+    3             55.0            55           0.0     0.00%
+    5            484.0           484          -0.0    -0.00%
+    7          12749.0          3399        9350.0    73.34%
+    9         199624.3          9350      190274.3    95.32%
+   11        4621963.0          5109     4616854.0    99.89%
+
+======================================================================
+EXPECTED CYCLE COUNTS FOR RANDOM TOURNAMENTS ON p VERTICES
+======================================================================
+
+  E[c_k] = C(p,k) * (k-1)! / 2^k
+  (Each k-subset has E[(k-1)!/2^{k-1}] directed Ham. cycles,
+   divided by... wait, need careful counting)
+
+  In a random tournament on k vertices:
+  E[#directed Ham cycles] = (k-1)! * (1/2)^k
+  (Each of (k-1)! directed cycles has prob (1/2)^k of all edges present)
+
+  p=7:
+    k= 3: E[c_k] = C(7,3)=      35 * 0.2500 =             8.8
+    k= 5: E[c_k] = C(7,5)=      21 * 0.7500 =            15.8
+    k= 7: E[c_k] = C(7,7)=       1 * 5.6250 =             5.6
+
+  p=11:
+    k= 3: E[c_k] = C(11,3)=     165 * 0.2500 =            41.2
+    k= 5: E[c_k] = C(11,5)=     462 * 0.7500 =           346.5
+    k= 7: E[c_k] = C(11,7)=     330 * 5.6250 =          1856.2
+    k= 9: E[c_k] = C(11,9)=      55 * 78.7500 =          4331.2
+    k=11: E[c_k] = C(11,11)=       1 * 1771.8750 =          1771.9
+
+  p=19:
+    k= 3: E[c_k] = C(19,3)=     969 * 0.2500 =           242.2
+    k= 5: E[c_k] = C(19,5)=   11628 * 0.7500 =          8721.0
+    k= 7: E[c_k] = C(19,7)=   50388 * 5.6250 =        283432.5
+    k= 9: E[c_k] = C(19,9)=   92378 * 78.7500 =       7274767.5
+    k=11: E[c_k] = C(19,11)=   75582 * 1771.8750 =     133921856.2
+    k=13: E[c_k] = C(19,13)=   27132 * 58471.8750 =    1586458912.5
+    k=15: E[c_k] = C(19,15)=    3876 * 2660470.3125 =   10311982931.2
+    k=17: E[c_k] = C(19,17)=     171 * 159628218.7500 =   27296425406.2
+    k=19: E[c_k] = C(19,19)=       1 * 12211558734.3750 =   12211558734.4
+
+======================================================================
+PALEY CYCLE EXCESS OVER RANDOM
+======================================================================
+
+  p=7:
+    k= 3: c_k(P)=             14, E[random]=            8.8, P/E=1.6000, c_k(I)=          14, I/E=1.6000
+    k= 5: c_k(P)=             42, E[random]=           15.8, P/E=2.6667, c_k(I)=          28, I/E=1.7778
+    k= 7: c_k(P)=             24, E[random]=            5.6, P/E=4.2667, c_k(I)=          17, I/E=3.0222
+
+  p=11:
+    k= 3: c_k(P)=             55, E[random]=           41.2, P/E=1.3333, c_k(I)=          55, I/E=1.3333
+    k= 5: c_k(P)=            594, E[random]=          346.5, P/E=1.7143, c_k(I)=         484, I/E=1.3968
+    k= 7: c_k(P)=          3,960, E[random]=         1856.2, P/E=2.1333, c_k(I)=       3,399, I/E=1.8311
+    k= 9: c_k(P)=         11,055, E[random]=         4331.2, P/E=2.5524, c_k(I)=       9,350, I/E=2.1587
+    k=11: c_k(P)=          5,505, E[random]=         1771.9, P/E=3.1069, c_k(I)=       5,109, I/E=2.8834
+
+  p=19:
+    k= 3: c_k(P)=            285, E[random]=          242.2, P/E=1.1765
+    k= 5: c_k(P)=         11,628, E[random]=         8721.0, P/E=1.3333
+    k= 7: c_k(P)=        424,080, E[random]=       283432.5, P/E=1.4962
+    k= 9: c_k(P)=     12,156,390, E[random]=      7274767.5, P/E=1.6710
+    k=11: c_k(P)=    249,208,902, E[random]=    133921856.2, P/E=1.8609
+    k=13: c_k(P)=  3,280,900,392, E[random]=   1586458912.5, P/E=2.0681
+    k=15: c_k(P)= 23,662,379,790, E[random]=  10311982931.2, P/E=2.2946
+    k=17: c_k(P)= 69,401,425,077, E[random]=  27296425406.2, P/E=2.5425
+    k=19: c_k(P)= 34,358,763,933, E[random]=  12211558734.4, P/E=2.8136
+
+======================================================================
+PROOF SKETCH: alpha_1(Paley) > alpha_1(Interval)
+======================================================================
+
+  OBSERVATION: c_3 is the SAME for Paley and Interval (both regular).
+  For k >= 5: c_k(Paley) > c_k(Interval) at p=7,11,19.
+
+  KEY IDEA: Paley has MORE subtournament Hamiltonian cycles because
+  QR is a (p, m, (m-1)/2)-difference set (perfect difference set).
+
+  For a regular tournament T on p vertices with connection set S:
+  - The subtournament T[U] on k vertices has cycle structure
+    determined by the restriction of S to U.
+  - For Paley (S = QR), every pair of vertices has the SAME
+    number of common neighbors: lambda = (p-3)/4.
+  - This "most uniform" local structure creates the most cycles.
+
+  FORMAL ARGUMENT (heuristic):
+  The number of Hamiltonian cycles in a tournament on k vertices
+  is related to the permanent of the adjacency matrix.
+  By van der Waerden's conjecture (proved by Egorychev-Falikman):
+    perm(A) >= n! / n^n  for doubly stochastic A.
+  The more "uniform" A is, the closer perm(A) is to n!/n^n.
+  Paley subtournaments are the most uniform (QR difference set
+  property ensures flat edge density), so they have the most
+  permanent-like cycles.
+
+  COUNTERPOINT: This argument is NOT rigorous because:
+  1. Hamiltonian cycles != permanent
+  2. Subtournament uniformity depends on the k-subset
+  3. The difference set property gives uniformity for PAIRS,
+     not higher-order structures
+
