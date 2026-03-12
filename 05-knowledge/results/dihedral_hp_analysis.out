@@ -1,0 +1,81 @@
+======================================================================
+PART 1: D_{14} orbit decomposition of T_7 Hamiltonian paths
+======================================================================
+QR_7 = [1, 2, 4]
+Total HPs: 189 (expected 189)
+Z_7-orbits: 27 (expected 27 = 27)
+
+Palindromic (self-paired) orbits: 9
+Chiral pairs: 9
+D_{14}-orbits: 18
+Check: 9 + 2×9 = 27 Z_p-orbits (expected 27)
+
+--- Palindromic orbit representatives ---
+  Orbit 0: (0, 1, 2, 3, 4, 5, 6) → reflect → (1, 2, 3, 4, 5, 6, 0) → rot(6) → (0, 1, 2, 3, 4, 5, 6)
+  Orbit 3: (0, 1, 2, 6, 3, 4, 5) → reflect → (2, 3, 4, 1, 5, 6, 0) → rot(5) → (0, 1, 2, 6, 3, 4, 5)
+  Orbit 8: (0, 1, 5, 2, 6, 3, 4) → reflect → (3, 4, 1, 5, 2, 6, 0) → rot(4) → (0, 1, 5, 2, 6, 3, 4)
+  Orbit 10: (0, 2, 3, 4, 5, 6, 1) → reflect → (6, 1, 2, 3, 4, 5, 0) → rot(1) → (0, 2, 3, 4, 5, 6, 1)
+  Orbit 14: (0, 2, 4, 5, 6, 1, 3) → reflect → (4, 6, 1, 2, 3, 5, 0) → rot(3) → (0, 2, 4, 5, 6, 1, 3)
+
+--- Chiral pair representatives ---
+  Orbits 1,23: (0, 1, 2, 4, 5, 6, 3) ↔ (0, 4, 5, 6, 1, 2, 3)
+  Orbits 2,16: (0, 1, 2, 4, 6, 3, 5) ↔ (0, 2, 6, 1, 3, 4, 5)
+  Orbits 4,18: (0, 1, 3, 4, 5, 2, 6) ↔ (0, 4, 1, 2, 3, 5, 6)
+
+======================================================================
+PART 2: Odd cycle pairing under anti-automorphism
+======================================================================
+Total odd directed cycles in T_7: 80
+By length: [(3, 14), (5, 42), (7, 24)]
+
+Anti-aut cycle pairing:
+  Fixed (self-paired) cycles: 12
+  Chiral pairs of cycles: 34
+  Check: 12 + 2×34 = 80 (expected 80)
+
+  Vertex-DISJOINT paired cycles: 1/34
+  These contribute to α_2 in OCF: each disjoint pair contributes +4 to H
+
+  OCF components:
+  alpha_1 = 80 (total odd cycles)
+  alpha_2 = 7 (disjoint pairs)
+  H = I(Omega, 2) ≥ 1 + 2*80 + 4*7 = 189
+  (This is a LOWER BOUND; full I(Omega,2) also counts alpha_3, alpha_4, ...)
+
+======================================================================
+PART 3: OCF structure for all circulant tournaments on Z_7
+======================================================================
+
+S                   H   α₁   α₂   α₃  Paley?   palindromic_Ω
+[1, 2, 3]         175   59   14    0      no I= 175
+[2, 3, 6]         175   59   14    0      no I= 175
+[1, 3, 5]         175   59   14    0      no I= 175
+[3, 5, 6]         189   80    7    0     YES I= 189
+[1, 2, 4]         189   80    7    0     YES I= 189
+[2, 4, 6]         175   59   14    0      no I= 175
+[1, 4, 5]         175   59   14    0      no I= 175
+[4, 5, 6]         175   59   14    0      no I= 175
+
+H = 1 + 2*α₁ + 4*α₂ + 8*α₃ + ... (OCF expansion)
+Paley maximizes H by maximizing the FULL independence polynomial, not just low-order terms
+
+======================================================================
+PART 4: Representation theory summary
+======================================================================
+
+D_{14} irreducible representations:
+  1-dim reps: 2 (trivial, sign)
+  2-dim reps: 3
+  Total: 5 irreducible reps
+
+HP space decomposition (189 HPs as D_{14}-representation):
+  Total dim = 189
+  Palindromic orbits (fixed by σ): 9 → contribute to 1-dim reps
+  Chiral pairs: 9 → each gives a 2-dim rep
+  Decomposition: 9 × 1-dim + 9 × 2-dim = 27 Z_p-orbits
+
+  D-orbits: 18 = H/(2p) would be 13.5
+  Palindromic size = 63, Chiral size = 126
+  Total = 189
+
+DONE.
