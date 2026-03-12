@@ -1,0 +1,188 @@
+PALEY OCF MECHANISM: WHY MORE ODD CYCLES?
+======================================================================
+
+======================================================================
+n = 3
+======================================================================
+
+  S=[2] [PALEY]
+    Cycle counts by length: {3: 1}
+    Total odd cycles: 1
+    Tr(A^3)/3 = 1.0 (should = C_3 = 1)
+    Tr(A^3) = 3.0, Σ|λ|^3 = 3.0000
+    Independence polynomial: {0: 1, 1: 1}
+    H = I(Ω,2) = 3
+
+  S=[1] [PALEY]
+    Cycle counts by length: {3: 1}
+    Total odd cycles: 1
+    Tr(A^3)/3 = 1.0 (should = C_3 = 1)
+    Tr(A^3) = 3.0, Σ|λ|^3 = 3.0000
+    Independence polynomial: {0: 1, 1: 1}
+    H = I(Ω,2) = 3
+
+======================================================================
+n = 5
+======================================================================
+
+  S=[3, 4] [other]
+    Cycle counts by length: {3: 5, 4: 5, 5: 2}
+    Total odd cycles: 7
+    Tr(A^3)/3 = 5.0 (should = C_3 = 5)
+    Tr(A^3) = 15.0, Σ|λ|^3 = 16.9443
+    Tr(A^5) = 10.0, Σ|λ|^5 = 54.3607
+    Independence polynomial: {0: 1, 1: 7}
+    H = I(Ω,2) = 15
+
+  S=[1, 3] [other]
+    Cycle counts by length: {3: 5, 4: 5, 5: 2}
+    Total odd cycles: 7
+    Tr(A^3)/3 = 5.0 (should = C_3 = 5)
+    Tr(A^3) = 15.0, Σ|λ|^3 = 16.9443
+    Tr(A^5) = 10.0, Σ|λ|^5 = 54.3607
+    Independence polynomial: {0: 1, 1: 7}
+    H = I(Ω,2) = 15
+
+  S=[2, 4] [other]
+    Cycle counts by length: {3: 5, 4: 5, 5: 2}
+    Total odd cycles: 7
+    Tr(A^3)/3 = 5.0 (should = C_3 = 5)
+    Tr(A^3) = 15.0, Σ|λ|^3 = 16.9443
+    Tr(A^5) = 10.0, Σ|λ|^5 = 54.3607
+    Independence polynomial: {0: 1, 1: 7}
+    H = I(Ω,2) = 15
+
+  S=[1, 2] [other]
+    Cycle counts by length: {3: 5, 4: 5, 5: 2}
+    Total odd cycles: 7
+    Tr(A^3)/3 = 5.0 (should = C_3 = 5)
+    Tr(A^3) = 15.0, Σ|λ|^3 = 16.9443
+    Tr(A^5) = 10.0, Σ|λ|^5 = 54.3607
+    Independence polynomial: {0: 1, 1: 7}
+    H = I(Ω,2) = 15
+
+======================================================================
+n = 7
+======================================================================
+
+  S=[4, 5, 6] [other]
+    Cycle counts by length: {3: 14, 4: 28, 5: 28, 6: 28, 7: 17}
+    Total odd cycles: 59
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 51.0629
+    Tr(A^5) = 140.0, Σ|λ|^5 = 358.3267
+    Tr(A^7) = 2765.0, Σ|λ|^7 = 2765.8532
+    Independence polynomial: {0: 0, 1: 59, 2: 14, 3: 0}
+    H = I(Ω,2) = 174
+
+  S=[1, 4, 5] [other]
+    Cycle counts by length: {3: 14, 4: 28, 5: 28, 6: 28, 7: 17}
+    Total odd cycles: 59
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 51.0629
+    Tr(A^5) = 140.0, Σ|λ|^5 = 358.3267
+    Tr(A^7) = 2765.0, Σ|λ|^7 = 2765.8532
+    Independence polynomial: {0: 0, 1: 59, 2: 14, 3: 0}
+    H = I(Ω,2) = 174
+
+  S=[2, 4, 6] [other]
+    Cycle counts by length: {3: 14, 4: 28, 5: 28, 6: 28, 7: 17}
+    Total odd cycles: 59
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 51.0629
+    Tr(A^5) = 140.0, Σ|λ|^5 = 358.3267
+    Tr(A^7) = 2765.0, Σ|λ|^7 = 2765.8532
+    Independence polynomial: {0: 0, 1: 59, 2: 14, 3: 0}
+    H = I(Ω,2) = 174
+
+  S=[1, 2, 4] [PALEY]
+    Cycle counts by length: {3: 14, 4: 21, 5: 42, 6: 35, 7: 24}
+    Total odd cycles: 80
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 43.9706
+    Tr(A^5) = 210.0, Σ|λ|^5 = 276.9411
+    Tr(A^7) = 2226.0, Σ|λ|^7 = 2254.8823
+    Independence polynomial: {0: 0, 1: 80, 2: 7, 3: 0}
+    H = I(Ω,2) = 188
+
+  S=[3, 5, 6] [PALEY]
+    Cycle counts by length: {3: 14, 4: 21, 5: 42, 6: 35, 7: 24}
+    Total odd cycles: 80
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 43.9706
+    Tr(A^5) = 210.0, Σ|λ|^5 = 276.9411
+    Tr(A^7) = 2226.0, Σ|λ|^7 = 2254.8823
+    Independence polynomial: {0: 0, 1: 80, 2: 7, 3: 0}
+    H = I(Ω,2) = 188
+
+  S=[1, 3, 5] [other]
+    Cycle counts by length: {3: 14, 4: 28, 5: 28, 6: 28, 7: 17}
+    Total odd cycles: 59
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 51.0629
+    Tr(A^5) = 140.0, Σ|λ|^5 = 358.3267
+    Tr(A^7) = 2765.0, Σ|λ|^7 = 2765.8532
+    Independence polynomial: {0: 0, 1: 59, 2: 14, 3: 0}
+    H = I(Ω,2) = 174
+
+  S=[2, 3, 6] [other]
+    Cycle counts by length: {3: 14, 4: 28, 5: 28, 6: 28, 7: 17}
+    Total odd cycles: 59
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 51.0629
+    Tr(A^5) = 140.0, Σ|λ|^5 = 358.3267
+    Tr(A^7) = 2765.0, Σ|λ|^7 = 2765.8532
+    Independence polynomial: {0: 0, 1: 59, 2: 14, 3: 0}
+    H = I(Ω,2) = 174
+
+  S=[1, 2, 3] [other]
+    Cycle counts by length: {3: 14, 4: 28, 5: 28, 6: 28, 7: 17}
+    Total odd cycles: 59
+    Tr(A^3)/3 = 14.0 (should = C_3 = 14)
+    Tr(A^3) = 42.0, Σ|λ|^3 = 51.0629
+    Tr(A^5) = 140.0, Σ|λ|^5 = 358.3267
+    Tr(A^7) = 2765.0, Σ|λ|^7 = 2765.8532
+    Independence polynomial: {0: 0, 1: 59, 2: 14, 3: 0}
+    H = I(Ω,2) = 174
+
+======================================================================
+EIGENVALUE FORMULA FOR CYCLE COUNTS
+======================================================================
+
+  Paley S={1, 2, 4}: eigenvalues = ['3.000+0.000j', '-0.500+1.323j', '-0.500+1.323j', '-0.500-1.323j', '-0.500+1.323j', '-0.500-1.323j', '-0.500-1.323j']
+  Other S={1, 2, 3}: eigenvalues = ['3.000+0.000j', '-0.500+2.191j', '-0.500-0.241j', '-0.500+0.627j', '-0.500-0.627j', '-0.500+0.241j', '-0.500-2.191j']
+
+  Power sums comparison:
+    ℓ=1: Tr_Paley=    -0.000, Tr_Other=    -0.000, diff=   0.000
+    ℓ=2: Tr_Paley=    -0.000, Tr_Other=    -0.000, diff=  -0.000
+    ℓ=3: Tr_Paley=    42.000, Tr_Other=    42.000, diff=  -0.000
+    ℓ=4: Tr_Paley=    84.000, Tr_Other=   112.000, diff= -28.000
+    ℓ=5: Tr_Paley=   210.000, Tr_Other=   140.000, diff=  70.000
+    ℓ=6: Tr_Paley=   756.000, Tr_Other=   672.000, diff=  84.000
+    ℓ=7: Tr_Paley=  2226.000, Tr_Other=  2765.000, diff=-539.000
+
+  Real parts of eigenvalues:
+    k=0: Paley Re=3.000000, Other Re=3.000000
+    k=1: Paley Re=-0.500000, Other Re=-0.500000
+    k=2: Paley Re=-0.500000, Other Re=-0.500000
+    k=3: Paley Re=-0.500000, Other Re=-0.500000
+    k=4: Paley Re=-0.500000, Other Re=-0.500000
+    k=5: Paley Re=-0.500000, Other Re=-0.500000
+    k=6: Paley Re=-0.500000, Other Re=-0.500000
+
+  Verification: Re(λ_k) = -1/2 for all k≥1 and ALL circulant tournaments on Z_p?
+    CONFIRMED: All circulant tournaments on Z_7 have Re(λ_k)=-1/2 for k≥1
+
+  Imaginary parts:
+    k=1: Paley Im=1.322876 (|Im|=1.322876), Other Im=2.190643 (|Im|=2.190643)
+    k=2: Paley Im=1.322876 (|Im|=1.322876), Other Im=-0.240787 (|Im|=0.240787)
+    k=3: Paley Im=-1.322876 (|Im|=1.322876), Other Im=0.626980 (|Im|=0.626980)
+    k=4: Paley Im=1.322876 (|Im|=1.322876), Other Im=-0.626980 (|Im|=0.626980)
+    k=5: Paley Im=-1.322876 (|Im|=1.322876), Other Im=0.240787 (|Im|=0.240787)
+    k=6: Paley Im=-1.322876 (|Im|=1.322876), Other Im=-2.190643 (|Im|=2.190643)
+
+  Sum of Im² (should be p(p-1)/8 = 5.25):
+    Paley: Σ Im² = 10.500000
+    Other: Σ Im² = 10.500000
+
+DONE.

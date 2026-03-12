@@ -1,0 +1,31 @@
+PALEY GLOBAL MAXIMALITY CHECK
+======================================================================
+
+n=5: Exhaustive enumeration of all 2^C(5,2) = 1024 tournaments
+  1024 tournaments, 0.0s
+  H distribution: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+  Max H = 15 (expected 15 from circulant analysis)
+  Maximizer count: 64
+  Maximizer score seq: (1, 2, 2, 2, 3)
+  Maximizer circulant: False
+
+n=7: Exhaustive enumeration of all 2^C(7,2) = 2097152 tournaments
+  ... 500000/2097152 done, current max H=189
+  ... 1000000/2097152 done, current max H=189
+  ... 1500000/2097152 done, current max H=189
+  ... 2000000/2097152 done, current max H=189
+  2097152 tournaments, 461.8s
+  Distinct H values: 77
+  Max H = 189 (expected 189 from Paley circulant)
+  Maximizers: 240 labeled, 2 circulant
+  Maximizer score seqs: {(3, 3, 3, 3, 3, 3, 3): 240}
+  Top H values: [(189, 240), (175, 720), (171, 1680), (159, 16800), (157, 5040), (155, 5040), (153, 15120), (151, 25200), (147, 5040), (145, 10080)]
+
+  Checking Paley structure of maximizers...
+  Paley (S={1, 2, 4}) H = 189
+
+n=9: Sampling 500000 random tournaments
+  ... 100000 done, current max H=3333
+  ... 200000 done, current max H=3333
+  ... 300000 done, current max H=3333
+  ... 400000 done, current max H=3333
