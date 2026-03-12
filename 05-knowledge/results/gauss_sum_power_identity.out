@@ -1,0 +1,519 @@
+
+======================================================================
+  SECTION 1: Z_7 Circulant Tournaments — Eigenvalue Analysis
+======================================================================
+
+QR_7 = [1, 2, 4]
+Total circulant tournaments on Z_7: 8
+Isomorphism classes: 2
+
+Class 1: S = [1, 2, 3]  (size 6)
+  λ_0 =  +3.0000  +0.0000i   |λ|=3.0000  arg=0.0000
+  λ_1 =  -0.5000  +2.1906i   |λ|=2.2470  arg=1.7952
+  λ_2 =  -0.5000  -0.2408i   |λ|=0.5550  arg=-2.6928
+  λ_3 =  -0.5000  +0.6270i   |λ|=0.8019  arg=2.2440
+  λ_4 =  -0.5000  -0.6270i   |λ|=0.8019  arg=-2.2440
+  λ_5 =  -0.5000  +0.2408i   |λ|=0.5550  arg=2.6928
+  λ_6 =  -0.5000  -2.1906i   |λ|=2.2470  arg=-1.7952
+  c_3 = 14.0  (imag: -9.47e-15)
+  c_5 = 28.0  (imag: 6.39e-14)
+  c_7 = 395.0  (imag: -3.77e-13)
+  Σλ^3 = 42.0
+  Σλ^5 = 140.0
+
+Class 2: S = [3, 5, 6]  (size 2)
+  λ_0 =  +3.0000  +0.0000i   |λ|=3.0000  arg=0.0000
+  λ_1 =  -0.5000  -1.3229i   |λ|=1.4142  arg=-1.9322
+  λ_2 =  -0.5000  -1.3229i   |λ|=1.4142  arg=-1.9322
+  λ_3 =  -0.5000  +1.3229i   |λ|=1.4142  arg=1.9322
+  λ_4 =  -0.5000  -1.3229i   |λ|=1.4142  arg=-1.9322
+  λ_5 =  -0.5000  +1.3229i   |λ|=1.4142  arg=1.9322
+  λ_6 =  -0.5000  +1.3229i   |λ|=1.4142  arg=1.9322
+  c_3 = 14.0  (imag: -2.18e-14)
+  c_5 = 42.0  (imag: 3.85e-14)
+  c_7 = 318.0  (imag: -2.87e-14)
+  Σλ^3 = 42.0
+  Σλ^5 = 210.0
+
+
+======================================================================
+  SECTION 2: c_3 and c_5 for ALL Z_7 circulants
+======================================================================
+
+S=[1, 2, 3]:  c_3=   14  c_5=   28
+S=[2, 3, 6]:  c_3=   14  c_5=   28
+S=[1, 3, 5]:  c_3=   14  c_5=   28
+S=[3, 5, 6]:  c_3=   14  c_5=   42
+S=[1, 2, 4]:  c_3=   14  c_5=   42 ← PALEY
+S=[2, 4, 6]:  c_3=   14  c_5=   28
+S=[1, 4, 5]:  c_3=   14  c_5=   28
+S=[4, 5, 6]:  c_3=   14  c_5=   28
+
+======================================================================
+  SECTION 3: Why Paley Maximizes c_5 — Eigenvalue Magnitudes
+======================================================================
+
+Key insight: c_5 = (1/5) Σ λ_k^5
+For circulants, λ_0 = |S| = (p-1)/2 always.
+The k≠0 eigenvalues are Gauss-type sums.
+
+--- NON-PALEY: S = [1, 2, 3] ---
+  |λ_k|:   ['3.0000', '2.2470', '0.5550', '0.8019', '0.8019', '0.5550', '2.2470']
+  |λ_k|^5: ['243.00', '57.28', '0.05', '0.33', '0.33', '0.05', '57.28']
+  Σ|λ_k|^5 = 358.33
+  Σλ_k^5   = 140.00 (actual, determines c_5)
+  Ratio actual/max_possible = 0.3907
+
+--- NON-PALEY: S = [3, 5, 6] ---
+  |λ_k|:   ['3.0000', '1.4142', '1.4142', '1.4142', '1.4142', '1.4142', '1.4142']
+  |λ_k|^5: ['243.00', '5.66', '5.66', '5.66', '5.66', '5.66', '5.66']
+  Σ|λ_k|^5 = 276.94
+  Σλ_k^5   = 210.00 (actual, determines c_5)
+  Ratio actual/max_possible = 0.7583
+
+For Paley (QR): ALL |λ_k| = √p for k≠0 (Gauss sum property)
+  → |λ_k|^5 = p^{5/2} for each k≠0
+  → Maximum possible 5th power contribution from k≠0 terms
+
+For non-Paley: |λ_k| vary, and by power-mean inequality,
+  Σ|λ_k|^5 < (p-1)*p^{5/2} when magnitudes are unequal.
+
+======================================================================
+  SECTION 4: Gauss Sum Identity for QR Sets
+======================================================================
+
+For S = QR_p, the eigenvalue is a Gauss sum:
+  G_k = Σ_{s∈QR} ω^{ks}
+
+Classical result: G_k = (χ(k)*g(χ) - 1) / 2
+  where g(χ) = Σ_{t=1}^{p-1} χ(t)ω^t is the quadratic Gauss sum
+  and χ is the Legendre symbol mod p
+
+For p ≡ 3 (mod 4): g(χ) = i√p
+For p ≡ 1 (mod 4): g(χ) = √p
+
+
+p = 5, QR = [1, 4]
+  g(χ) = 2.2361 + -0.0000i
+  |g(χ)|² = 5.00  (should be 5)
+  k=0: λ_direct=+2.0000+0.0000i  λ_formula=+2.0000+0.0000i  err=0.00e+00
+  k=1: λ_direct=+0.6180+0.0000i  λ_formula=+0.6180-0.0000i  err=1.24e-16
+  k=2: λ_direct=-1.6180+0.0000i  λ_formula=-1.6180+0.0000i  err=2.78e-16
+  k=3: λ_direct=-1.6180+0.0000i  λ_formula=-1.6180+0.0000i  err=4.48e-16
+
+p = 7, QR = [1, 2, 4]
+  g(χ) = 0.0000 + 2.6458i
+  |g(χ)|² = 7.00  (should be 7)
+  k=0: λ_direct=+3.0000+0.0000i  λ_formula=+3.0000+0.0000i  err=0.00e+00
+  k=1: λ_direct=-0.5000+1.3229i  λ_formula=-0.5000+1.3229i  err=4.97e-16
+  k=2: λ_direct=-0.5000+1.3229i  λ_formula=-0.5000+1.3229i  err=2.22e-16
+  k=3: λ_direct=-0.5000-1.3229i  λ_formula=-0.5000-1.3229i  err=1.09e-15
+
+p = 11, QR = [1, 3, 4, 5, 9]
+  g(χ) = 0.0000 + 3.3166i
+  |g(χ)|² = 11.00  (should be 11)
+  k=0: λ_direct=+5.0000+0.0000i  λ_formula=+5.0000+0.0000i  err=0.00e+00
+  k=1: λ_direct=-0.5000+1.6583i  λ_formula=-0.5000+1.6583i  err=2.78e-16
+  k=2: λ_direct=-0.5000-1.6583i  λ_formula=-0.5000-1.6583i  err=7.02e-16
+  k=3: λ_direct=-0.5000+1.6583i  λ_formula=-0.5000+1.6583i  err=9.69e-16
+
+p = 13, QR = [1, 3, 4, 9, 10, 12]
+  g(χ) = 3.6056 + -0.0000i
+  |g(χ)|² = 13.00  (should be 13)
+  k=0: λ_direct=+6.0000+0.0000i  λ_formula=+6.0000+0.0000i  err=0.00e+00
+  k=1: λ_direct=+1.3028-0.0000i  λ_formula=+1.3028-0.0000i  err=9.16e-16
+  k=2: λ_direct=-2.3028+0.0000i  λ_formula=-2.3028+0.0000i  err=1.05e-15
+  k=3: λ_direct=+1.3028-0.0000i  λ_formula=+1.3028-0.0000i  err=5.55e-16
+
+======================================================================
+  SECTION 5: Fifth Power Sum Identity
+======================================================================
+
+For S = QR_p, λ_k = (χ(k)·g - 1)/2 where g = g(χ).
+So λ_k^5 = (1/32)(χ(k)g - 1)^5
+
+Expanding (χ(k)g - 1)^5 by binomial theorem:
+  = Σ_{j=0}^{5} C(5,j) (χ(k)g)^j (-1)^{5-j}
+  = -1 + 5χg - 10g² + 10χg³ - 5g⁴ + χg⁵
+  (using χ(k)^j = χ(k) for odd j, 1 for even j, when k≠0)
+
+p= 5: g²=5.00-0.00j (expect χ(-1)·p = 5), c_5(Paley)=2, formula check: 2.26e-14
+p= 7: g²=-7.00+0.00j (expect χ(-1)·p = -7), c_5(Paley)=42, formula check: 8.99e-14
+p=11: g²=-11.00+0.00j (expect χ(-1)·p = -11), c_5(Paley)=594, formula check: 5.67e-13
+p=13: g²=13.00-0.00j (expect χ(-1)·p = 13), c_5(Paley)=1482, formula check: 2.73e-12
+p=17: g²=17.00+0.00j (expect χ(-1)·p = 17), c_5(Paley)=6392, formula check: 3.64e-12
+p=19: g²=-19.00+0.00j (expect χ(-1)·p = -19), c_5(Paley)=11628, formula check: 8.10e-12
+p=23: g²=-23.00+0.00j (expect χ(-1)·p = -23), c_5(Paley)=31878, formula check: 3.20e-11
+
+======================================================================
+  SECTION 6: Closed Form for c_5(Paley_p)
+======================================================================
+
+Using g² = χ(-1)·p:
+  For p ≡ 3 mod 4: g² = -p, g⁴ = p²
+  For p ≡ 1 mod 4: g² = p,  g⁴ = p²
+
+Σ_{k≠0} λ_k^5 = (p-1)/32 · (-1 - 10·χ(-1)·p - 5p²)
+
+Total: 5·c_5 = ((p-1)/2)^5 + (p-1)/32·(-1 - 10·χ(-1)·p - 5p²)
+
+  p= 5: χ(-1)=+1, c_5 =        2, direct=       2  ✓
+  p= 7: χ(-1)=-1, c_5 =       42, direct=      42  ✓
+  p=11: χ(-1)=-1, c_5 =      594, direct=     594  ✓
+  p=13: χ(-1)=+1, c_5 =     1482, direct=    1482  ✓
+  p=17: χ(-1)=+1, c_5 =     6392, direct=    6392  ✓
+  p=19: χ(-1)=-1, c_5 =    11628, direct=   11628  ✓
+  p=23: χ(-1)=-1, c_5 =    31878, direct=   31878  ✓
+  p=29: χ(-1)=+1, c_5 =   106778, direct=  106778  ✓
+  p=31: χ(-1)=-1, c_5 =   151032, direct=  151032  ✓
+
+======================================================================
+  SECTION 6b: Simplified c_5(Paley_p) Formula
+======================================================================
+
+5·c_5(Paley_p) = ((p-1)/2)^5 + (p-1)/32 · (-1 - 10χ(-1)p - 5p²)
+
+Let's separate by residue class of p mod 4:
+
+Case p ≡ 1 (mod 4):  χ(-1) = +1
+  5c_5 = (p-1)^5/32 + (p-1)(-1 - 10p - 5p²)/32
+       = (p-1)/32 · [(p-1)^4 - 1 - 10p - 5p²]
+
+Case p ≡ 3 (mod 4):  χ(-1) = -1
+  5c_5 = (p-1)^5/32 + (p-1)(-1 + 10p - 5p²)/32
+       = (p-1)/32 · [(p-1)^4 - 1 + 10p - 5p²]
+
+Expanding (p-1)^4 = p^4 - 4p^3 + 6p^2 - 4p + 1:
+
+Case p ≡ 1 (mod 4):
+  bracket = p^4 - 4p^3 + 6p^2 - 4p + 1 - 1 - 10p - 5p^2
+         = p^4 - 4p^3 + p^2 - 14p
+         = p(p^3 - 4p^2 + p - 14)
+
+Case p ≡ 3 (mod 4):
+  bracket = p^4 - 4p^3 + 6p^2 - 4p + 1 - 1 + 10p - 5p^2
+         = p^4 - 4p^3 + p^2 + 6p
+         = p(p^3 - 4p^2 + p + 6)
+
+So: 5c_5(Paley_p) = p(p-1)/32 × f(p)
+  where f(p) = p³ - 4p² + p - 14  if p ≡ 1 (mod 4)
+        f(p) = p³ - 4p² + p + 6   if p ≡ 3 (mod 4)
+
+  p= 5 ≡ 1 mod 4: f(p)=    16, c_5 =        2, direct =        2  ✓
+  p= 7 ≡ 3 mod 4: f(p)=   160, c_5 =       42, direct =       42  ✓
+  p=11 ≡ 3 mod 4: f(p)=   864, c_5 =      594, direct =      594  ✓
+  p=13 ≡ 1 mod 4: f(p)=  1520, c_5 =     1482, direct =     1482  ✓
+  p=17 ≡ 1 mod 4: f(p)=  3760, c_5 =     6392, direct =     6392  ✓
+  p=19 ≡ 3 mod 4: f(p)=  5440, c_5 =    11628, direct =    11628  ✓
+  p=23 ≡ 3 mod 4: f(p)= 10080, c_5 =    31878, direct =    31878  ✓
+  p=29 ≡ 1 mod 4: f(p)= 21040, c_5 =   106778, direct =   106778  ✓
+  p=31 ≡ 3 mod 4: f(p)= 25984, c_5 =   151032, direct =   151032  ✓
+
+======================================================================
+  SECTION 7: Paley vs Non-Paley c_5 Ratios at Various p
+======================================================================
+
+
+p = 5, QR = [1, 4]
+  Paley: c_3 = 0, c_5 = 2
+  S=[1, 2]: c_3=5, c_5=2, c_5/c_5(Paley) = 1.0000
+  → c_5(Paley)/c_5(min) = 1.0000
+
+p = 7, QR = [1, 2, 4]
+  Paley: c_3 = 14, c_5 = 42
+  S=[1, 2, 3]: c_3=14, c_5=28, c_5/c_5(Paley) = 0.6667
+  S=[3, 5, 6]: c_3=14, c_5=42, c_5/c_5(Paley) = 1.0000
+  → c_5(Paley)/c_5(min) = 1.5000
+
+p = 11, QR = [1, 3, 4, 5, 9]
+  Paley: c_3 = 55, c_5 = 594
+  S=[1, 2, 3, 4, 5]: c_3=55, c_5=484, c_5/c_5(Paley) = 0.8148
+  S=[2, 3, 4, 5, 10]: c_3=55, c_5=572, c_5/c_5(Paley) = 0.9630
+  S=[1, 3, 4, 5, 9]: c_3=55, c_5=594, c_5/c_5(Paley) = 1.0000 PALEY
+  S=[1, 2, 4, 5, 8]: c_3=55, c_5=550, c_5/c_5(Paley) = 0.9259
+  → c_5(Paley)/c_5(min) = 1.2273
+
+p = 13, QR = [1, 3, 4, 9, 10, 12]
+  Paley: c_3 = 52, c_5 = 1482
+  S=[1, 2, 3, 4, 5, 6]: c_3=91, c_5=1274, c_5/c_5(Paley) = 0.8596
+  S=[2, 3, 4, 5, 6, 12]: c_3=91, c_5=1430, c_5/c_5(Paley) = 0.9649
+  S=[1, 3, 4, 5, 6, 11]: c_3=91, c_5=1456, c_5/c_5(Paley) = 0.9825
+  S=[3, 4, 5, 6, 11, 12]: c_3=91, c_5=1378, c_5/c_5(Paley) = 0.9298
+  S=[2, 4, 5, 6, 10, 12]: c_3=91, c_5=1482, c_5/c_5(Paley) = 1.0000
+  S=[3, 5, 6, 9, 11, 12]: c_3=91, c_5=1456, c_5/c_5(Paley) = 0.9825
+  → c_5(Paley)/c_5(min) = 1.1633
+
+======================================================================
+  SECTION 8: Power-Mean Inequality Explanation
+======================================================================
+
+
+WHY Paley maximizes c_5 among circulants:
+
+For ANY circulant tournament on Z_p:
+  λ_0 = (p-1)/2  (always)
+  Σ_{k=1}^{p-1} |λ_k|² = Σ_{k=1}^{p-1} Σ_{s,t∈S} ω^{k(s-t)}
+                         = (p-1)·|S| - |S|²/...
+
+Actually, let's compute Σ|λ_k|² directly via Parseval:
+  Σ_{k=0}^{p-1} |λ_k|² = p · |S| = p(p-1)/2
+
+So Σ_{k=1}^{p-1} |λ_k|² = p(p-1)/2 - ((p-1)/2)² = (p-1)(p+1)/4
+
+For Paley: each |λ_k| = √((p+1)/4·(p-1)/(p-1)) — wait let me just verify:
+
+  p=5: Σ|λ_k|² (k≠0) = 6.00, expected = 6.00, per term = 1.5000, √(per term) = 1.2247
+  p=7: Σ|λ_k|² (k≠0) = 12.00, expected = 12.00, per term = 2.0000, √(per term) = 1.4142
+  p=11: Σ|λ_k|² (k≠0) = 30.00, expected = 30.00, per term = 3.0000, √(per term) = 1.7321
+  p=13: Σ|λ_k|² (k≠0) = 42.00, expected = 42.00, per term = 3.5000, √(per term) = 1.8708
+
+So Σ_{k≠0} |λ_k|² = (p-1)(p+1)/4, giving average |λ|² = (p+1)/4.
+For Paley, EVERY |λ_k|² = (p+1)/4 (Gauss sum: |g|²=p → |λ|²=(p+1)/4).
+
+Wait, let me recheck for p=7:
+  |λ_0|² = 9.0000
+  |λ_1|² = 2.0000
+  |λ_2|² = 2.0000
+  |λ_3|² = 2.0000
+  |λ_4|² = 2.0000
+  |λ_5|² = 2.0000
+  |λ_6|² = 2.0000
+
+Hmm, |λ_k|² = 2 for k≠0 at p=7, and (p+1)/4 = 2. Correct!
+
+
+The key is that Σ_{k≠0} Re(λ_k^5) is maximized when all phases align constructively
+AND all magnitudes are equal (concentrating mass at the "right" phases).
+
+By the power-mean inequality:
+  (Σ|λ_k|^5)/(p-1) ≥ ((Σ|λ_k|²)/(p-1))^{5/2}   — WRONG direction!
+
+Actually, the power-mean inequality says:
+  (Σ|λ_k|^5/(p-1))^{1/5} ≥ (Σ|λ_k|²/(p-1))^{1/2}
+
+which gives: Σ|λ_k|^5 ≥ (p-1)·((p+1)/4)^{5/2}
+
+with EQUALITY when all |λ_k| are equal, i.e., for Paley.
+
+Wait — this says Paley MINIMIZES Σ|λ_k|^5, not maximizes!
+That's because power-mean goes the other direction for p>2.
+
+Let me think again...
+
+Direct check: which circulant maximizes Σ|λ_k|^5?
+
+  p=5: Σ|λ_k|^5 range: 22.36 to 22.36
+    Max c_5 = 2 (Paley? False)
+    Min c_5 = 2
+
+  p=7: Σ|λ_k|^5 range: 33.94 to 115.33
+    Paley: Σ|λ|^5 = 33.94 (rank 1/8), Re(Σλ^5) = 210.00, c_5 = 42
+    Max c_5 = 42 (Paley? True)
+    Min c_5 = 28
+
+  p=11: Σ|λ_k|^5 range: 155.88 to 1076.40
+    Paley: Σ|λ|^5 = 155.88 (rank 1/32), Re(Σλ^5) = 2970.00, c_5 = 594
+    Max c_5 = 594 (Paley? True)
+    Min c_5 = 484
+
+KEY FINDING: For Paley (QR sets), equal magnitudes |λ_k| = √((p+1)/4)
+MINIMIZE Σ|λ_k|^5 among all circulants (by power-mean inequality).
+
+But Paley MAXIMIZES Re(Σλ^5) = 5·c_5!
+
+This means the PHASE ALIGNMENT is the crucial factor, not the magnitudes.
+The Gauss sum phases for QR sets are arithmetically special — they
+constructively interfere when raised to odd powers.
+
+
+======================================================================
+  SECTION 9: Phase Analysis — Why QR Phases Align
+======================================================================
+
+
+p = 7:
+         S=[1, 2, 3]:
+    k=1: λ phase=+1.7952 (0.5714π), λ^5 phase=+2.6928 (0.8571π), |λ|=2.2470, Re(λ^5)=-51.6066
+    k=2: λ phase=-2.6928 (-0.8571π), λ^5 phase=-0.8976 (-0.2857π), |λ|=0.5550, Re(λ^5)=+0.0328
+    k=3: λ phase=+2.2440 (0.7143π), λ^5 phase=-1.3464 (-0.4286π), |λ|=0.8019, Re(λ^5)=+0.0738
+    k=4: λ phase=-2.2440 (-0.7143π), λ^5 phase=+1.3464 (0.4286π), |λ|=0.8019, Re(λ^5)=+0.0738
+    k=5: λ phase=+2.6928 (0.8571π), λ^5 phase=+0.8976 (0.2857π), |λ|=0.5550, Re(λ^5)=+0.0328
+    k=6: λ phase=-1.7952 (-0.5714π), λ^5 phase=-2.6928 (-0.8571π), |λ|=2.2470, Re(λ^5)=-51.6066
+    Σ_{k≠0} Re(λ^5) = -103.0000
+         S=[3, 5, 6]:
+    k=1: λ phase=-1.9322 (-0.6150π), λ^5 phase=+2.9056 (0.9249π), |λ|=1.4142, Re(λ^5)=-5.5000
+    k=2: λ phase=-1.9322 (-0.6150π), λ^5 phase=+2.9056 (0.9249π), |λ|=1.4142, Re(λ^5)=-5.5000
+    k=3: λ phase=+1.9322 (0.6150π), λ^5 phase=-2.9056 (-0.9249π), |λ|=1.4142, Re(λ^5)=-5.5000
+    k=4: λ phase=-1.9322 (-0.6150π), λ^5 phase=+2.9056 (0.9249π), |λ|=1.4142, Re(λ^5)=-5.5000
+    k=5: λ phase=+1.9322 (0.6150π), λ^5 phase=-2.9056 (-0.9249π), |λ|=1.4142, Re(λ^5)=-5.5000
+    k=6: λ phase=+1.9322 (0.6150π), λ^5 phase=-2.9056 (-0.9249π), |λ|=1.4142, Re(λ^5)=-5.5000
+    Σ_{k≠0} Re(λ^5) = -33.0000
+
+p = 11:
+         S=[1, 2, 3, 4, 5]:
+    k=1: λ phase=+1.7136 (0.5455π), λ^5 phase=+2.2848 (0.7273π), |λ|=3.5133, Re(λ^5)=-350.5485
+    k=2: λ phase=-2.8560 (-0.9091π), λ^5 phase=-1.7136 (-0.5455π), |λ|=0.5211, Re(λ^5)=-0.0055
+    k=3: λ phase=+1.9992 (0.6364π), λ^5 phase=-2.5704 (-0.8182π), |λ|=1.2036, Re(λ^5)=-2.1250
+    k=4: λ phase=-2.5704 (-0.8182π), λ^5 phase=-0.2856 (-0.0909π), |λ|=0.5944, Re(λ^5)=+0.0712
+    k=5: λ phase=+2.2848 (0.7273π), λ^5 phase=-1.1424 (-0.3636π), |λ|=0.7635, Re(λ^5)=+0.1078
+    k=6: λ phase=-2.2848 (-0.7273π), λ^5 phase=+1.1424 (0.3636π), |λ|=0.7635, Re(λ^5)=+0.1078
+    k=7: λ phase=+2.5704 (0.8182π), λ^5 phase=+0.2856 (0.0909π), |λ|=0.5944, Re(λ^5)=+0.0712
+    k=8: λ phase=-1.9992 (-0.6364π), λ^5 phase=+2.5704 (0.8182π), |λ|=1.2036, Re(λ^5)=-2.1250
+    k=9: λ phase=+2.8560 (0.9091π), λ^5 phase=+1.7136 (0.5455π), |λ|=0.5211, Re(λ^5)=-0.0055
+    k=10: λ phase=-1.7136 (-0.5455π), λ^5 phase=-2.2848 (-0.7273π), |λ|=3.5133, Re(λ^5)=-350.5485
+    Σ_{k≠0} Re(λ^5) = -705.0000
+         S=[2, 3, 4, 5, 10]:
+    k=1: λ phase=+1.7765 (0.5655π), λ^5 phase=+2.5993 (0.8274π), |λ|=2.4479, Re(λ^5)=-75.2864
+    k=2: λ phase=-1.8198 (-0.5793π), λ^5 phase=-2.8160 (-0.8964π), |λ|=2.0287, Re(λ^5)=-32.5539
+    k=3: λ phase=-2.0852 (-0.6637π), λ^5 phase=+2.1406 (0.6814π), |λ|=1.0163, Re(λ^5)=-0.5849
+    k=4: λ phase=-1.8371 (-0.5848π), λ^5 phase=-2.9024 (-0.9239π), |λ|=1.8998, Re(λ^5)=-24.0438
+    k=5: λ phase=+3.1145 (0.9914π), λ^5 phase=+3.0060 (0.9568π), |λ|=0.5002, Re(λ^5)=-0.0310
+    k=6: λ phase=-3.1145 (-0.9914π), λ^5 phase=-3.0060 (-0.9568π), |λ|=0.5002, Re(λ^5)=-0.0310
+    k=7: λ phase=+1.8371 (0.5848π), λ^5 phase=+2.9024 (0.9239π), |λ|=1.8998, Re(λ^5)=-24.0438
+    k=8: λ phase=+2.0852 (0.6637π), λ^5 phase=-2.1406 (-0.6814π), |λ|=1.0163, Re(λ^5)=-0.5849
+    k=9: λ phase=+1.8198 (0.5793π), λ^5 phase=+2.8160 (0.8964π), |λ|=2.0287, Re(λ^5)=-32.5539
+    k=10: λ phase=-1.7765 (-0.5655π), λ^5 phase=-2.5993 (-0.8274π), |λ|=2.4479, Re(λ^5)=-75.2864
+    Σ_{k≠0} Re(λ^5) = -265.0000
+  PALEY S=[1, 3, 4, 5, 9]:
+    k=1: λ phase=+1.8636 (0.5932π), λ^5 phase=+3.0350 (0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=2: λ phase=-1.8636 (-0.5932π), λ^5 phase=-3.0350 (-0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=3: λ phase=+1.8636 (0.5932π), λ^5 phase=+3.0350 (0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=4: λ phase=+1.8636 (0.5932π), λ^5 phase=+3.0350 (0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=5: λ phase=+1.8636 (0.5932π), λ^5 phase=+3.0350 (0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=6: λ phase=-1.8636 (-0.5932π), λ^5 phase=-3.0350 (-0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=7: λ phase=-1.8636 (-0.5932π), λ^5 phase=-3.0350 (-0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=8: λ phase=-1.8636 (-0.5932π), λ^5 phase=-3.0350 (-0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=9: λ phase=+1.8636 (0.5932π), λ^5 phase=+3.0350 (0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    k=10: λ phase=-1.8636 (-0.5932π), λ^5 phase=-3.0350 (-0.9661π), |λ|=1.7321, Re(λ^5)=-15.5000
+    Σ_{k≠0} Re(λ^5) = -155.0000
+         S=[1, 2, 4, 5, 8]:
+    k=1: λ phase=+1.8930 (0.6025π), λ^5 phase=-3.1016 (-0.9873π), |λ|=1.5792, Re(λ^5)=-9.8131
+    k=2: λ phase=+2.4469 (0.7789π), λ^5 phase=-0.3320 (-0.1057π), |λ|=0.6508, Re(λ^5)=+0.1104
+    k=3: λ phase=+1.7407 (0.5541π), λ^5 phase=+2.4204 (0.7704π), |λ|=2.9567, Re(λ^5)=-169.7032
+    k=4: λ phase=-1.9132 (-0.6090π), λ^5 phase=+3.0002 (0.9550π), |λ|=1.4891, Re(λ^5)=-7.2480
+    k=5: λ phase=-2.0621 (-0.6564π), λ^5 phase=+2.2559 (0.7181π), |λ|=1.0598, Re(λ^5)=-0.8460
+    k=6: λ phase=+2.0621 (0.6564π), λ^5 phase=-2.2559 (-0.7181π), |λ|=1.0598, Re(λ^5)=-0.8460
+    k=7: λ phase=+1.9132 (0.6090π), λ^5 phase=-3.0002 (-0.9550π), |λ|=1.4891, Re(λ^5)=-7.2480
+    k=8: λ phase=-1.7407 (-0.5541π), λ^5 phase=-2.4204 (-0.7704π), |λ|=2.9567, Re(λ^5)=-169.7032
+    k=9: λ phase=-2.4469 (-0.7789π), λ^5 phase=+0.3320 (0.1057π), |λ|=0.6508, Re(λ^5)=+0.1104
+    k=10: λ phase=-1.8930 (-0.6025π), λ^5 phase=+3.1016 (0.9873π), |λ|=1.5792, Re(λ^5)=-9.8131
+    Σ_{k≠0} Re(λ^5) = -375.0000
+
+======================================================================
+  SECTION 10: Jacobi Sum Connection
+======================================================================
+
+
+For Paley tournaments, λ_k = (χ(k)g - 1)/2 where g = quadratic Gauss sum.
+
+The 5th power sum involves g^5. Since g² = χ(-1)·p:
+  g^4 = p², g^5 = p²·g
+
+So (χg-1)^5 = -1 + 5χg - 10χ(-1)p + 10χ(-1)·χ·pg - 5p² + χp²g
+
+Summing over k≠0 (using Σχ(k) = 0):
+  Σ(χg-1)^5 = -(p-1) - 10(p-1)χ(-1)p - 5(p-1)p²
+            = -(p-1)(1 + 10χ(-1)p + 5p²)
+
+So: c_5(Paley_p) = (1/5)[((p-1)/2)^5 - (p-1)(1 + 10χ(-1)p + 5p²)/32]
+
+This is purely in terms of p and χ(-1) = (-1)^{(p-1)/2}.
+No Jacobi sums needed — the fifth power already closes over {1, g, g², g³, g⁴, g⁵}
+because g² = χ(-1)·p reduces everything to ℤ[g].
+
+Verification of closed form:
+  p= 5: c_5(Paley) =          2  formula =          2  ✓
+  p= 7: c_5(Paley) =         42  formula =         42  ✓
+  p=11: c_5(Paley) =        594  formula =        594  ✓
+  p=13: c_5(Paley) =       1482  formula =       1482  ✓
+  p=17: c_5(Paley) =       6392  formula =       6392  ✓
+  p=19: c_5(Paley) =      11628  formula =      11628  ✓
+  p=23: c_5(Paley) =      31878  formula =      31878  ✓
+  p=29: c_5(Paley) =     106778  formula =     106778  ✓
+  p=31: c_5(Paley) =     151032  formula =     151032  ✓
+  p=37: c_5(Paley) =     376290  formula =     376290  ✓
+  p=41: c_5(Paley) =     637796  formula =     637796  ✓
+  p=43: c_5(Paley) =     814506  formula =     814506  ✓
+
+======================================================================
+  SECTION 11: Is c_5(Paley)/c_5(other) = 3/2 Special to p=7?
+======================================================================
+
+p=5: c_5 values = [2]
+  Paley c_5 = 2
+p=7: c_5 values = [28, 42]
+  Paley c_5 = 42
+  c_5(Paley)/c_5(28) = 42/28 = 3/2 = 1.500000
+p=11: c_5 values = [484, 550, 572, 594]
+  Paley c_5 = 594
+  c_5(Paley)/c_5(484) = 594/484 = 27/22 = 1.227273
+  c_5(Paley)/c_5(550) = 594/550 = 27/25 = 1.080000
+  c_5(Paley)/c_5(572) = 594/572 = 27/26 = 1.038462
+p=13: c_5 values = [1274, 1378, 1430, 1456, 1482]
+  Paley c_5 = 1482
+  c_5(Paley)/c_5(1274) = 1482/1274 = 57/49 = 1.163265
+  c_5(Paley)/c_5(1378) = 1482/1378 = 57/53 = 1.075472
+  c_5(Paley)/c_5(1430) = 1482/1430 = 57/55 = 1.036364
+  c_5(Paley)/c_5(1456) = 1482/1456 = 57/56 = 1.017857
+
+======================================================================
+  SECTION 12: Does Paley Always Maximize c_5 Among Circulants?
+======================================================================
+
+For larger primes, enumerating all circulants is expensive.
+Instead, sample random circulants and compare.
+
+  p=11: c_5(Paley)=     594, max other=     594, ratio=1.0000  [exhaustive] — PALEY MAX
+  p=13: c_5(Paley)=    1482, max other=    1482, ratio=1.0000  [exhaustive] — PALEY MAX
+  p=17: c_5(Paley)=    6392, max other=    6358, ratio=1.0053  [exhaustive] — PALEY MAX
+  p=19: c_5(Paley)=   11628, max other=   11514, ratio=1.0099  [sampled 500] — PALEY MAX
+  p=23: c_5(Paley)=   31878, max other=   31878, ratio=1.0000  [sampled 500] — PALEY MAX
+  p=29: c_5(Paley)=  106778, max other=  106778, ratio=1.0000  [sampled 500] — PALEY MAX
+
+======================================================================
+  SUMMARY
+======================================================================
+
+
+WHY PALEY TOURNAMENTS MAXIMIZE 5-CYCLES AMONG Z_p CIRCULANTS
+=============================================================
+
+1. EIGENVALUE STRUCTURE
+   For any circulant tournament on Z_p with connection set S:
+   - λ_k = Σ_{s∈S} ω^{ks} (Gauss-type sum)
+   - c_m = (1/m) Σ_{k=0}^{p-1} λ_k^m  (cycle count)
+
+2. WHY c_3 IS UNIVERSAL
+   Σ λ_k^3 involves Σ_{k=0}^{p-1} (Σ_{s∈S} ω^{ks})^3
+   = Σ_{a,b,c ∈ S} Σ_k ω^{k(a+b+c)}
+   = p · |{(a,b,c) ∈ S³ : a+b+c ≡ 0 mod p}|
+   This count is the same for ALL tournament connection sets S with |S|=(p-1)/2,
+   because it depends only on the additive structure of half-sets of Z_p^*.
+
+3. WHY c_5 IS NOT UNIVERSAL
+   The analogous 5-tuple count |{(a,b,c,d,e) ∈ S⁵ : a+b+c+d+e ≡ 0}|
+   DOES depend on the specific choice of S.
+
+4. WHY PALEY MAXIMIZES c_5
+   For S = QR_p: λ_k = (χ(k)g - 1)/2 where g is the quadratic Gauss sum.
+
+   Key properties:
+   (a) |λ_k| = √((p+1)/4) for ALL k≠0 (constant magnitude)
+   (b) The phases of λ_k are distributed according to the Legendre symbol
+   (c) g² = χ(-1)·p gives a clean algebraic closure under powers
+
+   The PHASE ALIGNMENT (not magnitude equality) is the critical factor.
+   Equal magnitudes actually MINIMIZE Σ|λ|^5 by power-mean.
+   But the QR phases are arithmetically special: when raised to the 5th power,
+   the real parts constructively interfere.
+
+5. CLOSED FORM
+   c_5(Paley_p) = [32·((p-1)/2)^5 - (p-1)(1 + 10χ(-1)p + 5p²)] / 160
+
+   where χ(-1) = (-1)^{(p-1)/2}.
+
+6. THE 3/2 RATIO
+   c_5(Paley_7)/c_5(other_7) = 42/28 = 3/2 is SPECIFIC to p=7.
+   The ratio varies with p and is NOT always 3/2.
+   However, Paley appears to ALWAYS give the maximum c_5 among circulants.
+

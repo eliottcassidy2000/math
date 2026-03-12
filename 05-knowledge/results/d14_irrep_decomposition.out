@@ -1,0 +1,149 @@
+======================================================================
+D_14 Irreducible Decomposition of H(T_7)
+======================================================================
+
+Step 1: Enumerating Hamiltonian paths of T_7 (Paley tournament on Z_7)...
+  QR_7 = {1, 2, 4}
+  Edge rule: u -> v iff (v - u) mod 7 in QR_7
+  Found 189 Hamiltonian paths.
+
+Step 2: Verifying D_14 action on HPs...
+  All rotations and reflections map HPs to HPs. Confirmed.
+
+Step 3: Computing Z_7 orbits...
+  Found 27 orbits of size 7 each.
+  Total HPs in orbits: 189
+
+Step 4: Analyzing reflection action on orbits...
+  Self-paired orbits (s maps orbit to itself): 9
+  Swapped orbit pairs (s swaps two orbits): 9
+  Check: 9 + 2 * 9 = 27 orbits
+
+  Self-paired orbit details:
+    Orbit 0: rep=(0, 1, 2, 3, 4, 5, 6), s(rep) = r^1(rep)
+    Orbit 3: rep=(0, 1, 2, 6, 3, 4, 5), s(rep) = r^2(rep)
+    Orbit 8: rep=(0, 1, 5, 2, 6, 3, 4), s(rep) = r^3(rep)
+    Orbit 10: rep=(0, 2, 3, 4, 5, 6, 1), s(rep) = r^6(rep)
+    Orbit 14: rep=(0, 2, 4, 5, 6, 1, 3), s(rep) = r^4(rep)
+    Orbit 15: rep=(0, 2, 4, 6, 1, 3, 5), s(rep) = r^2(rep)
+    Orbit 20: rep=(0, 4, 1, 3, 5, 2, 6), s(rep) = r^1(rep)
+    Orbit 21: rep=(0, 4, 1, 5, 2, 6, 3), s(rep) = r^4(rep)
+    Orbit 25: rep=(0, 4, 6, 1, 3, 5, 2), s(rep) = r^5(rep)
+
+======================================================================
+Step 5: Computing the character of the permutation representation
+======================================================================
+
+Conjugacy classes of D_14:
+  e                   : |class| =  1, chi = 189
+  r,r^6               : |class| =  2, chi = 0
+  r^2,r^5             : |class| =  2, chi = 0
+  r^3,r^4             : |class| =  2, chi = 0
+  s,sr,...,sr^6       : |class| =  7, chi = 9
+
+  Verification: sum of multiplicities * irrep_dim should equal 189
+  Burnside orbit count: (1/|D_14|) * sum |class|*chi = (1/14) * 252 = 18 D_14-orbits
+
+======================================================================
+Step 6: Decomposition into irreducible representations
+======================================================================
+
+Permutation character: [189, 0, 0, 0, 9]
+
+Irrep character table of D_14:
+  Irrep                          |    e |     r,r6 |    r2,r5 |    r3,r4 |   s..sr6
+  -------------------------------+------+----------+----------+----------+---------
+  rho_0 (trivial, dim 1)         |   1.0000 |   1.0000 |   1.0000 |   1.0000 |   1.0000
+  rho_1 (sign, dim 1)            |   1.0000 |   1.0000 |   1.0000 |   1.0000 |  -1.0000
+  rho_2 (dim 2, k=1)             |   2.0000 |   1.2470 |  -0.4450 |  -1.8019 |   0.0000
+  rho_3 (dim 2, k=2)             |   2.0000 |  -0.4450 |  -1.8019 |   1.2470 |   0.0000
+  rho_4 (dim 2, k=3)             |   2.0000 |  -1.8019 |   1.2470 |  -0.4450 |   0.0000
+
+Multiplicity computation: m_i = (1/|G|) * sum_C |C| * chi_V(C) * chi_i(C)*
+
+  rho_0 (trivial, dim 1):
+    m = (1/14) * (1*189*1.0000 + 2*0*1.0000 + 2*0*1.0000 + 2*0*1.0000 + 7*9*1.0000)
+    m = (1/14) * 252.0000 = 18.0000
+    Multiplicity: 18
+
+  rho_1 (sign, dim 1):
+    m = (1/14) * (1*189*1.0000 + 2*0*1.0000 + 2*0*1.0000 + 2*0*1.0000 + 7*9*-1.0000)
+    m = (1/14) * 126.0000 = 9.0000
+    Multiplicity: 9
+
+  rho_2 (dim 2, k=1):
+    m = (1/14) * (1*189*2.0000 + 2*0*1.2470 + 2*0*-0.4450 + 2*0*-1.8019 + 7*9*0.0000)
+    m = (1/14) * 378.0000 = 27.0000
+    Multiplicity: 27
+
+  rho_3 (dim 2, k=2):
+    m = (1/14) * (1*189*2.0000 + 2*0*-0.4450 + 2*0*-1.8019 + 2*0*1.2470 + 7*9*0.0000)
+    m = (1/14) * 378.0000 = 27.0000
+    Multiplicity: 27
+
+  rho_4 (dim 2, k=3):
+    m = (1/14) * (1*189*2.0000 + 2*0*-1.8019 + 2*0*1.2470 + 2*0*-0.4450 + 7*9*0.0000)
+    m = (1/14) * 378.0000 = 27.0000
+    Multiplicity: 27
+
+  Dimension check: 18*1 + 9*1 + 27*2 + 27*2 + 27*2 = 189
+  Matches H(T_7) = 189. Confirmed!
+
+======================================================================
+Step 7: Interpretation
+======================================================================
+
+  Trivial irrep multiplicity: 18
+    -> There are 18 D_14-invariant linear combinations of HPs.
+    -> These are the HP combinations invariant under BOTH rotation AND reflection.
+
+  Sign irrep multiplicity: 9
+    -> There are 9 combinations that are rotation-invariant but flip sign under reflection.
+
+  rho_2 (dim 2, k=1): multiplicity 27
+    -> 27 copies of the 2-dim representation with rotation eigenvalue e^{2*pi*i*1/7}
+
+  rho_3 (dim 2, k=2): multiplicity 27
+    -> 27 copies of the 2-dim representation with rotation eigenvalue e^{2*pi*i*2/7}
+
+  rho_4 (dim 2, k=3): multiplicity 27
+    -> 27 copies of the 2-dim representation with rotation eigenvalue e^{2*pi*i*3/7}
+
+======================================================================
+Step 8: Orbit structure details
+======================================================================
+
+  Total Z_7 orbits: 27
+  Self-paired under s: 9
+  Swapped pairs: 9
+
+  Self-paired orbits and their s-action:
+    Orbit 0: shift=1, fixed by s: 1, rep=(0, 1, 2, 3, 4, 5, 6)
+    Orbit 3: shift=2, fixed by s: 1, rep=(0, 1, 2, 6, 3, 4, 5)
+    Orbit 8: shift=3, fixed by s: 1, rep=(0, 1, 5, 2, 6, 3, 4)
+    Orbit 10: shift=6, fixed by s: 1, rep=(0, 2, 3, 4, 5, 6, 1)
+    Orbit 14: shift=4, fixed by s: 1, rep=(0, 2, 4, 5, 6, 1, 3)
+    Orbit 15: shift=2, fixed by s: 1, rep=(0, 2, 4, 6, 1, 3, 5)
+    Orbit 20: shift=1, fixed by s: 1, rep=(0, 4, 1, 3, 5, 2, 6)
+    Orbit 21: shift=4, fixed by s: 1, rep=(0, 4, 1, 5, 2, 6, 3)
+    Orbit 25: shift=5, fixed by s: 1, rep=(0, 4, 6, 1, 3, 5, 2)
+
+  Total HPs fixed by s (identity element of reflection class): 9
+
+  Example orbits:
+    Orbit 0: (0, 1, 2, 3, 4, 5, 6) -> ... (size 7)
+    Orbit 1: (0, 1, 2, 4, 5, 6, 3) -> ... (size 7)
+    Orbit 2: (0, 1, 2, 4, 6, 3, 5) -> ... (size 7)
+    Orbit 3: (0, 1, 2, 6, 3, 4, 5) -> ... (size 7)
+    Orbit 4: (0, 1, 3, 4, 5, 2, 6) -> ... (size 7)
+
+======================================================================
+SUMMARY
+======================================================================
+
+  H(T_7) = 189 decomposes under D_14 as:
+    18*rho_0 + 9*rho_1 + 27*rho_2 + 27*rho_3 + 27*rho_4
+
+  Or in terms of dimensions:
+    18x1 + 9x1 + 27x2 + 27x2 + 27x2 = 189
+

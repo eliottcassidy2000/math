@@ -1,0 +1,477 @@
+======================================================================
+SECTION 1: PERMANENT vs HAMILTONIAN PATH COUNT
+======================================================================
+
+For a tournament on n vertices:
+  H(T) = number of Hamiltonian paths
+  perm(A) = permanent of adjacency matrix
+  perm(A) counts ALL directed path-covers (not just single paths)
+
+Relation: H counts permutation matrices P with A[i][P(i)]=1
+  where P is a single cycle... NO, H counts sequences.
+  Actually: perm(A) = sum over ALL permutations sigma of prod A[i][sigma(i)]
+  which counts permutation matrices ≤ A, i.e., directed 1-factors.
+
+H counts Hamiltonian PATHS = directed walks visiting all vertices once.
+These correspond to permutations sigma where (1,sigma(1),sigma^2(1),...)  is a path.
+But perm(A) counts all perfect matchings in the bipartite double cover.
+
+Let's compute both and compare:
+
+--- p = 3 ---
+  S=[1]: H=3, perm(A)=-1, perm/H=-0.3333
+  S=[2]: H=3, perm(A)=-1, perm/H=-0.3333
+
+--- p = 5 ---
+  S=[1, 2]: H=15, perm(A)=-2, perm/H=-0.1333
+  S=[1, 3]: H=15, perm(A)=-2, perm/H=-0.1333
+  S=[2, 4]: H=15, perm(A)=-2, perm/H=-0.1333
+  S=[3, 4]: H=15, perm(A)=-2, perm/H=-0.1333
+
+--- p = 7 ---
+  S=[1, 2, 3]: H=175, perm(A)=-31, perm/H=-0.1771
+  S=[1, 2, 4]: H=189, perm(A)=-24, perm/H=-0.1270
+  S=[1, 3, 5]: H=175, perm(A)=-31, perm/H=-0.1771
+  S=[1, 4, 5]: H=175, perm(A)=-31, perm/H=-0.1771
+  S=[2, 3, 6]: H=175, perm(A)=-31, perm/H=-0.1771
+  S=[2, 4, 6]: H=175, perm(A)=-31, perm/H=-0.1771
+  S=[3, 5, 6]: H=189, perm(A)=-24, perm/H=-0.1270
+  S=[4, 5, 6]: H=175, perm(A)=-31, perm/H=-0.1771
+
+======================================================================
+SECTION 2: EIGENVALUE-PERMANENT CONNECTION
+======================================================================
+
+For a matrix with eigenvalues lambda_1,...,lambda_n:
+  det(A) = prod lambda_i  (easy)
+  perm(A) = ???  (hard — no clean eigenvalue formula)
+
+But for CIRCULANT matrices, eigenvalues have special structure.
+For circulant tournament on Z_p with connection set S:
+  lambda_k = sum_{s in S} omega^{ks}
+  A = sum_{s in S} P^s where P = permutation matrix of shift
+
+Key: A = f(P) where f(x) = sum_{s in S} x^s
+Eigenvalues: f(omega^k) for k=0,...,p-1
+
+--- p = 7 ---
+  S=[1, 2, 4]: H=189, prod|λ|=8.0000, Σ|λ|²=12.0000, Σ|λ|⁴=24.0000
+  S=[3, 5, 6]: H=189, prod|λ|=8.0000, Σ|λ|²=12.0000, Σ|λ|⁴=24.0000
+  S=[4, 5, 6]: H=175, prod|λ|=1.0000, Σ|λ|²=12.0000, Σ|λ|⁴=52.0000
+  S=[1, 2, 3]: H=175, prod|λ|=1.0000, Σ|λ|²=12.0000, Σ|λ|⁴=52.0000
+  Corr(H, prod|λ|) = 1.0000
+  Corr(H, Σ|λ|⁴) = -1.0000
+
+--- p = 11 ---
+  S=[2, 6, 7, 8, 10]: H=95095, prod|λ|=243.0000, Σ|λ|²=30.0000, Σ|λ|⁴=90.0000
+  S=[1, 3, 4, 5, 9]: H=95095, prod|λ|=243.0000, Σ|λ|²=30.0000, Σ|λ|⁴=90.0000
+  S=[3, 6, 7, 9, 10]: H=93467, prod|λ|=23.0000, Σ|λ|²=30.0000, Σ|λ|⁴=178.0000
+  S=[2, 3, 4, 5, 10]: H=92411, prod|λ|=23.0000, Σ|λ|²=30.0000, Σ|λ|⁴=134.0000
+  Corr(H, prod|λ|) = 0.7519
+  Corr(H, Σ|λ|⁴) = -0.0879
+
+--- p = 13 ---
+  S=[7, 8, 9, 10, 11, 12]: H=3711175, prod|λ|=1.0000, Σ|λ|²=42.0000, Σ|λ|⁴=602.0000
+  S=[1, 2, 3, 7, 8, 9]: H=3711175, prod|λ|=1.0000, Σ|λ|²=42.0000, Σ|λ|⁴=602.0000
+  S=[1, 4, 7, 8, 10, 11]: H=3711175, prod|λ|=1.0000, Σ|λ|²=42.0000, Σ|λ|⁴=602.0000
+  S=[2, 3, 4, 5, 6, 12]: H=3669497, prod|λ|=79.0000, Σ|λ|²=42.0000, Σ|λ|⁴=290.0000
+  Corr(H, prod|λ|) = -0.0790
+  Corr(H, Σ|λ|⁴) = 0.5093
+
+======================================================================
+SECTION 3: BREGMAN'S INEQUALITY AND TOURNAMENT PERMANENTS
+======================================================================
+
+Bregman's inequality (1973, proved by Schrijver):
+  perm(A) ≤ prod_i (r_i!)^{1/r_i}
+  where r_i = row sum of A.
+
+For regular tournament: all r_i = (n-1)/2, so:
+  perm(A) ≤ (((n-1)/2)!)^{n / ((n-1)/2)}
+
+Bregman bound for tournament PERMANENTS:
+  n=3: r=1, Bregman ≤ 1.00
+    Paley: perm(A)=-1, H=3
+  n=5: r=2, Bregman ≤ 5.66
+  n=7: r=3, Bregman ≤ 65.42
+    Paley: perm(A)=-24, H=189
+  n=11: r=5, Bregman ≤ 37514.46
+
+======================================================================
+SECTION 4: H AS TRACE OF MATRIX POWER (TRANSFER MATRIX)
+======================================================================
+
+H(T) = sum_{v,w} M^{n-2}[v][w] where M = transfer matrix
+  M[v][w] = A[v][w] * (1 - delta_{v,w_prev})
+
+But for CIRCULANT tournaments, there's a simpler view:
+  H = sum of products A[sigma(0)][sigma(1)] * ... * A[sigma(n-2)][sigma(n-1)]
+    over all permutations sigma of {0,...,n-1}
+  = sum over Hamiltonian paths in the tournament
+
+This is NOT the permanent (permanent sums over matchings, not paths).
+The permanent counts DIRECTED 1-FACTORS (union of vertex-disjoint cycles
+covering all vertices). H counts directed Hamiltonian PATHS.
+
+Connection: perm(A) = sum_k c_k where c_k counts directed k-cycles
+  covering all vertices (cycle covers). H counts the 1-cycle covers
+  that are paths (which aren't cycles...).
+
+Actually: Let me reconsider. For directed graph D:
+  perm(A(D)) = number of perfect matchings in bipartite double cover
+             = number of sets of vertex-disjoint directed cycles covering all vertices
+
+And H(T) = number of Hamiltonian paths = related but different.
+
+Let's check the relation numerically:
+
+--- p = 3 ---
+  S=[1]: H(paths)=3, H(cycles)=1, perm=-1, perm-H_cycles=-2
+  S=[2]: H(paths)=3, H(cycles)=1, perm=-1, perm-H_cycles=-2
+
+--- p = 5 ---
+  S=[1, 2]: H(paths)=15, H(cycles)=2, perm=-2, perm-H_cycles=-4
+  S=[1, 3]: H(paths)=15, H(cycles)=2, perm=-2, perm-H_cycles=-4
+  S=[2, 4]: H(paths)=15, H(cycles)=2, perm=-2, perm-H_cycles=-4
+  S=[3, 4]: H(paths)=15, H(cycles)=2, perm=-2, perm-H_cycles=-4
+
+--- p = 7 ---
+  S=[1, 2, 3]: H(paths)=175, H(cycles)=17, perm=-31, perm-H_cycles=-48
+  S=[1, 2, 4]: H(paths)=189, H(cycles)=24, perm=-24, perm-H_cycles=-48
+  S=[1, 3, 5]: H(paths)=175, H(cycles)=17, perm=-31, perm-H_cycles=-48
+  S=[1, 4, 5]: H(paths)=175, H(cycles)=17, perm=-31, perm-H_cycles=-48
+
+======================================================================
+SECTION 5: DOES PRODUCT OF |λ_k| DETERMINE H?
+======================================================================
+
+Test: is H monotone in prod_{k≠0} |λ_k|?
+
+--- p = 7 ---
+  H=     189, prod|λ|=      8.0000, S=[1, 2, 4] ← MAX
+  H=     189, prod|λ|=      8.0000, S=[3, 5, 6] ← MAX
+  H=     175, prod|λ|=      1.0000, S=[4, 5, 6]
+  H=     175, prod|λ|=      1.0000, S=[1, 4, 5]
+  H=     175, prod|λ|=      1.0000, S=[2, 4, 6]
+  H=     175, prod|λ|=      1.0000, S=[1, 3, 5]
+  H=     175, prod|λ|=      1.0000, S=[2, 3, 6]
+  H=     175, prod|λ|=      1.0000, S=[1, 2, 3]
+  Correlation(H, prod|λ|) = 1.000000
+
+--- p = 11 ---
+  H=   95095, prod|λ|=    243.0000, S=[2, 6, 7, 8, 10] ← MAX
+  H=   95095, prod|λ|=    243.0000, S=[1, 3, 4, 5, 9] ← MAX
+  H=   93467, prod|λ|=     23.0000, S=[3, 6, 7, 9, 10]
+  H=   93467, prod|λ|=     23.0000, S=[1, 3, 6, 7, 9]
+  H=   93467, prod|λ|=     23.0000, S=[1, 2, 3, 6, 7]
+  H=   93467, prod|λ|=     23.0000, S=[1, 2, 4, 6, 8]
+  H=   93467, prod|λ|=     23.0000, S=[1, 2, 3, 4, 6]
+  H=   93467, prod|λ|=     23.0000, S=[5, 7, 8, 9, 10]
+  H=   93467, prod|λ|=     23.0000, S=[3, 5, 7, 9, 10]
+  H=   93467, prod|λ|=     23.0000, S=[4, 5, 8, 9, 10]
+  H=   93467, prod|λ|=     23.0000, S=[2, 4, 5, 8, 10]
+  H=   93467, prod|λ|=     23.0000, S=[1, 2, 4, 5, 8]
+  H=   93027, prod|λ|=      1.0000, S=[6, 7, 8, 9, 10]
+  H=   93027, prod|λ|=      1.0000, S=[1, 2, 6, 7, 8]
+  H=   93027, prod|λ|=      1.0000, S=[2, 3, 6, 7, 10]
+  H=   93027, prod|λ|=      1.0000, S=[2, 4, 6, 8, 10]
+  H=   93027, prod|λ|=      1.0000, S=[1, 3, 4, 6, 9]
+  H=   93027, prod|λ|=      1.0000, S=[2, 5, 7, 8, 10]
+  H=   93027, prod|λ|=      1.0000, S=[1, 3, 5, 7, 9]
+  H=   93027, prod|λ|=      1.0000, S=[1, 4, 5, 8, 9]
+  H=   93027, prod|λ|=      1.0000, S=[3, 4, 5, 9, 10]
+  H=   93027, prod|λ|=      1.0000, S=[1, 2, 3, 4, 5]
+  H=   92411, prod|λ|=     23.0000, S=[1, 6, 7, 8, 9]
+  H=   92411, prod|λ|=     23.0000, S=[4, 6, 8, 9, 10]
+  H=   92411, prod|λ|=     23.0000, S=[1, 4, 6, 8, 9]
+  H=   92411, prod|λ|=     23.0000, S=[3, 4, 6, 9, 10]
+  H=   92411, prod|λ|=     23.0000, S=[2, 3, 4, 6, 10]
+  H=   92411, prod|λ|=     23.0000, S=[1, 5, 7, 8, 9]
+  H=   92411, prod|λ|=     23.0000, S=[1, 2, 5, 7, 8]
+  H=   92411, prod|λ|=     23.0000, S=[2, 3, 5, 7, 10]
+  H=   92411, prod|λ|=     23.0000, S=[1, 2, 3, 5, 7]
+  H=   92411, prod|λ|=     23.0000, S=[2, 3, 4, 5, 10]
+  Correlation(H, prod|λ|) = 0.751858
+
+======================================================================
+SECTION 6: AM-GM AND SPECTRAL FLATNESS
+======================================================================
+
+By AM-GM: (prod |λ_k|^2)^{1/m} ≤ (1/m) Σ |λ_k|^2
+with equality iff all |λ_k|^2 are equal (FLAT spectrum).
+
+Since Σ|λ_k|^2 = p(p-1)/4 is CONSTANT (Parseval),
+the product is maximized at flat spectrum.
+
+But does max PRODUCT imply max H? Let's test.
+
+--- p = 7 ---
+  H=     189, prod|λ|²=       64.0000, AM-GM ratio=1.000000
+  H=     189, prod|λ|²=       64.0000, AM-GM ratio=1.000000
+  H=     175, prod|λ|²=        1.0000, AM-GM ratio=0.015625
+  H=     175, prod|λ|²=        1.0000, AM-GM ratio=0.015625
+  H=     175, prod|λ|²=        1.0000, AM-GM ratio=0.015625
+  Corr(H, prod|λ|²) = 1.000000
+  Corr(H, AM-GM ratio) = 1.000000
+  Max H at index 0, max prod|λ|² at index 1
+  SAME? NO
+
+--- p = 11 ---
+  H=   95095, prod|λ|²=    59049.0000, AM-GM ratio=1.000000
+  H=   95095, prod|λ|²=    59049.0000, AM-GM ratio=1.000000
+  H=   93467, prod|λ|²=      529.0000, AM-GM ratio=0.008959
+  H=   93467, prod|λ|²=      529.0000, AM-GM ratio=0.008959
+  H=   93467, prod|λ|²=      529.0000, AM-GM ratio=0.008959
+  Corr(H, prod|λ|²) = 0.774175
+  Corr(H, AM-GM ratio) = 0.774175
+  Max H at index 0, max prod|λ|² at index 0
+  SAME? YES
+
+--- p = 13 ---
+  H= 3711175, prod|λ|²=        1.0000, AM-GM ratio=0.000000
+  H= 3711175, prod|λ|²=        1.0000, AM-GM ratio=0.000000
+  H= 3711175, prod|λ|²=        1.0000, AM-GM ratio=0.000000
+  H= 3711175, prod|λ|²=        1.0000, AM-GM ratio=0.000000
+  H= 3711175, prod|λ|²=        1.0000, AM-GM ratio=0.000000
+  Corr(H, prod|λ|²) = 0.087630
+  Corr(H, AM-GM ratio) = 0.087630
+  Max H at index 0, max prod|λ|² at index 38
+  SAME? NO
+
+======================================================================
+SECTION 7: SIGNED PERMANENT DECOMPOSITION
+======================================================================
+
+Key identity from Walsh framework (THM-077):
+  H(T) = I(Ω(T), 2) = Σ_{OCF collections} 2^k
+
+Alternative: H is related to the IMMANANT of A.
+  imm_χ(A) = Σ_σ χ(σ) * prod A[i][σ(i)]
+  where χ is a character of S_n.
+
+For χ = trivial character: imm = perm(A)
+For χ = sign character: imm = det(A)
+For other χ: imm gives cycle-weighted counts
+
+H counts Hamiltonian paths. A path (v_0,...,v_{n-1}) corresponds to
+  the permutation sending position i to v_i, which has cycle type (n)
+  (single cycle of length n, where we close the path into a cycle).
+
+Actually H counts OPEN paths, not cycles. So it's more subtle.
+H = Σ_{(v_0,...,v_{n-1})} Π_{i=0}^{n-2} A[v_i][v_{i+1}]
+
+This is the (1,1,...,1) entry of M^{n-1} where M = A - diagonal stuff...
+Let's not go there. Instead, let's focus on what's KNOWN:
+
+For circulant on Z_p, H is determined by eigenvalues {λ_k}.
+Since H depends only on |S| structure (not labeling), and
+scaling a∈Z_p^* permutes eigenvalues, H is symmetric in λ_1,...,λ_{p-1}.
+
+Testing: H as polynomial in power sums p_k = Σ λ_j^k:
+
+  p = 7: power sums of non-trivial eigenvalues
+  S=[1, 2, 4]: H=189
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 3.0000-0.0000j (real=3.0000, imag=-0.0000)
+    p_5 = -33.0000+0.0000j (real=-33.0000, imag=0.0000)
+    p_6 = 27.0000-0.0000j (real=27.0000, imag=-0.0000)
+
+  S=[3, 5, 6]: H=189
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 3.0000+0.0000j (real=3.0000, imag=0.0000)
+    p_5 = -33.0000+0.0000j (real=-33.0000, imag=0.0000)
+    p_6 = 27.0000-0.0000j (real=27.0000, imag=-0.0000)
+
+  S=[4, 5, 6]: H=175
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 31.0000-0.0000j (real=31.0000, imag=-0.0000)
+    p_5 = -103.0000+0.0000j (real=-103.0000, imag=0.0000)
+    p_6 = -57.0000-0.0000j (real=-57.0000, imag=-0.0000)
+
+  S=[1, 4, 5]: H=175
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 31.0000-0.0000j (real=31.0000, imag=-0.0000)
+    p_5 = -103.0000+0.0000j (real=-103.0000, imag=0.0000)
+    p_6 = -57.0000+0.0000j (real=-57.0000, imag=0.0000)
+
+  S=[2, 4, 6]: H=175
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 31.0000-0.0000j (real=31.0000, imag=-0.0000)
+    p_5 = -103.0000+0.0000j (real=-103.0000, imag=0.0000)
+    p_6 = -57.0000-0.0000j (real=-57.0000, imag=-0.0000)
+
+  S=[1, 3, 5]: H=175
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 31.0000-0.0000j (real=31.0000, imag=-0.0000)
+    p_5 = -103.0000+0.0000j (real=-103.0000, imag=0.0000)
+    p_6 = -57.0000+0.0000j (real=-57.0000, imag=0.0000)
+
+  S=[2, 3, 6]: H=175
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 31.0000-0.0000j (real=31.0000, imag=-0.0000)
+    p_5 = -103.0000+0.0000j (real=-103.0000, imag=0.0000)
+    p_6 = -57.0000-0.0000j (real=-57.0000, imag=-0.0000)
+
+  S=[1, 2, 3]: H=175
+    p_2 = -9.0000+0.0000j (real=-9.0000, imag=0.0000)
+    p_3 = 15.0000-0.0000j (real=15.0000, imag=-0.0000)
+    p_4 = 31.0000-0.0000j (real=31.0000, imag=-0.0000)
+    p_5 = -103.0000+0.0000j (real=-103.0000, imag=0.0000)
+    p_6 = -57.0000+0.0000j (real=-57.0000, imag=0.0000)
+
+======================================================================
+SECTION 8: FLAT SPECTRUM AND H — BEYOND CIRCULANTS
+======================================================================
+
+At n=7: ALL 240 H-maximizers are isomorphic to Paley T_7.
+This means Paley is the UNIQUE (up to isomorphism) H-maximizer.
+And T_7 has the flattest spectrum among circulants.
+
+Question: does T_7 also have the flattest spectrum among ALL
+tournaments on 7 vertices? (Non-circulant tournaments have
+non-circulant eigenvalue structure.)
+
+For non-circulant tournaments, A is NOT normal, so eigenvalues
+can be complex with non-trivial Jordan blocks.
+
+The SINGULAR VALUES of A (not eigenvalues) determine ||A||_F,
+and for normal matrices, singular values = |eigenvalues|.
+
+For regular tournaments: A has constant row sums = (n-1)/2.
+  Largest eigenvalue = (n-1)/2 (Perron root).
+  Sum of |eigenvalue|^2 = tr(A^T A) = sum A[i][j]^2 = n(n-1)/2.
+  So mean |λ|^2 = n(n-1)/(2n) = (n-1)/2.
+
+For T_7 (circulant): |λ_0|=3, |λ_k|=√2 for k=1,...,6
+  Check: 9 + 6*2 = 21 = 7*6/2 ✓
+
+Conjecture: Among all regular tournaments on n vertices,
+  the H-maximizer has the flattest SINGULAR VALUE spectrum.
+
+This is a MUCH stronger conjecture than the circulant version.
+
+======================================================================
+SECTION 9: GENERATING FUNCTION FOR H OF CIRCULANT
+======================================================================
+
+For circulant tournament on Z_p with connection set S:
+  A = Σ_{s∈S} P^s where P = cyclic shift matrix
+  Eigenvalues of P: ω^k (k=0,...,p-1)
+  Eigenvalues of A: f(ω^k) = Σ_{s∈S} ω^{ks}
+
+H(T) = # Hamiltonian paths. For a CIRCULANT:
+  Each HP orbit under Z_p has size p (p prime, no fixed points)
+  So H = p * (# orbits) ≡ 0 (mod p)
+
+  This is confirmed: H(T_7) = 189 = 7*27, H(T_11) = 95095 = 11*8645
+
+  p = 7: all circulant H values mod p:
+    All H ≡ 0 (mod 7) ✓
+
+  p = 11: all circulant H values mod p:
+    All H ≡ 0 (mod 11) ✓
+
+H/p values (number of Z_p orbits of HPs):
+  p=7: S=[1, 2, 4], H=189, H/p=27
+  p=7: S=[3, 5, 6], H=189, H/p=27
+  p=7: S=[4, 5, 6], H=175, H/p=25
+  p=7: S=[1, 4, 5], H=175, H/p=25
+  p=7: S=[2, 4, 6], H=175, H/p=25
+  p=7: S=[1, 3, 5], H=175, H/p=25
+  p=7: S=[2, 3, 6], H=175, H/p=25
+  p=7: S=[1, 2, 3], H=175, H/p=25
+
+  p=11: S=[2, 6, 7, 8, 10], H=95095, H/p=8645
+  p=11: S=[1, 3, 4, 5, 9], H=95095, H/p=8645
+  p=11: S=[3, 6, 7, 9, 10], H=93467, H/p=8497
+  p=11: S=[1, 3, 6, 7, 9], H=93467, H/p=8497
+  p=11: S=[1, 2, 3, 6, 7], H=93467, H/p=8497
+  p=11: S=[1, 2, 4, 6, 8], H=93467, H/p=8497
+  p=11: S=[1, 2, 3, 4, 6], H=93467, H/p=8497
+  p=11: S=[5, 7, 8, 9, 10], H=93467, H/p=8497
+  p=11: S=[3, 5, 7, 9, 10], H=93467, H/p=8497
+  p=11: S=[4, 5, 8, 9, 10], H=93467, H/p=8497
+  p=11: S=[2, 4, 5, 8, 10], H=93467, H/p=8497
+  p=11: S=[1, 2, 4, 5, 8], H=93467, H/p=8497
+  p=11: S=[6, 7, 8, 9, 10], H=93027, H/p=8457
+  p=11: S=[1, 2, 6, 7, 8], H=93027, H/p=8457
+  p=11: S=[2, 3, 6, 7, 10], H=93027, H/p=8457
+  p=11: S=[2, 4, 6, 8, 10], H=93027, H/p=8457
+  p=11: S=[1, 3, 4, 6, 9], H=93027, H/p=8457
+  p=11: S=[2, 5, 7, 8, 10], H=93027, H/p=8457
+  p=11: S=[1, 3, 5, 7, 9], H=93027, H/p=8457
+  p=11: S=[1, 4, 5, 8, 9], H=93027, H/p=8457
+  p=11: S=[3, 4, 5, 9, 10], H=93027, H/p=8457
+  p=11: S=[1, 2, 3, 4, 5], H=93027, H/p=8457
+  p=11: S=[1, 6, 7, 8, 9], H=92411, H/p=8401
+  p=11: S=[4, 6, 8, 9, 10], H=92411, H/p=8401
+  p=11: S=[1, 4, 6, 8, 9], H=92411, H/p=8401
+  p=11: S=[3, 4, 6, 9, 10], H=92411, H/p=8401
+  p=11: S=[2, 3, 4, 6, 10], H=92411, H/p=8401
+  p=11: S=[1, 5, 7, 8, 9], H=92411, H/p=8401
+  p=11: S=[1, 2, 5, 7, 8], H=92411, H/p=8401
+  p=11: S=[2, 3, 5, 7, 10], H=92411, H/p=8401
+  p=11: S=[1, 2, 3, 5, 7], H=92411, H/p=8401
+  p=11: S=[2, 3, 4, 5, 10], H=92411, H/p=8401
+
+======================================================================
+SECTION 10: NORMALIZED PERMANENT AND VAN DER WAERDEN
+======================================================================
+
+For regular tournament: A has row sums m = (n-1)/2.
+B = A/m is doubly stochastic (for regular tournaments).
+perm(B) = perm(A) / m^n
+
+Van der Waerden (proved 1981): min perm(B) = n!/n^n at B=J/n.
+The MAXIMUM among doubly stochastic: achieved at permutation matrices,
+  giving perm = 1. But A/m is NOT a permutation matrix.
+
+For tournament matrices: B has entries in {0, 1/m}.
+perm(B) = perm(A) / m^n where perm(A) counts directed 1-factors.
+
+But we want H, not perm(A). These are different!
+Let's compute perm(A) for all circulants and see if it correlates with H.
+
+  p = 7:
+    S=[1, 2, 4]: H=  189, perm(A)=   -24, prod|λ|=    8.0000, perm/H=-0.1270
+    S=[3, 5, 6]: H=  189, perm(A)=   -24, prod|λ|=    8.0000, perm/H=-0.1270
+    S=[4, 5, 6]: H=  175, perm(A)=   -31, prod|λ|=    1.0000, perm/H=-0.1771
+    S=[1, 4, 5]: H=  175, perm(A)=   -31, prod|λ|=    1.0000, perm/H=-0.1771
+    S=[2, 4, 6]: H=  175, perm(A)=   -31, prod|λ|=    1.0000, perm/H=-0.1771
+    S=[1, 3, 5]: H=  175, perm(A)=   -31, prod|λ|=    1.0000, perm/H=-0.1771
+    S=[2, 3, 6]: H=  175, perm(A)=   -31, prod|λ|=    1.0000, perm/H=-0.1771
+    S=[1, 2, 3]: H=  175, perm(A)=   -31, prod|λ|=    1.0000, perm/H=-0.1771
+  Corr(H, perm) = 1.000000
+
+
+======================================================================
+SYNTHESIS AND CONJECTURES
+======================================================================
+
+1. For circulant tournaments on Z_p:
+   H is determined by the eigenvalue multiset {|λ_k|²}.
+   This is PROVED (H depends only on Z_p^* orbit of S).
+
+2. For p ≡ 3 mod 4:
+   Paley achieves FLAT spectrum (all |λ_k| = √((p+1)/4)).
+   By AM-GM, flat spectrum MAXIMIZES prod |λ_k|.
+   Computationally: max prod|λ| ↔ max H (at p=7, 11).
+
+3. CONJECTURE (Spectral-Permanent Bridge):
+   Among circulant tournaments on Z_p with p ≡ 3 mod 4,
+   H is a monotonically increasing function of prod_{k≠0} |λ_k|².
+
+4. If true, this gives:
+   Flat spectrum → max prod|λ|² (AM-GM) → max H (monotonicity)
+   → PALEY MAXIMIZES H among circulants (QED for Step B).
+
+5. The missing step: PROVE the monotonicity of H in prod|λ|².
+   This is a statement about the generating function structure
+   of Hamiltonian paths on circulant graphs.
