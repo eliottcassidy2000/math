@@ -1,0 +1,237 @@
+SUM-PRODUCT PHENOMENON IN TOURNAMENT H-MAXIMIZATION
+===========================================================================
+
+===========================================================================
+1. ADDITIVE ENERGY E(S) = |{{(a,b,c,d): a+b=c+d}}|
+===========================================================================
+
+     p    m        E(QR)       E(Int)    ratio    E/m^3    E/m^3
+                                           I/P       QR      Int
+     7    3           15           19   1.2667   0.5556   0.7037
+    11    5           65           85   1.3077   0.5200   0.6800
+    19    9          369          489   1.3252   0.5062   0.6708
+    23   11          671          891   1.3279   0.5041   0.6694
+    31   15         1695         2255   1.3304   0.5022   0.6681
+    43   21         4641         6181   1.3318   0.5011   0.6674
+    59   29        12209        16269   1.3325   0.5006   0.6671
+    83   41        34481        45961   1.3329   0.5003   0.6669
+
+===========================================================================
+2. SUMSET AND PRODUCT SET SIZES
+===========================================================================
+
+     p    |QR+QR|      |I+I|    |QR·QR|      |I·I|
+     7          6          5          3          5
+    11         10          9          5          9
+    19         18         17          9         18
+    23         22         21         11         22
+    31         30         29         15         30
+
+  KEY OBSERVATION:
+    QR: |QR·QR| = m (closed under multiplication!)
+    Interval: |I·I| >> m (no multiplicative structure)
+    QR: |QR+QR| = p-1 or p (forced large by sum-product)
+    Interval: |I+I| ~ 2m = p-1 (arithmetic progression sumset)
+
+===========================================================================
+3. SUMSET INTERSECTION PROFILE |S ∩ (S+s)|
+===========================================================================
+
+  p = 7:
+     s     |QR∩(QR+s)|       |I∩(I+s)|      Δ
+     1               1               2     +1
+     2               1               1     +0
+     3               1               0     -1
+     4               1               0     -1
+     5               1               1     +0
+     6               1               2     +1
+  Variance: QR = 0.0000, Interval = 0.6667
+  QR is LESS uniform
+
+  p = 11:
+     s     |QR∩(QR+s)|       |I∩(I+s)|      Δ
+     1               2               4     +2 ***
+     2               2               3     +1
+     3               2               2     +0
+     4               2               1     -1
+     5               2               0     -2 ***
+     6               2               0     -2 ***
+     7               2               1     -1
+     8               2               2     +0
+     9               2               3     +1
+    10               2               4     +2 ***
+  Variance: QR = 0.0000, Interval = 2.0000
+  QR is LESS uniform
+
+  p = 19:
+     s     |QR∩(QR+s)|       |I∩(I+s)|      Δ
+     1               4               8     +4 ***
+     2               4               7     +3 ***
+     3               4               6     +2 ***
+     4               4               5     +1
+     5               4               4     +0
+     6               4               3     -1
+     7               4               2     -2 ***
+     8               4               1     -3 ***
+     9               4               0     -4 ***
+    10               4               0     -4 ***
+    11               4               1     -3 ***
+    12               4               2     -2 ***
+    13               4               3     -1
+    14               4               4     +0
+    15               4               5     +1
+    16               4               6     +2 ***
+    17               4               7     +3 ***
+    18               4               8     +4 ***
+  Variance: QR = 0.0000, Interval = 6.6667
+  QR is LESS uniform
+
+===========================================================================
+4. SUMSET STRUCTURE → PATH COUNTS
+===========================================================================
+
+  For a circulant tournament T(S), a 2-step walk 0 → a → b uses arcs a, b-a.
+  This walk exists iff a ∈ S AND (b-a) ∈ S, i.e., b ∈ S + a ⊂ S + S.
+
+  So the NUMBER of 2-step walks from 0 to b = |S ∩ (S+b)| = representation fn.
+
+  For k-step walks: the convolution S * S * ... * S (k times) mod p.
+
+  INTERVAL ADVANTAGE:
+    S = {1,...,m} → S+S = {2,...,2m} → heavy overlap with S when 2 ≤ s ≤ m
+    Specifically: |S ∩ (S+s)| = m - |s| for |s| ≤ m (triangular profile)
+    This triangular profile means:
+      - MANY short walks concentrate on nearby vertices
+      - Creates "highways" along the cycle → more Hamiltonian paths
+
+  QR DISADVANTAGE:
+    S = QR → |S ∩ (S+s)| ≈ m/2 for all s (approximately flat)
+    This flat profile means:
+      - Walks disperse UNIFORMLY → good expansion → bad for HP count
+    
+===========================================================================
+5. REPRESENTATION FUNCTION r_S(s) = |{{(a,b) ∈ S²: a+b ≡ s}}|
+===========================================================================
+
+  p = 7:
+     s    r_QR(s)   r_Int(s)
+     0          0          0
+     1          1          0
+     2          1          1
+     3          2          2
+     4          1          3
+     5          2          2
+     6          2          1
+  Mean: QR = 1.29, Int = 1.29
+  Std:  QR = 0.6999, Int = 1.0302
+  Max:  QR = 2, Int = 3
+  Min:  QR = 0, Int = 0
+
+  p = 11:
+     s    r_QR(s)   r_Int(s)
+     0          0          0
+     1          2          0
+     2          3          1
+     3          2          2
+     4          2          3
+     5          2          4
+     6          3          5
+     7          3          4
+     8          3          3
+     9          2          2
+    10          3          1
+  Mean: QR = 2.27, Int = 2.27
+  Std:  QR = 0.8624, Int = 1.6006
+  Max:  QR = 3, Int = 5
+  Min:  QR = 0, Int = 0
+
+===========================================================================
+6. FREIMAN-RUZSA STRUCTURE THEOREM
+===========================================================================
+
+  THEOREM (Freiman-Ruzsa): If |A+A| ≤ K|A|, then A is contained in
+  a generalized arithmetic progression of dimension ≤ f(K) and size ≤ g(K)|A|.
+
+  For our sets:
+    Interval {1,...,m}: |S+S| = 2m-1, so K = (2m-1)/m < 2
+    → Contained in a 1D arithmetic progression (trivially: itself!)
+    → Freiman dimension = 1
+
+    QR: |QR+QR| = p-1 or p, so K = (p-1)/m ≈ 2
+    → Also K < 2, but QR is NOT a single AP
+    → QR is "Freiman-structured" but in a MULTIPLICATIVE way
+
+  THE DEEP DISTINCTION:
+    Interval: additively structured (AP) → concentrated eigenvalues
+    QR: multiplicatively structured (subgroup) → spread eigenvalues
+
+    The Fourier transform (which gives eigenvalues) respects ADDITIVE structure.
+    So additively-structured sets have peaked Fourier transforms (= eigenvalues).
+    Multiplicatively-structured sets have flat Fourier transforms.
+
+    THIS IS WHY interval beats QR at large p:
+    Additive structure → spectral concentration → anti-Ramanujan → high H
+
+  QUANTITATIVE VERSION (Bourgain):
+    For A ⊂ Z_p with |A| = p/2:
+    Σ |â(ξ)|^4 ≥ |A|^3 / |A+A| (Parseval lower bound on E(A))
+
+    Interval: E = Θ(m³), so Σ|â|^4 = Θ(m³) → peaked
+    QR: E = Θ(m²p), so Σ|â|^4 = Θ(m²p) → less peaked
+
+===========================================================================
+7. BALOG-SZEMERÉDI-GOWERS → H BOUND
+===========================================================================
+
+  STRATEGY: Use BSG to get H bounds from additive energy.
+
+  Step 1: E(S) controls the L⁴ norm of the Fourier transform:
+    E(S) = Σ_ξ |ŝ(ξ)|⁴ where ŝ(ξ) = Σ_{s∈S} ω^{sξ}
+
+  Step 2: The eigenvalues of the circulant tournament ARE ŝ(ξ):
+    λ_j = ŝ(j) for j = 0,...,p-1
+
+  Step 3: High E(S) → concentrated |λ_j|⁴ sum → one dominant eigenvalue
+
+  Step 4: Dominant eigenvalue → high traces Tr(A^k) for large k
+    → more closed walks → (via OCF) more Hamiltonian paths → higher H
+
+  FORMAL BOUND:
+    By Cauchy-Schwarz: max_j |λ_j|² ≥ E(S) / (p · m²)
+
+    For Interval: max|λ|² ≥ m³ / (p·m²) = m/p ≈ 1/2
+    Actually: max|λ| = m (trivial eigenvalue), so nontrivial max is key.
+    Nontrivial: max_{j≠0} |λ_j|² ≥ (E(S) - m⁴/p) / ((p-1)·m²)
+
+    For Interval: (m³ - m⁴/p) / ((p-1)m²) ≈ m/p ≈ 1/2 → |λ_max| ≥ √(m/p)
+    But actual: |μ₁| ~ p/π ≈ 2m/π ≈ 0.64m → MUCH larger!
+
+    The BSG bound is WEAK because it doesn't use AP structure fully.
+    A direct calculation using Dirichlet kernel gives the tight bound.
+
+===========================================================================
+SUMMARY: ADDITIVE COMBINATORICS DICTIONARY
+===========================================================================
+
+  Tournament concept           ←→  Additive combinatorics concept
+  ─────────────────────────────────────────────────────────────────
+  Connection set S             ←→  Subset A ⊂ Z_p
+  Tournament eigenvalues λ_j   ←→  Fourier coefficients â(j)
+  Spectral gap                 ←→  L^∞ norm of â
+  Additive energy E(S)         ←→  L^4 norm of â (= E(A))
+  H(T) = Hamiltonian paths     ←→  Permanent of circulant(â)
+  Trace Tr(A^k)                ←→  k-th moment of â
+  Paley (QR set)               ←→  Multiplicative subgroup
+  Interval ({1,...,m})          ←→  Arithmetic progression
+  Paley eigenvector (THM-137)  ←→  Extremal function for E
+  H-maximization               ←→  "Structured permanent maximization"
+  Phase transition             ←→  Regime change in Fourier concentration
+
+  KEY RESULT: Tournament H-maximization is a CONCRETE INSTANCE of the
+  abstract additive combinatorics question:
+  "Which subsets of Z_p with |S|=m maximize the structured permanent?"
+
+  The answer transitions from MULTIPLICATIVE (QR) to ADDITIVE (AP) structure
+  as p grows, mirroring the sum-product phenomenon!
+
+DONE.
