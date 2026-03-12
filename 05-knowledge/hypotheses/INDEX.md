@@ -192,6 +192,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-490 | PALEY EIGENVALUE ALWAYS MAXIMAL: Even when Interval beats Paley in H (p≥19), the Paley eigenvalue of J (degree-2 interaction matrix) may be the largest for ALL p≡3 mod 4. Paley always maximizes the quadratic form; higher-degree terms override at large p. Verified p=7,11 only. Cannot verify p=19 without full cube (2^9=512 Held-Karp evaluations). | OPEN. | opus-S62 |
 | HYP-491 | CRITICAL COUPLING: The Paley→Interval transition occurs at dimensionless coupling g_c = 2√p_c/π ≈ 2.3-2.5. g(p=13)=2.29 (Paley wins), g(p=19)=2.77 (Interval wins). If g_c=2.5, then p_c≈15.4. The transition corresponds to the first positive Hessian eigenvalue appearing. | ising_phase_transition.py. | opus-S62 |
 | HYP-492 | ADDITIVE ENERGY PREDICTS H-RANKING: For circulant orientations at p>p_c, additive energy E(S) may be a monotone proxy for H(T(S)). E(Interval)/E(QR) = 1.27 (p=7) → 1.33 (p=23), growing. Testable at p=19 with existing orientation data. | ising_phase_transition.py. | opus-S62 |
+| HYP-493 | SDP INTEGRALITY GAP = PHASE TRANSITION: Degree-2 SDP relaxation of H-maximization is EXACT at p=7,11 (Paley achieves 100% of SDP bound) but WRONG at p=13 (predicts tie, Interval wins by 41678 from degree-4 terms). Integrality gap grows super-exponentially. SOS level 1→2 transition = Ising phase transition. Connected to MAX-CUT, Goemans-Williamson, Unique Games Conjecture. | sdp_sos_hierarchy.py. | opus-S62b |
+| HYP-494 | ANTI-RAMANUJAN PHENOMENON: Paley tournaments have optimal spectral gap (Ramanujan property, |lambda|=sqrt(p)/2) but this makes H CLOSE to mean. Interval's worse gap (|mu_1|~p/pi) → MORE deviation → higher H. Spectral deviation ratio (2sqrt(p)/pi)^p grows super-exponentially: 40 at p=7, 10^63 at p=83. Uncertainty principle: concentrated connection set → peaked spectrum → high H. | anti_ramanujan_proof.py. | opus-S62b |
+| HYP-495 | QR PERFECT DIFFERENCE SET: For p=3 mod 4, QR_p has constant autocorrelation C(s)=(p-3)/4 for ALL nonzero s (one-valued, not two-valued). This is the (p,(p-1)/2,(p-3)/4) difference set. Verified computationally p=7,11. Connects to QR error-correcting codes: same property → Paley eigenvector of J (THM-137). | deep_connections.py. | opus-S62b |
+| HYP-496 | ISING RG FLOW EXPONENTS: Degree-2 energy fraction scales as m^{-1.98}, degree-4 as m^{+8.98}. Critical point at p~13 where degree-4 first dominates. Analogy: Wilson-Fisher fixed point in phi^4 theory. T_eff = 1/log(m). | deep_connections.py, ising_phase_transition.py. | opus-S62b |
+| HYP-497 | IHARA ZETA BRIDGE: Z_T(u)^{-1} = det(I-uA) connects eigenvalues to cycle counts. Pole at u=1/m is critical point. Cycle count alternation at p=11 confirms THM-136: Paley wins k=5,9; Interval wins k=7,11. Overlap density ~99%: independence polynomial dominated by alpha_0, alpha_1. | ihara_zeta_ocf.py. | opus-S62b |
 | HYP-434 | chi(T) distribution at n=8: chi=1 (81.75%), chi=0 (17.55%), chi=2 (0.65%), chi=3 (0.05%) | 2000 random tournaments, full complex max_p=7. chi=2 from β_4=1, chi=3 from β_4=2. chi=3 ONLY from near-regular score (3,3,3,3,4,4,4,4) with c3=20 (maximum). No chi<0 or chi>3 seen. | kind-pasteur-S50 |
 | HYP-435 | β_4>0 requires c3 >= 16 at n=8 (out of max 20) | 2000 samples: c3 range for β_4=1 is 16-20, most common c3=18,19. β_4=2 only at c3=20. Highly cyclic structure required. Contrast: β_3>0 allows c3 as low as 7. | kind-pasteur-S50 |
 | HYP-436 | Unique chi=3 tournament has β_4=2, score (3,3,3,3,4,4,4,4), c3=20 | In 2000 samples, exactly 1 tournament had chi=3. Regular-adjacent score (differs by 1 from regular) with max possible c3=20. Consistent with earlier HYP-324 (β_4=5 at c3=20 from regular score). | kind-pasteur-S50 |
@@ -396,6 +401,9 @@ HYP-011, HYP-012, HYP-119, HYP-120, HYP-204, HYP-205, HYP-206
 
 ### Spectral
 HYP-201, HYP-202
+
+### Paley/Interval H-maximization
+HYP-479, HYP-480, HYP-481, HYP-482, HYP-483, HYP-484, HYP-485, HYP-486, HYP-487, HYP-488, HYP-489, HYP-490, HYP-491, HYP-492, HYP-493, HYP-494, HYP-495, HYP-496, HYP-497
 
 ### Dimensional meta-patterns (simplex perspective)
 HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310, HYP-311, HYP-312, HYP-313, HYP-314, HYP-315
