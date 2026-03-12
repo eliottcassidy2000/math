@@ -1,0 +1,443 @@
+======================================================================
+TRACE ALTERNATION: ANALYTICAL PROOF
+======================================================================
+
+--- Section 1: Paley trace formula verification ---
+Formula: tr_Paley(k) = m^k + m * Re[(g-1)^k - (g+1)^k] / 2^k
+where g = Gauss sum, |g|^2 = p, g = i*sqrt(p) for p = 3 mod 4
+
+  p=7: g = 0.000000 + 2.645751i
+    i*sqrt(p) = 2.645751i
+    |g - i*sqrt(p)| = 6.28e-16
+       k     tr_formula      tr_direct  match          Delta  sgn  k%4
+       3          42.00          42.00     ok          -0.00    0    3
+       5         210.00         210.00     ok          70.00    +    1
+       7        2226.00        2226.00     ok        -539.00    -    3
+  p=11: g = 0.000000 + 3.316625i
+    i*sqrt(p) = 3.316625i
+    |g - i*sqrt(p)| = 3.33e-16
+       k     tr_formula      tr_direct  match          Delta  sgn  k%4
+       3         165.00         165.00     ok          -0.00    0    3
+       5        2970.00        2970.00     ok         550.00    +    1
+       7       78540.00       78540.00     ok      -10703.00    -    3
+       9     1952445.00     1952445.00     ok      155826.00    +    1
+      11    48827790.00    48827790.00     ok    -2013803.00    -    3
+  p=19: g = 0.000000 + 4.358899i
+    i*sqrt(p) = 4.358899i
+    |g - i*sqrt(p)| = 2.22e-15
+       k     tr_formula      tr_direct  match          Delta  sgn  k%4
+       3         855.00         855.00     ok           0.00    0    3
+       5       58140.00       58140.00     ok        5700.00    +    1
+       7     4788000.00     4788000.00     ok     -321594.00    -    3
+       9   387397935.00   387397935.00     ok    14792868.00    +    1
+      11 31381136820.00 31381136820.00     ok  -632727854.00    -    3
+      13 2541865697280.00 2541865697280.00     ok 25854255206.00    +    1
+      15 205891131343815.00 205891131343815.00     ok -1019332901804.97    -    3
+      19 1350851717601459200.00 1350851717601457408.00   FAIL -1448447668636672.00    -    3
+  p=23: g = 0.000000 + 4.795832i
+    i*sqrt(p) = 4.795832i
+    |g - i*sqrt(p)| = 5.33e-15
+       k     tr_formula      tr_direct  match          Delta  sgn  k%4
+       3        1518.00        1518.00     ok          -0.00    0    3
+       5      159390.00      159390.00     ok       12650.00    +    1
+       7    19498710.00    19498710.00     ok    -1032493.00    -    3
+       9  2357880558.00  2357880558.00     ok    70117938.00    +    1
+      11 285311993670.00 285311993670.00     ok -4458716658.00    -    3
+      13 34522711007070.00 34522711007070.00     ok 272039283620.00    +    1
+      15 4177248170290998.00 4177248170290998.00     ok -16085534131945.00    -    3
+      23 895430243255217765220352.00 895430243255216691478528.00   FAIL -156346953318906462208.00    -    3
+
+======================================================================
+Section 2: Gauss sum decomposition for p = 3 mod 4
+======================================================================
+
+    For p = 3 mod 4: g = i*sqrt(p)  (since g^2 = (-1)^{(p-1)/2} * p = -p)
+
+    Paley eigenvalue sum (non-zero terms):
+      S_P = sum_{j=1}^{p-1} lambda_j^k = m * [(g-1)^k + (-g-1)^k] / 2^k
+
+    For k ODD: (-g-1)^k = -(g+1)^k
+      S_P = m * [(g-1)^k - (g+1)^k] / 2^k
+
+    With g = i*sqrt(p), write alpha = sqrt(p):
+      g - 1 = i*alpha - 1,  |g-1|^2 = alpha^2 + 1 = p + 1
+      g + 1 = i*alpha + 1,  |g+1|^2 = alpha^2 + 1 = p + 1
+
+    So |lambda_j| = sqrt(p+1)/2 for ALL j != 0  (confirmed!)
+
+    Phase: arg(g-1) = pi - arctan(alpha) (second quadrant)
+           arg(g+1) = arctan(alpha) (first quadrant)
+
+    (g-1)^k = (p+1)^{k/2} * e^{ik*[pi - arctan(alpha)]}
+    (g+1)^k = (p+1)^{k/2} * e^{ik*arctan(alpha)}
+
+    Difference (k odd):
+    (g-1)^k - (g+1)^k = (p+1)^{k/2} * [e^{ik(pi-theta)} - e^{ik*theta}]
+      where theta = arctan(sqrt(p))
+
+    e^{ik(pi-theta)} = e^{ikpi} * e^{-ik*theta} = (-1)^k * e^{-ik*theta}
+    For k odd: = -e^{-ik*theta}
+
+    So: -e^{-ik*theta} - e^{ik*theta} = -2*cos(k*theta)
+
+    (g-1)^k - (g+1)^k = -2*(p+1)^{k/2} * cos(k*theta)
+
+    S_P = m * [-2*(p+1)^{k/2} * cos(k*theta)] / 2^k
+        = -m * (p+1)^{k/2} * cos(k*theta) / 2^{k-1}
+
+    where theta = arctan(sqrt(p)).
+    
+  Verification of S_P = -m * (p+1)^{k/2} * cos(k*theta) / 2^{k-1}:
+
+  p=7, theta = 1.209429 rad = 69.30 deg:
+    k=3: direct=15.0000, formula=15.0000, ok=True
+    k=5: direct=-33.0000, formula=-33.0000, ok=True
+    k=7: direct=39.0000, formula=39.0000, ok=True
+    All match: True
+
+  p=11, theta = 1.277954 rad = 73.22 deg:
+    k=3: direct=40.0000, formula=40.0000, ok=True
+    k=5: direct=-155.0000, formula=-155.0000, ok=True
+    k=7: direct=415.0000, formula=415.0000, ok=True
+    k=9: direct=-680.0000, formula=-680.0000, ok=True
+    k=11: direct=-335.0000, formula=-335.0000, ok=True
+    All match: True
+
+  p=19, theta = 1.345283 rad = 77.08 deg:
+    k=3: direct=126.0000, formula=126.0000, ok=True
+    k=5: direct=-909.0000, formula=-909.0000, ok=True
+    k=7: direct=5031.0000, formula=5031.0000, ok=True
+    k=9: direct=-22554.0000, formula=-22554.0000, ok=True
+    k=11: direct=77211.0000, formula=77211.0000, ok=True
+    k=13: direct=-131049.0000, formula=-131049.0000, ok=True
+    All match: True
+
+  p=23, theta = 1.365227 rad = 78.22 deg:
+    k=3: direct=187.0000, formula=187.0000, ok=True
+    k=5: direct=-1661.0000, formula=-1661.0000, ok=True
+    k=7: direct=11539.0000, formula=11539.0000, ok=True
+    k=9: direct=-67133.0000, formula=-67133.0000, ok=True
+    k=11: direct=323059.0000, formula=323059.0000, ok=True
+    k=13: direct=-1136861.0000, formula=-1136861.0000, ok=True
+    All match: True
+
+  p=31, theta = 1.393086 rad = 79.82 deg:
+    k=3: direct=345.0000, formula=345.0000, ok=True
+    k=5: direct=-4215.0000, formula=-4215.0000, ok=True
+    k=7: direct=41145.0000, formula=41145.0000, ok=True
+    k=9: direct=-347415.0000, formula=-347415.0000, ok=True
+    k=11: direct=2577945.0000, formula=2577945.0000, ok=True
+    k=13: direct=-16434615.0000, formula=-16434615.0000, ok=True
+    All match: True
+
+  p=43, theta = 1.419464 rad = 81.33 deg:
+    k=3: direct=672.0000, formula=672.0000, ok=True
+    k=5: direct=-11571.0000, formula=-11571.0000, ok=True
+    k=7: direct=161679.0000, formula=161679.0000, ok=True
+    k=9: direct=-1995168.0000, formula=-1995168.0000, ok=True
+    k=11: direct=22335369.0000, formula=22335369.0000, ok=True
+    k=13: direct=-227627421.0000, formula=-227627421.0000, ok=True
+    All match: False
+
+======================================================================
+Section 3: Interval eigenvalue sum decomposition
+======================================================================
+
+    For Interval S = {1,...,m}, lambda_j = sum_{s=1}^m omega^{js}.
+
+    This is a geometric series: lambda_j = omega^j * (1 - omega^{jm}) / (1 - omega^j)
+
+    |lambda_j| = |sin(pi*j*m/p) / sin(pi*j/p)|
+
+    S_I = sum_{j=1}^{p-1} lambda_j^k
+
+    The interval eigenvalues are NOT uniform in magnitude.
+    But by symmetry: lambda_{p-j} = conj(lambda_j) - 1 ... no wait.
+
+    Actually: lambda_j = sum_{s=1}^m omega^{js}
+    lambda_{p-j} = sum_{s=1}^m omega^{(p-j)s} = sum omega^{-js} = conj(lambda_j)
+
+    So eigenvalues come in conjugate pairs: {lambda_j, conj(lambda_j)} for j=1,...,m.
+
+    S_I = sum_{j=1}^m [lambda_j^k + conj(lambda_j)^k] = 2 * sum_{j=1}^m Re(lambda_j^k)
+
+    Write lambda_j = r_j * e^{i*phi_j}, then:
+    S_I = 2 * sum_{j=1}^m r_j^k * cos(k*phi_j)
+
+    COMPARISON:
+    S_P = -m * (p+1)^{k/2} * cos(k*theta) / 2^{k-1}
+    S_I = 2 * sum_{j=1}^m r_j^k * cos(k*phi_j)
+
+    Delta_k = S_P - S_I
+    
+
+======================================================================
+Section 4: The k mod 4 mechanism
+======================================================================
+
+  Checking S_P and S_I signs and magnitudes:
+
+  p=7:
+    theta = 1.209429 (69.30 deg), pi/2 = 1.570796
+       k            S_P            S_I          Delta    cos(k*th)   (-1)^(k-1)/2
+       3          15.00          15.00          -0.00    -0.883883             -1
+       5         -33.00        -103.00          70.00     0.972272              1
+       7          39.00         578.00        -539.00    -0.574524             -1
+
+  p=11:
+    theta = 1.277954 (73.22 deg), pi/2 = 1.570796
+       k            S_P            S_I          Delta    cos(k*th)   (-1)^(k-1)/2
+       3          40.00          40.00          -0.00    -0.769800             -1
+       5        -155.00        -705.00         550.00     0.994325              1
+       7         415.00       11118.00      -10703.00    -0.887409             -1
+       9        -680.00     -156506.00      155826.00     0.484689              1
+      11        -335.00     2013468.00    -2013803.00     0.079594             -1
+
+  p=19:
+    theta = 1.345283 (77.08 deg), pi/2 = 1.570796
+       k            S_P            S_I          Delta    cos(k*th)   (-1)^(k-1)/2
+       3         126.00         126.00           0.00    -0.626099             -1
+       5        -909.00       -6609.00        5700.00     0.903371              1
+       7        5031.00      326625.00     -321594.00    -0.999970             -1
+       9      -22554.00   -14815422.00    14792868.00     0.896574              1
+      11       77211.00   632805065.00  -632727854.00    -0.613863             -1
+      13     -131049.00 -25854386255.00 25854255206.00     0.208380              1
+      15     -750834.00 1019332150970.92 -1019332901804.92     0.238779             -1
+      17    10033731.00 -38971011160881.85 38971021194612.85    -0.638183              1
+      19   -71532729.00 1448447597102042.75 -1448447668634771.75     0.909949             -1
+
+======================================================================
+Section 5: Correct sign analysis
+======================================================================
+
+  Direct check of S_P sign vs cos(k*theta) sign:
+
+  p=7, eps = 0.361367 (20.70 deg):
+    k=3: cos(k*th)= -0.883883, S_P_formula=       15.00, S_P_direct=       15.00, S_I=       15.00, Delta=       -0.00, k%4=3
+    k=5: cos(k*th)=  0.972272, S_P_formula=      -33.00, S_P_direct=      -33.00, S_I=     -103.00, Delta=       70.00, k%4=1
+    k=7: cos(k*th)= -0.574524, S_P_formula=       39.00, S_P_direct=       39.00, S_I=      578.00, Delta=     -539.00, k%4=3
+
+  p=11, eps = 0.292843 (16.78 deg):
+    k=3: cos(k*th)= -0.769800, S_P_formula=       40.00, S_P_direct=       40.00, S_I=       40.00, Delta=       -0.00, k%4=3
+    k=5: cos(k*th)=  0.994325, S_P_formula=     -155.00, S_P_direct=     -155.00, S_I=     -705.00, Delta=      550.00, k%4=1
+    k=7: cos(k*th)= -0.887409, S_P_formula=      415.00, S_P_direct=      415.00, S_I=    11118.00, Delta=   -10703.00, k%4=3
+    k=9: cos(k*th)=  0.484689, S_P_formula=     -680.00, S_P_direct=     -680.00, S_I=  -156506.00, Delta=   155826.00, k%4=1
+    k=11: cos(k*th)=  0.079594, S_P_formula=     -335.00, S_P_direct=     -335.00, S_I=  2013468.00, Delta= -2013803.00, k%4=3
+
+  p=19, eps = 0.225513 (12.92 deg):
+    k=3: cos(k*th)= -0.626099, S_P_formula=      126.00, S_P_direct=      126.00, S_I=      126.00, Delta=        0.00, k%4=3
+    k=5: cos(k*th)=  0.903371, S_P_formula=     -909.00, S_P_direct=     -909.00, S_I=    -6609.00, Delta=     5700.00, k%4=1
+    k=7: cos(k*th)= -0.999970, S_P_formula=     5031.00, S_P_direct=     5031.00, S_I=   326625.00, Delta=  -321594.00, k%4=3
+    k=9: cos(k*th)=  0.896574, S_P_formula=   -22554.00, S_P_direct=   -22554.00, S_I=-14815422.00, Delta= 14792868.00, k%4=1
+    k=11: cos(k*th)= -0.613863, S_P_formula=    77211.00, S_P_direct=    77211.00, S_I=632805065.00, Delta=-632727854.00, k%4=3
+    k=13: cos(k*th)=  0.208380, S_P_formula=  -131049.00, S_P_direct=  -131049.00, S_I=-25854386255.00, Delta=25854255206.00, k%4=1
+    k=15: cos(k*th)=  0.238779, S_P_formula=  -750834.00, S_P_direct=  -750834.00, S_I=1019332150970.92, Delta=-1019332901804.92, k%4=3
+    k=17: cos(k*th)= -0.638183, S_P_formula= 10033731.00, S_P_direct= 10033731.00, S_I=-38971011160881.85, Delta=38971021194612.85, k%4=1
+    k=19: cos(k*th)=  0.909949, S_P_formula=-71532729.00, S_P_direct=-71532729.00, S_I=1448447597102042.75, Delta=-1448447668634771.75, k%4=3
+
+======================================================================
+Section 6: H comparison via OCF cycle contributions
+======================================================================
+
+    H = 1 + sum_{k odd} 2^{(k-1)/2} * c_k  (OCF where c_k = directed k-cycles)
+
+    For k <= 5: c_k = tr(A^k)/k exactly (HYP-476).
+    For k >= 7: c_k = tr(A^k)/k - correction_k.
+
+    The alternation in tr(A^k) does NOT directly translate to H because:
+    1. The weights 2^{(k-1)/2} GROW with k
+    2. c_k != tr(A^k)/k for k >= 7
+    3. The OCF uses ALL odd k simultaneously
+
+    BUT: the TRACE ALTERNATION tells us about the SPECTRAL structure.
+    It means Paley and Interval have complementary spectral advantages:
+    - At k = 1 mod 4: Paley's flat spectrum wins (higher tr(A^k))
+    - At k = 3 mod 4: Interval's concentrated spectrum wins
+
+    The question is: which weight class dominates for H?
+    
+
+  p=7:
+       k         tr_P/k         tr_I/k  2^((k-1)/2)  weighted_diff  k%4
+       3           14.0           14.0            2           -0.0    3
+       5           42.0           28.0            4           56.0    1
+       7          318.0          395.0            8         -616.0    3
+    Total weighted difference: -560.0
+
+  p=11:
+       k         tr_P/k         tr_I/k  2^((k-1)/2)  weighted_diff  k%4
+       3           55.0           55.0            2           -0.0    3
+       5          594.0          484.0            4          440.0    1
+       7        11220.0        12749.0            8       -12232.0    3
+       9       216938.3       199624.3           16       277024.0    1
+      11      4438890.0      4621963.0           32     -5858336.0    3
+    Total weighted difference: -5593104.0
+
+  p=19:
+       k         tr_P/k         tr_I/k  2^((k-1)/2)  weighted_diff  k%4
+       3          285.0          285.0            2            0.0    3
+       5        11628.0        10488.0            4         4560.0    1
+       7       684000.0       729942.0            8      -367536.0    3
+       9     43044215.0     41400563.0           16     26298432.0    1
+      11   2852830620.0   2910351334.0           32  -1840662848.0    3
+      13 195528130560.0 193539341698.0           64 127282487168.0    1
+      15 13726075422921.0 13794030949708.0          128 -8698307428735.8    3
+      19 71097458821129336.0 71173692908952320.0          512 -39031852965367808.0    3
+    Total weighted difference: -38453568074106016.0
+
+======================================================================
+Section 7: Asymptotic analysis of the crossover
+======================================================================
+
+    S_P = -m * (p+1)^{k/2} * cos(k*theta) / 2^{k-1}
+
+    As p -> infinity: theta -> pi/2, and for fixed k:
+      cos(k*theta) -> cos(k*pi/2) = 0 (for k odd)
+
+    More precisely: cos(k*theta) ~ (-1)^{(k+1)/2} * k/sqrt(p)
+
+    So: |S_P| ~ m * (p+1)^{k/2} * k/sqrt(p) / 2^{k-1}
+            ~ (p/2) * p^{k/2} * k/sqrt(p) / 2^{k-1}
+            = k * p^{(k+1)/2-1} / 2^k
+            = k * p^{(k-1)/2} / 2^k
+
+    Meanwhile: |S_I| ~ 2 * r_1^k where r_1 ~ p/pi
+    So |S_I| ~ 2 * (p/pi)^k
+
+    Ratio: |S_I| / |S_P| ~ 2 * (p/pi)^k / (k * p^{(k-1)/2} / 2^k)
+                         = 2^{k+1} * p^k / (pi^k * k * p^{(k-1)/2})
+                         = 2^{k+1} * p^{(k+1)/2} / (pi^k * k)
+
+    For k >= 3 and large p: this ratio -> infinity.
+
+    So S_I ALWAYS dominates S_P eventually (as p grows).
+
+    The crossover prime for each k is where |S_I(k)| ~ |S_P(k)|.
+
+    For H: the OCF sums contributions from ALL k = 3,5,...,p.
+    Small k contributions favor Paley (k=5: Paley wins trace).
+    Large k contributions favor Interval (Dirichlet peak dominates).
+
+    As p grows: more large-k terms, tipping balance toward Interval.
+    This is WHY there's a crossover prime.
+    
+  |S_I(k)| / |S_P(k)| ratio for k=5:
+       p       |S_P(5)|       |S_I(5)|      ratio    asymp_ratio
+       7          33.00         114.56     3.4715          14.35
+      11         155.00        1070.60     6.9071          55.67
+      19         909.00       16275.07    17.9044         286.89
+      23        1661.00       42228.74    25.4237         508.91
+      31        4215.00      187507.40    44.4857        1246.08
+      43       11571.00      961846.76    83.1256        3325.57
+      67       44913.00     8827822.17   196.5538       12580.13
+      83       86141.00    25751392.60   298.9447       23916.35
+     107      186083.00    91680614.96   492.6867       51240.33
+
+======================================================================
+Section 8: k=p contribution (Hamiltonian cycles)
+======================================================================
+
+    At k = p: tr(A^p)/p = c_p + correction (non-simple walks).
+
+    For Paley: S_P(p) = -m * (p+1)^{p/2} * cos(p*theta) / 2^{p-1}
+    For Interval: S_I(p) dominated by r_1^p where r_1 ~ p/pi
+
+    The Paley eigenvalue magnitude is ((p+1)/4)^{1/2} ~ sqrt(p)/2.
+    So |lambda|^p ~ (sqrt(p)/2)^p = p^{p/2} / 2^p.
+
+    The interval dominant eigenvalue: |lambda_1|^p ~ (p/pi)^p.
+
+    Ratio: (p/pi)^p / (p^{p/2}/2^p) = (2/pi)^p * p^{p/2} -> infinity.
+
+    So at k=p, the interval eigenvalue dominates EXPONENTIALLY.
+    This is the fundamental reason the interval wins for large p.
+    
+  p=7: r_1=2.2470, |lam_Paley|=1.4142, (r_1/|lam_P|)^p = 2.56e+01
+  p=11: r_1=3.5133, |lam_Paley|=1.7321, (r_1/|lam_P|)^p = 2.39e+03
+  p=19: r_1=6.0548, |lam_Paley|=2.2361, (r_1/|lam_P|)^p = 1.66e+08
+
+======================================================================
+SUMMARY: Proof structure for trace alternation + crossover
+======================================================================
+
+    TRACE ALTERNATION (HYP-481):
+    1. Paley eigenvalue sum: S_P(k) = -m*(p+1)^{k/2}*cos(k*theta)/2^{k-1}
+       where theta = arctan(sqrt(p)), m = (p-1)/2.
+    2. theta = pi/2 - epsilon with epsilon = arctan(1/sqrt(p)) > 0.
+    3. cos(k*theta) for odd k has sign pattern determined by k mod 4:
+       k = 1 mod 4 (k=5,9,13,...): cos(k*theta) > 0 => S_P < 0
+       k = 3 mod 4 (k=3,7,11,...): cos(k*theta) < 0 => S_P > 0
+    4. Interval S_I ~ 2*r_1^k > 0 always (Dirichlet peak dominates).
+    5. Since S_I > 0 always:
+       k = 3 mod 4: S_P > 0, S_I > 0, and |S_P| > |S_I| at small p => Paley wins
+       k = 1 mod 4: S_P < 0, S_I > 0 => Interval wins (ALWAYS)
+
+    Wait — this says Interval wins at k=1 mod 4 (k=5,9,...), but observation
+    is that PALEY wins at k=1 mod 4!
+
+    LET ME RECHECK THE SIGN...
+    
+  CRITICAL: Direct S_P sign check at k=5
+  p=7, k=5:
+    cos(5*theta) = 0.972272
+    S_P_formula = -33.00
+    S_P_direct  = -33.00
+    S_I_direct  = -103.00
+    tr_P = 210.00, tr_I = 140.00
+    Delta = tr_P - tr_I = 70.00
+    S_P > S_I? True
+  p=11, k=5:
+    cos(5*theta) = 0.994325
+    S_P_formula = -155.00
+    S_P_direct  = -155.00
+    S_I_direct  = -705.00
+    tr_P = 2970.00, tr_I = 2420.00
+    Delta = tr_P - tr_I = 550.00
+    S_P > S_I? True
+  p=19, k=5:
+    cos(5*theta) = 0.903371
+    S_P_formula = -909.00
+    S_P_direct  = -909.00
+    S_I_direct  = -6609.00
+    tr_P = 58140.00, tr_I = 52440.00
+    Delta = tr_P - tr_I = 5700.00
+    S_P > S_I? True
+
+======================================================================
+Section 10: Full eigenvalue-by-eigenvalue comparison
+======================================================================
+
+  p=7, eigenvalue comparison:
+       j    |lam_P|    phase_P    |lam_I|    phase_I   QR
+       1     1.4142     1.9322     2.2470     1.7952   QR
+       2     1.4142     1.9322     0.5550    -2.6928   QR
+       3     1.4142    -1.9322     0.8019     2.2440   NQ
+       4     1.4142     1.9322     0.8019    -2.2440   QR
+       5     1.4142    -1.9322     0.5550     2.6928   NQ
+       6     1.4142    -1.9322     2.2470    -1.7952   NQ
+
+    k-th power sums (j=1..6):
+    k=3: sum_P = 15.00, sum_I = 15.00, Delta = -0.00
+      Per-eigenvalue (Re part):
+        j=1: P=      2.50, I=      7.07, diff=     -4.57
+        j=2: P=      2.50, I=     -0.04, diff=      2.54
+        j=3: P=      2.50, I=      0.46, diff=      2.04
+        j=4: P=      2.50, I=      0.46, diff=      2.04
+        j=5: P=      2.50, I=     -0.04, diff=      2.54
+        j=6: P=      2.50, I=      7.07, diff=     -4.57
+    k=5: sum_P = -33.00, sum_I = -103.00, Delta = 70.00
+      Per-eigenvalue (Re part):
+        j=1: P=     -5.50, I=    -51.61, diff=     46.11
+        j=2: P=     -5.50, I=      0.03, diff=     -5.53
+        j=3: P=     -5.50, I=      0.07, diff=     -5.57
+        j=4: P=     -5.50, I=      0.07, diff=     -5.57
+        j=5: P=     -5.50, I=      0.03, diff=     -5.53
+        j=6: P=     -5.50, I=    -51.61, diff=     46.11
+    k=7: sum_P = 39.00, sum_I = 578.00, Delta = -539.00
+      Per-eigenvalue (Re part):
+        j=1: P=      6.50, I=    289.20, diff=   -282.70
+        j=2: P=      6.50, I=      0.02, diff=      6.48
+        j=3: P=      6.50, I=     -0.21, diff=      6.71
+        j=4: P=      6.50, I=     -0.21, diff=      6.71
+        j=5: P=      6.50, I=      0.02, diff=      6.48
+        j=6: P=      6.50, I=    289.20, diff=   -282.70
