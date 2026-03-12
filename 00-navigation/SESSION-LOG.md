@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-12-S56c — 2026-03-12: Trace alternation theorem + crossover mechanism
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S56c (context compaction recovery)
+**Summary of work:**
+  Deep analytical investigation of WHY Paley doesn't maximize H at p=19.
+
+  MAJOR FINDINGS:
+  1. **THM-136: Trace alternation theorem.** For p=3 mod 4, sign(tr(A^k)_Paley - tr(A^k)_Interval)
+     = (-1)^{(k-3)/2} for all odd k >= 5. Paley wins at k=1 mod 4, interval at k=3 mod 4.
+     ZERO violations across p=7,...,83 (254 tests). Mechanism: Gauss sum + Dirichlet kernel
+     phases symmetrically bracket pi/2.
+
+  2. **THM-137: Crossover mechanism.** Three-layer structure:
+     - Layer 1 (spectral): Both eigenvalue sums oscillate with k mod 4
+     - Layer 2 (non-simple walks): Interval overcounts MORE at k>=7, correction favors Paley
+     - Layer 3 (OCF): Paley has more total cycles (alpha_1), interval has more independent pairs (alpha_2)
+     At small p, Paley's alpha_1 advantage wins. At p>=19, interval's spectral dominance overwhelms.
+
+  3. **HYP-482: Affine H(e_k) is interpolation artifact.** The exact fitting at p<=13 was because
+     the system is square (m orbits = m parameters). At p=17 with 100-digit mpmath, R^2=0.865.
+     Random features also give R^2=1.0 at p<=13.
+
+  4. **Additive combinatorics connection:** Delta_k = p*(M_k - N_k) where M_k/N_k count
+     k-fold sum-zero solutions in QR/{1,...,m}. Additive energy E(INT) > E(QR) always.
+
+  5. **Trace-based H approx ALWAYS favors interval** (even at p=7,11). Paley's actual advantage
+     comes entirely from non-simple walk corrections.
+
+**New contributions:** THM-136, THM-137, HYP-481, HYP-482, 6 new scripts
+**Unresolved threads:**
+  - Can THM-136 be proved algebraically for all p? (Interval side needs error bounds)
+  - Does interval maximize H for ALL p >= 19? (HYP-480, open)
+  - What's the exact mechanism for non-simple walk corrections favoring Paley?
+
 ## opus-2026-03-12-S58 — 2026-03-12: MAJOR — Paley does NOT maximize H at p=19
 
 **Account:** opus

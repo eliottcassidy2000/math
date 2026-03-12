@@ -488,6 +488,35 @@ REMAINING OPEN:
 
 ---
 
+## OPEN-Q-025 🟡 Prove Trace Alternation Theorem (THM-136) for all p
+
+**Statement:** For primes p = 3 mod 4, sign(tr(A^k)_Paley - tr(A^k)_Interval) = (-1)^{(k-3)/2} for all odd k >= 5.
+
+**Current status:** PROVED computationally for p <= 83 (zero violations). Analytical mechanism understood: Gauss sum and Dirichlet kernel phases bracket pi/2 from opposite sides, creating matched oscillations with the interval's dominant eigenvalue amplifying them.
+
+**What remains:**
+- The Paley eigenvalue sum has exact closed form: S_P(k) = -m*(p+1)^{k/2}*cos(k*theta)/2^{k-1}
+- The sign of S_P is proved for k*arctan(1/sqrt(p)) < pi (i.e., k < pi*sqrt(p))
+- For larger k, the sign may flip but |S_P| becomes negligible vs |S_I|
+- Need: rigorous error bounds on the dominant eigenvalue approximation for S_I
+- Connects to additive combinatorics: QR has more k-sum-zero solutions at k=1 mod 4
+
+**Source:** kind-pasteur-2026-03-12-S56c
+
+---
+
+## OPEN-Q-026 🟢 Does the interval maximize H for all circulant tournaments on Z_p, p >= 13?
+
+**Statement (HYP-480):** The cyclic interval C_p = (Z_p, {1,...,(p-1)/2}) maximizes H among all circulant tournaments on Z_p for all primes p >= 13.
+
+**Evidence:** Confirmed at p = 13 (exhaustive), p = 19 (THM-135). The dominant eigenvalue |mu_1| ~ p/pi grows faster than any other tournament's spectral radius, suggesting the gap widens.
+
+**What remains:** Need to verify at p = 23 and beyond (expensive Held-Karp DP). An analytical proof could use the spectral concentration argument from THM-137.
+
+**Source:** opus-2026-03-12-S58, kind-pasteur-2026-03-12-S56c
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.

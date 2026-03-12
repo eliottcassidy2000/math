@@ -352,3 +352,83 @@ TRACE FORMULA — CYCLE COUNTS vs EIGENVALUES — p = 13
   Cycle counts for each circulant tournament:
     S=[7, 8, 9, 10, 11, 12]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
     S=  [1, 2, 3, 7, 8, 9]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S=[1, 4, 7, 8, 10, 11]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S=[3, 4, 7, 8, 11, 12]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S= [1, 3, 5, 7, 9, 11]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S=[2, 4, 5, 7, 10, 12]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S= [1, 3, 6, 8, 9, 11]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S=[2, 4, 6, 8, 10, 12]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S= [1, 2, 5, 6, 9, 10]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S= [2, 3, 5, 6, 9, 12]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+
+  Do cycle counts determine H?
+    6 distinct cycle-count tuples
+    6 distinct H values
+    Cycle counts determine H? True
+
+======================================================================
+GRAND SUMMARY: SPECTRAL DETERMINATION OF H
+======================================================================
+
+    p mod4  n_H  ps_det flat=max winner         
+  --- ---- ---- ------- -------- ---------------
+    3    3    1    True     True PALEY/QR       
+    5    1    1    True     True FLATTEST       
+    7    3    2    True     True PALEY/QR       
+   11    3    4    True     True PALEY/QR       
+   13    1    6    True    False CONCENTRATED   
+
+======================================================================
+HIGHER PRIME TESTS
+======================================================================
+
+======================================================================
+HIGHER PRIME TESTS — p = 17, 19
+======================================================================
+
+--- p = 17 (mod 4 = 1) ---
+  256 circulant tournaments, 8 spectral params
+    Computed 50/256 (142.1s)
+    Computed 100/256 (281.4s)
+    Computed 150/256 (396.4s)
+    Computed 200/256 (464.9s)
+    Computed 250/256 (532.8s)
+  Total: 256 tournaments in 540.9s
+  16 distinct H values in sample
+  H range: [13478929757, 13689269499]
+  Max H: S = (9, 10, 11, 12, 13, 14, 15, 16), H = 13689269499
+  y^2 = [29.1153, 0.0087, 3.0882, 0.0375, 1.0083, 0.0958, 0.4384, 0.2078]
+  spread = 29.1066, dist_center = 714.0000
+  CI: H = 13689269499, rank = 1/256, spread = 29.1066
+    IS MAX: True
+  Flattest: H = 13560055389, rank = 33/256, spread = 8.4780
+    IS MAX: False
+  corr(H, dist_from_center) = 0.714629
+  ==> CYCLIC INTERVAL WINS (p mod 4 = 1)
+
+--- p = 19 (mod 4 = 3) ---
+  512 circulant tournaments, 9 spectral params
+    Computed 50/512 (350.0s)
+    Computed 100/512 (696.9s)
+    Computed 150/512 (1043.0s)
+    Computed 200/512 (1393.3s)
+    Computed 250/512 (1741.5s)
+    Computed 300/512 (2091.9s)
+    Computed 350/512 (2438.9s)
+    Computed 400/512 (2786.6s)
+    Computed 450/512 (3141.0s)
+    Computed 500/512 (3506.7s)
+  Total: 512 tournaments in 3598.5s
+  30 distinct H values in sample
+  H range: [1162651682029, 1184212824763]
+  Max H: S = (10, 11, 12, 13, 14, 15, 16, 17, 18), H = 1184212824763
+  y^2 = [36.4104, 0.007, 3.8985, 0.0295, 1.2993, 0.0732, 0.5857, 0.1514, 0.295]
+  spread = 36.4034, dist_center = 1140.0000
+  QR: H = 1172695746915, rank = 37/512, spread = 0.0000
+    IS MAX: False
+  CI: H = 1184212824763, rank = 1/512, spread = 36.4034
+    IS MAX: True
+  Flattest: H = 1172695746915, rank = 37/512, spread = 0.0000
+    IS MAX: False
+  corr(H, dist_from_center) = 0.723338
+  ==> CYCLIC INTERVAL WINS (p mod 4 = 3)
