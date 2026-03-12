@@ -1,0 +1,354 @@
+======================================================================
+SPECTRAL H FORMULA — SEARCH FOR H = f(eigenvalues)
+======================================================================
+
+======================================================================
+PRIME p = 3  (p mod 4 = 3, p mod 8 = 3)
+======================================================================
+  2 circulant tournaments, 1 spectral parameters
+  Computed in 0.0s
+  1 distinct H values: [3]
+  H_max = 3, H_min = 3
+  Max H tournament: S = (2,)
+  QR_3 = (1,), valid = True
+  H(QR) = 3, is max: True
+  Cyclic interval S = (2,), H = 3, is max: True
+
+  rank            H   spread   dist_ctr       sum_y4 S
+  ---- ------------ -------- ---------- ------------ --------------------
+     1            3   0.0000     0.0000       0.5625 [2] <-- CI
+     2            3   0.0000     0.0000       0.5625 [1] <-- QR
+
+  SPECTRAL MONOTONICITY TEST:
+    H =            3: avg dist from center = 0.0000, count = 2
+    p = 3 mod 4: H decreasing in dist? True
+
+  POWER SUM DETERMINATION:
+    1 distinct power sum signatures
+    1 distinct H values
+    H determined by power sums? True
+
+======================================================================
+D_{6} REPRESENTATION THEORY — p = 3
+======================================================================
+  D_{6} has 3 irreps:
+    2 one-dimensional (trivial, sign)
+    1 two-dimensional (rho_1, ..., rho_1)
+
+  INDEPENDENCE POLYNOMIAL DECOMPOSITION:
+    S=[2]: H=3, I(Omega,2)=3, IP=[1, 1], |Omega|=1
+    S=[1]: H=3, I(Omega,2)=3, IP=[1, 1], |Omega|=1
+
+======================================================================
+PRIME p = 5  (p mod 4 = 1, p mod 8 = 5)
+======================================================================
+  4 circulant tournaments, 2 spectral parameters
+  Computed in 0.0s
+  1 distinct H values: [15]
+  H_max = 15, H_min = 15
+  Max H tournament: S = (3, 4)
+  QR_5 = (1, 4), valid = False
+  Cyclic interval S = (3, 4), H = 15, is max: True
+
+  rank            H   spread   dist_ctr       sum_y4 S
+  ---- ------------ -------- ---------- ------------ --------------------
+     1           15   2.2361     2.5000       5.6250 [3, 4] <-- CI
+     2           15   2.2361     2.5000       5.6250 [1, 3]
+     3           15   2.2361     2.5000       5.6250 [2, 4]
+     4           15   2.2361     2.5000       5.6250 [1, 2]
+
+  SPECTRAL MONOTONICITY TEST:
+    H =           15: avg dist from center = 2.5000, count = 4
+    p = 1 mod 4: H increasing in dist? True
+
+  POWER SUM DETERMINATION:
+    1 distinct power sum signatures
+    1 distinct H values
+    H determined by power sums? True
+
+======================================================================
+D_{10} REPRESENTATION THEORY — p = 5
+======================================================================
+  D_{10} has 4 irreps:
+    2 one-dimensional (trivial, sign)
+    2 two-dimensional (rho_1, ..., rho_2)
+
+  INDEPENDENCE POLYNOMIAL DECOMPOSITION:
+    S=[3, 4]: H=15, I(Omega,2)=11, IP=[1, 5], |Omega|=5
+    *** MISMATCH ***
+    S=[1, 3]: H=15, I(Omega,2)=11, IP=[1, 5], |Omega|=5
+    *** MISMATCH ***
+    S=[2, 4]: H=15, I(Omega,2)=11, IP=[1, 5], |Omega|=5
+    *** MISMATCH ***
+    S=[1, 2]: H=15, I(Omega,2)=11, IP=[1, 5], |Omega|=5
+    *** MISMATCH ***
+
+======================================================================
+PRIME p = 7  (p mod 4 = 3, p mod 8 = 7)
+======================================================================
+  8 circulant tournaments, 3 spectral parameters
+  Computed in 0.0s
+  2 distinct H values: [189, 175]
+  H_max = 189, H_min = 175
+  Max H tournament: S = (1, 2, 4)
+  QR_7 = (1, 2, 4), valid = True
+  H(QR) = 189, is max: True
+  Cyclic interval S = (4, 5, 6), H = 175, is max: False
+
+  rank            H   spread   dist_ctr       sum_y4 S
+  ---- ------------ -------- ---------- ------------ --------------------
+     1          189   0.0000     0.0000       9.1875 [1, 2, 4] <-- QR
+     2          189   0.0000     0.0000       9.1875 [3, 5, 6]
+     3          175   4.7409    14.0000      23.1875 [4, 5, 6] <-- CI
+     4          175   4.7409    14.0000      23.1875 [1, 4, 5]
+     5          175   4.7409    14.0000      23.1875 [2, 4, 6]
+     6          175   4.7409    14.0000      23.1875 [1, 3, 5]
+     7          175   4.7409    14.0000      23.1875 [2, 3, 6]
+     8          175   4.7409    14.0000      23.1875 [1, 2, 3]
+
+  SPECTRAL MONOTONICITY TEST:
+    H =          189: avg dist from center = 0.0000, count = 2
+    H =          175: avg dist from center = 14.0000, count = 6
+    p = 3 mod 4: H decreasing in dist? False
+
+  POWER SUM DETERMINATION:
+    2 distinct power sum signatures
+    2 distinct H values
+    H determined by power sums? True
+
+  POLYNOMIAL FIT (H as function of power sums S_j = sum y_k^{2j}):
+    Note: S_1 = sum y_k^2 = p(p-1)/8 = 5.25 is CONSTANT
+    Linear in S2: H = 198.1875 + (-1.000000) * S2
+    R^2 = 1.00000000, max |residual| = 0.0000
+    *** EXACT LINEAR FORMULA FOUND ***
+    Interpretation: H is AFFINE in sum(y_k^4)
+
+    Exact data points:
+    H=         189 (x  2): S_j = [5.25, 9.1875, 16.0781]
+    H=         175 (x  6): S_j = [5.25, 23.1875, 110.5781]
+
+======================================================================
+VARIATIONAL PRINCIPLE TEST — p = 7
+======================================================================
+  Spectral simplex: sum y_k^2 = 5.2
+  Center point: y_k^2 = 1.7500 for all k
+  m = 3 spectral parameters
+  Center achievable: True (Paley is flat: True)
+  Minimum sum y^4 (flat) = 9.1875
+  Achieved by maximizer: 9.1875
+
+  corr(H, dist_from_center) = -1.000000
+  corr(H, sum_y^4) = -1.000000
+  p = 3 mod 4: expect negative correlation (flat=max)
+  Maximizer at center? True
+
+======================================================================
+D_{14} REPRESENTATION THEORY — p = 7
+======================================================================
+  D_{14} has 5 irreps:
+    2 one-dimensional (trivial, sign)
+    3 two-dimensional (rho_1, ..., rho_3)
+
+  INDEPENDENCE POLYNOMIAL DECOMPOSITION:
+    S=[1, 2, 4]: H=189, I(Omega,2)=57, IP=[1, 14, 7], |Omega|=14
+    *** MISMATCH ***
+    S=[3, 5, 6]: H=189, I(Omega,2)=57, IP=[1, 14, 7], |Omega|=14
+    *** MISMATCH ***
+    S=[4, 5, 6]: H=175, I(Omega,2)=85, IP=[1, 14, 14], |Omega|=14
+    *** MISMATCH ***
+    S=[1, 4, 5]: H=175, I(Omega,2)=85, IP=[1, 14, 14], |Omega|=14
+    *** MISMATCH ***
+    S=[2, 4, 6]: H=175, I(Omega,2)=85, IP=[1, 14, 14], |Omega|=14
+    *** MISMATCH ***
+
+======================================================================
+TRACE FORMULA — CYCLE COUNTS vs EIGENVALUES — p = 7
+======================================================================
+
+  Cycle counts for each circulant tournament:
+    S=           [1, 2, 4]: H=       189, c3=14, c5=42, c7=318, tr2=-0.000000
+    S=           [3, 5, 6]: H=       189, c3=14, c5=42, c7=318, tr2=-0.000000
+    S=           [4, 5, 6]: H=       175, c3=14, c5=28, c7=395, tr2=-0.000000
+    S=           [1, 4, 5]: H=       175, c3=14, c5=28, c7=395, tr2=-0.000000
+    S=           [2, 4, 6]: H=       175, c3=14, c5=28, c7=395, tr2=-0.000000
+    S=           [1, 3, 5]: H=       175, c3=14, c5=28, c7=395, tr2=-0.000000
+    S=           [2, 3, 6]: H=       175, c3=14, c5=28, c7=395, tr2=-0.000000
+    S=           [1, 2, 3]: H=       175, c3=14, c5=28, c7=395, tr2=-0.000000
+
+  Do cycle counts determine H?
+    2 distinct cycle-count tuples
+    2 distinct H values
+    Cycle counts determine H? True
+
+======================================================================
+PRIME p = 11  (p mod 4 = 3, p mod 8 = 3)
+======================================================================
+  32 circulant tournaments, 5 spectral parameters
+  Computed in 0.5s
+  4 distinct H values: [95095, 93467, 93027, 92411]
+  H_max = 95095, H_min = 92411
+  Max H tournament: S = (2, 6, 7, 8, 10)
+  QR_11 = (1, 3, 4, 5, 9), valid = True
+  H(QR) = 95095, is max: True
+  Cyclic interval S = (6, 7, 8, 9, 10), H = 93027, is max: False
+
+  rank            H   spread   dist_ctr       sum_y4 S
+  ---- ------------ -------- ---------- ------------ --------------------
+     1        95095   0.0000     0.0000      37.8125 [2, 6, 7, 8, 10]
+     2        95095   0.0000     0.0000      37.8125 [1, 3, 4, 5, 9] <-- QR
+     3        93467   8.3184    44.0000      81.8125 [3, 6, 7, 9, 10]
+     4        93467   8.3184    44.0000      81.8125 [1, 3, 6, 7, 9]
+     5        93467   8.3184    44.0000      81.8125 [1, 2, 3, 6, 7]
+     6        93467   8.3184    44.0000      81.8125 [1, 2, 4, 6, 8]
+     7        93467   8.3184    44.0000      81.8125 [1, 2, 3, 4, 6]
+     8        93467   8.3184    44.0000      81.8125 [5, 7, 8, 9, 10]
+     9        93467   8.3184    44.0000      81.8125 [3, 5, 7, 9, 10]
+    10        93467   8.3184    44.0000      81.8125 [4, 5, 8, 9, 10]
+   ...
+    13        93027  12.0720   110.0000     147.8125 [6, 7, 8, 9, 10] <-- CI
+    30        92411   5.7420    22.0000      59.8125 [2, 3, 5, 7, 10]
+    31        92411   5.7420    22.0000      59.8125 [1, 2, 3, 5, 7]
+    32        92411   5.7420    22.0000      59.8125 [2, 3, 4, 5, 10]
+
+  SPECTRAL MONOTONICITY TEST:
+    H =        95095: avg dist from center = 0.0000, count = 2
+    H =        93467: avg dist from center = 44.0000, count = 10
+    H =        93027: avg dist from center = 110.0000, count = 10
+    H =        92411: avg dist from center = 22.0000, count = 10
+    p = 3 mod 4: H decreasing in dist? False
+
+  POWER SUM DETERMINATION:
+    4 distinct power sum signatures
+    4 distinct H values
+    H determined by power sums? True
+
+  POLYNOMIAL FIT (H as function of power sums S_j = sum y_k^{2j}):
+    Note: S_1 = sum y_k^2 = p(p-1)/8 = 13.75 is CONSTANT
+    Linear in S2: H = 93240.4688 + (-1.500000) * S2
+    R^2 = 0.00771936, max |residual| = 1911.2500
+
+    Bilinear in S2, S3: H = 99422.3277 + (-150.423077)*S2 + (9.025641)*S3
+    R^2 = 0.41646269, max |residual| = 647.0962
+
+    Exact data points:
+    H=       95095 (x  2): S_j = [13.75, 37.8125, 103.9844, 285.957, 786.3818]
+    H=       93467 (x 10): S_j = [13.75, 81.8125, 631.9844, 5241.457, 44250.1318]
+    H=       93027 (x 10): S_j = [13.75, 147.8125, 1770.4844, 21392.207, 258684.8193]
+    H=       92411 (x 10): S_j = [13.75, 59.8125, 285.4844, 1438.207, 7534.1943]
+
+======================================================================
+VARIATIONAL PRINCIPLE TEST — p = 11
+======================================================================
+  Spectral simplex: sum y_k^2 = 13.8
+  Center point: y_k^2 = 2.7500 for all k
+  m = 5 spectral parameters
+  Center achievable: True (Paley is flat: True)
+  Minimum sum y^4 (flat) = 37.8125
+  Achieved by maximizer: 37.8125
+
+  corr(H, dist_from_center) = -0.087860
+  corr(H, sum_y^4) = -0.087860
+  p = 3 mod 4: expect negative correlation (flat=max)
+  Maximizer at center? True
+
+======================================================================
+TRACE FORMULA — CYCLE COUNTS vs EIGENVALUES — p = 11
+======================================================================
+
+  Cycle counts for each circulant tournament:
+    S=    [2, 6, 7, 8, 10]: H=     95095, c3=55, c5=594, c7=11220, tr2=-0.000000
+    S=     [1, 3, 4, 5, 9]: H=     95095, c3=55, c5=594, c7=11220, tr2=-0.000000
+    S=    [3, 6, 7, 9, 10]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+    S=     [1, 3, 6, 7, 9]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+    S=     [1, 2, 3, 6, 7]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+    S=     [1, 2, 4, 6, 8]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+    S=     [1, 2, 3, 4, 6]: H=     93467, c3=55, c5=550, c7=11693, tr2=0.000000
+    S=    [5, 7, 8, 9, 10]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+    S=    [3, 5, 7, 9, 10]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+    S=    [4, 5, 8, 9, 10]: H=     93467, c3=55, c5=550, c7=11693, tr2=-0.000000
+
+  Do cycle counts determine H?
+    4 distinct cycle-count tuples
+    4 distinct H values
+    Cycle counts determine H? True
+
+======================================================================
+PRIME p = 13  (p mod 4 = 1, p mod 8 = 5)
+======================================================================
+  64 circulant tournaments, 6 spectral parameters
+  Computed in 5.4s
+  6 distinct H values: [3711175, 3707483, 3704857, 3703011, 3683797, 3669497]
+  H_max = 3711175, H_min = 3669497
+  Max H tournament: S = (7, 8, 9, 10, 11, 12)
+  QR_13 = (1, 3, 4, 9, 10, 12), valid = False
+  Cyclic interval S = (7, 8, 9, 10, 11, 12), H = 3711175, is max: True
+
+  rank            H   spread   dist_ctr       sum_y4 S
+  ---- ------------ -------- ---------- ------------ --------------------
+     1      3711175  16.9417   227.5000     290.8750 [7, 8, 9, 10, 11, 12] <-- CI
+     2      3711175  16.9417   227.5000     290.8750 [1, 2, 3, 7, 8, 9]
+     3      3711175  16.9417   227.5000     290.8750 [1, 4, 7, 8, 10, 11]
+     4      3711175  16.9417   227.5000     290.8750 [3, 4, 7, 8, 11, 12]
+     5      3711175  16.9417   227.5000     290.8750 [1, 3, 5, 7, 9, 11]
+     6      3711175  16.9417   227.5000     290.8750 [2, 4, 5, 7, 10, 12]
+     7      3711175  16.9417   227.5000     290.8750 [1, 3, 6, 8, 9, 11]
+     8      3711175  16.9417   227.5000     290.8750 [2, 4, 6, 8, 10, 12]
+     9      3711175  16.9417   227.5000     290.8750 [1, 2, 5, 6, 9, 10]
+    10      3711175  16.9417   227.5000     290.8750 [2, 3, 5, 6, 9, 12]
+   ...
+    62      3669497   9.8038    71.5000     134.8750 [1, 3, 5, 6, 9, 11]
+    63      3669497   9.8038    71.5000     134.8750 [1, 2, 4, 5, 6, 10]
+    64      3669497   9.8038    71.5000     134.8750 [2, 3, 4, 5, 6, 12]
+
+  SPECTRAL MONOTONICITY TEST:
+    H =      3711175: avg dist from center = 227.5000, count = 12
+    H =      3707483: avg dist from center = 123.5000, count = 12
+    H =      3704857: avg dist from center = 45.5000, count = 12
+    H =      3703011: avg dist from center = 19.5000, count = 4
+    H =      3683797: avg dist from center = 45.5000, count = 12
+    H =      3669497: avg dist from center = 71.5000, count = 12
+    p = 1 mod 4: H increasing in dist? False
+
+  POWER SUM DETERMINATION:
+    12 distinct power sum signatures
+    6 distinct H values
+    H determined by power sums? True
+
+  POLYNOMIAL FIT (H as function of power sums S_j = sum y_k^{2j}):
+    Note: S_1 = sum y_k^2 = p(p-1)/8 = 19.5 is CONSTANT
+    Linear in S2: H = 3677351.9507 + (114.921053) * S2
+    R^2 = 0.25934015, max |residual| = 23354.9276
+
+    Bilinear in S2, S3: H = 3774771.7545 + (-1118.410714)*S2 + (54.338095)*S3
+    R^2 = 0.38582042, max |residual| = 18335.8036
+
+    Exact data points:
+    H=     3711175 (x 12): S_j = [19.5, 290.875, 4881.0938, 82685.5859, 1401947.498]
+    H=     3707483 (x 12): S_j = [19.5, 186.875, 2346.0938, 30815.5859, 407585.623]
+    H=     3704857 (x 12): S_j = [19.5, 108.875, 688.5938, 4708.3359, 33782.8105]
+    H=     3703011 (x  4): S_j = [19.5, 82.875, 396.0938, 1968.5859, 9899.373]
+    H=     3683797 (x 12): S_j = [19.5, 108.875, 688.5937, 4552.3359, 30857.8105]
+    H=     3669497 (x 12): S_j = [19.5, 134.875, 1176.0938, 11205.0859, 110828.123]
+
+======================================================================
+VARIATIONAL PRINCIPLE TEST — p = 13
+======================================================================
+  Spectral simplex: sum y_k^2 = 19.5
+  Center point: y_k^2 = 3.2500 for all k
+  m = 6 spectral parameters
+  Center achievable: False
+  Minimum sum y^4 (flat) = 63.3750
+  Achieved by maximizer: 290.8750
+
+  corr(H, dist_from_center) = 0.509255
+  corr(H, sum_y^4) = 0.509255
+  p = 1 mod 4: expect positive correlation (concentrated=max)
+  Maximizer farthest from center? True
+
+======================================================================
+TRACE FORMULA — CYCLE COUNTS vs EIGENVALUES — p = 13
+======================================================================
+
+  Cycle counts for each circulant tournament:
+    S=[7, 8, 9, 10, 11, 12]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
+    S=  [1, 2, 3, 7, 8, 9]: H=   3711175, c3=91, c5=1274, c7=44512, tr2=-0.000000
