@@ -1,0 +1,110 @@
+======================================================================
+INTERPOLATION ARTIFACT TEST
+======================================================================
+
+  p=7: m=3, 8 tours, 2 distinct H values
+    Random features (1+1 params, 2 points): 20/20 exact (all should be exact)
+    *** CONFIRMED: Any 1 features give exact fit ***
+    The 'affine in e_k' property is just interpolation!
+    1 random feats + const (2 params, 2 data): R^2=1.000000, max|res|=0.0000
+
+  p=11: m=5, 32 tours, 4 distinct H values
+    Random features (3+1 params, 4 points): 20/20 exact (all should be exact)
+    *** CONFIRMED: Any 3 features give exact fit ***
+    The 'affine in e_k' property is just interpolation!
+    1 random feats + const (2 params, 4 data): R^2=0.346606, max|res|=1270.5626
+    2 random feats + const (3 params, 4 data): R^2=0.968336, max|res|=198.2718
+    3 random feats + const (4 params, 4 data): R^2=1.000000, max|res|=0.0000
+
+  p=13: m=6, 64 tours, 6 distinct H values
+    Random features (5+1 params, 6 points): 20/20 exact (all should be exact)
+    *** CONFIRMED: Any 5 features give exact fit ***
+    The 'affine in e_k' property is just interpolation!
+    1 random feats + const (2 params, 6 data): R^2=0.068010, max|res|=22688.1446
+    2 random feats + const (3 params, 6 data): R^2=0.126767, max|res|=22061.8344
+    3 random feats + const (4 params, 6 data): R^2=0.180648, max|res|=21338.4643
+    5 random feats + const (6 params, 6 data): R^2=1.000000, max|res|=0.0000
+
+============================================================
+ROBUST CHARACTERIZATION: What maximizes H?
+============================================================
+
+  p=7 (mod 4 = 3), m=3:
+           H     var_y2   spread  dist_flat  paley interval
+         189     0.0000   0.0000     0.0000   True    False
+         175     4.6667   4.7409    14.0000  False     True
+  Corr(H, var_y2) = -1.0000
+  => H-maximizer tends to have LOW spectral variance (FLAT)
+  MAXIMIZER: Paley (flat spectrum, dist_flat=0.000000)
+
+  p=11 (mod 4 = 3), m=5:
+           H     var_y2   spread  dist_flat  paley interval
+       95095     0.0000   0.0000     0.0000  False    False
+       93467     8.8000   8.3184    44.0000  False    False
+       93027    22.0000  12.0720   110.0000  False     True
+       92411     4.4000   5.7420    22.0000  False    False
+  Corr(H, var_y2) = -0.4731
+  MAXIMIZER: S=(2, 6, 7, 8, 10), dist_flat=0.0000
+
+  p=13 (mod 4 = 1), m=6:
+           H     var_y2   spread  dist_flat  paley interval
+     3711175    37.9167  16.9417   227.5000  False     True
+     3707483    20.5833  13.2440   123.5000  False    False
+     3704857     7.5833   7.7464    45.5000  False    False
+     3703011     3.2500   3.6056    19.5000  False    False
+     3683797     7.5833   7.1063    45.5000  False    False
+     3669497    11.9167   9.8038    71.5000  False    False
+  Corr(H, var_y2) = 0.4185
+  MAXIMIZER: Cyclic interval (concentrated, dist_flat=227.5000)
+
+============================================================
+MONOTONICITY: H vs dist_flat
+============================================================
+
+  p=7: Sorted by dist_flat:
+     dist_flat          H
+      0.000000        189
+      0.000000        189
+     14.000000        175
+     14.000000        175
+     14.000000        175
+     14.000000        175
+     14.000000        175
+     14.000000        175
+  Monotone decreasing: True
+
+  p=11: Sorted by dist_flat:
+     dist_flat          H
+      0.000000      95095
+      0.000000      95095
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     22.000000      92411
+     44.000000      93467 <-- VIOLATION
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+     44.000000      93467
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+    110.000000      93027
+  Monotone decreasing: False

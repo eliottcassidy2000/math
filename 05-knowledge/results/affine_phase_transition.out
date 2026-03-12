@@ -1,0 +1,156 @@
+======================================================================
+AFFINE PHASE TRANSITION: WHY DOES H = affine(e_k) BREAK AT p=17?
+======================================================================
+
+============================================================
+SECTION 1: AFFINE FIT SURVEY
+============================================================
+
+  p= 3 (mod4=3): m=1,    2 tours,   1 orbits,   1 H-vals, AFFINE: 0 terms, R²=0.000000, status=APPROX
+
+  p= 5 (mod4=1): m=2,    4 tours,   1 orbits,   1 H-vals, AFFINE: 0 terms, R²=0.000000, status=APPROX
+
+  p= 7 (mod4=3): m=3,    8 tours,   2 orbits,   2 H-vals, AFFINE: 1 terms, R²=1.000000, status=EXACT
+
+  p=11 (mod4=3): m=5,   32 tours,   4 orbits,   4 H-vals, AFFINE: 3 terms, R²=1.000000, status=EXACT
+
+  p=13 (mod4=1): m=6,   64 tours,   6 orbits,   6 H-vals, AFFINE: 5 terms, R²=1.000000, status=EXACT
+
+  p=17 (mod4=1): m=8, 256 tours, 16 orbits, 16 H-vals, AFFINE: 7 terms, R²=0.865319, status=APPROX
+
+============================================================
+SECTION 2: ORBIT STRUCTURE AND GALOIS
+============================================================
+
+  p=3: Index orbits under Z_p* on {1,...,1}:
+    [1] (size 1)
+    1 index orbits => 1 degree-1 Z_p*-invariant monomials: sum_False y_k^2
+    Free invariant dims: deg-1 = 0, needed for affine e_k = 0
+
+  p=5: Index orbits under Z_p* on {1,...,2}:
+    [1, 2] (size 2)
+    1 index orbits => 1 degree-1 Z_p*-invariant monomials: sum_False y_k^2
+    Free invariant dims: deg-1 = 0, needed for affine e_k = 1
+
+  p=7: Index orbits under Z_p* on {1,...,3}:
+    [1, 2, 3] (size 3)
+    1 index orbits => 1 degree-1 Z_p*-invariant monomials: sum_False y_k^2
+    Free invariant dims: deg-1 = 0, needed for affine e_k = 2
+
+  p=11: Index orbits under Z_p* on {1,...,5}:
+    [1, 2, 3, 4, 5] (size 5)
+    1 index orbits => 1 degree-1 Z_p*-invariant monomials: sum_False y_k^2
+    Free invariant dims: deg-1 = 0, needed for affine e_k = 4
+
+  p=13: Index orbits under Z_p* on {1,...,6}:
+    [1, 2, 3, 4, 5, 6] (size 6)
+    1 index orbits => 1 degree-1 Z_p*-invariant monomials: sum_False y_k^2
+    Free invariant dims: deg-1 = 0, needed for affine e_k = 5
+
+  p=17: Index orbits under Z_p* on {1,...,8}:
+    [1, 2, 3, 4, 5, 6, 7, 8] (size 8)
+    1 index orbits => 1 degree-1 Z_p*-invariant monomials: sum_False y_k^2
+    Free invariant dims: deg-1 = 0, needed for affine e_k = 7
+
+============================================================
+SECTION 3: NON-SYMMETRIC INVARIANTS
+============================================================
+
+  p=7: 0 free orbit-sum features
+
+  p=13: 0 free orbit-sum features
+
+  p=17: see p17_nonlinear_fit.out
+
+============================================================
+SECTION 4: DIHEDRAL GROUP D_{2p} PERSPECTIVE
+============================================================
+
+    D_{2p} = <r, s | r^p = s^2 = 1, srs = r^{-1}>
+
+    For circulant tournaments on Z_p:
+    - Rotations Z_p < D_{2p}: act as automorphisms (T isomorphic to rotated T)
+    - Reflection s: vertex i -> -i mod p reverses all arcs (anti-automorphism)
+      So T and T^{op} (complement) are related by s.
+    - H(T) = H(T^{op}) for any tournament (path reversal)
+
+    The FULL symmetry group acting on connection sets is:
+    - Z_p: rotate (shift S by 1) — trivial, S is shift-invariant
+    - Z_p^*: multiply (a*S mod p) — this is the orbit action
+    - Negation: S -> {p-s : s in S} = complement connection set
+      This takes S to the complement tournament T^c = T^{op}
+      And H(T^{op}) = H(T) by path reversal
+
+    So the FULL symmetry is: Z_p^* extended by negation.
+    But negation IS multiplication by -1, which is in Z_p^* when p > 2.
+    Wait: -1 mod p is always in Z_p^* since gcd(p-1, p) = 1.
+    So negation IS already included in Z_p^*!
+
+    Actually: the connection set for the COMPLEMENTARY tournament is
+    S^c = {1,...,p-1} \ S = {p-s : s in S}... no.
+    If T has connection set S, then T^{op} (reverse all arcs) has
+    connection set S' = {(p-s) mod p : s in S} = {p-s : s in S}
+    because i->j in T iff (j-i) mod p in S, so j->i iff (i-j) mod p in S
+    iff (p-(j-i)) mod p in S iff (j-i) mod p in {p-s : s in S}.
+    And S' = (-1)*S mod p.
+
+    So T^{op} corresponds to (-1)*S = {p-s : s in S}.
+    Since -1 is in Z_p^*, the orbit of S under Z_p^* already contains
+    (-1)*S. So T and T^{op} are in the SAME orbit!
+
+    This means the orbit structure already accounts for both
+    D_{2p} rotations AND reflections.
+
+    What ELSE can D_{2p} contribute?
+    The dihedral group D_{2p} acts on the VERTICES, not the connection sets.
+    For a circulant tournament, the automorphism group contains Z_p
+    (rotations). The reflection s: i -> -i satisfies s*T = T^{op}.
+    So Aut(T) contains Z_p but may not contain s.
+
+    For SELF-CONVERSE tournaments (T = T^{op}), s is an anti-automorphism
+    but combined with arc-reversal gives an automorphism: the full
+    symmetry group is D_{2p}.
+
+    For NON-self-converse circulants (where S != {p-s : s in S}, i.e.,
+    (-1)*S != S, equivalently S is not closed under negation):
+    Aut(T) = Z_p (just rotations).
+
+    SELF-CONVERSE condition: (-1)*S = S, i.e., s in S iff p-s in S.
+    This is IMPOSSIBLE for tournament connection sets! Because S must
+    contain exactly one of {s, p-s} for each pair. So s in S iff p-s NOT in S.
+    Therefore S is NEVER self-converse... unless S is empty, which it's not.
+
+    Wait, (-1)*S = {p-s : s in S}. For S to be a tournament connection set,
+    for each pair {s, p-s}, exactly one is in S. So (-1)*S = complement of S
+    in {1,...,p-1}, which equals {s : s not in S}. This is NEVER equal to S
+    (unless m=0).
+
+    So circulant tournaments are NEVER self-converse! The orbit of S under
+    Z_p^* contains both S and (-1)*S (complement), and these are always
+    DISTINCT (as connection sets).
+
+    CONCLUSION: The dihedral group perspective for circulant tournaments
+    reduces to the Z_p^* orbit structure, which is what we already use.
+    
+
+============================================================
+SECTION 5: WHAT DEGREE IS H IN y^2?
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\affine_phase_transition.py", line 683, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\affine_phase_transition.py", line 569, in main
+    print("""
+    ~~~~~^^^^
+    H is a symmetric function of y_1^2,...,y_m^2 (invariant under Z_p*).
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<58 lines>...
+    At p\u226517, the constraint set becomes "looser" and higher-degree terms appear.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2264' in position 1232: character maps to <undefined>
