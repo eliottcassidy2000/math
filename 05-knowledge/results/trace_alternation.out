@@ -1,0 +1,207 @@
+======================================================================
+TRACE ALTERNATION PATTERN ANALYSIS
+======================================================================
+
+  p=7 (m=3):
+     k         tr_P/k         tr_I/k   P>I? k mod 4
+     3           14.0           14.0    TIE       3
+     5           42.0           28.0      P       1
+     7          318.0          395.0      I       3
+    Paley wins at k mod 4: {1: 1, 3: 0}
+    Interval wins at k mod 4: {1: 0, 3: 1}
+
+  p=11 (m=5):
+     k         tr_P/k         tr_I/k   P>I? k mod 4
+     3           55.0           55.0    TIE       3
+     5          594.0          484.0      P       1
+     7        11220.0        12749.0      I       3
+     9       216938.3       199624.3      P       1
+    11      4438890.0      4621963.0      I       3
+    Paley wins at k mod 4: {1: 2, 3: 0}
+    Interval wins at k mod 4: {1: 0, 3: 2}
+
+  p=19 (m=9):
+     k         tr_P/k         tr_I/k   P>I? k mod 4
+     3          285.0          285.0    TIE       3
+     5        11628.0        10488.0      P       1
+     7       684000.0       729942.0      I       3
+     9     43044215.0     41400563.0      P       1
+    11   2852830620.0   2910351334.0      I       3
+    13 195528130560.0 193539341698.0      P       1
+    15 13726075422921.0 13794030949708.0      I       3
+    17 981010688805900.5 978718275794452.2      P       1
+    19 71097458821129336.0 71173692908952320.0      I       3
+    Paley wins at k mod 4: {1: 4, 3: 0}
+    Interval wins at k mod 4: {1: 0, 3: 4}
+
+  p=23 (m=11):
+     k         tr_P/k         tr_I/k   P>I? k mod 4
+     3          506.0          506.0    TIE       3
+     5        31878.0        29348.0      P       1
+     7      2785530.0      2933029.0      I       3
+     9    261986728.7    254195846.7      P       1
+    11  25937453970.0  26342791848.0      I       3
+    13 2655593154390.0 2634667055650.0      P       1
+    15 278483211352733.2 279555580294862.9      I       3
+    17 29732178148858364.0 29677650578311948.0      P       1
+    19 3218899497265199104.0 3221649051554817024.0      I       3
+    23 38931749706748550709248.0 38938547400371116965888.0      I       3
+    Paley wins at k mod 4: {1: 5, 3: 0}
+    Interval wins at k mod 4: {1: 0, 3: 5}
+
+  p=31 (m=15):
+     k         tr_P/k         tr_I/k   P>I? k mod 4
+     3         1240.0         1240.0    TIE       3
+     5       151032.0       142352.0      P       1
+     7     24414360.0     25316212.0      I       3
+     9   4271445773.3   4184336021.3      P       1
+    11 786341676120.0 794686756584.0      I       3
+    13 149707311686520.0 148911000413128.0      P       1
+    15 29192926030826020.0 29268627155461176.0      I       3
+    17 5795654431501312000.0 5788485655445609472.0      P       1
+    19 1166756747396229758976.0 1167432908751234793472.0      I       3
+    31 92782770596556814014457951251595264.0 92783203106828569875084753944707072.0      I       3
+    Paley wins at k mod 4: {1: 7, 3: 0}
+    Interval wins at k mod 4: {1: 0, 3: 7}
+
+  p=43 (m=21):
+     k         tr_P/k         tr_I/k   P>I? k mod 4
+     3         3311.0         3311.0    TIE       3
+     5       814506.0       781396.0      P       1
+     7    257321460.0    263820953.0      I       3
+     9  88253116823.7  87040998509.7      P       1
+    11 31843411170690.0 32068575402631.0      I       3
+    13 11882490577807042.0 11840743046223586.0      P       1
+    15 4541487905668609536.0 4549213901119757824.0      I       3
+    17 1767173087945038757888.0 1765745980081579229184.0      P       1
+    19 697289296859532359630848.0 697552398049334580477952.0      I       3
+    43 16670983358503733036868860679860329082401915197257154560.0 16670983700022204239366454470596575699133048949900836864.0      I       3
+    Paley wins at k mod 4: {1: 10, 3: 0}
+    Interval wins at k mod 4: {1: 0, 3: 10}
+
+============================================================
+ANALYTICAL EXPLANATION
+============================================================
+
+    For Paley tournament on Z_p (p = 3 mod 4):
+      S = QR_p = {a^2 mod p : a = 1,...,(p-1)/2}
+      lambda_j = sum_{s in QR} omega^{js} = (chi(j)*g - 1)/2
+
+    where chi = Legendre symbol, g = sum_{a=1}^{p-1} chi(a)*omega^a (Gauss sum).
+    |g|^2 = p, arg(g) = ? (depends on p).
+
+    Key: chi(j) = +1 if j is QR, -1 if j is NQR.
+
+    So: lambda_j = (g - 1)/2 if j is QR
+        lambda_j = (-g - 1)/2 if j is NQR
+
+    For the trace:
+      tr(A^k) = m^k + sum_{j=1}^{p-1} lambda_j^k
+      = m^k + sum_{j in QR} ((g-1)/2)^k + sum_{j in NQR} ((-g-1)/2)^k
+      = m^k + |QR| * ((g-1)/2)^k + |NQR| * ((-g-1)/2)^k
+      = m^k + m * [(g-1)^k + (-g-1)^k] / 2^k
+
+    Now (g-1)^k + (-g-1)^k:
+    - If k is even: (-g-1)^k = (g+1)^k, so we get (g-1)^k + (g+1)^k
+    - If k is odd: (-g-1)^k = -(g+1)^k, so we get (g-1)^k - (g+1)^k
+
+    For k odd: (g-1)^k - (g+1)^k
+    = sum_{j=0}^k C(k,j) g^j [(-1)^{k-j} - 1]
+    = sum_{j=0}^k C(k,j) g^j * {0 if k-j even, -2 if k-j odd}
+    = -2 * sum_{j even, j<k} C(k,j) g^j
+
+    Actually let me redo this. Since k is odd:
+    (g-1)^k - (g+1)^k = sum C(k,j)g^j(-1)^{k-j} - sum C(k,j)g^j
+    = sum C(k,j)g^j [(-1)^{k-j} - 1]
+
+    When k-j is even (j has same parity as k, i.e., j is odd): (-1)^{k-j} = 1, term = 0
+    When k-j is odd (j is even): (-1)^{k-j} = -1, term = -2*C(k,j)*g^j
+
+    So: (g-1)^k - (g+1)^k = -2 * sum_{j=0,2,4,...} C(k,j) g^j
+    
+
+  p=7: g = 0.000000 + 2.645751i, |g| = 2.645751
+    Expected |g| = sqrt(7) = 2.645751
+    j=1: chi(j)=QR, formula=-0.5000+1.3229i, actual=-0.5000+1.3229i, match=True
+    j=2: chi(j)=QR, formula=-0.5000+1.3229i, actual=-0.5000+1.3229i, match=True
+    j=3: chi(j)=NQ, formula=-0.5000+-1.3229i, actual=-0.5000+-1.3229i, match=True
+
+  p=11: g = 0.000000 + 3.316625i, |g| = 3.316625
+    Expected |g| = sqrt(11) = 3.316625
+    j=1: chi(j)=QR, formula=-0.5000+1.6583i, actual=-0.5000+1.6583i, match=True
+    j=2: chi(j)=NQ, formula=-0.5000+-1.6583i, actual=-0.5000+-1.6583i, match=True
+    j=3: chi(j)=QR, formula=-0.5000+1.6583i, actual=-0.5000+1.6583i, match=True
+
+  p=19: g = 0.000000 + 4.358899i, |g| = 4.358899
+    Expected |g| = sqrt(19) = 4.358899
+    j=1: chi(j)=QR, formula=-0.5000+2.1794i, actual=-0.5000+2.1794i, match=True
+    j=2: chi(j)=NQ, formula=-0.5000+-2.1794i, actual=-0.5000+-2.1794i, match=True
+    j=3: chi(j)=NQ, formula=-0.5000+-2.1794i, actual=-0.5000+-2.1794i, match=True
+
+============================================================
+INTERVAL TRACE FORMULA
+============================================================
+
+    For Interval S = {1,...,m} with m = (p-1)/2:
+      lambda_j = sum_{s=1}^{m} omega^{js} = omega^j * (1 - omega^{jm}) / (1 - omega^j)
+
+    The DIFFERENCE in traces:
+      Delta_k = tr(A^k)_Paley - tr(A^k)_Interval
+      = sum_{j=1}^{p-1} [lambda_j(Paley)^k - lambda_j(Interval)^k]
+
+    For Paley: lambda_j = (chi(j)*g - 1)/2
+    For Interval: lambda_j = sum_{s=1}^m omega^{js} (Dirichlet kernel)
+
+    The sign of Delta_k alternates with k mod 4.
+    
+
+  p=7:
+     k        Delta_k   sign k mod 4
+     3          -0.00      -       3  ok
+     5          70.00      +       1  ok
+     7        -539.00      -       3  ok
+
+  p=11:
+     k        Delta_k   sign k mod 4
+     3          -0.00      -       3  ok
+     5         550.00      +       1  ok
+     7      -10703.00      -       3  ok
+     9      155826.00      +       1  ok
+    11    -2013803.00      -       3  ok
+
+  p=19:
+     k        Delta_k   sign k mod 4
+     3           0.00      +       3  BREAK
+     5        5700.00      +       1  ok
+     7     -321594.00      -       3  ok
+     9    14792868.00      +       1  ok
+    11  -632727854.00      -       3  ok
+    13 25854255206.00      +       1  ok
+    15 -1019332901804.97      -       3  ok
+    17 38971021194620.00      +       1  ok
+    19 -1448447668636672.00      -       3  ok
+
+============================================================
+PHASE COHERENCE AT k=5 (Paley advantage)
+============================================================
+
+  p=7:
+    Paley: mag^5 = 5.6569, phase factor = -5.8336
+    tr5_Paley = m^5 + mag^5 * phase_factor = 243 + -33.00 = 210.00
+    Interval: weighted phase sum = -103.0000
+    tr5_Interval = m^5 + -103.00 = 140.00
+    Delta = 70.00
+
+  p=11:
+    Paley: mag^5 = 15.5885, phase factor = -9.9433
+    tr5_Paley = m^5 + mag^5 * phase_factor = 3125 + -155.00 = 2970.00
+    Interval: weighted phase sum = -705.0000
+    tr5_Interval = m^5 + -705.00 = 2420.00
+    Delta = 550.00
+
+  p=19:
+    Paley: mag^5 = 55.9017, phase factor = -16.2607
+    tr5_Paley = m^5 + mag^5 * phase_factor = 59049 + -909.00 = 58140.00
+    Interval: weighted phase sum = -6609.0000
+    tr5_Interval = m^5 + -6609.00 = 52440.00
+    Delta = 5700.00
