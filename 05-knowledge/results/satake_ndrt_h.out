@@ -1,0 +1,54 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\satake_ndrt_h.py:132: SyntaxWarning: invalid escape sequence '\ '
+  A valid S: S \u2229 (-S) = \u2205, S \u222a (-S) = Z/nZ \ {0}.
+======================================================================
+SATAKE NDR TOURNAMENT INVESTIGATION (S56)
+======================================================================
+
+--- Satake connection sets ---
+q=5 (s=1): S=[1, 2], c_3=5
+q=13 (s=3): S=[1, 2, 3, 5, 6, 9], c_3=91
+q=29 (s=5): S=[1, 2, 3, 7, 11, 14, 16, 17, 19, 20, 21, 23, 24, 25], c_3=1015
+
+--- H(CT_q) via Hamiltonian path enumeration ---
+q=5: H(CT_5) = 15 (paths from 0: 3, c_3=5) [0.00s]
+q=13: H(CT_13) = 3703011 (paths from 0: 284847, c_3=91) [0.09s]
+
+--- All circulant H at n=5 (exhaustive) ---
+  H=15, S=[3, 4]
+  H=15, S=[2, 4]
+  H=15, S=[1, 3]
+  H=15, S=[1, 2]
+Satake CT_5 S=[1, 2] rank: #4
+
+--- All circulant H at n=13 (exhaustive over circulant) ---
+[5.3s, 64 distinct circulant tournaments]
+Top H values and representative S:
+  H=3711175, c_3=91, S=[7, 8, 9, 10, 11, 12]
+  H=3707483, c_3=91, S=[6, 8, 9, 10, 11, 12]
+  H=3704857, c_3=91, S=[5, 7, 9, 10, 11, 12]
+  H=3703011, c_3=91, S=[4, 7, 8, 10, 11, 12]
+  H=3683797, c_3=91, S=[3, 4, 5, 7, 11, 12]
+  H=3669497, c_3=91, S=[4, 6, 8, 10, 11, 12]
+
+Satake CT_13: H=3703011, rank #40/64
+Max H among circulants at n=13: 3711175
+Satake is NOT max (gap = 8164)
+
+--- All valid coset-pair tournaments at n=13 ---
+Cosets of C_4 mod 13 (g=2):
+  coset 0: [1, 3, 9]
+  coset 1: [2, 5, 6]
+  coset 2: [4, 10, 12]
+  coset 3: [7, 8, 11]
+  cosets 0+1: S=[1, 2, 3, 5, 6, 9], H=3703011, c_3=91 <- Satake
+  cosets 0+3: S=[1, 3, 7, 8, 9, 11], H=3703011, c_3=91 
+  cosets 1+2: S=[2, 4, 5, 6, 10, 12], H=3703011, c_3=91 
+  cosets 2+3: S=[4, 7, 8, 10, 11, 12], H=3703011, c_3=91 
+
+--- Unique H values at n=13 ---
+Satake H(CT_13) = 3703011
+Maximum circulant H at n=13 = 3711175
+
+--- n=9 context (Satake needs prime q, but let's check all circulants) ---
+All circulant H at n=9 (top 5): [3357, 3357, 3357, 3357, 3357]
+Max circulant H at n=9: 3357, S=[4, 6, 7, 8]
