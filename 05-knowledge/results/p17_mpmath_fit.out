@@ -1,0 +1,46 @@
+======================================================================
+p = 17, m = 8: MPMATH HIGH-PRECISION e_k FIT
+mpmath precision: 100 decimal digits
+======================================================================
+
+  16 orbit representatives
+  [1/16] H=13689269499, time=2.0s
+  [2/16] H=13496380733, time=2.1s
+  [3/16] H=13486964977, time=2.1s
+  [4/16] H=13491417243, time=2.1s
+  [5/16] H=13551423911, time=2.1s
+  [6/16] H=13526567225, time=2.1s
+  [7/16] H=13478929757, time=2.2s
+  [8/16] H=13627838945, time=2.1s
+  [9/16] H=13560055389, time=2.1s
+  [10/16] H=13519308361, time=2.2s
+  [11/16] H=13506158929, time=2.2s
+  [12/16] H=13544403013, time=2.1s
+  [13/16] H=13551813041, time=2.1s
+  [14/16] H=13492503135, time=2.2s
+  [15/16] H=13540194969, time=2.2s
+  [16/16] H=13507244311, time=2.2s
+
+  16 distinct H values
+  e_1 values: {'34.0'} (should be single value = 8.0)
+
+  === AFFINE FIT (e_2 through e_8) ===
+  n_terms=1 (e_2..e_2): R²=0.51069487583939, max|res|=71328274.51
+  n_terms=2 (e_2..e_3): R²=0.859851896135353, max|res|=41838923.43
+  n_terms=3 (e_2..e_4): R²=0.860058313955918, max|res|=40678601.35
+  n_terms=4 (e_2..e_5): R²=0.860477486113912, max|res|=39775443.72
+  n_terms=5 (e_2..e_6): R²=0.861991121236067, max|res|=40150590.03
+  n_terms=6 (e_2..e_7): R²=0.863183397734718, max|res|=39196482.23
+  n_terms=7 (e_2..e_8): R²=0.865319292366087, max|res|=38189703.02
+
+  === QUADRATIC FIT ===
+  Testing H = c_0 + sum c_k*e_k + sum c_kl*e_k*e_l
+  Quad(e2,e3,e4): R²=0.907900632461926, max|res|=44506279.26
+
+  === MIXED: AFFINE e_2..e_8 + QUADRATIC e_2^2 ===
+  R²=0.881822035512327, max|res|=37006040.29
+
+  === VERIFICATION: p=7, 11, 13 with mpmath ===
+  p=7: EXACT with 1 terms (e_2..e_2), max|res|=3.6576e-99
+  p=11: EXACT with 3 terms (e_2..e_4), max|res|=6.5543e-95
+  p=13: EXACT with 5 terms (e_2..e_6), max|res|=8.3896e-94

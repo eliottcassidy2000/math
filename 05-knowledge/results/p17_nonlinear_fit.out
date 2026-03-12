@@ -1,0 +1,45 @@
+======================================================================
+p = 17, m = 8: NONLINEAR POLYNOMIAL SEARCH FOR H
+======================================================================
+  Computed 16 orbit reps in 34.3s
+  16 distinct H values
+
+  === POWER SUMS S_k = sum y_i^(2k) ===
+  S_2..S_2: R²=0.51069488, max|res|=71328274.51
+  S_2..S_3: R²=0.85985190, max|res|=41838923.43
+  S_2..S_4: R²=0.86097566, max|res|=44474921.98
+  S_2..S_5: R²=0.86100458, max|res|=44240857.57
+  S_2..S_6: R²=0.86842778, max|res|=40083278.99
+  S_2..S_7: R²=0.87153382, max|res|=37981925.94
+  S_2..S_8: R²=0.91963118, max|res|=35663542.66
+
+  === INDIVIDUAL y_k^2 (NON-SYMMETRIC) ===
+  y_1^2..y_8^2 (affine): SINGULAR
+  e_2..e_8 (affine): R²=0.86531929, max|res|=38189703.02
+  Cannot compare (one fit failed)
+
+  === DEGREE-2 MONOMIAL SEARCH ===
+  +e_2*e_2: R²=0.88182204, max|res|=37006040.29
+  +e_2*e_3: R²=0.88538975, max|res|=36168916.36
+  Best product term: e_2*e_3
+
+  === GREEDY STEPWISE (adding best term at each step) ===
+  Step 1: add e_2*e_3, R²=0.8853897495, max|res|=36168916.36
+  Step 2: add e_7*e_8, R²=0.8934602306, max|res|=37607680.22
+  Step 3: add e_7*e_7, R²=0.8946956133, max|res|=38726603.31
+  Step 4: add e_2*e_7, R²=0.9301182727, max|res|=42826316.84
+  Step 5: add e_5*e_5, R²=0.9539807314, max|res|=36098795.21
+  Step 6: add e_3*e_6, R²=0.9813903190, max|res|=20835271.92
+  Step 7: add e_2*e_8, R²=0.9872884074, max|res|=14436645.20
+
+  === TRACE-BASED INVARIANTS ===
+
+  === CYCLE COUNTS c_k ===
+  c_3 values: {204.0} (should be single value)
+  c_5 values (9): [5712.0, 5916.0, 6052.0, 6154.0, 6222.0]...
+  H vs c_5: R²=0.51069488
+  H vs (c_5, c_7): R²=0.85985190
+  H vs (c_5, c_7, c_5²): R²=0.86169172
+
+  === CROSS-CHECK: p=13 ===
+  p=13 affine (e_2..e_6): R²=1.0000000000, max|res|=2.6904930515036488e-42
