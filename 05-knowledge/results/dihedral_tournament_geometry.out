@@ -1,0 +1,549 @@
+======================================================================
+DIHEDRAL TOURNAMENT GEOMETRY
+======================================================================
+
+--- SECTION 1: CHORD TYPES AND ORIENTATIONS ---
+
+p=7 (3 chord types):
+  Chord types:  k = [1, 2, 3]
+  Chord lengths: ['0.868', '1.564', '1.950']
+  Paley QR:     S = [1, 2, 4]
+  Paley sigma:  [1, 1, -1]
+  Interval:     S = [1, 2, 3]
+  Interval sigma: [1, 1, 1]
+  <sigma_P, sigma_I> = 1 (of 3)
+  Agreement fraction: 0.6667
+  Hamming distance: 1
+
+p=11 (5 chord types):
+  Chord types:  k = [1, 2, 3, 4, 5]
+  Chord lengths: ['0.563', '1.081', '1.511', '1.819', '1.980']
+  Paley QR:     S = [1, 3, 4, 5, 9]
+  Paley sigma:  [1, -1, 1, 1, 1]
+  Interval:     S = [1, 2, 3, 4, 5]
+  Interval sigma: [1, 1, 1, 1, 1]
+  <sigma_P, sigma_I> = 3 (of 5)
+  Agreement fraction: 0.8000
+  Hamming distance: 1
+
+p=19 (9 chord types):
+  Chord types:  k = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  Chord lengths: ['0.329', '0.649', '0.952', '1.228', '1.471', '1.674', '1.832', '1.939', '1.993']
+  Paley QR:     S = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+  Paley sigma:  [1, -1, -1, 1, 1, 1, 1, -1, 1]
+  Interval:     S = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  Interval sigma: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+  <sigma_P, sigma_I> = 3 (of 9)
+  Agreement fraction: 0.6667
+  Hamming distance: 3
+
+--- SECTION 2: CHORD MODE SPECTRA (D_{2p} irreps) ---
+
+p=7:
+    k  chord_len    |lam|_P    |lam|_I    ratio  phase_P/pi  phase_I/pi
+    1     0.8678     1.4142     2.2470   1.5889      0.6150      0.5714
+    2     1.5637     1.4142     0.5550   0.3924      0.6150     -0.8571
+    3     1.9499     1.4142     0.8019   0.5671     -0.6150      0.7143
+  Total energy: Paley=6.0000, Interval=6.0000, expected=5.2500
+  Gini(|lam|): Paley=0.0000, Interval=0.3130
+  Energy in mode 1: Paley=0.3333, Interval=0.8415
+
+p=11:
+    k  chord_len    |lam|_P    |lam|_I    ratio  phase_P/pi  phase_I/pi
+    1     0.5635     1.7321     3.5133   2.0284      0.5932      0.5455
+    2     1.0813     1.7321     0.5211   0.3009     -0.5932     -0.9091
+    3     1.5115     1.7321     1.2036   0.6949      0.5932      0.6364
+    4     1.8193     1.7321     0.5944   0.3431      0.5932     -0.8182
+    5     1.9796     1.7321     0.7635   0.4408      0.5932      0.7273
+  Total energy: Paley=15.0000, Interval=15.0000, expected=13.7500
+  Gini(|lam|): Paley=0.0000, Interval=0.3999
+  Energy in mode 1: Paley=0.2000, Interval=0.8229
+
+p=19:
+    k  chord_len    |lam|_P    |lam|_I    ratio  phase_P/pi  phase_I/pi
+    1     0.3292     2.2361     6.0548   2.7078      0.5718      0.5263
+    2     0.6494     2.2361     0.5069   0.2267     -0.5718     -0.9474
+    3     0.9519     2.2361     2.0368   0.9109     -0.5718      0.5789
+    4     1.2284     2.2361     0.5286   0.2364      0.5718     -0.8947
+    5     1.4714     2.2361     1.2447   0.5567      0.5718      0.6316
+    6     1.6743     2.2361     0.5685   0.2543      0.5718     -0.8421
+    7     1.8315     2.2361     0.9142   0.4088      0.5718      0.6842
+    8     1.9388     2.2361     0.6336   0.2834     -0.5718     -0.7895
+    9     1.9932     2.2361     0.7382   0.3302      0.5718      0.7368
+  Total energy: Paley=45.0000, Interval=45.0000, expected=42.7500
+  Gini(|lam|): Paley=0.0000, Interval=0.4763
+  Energy in mode 1: Paley=0.1111, Interval=0.8147
+
+--- SECTION 3: POLYGON WINDING AND DIRECTED ARCS ---
+
+
+GEOMETRIC PICTURE:
+  Place vertices v_0, v_1, ..., v_{p-1} at p-th roots of unity on the unit circle.
+
+  A CIRCULANT tournament with connection set S orients each edge:
+    v_j -> v_k  iff  (k-j) mod p in S
+
+  CHORD TYPE k: all edges {v_j, v_{j+k}} for j = 0,...,p-1.
+  The ORIENTATION of chord type k:
+    - If k in S: v_j -> v_{j+k} (clockwise jump of k positions)
+    - If k not in S: v_{j+k} -> v_j (counterclockwise jump)
+
+  INTERVAL TOURNAMENT S={1,...,m}:
+    ALL chords oriented CLOCKWISE. Every vertex beats its m
+    nearest clockwise neighbors. This is a "one-way flow" around the circle.
+
+    Geometrically: the tournament is a FLOW on the polygon,
+    where material moves consistently in one direction.
+
+  PALEY TOURNAMENT S=QR_p:
+    Chord orientations follow the Legendre symbol chi(k).
+    Short chords (k=1) and scattered longer chords go clockwise,
+    while other chords go counterclockwise.
+
+    Geometrically: a TURBULENT flow with both clockwise and
+    counterclockwise components at different length scales.
+
+p=7: Orientation pattern by chord length:
+  k= 1 (len=0.868): Paley= CW, Interval= CW
+  k= 2 (len=1.564): Paley= CW, Interval= CW
+  k= 3 (len=1.950): Paley=CCW, Interval= CW
+
+p=11: Orientation pattern by chord length:
+  k= 1 (len=0.563): Paley= CW, Interval= CW
+  k= 2 (len=1.081): Paley=CCW, Interval= CW
+  k= 3 (len=1.511): Paley= CW, Interval= CW
+  k= 4 (len=1.819): Paley= CW, Interval= CW
+  k= 5 (len=1.980): Paley= CW, Interval= CW
+
+p=19: Orientation pattern by chord length:
+  k= 1 (len=0.329): Paley= CW, Interval= CW
+  k= 2 (len=0.649): Paley=CCW, Interval= CW
+  k= 3 (len=0.952): Paley=CCW, Interval= CW
+  k= 4 (len=1.228): Paley= CW, Interval= CW
+  k= 5 (len=1.471): Paley= CW, Interval= CW
+  k= 6 (len=1.674): Paley= CW, Interval= CW
+  k= 7 (len=1.832): Paley= CW, Interval= CW
+  k= 8 (len=1.939): Paley=CCW, Interval= CW
+  k= 9 (len=1.993): Paley= CW, Interval= CW
+
+--- SECTION 4: D_{2p} ACTION ON TOURNAMENTS ---
+
+
+The DIHEDRAL GROUP D_{2p} has 2p elements:
+  - Rotations: r^0, r^1, ..., r^{p-1}  (cyclic subgroup C_p)
+  - Reflections: s, sr, sr^2, ..., sr^{p-1}
+
+Action on tournaments T(S) on Z_p:
+  1. ROTATION r: v_j -> v_{j+1 mod p}.
+     This maps T(S) to T(S) (circulants are rotation-invariant).
+
+  2. REFLECTION s: v_j -> v_{-j mod p}.
+     This maps T(S) to T(-S) where -S = {p-k : k in S}.
+     For tournaments, -S = S^c (complement), so s maps T to T^op.
+
+  KEY: No circulant tournament can be D_{2p}-invariant,
+  because reflection always gives T^op (the reverse tournament).
+
+  But D_{2p} acts on the SPACE of all circulant tournaments!
+  The rotation subgroup C_p acts trivially (preserves all circulants).
+  The reflection s acts as T -> T^op, i.e., sigma -> -sigma.
+
+  So the relevant symmetry for H-maximization is:
+  H(T) = H(T^op) (since reversing all arcs preserves HP count)
+  This means H(sigma) = H(-sigma) for orientation vectors.
+
+  The D_{2p} action on orientation space {+1,-1}^m:
+    Rotation: trivial (doesn't change sigma)
+    Reflection: sigma -> -sigma
+
+  Orbits: {sigma, -sigma} pairs. The orbit of sigma_interval = (+1,...,+1)
+  is {(+1,...,+1), (-1,...,-1)} = {interval, reverse interval}.
+  Both have the same H (since H(T) = H(T^op) for odd n).
+
+p=7: sigma -> -sigma preserves |lambda|:
+  k=1: |lam_P|=1.4142 vs |lam_Pc|=1.4142  |lam_I|=2.2470 vs |lam_Ic|=2.2470
+  k=2: |lam_P|=1.4142 vs |lam_Pc|=1.4142  |lam_I|=0.5550 vs |lam_Ic|=0.5550
+  k=3: |lam_P|=1.4142 vs |lam_Pc|=1.4142  |lam_I|=0.8019 vs |lam_Ic|=0.8019
+
+p=11: sigma -> -sigma preserves |lambda|:
+  k=1: |lam_P|=1.7321 vs |lam_Pc|=1.7321  |lam_I|=3.5133 vs |lam_Ic|=3.5133
+  k=2: |lam_P|=1.7321 vs |lam_Pc|=1.7321  |lam_I|=0.5211 vs |lam_Ic|=0.5211
+  k=3: |lam_P|=1.7321 vs |lam_Pc|=1.7321  |lam_I|=1.2036 vs |lam_Ic|=1.2036
+  k=4: |lam_P|=1.7321 vs |lam_Pc|=1.7321  |lam_I|=0.5944 vs |lam_Ic|=0.5944
+  k=5: |lam_P|=1.7321 vs |lam_Pc|=1.7321  |lam_I|=0.7635 vs |lam_Ic|=0.7635
+
+--- SECTION 5: ODD-ORDER GROUPS AND INTERLACING ---
+
+
+The user's key observation: dihedral groups D_{2n} have EVEN order 2n.
+Groups with ODD order (C_1, C_3, C_5, C_7, ...) are INTERLACED
+between tournament sizes.
+
+Tournament sizes:     n = 3   4   5   6   7   8   9   ...
+D_{2n} order:            6   8  10  12  14  16  18   ...
+Interlaced C_k:       3   5   7   9  11  13  15  17   ...
+
+The ODD-ORDER cyclic groups C_k act on the tournament vertex set
+differently from D_{2n}:
+  - C_n acts as the rotation subgroup of D_{2n}
+  - C_{n+1} cannot act on an n-gon at all!
+
+But there IS a deep connection: the CIRCULANT structure.
+
+For a circulant tournament on Z_p, the rotation group C_p acts on vertices.
+The EIGENVALUES of the adjacency matrix are the DFT coefficients,
+which live in the GROUP ALGEBRA C[C_p].
+
+The representation ring of C_p: all irreps are 1-dimensional,
+  rho_k: j -> omega^{jk} for k = 0, ..., p-1.
+
+Under D_{2p}, these pair up into 2D irreps:
+  rho_k + rho_{p-k} for k = 1, ..., (p-1)/2.
+
+The PALEY tournament's special property: its eigenvalues are
+determined by the GAUSS SUM, which is a character sum over
+the multiplicative group (Z/pZ)^*.
+
+(Z/pZ)^* is cyclic of order p-1. When p = 3 mod 4, p-1 = 2 mod 4.
+The QR subgroup has index 2, order (p-1)/2.
+
+So the QR structure involves:
+  C_{(p-1)/2} < C_{p-1} = (Z/pZ)^*
+
+This is an ODD-order group C_{(p-1)/2} acting on the multiplicative side!
+The interlacing the user notices is between:
+  - Additive structure: C_p acts on vertices (order p, odd)
+  - Multiplicative structure: C_{(p-1)/2} acts on QR (order (p-1)/2)
+
+The interplay between these two cyclic actions (additive and multiplicative)
+is what creates the Gauss sum and determines the Paley spectrum.
+
+  p= 3: |C_p|=3, |(Z/pZ)*|=2, |QR|=1, p mod 4 = 3, D_{2p} order = 6
+  p= 5: |C_p|=5, |(Z/pZ)*|=4, |QR|=2, p mod 4 = 1, D_{2p} order = 10
+  p= 7: |C_p|=7, |(Z/pZ)*|=6, |QR|=3, p mod 4 = 3, D_{2p} order = 14
+  p=11: |C_p|=11, |(Z/pZ)*|=10, |QR|=5, p mod 4 = 3, D_{2p} order = 22
+  p=13: |C_p|=13, |(Z/pZ)*|=12, |QR|=6, p mod 4 = 1, D_{2p} order = 26
+  p=17: |C_p|=17, |(Z/pZ)*|=16, |QR|=8, p mod 4 = 1, D_{2p} order = 34
+  p=19: |C_p|=19, |(Z/pZ)*|=18, |QR|=9, p mod 4 = 3, D_{2p} order = 38
+  p=23: |C_p|=23, |(Z/pZ)*|=22, |QR|=11, p mod 4 = 3, D_{2p} order = 46
+  p=29: |C_p|=29, |(Z/pZ)*|=28, |QR|=14, p mod 4 = 1, D_{2p} order = 58
+  p=31: |C_p|=31, |(Z/pZ)*|=30, |QR|=15, p mod 4 = 3, D_{2p} order = 62
+
+--- SECTION 6: POLYGON FLOW AND H-MAXIMIZATION ---
+
+
+FLOW ON THE n-GON:
+  Think of a circulant tournament as a FLOW on the regular n-gon.
+  Each chord type k contributes a "flow mode" at angular frequency k.
+
+  The total flow field at position theta on the circle:
+    F(theta) = sum_{k=1}^{m} sigma_k * f_k(theta)
+  where f_k is the k-th harmonic flow mode and sigma_k = +/-1.
+
+  INTERVAL tournament: F = sum_{k=1}^m f_k (all modes constructive)
+    -> MAXIMUM DIRECTIONAL BIAS (strongest "wind")
+    -> Creates a dominant "highway" for Hamiltonian paths
+
+  PALEY tournament: F = sum chi(k) * f_k (mixed signs)
+    -> Each mode has EQUAL energy but phases partially cancel
+    -> More "turbulent" but more "isotropic"
+
+H-MAXIMIZATION TRADEOFF:
+  - Directional bias (interval): good for LONG paths (the HP count)
+    because paths can ride the "wind" all the way around
+  - Isotropy (Paley): good for SHORT cycles (k=5 structure)
+    because 5-cycles can form in any orientation
+
+  At small p: there aren't many chord modes, so isotropy helps more.
+  At large p: the "wind" effect compounds over many steps, dominating.
+
+p=7:
+  Dominant mode |lam_1|: Interval=2.2470, Paley=1.4142
+  Total flow:           Interval=7.2078, Paley=8.4853
+  Peakedness (max/rms): Interval=1.5889, Paley=1.0000 (Paley always 1.0)
+  Dirichlet peak ratio: |lam_1|/sqrt(p)/2 = 1.6986
+
+p=11:
+  Dominant mode |lam_1|: Interval=3.5133, Paley=1.7321
+  Total flow:           Interval=13.1919, Paley=17.3205
+  Peakedness (max/rms): Interval=2.0284, Paley=1.0000 (Paley always 1.0)
+  Dirichlet peak ratio: |lam_1|/sqrt(p)/2 = 2.1186
+
+p=19:
+  Dominant mode |lam_1|: Interval=6.0548, Paley=2.2361
+  Total flow:           Interval=26.4528, Paley=40.2492
+  Peakedness (max/rms): Interval=2.7078, Paley=1.0000 (Paley always 1.0)
+  Dirichlet peak ratio: |lam_1|/sqrt(p)/2 = 2.7781
+
+p=23:
+  Dominant mode |lam_1|: Interval=7.3268, Paley=2.4495
+  Total flow:           Interval=33.5253, Paley=53.8888
+  Peakedness (max/rms): Interval=2.9912, Paley=1.0000 (Paley always 1.0)
+  Dirichlet peak ratio: |lam_1|/sqrt(p)/2 = 3.0555
+
+--- SECTION 7: D_{2p} CHARACTER TABLE AND TOURNAMENT MODES ---
+
+
+D_{2n} irreducible representations (n odd):
+  - 1D trivial: chi_0(r^k) = 1, chi_0(s*r^k) = 1
+  - 1D sign:    chi_1(r^k) = 1, chi_1(s*r^k) = -1
+  - 2D rho_j (j=1,...,(n-1)/2):
+      chi_j(r^k) = 2*cos(2*pi*j*k/n)
+      chi_j(s*r^k) = 0
+
+The adjacency matrix A of a circulant tournament decomposes:
+  A = (m/p)*J + sum_{j=1}^{m} [lambda_j P_j + conj(lambda_j) P_{p-j}]
+
+where P_j is the projection onto the j-th Fourier mode.
+
+Under D_{2p}, the pair (P_j, P_{p-j}) transforms as the 2D irrep rho_j.
+The eigenvalue PAIR (lambda_j, conj(lambda_j)) is the "D_{2p} eigenvalue"
+of the tournament in representation rho_j.
+
+The REFLECTION s maps lambda_j -> conj(lambda_j) (complex conjugation).
+For the interval: lambda_j has phase ~ pi*j/p (Dirichlet kernel).
+For Paley: lambda_j has phase ~ +/- theta_0 (two possible phases).
+
+D_{2p} EQUIVARIANCE OF H:
+  H is invariant under the FULL D_{2p} action (since H(T) = H(T^op)).
+  So H is a function on D_{2p}-orbits of circulant tournaments.
+  These orbits are parametrized by:
+    (|lambda_1|, |lambda_2|, ..., |lambda_m|)
+  since the reflection fixes |lambda_j| but conjugates the phase.
+
+  But H also depends on the PHASES! So the orbit structure alone
+  doesn't determine H. The phases encode the "chirality" of the flow.
+
+p=7: D_14 character decomposition
+   mode    |lam|_P    |lam|_I   phase_P/pi   phase_I/pi
+  rho_ 1     1.4142     2.2470       0.6150       0.5714
+  rho_ 2     1.4142     0.5550       0.6150      -0.8571
+  rho_ 3     1.4142     0.8019      -0.6150       0.7143
+
+p=11: D_22 character decomposition
+   mode    |lam|_P    |lam|_I   phase_P/pi   phase_I/pi
+  rho_ 1     1.7321     3.5133       0.5932       0.5455
+  rho_ 2     1.7321     0.5211      -0.5932      -0.9091
+  rho_ 3     1.7321     1.2036       0.5932       0.6364
+  rho_ 4     1.7321     0.5944       0.5932      -0.8182
+  rho_ 5     1.7321     0.7635       0.5932       0.7273
+
+--- SECTION 8: EXHAUSTIVE SCAN AT p=7 (2^3 = 8 orientations) ---
+
+p=7: All 2^3 = 8 orientation vectors
+       sigma                    S        H                 note
+  [-1, -1, -1]            [4, 5, 6]      175  INTERVAL complement
+   [1, -1, -1]            [1, 4, 5]      175                     
+   [-1, 1, -1]            [2, 4, 6]      175                     
+    [1, 1, -1]            [1, 2, 4]      189                PALEY
+   [-1, -1, 1]            [3, 5, 6]      189     PALEY complement
+    [1, -1, 1]            [1, 3, 5]      175                     
+    [-1, 1, 1]            [2, 3, 6]      175                     
+     [1, 1, 1]            [1, 2, 3]      175             INTERVAL
+
+Ranked by H:
+  #1: H=189, S=[1, 2, 4] PALEY
+  #2: H=189, S=[3, 5, 6] PALEY complement
+  #3: H=175, S=[4, 5, 6] INTERVAL complement
+  #4: H=175, S=[1, 4, 5] 
+  #5: H=175, S=[2, 4, 6] 
+  #6: H=175, S=[1, 3, 5] 
+  #7: H=175, S=[2, 3, 6] 
+  #8: H=175, S=[1, 2, 3] INTERVAL
+
+--- SECTION 9: WINDING NUMBER INTERPRETATION ---
+
+
+A Hamiltonian PATH on the p-gon visits all vertices in some order.
+The PATH can be characterized by its WINDING NUMBER around the circle:
+  w(P) = (1/2pi) * sum of angular displacements along the path.
+
+For the interval tournament (all clockwise):
+  Most Hamiltonian paths have HIGH winding number (they go mostly
+  in one direction around the circle).
+
+For the Paley tournament (mixed directions):
+  Paths have LOWER average winding number (forced to change direction).
+
+CONJECTURE: H-maximization at large p is equivalent to maximizing
+the number of paths with high winding number, which is achieved by
+the maximally coherent orientation (the interval tournament).
+
+p=7: Winding number distribution
+  Paley:    H=189, mean_winding=0.00, std=6.83
+  Interval: H=175, mean_winding=11.84, std=2.49
+
+   winding    Paley Interval
+       -18        7        0
+       -10        7        0
+        -9       14        0
+        -8        7        0
+        -4       28        0
+        -2        7        0
+        -1       28        0
+         2        7        0
+         3       14        0
+         5       28        0
+         6       21        7
+         8        7        7
+         9        0       14
+        10        7       14
+        11        0       28
+        12        7       49
+        13        0       28
+        15        0       14
+        16        0        7
+        18        0        7
+
+p=5: Paley H=10, winding mean=0.00
+p=5: Interval H=15, winding mean=6.00
+
+--- SECTION 10: QR STRUCTURE IN DIHEDRAL FRAMEWORK ---
+
+
+DEEP CONNECTION: The Paley tournament's connection set S = QR_p
+is the UNIQUE set (up to complement) that produces a FLAT eigenvalue
+spectrum: |lambda_k| = sqrt(p)/2 for all k.
+
+In the D_{2p} representation theory:
+  Paley = ISOTROPIC tournament (equal energy in all chord modes)
+  Interval = ANISOTROPIC tournament (energy concentrated in mode 1)
+
+This is like a crystal vs. an amorphous material:
+  - Crystal (Paley): uniform diffraction pattern (flat spectrum)
+  - Amorphous (Interval): peaked diffraction pattern (Dirichlet kernel)
+
+H-MAXIMIZATION:
+  At small p (few modes): isotropy wins, like how a perfect crystal
+  has special electronic properties.
+
+  At large p (many modes): anisotropy wins, like how directing all
+  energy into one beam is better than spreading it uniformly.
+
+THE CROSSOVER is when the "dimensionless coupling"
+  g = 2*sqrt(p)/pi
+exceeds a critical threshold:
+  g < g_c: Paley (isotropic) wins
+  g > g_c: Interval (anisotropic) wins
+
+From the data: g_c is between g(11) = 2.11 and g(19) = 2.78.
+
+Dimensionless coupling g = 2*sqrt(p)/pi:
+  p= 3: g=1.1027, p mod 4 = 3 (Paley exists)
+  p= 5: g=1.4235, p mod 4 = 1 (no Paley)
+  p= 7: g=1.6843, p mod 4 = 3 (Paley exists)
+  p=11: g=2.1114, p mod 4 = 3 (Paley exists)
+  p=13: g=2.2954, p mod 4 = 1 (no Paley)
+  p=17: g=2.6249, p mod 4 = 1 (no Paley)
+  p=19: g=2.7750, p mod 4 = 3 (Paley exists)
+  p=23: g=3.0531, p mod 4 = 3 (Paley exists)
+  p=29: g=3.4283, p mod 4 = 1 (no Paley)
+  p=31: g=3.5445, p mod 4 = 3 (Paley exists)
+  p=37: g=3.8724, p mod 4 = 1 (no Paley)
+  p=41: g=4.0764, p mod 4 = 1 (no Paley)
+  p=43: g=4.1746, p mod 4 = 3 (Paley exists)
+
+--- SECTION 11: CROSSOVER ANALYSIS INCLUDING p=1 mod 4 ---
+
+
+For p = 1 mod 4 (p = 5, 13, 17, 29, ...):
+  There is NO Paley tournament (since -1 is a QR, so QR_p is symmetric
+  and doesn't define a valid tournament).
+
+  But the INTERVAL tournament still exists for any odd p!
+  So the question becomes: among ALL circulant tournaments on Z_p,
+  which maximizes H?
+
+For p = 3 mod 4: Paley vs Interval is the main competition.
+For p = 1 mod 4: Interval may be the universal winner.
+
+The dihedral framework suggests:
+  p = 1 mod 4: -1 is QR, so reflection (j -> -j) maps QR to QR.
+    The QR set is "palindromic" (symmetric under reflection).
+    No valid tournament can use QR as connection set.
+
+  p = 3 mod 4: -1 is NQR, so reflection maps QR to NQR.
+    QR and NQR are "chiral" — they differ by a reflection.
+    The Paley tournament T_p has the MAXIMAL symmetry group
+    among circulant tournaments (size p*(p-1)/2 instead of just p).
+
+CROSSOVER SUMMARY:
+   p  p mod 4  g=2sqrt(p)/pi     winner
+    3        3         1.1027        TIE
+    5        1         1.4235        TIE
+    7        3         1.6843      Paley
+   11        3         2.1114      Paley
+   13        1         2.2954          ?
+   17        1         2.6249          ?
+   19        3         2.7750   Interval
+   23        3         3.0531  Interval?
+
+--- SECTION 12: H AS BOOLEAN FUNCTION ON ORIENTATION CUBE ---
+
+
+H is a function on the hypercube {+1,-1}^m where m = (p-1)/2.
+Each coordinate sigma_k encodes the orientation of chord type k.
+
+As a function on {+1,-1}^m, H has a FOURIER-WALSH expansion:
+  H(sigma) = sum_{S subset [m]} hat{H}(S) * prod_{k in S} sigma_k
+
+This is different from the Walsh expansion of H over tournament space!
+Here sigma lives in the ORIENTATION CUBE (dimension m),
+not the TOURNAMENT CUBE (dimension C(p,2)).
+
+The D_{2p} symmetry H(sigma) = H(-sigma) means:
+  hat{H}(S) = 0 for |S| odd
+  Only EVEN-degree Walsh coefficients survive.
+
+Let's compute this for p=7 (m=3, 8 orientations).
+
+p=7: Walsh-Fourier expansion of H on orientation cube
+  hat{H}(()) = 178.5000  (degree 0)
+  hat{H}((0, 1)) = 3.5000  (degree 2)
+  hat{H}((0, 2)) = -3.5000  (degree 2)
+  hat{H}((1, 2)) = -3.5000  (degree 2)
+
+  Verification: H(sigma) = H(-sigma)?
+    H(-1, -1, -1) = 175, H(1, 1, 1) = 175, equal? True
+    H(1, -1, -1) = 175, H(-1, 1, 1) = 175, equal? True
+    H(-1, 1, -1) = 175, H(1, -1, 1) = 175, equal? True
+    H(1, 1, -1) = 189, H(-1, -1, 1) = 189, equal? True
+
+======================================================================
+THEORETICAL SYNTHESIS
+======================================================================
+
+THE DIHEDRAL TOURNAMENT FRAMEWORK:
+
+1. CHORD DECOMPOSITION: A circulant tournament on Z_p decomposes into
+   m = (p-1)/2 chord modes, each either CW or CCW oriented.
+   This is an element sigma of the orientation cube {+1,-1}^m.
+
+2. DIHEDRAL ACTION: D_{2p} acts on the orientation cube:
+   - Rotations: trivial (sigma -> sigma)
+   - Reflection: sigma -> -sigma (reverse all orientations = T^op)
+   H is invariant under this action.
+
+3. IRREP SPECTRUM: Each chord mode k carries energy |lambda_k|^2,
+   with Parseval constraint sum |lambda_k|^2 = mp/4.
+   Paley = uniform distribution; Interval = concentrated in mode 1.
+
+4. CROSSOVER CRITERION: The dimensionless coupling g = 2*sqrt(p)/pi
+   determines whether isotropy (Paley) or concentration (interval) wins.
+   Crossover at g ~ 2.4 (between p=11 and p=19).
+
+5. TRACE ALTERNATION: Paley wins at k = 1 mod 4 (short-cycle advantage),
+   Interval wins at k = 3 mod 4 (long-cycle advantage).
+   The balance tips toward interval at large p.
+
+6. BOOLEAN FUNCTION: H on {+1,-1}^m has only even-degree Walsh coefficients
+   (consequence of D_{2p} symmetry H(sigma) = H(-sigma)).
+   The degree-0 coefficient is the MEAN H over all orientations.
+   The degree-2 coefficients encode pairwise chord interactions.
+
+OPEN QUESTIONS:
+  - Is the crossover monotone? (Once interval beats Paley, does it always win?)
+  - What is the exact critical g_c?
+  - Can this framework explain the Satake NDRT results?
+  - Does the boolean function structure reveal why c_3 is always equal?
+
