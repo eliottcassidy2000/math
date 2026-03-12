@@ -1,0 +1,39 @@
+CIRCULANT REDUCTION: DOES Z_p-AVERAGING INCREASE H?
+===========================================================================
+
+n=5: Exhaustive check (2^10 = 1024 tournaments)
+  1024 tournaments, 0.1s
+  H_avg > H_orig: 960 (93.8%)
+  H_avg < H_orig: 0 (0.0%)
+  H_avg = H_orig: 64 (6.2%)
+  Max H_orig = 15, Max H_avg = 15
+
+n=7: Sampling 50000 random tournaments
+  ... 10000 done (5.1s): +9995 -1 =4
+  ... 20000 done (10.2s): +19993 -1 =6
+  ... 30000 done (15.3s): +29990 -3 =7
+  ... 40000 done (20.4s): +39987 -4 =9
+  ... 50000 done (25.5s): +49983 -6 =11
+  50000 tournaments, 25.5s
+  H_avg > H_orig: 49983 (100.0%)
+  H_avg < H_orig: 6 (0.0%)
+  H_avg = H_orig: 11 (0.0%)
+  Max H_orig = 189, Max H_avg = 189
+  *** Z_n-averaging can DECREASE H! Not a valid reduction. ***
+
+n=9: Sampling 50000 random tournaments
+  ... 10000 done (34.1s): +9999 -1 =0
+  ... 20000 done (68.6s): +19999 -1 =0
+  ... 30000 done (102.7s): +29998 -2 =0
+  ... 40000 done (137.4s): +39998 -2 =0
+  ... 50000 done (172.9s): +49998 -2 =0
+  50000 tournaments, 172.9s
+  H_avg > H_orig: 49998 (100.0%)
+  H_avg < H_orig: 2 (0.0%)
+  H_avg = H_orig: 0 (0.0%)
+  Max H_orig = 3333, Max H_avg = 3357
+  *** Z_n-averaging can DECREASE H! Not a valid reduction. ***
+
+n=11: Sampling 50000 random tournaments
+  ... 10000 done (220.6s): +10000 -0 =0
+  ... 20000 done (441.0s): +20000 -0 =0

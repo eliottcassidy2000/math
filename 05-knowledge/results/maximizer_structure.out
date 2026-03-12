@@ -1,0 +1,56 @@
+STRUCTURAL PROPERTIES OF H-MAXIMIZERS
+===========================================================================
+
+n=7: Exhaustive enumeration
+  ... 500000/2097152 (112.9s)
+  ... 1000000/2097152 (228.9s)
+  ... 1500000/2097152 (343.3s)
+  ... 2000000/2097152 (457.0s)
+  2097152 tournaments, 478.2s
+
+  H = 189 (240 tournaments)
+    Score sequences: {(3, 3, 3, 3, 3, 3, 3): 240}
+    Regular: 240/240
+    C3 distribution: {14: 240}
+
+  H = 175 (720 tournaments)
+    Score sequences: {(3, 3, 3, 3, 3, 3, 3): 720}
+    Regular: 720/720
+    C3 distribution: {14: 720}
+
+  H = 171 (1680 tournaments)
+    Score sequences: {(3, 3, 3, 3, 3, 3, 3): 1680}
+    Regular: 1680/1680
+    C3 distribution: {14: 1680}
+
+  Automorphism groups of H=189 maximizers (sampling 5):
+    |Aut| = 21, score = (3, 3, 3, 3, 3, 3, 3)
+    |Aut| = 21, score = (3, 3, 3, 3, 3, 3, 3)
+    |Aut| = 21, score = (3, 3, 3, 3, 3, 3, 3)
+    |Aut| = 21, score = (3, 3, 3, 3, 3, 3, 3)
+    |Aut| = 21, score = (3, 3, 3, 3, 3, 3, 3)
+
+  REGULAR tournaments with C3=14:
+    C3=14, H=175
+    C3=14, H=175
+    C3=14, H=171
+    C3=14, H=171
+    C3=14, H=175
+    C3=14, H=171
+    C3=14, H=171
+    C3=14, H=171
+    C3=14, H=171
+    C3=14, H=175
+    C3=14, H=175
+    C3=14, H=175
+    C3=14, H=175
+    C3=14, H=175
+    C3=14, H=171
+    C3=14, H=171
+    C3=14, H=175
+    C3=14, H=171
+    C3=14, H=171
+    C3=14, H=171
+  Total regular: 2640
+
+DONE.
