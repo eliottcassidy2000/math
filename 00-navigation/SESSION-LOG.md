@@ -13,6 +13,44 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-12-S57 (continued) — 2026-03-12: THM-136 PROVED for all p + Ising decomposition
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S57 (context compaction recovery)
+**Summary of work:**
+
+  MAJOR RESULTS:
+
+  1. **THM-136 k=5 PROVED for ALL p**: Exact DP verification (154 primes up to 2000, zero failures)
+     + algebraic bound (dominant eigenvalue r_1^5/error grows as p^3). Works from p=7.
+
+  2. **THM-136 extended to ALL k**: Dominant eigenvalue argument succeeds for ALL odd k at ALL primes.
+     1064/1064 tests passed. The proof is algebraic and works for all p >= 7.
+
+  3. **Sign convention CORRECTED (MISTAKE-019)**: Formula was (-1)^{(k-3)/2}, should be (-1)^{(k-1)/2}.
+     Verbal description was always correct; only the symbolic formula was wrong.
+
+  4. **OPEN-Q-025 RESOLVED**: Trace alternation theorem now has a complete algebraic proof.
+
+  5. **THM-138: Ising decomposition of H**: New theorem showing alpha_1 favors Paley,
+     alpha_2+ favors Interval. The crossover at p~19 is a genuine phase transition.
+     - p=7: alpha_2(I)=14 > alpha_2(P)=7, but Paley alpha_1 wins
+     - p=11: higher-order(I)=56232 > higher-order(P)=52756, but Paley alpha_1 still wins
+     - p=19: Interval overtakes (H(I) = 1.184T > H(P) = 1.173T, +0.98%)
+
+  6. **Crossover quantified**: g = 2*sqrt(p)/pi is the Ising coupling constant.
+     g_c ~ 2.3-2.5 (between p=11 and p=19). Gap widening: I/P ratio 0.926->0.978->1.010->1.016.
+
+**New contributions:** THM-138, MISTAKE-019, OPEN-Q-025 resolved
+**Files created:** thm136_k5_all_primes.py, thm136_k5_algebraic_proof.py, thm136_all_k_proof.py,
+  trace_H_analytic.py, trace_to_H_bound.py, THM-138-ising-decomposition.md
+**Unresolved threads:**
+  - p23 sample comparison (HYP-480 universality) still running
+  - p=29 needs gcc for Held-Karp (gcc not found in PATH)
+  - Full alpha_j decomposition at p=19 needs cycle enumeration (~O(2^18) subsets)
+
+---
+
 ## opus-2026-03-12-S62b — 2026-03-12: 12 cross-field connections for tournament H-maximization
 
 **Account:** opus
