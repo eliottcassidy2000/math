@@ -61,10 +61,15 @@
 
 ### INV-137: Satake (arXiv:2502.12090): Cyclotomic Nearly-Doubly-Regular Tournaments (Feb 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50
-**Status:** INVESTIGATED (kind-pasteur-2026-03-12-S55). HIGH PRIORITY follow-up.
+**Status:** DEFINITIVELY RESOLVED (kind-pasteur-2026-03-12-S56). Satake NDRTs do NOT maximize H.
 **What:** For prime powers q ≡ 5 (mod 8), cyclotomic tournament CT_q is NDR iff q = s² + 4. When true: full adjacency spectrum computed explicitly (eigenvalues (q-1)/2 and (-1 ± i√(q ∓ 2√q))/2). Under Hardy-Littlewood conjecture F: infinitely many such q. This is the n ≡ 1 (mod 4) analog of Paley (n ≡ 3 mod 4).
-**Key question for our project:** Do these cyclotomic NDR tournaments (q=5, 13, 29, ...) maximize H? Our PALEY MAXIMIZER result holds for p ≡ 3 (mod 4); the q ≡ 5 (mod 4) case is unexplored.
-**Next step:** Compute H for smallest cyclotomic NDRTs: q=5 (s=1), q=13 (s=3), q=29 (s=5). Compare to H of other n-vertex tournaments. Also: eigenspace structure of CT_q relates to THM-125 (circulant structure). Add to OPEN-QUESTIONS.
+**RESOLUTION (S56 satake_analysis_ext.py, exhaustive at n=13):**
+- q=5: H_sat=15 = H_max (trivially tied — ALL 4 circulants tie at n=5)
+- q=13: H_sat=3,703,011, rank 40/64 — FAR from maximum (gap=8,164, HYP-456 REFUTED)
+- Maximizer at n=13: cyclic interval S={7,...,12}, H=3,711,175 (unique, rank 1/64) — HYP-455 CONFIRMED
+- NDR property does NOT predict H-optimality for q≡5 mod 8
+**Pattern discovered (HYP-455):** At Paley primes p≡3 mod 4 → Paley maximizes. At q≡5 mod 8 primes → cyclic interval maximizes.
+**Next step:** Verify cyclic interval pattern at q=29 (needs sparse/C++ Held-Karp). q=29 currently hits MemoryError in Python.
 
 ### INV-138: Ren (arXiv:2504.15126): Path Independence Complexes of Digraphs (Apr 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50

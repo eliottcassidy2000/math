@@ -1,0 +1,51 @@
+======================================================================
+SATAKE EXTENDED ANALYSIS (S56)
+======================================================================
+
+--- Full H distribution at n=13 ---
+[2.6s, 64 total circulant tournaments]
+Distinct H values: 6
+Full distribution (H: count):
+  H=3711175: 12 tournament(s)
+  H=3707483: 12 tournament(s)
+  H=3704857: 12 tournament(s)
+  H=3703011: 4 tournament(s)
+  H=3683797: 12 tournament(s)
+  H=3669497: 12 tournament(s)
+
+--- Cyclic interval hypothesis ---
+Is S = {ceil(n/2),...,n-1} always the maximizer?
+  n=5: cyclic_interval S=[3, 4], H=15, rank=1/4, max=15, is_max=YES
+    maximizer: S=[3, 4]
+    maximizer: S=[2, 4]
+    maximizer: S=[1, 3]
+    maximizer: S=[1, 2]
+  n=7: cyclic_interval S=[4, 5, 6], H=175, rank=3/8, max=189, is_max=NO (gap=14)
+    maximizer: S=[3, 5, 6]
+    maximizer: S=[1, 2, 4]
+  n=9: cyclic_interval S=[5, 6, 7, 8], H=3267, rank=7/16, max=3357, is_max=NO (gap=90)
+  n=11: cyclic_interval S=[6, 7, 8, 9, 10], H=93027, rank=13/32, max=95095, is_max=NO (gap=2068)
+    maximizer: S=[2, 6, 7, 8, 10]
+    maximizer: S=[1, 3, 4, 5, 9]
+  n=13: cyclic_interval S=[7, 8, 9, 10, 11, 12], H=3711175, rank=1/64, max=3711175, is_max=YES
+
+--- Satake primes q == 5 (mod 8) ---
+Primes q == 5 mod 8 up to 50: [5, 13, 29, 37]
+  q=5: H_sat=15 (rank 4/4), H_ci=15 (rank 1/4), H_max=15
+  q=13: H_sat=3703011 (rank 40/64), H_ci=3711175 (rank 1/64), H_max=3711175
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\satake_analysis_ext.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\satake_analysis_ext.py", line 101, in main
+    H_sat, paths_sat = ham_count_circulant(q, S_sat)
+                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\satake_ndrt_h.py", line 110, in ham_count_circulant
+    paths = ham_paths_from_0(n, set(S))
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\satake_ndrt_h.py", line 99, in ham_paths_from_0
+    key = (w, vis | frozenset([w]))
+              ~~~~^~~~~~~~~~~~~~~~
+MemoryError
+rror
+object repr     : MemoryError()
+lost sys.stderr

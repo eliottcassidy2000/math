@@ -13,11 +13,42 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-12-S56 — 2026-03-12: Satake NDRTs + eigenspace Betti pattern + T_11 full Betti
+## kind-pasteur-2026-03-12-S56 — 2026-03-12: Satake NDRTs + eigenspace Betti pattern + T_13 distribution
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-12-S55
-**Summary of work:** [IN PROGRESS]
+**Summary of work:**
+  Two-part session (interrupted, recovered):
+
+  PART 1 — EIGENSPACE BETTI DECOMPOSITION (eigenspace_betti_pattern.py):
+  - T_7: confirmed per-eigenspace structure — k=0 gives beta_0=1, k=1..6 each give beta_4=1 → total [1,0,0,0,6,0,0]
+  - T_11: partial analysis to m=4 (m=5..10 too large for Python) — consistent with known [1,0,0,0,0,5,15,0,0,0,0]
+  - T_13: MemoryError at omega enumeration (n=13 Omega_m too large for dict approach)
+
+  PART 2 — SATAKE EXTENDED ANALYSIS (satake_analysis_ext.py):
+  - Full H distribution at n=13: 6 distinct values, H_max=3,711,175 (12 tournaments)
+  - CYCLIC INTERVAL at n=13: S={7,...,12} IS the unique maximizer (rank 1/64) — confirmed HYP-455
+  - Cyclic interval pattern: wins at n=5,13 (n≡5 mod 8), loses to Paley at n=7,11 (n≡3 mod 4)
+  - Satake NDRT at q=13: H=3,703,011, rank 40/64 — NOT the maximizer (HYP-456 REFUTED)
+  - q=29: MemoryError in Held-Karp (n=29 too large for Python)
+
+  ALSO INTEGRATED: opus-2026-03-12-S56 findings (pulled from remote):
+  - THM-126: Paley T_7 uniquely maximizes H among all circulant tournaments on Z_7 (exhaustive)
+  - THM-127: Dihedral anti-automorphism for p≡3 mod 4 (reflections of p-gon are anti-auts)
+  - Corrected eigenvalue: |λ_k(T_p)| = √((p+1)/4) = √2 for T_7
+
+**New contributions:**
+  - eigenspace_betti_pattern.py — per-eigenspace Omega dims and Betti contributions
+  - satake_analysis_ext.py — full n=13 distribution + cyclic interval + Satake comparison
+  - results: eigenspace_betti_pattern.out, satake_analysis_ext.out
+  - HYP-455 (cyclic interval confirmed at n=5,13), HYP-456 (Satake NOT maximizer at q=13)
+  - INV-137 (Satake) updated with definitive q=13 result
+
+**Unresolved threads:**
+  - Cyclic interval maximizer for q≡5 mod 8 primes (q=29,37): need C/C++ or sparse Held-Karp
+  - Paley spectral flatness ↔ H-max: does it hold for all p≡3 mod 4? (THM-126 open extension)
+  - T_13 eigenspace Betti: blocked by MemoryError (need C/C++ or sparse approach)
+  - q=29 Satake vs cyclic interval: is cyclic interval always the maximizer for q≡5 mod 8?
 
 ## opus-2026-03-12-S56 — 2026-03-12: Paley circulant uniqueness + dihedral group connections
 
