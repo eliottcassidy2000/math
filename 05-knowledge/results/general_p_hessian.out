@@ -1,0 +1,108 @@
+GENERAL-p HESSIAN ANALYSIS
+============================================================
+
+============================================================
+p = 3, m = 1, v = p/4 = 0.75
+============================================================
+  2 circulant tournaments
+  1 distinct H values
+  Paley H = 3, min H = 3
+  Fitting with e_2,...,e_1: rank=1, need 1
+  H = 3.00  [residual: 0.00e+00]
+
+  HESSIAN: lambda_H = 0.0000
+  Paley is NOT local max (!!!)
+  Paley achieves max H? True
+
+  Fractional e_k gaps (averaged over non-Paley):
+
+============================================================
+p = 7, m = 3, v = p/4 = 1.75
+============================================================
+  8 circulant tournaments
+  2 distinct H values
+  Paley H = 189, min H = 175
+  Fitting with e_2,...,e_2: rank=2, need 2
+  H = 170.62 + (2.0000)*e_2  [residual: 2.84e-14]
+
+  HESSIAN: lambda_H = -2.0000
+  Paley is LOCAL MAX
+  Paley achieves max H? True
+
+  Fractional e_k gaps (averaged over non-Paley):
+    k=2: avg=0.7619, min=0.7619
+
+============================================================
+p = 11, m = 5, v = p/4 = 2.75
+============================================================
+  32 circulant tournaments
+  4 distinct H values
+  Paley H = 95095, min H = 92411
+  Fitting with e_2,...,e_4: rank=4, need 4
+  H = 89942.12 + (183.9303)*e_2 + (-102.0656)*e_3 + (43.6066)*e_4  [residual: 2.62e-10]
+
+  HESSIAN: lambda_H = -331.2131
+  Paley is LOCAL MAX
+  Paley achieves max H? True
+
+  Fractional e_k gaps (averaged over non-Paley):
+    k=2: avg=0.3879, min=0.1455
+    k=3: avg=0.6700, min=0.4364
+    k=4: avg=0.8783, min=0.7958
+
+============================================================
+SUMMARY TABLE
+============================================================
+   p   m n_reps     lambda_H  local_max global_max      H_max
+   3   1      1       0.0000      False       True          3
+   7   3      2      -2.0000       True       True        189
+  11   5      4    -331.2131       True       True      95095
+
+============================================================
+ASYMPTOTIC BEHAVIOR
+============================================================
+
+Key observation: the Hessian weights w_j = C(m-2,j-1) * v^{j-1}
+GROW with j (since v = p/4 > 1 for p >= 7). So higher-order
+positive e_k coefficients get disproportionately more weight.
+
+At p=11: c_2 = +184, c_3 = -102, c_4 = +44
+Weights: w_1 = 1, w_2 = 3*2.75 = 8.25, w_3 = 3*7.5625 = 22.69
+Weighted sum: 184*1 + (-102)*8.25 + 44*22.69 = 184 - 842 + 989 = 331 > 0
+
+The high-order positive term (c_4) dominates because its weight (22.69)
+is much larger than the low-order weight (1).
+
+CONJECTURE (HYP-469): For all primes p = 3 mod 4:
+lambda_H = -sum c_{j+1} * C(m-2,j-1) * (p/4)^{j-1} < 0.
+
+PROOF STRATEGY:
+1. Show the coefficients c_j have a pattern: alternating sign?
+2. Show the weighted sum is dominated by the highest-order positive term.
+3. Use the OCF structure: H = I(Omega, 2) to constrain the c_j.
+
+
+============================================================
+EIGENVALUE ANALYSIS FOR p = 19 (without DP)
+============================================================
+  p=19, m=9, 512 circulants
+  512 distinct eigenvalue spectra
+
+  Paley e_k values:
+    e_1 = 42.750000
+    e_2 = 812.250000
+    e_3 = 9002.437500
+    e_4 = 64142.367187
+    e_5 = 304676.244141
+
+  Paley maximizes each e_k?
+    e_2: Paley=812.2500, max=812.2500, Paley is max? True
+    e_3: Paley=9002.4375, max=9002.4375, Paley is max? True
+    e_4: Paley=64142.3672, max=64142.3672, Paley is max? True
+    e_5: Paley=304676.2441, max=304676.2441, Paley is max? True
+
+  Maclaurin means (Paley vs extremes):
+    Paley: ['4.7500', '4.7500', '4.7500', '4.7500', '4.7500']
+
+  Lowest e_2: 242.2500 (Paley: 812.2500)
+  Highest e_2: 812.2500

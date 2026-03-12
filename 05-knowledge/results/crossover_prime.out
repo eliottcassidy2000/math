@@ -1,0 +1,64 @@
+CROSSOVER PRIME SEARCH
+============================================================
+
+p = 3 (p mod 4 = 3), m = 1
+  Interval S={1,...,1}: H = 3
+  Interval complement S={2,...,2}: H = 3
+  Paley QR: H = 3
+  H(interval) - H(Paley) = +0
+  TIE
+
+p = 5 (p mod 4 = 1), m = 2
+  Interval S={1,...,2}: H = 15
+  Interval complement S={3,...,4}: H = 15
+
+p = 7 (p mod 4 = 3), m = 3
+  Interval S={1,...,3}: H = 175
+  Interval complement S={4,...,6}: H = 175
+  Paley QR: H = 189
+  H(interval) - H(Paley) = -14
+  Paley wins by 7.41%
+
+p = 11 (p mod 4 = 3), m = 5
+  Interval S={1,...,5}: H = 93027
+  Interval complement S={6,...,10}: H = 93027
+  Paley QR: H = 95095
+  H(interval) - H(Paley) = -2068
+  Paley wins by 2.17%
+
+p = 13 (p mod 4 = 1), m = 6
+  Interval S={1,...,6}: H = 3711175
+  Interval complement S={7,...,12}: H = 3711175
+
+p = 17 (p mod 4 = 1), m = 8
+  Interval S={1,...,8}: H = 13689269499
+  Interval complement S={9,...,16}: H = 13689269499
+
+p = 19 (p mod 4 = 3), m = 9
+  Interval S={1,...,9}: H = 1184212824763
+  Interval complement S={10,...,18}: H = 1184212824763
+  Paley QR: H = 1172695746915
+  H(interval) - H(Paley) = +11517077848
+  *** INTERVAL BEATS PALEY by 0.98% ***
+
+============================================================
+SUMMARY: p = 3 mod 4 primes
+============================================================
+   p             H(Paley)          H(Interval)         Diff     Winner
+   3                    3                    3           +0        TIE
+   7                  189                  175          -14      PALEY
+  11                95095                93027        -2068      PALEY
+  19        1172695746915        1184212824763 +11517077848   INTERVAL
+
+============================================================
+NON-PALEY PRIMES (p = 1 mod 4)
+============================================================
+
+  p=5: H(interval) = 15, H(complement) = 15
+  H(S) = H(comp) = 15 (as expected by symmetry)
+
+  p=13: H(interval) = 3711175, H(complement) = 3711175
+  H(S) = H(comp) = 3711175 (as expected by symmetry)
+
+  p=17: H(interval) = 13689269499, H(complement) = 13689269499
+  H(S) = H(comp) = 13689269499 (as expected by symmetry)

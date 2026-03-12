@@ -1,0 +1,45 @@
+=== CROSS-VALIDATION: p=11 ===
+  S=[1, 3, 4, 5, 9]: H=95095, expected=95095 OK
+  S=[1, 2, 4, 5, 8]: H=93467, expected=93467 OK
+  S=[1, 2, 3, 4, 5]: H=93027, expected=93027 OK
+  S=[2, 3, 4, 5, 10]: H=92411, expected=92411 OK
+
+  Even residues S=[2, 4, 6, 8, 10]: H=93027
+  (Paley H = 95095)
+
+=== p=19 VERIFICATION ===
+Paley S=[1, 4, 5, 6, 7, 9, 11, 16, 17]: H=1172695746915 (28.9s)
+Even  S=[2, 4, 6, 8, 10, 12, 14, 16, 18]: H=1184212824763 (28.6s)
+
+S_even valid (S ∩ -S = empty)? True
+  2 ↔ 17: complement in S? False
+  4 ↔ 15: complement in S? False
+  6 ↔ 13: complement in S? False
+  8 ↔ 11: complement in S? False
+  10 ↔ 9: complement in S? False
+  12 ↔ 7: complement in S? False
+  14 ↔ 5: complement in S? False
+  16 ↔ 3: complement in S? False
+  18 ↔ 1: complement in S? False
+
+*** RESULT: H_even - H_paley = 11517077848 ***
+*** PALEY DOES NOT MAXIMIZE H AT p=19! ***
+*** Even residue tournament beats Paley by 11517077848 ***
+*** Ratio: 1.009821 ***
+
+=== TESTING MORE CONNECTION SETS AT p=19 ===
+Interval S=[1, 2, 3, 4, 5, 6, 7, 8, 9]: H=1184212824763
+Paley_comp S=[2, 3, 8, 10, 12, 13, 14, 15, 18]: H=1172695746915
+Odd S=[1, 3, 5, 7, 9, 11, 13, 15, 17]: H=1184212824763
+  S=[7, 8, 10, 13, 14, 15, 16, 17, 18]: H=1168324974527
+  S=[1, 2, 5, 9, 11, 12, 13, 15, 16]: H=1167653827609
+  S=[3, 5, 6, 7, 9, 11, 15, 17, 18]: H=1166763885355
+  S=[1, 6, 8, 9, 12, 14, 15, 16, 17]: H=1167653827609
+  S=[1, 2, 6, 8, 10, 12, 14, 15, 16]: H=1163095255307
+  S=[1, 3, 6, 9, 11, 12, 14, 15, 17]: H=1178609421219
+  S=[1, 2, 6, 7, 10, 11, 14, 15, 16]: H=1168209512629
+  S=[2, 4, 5, 9, 11, 12, 13, 16, 18]: H=1167653827609
+  S=[5, 7, 9, 11, 13, 15, 16, 17, 18]: H=1169003452785
+  S=[2, 3, 5, 7, 9, 11, 13, 15, 18]: H=1167404174753
+
+Best H found: 1184212824763 for S=[2, 4, 6, 8, 10, 12, 14, 16, 18]
