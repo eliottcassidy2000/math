@@ -13,6 +13,46 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S62c — 2026-03-12: 25+ cross-field connections, dihedral group theory, formal proof attempts
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S62b (context compaction recovery)
+**Summary of work:**
+
+  MAJOR RESULTS:
+
+  1. **Weil/RH Connection**: Paley trace formula depends on |Gauss sum|=√p (= RH for curves).
+     Interval uses only Dirichlet kernel. Optimal transport W₁,W₂,KL between eigenvalue distributions.
+     Cycle expansion: Σ[s_k(I)-s_k(P)]/k positive for ALL p tested (7 through 83).
+
+  2. **Dihedral Group Theory** (user-requested): Symmetry-Breaking Principle.
+     Walsh freedom ratio = m exactly. Paley Stab = QR (|Stab|=m), Interval Stab = {1}.
+     Spectral entropy: Paley = log(m) (maximum), Interval ≈ 0.7 (concentrated).
+     Phase transition = spontaneous symmetry breaking (Ramanujan crystal → anti-Ramanujan glass).
+
+  3. **Local Optimality Analysis**: Interval becomes local max at p=13 (first time).
+     p=7,11: NOT local max (Paley reachable by single swap).
+     p=13: ALL single swaps decrease H. Every swap decreases |μ₁| for ALL p.
+
+  4. **p=13 Exhaustive**: INTERVAL IS GLOBAL MAX among all 64 circulants.
+     All 12 top tournaments are affinely equivalent to Interval.
+     Note: p=13 ≡ 1 mod 4, no Paley tournament exists.
+
+  5. **Tropical/Cluster/Matroid**: 7 new connections.
+     H = cluster character of Ω-module at x=2.
+     Tropical I reveals dominant independent set size.
+     Log-concavity holds at p=7 (Mason's conjecture may extend).
+
+  6. **Permanent/Representation Theory**: perm(A) decomposes via Schur polynomials.
+     HC/H ratio: Paley 0.89 vs Interval 0.68 (Paley has more cycle closure).
+
+**New contributions:** HYP-500 to HYP-504, multiple script files
+**Unresolved threads:**
+  - p=19 landscape computation running but slow (n=19 DP)
+  - Formal proof of HYP-480 still open (cycle expansion approach identified but error bounds missing)
+  - Ryser permanent formula has sign bug (needs fixing)
+  - Matroid proximity computation needs smaller test cases
+
 ## kind-pasteur-2026-03-12-S57 (continued) — 2026-03-12: THM-136 PROVED for all p + Ising decomposition
 
 **Account:** kind-pasteur
