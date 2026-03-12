@@ -1,0 +1,82 @@
+p=5: H(interval)=15, H(Paley)=10
+p=7: H(interval)=175, H(Paley)=189
+
+============================================================
+STEP SIZE DISTRIBUTION ANALYSIS
+============================================================
+
+p=7:
+  Interval: S = [1, 2, 3]
+    avg step = 2.00, max step = 3
+  Paley: S = [1, 2, 4]
+    avg step = 2.33, max step = 4
+  Small steps (<=2): interval=2, Paley=2
+  Consecutive? interval=True, Paley=False
+  Paley gaps: [1, 2]
+
+p=11:
+  Interval: S = [1, 2, 3, 4, 5]
+    avg step = 3.00, max step = 5
+  Paley: S = [1, 3, 4, 5, 9]
+    avg step = 4.40, max step = 9
+  Small steps (<=2): interval=2, Paley=1
+  Consecutive? interval=True, Paley=False
+  Paley gaps: [2, 1, 1, 4]
+
+p=19:
+  Interval: S = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    avg step = 5.00, max step = 9
+  Paley: S = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+    avg step = 8.44, max step = 17
+  Small steps (<=2): interval=2, Paley=1
+  Consecutive? interval=True, Paley=False
+  Paley gaps: [3, 1, 1, 1, 2, 2, 5, 1]
+
+============================================================
+THEORETICAL INSIGHT: CONSECUTIVE vs SCATTERED STEPS
+============================================================
+
+The cyclic interval S = {1,...,m} is a CONSECUTIVE block of step sizes.
+The Paley set QR_p is SCATTERED across {1,...,p-1}.
+
+Key advantage of consecutive steps:
+1. FINE-GRAINED CONTROL: steps of size 1 and 2 allow precise navigation
+   around the cycle, avoiding collisions with previously visited vertices.
+
+2. GREEDY PACKING: with small steps available, the HP can fill in gaps
+   between large jumps. A path that makes a large jump (step m) can then
+   use small steps (1,2,...) to fill the nearby vertices.
+
+3. NUMBER OF VALID COMPOSITIONS: for a random walk on Z_p with steps in S,
+   the probability that all partial sums are distinct depends on how
+   "fine-grained" the step set is. Consecutive steps give maximum
+   fine-grainedness.
+
+At small p (7, 11): the QR set still has good coverage (e.g., QR_7 = {1,2,4}
+   includes steps 1 and 2). The additional structure of QR (balanced phases,
+   Gauss sum properties) compensates for the non-consecutive gaps.
+
+At large p (19+): the QR set has larger gaps and misses critical small steps.
+   The QR_19 = {1,4,5,6,7,9,11,16,17} includes 1 but not {2,3}. The gaps
+   {2,3,8,10,12,13,14,15,18} are significant, and many fine-grained
+   navigation options are lost.
+
+PREDICTION: The crossover happens when the "gap penalty" of QR exceeds
+the "phase alignment bonus" of the Gauss sum structure.
+
+Missing consecutive pairs (k, k+1 both missing):
+  p=7: QR=[1, 2, 4]
+    Missing from (1, Ellipsis, {3}): [3]
+    Total missing consecutive pairs: 1
+  p=11: QR=[1, 3, 4, 5, 9]
+    Missing from (1, Ellipsis, {5}): [2]
+    Total missing consecutive pairs: 2
+  p=19: QR=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+    Missing from (1, Ellipsis, {9}): [2, 3, 8]
+    Total missing consecutive pairs: 4
+  p=23: QR=[1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+    Missing from (1, Ellipsis, {11}): [5, 7, 10, 11]
+    Total missing consecutive pairs: 5
+  p=31: QR=[1, 2, 4, 5, 7, 8, 9, 10, 14, 16, 18, 19, 20, 25, 28]
+    Missing from (1, Ellipsis, {15}): [3, 6, 11, 12, 13, 15]
+    Total missing consecutive pairs: 7

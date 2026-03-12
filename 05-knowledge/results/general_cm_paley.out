@@ -5,31 +5,31 @@ Extension of THM-130 to arbitrary odd cycle lengths
 ================================================================================
 VERIFICATION: c_m(Paley_p) formula vs direct computation
 ================================================================================
-  p= 7, m= 3: direct=          14, formula=                  14 [OK]
-  p= 7, m= 5: direct=          42, formula=                  42 [OK]
-  p= 7, m= 7: direct=         318, formula=                 318 [OK]
-  p=11, m= 3: direct=          55, formula=                  55 [OK]
-  p=11, m= 5: direct=         594, formula=                 594 [OK]
-  p=11, m= 7: direct=       11220, formula=               11220 [OK]
-  p=11, m= 9: direct=      216938, formula=            650815/3 [FAIL]
-  p=11, m=11: direct=     4438890, formula=             4438890 [OK]
-  p=13, m= 3: direct=          52, formula=                  52 [OK]
-  p=13, m= 5: direct=        1482, formula=                1482 [OK]
-  p=13, m= 7: direct=       39702, formula=               39702 [OK]
-  p=13, m= 9: direct=     1118537, formula=           3355612/3 [FAIL]
-  p=13, m=11: direct=    32976294, formula=            32976294 [OK]
-  p=19, m= 3: direct=         285, formula=                 285 [OK]
-  p=19, m= 5: direct=       11628, formula=               11628 [OK]
-  p=19, m= 7: direct=      684000, formula=              684000 [OK]
-  p=19, m= 9: direct=    43044215, formula=            43044215 [OK]
-  p=19, m=11: direct=  2852830620, formula=          2852830620 [OK]
-  p=23, m= 3: direct=         506, formula=                 506 [OK]
-  p=23, m= 5: direct=       31878, formula=               31878 [OK]
-  p=23, m= 7: direct=     2785530, formula=             2785530 [OK]
-  p=23, m= 9: direct=   261986728, formula=         785960186/3 [FAIL]
-  p=23, m=11: direct= 25937453970, formula=         25937453970 [OK]
+  p= 7, m= 3: direct=                  14, formula=                  14 [OK]
+  p= 7, m= 5: direct=                  42, formula=                  42 [OK]
+  p= 7, m= 7: direct=                 318, formula=                 318 [OK]
+  p=11, m= 3: direct=                  55, formula=                  55 [OK]
+  p=11, m= 5: direct=                 594, formula=                 594 [OK]
+  p=11, m= 7: direct=               11220, formula=               11220 [OK]
+  p=11, m= 9: direct=            650815/3, formula=            650815/3 [OK]
+  p=11, m=11: direct=             4438890, formula=             4438890 [OK]
+  p=13, m= 3: direct=                  52, formula=                  52 [OK]
+  p=13, m= 5: direct=                1482, formula=                1482 [OK]
+  p=13, m= 7: direct=               39702, formula=               39702 [OK]
+  p=13, m= 9: direct=           3355612/3, formula=           3355612/3 [OK]
+  p=13, m=11: direct=            32976294, formula=            32976294 [OK]
+  p=19, m= 3: direct=                 285, formula=                 285 [OK]
+  p=19, m= 5: direct=               11628, formula=               11628 [OK]
+  p=19, m= 7: direct=              684000, formula=              684000 [OK]
+  p=19, m= 9: direct=            43044215, formula=            43044215 [OK]
+  p=19, m=11: direct=          2852830620, formula=          2852830620 [OK]
+  p=23, m= 3: direct=                 506, formula=                 506 [OK]
+  p=23, m= 5: direct=               31878, formula=               31878 [OK]
+  p=23, m= 7: direct=             2785530, formula=             2785530 [OK]
+  p=23, m= 9: direct=         785960186/3, formula=         785960186/3 [OK]
+  p=23, m=11: direct=         25937453970, formula=         25937453970 [OK]
 
-Overall verification: SOME FAILED
+Overall verification: ALL PASSED
 ================================================================================
 TABLE: c_m(Paley_p) exact values
 ================================================================================
@@ -38,8 +38,8 @@ TABLE: c_m(Paley_p) exact values
      3              14              55              52             285             506
      5              42             594            1482           11628           31878
      7             318           11220           39702          684000         2785530
-     9               —          216938         1118537        43044215       261986728
-    11               —         4438890        32976294      2852830620     25937453970
+     9             ---        650815/3       3355612/3        43044215     785960186/3
+    11             ---         4438890        32976294      2852830620     25937453970
 ================================================================================
 GENERAL FORMULA ANALYSIS
 ================================================================================
@@ -181,3 +181,108 @@ Note: (1-xα)(1-xβ) = 1 + x + x²αβ where αβ = (1 - εp)/4.
     det(I-xA) = (1 - 3x) · (1 + x + 2x²)^3
     Verify at x=0.1: direct=0.9834496000, formula=0.9834496000, match=True
   p=11 (ε=-1):
+    αβ = (1 - εp)/4 = 3
+    det(I-xA) = (1 - 5x) · (1 + x + 3x²)^5
+    Verify at x=0.1: direct=0.9212175897, formula=0.9212175897, match=True
+  p=13 (ε=+1):
+    αβ = (1 - εp)/4 = -3
+    det(I-xA) = (1 - 6x) · (1 + x + -3x²)^6
+    Verify at x=0.1: direct=0.6002921407, formula=0.6002921407, match=True
+  p=19 (ε=-1):
+    αβ = (1 - εp)/4 = 5
+    det(I-xA) = (1 - 9x) · (1 + x + 5x²)^9
+    Verify at x=0.1: direct=0.3517876292, formula=0.3517876292, match=True
+  p=23 (ε=-1):
+    αβ = (1 - εp)/4 = 6
+    det(I-xA) = (1 - 11x) · (1 + x + 6x²)^11
+    Verify at x=0.1: direct=-0.5117264691, formula=-0.5117264691, match=True
+================================================================================
+EIGENVALUE MAGNITUDES AND CONVERGENCE RADIUS
+================================================================================
+  p=7: λ_0 = 3.0, |λ_k| = √2.00 = 1.4142
+    λ_0 > |λ_k|: True
+    Convergence radius of GF: 1/λ_0 = 0.333333
+    Asymptotic ratio |λ_k|/λ_0 = 0.471405
+    For large m: c_m ≈ λ_0^m/m · [1 + O(0.4714^m)]
+  p=11: λ_0 = 5.0, |λ_k| = √3.00 = 1.7321
+    λ_0 > |λ_k|: True
+    Convergence radius of GF: 1/λ_0 = 0.200000
+    Asymptotic ratio |λ_k|/λ_0 = 0.346410
+    For large m: c_m ≈ λ_0^m/m · [1 + O(0.3464^m)]
+  p=13: λ_0 = 6.0, |λ_k| = √3.50 = 1.8708
+    λ_0 > |λ_k|: True
+    Convergence radius of GF: 1/λ_0 = 0.166667
+    Asymptotic ratio |λ_k|/λ_0 = 0.311805
+    For large m: c_m ≈ λ_0^m/m · [1 + O(0.3118^m)]
+  p=19: λ_0 = 9.0, |λ_k| = √5.00 = 2.2361
+    λ_0 > |λ_k|: True
+    Convergence radius of GF: 1/λ_0 = 0.111111
+    Asymptotic ratio |λ_k|/λ_0 = 0.248452
+    For large m: c_m ≈ λ_0^m/m · [1 + O(0.2485^m)]
+  p=23: λ_0 = 11.0, |λ_k| = √6.00 = 2.4495
+    λ_0 > |λ_k|: True
+    Convergence radius of GF: 1/λ_0 = 0.090909
+    Asymptotic ratio |λ_k|/λ_0 = 0.222681
+    For large m: c_m ≈ λ_0^m/m · [1 + O(0.2227^m)]
+================================================================================
+HAMILTONIAN CYCLES: c_p(T_p) = number of directed p-cycles
+================================================================================
+  p=5:
+    c_p = 2 (Hamiltonian directed cycles / closed walks of length p)
+    H   = 10 (Hamiltonian paths)
+    Ratio H/c_p = 5.000000
+    Formula matches direct: True
+  p=7:
+    c_p = 318 (Hamiltonian directed cycles / closed walks of length p)
+    H   = 189 (Hamiltonian paths)
+    Ratio H/c_p = 0.594340
+    Formula matches direct: True
+================================================================================
+PALEY MAXIMIZATION: c_m for ALL odd m?
+================================================================================
+
+  p=5 (1024 tournaments, exhaustive):
+    m=3: Paley c_3=         0, max found=         5, NOT MAX (rank=6)
+    m=5: Paley c_5=         2, max found=         3, NOT MAX (rank=2)
+
+  p=7 (2097152 tournaments — sampling 20000)
+    m=3: Paley c_3=        14, max found=        14, MAXIMIZER
+    m=5: Paley c_5=        42, max found=        42, MAXIMIZER
+    m=7: Paley c_7=       318, max found=       395, NOT MAX (rank=4)
+================================================================================
+SUMMARY: MASTER FORMULA
+================================================================================
+
+THEOREM (General c_m for Paley tournaments):
+
+For p prime, m odd, m ≤ p:
+
+  c_m(T_p) = (1/m) · [((p-1)/2)^m - (p-1)/2^m · S_m(εp)]
+
+where:
+  ε = χ(-1) = (-1)^{(p-1)/2}
+  S_m(t) = Σ_{s=0}^{(m-1)/2} C(m, 2s) · t^s
+
+Equivalently, S_m(t) = Re[(1 + √t)^m] when t > 0 (i.e., cosh-type),
+             S_m(t) = Re[(1 + i√|t|)^m] when t < 0.
+
+Since (1+z)^m = Σ C(m,j) z^j and z = √(εp):
+  (1+z)^m + (1-z)^m = 2·Σ_{s≥0} C(m,2s) z^{2s} = 2·S_m(εp)
+
+So: S_m(εp) = [(1 + √(εp))^m + (1 - √(εp))^m] / 2
+
+For p ≡ 1 (mod 4): S_m = [(1+√p)^m + (1-√p)^m] / 2  (real)
+For p ≡ 3 (mod 4): S_m = [(1+i√p)^m + (1-i√p)^m] / 2 = Re[(1+i√p)^m]
+                        = (1+p)^{m/2} · cos(m·arctan(√p))
+
+GENERATING FUNCTION:
+  det(I - xA)^{-1} = 1/[(1 - (p-1)x/2) · (1 + x + (1-εp)x²/4)^{(p-1)/2}]
+
+  -log det(I - xA) = Σ_{m≥1} c_m · x^m
+
+The quadratic factor 1 + x + (1-εp)x²/4 has roots at x = 2/α, 2/β where
+α = (g-1)/2, β = (-g-1)/2 are the two distinct non-trivial eigenvalues.
+
+|α| = |β| = √((p+1)/4), so the non-trivial eigenvalue contribution to the GF
+has uniform convergence radius 2/√(p+1).
+

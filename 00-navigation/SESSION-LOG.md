@@ -13,6 +13,47 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S58 — 2026-03-12: MAJOR — Paley does NOT maximize H at p=19
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S58 (context compaction recovery)
+**Summary of work:**
+  Deep creative exploration of Paley tournament H-maximization via group theory,
+  dihedral groups, Schur convexity, and elementary symmetric polynomials.
+
+  MAJOR FINDINGS:
+  1. **THM-133: Trace formula at p=7.** H = (462 - tr(A^4))/2 for ALL Z_7 circulants.
+     Proved via Schur convexity: tr(A^4) = CONST + Sum(y_k^4), flat spectrum minimizes.
+     First non-exhaustive algebraic proof that Paley maximizes H at p=7.
+
+  2. **THM-134: Paley local max on Parseval simplex.** H decomposes in elementary
+     symmetric polynomial basis: H = c_0 + c_2*e_2 + c_3*e_3 + c_4*e_4.
+     Hessian at Paley point is negative definite (lambda_H = -2 at p=7, -331 at p=11).
+     Paley is the unique local maximum.
+
+  3. **THM-135: COUNTEREXAMPLE at p=19.** The cyclic interval tournament C_19 beats
+     Paley T_19 by 1.0%: H(C_19) = 1,184,212,824,763 > H(T_19) = 1,172,695,746,915.
+     Paley's advantage shrinks monotonically: TIE(p=3), +7.4%(p=7), +2.2%(p=11),
+     then REVERSES to -1.0%(p=19). Confirmed by cross-validated Held-Karp DP.
+
+  4. **Interval eigenvalue structure:** C_19 has one dominant eigenvalue |lambda_1|=6.05
+     (Dirichlet kernel) vs Paley's uniform |lambda|=2.24. The spectral concentration
+     creates MORE Hamiltonian paths than Paley's flat spectrum at large p.
+
+  5. **HYP-479/480:** Crossover conjecture formalized. Interval tournament conjectured
+     to maximize H for all primes p >= 13.
+
+  Also proved: THM-130 (c_5 closed form), THM-131 (D_14 irrep decomposition),
+  THM-132 (Z_11 OCF alpha_1 non-monotonicity).
+
+**New contributions:** THM-130, THM-131, THM-132, THM-133, THM-134, THM-135,
+  HYP-464-468 (from prior context), HYP-479, HYP-480
+**Unresolved threads:**
+  - Prove or disprove interval maximizes H at p=23 (need faster DP or algebraic method)
+  - Why does spectral concentration create more HPs? Composition counting approach started
+  - Can we prove the crossover analytically? When does QR gap penalty exceed phase bonus?
+  - Does the interval maximize H among ALL tournaments (not just circulants)?
+
 ## kind-pasteur-2026-03-12-S56c — 2026-03-12: Hessian sign flip + full OCF decomposition + trace formula
 
 **Account:** kind-pasteur

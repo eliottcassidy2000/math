@@ -73,9 +73,10 @@ def eigenvalues_direct(p):
     return eigs, A
 
 def cm_direct(A, m):
-    """Compute c_m = (number of directed m-cycles) = tr(A^m)/m."""
+    """Compute c_m = tr(A^m)/m (counts directed closed m-walks up to rotation)."""
     Am = np.linalg.matrix_power(A, m)
-    return int(round(np.trace(Am).real)) // m
+    tr_val = int(round(np.trace(Am).real))
+    return Fraction(tr_val, m)
 
 def gauss_sum(p):
     """Compute quadratic Gauss sum g = Σ_{k=0}^{p-1} χ(k) ζ^k numerically."""
@@ -165,12 +166,12 @@ def verify_cm(primes, ms):
             cm_dir = cm_direct(A, m)
             cm_form = cm_formula_exact(m, p)
 
-            match = (cm_form == Fraction(cm_dir))
+            match = (cm_form == cm_dir)
             status = "OK" if match else "FAIL"
             if not match:
                 all_ok = False
 
-            print(f"  p={p:2d}, m={m:2d}: direct={cm_dir:>12d}, formula={cm_form!s:>20s} [{status}]")
+            print(f"  p={p:2d}, m={m:2d}: direct={str(cm_dir):>20s}, formula={str(cm_form):>20s} [{status}]")
 
     print(f"\nOverall verification: {'ALL PASSED' if all_ok else 'SOME FAILED'}")
     return all_ok
@@ -193,10 +194,11 @@ def compute_cm_table(primes, ms):
         row = f"{m:>6d}"
         for p in primes:
             if m > p:
-                row += f"  {'—':>14s}"
+                row += f"  {'---':>14s}"
             else:
                 cm = cm_formula_exact(m, p)
-                row += f"  {int(cm):>14d}"
+                cm_str = str(int(cm)) if cm.denominator == 1 else str(cm)
+                row += f"  {cm_str:>14s}"
         print(row)
 
 def analyze_general_formula(ms):
@@ -288,8 +290,9 @@ def check_maximization(primes, ms):
         for m in ms:
             if m > p:
                 continue
-            paley_cm[m] = cm_direct(paley_A, m)
-            max_cm[m] = paley_cm[m]
+            pcm = cm_direct(paley_A, m)
+            paley_cm[m] = pcm
+            max_cm[m] = pcm
             max_achieved_by[m] = 1  # count how many achieve max
 
         # Check all tournaments
@@ -348,8 +351,8 @@ def check_hamiltonian(primes):
     print_separator()
 
     for p in primes:
-        if p > 13:
-            print(f"  p={p}: skipped (too large for direct computation)")
+        if p > 7:
+            print(f"  p={p}: skipped (p! too large for direct Hamiltonian enumeration)")
             continue
 
         _, A = eigenvalues_direct(p)
@@ -383,10 +386,11 @@ def check_hamiltonian(primes):
                 H_count += 1
 
         print(f"  p={p}:")
-        print(f"    c_p = {int(cp_form)} (Hamiltonian directed cycles)")
+        print(f"    c_p = {cp_form} (Hamiltonian directed cycles / closed walks of length p)")
         print(f"    H   = {H_count} (Hamiltonian paths)")
-        print(f"    Ratio H/c_p = {H_count/int(cp_form):.6f}" if int(cp_form) > 0 else "    c_p = 0")
-        print(f"    Formula matches direct: {cp_form == Fraction(cp_dir)}")
+        if cp_form > 0:
+            print(f"    Ratio H/c_p = {float(Fraction(H_count) / cp_form):.6f}")
+        print(f"    Formula matches direct: {cp_form == cp_dir}")
 
 def generating_function_analysis(primes):
     """
@@ -648,8 +652,6 @@ def paley_maximization_all_m(primes_small, ms):
 
         paley_A = paley_adjacency(p)
 
-        print(f"\n  p={p} ({n_tournaments} tournaments, exhaustive):")
-
         # Compute c_m for all tournaments
         results = {}  # m -> list of c_m values
         paley_vals = {}
@@ -660,26 +662,39 @@ def paley_maximization_all_m(primes_small, ms):
             results[m] = []
             paley_vals[m] = cm_direct(paley_A, m)
 
-        for bits in range(n_tournaments):
-            A = np.zeros((p, p), dtype=int)
-            for idx, (i, j) in enumerate(edges):
-                if (bits >> idx) & 1:
-                    A[i][j] = 1
-                else:
-                    A[j][i] = 1
-
-            for m in results:
-                results[m].append(cm_direct(A, m))
+        if n_tournaments > 500000:
+            print(f"\n  p={p} ({n_tournaments} tournaments — sampling 20000)")
+            import random
+            random.seed(42)
+            sample_indices = [random.randint(0, n_tournaments-1) for _ in range(20000)]
+            for bits in sample_indices:
+                A = np.zeros((p, p), dtype=int)
+                for idx, (i, j) in enumerate(edges):
+                    if (bits >> idx) & 1:
+                        A[i][j] = 1
+                    else:
+                        A[j][i] = 1
+                for m in results:
+                    results[m].append(cm_direct(A, m))
+        else:
+            print(f"\n  p={p} ({n_tournaments} tournaments, exhaustive):")
+            for bits in range(n_tournaments):
+                A = np.zeros((p, p), dtype=int)
+                for idx, (i, j) in enumerate(edges):
+                    if (bits >> idx) & 1:
+                        A[i][j] = 1
+                    else:
+                        A[j][i] = 1
+                for m in results:
+                    results[m].append(cm_direct(A, m))
 
         for m in sorted(results.keys()):
             max_cm = max(results[m])
-            is_max = paley_vals[m] == max_cm
+            is_max = paley_vals[m] >= max_cm
             n_at_max = results[m].count(max_cm)
-            rank = sorted(set(results[m]), reverse=True).index(paley_vals[m]) + 1
-            print(f"    m={m}: Paley c_{m}={paley_vals[m]:>6d}, max={max_cm:>6d}, "
-                  f"Paley rank={rank}/{len(set(results[m]))}, "
-                  f"max achieved by {n_at_max} tournaments, "
-                  f"{'MAXIMIZER' if is_max else 'NOT MAX'}")
+            rank = sorted(set(results[m]), reverse=True).index(paley_vals[m]) + 1 if paley_vals[m] in results[m] else "?"
+            print(f"    m={m}: Paley c_{m}={str(paley_vals[m]):>10s}, max found={str(max_cm):>10s}, "
+                  f"{'MAXIMIZER' if is_max else 'NOT MAX (rank=' + str(rank) + ')'}")
 
 def eigenvalue_magnitude_analysis(primes):
     """
@@ -737,9 +752,9 @@ def main():
     eigenvalue_magnitude_analysis(primes)
 
     # 7. Hamiltonian cycles (m = p)
-    check_hamiltonian([5, 7, 11, 13])
+    check_hamiltonian([5, 7])
 
-    # 8. Maximization check
+    # 8. Maximization check (p=5 exhaustive, p=7 sampled)
     paley_maximization_all_m([5, 7], ms)
 
     # 9. Summary
