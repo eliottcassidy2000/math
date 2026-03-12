@@ -1,0 +1,160 @@
+======================================================================
+HESSIAN SIGN ORIGIN — WHY DOES IT FLIP AT p mod 4?
+======================================================================
+
+============================================================
+SECTION 1: e_k COEFFICIENT TABLE ACROSS PRIMES
+============================================================
+
+  p = 7 (mod 4 = 3), m = 3
+    H = 170.6250 +2.0000*e_2
+    lambda_H = -2.0000
+    Sign pattern: ['+']
+
+  p = 11 (mod 4 = 3), m = 5
+    H = 89942.1171 +183.9303*e_2 -102.0656*e_3 +43.6066*e_4
+    lambda_H = -331.2131
+    Sign pattern: ['+', '-', '+']
+
+  p = 13 (mod 4 = 1), m = 6
+    H = 3507299.2578 +6596.1495*e_2 -3729.6323*e_3 +1835.0413*e_4 -401.3093*e_5 -700.4915*e_6
+    lambda_H = 58849.4350
+    Sign pattern: ['+', '-', '+', '-', '-']
+
+============================================================
+SECTION 2: ARE COEFFICIENTS RATIONAL?
+============================================================
+
+  p = 7:
+    c_0 = 170.6250000000 ~ 1365/8 (error = 1.14e-13)
+    c_2 = 2.0000000000 ~ 2 (error = 1.42e-14)
+
+  p = 11:
+    c_0 = 89942.1170594211 ~ 351134025/3904 (error = 5.09e-09)
+    c_2 = 183.9303278691 ~ 44879/244 (error = 2.85e-10)
+    c_3 = -102.0655737706 ~ -6226/61 (error = 1.40e-10)
+    c_4 = 43.6065573771 ~ 2660/61 (error = 4.45e-11)
+
+  p = 13:
+    c_0 = 3507299.2578419475 ~ 32537215215/9277 (error = 2.75e-08)
+    c_2 = 6596.1495100992 ~ 54530368/8267 (error = 1.23e-09)
+    c_3 = -3729.6322563739 ~ -14198710/3807 (error = 4.02e-09)
+    c_4 = 1835.0413135674 ~ 1732279/944 (error = 8.07e-09)
+    c_5 = -401.3093220350 ~ -94709/236 (error = 1.08e-09)
+    c_6 = -700.4915254281 ~ -41329/59 (error = 4.41e-09)
+
+============================================================
+SECTION 3: COEFFICIENT STRUCTURE
+============================================================
+
+    Observation: The coefficients grow rapidly with k.
+    At p=13: c_2 = 6596, c_3 = -3730, c_4 = 1835, c_5 = -401, c_6 = -700
+
+    The alternating sign pattern (+,-,+,-,-) breaks at k=6.
+    The Hessian formula is:
+      lambda_H = -sum_k c_k * C(m-2, k-2) * (p/4)^{k-2}
+
+    The term with largest MAGNITUDE dominates.
+    At p=7: only one term (k=2), trivially negative.
+    At p=11: three terms. The k=3 term (positive, from c_3 < 0) is large
+             but k=2 and k=4 terms together outweigh it.
+    At p=13: five terms. The k=4 and k=5 terms change the balance.
+    
+  p = 7, v = p/4 = 1.75:
+    k=2: c_k=      2.0000, C(1,0)=   1, v^0=    1.0000, term=     -2.0000 (-)
+    SUM = lambda_H = -2.0000 (-)
+  p = 11, v = p/4 = 2.75:
+    k=2: c_k=    183.9303, C(3,0)=   1, v^0=    1.0000, term=   -183.9303 (-)
+    k=3: c_k=   -102.0656, C(3,1)=   3, v^1=    2.7500, term=    842.0410 (+)
+    k=4: c_k=     43.6066, C(3,2)=   3, v^2=    7.5625, term=   -989.3238 (-)
+    SUM = lambda_H = -331.2131 (-)
+  p = 13, v = p/4 = 3.25:
+    k=2: c_k=   6596.1495, C(4,0)=   1, v^0=    1.0000, term=  -6596.1495 (-)
+    k=3: c_k=  -3729.6323, C(4,1)=   4, v^1=    3.2500, term=  48485.2193 (+)
+    k=4: c_k=   1835.0413, C(4,2)=   6, v^2=   10.5625, term=-116295.7432 (-)
+    k=5: c_k=   -401.3093, C(4,3)=   4, v^3=   34.3281, term=  55104.7863 (+)
+    k=6: c_k=   -700.4915, C(4,4)=   1, v^4=  111.5664, term=  78151.3221 (+)
+    SUM = lambda_H = 58849.4350 (+)
+
+============================================================
+SECTION 4: GAUSS SUM AND COEFFICIENT ORIGIN
+============================================================
+
+    For Paley T_p (p = 3 mod 4):
+      y_k^2 = |g_k|^2 where g_k = sum_{a in QR} omega^{ak} (Gauss sum)
+      g_k = chi(k) * g_1, so |g_k| = |g_1| = sqrt(p)/2
+      => y_k^2 = p/4 for all k (spectral flatness)
+
+    For p = 1 mod 4: -1 in QR, so S and -S overlap.
+    The QR set is NOT a valid tournament connection set.
+    No circulant tournament achieves flat spectrum.
+
+    The coefficient signs seem to encode how H's landscape changes
+    as we move away from the flat point on the spectral simplex.
+
+    KEY INSIGHT: At the flat point (y_k^2 = p/4 for all k),
+    e_k(y^2) = C(m,k) * (p/4)^k. This is the maximum of e_k (Schur).
+    Moving away from flat DECREASES all e_k simultaneously.
+    If c_k > 0: this decreases H (good for Paley being max).
+    If c_k < 0: this INCREASES H (bad for Paley).
+
+    The Hessian sign depends on the NET effect at second order.
+    
+
+  p = 7: e_k at uniform point (v = 1.75):
+    e_1 = C(3,1) * 1.75^1 = 5.2500
+    e_2 = C(3,2) * 1.75^2 = 9.1875
+    e_3 = C(3,3) * 1.75^3 = 5.3594
+
+  p = 11: e_k at uniform point (v = 2.75):
+    e_1 = C(5,1) * 2.75^1 = 13.7500
+    e_2 = C(5,2) * 2.75^2 = 75.6250
+    e_3 = C(5,3) * 2.75^3 = 207.9688
+    e_4 = C(5,4) * 2.75^4 = 285.9570
+    e_5 = C(5,5) * 2.75^5 = 157.2764
+
+  p = 13: e_k at uniform point (v = 3.25):
+    e_1 = C(6,1) * 3.25^1 = 19.5000
+    e_2 = C(6,2) * 3.25^2 = 158.4375
+    e_3 = C(6,3) * 3.25^3 = 686.5625
+    e_4 = C(6,4) * 3.25^4 = 1673.4961
+    e_5 = C(6,5) * 3.25^5 = 2175.5449
+    e_6 = C(6,6) * 3.25^6 = 1178.4202
+
+============================================================
+SECTION 5: DICHOTOMY MECHANISM
+============================================================
+
+    CLAIM: The sign of lambda_H is determined by whether
+    the ACHIEVABLE spectral configurations (circulant tournaments on Z_p)
+    favor "expansion from center" or "contraction toward center".
+
+    For p = 3 mod 4:
+      - Paley (QR) achieves the CENTER (flat spectrum)
+      - ALL other circulants are FARTHER from center
+      - H DECREASES as we move away => lambda_H < 0
+
+    For p = 1 mod 4:
+      - No circulant achieves the center
+      - The CLOSEST to center (Satake/NDR) has INTERMEDIATE H
+      - The FARTHEST from center (cyclic interval) has MAXIMUM H
+      - H INCREASES as we move away => lambda_H > 0
+
+    BUT THIS IS THE EMPIRICAL OBSERVATION, NOT THE CAUSE.
+    The CAUSE is in the coefficient signs c_k.
+    And the coefficients are determined by the POLYNOMIAL structure
+    of H(e_2, ..., e_m) which comes from the OCF and the conflict
+    graph Omega's dependence on eigenvalues.
+
+    The most promising route to understanding:
+    H = I(Omega, 2) where Omega has alpha_k independent k-sets.
+    The alpha_k are complicated functions of the cycle arrangement.
+    For circulant tournaments, alpha_k depends on the eigenvalues
+    through the cycle counts (which ARE trace functions of eigenvalues).
+
+    The polynomial H(e_k) encodes how DISJOINT CYCLE COLLECTIONS
+    vary with the spectral parameters. The sign of each c_k
+    tells us whether adding more "spectral concentration" (lower e_k)
+    helps or hurts the total count of independent cycle collections
+    of each size.
+    

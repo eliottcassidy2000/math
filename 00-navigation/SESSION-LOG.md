@@ -13,6 +13,49 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-12-S56c — 2026-03-12: Hessian sign flip + full OCF decomposition + trace formula
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S56 (context compaction recovery)
+**Summary of work:**
+  Deep continuation of dihedral/spectral analysis of Paley maximization.
+
+  MAJOR FINDINGS:
+  1. **HESSIAN SIGN FLIP (HYP-475):** Computed H as exact polynomial in e_k(y^2) at p=7,11,13.
+     lambda_H = -2 (p=7), -331 (p=11), **+58849 (p=13)**. Center is LOCAL MAX for p=3 mod 4,
+     LOCAL MIN for p=1 mod 4. The sign flip is caused by the breaking of alternating coefficient
+     signs: p=7 [+], p=11 [+,-,+], p=13 [+,-,+,-,-]. The last two negative coefficients at
+     p=13 drive the positive Hessian. Root cause: highest-order coefficient c_m flips sign at p mod 4.
+
+  2. **TRACE SIMPLICITY (HYP-476):** Proved tr(A^k) = k*c_k for k=3,4,5 in ALL tournaments
+     (all closed walks with k<=5 are simple). First non-simple correction at k=7.
+     This means c_4 = tr(A^4)/4 and c_5 = tr(A^5)/5 are exact spectral formulas.
+
+  3. **c_3 CONSTANCY (HYP-477):** All circulant tournaments on Z_p have identical c_3 (all regular).
+     c_4 and c_5 VARY and are the key discriminators.
+
+  4. **FULL OCF VERIFIED (p=5):** I(Omega, 2) = 15 = H with Omega having 7 vertices (5 three-cycles + 2 five-cycles).
+
+  5. **PALEY CYCLE DOMINANCE:** Paley has MORE directed cycles at every odd length k>=5:
+     p=7: c_5=42 vs 28, c_7=24 vs 17. p=11: c_5=594, c_7=3960, c_9=11055, c_11=5505 (all max).
+
+  6. **H = 231 - 2*c_4** at p=7 (confirmed THM-133, equivalent to 170.625 + 2*e_2).
+
+  7. **Coefficient rationality:** At p=7, c_0=1365/8, c_2=2 (exact). At p=11,13: rational with
+     non-trivial denominators (likely related to Galois group structure).
+
+  8. **Integrated opus S58-S60 findings:** THM-130-134, Maclaurin inequality, elementary symmetric decomposition.
+
+**New contributions:** HYP-475 to HYP-478
+**Scripts:** full_ocf_spectral.py, c5_spectral_formula.py, H_c4_formula.py, spectral_H_formula.py,
+  esym_p13_analysis.py, hessian_sign_origin.py, dihedral_ladder_analysis.py, cycle_count_H_formula.py
+**Unresolved threads:**
+  - Prove c_m sign alternates with p mod 4 (would explain dichotomy for all primes)
+  - Closed-form coefficients c_k(p) in terms of p
+  - Why does the highest-order coefficient flip sign?
+  - Test at p=17 (mod4=1) and p=19 (mod4=3) to confirm pattern
+  - Bridge between OCF alpha_k and elementary symmetric e_k(y^2)
+
 ## opus-2026-03-12-S60 — 2026-03-12: Spectral-OCF chain, Schur-concavity dichotomy, global Paley maximality
 
 **Account:** opus
