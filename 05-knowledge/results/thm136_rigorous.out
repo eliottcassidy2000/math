@@ -1,0 +1,155 @@
+======================================================================
+RIGOROUS ANALYSIS OF THM-136 (TRACE ALTERNATION)
+======================================================================
+
+======================================================================
+SIGN OF P_k(p) = Re[(1+i*sqrt(p))^k]
+======================================================================
+  k= 5 (mod4=1): expected +, ALL MATCH: p=7:+, p=11:+, p=19:+, p=23:+, p=31:+, p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k= 7 (mod4=3): expected -, ALL MATCH: p=7:-, p=11:-, p=19:-, p=23:-, p=31:-, p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k= 9 (mod4=1): expected +, ALL MATCH: p=11:+, p=19:+, p=23:+, p=31:+, p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=11 (mod4=3): expected -, MISMATCH: p=11:+, p=19:-, p=23:-, p=31:-, p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=13 (mod4=1): expected +, ALL MATCH: p=19:+, p=23:+, p=31:+, p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=15 (mod4=3): expected -, MISMATCH: p=19:+, p=23:-, p=31:-, p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=17 (mod4=1): expected +, MISMATCH: p=19:-, p=23:-, p=31:+, p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=19 (mod4=3): expected -, MISMATCH: p=19:+, p=23:+, p=31:+, p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=21 (mod4=1): expected +, MISMATCH: p=23:-, p=31:-, p=43:-, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=23 (mod4=3): expected -, MISMATCH: p=23:+, p=31:+, p=43:+, p=47:+, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=25 (mod4=1): expected +, MISMATCH: p=31:-, p=43:-, p=47:-, p=59:-, p=67:+, p=71:+, p=79:+, p=83:+
+  k=27 (mod4=3): expected -, MISMATCH: p=31:+, p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:-, p=83:-
+  k=29 (mod4=1): expected +, MISMATCH: p=31:-, p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=31 (mod4=3): expected -, MISMATCH: p=31:+, p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=33 (mod4=1): expected +, MISMATCH: p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=35 (mod4=3): expected -, MISMATCH: p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=37 (mod4=1): expected +, MISMATCH: p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=39 (mod4=3): expected -, MISMATCH: p=43:+, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=41 (mod4=1): expected +, MISMATCH: p=43:-, p=47:-, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=43 (mod4=3): expected -, MISMATCH: p=43:-, p=47:+, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=45 (mod4=1): expected +, MISMATCH: p=47:+, p=59:-, p=67:-, p=71:-, p=79:-, p=83:-
+  k=47 (mod4=3): expected -, MISMATCH: p=47:-, p=59:+, p=67:+, p=71:+, p=79:+, p=83:+
+  k=49 (mod4=1): expected +, MISMATCH: p=59:+, p=67:-, p=71:-, p=79:-, p=83:-
+  k=51 (mod4=3): expected -, MISMATCH: p=59:-, p=67:+, p=71:+, p=79:+, p=83:+
+  k=53 (mod4=1): expected +, MISMATCH: p=59:+, p=67:+, p=71:-, p=79:-, p=83:-
+  k=55 (mod4=3): expected -, MISMATCH: p=59:-, p=67:-, p=71:-, p=79:+, p=83:+
+  k=57 (mod4=1): expected +, MISMATCH: p=59:+, p=67:+, p=71:+, p=79:+, p=83:-
+
+======================================================================
+DOMINANCE ANALYSIS: |S_I| > |S_P| AND SIGN PROOF
+======================================================================
+
+  p = 7: m = 3
+  Paley |lambda| = 1.4142
+  Interval |mu_1| = 2.2470
+  Ratio r_1/|lam_P| = 1.5889
+  Interval magnitudes: ['2.2470', '0.5550', '0.8019']
+    k=  5 (mod4=1): P_k=            176, S_P_sign=<0, dom/err=   134.3, |S_I|/|S_P|=     3.1, Delta_sign=>0 [OK] [PROVED]
+    k=  7 (mod4=3): P_k=           -832, S_P_sign=>0, dom/err=  1260.1, |S_I|/|S_P|=    14.8, Delta_sign=<0 [OK] [PROVED]
+
+  p = 11: m = 5
+  Paley |lambda| = 1.7321
+  Interval |mu_1| = 3.5133
+  Ratio r_1/|lam_P| = 2.0284
+  Interval magnitudes: ['3.5133', '0.5211', '1.2036', '0.5944', '0.7635']
+    k=  5 (mod4=1): P_k=            496, S_P_sign=<0, dom/err=   121.0, |S_I|/|S_P|=     4.5, Delta_sign=>0 [OK] [PROVED]
+    k=  7 (mod4=3): P_k=          -5312, S_P_sign=>0, dom/err=  1444.8, |S_I|/|S_P|=    26.8, Delta_sign=<0 [OK] [PROVED]
+    k=  9 (mod4=1): P_k=          34816, S_P_sign=<0, dom/err= 14487.5, |S_I|/|S_P|=   230.2, Delta_sign=>0 [OK] [PROVED]
+    k= 11 (mod4=3): P_k=          68608, S_P_sign=<0, dom/err=130145.1, |S_I|/|S_P|=  6010.4, Delta_sign=<0 [OK] [PROVED]
+
+  p = 19: m = 9
+  Paley |lambda| = 2.2361
+  Interval |mu_1| = 6.0548
+  Ratio r_1/|lam_P| = 2.7078
+  Interval magnitudes: ['6.0548', '0.5069', '2.0368', '0.5286', '1.2447', '0.5685', '0.9142', '0.6336', '0.7382']
+    k=  5 (mod4=1): P_k=           1616, S_P_sign=<0, dom/err=    83.5, |S_I|/|S_P|=     7.1, Delta_sign=>0 [OK] [PROVED]
+    k=  7 (mod4=3): P_k=         -35776, S_P_sign=>0, dom/err=  1082.2, |S_I|/|S_P|=    64.8, Delta_sign=<0 [OK] [PROVED]
+    k=  9 (mod4=1): P_k=         641536, S_P_sign=<0, dom/err= 12123.9, |S_I|/|S_P|=   656.8, Delta_sign=>0 [OK] [PROVED]
+    k= 11 (mod4=3): P_k=       -8784896, S_P_sign=>0, dom/err=125850.9, |S_I|/|S_P|=  8195.7, Delta_sign=<0 [OK] [PROVED]
+    k= 13 (mod4=1): P_k=       59641856, S_P_sign=<0, dom/err=1243072.1, |S_I|/|S_P|=197287.8, Delta_sign=>0 [OK] [PROVED]
+    k= 15 (mod4=3): P_k=     1366851584, S_P_sign=<0, dom/err=11826367.7, |S_I|/|S_P|=1357599.8, Delta_sign=<0 [OK] [PROVED]
+    k= 17 (mod4=1): P_k=   -73063399424, S_P_sign=>0, dom/err=109033410.5, |S_I|/|S_P|=3884000.0, Delta_sign=>0 [OK] [PROVED]
+    k= 19 (mod4=3): P_k=  2083541745664, S_P_sign=<0, dom/err=977002571.3, |S_I|/|S_P|=20248739.5, Delta_sign=<0 [OK] [PROVED]
+
+  p = 23: m = 11
+  Paley |lambda| = 2.4495
+  Interval |mu_1| = 7.3268
+  Ratio r_1/|lam_P| = 2.9912
+  Interval magnitudes: ['7.3268', '0.5047', '2.4575', '0.5193', '1.4931', '0.5451', '1.0868', '0.5852', '0.8670', '0.6446', '0.7325']
+    k=  5 (mod4=1): P_k=           2416, S_P_sign=<0, dom/err=    71.0, |S_I|/|S_P|=     8.4, Delta_sign=>0 [OK] [PROVED]
+    k=  7 (mod4=3): P_k=         -67136, S_P_sign=>0, dom/err=   930.7, |S_I|/|S_P|=    90.3, Delta_sign=<0 [OK] [PROVED]
+    k=  9 (mod4=1): P_k=        1562368, S_P_sign=<0, dom/err= 10604.3, |S_I|/|S_P|=  1045.3, Delta_sign=>0 [OK] [PROVED]
+    k= 11 (mod4=3): P_k=      -30073856, S_P_sign=>0, dom/err=112421.6, |S_I|/|S_P|= 13802.3, Delta_sign=<0 [OK] [PROVED]
+    k= 13 (mod4=1): P_k=      423325696, S_P_sign=<0, dom/err=1138759.2, |S_I|/|S_P|=239290.5, Delta_sign=>0 [OK] [PROVED]
+    k= 15 (mod4=3): P_k=    -1303789568, S_P_sign=>0, dom/err=11160019.6, |S_I|/|S_P|=18376179.4, Delta_sign=<0 [OK] [PROVED]
+    k= 17 (mod4=1): P_k=  -186468859904, S_P_sign=>0, dom/err=106525273.7, |S_I|/|S_P|=29617335.3, Delta_sign=>0 [OK] [PROVED]
+    k= 19 (mod4=3): P_k=  8955612626944, S_P_sign=<0, dom/err=994173638.5, |S_I|/|S_P|=139016974.9, Delta_sign=<0 [OK] [PROVED]
+    k= 21 (mod4=1): P_k=-286640892280832, S_P_sign=>0, dom/err=9092070712.9, |S_I|/|S_P|=959540370.1, Delta_sign=>0 [OK] [PROVED]
+    k= 23 (mod4=3): P_k=7453766387236864, S_P_sign=<0, dom/err=81576850856.0, |S_I|/|S_P|=7997990150.1, Delta_sign=<0 [OK] [PROVED]
+
+  p = 31: m = 15
+  Paley |lambda| = 2.8284
+  Interval |mu_1| = 9.8718
+  Ratio r_1/|lam_P| = 3.4902
+  Interval magnitudes: ['9.8718', '0.5026', '3.3019', '0.5104', '1.9948', '0.5240', '1.4397', '0.5441', '1.1353', '0.5719', '0.9452', '0.6092', '0.8169', '0.6590', '0.7257']
+    k=  5 (mod4=1): P_k=           4496, S_P_sign=<0, dom/err=    54.2, |S_I|/|S_P|=    10.9, Delta_sign=>0 [OK] [PROVED]
+    k=  7 (mod4=3): P_k=        -175552, S_P_sign=>0, dom/err=   717.7, |S_I|/|S_P|=   154.0, Delta_sign=<0 [OK] [PROVED]
+    k=  9 (mod4=1): P_k=        5929216, S_P_sign=<0, dom/err=  8310.5, |S_I|/|S_P|=  2257.1, Delta_sign=>0 [OK] [PROVED]
+    k= 11 (mod4=3): P_k=     -175987712, S_P_sign=>0, dom/err= 89876.2, |S_I|/|S_P|= 35608.4, Delta_sign=<0 [OK] [PROVED]
+    k= 13 (mod4=1): P_k=     4487745536, S_P_sign=<0, dom/err=932029.0, |S_I|/|S_P|=629892.6, Delta_sign=>0 [OK] [PROVED]
+    k= 15 (mod4=3): P_k=   -89053315072, S_P_sign=>0, dom/err=9385744.0, |S_I|/|S_P|=13927466.7, Delta_sign=<0 [OK] [PROVED]
+    k= 17 (mod4=1): P_k=   747747475456, S_P_sign=<0, dom/err=92424104.2, |S_I|/|S_P|=712078125.3, Delta_sign=>0 [OK] [PROVED]
+    k= 19 (mod4=3): P_k= 46325746106368, S_P_sign=<0, dom/err=893756210.2, |S_I|/|S_P|=4846521974.4, Delta_sign=<0 [OK] [PROVED]
+    k= 21 (mod4=1): P_k=-3545238181249024, S_P_sign=>0, dom/err=8510799314.4, |S_I|/|S_P|=26298330287.2, Delta_sign=>0 [OK] [PROVED]
+    k= 23 (mod4=3): P_k=165276726862020608, S_P_sign=<0, dom/err=79956861503.3, |S_I|/|S_P|=231115559329.8, Delta_sign=<0 [OK] [PROVED]
+    k= 25 (mod4=1): P_k=-6286279714122235904, S_P_sign=>0, dom/err=742063264362.5, |S_I|/|S_P|=2459340893566.6, Delta_sign=>0 [OK] [PROVED]
+    k= 27 (mod4=3): P_k=207933414540625051648, S_P_sign=<0, dom/err=6809484969172.3, |S_I|/|S_P|=29754280484487.7, Delta_sign=<0 [OK] [PROVED]
+    k= 29 (mod4=1): P_k=-6038854445176333533184, S_P_sign=>0, dom/err=61820054023154.8, |S_I|/|S_P|=405623262957181.3, Delta_sign=>0 [OK] [PROVED]
+    k= 31 (mod4=3): P_k=149407450220979959103488, S_P_sign=<0, dom/err=555430744437346.5, |S_I|/|S_P|=6423836468217234.0, Delta_sign=<0 [OK] [PROVED]
+
+  p = 43: m = 21
+  Paley |lambda| = 3.3166
+  Interval |mu_1| = 13.6904
+  Ratio r_1/|lam_P| = 4.1278
+  Interval magnitudes: ['13.6904', '0.5013', '4.5716', '0.5054', '2.7527', '0.5123', '1.9768', '0.5221', '1.5486', '0.5353', '1.2784', '0.5522', '1.0935', '0.5734', '0.9598', '0.5995', '0.8593', '0.6317', '0.7816', '0.6713', '0.7204']
+    k=  5 (mod4=1): P_k=           8816, S_P_sign=<0, dom/err=    39.7, |S_I|/|S_P|=    14.7, Delta_sign=>0 [OK] [PROVED]
+    k=  7 (mod4=3): P_k=        -492736, S_P_sign=>0, dom/err=   529.2, |S_I|/|S_P|=   281.5, Delta_sign=<0 [OK] [PROVED]
+    k=  9 (mod4=1): P_k=       24322048, S_P_sign=<0, dom/err=  6186.2, |S_I|/|S_P|=  5467.1, Delta_sign=>0 [OK] [PROVED]
+    k= 11 (mod4=3): P_k=    -1089115136, S_P_sign=>0, dom/err= 67677.1, |S_I|/|S_P|=110889.5, Delta_sign=<0 [OK] [PROVED]
+    k= 13 (mod4=1): P_k=    44398186496, S_P_sign=<0, dom/err=711329.3, |S_I|/|S_P|=2384232.2, Delta_sign=>0 [OK] [PROVED]
+    k= 15 (mod4=3): P_k= -1620920762368, S_P_sign=>0, dom/err=7274344.3, |S_I|/|S_P|=55780763.6, Delta_sign=<0 [OK] [PROVED]
+    k= 17 (mod4=1): P_k= 50202454982656, S_P_sign=<0, dom/err=72888404.1, |S_I|/|S_P|=1508139065.4, Delta_sign=>0 [OK] [PROVED]
+    k= 19 (mod4=3): P_k=-1078903622598656, S_P_sign=>0, dom/err=718695891.0, |S_I|/|S_P|=57838149274.1, Delta_sign=<0 [OK] [PROVED]
+    k= 21 (mod4=1): P_k=-6564048548134912, S_P_sign=>0, dom/err=6993707853.6, |S_I|/|S_P|=7733275212544.6, Delta_sign=>0 [OK] [PROVED]
+    k= 23 (mod4=3): P_k=2640137491394330624, S_P_sign=<0, dom/err=67301997897.3, |S_I|/|S_P|=15467374569065.9, Delta_sign=<0 [OK] [PROVED]
+    k= 25 (mod4=1): P_k=-209063551287934582784, S_P_sign=>0, dom/err=641434395555.3, |S_I|/|S_P|=155625484419064.8, Delta_sign=>0 [OK] [PROVED]
+    k= 27 (mod4=3): P_k=12450032124847080865792, S_P_sign=<0, dom/err=6061294632632.0, |S_I|/|S_P|=2064404689057572.5, Delta_sign=<0 [OK] [PROVED]
+    k= 29 (mod4=1): P_k=-641055663193713440456704, S_P_sign=>0, dom/err=56837929969501.9, |S_I|/|S_P|=31429400157772520.0, Delta_sign=>0 [OK] [PROVED]
+    k= 31 (mod4=3): P_k=29745413514567980442189824, S_P_sign=<0, dom/err=529245616797900.4, |S_I|/|S_P|=527259855379187968.0, Delta_sign=<0 [OK] [PROVED]
+    k= 33 (mod4=1): P_k=-1257530971280681136419766272, S_P_sign=>0, dom/err=4896033918511403.0, |S_I|/|S_P|=9645108403596597248.0, Delta_sign=>0 [OK] [PROVED]
+    k= 35 (mod4=3): P_k=48045481023373605323180867584, S_P_sign=<0, dom/err=45016408574905784.0, |S_I|/|S_P|=194041064119940448256.0, Delta_sign=<0 [OK] [PROVED]
+    k= 37 (mod4=1): P_k=-1601240445563984167038525374464, S_P_sign=>0, dom/err=411496729476545792.0, |S_I|/|S_P|=4449171635709538205696.0, Delta_sign=>0 [OK] [PROVED]
+    k= 39 (mod4=3): P_k=41488146166123370125557971812352, S_P_sign=<0, dom/err=3740470422712569344.0, |S_I|/|S_P|=130486474088843401232384.0, Delta_sign=<0 [OK] [PROVED]
+    k= 41 (mod4=1): P_k=-385002775342489743160284507275264, S_P_sign=>0, dom/err=33815469711446941696.0, |S_I|/|S_P|=10626955041416274620973056.0, Delta_sign=>0 [OK] [PROVED]
+    k= 43 (mod4=3): P_k=-47980817848845706137616334817591296, S_P_sign=>0, dom/err=304068838638636826624.0, |S_I|/|S_P|=64099630642502423097114624.0, Delta_sign=<0 [OK] [PROVED]
+
+======================================================================
+SUMMARY
+======================================================================
+  All signs verified numerically for p = 7, 11, 19, 23, 31, 43
+
+======================================================================
+ASYMPTOTIC REGIME: When does dominant-term proof work?
+======================================================================
+  The dominant-term proof requires:
+  1. sin(k*pi/(2p)) > 0  (holds for k <= p since k*pi/(2p) <= pi/2)
+  2. dominant/error > 1   (fails at small k for large p)
+  3. |S_I_lower| > |S_P|  (requires r_1/|lam_P| ratio large enough)
+  p=  7: r1/|lam|=1.589, proved for k>=   5, covers 2/2 k-values (100%)
+  p= 11: r1/|lam|=2.028, proved for k>=   5, covers 4/4 k-values (100%)
+  p= 19: r1/|lam|=2.708, proved for k>=   5, covers 8/8 k-values (100%)
+  p= 23: r1/|lam|=2.991, proved for k>=   5, covers 10/10 k-values (100%)
+  p= 31: r1/|lam|=3.490, proved for k>=   5, covers 14/14 k-values (100%)
+  p= 43: r1/|lam|=4.128, proved for k>=   5, covers 20/20 k-values (100%)
+  p= 59: r1/|lam|=4.850, proved for k>=   5, covers 28/28 k-values (100%)
+  p= 83: r1/|lam|=5.766, proved for k>=   5, covers 40/40 k-values (100%)
+
+DONE.
