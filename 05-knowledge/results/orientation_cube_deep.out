@@ -1,0 +1,275 @@
+======================================================================
+ORIENTATION CUBE ANALYSIS
+======================================================================
+
+p=11: Computing H for all 2^5 = 32 orientations...
+Done in 1.2s
+
+Paley QR = [1, 3, 4, 5, 9]
+Paley sigma = (1, -1, 1, 1, 1)
+H(Paley) = 95095
+
+Top 10 by H:
+  #1: H=95095, sigma=(-1, 1, -1, -1, -1), S=[2, 6, 7, 8, 10] *** PALEY compl ***
+  #2: H=95095, sigma=(1, -1, 1, 1, 1), S=[1, 3, 4, 5, 9] *** PALEY ***
+  #3: H=93467, sigma=(-1, -1, 1, -1, -1), S=[3, 6, 7, 9, 10]
+  #4: H=93467, sigma=(1, -1, 1, -1, -1), S=[1, 3, 6, 7, 9]
+  #5: H=93467, sigma=(1, 1, 1, -1, -1), S=[1, 2, 3, 6, 7]
+  #6: H=93467, sigma=(1, 1, -1, 1, -1), S=[1, 2, 4, 6, 8]
+  #7: H=93467, sigma=(1, 1, 1, 1, -1), S=[1, 2, 3, 4, 6]
+  #8: H=93467, sigma=(-1, -1, -1, -1, 1), S=[5, 7, 8, 9, 10]
+  #9: H=93467, sigma=(-1, -1, 1, -1, 1), S=[3, 5, 7, 9, 10]
+  #10: H=93467, sigma=(-1, -1, -1, 1, 1), S=[4, 5, 8, 9, 10]
+
+Bottom 5:
+  #28: H=92411, sigma=(1, -1, -1, -1, 1), S=[1, 5, 7, 8, 9]
+  #29: H=92411, sigma=(1, 1, -1, -1, 1), S=[1, 2, 5, 7, 8]
+  #30: H=92411, sigma=(-1, 1, 1, -1, 1), S=[2, 3, 5, 7, 10]
+  #31: H=92411, sigma=(1, 1, 1, -1, 1), S=[1, 2, 3, 5, 7]
+  #32: H=92411, sigma=(-1, 1, 1, 1, 1), S=[2, 3, 4, 5, 10]
+
+4 distinct H values:
+  H=95095: 2 orientations
+  H=93467: 10 orientations
+  H=93027: 10 orientations
+  H=92411: 10 orientations
+
+Walsh-Fourier expansion (nonzero coefficients):
+  hat{H}() = 93101.2500  (degree 0)
+  hat{H}(0, 1) = -8.2500  (degree 2)
+  hat{H}(0, 2) = 272.2500  (degree 2)
+  hat{H}(0, 3) = 272.2500  (degree 2)
+  hat{H}(0, 4) = 8.2500  (degree 2)
+  hat{H}(1, 2) = -272.2500  (degree 2)
+  hat{H}(1, 3) = -8.2500  (degree 2)
+  hat{H}(1, 4) = -272.2500  (degree 2)
+  hat{H}(2, 3) = 8.2500  (degree 2)
+  hat{H}(2, 4) = 8.2500  (degree 2)
+  hat{H}(3, 4) = 272.2500  (degree 2)
+  hat{H}(0, 1, 2, 3) = -118.2500  (degree 4)
+  hat{H}(0, 1, 2, 4) = -118.2500  (degree 4)
+  hat{H}(0, 1, 3, 4) = -118.2500  (degree 4)
+  hat{H}(0, 2, 3, 4) = 118.2500  (degree 4)
+  hat{H}(1, 2, 3, 4) = -118.2500  (degree 4)
+
+Max odd-degree coefficient: 0.000000 (should be ~0)
+
+Degree structure:
+  degree 0: 1 terms, total L2 energy = 8667842751.5625
+    (): 93101.2500
+  degree 2: 10 terms, total L2 energy = 370940.6250
+    (0, 1): -8.2500
+    (0, 2): 272.2500
+    (0, 3): 272.2500
+    (0, 4): 8.2500
+    (1, 2): -272.2500
+    (1, 3): -8.2500
+    (1, 4): -272.2500
+    (2, 3): 8.2500
+    (2, 4): 8.2500
+    (3, 4): 272.2500
+  degree 4: 5 terms, total L2 energy = 69915.3125
+
+======================================================================
+WHY PALEY MAXIMIZES: INTERACTION MATRIX ANALYSIS
+======================================================================
+
+p=7: Interaction matrix J[i,j] = hat{H}({i,j}):
+[[ 0.   3.5 -3.5]
+ [ 3.5  0.  -3.5]
+ [-3.5 -3.5  0. ]]
+Eigenvalues: [-3.5 -3.5  7. ]
+Top eigenvector: [-0.57735027 -0.57735027  0.57735027]
+
+Paley sigma: [1, 1, -1]
+Top eigenvector sign pattern: [-1. -1.  1.]
+
+p=11: Interaction matrix J[i,j] = hat{H}({i,j}):
+[[   0.     -8.25  272.25  272.25    8.25]
+ [  -8.25    0.   -272.25   -8.25 -272.25]
+ [ 272.25 -272.25    0.      8.25    8.25]
+ [ 272.25   -8.25    8.25    0.    272.25]
+ [   8.25 -272.25    8.25  272.25    0.  ]]
+Eigenvalues: [-435.41097303 -435.41097303  154.91097303  154.91097303  561.        ]
+Top eigenvector: [-0.4472136  0.4472136 -0.4472136 -0.4472136 -0.4472136]
+Top eigvec sign: [-1.  1. -1. -1. -1.]
+Paley sigma:     [1, -1, 1, 1, 1]
+
+Quadratic form at Paley: sigma^T J sigma = 2805.0000
+Quadratic form at Interval: sigma^T J sigma = 561.0000
+
+Quadratic form values (sigma^T J sigma) for all 2^5 orientations:
+  (-1, -1, -1, -1, -1): Q=561.00, H=93027
+  (1, -1, -1, -1, -1): Q=-1617.00, H=92411
+  (-1, 1, -1, -1, -1): Q=2805.00, H=95095
+  (1, 1, -1, -1, -1): Q=561.00, H=93027
+  (-1, -1, 1, -1, -1): Q=495.00, H=93467
+  (1, -1, 1, -1, -1): Q=495.00, H=93467
+  (-1, 1, 1, -1, -1): Q=561.00, H=93027
+  (1, 1, 1, -1, -1): Q=495.00, H=93467
+  (-1, -1, -1, 1, -1): Q=-1617.00, H=92411
+  (1, -1, -1, 1, -1): Q=-1617.00, H=92411
+  (-1, 1, -1, 1, -1): Q=561.00, H=93027
+  (1, 1, -1, 1, -1): Q=495.00, H=93467
+  (-1, -1, 1, 1, -1): Q=-1617.00, H=92411
+  (1, -1, 1, 1, -1): Q=561.00, H=93027
+  (-1, 1, 1, 1, -1): Q=-1617.00, H=92411
+  (1, 1, 1, 1, -1): Q=495.00, H=93467
+  (-1, -1, -1, -1, 1): Q=495.00, H=93467
+  (1, -1, -1, -1, 1): Q=-1617.00, H=92411
+  (-1, 1, -1, -1, 1): Q=561.00, H=93027
+  (1, 1, -1, -1, 1): Q=-1617.00, H=92411
+  (-1, -1, 1, -1, 1): Q=495.00, H=93467
+  (1, -1, 1, -1, 1): Q=561.00, H=93027
+  (-1, 1, 1, -1, 1): Q=-1617.00, H=92411
+  (1, 1, 1, -1, 1): Q=-1617.00, H=92411
+  (-1, -1, -1, 1, 1): Q=495.00, H=93467
+  (1, -1, -1, 1, 1): Q=561.00, H=93027
+  (-1, 1, -1, 1, 1): Q=495.00, H=93467
+  (1, 1, -1, 1, 1): Q=495.00, H=93467
+  (-1, -1, 1, 1, 1): Q=561.00, H=93027
+  (1, -1, 1, 1, 1): Q=2805.00, H=95095
+  (-1, 1, 1, 1, 1): Q=-1617.00, H=92411
+  (1, 1, 1, 1, 1): Q=561.00, H=93027
+
+======================================================================
+HIGHER-ORDER INTERACTIONS
+======================================================================
+
+p=11: Higher-order term analysis
+  Total terms: 16
+  Degree 0: 1 terms
+  Degree 2: 10 terms
+  Degree 4: 5 terms
+    (0, 1, 2, 3): -118.2500
+    (0, 1, 2, 4): -118.2500
+    (0, 1, 3, 4): -118.2500
+    (0, 2, 3, 4): 118.2500
+    (1, 2, 3, 4): -118.2500
+
+======================================================================
+p=13: FILLING THE CROSSOVER GAP
+======================================================================
+p=13, m=6 (p mod 4 = 1)
+No Paley tournament at p=13 (p = 1 mod 4)
+Interval S = [1, 2, 3, 4, 5, 6]
+Held-Karp table size: 2^13 * 13 = 106496 entries
+
+Interval H = 3711175 (0.2s)
+
+Even residues S = [2, 4, 6, 8, 10, 12], valid? True
+H(even) = 3711175
+
+QR set = [1, 3, 4, 9, 10, 12], valid? False
+
+Results at p=13:
+         Interval: H=        3711175, S=[1, 2, 3, 4, 5, 6] ***
+         Random-5: H=        3711175, S=[1, 3, 6, 8, 9, 11] ***
+        Random-14: H=        3711175, S=[2, 4, 5, 7, 10, 12] ***
+    Interval_comp: H=        3711175, S=[7, 8, 9, 10, 11, 12] ***
+         Random-0: H=        3707483, S=[2, 3, 6, 8, 9, 12]
+        Random-10: H=        3707483, S=[2, 3, 6, 8, 9, 12]
+        Random-15: H=        3707483, S=[3, 5, 7, 9, 11, 12]
+        Random-17: H=        3707483, S=[1, 4, 5, 7, 10, 11]
+        Random-18: H=        3707483, S=[3, 5, 7, 9, 11, 12]
+        Random-19: H=        3707483, S=[1, 2, 7, 8, 9, 10]
+
+Best H = 3711175 for S = [1, 2, 3, 4, 5, 6]
+
+======================================================================
+WINDING NUMBER AT p=11: PALEY vs INTERVAL
+======================================================================
+H polynomial on orientation cube at p=11:
+  H(sigma) = 93101.25
+           - 8.25 * s1 * s2
+           + 272.25 * s1 * s3
+           + 272.25 * s1 * s4
+           + 8.25 * s1 * s5
+           - 272.25 * s2 * s3
+           - 8.25 * s2 * s4
+           - 272.25 * s2 * s5
+           + 8.25 * s3 * s4
+           + 8.25 * s3 * s5
+           + 272.25 * s4 * s5
+           - 118.25 * s1 * s2 * s3 * s4
+           - 118.25 * s1 * s2 * s3 * s5
+           - 118.25 * s1 * s2 * s4 * s5
+           + 118.25 * s1 * s3 * s4 * s5
+           - 118.25 * s2 * s3 * s4 * s5
+
+Degree-2 form at Paley: 2805.00
+Degree-4 contribution at Paley: 591.25
+Degree-2 form at Interval: 280.50
+Degree-4 contribution at Interval: -354.75
+
+Decomposition:
+  H0 (mean) = 93101.25
+  Paley:    H0 + H2 + H4 = 93101.25 + 2805.00 + 591.25 = 96497.50 (actual: 95095)
+  Interval: H0 + H2 + H4 = 93101.25 + 280.50 + -354.75 = 93027.00 (actual: 93027)
+
+======================================================================
+PALEY SIGMA AS EIGENVECTOR OF J
+======================================================================
+
+p=11: Is Paley sigma an eigenvector of J?
+  sigma_P = [ 1. -1.  1.  1.  1.]
+  J * sigma_P = [ 561. -561.  561.  561.  561.]
+  J*sigma / sigma = [561. 561. 561. 561. 561.]
+  Is eigenvector? True (std of ratios = 0.0000)
+
+  J matrix structure:
+[[   0.     -8.25  272.25  272.25    8.25]
+ [  -8.25    0.   -272.25   -8.25 -272.25]
+ [ 272.25 -272.25    0.      8.25    8.25]
+ [ 272.25   -8.25    8.25    0.    272.25]
+ [   8.25 -272.25    8.25  272.25    0.  ]]
+
+  J[i,j] vs chord distance |i-j|:
+    chords (1,2): J = -8.2500, |i-j| = 1
+    chords (1,3): J = 272.2500, |i-j| = 2
+    chords (1,4): J = 272.2500, |i-j| = 3
+    chords (1,5): J = 8.2500, |i-j| = 4
+    chords (2,3): J = -272.2500, |i-j| = 1
+    chords (2,4): J = -8.2500, |i-j| = 2
+    chords (2,5): J = -272.2500, |i-j| = 3
+    chords (3,4): J = 8.2500, |i-j| = 1
+    chords (3,5): J = 8.2500, |i-j| = 2
+    chords (4,5): J = 272.2500, |i-j| = 1
+
+======================================================================
+MULTIPLICATIVE AUTOMORPHISMS AND ORIENTATION CUBE
+======================================================================
+
+For Paley T_p, the automorphism group Aut(T_p) acts on the orientation cube.
+Multiplying the connection set by a QR element a:
+  S -> a*S mod p
+maps T_p to an ISOMORPHIC tournament (same H).
+
+This means: if sigma is the orientation of T_p, then a*sigma
+(rearranged by the multiplication) also gives the same H.
+
+For p=7: Aut(T_7) has order 7*3 = 21.
+The orientation cube has 8 points, so the orbit of Paley sigma
+can have at most 21/gcd points. But the cube is tiny (8 points)
+so the effective action is small.
+
+KEY: The multiplicative action PERMUTES chord types.
+Multiplying by a QR element a maps chord type k to chord type a*k mod p.
+This is a PERMUTATION of {1,...,m} (since a*QR = QR).
+
+
+p=7: Multiplicative permutations of chord types
+  Primitive root: g=3
+  QR elements: [1, 2, 4]
+  a=1: chord [1, 2, 3] -> [1, 2, 3], signs=[1, 1, 1]
+  a=2: chord [1, 2, 3] -> [2, 3, 1], signs=[1, -1, -1]
+  a=4: chord [1, 2, 3] -> [3, 1, 2], signs=[-1, 1, -1]
+
+p=11: Multiplicative permutations of chord types
+  Primitive root: g=2
+  QR elements: [1, 3, 4, 5, 9]
+  a=1: chord [1, 2, 3, 4, 5] -> [1, 2, 3, 4, 5], signs=[1, 1, 1, 1, 1]
+  a=3: chord [1, 2, 3, 4, 5] -> [3, 5, 2, 1, 4], signs=[1, -1, -1, 1, 1]
+  a=4: chord [1, 2, 3, 4, 5] -> [4, 3, 1, 5, 2], signs=[1, -1, 1, 1, -1]
+  a=5: chord [1, 2, 3, 4, 5] -> [5, 1, 4, 2, 3], signs=[1, -1, 1, -1, 1]
+  a=9: chord [1, 2, 3, 4, 5] -> [2, 4, 5, 3, 1], signs=[-1, -1, 1, 1, 1]
