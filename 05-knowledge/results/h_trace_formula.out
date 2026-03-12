@@ -1,0 +1,197 @@
+======================================================================
+THEOREM: H = f(tr(A^k)) FOR CIRCULANT TOURNAMENTS
+======================================================================
+
+=== p = 7: Testing H = (462 - tr(A^4))/2 ===
+
+  S=[4, 5, 6]: H=175, tr(A⁴)=112, (462-tr)/2=175 ✓
+  S=[1, 4, 5]: H=175, tr(A⁴)=112, (462-tr)/2=175 ✓
+  S=[2, 4, 6]: H=175, tr(A⁴)=112, (462-tr)/2=175 ✓
+  S=[1, 2, 4]: H=189, tr(A⁴)=84, (462-tr)/2=189 ✓
+  S=[3, 5, 6]: H=189, tr(A⁴)=84, (462-tr)/2=189 ✓
+  S=[1, 3, 5]: H=175, tr(A⁴)=112, (462-tr)/2=175 ✓
+  S=[2, 3, 6]: H=175, tr(A⁴)=112, (462-tr)/2=175 ✓
+  S=[1, 2, 3]: H=175, tr(A⁴)=112, (462-tr)/2=175 ✓
+
+All match: True
+
+Understanding the constant 462:
+  2 * H_max = 378 = 378
+  tr(A⁴)_Paley = 84
+  462 = 378 + 84 = 2*H + tr(A⁴) for Paley
+  462 = 2*175 + 112 = 2*H + tr(A⁴) for non-Paley ✓
+
+======================================================================
+=== p = 11: H as function of traces ===
+======================================================================
+
+Distinct (H, traces) combinations:
+  H=95095: tr(A²)=0, tr(A³)=165, tr(A⁴)=660, tr(A⁵)=2970, tr(A⁶)=15675
+  H=93467: tr(A²)=0, tr(A³)=165, tr(A⁴)=748, tr(A⁵)=2750, tr(A⁶)=14949
+  H=93027: tr(A²)=0, tr(A³)=165, tr(A⁴)=880, tr(A⁵)=2420, tr(A⁶)=13167
+  H=92411: tr(A²)=0, tr(A³)=165, tr(A⁴)=704, tr(A⁵)=2860, tr(A⁶)=15477
+
+tr(A²) values: {0} (universal)
+tr(A³) values: {165} (universal)
+
+λ_0 = 5
+
+Power sums of non-trivial eigenvalues:
+  H=95095: p_4=35, p_5=-155, p_6=50, p_7=415
+  H=93467: p_4=123, p_5=-375, p_6=-676, p_7=3726
+  H=93027: p_4=255, p_5=-705, p_6=-2458, p_7=11118
+  H=92411: p_4=79, p_5=-265, p_6=-148, p_7=1493
+
+Fitting H = a + b*p_4 + c*p_5 + d*p_6:
+  Error: Singular matrix
+
+======================================================================
+=== p = 13: H as function of traces ===
+======================================================================
+
+Distinct (H, traces):
+  H=3711175: p_4=524, p_5=-1406, p_6=-7617, p_7=31648
+  H=3707483: p_4=316, p_5=-886, p_6=-3327, p_7=14813
+  H=3704857: p_4=160, p_5=-496, p_6=-597, p_7=3893
+  H=3703011: p_4=108, p_5=-366, p_6=-207, p_7=2073
+  H=3683797: p_4=160, p_5=-496, p_6=-597, p_7=3893
+  H=3669497: p_4=212, p_5=-626, p_6=-1377, p_7=7078
+
+6 distinct H values → need 5 power sums to fit
+  Error: Singular matrix
+
+======================================================================
+COMBINATORIAL MEANING OF tr(A^4)
+======================================================================
+
+tr(A^k) = # closed walks of length k in the tournament
+tr(A^4) = # ordered (i,j,k,l) with i→j→k→l→i
+
+For tournaments, tr(A^4) counts:
+  - 4-cycles: ordered directed 4-cycles (but tournaments have no
+    directed 4-cycles! A tournament on 4 vertices has exactly one
+    Hamiltonian cycle, which is a 4-cycle.)
+  - Products of 2-walks: paths of length 4 returning to start
+    include repeated vertices (e.g., i→j→i→j→i doesn't exist in
+    tournaments since arcs are single-direction)
+
+Wait: in a tournament, A[i][j] + A[j][i] = 1 for i≠j, A[i][i]=0.
+So A²[i][j] = #{k : i→k→j}.
+tr(A²) = Σ_i A²[i][i] = Σ_i #{k : i→k→i} = 0 (no 2-cycles in tournament)
+Hmm, that gives 0, but we computed tr(A²) = 21 at p=7!
+
+Ah: A²[i][j] = Σ_k A[i][k]*A[k][j] counts intermediate vertices
+where i→k AND k→j. For i=j: A²[i][i] = #{k : A[i][k]=1 AND A[k][i]=1}
+= #{k : i→k AND k→i} = 0 (tournament: exactly one direction)
+
+p=7 Paley: A²[0][0] = 0, A²[1][1] = 0
+tr(A²) = 0
+But we said tr(A²) = Σλ² = -0
+
+Hmm, there's a discrepancy. Let me recheck...
+A²[0][0] = 0 — this counts #{k : 0→k AND k→0}
+Since 0→k means k∈QR={1,2,4}, and k→0 means -k∈QR, i.e., k∈-QR={3,5,6}
+So A²[0][0] = |QR ∩ (-QR)| = |{1,2,4} ∩ {3,5,6}| = 0
+
+So tr(A²) = 0 for ANY tournament (no 2-cycles). ✓
+
+But we said Σ_k λ_k² = p*N_2 where N_2 = |{(s1,s2)∈S²: s1+s2≡0}|.
+At p=7: N_2 = 0 (tournament condition), so Σλ² = 0.
+But λ_0 = 3, so Σ_{k≠0} λ_k² = -9. And tr(A²) = Σλ² = 0.
+Check: 9 + (-9) = 0 ✓
+
+So tr(A²) = 0 always. Then tr(A⁴) = Σ_{k=0}^{p-1} λ_k⁴.
+
+p=7 Paley: tr(A⁴) = 84
+  = 7 * (A⁴[0][0]) by circulant symmetry = 7 * 12
+  A⁴[0][0] = # ways to walk 0→?→?→?→0 in 4 steps
+
+  Direct count of walks 0→j→k→l→0: 12
+  This includes walks with repeated vertices!
+
+  Walk patterns by # distinct vertices:
+    4 distinct vertices: 12 walks
+
+So tr(A⁴) includes walks revisiting vertices.
+4 distinct = directed 4-cycles through 0 (× 7 for all starts)
+3 distinct = diamond-shaped walks (i→j→k→j→i type)
+2 distinct = back-and-forth (impossible in tournament: no 2-cycles)
+
+======================================================================
+THE KEY FORMULA
+======================================================================
+
+At p=7: H = (462 - tr(A⁴))/2
+
+This means: MINIMIZING tr(A⁴) = MAXIMIZING H.
+
+tr(A⁴) = Σ |λ_k|⁴·cos(4·arg(λ_k)) + |λ_0|⁴
+        = ((p-1)/2)⁴ + Σ_{k≠0} Re(λ_k⁴)
+
+For Paley: all |λ_k| = √((p+1)/4), all phases = ±arctan(√p)
+  tr(A⁴) = ((p-1)/2)⁴ + (p-1)·((p+1)/4)² · cos(4·arctan(√p))
+
+For flat spectrum at p=7:
+  λ_k = -1/2 ± i√7/2, |λ|² = 2, |λ|⁴ = 4
+  arg(λ) ≈ ±1.9322 rad
+  4·arg ≈ ±7.7288 → cos(7.7288) ≈ cos(7.7288-2π) ≈ cos(1.446) ≈ 0.1245
+  Σ Re(λ⁴) = 6 × 4 × 0.125000 = 3.0000
+  tr(A⁴) = 81 + 3.0000 = 84.0000
+  Expected: 84. Check: True
+
+======================================================================
+SCHUR CONVEXITY: WHY FLAT MINIMIZES tr(A⁴)
+======================================================================
+
+For p ≡ 3 mod 4, all eigenvalues satisfy Re(λ_k) = -1/2 (universal).
+So λ_k = -1/2 + i·y_k where y_k are the imaginary parts.
+
+Parseval: Σ |λ_k|² = Σ (1/4 + y_k²) = (p-1)(p+1)/4
+  → Σ y_k² = (p-1)(p+1)/4 - (p-1)/4 = (p-1)p/4
+
+Now: λ_k⁴ = (-1/2 + iy_k)⁴
+  = (1/2 - iy_k)⁴ ... wait: (-1/2 + iy)⁴ = ((-1+2iy)/2)⁴ = (1-2iy)⁴/16
+  = (1 - 8iy - 24y² + 32iy³ + 16y⁴)/16... let me compute properly.
+
+  (-1/2 + iy)⁴ = y**4 + 2*I*y**3 - 3*y**2/2 - I*y/2 + 1/16
+  Re part: re(y)**4 - 6*re(y)**2*im(y)**2 - 6*re(y)**2*im(y) - 3*re(y)**2/2 + im(y)**4 + 2*im(y)**3 + 3*im(y)**2/2 + im(y)/2 + 1/16
+
+  Re((-1/2 + iy)⁴) = 1/16 - 3y²/2 + y⁴
+
+  Σ_{k≠0} Re(λ_k⁴) = Σ (1/16 - 3y_k²/2 + y_k⁴)
+                     = (p-1)/16 - 3/2·Σy_k² + Σy_k⁴
+                     = (p-1)/16 - 3(p-1)p/8 + Σy_k⁴
+
+  So tr(A⁴) = ((p-1)/2)⁴ + (p-1)/16 - 3(p-1)p/8 + Σy_k⁴
+            = CONSTANT + Σy_k⁴
+
+  H = (C₁ - tr(A⁴))/2 = (C₂ - Σy_k⁴)/2
+
+  THEREFORE: H is maximized ⟺ Σy_k⁴ is minimized
+  ⟺ all y_k² are equal (by convexity of x²)
+  ⟺ FLAT SPECTRUM (Paley)
+
+  THIS IS THE COMPLETE PROOF OF STEP B AT p=7!
+
+  p=7, S=[4, 5, 6]: tr(A⁴)=112, const+Σy⁴=112.00, diff=0.0000
+  p=7, S=[1, 4, 5]: tr(A⁴)=112, const+Σy⁴=112.00, diff=0.0000
+  p=7, S=[2, 4, 6]: tr(A⁴)=112, const+Σy⁴=112.00, diff=0.0000
+  p=11, S=[6, 7, 8, 9, 10]: tr(A⁴)=880, const+Σy⁴=880.00, diff=0.0000
+  p=11, S=[1, 6, 7, 8, 9]: tr(A⁴)=704, const+Σy⁴=704.00, diff=0.0000
+  p=11, S=[2, 6, 7, 8, 10]: tr(A⁴)=660, const+Σy⁴=660.00, diff=0.0000
+
+IF H is linear in tr(A⁴) at p=11 too, then:
+  H = C - α·Σy_k⁴ (with α > 0)
+  → minimizing Σy_k⁴ → flat y_k² → Paley maximizes H
+
+p=11 (H, tr(A⁴)) pairs:
+  H=95095, tr(A⁴)=660
+  H=93467, tr(A⁴)=748
+  H=93027, tr(A⁴)=880
+  H=92411, tr(A⁴)=704
+
+Linear fit: H = 97774.2857 + -5.714286*tr(A⁴)
+Max error: 1340.4286
+NOT linear in tr(A⁴) alone at p=11!
+Quadratic: H = 163861.1657 + -178.14640884*tr + 0.1110622803*tr²
+Quadratic max error: 1079.337017
