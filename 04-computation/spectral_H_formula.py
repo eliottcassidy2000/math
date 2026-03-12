@@ -514,29 +514,46 @@ def group_theoretic_analysis(p, data):
                     if i != j:
                         adj[(i, j)] = (j - i) % p in S_set
 
-            # Find all directed 3-cycles
-            cycles_3 = []
-            for i in range(p):
-                for j in range(p):
-                    if i == j:
-                        continue
-                    if not adj[(i, j)]:
-                        continue
-                    for k in range(p):
-                        if k == i or k == j:
-                            continue
-                        if adj[(j, k)] and adj[(k, i)]:
-                            cycles_3.append((i, j, k))
+            # Find ALL directed odd cycles (not just 3-cycles!)
+            # BUG FIX (kind-pasteur-S57): Previous version only found
+            # 3-cycles, causing I(Omega,2) != H mismatch at p>=5.
+            # OCF requires ALL odd directed cycles.
+            from itertools import combinations
 
-            # Conflict graph: two cycles conflict if they share a vertex
-            c3 = len(cycles_3) // 3  # each cycle counted 3 times
             cycle_sets = []
-            seen = set()
-            for c in cycles_3:
-                key = tuple(sorted(c))
-                if key not in seen:
-                    seen.add(key)
-                    cycle_sets.append(set(c))
+            cycle_counts_by_length = {}
+            for k in range(3, p + 1, 2):  # odd lengths only
+                n_dir_cycles = 0
+                for subset in combinations(range(p), k):
+                    verts = list(subset)
+                    km = len(verts)
+                    sub_N = 1 << (km - 1)
+                    dp_sub = [0] * (sub_N * km)
+                    dp_sub[0] = 1  # mask=0, vertex=verts[0]
+
+                    for mask in range(sub_N):
+                        for vi in range(km):
+                            c = dp_sub[mask * km + vi]
+                            if c == 0:
+                                continue
+                            for ui in range(1, km):
+                                if mask & (1 << (ui - 1)):
+                                    continue
+                                if adj[(verts[vi], verts[ui])]:
+                                    dp_sub[(mask | (1 << (ui - 1))) * km + ui] += c
+
+                    full = sub_N - 1
+                    n_cycles = 0
+                    for vi in range(1, km):
+                        if dp_sub[full * km + vi] > 0:
+                            if adj[(verts[vi], verts[0])]:
+                                n_cycles += dp_sub[full * km + vi]
+
+                    if n_cycles > 0:
+                        for _ in range(n_cycles):
+                            cycle_sets.append(set(subset))
+                        n_dir_cycles += n_cycles
+                cycle_counts_by_length[k] = n_dir_cycles
 
             # Build Omega adjacency
             omega_n = len(cycle_sets)
@@ -548,12 +565,11 @@ def group_theoretic_analysis(p, data):
                         omega_adj[b][a] = True
 
             # Count independent sets by size
-            max_ind = 0
             ind_counts = [0] * (omega_n + 1)
             ind_counts[0] = 1
 
             # For small Omega, enumerate via bitmask
-            if omega_n <= 20:
+            if omega_n <= 24:
                 for mask in range(1, 1 << omega_n):
                     verts = [i for i in range(omega_n) if mask & (1 << i)]
                     is_ind = True
@@ -567,13 +583,16 @@ def group_theoretic_analysis(p, data):
                     if is_ind:
                         ind_counts[len(verts)] += 1
 
-                # Verify I(Omega, 2) = H
                 I_at_2 = sum(ind_counts[k] * (2 ** k) for k in range(omega_n + 1))
                 ip = [ind_counts[k] for k in range(omega_n + 1) if ind_counts[k] > 0]
+                match = "OK" if I_at_2 == H else "*** MISMATCH ***"
                 print(f"    S={list(S)}: H={H}, I(Omega,2)={I_at_2}, "
-                      f"IP={ip}, |Omega|={omega_n}")
-                if I_at_2 != H:
-                    print(f"    *** MISMATCH ***")
+                      f"IP={ip}, |Omega|={omega_n} [{match}]")
+            else:
+                cyc_str = ", ".join(f"{k}-cyc:{v}" for k, v in
+                                    sorted(cycle_counts_by_length.items()))
+                print(f"    S={list(S)}: H={H}, |Omega|={omega_n} "
+                      f"(too large for bitmask), cycles: {cyc_str}")
 
     return
 

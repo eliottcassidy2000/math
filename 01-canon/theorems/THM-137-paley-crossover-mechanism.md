@@ -103,9 +103,12 @@ As p grows:
 | 7 | 189 | 175 | +7.4% | PALEY |
 | 11| 95095 | 93027 | +2.2% | PALEY |
 | 19| 1,172,695,746,915 | 1,184,212,824,763 | -1.0% | INTERVAL |
+| 23| 15,760,206,976,379,349 | 16,011,537,490,557,279 | -1.6% | INTERVAL |
 
 The crossover occurs at p = 19, the first prime = 3 mod 4 after 11.
 (p = 13, 17 are 1 mod 4 and don't have Paley tournaments.)
+The interval's margin WIDENS from -1.0% at p=19 to -1.6% at p=23,
+consistent with the exponential spectral growth mechanism.
 
 ## Additive Combinatorics Perspective
 

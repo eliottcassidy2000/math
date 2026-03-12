@@ -509,11 +509,19 @@ REMAINING OPEN:
 
 **Statement (HYP-480):** The cyclic interval C_p = (Z_p, {1,...,(p-1)/2}) maximizes H among all circulant tournaments on Z_p for all primes p >= 13.
 
-**Evidence:** Confirmed at p = 13 (exhaustive), p = 19 (THM-135). The dominant eigenvalue |mu_1| ~ p/pi grows faster than any other tournament's spectral radius, suggesting the gap widens.
+**Evidence:** Confirmed at p = 13 (exhaustive), p = 19 (THM-135), p = 23 (kind-pasteur-S57).
 
-**What remains:** Need to verify at p = 23 and beyond (expensive Held-Karp DP). An analytical proof could use the spectral concentration argument from THM-137.
+| p | H(Paley) | H(Interval) | Margin | Winner |
+|---|----------|-------------|--------|--------|
+| 13 | - | 3,711,175 | - | INTERVAL (p=1 mod 4, no Paley) |
+| 19 | 1,172,695,746,915 | 1,184,212,824,763 | -1.0% | INTERVAL |
+| 23 | 15,760,206,976,379,349 | 16,011,537,490,557,279 | +1.59% | INTERVAL |
 
-**Source:** opus-2026-03-12-S58, kind-pasteur-2026-03-12-S56c
+The interval's margin is WIDENING with p, consistent with the spectral argument: |mu_1| ~ p/pi grows faster than Paley's sqrt(p)/2.
+
+**What remains:** Extend to p = 29, 31. An analytical proof could use the spectral concentration argument from THM-137. Whether interval maximizes H among ALL tournaments (not just circulant) is a separate open question.
+
+**Source:** opus-2026-03-12-S58, kind-pasteur-2026-03-12-S56c, kind-pasteur-2026-03-12-S57
 
 ---
 

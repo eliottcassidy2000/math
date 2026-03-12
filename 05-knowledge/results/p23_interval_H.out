@@ -1,0 +1,32 @@
+======================================================================
+HYP-480 TEST: H(Interval_23) vs H(Paley_23)
+======================================================================
+
+  H(Paley_23) = 15,760,206,976,379,349 (known from opus-S10)
+  Interval S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+  Computing H(Interval_23) via Held-Karp DP...
+  State space: 2^22 x 23 = 96,468,992 entries
+  Memory: ~0.8 GB (int64 flat list)
+    Progress: 57.2% (2399904/4194304), elapsed=30s, ETA=22s
+    DP completed in 52.4s
+
+  h_0(Interval_23) = 696,153,803,937,273
+  H(Interval_23) = 23 * 696,153,803,937,273 = 16,011,537,490,557,279
+  Total time: 53.4s
+
+  COMPARISON:
+  H(Paley_23)    = 15,760,206,976,379,349
+  H(Interval_23) = 16,011,537,490,557,279
+  Interval WINS by 251,330,514,177,930 (+1.5947%)
+
+  ==> HYP-480 SUPPORTED at p=23: Interval > Paley
+
+  Verifying H(Paley_23)...
+  Paley QR_23 = {1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18}
+    Progress: 60.1% (2521529/4194304), elapsed=30s, ETA=20s
+    DP completed in 51.6s
+  H(Paley_23) computed = 15,760,206,976,379,349
+  Match with known value: True
+
+DONE.
