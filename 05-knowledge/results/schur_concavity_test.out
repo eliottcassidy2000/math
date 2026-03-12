@@ -1,0 +1,83 @@
+SCHUR-CONCAVITY OF H ON THE SPECTRAL SIMPLEX
+===========================================================================
+
+===========================================================================
+p = 7 (p mod 4 = 3)
+===========================================================================
+  2 spectral classes
+  Total pairs: 1
+  Comparable (in majorization order): 1
+  Incomparable: 0
+  Schur-concave OK: 1/1
+  Schur-concave FAIL: 0/1
+
+  ✓ H is Schur-concave on all comparable pairs!
+  ✓ This PROVES Paley maximizes H among all circulants on Z_7
+
+  Classes sorted by H:
+    H=       189, σ₂=      9.19, y²=[np.float64(1.75), np.float64(1.75), np.float64(1.75)] ★ PALEY
+    H=       175, σ₂=     23.19, y²=[np.float64(0.058), np.float64(0.393), np.float64(4.799)]
+
+===========================================================================
+p = 11 (p mod 4 = 3)
+===========================================================================
+  4 spectral classes
+  Total pairs: 6
+  Comparable (in majorization order): 4
+  Incomparable: 2
+  Schur-concave OK: 4/4
+  Schur-concave FAIL: 0/4
+
+  ✓ H is Schur-concave on all comparable pairs!
+  ✓ This PROVES Paley maximizes H among all circulants on Z_11
+
+  Classes sorted by H:
+    H=     95095, σ₂=     37.81, y²=[np.float64(2.75), np.float64(2.75), np.float64(2.75), np.float64(2.75), np.float64(2.75)] ★ PALEY
+    H=     93467, σ₂=     81.81, y²=[np.float64(0.174), np.float64(0.873), np.float64(1.967), np.float64(2.244), np.float64(8.492)]
+    H=     93027, σ₂=    147.81, y²=[np.float64(0.022), np.float64(0.103), np.float64(0.333), np.float64(1.199), np.float64(12.094)]
+    H=     92411, σ₂=     59.81, y²=[np.float64(0.0), np.float64(0.783), np.float64(3.359), np.float64(3.865), np.float64(5.742)]
+
+===========================================================================
+p = 13 (p mod 4 = 1)
+===========================================================================
+  6 spectral classes
+  Total pairs: 15
+  Comparable (in majorization order): 9
+  Incomparable: 6
+  Schur-concave OK: 2/9
+  Schur-concave FAIL: 7/9
+
+  FAILURES:
+    i≻j but H(i)>H(j)
+      i: y²=[np.float64(0.01518783), np.float64(0.06886438), np.float64(0.19621475), np.float64(0.52471922), np.float64(1.73815654), np.float64(16.95685727)], H=3711175
+      j: y²=[np.float64(0.36224781), np.float64(0.44492382), np.float64(0.84933306), np.float64(3.13009222), np.float64(4.54735464), np.float64(10.16604845)], H=3669497
+    i≻j but H(i)>H(j)
+      i: y²=[np.float64(0.01518783), np.float64(0.06886438), np.float64(0.19621475), np.float64(0.52471922), np.float64(1.73815654), np.float64(16.95685727)], H=3711175
+      j: y²=[np.float64(0.23666765), np.float64(0.70519739), np.float64(1.13172379), np.float64(3.97313094), np.float64(6.11030318), np.float64(7.34297704)], H=3683797
+    i≻j but H(i)>H(j)
+      i: y²=[np.float64(0.01518783), np.float64(0.06886438), np.float64(0.19621475), np.float64(0.52471922), np.float64(1.73815654), np.float64(16.95685727)], H=3711175
+      j: y²=[np.float64(1.44722436), np.float64(1.44722436), np.float64(1.44722436), np.float64(5.05277564), np.float64(5.05277564), np.float64(5.05277564)], H=3703011
+    i≻j but H(i)>H(j)
+      i: y²=[np.float64(0.01518783), np.float64(0.06886438), np.float64(0.19621475), np.float64(0.52471922), np.float64(1.73815654), np.float64(16.95685727)], H=3711175
+      j: y²=[np.float64(0.04674723), np.float64(0.10730609), np.float64(2.73512522), np.float64(3.46770995), np.float64(5.34994047), np.float64(7.79317104)], H=3704857
+    j≻i but H(j)>H(i)
+      i: y²=[np.float64(6.168e-05), np.float64(0.64997039), np.float64(1.31253094), np.float64(1.91420365), np.float64(2.37917175), np.float64(13.24406158)], H=3707483
+      j: y²=[np.float64(0.23666765), np.float64(0.70519739), np.float64(1.13172379), np.float64(3.97313094), np.float64(6.11030318), np.float64(7.34297704)], H=3683797
+    i≻j but H(i)>H(j)
+      i: y²=[np.float64(6.168e-05), np.float64(0.64997039), np.float64(1.31253094), np.float64(1.91420365), np.float64(2.37917175), np.float64(13.24406158)], H=3707483
+      j: y²=[np.float64(1.44722436), np.float64(1.44722436), np.float64(1.44722436), np.float64(5.05277564), np.float64(5.05277564), np.float64(5.05277564)], H=3703011
+    j≻i but H(j)>H(i)
+      i: y²=[np.float64(0.04674723), np.float64(0.10730609), np.float64(2.73512522), np.float64(3.46770995), np.float64(5.34994047), np.float64(7.79317104)], H=3704857
+      j: y²=[np.float64(1.44722436), np.float64(1.44722436), np.float64(1.44722436), np.float64(5.05277564), np.float64(5.05277564), np.float64(5.05277564)], H=3703011
+
+  ✗ H is NOT Schur-concave on the spectral simplex
+
+  Classes sorted by H:
+    H=   3711175, σ₂=    290.88, y²=[np.float64(0.015), np.float64(0.069), np.float64(0.196), np.float64(0.525), np.float64(1.738), np.float64(16.957)]
+    H=   3707483, σ₂=    186.87, y²=[np.float64(0.0), np.float64(0.65), np.float64(1.313), np.float64(1.914), np.float64(2.379), np.float64(13.244)]
+    H=   3704857, σ₂=    108.88, y²=[np.float64(0.047), np.float64(0.107), np.float64(2.735), np.float64(3.468), np.float64(5.35), np.float64(7.793)]
+    H=   3703011, σ₂=     82.88, y²=[np.float64(1.447), np.float64(1.447), np.float64(1.447), np.float64(5.053), np.float64(5.053), np.float64(5.053)]
+    H=   3683797, σ₂=    108.87, y²=[np.float64(0.237), np.float64(0.705), np.float64(1.132), np.float64(3.973), np.float64(6.11), np.float64(7.343)]
+    H=   3669497, σ₂=    134.87, y²=[np.float64(0.362), np.float64(0.445), np.float64(0.849), np.float64(3.13), np.float64(4.547), np.float64(10.166)]
+
+DONE.
