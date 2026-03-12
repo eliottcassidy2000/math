@@ -1,0 +1,201 @@
+CROSSOVER MECHANISM: WHY INTERVAL BEATS PALEY AT LARGE p
+===========================================================================
+
+PART 1: TRACE DIFFERENCES Δ_k = C_k(Paley) - C_k(Interval)
+---------------------------------------------------------------------------
+
+  p = 7, m = 3
+     k  k mod 4           C_k(P)           C_k(I)              Δ_k            |Δ_k|*2^k
+     3        3             14.0             14.0             -0.0                    0 =
+     5        1             42.0             28.0            +14.0                  448 P
+     7        3            318.0            395.0            -77.0                 9856 I
+  Cumulative 2^k-weighted: Paley advantage = 448
+  Cumulative 2^k-weighted: Interval advantage = 9856
+  Net: INTERVAL wins by 9408
+
+  p = 11, m = 5
+     k  k mod 4           C_k(P)           C_k(I)              Δ_k            |Δ_k|*2^k
+     3        3             55.0             55.0             -0.0                    0 =
+     5        1            594.0            484.0           +110.0                 3520 P
+     7        3          11220.0          12749.0          -1529.0               195712 I
+     9        1         216938.3         199624.3         +17314.0              8864768 P
+    11        3        4438890.0        4621963.0        -183073.0            374933504 I
+  Cumulative 2^k-weighted: Paley advantage = 8868288
+  Cumulative 2^k-weighted: Interval advantage = 375129216
+  Net: INTERVAL wins by 366260928
+
+  p = 19, m = 9
+     k  k mod 4           C_k(P)           C_k(I)              Δ_k            |Δ_k|*2^k
+     3        3            285.0            285.0             -0.0                    0 =
+     5        1          11628.0          10488.0          +1140.0                36480 P
+     7        3         684000.0         729942.0         -45942.0              5880576 I
+     9        1       43044215.0       41400563.0       +1643652.0            841549824 P
+    11        3     2852830620.0     2910351334.0      -57520714.0         117802422272 I
+    13        1   195528130560.0   193539341698.0    +1988788862.0       16292158357503 P
+    15        3 13726075422921.0 13794030949708.0   -67955526787.0     2226766701756480 I
+    17        1 981010688805900.5 978718275794452.1 +2292413011448.4   300471158236561408 P
+    19        3 71097458821129336.0 71173692908952320.0 -76234087822984.0 39968617436536635392 I
+  Cumulative 2^k-weighted: Paley advantage = 300487451236505216
+  Cumulative 2^k-weighted: Interval advantage = 39970844321046691840
+  Net: INTERVAL wins by 39670356869810184192
+
+  p = 23, m = 11
+     k  k mod 4           C_k(P)           C_k(I)              Δ_k            |Δ_k|*2^k
+     3        3            506.0            506.0             -0.0                    0 =
+     5        1          31878.0          29348.0          +2530.0                80960 P
+     7        3        2785530.0        2933029.0        -147499.0             18879872 I
+     9        1      261986728.7      254195846.7       +7790882.0           3988931584 P
+    11        3    25937453970.0    26342791848.0     -405337878.0         830131974144 I
+    13        1  2655593154390.0  2634667055650.0   +20926098740.0      171426600878088 P
+    15        3 278483211352733.2 279555580294862.9 -1072368942129.8    35139385495707648 I
+    17        1 29732178148858364.0 29677650578311944.0 +54527570546420.0  7147037726660362240 P
+    19        3 3218899497265199104.0 3221649051554817024.0 -2749554289617920.0 1441558319395200040960 I
+  Cumulative 2^k-weighted: Paley advantage = 7147209157250252800
+  Cumulative 2^k-weighted: Interval advantage = 1441593459610846494720
+  Net: INTERVAL wins by 1434446250453596372992
+
+===========================================================================
+PART 2: DIRICHLET KERNEL vs GAUSS SUM EIGENVALUES
+---------------------------------------------------------------------------
+
+  p = 7
+  Paley: all |λ_k| = 1.4142
+  Interval eigenvalue magnitudes:
+    Sorted: ['2.247', '0.802', '0.555']
+    Ratio max/min: 4.05
+    Dominant eigenvalue |λ_1| = 2.2470 ≈ p/π = 2.2282
+    |λ_1(I)| / |λ(P)| = 1.5889
+    At k=p: dominant^p / flat^p ≈ 2.56e+01
+
+  p = 11
+  Paley: all |λ_k| = 1.7321
+  Interval eigenvalue magnitudes:
+    Sorted: ['3.513', '1.204', '0.764', '0.594', '0.521']
+    Ratio max/min: 6.74
+    Dominant eigenvalue |λ_1| = 3.5133 ≈ p/π = 3.5014
+    |λ_1(I)| / |λ(P)| = 2.0284
+    At k=p: dominant^p / flat^p ≈ 2.39e+03
+
+  p = 19
+  Paley: all |λ_k| = 2.2361
+  Interval eigenvalue magnitudes:
+    Sorted: ['6.055', '2.037', '1.245', '0.914', '0.738', '0.634', '0.569', '0.529', '0.507']
+    Ratio max/min: 11.94
+    Dominant eigenvalue |λ_1| = 6.0548 ≈ p/π = 6.0479
+    |λ_1(I)| / |λ(P)| = 2.7078
+    At k=p: dominant^p / flat^p ≈ 1.66e+08
+
+===========================================================================
+PART 3: DIHEDRAL GROUP INTERPRETATION
+---------------------------------------------------------------------------
+
+  p = 7, D_14 = {rotations} ∪ {reflections}
+    Interval S = [1, 2, 3]
+    σ(S) = -S mod p = [4, 5, 6]
+    σ is automorphism? False
+    Paley S = [1, 2, 4]
+    σ(S) = -S mod p = [3, 5, 6]
+    σ is automorphism of Paley? False
+    Multiplicative automorphisms: Interval=1, Paley=3
+    Full circulant |Aut|: Interval=7, Paley=21
+
+  p = 11, D_22 = {rotations} ∪ {reflections}
+    Interval S = [1, 2, 3, 4, 5]
+    σ(S) = -S mod p = [6, 7, 8, 9, 10]
+    σ is automorphism? False
+    Paley S = [1, 3, 4, 5, 9]
+    σ(S) = -S mod p = [2, 6, 7, 8, 10]
+    σ is automorphism of Paley? False
+    Multiplicative automorphisms: Interval=1, Paley=5
+    Full circulant |Aut|: Interval=11, Paley=55
+
+  p = 19, D_38 = {rotations} ∪ {reflections}
+    Interval S = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    σ(S) = -S mod p = [10, 11, 12, 13, 14, 15, 16, 17, 18]
+    σ is automorphism? False
+    Paley S = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+    σ(S) = -S mod p = [2, 3, 8, 10, 12, 13, 14, 15, 18]
+    σ is automorphism of Paley? False
+    Multiplicative automorphisms: Interval=1, Paley=9
+    Full circulant |Aut|: Interval=19, Paley=171
+
+===========================================================================
+PART 4: INTERVAL vs ALL CIRCULANTS (exhaustive at p=7, 11)
+---------------------------------------------------------------------------
+
+  p = 7: 8 circulants
+    Top 5 H values:
+      H = 189, S = [1, 2, 4] ★PALEY
+      H = 175, S = [4, 5, 6] ★INT
+    Paley H = 189
+    Interval H = 175
+    Paley rank: 1
+    Interval rank: 2
+
+  p = 11: 32 circulants
+    Top 5 H values:
+      H = 95095, S = [2, 6, 7, 8, 10] ★PALEY
+      H = 93467, S = [3, 6, 7, 9, 10]
+      H = 93027, S = [6, 7, 8, 9, 10] ★INT
+      H = 92411, S = [1, 6, 7, 8, 9]
+    Paley H = 95095
+    Interval H = 93027
+    Paley rank: 1
+    Interval rank: 3
+
+===========================================================================
+PART 5: CROSSOVER ANALYSIS — WHEN DOES INTERVAL BEAT PALEY?
+---------------------------------------------------------------------------
+
+     p             H(Paley)          H(Interval)       Δ/H(P)   Winner
+     7                  189                  175    +0.074074    PALEY
+    11                95095                93027    +0.021747    PALEY
+    19        1172695746915        1184212824763    -0.009821 INTERVAL
+
+  Paley advantage decreasing: 7.41% → 2.17% → -0.98%
+  The crossover prime p₀ is between 11 and 19.
+  The only p ≡ 3 mod 4 in (11, 19) is p = 15 (not prime).
+  So p₀ = 19 is the FIRST prime where interval beats Paley.
+
+===========================================================================
+PART 6: THE FLOW STRUCTURE OF INTERVAL TOURNAMENTS
+---------------------------------------------------------------------------
+
+  p = 7: Interval tournament
+    Every arc has displacement in {1,...,3}
+    HP count = # permutations with all steps in {1,...,3} mod p
+    H = 175
+    H(Paley) = 189
+    Paley connection set: [1, 2, 4]
+    Step sizes: [1, 2, 4]
+    Paley gaps between consecutive steps: [1, 2]
+    Interval has NO gaps (steps 1,2,...,3)
+
+  p = 11: Interval tournament
+    Every arc has displacement in {1,...,5}
+    HP count = # permutations with all steps in {1,...,5} mod p
+    H = 93027
+    H(Paley) = 95095
+    Paley connection set: [1, 3, 4, 5, 9]
+    Step sizes: [1, 3, 4, 5, 9]
+    Paley gaps between consecutive steps: [2, 1, 1, 4]
+    Interval has NO gaps (steps 1,2,...,5)
+
+===========================================================================
+PART 7: PERMANENT INTERPRETATION
+---------------------------------------------------------------------------
+  H(T) = Σ_σ Π_{i=0}^{n-2} A[σ(i), σ(i+1)]
+  This is a 'path permanent' — sum over Hamiltonian paths, not matchings.
+
+  Van der Waerden analogue:
+  For doubly stochastic matrices: perm(J/n) ≤ perm(M) is FALSE
+  (VdW says perm(J/n) ≤ perm(M) — wait, VdW says MINIMUM is at J/n)
+  So the flat matrix MINIMIZES the permanent.
+
+  For H on tournaments:
+  At small p: flat spectrum (Paley) MAXIMIZES H
+  At large p: concentrated spectrum (interval) MAXIMIZES H
+  The crossover suggests H is NOT Schur-concave in general.
+  This is consistent with THM-134 (Schur-concavity fails at p≡1(4)).
+
+DONE.

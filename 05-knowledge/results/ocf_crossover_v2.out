@@ -1,0 +1,138 @@
+OCF CROSSOVER v2: INDEPENDENCE STRUCTURE
+===========================================================================
+
+===========================================================================
+p = 7: FULL ANALYSIS
+===========================================================================
+
+  Paley: S = [1, 2, 4], H = 189
+    Cycle counts: {3: 14, 5: 42, 7: 24}
+    α_0 =      1  (2^0·α_0 =      1)
+    α_1 =     80  (2^1·α_1 =    160)
+    α_2 =      7  (2^2·α_2 =     28)
+    I(Ω, 2) = 189
+
+  Interval: S = [1, 2, 3], H = 175
+    Cycle counts: {3: 14, 5: 28, 7: 17}
+    α_0 =      1  (2^0·α_0 =      1)
+    α_1 =     59  (2^1·α_1 =    118)
+    α_2 =     14  (2^2·α_2 =     56)
+    I(Ω, 2) = 175
+
+  KEY INSIGHT at p=7:
+  Paley wins via α_1: 80*2 = 160 vs 59*2 = 118  (Δ = +42)
+  Interval wins via α_2: 7*4 = 28 vs 14*4 = 56   (Δ = -28)
+  Net: Paley +42-28 = +14 = 189-175 ✓
+
+  Paley has MORE total odd cycles (80 vs 59)
+  but FEWER independent pairs (7 vs 14)
+  Why? Paley cycles overlap MORE — the 'random' connectivity
+  of QR creates dense overlap in the cycle graph.
+  Interval cycles, being 'local' (small steps), overlap LESS.
+
+===========================================================================
+p = 11: APPROXIMATE ANALYSIS
+===========================================================================
+
+  Paley: S = [1, 3, 4, 5, 9], H = 95095
+    21169 odd cycles (0.07s)
+    Cycle counts: {3: 55, 5: 594, 7: 3960, 9: 11055, 11: 5505}
+      α_2 progress: 1000/21169...
+      α_2 progress: 2000/21169...
+      α_2 progress: 3000/21169...
+      α_2 progress: 4000/21169...
+      α_2 progress: 5000/21169...
+      α_2 progress: 6000/21169...
+      α_2 progress: 7000/21169...
+      α_2 progress: 8000/21169...
+      α_2 progress: 9000/21169...
+      α_2 progress: 10000/21169...
+      α_2 progress: 11000/21169...
+      α_2 progress: 12000/21169...
+      α_2 progress: 13000/21169...
+      α_2 progress: 14000/21169...
+      α_2 progress: 15000/21169...
+      α_2 progress: 16000/21169...
+      α_2 progress: 17000/21169...
+      α_2 progress: 18000/21169...
+      α_2 progress: 19000/21169...
+      α_2 progress: 20000/21169...
+      α_2 progress: 21000/21169...
+    α_0 =          1  (2^0·α_0 =          1)
+    α_1 =      21169  (2^1·α_1 =      42338)
+    α_2 =      10879  (2^2·α_2 =      43516)
+    Partial I(Ω, 2) from α_0,1,2 = 85855
+    Missing higher terms = 9240
+
+  Interval: S = [1, 2, 3, 4, 5], H = 93027
+    18397 odd cycles (0.07s)
+    Cycle counts: {3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+      α_2 progress: 1000/18397...
+      α_2 progress: 2000/18397...
+      α_2 progress: 3000/18397...
+      α_2 progress: 4000/18397...
+      α_2 progress: 5000/18397...
+      α_2 progress: 6000/18397...
+      α_2 progress: 7000/18397...
+      α_2 progress: 8000/18397...
+      α_2 progress: 9000/18397...
+      α_2 progress: 10000/18397...
+      α_2 progress: 11000/18397...
+      α_2 progress: 12000/18397...
+      α_2 progress: 13000/18397...
+      α_2 progress: 14000/18397...
+      α_2 progress: 15000/18397...
+      α_2 progress: 16000/18397...
+      α_2 progress: 17000/18397...
+      α_2 progress: 18000/18397...
+    α_0 =          1  (2^0·α_0 =          1)
+    α_1 =      18397  (2^1·α_1 =      36794)
+    α_2 =      11110  (2^2·α_2 =      44440)
+    Partial I(Ω, 2) from α_0,1,2 = 81235
+    Missing higher terms = 11792
+
+===========================================================================
+INTERPRETATION: THE CROSSOVER MECHANISM
+===========================================================================
+
+  At p=7:
+    Paley has 80 cycles, 7 disjoint pairs → dense overlap
+    Interval has 59 cycles, 14 disjoint pairs → sparse overlap
+    α_1 dominance: 2*Δα_1 > 4*Δα_2 → Paley wins
+
+  At p=11:
+    Both have ~21K cycles and many disjoint pairs
+    The higher α_k terms (k≥3) involve MULTIPLE disjoint cycles
+    Each disjoint cycle set gets 2^k weight
+    Interval's LOCALITY creates more disjoint configurations:
+      - Short-range cycles (local steps) are naturally disjoint
+      - Paley's QR-based cycles span the whole vertex set, creating overlaps
+
+  At p=19:
+    The independence polynomial is dominated by terms with k ≥ 3
+    (because p=19 allows many vertex-disjoint cycle packings)
+    Interval's local structure creates exponentially more packings
+    → Interval wins H
+
+  GENERAL PRINCIPLE:
+    Paley = "random" connectivity → many cycles but dense overlap
+    Interval = "local" connectivity → fewer cycles but sparse overlap
+
+    H = Σ α_k * 2^k is dominated by the LARGEST k terms
+    Large k terms count vertex-disjoint cycle PACKINGS
+    Local tournaments create better packings
+    → At large p, local (interval) beats global (Paley)
+    
+===========================================================================
+PART 4: OVERLAP DENSITY (average neighbors per cycle in Ω)
+===========================================================================
+
+  p = 7:
+    Paley: 80 cycles, avg overlap degree = 78.83, overlap density = 0.9978
+    Interval: 59 cycles, avg overlap degree = 57.53, overlap density = 0.9918
+
+  p = 11:
+    Paley: 21169 cycles, avg overlap degree = 21166.97, overlap density = 1.0000
+    Interval: 18397 cycles, avg overlap degree = 18394.79, overlap density = 0.9999
+
+DONE.
