@@ -1,0 +1,134 @@
+======================================================================
+CYCLE DOMINANCE MECHANISM FOR H-MAXIMIZATION
+======================================================================
+
+============================================================
+p = 7 (mod 4 = 3), m = 3
+============================================================
+           H    total     c_3     c_5     c_7 {'flat':>6} {'paley':>6}
+         189      374      14      42     318     0.00   *    
+         175      437      14      28     395    14.00       I
+
+  H-maximizer: H=189, total_cycles=374
+  Cycle-maximizer: H=175, total_cycles=437
+  H-maximizer != cycle-maximizer
+  Spearman rank corr(H, total_cycles) = -1.0000
+
+  Per-length dominance (maximizer vs others):
+    c_3: maximizer=14, max=14, rank=1/1
+    c_5: maximizer=42, max=42, rank=1/2
+    c_7: maximizer=318, max=395, rank=2/2
+
+============================================================
+p = 11 (mod 4 = 3), m = 5
+============================================================
+           H    total     c_3     c_5     c_7     c_9    c_11 {'flat':>6} {'paley':>6}
+       95095  4667697      55     594   11220  216938 4438890     0.00   *    
+       93467  4690610      55     550   11693  213176 4465136    44.00        
+       93027  4834875      55     484   12749  199624 4621963   110.00       I
+       92411  4669974      55     572   11374  216190 4441783    22.00        
+
+  H-maximizer: H=95095, total_cycles=4667697
+  Cycle-maximizer: H=93027, total_cycles=4834875
+  H-maximizer != cycle-maximizer
+  Spearman rank corr(H, total_cycles) = -0.4000
+
+  Per-length dominance (maximizer vs others):
+    c_3: maximizer=55, max=55, rank=1/1
+    c_5: maximizer=594, max=594, rank=1/4
+    c_7: maximizer=11220, max=12749, rank=4/4
+    c_9: maximizer=216938, max=216938, rank=1/4
+    c_11: maximizer=4438890, max=4621963, rank=4/4
+
+============================================================
+p = 13 (mod 4 = 1), m = 6
+============================================================
+           H    total     c_3     c_5     c_7     c_9    c_11    c_13 {'flat':>6} {'paley':>6}
+     3711175 1023285663      91    1274   44512 1048194 34086104 988105488   227.50       I
+     3707483 1035745162      91    1378   42107 1094240 33279649 1001327697   123.50        
+     3704857 1038735292      91    1456   40547 1116548 32999434 1004577216    45.50        
+     3703011 1038807442      91    1482   40287 1118628 32985069 1004661885    19.50        
+     3683797 1038754870      91    1456   40547 1116704 32997094 1004598978    45.50        
+     3669497 1038304823      91    1430   41002 1111166 33053384 1004097750    71.50        
+
+  H-maximizer: H=3711175, total_cycles=1023285663
+  Cycle-maximizer: H=3703011, total_cycles=1038807442
+  H-maximizer != cycle-maximizer
+  Spearman rank corr(H, total_cycles) = -0.6000
+
+  Per-length dominance (maximizer vs others):
+    c_3: maximizer=91, max=91, rank=1/1
+    c_5: maximizer=1274, max=1482, rank=5/5
+    c_7: maximizer=44512, max=44512, rank=1/5
+    c_9: maximizer=1048194, max=1118628, rank=6/6
+    c_11: maximizer=34086104, max=34086104, rank=1/6
+    c_13: maximizer=988105488, max=1004661885, rank=6/6
+
+============================================================
+SECTION 2: SPECTRAL MECHANISM FOR CYCLE MAXIMIZATION
+============================================================
+
+    For circulant tournament on Z_p with connection set S:
+      tr(A^k) = sum_{j=0}^{p-1} lambda_j^k
+              = m^k + sum_{j=1}^{p-1} lambda_j^k
+
+    For Paley (p = 3 mod 4):
+      lambda_j = (1/2)(chi(j)*g - 1) where g = Gauss sum, |g|^2 = p
+      |lambda_j|^2 = (p+1)/4 - Re(chi(j)*g)/2
+      Actually: lambda_j for Paley has |lambda_j| = sqrt(p)/2 for j != 0
+
+    The k-th power sum:
+      sum |lambda_j|^k = sum_{j=1}^{p-1} |lambda_j|^k
+                       = (p-1) * (sqrt(p)/2)^k for Paley
+                       <= (p-1) * max |lambda_j|^{k-2} * sum |lambda_j|^2 for others
+
+    By Parseval: sum |lambda_j|^2 = p*(p-1)/4 (constant for all regular circulants)
+    So sum |lambda_j|^k is bounded by (p-1) * max_j |lambda_j|^{k-2} * p/4.
+
+    For Paley: max |lambda_j| = sqrt(p)/2 (minimum possible by averaging).
+    For others: max |lambda_j| > sqrt(p)/2 (some eigenvalue is larger).
+
+    Key: for k >= 3, sum |lambda_j|^k is LARGER when the eigenvalue magnitudes
+    are more spread (by convexity of x^k for k > 2). This seems to CONTRADICT
+    Paley having the most cycles!
+
+    BUT: we're summing lambda_j^k, not |lambda_j|^k. The complex phases matter!
+    tr(A^k) = sum lambda_j^k = sum |lambda_j|^k * exp(i*k*arg(lambda_j))
+    The REAL PART of this sum is what matters (tr(A^k) is real).
+
+    The phases exp(i*k*arg(lambda_j)) can cause CANCELLATION. Paley's
+    "well-distributed" phases may cause LESS cancellation at odd k,
+    giving a larger real sum.
+
+    This is the spectral mechanism: Paley maximizes cycle counts not through
+    eigenvalue MAGNITUDE uniformity, but through eigenvalue PHASE coherence
+    at odd powers.
+    
+
+  p=7: Phase coherence analysis
+          S=[4, 5, 6]...: H=   175, |lam| range=[0.555, 2.247], spread=1.692, tr3=42, tr5=140
+                   Paley: H=   189, |lam| range=[1.414, 1.414], spread=0.000, tr3=42, tr5=210
+
+  p=11: Phase coherence analysis
+          S=[6, 7, 8]...: H= 93027, |lam| range=[0.521, 3.513], spread=2.992, tr3=165, tr5=2420
+          S=[1, 6, 7]...: H= 92411, |lam| range=[0.500, 2.448], spread=1.948, tr3=165, tr5=2860
+                   Paley: H= 95095, |lam| range=[1.732, 1.732], spread=0.000, tr3=165, tr5=2970
+          S=[3, 6, 7]...: H= 93467, |lam| range=[0.651, 2.957], spread=2.306, tr3=165, tr5=2750
+
+============================================================
+SECTION 3: INDEPENDENCE POLYNOMIAL DECOMPOSITION (p=7)
+============================================================
+
+  S=[4, 5, 6]: H=175
+    36 directed odd cycles (unique vertex sets)
+    alpha = [1, 36, 14]
+    I(Omega, 2) = 129
+    *** OCF MISMATCH: I(Omega,2)=129 != H=175 ***
+    Decomposition: 2^0*1=1 + 2^1*36=72 + 2^2*14=56 + 
+
+  S=[1, 2, 4]: H=189
+    36 directed odd cycles (unique vertex sets)
+    alpha = [1, 36, 7]
+    I(Omega, 2) = 101
+    *** OCF MISMATCH: I(Omega,2)=101 != H=189 ***
+    Decomposition: 2^0*1=1 + 2^1*36=72 + 2^2*7=28 + 

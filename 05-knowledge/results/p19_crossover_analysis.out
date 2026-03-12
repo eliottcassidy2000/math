@@ -1,0 +1,236 @@
+======================================================================
+P=19 CROSSOVER ANALYSIS: WHY INTERVAL BEATS PALEY
+======================================================================
+
+============================================================
+SECTION 1: SPECTRAL STRUCTURE COMPARISON
+============================================================
+
+  p=7, m=3:
+    Paley eigenvalue magnitudes: [1.414, 1.414, 1.414, 1.414, 1.414...]
+    Interval eigenvalue magnitudes: [2.247, 2.247, 0.802, 0.802, 0.555...]
+    Paley: all |lambda| = 1.4142 = sqrt(7)/2 = 1.3229
+    Interval: |lambda_1| = 2.2470, |lambda_2| = 2.2470
+    Dirichlet kernel |lambda_1| = 2.2470
+    Ratio |lambda_1(interval)| / |lambda(Paley)| = 1.5889
+
+  p=11, m=5:
+    Paley eigenvalue magnitudes: [1.732, 1.732, 1.732, 1.732, 1.732...]
+    Interval eigenvalue magnitudes: [3.513, 3.513, 1.204, 1.204, 0.764...]
+    Paley: all |lambda| = 1.7321 = sqrt(11)/2 = 1.6583
+    Interval: |lambda_1| = 3.5133, |lambda_2| = 3.5133
+    Dirichlet kernel |lambda_1| = 3.5133
+    Ratio |lambda_1(interval)| / |lambda(Paley)| = 2.0284
+
+  p=19, m=9:
+    Paley eigenvalue magnitudes: [2.236, 2.236, 2.236, 2.236, 2.236...]
+    Interval eigenvalue magnitudes: [6.055, 6.055, 2.037, 2.037, 1.245...]
+    Paley: all |lambda| = 2.2361 = sqrt(19)/2 = 2.1794
+    Interval: |lambda_1| = 6.0548, |lambda_2| = 6.0548
+    Dirichlet kernel |lambda_1| = 6.0548
+    Ratio |lambda_1(interval)| / |lambda(Paley)| = 2.7078
+
+============================================================
+SECTION 2: CYCLE COUNTS (TRACE-SIMPLE RANGE)
+============================================================
+
+  p=7:
+     k      tr(A^k)/k Paley   tr(A^k)/k Interval         Diff
+     3                 14.0                 14.0         -0.0  (exact)
+     5                 42.0                 28.0        +14.0  (exact)
+     7                318.0                395.0        -77.0  (approx)
+    c_3: Paley=14, Interval=14 (EQUAL)
+    c_5: Paley WINS (42 > 28)
+
+  p=11:
+     k      tr(A^k)/k Paley   tr(A^k)/k Interval         Diff
+     3                 55.0                 55.0         -0.0  (exact)
+     5                594.0                484.0       +110.0  (exact)
+     7              11220.0              12749.0      -1529.0  (approx)
+     9             216938.3             199624.3     +17314.0  (approx)
+    11            4438890.0            4621963.0    -183073.0  (approx)
+    c_3: Paley=55, Interval=55 (EQUAL)
+    c_5: Paley WINS (594 > 484)
+
+  p=19:
+     k      tr(A^k)/k Paley   tr(A^k)/k Interval         Diff
+     3                285.0                285.0         +0.0  (exact)
+     5              11628.0              10488.0      +1140.0  (exact)
+     7             684000.0             729942.0     -45942.0  (approx)
+     9           43044215.0           41400563.0   +1643652.0  (approx)
+    11         2852830620.0         2910351334.0  -57520714.0  (approx)
+    c_3: Paley=285, Interval=285 (EQUAL)
+    c_5: Paley WINS (11628 > 10488)
+
+============================================================
+SECTION 3: ANALYTICAL MARGIN ANALYSIS
+============================================================
+
+    For Paley T_p (p = 3 mod 4):
+      All |lambda_k| = sqrt(p)/2 for k = 1,...,p-1
+
+    For Interval C_p (S = {1,...,m}):
+      lambda_k = sum_{s=1}^{m} omega^{ks} = (omega^k - omega^{k(m+1)}) / (1 - omega^k)
+      |lambda_k| = |sin(pi*k*m/p) / sin(pi*k/p)|
+
+    The TRACE COMPARISON at each power k:
+      tr(A^k) = m^k + sum_{j=1}^{p-1} lambda_j^k
+
+    For Paley: sum_{j=1}^{p-1} lambda_j^k = ?
+    By Gauss sum theory: lambda_j = (chi(j)*g - 1)/2 where g = Gauss sum, |g|=sqrt(p)
+
+    For k=3:
+      tr(A^3)_Paley = m^3 + sum (chi(j)*g - 1)^3 / 8
+      = m^3 + (1/8) * sum [chi(j)^3 * g^3 - 3*chi(j)^2 * g^2 + 3*chi(j)*g - 1]
+      = m^3 + (1/8) * [g^3 * sum chi(j)^3 - 3*g^2 * sum chi(j)^2
+                        + 3*g * sum chi(j) - (p-1)]
+
+    Since chi is the Legendre symbol: chi(j)^2 = 1 for j != 0.
+    sum_{j=1}^{p-1} chi(j) = 0
+    sum_{j=1}^{p-1} chi(j)^2 = p-1
+    sum_{j=1}^{p-1} chi(j)^3 = sum chi(j) = 0
+
+    So: tr(A^3)_Paley = m^3 + (1/8) * [0 - 3*g^2*(p-1) + 0 - (p-1)]
+                       = m^3 + (1/8) * (p-1) * [-3*g^2 - 1]
+
+    With g^2 = chi(-1)*p = -p (for p = 3 mod 4):
+      = m^3 + (1/8) * (p-1) * [3p - 1]
+      = m^3 + (p-1)(3p-1)/8
+
+    For Interval: tr(A^3)_Interval = same (c_3 is constant for regular circulants)
+
+    So the difference comes from k >= 5. Let's compute tr(A^5):
+    
+  p=7: c_5 Paley=42, Interval=28, diff=+14
+         c_7/7 Paley=318, Interval=395, diff=-77
+         Trace wins: Paley 1, Interval 1 (of 3 odd k values)
+  p=11: c_5 Paley=594, Interval=484, diff=+110
+         c_7/7 Paley=11220, Interval=12749, diff=-1529
+         Trace wins: Paley 2, Interval 2 (of 5 odd k values)
+  p=19: c_5 Paley=11628, Interval=10488, diff=+1140
+         c_7/7 Paley=684000, Interval=729942, diff=-45942
+         Trace wins: Paley 4, Interval 4 (of 9 odd k values)
+  p=23: c_5 Paley=31878, Interval=29348, diff=+2530
+         c_7/7 Paley=2785530, Interval=2933029, diff=-147499
+         Trace wins: Paley 5, Interval 5 (of 11 odd k values)
+  p=31: c_5 Paley=151032, Interval=142352, diff=+8680
+         c_7/7 Paley=24414360, Interval=25316212, diff=-901852
+         Trace wins: Paley 7, Interval 7 (of 15 odd k values)
+
+============================================================
+SECTION 4: EIGENVALUE PHASE STRUCTURE
+============================================================
+
+  p=7: Paley eigenvalue phases (k=1,...,3):
+    k=1: |lambda|=1.4142, arg=1.9322 (0.6150*pi)
+    k=2: |lambda|=1.4142, arg=1.9322 (0.6150*pi)
+    k=3: |lambda|=1.4142, arg=-1.9322 (-0.6150*pi)
+
+  p=7: Interval eigenvalue phases (k=1,...,3):
+    k=1: |lambda|=2.2470, arg=1.7952 (0.5714*pi)
+    k=2: |lambda|=0.5550, arg=-2.6928 (-0.8571*pi)
+    k=3: |lambda|=0.8019, arg=2.2440 (0.7143*pi)
+
+  p=11: Paley eigenvalue phases (k=1,...,5):
+    k=1: |lambda|=1.7321, arg=1.8636 (0.5932*pi)
+    k=2: |lambda|=1.7321, arg=-1.8636 (-0.5932*pi)
+    k=3: |lambda|=1.7321, arg=1.8636 (0.5932*pi)
+    k=4: |lambda|=1.7321, arg=1.8636 (0.5932*pi)
+    k=5: |lambda|=1.7321, arg=1.8636 (0.5932*pi)
+
+  p=11: Interval eigenvalue phases (k=1,...,5):
+    k=1: |lambda|=3.5133, arg=1.7136 (0.5455*pi)
+    k=2: |lambda|=0.5211, arg=-2.8560 (-0.9091*pi)
+    k=3: |lambda|=1.2036, arg=1.9992 (0.6364*pi)
+    k=4: |lambda|=0.5944, arg=-2.5704 (-0.8182*pi)
+    k=5: |lambda|=0.7635, arg=2.2848 (0.7273*pi)
+
+  p=19: Paley eigenvalue phases (k=1,...,9):
+    k=1: |lambda|=2.2361, arg=1.7963 (0.5718*pi)
+    k=2: |lambda|=2.2361, arg=-1.7963 (-0.5718*pi)
+    k=3: |lambda|=2.2361, arg=-1.7963 (-0.5718*pi)
+    k=4: |lambda|=2.2361, arg=1.7963 (0.5718*pi)
+    k=5: |lambda|=2.2361, arg=1.7963 (0.5718*pi)
+    k=6: |lambda|=2.2361, arg=1.7963 (0.5718*pi)
+    k=7: |lambda|=2.2361, arg=1.7963 (0.5718*pi)
+    k=8: |lambda|=2.2361, arg=-1.7963 (-0.5718*pi)
+    k=9: |lambda|=2.2361, arg=1.7963 (0.5718*pi)
+
+  p=19: Interval eigenvalue phases (k=1,...,9):
+    k=1: |lambda|=6.0548, arg=1.6535 (0.5263*pi)
+    k=2: |lambda|=0.5069, arg=-2.9762 (-0.9474*pi)
+    k=3: |lambda|=2.0368, arg=1.8188 (0.5789*pi)
+    k=4: |lambda|=0.5286, arg=-2.8109 (-0.8947*pi)
+    k=5: |lambda|=1.2447, arg=1.9842 (0.6316*pi)
+    k=6: |lambda|=0.5685, arg=-2.6456 (-0.8421*pi)
+    k=7: |lambda|=0.9142, arg=2.1495 (0.6842*pi)
+    k=8: |lambda|=0.6336, arg=-2.4802 (-0.7895*pi)
+    k=9: |lambda|=0.7382, arg=2.3149 (0.7368*pi)
+
+============================================================
+SECTION 5: CROSSOVER GROWTH RATE ANALYSIS
+============================================================
+
+    The H-advantage of Paley vs Interval depends on two competing effects:
+
+    1. SHORT CYCLES (k=5): Paley's flat spectrum gives sum Re(lam^5) proportional
+       to (p-1) * (sqrt(p)/2)^5 * (phase coherence factor).
+       Interval's concentrated spectrum: ~ |lam_1|^5 * cos(5*arg(lam_1)).
+
+    2. LONG CYCLES (k ~ p): For k near p, we're computing H itself (directed
+       Hamiltonian cycles/paths). The interval's strong directional bias
+       creates a "highway" effect.
+
+    The crossover happens when the long-cycle advantage of the interval
+    overcomes the short-cycle advantage of Paley.
+
+    Growth rate comparison:
+    - Paley tr(A^k): ~ (p-1) * (sqrt(p)/2)^k * O(1)  [phases may help or hurt]
+    - Interval tr(A^k): ~ |lam_1|^k * cos(k*arg) ~ (p/pi)^k * O(1)
+
+    Ratio: (p/pi)^k / (sqrt(p)/2)^k = (2/pi * sqrt(p))^k
+
+    For p = 7: 2*sqrt(7)/pi ~ 1.68 > 1, so interval's dominant eigenvalue
+    grows FASTER, but the (p-1)=6 other eigenvalues of Paley compensate.
+
+    For large p: the SINGLE dominant eigenvalue (p/pi)^k overwhelms
+    the (p-1) Paley terms (sqrt(p)/2)^k each.
+
+    Crossover when: (p/pi)^k >> (p-1) * (sqrt(p)/2)^k
+    i.e., (2*sqrt(p)/pi)^k >> p-1
+    i.e., k > log(p) / log(2*sqrt(p)/pi)
+
+    For k = p (the H computation), this becomes:
+    (2*sqrt(p)/pi)^p >> p
+    
+  p=7: |lam_1/lam_P| = 1.6986, p*log(ratio) - log(p-1) = 1.92 -> INTERVAL
+  p=11: |lam_1/lam_P| = 2.1186, p*log(ratio) - log(p-1) = 5.96 -> INTERVAL
+  p=19: |lam_1/lam_P| = 2.7781, p*log(ratio) - log(p-1) = 16.52 -> INTERVAL
+  p=23: |lam_1/lam_P| = 3.0555, p*log(ratio) - log(p-1) = 22.60 -> INTERVAL
+  p=31: |lam_1/lam_P| = 3.5461, p*log(ratio) - log(p-1) = 35.84 -> INTERVAL
+  p=43: |lam_1/lam_P| = 4.1755, p*log(ratio) - log(p-1) = 57.72 -> INTERVAL
+
+============================================================
+SECTION 6: TOURNAMENT STRUCTURE COMPARISON
+============================================================
+
+  p=7:
+    Paley QR = [1, 2, 4]
+    Interval = [1, 2, 3]
+    Consecutive pairs: Paley=1, Interval=2
+    Paley gaps: min=1, max=2, pattern=[1, 2]
+    Interval: perfectly clustered (1 block of 3 consecutive elements)
+
+  p=11:
+    Paley QR = [1, 3, 4, 5, 9]
+    Interval = [1, 2, 3, 4, 5]
+    Consecutive pairs: Paley=2, Interval=4
+    Paley gaps: min=1, max=4, pattern=[2, 1, 1, 4]
+    Interval: perfectly clustered (1 block of 5 consecutive elements)
+
+  p=19:
+    Paley QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+    Interval = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Consecutive pairs: Paley=4, Interval=8
+    Paley gaps: min=1, max=5, pattern=[3, 1, 1, 1, 2, 2, 5, 1]
+    Interval: perfectly clustered (1 block of 9 consecutive elements)
