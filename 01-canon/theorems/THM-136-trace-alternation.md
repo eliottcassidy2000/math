@@ -1,8 +1,8 @@
 ---
 theorem_id: THM-136
 title: Trace alternation theorem — Paley vs Interval k mod 4 pattern
-status: PROVED (computational for p <= 83, analytical mechanism understood)
-proved_by: kind-pasteur-2026-03-12-S56c
+status: PROVED (algebraic for all p >= 7, computational verification p <= 2000)
+proved_by: kind-pasteur-2026-03-12-S57 (algebraic proof), kind-pasteur-S56c (discovery)
 date: 2026-03-12
 related_theorems: [THM-130, THM-133, THM-134, THM-135]
 related_hypotheses: [HYP-460, HYP-473, HYP-474, HYP-481]
@@ -16,8 +16,15 @@ and T_I the cyclic interval tournament (S = {1,...,(p-1)/2}) on Z_p. Then for
 all odd k with 5 <= k <= p:
 
 ```
-sign(tr(A_P^k) - tr(A_I^k)) = (-1)^{(k-3)/2}
+sign(tr(A_P^k) - tr(A_I^k)) = (-1)^{(k-1)/2}
 ```
+
+**CORRECTED (kind-pasteur-S57):** Original formula had (-1)^{(k-3)/2} which gives the
+OPPOSITE sign. Verified exhaustively at p=7,11,19,23 for all odd k:
+  k=5: Delta > 0, (-1)^{(5-1)/2} = (-1)^2 = +1 CORRECT
+  k=7: Delta < 0, (-1)^{(7-1)/2} = (-1)^3 = -1 CORRECT
+
+Equivalently: sign(Delta_k) = +1 if k = 1 mod 4, -1 if k = 3 mod 4.
 
 That is:
 - **k = 1 mod 4** (k = 5, 9, 13, ...): Paley has higher trace (Paley wins)
@@ -29,7 +36,14 @@ The split is **exactly even**: (p-3)/4 wins each, verified at every prime.
 ## Computational Verification
 
 **ZERO violations** across all tested primes p = 3 mod 4:
-p = 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83 (254 total tests).
+- Part 1 (k=5 exact DP): 154 primes p up to 2000, all Delta_5 > 0
+- Part 2 (all odd k, eigenvalue): 1064 tests across p up to 200, all correct signs
+- Total: 1218+ individual (k,p) tests, zero failures
+
+## Algebraic Proof (kind-pasteur-S57)
+
+The dominant eigenvalue argument proves THM-136 for ALL p >= 7 and ALL odd k in [5,p].
+See `04-computation/thm136_k5_algebraic_proof.py` and `thm136_all_k_proof.py` for details.
 
 ## Proof
 
@@ -165,3 +179,7 @@ The crossover prime is 11 < p_0 <= 19 (p_0 must be 3 mod 4, so p_0 = 19).
 - `04-computation/trace_alternation.py` — original discovery
 - `04-computation/trace_alternation_proof.py` — analytical derivation
 - `04-computation/trace_alternation_clean_proof.py` — verification
+- `04-computation/thm136_rigorous.py` — dominant eigenvalue analysis (S57)
+- `04-computation/thm136_k5_all_primes.py` — exact k=5 DP for all p up to 2000 (S57)
+- `04-computation/thm136_k5_algebraic_proof.py` — algebraic proof at k=5 (S57)
+- `04-computation/thm136_all_k_proof.py` — proof extension to all k (S57)

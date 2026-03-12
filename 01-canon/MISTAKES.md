@@ -735,3 +735,36 @@ Correct results: β_{n-1} = β_{n-2} = 0 for ALL tournaments at n=3-8 (HYP-423, 
 1. ALWAYS use max_p=n-1 when computing Betti numbers to avoid truncation artifacts
 2. Betti at the max computed degree is an UPPER BOUND (Betti at max_deg-1 and below are exact)
 3. When β at max_deg seems surprisingly large/nonzero, check if im(d_{max_deg+1}) is missing
+
+---
+
+## MISTAKE-019: THM-136 Sign Convention Error
+
+**Date discovered:** 2026-03-12
+**Found by:** kind-pasteur-S57
+**Affects:** THM-136 formula statement (not the verbal description or proof mechanism)
+
+### What was assumed
+The trace alternation sign formula was stated as:
+`sign(tr(A_P^k) - tr(A_I^k)) = (-1)^{(k-3)/2}`
+
+### Why it was wrong
+Direct computation at p=7,11,19,23 shows:
+- k=5: Delta > 0 (positive), but (-1)^{(5-3)/2} = (-1)^1 = -1 (WRONG)
+- k=7: Delta < 0 (negative), but (-1)^{(7-3)/2} = (-1)^2 = +1 (WRONG)
+
+The formula gives the OPPOSITE sign for every k.
+
+### The correct framing
+`sign(tr(A_P^k) - tr(A_I^k)) = (-1)^{(k-1)/2}`
+
+Equivalently: positive for k = 1 mod 4, negative for k = 3 mod 4.
+Verified with 1218+ individual (k,p) tests, zero failures.
+
+Note: the VERBAL description in THM-136 was always correct ("k=1 mod 4: Paley wins").
+Only the symbolic formula was off by one power.
+
+### Impact
+- Formula in THM-136 theorem file CORRECTED
+- No downstream impact: all proofs used the verbal description, not the formula
+- The algebraic proof (kind-pasteur-S57) uses the correct convention throughout
