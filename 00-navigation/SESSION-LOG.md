@@ -13,6 +13,50 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S60b — 2026-03-12: OCF independence crossover + Alon (1990) connection
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S60 (context compaction recovery)
+**Summary of work:**
+  Continued deep analysis of Paley vs Interval tournament H-maximization.
+  Integrated findings from kind-pasteur (THM-135/136) and opus-S58/S62.
+
+  MAJOR FINDINGS:
+  1. **OCF INDEPENDENCE CROSSOVER (HYP-484):** At p=7, Paley has MORE total odd
+     cycles (α_1=80 vs 59) but FEWER vertex-disjoint pairs (α_2=7 vs 14).
+     The 2^1 weighting at α_1 dominates 2^2 at α_2 → Paley wins by 14.
+     At p=11: α_1 still favors Paley, but α_3+ gives Interval 2552 extra.
+     At p=19: higher-order packings overwhelm → Interval wins.
+     Full I(Ω,2) verified against DP at p=7.
+
+  2. **ALON (1990) CONNECTION (HYP-483):** Noga Alon's Combinatorica paper
+     explicitly constructs our interval tournament as the best explicit
+     H-maximizer! T_n on Z_n with (i→j iff (i-j) mod n < n/2).
+     Upper bound via Brégman (Minc's conjecture): P(n) ≤ c·n^{3/2}·n!/2^{n-1}.
+     VdW connection EXPLICIT: regular tournaments have F(T) ≥ (1/e)·n!/2^n.
+
+  3. **ADLER-ALON-ROSS (2001):** Improved lower bound P(n) ≥ (e-o(1))·n!/2^{n-1}
+     using edge-disjoint TRIANGLE PACKINGS. The 2^{X(s)} factor in their proof
+     is EXACTLY our OCF's 2^k weighting! Their Poisson(1) distribution of
+     triangle appearances maps to our independence polynomial structure.
+
+  4. **INTERVAL NOT GLOBAL MAX for most finite n:** OEIS A038375 shows
+     H(interval) < P(n) at n=4,6,7,8,9,10,11. Only equals max at n=3,5.
+     For prime n≡3(4): Paley is global max at n=7,11. Interval overtakes
+     among circulants at n=19. Global status at n=19 unknown.
+
+  5. **ERROR AUDIT (3 bugs found):**
+     - exact_cycle_census.py: α_3 silently zero for m>500 (critical)
+     - schur_concavity_test.py: variable shadowing in failure display
+     - spectral_ocf_chain.py: comment annotation error (p(p-1)/8 vs /4)
+
+**New contributions:** HYP-483, HYP-484, 5 new scripts, 5 result files
+**Unresolved threads:**
+  - Is interval the GLOBAL H-maximizer at n=19 (among ALL tournaments)?
+  - Can we close Alon's O(n^{3/2}) gap using OCF?
+  - What tournament achieves P(9)=3357 and P(10)=15745?
+  - Adler-Alon-Ross Poisson(1) ↔ OCF independence structure: make formal
+
 ## kind-pasteur-2026-03-12-S56c — 2026-03-12: Trace alternation theorem + crossover mechanism
 
 **Account:** kind-pasteur
