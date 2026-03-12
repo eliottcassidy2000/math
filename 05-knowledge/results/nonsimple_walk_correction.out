@@ -1,0 +1,31 @@
+======================================================================
+NON-SIMPLE WALK CORRECTION ANALYSIS
+======================================================================
+
+  p=7: H(Paley)=189, H(Interval)=175, diff=14
+
+    Cycle comparison (c_k actual vs tr(A^k)/k approx):
+       k     c_k(P)    tr/k(P)    corr(P)     c_k(I)    tr/k(I)    corr(I)       Dc_k      Dtr/k      Dcorr
+       3         14       14.0       -0.0         14       14.0       -0.0          0       -0.0        0.0
+       5         42       42.0        0.0         28       28.0        0.0         14       14.0       -0.0
+       7         24      318.0     -294.0         17      395.0     -378.0          7      -77.0       84.0
+
+    H(Paley) OCF = 389, H(Interval) OCF = 277
+    H(Paley) approx = 2741.0, H(Interval) approx = 3301.0
+    OCF match: Paley False, Interval False
+    Correction swings H by: 672.0
+
+  p=11: H(Paley)=95095, H(Interval)=93027, diff=2068
+
+    Cycle comparison (c_k actual vs tr(A^k)/k approx):
+       k     c_k(P)    tr/k(P)    corr(P)     c_k(I)    tr/k(I)    corr(I)       Dc_k      Dtr/k      Dcorr
+       3         55       55.0       -0.0         55       55.0       -0.0          0       -0.0        0.0
+       5        594      594.0        0.0        484      484.0        0.0        110      110.0       -0.0
+       7       3960    11220.0    -7260.0       3399    12749.0    -9350.0        561    -1529.0     2090.0
+       9      11055   216938.3  -205883.3       9350   199624.3  -190274.3       1705    17314.0   -15609.0
+      11       5505  4438890.0 -4433385.0       5109  4621963.0 -4616854.0        396  -183073.0   183469.0
+
+    H(Paley) OCF = 387207, H(Interval) OCF = 342327
+    H(Paley) approx = 145607740.3, H(Interval) approx = 151200844.3
+    OCF match: Paley False, Interval False
+    Correction swings H by: 5637984.0

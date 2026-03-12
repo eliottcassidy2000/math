@@ -1,0 +1,257 @@
+======================================================================
+ADDITIVE STRUCTURE: QR vs INTERVAL k-SUM SOLUTIONS
+======================================================================
+
+--- Section 1: M_k - N_k for all primes and odd k ---
+  M_k = #{k-tuples from QR summing to 0 mod p}
+  N_k = #{k-tuples from {1,...,m} summing to 0 mod p}
+  Delta_k = p*(M_k - N_k)
+
+  p=7, QR=[1, 2, 4], INT=[1, 2, 3]:
+       k          M_k          N_k      M_k-N_k        Delta  k%4   winner
+       3            6            6            0            0    3      TIE
+       5           30           20           10           70    1       QR
+       7          318          395          -77         -539    3      INT
+
+  p=11, QR=[1, 3, 4, 5, 9], INT=[1, 2, 3, 4, 5]:
+       k          M_k          N_k      M_k-N_k        Delta  k%4   winner
+       3           15           15            0            0    3      TIE
+       5          270          220           50          550    1       QR
+       7         7140         8113         -973       -10703    3      INT
+       9       177495       163329        14166       155826    1       QR
+      11      4438890      4621963      -183073     -2013803    3      INT
+
+  p=19, QR=[1, 4, 5, 6, 7, 9, 11, 16, 17], INT=[1, 2, 3, 4, 5, 6, 7, 8, 9]:
+       k          M_k          N_k      M_k-N_k        Delta  k%4   winner
+       3           45           45            0            0    3      TIE
+       5         3060         2760          300         5700    1       QR
+       7       252000       268926       -16926      -321594    3      INT
+       9     20389365     19610793       778572     14792868    1       QR
+      11   1651638780   1684940246    -33301466   -632727854    3      INT
+      13 133782405120 132421654846   1360750274  25854255206    1       QR
+      15 10836375333885 10890024433980 -53649100095 -1019332901805    3      INT
+      17 877746405773700 875695299395036 2051106378664 38971021194616    1       QR
+      19 71097458821129440 71173692908952329 -76234087822889 -1448447668634891    3      INT
+
+======================================================================
+Section 2: Fourier decomposition of M_k - N_k
+======================================================================
+
+    M_k = (1/p) * sum_{t=0}^{p-1} [sum_{s in QR} omega^{ts}]^k
+        = (1/p) * [m^k + S_P(k)]
+
+    N_k = (1/p) * sum_{t=0}^{p-1} [sum_{s in INT} omega^{ts}]^k
+        = (1/p) * [m^k + S_I(k)]
+
+    M_k - N_k = (S_P(k) - S_I(k)) / p = Delta_k / p
+
+    Now decompose S_P - S_I by Fourier mode:
+    S_P(k) = sum_{t=1}^{p-1} lambda_t^k  (Paley eigenvalues)
+    S_I(k) = sum_{t=1}^{p-1} mu_t^k      (Interval eigenvalues)
+
+    Per-mode difference: lambda_t^k - mu_t^k for t = 1,...,p-1
+
+    Since lambda_{p-t} = conj(lambda_t) and mu_{p-t} = conj(mu_t):
+    S_P - S_I = 2*sum_{t=1}^m Re(lambda_t^k - mu_t^k)
+    
+
+  p=7:
+    Per-mode decomposition:
+       t    |lam|     |mu|    arg_lam     arg_mu
+       1   1.4142   2.2470     1.9322     1.7952
+       2   1.4142   0.5550     1.9322    -2.6928
+       3   1.4142   0.8019    -1.9322     2.2440
+
+    Re(lam_t^k - mu_t^k) per mode:
+       t          k=3          k=5          k=7
+       1        -4.57        46.11      -282.70
+       2         2.54        -5.53         6.48
+       3         2.04        -5.57         6.71
+
+    Sum (= Delta/2):         0.00        35.00      -269.50
+
+  p=11:
+    Per-mode decomposition:
+       t    |lam|     |mu|    arg_lam     arg_mu
+       1   1.7321   3.5133     1.8636     1.7136
+       2   1.7321   0.5211    -1.8636    -2.8560
+       3   1.7321   1.2036     1.8636     1.9992
+       4   1.7321   0.5944     1.8636    -2.5704
+       5   1.7321   0.7635     1.8636     2.2848
+
+    Re(lam_t^k - mu_t^k) per mode:
+       t          k=3          k=5          k=7          k=9         k=11
+       1       -14.02       335.05     -5517.10     78188.46  -1006775.13
+       2         4.09       -15.49        41.50       -68.00       -33.50
+       3         2.33       -13.37        40.98       -71.47       -25.82
+       4         3.97       -15.57        41.48       -68.00       -33.50
+       5         3.63       -15.61        41.65       -67.99       -33.55
+
+    Sum (= Delta/2):        -0.00       275.00     -5351.50     77913.00  -1006901.50
+
+======================================================================
+Section 3: Phase difference lam vs mu per mode
+======================================================================
+  Key: lam_t and mu_t have DIFFERENT magnitudes and phases.
+  The alternation comes from the PHASE STRUCTURE.
+
+  p=7: Paley phase theta=1.2094, Interval phase phi=1.7952
+    theta - pi/2 = -0.3614
+    phi   - pi/2 = 0.2244
+       t   arg(lam)    arg(mu)   phase_diff   chi(t)
+       1     1.9322 ( 1.9322)     1.7952 ( 1.7952)       0.1370       QR
+       2     1.9322 ( 1.9322)    -2.6928 (-2.6928)       4.6250       QR
+       3    -1.9322 (-1.9322)     2.2440 (-0.8976)      -4.1762       NQ
+  p=11: Paley phase theta=1.2780, Interval phase phi=1.7136
+    theta - pi/2 = -0.2928
+    phi   - pi/2 = 0.1428
+       t   arg(lam)    arg(mu)   phase_diff   chi(t)
+       1     1.8636 ( 1.8636)     1.7136 ( 1.7136)       0.1500       QR
+       2    -1.8636 (-1.8636)    -2.8560 (-2.8560)       0.9924       NQ
+       3     1.8636 ( 1.8636)     1.9992 (-1.1424)      -0.1356       QR
+       4     1.8636 ( 1.8636)    -2.5704 ( 0.5712)       4.4340       QR
+       5     1.8636 ( 1.8636)     2.2848 ( 2.2848)      -0.4212       QR
+  p=19: Paley phase theta=1.3453, Interval phase phi=1.6535
+    theta - pi/2 = -0.2255
+    phi   - pi/2 = 0.0827
+       t   arg(lam)    arg(mu)   phase_diff   chi(t)
+       1     1.7963 ( 1.7963)     1.6535 ( 1.6535)       0.1428       QR
+       2    -1.7963 (-1.7963)    -2.9762 (-2.9762)       1.1799       NQ
+       3    -1.7963 (-1.7963)     1.8188 (-1.3228)      -3.6151       NQ
+       4     1.7963 ( 1.7963)    -2.8109 ( 0.3307)       4.6072       QR
+       5     1.7963 ( 1.7963)     1.9842 ( 1.9842)      -0.1879       QR
+       6     1.7963 ( 1.7963)    -2.6456 (-2.6456)       4.4419       QR
+       7     1.7963 ( 1.7963)     2.1495 (-0.9921)      -0.3532       QR
+       8    -1.7963 (-1.7963)    -2.4802 ( 0.6614)       0.6839       NQ
+       9     1.7963 ( 1.7963)     2.3149 ( 2.3149)      -0.5185       QR
+
+======================================================================
+Section 4: Exact H from trace sums (approximation via tr/k)
+======================================================================
+  H_approx = 1 + sum_{k=3,5,...,p} 2^{(k-1)/2} * tr(A^k)/k
+  This is approximate because tr(A^k)/k != c_k for k >= 7.
+  But it captures the TREND correctly.
+
+  p=7: H_P_approx=2741, H_I_approx=3301, margin=-16.96%, winner=INTERVAL
+  p=11: H_P_approx=145607740, H_I_approx=151200844, margin=-3.70%, winner=INTERVAL
+  p=19: H_P_approx=36654807196191825920, H_I_approx=36693260764265930752, margin=-0.10%, winner=INTERVAL
+  p=23: H_P_approx=80094729406214237040148480, H_I_approx=80108511782943111694516224, margin=-0.02%, winner=INTERVAL
+
+======================================================================
+Section 5: Additive energy E(S) = #{(a,b,c,d) in S^4 : a+b=c+d}
+======================================================================
+  Additive energy measures how 'structured' a set is additively.
+  Higher energy = more additive structure = more sum-zero solutions.
+
+  p=7: E(QR)=15, E(INT)=19, E(QR)/m^3=0.5556, E(INT)/m^3=0.7037
+  p=11: E(QR)=65, E(INT)=85, E(QR)/m^3=0.5200, E(INT)/m^3=0.6800
+  p=19: E(QR)=369, E(INT)=489, E(QR)/m^3=0.5062, E(INT)/m^3=0.6708
+  p=23: E(QR)=671, E(INT)=891, E(QR)/m^3=0.5041, E(INT)/m^3=0.6694
+  p=31: E(QR)=1695, E(INT)=2255, E(QR)/m^3=0.5022, E(INT)/m^3=0.6681
+
+======================================================================
+Section 6: Sumset structure — k-fold sumset density
+======================================================================
+
+  p=7:
+    QR: |S|=3, |2S|=6 |3S|=7=Z_p 
+    INT: |S|=3, |2S|=5 |3S|=7=Z_p 
+
+  p=11:
+    QR: |S|=5, |2S|=10 |3S|=11=Z_p 
+    INT: |S|=5, |2S|=9 |3S|=11=Z_p 
+
+  p=19:
+    QR: |S|=9, |2S|=18 |3S|=19=Z_p 
+    INT: |S|=9, |2S|=17 |3S|=19=Z_p 
+
+======================================================================
+Section 7: QR multiplicative closure and its additive consequences
+======================================================================
+
+    QR_p is CLOSED under multiplication: a*b in QR if a,b in QR.
+    Interval {1,...,m} is NOT multiplicatively closed.
+
+    Key property: For t in QR, the map s -> t*s permutes QR.
+    So the k-sum sum_{i} s_i = 0 mod p is equivalent to
+    sum_{i} (t*s_i) = t * sum_i s_i = 0 mod p (since t != 0).
+    The set of solutions is preserved by QR-multiplication.
+
+    This means M_k(QR) has a large symmetry group (QR itself),
+    while N_k(INT) has only trivial symmetry.
+
+    The multiplicative structure of QR creates UNIFORM distribution
+    of k-sums over residue classes, while INT creates BIASED distribution
+    (sums cluster near k*m/2 = k*(p-1)/4).
+
+    M_k = (1/p) * sum_{t=0}^{p-1} |hat{1_QR}(t)|^{2k} ... no wait,
+    M_k counts k-tuples summing to 0, not 2k.
+
+    Actually: p*M_k = sum_t (sum_{s in S} omega^{ts})^k = sum_t hat_S(t)^k.
+    This is the k-th moment of the DFT of 1_S.
+
+    For QR: |hat_QR(t)| = sqrt((p+1)/4) = const for all t != 0.
+    For INT: |hat_INT(t)| varies (Dirichlet kernel).
+
+    So p*M_k = m^k + (p-1)*((p+1)/4)^{k/2} * cos(k*Theta)  [some aggregate phase]
+    p*N_k = m^k + sum_{t=1}^{p-1} |hat_INT(t)|^k * cos(k*arg(hat_INT(t)))
+    
+  p=7:
+    |hat_QR|: min=1.4142, max=1.4142, all equal: True
+    |hat_INT|: min=0.5550, max=2.2470, ratio max/min=4.05
+  p=11:
+    |hat_QR|: min=1.7321, max=1.7321, all equal: True
+    |hat_INT|: min=0.5211, max=3.5133, ratio max/min=6.74
+  p=19:
+    |hat_QR|: min=2.2361, max=2.2361, all equal: True
+    |hat_INT|: min=0.5069, max=6.0548, ratio max/min=11.94
+
+======================================================================
+Section 8: OCF-based H comparison (using N_k solutions)
+======================================================================
+  The OCF gives: H = 1 + sum_{k odd} 2^{(k-1)/2} * c_k
+  For circulant tournaments: c_k = tr(A^k)/k exactly only for k<=5.
+  But tr(A^k) = sum_{j=0}^{p-1} lambda_j^k, so
+  Delta_H = sum_{k odd} 2^{(k-1)/2} * (tr_P^k - tr_I^k)/k
+          = sum_{k odd} 2^{(k-1)/2} * Delta_k / k
+  (This is APPROXIMATE for k>=7 due to non-simple walks.)
+
+  p=7: Cumulative Delta_H (partial sums up to k):
+    k<=3: cum=            -0.0 (-, k%4=3)
+    k<=5: cum=            56.0 (+, k%4=1)
+    k<=7: cum=          -560.0 (-, k%4=3)
+  p=11: Cumulative Delta_H (partial sums up to k):
+    k<=3: cum=            -0.0 (-, k%4=3)
+    k<=5: cum=           440.0 (+, k%4=1)
+    k<=7: cum=        -11792.0 (-, k%4=3)
+    k<=9: cum=        265232.0 (+, k%4=1)
+    k<=11: cum=      -5593104.0 (-, k%4=3)
+  p=19: Cumulative Delta_H (partial sums up to k):
+    k<=3: cum=             0.0 (+, k%4=3)
+    k<=5: cum=          4560.0 (+, k%4=1)
+    k<=7: cum=       -362976.0 (-, k%4=3)
+    k<=9: cum=      25935456.0 (+, k%4=1)
+    k<=11: cum=   -1814727392.0 (-, k%4=3)
+    k<=13: cum=  125467759776.0 (+, k%4=1)
+    k<=15: cum=-8572839668959.7 (-, k%4=3)
+    k<=17: cum=578284891261788.5 (+, k%4=1)
+    k<=19: cum=-38453568074105368.0 (-, k%4=3)
+
+======================================================================
+Section 9: Crossover prime prediction
+======================================================================
+  At each p = 3 mod 4, check if the approximate H_P > H_I.
+
+  p=  3: margin =    +0.0000% => INTERVAL
+  p=  7: margin =   -16.9646% => INTERVAL
+  p= 11: margin =    -3.6991% => INTERVAL
+  p= 19: margin =    -0.1048% => INTERVAL
+  p= 23: margin =    -0.0172% => INTERVAL
+  p= 31: margin =    -0.0005% => INTERVAL
+  p= 43: margin =    -0.0000% => INTERVAL
+  p= 47: margin =    -0.0000% => INTERVAL
+  p= 59: margin =    -0.0000% => INTERVAL
+  p= 67: margin =    -0.0000% => INTERVAL
+  p= 71: margin =    -0.0000% => INTERVAL
+  p= 79: margin =    -0.0000% => INTERVAL
+  p= 83: margin =    -0.0000% => INTERVAL
