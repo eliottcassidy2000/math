@@ -1,0 +1,89 @@
+======================================================================
+PROOF: QR ACTION ON CHORD TYPES IS ALWAYS TRANSITIVE (p = 3 mod 4)
+======================================================================
+
+THEOREM: For every prime p = 3 mod 4, the QR subgroup of (Z/pZ)* acts
+TRANSITIVELY on the set of chord types {1, 2, ..., (p-1)/2}.
+
+PROOF:
+  Let m = (p-1)/2. We need to show: for every k, t in {1,...,m},
+  there exists a QR element a such that a*k = t (mod p) or a*k = -t (mod p).
+
+  Consider the two candidates:
+    a_1 = t * k^{-1} mod p    (satisfies a_1 * k = t mod p)
+    a_2 = -t * k^{-1} mod p   (satisfies a_2 * k = -t mod p)
+
+  We have a_2 = -a_1 mod p, so chi(a_2) = chi(-1) * chi(a_1) = -chi(a_1)
+  (using chi(-1) = -1 for p = 3 mod 4).
+
+  Therefore: exactly one of a_1, a_2 is a QR.
+
+  If a_1 is QR: take a = a_1, then a*k = t mod p, and since t <= m,
+    chord type k maps to t.
+  If a_2 is QR: take a = a_2, then a*k = -t = p-t mod p.
+    Since p-t > m (because t <= m < p/2 < p-t), we have pi_a(k) = p-(p-t) = t.
+
+  In both cases: pi_a(k) = t. QED.
+
+COROLLARY: The fixed subspace of the QR signed permutation action
+on R^m is EXACTLY 1-dimensional, spanned by the Paley orientation sigma_P.
+
+COROLLARY: The interaction matrix J has exactly (m+1)/2 distinct eigenvalues,
+with the Paley eigenvalue being simple (multiplicity 1) and all others
+having multiplicity 2.
+
+VERIFICATION:
+  p=  3 (m=  1): OK
+  p=  7 (m=  3): OK
+  p= 11 (m=  5): OK
+  p= 19 (m=  9): OK
+  p= 23 (m= 11): OK
+  p= 31 (m= 15): OK
+  p= 43 (m= 21): OK
+  p= 47 (m= 23): OK
+  p= 59 (m= 29): OK
+  p= 67 (m= 33): OK
+  p= 71 (m= 35): OK
+  p= 79 (m= 39): OK
+  p= 83 (m= 41): OK
+  p=103 (m= 51): OK
+  p=107 (m= 53): OK
+
+======================================================================
+IS THE PALEY EIGENVALUE ALWAYS MAXIMAL?
+======================================================================
+
+We've proved sigma_P is an eigenvector of J. But is its eigenvalue
+lambda_0 always the LARGEST?
+
+At p=7: lambda_0 = 7.0, others = -3.5. YES.
+At p=11: lambda_0 = 561.0, others = 154.9, -435.4. YES.
+
+QUESTION: Is lambda_0 > lambda_j for all j > 0, for ALL p = 3 mod 4?
+
+From the eigenvalue formula:
+  lambda_0 = (1/m) * [E[H * A^2] - m * E[H]]
+
+Since A(sigma_P) = m (maximal) and H is monotone increasing in |A|
+(at least at p=7,11), we expect lambda_0 to be large.
+
+But we CANNOT prove lambda_0 is always maximal without understanding
+the higher eigenvalues. The maximality depends on the CURVATURE of
+H as a function of sigma, which involves all Walsh degrees.
+
+CONJECTURE: lambda_0 is the unique maximal eigenvalue of J for ALL
+p = 3 mod 4. This would mean Paley ALWAYS maximizes the degree-2
+quadratic form, even when it doesn't maximize H overall.
+
+
+p=19: Explicit QR elements mapping chord types:
+    k->t   a (QR)  which  a*k mod p  maps to
+  1-> 1        1    t/k          1        1
+  1-> 5        5    t/k          5        5
+  1-> 9        9    t/k          9        9
+  5-> 1        4    t/k          1        1
+  5-> 5        1    t/k          5        5
+  5-> 9       17    t/k          9        9
+  9-> 1       17    t/k          1        1
+  9-> 5        9    t/k          5        5
+  9-> 9        1    t/k          9        9
