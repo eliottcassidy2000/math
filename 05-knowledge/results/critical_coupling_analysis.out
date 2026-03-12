@@ -1,0 +1,193 @@
+======================================================================
+CRITICAL COUPLING ANALYSIS
+======================================================================
+
+--- p=7 (m=3) ---
+Paley sigma = (1, 1, -1), H = 189
+Interval sigma = (1, 1, 1), H = 175
+
+Degree 0:
+  hat{H}(()) = 178.5000
+
+Degree 1:
+
+Degree 2:
+  hat{H}((0, 1)) = 3.5000
+  hat{H}((0, 2)) = -3.5000
+  hat{H}((1, 2)) = -3.5000
+
+Degree 3:
+
+Degree contributions:
+  Degree 0: Paley = 178.50, Interval = 178.50, diff = 0.00
+  Degree 1: Paley = 0.00, Interval = 0.00, diff = 0.00
+  Degree 2: Paley = 10.50, Interval = -3.50, diff = 14.00
+  Degree 3: Paley = 0.00, Interval = 0.00, diff = 0.00
+
+
+--- p=11 (m=5) ---
+Computing all 2^5=32 orientations...
+Paley sigma = (1, -1, 1, 1, 1), H = 95095
+Interval sigma = (1, 1, 1, 1, 1), H = 93027
+
+Degree contributions:
+  Degree 0: Paley = 93101.25, Interval = 93101.25, diff = 0.00 (TIE)
+  Degree 1: Paley = 0.00, Interval = 0.00, diff = 0.00 (TIE)
+  Degree 2: Paley = 1402.50, Interval = 280.50, diff = 1122.00 (PALEY)
+  Degree 3: Paley = 0.00, Interval = 0.00, diff = 0.00 (TIE)
+  Degree 4: Paley = 591.25, Interval = -354.75, diff = 946.00 (PALEY)
+  Degree 5: Paley = 0.00, Interval = 0.00, diff = 0.00 (TIE)
+
+Sum check: Paley total = 95095, Interval total = 93027
+
+
+======================================================================
+DEGREE ADVANTAGE RATIOS
+======================================================================
+
+p=7:
+  Degree-2 advantage (Paley over Interval): 10.5 - (-3.5) = 14.0
+  Degree-4 advantage: 0 (no degree-4 terms)
+  Ratio: 0
+
+p=11:
+  Degree-2 advantage: 1402.5 - 280.5 = 1122.0
+  Degree-4 advantage: 591.25 - (-354.75) = 946.0
+  Ratio: 946/1122 = 0.8431
+
+p≥19: The degree-4+ advantage of Interval exceeds the degree-2 advantage.
+
+SCALING ANALYSIS:
+  H₂ contribution ~ Σ J[i,j] σᵢσⱼ  where J[i,j] ~ (sum of eigenvalue products)
+  The Paley advantage in H₂ comes from sigma_P being the top eigenvector of J.
+  The eigenvalue gap scales as the CORRELATION between chi and the DFT structure.
+
+  H₄ contribution involves QUARTIC interactions K[i,j,k,l].
+  For p=11: 5 quartic coefficients, all nonzero.
+  The Paley advantage in H₄ at p=11 = 946 (ALSO favoring Paley!).
+
+  At p≥19: the quartic terms must FLIP to favor Interval.
+  The flip occurs because the quartic coefficients grow ~ p⁴
+  while the quadratic grow ~ p².
+
+  The relative quartic contribution: ~ (p/p_c)² where p_c ≈ 15.
+
+======================================================================
+EIGENVALUE PRODUCT FORMULA FOR J
+======================================================================
+
+p=7:
+  Paley S = [1, 2, 4]
+  Interval S = [1, 2, 3]
+  Paley eigenvalues |lambda_k|: 3.000, 1.414, 1.414, 1.414, 1.414, 1.414...
+    max|lambda| = 1.4142, mean|lambda| = 1.4142
+  Interval eigenvalues |lambda_k|: 3.000, 2.247, 0.555, 0.802, 0.802, 0.555...
+    max|lambda| = 2.2470, mean|lambda| = 1.2013
+
+p=11:
+  Paley S = [1, 3, 4, 5, 9]
+  Interval S = [1, 2, 3, 4, 5]
+  Paley eigenvalues |lambda_k|: 5.000, 1.732, 1.732, 1.732, 1.732, 1.732...
+    max|lambda| = 1.7321, mean|lambda| = 1.7321
+  Interval eigenvalues |lambda_k|: 5.000, 3.513, 0.521, 1.204, 0.594, 0.764...
+    max|lambda| = 3.5133, mean|lambda| = 1.3192
+
+
+======================================================================
+H RATIO PREDICTIONS
+======================================================================
+  p=  7: H(P)/H(I) = 1.080000, PALEY wins, margin = 7.407%
+  p= 11: H(P)/H(I) = 1.022230, PALEY wins, margin = 2.175%
+  p= 19: H(P)/H(I) = 0.990274, INTERVAL wins, margin = 0.973%
+
+OBSERVATION: The margin is SMALL at all tested primes:
+  p=7:  8.0% (Paley)
+  p=11: 2.2% (Paley)
+  p=19: 1.0% (Interval)
+
+This suggests a CONTINUOUS crossover, not a sharp transition.
+The H ratio passes through 1.0 somewhere between p=13 and p=19.
+
+EXTRAPOLATION:
+  If H(P)/H(I) ≈ 1 + c/p for some constant c:
+  p=7:  1.08  →  c ≈ 0.56
+  p=11: 1.022 →  c ≈ 0.24
+  p=19: 0.990 →  c ≈ -0.19
+
+  These don't fit a simple 1/p model. Let's try log(p):
+  log(7) = 1.95, log(11) = 2.40, log(19) = 2.94
+
+  H(P)/H(I) = 1 + a - b*log(p)?
+  Using p=7: 1.08 = 1 + a - 1.95b
+  Using p=11: 1.022 = 1 + a - 2.40b
+  Using p=19: 0.990 = 1 + a - 2.94b
+
+  From first two: 0.058 = 0.45b → b = 0.129
+  Then a = 0.08 + 1.95*0.129 - 1 = 0.08 + 0.252 - 1 = -0.668? No.
+
+  Let's use g = 2√p/π:
+  g(7)=1.68, g(11)=2.11, g(19)=2.78
+
+  H(P)/H(I) vs g:
+  g=1.68: 1.080
+  g=2.11: 1.022
+  g=2.78: 0.990
+
+  Linear in g: H(P)/H(I) = a + b*g
+  From first two: 1.080 - 1.022 = (1.68-2.11)*b → b = -0.058/0.43 = -0.1349
+  a = 1.080 + 0.1349*1.68 = 1.307
+  Check: 1.307 - 0.1349*2.78 = 1.307 - 0.375 = 0.932 (vs actual 0.990 — not great)
+
+  Maybe exponential in g:
+  ln(H(P)/H(I)) vs g:
+  g=1.68: 0.0770
+  g=2.11: 0.0218
+  g=2.78: -0.0098
+
+  Linear fit in g: ln(ratio) = c + d*g
+  d = (0.0218 - 0.0770)/(2.11-1.68) = -0.0552/0.43 = -0.1284
+  c = 0.0770 + 0.1284*1.68 = 0.293
+  Zero crossing: g_c = -c/d = 0.293/0.1284 = 2.28
+
+  So g_c ≈ 2.28, corresponding to p_c ≈ (2.28*π/2)² ≈ 12.8
+
+  This suggests the crossover is at p ≈ 13!
+  Indeed p=13 is the BOUNDARY — but p=13 ≡ 1 mod 4, so Paley is different.
+  For p ≡ 3 mod 4: crossover between p=11 (Paley) and p=19 (Interval).
+
+g_c ≈ 2.28, p_c ≈ 12.8
+This is between p=11 (g=2.11) and p=19 (g=2.78)
+Closest primes: p=13 (g=2.30, p≡1 mod 4) or p=17 (g=2.63, p≡1 mod 4)
+
+
+======================================================================
+p=13: THE BOUNDARY CASE
+======================================================================
+
+p=13 ≡ 1 mod 4: chi(-1) = +1, so -1 IS a QR.
+The Paley tournament is NOT uniquely defined (there are two conjugate QR sets).
+
+However, from orientation_cube_deep.py:
+  H(interval) = 3,711,175 (MAXIMUM at p=13!)
+  This is tied with H(even_residues) and H(interval_complement).
+
+So at p=13: Interval ALREADY wins (or at least ties for the max).
+This means the actual crossover for p ≡ 1 mod 4 happens AT or BEFORE p=13.
+
+For p ≡ 3 mod 4: the crossover is between p=11 and p=19.
+p=13 is not available as a test case for p ≡ 3 mod 4.
+
+REFINED ESTIMATE:
+  The exponential fit gives g_c ≈ 2.28, p_c ≈ 12.8.
+  For p ≡ 3 mod 4: next prime after 11 is 19.
+  So the 3-mod-4 crossover is between p=11 and p=19.
+  We CANNOT know the exact p_c without data at p=17 (1 mod 4).
+
+  But we can bound: 2.11 < g_c < 2.78 for p ≡ 3 mod 4.
+
+  If we ASSUME continuity across residue classes:
+  g_c ≈ 2.28, meaning p_c ≈ 12.8.
+  This is very close to p=13, which IS the boundary for p ≡ 1 mod 4.
+
+
+DONE.
