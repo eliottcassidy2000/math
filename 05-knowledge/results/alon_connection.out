@@ -1,0 +1,119 @@
+ALON'S INTERVAL TOURNAMENT AND OUR OCF ANALYSIS
+===========================================================================
+
+PART 1: ALON'S BOUNDS vs ACTUAL VALUES
+---------------------------------------------------------------------------
+     n         P(n)   n!/2^(n-1)    ratio    sqrt(pi/2e)*n^1.5   UB ratio
+     3            3          1.5   2.0000               3.9500   0.506332
+     4            5          3.0   1.6667               6.0814   0.274060
+     5           15          7.5   2.0000               8.4990   0.235322
+     6           45         22.5   2.0000              11.1722   0.179015
+     7          189         78.8   2.4000              14.0786   0.170471
+     8          661        315.0   2.0984              17.2008   0.121995
+     9         3357       1417.5   2.3683              20.5247   0.115386
+    10        15745       7087.5   2.2215              24.0388   0.092414
+    11        95095      38981.2   2.4395              27.7333   0.087963
+
+===========================================================================
+PART 2: PALEY vs INTERVAL vs SZELE BOUND
+---------------------------------------------------------------------------
+     p             H(Paley)          H(Interval)                Szele     P/Sz     I/Sz
+     3                    3                    3                  1.5   2.0000   2.0000
+     7                  189                  175                 78.8   2.4000   2.2222
+    11                95095                93027              38981.2   2.4395   2.3865
+    19        1172695746915        1184212824763       464039231906.2   2.5271   2.5520
+
+===========================================================================
+PART 3: BRÉGMAN (MINC) BOUND ON 1-FACTORS
+---------------------------------------------------------------------------
+  n=7: k=3
+    Brégman UB for 1-factors: 6.54e+01
+    VdW LB for regular: 1.34e+01
+    Szele avg HP: 7.88e+01
+    Brégman/Szele ratio: 0.8307
+    Alon UB factor: sqrt(π/2e)*n^1.5 = 14.0786
+  n=11: k=5
+    Brégman UB for 1-factors: 3.75e+04
+    VdW LB for regular: 6.83e+03
+    Szele avg HP: 3.90e+04
+    Brégman/Szele ratio: 0.9624
+    Alon UB factor: sqrt(π/2e)*n^1.5 = 27.7333
+  n=19: k=9
+    Brégman UB for 1-factors: 5.46e+11
+    VdW LB for regular: 8.31e+10
+    Szele avg HP: 4.64e+11
+    Brégman/Szele ratio: 1.1769
+    Alon UB factor: sqrt(π/2e)*n^1.5 = 62.9569
+
+===========================================================================
+PART 4: OCF PERSPECTIVE ON THE n^{3/2} GAP
+---------------------------------------------------------------------------
+
+  Alon's proof chain:
+    P(T) ≤ n * C(T)  (any HP becomes a HC by adding one edge)
+    C(T) ≤ F(T) = Per(A_T)  (HC ⊂ 1-factors)
+    Per(A_T) ≤ Π (r_i!)^{1/r_i}  (Brégman/Minc)
+    → P(n) ≤ c * n^{3/2} * n!/2^{n-1}
+
+  OCF perspective:
+    H(T) = I(Ω(T), 2) = Σ_{k≥0} α_k * 2^k
+
+  The α_k encode the independence structure of the odd-cycle complex.
+  For regular tournaments (both Paley and Interval):
+    α_0 = 1
+    α_1 = # odd cycles (grows roughly as n!/n for the n-cycle component)
+    α_2 = # vertex-disjoint cycle pairs
+    ...
+
+  The n^{3/2} factor in Alon's bound comes from:
+    - n factor from HP → HC conversion
+    - √n factor from Brégman's inequality applied to regular matrix
+
+  Can the OCF give a TIGHTER bound?
+  The key constraint: independence number of Ω(T) is at most ⌊n/3⌋
+  (since each odd cycle uses ≥ 3 vertices and they must be disjoint).
+  So H ≤ 1 + 2^1*α_1 + 2^2*α_2 + ... + 2^{⌊n/3⌋}*α_{⌊n/3⌋}
+  where α_k ≤ C(total_cycles, k) but with vertex-disjointness constraint.
+    
+===========================================================================
+PART 5: GROWTH RATE P(n)^{1/n}
+---------------------------------------------------------------------------
+  Szele-Alon: lim P(n)^{1/n} = n/(2e)
+
+     n                 P(n)   P(n)^(1/n)   n/(2e)
+     3                    3     1.442250   0.5518
+     4                    5     1.495349   0.7358
+     5                   15     1.718772   0.9197
+     6                   45     1.885973   1.1036
+     7                  189     2.114506   1.2876
+     8                  661     2.251776   1.4715
+     9                 3357     2.464747   1.6555
+    10                15745     2.628538   1.8394
+    11                95095     2.835044   2.0233
+
+===========================================================================
+PART 6: IS INTERVAL THE GLOBAL MAX FOR ALL n ≥ 19?
+---------------------------------------------------------------------------
+  n=3: H(interval) =        3, P(n) =        3  = MAX
+  n=4: H(interval) =        4, P(n) =        5  < MAX (5)
+  n=5: H(interval) =       15, P(n) =       15  = MAX
+  n=6: H(interval) =       18, P(n) =       45  < MAX (45)
+  n=7: H(interval) =      175, P(n) =      189  < MAX (189)
+  n=8: H(interval) =      312, P(n) =      661  < MAX (661)
+  n=9: H(interval) =     3267, P(n) =     3357  < MAX (3357)
+  n=10: H(interval) =     6860, P(n) =    15745  < MAX (15745)
+  n=11: H(interval) =    93027, P(n) =    95095  < MAX (95095)
+
+===========================================================================
+PART 7: ALON'S OPEN CONJECTURE: C(T_n) = C(n)?
+---------------------------------------------------------------------------
+  Alon conjectures the interval tournament maximizes Hamiltonian CYCLES.
+  'It seems plausible that C(T_n) = C(n), but at the moment we are
+  unable to prove or disprove this statement.' (1990)
+
+  Our OCF analysis suggests this IS true for large n:
+  The interval's local structure creates better vertex-disjoint
+  cycle packings, and the OCF's 2^k weighting amplifies this.
+  The crossover at p=19 for paths likely also holds for cycles.
+
+DONE.
