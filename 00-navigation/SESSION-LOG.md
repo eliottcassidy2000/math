@@ -13,6 +13,67 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S62b — 2026-03-12: 12 cross-field connections for tournament H-maximization
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S60b (context compaction recovery)
+**Summary of work:**
+  Deep creative exploration of cross-field connections, per human request to
+  "come up with creative new connections to other fields."
+
+  MAJOR FINDINGS (12 connections, all computationally verified):
+
+  1. **ISING PHASE TRANSITION**: p=13 is critical point where degree-4 terms
+     jump from 15.9% to 81.6%. At p=7: pure quadratic (100% degree-2).
+     At p=13: degree-4 dominates. RG scaling: deg-2 ~ m^{-2}, deg-4 ~ m^{+9}.
+
+  2. **QR CODES / CODING THEORY**: Paley orientation IS the QR codeword.
+     QR is a PERFECT DIFFERENCE SET: C(s) = (p-3)/4 for ALL nonzero s.
+     Two-valued → eigenvector → THM-137.
+
+  3. **ANTI-RAMANUJAN PHENOMENON**: Paley has optimal spectral gap (Ramanujan),
+     but H-maximization wants DEVIATION from mean, not mixing. Interval's worse
+     gap → spectral deviation ratio (2√p/π)^p grows super-exponentially
+     (40 at p=7, 10^63 at p=83).
+
+  4. **SDP/SOS HIERARCHY**: Phase transition = SOS level 1→2 transition.
+     Degree-2 SDP exact at p=7,11, WRONG at p=13 (integrality gap = 41678).
+     Connected to MAX-CUT, Goemans-Williamson, Unique Games Conjecture.
+
+  5. **SUM-PRODUCT PHENOMENON**: QR is multiplicatively closed (|QR·QR|=m),
+     Interval is additively structured. E(Int)/E(QR) → 4/3. QR has flat
+     intersection profile (variance=0), Interval has triangular (variance grows).
+     Phase transition = sum-product: multiplicative→additive as p grows.
+
+  6. **RANDOM MATRIX THEORY**: J eigenvalues = Schur-Weyl decomposition under
+     QR action. Structure: 1 singlet + (m-1)/2 doublets (from irreps).
+
+  7. **IHARA ZETA FUNCTION**: Z(u)^{-1} = det(I-uA) bridges eigenvalues to
+     cycle counts. Pole at u=1/m. Cycle alternation confirms THM-136.
+
+  8. **MCMC / ENERGY LANDSCAPE**: p=7: 2 local maxima (benign), p=11: 12
+     (roughening). Greedy search always finds global max at p=7.
+
+  9. **MODULAR FORMS**: Gauss sum g(p)=i√p is Hecke eigenvalue. Trace formula
+     for Paley = spectral decomposition on Hecke eigenforms.
+
+  10. **UNCERTAINTY PRINCIPLE**: Donoho-Stark for tournaments. Concentrated
+      connection set → peaked spectrum → high H.
+
+  11. **BOOLEAN FUNCTION COMPLEXITY**: H is symmetric (QR-invariant), all
+      coordinates equally influential. Noise-stable→noise-sensitive crossover.
+
+  12. **PERMANENT BOUNDS**: Product of eigenvalue magnitudes (Barvinok approx).
+
+**New contributions:** HYP-493 to HYP-497, scripts: ising_phase_transition.py,
+  deep_connections.py, anti_ramanujan_proof.py, ihara_zeta_ocf.py,
+  sdp_sos_hierarchy.py, sum_product_tournament.py
+**Unresolved threads:**
+  - Formalize anti-Ramanujan proof (cycle expansion with error bounds)
+  - Develop QR code ↔ ML decoding analogy further
+  - Test SDP gap at p=19 (requires full 2^9 cube computation)
+  - Compute Ihara zeta at p=11 with full odd-cycle graph (scalability issue)
+
 ## opus-2026-03-12-S62 — 2026-03-12: Dihedral tournament geometry + THM-137 Paley eigenvector theorem
 
 **Account:** opus
