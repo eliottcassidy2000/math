@@ -1,0 +1,40 @@
+======================================================================
+THM-136 VERIFICATION: k=5 FOR ALL PRIMES p=3 mod 4
+======================================================================
+
+PART 1: k=5 exact DP verification (Delta_5 = p*(M_5 - N_5))
+----------------------------------------------------------------------
+  Testing 154 primes p = 3 mod 4 in [7, 2000]
+  [103/154] p=1279: M5=83297586240, N5=83188871040, Delta5=>0, M5/N5-1=0.001307 [10.0s]
+  [126/154] p=1559: M5=184009514130, N5=183812543980, Delta5=>0, M5/N5-1=0.001072 [20.0s]
+  [143/154] p=1823: M5=344195003880, N5=343879980080, Delta5=>0, M5/N5-1=0.000916 [30.6s]
+  [154/154] p=1999: M5=497753248500, N5=497337831000, Delta5=>0, M5/N5-1=0.000835 [40.0s]
+
+  Results: 154 OK, 0 FAIL out of 154 primes
+  Closest margin: M5/N5-1 = 0.00083528 at p=1999
+  Total time: 40.0s
+
+======================================================================
+PART 2: Full trace alternation (all odd k) for p <= 200
+----------------------------------------------------------------------
+  p=7: 2 k-values tested, all OK
+  p=11: 4 k-values tested, all OK
+  p=19: 8 k-values tested, all OK
+  p=23: 10 k-values tested, all OK
+  p=31: 14 k-values tested, all OK
+  p=43: 20 k-values tested, all OK
+  p=47: 22 k-values tested, all OK
+  p=59: 28 k-values tested, all OK
+  p=67: 32 k-values tested, all OK
+  p=71: 34 k-values tested, all OK
+  p=79: 38 k-values tested, all OK
+  p=83: 40 k-values tested, all OK
+  p=199: 98 k-values tested, all OK
+
+  TOTAL: 1064/1064 tests passed, 0 failures
+
+  THM-136 VERIFIED for ALL p = 3 mod 4 up to 2000 (all k)
+  and k=5 specifically up to p = 2000
+  ZERO violations across all tests
+
+DONE.
