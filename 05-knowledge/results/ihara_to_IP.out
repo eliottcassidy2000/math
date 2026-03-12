@@ -1,0 +1,83 @@
+======================================================================
+IHARA ZETA AND CYCLE STRUCTURE
+======================================================================
+
+--- p=7, Paley ---
+  k  tr(A^k)  tr/k
+   3            42         14.00
+   4            84         21.00
+   5           210         42.00
+   6           756        126.00
+   7          2226        318.00
+
+--- p=7, Interval ---
+  k  tr(A^k)  tr/k
+   3            42         14.00
+   4           112         28.00
+   5           140         28.00
+   6           672        112.00
+   7          2765        395.00
+
+--- p=11, Paley ---
+  k  tr(A^k)  tr/k
+   3           165         55.00
+   4           660        165.00
+   5          2970        594.00
+   6         15675       2612.50
+   7         78540      11220.00
+   8        390060      48757.50
+   9       1952445     216938.33
+  10       9768000     976800.00
+  11      48827790    4438890.00
+
+--- p=11, Interval ---
+  k  tr(A^k)  tr/k
+   3           165         55.00
+   4           880        220.00
+   5          2420        484.00
+   6         13167       2194.50
+   7         89243      12749.00
+   8        409904      51238.00
+   9       1796619     199624.33
+  10       9684070     968407.00
+  11      50841593    4621963.00
+
+======================================================================
+IHARA ZETA DETERMINANT: Z(u)^{-1} = det(I - u*A)
+======================================================================
+
+  p=7, Paley:
+  Eigenvalues: ['3.00+0.00j', '-0.50+1.32j', '-0.50+1.32j', '-0.50-1.32j', '-0.50+1.32j', '-0.50-1.32j', '-0.50-1.32j']
+  Z(0.1)^{-1} = det(I - 0.1*A) = 0.983450
+  Z(0.2)^{-1} = det(I - 0.2*A) = 0.838861
+  Z(0.3)^{-1} = det(I - 0.3*A) = 0.324179
+
+  p=7, Interval:
+  Eigenvalues: ['3.00+0.00j', '-0.50+2.19j', '-0.50-0.24j', '-0.50+0.63j', '-0.50-0.63j', '-0.50+0.24j', '-0.50-2.19j']
+  Z(0.1)^{-1} = det(I - 0.1*A) = 0.982906
+  Z(0.2)^{-1} = det(I - 0.2*A) = 0.833306
+  Z(0.3)^{-1} = det(I - 0.3*A) = 0.316298
+
+======================================================================
+KEY INSIGHT
+======================================================================
+
+  The Ihara zeta function Z_T(u) encodes COUNTS of directed k-cycles:
+    log Z = sum c_k u^k / k
+
+  But H = I(Omega, 2) depends on INDEPENDENT SETS of cycles (disjointness).
+
+  Two tournaments can have identical c_k for all k but different H values,
+  if their cycles have different conflict structures.
+
+  At p=7:
+    - Paley: c_3=14, c_5=42, c_7=24, alpha_1=80, alpha_2=7, H=189
+    - Interval: c_3=14, c_5=28, c_7=17, alpha_1=59, alpha_2=14, H=175
+
+  Same c_3, different c_5 and c_7, but crucially different alpha_2!
+  Interval has DOUBLE the disjoint cycle pairs (14 vs 7).
+
+  This means H-maximization is NOT purely a spectral problem.
+  It requires understanding the GEOMETRIC structure of cycle overlaps,
+  which is where the additive energy / flow picture becomes essential.
+
