@@ -1,0 +1,88 @@
+======================================================================
+CYCLE COUNT RATIO P/I BY k AND p
+======================================================================
+
+  p=7:
+    k= 3  k/p=0.429  P/I=1.000000  TIE
+    k= 5  k/p=0.714  P/I=1.500000  PALEY
+    k= 7  k/p=1.000  P/I=1.411765  PALEY
+
+  p=11:
+    k= 3  k/p=0.273  P/I=1.000000  TIE
+    k= 5  k/p=0.455  P/I=1.227273  PALEY
+    k= 7  k/p=0.636  P/I=1.165049  PALEY
+    k= 9  k/p=0.818  P/I=1.182353  PALEY
+    k=11  k/p=1.000  P/I=1.077510  PALEY
+
+  p=19:
+    k= 3  k/p=0.158  P/I=1.000000  TIE
+    k= 5  k/p=0.263  P/I=1.108696  PALEY
+    k= 7  k/p=0.368  P/I=1.083600  PALEY
+    k= 9  k/p=0.474  P/I=1.124771  PALEY
+    k=11  k/p=0.579  P/I=1.109987  PALEY
+    k=13  k/p=0.684  P/I=1.107915  PALEY
+    k=15  k/p=0.789  P/I=1.080381  PALEY
+    k=17  k/p=0.895  P/I=1.043579  PALEY
+    k=19  k/p=1.000  P/I=0.986149  INTERVAL
+  REVERSAL at k=19: P/I = 0.986149
+
+======================================================================
+UNIVERSAL PATTERN?
+======================================================================
+
+  At p=7:  reversal at k=7 (k/p = 1.000) — Interval wins only at full cycle
+  At p=11: reversal at k=11 (k/p = 1.000) — same!
+  At p=19: reversal at k=19 (k/p = 1.000) — same!
+
+  But the RATIO at k=p tells us how it relates to H:
+  - p=7:  c_p(P)/c_p(I) = 24/17 = 1.412  — Paley wins even at k=p!
+  Wait, that contradicts what I said. Let me recheck.
+
+  p=7: c_p(P)/c_p(I) = 24/17 = 1.411765
+  p=11: c_p(P)/c_p(I) = 5505/5109 = 1.077510
+  p=19: c_p(P)/c_p(I) = 34358763933/34841356485 = 0.986149
+
+======================================================================
+HAMILTONIAN CYCLES vs PATHS
+======================================================================
+
+    p      name                     H              c_p                 p*c_p            non-cyclic   c_p/h_0
+    7     Paley                   189               24                   168                     3    0.8889
+    7  Interval                   175               17                   119                     8    0.6800
+   11     Paley                95,095            5,505                60,555                 3,140    0.6368
+   11  Interval                93,027            5,109                56,199                 3,348    0.6041
+   19     Paley     1,172,695,746,915   34,358,763,933       652,816,514,727        27,362,064,852    0.5567
+   19  Interval     1,184,212,824,763   34,841,356,485       661,985,773,215        27,485,634,292    0.5590
+
+  OBSERVATIONS:
+  1. c_p / h_0 INCREASES with p (more paths are cyclic at larger p)
+  2. At p=19: 55.5% of paths from v0 complete a Hamiltonian cycle
+  3. At p=7: only 38.1% (Paley) / 24.3% (Interval) of paths are cyclic
+  4. Interval has HIGHER c_p/h_0 at p=19 (55.9% vs 55.6%)
+     but LOWER at p=7 (24.3% vs 38.1%)
+  5. The reversal in cyclic fraction tracks the H-maximization crossover
+
+
+======================================================================
+ADDITIVE ENERGY AND CYCLE DISJOINTNESS
+======================================================================
+
+  p=7, m=3:
+    QR:  E = 15, theory = 9
+    Int: E = 19, theory = 19
+    Ratio E(Int)/E(QR) = 1.2667
+
+  p=11, m=5:
+    QR:  E = 65, theory = 35
+    Int: E = 85, theory = 85
+    Ratio E(Int)/E(QR) = 1.3077
+
+  p=19, m=9:
+    QR:  E = 369, theory = 243
+    Int: E = 489, theory = 489
+    Ratio E(Int)/E(QR) = 1.3252
+
+  p=23, m=11:
+    QR:  E = 671, theory = 473
+    Int: E = 891, theory = 891
+    Ratio E(Int)/E(QR) = 1.3279

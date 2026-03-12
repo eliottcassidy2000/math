@@ -1,0 +1,153 @@
+======================================================================
+CYCLE COUNTS AND ALPHA DECOMPOSITION AT p=19
+======================================================================
+QR set:       [1, 4, 5, 6, 7, 9, 11, 16, 17]
+Interval set: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+======================================================================
+Paley tournament on Z_19
+======================================================================
+
+  k=3: enumerating cycles through vertex 0 (153 subsets)...
+  k=3: c_k^(0) = 45, c_k = 285 (0.0s)
+
+  k=5: enumerating cycles through vertex 0 (3060 subsets)...
+  k=5: c_k^(0) = 3060, c_k = 11628 (0.0s)
+
+  k=7: enumerating cycles through vertex 0 (18564 subsets)...
+    5000/18564 subsets, 41627 cycles, 0.2s elapsed, ETA 1s
+    10000/18564 subsets, 83612 cycles, 0.4s elapsed, ETA 0s
+    15000/18564 subsets, 125984 cycles, 0.6s elapsed, ETA 0s
+  k=7: c_k^(0) = 156240, c_k = 424080 (0.8s)
+
+  k=9: enumerating cycles through vertex 0 (43758 subsets)...
+    5000/43758 subsets, 674061 cycles, 1.3s elapsed, ETA 10s
+    10000/43758 subsets, 1315439 cycles, 2.6s elapsed, ETA 9s
+    15000/43758 subsets, 1964524 cycles, 4.0s elapsed, ETA 8s
+    20000/43758 subsets, 2636925 cycles, 5.4s elapsed, ETA 6s
+    25000/43758 subsets, 3273829 cycles, 6.6s elapsed, ETA 5s
+    30000/43758 subsets, 3935534 cycles, 7.9s elapsed, ETA 4s
+    35000/43758 subsets, 4594620 cycles, 9.3s elapsed, ETA 2s
+    40000/43758 subsets, 5262490 cycles, 10.6s elapsed, ETA 1s
+  k=9: c_k^(0) = 5758290, c_k = 12156390 (11.6s)
+
+  k=11: enumerating cycles through vertex 0 (43758 subsets)...
+    5000/43758 subsets, 16622566 cycles, 8.7s elapsed, ETA 67s
+    10000/43758 subsets, 33137919 cycles, 17.2s elapsed, ETA 58s
+    15000/43758 subsets, 49507913 cycles, 25.9s elapsed, ETA 50s
+    20000/43758 subsets, 65813554 cycles, 34.6s elapsed, ETA 41s
+    25000/43758 subsets, 82475419 cycles, 43.6s elapsed, ETA 33s
+    30000/43758 subsets, 98744609 cycles, 51.8s elapsed, ETA 24s
+    35000/43758 subsets, 115250753 cycles, 60.1s elapsed, ETA 15s
+    40000/43758 subsets, 131834907 cycles, 68.8s elapsed, ETA 6s
+  k=11: c_k^(0) = 144278838, c_k = 249208902 (75.3s)
+
+  k=13: enumerating cycles through vertex 0 (18564 subsets)...
+    5000/18564 subsets, 605685547 cycles, 56.1s elapsed, ETA 152s
+    10000/18564 subsets, 1207962729 cycles, 114.2s elapsed, ETA 98s
+    15000/18564 subsets, 1812874656 cycles, 170.5s elapsed, ETA 41s
+  k=13: c_k^(0) = 2244826584, c_k = 3280900392 (210.7s)
+
+  k=15: enumerating cycles through vertex 0 (3060 subsets)...
+  k=15: c_k^(0) = 18680826150, c_k = 23662379790 (209.1s)
+
+  k=17: enumerating cycles through vertex 0 (153 subsets)...
+  k=17: c_k^(0) = 62096011911, c_k = 69401425077 (58.2s)
+
+  k=19: enumerating cycles through vertex 0 (1 subsets)...
+  k=19: c_k^(0) = 34358763933, c_k = 34358763933 (2.0s)
+
+  Total enumeration time: 567.6s
+
+  CYCLE COUNTS:
+    c_ 3 =                  285   (C(19,3)=969, ratio=0.2941)
+    c_ 5 =               11,628   (C(19,5)=11628, ratio=1.0000)
+    c_ 7 =              424,080   (C(19,7)=50388, ratio=8.4163)
+    c_ 9 =           12,156,390   (C(19,9)=92378, ratio=131.5940)
+    c_11 =          249,208,902   (C(19,11)=75582, ratio=3297.1991)
+    c_13 =        3,280,900,392   (C(19,13)=27132, ratio=120923.6471)
+    c_15 =       23,662,379,790   (C(19,15)=3876, ratio=6104845.1471)
+    c_17 =       69,401,425,077   (C(19,17)=171, ratio=405856287.0000)
+    c_19 =       34,358,763,933   (C(19,19)=1, ratio=34358763933.0000)
+
+  alpha_1 = 130,965,270,477
+  H (known) = 1,172,695,746,915
+  2*alpha_1 = 261,930,540,954
+  higher (sum_{j>=2} 2^j alpha_j) = 910,765,205,960
+  higher / H = 0.776642 = 77.66%
+
+======================================================================
+Interval tournament on Z_19
+======================================================================
+
+  k=3: enumerating cycles through vertex 0 (153 subsets)...
+  k=3: c_k^(0) = 45, c_k = 285 (0.0s)
+
+  k=5: enumerating cycles through vertex 0 (3060 subsets)...
+  k=5: c_k^(0) = 2760, c_k = 10488 (0.0s)
+
+  k=7: enumerating cycles through vertex 0 (18564 subsets)...
+    5000/18564 subsets, 32180 cycles, 0.2s elapsed, ETA 1s
+    10000/18564 subsets, 72910 cycles, 0.5s elapsed, ETA 0s
+    15000/18564 subsets, 117715 cycles, 0.7s elapsed, ETA 0s
+  k=7: c_k^(0) = 144186, c_k = 391362 (0.8s)
+
+  k=9: enumerating cycles through vertex 0 (43758 subsets)...
+    5000/43758 subsets, 403282 cycles, 1.4s elapsed, ETA 11s
+    10000/43758 subsets, 941735 cycles, 2.8s elapsed, ETA 9s
+    15000/43758 subsets, 1577349 cycles, 4.2s elapsed, ETA 8s
+    20000/43758 subsets, 2159017 cycles, 5.5s elapsed, ETA 7s
+    25000/43758 subsets, 2743419 cycles, 7.0s elapsed, ETA 5s
+    30000/43758 subsets, 3462953 cycles, 8.4s elapsed, ETA 4s
+    35000/43758 subsets, 4091257 cycles, 9.8s elapsed, ETA 2s
+    40000/43758 subsets, 4760601 cycles, 11.1s elapsed, ETA 1s
+  k=9: c_k^(0) = 5119524, c_k = 10807884 (12.0s)
+
+  k=11: enumerating cycles through vertex 0 (43758 subsets)...
+    5000/43758 subsets, 10446161 cycles, 9.0s elapsed, ETA 70s
+    10000/43758 subsets, 24640901 cycles, 18.0s elapsed, ETA 61s
+    15000/43758 subsets, 39358918 cycles, 27.0s elapsed, ETA 52s
+    20000/43758 subsets, 55900191 cycles, 36.0s elapsed, ETA 43s
+    25000/43758 subsets, 70769700 cycles, 44.7s elapsed, ETA 34s
+    30000/43758 subsets, 87234547 cycles, 54.0s elapsed, ETA 25s
+    35000/43758 subsets, 104177044 cycles, 63.1s elapsed, ETA 16s
+    40000/43758 subsets, 120360936 cycles, 72.0s elapsed, ETA 7s
+  k=11: c_k^(0) = 129982490, c_k = 224515210 (78.1s)
+
+  k=13: enumerating cycles through vertex 0 (18564 subsets)...
+    5000/18564 subsets, 480728158 cycles, 60.6s elapsed, ETA 164s
+    10000/18564 subsets, 1056200189 cycles, 123.3s elapsed, ETA 106s
+    15000/18564 subsets, 1636866764 cycles, 180.8s elapsed, ETA 43s
+  k=13: c_k^(0) = 2026172616, c_k = 2961329208 (222.1s)
+
+  k=15: enumerating cycles through vertex 0 (3060 subsets)...
+  k=15: c_k^(0) = 17290965105, c_k = 21901889133 (219.6s)
+
+  k=17: enumerating cycles through vertex 0 (153 subsets)...
+  k=17: c_k^(0) = 59502957286, c_k = 66503305202 (82.0s)
+
+  k=19: enumerating cycles through vertex 0 (1 subsets)...
+  k=19: c_k^(0) = 34841356485, c_k = 34841356485 (2.7s)
+
+  Total enumeration time: 617.4s
+
+  CYCLE COUNTS:
+    c_ 3 =                  285   (C(19,3)=969, ratio=0.2941)
+    c_ 5 =               10,488   (C(19,5)=11628, ratio=0.9020)
+    c_ 7 =              391,362   (C(19,7)=50388, ratio=7.7670)
+    c_ 9 =           10,807,884   (C(19,9)=92378, ratio=116.9963)
+    c_11 =          224,515,210   (C(19,11)=75582, ratio=2970.4852)
+    c_13 =        2,961,329,208   (C(19,13)=27132, ratio=109145.2605)
+    c_15 =       21,901,889,133   (C(19,15)=3876, ratio=5650642.1912)
+    c_17 =       66,503,305,202   (C(19,17)=171, ratio=388908217.5556)
+    c_19 =       34,841,356,485   (C(19,19)=1, ratio=34841356485.0000)
+
+  alpha_1 = 126,443,605,257
+  H (known) = 1,184,212,824,763
+  2*alpha_1 = 252,887,210,514
+  higher (sum_{j>=2} 2^j alpha_j) = 931,325,614,248
+  higher / H = 0.786451 = 78.65%
+
+======================================================================
+ISING DECOMPOSITION COMPARISON
+======================================================================

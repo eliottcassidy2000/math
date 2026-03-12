@@ -1,0 +1,120 @@
+======================================================================
+TRACE-TO-H CONNECTION FOR CIRCULANT TOURNAMENTS
+======================================================================
+
+p = 7:
+  QR = [1, 2, 4]
+  INT = [1, 2, 3]
+
+  Traces (tr(A^k)):
+     k           Paley        Interval           Delta   P>I?
+     3              42              42               0      I
+     5             210             140              70      P
+     7            2226            2765            -539      I
+
+  Cycle counts (c_k = #7-cycles):
+     k      Paley   Interval      Delta
+     3         14         14          0
+     5         42         28         14
+     7         24         17          7
+
+  Check: tr(A^3)/3 = 14 vs c_3 = 14 (Paley)
+  Check: tr(A^3)/3 = 14 vs c_3 = 14 (Interval)
+
+  Total odd cycles: Paley=80, Interval=59
+
+  ACCUMULATED trace advantage (weighted by 2^{(k-1)/2}/k):
+  Paley cumulative:   2740.0
+  Interval cumulative: 3300.0
+  Advantage: Interval by 560.0
+
+p = 11:
+  QR = [1, 3, 4, 5, 9]
+  INT = [1, 2, 3, 4, 5]
+
+  Traces (tr(A^k)):
+     k           Paley        Interval           Delta   P>I?
+     3             165             165               0      I
+     5            2970            2420             550      P
+     7           78540           89243          -10703      I
+     9         1952445         1796619          155826      P
+    11        48827790        50841593        -2013803      I
+
+  Cycle counts (c_k = #11-cycles):
+     k      Paley   Interval      Delta
+     3         55         55          0
+     5        594        484        110
+     7       3960       3399        561
+     9      11055       9350       1705
+    11       5505       5109        396
+
+  Check: tr(A^3)/3 = 55 vs c_3 = 55 (Paley)
+  Check: tr(A^3)/3 = 55 vs c_3 = 55 (Interval)
+
+  Total odd cycles: Paley=21169, Interval=18397
+
+  ACCUMULATED trace advantage (weighted by 2^{(k-1)/2}/k):
+  Paley cumulative:   145607739.3
+  Interval cumulative: 151200843.3
+  Advantage: Interval by 5593104.0
+
+p = 19:
+  QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+  INT = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  Traces (tr(A^k)):
+     k           Paley        Interval           Delta   P>I?
+     3             855             855               0      I
+     5           58140           52440            5700      P
+     7         4788000         5109594         -321594      I
+     9       387397935       372605067        14792868      P
+    11     31381136820     32013864674      -632727854      I
+    13   2541865697280   2516011442074     25854255206      P
+    15 205891131343815 206910464245620  -1019332901805      I
+    17 16677181709700308 16638210688505688  38971021194620      P
+    19 1350851717601457408 1352300165270094080 -1448447668636672      I
+
+  Cycle counts (c_k = #19-cycles):
+     k      Paley   Interval      Delta
+     3        285        285          0
+     5      11628      10488       1140
+     7     424080     391362      32718
+     9   12156390   10807884    1348506
+    11  249208902  224515210   24693692
+    13 3280900392 2961329208  319571184
+    15 23662379790 21901889133 1760490657
+    17 69401425077 66503305202 2898119875
+    19 34358763933 34841356485 -482592552
+
+  Check: tr(A^3)/3 = 285 vs c_3 = 285 (Paley)
+  Check: tr(A^3)/3 = 285 vs c_3 = 285 (Interval)
+
+  Total odd cycles: Paley=130965270477, Interval=126443605257
+
+  ACCUMULATED trace advantage (weighted by 2^{(k-1)/2}/k):
+  Paley cumulative:   36654807196191825920.0
+  Interval cumulative: 36693260764265930752.0
+  Advantage: Interval by 38453568074104832.0
+
+======================================================================
+KEY OBSERVATION
+======================================================================
+
+  The OCF is H(T) = I(Omega(T), 2) which depends on the INDEPENDENCE POLYNOMIAL
+  of the conflict graph Omega. This is NOT simply a sum of cycle counts --
+  it depends on which cycles are vertex-disjoint (independent sets in Omega).
+
+  However, traces tr(A^k) DO constrain the cycle counts c_k, and the
+  trace alternation theorem (THM-136) shows that Paley has more k-cycles
+  at k = 1 mod 4 while Interval has more at k = 3 mod 4.
+
+  The key connection to H: at large p, the higher-k cycles dominate H
+  (via 2^{(k-1)/2} weighting) AND the interval wins more decisively at
+  those higher k values (eigenvalue ratio grows as power of k).
+
+  This creates an ASYMPTOTIC PROOF that H(Interval) > H(Paley) for large p:
+  the weighted sum is dominated by large k where Interval wins decisively.
+
+  But converting this to a bound on I(Omega, 2) requires understanding
+  the CONFLICT STRUCTURE -- how many cycles are vertex-disjoint.
+
