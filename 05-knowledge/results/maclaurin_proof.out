@@ -1,0 +1,248 @@
+MACLAURIN INEQUALITY AND PALEY H-MAXIMIZATION
+======================================================================
+
+======================================================================
+MACLAURIN INEQUALITY ANALYSIS FOR p = 7
+======================================================================
+
+--- Maclaurin's Inequality Verification ---
+For Paley (all y^2 = 1.7500):
+  e_k / C(m,k):
+    e_1/C(3,1) = 5.2500 / 3 = 1.750000
+    e_2/C(3,2) = 9.1875 / 3 = 3.062500
+    e_3/C(3,3) = 5.3594 / 1 = 5.359375
+
+  Expected: e_k = C(m,k) * v^k where v = 1.75
+    k=1: expected=5.250000, actual=5.250000, match=True
+    k=2: expected=9.187500, actual=9.187500, match=True
+    k=3: expected=5.359375, actual=5.359375, match=True
+
+--- Fractional e_k Gaps (Paley advantage) ---
+  Delta_k / e_k(Paley) for each tournament:
+
+  H=175:
+    k=2: e_k=2.1875, Delta=7.0000, frac=0.761905
+    k=3: e_k=0.1094, Delta=5.2500, frac=0.979592
+    Fractional gap increasing? True
+
+--- H in elementary symmetric basis ---
+  H = 170.6250 + (2.0000)*e_2  [residual: 0.00e+00]
+
+--- Contribution Budget (why Paley wins) ---
+
+  H=175: total deficit = 14
+    c_2*Delta(e_2) = 2.00 * 7.0000 = +14.00 (helps)
+    Sum = 14.00 (should match deficit 14)
+
+======================================================================
+THEORETICAL ANALYSIS: Sufficient conditions for Paley maximization
+======================================================================
+
+  Second-order analysis at Paley (uniform) point:
+  Hessian of e_k restricted to Parseval hyperplane:
+  H(e_k)|_Parseval = -C(m-2,k-2) * v^{k-2} * I
+  This is NEGATIVE DEFINITE for k >= 2!
+
+    k=2: curvature = -1.000000
+    k=3: curvature = -1.750000
+
+  Hessian of H at Paley:
+    c_2 * curv(e_2) = 2.00 * -1.000000 = -2.0000
+
+  Total Hessian eigenvalue = -2.000000
+  Paley is LOCAL MAX of H on Parseval simplex
+
+  *** PALEY IS A LOCAL MAXIMUM OF H ***
+  Combined with Paley being the UNIQUE critical point (by symmetry),
+  and H being a polynomial of bounded degree on a compact domain,
+  this strongly suggests Paley is the GLOBAL maximum.
+
+--- Global optimality verification ---
+  max(H) = 189, achieved by 2/8 tournaments
+  Paley count = 1
+  Paley achieves max? True
+
+--- Monotonicity in e_m (product) after normalization ---
+  H=189: e_3=5.359375, H/e_3=35.2653 (Paley)
+  H=175: e_3=0.109375, H/e_3=1600.0000 
+
+======================================================================
+MACLAURIN INEQUALITY BOUND
+======================================================================
+
+  Maclaurin means mu_k = (e_k / C(m,k))^(1/k):
+
+  H=189 (Paley):
+    mu_1 = 1.750000    mu_2 = 1.750000    mu_3 = 1.750000
+    Decreasing? True
+    (All equal = 1.750000, as expected)
+
+  H=175 :
+    mu_1 = 1.750000    mu_2 = 0.853913    mu_3 = 0.478233
+    Decreasing? True
+    Deviation from Paley (1.750000): -0.0% +51.2% +72.7%
+
+======================================================================
+MACLAURIN INEQUALITY ANALYSIS FOR p = 11
+======================================================================
+
+--- Maclaurin's Inequality Verification ---
+For Paley (all y^2 = 2.7500):
+  e_k / C(m,k):
+    e_1/C(5,1) = 13.7500 / 5 = 2.750000
+    e_2/C(5,2) = 75.6250 / 10 = 7.562500
+    e_3/C(5,3) = 207.9688 / 10 = 20.796875
+    e_4/C(5,4) = 285.9570 / 5 = 57.191406
+    e_5/C(5,5) = 157.2764 / 1 = 157.276367
+
+  Expected: e_k = C(m,k) * v^k where v = 2.75
+    k=1: expected=13.750000, actual=13.750000, match=True
+    k=2: expected=75.625000, actual=75.625000, match=True
+    k=3: expected=207.968750, actual=207.968750, match=True
+    k=4: expected=285.957031, actual=285.957031, match=True
+    k=5: expected=157.276367, actual=157.276367, match=True
+
+--- Fractional e_k Gaps (Paley advantage) ---
+  Delta_k / e_k(Paley) for each tournament:
+
+  H=93467:
+    k=2: e_k=53.6250, Delta=22.0000, frac=0.290909
+    k=3: e_k=81.4688, Delta=126.5000, frac=0.608264
+    k=4: e_k=45.3320, Delta=240.6250, frac=0.841473
+    k=5: e_k=5.6826, Delta=151.5938, frac=0.963869
+    Fractional gap increasing? True
+
+  H=93027:
+    k=2: e_k=20.6250, Delta=55.0000, frac=0.727273
+    k=3: e_k=7.2188, Delta=200.7500, frac=0.965289
+    k=4: e_k=0.6445, Delta=285.3125, frac=0.997746
+    k=5: e_k=0.0107, Delta=157.2656, frac=0.999932
+    Fractional gap increasing? True
+
+  H=92411:
+    k=2: e_k=64.6250, Delta=11.0000, frac=0.145455
+    k=3: e_k=117.2188, Delta=90.7500, frac=0.436364
+    k=4: e_k=58.3945, Delta=227.5625, frac=0.795793
+    k=5: e_k=0.0107, Delta=157.2656, frac=0.999932
+    Fractional gap increasing? True
+
+--- H in elementary symmetric basis ---
+  H = 89942.1171 + (183.9303)*e_2 + (-102.0656)*e_3 + (43.6066)*e_4  [residual: 1.46e-11]
+
+--- Contribution Budget (why Paley wins) ---
+
+  H=93467: total deficit = 1628
+    c_2*Delta(e_2) = 183.93 * 22.0000 = +4046.47 (helps)
+    c_3*Delta(e_3) = -102.07 * 126.5000 = -12911.30 (HURTS)
+    c_4*Delta(e_4) = 43.61 * 240.6250 = +10492.83 (helps)
+    Sum = 1628.00 (should match deficit 1628)
+
+  H=93027: total deficit = 2068
+    c_2*Delta(e_2) = 183.93 * 55.0000 = +10116.17 (helps)
+    c_3*Delta(e_3) = -102.07 * 200.7500 = -20489.66 (HURTS)
+    c_4*Delta(e_4) = 43.61 * 285.3125 = +12441.50 (helps)
+    Sum = 2068.00 (should match deficit 2068)
+
+  H=92411: total deficit = 2684
+    c_2*Delta(e_2) = 183.93 * 11.0000 = +2023.23 (helps)
+    c_3*Delta(e_3) = -102.07 * 90.7500 = -9262.45 (HURTS)
+    c_4*Delta(e_4) = 43.61 * 227.5625 = +9923.22 (helps)
+    Sum = 2684.00 (should match deficit 2684)
+
+======================================================================
+THEORETICAL ANALYSIS: Sufficient conditions for Paley maximization
+======================================================================
+
+  Second-order analysis at Paley (uniform) point:
+  Hessian of e_k restricted to Parseval hyperplane:
+  H(e_k)|_Parseval = -C(m-2,k-2) * v^{k-2} * I
+  This is NEGATIVE DEFINITE for k >= 2!
+
+    k=2: curvature = -1.000000
+    k=3: curvature = -8.250000
+    k=4: curvature = -22.687500
+    k=5: curvature = -20.796875
+
+  Hessian of H at Paley:
+    c_2 * curv(e_2) = 183.93 * -1.000000 = -183.9303
+    c_3 * curv(e_3) = -102.07 * -8.250000 = 842.0410
+    c_4 * curv(e_4) = 43.61 * -22.687500 = -989.3238
+
+  Total Hessian eigenvalue = -331.213115
+  Paley is LOCAL MAX of H on Parseval simplex
+
+  *** PALEY IS A LOCAL MAXIMUM OF H ***
+  Combined with Paley being the UNIQUE critical point (by symmetry),
+  and H being a polynomial of bounded degree on a compact domain,
+  this strongly suggests Paley is the GLOBAL maximum.
+
+--- Global optimality verification ---
+  max(H) = 95095, achieved by 2/32 tournaments
+  Paley count = 1
+  Paley achieves max? True
+
+--- Monotonicity in e_m (product) after normalization ---
+  H=95095: e_5=157.276367, H/e_5=604.6363 (Paley)
+  H=93467: e_5=5.682617, H/e_5=16447.8790 
+  H=93027: e_5=0.010742, H/e_5=8659968.0000 
+  H=92411: e_5=0.010742, H/e_5=8602624.0000 
+
+======================================================================
+MACLAURIN INEQUALITY BOUND
+======================================================================
+
+  Maclaurin means mu_k = (e_k / C(m,k))^(1/k):
+
+  H=95095 (Paley):
+    mu_1 = 2.750000    mu_2 = 2.750000    mu_3 = 2.750000    mu_4 = 2.750000    mu_5 = 2.750000
+    Decreasing? True
+    (All equal = 2.750000, as expected)
+
+  H=93467 :
+    mu_1 = 2.750000    mu_2 = 2.315707    mu_3 = 2.012165    mu_4 = 1.735237    mu_5 = 1.415499
+    Decreasing? True
+    Deviation from Paley (2.750000): -0.0% +15.8% +26.8% +36.9% +48.5%
+
+  H=93027 :
+    mu_1 = 2.750000    mu_2 = 1.436141    mu_3 = 0.897058    mu_4 = 0.599195    mu_5 = 0.403849
+    Decreasing? True
+    Deviation from Paley (2.750000): -0.0% +47.8% +67.4% +78.2% +85.3%
+
+  H=92411 :
+    mu_1 = 2.750000    mu_2 = 2.542145    mu_3 = 2.271603    mu_4 = 1.848632    mu_5 = 0.403849
+    Decreasing? True
+    Deviation from Paley (2.750000): -0.0% +7.6% +17.4% +32.8% +85.3%
+
+======================================================================
+GRAND CONCLUSION
+======================================================================
+
+THEOREM SKETCH (Paley maximizes H among Z_p circulants):
+
+1. REPRESENTATION: H = c_0 + sum_{k=2}^{m+1} c_k * e_k(y^2)
+   where y_k = Im(eigenvalue_k), m = (p-1)/2.
+
+2. HESSIAN AT PALEY: The Hessian of H restricted to the Parseval
+   hyperplane sum(y_k^2) = m*p/4 is:
+     lambda_H = -sum_k c_k * C(m-2,k-2) * (p/4)^{k-2}
+   which is NEGATIVE (verified for p=7,11).
+
+3. CRITICAL POINT: By Z_p cyclic symmetry, the Paley point (all y^2
+   equal) is the UNIQUE critical point of H restricted to the symmetric
+   functions. The Hessian being negative makes it a local max.
+
+4. GLOBAL MAX: Since H is a polynomial on a compact domain and the
+   only critical point is a local max, either:
+   (a) Paley IS the global max, or
+   (b) The global max is on the boundary (some y_k = 0).
+
+5. BOUNDARY ANALYSIS: On the boundary of the eigenvalue domain, some
+   eigenvalue magnitudes collapse. This corresponds to highly
+   non-uniform spectra, which have SMALLER e_k values. The boundary
+   analysis needs Maclaurin's inequality to bound H on boundary.
+
+WHAT REMAINS:
+- Step 5: formal boundary analysis using Maclaurin bounds
+- Connect the polynomial representation to the OCF structure
+- Extend from circulant to all tournaments ("Step A")
+

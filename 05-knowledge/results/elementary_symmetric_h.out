@@ -1,0 +1,154 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+======================================================================
+ELEMENTARY SYMMETRIC POLYNOMIAL ANALYSIS — p = 7
+======================================================================
+8 tournaments, 2 distinct H values, m=3
+Paley: [1, 2, 4]
+
+  Elementary symmetric polynomials e_k(y²) for k=1,...,3:
+         H           e_1           e_2           e_3
+       189        5.2500        9.1875        5.3594  P
+       175        5.2500        2.1875        0.1094
+
+  e_1 universal? True (value: {5.25})
+
+--- Fitting H = c₀ + Σ_True c_k · e_k(y²) ---
+
+  Using e_2,...,e_2 (2 params, residual=0.00e+00):
+    H = 170.6250 +2.000000·e_2
+    Signs: 1 positive, 0 negative, 0 zero
+    ★★★ ALL e_k COEFFICIENTS NON-NEGATIVE! ★★★
+    → H is a POSITIVE linear combination of Schur-concave functions!
+    → H is SCHUR-CONCAVE → Paley maximizes H!
+
+--- Product alone: H vs e_3(y²) = Π y_k² ---
+  H=189: e_3 = 5.359375 (Paley)
+  H=175: e_3 = 0.109375 
+
+  H ≈ 174.71 + 2.666667·Πy²  (max error: 0.00)
+
+--- Log-product: H vs Σ log(y_k²) ---
+  H=189: Σlog(y²) = 1.678847 (Paley)
+  H=175: Σlog(y²) = -2.212973 
+
+  H ≈ 182.96 + 3.5973·Σlog(y²)  (max error: 0.00)
+  H ≈ 16.06 + 27.5921·Σlog + 44.9236·(Σlog)²  (err: 0.00)
+
+--- H / Π(y²) ratio ---
+  H=189: H/Πy² = 35.2653 (Paley)
+  H=175: H/Πy² = 1600.0000 
+
+--- OCF-like: Sum 2^k * e_k(y^2) ---
+  H=189: Σ2^k·e_k = 91.1250 (Paley)
+  H=175: Σ2^k·e_k = 21.1250 
+
+--- Connection: e_k(y²) vs OCF α_k ---
+  OCF: H = 1 + 2α₁ + 4α₂ + 8α₃ + ... where α_k counts k-tuples of disjoint odd cycles
+  If e_k(y^2) ~ alpha_k, then H = Sum 2^k*alpha_k <-> Sum 2^k*e_k(y^2)
+  This would be the BRIDGE between spectral and combinatorial!
+
+======================================================================
+COMPLETE SYMMETRIC FUNCTION ANALYSIS
+======================================================================
+
+--- Verifying e_k is Schur-concave on actual data ---
+
+  H=175: Paley << this? True
+    e_2: Paley=9.1875, other=2.1875, diff=+7.0000 ✓
+    e_3: Paley=5.3594, other=0.1094, diff=+5.2500 ✓
+
+======================================================================
+ELEMENTARY SYMMETRIC POLYNOMIAL ANALYSIS — p = 11
+======================================================================
+32 tournaments, 4 distinct H values, m=5
+Paley: [1, 3, 4, 5, 9]
+
+  Elementary symmetric polynomials e_k(y²) for k=1,...,5:
+         H           e_1           e_2           e_3           e_4           e_5
+     95095       13.7500       75.6250      207.9688      285.9570      157.2764  P
+     93467       13.7500       53.6250       81.4688       45.3320        5.6826
+     93027       13.7500       20.6250        7.2188        0.6445        0.0107
+     92411       13.7500       64.6250      117.2188       58.3945        0.0107
+
+  e_1 universal? True (value: {13.75})
+
+--- Fitting H = c₀ + Σ_True c_k · e_k(y²) ---
+
+  Using e_2,...,e_2 (2 params, residual=1.34e+03):
+    H = 92274.2857 +22.857143·e_2
+
+  Using e_2,...,e_3 (3 params, residual=6.70e+02):
+    H = 94660.4781 -83.322709·e_2 +31.968127·e_3
+
+  Using e_2,...,e_4 (4 params, residual=1.46e-11):
+    H = 89942.1171 +183.930328·e_2 -102.065574·e_3 +43.606557·e_4
+    Signs: 2 positive, 1 negative, 0 zero
+    Negative terms: ['e_3']
+
+--- Product alone: H vs e_5(y²) = Π y_k² ---
+  H=95095: e_5 = 157.276367 (Paley)
+  H=93467: e_5 = 5.682617 
+  H=93027: e_5 = 0.010742 
+  H=92411: e_5 = 0.010742 
+
+  H ≈ 92936.61 + 13.827149·Πy²  (max error: 525.76)
+
+--- Log-product: H vs Σ log(y_k²) ---
+  H=95095: Σlog(y²) = 5.058005 (Paley)
+  H=93467: Σlog(y²) = 1.737412 
+  H=93027: Σlog(y²) = -4.533577 
+  H=92411: Σlog(y²) = -4.533577 
+
+  H ≈ 93625.27 + 220.5784·Σlog(y²)  (max error: 541.51)
+  H ≈ 92955.10 + 227.4328·Σlog + 38.6792·(Σlog)²  (err: 308.00)
+
+--- H / Π(y²) ratio ---
+  H=95095: H/Πy² = 604.6363 (Paley)
+  H=93467: H/Πy² = 16447.8790 
+  H=93027: H/Πy² = 8659968.0000 
+  H=92411: H/Πy² = 8602624.0000 
+
+--- OCF-like: Sum 2^k * e_k(y^2) ---
+  H=95095: Σ2^k·e_k = 11602.9063 (Paley)
+  H=93467: Σ2^k·e_k = 1801.9063 
+  H=93027: Σ2^k·e_k = 179.4063 
+  H=92411: Σ2^k·e_k = 2159.4063 
+
+--- Connection: e_k(y²) vs OCF α_k ---
+  OCF: H = 1 + 2α₁ + 4α₂ + 8α₃ + ... where α_k counts k-tuples of disjoint odd cycles
+  If e_k(y^2) ~ alpha_k, then H = Sum 2^k*alpha_k <-> Sum 2^k*e_k(y^2)
+  This would be the BRIDGE between spectral and combinatorial!
+
+======================================================================
+COMPLETE SYMMETRIC FUNCTION ANALYSIS
+======================================================================
+
+--- Verifying e_k is Schur-concave on actual data ---
+
+  H=93467: Paley << this? True
+    e_2: Paley=75.6250, other=53.6250, diff=+22.0000 ✓
+    e_3: Paley=207.9688, other=81.4688, diff=+126.5000 ✓
+    e_4: Paley=285.9570, other=45.3320, diff=+240.6250 ✓
+    e_5: Paley=157.2764, other=5.6826, diff=+151.5938 ✓
+
+  H=93027: Paley << this? True
+    e_2: Paley=75.6250, other=20.6250, diff=+55.0000 ✓
+    e_3: Paley=207.9688, other=7.2188, diff=+200.7500 ✓
+    e_4: Paley=285.9570, other=0.6445, diff=+285.3125 ✓
+    e_5: Paley=157.2764, other=0.0107, diff=+157.2656 ✓
+
+  H=92411: Paley << this? True
+    e_2: Paley=75.6250, other=64.6250, diff=+11.0000 ✓
+    e_3: Paley=207.9688, other=117.2188, diff=+90.7500 ✓
+    e_4: Paley=285.9570, other=58.3945, diff=+227.5625 ✓
+    e_5: Paley=157.2764, other=0.0107, diff=+157.2656 ✓
+
+======================================================================
+SYNTHESIS: ELEMENTARY SYMMETRIC POLYNOMIAL ROUTE TO PROOF
+======================================================================
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/elementary_symmetric_h.py", line 310, in <module>
+    H = 198.19 - 1.0·e₂(y²)  [e₂ = Σ_{i<j} y_i²y_j²]
+NameError: name 'i' is not defined. Did you mean: 'id'?

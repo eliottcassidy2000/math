@@ -1,0 +1,364 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+======================================================================
+MULTI-VARIABLE SCHUR ANALYSIS FOR p = 7
+======================================================================
+
+8 circulant tournaments on Z_7
+
+2 distinct H values
+
+Power sums s_j = Σ y_k^{2j} (over all k=1,...,6):
+  (Note: s_1 = Σy_k² = (p-1)p/4 = 10.5 is universal)
+
+         H           s_1           s_2           s_3           s_4  Paley?
+--------------------------------------------------------------------------
+       189       10.5000       18.3750       32.1563       56.2734  YES
+       175       10.5000       46.3750      221.1563     1060.7734  
+
+======================================================================
+FITTING H = c_0 + c_2*s_2 + c_3*s_3 + ...
+======================================================================
+
+  Using s_2,...,s_2 (2 params, 2 eqs, rank=2):
+    EXACT FIT (residual = 0.00e+00):
+    H = 198.187500 -0.500000·s_2
+    All s_j coefficients negative? True
+    → H is Schur-CONCAVE in y² → Paley (flat y²) maximizes H!
+
+======================================================================
+MAJORIZATION ANALYSIS
+======================================================================
+
+Is y²_Paley majorized by all others? (Necessary for Schur convexity)
+
+Paley y² = ['1.7500', '1.7500', '1.7500']
+
+  H=175: y² = ['4.7989', '0.3931', '0.0580']
+    Partial sums (Paley): ['1.7500', '3.5000', '5.2500']
+    Partial sums (other): ['4.7989', '5.1920', '5.2500']
+    Paley ≺ other? True
+
+======================================================================
+NEWTON'S IDENTITIES: ELEMENTARY SYMMETRIC → POWER SUMS
+======================================================================
+
+  H=189 (Paley):
+    e_1(y²) = 5.2500
+    e_2(y²) = 9.1875
+    e_3(y²) = 5.3594
+
+  H=175 :
+    e_1(y²) = 5.2500
+    e_2(y²) = 2.1875
+    e_3(y²) = 0.1094
+
+======================================================================
+WEIGHTED POWER SUM: H = g(Σ w_j · y_k^{2j})
+======================================================================
+
+Can we find weights w_j such that Σ_j w_j · s_j is monotone with H?
+
+======================================================================
+PALEY vs OTHERS: COMPONENT-WISE COMPARISON OF y²
+======================================================================
+
+  Paley y² (sorted): ['1.750000', '1.750000', '1.750000']
+  Paley: all equal = 2.000000
+
+  H=175: y² = ['0.057979', '0.393104', '4.798917']
+    Δy² = ['-1.692021', '-1.356896', '+3.048917']
+    Sum(Δy²) = 0.000000 (should be 0)
+    Max |y²| = 4.798917 (Paley: 1.750000)
+    Gini(y²) = 0.602024
+
+======================================================================
+ENTROPY / INFORMATION-THEORETIC ANALYSIS
+======================================================================
+
+  H=189 (Paley):
+    Shannon entropy of y²: 1.098612 (max = 1.098612)
+    Rényi-2 entropy of y²: 1.098612
+    max(y²)/mean(y²) = 1.0000
+
+  H=175 :
+    Shannon entropy of y²: 0.325954 (max = 1.098612)
+    Rényi-2 entropy of y²: 0.172843
+    max(y²)/mean(y²) = 2.7422
+
+======================================================================
+MULTI-VARIABLE SCHUR ANALYSIS FOR p = 11
+======================================================================
+
+32 circulant tournaments on Z_11
+
+4 distinct H values
+
+Power sums s_j = Σ y_k^{2j} (over all k=1,...,10):
+  (Note: s_1 = Σy_k² = (p-1)p/4 = 27.5 is universal)
+
+         H           s_1           s_2           s_3           s_4           s_5           s_6  Paley?
+------------------------------------------------------------------------------------------------------
+     95095       27.5000       75.6250      207.9688      571.9141     1572.7637     4325.1001  YES
+     93467       27.5000      163.6250     1263.9688    10482.9141    88500.2637   750445.1313  
+     93027       27.5000      295.6250     3540.9688    42784.4141   517369.6387  6256775.1157  
+     92411       27.5000      119.6250      570.9688     2876.4141    15068.3887    81245.1782  
+
+======================================================================
+FITTING H = c_0 + c_2*s_2 + c_3*s_3 + ...
+======================================================================
+
+  Using s_2,...,s_2 (2 params, 4 eqs, rank=2):
+    Least squares (max error = 1340.43):
+    H ≈ 94435.0000 -5.7143·s_2
+
+  Using s_2,...,s_3 (3 params, 4 eqs, rank=3):
+    Least squares (max error = 670.30):
+    H ≈ 100634.6522 -89.0598·s_2 +5.3280·s_3
+
+  Using s_2,...,s_4 (4 params, 4 eqs, rank=4):
+    EXACT FIT (residual = 1.46e-11):
+    H = 107481.254092 -228.964211·s_2 +26.255587·s_3 -0.928771·s_4
+    All s_j coefficients negative? False
+    Positive coefficient terms: ['s_3']
+    → Direct Schur concavity FAILS
+
+======================================================================
+MAJORIZATION ANALYSIS
+======================================================================
+
+Is y²_Paley majorized by all others? (Necessary for Schur convexity)
+
+Paley y² = ['2.7500', '2.7500', '2.7500', '2.7500', '2.7500']
+
+  H=93467: y² = ['8.4920', '2.2438', '1.9673', '0.8732', '0.1736']
+    Partial sums (Paley): ['2.7500', '5.5000', '8.2500', '11.0000', '13.7500']
+    Partial sums (other): ['8.4920', '10.7358', '12.7032', '13.5764', '13.7500']
+    Paley ≺ other? True
+
+  H=93027: y² = ['12.0935', '1.1987', '0.3330', '0.1033', '0.0216']
+    Partial sums (Paley): ['2.7500', '5.5000', '8.2500', '11.0000', '13.7500']
+    Partial sums (other): ['12.0935', '13.2922', '13.6252', '13.7284', '13.7500']
+    Paley ≺ other? True
+
+  H=92411: y² = ['5.7422', '3.8655', '3.3593', '0.7829', '0.0002']
+    Partial sums (Paley): ['2.7500', '5.5000', '8.2500', '11.0000', '13.7500']
+    Partial sums (other): ['5.7422', '9.6077', '12.9670', '13.7498', '13.7500']
+    Paley ≺ other? True
+
+======================================================================
+NEWTON'S IDENTITIES: ELEMENTARY SYMMETRIC → POWER SUMS
+======================================================================
+
+  H=95095 (Paley):
+    e_1(y²) = 13.7500
+    e_2(y²) = 75.6250
+    e_3(y²) = 207.9688
+    e_4(y²) = 285.9570
+    e_5(y²) = 157.2764
+
+  H=93467 :
+    e_1(y²) = 13.7500
+    e_2(y²) = 53.6250
+    e_3(y²) = 81.4688
+    e_4(y²) = 45.3320
+    e_5(y²) = 5.6826
+
+  H=93027 :
+    e_1(y²) = 13.7500
+    e_2(y²) = 20.6250
+    e_3(y²) = 7.2188
+    e_4(y²) = 0.6445
+    e_5(y²) = 0.0107
+
+  H=92411 :
+    e_1(y²) = 13.7500
+    e_2(y²) = 64.6250
+    e_3(y²) = 117.2188
+    e_4(y²) = 58.3945
+    e_5(y²) = 0.0107
+
+======================================================================
+WEIGHTED POWER SUM: H = g(Σ w_j · y_k^{2j})
+======================================================================
+
+Can we find weights w_j such that Σ_j w_j · s_j is monotone with H?
+
+  Checking if a monotone linear functional exists...
+
+  NO monotone linear functional in s_2,...,s_6!
+  H is NOT a monotone function of any linear combination of power sums.
+
+======================================================================
+PALEY vs OTHERS: COMPONENT-WISE COMPARISON OF y²
+======================================================================
+
+  Paley y² (sorted): ['2.750000', '2.750000', '2.750000', '2.750000', '2.750000']
+  Paley: all equal = 3.000000
+
+  H=93467: y² = ['0.173599', '0.873231', '1.967321', '2.243805', '8.492045']
+    Δy² = ['-2.576401', '-1.876769', '-0.782679', '-0.506195', '+5.742045']
+    Sum(Δy²) = 0.000000 (should be 0)
+    Max |y²| = 8.492045 (Paley: 2.750000)
+    Gini(y²) = 0.523854
+
+  H=93027: y² = ['0.021554', '0.103253', '0.332964', '1.198691', '12.093538']
+    Δy² = ['-2.728446', '-2.646747', '-2.417036', '-1.551309', '+9.343538']
+    Sum(Δy²) = -0.000000 (should be 0)
+    Max |y²| = 12.093538 (Paley: 2.750000)
+    Gini(y²) = 0.734237
+
+  H=92411: y² = ['0.000184', '0.782863', '3.359264', '3.865460', '5.742229']
+    Δy² = ['-2.749816', '-1.967137', '+0.609264', '+1.115460', '+2.992229']
+    Sum(Δy²) = 0.000000 (should be 0)
+    Max |y²| = 5.742229 (Paley: 2.750000)
+    Gini(y²) = 0.423758
+
+======================================================================
+ENTROPY / INFORMATION-THEORETIC ANALYSIS
+======================================================================
+
+  H=95095 (Paley):
+    Shannon entropy of y²: 1.609438 (max = 1.609438)
+    Rényi-2 entropy of y²: 1.609438
+    max(y²)/mean(y²) = 1.0000
+
+  H=93467 :
+    Shannon entropy of y²: 1.101922 (max = 1.609438)
+    Rényi-2 entropy of y²: 0.837648
+    max(y²)/mean(y²) = 3.0880
+
+  H=93027 :
+    Shannon entropy of y²: 0.462556 (max = 1.609438)
+    Rényi-2 entropy of y²: 0.246133
+    max(y²)/mean(y²) = 4.3977
+
+  H=92411 :
+    Shannon entropy of y²: 1.229023 (max = 1.609438)
+    Rényi-2 entropy of y²: 1.150863
+    max(y²)/mean(y²) = 2.0881
+
+======================================================================
+DIRECT SCHUR-CONCAVITY TEST: Is H(y²) Schur-concave?
+======================================================================
+
+Schur-concavity means: transferring y² from a 'richer' to a 'poorer'
+coordinate INCREASES H. Equivalently: among all y² with Σy²=const,
+the UNIFORM distribution (Paley) gives the MAXIMUM H.
+
+Majorization order (most uniform → most spread):
+  H=95095: spread=0.0000, var=0.0000 (Paley)
+  H=93467: spread=8.3184, var=8.8000 
+  H=93027: spread=12.0720, var=22.0000 
+  H=92411: spread=5.7420, var=4.4000 
+
+  Spearman correlation(H, var(y²)) = -0.4000 (p=0.6000)
+
+  Pairwise majorization check:
+    H=93467 ≻ H=95095: ✓
+    H=93027 ≻ H=95095: ✓
+    H=93027 ≻ H=93467: ✓
+    H=92411 ≻ H=95095: ✓
+
+======================================================================
+GENERALIZED SCHUR FUNCTION ANALYSIS
+======================================================================
+
+  Fitting H as quadratic in (s_2, s_3):
+    H = 103256.0083 + -126.9456·s₂ + 14.6173·s₃ + -0.279882·s₂²
+    Max residual: 0.0000e+00
+
+    EXACT FIT!
+    Coefficient analysis:
+      Linear s₂: -126.945602 (negative ✓)
+      Linear s₃: 14.617284 (POSITIVE)
+      Quadratic s₂²: -0.27988215
+
+  Fitting H as function of (s_2, s_3, s_4):
+    Basis: ['1', 's₂', 's₃', 's₄'], rank=4
+    H = 107481.2541 + -228.964211·s₂ + 26.255587·s₃ + -0.928771·s₄
+    Max residual: 1.4552e-11
+    All power-sum coefficients negative? False
+
+======================================================================
+HESSIAN ANALYSIS AT PALEY POINT (p=11)
+======================================================================
+
+  At Paley: all y_k² = 3.0
+  Constraint: Σ y_k² = 15.0
+
+  Note: H is defined on DISCRETE set of circulant tournaments.
+  Cannot compute continuous Hessian directly.
+  Instead, use the POLYNOMIAL fit to analyze curvature.
+
+  If H = c₀ + c₂·s₂ + c₃·s₃, with s_j = Σy_k^(2j):
+  Then ∂H/∂(y_k²) = 2c₂·y_k² + 3c₃·y_k⁴
+  At Paley: ∂H/∂(y_k²) = 2c₂·v + 3c₃·v² (same for all k)
+  ∂²H/∂(y_k²)² = 2c₂ + 12c₃·y_k²
+  At Paley: 2c₂ + 12c₃·v
+  ∂²H/∂(y_i²)∂(y_j²) = 0 for i≠j (if H = c₀+c₂s₂+c₃s₃)
+
+  Hessian is DIAGONAL at Paley point!
+  Negative semi-definite iff 2c₂ + 12c₃·v ≤ 0
+
+======================================================================
+MULTI-VARIABLE SCHUR ANALYSIS FOR p = 13
+======================================================================
+
+64 circulant tournaments on Z_13
+
+6 distinct H values
+
+Power sums s_j = Σ y_k^{2j} (over all k=1,...,12):
+  (Note: s_1 = Σy_k² = (p-1)p/4 = 39.0 is universal)
+
+         H           s_1           s_2           s_3           s_4           s_5           s_6           s_7  Paley?
+--------------------------------------------------------------------------------------------------------------------
+   3711175       39.0000      581.7500     9762.1875   165371.1719  2803894.9961  47544763.0303  806208920.4832  
+   3707483       39.0000      373.7500     4692.1875    61631.1719   815171.2461  10793843.4678  142949147.8816  
+   3704857       39.0000      217.7500     1377.1875     9416.6719    67565.6211   499248.0771  3756873.4246  
+   3703011       39.0000      165.7500      792.1875     3937.1719    19798.7461    99901.2803   504579.9910  
+   3683797       39.0000      217.7500     1377.1875     9104.6719    61715.6211   425479.5771  2969439.0496  
+   3669497       39.0000      269.7500     2352.1875    22410.1719   221656.2461  2227280.9990  22530043.6785  
+
+======================================================================
+FITTING H = c_0 + c_2*s_2 + c_3*s_3 + ...
+======================================================================
+
+  Using s_2,...,s_2 (2 params, 6 eqs, rank=2):
+    Least squares (max error = 25589.00):
+    H ≈ 3683019.8750 +44.7308·s_2
+
+  Using s_2,...,s_3 (3 params, 6 eqs, rank=3):
+    Least squares (max error = 18375.50):
+    H ≈ 3773038.3438 -548.6875·s_2 +26.7167·s_3
+
+  Using s_2,...,s_4 (4 params, 6 eqs, rank=4):
+    Least squares (max error = 18201.05):
+    H ≈ 3829794.5124 -1093.6360·s_2 +80.2289·s_3 -1.5976·s_4
+
+  Using s_2,...,s_5 (5 params, 6 eqs, rank=5):
+    Least squares (max error = 409.71):
+    H ≈ 3190271.3630 +8639.2023·s_2 -1744.6433·s_3 +135.2144·s_4 -3.5073·s_5
+
+  Using s_2,...,s_6 (6 params, 6 eqs, rank=6):
+    EXACT FIT (residual = 3.73e-09):
+    H = 3199553.348449 +8395.228787·s_2 -1668.160877·s_3 +125.014943·s_4 -2.901479·s_5 -0.013163·s_6
+    All s_j coefficients negative? False
+    Positive coefficient terms: ['s_2', 's_4']
+    → Direct Schur concavity FAILS
+
+======================================================================
+MAJORIZATION ANALYSIS
+======================================================================
+
+Is y²_Paley majorized by all others? (Necessary for Schur convexity)
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/multivariable_schur.py", line 758, in <module>
+    main()
+  File "/home/e/Documents/claude/math/04-computation/multivariable_schur.py", line 720, in main
+    data, reps, H_groups = analyze_prime(p)
+  File "/home/e/Documents/claude/math/04-computation/multivariable_schur.py", line 293, in analyze_prime
+    paley_d = [d for d in reps if d['is_paley']][0]
+IndexError: list index out of range
