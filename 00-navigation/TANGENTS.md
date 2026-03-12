@@ -677,3 +677,15 @@ TANG-YAU CONJECTURE 4.8 IS FALSE: Tang-Yau (arXiv:2602.04140) conjecture H_m(C_n
 
 **T213** #betti-landscape-n9 #path-homology | certainty: HIGH (computed) | source: kind-pasteur-2026-03-08-S41
 N=9 BETTI LANDSCAPE FOR REGULAR TOURNAMENTS: H=3357 (max): β=[1,0,0,0,0,10]. H=3333: β=[1,0,0,0,5,0] (β₄=5). H=3303: β=[1,0,0,0,7,0] (β₄=7). H=3299: β=[1,0,0,0,1,1] (BOTH β₄ and β₅ nonzero!). H=3255: β=[1,0,0,1,0,0] (S-phase β₃=1). H=3075: β=[1,0,0,0,4,2] (β₄=4, β₅=2). β₃ and β₅ remain mutually exclusive but β₄ and β₅ can coexist. From betti_landscape_n9.out.
+
+**T214** #eigenspace-betti-split #paley-homology #k-eigenspace | certainty: VERY HIGH (computed) | source: kind-pasteur-2026-03-12-S55
+T_7 EIGENSPACE BETTI STRUCTURE: k=0 eigenspace gives Betti=[1,0,0,0,0,0,0] (only H_0=1, the connectivity component). k=1,...,6 each give [0,0,0,0,1,0,0] (one H_4 generator). Total: [1,0,0,0,6,0,0] ✓. Pattern: the k=0 eigenspace is "topologically trivial" (contractible-ish) while the non-trivial topology distributes evenly across k=1,...,n-1. For T_11, the pattern is DIFFERENT: all non-trivial homology (H_5, H_6) concentrates at k=0 (from t11_betti6_eigenspace.out: k=0 has rank(d_6)=305, k≠0 has rank(d_6)=309). The contrast T_7 vs T_11 in eigenspace distribution is a new structural observation.
+
+**T215** #satake-ndrt #h-maximizer #new-family | certainty: LOW (untested) | source: kind-pasteur-2026-03-12-S55 (Satake arXiv:2502.12090)
+NEW H-MAXIMIZER FAMILY? Satake constructs cyclotomic NDR tournaments for q ≡ 5 (mod 8) with q = s² + 4. These are the n ≡ 1 (mod 4) analog of Paley tournaments (which are n ≡ 3 mod 4). Our PALEY MAXIMIZER theorem holds for p ≡ 3 (mod 4). Question: do Satake's NDRTs also maximize H among all n-vertex tournaments? Smallest cases: q=5 (s=1), q=13 (s=3), q=29 (s=5). These are computable — compare to OEIS A038375.
+
+**T216** #mixed-graph-ocf #redei-generalization | certainty: LOW | source: kind-pasteur-2026-03-12-S55 (Schweser-Stiebitz-Toft arXiv:2510.10659)
+MIXED GRAPH OCF? Schweser-Stiebitz-Toft show three stronger forms of Rédei: adding undirected vertices produces even H-count. This suggests an extension of OCF (H(T) = I(Omega(T), 2)) to MIXED DIGRAPHS. The mixed-graph version would count H-paths in T with some undirected edges, and OCF would give a signed cycle-covering formula. Potential application: modeling social choice with partial orders (some pairs comparable, some not).
+
+**T217** #ren-path-independence #embedding-theorem #beta2-zero | certainty: MEDIUM | source: kind-pasteur-2026-03-12-S55 (Ren arXiv:2504.15126)
+REN EMBEDDING THEOREM AND BETA_2=0: Ren proves canonical embeddings from the independence complex of the underlying undirected graph into the path independence complex of the digraph. Our beta_2=0 result (ALL tournaments, exhaustive) may follow from this embedding: if the independence complex (of the undirected graph underlying the directed cycle structure) has trivial H_2, and the embedding preserves this, then beta_2=0 for tournaments. The seesaw mechanism (THM-095) might be a consequence. Worth investigating formally.

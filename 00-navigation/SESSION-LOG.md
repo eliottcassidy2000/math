@@ -13,6 +13,51 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-12-S55 — 2026-03-12: Fix betti_numbers, tests, paper investigation
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-10-S54
+**Summary of work:**
+  Three-part session:
+
+  PART 1 — FIX betti_numbers() in circulant_homology.py:
+  - Discovered the old formula `beta_m = Omega_m - (|A_{m+1}| - Omega_{m+1})` was WRONG
+    (used constraint-matrix rank instead of boundary-map rank)
+  - Implemented correct eigenspace boundary map computation:
+    beta_m = sum_k [(Omega_m^(k) - rank(d_m^(k))) - rank(d_{m+1}^(k))]
+  - Added: vectorized RREF (_gauss_rref, _gauss_nullbasis, _gauss_rank),
+    eigenspace basis caching (_omega_basis_cache, _face_data_cache),
+    _boundary_rank_k() method, correct betti_numbers()
+  - Verified: T_3=[1,1,0] ✓, T_7=[1,0,0,0,6,0,0] ✓
+  - T_11 boundary ranks confirmed matching t11_beta5_verify.py expectations
+
+  PART 2 — PYTEST TESTS (51 tests total, all pass):
+  - test_circulant_homology.py: 27 tests for CirculantHomology/PaleyHomology
+  - test_mod_rank_library.py: 24 tests for gauss_rank, nullbasis, matmul, certified_rank
+
+  PART 3 — PAPER INVESTIGATION (INV-136, 137, 138):
+  - Schweser-Stiebitz-Toft (2510.10659): 3 stronger Rédei forms; potential OCF extension to mixed graphs
+  - Satake (2502.12090): Cyclotomic NDR tournaments for q≡5(mod 8), q=s²+4; potential new H-maximizer family
+  - Ren (2504.15126): Path independence complexes use GLMY; embedding theorem may explain beta_2=0
+
+  NEW MATHEMATICAL FINDING:
+  - T_7 eigenspace Betti structure: k=0 gives [1,0,...,0]; k=1..6 each give [0,0,0,0,1,0,0]
+    Total: [1,0,0,0,6,0,0] ✓. Contrast with T_11: all non-trivial homology at k=0.
+
+**New contributions:**
+  - circulant_homology.py — correct betti_numbers implementation + caching
+  - test_circulant_homology.py — 27 pytest tests (all pass)
+  - test_mod_rank_library.py — 24 pytest tests (all pass)
+  - HYP-452 (betti formula fix), HYP-453 (T_7 eigenspace split), HYP-454 (T_11 eigenspace)
+  - T214-T217 (new tangents: eigenspace structure, Satake NDRTs, mixed graph OCF, Ren embedding)
+  - INV-136/137/138 updated with paper findings
+
+**Unresolved threads:**
+  - Satake NDRTs: compute H for q=5, 13, 29 and check if they maximize H (HIGH PRIORITY)
+  - Ren's embedding theorem: formal connection to beta_2=0 / seesaw
+  - T_11 full Betti (use_cache=False): needs ~4 min; verify beta_6=15
+  - T_19 degrees 9-18: still needs C/C++ or LinBox implementation
+
 ## kind-pasteur-2026-03-10-S54 — 2026-03-10: Engineering implementations + T_19 degrees 6-8
 
 **Account:** kind-pasteur

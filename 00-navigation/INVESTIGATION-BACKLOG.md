@@ -25,16 +25,18 @@
 
 ### INV-142: Engineering Product: mod_rank Library (PyPI Target)
 **Source:** kind-pasteur-2026-03-10-S53 (synthesis), S54 (update)
-**Status:** PARTLY DONE. mod_rank_library.py exists with core functions. Needs: pytest test suite, benchmark suite, README, PyPI packaging.
+**Status:** MOSTLY DONE. mod_rank_library.py has core functions. 24 pytest tests written (test_mod_rank_library.py, all pass). Needs: README, benchmark vs dense/scipy, create setup.py.
 **What:** General-purpose small-prime modular rank library. Key functions: gauss_rank_uint8, gauss_rank_nullbasis_uint8, certified_rank, betti_number_from_boundary_ranks. Memory table: T_11 deg 9 (52550×15745) = 6.6 GB int64 → 827 MB uint8.
 **Engineering value:** Useful for any combinatorics/topology computation over finite fields with large sparse matrices.
-**Next steps:** Add pytest tests, write README, benchmark vs dense/scipy, create setup.py
+**Next steps:** Write README, benchmark vs dense/scipy, create setup.py for PyPI
 
 ### INV-143: Engineering Product: circulant_homology Python Module
 **Source:** kind-pasteur-2026-03-10-S54
-**Status:** IMPLEMENTED. circulant_homology.py has CirculantHomology and PaleyHomology classes.
+**Status:** COMPLETE. circulant_homology.py has CirculantHomology and PaleyHomology classes. Fixed and verified.
 **What:** Clean API for computing Omega dims and Betti numbers of circulant tournaments. Uses sparse column reduction (THM-125 eigenspace identity gives n× speedup). Verified for T_3, T_7, T_11.
-**Next steps:** Verify betti_numbers() against known T_11 results, add Betti verification test, document API.
+**S55 fixes:** (1) betti_numbers() had wrong formula — fixed to use correct boundary map ranks via eigenspace computation. Verified T_3=[1,1,0], T_7=[1,0,0,0,6,0,0] exactly. (2) Added 27 pytest tests (test_circulant_homology.py, all pass). (3) Added caching for omega_basis_k and face_data for performance.
+**New finding (HYP-453):** T_7 eigenspace structure: k=0 = H_0 only; k=1..6 = one H_4 generator each. T_11 eigenspace: all non-trivial homology at k=0.
+**Next steps:** Compute full T_11 Betti (use_cache=False) in background — takes ~4 min; verify beta_6=15.
 
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50
@@ -52,21 +54,25 @@
 
 ### INV-136: Schweser-Stiebitz-Toft (arXiv:2510.10659): Redei's Theorem Revisited (Oct 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50
-**Status:** NEW — needs investigation.
-**What:** Reexamines Redei's 1934 theorem (H(T) is odd) alongside Dirac and Berge's stronger results. February 2026 revision. Could contain new perspectives on parity of H(T) directly relevant to the project.
-**Next step:** Fetch arXiv:2510.10659 and check for new parity results or connections to OCF.
+**Status:** INVESTIGATED (kind-pasteur-2026-03-12-S55).
+**What:** 6-page paper unifying three equivalent stronger forms of Rédei's theorem: (i) Rédei's stronger theorem (adding undirected vertices creates even path count), (ii) Berge's theorem (complementary mixed graphs have same parity), (iii) Dirac's theorem (Hamiltonian paths through non-oriented edges are even). All three are interconnected.
+**Relevance:** Directly relevant to H(T) parity. The mixed-graph generalization provides a structural lens complementary to OCF. THM-016/017 (our even-odd split) and DC (THM-082/083) could potentially be re-derived via Berge/Dirac. Possible route to extend OCF to mixed digraphs.
+**Action:** Add to TANGENTS as "Mixed graph OCF extension via Schweser-Stiebitz-Toft stronger Rédei".
 
 ### INV-137: Satake (arXiv:2502.12090): Cyclotomic Nearly-Doubly-Regular Tournaments (Feb 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50
-**Status:** NEW — needs investigation.
-**What:** Constructs new cyclotomic nearly-doubly-regular tournaments using almost difference sets. Conditionally confirms (Hardy-Littlewood conjecture F) Savchenko's conjecture on infinitely many DRTs with canonical spectrum. Relevant to DRT analysis and H-maximization.
-**Next step:** Check if any NDRTs at p=23 or beyond have H values we can compare.
+**Status:** INVESTIGATED (kind-pasteur-2026-03-12-S55). HIGH PRIORITY follow-up.
+**What:** For prime powers q ≡ 5 (mod 8), cyclotomic tournament CT_q is NDR iff q = s² + 4. When true: full adjacency spectrum computed explicitly (eigenvalues (q-1)/2 and (-1 ± i√(q ∓ 2√q))/2). Under Hardy-Littlewood conjecture F: infinitely many such q. This is the n ≡ 1 (mod 4) analog of Paley (n ≡ 3 mod 4).
+**Key question for our project:** Do these cyclotomic NDR tournaments (q=5, 13, 29, ...) maximize H? Our PALEY MAXIMIZER result holds for p ≡ 3 (mod 4); the q ≡ 5 (mod 4) case is unexplored.
+**Next step:** Compute H for smallest cyclotomic NDRTs: q=5 (s=1), q=13 (s=3), q=29 (s=5). Compare to H of other n-vertex tournaments. Also: eigenspace structure of CT_q relates to THM-125 (circulant structure). Add to OPEN-QUESTIONS.
 
 ### INV-138: Ren (arXiv:2504.15126): Path Independence Complexes of Digraphs (Apr 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50
-**Status:** NEW — needs investigation.
-**What:** Studies "path independence complexes" of digraphs with canonical embeddings and Shannon capacity consequences. The "path independence complex" concept may be related to our Omega(T) conflict graph.
-**Next step:** Check whether "path independence complex" is the same as or related to Omega(T). If so, their results on Shannon capacity might give new information.
+**Status:** INVESTIGATED (kind-pasteur-2026-03-12-S55). HIGH PRIORITY — closely adjacent to our work.
+**What:** Studies "path independence complexes" of digraphs — simplicial complexes whose faces are vertex sets with no directed path between any two. Uses GLMY infrastructure. Main results: (i) canonical embeddings from independence complex (undirected) into path independence complex (digraph), (ii) these are Σ_k-equivariant and isometric giving double-parametrized persistent homology, (iii) Shannon capacity consequences.
+**NOT the same as Omega(T):** Omega(T) is the conflict GRAPH of directed cycles (edges = two cycles sharing a vertex). The path independence complex is a SIMPLICIAL COMPLEX on vertices with different independence condition. However, both are topological structures related to the tournament and use GLMY machinery.
+**Key connection:** The embedding theorem (independence complex → path independence complex) might explain the tight relationship between Omega(T) and tournament path homology. Our beta_2=0 result and seesaw mechanism (THM-095) may follow from an embedding theorem structure.
+**Next step:** Read sections on Betti number bounds and explicit computations. Compare beta numbers from Ren's framework to our beta_2=0, beta_3 onset results. This is potentially a theoretical unification.
 
 ### INV-139: Tang-Yau (arXiv:2402.05682): Cellular Homology of Digraphs (Feb 2024)
 **Source:** Web research kind-pasteur-2026-03-10-S50

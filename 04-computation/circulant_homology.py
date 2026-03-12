@@ -46,8 +46,10 @@ WORKING PRIMES:
   - T_23: prime=139 (138=6*23)
 
 Author: kind-pasteur-2026-03-10-S54
+Updated: kind-pasteur-2026-03-12-S55 — fixed betti_numbers() formula
 """
 import time
+import numpy as np
 from functools import lru_cache
 
 
@@ -135,6 +137,88 @@ def compute_face(D, face_idx, n):
     else:
         merged = (D[face_idx - 1] + D[face_idx]) % n
         return D[:face_idx - 1] + (merged,) + D[face_idx + 1:]
+
+
+def compute_face_with_offset(D, face_idx, n):
+    """
+    Compute face and vertex-offset for eigenspace phase computation.
+
+    When removing face 0, the resulting path starts at vertex v + D[0],
+    contributing a phase factor ω_k^{D[0]} in eigenspace k.
+    All other faces (merge or remove last) keep the same starting vertex.
+
+    Returns: (face_diff_seq, offset)
+    """
+    m = len(D)
+    if face_idx == 0:
+        return D[1:], D[0]
+    elif face_idx == m:
+        return D[:m - 1], 0
+    else:
+        merged = (D[face_idx - 1] + D[face_idx]) % n
+        return D[:face_idx - 1] + (merged,) + D[face_idx + 1:], 0
+
+
+def _gauss_rref(C, prime):
+    """
+    Reduce matrix C to RREF over F_prime (in-place, vectorized).
+    Returns list of pivot column indices.
+
+    Uses numpy vectorized row operations for speed.
+    Entries must fit in int64 (works for prime <= ~3M with max dim ~3000).
+    """
+    rows, cols = C.shape
+    pivot_cols = []
+    pivot_row = 0
+    for col in range(cols):
+        # Find first non-zero in this column at or below pivot_row
+        nz = np.flatnonzero(C[pivot_row:, col])
+        if len(nz) == 0:
+            continue
+        found = nz[0] + pivot_row
+        if found != pivot_row:
+            C[[pivot_row, found]] = C[[found, pivot_row]]
+        # Normalize pivot row
+        inv = pow(int(C[pivot_row, col]), prime - 2, prime)
+        C[pivot_row] = C[pivot_row] * inv % prime
+        # Eliminate pivot column in all other rows (vectorized)
+        factors = C[:, col].copy()
+        factors[pivot_row] = 0
+        nz_rows = np.flatnonzero(factors)
+        if len(nz_rows) > 0:
+            C[nz_rows] = (C[nz_rows] - np.outer(factors[nz_rows], C[pivot_row])) % prime
+        pivot_cols.append(col)
+        pivot_row += 1
+        if pivot_row >= rows:
+            break
+    return pivot_cols
+
+
+def _gauss_nullbasis(C, prime):
+    """
+    Compute null-space basis of matrix C mod prime.
+    Returns rows of basis as numpy int64 array of shape (nullity, cols).
+    """
+    C = np.array(C, dtype=np.int64) % prime
+    rows, cols = C.shape
+    pivot_cols = _gauss_rref(C, prime)
+    pivot_set = set(pivot_cols)
+    free_cols = [c for c in range(cols) if c not in pivot_set]
+    if not free_cols:
+        return np.zeros((0, cols), dtype=np.int64)
+    basis = np.zeros((len(free_cols), cols), dtype=np.int64)
+    for i, fc in enumerate(free_cols):
+        basis[i, fc] = 1
+        for j, pc in enumerate(pivot_cols):
+            if j < rows:
+                basis[i, pc] = (-int(C[j, fc])) % prime
+    return basis
+
+
+def _gauss_rank(C, prime):
+    """Rank of matrix C mod prime (fast vectorized RREF)."""
+    C = np.array(C, dtype=np.int64) % prime
+    return len(_gauss_rref(C, prime))
 
 
 # ---------------------------------------------------------------------------
@@ -242,6 +326,7 @@ class CirculantHomology:
         self.prime = prime
         self._diff_seqs = None
         self._allowed_sets = None
+        self._omega_basis_cache = {}   # (m, omega_k) -> (basis, face_data)
 
     def _ensure_enumerated(self, max_degree):
         if self._diff_seqs is None or max(self._diff_seqs.keys()) < max_degree:
@@ -297,51 +382,191 @@ class CirculantHomology:
 
         return dims
 
+    def _get_face_data(self, m):
+        """
+        Build (and cache) face data for degree m.
+
+        Returns: (face_data, junk_idx) where
+          face_data: list of [(face, sign, offset, is_allowed), ...] per A_m element
+          junk_idx: {face: row_index} for junk (non-allowed) faces
+        """
+        if not hasattr(self, '_face_data_cache'):
+            self._face_data_cache = {}
+        if m in self._face_data_cache:
+            return self._face_data_cache[m]
+
+        A_m = self._diff_seqs.get(m, [])
+        allowed_lower = self._allowed_sets.get(m - 1, set())
+        face_data = []
+        junk_idx = {}
+
+        for D in A_m:
+            faces = []
+            for fi in range(m + 1):
+                fd, offset = compute_face_with_offset(D, fi, self.n)
+                sign = 1 if fi % 2 == 0 else -1
+                is_allowed = (fd in allowed_lower)
+                if not is_allowed and fd not in junk_idx:
+                    junk_idx[fd] = len(junk_idx)
+                faces.append((fd, sign, offset, is_allowed))
+            face_data.append(faces)
+
+        self._face_data_cache[m] = (face_data, junk_idx)
+        return face_data, junk_idx
+
+    def _omega_basis_k(self, m, omega_k):
+        """
+        Compute (and cache) the Omega_m^(k) basis matrix for eigenspace k.
+
+        Returns: (basis, face_data) where
+          basis: numpy array (Omega_m_dim, |A_m|) — rows are basis vectors over F_prime
+          face_data: list of [(face, sign, offset, is_allowed), ...] per A_m element
+
+        The basis is the null space of the constraint matrix with eigenspace phases
+        ω_k^offset applied when face_idx == 0 (only place where offset != 0).
+        """
+        cache_key = (m, omega_k)
+        if cache_key in self._omega_basis_cache:
+            return self._omega_basis_cache[cache_key]
+
+        A_m = self._diff_seqs.get(m, [])
+        prime = self.prime
+
+        if m == 0:
+            basis = np.ones((1, 1), dtype=np.int64)
+            result = (basis, [([], )])
+            self._omega_basis_cache[cache_key] = result
+            return result
+
+        n_Am = len(A_m)
+        face_data, junk_idx = self._get_face_data(m)
+        n_junk = len(junk_idx)
+
+        if n_junk == 0:
+            basis = np.eye(n_Am, dtype=np.int64)
+        else:
+            C = np.zeros((n_junk, n_Am), dtype=np.int64)
+            for j, faces in enumerate(face_data):
+                for fd, sign, offset, is_allowed in faces:
+                    if not is_allowed:
+                        row = junk_idx[fd]
+                        w = pow(omega_k, offset, prime) if offset != 0 else 1
+                        entry = (sign * w) % prime
+                        C[row, j] = (C[row, j] + entry) % prime
+            basis = _gauss_nullbasis(C, prime)
+
+        result = (basis, face_data)
+        self._omega_basis_cache[cache_key] = result
+        return result
+
+    def _boundary_rank_k(self, m, omega_k):
+        """
+        Compute rank of d_m^(k): Omega_m^(k) → Omega_{m-1}^(k) for eigenspace k.
+
+        The boundary map with eigenspace phases: face at position 0 gets phase ω_k^{D[0]},
+        all other faces get phase 1 (offset = 0).
+
+        Returns: integer rank.
+        """
+        if m == 0:
+            return 0
+
+        A_m = self._diff_seqs.get(m, [])
+        A_m1 = self._diff_seqs.get(m - 1, [])
+        if not A_m or not A_m1:
+            return 0
+
+        A_m1_idx = {d: i for i, d in enumerate(A_m1)}
+        prime = self.prime
+
+        # Step 1: Omega_m^(k) basis (with phases)
+        omega_m_basis, face_data_m = self._omega_basis_k(m, omega_k)
+        if omega_m_basis.shape[0] == 0:
+            return 0
+
+        # Step 2: Omega_{m-1}^(k) basis (with phases)
+        if m == 1:
+            omega_m1_basis = np.ones((1, 1), dtype=np.int64)
+        else:
+            omega_m1_basis, _ = self._omega_basis_k(m - 1, omega_k)
+        if omega_m1_basis.shape[0] == 0:
+            return omega_m_basis.shape[0]  # everything maps to 0
+
+        n_Am1 = len(A_m1)
+        n_Am = len(A_m)
+
+        # Step 3: Full boundary matrix BD: A_m → A_{m-1} (with phases)
+        BD = np.zeros((n_Am1, n_Am), dtype=np.int64)
+        for j, (D, faces) in enumerate(zip(A_m, face_data_m)):
+            for fd, sign, offset, is_allowed in faces:
+                if is_allowed and fd in A_m1_idx:
+                    row = A_m1_idx[fd]
+                    w = pow(omega_k, offset, prime) if offset != 0 else 1
+                    entry = (sign * w) % prime
+                    BD[row, j] = (BD[row, j] + entry) % prime
+
+        # Step 4: Restrict boundary to Omega bases
+        # d_restricted = omega_m1_basis @ BD @ omega_m_basis.T
+        # (Omega_{m-1}_dim, Omega_m_dim)
+        d_on_A = BD % prime @ omega_m_basis.T % prime % prime
+        d_restricted = omega_m1_basis @ d_on_A % prime
+
+        return _gauss_rank(d_restricted, prime)
+
     def betti_numbers(self, max_degree=None, verbose=False):
         """
-        Compute Betti numbers beta_m for degrees 0..max_degree.
+        Compute GLMY path homology Betti numbers beta_m for degrees 0..max_degree.
 
-        IMPORTANT NOTE ON OMEGA DIMS vs BETTI NUMBERS:
-        - omega_dims() returns the Tang-Yau Omega dimensions.
-        - For Paley T_p, sum(-1)^m * Omega_m = 1 per eigenspace (chi of Omega dims).
-        - The ACTUAL Betti numbers (beta_m) of the GLMY complex are a different
-          quantity, computed via ker(d_m) / im(d_{m+1}).
-        - For T_11: Omega=[1,5,20,...,30] (chi=1), Betti=[1,0,0,0,0,5,15,...] (chi=11 total).
-        - For T_3: Omega=[1,1,0] (chi=0), Betti=[1,0,0] per eigenspace (chi=1 per eigenspace).
+        beta_m = sum_k [ (Omega_m^(k) - rank(d_m^(k))) - rank(d_{m+1}^(k)) ]
 
-        This method uses the formula:
-          beta_m = Omega_m - (|A_{m+1}| - Omega_{m+1})
-        which is correct when Omega_m = dim(ker(d_m)).
-        This is experimentally verified for T_7 (gives correct results)
-        but should be double-checked against separate Betti scripts for new cases.
-        See: t11_beta5_verify.py, t11_d7_all_eigenspaces.py for reference Betti computations.
+        where the sum is over all n eigenspaces k = 0,...,n-1.
+        Omega_m^(k) is the same for all k (by THM-125).
+        The boundary ranks can differ between eigenspaces.
+
+        For small n (T_3, T_7, T_11): runs in seconds to minutes.
+        For T_19 and larger: use use_cache=True with precomputed values.
+
+        If use_cache=True (default), returns cached values for known p without
+        recomputing (PaleyHomology subclass).
+
+        Mathematical note:
+          Omega dims (omega_dims()) give dim(Omega_m^(k)) = size of chain group.
+          Betti numbers require the BOUNDARY MAP rank: rank(d_m^(k)).
+          These differ. Earlier incorrect formula used rank(constraint matrix)
+          which is NOT the same as rank(boundary map). Fixed in S55.
         """
         if max_degree is None:
             max_degree = self.n - 1
 
-        # Need omega_dims up to max_degree (for cycle spaces)
-        # and ranks of d_{m+1} up to max_degree (= |A_{m+1}| - Omega_{m+1})
-        self._ensure_enumerated(min(max_degree + 1, self.n - 1))
+        self._ensure_enumerated(max_degree + 1)
 
-        # Get omega dims for degrees 0..max_degree+1
-        inner_max = min(max_degree + 1, self.n - 1)
-        omega = self.omega_dims(max_degree=inner_max, verbose=verbose)
+        # Find primitive n-th root of unity mod prime
+        omega_p = find_nth_root_of_unity(self.n, self.prime)
 
-        # Compute ranks: rank(d_m) = |A_m| - Omega_m
-        def get_n_Am(m):
-            return len(self._diff_seqs.get(m, []))
+        # Precompute boundary ranks for all k and degrees 0..max_degree+1
+        # boundary_ranks[k][m] = rank(d_m^(k))
+        boundary_ranks = {}
+        for k in range(self.n):
+            omega_k = pow(omega_p, k, self.prime)
+            ranks_k = []
+            for m in range(max_degree + 2):
+                rk = self._boundary_rank_k(m, omega_k)
+                ranks_k.append(rk)
+            boundary_ranks[k] = ranks_k
+            if verbose:
+                print(f"  eigenspace k={k}: boundary ranks = {ranks_k[:max_degree+2]}")
+
+        # Omega dims (same for all k by THM-125)
+        omega = self.omega_dims(max_degree=max_degree, verbose=False)
 
         betti = []
         for m in range(max_degree + 1):
-            # beta_m = Omega_m - rank(d_{m+1})
-            # rank(d_{m+1}) = |A_{m+1}| - Omega_{m+1}
-            om_m = omega[m]
-            if m + 1 <= inner_max:
-                rank_next = get_n_Am(m + 1) - omega[m + 1]
-            else:
-                rank_next = 0  # top degree: no higher boundary
-            betti_m = om_m - rank_next
-            betti.append(betti_m)
+            total_beta_m = 0
+            for k in range(self.n):
+                ker_m = omega[m] - boundary_ranks[k][m]      # dim(ker d_m^(k))
+                im_next = boundary_ranks[k][m + 1]            # dim(im d_{m+1}^(k))
+                total_beta_m += ker_m - im_next
+            betti.append(total_beta_m)
 
         return betti
 
