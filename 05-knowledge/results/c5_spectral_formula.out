@@ -1,0 +1,147 @@
+======================================================================
+c_5 SPECTRAL FORMULA FOR CIRCULANT TOURNAMENTS
+======================================================================
+
+============================================================
+SECTION 1: TRACE vs CYCLE COUNT DECOMPOSITION
+============================================================
+
+    tr(A^k) counts ALL closed k-walks, not just simple k-cycles.
+    For tournaments: no backward edges (a_{ij}*a_{ji} = 0).
+    But closed walks CAN revisit vertices through different edges.
+
+    For k=3: tr(A^3) = 3*c_3 (all closed 3-walks are simple cycles)
+    For k=4: tr(A^4) = ??? (includes non-simple 4-walks)
+    For k=5: tr(A^5) = 5*c_5 + correction_terms
+    
+
+--- p = 5 ---
+  S=[3, 4], H=15
+    tr(A^3) = 15, 3*c_3 = 15, diff = -0
+    tr(A^4) = 20
+    tr(A^5) = 10, 5*c_5 = 10, diff = 0
+    4*c_4 = 20, tr(A^4) = 20, diff = 0
+    Total 5-walks = 10, simple = 10, non-simple = 0
+    tr(A^5) should = total_walks = 10: match = True
+    5*c_5 = 10, simple_walks = 10: match = True
+
+--- p = 7 ---
+  S=[4, 5, 6], H=175
+    tr(A^3) = 42, 3*c_3 = 42, diff = -0
+    tr(A^4) = 112
+    tr(A^5) = 140, 5*c_5 = 140, diff = -0
+    tr(A^6) = 672
+    tr(A^7) = 2765, 7*c_7 = 119, diff = 2646
+    4*c_4 = 112, tr(A^4) = 112, diff = 0
+    Total 5-walks = 140, simple = 140, non-simple = 0
+    tr(A^5) should = total_walks = 140: match = True
+    5*c_5 = 140, simple_walks = 140: match = True
+  S=[1, 2, 4], H=189
+    tr(A^3) = 42, 3*c_3 = 42, diff = 0
+    tr(A^4) = 84
+    tr(A^5) = 210, 5*c_5 = 210, diff = -0
+    tr(A^6) = 756
+    tr(A^7) = 2226, 7*c_7 = 168, diff = 2058
+    4*c_4 = 84, tr(A^4) = 84, diff = -0
+    Total 5-walks = 210, simple = 210, non-simple = 0
+    tr(A^5) should = total_walks = 210: match = True
+    5*c_5 = 210, simple_walks = 210: match = True
+
+--- p = 11 ---
+  S=[6, 7, 8, 9, 10], H=93027
+    tr(A^3) = 165, 3*c_3 = 165, diff = -0
+    tr(A^4) = 880
+    tr(A^5) = 2420, 5*c_5 = 2420, diff = 0
+    tr(A^6) = 13167
+    tr(A^7) = 89243, 7*c_7 = 23793, diff = 65450
+    4*c_4 = 880, tr(A^4) = 880, diff = 0
+  S=[1, 6, 7, 8, 9], H=92411
+    tr(A^3) = 165, 3*c_3 = 165, diff = -0
+    tr(A^4) = 704
+    tr(A^5) = 2860, 5*c_5 = 2860, diff = 0
+    tr(A^6) = 15477
+    tr(A^7) = 79618, 7*c_7 = 26103, diff = 53515
+    4*c_4 = 704, tr(A^4) = 704, diff = 0
+  S=[2, 6, 7, 8, 10], H=95095
+    tr(A^3) = 165, 3*c_3 = 165, diff = -0
+    tr(A^4) = 660
+    tr(A^5) = 2970, 5*c_5 = 2970, diff = 0
+    tr(A^6) = 15675
+    tr(A^7) = 78540, 7*c_7 = 27720, diff = 50820
+    4*c_4 = 660, tr(A^4) = 660, diff = 0
+  S=[3, 6, 7, 9, 10], H=93467
+    tr(A^3) = 165, 3*c_3 = 165, diff = 0
+    tr(A^4) = 748
+    tr(A^5) = 2750, 5*c_5 = 2750, diff = -0
+    tr(A^6) = 14949
+    tr(A^7) = 81851, 7*c_7 = 25102, diff = 56749
+    4*c_4 = 748, tr(A^4) = 748, diff = 0
+
+============================================================
+SECTION 2: NON-SIMPLE WALK CORRECTION FOR tr(A^5)
+============================================================
+
+  Detailed walk decomposition at p = 7:
+  S=[4, 5, 6]: H=175, c5=28, tr5=140, ns_walks=0, ns3=0
+
+============================================================
+SECTION 3: OCF DECOMPOSITION H = sum alpha_k * 2^k
+============================================================
+
+  p=5: 7 cycles in Omega (5 three-cycles + 2 five-cycles)
+       All share vertices (7 cycles on 5 vertices)
+       alpha = [1, 7, 0] => I(Omega, 2) = 1 + 14 = 15 = H
+
+  p=7: TWO classes of circulant tournaments
+       Paley:     c3=14, c5=42, c7=24 => |Omega| = 80
+       Non-Paley: c3=14, c5=28, c7=17 => |Omega| = 59
+
+       H(Paley) = 189, H(non-Paley) = 175, delta = 14
+       |Omega|(Paley) - |Omega|(non-Paley) = 80 - 59 = 21
+       2 * 21 = 42... not exactly 14.
+       But alpha_1 enters as 2*alpha_1, and alpha_2 enters as 4*alpha_2...
+       The net effect depends on both linear and quadratic terms.
+    
+  CONTRIBUTION BY CYCLE LENGTH at p=7:
+    S=[1, 2, 4]: lengths=[3], |Omega|=14, alpha=[1, 14, 7], I(Omega,2)=57
+  S=[1, 2, 4], H=189: lengths [3, 5]: |Omega|=56 (too large for IP)
+  S=[1, 2, 4], H=189: lengths [3, 5, 7]: |Omega|=80 (too large for IP)
+    S=[4, 5, 6]: lengths=[3], |Omega|=14, alpha=[1, 14, 14], I(Omega,2)=85
+  S=[4, 5, 6], H=175: lengths [3, 5]: |Omega|=42 (too large for IP)
+  S=[4, 5, 6], H=175: lengths [3, 5, 7]: |Omega|=59 (too large for IP)
+
+============================================================
+SECTION 4: PALEY CYCLE DOMINANCE
+============================================================
+
+    At p=7: Paley has MORE cycles at EVERY length:
+      c_3: 14 = 14 (same — all regular)
+      c_5: 42 > 28 (+50%)
+      c_7: 24 > 17 (+41%)
+
+    At p=11: Same pattern:
+      c_3:  55 =  55 (same)
+      c_5: 594 > 484-572 (max among non-Paley)
+      c_7: 3960 > 3399-3729
+      c_9: 11055 > 9350-10274
+      c_11: 5505 > 4999-5153
+
+    CONJECTURE: Paley tournament MAXIMIZES c_k for ALL odd k >= 5
+    among circulant tournaments on Z_p (when p = 3 mod 4).
+
+    This would give: Paley maximizes alpha_1 = sum c_k.
+    By OCF: H = 1 + 2*alpha_1 + 4*alpha_2 + ...
+    If alpha_1 dominance is sufficient, Paley maximizes H.
+
+    But we need to check: does max alpha_1 => max H?
+    (THM-132 says at p=11, alpha_1 ordering does NOT match H ordering!)
+    
+  p = 7: Total cycles per tournament
+    S=[4, 5, 6]: H=175, c3=14, c5=28, c7=17, alpha_1=59, 2*alpha_1+1=119
+    S=[1, 4, 5]: H=175, c3=14, c5=28, c7=17, alpha_1=59, 2*alpha_1+1=119
+    S=[2, 4, 6]: H=175, c3=14, c5=28, c7=17, alpha_1=59, 2*alpha_1+1=119
+    S=[1, 2, 4]: H=189, c3=14, c5=42, c7=24, alpha_1=80, 2*alpha_1+1=161
+    S=[3, 5, 6]: H=189, c3=14, c5=42, c7=24, alpha_1=80, 2*alpha_1+1=161
+    S=[1, 3, 5]: H=175, c3=14, c5=28, c7=17, alpha_1=59, 2*alpha_1+1=119
+    S=[2, 3, 6]: H=175, c3=14, c5=28, c7=17, alpha_1=59, 2*alpha_1+1=119
+    S=[1, 2, 3]: H=175, c3=14, c5=28, c7=17, alpha_1=59, 2*alpha_1+1=119

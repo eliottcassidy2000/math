@@ -1,0 +1,98 @@
+======================================================================
+FULL OCF DECOMPOSITION WITH ALL ODD CYCLES
+======================================================================
+
+============================================================
+p = 7: Full Omega with ALL odd cycles
+============================================================
+
+  S = [4, 5, 6], H = 175
+    Cycle counts: {3: 14, 5: 28, 7: 17}
+    Total cycles (|Omega|): 59
+    Too many cycles for brute force IP computation
+    y^2 = [4.7989, 0.058, 0.3931]
+    tr(A^3) = 42.0000
+    tr(A^4) = 112.0000
+    tr(A^5) = 140.0000
+    tr(A^6) = 672.0000
+    tr(A^7) = 2765.0000
+
+  S = [1, 2, 4], H = 189
+    Cycle counts: {3: 14, 5: 42, 7: 24}
+    Total cycles (|Omega|): 80
+    Too many cycles for brute force IP computation
+    y^2 = [1.75, 1.75, 1.75]
+    tr(A^3) = 42.0000
+    tr(A^4) = 84.0000
+    tr(A^5) = 210.0000
+    tr(A^6) = 756.0000
+    tr(A^7) = 2226.0000
+
+============================================================
+p = 5: Full Omega
+============================================================
+
+  S = [3, 4], H = 15
+    Cycle counts: {3: 5, 5: 2}
+    Total cycles: 7
+    alpha_k = [1, 7]
+    I(Omega, 2) = 15
+    Match: True
+
+============================================================
+p = 11: Cycle counts (Omega too large for brute IP)
+============================================================
+
+  S = [6, 7, 8, 9, 10], H = 93027
+    c_3 = 55
+    c_5 = 484
+    c_7 = 3399
+    c_9 = 9350
+    c_11 = 5109
+    sum(y^4) = 147.8125
+
+  S = [1, 6, 7, 8, 9], H = 92411
+    c_3 = 55
+    c_5 = 572
+    c_7 = 3729
+    c_9 = 10274
+    c_11 = 4999
+    sum(y^4) = 59.8125
+
+  S = [2, 6, 7, 8, 10], H = 95095
+    c_3 = 55
+    c_5 = 594
+    c_7 = 3960
+    c_9 = 11055
+    c_11 = 5505
+    sum(y^4) = 37.8125
+
+  S = [3, 6, 7, 9, 10], H = 93467
+    c_3 = 55
+    c_5 = 550
+    c_7 = 3586
+    c_9 = 10197
+    c_11 = 5153
+    sum(y^4) = 81.8125
+
+============================================================
+CYCLE COUNT VARIATION ANALYSIS
+============================================================
+
+    Finding: c_3 is CONSTANT for all circulant tournaments on Z_p
+    (because all are regular with degree (p-1)/2).
+
+    Question: Is c_5 also constant? Or does it vary?
+    If c_5 varies: it could explain the H variation.
+    If c_5 is constant: we need c_7 or the ARRANGEMENT structure.
+    
+
+  p = 7: c_5 variation across 8 circulant tournaments
+    S=[4, 5, 6]: H=175, c3=14, c5=28 (21 vsets), c7=17
+    S=[1, 4, 5]: H=175, c3=14, c5=28 (21 vsets), c7=17
+    S=[2, 4, 6]: H=175, c3=14, c5=28 (21 vsets), c7=17
+    S=[1, 2, 4]: H=189, c3=14, c5=42 (21 vsets), c7=24
+    S=[3, 5, 6]: H=189, c3=14, c5=42 (21 vsets), c7=24
+    S=[1, 3, 5]: H=175, c3=14, c5=28 (21 vsets), c7=17
+    S=[2, 3, 6]: H=175, c3=14, c5=28 (21 vsets), c7=17
+    S=[1, 2, 3]: H=175, c3=14, c5=28 (21 vsets), c7=17
