@@ -45,7 +45,7 @@ Column scaling analysis: p=7, degree=3, prime=89
   Ranks: {0: 12, 1: 12, 2: 12, 3: 12, 4: 12, 5: 12, 6: 12}
   All ranks equal? True
   C_m^(1) = C_m^(0) * diag(col_scales)? True
-  Column scales: [0, np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)]...
+  Column scales: [0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]...
 
 ==================================================
 T_11 (p=11, valid Paley: 11 == 3 mod 4)

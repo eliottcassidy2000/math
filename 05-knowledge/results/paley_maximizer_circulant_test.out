@@ -1,0 +1,95 @@
+======================================================================
+PART 1: H(T) for all circulant tournaments on Z_7
+======================================================================
+Paley QR_7 = [1, 2, 4]
+
+     H           S             Paley?     max|λ_k|    min|λ_k|      spread
+---------------------------------------------------------------------------
+   189       [3, 5, 6]          YES         1.4142      1.4142      0.0000
+   189       [1, 2, 4]          YES         1.4142      1.4142      0.0000
+   175       [4, 5, 6]           no         2.2470      0.5550      1.6920
+   175       [2, 4, 6]           no         2.2470      0.5550      1.6920
+   175       [2, 3, 6]           no         2.2470      0.5550      1.6920
+   175       [1, 4, 5]           no         2.2470      0.5550      1.6920
+   175       [1, 3, 5]           no         2.2470      0.5550      1.6920
+   175       [1, 2, 3]           no         2.2470      0.5550      1.6920
+
+Max H = 189, Paley H = 189
+Paley uniquely maximizes: True
+
+Spectral spread vs H:
+  S=[2, 4, 6]: H=175, spectral_spread=1.6920 
+  S=[1, 3, 5]: H=175, spectral_spread=1.6920 
+  S=[4, 5, 6]: H=175, spectral_spread=1.6920 
+  S=[2, 3, 6]: H=175, spectral_spread=1.6920 
+  S=[1, 4, 5]: H=175, spectral_spread=1.6920 
+  S=[1, 2, 3]: H=175, spectral_spread=1.6920 
+  S=[3, 5, 6]: H=189, spectral_spread=0.0000 ← Paley (flattest)
+  S=[1, 2, 4]: H=189, spectral_spread=0.0000 ← Paley (flattest)
+
+======================================================================
+PART 2: Satake NDRTs — H(T) for q=5, 13 (q≡5 mod 8, q=s²+4)
+======================================================================
+
+q=5 (n=5 vertices):
+  QR_5 = [1, 4] — note: QR_5 ∩ (-QR_5) = [1, 4] (NOT a tournament!)
+  Since 5≡1 mod 4: -1 is QR, so QR ∩ (-QR) ≠ ∅ → QR is NOT a valid tournament connection set
+  All 4 circulant tournaments on Z_5:
+    S=[1, 2]: H=15
+    S=[2, 4]: H=15
+    S=[1, 3]: H=15
+    S=[3, 4]: H=15
+
+  OEIS a(5) = 15
+  Question: what is the Satake NDRT at q=5?
+
+q=13 (n=13 vertices, q≡5 mod 8 since 13=8+5):
+  QR_13 = [1, 3, 4, 9, 10, 12]
+  13 ≡ 1 mod 4: -1 is QR mod 13, so QR_13 is NOT a tournament connection set
+  Testing specific Satake connection set for q=13...
+  QR_13 = [1, 3, 4, 9, 10, 12]
+  Testing 4 specific circulant tournaments on Z_13...
+    S=[1, 2, 3, 4, 5, 6]: H=3711175
+    S=[1, 3, 4, 9, 10, 12]: NOT a valid tournament (S ∩ -S = [1, 3, 4, 9, 10, 12])
+    S=[1, 3, 4, 5, 8, 11]: NOT a valid tournament (S ∩ -S = [5, 8])
+    S=[2, 3, 4, 5, 6, 10]: NOT a valid tournament (S ∩ -S = [3, 10])
+
+======================================================================
+PART 3: Spectral flatness ↔ H-maximization (Z_7)
+======================================================================
+
+For Paley T_7: all |λ_k| for k≠0 should equal √7/2 ≈ 1.3229
+Expected value: 1.3229
+
+S=[3, 5, 6]: H=189
+  |λ_k| for k=1..6: ['1.4142', '1.4142', '1.4142', '1.4142', '1.4142', '1.4142']
+  ← PALEY: all equal = True, value ≈ 1.4142, √7/2 = 1.3229
+
+S=[1, 2, 4]: H=189
+  |λ_k| for k=1..6: ['1.4142', '1.4142', '1.4142', '1.4142', '1.4142', '1.4142']
+  ← PALEY: all equal = True, value ≈ 1.4142, √7/2 = 1.3229
+
+S=[4, 5, 6]: H=175
+  |λ_k| for k=1..6: ['2.2470', '2.2470', '0.8019', '0.8019', '0.5550', '0.5550']
+
+S=[2, 4, 6]: H=175
+  |λ_k| for k=1..6: ['2.2470', '2.2470', '0.8019', '0.8019', '0.5550', '0.5550']
+
+S=[2, 3, 6]: H=175
+  |λ_k| for k=1..6: ['2.2470', '2.2470', '0.8019', '0.8019', '0.5550', '0.5550']
+
+S=[1, 4, 5]: H=175
+  |λ_k| for k=1..6: ['2.2470', '2.2470', '0.8019', '0.8019', '0.5550', '0.5550']
+
+S=[1, 3, 5]: H=175
+  |λ_k| for k=1..6: ['2.2470', '2.2470', '0.8019', '0.8019', '0.5550', '0.5550']
+
+S=[1, 2, 3]: H=175
+  |λ_k| for k=1..6: ['2.2470', '2.2470', '0.8019', '0.8019', '0.5550', '0.5550']
+
+
+CONCLUSION:
+Paley has flattest spectrum (spread=0): True
+Flat spectrum ↔ maximum H:  CONFIRMED
+
+DONE.

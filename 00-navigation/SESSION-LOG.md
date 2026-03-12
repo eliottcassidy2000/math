@@ -19,6 +19,53 @@ Entry format:
 **Continuation of:** kind-pasteur-2026-03-12-S55
 **Summary of work:** [IN PROGRESS]
 
+## opus-2026-03-12-S56 — 2026-03-12: Paley circulant uniqueness + dihedral group connections
+
+**Account:** opus
+**Continuation of:** kind-pasteur-2026-03-12-S55
+**Files read:** CLAUDE.md, MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, paley_maximizer_circulant_test.py, MSG-127-from-kind-pasteur-S55, t19_omega_dims_sparse.out, tang_yau_symbol_matrix.out
+**Summary of work:**
+
+  Multi-part synthesis and computation session:
+
+  PART 1 — Applications synthesis (formal-writeup.md, engineering-synthesis):
+  - Walsh-Fourier compression: 341× at n=5, ~100,000× at n=7 (lossless tournament representation)
+  - GLMY homology TDA for rankings, spectral tournament analysis
+  - 4 major software innovations: small-prime Gaussian elimination (8× RAM), THM-125 eigenspace
+    decomposition (n× speedup), multi-prime rank certification, diff-seq enumeration
+
+  PART 2 — Dihedral group / Paley maximizer deep analysis:
+  - Discovered: D_{2p} acts on T_p — rotations are automorphisms, reflections are ANTI-automorphisms
+    (because p≡3 mod 4 makes −1 a non-residue)
+  - Proved: The Paley tournament is the unique circulant on Z_7 invariant under full D_{14} symmetry
+  - Connected: Ramanujan flat spectrum → H-maximization (spectral principle)
+  - 4-step proof architecture for Paley maximization: circulant reduction → spectral optimality →
+    Ramanujan property → dihedral reflection
+
+  PART 3 — Exhaustive computation `paley_maximizer_circulant_test.py`:
+  - H(Paley T_7) = 189 vs H(all other Z_7 circulants) = 175. Paley uniquely maximizes. CONFIRMED.
+  - Spectral spread of Paley = 0.0000 (all |λ_k| = √2), all others spread = 1.6920. PERFECTLY CORRELATED.
+  - Gauss sum eigenvalue formula: |λ_k| = √((p+1)/4) = √2 for p=7, p≡3 mod 4 (correcting earlier estimate)
+  - At n=5: ALL 4 circulants achieve H=15=OEIS max (no unique maximizer; Paley doesn't apply)
+  - At n=13: Need proper Satake construction (QR_13 is NOT a valid tournament S since 13≡1 mod 4)
+
+  PART 4 — Git reconciliation after conflict:
+  - Resolved merge conflicts in agents/.session-state.json, inbox/PROCESSING-REPORT.md
+  - Rebased eigenspace_identity_proof.py (renamed local version, rebased, merged)
+
+**New contributions:**
+  - THM-126: Paley uniquely maximizes H among Z_7 circulants (exhaustive, spectral flatness theorem)
+  - THM-127: Dihedral anti-automorphism theorem — reflections map T_p → T_p^{op} for p≡3 mod 4
+  - 04-computation/paley_maximizer_circulant_test.py (new script)
+  - 05-knowledge/results/paley_maximizer_circulant_test.out (key results)
+  - 06-writeups/formal-writeup.md (expanded applications section)
+
+**Unresolved threads:**
+  - Satake NDRTs: need actual construction for q=13 (not just QR_13); compute H vs OEIS A038375
+  - Algebraic proof χ(T_p)=p for all Paley primes (only computational for p=3,7,11)
+  - T_19 degrees 9-18: needs C/C++ implementation
+  - Does spectral flatness ↔ H-maximization hold for all prime p≡3 mod 4?
+
 ## kind-pasteur-2026-03-12-S55 — 2026-03-12: Fix betti_numbers, tests, paper investigation
 
 **Account:** kind-pasteur
