@@ -1,0 +1,215 @@
+======================================================================
+THE DIHEDRAL LADDER — FULL SPECTRAL ANALYSIS
+======================================================================
+
+SECTION 1: EVEN n CIRCULANT TOURNAMENT IMPOSSIBILITY
+--------------------------------------------------
+For even n, element n/2 is self-paired (n/2 = n - n/2).
+This forces bidirectional or missing edge => no tournament.
+  n=2: element 1 is self-paired. D_{4} acts on 2-gon but NO circulant tournament exists.
+  n=4: element 2 is self-paired. D_{8} acts on 4-gon but NO circulant tournament exists.
+  n=6: element 3 is self-paired. D_{12} acts on 6-gon but NO circulant tournament exists.
+  n=8: element 4 is self-paired. D_{16} acts on 8-gon but NO circulant tournament exists.
+
+
+======================================================================
+SECTION 2: THE ODD LADDER
+======================================================================
+
+============================================================
+n=3: D_{6} (6 elements), 1 spectral params, 2 circulants
+  PRIME, n mod 4 = 3, n mod 8 = 3
+  QR_3 = [1], -1 mod 3 = 2 NOT IN QR
+  => QR_3 is a VALID tournament set (Paley-like)
+
+  H range: [3, 3], 1 distinct values
+  Maximizer: S=[2], H=3
+    y^2 values: ['0.7500']
+    Spread: 0.0000
+  Flattest: S=[1], H=3, spread=0.0000
+  QR tournament: S=[1], H=3, rank=1/1 *** MAXIMIZER ***
+  Cyclic interval: S=[2], H=3, *** MAXIMIZER ***
+
+  FLATTEST = MAX H: YES
+  QR = MAX H: YES
+
+============================================================
+n=5: D_{10} (10 elements), 2 spectral params, 4 circulants
+  PRIME, n mod 4 = 1, n mod 8 = 5
+  QR_5 = [1, 4], -1 mod 5 = 4 IN QR
+  => QR_5 is NOT a valid tournament set
+
+  H range: [15, 15], 1 distinct values
+  Maximizer: S=[3, 4], H=15
+    y^2 values: ['2.3680', '0.1320']
+    Spread: 1.0000
+  Flattest: S=[3, 4], H=15, spread=1.0000
+  Cyclic interval: S=[3, 4], H=15, *** MAXIMIZER ***
+
+  FLATTEST = MAX H: YES
+
+============================================================
+n=7: D_{14} (14 elements), 3 spectral params, 8 circulants
+  PRIME, n mod 4 = 3, n mod 8 = 7
+  QR_7 = [1, 2, 4], -1 mod 7 = 6 NOT IN QR
+  => QR_7 is a VALID tournament set (Paley-like)
+
+  H range: [175, 189], 2 distinct values
+  Maximizer: S=[3, 5, 6], H=189
+    y^2 values: ['1.7500', '1.7500', '1.7500']
+    Spread: 0.0000
+  Flattest: S=[1, 2, 4], H=189, spread=0.0000
+  QR tournament: S=[1, 2, 4], H=189, rank=1/2 *** MAXIMIZER ***
+  Cyclic interval: S=[4, 5, 6], H=175, 
+
+  FLATTEST = MAX H: YES
+  QR = MAX H: YES
+
+============================================================
+n=9: D_{18} (18 elements), 4 spectral params, 16 circulants
+  COMPOSITE (9=?), n mod 4 = 1, n mod 8 = 1
+  QR_9 = [1, 4, 7], -1 mod 9 = 8 NOT IN QR
+  => QR_9 is NOT a valid tournament set
+
+  H range: [3159, 3357], 3 distinct values
+  Maximizer: S=[4, 6, 7, 8], H=3357
+    y^2 values: ['4.6294', '1.2179', '0.7500', '2.4027']
+    Spread: 1.2089
+  Flattest: S=[1, 2, 4, 6], H=3357, spread=1.2089
+  Cyclic interval: S=[5, 6, 7, 8], H=3267, 
+
+  FLATTEST = MAX H: YES
+
+============================================================
+n=11: D_{22} (22 elements), 5 spectral params, 32 circulants
+  PRIME, n mod 4 = 3, n mod 8 = 3
+  QR_11 = [1, 3, 4, 5, 9], -1 mod 11 = 10 NOT IN QR
+  => QR_11 is a VALID tournament set (Paley-like)
+
+  H range: [92411, 95095], 4 distinct values
+  Maximizer: S=[2, 6, 7, 8, 10], H=95095
+    y^2 values: ['2.7500', '2.7500', '2.7500', '2.7500', '2.7500']
+    Spread: 0.0000
+  Flattest: S=[2, 6, 7, 8, 10], H=95095, spread=0.0000
+  QR tournament: S=[1, 3, 4, 5, 9], H=95095, rank=1/4 *** MAXIMIZER ***
+  Cyclic interval: S=[6, 7, 8, 9, 10], H=93027, 
+
+  FLATTEST = MAX H: YES
+  QR = MAX H: YES
+
+============================================================
+n=13: D_{26} (26 elements), 6 spectral params, 64 circulants
+  PRIME, n mod 4 = 1, n mod 8 = 5
+  QR_13 = [1, 3, 4, 9, 10, 12], -1 mod 13 = 12 IN QR
+  => QR_13 is NOT a valid tournament set
+
+  H range: [3669497, 3711175], 6 distinct values
+  Maximizer: S=[7, 8, 9, 10, 11, 12], H=3711175
+    y^2 values: ['16.9569', '0.0152', '1.7382', '0.0689', '0.5247', '0.1962']
+    Spread: 3.6332
+  Flattest: S=[1, 2, 3, 5, 6, 9], H=3703011, spread=1.0000
+  Cyclic interval: S=[7, 8, 9, 10, 11, 12], H=3711175, *** MAXIMIZER ***
+
+  FLATTEST = MAX H: NO
+
+
+======================================================================
+SECTION 3: LADDER SUMMARY TABLE
+======================================================================
+
+  n  |D| prime mod4 mod8  n_H      H_max flat=max QR_valid QR=max CI=max winner         
+-----------------------------------------------------------------------------------------------
+  3    6  True    3    3    1          3     True     True   True   True PALEY/QR       
+  5   10  True    1    5    1         15     True    False  False   True CYCLIC INT     
+  7   14  True    3    7    2        189     True     True   True  False PALEY/QR       
+  9   18 False    1    1    3       3357     True    False  False  False FLATTEST       
+ 11   22  True    3    3    4      95095     True     True   True  False PALEY/QR       
+ 13   26  True    1    5    6    3711175    False    False  False   True CYCLIC INT     
+
+
+======================================================================
+SECTION 4: n=9 DEEP DIVE (COMPOSITE: 9 = 3^2)
+======================================================================
+
+All 16 circulant tournaments on Z_9:
+  S                                H   spread y^2 values                                        
+  ---------------------------------------------------------------------------------------------
+  [4, 6, 7, 8]                  3357   1.2089 ['4.629', '1.218', '0.750', '2.403']              
+  [3, 5, 7, 8]                  3357   1.2089 ['1.218', '2.403', '0.750', '4.629']              
+  [2, 3, 4, 8]                  3357   1.2089 ['2.403', '4.629', '0.750', '1.218']              
+  [1, 5, 6, 7]                  3357   1.2089 ['2.403', '4.629', '0.750', '1.218']              
+  [1, 2, 4, 6]                  3357   1.2089 ['1.218', '2.403', '0.750', '4.629']              
+  [1, 2, 3, 5]                  3357   1.2089 ['4.629', '1.218', '0.750', '2.403']              
+  [5, 6, 7, 8]                  3267   2.3473 ['8.041', '0.033', '0.750', '0.176']               CI
+  [3, 4, 7, 8]                  3267   2.3473 ['0.176', '8.041', '0.750', '0.033']              
+  [2, 4, 6, 8]                  3267   2.3473 ['0.033', '0.176', '0.750', '8.041']              
+  [1, 3, 5, 7]                  3267   2.3473 ['0.033', '0.176', '0.750', '8.041']              
+  [1, 2, 5, 6]                  3267   2.3473 ['0.176', '8.041', '0.750', '0.033']              
+  [1, 2, 3, 4]                  3267   2.3473 ['8.041', '0.033', '0.750', '0.176']              
+  [2, 5, 6, 8]                  3159   1.6458 ['0.750', '0.750', '6.750', '0.750']              
+  [2, 3, 5, 8]                  3159   1.6458 ['0.750', '0.750', '6.750', '0.750']              
+  [1, 4, 6, 7]                  3159   1.6458 ['0.750', '0.750', '6.750', '0.750']              
+  [1, 3, 4, 7]                  3159   1.6458 ['0.750', '0.750', '6.750', '0.750']              
+
+  Z_9^* orbit decomposition:
+  Z_9^* = [1, 2, 4, 5, 7, 8] (order 6)
+  H=3357: 6 tournaments, orbit size 6
+  H=3267: 6 tournaments, orbit size 6
+  H=3159: 4 tournaments, orbit size 2
+
+
+======================================================================
+SECTION 5: THE QR MAXIMIZATION THEOREM
+======================================================================
+
+    PATTERN FROM THE LADDER:
+      n=3  (prime, mod4=3):  QR valid, QR = max       (Paley)
+      n=5  (prime, mod4=1):  QR NOT valid              (all tied)
+      n=7  (prime, mod4=3):  QR valid, QR = max        (Paley)
+      n=9  (composite):      QR valid (since -1 not QR_9), QR = ???
+      n=11 (prime, mod4=3):  QR valid, QR = max        (Paley)
+      n=13 (prime, mod4=1):  QR NOT valid              (cyclic int wins)
+
+    The KEY QUESTION: at n=9, does QR_9 = {1,4,7} maximize H?
+    If YES: QR maximization extends to composites where -1 not in QR.
+    If NO: Paley maximization is purely a prime phenomenon.
+
+  n=9: QR_9 = [1, 4, 7], H(QR) = None, H_max = 3357
+  QR_9 NOT FOUND among circulant tournaments!
+  REASON: |QR_9| = 3 but need |S| = 4
+  QR tournaments ONLY work at PRIMES (|QR_p| = (p-1)/2 = required |S|)
+  At n=p^k: |QR_n| = phi(n)/2 != (n-1)/2 in general.
+  QR spectrum: y^2 = ['0.0000', '0.0000', '6.7500', '0.0000']
+  QR spread = 3.0000
+  QR is spectrally FLAT: False
+
+
+======================================================================
+SECTION 6: THE UNIFIED SPECTRAL PRINCIPLE
+======================================================================
+
+    Combining all evidence:
+
+    1. FLAT SPECTRUM => MAX H (when achievable):
+       - n=3,7,11: Paley achieves flat, Paley = max. [CONFIRMED]
+       - n=9: QR_9 achieves flat (if it does) => QR = max? [TEST ABOVE]
+
+    2. WHEN FLAT NOT ACHIEVABLE:
+       - n=5: All spectra identical (degenerate case), all tied. [TRIVIAL]
+       - n=13: No flat spectrum. Concentrated (Dirichlet kernel) = max. [CONFIRMED]
+
+    3. THE PRINCIPLE: H is maximized at the "spectral center" (flat point).
+       When center is achievable: flat wins (Paley/QR).
+       When center is not achievable: landscape reverses, concentration wins.
+
+    4. ACHIEVABILITY: flat spectrum <=> -1 not in QR_n AND S=QR_n works.
+       For prime p: -1 not in QR_p iff p = 3 mod 4.
+       For composite n=p^2: -1 not in QR_n iff p = 3 mod 4.
+
+    5. THE DIHEDRAL INTERLACING:
+       EVEN n: No circulant tournaments exist (self-paired n/2 element).
+       ODD n: Circulant tournaments exist, D_{2n} acts.
+       The even-order dihedral groups D_{2n} provide the spectral framework.
+       The odd-order rotation groups Z_n provide the eigenvalue decomposition.
+       Between each tournament size (odd n), the "interlaced" group mediates.
+

@@ -1,0 +1,133 @@
+======================================================================
+CYCLE COUNT DETERMINATION OF H FOR CIRCULANT TOURNAMENTS
+======================================================================
+
+============================================================
+p = 3 (mod 4 = 3)
+============================================================
+  2 tournaments computed in 0.0s
+  1 distinct H values
+  c_3 trace vs direct: 0 mismatches
+  c_3 values: [1]
+  ALL circulant tournaments at p=3 have c_3 = 1
+  => c_3 does NOT distinguish H values. Need higher cycles.
+
+             H count    c3 y2 (spectral params)
+  ------------ ----- ----- ----------------------------------------
+             3     2     1 [0.7500]
+
+  OMEGA ANALYSIS (conflict graph of 3-cycles):
+    S=[2]: H=3, alpha=(1,1,0,0), OCF=3, match=True
+
+============================================================
+p = 5 (mod 4 = 1)
+============================================================
+  4 tournaments computed in 0.0s
+  1 distinct H values
+  c_3 trace vs direct: 0 mismatches
+  c_3 values: [5]
+  ALL circulant tournaments at p=5 have c_3 = 5
+  => c_3 does NOT distinguish H values. Need higher cycles.
+
+             H count    c3 y2 (spectral params)
+  ------------ ----- ----- ----------------------------------------
+            15     4     5 [2.3680, 0.1320]
+
+  OMEGA ANALYSIS (conflict graph of 3-cycles):
+    S=[3, 4]: H=15, alpha=(1,5,0,0), OCF=11, match=False
+
+============================================================
+p = 7 (mod 4 = 3)
+============================================================
+  8 tournaments computed in 0.0s
+  2 distinct H values
+  c_3 trace vs direct: 0 mismatches
+  c_3 values: [14]
+  ALL circulant tournaments at p=7 have c_3 = 14
+  => c_3 does NOT distinguish H values. Need higher cycles.
+
+             H count    c3 y2 (spectral params)
+  ------------ ----- ----- ----------------------------------------
+           189     2    14 [1.7500, 1.7500, 1.7500]
+           175     6    14 [4.7989, 0.0580, 0.3931]
+
+  OMEGA ANALYSIS (conflict graph of 3-cycles):
+    S=[1, 2, 4]: H=189, alpha=(1,14,7,0), OCF=57, match=False
+    S=[3, 5, 6]: H=189, alpha=(1,14,7,0), OCF=57, match=False
+
+============================================================
+p = 11 (mod 4 = 3)
+============================================================
+  32 tournaments computed in 0.3s
+  4 distinct H values
+  c_3 trace vs direct: 0 mismatches
+  c_3 values: [55]
+  ALL circulant tournaments at p=11 have c_3 = 55
+  => c_3 does NOT distinguish H values. Need higher cycles.
+
+             H count    c3 y2 (spectral params)
+  ------------ ----- ----- ----------------------------------------
+         95095     2    55 [2.7500, 2.7500, 2.7500, 2.7500, 2.7500]
+         93467    10    55 [2.2438, 0.1736, 8.4920, 1.9673, 0.8732]
+         93027    10    55 [12.0935, 0.0216, 1.1987, 0.1033, 0.3330]
+         92411    10    55 [5.7422, 3.8655, 0.7829, 3.3593, 0.0002]
+
+============================================================
+p = 13 (mod 4 = 1)
+============================================================
+  64 tournaments computed in 3.2s
+  6 distinct H values
+  c_3 trace vs direct: 0 mismatches
+  c_3 values: [91]
+  ALL circulant tournaments at p=13 have c_3 = 91
+  => c_3 does NOT distinguish H values. Need higher cycles.
+
+             H count    c3 y2 (spectral params)
+  ------------ ----- ----- ----------------------------------------
+       3711175    12    91 [16.9569, 0.0152, 1.7382, 0.0689, 0.5247, 0.1962]
+       3707483    12    91 [2.3792, 13.2441, 1.3125, 0.6500, 1.9142, 0.0001]
+       3704857    12    91 [0.1073, 5.3499, 0.0467, 7.7932, 3.4677, 2.7351]
+       3703011     4    91 [1.4472, 5.0528, 1.4472, 1.4472, 5.0528, 5.0528]
+       3683797    12    91 [6.1103, 3.9731, 0.7052, 1.1317, 7.3430, 0.2367]
+       3669497    12    91 [10.1660, 3.1301, 0.4449, 4.5474, 0.3622, 0.8493]
+
+============================================================
+KEY FINDING: c_3 for circulant tournaments on Z_p
+============================================================
+  p=3: c_3 values = [1]
+    Formula p(p-1)(p-5)/24 = -1, actual = 1
+    C(p,3) - p*C(s,2) = 1, actual = 1
+  p=5: c_3 values = [5]
+    Formula p(p-1)(p-5)/24 = 0, actual = 5
+    C(p,3) - p*C(s,2) = 5, actual = 5
+  p=7: c_3 values = [14]
+    Formula p(p-1)(p-5)/24 = 3, actual = 14
+    C(p,3) - p*C(s,2) = 14, actual = 14
+  p=11: c_3 values = [55]
+    Formula p(p-1)(p-5)/24 = 27, actual = 55
+    C(p,3) - p*C(s,2) = 55, actual = 55
+  p=13: c_3 values = [91]
+    Formula p(p-1)(p-5)/24 = 52, actual = 91
+    C(p,3) - p*C(s,2) = 91, actual = 91
+
+============================================================
+CONFLICT GRAPH STRUCTURE ANALYSIS (p=7)
+============================================================
+
+  S = [4, 5, 6], H = 175
+    |Omega| = 14, conflicts = 77, disjoint = 14
+    Degree dist: {11: 14}
+    alpha_1 = 14, alpha_2 = 14
+    OCF check: 1 + 2*14 + 4*14 = 85
+
+  S = [1, 2, 4], H = 189
+    |Omega| = 14, conflicts = 84, disjoint = 7
+    Degree dist: {12: 14}
+    alpha_1 = 14, alpha_2 = 7
+    OCF check: 1 + 2*14 + 4*7 = 57
+
+  S = [3, 5, 6], H = 189
+    |Omega| = 14, conflicts = 84, disjoint = 7
+    Degree dist: {12: 14}
+    alpha_1 = 14, alpha_2 = 7
+    OCF check: 1 + 2*14 + 4*7 = 57
