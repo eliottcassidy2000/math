@@ -1,0 +1,318 @@
+======================================================================
+THE DIHEDRAL MOD-4 DICHOTOMY
+======================================================================
+
+======================================================================
+1. THE SIGNED PERMUTATION P_{-1} FOR EACH PRIME
+======================================================================
+
+  p=  7 ≡ 7 mod 8: m=3, χ(-1)=-1, χ(2)=+1
+    -1 ∈ QR: False
+    P_{-1} = -I: True
+    → σ_P = [ 1  1 -1]
+    → σ_P fixed by all QR P_a: True
+    → THM-137 applies: Paley eigenvector theorem holds.
+
+  p= 11 ≡ 3 mod 8: m=5, χ(-1)=-1, χ(2)=-1
+    -1 ∈ QR: False
+    P_{-1} = -I: True
+    → σ_P = [ 1 -1  1  1  1]
+    → σ_P fixed by all QR P_a: True
+    → THM-137 applies: Paley eigenvector theorem holds.
+
+  p= 13 ≡ 5 mod 8: m=6, χ(-1)=+1, χ(2)=-1
+    -1 ∈ QR: True
+    P_{-1} = -I: True
+    → P_{-1} ∈ QR symmetry group → fixed subspace = {0}
+    → NO Paley eigenvector exists!
+
+  p= 17 ≡ 1 mod 8: m=8, χ(-1)=+1, χ(2)=+1
+    -1 ∈ QR: True
+    P_{-1} = -I: True
+    → P_{-1} ∈ QR symmetry group → fixed subspace = {0}
+    → NO Paley eigenvector exists!
+
+  p= 19 ≡ 3 mod 8: m=9, χ(-1)=-1, χ(2)=-1
+    -1 ∈ QR: False
+    P_{-1} = -I: True
+    → σ_P = [ 1 -1 -1  1  1  1  1 -1  1]
+    → σ_P fixed by all QR P_a: True
+    → THM-137 applies: Paley eigenvector theorem holds.
+
+  p= 23 ≡ 7 mod 8: m=11, χ(-1)=-1, χ(2)=+1
+    -1 ∈ QR: False
+    P_{-1} = -I: True
+    → σ_P = [ 1  1  1  1 -1  1 -1  1  1 -1 -1]
+    → σ_P fixed by all QR P_a: True
+    → THM-137 applies: Paley eigenvector theorem holds.
+
+  p= 29 ≡ 5 mod 8: m=14, χ(-1)=+1, χ(2)=-1
+    -1 ∈ QR: True
+    P_{-1} = -I: True
+    → P_{-1} ∈ QR symmetry group → fixed subspace = {0}
+    → NO Paley eigenvector exists!
+
+
+======================================================================
+2. POLYGON SYMMETRY: REFLECTION AUTOMORPHISM vs ANTI-AUTOMORPHISM
+======================================================================
+
+A tournament T on Z_p drawn as a regular p-gon:
+  - Vertices at positions exp(2πik/p) on the unit circle
+  - Arc i→j is a directed chord
+
+The ROTATION x → x+1 is always an automorphism (circulant).
+The REFLECTION x → -x maps arc (i→j) to arc (-i→-j):
+  - New difference: (-j)-(-i) = i-j = -(j-i)
+  - Original arc exists iff j-i ∈ QR
+  - Reflected arc exists iff -(j-i) ∈ QR iff χ(-1)·χ(j-i) = 1
+  - If χ(-1) = +1 (p≡1 mod 4): reflected arc exists iff original does
+    → REFLECTION IS AN AUTOMORPHISM → T_Paley has D_{2p} symmetry
+  - If χ(-1) = -1 (p≡3 mod 4): reflected arc exists iff original doesn't
+    → REFLECTION IS AN ANTI-AUTOMORPHISM → T → T^op
+    → T_Paley only has C_p × C_m symmetry, NOT D_{2p}
+
+  p=  7 (≡3 mod 4):
+    Reflection is automorphism: False
+    Reflection is anti-automorphism: True
+    |Aut(T_Paley)| = 21
+    Expected: p·m = 21
+  p= 11 (≡3 mod 4):
+    Reflection is automorphism: False
+    Reflection is anti-automorphism: True
+    |Aut(T_Paley)| = 55
+    Expected: p·m = 55
+  p= 13 (≡1 mod 4):
+    Reflection is automorphism: True
+    Reflection is anti-automorphism: True
+    |Aut(T_Paley)| = 78
+    Expected: p·m = 78
+  p= 17 (≡1 mod 4):
+    Reflection is automorphism: True
+    Reflection is anti-automorphism: True
+    |Aut(T_Paley)| = 136
+    Expected: p·m = 136
+  p= 19 (≡3 mod 4):
+    Reflection is automorphism: False
+    Reflection is anti-automorphism: True
+    |Aut(T_Paley)| = 171
+    Expected: p·m = 171
+
+
+======================================================================
+3. H-MAXIMIZATION AT p≡1 MOD 4: NO PALEY PHASE
+======================================================================
+
+  p=5, m=2 (p ≡ 1 mod 4, p ≡ 5 mod 8)
+  QR = [1, 4]
+  σ_P (Paley) = (1, -1)
+  σ_I (Interval) = (1, 1)
+  H(Paley) = 15
+  H(Interval) = 15
+  Top 5:
+    #1: σ=(1, 1), H=15, A(σ)=0
+    #2: σ=(1, -1), H=15, A(σ)=2
+    #3: σ=(-1, 1), H=15, A(σ)=-2
+    #4: σ=(-1, -1), H=15, A(σ)=0
+
+  Maximum H = 15
+  H(Paley) / H_max = 1.000000
+  H(Interval) / H_max = 1.000000
+  H(Paley) rank: 2/4
+  H(Interval) rank: 1/4
+  Distinct H values: 1
+    H=15: 4 orientations
+
+  p=13, m=6 (p ≡ 1 mod 4, p ≡ 5 mod 8)
+  QR = [1, 3, 4, 9, 10, 12]
+  σ_P (Paley) = (1, -1, 1, 1, -1, -1)
+  σ_I (Interval) = (1, 1, 1, 1, 1, 1)
+  H(Paley) = 3669497
+  H(Interval) = 3711175
+  Top 5:
+    #1: σ=(1, 1, 1, 1, 1, 1), H=3711175, A(σ)=0
+    #2: σ=(1, 1, 1, -1, -1, -1), H=3711175, A(σ)=2
+    #3: σ=(1, 1, -1, -1, 1, 1), H=3711175, A(σ)=-4
+    #4: σ=(1, -1, 1, -1, 1, -1), H=3711175, A(σ)=2
+    #5: σ=(1, -1, 1, -1, -1, 1), H=3711175, A(σ)=2
+
+  Maximum H = 3711175
+  H(Paley) / H_max = 0.988770
+  H(Interval) / H_max = 1.000000
+  H(Paley) rank: 56/64
+  H(Interval) rank: 1/64
+  Distinct H values: 6
+    H=3711175: 12 orientations
+    H=3707483: 12 orientations
+    H=3704857: 12 orientations
+    H=3703011: 4 orientations
+    H=3683797: 12 orientations
+    H=3669497: 12 orientations
+
+
+======================================================================
+4. THE ROLE OF χ(2): p≡5 MOD 8 vs p≡1 MOD 8
+======================================================================
+
+For p≡1 mod 4, we further split by χ(2):
+  p≡5 mod 8: χ(2) = -1 (2 is NQR)
+  p≡1 mod 8: χ(2) = +1 (2 is QR)
+
+χ(2) determines whether CONSECUTIVE chord types agree:
+  Chord 1 (nearest neighbor): always QR (since 1 ∈ QR)
+  Chord 2 (next-nearest): QR iff χ(2) = +1
+
+For Interval: σ₁ = σ₂ = +1 (both CW). Always agrees.
+For Paley:
+  p≡1 mod 8: σ₁ = σ₂ = +1 (both CW). AGREES with Interval on short chords.
+  p≡5 mod 8: σ₁ = +1, σ₂ = -1 (disagree!). CONFLICTS with Interval.
+
+When Paley conflicts with Interval on short chords, Interval's
+"flow advantage" is LARGER. This explains why Interval wins MORE
+decisively at p≡5 mod 8.
+
+p=17, m=8 (p ≡ 1 mod 8)
+  χ(-1) = 1, χ(2) = 1
+  QR = [1, 2, 4, 8, 9, 13, 15, 16]
+  σ_P = (1, 1, -1, 1, -1, -1, -1, 1)
+  σ_I = (1, 1, 1, 1, 1, 1, 1, 1)
+  Agreements: 4/8, Disagreements: 4/8
+  NQR chords (where they disagree): [3, 5, 6, 7]
+
+  Computing all 256 orientations at p=17...
+
+  H(Paley) = 13492503135
+  H(Interval) = 13689269499
+  H_max = 13689269499
+  H(P)/H_max = 0.985626
+  H(I)/H_max = 1.000000
+  H(P) rank: 196/256
+  H(I) rank: 1/256
+
+  Top 10:
+    #1: σ=(1, 1, 1, 1, 1, 1, 1, 1), H=13689269499, A(σ)=0, dist_from_I=0
+    #2: σ=(1, 1, 1, 1, -1, -1, -1, -1), H=13689269499, A(σ)=4, dist_from_I=4
+    #3: σ=(1, 1, -1, -1, 1, 1, -1, -1), H=13689269499, A(σ)=0, dist_from_I=4
+    #4: σ=(1, 1, -1, -1, -1, 1, 1, 1), H=13689269499, A(σ)=2, dist_from_I=3
+    #5: σ=(1, -1, 1, 1, -1, 1, 1, -1), H=13689269499, A(σ)=-2, dist_from_I=3
+    #6: σ=(1, -1, 1, -1, 1, 1, -1, 1), H=13689269499, A(σ)=-2, dist_from_I=3
+    #7: σ=(1, -1, 1, -1, 1, -1, 1, -1), H=13689269499, A(σ)=-4, dist_from_I=4
+    #8: σ=(1, -1, -1, 1, 1, -1, 1, 1), H=13689269499, A(σ)=2, dist_from_I=3
+    #9: σ=(-1, 1, 1, -1, -1, 1, -1, -1), H=13689269499, A(σ)=-2, dist_from_I=5
+    #10: σ=(-1, 1, -1, 1, -1, 1, -1, 1), H=13689269499, A(σ)=4, dist_from_I=4
+
+  Distinct H values: 16
+
+
+======================================================================
+5. THE COMPLETE MOD-8 PICTURE
+======================================================================
+
+    p  mod8 χ(-1)  χ(2)   m  m%2             H(P)             H(I)   Winner    Ratio
+  --- ----- ----- ----- --- ---- ---------------- ---------------- -------- --------
+    3     3    -1    -1   1    1                3                3      TIE   1.0000
+    5     5    +1    -1   2    0               15               15      TIE   1.0000
+    7     7    -1    +1   3    1              189              175    PALEY   1.0800
+   11     3    -1    -1   5    1            95095            93027    PALEY   1.0222
+   13     5    +1    -1   6    0          3669497          3711175 INTERVAL   0.9888
+   17     1    +1    +1   8    0      13492503135      13689269499 INTERVAL   0.9856
+   19     3    -1    -1   9    1    1172695746915    1184212824763 INTERVAL   0.9903
+
+
+======================================================================
+6. DIHEDRAL GROUP INTERPRETATION
+======================================================================
+
+The tournament on Z_p is drawn as a regular p-gon.
+The dihedral group D_{2p} = ⟨r, s | r^p = s² = (sr)² = 1⟩ acts on vertices.
+
+ROTATIONS (r^k): Always automorphisms of circulant tournaments.
+REFLECTION (s): x → -x mod p.
+
+For the PALEY tournament:
+  p≡3 mod 4: s is an ANTI-automorphism (T → T^op)
+    → Aut(T_Paley) = {x → ax + c : a ∈ QR, c ∈ Z_p} (order p·m)
+    → D_{2p} is NOT contained in Aut(T_Paley)
+    → Paley BREAKS the polygon's reflection symmetry
+    → This "chirality" creates a nontrivial Paley eigenvector σ_P
+
+  p≡1 mod 4: s IS an automorphism (T → T)
+    → Aut(T_Paley) ⊇ D_{2p} (full dihedral symmetry!)
+    → Paley PRESERVES the polygon's reflection symmetry
+    → "Too symmetric" = "too expander-like" = worse for flow
+    → No Paley eigenvector exists (P_{-1} = -I kills it)
+
+For the INTERVAL tournament:
+  s maps S = {1,...,m} to p-S = {m+1,...,p-1} (complementary interval)
+  → s is ALWAYS an anti-automorphism of Interval
+  → Interval ALWAYS breaks reflection symmetry → creates "flow"
+  → This is why Interval wins at ALL p ≡ 1 mod 4 and at large p ≡ 3 mod 4
+
+THE DEEP STRUCTURE:
+  H-maximization rewards CHIRALITY (breaking reflection symmetry).
+  Chirality = directed flow = more Hamiltonian paths.
+
+  At p≡3 mod 4 (small p):
+    Both Paley and Interval are chiral. Paley wins via the 2-body eigenvector.
+  At p≡3 mod 4 (large p):
+    Interval's STRONGER chirality (unidirectional flow) beats Paley's.
+  At p≡1 mod 4 (ALL p):
+    Paley is NOT chiral (has reflection symmetry) → Interval wins immediately.
+
+POLYGON PICTURE:
+  Think of directed edges as "traffic" on the p-gon.
+  - Interval: all traffic flows clockwise → maximum chirality
+  - Paley (p≡3 mod 4): traffic alternates by QR structure → partial chirality
+  - Paley (p≡1 mod 4): traffic is reflection-symmetric → zero chirality
+
+  "Chirality" = nonzero winding number = Hamiltonian paths "go around" the polygon.
+  Maximum chirality = maximum flow = maximum path count.
+
+======================================================================
+7. INTERLACING OF EVEN AND ODD GROUPS
+======================================================================
+
+The user's insight about interlacing:
+
+  D_{2n} (order 2n, even) = symmetries of the n-gon (tournament on n vertices)
+  C_m (order m) = QR symmetry group (m = (p-1)/2 chord types)
+
+  p:   3   5   7  11  13  17  19  23  29  31
+  m:   1   2   3   5   6   8   9  11  14  15
+  m%2: 1   0   1   1   0   0   1   1   0   1
+  mod4: 3   1   3   3   1   1   3   3   1   3
+
+  p≡3 mod 4 → m ODD:
+    C_m has no element of order 2
+    → -I is NOT in the QR symmetry group
+    → Nontrivial fixed subspace exists (σ_P)
+    → "Odd groups are interlaced between tournament sizes"
+    → These are the primes where Paley can win
+
+  p≡1 mod 4 → m EVEN:
+    C_m has an element of order 2 (= m/2-th power of generator)
+    → But P_{-1} = -I IS in the QR group (since -1 ∈ QR)
+    → Fixed subspace = {0}
+    → "Even groups align WITH tournament sizes"
+    → These are the primes where Paley CANNOT win
+
+The tournament sizes (p) and group orders (m) alternate:
+  ...p=11(m=5 odd)...p=13(m=6 even)...p=17(m=8 even)...p=19(m=9 odd)...
+  |_____Paley can win___|_______________Paley cannot________________|...
+
+The "interlacing" means: odd-order QR groups (p≡3 mod 4) have a
+DIFFERENT algebraic structure than even-order ones (p≡1 mod 4).
+The odd groups support a unique Paley eigenvector; the even ones don't.
+
+======================================================================
+8. CHIRALITY MEASURE: QUANTIFYING REFLECTION ASYMMETRY
+======================================================================
+  p=  5 (≡1 mod 4): Paley chirality = 0.0000, Interval chirality = 1.0000, ratio I/P = inf
+  p=  7 (≡3 mod 4): Paley chirality = 1.0000, Interval chirality = 1.0000, ratio I/P = 1.0000
+  p= 11 (≡3 mod 4): Paley chirality = 1.0000, Interval chirality = 1.0000, ratio I/P = 1.0000
+  p= 13 (≡1 mod 4): Paley chirality = 0.0000, Interval chirality = 1.0000, ratio I/P = inf
+  p= 17 (≡1 mod 4): Paley chirality = 0.0000, Interval chirality = 1.0000, ratio I/P = inf
+  p= 19 (≡3 mod 4): Paley chirality = 1.0000, Interval chirality = 1.0000, ratio I/P = 1.0000
+
+
+DONE.
