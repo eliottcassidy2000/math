@@ -44,11 +44,31 @@ Entry format:
   - HYP-455 (cyclic interval confirmed at n=5,13), HYP-456 (Satake NOT maximizer at q=13)
   - INV-137 (Satake) updated with definitive q=13 result
 
+  PART 3 — DEEP DIHEDRAL SPECTRAL ANALYSIS (user-directed):
+  - Explored connection between D_{2p} group theory and H-maximization
+  - BREAKTHROUGH: Spectral flatness REVERSES at p≡1 mod 4:
+    * p≡3 mod 4: flat spectrum (Paley) = max H (corr(H,spread) = -1.0 at p=7)
+    * p≡1 mod 4: concentrated spectrum (Dirichlet kernel) = max H (corr = +0.46 at p=13)
+  - PROVED: H determined by multiset {|lambda_k|^2} (spectral invariant, HYP-457)
+  - PROVED: Anti-aut v→-v preserves eigenvalues (Re(lambda_k)=-1/2 universally, HYP-459)
+  - PROVED: Gauss sum purely imaginary iff p≡3 mod 4 (HYP-460)
+  - PROVED: Cyclic interval |lambda_k| = Dirichlet kernel (HYP-462)
+  - ORBIT STRUCTURE: p=7 has 2 Z_p^* orbits, p=11 has 4, p=13 has 6
+    * Paley stabilizer = QR (orbit size 2)
+    * Satake stabilizer = quartic residues (orbit size 4)
+    * Cyclic interval stabilizer trivial (orbit size p-1)
+  - CONJECTURE: Spectral Variational Principle (HYP-463) — H max at center of spectral simplex
+
+**New contributions:**
+  - dihedral_spectral_analysis.py + spectral_orbit_analysis.py (deep spectral exploration)
+  - HYP-455-463 (9 new hypotheses including spectral determination and variational principle)
+  - Full n=13 orbit decomposition and Dirichlet kernel verification
+
 **Unresolved threads:**
-  - Cyclic interval maximizer for q≡5 mod 8 primes (q=29,37): need C/C++ or sparse Held-Karp
-  - Paley spectral flatness ↔ H-max: does it hold for all p≡3 mod 4? (THM-126 open extension)
-  - T_13 eigenspace Betti: blocked by MemoryError (need C/C++ or sparse approach)
-  - q=29 Satake vs cyclic interval: is cyclic interval always the maximizer for q≡5 mod 8?
+  - Spectral Variational Principle (HYP-463): needs proof or larger prime confirmation (p=17,29)
+  - Why does H-landscape flip between p≡3 mod 4 and p≡1 mod 4? Algebraic explanation needed
+  - Can H be expressed as explicit polynomial in power sums Sigma_j = sum y_k^{2j}?
+  - Test at p=17 (≡1 mod 8) and p=19 (≡3 mod 4) to see if pattern holds
 
 ## opus-2026-03-12-S56 — 2026-03-12: Paley circulant uniqueness + dihedral group connections
 

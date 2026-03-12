@@ -1,0 +1,239 @@
+======================================================================
+ORBIT STRUCTURE AND SPECTRAL VARIATIONAL PRINCIPLE
+======================================================================
+
+============================================================
+Z_7^* ORBIT DECOMPOSITION (|Z_7^*| = 6)
+============================================================
+
+         H | orbit |                 stab | representative                
+---------------------------------------------------------------------------
+       189 |     2 | QR_7                 | S=[3, 5, 6]
+       175 |     6 | {1}                  | S=[4, 5, 6]
+
+Total: 8 tournaments, 2 orbits
+Expected: 2^3 = 8
+
+============================================================
+Z_11^* ORBIT DECOMPOSITION (|Z_11^*| = 10)
+============================================================
+
+         H | orbit |                 stab | representative                
+---------------------------------------------------------------------------
+     95095 |     2 | QR_11                | S=[2, 6, 7, 8, 10]
+     93467 |    10 | {1}                  | S=[5, 7, 8, 9, 10]
+     93027 |    10 | {1}                  | S=[6, 7, 8, 9, 10]
+     92411 |    10 | {1}                  | S=[4, 6, 8, 9, 10]
+
+Total: 32 tournaments, 4 orbits
+Expected: 2^5 = 32
+
+============================================================
+Z_13^* ORBIT DECOMPOSITION (|Z_13^*| = 12)
+============================================================
+
+         H | orbit |                 stab | representative                
+---------------------------------------------------------------------------
+   3711175 |    12 | {1}                  | S=[7, 8, 9, 10, 11, 12]
+   3707483 |    12 | {1}                  | S=[6, 8, 9, 10, 11, 12]
+   3704857 |    12 | {1}                  | S=[5, 7, 9, 10, 11, 12]
+   3703011 |     4 | [1, 3, 9]            | S=[4, 7, 8, 10, 11, 12]
+   3683797 |    12 | {1}                  | S=[3, 4, 5, 7, 11, 12]
+   3669497 |    12 | {1}                  | S=[4, 6, 8, 10, 11, 12]
+
+Total: 64 tournaments, 6 orbits
+Expected: 2^6 = 64
+
+
+======================================================================
+SECTION 2: DISTANCE FROM SPECTRAL CENTER (y_k^2 = p/4)
+======================================================================
+
+    The "spectral center" is y_k^2 = p/4 for all k = 1,...,(p-1)/2.
+    This gives |lambda_k|^2 = (p+1)/4 (the Paley value).
+    Distance = sqrt(sum (y_k^2 - p/4)^2) = sqrt(var * m) where m = (p-1)/2.
+
+    For p=3 mod 4: Paley achieves center (distance = 0).
+    For p=1 mod 4: center not achievable. What's the distance pattern?
+
+
+--- p = 7 ---
+  Center: y_k^2 = 1.7500 for all k  (Paley value)
+           H dist_from_center     Sum_y4 type           
+  -------------------------------------------------------
+         189           0.0000     9.1875                
+         175           3.7417    23.1875 CYCLIC INT     
+
+  Correlation(H, dist_from_center) = -1.0000
+  => NEGATIVE: closer to center (flatter) = more H. PALEY WINS.
+
+--- p = 11 ---
+  Center: y_k^2 = 2.7500 for all k  (Paley value)
+           H dist_from_center     Sum_y4 type           
+  -------------------------------------------------------
+       95095           0.0000    37.8125                
+       93467           6.6332    81.8125                
+       93027          10.4881   147.8125 CYCLIC INT     
+       92411           4.6904    59.8125                
+
+  Correlation(H, dist_from_center) = -0.2561
+  => NEGATIVE: closer to center (flatter) = more H. PALEY WINS.
+
+--- p = 13 ---
+  Center: y_k^2 = 3.2500 for all k  (Paley value)
+           H dist_from_center     Sum_y4 type           
+  -------------------------------------------------------
+     3711175          15.0831   290.8750 CYCLIC INT     
+     3707483          11.1131   186.8750                
+     3704857           6.7454   108.8750                
+     3703011           4.4159    82.8750                
+     3683797           6.7454   108.8750                
+     3669497           8.4558   134.8750                
+
+  Correlation(H, dist_from_center) = 0.4632
+  => POSITIVE: farther from center = more H
+
+
+======================================================================
+SECTION 3: QUADRATIC MODEL H ~ a + b*Sum_y4 + c*Sum_y6
+======================================================================
+
+    Test: can H be approximated by a low-degree polynomial in power sums?
+    H ~ alpha + beta * Sigma_2 + gamma * Sigma_3 + ...
+    where Sigma_j = sum y_k^{2j} (the j-th power sum of y^2 values).
+
+
+--- p = 7 ---
+           H      Sigma_2      Sigma_3        Sigma_4
+  ----------------------------------------------------
+         189       9.1875      16.0781        28.1367
+         175      23.1875     110.5781       530.3867
+
+--- p = 11 ---
+           H      Sigma_2      Sigma_3        Sigma_4
+  ----------------------------------------------------
+       95095      37.8125     103.9844       285.9570
+       93467      81.8125     631.9844      5241.4570
+       93027     147.8125    1770.4844     21392.2070
+       92411      59.8125     285.4844      1438.2070
+
+  All Sigma_2 distinct => test H = a + b*Sigma_2:
+    a = 99708.12, b = -122.000000
+    Max residual: 11352.00
+
+--- p = 13 ---
+           H      Sigma_2      Sigma_3        Sigma_4
+  ----------------------------------------------------
+     3711175     290.8750    4881.0938     82685.5859
+     3707483     186.8750    2346.0938     30815.5859
+     3704857     108.8750     688.5938      4708.3359
+     3703011      82.8750     396.0938      1968.5859
+     3683797     108.8750     688.5938      4552.3359
+     3669497     134.8750    1176.0937     11205.0859
+
+  Sigma_2 values NOT all distinct => need higher power sums
+  H determined by (Sigma_2, Sigma_3, Sigma_4): YES
+
+
+======================================================================
+SECTION 4: MAXIMIZER STRUCTURE AT p=13
+======================================================================
+
+All 12 maximizers at p=13 (H=3711175):
+  Base: S_0 = [7, 8, 9, 10, 11, 12]
+   1 * S_0 = [7, 8, 9, 10, 11, 12]          MAXIMIZER
+   2 * S_0 = [1, 3, 5, 7, 9, 11]            MAXIMIZER
+   3 * S_0 = [1, 4, 7, 8, 10, 11]           MAXIMIZER
+   4 * S_0 = [1, 2, 5, 6, 9, 10]            MAXIMIZER
+   5 * S_0 = [1, 3, 6, 8, 9, 11]            MAXIMIZER
+   6 * S_0 = [1, 2, 3, 7, 8, 9]             MAXIMIZER
+   7 * S_0 = [4, 5, 6, 10, 11, 12]          MAXIMIZER
+   8 * S_0 = [2, 4, 5, 7, 10, 12]           MAXIMIZER
+   9 * S_0 = [3, 4, 7, 8, 11, 12]           MAXIMIZER
+  10 * S_0 = [2, 3, 5, 6, 9, 12]            MAXIMIZER
+  11 * S_0 = [2, 4, 6, 8, 10, 12]           MAXIMIZER
+  12 * S_0 = [1, 2, 3, 4, 5, 6]             MAXIMIZER
+
+  Structural analysis of maximizer S = [7, 8, 9, 10, 11, 12]:
+  Complement -S = [1, 2, 3, 4, 5, 6]
+  S is consecutive arc: True
+  |S intersect QR_13| = 3
+  |S intersect NQR_13| = 3
+  Quartic coset C_0 = [1, 3, 9]: |S ∩ C_0| = 1, members in S: [9]
+  Quartic coset C_1 = [2, 5, 6]: |S ∩ C_1| = 0, members in S: []
+  Quartic coset C_2 = [4, 10, 12]: |S ∩ C_2| = 2, members in S: [10, 12]
+  Quartic coset C_3 = [7, 8, 11]: |S ∩ C_3| = 3, members in S: [7, 8, 11]
+
+
+======================================================================
+SECTION 5: DIRICHLET KERNEL — WHY CONSECUTIVE SETS CONCENTRATE SPECTRUM
+======================================================================
+
+    For S = {a, a+1, ..., a+m-1} (consecutive arc of length m on Z_p):
+      lambda_k = sum_{j=0}^{m-1} omega^{k(a+j)} = omega^{ka} * (omega^{km} - 1) / (omega^k - 1)
+      |lambda_k| = |sin(pi*k*m/p)| / |sin(pi*k/p)|
+
+    This is the Dirichlet kernel D_m evaluated at 2*pi*k/p.
+    Main lobe at k=0 (trivial eigenvalue), width ~ p/m.
+    For k near 0 (but k != 0), |lambda_k| ~ m (LARGE).
+    For k far from 0, |lambda_k| ~ 1/|sin(pi*k/p)| (SMALL).
+
+    The cyclic interval S = {(p+1)/2, ..., p-1} has m = (p-1)/2.
+    |lambda_1| ~ (p-1)/2 / sin(pi/p) >> |lambda_k| for k >> 1.
+    This explains the CONCENTRATION: one eigenvalue dominates.
+
+  Cyclic interval at p=13: S=[7, 8, 9, 10, 11, 12], m=6
+    k   |lambda_k|    Dirichlet  match
+  -----------------------------------
+    0     6.000000     6.000000    YES
+    1     4.148115     4.148115    YES
+    2     0.514964     0.514964    YES
+    3     1.410020     1.410020    YES
+    4     0.564681     0.564681    YES
+    5     0.880181     0.880181    YES
+    6     0.667993     0.667993    YES
+    7     0.667993     0.667993    YES
+    8     0.880181     0.880181    YES
+    9     0.564681     0.564681    YES
+   10     1.410020     1.410020    YES
+   11     0.514964     0.514964    YES
+   12     4.148115     4.148115    YES
+
+
+======================================================================
+SYNTHESIS: THE DIHEDRAL SPECTRAL MAXIMIZATION THEOREM
+======================================================================
+
+    THEOREM (Spectral Determination): For circulant tournaments on Z_p (p prime),
+    H(T) is determined by the multiset {{|lambda_k|^2 : k=1,...,(p-1)/2}}.
+    Equivalently, H is constant on Z_p^* orbits of connection sets.
+
+    THEOREM (Anti-Aut Spectral Preservation): For any circulant tournament
+    on Z_p, the D_{2p} reflection anti-automorphism v -> -v preserves all
+    eigenvalues: lambda_k -> -1 - conj(lambda_k) = lambda_k.
+
+    THEOREM (Gauss Sum Dichotomy):
+      p = 3 mod 4: Gauss sum purely imaginary => Paley achieves flat spectrum
+                    (all |lambda_k|^2 = (p+1)/4). Flat = MAX H.
+      p = 1 mod 4: Gauss sum real => no flat spectrum possible.
+                    Concentrated spectrum = MAX H (Dirichlet kernel).
+
+    CONJECTURE (Spectral Variational Principle):
+      H, viewed as a function on the spectral simplex
+      {(y_1^2,...,y_m^2) : sum y_k^2 = p(p-1)/8}, has a unique global
+      maximum at the center y_k^2 = p/4 for all k.
+      - When center IS achievable (p=3 mod 4): Paley wins.
+      - When center is NOT achievable (p=1 mod 4): the connection set
+        whose spectrum is FARTHEST from center (maximum Sum_y^4) wins.
+
+    THE DIHEDRAL LADDER:
+      Tournament size n:    1    2    3    4    5    6    7   ...
+      Symmetry group:     D_2  D_4  D_6  D_8  D_10 D_12 D_14 ...
+      Spectral params:      0    1    1    2    2    3    3   ...
+      Interlaced Z_n:      Z_3  Z_5  Z_7  Z_9  Z_11 Z_13 ...
+
+      Each step up the ladder adds one spectral degree of freedom.
+      The odd-order cyclic groups Z_{2n+1} between D_{2n} and D_{2(n+1)}
+      correspond to the ROTATIONAL part of the symmetry (the automorphisms).
+      The reflections (anti-automorphisms) add the second Z_2 factor in D_{2n}.
+
