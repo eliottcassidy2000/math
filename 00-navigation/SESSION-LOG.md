@@ -13,6 +13,40 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S60 — 2026-03-12: Spectral-OCF chain, Schur-concavity dichotomy, global Paley maximality
+
+**Account:** opus
+**Continuation of:** opus-2026-03-10-S59 (continued from context compaction)
+**Summary of work:**
+  Deep investigation of the dihedral group / Paley tournament H-maximization connection (user-directed).
+
+  MAJOR FINDINGS:
+  1. **THM-133: Spectral-OCF chain** — Proved C₅ = f(p) - (1/2)Σy_k⁴ exactly, where y_k = Im(λ_k).
+     Paley minimizes Σy⁴ by Jensen inequality (spectral flatness), maximizing C₅.
+  2. **THM-134: Schur-concavity dichotomy** — H(y²) is Schur-concave on spectral simplex for p≡3 mod 4
+     (Paley primes), but NOT for p≡1 mod 4. Verified at p=7 (1/1), p=11 (4/4), p=13 (7/9 fail).
+  3. **Global maximality (HYP-471)** — Exhaustive check of all 2^21 tournaments at n=7 confirms
+     Paley is the UNIQUE H-maximizer (240 labeled maximizers, all Paley relabelings).
+  4. **Maximizer structure** — At n=7, all regular tournaments have exactly C₃=14 (universal from trace).
+     Three isomorphism classes: |Aut|=21 (Paley, H=189), |Aut|=7 (H=175), |Aut|=3 (H=171).
+     H correlates perfectly with |Aut|.
+  5. **Universal Re(λ_k)=-1/2** — All circulant tournament eigenvalues have real part -1/2 for k≥1.
+  6. **Exact formula at p=7** — H = 1587/8 - (1/2)Σy_k⁴ (linear in σ₂).
+  7. **Circulant reduction fails** — Z_p-averaging can decrease H (6/50000 at n=7), so simple averaging
+     does not provide Step A.
+  8. **H(T_19) = 1172695746915** computed.
+  9. **Cycle census** — Paley maximizes ALL odd cycle lengths at p=7 and p=11.
+
+**New contributions:** THM-133, THM-134, HYP-468 through HYP-474
+**Scripts:** dihedral_paley.py, paley_global_max.py, paley_ocf_mechanism.py, spectral_ocf_chain.py,
+  exact_cycle_census.py, ocf_eigenvalue_bridge.py, h_spectral_landscape.py, schur_concavity_test.py,
+  circulant_reduction.py, maximizer_structure.py, paley_h_closed_form.py
+**Unresolved threads:**
+  - Step A: How to reduce from all tournaments to circulants? Z_p-averaging doesn't work.
+  - Prove Schur-concavity of H for general p≡3 mod 4.
+  - Why does |Aut| correlate with H for regular tournaments?
+  - Closed-form H(T_p): no clean formula found (H(T_11)=5·7·11·13·19 is smooth, but H(T_19) has large prime factor).
+
 ## kind-pasteur-2026-03-12-S56 — 2026-03-12: Satake NDRTs + eigenspace Betti pattern + T_13 distribution
 
 **Account:** kind-pasteur
