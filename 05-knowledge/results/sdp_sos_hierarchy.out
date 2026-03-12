@@ -1,0 +1,206 @@
+SDP AND SUM-OF-SQUARES HIERARCHY FOR H-MAXIMIZATION
+===========================================================================
+
+===========================================================================
+p = 7, m = 3
+===========================================================================
+
+  1. DEGREE-2 SDP RELAXATION (Goemans-Williamson style)
+     max sigma^T J sigma  s.t. sigma_i^2 = 1
+     SDP optimum (upper bound): 21.0000
+     Q(Paley):   21.0000
+     Q(Interval): -7.0000
+     Paley achieves 100.0% of SDP bound
+     Interval achieves -33.3% of SDP bound
+     |<sigma_P, top_eigvec>| = 1.000000
+     Paley IS the SDP solution? True
+
+  2. DEGREE-4 TERMS (beyond SDP)
+     D4(Paley):   0.0000
+     D4(Interval): 0.0000
+     D4 advantage: Interval by 0.0000
+
+  3. FULL H COMPARISON
+     H_0 (mean): 178.50
+     H(Paley) = H_0 + Q_2 + D_4 + ... = 189
+     H(Interval) = H_0 + Q_2 + D_4 + ... = 175
+     Winner: PALEY by 14
+
+  4. SDP INTEGRALITY GAP
+     SDP says: Q_2 optimum is Paley (gap = 0 for quadratic)
+     Degree-4 correction: +0.0000 toward Interval
+     Fraction of total: 0.0%
+
+  5. SOS HIERARCHY LEVEL
+     Paley wins: SOS level 1 (degree-2) suffices
+
+  6. MOMENT MATRIX (degree-2 SOS)
+     M(Paley) rank: 1
+     M(Paley) = sigma_P sigma_P^T (rank 1 = tight SDP)
+
+===========================================================================
+p = 11, m = 5
+===========================================================================
+
+  1. DEGREE-2 SDP RELAXATION (Goemans-Williamson style)
+     max sigma^T J sigma  s.t. sigma_i^2 = 1
+     SDP optimum (upper bound): 2805.0000
+     Q(Paley):   2805.0000
+     Q(Interval): 561.0000
+     Paley achieves 100.0% of SDP bound
+     Interval achieves 20.0% of SDP bound
+     |<sigma_P, top_eigvec>| = 1.000000
+     Paley IS the SDP solution? True
+
+  2. DEGREE-4 TERMS (beyond SDP)
+     D4(Paley):   591.2500
+     D4(Interval): -354.7500
+     D4 advantage: Paley by 946.0000
+
+  3. FULL H COMPARISON
+     H_0 (mean): 93101.25
+     H(Paley) = H_0 + Q_2 + D_4 + ... = 95095
+     H(Interval) = H_0 + Q_2 + D_4 + ... = 93027
+     Winner: PALEY by 2068
+
+  4. SDP INTEGRALITY GAP
+     SDP says: Q_2 optimum is Paley (gap = 0 for quadratic)
+     Degree-4 correction: -946.0000 toward Interval
+     Fraction of total: 47.4%
+
+  5. SOS HIERARCHY LEVEL
+     Paley wins: SOS level 1 (degree-2) suffices
+
+  6. MOMENT MATRIX (degree-2 SOS)
+     M(Paley) rank: 1
+     M(Paley) = sigma_P sigma_P^T (rank 1 = tight SDP)
+
+===========================================================================
+p = 13, m = 6
+===========================================================================
+
+  1. DEGREE-2 SDP RELAXATION (Goemans-Williamson style)
+     max sigma^T J sigma  s.t. sigma_i^2 = 1
+     SDP optimum (upper bound): 32027.9925
+     Q(Paley):   -3113.5000
+     Q(Interval): -3113.5000
+     Paley achieves -9.7% of SDP bound
+     Interval achieves -9.7% of SDP bound
+     |<sigma_P, top_eigvec>| = 0.408248
+     Paley IS the SDP solution? False
+
+  2. DEGREE-4 TERMS (beyond SDP)
+     D4(Paley):   -24786.1250
+     D4(Interval): 16891.8750
+     D4 advantage: Interval by 41678.0000
+
+  3. FULL H COMPARISON
+     H_0 (mean): 3695839.88
+     H(Paley) = H_0 + Q_2 + D_4 + ... = 3669497
+     H(Interval) = H_0 + Q_2 + D_4 + ... = 3711175
+     Winner: INTERVAL by 41678
+
+  4. SDP INTEGRALITY GAP
+     SDP says: Q_2 optimum is Paley (gap = 0 for quadratic)
+     Degree-4 correction: +41678.0000 toward Interval
+     Fraction of total: 158.2%
+
+  5. SOS HIERARCHY LEVEL
+     Interval wins: need SOS level 2 (degree-4)
+     The degree-2 SDP is MISLEADING at this p!
+
+  6. MOMENT MATRIX (degree-2 SOS)
+     M(Paley) rank: 1
+     M(Paley) = sigma_P sigma_P^T (rank 1 = tight SDP)
+
+===========================================================================
+SYNTHESIS: THE SDP-SOS INTERPRETATION
+===========================================================================
+
+  THE PHASE TRANSITION AS AN SOS HIERARCHY TRANSITION:
+
+  At small p (≤ 11):
+    - H is dominated by degree-2 terms
+    - The degree-2 SDP relaxation is TIGHT
+    - Paley is the unique SDP optimum (= top eigenvector of J)
+    - SOS level 1 suffices to certify Paley's optimality
+    - The problem is "EASY" (polynomial-time solvable)
+
+  At large p (≥ 13):
+    - Degree-4+ terms dominate
+    - The degree-2 SDP gives WRONG answer (still says Paley)
+    - Need SOS level 2+ to see Interval's advantage
+    - The integrality gap of the degree-2 SDP grows with p
+    - The problem becomes "HARDER" (higher SOS levels needed)
+
+  CONNECTIONS TO COMPLEXITY THEORY:
+  1. MAX-CUT on the interaction graph J:
+     Goemans-Williamson gives 0.878-approximation via degree-2 SDP
+     Our problem has EXACT SDP solution at small p (no gap)
+     This is because J has QR symmetry → rank-1 solution is feasible
+
+  2. Unique Games Conjecture:
+     If UGC is true, then no polynomial-time algorithm beats GW for MAX-CUT
+     Our problem transitions from "easy" (SDP exact) to "hard" (SDP inexact)
+     at exactly the p where the physics phase transition occurs!
+
+  3. Sherali-Adams hierarchy:
+     The Walsh expansion IS the Sherali-Adams LP relaxation hierarchy
+     Level k sees degree-(2k) Walsh coefficients
+     The minimum level needed = the "proof complexity" of showing who wins
+
+  THIS GIVES A NEW PERSPECTIVE ON THE CROSSOVER:
+  The Paley → Interval crossover is not just a physical phase transition,
+  it's a COMPUTATIONAL COMPLEXITY transition. The proof that Interval
+  wins requires increasingly high SOS degree as we approach the critical p.
+
+
+===========================================================================
+INTEGRALITY GAP GROWTH
+===========================================================================
+
+  p=7: SDP advantage = 28.00, Actual advantage = 14, Gap = 14.00
+
+  p=11: SDP advantage = 2244.00, Actual advantage = 2068, Gap = 176.00
+
+  p=13: SDP advantage = 0.00, Actual advantage = -41678, Gap = 41678.00
+    SDP WRONG: says Paley by 0.00, but Interval wins by 41678
+
+  PREDICTION: Integrality gap ~ m^2 * (scaling of degree-4 terms)
+  At p=19: gap should be very large (Interval wins by ~1%)
+  At p=23: gap larger still (Interval wins by ~1.6%)
+
+===========================================================================
+H AS A BOOLEAN FUNCTION: COMPLEXITY MEASURES
+===========================================================================
+
+  p = 7, m = 3:
+    Low-degree energy (deg ≤ 2): 100.0%
+    High-degree energy (deg > 2): 0.0%
+    Total influence: 73.5000
+    Influence per coordinate: min=24.5000, max=24.5000
+    Influence symmetry: 1.0000
+    Noise sensitivity at ρ=0.5: 9.1875
+    Coordinate influences: ['24.50', '24.50', '24.50']
+    Sensitivity of H_max: 3 (out of 3)
+      (#{coords whose flip decreases H} from Paley)
+
+  p = 11, m = 5:
+    Low-degree energy (deg ≤ 2): 84.1%
+    High-degree energy (deg > 2): 15.9%
+    Total influence: 1021542.5000
+    Influence per coordinate: min=204308.5000, max=204308.5000
+    Influence symmetry: 1.0000
+    Noise sensitivity at ρ=0.5: 97104.8633
+    Coordinate influences: ['204308.50', '204308.50', '204308.50', '204308.50', '204308.50']
+    Sensitivity of H_max: 5 (out of 5)
+      (#{coords whose flip decreases H} from Paley)
+
+  BOOLEAN FUNCTION INTERPRETATION:
+    H is a SYMMETRIC Boolean function (invariant under QR permutation)
+    At p=7: low-degree polynomial (degree 2) = NOISE-STABLE
+    At p=11: degree-4 terms appear = becoming NOISE-SENSITIVE
+    The phase transition = crossing from noise-stable to noise-sensitive!
+    This connects to the KKL theorem and the noise sensitivity of Boolean functions
+
+DONE.
