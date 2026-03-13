@@ -1,0 +1,164 @@
+======================================================================
+CYCLE COUNT - ENERGY MOMENT DEPENDENCY
+======================================================================
+
+======================================================================
+EIGENVALUE DEPENDENCY at p=7, m=3
+======================================================================
+
+  c_3: CONSTANT = 14
+
+  c_5 dependency analysis:
+    c_5 = f(S4):         max_err = 0.0000 EXACT
+    c_5 = f(S4,S6):      max_err = 0.0000 EXACT
+    c_5 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_5 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_5 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_7 dependency analysis:
+    c_7 = f(S4):         max_err = 0.0000 EXACT
+    c_7 = f(S4,S6):      max_err = 0.0000 EXACT
+    c_7 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_7 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_7 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  THEORY: c_k depends on S4, S6, ..., S_{k-1}
+  Number of parameters: floor((k-3)/2) for k odd
+  k=3: 0 parameters (constant)
+  k=5: 1 parameter (S4 = linear in E)
+  k=7: 2 parameters (S4, S6)
+  k=9: 3 parameters (S4, S6, S8)
+  k=11: 4 parameters (S4, S6, S8, S10)
+  k=13: 5 parameters (S4, S6, S8, S10, S12)
+
+======================================================================
+EIGENVALUE DEPENDENCY at p=11, m=5
+======================================================================
+
+  c_3: CONSTANT = 55
+
+  c_5 dependency analysis:
+    c_5 = f(S4):         max_err = 0.0000 EXACT
+    c_5 = f(S4,S6):      max_err = 0.0000 EXACT
+    c_5 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_5 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_5 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_7 dependency analysis:
+    c_7 = f(S4):         max_err = 165.0000 
+    c_7 = f(S4,S6):      max_err = 0.0000 EXACT
+    c_7 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_7 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_7 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_9 dependency analysis:
+    c_9 = f(S4):         max_err = 3250.5000 
+    c_9 = f(S4,S6):      max_err = 348.3615 
+    c_9 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_9 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_9 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_11 dependency analysis:
+    c_11 = f(S4):         max_err = 43738.7500 
+    c_11 = f(S4,S6):      max_err = 8237.0962 
+    c_11 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_11 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_11 = f(S4..S12):    max_err = 0.0001 EXACT
+
+  THEORY: c_k depends on S4, S6, ..., S_{k-1}
+  Number of parameters: floor((k-3)/2) for k odd
+  k=3: 0 parameters (constant)
+  k=5: 1 parameter (S4 = linear in E)
+  k=7: 2 parameters (S4, S6)
+  k=9: 3 parameters (S4, S6, S8)
+  k=11: 4 parameters (S4, S6, S8, S10)
+  k=13: 5 parameters (S4, S6, S8, S10, S12)
+
+======================================================================
+EIGENVALUE DEPENDENCY at p=13, m=6
+======================================================================
+
+  c_3: CONSTANT = 91
+
+  c_5 dependency analysis:
+    c_5 = f(S4):         max_err = 0.0000 EXACT
+    c_5 = f(S4,S6):      max_err = 0.0000 EXACT
+    c_5 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_5 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_5 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_7 dependency analysis:
+    c_7 = f(S4):         max_err = 307.8947 
+    c_7 = f(S4,S6):      max_err = 0.0000 EXACT
+    c_7 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_7 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_7 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_9 dependency analysis:
+    c_9 = f(S4):         max_err = 8577.9474 
+    c_9 = f(S4,S6):      max_err = 1911.0000 
+    c_9 = f(S4,S6,S8):   max_err = 0.0000 EXACT
+    c_9 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_9 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_11 dependency analysis:
+    c_11 = f(S4):         max_err = 168880.2632 
+    c_11 = f(S4,S6):      max_err = 66439.2857 
+    c_11 = f(S4,S6,S8):   max_err = 2535.1164 
+    c_11 = f(S4..S10):    max_err = 0.0000 EXACT
+    c_11 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  c_13 dependency analysis:
+    c_13 = f(S4):         max_err = 2867876.2895 
+    c_13 = f(S4,S6):      max_err = 1509375.2143 
+    c_13 = f(S4,S6,S8):   max_err = 109387.6921 
+    c_13 = f(S4..S10):    max_err = 15323.0106 
+    c_13 = f(S4..S12):    max_err = 0.0000 EXACT
+
+  THEORY: c_k depends on S4, S6, ..., S_{k-1}
+  Number of parameters: floor((k-3)/2) for k odd
+  k=3: 0 parameters (constant)
+  k=5: 1 parameter (S4 = linear in E)
+  k=7: 2 parameters (S4, S6)
+  k=9: 3 parameters (S4, S6, S8)
+  k=11: 4 parameters (S4, S6, S8, S10)
+  k=13: 5 parameters (S4, S6, S8, S10, S12)
+
+======================================================================
+H vs EIGENVALUE MOMENTS at p=7
+======================================================================
+  H = f(S4): max_err = 0.00
+  H = f(S4,S6): max_err = 0.00
+  H = f(S4,S6,S8): max_err = 0.00
+  H = f(S4,S6,S8,S10): max_err = 0.00
+  *** H is an EXACT linear function of (S4,S6,S8,S10) ***
+  Coefficients: [ 2.81675436  4.45523533  5.51512876 -1.2998834   0.31690572]
+
+  H = f(E,S6,S8,S10): max_err = 0.00
+  *** H = 3.8113*E + 3.5927*S6 + 4.4483*S8 + -1.0429*S10 + 0.26 ***
+
+  Unique (E, S6, H) triples:
+    E=  15, S6=     16.08, H=     189
+    E=  19, S6=    110.58, H=     175
+
+======================================================================
+H vs EIGENVALUE MOMENTS at p=11
+======================================================================
+  H = f(S4): max_err = 1911.25
+  H = f(S4,S6): max_err = 647.10
+  H = f(S4,S6,S8): max_err = 0.00
+  H = f(S4,S6,S8,S10): max_err = 0.00
+  *** H is an EXACT linear function of (S4,S6,S8,S10) ***
+  Coefficients: [ 5471.95989505 -1473.30322237   159.82898255    -5.9019909
+   324.02831533]
+
+  H = f(E,S6,S8,S10): max_err = 0.00
+  *** H = 1615.0272*E + -140.8746*S6 + 18.6350*S8 + -0.7480*S10 + 26.41 ***
+
+  Unique (E, S6, H) triples:
+    E=  65, S6=    103.98, H=   95095
+    E=  69, S6=    285.48, H=   92411
+    E=  73, S6=    631.98, H=   93467
+    E=  85, S6=   1770.48, H=   93027
+
+DONE.
