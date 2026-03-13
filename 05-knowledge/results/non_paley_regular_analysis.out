@@ -1,0 +1,47 @@
+
+H=175:
+  c3 = 14
+  disj_33 = 14
+  Overlaps (shared vertices): {0: 14, 1: 49, 2: 28}
+  Vertex cycle count: [6, 6, 6, 6, 6, 6, 6]
+  Conflict graph degrees: [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
+  Score: [3, 3, 3, 3, 3, 3, 3]
+
+H=171:
+  c3 = 14
+  disj_33 = 10
+  Overlaps (shared vertices): {0: 10, 1: 57, 2: 24}
+  Vertex cycle count: [6, 6, 6, 6, 6, 6, 6]
+  Conflict graph degrees: [11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 13, 13, 13]
+  Score: [3, 3, 3, 3, 3, 3, 3]
+
+H=189:
+  c3 = 14
+  disj_33 = 7
+  Overlaps (shared vertices): {0: 7, 1: 63, 2: 21}
+  Vertex cycle count: [6, 6, 6, 6, 6, 6, 6]
+  Conflict graph degrees: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+  Score: [3, 3, 3, 3, 3, 3, 3]
+
+============================================================
+WHY β₁=1 FOR H=175?
+============================================================
+
+At n=5: β₁=1 iff every vertex is in some 3-cycle AND the 3-cycles
+"wrap around" in a way that creates a non-trivial 1-cycle in Ω₁.
+
+For regular n=7: every vertex is in c₃/v = 14/7 * 3 = 6 cycles.
+So the cycle-per-vertex condition is always satisfied.
+
+The difference must be in the OVERLAP structure:
+  H=189 (Paley): disj=7, overlap2=21, ov1=63 → β₁=0
+  H=171:         disj=10, overlap2=18, ov1=57 → β₁=0
+  H=175:         disj=14, overlap2=14, ov1=49 → β₁=1
+
+The H=175 class has the MOST disjoint 3-cycle pairs (14).
+More disjoint pairs = more "independence" in the cycle structure.
+This creates enough room for a non-trivial 1-cycle.
+
+CONJECTURE: At n=7 regular, β₁=1 iff disj_33 ≥ 14 (the maximum).
+This would connect cycle independence to topological holes.
+

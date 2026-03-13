@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71b — 2026-03-13: Paley Topological Maximality + Cycle Cascade
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71b (context recovery — 7th window)
+**Summary of work:**
+- **THM-130 WRITEUP UPDATE**: Updated formal-writeup.md section 6.5 with complete Paley Betti formula (β_m = m(m-3)/2, β_{m+1} = C(m+1,2), χ = p). Section was severely outdated.
+- **CYCLE CASCADE (HYP-753)**: Connected kind-pasteur's quadratic H formula to OCF. At n=7 regular: α₂ = disj₃₃ (only independent pairs), c₅ = -2·disj + 56 (LINEAR), c₇ = disj²/2 - 23disj/2 + 80 (QUADRATIC — source of the quadratic H formula). Paley maximizes H via most entangled 3-cycles → most 5,7-cycles.
+- **PALEY TOPOLOGICAL MAXIMALITY (HYP-754)**: Computed Betti and Ω for all 3 regular n=7 classes. Paley (H=189): β=(1,0,0,0,6,0,0), χ=7=p. H=171: contractible, χ=1. H=175: β₁=1, χ=0. Paley is uniquely topologically rich.
+- **χ = p CHARACTERIZES PALEY**: For generic n=5,7 tournaments, χ ∈ {0,1}. Only Paley achieves χ=p. Consequence of Z_p symmetry forcing Ω_d divisible by p for d ≥ 1.
+- **CONFLICT GRAPH UNIFORMITY**: Paley's conflict graph is perfectly regular (all degrees = 12). H=175 also regular (degree 11) but sparser → creates β₁=1. H=171 irregular (11-13). Sparser conflict = more topological holes.
+- **P_19 TOP-HALF APPROACH INFEASIBLE**: Orbit counts GROW in the top half (unlike P_11 scaling intuition), so computing Ω for d>9 is even harder than d=9.
+
+**New contributions:** HYP-753-755, updated formal writeup, cycle cascade analysis, 6 new scripts
+**Unresolved threads:** P_19 β verification (needs C code or >16GB RAM for Ω_9), algebraic proof of β_m = m(m-3)/2.
+
+---
+
 ## opus-2026-03-13-S67j — 2026-03-13: Cross-Field Bridges — 10 connections to other domains
 
 **Account:** opus
