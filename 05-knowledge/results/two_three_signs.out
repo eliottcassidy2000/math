@@ -1,0 +1,80 @@
+======================================================================
+PART 1: Transitive tournament (a1=0)
+======================================================================
+
+  n=3 transitive: H=1, c3=0, a1=0, a2=0
+    b0=1, b1=0
+    b0 > 0: True
+
+  n=5 transitive: H=1, c3=0, a1=0, a2=0
+    b0=1, b1=0
+    b0 > 0: True
+
+  n=7 transitive: H=1, c3=0, a1=0, a2=0
+    b0=1, b1=0
+    b0 > 0: True
+
+======================================================================
+PART 2: Exhaustive b0 sign at n=5
+======================================================================
+  n=5: b0 < 0: 784, b0 = 0: 120, b0 > 0: 120
+    total = 1024
+    b0=-1: bits=4, a1=2
+    b0=-1: bits=6, a1=2
+    b0=-3: bits=8, a1=4
+    b0=0: bits=2, a1=1
+    b0=0: bits=5, a1=1
+    b0=0: bits=11, a1=1
+    b0=1: bits=0, a1=0
+    b0=1: bits=1, a1=0
+    b0=1: bits=3, a1=0
+
+======================================================================
+PART 3: n=7 — searching for b0 > 0
+======================================================================
+  Transitive (bits=0): a1=0, a2=0, b0=1
+  Reverse transitive (bits=max): a1=0, a2=0, b0=1
+  bits=1: a1=0, a2=0, b0=1, H=1
+  bits=2: a1=1, a2=0, b0=0, H=3
+  bits=4: a1=2, a2=0, b0=-1, H=5
+  bits=8: a1=4, a2=0, b0=-3, H=9
+  bits=16: a1=8, a2=0, b0=-7, H=17
+  FOUND b0 > 0: bits=1834813, a1=0, a2=0, b0=1, H=1
+  FOUND b0 > 0: bits=241983, a1=0, a2=0, b0=1, H=1
+  FOUND b0 > 0: bits=500315, a1=0, a2=0, b0=1, H=1
+  FOUND b0 > 0: bits=264223, a1=0, a2=0, b0=1, H=1
+  FOUND b0 > 0: bits=1705215, a1=0, a2=0, b0=1, H=1
+
+======================================================================
+PART 4: b0 sign at n=5 vs a1
+======================================================================
+  b0 = 1 - a1 (at n=5, since a2=0)
+  b0 <= 0 iff a1 >= 1 iff tournament has at least one directed 3-cycle
+  b0 > 0 iff a1 = 0 iff tournament is transitive
+  # transitive n=5: 120/1024
+
+  Transitive iff a1=0 iff acyclic (for tournaments)
+  At n=7: transitive tournament exists, has b0=1 > 0
+  Random sampling missed it because P(transitive) = 7!/2^21 = 5040/2097152 ~ 0.0024
+
+  Expected # transitive tournaments at n=7:
+    n! = 5040
+    2^C(n,2) = 2097152
+    P(transitive) = 5040/2097152 = 0.002403
+
+======================================================================
+PART 5: Can b1 <= 0?
+======================================================================
+  b1 = a1 - 2*a2
+  b1 <= 0 iff a1 <= 2*a2
+  This requires: # disjoint pairs >= (# total cycles)/2
+  At n=5: a2=0, so b1 = a1 >= 0. b1=0 only for transitive.
+  At n=7: need a1 <= 2*a2. Since a2 <= C(alpha_1 choose 2)...
+
+  Checking b1 sign at n=9 (small sample):
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\two_three_signs.py", line 347, in <module>
+    bits = np.random.randint(0, 1 << total_bits)
+  File "numpy/random/mtrand.pyx", line 794, in numpy.random.mtrand.RandomState.randint
+  File "numpy/random/_bounded_integers.pyx", line 2881, in numpy.random._bounded_integers._rand_int32
+ValueError: high is out of bounds for int32
