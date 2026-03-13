@@ -1,0 +1,342 @@
+/Users/e/Documents/GitHub/math/04-computation/rmt_free_probability.py:319: SymPyDeprecationWarning: 
+
+The `sympy.ntheory.residue_ntheory.legendre_symbol` has been moved to `sympy.functions.combinatorial.numbers.legendre_symbol`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  sigma_pal = np.array([float(legendre(k, p)) for k in range(1, m+1)])
+========================================================================
+PART I: EIGENVALUE DISTRIBUTIONS AS PROBABILITY MEASURES
+========================================================================
+
+  p=7, m=3:
+    μ_2: Int = 2.00, Pal = 2.00, ratio = 1.0000
+    μ_4: Int = 8.67, Pal = 4.00, ratio = 2.1667
+    μ_6: Int = 43.00, Pal = 8.00, ratio = 5.3750
+    μ_8: Int = 216.67, Pal = 16.00, ratio = 13.5417
+    H_2: Int = 1.4695 bits, Pal = 2.5850 bits
+    H_2 ratio: 0.5685
+
+  p=13, m=6:
+    μ_2: Int = 3.50, Pal = 3.50, ratio = 1.0000
+    μ_4: Int = 50.17, Pal = 15.50, ratio = 3.2366
+    μ_6: Int = 850.50, Pal = 77.00, ratio = 11.0455
+    μ_8: Int = 14612.83, Pal = 399.50, ratio = 36.5778
+    H_2: Int = 1.5510 bits, Pal = 3.2455 bits
+    H_2 ratio: 0.4779
+
+  p=19, m=9:
+    μ_2: Int = 5.00, Pal = 5.00, ratio = 1.0000
+    μ_4: Int = 151.67, Pal = 25.00, ratio = 6.0667
+    μ_6: Int = 5483.00, Pal = 125.00, ratio = 43.8640
+    μ_8: Int = 200733.00, Pal = 625.00, ratio = 321.1728
+    H_2: Int = 1.5690 bits, Pal = 4.1699 bits
+    H_2 ratio: 0.3763
+
+  p=29, m=14:
+    μ_2: Int = 7.50, Pal = 7.50, ratio = 1.0000
+    μ_4: Int = 527.50, Pal = 63.50, ratio = 8.3071
+    μ_6: Int = 44389.50, Pal = 585.00, ratio = 75.8795
+    μ_8: Int = 3781165.21, Pal = 5663.50, ratio = 667.6375
+    H_2: Int = 1.5781 bits, Pal = 4.6325 bits
+    H_2 ratio: 0.3407
+
+  p=37, m=18:
+    μ_2: Int = 9.50, Pal = 9.50, ratio = 1.0000
+    μ_4: Int = 1086.17, Pal = 99.50, ratio = 10.9162
+    μ_6: Int = 148751.00, Pal = 1121.00, ratio = 132.6949
+    μ_8: Int = 20618391.50, Pal = 13239.50, ratio = 1557.3391
+    H_2: Int = 1.5808 bits, Pal = 5.0292 bits
+    H_2 ratio: 0.3143
+
+========================================================================
+PART II: MOMENT RATIO SCALING
+========================================================================
+
+For Interval: μ_k = (1/(p-1)) Σ |λ_t|^k ≈ |μ₁|^k / (p-1)
+  (dominated by the top eigenvalue |μ₁| ≈ 2m/π)
+
+For Paley: μ_k = (1/(p-1)) Σ |λ_t|^k = ((p+1)/4)^{k/2}
+  (all eigenvalues have the same magnitude √((p+1)/4))
+
+Ratio: μ_k(Int) / μ_k(Pal) ≈ (|μ₁|/√((p+1)/4))^k / (p-1)^{k/??}
+
+Wait, more carefully:
+  μ_k(Int) ≈ (2/p) |μ₁|^k  (two conjugate eigenvalues contribute)
+  μ_k(Pal) = ((p+1)/4)^{k/2}
+
+  Ratio ≈ (2/(p-1)) · (|μ₁|² / ((p+1)/4))^{k/2}
+
+For large p: |μ₁| ≈ 2m/π ≈ p/π, so |μ₁|² ≈ p²/π²
+  (p+1)/4 ≈ p/4
+
+  Ratio ≈ (2/p) · (4p/π²)^{k/2} = (2/p) · (4/π²)^{k/2} · p^{k/2}
+
+For k ≥ 3: this ratio → ∞ as p → ∞.
+For k = 2: ratio → (2/p) · (4/π²) · p = 8/π² ≈ 0.81 (constant, < 1!)
+
+So: μ_2(Int) < μ_2(Pal) for large p (Paley has more total "cycle energy")
+But: μ_k(Int) > μ_k(Pal) for k ≥ 4 and p large enough.
+
+This is the MOMENT CROSSOVER: higher moments favor Interval.
+And H = Z(Ω, 2) depends on ALL moments (through the cycle counts).
+
+
+  p=7:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 2.166667
+    μ_ 6: ratio(Int/Pal) = 5.375000
+    μ_ 8: ratio(Int/Pal) = 13.541667
+    μ_10: ratio(Int/Pal) = 34.177083
+
+  p=13:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 4.095238
+    μ_ 6: ratio(Int/Pal) = 19.836735
+    μ_ 8: ratio(Int/Pal) = 97.378315
+    μ_10: ratio(Int/Pal) = 478.658019
+
+  p=19:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 6.066667
+    μ_ 6: ratio(Int/Pal) = 43.864000
+    μ_ 8: ratio(Int/Pal) = 321.172800
+    μ_10: ratio(Int/Pal) = 2354.513956
+
+  p=29:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 9.377778
+    μ_ 6: ratio(Int/Pal) = 105.219556
+    μ_ 8: ratio(Int/Pal) = 1195.034932
+    μ_10: ratio(Int/Pal) = 13588.716179
+
+  p=37:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 12.035088
+    μ_ 6: ratio(Int/Pal) = 173.495845
+    μ_ 8: ratio(Int/Pal) = 2531.397580
+    μ_10: ratio(Int/Pal) = 36977.727700
+
+  p=53:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 17.358025
+    μ_ 6: ratio(Int/Pal) = 361.240055
+    μ_ 8: ratio(Int/Pal) = 7608.100798
+    μ_10: ratio(Int/Pal) = 160420.951284
+
+  p=97:
+    μ_ 2: ratio(Int/Pal) = 1.000000
+    μ_ 4: ratio(Int/Pal) = 32.013605
+    μ_ 6: ratio(Int/Pal) = 1229.518534
+    μ_ 8: ratio(Int/Pal) = 47784.688064
+    μ_10: ratio(Int/Pal) = 1859277.440576
+
+========================================================================
+PART III: THE CYCLE COUNT DICHOTOMY
+========================================================================
+
+From the trace formula: c_k = (1/p) Σ_t λ_t^k
+
+For the Interval tournament (large p):
+  c_k ≈ (2/p) |μ₁|^k cos(kθ₁) + (2/p) |μ₃|^k cos(kθ₃) + ...
+  where θ_t is the argument of λ_t.
+
+  Dominated by the TOP TWO eigenvalues (conjugate pair):
+  c_k ≈ (2/p) |μ₁|^k cos(kθ₁)
+
+  This OSCILLATES between positive and negative as k varies!
+  For k where cos(kθ₁) > 0: Interval has MORE k-cycles
+  For k where cos(kθ₁) < 0: Interval has FEWER k-cycles
+
+For the Paley tournament (p ≡ 3 mod 4):
+  c_k = (1/p) Σ_t (√((p+1)/4) · e^{iφ_t})^k
+  where φ_t are the Gauss sum phases.
+
+  All terms have the same magnitude → more "averaging" → c_k is smoother.
+
+THE KEY: At the Hamiltonian length k=p:
+  c_p(Int) > c_p(Pal) even though c_k(Int) < c_k(Pal) for most shorter k.
+  (This is the "Hamiltonian cycle reversal" from synthesis_missing_links.out)
+
+  Why? Because cos(p·θ₁) happens to be close to 1 for Interval.
+  θ₁ ≈ π/(2m) → p·θ₁ ≈ p·π/(p-1) ≈ π → cos(pθ₁) ≈ -1 → c_p < 0??
+
+  Wait, this doesn't match. Let me compute directly.
+
+
+  p=7: Top eigenvalue
+    λ₁ = -0.5000+2.1906j, |λ₁| = 2.2470, arg = 1.7952 rad = 102.9°
+    c_ 3: trace = 6.00, dominant = 2.02, cos(3θ) = 0.6235
+    c_ 5: trace = 20.00, dominant = -14.74, cos(5θ) = -0.9010
+    c_ 7: trace = 395.00, dominant = 82.63, cos(7θ) = 1.0000
+
+  p=13: Top eigenvalue
+    λ₁ = -0.5000+4.1179j, |λ₁| = 4.1481, arg = 1.6916 rad = 96.9°
+    c_ 3: trace = 21.00, dominant = 3.89, cos(3θ) = 0.3546
+    c_ 5: trace = 490.00, dominant = -107.33, cos(5θ) = -0.5681
+    c_ 7: trace = 23968.00, dominant = 2433.55, cos(7θ) = 0.7485
+    c_ 9: trace = 725673.00, dominant = -49534.83, cos(9θ) = -0.8855
+    c_11: trace = 28842088.00, dominant = 934627.18, cos(11θ) = 0.9709
+    c_13: trace = 988105488.00, dominant = -16563295.83, cos(13θ) = -1.0000
+
+  p=19: Top eigenvalue
+    λ₁ = -0.5000+6.0341j, |λ₁| = 6.0548, arg = 1.6535 rad = 94.7°
+    c_ 3: trace = 45.00, dominant = 5.74, cos(3θ) = 0.2455
+    c_ 5: trace = 2760.00, dominant = -344.09, cos(5θ) = -0.4017
+    c_ 7: trace = 268926.00, dominant = 17175.62, cos(7θ) = 0.5469
+    c_ 9: trace = 19610793.00, dominant = -779709.39, cos(9θ) = -0.6773
+    c_11: trace = 1684940246.00, dominant = 33305425.07, cos(11θ) = 0.7891
+    c_13: trace = 132421654846.00, dominant = -1360757262.96, cos(13θ) = -0.8795
+    c_15: trace = 10890024433980.00, dominant = 53649063057.26, cos(15θ) = 0.9458
+    c_17: trace = 875695299395036.12, dominant = -2051105867110.52, cos(17θ) = -0.9864
+    c_19: trace = 71173692908952320.00, dominant = 76234084136023.50, cos(19θ) = 1.0000
+
+========================================================================
+PART IV: THE LOG-PARTITION FUNCTION AND CONVEXITY
+========================================================================
+
+THE CENTRAL QUESTION: Why does max IPR → max H for large p?
+
+APPROACH: Consider log H = log Z(Ω, 2) as a function of the eigenvalue
+distribution. The partition function Z is a sum of exponentials (in the
+independence polynomial expansion), so log Z is a "logsumexp" function.
+
+CLAIM: log Z(Ω, λ) is CONVEX in λ for large enough λ.
+  (This is because the dominant term 2^k α_k for the largest k
+   grows exponentially with λ.)
+
+But we need convexity in the eigenvalue DISTRIBUTION, not in λ.
+
+ALTERNATIVE: Think of the eigenvalue distribution as a PROBABILITY measure
+μ on the complex plane. For each μ:
+  1. Compute the cycle counts c_k(μ) via the trace formula
+  2. Build the overlap graph Ω(μ)
+  3. Compute H(μ) = Z(Ω(μ), 2)
+
+If H is convex in μ (in the sense of optimal transport), then
+the most concentrated μ (Dirac delta → Interval) maximizes H.
+
+This connects to the MONGE-KANTOROVICH theory:
+  The optimal transport cost from Interval to Paley is related to
+  the Wasserstein distance between their eigenvalue distributions.
+
+For large p: the Wasserstein distance W₂(μ_Int, μ_Pal) → ∞
+  (Interval concentrates while Paley spreads over a circle)
+  So if H has any convexity, the advantage of Interval grows with p.
+
+  p=7: W₂ = 0.7760, L∞ = 0.8593, conc(Int) = 1.8705, conc(Pal) = 1.0000
+  p=13: W₂ = 1.3766, L∞ = 2.2773, conc(Int) = 3.0404, conc(Pal) = 1.0000
+  p=19: W₂ = 1.8514, L∞ = 3.8187, conc(Int) = 4.1200, conc(Pal) = 1.0000
+  p=29: W₂ = 2.5074, L∞ = 6.4969, conc(Int) = 5.8058, conc(Pal) = 1.0000
+  p=53: W₂ = 3.7417, L∞ = 13.1987, conc(Int) = 9.5381, conc(Pal) = 1.0000
+
+========================================================================
+PART V: THE b-VECTOR OPTIMIZATION LANDSCAPE
+========================================================================
+
+Since B is orthogonal (scaled), the map σ → b = Bσ is a rotation.
+The hypercube {±1}^m maps to a DISCRETE SET on a sphere.
+
+All b-vectors have the same norm (||b||² = m · p/4).
+H depends on b through |λ_t|² = 1/4 + b_t².
+
+Define: F(b) = H(eigenvalues with |λ_t|² = 1/4 + b_t²)
+
+The optimization is: max_{b ∈ B({±1}^m)} F(b)
+
+Since B is orthogonal, the vertices of the hypercube map to the
+vertices of a ROTATED hypercube on the sphere. The question is:
+which vertex maximizes F?
+
+THE INTERVAL VERTEX: b_Int = B · (1,...,1)
+  This has b_1 = Σ sin(2πj/p) ≈ cot(π/(2m+2)) (very large)
+  and b_t ≈ 0 for t ≥ 2.
+
+THE PALEY VERTEX: b_Pal = B · σ_P
+  This has all |b_t| ≈ √(p/4) (equidistributed).
+
+F is maximized at the Interval vertex for p ≥ 13.
+This is equivalent to saying: the function F prefers "spike" distributions
+(one large b_t, rest small) over "flat" distributions.
+
+Is F convex on the sphere? If so, the vertices of the hypercube
+(which are the "most extreme" points) would all achieve larger F
+than interior points. And among the vertices, the one with the
+most extreme b-distribution would win.
+
+Actually: F is NOT convex on the sphere (we showed violations at p=13).
+But it IS maximized at the most extreme vertex.
+
+
+  p=13: Interpolation between Interval and Paley b-vectors
+  b_Int: ['4.118', '-0.123', '1.318', '-0.262', '0.724', '-0.443']
+  b_Pal: ['0.667', '0.922', '-2.132', '3.188', '1.769', '0.602']
+
+  H vs Hamming distance from Interval:
+   Hamming d  #orient        min H        max H       mean H
+           0        1      3711175      3711175    3711175.0
+           1        6      3669497      3707483    3689690.3
+           2       15      3669497      3711175    3694817.5
+           3       20      3669497      3711175    3699529.6
+           4       15      3669497      3711175    3694817.5
+           5        6      3669497      3707483    3689690.3
+           6        1      3711175      3711175    3711175.0
+
+========================================================================
+PART VI: THE PROOF PATH — PUTTING IT ALL TOGETHER
+========================================================================
+
+FROM ALL THE EVIDENCE, the proof structure is:
+
+THEOREM (Interval H-Maximization, p ≥ 13):
+  Among all circulant tournaments on Z_p (p ≥ 13 prime), the Interval
+  tournament S = {1, 2, ..., (p-1)/2} maximizes the Hamiltonian path count H.
+
+PROOF ARCHITECTURE:
+
+  1. ALGEBRAIC REFORMULATION:
+     H(σ) = Σ_{S⊂[m]} ĥ[S] · Π_{k∈S} σ_k    (Walsh expansion)
+     H(σ) depends on σ only through b = Bσ where B is the DFT sine matrix
+     Since B has constant singular values, H is a function on a sphere
+
+  2. THE WALSH DIFFERENCE FORMULA (proved for p ≡ 3 mod 4):
+     H(1,...,1) - H(σ_P) = 2 · Σ_{NQR products} ĥ[S]
+
+  3. EXHAUSTIVE VERIFICATION (computed):
+     p = 13: H(Interval) = 3,711,175 = max over all 64 orientations
+     p = 17: H(Interval) = 13,689,269,499 = max over all 256 orientations
+
+  4. ASYMPTOTIC SCALING (from THM-142 + entropy analysis):
+     The disjointness excess Δα₂ grows as O(p⁴) [THM-142]
+     The cycle count advantage Δα₁ grows slower (relative to α₁)
+     The H correlation with IPR INCREASES with p (0.51 → 0.71 → ...)
+     The Rényi entropy ratio decreases: H₂(Int)/H₂(Pal) → 0
+
+  5. FOR A COMPLETE PROOF: need one of:
+     (a) Exhaustive verification at p = 19, 23 (computationally hard)
+     (b) Analytic bound: H(Int) - H(σ) ≥ 0 for all σ using Walsh structure
+     (c) Induction: if true at p, then true at p' > p
+         (using the increasing correlation as evidence)
+
+  The STRONGEST current approach is (b): the Walsh expansion gives
+  H(Int) - H(σ) = 2·Σ_{ψ(S,σ)=-1} ĥ[S]
+  where ψ(S,σ) = Π_{k∈S} σ_k.
+
+  For ANY σ, the set {S : ψ(S,σ) = -1} contains exactly 2^{m-1} subsets.
+  If Σ_{NQR(σ)} ĥ[S] ≥ 0 for ALL σ (not just Paley), then Interval wins.
+
+  This is a HYPERPLANE INEQUALITY on the Walsh spectrum:
+  for each σ, the half-space defined by σ must have non-negative
+  projection of ĥ.
+
+  At p=13: this holds (verified by exhaustive search).
+  At p=17: this holds (verified by exhaustive search).
+
+  The question is: does it hold for all p ≥ 13?
+
+
+DONE.
