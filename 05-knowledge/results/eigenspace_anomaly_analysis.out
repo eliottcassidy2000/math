@@ -1,0 +1,16 @@
+======================================================================
+k=0 EIGENSPACE BOUNDARY RANK ANOMALY
+======================================================================
+
+=== Paley T_11 ===
+Omega: [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+Known Betti: [1, 0, 0, 0, 0, 5, 15, 0, 0, 0, 0]
+
+Boundary ranks (k=0 vs k=1):
+  m= 0: k=0:     0, k=1:     0, k>=1 same: True    (0.0s)
+  m= 1: k=0:     0, k=1:     1, k>=1 same: True  ANOMALY  (0.0s)
+  m= 2: k=0:     5, k=1:     4, k>=1 same: True  ANOMALY  (0.0s)
+  m= 3: k=0:    15, k=1:    16, k>=1 same: True  ANOMALY  (0.1s)
+  m= 4: k=0:    55, k=1:    54, k>=1 same: True  ANOMALY  (0.8s)
+  m= 5: k=0:   150, k=1:   151, k>=1 same: True  ANOMALY  (14.3s)
+  m= 6: k=0:   305, k=1:   309, k>=1 same: True  ANOMALY  (234.1s)

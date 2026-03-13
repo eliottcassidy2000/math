@@ -1,0 +1,111 @@
+======================================================================
+INTERVAL TOURNAMENT CYCLE COUNTS FROM THM-143
+======================================================================
+
+p=7, m=3:
+  k= 3: n_0=       6, n_total=        14, slope=1, intercept=0
+  k= 5: n_0=      30, n_total=        42, slope=0, intercept=10
+  k= 7: n_0=       3, n_total=         3, slope=0, intercept=1
+  Check c_3: expected 14, got 14, MATCH
+
+p=11, m=5:
+  k= 3: n_0=      15, n_total=        55, slope=1, intercept=0
+  k= 5: n_0=     370, n_total=       814, slope=3, intercept=65
+  k= 7: n_0=     630, n_total=       990, slope=0, intercept=126
+  k= 9: n_0=     180, n_total=       220, slope=0, intercept=36
+  k=11: n_0=       5, n_total=         5, slope=0, intercept=1
+  Check c_3: expected 55, got 55, MATCH
+
+p=13, m=6:
+  k= 3: n_0=      21, n_total=        91, slope=1, intercept=0
+  k= 5: n_0=     840, n_total=      2184, slope=6, intercept=119
+  k= 7: n_0=    2751, n_total=      5109, slope=1, intercept=455
+  k= 9: n_0=    1980, n_total=      2860, slope=0, intercept=330
+  k=11: n_0=     330, n_total=       390, slope=0, intercept=55
+  k=13: n_0=       6, n_total=         6, slope=0, intercept=1
+  Check c_3: expected 91, got 91, MATCH
+
+p=17, m=8:
+  k= 3: n_0=      36, n_total=       204, slope=1, intercept=0
+  k= 5: n_0=    2940, n_total=      9996, slope=15, intercept=300
+  k= 7: n_0=   23436, n_total=     56916, slope=15, intercept=2862
+  k= 9: n_0=   51444, n_total=     97172, slope=1, intercept=6426
+  k=11: n_0=   40040, n_total=     61880, slope=0, intercept=5005
+  k=13: n_0=   10920, n_total=     14280, slope=0, intercept=1365
+  k=15: n_0=     840, n_total=       952, slope=0, intercept=105
+  k=17: n_0=       8, n_total=         8, slope=0, intercept=1
+  Check c_3: expected 204, got 204, MATCH
+
+p=19, m=9:
+  k= 3: n_0=      45, n_total=       285, slope=1, intercept=0
+  k= 5: n_0=    4860, n_total=     18468, slope=21, intercept=435
+  k= 7: n_0=   53928, n_total=    146376, slope=35, intercept=5817
+  k= 9: n_0=  174708, n_total=    368828, slope=7, intercept=19377
+  k=11: n_0=  218790, n_total=    377910, slope=0, intercept=24310
+  k=13: n_0=  111384, n_total=    162792, slope=0, intercept=12376
+  k=15: n_0=   21420, n_total=     27132, slope=0, intercept=2380
+  k=17: n_0=    1224, n_total=      1368, slope=0, intercept=136
+  k=19: n_0=       9, n_total=         9, slope=0, intercept=1
+  Check c_3: expected 285, got 285, MATCH
+
+p=23, m=11:
+  k= 3: n_0=      66, n_total=       506, slope=1, intercept=0
+  k= 5: n_0=   11330, n_total=     52118, slope=36, intercept=814
+  k= 7: n_0=  214137, n_total=    703593, slope=126, intercept=18711
+  k= 9: n_0= 1273140, n_total=   3253580, slope=84, intercept=115236
+  k=11: n_0= 3232625, n_total=   6759125, slope=9, intercept=293821
+  k=13: n_0= 3879876, n_total=   6864396, slope=0, intercept=352716
+  k=15: n_0= 2238390, n_total=   3432198, slope=0, intercept=203490
+  k=17: n_0=  596904, n_total=    807576, slope=0, intercept=54264
+  k=19: n_0=   65835, n_total=     79695, slope=0, intercept=5985
+  k=21: n_0=    2310, n_total=      2530, slope=0, intercept=210
+  k=23: n_0=      11, n_total=        11, slope=0, intercept=1
+  Check c_3: expected 506, got 506, MATCH
+
+======================================================================
+SLOPE GENERATING FUNCTION: sum_k b_k x^k = x^3 (1+x)^{m-2}
+======================================================================
+  p=7 (m=3): [(3, 1), (5, 0), (7, 0)]
+  p=11 (m=5): [(3, 1), (5, 3), (7, 0), (9, 0), (11, 0)]
+  p=13 (m=6): [(3, 1), (5, 6), (7, 1), (9, 0), (11, 0), (13, 0)]
+  p=17 (m=8): [(3, 1), (5, 15), (7, 15), (9, 1), (11, 0), (13, 0), (15, 0), (17, 0)]
+  p=19 (m=9): [(3, 1), (5, 21), (7, 35), (9, 7), (11, 0), (13, 0), (15, 0), (17, 0), (19, 0)]
+
+  Total slope = 2^(m-2):
+    p=7: sum b_k = 1, 2^(m-2) = 2, MISMATCH
+    p=11: sum b_k = 4, 2^(m-2) = 8, MISMATCH
+    p=13: sum b_k = 8, 2^(m-2) = 16, MISMATCH
+    p=17: sum b_k = 32, 2^(m-2) = 64, MISMATCH
+    p=19: sum b_k = 64, 2^(m-2) = 128, MISMATCH
+
+======================================================================
+H(Interval) FROM CYCLE COUNTS
+======================================================================
+
+OCF: H = I(Omega, 2) where Omega is the odd-cycle conflict graph.
+     I(G, x) = sum_{S independent} x^|S|
+
+The cycle counts alone DON'T determine H (need the conflict structure too).
+BUT: the co_occ function DOES encode pairwise conflicts!
+
+Two k-cycles conflict iff they share a vertex.
+From co_occ_k(d), we know the pairwise overlap structure.
+
+For DISJOINT cycle PAIRS: THM-142 gives the exact excess.
+For GENERAL independence sets: need k-wise disjointness.
+
+KEY QUESTION: Can we recover I(Omega, 2) from the co_occ functions alone?
+
+Verifying H values:
+  p=7: H(Interval) = 175
+    c_3 vertex sets = 14
+    c_5 vertex sets = 42
+    c_7 vertex sets = 3
+  p=11: H(Interval) = 95095
+    c_3 vertex sets = 55
+    c_5 vertex sets = 814
+    c_7 vertex sets = 990
+    c_9 vertex sets = 220
+    c_11 vertex sets = 5
+
+DONE.
