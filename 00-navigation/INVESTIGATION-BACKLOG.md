@@ -50,7 +50,8 @@
 - DOES NOT have Omega palindrome or top vanishing results for arbitrary connection sets.
 **Impact:** The symbol-matrix framework is the right tool for T_p, but they leave Paley application open. The Stability Theorem (Thm 1.4) implies our pattern β_6(T_p)=p-1 holds for ALL large p∉Q+(QR_p). Computing Q+(QR_p) would be the key step.
 **Next step (UPDATED S52):** COMPLETED. Tang-Yau symbol matrix applied to T_7 (deg 2-5) and T_11 (deg 2-5). Key discovery: Q+(QR_p) is EMPTY (not just "avoids p-th roots" — ALL t values work equally). Symbol matrix M_m(t) is CONSTANT (THM-125: proven algebraically). Eigenspace identity is trivial consequence. New open: prove Q+(QR_p) empty algebraically for all p.
-**Priority:** CLOSED for computational part. Algebraic proof is Priority B.
+**S71c UPDATE:** Full HTML paper read. Confirms our eigenspace approach matches their Prop 4.1. Their Conjecture 4.8 (H_m=0 for m≥3, no-wrap-around S) does NOT apply to Paley (QR has wrap-around). Our HYP-824 Betti concentration at d=m,m+1 is genuinely new. Key open: prove β_d^(0)=0 for 3≤d≤m-1 (the intermediate vanishing).
+**Priority:** CLOSED for computational part. Proving intermediate vanishing is Priority A.
 
 ### INV-136: Schweser-Stiebitz-Toft (arXiv:2510.10659): Redei's Theorem Revisited (Oct 2025)
 **Source:** Web research kind-pasteur-2026-03-10-S50
