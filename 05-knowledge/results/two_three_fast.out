@@ -1,0 +1,338 @@
+======================================================================
+PART 1: H = 1 + 2*a1 + 4*a2 verification
+======================================================================
+  n=5: H = 1 + 2*a1 + 4*a2 verified: 500/500
+  n=7: H = 1 + 2*a1 + 4*a2 verified: 300/300
+
+======================================================================
+PART 2: Full structure at n=5 (exhaustive)
+======================================================================
+  (alpha_1, alpha_2) distribution:
+    a1   a2  count     H  H%3  H%6  H%12
+     0    0    120     1    1    1     1
+     1    0    120     3    0    3     3
+     2    0    240     5    2    5     5
+     4    0    240     9    0    3     9
+     5    0    120    11    2    5    11
+     6    0    120    13    1    1     1
+     7    0     64    15    0    3     3
+
+  2-adic structure:
+  bit 0 of H: always 1 (Redei)
+  bit 1 of H: {0: 720, 1: 304} (= alpha_1 mod 2)
+  bit 2 of H: {0: 600, 1: 424}
+  bit 3 of H: {0: 480, 1: 544}
+
+  H mod 3: {1: 240, 0: 424, 2: 360}
+  H mod 6: {1: 240, 3: 424, 5: 360}
+
+  I(Omega, -1) = 1 - a1 + a2:
+  distribution: {-6: 64, -5: 120, -4: 120, -3: 240, -1: 240, 0: 120, 1: 120}
+  H mod 3 = I(Omega, -1) mod 3: 1024/1024
+
+======================================================================
+PART 3: n=7 — 2-adic and 3-adic structure (300 samples)
+======================================================================
+  OCF (H = 1+2*a1+4*a2) verified: 300/300
+  bit 1 = a1 mod 2: 300/300
+  H mod 3 = (1-a1+a2) mod 3: 300/300
+
+  alpha_1: [2, 61], mean=29.8
+  alpha_2: [0, 12], mean=4.4
+  H range: [5, 159]
+  H mod 2: {1: 300}
+  H mod 3: {1: 107, 2: 104, 0: 89}
+  H mod 4: {1: 169, 3: 131}
+  H mod 6: {1: 107, 5: 104, 3: 89}
+  H mod 12: {1: 56, 7: 51, 5: 67, 11: 37, 3: 43, 9: 46}
+
+======================================================================
+PART 4: alpha_1 vs alpha_2 at n=7
+======================================================================
+  a1 -> range of a2:
+    a1=  2: a2 in [0] (H in [5])
+    a1=  4: a2 in [0] (H in [9])
+    a1=  5: a2 in [0] (H in [11])
+    a1=  6: a2 in [0, 1] (H in [13, 17])
+    a1=  7: a2 in [0] (H in [15])
+    a1=  8: a2 in [0] (H in [17])
+    a1=  9: a2 in [0, 1] (H in [19, 23])
+    a1= 10: a2 in [2] (H in [29])
+    a1= 11: a2 in [1] (H in [27])
+    a1= 12: a2 in [0, 1, 2] (H in [25, 29, 33])
+    a1= 13: a2 in [1] (H in [31])
+    a1= 14: a2 in [1, 2, 3] (H in [33, 37, 41])
+    a1= 15: a2 in [0] (H in [31])
+    a1= 16: a2 in [0, 1, 2] (H in [33, 37, 41])
+    a1= 17: a2 in [4] (H in [51])
+    a1= 18: a2 in [2, 3] (H in [45, 49])
+    a1= 19: a2 in [0, 1] (H in [39, 43])
+    a1= 20: a2 in [2, 3] (H in [49, 53])
+    a1= 21: a2 in [2, 3, 4] (H in [51, 55, 59])
+    a1= 22: a2 in [2, 3, 5] (H in [53, 57, 65])
+    a1= 23: a2 in [5] (H in [67])
+    a1= 24: a2 in [0, 4, 5] (H in [49, 65, 69])
+    a1= 25: a2 in [2, 5] (H in [59, 71])
+    a1= 26: a2 in [3, 4] (H in [65, 69])
+    a1= 27: a2 in [4] (H in [71])
+    a1= 28: a2 in [2, 4, 5, 6] (H in [65, 73, 77, 81])
+    a1= 29: a2 in [2, 6] (H in [67, 83])
+    a1= 30: a2 in [3, 5, 6] (H in [73, 81, 85])
+    a1= 31: a2 in [3, 4, 7, 8] (H in [75, 79, 91, 95])
+    a1= 32: a2 in [4, 6] (H in [81, 89])
+    a1= 33: a2 in [2, 4, 6] (H in [75, 83, 91])
+    a1= 34: a2 in [5, 6] (H in [89, 93])
+    a1= 35: a2 in [5, 7, 8] (H in [91, 99, 103])
+    a1= 36: a2 in [4, 5, 6] (H in [89, 93, 97])
+    a1= 37: a2 in [4, 5, 6, 7] (H in [91, 95, 99, 103])
+    a1= 38: a2 in [6, 8] (H in [101, 109])
+    a1= 39: a2 in [6, 8] (H in [103, 111])
+    a1= 40: a2 in [5, 6, 7] (H in [101, 105, 109])
+    a1= 41: a2 in [8, 10] (H in [115, 123])
+    a1= 42: a2 in [4, 6, 7, 8] (H in [101, 109, 113, 117])
+    a1= 43: a2 in [6, 7] (H in [111, 115])
+    a1= 44: a2 in [7, 8, 10, 12] (H in [117, 121, 129, 137])
+    a1= 45: a2 in [5, 6, 8, 10] (H in [111, 115, 123, 131])
+    a1= 46: a2 in [6, 9] (H in [117, 129])
+    a1= 47: a2 in [7] (H in [123])
+    a1= 48: a2 in [6, 12] (H in [121, 145])
+    a1= 49: a2 in [8, 10] (H in [131, 139])
+    a1= 50: a2 in [7, 8, 11] (H in [129, 133, 145])
+    a1= 51: a2 in [8] (H in [135])
+    a1= 52: a2 in [8] (H in [137])
+    a1= 54: a2 in [5, 7, 8, 12] (H in [129, 137, 141, 157])
+    a1= 55: a2 in [10] (H in [151])
+    a1= 56: a2 in [10] (H in [153])
+    a1= 57: a2 in [7] (H in [143])
+    a1= 59: a2 in [8] (H in [151])
+    a1= 60: a2 in [8] (H in [153])
+    a1= 61: a2 in [9] (H in [159])
+
+======================================================================
+PART 5: The 2-3 CRT tower at n=7
+======================================================================
+
+Level 0: H mod 1 = 0 (trivial)
+Level 1: H mod 2 = 1 (Redei)
+Level 2: H mod 3 = (1-a1+a2) mod 3 = I(Omega,-1) mod 3
+Level 3: H mod 4 = 1 + 2*(a1 mod 2) (from bit 0=1, bit 1=a1 mod 2)
+Level 4: H mod 6 = CRT(H mod 2, H mod 3) = CRT(1, I(Omega,-1) mod 3)
+Level 5: H mod 12 = CRT(H mod 4, H mod 3)
+
+The number 2 controls the PARITY structure (Redei, bit extraction).
+The number 3 controls the TOPOLOGICAL structure (independence complex).
+
+  H mod 12 = CRT(H mod 4, H mod 3): 300/300
+  Possible H mod 12 values: [1, 3, 5, 7, 9, 11]
+
+======================================================================
+PART 6: 2-adic valuation of H-1
+======================================================================
+  v_2(H-1) distribution: {1: 131, 2: 73, 3: 39, 4: 20, 5: 16, 6: 16, 7: 5}
+  v_2(H-1) = 1: H = 3 mod 4 => a1 odd
+  v_2(H-1) >= 2: H = 1 mod 4 => a1 even
+
+======================================================================
+PART 7: 3-adic structure at n=7
+======================================================================
+  H mod 9: {0: 30, 1: 51, 2: 48, 3: 23, 4: 34, 5: 34, 6: 36, 7: 22, 8: 22}
+
+  H = I(-1) + 3*(a1+a2) mod 9:
+  Verified: 300/300
+  (This is tautological: 1-a1+a2+3(a1+a2) = 1+2a1+4a2)
+
+  (a1+a2) mod 3 distribution: {0: 103, 1: 105, 2: 92}
+
+======================================================================
+PART 8: I(Omega, 3) at n=5 and n=7
+======================================================================
+
+  n=5: I(Omega, 3) distribution:
+    I(3)=    1 (a1=0, a2=0): count=56
+    I(3)=    4 (a1=1, a2=0): count=57
+    I(3)=    7 (a1=2, a2=0): count=117
+    I(3)=   13 (a1=1, a2=1): count=118
+    I(3)=   16 (a1=2, a2=1): count=60
+    I(3)=   19 (a1=0, a2=2): count=60
+    I(3)=   22 (a1=1, a2=2): count=32
+  I(Omega, 3) mod 3: {1: 500}
+  Always 1 mod 3: True
+
+  Ratio I(3)/I(2) at n=5:
+    a1=0, a2=0: I(2)=1, I(3)=1, ratio=1.0000
+    a1=0, a2=0: I(2)=1, I(3)=1, ratio=1.0000
+    a1=1, a2=0: I(2)=3, I(3)=4, ratio=1.3333
+    a1=0, a2=0: I(2)=1, I(3)=1, ratio=1.0000
+    a1=2, a2=0: I(2)=5, I(3)=7, ratio=1.4000
+    a1=1, a2=0: I(2)=3, I(3)=4, ratio=1.3333
+    a1=2, a2=0: I(2)=5, I(3)=7, ratio=1.4000
+    a1=0, a2=0: I(2)=1, I(3)=1, ratio=1.0000
+    a1=4, a2=0: I(2)=9, I(3)=13, ratio=1.4444
+    a1=2, a2=0: I(2)=5, I(3)=7, ratio=1.4000
+
+  n=7: I(Omega, 3) distribution:
+    I(3)=    7 (a1=2, a2=0): count=3
+    I(3)=   13 (a1=1, a2=1): count=4
+    I(3)=   22 (a1=1, a2=2): count=8
+    I(3)=   28 (a1=0, a2=3): count=6
+    I(3)=   37 (a1=0, a2=4): count=4
+    I(3)=   46 (a1=0, a2=5): count=7
+    I(3)=   49 (a1=1, a2=5): count=11
+    I(3)=   52 (a1=2, a2=5): count=5
+    I(3)=   58 (a1=1, a2=6): count=3
+    I(3)=   61 (a1=2, a2=6): count=9
+    I(3)=   67 (a1=1, a2=7): count=5
+    I(3)=   70 (a1=2, a2=7): count=4
+    I(3)=   73 (a1=0, a2=8): count=5
+    I(3)=   82 (a1=0, a2=9): count=6
+    I(3)=   91 (a1=0, a2=10): count=3
+    I(3)=   94 (a1=1, a2=10): count=8
+    I(3)=  103 (a1=1, a2=11): count=7
+    I(3)=  106 (a1=2, a2=11): count=7
+    I(3)=  109 (a1=0, a2=12): count=3
+    I(3)=  115 (a1=2, a2=12): count=3
+    I(3)=  118 (a1=0, a2=13): count=10
+    I(3)=  121 (a1=1, a2=13): count=8
+    I(3)=  130 (a1=1, a2=14): count=4
+    I(3)=  136 (a1=0, a2=15): count=7
+    I(3)=  142 (a1=2, a2=15): count=3
+    I(3)=  145 (a1=0, a2=16): count=3
+    I(3)=  148 (a1=1, a2=16): count=5
+    I(3)=  151 (a1=2, a2=16): count=7
+    I(3)=  154 (a1=0, a2=17): count=3
+    I(3)=  157 (a1=1, a2=17): count=6
+    I(3)=  163 (a1=0, a2=18): count=7
+    I(3)=  166 (a1=1, a2=18): count=4
+    I(3)=  169 (a1=2, a2=18): count=4
+    I(3)=  172 (a1=0, a2=19): count=4
+    I(3)=  175 (a1=1, a2=19): count=5
+    I(3)=  181 (a1=0, a2=20): count=9
+    I(3)=  184 (a1=1, a2=20): count=4
+    I(3)=  187 (a1=2, a2=20): count=7
+    I(3)=  190 (a1=0, a2=21): count=6
+    I(3)=  193 (a1=1, a2=21): count=3
+    I(3)=  199 (a1=0, a2=22): count=4
+    I(3)=  205 (a1=2, a2=22): count=3
+    I(3)=  214 (a1=2, a2=23): count=3
+    I(3)=  220 (a1=1, a2=24): count=6
+    I(3)=  223 (a1=2, a2=24): count=4
+    I(3)=  226 (a1=0, a2=25): count=9
+    I(3)=  229 (a1=1, a2=25): count=3
+    I(3)=  235 (a1=0, a2=26): count=4
+    I(3)=  238 (a1=1, a2=26): count=5
+    I(3)=  250 (a1=2, a2=27): count=3
+    I(3)=  253 (a1=0, a2=28): count=3
+  I(Omega, 3) mod 3: {1: 300}
+  Always 1 mod 3: True
+
+======================================================================
+PART 9: Why x=2? The minimum positive integer for OCF
+======================================================================
+
+At x=1: I(Omega, 1) = sum alpha_k = total # independent sets.
+  This counts ALL independent sets equally.
+
+At x=2: I(Omega, 2) = H = Hamiltonian paths.
+  Weight 2^k gives independent sets of size k a weight 2^k.
+  The "2" gives EXPONENTIAL weight to larger independent sets.
+
+At x=3: I(Omega, 3) = 1 + 3*a1 + 9*a2.
+  Even MORE weight on larger independent sets.
+
+KEY QUESTION: Why does x=2 count Hamiltonian paths?
+
+ANSWER (from Grinberg-Stanley):
+  H(T) = sum over sigma in S_n with all nontrivial cycles being directed
+  odd cycles in T, of 2^{number of nontrivial cycles of sigma}
+
+  The factor 2 comes from: each directed odd cycle has 2 orientations,
+  and the GS formula picks one for each cycle independently.
+
+  If we used 3 orientations (impossible in tournaments), we'd get I(Omega, 3).
+  If we used 1 orientation (fixed), we'd get I(Omega, 1).
+
+  x=2 is the UNIQUE value that counts Hamiltonian paths because
+  tournaments have EXACTLY 2 directed Hamiltonian cycles per odd vertex set
+  (forward and backward, when a Hamiltonian cycle exists).
+
+Wait: at k=3, a 3-vertex tournament has AT MOST 1 directed 3-cycle
+(if it's a cyclic tournament) with 2 directions: a->b->c->a and a->c->b->a.
+But those are DIFFERENT directed cycles. So a 3-vertex cyclic tournament
+contributes 2 to alpha_1 (2 directed cycles on the same vertex set).
+
+No wait -- I need to check: does a 3-vertex cyclic tournament
+have 1 or 2 directed Hamiltonian cycles?
+
+If a->b->c->a: this IS a directed Ham cycle.
+The reverse a->c->b->a would need c->b, b->a, a->c, which is NOT in T
+(since T is a tournament, either a->b or b->a but not both).
+
+So a 3-vertex tournament has AT MOST 1 directed 3-cycle (Hamiltonian cycle).
+NOT 2! In a tournament, the "reverse" of a 3-cycle is NOT a valid cycle.
+
+Then why factor 2? The GS formula says:
+  For each sigma with all nontrivial cycles being directed odd cycles,
+  contribute 2^(# nontrivial cycles).
+
+  A permutation sigma = (abc)(identity on rest) contributes 2^1 = 2
+  IF abc is a directed cycle of T. The factor 2 is NOT "two orientations"
+  but rather the fixed point of the formula.
+
+  More precisely: sigma = (1)(2)...(n) (identity) contributes 2^0 = 1.
+  This is the "1" in H = 1 + 2*a1 + ...
+
+  sigma = (abc)(identity on rest) contributes 2^1 = 2 for each directed cycle.
+  This gives 2*a1.
+
+  sigma = (abc)(def)(identity on rest) contributes 2^2 = 4 for each pair
+  of directed cycles on disjoint vertex sets. This gives 4*a2.
+
+So the factor 2 in the GS formula is NOT about "two orientations."
+It's a combinatorial factor from the signed version of the permanent.
+
+ACTUALLY: Let me re-read GS. Their Corollary 20 says:
+  ham(D) = sum_{sigma: all cycles odd D-cycles} 2^{psi(sigma)}
+  where psi(sigma) = # cycles of sigma that are NOT fixed points.
+
+  For identity: psi = 0, contribution = 1.
+  For (abc)(rest fixed): psi = 1, contribution = 2.
+  For (abc)(def)(rest fixed): psi = 2, contribution = 4.
+
+  This IS 2^(# nontrivial cycles) = x^(# vertices in I.S.) at x=2
+  via the correspondence: nontrivial cycles <-> independent set in Omega.
+
+The 2 ultimately comes from the relationship between the permanent
+and the independence polynomial, evaluated at x=2.
+
+
+======================================================================
+PART 10: SUMMARY — The Complete 2-3 Picture
+======================================================================
+
+THE NUMBER 2:
+  1. H = I(Omega, 2): the OCF evaluation point
+  2. 2^k weight from GS formula: each nontrivial cycle contributes factor 2
+  3. H is always ODD: I(Omega, 2) = I(Omega, 0) = 1 (mod 2)
+  4. bit 1 of H = alpha_1 mod 2: parity of total directed odd cycles
+  5. H mod 4 = 1 or 3, determined by alpha_1 parity
+  6. v_2(H-1) encodes the 2-adic structure of the cycle decomposition
+
+THE NUMBER 3:
+  1. 3-cycles are the "atoms" of tournament structure
+  2. H mod 3 = I(Omega, -1) mod 3 (since 2 = -1 mod 3)
+  3. I(Omega, -1) = reduced Euler char of Ind(Omega) + 1 = topological
+  4. tr(Sigma^3) always divisible by 6 (factor 3 from symmetric trace)
+  5. 9 | F(T, omega) universally for n >= 6 (THM-085)
+  6. THM-086: 3 | c_j for j < val(n)
+  7. sigma:lambda:delta = 2:1:1 — the "3" in common neighborhood
+
+THE INTERPLAY:
+  1. 6 = 2*3 = lcm(2,3): H mod 6 is the CRT combination
+  2. 12 = 4*3: H mod 12 = CRT(H mod 4, H mod 3) captures bit 1 + topology
+  3. tr(Sigma^3) gaps always divisible by 12 = 4*3
+  4. Worpitzky: 6 | W_3 (from 3! = 6)
+  5. At n=7: H = 1 + 2*a1 + 4*a2, and H mod 3 = 1 - a1 + a2 mod 3
+     So 3 "mixes" a1 and a2 while 2 "separates" them by bit position
+
+
+Done.
