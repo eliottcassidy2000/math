@@ -1,0 +1,922 @@
+================================================================================
+EIGENSPACE UNIFORMITY ANALYSIS: Interval n=7, S={1,2,3}
+================================================================================
+
+================================================================================
+PART 1: Projected boundary matrices B_k
+================================================================================
+
+--- Degree m=1 ---
+  Matrix size: 1 x 3
+  Paths at degree 1 (from 0): [(0, 1), (0, 2), (0, 3)]
+  Paths at degree 0 (from 0): [(0,)]
+
+  B_0 (k=0, real matrix since no phase):
+    [   0.00   0.00   0.00 ]
+
+  B_1 (k=1, complex):
+    [   0.00   0.00   0.00 ]
+
+  Singular values comparison:
+    k=0: [0.000000]
+    k=1: [0.000000]
+    k=2: [0.000000]
+    k=3: [0.000000]
+    k=4: [0.000000]
+    k=5: [0.000000]
+    k=6: [0.000000]
+
+  All eigenspaces have same singular values? True
+
+--- Degree m=2 ---
+  Matrix size: 3 x 3
+  Paths at degree 2 (from 0): [(0, 1, 2), (0, 1, 3), (0, 2, 3)]
+  Paths at degree 1 (from 0): [(0, 1), (0, 2), (0, 3)]
+
+  B_0 (k=0, real matrix since no phase):
+    [   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00 ]
+    [   0.00  -1.00  -1.00 ]
+
+  B_1 (k=1, complex):
+    [   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00 ]
+    [   0.00  -1.00  -1.00 ]
+
+  Singular values comparison:
+    k=0: [1.414214, 1.000000, 0.000000]
+    k=1: [1.414214, 1.000000, 0.000000]
+    k=2: [1.414214, 1.000000, 0.000000]
+    k=3: [1.414214, 1.000000, 0.000000]
+    k=4: [1.414214, 1.000000, 0.000000]
+    k=5: [1.414214, 1.000000, 0.000000]
+    k=6: [1.414214, 1.000000, 0.000000]
+
+  All eigenspaces have same singular values? True
+
+--- Degree m=3 ---
+  Matrix size: 3 x 5
+  Paths at degree 3 (from 0): [(0, 1, 2, 3), (0, 1, 2, 4), (0, 1, 3, 4), (0, 2, 3, 4), (0, 2, 3, 5)]
+  Paths at degree 2 (from 0): [(0, 1, 2), (0, 1, 3), (0, 2, 3)]
+
+  B_0 (k=0, real matrix since no phase):
+    [   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00 ]
+
+  B_1 (k=1, complex):
+    [   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00 ]
+
+  Singular values comparison:
+    k=0: [1.414214, 0.000000, 0.000000]
+    k=1: [1.414214, 0.000000, 0.000000]
+    k=2: [1.414214, 0.000000, 0.000000]
+    k=3: [1.414214, 0.000000, 0.000000]
+    k=4: [1.414214, 0.000000, 0.000000]
+    k=5: [1.414214, 0.000000, 0.000000]
+    k=6: [1.414214, 0.000000, 0.000000]
+
+  All eigenspaces have same singular values? True
+
+--- Degree m=4 ---
+  Matrix size: 5 x 8
+  Paths at degree 4 (from 0): [(0, 1, 2, 3, 4), (0, 1, 2, 3, 5), (0, 1, 2, 4, 5), (0, 1, 3, 4, 5), (0, 1, 3, 4, 6), (0, 2, 3, 4, 5), (0, 2, 3, 4, 6), (0, 2, 3, 5, 6)]
+  Paths at degree 3 (from 0): [(0, 1, 2, 3), (0, 1, 2, 4), (0, 1, 3, 4), (0, 2, 3, 4), (0, 2, 3, 5)]
+
+  B_0 (k=0, real matrix since no phase):
+    [   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   0.00  -1.00   0.00   0.00   0.00  -1.00   0.00   0.00 ]
+
+  B_1 (k=1, complex):
+    [   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   0.00  -1.00   0.00   0.00   0.00  -1.00   0.00   0.00 ]
+
+  Singular values comparison:
+    k=0: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+    k=1: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+    k=2: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+    k=3: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+    k=4: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+    k=5: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+    k=6: [1.732051, 1.414214, 0.000000, 0.000000, -0.000000]
+
+  All eigenspaces have same singular values? True
+
+--- Degree m=5 ---
+  Matrix size: 8 x 7
+  Paths at degree 5 (from 0): [(0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 6), (0, 1, 2, 3, 5, 6), (0, 1, 2, 4, 5, 6), (0, 1, 3, 4, 5, 6), (0, 2, 3, 4, 5, 6), (0, 2, 3, 5, 6, 1)]
+  Paths at degree 4 (from 0): [(0, 1, 2, 3, 4), (0, 1, 2, 3, 5), (0, 1, 2, 4, 5), (0, 1, 3, 4, 5), (0, 1, 3, 4, 6), (0, 2, 3, 4, 5), (0, 2, 3, 4, 6), (0, 2, 3, 5, 6)]
+
+  B_0 (k=0, real matrix since no phase):
+    [   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   0.00   1.00   0.00   0.00   1.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   0.00  -1.00   0.00   0.00   0.00   1.00   0.00 ]
+    [   0.00   0.00  -1.00   0.00   0.00  -1.00   0.00 ]
+
+  B_1 (k=1, complex):
+    [   0.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   0.00   1.00   0.00   0.00   1.00   0.00   0.00 ]
+    [  -1.00   0.00   0.00   0.00   0.00   0.00   0.00 ]
+    [   0.00  -1.00   0.00   0.00   0.00   1.00   0.00 ]
+    [   0.00   0.00  -1.00   0.00   0.00  -1.00   0.00 ]
+
+  Singular values comparison:
+    k=0: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+    k=1: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+    k=2: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+    k=3: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+    k=4: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+    k=5: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+    k=6: [2.000000, 1.847759, 1.414214, 0.765367, 0.000000, 0.000000, 0.000000]
+
+  All eigenspaces have same singular values? True
+
+--- Degree m=6 ---
+  Matrix size: 7 x 2
+  Paths at degree 6 (from 0): [(0, 1, 2, 3, 4, 5, 6), (0, 2, 3, 4, 5, 6, 1)]
+  Paths at degree 5 (from 0): [(0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 6), (0, 1, 2, 3, 5, 6), (0, 1, 2, 4, 5, 6), (0, 1, 3, 4, 5, 6), (0, 2, 3, 4, 5, 6), (0, 2, 3, 5, 6, 1)]
+
+  B_0 (k=0, real matrix since no phase):
+    [   0.00   0.00 ]
+    [  -1.00   0.00 ]
+    [   1.00   0.00 ]
+    [  -1.00   0.00 ]
+    [   1.00   0.00 ]
+    [  -1.00   0.00 ]
+    [   0.00  -1.00 ]
+
+  B_1 (k=1, complex):
+    [   0.00   0.00 ]
+    [  -1.00   0.00 ]
+    [   1.00   0.00 ]
+    [  -1.00   0.00 ]
+    [   1.00   0.00 ]
+    [  -1.00   0.00 ]
+    [   0.00  -1.00 ]
+
+  Singular values comparison:
+    k=0: [2.236068, 1.000000]
+    k=1: [2.236068, 1.000000]
+    k=2: [2.236068, 1.000000]
+    k=3: [2.236068, 1.000000]
+    k=4: [2.236068, 1.000000]
+    k=5: [2.236068, 1.000000]
+    k=6: [2.236068, 1.000000]
+
+  All eigenspaces have same singular values? True
+
+================================================================================
+PART 2: Structural comparison B_0 vs B_k
+================================================================================
+
+--- Degree m=1 ---
+  B_0^H B_0 == B_1^H B_1 ? True
+  B_0 B_0^H == B_1 B_1^H ? True
+
+  Looking for diagonal transformation B_1 = D_row * B_0 * D_col:
+    YES! B_1 = D_row * B_0 * D_col for diagonal unitaries
+
+  Frobenius norms: ||B_0||=0.000000, ||B_1||=0.000000
+
+--- Degree m=2 ---
+  B_0^H B_0 == B_1^H B_1 ? True
+  B_0 B_0^H == B_1 B_1^H ? True
+
+  Looking for diagonal transformation B_1 = D_row * B_0 * D_col:
+    YES! B_1 = D_row * B_0 * D_col for diagonal unitaries
+    D_row phases: ['0.0000pi', '-0.0000pi', '0.0000pi']
+    D_col phases: ['0.0000pi', '-0.0000pi', '-0.0000pi']
+    D_row magnitudes: ['1.000000', '1.000000', '1.000000']
+    D_col magnitudes: ['1.000000', '1.000000', '1.000000']
+    Reconstruction error: 0.00e+00
+
+  Frobenius norms: ||B_0||=1.732051, ||B_1||=1.732051
+
+--- Degree m=3 ---
+  B_0^H B_0 == B_1^H B_1 ? True
+  B_0 B_0^H == B_1 B_1^H ? True
+
+  Looking for diagonal transformation B_1 = D_row * B_0 * D_col:
+    YES! B_1 = D_row * B_0 * D_col for diagonal unitaries
+    D_row phases: ['0.0000pi', '0.0000pi', '-0.0000pi']
+    D_col phases: ['0.0000pi', '0.0000pi', '0.0000pi', '0.0000pi', '0.0000pi']
+    D_row magnitudes: ['1.000000', '1.000000', '1.000000']
+    D_col magnitudes: ['1.000000', '1.000000', '1.000000', '1.000000', '1.000000']
+    Reconstruction error: 0.00e+00
+
+  Frobenius norms: ||B_0||=1.414214, ||B_1||=1.414214
+
+--- Degree m=4 ---
+  B_0^H B_0 == B_1^H B_1 ? True
+  B_0 B_0^H == B_1 B_1^H ? True
+
+  Looking for diagonal transformation B_1 = D_row * B_0 * D_col:
+    YES! B_1 = D_row * B_0 * D_col for diagonal unitaries
+    D_row phases: ['0.0000pi', '-0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi']
+    D_col phases: ['0.0000pi', '-0.0000pi', '0.0000pi', '0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi', '0.0000pi']
+    D_row magnitudes: ['1.000000', '1.000000', '1.000000', '1.000000', '1.000000']
+    D_col magnitudes: ['1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000']
+    Reconstruction error: 0.00e+00
+
+  Frobenius norms: ||B_0||=2.236068, ||B_1||=2.236068
+
+--- Degree m=5 ---
+  B_0^H B_0 == B_1^H B_1 ? True
+  B_0 B_0^H == B_1 B_1^H ? True
+
+  Looking for diagonal transformation B_1 = D_row * B_0 * D_col:
+    YES! B_1 = D_row * B_0 * D_col for diagonal unitaries
+    D_row phases: ['0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi', '0.0000pi']
+    D_col phases: ['0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi', '0.0000pi', '0.0000pi', '0.0000pi']
+    D_row magnitudes: ['1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000']
+    D_col magnitudes: ['1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000']
+    Reconstruction error: 0.00e+00
+
+  Frobenius norms: ||B_0||=3.162278, ||B_1||=3.162278
+
+--- Degree m=6 ---
+  B_0^H B_0 == B_1^H B_1 ? True
+  B_0 B_0^H == B_1 B_1^H ? True
+
+  Looking for diagonal transformation B_1 = D_row * B_0 * D_col:
+    YES! B_1 = D_row * B_0 * D_col for diagonal unitaries
+    D_row phases: ['0.0000pi', '-0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi', '-0.0000pi', '0.0000pi']
+    D_col phases: ['0.0000pi', '-0.0000pi']
+    D_row magnitudes: ['1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000', '1.000000']
+    D_col magnitudes: ['1.000000', '1.000000']
+    Reconstruction error: 0.00e+00
+
+  Frobenius norms: ||B_0||=2.449490, ||B_1||=2.449490
+
+================================================================================
+PART 3: Understanding B_k algebraically
+================================================================================
+
+The boundary matrix B_k[beta, alpha] for eigenspace k has entries:
+  B_k[beta, alpha] = sum over interior faces of alpha that canonicalize to beta
+  Each term = (-1)^i * omega^{k * shift}
+  where shift = starting vertex of the face before canonicalization
+
+For k=0: all phases = 1, so B_0 is a REAL INTEGER matrix
+For k!=0: phases are powers of omega^k
+
+KEY QUESTION: Why does rank(B_0) = rank(B_k)?
+
+--- Degree m=2: Entry decomposition ---
+  Nonzero entries and their shift decomposition:
+    (1,0): beta=(0, 2), alpha=(0, 1, 2)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+    (2,1): beta=(0, 3), alpha=(0, 1, 3)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+    (2,2): beta=(0, 3), alpha=(0, 2, 3)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+
+--- Degree m=3: Entry decomposition ---
+  Nonzero entries and their shift decomposition:
+    (1,0): beta=(0, 1, 3), alpha=(0, 1, 2, 3)
+      contributions: [(+1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = 1
+      B_1 entry = 1.0000+0.0000j
+    (2,0): beta=(0, 2, 3), alpha=(0, 1, 2, 3)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+
+--- Degree m=4: Entry decomposition ---
+  Nonzero entries and their shift decomposition:
+    (1,0): beta=(0, 1, 2, 4), alpha=(0, 1, 2, 3, 4)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+    (2,0): beta=(0, 1, 3, 4), alpha=(0, 1, 2, 3, 4)
+      contributions: [(+1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = 1
+      B_1 entry = 1.0000+0.0000j
+    (3,0): beta=(0, 2, 3, 4), alpha=(0, 1, 2, 3, 4)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+    (4,1): beta=(0, 2, 3, 5), alpha=(0, 1, 2, 3, 5)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+    (4,5): beta=(0, 2, 3, 5), alpha=(0, 2, 3, 4, 5)
+      contributions: [(-1, shift=0)]
+      distinct shifts: [0] (count=1)
+      B_0 entry = -1
+      B_1 entry = -1.0000+0.0000j
+
+================================================================================
+PART 4: Universal diagonal gauge transformation
+================================================================================
+
+If B_k = D_k * B_0 * E_k for diagonal D_k, E_k, then:
+  rank(B_k) = rank(B_0) automatically (diagonal matrices are invertible)
+  This would PROVE eigenspace Betti uniformity!
+
+--- Degree m=1 ---
+  k=1: No nonzero entries in B_0 to compare
+  k=2: No nonzero entries in B_0 to compare
+  k=3: No nonzero entries in B_0 to compare
+  k=4: No nonzero entries in B_0 to compare
+  k=5: No nonzero entries in B_0 to compare
+  k=6: No nonzero entries in B_0 to compare
+
+--- Degree m=2 ---
+  k=1: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 2), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+  k=2: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 2), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+  k=3: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 2), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+  k=4: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 2), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+  k=5: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 2), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+  k=6: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 2), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+
+--- Degree m=3 ---
+  k=1: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 3), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 2: path=(0, 2, 3), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+  k=2: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 3), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 2: path=(0, 2, 3), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+  k=3: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 3), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 2: path=(0, 2, 3), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+  k=4: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 3), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 2: path=(0, 2, 3), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+  k=5: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 3), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 2: path=(0, 2, 3), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+  k=6: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 3), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 2: path=(0, 2, 3), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+
+--- Degree m=4 ---
+  k=1: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 4), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+      row 2: path=(0, 1, 3, 4), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 3: path=(0, 2, 3, 4), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+  k=2: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 4), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+      row 2: path=(0, 1, 3, 4), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 3: path=(0, 2, 3, 4), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+  k=3: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 4), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+      row 2: path=(0, 1, 3, 4), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 3: path=(0, 2, 3, 4), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+  k=4: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 4), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+      row 2: path=(0, 1, 3, 4), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 3: path=(0, 2, 3, 4), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+  k=5: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 4), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+      row 2: path=(0, 1, 3, 4), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 3: path=(0, 2, 3, 4), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+  k=6: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 4), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+      row 2: path=(0, 1, 3, 4), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 3: path=(0, 2, 3, 4), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+
+--- Degree m=5 ---
+  k=1: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0, 3: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 5), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 2: path=(0, 1, 2, 4, 5), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 3: path=(0, 1, 3, 4, 5), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 5: path=(0, 2, 3, 4, 5), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+  k=2: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0, 3: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 5), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 2: path=(0, 1, 2, 4, 5), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 3: path=(0, 1, 3, 4, 5), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 5: path=(0, 2, 3, 4, 5), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+  k=3: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0, 3: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 5), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 2: path=(0, 1, 2, 4, 5), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 3: path=(0, 1, 3, 4, 5), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 5: path=(0, 2, 3, 4, 5), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+  k=4: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0, 3: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 5), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 2: path=(0, 1, 2, 4, 5), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 3: path=(0, 1, 3, 4, 5), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 5: path=(0, 2, 3, 4, 5), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+  k=5: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0, 3: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 5), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 2: path=(0, 1, 2, 4, 5), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 3: path=(0, 1, 3, 4, 5), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 5: path=(0, 2, 3, 4, 5), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+  k=6: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: 0.0, 2: -0.0, 3: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5), sum_mod_n=1, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 5), sum_mod_n=4, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 2: path=(0, 1, 2, 4, 5), sum_mod_n=5, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 3: path=(0, 1, 3, 4, 5), sum_mod_n=6, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 5: path=(0, 2, 3, 4, 5), sum_mod_n=0, phase=1.0000-0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+
+--- Degree m=6 ---
+  k=1: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0, 4: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5, 6), sum_mod_n=0, phase=1.0000+0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 4, 6), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 2: path=(0, 1, 2, 3, 5, 6), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 3: path=(0, 1, 2, 4, 5, 6), sum_mod_n=4, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 4: path=(0, 1, 3, 4, 5, 6), sum_mod_n=5, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 5: path=(0, 2, 3, 4, 5, 6), sum_mod_n=6, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+  k=2: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0, 4: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5, 6), sum_mod_n=0, phase=1.0000+0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 4, 6), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 2: path=(0, 1, 2, 3, 5, 6), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 3: path=(0, 1, 2, 4, 5, 6), sum_mod_n=4, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 4: path=(0, 1, 3, 4, 5, 6), sum_mod_n=5, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 5: path=(0, 2, 3, 4, 5, 6), sum_mod_n=6, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+  k=3: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0, 4: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5, 6), sum_mod_n=0, phase=1.0000+0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 4, 6), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 2: path=(0, 1, 2, 3, 5, 6), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 3: path=(0, 1, 2, 4, 5, 6), sum_mod_n=4, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 4: path=(0, 1, 3, 4, 5, 6), sum_mod_n=5, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 5: path=(0, 2, 3, 4, 5, 6), sum_mod_n=6, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+  k=4: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0, 4: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5, 6), sum_mod_n=0, phase=1.0000+0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 4, 6), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 2: path=(0, 1, 2, 3, 5, 6), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 3: path=(0, 1, 2, 4, 5, 6), sum_mod_n=4, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 4: path=(0, 1, 3, 4, 5, 6), sum_mod_n=5, phase=1.0000+0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 5: path=(0, 2, 3, 4, 5, 6), sum_mod_n=6, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+  k=5: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0, 4: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5, 6), sum_mod_n=0, phase=1.0000+0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 4, 6), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 2: path=(0, 1, 2, 3, 5, 6), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+      row 3: path=(0, 1, 2, 4, 5, 6), sum_mod_n=4, phase=1.0000-0.0000j, omega^(k*sum)=0.6235-0.7818j, match=False
+      row 4: path=(0, 1, 3, 4, 5, 6), sum_mod_n=5, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 5: path=(0, 2, 3, 4, 5, 6), sum_mod_n=6, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+  k=6: DIAGONAL GAUGE EXISTS!
+    row phases (units of 2pi/n): {1: -0.0, 2: 0.0, 3: -0.0, 4: 0.0, 5: -0.0}
+    col phases (units of 2pi/n): {0: 0.0}
+    Checking if col phases = k * (sum of vertices mod n):
+      col 0: path=(0, 1, 2, 3, 4, 5, 6), sum_mod_n=0, phase=1.0000+0.0000j, omega^(k*sum)=1.0000+0.0000j, match=True
+    Checking if row phases = k * (sum of vertices mod n):
+      row 1: path=(0, 1, 2, 3, 4, 6), sum_mod_n=2, phase=1.0000-0.0000j, omega^(k*sum)=-0.2225-0.9749j, match=False
+      row 2: path=(0, 1, 2, 3, 5, 6), sum_mod_n=3, phase=1.0000+0.0000j, omega^(k*sum)=-0.9010-0.4339j, match=False
+      row 3: path=(0, 1, 2, 4, 5, 6), sum_mod_n=4, phase=1.0000-0.0000j, omega^(k*sum)=-0.9010+0.4339j, match=False
+      row 4: path=(0, 1, 3, 4, 5, 6), sum_mod_n=5, phase=1.0000+0.0000j, omega^(k*sum)=-0.2225+0.9749j, match=False
+      row 5: path=(0, 2, 3, 4, 5, 6), sum_mod_n=6, phase=1.0000-0.0000j, omega^(k*sum)=0.6235+0.7818j, match=False
+
+================================================================================
+PART 5: Single-shift entries analysis
+================================================================================
+
+If every nonzero entry of B has exactly ONE contributing (sign, shift) pair,
+then B_k[i,j] = sign * omega^{k*shift} = omega^{k*shift} * B_0[i,j]
+which is exactly the diagonal gauge with d[i,j] depending only on shift.
+
+  Degree m=1: 0 single-shift entries, 0 multi-shift entries
+
+  Degree m=2: 3 single-shift entries, 0 multi-shift entries
+
+  Degree m=3: 2 single-shift entries, 0 multi-shift entries
+
+  Degree m=4: 5 single-shift entries, 0 multi-shift entries
+
+  Degree m=5: 10 single-shift entries, 0 multi-shift entries
+
+  Degree m=6: 6 single-shift entries, 0 multi-shift entries
+
+================================================================================
+PART 6: Vertex-sum gauge conjecture
+================================================================================
+
+Conjecture: B_k = D_k^row * B_0 * D_k^col
+where D_k^row[i,i] = omega^{k * f(path_i)}
+and D_k^col[j,j] = omega^{k * g(path_j)}
+for some functions f, g of the path.
+
+Natural candidates for f, g:
+  (a) sum of vertices mod n
+  (b) sum of interior vertices mod n
+  (c) last vertex mod n
+  (d) first + last vertex mod n
+
+--- Degree m=2 ---
+
+--- Degree m=3 ---
+
+--- Degree m=4 ---
+
+--- Degree m=5 ---
+
+================================================================================
+PART 7: Exhaustive gauge search (all linear combinations of vertex indices)
+================================================================================
+
+--- Degree m=2 (ncols=3, nrows=3) ---
+  MATCH: row_phase=omega^(0*v_last), col_phase=omega^(0*v_last), err=0.00e+00
+  MATCH: row_phase=omega^(6*v_last), col_phase=omega^(1*v_last), err=1.87e-15
+  MATCH: row_phase=omega^(5*v_last), col_phase=omega^(2*v_last), err=1.91e-15
+  MATCH: row_phase=omega^(4*v_last), col_phase=omega^(3*v_last), err=1.89e-15
+  MATCH: row_phase=omega^(3*v_last), col_phase=omega^(4*v_last), err=1.89e-15
+  MATCH: row_phase=omega^(2*v_last), col_phase=omega^(5*v_last), err=1.91e-15
+  MATCH: row_phase=omega^(1*v_last), col_phase=omega^(6*v_last), err=1.87e-15
+
+--- Degree m=3 (ncols=5, nrows=3) ---
+  MATCH: row_phase=omega^(0*v_last), col_phase=omega^(0*v_last), err=0.00e+00
+  MATCH: row_phase=omega^(6*v_last), col_phase=omega^(1*v_last), err=1.87e-15
+  MATCH: row_phase=omega^(5*v_last), col_phase=omega^(2*v_last), err=1.91e-15
+  MATCH: row_phase=omega^(4*v_last), col_phase=omega^(3*v_last), err=1.89e-15
+  MATCH: row_phase=omega^(3*v_last), col_phase=omega^(4*v_last), err=1.89e-15
+  MATCH: row_phase=omega^(2*v_last), col_phase=omega^(5*v_last), err=1.91e-15
+  MATCH: row_phase=omega^(1*v_last), col_phase=omega^(6*v_last), err=1.87e-15
+
+--- Degree m=4 (ncols=8, nrows=5) ---
+  MATCH: row_phase=omega^(0*v_last), col_phase=omega^(0*v_last), err=0.00e+00
+  MATCH: row_phase=omega^(6*v_last), col_phase=omega^(1*v_last), err=3.22e-15
+  MATCH: row_phase=omega^(5*v_last), col_phase=omega^(2*v_last), err=3.07e-15
+  MATCH: row_phase=omega^(4*v_last), col_phase=omega^(3*v_last), err=3.24e-15
+  MATCH: row_phase=omega^(3*v_last), col_phase=omega^(4*v_last), err=3.24e-15
+  MATCH: row_phase=omega^(2*v_last), col_phase=omega^(5*v_last), err=3.07e-15
+  MATCH: row_phase=omega^(1*v_last), col_phase=omega^(6*v_last), err=3.22e-15
+
+--- Degree m=5 (ncols=7, nrows=8) ---
+  MATCH: row_phase=omega^(0*v_last), col_phase=omega^(0*v_last), err=0.00e+00
+  MATCH: row_phase=omega^(6*v_last), col_phase=omega^(1*v_last), err=3.82e-15
+  MATCH: row_phase=omega^(5*v_last), col_phase=omega^(2*v_last), err=3.95e-15
+  MATCH: row_phase=omega^(4*v_last), col_phase=omega^(3*v_last), err=3.78e-15
+  MATCH: row_phase=omega^(3*v_last), col_phase=omega^(4*v_last), err=3.78e-15
+  MATCH: row_phase=omega^(2*v_last), col_phase=omega^(5*v_last), err=3.95e-15
+  MATCH: row_phase=omega^(1*v_last), col_phase=omega^(6*v_last), err=3.82e-15
+
+================================================================================
+PART 8: Same analysis for n=5 (Interval)
+================================================================================
+
+--- n=5, Degree m=1, size 1x2 ---
+  B_0:
+    [  0.00,   0.00]
+  B_1:
+    [0.0000+0.0000j, 0.0000+0.0000j]
+  SVD(B_0): ['0.000000']
+  SVD(B_1): ['0.000000']
+  Same SVDs? True
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(4*v_last), err=0.00e+00
+
+--- n=5, Degree m=2, size 2x1 ---
+  B_0:
+    [  0.00]
+    [ -1.00]
+  B_1:
+    [0.0000+0.0000j]
+    [-1.0000+0.0000j]
+  SVD(B_0): ['1.000000']
+  SVD(B_1): ['1.000000']
+  Same SVDs? True
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(1*v_last), err=3.14e-16
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(2*v_last), err=3.14e-16
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(3*v_last), err=3.14e-16
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(4*v_last), err=3.14e-16
+
+--- n=5, Degree m=3, size 1x1 ---
+  B_0:
+    [  0.00]
+  B_1:
+    [0.0000+0.0000j]
+  SVD(B_0): ['0.000000']
+  SVD(B_1): ['0.000000']
+  Same SVDs? True
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(4*v_last), err=0.00e+00
+
+--- n=5, Degree m=4, size 1x1 ---
+  B_0:
+    [  0.00]
+  B_1:
+    [0.0000+0.0000j]
+  SVD(B_0): ['0.000000']
+  SVD(B_1): ['0.000000']
+  Same SVDs? True
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(0*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(1*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(2*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(3*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(0*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(1*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(2*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(3*v_last), col=omega^(4*v_last), err=0.00e+00
+  GAUGE MATCH: row=omega^(4*v_last), col=omega^(4*v_last), err=0.00e+00
+
+================================================================================
+PART 9: Boundary in difference-sequence representation
+================================================================================
+
+Paths from 0 are determined by difference sequence (d_1,...,d_m), d_i in S.
+Vertex sequence: (0, d_1, d_1+d_2, ..., d_1+...+d_m) mod n.
+Removing interior vertex i (1<=i<=m-1) merges d_i and d_{i+1}.
+The resulting face starts at vertex 0 if i>0, or at vertex d_1 if i=0.
+Wait — we also remove i=0 (first vertex) and i=m (last vertex)?
+NO: for GLMY path homology, boundary only removes INTERIOR vertices.
+Interior = positions 1,...,m-1 (for an m-path = (m+1)-tuple).
+
+So: removing vertex at position i (1<=i<=m-1):
+  - The face always starts at vertex 0 (shift=0)!
+  - The diff sequence becomes (..., d_i + d_{i+1}, ...)
+  - The face is STILL from vertex 0, so canonical = face itself!
+
+WAIT. This means shift is ALWAYS 0 for GLMY boundary.
+If shift=0, then phase = omega^{k*0} = 1 for ALL k.
+So B_k = B_0 for ALL k?!
+
+Let me verify this claim...
+
+  Degree m=1:
+    Shifts seen: []
+
+  Degree m=2:
+    All shifts are 0 => B_k = B_0 for all k at this degree
+
+  Degree m=3:
+    All shifts are 0 => B_k = B_0 for all k at this degree
+
+  Degree m=4:
+    All shifts are 0 => B_k = B_0 for all k at this degree
+
+  Degree m=5:
+    All shifts are 0 => B_k = B_0 for all k at this degree
+
+  Degree m=6:
+    All shifts are 0 => B_k = B_0 for all k at this degree
+
+================================================================================
+PART 10: Direct equality check B_k == B_0
+================================================================================
+  m=1: B_k == B_0 for ALL k=0,...,6
+  m=2: B_k == B_0 for ALL k=0,...,6
+  m=3: B_k == B_0 for ALL k=0,...,6
+  m=4: B_k == B_0 for ALL k=0,...,6
+  m=5: B_k == B_0 for ALL k=0,...,6
+  m=6: B_k == B_0 for ALL k=0,...,6
+
+================================================================================
+SUMMARY
+================================================================================
+
+The key insight about GLMY path homology boundary:
+
+For an m-path (v_0, v_1, ..., v_m), the GLMY boundary removes INTERIOR vertices
+only (positions 1 through m-1). The resulting face always starts at v_0 and ends
+at v_m. When we use orbit representatives starting at vertex 0, the face ALSO
+starts at vertex 0, so the shift needed to canonicalize is ALWAYS 0.
+
+Therefore: phase = omega^{k * 0} = 1 for ALL k.
+
+Consequence: B_k = B_0 for ALL k = 0, ..., p-1.
+
+This means all eigenspace boundary matrices are IDENTICAL (not just isomorphic),
+and hence all ranks, kernels, and Betti numbers are identical.
+
+The uniformity is NOT a deep algebraic coincidence — it's a direct consequence of
+the GLMY boundary only removing interior vertices (not endpoints), combined with
+the convention of using orbit reps starting at a fixed vertex.
+
+Algebraic proof:
+  Let alpha = (0, a_1, ..., a_m) be an m-path orbit representative (starting at 0).
+  The i-th face (1 <= i <= m-1) is:
+    face_i = (0, a_1, ..., a_{i-1}, a_{i+1}, ..., a_m)
+  which ALSO starts at 0 (no rotation needed to canonicalize).
+
+  Therefore B_k[face_i_index, alpha_index] += (-1)^i * omega^{k*0} = (-1)^i
+
+  This is INDEPENDENT of k.  QED.
+

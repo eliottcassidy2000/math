@@ -768,3 +768,54 @@ Only the symbolic formula was off by one power.
 - Formula in THM-136 theorem file CORRECTED
 - No downstream impact: all proofs used the verbal description, not the formula
 - The algebraic proof (kind-pasteur-S57) uses the correct convention throughout
+
+## MISTAKE-021: S70 "GLMY Betti Numbers" Use Wrong Chain Complex
+
+**Date discovered:** 2026-03-13
+**Found by:** opus-2026-03-13-S71
+**Affects:** ALL scripts from S70 session: betti_omega_connection.py, betti_divisibility.py, per_eigenspace_betti.py, per_eig_betti_n9.py, and all results/theorems derived from them (THM-154, eigenspace Betti uniformity)
+
+### What was assumed
+The S70 scripts computed "GLMY path homology Betti numbers" using:
+- Allowed paths = "regular paths" (v_i→v_{i+1} AND v_{i-1}→v_{i+1})
+- Boundary = interior-only deletion (indices 1 to m-1)
+Results were called "GLMY Betti numbers" and compared with GLMY literature.
+
+### Why it was wrong
+The actual GLMY path homology uses:
+- Allowed paths = directed paths (v_i→v_{i+1} only, NO skip-one requirement)
+- Boundary = full vertex deletion (indices 0 to m), but restricted to Ω_m subspace
+- Ω_m = {u ∈ A_m : ∂u has all components in A_{m-1}}
+
+**These give DIFFERENT chain complexes with different Betti numbers:**
+- Paley P_7 GLMY: β = [1,0,0,0,6,0,0], dim(A_2)=63
+- Paley P_7 S70:  β = [7,0,0,21,21,21,21], dim(A_2)=21
+
+The "regular path + interior boundary" complex IS a valid chain complex
+(d²=0 verified), but it is NOT standard GLMY path homology.
+
+### The correct framing
+There are TWO distinct valid chain complexes for tournaments:
+
+1. **GLMY Path Homology** (standard): directed paths, full boundary on Ω_m.
+   Implemented correctly in path_homology_v2.py.
+   β_0 = 1 for all tournaments. β_2 = 0 for all tested tournaments (n≤8).
+
+2. **Tournament Regular Homology (TRH)** (novel?): regular paths, interior boundary.
+   Used in S70 scripts. β_0 = n for all tournaments on n vertices.
+   Has eigenspace Betti uniformity and divisibility by n for circulants.
+
+Both are valid mathematical objects. But they should not be conflated.
+
+### Impact
+- THM-154 (Betti divisibility) applies to TRH, not GLMY
+- Eigenspace Betti uniformity applies to TRH, not GLMY
+- β_2=0 for all tournaments holds for BOTH (GLMY verified n≤8, TRH verified n≤8)
+- The S70 "per-eigenspace Betti" results are self-consistent but not GLMY
+- The S38-S41 β_2=0 results (from path_homology_v2.py) are correct GLMY
+- circulant_homology.py implements yet another convention (full boundary on regular paths) which is NEITHER GLMY nor TRH
+
+### Lesson
+ALWAYS verify which chain complex you're computing. The three ingredients
+(allowed paths, boundary convention, Ω subspace) must be consistent.
+When reading "path homology" results, check which convention is used.
