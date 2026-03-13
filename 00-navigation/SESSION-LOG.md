@@ -13,6 +13,49 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S63 — 2026-03-12: Chirality dichotomy + p=17 exhaustive + NQR orbit pairing
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S62 (context compaction recovery)
+**Summary of work:**
+  Deep creative exploration of dihedral group / polygon geometry connection.
+
+  MAJOR FINDINGS:
+
+  1. **THM-139: CHIRALITY DICHOTOMY (PROVED)**:
+     - p≡3 mod 4: Paley BREAKS polygon reflection (anti-aut). σ_P exists. THM-137 applies.
+     - p≡1 mod 4: Paley PRESERVES reflection (true aut). P_{-1}=-I ∈ QR group.
+       Fixed subspace = {0}. NO eigenvector. THM-137 does NOT apply.
+     - This explains WHY Paley can only win at p≡3 mod 4 (small p).
+
+  2. **p=17 EXHAUSTIVE (NEW DATA)**: First p≡1 mod 8 fully computed.
+     H(Interval) = 13,689,269,499 = max. H(Paley) = 13,492,503,135, rank 196/256.
+     ALL 16 H-values have exactly 16 orientations each (perfect uniform distribution).
+
+  3. **NQR ORBIT PAIRING**: Each H-level at p≡1 mod 4 splits into exactly
+     2 QR orbits paired by NQR multiplication. NQR maps T → T^op, H preserved.
+     Verified at both p=13 and p=17.
+
+  4. **CHIRALITY = FLOW**: Paley chirality=0 at p≡1 mod 4, chirality=1 at p≡3 mod 4.
+     Interval always has chirality=1. H-maximization rewards chirality (directed flow).
+
+  5. **INTERLACING**: m=(p-1)/2 is ODD for p≡3 mod 4, EVEN for p≡1 mod 4.
+     Odd-order QR groups support Paley eigenvector; even-order ones don't.
+     This is the user's "interlacing of even and odd groups" insight formalized.
+
+**New contributions:**
+  - THM-139 (chirality dichotomy, proved)
+  - HYP-498, HYP-499
+  - dihedral_mod4_dichotomy.py, p17_max_orbit_analysis.py, orbit_pairing_nqr.py
+
+**Unresolved threads:**
+  - At p≡1 mod 4: what makes the Interval orbit special among all orbits at H_max?
+  - Is there a p≡1 mod 4 analogue of the eigenvector theorem?
+  - The size-2 orbits at p=13 ({σ_P, -σ_P}) — what is their H value relative to max?
+  - Test at p=29 (≡5 mod 8): needs C++ Held-Karp
+
+---
+
 ## opus-2026-03-12-S62d — 2026-03-12: p=19,23 verified, three-strategy proof framework, 30+ connections
 
 **Account:** opus

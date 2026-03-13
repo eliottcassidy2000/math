@@ -1,0 +1,127 @@
+p=17, m=8
+QR = [1, 2, 4, 8, 9, 13, 15, 16]
+NQR = [3, 5, 6, 7, 10, 11, 12, 14]
+
+--- NQR ORBIT PAIRING ---
+
+P_3 (NQR element 3):
+  (-1, -1, -1, -1, -1, -1, -1, -1) → (-1, 1, -1, -1, 1, -1, -1, 1)  in orbit_28: True
+  (-1, -1, -1, -1, 1, 1, 1, 1) → (1, -1, -1, 1, 1, -1, 1, 1)  in orbit_28: True
+  (-1, -1, 1, 1, -1, -1, 1, 1) → (-1, 1, -1, 1, -1, -1, 1, -1)  in orbit_28: True
+  (-1, 1, -1, 1, -1, 1, -1, 1) → (1, 1, -1, -1, -1, 1, 1, 1)  in orbit_28: True
+  (1, -1, 1, -1, 1, -1, 1, -1) → (-1, -1, 1, 1, 1, -1, -1, -1)  in orbit_28: True
+  (1, 1, -1, -1, 1, 1, -1, -1) → (1, -1, 1, -1, 1, 1, -1, 1)  in orbit_28: True
+  (1, 1, 1, 1, -1, -1, -1, -1) → (-1, 1, 1, -1, -1, 1, -1, -1)  in orbit_28: True
+  (1, 1, 1, 1, 1, 1, 1, 1) → (1, -1, 1, 1, -1, 1, 1, -1)  in orbit_28: True
+  All orbit_0 → orbit_28: True
+
+P_5 (NQR element 5):
+  (-1, -1, -1, -1, -1, -1, -1, -1) → (-1, 1, -1, 1, -1, -1, 1, -1)  in orbit_28: True
+  (-1, -1, -1, -1, 1, 1, 1, 1) → (1, 1, -1, -1, -1, 1, 1, 1)  in orbit_28: True
+  (-1, -1, 1, 1, -1, -1, 1, 1) → (1, -1, 1, 1, -1, 1, 1, -1)  in orbit_28: True
+  (-1, 1, -1, 1, -1, 1, -1, 1) → (-1, 1, 1, -1, -1, 1, -1, -1)  in orbit_28: True
+  (1, -1, 1, -1, 1, -1, 1, -1) → (1, -1, -1, 1, 1, -1, 1, 1)  in orbit_28: True
+  (1, 1, -1, -1, 1, 1, -1, -1) → (-1, 1, -1, -1, 1, -1, -1, 1)  in orbit_28: True
+  (1, 1, 1, 1, -1, -1, -1, -1) → (-1, -1, 1, 1, 1, -1, -1, -1)  in orbit_28: True
+  (1, 1, 1, 1, 1, 1, 1, 1) → (1, -1, 1, -1, 1, 1, -1, 1)  in orbit_28: True
+  All orbit_0 → orbit_28: True
+
+P_6 (NQR element 6):
+  (-1, -1, -1, -1, -1, -1, -1, -1) → (-1, -1, 1, 1, 1, -1, -1, -1)  in orbit_28: True
+  (-1, -1, -1, -1, 1, 1, 1, 1) → (-1, 1, -1, -1, 1, -1, -1, 1)  in orbit_28: True
+  (-1, -1, 1, 1, -1, -1, 1, 1) → (1, -1, -1, 1, 1, -1, 1, 1)  in orbit_28: True
+  (-1, 1, -1, 1, -1, 1, -1, 1) → (-1, 1, -1, 1, -1, -1, 1, -1)  in orbit_28: True
+  (1, -1, 1, -1, 1, -1, 1, -1) → (1, -1, 1, -1, 1, 1, -1, 1)  in orbit_28: True
+  (1, 1, -1, -1, 1, 1, -1, -1) → (-1, 1, 1, -1, -1, 1, -1, -1)  in orbit_28: True
+  (1, 1, 1, 1, -1, -1, -1, -1) → (1, -1, 1, 1, -1, 1, 1, -1)  in orbit_28: True
+  (1, 1, 1, 1, 1, 1, 1, 1) → (1, 1, -1, -1, -1, 1, 1, 1)  in orbit_28: True
+  All orbit_0 → orbit_28: True
+
+Reverse: P_3 maps orbit_28 → orbit_0?
+  (-1, -1, 1, 1, 1, -1, -1, -1) → (-1, -1, -1, -1, -1, -1, -1, -1)  in orbit_0: True
+  (-1, 1, -1, -1, 1, -1, -1, 1) → (-1, -1, -1, -1, 1, 1, 1, 1)  in orbit_0: True
+  (-1, 1, -1, 1, -1, -1, 1, -1) → (-1, 1, -1, 1, -1, 1, -1, 1)  in orbit_0: True
+  (-1, 1, 1, -1, -1, 1, -1, -1) → (1, 1, -1, -1, 1, 1, -1, -1)  in orbit_0: True
+  (1, -1, -1, 1, 1, -1, 1, 1) → (-1, -1, 1, 1, -1, -1, 1, 1)  in orbit_0: True
+  (1, -1, 1, -1, 1, 1, -1, 1) → (1, -1, 1, -1, 1, -1, 1, -1)  in orbit_0: True
+  (1, -1, 1, 1, -1, 1, 1, -1) → (1, 1, 1, 1, -1, -1, -1, -1)  in orbit_0: True
+  (1, 1, -1, -1, -1, 1, 1, 1) → (1, 1, 1, 1, 1, 1, 1, 1)  in orbit_0: True
+  All orbit_28 → orbit_0: True
+
+--- WHY NQR PAIRING PRESERVES H ---
+
+For b ∈ NQR, the map x → bx on Z_p is an ANTI-automorphism of T_Paley.
+On orientations: P_b σ gives a tournament T(P_b σ) = T(σ)^op.
+Since H(T) = H(T^op), we have H(P_b σ) = H(σ).
+
+But P_b is NOT in the QR group {P_a : a ∈ QR}.
+So P_b maps each QR orbit to a DIFFERENT QR orbit.
+All QR orbits in the same H-level are paired by ANY NQR element.
+
+KEY: The FULL multiplicative group (Z/pZ)* = QR ∪ NQR acts on orientations.
+QR orbits have |QR| = m elements each.
+(Z/pZ)* orbits have |QR| + |NQR| = p-1 elements, but orientations
+are in {±1}^m (only 2^m elements), so the orbit sizes are smaller.
+
+The pairing: each (Z/pZ)* orbit = exactly 2 QR orbits (related by NQR).
+Since (Z/pZ)* includes BOTH QR and NQR, and both preserve H (one by
+automorphism, the other by anti-automorphism + H=H(T^op)).
+
+
+--- VERIFICATION AT p=13 ---
+NQR element b=2 at p=13:
+  All orbit_0 → orbit_1: True ✓
+
+======================================================================
+STRUCTURE THEOREM FOR p ≡ 1 mod 4
+======================================================================
+
+THEOREM: For p ≡ 1 mod 4, the orientation cube {±1}^m decomposes into:
+  - (2^m / (2m)) QR orbits, each of size m (Interval lies in one such orbit)
+  - Wait, 2^m / m is not always an integer. Let's check...
+
+  p=13: 2^6 / 6 = 64/6 = 10.67... but we found 12 orbits of size 6 and
+    a few of size 2. So orbit sizes aren't uniform.
+
+Actually from the data:
+  p=13: 12 QR orbits. 10 orbits of size 6, plus 2 orbits of size 2?
+    12*6 = 72 ≠ 64, so NOT all size 6. Let me recheck.
+    From the output: each H value has 12 orientations (mostly). 12*5 + 4 = 64.
+    So: 5 H-values with 12 orientations + 1 H-value with 4 = 64. ✓
+    Orbits: 5 × 2 orbits of 6 + 1 × 2 orbits of 2 = 10 + 2 = 12 orbits. ✓
+
+  p=17: 32 QR orbits. 16 H-values × 2 orbits = 32. Each orbit size 8.
+    32*8 = 256 = 2^8. ✓
+
+  So orbit sizes CAN be different (6 or 2 at p=13, but uniform 8 at p=17).
+
+  The uniform size at p=17 (all orbits size 8 = m) happens because:
+  - The QR action on chord types is transitive
+  - No chord type is fixed by any non-identity QR element
+  - (Equivalently: no a ∈ QR with a ≠ 1 has ak ≡ ±k mod p for any chord k)
+
+  At p=13: some orbits are smaller because the QR action has fixed points
+  on certain orientations. Specifically, (1, -1, 1, 1, -1, -1) = σ_P is
+  fixed by all QR elements → orbit size = 1 (but paired with -σ_P → 2).
+
+CORRECT FORMULATION:
+  The orientation cube decomposes into QR orbits.
+  Each orbit has size dividing m.
+  NQR multiplication pairs orbits: each (Z/pZ)* orbit = 2 QR orbits.
+  H is constant on (Z/pZ)* orbits (since both QR and NQR preserve H).
+  So each H-level is a union of (Z/pZ)* orbits.
+
+  For p ≡ 3 mod 4, this is DIFFERENT:
+  - NQR includes -1
+  - P_-1 = -I maps σ → -σ
+  - σ and -σ may be in DIFFERENT QR orbits (since -1 ∉ QR)
+  - But they give the same H (since H(σ) = H(-σ))
+  - So the pairing is just complement symmetry
+  - The Paley orientation σ_P is in a QR orbit of size 1
+    (since it's fixed by all P_a) → exceptional behavior!
+
+p=13: Checking orbit sizes...
+  Small orbit (size 2): [(-1, -1, -1, 1, -1, -1), (1, 1, 1, -1, 1, 1)]
+  Small orbit (size 2): [(-1, 1, -1, 1, 1, 1), (1, -1, 1, -1, -1, -1)]
+
+DONE.
