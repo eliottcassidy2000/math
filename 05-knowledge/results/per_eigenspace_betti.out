@@ -1,0 +1,51 @@
+======================================================================
+PER-EIGENSPACE ANALYSIS: INTERVAL n=7
+======================================================================
+
+  Orbit counts (= per-eigenspace Omega):
+    Omega_0: total=7, from-0=1, total/n=1
+    Omega_1: total=21, from-0=3, total/n=3
+    Omega_2: total=21, from-0=3, total/n=3
+    Omega_3: total=35, from-0=5, total/n=5
+    Omega_4: total=56, from-0=8, total/n=8
+    Omega_5: total=49, from-0=7, total/n=7
+    Omega_6: total=14, from-0=2, total/n=2
+
+  Per-eigenspace boundary ranks:
+  k=0: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+  k=1: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+  k=2: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+  k=3: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+  k=4: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+  k=5: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+  k=6: ranks=[0, 2, 1, 2, 4, 2], beta=[1, 1, 0, 2, 2, 1, 0]
+
+  Total β (sum over k): [7, 7, 0, 14, 14, 7, 0]
+
+  Q_k values:
+    Q_0 = 9 (trivial)
+    Q_1 = 5.0489
+    Q_2 = 0.3080
+    Q_3 = 0.6431
+    Q_4 = 0.6431
+    Q_5 = 0.3080
+    Q_6 = 5.0489
+
+======================================================================
+PER-EIGENSPACE ANALYSIS: PALEY p=7
+======================================================================
+  Per-eigenspace Omega: [1, 3, 3, 3, 3, 3, 3]
+  k=0: beta=[1, 0, 0, 3, 3, 3, 3]
+  k=1: beta=[1, 0, 0, 3, 3, 3, 3]
+  k=2: beta=[1, 0, 0, 3, 3, 3, 3]
+  k=3: beta=[1, 0, 0, 3, 3, 3, 3]
+  k=4: beta=[1, 0, 0, 3, 3, 3, 3]
+  k=5: beta=[1, 0, 0, 3, 3, 3, 3]
+  k=6: beta=[1, 0, 0, 3, 3, 3, 3]
+
+  All k≠0 eigenspaces identical?
+    True
+    Per-eigenspace Betti (k≠0): [1, 0, 0, 3, 3, 3, 3]
+    k=0 eigenspace Betti: [1, 0, 0, 3, 3, 3, 3]
+
+DONE.
