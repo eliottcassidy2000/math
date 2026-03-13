@@ -1,0 +1,393 @@
+======================================================================
+ENERGY-DISJOINTNESS BRIDGE
+Testing: disj3 = (p/2)*energy + const
+======================================================================
+
+======================================================================
+CLOSED-FORM IDENTITY DERIVATION
+======================================================================
+
+  Starting from eigenvalue structure of circulant tournament on Z_p:
+
+  lambda_0 = m = (p-1)/2
+  lambda_t = -1/2 + i*D_t  for t = 1, ..., p-1
+
+  Known: sum_{t!=0} D_t^2 = mp/2   (from sum |lambda_t|^2 = m)
+
+  IDENTITY 1: c5 from eigenvalues
+    c5 = tr(A^5)/5 = [m^5 + 2*sum Re((-1/2+iD_t)^5)] / 5
+    Re(z^5) = -1/32 + 5D^2/4 - 5D^4/2
+
+    5c5 = m^5 - (p-1)/16 + 5mp/4 - 5*sum D^4
+    => sum D^4 = (m^5 - (p-1)/16 + 5mp/4 - 5c5) / 5   ...(*)
+
+  IDENTITY 2: energy from eigenvalues
+    E(S) = (1/p)*sum_t |S_hat(t)|^4 = (1/p)*[m^4 + sum_{t!=0}(1/4+D_t^2)^2]
+    = (1/p)*[m^4 + (p-1)/16 + mp/4 + sum D^4]          ...(**)
+
+  COMBINING (*) and (**):
+    E*p = m^4 + (p-1)/16 + mp/4 + [m^5/5 - (p-1)/80 + mp/4 - c5]
+    E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+
+    E = [m^4 + m^5/5 + (p-1)/20 + mp/2 - c5] / p
+
+  IDENTITY 3: disj3 from c5 (THM-155 Walsh version)
+    disj3 = -c5/2 + const(p)
+
+  COMBINING:
+    disj3 = -c5/2 + const
+    E = const'(p) - c5/p
+
+    => disj3 = p*E/2 + const''(p)
+
+  This is a LINEAR relationship with slope p/2!
+
+
+======================================================================
+ALL-ORIENTATION ANALYSIS at p=7, m=3, N=8
+======================================================================
+
+  Correlation matrix:
+    Corr(disj3, energy)    = 1.000000
+    Corr(disj3, c5)        = -1.000000
+    Corr(disj3, sum D^2)   = nan
+    Corr(disj3, sum D^4)   = 1.000000
+    Corr(disj3, L4)        = 1.000000
+    Corr(energy, c5)       = -1.000000
+    Corr(energy, sum D^2)  = nan
+    Corr(energy, sum D^4)  = 1.000000
+    Corr(energy, L4)       = 1.000000
+    Corr(c5, sum D^4)      = -1.000000
+
+  Linear fit: disj3 = 2.000000 * energy + -23.75
+    Max residual = 0.750000
+
+  Linear fit: disj3 = -0.571429 * c5 + 30.25
+    Max residual = 0.750000
+
+  Linear fit: energy = -0.326531 * c5 + 28.29
+    Max residual = 0.428571
+
+  Linear fit: energy = 0.163265 * sum_D^4 + 11.57
+    Max residual = 0.428571
+
+  Multivariate: energy = 0.142857*D4 + 1.167978*D2 + 0.11
+    Max residual = 0.000000
+
+  Unique orientation data (first 20):
+    disj3=     7  energy=    15  c5=    42  D2=     10.50  D4=     18.38  (×2)
+    disj3=    14  energy=    19  c5=    28  D2=     10.50  D4=     46.38  (×6)
+
+======================================================================
+ALL-ORIENTATION ANALYSIS at p=11, m=5, N=32
+======================================================================
+
+  Correlation matrix:
+    Corr(disj3, energy)    = 1.000000
+    Corr(disj3, c5)        = -1.000000
+    Corr(disj3, sum D^2)   = nan
+    Corr(disj3, sum D^4)   = 1.000000
+    Corr(disj3, L4)        = 1.000000
+    Corr(energy, c5)       = -1.000000
+    Corr(energy, sum D^2)  = nan
+    Corr(energy, sum D^4)  = 1.000000
+    Corr(energy, L4)       = 1.000000
+    Corr(c5, sum D^4)      = -1.000000
+
+  Linear fit: disj3 = 2.838710 * energy + 309.60
+    Max residual = 0.887097
+
+  Linear fit: disj3 = -0.516129 * c5 + 800.69
+    Max residual = 0.887097
+
+  Linear fit: energy = -0.187683 * c5 + 176.16
+    Max residual = 0.322581
+
+  Linear fit: energy = 0.093842 * sum_D^4 + 57.58
+    Max residual = 0.322581
+
+  Multivariate: energy = 0.090909*D4 + 2.110845*D2 + 0.08
+    Max residual = 0.000000
+
+  Unique orientation data (first 20):
+    disj3=   495  energy=    65  c5=   594  D2=     27.50  D4=     75.63  (×2)
+    disj3=   506  energy=    69  c5=   572  D2=     27.50  D4=    119.63  (×10)
+    disj3=   517  energy=    73  c5=   550  D2=     27.50  D4=    163.62  (×1)
+    disj3=   517  energy=    73  c5=   550  D2=     27.50  D4=    163.63  (×9)
+    disj3=   550  energy=    85  c5=   484  D2=     27.50  D4=    295.62  (×1)
+    disj3=   550  energy=    85  c5=   484  D2=     27.50  D4=    295.63  (×9)
+
+======================================================================
+ALL-ORIENTATION ANALYSIS at p=13, m=6, N=64
+======================================================================
+
+  Correlation matrix:
+    Corr(disj3, energy)    = 1.000000
+    Corr(disj3, c5)        = -1.000000
+    Corr(disj3, sum D^2)   = nan
+    Corr(disj3, sum D^4)   = 1.000000
+    Corr(disj3, L4)        = 1.000000
+    Corr(energy, c5)       = -1.000000
+    Corr(energy, sum D^2)  = nan
+    Corr(energy, sum D^4)  = 1.000000
+    Corr(energy, L4)       = 1.000000
+    Corr(c5, sum D^4)      = -1.000000
+
+  Linear fit: disj3 = 3.301587 * energy + 1339.00
+    Max residual = 1.031746
+
+  Linear fit: disj3 = -0.507937 * c5 + 2468.14
+    Max residual = 1.031746
+
+  Linear fit: energy = -0.156288 * c5 + 345.43
+    Max residual = 0.317460
+
+  Linear fit: energy = 0.078144 * sum_D^4 + 100.86
+    Max residual = 0.317460
+
+  Multivariate: energy = 0.076923*D4 + 2.594448*D2 + 0.07
+    Max residual = 0.000000
+
+  Unique orientation data (first 20):
+    disj3=  1716  energy=   114  c5=  1482  D2=     39.00  D4=    165.75  (×4)
+    disj3=  1729  energy=   118  c5=  1456  D2=     39.00  D4=    217.75  (×24)
+    disj3=  1742  energy=   122  c5=  1430  D2=     39.00  D4=    269.75  (×12)
+    disj3=  1768  energy=   130  c5=  1378  D2=     39.00  D4=    373.75  (×12)
+    disj3=  1820  energy=   146  c5=  1274  D2=     39.00  D4=    581.75  (×12)
+
+
+======================================================================
+SLOPE VERIFICATION: disj3 = (p/2)*energy + const
+======================================================================
+
+  Testing disj3 = (p/2)*energy + const at p=7:
+    Measured slope     = 2.000000
+    Expected slope p/2 = 3.500000
+    Slope match: False
+    Intercept = -23.75
+    Max residual = 0.750000
+    c5 vs energy slope = -4.000000 (expected -7)
+
+  Testing disj3 = (p/2)*energy + const at p=11:
+    Measured slope     = 2.838710
+    Expected slope p/2 = 5.500000
+    Slope match: False
+    Intercept = 309.60
+    Max residual = 0.887097
+    c5 vs energy slope = -5.677419 (expected -11)
+
+  Testing disj3 = (p/2)*energy + const at p=13:
+    Measured slope     = 3.301587
+    Expected slope p/2 = 6.500000
+    Slope match: False
+    Intercept = 1339.00
+    Max residual = 1.031746
+    c5 vs energy slope = -6.603175 (expected -13)
+
+  Testing disj3 = (p/2)*energy + const at p=17:
+    Measured slope     = 4.317460
+    Expected slope p/2 = 8.500000
+    Slope match: False
+    Intercept = 9942.50
+    Max residual = 3.710317
+    c5 vs energy slope = -8.634921 (expected -17)
+
+  Testing disj3 = (p/2)*energy + const at p=19:
+    Measured slope     = 4.825397
+    Expected slope p/2 = 9.500000
+    Slope match: False
+    Intercept = 21586.64
+    Max residual = 6.257937
+    c5 vs energy slope = -9.650794 (expected -19)
+
+
+======================================================================
+ALGEBRAIC IDENTITY VERIFICATION
+======================================================================
+
+======================================================================
+ALGEBRAIC IDENTITY TEST at p=7
+======================================================================
+
+  bits=000 S=[6, 5, 4]
+    c5 = 28
+    energy = 19
+    sum_D2 = 10.5000 (expected mp/2 = 10.5)
+    sum_D4 = 46.3750
+    pred_D4 from c5 = 25.7750 (diff = 20.600000)
+    pred_E from eigenvals = 19.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 112.4000
+    Actual E*p = 133
+    Match: False
+
+  bits=001 S=[1, 5, 4]
+    c5 = 28
+    energy = 19
+    sum_D2 = 10.5000 (expected mp/2 = 10.5)
+    sum_D4 = 46.3750
+    pred_D4 from c5 = 25.7750 (diff = 20.600000)
+    pred_E from eigenvals = 19.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 112.4000
+    Actual E*p = 133
+    Match: False
+
+  bits=111 S=[1, 2, 3]
+    c5 = 28
+    energy = 19
+    sum_D2 = 10.5000 (expected mp/2 = 10.5)
+    sum_D4 = 46.3750
+    pred_D4 from c5 = 25.7750 (diff = 20.600000)
+    pred_E from eigenvals = 19.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 112.4000
+    Actual E*p = 133
+    Match: False
+
+  bits=010 S=[6, 2, 4]
+    c5 = 28
+    energy = 19
+    sum_D2 = 10.5000 (expected mp/2 = 10.5)
+    sum_D4 = 46.3750
+    pred_D4 from c5 = 25.7750 (diff = 20.600000)
+    pred_E from eigenvals = 19.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 112.4000
+    Actual E*p = 133
+    Match: False
+
+======================================================================
+ALGEBRAIC IDENTITY TEST at p=11
+======================================================================
+
+  bits=00000 S=[10, 9, 8, 7, 6]
+    c5 = 484
+    energy = 85
+    sum_D2 = 27.5000 (expected mp/2 = 27.5)
+    sum_D4 = 295.6250
+    pred_D4 from c5 = 154.6250 (diff = 141.000000)
+    pred_E from eigenvals = 85.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 794.0000
+    Actual E*p = 935
+    Match: False
+
+  bits=00001 S=[1, 9, 8, 7, 6]
+    c5 = 572
+    energy = 69
+    sum_D2 = 27.5000 (expected mp/2 = 27.5)
+    sum_D4 = 119.6250
+    pred_D4 from c5 = 66.6250 (diff = 53.000000)
+    pred_E from eigenvals = 69.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 706.0000
+    Actual E*p = 759
+    Match: False
+
+  bits=11111 S=[1, 2, 3, 4, 5]
+    c5 = 484
+    energy = 85
+    sum_D2 = 27.5000 (expected mp/2 = 27.5)
+    sum_D4 = 295.6250
+    pred_D4 from c5 = 154.6250 (diff = 141.000000)
+    pred_E from eigenvals = 85.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 794.0000
+    Actual E*p = 935
+    Match: False
+
+  bits=01010 S=[10, 2, 8, 4, 6]
+    c5 = 484
+    energy = 85
+    sum_D2 = 27.5000 (expected mp/2 = 27.5)
+    sum_D4 = 295.6250
+    pred_D4 from c5 = 154.6250 (diff = 141.000000)
+    pred_E from eigenvals = 85.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 794.0000
+    Actual E*p = 935
+    Match: False
+
+======================================================================
+ALGEBRAIC IDENTITY TEST at p=13
+======================================================================
+
+  bits=000000 S=[12, 11, 10, 9, 8, 7]
+    c5 = 1274
+    energy = 146
+    sum_D2 = 39.0000 (expected mp/2 = 39.0)
+    sum_D4 = 581.7500
+    pred_D4 from c5 = 300.5500 (diff = 281.200000)
+    pred_E from eigenvals = 146.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 1616.8000
+    Actual E*p = 1898
+    Match: False
+
+  bits=000001 S=[1, 11, 10, 9, 8, 7]
+    c5 = 1430
+    energy = 122
+    sum_D2 = 39.0000 (expected mp/2 = 39.0)
+    sum_D4 = 269.7500
+    pred_D4 from c5 = 144.5500 (diff = 125.200000)
+    pred_E from eigenvals = 122.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 1460.8000
+    Actual E*p = 1586
+    Match: False
+
+  bits=111111 S=[1, 2, 3, 4, 5, 6]
+    c5 = 1274
+    energy = 146
+    sum_D2 = 39.0000 (expected mp/2 = 39.0)
+    sum_D4 = 581.7500
+    pred_D4 from c5 = 300.5500 (diff = 281.200000)
+    pred_E from eigenvals = 146.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 1616.8000
+    Actual E*p = 1898
+    Match: False
+
+  bits=010101 S=[1, 11, 3, 9, 5, 7]
+    c5 = 1274
+    energy = 146
+    sum_D2 = 39.0000 (expected mp/2 = 39.0)
+    sum_D4 = 581.7500
+    pred_D4 from c5 = 300.5500 (diff = 281.200000)
+    pred_E from eigenvals = 146.0000 (diff = 0.000000)
+    PREDICTED E*p = m^4 + m^5/5 + (p-1)/20 + mp/2 - c5
+    = 1616.8000
+    Actual E*p = 1898
+    Match: False
+
+
+
+======================================================================
+HIGHER MOMENT INVESTIGATION at p=7
+======================================================================
+
+  c_3: constant (std=0)
+
+  c_5 vs energy: corr = -1.000000  EXACT? slope=-4.0000, max_resid=1.5000
+
+  c_7 vs energy: corr = 1.000000  EXACT? slope=22.0000, max_resid=8.2500
+
+======================================================================
+HIGHER MOMENT INVESTIGATION at p=11
+======================================================================
+
+  c_3: constant (std=0)
+
+  c_5 vs energy: corr = -1.000000  EXACT? slope=-5.6774, max_resid=1.7742
+
+  c_7 vs energy: corr = 0.996870  2-var fit: 180.2193*E + -8.7586*D4 + 3.11, max_err=165.0000
+    + D6 fit: -6.8750*E + 0.5000*D6 + 11562.89, max_err=0.0000
+
+  c_9 vs energy: corr = -0.989736  2-var fit: 3906.1345*E + -446.6531*D4 + 67.90, max_err=3250.5000
+    + D6 fit: 905.6808*E + -10.5385*D6 + 160033.23, max_err=348.3615
+
+  c_11 vs energy: corr = 0.980938  2-var fit: 74291.6353*E + -5753.2850*D4 + 1287.13, max_err=43738.7500
+    + D6 fit: -16005.4231*E + 148.8205*D6 + 5453664.50, max_err=8237.0962
+
+DONE.
