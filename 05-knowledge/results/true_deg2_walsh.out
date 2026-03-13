@@ -1,0 +1,465 @@
+======================================================================
+TRUE DEGREE-2 WALSH OF D^{2n} (FULL 2^m TRANSFORM)
+======================================================================
+
+============================================================
+p=7 (3 mod 4), m=3
+============================================================
+
+  D^2 degree-2 Walsh:
+    (1,2): W=     -0.0000, sign=+0, chi=+1, match=  N/A, res=a=-3b
+    (1,3): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=3a=b
+    (2,3): W=     -0.0000, sign=+0, chi=-1, match=  N/A, res=a=3b
+    SUMMARY: sign=chi in 0/0 nonzero (of 3 pairs)
+
+  D^4 degree-2 Walsh:
+    (1,2): W=     -7.0000, sign=-1, chi=+1, match=    0, res=a=-3b
+    (1,3): W=      7.0000, sign=+1, chi=-1, match=    0, res=3a=b
+    (2,3): W=      7.0000, sign=+1, chi=-1, match=    0, res=a=3b
+    SUMMARY: sign=chi in 0/3 nonzero (of 3 pairs)
+
+  D^6 degree-2 Walsh:
+    (1,2): W=    -47.2500, sign=-1, chi=+1, match=    0, res=a=-3b
+    (1,3): W=     47.2500, sign=+1, chi=-1, match=    0, res=3a=b
+    (2,3): W=     47.2500, sign=+1, chi=-1, match=    0, res=a=3b
+    SUMMARY: sign=chi in 0/3 nonzero (of 3 pairs)
+
+  D^8 degree-2 Walsh:
+    (1,2): W=   -251.1250, sign=-1, chi=+1, match=    0, res=a=-3b
+    (1,3): W=    251.1250, sign=+1, chi=-1, match=    0, res=3a=b
+    (2,3): W=    251.1250, sign=+1, chi=-1, match=    0, res=a=3b
+    SUMMARY: sign=chi in 0/3 nonzero (of 3 pairs)
+
+============================================================
+p=11 (3 mod 4), m=5
+============================================================
+
+  D^2 degree-2 Walsh:
+    (1,2): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=-
+    (1,3): W=     -0.0000, sign=+0, chi=+1, match=  N/A, res=3a=b
+    (1,4): W=     -0.0000, sign=+0, chi=+1, match=  N/A, res=a=3b
+    (1,5): W=      0.0000, sign=+0, chi=+1, match=  N/A, res=-
+    (2,3): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=a=-3b
+    (2,4): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=-
+    (2,5): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=3a=-b
+    (3,4): W=      0.0000, sign=+0, chi=+1, match=  N/A, res=-
+    (3,5): W=     -0.0000, sign=+0, chi=+1, match=  N/A, res=-
+    (4,5): W=      0.0000, sign=+0, chi=+1, match=  N/A, res=a=3b
+    SUMMARY: sign=chi in 0/0 nonzero (of 10 pairs)
+
+  D^4 degree-2 Walsh:
+    (1,2): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=-
+    (1,3): W=     11.0000, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=     11.0000, sign=+1, chi=+1, match=    1, res=a=3b
+    (1,5): W=      0.0000, sign=+0, chi=+1, match=  N/A, res=-
+    (2,3): W=    -11.0000, sign=-1, chi=-1, match=    1, res=a=-3b
+    (2,4): W=      0.0000, sign=+0, chi=-1, match=  N/A, res=-
+    (2,5): W=    -11.0000, sign=-1, chi=-1, match=    1, res=3a=-b
+    (3,4): W=      0.0000, sign=+0, chi=+1, match=  N/A, res=-
+    (3,5): W=     -0.0000, sign=+0, chi=+1, match=  N/A, res=-
+    (4,5): W=     11.0000, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 5/5 nonzero (of 10 pairs)
+
+  D^6 degree-2 Walsh:
+    (1,2): W=    -33.0000, sign=-1, chi=-1, match=    1, res=-
+    (1,3): W=    206.2500, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=    206.2500, sign=+1, chi=+1, match=    1, res=a=3b
+    (1,5): W=     33.0000, sign=+1, chi=+1, match=    1, res=-
+    (2,3): W=   -206.2500, sign=-1, chi=-1, match=    1, res=a=-3b
+    (2,4): W=    -33.0000, sign=-1, chi=-1, match=    1, res=-
+    (2,5): W=   -206.2500, sign=-1, chi=-1, match=    1, res=3a=-b
+    (3,4): W=     33.0000, sign=+1, chi=+1, match=    1, res=-
+    (3,5): W=     33.0000, sign=+1, chi=+1, match=    1, res=-
+    (4,5): W=    206.2500, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 10/10 nonzero (of 10 pairs)
+
+  D^8 degree-2 Walsh:
+    (1,2): W=   -924.0000, sign=-1, chi=-1, match=    1, res=-
+    (1,3): W=   2825.6250, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=   2825.6250, sign=+1, chi=+1, match=    1, res=a=3b
+    (1,5): W=    924.0000, sign=+1, chi=+1, match=    1, res=-
+    (2,3): W=  -2825.6250, sign=-1, chi=-1, match=    1, res=a=-3b
+    (2,4): W=   -924.0000, sign=-1, chi=-1, match=    1, res=-
+    (2,5): W=  -2825.6250, sign=-1, chi=-1, match=    1, res=3a=-b
+    (3,4): W=    924.0000, sign=+1, chi=+1, match=    1, res=-
+    (3,5): W=    924.0000, sign=+1, chi=+1, match=    1, res=-
+    (4,5): W=   2825.6250, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 10/10 nonzero (of 10 pairs)
+
+  D^10 degree-2 Walsh:
+    (1,2): W= -16781.8750, sign=-1, chi=-1, match=    1, res=-
+    (1,3): W=  35139.8437, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=  35139.8438, sign=+1, chi=+1, match=    1, res=a=3b
+    (1,5): W=  16781.8750, sign=+1, chi=+1, match=    1, res=-
+    (2,3): W= -35139.8437, sign=-1, chi=-1, match=    1, res=a=-3b
+    (2,4): W= -16781.8750, sign=-1, chi=-1, match=    1, res=-
+    (2,5): W= -35139.8437, sign=-1, chi=-1, match=    1, res=3a=-b
+    (3,4): W=  16781.8750, sign=+1, chi=+1, match=    1, res=-
+    (3,5): W=  16781.8750, sign=+1, chi=+1, match=    1, res=-
+    (4,5): W=  35139.8438, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 10/10 nonzero (of 10 pairs)
+
+============================================================
+p=13 (1 mod 4), m=6
+============================================================
+
+  D^2 degree-2 Walsh:
+    SUMMARY: sign=chi in 0/0 nonzero (of 15 pairs)
+
+  D^4 degree-2 Walsh:
+    (1,3): W=     13.0000, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=    -13.0000, sign=-1, chi=+1, match=    0, res=a=-3b
+    (2,5): W=     13.0000, sign=+1, chi=+1, match=    1, res=a=3b
+    (2,6): W=     13.0000, sign=+1, chi=+1, match=    1, res=3a=b
+    (3,4): W=    -13.0000, sign=-1, chi=+1, match=    0, res=3a=-b
+    (5,6): W=     13.0000, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 4/6 nonzero (of 15 pairs)
+
+  D^6 degree-2 Walsh:
+    (1,3): W=    341.2500, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=   -341.2500, sign=-1, chi=+1, match=    0, res=a=-3b
+    (2,5): W=    341.2500, sign=+1, chi=+1, match=    1, res=a=3b
+    (2,6): W=    341.2500, sign=+1, chi=+1, match=    1, res=3a=b
+    (3,4): W=   -341.2500, sign=-1, chi=+1, match=    0, res=3a=-b
+    (5,6): W=    341.2500, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 4/6 nonzero (of 15 pairs)
+
+  D^8 degree-2 Walsh:
+    (1,2): W=     39.0000, sign=+1, chi=-1, match=    0, res=-
+    (1,3): W=   6972.8750, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=  -6972.8750, sign=-1, chi=+1, match=    0, res=a=-3b
+    (1,6): W=    -39.0000, sign=-1, chi=-1, match=    1, res=-
+    (2,4): W=     39.0000, sign=+1, chi=-1, match=    0, res=-
+    (2,5): W=   6972.8750, sign=+1, chi=+1, match=    1, res=a=3b
+    (2,6): W=   6972.8750, sign=+1, chi=+1, match=    1, res=3a=b
+    (3,4): W=  -6972.8750, sign=-1, chi=+1, match=    0, res=3a=-b
+    (3,5): W=    -39.0000, sign=-1, chi=-1, match=    1, res=-
+    (3,6): W=     39.0000, sign=+1, chi=-1, match=    0, res=-
+    (4,5): W=    -39.0000, sign=-1, chi=-1, match=    1, res=-
+    (5,6): W=   6972.8750, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 7/12 nonzero (of 15 pairs)
+
+  D^10 degree-2 Walsh:
+    (1,2): W=    731.2500, sign=+1, chi=-1, match=    0, res=-
+    (1,3): W= 131306.0937, sign=+1, chi=+1, match=    1, res=3a=b
+    (1,4): W=-131306.0938, sign=-1, chi=+1, match=    0, res=a=-3b
+    (1,6): W=   -731.2500, sign=-1, chi=-1, match=    1, res=-
+    (2,4): W=    731.2500, sign=+1, chi=-1, match=    0, res=-
+    (2,5): W= 131306.0937, sign=+1, chi=+1, match=    1, res=a=3b
+    (2,6): W= 131306.0937, sign=+1, chi=+1, match=    1, res=3a=b
+    (3,4): W=-131306.0938, sign=-1, chi=+1, match=    0, res=3a=-b
+    (3,5): W=   -731.2500, sign=-1, chi=-1, match=    1, res=-
+    (3,6): W=    731.2500, sign=+1, chi=-1, match=    0, res=-
+    (4,5): W=   -731.2500, sign=-1, chi=-1, match=    1, res=-
+    (5,6): W= 131306.0937, sign=+1, chi=+1, match=    1, res=a=3b
+    SUMMARY: sign=chi in 7/12 nonzero (of 15 pairs)
+
+============================================================
+PART 2: VERIFY D^4 TRUE DEG-2 = -2*T_PURE
+============================================================
+
+  p=7:
+    (1,2): true_deg2=   -7.0000, -2*T_pure=   -7.0000, match=True
+    (1,3): true_deg2=    7.0000, -2*T_pure=    7.0000, match=True
+    (2,3): true_deg2=    7.0000, -2*T_pure=    7.0000, match=True
+
+  p=11:
+    (1,2): true_deg2=    0.0000, -2*T_pure=    0.0000, match=True
+    (1,3): true_deg2=   11.0000, -2*T_pure=   11.0000, match=True
+    (1,4): true_deg2=   11.0000, -2*T_pure=   11.0000, match=True
+    (1,5): true_deg2=    0.0000, -2*T_pure=   -0.0000, match=True
+    (2,3): true_deg2=  -11.0000, -2*T_pure=  -11.0000, match=True
+    (2,4): true_deg2=    0.0000, -2*T_pure=   -0.0000, match=True
+    (2,5): true_deg2=  -11.0000, -2*T_pure=  -11.0000, match=True
+    (3,4): true_deg2=    0.0000, -2*T_pure=   -0.0000, match=True
+    (3,5): true_deg2=   -0.0000, -2*T_pure=    0.0000, match=True
+    (4,5): true_deg2=   11.0000, -2*T_pure=   11.0000, match=True
+
+  p=13:
+    (1,3): true_deg2=   13.0000, -2*T_pure=   13.0000, match=True
+    (1,4): true_deg2=  -13.0000, -2*T_pure=  -13.0000, match=True
+    (2,5): true_deg2=   13.0000, -2*T_pure=   13.0000, match=True
+    (2,6): true_deg2=   13.0000, -2*T_pure=   13.0000, match=True
+    (3,4): true_deg2=  -13.0000, -2*T_pure=  -13.0000, match=True
+    (5,6): true_deg2=   13.0000, -2*T_pure=   13.0000, match=True
+
+============================================================
+PART 3: D^6 TRUE DEGREE-2 WALSH
+============================================================
+D^6 = (sum S_l sigma_l)^6. Degree-2 at {a,b}:
+Patterns with n_a odd, n_b odd, sum=6:
+  (5,1,0): 6*Sa^5*Sb
+  (1,5,0): 6*Sa*Sb^5
+  (3,3,0): 20*Sa^3*Sb^3
+  (3,1,2c): 60*Sa^3*Sb*Sc^2
+  (1,3,2c): 60*Sa*Sb^3*Sc^2
+  (1,1,4c): 30*Sa*Sb*Sc^4
+  (1,1,2c,2d): 180*Sa*Sb*Sc^2*Sd^2
+
+But (1,1,2c,2d) with c!=d is degree-4 Walsh! (4 distinct sigma vars)
+True degree-2 excludes (1,1,2c,2d) cross-terms.
+
+  p=7:
+    (1,2): true_deg2=    -47.2500, pure+single=    -47.2500, diff=   -0.0000, chi=+1
+    (1,3): true_deg2=     47.2500, pure+single=     47.2500, diff=   -0.0000, chi=-1
+    (2,3): true_deg2=     47.2500, pure+single=     47.2500, diff=    0.0000, chi=-1
+
+  p=11:
+    (1,2): true_deg2=    -33.0000, pure+single=     28.8750, diff=  -61.8750, chi=-1
+    (1,3): true_deg2=    206.2500, pure+single=     20.6250, diff=  185.6250, chi=+1
+    (1,4): true_deg2=    206.2500, pure+single=     20.6250, diff=  185.6250, chi=+1
+    (1,5): true_deg2=     33.0000, pure+single=    -28.8750, diff=   61.8750, chi=+1
+    (2,3): true_deg2=   -206.2500, pure+single=    -20.6250, diff= -185.6250, chi=-1
+    (2,4): true_deg2=    -33.0000, pure+single=     28.8750, diff=  -61.8750, chi=-1
+    (2,5): true_deg2=   -206.2500, pure+single=    -20.6250, diff= -185.6250, chi=-1
+    (3,4): true_deg2=     33.0000, pure+single=    -28.8750, diff=   61.8750, chi=+1
+    (3,5): true_deg2=     33.0000, pure+single=    -28.8750, diff=   61.8750, chi=+1
+    (4,5): true_deg2=    206.2500, pure+single=     20.6250, diff=  185.6250, chi=+1
+
+============================================================
+PART 4: GAUSS SUM FACTORIZATION (CORRECTED)
+============================================================
+g(a) = chi(a)*sqrt(p) at p=3 mod 4
+g(a)*g(b) = chi(ab)*p
+
+TRUE_deg2(D^{2n}) / (chi(ab)*p) should reveal the sign mechanism
+
+  p=7 (3 mod 4), chi(-1)=-1:
+
+    D^2 true degree-2 / (chi(ab)*p):
+      (1,2): W=   -0.0000 (~ 0), chi=+1
+      (1,3): W=    0.0000 (~ 0), chi=-1
+      (2,3): W=   -0.0000 (~ 0), chi=-1
+
+    D^4 true degree-2 / (chi(ab)*p):
+      (1,2): W=   -7.0000, chi=+1, ratio= -1.000000
+      (1,3): W=    7.0000, chi=-1, ratio= -1.000000
+      (2,3): W=    7.0000, chi=-1, ratio= -1.000000
+      Constant ratio? True (first=-1.000000)
+      All same sign? True
+
+    D^6 true degree-2 / (chi(ab)*p):
+      (1,2): W=  -47.2500, chi=+1, ratio= -6.750000
+      (1,3): W=   47.2500, chi=-1, ratio= -6.750000
+      (2,3): W=   47.2500, chi=-1, ratio= -6.750000
+      Constant ratio? True (first=-6.750000)
+      All same sign? True
+
+    D^8 true degree-2 / (chi(ab)*p):
+      (1,2): W= -251.1250, chi=+1, ratio=-35.875000
+      (1,3): W=  251.1250, chi=-1, ratio=-35.875000
+      (2,3): W=  251.1250, chi=-1, ratio=-35.875000
+      Constant ratio? True (first=-35.875000)
+      All same sign? True
+
+  p=11 (3 mod 4), chi(-1)=-1:
+
+    D^2 true degree-2 / (chi(ab)*p):
+      (1,2): W=    0.0000 (~ 0), chi=-1
+      (1,3): W=   -0.0000 (~ 0), chi=+1
+      (1,4): W=   -0.0000 (~ 0), chi=+1
+      (1,5): W=    0.0000 (~ 0), chi=+1
+      (2,3): W=    0.0000 (~ 0), chi=-1
+      (2,4): W=    0.0000 (~ 0), chi=-1
+      (2,5): W=    0.0000 (~ 0), chi=-1
+      (3,4): W=    0.0000 (~ 0), chi=+1
+      (3,5): W=   -0.0000 (~ 0), chi=+1
+      (4,5): W=    0.0000 (~ 0), chi=+1
+
+    D^4 true degree-2 / (chi(ab)*p):
+      (1,2): W=    0.0000 (~ 0), chi=-1
+      (1,3): W=   11.0000, chi=+1, ratio=  1.000000
+      (1,4): W=   11.0000, chi=+1, ratio=  1.000000
+      (1,5): W=    0.0000 (~ 0), chi=+1
+      (2,3): W=  -11.0000, chi=-1, ratio=  1.000000
+      (2,4): W=    0.0000 (~ 0), chi=-1
+      (2,5): W=  -11.0000, chi=-1, ratio=  1.000000
+      (3,4): W=    0.0000 (~ 0), chi=+1
+      (3,5): W=   -0.0000 (~ 0), chi=+1
+      (4,5): W=   11.0000, chi=+1, ratio=  1.000000
+      Constant ratio? True (first=1.000000)
+      All same sign? True
+
+    D^6 true degree-2 / (chi(ab)*p):
+      (1,2): W=  -33.0000, chi=-1, ratio=  3.000000
+      (1,3): W=  206.2500, chi=+1, ratio= 18.750000
+      (1,4): W=  206.2500, chi=+1, ratio= 18.750000
+      (1,5): W=   33.0000, chi=+1, ratio=  3.000000
+      (2,3): W= -206.2500, chi=-1, ratio= 18.750000
+      (2,4): W=  -33.0000, chi=-1, ratio=  3.000000
+      (2,5): W= -206.2500, chi=-1, ratio= 18.750000
+      (3,4): W=   33.0000, chi=+1, ratio=  3.000000
+      (3,5): W=   33.0000, chi=+1, ratio=  3.000000
+      (4,5): W=  206.2500, chi=+1, ratio= 18.750000
+      Constant ratio? False (first=3.000000)
+      All same sign? True
+
+    D^8 true degree-2 / (chi(ab)*p):
+      (1,2): W= -924.0000, chi=-1, ratio= 84.000000
+      (1,3): W= 2825.6250, chi=+1, ratio=256.875000
+      (1,4): W= 2825.6250, chi=+1, ratio=256.875000
+      (1,5): W=  924.0000, chi=+1, ratio= 84.000000
+      (2,3): W=-2825.6250, chi=-1, ratio=256.875000
+      (2,4): W= -924.0000, chi=-1, ratio= 84.000000
+      (2,5): W=-2825.6250, chi=-1, ratio=256.875000
+      (3,4): W=  924.0000, chi=+1, ratio= 84.000000
+      (3,5): W=  924.0000, chi=+1, ratio= 84.000000
+      (4,5): W= 2825.6250, chi=+1, ratio=256.875000
+      Constant ratio? False (first=84.000000)
+      All same sign? True
+
+    D^10 true degree-2 / (chi(ab)*p):
+      (1,2): W=-16781.8750, chi=-1, ratio=1525.625000
+      (1,3): W=35139.8437, chi=+1, ratio=3194.531250
+      (1,4): W=35139.8438, chi=+1, ratio=3194.531250
+      (1,5): W=16781.8750, chi=+1, ratio=1525.625000
+      (2,3): W=-35139.8437, chi=-1, ratio=3194.531250
+      (2,4): W=-16781.8750, chi=-1, ratio=1525.625000
+      (2,5): W=-35139.8437, chi=-1, ratio=3194.531250
+      (3,4): W=16781.8750, chi=+1, ratio=1525.625000
+      (3,5): W=16781.8750, chi=+1, ratio=1525.625000
+      (4,5): W=35139.8438, chi=+1, ratio=3194.531250
+      Constant ratio? False (first=1525.625000)
+      All same sign? True
+
+============================================================
+PART 5: FULL H_HAT DECOMPOSITION BY TRACE POWER
+============================================================
+h_hat[{a,b}] = sum_{k even} weight_k * (1/k) * deg2(tr(A^k))
+where deg2(tr(A^k)) = sum_n coeff_{k,n} * deg2(sum_freq D^{2n})
+
+For circulant tournament, this simplifies to understanding
+deg2(sum_freq D^{2n}) for each n.
+
+  p=7, m=3:
+    (1,2): h_hat=      3.50, sign=+1, chi=+1, match=True
+        D^4 true deg-2:      -7.0000
+        D^6 true deg-2:     -47.2500
+        D^8 true deg-2:    -251.1250
+    (1,3): h_hat=     -3.50, sign=-1, chi=-1, match=True
+        D^4 true deg-2:       7.0000
+        D^6 true deg-2:      47.2500
+        D^8 true deg-2:     251.1250
+    (2,3): h_hat=     -3.50, sign=-1, chi=-1, match=True
+        D^4 true deg-2:       7.0000
+        D^6 true deg-2:      47.2500
+        D^8 true deg-2:     251.1250
+
+  p=11, m=5:
+    (1,2): h_hat=     -8.25, sign=-1, chi=-1, match=True
+        D^6 true deg-2:     -33.0000
+        D^8 true deg-2:    -924.0000
+        D^10 true deg-2:  -16781.8750
+    (1,3): h_hat=    272.25, sign=+1, chi=+1, match=True
+        D^4 true deg-2:      11.0000
+        D^6 true deg-2:     206.2500
+        D^8 true deg-2:    2825.6250
+        D^10 true deg-2:   35139.8437
+    (1,4): h_hat=    272.25, sign=+1, chi=+1, match=True
+        D^4 true deg-2:      11.0000
+        D^6 true deg-2:     206.2500
+        D^8 true deg-2:    2825.6250
+        D^10 true deg-2:   35139.8438
+    (1,5): h_hat=      8.25, sign=+1, chi=+1, match=True
+        D^6 true deg-2:      33.0000
+        D^8 true deg-2:     924.0000
+        D^10 true deg-2:   16781.8750
+    (2,3): h_hat=   -272.25, sign=-1, chi=-1, match=True
+        D^4 true deg-2:     -11.0000
+        D^6 true deg-2:    -206.2500
+        D^8 true deg-2:   -2825.6250
+        D^10 true deg-2:  -35139.8437
+    (2,4): h_hat=     -8.25, sign=-1, chi=-1, match=True
+        D^6 true deg-2:     -33.0000
+        D^8 true deg-2:    -924.0000
+        D^10 true deg-2:  -16781.8750
+    (2,5): h_hat=   -272.25, sign=-1, chi=-1, match=True
+        D^4 true deg-2:     -11.0000
+        D^6 true deg-2:    -206.2500
+        D^8 true deg-2:   -2825.6250
+        D^10 true deg-2:  -35139.8437
+    (3,4): h_hat=      8.25, sign=+1, chi=+1, match=True
+        D^6 true deg-2:      33.0000
+        D^8 true deg-2:     924.0000
+        D^10 true deg-2:   16781.8750
+    (3,5): h_hat=      8.25, sign=+1, chi=+1, match=True
+        D^6 true deg-2:      33.0000
+        D^8 true deg-2:     924.0000
+        D^10 true deg-2:   16781.8750
+    (4,5): h_hat=    272.25, sign=+1, chi=+1, match=True
+        D^4 true deg-2:      11.0000
+        D^6 true deg-2:     206.2500
+        D^8 true deg-2:    2825.6250
+        D^10 true deg-2:   35139.8438
+
+============================================================
+PART 6: p=19 (m=9, 2^9=512 orientations)
+============================================================
+
+  D^{2n} true degree-2 at p=19:
+
+  D^2:
+    SUMMARY: sign=chi in 0/0 nonzero (36 pairs, 36 zero)
+
+  D^4:
+    (1,3): W=     19.0000, chi=-1, sign=+1, res=3a=b
+    (1,6): W=    -19.0000, chi=+1, sign=-1, res=a=-3b
+    (2,6): W=     19.0000, chi=-1, sign=+1, res=3a=b
+    (2,7): W=     19.0000, chi=-1, sign=+1, res=a=3b
+    (3,9): W=     19.0000, chi=-1, sign=+1, res=3a=b
+    (4,5): W=    -19.0000, chi=+1, sign=-1, res=a=-3b
+    (4,7): W=    -19.0000, chi=+1, sign=-1, res=3a=-b
+    (5,8): W=     19.0000, chi=-1, sign=+1, res=a=3b
+    (8,9): W=     19.0000, chi=-1, sign=+1, res=a=3b
+    SUMMARY: sign=chi in 0/9 nonzero (36 pairs, 27 zero)
+
+  D^6:
+    (1,3): W=    926.2500, chi=-1, sign=+1, res=3a=b
+    (1,4): W=     57.0000, chi=+1, sign=+1, res=-
+    (1,5): W=     57.0000, chi=+1, sign=+1, res=-
+    (1,6): W=   -926.2500, chi=+1, sign=-1, res=a=-3b
+    (2,6): W=    926.2500, chi=-1, sign=+1, res=3a=b
+    (2,7): W=    926.2500, chi=-1, sign=+1, res=a=3b
+    (2,8): W=     57.0000, chi=+1, sign=+1, res=-
+    (2,9): W=    -57.0000, chi=-1, sign=-1, res=-
+    (3,4): W=    -57.0000, chi=-1, sign=-1, res=-
+    (3,7): W=    -57.0000, chi=-1, sign=-1, res=-
+    (3,9): W=    926.2500, chi=-1, sign=+1, res=3a=b
+    (4,5): W=   -926.2500, chi=+1, sign=-1, res=a=-3b
+    (4,7): W=   -926.2500, chi=+1, sign=-1, res=3a=-b
+    (5,6): W=     57.0000, chi=+1, sign=+1, res=-
+    (5,8): W=    926.2500, chi=-1, sign=+1, res=a=3b
+    (6,8): W=    -57.0000, chi=-1, sign=-1, res=-
+    (7,9): W=     57.0000, chi=+1, sign=+1, res=-
+    (8,9): W=    926.2500, chi=-1, sign=+1, res=a=3b
+    SUMMARY: sign=chi in 9/18 nonzero (36 pairs, 18 zero)
+
+  D^8:
+    (1,3): W=  37123.6250, chi=-1, sign=+1, res=3a=b
+    (1,4): W=   4522.0000, chi=+1, sign=+1, res=-
+    (1,5): W=   4522.0000, chi=+1, sign=+1, res=-
+    (1,6): W= -37123.6250, chi=+1, sign=-1, res=a=-3b
+    (1,7): W=     57.0000, chi=+1, sign=+1, res=-
+    (1,8): W=    -57.0000, chi=-1, sign=-1, res=-
+    (2,3): W=     57.0000, chi=+1, sign=+1, res=-
+    (2,5): W=    -57.0000, chi=-1, sign=-1, res=-
+    (2,6): W=  37123.6250, chi=-1, sign=+1, res=3a=b
+    (2,7): W=  37123.6250, chi=-1, sign=+1, res=a=3b
+    (2,8): W=   4522.0000, chi=+1, sign=+1, res=-
+    (2,9): W=  -4522.0000, chi=-1, sign=-1, res=-
+    (3,4): W=  -4522.0000, chi=-1, sign=-1, res=-
+    (3,5): W=    -57.0000, chi=-1, sign=-1, res=-
+    (3,7): W=  -4522.0000, chi=-1, sign=-1, res=-
+    (3,9): W=  37123.6250, chi=-1, sign=+1, res=3a=b
+    (4,5): W= -37123.6250, chi=+1, sign=-1, res=a=-3b
+    (4,6): W=     57.0000, chi=+1, sign=+1, res=-
+    (4,7): W= -37123.6250, chi=+1, sign=-1, res=3a=-b
+    (4,9): W=     57.0000, chi=+1, sign=+1, res=-
+    (5,6): W=   4522.0000, chi=+1, sign=+1, res=-
+    (5,8): W=  37123.6250, chi=-1, sign=+1, res=a=3b
+    (6,8): W=  -4522.0000, chi=-1, sign=-1, res=-
+    (6,9): W=     57.0000, chi=+1, sign=+1, res=-
+    (7,8): W=    -57.0000, chi=-1, sign=-1, res=-
+    (7,9): W=   4522.0000, chi=+1, sign=+1, res=-
+    (8,9): W=  37123.6250, chi=-1, sign=+1, res=a=3b
+    SUMMARY: sign=chi in 18/27 nonzero (36 pairs, 9 zero)
