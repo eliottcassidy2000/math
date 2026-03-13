@@ -1,0 +1,294 @@
+======================================================================
+PART 1: I(Omega, x) derivative structure
+======================================================================
+
+I(Omega, x) = sum alpha_k * x^k
+
+At x=2: H = I(Omega, 2) = sum alpha_k * 2^k
+At x=3: I(Omega, 3) = sum alpha_k * 3^k
+
+Difference: I(3) - I(2) = sum alpha_k * (3^k - 2^k)
+  = alpha_1 * 1 + alpha_2 * 5 + alpha_3 * 19 + ...
+
+Derivative: I'(Omega, 2) = sum k * alpha_k * 2^{k-1}
+  = alpha_1 + 2*alpha_2*2 + 3*alpha_3*4 + ...
+  = alpha_1 + 4*alpha_2 + 12*alpha_3
+
+At x=2: dH/dx = I'(Omega, 2)
+This measures how sensitive H is to the evaluation point.
+
+Logarithmic derivative: I'(Omega,2)/I(Omega,2) = d/dx[log I(Omega,x)] at x=2
+This is the "average number of cycles" in a random independent set
+weighted by x^|S| / I(Omega, x).
+
+======================================================================
+PART 2: Worpitzky decomposition F(T,x) and the role of 2,3
+======================================================================
+
+--- n=4 ---
+F(T,x) = sum F_k x^k where F_k = #Ham paths with k ascents
+Worpitzky: F(T,x) = sum W_k * C(x-1,k)
+  W_0 = F(T,1) = H(T)
+  W_k = sum (-1)^{j} C(k,j) F(T, k-j+1) = Euler transform
+
+  Worpitzky coefficient W_k statistics:
+    W_0: min=1, max=5, mean=3.0, always_even=False, always_div3=False
+    W_1: min=0, max=19, mean=6.4, always_even=False, always_div3=False
+    W_2: min=0, max=20, mean=4.2, always_even=True, always_div3=False
+    W_3: min=0, max=6, mean=0.8, always_even=True, always_div3=True
+
+--- n=5 ---
+F(T,x) = sum F_k x^k where F_k = #Ham paths with k ascents
+Worpitzky: F(T,x) = sum W_k * C(x-1,k)
+  W_0 = F(T,1) = H(T)
+  W_k = sum (-1)^{j} C(k,j) F(T, k-j+1) = Euler transform
+
+  Worpitzky coefficient W_k statistics:
+    W_0: min=1, max=15, mean=6.4, always_even=False, always_div3=False
+    W_1: min=0, max=57, mean=14.3, always_even=False, always_div3=False
+    W_2: min=0, max=66, mean=9.5, always_even=True, always_div3=False
+    W_3: min=0, max=24, mean=1.4, always_even=True, always_div3=True
+    W_4: min=0, max=0, mean=0.0, always_even=True, always_div3=True
+
+--- n=6 ---
+F(T,x) = sum F_k x^k where F_k = #Ham paths with k ascents
+Worpitzky: F(T,x) = sum W_k * C(x-1,k)
+  W_0 = F(T,1) = H(T)
+  W_k = sum (-1)^{j} C(k,j) F(T, k-j+1) = Euler transform
+
+  Worpitzky coefficient W_k statistics:
+    W_0: min=1, max=37, mean=11.7, always_even=False, always_div3=False
+    W_1: min=0, max=75, mean=22.8, always_even=False, always_div3=False
+    W_2: min=0, max=44, mean=11.3, always_even=True, always_div3=False
+    W_3: min=0, max=0, mean=0.0, always_even=True, always_div3=True
+    W_4: min=0, max=0, mean=0.0, always_even=True, always_div3=True
+    W_5: min=0, max=0, mean=0.0, always_even=True, always_div3=True
+
+======================================================================
+PART 3: Why 48 = 2 * 4! in the tr(Sigma^3) gap?
+======================================================================
+
+At n=7, ambiguous simplex profiles (same (sigma,lambda,delta) spectrum
+but different c7) always differ by |delta(c7)| <= 3.
+
+The tr(Sigma^3) values differ by EXACTLY 48 = 2 * 24 = 2 * 4!
+between tournaments in the same ambiguous group.
+
+Why 48?
+  n=7, n-2=5
+  4! = 24 = (n-3)!
+  48 = 2 * (n-3)!
+
+The factor 2 is the "OCF weight" (2 orientations per cycle).
+The factor (n-3)! = 4! = 24 counts... what?
+
+At n=7, a Vitali atom reversal changes 4 arcs.
+The 4 arcs involve 4 vertices. 4! is the number of permutations
+of these 4 vertices. But the actual number of arc flips is 4.
+
+Alternative: 48 = 2 * C(5,2) * C(3,1) * ... hmm.
+Let me compute this more carefully.
+
+
+  Ambiguous simplex profiles: 38
+
+    Profile (first 5): (np.int64(0), np.int64(1), np.int64(1), np.int64(2), np.int64(2))...
+      c7 values: [128, 129], gap = 1
+      tr(S^2) = 316 (constant)
+      tr(S^3) values: [3132, 3372], gap = 240
+      tr(S^4) = 56040
+      tr3 gap = 240 = 2 * 120
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2))...
+      c7 values: [151, 152, 153], gap = 2
+      tr(S^2) = 280 (constant)
+      tr(S^3) values: [2676, 2748, 2820], gap = 144
+      tr(S^4) = 46176
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(2))...
+      c7 values: [63, 64], gap = 1
+      tr(S^2) = 340 (constant)
+      tr(S^3) values: [3828, 3900, 3996], gap = 168
+      tr(S^4) = 69896
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2))...
+      c7 values: [142, 146, 147], gap = 5
+      tr(S^2) = 264 (constant)
+      tr(S^3) values: [2724, 2784, 2844, 2904], gap = 180
+      tr(S^4) = 45280
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1))...
+      c7 values: [152, 154, 155], gap = 3
+      tr(S^2) = 280 (constant)
+      tr(S^3) values: [2688, 2748, 2808, 2928], gap = 240
+      tr(S^4) = 46176
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2))...
+      c7 values: [89, 90], gap = 1
+      tr(S^2) = 320 (constant)
+      tr(S^3) values: [3636, 3648, 3708], gap = 72
+      tr(S^4) = 64256
+
+    Profile (first 5): (np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1))...
+      c7 values: [182, 183], gap = 1
+      tr(S^2) = 328 (constant)
+      tr(S^3) values: [2952, 3132], gap = 180
+      tr(S^4) = 52896
+      tr3 gap = 180 = 2 * 90
+
+    Profile (first 5): (np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1))...
+      c7 values: [243, 245, 246], gap = 3
+      tr(S^2) = 256 (constant)
+      tr(S^3) values: [1980, 2040, 2160], gap = 180
+      tr(S^4) = 33216
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2))...
+      c7 values: [89, 90], gap = 1
+      tr(S^2) = 320 (constant)
+      tr(S^3) values: [3408, 3468, 3648], gap = 240
+      tr(S^4) = 60576
+
+    Profile (first 5): (np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2))...
+      c7 values: [118, 119], gap = 1
+      tr(S^2) = 300 (constant)
+      tr(S^3) values: [3156, 3228], gap = 72
+      tr(S^4) = 55496
+      tr3 gap = 72 = 2 * 36
+
+======================================================================
+PART 4: tr(Sigma^3) gap at different n
+======================================================================
+
+  n=5: 1 ambiguous profiles
+    tr3 gap values: Counter({36: 1})
+      gap=36: 36=2*18, (n-3)!=2, 2*(n-3)!=4, match=False
+
+  n=6: 0 ambiguous profiles
+
+  n=7: 38 ambiguous profiles
+    tr3 gap values: Counter({60: 5, 240: 4, 180: 3, 120: 2, 48: 2, 72: 1, 288: 1})
+      gap=48: 48=2*24, (n-3)!=24, 2*(n-3)!=48, match=True
+      gap=60: 60=2*30, (n-3)!=24, 2*(n-3)!=48, match=False
+      gap=72: 72=2*36, (n-3)!=24, 2*(n-3)!=48, match=False
+      gap=120: 120=2*60, (n-3)!=24, 2*(n-3)!=48, match=False
+      gap=180: 180=2*90, (n-3)!=24, 2*(n-3)!=48, match=False
+      gap=240: 240=2*120, (n-3)!=24, 2*(n-3)!=48, match=False
+      gap=288: 288=2*144, (n-3)!=24, 2*(n-3)!=48, match=False
+
+======================================================================
+PART 5: 2-adic tower I(Omega, 2^k)
+======================================================================
+
+I(Omega, 2) = H (the OCF — Hamiltonian path count)
+I(Omega, 4) = sum alpha_k * 4^k = sum alpha_k * (2^2)^k
+I(Omega, 8) = sum alpha_k * 8^k
+
+If x = 2^m:
+  I(Omega, 2^m) = sum alpha_k * 2^{mk}
+
+This is a "2-adic tower" where each level refines the previous.
+
+I(Omega, 2^m) mod 2^m gives information about alpha_0 = 1.
+I(Omega, 2^m) mod 2^{2m} gives information about alpha_0 + alpha_1*2^m.
+etc.
+
+The point x=2 is the "first level" of this tower.
+
+
+  n=5:
+   bits     H   I(O,4)   I(O,8)  I(O,2)/I(O,4)
+      0     1        1        1         1.0000
+     10     9       17       33         0.5294
+     40    15       29       57         0.5172
+    100     9       17       33         0.5294
+    200    11       21       41         0.5238
+    500     1        1        1         1.0000
+   1023     1        1        1         1.0000
+
+======================================================================
+PART 6: H mod 3 vs c3 mod 3 — is there a pattern?
+======================================================================
+
+  n=5: H mod 3 vs c3 mod 3 crosstab:
+               c3=0(3)  c3=1(3)  c3=2(3)
+    H=0(3):      240      160       24
+    H=1(3):      120      120        0
+    H=2(3):        0      120      240
+
+  n=6: H mod 3 vs c3 mod 3 crosstab:
+               c3=0(3)  c3=1(3)  c3=2(3)
+    H=0(3):      619      750      188
+    H=1(3):      662      619      378
+    H=2(3):      594      477      713
+
+  n=7: H mod 3 vs c3 mod 3 crosstab:
+               c3=0(3)  c3=1(3)  c3=2(3)
+    H=0(3):      592      472      549
+    H=1(3):      556      790      449
+    H=2(3):      609      500      483
+
+======================================================================
+PART 7: Coupling between 2 and 3 in H(T)
+======================================================================
+
+H = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
+
+KEY IDENTITY: H = 1 (mod 2) always (Redei)
+This follows from I(G, 2) = I(G, 0) = 1 (mod 2) for ANY graph G.
+
+DEEPER: H - 1 = 2*alpha_1 + 4*alpha_2 + ...
+So (H-1)/2 = alpha_1 + 2*alpha_2 + 4*alpha_3 + ...
+           = I(Omega, 2) evaluated at the "shifted" polynomial!
+
+Wait: (H-1)/2 = (I(Omega,2) - 1)/2 = sum_{k>=1} alpha_k * 2^{k-1}
+
+This is the number of "odd cycle choices with halved weight."
+
+And (H-1)/2 mod 2:
+  = alpha_1 mod 2  (since higher terms are divisible by 2)
+  = (# directed odd cycles in T) mod 2
+
+So the second bit of H is determined by the PARITY of the number
+of directed odd cycles!
+
+At n=5: odd cycles = 3-cycles + 5-cycles
+  alpha_1 = c3 + c5
+  (H-1)/2 = alpha_1 (since alpha_2 = 0 at n=5)
+
+
+  Verifying (H-1)/2 mod 2 = alpha_1 mod 2 at n=5:
+    Matches: 1024/1024
+
+  Verifying (H-1)/2 mod 2 = alpha_1 mod 2 at n=7:
+    Matches: 535/1000
+
+======================================================================
+PART 8: H mod 3 = I(Omega, 2) mod 3
+======================================================================
+
+H mod 3 = I(Omega, 2) mod 3
+  = (1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...) mod 3
+  = (1 + 2*alpha_1 + alpha_2 + 2*alpha_3 + alpha_4 + ...) mod 3
+  = (1 + 2*(alpha_1 + alpha_3 + ...) + (alpha_2 + alpha_4 + ...)) mod 3
+
+Since 2 = -1 mod 3 and 4 = 1 mod 3:
+  H mod 3 = 1 - alpha_1 + alpha_2 - alpha_3 + alpha_4 - ... mod 3
+          = I(Omega, -1) mod 3 !!
+
+REMARKABLE: H mod 3 = I(Omega, -1) mod 3.
+
+I(Omega, -1) is the evaluation at x=-1, which counts independent sets
+with alternating signs: sum (-1)^k * alpha_k.
+
+For bipartite graphs, I(G, -1) = 0 always. For triangle-free graphs,
+I(G, -1) = 1 - alpha_1 + alpha_2.
+
+
+  Verifying H mod 3 = I(Omega, -1) mod 3 at n=5:
+    Matches: 1024/1024
+
+  Verifying H mod 3 = I(Omega, -1) mod 3 at n=6 (sampled):
+    Matches: 200/200
+
+
+Done.
