@@ -1,0 +1,46 @@
+
+======================================================================
+MOMENT DEGREE ANALYSIS at p=7, m=3, N=8
+======================================================================
+
+  Active disjoint pair types: [(3, 3)]
+
+  Testing moment sufficiency:
+  disj(3,3) = f(S2,S4): 0.44228665*S2 + 0.50000000*S4 + 0.08  err=0.000000 EXACT
+
+  MOMENT DEGREE SUMMARY:
+        type  max(k)   k1+k2   min moments needed
+  (3,3)            3       6               S4..S4
+
+  CHARACTER DECOMPOSITION of disj(3,3):
+  bits= 0: D=70, P=28, Q=14, (D-P+Q)/4=14, actual=14, c3=14, total_prod=7
+  bits= 1: D=70, P=-28, Q=14, (D-P+Q)/4=28, actual=14, c3=21, total_prod=-7
+  bits= 2: D=70, P=-140, Q=70, (D-P+Q)/4=70, actual=14, c3=35, total_prod=-35
+  bits= 3: D=70, P=28, Q=14, (D-P+Q)/4=14, actual=7, c3=14, total_prod=7
+
+======================================================================
+MOMENT DEGREE ANALYSIS at p=11, m=5, N=32
+======================================================================
+
+  Active disjoint pair types: [(3, 3), (3, 5), (3, 7), (5, 5)]
+
+  Testing moment sufficiency:
+  disj(3,3) = f(S2,S4): 34.44282308*S2 + 0.50000000*S4 + 2.50  err=0.000000 EXACT
+  disj(3,5) = f(S2,S4,S6,S8): 287.35946850*S2 + -16.74493715*S4 + 3.29469274*S6 + -0.18016760*S8 + 20.90  err=0.000000 EXACT
+  disj(3,7) = f(S2,S4,S6,S8): 333.51701846*S2 + 11.44134078*S4 + -2.37988827*S6 + 0.15642458*S8 + 24.26  err=0.000000 EXACT
+  disj(5,5) = f(S2,S4,S6,S8): 198.03477753*S2 + -37.95993366*S4 + 6.86662011*S6 + -0.35684358*S8 + 14.40  err=0.000000 EXACT
+
+  MOMENT DEGREE SUMMARY:
+        type  max(k)   k1+k2   min moments needed
+  (3,3)            3       6               S4..S4
+  (3,5)            5       8               S4..S8
+  (3,7)            7      10               S4..S8
+  (5,5)            5      10               S4..S8
+
+  CHARACTER DECOMPOSITION of disj(3,3):
+  bits= 0: D=4620, P=3080, Q=660, (D-P+Q)/4=550, actual=550, c3=55, total_prod=55
+  bits= 1: D=4620, P=-3080, Q=660, (D-P+Q)/4=2090, actual=506, c3=110, total_prod=-55
+  bits= 2: D=4620, P=-616, Q=220, (D-P+Q)/4=1364, actual=495, c3=88, total_prod=-11
+  bits= 3: D=4620, P=-1848, Q=308, (D-P+Q)/4=1694, actual=550, c3=99, total_prod=-33
+
+DONE.

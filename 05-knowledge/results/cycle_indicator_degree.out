@@ -1,0 +1,84 @@
+======================================================================
+CYCLE INDICATOR POLYNOMIAL DEGREE ANALYSIS
+======================================================================
+
+============================================================
+  k = 3 (directed 3-cycle indicator)
+============================================================
+  3 pairwise sigma variables
+  2 factorial = 1
+  2 directed Hamiltonian cycles
+
+  Effective polynomial degree: 2
+  Degree distribution (sum of |coeff| at each degree):
+    degree 0: 1 nonzero terms, total |coeff| = 2
+    degree 1: 0 nonzero terms, total |coeff| = 0
+    degree 2: 3 nonzero terms, total |coeff| = 6
+    degree 3: 0 nonzero terms, total |coeff| = 0
+
+  Full polynomial (numerator, divide by 2^3=8):
+      +2 * 1
+      -2 * σ_01
+      +2 * σ_02
+      -2 * σ_01*σ_02
+
+============================================================
+  k = 5 (directed 5-cycle indicator)
+============================================================
+  10 pairwise sigma variables
+  4 factorial = 1
+  24 directed Hamiltonian cycles
+
+  Effective polynomial degree: 4
+  Degree distribution (sum of |coeff| at each degree):
+    degree 0: 1 nonzero terms, total |coeff| = 24
+    degree 1: 0 nonzero terms, total |coeff| = 0
+    degree 2: 30 nonzero terms, total |coeff| = 120
+    degree 3: 0 nonzero terms, total |coeff| = 0
+    degree 4: 60 nonzero terms, total |coeff| = 120
+    degree 5: 0 nonzero terms, total |coeff| = 0
+
+  Constant term: 24
+    deg 0: coeff=24, vars=[]
+
+============================================================
+  k = 7 (directed 7-cycle indicator)
+============================================================
+  21 pairwise sigma variables
+  6 factorial = 1
+  720 directed Hamiltonian cycles
+
+  Effective polynomial degree: 6
+  Degree distribution (sum of |coeff| at each degree):
+    degree 0: 1 nonzero terms, total |coeff| = 720
+    degree 1: 0 nonzero terms, total |coeff| = 0
+    degree 2: 105 nonzero terms, total |coeff| = 5040
+    degree 3: 0 nonzero terms, total |coeff| = 0
+    degree 4: 1890 nonzero terms, total |coeff| = 10080
+    degree 5: 0 nonzero terms, total |coeff| = 0
+    degree 6: 2520 nonzero terms, total |coeff| = 5040
+    degree 7: 0 nonzero terms, total |coeff| = 0
+
+  Constant term: 720
+    deg 0: coeff=720, vars=[]
+
+============================================================
+  VERIFICATION for k=3
+============================================================
+  Polynomial / 8:
+    2/8 * 1 = 0.2500 * 1
+    -2/8 * σ01*σ02 = -0.2500 * σ01*σ02
+    2/8 * σ01*σ12 = 0.2500 * σ01*σ12
+    -2/8 * σ02*σ12 = -0.2500 * σ02*σ12
+
+  Expected: (1/4)(1 + σ01*σ12 - σ01*σ02 - σ12*σ02)
+  = 2/8 + 2/8*σ01*σ12 - 2/8*σ01*σ02 - 2/8*σ12*σ02
+
+============================================================
+  MOMENT DEPENDENCE THEORY
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\cycle_indicator_degree.py", line 246, in <module>
+    c_k needs moments up to S_{2*d(k)}
+                                 ^
+NameError: name 'd' is not defined. Did you mean: 'id'?
