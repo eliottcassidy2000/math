@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-12-S60 — 2026-03-12: THM-155 PROVED — Disjoint 3-Cycle Identity for ALL Regular Tournaments
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S58/S59 (overlap weight analysis, context overflow x5)
+**Summary of work:**
+Deep exploration of overlap weight structure in tournament 3-cycles. Discovered and PROVED the Disjoint 3-Cycle Identity: for any regular tournament on n=2m+1 vertices, K(T) = c5 - 2*ov1 - 2*ov2 = -3n(n^2-1)(n^2-9)/320. Originally discovered for circulant tournaments on Z_p, then found to hold for ALL regular tournaments via eigenvalue proof.
+
+**Key discoveries:**
+1. **THM-155 (Disjoint 3-Cycle Identity)**: PROVED. K = -3n(n^2-1)(n^2-9)/320 for all regular tournaments. disj3 + c5/2 = const(n).
+2. **Trace identity**: 2*tr(A^5) + 5*tr(A^4) = 2m^5 + 5m^4 - m(5m+2). Proof via Re(z^4(2z+5)) = 1/4 - 5y^2 and sum y_k^2 = mn/2.
+3. **Lambda-mu identity**: For edge i->j in regular tournament, lambda_{ij} = mu_{ij} + 1 (from A^2 - A^{T2} = A^T - A).
+4. **c3(v) constant**: Every vertex in a regular tournament is in (n^2-1)/8 three-cycles.
+5. **Three rigid classes at n=7**: (c5,ov1,ov2,disj) = (42,63,21,7), (36,57,24,10), (28,49,28,14) — all K=-126.
+6. **Closed forms**: c5+2*ov2 = n(n^2-1)(n^2-9)/160; c5+sum_mu^2 = n(n-1)(n-3)(n^2+4n-17)/160.
+7. **Works for ALL odd n** (not just prime): verified n=5,7,9,11,13,15,17,19,21.
+8. **K(p) formula**: K = -9*c3*(p^2-9)/40 = -18p*C(m+2,4)/5 (alternative forms).
+
+**New contributions:** THM-155, scripts overlap_gauss_bridge.py, disj3_c5_theorem.py, local_5vertex_identity.py, K_closed_form.py, disj3_general_test.py, K_regularity_proof.py, K_trace_formula.py, K_algebraic_proof.py, K_full_proof.py, K_cancellation_mechanism.py
+**Unresolved threads:**
+- Algebraic proof of tr(A^4) = 2*sum_mu2 + 2*sum_mu (verified but not formally proved)
+- Connection to Savchenko's cycle count formulas
+- Can the identity be extended to non-regular tournaments with a correction term?
+- 4-fold Gauss sum factorization: h4[c5]/G4 = -12 universal at p=11
+
 ## opus-2026-03-13-S71 — 2026-03-13: MAJOR — Per-Eigenspace Betti Structure, chi(P_p)=p, QR Scaling Symmetry
 
 **Account:** opus
