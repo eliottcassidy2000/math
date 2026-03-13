@@ -1,0 +1,72 @@
+======================================================================
+TWO PHASES AT n=7?
+======================================================================
+
+Paley P_7 adjacency:
+   [0, 1, 1, 0, 1, 0, 0]
+   [0, 0, 1, 1, 0, 1, 0]
+   [0, 0, 0, 1, 1, 0, 1]
+   [1, 0, 0, 0, 1, 1, 0]
+   [0, 1, 0, 0, 0, 1, 1]
+   [1, 0, 1, 0, 0, 0, 1]
+   [1, 1, 0, 1, 0, 0, 0]
+
+H(Paley P_7) = 189
+
+Searching for all 3 regular tournament classes at n=7...
+  Found Paley class (H=189)
+  Found new class! H=175 (total classes: 2)
+  Found new class! H=171 (total classes: 3)
+
+Found 3 regular tournament classes at n=7
+
+======================================================================
+ANALYSIS OF REGULAR n=7 TOURNAMENTS
+======================================================================
+
+  H = 171
+  Total directed cycles: 65
+  By length: {3: 14, 5: 36, 7: 15}
+  α₀=1, α₁=65, α₂=10, α₃=0
+  H check: 1 + 2*65 + 4*10 + 8*0 = 171
+  Match: True
+  2α₁/H = 0.760, 4α₂/H = 0.234, 8α₃/H = 0.000
+  Spectral uniformity: 0.4536
+  Nontrivial |λ|: ['0.5176', '0.5176', '1.4142', '1.4142', '1.9319', '1.9319']
+
+  H = 175
+  Total directed cycles: 59
+  By length: {3: 14, 5: 28, 7: 17}
+  α₀=1, α₁=59, α₂=14, α₃=0
+  H check: 1 + 2*59 + 4*14 + 8*0 = 175
+  Match: True
+  2α₁/H = 0.674, 4α₂/H = 0.320, 8α₃/H = 0.000
+  Spectral uniformity: 0.6212
+  Nontrivial |λ|: ['0.5550', '0.5550', '0.8019', '0.8019', '2.2470', '2.2470']
+
+  H = 189
+  Total directed cycles: 80
+  By length: {3: 14, 5: 42, 7: 24}
+  α₀=1, α₁=80, α₂=7, α₃=0
+  H check: 1 + 2*80 + 4*7 + 8*0 = 189
+  Match: True
+  2α₁/H = 0.847, 4α₂/H = 0.148, 8α₃/H = 0.000
+  Spectral uniformity: 0.0000
+  Nontrivial |λ|: ['1.4142', '1.4142', '1.4142', '1.4142', '1.4142', '1.4142']
+
+======================================================================
+TWO-PHASE ANALYSIS
+======================================================================
+
+If the two-phase phenomenon persists at n=7:
+- The Paley class (H=189) should have the most uniform eigenvalues
+  but possibly NOT the highest α₂.
+- Another class might achieve high H through different channel balance.
+
+At n=7, the possible disjoint pairs are (3,3)-pairs using 6 of 7 vertices.
+For each of the C(7,6)=7 choices of 6 vertices, we can have at most
+C(6,3)/2 = 10 ways to partition into two 3-sets.
+But only some of these will both form directed 3-cycles.
+
+The α₂ maximum at n=7 tells us how many such disjoint 3-cycle pairs exist.
+
