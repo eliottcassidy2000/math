@@ -1,0 +1,320 @@
+======================================================================
+WALSH-OVERLAP BRIDGE ANALYSIS
+======================================================================
+
+======================================================================
+p=7, m=3, p mod 4 = 3
+======================================================================
+
+  Walsh energy by degree:
+    deg 0:       31862.25 (99.8848%)
+    deg 1:           0.00 (0.0000%)
+    deg 2:          36.75 (0.1152%)
+    deg 3:           0.00 (0.0000%)
+
+  Degree-2 Walsh interaction matrix h_hat[{i,j}]:
+         +0.00      +3.50      -3.50
+         +3.50      +0.00      -3.50
+         -3.50      -3.50      +0.00
+
+  Gap product -> Walsh coefficient sign (degree 2):
+    {i=0,j=1}: gaps=(1,2), prod=2, QR, h=+3.50 [+] MATCH
+    {i=0,j=2}: gaps=(1,3), prod=3, NQR, h=-3.50 [-] MATCH
+    {i=1,j=2}: gaps=(2,3), prod=6, NQR, h=-3.50 [-] MATCH
+
+  --- Co-occurrence vs Walsh for each tournament ---
+
+    Interval (S=[1, 2, 3]):
+      c3 sets = 14
+      Co-occ variance = 0.6667
+      Fourier L4/L2^2 = 0.301587
+      Walsh deg-2 energy = 36.7500
+      |S_hat|^2 variance = 4.666667
+      |S_hat|^2 mean = 2.000000
+
+    Paley (S=[1, 2, 4]):
+      c3 sets = 14
+      Co-occ variance = 0.0000
+      Fourier L4/L2^2 = 0.238095
+      Walsh deg-2 energy = 36.7500
+      |S_hat|^2 variance = 0.000000
+      |S_hat|^2 mean = 2.000000
+
+  --- Chord interaction decomposition ---
+    {i=0,j=1}: h_hat =      +3.50, spectral_int =    -0.0000
+    {i=0,j=2}: h_hat =      -3.50, spectral_int =    -0.0000
+    {i=1,j=2}: h_hat =      -3.50, spectral_int =    -0.0000
+
+  --- Additive energy and Walsh ---
+
+  --- |S_hat|^2 spectrum vs H correlation ---
+    H determined by sorted |S_hat|^2 spectrum? 2/2 spectra have unique H
+
+  --- Degree-4 Walsh coefficients ---
+    No degree-4 coefficients (m=3 < 4)
+
+  --- Walsh as partial derivatives of H ---
+    chords (0,1): avg H(++)=182.0, H(+-)=175.0, H(-+)=175.0, H(--)=182.0, interaction=3.50 [Walsh=3.50]
+    chords (0,2): avg H(++)=175.0, H(+-)=182.0, H(-+)=182.0, H(--)=175.0, interaction=-3.50 [Walsh=-3.50]
+    chords (1,2): avg H(++)=175.0, H(+-)=182.0, H(-+)=182.0, H(--)=175.0, interaction=-3.50 [Walsh=-3.50]
+
+  --- Overlap weight structure ---
+    Cycles using each gap (Interval):
+      gap 1: 52 cycles
+      gap 2: 52 cycles
+      gap 3: 59 cycles
+
+    Cycle co-usage of gap pairs (Interval):
+           gap  1 gap  2 gap  3
+    gap 1    52    45    52
+    gap 2    45    52    52
+    gap 3    52    52    59
+
+    Gap co-usage vs Walsh h_hat[{i,j}]:
+      gaps (1,2): 45 co-uses, h_hat = +3.50
+      gaps (1,3): 52 co-uses, h_hat = -3.50
+      gaps (2,3): 52 co-uses, h_hat = -3.50
+
+======================================================================
+p=11, m=5, p mod 4 = 3
+======================================================================
+
+  Walsh energy by degree:
+    deg 0:  8667842751.56 (99.9949%)
+    deg 1:           0.00 (0.0000%)
+    deg 2:      370940.62 (0.0043%)
+    deg 3:           0.00 (0.0000%)
+    deg 4:       69915.31 (0.0008%)
+    deg 5:           0.00 (0.0000%)
+
+  Degree-2 Walsh interaction matrix h_hat[{i,j}]:
+         +0.00      -8.25    +272.25    +272.25      +8.25
+         -8.25      +0.00    -272.25      -8.25    -272.25
+       +272.25    -272.25      +0.00      +8.25      +8.25
+       +272.25      -8.25      +8.25      +0.00    +272.25
+         +8.25    -272.25      +8.25    +272.25      +0.00
+
+  Gap product -> Walsh coefficient sign (degree 2):
+    {i=0,j=1}: gaps=(1,2), prod=2, NQR, h=-8.25 [-] MATCH
+    {i=0,j=2}: gaps=(1,3), prod=3, QR, h=+272.25 [+] MATCH
+    {i=0,j=3}: gaps=(1,4), prod=4, QR, h=+272.25 [+] MATCH
+    {i=0,j=4}: gaps=(1,5), prod=5, QR, h=+8.25 [+] MATCH
+    {i=1,j=2}: gaps=(2,3), prod=6, NQR, h=-272.25 [-] MATCH
+    {i=1,j=3}: gaps=(2,4), prod=8, NQR, h=-8.25 [-] MATCH
+    {i=1,j=4}: gaps=(2,5), prod=10, NQR, h=-272.25 [-] MATCH
+    {i=2,j=3}: gaps=(3,4), prod=1, QR, h=+8.25 [+] MATCH
+    {i=2,j=4}: gaps=(3,5), prod=4, QR, h=+8.25 [+] MATCH
+    {i=3,j=4}: gaps=(4,5), prod=9, QR, h=+272.25 [+] MATCH
+
+  --- Co-occurrence vs Walsh for each tournament ---
+
+    Interval (S=[1, 2, 3, 4, 5]):
+      c3 sets = 55
+      Co-occ variance = 2.0000
+      Fourier L4/L2^2 = 0.309091
+      Walsh deg-2 energy = 370940.6250
+      |S_hat|^2 variance = 22.000000
+      |S_hat|^2 mean = 3.000000
+
+    Paley (S=[1, 3, 4, 5, 9]):
+      c3 sets = 55
+      Co-occ variance = 0.0000
+      Fourier L4/L2^2 = 0.236364
+      Walsh deg-2 energy = 370940.6250
+      |S_hat|^2 variance = 0.000000
+      |S_hat|^2 mean = 3.000000
+
+  --- Chord interaction decomposition ---
+    {i=0,j=1}: h_hat =      -8.25, spectral_int =    -0.0000
+    {i=0,j=2}: h_hat =    +272.25, spectral_int =    -0.0000
+    {i=0,j=3}: h_hat =    +272.25, spectral_int =    -0.0000
+    {i=0,j=4}: h_hat =      +8.25, spectral_int =    -0.0000
+    {i=1,j=2}: h_hat =    -272.25, spectral_int =    +0.0000
+    {i=1,j=3}: h_hat =      -8.25, spectral_int =    -0.0000
+    {i=1,j=4}: h_hat =    -272.25, spectral_int =    -0.0000
+    {i=2,j=3}: h_hat =      +8.25, spectral_int =    -0.0000
+    {i=2,j=4}: h_hat =      +8.25, spectral_int =    -0.0000
+    {i=3,j=4}: h_hat =    +272.25, spectral_int =    -0.0000
+
+  --- Additive energy and Walsh ---
+
+  --- |S_hat|^2 spectrum vs H correlation ---
+    H determined by sorted |S_hat|^2 spectrum? 4/4 spectra have unique H
+
+  --- Degree-4 Walsh coefficients ---
+    |h| = 118.25: 5 coeffs (1+, 4-)
+      S={0, 1, 2, 3}, prod gaps = 2, NQR, h=-118.25
+      S={0, 1, 2, 4}, prod gaps = 8, NQR, h=-118.25
+      S={0, 1, 3, 4}, prod gaps = 7, NQR, h=-118.25
+
+  --- Walsh as partial derivatives of H ---
+    chords (0,1): avg H(++)=93093.0, H(+-)=93109.5, H(-+)=93109.5, H(--)=93093.0, interaction=-8.25 [Walsh=-8.25]
+    chords (0,2): avg H(++)=93373.5, H(+-)=92829.0, H(-+)=92829.0, H(--)=93373.5, interaction=272.25 [Walsh=272.25]
+    chords (0,3): avg H(++)=93373.5, H(+-)=92829.0, H(-+)=92829.0, H(--)=93373.5, interaction=272.25 [Walsh=272.25]
+    chords (0,4): avg H(++)=93109.5, H(+-)=93093.0, H(-+)=93093.0, H(--)=93109.5, interaction=8.25 [Walsh=8.25]
+    chords (1,2): avg H(++)=92829.0, H(+-)=93373.5, H(-+)=93373.5, H(--)=92829.0, interaction=-272.25 [Walsh=-272.25]
+    chords (1,3): avg H(++)=93093.0, H(+-)=93109.5, H(-+)=93109.5, H(--)=93093.0, interaction=-8.25 [Walsh=-8.25]
+    chords (1,4): avg H(++)=92829.0, H(+-)=93373.5, H(-+)=93373.5, H(--)=92829.0, interaction=-272.25 [Walsh=-272.25]
+    chords (2,3): avg H(++)=93109.5, H(+-)=93093.0, H(-+)=93093.0, H(--)=93109.5, interaction=8.25 [Walsh=8.25]
+    chords (2,4): avg H(++)=93109.5, H(+-)=93093.0, H(-+)=93093.0, H(--)=93109.5, interaction=8.25 [Walsh=8.25]
+    chords (3,4): avg H(++)=93373.5, H(+-)=92829.0, H(-+)=92829.0, H(--)=93373.5, interaction=272.25 [Walsh=272.25]
+
+  --- Overlap weight structure ---
+    Cycles using each gap (Interval):
+      gap 1: 18331 cycles
+      gap 2: 18353 cycles
+      gap 3: 18342 cycles
+      gap 4: 18364 cycles
+      gap 5: 18386 cycles
+
+    Cycle co-usage of gap pairs (Interval):
+           gap  1 gap  2 gap  3 gap  4 gap  5
+    gap 1 18331 18309 18298 18309 18331
+    gap 2 18309 18353 18309 18342 18353
+    gap 3 18298 18309 18342 18320 18331
+    gap 4 18309 18342 18320 18364 18353
+    gap 5 18331 18353 18331 18353 18386
+
+    Gap co-usage vs Walsh h_hat[{i,j}]:
+      gaps (1,2): 18309 co-uses, h_hat = -8.25
+      gaps (1,3): 18298 co-uses, h_hat = +272.25
+      gaps (1,4): 18309 co-uses, h_hat = +272.25
+      gaps (1,5): 18331 co-uses, h_hat = +8.25
+      gaps (2,3): 18309 co-uses, h_hat = -272.25
+      gaps (2,4): 18342 co-uses, h_hat = -8.25
+      gaps (2,5): 18353 co-uses, h_hat = -272.25
+      gaps (3,4): 18320 co-uses, h_hat = +8.25
+      gaps (3,5): 18331 co-uses, h_hat = +8.25
+      gaps (4,5): 18353 co-uses, h_hat = +272.25
+
+======================================================================
+p=13, m=6, p mod 4 = 1
+======================================================================
+
+  Walsh energy by degree:
+    deg 0: 13659232381640.02 (99.9982%)
+    deg 1:           0.00 (0.0000%)
+    deg 2:    45215543.34 (0.0003%)
+    deg 3:           0.00 (0.0000%)
+    deg 4:   200063808.14 (0.0015%)
+    deg 5:           0.00 (0.0000%)
+    deg 6:           0.00 (0.0000%)
+
+  Degree-2 Walsh interaction matrix h_hat[{i,j}]:
+         +0.00   +2632.50    -778.38    +778.38      +0.00   -2632.50
+      +2632.50      +0.00      +0.00   +2632.50    -778.38    -778.38
+       -778.38      +0.00      +0.00    +778.38   -2632.50   +2632.50
+       +778.38   +2632.50    +778.38      +0.00   -2632.50      +0.00
+         +0.00    -778.38   -2632.50   -2632.50      +0.00    -778.38
+      -2632.50    -778.38   +2632.50      +0.00    -778.38      +0.00
+
+  Gap product -> Walsh coefficient sign (degree 2):
+    {i=0,j=1}: gaps=(1,2), prod=2, NQR, h=+2632.50 [+] MISMATCH
+    {i=0,j=2}: gaps=(1,3), prod=3, QR, h=-778.38 [-] MISMATCH
+    {i=0,j=3}: gaps=(1,4), prod=4, QR, h=+778.38 [+] MATCH
+    {i=0,j=5}: gaps=(1,6), prod=6, NQR, h=-2632.50 [-] MATCH
+    {i=1,j=3}: gaps=(2,4), prod=8, NQR, h=+2632.50 [+] MISMATCH
+    {i=1,j=4}: gaps=(2,5), prod=10, QR, h=-778.38 [-] MISMATCH
+    {i=1,j=5}: gaps=(2,6), prod=12, QR, h=-778.38 [-] MISMATCH
+    {i=2,j=3}: gaps=(3,4), prod=12, QR, h=+778.38 [+] MATCH
+    {i=2,j=4}: gaps=(3,5), prod=2, NQR, h=-2632.50 [-] MATCH
+    {i=2,j=5}: gaps=(3,6), prod=5, NQR, h=+2632.50 [+] MISMATCH
+    {i=3,j=4}: gaps=(4,5), prod=7, NQR, h=-2632.50 [-] MATCH
+    {i=4,j=5}: gaps=(5,6), prod=4, QR, h=-778.38 [-] MISMATCH
+
+  --- Co-occurrence vs Walsh for each tournament ---
+
+    Interval (S=[1, 2, 3, 4, 5, 6]):
+      c3 sets = 91
+      Co-occ variance = 2.9167
+      Fourier L4/L2^2 = 0.311966
+      Walsh deg-2 energy = 45215543.3438
+      |S_hat|^2 variance = 37.916667
+      |S_hat|^2 mean = 3.500000
+
+    Paley (S=[1, 3, 4, 9, 10, 12]):
+      c3 sets = 26
+      Co-occ variance = 1.0000
+      Fourier L4/L2^2 = 0.243590
+      Walsh deg-2 energy = 45215543.3438
+      |S_hat|^2 variance = 3.250000
+      |S_hat|^2 mean = 3.500000
+
+  --- Chord interaction decomposition ---
+    {i=0,j=1}: h_hat =   +2632.50, spectral_int =    +0.0000
+    {i=0,j=2}: h_hat =    -778.38, spectral_int =    -0.0000
+    {i=0,j=3}: h_hat =    +778.38, spectral_int =    -0.0000
+    {i=0,j=5}: h_hat =   -2632.50, spectral_int =    -0.0000
+    {i=1,j=3}: h_hat =   +2632.50, spectral_int =    -0.0000
+    {i=1,j=4}: h_hat =    -778.38, spectral_int =    -0.0000
+    {i=1,j=5}: h_hat =    -778.38, spectral_int =    -0.0000
+    {i=2,j=3}: h_hat =    +778.38, spectral_int =    -0.0000
+    {i=2,j=4}: h_hat =   -2632.50, spectral_int =    -0.0000
+    {i=2,j=5}: h_hat =   +2632.50, spectral_int =    -0.0000
+    {i=3,j=4}: h_hat =   -2632.50, spectral_int =    -0.0000
+    {i=4,j=5}: h_hat =    -778.38, spectral_int =    -0.0000
+
+  --- Additive energy and Walsh ---
+
+  --- |S_hat|^2 spectrum vs H correlation ---
+    H determined by sorted |S_hat|^2 spectrum? 6/6 spectra have unique H
+
+  --- Degree-4 Walsh coefficients ---
+    |h| = 5209.75: 6 coeffs (5+, 1-)
+      S={0, 1, 2, 3}, prod gaps = 11, NQR, h=+5209.75
+      S={0, 2, 3, 4}, prod gaps = 8, NQR, h=+5209.75
+      S={0, 2, 3, 5}, prod gaps = 7, NQR, h=+5209.75
+    |h| = 3508.38: 3 coeffs (1+, 2-)
+      S={0, 1, 2, 4}, prod gaps = 4, QR, h=+3508.38
+      S={1, 2, 3, 5}, prod gaps = 1, QR, h=-3508.38
+      S={0, 3, 4, 5}, prod gaps = 3, QR, h=-3508.38
+    |h| = 219.38: 6 coeffs (2+, 4-)
+      S={0, 1, 3, 4}, prod gaps = 1, QR, h=-219.38
+      S={1, 2, 3, 4}, prod gaps = 3, QR, h=-219.38
+      S={0, 1, 2, 5}, prod gaps = 10, QR, h=+219.38
+
+  --- Walsh as partial derivatives of H ---
+    chords (0,1): avg H(++)=3698472.4, H(+-)=3693207.4, H(-+)=3693207.4, H(--)=3698472.4, interaction=2632.50 [Walsh=2632.50]
+    chords (0,2): avg H(++)=3695061.5, H(+-)=3696618.2, H(-+)=3696618.2, H(--)=3695061.5, interaction=-778.38 [Walsh=-778.38]
+    chords (0,3): avg H(++)=3696618.2, H(+-)=3695061.5, H(-+)=3695061.5, H(--)=3696618.2, interaction=778.38 [Walsh=778.38]
+    chords (0,5): avg H(++)=3693207.4, H(+-)=3698472.4, H(-+)=3698472.4, H(--)=3693207.4, interaction=-2632.50 [Walsh=-2632.50]
+    chords (1,3): avg H(++)=3698472.4, H(+-)=3693207.4, H(-+)=3693207.4, H(--)=3698472.4, interaction=2632.50 [Walsh=2632.50]
+    chords (1,4): avg H(++)=3695061.5, H(+-)=3696618.2, H(-+)=3696618.2, H(--)=3695061.5, interaction=-778.38 [Walsh=-778.38]
+    chords (1,5): avg H(++)=3695061.5, H(+-)=3696618.2, H(-+)=3696618.2, H(--)=3695061.5, interaction=-778.38 [Walsh=-778.38]
+    chords (2,3): avg H(++)=3696618.2, H(+-)=3695061.5, H(-+)=3695061.5, H(--)=3696618.2, interaction=778.38 [Walsh=778.38]
+    chords (2,4): avg H(++)=3693207.4, H(+-)=3698472.4, H(-+)=3698472.4, H(--)=3693207.4, interaction=-2632.50 [Walsh=-2632.50]
+    chords (2,5): avg H(++)=3698472.4, H(+-)=3693207.4, H(-+)=3693207.4, H(--)=3698472.4, interaction=2632.50 [Walsh=2632.50]
+    chords (3,4): avg H(++)=3693207.4, H(+-)=3698472.4, H(-+)=3698472.4, H(--)=3693207.4, interaction=-2632.50 [Walsh=-2632.50]
+    chords (4,5): avg H(++)=3695061.5, H(+-)=3696618.2, H(-+)=3696618.2, H(--)=3695061.5, interaction=-778.38 [Walsh=-778.38]
+
+  --- Overlap weight structure ---
+    Cycles using each gap (Interval):
+      gap 1: 16991 cycles
+      gap 2: 17030 cycles
+      gap 3: 17043 cycles
+      gap 4: 17043 cycles
+      gap 5: 17095 cycles
+      gap 6: 17160 cycles
+
+    Cycle co-usage of gap pairs (Interval):
+           gap  1 gap  2 gap  3 gap  4 gap  5 gap  6
+    gap 1 16991 16861 16874 16887 16900 16965
+    gap 2 16861 17030 16887 16887 16978 17017
+    gap 3 16874 16887 17043 16939 16939 17004
+    gap 4 16887 16887 16939 17043 16939 17004
+    gap 5 16900 16978 16939 16939 17095 17043
+    gap 6 16965 17017 17004 17004 17043 17160
+
+    Gap co-usage vs Walsh h_hat[{i,j}]:
+      gaps (1,2): 16861 co-uses, h_hat = +2632.50
+      gaps (1,3): 16874 co-uses, h_hat = -778.38
+      gaps (1,4): 16887 co-uses, h_hat = +778.38
+      gaps (1,6): 16965 co-uses, h_hat = -2632.50
+      gaps (2,4): 16887 co-uses, h_hat = +2632.50
+      gaps (2,5): 16978 co-uses, h_hat = -778.38
+      gaps (2,6): 17017 co-uses, h_hat = -778.38
+      gaps (3,4): 16939 co-uses, h_hat = +778.38
+      gaps (3,5): 16939 co-uses, h_hat = -2632.50
+      gaps (3,6): 17004 co-uses, h_hat = +2632.50
+      gaps (4,5): 16939 co-uses, h_hat = -2632.50
+      gaps (5,6): 17043 co-uses, h_hat = -778.38

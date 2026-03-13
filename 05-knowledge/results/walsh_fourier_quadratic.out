@@ -1,0 +1,297 @@
+======================================================================
+WALSH-FOURIER QUADRATIC FORM ANALYSIS
+======================================================================
+
+======================================================================
+p=7, m=3, p mod 4 = 3
+======================================================================
+
+  1. FOURIER DECOMPOSITION STRUCTURE
+     S_hat(k) = C(k) + i*D(k;sigma), C sigma-indep, D linear in sigma
+
+    C(k) values:
+      C(1) = -0.500000
+      C(2) = -0.500000
+      C(3) = -0.500000
+
+    Sine coefficient matrix sin(2*pi*k*g_i/p):
+      k\i     i=0    i=1    i=2
+        k=1  +0.7818 +0.9749 +0.4339
+        k=2  +0.9749 -0.4339 -0.7818
+        k=3  +0.4339 -0.7818 +0.9749
+
+  2. VERIFY |S_hat(k)|^2 = C(k)^2 + D(k;sigma)^2
+    sigma=(-1, -1, -1): max error = 2.7e-15
+    sigma=(1, -1, -1): max error = 2.7e-15
+    sigma=(-1, 1, -1): max error = 1.3e-15
+    sigma=(1, 1, -1): max error = 3.6e-15
+    Max error over all sigma: 7.11e-15
+
+  3. QUADRATIC FORM COEFFICIENTS
+     Q_k(sigma) = C(k)^2 + (sum_i s_ki * sigma_i)^2
+     = C(k)^2 + sum_i s_ki^2 + sum_{i<j} 2*s_ki*s_kj * sigma_i*sigma_j
+     (constant + pure quadratic: NO linear terms)
+
+    Quadratic form constants (sigma-independent part):
+      Q_1 constant = 2.000000
+      Q_2 constant = 2.000000
+      Q_3 constant = 2.000000
+
+    Total quadratic form (sum of all Q_k):
+      Constant = 6.000000
+      ALL cross terms = 0 (orthogonal decomposition!)
+
+  4. IS H A LINEAR FUNCTION OF {Q_k}?
+     Testing H(sigma) = a_0 + sum_k a_k * Q_k(sigma)
+    Max residual = 10.500000
+    RMS residual = 6.062178
+    Is H linear in Q_k? NO
+    Non-linear dependence detected!
+    Top 5 residuals:
+      sigma=(1, 1, -1): H=189, H_pred=178.5, residual=+10.50
+      sigma=(-1, -1, 1): H=189, H_pred=178.5, residual=+10.50
+      sigma=(-1, 1, -1): H=175, H_pred=178.5, residual=-3.50
+      sigma=(1, -1, 1): H=175, H_pred=178.5, residual=-3.50
+      sigma=(1, -1, -1): H=175, H_pred=178.5, residual=-3.50
+
+  5. IS H A QUADRATIC FUNCTION OF {Q_k}?
+     Testing H = a_0 + sum a_k Q_k + sum a_kl Q_k Q_l
+    Number of parameters: 10
+    Underdetermined (10 params > 8 equations)
+
+  6. WALSH DECOMPOSITION FROM QUADRATIC FORMS
+     Each Q_k contributes degree-2 Walsh coefficients via s_ki*s_kj terms
+
+    Walsh degree-2 vs quadratic form prediction:
+      h_hat[{0,1}] = +3.5000 (linear model fails)
+      h_hat[{0,2}] = -3.5000 (linear model fails)
+      h_hat[{1,2}] = -3.5000 (linear model fails)
+
+  7. ORTHOGONALITY OF QUADRATIC FORMS
+
+    Q_k means: ['2.0000', '2.0000', '2.0000']
+
+    Gram matrix (centered):
+              3.50        -1.75        -1.75
+             -1.75         3.50        -1.75
+             -1.75        -1.75         3.50
+
+    Q_k pairing structure (k and p-k):
+      Q_1 == Q_1 (paired)
+      Q_2 == Q_2 (paired)
+      Q_3 == Q_3 (paired)
+
+  8. CHIRALITY: DOES H DEPEND ON PHASE OF S_hat(k)?
+    Total chiral Q-multisets: 0 / 2
+    => H is determined by {Q_k} multiset (no chirality)
+
+======================================================================
+p=11, m=5, p mod 4 = 3
+======================================================================
+
+  1. FOURIER DECOMPOSITION STRUCTURE
+     S_hat(k) = C(k) + i*D(k;sigma), C sigma-indep, D linear in sigma
+
+    C(k) values:
+      C(1) = -0.500000
+      C(2) = -0.500000
+      C(3) = -0.500000
+      C(4) = -0.500000
+      C(5) = -0.500000
+
+    Sine coefficient matrix sin(2*pi*k*g_i/p):
+      k\i     i=0    i=1    i=2    i=3    i=4
+        k=1  +0.5406 +0.9096 +0.9898 +0.7557 +0.2817
+        k=2  +0.9096 +0.7557 -0.2817 -0.9898 -0.5406
+        k=3  +0.9898 -0.2817 -0.9096 +0.5406 +0.7557
+        k=4  +0.7557 -0.9898 +0.5406 +0.2817 -0.9096
+        k=5  +0.2817 -0.5406 +0.7557 -0.9096 +0.9898
+
+  2. VERIFY |S_hat(k)|^2 = C(k)^2 + D(k;sigma)^2
+    sigma=(-1, -1, -1, -1, -1): max error = 1.8e-15
+    sigma=(1, -1, -1, -1, -1): max error = 4.4e-15
+    sigma=(-1, 1, -1, -1, -1): max error = 4.0e-15
+    sigma=(1, 1, -1, -1, -1): max error = 1.1e-14
+    Max error over all sigma: 1.24e-14
+
+  3. QUADRATIC FORM COEFFICIENTS
+     Q_k(sigma) = C(k)^2 + (sum_i s_ki * sigma_i)^2
+     = C(k)^2 + sum_i s_ki^2 + sum_{i<j} 2*s_ki*s_kj * sigma_i*sigma_j
+     (constant + pure quadratic: NO linear terms)
+
+    Quadratic form constants (sigma-independent part):
+      Q_1 constant = 3.000000
+      Q_2 constant = 3.000000
+      Q_3 constant = 3.000000
+      Q_4 constant = 3.000000
+      Q_5 constant = 3.000000
+
+    Total quadratic form (sum of all Q_k):
+      Constant = 15.000000
+      ALL cross terms = 0 (orthogonal decomposition!)
+
+  4. IS H A LINEAR FUNCTION OF {Q_k}?
+     Testing H(sigma) = a_0 + sum_k a_k * Q_k(sigma)
+    Max residual = 1993.750000
+    RMS residual = 663.969832
+    Is H linear in Q_k? NO
+    Non-linear dependence detected!
+    Top 5 residuals:
+      sigma=(-1, 1, -1, -1, -1): H=95095, H_pred=93101.2, residual=+1993.75
+      sigma=(1, -1, 1, 1, 1): H=95095, H_pred=93101.2, residual=+1993.75
+      sigma=(-1, 1, 1, 1, -1): H=92411, H_pred=93101.3, residual=-690.25
+      sigma=(1, -1, -1, -1, 1): H=92411, H_pred=93101.3, residual=-690.25
+      sigma=(1, -1, -1, 1, -1): H=92411, H_pred=93101.3, residual=-690.25
+
+  5. IS H A QUADRATIC FUNCTION OF {Q_k}?
+     Testing H = a_0 + sum a_k Q_k + sum a_kl Q_k Q_l
+    Number of parameters: 21
+    Max residual = 2539.549250
+    RMS residual = 1153.389178
+    Is H quadratic in Q_k? NO
+
+  6. WALSH DECOMPOSITION FROM QUADRATIC FORMS
+     Each Q_k contributes degree-2 Walsh coefficients via s_ki*s_kj terms
+
+    Walsh degree-2 vs quadratic form prediction:
+      h_hat[{0,1}] = -8.2500 (linear model fails)
+      h_hat[{0,2}] = +272.2500 (linear model fails)
+      h_hat[{0,3}] = +272.2500 (linear model fails)
+      h_hat[{0,4}] = +8.2500 (linear model fails)
+      h_hat[{1,2}] = -272.2500 (linear model fails)
+      h_hat[{1,3}] = -8.2500 (linear model fails)
+      h_hat[{1,4}] = -272.2500 (linear model fails)
+      h_hat[{2,3}] = +8.2500 (linear model fails)
+      h_hat[{2,4}] = +8.2500 (linear model fails)
+      h_hat[{3,4}] = +272.2500 (linear model fails)
+
+  7. ORTHOGONALITY OF QUADRATIC FORMS
+
+    Q_k means: ['3.0000', '3.0000', '3.0000', '3.0000', '3.0000']
+
+    Gram matrix (centered):
+             11.00        -2.75        -2.75        -2.75        -2.75
+             -2.75        11.00        -2.75        -2.75        -2.75
+             -2.75        -2.75        11.00        -2.75        -2.75
+             -2.75        -2.75        -2.75        11.00        -2.75
+             -2.75        -2.75        -2.75        -2.75        11.00
+
+    Q_k pairing structure (k and p-k):
+      Q_1 == Q_1 (paired)
+      Q_2 == Q_2 (paired)
+      Q_3 == Q_3 (paired)
+      Q_4 == Q_4 (paired)
+      Q_5 == Q_5 (paired)
+
+  8. CHIRALITY: DOES H DEPEND ON PHASE OF S_hat(k)?
+    Total chiral Q-multisets: 0 / 4
+    => H is determined by {Q_k} multiset (no chirality)
+
+======================================================================
+p=13, m=6, p mod 4 = 1
+======================================================================
+
+  1. FOURIER DECOMPOSITION STRUCTURE
+     S_hat(k) = C(k) + i*D(k;sigma), C sigma-indep, D linear in sigma
+
+    C(k) values:
+      C(1) = -0.500000
+      C(2) = -0.500000
+      C(3) = -0.500000
+      C(4) = -0.500000
+      C(5) = -0.500000
+      C(6) = -0.500000
+
+    Sine coefficient matrix sin(2*pi*k*g_i/p):
+      k\i     i=0    i=1    i=2    i=3    i=4    i=5
+        k=1  +0.4647 +0.8230 +0.9927 +0.9350 +0.6631 +0.2393
+        k=2  +0.8230 +0.9350 +0.2393 -0.6631 -0.9927 -0.4647
+        k=3  +0.9927 +0.2393 -0.9350 -0.4647 +0.8230 +0.6631
+        k=4  +0.9350 -0.6631 -0.4647 +0.9927 -0.2393 -0.8230
+        k=5  +0.6631 -0.9927 +0.8230 -0.2393 -0.4647 +0.9350
+        k=6  +0.2393 -0.4647 +0.6631 -0.8230 +0.9350 -0.9927
+
+  2. VERIFY |S_hat(k)|^2 = C(k)^2 + D(k;sigma)^2
+    sigma=(-1, -1, -1, -1, -1, -1): max error = 1.1e-14
+    sigma=(1, -1, -1, -1, -1, -1): max error = 6.7e-15
+    sigma=(-1, 1, -1, -1, -1, -1): max error = 7.1e-15
+    sigma=(1, 1, -1, -1, -1, -1): max error = 1.4e-14
+    Max error over all sigma: 2.49e-14
+
+  3. QUADRATIC FORM COEFFICIENTS
+     Q_k(sigma) = C(k)^2 + (sum_i s_ki * sigma_i)^2
+     = C(k)^2 + sum_i s_ki^2 + sum_{i<j} 2*s_ki*s_kj * sigma_i*sigma_j
+     (constant + pure quadratic: NO linear terms)
+
+    Quadratic form constants (sigma-independent part):
+      Q_1 constant = 3.500000
+      Q_2 constant = 3.500000
+      Q_3 constant = 3.500000
+      Q_4 constant = 3.500000
+      Q_5 constant = 3.500000
+      Q_6 constant = 3.500000
+
+    Total quadratic form (sum of all Q_k):
+      Constant = 21.000000
+      ALL cross terms = 0 (orthogonal decomposition!)
+
+  4. IS H A LINEAR FUNCTION OF {Q_k}?
+     Testing H(sigma) = a_0 + sum_k a_k * Q_k(sigma)
+    Max residual = 26342.875000
+    RMS residual = 15661.396856
+    Is H linear in Q_k? NO
+    Non-linear dependence detected!
+    Top 5 residuals:
+      sigma=(1, -1, -1, -1, -1, -1): H=3669497, H_pred=3695839.9, residual=-26342.88
+      sigma=(-1, 1, 1, 1, 1, 1): H=3669497, H_pred=3695839.9, residual=-26342.88
+      sigma=(1, -1, 1, 1, -1, -1): H=3669497, H_pred=3695839.9, residual=-26342.88
+      sigma=(-1, 1, -1, -1, 1, 1): H=3669497, H_pred=3695839.9, residual=-26342.88
+      sigma=(-1, -1, -1, 1, 1, -1): H=3669497, H_pred=3695839.9, residual=-26342.88
+
+  5. IS H A QUADRATIC FUNCTION OF {Q_k}?
+     Testing H = a_0 + sum a_k Q_k + sum a_kl Q_k Q_l
+    Number of parameters: 28
+    Max residual = 1823656.514643
+    RMS residual = 799960.757263
+    Is H quadratic in Q_k? NO
+
+  6. WALSH DECOMPOSITION FROM QUADRATIC FORMS
+     Each Q_k contributes degree-2 Walsh coefficients via s_ki*s_kj terms
+
+    Walsh degree-2 vs quadratic form prediction:
+      h_hat[{0,1}] = +2632.5000 (linear model fails)
+      h_hat[{0,2}] = -778.3750 (linear model fails)
+      h_hat[{0,3}] = +778.3750 (linear model fails)
+      h_hat[{0,5}] = -2632.5000 (linear model fails)
+      h_hat[{1,3}] = +2632.5000 (linear model fails)
+      h_hat[{1,4}] = -778.3750 (linear model fails)
+      h_hat[{1,5}] = -778.3750 (linear model fails)
+      h_hat[{2,3}] = +778.3750 (linear model fails)
+      h_hat[{2,4}] = -2632.5000 (linear model fails)
+      h_hat[{2,5}] = +2632.5000 (linear model fails)
+      h_hat[{3,4}] = -2632.5000 (linear model fails)
+      h_hat[{4,5}] = -778.3750 (linear model fails)
+
+  7. ORTHOGONALITY OF QUADRATIC FORMS
+
+    Q_k means: ['3.5000', '3.5000', '3.5000', '3.5000', '3.5000', '3.5000']
+
+    Gram matrix (centered):
+             16.25        -3.25        -3.25        -3.25        -3.25        -3.25
+             -3.25        16.25        -3.25        -3.25        -3.25        -3.25
+             -3.25        -3.25        16.25        -3.25        -3.25        -3.25
+             -3.25        -3.25        -3.25        16.25        -3.25        -3.25
+             -3.25        -3.25        -3.25        -3.25        16.25        -3.25
+             -3.25        -3.25        -3.25        -3.25        -3.25        16.25
+
+    Q_k pairing structure (k and p-k):
+      Q_1 == Q_1 (paired)
+      Q_2 == Q_2 (paired)
+      Q_3 == Q_3 (paired)
+      Q_4 == Q_4 (paired)
+      Q_5 == Q_5 (paired)
+      Q_6 == Q_6 (paired)
+
+  8. CHIRALITY: DOES H DEPEND ON PHASE OF S_hat(k)?
+    Total chiral Q-multisets: 0 / 6
+    => H is determined by {Q_k} multiset (no chirality)
