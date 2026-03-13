@@ -1,0 +1,20 @@
+======================================================================
+MIXED DISJOINT TRIPLES AT n=10
+Possible triple types:
+  (3,3,3): needs 9 vertices <= 10
+======================================================================
+  ... 500/2000, found 3, elapsed 22s
+  ... 1000/2000, found 5, elapsed 44s
+  ... 1500/2000, found 9, elapsed 71s
+
+Total: 12 H-changing examples in 117s
+
+Formula delta_H = 2*(dc7+dc9) + 4*di2 + 8*di3:
+  Match rate: 12/12
+Without di3 term: 12/12
+
+  di3 total distribution: {0: 12}
+  di3 type (3, 3, 3): nonzero 0/12, dist={0: 12}
+  i3_A type (3, 3, 3): min=16, max=108, mean=46.8
+
+Done.
