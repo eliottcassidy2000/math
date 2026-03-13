@@ -1,0 +1,246 @@
+======================================================================
+PALEY AS ENERGY MINIMIZER: E(QR) <= E(S) for all orientations
+======================================================================
+
+======================================================================
+H vs ENERGY ANALYSIS at p=7, m=3
+======================================================================
+
+  Unique (E, disj3, H) triples (sorted by E):
+       E  disj3        H  count
+      15      7      189      2
+      19     14      175      6
+
+  Corr(E, H) = -1.000000
+
+  PALEY: bits=011, S=[1, 2, 4], E=15, disj3=7, H=189
+  INTERVAL: bits=111, S=[1, 2, 3], E=19, disj3=14, H=175
+
+  E -> H mapping:
+    E=15: H in [189]
+    E=19: H in [175]
+
+  E determines H: True
+  H determines E: True
+
+======================================================================
+H vs ENERGY ANALYSIS at p=11, m=5
+======================================================================
+
+  Unique (E, disj3, H) triples (sorted by E):
+       E  disj3        H  count
+      65    495    95095      2
+      69    506    92411     10
+      73    517    93467     10
+      85    550    93027     10
+
+  Corr(E, H) = -0.087860
+
+  PALEY: bits=11101, S=[1, 9, 3, 4, 5], E=65, disj3=495, H=95095
+  INTERVAL: bits=11111, S=[1, 2, 3, 4, 5], E=85, disj3=550, H=93027
+
+  E -> H mapping:
+    E=65: H in [95095]
+    E=69: H in [92411]
+    E=73: H in [93467]
+    E=85: H in [93027]
+
+  E determines H: True
+  H determines E: True
+
+======================================================================
+FOURIER UNIFORMITY ANALYSIS at p=7
+======================================================================
+
+  Paley: S = [1, 2, 4]
+    |S_hat(0)|^2 = 9.0000 (= m^2 = 9)
+    |S_hat(t)|^2 for t!=0:
+      min = 2.0000
+      max = 2.0000
+      mean = 2.0000 (expected (p-1)/4 = 1.5000)
+      variance = 0.0000
+      std = 0.0000
+    Uniform spectrum (Gauss sum): True
+    This is WHY Paley minimizes E: by C-S, sum x^2 >= (sum x)^2/n
+    with equality iff all x equal.
+    E(S) = 15
+    sum |S_hat|^4 = 105.0000 (= p*E = 105)
+
+  Interval: S = [1, 2, 3]
+    |S_hat(0)|^2 = 9.0000 (= m^2 = 9)
+    |S_hat(t)|^2 for t!=0:
+      min = 0.3080
+      max = 5.0489
+      mean = 2.0000 (expected (p-1)/4 = 1.5000)
+      variance = 4.6667
+      std = 2.1602
+    E(S) = 19
+    sum |S_hat|^4 = 133.0000 (= p*E = 133)
+
+======================================================================
+FOURIER UNIFORMITY ANALYSIS at p=11
+======================================================================
+
+  Paley: S = [1, 3, 4, 5, 9]
+    |S_hat(0)|^2 = 25.0000 (= m^2 = 25)
+    |S_hat(t)|^2 for t!=0:
+      min = 3.0000
+      max = 3.0000
+      mean = 3.0000 (expected (p-1)/4 = 2.5000)
+      variance = 0.0000
+      std = 0.0000
+    Uniform spectrum (Gauss sum): True
+    This is WHY Paley minimizes E: by C-S, sum x^2 >= (sum x)^2/n
+    with equality iff all x equal.
+    E(S) = 65
+    sum |S_hat|^4 = 715.0000 (= p*E = 715)
+
+  Interval: S = [1, 2, 3, 4, 5]
+    |S_hat(0)|^2 = 25.0000 (= m^2 = 25)
+    |S_hat(t)|^2 for t!=0:
+      min = 0.2716
+      max = 12.3435
+      mean = 3.0000 (expected (p-1)/4 = 2.5000)
+      variance = 22.0000
+      std = 4.6904
+    E(S) = 85
+    sum |S_hat|^4 = 935.0000 (= p*E = 935)
+
+======================================================================
+FOURIER UNIFORMITY ANALYSIS at p=13
+======================================================================
+
+  Paley: S = [1, 3, 4, 9, 10, 12]
+    |S_hat(0)|^2 = 36.0000 (= m^2 = 36)
+    |S_hat(t)|^2 for t!=0:
+      min = 1.6972
+      max = 5.3028
+      mean = 3.5000 (expected (p-1)/4 = 3.0000)
+      variance = 3.2500
+      std = 1.8028
+    Uniform spectrum (Gauss sum): False
+    E(S) = 114
+    sum |S_hat|^4 = 1482.0000 (= p*E = 1482)
+
+  Interval: S = [1, 2, 3, 4, 5, 6]
+    |S_hat(0)|^2 = 36.0000 (= m^2 = 36)
+    |S_hat(t)|^2 for t!=0:
+      min = 0.2652
+      max = 17.2069
+      mean = 3.5000 (expected (p-1)/4 = 3.0000)
+      variance = 37.9167
+      std = 6.1577
+    E(S) = 146
+    sum |S_hat|^4 = 1898.0000 (= p*E = 1898)
+
+======================================================================
+WEIL BOUND CONNECTION at p=7
+======================================================================
+  E(QR) formula: (m^4 + (p-1)*p^2/16) / p
+    = (81 + 18) / 7
+    = 14.1964
+  E(QR) computed: 15
+  Match: False
+
+  Simplified: E(QR) = m^4/p + (p-1)p/16
+    = 14.1964
+    = 81/p + 2
+
+  E(Interval) = 19
+  E(Interval) - E(QR) = 4
+  Ratio E(Int)/E(QR) = 1.266667
+
+  Interval spectrum variance = 4.6667
+  Excess energy from variance = 4.0000
+  Actual excess = 4
+  Match: True
+
+======================================================================
+WEIL BOUND CONNECTION at p=11
+======================================================================
+  E(QR) formula: (m^4 + (p-1)*p^2/16) / p
+    = (625 + 75) / 11
+    = 63.6932
+  E(QR) computed: 65
+  Match: False
+
+  Simplified: E(QR) = m^4/p + (p-1)p/16
+    = 63.6932
+    = 625/p + 6
+
+  E(Interval) = 85
+  E(Interval) - E(QR) = 20
+  Ratio E(Int)/E(QR) = 1.307692
+
+  Interval spectrum variance = 22.0000
+  Excess energy from variance = 20.0000
+  Actual excess = 20
+  Match: True
+
+======================================================================
+WEIL BOUND CONNECTION at p=13
+======================================================================
+  E(QR) formula: (m^4 + (p-1)*p^2/16) / p
+    = (1296 + 126) / 13
+    = 109.4423
+  E(QR) computed: 114
+  Match: False
+
+  Simplified: E(QR) = m^4/p + (p-1)p/16
+    = 109.4423
+    = 1296/p + 9
+
+  E(Interval) = 146
+  E(Interval) - E(QR) = 32
+  Ratio E(Int)/E(QR) = 1.280702
+
+  Interval spectrum variance = 37.9167
+  Excess energy from variance = 35.0000
+  Actual excess = 32
+  Match: False
+
+======================================================================
+WEIL BOUND CONNECTION at p=19
+======================================================================
+  E(QR) formula: (m^4 + (p-1)*p^2/16) / p
+    = (6561 + 406) / 19
+    = 366.6908
+  E(QR) computed: 369
+  Match: False
+
+  Simplified: E(QR) = m^4/p + (p-1)p/16
+    = 366.6908
+    = 6561/p + 21
+
+  E(Interval) = 489
+  E(Interval) - E(QR) = 120
+  Ratio E(Int)/E(QR) = 1.325203
+
+  Interval spectrum variance = 126.6667
+  Excess energy from variance = 120.0000
+  Actual excess = 120
+  Match: True
+
+======================================================================
+H-ENERGY MONOTONICITY at p=7
+======================================================================
+  E=  15: H in [189, 189] (constant), n=2
+  E=  19: H in [175, 175] (constant), n=6
+
+  Monotone decreasing: True
+  Corr(E, H) = -1.000000
+  Linear: H = -4.0000*E + 250.50, max_resid = 1.5000
+
+======================================================================
+H-ENERGY MONOTONICITY at p=11
+======================================================================
+  E=  65: H in [95095, 95095] (constant), n=2
+  E=  69: H in [92411, 92411] (constant), n=10
+  E=  73: H in [93467, 93467] (constant), n=10
+  E=  85: H in [93027, 93027] (constant), n=10
+
+  Monotone decreasing: False
+  Corr(E, H) = -0.087860
+  Linear: H = -8.5161*E + 93739.96, max_resid = 1908.5887
+
+DONE.
