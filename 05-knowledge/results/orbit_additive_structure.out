@@ -1,0 +1,108 @@
+======================================================================
+p=7, m=3, QR=[1, 2, 4]
+======================================================================
+  2 extended orbits
+
+  Orbit 0 (6 members):
+    Rep S = [4, 5, 6]
+    sum_in=2, schur=2, diff_in=3
+    ap3=2, energy=19, prod_size=5
+    (all 6 members have identical invariants)
+
+  Orbit 1 (2 members) [PALEY]:
+    Rep S = [1, 2, 4]
+    sum_in=3, schur=3, diff_in=3
+    ap3=0, energy=15, prod_size=3
+    (all 2 members have identical invariants)
+
+  Distinguishing power:
+    sum_in: values=[2, 3], DISTINGUISHES
+    schur: values=[2, 3], DISTINGUISHES
+    diff_in: values=[3, 3], only 1/2
+    ap3: values=[2, 0], DISTINGUISHES
+    energy: values=[19, 15], DISTINGUISHES
+    prod_size: values=[5, 3], DISTINGUISHES
+======================================================================
+p=11, m=5, QR=[1, 3, 4, 5, 9]
+======================================================================
+  4 extended orbits
+
+  Orbit 0 (10 members):
+    Rep S = [6, 7, 8, 9, 10]
+    sum_in=6, schur=6, diff_in=10
+    ap3=8, energy=85, prod_size=9
+    (all 10 members have identical invariants)
+
+  Orbit 1 (10 members):
+    Rep S = [1, 6, 7, 8, 9]
+    sum_in=6, schur=6, diff_in=10
+    ap3=8, energy=69, prod_size=9
+    (all 10 members have identical invariants)
+
+  Orbit 2 (2 members) [PALEY]:
+    Rep S = [2, 6, 7, 8, 10]
+    sum_in=5, schur=5, diff_in=10
+    ap3=10, energy=65, prod_size=5
+    (all 2 members have identical invariants)
+
+  Orbit 3 (10 members):
+    Rep S = [3, 6, 7, 9, 10]
+    sum_in=7, schur=7, diff_in=10
+    ap3=6, energy=73, prod_size=9
+    (all 10 members have identical invariants)
+
+  Distinguishing power:
+    sum_in: values=[6, 6, 5, 7], only 3/4
+    schur: values=[6, 6, 5, 7], only 3/4
+    diff_in: values=[10, 10, 10, 10], only 1/4
+    ap3: values=[8, 8, 10, 6], only 3/4
+    energy: values=[85, 69, 65, 73], DISTINGUISHES
+    prod_size: values=[9, 9, 5, 9], only 2/4
+======================================================================
+p=13, m=6, QR=[1, 3, 4, 9, 10, 12]
+======================================================================
+  6 extended orbits
+
+  Orbit 0 (12 members):
+    Rep S = [7, 8, 9, 10, 11, 12]
+    sum_in=9, schur=9, diff_in=15
+    ap3=12, energy=146, prod_size=12
+    (all 12 members have identical invariants)
+
+  Orbit 1 (12 members):
+    Rep S = [1, 7, 8, 9, 10, 11]
+    sum_in=9, schur=9, diff_in=15
+    ap3=12, energy=122, prod_size=12
+    (all 12 members have identical invariants)
+
+  Orbit 2 (12 members):
+    Rep S = [2, 7, 8, 9, 10, 12]
+    sum_in=8, schur=8, diff_in=15
+    ap3=14, energy=118, prod_size=11
+    (all 12 members have identical invariants)
+
+  Orbit 3 (12 members):
+    Rep S = [1, 2, 7, 8, 9, 10]
+    sum_in=9, schur=9, diff_in=15
+    ap3=12, energy=130, prod_size=11
+    (all 12 members have identical invariants)
+
+  Orbit 4 (4 members):
+    Rep S = [1, 3, 7, 8, 9, 11]
+    sum_in=9, schur=9, diff_in=15
+    ap3=12, energy=114, prod_size=9
+    (all 4 members have identical invariants)
+
+  Orbit 5 (12 members):
+    Rep S = [1, 2, 4, 7, 8, 10]
+    sum_in=10, schur=10, diff_in=15
+    ap3=10, energy=118, prod_size=11
+    (all 12 members have identical invariants)
+
+  Distinguishing power:
+    sum_in: values=[9, 9, 8, 9, 9, 10], only 3/6
+    schur: values=[9, 9, 8, 9, 9, 10], only 3/6
+    diff_in: values=[15, 15, 15, 15, 15, 15], only 1/6
+    ap3: values=[12, 12, 14, 12, 12, 10], only 3/6
+    energy: values=[146, 122, 118, 130, 114, 118], only 5/6
+    prod_size: values=[12, 12, 11, 11, 9, 11], only 3/6
