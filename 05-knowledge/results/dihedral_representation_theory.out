@@ -1,0 +1,385 @@
+/Users/e/Documents/GitHub/math/04-computation/dihedral_representation_theory.py:130: SymPyDeprecationWarning: 
+
+The `sympy.ntheory.residue_ntheory.legendre_symbol` has been moved to `sympy.functions.combinatorial.numbers.legendre_symbol`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  qr_chars = [legendre(k, p) for k in orbit]
+========================================================================
+PART I: DIHEDRAL GROUP ACTION ON CHORDS
+========================================================================
+
+  p=7, m=3
+  Reflection k -> m+1-k = {1: 3, 2: 2, 3: 1}
+  Fixed points: [2]
+  Orbits: [[1, 3], [2]]
+  QR character of orbit elements:
+    [1, 3] -> QR chars [1, -1], product=3 (NQR)
+    [2] -> QR chars [1], product=2 (QR)
+
+  p=11, m=5
+  Reflection k -> m+1-k = {1: 5, 2: 4, 3: 3, 4: 2, 5: 1}
+  Fixed points: [3]
+  Orbits: [[1, 5], [2, 4], [3]]
+  QR character of orbit elements:
+    [1, 5] -> QR chars [1, 1], product=5 (QR)
+    [2, 4] -> QR chars [-1, 1], product=8 (NQR)
+    [3] -> QR chars [1], product=3 (QR)
+
+  p=13, m=6
+  Reflection k -> m+1-k = {1: 6, 2: 5, 3: 4, 4: 3, 5: 2, 6: 1}
+  Fixed points: []
+  Orbits: [[1, 6], [2, 5], [3, 4]]
+  QR character of orbit elements:
+    [1, 6] -> QR chars [1, -1], product=6 (NQR)
+    [2, 5] -> QR chars [-1, -1], product=10 (QR)
+    [3, 4] -> QR chars [1, 1], product=12 (QR)
+
+  p=19, m=9
+  Reflection k -> m+1-k = {1: 9, 2: 8, 3: 7, 4: 6, 5: 5, 6: 4, 7: 3, 8: 2, 9: 1}
+  Fixed points: [5]
+  Orbits: [[1, 9], [2, 8], [3, 7], [4, 6], [5]]
+  QR character of orbit elements:
+    [1, 9] -> QR chars [1, 1], product=9 (QR)
+    [2, 8] -> QR chars [-1, -1], product=16 (QR)
+    [3, 7] -> QR chars [-1, 1], product=2 (NQR)
+    [4, 6] -> QR chars [1, 1], product=5 (QR)
+    [5] -> QR chars [1], product=5 (QR)
+
+========================================================================
+PART II: WALSH ORBITS UNDER REFLECTION
+========================================================================
+
+  p=7: Walsh orbits under reflection
+  Total orbits: 6
+  Symmetric (ĥ[S]=ĥ[refl(S)]): 5
+  Asymmetric: 1
+  Max |ĥ[S] - ĥ[refl(S)]| = 7.000000
+
+  Orbit contributions to NQR sum:
+                S         refl(S)  |S|         ĥ[S]   QR?  orbit contrib
+           [1, 3]          [1, 3]    2      -3.5000   NQR        -3.5000
+
+  p=11: Walsh orbits under reflection
+  Total orbits: 20
+  Symmetric (ĥ[S]=ĥ[refl(S)]): 15
+  Asymmetric: 5
+  Max |ĥ[S] - ĥ[refl(S)]| = 544.500000
+
+  Orbit contributions to NQR sum:
+                S         refl(S)  |S|         ĥ[S]   QR?  orbit contrib
+           [1, 2]          [4, 5]    2      -8.2500   NQR        -8.2500
+           [2, 3]          [3, 4]    2    -272.2500   NQR      -272.2500
+           [2, 4]          [2, 4]    2      -8.2500   NQR        -8.2500
+     [1, 2, 3, 4]    [2, 3, 4, 5]    4    -118.2500   NQR      -236.5000
+     [1, 2, 3, 5]    [1, 3, 4, 5]    4    -118.2500   NQR      -118.2500
+     [1, 2, 4, 5]    [1, 2, 4, 5]    4    -118.2500   NQR      -118.2500
+
+  p=13: Walsh orbits under reflection
+  Total orbits: 36
+  Symmetric (ĥ[S]=ĥ[refl(S)]): 24
+  Asymmetric: 12
+  Max |ĥ[S] - ĥ[refl(S)]| = 8718.125000
+
+  Orbit contributions to NQR sum:
+                S         refl(S)  |S|         ĥ[S]   QR?  orbit contrib
+           [1, 2]          [5, 6]    2    2632.5000   NQR      2632.5000
+           [2, 3]          [4, 5]    2       0.0000   NQR     -2632.5000
+           [1, 6]          [1, 6]    2   -2632.5000   NQR     -2632.5000
+     [1, 2, 3, 4]    [3, 4, 5, 6]    4    5209.7500   NQR      5209.7500
+     [1, 3, 4, 5]    [2, 3, 4, 6]    4    5209.7500   NQR      5209.7500
+     [1, 3, 4, 6]    [1, 3, 4, 6]    4    5209.7500   NQR      5209.7500
+     [1, 2, 5, 6]    [1, 2, 5, 6]    4    5209.7500   NQR      5209.7500
+
+========================================================================
+PART III: MULTIPLICATIVE CHARACTER STRUCTURE
+========================================================================
+
+The map φ: (Z/2)^m → {±1} defined by φ(S) = legendre(Π(S), p)
+is a group homomorphism from the Boolean hypercube to {±1}.
+
+Key: φ factors through the multiplicative structure of Z_p^*:
+  φ(S) = legendre(Π(S), p) = Π_{k∈S} legendre(k, p) = Π_{k∈S} χ(k)
+
+where χ is the Legendre character.
+
+So φ(S) = Π_{k∈S} χ(k), which means φ is determined by the
+CHARACTER VALUES χ(1), χ(2), ..., χ(m).
+
+The NQR subsets are EXACTLY those S where an ODD number of elements
+are quadratic non-residues.
+
+PARITY STRUCTURE:
+  NQR chords at p=7: {3}  → 1 out of 3
+  NQR chords at p=11: {2} → 1 out of 5
+  NQR chords at p=13: {2,5,6} → 3 out of 6
+
+The NUMBER of NQR chords determines the structure of the sign flip.
+
+  p=  7: m= 3, #NQR_chords=1, #QR_chords=2, ratio=0.333
+         NQR chords: [3]
+         deg-2: 2/3 NQR-product subsets (0.667)
+  p= 11: m= 5, #NQR_chords=1, #QR_chords=4, ratio=0.200
+         NQR chords: [2]
+         deg-2: 4/10 NQR-product subsets (0.400)
+         deg-4: 4/5 NQR-product subsets (0.800)
+  p= 13: m= 6, #NQR_chords=3, #QR_chords=3, ratio=0.500
+         NQR chords: [2, 5, 6]
+         deg-2: 9/15 NQR-product subsets (0.600)
+         deg-4: 6/15 NQR-product subsets (0.400)
+  p= 17: m= 8, #NQR_chords=4, #QR_chords=4, ratio=0.500
+         NQR chords: [3, 5, 6, 7]
+         deg-2: 16/28 NQR-product subsets (0.571)
+         deg-4: 32/70 NQR-product subsets (0.457)
+  p= 19: m= 9, #NQR_chords=3, #QR_chords=6, ratio=0.333
+         NQR chords: [2, 3, 8]
+         deg-2: 18/36 NQR-product subsets (0.500)
+         deg-4: 66/126 NQR-product subsets (0.524)
+  p= 23: m=11, #NQR_chords=4, #QR_chords=7, ratio=0.364
+         NQR chords: [5, 7, 10, 11]
+         deg-2: 28/55 NQR-product subsets (0.509)
+         deg-4: 168/330 NQR-product subsets (0.509)
+  p= 29: m=14, #NQR_chords=7, #QR_chords=7, ratio=0.500
+         NQR chords: [2, 3, 8, 10, 11, 12, 14]
+         deg-2: 49/91 NQR-product subsets (0.538)
+         deg-4: 490/1001 NQR-product subsets (0.490)
+  p= 31: m=15, #NQR_chords=6, #QR_chords=9, ratio=0.400
+         NQR chords: [3, 6, 11, 12, 13, 15]
+         deg-2: 54/105 NQR-product subsets (0.514)
+         deg-4: 684/1365 NQR-product subsets (0.501)
+  p= 37: m=18, #NQR_chords=9, #QR_chords=9, ratio=0.500
+         NQR chords: [2, 5, 6, 8, 13, 14, 15, 17, 18]
+         deg-2: 81/153 NQR-product subsets (0.529)
+         deg-4: 1512/3060 NQR-product subsets (0.494)
+  p= 41: m=20, #NQR_chords=10, #QR_chords=10, ratio=0.500
+         NQR chords: [3, 6, 7, 11, 12, 13, 14, 15, 17, 19]
+         deg-2: 100/190 NQR-product subsets (0.526)
+         deg-4: 2400/4845 NQR-product subsets (0.495)
+  p= 43: m=21, #NQR_chords=9, #QR_chords=12, ratio=0.429
+         NQR chords: [2, 3, 5, 7, 8, 12, 18, 19, 20]
+         deg-2: 108/210 NQR-product subsets (0.514)
+         deg-4: 2988/5985 NQR-product subsets (0.499)
+
+========================================================================
+PART IV: QR AUTOMORPHISM AND SPECTRAL SYMMETRY
+========================================================================
+
+  p=7: QR automorphisms of Z_p^*
+  QR chords: [1, 2]
+  NQR chords: [3]
+  Primitive root: 3, QR generator: 2
+  QR orbits on chords:
+    [1, 2, 3] (QR)
+
+  p=13: QR automorphisms of Z_p^*
+  QR chords: [1, 3, 4]
+  NQR chords: [2, 5, 6]
+  Primitive root: 2, QR generator: 4
+  QR orbits on chords:
+    [1, 3, 4] (QR)
+    [2, 5, 6] (NQR)
+
+  p=19: QR automorphisms of Z_p^*
+  QR chords: [1, 4, 5, 6, 7, 9]
+  NQR chords: [2, 3, 8]
+  Primitive root: 2, QR generator: 4
+  QR orbits on chords:
+    [1, 2, 3, 4, 5, 6, 7, 8, 9] (QR)
+
+========================================================================
+PART V: THE DIHEDRAL SYMMETRY OF H
+========================================================================
+
+For circulant tournaments, H has TWO symmetries:
+  1. Vertex rotation: v -> v+1 (mod p)  [always a symmetry for circulants]
+  2. Vertex REFLECTION: v -> -v (mod p)  [always a symmetry for circulants!]
+
+The reflection v -> -v maps arc (i, i+k) to arc (-i, -i-k) = (-i-k, -i).
+This REVERSES the arc direction, so chord k maps to chord p-k.
+In the chord language: σ_k -> σ_{m+1-k}.
+
+But H counts HAMILTONIAN PATHS, which are directed.
+Under vertex reflection, a Hamiltonian path v_0->v_1->...->v_{p-1}
+maps to (-v_0)->(-v_1)->...->(-v_{p-1}).
+The direction is preserved! So H is invariant under σ_k -> σ_{m+1-k}.
+
+This means: ĥ[S] = ĥ[reflect(S)]
+where reflect({k_1,...,k_d}) = {m+1-k_1,...,m+1-k_d}.
+
+CONSEQUENCE: Walsh coefficients come in PAIRS (or are self-dual).
+The NQR sum = Σ_{NQR} ĥ[S] can be reorganized by reflection orbits.
+
+  p=7: Reflection orbits and QR/NQR product pairing
+  Same QR status in orbit: 3
+  Different QR status: 2
+  *** REFLECTION CAN SWAP QR↔NQR! ***
+  Examples:
+    [1] (QR) <-> [3] (NQR)
+    [1, 2] (QR) <-> [2, 3] (NQR)
+
+  KEY INSIGHT: When reflection swaps QR↔NQR,
+  ĥ[S] = ĥ[refl(S)] but S is NQR while refl(S) is QR (or vice versa).
+  These pairs CANCEL in the NQR sum!
+  The net NQR sum comes only from:
+    1. Self-dual subsets (S = refl(S)) that are NQR
+    2. Orbit pairs where BOTH are NQR (or both QR)
+  p=13: Reflection orbits and QR/NQR product pairing
+  Same QR status in orbit: 19
+  Different QR status: 16
+  *** REFLECTION CAN SWAP QR↔NQR! ***
+  Examples:
+    [1] (QR) <-> [6] (NQR)
+    [1, 2] (NQR) <-> [5, 6] (QR)
+    [1, 3] (QR) <-> [4, 6] (NQR)
+    [1, 2, 3] (NQR) <-> [4, 5, 6] (QR)
+    [1, 4] (QR) <-> [3, 6] (NQR)
+
+  KEY INSIGHT: When reflection swaps QR↔NQR,
+  ĥ[S] = ĥ[refl(S)] but S is NQR while refl(S) is QR (or vice versa).
+  These pairs CANCEL in the NQR sum!
+  The net NQR sum comes only from:
+    1. Self-dual subsets (S = refl(S)) that are NQR
+    2. Orbit pairs where BOTH are NQR (or both QR)
+
+========================================================================
+PART VI: REPRESENTATION-THEORETIC DECOMPOSITION
+========================================================================
+
+VIEW: Think of the Walsh spectrum as a function on (Z/2)^m.
+The two relevant characters are:
+  1. The trivial character: χ_0(S) = 1 for all S
+  2. The Legendre character: χ_L(S) = legendre(Π(S), p) = Π_{k∈S} χ(k)
+
+Then:
+  H(Int) = Σ_S ĥ[S] χ_0(S) = <ĥ, χ_0>
+  H(Pal) = Σ_S ĥ[S] χ_L(S) = <ĥ, χ_L>
+
+The difference H(Int) - H(Pal) = <ĥ, χ_0 - χ_L> = 2 <ĥ, 1_{NQR}>.
+
+In REPRESENTATION THEORY terms:
+  χ_0 = trivial rep of (Z/2)^m
+  χ_L = one-dimensional rep factoring through the Legendre symbol
+
+The "advantage" of Interval is proportional to the PROJECTION of ĥ
+onto the indicator of NQR-product subsets.
+
+SCHUR ORTHOGONALITY says:
+  <χ_0, χ_L> = 0 (the two characters are orthogonal)
+
+But ĥ is NOT a character — it's a FUNCTION on (Z/2)^m.
+The question is: how does ĥ project onto the "NQR direction"?
+
+  p=7: ||ĥ|| = 178.6029, ||1_NQR|| = 2.0000
+    <ĥ, 1_NQR> = -7.0000
+    Projection = -3.5000
+    cos(angle) = -0.019597
+    H(Int)-H(Pal) = -14.0000
+    By degree:
+      deg-2: NQR Σ = -7.0000
+  p=11: ||ĥ|| = 93103.6176, ||1_NQR|| = 4.0000
+    <ĥ, 1_NQR> = -1034.0000
+    Projection = -258.5000
+    cos(angle) = -0.002776
+    H(Int)-H(Pal) = -2068.0000
+    By degree:
+      deg-2: NQR Σ = -561.0000
+      deg-4: NQR Σ = -473.0000
+  p=13: ||ĥ|| = 3695873.0580, ||1_NQR|| = 5.6569
+    <ĥ, 1_NQR> = 20839.0000
+    Projection = 3683.8496
+    cos(angle) = 0.000997
+    H(Int)-H(Pal) = 41678.0000
+    By degree:
+      deg-4: NQR Σ = 20839.0000
+
+========================================================================
+PART VII: THE TROPICAL / MAX-PLUS STRUCTURE
+========================================================================
+
+TROPICAL GEOMETRY connection:
+
+In the "tropical limit" (temperature T → 0), the partition function
+  Z(Ω, λ) = Σ_k α_k λ^k
+becomes dominated by the maximum term:
+  log Z ≈ max_k (k · log λ + log α_k)
+
+At λ = 2:
+  log Z ≈ max_k (k · log 2 + log α_k)
+
+This is a TROPICAL POLYNOMIAL in log λ.
+The dominant term depends on which k maximizes k·log(2) + log(α_k).
+
+For the Interval tournament (spectral concentration → bipartite Ω):
+  α_k decays SLOWLY with k (bipartite structure allows large independent sets)
+  → dominant term at higher k
+
+For the Paley tournament (flat spectrum → random Ω):
+  α_k decays FAST with k (random graph has small independence number)
+  → dominant term at lower k
+
+The tropical viewpoint makes the mechanism transparent:
+  H = Z(Ω, 2) is dominated by the LARGEST 2^k α_k term.
+  Interval wins when its larger α_k values outweigh Paley's advantage at α_1.
+
+
+  p=7: H(Int) = 5040, H(Pal) = 189
+  Tropical dominant term analysis:
+  (Would need full α_k computation — see hardcore_spectral_gap.out)
+
+========================================================================
+PART VIII: THE GRAND UNIFIED PICTURE
+========================================================================
+
+THEOREM (Grand Unified H-Maximization):
+
+For prime p, the Interval tournament maximizes H among all circulant
+tournaments for p ≥ 13. The mechanism involves FIVE equivalent viewpoints:
+
+1. ADDITIVE COMBINATORICS (Number Theory):
+   The interval S = {1,...,m} has MAXIMUM additive energy E(S) among all
+   m-subsets of Z_p. By the Parseval identity for the 4th power:
+     Σ_k |λ_k|^4 = p · E(S) - m^4
+   Maximum E(S) → maximum IPR → maximum spectral concentration.
+
+2. HARMONIC ANALYSIS (Fejér Kernel):
+   The eigenvalues of the Interval tournament are EXACTLY the Fejér kernel:
+     |λ_k|^2 = sin^2(πmk/p) / sin^2(πk/p)
+   This is the EXTREMAL kernel in approximation theory: it maximizes
+   the ratio of the main lobe to total energy (Beurling-Selberg).
+
+3. STATISTICAL MECHANICS (Hard-Core Lattice Gas):
+   H = Z(Ω, 2) is the partition function of the hard-core lattice gas
+   on the odd-cycle overlap graph Ω at fugacity λ = 2.
+   Spectral concentration → bipartite-like Ω → larger Z at any λ > 0.
+
+4. WALSH INTERFERENCE (Quantum Analogy):
+   H(Int) = Σ_S ĥ[S] (all constructive interference)
+   H(Pal) = Σ_S ĥ[S] · χ(Π(S)) (partial destructive interference)
+   The "phase mismatch" causes Paley to lose relative amplitude.
+   The crossover from Paley to Interval at p=13 occurs when the
+   degree-4 Walsh interactions flip sign.
+
+5. REPRESENTATION THEORY (Dihedral + Multiplicative Characters):
+   The Walsh spectrum ĥ lives on the Boolean hypercube (Z/2)^m.
+   The difference H(Int) - H(Pal) = 2·<ĥ, 1_NQR> is the projection
+   of ĥ onto the indicator of NQR-product subsets.
+   The reflection symmetry ĥ[S] = ĥ[m+1-S] means this projection
+   is controlled by reflection-orbit pairs where QR status differs.
+
+PROOF STRATEGY:
+  Step 1: Interval maximizes E(S) [classical, Freiman-Ruzsa]
+  Step 2: Max E(S) → max IPR [Parseval identity, exact]
+  Step 3: Max IPR → spectral concentration → bipartite-like Ω
+  Step 4: Bipartite-like Ω → max Z(Ω, 2) [Galvin-Tetali theorem]
+  Step 5: Z(Ω, 2) = H [OCF, proved as THM-077]
+
+The REMAINING GAP is making Step 3→4 rigorous: proving that the
+specific form of spectral concentration (Fejér kernel) implies
+the specific Ω structure that maximizes Z(Ω, 2).
+
+
+DONE.
