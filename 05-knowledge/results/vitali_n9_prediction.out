@@ -1,0 +1,44 @@
+======================================================================
+VITALI ATOM AT n=9: TESTING PREDICTIONS
+======================================================================
+  ... 500/200, found 1, elapsed 7s
+  ... 1000/200, found 4, elapsed 13s
+  ... 1500/200, found 8, elapsed 20s
+  ... 2000/200, found 16, elapsed 28s
+  ... 2500/200, found 20, elapsed 35s
+  ... 3000/200, found 26, elapsed 42s
+  ... 3500/200, found 30, elapsed 50s
+  ... 4000/200, found 34, elapsed 57s
+  ... 4500/200, found 40, elapsed 64s
+
+Total: 42 H-changing examples in 70s
+
+Formula delta_H = 2*(dc7+dc9) + 4*di2 + 8*di3:
+  Match rate: 42/42 (100.0%)
+
+  dc3 distribution: {0: 42}
+  dc5 distribution: {0: 42}
+  dc7 distribution: {-4: 3, -3: 1, -2: 6, -1: 10, 0: 6, 1: 9, 2: 4, 3: 2, 4: 1}
+  dc9 distribution: {-3: 3, -2: 3, -1: 7, 0: 12, 1: 10, 2: 2, 3: 5}
+  di2 distribution: {-2: 4, -1: 6, 0: 18, 1: 6, 2: 7, 3: 1}
+  di3 distribution: {0: 42}
+  delta_H distribution: {-14: 2, -10: 2, -8: 2, -6: 5, -4: 2, -2: 6, 2: 9, 4: 3, 6: 5, 10: 1, 12: 1, 14: 1, 16: 3}
+
+  dc3 = 0 always? True
+  dc5 = 0 always? True
+  dc9 != 0: 30 / 42
+  di3 != 0: 0 / 42
+
+  Sample examples:
+    dH=   2, dc7=  3, dc9=  0, di2= -1, di3=  0, pred=   2 [OK]
+    dH=   2, dc7=  1, dc9=  0, di2=  0, di3=  0, pred=   2 [OK]
+    dH=  -8, dc7= -1, dc9= -3, di2=  0, di3=  0, pred=  -8 [OK]
+    dH=  -2, dc7=  1, dc9=  0, di2= -1, di3=  0, pred=  -2 [OK]
+    dH=   2, dc7=  0, dc9=  1, di2=  0, di3=  0, pred=   2 [OK]
+    dH=  -4, dc7=  0, dc9=  0, di2= -1, di3=  0, pred=  -4 [OK]
+    dH=  -6, dc7= -1, dc9=  0, di2= -1, di3=  0, pred=  -6 [OK]
+    dH=   4, dc7= -2, dc9=  0, di2=  2, di3=  0, pred=   4 [OK]
+    dH=   4, dc7=  1, dc9=  1, di2=  0, di3=  0, pred=   4 [OK]
+    dH=   6, dc7=  0, dc9=  1, di2=  1, di3=  0, pred=   6 [OK]
+
+Done.

@@ -166,10 +166,10 @@ for trial in range(5000):  # need more trials at n=9
         if H_A == H_B:
             continue
 
-        # Compute cycle data — skip 9-cycles (too expensive: 8!=40320 perms)
+        # Compute cycle data — include 9-cycles (C(9,9)=1 set, 8!=40320 perms, fast)
         all_cycles_A = {}
         all_cycles_B = {}
-        for length in [3, 5, 7]:  # skip 9 for speed
+        for length in [3, 5, 7, 9]:  # include all odd lengths
             c_A = count_directed_cycles_by_set(A, n, length)
             c_B = count_directed_cycles_by_set(B, n, length)
             for vs, m in c_A.items():
@@ -190,7 +190,7 @@ for trial in range(5000):  # need more trials at n=9
         dc3 = dir_B.get(3, 0) - dir_A.get(3, 0)
         dc5 = dir_B.get(5, 0) - dir_A.get(5, 0)
         dc7 = dir_B.get(7, 0) - dir_A.get(7, 0)
-        dc9 = 0  # skipped for speed
+        dc9 = dir_B.get(9, 0) - dir_A.get(9, 0)
 
         # Disjoint pair count (directed, with multiplicity)
         cycle_dict_A = {vs: m for vs, (l, m) in all_cycles_A.items()}
