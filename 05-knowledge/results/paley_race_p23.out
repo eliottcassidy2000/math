@@ -1,0 +1,52 @@
+p = 23, m = 11
+prod(1+Q) Interval: 28657.0
+prod(1+Q) Paley:    1977326743.0
+Spectral ratio:     68999.8
+
+Computing H(Interval)...
+    Step 4/23: 1045 masks, 1265 paths
+    Step 7/23: 71841 masks, 1016961 paths
+    Step 10/23: 496925 masks, 479288238 paths
+    Step 13/23: 646646 masks, 116549984942 paths
+    Step 16/23: 170544 masks, 12025347281107 paths
+    Step 19/23: 7315 masks, 367249078625149 paths
+    Step 21/23: 231 masks, 1231716332638891 paths
+    Step 22/23: 22 masks, 1307513741617961 paths
+    Step 23/23: 1 masks, 696153803937273 paths
+  H_from_0 = 696153803937273, time = 73.8s
+  Amplification = 24292626720.7754
+
+Computing H(Paley)...
+    Step 4/23: 990 masks, 1265 paths
+    Step 7/23: 71379 masks, 1057375 paths
+    Step 10/23: 496870 masks, 509650702 paths
+    Step 13/23: 646646 masks, 125141691774 paths
+    Step 16/23: 170544 masks, 12863053682787 paths
+    Step 19/23: 7315 masks, 384833916750701 paths
+    Step 21/23: 231 masks, 1258350747052487 paths
+    Step 22/23: 22 masks, 1313333107451805 paths
+    Step 23/23: 1 masks, 685226390277363 paths
+  H_from_0 = 685226390277363, time = 75.4s
+  Amplification = 346541.8109
+
+Paley/Interval = 0.984303
+Interval wins by 1.5697%
+
+============================================================
+UPDATED RACE TABLE
+============================================================
+
+  p  │ p mod 4 │ Best/Int │ Winner       │ Int amp
+─────┼─────────┼──────────┼──────────────┼────────────
+   5 │       1 │ 1.000    │ Interval     │ 0.6
+   7 │       3 │ 1.080    │ Paley        │ 1.9
+  11 │       3 │ 1.022    │ Paley        │ 95
+  13 │       1 │ 1.000    │ Interval     │ 1,225
+  17 │       1 │ 1.000    │ Interval     │ 504,227
+  19 │       3 │ 0.990    │ Interval     │ 14,907,197
+  23 │       3 │ 0.984    │ Interval     │ 24,292,626,721
+
+CONFIRMED: Interval dominates for ALL tested p ≥ 13!
+Amplification factor ratio: Int/Paley = 70100.1×
+Spectral base ratio: Paley/Int = 68999.8×
+Net advantage: 1.015947× for Interval
