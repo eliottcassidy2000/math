@@ -1,0 +1,351 @@
+======================================================================
+n=5 EXHAUSTIVE: Pfaffian sum vs tournament invariants
+======================================================================
+
+  Classes by (scores, c3, c5):
+    scores=(0, 1, 2, 3, 4), c3=0, c5=0: H=[1], |Pf_sum|=[1], Pf_sum=[-1, 1]
+    scores=(0, 1, 3, 3, 3), c3=1, c5=0: H=[3], |Pf_sum|=[3], Pf_sum=[-3, 3]
+    scores=(0, 2, 2, 2, 4), c3=1, c5=0: H=[3], |Pf_sum|=[3], Pf_sum=[-3, 3]
+    scores=(0, 2, 2, 3, 3), c3=2, c5=0: H=[5], |Pf_sum|=[1], Pf_sum=[-1, 1]
+    scores=(1, 1, 1, 3, 4), c3=1, c5=0: H=[3], |Pf_sum|=[3], Pf_sum=[-3, 3]
+    scores=(1, 1, 2, 2, 4), c3=2, c5=0: H=[5], |Pf_sum|=[1], Pf_sum=[-1, 1]
+    scores=(1, 1, 2, 3, 3), c3=3, c5=1: H=[9], |Pf_sum|=[3, 5], Pf_sum=[-5, -3, 3, 5]
+    scores=(1, 2, 2, 2, 3), c3=4, c5=1: H=[11], |Pf_sum|=[1], Pf_sum=[-1, 1]
+    scores=(1, 2, 2, 2, 3), c3=4, c5=2: H=[13], |Pf_sum|=[7], Pf_sum=[-7, 7]
+    scores=(1, 2, 2, 2, 3), c3=4, c5=3: H=[15], |Pf_sum|=[9], Pf_sum=[-9, 9]
+    scores=(2, 2, 2, 2, 2), c3=5, c5=2: H=[15], |Pf_sum|=[5], Pf_sum=[-5, 5]
+
+  Testing |Pf_sum| = 2*c5 + 1:
+    FAIL: bits=2, H=3, c5=0, Pf_sum=3, |Pf_sum|=3, 2*c5+1=1
+
+======================================================================
+n=3 EXHAUSTIVE
+======================================================================
+  bits=0: H=1, c3=0, Pf_sum=-1, |Pf_sum|=1, 2*c3+1=1
+  bits=1: H=1, c3=0, Pf_sum=1, |Pf_sum|=1, 2*c3+1=1
+  bits=2: H=3, c3=1, Pf_sum=-3, |Pf_sum|=3, 2*c3+1=3
+  bits=3: H=1, c3=0, Pf_sum=-1, |Pf_sum|=1, 2*c3+1=1
+  bits=4: H=1, c3=0, Pf_sum=1, |Pf_sum|=1, 2*c3+1=1
+  bits=5: H=3, c3=1, Pf_sum=3, |Pf_sum|=3, 2*c3+1=3
+  bits=6: H=1, c3=0, Pf_sum=-1, |Pf_sum|=1, 2*c3+1=1
+  bits=7: H=1, c3=0, Pf_sum=1, |Pf_sum|=1, 2*c3+1=1
+
+======================================================================
+n=4 EXHAUSTIVE: Pf(S) vs tournament invariants
+======================================================================
+  bits=0: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=1: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=2: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=3
+  bits=3: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=4: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=5: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=-3
+  bits=6: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=7: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=8: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=9: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=-3
+  bits=10: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=11: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=12: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=13: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=14: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=3
+  bits=15: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=16: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=3
+  bits=17: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=18: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=19: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=20: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=21: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=22: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=23: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=-3
+  bits=24: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=25: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=26: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=27: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=-3
+  bits=28: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=3
+  bits=29: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=30: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=31: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=32: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=33: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=34: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=35: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=3
+  bits=36: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=-3
+  bits=37: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=38: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=39: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=40: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=-3
+  bits=41: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=42: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=43: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=44: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=45: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=46: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=47: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=3
+  bits=48: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=49: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=3
+  bits=50: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=51: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=52: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=53: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=54: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=-3
+  bits=55: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=56: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=57: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=1
+  bits=58: H=3, c3=1, scores=(1, 1, 1, 3), Pf(S)=-3
+  bits=59: H=5, c3=2, scores=(1, 1, 2, 2), Pf(S)=-1
+  bits=60: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+  bits=61: H=3, c3=1, scores=(0, 2, 2, 2), Pf(S)=3
+  bits=62: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=-1
+  bits=63: H=1, c3=0, scores=(0, 1, 2, 3), Pf(S)=1
+
+======================================================================
+n=7 SAMPLE: Pfaffian sum vs c7
+======================================================================
+  COUNTEREXAMPLE: bits=466956, H=49, c7=2, |Pf_sum|=7, 2*c7+1=5
+  COUNTEREXAMPLE: bits=104902, H=23, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1153556, H=79, c7=4, |Pf_sum|=7, 2*c7+1=9
+  COUNTEREXAMPLE: bits=1027150, H=137, c7=13, |Pf_sum|=23, 2*c7+1=27
+  COUNTEREXAMPLE: bits=936213, H=117, c7=13, |Pf_sum|=21, 2*c7+1=27
+  COUNTEREXAMPLE: bits=585264, H=83, c7=5, |Pf_sum|=1, 2*c7+1=11
+  COUNTEREXAMPLE: bits=429895, H=101, c7=7, |Pf_sum|=5, 2*c7+1=15
+  COUNTEREXAMPLE: bits=364647, H=45, c7=2, |Pf_sum|=3, 2*c7+1=5
+  COUNTEREXAMPLE: bits=1769668, H=31, c7=1, |Pf_sum|=7, 2*c7+1=3
+  COUNTEREXAMPLE: bits=133306, H=105, c7=8, |Pf_sum|=5, 2*c7+1=17
+  COUNTEREXAMPLE: bits=124978, H=89, c7=6, |Pf_sum|=9, 2*c7+1=13
+  COUNTEREXAMPLE: bits=392986, H=15, c7=0, |Pf_sum|=9, 2*c7+1=1
+  COUNTEREXAMPLE: bits=917034, H=79, c7=5, |Pf_sum|=5, 2*c7+1=11
+  COUNTEREXAMPLE: bits=975850, H=109, c7=10, |Pf_sum|=1, 2*c7+1=21
+  COUNTEREXAMPLE: bits=111299, H=33, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=924594, H=131, c7=11, |Pf_sum|=15, 2*c7+1=23
+  COUNTEREXAMPLE: bits=1884119, H=75, c7=5, |Pf_sum|=19, 2*c7+1=11
+  COUNTEREXAMPLE: bits=27257, H=123, c7=11, |Pf_sum|=21, 2*c7+1=23
+  COUNTEREXAMPLE: bits=669659, H=89, c7=6, |Pf_sum|=9, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1427114, H=139, c7=12, |Pf_sum|=9, 2*c7+1=25
+  COUNTEREXAMPLE: bits=1165476, H=101, c7=8, |Pf_sum|=9, 2*c7+1=17
+  COUNTEREXAMPLE: bits=652128, H=45, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=903091, H=83, c7=6, |Pf_sum|=11, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1411779, H=81, c7=5, |Pf_sum|=3, 2*c7+1=11
+  COUNTEREXAMPLE: bits=428700, H=123, c7=11, |Pf_sum|=19, 2*c7+1=23
+  COUNTEREXAMPLE: bits=389004, H=41, c7=2, |Pf_sum|=7, 2*c7+1=5
+  COUNTEREXAMPLE: bits=1593530, H=83, c7=5, |Pf_sum|=7, 2*c7+1=11
+  COUNTEREXAMPLE: bits=1505668, H=31, c7=0, |Pf_sum|=7, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1109480, H=45, c7=3, |Pf_sum|=15, 2*c7+1=7
+  COUNTEREXAMPLE: bits=182244, H=37, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1926967, H=41, c7=2, |Pf_sum|=1, 2*c7+1=5
+  COUNTEREXAMPLE: bits=523558, H=79, c7=4, |Pf_sum|=7, 2*c7+1=9
+  COUNTEREXAMPLE: bits=1587688, H=61, c7=4, |Pf_sum|=15, 2*c7+1=9
+  COUNTEREXAMPLE: bits=330511, H=37, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1229678, H=35, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=1516807, H=141, c7=14, |Pf_sum|=25, 2*c7+1=29
+  COUNTEREXAMPLE: bits=291735, H=51, c7=3, |Pf_sum|=11, 2*c7+1=7
+  COUNTEREXAMPLE: bits=192201, H=135, c7=12, |Pf_sum|=15, 2*c7+1=25
+  COUNTEREXAMPLE: bits=955874, H=59, c7=3, |Pf_sum|=9, 2*c7+1=7
+  COUNTEREXAMPLE: bits=334671, H=37, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=976395, H=97, c7=8, |Pf_sum|=7, 2*c7+1=17
+  COUNTEREXAMPLE: bits=423630, H=115, c7=9, |Pf_sum|=11, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1594364, H=77, c7=6, |Pf_sum|=9, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1165905, H=125, c7=10, |Pf_sum|=17, 2*c7+1=21
+  COUNTEREXAMPLE: bits=1901740, H=103, c7=9, |Pf_sum|=17, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1530217, H=115, c7=9, |Pf_sum|=5, 2*c7+1=19
+  COUNTEREXAMPLE: bits=682220, H=93, c7=6, |Pf_sum|=7, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1552651, H=19, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1490113, H=111, c7=9, |Pf_sum|=13, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1119786, H=131, c7=11, |Pf_sum|=9, 2*c7+1=23
+  COUNTEREXAMPLE: bits=299483, H=23, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=717807, H=73, c7=4, |Pf_sum|=5, 2*c7+1=9
+  COUNTEREXAMPLE: bits=685359, H=71, c7=5, |Pf_sum|=9, 2*c7+1=11
+  COUNTEREXAMPLE: bits=1938859, H=123, c7=11, |Pf_sum|=21, 2*c7+1=23
+  COUNTEREXAMPLE: bits=1591551, H=3, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=921132, H=115, c7=9, |Pf_sum|=11, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1360140, H=101, c7=8, |Pf_sum|=9, 2*c7+1=17
+  COUNTEREXAMPLE: bits=234620, H=73, c7=4, |Pf_sum|=5, 2*c7+1=9
+  COUNTEREXAMPLE: bits=960697, H=81, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=1682607, H=89, c7=6, |Pf_sum|=17, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1122986, H=151, c7=13, |Pf_sum|=5, 2*c7+1=27
+  COUNTEREXAMPLE: bits=277615, H=81, c7=6, |Pf_sum|=3, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1319854, H=89, c7=6, |Pf_sum|=15, 2*c7+1=13
+  COUNTEREXAMPLE: bits=891820, H=117, c7=10, |Pf_sum|=19, 2*c7+1=21
+  COUNTEREXAMPLE: bits=2093927, H=81, c7=6, |Pf_sum|=3, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1659400, H=103, c7=9, |Pf_sum|=17, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1924564, H=45, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=599246, H=79, c7=4, |Pf_sum|=7, 2*c7+1=9
+  COUNTEREXAMPLE: bits=1034430, H=101, c7=8, |Pf_sum|=9, 2*c7+1=17
+  COUNTEREXAMPLE: bits=1796981, H=89, c7=6, |Pf_sum|=9, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1675207, H=81, c7=6, |Pf_sum|=3, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1518323, H=75, c7=5, |Pf_sum|=3, 2*c7+1=11
+  COUNTEREXAMPLE: bits=919897, H=143, c7=15, |Pf_sum|=33, 2*c7+1=31
+  COUNTEREXAMPLE: bits=580205, H=109, c7=8, |Pf_sum|=3, 2*c7+1=17
+  COUNTEREXAMPLE: bits=2069955, H=69, c7=5, |Pf_sum|=7, 2*c7+1=11
+  COUNTEREXAMPLE: bits=381301, H=109, c7=8, |Pf_sum|=5, 2*c7+1=17
+  COUNTEREXAMPLE: bits=459901, H=93, c7=9, |Pf_sum|=15, 2*c7+1=19
+  COUNTEREXAMPLE: bits=641062, H=113, c7=9, |Pf_sum|=11, 2*c7+1=19
+  COUNTEREXAMPLE: bits=671013, H=91, c7=5, |Pf_sum|=1, 2*c7+1=11
+  COUNTEREXAMPLE: bits=1770667, H=35, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=266454, H=27, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1600627, H=67, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=1963143, H=121, c7=9, |Pf_sum|=7, 2*c7+1=19
+  COUNTEREXAMPLE: bits=48154, H=77, c7=5, |Pf_sum|=5, 2*c7+1=11
+  COUNTEREXAMPLE: bits=480464, H=91, c7=6, |Pf_sum|=1, 2*c7+1=13
+  COUNTEREXAMPLE: bits=467883, H=109, c7=10, |Pf_sum|=15, 2*c7+1=21
+  COUNTEREXAMPLE: bits=1823537, H=29, c7=0, |Pf_sum|=9, 2*c7+1=1
+  COUNTEREXAMPLE: bits=663361, H=121, c7=10, |Pf_sum|=5, 2*c7+1=21
+  COUNTEREXAMPLE: bits=1903055, H=65, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=13611, H=103, c7=8, |Pf_sum|=9, 2*c7+1=17
+  COUNTEREXAMPLE: bits=1104733, H=33, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=749320, H=45, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=446319, H=93, c7=7, |Pf_sum|=7, 2*c7+1=15
+  COUNTEREXAMPLE: bits=1251768, H=109, c7=8, |Pf_sum|=3, 2*c7+1=17
+  COUNTEREXAMPLE: bits=834293, H=65, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=641054, H=129, c7=12, |Pf_sum|=13, 2*c7+1=25
+  COUNTEREXAMPLE: bits=1568308, H=51, c7=3, |Pf_sum|=11, 2*c7+1=7
+  COUNTEREXAMPLE: bits=677585, H=137, c7=13, |Pf_sum|=23, 2*c7+1=27
+  COUNTEREXAMPLE: bits=1359609, H=129, c7=12, |Pf_sum|=13, 2*c7+1=25
+  COUNTEREXAMPLE: bits=2049360, H=29, c7=1, |Pf_sum|=5, 2*c7+1=3
+  COUNTEREXAMPLE: bits=81691, H=53, c7=3, |Pf_sum|=11, 2*c7+1=7
+  COUNTEREXAMPLE: bits=469207, H=41, c7=2, |Pf_sum|=7, 2*c7+1=5
+  COUNTEREXAMPLE: bits=1289807, H=139, c7=12, |Pf_sum|=9, 2*c7+1=25
+  COUNTEREXAMPLE: bits=242955, H=15, c7=0, |Pf_sum|=9, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1010288, H=9, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=359256, H=17, c7=0, |Pf_sum|=7, 2*c7+1=1
+  COUNTEREXAMPLE: bits=2038391, H=57, c7=3, |Pf_sum|=15, 2*c7+1=7
+  COUNTEREXAMPLE: bits=290298, H=111, c7=12, |Pf_sum|=21, 2*c7+1=25
+  COUNTEREXAMPLE: bits=527477, H=69, c7=4, |Pf_sum|=7, 2*c7+1=9
+  COUNTEREXAMPLE: bits=538512, H=67, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=692592, H=83, c7=5, |Pf_sum|=1, 2*c7+1=11
+  COUNTEREXAMPLE: bits=1111728, H=103, c7=8, |Pf_sum|=1, 2*c7+1=17
+  COUNTEREXAMPLE: bits=1774769, H=103, c7=8, |Pf_sum|=9, 2*c7+1=17
+  COUNTEREXAMPLE: bits=888346, H=93, c7=6, |Pf_sum|=7, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1673494, H=133, c7=11, |Pf_sum|=9, 2*c7+1=23
+  COUNTEREXAMPLE: bits=1566239, H=39, c7=1, |Pf_sum|=5, 2*c7+1=3
+  COUNTEREXAMPLE: bits=1837524, H=23, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1893670, H=111, c7=9, |Pf_sum|=21, 2*c7+1=19
+  COUNTEREXAMPLE: bits=507528, H=41, c7=2, |Pf_sum|=9, 2*c7+1=5
+  COUNTEREXAMPLE: bits=942448, H=89, c7=6, |Pf_sum|=9, 2*c7+1=13
+  COUNTEREXAMPLE: bits=268544, H=9, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1418033, H=79, c7=5, |Pf_sum|=3, 2*c7+1=11
+  COUNTEREXAMPLE: bits=88224, H=73, c7=5, |Pf_sum|=7, 2*c7+1=11
+  COUNTEREXAMPLE: bits=965171, H=65, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=30160, H=69, c7=5, |Pf_sum|=7, 2*c7+1=11
+  COUNTEREXAMPLE: bits=297766, H=113, c7=9, |Pf_sum|=11, 2*c7+1=19
+  COUNTEREXAMPLE: bits=246934, H=153, c7=14, |Pf_sum|=21, 2*c7+1=29
+  COUNTEREXAMPLE: bits=960251, H=33, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=282697, H=75, c7=5, |Pf_sum|=3, 2*c7+1=11
+  COUNTEREXAMPLE: bits=131755, H=89, c7=6, |Pf_sum|=15, 2*c7+1=13
+  COUNTEREXAMPLE: bits=1385917, H=111, c7=9, |Pf_sum|=3, 2*c7+1=19
+  COUNTEREXAMPLE: bits=297197, H=69, c7=5, |Pf_sum|=7, 2*c7+1=11
+  COUNTEREXAMPLE: bits=998263, H=33, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1168018, H=135, c7=12, |Pf_sum|=7, 2*c7+1=25
+  COUNTEREXAMPLE: bits=2035975, H=91, c7=5, |Pf_sum|=1, 2*c7+1=11
+  COUNTEREXAMPLE: bits=898574, H=111, c7=9, |Pf_sum|=3, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1982525, H=9, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1019204, H=91, c7=5, |Pf_sum|=1, 2*c7+1=11
+  COUNTEREXAMPLE: bits=1707333, H=33, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=798637, H=37, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=395631, H=67, c7=4, |Pf_sum|=1, 2*c7+1=9
+  COUNTEREXAMPLE: bits=406557, H=97, c7=8, |Pf_sum|=7, 2*c7+1=17
+  COUNTEREXAMPLE: bits=1807959, H=73, c7=4, |Pf_sum|=5, 2*c7+1=9
+  COUNTEREXAMPLE: bits=1486031, H=143, c7=15, |Pf_sum|=33, 2*c7+1=31
+  COUNTEREXAMPLE: bits=1776617, H=141, c7=14, |Pf_sum|=31, 2*c7+1=29
+  COUNTEREXAMPLE: bits=1724287, H=9, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1958843, H=67, c7=4, |Pf_sum|=13, 2*c7+1=9
+  COUNTEREXAMPLE: bits=227210, H=73, c7=5, |Pf_sum|=7, 2*c7+1=11
+  COUNTEREXAMPLE: bits=412794, H=139, c7=12, |Pf_sum|=1, 2*c7+1=25
+  COUNTEREXAMPLE: bits=1688716, H=101, c7=7, |Pf_sum|=5, 2*c7+1=15
+  COUNTEREXAMPLE: bits=1423138, H=89, c7=6, |Pf_sum|=9, 2*c7+1=13
+  COUNTEREXAMPLE: bits=458307, H=143, c7=14, |Pf_sum|=23, 2*c7+1=29
+  COUNTEREXAMPLE: bits=1042940, H=91, c7=5, |Pf_sum|=1, 2*c7+1=11
+  COUNTEREXAMPLE: bits=803587, H=103, c7=8, |Pf_sum|=7, 2*c7+1=17
+  COUNTEREXAMPLE: bits=1881621, H=125, c7=10, |Pf_sum|=17, 2*c7+1=21
+  COUNTEREXAMPLE: bits=587967, H=9, c7=0, |Pf_sum|=5, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1769499, H=13, c7=0, |Pf_sum|=7, 2*c7+1=1
+  COUNTEREXAMPLE: bits=769604, H=109, c7=9, |Pf_sum|=1, 2*c7+1=19
+  COUNTEREXAMPLE: bits=1168303, H=33, c7=0, |Pf_sum|=3, 2*c7+1=1
+  COUNTEREXAMPLE: bits=1940402, H=151, c7=14, |Pf_sum|=3, 2*c7+1=29
+  COUNTEREXAMPLE: bits=1047764, H=71, c7=5, |Pf_sum|=9, 2*c7+1=11
+  COUNTEREXAMPLE: bits=316187, H=59, c7=3, |Pf_sum|=9, 2*c7+1=7
+  COUNTEREXAMPLE: bits=1858625, H=35, c7=1, |Pf_sum|=1, 2*c7+1=3
+  COUNTEREXAMPLE: bits=410658, H=69, c7=3, |Pf_sum|=3, 2*c7+1=7
+
+  c7 -> |Pf_sum| distribution:
+    c7=0: |Pf_sum|=[1, 3, 5, 7, 9], count=41
+    c7=1: |Pf_sum|=[1, 3, 5, 7], count=15
+    c7=2: |Pf_sum|=[1, 3, 5, 7, 9], count=7
+    c7=3: |Pf_sum|=[3, 7, 9, 11, 15], count=10
+    c7=4: |Pf_sum|=[1, 5, 7, 9, 13, 15], count=17
+    c7=5: |Pf_sum|=[1, 3, 5, 7, 9, 11, 19], count=24
+    c7=6: |Pf_sum|=[1, 3, 7, 9, 11, 15, 17], count=16
+    c7=7: |Pf_sum|=[5, 7, 15], count=7
+    c7=8: |Pf_sum|=[1, 3, 5, 7, 9, 17], count=15
+    c7=9: |Pf_sum|=[1, 3, 5, 7, 11, 13, 15, 17, 19, 21], count=16
+    c7=10: |Pf_sum|=[1, 5, 15, 17, 19], count=6
+    c7=11: |Pf_sum|=[9, 15, 19, 21, 23], count=7
+    c7=12: |Pf_sum|=[1, 7, 9, 13, 15, 21], count=8
+    c7=13: |Pf_sum|=[5, 21, 23], count=4
+    c7=14: |Pf_sum|=[3, 21, 23, 25, 31], count=5
+    c7=15: |Pf_sum|=[33], count=2
+
+  c7 -> unique |Pf_sum|?
+    c7=0: MULTIPLE |Pf_sum| = [1, 3, 5, 7, 9]
+    c7=1: MULTIPLE |Pf_sum| = [1, 3, 5, 7]
+    c7=2: MULTIPLE |Pf_sum| = [1, 3, 5, 7, 9]
+    c7=3: MULTIPLE |Pf_sum| = [3, 7, 9, 11, 15]
+    c7=4: MULTIPLE |Pf_sum| = [1, 5, 7, 9, 13, 15]
+    c7=5: MULTIPLE |Pf_sum| = [1, 3, 5, 7, 9, 11, 19]
+    c7=6: MULTIPLE |Pf_sum| = [1, 3, 7, 9, 11, 15, 17]
+    c7=7: MULTIPLE |Pf_sum| = [5, 7, 15]
+    c7=8: MULTIPLE |Pf_sum| = [1, 3, 5, 7, 9, 17]
+    c7=9: MULTIPLE |Pf_sum| = [1, 3, 5, 7, 11, 13, 15, 17, 19, 21]
+    c7=10: MULTIPLE |Pf_sum| = [1, 5, 15, 17, 19]
+    c7=11: MULTIPLE |Pf_sum| = [9, 15, 19, 21, 23]
+    c7=12: MULTIPLE |Pf_sum| = [1, 7, 9, 13, 15, 21]
+    c7=13: MULTIPLE |Pf_sum| = [5, 21, 23]
+    c7=14: MULTIPLE |Pf_sum| = [3, 21, 23, 25, 31]
+  Ambiguous: 15 c7 values
+
+======================================================================
+FORMULA SEARCH: |Pf_sum| as function of (H, c3, c5, c7, ...)
+======================================================================
+  bits=466956: H=49, c3=8, c5=14, c7=2, alpha2=0, Pf_sum=7
+    2*(c3+c5+c7)+1 = 49
+    H - 4*alpha2 = 49
+    |Pf_sum| = 7
+  bits=104902: H=23, c3=5, c5=4, c7=0, alpha2=1, Pf_sum=5
+    2*(c3+c5+c7)+1 = 19
+    H - 4*alpha2 = 19
+    |Pf_sum| = 5
+  bits=1153556: H=79, c3=10, c5=21, c7=4, alpha2=2, Pf_sum=7
+    2*(c3+c5+c7)+1 = 71
+    H - 4*alpha2 = 71
+    |Pf_sum| = 7
+  bits=1027150: H=137, c3=12, c5=29, c7=13, alpha2=7, Pf_sum=23
+    2*(c3+c5+c7)+1 = 109
+    H - 4*alpha2 = 109
+    |Pf_sum| = 23
+  bits=936213: H=117, c3=9, c5=20, c7=13, alpha2=8, Pf_sum=21
+    2*(c3+c5+c7)+1 = 85
+    H - 4*alpha2 = 85
+    |Pf_sum| = 21
+  bits=585264: H=83, c3=10, c5=18, c7=5, alpha2=4, Pf_sum=1
+    2*(c3+c5+c7)+1 = 67
+    H - 4*alpha2 = 67
+    |Pf_sum| = 1
+  bits=429895: H=101, c3=11, c5=20, c7=7, alpha2=6, Pf_sum=5
+    2*(c3+c5+c7)+1 = 77
+    H - 4*alpha2 = 77
+    |Pf_sum| = 5
+  bits=364647: H=45, c3=7, c5=9, c7=2, alpha2=2, Pf_sum=-3
+    2*(c3+c5+c7)+1 = 37
+    H - 4*alpha2 = 37
+    |Pf_sum| = 3
+  bits=1769668: H=31, c3=6, c5=8, c7=1, alpha2=0, Pf_sum=-7
+    2*(c3+c5+c7)+1 = 31
+    H - 4*alpha2 = 31
+    |Pf_sum| = 7
+  bits=133306: H=105, c3=11, c5=21, c7=8, alpha2=6, Pf_sum=5
+    2*(c3+c5+c7)+1 = 81
+    H - 4*alpha2 = 81
+    |Pf_sum| = 5
+
+======================================================================
+DONE.
+======================================================================

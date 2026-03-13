@@ -1,0 +1,188 @@
+
+============================================================
+n=3: EXHAUSTIVE TEST
+============================================================
+  All perfect squares: True
+  Failures: 0/8
+  Distinct det values: [1, 9]
+  Square roots: [1, 3]
+  All roots odd: True
+
+============================================================
+n=4: EXHAUSTIVE TEST
+============================================================
+  All perfect squares: True
+  Failures: 0/64
+  Distinct det values: [1, 9]
+  Square roots: [1, 3]
+  All roots odd: True
+
+============================================================
+n=5: EXHAUSTIVE TEST
+============================================================
+  All perfect squares: True
+  Failures: 0/1024
+  Distinct det values: [1, 9, 25, 49, 81]
+  Square roots: [1, 3, 5, 7, 9]
+  All roots odd: True
+
+============================================================
+n=6: EXHAUSTIVE TEST
+============================================================
+  All perfect squares: True
+  Failures: 0/32768
+  Distinct det values: [1, 9, 25, 49, 81]
+  Square roots: [1, 3, 5, 7, 9]
+  All roots odd: True
+
+============================================================
+n=7: SAMPLE TEST (every 100th tournament)
+============================================================
+  All perfect squares: True
+  Failures: 0/20972
+  Distinct det values: [1, 9, 25, 49, 81, 121, 169, 225, 289, 361, 441, 529, 625, 729, 961, 1089, 1225]
+  Square roots: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31, 33, 35]
+  All roots odd: True
+
+============================================================
+ALGEBRAIC ANALYSIS: WHY IS det(I+2A) A PERFECT SQUARE?
+============================================================
+
+For a tournament T with adjacency matrix A:
+  A + A^T = J - I  (tournament axiom)
+  S = A - A^T  (skew-symmetric)
+  A = (J - I + S) / 2
+
+So: I + 2A = I + (J - I + S) = J + S
+
+Therefore: det(I + 2A) = det(J + S) where S is skew-symmetric.
+
+Now: J = 1*1^T (rank-1 matrix, all entries 1).
+By the matrix determinant lemma:
+  det(J + S) = det(S + 1*1^T) = det(S) * (1 + 1^T S^{-1} 1)  [if S invertible]
+
+For ODD n: det(S) = 0 (skew-symmetric of odd order).
+So we need a different approach.
+
+For EVEN n: det(S) = Pf(S)^2 (perfect square by Pfaffian).
+And S^{-1} is also skew-symmetric, so 1^T S^{-1} 1 = 0.
+This gives det(J + S) = det(S) = Pf(S)^2.  <-- PERFECT SQUARE!
+
+For ODD n: We use the fact that J + S has rank at most n.
+Since S has rank n-1 (odd skew-symmetric), and J has rank 1,
+the rank of J + S is at most n.
+
+Actually, for odd n: ker(S) = span(v) where v is the vector of
+cofactors. Since S is a tournament's skew-adjacency, this v is related
+to the Pfaffian structure.
+
+Let me verify: for even n, det(I+2A) = det(J+S) = det(S) = Pf(S)^2.
+
+VERIFICATION: Even n, det(I+2A) = det(S) = Pf(S)^2
+  n=4: CONFIRMED det(I+2A) = det(S) for all 64 tournaments
+  n=6: CONFIRMED det(I+2A) = det(S) for all 32768 tournaments
+
+ODD n ANALYSIS:
+
+  n=3:
+    bits=0: det(J+S)=1, sum_Pf^2=3
+    bits=1: det(J+S)=1, sum_Pf^2=3
+    bits=2: det(J+S)=9, sum_Pf^2=3
+    bits=3: det(J+S)=1, sum_Pf^2=3
+    bits=4: det(J+S)=1, sum_Pf^2=3
+    bits=5: det(J+S)=9, sum_Pf^2=3
+    bits=6: det(J+S)=1, sum_Pf^2=3
+    bits=7: det(J+S)=1, sum_Pf^2=3
+
+  n=5:
+    bits=0: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=37: det(J+S)=1, v=[3, -3, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=74: det(J+S)=49, v=[1, -3, 1, -1, 3], sum(v)=1, sum^2=1, match=False
+    bits=111: det(J+S)=1, v=[1, -1, 1, -3, 3], sum(v)=1, sum^2=1, match=True
+    bits=148: det(J+S)=1, v=[3, -1, 3, -1, 1], sum(v)=5, sum^2=25, match=False
+    bits=185: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=222: det(J+S)=9, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=False
+    bits=259: det(J+S)=1, v=[3, -1, 1, -3, 1], sum(v)=1, sum^2=1, match=True
+    bits=296: det(J+S)=49, v=[1, -1, 1, -3, 3], sum(v)=1, sum^2=1, match=False
+    bits=333: det(J+S)=25, v=[1, -1, 3, -1, 3], sum(v)=5, sum^2=25, match=True
+    bits=370: det(J+S)=1, v=[3, -1, 1, -3, 1], sum(v)=1, sum^2=1, match=True
+    bits=407: det(J+S)=25, v=[1, -3, 1, -1, 3], sum(v)=1, sum^2=1, match=False
+    bits=444: det(J+S)=1, v=[3, -1, 3, -1, 1], sum(v)=5, sum^2=25, match=False
+    bits=481: det(J+S)=1, v=[1, -1, 1, -3, 3], sum(v)=1, sum^2=1, match=True
+    bits=518: det(J+S)=25, v=[1, -3, 1, -3, 1], sum(v)=-3, sum^2=9, match=False
+    bits=555: det(J+S)=9, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=False
+    bits=592: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=629: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=666: det(J+S)=81, v=[1, -1, 3, -3, 1], sum(v)=1, sum^2=1, match=False
+    bits=703: det(J+S)=1, v=[1, -3, 3, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=740: det(J+S)=25, v=[1, -1, 3, -3, 1], sum(v)=1, sum^2=1, match=False
+    bits=777: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=814: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=851: det(J+S)=1, v=[1, -3, 3, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=888: det(J+S)=1, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=True
+    bits=925: det(J+S)=9, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=False
+    bits=962: det(J+S)=9, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=False
+    bits=999: det(J+S)=9, v=[1, -1, 1, -1, 1], sum(v)=1, sum^2=1, match=False
+
+
+============================================================
+THEOREM: det(I+2A) = (sum_i (-1)^i Pf(S_ii))^2
+============================================================
+
+For a tournament T on n vertices (n odd) with skew-adjacency S = A - A^T:
+
+  I + 2A = J + S  (since A + A^T = J - I for tournaments)
+
+  det(J + S) = det(S + 1*1^T)
+
+Since S is skew-symmetric of odd order, det(S) = 0 and rank(S) = n-1.
+The adjugate adj(S) has rank 1 for skew-symmetric matrices of odd order.
+
+Key identity: adj(S) = v * v^T where v_i = (-1)^i * Pf(S_ii)
+(S_ii = S with row i and column i deleted, which is even-order skew-symmetric)
+
+By the matrix determinant lemma for rank-deficient matrices:
+  det(S + 1*1^T) = det(S) + 1^T * adj(S) * 1 = 0 + (1^T v)^2 = (sum_i v_i)^2
+
+Therefore: det(I + 2A) = (sum_{i=0}^{n-1} (-1)^i Pf(S_{ii}))^2
+
+This is ALWAYS a perfect square!
+
+For even n: det(I + 2A) = det(J + S) = det(S) = Pf(S)^2 (also a perfect square).
+
+COMBINED: For ANY tournament on any n, det(I + 2A) is a perfect square.
+
+EXHAUSTIVE VERIFICATION:
+  MISMATCH at n=3, bits=2: 9 != 1
+  MISMATCH at n=5, bits=2: 9 != 1
+
+
+============================================================
+BONUS: WHAT IS THE PFAFFIAN SUM?
+============================================================
+
+  n=5 exhaustive:
+  Pfaffian sum values: [-3, 1, 5]
+    Pf_sum=-3: H=[3, 5, 9, 13, 15], count=64
+    Pf_sum=1: H=[1, 3, 5, 9, 11, 13, 15], count=768
+    Pf_sum=5: H=[3, 5, 9, 13, 15], count=192
+
+
+============================================================
+PFAFFIAN SUM AT n=7 FOR AMBIGUOUS PAIR
+============================================================
+  H=109, c7=8:
+    v = [7, -1, 3, -7, 1, -3, 1]
+    Pf_sum = 1
+    Pf_sum^2 = 1
+    det(I+2A) = 1
+  H=111, c7=9:
+    v = [9, -1, 3, -3, 9, -1, 1]
+    Pf_sum = 17
+    Pf_sum^2 = 289
+    det(I+2A) = 289
+
+
+============================================================
+DONE.
+============================================================

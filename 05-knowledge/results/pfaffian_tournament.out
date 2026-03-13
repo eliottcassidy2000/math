@@ -1,0 +1,145 @@
+======================================================================
+VERIFICATION: Pf(S)^2 = det(S)
+======================================================================
+  n=3: Pf^2 = det(S) VERIFIED for all 8 tournaments
+  n=4: Pf^2 = det(S) VERIFIED for all 64 tournaments
+  n=5: Pf^2 = det(S) VERIFIED for all 1024 tournaments
+  n=6: Pf^2 = det(S) VERIFIED for all 32768 tournaments
+
+======================================================================
+NULL VECTOR OF S (odd n) = signed Pfaffian vector
+======================================================================
+
+  n=3:
+    bits=0: w=[-1, 1, -1], sum=-1, sum^2=1, det(J+S)=1
+    bits=1: w=[-1, 1, 1], sum=1, sum^2=1, det(J+S)=1
+    bits=2: w=[-1, -1, -1], sum=-3, sum^2=9, det(J+S)=9
+
+  n=5:
+    bits=0: w=[1, -1, 1, -1, 1], sum=1, sum^2=1, det(J+S)=1
+    bits=1: w=[1, -1, -1, 1, -1], sum=-1, sum^2=1, det(J+S)=1
+    bits=2: w=[1, 1, 1, -3, 3], sum=3, sum^2=9, det(J+S)=9
+
+======================================================================
+EXHAUSTIVE: n=5 Pfaffian sum (signed) vs H
+======================================================================
+  Pfaffian sum -> H mapping:
+    Pf_sum=-9: H=[15]
+    Pf_sum=-7: H=[13]
+    Pf_sum=-5: H=[9, 15]
+    Pf_sum=-3: H=[3, 9]
+    Pf_sum=-1: H=[1, 5, 11]
+    Pf_sum=+1: H=[1, 5, 11]
+    Pf_sum=+3: H=[3, 9]
+    Pf_sum=+5: H=[9, 15]
+    Pf_sum=+7: H=[13]
+    Pf_sum=+9: H=[15]
+
+  H -> Pfaffian sum mapping:
+    H=1: Pf_sum=[-1, 1]
+    H=3: Pf_sum=[-3, 3]
+    H=5: Pf_sum=[-1, 1]
+    H=9: Pf_sum=[-5, -3, 3, 5]
+    H=11: Pf_sum=[-1, 1]
+    H=13: Pf_sum=[-7, 7]
+    H=15: Pf_sum=[-9, -5, 5, 9]
+
+  Does Pf_sum determine anything beyond H at n=5?
+    (H=1, Pf_sum=-1): c5=[0]
+    (H=1, Pf_sum=+1): c5=[0]
+    (H=3, Pf_sum=-3): c5=[0]
+    (H=3, Pf_sum=+3): c5=[0]
+    (H=5, Pf_sum=-1): c5=[0]
+    (H=5, Pf_sum=+1): c5=[0]
+    (H=9, Pf_sum=-5): c5=[1]
+    (H=9, Pf_sum=-3): c5=[1]
+    (H=9, Pf_sum=+3): c5=[1]
+    (H=9, Pf_sum=+5): c5=[1]
+    (H=11, Pf_sum=-1): c5=[1]
+    (H=11, Pf_sum=+1): c5=[1]
+    (H=13, Pf_sum=-7): c5=[2]
+    (H=13, Pf_sum=+7): c5=[2]
+    (H=15, Pf_sum=-9): c5=[3]
+    (H=15, Pf_sum=-5): c5=[2]
+    (H=15, Pf_sum=+5): c5=[2]
+    (H=15, Pf_sum=+9): c5=[3]
+
+======================================================================
+DEEPEST AMBIGUITY PAIR: n=7 Pfaffian analysis
+======================================================================
+
+  H=109, c7=8:
+    H = 109, c7 = 8
+    w = [-7, 1, 3, -7, -1, -3, 1]
+    Pf_sum = sum(w) = -13
+    Pf_sum^2 = 169
+    det(J+S) = 169
+    det(I+2A) = 169
+    Match: Pf_sum^2 = det(J+S) = det(I+2A)? True
+    Deletion Pfaffians:
+      Pf(S\0) = -7 (det = 49 = -7^2 = 49)
+      Pf(S\1) = -1 (det = 1 = -1^2 = 1)
+      Pf(S\2) = +3 (det = 9 = 3^2 = 9)
+      Pf(S\3) = +7 (det = 49 = 7^2 = 49)
+      Pf(S\4) = -1 (det = 1 = -1^2 = 1)
+      Pf(S\5) = +3 (det = 9 = 3^2 = 9)
+      Pf(S\6) = +1 (det = 1 = 1^2 = 1)
+
+  H=111, c7=9:
+    H = 111, c7 = 9
+    w = [-9, 1, -3, 3, -9, -1, -1]
+    Pf_sum = sum(w) = -19
+    Pf_sum^2 = 361
+    det(J+S) = 361
+    det(I+2A) = 361
+    Match: Pf_sum^2 = det(J+S) = det(I+2A)? True
+    Deletion Pfaffians:
+      Pf(S\0) = -9 (det = 81 = -9^2 = 81)
+      Pf(S\1) = -1 (det = 1 = -1^2 = 1)
+      Pf(S\2) = -3 (det = 9 = -3^2 = 9)
+      Pf(S\3) = -3 (det = 9 = -3^2 = 9)
+      Pf(S\4) = -9 (det = 81 = -9^2 = 81)
+      Pf(S\5) = +1 (det = 1 = 1^2 = 1)
+      Pf(S\6) = -1 (det = 1 = -1^2 = 1)
+
+======================================================================
+INTERPRETATION: What does Pf(S\v) count?
+======================================================================
+
+For a tournament T on n vertices with skew-adjacency S = A - A^T:
+
+Pf(S) counts the number of PERFECT MATCHINGS with signs:
+  Pf(S) = sum over perfect matchings M: sign(M) * prod_{(i,j) in M} S[i][j]
+
+For a tournament, S[i][j] = +1 if i->j, -1 if j->i.
+So each perfect matching M gets weight = product of signs = +1 or -1
+multiplied by the sign of the matching permutation.
+
+For EVEN n: Pf(S) = signed count of perfect matchings.
+For ODD n: Pf is undefined (S is singular). But Pf(S\v) is defined
+for each vertex v, giving a "local Pfaffian" at each vertex.
+
+The null vector w_i = (-1)^i * Pf(S\i) has the interpretation:
+w_i = signed count of perfect matchings of T\{i} with an extra
+sign factor of (-1)^i (from the row/column ordering).
+
+The PFAFFIAN SUM = sum_i w_i = sum_i (-1)^i * Pf(S\i)
+is the total "signed matching weight" across all vertex deletions.
+
+Verify at n=5:
+  bits=0: H=1, w=[1, -1, 1, -1, 1], Pf_sum=1, Pf_sum^2=1
+  bits=10: H=9, w=[1, 3, -1, -1, 3], Pf_sum=5, Pf_sum^2=25
+  bits=40: H=15, w=[3, 1, 1, 1, 3], Pf_sum=9, Pf_sum^2=81
+  bits=41: H=13, w=[3, 1, -1, 3, 1], Pf_sum=7, Pf_sum^2=49
+
+======================================================================
+PFAFFIAN SUM MODULAR PROPERTIES
+======================================================================
+
+  n=5 exhaustive:
+  All Pfaffian sums at n=5: [-9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+  All odd: True
+
+======================================================================
+DONE.
+======================================================================
