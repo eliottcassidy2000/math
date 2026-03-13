@@ -1,0 +1,66 @@
+======================================================================
+DISJ3 + C5/2 = CONST: GENERALITY TEST
+======================================================================
+
+============================================================
+PART 1: All tournaments on n=5
+============================================================
+  n=5: K_expected (for regular) = -18
+  c3 for regular = 5
+
+  Regular tournaments (scores (2,2,2,2,2)): K values = [-18]
+  *** CONSTANT K = -18 for ALL regular 5-vertex tournaments ***
+  K_expected = -18, match = True
+
+  Non-regular K values: [-11, -10, -9, -5, -2, 0]
+
+  K by score sequence:
+    (0, 1, 2, 3, 4): K = [0]
+    (0, 1, 3, 3, 3): K = [0]
+    (0, 2, 2, 2, 4): K = [0]
+    (0, 2, 2, 3, 3): K = [-2]
+    (1, 1, 1, 3, 4): K = [0]
+    (1, 1, 2, 2, 4): K = [-2]
+    (1, 1, 2, 3, 3): K = [-5]
+    (1, 2, 2, 2, 3): K = [-11, -10, -9]
+    (2, 2, 2, 2, 2): K = [-18]
+
+============================================================
+PART 2: All tournaments on n=7 (sampling)
+============================================================
+  n=7: K_expected = -126
+
+  All circulant orientations:
+    Circulant K values: [-126]
+    *** CONSTANT K = -126, expected = -126 ***
+
+  Random regular tournaments (200 samples):
+    Regular K values: [-126]
+    *** CONSTANT K = -126 for ALL regular 7-vertex tournaments ***
+
+  Random non-regular tournaments (200 samples):
+    Non-regular K values: 57 distinct values
+    Range: [-107, 0]
+
+============================================================
+PART 3: Exhaustive n=7 regular tournament census
+============================================================
+  Heavy sampling: 5000 random regular tournaments on n=7
+  Found 37379 regular tournaments
+  K distribution:
+    K=-126: 37379 tournaments (100.0%)
+
+  *** THEOREM HOLDS FOR ALL REGULAR TOURNAMENTS ON 7 VERTICES! ***
+
+============================================================
+PART 4: Random regular tournaments on n=9
+============================================================
+  n=9: K_expected = -486
+  Found 3284 regular tournaments
+  K distribution:
+    K=-486: 3284 tournaments (100.0%)
+
+  *** THEOREM HOLDS FOR ALL REGULAR n=9 TOURNAMENTS! ***
+  K = -486, expected = -486
+
+DONE.
