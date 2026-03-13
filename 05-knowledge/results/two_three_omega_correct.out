@@ -1,0 +1,265 @@
+======================================================================
+PART 1: OCF verification with FULL Omega (all odd cycles)
+======================================================================
+
+  n=5, exhaustive (1024 tournaments)
+    MISMATCH: bits=40, H=15, I(Omega,2)=11, cycles=Counter({3: 4, 5: 1}), IP=[1, 5, 0, 0, 0, 0]
+    MISMATCH: bits=41, H=13, I(Omega,2)=11, cycles=Counter({3: 4, 5: 1}), IP=[1, 5, 0, 0, 0, 0]
+    MISMATCH: bits=42, H=13, I(Omega,2)=11, cycles=Counter({3: 4, 5: 1}), IP=[1, 5, 0, 0, 0, 0]
+
+  Mismatches: 184/1024
+  => OCF FAILED
+
+  Cycle length statistics:
+    length 3: mean=2.83, max=5, nonzero=904/904
+    length 5: mean=1.00, max=1, nonzero=544/544
+
+======================================================================
+PART 2: Contribution of each cycle length to H
+======================================================================
+
+  n=5: H = 1 + 2*(3-cycle contribution) + (cross terms)
+    bits=0: H=1, I_full=1, I_3only=1, c3=0, c5=0, gap=0
+    bits=1: H=1, I_full=1, I_3only=1, c3=0, c5=0, gap=0
+    bits=100: H=9, I_full=9, I_3only=7, c3=3, c5=1, gap=2
+    bits=500: H=1, I_full=1, I_3only=1, c3=0, c5=0, gap=0
+    bits=1023: H=1, I_full=1, I_3only=1, c3=0, c5=0, gap=0
+
+======================================================================
+PART 3: The 5-cycle contribution at n=5
+======================================================================
+  Tournaments with 5-cycles: 544/1024
+  5-cycle count distribution: {0: 480, 1: 544}
+  Gap (I_full - I_3only): {0: 480, 2: 544}
+  => Each 5-cycle contributes 2 to H (since it's a single vertex in Omega, weight 2^1=2)
+
+  Checking gap = 2 * c5:
+    gap = 2*c5: 1024/1024
+
+======================================================================
+PART 4: Cycle length decomposition at n=6
+======================================================================
+  WARNING: H=41 != I(Omega,2)=37 at bits=23654
+  WARNING: H=15 != I(Omega,2)=13 at bits=860
+  WARNING: H=25 != I(Omega,2)=21 at bits=29802
+  WARNING: H=25 != I(Omega,2)=21 at bits=21575
+  WARNING: H=25 != I(Omega,2)=21 at bits=11964
+  WARNING: H=29 != I(Omega,2)=25 at bits=11284
+  WARNING: H=43 != I(Omega,2)=33 at bits=6265
+  WARNING: H=27 != I(Omega,2)=23 at bits=16850
+  WARNING: H=43 != I(Omega,2)=33 at bits=29910
+  WARNING: H=33 != I(Omega,2)=29 at bits=21962
+  WARNING: H=31 != I(Omega,2)=25 at bits=14423
+  WARNING: H=43 != I(Omega,2)=33 at bits=11363
+  WARNING: H=15 != I(Omega,2)=11 at bits=32052
+  WARNING: H=37 != I(Omega,2)=33 at bits=23333
+  WARNING: H=33 != I(Omega,2)=29 at bits=2433
+  WARNING: H=41 != I(Omega,2)=37 at bits=6420
+  WARNING: H=37 != I(Omega,2)=29 at bits=20939
+  WARNING: H=37 != I(Omega,2)=29 at bits=19769
+  WARNING: H=25 != I(Omega,2)=21 at bits=6396
+  WARNING: H=37 != I(Omega,2)=29 at bits=29419
+  WARNING: H=37 != I(Omega,2)=29 at bits=8666
+  WARNING: H=29 != I(Omega,2)=27 at bits=25658
+  WARNING: H=33 != I(Omega,2)=29 at bits=24233
+  WARNING: H=37 != I(Omega,2)=29 at bits=2747
+  WARNING: H=29 != I(Omega,2)=27 at bits=25551
+  WARNING: H=41 != I(Omega,2)=37 at bits=26382
+  WARNING: H=27 != I(Omega,2)=23 at bits=189
+  WARNING: H=37 != I(Omega,2)=33 at bits=19118
+  WARNING: H=31 != I(Omega,2)=25 at bits=3005
+  WARNING: H=29 != I(Omega,2)=27 at bits=21042
+  WARNING: H=31 != I(Omega,2)=25 at bits=1899
+  WARNING: H=43 != I(Omega,2)=33 at bits=24118
+  WARNING: H=25 != I(Omega,2)=21 at bits=1267
+  WARNING: H=15 != I(Omega,2)=13 at bits=17912
+  WARNING: H=33 != I(Omega,2)=29 at bits=11394
+  WARNING: H=37 != I(Omega,2)=33 at bits=8838
+  WARNING: H=33 != I(Omega,2)=29 at bits=14502
+  WARNING: H=33 != I(Omega,2)=29 at bits=10627
+  WARNING: H=41 != I(Omega,2)=37 at bits=8792
+  WARNING: H=15 != I(Omega,2)=13 at bits=10253
+  WARNING: H=33 != I(Omega,2)=29 at bits=8433
+  WARNING: H=29 != I(Omega,2)=25 at bits=10233
+  WARNING: H=29 != I(Omega,2)=25 at bits=23425
+  WARNING: H=29 != I(Omega,2)=27 at bits=25939
+  WARNING: H=33 != I(Omega,2)=25 at bits=26054
+  WARNING: H=29 != I(Omega,2)=27 at bits=12206
+  WARNING: H=37 != I(Omega,2)=33 at bits=14541
+  WARNING: H=33 != I(Omega,2)=29 at bits=3152
+  WARNING: H=43 != I(Omega,2)=33 at bits=26531
+  WARNING: H=33 != I(Omega,2)=29 at bits=1585
+  WARNING: H=15 != I(Omega,2)=13 at bits=3943
+  WARNING: H=37 != I(Omega,2)=33 at bits=23939
+  WARNING: H=33 != I(Omega,2)=29 at bits=11653
+  WARNING: H=33 != I(Omega,2)=29 at bits=10805
+  WARNING: H=23 != I(Omega,2)=21 at bits=20227
+  WARNING: H=37 != I(Omega,2)=29 at bits=7989
+  WARNING: H=25 != I(Omega,2)=21 at bits=9692
+  WARNING: H=23 != I(Omega,2)=21 at bits=12990
+  WARNING: H=37 != I(Omega,2)=29 at bits=6873
+  WARNING: H=13 != I(Omega,2)=11 at bits=4297
+  WARNING: H=29 != I(Omega,2)=27 at bits=26557
+  WARNING: H=33 != I(Omega,2)=29 at bits=29487
+  WARNING: H=43 != I(Omega,2)=33 at bits=11534
+  WARNING: H=37 != I(Omega,2)=33 at bits=29127
+  WARNING: H=15 != I(Omega,2)=11 at bits=7629
+  WARNING: H=23 != I(Omega,2)=21 at bits=28374
+  WARNING: H=29 != I(Omega,2)=25 at bits=25851
+  WARNING: H=23 != I(Omega,2)=21 at bits=24253
+  WARNING: H=25 != I(Omega,2)=21 at bits=22823
+  WARNING: H=13 != I(Omega,2)=11 at bits=24276
+  WARNING: H=25 != I(Omega,2)=21 at bits=23247
+  WARNING: H=37 != I(Omega,2)=29 at bits=8529
+  WARNING: H=43 != I(Omega,2)=33 at bits=9268
+  WARNING: H=23 != I(Omega,2)=21 at bits=21271
+  WARNING: H=29 != I(Omega,2)=27 at bits=30936
+  WARNING: H=29 != I(Omega,2)=27 at bits=21243
+  WARNING: H=13 != I(Omega,2)=11 at bits=8571
+  WARNING: H=29 != I(Omega,2)=27 at bits=18446
+  WARNING: H=31 != I(Omega,2)=25 at bits=8006
+  WARNING: H=33 != I(Omega,2)=29 at bits=21847
+  WARNING: H=23 != I(Omega,2)=21 at bits=2695
+  WARNING: H=25 != I(Omega,2)=21 at bits=26071
+  WARNING: H=13 != I(Omega,2)=11 at bits=22002
+  WARNING: H=31 != I(Omega,2)=25 at bits=6736
+  WARNING: H=23 != I(Omega,2)=21 at bits=5892
+  WARNING: H=31 != I(Omega,2)=25 at bits=3561
+  WARNING: H=13 != I(Omega,2)=11 at bits=31737
+  WARNING: H=23 != I(Omega,2)=21 at bits=6184
+  WARNING: H=45 != I(Omega,2)=33 at bits=22662
+  WARNING: H=29 != I(Omega,2)=25 at bits=8392
+  WARNING: H=43 != I(Omega,2)=33 at bits=30535
+  WARNING: H=33 != I(Omega,2)=29 at bits=13067
+  WARNING: H=31 != I(Omega,2)=25 at bits=15265
+  WARNING: H=25 != I(Omega,2)=21 at bits=23599
+  WARNING: H=43 != I(Omega,2)=33 at bits=2454
+  WARNING: H=27 != I(Omega,2)=23 at bits=11837
+  WARNING: H=37 != I(Omega,2)=29 at bits=14039
+  WARNING: H=43 != I(Omega,2)=33 at bits=30567
+  WARNING: H=25 != I(Omega,2)=21 at bits=10965
+  WARNING: H=25 != I(Omega,2)=21 at bits=9762
+  WARNING: H=33 != I(Omega,2)=29 at bits=32482
+  WARNING: H=33 != I(Omega,2)=29 at bits=14948
+  WARNING: H=15 != I(Omega,2)=11 at bits=8110
+  WARNING: H=15 != I(Omega,2)=13 at bits=13773
+  WARNING: H=33 != I(Omega,2)=29 at bits=27266
+  WARNING: H=25 != I(Omega,2)=21 at bits=23769
+  WARNING: H=29 != I(Omega,2)=25 at bits=12685
+  WARNING: H=37 != I(Omega,2)=29 at bits=23322
+  WARNING: H=29 != I(Omega,2)=25 at bits=20872
+  WARNING: H=33 != I(Omega,2)=29 at bits=21518
+  WARNING: H=37 != I(Omega,2)=33 at bits=22361
+  WARNING: H=37 != I(Omega,2)=29 at bits=24105
+  WARNING: H=29 != I(Omega,2)=27 at bits=17868
+  WARNING: H=43 != I(Omega,2)=33 at bits=24242
+
+  n=6 (200 samples), OCF verified for all
+    length 3: mean=5.14, max=8, present in 197/200
+    length 5: mean=3.63, max=6, present in 178/200
+
+======================================================================
+PART 5: WHY each independent odd cycle contributes factor 2
+======================================================================
+
+H(T) = I(Omega(T), 2) = sum_{S: indep set of odd cycles} 2^|S|
+
+Each independent odd cycle C contributes a factor of 2 to H.
+WHY 2?
+
+The Grinberg-Stanley proof: each odd-cycle cover contributes (-1)^...
+to the alternating sum, and the combinatorics resolves to 2^|S|.
+
+More concretely: each directed odd cycle C has 2 directions
+(clockwise and counterclockwise). In a tournament, exactly ONE
+direction is realized. But in the permutation expansion, both
+directions contribute (one as an even permutation, one as odd).
+The net contribution of a single cycle is:
+  (+1) + (+1) = 2  (both directions give same sign in the OCF)
+
+This is because an odd cycle has EVEN permutation parity:
+  sign(cycle of length k) = (-1)^{k-1}
+  For odd k: sign = (-1)^{even} = +1
+
+So BOTH orientations of an odd cycle are EVEN permutations,
+and both contribute +1 to the independence polynomial weight.
+2 = 1 + 1 = (contributions from the two orientations).
+
+For EVEN cycles (length 2, 4, 6, ...):
+  sign = (-1)^{odd} = -1
+  The two orientations would contribute +1 and -1, canceling!
+  This is why even cycles don't appear in the OCF.
+
+THE NUMBER 2 IS THE NUMBER OF ORIENTATIONS OF AN ODD CYCLE
+THAT HAVE THE SAME PERMUTATION PARITY.
+
+THE NUMBER 3 IS THE SMALLEST ODD CYCLE LENGTH.
+
+======================================================================
+PART 6: Full IP decomposition at n=5
+======================================================================
+  n=5, full IP coefficient distribution:
+    alpha_0: {1: 1024}
+    alpha_1: {1: 120, 2: 240, 4: 240, 5: 280, 6: 24}
+
+======================================================================
+PART 7: I(Omega, x) at special points (FULL Omega)
+======================================================================
+  I(Omega, -1): range [-5, 1], matches H: 120/1024, mod 2: Counter({1: 624, 0: 400})
+  I(Omega, 0): range [1, 1], matches H: 120/1024, mod 2: Counter({1: 1024})
+  I(Omega, 1): range [1, 7], matches H: 120/1024, mod 2: Counter({1: 624, 0: 400})
+  I(Omega, 2): range [1, 13], matches H: 840/1024, mod 2: Counter({1: 1024})
+  I(Omega, 3): range [1, 19], matches H: 120/1024, mod 2: Counter({1: 624, 0: 400})
+  I(Omega, 4): range [1, 25], matches H: 120/1024, mod 2: Counter({1: 1024})
+
+======================================================================
+PART 8: SYNTHESIS — The 2-3 duality
+======================================================================
+
+THEOREM (2-3 Duality in Tournament Parity):
+
+H(T) = I(Omega(T), 2) where:
+  - Omega(T) has vertices = directed ODD cycles (length 3, 5, 7, ...)
+  - Two cycles adjacent iff they share a vertex
+
+The numbers 2 and 3 appear as follows:
+
+THE NUMBER 2:
+  (a) x = 2 is the evaluation point
+  (b) 2 = number of orientations per odd cycle with same parity
+  (c) 2 = sigma/lambda ratio (the average triple budget splits 2:1:1)
+  (d) 2 divides H(T) - H(T\v) for all v (Claim A factor)
+  (e) H is always odd = NOT divisible by 2 (Redei)
+  (f) F(T, x) mod 2 = (1+x)^{n-1} — completely tournament-independent
+
+THE NUMBER 3:
+  (a) 3 = smallest odd cycle length = fundamental building block
+  (b) total_lambda = 3 * c3 (C(3,2) = 3 pairs per triangle)
+  (c) 9 | F(T, omega) for n >= 6 (THM-085)
+  (d) F(T, x) mod 3 has val(n) = 2*floor((n-1)/2) universal zeros (THM-086)
+  (e) H mod 3 is the FIRST non-trivial residue (mod 2 is trivial = always 1)
+  (f) 3 = n-2 at n=5, the first non-trivial tournament size
+
+THE PAIR (2, 3):
+  - Only consecutive prime pair
+  - 2 * 3 = 6: H mod 6 in {1, 3, 5} (combining Redei + mod 3)
+  - 2^k weights in OCF * C(3,2) structure in lambda = the fundamental coupling
+  - The 48 in tr(Sigma^3) gap: 48 = 2 * 24 = 2 * 4! = 2 * (n-3)! at n=7
+
+  The evaluation point x=2 "sees" the 3-cycle structure through the
+  independence polynomial. The 3-cycles are the atoms, and each atom
+  has weight 2 (= number of consistent orientations).
+
+======================================================================
+PART 9: H mod 6 detailed structure
+======================================================================
+
+  n=3: H mod 6 = {1: 6, 3: 2}
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\two_three_omega_correct.py", line 538, in <module>
+    print(f"    H\u2261{r}(3): c3 mod 3 = {dict(sorted(c3_mod3.items()))}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2261' in position 5: character maps to <undefined>

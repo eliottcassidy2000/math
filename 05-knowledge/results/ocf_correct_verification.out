@@ -1,0 +1,56 @@
+======================================================================
+TEST 1: OCF with CORRECT Omega at n=5 (exhaustive)
+======================================================================
+
+Result: 0/1024 mismatches
+=> OCF VERIFIED at n=5
+
+Cycle group statistics (vertex set size -> multiplicity):
+  size 3: count distribution = Counter({1: 2560})
+  size 5: count distribution = Counter({1: 360, 2: 144, 3: 40})
+
+======================================================================
+TEST 2: OCF with CORRECT Omega at n=6 (sampled)
+======================================================================
+
+Result: 0 mismatches in 500 samples
+
+======================================================================
+TEST 3: How many directed 5-cycles per vertex set at n=5?
+======================================================================
+  c5 (directed 5-cycles on all 5 vertices) distribution:
+    c5=0: 480 tournaments
+    c5=1: 360 tournaments
+    c5=2: 144 tournaments
+    c5=3: 40 tournaments
+
+  Specific mismatch case (bits=40):
+    H=15, c5=3
+    3-cycles: [([0, 1, 4], 1), ([0, 2, 4], 1), ([0, 3, 4], 1), ([1, 2, 3], 1)]
+    Total Omega vertices = 4 + 3 = 7
+    Expected I(Omega, 2) with multiplicity:
+      alpha_1 = 4 (3-cycle vertices) + 3 (5-cycle vertices) = 7
+
+======================================================================
+TEST 4: Direct GS formula (sum over odd-cycle partitions)
+======================================================================
+
+  n=5, testing GS formula variants:
+   bits     H   GS+fix   GS-fix
+      0     1        0        0
+      1     1        0        0
+      5     3        0        0
+     10     9        2        2
+     40    15        6        6
+    100     9        2        2
+    500     1        0        0
+   1023     1        0        0
+
+======================================================================
+TEST 5: Does GS formula match H? (exhaustive n=5)
+======================================================================
+  GS with 1-cycles = H: 0/1024
+  GS without 1-cycles = H: 0/1024
+
+
+Done.

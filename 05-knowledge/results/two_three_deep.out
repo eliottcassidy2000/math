@@ -1,0 +1,245 @@
+======================================================================
+PART 1: WHY x=2? Independence polynomial at various points
+======================================================================
+
+--- n=5 ---
+  I(Omega, -1): range [-4, 1], mean=-1.1, matches H: 35/200, I mod 2: Counter({1: 124, 0: 76})
+  I(Omega, 0): range [1, 1], mean=1.0, matches H: 35/200, I mod 2: Counter({1: 200})
+  I(Omega, 1): range [1, 6], mean=3.1, matches H: 35/200, I mod 2: Counter({1: 124, 0: 76})
+  I(Omega, 2): range [1, 11], mean=5.3, matches H: 116/200, I mod 2: Counter({1: 200})
+  I(Omega, 3): range [1, 16], mean=7.4, matches H: 51/200, I mod 2: Counter({1: 124, 0: 76})
+  I(Omega, 4): range [1, 21], mean=9.5, matches H: 35/200, I mod 2: Counter({1: 200})
+
+--- n=6 ---
+  I(Omega, -1): range [-6, 1], mean=-3.3, matches H: 11/500, I mod 2: Counter({1: 294, 0: 206})
+  I(Omega, 0): range [1, 1], mean=1.0, matches H: 11/500, I mod 2: Counter({1: 500})
+  I(Omega, 1): range [1, 13], mean=6.6, matches H: 11/500, I mod 2: Counter({1: 294, 0: 206})
+  I(Omega, 2): range [1, 33], mean=13.4, matches H: 62/500, I mod 2: Counter({1: 500})
+  I(Omega, 3): range [1, 61], mean=21.4, matches H: 46/500, I mod 2: Counter({1: 294, 0: 206})
+  I(Omega, 4): range [1, 97], mean=30.6, matches H: 46/500, I mod 2: Counter({1: 500})
+
+--- n=7 ---
+  I(Omega, -1): range [-7, 1], mean=-3.2, matches H: 0/500, I mod 2: Counter({1: 264, 0: 236})
+  I(Omega, 0): range [1, 1], mean=1.0, matches H: 0/500, I mod 2: Counter({1: 500})
+  I(Omega, 1): range [2, 26], mean=14.1, matches H: 0/500, I mod 2: Counter({1: 264, 0: 236})
+  I(Omega, 2): range [3, 75], mean=36.1, matches H: 7/500, I mod 2: Counter({1: 500})
+  I(Omega, 3): range [4, 148], mean=67.0, matches H: 19/500, I mod 2: Counter({1: 264, 0: 236})
+  I(Omega, 4): range [5, 245], mean=106.7, matches H: 9/500, I mod 2: Counter({1: 500})
+
+======================================================================
+PART 2: 2-ADIC VALUATION v_2(H(T))
+======================================================================
+
+--- n=3 (from 8 tournaments) ---
+  v_2(H) distribution: {0: 8}
+  H mod 4: {1: 6, 3: 2}
+  H mod 8: {1: 6, 3: 2}
+  v_2(3!) = 1
+
+--- n=4 (from 64 tournaments) ---
+  v_2(H) distribution: {0: 64}
+  H mod 4: {1: 48, 3: 16}
+  H mod 8: {1: 24, 3: 16, 5: 24}
+  v_2(4!) = 3
+
+--- n=5 (from 1024 tournaments) ---
+  v_2(H) distribution: {0: 1024}
+  H mod 4: {1: 720, 3: 304}
+  H mod 8: {1: 360, 3: 240, 5: 360, 7: 64}
+  v_2(5!) = 3
+
+--- n=6 (from 5000 tournaments) ---
+  v_2(H) distribution: {0: 5000}
+  H mod 4: {1: 3132, 3: 1868}
+  H mod 8: {1: 1539, 3: 887, 5: 1593, 7: 981}
+  v_2(6!) = 4
+
+--- n=7 (from 5000 tournaments) ---
+  v_2(H) distribution: {0: 5000}
+  H mod 4: {1: 2753, 3: 2247}
+  H mod 8: {1: 1453, 3: 1202, 5: 1300, 7: 1045}
+  v_2(7!) = 4
+
+======================================================================
+PART 3: 3-ADIC VALUATION v_3(H(T))
+======================================================================
+
+--- n=3 (from 8 tournaments) ---
+  v_3(H) distribution: {0: 6, 1: 2}
+  H mod 3: {0: 2, 1: 6}
+  H mod 9: {1: 6, 3: 2}
+  H mod 27: {1: 6, 3: 2}
+  v_3(3!) = 1
+
+--- n=4 (from 64 tournaments) ---
+  v_3(H) distribution: {0: 48, 1: 16}
+  H mod 3: {0: 16, 1: 24, 2: 24}
+  H mod 9: {1: 24, 3: 16, 5: 24}
+  H mod 27: {1: 24, 3: 16, 5: 24}
+  v_3(4!) = 1
+
+--- n=5 (from 1024 tournaments) ---
+  v_3(H) distribution: {0: 600, 1: 184, 2: 240}
+  H mod 3: {0: 424, 1: 240, 2: 360}
+  H mod 9: {0: 240, 1: 120, 2: 120, 3: 120, 4: 120, 5: 240, 6: 64}
+  H mod 27: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+  v_3(5!) = 1
+
+--- n=6 (from 5000 tournaments) ---
+  v_3(H) distribution: {0: 3443, 1: 898, 2: 586, 3: 73}
+  H mod 3: {0: 1557, 1: 1659, 2: 1784}
+  H mod 9: {0: 659, 1: 839, 2: 646, 3: 192, 4: 454, 5: 905, 6: 706, 7: 366, 8: 233}
+  H mod 27: {0: 73, 1: 150, 2: 402, 3: 192, 4: 206, 5: 414, 6: 344, 9: 532, 10: 475, 11: 244, 13: 248, 14: 78, 15: 362, 16: 164, 17: 233, 18: 54, 19: 214, 23: 413, 25: 202}
+  v_3(6!) = 2
+
+--- n=7 (from 5000 tournaments) ---
+  v_3(H) distribution: {0: 3408, 1: 1007, 2: 302, 3: 142, 4: 141}
+  H mod 3: {0: 1592, 1: 1743, 2: 1665}
+  H mod 9: {0: 585, 1: 745, 2: 590, 3: 421, 4: 513, 5: 666, 6: 586, 7: 485, 8: 409}
+  H mod 27: {0: 283, 1: 232, 2: 278, 3: 176, 4: 144, 5: 179, 6: 145, 7: 102, 8: 214, 9: 188, 10: 341, 11: 161, 12: 123, 13: 162, 14: 146, 15: 282, 16: 204, 17: 149, 18: 114, 19: 172, 20: 151, 21: 122, 22: 207, 23: 341, 24: 159, 25: 179, 26: 46}
+  v_3(7!) = 2
+
+======================================================================
+PART 4: H(T) - H(T-v) = 2 * sum mu(C)
+======================================================================
+The deletion ratio R(T) = sum_v [H(T) - H(T\v)] / (n * H(T))
+H(T) - H(T\v) is always EVEN (from Claim A, the factor of 2)
+
+--- n=5 ---
+  H(T)-H(T\v) mod 2: {0: 5000}
+  H(T)-H(T\v) mod 4: {0: 2874, 2: 2126}
+  Always even: 5000/5000 (100.0%)
+
+--- n=6 ---
+  H(T)-H(T\v) mod 2: {0: 6000}
+  H(T)-H(T\v) mod 4: {0: 3462, 2: 2538}
+  Always even: 6000/6000 (100.0%)
+
+--- n=7 ---
+  H(T)-H(T\v) mod 2: {0: 2100}
+  H(T)-H(T\v) mod 4: {0: 1077, 2: 1023}
+  Always even: 2100/2100 (100.0%)
+
+======================================================================
+PART 5: WHY 3-CYCLES? The counting structure
+======================================================================
+  Distinct (c3,c5,c7) triples: 160
+  c7 determines H uniquely: checking via OCF
+  H = I(Omega, 2) = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
+  where alpha_k = #{independent sets of size k in Omega}
+
+  H in base 2 (binary expansion via independence sets):
+    H=157, I(Omega,2)=75, alpha=[1, 13, 12, 0, 0, 0], binary=0b10011101
+    H=145, I(Omega,2)=73, alpha=[1, 12, 12, 0, 0, 0], binary=0b10010001
+    H=73, I(Omega,2)=35, alpha=[1, 9, 4, 0, 0, 0], binary=0b1001001
+    H=109, I(Omega,2)=53, alpha=[1, 10, 8, 0, 0, 0], binary=0b1101101
+    H=37, I(Omega,2)=23, alpha=[1, 7, 2, 0, 0, 0], binary=0b100101
+
+======================================================================
+PART 6: H mod 6 (Chinese Remainder: mod 2 and mod 3 combined)
+======================================================================
+
+  n=3: H mod 6 = {1: 6, 3: 2}
+    Redei: H is odd, so H mod 6 in {1,3,5}
+    CONFIRMED: only odd residues
+    H mod 3: {0: 2, 1: 6}
+
+  n=4: H mod 6 = {1: 24, 3: 16, 5: 24}
+    Redei: H is odd, so H mod 6 in {1,3,5}
+    CONFIRMED: only odd residues
+    H mod 3: {0: 16, 1: 24, 2: 24}
+
+  n=5: H mod 6 = {1: 240, 3: 424, 5: 360}
+    Redei: H is odd, so H mod 6 in {1,3,5}
+    CONFIRMED: only odd residues
+    H mod 3: {0: 424, 1: 240, 2: 360}
+
+  n=6: H mod 6 = {1: 1659, 3: 1557, 5: 1784}
+    Redei: H is odd, so H mod 6 in {1,3,5}
+    CONFIRMED: only odd residues
+    H mod 3: {0: 1557, 1: 1659, 2: 1784}
+
+  n=7: H mod 6 = {1: 1743, 3: 1592, 5: 1665}
+    Redei: H is odd, so H mod 6 in {1,3,5}
+    CONFIRMED: only odd residues
+    H mod 3: {0: 1592, 1: 1743, 2: 1665}
+
+======================================================================
+PART 7: I(Omega, x) = sum alpha_k * x^k — coefficient structure
+======================================================================
+  alpha_k statistics at n=7:
+    alpha_0: min=1, max=1, mean=1.0, always_odd=True, always_div3=False
+    alpha_1: min=1, max=13, mean=8.7, always_odd=False, always_div3=False
+    alpha_2: min=1, max=12, mean=5.0, always_odd=False, always_div3=False
+
+======================================================================
+PART 8: n-2 = sigma + lambda + delta — the triple budget
+======================================================================
+  At n=7, n-2=5
+  Possible (sigma, lambda, delta) triples summing to 5:
+  Distribution of (sigma, lambda, delta) per pair:
+    (0, 0, 5): 41
+    (0, 1, 4): 207
+    (0, 2, 3): 377
+    (0, 3, 2): 402
+    (0, 4, 1): 192
+    (0, 5, 0): 39
+    (1, 0, 4): 408
+    (1, 1, 3): 1668
+    (1, 2, 2): 2447
+    (1, 3, 1): 1614
+    (1, 4, 0): 430
+    (2, 0, 3): 1674
+    (2, 1, 2): 4972
+    (2, 2, 1): 4929
+    (2, 3, 0): 1626
+    (3, 0, 2): 3233
+    (3, 1, 1): 6524
+    (3, 2, 0): 3314
+    (4, 0, 1): 3360
+    (4, 1, 0): 3239
+    (5, 0, 0): 1304
+
+  Mean: sigma=2.502, lambda=1.246, delta=1.251
+  Ratio sigma:lambda:delta = 2.007:1.000:1.004
+  sigma/lambda ~ 2:1 ? 2.0075
+
+======================================================================
+PART 9: F(T, x) at special points
+======================================================================
+F(T, x) = sum over Ham paths P of x^{asc(P)}
+F(T, 1) = n! / n = (n-1)! ... wait, F(T,1) = H(T)
+Actually F(T, x) = sum_k F_k * x^k where F_k = # Ham paths with k ascents
+
+  --- n=4 ---
+    H: range [1, 5], mod2=Counter({1: 64}), mod3=Counter({1: 24, 2: 24, 0: 16})
+    F(2): range [1, 24], mod2=Counter({0: 56, 1: 8}), mod3=Counter({1: 27, 2: 27, 0: 10})
+    F(3): range [1, 63], mod2=Counter({1: 64}), mod3=Counter({0: 56, 1: 8})
+    F(-1): range [-3, 3], mod2=Counter({1: 64}), mod3=Counter({1: 27, 2: 27, 0: 10})
+    F(T,1)=H(T): True
+    F(T,-1) values: [-3, -1, 1, 3]
+    F(2)/H: range [1.000, 8.000], mean=3.125
+    F(3)/H: range [1.000, 27.000], mean=6.667
+
+  --- n=5 ---
+    H: range [1, 15], mod2=Counter({1: 500}), mod3=Counter({0: 207, 2: 177, 1: 116})
+    F(2): range [1, 84], mod2=Counter({0: 436, 1: 64}), mod3=Counter({1: 209, 2: 150, 0: 141})
+    F(3): range [1, 243], mod2=Counter({1: 500}), mod3=Counter({0: 436, 1: 64})
+    F(-1): range [-9, 7], mod2=Counter({1: 500}), mod3=Counter({1: 209, 2: 150, 0: 141})
+    F(T,1)=H(T): True
+    F(T,-1) values: [-9, -7, -5, -3, -1, 1, 3, 5, 7]
+    F(2)/H: range [1.000, 8.000], mean=3.828
+    F(3)/H: range [1.000, 27.000], mean=9.243
+
+  --- n=6 ---
+    H: range [1, 45], mod2=Counter({1: 500}), mod3=Counter({2: 193, 0: 172, 1: 135})
+    F(2): range [1, 150], mod2=Counter({0: 372, 1: 128}), mod3=Counter({0: 186, 2: 161, 1: 153})
+    F(3): range [1, 315], mod2=Counter({1: 500}), mod3=Counter({0: 372, 1: 128})
+    F(-1): range [-21, 21], mod2=Counter({1: 500}), mod3=Counter({0: 186, 2: 161, 1: 153})
+    F(T,1)=H(T): True
+    F(T,-1) values: [-21, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+    F(2)/H: range [1.000, 4.000], mean=3.174
+    F(3)/H: range [1.000, 9.000], mean=6.540
+
+
+Done with Part 1-9.
