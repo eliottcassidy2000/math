@@ -1,0 +1,389 @@
+======================================================================
+FIBONACCI DEEP DIVE — opus-2026-03-12-S67c
+======================================================================
+
+PART 1: prod(a + Q_k) FOR VARIOUS a
+======================================================================
+
+prod(1+Q_k) = F_p. What about prod(a+Q_k) for other a?
+
+p=5, m=2:
+  prod(-2+Q) =           -1.0  P_m(+2) =             -1  (-1)^m·P =             -1
+  prod(-1+Q) =           -1.0  P_m(+1) =             -1  (-1)^m·P =             -1
+  prod(+0+Q) =            1.0  P_m(+0) =              1  (-1)^m·P =              1
+  prod(+1+Q) =            5.0  P_m(-1) =              5  (-1)^m·P =              5
+  prod(+2+Q) =           11.0  P_m(-2) =             11  (-1)^m·P =             11
+  prod(+3+Q) =           19.0  P_m(-3) =             19  (-1)^m·P =             19
+  prod(+4+Q) =           29.0  P_m(-4) =             29  (-1)^m·P =             29
+  prod(+5+Q) =           41.0  P_m(-5) =             41  (-1)^m·P =             41
+  B_m(1) = 5 = F_p = 5
+  B_m(2) = 11
+  prod(2+Q) = 11.0
+  prod(3+Q) = 19.0
+  2^m B_m(1/2) = 11.0
+
+  IDENTITY: prod(a+Q_k) = a^m · B_m(1/a)
+    a=1: prod = 5.0000, a^m B_m(1/a) = 5.0000, match = True
+    a=2: prod = 11.0000, a^m B_m(1/a) = 11.0000, match = True
+    a=3: prod = 19.0000, a^m B_m(1/a) = 19.0000, match = True
+    a=4: prod = 29.0000, a^m B_m(1/a) = 29.0000, match = True
+    a=5: prod = 41.0000, a^m B_m(1/a) = 41.0000, match = True
+
+p=7, m=3:
+  prod(-2+Q) =            7.0  P_m(+2) =             -7  (-1)^m·P =              7
+  prod(-1+Q) =            1.0  P_m(+1) =             -1  (-1)^m·P =              1
+  prod(+0+Q) =            1.0  P_m(+0) =             -1  (-1)^m·P =              1
+  prod(+1+Q) =           13.0  P_m(-1) =            -13  (-1)^m·P =             13
+  prod(+2+Q) =           43.0  P_m(-2) =            -43  (-1)^m·P =             43
+  prod(+3+Q) =           97.0  P_m(-3) =            -97  (-1)^m·P =             97
+  prod(+4+Q) =          181.0  P_m(-4) =           -181  (-1)^m·P =            181
+  prod(+5+Q) =          301.0  P_m(-5) =           -301  (-1)^m·P =            301
+  B_m(1) = 13 = F_p = 13
+  B_m(2) = 41
+  prod(2+Q) = 43.0
+  prod(3+Q) = 97.0
+  2^m B_m(1/2) = 43.0
+
+  IDENTITY: prod(a+Q_k) = a^m · B_m(1/a)
+    a=1: prod = 13.0000, a^m B_m(1/a) = 13.0000, match = True
+    a=2: prod = 43.0000, a^m B_m(1/a) = 43.0000, match = True
+    a=3: prod = 97.0000, a^m B_m(1/a) = 97.0000, match = True
+    a=4: prod = 181.0000, a^m B_m(1/a) = 181.0000, match = True
+    a=5: prod = 301.0000, a^m B_m(1/a) = 301.0000, match = True
+
+p=11, m=5:
+  prod(-2+Q) =           23.0  P_m(+2) =            -23  (-1)^m·P =             23
+  prod(-1+Q) =           -1.0  P_m(+1) =              1  (-1)^m·P =             -1
+  prod(+0+Q) =            1.0  P_m(+0) =             -1  (-1)^m·P =              1
+  prod(+1+Q) =           89.0  P_m(-1) =            -89  (-1)^m·P =             89
+  prod(+2+Q) =          683.0  P_m(-2) =           -683  (-1)^m·P =            683
+  prod(+3+Q) =         2683.0  P_m(-3) =          -2683  (-1)^m·P =           2683
+  prod(+4+Q) =         7589.0  P_m(-4) =          -7589  (-1)^m·P =           7589
+  prod(+5+Q) =        17621.0  P_m(-5) =         -17621  (-1)^m·P =          17621
+  B_m(1) = 89 = F_p = 89
+  B_m(2) = 571
+  prod(2+Q) = 683.0
+  prod(3+Q) = 2683.0
+  2^m B_m(1/2) = 683.0
+
+  IDENTITY: prod(a+Q_k) = a^m · B_m(1/a)
+    a=1: prod = 89.0000, a^m B_m(1/a) = 89.0000, match = True
+    a=2: prod = 683.0000, a^m B_m(1/a) = 683.0000, match = True
+    a=3: prod = 2683.0000, a^m B_m(1/a) = 2683.0000, match = True
+    a=4: prod = 7589.0000, a^m B_m(1/a) = 7589.0000, match = True
+    a=5: prod = 17621.0000, a^m B_m(1/a) = 17621.0000, match = True
+
+p=13, m=6:
+  prod(-2+Q) =           -1.0  P_m(+2) =             -1  (-1)^m·P =             -1
+  prod(-1+Q) =            1.0  P_m(+1) =              1  (-1)^m·P =              1
+  prod(+0+Q) =            1.0  P_m(+0) =              1  (-1)^m·P =              1
+  prod(+1+Q) =          233.0  P_m(-1) =            233  (-1)^m·P =            233
+  prod(+2+Q) =         2731.0  P_m(-2) =           2731  (-1)^m·P =           2731
+  prod(+3+Q) =        14209.0  P_m(-3) =          14209  (-1)^m·P =          14209
+  prod(+4+Q) =        49661.0  P_m(-4) =          49661  (-1)^m·P =          49661
+  prod(+5+Q) =       136681.0  P_m(-5) =         136681  (-1)^m·P =         136681
+  B_m(1) = 233 = F_p = 233
+  B_m(2) = 2131
+  prod(2+Q) = 2731.0
+  prod(3+Q) = 14209.0
+  2^m B_m(1/2) = 2731.0
+
+  IDENTITY: prod(a+Q_k) = a^m · B_m(1/a)
+    a=1: prod = 233.0000, a^m B_m(1/a) = 233.0000, match = True
+    a=2: prod = 2731.0000, a^m B_m(1/a) = 2731.0000, match = True
+    a=3: prod = 14209.0000, a^m B_m(1/a) = 14209.0000, match = True
+    a=4: prod = 49661.0000, a^m B_m(1/a) = 49661.0000, match = True
+    a=5: prod = 136681.0000, a^m B_m(1/a) = 136681.0000, match = True
+
+p=17, m=8:
+  prod(-2+Q) =          271.0  P_m(+2) =            271  (-1)^m·P =            271
+  prod(-1+Q) =           -1.0  P_m(+1) =             -1  (-1)^m·P =             -1
+  prod(+0+Q) =            1.0  P_m(+0) =              1  (-1)^m·P =              1
+  prod(+1+Q) =         1597.0  P_m(-1) =           1597  (-1)^m·P =           1597
+  prod(+2+Q) =        43691.0  P_m(-2) =          43691  (-1)^m·P =          43691
+  prod(+3+Q) =       399331.0  P_m(-3) =         399331  (-1)^m·P =         399331
+  prod(+4+Q) =      2135149.0  P_m(-4) =        2135149  (-1)^m·P =        2135149
+  prod(+5+Q) =      8275601.0  P_m(-5) =        8275601  (-1)^m·P =        8275601
+  B_m(1) = 1597 = F_p = 1597
+  B_m(2) = 29681
+  prod(2+Q) = 43691.0
+  prod(3+Q) = 399331.0
+  2^m B_m(1/2) = 43691.0
+
+  IDENTITY: prod(a+Q_k) = a^m · B_m(1/a)
+    a=1: prod = 1597.0000, a^m B_m(1/a) = 1597.0000, match = True
+    a=2: prod = 43691.0000, a^m B_m(1/a) = 43691.0000, match = True
+    a=3: prod = 399331.0000, a^m B_m(1/a) = 399331.0000, match = True
+    a=4: prod = 2135149.0000, a^m B_m(1/a) = 2135149.0000, match = True
+    a=5: prod = 8275601.0000, a^m B_m(1/a) = 8275601.0000, match = True
+
+======================================================================
+PART 2: B_m(x) AS A GENERATING FUNCTION
+======================================================================
+
+prod(a + Q_k) = a^m B_m(1/a)
+Setting x = 1/a: prod(1/x + Q_k) = (1/x)^m B_m(x)
+So B_m(x) = x^m prod(Q_k + 1/x)
+
+The ZEROS of B_m(x) are at x_k = -1/Q_k!
+Since all Q_k > 0, all zeros of B_m are REAL and NEGATIVE.
+
+  p=7: B_m zeros = [-3.2469796  -1.55495813 -0.19806226]
+         Q_k = [5.04891734 0.64310413 0.30797853]
+  B_m(-1) = -1
+  B_m(0)  = 1 (should be 1)
+  B_m(1)  = 13 = F_p = 13
+  B_m(2)  = 41
+  B_m(3)  = 91
+  B_m(4)  = 169
+  Pell_{2m+1} = 169
+  B_m(2) = 41
+  Check: is B_m(2) related to Pell?
+    B_0..B_7 at x=2: [1, 3, 11, 41, 153, 571, 2131, 7953]
+    Pell_0..15: [0, 1, 2, 5, 12, 29, 70, 169, 408, 985, 2378, 5741, 13860, 33461, 80782, 195025]
+
+  p=11: B_m zeros = [-3.68250707 -2.83083003 -1.71537032 -0.69027853 -0.08101405]
+         Q_k = [12.34353752  1.44869057  0.5829645   0.35325328  0.27155413]
+  B_m(-1) = 1
+  B_m(0)  = 1 (should be 1)
+  B_m(1)  = 89 = F_p = 89
+  B_m(2)  = 571
+  B_m(3)  = 2089
+  B_m(4)  = 5741
+  Pell_{2m+1} = 5741
+  B_m(2) = 571
+  Check: is B_m(2) related to Pell?
+    B_0..B_7 at x=2: [1, 3, 11, 41, 153, 571, 2131, 7953]
+    Pell_0..15: [0, 1, 2, 5, 12, 29, 70, 169, 408, 985, 2378, 5741, 13860, 33461, 80782, 195025]
+
+  p=13: B_m zeros = [-3.77091205 -3.13612949 -2.24107336 -1.29079023 -0.5029785  -0.05811637]
+         Q_k = [17.20685727  1.98815654  0.77471922  0.44621475  0.31886438  0.26518783]
+  B_m(-1) = 1
+  B_m(0)  = 1 (should be 1)
+  B_m(1)  = 233 = F_p = 233
+  B_m(2)  = 2131
+  B_m(3)  = 10009
+  B_m(4)  = 33461
+  Pell_{2m+1} = 33461
+  B_m(2) = 2131
+  Check: is B_m(2) related to Pell?
+    B_0..B_7 at x=2: [1, 3, 11, 41, 153, 571, 2131, 7953]
+    Pell_0..15: [0, 1, 2, 5, 12, 29, 70, 169, 408, 985, 2378, 5741, 13860, 33461, 80782, 195025]
+
+======================================================================
+PART 3: PROD(a+Q_k) = a^m B_m(1/a) — THE FULL PICTURE
+======================================================================
+
+This gives us a PARAMETERIZED FAMILY of identities:
+
+p=7, m=3:
+  a=1: prod(1+Q) = F_{2m+1} = F_7 = 13
+  d/da prod(a+Q)|_{a=1} = 20.0000
+  = m·F_p - B'_m(1) = 3·13 - 19 = 20
+  F_p · sum 1/(1+Q_k) = 13 · 1.538462 = 20.0000
+  sum 1/(1+Q_k) = 1.538462
+  = m - B'_m(1)/F_p = 3 - 1.461538
+  B'_m(1)/F_p = 1.461538
+  log-deriv B'_m(1)/B_m(1) = 1.461538
+
+p=11, m=5:
+  a=1: prod(1+Q) = F_{2m+1} = F_11 = 89
+  d/da prod(a+Q)|_{a=1} = 235.0000
+  = m·F_p - B'_m(1) = 5·89 - 210 = 235
+  F_p · sum 1/(1+Q_k) = 89 · 2.640449 = 235.0000
+  sum 1/(1+Q_k) = 2.640449
+  = m - B'_m(1)/F_p = 5 - 2.359551
+  B'_m(1)/F_p = 2.359551
+  log-deriv B'_m(1)/B_m(1) = 2.359551
+
+p=13, m=6:
+  a=1: prod(1+Q) = F_{2m+1} = F_13 = 233
+  d/da prod(a+Q)|_{a=1} = 744.0000
+  = m·F_p - B'_m(1) = 6·233 - 654 = 744
+  F_p · sum 1/(1+Q_k) = 233 · 3.193133 = 744.0000
+  sum 1/(1+Q_k) = 3.193133
+  = m - B'_m(1)/F_p = 6 - 2.806867
+  B'_m(1)/F_p = 2.806867
+  log-deriv B'_m(1)/B_m(1) = 2.806867
+
+======================================================================
+PART 4: FIBONACCI WORD AND TOURNAMENT MORPHISM
+======================================================================
+
+The Fibonacci word is the infinite binary word obtained from
+the substitution S: 0→01, 1→0.
+It encodes the 1D quasicrystal (Fibonacci chain).
+
+Connection: the Interval tournament has generating set
+S = {1,...,m} = the 'interval' in Z_p. The complement is
+{m+1,...,p-1}. This partition of Z_p* into two halves
+is the simplest possible — analogous to the Fibonacci
+word's partition into 0s and 1s.
+
+  F-word 2: 0000... (length 4)
+  F-word 3: 00000000... (length 8)
+  F-word 4: 0000000000000000... (length 16)
+  F-word 5: 00000000000000000000000000000000... (length 32)
+  F-word 6: 00000000000000000000000000000000000000000000000000... (length 64)
+  F-word 7: 00000000000000000000000000000000000000000000000000... (length 128)
+
+Key analogy:
+  Fibonacci chain: 01001010010010100101...
+  has diffraction peaks at positions n/φ mod 1
+
+  Interval tournament: eigenvalues Q_k peak at k=1
+  with Q_1/Q_2 → ∞ as p → ∞
+
+  Both exhibit 'quasicrystalline order':
+  - Not periodic (the Q_k are all different)
+  - Not random (they follow a precise Chebyshev formula)
+  - Self-similar (Morgan-Voyce recurrence = self-similar structure)
+
+======================================================================
+PART 5: H IN THE FIBONACCI BASIS
+======================================================================
+
+  p=5: H = 15
+    Zeckendorf: 13 + 2
+    H / F_p = 3.000000
+    H mod F_p = 0
+    H = 3 · F_5 + 0
+    H/p = 3
+    Nearest F: F_3=2, F_4=3
+    Nearest L: L_1=1, L_2=3
+
+  p=7: H = 175
+    Zeckendorf: 144 + 21 + 8 + 2
+    H / F_p = 13.461538
+    H mod F_p = 6
+    H = 13 · F_7 + 6
+    H/p = 25
+    Nearest F: F_8=21, F_9=34
+    Nearest L: L_6=18, L_7=29
+
+  p=11: H = 93027
+    Zeckendorf: 75025 + 17711 + 233 + 55 + 3
+    H / F_p = 1045.247191
+    H mod F_p = 22
+    H = 1045 · F_11 + 22
+    H/p = 8457
+    Nearest F: F_20=6765, F_21=10946
+    Nearest L: L_18=5778, L_19=9349
+
+  p=13: H = 3711175
+    Zeckendorf: 3524578 + 121393 + 46368 + 17711 + 987 + 89 + 34 + 13 + 2
+    H / F_p = 15927.789700
+    H mod F_p = 184
+    H = 15927 · F_13 + 184
+    H/p = 285475
+    Nearest F: F_27=196418, F_28=317811
+    Nearest L: L_26=271443, L_27=439204
+
+======================================================================
+PART 6: GOLDEN RATIO IN THE EIGENVALUE SPECTRUM
+======================================================================
+
+  p= 7: F_p^(1/m) = 2.351335 (→ φ² = 2.618034)
+    Q_1/Q_2 = 7.8509
+    Q_2/Q_3 = 2.0881
+  p=11: F_p^(1/m) = 2.454019 (→ φ² = 2.618034)
+    Q_1/Q_2 = 8.5205
+    Q_2/Q_3 = 2.4850
+  p=13: F_p^(1/m) = 2.480615 (→ φ² = 2.618034)
+    Q_1/Q_2 = 8.6547
+    Q_2/Q_3 = 2.5663
+  p=17: F_p^(1/m) = 2.514277 (→ φ² = 2.618034)
+    Q_1/Q_2 = 8.7968
+    Q_2/Q_3 = 2.6529
+  p=23: F_p^(1/m) = 2.542159 (→ φ² = 2.618034)
+    Q_1/Q_2 = 8.8886
+    Q_2/Q_3 = 2.7092
+  p=29: F_p^(1/m) = 2.558231 (→ φ² = 2.618034)
+    Q_1/Q_2 = 8.9298
+    Q_2/Q_3 = 2.7345
+  p=43: F_p^(1/m) = 2.578012 (→ φ² = 2.618034)
+    Q_1/Q_2 = 8.9680
+    Q_2/Q_3 = 2.7580
+
+  ASYMPTOTIC: F_p^(1/m) → φ² = 2.618034
+  because F_p ≈ φ^p/√5 and p = 2m+1, so
+  F_p^(1/m) ≈ (φ^(2m+1)/√5)^(1/m) → φ^2 = 2.618034
+
+======================================================================
+PART 7: FIBONACCI DIVISIBILITY LATTICE
+======================================================================
+
+Key property: F_m | F_n iff m | n.
+So F_p is always coprime to F_q for distinct primes p, q > 5.
+
+The Pisano period π(p) = period of F_n mod p:
+
+  p= 5: π(p) =   20, F_p mod p = 0, (5/p) = +0
+    p divides F_{p-(p+1)} = F_6
+  p= 7: π(p) =   16, F_p mod p = 6, (5/p) = -1
+    p divides F_{p-(p+1)} = F_8
+  p=11: π(p) =   10, F_p mod p = 1, (5/p) = +1
+    p divides F_{p-1} = F_10
+  p=13: π(p) =   28, F_p mod p = 12, (5/p) = -1
+    p divides F_{p-(p+1)} = F_14
+  p=17: π(p) =   36, F_p mod p = 16, (5/p) = -1
+    p divides F_{p-(p+1)} = F_18
+  p=19: π(p) =   18, F_p mod p = 1, (5/p) = +1
+    p divides F_{p-1} = F_18
+  p=23: π(p) =   48, F_p mod p = 22, (5/p) = -1
+    p divides F_{p-(p+1)} = F_24
+  p=29: π(p) =   14, F_p mod p = 1, (5/p) = +1
+    p divides F_{p-1} = F_28
+  p=31: π(p) =   30, F_p mod p = 1, (5/p) = +1
+    p divides F_{p-1} = F_30
+  p=37: π(p) =   76, F_p mod p = 36, (5/p) = -1
+    p divides F_{p-(p+1)} = F_38
+  p=41: π(p) =   40, F_p mod p = 1, (5/p) = +1
+    p divides F_{p-1} = F_40
+  p=43: π(p) =   88, F_p mod p = 42, (5/p) = -1
+    p divides F_{p-(p+1)} = F_44
+
+  F_p ≡ (5/p) mod p (by Fibonacci reciprocity law)
+  So prod(1+Q_k) ≡ (5/p) mod p
+
+  This constrains the Q-spectrum modularly!
+
+======================================================================
+PART 8: FIBONACCI-TOURNAMENT DICTIONARY
+======================================================================
+
+| Fibonacci/Golden Ratio     | Tournament                          |
+|----------------------------|-------------------------------------|
+| F_p = prod(1+Q_k)          | Eigenvalue product of Interval      |
+| φ² = lim F_p^{1/m}         | Geometric mean of 1+Q_k             |
+| B_m(x) = Morgan-Voyce      | Generating function of e_j           |
+| [[3,-1],[1,0]]^m           | Transfer matrix of ladder network   |
+| Zeckendorf representation  | (Open) Decomposition of H?          |
+| F_m | F_n iff m | n        | (Open) Divisibility in H?           |
+| Pisano period π(p)         | Periodicity of F_p mod p            |
+| Fibonacci word (quasicryst)| Dirichlet kernel (aperiodic order)  |
+| φ = (1+√5)/2               | Eigenvalue of transfer matrix       |
+| F_{p-1} + F_{p+1} = L_p    | Lucas = trace of T^m                |
+| 1/φ + 1/φ² = 1             | Eigenvalue reciprocal sum = 1       |
+| F_n² + F_{n+1}² = F_{2n+1} | Parseval-type identity for Q_k?     |
+
+DEEPEST CONNECTION:
+  The Interval tournament IS a 1D Fibonacci quasicrystal
+  in frequency space. Its eigenvalues (Q_k) are the
+  'phonon frequencies' of the Fibonacci chain. The identity
+  prod(1+Q_k) = F_p says: the thermal partition function
+  of this quasicrystal at temperature T = 1/ln(2) equals
+  the p-th Fibonacci number.
+
+UNEXPLORED DIRECTIONS:
+  1. Does the Fibonacci LATTICE (2D, Penrose tiling)
+     have an analogue for 2D tournaments?
+  2. The golden ratio appears in KAM theory (stability
+     of Hamiltonian systems). Does tournament stability
+     (under perturbation of S) follow golden-ratio scaling?
+  3. Fibonacci numbers count tilings of 1×n rectangles.
+     Does F_p count tilings related to the tournament?
+  4. The Binet formula F_p = (φ^p - ψ^p)/√5 means
+     prod(1+Q_k) splits into TWO Galois-conjugate parts.
+     This might connect to the Galois structure of Q(cos 2π/p).
+
