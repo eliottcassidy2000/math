@@ -1,0 +1,112 @@
+======================================================================
+PALEY TOURNAMENT EULER CHARACTERISTIC — KEY FINDINGS
+opus-2026-03-13-S71b
+======================================================================
+
+CONJECTURE (HYP-671): chi(P_p) = p for all Paley primes p ≥ 7.
+
+EVIDENCE:
+  P_3  (m=1): Omega/p=[1,1,0], chi=0 (EXCEPTION, too small)
+  P_7  (m=3): Omega/p=[1,3,6,9,9,6,3], chi=7=p ✓
+  P_11 (m=5): Omega/p=[1,5,20,70,205,460,700,690,450,180,30], chi=11=p ✓
+  P_19 (m=9): Omega/p through d=8: [1,9,72,540,3753,23832,136260,688266,2987622]
+              Partial chi/p = 2415061. Full computation pending.
+
+NON-PALEY CIRCULANTS (chi ≠ p in general):
+  C_7^{1,2,3}:    chi/p=0, chi=0
+  C_7^{1,3,5}:    chi/p=0, chi=0
+  C_11^{1..5}:    chi/p=0, chi=0 (interval tournament)
+  C_11^{1,2,4,5,8}: chi/p=2, chi=22
+  C_11^{1,2,3,6,7}: chi/p=2, chi=22
+  => chi=p is SPECIFIC to Paley (QR connection set)
+
+======================================================================
+BETTI CONCENTRATION (HYP-672)
+======================================================================
+
+For P_p with m=(p-1)/2 ≥ 3, Betti numbers are concentrated:
+  β_d = 0 for d ∉ {0, m, m+1}
+  β_0 = 1
+  β_m = m(m-3)/2
+  β_{m+1} = m(m+1)/2 = C(m+1, 2)
+  chi = 1 - β_m + β_{m+1} = 1 + 2m = p
+
+VERIFICATION:
+  P_7 (m=3):
+    β = [1, 0, 0, 0, 6, 0, 0]
+    β_3 = 3(3-3)/2 = 0 ✓
+    β_4 = C(4,2) = 6 ✓
+    chi = 1 + 0 + 6 = 7 ✓
+
+  P_11 (m=5):
+    β = [1, 0, 0, 0, 0, 5, 15, 0, 0, 0, 0]
+    β_5 = 5(5-3)/2 = 5 ✓
+    β_6 = C(6,2) = 15 ✓
+    chi = 1 - 5 + 15 = 11 ✓
+
+PREDICTIONS:
+  P_19 (m=9):
+    β_9 = 9(9-3)/2 = 27
+    β_10 = C(10,2) = 45
+    chi = 1 - 27 + 45 = 19
+
+  P_23 (m=11):
+    β_11 = 11(11-3)/2 = 44
+    β_12 = C(12,2) = 66
+    chi = 1 - 44 + 66 = 23
+
+  P_31 (m=15):
+    β_15 = 15(15-3)/2 = 90
+    β_16 = C(16,2) = 120
+    chi = 1 - 90 + 120 = 31
+
+  General: β_{m+1} - β_m = m(m+1)/2 - m(m-3)/2 = 2m = p-1 always.
+
+======================================================================
+OMEGA/A RATIO PATTERN (HYP-674)
+======================================================================
+
+For Paley tournaments, the fraction of allowed paths that are in Omega
+decreases nearly linearly:
+
+  rank(C_2)/A_2 = 1/m   (exact for all tested p)
+  rank(C_3)/A_3 = 4/p   (exact for all tested p)
+
+P_19 Omega/A ratios: 1.00, 1.00, 0.889, 0.789, 0.690, 0.592, 0.491, 0.391, 0.292
+  Decrease per degree ≈ 1/m = 0.111
+
+P_11 Omega/A ratios: 1.00, 1.00, 0.800, 0.636, 0.477, 0.322, 0.176, 0.079, 0.031, 0.011, 0.003
+  Decrease per degree ≈ 1/m = 0.200 (initially)
+
+======================================================================
+CHI_GLMY vs CHI_TRANSITIVE (HYP-673)
+======================================================================
+
+chi_transitive (alternating sum of transitive sub-tournament counts):
+  P_3:  chi_t = 0
+  P_7:  chi_t = 7
+  P_11: chi_t = 11
+  P_19: chi_t = -152 = -8 × 19
+  P_23: chi_t = 23
+
+chi_GLMY (alternating sum of path homology Omega dims):
+  P_3:  chi_GLMY = 0
+  P_7:  chi_GLMY = 7
+  P_11: chi_GLMY = 11
+  P_19: chi_GLMY = 19 (PREDICTED by HYP-671, not yet verified)
+  P_23: chi_GLMY = 23 (PREDICTED)
+
+KEY: chi_GLMY uses LINEAR ALGEBRA (kernel of constraint map), while
+chi_transitive counts INDIVIDUAL transitive subsets. Omega_d ≥ t_{d+1}
+because Omega includes formal linear combinations where non-allowed
+face contributions cancel.
+
+For P_7: Omega_2/p = 6 while t_3/p = 3 (factor 2 from cancellation pairs)
+For P_19: difference is dramatic (chi_t = -152 vs predicted chi_GLMY = 19)
+
+Among general tournaments:
+  n=4: chi_GLMY = chi_t for ALL 16 tournaments
+  n=5: chi_GLMY ≠ chi_t for 40/1024 tournaments (all non-regular)
+  n=7: Some regular non-Paley circulants have chi_GLMY ≠ chi_t
+
+DONE.
