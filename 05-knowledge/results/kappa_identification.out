@@ -1,0 +1,132 @@
+/Users/e/Documents/GitHub/math/04-computation/kappa_identification.py:253: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+  return np.trapz(integrand, theta) / pi  # ∫_0^π / π = average over half-period
+HIGH-PRECISION κ COMPUTATION
+============================================================
+  p= 9791, m=4895: κ = 0.6713266702
+  p= 9811, m=4905: κ = 0.6713267363
+  p= 9817, m=4908: κ = 0.6713267561
+  p= 9827, m=4913: κ = 0.6713267890
+  p= 9839, m=4919: κ = 0.6713268285
+  p= 9847, m=4923: κ = 0.6713268547
+  p= 9857, m=4928: κ = 0.6713268874
+  p= 9859, m=4929: κ = 0.6713268940
+  p= 9871, m=4935: κ = 0.6713269332
+  p= 9899, m=4949: κ = 0.6713270242
+  p= 9901, m=4950: κ = 0.6713270307
+  p= 9907, m=4953: κ = 0.6713270501
+  p= 9919, m=4959: κ = 0.6713270889
+  p= 9929, m=4964: κ = 0.6713271212
+  p= 9937, m=4968: κ = 0.6713271469
+  p= 9941, m=4970: κ = 0.6713271598
+  p= 9949, m=4974: κ = 0.6713271855
+  p= 9967, m=4983: κ = 0.6713272432
+  p= 9989, m=4994: κ = 0.6713273134
+  p= 9991, m=4995: κ = 0.6713273197
+
+Best estimate: κ = 0.6713273197
+
+  2/3 = 0.6666666667  (diff = 4.66e-03)
+  log(2) = 0.6931471806  (diff = -2.18e-02)
+  1 - 1/(2e) = 0.8160602794  (diff = -1.45e-01)
+  2log(φ)/π = 0.3063489625  (diff = 3.65e-01)
+  3/π + 1/6 = 1.1215963252
+  1 - 1/e = 0.6321205588
+  1 - 1/3 = 0.6666666667
+  π/4 - 1/12 = 0.7020648301
+  1/log(4) = 0.7213475204
+
+  0.67143... Let's get more digits and try to identify
+
+Richardson extrapolation: κ_∞ = 0.671359119629
+  Correction: -0.317723/p + 0.0981/p²
+  Alt fit (1/√p): κ_∞ = 0.671392675265
+
+============================================================
+ANALYTICAL DERIVATION ATTEMPT
+============================================================
+
+Growth of S(m) = Σ_{Q>1} log Q:
+  m=  20: S(m) = 12.7743, S(m)/m = 0.638716, S(m)/(m*logφ) = 1.327308
+  m=  50: S(m) = 32.1556, S(m)/m = 0.643113, S(m)/(m*logφ) = 1.336444
+  m= 200: S(m) = 129.0740, S(m)/m = 0.645370, S(m)/(m*logφ) = 1.341135
+  m=2000: S(m) = 1292.1109, S(m)/m = 0.646055, S(m)/(m*logφ) = 1.342559
+
+S(m)/m convergence:
+  m=4950: S(m)/m = 0.64605714
+  m=4953: S(m)/m = 0.64605718
+  m=4959: S(m)/m = 0.64605727
+  m=4964: S(m)/m = 0.64605735
+  m=4968: S(m)/m = 0.64605741
+  m=4970: S(m)/m = 0.64605744
+  m=4974: S(m)/m = 0.64605750
+  m=4983: S(m)/m = 0.64605763
+  m=4994: S(m)/m = 0.64605780
+  m=4995: S(m)/m = 0.64605781
+
+S(m)/m at m=4995: 0.64605781
+2*κ*log(φ) = 0.64613189
+Predicted S(m)/m → 2κ_∞·logφ = 0.64613189
+
+============================================================
+THE INTEGRAL REPRESENTATION
+============================================================
+
+m = 10000: κ = 0.6713432282
+  S/m = 0.64609488
+  logF/m = 0.96239130
+  2·log(φ) = 0.96242365
+  fraction above: 0.333300
+  m=  10: (1/π)∫_0^π log(1+F_m(θ))dθ = 1.155844, val/log(m) = 0.501977, val/(2logφ) = 1.200972
+  m=  50: (1/π)∫_0^π log(1+F_m(θ))dθ = 1.165825, val/log(m) = 0.298011, val/(2logφ) = 1.211343
+  m= 100: (1/π)∫_0^π log(1+F_m(θ))dθ = 1.166139, val/log(m) = 0.253224, val/(2logφ) = 1.211669
+  m= 500: (1/π)∫_0^π log(1+F_m(θ))dθ = 1.166239, val/log(m) = 0.187661, val/(2logφ) = 1.211773
+  m=1000: (1/π)∫_0^π log(1+F_m(θ))dθ = 1.166234, val/log(m) = 0.168830, val/(2logφ) = 1.211767
+
+Observation: the integral grows as 2·log(m) + const, not 2·log(φ)!
+This is because logF_p ≈ 2m·logφ but the RIEMANN SUM has m terms,
+each contributing ~2logφ/1 in the average, while the INTEGRAL is
+dominated by the peak at θ=0 which contributes ~log(m²).
+
+The resolution: the Riemann sum ≠ integral for sharply peaked functions.
+The peak of F_m at θ=0 has width O(1/m), capturing ~O(1) sample points
+near θ=0, each contributing O(log m²). But there are ~m points total,
+each contributing O(1) on average.
+
+============================================================
+ALTERNATIVE: κ AS AN INTEGRAL
+============================================================
+
+Convergence of averages:
+  m=50001: S/m = 0.64612449, logF/m = 0.96241718, κ = 0.67135594
+  m=25010: S/m = 0.64611710, logF/m = 0.96241072, κ = 0.67135277
+  m=10005: S/m = 0.64609491, logF/m = 0.96239132, κ = 0.67134324
+  m= 5003: S/m = 0.64605793, logF/m = 0.96235899, κ = 0.67132737
+  m= 2501: S/m = 0.64598395, logF/m = 0.96229430, κ = 0.67129562
+  m= 1001: S/m = 0.64576233, logF/m = 0.96210047, κ = 0.67120052
+
+  2·logφ = 0.96242365
+
+============================================================
+TRYING TO IDENTIFY κ EXACTLY
+============================================================
+
+κ_∞ = 0.671359119629
+Target: 0.6713591196
+
+Closest matches:
+  2/3                            = 0.6666666667  diff = 4.69e-03
+  2φ/π-1/e                       = 0.6621929884  diff = 9.17e-03
+  1-1/π                          = 0.6816901138  diff = 1.03e-02
+  log(2)                         = 0.6931471806  diff = 2.18e-02
+  π/4-1/12                       = 0.7020648301  diff = 3.07e-02
+  ln(2)+1/42                     = 0.7169567044  diff = 4.56e-02
+  2·(8/π²-1/2)                   = 0.6211389383  diff = 5.02e-02
+  2log(φ²)/π                     = 0.6126979251  diff = 5.87e-02
+  4logφ/π                        = 0.6126979251  diff = 5.87e-02
+  (4/π)·logφ                     = 0.6126979251  diff = 5.87e-02
+
+Trying p/q · C for small p,q and C ∈ {π, φ, e, √2, √3, √5, log2}:
+  3·√5/10                        = 0.6708203932  diff = 5.39e-04
+  19·1/π/9                       = 0.6719875375  diff = 6.28e-04
+
+Trying a·C₁ + b·C₂ for small integers a,b:
