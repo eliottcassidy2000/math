@@ -1,0 +1,27 @@
+EFFECTIVE MARGINAL H PER CYCLE BY LENGTH
+============================================================
+  dH=-1628, predicted=-1628, match=True
+  dH=-2068, predicted=-2068, match=True
+  dH=-2684, predicted=-2684, match=True
+
+Solving for effective coefficients with b11 = 2:
+  det(A) = 4940672.0
+
+  Effective H per unit c_k:
+    b_5 = -36.9375
+    b_7 = -1.5000
+    b_9 = 3.6250
+    b_11 = 2.0000
+
+  Verification:
+    diff 0: actual dH=-1628, predicted=-1628.0
+    diff 1: actual dH=-2068, predicted=-2068.0
+    diff 2: actual dH=-2684, predicted=-2684.0
+
+  Interpretation:
+    c_5: b=-36.9375 < 2 -- LESS VALUABLE (overlap penalty)
+    c_7: b=-1.5000 < 2 -- LESS VALUABLE (overlap penalty)
+    c_9: b=3.6250 > 2 -- SUPER-VALUABLE (disjoint pair bonus)
+    c_11: b=2.0000 ~ 2 -- NEUTRAL (no alpha effect)
+
+DONE.

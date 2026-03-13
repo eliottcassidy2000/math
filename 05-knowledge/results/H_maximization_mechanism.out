@@ -1,0 +1,54 @@
+
+======================================================================
+  H-MAXIMIZATION MECHANISM AT p=7
+======================================================================
+
+   bits        H      N       a2     a3   ovlp%    H/N #sets #disj
+  ------------------------------------------------------------
+      3      189     80        7      0 99.778%  2.362    36     7
+      0      175     59       14      0 99.182%  2.966    36    14
+
+  Linear model: H = 135.67 + 0.6667 * N
+  R^2 = 1.000000
+  Max residual = 0.00
+  Note: exact formula coefficient is 2.0 for the N term
+  The slope b=0.6667 > 2 absorbs part of the alpha_2, alpha_3 contributions
+
+  Is alpha_2 a function of N alone? True
+  N -> alpha_2 map: {59: 14, 80: 7}
+  Is alpha_3 a function of N alone? True
+
+  Overlap coefficient: d(alpha_2)/dN ~ -0.3333
+  Critical threshold: 1/2 = 0.5
+  Since |overlap_coeff| = 0.3333 < 0.5: MORE cycles always helps
+
+  At p=7: H = 1 + 2N + 4*a2 (alpha_3 = 0)
+  Net dH/dN = 2 - 4*(da2/dN)
+    N: 59->80: dN=21, da2=-7, da2/dN=-0.333, dH=14, predicted_dH=14
+
+======================================================================
+  H-MAXIMIZATION MECHANISM AT p=11
+======================================================================
+
+   bits        H      N       a2     a3   ovlp%    H/N #sets #disj
+  ------------------------------------------------------------
+      2    95095  21169    10879   1155 99.995%  4.492   793  3861
+      4    93467  19541    11220   1188 99.994%  4.783   815  4378
+      0    93027  18397    11110   1474 99.993%  5.057   848  4972
+      1    92411  19629    10912   1188 99.994%  4.708   804  4158
+
+  Linear model: H = 85359.73 + 0.4008 * N
+  R^2 = 0.191331
+  Max residual = 1249.67
+  Note: exact formula coefficient is 2.0 for the N term
+  The slope b=0.4008 > 2 absorbs part of the alpha_2, alpha_3 contributions
+
+  Is alpha_2 a function of N alone? True
+  N -> alpha_2 map: {18397: 11110, 19541: 11220, 19629: 10912, 21169: 10879}
+  Is alpha_3 a function of N alone? True
+
+  Overlap coefficient: d(alpha_2)/dN ~ -0.0734
+  Critical threshold: 1/2 = 0.5
+  Since |overlap_coeff| = 0.0734 < 0.5: MORE cycles always helps
+
+DONE.

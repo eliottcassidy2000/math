@@ -1,0 +1,73 @@
+PER-LENGTH ORDERING:
+  c_3: A:55 > B:55 > C:55 > D:55
+  c_5: A:594 > D:572 > B:550 > C:484
+  c_7: A:3960 > D:3729 > B:3586 > C:3399
+  c_9: A:11055 > D:10274 > B:10197 > C:9350
+  c_11: A:5505 > B:5153 > C:5109 > D:4999
+
+  N:  A:21169 > D:19629 > B:19541 > C:18397
+  H:  A:95095 > B:93467 > C:93027 > D:92411
+  a2: B:11220 > C:11110 > D:10912 > A:10879
+  a3: C:1474 > B:1188 > D:1188 > A:1155
+
+
+DETAILED B vs D COMPARISON:
+  dN  =    +88,  2*dN  =   +176
+  da2 =   -308,  4*da2 =  -1232
+  da3 =     +0,  8*da3 =     +0
+  Total dH = -1056 (actual: -1056)
+
+  D has MORE cycles (+88) but FEWER disjoint pairs (-308)
+  The disjoint pair DEFICIT costs 4*(308) = 1232
+  vs the cycle SURPLUS benefit 2*88 = 176
+  Net: cycle surplus is OVERWHELMED by disjoint pair change
+  This is the ONLY case at p=11 where more cycles doesn't help!
+
+
+PER-LENGTH DISJOINT PAIR COMPARISON (B vs D):
+  disj(3,3): B=517, D=506, D-B=  -11
+  disj(3,5): B=3740, D=3652, D-B=  -88
+  disj(3,7): B=4862, D=4840, D-B=  -22
+  disj(5,5): B=2101, D=1914, D-B= -187
+
+  Total a2: B=11220, D=10912, D-B= -308
+
+
+======================================================================
+  REVISED UNDERSTANDING OF H-MAXIMIZATION
+======================================================================
+  H = 1 + 2*N + 4*alpha_2 + 8*alpha_3
+  ALL terms are POSITIVE. More of anything helps.
+
+  But N and alpha_2 are ANTI-CORRELATED:
+  More cycles => more overlaps => fewer disjoint pairs => lower alpha_2
+
+  The question: does the 2*dN gain from more cycles
+  overcome the 4*|d(alpha_2)| loss from fewer disjoint pairs?
+
+  ANSWER: For Paley (A) vs others, YES (always).
+  But for D vs B (within the non-Paley classes), NO.
+  D has more cycles but it doesn't compensate.
+
+  Why does Paley's N advantage SCALE better?
+  Paley's extra cycles come overwhelmingly from c9 (+858 over B)
+  and c7 (+374 over B), which are LARGE cycles.
+  Large cycles overlap with EVERYTHING, contributing 0 to alpha_2.
+  So Paley's N increase is 'cheap' — it doesn't reduce alpha_2 much.
+
+  Paley's N advantage by cycle length:
+    dc_3 =    +0 (  +0.0% of dN)
+    dc_5 =   +44 (  +2.7% of dN)
+    dc_7 =  +374 ( +23.0% of dN)
+    dc_9 =  +858 ( +52.7% of dN)
+    dc_11 =  +352 ( +21.6% of dN)
+
+  D's N advantage over B by cycle length:
+    dc_3 =    +0 (  +0.0% of dN)
+    dc_5 =   +22 ( +25.0% of dN)
+    dc_7 =  +143 (+162.5% of dN)
+    dc_9 =   +77 ( +87.5% of dN)
+    dc_11 =  -154 (-175.0% of dN)
+
+
+DONE.

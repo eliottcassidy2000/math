@@ -1,0 +1,92 @@
+
+======================================================================
+  PER-LENGTH CYCLE MAXIMIZATION AT p=7
+======================================================================
+  Paley bits = 3
+
+  k=3: Paley c_k=14, max c_k=14, min=14
+    Distinct values: 1
+    Paley maximizes? True
+    # maximizers: 8
+      c_3 = 14: 8 orientations <-- PALEY
+
+  k=5: Paley c_k=42, max c_k=42, min=28
+    Distinct values: 2
+    Paley maximizes? True
+    # maximizers: 2
+      c_5 = 42: 2 orientations <-- PALEY
+      c_5 = 28: 6 orientations
+
+  k=7: Paley c_k=24, max c_k=24, min=17
+    Distinct values: 2
+    Paley maximizes? True
+    # maximizers: 2
+      c_7 = 24: 2 orientations <-- PALEY
+      c_7 = 17: 6 orientations
+
+  Savchenko check: Does Paley maximize EVERY c_k?
+    YES -- Paley maximizes c_k for ALL k in {3,5,...,7}
+
+  Anti-Paley (S=NQR=[3, 5, 6]): bits=4
+    k=3: anti-Paley c_k=14, Paley c_k=14, same=True
+    k=5: anti-Paley c_k=42, Paley c_k=42, same=True
+    k=7: anti-Paley c_k=24, Paley c_k=24, same=True
+
+======================================================================
+  PER-LENGTH CYCLE MAXIMIZATION AT p=11
+======================================================================
+  Paley bits = 29
+
+  k=3: Paley c_k=55, max c_k=55, min=55
+    Distinct values: 1
+    Paley maximizes? True
+    # maximizers: 32
+      c_3 = 55: 32 orientations <-- PALEY
+
+  k=5: Paley c_k=594, max c_k=594, min=484
+    Distinct values: 4
+    Paley maximizes? True
+    # maximizers: 2
+      c_5 = 594: 2 orientations <-- PALEY
+      c_5 = 572: 10 orientations
+      c_5 = 550: 10 orientations
+      c_5 = 484: 10 orientations
+
+  k=7: Paley c_k=3960, max c_k=3960, min=3399
+    Distinct values: 4
+    Paley maximizes? True
+    # maximizers: 2
+      c_7 = 3960: 2 orientations <-- PALEY
+      c_7 = 3729: 10 orientations
+      c_7 = 3586: 10 orientations
+      c_7 = 3399: 10 orientations
+
+  k=9: Paley c_k=11055, max c_k=11055, min=9350
+    Distinct values: 4
+    Paley maximizes? True
+    # maximizers: 2
+      c_9 = 11055: 2 orientations <-- PALEY
+      c_9 = 10274: 10 orientations
+      c_9 = 10197: 10 orientations
+      c_9 = 9350: 10 orientations
+
+  k=11: Paley c_k=5505, max c_k=5505, min=4999
+    Distinct values: 4
+    Paley maximizes? True
+    # maximizers: 2
+      c_11 = 5505: 2 orientations <-- PALEY
+      c_11 = 5153: 10 orientations
+      c_11 = 5109: 10 orientations
+      c_11 = 4999: 10 orientations
+
+  Savchenko check: Does Paley maximize EVERY c_k?
+    YES -- Paley maximizes c_k for ALL k in {3,5,...,11}
+
+  Anti-Paley (S=NQR=[2, 6, 7, 8, 10]): bits=2
+    k=3: anti-Paley c_k=55, Paley c_k=55, same=True
+    k=5: anti-Paley c_k=594, Paley c_k=594, same=True
+    k=7: anti-Paley c_k=3960, Paley c_k=3960, same=True
+    k=9: anti-Paley c_k=11055, Paley c_k=11055, same=True
+    k=11: anti-Paley c_k=5505, Paley c_k=5505, same=True
+
+DONE.
