@@ -1,0 +1,3213 @@
+======================================================================
+ANALYSIS 1: THE 2D H-MANIFOLD
+======================================================================
+
+n=5: H-manifold analysis
+  Total tournaments: 1024
+  (var_s, H_4) determines H uniquely? True
+  Number of (var_s, H_4) pairs: 8
+  Number of distinct H values: 7
+  H is a FUNCTION of (score_variance, H_4) -- confirmed!
+  The H-manifold is EXACTLY 2-dimensional.
+
+  Score variance | #H4 values | H4 range
+  ---------------+------------+---------
+           0.0000 |          1 | 0.0
+           0.4000 |          3 | -1.0 to 3.0
+           0.8000 |          1 | 0.0
+           1.2000 |          1 | -1.0
+           1.6000 |          1 | 0.0
+           2.0000 |          1 | 1.0
+
+n=6: H-manifold analysis
+  Total tournaments: 32768
+  (var_s, H_4) determines H uniquely? True
+  Number of (var_s, H_4) pairs: 24
+  Number of distinct H values: 19
+  H is a FUNCTION of (score_variance, H_4) -- confirmed!
+  The H-manifold is EXACTLY 2-dimensional.
+
+  Score variance | #H4 values | H4 range
+  ---------------+------------+---------
+           0.2500 |          3 | 0.5 to 4.5
+           0.5833 |          2 | -1.5 to 2.5
+           0.9167 |          6 | -5.5 to 8.5
+           1.2500 |          4 | -7.5 to 4.5
+           1.5833 |          4 | -5.5 to 0.5
+           1.9167 |          1 | -1.5
+           2.2500 |          2 | 0.5 to 4.5
+           2.5833 |          1 | 4.5
+           2.9167 |          1 | 8.5
+
+======================================================================
+ANALYSIS 2: THE TOURNAMENT UNCERTAINTY PRINCIPLE
+======================================================================
+
+CLAIM: There is a TOURNAMENT UNCERTAINTY PRINCIPLE:
+  Score regularity (small Var_s) and cycle control (specific H_4) are
+  partially incompatible. You can optimize one at the cost of the other.
+
+  - Regular tournaments (Var_s = 0) have the MOST favorable H_2,
+    but H_4 is FIXED (= 0 at n=5, may vary at larger n).
+  - Irregular tournaments sacrifice H_2 but gain more control over H_4.
+
+This is analogous to the Heisenberg uncertainty principle: position
+(score exactness) and momentum (cycle structure) cannot both be
+precisely controlled.
+
+It's also the Vitali analogy: trying to "choose" both a specific
+score sequence AND a specific cycle structure from each equivalence
+class is like trying to construct a measurable Vitali set.
+
+
+n=5: Score variance vs H_4 spread
+     Var_s | #tours |     H4_range |  H4_spread |   H4_std
+  ---------+--------+--------------+------------+---------
+    0.0000 |     24 |          0.0 |        0.0 |   0.0000
+    0.4000 |    280 |  -1.0 to 3.0 |        4.0 |   1.3997
+    0.8000 |    240 |          0.0 |        0.0 |   0.0000
+    1.2000 |    240 |         -1.0 |        0.0 |   0.0000
+    1.6000 |    120 |          0.0 |        0.0 |   0.0000
+    2.0000 |    120 |          1.0 |        0.0 |   0.0000
+
+n=6: Score variance vs H_4 spread
+     Var_s | #tours |     H4_range |  H4_spread |   H4_std
+  ---------+--------+--------------+------------+---------
+    0.2500 |   2640 |   0.5 to 4.5 |        4.0 |   1.3361
+    0.5833 |   4800 |  -1.5 to 2.5 |        4.0 |   1.9596
+    0.9167 |   8640 |  -5.5 to 8.5 |       14.0 |   3.9861
+    1.2500 |   3648 |  -7.5 to 4.5 |       12.0 |   3.2615
+    1.5833 |   6240 |  -5.5 to 0.5 |        6.0 |   2.1648
+    1.9167 |   2880 |         -1.5 |        0.0 |   0.0000
+    2.2500 |   2240 |   0.5 to 4.5 |        4.0 |   0.7423
+    2.5833 |    960 |          4.5 |        0.0 |   0.0000
+    2.9167 |    720 |          8.5 |        0.0 |   0.0000
+
+======================================================================
+ANALYSIS 3: THE {0,1,2} STRUCTURE IN OVERLAP WEIGHTS
+======================================================================
+
+At n=5: The three levels (0, 1, 2) appear naturally in three places:
+
+1. SCORE VALUES: s_v ranges from 0 to n-1 = 4
+   The "ternary" restriction to (0, 1, 2) captures n=3 exactly.
+
+2. OVERLAP WEIGHTS: Two 3-cycles share 0, 1, or 2 vertices.
+   W(C_i, C_j) in {0, 1, 2} (never 3, since |C|=3).
+
+3. FOURIER DEGREES: Only degrees (0, 2, 4) appear (mapped to (0, 1, 2)).
+   The degree-2k term captures k-th order interactions.
+
+The VITALI STRUCTURE maps these three views:
+  Score level (fine)   ->  Fourier degree 2 (coarse)
+  Overlap weight (fine) -> Fourier degree 4 (finer)
+  Full tournament (finest) -> All degrees (complete)
+
+Each coarsening is a "Vitali quotient" — grouping by equivalence class.
+
+
+  3-Cycle overlap distribution by H value:
+      H |     ov=0 |     ov=1 |     ov=2 |    total
+  ------+----------+----------+----------+---------
+      5 |     0.00 |     0.00 |     1.00 |     1.00
+      9 |     0.00 |     0.50 |     2.50 |     3.00
+     11 |     0.00 |     2.00 |     4.00 |     6.00
+     13 |     0.00 |     3.00 |     3.00 |     6.00
+     15 |     0.00 |     3.75 |     3.75 |     7.50
+
+======================================================================
+ANALYSIS 4: WHAT H_4 REALLY MEASURES
+======================================================================
+
+n=5: Score class (1,2,2,2,3)
+
+  H=11 (H_4=-1.0): bits=12
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 0, 0, 1, 1, 2], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=11 (H_4=-1.0): bits=28
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 1, 1, 0, 0, 2], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [0]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=15 (H_4=3.0): bits=40
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=41
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 0, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [3]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=42
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=1): beats [1]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=44
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 1, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [0, 1]
+    v3(s=1): beats [2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=11 (H_4=-1.0): bits=57
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 0, 1, 2, 1, 0, 1], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [0]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=68
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=15 (H_4=3.0): bits=69
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=11 (H_4=-1.0): bits=70
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 2, 0, 0, 1, 1, 0, 1], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=11 (H_4=-1.0): bits=72
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 0, 2, 0, 1], var=0.4400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=73
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 0, 0, 0, 2, 0, 1], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=74
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=1): beats [1]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=77
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 0, 1, 0, 1], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=1): beats [4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=78
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 2, 0, 0, 0, 1, 0, 1], var=0.4400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=85
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [0]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=13 (H_4=1.0): bits=89
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 0, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [0]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=92
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 1, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=1): beats [0]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=15 (H_4=3.0): bits=93
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [0]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=97
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 0, 0, 1, 1, 1, 2], var=0.4400
+    v0(s=1): beats [1]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=11 (H_4=-1.0): bits=99
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 1, 0, 0, 2], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [3, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=13 (H_4=1.0): bits=101
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 0, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=1): beats [2]
+    v4(s=3): beats [0, 2, 3]
+
+  H=13 (H_4=1.0): bits=104
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [2, 3]
+
+  H=15 (H_4=3.0): bits=106
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=107
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 1, 0, 0, 1], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=108
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 0, 0, 1, 1, 0, 1, 0, 0, 1], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=1): beats [2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=109
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 1, 0, 1, 0, 0, 1, 0, 0, 1], var=0.4400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=1): beats [2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=121
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 0, 1, 2, 1, 0, 1], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=1): beats [0]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=138
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 0, 1, 0, 1, 2, 1], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [1, 2, 3]
+
+  H=15 (H_4=3.0): bits=152
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=153
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=154
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 0, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=156
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 1, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [1]
+    v4(s=3): beats [1, 2, 3]
+
+  H=11 (H_4=-1.0): bits=170
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 1, 1, 0, 2, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [0]
+    v4(s=3): beats [1, 2, 3]
+
+  H=11 (H_4=-1.0): bits=185
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 0, 2, 1, 1, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [0]
+    v4(s=3): beats [1, 2, 3]
+
+  H=13 (H_4=1.0): bits=194
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 0, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [0, 2, 3]
+
+  H=15 (H_4=3.0): bits=195
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [0, 2, 3]
+
+  H=11 (H_4=-1.0): bits=198
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 2, 0, 0, 1, 1, 1, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [1]
+    v4(s=3): beats [0, 2, 3]
+
+  H=11 (H_4=-1.0): bits=200
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 0, 2, 1, 0], var=0.4400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=201
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 0, 0, 0, 2, 1, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=203
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=1): beats [4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=204
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=1): beats [1]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=206
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 2, 0, 0, 0, 1, 1, 0], var=0.4400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [1]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=209
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 0, 0, 1, 1, 2, 1], var=0.4400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [0, 2, 3]
+
+  H=13 (H_4=1.0): bits=211
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [0, 2, 3]
+
+  H=11 (H_4=-1.0): bits=213
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 1, 0, 2, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [1]
+    v4(s=3): beats [0, 2, 3]
+
+  H=13 (H_4=1.0): bits=216
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 1, 1, 1, 0], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=218
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 0, 0, 1, 0, 1, 1, 0, 1, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=219
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 0, 1, 1, 0, 0, 1, 0, 1, 0], var=0.4400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [2, 3]
+
+  H=15 (H_4=3.0): bits=220
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [1]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=221
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [1]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=227
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 1, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [0]
+    v4(s=3): beats [0, 2, 3]
+
+  H=13 (H_4=1.0): bits=233
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 0, 1, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=1): beats [0]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=234
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 1, 1, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [0]
+    v4(s=2): beats [2, 3]
+
+  H=15 (H_4=3.0): bits=235
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [0]
+    v4(s=2): beats [2, 3]
+
+  H=11 (H_4=-1.0): bits=249
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 0, 2, 1, 1, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [0]
+    v4(s=2): beats [2, 3]
+
+  H=13 (H_4=1.0): bits=262
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=13 (H_4=1.0): bits=266
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 0, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=268
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 1, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=1): beats [0]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=15 (H_4=3.0): bits=270
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=276
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=11 (H_4=-1.0): bits=277
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 2, 0, 1, 0, 0, 1, 1], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=15 (H_4=3.0): bits=278
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [4]
+    v3(s=2): beats [1, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=11 (H_4=-1.0): bits=280
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 2, 0, 1, 0, 1], var=0.4400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=281
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=282
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 0, 2, 0, 0, 0, 1], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=285
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 2, 0, 1, 0, 0, 0, 1], var=0.4400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=286
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 1, 0, 0, 0, 1], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=290
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 0, 1, 2, 0, 1, 1], var=0.4400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=13 (H_4=1.0): bits=291
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [3]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=11 (H_4=-1.0): bits=294
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 0, 2, 0, 1, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 4]
+    v3(s=1): beats [2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=13 (H_4=1.0): bits=296
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 1, 1, 1, 0], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=297
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 2, 0, 1, 0, 0, 1, 1, 1, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [3]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=299
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 2, 1, 1, 0, 0, 1, 0, 1, 0], var=0.4400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=1): beats [3]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [1, 3]
+
+  H=15 (H_4=3.0): bits=300
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=302
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=305
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 0, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=15 (H_4=3.0): bits=307
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [4]
+    v3(s=2): beats [0, 2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=11 (H_4=-1.0): bits=309
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 2, 0, 1, 1, 0, 1, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=1): beats [2]
+    v4(s=3): beats [0, 1, 3]
+
+  H=11 (H_4=-1.0): bits=312
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 2, 1, 1, 0, 0], var=0.4400
+    v0(s=1): beats [4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=314
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 0, 2, 1, 0, 0, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=1): beats [4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=315
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=316
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=317
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 2, 0, 1, 1, 0, 0, 0], var=0.4400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=322
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=323
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 2, 0, 1, 0, 0, 1, 0, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [4]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=324
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 2, 0, 1, 1, 1, 0], var=0.4400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=325
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 1, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=327
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 2, 1, 1, 0, 0, 1, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=1): beats [4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=15 (H_4=3.0): bits=330
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=332
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 2, 0, 0, 1, 0, 0], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=1): beats [3]
+
+  H=13 (H_4=1.0): bits=334
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 0, 0, 1, 0, 0], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=1): beats [3]
+
+  H=13 (H_4=1.0): bits=337
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=339
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 2, 0, 1, 1, 0, 0, 0, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=340
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 2, 1, 1, 0, 1, 0], var=0.4400
+    v0(s=1): beats [3]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=342
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 1, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=1): beats [4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=343
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 2, 1, 1, 1, 0, 0, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [4]
+    v3(s=2): beats [1, 2]
+    v4(s=2): beats [0, 3]
+
+  H=15 (H_4=3.0): bits=345
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [0, 1, 2]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=348
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 2, 1, 0, 0, 0, 0], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=1): beats [3]
+
+  H=13 (H_4=1.0): bits=349
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 1, 0, 0, 0, 0], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [1, 2]
+    v4(s=1): beats [3]
+
+  H=13 (H_4=1.0): bits=353
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=354
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 2, 0, 0, 1], var=0.4400
+    v0(s=1): beats [2]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [0, 3]
+
+  H=15 (H_4=3.0): bits=357
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=358
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 1, 0, 2, 0, 0, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=359
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 0, 1, 0, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=361
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 2, 0, 0, 1, 0, 1, 1, 0, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=1): beats [3]
+
+  H=13 (H_4=1.0): bits=362
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=363
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 2, 1, 0, 1, 0, 1, 0, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=1): beats [3]
+
+  H=15 (H_4=3.0): bits=369
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=371
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 1, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=1): beats [4]
+    v3(s=2): beats [0, 2]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=373
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 1, 1, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=1): beats [2]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=377
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 1, 1, 1, 0, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [0, 2]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=394
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 0, 1, 0, 1, 2, 1], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=1): beats [0]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=402
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 0, 1, 1, 0, 1, 2], var=0.4400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [0, 1, 3]
+
+  H=11 (H_4=-1.0): bits=403
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 0, 0, 0, 1, 2], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [2]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=3): beats [0, 1, 3]
+
+  H=13 (H_4=1.0): bits=406
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 0, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [1]
+    v4(s=3): beats [0, 1, 3]
+
+  H=13 (H_4=1.0): bits=408
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 2]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [1, 3]
+
+  H=15 (H_4=3.0): bits=409
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [2]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=411
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=1): beats [2]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=412
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 2, 0, 1, 1, 0, 0, 0, 1, 1], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=1): beats [1]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=414
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 2, 0, 1, 0, 0, 0, 0, 1, 1], var=0.4400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [1]
+    v4(s=2): beats [1, 3]
+
+  H=11 (H_4=-1.0): bits=426
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 1, 0, 2, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=1): beats [0]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=435
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 1, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [0]
+    v4(s=3): beats [0, 1, 3]
+
+  H=13 (H_4=1.0): bits=441
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 1, 0, 1, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=1): beats [0]
+    v4(s=2): beats [1, 3]
+
+  H=13 (H_4=1.0): bits=442
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 1, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [0]
+    v4(s=2): beats [1, 3]
+
+  H=15 (H_4=3.0): bits=443
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [0]
+    v4(s=2): beats [1, 3]
+
+  H=15 (H_4=3.0): bits=450
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=451
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 1, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=454
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 1, 0, 1, 1, 1, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=1): beats [1]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=458
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 1, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=465
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 0, 0, 1, 2, 1], var=0.4400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 4]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=466
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=469
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 1, 0, 0, 0, 2, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=1): beats [1]
+    v4(s=2): beats [0, 3]
+
+  H=15 (H_4=3.0): bits=470
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [1]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=471
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 0, 0, 0, 1, 0], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [1]
+    v4(s=2): beats [0, 3]
+
+  H=13 (H_4=1.0): bits=473
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=474
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 1, 0, 0, 1, 1, 0, 0, 1, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=475
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 1, 1, 0, 1, 0, 0, 0, 1, 0], var=0.4400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 1]
+    v4(s=1): beats [3]
+
+  H=11 (H_4=-1.0): bits=483
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 2, 0, 1, 0, 1, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=1): beats [0]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=499
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 2, 0, 1, 0, 1, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [0]
+    v4(s=2): beats [0, 3]
+
+  H=11 (H_4=-1.0): bits=524
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 0, 0, 1, 1, 2], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=540
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 1, 0, 0, 2], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [0]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=548
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 0, 1, 0, 2, 1], var=0.4400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [2, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=11 (H_4=-1.0): bits=549
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 0, 0, 0, 0, 2, 1], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [3]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [2, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=13 (H_4=1.0): bits=550
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 3]
+    v2(s=1): beats [1]
+    v3(s=2): beats [2, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=13 (H_4=1.0): bits=552
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=15 (H_4=3.0): bits=553
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [3]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=554
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 2, 1, 0, 1, 0, 0, 1, 1], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=1): beats [1]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=557
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=1): beats [3]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=558
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 2, 1, 0, 0, 0, 0, 1, 1], var=0.4400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=1): beats [1]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=565
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 0, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [0]
+    v3(s=2): beats [2, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=13 (H_4=1.0): bits=569
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [0]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=572
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 1, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=1): beats [0]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=15 (H_4=3.0): bits=573
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [0]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [1, 2]
+
+  H=15 (H_4=3.0): bits=580
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=581
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 0, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=582
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 4]
+    v2(s=1): beats [1]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=588
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 1, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=597
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 0, 2, 1, 0, 1, 1], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [0]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=609
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 0, 1, 0, 1, 1, 2], var=0.4400
+    v0(s=1): beats [1]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=611
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 1, 0, 0, 0, 2], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [3, 4]
+    v2(s=1): beats [1]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=612
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=15 (H_4=3.0): bits=614
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=615
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 1, 0, 0, 0, 1], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=1): beats [1]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=617
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 0, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=620
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 0, 1, 0, 1, 1, 0, 0, 0, 1], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=621
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 1, 1, 0, 0, 1, 0, 0, 0, 1], var=0.4400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [0, 1]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=629
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 0, 2, 1, 0, 1, 1], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=1): beats [0]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=646
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 0, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=13 (H_4=1.0): bits=650
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=652
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 1, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=1): beats [0]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=15 (H_4=3.0): bits=654
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=660
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 0, 2, 0, 1, 1], var=0.4400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=13 (H_4=1.0): bits=661
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 1, 0, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=11 (H_4=-1.0): bits=662
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 0, 0, 2, 0, 0, 1], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [3]
+    v3(s=2): beats [1, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=13 (H_4=1.0): bits=664
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=665
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 2, 1, 0, 0, 1, 1, 0, 1], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=15 (H_4=3.0): bits=666
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=669
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 2, 1, 0, 0, 1, 0, 0, 1], var=0.4400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=670
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 1, 0, 0, 1], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=674
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 1, 1, 0, 1, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=11 (H_4=-1.0): bits=675
+    Scores (by vertex): [2, 1, 2, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 2, 1, 0, 0, 0, 1, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [3]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=15 (H_4=3.0): bits=678
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=11 (H_4=-1.0): bits=680
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 2, 1, 0, 1, 1, 0], var=0.4400
+    v0(s=1): beats [4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=681
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 1, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=1): beats [3]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=683
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 2, 1, 0, 0, 0, 1, 0], var=0.4400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=1): beats [3]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=684
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 2, 0, 0, 0, 1, 0], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=686
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 0, 0, 0, 1, 0], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=689
+    Scores (by vertex): [1, 2, 2, 2, 3]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=11 (H_4=-1.0): bits=691
+    Scores (by vertex): [2, 2, 1, 2, 3]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 2, 1, 0, 1, 0, 0, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=15 (H_4=3.0): bits=693
+    Scores (by vertex): [2, 2, 2, 1, 3]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [4]
+    v4(s=3): beats [0, 1, 2]
+
+  H=11 (H_4=-1.0): bits=696
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 2, 1, 1, 1, 0, 0], var=0.4400
+    v0(s=1): beats [4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=698
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 1, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=699
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 2, 1, 0, 1, 0, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=700
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 2, 0, 1, 0, 0, 0], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [1, 2]
+
+  H=13 (H_4=1.0): bits=701
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 0, 1, 0, 0, 0], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [1, 2]
+
+  H=11 (H_4=-1.0): bits=706
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 0, 2, 1, 1, 0, 1], var=0.4400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=707
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [4]
+    v2(s=2): beats [1, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=708
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 1, 1, 1, 0], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=709
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 2, 1, 0, 0, 1, 0, 1, 1, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=711
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 2, 1, 1, 0, 1, 0, 1, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=1): beats [4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=714
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 2, 0, 1, 0, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=1): beats [2]
+
+  H=15 (H_4=3.0): bits=716
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [2]
+
+  H=13 (H_4=1.0): bits=718
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [2]
+
+  H=13 (H_4=1.0): bits=721
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 0, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=15 (H_4=3.0): bits=723
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=724
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 2, 0, 1, 0], var=0.4400
+    v0(s=1): beats [3]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=726
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 0, 1, 2, 0, 0, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=1): beats [3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=727
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=1): beats [3]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=729
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 2, 0, 0, 1, 1, 1, 0, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=1): beats [2]
+
+  H=13 (H_4=1.0): bits=732
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=733
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 2, 0, 0, 1, 1, 0, 0, 0], var=0.4400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [2]
+
+  H=13 (H_4=1.0): bits=737
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=738
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 2, 1, 0, 0, 1], var=0.4400
+    v0(s=1): beats [2]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=741
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 2, 0, 0, 1, 1, 0, 0, 1, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=742
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 1, 1, 0, 0, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 2]
+
+  H=11 (H_4=-1.0): bits=743
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 2, 0, 1, 1, 1, 0, 0, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 2]
+
+  H=15 (H_4=3.0): bits=745
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=746
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 1, 2, 0, 0, 0, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [2]
+
+  H=13 (H_4=1.0): bits=747
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 1, 0, 0, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [2]
+
+  H=15 (H_4=3.0): bits=753
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [1]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=755
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 1, 1, 1, 1, 0, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=1): beats [3]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=757
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 1, 1, 0, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 2]
+
+  H=13 (H_4=1.0): bits=761
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 1, 1, 1, 1, 0, 0], var=0.2400
+    v0(s=2): beats [1, 4]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 3]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [2]
+
+  H=11 (H_4=-1.0): bits=774
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 0, 0, 1, 2, 1, 1], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=1): beats [0]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=15 (H_4=3.0): bits=788
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=789
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 1, 0, 1, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [2]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=790
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 0, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 2]
+    v2(s=1): beats [4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=796
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 1, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=1): beats [1]
+
+  H=13 (H_4=1.0): bits=802
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 0, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=15 (H_4=3.0): bits=803
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [3]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=804
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 0, 1, 1, 2, 0], var=0.4400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=805
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 0, 0, 0, 1, 2, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [3]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=807
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=1): beats [3]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=810
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 2, 0, 0, 1, 0, 1, 1, 0], var=0.4400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=1): beats [1]
+
+  H=13 (H_4=1.0): bits=812
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=814
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 1, 2, 0, 0, 0, 0, 1, 1, 0], var=0.4400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=817
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 0, 1, 0, 2, 1, 1], var=0.4400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=819
+    Scores (by vertex): [2, 2, 1, 3, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=820
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 1, 1, 1, 0], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=822
+    Scores (by vertex): [2, 3, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 0, 1, 0, 0, 1, 1, 1, 0, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=1): beats [4]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=823
+    Scores (by vertex): [3, 2, 1, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 0, 1, 1, 0, 1, 0, 1, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [2, 3]
+    v2(s=1): beats [4]
+    v3(s=2): beats [2, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=825
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 1, 0, 2, 0, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=1): beats [1]
+
+  H=15 (H_4=3.0): bits=828
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=2): beats [3, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [1]
+
+  H=13 (H_4=1.0): bits=829
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=3): beats [1, 3, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=838
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 1, 1, 2, 0, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=1): beats [0]
+
+  H=11 (H_4=-1.0): bits=853
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 1, 0, 1, 2, 0, 1, 1, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=3): beats [1, 2, 4]
+    v4(s=1): beats [0]
+
+  H=13 (H_4=1.0): bits=867
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 1, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=3): beats [0, 2, 4]
+    v4(s=1): beats [0]
+
+  H=13 (H_4=1.0): bits=869
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 1, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [0, 1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [0]
+
+  H=13 (H_4=1.0): bits=870
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 1, 1, 1, 1, 0, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [0]
+
+  H=15 (H_4=3.0): bits=871
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [3, 4]
+    v2(s=2): beats [1, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [0]
+
+  H=11 (H_4=-1.0): bits=885
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 2, 0, 1, 1, 0], var=0.4400
+    v0(s=2): beats [1, 3]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [0, 4]
+    v3(s=2): beats [2, 4]
+    v4(s=1): beats [0]
+
+  H=11 (H_4=-1.0): bits=902
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 0, 0, 1, 2, 1, 1], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=1): beats [0]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=914
+    Scores (by vertex): [1, 2, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 0, 1, 1, 1, 0, 2], var=0.4400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [3, 4]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=915
+    Scores (by vertex): [2, 1, 2, 3, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 1, 0, 0, 0, 1, 0, 2], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [2]
+    v2(s=2): beats [3, 4]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=916
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 0, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [3]
+    v1(s=2): beats [0, 2]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 1]
+
+  H=15 (H_4=3.0): bits=917
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 0, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=1): beats [2]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=919
+    Scores (by vertex): [3, 1, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 0, 0, 0, 1, 0, 1], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=1): beats [2]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=922
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 0, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [3, 4]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=924
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 2, 1, 0, 1, 0, 0, 1, 0, 1], var=0.4400
+    v0(s=2): beats [3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=926
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 2, 1, 0, 0, 0, 0, 1, 0, 1], var=0.4400
+    v0(s=3): beats [2, 3, 4]
+    v1(s=2): beats [0, 2]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [1]
+
+  H=15 (H_4=3.0): bits=930
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=931
+    Scores (by vertex): [2, 1, 3, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 1, 1, 0, 0, 1, 1, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=1): beats [3]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=934
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 0, 1, 1, 1, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=938
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 1, 1, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=2): beats [0, 3]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=945
+    Scores (by vertex): [1, 2, 3, 2, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 0, 0, 1, 1, 0, 0, 2, 1, 1], var=0.4400
+    v0(s=1): beats [1]
+    v1(s=2): beats [2, 3]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=946
+    Scores (by vertex): [1, 3, 2, 2, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 1, 1, 1, 1, 0, 1], var=0.2400
+    v0(s=1): beats [2]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=2): beats [0, 1]
+
+  H=13 (H_4=1.0): bits=949
+    Scores (by vertex): [2, 2, 3, 1, 2]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 1, 1, 0, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 3]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=950
+    Scores (by vertex): [2, 3, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 1, 0, 0, 1, 0, 1, 1, 0, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=951
+    Scores (by vertex): [3, 2, 2, 1, 2]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [2, 1, 0, 1, 1, 0, 0, 1, 0, 0], var=0.4400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=1): beats [4]
+    v4(s=2): beats [0, 1]
+
+  H=11 (H_4=-1.0): bits=953
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 1, 1, 0, 0, 2, 0, 0], var=0.4400
+    v0(s=2): beats [1, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [1]
+
+  H=15 (H_4=3.0): bits=954
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=2): beats [2, 4]
+    v1(s=3): beats [0, 2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [1]
+
+  H=13 (H_4=1.0): bits=955
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 1, 1, 0, 0, 1, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 4]
+    v1(s=2): beats [2, 3]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [1]
+
+  H=11 (H_4=-1.0): bits=966
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 1, 1, 1, 2, 0, 0], var=0.4400
+    v0(s=2): beats [2, 3]
+    v1(s=2): beats [0, 4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [0]
+
+  H=13 (H_4=1.0): bits=979
+    Scores (by vertex): [2, 2, 2, 3, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 0, 1, 0, 1, 1, 0, 1, 0, 1], var=0.2400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=3): beats [0, 1, 4]
+    v4(s=1): beats [0]
+
+  H=13 (H_4=1.0): bits=981
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [0, 1, 1, 0, 1, 1, 0, 1, 1, 0], var=0.2400
+    v0(s=2): beats [1, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=3): beats [0, 3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [0]
+
+  H=13 (H_4=1.0): bits=982
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=2, total_dir=6
+    c3_sets=4
+    AA^T off-diag: [1, 1, 0, 0, 1, 1, 1, 1, 0, 0], var=0.2400
+    v0(s=2): beats [2, 3]
+    v1(s=3): beats [0, 2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [0]
+
+  H=15 (H_4=3.0): bits=983
+    Scores (by vertex): [3, 2, 2, 2, 1]
+    c3_dir=4, c5_dir=3, total_dir=7
+    c3_sets=4
+    AA^T off-diag: [1, 1, 1, 0, 1, 1, 0, 1, 0, 0], var=0.2400
+    v0(s=3): beats [1, 2, 3]
+    v1(s=2): beats [2, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [1, 4]
+    v4(s=1): beats [0]
+
+  H=11 (H_4=-1.0): bits=995
+    Scores (by vertex): [2, 2, 3, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [0, 1, 0, 0, 2, 1, 0, 1, 0, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=2): beats [3, 4]
+    v2(s=3): beats [1, 3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [0]
+
+  H=11 (H_4=-1.0): bits=1011
+    Scores (by vertex): [2, 3, 2, 2, 1]
+    c3_dir=4, c5_dir=1, total_dir=5
+    c3_sets=4
+    AA^T off-diag: [1, 0, 0, 0, 2, 1, 0, 1, 0, 1], var=0.4400
+    v0(s=2): beats [1, 2]
+    v1(s=3): beats [2, 3, 4]
+    v2(s=2): beats [3, 4]
+    v3(s=2): beats [0, 4]
+    v4(s=1): beats [0]
+
+  Summary across all (1,2,2,2,3) tournaments:
+
+      H |  count |  c3_dir |  c5_dir |  total |   AA^T var
+  ------+--------+---------+---------+--------+-----------
+     11 |    120 |     [4] |     [1] |    [5] |     [0.44]
+     13 |    120 |     [4] |     [2] |    [6] |     [0.24]
+     15 |     40 |     [4] |     [3] |    [7] |     [0.24]
+
+======================================================================
+DONE.
