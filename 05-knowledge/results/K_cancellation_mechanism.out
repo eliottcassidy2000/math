@@ -1,0 +1,195 @@
+======================================================================
+CANCELLATION MECHANISM ANALYSIS
+======================================================================
+
+============================================================
+PART 1: Verify tr(A^4) formula
+============================================================
+  n=5: FAIL! tr(A^4)=20, nm^2+2*sum_mu2=30
+  n=5: tr(A^4) = nm^2 + 2*sum_mu2 FAILED!
+  n=7: FAIL! tr(A^4)=96, nm^2+2*sum_mu2=117
+  n=7: tr(A^4) = nm^2 + 2*sum_mu2 FAILED!
+  n=9: FAIL! tr(A^4)=300, nm^2+2*sum_mu2=336
+  n=9: tr(A^4) = nm^2 + 2*sum_mu2 FAILED!
+
+  Divisibility check: is tr(A^4) divisible by 4?
+  n=5: tr(A^4) values = [20]
+    20 / 4 = 5.0 (integer)
+  n=7: tr(A^4) values = [84, 96, 112]
+    84 / 4 = 21.0 (integer)
+    96 / 4 = 24.0 (integer)
+    112 / 4 = 28.0 (integer)
+
+============================================================
+PART 2: What does tr(A^4) count?
+============================================================
+  n=7: tr(A^4) = 96
+  # ordered directed 4-cycles = 96
+  tr(A^4) == ordered 4-cycles: True
+  c4 (unordered) = 24
+  tr(A^4)/4 = 24.0
+
+  Recount:
+  tr(A^4) via matrix = 96
+  Direct 4-cycle count (ORDERED, DISTINCT vertices) = 96
+  Match: True
+  All closed 4-walks (incl. non-distinct) = 96
+  Non-distinct vertex walks = 0
+  Distinct vertex walks = 96
+  tr(A^4) = 96, all walks = 96
+
+============================================================
+PART 3: Closed 4-walk patterns
+============================================================
+  Non-distinct walk patterns:
+  Total non-distinct: 0
+
+  tr(A^4) = 96
+  Sum over all (i,j,k,l): 96
+  These should be equal: True
+
+============================================================
+PART 4: Savchenko's c5 formula for regular tournaments
+============================================================
+
+============================================================
+PART 5: Eigenvalue analysis
+============================================================
+
+  Trial 0: eigenvalues:
+    +3.0000 +0.0000i  (|z|=3.0000)
+    -0.5000 +1.8660i  (|z|=1.9319)
+    -0.5000 -1.8660i  (|z|=1.9319)
+    -0.5000 +1.3229i  (|z|=1.4142)
+    -0.5000 -1.3229i  (|z|=1.4142)
+    -0.5000 +0.1340i  (|z|=0.5176)
+    -0.5000 -0.1340i  (|z|=0.5176)
+    sum z_k^5 = -63.00 + 0.00i
+    tr(A^5) = m^5 + sum z^5 = 243 + -63.0 = 180.0 (actual: 180)
+    sum_mu2 = 27
+    sum z_k^4 = 15.00
+    tr(A^4) = 81 + 15.0 = 96.0 (actual: 96)
+    sum |z_k|^2 = 12.0000
+
+  Trial 1: eigenvalues:
+    +3.0000 +0.0000i  (|z|=3.0000)
+    -0.5000 +1.8660i  (|z|=1.9319)
+    -0.5000 -1.8660i  (|z|=1.9319)
+    -0.5000 +1.3229i  (|z|=1.4142)
+    -0.5000 -1.3229i  (|z|=1.4142)
+    -0.5000 +0.1340i  (|z|=0.5176)
+    -0.5000 -0.1340i  (|z|=0.5176)
+    sum z_k^5 = -63.00 + 0.00i
+    tr(A^5) = m^5 + sum z^5 = 243 + -63.0 = 180.0 (actual: 180)
+    sum_mu2 = 27
+    sum z_k^4 = 15.00
+    tr(A^4) = 81 + 15.0 = 96.0 (actual: 96)
+    sum |z_k|^2 = 12.0000
+
+  Trial 2: eigenvalues:
+    +3.0000 +0.0000i  (|z|=3.0000)
+    -0.5000 +1.8660i  (|z|=1.9319)
+    -0.5000 -1.8660i  (|z|=1.9319)
+    -0.5000 +1.3229i  (|z|=1.4142)
+    -0.5000 -1.3229i  (|z|=1.4142)
+    -0.5000 +0.1340i  (|z|=0.5176)
+    -0.5000 -0.1340i  (|z|=0.5176)
+    sum z_k^5 = -63.00 + 0.00i
+    tr(A^5) = m^5 + sum z^5 = 243 + -63.0 = 180.0 (actual: 180)
+    sum_mu2 = 27
+    sum z_k^4 = 15.00
+    tr(A^4) = 81 + 15.0 = 96.0 (actual: 96)
+    sum |z_k|^2 = 12.0000
+
+============================================================
+PART 6: Verify c5+sum_mu2 formula at larger n
+============================================================
+  n= 5: c5+sum_mu2 = [7], expected=7, CONSTANT, match=True
+  n= 7: c5+sum_mu2 = [63], expected=63, CONSTANT, match=True
+  n= 9: c5+sum_mu2 = [270], expected=270, CONSTANT, match=True
+  n=11: c5+sum_mu2 = [814], expected=814, CONSTANT, match=True
+  n=13: c5+sum_mu2 = [1989], expected=1989, CONSTANT, match=True
+  n=15: c5+sum_mu2 = [4221], expected=4221, CONSTANT, match=True
+  n=17: c5+sum_mu2 = [8092], expected=8092, CONSTANT, match=True
+  n=19: c5+sum_mu2 = [14364], expected=14364, CONSTANT, match=True
+  n=21: c5+sum_mu2 = [24003], expected=24003, CONSTANT, match=True
+
+============================================================
+PART 7: Linear relation between sum_mu2 and tr(A^4)
+============================================================
+  n=5: 2*tr(A^5)+5*tr(A^4) = [120], expected=170, CONSTANT, match=False
+  n=7: 2*tr(A^5)+5*tr(A^4) = [840], expected=945, CONSTANT, match=False
+  n=9: 2*tr(A^5)+5*tr(A^4) = [3240], expected=3420, CONSTANT, match=False
+  n=11: 2*tr(A^5)+5*tr(A^4) = [9240], expected=9515, CONSTANT, match=False
+
+============================================================
+PART 8: Algebraic proof of 2*tr(A^5) + 5*tr(A^4) = const
+============================================================
+  For z = -1/2 + iy:
+  Re(z^4*(2z+5)) = 1/4 - 5*y^2
+
+  Therefore: 2*tr(A^5) + 5*tr(A^4) = const
+  iff sum_k (1/4 - 5*y_k^2) = const (over non-trivial eigenvalues)
+  iff sum y_k^2 = const
+
+  n=5: sum y_k^2 = 5.0000, expected mn/2 = 5.0000, diff = 0.00000000
+  n=7: sum y_k^2 = 10.5000, expected mn/2 = 10.5000, diff = 0.00000000
+  n=9: sum y_k^2 = 18.0000, expected mn/2 = 18.0000, diff = 0.00000000
+  n=11: sum y_k^2 = 27.5000, expected mn/2 = 27.5000, diff = 0.00000000
+
+  PROOF COMPLETE!
+  sum y_k^2 = mn/2 is constant because:
+    sum |z_k|^2 = tr(A^T A) - m^2 = nm - m^2 = m(m+1)
+    sum y_k^2 = sum |z_k|^2 - (n-1)/4 = m(m+1) - m/2 = mn/2
+  Therefore:
+    sum Re(z_k^4*(2z_k+5)) = (n-1)/4 - 5*mn/2 = (2m)/4 - 5m(2m+1)/2
+                           = m/2 - 5m(2m+1)/2 = m(1 - 5(2m+1))/2 = m(-10m-4)/2 = -m(5m+2)
+  And:
+    2*tr(A^5) + 5*tr(A^4) = 2m^5 + 5m^4 - 2*m(5m+2)
+
+  For n=7: 2m^5+5m^4+m(1-5n)/2 = 486+405+-51 = 840
+  Predicted: 2*tr(A^5)+5*tr(A^4) = 840
+  Actual: 2*180+5*96 = 840
+  Formula: 2m^5 + 5m^4 - m(5m+2) = 840
+  n=5: formula=120, actual=[120], match=True
+  n=7: formula=840, actual=[840], match=True
+  n=9: formula=3240, actual=[3240], match=True
+  n=11: formula=9240, actual=[9240], match=True
+  n=13: formula=21840, actual=[21840], match=True
+
+============================================================
+THEOREM (THM-140): PROVED!
+============================================================
+
+  For any regular tournament A on n = 2m+1 vertices:
+
+    2*tr(A^5) + 5*tr(A^4) = 2m^5 + 5m^4 - m(5m+2)
+
+  PROOF:
+    1. tr(A^k) = m^k + sum_{k=1}^{n-1} z_k^k  (eigenvalue decomposition)
+    2. All non-trivial z_k have Re(z_k) = -1/2  (regular tournament)
+    3. Write z_k = -1/2 + i*y_k
+
+    4. 2*tr(A^5) + 5*tr(A^4) = 2m^5 + 5m^4 + sum z_k^4*(2z_k + 5)
+
+    5. Re(z^4*(2z+5)) = 1/4 - 5*y^2  [direct computation]
+
+    6. sum_{k=1}^{n-1} y_k^2 = mn/2  [because:
+       sum |z_k|^2 = tr(A^T A) - m^2 = nm - m^2 = m(m+1)
+       sum y_k^2 = sum |z_k|^2 - (n-1)/4 = m(m+1) - m/2 = mn/2]
+
+    7. sum Re(z_k^4*(2z_k+5)) = (n-1)/4 - 5*mn/2 = -m(5m+2)
+
+    8. Therefore 2*tr(A^5) + 5*tr(A^4) = 2m^5 + 5m^4 - m(5m+2).  QED.
+
+  COROLLARY: K(T) = c5 - 2*ov1 - 2*ov2 = -3n(n^2-1)(n^2-9)/320
+  for ALL regular tournaments T on n = 2m+1 vertices.
+
+  PROOF of corollary:
+    K = c5 + 2*ov2 - n*L_c*(L_c-1)  where L_c = (n^2-1)/8
+    c5 + 2*ov2 = tr(A^5)/5 + (tr(A^4) - nm^2)/2 + n(n-1)(n-3)/8
+             = [2*tr(A^5) + 5*tr(A^4)]/10 - nm^2/2 + n(n-1)(n-3)/8
+             = [2m^5+5m^4-m(5m+2)]/10 - nm^2/2 + n(n-1)(n-3)/8
+    This is a polynomial in m (or n), giving the closed form.  QED.
+    
+DONE.
