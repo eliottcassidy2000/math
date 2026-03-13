@@ -1,0 +1,392 @@
+======================================================================
+Case 1
+======================================================================
+
+  Tournament 1 (bits=4728, H=109):
+    [0, 0, 0, 0, 1, 1, 1]
+    [1, 0, 1, 0, 0, 1, 0]
+    [1, 0, 0, 0, 1, 0, 0]
+    [1, 1, 1, 0, 0, 0, 0]
+    [0, 1, 0, 1, 0, 0, 0]
+    [0, 0, 1, 1, 1, 0, 0]
+    [0, 1, 1, 1, 1, 1, 0]
+
+  Tournament 2 (bits=4658, H=111):
+    [0, 0, 1, 0, 0, 1, 1]
+    [1, 0, 0, 0, 0, 1, 0]
+    [0, 1, 0, 0, 1, 0, 0]
+    [1, 1, 1, 0, 0, 0, 0]
+    [1, 1, 0, 1, 0, 0, 0]
+    [0, 0, 1, 1, 1, 0, 0]
+    [0, 1, 1, 1, 1, 1, 0]
+
+  Scores1: [3, 3, 2, 3, 2, 3, 5]
+  Scores2: [3, 2, 2, 3, 3, 3, 5]
+
+  Lambda1:
+    [0, 2, 2, 3, 2, 2, 3]
+    [2, 0, 1, 1, 3, 2, 1]
+    [2, 1, 0, 1, 2, 1, 1]
+    [3, 1, 1, 0, 2, 2, 1]
+    [2, 3, 2, 2, 0, 1, 0]
+    [2, 2, 1, 2, 1, 0, 0]
+    [3, 1, 1, 1, 0, 0, 0]
+  Lambda2:
+    [0, 2, 2, 2, 3, 2, 3]
+    [2, 0, 2, 1, 1, 3, 1]
+    [2, 2, 0, 1, 2, 1, 0]
+    [2, 1, 1, 0, 1, 2, 1]
+    [3, 1, 2, 1, 0, 2, 1]
+    [2, 3, 1, 2, 2, 0, 0]
+    [3, 1, 0, 1, 1, 0, 0]
+
+  Lambda isomorphism: perm=(0, 1, 5, 2, 3, 4, 6)
+
+  A1 permuted by sigma:
+    [0, 0, 1, 0, 0, 1, 1]
+    [1, 0, 1, 1, 0, 0, 0]
+    [0, 0, 0, 1, 1, 1, 0]
+    [1, 0, 0, 0, 0, 1, 0]
+    [1, 1, 0, 1, 0, 0, 0]
+    [0, 1, 0, 0, 1, 0, 0]
+    [0, 1, 1, 1, 1, 1, 0]
+
+  Arc flips between A1_perm and A2: [(1, 2), (1, 3), (1, 5), (2, 3), (2, 5), (3, 5)]
+  Number of flips: 6
+
+  Flip details (lambda values in A2's labeling):
+    (1,2): lambda=2, A1'=1->0
+    (1,3): lambda=1, A1'=1->0
+    (1,5): lambda=3, A1'=0->1
+    (2,3): lambda=1, A1'=1->0
+    (2,5): lambda=1, A1'=1->0
+    (3,5): lambda=2, A1'=1->0
+
+  3-cycle orientations:
+
+    bits=4728, H=109:
+      [0, 1, 4]: 0->4->1->0 (counter-clockwise)
+      [0, 1, 6]: 0->6->1->0 (counter-clockwise)
+      [0, 2, 5]: 0->5->2->0 (counter-clockwise)
+      [0, 2, 6]: 0->6->2->0 (counter-clockwise)
+      [0, 3, 4]: 0->4->3->0 (counter-clockwise)
+      [0, 3, 5]: 0->5->3->0 (counter-clockwise)
+      [0, 3, 6]: 0->6->3->0 (counter-clockwise)
+      [1, 2, 4]: 1->2->4->1 (clockwise)
+      [1, 3, 5]: 1->5->3->1 (counter-clockwise)
+      [1, 4, 5]: 1->5->4->1 (counter-clockwise)
+      [2, 3, 4]: 2->4->3->2 (counter-clockwise)
+
+    bits=4658, H=111:
+      [0, 1, 2]: 0->2->1->0 (counter-clockwise)
+      [0, 1, 6]: 0->6->1->0 (counter-clockwise)
+      [0, 2, 4]: 0->2->4->0 (clockwise)
+      [0, 3, 5]: 0->5->3->0 (counter-clockwise)
+      [0, 3, 6]: 0->6->3->0 (counter-clockwise)
+      [0, 4, 5]: 0->5->4->0 (counter-clockwise)
+      [0, 4, 6]: 0->6->4->0 (counter-clockwise)
+      [1, 2, 5]: 1->5->2->1 (counter-clockwise)
+      [1, 3, 5]: 1->5->3->1 (counter-clockwise)
+      [1, 4, 5]: 1->5->4->1 (counter-clockwise)
+      [2, 3, 4]: 2->4->3->2 (counter-clockwise)
+
+  5-cycle counts per subset:
+    Subsets where c5 differs: 6
+      (0, 1, 2, 3, 5): c5_1=3, c5_2=2
+      (0, 1, 2, 4, 6): c5_1=2, c5_2=1
+      (0, 1, 4, 5, 6): c5_1=1, c5_2=2
+      (0, 2, 3, 4, 6): c5_1=1, c5_2=2
+      (0, 3, 4, 5, 6): c5_1=2, c5_2=1
+      (1, 2, 3, 4, 5): c5_1=2, c5_2=3
+
+  c7_dir: A1_perm=8, A2=9
+
+  Net flow analysis:
+    H=109: net flow by lambda value: {0: -2, 1: -2, 2: 2, 3: -1}
+    H=111: net flow by lambda value: {0: -2, 1: -8, 2: -2, 3: 1}
+
+  Vertex flow through lambda-3 edges:
+    H=109, v=0: lam3(out=1,in=1), lam2(out=2,in=2)
+    H=109, v=1: lam3(out=0,in=1), lam2(out=2,in=0)
+    H=109, v=2: lam3(out=0,in=0), lam2(out=1,in=2)
+    H=109, v=3: lam3(out=0,in=0), lam2(out=2,in=0)
+    H=109, v=4: lam3(out=1,in=0), lam2(out=0,in=2)
+    H=109, v=5: lam3(out=1,in=0), lam2(out=1,in=2)
+    H=109, v=6: lam3(out=0,in=1), lam2(out=0,in=0)
+    H=111, v=0: lam3(out=1,in=1), lam2(out=2,in=2)
+    H=111, v=1: lam3(out=1,in=0), lam2(out=1,in=1)
+    H=111, v=2: lam3(out=0,in=0), lam2(out=2,in=1)
+    H=111, v=3: lam3(out=0,in=0), lam2(out=1,in=1)
+    H=111, v=4: lam3(out=1,in=0), lam2(out=0,in=2)
+    H=111, v=5: lam3(out=0,in=1), lam2(out=2,in=1)
+    H=111, v=6: lam3(out=0,in=1), lam2(out=0,in=0)
+
+  3-cycle orientation signature:
+    H=109: orientations = [0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0]
+           sum = 5
+    H=111: orientations = [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+           sum = 1
+======================================================================
+Case 2
+======================================================================
+
+  Tournament 1 (bits=9388, H=109):
+    [0, 0, 0, 1, 1, 0, 1]
+    [1, 0, 0, 1, 0, 0, 1]
+    [1, 1, 0, 0, 0, 1, 0]
+    [0, 0, 1, 0, 0, 0, 0]
+    [0, 1, 1, 1, 0, 0, 0]
+    [1, 1, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 1, 1, 0]
+
+  Tournament 2 (bits=9653, H=111):
+    [0, 1, 0, 1, 0, 1, 1]
+    [0, 0, 0, 1, 1, 0, 1]
+    [1, 1, 0, 0, 0, 1, 0]
+    [0, 0, 1, 0, 0, 0, 0]
+    [1, 0, 1, 1, 0, 0, 0]
+    [0, 1, 0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 1, 1, 0]
+
+  Scores1: [3, 3, 3, 1, 3, 4, 4]
+  Scores2: [4, 3, 3, 1, 3, 3, 4]
+
+  Lambda1:
+    [0, 1, 3, 1, 2, 1, 2]
+    [1, 0, 2, 1, 2, 1, 3]
+    [3, 2, 0, 3, 2, 2, 2]
+    [1, 1, 3, 0, 0, 1, 0]
+    [2, 2, 2, 0, 0, 1, 1]
+    [1, 1, 2, 1, 1, 0, 2]
+    [2, 3, 2, 0, 1, 2, 0]
+  Lambda2:
+    [0, 1, 2, 1, 3, 1, 2]
+    [1, 0, 3, 1, 2, 1, 2]
+    [2, 3, 0, 3, 2, 2, 2]
+    [1, 1, 3, 0, 0, 1, 0]
+    [3, 2, 2, 0, 0, 2, 1]
+    [1, 1, 2, 1, 2, 0, 1]
+    [2, 2, 2, 0, 1, 1, 0]
+
+  Lambda isomorphism: perm=(1, 0, 2, 3, 6, 5, 4)
+
+  A1 permuted by sigma:
+    [0, 1, 0, 1, 1, 0, 0]
+    [0, 0, 0, 1, 1, 0, 1]
+    [1, 1, 0, 0, 0, 1, 0]
+    [0, 0, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 1, 1]
+    [1, 1, 0, 1, 0, 0, 1]
+    [1, 0, 1, 1, 0, 0, 0]
+
+  Arc flips between A1_perm and A2: [(0, 4), (0, 5), (0, 6), (4, 5), (4, 6), (5, 6)]
+  Number of flips: 6
+
+  Flip details (lambda values in A2's labeling):
+    (0,4): lambda=3, A1'=1->0
+    (0,5): lambda=1, A1'=0->1
+    (0,6): lambda=2, A1'=0->1
+    (4,5): lambda=2, A1'=1->0
+    (4,6): lambda=1, A1'=1->0
+    (5,6): lambda=1, A1'=1->0
+
+  3-cycle orientations:
+
+    bits=9388, H=109:
+      [0, 1, 4]: 0->4->1->0 (counter-clockwise)
+      [0, 2, 3]: 0->3->2->0 (counter-clockwise)
+      [0, 2, 4]: 0->4->2->0 (counter-clockwise)
+      [0, 2, 6]: 0->6->2->0 (counter-clockwise)
+      [0, 5, 6]: 0->6->5->0 (counter-clockwise)
+      [1, 2, 3]: 1->3->2->1 (counter-clockwise)
+      [1, 2, 6]: 1->6->2->1 (counter-clockwise)
+      [1, 4, 6]: 1->6->4->1 (counter-clockwise)
+      [1, 5, 6]: 1->6->5->1 (counter-clockwise)
+      [2, 3, 5]: 2->5->3->2 (counter-clockwise)
+      [2, 4, 5]: 2->5->4->2 (counter-clockwise)
+
+    bits=9653, H=111:
+      [0, 1, 4]: 0->1->4->0 (clockwise)
+      [0, 2, 3]: 0->3->2->0 (counter-clockwise)
+      [0, 2, 6]: 0->6->2->0 (counter-clockwise)
+      [0, 4, 5]: 0->5->4->0 (counter-clockwise)
+      [0, 4, 6]: 0->6->4->0 (counter-clockwise)
+      [1, 2, 3]: 1->3->2->1 (counter-clockwise)
+      [1, 2, 4]: 1->4->2->1 (counter-clockwise)
+      [1, 2, 6]: 1->6->2->1 (counter-clockwise)
+      [1, 5, 6]: 1->6->5->1 (counter-clockwise)
+      [2, 3, 5]: 2->5->3->2 (counter-clockwise)
+      [2, 4, 5]: 2->5->4->2 (counter-clockwise)
+
+  5-cycle counts per subset:
+    Subsets where c5 differs: 6
+      (0, 1, 2, 3, 4): c5_1=1, c5_2=2
+      (0, 1, 2, 3, 6): c5_1=2, c5_2=1
+      (0, 1, 4, 5, 6): c5_1=2, c5_2=3
+      (0, 2, 4, 5, 6): c5_1=3, c5_2=2
+      (1, 2, 3, 4, 5): c5_1=2, c5_2=1
+      (1, 2, 3, 5, 6): c5_1=1, c5_2=2
+
+  c7_dir: A1_perm=8, A2=9
+
+  Net flow analysis:
+    H=109: net flow by lambda value: {0: -2, 1: 2, 2: 0, 3: -1}
+    H=111: net flow by lambda value: {0: -2, 1: 0, 2: 0, 3: -3}
+
+  Vertex flow through lambda-3 edges:
+    H=109, v=0: lam3(out=1,in=0), lam2(out=0,in=2)
+    H=109, v=1: lam3(out=0,in=1), lam2(out=2,in=0)
+    H=109, v=2: lam3(out=1,in=1), lam2(out=2,in=2)
+    H=109, v=3: lam3(out=1,in=0), lam2(out=0,in=0)
+    H=109, v=4: lam3(out=0,in=1), lam2(out=2,in=1)
+    H=109, v=5: lam3(out=0,in=0), lam2(out=0,in=2)
+    H=109, v=6: lam3(out=0,in=0), lam2(out=2,in=1)
+    H=111, v=0: lam3(out=0,in=1), lam2(out=1,in=1)
+    H=111, v=1: lam3(out=0,in=1), lam2(out=2,in=0)
+    H=111, v=2: lam3(out=1,in=1), lam2(out=2,in=2)
+    H=111, v=3: lam3(out=1,in=0), lam2(out=0,in=0)
+    H=111, v=4: lam3(out=1,in=0), lam2(out=1,in=2)
+    H=111, v=5: lam3(out=0,in=0), lam2(out=1,in=1)
+    H=111, v=6: lam3(out=0,in=0), lam2(out=1,in=2)
+
+  3-cycle orientation signature:
+    H=109: orientations = [1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1]
+           sum = 5
+    H=111: orientations = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+           sum = 1
+
+======================================================================
+ANALYSIS 2: MINIMAL ADDITIONAL INVARIANT
+======================================================================
+
+For the 2 deepest ambiguity cases:
+  Both have isomorphic lambda graphs.
+  Both have same c3, same c5_dir, same alpha_2.
+  They DIFFER in c7_dir (8 vs 9).
+
+So: labeled lambda + c7_dir determines H for ALL n=7 tournaments?
+This would mean:
+  H = 1 + 2*alpha_1 + 4*alpha_2  (OCF decomposition, THM-166)
+  alpha_1 is determined by labeled lambda (it's the total directed cycle count)
+  alpha_2 is determined by labeled lambda (disjointness)
+  But alpha_1 counts directed 3-cycles, 5-cycles, AND 7-cycles.
+  alpha_1 = c3_dir + c5_dir + c7_dir
+
+  c3_dir and c5_dir are determined by labeled lambda.
+  c7_dir is NOT.
+
+So: the UNIQUE additional bit of information is c7_dir (= #directed Hamiltonian cycles).
+This is the arc orientation invariant: how many of the 7! possible orderings
+are Hamiltonian cycles.
+
+
+  Case 1:
+    bits=4728: H=109, c3=11, c5=23, c7=8, alpha_1=42, alpha_2=6
+    Verify: 1 + 2*42 + 4*6 = 109
+    bits=4658: H=111, c3=11, c5=23, c7=9, alpha_1=43, alpha_2=6
+    Verify: 1 + 2*43 + 4*6 = 111
+
+  Case 2:
+    bits=9388: H=109, c3=11, c5=23, c7=8, alpha_1=42, alpha_2=6
+    Verify: 1 + 2*42 + 4*6 = 109
+    bits=9653: H=111, c3=11, c5=23, c7=9, alpha_1=43, alpha_2=6
+    Verify: 1 + 2*43 + 4*6 = 111
+
+======================================================================
+ANALYSIS 3: VITALI STRUCTURE AT ARC ORIENTATION LEVEL
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\arc_orientation_invariant.py", line 371, in <module>
+    print("""
+    ~~~~~^^^^
+    THE FOUR-LEVEL MEASURABILITY HIERARCHY:
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<30 lines>...
+    This is the VITALI TOWER: each quotient loses exactly one piece of cycle info.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 93: character maps to <undefined>
+  Level 2->1: Which edges of the lambda graph are bidirectional vs directed (orientation)
+  Level 3->2: Whether the full oriented graph has Hamiltonian cycles (topology)
+
+Each level's non-measurable content controls EXACTLY ONE cycle length:
+  Level 1 resolves ambiguity via alpha_2 (disjointness of 3-cycles)
+  Level 2 resolves via c5_dir (5-cycle structure)
+  Level 3 resolves via c7_dir (Hamiltonian cycles)
+
+This is the VITALI TOWER: each quotient loses exactly one piece of cycle info.
+
+
+======================================================================
+ANALYSIS 4: THE SINGLE ARC FLIP
+======================================================================
+
+  Case 1:
+    Flips: [(1, 2, 2), (1, 3, 1), (1, 5, 3), (2, 3, 1), (2, 5, 1), (3, 5, 2)]
+    These flips preserve lambda but change c7 by 1
+    Hamming distance: 6
+    Edge (1,2), lambda=2: shared 3-cycles = [[0, 1, 2], [1, 2, 5]]
+    Edge (1,3), lambda=1: shared 3-cycles = [[1, 3, 5]]
+    Edge (1,5), lambda=3: shared 3-cycles = [[1, 2, 5], [1, 3, 5], [1, 4, 5]]
+    Edge (2,3), lambda=1: shared 3-cycles = [[2, 3, 4]]
+    Edge (2,5), lambda=1: shared 3-cycles = [[1, 2, 5]]
+    Edge (3,5), lambda=2: shared 3-cycles = [[0, 3, 5], [1, 3, 5]]
+
+  Case 2:
+    Flips: [(0, 4, 3), (0, 5, 1), (0, 6, 2), (4, 5, 2), (4, 6, 1), (5, 6, 1)]
+    These flips preserve lambda but change c7 by 1
+    Hamming distance: 6
+    Edge (0,4), lambda=3: shared 3-cycles = [[0, 1, 4], [0, 4, 5], [0, 4, 6]]
+    Edge (0,5), lambda=1: shared 3-cycles = [[0, 4, 5]]
+    Edge (0,6), lambda=2: shared 3-cycles = [[0, 2, 6], [0, 4, 6]]
+    Edge (4,5), lambda=2: shared 3-cycles = [[0, 4, 5], [2, 4, 5]]
+    Edge (4,6), lambda=1: shared 3-cycles = [[0, 4, 6]]
+    Edge (5,6), lambda=1: shared 3-cycles = [[1, 5, 6]]
+
+======================================================================
+ANALYSIS 5: EXHAUSTIVE INVARIANT COMPARISON
+======================================================================
+
+  Case 1:
+    bits=4728, H=109:
+      scores=[2, 2, 3, 3, 3, 3, 5]
+      c3_dir=11, c5_dir=23, c7_dir=8
+      alpha_2(3-3)=6
+      #5-cycle sets=15
+      disj_55=0, disj_35=0
+      per-vertex c3 membership: [3, 4, 4, 5, 5, 5, 7]
+      per-vertex c5 weighted: [12, 16, 16, 16, 17, 17, 21]
+    bits=4658, H=111:
+      scores=[2, 2, 3, 3, 3, 3, 5]
+      c3_dir=11, c5_dir=23, c7_dir=9
+      alpha_2(3-3)=6
+      #5-cycle sets=15
+      disj_55=0, disj_35=0
+      per-vertex c3 membership: [3, 4, 4, 5, 5, 5, 7]
+      per-vertex c5 weighted: [12, 16, 16, 17, 17, 17, 20]
+
+  Case 2:
+    bits=9388, H=109:
+      scores=[1, 3, 3, 3, 3, 4, 4]
+      c3_dir=11, c5_dir=23, c7_dir=8
+      alpha_2(3-3)=6
+      #5-cycle sets=15
+      disj_55=0, disj_35=0
+      per-vertex c3 membership: [3, 4, 4, 5, 5, 5, 7]
+      per-vertex c5 weighted: [12, 16, 16, 16, 17, 17, 21]
+    bits=9653, H=111:
+      scores=[1, 3, 3, 3, 3, 4, 4]
+      c3_dir=11, c5_dir=23, c7_dir=9
+      alpha_2(3-3)=6
+      #5-cycle sets=15
+      disj_55=0, disj_35=0
+      per-vertex c3 membership: [3, 4, 4, 5, 5, 5, 7]
+      per-vertex c5 weighted: [12, 16, 16, 17, 17, 17, 20]
+
+======================================================================
+DONE.
+======================================================================
