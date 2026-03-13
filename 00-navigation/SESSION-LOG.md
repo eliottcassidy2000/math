@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71c (cont'd) — 2026-03-13: Degenerate Walk Theorem + Sigma Hierarchy + Betti Lambda-Determination
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71c (context windows 13-14)
+**Summary of work:**
+- **HYP-847 PROVED**: tr(A^k) = k·c_{k,dir} for ALL tournaments iff k ≤ 5. Gap argument: vertex repetition at gap j requires back-and-forth (impossible in tournaments) unless min(j,k-j) ≥ 3, requiring k ≥ 6. This gives c5_dir = tr(A^5)/5 always.
+- **HYP-848 SIGMA-ALGEBRA HIERARCHY**: Lambda determines c3,c5 (labeled, not multiset). (Lambda,sigma) determines c7. Formula: A_{ij}=1 iff d_i-d_j = n-1-σ-2λ (only for d_i≠d_j; vacuous when d_i=d_j since σ+2λ=n-1 always).
+- **HYP-849 BETTI LAMBDA-DETERMINED**: Path homology β_0..β_3 are determined by labeled lambda even though c7 is NOT. 0 ambiguities at n=7 (2000 samples) and n=8 (200 samples). Betti numbers are "more measurable" than cycle counts.
+- **HYP-845 EIGENSPACE BETTI DECOMPOSITION**: Formalized conjecture for Paley tournaments.
+- **Key distinction**: c5 is determined by LABELED lambda (0 ambig at n=7) but NOT by lambda multiset (35 ambig). Labeled vs multiset is crucial.
+**New contributions:** HYP-845, HYP-847-849. Scripts: tr_A5_*.py, lambda_nonunique_c7_check.py, sigma_c7_determination.py, betti_sigma_hierarchy.py, betti_lambda_n8.py, eigenspace_betti_decomposition.py
+**Unresolved threads:**
+1. **Prove c5 = tr(A^5)/5 is lambda-determined ALGEBRAICALLY** — tr(A^5) = tr(A²·A·A²), A² involves lambda
+2. **P_19 QR-orbit d=6,7 boundary ranks** — still computing in background
+3. **Does HYP-849 extend to all d?** — test β_4 at n=8
+4. **WHY are Betti numbers more measurable than cycles?** — deep structural question
+
 ## kind-pasteur-2026-03-13-S61 (cont'd) — 2026-03-13: c5 Lambda Formula + Sigma-Algebra Hierarchy + Witness Matrix
 
 **Account:** kind-pasteur
