@@ -1,0 +1,132 @@
+======================================================================
+ORIENTATION SYMMETRY ANALYSIS at p=11
+QR = [1, 3, 4, 5, 9]
+======================================================================
+
+  8 QR-orbits:
+
+    Orbit 0: 5 members
+      bits=00000, S=[6, 7, 8, 9, 10]
+      bits=00011, S=[1, 2, 6, 7, 8]
+      bits=00110, S=[2, 3, 6, 7, 10]
+      bits=01010, S=[2, 4, 6, 8, 10]
+      bits=10010, S=[2, 5, 7, 8, 10]
+
+    Orbit 1: 5 members
+      bits=00001, S=[1, 6, 7, 8, 9]
+      bits=01000, S=[4, 6, 8, 9, 10]
+      bits=01110, S=[2, 3, 4, 6, 10]
+      bits=10011, S=[1, 2, 5, 7, 8]
+      bits=10110, S=[2, 3, 5, 7, 10]
+
+    Orbit 2: 1 members
+      bits=00010, S=[2, 6, 7, 8, 10] <-- anti-Paley
+
+    Orbit 3: 5 members
+      bits=00100, S=[3, 6, 7, 9, 10]
+      bits=00111, S=[1, 2, 3, 6, 7]
+      bits=01011, S=[1, 2, 4, 6, 8]
+      bits=10000, S=[5, 7, 8, 9, 10]
+      bits=11010, S=[2, 4, 5, 8, 10]
+
+    Orbit 4: 5 members
+      bits=00101, S=[1, 3, 6, 7, 9]
+      bits=01111, S=[1, 2, 3, 4, 6]
+      bits=10100, S=[3, 5, 7, 9, 10]
+      bits=11000, S=[4, 5, 8, 9, 10]
+      bits=11011, S=[1, 2, 4, 5, 8]
+
+    Orbit 5: 5 members
+      bits=01001, S=[1, 4, 6, 8, 9]
+      bits=01100, S=[3, 4, 6, 9, 10]
+      bits=10001, S=[1, 5, 7, 8, 9]
+      bits=10111, S=[1, 2, 3, 5, 7]
+      bits=11110, S=[2, 3, 4, 5, 10]
+
+    Orbit 6: 5 members
+      bits=01101, S=[1, 3, 4, 6, 9]
+      bits=10101, S=[1, 3, 5, 7, 9]
+      bits=11001, S=[1, 4, 5, 8, 9]
+      bits=11100, S=[3, 4, 5, 9, 10]
+      bits=11111, S=[1, 2, 3, 4, 5]
+
+    Orbit 7: 1 members
+      bits=11101, S=[1, 3, 4, 5, 9] <-- PALEY
+
+  Paley: bits=11101, orbit has 1 members
+
+  NQR = [2, 6, 7, 8, 10]
+
+  NQR orbit pairing:
+    Orbit of bits=00000 -> NQR*S = bits=10101 (different orbit)
+    Orbit of bits=00001 -> NQR*S = bits=10111 (different orbit)
+    Orbit of bits=00010 -> NQR*S = bits=11101 (different orbit)
+    Orbit of bits=00100 -> NQR*S = bits=00101 (different orbit)
+    Orbit of bits=00101 -> NQR*S = bits=00111 (different orbit)
+    Orbit of bits=01001 -> NQR*S = bits=10011 (different orbit)
+    Orbit of bits=01101 -> NQR*S = bits=00011 (different orbit)
+    Orbit of bits=11101 -> NQR*S = bits=00010 (different orbit)
+
+
+  Extended orbits under FULL (Z/pZ)* action:
+
+    Extended Orbit 0: 10 members
+      bits=00000, S=[6, 7, 8, 9, 10]
+      bits=00011, S=[1, 2, 6, 7, 8]
+      bits=00110, S=[2, 3, 6, 7, 10]
+      bits=01010, S=[2, 4, 6, 8, 10]
+      bits=01101, S=[1, 3, 4, 6, 9]
+      bits=10010, S=[2, 5, 7, 8, 10]
+      bits=10101, S=[1, 3, 5, 7, 9]
+      bits=11001, S=[1, 4, 5, 8, 9]
+      bits=11100, S=[3, 4, 5, 9, 10]
+      bits=11111, S=[1, 2, 3, 4, 5]
+
+    Extended Orbit 1: 10 members
+      bits=00001, S=[1, 6, 7, 8, 9]
+      bits=01000, S=[4, 6, 8, 9, 10]
+      bits=01001, S=[1, 4, 6, 8, 9]
+      bits=01100, S=[3, 4, 6, 9, 10]
+      bits=01110, S=[2, 3, 4, 6, 10]
+      bits=10001, S=[1, 5, 7, 8, 9]
+      bits=10011, S=[1, 2, 5, 7, 8]
+      bits=10110, S=[2, 3, 5, 7, 10]
+      bits=10111, S=[1, 2, 3, 5, 7]
+      bits=11110, S=[2, 3, 4, 5, 10]
+
+    Extended Orbit 2: 2 members
+      bits=00010, S=[2, 6, 7, 8, 10] <-- anti-Paley
+      bits=11101, S=[1, 3, 4, 5, 9] <-- PALEY
+
+    Extended Orbit 3: 10 members
+      bits=00100, S=[3, 6, 7, 9, 10]
+      bits=00101, S=[1, 3, 6, 7, 9]
+      bits=00111, S=[1, 2, 3, 6, 7]
+      bits=01011, S=[1, 2, 4, 6, 8]
+      bits=01111, S=[1, 2, 3, 4, 6]
+      bits=10000, S=[5, 7, 8, 9, 10]
+      bits=10100, S=[3, 5, 7, 9, 10]
+      bits=11000, S=[4, 5, 8, 9, 10]
+      bits=11010, S=[2, 4, 5, 8, 10]
+      bits=11011, S=[1, 2, 4, 5, 8]
+
+  4 extended orbits (should partition into H-classes)
+
+
+  Complement structure (S -> p-S):
+    bits=00000 <-> comp=11111 same ext orbit
+    bits=00001 <-> comp=11110 same ext orbit
+    bits=00010 <-> comp=11101 same ext orbit
+    bits=00011 <-> comp=11100 same ext orbit
+    bits=00100 <-> comp=11011 same ext orbit
+    bits=00101 <-> comp=11010 same ext orbit
+    bits=00110 <-> comp=11001 same ext orbit
+    bits=00111 <-> comp=11000 same ext orbit
+    bits=01000 <-> comp=10111 same ext orbit
+    bits=01001 <-> comp=10110 same ext orbit
+    bits=01010 <-> comp=10101 same ext orbit
+    bits=01011 <-> comp=10100 same ext orbit
+    bits=01100 <-> comp=10011 same ext orbit
+    bits=01101 <-> comp=10010 same ext orbit
+    bits=01110 <-> comp=10001 same ext orbit
+    bits=01111 <-> comp=10000 same ext orbit
