@@ -292,7 +292,11 @@ The Euler characteristic equals the number of vertices, generalizing the formula
 
 **Orbit-level formula:** beta_m^{orb} = (m-3)/2, beta_{m+1}^{orb} = (m+1)/2 = m-1 copies plus (m-3)/2 from k=0.
 
-**Combinatorial interpretation:** beta_m = number of diagonals of a regular m-gon (including sides for m >= 4). The connection to polygon geometry is unexplained but numerically exact.
+**Combinatorial interpretation:** beta_m = number of diagonals of a regular m-gon (including sides for m >= 4).
+
+**Heisenberg Lie algebra connection (HYP-756):** The formula beta_m = m(m-3)/2 is EXACTLY the second Betti number b_2(h_m) of the m-dimensional Heisenberg Lie algebra, via Santharoubane's theorem (1983): b_2(h_{2n+1}) = n(2n-1) - 1. Under the re-indexing n = (m-1)/2, this gives m(m-3)/2. OEIS sequence A014106. Moreover, beta_{m+1} = b_2(h_{m+2}) + 1. This connection appears to be new — no prior work links tournament path homology to Heisenberg cohomology. The Heisenberg algebra's symplectic structure (central extension via a 2-form) mirrors the Legendre symbol structure on Z_p*.
+
+**Topological maximality (HYP-754):** Among all regular tournaments at n=7, only the Paley tournament has nontrivial high-dimensional homology. The two non-Paley regular classes have beta = (1,0,...,0) (contractible, chi=1) and beta = (1,1,0,...,0) (single directed 1-hole, chi=0). More generally, generic tournaments have chi in {0,1}; chi = p appears to characterize Paley among all tournaments.
 
 ---
 

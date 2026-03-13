@@ -23,6 +23,8 @@ Entry format:
 - **PALEY TOPOLOGICAL MAXIMALITY (HYP-754)**: Computed Betti and Ω for all 3 regular n=7 classes. Paley (H=189): β=(1,0,0,0,6,0,0), χ=7=p. H=171: contractible, χ=1. H=175: β₁=1, χ=0. Paley is uniquely topologically rich.
 - **χ = p CHARACTERIZES PALEY**: For generic n=5,7 tournaments, χ ∈ {0,1}. Only Paley achieves χ=p. Consequence of Z_p symmetry forcing Ω_d divisible by p for d ≥ 1.
 - **CONFLICT GRAPH UNIFORMITY**: Paley's conflict graph is perfectly regular (all degrees = 12). H=175 also regular (degree 11) but sparser → creates β₁=1. H=171 irregular (11-13). Sparser conflict = more topological holes.
+- **HEISENBERG CONNECTION (HYP-756)**: β_m = b_2(h_m) EXACTLY, where h_m is the Heisenberg Lie algebra. Santharoubane (1983): b_2(h_{2n+1}) = n(2n-1)-1 under n=(m-1)/2 gives m(m-3)/2. OEIS A014106. β_{m+1} = b_2(h_{m+2})+1. Connection appears NEW — no prior link. Symplectic structure of h_m mirrors Legendre symbol.
+- **P_11 k=1 CONFIRMED**: R_7^{(1)} = 390, giving β_6^{(1)} = 700-309-390 = 1. Verified over GF(23) and GF(67).
 - **P_19 TOP-HALF APPROACH INFEASIBLE**: Orbit counts GROW in the top half (unlike P_11 scaling intuition), so computing Ω for d>9 is even harder than d=9.
 
 **New contributions:** HYP-753-755, updated formal writeup, cycle cascade analysis, 6 new scripts
