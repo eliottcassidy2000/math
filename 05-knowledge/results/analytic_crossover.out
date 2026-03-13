@@ -1,0 +1,140 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+ANALYTIC CROSSOVER PREDICTION
+======================================================================
+
+--- THM-142: 3-3 Disjointness Excess ---
+  p= 7: Δ(3,3 disjoint) =          7, c3 =     14, 4·Δ/c3 = 2.00
+  p=11: Δ(3,3 disjoint) =         55, c3 =     55, 4·Δ/c3 = 4.00
+  p=19: Δ(3,3 disjoint) =        570, c3 =    285, 4·Δ/c3 = 8.00
+  p=23: Δ(3,3 disjoint) =       1265, c3 =    506, 4·Δ/c3 = 10.00
+  p=31: Δ(3,3 disjoint) =       4340, c3 =   1240, 4·Δ/c3 = 14.00
+  p=43: Δ(3,3 disjoint) =      16555, c3 =   3311, 4·Δ/c3 = 20.00
+
+--- Known Δα₁ data ---
+  p=7: Δα₁ =              21, 2·Δα₁ =              42, H(P)-H(I) =              14
+         Δα₂ =               7, 4·Δα₂ =              28
+         residual (8·Δα₃+...) = 0
+  p=11: Δα₁ =            2772, 2·Δα₁ =            5544, H(P)-H(I) =            2068
+         Δα₂ =             231, 4·Δα₂ =             924
+         residual (8·Δα₃+...) = -2552
+  p=19: Δα₁ =      4521665220, 2·Δα₁ =      9043330440, H(P)-H(I) =    -11517077848
+
+--- Growth rates ---
+  p=7: Δα₁ = 21, log Δα₁ / log p = 1.56
+  p=11: Δα₁ = 2772, log Δα₁ / log p = 3.31
+  p=19: Δα₁ = 4521665220, log Δα₁ / log p = 7.55
+
+--- Trace formula analysis of Δα₁ ---
+
+  p=7: |λ_Pal| = 1.414, |μ₁_Int| = 2.247, ratio = 1.589
+    k=3: tr_P/p=2.1, tr_I/p=2.1, Δ=-0.0
+    k=5: tr_P/p=-4.7, tr_I/p=-14.7, Δ=10.0
+    k=7: tr_P/p=5.6, tr_I/p=82.6, Δ=-77.0
+
+  p=11: |λ_Pal| = 1.732, |μ₁_Int| = 3.513, ratio = 2.028
+    k=3: tr_P/p=3.6, tr_I/p=3.6, Δ=-0.0
+    k=5: tr_P/p=-14.1, tr_I/p=-64.1, Δ=50.0
+    k=7: tr_P/p=37.7, tr_I/p=1010.7, Δ=-973.0
+    k=9: tr_P/p=-61.8, tr_I/p=-14227.8, Δ=14166.0
+
+  p=19: |λ_Pal| = 2.236, |μ₁_Int| = 6.055, ratio = 2.708
+    k=3: tr_P/p=6.6, tr_I/p=6.6, Δ=0.0
+    k=5: tr_P/p=-47.8, tr_I/p=-347.8, Δ=300.0
+    k=7: tr_P/p=264.8, tr_I/p=17190.8, Δ=-16926.0
+    k=9: tr_P/p=-1187.1, tr_I/p=-779759.1, Δ=778572.0
+
+======================================================================
+CROSSOVER ESTIMATE
+======================================================================
+  p=7: H(P)/H(I) = 1.080000, log ratio = 0.076961
+  p=11: H(P)/H(I) = 1.022230, log ratio = 0.021987
+  p=19: H(P)/H(I) = 0.990274, log ratio = -0.009773
+
+  Quadratic fit: log(H_P/H_I) = 2.5329/p² + 0.4661/p + -0.041323
+  Predicted crossover: p_c ≈ 15.3
+  Linear fit: log(H_P/H_I) = 0.9669/p + -0.062581
+  Linear predicted crossover: 1/p_c = 0.0647, p_c ≈ 15.5
+
+======================================================================
+SCALING ARGUMENT
+======================================================================
+
+From the data and THM-142:
+
+  Δα₁ = α₁(P) - α₁(I) grows as ~ p^{a} for some a
+  Δα₂ ≥ p(p-1)(p+1)(p-3)/192 ~ p⁴/192  [3-3 pairs only, THM-142]
+
+  H(P) - H(I) = 2·Δα₁ - 4·Δα₂ - 8·Δα₃ - ...
+
+The crossover is when the POSITIVE 2·Δα₁ term is overcome by the
+NEGATIVE -4·Δα₂ and higher terms.
+
+From the trace formula at p=19:
+  Δα₁ ≈ 4.5 × 10⁹, grows roughly as (p/e)^{p/2}
+  But so does α₁ itself, and the RATIO Δα₁/α₁ → 0 as p → ∞
+
+In contrast, Δα₂/α₂ stays bounded away from 0 (the disjointness
+gap is STRUCTURAL, not just a fluctuation).
+
+The competition between exponentially growing terms with different
+bases is what determines the crossover.
+
+For p ≡ 3 mod 4 primes: crossover between p=11 and p=19.
+The exact critical prime is BETWEEN 11 and 19 — likely p=13 or p=17
+(but these are ≡ 1 mod 4, where Paley doesn't exist!).
+
+This suggests: for p ≡ 3 mod 4, the crossover occurs at the first
+prime p > 11, which is p = 19. The transition is "sharp" — there
+is no intermediate prime to test.
+
+For p ≡ 1 mod 4: Interval always wins (no Paley eigenvector advantage).
+
+======================================================================
+TOWARDS A PROOF: INTERVAL WINS FOR p ≥ 19
+======================================================================
+
+STRATEGY:
+
+1. At degree 2 (J matrix):
+   Paley eigenvalue λ_P = +7 (p=7), +561 (p=11), -544M (p=19)
+   λ_P changes sign → degree-2 ALSO favors Interval at p=19!
+
+   If λ_P < 0 for all p ≥ 19 (p ≡ 3 mod 4), then EVERY Walsh degree
+   favors Interval, and the proof is immediate.
+
+2. Can we compute λ_P analytically?
+   λ_P = (1/m) σ_P^T J σ_P
+
+   From the Walsh decomposition:
+   J[i,j] = Ĥ[{i,j}] = interaction between chords i and j
+
+   σ_P^T J σ_P = Σ_{i,j} J[i,j] χ(i) χ(j)
+   = Σ_{QR pairs} J[i,j] + Σ_{NQR pairs} J[i,j] - 2·Σ_{mixed pairs} J[i,j]
+   = (Σ_all J[i,j]) - 4·Σ_{mixed} J[i,j]
+
+   At p=13: Σ_{mixed} = 0 exactly (mixed pairs cancel)
+   At p=7,11: Σ_{mixed} < 0 (all negative)
+   At p=19: Σ_{mixed} > 0 (from HYP-512 data, λ_P < 0)
+
+   So the question is: when does Σ_{mixed} J[i,j] change sign?
+
+3. The J matrix entries J[i,j] involve the FULL Hamiltonian path counting
+   function, which is hard to compute analytically. But the LINEARIZED
+   version (from cycle counts only) is computable!
+
+   From S66: the linearized Ĥ is COMPLETELY WRONG (nonlinear corrections
+   dominate by 100:1 ratio). So cycle counts alone don't determine J.
+
+4. ALTERNATIVE APPROACH: Use the SPECTRAL concentration bound.
+   IPR(Interval) → 1/3 as p → ∞
+   IPR(Paley) → 0 as p → ∞
+
+   If IPR determines H ranking for large p, and we can prove this
+   rigorously, then Interval wins for all sufficiently large p.
+
+   Combined with exhaustive verification at p=19 (done), this gives
+   Interval wins for all p ≥ 19 with p ≡ 3 mod 4.
+
+DONE.
