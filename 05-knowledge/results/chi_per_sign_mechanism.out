@@ -1,0 +1,129 @@
+/home/e/.local/lib/python3.10/site-packages/numpy/lib/function_base.py:2897: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/e/.local/lib/python3.10/site-packages/numpy/lib/function_base.py:2898: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+================================================================================
+CHI_PER SIGN MECHANISM at p = 13
+================================================================================
+
+  Sorted by chi_per:
+  S                           chi  mode  centr    skew  Σodd-Σevn  QR  LP    E |S+S|
+  [1, 3, 7, 8, 9, 11]         -17 m=8   7.94  -0.211        +17   3  -1  114    12
+  [1, 7, 8, 9, 10, 11]         -8 m=8   8.08  -0.264         +8   3  -1  122    12
+  [1, 2, 7, 8, 9, 10]          -3 m=9   8.53  -0.394         +3   3  -1  130    12
+  [7, 8, 9, 10, 11, 12]         1 m=9   8.76  -0.436         -1   3  -1  146    11
+  [2, 7, 8, 9, 10, 12]          1 m=8   7.95  -0.220         -1   3  -1  118    12
+  [1, 2, 4, 7, 8, 10]           4 m=8   8.15  -0.269         -4   3  -1  118    12
+
+  Correlations with chi_per:
+    corr(chi_per, centroid) = 0.4036
+    corr(chi_per, skewness) = -0.3949
+    corr(chi_per, Σeven-Σodd) = 1.0000
+    corr(chi_per, QR count) = nan
+    corr(chi_per, E) = 0.3834
+
+================================================================================
+EVEN/ODD BALANCE IN Ω
+================================================================================
+
+  S = [1, 3, 7, 8, 9, 11], chi_per = -17
+    m= 0: Ω =      1  (+), cumulative chi =     +1
+    m= 1: Ω =      6  (-), cumulative chi =     -5
+    m= 2: Ω =     30  (+), cumulative chi =    +25
+    m= 3: Ω =    135  (-), cumulative chi =   -110
+    m= 4: Ω =    528  (+), cumulative chi =   +418
+    m= 5: Ω =   1707  (-), cumulative chi =  -1289
+    m= 6: Ω =   4245  (+), cumulative chi =  +2956
+    m= 7: Ω =   7503  (-), cumulative chi =  -4547
+    m= 8: Ω =   9177  (+), cumulative chi =  +4630
+    m= 9: Ω =   7770  (-), cumulative chi =  -3140
+    m=10: Ω =   4374  (+), cumulative chi =  +1234
+    m=11: Ω =   1488  (-), cumulative chi =   -254
+    m=12: Ω =    237  (+), cumulative chi =    -17
+
+  S = [1, 7, 8, 9, 10, 11], chi_per = -8
+    m= 0: Ω =      1  (+), cumulative chi =     +1
+    m= 1: Ω =      6  (-), cumulative chi =     -5
+    m= 2: Ω =     30  (+), cumulative chi =    +25
+    m= 3: Ω =    135  (-), cumulative chi =   -110
+    m= 4: Ω =    520  (+), cumulative chi =   +410
+    m= 5: Ω =   1627  (-), cumulative chi =  -1217
+    m= 6: Ω =   3915  (+), cumulative chi =  +2698
+    m= 7: Ω =   6965  (-), cumulative chi =  -4267
+    m= 8: Ω =   9012  (+), cumulative chi =  +4745
+    m= 9: Ω =   8325  (-), cumulative chi =  -3580
+    m=10: Ω =   5157  (+), cumulative chi =  +1577
+    m=11: Ω =   1906  (-), cumulative chi =   -329
+    m=12: Ω =    321  (+), cumulative chi =     -8
+
+  S = [1, 2, 7, 8, 9, 10], chi_per = -3
+    m= 0: Ω =      1  (+), cumulative chi =     +1
+    m= 1: Ω =      6  (-), cumulative chi =     -5
+    m= 2: Ω =     30  (+), cumulative chi =    +25
+    m= 3: Ω =    135  (-), cumulative chi =   -110
+    m= 4: Ω =    517  (+), cumulative chi =   +407
+    m= 5: Ω =   1622  (-), cumulative chi =  -1215
+    m= 6: Ω =   4129  (+), cumulative chi =  +2914
+    m= 7: Ω =   8436  (-), cumulative chi =  -5522
+    m= 8: Ω =  13292  (+), cumulative chi =  +7770
+    m= 9: Ω =  15078  (-), cumulative chi =  -7308
+    m=10: Ω =  11316  (+), cumulative chi =  +4008
+    m=11: Ω =   4988  (-), cumulative chi =   -980
+    m=12: Ω =    977  (+), cumulative chi =     -3
+
+  S = [7, 8, 9, 10, 11, 12], chi_per = 1
+    m= 0: Ω =      1  (+), cumulative chi =     +1
+    m= 1: Ω =      6  (-), cumulative chi =     -5
+    m= 2: Ω =     30  (+), cumulative chi =    +25
+    m= 3: Ω =    140  (-), cumulative chi =   -115
+    m= 4: Ω =    556  (+), cumulative chi =   +441
+    m= 5: Ω =   1823  (-), cumulative chi =  -1382
+    m= 6: Ω =   4983  (+), cumulative chi =  +3601
+    m= 7: Ω =  11241  (-), cumulative chi =  -7640
+    m= 8: Ω =  19730  (+), cumulative chi = +12090
+    m= 9: Ω =  24780  (-), cumulative chi = -12690
+    m=10: Ω =  20344  (+), cumulative chi =  +7654
+    m=11: Ω =   9642  (-), cumulative chi =  -1988
+    m=12: Ω =   1989  (+), cumulative chi =     +1
+
+  S = [2, 7, 8, 9, 10, 12], chi_per = 1
+    m= 0: Ω =      1  (+), cumulative chi =     +1
+    m= 1: Ω =      6  (-), cumulative chi =     -5
+    m= 2: Ω =     30  (+), cumulative chi =    +25
+    m= 3: Ω =    135  (-), cumulative chi =   -110
+    m= 4: Ω =    524  (+), cumulative chi =   +414
+    m= 5: Ω =   1663  (-), cumulative chi =  -1249
+    m= 6: Ω =   4001  (+), cumulative chi =  +2752
+    m= 7: Ω =   6876  (-), cumulative chi =  -4124
+    m= 8: Ω =   8409  (+), cumulative chi =  +4285
+    m= 9: Ω =   7266  (-), cumulative chi =  -2981
+    m=10: Ω =   4237  (+), cumulative chi =  +1256
+    m=11: Ω =   1493  (-), cumulative chi =   -237
+    m=12: Ω =    238  (+), cumulative chi =     +1
+
+  S = [1, 2, 4, 7, 8, 10], chi_per = 4
+    m= 0: Ω =      1  (+), cumulative chi =     +1
+    m= 1: Ω =      6  (-), cumulative chi =     -5
+    m= 2: Ω =     30  (+), cumulative chi =    +25
+    m= 3: Ω =    135  (-), cumulative chi =   -110
+    m= 4: Ω =    524  (+), cumulative chi =   +414
+    m= 5: Ω =   1675  (-), cumulative chi =  -1261
+    m= 6: Ω =   4176  (+), cumulative chi =  +2915
+    m= 7: Ω =   7707  (-), cumulative chi =  -4792
+    m= 8: Ω =  10295  (+), cumulative chi =  +5503
+    m= 9: Ω =   9681  (-), cumulative chi =  -4178
+    m=10: Ω =   6081  (+), cumulative chi =  +1903
+    m=11: Ω =   2298  (-), cumulative chi =   -395
+    m=12: Ω =    399  (+), cumulative chi =     +4
+
+================================================================================
+ALTERNATING WEIGHTED ANALYSIS
+================================================================================
+  S=[1, 3, 7, 8, 9, 11]       chi_per=-17, first_half(0..6)= +2956, second_half(7..12)= -2973
+  S=[1, 7, 8, 9, 10, 11]      chi_per= -8, first_half(0..6)= +2698, second_half(7..12)= -2706
+  S=[1, 2, 7, 8, 9, 10]       chi_per= -3, first_half(0..6)= +2914, second_half(7..12)= -2917
+  S=[7, 8, 9, 10, 11, 12]     chi_per= +1, first_half(0..6)= +3601, second_half(7..12)= -3600
+  S=[2, 7, 8, 9, 10, 12]      chi_per= +1, first_half(0..6)= +2752, second_half(7..12)= -2751
+  S=[1, 2, 4, 7, 8, 10]       chi_per= +4, first_half(0..6)= +2915, second_half(7..12)= -2911
+
+DONE.
