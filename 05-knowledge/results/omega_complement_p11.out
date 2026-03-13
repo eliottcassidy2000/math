@@ -1,0 +1,104 @@
+======================================================================
+OMEGA COMPLEMENT STRUCTURE at p=7
+======================================================================
+
+  Interval (bits=000, S=[4, 5, 6]):
+    Total directed cycles (alpha_1): 59
+    By length: {3: 14, 5: 28, 7: 17}
+    Disjoint pairs (alpha_2): 14
+    alpha_2/p = 2.0000
+    alpha_2 mod p = 0
+    Disjoint pairs by length: {(3, 3): 14}
+    Complement degree dist: {0: 45, 2: 14}
+    Max complement degree: 2
+    Is matching? False
+    Alpha_3 (disjoint triples): 0
+    H = 1 + 2*59 + 4*14 + 8*0 = 175
+    *** alpha_2 = 2 * p  (p-DIVISIBLE!)
+    Distinct vertex sets in disjoint pairs: 14
+    Size constraint: vertex sets sum <= 7
+      (3,3): 14 pairs, sum=6 <= p OK
+
+  Paley (bits=011, S=[1, 2, 4]):
+    Total directed cycles (alpha_1): 80
+    By length: {3: 14, 5: 42, 7: 24}
+    Disjoint pairs (alpha_2): 7
+    alpha_2/p = 1.0000
+    alpha_2 mod p = 0
+    Disjoint pairs by length: {(3, 3): 7}
+    Complement degree dist: {0: 66, 1: 14}
+    Max complement degree: 1
+    Is matching? True
+    Alpha_3 (disjoint triples): 0
+    H = 1 + 2*80 + 4*7 + 8*0 = 189
+    *** alpha_2 = 1 * p  (p-DIVISIBLE!)
+    Distinct vertex sets in disjoint pairs: 14
+    Size constraint: vertex sets sum <= 7
+      (3,3): 7 pairs, sum=6 <= p OK
+
+  ============================================================
+  SUMMARY at p=7:
+  Only odd-length pairs with sizes summing to <= p can be disjoint
+  At p=7: possible disjoint length pairs: [(3, 3)]
+======================================================================
+OMEGA COMPLEMENT STRUCTURE at p=11
+======================================================================
+
+  Interval (bits=00000, S=[6, 7, 8, 9, 10]):
+    Total directed cycles (alpha_1): 18397
+    By length: {3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+    Disjoint pairs (alpha_2): 11110
+    alpha_2/p = 1010.0000
+    alpha_2 mod p = 0
+    Disjoint pairs by length: {(3, 3): 550, (3, 5): 3476, (3, 7): 5434, (5, 5): 1650}
+    Complement degree dist: {0: 15141, 2: 2717, 8: 44, 11: 110, 14: 33, 16: 297, 182: 55}
+    Max complement degree: 182
+    Is matching? False
+    H = 1 + 2*18397 + 4*11110 + 8*0 = 81235
+    *** alpha_2 = 1010 * p  (p-DIVISIBLE!)
+
+  Orbit-B (bits=00010, S=[2, 6, 7, 8, 10]):
+    Total directed cycles (alpha_1): 21169
+    By length: {3: 55, 5: 594, 7: 3960, 9: 11055, 11: 5505}
+    Disjoint pairs (alpha_2): 10879
+    alpha_2/p = 989.0000
+    alpha_2 mod p = 0
+    Disjoint pairs by length: {(3, 3): 495, (3, 5): 3630, (3, 7): 4840, (5, 5): 1914}
+    Complement degree dist: {0: 17275, 1: 1650, 2: 1595, 7: 44, 10: 55, 12: 165, 13: 220, 16: 110, 172: 55}
+    Max complement degree: 172
+    Is matching? False
+    H = 1 + 2*21169 + 4*10879 + 8*0 = 85855
+    *** alpha_2 = 989 * p  (p-DIVISIBLE!)
+
+  Orbit-C (bits=01010, S=[2, 4, 6, 8, 10]):
+    Total directed cycles (alpha_1): 18397
+    By length: {3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+    Disjoint pairs (alpha_2): 11110
+    alpha_2/p = 1010.0000
+    alpha_2 mod p = 0
+    Disjoint pairs by length: {(3, 3): 550, (3, 5): 3476, (3, 7): 5434, (5, 5): 1650}
+    Complement degree dist: {0: 15141, 2: 2717, 8: 44, 11: 110, 14: 33, 16: 297, 182: 55}
+    Max complement degree: 182
+    Is matching? False
+    H = 1 + 2*18397 + 4*11110 + 8*0 = 81235
+    *** alpha_2 = 1010 * p  (p-DIVISIBLE!)
+
+  Paley (bits=01011, S=[1, 2, 4, 6, 8]):
+    Total directed cycles (alpha_1): 19541
+    By length: {3: 55, 5: 550, 7: 3586, 9: 10197, 11: 5153}
+    Disjoint pairs (alpha_2): 11220
+    alpha_2/p = 1020.0000
+    alpha_2 mod p = 0
+    Disjoint pairs by length: {(3, 3): 517, (3, 5): 3740, (3, 7): 4862, (5, 5): 2101}
+    Complement degree dist: {0: 16087, 1: 836, 2: 2013, 4: 22, 9: 66, 11: 22, 12: 55, 14: 110, 16: 143, 19: 110, 20: 22, 159: 22, 185: 22, 188: 11}
+    Max complement degree: 188
+    Is matching? False
+    H = 1 + 2*19541 + 4*11220 + 8*0 = 83963
+    *** alpha_2 = 1020 * p  (p-DIVISIBLE!)
+
+  ============================================================
+  SUMMARY at p=11:
+  Only odd-length pairs with sizes summing to <= p can be disjoint
+  At p=11: possible disjoint length pairs: [(3, 3), (3, 5), (3, 7), (5, 5)]
+
+DONE.

@@ -1,0 +1,162 @@
+======================================================================
+c_k WALSH SIGN PATTERNS at p=11
+======================================================================
+
+Computing c_k for all 32 orientations...
+  bits=00000 (1/32) c_k = {3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+  bits=01000 (9/32) c_k = {3: 55, 5: 572, 7: 3729, 9: 10274, 11: 4999}
+  bits=10000 (17/32) c_k = {3: 55, 5: 550, 7: 3586, 9: 10197, 11: 5153}
+  bits=11000 (25/32) c_k = {3: 55, 5: 550, 7: 3586, 9: 10197, 11: 5153}
+
+======================================================================
+DEGREE-2 WALSH DECOMPOSITION of c_k
+======================================================================
+
+  c_3:
+    Distinct values: [55]
+    Range: 55 to 55
+    Mean (h_hat_0): 55.0000
+
+  c_5:
+    Distinct values: [484, 550, 572, 594]
+    Range: 484 to 594
+    Mean (h_hat_0): 539.0000
+    (0,2) gaps=(1,3) q=3: h_hat=   -5.5000, |h_hat|=    5.5000, sign*chi(ab)=-1
+    (0,3) gaps=(1,4) q=3: h_hat=   -5.5000, |h_hat|=    5.5000, sign*chi(ab)=-1
+    (1,2) gaps=(2,3) q=3: h_hat=    5.5000, |h_hat|=    5.5000, sign*chi(ab)=-1
+    (1,4) gaps=(2,5) q=3: h_hat=    5.5000, |h_hat|=    5.5000, sign*chi(ab)=-1
+    (3,4) gaps=(4,5) q=3: h_hat=   -5.5000, |h_hat|=    5.5000, sign*chi(ab)=-1
+
+  c_7:
+    Distinct values: [3399, 3586, 3729, 3960]
+    Range: 3399 to 3960
+    Mean (h_hat_0): 3595.6250
+    (0,1) gaps=(1,2) q=5: h_hat=  -20.6250, |h_hat|=   20.6250, sign*chi(ab)=+1
+    (0,2) gaps=(1,3) q=3: h_hat=  -15.1250, |h_hat|=   15.1250, sign*chi(ab)=-1
+    (0,3) gaps=(1,4) q=3: h_hat=  -15.1250, |h_hat|=   15.1250, sign*chi(ab)=-1
+    (0,4) gaps=(1,5) q=5: h_hat=   20.6250, |h_hat|=   20.6250, sign*chi(ab)=+1
+    (1,2) gaps=(2,3) q=3: h_hat=   15.1250, |h_hat|=   15.1250, sign*chi(ab)=-1
+    (1,3) gaps=(2,4) q=5: h_hat=  -20.6250, |h_hat|=   20.6250, sign*chi(ab)=+1
+    (1,4) gaps=(2,5) q=3: h_hat=   15.1250, |h_hat|=   15.1250, sign*chi(ab)=-1
+    (2,3) gaps=(3,4) q=5: h_hat=   20.6250, |h_hat|=   20.6250, sign*chi(ab)=+1
+    (2,4) gaps=(3,5) q=5: h_hat=   20.6250, |h_hat|=   20.6250, sign*chi(ab)=+1
+    (3,4) gaps=(4,5) q=3: h_hat=  -15.1250, |h_hat|=   15.1250, sign*chi(ab)=-1
+
+  c_9:
+    Distinct values: [9350, 10197, 10274, 11055]
+    Range: 9350 to 11055
+    Mean (h_hat_0): 10010.0000
+    (0,1) gaps=(1,2) q=5: h_hat=   -5.5000, |h_hat|=    5.5000, sign*chi(ab)=+1
+    (0,2) gaps=(1,3) q=3: h_hat=  -13.7500, |h_hat|=   13.7500, sign*chi(ab)=-1
+    (0,3) gaps=(1,4) q=3: h_hat=  -13.7500, |h_hat|=   13.7500, sign*chi(ab)=-1
+    (0,4) gaps=(1,5) q=5: h_hat=    5.5000, |h_hat|=    5.5000, sign*chi(ab)=+1
+    (1,2) gaps=(2,3) q=3: h_hat=   13.7500, |h_hat|=   13.7500, sign*chi(ab)=-1
+    (1,3) gaps=(2,4) q=5: h_hat=   -5.5000, |h_hat|=    5.5000, sign*chi(ab)=+1
+    (1,4) gaps=(2,5) q=3: h_hat=   13.7500, |h_hat|=   13.7500, sign*chi(ab)=-1
+    (2,3) gaps=(3,4) q=5: h_hat=    5.5000, |h_hat|=    5.5000, sign*chi(ab)=+1
+    (2,4) gaps=(3,5) q=5: h_hat=    5.5000, |h_hat|=    5.5000, sign*chi(ab)=+1
+    (3,4) gaps=(4,5) q=3: h_hat=  -13.7500, |h_hat|=   13.7500, sign*chi(ab)=-1
+
+  c_11:
+    Distinct values: [4999, 5109, 5153, 5505]
+    Range: 4999 to 5505
+    Mean (h_hat_0): 5113.1250
+    (0,1) gaps=(1,2) q=5: h_hat=   -9.6250, |h_hat|=    9.6250, sign*chi(ab)=+1
+    (0,2) gaps=(1,3) q=3: h_hat=   48.1250, |h_hat|=   48.1250, sign*chi(ab)=+1
+    (0,3) gaps=(1,4) q=3: h_hat=   48.1250, |h_hat|=   48.1250, sign*chi(ab)=+1
+    (0,4) gaps=(1,5) q=5: h_hat=    9.6250, |h_hat|=    9.6250, sign*chi(ab)=+1
+    (1,2) gaps=(2,3) q=3: h_hat=  -48.1250, |h_hat|=   48.1250, sign*chi(ab)=+1
+    (1,3) gaps=(2,4) q=5: h_hat=   -9.6250, |h_hat|=    9.6250, sign*chi(ab)=+1
+    (1,4) gaps=(2,5) q=3: h_hat=  -48.1250, |h_hat|=   48.1250, sign*chi(ab)=+1
+    (2,3) gaps=(3,4) q=5: h_hat=    9.6250, |h_hat|=    9.6250, sign*chi(ab)=+1
+    (2,4) gaps=(3,5) q=5: h_hat=    9.6250, |h_hat|=    9.6250, sign*chi(ab)=+1
+    (3,4) gaps=(4,5) q=3: h_hat=   48.1250, |h_hat|=   48.1250, sign*chi(ab)=+1
+
+======================================================================
+DEGREE-1 WALSH COEFFICIENTS of c_k
+======================================================================
+
+  c_3: all degree-1 coefficients = 0
+
+  c_5: all degree-1 coefficients = 0
+
+  c_7: all degree-1 coefficients = 0
+
+  c_9: all degree-1 coefficients = 0
+
+  c_11: all degree-1 coefficients = 0
+
+======================================================================
+DEGREE-4 WALSH COEFFICIENTS of c_k
+======================================================================
+
+  c_3:
+    (0, 1, 2, 3): h_hat = 0
+    (0, 1, 2, 4): h_hat = 0
+    (0, 1, 3, 4): h_hat = 0
+    (0, 2, 3, 4): h_hat = 0
+    (1, 2, 3, 4): h_hat = 0
+
+  c_5:
+    (0, 1, 2, 3) gaps=(1,2,3,4): h_hat=    -16.5000, chi(prod)=-1, sign*chi=+1
+    (0, 1, 2, 4) gaps=(1,2,3,5): h_hat=    -16.5000, chi(prod)=-1, sign*chi=+1
+    (0, 1, 3, 4) gaps=(1,2,4,5): h_hat=    -16.5000, chi(prod)=-1, sign*chi=+1
+    (0, 2, 3, 4) gaps=(1,3,4,5): h_hat=     16.5000, chi(prod)=+1, sign*chi=+1
+    (1, 2, 3, 4) gaps=(2,3,4,5): h_hat=    -16.5000, chi(prod)=-1, sign*chi=+1
+
+  c_7:
+    (0, 1, 2, 3) gaps=(1,2,3,4): h_hat=    -67.3750, chi(prod)=-1, sign*chi=+1
+    (0, 1, 2, 4) gaps=(1,2,3,5): h_hat=    -67.3750, chi(prod)=-1, sign*chi=+1
+    (0, 1, 3, 4) gaps=(1,2,4,5): h_hat=    -67.3750, chi(prod)=-1, sign*chi=+1
+    (0, 2, 3, 4) gaps=(1,3,4,5): h_hat=     67.3750, chi(prod)=+1, sign*chi=+1
+    (1, 2, 3, 4) gaps=(2,3,4,5): h_hat=    -67.3750, chi(prod)=-1, sign*chi=+1
+
+  c_9:
+    (0, 1, 2, 3) gaps=(1,2,3,4): h_hat=   -217.2500, chi(prod)=-1, sign*chi=+1
+    (0, 1, 2, 4) gaps=(1,2,3,5): h_hat=   -217.2500, chi(prod)=-1, sign*chi=+1
+    (0, 1, 3, 4) gaps=(1,2,4,5): h_hat=   -217.2500, chi(prod)=-1, sign*chi=+1
+    (0, 2, 3, 4) gaps=(1,3,4,5): h_hat=    217.2500, chi(prod)=+1, sign*chi=+1
+    (1, 2, 3, 4) gaps=(2,3,4,5): h_hat=   -217.2500, chi(prod)=-1, sign*chi=+1
+
+  c_11:
+    (0, 1, 2, 3) gaps=(1,2,3,4): h_hat=    -20.6250, chi(prod)=-1, sign*chi=+1
+    (0, 1, 2, 4) gaps=(1,2,3,5): h_hat=    -20.6250, chi(prod)=-1, sign*chi=+1
+    (0, 1, 3, 4) gaps=(1,2,4,5): h_hat=    -20.6250, chi(prod)=-1, sign*chi=+1
+    (0, 2, 3, 4) gaps=(1,3,4,5): h_hat=     20.6250, chi(prod)=+1, sign*chi=+1
+    (1, 2, 3, 4) gaps=(2,3,4,5): h_hat=    -20.6250, chi(prod)=-1, sign*chi=+1
+
+======================================================================
+SIGN LAW CLASSIFICATION
+======================================================================
+
+  c_3: ZERO
+    product=0, anti=0, zero=10/10
+    magnitudes: [0.0]
+    q=3: product=0, anti=0, zero=5, mags=[0.0]
+    q=5: product=0, anti=0, zero=5, mags=[0.0]
+
+  c_5: MIXED
+    product=0, anti=5, zero=5/10
+    magnitudes: [0.0, 5.5]
+    q=3: product=0, anti=5, zero=0, mags=[5.5]
+    q=5: product=0, anti=0, zero=5, mags=[0.0]
+
+  c_7: MIXED
+    product=5, anti=5, zero=0/10
+    magnitudes: [15.125, 20.625]
+    q=3: product=0, anti=5, zero=0, mags=[15.125]
+    q=5: product=5, anti=0, zero=0, mags=[20.625]
+
+  c_9: MIXED
+    product=5, anti=5, zero=0/10
+    magnitudes: [5.5, 13.75]
+    q=3: product=0, anti=5, zero=0, mags=[13.75]
+    q=5: product=5, anti=0, zero=0, mags=[5.5]
+
+  c_11: PRODUCT
+    product=10, anti=0, zero=0/10
+    magnitudes: [9.625, 48.125]
+    q=3: product=5, anti=0, zero=0, mags=[48.125]
+    q=5: product=5, anti=0, zero=0, mags=[9.625]
+
+DONE.
