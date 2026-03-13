@@ -1,0 +1,212 @@
+======================================================================
+DIRECTED CYCLE MULTIPLICITY ANATOMY
+======================================================================
+
+======================================================================
+p=7, m=3
+======================================================================
+
+  Interval (S=[1, 2, 3]):
+  ------------------------------------------------------------
+
+    k=3:
+      14 vertex sets, 14 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 1): 14 sets, avg mult=1.0, mults=[1], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 14 sets (100.0%)
+
+    k=5:
+      21 vertex sets, 28 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 2, 3, 3): 7 sets, avg mult=1.0, mults=[1], var_s=0.80
+        score=(1, 2, 2, 2, 3): 7 sets, avg mult=1.0, mults=[1], var_s=0.40
+        score=(2, 2, 2, 2, 2): 7 sets, avg mult=2.0, mults=[2], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 14 sets (66.7%)
+        mult=2: 7 sets (33.3%)
+
+    k=7:
+      1 vertex sets, 17 directed cycles
+      Score sequence analysis:
+        score=(3, 3, 3, 3, 3, 3, 3): 1 sets, avg mult=17.0, mults=[17], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=17: 1 sets (100.0%)
+
+    TOTAL alpha_1 = directed cycles:
+      k=3: 14 directed cycles
+      k=5: 28 directed cycles
+      k=7: 17 directed cycles
+      TOTAL alpha_1 = 59
+
+  Paley (S=[1, 2, 4]):
+  ------------------------------------------------------------
+
+    k=3:
+      14 vertex sets, 14 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 1): 14 sets, avg mult=1.0, mults=[1], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 14 sets (100.0%)
+
+    k=5:
+      21 vertex sets, 42 directed cycles
+      Score sequence analysis:
+        score=(1, 2, 2, 2, 3): 21 sets, avg mult=2.0, mults=[2], var_s=0.40
+      Multiplicity distribution:
+        mult=2: 21 sets (100.0%)
+
+    k=7:
+      1 vertex sets, 24 directed cycles
+      Score sequence analysis:
+        score=(3, 3, 3, 3, 3, 3, 3): 1 sets, avg mult=24.0, mults=[24], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=24: 1 sets (100.0%)
+
+    TOTAL alpha_1 = directed cycles:
+      k=3: 14 directed cycles
+      k=5: 42 directed cycles
+      k=7: 24 directed cycles
+      TOTAL alpha_1 = 80
+
+======================================================================
+p=11, m=5
+======================================================================
+
+  Interval (S=[1, 2, 3, 4, 5]):
+  ------------------------------------------------------------
+
+    k=3:
+      55 vertex sets, 55 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 1): 55 sets, avg mult=1.0, mults=[1], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 55 sets (100.0%)
+
+    k=5:
+      407 vertex sets, 484 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 2, 3, 3): 165 sets, avg mult=1.0, mults=[1], var_s=0.80
+        score=(1, 2, 2, 2, 3): 165 sets, avg mult=1.0, mults=[1], var_s=0.40
+        score=(2, 2, 2, 2, 2): 77 sets, avg mult=2.0, mults=[2], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 330 sets (81.1%)
+        mult=2: 77 sets (18.9%)
+
+    k=7:
+      330 vertex sets, 3399 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 2, 3, 4, 5, 5): 11 sets, avg mult=1.0, mults=[1], var_s=2.57
+        score=(1, 2, 2, 3, 4, 4, 5): 22 sets, avg mult=1.0, mults=[1], var_s=1.71
+        score=(1, 2, 3, 3, 3, 4, 5): 11 sets, avg mult=1.0, mults=[1], var_s=1.43
+        score=(2, 2, 2, 3, 4, 4, 4): 77 sets, avg mult=8.0, mults=[8], var_s=0.86
+        score=(2, 2, 3, 3, 3, 4, 4): 88 sets, avg mult=10.4, mults=[10, 13], var_s=0.57
+        score=(2, 3, 3, 3, 3, 3, 4): 77 sets, avg mult=14.0, mults=[14], var_s=0.29
+        score=(3, 3, 3, 3, 3, 3, 3): 44 sets, avg mult=17.0, mults=[17], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 44 sets (13.3%)
+        mult=8: 77 sets (23.3%)
+        mult=10: 77 sets (23.3%)
+        mult=13: 11 sets (3.3%)
+        mult=14: 77 sets (23.3%)
+        mult=17: 44 sets (13.3%)
+
+    k=9:
+      55 vertex sets, 9350 directed cycles
+      Score sequence analysis:
+        score=(3, 3, 3, 3, 4, 5, 5, 5, 5): 11 sets, avg mult=125.0, mults=[125], var_s=0.89
+        score=(3, 3, 3, 4, 4, 4, 5, 5, 5): 11 sets, avg mult=141.0, mults=[141], var_s=0.67
+        score=(3, 3, 4, 4, 4, 4, 4, 5, 5): 11 sets, avg mult=165.0, mults=[165], var_s=0.44
+        score=(3, 4, 4, 4, 4, 4, 4, 4, 5): 11 sets, avg mult=197.0, mults=[197], var_s=0.22
+        score=(4, 4, 4, 4, 4, 4, 4, 4, 4): 11 sets, avg mult=222.0, mults=[222], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=125: 11 sets (20.0%)
+        mult=141: 11 sets (20.0%)
+        mult=165: 11 sets (20.0%)
+        mult=197: 11 sets (20.0%)
+        mult=222: 11 sets (20.0%)
+
+    k=11:
+      1 vertex sets, 5109 directed cycles
+      Score sequence analysis:
+        score=(5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5): 1 sets, avg mult=5109.0, mults=[5109], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=5109: 1 sets (100.0%)
+
+    TOTAL alpha_1 = directed cycles:
+      k=3: 55 directed cycles
+      k=5: 484 directed cycles
+      k=7: 3399 directed cycles
+      k=9: 9350 directed cycles
+      k=11: 5109 directed cycles
+      TOTAL alpha_1 = 18397
+
+  Paley (S=[1, 3, 4, 5, 9]):
+  ------------------------------------------------------------
+
+    k=3:
+      55 vertex sets, 55 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 1): 55 sets, avg mult=1.0, mults=[1], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 55 sets (100.0%)
+
+    k=5:
+      352 vertex sets, 594 directed cycles
+      Score sequence analysis:
+        score=(1, 1, 2, 3, 3): 110 sets, avg mult=1.0, mults=[1], var_s=0.80
+        score=(1, 2, 2, 2, 3): 220 sets, avg mult=2.0, mults=[1, 2, 3], var_s=0.40
+        score=(2, 2, 2, 2, 2): 22 sets, avg mult=2.0, mults=[2], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=1: 165 sets (46.9%)
+        mult=2: 132 sets (37.5%)
+        mult=3: 55 sets (15.6%)
+
+    k=7:
+      330 vertex sets, 3960 directed cycles
+      Score sequence analysis:
+        score=(1, 3, 3, 3, 3, 4, 4): 55 sets, avg mult=9.0, mults=[9], var_s=0.86
+        score=(2, 2, 2, 3, 4, 4, 4): 55 sets, avg mult=11.0, mults=[11], var_s=0.86
+        score=(2, 2, 3, 3, 3, 3, 5): 55 sets, avg mult=9.0, mults=[9], var_s=0.86
+        score=(2, 2, 3, 3, 3, 4, 4): 110 sets, avg mult=15.0, mults=[15], var_s=0.57
+        score=(2, 3, 3, 3, 3, 3, 4): 55 sets, avg mult=13.0, mults=[13], var_s=0.29
+      Multiplicity distribution:
+        mult=9: 110 sets (33.3%)
+        mult=11: 55 sets (16.7%)
+        mult=13: 55 sets (16.7%)
+        mult=15: 110 sets (33.3%)
+
+    k=9:
+      55 vertex sets, 11055 directed cycles
+      Score sequence analysis:
+        score=(3, 3, 4, 4, 4, 4, 4, 5, 5): 55 sets, avg mult=201.0, mults=[201], var_s=0.44
+      Multiplicity distribution:
+        mult=201: 55 sets (100.0%)
+
+    k=11:
+      1 vertex sets, 5505 directed cycles
+      Score sequence analysis:
+        score=(5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5): 1 sets, avg mult=5505.0, mults=[5505], var_s=0.00 REGULAR
+      Multiplicity distribution:
+        mult=5505: 1 sets (100.0%)
+
+    TOTAL alpha_1 = directed cycles:
+      k=3: 55 directed cycles
+      k=5: 594 directed cycles
+      k=7: 3960 directed cycles
+      k=9: 11055 directed cycles
+      k=11: 5505 directed cycles
+      TOTAL alpha_1 = 21169
+
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\multiplicity_anatomy.py", line 307, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\multiplicity_anatomy.py", line 159, in main
+    print("KEY INSIGHT: SCORE REGULARITY \u2192 DIRECTED CYCLE MULTIPLICITY")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 30: character maps to <undefined>
