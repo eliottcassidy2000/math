@@ -1,0 +1,212 @@
+========================================================================
+PART I: Ω GRAPH STRUCTURE FOR p=7
+========================================================================
+
+  Interval (S=[1, 2, 3]):
+    Odd cycles: 36 [0.00s]
+      Length 3: 14 cycles
+      Length 5: 21 cycles
+      Length 7: 1 cycles
+    |V(Ω)| = 36
+    |E(Ω)| = 616
+    Degree: min=33, max=35, avg=34.22
+    Edge density = 0.9778
+    Degree distribution: {33: 14, 35: 22}
+    Scott-Sokal upper bound Z(Ω,2) ≤ 3.08
+    Hoffman bound: α(Ω) ≥ 2.90
+    Spectral gap of Ω: λ_max=34.25, λ_min=-3.00
+    Clustering coefficient: 0.9781
+
+  Paley (S=[1, 2, 4]):
+    Odd cycles: 36 [0.00s]
+      Length 3: 14 cycles
+      Length 5: 21 cycles
+      Length 7: 1 cycles
+    |V(Ω)| = 36
+    |E(Ω)| = 623
+    Degree: min=34, max=35, avg=34.61
+    Edge density = 0.9889
+    Degree distribution: {34: 14, 35: 22}
+    Scott-Sokal upper bound Z(Ω,2) ≤ 3.04
+    Hoffman bound: α(Ω) ≥ 1.97
+    Spectral gap of Ω: λ_max=34.62, λ_min=-2.00
+    Clustering coefficient: 0.9886
+
+========================================================================
+PART II: Ω GRAPH STRUCTURE FOR p=11
+========================================================================
+
+  Interval (S=[1, 2, 3]...):
+    Odd cycles (len ≤ 7): 792 [0.0s]
+      Length 3: 55 cycles
+      Length 5: 407 cycles
+      Length 7: 330 cycles
+    |V(Ω≤7)| = 792
+    |E(Ω≤7)| = 308264
+    Degree: min=711, max=791, avg=778.44
+    Edge density = 0.9841
+    Too many cycles (792) for brute force independence polynomial
+    Spectral: λ_max=778.91, λ_min=-18.82
+    Hoffman bound: α(Ω≤7) ≥ 18.69
+
+  Paley (S=[1, 3, 4]...):
+    Odd cycles (len ≤ 7): 737 [0.0s]
+      Length 3: 55 cycles
+      Length 5: 352 cycles
+      Length 7: 330 cycles
+    |V(Ω≤7)| = 737
+    |E(Ω≤7)| = 267355
+    Degree: min=670, max=736, avg=725.52
+    Edge density = 0.9858
+    Too many cycles (737) for brute force independence polynomial
+    Spectral: λ_max=725.89, λ_min=-16.08
+    Hoffman bound: α(Ω≤7) ≥ 15.97
+
+========================================================================
+PART III: WHY BLOCK STRUCTURE HELPS — THE TURÁN ANALOGY
+========================================================================
+
+OBSERVATION from p=7 data above:
+  - Interval Ω: cycles cluster → Ω has BLOCK structure
+  - Paley Ω: cycles spread → Ω is more "random-like"
+
+The TURÁN GRAPH T(n,r) maximizes edges with no (r+1)-clique.
+By complement, the Turán complement MINIMIZES the independence number
+for given edge count.
+
+But we want the MAXIMUM Z(Ω, 2), not just max α.
+For the independence polynomial at fugacity λ=2:
+  Z(G, 2) = Σ_k α_k 2^k
+
+This is maximized when α_k is large for large k, which requires
+large independent sets.
+
+KEY INSIGHT: For a graph with vertex set partitioned into cliques
+(block structure), the independence polynomial factors:
+  Z(G, 2) ≈ Π_{blocks B} (1 + 2 · choice from B)
+
+For COMPLETE MULTIPARTITE graph K_{n₁,...,n_r}:
+  α_k = Σ_{i₁<...<i_k} 1 (choose one vertex from each of k blocks)
+  Z = Π_i (1 + n_i · λ)
+
+For a graph with partial block structure (not exactly multipartite):
+  Z is between the multipartite value (max) and the complete graph value (min).
+
+PREDICTION: Ω(Interval) has MORE multipartite-like structure than Ω(Paley),
+leading to higher Z = H.
+
+This can be quantified by the MULTIPARTITE DISTANCE:
+  d(G) = min_r || adj(G) - adj(K_{n₁,...,n_r}) ||_F
+
+p=7: Checking multipartite structure of Ω
+
+  Interval: 36 cycles, transitivity violations = 8
+    Complement components (disjoint cycle groups): [7, 1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      Component 0: size 7, NOT clique
+      Component 8: size 7, NOT clique
+      Component 1: [[0, 1, 4, 5, 6]]
+      Component 2: [[0, 1, 3, 4, 5]]
+      Component 3: [[0, 1, 2, 5, 6]]
+      Component 4: [[1, 2, 3, 4, 6]]
+      Component 5: [[1, 3, 4, 5, 6]]
+      Component 6: [[0, 1, 2, 3, 4]]
+      Component 7: [[0, 1, 2, 4, 6]]
+      Component 9: [[0, 2, 3, 4, 5]]
+      Component 10: [[0, 2, 4, 5, 6]]
+      Component 11: [[1, 2, 3, 4, 5]]
+      Component 12: [[1, 2, 4, 5, 6]]
+      Component 13: [[1, 2, 3, 5, 6]]
+      Component 14: [[0, 1, 3, 5, 6]]
+      Component 15: [[0, 1, 2, 4, 5]]
+      Component 16: [[0, 2, 3, 4, 6]]
+      Component 17: [[2, 3, 4, 5, 6]]
+      Component 18: [[0, 1, 2, 3, 4, 5, 6]]
+      Component 19: [[0, 3, 4, 5, 6]]
+      Component 20: [[0, 2, 3, 5, 6]]
+      Component 21: [[0, 1, 2, 3, 5]]
+      Component 22: [[0, 1, 3, 4, 6]]
+      Component 23: [[0, 1, 2, 3, 6]]
+
+  Paley: 36 cycles, transitivity violations = 0
+    Complement components (disjoint cycle groups): [1, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1]
+      Component 5: size 2, CLIQUE
+      Component 6: size 2, CLIQUE
+      Component 8: size 2, CLIQUE
+      Component 9: size 2, CLIQUE
+      Component 14: size 2, CLIQUE
+      Component 22: size 2, CLIQUE
+      Component 23: size 2, CLIQUE
+      Component 0: [[0, 1, 4, 5, 6]]
+      Component 1: [[0, 1, 3, 4, 5]]
+      Component 2: [[0, 1, 2, 5, 6]]
+      Component 3: [[1, 2, 3, 4, 6]]
+      Component 4: [[1, 3, 4, 5, 6]]
+      Component 5: [[0, 4, 6], [2, 3, 5]]
+      Component 6: [[0, 2, 3], [1, 5, 6]]
+      Component 7: [[0, 1, 2, 3, 4]]
+      Component 8: [[0, 2, 6], [1, 3, 4]]
+      Component 9: [[0, 4, 5], [1, 2, 6]]
+      Component 10: [[0, 1, 2, 4, 6]]
+      Component 11: [[0, 2, 3, 4, 5]]
+      Component 12: [[0, 2, 4, 5, 6]]
+      Component 13: [[1, 2, 3, 4, 5]]
+      Component 14: [[3, 4, 6], [0, 1, 5]]
+      Component 15: [[1, 2, 4, 5, 6]]
+      Component 16: [[1, 2, 3, 5, 6]]
+      Component 17: [[0, 1, 3, 5, 6]]
+      Component 18: [[0, 1, 2, 4, 5]]
+      Component 19: [[0, 2, 3, 4, 6]]
+      Component 20: [[2, 3, 4, 5, 6]]
+      Component 21: [[0, 1, 2, 3, 4, 5, 6]]
+      Component 22: [[0, 1, 3], [2, 4, 5]]
+      Component 23: [[1, 2, 4], [3, 5, 6]]
+      Component 24: [[0, 3, 4, 5, 6]]
+      Component 25: [[0, 2, 3, 5, 6]]
+      Component 26: [[0, 1, 2, 3, 5]]
+      Component 27: [[0, 1, 3, 4, 6]]
+      Component 28: [[0, 1, 2, 3, 6]]
+
+========================================================================
+PART IV: VERTEX USAGE CONCENTRATION
+========================================================================
+Vertex participation in odd cycles (p=7):
+
+  Interval: vertex participation = [22, 22, 22, 22, 22, 22, 22]
+    Mean = 22.00, Std = 0.00
+    Concentration (std/mean) = 0.0000
+
+  Paley: vertex participation = [22, 22, 22, 22, 22, 22, 22]
+    Mean = 22.00, Std = 0.00
+    Concentration (std/mean) = 0.0000
+
+========================================================================
+PART V: KAHN-GALVIN-TETALI DIRECTION
+========================================================================
+
+THEOREM (Kahn, 2001; Galvin-Tetali, 2004): For a d-regular graph G:
+  Z(G, λ)^{1/|V|} ≤ Z(K_{d,d}, λ)^{1/(2d)}
+
+The bound is tight for disjoint unions of K_{d,d}.
+
+For OUR problem: Ω is NOT regular. But we can use the ENTROPY bound:
+
+THEOREM (Galvin-Tetali): For any graph G,
+  Z(G, λ) ≤ exp(Σ_v log Z(K_{1,d_v}, λ) / (d_v + 1))
+
+where d_v = degree of vertex v.
+
+This means: vertices with LOWER degree contribute MORE to Z.
+So if Ω(Interval) has more LOW-degree vertices than Ω(Paley),
+it has higher Z = H.
+
+But does it? Let's check the degree distributions.
+
+Degree distribution comparison (p=7):
+  Interval: degrees = [33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35]
+    Galvin-Tetali bound: Z ≤ 48789838065432320.00
+    (too many vertices for brute force)
+  Paley: degrees = [34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 34, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35]
+    Galvin-Tetali bound: Z ≤ 49424532254345600.00
+    (too many vertices for brute force)
+
+DONE.
