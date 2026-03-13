@@ -1,0 +1,222 @@
+======================================================================
+IPR-ENERGY IDENTITY: FINDING THE CORRECT FORMULA
+======================================================================
+
+--- PART 1: PARSEVAL IDENTITIES ---
+sum |S_hat(k)|^2 = p*m  (Parseval)
+sum |S_hat(k)|^4 = p*E(S)  (4th moment = energy)
+  p= 7, Interval: sum|S|^2 = 21.0 vs p*m = 21, sum|S|^4 = 133.0 vs p*E = 133, match_2: True, match_4: True
+  p= 7, Paley   : sum|S|^2 = 21.0 vs p*m = 21, sum|S|^4 = 105.0 vs p*E = 105, match_2: True, match_4: True
+  p=11, Interval: sum|S|^2 = 55.0 vs p*m = 55, sum|S|^4 = 935.0 vs p*E = 935, match_2: True, match_4: True
+  p=11, Paley   : sum|S|^2 = 55.0 vs p*m = 55, sum|S|^4 = 715.0 vs p*E = 715, match_2: True, match_4: True
+  p=13, Interval: sum|S|^2 = 78.0 vs p*m = 78, sum|S|^4 = 1898.0 vs p*E = 1898, match_2: True, match_4: True
+  p=13, Paley   : sum|S|^2 = 78.0 vs p*m = 78, sum|S|^4 = 1482.0 vs p*E = 1482, match_2: True, match_4: True
+  p=17, Interval: sum|S|^2 = 136.0 vs p*m = 136, sum|S|^4 = 5848.0 vs p*E = 5848, match_2: True, match_4: True
+  p=17, Paley   : sum|S|^2 = 136.0 vs p*m = 136, sum|S|^4 = 4488.0 vs p*E = 4488, match_2: True, match_4: True
+  p=19, Interval: sum|S|^2 = 171.0 vs p*m = 171, sum|S|^4 = 9291.0 vs p*E = 9291, match_2: True, match_4: True
+  p=19, Paley   : sum|S|^2 = 171.0 vs p*m = 171, sum|S|^4 = 7011.0 vs p*E = 7011, match_2: True, match_4: True
+  p=23, Interval: sum|S|^2 = 253.0 vs p*m = 253, sum|S|^4 = 20493.0 vs p*E = 20493, match_2: True, match_4: True
+  p=23, Paley   : sum|S|^2 = 253.0 vs p*m = 253, sum|S|^4 = 15433.0 vs p*E = 15433, match_2: True, match_4: True
+
+--- PART 2: THREE IPR FORMULAS ---
+IPR_all = E(S) / (p*m^2)
+IPR_k>0 = (p*E(S) - m^4) / (m(p-m))^2
+IPR_direct = sum|S_hat|^4 / (sum|S_hat|^2)^2
+
+  p=7:
+    Interval: E=    19
+      IPR_all:     direct=0.30158730, formula=0.30158730, match=True
+      IPR_nontriv: direct=0.36111111, formula=0.36111111, match=True
+    Paley   : E=    15
+      IPR_all:     direct=0.23809524, formula=0.23809524, match=True
+      IPR_nontriv: direct=0.16666667, formula=0.16666667, match=True
+
+  p=11:
+    Interval: E=    85
+      IPR_all:     direct=0.30909091, formula=0.30909091, match=True
+      IPR_nontriv: direct=0.34444444, formula=0.34444444, match=True
+    Paley   : E=    65
+      IPR_all:     direct=0.23636364, formula=0.23636364, match=True
+      IPR_nontriv: direct=0.10000000, formula=0.10000000, match=True
+
+  p=13:
+    Interval: E=   146
+      IPR_all:     direct=0.31196581, formula=0.31196581, match=True
+      IPR_nontriv: direct=0.34126984, formula=0.34126984, match=True
+    Paley   : E=   114
+      IPR_all:     direct=0.24358974, formula=0.24358974, match=True
+      IPR_nontriv: direct=0.10544218, formula=0.10544218, match=True
+
+  p=17:
+    Interval: E=   344
+      IPR_all:     direct=0.31617647, formula=0.31617647, match=True
+      IPR_nontriv: direct=0.33796296, formula=0.33796296, match=True
+    Paley   : E=   264
+      IPR_all:     direct=0.24264706, formula=0.24264706, match=True
+      IPR_nontriv: direct=0.07561728, formula=0.07561728, match=True
+
+  p=19:
+    Interval: E=   489
+      IPR_all:     direct=0.31773879, formula=0.31773879, match=True
+      IPR_nontriv: direct=0.33703704, formula=0.33703704, match=True
+    Paley   : E=   369
+      IPR_all:     direct=0.23976608, formula=0.23976608, match=True
+      IPR_nontriv: direct=0.05555556, formula=0.05555556, match=True
+
+--- PART 3: WHICH IPR PREDICTS H? ---
+
+  p=7:
+    corr(E, H)          = -1.000000
+    corr(IPR_all, H)    = -1.000000
+    corr(IPR_nontriv, H)= -1.000000
+    Top 3 by H:
+      H=     189, E=  15, IPR_all=0.238095, S=[1, 2, 4]
+      H=     189, E=  15, IPR_all=0.238095, S=[3, 5, 6]
+      H=     175, E=  19, IPR_all=0.301587, S=[4, 5, 6]
+    Bottom 3 by H:
+      H=     175, E=  19, IPR_all=0.301587, S=[1, 3, 5]
+      H=     175, E=  19, IPR_all=0.301587, S=[2, 3, 6]
+      H=     175, E=  19, IPR_all=0.301587, S=[1, 2, 3]
+
+  p=11:
+    corr(E, H)          = -0.087860
+    corr(IPR_all, H)    = -0.087860
+    corr(IPR_nontriv, H)= -0.087860
+    Top 3 by H:
+      H=   95095, E=  65, IPR_all=0.236364, S=[2, 6, 7, 8, 10]
+      H=   95095, E=  65, IPR_all=0.236364, S=[1, 3, 4, 5, 9]
+      H=   93467, E=  73, IPR_all=0.265455, S=[3, 6, 7, 9, 10]
+    Bottom 3 by H:
+      H=   92411, E=  69, IPR_all=0.250909, S=[2, 3, 5, 7, 10]
+      H=   92411, E=  69, IPR_all=0.250909, S=[1, 2, 3, 5, 7]
+      H=   92411, E=  69, IPR_all=0.250909, S=[2, 3, 4, 5, 10]
+
+  p=13:
+    corr(E, H)          = +0.509255
+    corr(IPR_all, H)    = +0.509255
+    corr(IPR_nontriv, H)= +0.509255
+    Top 3 by H:
+      H= 3711175, E= 146, IPR_all=0.311966, S=[7, 8, 9, 10, 11, 12]
+      H= 3711175, E= 146, IPR_all=0.311966, S=[1, 2, 3, 7, 8, 9]
+      H= 3711175, E= 146, IPR_all=0.311966, S=[1, 4, 7, 8, 10, 11]
+    Bottom 3 by H:
+      H= 3669497, E= 122, IPR_all=0.260684, S=[1, 3, 5, 6, 9, 11]
+      H= 3669497, E= 122, IPR_all=0.260684, S=[1, 2, 4, 5, 6, 10]
+      H= 3669497, E= 122, IPR_all=0.260684, S=[2, 3, 4, 5, 6, 12]
+
+--- PART 4: DEEPER ADDITIVE ENERGY ANALYSIS ---
+E(S)/m^2 = normalized additive energy
+For m-element subsets of Z_p:
+  E_min >= m^2 (trivial pairs a=c, b=d)
+  E(Interval) is max by Ruzsa-Szemeredi / rearrangement
+
+  p=7, m=3:
+    Distinct E values: [15, 19]
+    E(Interval)/m^2 = 19/9 = 2.1111
+    E_min/m^2 = 15/9 = 1.6667
+    E_gap = 4
+
+  p=11, m=5:
+    Distinct E values: [65, 69, 73, 85]
+    E(Interval)/m^2 = 85/25 = 3.4000
+    E_min/m^2 = 65/25 = 2.6000
+    E_gap = 12
+
+  p=13, m=6:
+    Distinct E values: [114, 118, 122, 130, 146]
+    E(Interval)/m^2 = 146/36 = 4.0556
+    E_min/m^2 = 114/36 = 3.1667
+    E_gap = 16
+
+--- PART 5: WALSH DEGREE-2 SUM vs E(S) ---
+f_2(sigma) = sum_{|S|=2} h_hat[S] * chi_S(sigma)
+Is f_2 a function of E(sigma)?
+
+  p=7:
+     bits     E        H        f_2        f_4
+        0    19      175       -3.5        0.0
+        1    19      175       -3.5        0.0
+        2    19      175       -3.5        0.0
+        3    15      189       10.5        0.0
+        4    15      189       10.5        0.0
+        5    19      175       -3.5        0.0
+        6    19      175       -3.5        0.0
+        7    19      175       -3.5        0.0
+
+  p=11:
+     bits     E        H        f_2        f_4
+        0    85    93027      280.5     -354.8
+        1    69    92411     -808.5      118.2
+        2    65    95095     1402.5      591.2
+        3    85    93027      280.5     -354.8
+        4    73    93467      247.5      118.2
+        5    73    93467      247.5      118.2
+        6    85    93027      280.5     -354.8
+        7    73    93467      247.5      118.2
+        8    69    92411     -808.5      118.2
+        9    69    92411     -808.5      118.2
+       10    85    93027      280.5     -354.8
+       11    73    93467      247.5      118.2
+       12    69    92411     -808.5      118.2
+       13    85    93027      280.5     -354.8
+       14    69    92411     -808.5      118.2
+       15    73    93467      247.5      118.2
+       16    73    93467      247.5      118.2
+       17    69    92411     -808.5      118.2
+       18    85    93027      280.5     -354.8
+       19    69    92411     -808.5      118.2
+       20    73    93467      247.5      118.2
+       21    85    93027      280.5     -354.8
+       22    69    92411     -808.5      118.2
+       23    69    92411     -808.5      118.2
+       24    73    93467      247.5      118.2
+       25    85    93027      280.5     -354.8
+       26    73    93467      247.5      118.2
+       27    73    93467      247.5      118.2
+       28    85    93027      280.5     -354.8
+       29    65    95095     1402.5      591.2
+       30    69    92411     -808.5      118.2
+       31    85    93027      280.5     -354.8
+
+--- PART 6: SIGN PATTERN OF DEGREE-2 WALSH COEFFICIENTS ---
+h_hat[{i,j}] sign depends on whether pair_sum falls in QR or NQR
+
+  p=7:
+          pair pair_sum  sum in QR      h_hat   sign
+    (1,2)             3      False        3.5      +
+    (1,3)             4       True       -3.5      -
+    (2,3)             5      False       -3.5      -
+    sign(h_hat) = chi(pair_sum): 1/3 correct
+
+  p=11:
+          pair pair_sum  sum in QR      h_hat   sign
+    (1,2)             3       True       -8.2      -
+    (1,3)             4       True      272.2      +
+    (1,4)             5       True      272.2      +
+    (1,5)             6      False        8.2      +
+    (2,3)             5       True     -272.2      -
+    (2,4)             6      False       -8.2      -
+    (2,5)             7      False     -272.2      -
+    (3,4)             7      False        8.2      +
+    (3,5)             8      False        8.2      +
+    (4,5)             9       True      272.2      +
+    sign(h_hat) = chi(pair_sum): 5/10 correct
+
+  p=13:
+          pair pair_sum  sum in QR      h_hat   sign
+    (1,2)             3       True     2632.5      +
+    (1,3)             4       True     -778.4      -
+    (1,4)             5      False      778.4      +
+    (1,5)             6      False        0.0      0
+    (1,6)             7      False    -2632.5      -
+    (2,3)             5      False        0.0      0
+    (2,4)             6      False     2632.5      +
+    (2,5)             7      False     -778.4      -
+    (2,6)             8      False     -778.4      -
+    (3,4)             7      False      778.4      +
+    (3,5)             8      False    -2632.5      -
+    (3,6)             9       True     2632.5      +
+    (4,5)             9       True    -2632.5      -
+    (4,6)            10       True        0.0      0
+    (5,6)            11      False     -778.4      -
+    sign(h_hat) = chi(pair_sum): 7/12 correct

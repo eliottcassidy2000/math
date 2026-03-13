@@ -1,0 +1,223 @@
+======================================================================
+IS H DETERMINED BY E(S)? (Additive Energy)
+======================================================================
+
+--- PART 1: FULL E -> H MAPPING ---
+
+  p=7, m=3, 2^m = 8 orientations:
+         E  count             H values   determined
+        15      2                [189] YES
+        19      6                [175] YES
+
+    H is FULLY determined by E(S) at p=7
+
+  p=11, m=5, 2^m = 32 orientations:
+         E  count             H values   determined
+        65      2              [95095] YES
+        69     10              [92411] YES
+        73     10              [93467] YES
+        85     10              [93027] YES
+
+    H is FULLY determined by E(S) at p=11
+
+  p=13, m=6, 2^m = 64 orientations:
+         E  count             H values   determined
+       114      4            [3703011] YES
+       118     24   [3683797, 3704857] NO ***
+       122     12            [3669497] YES
+       130     12            [3707483] YES
+       146     12            [3711175] YES
+
+    H is NOT determined by E(S) at p=13
+
+--- PART 2: THE FUNCTION H = f(E) ---
+If H is determined by E, we can write H = a_0 + a_1*E + a_2*E^2 + ...
+
+  p=7: E -> H mapping:
+    E=    15 -> H=       189
+    E=    19 -> H=       175
+    Slopes dH/dE: ['-3.50']
+
+  p=11: E -> H mapping:
+    E=    65 -> H=     95095
+    E=    69 -> H=     92411
+    E=    73 -> H=     93467
+    E=    85 -> H=     93027
+    Slopes dH/dE: ['-671.00', '264.00', '-36.67']
+    Linear? False
+
+  p=13: E -> H mapping:
+    E=   114 -> H=   3703011
+    E=   118 -> H=   3683797
+    E=   122 -> H=   3669497
+    E=   130 -> H=   3707483
+    E=   146 -> H=   3711175
+    Slopes dH/dE: ['-4803.50', '-3575.00', '4748.25', '230.75']
+    Linear? False
+
+--- PART 3: REPRESENTATION FUNCTION r_S ---
+r_S(n) = |{(a,b) in S x S : a+b = n mod p}|
+E(S) = sum r_S(n)^2. But is H determined by the full r_S profile?
+
+  p=7:
+    Distinct r-profiles: 2
+    profile=(0, 1, 1, 2, 2, 3), count=6, E=28, H=[175]
+    profile=(1, 1, 1, 2, 2, 2), count=2, E=24, H=[189]
+
+  p=11:
+    Distinct r-profiles: 4
+    profile=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5), count=10, E=110, H=[93027]
+    profile=(1, 1, 2, 2, 2, 3, 3, 3, 4, 4), count=10, E=98, H=[93467]
+    profile=(1, 2, 2, 2, 2, 3, 3, 3, 3, 4), count=10, E=94, H=[92411]
+    profile=(2, 2, 2, 2, 2, 3, 3, 3, 3, 3), count=2, E=90, H=[95095]
+
+  p=13:
+    Distinct r-profiles: 6
+    profile=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6), count=12, E=182, H=[3711175]
+    profile=(1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5), count=12, E=166, H=[3707483]
+    profile=(1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5), count=12, E=158, H=[3669497]
+    profile=(1, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4), count=12, E=154, H=[3704857]
+    profile=(2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5), count=12, E=154, H=[3683797]
+    profile=(2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4), count=4, E=150, H=[3703011]
+
+--- PART 4: HIGHER ENERGY INVARIANTS ---
+E_2 = sum r(n)^2 (standard additive energy)
+E_3 = sum r(n)^3 (cubic energy)
+E_4 = sum r(n)^4 (quartic energy)
+Question: do (E_2, E_3) determine H better?
+
+  p=7:
+    Distinct (E2,E3) pairs: 2
+    (E2=15, E3=27): H=[189], count=2
+    (E2=19, E3=45): H=[175], count=6
+    H determined by (E2, E3)? True
+
+  p=11:
+    Distinct (E2,E3) pairs: 4
+    (E2=65, E3=175): H=[95095], count=2
+    (E2=69, E3=205): H=[92411], count=10
+    (E2=73, E3=235): H=[93467], count=10
+    (E2=85, E3=325): H=[93027], count=10
+    H determined by (E2, E3)? True
+
+  p=13:
+    Distinct (E2,E3) pairs: 6
+    (E2=114, E3=378): H=[3703011], count=4
+    (E2=118, E3=408): H=[3704857], count=12
+    (E2=118, E3=420): H=[3683797], count=12
+    (E2=122, E3=450): H=[3669497], count=12
+    (E2=130, E3=522): H=[3707483], count=12
+    (E2=146, E3=666): H=[3711175], count=12
+    H determined by (E2, E3)? True
+
+--- PART 5: FOURIER SPECTRUM ANALYSIS ---
+The sorted Fourier spectrum {|S_hat(k)|^2}_{k>0} should determine H
+(up to automorphisms of Z_p)
+
+  p=7:
+    Distinct sorted Fourier spectra: 4
+    spectrum=('0.31', '0.31', '0.64', '5.05')..., count=2, H=[175]
+    spectrum=('0.31', '0.64', '0.64', '5.05')..., count=2, H=[175]
+    spectrum=('0.31', '0.64', '5.05', '5.05')..., count=2, H=[175]
+    spectrum=('2.00', '2.00', '2.00', '2.00')..., count=2, H=[189]
+
+  p=11:
+    Distinct sorted Fourier spectra: 16
+    spectrum=('0.25', '0.25', '1.03', '3.61')..., count=2, H=[92411]
+    spectrum=('0.25', '1.03', '1.03', '3.61')..., count=2, H=[92411]
+    spectrum=('0.25', '1.03', '3.61', '3.61')..., count=2, H=[92411]
+    spectrum=('0.25', '1.03', '3.61', '4.12')..., count=2, H=[92411]
+    spectrum=('0.25', '1.03', '3.61', '4.12')..., count=2, H=[92411]
+    spectrum=('0.27', '0.27', '0.35', '0.58')..., count=2, H=[93027]
+    spectrum=('0.27', '0.35', '0.35', '0.58')..., count=2, H=[93027]
+    spectrum=('0.27', '0.35', '0.58', '0.58')..., count=2, H=[93027]
+    spectrum=('0.27', '0.35', '0.58', '1.45')..., count=2, H=[93027]
+    spectrum=('0.27', '0.35', '0.58', '1.45')..., count=2, H=[93027]
+    spectrum=('0.42', '0.42', '1.12', '2.22')..., count=2, H=[93467]
+    spectrum=('0.42', '1.12', '1.12', '2.22')..., count=2, H=[93467]
+    spectrum=('0.42', '1.12', '2.22', '2.22')..., count=2, H=[93467]
+    spectrum=('0.42', '1.12', '2.22', '2.49')..., count=2, H=[93467]
+    spectrum=('0.42', '1.12', '2.22', '2.49')..., count=2, H=[93467]
+    spectrum=('3.00', '3.00', '3.00', '3.00')..., count=2, H=[95095]
+
+  p=13:
+    Distinct sorted Fourier spectra: 32
+    spectrum=('0.25', '0.25', '0.90', '1.56')..., count=2, H=[3707483]
+    spectrum=('0.25', '0.90', '0.90', '1.56')..., count=2, H=[3707483]
+    spectrum=('0.25', '0.90', '1.56', '1.56')..., count=2, H=[3707483]
+    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=2, H=[3707483]
+    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=2, H=[3707483]
+    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=2, H=[3707483]
+    spectrum=('0.27', '0.27', '0.32', '0.45')..., count=2, H=[3711175]
+    spectrum=('0.27', '0.32', '0.32', '0.45')..., count=2, H=[3711175]
+    spectrum=('0.27', '0.32', '0.45', '0.45')..., count=2, H=[3711175]
+    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=2, H=[3711175]
+    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=2, H=[3711175]
+    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=2, H=[3711175]
+    spectrum=('0.30', '0.30', '0.36', '2.99')..., count=2, H=[3704857]
+    spectrum=('0.30', '0.36', '0.36', '2.99')..., count=2, H=[3704857]
+    spectrum=('0.30', '0.36', '2.99', '2.99')..., count=2, H=[3704857]
+    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=2, H=[3704857]
+    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=2, H=[3704857]
+    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=2, H=[3704857]
+    spectrum=('0.49', '0.49', '0.96', '1.38')..., count=2, H=[3683797]
+    spectrum=('0.49', '0.96', '0.96', '1.38')..., count=2, H=[3683797]
+    spectrum=('0.49', '0.96', '1.38', '1.38')..., count=2, H=[3683797]
+    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=2, H=[3683797]
+    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=2, H=[3683797]
+    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=2, H=[3683797]
+    spectrum=('0.61', '0.61', '0.69', '1.10')..., count=2, H=[3669497]
+    spectrum=('0.61', '0.69', '0.69', '1.10')..., count=2, H=[3669497]
+    spectrum=('0.61', '0.69', '1.10', '1.10')..., count=2, H=[3669497]
+    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=2, H=[3669497]
+    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=2, H=[3669497]
+    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=2, H=[3669497]
+    spectrum=('1.70', '1.70', '1.70', '1.70')..., count=2, H=[3703011]
+    spectrum=('1.70', '1.70', '1.70', '5.30')..., count=2, H=[3703011]
+
+--- PART 6: H vs E INTERPOLATION ---
+
+  p=7, m=3:
+    2 distinct (E, H) points
+    Linear fit: H = 241.50 + -3.50 * E
+    Max residual: 0.00
+    Linear? True
+
+  p=11, m=5:
+    4 distinct (E, H) points
+    Linear fit: H = 98088.57 + -62.86 * E
+    Max residual: 1340.43
+    Linear? False
+    Quadratic fit residuals: ['0.0', '0.0', '0.0', '-26048.0']
+    Max quadratic residual: 26048.00
+
+  p=13, m=6:
+    5 distinct (E, H) points
+    Linear fit: H = 3602670.83 + 732.71 * E
+    Max residual: 22564.75
+    Linear? True
+    Quadratic fit residuals: ['0.0', '0.0', '0.0', '51844.0', '24284.0']
+    Max quadratic residual: 51844.00
+
+--- PART 7: WHY E anti-correlates with H at p=3 mod 4 ---
+At p=7 (3 mod 4): max E = Interval, but max H = Paley
+At p=13 (1 mod 4): max E = Interval = max H
+
+Insight: Walsh degree-2 contribution f_2(sigma) depends on
+the Legendre character chi at p=3 mod 4, creating sign reversal.
+At p=1 mod 4, chi(-1)=+1 so no reversal; degree-4 takes over.
+
+  p=7 (3 mod 4): chi(-1) = -1
+    At p=3 mod 4: chi(-1)=-1, Paley tournament exists
+    At p=1 mod 4: chi(-1)=+1, NO Paley tournament
+    The sign reversal in Walsh degree-2 is controlled by chi(-1)
+
+  p=11 (3 mod 4): chi(-1) = -1
+    At p=3 mod 4: chi(-1)=-1, Paley tournament exists
+    At p=1 mod 4: chi(-1)=+1, NO Paley tournament
+    The sign reversal in Walsh degree-2 is controlled by chi(-1)
+
+  p=13 (1 mod 4): chi(-1) = 1
+    At p=3 mod 4: chi(-1)=-1, Paley tournament exists
+    At p=1 mod 4: chi(-1)=+1, NO Paley tournament
+    The sign reversal in Walsh degree-2 is controlled by chi(-1)
