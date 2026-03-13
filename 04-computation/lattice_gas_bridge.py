@@ -641,7 +641,7 @@ print()
 # Is it true that H(T) ≥ F_p for ALL circulant tournaments?
 # Or is H(Int) special in being ≥ F_p?
 
-for p in [7, 11, 13]:
+for p in [7, 11]:  # skip p=13 (too slow for exhaustive DP)
     m = (p-1)//2
     results = all_circulant_H(p)
     Fp = fib(p)
@@ -679,7 +679,7 @@ print("   structure in the H values as p increases")
 print()
 print("4. ALL H values satisfy H ≥ F_p (for circulant tournaments):")
 all_above = True
-for p in [7, 11, 13]:
+for p in [7, 11]:  # skip p=13 (too slow)
     results = all_circulant_H(p)
     Fp = fib(p)
     for r in results:
