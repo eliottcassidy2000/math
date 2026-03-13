@@ -1,0 +1,115 @@
+======================================================================
+K IN TERMS OF MATRIX TRACES
+======================================================================
+
+============================================================
+PART 1: All regular n=5 tournaments
+============================================================
+  bits=  76: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 105: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 202: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 217: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 284: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 298: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 313: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 326: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 341: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 355: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 410: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 467: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 556: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 613: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 668: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 682: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 697: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 710: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 725: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 739: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 806: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 821: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 918: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+  bits= 947: c3=5, c5=2, ov1=5, ov2=5, K=-18, butterfly=25, c3v_const=True
+
+============================================================
+PART 2: Regular n=7 trace analysis
+============================================================
+  K_expected = -126
+
+  Classes found:
+
+    c5=28, ov1=49, ov2=28, K=-126
+    butterfly=98, c3v_const=True, c3v_val=6
+    Trace quantities: trA5=140
+
+    c5=36, ov1=57, ov2=24, K=-126
+    butterfly=90, c3v_const=True, c3v_val=6
+    Trace quantities: trA5=180
+
+    c5=42, ov1=63, ov2=21, K=-126
+    butterfly=84, c3v_const=True, c3v_val=6
+    Trace quantities: trA5=210
+
+============================================================
+PART 3: Is c3(v) constant for regular tournaments?
+============================================================
+  n=7: c3=14, 3c3/n = 6.0
+  (n^2-1)/8 = 6.0
+  c3(v) = 6 for ALL regular n=7 tournaments (100 samples)
+  This is a well-known result: in regular tournaments, every vertex
+  is in the same number of 3-cycles = (n^2-1)/8
+
+============================================================
+PART 4: Expressing K algebraically
+============================================================
+
+  For n=7: L = c3(v) = 6, c3 = 14
+  K = c5 + butterfly - n*L*(L-1) - 3*c3
+  K = c5 + butterfly + (-252)
+  K_expected = -126
+  So: c5 + butterfly = 126
+
+  Verification:
+    c5=36, butterfly=90, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=28, butterfly=98, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=28, butterfly=98, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=36, butterfly=90, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=28, butterfly=98, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=28, butterfly=98, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=42, butterfly=84, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+    c5=28, butterfly=98, c5+butterfly=126, K_formula=-126, K_actual=-126, OK
+
+============================================================
+PART 5: Why is c5 + butterfly constant for regular tournaments?
+============================================================
+  Trial 0: butterfly_direct=90, butterfly_matrix=27, FAIL
+  Trial 1: butterfly_direct=98, butterfly_matrix=35, FAIL
+  Trial 3: butterfly_direct=84, butterfly_matrix=21, FAIL
+  Trial 4: butterfly_direct=90, butterfly_matrix=27, FAIL
+
+============================================================
+PART 6: Can c5 + butterfly be expressed as a single trace formula?
+============================================================
+  For one regular n=7 tournament:
+    tr(A^3) = 42
+    tr(A^5) = 180
+    tr(A^2 * A^T) = 21
+    tr(A * A^T * A) = 21
+    tr(A^2 * A^T^2) = 117
+    tr((A*A^T)^2) = 117
+    tr(A * A^T * A * A^T) = 117
+    tr(A * A^T * A^T * A) = 117
+    tr(A^3 * A^T) = 51
+    tr(A * A^T * A^2) = 51
+    tr(A^2 * A * A^T) = 51
+    tr(A^2 * A^T * A) = 51
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\K_trace_formula.py", line 713, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\K_trace_formula.py", line 427, in main
+    print(f"    {name} = {val}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2299' in position 10: character maps to <undefined>

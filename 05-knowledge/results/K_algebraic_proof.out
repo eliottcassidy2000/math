@@ -1,0 +1,127 @@
+======================================================================
+ALGEBRAIC PROOF: K CONSTANT FOR REGULAR TOURNAMENTS
+======================================================================
+
+============================================================
+PART 1: Matrix identities for regular tournaments
+============================================================
+  A + A^T = J - I: True
+  (A^T)^2 = I + 2A + A^2 - J: True
+  (A^T)^2 = I + 2A + A^2 (WITHOUT -J): False
+  A*J = m*J: True
+  J*A = m*J: True
+
+============================================================
+PART 2: Butterfly sum decomposition
+============================================================
+  Non-edge 0->1: (A^2)_{ji}=2, (A^2)_{ij}=3, B_{ij}=A2-1=2, match=True
+  Edge 0->2: lambda=2, (A^2)_{ij}=1, B_{ij}=2A+A2-1=2, match=True
+  Edge 0->3: lambda=2, (A^2)_{ij}=1, B_{ij}=2A+A2-1=2, match=True
+  Edge 0->4: lambda=2, (A^2)_{ij}=1, B_{ij}=2A+A2-1=2, match=True
+  Non-edge 0->5: (A^2)_{ji}=1, (A^2)_{ij}=2, B_{ij}=A2-1=1, match=True
+  Non-edge 0->6: (A^2)_{ji}=0, (A^2)_{ij}=1, B_{ij}=A2-1=0, match=True
+
+  (A^2)_{ji} - (A^2)_{ij} = 2*A_{ij} - 1 for all i!=j: True
+
+============================================================
+PART 3: Expand butterfly algebraically
+============================================================
+  sum A.*A^2 = 21
+  3*c3 = 42
+  c3 = 14, C(n,3) = 35, transitive = 21
+  sum A.*A^2 = 21, C(n,3)-c3 = 21
+  Match: True
+  For regular: C(n,3)-c3 = n(n-1)(n-3)/8 = 21
+
+============================================================
+PART 4: sum_{i->j} mu^2 (second moment)
+============================================================
+  sum mu^2 = 27
+  butterfly (direct) = 90
+  butterfly (formula sum(mu+1)^2) = 90
+  Match: True
+
+============================================================
+PART 5: c5 + 2*ov2 = c5 + butterfly - 3*c3
+============================================================
+  2*C(n,3) + n*m - 5*c3 = 21
+  n(n-1)(n-3)/8 = 21
+  Match: True
+
+  Target for c5 + 2*ov2 = 84
+  Target for tr(A^5)/5 + sum mu^2 = 63
+    Trial 0: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+    Trial 1: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+    Trial 2: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+    Trial 4: c5=28, sum_mu2=35, c5+sum_mu2=63, target=63, OK
+    Trial 6: c5=28, sum_mu2=35, c5+sum_mu2=63, target=63, OK
+    Trial 7: c5=28, sum_mu2=35, c5+sum_mu2=63, target=63, OK
+    Trial 9: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+    Trial 10: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+    Trial 12: c5=28, sum_mu2=35, c5+sum_mu2=63, target=63, OK
+    Trial 13: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+    Trial 14: c5=36, sum_mu2=27, c5+sum_mu2=63, target=63, OK
+
+============================================================
+PART 6: sum mu^2 as a trace expression
+============================================================
+  sum mu^2 = 27
+  tr(C^T * A^2) = 27
+  Match: True
+
+  Checking if sum_mu^2 = a*trA5 + b*trA3AT + c*trA2AT2 + d*trAAT^2 + const
+  Data points:
+    trA5=180, trA3AT=51, trA2AT2=117, trAAT2=117, sum_mu2=27
+    trA5=180, trA3AT=51, trA2AT2=117, trAAT2=117, sum_mu2=27
+    trA5=180, trA3AT=51, trA2AT2=117, trAAT2=117, sum_mu2=27
+    trA5=140, trA3AT=35, trA2AT2=133, trAAT2=133, sum_mu2=35
+    trA5=140, trA3AT=35, trA2AT2=133, trAAT2=133, sum_mu2=35
+    trA5=140, trA3AT=35, trA2AT2=133, trAAT2=133, sum_mu2=35
+    trA5=180, trA3AT=51, trA2AT2=117, trAAT2=117, sum_mu2=27
+    trA5=180, trA3AT=51, trA2AT2=117, trAAT2=117, sum_mu2=27
+    trA5=140, trA3AT=35, trA2AT2=133, trAAT2=133, sum_mu2=35
+    trA5=180, trA3AT=51, trA2AT2=117, trAAT2=117, sum_mu2=27
+
+  Fit: sum_mu2 = -0.053413*trA5 + -0.037280*trA3AT + 0.164594*trA2AT2 + 0.164594*trAAT2 + 0.000758
+  Residuals: (perfect fit or underdetermined)
+    Predicted=27.00, Actual=27, Error=0.000000
+    Predicted=27.00, Actual=27, Error=0.000000
+    Predicted=27.00, Actual=27, Error=0.000000
+    Predicted=35.00, Actual=35, Error=0.000000
+    Predicted=35.00, Actual=35, Error=0.000000
+
+============================================================
+PART 7: Does K constant hold for non-prime odd n?
+============================================================
+  n=5: 50 tournaments, K=[-18] -- CONSTANT, formula=-18, match=True
+  n=7: 50 tournaments, K=[-126] -- CONSTANT, formula=-126, match=True
+  n=9: 50 tournaments, K=[-486] -- CONSTANT, formula=-486, match=True
+  n=11: 50 tournaments, K=[-1386] -- CONSTANT, formula=-1386, match=True
+  n=13: 50 tournaments, K=[-3276] -- CONSTANT, formula=-3276, match=True
+  n=15: 50 tournaments, K=[-6804] -- CONSTANT, formula=-6804, match=True
+
+============================================================
+PART 8: The key identity A^2 - A^{T2} = A^T - A
+============================================================
+  For regular tournaments:
+  A^2 - (A^T)^2 = A^T - A = (J-I) - 2A
+  Entry-wise for i!=j: (A^2)_{ij} - (A^2)_{ji} = A_{ji} - A_{ij}
+  For edge i->j: lambda_{ij} = mu_{ij} + 1
+
+============================================================
+PART 9: The central identity
+============================================================
+
+  Values of c5 + sum_mu^2 for various n:
+  n=5: c5+sum_mu2 = [7]
+  n=7: c5+sum_mu2 = [63]
+  n=9: c5+sum_mu2 = [270]
+
+  Predicted constants:
+  n=5: c5+sum_mu2 = 7
+  n=7: c5+sum_mu2 = 63
+  n=9: c5+sum_mu2 = 270
+  n=11: c5+sum_mu2 = 814
+  n=13: c5+sum_mu2 = 1989
+
+DONE.
