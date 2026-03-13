@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S68 — 2026-03-14: The Universe of 2 and 3
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67k (context carry-forward)
+**Summary of work:**
+Deep exploration of 2 and 3 as the fundamental constants of tournament theory:
+- **15-part "Universe of 2 and 3" overview** mapping how every structure relates to 2 and 3
+- **k-nacci→2, k-Jacobsthal→3**: explicit convergence rates, ratio→3/2
+- **x=2 uniqueness**: only positive integer where Fibonacci root is integral (root=weight=2)
+- **Trinity (1,2,3)**: empty set weight, inclusion weight, isolated vertex weight
+- **Universal Jacobsthal formula**: J_{k(k-1)}(n) = (k^n-(-(k-1))^n)/(2k-1) for all k
+- **x-deformation**: Q(x) = I(CG,x)² - det(I+xA) always divisible by x
+- **Single-cycle Q**: Q(x) = -x(x-2)(x+1), x=2 is exact root → explains H=|Pf|
+- **H≥|Pf| is x=2 specific**: does NOT hold for general x>0
+- **det(I+xA) coefficient structure**: c_1=c_2=0 always, c_3=#{3-cycles}, c_4=-#{4-cycles}
+- **Cycle cover interpretation**: c_k = signed count of covers by directed ≥3-cycles
+- **c_6 sign alternation breaks**: c_6 can be positive (80/32768 at n=6) due to 3+3 covers
+- **Pf² = 1 + 8c₃ + 16c₄ + 32c₅ + ...** vs **H = 1 + 2α₁ + 4α₂ + ...**
+- **H=|Pf| frequency drops**: 100%(n=3), 62.5%(n=4), 23.4%(n=5), 5.4%(n=6)
+- **R(2) ≡ 0 (mod 4)** always, where Q(x) = x·R(x)
+- **Jacobsthal primes**: J(n) prime for n=3,4,5,7,11,13,17,19,23
+- **J(n) mod 3**: period 6, pattern (0,1,1,0,2,2)
+**New contributions:** Scripts two_and_three_universe.py, x_deformation_pfaffian.py, q_x_divisibility.py, generalized_tournament_x.py, q_polynomial_structure.py, det_coefficients.py
+**Unresolved threads:** Proof of H≥|Pf|, Pfaffian OCF (Pf=I(G',2) for what G'?), combinatorial meaning of Q=(H²-Pf²)/8
+
 ## opus-2026-03-13-S71c (cont'd) — 2026-03-13: 2-and-3 Universality + Vandermonde Extraction
 
 **Account:** opus

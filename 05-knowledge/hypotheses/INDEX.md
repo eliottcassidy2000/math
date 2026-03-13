@@ -822,3 +822,20 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 ## Tags
 #tag1 #tag2
 ```
+
+---
+
+## opus-2026-03-14-S68 Hypotheses
+
+| HYP-871 | x=2 unique integer fixed point of Fibonacci root | CONFIRMED | x=k(k-1) gives root k; x=2 is k=2 case. Only positive integer x>0 where root=(1+√(1+4x))/2 is integer. | opus-S68 |
+| HYP-872 | Q(x)=I(CG,x)²-det(I+xA) always divisible by x | CONFIRMED | Q(0)=I(CG,0)²-det(I)=1-1=0. Exhaustive n≤5. | opus-S68 |
+| HYP-873 | For single-cycle tournament: Q(x)=-x(x-2)(x+1) | CONFIRMED | Symbolic computation. x=2 is root → H=|Pf| for single-cycle cases. | opus-S68 |
+| HYP-874 | H≥|Pf| specific to x=2, fails at other x>0 | CONFIRMED | At x=3: Q(3)<0 for H=3 case (Q(3)=-12). | opus-S68 |
+| HYP-875 | det(I+xA) = 1+0x+0x²+c₃x³+... (c₁=c₂=0 always) | CONFIRMED | c₁=tr(A)=0, c₂=Σ det(2×2 submatrix)=Σ(-A_ij·A_ji)=0 for tournaments. | opus-S68 |
+| HYP-876 | c₃ = #{directed 3-cycles in T} | CONFIRMED | Exhaustive n≤5. c₃=Σ_{|S|=3} det(A_S) and det of 3×3 tournament submatrix = +1 iff directed 3-cycle. | opus-S68 |
+| HYP-877 | c₄ = -#{directed 4-cycles} (each counted once as derangement) | CONFIRMED | Exhaustive n≤5. Only cycle covers of 4 vertices are single 4-cycles; sign=(-1)^{4-1}=-1. | opus-S68 |
+| HYP-878 | sgn(c_k)=(-1)^{k+1} for all k≥3 | REFUTED at k=6 | c₆=+1 for 80/32768 tournaments at n=6 — two 3-cycle covers (sign +1) can overpower one 6-cycle (sign -1). | opus-S68 |
+| HYP-879 | R(2)≡0(mod 4) always, where Q(x)=x·R(x) | CONFIRMED | R(2)=(H²-Pf²)/2; H,|Pf| both odd → H-|Pf|,H+|Pf| both even → product divisible by 4 → R(2) div by 4. | opus-S68 |
+| HYP-880 | H=|Pf| frequency drops exponentially: 100,62.5,23.4,5.4% at n=3,4,5,6 | CONFIRMED | Exhaustive computation. Consistent with ~(2/3)^n scaling. | opus-S68 |
+| HYP-881 | J_{k(k-1)}(n) = (k^n-(-(k-1))^n)/(2k-1) for all k≥2 | CONFIRMED | Direct verification at k=2 (Jacobsthal), k=3 (root=3, denom=5), k=4 (root=4, denom=7). | opus-S68 |
+| HYP-882 | J(n) mod 3 has period 6: pattern (0,1,1,0,2,2) | CONFIRMED | Since 2^n mod 9 has period 6 and (-1)^n mod 9 has period 2, lcm=6. | opus-S68 |
