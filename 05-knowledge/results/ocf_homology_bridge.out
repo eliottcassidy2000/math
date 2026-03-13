@@ -1,0 +1,92 @@
+======================================================================
+CONNECTING Ω(T) TO PATH HOMOLOGY
+======================================================================
+
+STRUCTURAL RELATIONSHIP:
+
+The Ω graph encodes which odd cycles can coexist in an independent set.
+The independence polynomial I(Ω, λ) at λ=2 gives H.
+
+For PATH HOMOLOGY: the boundary maps involve PATHS, not cycles.
+β_k measures obstructions to extending (k-1)-dimensional path homology.
+
+KEY QUESTION: Do the independent sets of Ω(T) relate to the
+homology generators?
+
+At n=7 (Paley, p=7):
+  β_4 = 6 = p-1 (from eigenspace decomposition)
+  H = 189 = 27 × 7 = 3³ × 7
+  α_1(Ω) = 80 (all odd cycles), α_2 = 7
+  I(Ω, 2) = 1 + 160 + 28 = 189 ✓
+
+The 6 generators of H_4(T_7) correspond to 6 linearly independent
+4-dimensional "holes" in the path complex.
+
+These are NOT the same as the 7 independent pairs in α_2(Ω).
+But they live in complementary spaces:
+  - α_2 captures cycle DISJOINTNESS (vertex-based)
+  - β_4 captures path INDEPENDENCE (chain-based)
+
+Can the β_4 generators be expressed in terms of Ω structure?
+
+
+--- Interval tournament at p=7 ---
+  Score sequence: [3, 3, 3, 3, 3, 3, 3]
+  Regular: True
+  c3 = 14
+    n=7: |edges|=21, rank(d1)=6, |2-paths|=63, rank(d2)=15, beta_1 ≈ 0
+
+--- Paley tournament at p=7 ---
+  Score sequence: [3, 3, 3, 3, 3, 3, 3]
+  Regular: True
+  c3 = 14
+    n=7: |edges|=21, rank(d1)=6, |2-paths|=63, rank(d2)=15, beta_1 ≈ 0
+
+======================================================================
+THE PALEY VS INTERVAL HOMOLOGY QUESTION
+======================================================================
+
+Both Paley and Interval are REGULAR tournaments at p=7 (scores all = 3).
+Both have the same c3 = 14 (3-cycle count).
+
+But they have DIFFERENT H values (189 vs 175) and presumably
+different path homology.
+
+The Paley tournament T_7 has:
+  β = (1, 0, 0, 0, 6, 0, 0)
+  Euler char χ = 1 - 0 + 0 - 0 + 6 - 0 + 0 = 7
+
+What about the Interval tournament? Key differences:
+  - Interval has chirality 1.0 (breaks reflection)
+  - Paley has chirality 1.0 at p≡3 mod 4 too
+  - Both have |Aut| = p·m = 21
+
+The β_4 = 6 for Paley comes from the eigenspace decomposition.
+For Interval, we would need to compute the eigenspace dims of Ω.
+
+SPECULATION: Perhaps β_4(Interval) < β_4(Paley) = 6?
+If so, the "fewer homology generators" could reflect the
+"more structured / less tangled" cycle structure of Interval.
+
+This would connect:
+  Lower β_4 ↔ more cycle disjointness ↔ higher α_2 ↔ higher H
+  (AT LARGE p, not at p=7 where Paley still wins)
+
+
+--- Omega dimensions comparison ---
+
+  Interval:
+    Ω_0 = 7
+    Ω_1 = 21 (= n(n-1)/2 = 21)
+    Ω_2 = 63
+    A_3 = 147
+    A_4 = 245
+
+  Paley:
+    Ω_0 = 7
+    Ω_1 = 21 (= n(n-1)/2 = 21)
+    Ω_2 = 63
+    A_3 = 147
+    A_4 = 273
+
+DONE.
