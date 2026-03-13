@@ -1,0 +1,29 @@
+Checking tr(A^7) vs 7*c7_dir at n=7...
+  trial 0: tr7=2212, 7*c7=105, diff=2107
+    c3=13, c5=26, c7=15
+  trial 1: tr7=1862, 7*c7=98, diff=1764
+    c3=12, c5=22, c7=14
+  trial 2: tr7=896, 7*c7=28, diff=868
+    c3=9, c5=15, c7=4
+
+Result: 499/500 failures
+tr(A^7) != 7*c7_dir — degenerate 7-walks exist!
+
+Now checking: is tr(A^7) lambda-determined (labeled)?
+  Labeled lambda groups: 19233, ambiguous: 6
+    (1, 1, 2, 2, 1, 1, 1, 2, 3, 1, 2, 2, 1, 2, 1, 2, 2, 2, 3, 1, 3): tr7 = [1589, 1596]
+    (1, 2, 3, 3, 1, 2, 2, 3, 2, 1, 1, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1): tr7 = [1589, 1596]
+    (1, 3, 2, 1, 1, 2, 2, 2, 1, 1, 1, 2, 0, 2, 1, 3, 3, 2, 1, 0, 2): tr7 = [1337, 1344]
+    (2, 1, 1, 1, 2, 1, 2, 2, 2, 2, 2, 1, 1, 3, 2, 2, 3, 3, 1, 1, 1): tr7 = [1589, 1596]
+    (2, 2, 3, 3, 2, 2, 1, 1, 1, 2, 1, 1, 1, 3, 2, 1, 2, 2, 0, 0, 1): tr7 = [1337, 1344]
+
+============================================================
+DEGENERATE WALK ANALYSIS
+============================================================
+tr(A^3) = 3*c3: TRUE (no degenerate 3-walks in tournaments)
+tr(A^5) = 5*c5: TRUE at n=5,6,7 (no degenerate 5-walks in tournaments)
+
+For 7-walks: ia=i_{a+3} is possible! Gives walks on 6 distinct vertices.
+This explains why tr(A^7) != 7*c7_dir: degenerate walks on 5,6 vertices exist.
+
+Done.

@@ -1,0 +1,9 @@
+n=7, 50000 samples, 72.7s
+
+Labeled lambda groups: 46010, ambiguous: 0
+Multiset lambda groups: 149, ambiguous: 35
+
+  c5 IS determined by LABELED lambda! Kind-pasteur was right.
+  c5 is NOT determined by lambda multiset alone — vertex identity matters.
+
+Done.

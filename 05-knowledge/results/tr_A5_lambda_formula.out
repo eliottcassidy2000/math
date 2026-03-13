@@ -1,0 +1,47 @@
+============================================================
+TRACE DECOMPOSITION OF tr(A^5)
+============================================================
+w5 = 5*c5_dir: VERIFIED for all 1024 tournaments
+
+--- 4-vertex walks (w4) ---
+  w4 determined by (S1,S2,S3)? Ambiguous groups: 0
+  w3 determined by (S1,S2,S3)? Ambiguous groups: 0
+  tr(A^5) determined by (S1,S2,S3)? Ambiguous groups: 0
+
+--- Analyzing 4-vertex walk patterns ---
+  w4 values: {0}
+  w3 values: {0}
+  w2 values: {0}
+
+  CONCLUSION: tr(A^5) = 5*c5_dir? True
+
+--- Is tr(A^5) lambda-determined? ---
+
+============================================================
+VERIFICATION AT n=6: tr(A^5) = 5*c5_dir?
+============================================================
+  Tested 10000 tournaments, failures: 0
+  tr(A^5) = 5*c5_dir CONFIRMED at n=6!
+
+============================================================
+IS tr(A^5) LAMBDA-DETERMINED AT n=6?
+============================================================
+  Lambda multiset groups: 29, ambiguous: 0
+
+============================================================
+IS tr(A^5) LAMBDA-DETERMINED AT n=7?
+============================================================
+  Lambda multiset groups: 149, ambiguous: 35
+    multiset=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3): tr5 values = [20, 25]
+
+============================================================
+IS tr(A^7) LAMBDA-DETERMINED AT n=7?
+============================================================
+  Lambda multiset groups: 149, ambiguous: 29
+    multiset=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3): tr7 values = [175, 182]
+    multiset=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4): tr7 values = [294, 308]
+    multiset=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3): tr7 values = [441, 448, 455]
+    multiset=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3): tr7 values = [672, 679]
+    multiset=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 4): tr7 values = [679, 686]
+
+Done.
