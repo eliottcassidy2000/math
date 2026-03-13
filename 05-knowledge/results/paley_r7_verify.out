@@ -1,0 +1,43 @@
+|A_7| = 8735, |A_6| = 3970
+Omega_7 = 690
+Omega_6 = 700
+
+============================================================
+Computing r_7^(k=0)...
+============================================================
+  Building omega_7 basis...
+  dim(Omega_7) = 690, basis shape = (690, 8735)
+  omega_m_basis memory: 48 MB
+  Building omega_6 basis...
+  dim(Omega_6) = 700, basis shape = (700, 3970)
+  omega_m1_basis memory: 22 MB
+  Computing BD @ omega_basis.T column-by-column...
+  bd_omega memory: 22 MB
+  Computing d_restricted = omega_6_basis @ bd_omega...
+  d_restricted shape = (700, 690)
+  Computing rank...
+
+  r_7^(k=0) = 390  (58.5s)
+  PREDICTED: 390
+  CONFIRMED!
+
+============================================================
+Computing r_7^(k=1)...
+============================================================
+  Building omega_7 basis...
+  dim(Omega_7) = 690, basis shape = (690, 8735)
+  omega_m_basis memory: 48 MB
+  Building omega_6 basis...
+  dim(Omega_6) = 700, basis shape = (700, 3970)
+  omega_m1_basis memory: 22 MB
+  Computing BD @ omega_basis.T column-by-column...
+  bd_omega memory: 22 MB
+  Computing d_restricted = omega_6_basis @ bd_omega...
+  d_restricted shape = (700, 690)
+  Computing rank...
+
+  r_7^(k=1) = 390  (58.1s)
+  PREDICTED: 390
+  CONFIRMED!
+
+DONE.

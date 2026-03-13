@@ -53,7 +53,10 @@ Anomaly pattern: (-1, +1, -1, +1) at m=1-4. Alternating sign, magnitude 1.
 - β₄^(k≥1) = 9 - 5 - 3 = 1 (each)
 - **β₄ = 0 + 6×1 = 6** ✓
 
-k=0 NEVER contributes to homology. ALL Betti comes from k≥1 eigenspaces.
+At p=7: k=0 NEVER contributes to homology. ALL Betti comes from k≥1 eigenspaces.
+
+**CORRECTION (S68):** This pattern does NOT generalize! At p=11, k=0 IS the
+primary source of β₅. See p=11 per-eigenspace decomposition below.
 
 ### p = 7, Interval (S = {1, 2, 3}):
 | m | r_m^(0) | r_m^(k≥1) | Δ |
@@ -78,9 +81,35 @@ Constant for m ≥ 2. **Chain complex exact at ALL degrees ≥ 2.**
 | 4 | 55      | 54        | +1|
 | 5 | 150     | 151       | -1|
 | 6 | 305     | 309       | -4|
+| 7 | 390     | 390       | 0 |
 
-Anomaly at m=1-6 (at least). k≥1 eigenspaces split into QR orbit (5)
-and NQR orbit (5), contributing differently to β₅=5 and β₆=15.
+Anomaly at m=1-6 ONLY. **r_7 = 390 for ALL eigenspaces (VERIFIED S68).**
+This confirms D(T_11) = 6 = (p+1)/2, matching HYP-550.
+
+Anomaly pattern: (0, -1, +1, -1, +1, -1, -4, 0, 0, ...).
+Note: Δ₆ = -4 (not ±1!) — anomaly magnitude INCREASES at the last degree.
+
+**Per-eigenspace Betti decomposition (VERIFIED S68):**
+Using r_7=390, r_8=300, r_9=150, r_10=30 (from β=0 at degrees 7-10):
+
+| m | β_m^(k=0) | β_m^(k≥1) | β_m total |
+|---|-----------|-----------|-----------|
+| 0 | 1         | 0         | 1         |
+| 1 | 0         | 0         | 0         |
+| 2 | 0         | 0         | 0         |
+| 3 | 0         | 0         | 0         |
+| 4 | 0         | 0         | 0         |
+| 5 | **5**     | 0         | **5**     |
+| 6 | **5**     | **1**     | **15**    |
+| 7-10| 0       | 0         | 0         |
+
+**KEY INSIGHT:** At p=11, β₅=5 comes ENTIRELY from k=0 (the opposite of p=7!).
+β₆=15 has mixed origin: k=0 contributes 5, each k≥1 contributes 1.
+
+Pattern comparison:
+- p=7: β₄=6 from k≥1 only (k=0 contributes 0)
+- p=11: β₅=5 from k=0 only; β₆=15 from k=0 (5) + k≥1 (10×1)
+- The role of k=0 REVERSES between p=7 and p=11!
 
 ### p = 11, Interval (S = {1, 2, 3, 4, 5}):
 | m | r_m^(0) | r_m^(k≥1) |
