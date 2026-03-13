@@ -1,0 +1,85 @@
+======================================================================
+CYCLE OVERLAP ANALYSIS FOR REGULAR n=7 TOURNAMENTS
+======================================================================
+  Found representatives for H classes: [171, 175, 189]
+
+============================================================
+  H = 171
+============================================================
+  Directed cycles: c3=14, c5=36, c7=15
+  Total cycles: 65
+
+  Overlap graph Ω: 65 vertices, 2070 edges
+  Density: 0.9952
+  Degree range: [62, 64]
+  Mean degree: 63.69
+
+  Too many cycles (65) for exact I(Ω, 2) computation
+  alpha_1 (total cycles) = 65
+  alpha_2 (disjoint pairs) = 10
+  alpha_3 estimate from independent triples...
+  I(Ω, 2) ≈ 1 + 2*65 + 4*10 + ... = 171+higher
+
+  Clique number ω(Ω) ≥ 65
+
+  Overlap structure:
+    3-3 overlaps: 81/91
+    5-5 overlaps: 630/630
+    3-5 overlaps: 504/504
+    3-7 overlaps: 210/210
+    5-7 overlaps: 540/540
+
+============================================================
+  H = 175
+============================================================
+  Directed cycles: c3=14, c5=28, c7=17
+  Total cycles: 59
+
+  Overlap graph Ω: 59 vertices, 1697 edges
+  Density: 0.9918
+  Degree range: [56, 58]
+  Mean degree: 57.53
+
+  Too many cycles (59) for exact I(Ω, 2) computation
+  alpha_1 (total cycles) = 59
+  alpha_2 (disjoint pairs) = 14
+  alpha_3 estimate from independent triples...
+  I(Ω, 2) ≈ 1 + 2*59 + 4*14 + ... = 175+higher
+
+  Clique number ω(Ω) ≥ 59
+
+  Overlap structure:
+    3-3 overlaps: 77/91
+    5-5 overlaps: 378/378
+    3-5 overlaps: 392/392
+    3-7 overlaps: 238/238
+    5-7 overlaps: 476/476
+
+============================================================
+  H = 189
+============================================================
+  Directed cycles: c3=14, c5=42, c7=24
+  Total cycles: 80
+
+  Overlap graph Ω: 80 vertices, 3153 edges
+  Density: 0.9978
+  Degree range: [78, 79]
+  Mean degree: 78.83
+
+  Too many cycles (80) for exact I(Ω, 2) computation
+  alpha_1 (total cycles) = 80
+  alpha_2 (disjoint pairs) = 7
+  alpha_3 estimate from independent triples...
+  I(Ω, 2) ≈ 1 + 2*80 + 4*7 + ... = 189+higher
+
+  Clique number ω(Ω) ≥ 80
+
+  Overlap structure:
+    3-3 overlaps: 84/91
+    5-5 overlaps: 861/861
+    3-5 overlaps: 588/588
+    3-7 overlaps: 336/336
+    5-7 overlaps: 1008/1008
+
+
+DONE — cycle_overlap_n7.py complete
