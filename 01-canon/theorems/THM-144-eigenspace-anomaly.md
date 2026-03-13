@@ -43,11 +43,17 @@ FROM the anomaly:
 | 2 | 3       | 2         | +1                  |
 | 3 | 3       | 4         | -1                  |
 | 4 | 6       | 5         | +1                  |
-| 5 | 7       | 7         | 0                   |
-| 6 | 2       | 2         | 0                   |
+| 5 | 3       | 3         | 0                   |
+| 6 | 3       | 3         | 0                   |
 
-Anomaly pattern: (-1, +1, -1, +1) — **alternating sign, magnitude 1**.
-Result: β₄ = 6 (from 6 eigenspaces k=1,...,6 each contributing 1).
+Anomaly pattern: (-1, +1, -1, +1) at m=1-4. Alternating sign, magnitude 1.
+
+**Per-eigenspace Betti decomposition (VERIFIED):**
+- β₄^(k=0) = 9 - 6 - 3 = 0
+- β₄^(k≥1) = 9 - 5 - 3 = 1 (each)
+- **β₄ = 0 + 6×1 = 6** ✓
+
+k=0 NEVER contributes to homology. ALL Betti comes from k≥1 eigenspaces.
 
 ### p = 7, Interval (S = {1, 2, 3}):
 | m | r_m^(0) | r_m^(k≥1) | Δ |
@@ -59,7 +65,8 @@ Result: β₄ = 6 (from 6 eigenspaces k=1,...,6 each contributing 1).
 | 5 | 7       | 7         | 0 |
 | 6 | 2       | 2         | 0 |
 
-Only anomaly at m=1 → β₁ = 1 (from k=0 eigenspace only).
+Constant for m ≥ 2. **Chain complex exact at ALL degrees ≥ 2.**
+β₀ = 1, β₁ = 1 (both from k=0 only), all others = 0.
 
 ### p = 11, Paley T_11 (S = QR_11):
 | m | r_m^(0) | r_m^(k≥1) | Δ |
@@ -72,9 +79,8 @@ Only anomaly at m=1 → β₁ = 1 (from k=0 eigenspace only).
 | 5 | 150     | 151       | -1|
 | 6 | 305     | 309       | -4|
 
-Anomaly pattern: (-1, +1, -1, +1, -1, -4) — **alternating sign for m=1-5,
-then jump to -4 at m=6**. The m=6 anomaly is LARGER, suggesting the Betti
-concentration begins at m=6 (consistent with known β₆ = 15).
+Anomaly at m=1-6 (at least). k≥1 eigenspaces split into QR orbit (5)
+and NQR orbit (5), contributing differently to β₅=5 and β₆=15.
 
 ### p = 11, Interval (S = {1, 2, 3, 4, 5}):
 | m | r_m^(0) | r_m^(k≥1) |
@@ -87,7 +93,9 @@ concentration begins at m=6 (consistent with known β₆ = 15).
 | 5 | 166     | 166       |
 | 6 | 356     | 356       |
 
-**Completely constant for m ≥ 2!** Only the universal m=1 anomaly.
+**Completely constant for m ≥ 2!** Chain complex exact at m=2,...,6 (verified).
+Ω_m - r_m - r_{m+1} = 0 at all verified degrees.
+β₀ = 1, β₁ = 1 (from k=0 only), conjectured β_m = 0 for m ≥ 2.
 
 ## Why Paley has deep anomaly
 

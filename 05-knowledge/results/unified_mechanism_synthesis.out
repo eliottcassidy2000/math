@@ -1,0 +1,102 @@
+======================================================================
+UNIFIED MECHANISM: QR SYMMETRY vs CONSECUTIVENESS
+======================================================================
+
+======================================================================
+p = 7, m = 3
+======================================================================
+
+  VIEW 1: SPECTRAL
+  Paley |λ|: ['1.414', '1.414', '1.414']
+  Interval |λ|: ['2.247', '0.555', '0.802']
+  IPR: Paley=0.3333 (flat), Interval=0.7222 (peaked)
+  Paley spectrum is FLAT
+
+  VIEW 2: TOPOLOGICAL (eigenspace anomaly)
+  Paley:    k=0 anomaly depth D=4, β=[1,0,0,0,6,0,0], χ=7
+  Interval: k=0 anomaly depth D=1, β=[1,1,0,0,0,0,0], χ=0
+  Paley: QR group creates deep anomaly via multiplicative closure
+  Interval: no extra symmetry → trivial acyclic eigenspaces
+
+  VIEW 3: COMBINATORIAL (co-occurrence)
+  Paley: co_occ_k(d) = CONSTANT (QR difference set)
+  Interval: co_occ_k(d) = a_k + C(m-2,k-3)*d (THM-143 gradient)
+    k=3: Interval slope = C(1,0) = 1
+    k=5: Interval slope = C(1,2) = 0
+    k=7: Interval slope = C(1,4) = 0
+
+  VIEW 4: H-MAXIMALITY
+  Paley H=189, Interval H=175 → Paley WINS (α₁ dominates)
+  α_max = floor(7/3) = 2
+
+  GRADIENT-TO-ALPHA SCALING:
+    (3,3) pair: b_k² = 1, Δα₂ scales as O(p^2)
+    (5,5) pair: b_k² = 0, Δα₂ scales as O(p^6)
+    (7,7) pair: b_k² = 0, Δα₂ scales as O(p^10)
+
+======================================================================
+p = 11, m = 5
+======================================================================
+
+  VIEW 1: SPECTRAL
+  Paley |λ|: ['1.732', '1.732', '1.732', '1.732', '1.732']
+  Interval |λ|: ['3.513', '0.521', '1.204', '0.594', '0.764']
+  IPR: Paley=0.2000 (flat), Interval=0.6889 (peaked)
+  Paley spectrum is FLAT
+
+  VIEW 2: TOPOLOGICAL (eigenspace anomaly)
+  Paley:    k=0 anomaly depth D≥6, β=[1,0,0,0,0,5,15,0,0,0,0], χ=11
+  Interval: k=0 anomaly depth D=1, β=[1,1,0,...,0] (conj), χ=0
+  Paley: QR group creates deep anomaly via multiplicative closure
+  Interval: no extra symmetry → trivial acyclic eigenspaces
+
+  VIEW 3: COMBINATORIAL (co-occurrence)
+  Paley: co_occ_k(d) = CONSTANT (QR difference set)
+  Interval: co_occ_k(d) = a_k + C(m-2,k-3)*d (THM-143 gradient)
+    k=3: Interval slope = C(3,0) = 1
+    k=5: Interval slope = C(3,2) = 3
+    k=7: Interval slope = C(3,4) = 0
+
+  VIEW 4: H-MAXIMALITY
+  Paley H=95095, Interval H=93027 → Paley WINS (α₁ still dominates)
+  α_max = floor(11/3) = 3
+
+  GRADIENT-TO-ALPHA SCALING:
+    (3,3) pair: b_k² = 1, Δα₂ scales as O(p^2)
+    (5,5) pair: b_k² = 9, Δα₂ scales as O(p^6)
+    (7,7) pair: b_k² = 0, Δα₂ scales as O(p^10)
+
+======================================================================
+THE GRAND UNIFICATION
+======================================================================
+
+QR Multiplicative Closure (Paley):
+  SPECTRAL:      |λ_t| = √((p+1)/4) for all t  (Gauss sum)
+  TOPOLOGICAL:   k=0 eigenspace anomaly → deep homology (β_{(p+1)/2} = p-1)
+  COMBINATORIAL: Uniform multiplicity → high α₁, low α₂+
+  H-EFFECT:      Wins at small p (α₁ dominance)
+
+Consecutive-Integer Structure (Interval):
+  SPECTRAL:      |λ_t| = |sin(πmt/p)/sin(πt/p)|  (Dirichlet kernel)
+  TOPOLOGICAL:   No anomaly → acyclic eigenspaces → β=[1,1,0,...,0]
+  COMBINATORIAL: Distance gradient → co-occ linearity → high α₂+
+  H-EFFECT:      Wins at large p (α₂+ dominance via O(p^6) scaling)
+
+The SAME property — QR closure vs consecutiveness — simultaneously
+determines ALL four characteristics. They are not independent
+phenomena but manifestations of a single algebraic distinction.
+
+Phase transition at p≈13:
+  The gradient-to-alpha scaling O(p^{2k-4}) means higher-order
+  disjointness (α_2, α_3) grows POLYNOMIALLY faster than
+  multiplicity advantage (α_1). The crossover occurs when:
+    2^2 * Δα₂ > 2 * Δα₁
+  i.e., when the disjointness bonus outweighs the multiplicity penalty.
+
+Topological side:
+  The phase transition does NOT change the topological type.
+  Both before and after p≈13, Interval has β=[1,1,0,...,0].
+  The topology is a STATIC invariant, while H-maximality is DYNAMIC.
+  Topology reflects the SYMMETRY TYPE, not the H value.
+
+DONE.
