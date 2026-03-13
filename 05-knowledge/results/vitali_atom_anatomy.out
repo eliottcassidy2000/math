@@ -1,0 +1,178 @@
+======================================================================
+PART 1: Vitali pairs at n=5 — identifying the atom
+======================================================================
+  Total lambda classes at n=5: 208
+  Vitali classes (Ps sign differs): 76
+
+  VITALI ATOM ANATOMY:
+    Lambda=(0, 0, 0, 0, 0)..., Ps=(+1, -1), H=(1, 1), diff_edges=[(0, 1)] (1 arcs), diff_verts=[0, 1], reversal=Yes (0, 1)
+    Lambda=(1, 1, 0, 0, 1)..., Ps=(+3, -3), H=(3, 3), diff_edges=[(0, 1), (0, 2), (1, 2)] (3 arcs), diff_verts=[0, 1, 2], reversal=Yes (0, 1, 2)
+    Lambda=(1, 1, 2, 0, 0)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(1, 2)] (1 arcs), diff_verts=[1, 2], reversal=Yes (1, 2)
+    Lambda=(0, 1, 1, 0, 0)..., Ps=(+3, -3), H=(3, 3), diff_edges=[(0, 1), (1, 2), (1, 3)] (3 arcs), diff_verts=[0, 1, 2, 3], reversal=No
+    Lambda=(2, 1, 1, 0, 1)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(0, 1), (0, 2), (0, 3), (1, 2), (1, 3)] (5 arcs), diff_verts=[0, 1, 2, 3], reversal=No
+    Lambda=(1, 1, 1, 3, 0)..., Ps=(+3, -3), H=(9, 9), diff_edges=[(1, 2)] (1 arcs), diff_verts=[1, 2], reversal=Yes (1, 2)
+    Lambda=(0, 1, 1, 2, 0)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(2, 3)] (1 arcs), diff_verts=[2, 3], reversal=Yes (2, 3)
+    Lambda=(0, 0, 1, 1, 0)..., Ps=(+3, -3), H=(3, 3), diff_edges=[(1, 2)] (1 arcs), diff_verts=[1, 2], reversal=Yes (1, 2)
+    Lambda=(2, 2, 2, 2, 0)..., Ps=(+1, -1), H=(11, 11), diff_edges=[(1, 2)] (1 arcs), diff_verts=[1, 2], reversal=Yes (1, 2)
+    Lambda=(0, 2, 1, 1, 0)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(0, 2), (0, 3), (0, 4), (2, 3), (2, 4)] (5 arcs), diff_verts=[0, 2, 3, 4], reversal=No
+    Lambda=(3, 1, 1, 1, 1)..., Ps=(+3, -3), H=(9, 9), diff_edges=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)] (7 arcs), diff_verts=[0, 1, 2, 3, 4], reversal=No
+    Lambda=(1, 2, 1, 0, 1)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(1, 3)] (1 arcs), diff_verts=[1, 3], reversal=Yes (1, 3)
+    Lambda=(1, 0, 1, 0, 0)..., Ps=(+3, -3), H=(3, 3), diff_edges=[(0, 1), (0, 3), (1, 3)] (3 arcs), diff_verts=[0, 1, 3], reversal=Yes (0, 1, 3)
+    Lambda=(1, 0, 1, 2, 0)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(1, 3)] (1 arcs), diff_verts=[1, 3], reversal=Yes (1, 3)
+    Lambda=(1, 3, 1, 1, 1)..., Ps=(+3, -3), H=(9, 9), diff_edges=[(1, 3)] (1 arcs), diff_verts=[1, 3], reversal=Yes (1, 3)
+    Lambda=(2, 0, 1, 1, 0)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(0, 1), (0, 3), (0, 4), (1, 3), (1, 4)] (5 arcs), diff_verts=[0, 1, 3, 4], reversal=No
+    Lambda=(0, 0, 0, 0, 1)..., Ps=(+3, -3), H=(3, 3), diff_edges=[(0, 1), (0, 2), (0, 3)] (3 arcs), diff_verts=[0, 1, 2, 3], reversal=No
+    Lambda=(1, 0, 1, 0, 1)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(0, 2)] (1 arcs), diff_verts=[0, 2], reversal=Yes (0, 2)
+    Lambda=(1, 1, 0, 0, 2)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(0, 3)] (1 arcs), diff_verts=[0, 3], reversal=Yes (0, 3)
+    Lambda=(0, 1, 1, 0, 1)..., Ps=(+1, -1), H=(5, 5), diff_edges=[(0, 1)] (1 arcs), diff_verts=[0, 1], reversal=Yes (0, 1)
+
+  Arc difference sizes: {1: 12, 3: 4, 5: 3, 7: 1}
+
+======================================================================
+PART 2: Classification of Vitali transformations at n=5
+======================================================================
+  Transform type counts: {'2-reversal': 640, '3-reversal': 320, 'other': 4120}
+
+======================================================================
+PART 3: Pfaffian sum change under k-vertex reversal
+======================================================================
+  k=2-vertex reversal deltas: {-6: 1280, -2: 3840, 2: 3840, 6: 1280}
+    Never preserves Ps? True
+    Sign: flips=3680/10240 (35.9%), same=6560/10240, zero=0/10240
+  k=3-vertex reversal deltas: {-18: 20, -14: 180, -10: 720, -6: 1680, -2: 2520, 2: 2520, 6: 1680, 10: 720, 14: 180, 18: 20}
+    Never preserves Ps? True
+    Sign: flips=7120/10240 (69.5%), same=3120/10240, zero=0/10240
+  k=4-vertex reversal deltas: {-16: 120, -12: 320, -8: 480, -4: 960, 0: 1360, 4: 960, 8: 480, 12: 320, 16: 120}
+    Never preserves Ps? False
+    Sign: flips=3280/5120 (64.1%), same=1840/5120, zero=0/5120
+  k=5-vertex reversal deltas: {0: 1024}
+    Never preserves Ps? False
+    Sign: flips=0/1024 (0.0%), same=1024/1024, zero=0/1024
+
+======================================================================
+PART 4: Complement = full reversal
+======================================================================
+  Lambda preservation under k-reversal at n=5:
+    k=2: 352/2560 preserve lambda (13.8%)
+    k=3: 192/2560 preserve lambda (7.5%)
+    k=4: 192/1280 preserve lambda (15.0%)
+    k=5: 256/256 preserve lambda (100.0%)
+
+======================================================================
+PART 5: 4-vertex reversal anatomy
+======================================================================
+  Lambda preservation for EACH 4-subset:
+    Preserves lambda: 640/5120 (12.5%)
+    Breaks lambda:    4480/5120
+
+  Among lambda-preserving 4-reversals:
+    Ps sign flip:     0
+    Ps sign same:     640
+    Ps = 0 involved:  0
+
+======================================================================
+PART 6: Sub-tournament type for lambda-preserving 4-reversals
+======================================================================
+  Sub-tournament (score, c3) when 4-reversal preserves lambda:
+    scores=(0, 1, 2, 3), c3=0: 240 (TRANSITIVE)
+    scores=(0, 2, 2, 2), c3=1: 80 (NON-TRANS)
+    scores=(1, 1, 1, 3), c3=1: 80 (NON-TRANS)
+    scores=(1, 1, 2, 2), c3=2: 240 (NON-TRANS)
+
+======================================================================
+PART 7: Pfaffian sum as a SIGN FUNCTION on lambda classes
+======================================================================
+  Testing simple sign predictors at n=5:
+    bits=0: Ps=+1, fwd_arcs=0, scores=(0, 1, 2, 3, 4)
+    bits=7: Ps=-1, fwd_arcs=3, scores=(3, 0, 1, 2, 4)
+    bits=100: Ps=-5, fwd_arcs=3, scores=(1, 3, 2, 1, 3)
+    bits=341: Ps=-5, fwd_arcs=5, scores=(2, 2, 2, 2, 2)
+
+  Forward-arc parity determines Ps sign? True
+  Bit-count parity determines Ps sign? True
+  Sign of Pf(S_{00}) determines Ps sign? False
+
+======================================================================
+PART 8: Vitali atoms at n=7 — the ambiguous pair
+======================================================================
+
+  Searching for labeled-lambda-identical pairs with DIFFERENT H at n=7...
+    Lambda class: 2 tours
+      bits=390294: H=109, Ps=13
+      bits=894140: H=111, Ps=-19
+      Diff arcs between H=109 and H=111: 6
+    Lambda class: 2 tours
+      bits=1267802: H=143, Ps=-33
+      bits=324325: H=141, Ps=-31
+      Diff arcs between H=143 and H=141: 15
+    Lambda class: 2 tours
+      bits=1502577: H=111, Ps=-19
+      bits=1500598: H=109, Ps=13
+      Diff arcs between H=111 and H=109: 6
+    Lambda class: 2 tours
+      bits=622157: H=109, Ps=-13
+      bits=590258: H=111, Ps=-19
+      Diff arcs between H=109 and H=111: 15
+    Lambda class: 2 tours
+      bits=110116: H=141, Ps=31
+      bits=2052942: H=143, Ps=33
+      Diff arcs between H=141 and H=143: 15
+
+  Lambda classes with different H: 319
+
+======================================================================
+PART 9: The mass spectrum Ps^2 at n=5 and n=7
+======================================================================
+  n=5: Ps^2 values = [1, 9, 25, 49, 81]
+  Ps^2 mod 16: {1: 640, 9: 384}
+  Ps^2 mod 24: {1: 744, 9: 280}
+
+  n=7: |Ps| values (sample): [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31, 33, 35, 49]
+  All odd? True
+  n=7: Ps mod 4: {1: 9912, 3: 10088}
+
+======================================================================
+PART 10: Topological interpretation
+======================================================================
+
+THE VITALI ANALOGY (formalized):
+
+1. TOURNAMENT SPACE = the set of all n-vertex tournaments
+   (2^{C(n,2)} elements)
+
+2. LAMBDA EQUIVALENCE = the equivalence relation T ~ T' iff
+   lambda(T) = lambda(T') (same labeled lambda graph)
+   This is the "rational structure" — the measurable part.
+
+3. PFAFFIAN SUM = a Z-valued function on tournaments
+   Ps: T -> Z, always odd.
+   At n=5: Ps is a SIGN function on lambda classes
+   (each class has exactly +Ps and -Ps representatives).
+   At n=7: some classes have representatives with DIFFERENT |Ps|.
+
+4. THE VITALI ATOM = a 4-vertex reversal that preserves lambda
+   This is the "translation" in the analogy.
+   It acts by flipping the sign of Ps (at n=5).
+
+5. THE NON-MEASURABLE SET = the set of tournaments where Ps > 0
+   (or any sign-consistent choice from each lambda class).
+   This cannot be defined using only lambda — it requires
+   the Pfaffian, which sees MATCHINGS not just CYCLES.
+
+6. THE MEASURE = the Hamiltonian path count H(T).
+   H is lambda-measurable at n <= 6 (determined by lambda + scores).
+   H becomes lambda-NON-MEASURABLE at n = 7.
+   The Pfaffian sum resolves this non-measurability.
+
+7. THE DEEPER STRUCTURE:
+   Ps^2 = det(I + 2A) = product(1 + 2*lambda_k)
+   where lambda_k are eigenvalues of A.
+   So |Ps| is determined by the SPECTRUM of A.
+   The SIGN of Ps is a topological invariant:
+   it's the orientation of the tournament in the
+   "matching space" (related to the Stiefel-Whitney class
+   or Euler class of the associated vector bundle).
+
+======================================================================
+DONE.
+======================================================================
