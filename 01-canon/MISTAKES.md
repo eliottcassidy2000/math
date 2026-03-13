@@ -855,3 +855,35 @@ At p=7, Interval tournament S=[1,2,3]:
 
 ### Lesson
 When implementing independent set enumeration via backtracking, the recursive call after selecting vertex w should pass v=w (NOT v=w+1). The `range(v+1, n)` in the next level already excludes w.
+
+---
+
+## MISTAKE-022: Sparse Gaussian Elimination Fill-In Bug
+
+**Date discovered:** 2026-03-13, opus-S71c (9th context window)
+**Found by:** opus, when k=0 eigenspace Betti numbers came out negative
+**Affects:** p19_omega5_sparse.py, p23_omega5_sparse.py, p31_omega5_sparse.py, p43_omega5_sparse.py (ALL scripts using the sparse Gaussian pattern with single-pass row iteration)
+
+### What was assumed
+The sparse Gaussian elimination iterated over `sorted(col.keys())` once, subtracting each matching pivot. This should correctly eliminate all pivot contributions.
+
+### Why it was wrong
+When subtracting a pivot at row `r`, the pivot vector has entries at rows `r' > r` (fill-in). These new entries at rows NOT in the original column are never checked against existing pivots at those rows, because the `sorted(col.keys())` list was computed BEFORE the subtraction and doesn't include fill-in entries.
+
+Concrete example: column has entries at rows {3, 7}. Pivot at row 3 has entries at {3, 5, 7}. After subtracting pivot 3, the column has entries at {5, 7}. Row 5 was NOT in the original sorted list, so even if there's a pivot at row 5, it's never subtracted. This causes the rank to be OVERCOUNTED (some columns that should reduce to zero don't).
+
+### The correct framing
+After any pivot subtraction, restart the row scan from the beginning (or at least from the newly-created entry). A simple fix: wrap the elimination loop in `while changed: ... break after subtraction`.
+
+### Impact
+- **P_19 Omega_5 was 12602 (WRONG), correct is 23832**
+- **P_23 Omega_5 was 50715 (WRONG), correct is 78430**
+- **P_31 Omega_5 was 252065 (WRONG), correct is 456330**
+- **P_43 Omega_5 was 1429652 (WRONG), correct is 2865660**
+- P_7 and P_11 were unaffected (small enough that fill-in didn't change rank)
+- HYP-790 ("Omega_5 not polynomial in m") was based on wrong data — **RETRACTED**
+- **CORRECTED**: Ω_5 = m(m-1)(m³-6m²+10m-2) — a **clean integer polynomial** in m!
+- All formulas Ω_d for d ≤ 5 are now proven/verified
+
+### Lesson
+In sparse Gaussian elimination, fill-in from pivot subtraction can create new entries at rows that were not in the original column. These MUST be processed against their pivots. Always use a while loop that restarts after each subtraction, or maintain a priority queue of unprocessed rows.
