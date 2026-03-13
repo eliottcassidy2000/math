@@ -1,0 +1,164 @@
+======================================================================
+ANALYTICAL DERIVATION OF κ_trop
+======================================================================
+
+STEP 1: Identify exact cutoff for Q_k > 1
+----------------------------------------
+
+Q_k > 1 for k odd ⟺ 1/(4sin²(kπ/(2p))) > 1 ⟺ sin²(kπ/(2p)) < 1/4
+⟺ |sin(kπ/(2p))| < 1/2 ⟺ kπ/(2p) < π/6 (first branch)
+⟺ k < p/3
+
+More precisely: k < p/3 OR k in (2p/3, p)
+But k ∈ {1,...,m} = {1,...,(p-1)/2}, so k < p/2.
+The condition k < p/3 covers the odd k with Q_k > 1 in this range.
+For 5p/6 < k < p: sin(kπ/(2p)) = sin(π/2 - ε) ≈ 1, so Q_k < 1.
+
+  p=97: odd k with Q>1: actual=16, predicted (k<p/3)=16, even k with Q>1=0
+  p=997: odd k with Q>1: actual=166, predicted (k<p/3)=166, even k with Q>1=0
+
+Perfect! The cutoff k < p/3 is exact for large p.
+Odd k in {1,3,...,p/3}: approximately p/6 modes. Total m ≈ p/2.
+Fraction = (p/6)/(p/2) = 1/3. ✓
+
+
+STEP 2: Compute S(m) = Σ_{odd k < p/3} log Q_k
+----------------------------------------
+
+S(m) = Σ_{k odd, k<p/3} [-log 4 - 2 log sin(kπ/(2p))]
+
+Let K = ⌊p/6⌋ = number of odd k values below p/3.
+(Odd k in {1,3,...,2K-1}, so 2K-1 < p/3, K ≈ p/6.)
+
+Cl_2(π/3) = 1.01494161
+∫_0^{π/6} log sin t dt = -0.87040182
+Numerical integral: -0.87045559
+
+
+STEP 3: Assemble S(m)
+----------------------------------------
+
+S(m) ≈ (p/π)·Cl₂(π/3)
+
+And log(F_p) ≈ (p-1)·log(φ) ≈ p·log(φ)
+
+Therefore: κ = S(m)/log(F_p) ≈ Cl₂(π/3) / (π·log(φ))
+
+κ_predicted = Cl₂(π/3) / (π·logφ) = 1.01494161 / (3.141593 × 0.481212)
+            = 1.01494161 / 1.51177153
+            = 0.6713591196
+
+Compare with numerical values:
+  p=997: κ_numerical = 0.6710405398, predicted = 0.6713591196, diff = -3.19e-04
+  p=4999: κ_numerical = 0.6712955663, predicted = 0.6713591196, diff = -6.36e-05
+
+HMMMM. The prediction 0.67135912 is not matching the numerical 0.6714.
+The issue is that the Riemann sum approximation is too crude.
+Let me be more careful about the lower integration limit and edge effects.
+
+
+
+Predicted S/m → (2/π)·Cl₂(π/3) = 0.64613189
+Numerical S/m ≈ 0.64610000 (from previous runs)
+Difference: 0.000032
+
+κ = Cl₂(π/3) / (π·logφ) = 1.01494161 / (1.51177153)
+  = 0.6713591196
+
+corr/m → (2/π)·∫_0^{π/6} log(1+4sin²θ) dθ = 0.09100554
+R1/m → (2/π)·∫_{π/6}^{π/4} log(1+1/(4sin²θ)) dθ = 0.00000000
+R2/m → (1/2)·log(5/4) = 0.11157178
+
+Total logF/m = 0.84870921
+2·logφ = 0.96242365
+Difference: -0.113714
+
+κ = S/m / (logF/m) = 0.64613189 / 0.84870921 = 0.7613112831
+
+======================================================================
+CORRECT INTEGRAL DECOMPOSITION
+======================================================================
+
+Odd contribution: (2/π)·∫_0^{π/4} log(1+1/(4sin²θ)) dθ = 0.82502033
+Even contribution: (2/π)·∫_0^{π/4} log(1+1/(4cos²θ)) dθ = 0.13750805
+Total logF/m = 0.96252838
+2·logφ = 0.96242365
+Ratio: 1.00010882
+
+S/m = (2/π)·Cl₂(π/3) = 0.64613189
+κ = S/m / (logF/m) = 0.6712860687
+
+Verification against exact computation at p=9973:
+  S_exact/m = 0.64605768, integral prediction = 0.64613189
+  logF_exact/m = 0.96235877, integral prediction = 0.96252838
+  κ_exact = 0.6713272623
+  κ_integral = 0.6712860687
+
+======================================================================
+FINAL ANSWER
+======================================================================
+
+κ_trop = Cl₂(π/3) / [∫_0^{π/4} [log(1+1/(4sin²θ)) + log(1+1/(4cos²θ))] dθ]
+       ≈ 1.01494161 / [1.51193605]
+       ≈ 0.6712860687
+
+Let's see if this simplifies to a known constant...
+
+Combined: ∫_0^{π/4} log(1+5/(4sin²(2θ))) dθ = 1.51193605
+Separate: 1.51193605
+Match: True
+
+KEY IDENTITY: ∫_0^{π/2} log(4sin²u) du = 0
+Proof: (π/2)log 4 + 2·∫_0^{π/2} log sin u du = π log 2 + 2·(-π/2·log 2) = 0 ✓
+
+Therefore:
+  logF/m → (1/π)·∫_0^{π/2} log(4sin²u + 5) du
+
+  ∫_0^{π/2} log(4sin²u + 5) du = 3.02354307
+  (1/π)·this = 0.96242365
+  2logφ = 0.96242365
+  Ratio: 1.00000000
+
+κ = 2·Cl₂(π/3) / ∫_0^{π/2} log(4sin²u+5) du
+  = 2·1.01494161 / 3.02354307
+  = 0.6713591196
+
+Compare with numerical κ ≈ 0.6714
+Difference: -0.000041
+
+∫_0^π log(7-2cos v) dv = π·log((7+3√5)/2) = 6.04708614
+(1/2)·this = 3.02354307
+Numerical = 3.02354307
+Match: True
+
+(7+3√5)/2 = 6.85410197
+log((7+3√5)/2)/2 = 0.96242365
+2logφ = 0.96242365
+
+φ⁴ = 6.85410197
+(7+3√5)/2 = 6.85410197
+MATCH: True
+
+CONFIRMED: ∫_0^{π/2} log(4sin²u+5) du = (π/2)·log(φ⁴) = 2π·logφ
+And logF/m → (1/π)·(2π logφ) = 2logφ ✓
+
+THEOREM: κ_trop = Cl₂(π/3) / (π·logφ)
+                = 1.0149416064 / 1.5117715344
+                = 0.6713591196
+
+But this doesn't match the numerical value! Let me check...
+Numerical κ at p=9973: 0.6713272623
+Analytical: 0.6713591196
+Difference: -0.000032
+
+The convergence is LOGARITHMICALLY SLOW due to the singularity at θ=0.
+Prediction: κ(p) = Cl₂(π/3)/(π·logφ) + c·log(p)/p + ...
+
+Let me check this prediction with a log(p)/p fit:
+Fit: κ = 0.6714310711 + -0.067813·log(p)/p
+Cl₂(π/3)/(π·logφ) = 0.6713591196
+Fit intercept = 0.6714310711
+Difference: 7.20e-05
+
+Better fit: κ = 0.6713286833 + -0.126432·log(p)/p + 0.0125·log²(p)/p
+Cl₂(π/3)/(π·logφ) = 0.6713591196
