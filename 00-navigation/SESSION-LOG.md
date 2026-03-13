@@ -13,6 +13,56 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S65 — 2026-03-12: Walsh difference formula + additive energy = IPR + 5 new discoveries
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S64 (context compaction recovery)
+**Summary of work:**
+  Deep synthesis of entire repo, looking for new connections across all results.
+
+  MAJOR FINDINGS:
+
+  1. **WALSH DIFFERENCE FORMULA (PROVED)**:
+     H(Int) - H(Pal) = 2·Σ_{ψ(S)=-1} Ĥ[S]
+     where ψ: P({1..m})→{±1} is surjective homomorphism with |ker|=2^{m-1}
+     Phase transition = when NQR Walsh sum changes sign.
+
+  2. **ADDITIVE ENERGY = IPR (EXACT)**:
+     IPR = (p·E(S) - (p-1)⁴) / (m(m+1))²
+     via Parseval 4th power: Σ|f_S(k)|⁴ = p·E(S)
+     Interval maximizes E(S) → maximizes IPR → maximizes H (complete chain!)
+
+  3. **MIXED PAIR J ENTRIES**: At p=7,11 (≡3 mod 4), ALL mixed QR-NQR
+     chord pair interactions J[i,j] are NEGATIVE. At p=13 (≡1 mod 4),
+     mixed sum = 0 EXACTLY. This is WHY Paley wins at degree 2.
+
+  4. **CYCLE RATIO MONOTONICITY**: c_k(Int)/c_k(Pal) increases with k,
+     crossing 1.0 at k=p. Interval has MORE Hamiltonian cycles than Paley!
+
+  5. **PALEY Ω IS BETTER EXPANDER**: Larger spectral gap → fewer
+     independent sets → lower α_k → lower H. "Too random = too well-mixed."
+
+  6. **Ω Hoffman bound**: α(Ω_Int) ≥ 2.90 vs α(Ω_Pal) ≥ 1.97 at p=7.
+
+  7. **OCF-HOMOLOGY BRIDGE**: At p=7, Paley has 273 four-step paths vs
+     Interval's 245 (more tangled). Open: compute β₄(Interval) to compare.
+
+  8. **HYP-519 through HYP-523** added to hypothesis index.
+
+**New contributions:**
+  - HYP-519 (Walsh difference formula), HYP-520 (E=IPR), HYP-521 (mixed J entries)
+  - HYP-522 (cycle ratio monotonicity), HYP-523 (Paley Ω expansion)
+  - synthesis_missing_links.py, walsh_character_excess.py, nqr_walsh_degree2_analysis.py
+  - hardcore_spectral_gap.py, crossover_prediction.py, ocf_homology_bridge.py
+
+**Unresolved threads:**
+  - Step 3→4 gap: rigorous IPR → cycle disjointness bound
+  - Compute β₄(Interval at p=7) to compare with β₄(Paley)=6
+  - Walsh interference at p=19,23 (need exhaustive computation)
+  - p=29 needs C++ Held-Karp
+
+---
+
 ## opus-2026-03-12-S64 — 2026-03-12: Fejér kernel + overlap concentration + 6-step proof chain
 
 **Account:** opus
