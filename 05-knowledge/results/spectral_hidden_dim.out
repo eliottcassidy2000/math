@@ -1,0 +1,123 @@
+============================================================
+SPECTRAL HIDDEN DIMENSION ANALYSIS AT n=7
+============================================================
+
+Total profiles: 257
+Ambiguous: 6
+
+==================================================
+Profile 1: c7=191 vs 192 (dc7=1)
+  n_lo=79, n_hi=40
+  Skew spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    SKEW SPECTRUM DISTINGUISHES lo from hi!
+  Omega spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 1
+    Omega spectrum does NOT distinguish
+  Adj spectrum (A+A^T): lo has 1 distinct, hi has 1
+    Overlap: 1
+  Sigma graph spectrum: lo has 1 distinct, hi has 1
+    Overlap: 0
+    SIGMA SPECTRUM DISTINGUISHES!
+  det(A-A^T): lo={0}, hi={0}
+  det mod 7: lo={0: 20}, hi={0: 20}
+
+==================================================
+Profile 2: c7=192 vs 193 (dc7=1)
+  n_lo=25, n_hi=53
+  Skew spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    SKEW SPECTRUM DISTINGUISHES lo from hi!
+  Omega spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    OMEGA SPECTRUM DISTINGUISHES lo from hi!
+  Adj spectrum (A+A^T): lo has 1 distinct, hi has 1
+    Overlap: 1
+  Sigma graph spectrum: lo has 1 distinct, hi has 1
+    Overlap: 0
+    SIGMA SPECTRUM DISTINGUISHES!
+  det(A-A^T): lo={0}, hi={0}
+  det mod 7: lo={0: 20}, hi={0: 20}
+
+==================================================
+Profile 3: c7=279 vs 281 (dc7=2)
+  n_lo=15, n_hi=50
+  Skew spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    SKEW SPECTRUM DISTINGUISHES lo from hi!
+  Omega spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    OMEGA SPECTRUM DISTINGUISHES lo from hi!
+  Adj spectrum (A+A^T): lo has 1 distinct, hi has 1
+    Overlap: 1
+  Sigma graph spectrum: lo has 1 distinct, hi has 1
+    Overlap: 0
+    SIGMA SPECTRUM DISTINGUISHES!
+  det(A-A^T): lo={0}, hi={0}
+  det mod 7: lo={0: 15}, hi={0: 20}
+
+==================================================
+Profile 4: c7=227 vs 228 (dc7=1)
+  n_lo=18, n_hi=42
+  Skew spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 1
+    Skew spectrum does NOT distinguish (shared spectra)
+  Omega spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 1
+    Omega spectrum does NOT distinguish
+  Adj spectrum (A+A^T): lo has 1 distinct, hi has 1
+    Overlap: 1
+  Sigma graph spectrum: lo has 1 distinct, hi has 1
+    Overlap: 0
+    SIGMA SPECTRUM DISTINGUISHES!
+  det(A-A^T): lo={0}, hi={0}
+  det mod 7: lo={0: 18}, hi={0: 20}
+
+==================================================
+Profile 5: c7=232 vs 235 (dc7=3)
+  n_lo=21, n_hi=20
+  Skew spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    SKEW SPECTRUM DISTINGUISHES lo from hi!
+  Omega spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    OMEGA SPECTRUM DISTINGUISHES lo from hi!
+  Adj spectrum (A+A^T): lo has 1 distinct, hi has 1
+    Overlap: 1
+  Sigma graph spectrum: lo has 1 distinct, hi has 1
+    Overlap: 0
+    SIGMA SPECTRUM DISTINGUISHES!
+  det(A-A^T): lo={0}, hi={0}
+  det mod 7: lo={0: 20}, hi={0: 20}
+
+==================================================
+Profile 6: c7=153 vs 154 (dc7=1)
+  n_lo=11, n_hi=27
+  Skew spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    SKEW SPECTRUM DISTINGUISHES lo from hi!
+  Omega spectra: lo has 1 distinct, hi has 1 distinct
+    Overlap: 0
+    OMEGA SPECTRUM DISTINGUISHES lo from hi!
+  Adj spectrum (A+A^T): lo has 1 distinct, hi has 1
+    Overlap: 1
+  Sigma graph spectrum: lo has 1 distinct, hi has 1
+    Overlap: 0
+    SIGMA SPECTRUM DISTINGUISHES!
+  det(A-A^T): lo={0}, hi={0}
+  det mod 7: lo={0: 11}, hi={0: 20}
+
+
+============================================================
+DISTINGUISHING INVARIANT SUMMARY
+============================================================
+
+For each ambiguous simplex profile (same multiset of (sigma,lambda,delta)):
+  - c3, c5, c4 are IDENTICAL
+  - n_1122, n_trans4, n_1113 are IDENTICAL
+  - n_reg5 is IDENTICAL
+
+Testing spectral invariants to find the hidden dimension...
+
+
+Done.

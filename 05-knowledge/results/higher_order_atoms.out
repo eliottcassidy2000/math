@@ -1,0 +1,52 @@
+============================================================
+HIGHER-ORDER LAMBDA-PRESERVING REVERSALS AT n=7
+============================================================
+
+--- Lambda-preserving reversal census ---
+
+  k=4: 201/70000 lambda-preserving (0.29%)
+    dc7 distribution: {-1: 18, 0: 165, 1: 18}
+
+  k=5: 160/42000 lambda-preserving (0.38%)
+    dc7 distribution: {0: 160}
+
+  k=6: 444/14000 lambda-preserving (3.17%)
+    dc7 distribution: {0: 444}
+
+
+============================================================
+dc7=2 VIA COMPOSITION OF VITALI ATOMS
+============================================================
+Found 0 cases with |dc7_composition| >= 2
+
+
+============================================================
+dc7=2 VIA 5-VERTEX REVERSAL
+============================================================
+Found 0 dc7!=0 from 5-vertex reversals
+dc7 distribution: {}
+Sub-tournament scores: {}
+
+
+============================================================
+6-VERTEX REVERSAL
+============================================================
+Found 211 6-vertex lambda-preserving reversals
+dc7 distribution: {0: 211}
+Sub-tournament scores: {(np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)): 1, (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)): 2, (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)): 5, (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)): 1, (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)): 6, (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): 14, (np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): 12, (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)): 3, (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)): 14, (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): 24, (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): 9, (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)): 7, (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)): 4, (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)): 55, (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 19, (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)): 1, (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)): 19, (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 15}
+
+
+============================================================
+ATOM HIERARCHY SUMMARY
+============================================================
+
+At n=7, lambda-preserving reversals exist at sizes:
+  k=4: The Vitali atom. Score (1,1,2,2). |dc7| <= 1.
+  k=5: ??? Score type ???. |dc7| range ???.
+  k=6: ??? |dc7| range ???.
+
+The simplex profile ambiguity has gaps 1, 2, 3.
+These correspond to different "atom levels" in the hierarchy.
+
+
+Done.

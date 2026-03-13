@@ -1,0 +1,111 @@
+============================================================
+HIDDEN DIMENSION PROBE AT n=7
+============================================================
+
+Total profiles: 257
+Ambiguous profiles: 6
+
+==================================================
+Profile 1: c7 in {191, 192}
+  n_lo=64, n_hi=30
+  Vitali atoms: lo=8/10, hi=10/10
+  Parities (c7%2, tr(A^4)%2, n_1122%2, delta_total%2):
+    lo: {(1, 0, 1, 0): 64}
+    hi: {(0, 0, 1, 0): 30}
+  No direct 4-subset reversal link (expected — different labelings)
+  5-subsets containing (1,1,2,2): lo=[19, 19, 19, 19, 19], hi=[19, 19, 19, 19, 19]
+
+==================================================
+Profile 2: c7 in {192, 193}
+  n_lo=20, n_hi=41
+  Vitali atoms: lo=0/10, hi=0/10
+  Parities (c7%2, tr(A^4)%2, n_1122%2, delta_total%2):
+    lo: {(0, 0, 1, 0): 20}
+    hi: {(1, 0, 1, 0): 41}
+  No direct 4-subset reversal link (expected — different labelings)
+  5-subsets containing (1,1,2,2): lo=[19, 19, 19, 19, 19], hi=[19, 19, 19, 19, 19]
+
+==================================================
+Profile 3: c7 in {279, 281}
+  n_lo=12, n_hi=45
+  Vitali atoms: lo=0/10, hi=0/10
+  Parities (c7%2, tr(A^4)%2, n_1122%2, delta_total%2):
+    lo: {(1, 0, 1, 0): 12}
+    hi: {(1, 0, 1, 0): 45}
+  No direct 4-subset reversal link (expected — different labelings)
+  5-subsets containing (1,1,2,2): lo=[21, 21, 21, 21, 21], hi=[21, 21, 21, 21, 21]
+
+==================================================
+Profile 4: c7 in {227, 228}
+  n_lo=15, n_hi=32
+  Vitali atoms: lo=10/10, hi=10/10
+  Parities (c7%2, tr(A^4)%2, n_1122%2, delta_total%2):
+    lo: {(1, 0, 0, 1): 15}
+    hi: {(0, 0, 0, 1): 32}
+  No direct 4-subset reversal link (expected — different labelings)
+  5-subsets containing (1,1,2,2): lo=[21, 21, 21, 21, 21], hi=[21, 21, 21, 21, 21]
+
+
+============================================================
+GLOBAL INVARIANT SEARCH
+='*60
+
+Profile 1: c7=191 vs 192
+    lo: c7=191, c3=11, c5=23, n_1122=17, n_trans4=8, n_1113=6, c4=17, n_reg5=1
+    lo: c7=191, c3=11, c5=23, n_1122=17, n_trans4=8, n_1113=6, c4=17, n_reg5=1
+    lo: c7=191, c3=11, c5=23, n_1122=17, n_trans4=8, n_1113=4, c4=17, n_reg5=1
+    hi: c7=192, c3=11, c5=23, n_1122=17, n_trans4=8, n_1113=4, c4=17, n_reg5=1
+    hi: c7=192, c3=11, c5=23, n_1122=17, n_trans4=8, n_1113=6, c4=17, n_reg5=1
+    hi: c7=192, c3=11, c5=23, n_1122=17, n_trans4=8, n_1113=4, c4=17, n_reg5=1
+
+Profile 2: c7=192 vs 193
+    lo: c7=192, c3=11, c5=25, n_1122=17, n_trans4=8, n_1113=5, c4=17, n_reg5=1
+    lo: c7=192, c3=11, c5=25, n_1122=17, n_trans4=8, n_1113=5, c4=17, n_reg5=1
+    lo: c7=192, c3=11, c5=25, n_1122=17, n_trans4=8, n_1113=5, c4=17, n_reg5=1
+    hi: c7=193, c3=11, c5=25, n_1122=17, n_trans4=8, n_1113=5, c4=17, n_reg5=1
+    hi: c7=193, c3=11, c5=25, n_1122=17, n_trans4=8, n_1113=5, c4=17, n_reg5=1
+    hi: c7=193, c3=11, c5=25, n_1122=17, n_trans4=8, n_1113=5, c4=17, n_reg5=1
+
+Profile 3: c7=279 vs 281
+    lo: c7=279, c3=13, c5=33, n_1122=21, n_trans4=4, n_1113=5, c4=21, n_reg5=2
+    lo: c7=279, c3=13, c5=33, n_1122=21, n_trans4=4, n_1113=5, c4=21, n_reg5=2
+    lo: c7=279, c3=13, c5=33, n_1122=21, n_trans4=4, n_1113=5, c4=21, n_reg5=2
+    hi: c7=281, c3=13, c5=33, n_1122=21, n_trans4=4, n_1113=5, c4=21, n_reg5=2
+    hi: c7=281, c3=13, c5=33, n_1122=21, n_trans4=4, n_1113=5, c4=21, n_reg5=2
+    hi: c7=281, c3=13, c5=33, n_1122=21, n_trans4=4, n_1113=5, c4=21, n_reg5=2
+
+Profile 4: c7=227 vs 228
+    lo: c7=227, c3=12, c5=30, n_1122=18, n_trans4=5, n_1113=6, c4=18, n_reg5=1
+    lo: c7=227, c3=12, c5=30, n_1122=18, n_trans4=5, n_1113=6, c4=18, n_reg5=1
+    lo: c7=227, c3=12, c5=30, n_1122=18, n_trans4=5, n_1113=6, c4=18, n_reg5=1
+    hi: c7=228, c3=12, c5=30, n_1122=18, n_trans4=5, n_1113=6, c4=18, n_reg5=1
+    hi: c7=228, c3=12, c5=30, n_1122=18, n_trans4=5, n_1113=6, c4=18, n_reg5=1
+    hi: c7=228, c3=12, c5=30, n_1122=18, n_trans4=5, n_1113=6, c4=18, n_reg5=1
+
+
+============================================================
+VITALI ATOM CONNECTION TO AMBIGUITY
+============================================================
+
+Profile 1: c7=191 vs 192
+  FOUND: atom (1, 3, 5, 6) maps c7=191 -> c7=192
+    Same simplex profile: YES
+
+Profile 2: c7=192 vs 193
+  No Vitali atom connection found in first 5 lo examples
+
+Profile 3: c7=279 vs 281
+  No Vitali atom connection found in first 5 lo examples
+
+Profile 4: c7=227 vs 228
+  FOUND: atom (0, 2, 3, 4) maps c7=227 -> c7=228
+    Same simplex profile: YES
+
+Profile 5: c7=232 vs 235
+  No Vitali atom connection found in first 5 lo examples
+
+Profile 6: c7=153 vs 154
+  No Vitali atom connection found in first 5 lo examples
+
+
+Done.
