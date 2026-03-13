@@ -1,0 +1,161 @@
+======================================================================
+DISJOINTNESS ANALYSIS: WHY INTERVAL HAS MORE DISJOINT PAIRS
+======================================================================
+
+============================================================
+p=7, Paley: 80 cycles
+============================================================
+
+  Vertex usage: avg=60.0, var=0.0, std=0.0
+  Per vertex: [60, 60, 60, 60, 60, 60, 60]
+  UNIFORM: all vertices in 60 cycles
+
+  Overlap distribution (|C_i cap C_j|):
+    overlap=0:        7 pairs (0.22%)
+    overlap=1:      147 pairs (4.65%)
+    overlap=2:      357 pairs (11.30%)
+    overlap=3:      924 pairs (29.24%)
+    overlap=4:      420 pairs (13.29%)
+    overlap=5:     1029 pairs (32.56%)
+    overlap=7:      276 pairs (8.73%)
+  Disjointness rate: 7/3160 = 0.2215%
+
+  Disjointness by (len_i, len_j):
+    (3,3): 7/91 = 7.69%
+    (3,5): 0/588 = 0.00%
+    (3,7): 0/336 = 0.00%
+    (5,5): 0/861 = 0.00%
+    (5,7): 0/1008 = 0.00%
+    (7,7): 0/276 = 0.00%
+
+  Cycle diameter (arc length): avg=4.78
+    diameter=3: 14 cycles
+    diameter=4: 14 cycles
+    diameter=5: 28 cycles
+    diameter=6: 24 cycles
+
+============================================================
+p=7, Interval: 59 cycles
+============================================================
+
+  Vertex usage: avg=43.0, var=0.0, std=0.0
+  Per vertex: [43, 43, 43, 43, 43, 43, 43]
+  UNIFORM: all vertices in 43 cycles
+
+  Overlap distribution (|C_i cap C_j|):
+    overlap=0:       14 pairs (0.82%)
+    overlap=1:      112 pairs (6.55%)
+    overlap=2:      238 pairs (13.91%)
+    overlap=3:      546 pairs (31.91%)
+    overlap=4:      182 pairs (10.64%)
+    overlap=5:      483 pairs (28.23%)
+    overlap=7:      136 pairs (7.95%)
+  Disjointness rate: 14/1711 = 0.8182%
+
+  Disjointness by (len_i, len_j):
+    (3,3): 14/91 = 15.38%
+    (3,5): 0/392 = 0.00%
+    (3,7): 0/238 = 0.00%
+    (5,5): 0/378 = 0.00%
+    (5,7): 0/476 = 0.00%
+    (7,7): 0/136 = 0.00%
+
+  Cycle diameter (arc length): avg=4.93
+    diameter=4: 21 cycles
+    diameter=5: 21 cycles
+    diameter=6: 17 cycles
+
+============================================================
+p=11, Paley: 21169 cycles
+============================================================
+
+  Vertex usage: avg=17355.0, var=0.0, std=0.0
+  Per vertex: [17355, 17355, 17355, 17355, 17355, 17355, 17355, 17355, 17355, 17355, 17355]
+  UNIFORM: all vertices in 17355 cycles
+
+  Overlap distribution (|C_i cap C_j|):
+    overlap=0:    10879 pairs (0.00%)
+    overlap=1:   170005 pairs (0.08%)
+    overlap=2:   891770 pairs (0.40%)
+    overlap=3:  3815295 pairs (1.70%)
+    overlap=4:  7628995 pairs (3.41%)
+    overlap=5: 24878227 pairs (11.10%)
+    overlap=6: 22950620 pairs (10.24%)
+    overlap=7: 66595375 pairs (29.72%)
+    overlap=8: 19998495 pairs (8.93%)
+    overlap=9: 61963275 pairs (27.66%)
+    overlap=11: 15149760 pairs (6.76%)
+  Disjointness rate: 10879/224052696 = 0.0049%
+
+  Disjointness by (len_i, len_j):
+    (3,3): 495/1485 = 33.33%
+    (3,5): 3630/32670 = 11.11%
+    (3,7): 4840/217800 = 2.22%
+    (3,9): 0/608025 = 0.00%
+    (3,11): 0/302775 = 0.00%
+    (5,5): 1914/176121 = 1.09%
+    (5,7): 0/2352240 = 0.00%
+    (5,9): 0/6566670 = 0.00%
+    (5,11): 0/3269970 = 0.00%
+    (7,7): 0/7838820 = 0.00%
+    (7,9): 0/43777800 = 0.00%
+    (7,11): 0/21799800 = 0.00%
+    (9,9): 0/61100985 = 0.00%
+    (9,11): 0/60857775 = 0.00%
+    (11,11): 0/15149760 = 0.00%
+
+  Cycle diameter (arc length): avg=8.88
+    diameter=2: 11 cycles
+    diameter=4: 22 cycles
+    diameter=5: 22 cycles
+    diameter=6: 319 cycles
+    diameter=7: 957 cycles
+    diameter=8: 4906 cycles
+    diameter=9: 9427 cycles
+    diameter=10: 5505 cycles
+
+============================================================
+p=11, Interval: 18397 cycles
+============================================================
+
+  Vertex usage: avg=15157.0, var=0.0, std=0.0
+  Per vertex: [15157, 15157, 15157, 15157, 15157, 15157, 15157, 15157, 15157, 15157, 15157]
+  UNIFORM: all vertices in 15157 cycles
+
+  Overlap distribution (|C_i cap C_j|):
+    overlap=0:    11110 pairs (0.01%)
+    overlap=1:   139040 pairs (0.08%)
+    overlap=2:   673552 pairs (0.40%)
+    overlap=3:  2842356 pairs (1.68%)
+    overlap=4:  5366812 pairs (3.17%)
+    overlap=5: 18208553 pairs (10.76%)
+    overlap=6: 16502794 pairs (9.75%)
+    overlap=7: 49593060 pairs (29.31%)
+    overlap=8: 14235936 pairs (8.41%)
+    overlap=9: 48594007 pairs (28.72%)
+    overlap=11: 13048386 pairs (7.71%)
+  Disjointness rate: 11110/169215606 = 0.0066%
+
+  Disjointness by (len_i, len_j):
+    (3,3): 550/1485 = 37.04%
+    (3,5): 3476/26620 = 13.06%
+    (3,7): 5434/186945 = 2.91%
+    (3,9): 0/514250 = 0.00%
+    (3,11): 0/280995 = 0.00%
+    (5,5): 1650/116886 = 1.41%
+    (5,7): 0/1645116 = 0.00%
+    (5,9): 0/4525400 = 0.00%
+    (5,11): 0/2472756 = 0.00%
+    (7,7): 0/5774901 = 0.00%
+    (7,9): 0/31780650 = 0.00%
+    (7,11): 0/17365491 = 0.00%
+    (9,9): 0/43706575 = 0.00%
+    (9,11): 0/47769150 = 0.00%
+    (11,11): 0/13048386 = 0.00%
+
+  Cycle diameter (arc length): avg=8.98
+    diameter=6: 165 cycles
+    diameter=7: 616 cycles
+    diameter=8: 3740 cycles
+    diameter=9: 8767 cycles
+    diameter=10: 5109 cycles
