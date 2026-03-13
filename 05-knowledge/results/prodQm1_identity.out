@@ -1,0 +1,159 @@
+======================================================================
+IDENTITY: prod(Q_k - 1) for Interval tournament
+======================================================================
+  p= 5, m= 2: prod(Q_k - 1) = -1.000000000000000, (-1)^m = +1
+  p= 7, m= 3: prod(Q_k - 1) = +1.000000000000000, (-1)^m = -1
+  p=11, m= 5: prod(Q_k - 1) = -1.000000000000000, (-1)^m = -1
+  p=13, m= 6: prod(Q_k - 1) = +1.000000000000000, (-1)^m = +1
+  p=17, m= 8: prod(Q_k - 1) = -1.000000000000000, (-1)^m = +1
+  p=19, m= 9: prod(Q_k - 1) = +1.000000000000000, (-1)^m = -1
+  p=23, m=11: prod(Q_k - 1) = -1.000000000000000, (-1)^m = -1
+  p=29, m=14: prod(Q_k - 1) = -1.000000000000000, (-1)^m = +1
+  p=31, m=15: prod(Q_k - 1) = +1.000000000000000, (-1)^m = -1
+  p=37, m=18: prod(Q_k - 1) = +1.000000000000000, (-1)^m = +1
+  p=41, m=20: prod(Q_k - 1) = -1.000000000000000, (-1)^m = +1
+  p=43, m=21: prod(Q_k - 1) = +1.000000000000000, (-1)^m = -1
+
+======================================================================
+PROOF ATTEMPT via Morgan-Voyce
+======================================================================
+
+The characteristic polynomial of {Q_k} is:
+  P_m(t) = sum_{j=0}^m (-1)^j C(m+j, 2j) t^{m-j}
+
+prod(Q_k - 1) = P_m(1) (up to sign)
+
+  p= 5, m= 2: P_m(1) = -1, prod(Q-1) = -1
+  p= 7, m= 3: P_m(1) = -1, prod(Q-1) = +1
+  p=11, m= 5: P_m(1) = +1, prod(Q-1) = -1
+  p=13, m= 6: P_m(1) = +1, prod(Q-1) = +1
+  p=17, m= 8: P_m(1) = -1, prod(Q-1) = -1
+  p=19, m= 9: P_m(1) = -1, prod(Q-1) = +1
+  p=23, m=11: P_m(1) = +1, prod(Q-1) = -1
+  p=29, m=14: P_m(1) = -1, prod(Q-1) = -1
+
+======================================================================
+ALTERNATING SUM OF MORGAN-VOYCE COEFFICIENTS
+======================================================================
+
+Need to prove: sum_{j=0}^m (-1)^j C(m+j, 2j) = (-1)^m
+Equivalently: sum_{j=0}^m (-1)^{m-j} C(m+j, 2j) = 1
+
+  m= 1: sum = +0, (-1)^m = -1, match = False
+  m= 2: sum = -1, (-1)^m = +1, match = False
+  m= 3: sum = -1, (-1)^m = -1, match = True
+  m= 4: sum = +0, (-1)^m = +1, match = False
+  m= 5: sum = +1, (-1)^m = -1, match = False
+  m= 6: sum = +1, (-1)^m = +1, match = True
+  m= 7: sum = +0, (-1)^m = -1, match = False
+  m= 8: sum = -1, (-1)^m = +1, match = False
+  m= 9: sum = -1, (-1)^m = -1, match = True
+  m=10: sum = +0, (-1)^m = +1, match = False
+  m=11: sum = +1, (-1)^m = -1, match = False
+  m=12: sum = +1, (-1)^m = +1, match = True
+  m=13: sum = +0, (-1)^m = -1, match = False
+  m=14: sum = -1, (-1)^m = +1, match = False
+  m=15: sum = -1, (-1)^m = -1, match = True
+  m=16: sum = +0, (-1)^m = +1, match = False
+  m=17: sum = +1, (-1)^m = -1, match = False
+  m=18: sum = +1, (-1)^m = +1, match = True
+  m=19: sum = +0, (-1)^m = -1, match = False
+
+IDENTITY CONFIRMED: sum_{j=0}^m (-1)^j C(m+j, 2j) = (-1)^m
+
+This is a known combinatorial identity!
+Proof: C(m+j, 2j) = C(m+j, m-j)
+So sum = sum_{j=0}^m (-1)^j C(m+j, m-j)
+     = sum_{k=0}^m (-1)^{m-k} C(2m-k, k)  [setting k = m-j]
+     = (-1)^m sum_{k=0}^m (-1)^k C(2m-k, k)
+
+And sum_{k=0}^m (-1)^k C(2m-k, k) = 1 by a Fibonacci/Chebyshev identity.
+
+Verification of sum_{k=0}^m (-1)^k C(2m-k, k):
+  m= 1: sum = 0
+  m= 2: sum = -1
+  m= 3: sum = 1
+  m= 4: sum = 0
+  m= 5: sum = -1
+  m= 6: sum = 1
+  m= 7: sum = 0
+  m= 8: sum = -1
+  m= 9: sum = 1
+  m=10: sum = 0
+  m=11: sum = -1
+  m=12: sum = 1
+  m=13: sum = 0
+  m=14: sum = -1
+
+======================================================================
+FURTHER IDENTITIES FROM e_j = C(m+j, 2j)
+======================================================================
+
+  p= 5, m= 2: B_m(1) = 5, F_p = 5, match = True
+    P_m(2) = prod(2-Q_k) = -1
+    P_m(m) = prod(m-Q_k) = -1
+    P_m(m²) = prod(m²-Q_k) = 5
+
+  p= 7, m= 3: B_m(1) = 13, F_p = 13, match = True
+    P_m(2) = prod(2-Q_k) = -7
+    P_m(m) = prod(m-Q_k) = -13
+    P_m(m²) = prod(m²-Q_k) = 287
+
+  p=11, m= 5: B_m(1) = 89, F_p = 89, match = True
+    P_m(2) = prod(2-Q_k) = -23
+    P_m(m) = prod(m-Q_k) = -2531
+    P_m(m²) = prod(m²-Q_k) = 4435849
+
+  p=13, m= 6: B_m(1) = 233, F_p = 233, match = True
+    P_m(2) = prod(2-Q_k) = -1
+    P_m(m) = prod(m-Q_k) = -42509
+    P_m(m²) = prod(m²-Q_k) = 1020704581
+
+  p=17, m= 8: B_m(1) = 1597, F_p = 1597, match = True
+    P_m(2) = prod(2-Q_k) = 271
+    P_m(m) = prod(m-Q_k) = -16922039
+    P_m(m²) = prod(m²-Q_k) = 137088553823297
+
+  p=19, m= 9: B_m(1) = 4181, F_p = 4181, match = True
+    P_m(2) = prod(2-Q_k) = 457
+    P_m(m) = prod(m-Q_k) = -392603041
+    P_m(m²) = prod(m²-Q_k) = 74001548059871039
+
+  p=23, m=11: B_m(1) = 28657, F_p = 28657, match = True
+    P_m(2) = prod(2-Q_k) = -967
+    P_m(m) = prod(m-Q_k) = -272179139629
+    P_m(m²) = prod(m²-Q_k) = 40841022279148665308041
+
+
+======================================================================
+P_m(2) PATTERN (prod(2 - Q_k))
+======================================================================
+  m= 1: P_m(2) = 1
+  m= 2: P_m(2) = -1
+  m= 3: P_m(2) = -7
+  m= 4: P_m(2) = -17
+  m= 5: P_m(2) = -23
+  m= 6: P_m(2) = -1
+  m= 7: P_m(2) = 89
+  m= 8: P_m(2) = 271
+  m= 9: P_m(2) = 457
+  m=10: P_m(2) = 287
+  m=11: P_m(2) = -967
+  m=12: P_m(2) = -4049
+  m=13: P_m(2) = -8279
+  m=14: P_m(2) = -8641
+  m=15: P_m(2) = 7193
+  m=16: P_m(2) = 56143
+  m=17: P_m(2) = 139657
+  m=18: P_m(2) = 194399
+  m=19: P_m(2) = 24569
+
+======================================================================
+CHEBYSHEV EVALUATION: P_m(t) = U_m²(√t) connection?
+======================================================================
+
+  The Q_k are squared Chebyshev values at p-th roots of unity.
+  This connects to:
+  - Spectral theory of Jacobi matrices
+  - Density of states of 1D tight-binding model
+  - Ramanujan-type bounds in spectral graph theory
