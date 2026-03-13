@@ -1,0 +1,109 @@
+======================================================================
+n = 5: FAST WALSH ANALYSIS
+======================================================================
+Computing Omega_m and H for all 1024 tournaments...
+Computing Walsh transforms...
+  Omega_0: nonzero at degrees [0]
+    deg  0:     1/    1 nonzero, max |coeff| = 5.00000000
+  Omega_1: nonzero at degrees [0]
+    deg  0:     1/    1 nonzero, max |coeff| = 10.00000000
+  Omega_2: nonzero at degrees [0, 2]
+    deg  0:     1/    1 nonzero, max |coeff| = 7.50000000
+    deg  2:    30/   45 nonzero, max |coeff| = 0.25000000
+  Omega_3: nonzero at degrees [0, 4]
+    deg  0:     1/    1 nonzero, max |coeff| = 3.75000000
+    deg  4:    15/  210 nonzero, max |coeff| = 0.25000000
+  Omega_4: nonzero at degrees [0, 2, 4, 6]
+    deg  0:     1/    1 nonzero, max |coeff| = 0.93750000
+    deg  2:    30/   45 nonzero, max |coeff| = 0.06250000
+    deg  4:   140/  210 nonzero, max |coeff| = 0.18750000
+    deg  6:   120/  210 nonzero, max |coeff| = 0.03125000
+  H: nonzero at degrees [0, 2, 4]
+    deg  0:     1/    1 nonzero, max |coeff| = 7.50000000
+    deg  2:    30/   45 nonzero, max |coeff| = 0.75000000
+    deg  4:    60/  210 nonzero, max |coeff| = 0.12500000
+
+  H - Omega_4: min=0, max=15, mean=6.5625
+  H ≠ Omega_4 at n=5 ✗
+  H-Omega_{n-1}: nonzero at degrees [0, 2, 4, 6]
+    deg  0:     1/    1 nonzero, max |coeff| = 6.56250000
+    deg  2:    30/   45 nonzero, max |coeff| = 0.68750000
+    deg  4:   140/  210 nonzero, max |coeff| = 0.18750000
+    deg  6:   120/  210 nonzero, max |coeff| = 0.03125000
+  chi: nonzero at degrees [0, 2, 4, 6]
+    deg  0:     1/    1 nonzero, max |coeff| = 0.31250000
+    deg  2:    30/   45 nonzero, max |coeff| = 0.18750000
+    deg  4:   140/  210 nonzero, max |coeff| = 0.18750000
+    deg  6:   120/  210 nonzero, max |coeff| = 0.03125000
+
+======================================================================
+n = 6: FAST WALSH ANALYSIS
+======================================================================
+Computing Omega_m and H for all 32768 tournaments...
+  5000/32768 done...
+  10000/32768 done...
+  15000/32768 done...
+  20000/32768 done...
+  25000/32768 done...
+  30000/32768 done...
+Computing Walsh transforms...
+  Omega_0: nonzero at degrees [0]
+    deg  0:     1/    1 nonzero, max |coeff| = 6.00000000
+  Omega_1: nonzero at degrees [0]
+    deg  0:     1/    1 nonzero, max |coeff| = 15.00000000
+  Omega_2: nonzero at degrees [0, 2]
+    deg  0:     1/    1 nonzero, max |coeff| = 15.00000000
+    deg  2:    60/  105 nonzero, max |coeff| = 0.25000000
+  Omega_3: nonzero at degrees [0, 4]
+    deg  0:     1/    1 nonzero, max |coeff| = 11.25000000
+    deg  4:    45/ 1365 nonzero, max |coeff| = 0.25000000
+  Omega_4: nonzero at degrees [0, 2, 4, 6]
+    deg  0:     1/    1 nonzero, max |coeff| = 5.62500000
+    deg  2:    60/  105 nonzero, max |coeff| = 0.18750000
+    deg  4:   795/ 1365 nonzero, max |coeff| = 0.25000000
+    deg  6:   720/ 5005 nonzero, max |coeff| = 0.03125000
+  Omega_5: nonzero at degrees [0, 2, 4, 6, 8]
+    deg  0:     1/    1 nonzero, max |coeff| = 1.40625000
+    deg  2:    60/  105 nonzero, max |coeff| = 0.09375000
+    deg  4:   885/ 1365 nonzero, max |coeff| = 0.09375000
+    deg  6:  2580/ 5005 nonzero, max |coeff| = 0.02343750
+    deg  8:  2340/ 6435 nonzero, max |coeff| = 0.00781250
+  H: nonzero at degrees [0, 2, 4]
+    deg  0:     1/    1 nonzero, max |coeff| = 22.50000000
+    deg  2:    60/  105 nonzero, max |coeff| = 1.50000000
+    deg  4:   450/ 1365 nonzero, max |coeff| = 0.25000000
+
+  H - Omega_5: min=0, max=42, mean=21.0938
+  H-Omega_{n-1}: nonzero at degrees [0, 2, 4, 6, 8]
+    deg  0:     1/    1 nonzero, max |coeff| = 21.09375000
+    deg  2:    60/  105 nonzero, max |coeff| = 1.40625000
+    deg  4:   885/ 1365 nonzero, max |coeff| = 0.20312500
+    deg  6:  2580/ 5005 nonzero, max |coeff| = 0.02343750
+    deg  8:  2340/ 6435 nonzero, max |coeff| = 0.00781250
+  chi: nonzero at degrees [0, 2, 4, 6, 8]
+    deg  0:     1/    1 nonzero, max |coeff| = 1.03125000
+    deg  2:    60/  105 nonzero, max |coeff| = 0.15625000
+    deg  4:   525/ 1365 nonzero, max |coeff| = 0.09375000
+    deg  6:  2580/ 5005 nonzero, max |coeff| = 0.02343750
+    deg  8:  2340/ 6435 nonzero, max |coeff| = 0.00781250
+
+  Cross-correlations:
+    corr(Omega_2, Omega_3) = 0.000000
+    corr(Omega_2, Omega_4) = -0.534522
+    corr(Omega_2, Omega_5) = -0.475831
+    corr(Omega_3, Omega_4) = 0.617213
+    corr(Omega_3, Omega_5) = 0.412082
+    corr(Omega_4, Omega_5) = 0.869003
+
+  Omega_m distributions:
+    Omega_0: unique values = [6]
+    Omega_1: unique values = [15]
+    Omega_2: unique values = [12, 13, 14, 15, 16, 17, 18, 19, 20]
+    Omega_3: unique values = [9, 10, 11, 12, 15]
+    Omega_4: unique values = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16]
+    Omega_5: unique values = [0, 1, 2, 3, 4, 5, 7, 9]
+
+  Omega_2 formula check:
+    Omega_2 = C(6,3) - t_3: 0/1000 mismatches
+
+DONE.
