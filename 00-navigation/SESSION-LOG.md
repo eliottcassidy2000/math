@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71c (cont'd) — 2026-03-13: Paley Betti Formula + QR Eigenspace Decomposition
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71c (context window 11)
+**Summary of work:**
+- **P_19 β_3=0 CONFIRMED (HYP-836)**: rank(∂_4)=477=Ω_3-m(m-2)=540-63, confirming intermediate vanishing. P_19 d=5-7 boundary ranks computing (40K-column sparse GE, slow).
+- **Tang-Yau connection (HYP-835)**: Read full HTML of arXiv:2602.04140. Their Prop 4.1 = our eigenspace method. Their Conj 4.8 (H_m=0 for m≥3, no-wrap-around) does NOT apply to Paley. Our Betti concentration at d=m,m+1 is NEW.
+- **QR sum graph analysis (HYP-834)**: Γ_p (a~b iff a+b∈QR) is ALWAYS regular with degree (p-3)/4 or (p-7)/4 (from Jacobi sums). Both Γ and Γ' connected for m≥5. β_m^(0) = m(m-3)/2 is universal, not tied to Γ structure.
+- **QR-orbit decomposition**: QR_p acts FREELY on diff-sequences (d≥1), splitting k=0 complex into m identical sub-complexes. Each has β_m=β_{m+1}=(m-3)/2. VERIFIED: Ω_d divisible by m for all d≥1 (P_7, P_11, P_19). Sub-complex Euler char = 0 for j≠0. The uniform distribution is a consequence of Paley arc-transitivity.
+- **Li-Shen paper (arXiv:2603.09153)**: Read. Trapezohedral path basis for Ω_3 in general digraphs. Less relevant to our specific problem.
+**New contributions:** HYP-834, HYP-835, HYP-836. Scripts: k0_betti_verify.py, k0_betti_p19_partial.py, qr_sum_graph.py, qr_orbit_homology.py
+**Unresolved threads:**
+1. **P_19 d=5+ boundary ranks** still computing — verify β_4=β_5=β_6=β_7=β_8=0.
+2. **PROVE β_d^(0)=0 for 3≤d≤m-1** — the key open problem. Sub-complex has dims [0,1,Ω_2/m,...] and is exact below m. Need algebraic/structural argument.
+3. **Ω_d polynomial formulas**: Need P_31 data (too slow for current approach) or P_23 Ω_7-10 data for d≥4.
+4. **Session close-out**: This entry.
+
 ## opus-2026-03-13-S67k (cont'd) — 2026-03-13: Fibonacci-OCF-Lattice Gas Triangle
 
 **Account:** opus
