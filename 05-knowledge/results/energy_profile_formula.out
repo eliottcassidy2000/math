@@ -1,0 +1,167 @@
+======================================================================
+ENERGY PROFILE -> H FORMULA
+======================================================================
+
+--- PART 1: FULL DATA TABLE ---
+
+  p=7, m=3:
+       E_2      E_3        E_4          H    c3     c5
+        15       27         51        189    14     42
+        19       45        115        175    14     28
+
+  p=11, m=5:
+       E_2      E_3        E_4          H    c3     c5
+        65      175        485      95095    55    594
+        69      205        645      92411    55    572
+        73      235        805      93467    55    550
+        85      325       1333      93027    55    484
+
+  p=13, m=6:
+       E_2      E_3        E_4          H    c3     c5
+       114      378       1302    3703011    91   1482
+       118      408       1462    3704857    91   1456
+       118      420       1606    3683797    91   1456
+       122      450       1766    3669497    91   1430
+       130      522       2230    3707483    91   1378
+       146      666       3254    3711175    91   1274
+
+--- PART 2: H = a + b*E_2 + c*E_3 FIT ---
+
+  p=7, 2 classes:
+
+  p=11, 4 classes:
+    Singular system (D=0.0000)
+
+  p=13, 6 classes:
+    H = 2486903.0000 + 16376.5000*E_2 + -1755.0000*E_3
+    Residuals: ['12577.0', '1567.0', '1567.0', '-25589.0', '7745.0', '2133.0']
+    Max residual: 25589.0000
+    EXACT linear fit? False
+
+--- PART 3: H AS POLYNOMIAL IN E_2 ---
+
+  p=7:
+    E=15: H=[189]
+    E=19: H=[175]
+    E_2 alone determines H at p=7
+
+  p=11:
+    E=65: H=[95095]
+    E=69: H=[92411]
+    E=73: H=[93467]
+    E=85: H=[93027]
+    E_2 alone determines H at p=11
+
+  p=13:
+    E=114: H=[3703011]
+    E=118: H=[3683797, 3704857]
+    E=122: H=[3669497]
+    E=130: H=[3707483]
+    E=146: H=[3711175]
+    E_2 alone does NOT determine H at p=13
+    Need (E_2, E_3) pair
+
+--- PART 4: CYCLE COUNTS AS FUNCTIONS OF E ---
+c3 depends only on S (not orientation). But for circulant T,
+c3 = p * |zero-sum triples| / 3 which depends on S.
+Question: does c3 determine E? Or vice versa?
+
+  p=7:
+    c3=14: E values = [15, 19]
+
+  p=11:
+    c3=55: E values = [65, 69, 73, 85]
+
+  p=13:
+    c3=91: E values = [114, 118, 122, 130, 146]
+
+--- PART 5: STRUCTURE OF E VALUES ---
+E(S) for m-element subsets of Z_p obtained by orientation choices
+
+  p=7, m=3:
+    E values: [15, 19]
+    E diffs:  [4]
+    E range:  [15, 19]
+    # distinct: 2
+
+  p=11, m=5:
+    E values: [65, 69, 73, 85]
+    E diffs:  [4, 4, 12]
+    E range:  [65, 85]
+    # distinct: 4
+
+  p=13, m=6:
+    E values: [114, 118, 122, 130, 146]
+    E diffs:  [4, 4, 8, 16]
+    E range:  [114, 146]
+    # distinct: 5
+
+  p=17, m=8:
+    E values: [268, 272, 276, 280, 284, 292, 304, 320, 344]
+    E diffs:  [4, 4, 4, 4, 8, 12, 16, 24]
+    E range:  [268, 344]
+    # distinct: 9
+
+--- PART 6: STRUCTURAL EXPLANATION ---
+
+    WHY does the representation profile r_S determine H?
+
+    For a circulant tournament T_p with connection set S:
+    - The adjacency matrix A has eigenvalues lambda_k = S_hat(k)
+    - H = sum over Hamiltonian paths = permanent-like quantity
+    - OCF: H = I(Omega(T), 2) where Omega is the conflict graph
+
+    The conflict graph Omega depends on cycle structure.
+    The cycle count c_k = (directed k-cycles) depends on the eigenvalues:
+      c_k = sum_{k} lambda_{k_1} * ... * lambda_{k_k} (trace of A^k, restricted)
+
+    Actually, for UNDIRECTED cycle vertex sets:
+      c_k is determined by the Fourier magnitudes |S_hat(k)|^2 = Q_k
+      (because cycle counts depend on |lambda_k|^2, not phase)
+
+    The sorted Q_k profile is exactly the sorted |S_hat(k)|^2 profile,
+    which is determined by the representation function r_S via Parseval:
+      |S_hat(k)|^2 = sum_n r_S(n) * omega^{kn}  (Fourier transform of r_S)
+
+    So: r_S determines {Q_k} determines {c_k} determines Omega determines H.
+
+    But WAIT: two different r_S profiles can give the same SORTED Q_k set
+    but H values differ because the ASSIGNMENT of Q_k to k matters for
+    higher-order cycle overlap structure.
+
+    Actually NO: the key insight is that for circulant tournaments,
+    the automorphism group Z_p acts on everything, so the SORTED profile
+    suffices. The overlap structure of cycles is determined by the
+    MULTISET {Q_k}, not the individual assignments.
+
+    CORRECTION: At p=13, we saw that E_2=118 has TWO different H values.
+    These correspond to TWO different sorted r_S profiles with the same E_2.
+    Adding E_3 distinguishes them. So it's the PROFILE that matters,
+    not just a few moments.
+
+    CONJECTURE (HYP-575): For circulant tournaments on Z_p,
+    H(T) is determined by the sorted representation profile
+    {r_S(n)}_{n=1}^{p-1} (multiset).
+    
+--- PART 7: p=17 CHECK (E2, E3) ---
+  p=17, m=8, 2^m=256 orientations (may be slow for H)
+    New class (1): E2=344, E3=2080, H=13689269499 (1.5s elapsed)
+    New class (2): E2=304, E3=1600, H=13496380733 (3.1s elapsed)
+    New class (3): E2=284, E3=1354, H=13486964977 (4.6s elapsed)
+    New class (4): E2=280, E3=1288, H=13491417243 (6.1s elapsed)
+    New class (5): E2=272, E3=1216, H=13551423911 (7.7s elapsed)
+    New class (6): E2=284, E3=1378, H=13478929757 (9.3s elapsed)
+    New class (7): E2=320, E3=1792, H=13627838945 (10.8s elapsed)
+    New class (8): E2=268, E3=1162, H=13560055389 (12.3s elapsed)
+    New class (9): E2=280, E3=1312, H=13519308361 (13.9s elapsed)
+    New class (10): E2=276, E3=1270, H=13506158929 (15.4s elapsed)
+    New class (11): E2=284, E3=1342, H=13544403013 (17.0s elapsed)
+    New class (12): E2=292, E3=1438, H=13551813041 (18.5s elapsed)
+    New class (13): E2=280, E3=1336, H=13492503135 (20.1s elapsed)
+    New class (14): E2=292, E3=1474, H=13507244311 (21.7s elapsed)
+
+  Total distinct (E2,E3) classes at p=17: 14
+  E2 alone determines H? NO
+    E2=280: H values = [13491417243, 13492503135, 13519308361]
+    E2=284: H values = [13478929757, 13486964977, 13544403013]
+    E2=292: H values = [13507244311, 13551813041]
