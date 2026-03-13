@@ -1,0 +1,90 @@
+============================================================
+WITNESS MATRIX FIBER ANALYSIS
+============================================================
+
+n=7: C(n,2)=21 pairs, witness matrix is 7 x 21
+Found 100 Vitali pairs
+
+Witness matrix change statistics:
+  # of changed entries: {np.int64(0): 41, np.int64(24): 59}
+  # of +1 entries: Counter({np.int64(12): 59, np.int64(0): 41})
+  # of -1 entries: Counter({np.int64(12): 59, np.int64(0): 41})
+
+Row sum changes (delta_k change):
+  subset=(0, 2, 3, 4): row_changes=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0))
+  subset=(2, 3, 4, 6): row_changes=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0))
+  subset=(1, 3, 5, 6): row_changes=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0))
+  subset=(0, 1, 4, 6): row_changes=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0))
+  subset=(1, 3, 5, 6): row_changes=(np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0))
+  delta(k) always preserved? True
+
+============================================================
+OVERLAP WEIGHTS IN WITNESS SPACE
+============================================================
+
+============================================================
+c7 NON-MEASURABILITY: WHAT EXTRA INFORMATION IS NEEDED?
+============================================================
+Testing at n=7: does (lambda, sigma) determine c7?
+  Groups: 48835, ambiguous: 0
+  (lambda, sigma) determines c7? True
+
+  A^2 groups: 19898, ambiguous: 0
+  A^2 determines c7? True
+
+============================================================
+DIMENSION HIERARCHY OF TOURNAMENT INVARIANTS
+============================================================
+
+n=5: 1024 tournaments
+  Score classes: 9
+  Lambda classes: 208
+  Score fiber sizes: [(24, 1), (40, 3), (120, 3), (240, 1), (280, 1)]
+  Lambda fiber sizes: [(2, 132), (4, 10), (8, 45), (12, 20), (120, 1)]
+
+n=6: 32768 tournaments
+  Score classes: 22
+  Lambda classes: 8143
+  Score fiber sizes: min=80, max=8640, mean=1489.5
+  Lambda fiber sizes: min=2, max=720, mean=4.0
+  Lambda/score refinement: 370.1x
+
+============================================================
+THE VITALI ANALOGY
+============================================================
+
+VITALI SET IN R/Q              | TOURNAMENTS & LAMBDA
+================================|================================
+Real line R                     | Tournament space {0,1}^C(n,2)
+Rational translations Q         | Vitali atoms (lambda-preserving)
+Coset R/Q                       | Lambda fiber (same lambda graph)
+Lebesgue measure on R           | c5_dir (or any lambda-measurable fn)
+Non-measurable set V            | c7_dir (NOT lambda-measurable)
+                                |
+Key property: Q preserves       | Lambda atoms preserve c5
+Lebesgue measure                |  (THM-172 + THM-173)
+                                |
+Key property: V has no           | c7 has no lambda-formula
+well-defined measure under Q     |  (5 ambiguous groups at n=7)
+                                |
+Sigma-algebra of measurable sets | Lambda-measurable invariants:
+                                |   c3, c5, overlap spectra,
+                                |   independence #s i_k for c3, c5...
+                                |
+Non-measurable "residual"       | Lambda-non-measurable residual:
+                                |   c7, c9, ..., and their overlap
+                                |   contributions to i_k
+
+The {2,1,0} overlap weights connect to this as follows:
+  W=2 pairs: controlled by lambda (THM-171)
+  W=1 pairs: controlled by lambda + vertex degrees (THM-171)
+  W=0 pairs: controlled by lambda (THM-171)
+
+For c3-c3 overlaps, ALL are lambda-measurable (THM-171).
+For c3-c5 overlaps: count controlled by both c3 and c5,
+  both lambda-measurable. So c3-c5 overlap count is measurable.
+For c5-c5 overlaps: count may be measurable (both c5 are).
+For c3-c7 overlaps: count involves c7, which is NOT measurable.
+  This is where the 'non-measurability' first enters the overlap structure.
+
+Done.

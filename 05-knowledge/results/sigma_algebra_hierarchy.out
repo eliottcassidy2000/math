@@ -1,0 +1,80 @@
+============================================================
+LEVEL 1: What does LAMBDA determine?
+============================================================
+
+n=7: Testing c3, c5, c7 measurability w.r.t. lambda
+  c3: 0 ambiguous lambda groups
+  c5: 0 ambiguous lambda groups
+  c7: 31 ambiguous lambda groups
+
+============================================================
+LEVEL 1.5: What does (LAMBDA, SIGMA) determine?
+============================================================
+  c3: 0 ambiguous (lambda, sigma) groups
+  c5: 0 ambiguous (lambda, sigma) groups
+  c7: 0 ambiguous (lambda, sigma) groups
+
+============================================================
+SIGMA vs LAMBDA: How much more information?
+============================================================
+  Lambda groups: 46010
+  (Lambda, sigma) groups: 48835
+  Sigma refinement factor: 1.1x
+
+============================================================
+SIGMA DECOMPOSITION
+============================================================
+(lambda, sigma) -> {A^2[u][v], A^2[v][u]} as MULTISET
+The ordered pair requires knowing who beats whom (Level 2).
+  Verified: {A^2[u][v], A^2[v][u]} = {lambda, n-2-sigma-lambda}
+
+============================================================
+DOES A^2 DETERMINE ALL CYCLE COUNTS?
+============================================================
+Does A^2 determine A uniquely at n=5?
+  n=5: 1024 A^2 classes, 0 with multiple tournaments
+  Max fiber size: 1
+
+============================================================
+VITALI ATOM'S EFFECT ON EACH LEVEL
+============================================================
+Does Vitali atom preserve sigma?
+  Sigma preserved: 0
+  Sigma changed: 123
+  Max |delta_sigma|: 1
+  This means Vitali atoms live BETWEEN Level 1 and Level 1.5!
+  They preserve lambda (Level 1) but NOT sigma (Level 1.5).
+  Since c7 needs sigma to be determined, dc7 can be nonzero.
+
+============================================================
+HIERARCHY SUMMARY
+============================================================
+
+Level  | Invariant(s)         | Measurable cycles | Vitali preserves?
+-------|----------------------|-------------------|------------------
+  0    | Score sequence       | c3                | YES
+  1    | Lambda graph         | c3, c5            | YES (by definition)
+  1.5  | Lambda + sigma       | c3, c5, c7        | NO (sigma changes!)
+  2    | Full adjacency A     | all c_k           | NO
+
+The Vitali atom sits at Level 1: it preserves everything lambda-measurable
+(c3, c5, overlap spectra) but can change c7 because it changes sigma.
+
+This is the EXACT analogue of a measure-preserving transformation in
+the Vitali construction: it preserves the "sigma-algebra" of lambda-measurable
+sets but is NOT an identity on the full space.
+
+The {2,1,0} overlap weights decompose within this hierarchy:
+  - c3 overlap spectrum (W=2,1,0 between c3 pairs): Level 0 measurable
+  - c5 cycle count: Level 1 measurable
+  - c7 cycle count: Level 1.5 measurable
+  - Individual overlap weights involving c7: Level 1.5 measurable
+
+The "hidden higher-dimensional structure" is the WITNESS MATRIX W:
+  - W is n x C(n,2), binary
+  - Column sums = lambda (Level 1)
+  - Row sums = delta(k) (also Level 1, surprisingly!)
+  - Individual entries = Level 2 information
+  - Vitali atoms change 24 entries but preserve all column AND row sums
+
+Done.
