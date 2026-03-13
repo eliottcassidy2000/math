@@ -1,0 +1,143 @@
+======================================================================
+QUANTUM TOURNAMENT: PAULI DECOMPOSITION OF H
+======================================================================
+
+  n=3, m=3 qubits:
+    Non-zero Pauli terms by weight:
+      Weight 0: 1 terms
+      Weight 2: 3 terms
+    Total non-zero terms: 4 out of 8
+    Sparsity: 0.5000
+    CNOT gate complexity to implement H: 6
+    Classical complexity: 6 (enumerate all permutations)
+    Quantum advantage: 1.0x
+
+  n=4, m=6 qubits:
+    Non-zero Pauli terms by weight:
+      Weight 0: 1 terms
+      Weight 2: 12 terms
+    Total non-zero terms: 13 out of 64
+    Sparsity: 0.7969
+    CNOT gate complexity to implement H: 24
+    Classical complexity: 24 (enumerate all permutations)
+    Quantum advantage: 1.0x
+
+  n=5, m=10 qubits:
+    Non-zero Pauli terms by weight:
+      Weight 0: 1 terms
+      Weight 2: 30 terms
+      Weight 4: 60 terms
+    Total non-zero terms: 91 out of 1024
+    Sparsity: 0.9111
+    CNOT gate complexity to implement H: 300
+    Classical complexity: 120 (enumerate all permutations)
+    Quantum advantage: 0.4x
+
+======================================================================
+QUANTUM GROUND STATE: SUPERPOSITION OF H-MAXIMIZERS
+======================================================================
+
+  n=3: ground state is superposition of 2 tournaments
+    Cut: 1 | 2 qubits
+    Schmidt rank: 2
+    Entanglement entropy: 1.0000 bits (max 1)
+    Entanglement ratio: 1.0000
+    Ground state is ENTANGLED (2 Schmidt coefficients)
+
+  n=4: ground state is superposition of 24 tournaments
+    Cut: 3 | 3 qubits
+    Schmidt rank: 5
+    Entanglement entropy: 1.5221 bits (max 3)
+    Entanglement ratio: 0.5074
+    Ground state is ENTANGLED (5 Schmidt coefficients)
+
+  n=5: ground state is superposition of 64 tournaments
+    Cut: 5 | 5 qubits
+    Schmidt rank: 21
+    Entanglement entropy: 3.7137 bits (max 5)
+    Entanglement ratio: 0.7427
+    Ground state is ENTANGLED (21 Schmidt coefficients)
+
+======================================================================
+THERMAL STATE: QUANTUM PARTITION FUNCTION Z(β)
+======================================================================
+  β=0.01: Z=1.10e+03, <H>=7.68, C_v=0.0018, S=7.08 nats, F=-700.7363
+  β=0.10: Z=2.37e+03, <H>=9.25, C_v=0.1660, S=8.69 nats, F=-77.6990
+  β=0.50: Z=2.50e+05, <H>=13.22, C_v=1.1825, S=19.04 nats, F=-24.8597
+  β=1.00: Z=2.71e+08, <H>=14.46, C_v=1.1851, S=33.88 nats, F=-19.4194
+  β=2.00: Z=7.08e+14, <H>=14.93, C_v=0.5540, S=64.06 nats, F=-17.0966
+  β=5.00: Z=2.39e+34, <H>=15.00, C_v=0.0085, S=154.16 nats, F=-15.8318
+
+  Specific heat scan:
+    Peak specific heat: C_max = 1.2672 at β = 0.7157
+    Inverse temperature: T_c = 1.3973
+
+======================================================================
+GROVER SEARCH: QUANTUM SPEEDUP FOR H-MAXIMIZATION
+======================================================================
+  n=3: m=3 qubits, N=2^3=8
+    H-maximizers: 2, density=0.250000
+    Classical: 4 queries
+    Grover: 1.6 queries
+    Speedup: 2.5x
+  n=4: m=6 qubits, N=2^6=64
+    H-maximizers: 24, density=0.375000
+    Classical: 3 queries
+    Grover: 1.3 queries
+    Speedup: 2.1x
+  n=5: m=10 qubits, N=2^10=1,024
+    H-maximizers: 64, density=0.062500
+    Classical: 16 queries
+    Grover: 3.1 queries
+    Speedup: 5.1x
+  n=6: m=15 qubits, N=2^15=32,768
+    H-maximizers: 480, density=0.014648
+    Classical: 68 queries
+    Grover: 6.5 queries
+    Speedup: 10.5x
+  n=7: m=21 qubits, N=2^21=2,097,152
+    H-maximizers: 5040, density=0.002403
+    Classical: 416 queries
+    Grover: 16.0 queries
+    Speedup: 26.0x
+  n=8: m=28 qubits, N=2^28=268,435,456
+    H-maximizers: 40320, density=0.000150
+    Classical: 6658 queries
+    Grover: 64.1 queries
+    Speedup: 103.9x
+
+======================================================================
+VQE ANSATZ: USING FOURIER STRUCTURE FOR QUANTUM OPTIMIZATION
+======================================================================
+  H ≈ H_0 + H_2 (97% of energy)
+  H_2 depends only on score sequence (1 DOF)
+  Score = sum_j Z_j for each vertex
+
+  PROPOSED VQE CIRCUIT:
+  1. Initialize |+⟩^m (uniform superposition)
+  2. Apply R_z(θ) rotations on each qubit (parametric)
+  3. Apply ZZ coupling gates for adjacent edge pairs
+  4. Measure Z expectation values
+  5. Estimate H_2 from score sequence
+  6. Add degree-4 correction from ZZ-ZZ correlators
+
+  Circuit depth: O(m) for H_2, O(m^2) for H_4 correction
+  For n=5: 10 qubits, depth ~10 for 97% accuracy
+  For n=7: 21 qubits, depth ~21 for estimated 97% accuracy
+  For n=19: 171 qubits, depth ~171 — feasible on near-term quantum hardware!
+
+======================================================================
+TOURNAMENT CODE: QUANTUM ERROR CORRECTION
+======================================================================
+
+  Tournament code [[10, 6, 2]]:
+  Physical qubits: 10
+  Logical qubits: 6
+  Code distance: 2
+  Code rate: 0.6000
+
+  Code structure:
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/quantum_tournament.py", line 316, in <module>
+    print(f"  The code space = {{{T : H(T) = max}}} = regular tournaments")
+NameError: name 'T' is not defined
