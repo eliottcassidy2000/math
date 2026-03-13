@@ -1,0 +1,82 @@
+p=11, testing all 32 orientations
+======================================================================
+  bits=0: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=1: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=2: c3=55, lambda=3 (BIBD!), disj_pairs=495
+  bits=3: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=4: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=5: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=6: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=7: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=8: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=9: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=10: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=11: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=12: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=13: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=14: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=15: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=16: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=17: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=18: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=19: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=20: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=21: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=22: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=23: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=24: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=25: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=26: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=27: c3=55, lambda=[2, 3, 4], disj_pairs=517
+  bits=28: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+  bits=29: c3=55, lambda=3 (BIBD!), disj_pairs=495 <-- PALEY
+  bits=30: c3=55, lambda=[2, 3, 4], disj_pairs=506
+  bits=31: c3=55, lambda=[1, 2, 3, 4, 5], disj_pairs=550
+
+
+======================================================================
+DETAILED PALEY p=11 BIBD ANALYSIS
+======================================================================
+  Active 3-sets (blocks): 55
+  This is a (11, 3, lambda)-BIBD with lambda = 3
+  Near-parallel classes (3,3,3): 550
+  Per leftover pair: 10.0
+
+
+======================================================================
+NEAR-PARALLEL CLASSES ACROSS ORIENTATIONS
+======================================================================
+  bits=0: c3=55, disj_pairs=550, npc_333=748
+  bits=1: c3=55, disj_pairs=506, npc_333=572
+  bits=2: c3=55, disj_pairs=495, npc_333=550
+  bits=3: c3=55, disj_pairs=550, npc_333=748
+  bits=4: c3=55, disj_pairs=517, npc_333=572
+  bits=5: c3=55, disj_pairs=517, npc_333=572
+  bits=6: c3=55, disj_pairs=550, npc_333=748
+  bits=7: c3=55, disj_pairs=517, npc_333=572
+  bits=8: c3=55, disj_pairs=506, npc_333=572
+  bits=9: c3=55, disj_pairs=506, npc_333=572
+  bits=10: c3=55, disj_pairs=550, npc_333=748
+  bits=11: c3=55, disj_pairs=517, npc_333=572
+  bits=12: c3=55, disj_pairs=506, npc_333=572
+  bits=13: c3=55, disj_pairs=550, npc_333=748
+  bits=14: c3=55, disj_pairs=506, npc_333=572
+  bits=15: c3=55, disj_pairs=517, npc_333=572
+  bits=16: c3=55, disj_pairs=517, npc_333=572
+  bits=17: c3=55, disj_pairs=506, npc_333=572
+  bits=18: c3=55, disj_pairs=550, npc_333=748
+  bits=19: c3=55, disj_pairs=506, npc_333=572
+  bits=20: c3=55, disj_pairs=517, npc_333=572
+  bits=21: c3=55, disj_pairs=550, npc_333=748
+  bits=22: c3=55, disj_pairs=506, npc_333=572
+  bits=23: c3=55, disj_pairs=506, npc_333=572
+  bits=24: c3=55, disj_pairs=517, npc_333=572
+  bits=25: c3=55, disj_pairs=550, npc_333=748
+  bits=26: c3=55, disj_pairs=517, npc_333=572
+  bits=27: c3=55, disj_pairs=517, npc_333=572
+  bits=28: c3=55, disj_pairs=550, npc_333=748
+  bits=29: c3=55, disj_pairs=495, npc_333=550 <-- PALEY
+  bits=30: c3=55, disj_pairs=506, npc_333=572
+  bits=31: c3=55, disj_pairs=550, npc_333=748
+
+DONE.
