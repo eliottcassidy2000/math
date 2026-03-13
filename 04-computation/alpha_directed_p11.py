@@ -161,7 +161,7 @@ def main():
                         if not (excluded & (1 << w)):
                             backtrack(w + 1, excluded | nbr[w], size + 1)
 
-                backtrack(0, 0, 0)
+                backtrack(-1, 0, 0)
 
                 H = sum(alpha[j] * (2**j) for j in alpha)
                 max_j = max(alpha.keys())

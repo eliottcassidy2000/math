@@ -819,3 +819,39 @@ Both are valid mathematical objects. But they should not be conflated.
 ALWAYS verify which chain complex you're computing. The three ingredients
 (allowed paths, boundary convention, Ω subspace) must be consistent.
 When reading "path homology" results, check which convention is used.
+
+---
+
+## MISTAKE-019: TWO bugs in independent set backtracking algorithm
+
+**Date discovered:** 2026-03-13, kind-pasteur-S60
+**Found by:** kind-pasteur
+**Affects:** alpha3_p7_only.py, alpha3_moment_analysis.py, overlap_weight_analysis.py, H_energy_decomposition.py, cycle_walsh_decomposition.py, moment_cancellation_mechanism.py, overlap_gauss_bridge.py, alpha_directed_p11.py, alpha_full_p11.py, alpha2_direct_verify.py, backtrack_debug.py (ALL files with independent set enumeration)
+
+### Bug 1: Missing vertex 0 (`backtrack(0,0,0)` should be `backtrack(-1,0,0)`)
+
+The backtracking function `backtrack(v, mask, size)` iterates `for w in range(v+1, n)`. When called with `v=0`, the loop starts at `w=1`, SKIPPING vertex 0 entirely. This undercounts all alpha_j.
+
+**Fix:** Call `backtrack(-1, 0, 0)` so the loop starts at `w=0`.
+
+### Bug 2: Skipping consecutive indices (`backtrack(w+1, ...)` should be `backtrack(w, ...)`)
+
+The recursive call `backtrack(w + 1, mask | nbr[w], size + 1)` passes `v = w+1`. At the next level, the loop starts at `w' = v+1 = w+2`, SKIPPING index `w+1`. This means any independent set containing cycles with consecutive indices is missed.
+
+**Fix:** Change to `backtrack(w, mask | nbr[w], size + 1)`. Then the next level's loop starts at `w+1`, correctly considering all higher indices.
+
+### Concrete example
+
+At p=7, Interval tournament S=[1,2,3]:
+- 59 directed cycles, 14 disjoint (3,3)-pairs (correct)
+- Bug 2: Pair (5,6) = ({0,3,6}, {1,2,5}) has consecutive indices and was SKIPPED
+- Backtracking gave alpha_2=13 instead of 14, H=171 instead of 175
+- Held-Karp gives H=175 (correct)
+
+### Impact
+- All previous alpha_j values from backtracking are SUSPECT
+- THM-027 alpha_2 values at p=7 need recheck (Paley alpha_2=7 was coincidentally correct because no consecutive disjoint pairs)
+- Any H derived from backtracking alpha may be wrong
+
+### Lesson
+When implementing independent set enumeration via backtracking, the recursive call after selecting vertex w should pass v=w (NOT v=w+1). The `range(v+1, n)` in the next level already excludes w.

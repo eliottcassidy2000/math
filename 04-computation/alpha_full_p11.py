@@ -112,7 +112,7 @@ def independence_polynomial_backtrack(cycles, x=2):
             if not (excluded & (1 << w)):
                 backtrack(w + 1, excluded | nbr[w], size + 1)
 
-    backtrack(0, 0, 0)
+    backtrack(-1, 0, 0)
 
     # Compute I(Omega, x)
     max_j = max(alpha.keys())

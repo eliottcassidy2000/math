@@ -147,8 +147,8 @@ def compute_alpha_decomp(cycles_all, p):
         alpha[size] += 1
         for w in range(v + 1, n):
             if not (mask & (1 << w)):
-                backtrack(w + 1, mask | nbr[w], size + 1)
-    backtrack(0, 0, 0)
+                backtrack(w, mask | nbr[w], size + 1)
+    backtrack(-1, 0, 0)
     return alpha
 
 

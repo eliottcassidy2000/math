@@ -1,0 +1,83 @@
+======================================================================
+FULL ALPHA DECOMPOSITION at p=7
+======================================================================
+
+  bits=0, S=[6, 5, 4], H=175
+    Cycles: 59, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 59  (contribution: 59*2 = 118)
+    alpha_2 = 14  (contribution: 14*4 = 56)
+    S4 = 23.1875, S6 = 110.5781
+    H = 1*1 + 59*2 + 14*4
+
+  bits=1, S=[1, 5, 4], H=175
+    Cycles: 59, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 59  (contribution: 59*2 = 118)
+    alpha_2 = 14  (contribution: 14*4 = 56)
+    S4 = 23.1875, S6 = 110.5781
+    H = 1*1 + 59*2 + 14*4
+
+  bits=2, S=[6, 2, 4], H=175
+    Cycles: 59, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 59  (contribution: 59*2 = 118)
+    alpha_2 = 14  (contribution: 14*4 = 56)
+    S4 = 23.1875, S6 = 110.5781
+    H = 1*1 + 59*2 + 14*4
+
+  bits=3, S=[1, 2, 4], H=189
+    Cycles: 80, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 80  (contribution: 80*2 = 160)
+    alpha_2 = 7  (contribution: 7*4 = 28)
+    S4 = 9.1875, S6 = 16.0781
+    H = 1*1 + 80*2 + 7*4
+
+  bits=4, S=[6, 5, 3], H=189
+    Cycles: 80, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 80  (contribution: 80*2 = 160)
+    alpha_2 = 7  (contribution: 7*4 = 28)
+    S4 = 9.1875, S6 = 16.0781
+    H = 1*1 + 80*2 + 7*4
+
+  bits=5, S=[1, 5, 3], H=175
+    Cycles: 59, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 59  (contribution: 59*2 = 118)
+    alpha_2 = 14  (contribution: 14*4 = 56)
+    S4 = 23.1875, S6 = 110.5781
+    H = 1*1 + 59*2 + 14*4
+
+  bits=6, S=[6, 2, 3], H=175
+    Cycles: 59, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 59  (contribution: 59*2 = 118)
+    alpha_2 = 14  (contribution: 14*4 = 56)
+    S4 = 23.1875, S6 = 110.5781
+    H = 1*1 + 59*2 + 14*4
+
+  bits=7, S=[1, 2, 3], H=175
+    Cycles: 59, Max alpha idx: 2
+    alpha_0 = 1
+    alpha_1 = 59  (contribution: 59*2 = 118)
+    alpha_2 = 14  (contribution: 14*4 = 56)
+    S4 = 23.1875, S6 = 110.5781
+    H = 1*1 + 59*2 + 14*4
+
+======================================================================
+SUMMARY
+======================================================================
+
+  *** All alpha_j = 0 for j >= 3 ***
+  H = 1 + 2*alpha_1 + 4*alpha_2 for ALL orientations at p=7
+  Since alpha_1 = linear(S4,S6) [THM-157] and alpha_2 = linear(S4) [THM-156],
+  H is AUTOMATICALLY a linear function of (S4, S6).
+  (In fact, S6 is redundant since there are only 2 orbit types)
+
+  Orbit type summary:
+    H=175: alpha=[1, 59, 14], S4=23.1875, count=6
+    H=189: alpha=[1, 80, 7], S4=9.1875, count=2
+
+DONE.

@@ -112,10 +112,10 @@ def full_alpha_decomposition(A, p, cycles):
         alpha[size] += 1
         for w in range(v + 1, n):
             if not (mask & (1 << w)):
-                backtrack(w + 1, mask | nbr[w], size + 1)
+                backtrack(w, mask | nbr[w], size + 1)
 
     if n <= 25:
-        backtrack(0, 0, 0)
+        backtrack(-1, 0, 0)
     else:
         # Fallback: only compute alpha_0, alpha_1, alpha_2, alpha_3
         alpha[0] = 1

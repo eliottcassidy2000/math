@@ -144,7 +144,7 @@ def count_independent_sets(adj, n):
                 new_mask = mask | nbr[w]
                 backtrack(w + 1, new_mask, size + 1)
 
-    backtrack(0, 0, 0)
+    backtrack(-1, 0, 0)
     return alpha
 
 
