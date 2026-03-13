@@ -1,0 +1,120 @@
+======================================================================
+PER-RESONANCE WALSH ANALYSIS
+======================================================================
+
+### p=7 ###
+
+======================================================================
+PER-CYCLE-LENGTH WALSH DECOMPOSITION at p=7
+======================================================================
+
+  Pair (1,2), chi(ab)=+, resonances q=[2]
+    h_hat_H = 3.5000
+    c_5: h_hat =       3.5000, sign = +, sign*chi(ab) = +
+    c_7: h_hat =     -19.2500, sign = -, sign*chi(ab) = -
+
+  Pair (1,3), chi(ab)=-, resonances q=[3]
+    h_hat_H = -3.5000
+    c_5: h_hat =      -3.5000, sign = -, sign*chi(ab) = +
+    c_7: h_hat =      19.2500, sign = +, sign*chi(ab) = -
+
+  Pair (2,3), chi(ab)=-, resonances q=[2]
+    h_hat_H = -3.5000
+    c_5: h_hat =      -3.5000, sign = -, sign*chi(ab) = +
+    c_7: h_hat =      19.2500, sign = +, sign*chi(ab) = -
+
+======================================================================
+OVERLAP ANALYSIS via THM-155 at p=7
+======================================================================
+  c3 = 14 (constant for all regular)
+  c5 + 2*ov2 = 84
+  K = c5 - 2*ov1 - 2*ov2 = -126
+  bits=00000: c5=28, ov2=28, ov1=49, disj3=14, H=175
+  bits=00001: c5=28, ov2=28, ov1=49, disj3=14, H=175
+  bits=00010: c5=28, ov2=28, ov1=49, disj3=14, H=175
+  bits=00011: c5=42, ov2=21, ov1=63, disj3=7, H=189
+  bits=00100: c5=42, ov2=21, ov1=63, disj3=7, H=189
+  bits=00101: c5=28, ov2=28, ov1=49, disj3=14, H=175
+
+======================================================================
+MAGNITUDE FORMULA TEST at p=7
+======================================================================
+  resonances q=(2,): count=2, |h|/p = 0.5000 = 1/2^1, all_equal=True
+    (1,2): sign=+, chi(ab)=+1, sign*chi(ab)=+1, chi(q)=[1]
+    (2,3): sign=-, chi(ab)=-1, sign*chi(ab)=+1, chi(q)=[1]
+  resonances q=(3,): count=1, |h|/p = 0.5000 = 1/2^1, all_equal=True
+    (1,3): sign=-, chi(ab)=-1, sign*chi(ab)=+1, chi(q)=[-1]
+
+### p=11 ###
+
+======================================================================
+PER-CYCLE-LENGTH WALSH DECOMPOSITION at p=11
+======================================================================
+
+  Pair (1,2), chi(ab)=-, resonances q=[2]
+    h_hat_H = -8.2500
+    c_7: h_hat =     -16.5000, sign = -, sign*chi(ab) = +
+    c_9: h_hat =     423.5000, sign = +, sign*chi(ab) = -
+    c_11: h_hat =   -6701.7500, sign = -, sign*chi(ab) = +
+
+  Pair (1,3), chi(ab)=+, resonances q=[3]
+    h_hat_H = 272.2500
+    c_5: h_hat =      -5.5000, sign = -, sign*chi(ab) = -
+    c_7: h_hat =      96.2500, sign = +, sign*chi(ab) = +
+    c_9: h_hat =   -1177.0000, sign = -, sign*chi(ab) = -
+    c_11: h_hat =   12540.0000, sign = +, sign*chi(ab) = +
+
+  Pair (1,4), chi(ab)=+, resonances q=[4]
+    h_hat_H = 272.2500
+    c_5: h_hat =      -5.5000, sign = -, sign*chi(ab) = -
+    c_7: h_hat =      96.2500, sign = +, sign*chi(ab) = +
+    c_9: h_hat =   -1177.0000, sign = -, sign*chi(ab) = -
+    c_11: h_hat =   12540.0000, sign = +, sign*chi(ab) = +
+
+  Pair (2,3), chi(ab)=-, resonances q=[4]
+    h_hat_H = -272.2500
+    c_5: h_hat =       5.5000, sign = +, sign*chi(ab) = -
+    c_7: h_hat =     -96.2500, sign = -, sign*chi(ab) = +
+    c_9: h_hat =    1177.0000, sign = +, sign*chi(ab) = -
+    c_11: h_hat =  -12540.0000, sign = -, sign*chi(ab) = +
+
+  Pair (2,4), chi(ab)=-, resonances q=[2]
+    h_hat_H = -8.2500
+    c_7: h_hat =     -16.5000, sign = -, sign*chi(ab) = +
+    c_9: h_hat =     423.5000, sign = +, sign*chi(ab) = -
+    c_11: h_hat =   -6701.7500, sign = -, sign*chi(ab) = +
+
+  Pair (3,4), chi(ab)=+, resonances q=[5]
+    h_hat_H = 8.2500
+    c_7: h_hat =      16.5000, sign = +, sign*chi(ab) = +
+    c_9: h_hat =    -423.5000, sign = -, sign*chi(ab) = -
+    c_11: h_hat =    6701.7500, sign = +, sign*chi(ab) = +
+
+======================================================================
+OVERLAP ANALYSIS via THM-155 at p=11
+======================================================================
+  c3 = 55 (constant for all regular)
+  c5 + 2*ov2 = 924
+  K = c5 - 2*ov1 - 2*ov2 = -1386
+  bits=00000: c5=484, ov2=220, ov1=715, disj3=550, H=93027
+  bits=00001: c5=572, ov2=176, ov1=803, disj3=506, H=92411
+  bits=00010: c5=594, ov2=165, ov1=825, disj3=495, H=95095
+  bits=00011: c5=484, ov2=220, ov1=715, disj3=550, H=93027
+  bits=00100: c5=550, ov2=187, ov1=781, disj3=517, H=93467
+  bits=00101: c5=550, ov2=187, ov1=781, disj3=517, H=93467
+
+======================================================================
+MAGNITUDE FORMULA TEST at p=11
+======================================================================
+  resonances q=(2,): count=3, |h|/p = 0.7500 = 3/2^2, all_equal=True
+    (1,2): sign=-, chi(ab)=-1, sign*chi(ab)=+1, chi(q)=[-1]
+    (2,4): sign=-, chi(ab)=-1, sign*chi(ab)=+1, chi(q)=[-1]
+  resonances q=(3,): count=2, |h|/p = 24.7500 = 99/2^2, all_equal=True
+    (1,3): sign=+, chi(ab)=+1, sign*chi(ab)=+1, chi(q)=[1]
+    (2,5): sign=-, chi(ab)=-1, sign*chi(ab)=+1, chi(q)=[1]
+  resonances q=(4,): count=3, |h|/p = 24.7500 = 99/2^2, all_equal=True
+    (1,4): sign=+, chi(ab)=+1, sign*chi(ab)=+1, chi(q)=[1]
+    (2,3): sign=-, chi(ab)=-1, sign*chi(ab)=+1, chi(q)=[1]
+  resonances q=(5,): count=2, |h|/p = 0.7500 = 3/2^2, all_equal=True
+    (1,5): sign=+, chi(ab)=+1, sign*chi(ab)=+1, chi(q)=[1]
+    (3,4): sign=+, chi(ab)=+1, sign*chi(ab)=+1, chi(q)=[1]

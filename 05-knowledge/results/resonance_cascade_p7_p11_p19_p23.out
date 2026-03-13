@@ -1,0 +1,425 @@
+======================================================================
+RESONANCE CASCADE IN DEGREE-2 WALSH
+======================================================================
+
+--- PART 1: RESONANCE CLASSIFICATION ---
+
+  p=7, m=3:
+    (1,2): chi=+1, resonances: 3:a=-3b, 5:5a=-b
+    (1,3): chi=-1, resonances: 3:3a=b, 5:a=5b
+    (2,3): chi=-1, resonances: 3:a=3b, 5:5a=b
+
+  p=11, m=5:
+    (1,2): chi=-1, resonances: 5:a=-5b, 9:9a=-b
+    (1,3): chi=+1, resonances: 3:3a=b, 7:a=-7b
+    (1,4): chi=+1, resonances: 3:a=3b, 7:7a=-b
+    (1,5): chi=+1, resonances: 5:5a=b, 9:a=9b
+    (2,3): chi=-1, resonances: 3:a=-3b, 7:7a=b
+    (2,4): chi=-1, resonances: 5:a=-5b, 9:9a=-b
+    (2,5): chi=-1, resonances: 3:3a=-b, 7:a=7b
+    (3,4): chi=+1, resonances: 5:5a=b, 9:a=9b
+    (3,5): chi=+1, resonances: 5:a=5b, 9:9a=b
+    (4,5): chi=+1, resonances: 3:a=3b, 7:7a=-b
+
+  p=19, m=9:
+    (1,2): chi=-1, resonances: 9:a=-9b, 17:17a=-b
+    (1,3): chi=-1, resonances: 3:3a=b, 13:a=13b
+    (1,4): chi=+1, resonances: 5:a=5b, 15:15a=-b
+    (1,5): chi=+1, resonances: 5:5a=b, 15:a=-15b
+    (1,6): chi=+1, resonances: 3:a=-3b, 13:13a=-b
+    (1,7): chi=+1, resonances: 7:7a=b, 11:a=11b
+    (1,8): chi=-1, resonances: 7:a=-7b, 11:11a=-b
+    (1,9): chi=+1, resonances: 9:9a=b, 17:a=17b
+    (2,3): chi=+1, resonances: 7:a=7b, 11:11a=b
+    (2,4): chi=-1, resonances: 9:a=-9b, 17:17a=-b
+    (2,5): chi=-1, resonances: 7:7a=-b, 11:a=-11b
+    (2,6): chi=-1, resonances: 3:3a=b, 13:a=13b
+    (2,7): chi=-1, resonances: 3:a=3b, 13:13a=b
+    (2,8): chi=+1, resonances: 5:a=5b, 15:15a=-b
+    (2,9): chi=-1, resonances: 5:5a=-b, 15:a=15b
+    (3,4): chi=-1, resonances: 5:5a=-b, 15:a=15b
+    (3,5): chi=-1, resonances: 7:a=-7b, 11:11a=-b
+    (3,6): chi=-1, resonances: 9:a=-9b, 17:17a=-b
+    (3,7): chi=-1, resonances: 5:a=-5b, 15:15a=b
+    (3,8): chi=+1, resonances: 9:9a=b, 17:a=17b
+    (3,9): chi=-1, resonances: 3:3a=b, 13:a=13b
+    (4,5): chi=+1, resonances: 3:a=-3b, 13:13a=-b
+    (4,6): chi=+1, resonances: 7:a=7b, 11:11a=b
+    (4,7): chi=+1, resonances: 3:3a=-b, 13:a=-13b
+    (4,8): chi=-1, resonances: 9:a=-9b, 17:17a=-b
+    (4,9): chi=+1, resonances: 7:7a=b, 11:a=11b
+    (5,6): chi=+1, resonances: 5:5a=b, 15:a=-15b
+    (5,7): chi=+1, resonances: 9:9a=b, 17:a=17b
+    (5,8): chi=-1, resonances: 3:a=3b, 13:13a=b
+    (5,9): chi=+1, resonances: 9:a=9b, 17:17a=b
+    (6,7): chi=+1, resonances: 9:a=9b, 17:17a=b
+    (6,8): chi=-1, resonances: 5:5a=-b, 15:a=15b
+    (6,9): chi=+1, resonances: 7:a=7b, 11:11a=b
+    (7,8): chi=-1, resonances: 7:7a=-b, 11:a=-11b
+    (7,9): chi=+1, resonances: 5:a=5b, 15:15a=-b
+    (8,9): chi=-1, resonances: 3:a=3b, 13:13a=b
+
+  p=23, m=11:
+    (1,2): chi=+1, resonances: 11:a=-11b, 21:21a=-b
+    (1,3): chi=+1, resonances: 3:3a=b, 15:a=-15b
+    (1,4): chi=+1, resonances: 17:a=-17b, 19:19a=-b
+    (1,5): chi=-1, resonances: 5:5a=b, 9:a=-9b
+    (1,6): chi=+1, resonances: 17:17a=-b, 19:a=-19b
+    (1,7): chi=-1, resonances: 7:7a=b, 13:a=-13b
+    (1,8): chi=+1, resonances: 3:a=3b, 15:15a=-b
+    (1,9): chi=+1, resonances: 5:a=-5b, 9:9a=b
+    (1,10): chi=-1, resonances: 7:a=7b, 13:13a=-b
+    (1,11): chi=-1, resonances: 11:11a=b, 21:a=21b
+    (2,3): chi=+1, resonances: 7:a=-7b, 13:13a=b
+    (2,4): chi=+1, resonances: 11:a=-11b, 21:21a=-b
+    (2,5): chi=-1, resonances: 5:a=5b, 9:9a=-b
+    (2,6): chi=+1, resonances: 3:3a=b, 15:a=-15b
+    (2,7): chi=-1, resonances: 3:a=-3b, 15:15a=b
+    (2,8): chi=+1, resonances: 17:a=-17b, 19:19a=-b
+    (2,9): chi=+1, resonances: 7:7a=-b, 13:a=13b
+    (2,10): chi=-1, resonances: 5:5a=b, 9:a=-9b
+    (2,11): chi=-1, resonances: 17:17a=b, 19:a=19b
+    (3,4): chi=+1, resonances: 5:a=-5b, 9:9a=b
+    (3,5): chi=-1, resonances: 17:17a=b, 19:a=19b
+    (3,6): chi=+1, resonances: 11:a=-11b, 21:21a=-b
+    (3,7): chi=-1, resonances: 7:a=7b, 13:13a=-b
+    (3,8): chi=+1, resonances: 5:5a=-b, 9:a=9b
+    (3,9): chi=+1, resonances: 3:3a=b, 15:a=-15b
+    (3,10): chi=-1, resonances: 11:11a=b, 21:a=21b
+    (3,11): chi=-1, resonances: 17:a=17b, 19:19a=b
+    (4,5): chi=-1, resonances: 7:7a=b, 13:a=-13b
+    (4,6): chi=+1, resonances: 7:a=-7b, 13:13a=b
+    (4,7): chi=-1, resonances: 17:a=17b, 19:19a=b
+    (4,8): chi=+1, resonances: 11:a=-11b, 21:21a=-b
+    (4,9): chi=+1, resonances: 3:a=3b, 15:15a=-b
+    (4,10): chi=-1, resonances: 5:a=5b, 9:9a=-b
+    (4,11): chi=-1, resonances: 3:3a=-b, 15:a=15b
+    (5,6): chi=-1, resonances: 3:a=-3b, 15:15a=b
+    (5,7): chi=+1, resonances: 17:17a=-b, 19:a=-19b
+    (5,8): chi=-1, resonances: 3:3a=-b, 15:a=15b
+    (5,9): chi=-1, resonances: 11:11a=b, 21:a=21b
+    (5,10): chi=+1, resonances: 11:a=-11b, 21:21a=-b
+    (5,11): chi=+1, resonances: 7:7a=-b, 13:a=13b
+    (6,7): chi=-1, resonances: 5:5a=b, 9:a=-9b
+    (6,8): chi=+1, resonances: 5:a=-5b, 9:9a=b
+    (6,9): chi=+1, resonances: 7:a=-7b, 13:13a=b
+    (6,10): chi=-1, resonances: 17:17a=b, 19:a=19b
+    (6,11): chi=-1, resonances: 11:a=11b, 21:21a=b
+    (7,8): chi=-1, resonances: 11:11a=b, 21:a=21b
+    (7,9): chi=-1, resonances: 11:a=11b, 21:21a=b
+    (7,10): chi=+1, resonances: 3:a=3b, 15:15a=-b
+    (7,11): chi=+1, resonances: 5:5a=-b, 9:a=9b
+    (8,9): chi=+1, resonances: 17:a=-17b, 19:19a=-b
+    (8,10): chi=-1, resonances: 7:7a=b, 13:a=-13b
+    (8,11): chi=-1, resonances: 7:a=7b, 13:13a=-b
+    (9,10): chi=-1, resonances: 17:a=17b, 19:19a=b
+    (9,11): chi=-1, resonances: 5:a=5b, 9:9a=-b
+    (10,11): chi=+1, resonances: 3:a=3b, 15:15a=-b
+
+--- PART 2: CASCADE PATTERN VERIFICATION ---
+D^{2n} deg-2 nonzero iff pair has q-resonance with q <= 2n-1
+
+  p=7:
+    (1,2): min_q=  3, onset_n=2, expected=2 MATCH
+    (1,3): min_q=  3, onset_n=2, expected=2 MATCH
+    (2,3): min_q=  3, onset_n=2, expected=2 MATCH
+
+  p=11:
+    (1,2): min_q=  5, onset_n=3, expected=3 MATCH
+    (1,3): min_q=  3, onset_n=2, expected=2 MATCH
+    (1,4): min_q=  3, onset_n=2, expected=2 MATCH
+    (1,5): min_q=  5, onset_n=3, expected=3 MATCH
+    (2,3): min_q=  3, onset_n=2, expected=2 MATCH
+    (2,4): min_q=  5, onset_n=3, expected=3 MATCH
+    (2,5): min_q=  3, onset_n=2, expected=2 MATCH
+    (3,4): min_q=  5, onset_n=3, expected=3 MATCH
+    (3,5): min_q=  5, onset_n=3, expected=3 MATCH
+    (4,5): min_q=  3, onset_n=2, expected=2 MATCH
+
+  p=19:
+    (1,2): min_q=  9, onset_n=5, expected=5 MATCH
+    (1,3): min_q=  3, onset_n=2, expected=2 MATCH
+    (1,4): min_q=  5, onset_n=3, expected=3 MATCH
+    (1,5): min_q=  5, onset_n=3, expected=3 MATCH
+    (1,6): min_q=  3, onset_n=2, expected=2 MATCH
+    (1,7): min_q=  7, onset_n=4, expected=4 MATCH
+    (1,8): min_q=  7, onset_n=4, expected=4 MATCH
+    (1,9): min_q=  9, onset_n=5, expected=5 MATCH
+    (2,3): min_q=  7, onset_n=4, expected=4 MATCH
+    (2,4): min_q=  9, onset_n=5, expected=5 MATCH
+    (2,5): min_q=  7, onset_n=4, expected=4 MATCH
+    (2,6): min_q=  3, onset_n=2, expected=2 MATCH
+    (2,7): min_q=  3, onset_n=2, expected=2 MATCH
+    (2,8): min_q=  5, onset_n=3, expected=3 MATCH
+    (2,9): min_q=  5, onset_n=3, expected=3 MATCH
+    (3,4): min_q=  5, onset_n=3, expected=3 MATCH
+    (3,5): min_q=  7, onset_n=4, expected=4 MATCH
+    (3,6): min_q=  9, onset_n=5, expected=5 MATCH
+    (3,7): min_q=  5, onset_n=3, expected=3 MATCH
+    (3,8): min_q=  9, onset_n=5, expected=5 MATCH
+    (3,9): min_q=  3, onset_n=2, expected=2 MATCH
+    (4,5): min_q=  3, onset_n=2, expected=2 MATCH
+    (4,6): min_q=  7, onset_n=4, expected=4 MATCH
+    (4,7): min_q=  3, onset_n=2, expected=2 MATCH
+    (4,8): min_q=  9, onset_n=5, expected=5 MATCH
+    (4,9): min_q=  7, onset_n=4, expected=4 MATCH
+    (5,6): min_q=  5, onset_n=3, expected=3 MATCH
+    (5,7): min_q=  9, onset_n=5, expected=5 MATCH
+    (5,8): min_q=  3, onset_n=2, expected=2 MATCH
+    (5,9): min_q=  9, onset_n=5, expected=5 MATCH
+    (6,7): min_q=  9, onset_n=5, expected=5 MATCH
+    (6,8): min_q=  5, onset_n=3, expected=3 MATCH
+    (6,9): min_q=  7, onset_n=4, expected=4 MATCH
+    (7,8): min_q=  7, onset_n=4, expected=4 MATCH
+    (7,9): min_q=  5, onset_n=3, expected=3 MATCH
+    (8,9): min_q=  3, onset_n=2, expected=2 MATCH
+
+--- PART 3: SIGN AT EACH RESONANCE LEVEL ---
+For q-resonant pair (a,b) with qa=b: sign(D^{2n}) vs chi(ab)
+chi(ab) = chi(qa^2) = chi(q)*chi(a)^2 = chi(q)
+For qa=-b: chi(ab) = chi(-qa^2) = chi(-q)
+
+  p=7 (3 mod 4):
+    chi(3)=-1, chi(5)=-1, chi(7)=+0
+    chi(-3)=+1, chi(-5)=+1, chi(-7)=+0
+
+    q=3 resonance:
+      (1,2) [a=-3b] chi=+1:  D^4:-1(R=   -1.00) D^6:-1(R=   -6.75)
+      (1,3) [3a=b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=   -6.75)
+      (2,3) [a=3b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=   -6.75)
+
+  p=11 (3 mod 4):
+    chi(3)=+1, chi(5)=+1, chi(7)=-1
+    chi(-3)=-1, chi(-5)=-1, chi(-7)=+1
+
+    q=3 resonance:
+      (1,3) [3a=b] chi=+1:  D^4:+1(R=    1.00) D^6:+1(R=   18.75) D^8:+1(R=  256.87) D^10:+1(R= 3194.53)
+      (1,4) [a=3b] chi=+1:  D^4:+1(R=    1.00) D^6:+1(R=   18.75) D^8:+1(R=  256.88) D^10:+1(R= 3194.53)
+      (2,3) [a=-3b] chi=-1:  D^4:-1(R=    1.00) D^6:-1(R=   18.75) D^8:-1(R=  256.87) D^10:-1(R= 3194.53)
+      (2,5) [3a=-b] chi=-1:  D^4:-1(R=    1.00) D^6:-1(R=   18.75) D^8:-1(R=  256.87) D^10:-1(R= 3194.53)
+      (4,5) [a=3b] chi=+1:  D^4:+1(R=    1.00) D^6:+1(R=   18.75) D^8:+1(R=  256.88) D^10:+1(R= 3194.53)
+
+    q=5 resonance:
+      (1,2) [a=-5b] chi=-1:  D^6:-1(R=    3.00) D^8:-1(R=   84.00) D^10:-1(R= 1525.62)
+      (1,5) [5a=b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=   84.00) D^10:+1(R= 1525.63)
+      (2,4) [a=-5b] chi=-1:  D^6:-1(R=    3.00) D^8:-1(R=   84.00) D^10:-1(R= 1525.62)
+      (3,4) [5a=b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=   84.00) D^10:+1(R= 1525.62)
+      (3,5) [a=5b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=   84.00) D^10:+1(R= 1525.62)
+
+  p=19 (3 mod 4):
+    chi(3)=-1, chi(5)=+1, chi(7)=+1
+    chi(-3)=+1, chi(-5)=-1, chi(-7)=-1
+
+    q=3 resonance:
+      (1,3) [3a=b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=  -48.75) D^8:+1(R=-1953.88) D^10:+1(R=-74107.03)
+      (1,6) [a=-3b] chi=+1:  D^4:-1(R=   -1.00) D^6:-1(R=  -48.75) D^8:-1(R=-1953.88) D^10:-1(R=-74107.03)
+      (2,6) [3a=b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=  -48.75) D^8:+1(R=-1953.87) D^10:+1(R=-74107.03)
+      (2,7) [a=3b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=  -48.75) D^8:+1(R=-1953.87) D^10:+1(R=-74107.03)
+      (3,9) [3a=b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=  -48.75) D^8:+1(R=-1953.87) D^10:+1(R=-74107.03)
+      (4,5) [a=-3b] chi=+1:  D^4:-1(R=   -1.00) D^6:-1(R=  -48.75) D^8:-1(R=-1953.87) D^10:-1(R=-74107.03)
+      (4,7) [3a=-b] chi=+1:  D^4:-1(R=   -1.00) D^6:-1(R=  -48.75) D^8:-1(R=-1953.88) D^10:-1(R=-74107.03)
+      (5,8) [a=3b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=  -48.75) D^8:+1(R=-1953.87) D^10:+1(R=-74107.03)
+      (8,9) [a=3b] chi=-1:  D^4:+1(R=   -1.00) D^6:+1(R=  -48.75) D^8:+1(R=-1953.87) D^10:+1(R=-74107.03)
+
+    q=5 resonance:
+      (1,4) [a=5b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=  238.00) D^10:+1(R=13130.63)
+      (1,5) [5a=b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=  238.00) D^10:+1(R=13130.62)
+      (2,8) [a=5b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=  238.00) D^10:+1(R=13130.62)
+      (2,9) [5a=-b] chi=-1:  D^6:-1(R=    3.00) D^8:-1(R=  238.00) D^10:-1(R=13130.63)
+      (3,4) [5a=-b] chi=-1:  D^6:-1(R=    3.00) D^8:-1(R=  238.00) D^10:-1(R=13130.62)
+      (3,7) [a=-5b] chi=-1:  D^6:-1(R=    3.00) D^8:-1(R=  238.00) D^10:-1(R=13130.62)
+      (5,6) [5a=b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=  238.00) D^10:+1(R=13130.62)
+      (6,8) [5a=-b] chi=-1:  D^6:-1(R=    3.00) D^8:-1(R=  238.00) D^10:-1(R=13130.63)
+      (7,9) [a=5b] chi=+1:  D^6:+1(R=    3.00) D^8:+1(R=  238.00) D^10:+1(R=13130.62)
+
+    q=7 resonance:
+      (1,7) [7a=b] chi=+1:  D^8:+1(R=    3.00) D^10:+1(R=  386.25)
+      (1,8) [a=-7b] chi=-1:  D^8:-1(R=    3.00) D^10:-1(R=  386.25)
+      (2,3) [a=7b] chi=+1:  D^8:+1(R=    3.00) D^10:+1(R=  386.25)
+      (2,5) [7a=-b] chi=-1:  D^8:-1(R=    3.00) D^10:-1(R=  386.25)
+      (3,5) [a=-7b] chi=-1:  D^8:-1(R=    3.00) D^10:-1(R=  386.25)
+      (4,6) [a=7b] chi=+1:  D^8:+1(R=    3.00) D^10:+1(R=  386.25)
+      (4,9) [7a=b] chi=+1:  D^8:+1(R=    3.00) D^10:+1(R=  386.25)
+      (6,9) [a=7b] chi=+1:  D^8:+1(R=    3.00) D^10:+1(R=  386.25)
+      (7,8) [7a=-b] chi=-1:  D^8:-1(R=    3.00) D^10:-1(R=  386.25)
+
+    q=9 resonance:
+      (1,2) [a=-9b] chi=-1:  D^10:-1(R=  155.00)
+      (1,9) [9a=b] chi=+1:  D^10:+1(R=  155.00)
+      (2,4) [a=-9b] chi=-1:  D^10:-1(R=  155.00)
+      (3,6) [a=-9b] chi=-1:  D^10:-1(R=  155.00)
+      (3,8) [9a=b] chi=+1:  D^10:+1(R=  155.00)
+      (4,8) [a=-9b] chi=-1:  D^10:-1(R=  155.00)
+      (5,7) [9a=b] chi=+1:  D^10:+1(R=  155.00)
+      (5,9) [a=9b] chi=+1:  D^10:+1(R=  155.00)
+      (6,7) [a=9b] chi=+1:  D^10:+1(R=  155.00)
+
+--- PART 4: SIGN = f(chi(q)) HYPOTHESIS ---
+Hypothesis: at q-resonant pair with qa=+/-b,
+sign(D^{2n} deg-2) = chi(q) * chi(ab) * (-1)^{something}
+
+  p=7:
+    (1,2): q=3, type=a=-3b, chi(ab)=+1, sign=-1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (1,3): q=3, type=3a=b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (2,3): q=3, type=a=3b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+
+  p=11:
+    (1,2): q=5, type=a=-5b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,3): q=3, type=3a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,4): q=3, type=a=3b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,5): q=5, type=5a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,3): q=3, type=a=-3b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,4): q=5, type=a=-5b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,5): q=3, type=3a=-b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,4): q=5, type=5a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,5): q=5, type=a=5b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (4,5): q=3, type=a=3b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+
+  p=19:
+    (1,2): q=9, type=a=-9b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,3): q=3, type=3a=b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (1,4): q=5, type=a=5b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,5): q=5, type=5a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,6): q=3, type=a=-3b, chi(ab)=+1, sign=-1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (1,7): q=7, type=7a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,8): q=7, type=a=-7b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (1,9): q=9, type=9a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,3): q=7, type=a=7b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,4): q=9, type=a=-9b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,5): q=7, type=7a=-b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,6): q=3, type=3a=b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (2,7): q=3, type=a=3b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (2,8): q=5, type=a=5b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (2,9): q=5, type=5a=-b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,4): q=5, type=5a=-b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,5): q=7, type=a=-7b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,6): q=9, type=a=-9b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,7): q=5, type=a=-5b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,8): q=9, type=9a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (3,9): q=3, type=3a=b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (4,5): q=3, type=a=-3b, chi(ab)=+1, sign=-1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (4,6): q=7, type=a=7b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (4,7): q=3, type=3a=-b, chi(ab)=+1, sign=-1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (4,8): q=9, type=a=-9b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (4,9): q=7, type=7a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (5,6): q=5, type=5a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (5,7): q=9, type=9a=b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (5,8): q=3, type=a=3b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+    (5,9): q=9, type=a=9b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (6,7): q=9, type=a=9b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (6,8): q=5, type=5a=-b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (6,9): q=7, type=a=7b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (7,8): q=7, type=7a=-b, chi(ab)=-1, sign=-1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (7,9): q=5, type=a=5b, chi(ab)=+1, sign=+1, sign*chi=+1, chi(q)=+1, chi(-q)=-1
+    (8,9): q=3, type=a=3b, chi(ab)=-1, sign=+1, sign*chi=-1, chi(q)=-1, chi(-q)=+1
+
+--- PART 5: MAGNITUDE AT ONSET ---
+At the onset power n=(q+1)/2, what is |D^{2n} deg-2|?
+
+  p=7:
+    (1,2): q=3, onset D^4, |W|=7.0000, |W|/p=1.0000
+    (1,3): q=3, onset D^4, |W|=7.0000, |W|/p=1.0000
+    (2,3): q=3, onset D^4, |W|=7.0000, |W|/p=1.0000
+
+  p=11:
+    (1,2): q=5, onset D^6, |W|=33.0000, |W|/p=3.0000
+    (1,3): q=3, onset D^4, |W|=11.0000, |W|/p=1.0000
+    (1,4): q=3, onset D^4, |W|=11.0000, |W|/p=1.0000
+    (1,5): q=5, onset D^6, |W|=33.0000, |W|/p=3.0000
+    (2,3): q=3, onset D^4, |W|=11.0000, |W|/p=1.0000
+    (2,4): q=5, onset D^6, |W|=33.0000, |W|/p=3.0000
+    (2,5): q=3, onset D^4, |W|=11.0000, |W|/p=1.0000
+    (3,4): q=5, onset D^6, |W|=33.0000, |W|/p=3.0000
+    (3,5): q=5, onset D^6, |W|=33.0000, |W|/p=3.0000
+    (4,5): q=3, onset D^4, |W|=11.0000, |W|/p=1.0000
+
+  p=19:
+    (1,2): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (1,3): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (1,4): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (1,5): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (1,6): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (1,7): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (1,8): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (1,9): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (2,3): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (2,4): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (2,5): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (2,6): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (2,7): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (2,8): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (2,9): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (3,4): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (3,5): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (3,6): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (3,7): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (3,8): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (3,9): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (4,5): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (4,6): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (4,7): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (4,8): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (4,9): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (5,6): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (5,7): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (5,8): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+    (5,9): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (6,7): q=9, onset D^10, |W|=2945.0000, |W|/p=155.0000
+    (6,8): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (6,9): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (7,8): q=7, onset D^8, |W|=57.0000, |W|/p=3.0000
+    (7,9): q=5, onset D^6, |W|=57.0000, |W|/p=3.0000
+    (8,9): q=3, onset D^4, |W|=19.0000, |W|/p=1.0000
+
+--- PART 6: PRODUCT LAW AT p=19 ---
+Computing H for all 512 orientations at p=19...
+(This takes a few minutes)
+  Progress: 12% (64/512), ETA: 6691s
+  Progress: 25% (128/512), ETA: 6583s
+  Progress: 38% (192/512), ETA: 6151s
+  Progress: 50% (256/512), ETA: 4668s
+  Progress: 62% (320/512), ETA: 3187s
+  Progress: 75% (384/512), ETA: 1948s
+  Progress: 88% (448/512), ETA: 906s
+  Computed 512 orientations in 6824.4s
+
+  Degree-2 Walsh of H at p=19:
+    (1,2): h_hat=  180376253.45, sign=+1, chi=-1, match=False, q=9
+    (1,3): h_hat=  207724893.82, sign=+1, chi=-1, match=False, q=3
+    (1,4): h_hat=  122158124.55, sign=+1, chi=+1, match=True, q=5
+    (1,5): h_hat=  122158124.55, sign=+1, chi=+1, match=True, q=5
+    (1,6): h_hat= -207724893.82, sign=-1, chi=+1, match=False, q=3
+    (1,7): h_hat=   -6284752.76, sign=-1, chi=+1, match=False, q=7
+    (1,8): h_hat=    6284752.76, sign=+1, chi=-1, match=False, q=7
+    (1,9): h_hat= -180376253.45, sign=-1, chi=+1, match=False, q=9
+    (2,3): h_hat=   -6284752.76, sign=-1, chi=+1, match=False, q=7
+    (2,4): h_hat=  180376253.45, sign=+1, chi=-1, match=False, q=9
+    (2,5): h_hat=    6284752.76, sign=+1, chi=-1, match=False, q=7
+    (2,6): h_hat=  207724893.82, sign=+1, chi=-1, match=False, q=3
+    (2,7): h_hat=  207724893.82, sign=+1, chi=-1, match=False, q=3
+    (2,8): h_hat=  122158124.55, sign=+1, chi=+1, match=True, q=5
+    (2,9): h_hat= -122158124.55, sign=-1, chi=-1, match=True, q=5
+    (3,4): h_hat= -122158124.55, sign=-1, chi=-1, match=True, q=5
+    (3,5): h_hat=    6284752.76, sign=+1, chi=-1, match=False, q=7
+    (3,6): h_hat=  180376253.45, sign=+1, chi=-1, match=False, q=9
+    (3,7): h_hat= -122158124.55, sign=-1, chi=-1, match=True, q=5
+    (3,8): h_hat= -180376253.45, sign=-1, chi=+1, match=False, q=9
+    (3,9): h_hat=  207724893.82, sign=+1, chi=-1, match=False, q=3
+    (4,5): h_hat= -207724893.82, sign=-1, chi=+1, match=False, q=3
+    (4,6): h_hat=   -6284752.76, sign=-1, chi=+1, match=False, q=7
+    (4,7): h_hat= -207724893.82, sign=-1, chi=+1, match=False, q=3
+    (4,8): h_hat=  180376253.45, sign=+1, chi=-1, match=False, q=9
+    (4,9): h_hat=   -6284752.76, sign=-1, chi=+1, match=False, q=7
+    (5,6): h_hat=  122158124.55, sign=+1, chi=+1, match=True, q=5
+    (5,7): h_hat= -180376253.45, sign=-1, chi=+1, match=False, q=9
+    (5,8): h_hat=  207724893.82, sign=+1, chi=-1, match=False, q=3
+    (5,9): h_hat= -180376253.45, sign=-1, chi=+1, match=False, q=9
+    (6,7): h_hat= -180376253.45, sign=-1, chi=+1, match=False, q=9
+    (6,8): h_hat= -122158124.55, sign=-1, chi=-1, match=True, q=5
+    (6,9): h_hat=   -6284752.76, sign=-1, chi=+1, match=False, q=7
+    (7,8): h_hat=    6284752.76, sign=+1, chi=-1, match=False, q=7
+    (7,9): h_hat=  122158124.55, sign=+1, chi=+1, match=True, q=5
+    (8,9): h_hat=  207724893.82, sign=+1, chi=-1, match=False, q=3
+
+  PRODUCT LAW: sign=chi in 9/36 pairs
+  FAILS at p=19

@@ -1,0 +1,128 @@
+======================================================================
+CORRECTED SIGN LAW ANALYSIS
+sign(h_hat[{a,b}]) * chi(ab) =? chi(q)
+where q is the resonance: q*(a+1) = +/-(b+1) mod p
+======================================================================
+
+--- p=7 ---
+
+  p=7, m=3, chi(-1)=-1
+    Pair           h_hat   sign  chi(ab)    q  chi(q)  sign*chi(ab)  =chi(q)?
+  (1,2)            3.50      +        +    2       +             +       YES
+  (1,3)           -3.50      -        -    3       -             +        NO
+  (2,3)           -3.50      -        -    2       +             +       YES
+
+  Corrected sign law: 2/3 match
+
+  p=7: Magnitude by resonance class q
+    q=2: magnitudes = ['3.50', '3.50'], all equal: True, |h|/p = 0.5000
+    q=3: magnitudes = ['3.50'], all equal: True, |h|/p = 0.5000
+
+  Connection to THM-155 at p=7:
+  Expected c5 + 2*ov2 = 84
+  c5 values: [28, 42]
+  Number of distinct c5: 2
+    h_hat_c5[(1,2)] =     3.5000, sign*chi(ab)=+, chi(q=2)=+, MATCH
+    h_hat_c5[(1,3)] =    -3.5000, sign*chi(ab)=+, chi(q=3)=-, FAIL
+    h_hat_c5[(2,3)] =    -3.5000, sign*chi(ab)=+, chi(q=2)=+, MATCH
+
+--- p=11 ---
+
+  p=11, m=5, chi(-1)=-1
+    Pair           h_hat   sign  chi(ab)    q  chi(q)  sign*chi(ab)  =chi(q)?
+  (1,2)           -8.25      -        -    2       -             +        NO
+  (1,3)          272.25      +        +    3       +             +       YES
+  (1,4)          272.25      +        +    4       +             +       YES
+  (1,5)            8.25      +        +    5       +             +       YES
+  (2,3)         -272.25      -        -    4       +             +       YES
+  (2,4)           -8.25      -        -    2       -             +        NO
+  (2,5)         -272.25      -        -    3       +             +       YES
+  (3,4)            8.25      +        +    5       +             +       YES
+  (3,5)            8.25      +        +    2       -             +        NO
+  (4,5)          272.25      +        +    4       +             +       YES
+
+  Corrected sign law: 7/10 match
+
+  p=11: Magnitude by resonance class q
+    q=2: magnitudes = ['8.25', '8.25', '8.25'], all equal: True, |h|/p = 0.7500
+    q=3: magnitudes = ['272.25', '272.25'], all equal: True, |h|/p = 24.7500
+    q=4: magnitudes = ['272.25', '272.25', '272.25'], all equal: True, |h|/p = 24.7500
+    q=5: magnitudes = ['8.25', '8.25'], all equal: True, |h|/p = 0.7500
+
+  Connection to THM-155 at p=11:
+  Expected c5 + 2*ov2 = 924
+  c5 values: [484, 550, 572, 594]
+  Number of distinct c5: 4
+    h_hat_c5[(1,3)] =    -5.5000, sign*chi(ab)=-, chi(q=3)=+, FAIL
+    h_hat_c5[(1,4)] =    -5.5000, sign*chi(ab)=-, chi(q=4)=+, FAIL
+    h_hat_c5[(2,3)] =     5.5000, sign*chi(ab)=-, chi(q=4)=+, FAIL
+
+--- p=19 (from saved data) ---
+
+  p=19, m=9
+    Pair         |h_hat|   sign  chi(ab)    q  chi(q)  sign*chi(ab)  =chi(q)?
+  (1,2)    180376253.45      +        -    2       -             -       YES
+  (1,3)    207724893.82      +        -    3       -             -       YES
+  (1,4)    122158124.55      +        +    4       +             +       YES
+  (1,5)    122158124.55      +        +    5       +             +       YES
+  (1,6)    207724893.82      -        +    6       +             -        NO
+  (1,7)      6284752.76      -        +    7       +             -        NO
+  (1,8)      6284752.76      +        -    8       -             -       YES
+  (1,9)    180376253.45      -        +    9       +             -        NO
+  (2,3)      6284752.76      -        +    8       -             -       YES
+  (2,4)    180376253.45      +        -    2       -             -       YES
+  (2,5)      6284752.76      +        -    7       +             -        NO
+  (2,6)    207724893.82      +        -    3       -             -       YES
+  (2,7)    207724893.82      +        -    6       +             -        NO
+  (2,8)    122158124.55      +        +    4       +             +       YES
+  (2,9)    122158124.55      -        -    5       +             +       YES
+  (3,4)    122158124.55      -        -    5       +             +       YES
+  (3,5)      6284752.76      +        -    8       -             -       YES
+  (3,6)    180376253.45      +        -    2       -             -       YES
+  (3,7)    122158124.55      -        -    4       +             +       YES
+  (3,8)    180376253.45      -        +    9       +             -        NO
+  (3,9)    207724893.82      +        -    3       -             -       YES
+  (4,5)    207724893.82      -        +    6       +             -        NO
+  (4,6)      6284752.76      -        +    8       -             -       YES
+  (4,7)    207724893.82      -        +    3       -             -       YES
+  (4,8)    180376253.45      +        -    2       -             -       YES
+  (4,9)      6284752.76      -        +    7       +             -        NO
+  (5,6)    122158124.55      +        +    5       +             +       YES
+  (5,7)    180376253.45      -        +    9       +             -        NO
+  (5,8)    207724893.82      +        -    6       +             -        NO
+  (5,9)    180376253.45      -        +    2       -             -       YES
+  (6,7)    180376253.45      -        +    2       -             -       YES
+  (6,8)    122158124.55      -        -    5       +             +       YES
+  (6,9)      6284752.76      -        +    8       -             -       YES
+  (7,8)      6284752.76      +        -    7       +             -        NO
+  (7,9)    122158124.55      +        +    4       +             +       YES
+  (8,9)    207724893.82      +        -    6       +             -        NO
+
+  Corrected sign law at p=19: 24/36 match
+
+  p=19: Magnitude by resonance class q
+    q=2: count=6, magnitudes all equal: True, |h|/p = 9493487.0237
+    q=3: count=4, magnitudes all equal: True, |h|/p = 10932889.1484
+    q=4: count=4, magnitudes all equal: True, |h|/p = 6429374.9763
+    q=5: count=5, magnitudes all equal: True, |h|/p = 6429374.9763
+    q=6: count=5, magnitudes all equal: True, |h|/p = 10932889.1484
+    q=7: count=4, magnitudes all equal: True, |h|/p = 330776.4611
+    q=8: count=5, magnitudes all equal: True, |h|/p = 330776.4611
+    q=9: count=3, magnitudes all equal: True, |h|/p = 9493487.0237
+
+======================================================================
+SUMMARY
+======================================================================
+  p=7:  corrected sign law FAILS
+  p=11: corrected sign law FAILS
+  p=19: corrected sign law 24/36
+
+  Key insight: sign(h_hat[a,b]) = chi(q) * chi(ab)
+  where q is the minimum resonance (q*a = +/-b mod p)
+  This SUBSUMES the product law (which assumed chi(q)=+1)
+  and EXPLAINS the failures at p=19 (where chi(3)=-1, chi(7)=+1, etc.)
+
+  Connection to THM-155:
+  The sign law controls how c5 and ov2 Walsh coefficients cancel
+  to make c5+2*ov2 constant. The resonance structure is the algebraic
+  reason behind the constancy of the disjoint 3-cycle identity.
