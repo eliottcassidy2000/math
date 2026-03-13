@@ -1,0 +1,159 @@
+============================================================
+WITNESS MATRIX CHANGE STRUCTURE UNDER VITALI ATOMS
+============================================================
+Non-trivial Vitali pairs: 100
+
+Change decomposition by k-membership and pair-type:
+  k in S  k out S  pair SS  pair SX  pair XX
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+      16        8        8       16        0
+
+Distributions:
+  k in S: {16: 100}
+  k out S: {8: 100}
+  pair SS: {8: 100}
+  pair SX: {16: 100}
+  pair XX: {0: 100}
+
+--- Detailed example: S = (0, 2, 3, 4) ---
+Changes (k, u, v, delta):
+  k=0(IN_S), pair=(1,3)(XS), delta=-1
+  k=0(IN_S), pair=(1,4)(XS), delta=+1
+  k=0(IN_S), pair=(3,6)(SX), delta=+1
+  k=0(IN_S), pair=(4,6)(SX), delta=-1
+  k=1(OUT_S), pair=(0,3)(SS), delta=-1
+  k=1(OUT_S), pair=(0,4)(SS), delta=+1
+  k=1(OUT_S), pair=(2,3)(SS), delta=+1
+  k=1(OUT_S), pair=(2,4)(SS), delta=-1
+  k=2(IN_S), pair=(1,3)(XS), delta=+1
+  k=2(IN_S), pair=(1,4)(XS), delta=-1
+  k=2(IN_S), pair=(3,6)(SX), delta=-1
+  k=2(IN_S), pair=(4,6)(SX), delta=+1
+  k=3(IN_S), pair=(0,1)(SX), delta=-1
+  k=3(IN_S), pair=(0,6)(SX), delta=+1
+  k=3(IN_S), pair=(1,2)(XS), delta=+1
+  k=3(IN_S), pair=(2,6)(SX), delta=-1
+  k=4(IN_S), pair=(0,1)(SX), delta=+1
+  k=4(IN_S), pair=(0,6)(SX), delta=-1
+  k=4(IN_S), pair=(1,2)(XS), delta=-1
+  k=4(IN_S), pair=(2,6)(SX), delta=+1
+  k=6(OUT_S), pair=(0,3)(SS), delta=+1
+  k=6(OUT_S), pair=(0,4)(SS), delta=-1
+  k=6(OUT_S), pair=(2,3)(SS), delta=-1
+  k=6(OUT_S), pair=(2,4)(SS), delta=+1
+
+============================================================
+SWAP DECOMPOSITION
+============================================================
+
+Example 0: S=(0, 2, 3, 4)
+  +1 entries: [(0, 8), (0, 17), (1, 3), (1, 11), (2, 7), (2, 19), (3, 5), (3, 6), (4, 0), (4, 14), (6, 2), (6, 12)]
+  -1 entries: [(0, 7), (0, 19), (1, 2), (1, 12), (2, 8), (2, 17), (3, 0), (3, 14), (4, 5), (4, 6), (6, 3), (6, 11)]
+  +1 count: 12, -1 count: 12
+  Row sums: [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  Col sums: [] (nonzero entries)
+  All row sums 0? True
+  All col sums 0? True
+  Rank of diff matrix: 3
+
+Example 1: S=(0, 1, 4, 6)
+  +1 entries: [(0, 9), (0, 14), (1, 4), (1, 12), (2, 5), (2, 8), (4, 6), (4, 20), (5, 0), (5, 19), (6, 1), (6, 18)]
+  -1 entries: [(0, 6), (0, 20), (1, 1), (1, 18), (2, 0), (2, 19), (4, 9), (4, 14), (5, 5), (5, 8), (6, 4), (6, 12)]
+  +1 count: 12, -1 count: 12
+  Row sums: [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  Col sums: [] (nonzero entries)
+  All row sums 0? True
+  All col sums 0? True
+  Rank of diff matrix: 3
+
+Example 2: S=(1, 3, 5, 6)
+  +1 entries: [(1, 14), (1, 18), (2, 10), (2, 16), (3, 13), (3, 19), (4, 9), (4, 17), (5, 8), (5, 11), (6, 6), (6, 15)]
+  -1 entries: [(1, 13), (1, 19), (2, 9), (2, 17), (3, 14), (3, 18), (4, 10), (4, 16), (5, 6), (5, 15), (6, 8), (6, 11)]
+  +1 count: 12, -1 count: 12
+  Row sums: [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  Col sums: [] (nonzero entries)
+  All row sums 0? True
+  All col sums 0? True
+  Rank of diff matrix: 3
+
+Example 3: S=(1, 3, 4, 5)
+  +1 entries: [(0, 7), (0, 18), (1, 2), (1, 20), (3, 0), (3, 19), (4, 4), (4, 17), (5, 3), (5, 10), (6, 9), (6, 15)]
+  -1 entries: [(0, 9), (0, 15), (1, 4), (1, 17), (3, 3), (3, 10), (4, 2), (4, 20), (5, 0), (5, 19), (6, 7), (6, 18)]
+  +1 count: 12, -1 count: 12
+  Row sums: [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  Col sums: [] (nonzero entries)
+  All row sums 0? True
+  All col sums 0? True
+  Rank of diff matrix: 3
+
+Example 4: S=(0, 2, 4, 5)
+  +1 entries: [(0, 6), (0, 19), (1, 1), (1, 18), (2, 0), (2, 20), (4, 5), (4, 9), (5, 8), (5, 14), (6, 3), (6, 13)]
+  -1 entries: [(0, 8), (0, 14), (1, 3), (1, 13), (2, 5), (2, 9), (4, 0), (4, 20), (5, 6), (5, 19), (6, 1), (6, 18)]
+  +1 count: 12, -1 count: 12
+  Row sums: [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  Col sums: [] (nonzero entries)
+  All row sums 0? True
+  All col sums 0? True
+  Rank of diff matrix: 3
+
+============================================================
+WITNESS MATRIX RANK AND NULL SPACE
+============================================================
+n=7: Witness matrix rank distribution: {np.int64(3): 8, np.int64(5): 37, np.int64(6): 60, np.int64(7): 95}
+  Matrix size: 7 x 21 = 7 x 21
+  Max possible rank: min(7, 21) = 7
+  Null space dimension (hidden DOF): Counter({np.int64(14): 95, np.int64(15): 60, np.int64(16): 37, np.int64(18): 8})
+
+n=5 check:
+  bits=0: rank=0, null dim=10
+  bits=1: rank=0, null dim=10
+  bits=2: rank=3, null dim=7
+  bits=3: rank=0, null dim=10
+  bits=4: rank=3, null dim=7
+
+============================================================
+TRANSPORTATION POLYTOPE CONNECTION
+============================================================
+
+The witness matrix W lives in the TRANSPORTATION POLYTOPE:
+  TP(row_sums, col_sums) = {M >= 0 : M*1 = col_sums, 1^T*M = row_sums}
+
+For integer binary matrices, this is the BIRKHOFF POLYTOPE (generalized).
+The vertices of TP are specific integer matrices.
+The Vitali atom moves between vertices of TP while staying on the polytope.
+
+Key insight: The number of vertices of TP(delta, lambda) = number of
+tournaments with the same (delta, lambda) structure = fiber size at Level 1.
+
+The DIMENSION of TP is:
+  (n-1)(C(n,2)-1) - (n-1 + C(n,2)-1 - 1) = ... complicated.
+
+But the key observation is: Vitali atoms are EDGES of the transportation
+polytope, connecting adjacent vertices.
+
+The diff matrix D = W_B - W_A has rank 1, 2, or 3 (from our analysis).
+Rank 1 would mean D = u*v^T — a single swap.
+Rank 2 would mean D = u1*v1^T + u2*v2^T — composition of 2 swaps.
+
+Rank of diff matrices in Vitali changes:
+  {np.int64(3): 100}
+
+============================================================
+THE 24-ENTRY CHANGE: STRUCTURAL ANALYSIS
+============================================================
+Tally of changes by type across all Vitali pairs:
+  k_type p_type  delta  count per_pair
+      kS     SX     -1    800      8.0
+      kS     SX     +1    800      8.0
+      kX     SS     -1    400      4.0
+      kX     SS     +1    400      4.0
+
+Done.
