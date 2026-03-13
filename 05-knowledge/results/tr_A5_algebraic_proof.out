@@ -1,0 +1,38 @@
+============================================================
+THEOREM: tr(A^k) = k * c_{k,dir} iff k <= 5
+============================================================
+  n=4: tr(A^4) = 4*c4 for ALL 2^6=64 tournaments
+  n=6 first fail: tr6=204, 6*c6=24, diff=180
+  n=6: tr(A^6) = 6*c6 failures: 974/1000
+
+  THEOREM: tr(A^k) = k * c_{k,dir} for all tournaments iff k <= 5
+  Proof: vertex repetition in closed k-walk requires gap j with
+  min(j, k-j) >= 3, which needs k >= 6.
+  For k=3: no gap j with 2 <= j <= 1 (empty). ✓
+  For k=4: gap j=2 → min(2,2)=2. ✓
+  For k=5: gaps j=2,3 → min(2,3)=2, min(3,2)=2. ✓
+  For k=6: gap j=3 → min(3,3)=3 > 2. ✗
+  For k>=7: gap j=3 → min(3,k-3) >= min(3,4) = 3 > 2. ✗
+  TWO n=5 tournaments with SAME labeled lambda:
+    bits1=0: A=[[0, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 1, 0, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 1, 0]]
+    bits2=1: A=[[0, 1, 0, 0, 0], [0, 0, 0, 0, 0], [1, 1, 0, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 1, 0]]
+    lambda=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+  At n=6: non-unique labeled lambda pairs: 24625
+  Labeled lambda does NOT uniquely determine tournaments at n=6.
+
+  n=7 non-unique pair #1:
+    tr5: 20 vs 20 (same: True)
+    tr7: 168 vs 168 (same: True)
+
+  n=7 non-unique pair #2:
+    tr5: 5 vs 5 (same: True)
+    tr7: 63 vs 63 (same: True)
+
+  n=7 non-unique pair #3:
+    tr5: 15 vs 15 (same: True)
+    tr7: 112 vs 112 (same: True)
+
+  At n=7 (100k samples): non-unique labeled lambda: 11155
+
+Done.
