@@ -1,0 +1,139 @@
+======================================================================
+TRANSITIVE TOURNAMENT: Omega_m = C(n, m+1)?
+======================================================================
+
+  n = 3:
+    Omega_0 = 3, C(3,1) = 3 ✓
+    Omega_1 = 3, C(3,2) = 3 ✓
+    Omega_2 = 1, C(3,3) = 1 ✓
+
+  n = 4:
+    Omega_0 = 4, C(4,1) = 4 ✓
+    Omega_1 = 6, C(4,2) = 6 ✓
+    Omega_2 = 4, C(4,3) = 4 ✓
+    Omega_3 = 1, C(4,4) = 1 ✓
+
+  n = 5:
+    Omega_0 = 5, C(5,1) = 5 ✓
+    Omega_1 = 10, C(5,2) = 10 ✓
+    Omega_2 = 10, C(5,3) = 10 ✓
+    Omega_3 = 5, C(5,4) = 5 ✓
+    Omega_4 = 1, C(5,5) = 1 ✓
+
+  n = 6:
+    Omega_0 = 6, C(6,1) = 6 ✓
+    Omega_1 = 15, C(6,2) = 15 ✓
+    Omega_2 = 20, C(6,3) = 20 ✓
+    Omega_3 = 15, C(6,4) = 15 ✓
+    Omega_4 = 6, C(6,5) = 6 ✓
+    Omega_5 = 1, C(6,6) = 1 ✓
+
+  n = 7:
+    Omega_0 = 7, C(7,1) = 7 ✓
+    Omega_1 = 21, C(7,2) = 21 ✓
+    Omega_2 = 35, C(7,3) = 35 ✓
+    Omega_3 = 35, C(7,4) = 35 ✓
+    Omega_4 = 21, C(7,5) = 21 ✓
+    Omega_5 = 7, C(7,6) = 7 ✓
+    Omega_6 = 1, C(7,7) = 1 ✓
+
+  n = 8:
+    Omega_0 = 8, C(8,1) = 8 ✓
+    Omega_1 = 28, C(8,2) = 28 ✓
+    Omega_2 = 56, C(8,3) = 56 ✓
+    Omega_3 = 70, C(8,4) = 70 ✓
+    Omega_4 = 56, C(8,5) = 56 ✓
+    Omega_5 = 28, C(8,6) = 28 ✓
+    Omega_6 = 8, C(8,7) = 8 ✓
+    Omega_7 = 1, C(8,8) = 1 ✓
+
+======================================================================
+PROOF SKETCH: Why Omega_m(trans) = C(n, m+1)
+======================================================================
+
+In the transitive tournament on {0,1,...,n-1} with i→j iff i<j:
+- An m-path (v_0, v_1, ..., v_m) requires v_0→v_1→...→v_m.
+  Since the tournament is transitive, this means v_0 < v_1 < ... < v_m.
+- Regularity: v_{i-1} → v_{i+1} for all 0<i<m.
+  Since v_{i-1} < v_{i+1} in the transitive tournament, this is
+  automatically satisfied.
+- Therefore EVERY increasing sequence of length (m+1) is a regular m-path.
+- Count = C(n, m+1). QED.
+
+======================================================================
+REGULAR TOURNAMENT PROFILES
+======================================================================
+
+  n = 3, interval tournament S={1} (regular=True):
+    Omega_0 =      3  (simplicial:      3, diff:     +0)
+    Omega_1 =      3  (simplicial:      3, diff:     +0)
+    Omega_2 =      0  (simplicial:      1, diff:     -1)
+    chi = 0
+    Palindromic: False
+
+  n = 5, interval tournament S={1, 2} (regular=True):
+    Omega_0 =      5  (simplicial:      5, diff:     +0)
+    Omega_1 =     10  (simplicial:     10, diff:     +0)
+    Omega_2 =      5  (simplicial:     10, diff:     -5)
+    Omega_3 =      5  (simplicial:      5, diff:     +0)
+    Omega_4 =      5  (simplicial:      1, diff:     +4)
+    chi = 0
+    Palindromic: False
+
+  n = 7, interval tournament S={1, 2, 3} (regular=True):
+    Omega_0 =      7  (simplicial:      7, diff:     +0)
+    Omega_1 =     21  (simplicial:     21, diff:     +0)
+    Omega_2 =     21  (simplicial:     35, diff:    -14)
+    Omega_3 =     35  (simplicial:     35, diff:     +0)
+    Omega_4 =     56  (simplicial:     21, diff:    +35)
+    Omega_5 =     49  (simplicial:      7, diff:    +42)
+    Omega_6 =     14  (simplicial:      1, diff:    +13)
+    chi = -7
+    Palindromic: False
+
+======================================================================
+n=5: ALL OMEGA PROFILES (deviation from simplicial)
+======================================================================
+  Simplicial: [5, 10, 10, 5, 1]
+
+  Type   O0   O1   O2   O3   O4 |   d0   d1   d2   d3   d4 |  chi    H
+                                | dev from simplicial  | 
+  (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)    5   10   10    5    1 |   +0   +0   +0   +0   +0 |    1    1
+  (0, 0, 0, 1, 0, 0, 0, 0, 1, 1)    5   10    9    3    0 |   +0   +0   -1   -2   -1 |    1    3
+  (0, 0, 0, 0, 0, 0, 1, 0, 0, 1)    5   10    9    3    0 |   +0   +0   -1   -2   -1 |    1    3
+  (0, 0, 0, 0, 0, 0, 0, 0, 1, 0)    5   10    9    3    0 |   +0   +0   -1   -2   -1 |    1    3
+  (0, 0, 0, 1, 0, 0, 0, 0, 0, 1)    5   10    8    3    1 |   +0   +0   -2   -2   +0 |    1    5
+  (0, 0, 0, 0, 0, 0, 1, 0, 0, 0)    5   10    8    3    1 |   +0   +0   -2   -2   +0 |    1    5
+  (0, 0, 0, 1, 0, 0, 0, 0, 0, 0)    5   10    7    5    1 |   +0   +0   -3   +0   +0 |   -2    9
+  (0, 0, 0, 1, 0, 0, 0, 0, 1, 0)    5   10    7    3    0 |   +0   +0   -3   -2   -1 |   -1    9
+  (0, 0, 0, 1, 0, 0, 1, 0, 0, 0)    5   10    6    5    2 |   +0   +0   -4   +0   +1 |   -2   11
+  (0, 0, 0, 1, 0, 1, 0, 0, 0, 1)    5   10    6    3    1 |   +0   +0   -4   -2   +0 |   -1   13
+  (0, 0, 0, 1, 0, 1, 0, 0, 0, 0)    5   10    6    3    0 |   +0   +0   -4   -2   -1 |   -2   15
+  (0, 0, 1, 1, 0, 0, 1, 0, 0, 0)    5   10    5    5    5 |   +0   +0   -5   +0   +4 |    0   15
+
+======================================================================
+n=6: TRANSITIVE TOURNAMENT PROFILE
+======================================================================
+  Omega profile: [6, 15, 20, 15, 6, 1]
+  Simplicial:    [6, 15, 20, 15, 6, 1]
+  Match: True
+
+  Is transitive tournament the MAXIMIZER of Omega_m?
+    Omega_0: max=5, C(n,m+1)=5, trans is max: True
+    Omega_1: max=10, C(n,m+1)=10, trans is max: True
+    Omega_2: max=10, C(n,m+1)=10, trans is max: True
+    Omega_3: max=5, C(n,m+1)=5, trans is max: True
+    Omega_4: max=5, C(n,m+1)=1, trans is max: False
+
+  For n=5 regular tournament: Omega_4 = 5 > 1 = transitive
+  => Transitive is NOT always maximizer!
+  The regular tournament maximizes Omega_4 at odd n.
+
+  Which tournament type maximizes each Omega_m at n=5?
+    Omega_0: max = 5, achieved by 12 type(s)
+    Omega_1: max = 10, achieved by 12 type(s)
+    Omega_2: max = 10, achieved by 1 type(s)
+    Omega_3: max = 5, achieved by 4 type(s)
+    Omega_4: max = 5, achieved by 1 type(s)
+
+DONE.
