@@ -1,0 +1,81 @@
+======================================================================
+THEOREM: Omega_2/p = m(m-1) for Paley tournaments
+opus-2026-03-13-S71b — PROVED
+======================================================================
+
+Statement: For P_p with p ≡ 3 mod 4 and m = (p-1)/2:
+  Omega_2/p = m(m-1)
+  Equivalently: rank(C_2)/|A_2| = 1/m
+
+PROOF:
+
+Step 1: |A_2|/p = m².
+  A 2-diff-seq (s,t) has s,t ∈ QR_p, with partial sums 0, s, s+t
+  all distinct mod p. Since s ∈ QR implies s ≠ 0, t ∈ QR implies t ≠ 0,
+  and s+t = 0 requires t = -s ∉ QR (since -1 ∉ QR for p ≡ 3 mod 4).
+  So ALL m² pairs (s,t) ∈ QR × QR are valid 2-diff-seqs.
+
+Step 2: Constraint structure.
+  The faces of (s,t) are:
+    face 0 = (t)        — in A_1 since t ∈ QR ✓
+    face 1 = ((s+t)%p)  — in A_1 iff s+t ∈ QR
+    face 2 = (s)        — in A_1 since s ∈ QR ✓
+
+  So the ONLY possible junk face is face 1, with merged value s+t.
+  The constraint matrix C_2 has:
+    - Rows: junk values r ∈ {0} ∪ NQR (values not in QR)
+    - Columns: (s,t) ∈ QR² with s+t ≡ r (mod p)
+    - Entry: -1 (sign of face 1 = (-1)^1)
+  Each column has AT MOST one nonzero entry.
+
+Step 3: N(r) = #{(s,t) ∈ QR×QR : s+t ≡ r}.
+  Using Jacobi sum J(χ,χ) = Σ_{a+b=1} χ(a)χ(b) = -χ(-1) = 1
+  (since χ(-1) = -1 for p ≡ 3 mod 4, and χ² = trivial):
+
+  N(r) = (p+1)/4 - (1+χ(r))/2    for r ≠ 0
+  N(0) = 0                         (since -s ∉ QR for s ∈ QR)
+
+  For r ∈ QR (χ(r) = 1):  N(r) = (p-3)/4 = (m-1)/2
+  For r ∈ NQR (χ(r) = -1): N(r) = (p+1)/4 = (m+1)/2
+
+  Check: m·(m-1)/2 + m·(m+1)/2 = m·m = m² ✓
+
+Step 4: rank(C_2) = m.
+  Every NQR value r has N(r) = (m+1)/2 ≥ 1 columns targeting it.
+  So all m NQR rows are non-empty.
+  r = 0 has N(0) = 0 (empty row, doesn't contribute to rank).
+  Since each column has at most one nonzero entry, the constraint
+  matrix is "block-diagonal" with m blocks (one per NQR value).
+  Each block is a row of (m+1)/2 copies of -1.
+  Rank of each block = 1.
+  Total rank = m. ✓
+
+Step 5: Omega_2/p = m² - m = m(m-1). QED.
+
+======================================================================
+VERIFIED for p = 3, 7, 11, 19, 23, 31, 43, 47.
+
+COROLLARY: The N(r) distribution from the Jacobi sum is:
+  N(r ∈ QR) = (m-1)/2   (constant!)
+  N(r ∈ NQR) = (m+1)/2  (constant!)
+  N(0) = 0
+
+  This perfect uniformity is a consequence of the Paley graph's
+  strong regularity and J(χ,χ) = 1 for p ≡ 3 mod 4.
+
+======================================================================
+PARTIAL RESULT: rank(C_3)/A_3 = 4/p
+
+This holds for p = 7, 11, 19, 23 but the proof requires understanding
+the constraint structure at degree 3, where MULTIPLE faces can be junk.
+A degree-3 diff-seq (s,t,u) has 4 faces:
+  face 0 = (t,u)           — 2-diff-seq
+  face 1 = ((s+t)%p, u)    — junk if s+t ∉ QR
+  face 2 = (s, (t+u)%p)    — junk if t+u ∉ QR
+  face 3 = (s,t)            — always in A_2
+
+The constraint involves SIGNED sums: if both face 1 and face 2 are
+junk, the constraint row depends on whether the junk faces are the same.
+This makes the rank computation more complex.
+
+OPEN: Prove rank(C_3)/A_3 = 4/p using Jacobi sums of higher order.
