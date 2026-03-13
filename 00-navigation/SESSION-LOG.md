@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71b — 2026-03-13: chi(P_p)=p CONJECTURE — Betti Concentration for Paley Tournaments
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71b (3rd context window)
+**Summary of work:**
+- Discovered chi(P_p) = p for Paley primes p ≥ 7 (HYP-671). VERIFIED: P_7 (chi=7), P_11 (chi=11). NON-Paley circulants do NOT satisfy this.
+- Found BETTI CONCENTRATION pattern (HYP-672): β_d = 0 for d ∉ {0, m, m+1}, with β_m = m(m-3)/2, β_{m+1} = C(m+1,2). Predicts P_19: β_9=27, β_10=45, chi=19.
+- chi_transitive(P_19) = -152 ≠ 19 (predicted chi_GLMY). First Paley prime where these diverge (HYP-673).
+- Universal constraint rank patterns: rank(C_2)/A_2 = 1/m, rank(C_3)/A_3 = 4/p for ALL Paley primes (verified p=7,11,19,23).
+- Z_m orbit complex consistent with acyclicity for P_7 and P_11 (would PROVE chi=p).
+- Found arXiv:2602.04140 (Feb 2026) — confirms our symbol-matrix/eigenspace approach. No Paley results.
+- P_23 Omega computed through d=6: [1,11,110,1045,9361,78430,610115].
+**New contributions:** HYP-671, HYP-672, HYP-673, HYP-674
+**Unresolved threads:**
+- PROVE orbit complex acyclicity (would give chi(P_p)=p for all p≥7)
+- Complete P_19 chi computation (stuck at degree 9, needs ~10GB RAM)
+- Verify Betti concentration for P_23 or P_19
+
 ## kind-pasteur-2026-03-12-S60 — 2026-03-12: THM-155 PROVED — Disjoint 3-Cycle Identity for ALL Regular Tournaments
 
 **Account:** kind-pasteur

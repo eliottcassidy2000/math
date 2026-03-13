@@ -1,0 +1,35 @@
+======================================================================
+P_23 OMEGA COMPUTATION (PARTIAL)
+opus-2026-03-13-S71b
+======================================================================
+
+QR_23 = {1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18}, |QR| = 11, m = 11
+
+Diff-seq counts |A_d|/p (d=0..6):
+  [1, 11, 121, 1265, 12595, 118745, 1057375]
+
+Omega/p (d=0..6):
+  [1, 11, 110, 1045, 9361, 78430, 610115]
+
+rank(C_d)/A_d ratios:
+  d=0: 0
+  d=1: 0
+  d=2: 11/121 = 1/11 = 1/m  (UNIVERSAL)
+  d=3: 220/1265 = 4/23 = 4/p  (UNIVERSAL)
+  d=4: 3234/12595 ≈ 0.257
+  d=5: 40315/118745 ≈ 0.340
+  d=6: 447260/1057375 ≈ 0.423
+
+Omega/A ratios: 1.000, 1.000, 0.909, 0.826, 0.743, 0.661, 0.577
+  Decrease per degree ≈ 1/12 ≈ 0.083
+
+Partial chi/p (d=0..6) = 540101
+
+Omega/pm (QR orbit counts): [1, 1, 10, 95, 851, 7130, 55465]
+  All divisible by m=11 ✓
+
+OOM at degree 7 (diff-seq enumeration exhausts memory).
+
+UNIVERSAL CONSTRAINT RANK PATTERNS (verified p=7,11,19,23):
+  rank(C_2)/A_2 = 1/m   (fraction of 2-paths with junk merged face)
+  rank(C_3)/A_3 = 4/p   (fraction of 3-paths with junk constraints)
