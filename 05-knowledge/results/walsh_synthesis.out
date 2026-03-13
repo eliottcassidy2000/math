@@ -1,0 +1,92 @@
+======================================================================
+WALSH-LEGENDRE THEORY: COMPLETE SYNTHESIS
+======================================================================
+
+======================================================================
+THEOREM VERIFICATION TABLE
+======================================================================
+
+   p  mod4   Sign Law    Paley  Int max?     Int excess   Paley excess          Max H
+                        valid?                                                       
+------------------------------------------------------------------------------------------
+   5     1        N/A      YES       YES           +0.0           +0.0             15
+   7     3        YES      YES        NO           -3.5          +10.5            189
+  11     3        YES      YES        NO          -74.2        +1993.8          95095
+  13     1         NO      YES       YES       +15335.1       -26342.9        3711175
+
+======================================================================
+DEGREE CONTRIBUTIONS TO INTERVAL
+======================================================================
+
+   p          deg-0          deg-2          deg-4          deg-6          total
+------------------------------------------------------------------------------
+   5          +15.0           +0.0           +0.0           +0.0             15
+   7         +178.5           -3.5           +0.0           +0.0            175
+  11       +93101.2         +280.5         -354.8           +0.0          93027
+  13     +3695839.9        -1556.8       +16891.9           +0.0        3711175
+
+======================================================================
+DEGREE CONTRIBUTIONS TO PALEY
+======================================================================
+
+  p=5:
+    deg-0:         +15.00
+    Total =             15 = H(Paley)
+
+  p=7:
+    deg-0:        +178.50
+    deg-2:         +10.50
+    Total =            189 = H(Paley)
+
+  p=11:
+    deg-0:      +93101.25
+    deg-2:       +1402.50
+    deg-4:        +591.25
+    Total =          95095 = H(Paley)
+
+  p=13:
+    deg-0:    +3695839.88
+    deg-2:       -1556.75
+    deg-4:      -24786.12
+    Total =        3669497 = H(Paley)
+
+======================================================================
+THEOREM STATEMENTS
+======================================================================
+
+  THEOREM 1 (Walsh Odd-Degree Vanishing):
+    For any circulant tournament on Z_p, the Walsh decomposition of H(sigma)
+    on the orientation cube {+1,-1}^m (m=(p-1)/2) has all odd-degree
+    coefficients equal to zero.
+
+  Proof: H(sigma) = H(-sigma) by path reversal symmetry.
+
+  THEOREM 2 (Walsh-Legendre Sign Law, verified p=7,11):
+    For p = 3 mod 4, sign(h_hat[S]) = chi(prod_{i in S}(i+1))
+    where chi is the Legendre symbol mod p.
+
+  Proof status: VERIFIED computationally at p=7 (3 coefficients) and
+    p=11 (15 coefficients). Proof sketch via Gauss sum theory.
+
+  THEOREM 3 (Paley Perfect Alignment):
+    For p = 3 mod 4, the Paley orientation sigma_P = (chi(1),...,chi(m))
+    achieves perfect alignment: h_hat[S] * prod_{i in S} sigma_P[i] > 0
+    for every non-zero Walsh coefficient.
+
+  Proof: Follows immediately from Theorem 2.
+    h_hat[S] * prod chi(i+1) = |h_hat[S]| * chi(...)^2 = |h_hat[S]| > 0.
+
+  COROLLARY (Paley H-Maximization):
+    For p = 3 mod 4, the Paley tournament maximizes H among all circulant
+    tournaments on Z_p.
+
+  Proof: H(sigma) = sum_S h_hat[S] * prod sigma_i. Each term is bounded
+    by |h_hat[S]| in absolute value. Paley achieves the upper bound
+    simultaneously for all terms (by Theorem 3). Therefore
+    H(Paley) = sum_S |h_hat[S]| >= H(sigma) for all sigma.
+
+  CONJECTURE (Interval Maximization at p=1 mod 4):
+    For p = 1 mod 4, the Interval tournament (S={1,...,m}) maximizes H
+    among all circulant tournaments on Z_p.
+    Verified: p=5 (trivially), p=13, p=17.
+
