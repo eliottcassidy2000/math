@@ -1,0 +1,174 @@
+
+============================================================
+P_7 (m=3): |A_4| = 39, |A_4|/p = 5
+
+Junk face profiles (counts / p):
+  none  :        0  (total 3)
+  f1    :        0  (total 3)
+  f2    :        0  (total 6)
+  f3    :        0  (total 3)
+  f12   :        0  (total 3)
+  f13   :        1  (total 12)
+  f23   :        0  (total 3)
+  f123  :        0  (total 6)
+
+Junk face tuple counts:
+  |junk_f1| = 15
+  |junk_f2| = 9
+  |junk_f3| = 15
+  |f1 ∩ f2| = 0
+  |f1 ∩ f3| = 0
+  |f2 ∩ f3| = 0
+  |f1 ∩ f2 ∩ f3| = 0
+  |f1 ∪ f2 ∪ f3| = 39
+
+Constraint matrix: 39 rows × 39 cols
+  rank(C_4) = 30
+  nullity = 39 - 30 = 9
+  nullity / m² = 1.0000
+  Omega_4/p = 5 - 30 = -25
+
+--- Overlap Analysis ---
+f1 ∩ f2 = 0 (should be 0)
+f1 ∩ f3 = 0 (should be 0)
+f2 ∩ f3 = 0 (should be 0)
+
+Per-block analysis:
+  Block 1 (face 1): 15 rows, rank = 15, nullity = 0
+  Block 2 (face 2): 9 rows, rank = 9, nullity = 0
+  Block 3 (face 3): 15 rows, rank = 15, nullity = 0
+  Sum of block ranks = 39
+  Full rank = 30
+  Discrepancy = 9
+
+  Total nullity = 9
+  Sum of block nullities = 0
+
+Column-to-block distribution (counts / p):
+  blocks none:        0
+  blocks 1   :        0
+  blocks 2   :        0
+  blocks 3   :        0
+  blocks 12  :        0
+  blocks 13  :        1
+  blocks 23  :        0
+  blocks 123 :        0
+
+SUMMARY: nullity = 9, m² = 9, match = True
+============================================================
+
+============================================================
+P_11 (m=5): |A_4| = 430, |A_4|/p = 39
+
+Junk face profiles (counts / p):
+  none  :        3  (total 40)
+  f1    :        4  (total 45)
+  f2    :        5  (total 60)
+  f3    :        4  (total 45)
+  f12   :        4  (total 45)
+  f13   :        8  (total 90)
+  f23   :        4  (total 45)
+  f123  :        5  (total 60)
+
+Junk face tuple counts:
+  |junk_f1| = 90
+  |junk_f2| = 70
+  |junk_f3| = 90
+  |f1 ∩ f2| = 0
+  |f1 ∩ f3| = 0
+  |f2 ∩ f3| = 0
+  |f1 ∩ f2 ∩ f3| = 0
+  |f1 ∪ f2 ∪ f3| = 250
+
+Constraint matrix: 250 rows × 430 cols
+  rank(C_4) = 225
+  nullity = 250 - 225 = 25
+  nullity / m² = 1.0000
+  Omega_4/p = 39 - 225 = -186
+
+--- Overlap Analysis ---
+f1 ∩ f2 = 0 (should be 0)
+f1 ∩ f3 = 0 (should be 0)
+f2 ∩ f3 = 0 (should be 0)
+
+Per-block analysis:
+  Block 1 (face 1): 90 rows, rank = 90, nullity = 0
+  Block 2 (face 2): 70 rows, rank = 70, nullity = 0
+  Block 3 (face 3): 90 rows, rank = 90, nullity = 0
+  Sum of block ranks = 250
+  Full rank = 225
+  Discrepancy = 25
+
+  Total nullity = 25
+  Sum of block nullities = 0
+
+Column-to-block distribution (counts / p):
+  blocks none:        3
+  blocks 1   :        4
+  blocks 2   :        5
+  blocks 3   :        4
+  blocks 12  :        4
+  blocks 13  :        8
+  blocks 23  :        4
+  blocks 123 :        5
+
+SUMMARY: nullity = 25, m² = 25, match = True
+============================================================
+
+============================================================
+P_19 (m=9): |A_4| = 5436, |A_4|/p = 286
+
+Junk face profiles (counts / p):
+  none  :       30  (total 576)
+  f1    :       33  (total 630)
+  f2    :       37  (total 720)
+  f3    :       33  (total 630)
+  f12   :       33  (total 630)
+  f13   :       47  (total 900)
+  f23   :       33  (total 630)
+  f123  :       37  (total 720)
+
+Junk face tuple counts:
+  |junk_f1| = 612
+  |junk_f2| = 540
+  |junk_f3| = 612
+  |f1 ∩ f2| = 0
+  |f1 ∩ f3| = 0
+  |f2 ∩ f3| = 0
+  |f1 ∩ f2 ∩ f3| = 0
+  |f1 ∪ f2 ∪ f3| = 1764
+
+Constraint matrix: 1764 rows × 5436 cols
+  rank(C_4) = 1683
+  nullity = 1764 - 1683 = 81
+  nullity / m² = 1.0000
+  Omega_4/p = 286 - 1683 = -1397
+
+--- Overlap Analysis ---
+f1 ∩ f2 = 0 (should be 0)
+f1 ∩ f3 = 0 (should be 0)
+f2 ∩ f3 = 0 (should be 0)
+
+Per-block analysis:
+  Block 1 (face 1): 612 rows, rank = 612, nullity = 0
+  Block 2 (face 2): 540 rows, rank = 540, nullity = 0
+  Block 3 (face 3): 612 rows, rank = 612, nullity = 0
+  Sum of block ranks = 1764
+  Full rank = 1683
+  Discrepancy = 81
+
+  Total nullity = 81
+  Sum of block nullities = 0
+
+Column-to-block distribution (counts / p):
+  blocks none:       30
+  blocks 1   :       33
+  blocks 2   :       37
+  blocks 3   :       33
+  blocks 12  :       33
+  blocks 13  :       47
+  blocks 23  :       33
+  blocks 123 :       37
+
+SUMMARY: nullity = 81, m² = 81, match = True
+============================================================
