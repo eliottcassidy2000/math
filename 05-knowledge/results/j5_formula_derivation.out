@@ -1,0 +1,192 @@
+======================================================================
+J_5 FORMULA DERIVATION + FULL ALPHA_2 ANALYSIS
+======================================================================
+
+======================================================================
+p=7, Paley, S=[1, 2, 4]
+======================================================================
+
+  --- J_5 Deep Structure (Paley, p=7) ---
+    J_5(0,v) = [0, 20, 20, 20, 20, 20, 20]
+    Spectral match (v>0): max error = 0.000000
+
+    Position decomposition of J_5(0,d):
+      d=1: pos1=10, pos2=0, pos3=3, pos4=0, total=13 (exact=20)
+      d=2: pos1=5, pos2=6, pos3=2, pos4=0, total=13 (exact=20)
+      d=3: pos1=5, pos2=6, pos3=3, pos4=0, total=14 (exact=20)
+      d=4: pos1=0, pos2=3, pos3=6, pos4=5, total=14 (exact=20)
+
+    Convolution analysis:
+    J_3(0,d): [0, 1, 2, 3, 3, 2, 1]
+    J_5(0,d): [0, 20, 20, 20, 20, 20, 20]
+    Convolution J_3*J_3: [28, 25, 19, 14, 14, 19, 25]
+      d=1: J_5=20, conv=25, ratio=0.8000, diff=-5
+      d=2: J_5=20, conv=19, ratio=1.0526, diff=1
+      d=3: J_5=20, conv=14, ratio=1.4286, diff=6
+      d=4: J_5=20, conv=14, ratio=1.4286, diff=6
+
+  --- 5-5 Disjointness Analysis (Paley, p=7) ---
+    c5 vertex sets: 21
+    [Skipping: need k1+k2 <= p for disjoint pairs, need p >= 10]
+
+======================================================================
+p=7, Interval, S=[1, 2, 3]
+======================================================================
+
+  --- J_5 Deep Structure (Interval, p=7) ---
+    J_5(0,v) = [0, 13, 13, 14, 14, 13, 13]
+    Spectral match (v>0): max error = 0.000000
+
+    Position decomposition of J_5(0,d):
+      d=1: pos1=10, pos2=0, pos3=3, pos4=0, total=13 (exact=13)
+      d=2: pos1=5, pos2=6, pos3=2, pos4=0, total=13 (exact=13)
+      d=3: pos1=5, pos2=6, pos3=3, pos4=0, total=14 (exact=14)
+      d=4: pos1=0, pos2=3, pos3=6, pos4=5, total=14 (exact=14)
+
+    Convolution analysis:
+    J_3(0,d): [0, 1, 2, 3, 3, 2, 1]
+    J_5(0,d): [0, 13, 13, 14, 14, 13, 13]
+    Convolution J_3*J_3: [28, 25, 19, 14, 14, 19, 25]
+      d=1: J_5=13, conv=25, ratio=0.5200, diff=-12
+      d=2: J_5=13, conv=19, ratio=0.6842, diff=-6
+      d=3: J_5=14, conv=14, ratio=1.0000, diff=0
+      d=4: J_5=14, conv=14, ratio=1.0000, diff=0
+
+  --- 5-5 Disjointness Analysis (Interval, p=7) ---
+    c5 vertex sets: 21
+    [Skipping: need k1+k2 <= p for disjoint pairs, need p >= 10]
+
+======================================================================
+p=11, Paley, S=[1, 3, 4, 5, 9]
+======================================================================
+
+  --- J_5 Deep Structure (Paley, p=11) ---
+    J_5(0,v) = [0, 108, 108, 108, 108, 108, 108, 108, 108, 108, 108]
+    Spectral match (v>0): max error = 0.000000
+
+    Position decomposition of J_5(0,d):
+      d=1: pos1=68, pos2=0, pos3=10, pos4=0, total=78 (exact=108)
+      d=2: pos1=53, pos2=19, pos3=12, pos4=0, total=84 (exact=108)
+      d=3: pos1=39, pos2=36, pos3=12, pos4=0, total=87 (exact=108)
+      d=4: pos1=30, pos2=45, pos3=16, pos4=0, total=91 (exact=108)
+      d=5: pos1=30, pos2=40, pos3=30, pos4=0, total=100 (exact=108)
+      d=6: pos1=0, pos2=30, pos3=40, pos4=30, total=100 (exact=108)
+
+    Convolution analysis:
+    J_3(0,d): [0, 1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+    J_5(0,d): [0, 108, 108, 108, 108, 108, 108, 108, 108, 108, 108]
+    Convolution J_3*J_3: [110, 105, 93, 78, 64, 55, 55, 64, 78, 93, 105]
+      d=1: J_5=108, conv=105, ratio=1.0286, diff=3
+      d=2: J_5=108, conv=93, ratio=1.1613, diff=15
+      d=3: J_5=108, conv=78, ratio=1.3846, diff=30
+      d=4: J_5=108, conv=64, ratio=1.6875, diff=44
+      d=5: J_5=108, conv=55, ratio=1.9636, diff=53
+      d=6: J_5=108, conv=55, ratio=1.9636, diff=53
+
+  --- 5-5 Disjointness Analysis (Paley, p=11) ---
+    c5 vertex sets: 352
+    5-cycle sets containing 0: 160
+    co_occ_5 profile: [0, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64]
+      gap 1: 64 shared 5-cycle sets
+      gap 2: 64 shared 5-cycle sets
+      gap 3: 64 shared 5-cycle sets
+      gap 4: 64 shared 5-cycle sets
+      gap 5: 64 shared 5-cycle sets
+      gap 6: 64 shared 5-cycle sets
+    Disjoint 5-5 pairs: 726/61776 (1.18%)
+    Overlap dist: {0: 726, 1: 10120, 2: 27060, 3: 19800, 4: 4070}
+    n_v (sets per vertex) = 160
+    p * C(n_v, 2) = 139920
+    sum ov*count = 139920
+    |ov>=2| = 50930
+    I-E check: C(n5,2) - sum_C(nv,2) + |ov>=2| = 61776 - 139920 + 50930 = -27214 (should = 726)
+
+======================================================================
+p=11, Interval, S=[1, 2, 3, 4, 5]
+======================================================================
+
+  --- J_5 Deep Structure (Interval, p=11) ---
+    J_5(0,v) = [0, 78, 84, 87, 91, 100, 100, 91, 87, 84, 78]
+    Spectral match (v>0): max error = 0.000000
+
+    Position decomposition of J_5(0,d):
+      d=1: pos1=68, pos2=0, pos3=10, pos4=0, total=78 (exact=78)
+      d=2: pos1=53, pos2=19, pos3=12, pos4=0, total=84 (exact=84)
+      d=3: pos1=39, pos2=36, pos3=12, pos4=0, total=87 (exact=87)
+      d=4: pos1=30, pos2=45, pos3=16, pos4=0, total=91 (exact=91)
+      d=5: pos1=30, pos2=40, pos3=30, pos4=0, total=100 (exact=100)
+      d=6: pos1=0, pos2=30, pos3=40, pos4=30, total=100 (exact=100)
+
+    Convolution analysis:
+    J_3(0,d): [0, 1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+    J_5(0,d): [0, 78, 84, 87, 91, 100, 100, 91, 87, 84, 78]
+    Convolution J_3*J_3: [110, 105, 93, 78, 64, 55, 55, 64, 78, 93, 105]
+      d=1: J_5=78, conv=105, ratio=0.7429, diff=-27
+      d=2: J_5=84, conv=93, ratio=0.9032, diff=-9
+      d=3: J_5=87, conv=78, ratio=1.1154, diff=9
+      d=4: J_5=91, conv=64, ratio=1.4219, diff=27
+      d=5: J_5=100, conv=55, ratio=1.8182, diff=45
+      d=6: J_5=100, conv=55, ratio=1.8182, diff=45
+
+  --- 5-5 Disjointness Analysis (Interval, p=11) ---
+    c5 vertex sets: 407
+    5-cycle sets containing 0: 185
+    co_occ_5 profile: [0, 68, 71, 74, 77, 80, 80, 77, 74, 71, 68]
+      gap 1: 68 shared 5-cycle sets
+      gap 2: 71 shared 5-cycle sets
+      gap 3: 74 shared 5-cycle sets
+      gap 4: 77 shared 5-cycle sets
+      gap 5: 80 shared 5-cycle sets
+      gap 6: 80 shared 5-cycle sets
+    Disjoint 5-5 pairs: 1122/82621 (1.36%)
+    Overlap dist: {0: 1122, 1: 13596, 2: 35596, 3: 26796, 4: 5511}
+    n_v (sets per vertex) = 185
+    p * C(n_v, 2) = 187220
+    sum ov*count = 187220
+    |ov>=2| = 67903
+    I-E check: C(n5,2) - sum_C(nv,2) + |ov>=2| = 82621 - 187220 + 67903 = -36696 (should = 1122)
+
+======================================================================
+FULL ALPHA_2 COMPARISON (all cycle lengths)
+======================================================================
+
+  p=7, Paley: alpha_1=80, alpha_2=7 (0.0s)
+    Cycle counts by length: {3: 14, 5: 21, 7: 1}
+
+  p=7, Interval: alpha_1=59, alpha_2=14 (0.0s)
+    Cycle counts by length: {3: 14, 5: 21, 7: 1}
+
+  p=11, Paley: alpha_1=21169, alpha_2=10879 (35.3s)
+    Cycle counts by length: {3: 55, 5: 352, 7: 330, 9: 55, 11: 1}
+
+  p=11, Interval: alpha_1=18397, alpha_2=11110 (26.3s)
+    Cycle counts by length: {3: 55, 5: 407, 7: 330, 9: 55, 11: 1}
+
+======================================================================
+GAP COMPOSITION ANALYSIS
+(Exactly which gap tuples contribute to J_5)
+======================================================================
+
+  p=7, Interval S=[1, 2, 3]:
+    Valid gap 5-tuples: 20
+    (These are DIRECTED cycles; some may have repeated vertices)
+    Simple (5 distinct vertices): 20
+    Non-simple (repeated vertex): 0
+    d contributions: {1: 13, 2: 13, 3: 14, 4: 14, 5: 13, 6: 13}
+      d=1: count=13
+      d=2: count=13
+      d=3: count=14
+      d=4: count=14
+
+  p=11, Interval S=[1, 2, 3, 4, 5]:
+    Valid gap 5-tuples: 220
+    (These are DIRECTED cycles; some may have repeated vertices)
+    Simple (5 distinct vertices): 220
+    Non-simple (repeated vertex): 0
+    d contributions: {1: 78, 2: 84, 3: 87, 4: 91, 5: 100, 6: 100, 7: 91, 8: 87, 9: 84, 10: 78}
+      d=1: count=78
+      d=2: count=84
+      d=3: count=87
+      d=4: count=91
+      d=5: count=100
+      d=6: count=100
