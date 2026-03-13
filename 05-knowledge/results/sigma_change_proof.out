@@ -1,0 +1,60 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\sigma_change_proof.py:33: SyntaxWarning: invalid escape sequence '\{'
+  Does EVERY w in S\{u} cause a sigma change? Not necessarily.
+
+============================================================
+SIGMA CHANGE ANALYSIS AT n=7
+============================================================
+  Vitali pairs: 123, non-trivial: 123
+  Expected SX pairs: 12
+  XX changes: {0: 123}
+  SX changes: {12: 123}
+  SS changes: {0: 123}
+  Total changes: {12: 123}
+  XX=0 always? True
+  SS=0 always? True
+  SX=12 always? True
+
+============================================================
+SIGMA CHANGE ANALYSIS AT n=8
+============================================================
+  Vitali pairs: 40, non-trivial: 40
+  Expected SX pairs: 16
+  XX changes: {0: 40}
+  SX changes: {16: 40}
+  SS changes: {0: 40}
+  Total changes: {16: 40}
+  XX=0 always? True
+  SS=0 always? True
+  SX=16 always? True
+
+============================================================
+SIGMA CHANGE ANALYSIS AT n=9
+============================================================
+  Vitali pairs: 28, non-trivial: 28
+  Expected SX pairs: 20
+  XX changes: {0: 28}
+  SX changes: {20: 28}
+  SS changes: {0: 28}
+  Total changes: {20: 28}
+  XX=0 always? True
+  SS=0 always? True
+  SX=20 always? True
+
+============================================================
+WHY EVERY SX PAIR CHANGES SIGMA
+============================================================
+Algebraic formula for delta_sigma:
+  For SX pair (s,x): delta_sigma = -sum_{w in S, w!=s} sign(s->w)*sign(x->w)
+  where sign(u->v) = A[u][v] - A[v][u] in {-1,+1}
+
+Formula verified: 1476/1476
+
+Key insight: sum of 3 terms in {-1,+1} is ALWAYS odd, so NEVER 0.
+Therefore delta_sigma(s,x) is ALWAYS nonzero for SX pairs.
+This PROVES that sigma changes for ALL |S|*(n-|S|) = 4*(n-4) SX pairs.
+
+delta_sigma values for SX pairs:
+  delta_sigma distribution for SX pairs: {-1: 738, 1: 738}
+  Always +/-1? True
+
+Done.
