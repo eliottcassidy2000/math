@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S60 — 2026-03-13: Overlap Weight Deep Analysis + Spectral H-Maximization
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S60 (13th context window!)
+**Summary of work:**
+Deep exploration of overlap weight structure for circulant tournaments, spanning 13 context windows. Major discoveries:
+
+1. **THM-160 (PROVED)**: w(C) = N_total - 1 - C_odd(T[comp(V_C)]). Overlap weight = total cycles minus 1 minus cycles on complement.
+2. **THM-161**: Effective marginal H coefficients are LENGTH-DEPENDENT: b_5=-37, b_7=-1.5, b_9=+3.6, b_11=+2.0 at p=11. Short cycles have NEGATIVE effective value!
+3. **THM-162**: Paley flat spectrum + H-maximization. Paley has flat eigenvalue spectrum (Ramanujan). corr(H, c_p) = 0.988 — H almost perfectly correlates with Hamiltonian cycle count.
+4. **c3 constant for ALL regular tournaments**: c3 = n(n-1)(n+1)/24 — depends ONLY on degree sequence. (HYP-712)
+5. **Paley maximizes EVERY c_k**: Verified at p=7 and p=11 (Savchenko). (HYP-713)
+6. **4 H-classes at p=11** with sizes 2:10:10:10, all determined by eigenvalue structure. (HYP-718)
+7. **Overlap coefficient < 1/2**: More cycles ALWAYS increases H despite anti-correlated alpha_2. (HYP-720)
+8. **Paley flat common-neighbor matrix**: (AA^T)_{ij} = (p-3)/4 constant for all i!=j. (HYP-716)
+9. **D^2 type count is NEW OEIS sequence**: 1, 1, 2, 4, 6, 16, 30, 94 for p=3,5,7,11,13,17,19,23.
+10. **p=13 spectral analysis**: 5 sum_4 classes, 6 D^2 types. Paley at p≡1 mod 4 has 2-level spectrum (not flat).
+
+**New contributions:** THM-160, THM-161, THM-162, HYP-712 through HYP-720 (9 new hypotheses)
+**Scripts created:** overlap_weight_counts.py, constant_complement.py, overlap_weight_spectrum.py, overlap_weight_H_formula.py, alpha3_structure.py, partition_bibd_connection.py, alpha_decomposition_all_orientations.py, c3_constant_and_qr_parity.py, class_distinguisher.py, tradeoff_mechanism.py, H_maximization_mechanism.py, N_maximization_paley.py, ck_class_ordering.py, ham_cycle_dominance.py, marginal_H_verification.py, eigenvalue_H_connection.py, spectral_cycle_bridge.py, p13_spectral_analysis.py, class_count_formula.py
+**Unresolved threads:**
+- Does the b_k effective coefficient pattern hold at p=13 and p=17?
+- Theoretical proof of overlap coefficient < 1/2
+- D^2 type count formula via Burnside's lemma — exact group action needed
+- Connection between spectral flatness and H-maximization at p≡1 mod 4
+
 ## opus-2026-03-13-S71b — 2026-03-13: Constraint Structure Theorems & Per-Eigenspace Betti Verification
 
 **Account:** opus
