@@ -1,0 +1,84 @@
+======================================================================
+REGULAR TOURNAMENTS AT n=7: THREE H CLASSES
+======================================================================
+  Sampling regular tournaments from 2^21 = 2097152 total...
+  Found 134 regular tournaments in 0.9s
+  H classes: [171, 175, 189]
+    H=171: 73 found
+    H=175: 45 found
+    H=189: 16 found
+
+======================================================================
+CYCLE STRUCTURE BY H CLASS
+======================================================================
+
+  H=171 (sample of 10):
+    c3 (3-cycles): [14] (all same? True)
+    c5 (5-cycles): [36] (all same? True)
+    c7 (7-cycles): [2] (all same? True)
+    Expected c3 for regular n=7: 14
+    det(I+A) = 8.00
+    AA^T diagonal = [3. 3. 3. 3. 3. 3. 3.]
+    AA^T off-diagonal variance = 0.2857
+
+  H=175 (sample of 10):
+    c3 (3-cycles): [14] (all same? True)
+    c5 (5-cycles): [28] (all same? True)
+    c7 (7-cycles): [2] (all same? True)
+    Expected c3 for regular n=7: 14
+    det(I+A) = 4.00
+    AA^T diagonal = [3. 3. 3. 3. 3. 3. 3.]
+    AA^T off-diagonal variance = 0.6667
+
+  H=189 (sample of 10):
+    c3 (3-cycles): [14] (all same? True)
+    c5 (5-cycles): [42] (all same? True)
+    c7 (7-cycles): [3] (all same? True)
+    Expected c3 for regular n=7: 14
+    det(I+A) = 32.00
+    AA^T diagonal = [3. 3. 3. 3. 3. 3. 3.]
+    AA^T off-diagonal variance = 0.0000
+
+======================================================================
+PALEY P_7 STRUCTURE
+======================================================================
+  QR mod 7 = [1, 2, 4]
+  H(P_7) = 189
+  c3 = 14
+  c5 = 42
+  c7 = 3
+  AA^T = 
+[[3 1 1 1 1 1 1]
+ [1 3 1 1 1 1 1]
+ [1 1 3 1 1 1 1]
+ [1 1 1 3 1 1 1]
+ [1 1 1 1 3 1 1]
+ [1 1 1 1 1 3 1]
+ [1 1 1 1 1 1 3]]
+  AA^T is circulant? True
+  Off-diagonal values: [np.int64(1)]
+  Off-diagonal variance: 0.000000
+  det(I+A) = 32.00
+  Expected: (7+1)^4/2^7 = 32.00
+
+======================================================================
+INVARIANT ANALYSIS: WHAT DISTINGUISHES H CLASSES?
+======================================================================
+
+  H=171 (73 tournaments, analyzing 30):
+    c5 range: [36, 36], mean=36.0
+    c7 range: [2, 2], mean=2.0
+    det(I+A): [8.0, 8.0], mean=8.0
+
+  H=175 (45 tournaments, analyzing 30):
+    c5 range: [28, 28], mean=28.0
+    c7 range: [2, 2], mean=2.0
+    det(I+A): [4.0, 4.0], mean=4.0
+
+  H=189 (16 tournaments, analyzing 16):
+    c5 range: [42, 42], mean=42.0
+    c7 range: [3, 3], mean=3.0
+    det(I+A): [32.0, 32.0], mean=32.0
+
+
+DONE — regular_n7_classification.py complete
