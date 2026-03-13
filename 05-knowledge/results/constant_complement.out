@@ -1,0 +1,66 @@
+p=11, m=5, testing all 32 orientations
+
+=== c3(8-vertex complement) constancy per orientation ===
+  bits=0: S=[10, 9, 8, 7, 6], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=1: S=[1, 9, 8, 7, 6], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=2: S=[10, 2, 8, 7, 6], c3=55, c3(comp) values=[18, 19], VARIES
+  bits=3: S=[1, 2, 8, 7, 6], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=4: S=[10, 9, 3, 7, 6], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=5: S=[1, 9, 3, 7, 6], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=6: S=[10, 2, 3, 7, 6], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=7: S=[1, 2, 3, 7, 6], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=8: S=[10, 9, 8, 4, 6], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=9: S=[1, 9, 8, 4, 6], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=10: S=[10, 2, 8, 4, 6], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=11: S=[1, 2, 8, 4, 6], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=12: S=[10, 9, 3, 4, 6], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=13: S=[1, 9, 3, 4, 6], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=14: S=[10, 2, 3, 4, 6], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=15: S=[1, 2, 3, 4, 6], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=16: S=[10, 9, 8, 7, 5], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=17: S=[1, 9, 8, 7, 5], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=18: S=[10, 2, 8, 7, 5], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=19: S=[1, 2, 8, 7, 5], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=20: S=[10, 9, 3, 7, 5], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=21: S=[1, 9, 3, 7, 5], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=22: S=[10, 2, 3, 7, 5], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=23: S=[1, 2, 3, 7, 5], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=24: S=[10, 9, 8, 4, 5], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=25: S=[1, 9, 8, 4, 5], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=26: S=[10, 2, 8, 4, 5], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=27: S=[1, 2, 8, 4, 5], c3=55, c3(comp) values=[16, 17, 18, 19, 20], VARIES
+  bits=28: S=[10, 9, 3, 4, 5], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+  bits=29: S=[1, 9, 3, 4, 5], c3=55, c3(comp) values=[18, 19], VARIES
+  bits=30: S=[10, 2, 3, 4, 5], c3=55, c3(comp) values=[16, 18, 19, 20], VARIES
+  bits=31: S=[1, 2, 3, 4, 5], c3=55, c3(comp) values=[14, 16, 18, 20], VARIES
+
+  c3(comp) CONSTANT: 0/32
+
+
+=== INCLUSION-EXCLUSION for Paley p=11 ===
+  c3 = 55
+  3-cycles per vertex = 15
+  3-cycles through QR pair: 3
+  3-cycles through NQR pair: 3
+
+  Formula: c3(comp) = 55 - 3*15 + q*3 + (3-q)*3 - n(V)
+         = 10 + q*0 + 3*3 - n(V)
+         = 19 + 0*q - n(V)
+
+  QR-pair distribution:
+    q=1, n(V)=1: 11 subsets, predicted c3(comp) = 18
+    q=2, n(V)=0: 66 subsets, predicted c3(comp) = 19
+    q=2, n(V)=1: 11 subsets, predicted c3(comp) = 18
+    q=3, n(V)=0: 44 subsets, predicted c3(comp) = 19
+    q=3, n(V)=1: 33 subsets, predicted c3(comp) = 18
+
+  Verification against actual c3(comp):
+    q=1, n(V)=1: actual=18, pred=18, match=True
+    q=2, n(V)=0: actual=19, pred=19, match=True
+    q=2, n(V)=1: actual=18, pred=18, match=True
+    q=3, n(V)=0: actual=19, pred=19, match=True
+    q=3, n(V)=1: actual=18, pred=18, match=True
+
+  delta = 0: pair_qr = pair_nqr => c3(comp) constant iff n(V) constant
+
+DONE.

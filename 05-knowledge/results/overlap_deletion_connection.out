@@ -1,0 +1,77 @@
+Paley p=11, S=[1, 3, 4, 5, 9]
+
+=== DELETION SUM VS HAMILTONIAN STRUCTURE ===
+
+  D=2, w=591, count=22
+    Score sequences: [(0, 3, 3, 3, 3, 3), (2, 2, 2, 2, 2, 5)]
+    n6(comp): [0]
+    Deletion patterns: [(0, 0, 0, 0, 0, 2)]
+
+  D=4, w=589, count=55
+    Score sequences: [(1, 2, 2, 3, 3, 4)]
+    n6(comp): [3]
+    Deletion patterns: [(0, 0, 1, 1, 1, 1)]
+
+  D=6, w=587, count=55
+    Score sequences: [(1, 2, 2, 3, 3, 4)]
+    n6(comp): [2]
+    Deletion patterns: [(0, 0, 1, 1, 2, 2)]
+
+  D=7, w=586, count=110
+    Score sequences: [(1, 2, 2, 3, 3, 4)]
+    n6(comp): [3]
+    Deletion patterns: [(0, 0, 1, 1, 2, 3)]
+
+  D=9, w=584, count=110
+    Score sequences: [(1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 3, 4)]
+    n6(comp): [4]
+    Deletion patterns: [(0, 1, 1, 2, 2, 3)]
+
+
+=== SCORE -> D MAPPING ===
+  Score (0, 3, 3, 3, 3, 3): D = [2], count = 11
+  Score (1, 2, 2, 3, 3, 4): D = [4, 6, 7], count = 220
+  Score (1, 2, 3, 3, 3, 3): D = [9], count = 55
+  Score (2, 2, 2, 2, 2, 5): D = [2], count = 11
+  Score (2, 2, 2, 2, 3, 4): D = [9], count = 55
+
+
+=== D vs n_3, n_6 ===
+  D=2: (n3,n6) = [(5, 0)]
+  D=4: (n3,n6) = [(6, 3)]
+  D=6: (n3,n6) = [(6, 2)]
+  D=7: (n3,n6) = [(6, 3)]
+  D=9: (n3,n6) = [(7, 4)]
+
+  D = 2.7857*n3 + 0.2857*n6 + -11.5714
+  Max error: 2.000000
+
+
+=== VERIFICATION: D = c_5(complement) ===
+  D=4, c5(comp)=4, match=True
+  D=9, c5(comp)=9, match=True
+  D=7, c5(comp)=7, match=True
+  D=6, c5(comp)=6, match=True
+  D=7, c5(comp)=7, match=True
+
+
+=== SCORE SEQUENCES OF 6-VERTEX SUBTOURNAMENTS ===
+  Score (0, 3, 3, 3, 3, 3): 11 subtournaments (2.4%)
+  Score (1, 2, 2, 3, 3, 4): 220 subtournaments (47.6%)
+  Score (1, 2, 3, 3, 3, 3): 55 subtournaments (11.9%)
+  Score (2, 2, 2, 2, 2, 5): 11 subtournaments (2.4%)
+  Score (2, 2, 2, 2, 3, 4): 55 subtournaments (11.9%)
+  Score (2, 2, 2, 3, 3, 3): 110 subtournaments (23.8%)
+
+
+=== GLOBAL OVERLAP WEIGHT CHECK ===
+  c_5 = 594
+  sum D(V)*n(V) = 3828
+  This should equal 2*disj(5,5) (unordered counting): 3828
+  disj(5,5) unordered = 1914
+  sum D*n / 2 = 1914.0
+  Match: True
+
+  sum D*n = 3828 = 2*disj(5,5)_unordered? True
+
+DONE.

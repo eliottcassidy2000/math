@@ -1,0 +1,63 @@
+<stdin>:12: SyntaxWarning: invalid escape sequence '\ '
+Paley p=11
+  c_k: {3: 55, 5: 594, 7: 3960, 9: 11055, 11: 5505}
+  N_total = 21169
+
+=== FULL OVERLAP WEIGHT FOR ALL CYCLE TYPES ===
+  Formula: w(C) = 21169 - 1 - C_odd(comp(V)) = 21168 - C_odd(comp)
+
+  --- k=3 cycles ---
+    w=20996: C_odd(comp)=172, 55 orbits
+    CONSTANT w=20996 (complement too small for odd cycles)
+
+  --- k=5 cycles ---
+    w range: [21152, 21161]
+    C_odd(comp) range: [7, 16]
+    C_odd(comp)=7: w=21161, 22 orbits
+    C_odd(comp)=10: w=21158, 55 orbits
+    C_odd(comp)=12: w=21156, 55 orbits
+    C_odd(comp)=13: w=21155, 110 orbits
+    C_odd(comp)=16: w=21152, 110 orbits
+
+  --- k=7 cycles ---
+    w=21166: C_odd(comp)=2, 165 orbits
+    w=21167: C_odd(comp)=1, 110 orbits
+    w=21168: C_odd(comp)=0, 55 orbits
+
+  --- k=9 cycles ---
+    w=21168: C_odd(comp)=0, 55 orbits
+    CONSTANT w=21168 (complement too small for odd cycles)
+
+  --- k=11 cycles ---
+    w=21168: C_odd(comp)=0, 1 orbits
+    CONSTANT w=21168 (complement too small for odd cycles)
+
+
+============================================================
+Paley p=7
+  c_k: {3: 14, 5: 42, 7: 24}
+  N_total = 80
+
+  --- k=3 cycles ---
+    CONSTANT w=78
+
+  --- k=5 cycles ---
+    CONSTANT w=79
+
+  --- k=7 cycles ---
+    CONSTANT w=79
+
+Interval p=7, S=[1, 2, 3]
+  c_k: {3: 14, 5: 28, 7: 17}
+  N_total = 59
+
+  --- k=3 cycles ---
+    CONSTANT w=56
+
+  --- k=5 cycles ---
+    CONSTANT w=58
+
+  --- k=7 cycles ---
+    CONSTANT w=58
+
+DONE.
