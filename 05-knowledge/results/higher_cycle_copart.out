@@ -1,0 +1,198 @@
+======================================================================
+HIGHER-CYCLE CO-PARTICIPATION BY RESONANCE LEVEL
+======================================================================
+
+============================================================
+p = 7, m = 3, QR = [1, 2, 4]
+============================================================
+
+Finding directed cycles up to length 7...
+  3-cycles: 14
+  4-cycles: 21
+  5-cycles: 42
+  6-cycles: 35
+  7-cycles: 24
+
+  --- 3-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=Y): avg=  14.0, vals=[14], pairs=[(1, 2), (1, 3), (2, 3)]
+
+  --- 4-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=Y): avg=   7.0, vals=[7], pairs=[(1, 2), (1, 3), (2, 3)]
+
+  --- 5-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=Y): avg=  14.0, vals=[14], pairs=[(1, 2), (1, 3), (2, 3)]
+
+  --- 6-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=Y): avg=  21.0, vals=[21], pairs=[(1, 2), (1, 3), (2, 3)]
+
+  --- 7-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=Y): avg=  21.0, vals=[21], pairs=[(1, 2), (1, 3), (2, 3)]
+
+  --- SUMMARY: copart by (q, cycle-length) ---
+      q chi(q)    c3-copart    c4-copart    c5-copart    c6-copart    c7-copart
+      3     -1         14.0          7.0         14.0         21.0         21.0
+
+============================================================
+p = 11, m = 5, QR = [1, 3, 4, 5, 9]
+============================================================
+
+Finding directed cycles up to length 7...
+  3-cycles: 55
+  4-cycles: 165
+  5-cycles: 594
+  6-cycles: 1595
+  7-cycles: 3960
+
+  --- 3-cycle co-participation by chord pair ---
+    q= 3 (chi=+1, 3c-copart=N): avg=   0.0, vals=[0], pairs=[(1, 3), (1, 4), (2, 3), (2, 5), (4, 5)]
+    q= 5 (chi=+1, 3c-copart=Y): avg=  11.0, vals=[11], pairs=[(1, 2), (1, 5), (2, 4), (3, 4), (3, 5)]
+
+  --- 4-cycle co-participation by chord pair ---
+    q= 3 (chi=+1, 3c-copart=N): avg=  66.0, vals=[66], pairs=[(1, 3), (1, 4), (2, 3), (2, 5), (4, 5)]
+    q= 5 (chi=+1, 3c-copart=Y): avg=  33.0, vals=[33], pairs=[(1, 2), (1, 5), (2, 4), (3, 4), (3, 5)]
+
+  --- 5-cycle co-participation by chord pair ---
+    q= 3 (chi=+1, 3c-copart=N): avg= 330.0, vals=[330], pairs=[(1, 3), (1, 4), (2, 3), (2, 5), (4, 5)]
+    q= 5 (chi=+1, 3c-copart=Y): avg= 352.0, vals=[352], pairs=[(1, 2), (1, 5), (2, 4), (3, 4), (3, 5)]
+
+  --- 6-cycle co-participation by chord pair ---
+    q= 3 (chi=+1, 3c-copart=N): avg= 836.0, vals=[836], pairs=[(1, 3), (1, 4), (2, 3), (2, 5), (4, 5)]
+    q= 5 (chi=+1, 3c-copart=Y): avg= 814.0, vals=[814], pairs=[(1, 2), (1, 5), (2, 4), (3, 4), (3, 5)]
+
+  --- 7-cycle co-participation by chord pair ---
+    q= 3 (chi=+1, 3c-copart=N): avg=2277.0, vals=[2277], pairs=[(1, 3), (1, 4), (2, 3), (2, 5), (4, 5)]
+    q= 5 (chi=+1, 3c-copart=Y): avg=2255.0, vals=[2255], pairs=[(1, 2), (1, 5), (2, 4), (3, 4), (3, 5)]
+
+  --- SUMMARY: copart by (q, cycle-length) ---
+      q chi(q)    c3-copart    c4-copart    c5-copart    c6-copart    c7-copart
+      3     +1          0.0         66.0        330.0        836.0       2277.0
+      5     +1         11.0         33.0        352.0        814.0       2255.0
+
+============================================================
+p = 19, m = 9, QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+============================================================
+
+Finding directed cycles up to length 5...
+  3-cycles: 285
+  4-cycles: 1710
+  5-cycles: 11628
+
+  --- 3-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=N): avg=   0.0, vals=[0], pairs=[(1, 3), (1, 6), (2, 6), (2, 7), (3, 9), (4, 5), (4, 7), (5, 8), (8, 9)]
+    q= 5 (chi=+1, 3c-copart=N): avg=   0.0, vals=[0], pairs=[(1, 4), (1, 5), (2, 8), (2, 9), (3, 4), (3, 7), (5, 6), (6, 8), (7, 9)]
+    q= 7 (chi=+1, 3c-copart=Y): avg=  38.0, vals=[38], pairs=[(1, 7), (1, 8), (2, 3), (2, 5), (3, 5), (4, 6), (4, 9), (6, 9), (7, 8)]
+    q= 9 (chi=+1, 3c-copart=Y): avg=  19.0, vals=[19], pairs=[(1, 2), (1, 9), (2, 4), (3, 6), (3, 8), (4, 8), (5, 7), (5, 9), (6, 7)]
+
+  --- 4-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=N): avg= 190.0, vals=[190], pairs=[(1, 3), (1, 6), (2, 6), (2, 7), (3, 9), (4, 5), (4, 7), (5, 8), (8, 9)]
+    q= 5 (chi=+1, 3c-copart=N): avg= 285.0, vals=[285], pairs=[(1, 4), (1, 5), (2, 8), (2, 9), (3, 4), (3, 7), (5, 6), (6, 8), (7, 9)]
+    q= 7 (chi=+1, 3c-copart=Y): avg= 171.0, vals=[171], pairs=[(1, 7), (1, 8), (2, 3), (2, 5), (3, 5), (4, 6), (4, 9), (6, 9), (7, 8)]
+    q= 9 (chi=+1, 3c-copart=Y): avg= 228.0, vals=[228], pairs=[(1, 2), (1, 9), (2, 4), (3, 6), (3, 8), (4, 8), (5, 7), (5, 9), (6, 7)]
+
+  --- 5-cycle co-participation by chord pair ---
+    q= 3 (chi=-1, 3c-copart=N): avg=2242.0, vals=[2242], pairs=[(1, 3), (1, 6), (2, 6), (2, 7), (3, 9), (4, 5), (4, 7), (5, 8), (8, 9)]
+    q= 5 (chi=+1, 3c-copart=N): avg=2090.0, vals=[2090], pairs=[(1, 4), (1, 5), (2, 8), (2, 9), (3, 4), (3, 7), (5, 6), (6, 8), (7, 9)]
+    q= 7 (chi=+1, 3c-copart=Y): avg=1862.0, vals=[1862], pairs=[(1, 7), (1, 8), (2, 3), (2, 5), (3, 5), (4, 6), (4, 9), (6, 9), (7, 8)]
+    q= 9 (chi=+1, 3c-copart=Y): avg=2242.0, vals=[2242], pairs=[(1, 2), (1, 9), (2, 4), (3, 6), (3, 8), (4, 8), (5, 7), (5, 9), (6, 7)]
+
+  --- SUMMARY: copart by (q, cycle-length) ---
+      q chi(q)    c3-copart    c4-copart    c5-copart
+      3     -1          0.0        190.0       2242.0
+      5     +1          0.0        285.0       2090.0
+      7     +1         38.0        171.0       1862.0
+      9     +1         19.0        228.0       2242.0
+
+
+======================================================================
+PART 2: q=3 PAIRS AT p=19 -- CYCLE LENGTH COMPENSATION?
+======================================================================
+
+p=19, QR=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+chi(3)=-1 => q=3 pairs have D^4 with WRONG sign
+  3-cycles: 285
+  4-cycles: 1710
+  5-cycles: 11628
+
+  3-cycle co-participation at p=19:
+    ( 1, 2): q= 9, chi(q)=+1, chi(ab)=-1, 3c-copart=  19
+    ( 1, 3): q= 3, chi(q)=-1, chi(ab)=-1, 3c-copart=   0
+    ( 1, 4): q= 5, chi(q)=+1, chi(ab)=+1, 3c-copart=   0
+    ( 1, 5): q= 5, chi(q)=+1, chi(ab)=+1, 3c-copart=   0
+    ( 1, 6): q= 3, chi(q)=-1, chi(ab)=+1, 3c-copart=   0
+    ( 1, 7): q= 7, chi(q)=+1, chi(ab)=+1, 3c-copart=  38
+    ( 1, 8): q= 7, chi(q)=+1, chi(ab)=-1, 3c-copart=  38
+    ( 1, 9): q= 9, chi(q)=+1, chi(ab)=+1, 3c-copart=  19
+    ( 2, 3): q= 7, chi(q)=+1, chi(ab)=+1, 3c-copart=  38
+    ( 2, 4): q= 9, chi(q)=+1, chi(ab)=-1, 3c-copart=  19
+    ( 2, 5): q= 7, chi(q)=+1, chi(ab)=-1, 3c-copart=  38
+    ( 2, 6): q= 3, chi(q)=-1, chi(ab)=-1, 3c-copart=   0
+    ( 2, 7): q= 3, chi(q)=-1, chi(ab)=-1, 3c-copart=   0
+    ( 2, 8): q= 5, chi(q)=+1, chi(ab)=+1, 3c-copart=   0
+    ( 2, 9): q= 5, chi(q)=+1, chi(ab)=-1, 3c-copart=   0
+    ( 3, 4): q= 5, chi(q)=+1, chi(ab)=-1, 3c-copart=   0
+    ( 3, 5): q= 7, chi(q)=+1, chi(ab)=-1, 3c-copart=  38
+    ( 3, 6): q= 9, chi(q)=+1, chi(ab)=-1, 3c-copart=  19
+    ( 3, 7): q= 5, chi(q)=+1, chi(ab)=-1, 3c-copart=   0
+    ( 3, 8): q= 9, chi(q)=+1, chi(ab)=+1, 3c-copart=  19
+    ( 3, 9): q= 3, chi(q)=-1, chi(ab)=-1, 3c-copart=   0
+    ( 4, 5): q= 3, chi(q)=-1, chi(ab)=+1, 3c-copart=   0
+    ( 4, 6): q= 7, chi(q)=+1, chi(ab)=+1, 3c-copart=  38
+    ( 4, 7): q= 3, chi(q)=-1, chi(ab)=+1, 3c-copart=   0
+    ( 4, 8): q= 9, chi(q)=+1, chi(ab)=-1, 3c-copart=  19
+    ( 4, 9): q= 7, chi(q)=+1, chi(ab)=+1, 3c-copart=  38
+    ( 5, 6): q= 5, chi(q)=+1, chi(ab)=+1, 3c-copart=   0
+    ( 5, 7): q= 9, chi(q)=+1, chi(ab)=+1, 3c-copart=  19
+    ( 5, 8): q= 3, chi(q)=-1, chi(ab)=-1, 3c-copart=   0
+    ( 5, 9): q= 9, chi(q)=+1, chi(ab)=+1, 3c-copart=  19
+    ( 6, 7): q= 9, chi(q)=+1, chi(ab)=+1, 3c-copart=  19
+    ( 6, 8): q= 5, chi(q)=+1, chi(ab)=-1, 3c-copart=   0
+    ( 6, 9): q= 7, chi(q)=+1, chi(ab)=+1, 3c-copart=  38
+    ( 7, 8): q= 7, chi(q)=+1, chi(ab)=-1, 3c-copart=  38
+    ( 7, 9): q= 5, chi(q)=+1, chi(ab)=+1, 3c-copart=   0
+    ( 8, 9): q= 3, chi(q)=-1, chi(ab)=-1, 3c-copart=   0
+
+  5-cycle co-participation at p=19:
+    ( 1, 3): q= 3, chi(q)=-1, chi(ab)=-1, 5c-copart=2242
+    ( 1, 4): q= 5, chi(q)=+1, chi(ab)=+1, 5c-copart=2090
+    ( 1, 5): q= 5, chi(q)=+1, chi(ab)=+1, 5c-copart=2090
+    ( 1, 6): q= 3, chi(q)=-1, chi(ab)=+1, 5c-copart=2242
+    ( 2, 6): q= 3, chi(q)=-1, chi(ab)=-1, 5c-copart=2242
+    ( 2, 7): q= 3, chi(q)=-1, chi(ab)=-1, 5c-copart=2242
+    ( 2, 8): q= 5, chi(q)=+1, chi(ab)=+1, 5c-copart=2090
+    ( 2, 9): q= 5, chi(q)=+1, chi(ab)=-1, 5c-copart=2090
+    ( 3, 4): q= 5, chi(q)=+1, chi(ab)=-1, 5c-copart=2090
+    ( 3, 7): q= 5, chi(q)=+1, chi(ab)=-1, 5c-copart=2090
+    ( 3, 9): q= 3, chi(q)=-1, chi(ab)=-1, 5c-copart=2242
+    ( 4, 5): q= 3, chi(q)=-1, chi(ab)=+1, 5c-copart=2242
+    ( 4, 7): q= 3, chi(q)=-1, chi(ab)=+1, 5c-copart=2242
+    ( 5, 6): q= 5, chi(q)=+1, chi(ab)=+1, 5c-copart=2090
+    ( 5, 8): q= 3, chi(q)=-1, chi(ab)=-1, 5c-copart=2242
+    ( 6, 8): q= 5, chi(q)=+1, chi(ab)=-1, 5c-copart=2090
+    ( 7, 9): q= 5, chi(q)=+1, chi(ab)=+1, 5c-copart=2090
+    ( 8, 9): q= 3, chi(q)=-1, chi(ab)=-1, 5c-copart=2242
+
+
+--- PART 3: DOES 5-CYCLE COPART CORRELATE WITH chi(ab)? ---
+
+  q=3 pairs (chi(3)=-1, D^4 wrong sign):
+      pair  chi(ab)   c3-cop   c5-cop  sign from c5?
+  ( 1, 3)       -1        0     2242
+  ( 1, 6)       +1        0     2242
+  ( 2, 6)       -1        0     2242
+  ( 2, 7)       -1        0     2242
+  ( 3, 9)       -1        0     2242
+  ( 4, 5)       +1        0     2242
+  ( 4, 7)       +1        0     2242
+  ( 5, 8)       -1        0     2242
+  ( 8, 9)       -1        0     2242
+
+  q=5 pairs (chi(5)=+1):
+  ( 1, 4)       +1        0     2090
+  ( 1, 5)       +1        0     2090
+  ( 2, 8)       +1        0     2090
+  ( 2, 9)       -1        0     2090
+  ( 3, 4)       -1        0     2090
+  ( 3, 7)       -1        0     2090
+  ( 5, 6)       +1        0     2090
+  ( 6, 8)       -1        0     2090
+  ( 7, 9)       +1        0     2090

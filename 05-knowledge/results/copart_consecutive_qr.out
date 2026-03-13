@@ -1,0 +1,249 @@
+======================================================================
+COPART vs CONSECUTIVE QR ANALYSIS
+======================================================================
+
+--- PART 1: COPART FRACTION FOR ODD q ---
+    p p mod 4  copart_Y  total_q   fraction  (p-3)/4
+    7       3         2        2     1.0000      1.0
+   11       3         2        4     0.5000      2.0
+   19       3         4        8     0.5000      4.0
+   23       3         6       10     0.6000      5.0
+   31       3         8       14     0.5714      7.0
+   43       3        10       20     0.5000     10.0
+   47       3        12       22     0.5455     11.0
+   59       3        14       28     0.5000     14.0
+   67       3        16       32     0.5000     16.0
+   71       3        18       34     0.5294     17.0
+   79       3        20       38     0.5263     19.0
+   83       3        20       40     0.5000     20.0
+
+
+--- PART 2: CONSECUTIVE QR PAIR TYPES ---
+    p   A(QR->QNR)   B(QNR->QR)    C(QR->QR)  D(QNR->QNR)    A+B    C+D
+    7            2            1            1            1      3      2
+   11            3            2            2            2      5      4
+   19            5            4            4            4      9      8
+   23            6            5            5            5     11     10
+   31            8            7            7            7     15     14
+   43           11           10           10           10     21     20
+   47           12           11           11           11     23     22
+   59           15           14           14           14     29     28
+   67           17           16           16           16     33     32
+   71           18           17           17           17     35     34
+   79           20           19           19           19     39     38
+   83           21           20           20           20     41     40
+
+
+--- PART 3: DETAILED TRANSITION ANALYSIS ---
+Copart > 0 iff (chi(q)=+1, chi(q+1)=-1) or (chi(q)=-1, chi(q-1)=+1)
+First condition = Type A transition at ODD q
+Second condition = Type B transition at ODD q (since chi(q-1)=+1, chi(q)=-1)
+NO! Second is: chi(q)=-1 and chi(q-1)=+1, i.e., Type A at EVEN n=q-1
+
+  p=7:
+    q= 3: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q= 5: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    Total: 0 from A-at-odd + 2 from A-at-even = 2
+
+  p=11:
+    q= 3: chi(q)=+1, chi(q+1)=+1 -> copart=N [C-type at q]
+    q= 5: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q= 7: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q= 9: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    Total: 2 from A-at-odd + 0 from A-at-even = 2
+
+  p=19:
+    q= 3: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q= 5: chi(q)=+1, chi(q+1)=+1 -> copart=N [C-type at q]
+    q= 7: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q= 9: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q=11: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q=13: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=15: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=17: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    Total: 4 from A-at-odd + 0 from A-at-even = 4
+
+  p=23:
+    q= 3: chi(q)=+1, chi(q+1)=+1 -> copart=N [C-type at q]
+    q= 5: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q= 7: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q= 9: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q=11: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=13: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q=15: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=17: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q=19: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q=21: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    Total: 2 from A-at-odd + 4 from A-at-even = 6
+
+  p=31:
+    q= 3: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q= 5: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q= 7: chi(q)=+1, chi(q+1)=+1 -> copart=N [C-type at q]
+    q= 9: chi(q)=+1, chi(q+1)=+1 -> copart=N [C-type at q]
+    q=11: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q=13: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=15: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q=17: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q=19: chi(q)=+1, chi(q+1)=+1 -> copart=N [C-type at q]
+    q=21: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    q=23: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=25: chi(q)=+1, chi(q+1)=-1 -> copart=Y [A-type at q]
+    q=27: chi(q)=-1, chi(q-1)=-1 -> copart=N [D-type at q-1]
+    q=29: chi(q)=-1, chi(q-1)=+1 -> copart=Y [A-type at q-1]
+    Total: 2 from A-at-odd + 6 from A-at-even = 8
+
+
+--- PART 4: chi(q^2-1) CONNECTION ---
+From algebra: copart > 0 iff chi((a+b)(b-a)) = chi(b^2-a^2) = chi(q^2-1) = ...
+For q-resonance (qa=b): b^2-a^2 = a^2(q^2-1)
+chi(b^2-a^2) = chi(a^2)*chi(q^2-1) = chi(q^2-1)
+
+So: copart > 0 iff chi(q^2-1) = +1
+    q^2-1 = (q-1)(q+1)
+    chi(q^2-1) = chi(q-1)*chi(q+1)
+
+CLAIM: copart > 0 iff chi(q-1)*chi(q+1) = +1
+Let's verify this is equivalent to HYP-601:
+
+  p=7: HYP-601 vs chi(q^2-1): 1/2 match
+  p=11: HYP-601 vs chi(q^2-1): 2/4 match
+  p=19: HYP-601 vs chi(q^2-1): 4/8 match
+  p=23: HYP-601 vs chi(q^2-1): 5/10 match
+  p=31: HYP-601 vs chi(q^2-1): 7/14 match
+  p=43: HYP-601 vs chi(q^2-1): 10/20 match
+
+
+--- PART 5: VERIFY chi(q-1)*chi(q+1) = chi(q^2-1) ---
+This is just multiplicativity of chi. Always true.
+
+So the copart theorem simplifies to:
+  copart(q) > 0 iff chi(q^2-1) = +1
+  i.e., (q-1)(q+1) is a QR mod p
+
+But wait -- is this EQUIVALENT to HYP-601?
+HYP-601: chi(q)=+1 => copart iff chi(q+1)=-1
+         chi(q)=-1 => copart iff chi(q-1)=+1
+
+Case 1: chi(q)=+1
+  chi(q-1)*chi(q+1)=+1 means chi(q-1)=chi(q+1)
+  q is odd, q-1 is even. For copart: chi(q+1)=-1
+  If chi(q+1)=-1, then chi(q-1)=-1, product=+1. OK.
+  If chi(q+1)=+1, then chi(q-1)=+1, product=+1. PROBLEM!
+  Wait, product=+1 in BOTH cases if chi(q-1)=chi(q+1)!
+
+So chi(q^2-1)=+1 does NOT reduce to HYP-601 directly.
+Let me recheck...
+
+
+--- PART 6: CAREFUL COMPARISON ---
+  p=7: 1 MISMATCHES:
+    q=5: chi(q)=-1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+  p=11: 2 MISMATCHES:
+    q=5: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=7: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+  p=19: 4 MISMATCHES:
+    q=5: chi(q)=+1, chi(q-1)=+1, chi(q+1)=+1, HYP-601=False, chi(q^2-1)=True
+    q=7: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=13: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+    q=17: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+  p=23: 5 MISMATCHES:
+    q=3: chi(q)=+1, chi(q-1)=+1, chi(q+1)=+1, HYP-601=False, chi(q^2-1)=True
+    q=9: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=13: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=19: chi(q)=-1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=21: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+  p=31: 7 MISMATCHES:
+    q=5: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=9: chi(q)=+1, chi(q-1)=+1, chi(q+1)=+1, HYP-601=False, chi(q^2-1)=True
+    q=11: chi(q)=-1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=19: chi(q)=+1, chi(q-1)=+1, chi(q+1)=+1, HYP-601=False, chi(q^2-1)=True
+    q=21: chi(q)=-1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=23: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+    q=29: chi(q)=-1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+  p=43: 10 MISMATCHES:
+    q=7: chi(q)=-1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=11: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=15: chi(q)=+1, chi(q-1)=+1, chi(q+1)=+1, HYP-601=False, chi(q^2-1)=True
+    q=17: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=19: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+    q=25: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+    q=27: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+    q=29: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+    q=33: chi(q)=-1, chi(q-1)=-1, chi(q+1)=-1, HYP-601=False, chi(q^2-1)=True
+    q=41: chi(q)=+1, chi(q-1)=+1, chi(q+1)=-1, HYP-601=True, chi(q^2-1)=False
+
+
+--- PART 7: SIGN LAW CONNECTION ---
+The sign formula from resonance cascade:
+  sign(D^{2n}_onset) * chi(ab) = chi(q)
+
+For the product law sign(h_hat) = chi(ab):
+  Need sign(h_hat) = chi(ab)
+  If h_hat dominated by D^{2n}_onset:
+    sign(h_hat) = sign(D^{2n}_onset) = chi(q)*chi(ab)
+    Product law requires chi(q)=+1
+
+At p=3 mod 4 with chi(q)=-1 (e.g., q=3 at p=19):
+  Dominant D^4 has wrong sign
+  ALSO: copart(q=3) depends on chi(8)=chi(2)^3
+
+  p=7: chi(2)=+1, chi(3)=-1
+    q=3: chi(3)=-1, chi(2)=+1, copart=Y
+    q=5: chi(5)=-1, chi(4)=+1, copart=Y
+    Sign law OK for q=3? chi(3)==-1 NO (D^4 wrong sign)
+
+  p=11: chi(2)=-1, chi(3)=+1
+    q=3: chi(3)=+1, chi(4)=+1, copart=N
+    q=5: chi(5)=+1, chi(6)=-1, copart=Y
+    Sign law OK for q=3? chi(3)==+1 YES
+
+  p=19: chi(2)=-1, chi(3)=-1
+    q=3: chi(3)=-1, chi(2)=-1, copart=N
+    q=5: chi(5)=+1, chi(6)=+1, copart=N
+    Sign law OK for q=3? chi(3)==-1 NO (D^4 wrong sign)
+
+  p=23: chi(2)=+1, chi(3)=+1
+    q=3: chi(3)=+1, chi(4)=+1, copart=N
+    q=5: chi(5)=-1, chi(4)=+1, copart=Y
+    Sign law OK for q=3? chi(3)==+1 YES
+
+  p=31: chi(2)=+1, chi(3)=-1
+    q=3: chi(3)=-1, chi(2)=+1, copart=Y
+    q=5: chi(5)=+1, chi(6)=-1, copart=Y
+    Sign law OK for q=3? chi(3)==-1 NO (D^4 wrong sign)
+
+  p=43: chi(2)=-1, chi(3)=-1
+    q=3: chi(3)=-1, chi(2)=-1, copart=N
+    q=5: chi(5)=-1, chi(4)=+1, copart=Y
+    Sign law OK for q=3? chi(3)==-1 NO (D^4 wrong sign)
+
+
+--- PART 8: ASYMPTOTIC COPART FRACTION ---
+Heuristically, chi(q) and chi(q+/-1) are 'independent' for large p.
+Then P(copart=Y) = P(chi(q)=+1)*P(chi(q+1)=-1) + P(chi(q)=-1)*P(chi(q-1)=+1)
+                  = (1/2)(1/2) + (1/2)(1/2) = 1/2
+
+    p   fraction    1/2
+    7     1.0000    0.5
+   11     0.5000    0.5
+   19     0.5000    0.5
+   23     0.6000    0.5
+   31     0.5714    0.5
+   43     0.5000    0.5
+   47     0.5455    0.5
+   59     0.5000    0.5
+   67     0.5000    0.5
+   71     0.5294    0.5
+   79     0.5263    0.5
+   83     0.5000    0.5
+  103     0.5200    0.5
+  107     0.5000    0.5
+  127     0.5161    0.5
+  131     0.5000    0.5
+  151     0.5135    0.5
+  163     0.5000    0.5
+  167     0.5122    0.5
+  179     0.5000    0.5
+  191     0.5106    0.5
+  199     0.5102    0.5
