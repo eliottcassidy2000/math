@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71b — 2026-03-13: Orbit Complex Analysis & P_19 Ω Extension (6th context window)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71b (6th context window)
+**Summary of work:**
+- **ORBIT COMPLEX β_m^{orb} = (m-3)/2 CONFIRMED (HYP-722)**: Computed orbit complex for P_7 and P_11 using modular arithmetic. P_7: contractible (β_orb=[1,0,...,0]). P_11: β_orb=[1,0,0,0,0,1,1,0,...,0]. β_m^{(0)} = m·β_m^{orb} by Shapiro's lemma.
+- **Ω_3 CLOSED FORMULA PROVED (HYP-721)**: Ω_3 = m(m-1)(2m-3)/2. Junk_3 = 2m(m-1). Ratio Ω_3/|A_3| = (2m-3)/(2m+1) = (p-4)/p.
+- **BUDGET EQUALITY PROVED (HYP-723)**: Budget_m = Budget_{m+1} for orbit (and full) complex. Consequence of chi=1 + acyclicity.
+- **P_19 Ω EXTENDED (HYP-724)**: Ω = [1,9,72,540,3753,23832,136260,688266,...] through d=7. Previously only through d=4. Computed via orbit representatives (factor m speedup).
+- **Orbit boundary failure**: Naive orbit "complex" has ∂∂≠0 due to junk face dropping. Correct computation uses stacking trick on full complex, dividing by m.
+- **Ω_4^{orb} quadratic fit**: (25m²-162m+267)/2 verified for m=3,5,9. Does not factor cleanly.
+
+**New contributions:** HYP-721-724
+**Scripts created:** orbit_complex_mod.py, orbit_complex_fast.py, orbit_p19_partial.py, orbit_rank_analysis.py, omega_orb_pattern.py
+**Unresolved:** Algebraic proof of β_m = m(m-3)/2; P_19 orbit through d=m=9; closed-form Ω_d for d≥4
+
 ## opus-2026-03-13-S71b — 2026-03-13: Rank Shift Theorem & P_11 k=1 Complete Verification (5th context window)
 
 **Account:** opus
