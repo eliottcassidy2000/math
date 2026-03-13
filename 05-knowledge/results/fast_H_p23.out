@@ -1,0 +1,69 @@
+p = 23, m = 11
+QR = [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+Interval = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+2^23 = 8,388,608 states
+
+Computing H(Interval)...
+    Layer 2/23: 253 masks [0.0s]
+    Layer 3/23: 1771 masks [0.0s]
+    Layer 4/23: 8855 masks [0.0s]
+    Layer 5/23: 33649 masks [0.2s]
+    Layer 6/23: 100947 masks [0.8s]
+    Layer 7/23: 245157 masks [3.0s]
+    Layer 8/23: 490314 masks [8.4s]
+    Layer 9/23: 817190 masks [18.7s]
+    Layer 10/23: 1144066 masks [33.8s]
+    Layer 11/23: 1352078 masks [50.1s]
+    Layer 12/23: 1352078 masks [61.8s]
+    Layer 13/23: 1144066 masks [64.1s]
+    Layer 14/23: 817190 masks [54.8s]
+    Layer 15/23: 490314 masks [39.4s]
+    Layer 16/23: 245157 masks [24.0s]
+    Layer 17/23: 100947 masks [11.6s]
+    Layer 18/23: 33649 masks [4.7s]
+    Layer 19/23: 8855 masks [1.5s]
+    Layer 20/23: 1771 masks [0.4s]
+    Layer 21/23: 253 masks [0.1s]
+    Layer 22/23: 23 masks [0.0s]
+    Layer 23/23: 1 masks [0.0s]
+  H(Interval) = 16,011,537,490,557,279 (377.9s)
+
+Computing H(Paley)...
+    Layer 2/23: 253 masks [0.0s]
+    Layer 3/23: 1771 masks [0.0s]
+    Layer 4/23: 8855 masks [0.0s]
+    Layer 5/23: 33649 masks [0.1s]
+    Layer 6/23: 100947 masks [0.8s]
+    Layer 7/23: 245157 masks [3.0s]
+    Layer 8/23: 490314 masks [8.5s]
+    Layer 9/23: 817190 masks [19.0s]
+    Layer 10/23: 1144066 masks [34.6s]
+    Layer 11/23: 1352078 masks [51.2s]
+    Layer 12/23: 1352078 masks [62.8s]
+    Layer 13/23: 1144066 masks [64.3s]
+    Layer 14/23: 817190 masks [55.0s]
+    Layer 15/23: 490314 masks [39.7s]
+    Layer 16/23: 245157 masks [23.7s]
+    Layer 17/23: 100947 masks [11.7s]
+    Layer 18/23: 33649 masks [4.7s]
+    Layer 19/23: 8855 masks [1.5s]
+    Layer 20/23: 1771 masks [0.4s]
+    Layer 21/23: 253 masks [0.1s]
+    Layer 22/23: 23 masks [0.0s]
+    Layer 23/23: 1 masks [0.0s]
+  H(Paley) = 15,760,206,976,379,349 (382.0s)
+
+SUMMARY p=23:
+  H(Interval) = 16,011,537,490,557,279
+  H(Paley)    = 15,760,206,976,379,349
+  Gap: +251,330,514,177,930 (+1.5947%)
+  Interval WINS
+
+========================================================================
+LOCAL MAX CHECK (selected swaps from Interval)
+========================================================================
+  Swap 1→22: ΔH=-184,892,619,530,446 (-1.1547%) [366.4s]
+  Swap 5→18: ΔH=-313,140,526,475,114 (-1.9557%) [366.4s]
+  Swap 11→12: ΔH=-70,817,425,040,322 (-0.4423%) [365.0s]
+
+DONE.

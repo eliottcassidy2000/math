@@ -1,0 +1,121 @@
+========================================================================
+CROSSOVER LANDSCAPE: p ≡ 3 mod 4 primes
+========================================================================
+
+  p=3: ≡ 3 mod 4, m=1, QR valid tournament: True
+  p=7: ≡ 3 mod 4, m=3, QR valid tournament: True
+  p=11: ≡ 3 mod 4, m=5, QR valid tournament: True
+  p=19: ≡ 3 mod 4, m=9, QR valid tournament: True
+  p=23: ≡ 3 mod 4, m=11, QR valid tournament: True
+  p=31: ≡ 3 mod 4, m=15, QR valid tournament: True
+
+========================================================================
+p = 19 DETAILED ANALYSIS
+========================================================================
+
+p = 19, m = 9
+QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+Interval = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Pairs: [(1, 18), (2, 17), (3, 16), (4, 15), (5, 14), (6, 13), (7, 12), (8, 11), (9, 10)]
+
+Paley orientation bits: (0, 1, 1, 0, 0, 0, 0, 1, 0)
+Interval orientation bits: (0, 0, 0, 0, 0, 0, 0, 0, 0)
+Hamming distance: 3 out of 9
+
+H(Paley) = 1172695746915 (computed in 16.5s)
+H(Interval) = 1184212824763 (computed in 16.4s)
+Gap: H(Int) - H(Pal) = +11517077848 (+0.982%)
+
+Single-swap analysis from Interval:
+  Total valid single swaps: 9
+       a→b            H_new               ΔH      ΔH/H
+  9→10    1178609421219      -5603403544  -0.4732%
+  8→11    1170808019243     -13404805520  -1.1320%
+  1→18    1168209512629     -16003312134  -1.3514%
+  7→12    1167273189589     -16939635174  -1.4305%
+  6→13    1166923533919     -17289290844  -1.4600%
+  4→15    1165755868589     -18456956174  -1.5586%
+  2→17    1164636013301     -19576811462  -1.6531%
+  3→16    1164476313893     -19736510870  -1.6666%
+  5→14    1163523338645     -20689486118  -1.7471%
+  All swaps negative: True
+  → Interval is LOCAL MAX at p=19
+
+Single-swap analysis from Paley:
+  Total valid single swaps: 9
+       a→b            H_new               ΔH      ΔH/H
+  1→18    1163848601583      -8847145332  -0.7544%
+  4→15    1163848601583      -8847145332  -0.7544%
+  5→14    1163848601583      -8847145332  -0.7544%
+  6→13    1163848601583      -8847145332  -0.7544%
+  7→12    1163848601583      -8847145332  -0.7544%
+  9→10    1163848601583      -8847145332  -0.7544%
+  11→ 8    1163848601583      -8847145332  -0.7544%
+  16→ 3    1163848601583      -8847145332  -0.7544%
+  17→ 2    1163848601583      -8847145332  -0.7544%
+  All swaps negative: True
+  → Paley is LOCAL MAX at p=19
+
+
+========================================================================
+SPECTRAL LANDSCAPE
+========================================================================
+
+  Interval |μ| (top 5): 6.0548, 6.0548, 2.0368, 2.0368, 1.2447
+  Paley |μ| (top 5):    2.2361, 2.2361, 2.2361, 2.2361, 2.2361
+  |μ_1| ratio: 2.7078
+  Spectral entropy: Int=1.4620, Pal=2.8904
+
+========================================================================
+GRADIENT ASCENT FROM RANDOM STARTING POINTS
+========================================================================
+
+  Trial 1: start S=[2, 3, 4, 8, 9, 12, 13, 14, 18]
+    Steps: 1, Final S=[3, 4, 8, 9, 12, 13, 14, 17, 18], H=1184212824763
+    Hamming to Interval: 5
+    Equivalent to Interval: True
+
+  Trial 2: start S=[1, 2, 4, 5, 8, 10, 12, 13, 16]
+    Steps: 2, Final S=[1, 4, 5, 8, 9, 12, 13, 16, 17], H=1184212824763
+    Hamming to Interval: 4
+    Equivalent to Interval: True
+
+  Trial 3: start S=[2, 5, 6, 8, 9, 12, 15, 16, 18]
+    Steps: 1, Final S=[2, 3, 5, 6, 8, 9, 12, 15, 18], H=1184212824763
+    Hamming to Interval: 3
+    Equivalent to Interval: True
+
+  Trial 4: start S=[1, 8, 10, 12, 13, 14, 15, 16, 17]
+    Steps: 2, Final S=[10, 11, 12, 13, 14, 15, 16, 17, 18], H=1184212824763
+    Hamming to Interval: 9
+    Equivalent to Interval: True
+
+  Trial 5: start S=[6, 7, 8, 9, 14, 15, 16, 17, 18]
+    Steps: 1, Final S=[5, 6, 7, 8, 9, 15, 16, 17, 18], H=1184212824763
+    Hamming to Interval: 4
+    Equivalent to Interval: True
+
+========================================================================
+CRITICAL CONCLUSION
+========================================================================
+
+
+  AT p=19:
+    H(Interval) = 1184212824763
+    H(Paley) = 1172695746915
+    Gap: +0.982%
+
+  The orientation landscape at p=19 shows:
+  - Interval is local max: True
+  - Paley is local max: True
+
+  PHASE TRANSITION SUMMARY (p ≡ 3 mod 4):
+  p=7:  Paley wins, Paley is global max, Interval is NOT local max
+  p=11: Paley wins, Paley is global max, Interval is NOT local max
+  p=19: Interval wins, both may be local maxima
+  p=23: Interval wins (kind-pasteur: 0/36 beat Interval)
+
+  The crossover from Paley→Interval happens between p=11 and p=19.
+  (p=13 ≡ 1 mod 4 is outside the Paley domain.)
+
+DONE.
