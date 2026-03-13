@@ -1,0 +1,200 @@
+======================================================================
+PART 1: LARGE SAMPLE — CONFIRM THE 100% CYCLIC RATE
+======================================================================
+  ... 1000/5000, cyclic=8+0, trans=5+20
+  ... 2000/5000, cyclic=18+0, trans=14+38
+  ... 3000/5000, cyclic=28+0, trans=17+60
+  ... 4000/5000, cyclic=33+0, trans=24+88
+
+Cyclic external: changing=48, preserving=0
+  Rate: 100.0%
+  CONFIRMED 100%
+
+Transitive external: changing=34, preserving=108
+  Rate: 23.9%
+
+======================================================================
+PART 2: TRANSITIVE EXT — WHAT DISTINGUISHES CHANGING FROM PRESERVING?
+======================================================================
+
+Total transitive: 142, changing: 34, preserving: 108
+
+--- n_beats_source (how many subset vertices beat ext-source) ---
+  n=0: changing=0, preserving=22, rate=0.0%
+  n=2: changing=20, preserving=86, rate=18.9%
+  n=4: changing=14, preserving=0, rate=100.0%
+
+--- n_beaten_by_sink ---
+  n=0: changing=0, preserving=31, rate=0.0%
+  n=2: changing=14, preserving=77, rate=15.4%
+  n=4: changing=20, preserving=0, rate=100.0%
+
+--- Cross-tab (n_beats_source, n_beaten_by_sink) ---
+  beats_source=0, beaten_by_sink=2: changing=0, preserving=22, rate=0.0%
+  beats_source=2, beaten_by_sink=0: changing=0, preserving=31, rate=0.0%
+  beats_source=2, beaten_by_sink=2: changing=0, preserving=55, rate=0.0%
+  beats_source=2, beaten_by_sink=4: changing=20, preserving=0, rate=100.0%
+  beats_source=4, beaten_by_sink=2: changing=14, preserving=0, rate=100.0%
+
+--- source_from_low, source_from_high ---
+  low_beat_source=0, high_beat_source=0: changing=0, preserving=22, rate=0.0%
+  low_beat_source=1, high_beat_source=1: changing=20, preserving=86, rate=18.9%
+  low_beat_source=2, high_beat_source=2: changing=14, preserving=0, rate=100.0%
+
+--- delta_comp distribution ---
+  Changing: Counter({-1: 22, 1: 12})
+  Preserving: Counter({0: 108})
+
+======================================================================
+PART 3: THE RANK-1 COMPLETION MATRIX ANALYSIS
+======================================================================
+
+For transitive ext: C[d][a] is rank-1 (v_out * v_in^T)
+delta_comp = f(S') - f(S) where f = bilinear form on HP endpoint pairs
+
+Ham path endpoint distribution for (1,1,2,2) tournaments:
+  bits=4: low=[0, 1], high=[2, 3], starts: 2L+3H, ends: 3L+2H
+  bits=6: low=[1, 2], high=[0, 3], starts: 2L+3H, ends: 3L+2H
+  bits=12: low=[0, 2], high=[1, 3], starts: 2L+3H, ends: 3L+2H
+  bits=13: low=[1, 2], high=[0, 3], starts: 2L+3H, ends: 3L+2H
+  bits=17: low=[0, 1], high=[2, 3], starts: 2L+3H, ends: 3L+2H
+  bits=18: low=[0, 2], high=[1, 3], starts: 2L+3H, ends: 3L+2H
+  bits=19: low=[1, 2], high=[0, 3], starts: 2L+3H, ends: 3L+2H
+  bits=20: low=[0, 3], high=[1, 2], starts: 2L+3H, ends: 3L+2H
+  bits=21: low=[1, 3], high=[0, 2], starts: 2L+3H, ends: 3L+2H
+
+======================================================================
+PART 4: THE EXACT CONDITION FOR TRANSITIVE EXT
+======================================================================
+
+Distribution of |B_s| and |B_k| for transitive ext:
+(B_s = subset vertices beating ext-source, B_k = beaten by ext-sink)
+  |B_s|=0, |B_k|=2: changing=0, preserving=22, rate=0.0%
+  |B_s|=2, |B_k|=0: changing=0, preserving=31, rate=0.0%
+  |B_s|=2, |B_k|=2: changing=0, preserving=55, rate=0.0%
+  |B_s|=2, |B_k|=4: changing=20, preserving=0, rate=100.0%
+  |B_s|=4, |B_k|=2: changing=14, preserving=0, rate=100.0%
+
+B_s intersection with low/high vertices:
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  CHANGE: |B_s|=4, B_s_low=2, B_s_high=2, |B_k|=2, B_k_low=1, B_k_high=1, delta=-1
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=0, B_k_low=0, B_k_high=0, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  CHANGE: |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=4, B_k_low=2, B_k_high=2, delta=1
+  CHANGE: |B_s|=4, B_s_low=2, B_s_high=2, |B_k|=2, B_k_low=1, B_k_high=1, delta=1
+  CHANGE: |B_s|=4, B_s_low=2, B_s_high=2, |B_k|=2, B_k_low=1, B_k_high=1, delta=-1
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=0, B_k_low=0, B_k_high=0, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=0, B_k_low=0, B_k_high=0, delta=0
+  KEEP  : |B_s|=0, B_s_low=0, B_s_high=0, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=0, B_k_low=0, B_k_high=0, delta=0
+  KEEP  : |B_s|=2, B_s_low=1, B_s_high=1, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=0, B_s_low=0, B_s_high=0, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+  KEEP  : |B_s|=0, B_s_low=0, B_s_high=0, |B_k|=2, B_k_low=1, B_k_high=1, delta=0
+
+======================================================================
+PART 5: REFINED CROSS-TAB — B_s/B_k vs LOW/HIGH
+======================================================================
+
+bs_low bs_hi bk_low bk_hi changing  preserv     rate
+     0     0      1     1        0       22     0.0%
+     1     1      0     0        0       31     0.0%
+     1     1      1     1        0       55     0.0%
+     1     1      2     2       20        0   100.0%
+     2     2      1     1       14        0   100.0%
+
+======================================================================
+PART 6: THE COMPLETION FORMULA AS BILINEAR PAIRING
+======================================================================
+Start/end frequencies by low/high status:
+
+  bits=4: low=[0, 1], high=[2, 3]
+    v=0 (L): starts=1, ends=1
+    v=1 (L): starts=1, ends=2
+    v=2 (H): starts=2, ends=1
+    v=3 (H): starts=1, ends=1
+  After reversal: new_low=[2, 3], new_high=[0, 1]
+    v=0 (H): starts=1, ends=1
+    v=1 (H): starts=2, ends=1
+    v=2 (L): starts=1, ends=2
+    v=3 (L): starts=1, ends=1
+
+  bits=12: low=[0, 2], high=[1, 3]
+    v=0 (L): starts=1, ends=1
+    v=1 (H): starts=2, ends=1
+    v=2 (L): starts=1, ends=2
+    v=3 (H): starts=1, ends=1
+  After reversal: new_low=[1, 3], new_high=[0, 2]
+    v=0 (H): starts=1, ends=1
+    v=1 (L): starts=1, ends=2
+    v=2 (H): starts=2, ends=1
+    v=3 (L): starts=1, ends=1
+
+  bits=17: low=[0, 1], high=[2, 3]
+    v=0 (L): starts=1, ends=2
+    v=1 (L): starts=1, ends=1
+    v=2 (H): starts=2, ends=1
+    v=3 (H): starts=1, ends=1
+  After reversal: new_low=[2, 3], new_high=[0, 1]
+    v=0 (H): starts=2, ends=1
+    v=1 (H): starts=1, ends=1
+    v=2 (L): starts=1, ends=2
+    v=3 (L): starts=1, ends=1
+
+======================================================================
+PART 7: SEARCH FOR PERFECT TRANSITIVE PREDICTOR
+======================================================================
+
+   bs_type    bk_type   changing    preserv     rate
+     empty      mixed          0         22     0.0%
+     mixed      empty          0         31     0.0%
+     mixed      mixed         34         55    38.2%
+
+--- Endpoint pairs by (end_type, start_type) ---
+  bits=4: {('L', 'L'): 1, ('H', 'L'): 1, ('L', 'H'): 2, ('H', 'H'): 1}
+    After: {('H', 'L'): 2, ('L', 'L'): 1, ('L', 'H'): 1, ('H', 'H'): 1}
+    Delta (LL): 0, (LH): -1, (HL): 1, (HH): 0
+  bits=12: {('L', 'L'): 1, ('L', 'H'): 2, ('H', 'H'): 1, ('H', 'L'): 1}
+    After: {('H', 'L'): 2, ('L', 'H'): 1, ('L', 'L'): 1, ('H', 'H'): 1}
+    Delta (LL): 0, (LH): -1, (HL): 1, (HH): 0
+  bits=17: {('H', 'L'): 1, ('L', 'L'): 1, ('H', 'H'): 1, ('L', 'H'): 2}
+    After: {('L', 'L'): 1, ('H', 'L'): 2, ('L', 'H'): 1, ('H', 'H'): 1}
+    Delta (LL): 0, (LH): -1, (HL): 1, (HH): 0
+
+======================================================================
+PART 8: UNIVERSAL ENDPOINT TYPE DISTRIBUTION
+======================================================================
+Universal endpoint type distribution across all 24 labeled (1,1,2,2) tournaments:
+  {('H', 'H'): 1, ('H', 'L'): 1, ('L', 'H'): 2, ('L', 'L'): 1}: 24 tournaments
+
+  This means: for ANY (1,1,2,2) tournament:
+  - 1 endpoint pair has (end=L, start=L)
+  - 1 endpoint pair has (end=H, start=L)
+  - 1 endpoint pair has (end=L, start=H)
+  - 2 endpoint pairs have (end=H, start=H)
+  (Or the symmetric variant)
+
+  After reversal (L and H swap roles):
+  - 2 pairs (L,L), 1 pair (L,H), 1 pair (H,L), 1 pair (H,H)
+  i.e., (L,L) goes 1->2, (H,H) goes 2->1
+
+  So for B_s x B_k bilinear form:
+  If B_s=low, B_k=low: delta = (end=L,start=L) change = +1
+  If B_s=high, B_k=high: delta = (end=H,start=H) change = -1
+  If B_s=low, B_k=high: delta = (end=L,start=H) change = 0
+  If B_s=high, B_k=low: delta = (end=H,start=L) change = 0
+  Mixed B_s/B_k: depends on specifics
+
+  VERIFICATION against actual data:
+
+  Category counts:
+    B_s=empty, B_k=mixed: 22
+    B_s=mixed, B_k=empty: 31
+    B_s=mixed, B_k=mixed: 89
+
+Done.
