@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S61 (cont'd) — 2026-03-13: c5 Lambda Formula + Sigma-Algebra Hierarchy + Witness Matrix
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S61 (context window 3+)
+**Summary of work:**
+- **THM-173 PROVED**: c5_dir = sum over C(n,5) subsets of f(histogram of restricted lambda). 9-entry lookup table. Verified n=5 exhaustive, n=6 (500/500), n=7 (200/200). This PROVES dc5=0 for all lambda-preserving atoms.
+- **SIGMA-ALGEBRA HIERARCHY discovered**: Score < Lambda < (Lambda,sigma) < A. Lambda determines c3,c5 (not c7). (Lambda,sigma) determines c3,c5,c7. Vitali atoms preserve lambda but NEVER sigma (0/123).
+- **WITNESS MATRIX STRUCTURE**: n x C(n,2) binary matrix with rigid 24-entry change pattern under Vitali atoms. Always rank 3. Doubly-balanced (all row AND column sums preserved). Delta(k) preserved.
+- **dc7 NOT first-order**: Cannot be expressed as linear function of sigma changes or witness diff.
+- **Key formulas**: lambda_V(u,v) = lambda(u,v) - witness(k,u,v). sigma + lambda determines {A^2[u][v], A^2[v][u]} as multiset.
+**New contributions:** THM-173, HYP-847-853. Scripts: c5_formula_*.py, sigma_algebra_hierarchy.py, witness_matrix_deep.py, witness_rank3_decomp.py
+**Unresolved threads:**
+1. **Does (lambda, sigma) determine c9?** — the next level of the hierarchy
+2. **Prove rank-3 universality** of witness diff
+3. **Express dc7 as function of tournament + diff** — higher-order expansion needed
+4. **Engineering**: 9-entry lookup table for fast c5 computation
+
 ## opus-2026-03-13-S71c (cont'd) — 2026-03-13: Paley Betti Formula + QR Eigenspace Decomposition
 
 **Account:** opus
