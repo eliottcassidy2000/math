@@ -1,0 +1,336 @@
+======================================================================
+VITALI OVERLAP HIDDEN DIMENSION ANALYSIS
+======================================================================
+
+============================================================
+  H=109, c7=8 (bits=4728)
+============================================================
+  H = 109
+  3-cycle vertex sets: 11, directed: 11
+  5-cycle vertex sets: 15, directed: 23
+  7-cycle vertex sets: 1, directed: 8
+
+  3-cycle orientations: +1=1, -1=10
+
+  --- 3-CYCLE OVERLAP WEIGHT MATRIX ---
+    overlap=0: 6 pairs
+    overlap=1: 32 pairs
+    overlap=2: 17 pairs
+
+  --- 3-CYCLE x 5-CYCLE OVERLAP ---
+    overlap=1: 21 pairs
+    overlap=2: 88 pairs
+    overlap=3: 56 pairs
+
+  --- 5-CYCLE x 5-CYCLE OVERLAP ---
+    overlap=3: 48 pairs
+    overlap=4: 57 pairs
+
+  --- PER-5-CYCLE-VERTEX-SET DETAILS ---
+    [0, 1, 2, 3, 4]: 1 directed 5-cycles
+    [0, 1, 2, 3, 5]: 1 directed 5-cycles
+    [0, 1, 2, 3, 6]: 1 directed 5-cycles
+    [0, 1, 2, 4, 5]: 3 directed 5-cycles
+    [0, 1, 2, 4, 6]: 2 directed 5-cycles
+    [0, 1, 2, 5, 6]: 1 directed 5-cycles
+    [0, 1, 3, 4, 5]: 2 directed 5-cycles
+    [0, 1, 3, 4, 6]: 1 directed 5-cycles
+    [0, 1, 3, 5, 6]: 2 directed 5-cycles
+    [0, 1, 4, 5, 6]: 1 directed 5-cycles
+    [0, 2, 3, 4, 5]: 2 directed 5-cycles
+    [0, 2, 3, 4, 6]: 2 directed 5-cycles
+    [0, 2, 3, 5, 6]: 1 directed 5-cycles
+    [0, 3, 4, 5, 6]: 1 directed 5-cycles
+    [1, 2, 3, 4, 5]: 2 directed 5-cycles
+
+  --- OVERLAP ENERGY ---
+    3-cycle overlap energy (sum W^2): 100
+    3-cycle overlap linear (sum W): 66
+
+  --- SIGNED OVERLAP (orientation-weighted) ---
+    overlap=0: sign_sum=+2 (of 6 pairs)
+    overlap=1: sign_sum=+22 (of 32 pairs)
+    overlap=2: sign_sum=+11 (of 17 pairs)
+    TOTAL signed overlap: +35
+
+  --- VERTEX PARTICIPATION ---
+    3-cycles: [7, 5, 4, 5, 5, 4, 3]
+    5-cycles: [14, 11, 10, 11, 10, 10, 9]
+    7-cycles: [trivially all 7 vertices in each of 8 directed cycles]
+
+  --- OVERLAP GRAPHS AT EACH WEIGHT LEVEL ---
+    W=0: 6 edges, deg_seq=(0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2)
+    W=1: 32 edges, deg_seq=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8)
+    W=2: 17 edges, deg_seq=(2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4)
+
+  --- LAMBDA-0 EDGES (non-3-cycle edges) ---
+    Lambda-0 edges: [(4, 6), (5, 6)]
+      (4,6): in 5 5-cycle vertex sets
+      (5,6): in 5 5-cycle vertex sets
+
+  --- HIDDEN PARITY ---
+    c7_dir = 8
+    c7_dir mod 2 = 0
+    alpha_1 = c3+c5+c7 = 11+23+8 = 42
+    alpha_1 mod 2 = 0
+    alpha_2 (disjoint 3-cycle pairs) = 6
+    H = 1 + 2*42 + 4*6 = 109
+
+============================================================
+  H=111, c7=9 (bits=4658)
+============================================================
+  H = 111
+  3-cycle vertex sets: 11, directed: 11
+  5-cycle vertex sets: 15, directed: 23
+  7-cycle vertex sets: 1, directed: 9
+
+  3-cycle orientations: +1=1, -1=10
+
+  --- 3-CYCLE OVERLAP WEIGHT MATRIX ---
+    overlap=0: 6 pairs
+    overlap=1: 32 pairs
+    overlap=2: 17 pairs
+
+  --- 3-CYCLE x 5-CYCLE OVERLAP ---
+    overlap=1: 21 pairs
+    overlap=2: 88 pairs
+    overlap=3: 56 pairs
+
+  --- 5-CYCLE x 5-CYCLE OVERLAP ---
+    overlap=3: 48 pairs
+    overlap=4: 57 pairs
+
+  --- PER-5-CYCLE-VERTEX-SET DETAILS ---
+    [0, 1, 2, 3, 4]: 1 directed 5-cycles
+    [0, 1, 2, 3, 5]: 2 directed 5-cycles
+    [0, 1, 2, 3, 6]: 1 directed 5-cycles
+    [0, 1, 2, 4, 5]: 2 directed 5-cycles
+    [0, 1, 2, 4, 6]: 1 directed 5-cycles
+    [0, 1, 2, 5, 6]: 1 directed 5-cycles
+    [0, 1, 3, 4, 5]: 1 directed 5-cycles
+    [0, 1, 3, 4, 6]: 1 directed 5-cycles
+    [0, 1, 3, 5, 6]: 2 directed 5-cycles
+    [0, 1, 4, 5, 6]: 2 directed 5-cycles
+    [0, 2, 3, 4, 5]: 2 directed 5-cycles
+    [0, 2, 3, 4, 6]: 2 directed 5-cycles
+    [0, 2, 4, 5, 6]: 1 directed 5-cycles
+    [0, 3, 4, 5, 6]: 1 directed 5-cycles
+    [1, 2, 3, 4, 5]: 3 directed 5-cycles
+
+  --- OVERLAP ENERGY ---
+    3-cycle overlap energy (sum W^2): 100
+    3-cycle overlap linear (sum W): 66
+
+  --- SIGNED OVERLAP (orientation-weighted) ---
+    overlap=0: sign_sum=+4 (of 6 pairs)
+    overlap=1: sign_sum=+22 (of 32 pairs)
+    overlap=2: sign_sum=+9 (of 17 pairs)
+    TOTAL signed overlap: +35
+
+  --- VERTEX PARTICIPATION ---
+    3-cycles: [7, 5, 4, 4, 5, 5, 3]
+    5-cycles: [14, 11, 10, 10, 11, 10, 9]
+    7-cycles: [trivially all 7 vertices in each of 9 directed cycles]
+
+  --- OVERLAP GRAPHS AT EACH WEIGHT LEVEL ---
+    W=0: 6 edges, deg_seq=(0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2)
+    W=1: 32 edges, deg_seq=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8)
+    W=2: 17 edges, deg_seq=(1, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4)
+
+  --- LAMBDA-0 EDGES (non-3-cycle edges) ---
+    Lambda-0 edges: [(2, 6), (5, 6)]
+      (2,6): in 5 5-cycle vertex sets
+      (5,6): in 5 5-cycle vertex sets
+
+  --- HIDDEN PARITY ---
+    c7_dir = 9
+    c7_dir mod 2 = 1
+    alpha_1 = c3+c5+c7 = 11+23+9 = 43
+    alpha_1 mod 2 = 1
+    alpha_2 (disjoint 3-cycle pairs) = 6
+    H = 1 + 2*43 + 4*6 = 111
+
+
+======================================================================
+COMPARATIVE ANALYSIS: WHAT DIFFERS BETWEEN c7=8 and c7=9?
+======================================================================
+
+  c3_count: 11 vs 11 -> delta = 0
+  c5_count: 23 vs 23 -> delta = 0
+  c7_count: 8 vs 9 -> delta = 1
+  alpha_1:  42 vs 43 -> delta = 1
+  alpha_2:  6 vs 6 -> delta = 0
+
+  3-cycle overlap distribution:
+    overlap=0: 6 vs 6 (delta=+0)
+    overlap=1: 32 vs 32 (delta=+0)
+    overlap=2: 17 vs 17 (delta=+0)
+
+  Signed overlap by weight level:
+    overlap=0: +2 vs +4 (delta=+2) <-- DIFFERENT
+    overlap=1: +22 vs +22 (delta=+0)
+    overlap=2: +11 vs +9 (delta=-2) <-- DIFFERENT
+    overlap=3: +0 vs +0 (delta=+0)
+
+  5-cycle vertex set comparison:
+    [0, 1, 2, 3, 5]: 1 vs 2 (delta=+1)
+    [0, 1, 2, 4, 5]: 3 vs 2 (delta=-1)
+    [0, 1, 2, 4, 6]: 2 vs 1 (delta=-1)
+    [0, 1, 3, 4, 5]: 2 vs 1 (delta=-1)
+    [0, 1, 4, 5, 6]: 1 vs 2 (delta=+1)
+    [0, 2, 3, 5, 6]: 1 vs 0 (delta=-1)
+    [0, 2, 4, 5, 6]: 0 vs 1 (delta=+1)
+    [1, 2, 3, 4, 5]: 2 vs 3 (delta=+1)
+
+  5-cycle vertex sets: 13 same, 8 different
+
+
+======================================================================
+THE {2,1,0} FILTRATION AND THE HIDDEN DIMENSION
+======================================================================
+
+The overlap weight W(C_i, C_j) = |V(C_i) intersection V(C_j)| defines
+a graded structure on pairs of 3-cycles:
+
+  W = 2: "strongly conflicting" (2 shared vertices out of 3)
+         These pairs share an EDGE of the tournament.
+         Lambda_{uv} counts exactly how many 3-cycles contain edge (u,v).
+
+  W = 1: "weakly conflicting" (1 shared vertex)
+         These pairs share a VERTEX but not an edge.
+
+  W = 0: "independent" (disjoint)
+         These pairs are non-adjacent in Omega(T).
+         Alpha_2 = #{W=0 pairs}.
+
+The lambda graph captures the W=2 structure completely (lambda_{uv} =
+number of 3-cycles containing edge (u,v), and two 3-cycles with overlap 2
+share exactly one edge).
+
+THEOREM: Lambda captures W=2 and W=0 counts exactly. So:
+  - |{pairs with W=2}| = sum_{u<v} C(lambda_{uv}, 2) [depends only on lambda]
+  - |{pairs with W=0}| = alpha_2 [depends only on lambda at n<=8]
+  - |{pairs with W=1}| = C(c3,2) - |W=2| - |W=0| [determined by above]
+
+So the TOTAL overlap weight distribution {2,1,0} is lambda-determined!
+This means the hidden dimension (c7_dir) is NOT in the overlap weights
+of 3-cycles at all. It's in the ORIENTATIONS of 5-cycles.
+
+  H=109, c7=8: W=2 from lambda = 17, direct = 17, match = True
+  H=111, c7=9: W=2 from lambda = 17, direct = 17, match = True
+
+
+======================================================================
+5-CYCLE ORIENTATION STRUCTURE: WHERE c7 HIDES
+======================================================================
+
+Since the {2,1,0} overlap weights on 3-cycles are lambda-determined,
+the hidden dimension must live in the 5-cycle or 7-cycle orientations.
+
+For each 5-vertex subset S, the sub-tournament T|_S has some number
+of directed 5-cycles. This number can be 0, 1, 2, or 3 (max for 5-cycle
+types in a 5-vertex tournament).
+
+The 7-cycle count (c7_dir) is the number of directed Hamiltonian cycles
+on the full 7 vertices. It equals 2 * (# undirected HC) if all HCs go
+in pairs, but for tournaments, each undirected HC has exactly one
+direction as a directed HC... wait, no: in a tournament, each undirected
+HC has EXACTLY ONE direction that is a valid directed path.
+
+So c7_dir = number of orientations of the complete graph's Hamiltonian
+cycles that are consistent with the tournament.
+
+
+  H=109, c7=8 (bits=4728):
+    [0, 1, 2, 3, 4]: c3=4, c5=1, scores=[1, 2, 2, 2, 3]
+    [0, 1, 2, 3, 5]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 2, 3, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 2, 4, 5]: c3=4, c5=3, scores=[1, 2, 2, 2, 3]
+    [0, 1, 2, 4, 6]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 1, 2, 5, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 3, 4, 5]: c3=5, c5=2, scores=[2, 2, 2, 2, 2]
+    [0, 1, 3, 4, 6]: c3=4, c5=1, scores=[1, 2, 2, 2, 3]
+    [0, 1, 3, 5, 6]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 1, 4, 5, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 2, 3, 4, 5]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 2, 3, 4, 6]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 2, 3, 5, 6]: c3=4, c5=1, scores=[1, 2, 2, 2, 3]
+    [0, 2, 4, 5, 6]: c3=2, c5=0, scores=[0, 2, 2, 3, 3]
+    [0, 3, 4, 5, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [1, 2, 3, 4, 5]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [1, 2, 3, 4, 6]: c3=2, c5=0, scores=[1, 1, 2, 2, 4]
+    [1, 2, 3, 5, 6]: c3=1, c5=0, scores=[0, 2, 2, 2, 4]
+    [1, 2, 4, 5, 6]: c3=2, c5=0, scores=[1, 1, 2, 2, 4]
+    [1, 3, 4, 5, 6]: c3=2, c5=0, scores=[1, 1, 2, 2, 4]
+    [2, 3, 4, 5, 6]: c3=1, c5=0, scores=[1, 1, 1, 3, 4]
+
+  H=111, c7=9 (bits=4658):
+    [0, 1, 2, 3, 4]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 2, 3, 5]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 1, 2, 3, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 2, 4, 5]: c3=5, c5=2, scores=[2, 2, 2, 2, 2]
+    [0, 1, 2, 4, 6]: c3=4, c5=1, scores=[1, 2, 2, 2, 3]
+    [0, 1, 2, 5, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 3, 4, 5]: c3=4, c5=1, scores=[1, 2, 2, 2, 3]
+    [0, 1, 3, 4, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 1, 3, 5, 6]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 1, 4, 5, 6]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 2, 3, 4, 5]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 2, 3, 4, 6]: c3=4, c5=2, scores=[1, 2, 2, 2, 3]
+    [0, 2, 3, 5, 6]: c3=2, c5=0, scores=[0, 2, 2, 3, 3]
+    [0, 2, 4, 5, 6]: c3=3, c5=1, scores=[1, 1, 2, 3, 3]
+    [0, 3, 4, 5, 6]: c3=4, c5=1, scores=[1, 2, 2, 2, 3]
+    [1, 2, 3, 4, 5]: c3=4, c5=3, scores=[1, 2, 2, 2, 3]
+    [1, 2, 3, 4, 6]: c3=1, c5=0, scores=[0, 2, 2, 2, 4]
+    [1, 2, 3, 5, 6]: c3=2, c5=0, scores=[1, 1, 2, 2, 4]
+    [1, 2, 4, 5, 6]: c3=2, c5=0, scores=[1, 1, 2, 2, 4]
+    [1, 3, 4, 5, 6]: c3=2, c5=0, scores=[1, 1, 2, 2, 4]
+    [2, 3, 4, 5, 6]: c3=1, c5=0, scores=[1, 1, 1, 3, 4]
+
+
+======================================================================
+5-CYCLE CHIRALITY: orientation x multiplicity
+======================================================================
+
+  H=109, c7=8:
+    5-cycle chirality sum (perm sign): 5
+
+  H=111, c7=9:
+    5-cycle chirality sum (perm sign): 17
+
+
+======================================================================
+SIGNED ADJACENCY STRUCTURE: det and permanent
+======================================================================
+
+
+======================================================================
+SIGNED ADJACENCY DETERMINANTS
+======================================================================
+
+  H=109, c7=8:
+    det(S del 0) = 49, sqrt = 7.0
+    det(S del 1) = 1, sqrt = 1.0
+    det(S del 2) = 9, sqrt = 3.0
+    det(S del 3) = 49, sqrt = 7.0
+    det(S del 4) = 1, sqrt = 1.0
+    det(S del 5) = 9, sqrt = 3.0
+    det(S del 6) = 1, sqrt = 1.0
+    det(I+A) = 8
+    det(I+2A) = 169
+
+  H=111, c7=9:
+    det(S del 0) = 81, sqrt = 9.0
+    det(S del 1) = 1, sqrt = 1.0
+    det(S del 2) = 9, sqrt = 3.0
+    det(S del 3) = 9, sqrt = 3.0
+    det(S del 4) = 81, sqrt = 9.0
+    det(S del 5) = 1, sqrt = 1.0
+    det(S del 6) = 1, sqrt = 1.0
+    det(I+A) = 10
+    det(I+2A) = 361
+
+
+======================================================================
+DONE.
+======================================================================
