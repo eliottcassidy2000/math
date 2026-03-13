@@ -1,0 +1,192 @@
+======================================================================
+MORGAN-VOYCE POLYNOMIAL AND THE INTERVAL Q-POLYNOMIAL
+======================================================================
+
+--- PART 1: FIBONACCI ROW SUMS ---
+b(m, 1) = sum C(m+j, 2j) = F_{2m+1}
+  m= 1: b(m,1) =          2, F_3 =          2, match: True
+  m= 2: b(m,1) =          5, F_5 =          5, match: True
+  m= 3: b(m,1) =         13, F_7 =         13, match: True
+  m= 4: b(m,1) =         34, F_9 =         34, match: True
+  m= 5: b(m,1) =         89, F_11 =         89, match: True
+  m= 6: b(m,1) =        233, F_13 =        233, match: True
+  m= 7: b(m,1) =        610, F_15 =        610, match: True
+  m= 8: b(m,1) =       1597, F_17 =       1597, match: True
+  m= 9: b(m,1) =       4181, F_19 =       4181, match: True
+  m=10: b(m,1) =      10946, F_21 =      10946, match: True
+  m=11: b(m,1) =      28657, F_23 =      28657, match: True
+  m=12: b(m,1) =      75025, F_25 =      75025, match: True
+  m=13: b(m,1) =     196418, F_27 =     196418, match: True
+  m=14: b(m,1) =     514229, F_29 =     514229, match: True
+  m=15: b(m,1) =    1346269, F_31 =    1346269, match: True
+
+--- PART 2: SPECIAL VALUES ---
+b(m, x) at various x values:
+  m=1: b(m,-1)=       0, b(m,0)=  1, b(m,1)=       2, b(m,2)=         3, b(m,4)=           5
+  m=2: b(m,-1)=      -1, b(m,0)=  1, b(m,1)=       5, b(m,2)=        11, b(m,4)=          29
+  m=3: b(m,-1)=      -1, b(m,0)=  1, b(m,1)=      13, b(m,2)=        41, b(m,4)=         169
+  m=4: b(m,-1)=       0, b(m,0)=  1, b(m,1)=      34, b(m,2)=       153, b(m,4)=         985
+  m=5: b(m,-1)=       1, b(m,0)=  1, b(m,1)=      89, b(m,2)=       571, b(m,4)=        5741
+  m=6: b(m,-1)=       1, b(m,0)=  1, b(m,1)=     233, b(m,2)=      2131, b(m,4)=       33461
+  m=7: b(m,-1)=       0, b(m,0)=  1, b(m,1)=     610, b(m,2)=      7953, b(m,4)=      195025
+  m=8: b(m,-1)=      -1, b(m,0)=  1, b(m,1)=    1597, b(m,2)=     29681, b(m,4)=     1136689
+  m=9: b(m,-1)=      -1, b(m,0)=  1, b(m,1)=    4181, b(m,2)=    110771, b(m,4)=     6625109
+
+--- PART 3: P_m(t) = t^m * b(m, -1/t) ---
+P_m(t) = sum_{j=0}^m (-1)^j C(m+j,2j) t^{m-j}
+       = t^m * sum_{j=0}^m C(m+j,2j) * (-1/t)^j
+       = t^m * b(m, -1/t)
+  m=3, k=1: Q_k^m * b(m,-1/Q_k) = 6.597547e-14
+  m=3, k=2: Q_k^m * b(m,-1/Q_k) = 8.302550e-16
+  m=3, k=3: Q_k^m * b(m,-1/Q_k) = 0.000000e+00
+  m=5, k=1: Q_k^m * b(m,-1/Q_k) = 4.749735e-11
+  m=5, k=2: Q_k^m * b(m,-1/Q_k) = 1.259081e-16
+  m=5, k=3: Q_k^m * b(m,-1/Q_k) = 1.700199e-14
+  m=5, k=4: Q_k^m * b(m,-1/Q_k) = -7.035480e-16
+  m=5, k=5: Q_k^m * b(m,-1/Q_k) = 5.980132e-16
+  m=8, k=1: Q_k^m * b(m,-1/Q_k) = 3.465630e-05
+  m=8, k=2: Q_k^m * b(m,-1/Q_k) = 1.375692e-16
+  m=8, k=3: Q_k^m * b(m,-1/Q_k) = 3.180560e-11
+  m=8, k=4: Q_k^m * b(m,-1/Q_k) = 8.681075e-16
+  m=8, k=5: Q_k^m * b(m,-1/Q_k) = 2.686030e-14
+  m=8, k=6: Q_k^m * b(m,-1/Q_k) = -5.293391e-16
+  m=8, k=7: Q_k^m * b(m,-1/Q_k) = 1.773577e-14
+  m=8, k=8: Q_k^m * b(m,-1/Q_k) = 7.671909e-16
+
+--- PART 4: DISCRIMINANT FROM MORGAN-VOYCE ---
+The Morgan-Voyce polynomial b(m,x) is related to Chebyshev U via:
+  b(m, x) = U_m(1 + x/2) / U_m(1)
+Wait, that's not right. Let me check the actual relation.
+
+Actually: b(m, x) is related to Chebyshev U via the substitution
+  x = -4*sin^2(theta/2) = 2*(cos(theta) - 1)
+Then b(m, 2*(cos(theta)-1)) = sin((m+1)*theta) / sin(theta) = U_m(cos(theta))
+Let's verify...
+
+  m=3:
+    theta=0.3: b(m, 2(cos-1)) = 0.503222, U_m(cos) = 3.153893, ratio = 0.159556
+    theta=0.7: b(m, 2(cos-1)) = -0.819942, U_m(cos) = 0.519992, ratio = -1.576836
+    theta=1.1: b(m, 2(cos-1)) = -0.890765, U_m(cos) = -1.067767, ratio = 0.834231
+    theta=1.5: b(m, 2(cos-1)) = 0.699868, U_m(cos) = -0.280117, ratio = -2.498482
+    theta=2.0: b(m, 2(cos-1)) = 1.395334, U_m(cos) = 1.088047, ratio = 1.282421
+
+  m=5:
+    theta=0.3: b(m, 2(cos-1)) = -0.080019, U_m(cos) = 3.295367, ratio = -0.024282
+    theta=0.7: b(m, 2(cos-1)) = -0.808411, U_m(cos) = -1.352921, ratio = 0.597530
+    theta=1.1: b(m, 2(cos-1)) = 1.141240, U_m(cos) = 0.349572, ratio = 3.264676
+    theta=1.5: b(m, 2(cos-1)) = -0.527202, U_m(cos) = 0.413153, ratio = -1.276044
+    theta=2.0: b(m, 2(cos-1)) = 0.008191, U_m(cos) = -0.590096, ratio = -0.013881
+
+  m=8:
+    theta=0.3: b(m, 2(cos-1)) = -0.839480, U_m(cos) = 1.446195, ratio = -0.580475
+    theta=0.7: b(m, 2(cos-1)) = 1.005996, U_m(cos) = 0.026100, ratio = 38.544331
+    theta=1.1: b(m, 2(cos-1)) = -1.169709, U_m(cos) = -0.513389, ratio = 2.278407
+    theta=1.5: b(m, 2(cos-1)) = 1.343723, U_m(cos) = 0.805803, ratio = 1.667558
+    theta=2.0: b(m, 2(cos-1)) = -0.509277, U_m(cos) = -0.825898, ratio = 0.616634
+
+--- PART 5: EXACT CHEBYSHEV RELATION ---
+Testing: b(m, x-2) = U_m(x/2) where U_m is Chebyshev of 2nd kind
+
+  m=3:
+    x=0.5: b(m,x-2) = -0.125000, U_m(x/2) = -0.875000, match: False
+    x=1.0: b(m,x-2) = -1.000000, U_m(x/2) = -1.000000, match: True
+    x=1.5: b(m,x-2) = -0.875000, U_m(x/2) = 0.375000, match: False
+    x=2.5: b(m,x-2) = 5.375000, U_m(x/2) = 10.625000, match: False
+    x=3.0: b(m,x-2) = 13.000000, U_m(x/2) = 21.000000, match: False
+
+  m=5:
+    x=0.5: b(m,x-2) = 0.718750, U_m(x/2) = 1.031250, match: False
+    x=1.0: b(m,x-2) = 1.000000, U_m(x/2) = 0.000000, match: False
+    x=1.5: b(m,x-2) = -0.718750, U_m(x/2) = -1.406250, match: False
+    x=2.5: b(m,x-2) = 21.343750, U_m(x/2) = 42.656250, match: False
+    x=3.0: b(m,x-2) = 89.000000, U_m(x/2) = 144.000000, match: False
+
+  m=8:
+    x=0.5: b(m,x-2) = 0.261719, U_m(x/2) = -0.667969, match: False
+    x=1.0: b(m,x-2) = -1.000000, U_m(x/2) = -0.000000, match: False
+    x=1.5: b(m,x-2) = 1.058594, U_m(x/2) = 0.332031, match: False
+    x=2.5: b(m,x-2) = 170.667969, U_m(x/2) = 341.332031, match: False
+    x=3.0: b(m,x-2) = 1597.000000, U_m(x/2) = 2584.000000, match: False
+
+--- PART 6: SIMPLER CHEBYSHEV RELATION ---
+From the OEIS: Morgan-Voyce b(n,x) relates to Chebyshev via:
+  b(n, x^2 - 2) = ... or
+  b(n, t) = (1/sqrt(t+4)) * ((sqrt(t+4) + sqrt(t))/2)^{2n+1} + symm
+
+Actually, let me just use the GF directly.
+GF: sum_m b(m,x) z^m = (1-z)/((1-z)^2 - xz)
+Setting z = 1/(t+1) might give the Q-polynomial generating function.
+
+Key insight: Our polynomial P_m(t) = t^m * b(m, -1/t)
+The ROOTS of P_m are Q_k = sin^2(pi*r(k)/p) / sin^2(pi*k/p)
+These are given by Q_k = -1/(-1/Q_k) where b(m, -1/Q_k) = 0
+So the ROOTS of b(m, -s) = 0 are s_k = 1/Q_k
+And sum(s_k) = e_{m-1}/e_m = (p-2)/1 = p-2
+This checks out: sum 1/Q_k = p-2 = 2m-1
+
+--- PART 7: FIBONACCI IMPLICATIONS ---
+Since e_j = C(m+j, 2j) and sum_j C(m+j, 2j) = F_{2m+1}:
+  sum e_j = F_{2m+1}
+This means: P_m(-1) = sum (-1)^j e_j * (-1)^{m-j} = (-1)^m * sum e_j = (-1)^m * F_{2m+1}
+I.e., prod(1 + Q_k) = F_{2m+1} (up to sign)
+  p=5, m=2: prod(1+Q_k) = 5.0000, F_5 = 5, match: True
+  p=7, m=3: prod(1+Q_k) = 13.0000, F_7 = 13, match: True
+  p=11, m=5: prod(1+Q_k) = 89.0000, F_11 = 89, match: True
+  p=13, m=6: prod(1+Q_k) = 233.0000, F_13 = 233, match: True
+  p=17, m=8: prod(1+Q_k) = 1597.0000, F_17 = 1597, match: True
+  p=19, m=9: prod(1+Q_k) = 4181.0000, F_19 = 4181, match: True
+  p=23, m=11: prod(1+Q_k) = 28657.0000, F_23 = 28657, match: True
+
+--- PART 8: b(m, -4) = prod(Q_k - 4) * (-1)^m ---
+P_m(4) = 4^m * b(m, -1/4)
+This equals prod(4 - Q_k)
+  p=5, m=2: prod(4-Q_k) = 5.0000, P_m(4) = 5.0000, b(m,-1/4) = 0.312500
+  p=7, m=3: prod(4-Q_k) = -13.0000, P_m(4) = -13.0000, b(m,-1/4) = -0.203125
+  p=11, m=5: prod(4-Q_k) = -989.0000, P_m(4) = -989.0000, b(m,-1/4) = -0.965820
+  p=13, m=6: prod(4-Q_k) = -4187.0000, P_m(4) = -4187.0000, b(m,-1/4) = -1.022217
+  p=17, m=8: prod(4-Q_k) = -27403.0000, P_m(4) = -27403.0000, b(m,-1/4) = -0.418137
+  p=19, m=9: prod(4-Q_k) = 23939.0000, P_m(4) = 23939.0000, b(m,-1/4) = 0.091320
+
+--- PART 9: THE BIG PICTURE ---
+
+  THEOREM (INTERVAL Q-POLYNOMIAL = MORGAN-VOYCE):
+  For the Interval circulant tournament T_p with S = {1,...,m}, m=(p-1)/2:
+
+  1. The Fourier magnitudes Q_k = |S_hat(k)|^2 have ESFs:
+     e_j(Q_1,...,Q_m) = C(m+j, 2j)  (Morgan-Voyce coefficient)
+
+  2. The characteristic polynomial of Q_1,...,Q_m is:
+     P_m(t) = t^m * b(m, -1/t)
+     where b(m, x) = sum C(m+j,2j) x^j is the Morgan-Voyce polynomial.
+
+  3. COROLLARIES:
+     a) prod Q_k = 1             (constant term of P_m)
+     b) sum Q_k = m(m+1)/2       (Parseval)
+     c) sum 1/Q_k = p - 2        (sum of reciprocals)
+     d) prod(1 + Q_k) = F_{2m+1} (Fibonacci!)
+     e) disc = p^{m-1}           (discriminant)
+
+  4. CHEBYSHEV PROOF:
+     Q_k = (1 - T_m(cos(2*pi*k/p))) / (1 - cos(2*pi*k/p))
+     where T_m is the Chebyshev polynomial of the first kind.
+     The cos(2*pi*k/p) are roots of the minimal polynomial Psi_p,
+     and the resultant Res(Psi_p(x), (1-x)*t - (1-T_m(x))) = P_m(t).
+
+  5. WHY FIBONACCI?
+     prod(1 + Q_k) = prod(1 + sin^2(pi*r(k)/p)/sin^2(pi*k/p))
+                   = prod (sin^2(pi*k/p) + sin^2(pi*r(k)/p)) / sin^2(pi*k/p)
+     This equals F_{2m+1} by the Morgan-Voyce identity b(m,1) = F_{2m+1}.
+     The Fibonacci number counts NONDECREASING DYCK PATHS of semilength m+1.
+
+--- COMPLETE TABLE ---
+   p   m    sum Q  prod Q  sum 1/Q  prod(1+Q)    F(2m+1)           disc
+----------------------------------------------------------------------
+   5   2      3.0     1.0      3.0        5.0          5              5
+   7   3      6.0     1.0      5.0       13.0         13             49
+  11   5     15.0     1.0      9.0       89.0         89          14641
+  13   6     21.0     1.0     11.0      233.0        233         371293
+  17   8     36.0     1.0     15.0     1597.0       1597      410338673
+  19   9     45.0     1.0     17.0     4181.0       4181    16983563041
+  23  11     66.0     1.0     21.0    28657.0      28657 41426511213646
+  29  14    105.0     1.0     27.0   514229.0     514229 10260628712944773120
+  31  15    120.0     1.0     29.0  1346269.0    1346269 756943935221617262592
