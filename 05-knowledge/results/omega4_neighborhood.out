@@ -1,0 +1,32 @@
+======================================================================
+OMEGA_4 NEIGHBORHOOD FORMULA: n = 6
+======================================================================
+  Computing for all tournaments...
+    5000/32768...
+    10000/32768...
+    15000/32768...
+    20000/32768...
+    25000/32768...
+    30000/32768...
+  Done computing.
+
+  Omega_4 = sum per_vertex: 0 mismatches
+
+  C(n,5) = 6
+
+  Correlations with Omega_4:
+    corr(sum_c3_in, Omega_4) = -0.404061
+    corr(sum_c3_out, Omega_4) = -0.404061
+    corr(sum_o3_in, Omega_4) = -0.198390
+    corr(sum_o3_out, Omega_4) = -0.198390
+
+  Linear fit: Omega_4 = -1.0956*Σc3_in + -1.0956*Σc3_out + -0.3824*Σo3_in + -0.3824*Σo3_out + 10.8088
+  Max error: 6.580882
+
+  Simpler fit: Omega_4 = -1.0956*Σc3 + -0.3824*Σo3 + 10.8088
+  Max error: 6.580882
+
+  With t3: Omega_4 = -0.8214*Σc3 + 0.7143*Σo3 + 1.5536*t3 + -1.0714
+  Max error: 4.642857
+
+DONE.
