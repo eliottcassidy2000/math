@@ -31,11 +31,20 @@ Deep exploration of overlap weight structure in tournament 3-cycles. Discovered 
 8. **K(p) formula**: K = -9*c3*(p^2-9)/40 = -18p*C(m+2,4)/5 (alternative forms).
 
 **New contributions:** THM-155, scripts overlap_gauss_bridge.py, disj3_c5_theorem.py, local_5vertex_identity.py, K_closed_form.py, disj3_general_test.py, K_regularity_proof.py, K_trace_formula.py, K_algebraic_proof.py, K_full_proof.py, K_cancellation_mechanism.py
+**Extended session findings (context overflow #7):**
+9. **Product law fails at p=19**: sign(h_hat_H) = chi(ab) in only 9/36 pairs. Holds perfectly at p=7,11.
+10. **Per-cycle-length sign alternation at p=11**: sign(h_hat_{c_k}) = (-1)^{(k-3)/2} * chi(ab), PERFECT 35/35. c_5,c_9 anti-product; c_7,c_11 product law. Fails at p=7 (finite-size) and p=13 (within-class inconsistency).
+11. **Magnitude constant within resonance class**: All pairs with same q-resonance have identical |h_hat|. q and q^{-1} mod p also paired.
+12. **p=11 OCF anatomy**: 4 Z_p*-orbits with H in {92411, 93027, 93467, 95095}. alpha_2 Walsh FAILS product law; alpha_3 follows it. Degree-4: H,alpha_1 follow; alpha_2,alpha_3 FAIL.
+13. **D^2 coefficient of Re(z^k) is C(k,2)/2^{k-2} > 0 ALWAYS** — alternation comes from Gauss sum structure, not binomial expansion.
+
+**New hypotheses:** HYP-665 through HYP-670
 **Unresolved threads:**
 - Algebraic proof of tr(A^4) = 2*sum_mu2 + 2*sum_mu (verified but not formally proved)
 - Connection to Savchenko's cycle count formulas
 - Can the identity be extended to non-regular tournaments with a correction term?
-- 4-fold Gauss sum factorization: h4[c5]/G4 = -12 universal at p=11
+- Why does sign alternation hold perfectly at p=11 but fail at p=13?
+- What determines the sign within a resonance class at p>=13?
 
 ## opus-2026-03-13-S71 — 2026-03-13: MAJOR — Per-Eigenspace Betti Structure, chi(P_p)=p, QR Scaling Symmetry
 
