@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67j — 2026-03-13: Cross-Field Bridges — 10 connections to other domains
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67i (context recovery after compaction)
+**Summary of work:**
+- **EXACT PALEY DET FORMULA (THEOREM)**: det(I+A) = (p+1)^{(p+1)/2}/2^p for Paley P_p (p≡3 mod 4). Proved via Gauss sums: all nonzero eigenvalues have |λ_k| = √((p+1)/2). Verified for 13 primes.
+- **H LANDSCAPE: NO LOCAL OPTIMA at n=3,4,5 (HYP-734)**: Every local max is global max. Greedy ascent from ANY tournament reaches optimum in 2-3 steps.
+- **PHASE TRANSITION at n=6 (HYP-735)**: 720 spurious local maxima, ALL at H=37 (global=45), ALL with score (1,2,2,3,3,4), ALL at distance 2 from genuine max. Even-n symmetry breaking from D_m to S_{n/2}².
+- **6 cross-field bridges computed**: (1) Ising model — H is uniform spin glass on L(K_n); (2) Boolean complexity — equal influence, FKN sharp; (3) DPO rewriting — arc reversal commutativity = Fourier support; (4) Coding theory — tournament code [[10,6,2]]; (5) Markov mixing — spectral gap analysis; (6) Information theory — 85-100% of H from scores alone.
+- **Social choice connection**: H = ranking ambiguity (Kemeny), corr(H,Slater)≈0.88, Arrow's irrationality = degree-4 energy.
+- **Quantum tournament**: Pauli decomposition, Grover speedup 100x at n=8, VQE ansatz depth O(m), entangled ground state.
+- **Dihedral groups**: AGL(1,p) = Z_p ⋊ Z_m is generalized dihedral, chiral at p≡3 mod 4. Irreps: m 1-dim + 2 m-dim.
+- Considered arXiv:2409.01006 (Bajaj, hypergraph rewriting) — inspired DPO connection to arc reversals.
+
+**New contributions:** HYP-734-741, exact det formula, cross-field synthesis document, 7 scripts
+**Unresolved threads:** No-spurious-maxima at all odd n? Reidemeister torsion (HYP-731). Quantum algorithm exploiting degree-2 structure.
+
+---
+
 ## opus-2026-03-13-S67i — 2026-03-13: Fibonacci-Vitali-Ergodic Trinity — unified measurability framework
 
 **Account:** opus
