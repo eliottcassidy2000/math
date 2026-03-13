@@ -1,0 +1,25 @@
+======================================================================
+di3 ANALYSIS AT n=9: IS IT STRUCTURALLY ZERO?
+======================================================================
+  ... 1000/5000, found 4
+  ... 2000/5000, found 16
+  ... 3000/5000, found 26
+  ... 4000/5000, found 34
+
+Total H-changing examples: 42
+
+  delta_t3 distribution: {0: 42}
+  delta_dp (c3-c3 disjoint pairs): {0: 42}
+  delta_c3_vs: {0: 42}
+
+  delta_t3 = 0 always? True
+  delta_dp = 0 always? True
+  delta_c3_vs = 0 always? True
+
+  di3 = 0 STRUCTURALLY at n=9!
+  This means the c3 swap preserves disjoint triple counts.
+
+  t3_A values: {0: 4, 1: 6, 2: 6, 3: 2, 4: 5, 5: 3, 6: 4, 7: 5, 8: 3, 9: 2, 10: 1, 13: 1}
+  dp_A values (c3-c3 pairs): min=7, max=97
+
+Done.
