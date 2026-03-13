@@ -1,0 +1,283 @@
+======================================================================
+SPECTRAL TRANSFER PROOF DIRECTION — opus-2026-03-12-S67c
+======================================================================
+
+PART 1: H AS A FUNCTION OF THE SPECTRUM {Q_k}
+======================================================================
+
+Testing: H = F(Q_1,...,Q_m) for various functional forms
+
+p=7, m=3:
+  H IS determined by sorted Q spectrum
+  PAL: H=189, prod(1+Q)=27.0, prod(Q+2)=64.0
+       sum(Q²)=12.0, sum(log(1+Q))=3.2958
+  INT: H=175, prod(1+Q)=13.0, prod(Q+2)=43.0
+       sum(Q²)=26.0, sum(log(1+Q))=2.5649
+
+  Spectral invariants for each H-class at p=7:
+    other: H=175, e1=6.00, e2=5.00, E=19
+      PAL: H=189, e1=6.00, e2=12.00, E=15
+      INT: H=175, e1=6.00, e2=5.00, E=19
+
+p=11, m=5:
+  H IS determined by sorted Q spectrum
+  PAL: H=95095, prod(1+Q)=1024.0, prod(Q+2)=3125.0
+       sum(Q²)=45.0, sum(log(1+Q))=6.9315
+  INT: H=93027, prod(1+Q)=89.0, prod(Q+2)=683.0
+       sum(Q²)=155.0, sum(log(1+Q))=4.4886
+
+  Spectral invariants for each H-class at p=11:
+    other: H=93027, e1=15.00, e2=35.00, E=85
+      PAL: H=95095, e1=15.00, e2=90.00, E=65
+      INT: H=93027, e1=15.00, e2=35.00, E=85
+
+p=13, m=6:
+  H IS determined by sorted Q spectrum
+  INT: H=3711175, prod(1+Q)=233.0, prod(Q+2)=2731.0
+       sum(Q²)=301.0, sum(log(1+Q))=5.4510
+
+  Spectral invariants for each H-class at p=13:
+    other: H=3711175, e1=21.00, e2=70.00, E=146
+      INT: H=3711175, e1=21.00, e2=70.00, E=146
+
+======================================================================
+PART 2: CHARACTERISTIC POLYNOMIAL VALUES AND H
+======================================================================
+
+P_m(t) = prod(t - Q_k). Does P_m evaluated at special points give H?
+
+  other (H=175):
+    P(  0) =                -1.00  H/P =    -175.0000
+    P(  1) =                -1.00  H/P =    -175.0000
+    P(  2) =                -7.00  H/P =     -25.0000
+    P( -1) =               -13.00  H/P =     -13.4615
+    P( -2) =               -43.00  H/P =      -4.0698
+    P(  3) =               -13.00  H/P =     -13.4615
+    P(  4) =               -13.00  H/P =     -13.4615
+    P(  7) =                83.00  H/P =       2.1084
+    P(  6) =                29.00  H/P =       6.0345
+    P(  5) =                -1.00  H/P =    -175.0000
+
+    PAL (H=189):
+    P(  0) =                -8.00  H/P =     -23.6250
+    P(  1) =                -1.00  H/P =    -189.0000
+    P(  2) =                -0.00  H/P =          inf
+    P( -1) =               -27.00  H/P =      -7.0000
+    P( -2) =               -64.00  H/P =      -2.9531
+    P(  3) =                 1.00  H/P =     189.0000
+    P(  4) =                 8.00  H/P =      23.6250
+    P(  7) =               125.00  H/P =       1.5120
+    P(  6) =                64.00  H/P =       2.9531
+    P(  5) =                27.00  H/P =       7.0000
+
+    INT (H=175):
+    P(  0) =                -1.00  H/P =    -175.0000
+    P(  1) =                -1.00  H/P =    -175.0000
+    P(  2) =                -7.00  H/P =     -25.0000
+    P( -1) =               -13.00  H/P =     -13.4615
+    P( -2) =               -43.00  H/P =      -4.0698
+    P(  3) =               -13.00  H/P =     -13.4615
+    P(  4) =               -13.00  H/P =     -13.4615
+    P(  7) =                83.00  H/P =       2.1084
+    P(  6) =                29.00  H/P =       6.0345
+    P(  5) =                -1.00  H/P =    -175.0000
+
+  other (H=93027):
+    P(  0) =                -1.00  H/P =  -93027.0000
+    P(  1) =                 1.00  H/P =   93027.0000
+    P(  2) =               -23.00  H/P =   -4044.6522
+    P( -1) =               -89.00  H/P =   -1045.2472
+    P( -2) =              -683.00  H/P =    -136.2035
+    P(  5) =             -2531.00  H/P =     -36.7550
+    P(  6) =             -5059.00  H/P =     -18.3884
+    P( 11) =            -15269.00  H/P =      -6.0925
+    P( 10) =            -17711.00  H/P =      -5.2525
+    P(  9) =            -16039.00  H/P =      -5.8000
+
+    PAL (H=95095):
+    P(  0) =              -243.00  H/P =    -391.3374
+    P(  1) =               -32.00  H/P =   -2971.7188
+    P(  2) =                -1.00  H/P =  -95095.0000
+    P( -1) =             -1024.00  H/P =     -92.8662
+    P( -2) =             -3125.00  H/P =     -30.4304
+    P(  5) =                32.00  H/P =    2971.7187
+    P(  6) =               243.00  H/P =     391.3374
+    P( 11) =             32768.00  H/P =       2.9021
+    P( 10) =             16807.00  H/P =       5.6581
+    P(  9) =              7776.00  H/P =      12.2293
+
+    INT (H=93027):
+    P(  0) =                -1.00  H/P =  -93027.0000
+    P(  1) =                 1.00  H/P =   93027.0000
+    P(  2) =               -23.00  H/P =   -4044.6522
+    P( -1) =               -89.00  H/P =   -1045.2472
+    P( -2) =              -683.00  H/P =    -136.2035
+    P(  5) =             -2531.00  H/P =     -36.7550
+    P(  6) =             -5059.00  H/P =     -18.3884
+    P( 11) =            -15269.00  H/P =      -6.0925
+    P( 10) =            -17711.00  H/P =      -5.2525
+    P(  9) =            -16039.00  H/P =      -5.8000
+
+  other (H=3711175):
+    P(  0) =                 1.00  H/P = 3711175.0000
+    P(  1) =                 1.00  H/P = 3711175.0000
+    P(  2) =                -1.00  H/P = -3711175.0000
+    P( -1) =               233.00  H/P =   15927.7897
+    P( -2) =              2731.00  H/P =    1358.9070
+    P(  6) =            -42509.00  H/P =     -87.3033
+    P(  7) =            -93911.00  H/P =     -39.5180
+    P( 13) =          -1148159.00  H/P =      -3.2323
+    P( 12) =           -926771.00  H/P =      -4.0044
+    P( 11) =           -692119.00  H/P =      -5.3620
+
+    INT (H=3711175):
+    P(  0) =                 1.00  H/P = 3711175.0000
+    P(  1) =                 1.00  H/P = 3711175.0000
+    P(  2) =                -1.00  H/P = -3711175.0000
+    P( -1) =               233.00  H/P =   15927.7897
+    P( -2) =              2731.00  H/P =    1358.9070
+    P(  6) =            -42509.00  H/P =     -87.3033
+    P(  7) =            -93911.00  H/P =     -39.5180
+    P( 13) =          -1148159.00  H/P =      -3.2323
+    P( 12) =           -926771.00  H/P =      -4.0044
+    P( 11) =           -692119.00  H/P =      -5.3620
+
+======================================================================
+PART 3: H MODULAR ARITHMETIC (H mod small primes)
+======================================================================
+
+p=7:
+  other: H=           175  mod(2,3,4,5,7,8,p) = [1, 1, 3, 0, 0, 7, 0]
+    PAL: H=           189  mod(2,3,4,5,7,8,p) = [1, 0, 1, 4, 0, 5, 0]
+    INT: H=           175  mod(2,3,4,5,7,8,p) = [1, 1, 3, 0, 0, 7, 0]
+  All H mod 7: [0]
+
+p=11:
+  other: H=         93027  mod(2,3,4,5,7,8,p) = [1, 0, 3, 2, 4, 3, 0]
+    PAL: H=         95095  mod(2,3,4,5,7,8,p) = [1, 1, 3, 0, 0, 7, 0]
+    INT: H=         93027  mod(2,3,4,5,7,8,p) = [1, 0, 3, 2, 4, 3, 0]
+  All H mod 11: [0]
+
+p=13:
+  other: H=       3711175  mod(2,3,4,5,7,8,p) = [1, 1, 3, 0, 6, 7, 0]
+    INT: H=       3711175  mod(2,3,4,5,7,8,p) = [1, 1, 3, 0, 6, 7, 0]
+  All H mod 13: [0]
+
+======================================================================
+PART 4: REPRESENTATION PROFILE AND SPECTRAL DATA
+======================================================================
+
+kind-pasteur showed: sorted (r_S(0),...,r_S(p-1)) determines H.
+r_S(t) = |{(a,b) ∈ S×S : a+b ≡ t mod p}|
+
+Connection: r_S is the AUTOCORRELATION of the indicator of S.
+By convolution theorem: r_hat(k) = |S_hat(k)|² = Q_k
+So r_S and {Q_k} carry the same information!
+
+But the SORTED r_S and SORTED Q may carry different info
+because the sorting permutations may differ.
+
+  PAL, p=7:
+    r_S = [0, 1, 1, 2, 1, 2, 2]
+    sorted r_S = [0, 1, 1, 1, 2, 2, 2]
+    Q_k = [2. 2. 2.]
+    r_hat = [2. 2. 2.]
+    Match? True
+
+  INT, p=7:
+    r_S = [0, 0, 1, 2, 3, 2, 1]
+    sorted r_S = [0, 0, 1, 1, 2, 2, 3]
+    Q_k = [5.0489 0.308  0.6431]
+    r_hat = [5.0489 0.308  0.6431]
+    Match? True
+
+  PAL, p=11:
+    r_S = [0, 2, 3, 2, 2, 2, 3, 3, 3, 2, 3]
+    sorted r_S = [0, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3]
+    Q_k = [3. 3. 3. 3. 3.]
+    r_hat = [3. 3. 3. 3. 3.]
+    Match? True
+
+  INT, p=11:
+    r_S = [0, 0, 1, 2, 3, 4, 5, 4, 3, 2, 1]
+    sorted r_S = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5]
+    Q_k = [12.3435  0.2716  1.4487  0.3533  0.583 ]
+    r_hat = [12.3435  0.2716  1.4487  0.3533  0.583 ]
+    Match? True
+
+  INT, p=13:
+    r_S = [0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]
+    sorted r_S = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
+    Q_k = [17.2069  0.2652  1.9882  0.3189  0.7747  0.4462]
+    r_hat = [17.2069  0.2652  1.9882  0.3189  0.7747  0.4462]
+    Match? True
+
+======================================================================
+PART 5: IS H EXPRESSIBLE AS A DETERMINANT?
+======================================================================
+
+H(T) counts Hamiltonian paths. For circulant tournaments,
+H = p · h where h counts paths starting at vertex 0.
+
+Determinantal formula: h can sometimes be expressed as
+a permanent or pfaffian of a matrix built from the Q_k.
+
+p=7:
+  H(Int) = 175 = 7 * 25
+  h = 25
+  det(I + diag(Q)) = prod(1+Q) = 13.0 ≠ 175
+  Note: H is related to immanants of the adjacency matrix
+  Eigenvalues |λ|: [3.     2.247  0.555  0.8019]
+  sum |λ|^2 = 21.0 = m*(m+1)/2*p = 6.0
+
+p=11:
+  H(Int) = 93027 = 11 * 8457
+  h = 8457
+  det(I + diag(Q)) = prod(1+Q) = 89.0 ≠ 93027
+  Note: H is related to immanants of the adjacency matrix
+  Eigenvalues |λ|: [5.     3.5133 0.5211 1.2036 0.5944 0.7635]
+  sum |λ|^2 = 55.0 = m*(m+1)/2*p = 15.0
+
+
+======================================================================
+PART 6: SYNTHESIS — THE PROOF ROADMAP
+======================================================================
+
+Based on all discoveries, the proof should go:
+
+STEP 1: For circulant tournaments, H is determined by
+the representation profile r_S (kind-pasteur, verified)
+
+STEP 2: The representation profile is the inverse DFT of Q_k.
+So H = F(Q_1,...,Q_m) for some specific function F.
+
+STEP 3: The Walsh decomposition H = sum h_hat[S] chi_S(sigma)
+gives H as a polynomial in the sign variables sigma_k.
+The degree-4 term dominates for p >= 13.
+
+STEP 4: The degree-4 coefficient h_hat[{i,j,k,l}] depends on
+the 4-point additive correlation of S, which is measured by
+the zero-sum index W = |{±i±j±k±l ≡ 0 mod p}|.
+
+STEP 5: For the Interval S = {1,...,m}:
+  - E(S) = maximal additive energy (Freiman bound achieved)
+  - The representation profile r_S is a TRIANGLE function
+  - The degree-4 Walsh surplus is positive because the
+    triangle profile concentrates 4-point correlations
+
+STEP 6: The hyperplane condition (sum h_hat >= 0 for all
+flip sets) can be verified by showing the positive h_hat
+terms (from zero-sum quadruples) outweigh the negative ones.
+
+STEP 7: For p >= 13, the degree-4 energy ratio E4/E2 > 1,
+so the degree-4 terms control the H landscape.
+Combined with the hyperplane condition, this proves
+Interval maximizes H.
+
+MISSING PIECES:
+  A. Analytic formula for h_hat[{i,j,k,l}] in terms of
+     additive 4-point correlations (character sum identity)
+  B. Proof that zero-sum surplus is positive for all p >= 13
+  C. Proof that E4/E2 > 1 for all p >= 13
+  D. These reduce to character sum estimates (Weil-type bounds)
+
