@@ -1,0 +1,106 @@
+======================================================================
+ANALYSIS 1: n=5 — LABELED vs SORTED LAMBDA
+======================================================================
+Sorted lambda classes: 9
+Labeled lambda classes (up to isomorphism): 9
+Labeled lambda DETERMINES H at n=5!
+
+Labeled classes per sorted lambda class:
+
+======================================================================
+ANALYSIS 2: n=6 — DOES LABELED LAMBDA RESOLVE AMBIGUITIES?
+======================================================================
+Labeled lambda classes at n=6: 32
+Labeled lambda DETERMINES H at n=6!
+
+======================================================================
+ANALYSIS 3: n=7 AMBIGUOUS CASES — LABELED LAMBDA
+======================================================================
+Found 20160 tournaments in ambiguous class
+
+  H=25: 10080 tournaments
+    Lambda degree sequences: [(0, 4, 4, 4, 6, 8, 10)]
+
+  H=29: 10080 tournaments
+    Lambda degree sequences: [(0, 4, 4, 6, 6, 6, 10)]
+
+  Lambda degree sequence resolves: True
+  Edge type histogram resolves: True
+
+======================================================================
+ANALYSIS 4: VERTEX SCORE + LAMBDA DETERMINES EVERYTHING?
+======================================================================
+
+  H=25 (bits=371):
+    Out-degrees: [4, 2, 0, 3, 3, 4, 5]
+    Vertex 0 (d_out=4): lambda profile = [0, 1, 2, 2, 2, 3]
+    Vertex 1 (d_out=2): lambda profile = [0, 0, 0, 1, 1, 2]
+    Vertex 2 (d_out=0): lambda profile = [0, 0, 0, 0, 0, 0]
+    Vertex 3 (d_out=3): lambda profile = [0, 1, 1, 1, 1, 2]
+    Vertex 4 (d_out=3): lambda profile = [0, 1, 1, 1, 2, 3]
+    Vertex 5 (d_out=4): lambda profile = [0, 0, 0, 1, 1, 2]
+    Vertex 6 (d_out=5): lambda profile = [0, 0, 0, 1, 1, 2]
+
+  H=29 (bits=739):
+    Out-degrees: [3, 3, 0, 2, 4, 4, 5]
+    Vertex 0 (d_out=3): lambda profile = [0, 1, 2, 2, 2, 3]
+    Vertex 1 (d_out=3): lambda profile = [0, 0, 1, 1, 2, 2]
+    Vertex 2 (d_out=0): lambda profile = [0, 0, 0, 0, 0, 0]
+    Vertex 3 (d_out=2): lambda profile = [0, 0, 0, 1, 1, 2]
+    Vertex 4 (d_out=4): lambda profile = [0, 0, 1, 1, 1, 1]
+    Vertex 5 (d_out=4): lambda profile = [0, 0, 1, 1, 2, 2]
+    Vertex 6 (d_out=5): lambda profile = [0, 0, 1, 1, 1, 3]
+
+======================================================================
+ANALYSIS 5: DISJOINTNESS GEOMETRY
+======================================================================
+
+  H=25 (bits=371):
+    3-cycle vertex sets: [[0, 1, 4], [0, 4, 6], [0, 4, 5], [0, 3, 6], [0, 3, 5], [1, 3, 4]]
+    alpha_2 = 0
+    Vertex pairs with lambda=0: [(0, 2), (1, 2), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (5, 6)]
+
+  H=29 (bits=739):
+    3-cycle vertex sets: [[0, 4, 6], [0, 3, 6], [0, 5, 6], [0, 1, 5], [1, 4, 5], [0, 1, 3]]
+    DISJOINT: [0, 3, 6] and [1, 4, 5]
+    alpha_2 = 1
+    Vertex pairs with lambda=0: [(0, 2), (1, 2), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5)]
+
+======================================================================
+ANALYSIS 6: THE VITALI QUOTIENT — WHAT SORTING DESTROYS
+======================================================================
+
+THE VITALI STRUCTURE OF TOURNAMENT CYCLE GEOMETRY:
+
+MEASURABLE (sorted lambda):
+  - Determines: c3, ov_histogram, sum(lambda^2), mean(lambda)
+  - Does NOT determine: alpha_2 (disjointness), H
+
+NON-MEASURABLE (vertex-pair assignment):
+  - The specific mapping: vertex pair (u,v) -> lambda_{uv}
+  - Determines: which 3-cycle vertex sets are disjoint
+  - Determines: alpha_2 and hence H
+
+THE QUOTIENT:
+  Within each sorted-lambda class, the labeled lambda varies.
+  The number of labeled lambda orbits = number of H values.
+
+  For REGULAR n=7: sorted lambda has only 3 forms, and each
+  sorted form corresponds to exactly ONE labeled orbit.
+  So sorting loses NOTHING -> lambda determines H.
+
+  For non-regular: sorted lambda can have MULTIPLE labeled orbits.
+  The orbits with different alpha_2 give different H.
+  This is the "non-measurable" content.
+
+ANALOGY TABLE:
+  Lebesgue measure   <-->   Score sequence
+  Borel sigma-algebra <-->   Sorted lambda histogram
+  Power set           <-->   Labeled lambda graph
+  Non-measurable set  <-->   Tournaments with same sorted lambda but different alpha_2
+  Vitali set          <-->   Set of representatives, one per labeled orbit
+
+
+======================================================================
+DONE.
+======================================================================
