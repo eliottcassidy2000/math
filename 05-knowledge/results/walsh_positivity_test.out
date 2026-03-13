@@ -1,0 +1,146 @@
+========================================================================
+WALSH POSITIVITY TEST — COMPUTING H VALUES
+========================================================================
+
+  Computing H for p=7 (8 orientations)...
+    Done in 0.0s
+
+  Computing H for p=11 (32 orientations)...
+    Done in 0.4s
+
+  Computing H for p=13 (64 orientations)...
+    64/64 (4.1s)
+    Done in 4.1s
+
+  Computing H for p=17 (256 orientations)...
+    64/256 (112.5s)
+    128/256 (225.1s)
+    192/256 (337.5s)
+    256/256 (450.0s)
+    Done in 450.0s
+
+========================================================================
+WALSH TRANSFORM AND POSITIVITY CHECK
+========================================================================
+
+  p=7, m=3:
+    Degree 0: 1+, 0-, 0=0 [ALL+]  sum(+)=178.50, sum(-)=0.00
+    Degree 2: 1+, 2-, 0=0 [MIXED]  sum(+)=3.50, sum(-)=-7.00
+      [+] ĥ[1, 2] = 3.5000
+      [-] ĥ[1, 3] = -3.5000
+      [-] ĥ[2, 3] = -3.5000
+    f_2(all-ones) = -3.5000, max = 10.5000 ← NOT max, at (1, 1, -1)
+
+    H(Interval) = 175
+    H(max) = 189 at σ = (1, 1, -1)
+    Interval is max? False
+
+  p=11, m=5:
+    Degree 0: 1+, 0-, 0=0 [ALL+]  sum(+)=93101.25, sum(-)=0.00
+    Degree 2: 6+, 4-, 0=0 [MIXED]  sum(+)=841.50, sum(-)=-561.00
+      [+] ĥ[1, 3] = 272.2500
+      [-] ĥ[2, 3] = -272.2500
+      [+] ĥ[1, 4] = 272.2500
+      [-] ĥ[2, 5] = -272.2500
+      [+] ĥ[4, 5] = 272.2500
+      [-] ĥ[1, 2] = -8.2500
+      [-] ĥ[2, 4] = -8.2500
+      [+] ĥ[3, 4] = 8.2500
+      [+] ĥ[1, 5] = 8.2500
+      [+] ĥ[3, 5] = 8.2500
+    Degree 4: 1+, 4-, 0=0 [MIXED]  sum(+)=118.25, sum(-)=-473.00
+      [-] ĥ[1, 2, 3, 4] = -118.2500
+      [-] ĥ[1, 2, 3, 5] = -118.2500
+      [-] ĥ[1, 2, 4, 5] = -118.2500
+      [+] ĥ[1, 3, 4, 5] = 118.2500
+      [-] ĥ[2, 3, 4, 5] = -118.2500
+    f_2(all-ones) = 280.5000, max = 1402.5000 ← NOT max, at (-1, 1, -1, -1, -1)
+    f_4(all-ones) = -354.7500, max = 591.2500 ← NOT max, at (-1, 1, -1, -1, -1)
+
+    H(Interval) = 93027
+    H(max) = 95095 at σ = (-1, 1, -1, -1, -1)
+    Interval is max? False
+
+  p=13, m=6:
+    Degree 0: 1+, 0-, 0=0 [ALL+]  sum(+)=3695839.88, sum(-)=0.00
+    Degree 2: 5+, 7-, 3=0 [MIXED]  sum(+)=9454.25, sum(-)=-11011.00
+      [+] ĥ[1, 2] = 2632.5000
+      [+] ĥ[2, 4] = 2632.5000
+      [-] ĥ[3, 5] = -2632.5000
+      [-] ĥ[4, 5] = -2632.5000
+      [-] ĥ[1, 6] = -2632.5000
+      [+] ĥ[3, 6] = 2632.5000
+      [-] ĥ[1, 3] = -778.3750
+      [+] ĥ[1, 4] = 778.3750
+      [+] ĥ[3, 4] = 778.3750
+      [-] ĥ[2, 5] = -778.3750
+      [-] ĥ[2, 6] = -778.3750
+      [-] ĥ[5, 6] = -778.3750
+    Degree 4: 8+, 7-, 0=0 [MIXED]  sum(+)=29995.88, sum(-)=-13104.00
+      [+] ĥ[1, 2, 3, 4] = 5209.7500
+      [+] ĥ[1, 3, 4, 5] = 5209.7500
+      [+] ĥ[1, 3, 4, 6] = 5209.7500
+      [+] ĥ[1, 2, 5, 6] = 5209.7500
+      [+] ĥ[2, 3, 5, 6] = 5209.7500
+      [-] ĥ[2, 4, 5, 6] = -5209.7500
+      [+] ĥ[1, 2, 3, 5] = 3508.3750
+      [-] ĥ[2, 3, 4, 6] = -3508.3750
+      [-] ĥ[1, 4, 5, 6] = -3508.3750
+      [-] ĥ[1, 2, 4, 5] = -219.3750
+      [-] ĥ[2, 3, 4, 5] = -219.3750
+      [+] ĥ[1, 2, 3, 6] = 219.3750
+      [-] ĥ[1, 2, 4, 6] = -219.3750
+      [+] ĥ[1, 3, 5, 6] = 219.3750
+      [-] ĥ[3, 4, 5, 6] = -219.3750
+    f_2(all-ones) = -1556.7500, max = 12086.7500 ← NOT max, at (1, 1, -1, 1, -1, -1)
+    f_4(all-ones) = 16891.8750, max = 16891.8750 ← ALL-ONES IS MAX
+
+    H(Interval) = 3711175
+    H(max) = 3711175 at σ = (-1, -1, -1, -1, -1, -1)
+    Interval is max? True
+
+  p=17, m=8:
+    Degree 0: 1+, 0-, 0=0 [ALL+]  sum(+)=13535654589.88, sum(-)=0.00
+    Degree 2: 14+, 10-, 4=0 [MIXED]  sum(+)=28685877.56, sum(-)=-22680302.44
+    Degree 4: 45+, 23-, 2=0 [MIXED]  sum(+)=220740791.44, sum(-)=-95741548.81
+    Degree 6: 16+, 8-, 4=0 [MIXED]  sum(+)=55924584.44, sum(-)=-33314493.06
+    f_2(all-ones) = 6005575.1250, max = 30737238.8750 ← NOT max, at (-1, -1, -1, -1, 1, -1, -1, -1)
+    f_4(all-ones) = 124999242.6250, max = 124999242.6250 ← ALL-ONES IS MAX
+    f_6(all-ones) = 22610091.3750, max = 58642262.8750 ← NOT max, at (1, -1, -1, 1, -1, -1, -1, -1)
+
+    H(Interval) = 13689269499
+    H(max) = 13689269499 at σ = (-1, -1, -1, -1, -1, -1, -1, -1)
+    Interval is max? True
+
+========================================================================
+THE TRANSITION PATTERN
+========================================================================
+
+Summary of Walsh coefficient signs:
+
+  p=7 (m=3): Degree 2 has MIXED signs → Paley optimizes degree 2 → Paley wins
+  p=11 (m=5): Both degree 2 and 4 have coefficients → degree 2 dominates
+  p=13 (m=6): Degree 4 dominates (81.6% of variance)
+  p=17 (m=8): ???
+
+KEY OBSERVATION from previous analysis:
+  - Degree-1 Walsh coefficients are ALL ZERO (complement symmetry)
+  - Only EVEN degrees appear
+  - The dominant degree INCREASES with p
+
+PROOF STRATEGY:
+  If ALL degree-4 coefficients are positive for p ≥ 13, and degree-4
+  dominates, then all-ones maximizes the dominant term.
+  The degree-2 "loss" (where Paley or other σ might be better)
+  is overcome by the degree-4 "gain".
+
+  This is analogous to the SECOND-ORDER phase transition in physics:
+  the quartic term (degree 4) overcomes the quadratic term (degree 2)
+  above the critical temperature.
+
+  p=7: E₂/E_total = 1.0000, E₄/E_total = 0.0000, E₄/E₂ = 0.0000
+  p=11: E₂/E_total = 0.8414, E₄/E_total = 0.1586, E₄/E₂ = 0.1885
+  p=13: E₂/E_total = 0.1843, E₄/E_total = 0.8157, E₄/E₂ = 4.4247
+  p=17: E₂/E_total = 0.0554, E₄/E_total = 0.6611, E₄/E₂ = 11.9418
+
+DONE.
