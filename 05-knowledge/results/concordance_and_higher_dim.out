@@ -1,0 +1,164 @@
+======================================================================
+ANALYSIS 1: 3-CYCLE INCIDENCE STRUCTURE
+======================================================================
+
+  H=111 (bits=4658): 11 3-cycles
+    Overlap-2 pairs: 17
+    C0=[1, 3, 5], C6=[1, 2, 5]: shared=(1,5) arc=u->v, w1=3: w1->u,v->w1, w2=2: w2->u,v->w2
+    C0=[1, 3, 5], C8=[1, 4, 5]: shared=(1,5) arc=u->v, w1=3: w1->u,v->w1, w2=4: w2->u,v->w2
+    C0=[1, 3, 5], C9=[0, 3, 5]: shared=(3,5) arc=v->u, w1=1: u->w1,w1->v, w2=0: u->w2,w2->v
+    C1=[0, 4, 6], C4=[0, 4, 5]: shared=(0,4) arc=v->u, w1=6: u->w1,w1->v, w2=5: u->w2,w2->v
+    C1=[0, 4, 6], C5=[0, 3, 6]: shared=(0,6) arc=u->v, w1=4: w1->u,v->w1, w2=3: w2->u,v->w2
+
+  H=109 (bits=4728): 11 3-cycles
+    Overlap-2 pairs: 17
+    C0=[0, 3, 4], C2=[0, 1, 4]: shared=(0,4) arc=u->v, w1=3: w1->u,v->w1, w2=1: w2->u,v->w2
+    C0=[0, 3, 4], C3=[2, 3, 4]: shared=(3,4) arc=v->u, w1=0: u->w1,w1->v, w2=2: u->w2,w2->v
+    C0=[0, 3, 4], C6=[0, 3, 6]: shared=(0,3) arc=v->u, w1=4: u->w1,w1->v, w2=6: u->w2,w2->v
+    C0=[0, 3, 4], C9=[0, 3, 5]: shared=(0,3) arc=v->u, w1=4: u->w1,w1->v, w2=5: u->w2,w2->v
+    C1=[1, 3, 5], C8=[1, 4, 5]: shared=(1,5) arc=u->v, w1=3: w1->u,v->w1, w2=4: w2->u,v->w2
+
+======================================================================
+ANALYSIS 2: THE ORIENTED 3-CYCLE COMPLEX
+======================================================================
+
+  H=111 (bits=4658):
+    Edges: 19
+    Triangles: 11
+    rank(d2) = 11
+    ker(d2) = dim(H_2) + something, coker = dim(H_1)
+    H_2 = ker(d2) has dimension 0
+    H_1 has dimension 8 (ignoring d_1)
+    rank(d1) = 6
+    Betti numbers: b0=1, b1=2, b2=0
+    Euler char: -1
+
+  H=109 (bits=4728):
+    Edges: 19
+    Triangles: 11
+    rank(d2) = 11
+    ker(d2) = dim(H_2) + something, coker = dim(H_1)
+    H_2 = ker(d2) has dimension 0
+    H_1 has dimension 8 (ignoring d_1)
+    rank(d1) = 6
+    Betti numbers: b0=1, b1=2, b2=0
+    Euler char: -1
+
+======================================================================
+ANALYSIS 3: CYCLE COMPLEX COMPARISON
+======================================================================
+
+  Oriented boundary comparison:
+  H=111: orientations = [-1, -1, 1, -1, -1, -1, -1, -1, -1, -1, -1]
+           product = 1
+           positive=1, negative=10
+  H=109: orientations = [-1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+           product = 1
+           positive=1, negative=10
+
+======================================================================
+ANALYSIS 4: THE 5-CYCLE LAYER
+======================================================================
+
+  H=111: 15 5-cycle vertex sets, 23 directed 5-cycles
+    Multiplicity: {1: 8, 2: 6, 3: 1}
+    Per-vertex 5-cycle weight: [20, 17, 16, 16, 17, 17, 12]
+    Sorted: [12, 16, 16, 17, 17, 17, 20]
+
+  H=109: 15 5-cycle vertex sets, 23 directed 5-cycles
+    Multiplicity: {1: 8, 2: 6, 3: 1}
+    Per-vertex 5-cycle weight: [21, 17, 16, 16, 17, 16, 12]
+    Sorted: [12, 16, 16, 16, 17, 17, 21]
+
+======================================================================
+ANALYSIS 5: DIMENSION COUNTING FOR THE VITALI ANALOGY
+======================================================================
+
+DIMENSION COUNTING:
+
+A tournament on n=7 has C(7,2) = 21 binary choices (arc directions).
+Total dimension: 21 bits = 2^21 = 2097152 tournaments.
+
+The score sequence constrains 7 degrees. Dimension remaining: ~14.
+The lambda matrix has C(7,2) = 21 entries, but with rank constraints.
+In practice, the lambda histogram has ~10 independent parameters.
+
+For our specific class:
+  - Score (2,2,3,3,3,3,5): fixes ~7 dimensions
+  - Lambda histogram: fixes ~10 dimensions
+  - Lambda degree sequence: fixes ~12 dimensions (resolves most ambiguity)
+  - Lambda isomorphism class: fixes ~14 dimensions
+  - Remaining: ~7 dimensions of "arc orientation" freedom
+  - Only 1 of these 7 dimensions affects c7 (and hence H)
+
+The "Vitali quotient" maps R^21 -> R^{14} by forgetting 7 dimensions.
+The "non-measurable content" lives in a 7-dimensional fiber.
+But only a 1-dimensional subspace of this fiber affects H.
+
+This is why the Vitali analogy works:
+  - The "measurable" part (lambda) captures 14/21 = 67% of the information
+  - The "non-measurable" part (arc orientation) has 7 dimensions
+  - Only 1 dimension of the non-measurable part is "physically relevant" (affects H)
+  - The other 6 dimensions of arc orientation are "gauge freedom" (don't affect H)
+
+The Vitali set analogy:
+  - R/Q: the rationals are the "measurable" equivalence classes
+  - A Vitali set picks one representative from each class
+  - The "non-measurable" content is the choice of representative
+  - In our setting: lambda = the "rational equivalence class"
+  - c7 = the "choice of representative" that determines H
+  - The 6 gauge dimensions = different labelings of the same oriented structure
+
+======================================================================
+ANALYSIS 6: MINIMAL BEYOND-LAMBDA INVARIANT
+======================================================================
+
+  H=111: 5-cycle sets with count:
+    (0, 1, 2, 3, 4): 1 directed 5-cycles
+    (0, 1, 2, 3, 5): 2 directed 5-cycles
+    (0, 1, 2, 3, 6): 1 directed 5-cycles
+    (0, 1, 2, 4, 5): 2 directed 5-cycles
+    (0, 1, 2, 4, 6): 1 directed 5-cycles
+    (0, 1, 2, 5, 6): 1 directed 5-cycles
+    (0, 1, 3, 4, 5): 1 directed 5-cycles
+    (0, 1, 3, 4, 6): 1 directed 5-cycles
+    (0, 1, 3, 5, 6): 2 directed 5-cycles
+    (0, 1, 4, 5, 6): 2 directed 5-cycles
+    (0, 2, 3, 4, 5): 2 directed 5-cycles
+    (0, 2, 3, 4, 6): 2 directed 5-cycles
+    (0, 2, 4, 5, 6): 1 directed 5-cycles
+    (0, 3, 4, 5, 6): 1 directed 5-cycles
+    (1, 2, 3, 4, 5): 3 directed 5-cycles
+
+  H=109: 5-cycle sets with count:
+    (0, 1, 2, 3, 4): 1 directed 5-cycles
+    (0, 1, 2, 3, 5): 1 directed 5-cycles
+    (0, 1, 2, 3, 6): 1 directed 5-cycles
+    (0, 1, 2, 4, 5): 3 directed 5-cycles
+    (0, 1, 2, 4, 6): 2 directed 5-cycles
+    (0, 1, 2, 5, 6): 1 directed 5-cycles
+    (0, 1, 3, 4, 5): 2 directed 5-cycles
+    (0, 1, 3, 4, 6): 1 directed 5-cycles
+    (0, 1, 3, 5, 6): 2 directed 5-cycles
+    (0, 1, 4, 5, 6): 1 directed 5-cycles
+    (0, 2, 3, 4, 5): 2 directed 5-cycles
+    (0, 2, 3, 4, 6): 2 directed 5-cycles
+    (0, 2, 3, 5, 6): 1 directed 5-cycles
+    (0, 3, 4, 5, 6): 1 directed 5-cycles
+    (1, 2, 3, 4, 5): 2 directed 5-cycles
+
+  Candidate invariant: 3-cycle triple coherence
+  H=111: 115 mutually-intersecting triples, prod>0: 32, prod<0: 83, sum: -51
+  H=109: 115 mutually-intersecting triples, prod>0: 25, prod<0: 90, sum: -65
+
+======================================================================
+ANALYSIS 7: ARC FLOW THROUGH LAMBDA-0 EDGES
+======================================================================
+
+  H=111: lambda-0 edges: [(2, 6, 'v->u'), (5, 6, 'v->u')]
+
+  H=109: lambda-0 edges: [(4, 6, 'v->u'), (5, 6, 'v->u')]
+
+======================================================================
+DONE.
+======================================================================
