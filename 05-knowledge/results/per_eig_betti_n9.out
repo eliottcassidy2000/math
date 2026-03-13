@@ -1,0 +1,34 @@
+Interval n=9, S=[1, 2, 3, 4]
+Q_k values:
+  Q_0 = 16 (trivial)
+  Q_1 = 8.2909
+  Q_2 = 0.2831
+  Q_3 = 1.0000
+  Q_4 = 0.4260
+  Q_5 = 0.4260
+  Q_6 = 1.0000
+  Q_7 = 0.2831
+  Q_8 = 8.2909
+Omega_0: total=9, per-eig=1
+Omega_1: total=36, per-eig=4
+Omega_2: total=54, per-eig=6
+Omega_3: total=126, per-eig=14
+Omega_4: total=279, per-eig=31
+Omega_5: total=450, per-eig=50
+Omega_6: total=468, per-eig=52
+Omega_7: total=288, per-eig=32
+Omega_8: total=99, per-eig=11
+
+Eigenspace k=0:
+  ranks: [0, 3, 3, 8, 20, 28, 21, 8]
+  beta:  [1, 1, 0, 3, 3, 2, 3, 3, 3]
+
+Eigenspace k=1:
+  ranks: [0, 3, 3, 8, 20, 28, 21, 8]
+  beta:  [1, 1, 0, 3, 3, 2, 3, 3, 3]
+
+Eigenspace k=2:
+  ranks: [0, 3, 3, 8, 20, 28, 21, 8]
+  beta:  [1, 1, 0, 3, 3, 2, 3, 3, 3]
+
+DONE.
