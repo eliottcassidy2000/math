@@ -1,0 +1,70 @@
+============================================================
+ALPHA_2 SIGN ANATOMY at p=7
+============================================================
+
+      Pair     gaps   q  chi(ab)        h_hat  sign      pattern
+  (0,1)  (1,2)    3        +1       -1.7500      -  anti-product  chi(q)=-1
+  (0,2)  (1,3)    3        -1       -1.7500      -       product  chi(q)=-1
+  (1,2)  (2,3)    3        -1       -1.7500      -       product  chi(q)=-1
+
+  Testing: sign(h_hat_alpha2) = -chi(q) * chi(ab)?
+    (0,1): predicted=+1, actual=-1, FAIL
+    (0,2): predicted=-1, actual=-1, OK
+    (1,2): predicted=-1, actual=-1, OK
+
+  Grouped by resonance level q:
+    q=3: |h_hat|={1.75}, sign*chi(ab)={1, -1}
+
+  OCF cancellation per resonance class:
+
+    q=3, pair (0,1), chi(ab)=+1:
+      2*h_a1  =      10.5000 (sign vs chi: same)
+      4*h_a2  =      -7.0000 (sign vs chi: anti)
+      h_hat_H =       3.5000 (sign vs chi: same)
+============================================================
+ALPHA_2 SIGN ANATOMY at p=11
+============================================================
+
+      Pair     gaps   q  chi(ab)        h_hat  sign      pattern
+  (0,1)  (1,2)    5        -1       47.4375      +  anti-product  chi(q)=+1
+  (0,2)  (1,3)    3        +1       29.5625      +       product  chi(q)=+1
+  (0,3)  (1,4)    3        +1       29.5625      +       product  chi(q)=+1
+  (0,4)  (1,5)    5        +1      -47.4375      -  anti-product  chi(q)=+1
+  (1,2)  (2,3)    3        -1      -29.5625      -       product  chi(q)=+1
+  (1,3)  (2,4)    5        -1       47.4375      +  anti-product  chi(q)=+1
+  (1,4)  (2,5)    3        -1      -29.5625      -       product  chi(q)=+1
+  (2,3)  (3,4)    5        +1      -47.4375      -  anti-product  chi(q)=+1
+  (2,4)  (3,5)    5        +1      -47.4375      -  anti-product  chi(q)=+1
+  (3,4)  (4,5)    3        +1       29.5625      +       product  chi(q)=+1
+
+  Testing: sign(h_hat_alpha2) = -chi(q) * chi(ab)?
+    (0,1): predicted=+1, actual=+1, OK
+    (0,2): predicted=-1, actual=+1, FAIL
+    (0,3): predicted=-1, actual=+1, FAIL
+    (0,4): predicted=-1, actual=-1, OK
+    (1,2): predicted=+1, actual=-1, FAIL
+    (1,3): predicted=+1, actual=+1, OK
+    (1,4): predicted=+1, actual=-1, FAIL
+    (2,3): predicted=-1, actual=-1, OK
+    (2,4): predicted=-1, actual=-1, OK
+    (3,4): predicted=-1, actual=+1, FAIL
+
+  Grouped by resonance level q:
+    q=3: |h_hat|={29.5625}, sign*chi(ab)={1}
+    q=5: |h_hat|={47.4375}, sign*chi(ab)={-1}
+
+  OCF cancellation per resonance class:
+
+    q=3, pair (0,2), chi(ab)=+1:
+      2*h_a1  =      27.5000 (sign vs chi: same)
+      4*h_a2  =     118.2500 (sign vs chi: same)
+      8*h_a3  =     126.5000 (sign vs chi: same)
+      h_hat_H =     272.2500 (sign vs chi: same)
+
+    q=5, pair (0,1), chi(ab)=-1:
+      2*h_a1  =     -71.5000 (sign vs chi: same)
+      4*h_a2  =     189.7500 (sign vs chi: anti)
+      8*h_a3  =    -126.5000 (sign vs chi: same)
+      h_hat_H =      -8.2500 (sign vs chi: same)
+
+DONE.
