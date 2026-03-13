@@ -1,0 +1,588 @@
+==============================================================================
+  COEFFICIENTS OF det(I+xA) — THE CYCLE COVER INTERPRETATION
+==============================================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 1: CYCLE COVER DECOMPOSITION OF det(A_S)                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+For a k-vertex tournament T_S:
+  det(A_S) = Σ_σ sgn(σ) ∏_{i∈S} A[i,σ(i)]
+
+A permutation σ contributes iff all its cycles are directed cycles in T_S.
+Such σ is called a CYCLE COVER of T_S.
+
+The sign of σ depends on its cycle structure:
+  - Fixed points (1-cycles): A[i,i] = 0, so NO fixed points contribute
+  - 2-cycles: A[i,j]·A[j,i] = 0 for tournaments, so NO 2-cycles contribute
+  - k-cycles (k≥3): contribute iff they are directed cycles in T_S
+  - sign(k-cycle) = (-1)^{k-1}
+
+So ONLY permutations that decompose into disjoint directed cycles of
+length ≥ 3 contribute. For odd cycles, sign = +1. For even cycles, sign = -1.
+
+THEREFORE:
+  det(A_S) = Σ_{cycle covers of S using only directed ≥3-cycles}
+             ∏_{cycle C in cover} (-1)^{|C|-1}
+
+  = Σ_{covers} (-1)^{#even-cycles-in-cover} · (+1)^{#odd-cycles}
+  = Σ_{covers} (-1)^{#even-length-cycles}
+
+THIS IS THE SIGNED CYCLE COVER COUNT.
+
+Verifying c_k = Σ_{|S|=k} signed_cycle_covers(T|_S):
+
+n=4:
+  bits=000000: H=1
+    c_k = [1, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+
+  bits=000010: H=3
+    c_k = [1, 0, 0, 1, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+
+  bits=000100: H=5
+    c_k = [1, 0, 0, 2, -1]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+
+n=5:
+  bits=0000000000: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000001: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000010: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000011: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000100: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000101: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000110: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000000111: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000001000: H=9
+    c_k = [1, 0, 0, 3, -3, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000001001: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000001010: H=9
+    c_k = [1, 0, 0, 3, -2, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -2 (signed 4-cycle covers = -2)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000001011: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000001100: H=11
+    c_k = [1, 0, 0, 4, -4, 1]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -4 (signed 4-cycle covers = -4)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000001101: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000001110: H=9
+    c_k = [1, 0, 0, 3, -3, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000001111: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010000: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010001: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010010: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010011: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010100: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010101: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010110: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000010111: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000011000: H=9
+    c_k = [1, 0, 0, 3, -3, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000011001: H=9
+    c_k = [1, 0, 0, 3, -2, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -2 (signed 4-cycle covers = -2)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000011010: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000011011: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000011100: H=11
+    c_k = [1, 0, 0, 4, -4, 1]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -4 (signed 4-cycle covers = -4)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000011101: H=9
+    c_k = [1, 0, 0, 3, -3, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000011110: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000011111: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100000: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100001: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100010: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100011: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100100: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100101: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100110: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000100111: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000101000: H=15
+    c_k = [1, 0, 0, 4, -3, 3]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 3 (signed 5-cycle covers = 3)
+
+  bits=0000101001: H=13
+    c_k = [1, 0, 0, 4, -3, 2]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 2 (signed 5-cycle covers = 2)
+
+  bits=0000101010: H=13
+    c_k = [1, 0, 0, 4, -3, 2]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 2 (signed 5-cycle covers = 2)
+
+  bits=0000101011: H=9
+    c_k = [1, 0, 0, 3, -2, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -2 (signed 4-cycle covers = -2)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000101100: H=13
+    c_k = [1, 0, 0, 4, -3, 2]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 2 (signed 5-cycle covers = 2)
+
+  bits=0000101101: H=9
+    c_k = [1, 0, 0, 3, -2, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -2 (signed 4-cycle covers = -2)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000101110: H=9
+    c_k = [1, 0, 0, 3, -2, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -2 (signed 4-cycle covers = -2)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000101111: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110000: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110001: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110010: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110011: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110100: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110101: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110110: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000110111: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000111000: H=9
+    c_k = [1, 0, 0, 3, -3, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000111001: H=11
+    c_k = [1, 0, 0, 4, -4, 1]
+    c_3 = 4 (#{3-cycles} = 4)
+    c_4 = -4 (signed 4-cycle covers = -4)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000111010: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000111011: H=5
+    c_k = [1, 0, 0, 2, -1, 0]
+    c_3 = 2 (#{3-cycles} = 2)
+    c_4 = -1 (signed 4-cycle covers = -1)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000111100: H=9
+    c_k = [1, 0, 0, 3, -2, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -2 (signed 4-cycle covers = -2)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000111101: H=9
+    c_k = [1, 0, 0, 3, -3, 1]
+    c_3 = 3 (#{3-cycles} = 3)
+    c_4 = -3 (signed 4-cycle covers = -3)
+    c_5 = 1 (signed 5-cycle covers = 1)
+
+  bits=0000111110: H=3
+    c_k = [1, 0, 0, 1, 0, 0]
+    c_3 = 1 (#{3-cycles} = 1)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+  bits=0000111111: H=1
+    c_k = [1, 0, 0, 0, 0, 0]
+    c_3 = 0 (#{3-cycles} = 0)
+    c_4 = 0 (signed 4-cycle covers = 0)
+    c_5 = 0 (signed 5-cycle covers = 0)
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 2: COMBINATORIAL FORMULAS FOR c_k                                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+SUMMARY:
+  c_0 = 1
+  c_1 = 0 (no self-loops)
+  c_2 = 0 (no mutual edges in tournaments)
+  c_3 = #{directed 3-cycles}
+  c_4 = -#{directed 4-cycles}/2  ??? Let's check...
+
+For k=4: the only cycle covers of 4 vertices using ≥3-cycles are:
+  - A single 4-cycle (even cycle → sign = -1)
+  - No way to decompose into two shorter cycles (4 = 3+1 impossible)
+
+So c_4 = Σ_{|S|=4} (-1) · #{directed 4-cycles on S}
+       = -#{directed 4-cycles summed over all 4-subsets}
+
+But each directed 4-cycle is counted how many times?
+  A directed 4-cycle on {a,b,c,d} with a→b→c→d→a has a UNIQUE underlying
+  4-element set. And each undirected cycle {a,b,c,d} with specific orientation
+  appears as 1 permutation (cyclic). But we count (4-1)! = 6 different
+  4-cycles on {a,b,c,d}... wait, no. There are (4-1)!/2 = 3 oriented cycles
+  (each unoriented cycle has 2 orientations).
+
+Let me think again. A directed cycle a→b→c→d→a corresponds to the
+permutation σ = (a b c d). There are 3! = 6 permutations that are
+4-cycles on {a,b,c,d}, forming 3 pairs of inverse cycles.
+
+In a tournament, at most 3 of these 6 permutations can be realized
+(since for each pair, at most one direction works).
+
+Actually each ORIENTED 4-cycle a₁→a₂→a₃→a₄→a₁ corresponds to exactly
+one cyclic permutation up to starting point: (a₁ a₂ a₃ a₄).
+There are 3!/1 = 6 ways to write a 4-cycle on 4 elements.
+Each oriented cycle gives (k-1)! = 3! = 6? No...
+
+OK, the number of distinct 4-element cyclic permutations is (4-1)! = 6.
+But as DIRECTED cycles, each undirected cycle has 2 orientations.
+So there are 3 undirected 4-cycles on 4 elements, each with 2 orientations.
+
+Detailed 4-cycle analysis on K_4:
+  bits=000100: H=5, #dir-4-cycles=1, c_4 = -1
+    det(A) = -1, -#{4-cycles} = -1
+  bits=000110: H=5, #dir-4-cycles=1, c_4 = -1
+    det(A) = -1, -#{4-cycles} = -1
+  bits=001100: H=5, #dir-4-cycles=1, c_4 = -1
+    det(A) = -1, -#{4-cycles} = -1
+  bits=001101: H=5, #dir-4-cycles=1, c_4 = -1
+    det(A) = -1, -#{4-cycles} = -1
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 3: det(I+2A) = 1 + 8c₃ + 16c₄ + 32c₅ + ...                          ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+At x=2: det(I+2A) = Σ c_k · 2^k = 1 + 8c₃ + 16c₄ + 32c₅ + ...
+Since det(I+2A) = Pf(S)² ≥ 0, we need:
+  1 + 8c₃ + 16c₄ + 32c₅ + ... ≥ 0
+
+And H² = (1 + 2α₁)² + ... so:
+  Q = H² - Pf² = (... + 2α₁)² - (1 + 8c₃ + ...)
+
+Let's tabulate.
+
+
+n=5:
+  H     Pf²   c_3   8c_3   c_4   16c_4   c_5   32c_5     1+Σ   α_1
+-----------------------------------------------------------------
+  1       1     0      0     0       0     0       0       1     0
+  3       9     1      8     0       0     0       0       9     1
+  5       1     2     16    -1     -16     0       0       1     2
+  9       9     3     24    -3     -48     1      32       9     4
+ 11       1     4     32    -4     -64     1      32       1     5
+ 15      81     4     32    -3     -48     3      96      81     7
+ 13      49     4     32    -3     -48     2      64      49     6
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 4: THE 2-3 PATTERN IN c_k                                             ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+From the data:
+
+c_3 = number of directed 3-cycles (always ≥ 0)
+c_4 = -number of directed 4-cycles (always ≤ 0 for tournaments!)
+c_5 = number of directed 5-cycles + #{covers by 3+... impossible}
+    = number of directed 5-cycles (always ≥ 0)
+
+So the signs alternate: c_3 ≥ 0, c_4 ≤ 0, c_5 ≥ 0, c_6 ≤ 0(?), ...
+
+CONJECTURE: sgn(c_k) = (-1)^{k+1} for k ≥ 3
+  i.e., c_k > 0 for odd k, c_k < 0 for even k (when nonzero)
+
+REASON: A single k-cycle permutation has sign (-1)^{k-1}.
+  So for odd k: sign = +1, contributes positively → c_k ≥ 0
+  For even k: sign = -1, contributes negatively → c_k ≤ 0
+
+BUT: for larger k, there can be DECOMPOSITIONS into multiple cycles.
+  k=6: can decompose as two 3-cycles (sign = +1·+1 = +1) or one 6-cycle (sign = -1)
+  So c_6 could be either sign depending on which dominates.
+
+Let's check c_6 for n=6 tournaments.
+
+n=6: Distribution of c_6 = det(A):
+  c_6 =  -4:   1680 tournaments
+  c_6 =  -3:   2640 tournaments
+  c_6 =  -2:   9120 tournaments
+  c_6 =  -1:   8160 tournaments
+  c_6 =   0:  11088 tournaments
+  c_6 =   1:     80 tournaments
+
+n=6: Distribution of c_5:
+  c_5 =   0:   3920 tournaments
+  c_5 =   1:   4320 tournaments
+  c_5 =   2:   2448 tournaments
+  c_5 =   3:   1920 tournaments
+  c_5 =   4:   4320 tournaments
+  c_5 =   5:   1440 tournaments
+  c_5 =   6:   5040 tournaments
+  c_5 =   7:   4320 tournaments
+  c_5 =   8:   1440 tournaments
+  c_5 =   9:   1920 tournaments
+  c_5 =  11:   1440 tournaments
+  c_5 =  12:    240 tournaments
+
+════════════════════════════════════════════════════════════════════════════════
+GRAND SYNTHESIS
+════════════════════════════════════════════════════════════════════════════════
+
+det(I+xA) = 1 + c₃x³ + c₄x⁴ + ... + cₙxⁿ
+
+where c_k = signed count of cycle covers of T using cycles of length ≥ 3.
+
+At x=2: Pf² = 1 + 8c₃ - 16|c₄| + 32c₅ - 64|c₆| + ...
+
+The interplay between POSITIVE (odd-cycle) and NEGATIVE (even-cycle)
+contributions determines the Pfaffian squared.
+
+H = I(CG, 2) = 1 + 2α₁ + 4α₂ + ... where α_k counts independent sets
+of odd cycles in the conflict graph.
+
+The inequality H ≥ |Pf| says: the INDEPENDENCE POLYNOMIAL at x=2 dominates
+the CYCLE COVER polynomial at x=2.
+
+In the 2-3 framework:
+  - c₃ counts 3-cycles (the 3 of the trinity)
+  - The weight 8 = 2³ (the 2 of the trinity, cubed)
+  - α₁ counts odd cycles, weighted by 2 each
+  - H = 1 + 2·(#cycles) + 4·(#independent pairs) + ...
+  - Pf² = 1 + 8·(#3-cycles) - 16·(#4-cycles) + ...
+
+The 2-3 miracle: at x=2, the independence polynomial ALWAYS wins.
+
