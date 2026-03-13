@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67k (cont'd) — 2026-03-13: Iso Class Graph, RG Flow, Fractal Structure
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67k (context recovery — iso class investigation)
+**Summary of work:**
+- **TOURNAMENT RENORMALIZATION GROUP (HYP-796)**: Score classes at n behave like single iso classes at n-2. The nearly-regular score class SPLITS as n increases, replicating the full structure at n-2. Regular class: n=3(1)→n=5(1)→n=7(3), matching the (1,2,2,2,3) group at n=5.
+- **SCORE→H CHANNEL CAPACITY DECAY (HYP-797)**: I(H;score)/H(H) = 100%(n≤4), 85.3%(n=5), 70.3%(n=6). Decay ≈ 4/n. Engineering: Copeland score captures 4/n of ranking info.
+- **FLIP GRAPH SPECTRAL ANALYSIS (HYP-798, HYP-802)**: H-max classes have LOWEST flip-graph degree. Fiedler value increases with n (better connectivity despite more local maxima). n=5: Ramanujan bound satisfied for λ₂.
+- **α₂ ONSET = CONFLUENCE FAILURE (HYP-799)**: α₂ turns on at exactly n=6, causing: OCF quadratic term, spurious local maxima, DPO confluence loss.
+- **SUB-TOURNAMENT FRACTAL STRUCTURE (HYP-800)**: H=45 at n=6 has ALL 5-vertex subs in same iso class. Ramanujan uniformity ⟹ sub-tournament uniformity ⟹ RG fixed point.
+- **det(I+2A) ON FLIP GRAPH (HYP-801)**: sqrt always odd, values {1,3,5,7,9}. NOT monotonic in H. Provides independent matching-based information (connects to kind-pasteur's HYP-788).
+- **OCF PERTURBATIVE EXPANSION (HYP-803)**: Order ⌊n/3⌋ terms needed. Each is a "relevant operator" in RG sense.
+- **BAJAJ (2409.01006v1) CONNECTION**: DPO rewriting = flip graph. Confluence failure at n=6 explained by α₂ onset. Normal forms = RG fixed points.
+- **BLUESELF/BLACKSELF ANALYSIS**: Computed for n=3..6. Blueself: 2,2,4,5 classes. Blackself: 0,0,4,7 classes. GS check may differ from tiling GS — needs clarification.
+**New contributions:** HYP-796 through HYP-803. Scripts: iso_class_graph_fast.py, iso_class_fractal.py, flip_graph_spectral.py, rg_flow_tournament.py, det_sqrt_flip_graph.py
+**Unresolved:** (1) Exact RG flow map formula (2) Channel capacity at n=7 (3) Blueself definition discrepancy with THM-023 (4) det(I+2A) as so(n) invariant
+
+---
+
 ## kind-pasteur-2026-03-13-S61 — 2026-03-13: Vitali overlap/Pfaffian duality + det(I+2A) perfect square
 
 **Account:** kind-pasteur

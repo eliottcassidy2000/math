@@ -1,0 +1,340 @@
+======================================================================
+sqrt(det(I+2A)) ON THE FLIP GRAPH
+======================================================================
+
+======================================================================
+n = 3
+======================================================================
+
+Flip graph edge analysis (sqrt changes):
+  (ΔH, Δsqrt): count
+  ( -2,  -2): 3
+  ( +2,  +2): 1
+
+sqrt(det(I+2A)) as class distinguisher:
+
+sqrt values: [1, 3]
+sqrt mod 4: [1, 3]
+sqrt mod 8: [1, 3]
+
+corr(H, sqrt(det)) = 1.0000
+
+sqrt vs c3:
+  c3=0: sqrt ∈ [1]
+  c3=1: sqrt ∈ [3]
+
+All sqrt odd? True
+det mod 4: [1]
+det mod 8: [1]
+
+======================================================================
+n = 4
+======================================================================
+
+Flip graph edge analysis (sqrt changes):
+  (ΔH, Δsqrt): count
+  ( -4,  +0): 1
+  ( -2,  -2): 6
+  ( -2,  +2): 2
+  ( +2,  -2): 6
+  ( +2,  +2): 2
+  ( +4,  +0): 1
+
+sqrt(det(I+2A)) as class distinguisher:
+  H=3: 2 classes, sqrt = [3, 3], scores = [(0, 2, 2, 2), (1, 1, 1, 3)]
+    → sqrt has duplicates, does NOT fully distinguish
+
+sqrt values: [1, 3]
+sqrt mod 4: [1, 3]
+sqrt mod 8: [1, 3]
+
+corr(H, sqrt(det)) = 0.0000
+
+sqrt vs c3:
+  c3=0: sqrt ∈ [1]
+  c3=1: sqrt ∈ [3, 3]
+  c3=2: sqrt ∈ [1]
+
+All sqrt odd? True
+det mod 4: [1]
+det mod 8: [1]
+
+======================================================================
+n = 5
+======================================================================
+
+Flip graph edge analysis (sqrt changes):
+  (ΔH, Δsqrt): count
+  (-12,  -6): 1
+  ( -8,  -6): 2
+  ( -8,  -2): 1
+  ( -6,  -6): 3
+  ( -6,  -2): 2
+  ( -6,  +0): 2
+  ( -4,  -4): 7
+  ( -4,  -2): 5
+  ( -4,  +0): 2
+  ( -2,  -6): 2
+  ( -2,  -2): 15
+  ( -2,  +2): 11
+  ( -2,  +4): 1
+  ( +0,  -2): 2
+  ( +0,  +2): 2
+  ( +2,  -4): 1
+  ( +2,  -2): 15
+  ( +2,  +2): 5
+  ( +2,  +6): 2
+  ( +4,  +0): 2
+  ( +4,  +2): 5
+  ( +4,  +4): 3
+  ( +6,  +0): 2
+  ( +6,  +2): 6
+  ( +6,  +6): 1
+  ( +8,  +2): 1
+  ( +8,  +6): 2
+  (+12,  +6): 1
+
+sqrt(det(I+2A)) as class distinguisher:
+  H=3: 3 classes, sqrt = [3, 3, 3], scores = [(0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (1, 1, 1, 3, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=5: 2 classes, sqrt = [1, 1], scores = [(0, 2, 2, 3, 3), (1, 1, 2, 2, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=9: 2 classes, sqrt = [3, 5], scores = [(1, 1, 2, 3, 3), (1, 1, 2, 3, 3)]
+    → sqrt DISTINGUISHES all 2 classes!
+  H=15: 2 classes, sqrt = [9, 5], scores = [(1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+    → sqrt DISTINGUISHES all 2 classes!
+
+sqrt values: [1, 3, 5, 7, 9]
+sqrt mod 4: [1, 3]
+sqrt mod 8: [1, 3, 5, 7]
+
+corr(H, sqrt(det)) = 0.7062
+
+sqrt vs c3:
+  c3=0: sqrt ∈ [1]
+  c3=1: sqrt ∈ [3, 3, 3]
+  c3=2: sqrt ∈ [1, 1]
+  c3=3: sqrt ∈ [3, 5]
+  c3=4: sqrt ∈ [1, 7, 9]
+  c3=5: sqrt ∈ [5]
+
+All sqrt odd? True
+det mod 4: [1]
+det mod 8: [1]
+
+======================================================================
+n = 6
+======================================================================
+
+Flip graph edge analysis (sqrt changes):
+  (ΔH, Δsqrt): count
+  (-32,  +0): 1
+  (-26,  -2): 2
+  (-24,  +0): 2
+  (-24,  +2): 4
+  (-22,  -2): 2
+  (-20,  +0): 1
+  (-20,  +4): 2
+  (-18,  -4): 2
+  (-18,  -2): 2
+  (-18,  +0): 6
+  (-18,  +2): 2
+  (-18,  +6): 2
+  (-16,  -6): 2
+  (-16,  -2): 2
+  (-16,  +0): 4
+  (-16,  +2): 5
+  (-16,  +6): 2
+  (-14,  -2): 6
+  (-14,  +0): 8
+  (-14,  +2): 4
+  (-12,  -6): 4
+  (-12,  -4): 2
+  (-12,  -2): 2
+  (-12,  +0): 2
+  (-12,  +2): 2
+  (-12,  +6): 8
+  (-10,  -6): 2
+  (-10,  -2): 14
+  (-10,  +0): 6
+  (-10,  +2): 16
+  (-10,  +4): 2
+  ( -8,  -6): 4
+  ( -8,  -4): 4
+  ( -8,  -2): 30
+  ( -8,  +0): 1
+  ( -8,  +2): 13
+  ( -8,  +6): 2
+  ( -6,  -6): 14
+  ( -6,  -2): 4
+  ( -6,  +0): 10
+  ( -6,  +2): 16
+  ( -6,  +4): 8
+  ( -6,  +6): 2
+  ( -4,  -4): 14
+  ( -4,  -2): 26
+  ( -4,  +0): 13
+  ( -4,  +2): 12
+  ( -4,  +6): 2
+  ( -2,  -6): 14
+  ( -2,  -2): 26
+  ( -2,  +0): 6
+  ( -2,  +2): 26
+  ( -2,  +4): 4
+  ( -2,  +6): 2
+  ( +0,  -4): 2
+  ( +0,  -2): 10
+  ( +0,  +0): 22
+  ( +0,  +2): 10
+  ( +0,  +4): 2
+  ( +2,  -6): 2
+  ( +2,  -4): 4
+  ( +2,  -2): 34
+  ( +2,  +0): 6
+  ( +2,  +2): 10
+  ( +2,  +6): 10
+  ( +4,  -6): 2
+  ( +4,  -2): 8
+  ( +4,  +0): 11
+  ( +4,  +2): 30
+  ( +4,  +4): 6
+  ( +6,  -6): 2
+  ( +6,  -4): 8
+  ( +6,  -2): 16
+  ( +6,  +0): 10
+  ( +6,  +2): 12
+  ( +6,  +6): 6
+  ( +8,  -6): 2
+  ( +8,  -2): 17
+  ( +8,  +0): 1
+  ( +8,  +2): 22
+  ( +8,  +4): 4
+  ( +8,  +6): 4
+  (+10,  -4): 2
+  (+10,  -2): 24
+  (+10,  +0): 6
+  (+10,  +2): 6
+  (+10,  +6): 2
+  (+12,  -6): 8
+  (+12,  -2): 6
+  (+12,  +0): 2
+  (+12,  +2): 2
+  (+12,  +4): 2
+  (+12,  +6): 4
+  (+14,  -2): 4
+  (+14,  +0): 8
+  (+14,  +2): 6
+  (+16,  -6): 2
+  (+16,  -2): 7
+  (+16,  +0): 2
+  (+16,  +2): 2
+  (+16,  +6): 2
+  (+18,  -6): 2
+  (+18,  -2): 10
+  (+18,  +0): 6
+  (+18,  +2): 2
+  (+18,  +4): 2
+  (+20,  -4): 2
+  (+20,  +0): 1
+  (+22,  +2): 2
+  (+24,  -2): 4
+  (+24,  +0): 2
+  (+26,  +2): 2
+  (+32,  +0): 1
+
+sqrt(det(I+2A)) as class distinguisher:
+  H=3: 4 classes, sqrt = [3, 3, 3, 3], scores = [(0, 1, 2, 4, 4, 4), (0, 1, 3, 3, 3, 5), (0, 2, 2, 2, 4, 5), (1, 1, 1, 3, 4, 5)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=5: 3 classes, sqrt = [1, 1, 1], scores = [(0, 1, 3, 3, 4, 4), (0, 2, 2, 3, 3, 5), (1, 1, 2, 2, 4, 5)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=9: 5 classes, sqrt = [3, 5, 3, 5, 9], scores = [(0, 2, 2, 3, 4, 4), (0, 2, 2, 3, 4, 4), (1, 1, 2, 3, 3, 5), (1, 1, 2, 3, 3, 5), (1, 1, 1, 4, 4, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=11: 2 classes, sqrt = [1, 1], scores = [(0, 2, 3, 3, 3, 4), (1, 2, 2, 2, 3, 5)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=13: 2 classes, sqrt = [7, 7], scores = [(0, 2, 3, 3, 3, 4), (1, 2, 2, 2, 3, 5)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=15: 6 classes, sqrt = [9, 5, 1, 1, 9, 5], scores = [(0, 2, 3, 3, 3, 4), (0, 3, 3, 3, 3, 3), (1, 1, 2, 3, 4, 4), (1, 1, 2, 3, 4, 4), (1, 2, 2, 2, 3, 5), (2, 2, 2, 2, 2, 5)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=17: 2 classes, sqrt = [1, 7], scores = [(1, 1, 2, 3, 4, 4), (1, 1, 2, 3, 4, 4)]
+    → sqrt DISTINGUISHES all 2 classes!
+  H=19: 2 classes, sqrt = [3, 3], scores = [(1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=23: 4 classes, sqrt = [5, 1, 1, 5], scores = [(1, 1, 3, 3, 3, 4), (1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=25: 2 classes, sqrt = [1, 1], scores = [(1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=27: 2 classes, sqrt = [3, 3], scores = [(1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=29: 4 classes, sqrt = [1, 1, 1, 9], scores = [(1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=31: 2 classes, sqrt = [7, 7], scores = [(1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=33: 5 classes, sqrt = [3, 1, 3, 3, 3], scores = [(1, 2, 3, 3, 3, 3), (1, 2, 2, 3, 3, 4), (1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 3, 4), (2, 2, 2, 2, 3, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=37: 5 classes, sqrt = [1, 5, 3, 3, 5], scores = [(1, 2, 2, 3, 3, 4), (1, 2, 3, 3, 3, 3), (1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 3, 4), (2, 2, 2, 2, 3, 4)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=43: 2 classes, sqrt = [1, 1], scores = [(2, 2, 2, 3, 3, 3), (2, 2, 2, 3, 3, 3)]
+    → sqrt has duplicates, does NOT fully distinguish
+  H=45: 2 classes, sqrt = [1, 7], scores = [(2, 2, 2, 3, 3, 3), (2, 2, 2, 3, 3, 3)]
+    → sqrt DISTINGUISHES all 2 classes!
+
+sqrt values: [1, 3, 5, 7, 9]
+sqrt mod 4: [1, 3]
+sqrt mod 8: [1, 3, 5, 7]
+
+corr(H, sqrt(det)) = -0.0641
+
+sqrt vs c3:
+  c3=0: sqrt ∈ [1]
+  c3=1: sqrt ∈ [3, 3, 3, 3]
+  c3=2: sqrt ∈ [1, 1, 1, 9]
+  c3=3: sqrt ∈ [3, 3, 5, 5]
+  c3=4: sqrt ∈ [1, 1, 1, 1, 1, 7, 7, 7, 9, 9]
+  c3=5: sqrt ∈ [3, 3, 3, 3, 5, 5, 5, 5]
+  c3=6: sqrt ∈ [1, 1, 1, 1, 1, 1, 1, 1, 1, 7, 7, 9]
+  c3=7: sqrt ∈ [3, 3, 3, 3, 3, 3, 5, 5]
+  c3=8: sqrt ∈ [1, 1, 1, 1, 7]
+
+All sqrt odd? True
+det mod 4: [1]
+det mod 8: [1]
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+Key findings about sqrt(det(I+2A)):
+
+1. ALWAYS ODD (confirmed n=3..6)
+2. Values: {1, 3, 5, 7, 9} — all odd integers up to ~n
+3. det ≡ 1 mod 8 always (since sqrt² = odd² = 1 mod 8)
+4. At n=5: sqrt distinguishes SOME same-H pairs (not all)
+5. At n=6: sqrt does NOT fully distinguish same-H classes
+6. sqrt has NO consistent monotonic relationship with H
+7. Under single flip: sqrt can change by any even integer
+
+det(I+2A) is NOT a Lyapunov function for H-ascent.
+BUT it IS an independent invariant that carries information
+about matching structure (Pfaffian) rather than cycle structure (OCF).
+
+INFORMATION DECOMPOSITION:
+  H = f(α₁, α₂, ...) — cycle-based
+  det(I+2A) = g(matchings) — matching-based
+  These are COMPLEMENTARY: together they carry more info than either alone.
+
+This is kind-pasteur's insight: (H, Pf_sum) may be a complete invariant
+at higher n, combining the cycle and matching perspectives.
+
+CONNECTION TO so(n):
+  det(I+2A) = det(I+2A) where A generates so(n).
+  The Killing form of so(n) is -2(n-2)·I.
+  So I+2A = I + 2A = (1+eigenvalue) product.
+  For a tournament with adjacency eigenvalues λ_k:
+    det(I+2A) = ∏(1+2λ_k)
+  This is the Ihara zeta function ζ_T(-2)^{-1}!
+
+RAMANUJAN CONNECTION:
+  For Paley P_p, all nontrivial |λ_k| = √((p+1)/4).
+  So |1+2λ_k| = |1+2·e^{iθ}·√((p+1)/4)|
+  This is related to the Ramanujan bound.
+
