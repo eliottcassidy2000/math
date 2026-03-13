@@ -1,0 +1,31 @@
+
+======================================================================
+ALPHA_2 MOMENT ANALYSIS at p=7, m=3, N=8 orientations
+======================================================================
+  bits=0/8, elapsed=0.0s, cycles=59, alpha=[1, 59, 14], H=175
+
+  Done: 8 orientations in 0.0s
+
+  Unique alpha profiles: 2
+    alpha=[1, 59, 14], count=6, H=[175], cycles=59, residual=0
+    alpha=[1, 80, 7], count=2, H=[189], cycles=80, residual=0
+
+  --- ALPHA_2 MOMENT FIT ---
+  alpha_2 values: [7, 14]
+    alpha_2 = f(S4): max_err = 0.000000 EXACT
+    = 0.500000*S4 + 2.41
+
+  --- ALPHA_1 MOMENT FIT ---
+  alpha_1 values: [59, 80]
+    alpha_1 = f(S4): max_err = 0.000000 EXACT
+    = -1.500000*S4 + 93.78
+
+  --- H MOMENT FIT ---
+  H values: [175, 189]
+    H = f(S4): max_err = 0.000000 EXACT
+    = -1.000000*S4 + 198.19
+
+======================================================================
+ALPHA_2 MOMENT ANALYSIS at p=11, m=5, N=32 orientations
+======================================================================
+  bits=0/32, elapsed=94.9s, cycles=18397, alpha=[1, 18397, 11110, 1474], H=93027
