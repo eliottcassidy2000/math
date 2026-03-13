@@ -1,0 +1,160 @@
+======================================================================
+DIRECTED MULTIPLICITY ANALYSIS OF VITALI ATOM AT n=8
+======================================================================
+  ... 500/3000, found 10 examples
+  ... 1000/3000, found 21 examples
+  ... 1500/3000, found 29 examples
+  ... 2000/3000, found 31 examples
+  ... 2500/3000, found 39 examples
+
+Total H-changing examples: 45
+
+======================================================================
+TEST: delta_H = 2 * delta_dir (directed cycle count)?
+======================================================================
+  Match rate: 25/45 (55.6%)
+
+  Non-matching examples:
+    dH=6, d_dir=1, 2*d_dir=2
+    dH=-6, d_dir=-1, 2*d_dir=-2
+    dH=-4, d_dir=0, 2*d_dir=0
+    dH=-6, d_dir=-1, 2*d_dir=-2
+    dH=-4, d_dir=0, 2*d_dir=0
+    dH=-2, d_dir=1, 2*d_dir=2
+    dH=-6, d_dir=-1, 2*d_dir=-2
+    dH=6, d_dir=1, 2*d_dir=2
+    dH=6, d_dir=1, 2*d_dir=2
+    dH=2, d_dir=-1, 2*d_dir=-2
+    dH=4, d_dir=-2, 2*d_dir=-4
+    dH=-4, d_dir=0, 2*d_dir=0
+    dH=-4, d_dir=0, 2*d_dir=0
+    dH=6, d_dir=1, 2*d_dir=2
+    dH=4, d_dir=0, 2*d_dir=0
+    dH=-6, d_dir=-1, 2*d_dir=-2
+    dH=-4, d_dir=0, 2*d_dir=0
+    dH=6, d_dir=1, 2*d_dir=2
+    dH=2, d_dir=3, 2*d_dir=6
+    dH=-4, d_dir=0, 2*d_dir=0
+
+  delta_dir distribution:
+    delta_dir=-2: 3
+    delta_dir=-1: 15
+    delta_dir=0: 7
+    delta_dir=1: 14
+    delta_dir=2: 5
+    delta_dir=3: 1
+
+  delta_H distribution:
+    delta_H=-6: 4
+    delta_H=-4: 8
+    delta_H=-2: 11
+    delta_H=2: 10
+    delta_H=4: 7
+    delta_H=6: 5
+
+======================================================================
+WHICH CYCLE LENGTHS HAVE MULTIPLICITY CHANGES?
+======================================================================
+  c3 multiplicity changes in 45/45 examples (100.0%)
+  c5 multiplicity changes in 45/45 examples (100.0%)
+  c7 multiplicity changes in 45/45 examples (100.0%)
+
+======================================================================
+NUMBER OF VERTEX SETS WITH MULTIPLICITY CHANGES
+======================================================================
+  15 vertex sets changed: 19 examples
+  20 vertex sets changed: 10 examples
+  25 vertex sets changed: 10 examples
+  30 vertex sets changed: 6 examples
+
+======================================================================
+MULTIPLICITY CHANGE MAGNITUDES
+======================================================================
+
+  c3 multiplicity deltas:
+    delta=-1: 196
+    delta=1: 196
+
+  c5 multiplicity deltas:
+    delta=-2: 2
+    delta=-1: 217
+    delta=1: 217
+    delta=2: 2
+
+  c7 multiplicity deltas:
+    delta=-1: 40
+    delta=1: 44
+    delta=2: 1
+
+======================================================================
+CLIQUE PERTURBATION FORMULA
+======================================================================
+
+When vertex set V changes multiplicity from m_A to m_B:
+- The m_A directed cycles on V form a clique K_{m_A} in Omega_A
+- The m_B directed cycles on V form a clique K_{m_B} in Omega_B
+- This is a CLIQUE RESIZE operation
+
+For the independence polynomial:
+- Adding a vertex v to a clique doesn't change any independent set
+  that already has a member of the clique (since v is adjacent to all of them)
+- It CAN add to independent sets that have NO member of the clique
+- So adding v to clique K increases alpha_j by the number of j-1 sized
+  independent sets in Omega that avoid ALL vertices of K
+
+Key: if V is a LARGE vertex set (e.g., all 8 vertices for c7),
+then EVERY other cycle shares at least 1 vertex with V.
+So every other Omega vertex is adjacent to all members of the K clique.
+Adding/removing from K only changes alpha_0 (trivially) and alpha_1 (by 1 each).
+This gives delta_H = 2 * (number added - number removed) = 2 * delta_mult.
+
+But if V is a SMALL vertex set (e.g., 3 vertices for c3),
+then cycles on disjoint vertex sets are NOT adjacent to the clique.
+Adding a vertex to K can increase alpha_2 by the number of cycles
+disjoint from V.
+
+TESTING: delta_H = 2*delta_c7_dir + contribution from c3/c5 changes
+  dH=  6, dc7_dir= 1, dc5_dir= 0, dc3_dir= 0, 2*dc7=  2, residual=  4
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -6, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual= -4
+  dH= -4, dc7_dir= 0, dc5_dir= 0, dc3_dir= 0, 2*dc7=  0, residual= -4
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH=  4, dc7_dir= 2, dc5_dir= 0, dc3_dir= 0, 2*dc7=  4, residual=  0
+  dH= -6, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual= -4
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -4, dc7_dir= 0, dc5_dir= 0, dc3_dir= 0, 2*dc7=  0, residual= -4
+  dH=  2, dc7_dir= 1, dc5_dir= 0, dc3_dir= 0, 2*dc7=  2, residual=  0
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -2, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual=  0
+  dH= -2, dc7_dir= 1, dc5_dir= 0, dc3_dir= 0, 2*dc7=  2, residual= -4
+  dH=  2, dc7_dir= 1, dc5_dir= 0, dc3_dir= 0, 2*dc7=  2, residual=  0
+  dH= -6, dc7_dir=-1, dc5_dir= 0, dc3_dir= 0, 2*dc7= -2, residual= -4
+  dH=  4, dc7_dir= 2, dc5_dir= 0, dc3_dir= 0, 2*dc7=  4, residual=  0
+  dH=  6, dc7_dir= 1, dc5_dir= 0, dc3_dir= 0, 2*dc7=  2, residual=  4
+
+  Full test: delta_H vs 2*delta_dir_total
+  dH=  6, d_dir= 1, 2*d_dir=  2, match=NO
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -6, d_dir=-1, 2*d_dir= -2, match=NO
+  dH= -4, d_dir= 0, 2*d_dir=  0, match=NO
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH=  4, d_dir= 2, 2*d_dir=  4, match=YES
+  dH= -6, d_dir=-1, 2*d_dir= -2, match=NO
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -4, d_dir= 0, 2*d_dir=  0, match=NO
+  dH=  2, d_dir= 1, 2*d_dir=  2, match=YES
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -2, d_dir=-1, 2*d_dir= -2, match=YES
+  dH= -2, d_dir= 1, 2*d_dir=  2, match=NO
+  dH=  2, d_dir= 1, 2*d_dir=  2, match=YES
+  dH= -6, d_dir=-1, 2*d_dir= -2, match=NO
+  dH=  4, d_dir= 2, 2*d_dir=  4, match=YES
+  dH=  6, d_dir= 1, 2*d_dir=  2, match=NO
+
+Done.

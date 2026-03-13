@@ -1,0 +1,84 @@
+======================================================================
+VERIFY: delta_H = 2*delta_c7_dir + 4*delta_i2
+======================================================================
+  seed 0: verified=7, failed=0
+  seed 1: verified=14, failed=0
+  seed 2: verified=23, failed=0
+  seed 3: verified=31, failed=0
+  seed 4: verified=45, failed=0
+  seed 5: verified=52, failed=0
+  seed 6: verified=60, failed=0
+  seed 7: verified=66, failed=0
+  seed 8: verified=74, failed=0
+  seed 9: verified=79, failed=0
+  seed 10: verified=92, failed=0
+  seed 11: verified=100, failed=0
+  seed 12: verified=106, failed=0
+  seed 13: verified=112, failed=0
+  seed 14: verified=119, failed=0
+  seed 15: verified=126, failed=0
+  seed 16: verified=137, failed=0
+  seed 17: verified=145, failed=0
+  seed 18: verified=153, failed=0
+  seed 19: verified=166, failed=0
+
+RESULT: verified=166, failed=0
+Formula delta_H = 2*delta_c7_dir + 4*delta_i2: CONFIRMED
+
+  delta_c7_dir distribution: {-3: 6, -2: 17, -1: 50, 0: 36, 1: 40, 2: 14, 3: 3}
+  delta_i2 distribution: {-2: 2, -1: 41, 0: 84, 1: 37, 2: 2}
+  delta_H distribution: {-6: 12, -4: 35, -2: 47, 2: 32, 4: 32, 6: 8}
+
+  Cross-tab (dc7_dir, di2) -> delta_H:
+  dc7_dir=-3, di2= 1: dH values=[-2], count=6, pred=-2, match=True
+  dc7_dir=-2, di2= 0: dH values=[-4], count=15, pred=-4, match=True
+  dc7_dir=-2, di2= 2: dH values=[4], count=2, pred=4, match=True
+  dc7_dir=-1, di2=-1: dH values=[-6], count=12, pred=-6, match=True
+  dc7_dir=-1, di2= 0: dH values=[-2], count=33, pred=-2, match=True
+  dc7_dir=-1, di2= 1: dH values=[2], count=5, pred=2, match=True
+  dc7_dir= 0, di2=-1: dH values=[-4], count=18, pred=-4, match=True
+  dc7_dir= 0, di2= 1: dH values=[4], count=18, pred=4, match=True
+  dc7_dir= 1, di2=-1: dH values=[-2], count=8, pred=-2, match=True
+  dc7_dir= 1, di2= 0: dH values=[2], count=24, pred=2, match=True
+  dc7_dir= 1, di2= 1: dH values=[6], count=8, pred=6, match=True
+  dc7_dir= 2, di2=-2: dH values=[-4], count=2, pred=-4, match=True
+  dc7_dir= 2, di2= 0: dH values=[4], count=12, pred=4, match=True
+  dc7_dir= 3, di2=-1: dH values=[2], count=3, pred=2, match=True
+
+  i2_A range: 6-72
+  i2_B range: 6-72
+
+  Are there examples with |delta_i2| > 1?
+  YES: 4 examples with |delta_i2| > 1
+    dc7_dir=2, di2=-2, dH=-4
+    dc7_dir=2, di2=-2, dH=-4
+    dc7_dir=-2, di2=2, dH=4
+    dc7_dir=-2, di2=2, dH=4
+
+======================================================================
+COMPARISON WITH n=7
+======================================================================
+
+At n=7: delta_H = 2*delta_c7_dir, delta_i2 = 0 always
+  (all cycles use >= 3 vertices, disjoint pairs need 6 vertices,
+   only 3-cycles can be disjoint, and disjoint 3-3 pairs are preserved)
+
+At n=8: delta_H = 2*delta_c7_dir + 4*delta_i2
+  - delta_c7_dir in {-2,...,2} (c7 uses 7 of 8 vertices)
+  - delta_i2 in {-1, 0, 1} (from c3/c5 reshuffling)
+  - Possible delta_H values: {-6, -4, -2, 0, 2, 4, 6}
+
+The i2 channel opens at n=8 because:
+1. Disjoint (3,5)-pairs need exactly 8 vertices = n
+2. The Vitali atom reshuffles WHICH 3-cycles and 5-cycles exist
+   (total counts preserved, but identities change)
+3. This changes whether specific (3,5) pairs are disjoint
+4. Each such change contributes +-4 to delta_H
+
+At n=9, predict:
+- delta_c9_dir channel opens (9-cycles on all 9 vertices)
+- delta_i2 grows (more room for disjoint pairs)
+- delta_i3 channel opens (disjoint triples, e.g., three 3-cycles)
+- Formula: delta_H = 2*(dc7+dc9) + 4*di2 + 8*di3
+
+Done.
