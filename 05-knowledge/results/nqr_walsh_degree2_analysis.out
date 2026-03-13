@@ -1,0 +1,129 @@
+======================================================================
+DEGREE-2 NQR WALSH SUM: THE J MATRIX CONNECTION
+======================================================================
+
+==================================================
+p=7, m=3
+==================================================
+  QR chords: [1, 2]
+  NQR chords: [3]
+
+  J matrix (interaction):
+    chord 1 (QR): [   178.5      3.5     -3.5]
+    chord 2 (QR): [     3.5    178.5     -3.5]
+    chord 3 (NQR): [    -3.5     -3.5    178.5]
+
+  Pair classification:
+  QR×QR pairs: Σ J = 3.50 (1 pairs)
+  NQR×NQR pairs: Σ J = 0.00 (0 pairs)
+  Mixed pairs: Σ J = -7.00 (2 pairs)
+  QR diagonal: Σ J_ii = 357.00
+  NQR diagonal: Σ J_ii = 178.50
+
+  Degree-2 NQR sum = -7.00
+  Contribution to H(Int)-H(Pal) = -14.00
+
+  Q(Paley) = σ_P^T J σ_P = 556.50
+  Q(Interval) = 1^T J 1 = 528.50
+  Q(Pal) - Q(Int) = 28.00
+
+  Q(Pal)-Q(Int) via formula: 28.00
+  Direct computation:        28.00
+
+  RELATIONSHIP:
+  deg-2 H(Int)-H(Pal) = 2 * Σ_mixed J = -14.00
+  Q(Pal) - Q(Int) = -2 * Σ_all_mixed J = 28.00
+
+==================================================
+p=11, m=5
+==================================================
+  QR chords: [1, 3, 4, 5]
+  NQR chords: [2]
+
+  J matrix (interaction):
+    chord 1 (QR): [ 93101.2     -8.2    272.2    272.2      8.2]
+    chord 2 (NQR): [    -8.2  93101.2   -272.2     -8.2   -272.2]
+    chord 3 (QR): [   272.2   -272.2  93101.2      8.2      8.2]
+    chord 4 (QR): [   272.2     -8.2      8.2  93101.2    272.2]
+    chord 5 (QR): [     8.2   -272.2      8.2    272.2  93101.2]
+
+  Pair classification:
+  QR×QR pairs: Σ J = 841.50 (6 pairs)
+  NQR×NQR pairs: Σ J = 0.00 (0 pairs)
+  Mixed pairs: Σ J = -561.00 (4 pairs)
+  QR diagonal: Σ J_ii = 372405.00
+  NQR diagonal: Σ J_ii = 93101.25
+
+  Degree-2 NQR sum = -561.00
+  Contribution to H(Int)-H(Pal) = -1122.00
+
+  Q(Paley) = σ_P^T J σ_P = 468311.25
+  Q(Interval) = 1^T J 1 = 466067.25
+  Q(Pal) - Q(Int) = 2244.00
+
+  Q(Pal)-Q(Int) via formula: 2244.00
+  Direct computation:        2244.00
+
+  RELATIONSHIP:
+  deg-2 H(Int)-H(Pal) = 2 * Σ_mixed J = -1122.00
+  Q(Pal) - Q(Int) = -2 * Σ_all_mixed J = 2244.00
+
+==================================================
+p=13, m=6
+==================================================
+  QR chords: [1, 3, 4]
+  NQR chords: [2, 5, 6]
+
+  J matrix (interaction):
+    chord 1 (QR): [3695839.9   2632.5   -778.4    778.4      0.0  -2632.5]
+    chord 2 (NQR): [  2632.5 3695839.9      0.0   2632.5   -778.4   -778.4]
+    chord 3 (QR): [  -778.4      0.0 3695839.9    778.4  -2632.5   2632.5]
+    chord 4 (QR): [   778.4   2632.5    778.4 3695839.9  -2632.5      0.0]
+    chord 5 (NQR): [     0.0   -778.4  -2632.5  -2632.5 3695839.9   -778.4]
+    chord 6 (NQR): [ -2632.5   -778.4   2632.5      0.0   -778.4 3695839.9]
+
+  Pair classification:
+  QR×QR pairs: Σ J = 778.38 (3 pairs)
+  NQR×NQR pairs: Σ J = -2335.12 (3 pairs)
+  Mixed pairs: Σ J = 0.00 (9 pairs)
+  QR diagonal: Σ J_ii = 11087519.62
+  NQR diagonal: Σ J_ii = 11087519.62
+
+  Degree-2 NQR sum = 0.00
+  Contribution to H(Int)-H(Pal) = 0.00
+
+======================================================================
+THE KEY STRUCTURAL QUESTION
+======================================================================
+
+At degree 2, the NQR Walsh sum = Σ_{mixed pairs {i,j}} J[i,j]
+
+J[i,j] measures the INTERACTION between chord i and chord j in H:
+  J[i,j] > 0: flipping both chords i,j together INCREASES H more than expected
+  J[i,j] < 0: flipping both chords together DECREASES H
+
+For Paley to win: mixed pairs must have NEGATIVE interaction (J < 0)
+This means: flipping a QR chord and an NQR chord together is BAD for H.
+Equivalently: it's GOOD to have QR and NQR chords pointing in OPPOSITE directions.
+This is exactly what Paley does (σ_P has QR chords = +1, NQR chords = -1).
+
+For Interval to win: mixed pairs must have POSITIVE interaction
+This means: flipping QR and NQR chords together is GOOD for H.
+Equivalently: it's GOOD to have ALL chords pointing the SAME direction.
+This is exactly what Interval does (all σ = +1).
+
+The TRANSITION happens when the J[i,j] entries for mixed pairs collectively
+flip from negative to positive average.
+
+
+p=7: Mixed pair J entries:
+  J[1,3] =    -3.50  (chord 1 QR, chord 3 NQR)
+  J[2,3] =    -3.50  (chord 2 QR, chord 3 NQR)
+
+p=11: Mixed pair J entries:
+  J[1,2] =    -8.25  (chord 1 QR, chord 2 NQR)
+  J[2,3] =  -272.25  (chord 2 NQR, chord 3 QR)
+  J[2,4] =    -8.25  (chord 2 NQR, chord 4 QR)
+  J[2,5] =  -272.25  (chord 2 NQR, chord 5 QR)
+
+DONE.

@@ -1,0 +1,98 @@
+======================================================================
+WALSH CHARACTER BALANCE: PROOF AND CONSEQUENCES
+======================================================================
+
+--- Part 1: Verify the group homomorphism structure ---
+  p= 5, m=2: QR=2, NQR=2, total=4=2^2=4, surjective=True, QR=2^1=2? True
+  p= 7, m=3: QR=4, NQR=4, total=8=2^3=8, surjective=True, QR=2^2=4? True
+  p=11, m=5: QR=16, NQR=16, total=32=2^5=32, surjective=True, QR=2^4=16? True
+  p=13, m=6: QR=32, NQR=32, total=64=2^6=64, surjective=True, QR=2^5=32? True
+  p=17, m=8: QR=128, NQR=128, total=256=2^8=256, surjective=True, QR=2^7=128? True
+  p=19, m=9: QR=256, NQR=256, total=512=2^9=512, surjective=True, QR=2^8=256? True
+  p=23, m=11: QR=1024, NQR=1024, total=2048=2^11=2048, surjective=True, QR=2^10=1024? True
+  p=29, m=14: QR=8192, NQR=8192, total=16384=2^14=16384, surjective=True, QR=2^13=8192? True
+  p=31, m=15: QR=16384, NQR=16384, total=32768=2^15=32768, surjective=True, QR=2^14=16384? True
+
+--- Part 2: The Walsh difference formula ---
+
+THEOREM: H(Interval) - H(Paley) = 2 · Σ_{S: ψ(S)=-1} hat{H}[S]
+
+where hat{H}[S] is the Walsh-Fourier coefficient of H at subset S.
+
+Since hat{H}[S] depends only on the STRUCTURE of S (number of even-length
+path components, total degree), and the NQR subsets are essentially
+"half of all subsets", this gives:
+
+  H(Int) - H(Pal) = 2 · (sum of hat{H} over half the subsets)
+
+At small m: the specific WHICH subsets are NQR matters (structured)
+At large m: approaches random → H(Int) - H(Pal) ≈ 0 (relative to H)
+
+But the data shows H(Int)/H(Pal) → 1.06... So the difference is O(H).
+This means the NQR subsets are NOT random — they are biased toward
+subsets with LARGER hat{H}[S]!
+
+--- Part 3: Verification at p=7 ---
+
+p=7, m=3
+  H(Interval) = 175
+  H(Paley) = 189
+  Difference = -14
+
+             S  |S|    hat{H}[S]   ψ(S)
+             ∅    0       178.50     +1
+           {1}    1         0.00     +1
+           {2}    1         0.00     +1
+         {1,2}    2         3.50     +1
+           {3}    1         0.00     -1
+         {1,3}    2        -3.50     -1
+         {2,3}    2        -3.50     -1
+       {1,2,3}    3         0.00     -1
+
+  Σ hat{H}[S] for ψ=+1: 182.00
+  Σ hat{H}[S] for ψ=-1: -7.00
+  H(Pal) = qr_sum - nqr_sum = 189.00
+  H(Int) = qr_sum + nqr_sum = 175.00
+  Difference = 2 * nqr_sum = -14.00
+  Actual diff = -14
+
+--- Part 4: Verification at p=11 ---
+
+p=11, m=5
+  H(Interval) = 93027
+  H(Paley) = 95095
+  Difference = -2068
+
+  Walsh difference by degree:
+   deg           Σ_QR          Σ_NQR          2*NQR
+     0       93101.25           0.00           0.00
+     1           0.00           0.00           0.00
+     2         841.50        -561.00       -1122.00
+     3           0.00           0.00           0.00
+     4         118.25        -473.00        -946.00
+     5           0.00           0.00           0.00
+  total       94061.00       -1034.00       -2068.00
+  Check: H(Pal) = 95095.00, H(Int) = 93027.00
+
+  Most important Walsh degrees for H(Int)-H(Pal):
+  degree 0: 2*Σ_NQR =       0.00 (   -0.0% of diff)
+  degree 1: 2*Σ_NQR =       0.00 (   -0.0% of diff)
+  degree 2: 2*Σ_NQR =   -1122.00 (   54.3% of diff)
+  degree 3: 2*Σ_NQR =       0.00 (   -0.0% of diff)
+  degree 4: 2*Σ_NQR =    -946.00 (   45.7% of diff)
+  degree 5: 2*Σ_NQR =       0.00 (   -0.0% of diff)
+
+--- Part 5: Sign of NQR sum determines winner ---
+  p=7: NQR sum = -7.00, sign = <0, H(Int)-H(Pal) = -14
+  p=11: NQR sum = -1034.00, sign = <0, H(Int)-H(Pal) = -2068
+
+CONCLUSION:
+  - At p=7: NQR sum < 0 → H(Pal) > H(Int) (Paley wins)
+  - At p=11: NQR sum < 0 → H(Pal) > H(Int) (Paley wins)
+  - At large p: NQR sum > 0 (expected) → H(Int) > H(Pal)
+
+The sign of the NQR Walsh sum is the EXACT criterion for the phase transition.
+The question reduces to: when does Σ_{ψ(S)=-1} hat{H}[S] change sign?
+
+
+DONE.
