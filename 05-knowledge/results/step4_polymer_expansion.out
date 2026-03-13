@@ -1,0 +1,242 @@
+/Users/e/Documents/GitHub/math/04-computation/step4_polymer_expansion.py:117: SymPyDeprecationWarning: 
+
+The `sympy.ntheory.residue_ntheory.legendre_symbol` has been moved to `sympy.functions.combinatorial.numbers.legendre_symbol`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  sigma_pal = tuple(int(legendre(k, p)) for k in range(1, m + 1))
+========================================================================
+PART I: EXHAUSTIVE H SEARCH OVER ALL CIRCULANT ORIENTATIONS
+========================================================================
+
+  p=7, m=3, 2^m = 8 orientations
+  Top 10 H values:
+    #1: H =        189, σ = (-1, -1, 1), IPR = 0.1667
+    #2: H =        189, σ = (1, 1, -1), IPR = 0.1667
+    #3: H =        175, σ = (1, 1, 1), IPR = 0.3611
+    #4: H =        175, σ = (-1, 1, 1), IPR = 0.3611
+    #5: H =        175, σ = (1, -1, 1), IPR = 0.3611
+    #6: H =        175, σ = (-1, 1, -1), IPR = 0.3611
+    #7: H =        175, σ = (1, -1, -1), IPR = 0.3611
+    #8: H =        175, σ = (-1, -1, -1), IPR = 0.3611
+  Bottom 5:
+    #4: H =        175, σ = (-1, 1, 1), IPR = 0.3611
+    #5: H =        175, σ = (1, -1, 1), IPR = 0.3611
+    #6: H =        175, σ = (-1, 1, -1), IPR = 0.3611
+    #7: H =        175, σ = (1, -1, -1), IPR = 0.3611
+    #8: H =        175, σ = (-1, -1, -1), IPR = 0.3611
+
+  Interval: H = 175, rank = 3/8
+  Paley:    H = 189, rank = 2/8
+  Interval is NOT the maximum. Max = 189 (rank diff: 2)
+
+  Correlation(H, IPR) = -1.0000
+
+  p=11, m=5, 2^m = 32 orientations
+  Top 10 H values:
+    #1: H =      95095, σ = (1, -1, 1, 1, 1), IPR = 0.1000
+    #2: H =      95095, σ = (-1, 1, -1, -1, -1), IPR = 0.1000
+    #3: H =      93467, σ = (1, 1, -1, 1, 1), IPR = 0.1978
+    #4: H =      93467, σ = (-1, 1, -1, 1, 1), IPR = 0.1978
+    #5: H =      93467, σ = (-1, -1, -1, 1, 1), IPR = 0.1978
+    #6: H =      93467, σ = (-1, -1, 1, -1, 1), IPR = 0.1978
+    #7: H =      93467, σ = (-1, -1, -1, -1, 1), IPR = 0.1978
+    #8: H =      93467, σ = (1, 1, 1, 1, -1), IPR = 0.1978
+    #9: H =      93467, σ = (1, 1, -1, 1, -1), IPR = 0.1978
+    #10: H =      93467, σ = (1, 1, 1, -1, -1), IPR = 0.1978
+  Bottom 5:
+    #28: H =      92411, σ = (-1, 1, 1, 1, -1), IPR = 0.1489
+    #29: H =      92411, σ = (-1, -1, 1, 1, -1), IPR = 0.1489
+    #30: H =      92411, σ = (1, -1, -1, 1, -1), IPR = 0.1489
+    #31: H =      92411, σ = (-1, -1, -1, 1, -1), IPR = 0.1489
+    #32: H =      92411, σ = (1, -1, -1, -1, -1), IPR = 0.1489
+
+  Interval: H = 93027, rank = 13/32
+  Paley:    H = 95095, rank = 1/32
+  Interval is NOT the maximum. Max = 95095 (rank diff: 12)
+
+  Correlation(H, IPR) = -0.0879
+
+  p=13, m=6, 2^m = 64 orientations
+  Top 10 H values:
+    #1: H =    3711175, σ = (1, 1, 1, 1, 1, 1), IPR = 0.3413
+    #2: H =    3711175, σ = (-1, -1, -1, 1, 1, 1), IPR = 0.3413
+    #3: H =    3711175, σ = (-1, 1, 1, -1, 1, 1), IPR = 0.3413
+    #4: H =    3711175, σ = (1, 1, -1, -1, 1, 1), IPR = 0.3413
+    #5: H =    3711175, σ = (-1, 1, -1, 1, -1, 1), IPR = 0.3413
+    #6: H =    3711175, σ = (1, -1, 1, -1, -1, 1), IPR = 0.3413
+    #7: H =    3711175, σ = (-1, 1, -1, 1, 1, -1), IPR = 0.3413
+    #8: H =    3711175, σ = (1, -1, 1, -1, 1, -1), IPR = 0.3413
+    #9: H =    3711175, σ = (-1, -1, 1, 1, -1, -1), IPR = 0.3413
+    #10: H =    3711175, σ = (1, -1, -1, 1, -1, -1), IPR = 0.3413
+  Bottom 5:
+    #60: H =    3669497, σ = (1, 1, 1, -1, 1, -1), IPR = 0.1644
+    #61: H =    3669497, σ = (1, -1, 1, 1, -1, -1), IPR = 0.1644
+    #62: H =    3669497, σ = (-1, 1, -1, 1, -1, -1), IPR = 0.1644
+    #63: H =    3669497, σ = (-1, -1, 1, -1, -1, -1), IPR = 0.1644
+    #64: H =    3669497, σ = (1, -1, -1, -1, -1, -1), IPR = 0.1644
+
+  Interval: H = 3711175, rank = 1/64
+  Paley:    H = 3669497, rank = 61/64
+  *** INTERVAL IS THE GLOBAL MAXIMUM! ***
+
+  Correlation(H, IPR) = 0.5093
+
+========================================================================
+PART II: p=17 EXHAUSTIVE SEARCH
+========================================================================
+  p=17, m=8, 2^8 = 256 orientations (feasible)
+  64/256 done (111.6s)
+  128/256 done (223.0s)
+  192/256 done (334.3s)
+  256/256 done (445.8s)
+
+  p=17: Top 10 H values:
+    #1: H =      13689269499, σ = (1, 1, 1, 1, 1, 1, 1, 1), IPR = 0.3380
+    #2: H =      13689269499, σ = (-1, -1, -1, -1, 1, 1, 1, 1), IPR = 0.3380
+    #3: H =      13689269499, σ = (1, 1, -1, -1, -1, 1, 1, 1), IPR = 0.3380
+    #4: H =      13689269499, σ = (1, -1, -1, 1, 1, -1, 1, 1), IPR = 0.3380
+    #5: H =      13689269499, σ = (-1, -1, 1, 1, -1, -1, 1, 1), IPR = 0.3380
+    #6: H =      13689269499, σ = (1, -1, 1, -1, 1, 1, -1, 1), IPR = 0.3380
+    #7: H =      13689269499, σ = (-1, 1, -1, 1, -1, 1, -1, 1), IPR = 0.3380
+    #8: H =      13689269499, σ = (-1, 1, -1, -1, 1, -1, -1, 1), IPR = 0.3380
+    #9: H =      13689269499, σ = (1, -1, 1, 1, -1, 1, 1, -1), IPR = 0.3380
+    #10: H =      13689269499, σ = (1, -1, 1, -1, 1, -1, 1, -1), IPR = 0.3380
+
+  Interval: H = 13689269499, rank = 1/256
+  Paley:    H = 13492503135, rank = 199/256
+  *** INTERVAL IS THE GLOBAL MAXIMUM AT p=17! ***
+  Correlation(H, IPR) = 0.7146
+
+========================================================================
+PART III: THE MAJORIZATION / SCHUR-CONVEXITY ARGUMENT
+========================================================================
+
+DEFINITION: A vector x majorizes y (written x ≻ y) if the partial sums
+of x sorted in decreasing order dominate those of y.
+
+For eigenvalue distributions on the sphere Σ|λ_t|² = const:
+  Interval's |λ|² vector MAJORIZES Paley's (and every other circulant's).
+
+This is because:
+  Interval has the most concentrated distribution (one big, rest small)
+  Paley has the flattest distribution (all equal)
+
+If H = f(|λ_1|², ..., |λ_m|²) is SCHUR-CONVEX, then:
+  x ≻ y ⟹ f(x) ≥ f(y)
+  ⟹ H(Interval) ≥ H(all others)
+
+QUESTION: Is H Schur-convex in the eigenvalue magnitudes?
+
+For the CYCLE COUNTS c_k = (1/p)Σ|λ_t|^k, these are symmetric
+power sums, which are Schur-convex for k ≥ 2.
+
+So c_k(Interval) ≥ c_k(all others) for k ≥ 2... WAIT, this is FALSE!
+We know Paley has MORE short odd cycles than Interval at p=7,11.
+
+The issue: c_k = (1/p)Σ Re(λ_t^k), not (1/p)Σ |λ_t|^k.
+Cycle counts involve the PHASES of eigenvalues, not just magnitudes.
+
+So the Schur-convexity argument FAILS for individual cycle counts.
+But it might work for H = Z(Ω, 2) = function of ALL cycle counts together.
+
+
+  p=7: Majorization check
+  Interval |λ|² (sorted): ['5.0489', '5.0489', '0.6431', '0.6431', '0.3080', '0.3080']
+  Paley    |λ|² (sorted): ['2.0000', '2.0000', '2.0000', '2.0000', '2.0000', '2.0000']
+  Partial sums Int ≥ Pal? True
+    k=1: Int=5.0489, Pal=2.0000 ✓
+    k=2: Int=10.0978, Pal=4.0000 ✓
+    k=3: Int=10.7409, Pal=6.0000 ✓
+    k=4: Int=11.3840, Pal=8.0000 ✓
+    k=5: Int=11.6920, Pal=10.0000 ✓
+    k=6: Int=12.0000, Pal=12.0000 ✓
+
+  p=13: Majorization check
+  Interval |λ|² (sorted): ['17.2069', '17.2069', '1.9882', '1.9882', '0.7747', '0.7747', '0.4462', '0.4462', '0.3189', '0.3189', '0.2652', '0.2652']
+  Paley    |λ|² (sorted): ['10.4160', '10.4160', '4.7974', '4.7974', '3.3801', '3.3801', '1.0993', '1.0993', '0.6949', '0.6949', '0.6122', '0.6122']
+  Partial sums Int ≥ Pal? True
+    k=1: Int=17.2069, Pal=10.4160 ✓
+    k=2: Int=34.4137, Pal=20.8321 ✓
+    k=3: Int=36.4019, Pal=25.6295 ✓
+    k=4: Int=38.3900, Pal=30.4268 ✓
+    k=5: Int=39.1647, Pal=33.8069 ✓
+    k=6: Int=39.9395, Pal=37.1870 ✓
+    k=7: Int=40.3857, Pal=38.2863 ✓
+    k=8: Int=40.8319, Pal=39.3857 ✓
+    k=9: Int=41.1508, Pal=40.0806 ✓
+    k=10: Int=41.4696, Pal=40.7755 ✓
+    k=11: Int=41.7348, Pal=41.3878 ✓
+    k=12: Int=42.0000, Pal=42.0000 ✓
+
+========================================================================
+PART IV: H AS A FUNCTION ON THE EIGENVALUE SPHERE
+========================================================================
+
+  p=7: All orientations in (IPR, H) space
+         IPR  #orientations      min H      max H     mean H
+      0.1667              2        189        189      189.0
+      0.3611              6        175        175      175.0
+
+  p=13: All orientations in (IPR, H) space
+         IPR  #orientations      min H      max H     mean H
+      0.1054              4    3703011    3703011  3703011.0
+      0.1349             24    3683797    3704857  3694327.0
+      0.1644             12    3669497    3669497  3669497.0
+      0.2234             12    3707483    3707483  3707483.0
+      0.3413             12    3711175    3711175  3711175.0
+
+========================================================================
+PART V: DOES MAXIMUM IPR ⟹ MAXIMUM H?
+========================================================================
+
+From the data above, we can check: is the H-maximizer always the
+IPR-maximizer? Or are there exceptions?
+
+More precisely: among all orientations σ with the same IPR,
+which one maximizes H? Is it always the Interval orientation?
+
+
+  p=7:
+    Max IPR sigma: (-1, 1, -1) (IPR = 0.3611)
+    Max H sigma:   (1, 1, -1) (H = 189)
+    Interval sigma: (1, 1, 1)
+    Max IPR = Interval? False
+    Max H = Interval? False
+
+  p=11:
+    Max IPR sigma: (1, -1, 1, -1, 1) (IPR = 0.3444)
+    Max H sigma:   (-1, 1, -1, -1, -1) (H = 95095)
+    Interval sigma: (1, 1, 1, 1, 1)
+    Max IPR = Interval? False
+    Max H = Interval? False
+
+  p=13:
+    Max IPR sigma: (1, -1, 1, -1, -1, 1) (IPR = 0.3413)
+    Max H sigma:   (-1, -1, -1, -1, -1, -1) (H = 3711175)
+    Interval sigma: (1, 1, 1, 1, 1, 1)
+    Max IPR = Interval? False
+    Max H = Interval? True
+
+========================================================================
+CONCLUSIONS
+========================================================================
+
+SUMMARY OF EXHAUSTIVE SEARCH:
+  1. At each p, we compute H for all 2^m circulant orientations
+  2. The Interval orientation (all σ = +1) is checked against all others
+  3. The correlation between H and IPR reveals whether spectral
+     concentration reliably predicts H-maximality
+
+If max(H) = H(Interval) for all tested p ≥ 13, this provides strong
+computational evidence for the conjecture.
+
+Note: σ and -σ give the same tournament (complement symmetry), so
+effectively there are 2^{m-1} distinct tournaments.
+
+
+DONE.
