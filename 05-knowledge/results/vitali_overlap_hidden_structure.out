@@ -1,0 +1,168 @@
+======================================================================
+ANALYSIS 1: OVERLAP WEIGHT STRUCTURE AT n=5 (EXHAUSTIVE)
+======================================================================
+
+Total tournaments: 1024
+Distinct overlap weight histograms: 8
+Distinct (score, H) classes: 11
+
+Overlap histogram classes:
+  {}: count=240, H=[1, 3], scores=[(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (1, 1, 1, 3, 4)]
+  {1: 1, 2: 2, 3: 3}: count=120, H=[9], scores=[(1, 1, 2, 3, 3)]
+  {1: 2, 2: 4, 3: 4}: count=120, H=[11], scores=[(1, 2, 2, 2, 3)]
+  {1: 3, 2: 3, 3: 8, 5: 1}: count=120, H=[13], scores=[(1, 2, 2, 2, 3)]
+  {1: 3, 2: 3, 3: 12, 5: 3}: count=40, H=[15], scores=[(1, 2, 2, 2, 3)]
+  {1: 5, 2: 5, 3: 10, 5: 1}: count=24, H=[15], scores=[(2, 2, 2, 2, 2)]
+  {2: 1}: count=240, H=[5], scores=[(0, 2, 2, 3, 3), (1, 1, 2, 2, 4)]
+  {2: 3, 3: 3}: count=120, H=[9], scores=[(1, 1, 2, 3, 3)]
+
+Refinement: within each (score, H) class, how many overlap histograms?
+  Score (0, 1, 2, 3, 4), H=1: 1 overlap histogram (120 tournaments)
+  Score (0, 1, 3, 3, 3), H=3: 1 overlap histogram (40 tournaments)
+  Score (0, 2, 2, 2, 4), H=3: 1 overlap histogram (40 tournaments)
+  Score (0, 2, 2, 3, 3), H=5: 1 overlap histogram (120 tournaments)
+  Score (1, 1, 1, 3, 4), H=3: 1 overlap histogram (40 tournaments)
+  Score (1, 1, 2, 2, 4), H=5: 1 overlap histogram (120 tournaments)
+  Score (1, 1, 2, 3, 3), H=9: 2 distinct overlap histograms!
+    {1: 1, 2: 2, 3: 3}: 120 tournaments
+    {2: 3, 3: 3}: 120 tournaments
+  Score (1, 2, 2, 2, 3), H=11: 1 overlap histogram (120 tournaments)
+  Score (1, 2, 2, 2, 3), H=13: 1 overlap histogram (120 tournaments)
+  Score (1, 2, 2, 2, 3), H=15: 1 overlap histogram (40 tournaments)
+  Score (2, 2, 2, 2, 2), H=15: 1 overlap histogram (24 tournaments)
+
+======================================================================
+ANALYSIS 2: THE {2,1,0} TERNARY CODE AT n=5
+======================================================================
+
+3-cycle pair overlap at n=5:
+  bits=12: H=11, c3=4, c5=1, 3-cycle ternary code=(1, 1, 2, 2, 2, 2)
+
+Grouping score (1,2,2,2,3) by 3-cycle ternary code:
+  Ternary code (1, 1, 1, 2, 2, 2): count=160, H=[13, 15], c5=[2, 3]
+  Ternary code (1, 1, 2, 2, 2, 2): count=120, H=[11], c5=[1]
+
+======================================================================
+ANALYSIS 3: SPECTRAL INVARIANTS OF OVERLAP MATRIX AT n=5
+======================================================================
+
+Spectral invariants by (score, H):
+  Score (0, 1, 2, 3, 4), H=1: nc=[0], trace(W)=[0], ||W||_F^2=[0]
+  Score (0, 1, 3, 3, 3), H=3: nc=[1], trace(W)=[3], ||W||_F^2=[9]
+  Score (0, 2, 2, 2, 4), H=3: nc=[1], trace(W)=[3], ||W||_F^2=[9]
+  Score (0, 2, 2, 3, 3), H=5: nc=[2], trace(W)=[6], ||W||_F^2=[26]
+  Score (1, 1, 1, 3, 4), H=3: nc=[1], trace(W)=[3], ||W||_F^2=[9]
+  Score (1, 1, 2, 2, 4), H=5: nc=[2], trace(W)=[6], ||W||_F^2=[26]
+  Score (1, 1, 2, 3, 3), H=9: nc=[4], trace(W)=[14], ||W||_F^2=[124, 130]
+  Score (1, 2, 2, 2, 3), H=11: nc=[5], trace(W)=[17], ||W||_F^2=[169]
+  Score (1, 2, 2, 2, 3), H=13: nc=[6], trace(W)=[22], ||W||_F^2=[310]
+  Score (1, 2, 2, 2, 3), H=15: nc=[7], trace(W)=[27], ||W||_F^2=[507]
+  Score (2, 2, 2, 2, 2), H=15: nc=[7], trace(W)=[25], ||W||_F^2=[375]
+
+======================================================================
+ANALYSIS 4: OVERLAP WEIGHT AND ALPHA_2 AT n=6
+======================================================================
+Processed 32768 tournaments
+Distinct overlap profiles: 32
+  3-cycle overlap histogram DETERMINES alpha_2!
+
+======================================================================
+ANALYSIS 5: HIDDEN DIMENSION COUNT
+======================================================================
+n=5:
+  Total tournaments: 1024
+  Score classes: 9 (3.17 bits)
+  H classes: 7 (2.81 bits)
+  Overlap histogram classes: 8 (3.00 bits)
+  Full tournament space: 1024 (10.00 bits)
+
+n=6:
+  Total tournaments: 32768
+  Score classes: 22 (4.46 bits)
+  H classes: 19 (4.25 bits)
+  Overlap histogram classes: 31 (4.95 bits)
+  Full tournament space: 32768 (15.00 bits)
+
+======================================================================
+ANALYSIS 6: VITALI QUOTIENT — STRUCTURE BEYOND SCORES
+======================================================================
+
+Score class (1,2,2,2,3) at n=5:
+  Total in class: 280
+  c3 is CONSTANT = 4 (score-determined)
+  c5 varies:
+    c5=1: count=120, H=[11]
+    c5=2: count=120, H=[13]
+    c5=3: count=40, H=[15]
+
+  What determines c5? Let's check vertex participation:
+    c5=1: out_degrees=[2, 1, 2, 2, 3], c3_through_sink=2, c3_through_source=2, c5_through_sink=1, c5_through_source=1
+    c5=2: out_degrees=[2, 1, 2, 2, 3], c3_through_sink=2, c3_through_source=2, c5_through_sink=2, c5_through_source=2
+    c5=3: out_degrees=[1, 2, 2, 2, 3], c3_through_sink=3, c3_through_source=3, c5_through_sink=3, c5_through_source=3
+
+======================================================================
+ANALYSIS 7: OVERLAP WEIGHT METRIC PROPERTIES
+======================================================================
+Triangle inequality check (d = 3 - overlap weight) on 3-cycles:
+  Total triples: 4
+  Violations: 0
+  d = 3 - W is a VALID metric on 3-cycles!
+
+======================================================================
+ANALYSIS 8: n=7 REGULAR — TERNARY OVERLAP STRUCTURE
+======================================================================
+Scanning all 2097152 tournaments for regular ones...
+Found 2640 regular tournaments
+
+Overlap structure by H-class:
+  H=171: count=1680, disj_33=[10]
+    overlap hist {0: 10, 1: 57, 2: 24}: 1680 tournaments
+  H=175: count=720, disj_33=[14]
+    overlap hist {0: 14, 1: 49, 2: 28}: 720 tournaments
+  H=189: count=240, disj_33=[7]
+    overlap hist {0: 7, 1: 63, 2: 21}: 240 tournaments
+
+Does 3-cycle overlap histogram determine H-class?
+  {0: 7, 1: 63, 2: 21} -> H = 189 (240 tournaments)
+  {0: 10, 1: 57, 2: 24} -> H = 171 (1680 tournaments)
+  {0: 14, 1: 49, 2: 28} -> H = 175 (720 tournaments)
+
+======================================================================
+ANALYSIS 9: 5-CYCLE OVERLAP STRUCTURE IN REGULAR n=7
+======================================================================
+
+  H=171: 36 directed 5-cycles
+    Vertex sets: 21
+    Directed cycles per vertex set: {1: 9, 2: 9, 3: 3}
+    5-cycle vertex set overlap: {3: 105, 4: 105}
+    3-in-5 containment: 84/294 (28.6%)
+
+  H=175: 28 directed 5-cycles
+    Vertex sets: 21
+    Directed cycles per vertex set: {1: 14, 2: 7}
+    5-cycle vertex set overlap: {3: 105, 4: 105}
+    3-in-5 containment: 84/294 (28.6%)
+
+  H=189: 42 directed 5-cycles
+    Vertex sets: 21
+    Directed cycles per vertex set: {2: 21}
+    5-cycle vertex set overlap: {3: 105, 4: 105}
+    3-in-5 containment: 84/294 (28.6%)
+
+======================================================================
+ANALYSIS 10: OVERLAP-WEIGHTED INDEPENDENCE POLYNOMIAL
+======================================================================
+Soft independence: I_q(Omega, x) at n=5, score (1,2,2,2,3)
+  bits=12, H=11: I_q(Omega,2) = q=0.0:11.0, q=0.25:14.3, q=0.5:22.3, q=0.75:47.8, q=1.0:243.0
+  bits=28, H=11: I_q(Omega,2) = q=0.0:11.0, q=0.25:14.3, q=0.5:22.3, q=0.75:47.8, q=1.0:243.0
+  bits=40, H=15: I_q(Omega,2) = q=0.0:15.0, q=0.25:19.6, q=0.5:32.9, q=0.75:91.0, q=1.0:2187.0
+
+  Per H-value (one representative each):
+    H=11: I_0 = 11 (= H, standard OCF), I_0.5 = 22.3, I_1 = 243 (= 2^nc=32)
+    H=15: I_0 = 15 (= H, standard OCF), I_0.5 = 32.9, I_1 = 2187 (= 2^nc=128)
+    H=13: I_0 = 13 (= H, standard OCF), I_0.5 = 28.2, I_1 = 729 (= 2^nc=64)
+
+
+======================================================================
+DONE.
+======================================================================
