@@ -1,0 +1,58 @@
+p=17, m=8, p mod 4 = 1
+Computing H for 256 circulant tournaments...
+  32/256 computed (49.9s elapsed, ETA 349s)
+  64/256 computed (99.4s elapsed, ETA 298s)
+  96/256 computed (148.8s elapsed, ETA 248s)
+  128/256 computed (198.3s elapsed, ETA 198s)
+  160/256 computed (247.7s elapsed, ETA 149s)
+  192/256 computed (297.1s elapsed, ETA 99s)
+  224/256 computed (346.8s elapsed, ETA 50s)
+  256/256 computed (396.3s elapsed, ETA 0s)
+
+All 256 H values computed in 396.3s
+
+16 distinct H values:
+  H=13689269499: 16 orientations
+  H=13627838945: 16 orientations
+  H=13560055389: 16 orientations
+  H=13551813041: 16 orientations
+  H=13551423911: 16 orientations
+  H=13544403013: 16 orientations
+  H=13540194969: 16 orientations
+  H=13526567225: 16 orientations
+  H=13519308361: 16 orientations
+  H=13507244311: 16 orientations
+  ... (16 total)
+  H=13491417243: 16 orientations
+  H=13486964977: 16 orientations
+  H=13478929757: 16 orientations
+
+Mean H = 13535654589.88
+H(Interval) = 13689269499
+Excess = 153614909.12
+Max H = 13689269499
+Interval is maximizer: True
+
+Computing Walsh decomposition (256 x 256 transform)...
+Walsh transform computed in 0.0s
+
+Walsh energy by degree:
+   deg                 energy        pct      contrib_int
+     0 183213945176404164608.0  99.998421%  +13535654589.88
+     2      160107274584877.8   0.000087%      +6005575.12
+     4     1911964571336955.2   0.001044%    +124999242.62
+     6      820086953224522.4   0.000448%     +22610091.38
+
+Sign pattern:
+  deg 2: 14+ 10- coefficients, magnitudes=[118928.28, 2883859.28, 3417984.94], sum=6005575.12
+  deg 4: 45+ 23- coefficients, magnitudes=[1570913.16, 1854975.19, 2334576.0, 2957437.94, 3583260.53, 4507444.81, 7286785.97, 8169548.16, 8222838.38], sum=124999242.62
+  deg 6: 16+ 8- coefficients, magnitudes=[150161.0, 923259.91, 10081463.78], sum=22610091.38
+
+============================================================
+PHASE TRANSITION SUMMARY for p=17 (mod 4 = 1):
+  deg-2 contribution to Interval:      +6005575.12
+  deg-4 contribution to Interval:    +124999242.62
+  deg-6 contribution to Interval:     +22610091.38
+  deg-8 contribution to Interval:            +0.00
+  Total non-constant contribution:    +153614909.12
+  Interval excess over mean:    +153614909.12
