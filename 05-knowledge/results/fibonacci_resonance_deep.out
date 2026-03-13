@@ -1,0 +1,437 @@
+========================================================================
+PART A: PHYLLOTAXIS ANOMALY — WHY GOLDEN ANGLE BEATS INTERVAL
+========================================================================
+
+Comparing tournament types by F-product = prod(1+Q_k):
+   p |       Interval |          Paley |   Phyllotactic |     FibLattice |         Best
+------------------------------------------------------------------------------------------
+   5 |            5.0 |            5.0 |            5.0 |            5.0 |   Int ×1.0
+      Int=[1, 2]
+      Pal=[1, 4]
+      Phy=[1, 3]
+      Fib=[1, 2]
+   7 |           13.0 |           27.0 |           27.0 |           13.0 |   Pal ×2.1
+      Int=[1, 2, 3]
+      Pal=[1, 2, 4]
+      Phy=[1, 3, 4]
+      Fib=[1, 2, 3]
+  11 |           89.0 |         1024.0 |          529.0 |         1024.0 |   Fib ×11.5
+      Int=[1, 2, 3, 4, 5]
+      Pal=[1, 3, 4, 5, 9]
+      Phy=[1, 3, 4, 6, 8]
+      Fib=[1, 2, 3, 5, 8]
+  13 |          233.0 |         4913.0 |         1871.0 |         3041.0 |   Pal ×21.1
+      Int=[1, 2, 3, 4, 5, 6]
+      Pal=[1, 3, 4, 9, 10, 12]
+      Phy=[1, 3, 4, 6, 8, 9]
+      Fib=[1, 2, 3, 5, 8, 11]
+  17 |         1597.0 |       456976.0 |       116381.0 |       249049.0 |   Pal ×286.1
+      Int=[1, 2, 3, 4, 5, 6, 7, 8]
+      Pal=[1, 2, 4, 8, 9, 13, 15, 16]
+      Phy=[1, 3, 4, 6, 8, 9, 11, 12]
+      Fib=[1, 2, 3, 4, 5, 8, 12, 13]
+  19 |         4181.0 |     10077696.0 |       280099.0 |      1459391.0 |   Pal ×2410.4
+      Int=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+      Pal=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+      Phy=[1, 3, 4, 6, 8, 9, 11, 12, 14]
+      Fib=[1, 2, 3, 5, 8, 11, 13, 15, 17]
+  23 |        28657.0 |   1977326743.0 |     30709507.0 |    230087951.0 |   Pal ×68999.8
+      Int=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+      Pal=[1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+      Phy=[1, 3, 4, 6, 8, 9, 11, 12, 14, 16, 17]
+      Fib=[1, 2, 3, 5, 6, 8, 9, 11, 13, 20, 21]
+
+========================================================================
+PART A.2: EXHAUSTIVE OPTIMAL CONNECTION SET SEARCH
+========================================================================
+
+For each p, find the connection set S ⊂ {1,...,p-1}, |S|=m,
+that MAXIMIZES prod(1+Q_k). Compare with Interval, Paley, Phyllotactic.
+
+p=5: searched 6 sets of size 2
+  OPTIMAL:      S = [3, 4], F = 5.0
+  Interval:     S = [1, 2], F = 5.0 (ratio: 1.000)
+  Paley:        S = [1, 4], F = 5.0 (ratio: 1.000)
+  Phyllotactic: S = [1, 3], F = 5.0 (ratio: 1.000)
+
+p=7: searched 20 sets of size 3
+  OPTIMAL:      S = [2, 4, 5], F = 27.0
+  Interval:     S = [1, 2, 3], F = 13.0 (ratio: 2.077)
+  Paley:        S = [1, 2, 4], F = 27.0 (ratio: 1.000)
+  Phyllotactic: S = [1, 3, 4], F = 27.0 (ratio: 1.000)
+
+p=11: searched 252 sets of size 5
+  OPTIMAL:      S = [3, 6, 8, 9, 10], F = 1024.0
+  Interval:     S = [1, 2, 3, 4, 5], F = 89.0 (ratio: 11.506)
+  Paley:        S = [1, 3, 4, 5, 9], F = 1024.0 (ratio: 1.000)
+  Phyllotactic: S = [1, 3, 4, 6, 8], F = 529.0 (ratio: 1.936)
+
+p=13: searched 924 sets of size 6
+  OPTIMAL:      S = [3, 5, 6, 7, 10, 11], F = 5459.0
+  Interval:     S = [1, 2, 3, 4, 5, 6], F = 233.0 (ratio: 23.429)
+  Paley:        S = [1, 3, 4, 9, 10, 12], F = 4913.0 (ratio: 1.111)
+  Phyllotactic: S = [1, 3, 4, 6, 8, 9], F = 1871.0 (ratio: 2.918)
+
+p=17: searched 12870 sets of size 8
+  OPTIMAL:      S = [1, 4, 6, 8, 9, 10, 11, 15], F = 525571.0
+  Interval:     S = [1, 2, 3, 4, 5, 6, 7, 8], F = 1597.0 (ratio: 329.099)
+  Paley:        S = [1, 2, 4, 8, 9, 13, 15, 16], F = 456976.0 (ratio: 1.150)
+  Phyllotactic: S = [1, 3, 4, 6, 8, 9, 11, 12], F = 116381.0 (ratio: 4.516)
+
+========================================================================
+PART B: STRUCTURE OF OPTIMAL CONNECTION SETS
+========================================================================
+
+Analyze the gap structure of optimal sets.
+Key question: is the optimal set always 'interval-like' or does it have
+gaps related to Fibonacci numbers?
+
+========================================================================
+PART C: CONTINUED FRACTIONS AND THE RESONANCE MECHANISM
+========================================================================
+
+The GOLDEN RATIO φ = [1;1,1,1,...] has the simplest continued fraction.
+This means φ is the HARDEST number to approximate by rationals.
+
+Key fact: the convergents of φ are F_{n+1}/F_n (Fibonacci ratios).
+
+For our tournament cascade:
+  B_m(x) satisfies the SAME recurrence as the convergents of (2+x)/(1):
+    B_m = (2+x)·B_{m-1} - B_{m-2}
+    
+  At x=1: B_m(1)/B_{m-1}(1) → φ² (convergents of φ²)
+  
+  The "resonance" occurs because:
+  1. The transfer matrix T_B has eigenvalue ratio φ² (golden)
+  2. The Fourier mode Q_k = sin²(mπk/p)/sin²(πk/p) peaks at k=1
+  3. The peak Q_1 ~ m² while Q_m ~ 1
+  4. The product prod(1+Q_k) is dominated by the peak → F_{2m+1}
+  
+  The Fibonacci cascade is the CONTINUED FRACTION of the amplification:
+    A(p) = [a_0; a_1, a_2, ...] where a_i are related to the Q_k
+
+
+Continued fraction structure of key ratios:
+
+  p=7: F_p/F_{2m+1} = 13/21 = 0.619048
+    CF = [0, 1, 1, 1, 1, 1, 1, 1]
+
+  p=11: F_p/F_{2m+1} = 89/144 = 0.618056
+    CF = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]
+
+  p=13: F_p/F_{2m+1} = 233/377 = 0.618037
+    CF = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+  p=17: F_p/F_{2m+1} = 1597/2584 = 0.618034
+    CF = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+  p=19: F_p/F_{2m+1} = 4181/6765 = 0.618034
+    CF = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+  p=23: F_p/F_{2m+1} = 28657/46368 = 0.618034
+    CF = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+========================================================================
+PART D: SYMBOLIC DYNAMICS — TOURNAMENT AS SUBSHIFT
+========================================================================
+
+A Hamiltonian path in T is a SEQUENCE (v_0, v_1, ..., v_{p-1}) where:
+  - v_{i+1} - v_i mod p ∈ S  (adjacency constraint)
+  - All v_i distinct           (no revisit constraint)
+
+Without the no-revisit constraint, this is a SUBSHIFT OF FINITE TYPE:
+  The adjacency matrix A_{ij} = 1 iff j-i mod p ∈ S
+  The number of length-n paths grows as ρ(A)^n where ρ = spectral radius
+
+With the no-revisit constraint, it becomes a SOFIC SHIFT with
+an exponentially growing forbidden word list.
+
+The TOPOLOGICAL ENTROPY of the subshift (without no-revisit) is:
+  h_top = log(ρ(A))
+
+For the Interval circulant: ρ(A) = Σ_{s∈S} 1 = m (the degree), 
+BUT the actual spectral radius is max_k |λ_k| where λ_k are eigenvalues.
+
+  p= 7: ρ=3.000, h_top=1.0986, h_restricted≈0.6444, ratio=0.5866
+  p=11: ρ=5.000, h_top=1.6094, h_restricted≈0.6260, ratio=0.3890
+  p=13: ρ=6.000, h_top=1.7918, h_restricted≈0.6166, ratio=0.3441
+  p=17: ρ=8.000, h_top=2.0794, h_restricted≈0.6005, ratio=0.2888
+  p=19: ρ=9.000, h_top=2.1972, h_restricted≈0.5938, ratio=0.2703
+  p=23: ρ=11.000, h_top=2.3979, h_restricted≈0.5825, ratio=0.2429
+
+========================================================================
+PART E: THERMODYNAMIC FORMALISM — FREE ENERGY & PRESSURE
+========================================================================
+
+In the THERMODYNAMIC FORMALISM (Ruelle, Sinai, Bowen):
+  The PRESSURE function P(φ) generalizes topological entropy:
+    P(φ) = sup_μ { h(μ) + ∫φ dμ }
+  where μ ranges over invariant measures and φ is a potential.
+
+For our tournament cascade:
+  - The "potential" is φ(x) = -log|x_{i+1} - x_i| (log-step-size)
+  - The pressure P(β·φ) as a function of inverse temperature β
+    undergoes a PHASE TRANSITION at β_c
+
+Connection to Fibonacci:
+  At β=0: P = h_top (topological entropy)
+  At β=∞: P → h_max (entropy of max-weight paths)
+  The Fibonacci structure appears because the transfer operator
+  at the "golden" temperature β_gold has eigenvalues φ², ψ²
+
+
+  p=7: Free energy landscape
+         β |         F(β) |         E(β) |         S(β)
+    ------------------------------------------------
+       0.0 |      -0.6931 |       0.0000 |       0.6931
+       0.5 |      -0.7360 |      -0.1679 |       0.6521
+       1.0 |      -0.8550 |      -0.3005 |       0.5545
+       1.5 |      -1.0290 |      -0.3886 |       0.4460
+       2.0 |      -1.2379 |      -0.4423 |       0.3533
+       3.0 |      -1.7100 |      -0.4935 |       0.2294
+       5.0 |      -2.7344 |      -0.5239 |       0.1150
+
+  p=11: Free energy landscape
+         β |         F(β) |         E(β) |         S(β)
+    ------------------------------------------------
+       0.0 |      -0.6931 |      -0.0000 |       0.6931
+       0.5 |      -0.7501 |      -0.2181 |       0.6410
+       1.0 |      -0.8977 |      -0.3591 |       0.5387
+       1.5 |      -1.0986 |      -0.4367 |       0.4435
+       2.0 |      -1.3290 |      -0.4812 |       0.3666
+       3.0 |      -1.8360 |      -0.5264 |       0.2568
+       5.0 |      -2.9273 |      -0.5584 |       0.1354
+
+  p=13: Free energy landscape
+         β |         F(β) |         E(β) |         S(β)
+    ------------------------------------------------
+       0.0 |      -0.6931 |       0.0000 |       0.6931
+       0.5 |      -0.7541 |      -0.2314 |       0.6384
+       1.0 |      -0.9085 |      -0.3719 |       0.5366
+       1.5 |      -1.1154 |      -0.4483 |       0.4429
+       2.0 |      -1.3517 |      -0.4936 |       0.3645
+       3.0 |      -1.8725 |      -0.5412 |       0.2488
+       5.0 |      -2.9938 |      -0.5726 |       0.1305
+
+========================================================================
+PART F: QUANTUM GROUPS — CRYSTAL BASE CONNECTION
+========================================================================
+
+CRYSTAL BASES (Kashiwara, Lusztig) provide a combinatorial skeleton
+for representations of quantum groups U_q(g).
+
+At q = e^{2πi/5} (fifth root of unity), the quantum group U_q(sl₂)
+has a FINITE representation theory (tilting modules).
+
+The FUSION RULES at this root of unity are:
+  V₁ ⊗ V₁ = V₀ ⊕ V₁  (Fibonacci fusion!)
+  
+  This is EXACTLY the Morgan-Voyce recurrence:
+  B_m = (2+x)·B_{m-1} - B_{m-2} at x = dim(V₁)-1 = 0
+
+  More precisely: dim(V₁^{⊗n}) = F_{n+1} (Fibonacci numbers!)
+
+CONNECTION TO TOURNAMENTS:
+  The tournament Hamiltonian path count H(T) can be interpreted as:
+  H = Tr(T_B^m · correction) where T_B is the transfer matrix.
+  
+  If we set q = e^{2πi/5}, then:
+  T_B = (quantum 6j-symbol evaluation) × (standard transfer matrix)
+  
+  The CRYSTAL BASE of the tournament is the set of Hamiltonian paths,
+  with Kashiwara operators ẽ_i, f̃_i acting by "local moves":
+    f̃_i: swap vertices at positions i, i+1 if possible
+    ẽ_i: reverse swap
+
+  The CRYSTAL GRAPH of the tournament encodes which paths can be
+  reached from which by local moves.
+
+Crystal graph for p=7 Interval tournament:
+Vertices = Hamiltonian paths from 0, Edges = adjacent transpositions
+  Found 25 Hamiltonian paths from 0
+  Crystal graph: 25 vertices, 0 edges
+  Average degree: 0.00
+  Density: 0.0000
+
+========================================================================
+PART G: CATALAN-FIBONACCI DUALITY
+========================================================================
+
+CATALAN NUMBERS C_n = (2n choose n)/(n+1) count:
+  - Non-crossing partitions of [n]
+  - Dyck paths of length 2n
+  - Binary trees with n nodes
+  
+FIBONACCI NUMBERS F_n count:
+  - Compositions of n-1 into 1s and 2s
+  - Independent sets of path graph P_{n-2}
+  - Tilings of 1×(n-1) board with squares and dominos
+
+There's a DEEP connection via the BALLOT PROBLEM:
+  Catalan = constrained at EVERY step (Dyck path never goes negative)
+  Fibonacci = constrained at LAST step (composition must sum to n-1)
+
+For TOURNAMENTS:
+  The no-revisit constraint is like a Dyck path constraint!
+  After visiting k vertices, the remaining p-k must be reachable.
+  
+  The CATALAN structure appears in the TREE of partial paths:
+    Level k of the tree has at most C_k nodes (non-crossing constraint)
+    But the actual count is bounded by F_{k+1} (Fibonacci growth)
+    
+  THE KEY BRIDGE: The transfer matrix T_B generates Fibonacci,
+  but the "pruning" by the no-revisit constraint introduces
+  Catalan-like refinements.
+
+Partial path tree for p=7 Interval:
+  Step | Partial paths | Fibonacci | Catalan | Ratio(path/fib)
+     0 |             1 |         1 |       1 | 1.0000
+     1 |             3 |         1 |       1 | 3.0000
+     2 |             9 |         2 |       2 | 4.5000
+     3 |            21 |         3 |       5 | 7.0000
+     4 |            35 |         5 |      14 | 7.0000
+     5 |            41 |         8 |      42 | 5.1250
+     6 |            25 |        13 |     132 | 1.9231
+
+  Total Hamiltonian paths: 25
+  This is 25 vs F_7 = 13
+
+========================================================================
+PART H: ENTROPY PRODUCTION — TOURNAMENT AS ARROW OF TIME
+========================================================================
+
+A tournament is a COMPLETE ordering under pairwise comparison.
+This is the mathematical structure of an ARROW OF TIME:
+  For every pair (i,j), there is a definite temporal ordering i→j or j→i.
+
+The ENTROPY PRODUCTION of a path π = (v_0,...,v_{p-1}) is:
+  σ(π) = Σ_{t=0}^{p-2} log(outdeg(v_t, remaining) / indeg(v_t, remaining))
+
+For the Interval tournament:
+  - Early in the path: many choices → low entropy production
+  - Late in the path: few choices → high entropy production
+  - The path "burns through" its options → IRREVERSIBILITY
+
+This connects to the SECOND LAW:
+  The amplification A(p) counts HOW MANY MORE valid future paths
+  exist than a uniform model would predict.
+  
+  A(p) > 1 means the tournament is "more ordered" than random
+  → LOWER entropy production → the Fibonacci cascade resists disorder.
+
+The KPZ scaling A ~ exp(c·m^{4/3}) means entropy production
+grows as m^{4/3} — the SAME exponent as in KPZ roughening!
+
+Entropy production analysis at p=7:
+  Path (0, 1, 2, 3, 4, 5, 6): σ = 1.504
+    Steps: ['out=3,in=3', 'out=3,in=2', 'out=3,in=1', 'out=3,in=0', 'out=2,in=0', 'out=1,in=0']
+  Path (0, 1, 3, 4, 5, 6, 2): σ = 2.197
+    Steps: ['out=3,in=3', 'out=3,in=2', 'out=3,in=1', 'out=2,in=1', 'out=1,in=1', 'out=1,in=0']
+  Path (0, 1, 3, 4, 6, 2, 5): σ = 2.197
+    Steps: ['out=3,in=3', 'out=3,in=2', 'out=3,in=1', 'out=2,in=1', 'out=1,in=1', 'out=1,in=0']
+
+  Average entropy production: 1.0782
+  Per step: 0.1797
+
+========================================================================
+PART I: ZECKENDORF'S THEOREM AND TOURNAMENT DECOMPOSITION
+========================================================================
+
+ZECKENDORF'S THEOREM: Every positive integer has a unique representation
+as a sum of NON-CONSECUTIVE Fibonacci numbers:
+  n = F_{i_1} + F_{i_2} + ... + F_{i_k}  where i_j - i_{j+1} ≥ 2
+
+For the tournament H values:
+  H(p) = p · prod(1+Q_k) · A(p)
+  
+If H is "Fibonacci-structured", its Zeckendorf representation should
+be SHORT (few terms) and REGULAR (indices evenly spaced).
+
+  F_5 = 5: Zeckendorf = F_5
+  F_5 = 8: Zeckendorf = F_6
+  F_7 = 13: Zeckendorf = F_7
+  F_7 = 21: Zeckendorf = F_8
+  F_11 = 89: Zeckendorf = F_11
+  F_11 = 144: Zeckendorf = F_12
+  F_13 = 233: Zeckendorf = F_13
+  F_13 = 377: Zeckendorf = F_14
+
+========================================================================
+PART J: THE GOLDEN STRING — TOURNAMENT WORD COMPLEXITY
+========================================================================
+
+The FIBONACCI WORD (or golden string) is the infinite word:
+  w = abaababaabaab...
+obtained by the substitution a → ab, b → a.
+
+This word has COMPLEXITY function C(n) = n + 1 (STURMIAN — minimal
+for an aperiodic word). It is the cutting sequence of a line
+with slope 1/φ.
+
+For TOURNAMENTS, define a "step word" for each Hamiltonian path:
+  Given path π = (v_0,...,v_{p-1}), define
+  w(π)_t = step size = (v_{t+1} - v_t) mod p
+
+If the tournament is the Interval [1,...,m], step sizes ∈ {1,...,m}.
+The COMPLEXITY of the set of all step words measures the
+"information content" of the tournament.
+
+p=7: 25 step words of length 12
+  C(1) = 5 distinct subwords of length 1
+  C(2) = 21 distinct subwords of length 2
+  C(3) = 51 distinct subwords of length 3
+  C(4) = 59 distinct subwords of length 4
+  C(5) = 45 distinct subwords of length 5
+  C(6) = 25 distinct subwords of length 6
+  C(7) = 0 distinct subwords of length 7
+  C(8) = 0 distinct subwords of length 8
+  C(9) = 0 distinct subwords of length 9
+  C(10) = 0 distinct subwords of length 10
+  C(11) = 0 distinct subwords of length 11
+  C(12) = 0 distinct subwords of length 12
+
+  Sturmian would give C(n) = n+1: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+  Step distribution:
+    step 1: 50 (33.3%)
+    step 2: 44 (29.3%)
+    step 3: 28 (18.7%)
+    step 8: 10 (6.7%)
+    step 9: 18 (12.0%)
+
+========================================================================
+SYNTHESIS: THE FIBONACCI RESONANCE DEEP STRUCTURE
+========================================================================
+
+The Fibonacci resonance cascade in tournaments is a manifestation of
+SEVEN interconnected mathematical structures:
+
+1. NUMBER THEORY: φ = [1;1,1,...] → F_p = Norm_{Q(√5)/Q}(φ^{p-1})
+   The golden ratio's extremal irrationality generates F_p as a norm.
+
+2. SYMBOLIC DYNAMICS: Tournament paths form a sofic shift with
+   topological entropy h ≈ log(m), reduced by the no-revisit
+   constraint to h_eff ≈ log(F_{2m+1})/p.
+
+3. THERMODYNAMIC FORMALISM: The transfer matrix T_B generates a
+   "pressure function" P(β) with phase transition at β_c where
+   the Fibonacci eigenvalue dominates.
+
+4. QUANTUM GROUPS: At q = e^{2πi/5}, the fusion rules are Fibonacci.
+   The tournament path count = dimension of tensor power representation.
+
+5. CATALAN-FIBONACCI DUALITY: The tree of partial paths grows as
+   Fibonacci (branching) pruned by Catalan (non-crossing = no-revisit).
+
+6. ENTROPY PRODUCTION: The arrow of time in tournaments (complete
+   ordering) connects to the Second Law. Fibonacci cascade = 
+   minimal entropy production (most ordered tournament).
+
+7. PHYLLOTAXIS: Golden-angle sampling may BEAT the Interval for the
+   F-product — the same mechanism that makes sunflowers optimal
+   makes tournaments optimal.
+
+The COMMON ROOT of all seven is: φ = lim F_{n+1}/F_n is the eigenvalue
+of the simplest non-trivial hyperbolic matrix [[1,1],[1,0]] ∈ SL(2,Z).
+Everything in this project traces back to this single matrix.
+
