@@ -1,0 +1,39 @@
+======================================================================
+SEARCHING FOR SMALL-OMEGA H-CHANGING EXAMPLE AT n=8
+======================================================================
+  NEW BEST: seed=0, trial=18, total_dir=98, H=281->285
+  NEW BEST: seed=0, trial=108, total_dir=43, H=111->109
+  NEW BEST: seed=2, trial=296, total_dir=42, H=109->111
+  ... seed 9, best so far: 42
+  ... seed 19, best so far: 42
+  ... seed 29, best so far: 42
+  ... seed 39, best so far: 42
+  ... seed 49, best so far: 42
+  ... seed 59, best so far: 42
+  ... seed 69, best so far: 42
+  ... seed 79, best so far: 42
+  ... seed 89, best so far: 42
+  ... seed 99, best so far: 42
+
+Best example: 42 directed cycles
+  bits=56161919, subset=(1, 2, 3, 7)
+  H: 109 -> 111, delta=2
+
+  Directed cycles A: 42 = {3: 11, 5: 23, 7: 8}
+  Directed cycles B: 43 = {3: 11, 5: 23, 7: 9}
+
+  Still too many cycles for full IP. Best found: 42
+  The n=8 topology change needs special analysis techniques.
+
+  Disjoint directed cycle pairs: A=6, B=6, delta=0
+  delta_H from i_1 change: 2
+  delta_H from i_2 change (if only i_1,i_2): 0
+  Residual (higher order): 0
+  Actual delta_H = 2
+  2*di_1 + 4*di_2 = 2
+
+  Disjoint directed cycle triples: A=0, B=0, delta=0
+  2*di_1 + 4*di_2 + 8*di_3 = 2
+  Remaining residual: 0
+
+Done.
