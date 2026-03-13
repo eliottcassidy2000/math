@@ -1,0 +1,120 @@
+======================================================================
+WALSH-GAUSS STRUCTURE ANALYSIS
+======================================================================
+
+============================================================
+p = 7, m = 3, QR = [1, 2, 4]
+============================================================
+
+  H distribution (counts symmetric orientations):
+    H = 175: 6 orientations (x2 with symmetry = 12)
+    H = 189: 2 orientations (x2 with symmetry = 4)
+
+  Degree-2 Walsh coefficients:
+    (0, 1): gaps=(1,2), q=3, h_hat=      7.0000, |h_hat|=      7.0000, chi(prod)=+1, sign=OK
+    (0, 2): gaps=(1,3), q=3, h_hat=     -7.0000, |h_hat|=      7.0000, chi(prod)=-1, sign=OK
+    (1, 2): gaps=(2,3), q=3, h_hat=     -7.0000, |h_hat|=      7.0000, chi(prod)=-1, sign=OK
+
+  |h_hat| by resonance level:
+    q=3 (chi(q)=-1): |h_hat| = [7.0]
+
+  --- MAGNITUDE RATIOS ---
+
+  --- D^{2n} DECOMPOSITION ---
+  h_hat[{a,b}] = sum_n D^{2n}_ab / 2^m
+  For q-resonant pair: D^{2n}_ab nonzero only at n >= (q+1)/2
+  Sign of D^{2n} at onset: chi(q) * chi(ab)
+
+    q=3: onset at D^4, sign(D^4) = chi(q)*chi(ab) = (-1)*(+1) = -1
+    h_hat =       7.0000, sign(h_hat) = +1, chi(ab) = +1
+    => D^4 has WRONG sign for product law!
+       But h_hat still has correct sign => higher D^{2n} or OCF nonlinearity corrects it
+
+
+============================================================
+p = 11, m = 5, QR = [1, 3, 4, 5, 9]
+============================================================
+
+  H distribution (counts symmetric orientations):
+    H = 92411: 10 orientations (x2 with symmetry = 20)
+    H = 93027: 10 orientations (x2 with symmetry = 20)
+    H = 93467: 10 orientations (x2 with symmetry = 20)
+    H = 95095: 2 orientations (x2 with symmetry = 4)
+
+  Degree-2 Walsh coefficients:
+    (0, 1): gaps=(1,2), q=5, h_hat=    -16.5000, |h_hat|=     16.5000, chi(prod)=-1, sign=OK
+    (0, 2): gaps=(1,3), q=3, h_hat=    544.5000, |h_hat|=    544.5000, chi(prod)=+1, sign=OK
+    (0, 3): gaps=(1,4), q=3, h_hat=    544.5000, |h_hat|=    544.5000, chi(prod)=+1, sign=OK
+    (0, 4): gaps=(1,5), q=5, h_hat=     16.5000, |h_hat|=     16.5000, chi(prod)=+1, sign=OK
+    (1, 2): gaps=(2,3), q=3, h_hat=   -544.5000, |h_hat|=    544.5000, chi(prod)=-1, sign=OK
+    (1, 3): gaps=(2,4), q=5, h_hat=    -16.5000, |h_hat|=     16.5000, chi(prod)=-1, sign=OK
+    (1, 4): gaps=(2,5), q=3, h_hat=   -544.5000, |h_hat|=    544.5000, chi(prod)=-1, sign=OK
+    (2, 3): gaps=(3,4), q=5, h_hat=     16.5000, |h_hat|=     16.5000, chi(prod)=+1, sign=OK
+    (2, 4): gaps=(3,5), q=5, h_hat=     16.5000, |h_hat|=     16.5000, chi(prod)=+1, sign=OK
+    (3, 4): gaps=(4,5), q=3, h_hat=    544.5000, |h_hat|=    544.5000, chi(prod)=+1, sign=OK
+
+  |h_hat| by resonance level:
+    q=3 (chi(q)=+1): |h_hat| = [544.5]
+    q=5 (chi(q)=+1): |h_hat| = [16.5]
+
+  Degree-4 Walsh coefficients:
+    (0, 1, 2, 3): gaps=(1, 2, 3, 4), prod=24, h_hat=   -236.5000, chi(prod)=-1, sign=OK
+    (0, 1, 2, 4): gaps=(1, 2, 3, 5), prod=30, h_hat=   -236.5000, chi(prod)=-1, sign=OK
+    (0, 1, 3, 4): gaps=(1, 2, 4, 5), prod=40, h_hat=   -236.5000, chi(prod)=-1, sign=OK
+    (0, 2, 3, 4): gaps=(1, 3, 4, 5), prod=60, h_hat=    236.5000, chi(prod)=+1, sign=OK
+    (1, 2, 3, 4): gaps=(2, 3, 4, 5), prod=120, h_hat=   -236.5000, chi(prod)=-1, sign=OK
+
+  --- MAGNITUDE RATIOS ---
+    Distinct |h_hat_2| values: [16.5, 544.5]
+    Ratio large/small: 33.000000
+    = 33.0
+    Ratio / p = 3.000000
+    Ratio / (p-1) = 3.300000
+    Ratio / (p+1) = 2.750000
+
+  --- D^{2n} DECOMPOSITION ---
+  h_hat[{a,b}] = sum_n D^{2n}_ab / 2^m
+  For q-resonant pair: D^{2n}_ab nonzero only at n >= (q+1)/2
+  Sign of D^{2n} at onset: chi(q) * chi(ab)
+
+    q=3: onset at D^4, sign(D^4) = chi(q)*chi(ab) = (+1)*(+1) = +1
+    h_hat =     544.5000, sign(h_hat) = +1, chi(ab) = +1
+    => D^4 has CORRECT sign for product law
+
+    q=5: onset at D^6, sign(D^6) = chi(q)*chi(ab) = (+1)*(-1) = -1
+    h_hat =     -16.5000, sign(h_hat) = -1, chi(ab) = -1
+    => D^6 has CORRECT sign for product law
+
+
+
+============================================================
+PART 4: EXPLICIT h_hat FORMULA AT p=7
+============================================================
+
+  All H values (sigma_0=+1 half):
+    sigma=[-1, -1, -1], S=[4, 5, 6], H=175
+    sigma=[1, -1, -1], S=[1, 4, 5], H=175
+    sigma=[-1, 1, -1], S=[2, 4, 6], H=175
+    sigma=[1, 1, -1], S=[1, 2, 4], H=189
+    sigma=[-1, -1, 1], S=[3, 5, 6], H=189
+    sigma=[1, -1, 1], S=[1, 3, 5], H=175
+    sigma=[-1, 1, 1], S=[2, 3, 6], H=175
+    sigma=[1, 1, 1], S=[1, 2, 3], H=175
+
+  h_hat[{0,1}] = (1/2^m) * sum H(sigma) * sigma_0 * sigma_1
+  = (2/2^m) * sum_(sigma_0=+1) H(sigma) * sigma_0 * sigma_1
+  = (2/8) * sum_(sigma_0=+1) H(sigma) * sigma_1
+    sigma=[-1, -1, -1], H=175, s0*s1=+1, contrib=+175
+    sigma=[1, -1, -1], H=175, s0*s1=-1, contrib=-175
+    sigma=[-1, 1, -1], H=175, s0*s1=-1, contrib=-175
+    sigma=[1, 1, -1], H=189, s0*s1=+1, contrib=+189
+    sigma=[-1, -1, 1], H=189, s0*s1=+1, contrib=+189
+    sigma=[1, -1, 1], H=175, s0*s1=-1, contrib=-175
+    sigma=[-1, 1, 1], H=175, s0*s1=-1, contrib=-175
+    sigma=[1, 1, 1], H=175, s0*s1=+1, contrib=+175
+  Total = 28, h_hat = 2*28/8 = 7.0000
+
+  H(Paley) = 189, H(non-Paley) = 175
+  Difference = 14 = 2*p = 2*7
+  h_hat = 2*(189-175*3)/(2^3) ... no, need full Walsh
+  |h_hat_2| = p/2 = 3.5 for ALL degree-2 at p=7
