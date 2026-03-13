@@ -1,0 +1,208 @@
+/Users/e/Documents/GitHub/math/04-computation/boolean_fkg_proof.py:390: SymPyDeprecationWarning: 
+
+The `sympy.ntheory.residue_ntheory.legendre_symbol` has been moved to `sympy.functions.combinatorial.numbers.legendre_symbol`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  sigma_pal = tuple(int(legendre(k, p)) for k in range(1, m + 1))
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+========================================================================
+PART I: LOG-SUPERMODULARITY TEST
+========================================================================
+
+If H is log-supermodular on {±1}^m, i.e.:
+  H(σ ∨ τ) · H(σ ∧ τ) ≥ H(σ) · H(τ)  for all σ, τ
+where (σ ∨ τ)_i = max(σ_i, τ_i) and (σ ∧ τ)_i = min(σ_i, τ_i),
+then by FKG:
+  - The maximum is at all-ones (since all-ones = ∨ of everything)
+  - More generally, for any increasing event A:
+    P(A | high H) ≥ P(A | low H)
+
+This is EXACTLY what we need to prove Interval maximizes H!
+
+  p=7: 5/28 log-supermodularity violations
+    Worst ratio: 0.857339
+  p=11: 114/496 log-supermodularity violations
+    Worst ratio: 0.956980
+  p=13: 614/2016 log-supermodularity violations
+    Worst ratio: 0.977665
+
+========================================================================
+PART II: MONOTONICITY ANALYSIS — IS H COORDINATEWISE INCREASING?
+========================================================================
+
+A simpler condition: is H(σ) ≤ H(σ') whenever σ ≤ σ' coordinatewise?
+If so, then all-ones is trivially the maximum.
+
+This is equivalent to: ALL degree-1 Walsh coefficients are non-negative,
+AND the function is monotone (which is stronger than just degree-1 signs).
+
+
+  p=7: 3/12 anti-monotone flips
+  Degree-1 Walsh coefficients (influences):
+    ĥ[{1}] = 0.00 ← positive
+    ĥ[{2}] = 0.00 ← positive
+    ĥ[{3}] = 0.00 ← positive
+
+  p=11: 30/80 anti-monotone flips
+  Degree-1 Walsh coefficients (influences):
+    ĥ[{1}] = 0.00 ← positive
+    ĥ[{2}] = 0.00 ← positive
+    ĥ[{3}] = 0.00 ← positive
+    ĥ[{4}] = 0.00 ← positive
+    ĥ[{5}] = 0.00 ← positive
+
+  p=13: 84/192 anti-monotone flips
+  Degree-1 Walsh coefficients (influences):
+    ĥ[{1}] = 0.00 ← positive
+    ĥ[{2}] = 0.00 ← positive
+    ĥ[{3}] = 0.00 ← positive
+    ĥ[{4}] = 0.00 ← positive
+    ĥ[{5}] = 0.00 ← positive
+    ĥ[{6}] = 0.00 ← positive
+
+========================================================================
+PART III: FKG LATTICE CONDITION (HOLLEY CRITERION)
+========================================================================
+
+Even if H is not coordinatewise monotone, it can still satisfy the
+FKG lattice condition: for all σ ~ τ (differing in one coordinate),
+  H(σ∨τ) / H(σ) ≥ H(τ) / H(σ∧τ)
+
+This is the CONDITIONAL version of log-supermodularity, and it's
+sufficient for FKG to apply. It's also easier to verify — we only
+need to check pairs differing in exactly TWO coordinates.
+
+  p=7: 4/6 FKG lattice violations (2-coord test)
+  p=11: 38/80 FKG lattice violations (2-coord test)
+  p=13: 120/240 FKG lattice violations (2-coord test)
+
+========================================================================
+PART IV: NOISE STABILITY AND HYPERCONTRACTIVITY
+========================================================================
+
+Noise stability: S_ρ(H) = Σ_S ρ^|S| ĥ[S]²
+  = expected correlation between H(σ) and H(σ') where σ' is a
+  ρ-correlated copy of σ.
+
+If S_ρ(H) is close to Var(H), then H is "noise stable" — it depends
+mostly on low-degree Fourier coefficients. The Majority Is Stablest
+theorem (Mossel-O'Donnell-Oleszkiewicz 2010) then implies that the
+maximum is near the "dictator" functions (all-ones or all-minus-ones).
+
+Hypercontractivity (Bonami-Beckner): ||T_ρ f||_q ≤ ||f||_p for
+q-1 = ρ²(p-1). This bounds how much energy can be in high degrees.
+
+
+  p=7, m=3:
+    Mean H = 178.5
+    Total Var(H) = 36.8
+    Degree 0: energy = 31862.2 (mean²)
+    Degree 1: energy = 0.0 (0.0% of variance)
+    Degree 2: energy = 36.8 (100.0% of variance)
+    Degree 3: energy = 0.0 (0.0% of variance)
+    Noise stability S_ρ / Var(H):
+      ρ=0.5: S_ρ/Var = 0.0625
+      ρ=0.8: S_ρ/Var = 0.4096
+      ρ=0.9: S_ρ/Var = 0.6561
+      ρ=0.95: S_ρ/Var = 0.8145
+      ρ=0.99: S_ρ/Var = 0.9606
+
+  p=11, m=5:
+    Mean H = 93101.2
+    Total Var(H) = 440855.9
+    Degree 0: energy = 8667842751.6 (mean²)
+    Degree 1: energy = 0.0 (0.0% of variance)
+    Degree 2: energy = 370940.6 (84.1% of variance)
+    Degree 3: energy = 0.0 (0.0% of variance)
+    Degree 4: energy = 69915.3 (15.9% of variance)
+    Degree 5: energy = 0.0 (0.0% of variance)
+    Noise stability S_ρ / Var(H):
+      ρ=0.5: S_ρ/Var = 0.0532
+      ρ=0.8: S_ρ/Var = 0.3712
+      ρ=0.9: S_ρ/Var = 0.6203
+      ρ=0.95: S_ρ/Var = 0.7905
+      ρ=0.99: S_ρ/Var = 0.9546
+
+  p=13, m=6:
+    Mean H = 3695839.9
+    Total Var(H) = 245279351.5
+    Degree 0: energy = 13659232381640.0 (mean²)
+    Degree 1: energy = 0.0 (0.0% of variance)
+    Degree 2: energy = 45215543.3 (18.4% of variance)
+    Degree 3: energy = 0.0 (0.0% of variance)
+    Degree 4: energy = 200063808.1 (81.6% of variance)
+    Degree 5: energy = 0.0 (0.0% of variance)
+    Degree 6: energy = 0.0 (0.0% of variance)
+    Noise stability S_ρ / Var(H):
+      ρ=0.5: S_ρ/Var = 0.0147
+      ρ=0.8: S_ρ/Var = 0.2124
+      ρ=0.9: S_ρ/Var = 0.4721
+      ρ=0.95: S_ρ/Var = 0.6913
+      ρ=0.99: S_ρ/Var = 0.9297
+
+========================================================================
+PART V: THE CORRELATION INEQUALITY APPROACH
+========================================================================
+
+NEW IDEA: Instead of proving H is log-supermodular directly,
+use the POLYMER EXPANSION of Z(Ω, λ):
+
+  Z(Ω, λ) = Π_{v ∈ V(Ω)} (1 + λ·x_v) · Π_{uv ∈ E(Ω)} (1 - x_u·x_v·...)
+
+In the hard-core model, Z = Σ_{I independent} λ^|I|.
+
+The KEY: Z(Ω, λ) is a MONOTONE function of the complement graph.
+If we can show that Interval's complement-Ω has more edges (sparser Ω),
+then Z(Ω_Int, λ) ≥ Z(Ω_Pal, λ) for all λ > 0.
+
+Formally: if Ω_Int ⊆ Ω_Pal (as graphs), then every independent set of
+Ω_Pal is also independent in Ω_Int, so Z(Ω_Int, λ) ≥ Z(Ω_Pal, λ).
+
+Is Ω_Int ⊂ Ω_Pal as a SUBGRAPH? Let's check!
+
+
+  p=7:
+    Interval: 0 cycles, 0 Ω-edges (density 0.0000)
+    Paley:    0 cycles, 0 Ω-edges (density 0.0000)
+    Independence polynomial comparison:
+      α_0: Int=1, Pal=1, Δ=0, 2^k·Δ=0 [TIE]
+    Z(Ω,2): Int=1, Pal=1
+
+  p=11:
+    Interval: 0 cycles, 0 Ω-edges (density 0.0000)
+    Paley:    0 cycles, 0 Ω-edges (density 0.0000)
+    Independence polynomial comparison:
+      α_0: Int=1, Pal=1, Δ=0, 2^k·Δ=0 [TIE]
+    Z(Ω,2): Int=1, Pal=1
+
+========================================================================
+PART VI: STOCHASTIC DOMINANCE OF Ω DEGREE SEQUENCES
+========================================================================
+
+Even if Ω_Int ⊄ Ω_Pal, we can compare their degree sequences.
+In the hard-core model, Z is monotone in the graph structure:
+  fewer edges → more independent sets → higher Z.
+
+But this is too coarse — the STRUCTURE of edges matters.
+Specifically: Ω_Int may have fewer edges but they could be more
+concentrated (forming cliques), which HELPS independent sets elsewhere.
+
+The REAL comparison: Interval's Ω has a SPARSER structure in the
+"between-clusters" region, compensating for denser "within-cluster" edges.
+
+
+  p=7, Interval: 0 cycles
+    Ω degree sequence: []
+    Mean degree: nan
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/boolean_fkg_proof.py", line 524, in <module>
+    print(f"    Max degree: {max(deg)}")
+ValueError: max() arg is an empty sequence
