@@ -1,0 +1,29 @@
+P_7 (m=3):
+  d=0: |A|=1, dim(Omega)=1
+  d=1: |A|=3, dim(Omega)=3
+  d=2: |A|=9, dim(Omega)=6
+  d=3: |A|=21, dim(Omega)=9
+  d=4: |A|=39, dim(Omega)=9
+  d=5: |A|=45, dim(Omega)=6
+  d=6: |A|=27, dim(Omega)=3
+
+Boundary ranks:
+  R_1 = rank(∂_1|Omega) = 0
+  R_2 = rank(∂_2|Omega) = 3
+  R_3 = rank(∂_3|Omega) = 3
+  R_4 = rank(∂_4|Omega) = 6
+  R_5 = rank(∂_5|Omega) = 3
+  R_6 = rank(∂_6|Omega) = 3
+
+Betti numbers:
+  beta_0 = 1 - 0 = 1
+  beta_1 = 3 - 3 = 0
+  beta_2 = 3 - 3 = 0
+  beta_3 = 6 - 6 = 0
+  beta_4 = 3 - 3 = 0
+  beta_5 = 3 - 3 = 0
+  beta_6 = 0 - 0 = 0
+
+  beta = [1, 0, 0, 0, 0, 0, 0]
+  chi = 1
+  chi/p = 0.14285714285714285

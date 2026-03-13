@@ -1,0 +1,178 @@
+======================================================================
+CONSTRAINT STRUCTURE THEOREM FOR PALEY TOURNAMENTS
+opus-2026-03-13-S71b — Comprehensive Summary
+======================================================================
+
+For P_p with p ≡ 3 mod 4, m = (p-1)/2, QR = quadratic residues.
+
+SETUP:
+  A d-diff-seq is (s_1,...,s_d) ∈ QR^d with all partial sums distinct.
+  Interior face i (1 ≤ i ≤ d-1) merges s_i + s_{i+1} and is "junk"
+  when s_i + s_{i+1} ∉ QR.
+
+  The constraint matrix C_d has:
+    - Rows: junk (d-1)-tuples (faces not in A_{d-1})
+    - Columns: d-diff-seqs in A_d
+    - Entry: sum of (-1)^i over all faces of σ that equal the row tuple
+
+  Omega_d = ker(C_d), so dim(Omega_d) = |A_d| - rank(C_d).
+
+======================================================================
+BLOCK STRUCTURE
+======================================================================
+
+THEOREM (Block Diagonality): The junk face rows partition into (d-1)
+blocks indexed by face index i ∈ {1,...,d-1}:
+
+  Block i: junk faces from face i have the (d-1)-tuple type signature
+    (QR,...,QR, NQR, QR,...,QR)
+    where position i-1 is in NQR and all other positions are in QR.
+
+  These blocks are PAIRWISE DISJOINT since QR ∩ NQR = ∅.
+
+PROOF (sketch):
+  Face i of (s_1,...,s_d) is the (d-1)-tuple obtained by replacing
+  (s_i, s_{i+1}) with s_i + s_{i+1}. The entries at positions ≠ i-1
+  retain their original QR values (being elements of the diff-seq).
+  Position i-1 has value s_i + s_{i+1} ∈ NQR (junk condition).
+
+  For blocks i and j (i ≠ j), position i-1 must be in NQR for block i
+  but in QR for block j (since it's an original QR entry in block j).
+  Hence the blocks are disjoint. ∎
+
+======================================================================
+DEGREE 2: PROVED (HYP-678)
+======================================================================
+
+  |A_2|/p = m²
+  Blocks: 1 (face 1 only). Rows: NQR values r.
+  N(r) = (m+1)/2 for r ∈ NQR (Jacobi sum J(χ,χ) = 1).
+  rank(C_2) = m (one per NQR value, each block trivially rank 1).
+  Omega_2/p = m² - m = m(m-1).
+
+======================================================================
+DEGREE 3: PROVED (HYP-679)
+======================================================================
+
+  |A_3|/p = m(m-1)p/2
+  Blocks: 2 (faces 1 and 2).
+    Block 1: (NQR, QR) — m(m-1) rows
+    Block 2: (QR, NQR) — m(m-1) rows
+  Signs: face 1 = -1, face 2 = +1 (OPPOSITE signs).
+  Each block has full row rank = m(m-1).
+  Blocks don't couple (opposite signs → no cancellation).
+  rank(C_3) = 2m(m-1).
+  Omega_3/p = m(m-1)(p-4)/2.
+
+======================================================================
+DEGREE 4: PROVED (HYP-680)
+======================================================================
+
+  Blocks: 3 (faces 1, 2, 3).
+    Block 1: (NQR, QR, QR) — signs: -1
+    Block 2: (QR, NQR, QR) — signs: +1
+    Block 3: (QR, QR, NQR) — signs: -1
+
+  Each block individually has FULL ROW RANK.
+
+  INTER-BLOCK COUPLING:
+  Blocks 1 and 3 have the SAME SIGN (-1).
+  Columns hitting both create "parallel" entries.
+
+  The coupling decomposes into m² sub-blocks indexed by (r, r') ∈ NQR²:
+    Sub-block (r, r'): connects
+      B₁ rows {(r, u, v) : u+v = r'} (N(r') = (m+1)/2 rows)
+      B₃ rows {(s, t, r') : s+t = r} (N(r) = (m+1)/2 rows)
+    via N(r)·N(r') = ((m+1)/2)² columns.
+
+    This is a COMPLETE BIPARTITE graph.
+    Rank = N(r) + N(r') - 1 = m.
+    Nullity = 1.
+
+  Sub-blocks are row-disjoint → nullity = m² × 1 = m².
+
+  Block 2 (opposite sign) doesn't contribute to null space.
+
+  rank(C_4) = (total junk rows) - m².
+
+======================================================================
+DEGREE 5+: PARTIALLY ANALYZED
+======================================================================
+
+  Blocks: (d-1) blocks with signs (-1)^1, (-1)^2, ..., (-1)^{d-1}.
+  Same-sign pairs: {(i,j) : i ≡ j mod 2}.
+  Each pair contributes coupling nullity.
+
+  At d=5: same-sign pairs (1,3), (2,4), (1,5 doesn't exist).
+  HOWEVER: the nullity is MORE than 2m² — additional contributions
+  from columns hitting 3 or 4 blocks simultaneously.
+
+  VERIFIED:
+    d=5, P_7:  nullity = 33
+    d=5, P_11: nullity = 250
+    d=6, P_7:  nullity = 42
+    d=6, P_11: nullity = 1620
+
+  No simple closed formula found yet.
+
+======================================================================
+FULL NULLITY TABLE
+======================================================================
+
+P_7 (m=3):
+  d | |A_d| | junk  | rank | nullity | Omega
+  0 |     1 |     0 |    0 |       0 |     1
+  1 |     3 |     0 |    0 |       0 |     3
+  2 |     9 |     3 |    3 |       0 |     6
+  3 |    21 |    12 |   12 |       0 |     9
+  4 |    39 |    39 |   30 |       9 |     9
+  5 |    45 |    72 |   39 |      33 |     6
+  6 |    27 |    66 |   24 |      42 |     3
+
+P_11 (m=5):
+  d | |A_d| | junk  | rank  | nullity | Omega
+  0 |     1 |     0 |     0 |       0 |     1
+  1 |     5 |     0 |     0 |       0 |     5
+  2 |    25 |     5 |     5 |       0 |    20
+  3 |   110 |    40 |    40 |       0 |    70
+  4 |   430 |   250 |   225 |      25 |   205
+  5 |  1430 |  1220 |   970 |     250 |   460
+  6 |  3970 |  4890 |  3270 |    1620 |   700
+  7 |  8735 | 15230 |  8045 |    7185 |   690
+  8 | 14395 | 35145 | 13945 |   21200 |   450
+  9 | 15745 | 52550 | 15565 |   36985 |   180
+ 10 |  8645 | 38675 |  8615 |   30060 |    30
+
+(Degrees 8-10 values from earlier computation session.)
+
+======================================================================
+PROVED FORMULAS
+======================================================================
+
+  Omega_0/p = 1
+  Omega_1/p = m
+  Omega_2/p = m(m-1)                     [rank(C_2) = m]
+  Omega_3/p = m(m-1)(2m-3)/2             [rank(C_3) = 2m(m-1)]
+  nullity(C_4) = m²                       [tensor product coupling]
+
+  UNIVERSAL RATIOS:
+    rank(C_2)/|A_2| = 1/m
+    rank(C_3)/|A_3| = 4/p
+
+  BETTI (HYP-672, verified P_7 and P_11):
+    β_0 = 1, β_m = m(m-3)/2, β_{m+1} = C(m+1,2)
+    β_d = 0 for d ∉ {0, m, m+1}
+    chi = p
+
+======================================================================
+KEY OPEN QUESTIONS
+======================================================================
+
+1. Closed-form formula for |A_d|/p at degree d ≥ 4?
+2. Closed-form nullity formula for d ≥ 5?
+3. Algebraic proof that chi = p?
+4. Can the per-eigenspace Betti pattern be proved from the
+   constraint structure + Hopf trace formula?
+5. Does the block-diagonality extend to a spectral sequence
+   that converges to the Betti numbers?
+======================================================================

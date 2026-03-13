@@ -1,0 +1,70 @@
+PREDICTED k=0 eigenspace for P_11 (m=5):
+  d    Omega      R_d  R_{d+1}   beta_d
+  0        1        0        0        1
+  1        5        0        5        0
+  2       20        5       15        0
+  3       70       15       55        0
+  4      205       55      150        0
+  5      460      150      305        5
+  6      700      305      390        5
+  7      690      390      300        0
+  8      450      300      150        0
+  9      180      150       30        0
+ 10       30       30        0        0
+  d=0: 0 + 0 + 1 = 1 = Omega_0 ✓
+  d=1: 0 + 5 + 0 = 5 = Omega_1 ✓
+  d=2: 5 + 15 + 0 = 20 = Omega_2 ✓
+  d=3: 15 + 55 + 0 = 70 = Omega_3 ✓
+  d=4: 55 + 150 + 0 = 205 = Omega_4 ✓
+  d=5: 150 + 305 + 5 = 460 = Omega_5 ✓
+  d=6: 305 + 390 + 5 = 700 = Omega_6 ✓
+  d=7: 390 + 300 + 0 = 690 = Omega_7 ✓
+  d=8: 300 + 150 + 0 = 450 = Omega_8 ✓
+  d=9: 150 + 30 + 0 = 180 = Omega_9 ✓
+  d=10: 30 + 0 + 0 = 30 = Omega_10 ✓
+
+
+Verifying boundary ranks computationally (small degrees)...
+  d=0: |A_d| = 1
+  d=1: |A_d| = 5
+  d=2: |A_d| = 25
+  d=3: |A_d| = 110
+  d=4: |A_d| = 430
+  d=5: |A_d| = 1430
+  d=6: |A_d| = 3970
+  d=7: |A_d| = 8735
+
+  R_1:
+    stacked matrix: (1, 5)
+    rank([C;B]) = 0, rank(C) = 0, R_1 = 0
+    predicted: 0  ✓
+
+  R_2:
+    stacked matrix: (10, 25)
+    rank([C;B]) = 10, rank(C) = 5, R_2 = 5
+    predicted: 5  ✓
+
+  R_3:
+    stacked matrix: (65, 110)
+    rank([C;B]) = 55, rank(C) = 40, R_3 = 15
+    predicted: 15  ✓
+
+  R_4:
+    stacked matrix: (360, 430)
+    rank([C;B]) = 280, rank(C) = 225, R_4 = 55
+    predicted: 55  ✓
+
+  R_5:
+    stacked matrix: (1650, 1430)
+    rank([C;B]) = 1120, rank(C) = 970, R_5 = 150
+    predicted: 150  ✓
+
+  R_6:
+    stacked matrix: (6320, 3970)
+    rank([C;B]) = 3575, rank(C) = 3270, R_6 = 305
+    predicted: 305  ✓
+
+  R_7:
+    stacked matrix: (19200, 8735)
+    rank([C;B]) = 8435, rank(C) = 8045, R_7 = 390
+    predicted: 390  ✓

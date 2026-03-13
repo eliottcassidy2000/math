@@ -1,0 +1,22 @@
+P_11 (m=5): building diff-seqs...
+  d=0: |A_d| = 1
+  d=1: |A_d| = 5
+  d=2: |A_d| = 25
+  d=3: |A_d| = 110
+  d=4: |A_d| = 430
+  d=5: |A_d| = 1430
+  d=6: |A_d| = 3970
+  d=7: |A_d| = 8735
+  d=8: |A_d| = 14395
+  d=9: |A_d| = 15745
+  d=10: |A_d| = 8645
+
+Computing Omega dimensions...
+  Omega_0 = 1
+  Omega_1 = 5
+  Omega_2 = 20
+  Omega_3 = 70
+  Omega_4 = 205
+  Omega_5 = 460
+  Omega_6 = 700
+  Omega_7 = 690
