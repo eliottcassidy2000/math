@@ -1,0 +1,95 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tr_sigma3_invariant.py:208: RuntimeWarning: divide by zero encountered in scalar divide
+  f"RMSE={rmse:.2f}, r^2={1-np.var(residuals)/np.var(c7s):.4f}")
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tr_sigma3_invariant.py:208: RuntimeWarning: invalid value encountered in scalar divide
+  f"RMSE={rmse:.2f}, r^2={1-np.var(residuals)/np.var(c7s):.4f}")
+============================================================
+tr(sigma^3) INVARIANT ANALYSIS
+============================================================
+
+--- (Profile, tr(sigma^3)) determines c7? ---
+  Still ambiguous: profile has tr3=2184, c7s=[227, 228]
+  (profile, tr3) pairs: 262
+  Ambiguous: 1
+
+--- The 48 Gap ---
+  c7=191 vs 192 (dc7=1): same_sdeg=True, tr3_lo={2388}, tr3_hi={2436}, gap=48, tr4_lo={38856}, tr4_hi={38792}
+  c7=192 vs 193 (dc7=1): same_sdeg=False, tr3_lo={2460}, tr3_hi={2508}, gap=48, tr4_lo={40520}, tr4_hi={40456}
+  c7=279 vs 281 (dc7=2): same_sdeg=True, tr3_lo={1740}, tr3_hi={1788}, gap=48, tr4_lo={27560}, tr4_hi={27336}
+  c7=227 vs 228 (dc7=1): same_sdeg=False, tr3_lo={2184}, tr3_hi={2184}, gap=0, tr4_lo={32160}, tr4_hi={32000}
+  c7=232 vs 235 (dc7=3): same_sdeg=True, tr3_lo={2028}, tr3_hi={2076}, gap=48, tr4_lo={32256}, tr4_hi={31872}
+  c7=153 vs 154 (dc7=1): same_sdeg=True, tr3_lo={2736}, tr3_hi={2688}, gap=-48, tr4_lo={45152}, tr4_hi={44896}
+
+--- tr(sigma^3) Alone ---
+  Distinct tr3 values: 146
+  Ambiguous for c7: 20
+
+--- (tr(sigma^2), tr(sigma^3)) ---
+  Distinct (tr2, tr3) pairs: 167
+  Ambiguous for c7: 1
+
+--- (tr(sigma^2), tr(sigma^3), tr(sigma^4)) ---
+  Distinct (tr2, tr3, tr4) triples: 168
+  Ambiguous for c7: 0
+
+--- c7 vs tr(sigma^3) Correlation ---
+  tr2=220: n=139, c7 = 0.0417*tr3 + 206.5, RMSE=0.00, r^2=1.0000
+  tr2=236: n=101, c7 = 0.0269*tr3 + 244.9, RMSE=0.90, r^2=0.4862
+  tr2=240: n=581, c7 = 0.0342*tr3 + 161.6, RMSE=1.11, r^2=0.6517
+  tr2=244: n=272, c7 = 0.0250*tr3 + 119.9, RMSE=0.00, r^2=1.0000
+  tr2=252: n=146, c7 = 0.0167*tr3 + 274.8, RMSE=0.00, r^2=1.0000
+  tr2=256: n=472, c7 = 0.0147*tr3 + 214.1, RMSE=0.46, r^2=0.8263
+  tr2=260: n=632, c7 = 0.0152*tr3 + 154.7, RMSE=0.63, r^2=0.6504
+  tr2=264: n=433, c7 = 0.0312*tr3 + 56.5, RMSE=0.80, r^2=0.8672
+  tr2=268: n=99, c7 = -0.1386*tr3 + 543.7, RMSE=2.25, r^2=0.9995
+  tr2=272: n=310, c7 = 0.0040*tr3 + 247.4, RMSE=0.12, r^2=0.8440
+  tr2=276: n=365, c7 = 0.0074*tr3 + 183.6, RMSE=0.78, r^2=0.4825
+  tr2=280: n=1213, c7 = -0.1146*tr3 + 471.8, RMSE=9.91, r^2=0.6600
+  tr2=284: n=382, c7 = 0.0201*tr3 + 47.1, RMSE=0.97, r^2=0.4690
+  tr2=288: n=174, c7 = -0.1326*tr3 + 535.6, RMSE=12.40, r^2=0.9824
+  tr2=292: n=270, c7 = 0.0042*tr3 + 201.4, RMSE=0.00, r^2=1.0000
+  tr2=296: n=595, c7 = 0.0042*tr3 + 150.7, RMSE=0.23, r^2=0.7763
+  tr2=300: n=779, c7 = -0.1274*tr3 + 526.8, RMSE=15.94, r^2=0.8495
+  tr2=304: n=427, c7 = 0.0167*tr3 + 22.7, RMSE=0.44, r^2=0.8808
+  tr2=308: n=111, c7 = 0.0167*tr3 + 180.8, RMSE=0.00, r^2=1.0000
+  tr2=312: n=407, c7 = 0.0042*tr3 + 160.2, RMSE=0.00, r^2=1.0000
+  tr2=316: n=538, c7 = 0.0046*tr3 + 113.2, RMSE=0.55, r^2=0.3851
+  tr2=320: n=770, c7 = -0.1296*tr3 + 555.9, RMSE=13.15, r^2=0.9416
+  tr2=324: n=296, c7 = 0.0167*tr3 + -9.4, RMSE=0.00, r^2=1.0000
+  tr2=328: n=169, c7 = 0.0056*tr3 + 165.6, RMSE=0.00, r^2=1.0000
+  tr2=332: n=260, c7 = 0.0042*tr3 + 123.2, RMSE=0.00, r^2=1.0000
+  tr2=336: n=460, c7 = 0.0058*tr3 + 76.5, RMSE=0.44, r^2=0.8409
+  tr2=340: n=720, c7 = -0.1342*tr3 + 589.1, RMSE=13.63, r^2=0.8766
+  tr2=344: n=304, c7 = 0.0000*tr3 + 36.0, RMSE=0.00, r^2=-inf
+  tr2=352: n=244, c7 = 0.0056*tr3 + 84.9, RMSE=0.00, r^2=1.0000
+  tr2=356: n=132, c7 = 0.0167*tr3 + 3.0, RMSE=0.00, r^2=1.0000
+  tr2=360: n=649, c7 = 0.0019*tr3 + 33.6, RMSE=0.33, r^2=0.2172
+  tr2=372: n=129, c7 = 0.0042*tr3 + 60.7, RMSE=0.00, r^2=1.0000
+  tr2=380: n=313, c7 = -0.1064*tr3 + 540.5, RMSE=5.63, r^2=0.9847
+  tr2=392: n=216, c7 = 0.0042*tr3 + 35.5, RMSE=0.00, r^2=1.0000
+  tr2=396: n=231, c7 = 0.0010*tr3 + 25.4, RMSE=0.37, r^2=0.0297
+  tr2=400: n=288, c7 = -0.0936*tr3 + 512.8, RMSE=3.42, r^2=0.9952
+  tr2=416: n=235, c7 = 0.0000*tr3 + 16.0, RMSE=0.00, r^2=nan
+
+
+--- The 48 = ? ---
+48 = 2 * 24 = 2 * 4!
+48 = 6 * 8
+48 = 3 * 16
+48 = 12 * 4
+At n=7: C(5,2) = 10, C(5,3) = 10
+tr(sigma^3) counts weighted triangles in sigma graph
+Change of 48 in tr3 with dc7=1 means:
+  If c7 changes by 1, tr3 changes by 48
+  => each 7-cycle difference contributes 48 to tr3
+  => 48 = 6 * 8: perhaps 6 sigma-triangles of weight 8 per cycle?
+  => Or: 48 = 2 * sum over 3-element subsets of something...
+
+Gap analysis:
+  dc7=1: gap=48 (profiles 1, 2, 4, 6)
+  dc7=2: gap=48 (profile 3)
+  dc7=3: gap=48 (profile 5)
+  => The tr3 gap is CONSTANT at 48 regardless of dc7!
+  => tr3 and c7 carry INDEPENDENT information, resolved jointly
+
+
+Done.

@@ -1,0 +1,125 @@
+============================================================
+SIGMA SPECTRAL DETAIL ANALYSIS AT n=7
+============================================================
+
+Ambiguous profiles: 6
+
+==================================================
+Profile 1: c7=191 vs 192 (dc7=1)
+  Sigma deg seq: lo={(10, 13, 14, 14, 14, 15, 16)}, hi={(10, 13, 14, 14, 14, 15, 16)}
+    -> Sigma deg seq same (need deeper invariant)
+  Lambda deg seq: lo={(6, 8, 8, 10, 10, 10, 14)}, hi={(6, 8, 8, 10, 10, 10, 14)}
+  Delta deg seq: lo={(6, 6, 6, 6, 7, 7, 10)}, hi={(6, 6, 6, 6, 7, 7, 10)}
+    lo: tr(sigma^2) = 260    lo: tr(sigma^3) = 2388    lo: tr(sigma^4) = 38856
+    hi: tr(sigma^2) = 260    hi: tr(sigma^3) = 2436    hi: tr(sigma^4) = 38792
+  Sigma deg seq varieties: lo has 1, hi has 1
+  Sigma eigenvalues:
+    lo: [-5.3071, -4.8284, -3.1790, -2.0000, 0.5796, 0.8284, 13.9065]
+    hi: [-5.0191, -4.0000, -3.5258, -3.2361, 0.6167, 1.2361, 13.9283]
+    diffs: [0.2880, 0.8284, 0.3468, 1.2361, 0.0370, 0.4076, 0.0217]
+  Tournament scores: lo={(2, 2, 3, 3, 3, 3, 5), (1, 3, 3, 3, 3, 4, 4)}, hi={(2, 2, 3, 3, 3, 3, 5), (1, 3, 3, 3, 3, 4, 4)}
+
+==================================================
+Profile 2: c7=192 vs 193 (dc7=1)
+  Sigma deg seq: lo={(11, 11, 13, 13, 14, 17, 17)}, hi={(9, 13, 13, 14, 15, 15, 17)}
+    -> SIGMA DEGREE SEQUENCE DISTINGUISHES!
+  Lambda deg seq: lo={(6, 6, 10, 10, 10, 12, 12)}, hi={(6, 8, 8, 10, 10, 10, 14)}
+  Delta deg seq: lo={(6, 7, 7, 7, 7, 7, 7)}, hi={(6, 7, 7, 7, 7, 7, 7)}
+    lo: tr(sigma^2) = 260    lo: tr(sigma^3) = 2460    lo: tr(sigma^4) = 40520
+    hi: tr(sigma^2) = 260    hi: tr(sigma^3) = 2508    hi: tr(sigma^4) = 40456
+  Sigma deg seq varieties: lo has 1, hi has 1
+  Sigma eigenvalues:
+    lo: [-5.3295, -5.2361, -2.5029, -0.7639, -0.2135, -0.0000, 14.0459]
+    hi: [-5.0951, -4.8284, -2.8545, -2.0000, -0.1173, 0.8284, 14.0669]
+    diffs: [0.2343, 0.4076, 0.3516, 1.2361, 0.0962, 0.8284, 0.0210]
+  Tournament scores: lo={(2, 2, 2, 3, 4, 4, 4)}, hi={(2, 2, 2, 3, 4, 4, 4)}
+
+==================================================
+Profile 3: c7=279 vs 281 (dc7=2)
+  Sigma deg seq: lo={(10, 12, 12, 13, 13, 14, 14)}, hi={(10, 12, 12, 13, 13, 14, 14)}
+    -> Sigma deg seq same (need deeper invariant)
+  Lambda deg seq: lo={(10, 10, 10, 10, 12, 12, 14)}, hi={(10, 10, 10, 10, 12, 12, 14)}
+  Delta deg seq: lo={(6, 6, 6, 6, 6, 7, 7)}, hi={(6, 6, 6, 6, 6, 7, 7)}
+    lo: tr(sigma^2) = 220    lo: tr(sigma^3) = 1740    lo: tr(sigma^4) = 27560
+    hi: tr(sigma^2) = 220    hi: tr(sigma^3) = 1788    hi: tr(sigma^4) = 27336
+  Sigma deg seq varieties: lo has 1, hi has 1
+  Sigma eigenvalues:
+    lo: [-5.4104, -5.2361, -1.2815, -0.7639, -0.0000, -0.0000, 12.6919]
+    hi: [-5.1352, -4.8284, -2.0000, -2.0000, 0.4291, 0.8284, 12.7061]
+    diffs: [0.2752, 0.4076, 0.7185, 1.2361, 0.4291, 0.8284, 0.0142]
+  Tournament scores: lo={(2, 3, 3, 3, 3, 3, 4)}, hi={(2, 3, 3, 3, 3, 3, 4)}
+
+==================================================
+Profile 4: c7=227 vs 228 (dc7=1)
+  Sigma deg seq: lo={(11, 11, 12, 14, 14, 15, 15)}, hi={(11, 12, 12, 13, 13, 15, 16)}
+    -> SIGMA DEGREE SEQUENCE DISTINGUISHES!
+  Lambda deg seq: lo={(8, 8, 10, 10, 12, 12, 12)}, hi={(8, 8, 10, 10, 12, 12, 12)}
+  Delta deg seq: lo={(6, 6, 6, 7, 7, 7, 7)}, hi={(6, 6, 6, 7, 7, 7, 7)}
+    lo: tr(sigma^2) = 224    lo: tr(sigma^3) = 2184    lo: tr(sigma^4) = 32160
+    hi: tr(sigma^2) = 224    hi: tr(sigma^3) = 2184    hi: tr(sigma^4) = 32000
+  Sigma deg seq varieties: lo has 1, hi has 1
+  Sigma eigenvalues:
+    lo: [-4.4452, -4.0000, -2.6133, -2.0000, -0.2586, -0.0000, 13.3171]
+    hi: [-4.0000, -4.0000, -3.3066, -2.0000, -0.0000, 0.0000, 13.3066]
+    diffs: [0.4452, 0.0000, 0.6933, 0.0000, 0.2586, 0.0000, 0.0104]
+  Tournament scores: lo={(2, 2, 3, 3, 3, 4, 4)}, hi={(2, 2, 3, 3, 3, 4, 4)}
+
+==================================================
+Profile 5: c7=232 vs 235 (dc7=3)
+  Sigma deg seq: lo={(12, 12, 12, 13, 13, 15, 15)}, hi={(12, 12, 12, 13, 13, 15, 15)}
+    -> Sigma deg seq same (need deeper invariant)
+  Lambda deg seq: lo={(8, 8, 10, 10, 12, 12, 12)}, hi={(8, 8, 10, 10, 12, 12, 12)}
+  Delta deg seq: lo={(6, 6, 6, 7, 7, 7, 7)}, hi={(6, 6, 6, 7, 7, 7, 7)}
+    lo: tr(sigma^2) = 240    lo: tr(sigma^3) = 2028    lo: tr(sigma^4) = 32256
+    hi: tr(sigma^2) = 240    hi: tr(sigma^3) = 2076    hi: tr(sigma^4) = 31872
+  Sigma deg seq varieties: lo has 1, hi has 1
+  Sigma eigenvalues:
+    lo: [-5.4264, -4.8284, -2.5590, -2.0000, 0.7394, 0.8284, 13.2461]
+    hi: [-4.8417, -4.0000, -3.4541, -3.2361, 1.0471, 1.2361, 13.2488]
+    diffs: [0.5847, 0.8284, 0.8951, 1.2361, 0.3077, 0.4076, 0.0027]
+  Tournament scores: lo={(2, 2, 3, 3, 3, 4, 4)}, hi={(2, 2, 3, 3, 3, 4, 4)}
+
+==================================================
+Profile 6: c7=153 vs 154 (dc7=1)
+  Sigma deg seq: lo={(12, 12, 14, 14, 16, 16, 16)}, hi={(12, 12, 14, 14, 16, 16, 16)}
+    -> Sigma deg seq same (need deeper invariant)
+  Lambda deg seq: lo={(6, 6, 8, 8, 8, 12, 12)}, hi={(6, 6, 8, 8, 8, 12, 12)}
+  Delta deg seq: lo={(6, 6, 6, 6, 6, 10, 10)}, hi={(6, 6, 6, 6, 6, 10, 10)}
+    lo: tr(sigma^2) = 280    lo: tr(sigma^3) = 2736    lo: tr(sigma^4) = 45152
+    hi: tr(sigma^2) = 280    hi: tr(sigma^3) = 2688    hi: tr(sigma^4) = 44896
+  Sigma deg seq varieties: lo has 1, hi has 1
+  Sigma eigenvalues:
+    lo: [-5.1182, -4.0000, -4.0000, -3.2361, 0.6481, 1.2361, 14.4701]
+    hi: [-4.8284, -4.8284, -4.4340, -2.0000, 0.8284, 0.8284, 14.4340]
+    diffs: [0.2898, 0.8284, 0.4340, 1.2361, 0.1803, 0.4076, 0.0361]
+  Tournament scores: lo={(1, 3, 3, 3, 3, 3, 5)}, hi={(1, 3, 3, 3, 3, 3, 5)}
+
+
+============================================================
+SIGMA DEGREE SEQUENCE AS HIDDEN DIMENSION
+============================================================
+  (profile, sigma_deg_seq) pairs: 266
+  Ambiguous for c7: 4
+
+--- Sigma Degree Sequence Alone ---
+  Distinct sigma deg seqs: 204
+  Ambiguous for c7: 37
+
+--- Lambda Degree Sequence Alone ---
+  Distinct lambda deg seqs: 128
+  Ambiguous for c7: 47
+
+--- (Sigma, Lambda) Degree Sequences Together ---
+  Distinct (sig_deg, lam_deg) pairs: 216
+  Ambiguous for c7: 38
+
+--- Score Sequence + c3 ---
+  Distinct (scores, c3): 58
+  Ambiguous for c7: 41
+
+--- Score Sequence + c3 + c5 ---
+  Distinct (scores, c3, c5): 183
+  Ambiguous for c7: 71
+
+
+Done.
