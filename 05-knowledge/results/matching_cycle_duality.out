@@ -1,0 +1,179 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\matching_cycle_duality.py:17: SyntaxWarning: invalid escape sequence '\{'
+  2. For odd n: Pf(S\v) counts signed PMs of T\{v}.
+C:\Users\Eliott\Documents\GitHub\math\04-computation\matching_cycle_duality.py:97: SyntaxWarning: invalid escape sequence '\i'
+  """Compute the Pfaffian vector w_i = (-1)^i Pf(S\i)."""
+C:\Users\Eliott\Documents\GitHub\math\04-computation\matching_cycle_duality.py:109: SyntaxWarning: invalid escape sequence '\{'
+  """Enumerate all perfect matchings of T\{v_del} with their signs.
+======================================================================
+ANALYSIS 1: PERFECT MATCHINGS OF T\{v} FOR AMBIGUOUS PAIR
+======================================================================
+
+  H=109, c7=8:
+    Pfaffian vector: w = [-7, 1, 3, -7, -1, -3, 1]
+    Pf_sum = -13
+    T\0: 15 PMs, 4 pos, 11 neg, signed_sum=-7, Pf=-7, w_0=-7
+    T\1: 15 PMs, 7 pos, 8 neg, signed_sum=-1, Pf=-1, w_1=1
+    T\2: 15 PMs, 9 pos, 6 neg, signed_sum=3, Pf=3, w_2=3
+    T\3: 15 PMs, 11 pos, 4 neg, signed_sum=7, Pf=7, w_3=-7
+    T\4: 15 PMs, 7 pos, 8 neg, signed_sum=-1, Pf=-1, w_4=-1
+    T\5: 15 PMs, 9 pos, 6 neg, signed_sum=3, Pf=3, w_5=-3
+    T\6: 15 PMs, 8 pos, 7 neg, signed_sum=1, Pf=1, w_6=1
+
+  H=111, c7=9:
+    Pfaffian vector: w = [-9, 1, -3, 3, -9, -1, -1]
+    Pf_sum = -19
+    T\0: 15 PMs, 3 pos, 12 neg, signed_sum=-9, Pf=-9, w_0=-9
+    T\1: 15 PMs, 7 pos, 8 neg, signed_sum=-1, Pf=-1, w_1=1
+    T\2: 15 PMs, 6 pos, 9 neg, signed_sum=-3, Pf=-3, w_2=-3
+    T\3: 15 PMs, 6 pos, 9 neg, signed_sum=-3, Pf=-3, w_3=3
+    T\4: 15 PMs, 3 pos, 12 neg, signed_sum=-9, Pf=-9, w_4=-9
+    T\5: 15 PMs, 8 pos, 7 neg, signed_sum=1, Pf=1, w_5=-1
+    T\6: 15 PMs, 7 pos, 8 neg, signed_sum=-1, Pf=-1, w_6=-1
+
+======================================================================
+ANALYSIS 2: MATCHING ANATOMY FOR v_del=0
+======================================================================
+
+  H=109, c7=8, deleting vertex 0:
+    ['1->2', '4->3', '6->5']: weight=+1, pf_sign=+1, contrib=+1
+    ['1->2', '6->3', '5->4']: weight=+1, pf_sign=+1, contrib=+1
+    ['3->1', '6->2', '5->4']: weight=-1, pf_sign=-1, contrib=+1
+    ['4->1', '5->2', '6->3']: weight=-1, pf_sign=-1, contrib=+1
+    ['1->2', '5->3', '6->4']: weight=+1, pf_sign=-1, contrib=-1
+    ['3->1', '2->4', '6->5']: weight=+1, pf_sign=-1, contrib=-1
+    ['3->1', '5->2', '6->4']: weight=-1, pf_sign=+1, contrib=-1
+    ['4->1', '3->2', '6->5']: weight=-1, pf_sign=+1, contrib=-1
+    ['4->1', '6->2', '5->3']: weight=-1, pf_sign=+1, contrib=-1
+    ['1->5', '3->2', '6->4']: weight=+1, pf_sign=-1, contrib=-1
+    ['1->5', '2->4', '6->3']: weight=-1, pf_sign=+1, contrib=-1
+    ['1->5', '6->2', '4->3']: weight=+1, pf_sign=-1, contrib=-1
+    ['6->1', '3->2', '5->4']: weight=-1, pf_sign=+1, contrib=-1
+    ['6->1', '2->4', '5->3']: weight=+1, pf_sign=-1, contrib=-1
+    ['6->1', '5->2', '4->3']: weight=-1, pf_sign=+1, contrib=-1
+
+  H=111, c7=9, deleting vertex 0:
+    ['2->1', '5->3', '6->4']: weight=-1, pf_sign=-1, contrib=+1
+    ['3->1', '6->2', '5->4']: weight=-1, pf_sign=-1, contrib=+1
+    ['4->1', '5->2', '6->3']: weight=-1, pf_sign=-1, contrib=+1
+    ['2->1', '4->3', '6->5']: weight=-1, pf_sign=+1, contrib=-1
+    ['2->1', '6->3', '5->4']: weight=-1, pf_sign=+1, contrib=-1
+    ['3->1', '2->4', '6->5']: weight=+1, pf_sign=-1, contrib=-1
+    ['3->1', '5->2', '6->4']: weight=-1, pf_sign=+1, contrib=-1
+    ['4->1', '3->2', '6->5']: weight=-1, pf_sign=+1, contrib=-1
+    ['4->1', '6->2', '5->3']: weight=-1, pf_sign=+1, contrib=-1
+    ['1->5', '3->2', '6->4']: weight=+1, pf_sign=-1, contrib=-1
+    ['1->5', '2->4', '6->3']: weight=-1, pf_sign=+1, contrib=-1
+    ['1->5', '6->2', '4->3']: weight=+1, pf_sign=-1, contrib=-1
+    ['6->1', '3->2', '5->4']: weight=-1, pf_sign=+1, contrib=-1
+    ['6->1', '2->4', '5->3']: weight=+1, pf_sign=-1, contrib=-1
+    ['6->1', '5->2', '4->3']: weight=-1, pf_sign=+1, contrib=-1
+
+======================================================================
+ANALYSIS 3: MATCHING-CYCLE DUALITY AT n=5 (EXHAUSTIVE)
+======================================================================
+  Score + H classes:
+    scores=(0, 1, 2, 3, 4), H=1: 120 tours, 20 distinct w, Pf_sum=[-1, 1]
+    scores=(0, 1, 3, 3, 3), H=3: 40 tours, 40 distinct w, Pf_sum=[-3, 3]
+    scores=(0, 2, 2, 2, 4), H=3: 40 tours, 20 distinct w, Pf_sum=[-3, 3]
+    scores=(0, 2, 2, 3, 3), H=5: 120 tours, 120 distinct w, Pf_sum=[-1, 1]
+    scores=(1, 1, 1, 3, 4), H=3: 40 tours, 40 distinct w, Pf_sum=[-3, 3]
+    scores=(1, 1, 2, 2, 4), H=5: 120 tours, 120 distinct w, Pf_sum=[-1, 1]
+    scores=(1, 1, 2, 3, 3), H=9: 240 tours, 70 distinct w, Pf_sum=[-5, -3, 3, 5]
+    scores=(1, 2, 2, 2, 3), H=11: 120 tours, 20 distinct w, Pf_sum=[-1, 1]
+    scores=(1, 2, 2, 2, 3), H=13: 120 tours, 60 distinct w, Pf_sum=[-7, 7]
+    scores=(1, 2, 2, 2, 3), H=15: 40 tours, 20 distinct w, Pf_sum=[-9, 9]
+    scores=(2, 2, 2, 2, 2), H=15: 24 tours, 2 distinct w, Pf_sum=[-5, 5]
+
+======================================================================
+ANALYSIS 4: PFAFFIAN VECTOR SORTED (VERTEX-INDEPENDENT)
+======================================================================
+  H=109, c7=8:
+    w = [-7, 1, 3, -7, -1, -3, 1]
+    |w| sorted = [1, 1, 1, 3, 3, 7, 7]
+    w sorted = [-7, -7, -3, -1, 1, 1, 3]
+    v=0: score=3, |Pf|=7
+    v=1: score=3, |Pf|=1
+    v=2: score=2, |Pf|=3
+    v=3: score=3, |Pf|=7
+    v=4: score=2, |Pf|=1
+    v=5: score=3, |Pf|=3
+    v=6: score=5, |Pf|=1
+  H=111, c7=9:
+    w = [-9, 1, -3, 3, -9, -1, -1]
+    |w| sorted = [1, 1, 1, 3, 3, 9, 9]
+    w sorted = [-9, -9, -3, -1, -1, 1, 3]
+    v=0: score=3, |Pf|=9
+    v=1: score=2, |Pf|=1
+    v=2: score=2, |Pf|=3
+    v=3: score=3, |Pf|=3
+    v=4: score=3, |Pf|=9
+    v=5: score=3, |Pf|=1
+    v=6: score=5, |Pf|=1
+
+======================================================================
+ANALYSIS 5: PFAFFIAN VECTOR vs SCORE AT n=5
+======================================================================
+  Score -> |Pf(S\v)| distribution at n=5:
+    score=0: |Pf| in [1, 3], avg=1.50
+    score=1: |Pf| in [1, 3], avg=1.50
+    score=2: |Pf| in [1, 3], avg=1.50
+    score=3: |Pf| in [1, 3], avg=1.50
+    score=4: |Pf| in [1, 3], avg=1.50
+
+======================================================================
+ANALYSIS 6: THE ALGEBRAIC MEANING
+======================================================================
+
+THEOREM (det(I+2A) = (Pf_sum)^2 for tournaments):
+
+For a tournament T on n vertices:
+  A + A^T = J - I  (tournament axiom)
+  S = A - A^T  (skew-adjacency matrix)
+  I + 2A = J + S  (key identity)
+
+Case 1 (n even):
+  det(J + S) = det(S) * det(I + S^{-1}J) = det(S) * (1 + 1^T S^{-1} 1)
+  But S^{-1} is skew-symmetric, so 1^T S^{-1} 1 = 0.
+  Therefore det(J + S) = det(S) = Pf(S)^2.
+
+Case 2 (n odd):
+  S is singular (rank n-1). adj(S) has rank 1 and is PSD.
+  By the matrix determinant lemma for singular S:
+    det(S + uv^T) = v^T adj(S) u  (when det(S) = 0)
+  With u = v = 1 (all-ones vector):
+    det(J + S) = 1^T adj(S) 1
+
+  For skew-symmetric S of odd order, adj(S) = w * w^T where
+  w_i = (-1)^i * Pf(S_ii) (S_ii = S with row i, col i deleted).
+
+  Therefore: det(J + S) = (1^T w)^2 = (sum_i (-1)^i Pf(S_ii))^2.
+
+THE MATCHING-CYCLE DUALITY:
+  det(I + 2A) involves ALL minors of S (via expansion).
+  The Pfaffian sum involves DELETION Pfaffians Pf(S_ii).
+  Pf(S_ii) = signed count of perfect matchings of T\{i}.
+
+  The Hamiltonian path count H(T) = I(Omega(T), 2) involves all
+  DIRECTED ODD CYCLES.
+
+  The formula det(I+2A) = (Pf_sum)^2 is NOT a simple function of H.
+  At n=5: both H=9 and H=15 have multiple Pf_sum values.
+  At n=7: the ambiguous pair has Pf_sum = -13 vs -19, while H = 109 vs 111.
+
+  So the Pfaffian sum encodes DIFFERENT information from H.
+  It's a matching-based invariant that captures the oriented structure
+  in a way that's complementary to the cycle-based H.
+
+  CONJECTURE: The complete set of tournament invariants includes both:
+  - H (cycle-based, via OCF)
+  - sqrt(det(I+2A)) (matching-based, via Pfaffian)
+  These two invariants together may capture ALL orientation information
+  that the score sequence and lambda graph miss.
+
+  Does (H, |Pf_sum|) uniquely determine score + c_k at n=5?
+    (H=3, |Pf_sum|=3): scores=[(0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (1, 1, 1, 3, 4)] -- MULTIPLE SCORES
+    (H=5, |Pf_sum|=1): scores=[(0, 2, 2, 3, 3), (1, 1, 2, 2, 4)] -- MULTIPLE SCORES
+
+======================================================================
+DONE.
+======================================================================
