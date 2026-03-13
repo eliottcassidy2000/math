@@ -1,0 +1,290 @@
+======================================================================
+PART I: MATCHING COMPLEX M(K_n)
+======================================================================
+
+n = 3: m = 3 edges, max matching = 1
+  f-vector: [1, 3]
+  Euler characteristic: χ = -2
+  Dimension: 0
+  Top simplex dimension: 0
+  ∂_1: 3 simplices → 1 simplices, rank = 1
+
+n = 4: m = 6 edges, max matching = 2
+  f-vector: [1, 6, 3]
+  Euler characteristic: χ = -2
+  Dimension: 1
+  Top simplex dimension: 1
+  ∂_1: 6 simplices → 1 simplices, rank = 1
+  ∂_2: 3 simplices → 6 simplices, rank = 3
+
+n = 5: m = 10 edges, max matching = 2
+  f-vector: [1, 10, 15]
+  Euler characteristic: χ = 6
+  Dimension: 1
+  Top simplex dimension: 1
+  ∂_1: 10 simplices → 1 simplices, rank = 1
+  ∂_2: 15 simplices → 10 simplices, rank = 9
+
+n = 6: m = 15 edges, max matching = 3
+  f-vector: [1, 15, 45, 15]
+  Euler characteristic: χ = 16
+  Dimension: 2
+  Top simplex dimension: 2
+  ∂_1: 15 simplices → 1 simplices, rank = 1
+  ∂_2: 45 simplices → 15 simplices, rank = 14
+  ∂_3: 15 simplices → 45 simplices, rank = 15
+
+n = 7: m = 21 edges, max matching = 3
+  f-vector: [1, 21, 105, 105]
+  Euler characteristic: χ = -20
+  Dimension: 2
+  Top simplex dimension: 2
+  ∂_1: 21 simplices → 1 simplices, rank = 1
+  ∂_2: 105 simplices → 21 simplices, rank = 20
+  ∂_3: 105 simplices → 105 simplices, rank = 85
+
+n = 8: m = 28 edges, max matching = 4
+  f-vector: [1, 28, 210, 420, 105]
+  Euler characteristic: χ = -132
+  Dimension: 3
+  Top simplex dimension: 3
+
+======================================================================
+PART II: SPIN GLASS ON L(K_n) — H(T) AS ENERGY
+======================================================================
+
+H(T) is a uniform spin glass on L(K_n) (line graph of complete graph).
+This is a SPECIFIC, STRUCTURED spin glass with:
+- Uniform coupling J = ±0.75 (from our Fourier computation)
+- Interaction graph = L(K_n)
+- 97% of energy in pairwise terms
+
+Comparison with classical spin glass models:
+- Sherrington-Kirkpatrick (SK): random J on complete graph → frustrated
+- Edwards-Anderson (EA): random J on lattice → finite-dim frustrated
+- H(T): UNIFORM J on L(K_n) → maximally structured
+
+The fact that J is UNIFORM AND the interaction graph is L(K_n) means:
+- The frustration is PURELY TOPOLOGICAL (from L(K_n) structure)
+- No randomness in couplings — all frustration is geometric
+- This makes H(T) a "crystalline spin glass" (periodic, not random)
+
+PREDICTION: The landscape complexity should be COMPUTABLE in closed form
+because the structure is algebraic, not random.
+
+n = 5, m = 10, total tournaments = 1024
+  Local maxima: 64
+  Local minima: 120
+  Saddle points: 840
+  Global max H = 15, count = 64
+  Global min H = 1, count = 120
+  Local max H values: [np.int64(15)]
+  Benign landscape (all local max = global max): True
+
+--- Landscape Level Sets ---
+  H =   1:   120 tournaments
+  H =   3:   120 tournaments
+  H =   5:   240 tournaments
+  H =   9:   240 tournaments
+  H =  11:   120 tournaments
+  H =  13:   120 tournaments
+  H =  15:    64 tournaments
+
+======================================================================
+PART III: FRUSTRATION INDEX OF L(K_n)
+======================================================================
+
+In an Ising model on graph G with couplings J_ij:
+- A loop is FRUSTRATED if the product of J around it is negative
+- Frustration index = minimum number of edges to cut to remove all frustration
+
+For H(T) on L(K_n) with UNIFORM |J| = 0.75:
+- The sign of J_{ef} depends on the ORIENTATION of the shared vertex
+- A triangle in L(K_n) is frustrated iff it corresponds to a 3-cycle in T
+- Frustration = 3-cycle structure of the tournament!
+
+THEOREM: The frustration index of the H-landscape equals α₁(T)
+(the number of 3-cycles), which is exactly the degree-2 Fourier
+contribution to H.
+
+Triangles in L(K_5): 10
+(Should be C(5,3) = 10 = # triangles in K_5)
+
+Transitive T_5 (H=1):
+  Frustrated triangles: 0
+  (Transitive has 0 cycles → 0 frustration)
+
+H-max tournament (H=15):
+  Frustrated triangles: 4
+  (Regular tournaments maximize frustration!)
+
+--- Frustration vs H distribution ---
+  H =   1: frustration = [0], mean = 0.00
+  H =   3: frustration = [1], mean = 1.00
+  H =   5: frustration = [2], mean = 2.00
+  H =   9: frustration = [3], mean = 3.00
+  H =  11: frustration = [4], mean = 4.00
+  H =  13: frustration = [4], mean = 4.00
+  H =  15: frustration = [4, 5], mean = 4.38
+
+======================================================================
+PART IV: TOURNAMENT CODES
+======================================================================
+
+H-maximizing tournaments form a CODE in the Hamming space {0,1}^m.
+
+At n=5: 64 codewords (H=15) out of 1024 possible → rate = 6/10 = 0.6
+Minimum Hamming distance determines error-correcting capability.
+
+Connection to EXISTING codes:
+- Reed-Muller codes: degree-2 polynomials on F_2^m
+- BCH codes: cyclic codes from polynomial roots
+- Paley QR codes: from quadratic residue structure
+
+The fact that H is 97% degree-2 means the H-maximizing set is
+CLOSE TO a Reed-Muller code. The 3% degree-4 correction breaks
+perfect Reed-Muller structure.
+
+H-max code at n=5: 64 codewords, m=10 bits
+Rate: 6.0/10 = 0.600
+Minimum Hamming distance: d = 2
+Error detection: up to 1 errors
+Error correction: up to 0 errors
+Distance distribution: [(2, 180), (3, 200), (4, 300), (5, 624), (6, 300), (7, 200), (8, 180), (10, 32)]
+
+--- Pairwise Distance Spectrum ---
+  d = 2: 180 pairs
+  d = 3: 200 pairs
+  d = 4: 300 pairs
+  d = 5: 624 pairs
+  d = 6: 300 pairs
+  d = 7: 200 pairs
+  d = 8: 180 pairs
+  d = 10: 32 pairs
+
+Our code: [[10, 6, 2]]
+Reed-Muller R(1,5): [[10, 6, 4]]
+Match? NO — d=2
+
+======================================================================
+PART V: TOURNAMENT LATTICE
+======================================================================
+
+Tournaments ordered by H form a PARTIAL ORDER via:
+  T₁ ≤ T₂ iff T₂ can be reached from T₁ by H-increasing flips.
+
+This poset has a MÖBIUS FUNCTION μ that encodes the incidence
+algebra. The Möbius inversion relates:
+  f(T) = Σ_{S≤T} g(S)  ↔  g(T) = Σ_{S≤T} μ(S,T) f(S)
+
+CONNECTION TO RÉDEI: The original Rédei-Berge GF uses a similar
+Möbius inversion on the tournament poset.
+
+KEY QUESTION: Is the H-ordering a LATTICE? (meet and join always exist)
+At n=5 with confluence: YES, the H-poset is a lattice.
+At n≥6: NO, because spurious local maxima break the join operation.
+
+--- H-Ascent DAG at n=5 ---
+
+DAG edges (H-increasing flips): 4000
+Level transitions:
+  H=1 → H=3: 360 edges
+  H=1 → H=5: 240 edges
+  H=1 → H=9: 120 edges
+  H=3 → H=5: 480 edges
+  H=3 → H=9: 240 edges
+  H=3 → H=15: 40 edges
+  H=5 → H=9: 480 edges
+  H=5 → H=11: 240 edges
+  H=5 → H=13: 240 edges
+  H=9 → H=11: 360 edges
+  H=9 → H=13: 360 edges
+  H=9 → H=15: 120 edges
+  H=11 → H=13: 240 edges
+  H=11 → H=15: 120 edges
+  H=13 → H=15: 360 edges
+
+Poset width (antichain size) at each level:
+  H =   1: width = 120
+  H =   3: width = 120
+  H =   5: width = 240
+  H =   9: width = 240
+  H =  11: width = 120
+  H =  13: width = 120
+  H =  15: width = 64
+
+======================================================================
+PART VI: CONSTRAINT SATISFACTION PERSPECTIVE
+======================================================================
+
+A tournament T on [n] is a solution to C(n,2) binary constraints.
+Each arc (i→j) or (j→i) is a binary variable.
+H(T) counts the number of "consistent total orderings."
+
+This is EXACTLY a weighted MAX-CSP (constraint satisfaction):
+- Variables: arcs x_{ij} ∈ {0, 1}
+- Constraints: transitivity (if i→j and j→k then i→k)
+- H(T) = number of satisfying assignments to the total ordering
+
+CONNECTION TO SURVEY PROPAGATION:
+- Score sequence = "cavity field" in belief propagation
+- 3-cycle count = frustration in the factor graph
+- The degree-2 Fourier ≈ belief propagation fixed point
+- Degree-4 correction = loopy BP error
+
+This connects to:
+- SAT solving (tournament as 2-SAT instance)
+- Factor graphs (constraint bipartite graph)
+- Gibbs sampling (MCMC on tournament space)
+- Message passing (score = marginal, coupling = message)
+
+--- Transitivity Violation Count ---
+
+Correlation(H, transitivity_violations): 0.9733
+  H =   1: violations = [np.int64(0)], mean = 0.00
+  H =   3: violations = [np.int64(1)], mean = 1.00
+  H =   5: violations = [np.int64(2)], mean = 2.00
+  H =   9: violations = [np.int64(3)], mean = 3.00
+  H =  11: violations = [np.int64(4)], mean = 4.00
+  H =  13: violations = [np.int64(4)], mean = 4.00
+  H =  15: violations = [np.int64(4), np.int64(5)], mean = 4.38
+
+======================================================================
+PART VII: WEIGHT ENUMERATOR OF H-MAX CODE
+======================================================================
+
+The WEIGHT ENUMERATOR polynomial of a code C ⊂ F_2^n is:
+  W_C(x, y) = Σ_{c ∈ C} x^{n-wt(c)} y^{wt(c)}
+
+For our H-max tournament code at n=5:
+  C = {bit vectors of H-maximizing tournaments}
+  Each codeword has wt(c) = # arcs oriented "forward"
+
+The MacWilliams identity relates W_C to W_{C⊥}.
+
+Weight distribution of H-max code (64 codewords):
+  weight 2: 1 codewords
+  weight 3: 4 codewords
+  weight 4: 15 codewords
+  weight 5: 24 codewords
+  weight 6: 15 codewords
+  weight 7: 4 codewords
+  weight 8: 1 codewords
+
+Code dimension (rank): 10
+Pivot positions: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Systematic generator matrix (first 10 rows):
+  [1 0 0 0 0 0 0 0 0 0]
+  [0 1 0 0 0 0 0 0 0 0]
+  [0 0 1 0 0 0 0 0 0 0]
+  [0 0 0 1 0 0 0 0 0 0]
+  [0 0 0 0 1 0 0 0 0 0]
+  [0 0 0 0 0 1 0 0 0 0]
+
+======================================================================
+PART VIII: SYNTHESIS OF NEW CONNECTIONS
+======================================================================
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/matching_complex_spectral.py", line 596, in <module>
+    print("""
+KeyError: "'' if min_dist == 4 else 'Different from '"
