@@ -1,0 +1,48 @@
+======================================================================
+P_11 COMPLETE PER-EIGENSPACE BETTI NUMBERS
+opus-2026-03-13-S71b — Full verification
+======================================================================
+
+Omega = [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+m = 5, p = 11
+
+k=0 EIGENSPACE:
+  R^{(0)} = [0, 0, 5, 15, 55, 150, 305, 390, 300, 150, 30, 0]
+  β^{(0)} = [1, 0, 0, 0, 0,  5,   5,   0,   0,   0,  0]
+  chi = 1
+
+k=1 EIGENSPACE (verified mod GF(23) and GF(67)):
+  R^{(1)} = [0, 1, 4, 16, 54, 151, 309, 390, 300, 150, 30, 0]
+  β^{(1)} = [0, 0, 0, 0,  0,   0,   1,   0,   0,   0,  0]
+  chi = 1
+
+RANK SHIFT VERIFICATION:
+  R^{(1)} - R^{(0)} = [0, 1, -1, 1, -1, 1, 4, 0, 0, 0, 0, 0]
+  Expected pattern (HYP-710):
+    d=0: 0
+    d=1..5 (d=1..m): (-1)^{d+1} = [1, -1, 1, -1, 1]
+    d=6 (d=m+1): β_m^{(0)} - 1 = 5 - 1 = 4
+    d=7..11 (d≥m+2): 0
+  MATCH: PERFECT ✓
+
+All k≠0 eigenspaces are identical by QR-orbit symmetry (THM-125).
+
+TOTAL BETTI:
+  β_total = [1, 0, 0, 0, 0, 5, 5+10, 0, 0, 0, 0]
+          = [1, 0, 0, 0, 0, 5, 15, 0, 0, 0, 0]
+  β_5 = m(m-3)/2 = 5
+  β_6 = m(m-3)/2 + (p-1)*1 = 5 + 10 = 15 = C(6,2) ✓
+  chi = 1 - 0 + 0 - 0 + 0 - 5 + 15 - 0 + 0 - 0 + 0 = 11 = p ✓
+
+SUMMARY:
+  - β_m = m(m-3)/2 comes ENTIRELY from k=0 eigenspace
+  - β_{m+1} = m(m-3)/2 + 2m = m(m+1)/2 = C(m+1,2)
+    splits as m(m-3)/2 from k=0 and 1 each from k≠0
+  - The Rank Shift Theorem (HYP-710) explains WHY β_{m+1}^{(k)} = 1:
+    it's an automatic consequence of:
+    (a) face-0 phase creating rank-1 shift at d=1
+    (b) acyclicity propagating the shift through d=1..m
+    (c) same Omega dims and top-down acyclicity giving R_d^{(k)}=R_d^{(0)} for d≥m+2
+  - β_m^{(0)} = m(m-3)/2 is the SOLE free parameter, NOT explained by
+    representation theory or Euler characteristic alone
+======================================================================

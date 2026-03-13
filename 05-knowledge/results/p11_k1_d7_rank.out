@@ -1,0 +1,201 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+QR = [1, 3, 4, 5, 9]
+omega = 2, omega^11 mod 23 = 1
+|A_7| = 8735, |A_6| = 3970  (0.0s)
+Building matrices as sparse...
+  Junk faces: 26380 entries, 15230 distinct junk 6-seqs
+  Boundary entries: 43500
+  Built in 0.1s
+
+Stacked matrix: 19200 x 8735
+Total nonzero entries: 69880
+Allocating dense matrix (19200 x 8735, int16, ~319 MB)...
+Matrices built.
+
+Computing rank(C_7) over GF(23)...
+  rank: 200 pivots found, col 199/8735
+  rank: 400 pivots found, col 416/8735
+  rank: 600 pivots found, col 616/8735
+  rank: 800 pivots found, col 864/8735
+  rank: 1000 pivots found, col 1091/8735
+  rank: 1200 pivots found, col 1291/8735
+  rank: 1400 pivots found, col 1491/8735
+  rank: 1600 pivots found, col 1691/8735
+  rank: 1800 pivots found, col 1898/8735
+  rank: 2000 pivots found, col 2122/8735
+  rank: 2200 pivots found, col 2323/8735
+  rank: 2400 pivots found, col 2537/8735
+  rank: 2600 pivots found, col 2737/8735
+  rank: 2800 pivots found, col 2937/8735
+  rank: 3000 pivots found, col 3140/8735
+  rank: 3200 pivots found, col 3375/8735
+  rank: 3400 pivots found, col 3614/8735
+  rank: 3600 pivots found, col 3849/8735
+  rank: 3800 pivots found, col 4052/8735
+  rank: 4000 pivots found, col 4265/8735
+  rank: 4200 pivots found, col 4471/8735
+  rank: 4400 pivots found, col 4689/8735
+  rank: 4600 pivots found, col 4927/8735
+  rank: 4800 pivots found, col 5141/8735
+  rank: 5000 pivots found, col 5355/8735
+  rank: 5200 pivots found, col 5563/8735
+  rank: 5400 pivots found, col 5772/8735
+  rank: 5600 pivots found, col 6000/8735
+  rank: 5800 pivots found, col 6235/8735
+  rank: 6000 pivots found, col 6445/8735
+  rank: 6200 pivots found, col 6652/8735
+  rank: 6400 pivots found, col 6884/8735
+  rank: 6600 pivots found, col 7124/8735
+  rank: 6800 pivots found, col 7330/8735
+  rank: 7000 pivots found, col 7547/8735
+  rank: 7200 pivots found, col 7778/8735
+  rank: 7400 pivots found, col 7988/8735
+  rank: 7600 pivots found, col 8210/8735
+  rank: 7800 pivots found, col 8462/8735
+  rank: 8000 pivots found, col 8683/8735
+rank(C_7) = 8045  (16.3s)
+Omega_7 = 8735 - 8045 = 690
+
+Computing rank([C_7; B_7^{(1)}]) over GF(23)...
+  rank: 200 pivots found, col 199/8735
+  rank: 400 pivots found, col 399/8735
+  rank: 600 pivots found, col 599/8735
+  rank: 800 pivots found, col 799/8735
+  rank: 1000 pivots found, col 999/8735
+  rank: 1200 pivots found, col 1199/8735
+  rank: 1400 pivots found, col 1399/8735
+  rank: 1600 pivots found, col 1599/8735
+  rank: 1800 pivots found, col 1799/8735
+  rank: 2000 pivots found, col 1999/8735
+  rank: 2200 pivots found, col 2199/8735
+  rank: 2400 pivots found, col 2399/8735
+  rank: 2600 pivots found, col 2599/8735
+  rank: 2800 pivots found, col 2799/8735
+  rank: 3000 pivots found, col 2999/8735
+  rank: 3200 pivots found, col 3199/8735
+  rank: 3400 pivots found, col 3399/8735
+  rank: 3600 pivots found, col 3601/8735
+  rank: 3800 pivots found, col 3814/8735
+  rank: 4000 pivots found, col 4017/8735
+  rank: 4200 pivots found, col 4226/8735
+  rank: 4400 pivots found, col 4436/8735
+  rank: 4600 pivots found, col 4636/8735
+  rank: 4800 pivots found, col 4836/8735
+  rank: 5000 pivots found, col 5044/8735
+  rank: 5200 pivots found, col 5259/8735
+  rank: 5400 pivots found, col 5471/8735
+  rank: 5600 pivots found, col 5680/8735
+  rank: 5800 pivots found, col 5892/8735
+  rank: 6000 pivots found, col 6102/8735
+  rank: 6200 pivots found, col 6311/8735
+  rank: 6400 pivots found, col 6520/8735
+  rank: 6600 pivots found, col 6722/8735
+  rank: 6800 pivots found, col 6934/8735
+  rank: 7000 pivots found, col 7160/8735
+  rank: 7200 pivots found, col 7365/8735
+  rank: 7400 pivots found, col 7572/8735
+  rank: 7600 pivots found, col 7798/8735
+  rank: 7800 pivots found, col 8011/8735
+  rank: 8000 pivots found, col 8234/8735
+  rank: 8200 pivots found, col 8472/8735
+  rank: 8400 pivots found, col 8693/8735
+rank(stacked) = 8435  (50.0s)
+
+R_7^{(1)} = 8435 - 8045 = 390
+
+Prediction: R_7^{(1)} = 390
+If R_6^{(1)} = 309 and Omega_6 = 700:
+  beta_6^{(1)} = 700 - 309 - 390 = 1
+
+--- Verification with q=67 ---
+omega2 = 64
+  rank: 200 pivots found, col 199/8735
+  rank: 400 pivots found, col 416/8735
+  rank: 600 pivots found, col 616/8735
+  rank: 800 pivots found, col 864/8735
+  rank: 1000 pivots found, col 1091/8735
+  rank: 1200 pivots found, col 1291/8735
+  rank: 1400 pivots found, col 1491/8735
+  rank: 1600 pivots found, col 1691/8735
+  rank: 1800 pivots found, col 1898/8735
+  rank: 2000 pivots found, col 2122/8735
+  rank: 2200 pivots found, col 2323/8735
+  rank: 2400 pivots found, col 2537/8735
+  rank: 2600 pivots found, col 2737/8735
+  rank: 2800 pivots found, col 2937/8735
+  rank: 3000 pivots found, col 3140/8735
+  rank: 3200 pivots found, col 3375/8735
+  rank: 3400 pivots found, col 3614/8735
+  rank: 3600 pivots found, col 3849/8735
+  rank: 3800 pivots found, col 4052/8735
+  rank: 4000 pivots found, col 4265/8735
+  rank: 4200 pivots found, col 4471/8735
+  rank: 4400 pivots found, col 4689/8735
+  rank: 4600 pivots found, col 4927/8735
+  rank: 4800 pivots found, col 5141/8735
+  rank: 5000 pivots found, col 5355/8735
+  rank: 5200 pivots found, col 5563/8735
+  rank: 5400 pivots found, col 5772/8735
+  rank: 5600 pivots found, col 6000/8735
+  rank: 5800 pivots found, col 6235/8735
+  rank: 6000 pivots found, col 6445/8735
+  rank: 6200 pivots found, col 6652/8735
+  rank: 6400 pivots found, col 6884/8735
+  rank: 6600 pivots found, col 7124/8735
+  rank: 6800 pivots found, col 7330/8735
+  rank: 7000 pivots found, col 7547/8735
+  rank: 7200 pivots found, col 7778/8735
+  rank: 7400 pivots found, col 7988/8735
+  rank: 7600 pivots found, col 8210/8735
+  rank: 7800 pivots found, col 8462/8735
+  rank: 8000 pivots found, col 8683/8735
+rank(C_7) over GF(67) = 8045  (14.2s)
+  rank: 200 pivots found, col 199/8735
+  rank: 400 pivots found, col 399/8735
+  rank: 600 pivots found, col 599/8735
+  rank: 800 pivots found, col 799/8735
+  rank: 1000 pivots found, col 999/8735
+  rank: 1200 pivots found, col 1199/8735
+  rank: 1400 pivots found, col 1399/8735
+  rank: 1600 pivots found, col 1599/8735
+  rank: 1800 pivots found, col 1799/8735
+  rank: 2000 pivots found, col 1999/8735
+  rank: 2200 pivots found, col 2199/8735
+  rank: 2400 pivots found, col 2399/8735
+  rank: 2600 pivots found, col 2599/8735
+  rank: 2800 pivots found, col 2799/8735
+  rank: 3000 pivots found, col 2999/8735
+  rank: 3200 pivots found, col 3199/8735
+  rank: 3400 pivots found, col 3399/8735
+  rank: 3600 pivots found, col 3601/8735
+  rank: 3800 pivots found, col 3814/8735
+  rank: 4000 pivots found, col 4017/8735
+  rank: 4200 pivots found, col 4226/8735
+  rank: 4400 pivots found, col 4436/8735
+  rank: 4600 pivots found, col 4636/8735
+  rank: 4800 pivots found, col 4836/8735
+  rank: 5000 pivots found, col 5044/8735
+  rank: 5200 pivots found, col 5259/8735
+  rank: 5400 pivots found, col 5471/8735
+  rank: 5600 pivots found, col 5680/8735
+  rank: 5800 pivots found, col 5892/8735
+  rank: 6000 pivots found, col 6102/8735
+  rank: 6200 pivots found, col 6311/8735
+  rank: 6400 pivots found, col 6520/8735
+  rank: 6600 pivots found, col 6722/8735
+  rank: 6800 pivots found, col 6934/8735
+  rank: 7000 pivots found, col 7160/8735
+  rank: 7200 pivots found, col 7365/8735
+  rank: 7400 pivots found, col 7572/8735
+  rank: 7600 pivots found, col 7798/8735
+  rank: 7800 pivots found, col 8011/8735
+  rank: 8000 pivots found, col 8234/8735
+  rank: 8200 pivots found, col 8472/8735
+  rank: 8400 pivots found, col 8693/8735
+rank(stacked) over GF(67) = 8435  (45.4s)
+R_7^{(1)} over GF(67) = 390
+
+*** CONFIRMED: R_7^{(1)} = 390 ***
+
+Done.
