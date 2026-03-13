@@ -56,3 +56,31 @@ chi(P_p) = p is a deep property of quadratic residues.
 
 LEFSCHETZ NUMBER: L(g) = 0 for all non-identity g ∈ Z_p.
 This is consistent with free Z_p action on the path complex.
+
+============================================================
+QR MULTIPLICATIVE SCALING SYMMETRY
+============================================================
+
+KEY INSIGHT: For Paley P_p, S = QR is closed under multiplication mod p.
+This gives an EXTRA symmetry group Z_{(p-1)/2} acting on diff-seqs:
+  φ_a: (d_1,...,d_m) → (a·d_1,...,a·d_m) for a ∈ QR
+
+Properties:
+1. φ_a preserves S-membership (mult-closure)
+2. φ_a preserves partial sum distinctness (scaling by a ≠ 0)
+3. φ_a commutes with boundary maps (face merging scales)
+4. Verified: a·QR = QR for all a ∈ QR at p=7,11
+
+Non-Paley circulants lack this symmetry → chi_per ≠ 1.
+
+Full symmetry group of Paley path complex:
+  Z_p (translation) × Z_{(p-1)/2} (QR scaling)
+  Order = p(p-1)/2
+
+This double symmetry may force chi_per = 1 and explain
+the per-eigenspace Betti structure (HYP-657).
+
+chi_per survey at n=11: 32 valid arc sets
+  chi_per=0: 20 sets (most common)
+  chi_per=1: 2 sets (ONLY Paley QR and -QR)
+  chi_per=2: 10 sets
