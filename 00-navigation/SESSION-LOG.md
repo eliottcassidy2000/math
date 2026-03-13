@@ -34,6 +34,26 @@ Entry format:
 - Algebraic proof of β_m = m(m-3)/2
 - Full Omega_d closed formula for arbitrary d
 
+## opus-2026-03-13-S67h — 2026-03-13: Fibonacci-Fourier Duality — Q_k Exact Spectrum, κ_trop = Cl₂(π/3)/(π·logφ), Cross-field Bridges
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67g (context recovery)
+**Summary of work:**
+- **Q_k EXACT FORMULA (HYP-700)**: Proved Q_k = 1/(4sin²(kπ/(2p))) for k odd, Q_k = 1/(4cos²(kπ/(2p))) for k even. Beautiful parity splitting: odd modes diverge as p²/(k²π²), even modes degenerate to 1/4.
+- **Q_1/ΣQ → 8/π² PROVED (HYP-701)**: With full asymptotic expansion. Corrected previous conjecture of 1-1/(2φ²) = 0.8090 — true limit is 8/π² = 0.8106, Fourier-analytic not golden-ratio.
+- **κ_trop = Cl₂(π/3)/(π·logφ) DERIVED (HYP-707)**: The tropical dominance constant identified as Clausen function ratio. Key identity: (7+3√5)/2 = φ⁴, giving ∫ log(4sin²u+5) du = 2π logφ.
+- **8 cross-field connections explored**: (1) Fibonacci anyons/Jones polynomial, (2) Arnold tongues/devil's staircase, (3) quasicrystal diffraction, (4) modular forms/eta products, (5) free probability, (6) TASEP/LPP, (7) RSK correspondence, (8) Fredholm determinants.
+- **Spectrum parity splitting (HYP-709)**: Q_k > 1 iff k odd AND k < p/3, giving exactly m/3 modes above threshold. The 1/3 fraction is PROVED.
+- **RSK shapes (HYP-706)**: Tournament HP paths have structured Young diagrams with average LIS below random (3.27 vs 4.47 at p=5).
+- **Level spacing rigid (HYP-704)**: <r> ≈ 0.96-0.99, not random-matrix-like.
+**New contributions:** HYP-700 through HYP-709
+**Scripts created:** fibonacci_anyon_arnoldi.py, q1_limit_exact.py, qk_exact_limits.py, kappa_identification.py, kappa_analytical.py, tasep_tournament_bridge.py
+**Unresolved threads:**
+- κ_trop convergence is logarithmically slow — can we compute the O(log p / p) correction?
+- RSK shape distribution for larger p — does it converge to a Tracy-Widom shape?
+- The Fibonacci-Fourier duality: can we make the "Grover's algorithm" analogy rigorous?
+- TASEP/Bethe ansatz for circulant tournaments — can we solve exactly?
+
 ## opus-2026-03-13-S67g — 2026-03-13: Fibonacci Resonance Deep Dive — Uncertainty Principle, Orbit Theory, Hecke Connection
 
 **Account:** opus
