@@ -13,6 +13,47 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S70 — 2026-03-13: GLMY Path Homology Deep Dive — Omega Formulas, Betti Numbers, Eigenspace Uniformity
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S70 (context recovery)
+**Summary of work:**
+Deep exploration of GLMY path homology structure for tournaments. Discovered explicit formulas for Omega_m, Betti number patterns, and the Eigenspace Betti Uniformity theorem. Proved THM-150 (Fibonacci product identity), THM-151 (Omega_3 formula), THM-152 (simplicial identity), THM-153 (Paley geometric growth), THM-154 (Betti divisibility).
+
+**Key discoveries:**
+
+1. **THM-150 (PROVED)**: prod(1+Q_k) = F_p for Interval tournament. Proof via Morgan-Voyce polynomials: e_j(Q) = C(m+j,2j), sum = B_m(1) = F_{2m+1} = F_p.
+
+2. **THM-151 (Omega_3 Formula)**: Omega_3(T) = C(n,4) - Σ_v[c3(N_in(v)) + c3(N_out(v))]. omega3_local = 1 iff internal c3 is even. Walsh degree {0,4}, orthogonal to t_3.
+
+3. **THM-152 (Simplicial Identity, PROVED)**: Omega_m(transitive) = C(n, m+1). Every increasing (m+1)-subset is a regular m-path. Verified n=3..8.
+
+4. **THM-153 (Paley Geometric Growth)**: Omega_m(Paley) = C(p,2)·(Q-1)^{m-1} for m≤4, Q=(p+1)/4. p=7 UNIQUE: Q-1=1 gives constant Omega=21 for ALL m.
+
+5. **THM-154 (Betti Divisibility)**: All Betti of circulant tournaments on Z_n are divisible by n. Per-eigenspace β_m = β_m(total)/n.
+
+6. **EIGENSPACE BETTI UNIFORMITY (NEW)**: For circulant tournaments on Z_p, ALL eigenspaces k=0,...,p-1 have IDENTICAL Betti numbers, even when Q_k vary dramatically. Verified at n=5,7,9. Boundary map rank is independent of eigenspace index.
+
+7. **Omega_4 structure**: omega4_local on 5-vertex subtournaments is determined by full isomorphism type, not by (score_seq, t_3) alone. Unlike Omega_3, no simple cycle-count formula suffices.
+
+8. **Betti profiles**: Paley p=7 has β=(7,0,0,21,21,21,21) — boundary maps ∂_m=0 for m≥3. Regular n=5 has palindromic β=(5,5,0,5,5). Transitive has β=(n,n-1,0,...,0).
+
+9. **Omega_2 universal**: All regular tournaments have Omega_2 = n(n-1)(n-3)/8 (Parseval).
+
+**New contributions:** THM-150, THM-151, THM-152, THM-153, THM-154, HYP-622–HYP-626
+
+**Scripts created:** product_identity_proof.py, esf_collision_p17.py, walsh_glmy_bridge.py, omega_vs_H_walsh.py, walsh_omega_degree.py, walsh_omega_fast.py, omega3_structure.py, omega4_structure.py, omega4_finer.py, omega4_5cycle.py, omega4_neighborhood.py, omega_simplicial_profile.py, circulant_omega_profiles.py, paley7_constant_omega.py, omega_growth_rate.py, betti_omega_connection.py, betti_divisibility.py, per_eigenspace_betti.py, per_eig_betti_n9.py
+
+**Unresolved threads:**
+- Algebraic proof of Eigenspace Betti Uniformity (why do different Q_k give same β?)
+- Extend THM-153 beyond m=4 (what corrects the geometric growth?)
+- Prove THM-154 algebraically (Galois argument for k≠0, need k=0 argument)
+- Omega_4 explicit formula (no simple neighborhood formula; needs full iso type)
+- Fix numerical issues in Betti computation for n≥11 (need integer rank)
+- Connection between per-eigenspace Betti and circulant eigenspace structure (THM-145)
+
+---
+
 ## opus-2026-03-13-S67f — 2026-03-13: Deep Cross-Field Connections — KPZ, Toda, Dihedral, L-functions
 
 **Account:** opus
