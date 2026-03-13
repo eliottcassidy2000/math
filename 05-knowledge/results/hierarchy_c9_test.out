@@ -1,0 +1,46 @@
+============================================================
+DOES LAMBDA DETERMINE c9 AT n=9?
+============================================================
+  2000/10000: c5 amb=0, c7 amb=0, c9 amb=0
+  4000/10000: c5 amb=0, c7 amb=0, c9 amb=0
+  6000/10000: c5 amb=0, c7 amb=0, c9 amb=0
+  8000/10000: c5 amb=0, c7 amb=0, c9 amb=0
+
+Final: lambda groups=10000
+  c5 ambiguous: 0
+  c7 ambiguous: 0
+  c9 ambiguous: 0
+  Lambda determines c5? True
+  Lambda determines c7? True
+  Lambda determines c9? True
+
+============================================================
+DOES (LAMBDA, SIGMA) DETERMINE c9 AT n=9?
+============================================================
+  2000/10000: c7 amb=0, c9 amb=0
+  4000/10000: c7 amb=0, c9 amb=0
+  6000/10000: c7 amb=0, c9 amb=0
+  8000/10000: c7 amb=0, c9 amb=0
+
+Final: (lambda,sigma) groups=10000
+  c7 ambiguous: 0
+  c9 ambiguous: 0
+  (Lambda,sigma) determines c7? True
+  (Lambda,sigma) determines c9? True
+
+============================================================
+DOES A^2 DETERMINE A UNIQUELY?
+============================================================
+
+  n=6: 32768 A^2 classes from 32768 tournaments
+  Multiple-tournament classes: 0
+  Max fiber size: 1
+
+  n=7: 190800 A^2 classes from 200000 tournaments
+  Multiple-tournament classes: 8895
+  Max fiber size: 4
+  Example: 2 tournaments with same A^2
+    bits=1414414: scores=[1, 2, 3, 3, 4, 4, 4], c5=19, c7=152
+    bits=1414414: scores=[1, 2, 3, 3, 4, 4, 4], c5=19, c7=152
+
+Done.
