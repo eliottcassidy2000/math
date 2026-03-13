@@ -1,0 +1,40 @@
+======================================================================
+STEP 1: Verify I(Omega, 2) = H at n=8 for a random tournament
+======================================================================
+Tournament bits=266460262
+H(T) = 207
+Number of directed odd cycles: 75
+  By length: c3=13 c5=36 c7=26 
+  WARNING: 75 vertices, using approximation
+I(Omega(T), 2) = -1
+Match: False
+
+======================================================================
+STEP 2: Find an H-changing reversal and compute I before/after
+======================================================================
+Found! trial=17, subset=(0, 1, 4, 6), H_A=281, H_B=285, delta=4
+
+Cycles BEFORE:
+  c3 = 14
+  c5 = 44
+  c7 = 40
+
+Cycles AFTER:
+  c3 = 14
+  c5 = 44
+  c7 = 42
+  delta_c7 = 2
+
+  Too many cycles (98, 100) for full IP computation
+
+======================================================================
+STEP 3: Find case where delta_H != 2*delta_c7
+======================================================================
+
+FOUND DISCREPANCY: trial=106, subset=(0, 2, 3, 7)
+  delta_H = -4, delta_c7 = 0, 2*dc7 = 0
+
+  Cycles BEFORE: {3: 14, 5: 41, 7: 43}
+  Cycles AFTER:  {3: 14, 5: 41, 7: 43}
+
+Done.
