@@ -39,3 +39,20 @@ HYPOTHESES:
   HYP-658: chi^(0) = 1 for all Paley P_p
   HYP-659: k=0 Betti structure varies with p (trivial at p=7, nontrivial at p=11)
   HYP-660: rk^(k≠0)_m - rk^(0)_m = (-1)^{m+1} for m=1...(p-3)/2
+
+============================================================
+CHI PER EIGENSPACE: PALEY vs NON-PALEY
+============================================================
+
+chi_per is NOT always 1 for circulant tournaments:
+- n=5: all 4 circulants → chi_per = 0 (chi_total = 0)
+- n=7: ONLY Paley (QR={1,2,4} and complement {3,5,6}) → chi_per = 1
+       All 6 non-Paley circulants → chi_per = 0
+- n=9: some circulants → chi_per = -1 (chi_total = -9)
+- n=11: Paley → chi_per = 1; S={1,2,3,4,6} → chi_per = 2
+
+CONCLUSION: chi_per = 1 is SPECIFIC to Paley arc sets (QR).
+chi(P_p) = p is a deep property of quadratic residues.
+
+LEFSCHETZ NUMBER: L(g) = 0 for all non-identity g ∈ Z_p.
+This is consistent with free Z_p action on the path complex.
