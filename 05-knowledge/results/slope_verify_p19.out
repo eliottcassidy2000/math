@@ -1,0 +1,179 @@
+======================================================================
+BINOMIAL SLOPE VERIFICATION: b_k = C(m-(k-1)/2, (k-1)/2)
+======================================================================
+
+======================================================================
+p=17, m=8, Interval S=[1, 2, 3, 4, 5, 6, 7, 8]
+======================================================================
+
+Predictions:
+  k=3: b = 1 (THM-141, anomalous)
+  k=5: b = C(6,2) = 15
+  k=7: b = C(5,3) = 10
+  k=9: b = C(4,4) = 1
+  k=11: b = C(3,5) = 0
+  k=13: b = C(2,6) = 0
+
+  k=3: checking 680 subsets... 0.0s
+    204 vertex sets, 36 through 0
+    Profile: [1, 2, 3, 4, 5, 6, 7, 8]
+    Linear: True (res=0.000000)
+    Slope = 1.0000, Intercept = 0.0000
+    Predicted slope = 1
+    MATCH: True
+
+  k=5: checking 6188 subsets... 0.1s
+    4998 vertex sets, 1470 through 0
+    Profile: [315, 330, 345, 360, 375, 390, 405, 420]
+    Linear: True (res=0.000000)
+    Slope = 15.0000, Intercept = 300.0000
+    Predicted slope = 15
+    MATCH: True
+
+  k=7: checking 19448 subsets... 1.6s
+    18972 vertex sets, 7812 through 0
+    Profile: [2877, 2892, 2907, 2922, 2937, 2952, 2967, 2982]
+    Linear: True (res=0.000000)
+    Slope = 15.0000, Intercept = 2862.0000
+    Predicted slope = 10
+    MATCH: False
+
+  k=9: checking 24310 subsets... 14.2s
+    24293 vertex sets, 12861 through 0
+    Profile: [6427, 6428, 6429, 6430, 6431, 6432, 6433, 6434]
+    Linear: True (res=0.000000)
+    Slope = 1.0000, Intercept = 6426.0000
+    Predicted slope = 1
+    MATCH: True
+
+  k=11: checking 12376 subsets... 51.0s
+    12376 vertex sets, 8008 through 0
+    Profile: [5005, 5005, 5005, 5005, 5005, 5005, 5005, 5005]
+    Linear: True (res=0.000000)
+    Slope = 0.0000, Intercept = 5005.0000
+    Predicted slope = 0
+    MATCH: True
+
+  k=13: checking 2380 subsets... 63.1s
+    2380 vertex sets, 1820 through 0
+    Profile: [1365, 1365, 1365, 1365, 1365, 1365, 1365, 1365]
+    Linear: True (res=0.000000)
+    Slope = 0.0000, Intercept = 1365.0000
+    Predicted slope = 0
+    MATCH: True
+
+======================================================================
+p=19, m=9, Interval S=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+======================================================================
+
+Predictions:
+  k=3: b = 1 (THM-141, anomalous)
+  k=5: b = C(7,2) = 21
+  k=7: b = C(6,3) = 20
+  k=9: b = C(5,4) = 5
+  k=11: b = C(4,5) = 0
+  k=13: b = C(3,6) = 0
+
+  k=3: checking 969 subsets... 0.0s
+    285 vertex sets, 45 through 0
+    Profile: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Linear: True (res=0.000000)
+    Slope = 1.0000, Intercept = 0.0000
+    Predicted slope = 1
+    MATCH: True
+
+  k=5: checking 11628 subsets... 0.1s
+    9234 vertex sets, 2430 through 0
+    Profile: [456, 477, 498, 519, 540, 561, 582, 603, 624]
+    Linear: True (res=0.000000)
+    Slope = 21.0000, Intercept = 435.0000
+    Predicted slope = 21
+    MATCH: True
+
+  k=7: checking 50388 subsets... 4.1s
+    48792 vertex sets, 17976 through 0
+    Profile: [5852, 5887, 5922, 5957, 5992, 6027, 6062, 6097, 6132]
+    Linear: True (res=0.000000)
+    Slope = 35.0000, Intercept = 5817.0000
+    Predicted slope = 20
+    MATCH: False
+
+  k=9: checking 92378 subsets... 53.8s
+    92207 vertex sets, 43677 through 0
+    Profile: [19384, 19391, 19398, 19405, 19412, 19419, 19426, 19433, 19440]
+    Linear: True (res=0.000000)
+    Slope = 7.0000, Intercept = 19377.0000
+    Predicted slope = 5
+    MATCH: False
+
+  k=11: checking 75582 subsets... 309.5s
+    75582 vertex sets, 43758 through 0
+    Profile: [24310, 24310, 24310, 24310, 24310, 24310, 24310, 24310, 24310]
+    Linear: True (res=0.000000)
+    Slope = 0.0000, Intercept = 24310.0000
+    Predicted slope = 0
+    MATCH: True
+
+  k=13: checking 27132 subsets... 715.6s
+    27132 vertex sets, 18564 through 0
+    Profile: [12376, 12376, 12376, 12376, 12376, 12376, 12376, 12376, 12376]
+    Linear: True (res=0.000000)
+    Slope = 0.0000, Intercept = 12376.0000
+    Predicted slope = 0
+    MATCH: True
+
+======================================================================
+INTERCEPT ANALYSIS
+======================================================================
+
+Intercept table (a_k):
+    k |      p=7 |     p=11 |     p=13
+  ----+----------+----------+---------
+    3 |        0 |        0 |        0 |
+    5 |       10 |       65 |      119 |
+    7 |      --- |      126 |      455 |
+    9 |      --- |       36 |      330 |
+
+Intercept pattern search:
+
+  p=7, m=3:
+    k=3: a=0, n_sets=14, n_0=6, C(p-2,k-2)=5, n_0/n_sets=0.4286, k/p=0.4286
+    k=5: a=10, n_sets=21, n_0=15, C(p-2,k-2)=10, n_0/n_sets=0.7143, k/p=0.7143
+
+  p=11, m=5:
+    k=3: a=0, n_sets=55, n_0=15, C(p-2,k-2)=9, n_0/n_sets=0.2727, k/p=0.2727
+    k=5: a=65, n_sets=407, n_0=185, C(p-2,k-2)=84, n_0/n_sets=0.4545, k/p=0.4545
+    k=7: a=126, n_sets=330, n_0=210, C(p-2,k-2)=126, n_0/n_sets=0.6364, k/p=0.6364
+    k=9: a=36, n_sets=55, n_0=45, C(p-2,k-2)=36, n_0/n_sets=0.8182, k/p=0.8182
+
+  p=13, m=6:
+    k=3: a=0, n_sets=91, n_0=21, C(p-2,k-2)=11, n_0/n_sets=0.2308, k/p=0.2308
+    k=5: a=119, n_sets=1092, n_0=420, C(p-2,k-2)=165, n_0/n_sets=0.3846, k/p=0.3846
+    k=7: a=455, n_sets=1703, n_0=917, C(p-2,k-2)=462, n_0/n_sets=0.5385, k/p=0.5385
+    k=9: a=330, n_sets=715, n_0=495, C(p-2,k-2)=330, n_0/n_sets=0.6923, k/p=0.6923
+
+======================================================================
+k=3 ANOMALY ANALYSIS
+======================================================================
+
+For k=3, the formula C(m-1,1) = m-1 would predict slopes:
+  p=7: C(2,1) = 2, but actual slope = 1
+  p=11: C(4,1) = 4, but actual slope = 1
+  p=13: C(5,1) = 5, but actual slope = 1
+  p=17: C(7,1) = 7, but actual slope = 1
+  p=19: C(8,1) = 8, but actual slope = 1
+
+k=3 vertex sets = directed triangles.
+co_occ_3(d) counts triangle vertex sets containing {0, d}.
+The third vertex v must have 0->v->d->0 or 0->d->v->0 (one of these).
+For Interval S={1,...,m}, 0->v requires v in S = {1,...,m}.
+v->d requires d-v in S. d->0 requires p-d in S, i.e., d <= m.
+If 0->d (i.e., d in S), then third vertex v needs:
+  v in S AND (d-v) in S AND (p-d+v)...wait, not quite.
+Actually for a 3-cycle {0,d,v}, exactly ONE cyclic ordering works.
+THM-141 proof: co_occ_3(d) = |S intersect (d-S)| = min(d, p-d) for Interval.
+
+For k>=5, the 'third vertex' argument doesn't apply;
+instead we're choosing k-2 more vertices, and the constraint is global (Ham cycle).
+The binomial coefficient C(m-j, j) with j=(k-1)/2 counts something about
+the number of ways to increase the feasible region as d grows.

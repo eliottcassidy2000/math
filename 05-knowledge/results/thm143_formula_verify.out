@@ -1,0 +1,166 @@
+======================================================================
+THM-143 FORMULA VERIFICATION
+======================================================================
+
+  p   k |    slope   interc |    formula     actual | match
+----------------------------------------------------------------------
+  7   3 |        1        0 |          1          1 | PASS
+  7   5 |        0       10 |         10         10 | PASS
+ 11   3 |        1        0 |          1          1 | PASS
+ 11   5 |        3       65 |         68         68 | PASS
+ 11   7 |        0      126 |        126        126 | PASS
+ 11   9 |        0       36 |         36         36 | PASS
+ 13   3 |        1        0 |          1          1 | PASS
+ 13   5 |        6      119 |        125        125 | PASS
+ 13   7 |        1      455 |        456        456 | PASS
+ 13   9 |        0      330 |        330        330 | PASS
+ 17   3 |        1        0 |          1          1 | PASS
+ 17   5 |       15      300 |        315        315 | PASS
+ 17   7 |       15     2862 |       2877       2877 | PASS
+ 17   9 |        1     6426 |       6427       6427 | PASS
+ 17  11 |        0     5005 |       5005       5005 | PASS
+ 17  13 |        0     1365 |       1365       1365 | PASS
+ 19   3 |        1        0 |          1          1 | PASS
+ 19   5 |       21      435 |        456        456 | PASS
+ 19   7 |       35     5817 |       5852       5852 | PASS
+ 19   9 |        7    19377 |      19384      19384 | PASS
+ 19  11 |        0    24310 |      24310      24310 | PASS
+ 19  13 |        0    12376 |      12376      12376 | PASS
+
+======================================================================
+ALL 22 TEST CASES PASS -- THM-143 FULLY VERIFIED
+
+======================================================================
+PREDICTIONS FOR LARGER PRIMES
+======================================================================
+
+p=23, m=11:
+  k= 3: slope = C(9,0) =          1, intercept =          0
+  k= 5: slope = C(9,2) =         36, intercept =        814
+  k= 7: slope = C(9,4) =        126, intercept =      18711
+  k= 9: slope = C(9,6) =         84, intercept =     115236
+  k=11: slope = C(9,8) =          9, intercept =     293821
+  Slope nonzero for k <= 11 (p >= 2k-1)
+
+p=29, m=14:
+  k= 3: slope = C(12,0) =          1, intercept =          0
+  k= 5: slope = C(12,2) =         66, intercept =       1715
+  k= 7: slope = C(12,4) =        495, intercept =      72513
+  k= 9: slope = C(12,6) =        924, intercept =     873378
+  k=11: slope = C(12,8) =        495, intercept =    4679180
+  k=13: slope = C(12,10) =         66, intercept =   13036893
+  k=15: slope = C(12,12) =          1, intercept =   20058285
+  Slope nonzero for k <= 15 (p >= 2k-1)
+
+p=31, m=15:
+  k= 3: slope = C(13,0) =          1, intercept =          0
+  k= 5: slope = C(13,2) =         78, intercept =       2120
+  k= 7: slope = C(13,4) =        715, intercept =     106028
+  k= 9: slope = C(13,6) =       1716, intercept =    1531608
+  k=11: slope = C(13,8) =       1287, intercept =    9993698
+  k=13: slope = C(13,10) =        286, intercept =   34592636
+  k=15: slope = C(13,12) =         13, intercept =   67863706
+  Slope nonzero for k <= 15 (p >= 2k-1)
+
+p=37, m=18:
+  k= 3: slope = C(16,0) =          1, intercept =          0
+  k= 5: slope = C(16,2) =        120, intercept =       3705
+  k= 7: slope = C(16,4) =       1820, intercept =     285684
+  k= 9: slope = C(16,6) =       8008, intercept =    6560928
+  k=11: slope = C(16,8) =      12870, intercept =   70351490
+  k=13: slope = C(16,10) =       8008, intercept =  417069380
+  k=15: slope = C(16,12) =       1820, intercept = 1476302660
+  k=17: slope = C(16,14) =        120, intercept = 3247940864
+  k=19: slope = C(16,16) =          1, intercept = 4537567631
+  Slope nonzero for k <= 19 (p >= 2k-1)
+
+p=41, m=20:
+  k= 3: slope = C(18,0) =          1, intercept =          0
+  k= 5: slope = C(18,2) =        153, intercept =       5110
+  k= 7: slope = C(18,4) =       3060, intercept =     502929
+  k= 9: slope = C(18,6) =      18564, intercept =   14959269
+  k=11: slope = C(18,8) =      43758, intercept =  210947594
+  k=13: slope = C(18,10) =      43758, intercept = 1675105302
+  k=15: slope = C(18,12) =      18564, intercept = 8122027032
+  k=17: slope = C(18,14) =       3060, intercept = 25140775584
+  k=19: slope = C(18,16) =        153, intercept = 51021114579
+  Slope nonzero for k <= 21 (p >= 2k-1)
+
+p=43, m=21:
+  k= 3: slope = C(19,0) =          1, intercept =          0
+  k= 5: slope = C(19,2) =        171, intercept =       5929
+  k= 7: slope = C(19,4) =       3876, intercept =     652498
+  k= 9: slope = C(19,6) =      27132, intercept =   21834648
+  k=11: slope = C(19,8) =      75582, intercept =  348588383
+  k=13: slope = C(19,10) =      92378, intercept = 3157354070
+  k=15: slope = C(19,12) =      50388, intercept = 17618940692
+  k=17: slope = C(19,14) =      11628, intercept = 63432015204
+  k=19: slope = C(19,16) =        969, intercept = 151584458961
+  Slope nonzero for k <= 21 (p >= 2k-1)
+
+p=47, m=23:
+  k= 3: slope = C(21,0) =          1, intercept =          0
+  k= 5: slope = C(21,2) =        210, intercept =       7820
+  k= 7: slope = C(21,4) =       5985, intercept =    1057770
+  k= 9: slope = C(21,6) =      54264, intercept =   43961004
+  k=11: slope = C(21,8) =     203490, intercept =  880985445
+  k=13: slope = C(21,10) =     352716, intercept = 10141778010
+  k=15: slope = C(21,12) =     293930, intercept = 72998951235
+  k=17: slope = C(21,14) =     116280, intercept = 344864580600
+  k=19: slope = C(21,16) =      20349, intercept = 1103068109529
+  Slope nonzero for k <= 23 (p >= 2k-1)
+
+======================================================================
+DISJOINTNESS EXCESS FROM CO_OCC VARIANCE
+======================================================================
+
+For k=3 (THM-142 check):
+  p=7: excess = 28, THM-142 = 7, match = False
+  p=11: excess = 165, THM-142 = 55, match = False
+  p=13: no Paley (p != 3 mod 4)
+  p=17: no Paley (p != 3 mod 4)
+  p=19: excess = 1254, THM-142 = 570, match = False
+  p=23: excess = 2530, THM-142 = 1265, match = False
+  p=29: no Paley (p != 3 mod 4)
+
+For k=5 (NEW):
+  p=11: Interval ov2 = 149050, slope = 3
+  p=13: Interval ov2 = 763035, slope = 6
+  p=19: Interval ov2 = 25137000, slope = 21
+  p=23: Interval ov2 = 135712995, slope = 36
+
+======================================================================
+TOTAL VERTEX SETS n_0 FROM FORMULA
+======================================================================
+n_0 = sum_{d=1}^{p-1} co_occ_k(d) / (k-1)
+    = [2 * sum_{d=1}^m (a_k + b_k * d)] / (k-1)
+    = 2 * [m * a_k + b_k * m*(m+1)/2] / (k-1)
+
+p=7, m=3:
+  k=3: a=0, b=1, n_0=6, n_total=14
+  k=5: a=10, b=0, n_0=15, n_total=21
+p=11, m=5:
+  k=3: a=0, b=1, n_0=15, n_total=55
+  k=5: a=65, b=3, n_0=185, n_total=407
+  k=7: a=126, b=0, n_0=210, n_total=330
+  k=9: a=36, b=0, n_0=45, n_total=55
+p=13, m=6:
+  k=3: a=0, b=1, n_0=21, n_total=91
+  k=5: a=119, b=6, n_0=420, n_total=1092
+  k=7: a=455, b=1, n_0=917, n_total=1703
+  k=9: a=330, b=0, n_0=495, n_total=715
+  k=11: a=55, b=0, n_0=66, n_total=78
+p=17, m=8:
+  k=3: a=0, b=1, n_0=36, n_total=204
+  k=5: a=300, b=15, n_0=1470, n_total=4998
+  k=7: a=2862, b=15, n_0=7812, n_total=18972
+  k=9: a=6426, b=1, n_0=12861, n_total=24293
+  k=11: a=5005, b=0, n_0=8008, n_total=12376
+  k=13: a=1365, b=0, n_0=1820, n_total=2380
+p=19, m=9:
+  k=3: a=0, b=1, n_0=45, n_total=285
+  k=5: a=435, b=21, n_0=2430, n_total=9234
+  k=7: a=5817, b=35, n_0=17976, n_total=48792
+  k=9: a=19377, b=7, n_0=43677, n_total=92207
+  k=11: a=24310, b=0, n_0=43758, n_total=75582
+  k=13: a=12376, b=0, n_0=18564, n_total=27132
