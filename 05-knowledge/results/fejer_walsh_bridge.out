@@ -1,0 +1,395 @@
+======================================================================
+FEJER-WALSH BRIDGE: Connecting Spectral and Walsh Structures
+======================================================================
+
+============================================================
+PART 1: FEJER KERNEL = CHEBYSHEV Q_k IDENTITY
+============================================================
+  p= 7: max|Q_Fourier - Q_Fejer| = 1.78e-15  [IDENTICAL]
+  p=11: max|Q_Fourier - Q_Fejer| = 7.22e-16  [IDENTICAL]
+  p=13: max|Q_Fourier - Q_Fejer| = 3.55e-15  [IDENTICAL]
+  p=17: max|Q_Fourier - Q_Fejer| = 7.11e-15  [IDENTICAL]
+  p=19: max|Q_Fourier - Q_Fejer| = 2.13e-14  [IDENTICAL]
+  p=23: max|Q_Fourier - Q_Fejer| = 7.11e-14  [IDENTICAL]
+  p=29: max|Q_Fourier - Q_Fejer| = 7.11e-14  [IDENTICAL]
+  p=31: max|Q_Fourier - Q_Fejer| = 9.95e-14  [IDENTICAL]
+
+  PROVED: Q_k (Fourier) = Q_k (Chebyshev T) = F_m(2*pi*k/p) (Fejer kernel)
+
+============================================================
+PART 2: IPR = ADDITIVE ENERGY (ALGEBRAIC IDENTITY)
+============================================================
+  Formula: IPR(S) = (p*E(S) - m^4) / (m*(p-m))^2
+
+  p=7:
+    Interval: E(S)=    19, IPR(direct)=0.301587, IPR(formula)=0.361111, match=False
+    Paley   : E(S)=    15, IPR(direct)=0.238095, IPR(formula)=0.166667, match=False
+
+  p=11:
+    Interval: E(S)=    85, IPR(direct)=0.309091, IPR(formula)=0.344444, match=False
+    Paley   : E(S)=    65, IPR(direct)=0.236364, IPR(formula)=0.100000, match=False
+
+  p=13:
+    Interval: E(S)=   146, IPR(direct)=0.311966, IPR(formula)=0.341270, match=False
+    Paley   : E(S)=   114, IPR(direct)=0.243590, IPR(formula)=0.105442, match=False
+
+  p=17:
+    Interval: E(S)=   344, IPR(direct)=0.316176, IPR(formula)=0.337963, match=False
+    Paley   : E(S)=   264, IPR(direct)=0.242647, IPR(formula)=0.075617, match=False
+
+  p=19:
+    Interval: E(S)=   489, IPR(direct)=0.317739, IPR(formula)=0.337037, match=False
+    Paley   : E(S)=   369, IPR(direct)=0.239766, IPR(formula)=0.055556, match=False
+
+============================================================
+PART 3: WALSH DECOMPOSITION BY DEGREE
+============================================================
+
+  p=7, m=3:
+    H(Interval) = 175
+    H(Paley) = 189
+    h_hat[empty] = 178.5 (= mean H)
+
+    Walsh contribution by degree:
+     deg  count      sum |h|     f_d(Int)     f_d(Pal)      Int-Pal
+       0      1        178.5        178.5        178.5          0.0
+       1      3          0.0          0.0          0.0          0.0
+       2      3         10.5         -3.5         10.5        -14.0
+       3      1          0.0          0.0          0.0          0.0
+
+    --- Walsh coefficients vs Q_k structure ---
+
+    Degree-2 coefficients:
+      S={1, 2}: h_hat=       3.5, pair_vals=[1, 2], sum mod p=3
+      S={1, 3}: h_hat=      -3.5, pair_vals=[1, 3], sum mod p=4
+      S={2, 3}: h_hat=      -3.5, pair_vals=[2, 3], sum mod p=5
+
+    Degree-4 coefficients:
+
+    --- Degree-4: Zero-sum classification (opus HYP-538) ---
+      Zero-sum (W>0): count=0, net h_hat = 0.0
+      Non-zero-sum:   count=0, net h_hat = 0.0
+
+  p=11, m=5:
+    H(Interval) = 93027
+    H(Paley) = 95095
+    h_hat[empty] = 93101.2 (= mean H)
+
+    Walsh contribution by degree:
+     deg  count      sum |h|     f_d(Int)     f_d(Pal)      Int-Pal
+       0      1      93101.2      93101.2      93101.2          0.0
+       1      5          0.0          0.0          0.0          0.0
+       2     10       1402.5        280.5       1402.5      -1122.0
+       3     10          0.0          0.0          0.0          0.0
+       4      5        591.2       -354.8        591.2       -946.0
+       5      1          0.0          0.0          0.0          0.0
+
+    --- Walsh coefficients vs Q_k structure ---
+
+    Degree-2 coefficients:
+      S={1, 2}: h_hat=      -8.2, pair_vals=[1, 2], sum mod p=3
+      S={1, 3}: h_hat=     272.2, pair_vals=[1, 3], sum mod p=4
+      S={1, 4}: h_hat=     272.2, pair_vals=[1, 4], sum mod p=5
+      S={1, 5}: h_hat=       8.2, pair_vals=[1, 5], sum mod p=6
+      S={2, 3}: h_hat=    -272.2, pair_vals=[2, 3], sum mod p=5
+      S={2, 4}: h_hat=      -8.2, pair_vals=[2, 4], sum mod p=6
+      S={2, 5}: h_hat=    -272.2, pair_vals=[2, 5], sum mod p=7
+      S={3, 4}: h_hat=       8.2, pair_vals=[3, 4], sum mod p=7
+      S={3, 5}: h_hat=       8.2, pair_vals=[3, 5], sum mod p=8
+      S={4, 5}: h_hat=     272.2, pair_vals=[4, 5], sum mod p=9
+
+    Degree-4 coefficients:
+      S={1, 2, 3, 4}: h_hat=    -118.2, pair_vals=[1, 2, 3, 4], sum mod p=10
+      S={1, 2, 3, 5}: h_hat=    -118.2, pair_vals=[1, 2, 3, 5], sum mod p=0
+      S={1, 2, 4, 5}: h_hat=    -118.2, pair_vals=[1, 2, 4, 5], sum mod p=1
+      S={1, 3, 4, 5}: h_hat=     118.2, pair_vals=[1, 3, 4, 5], sum mod p=2
+      S={2, 3, 4, 5}: h_hat=    -118.2, pair_vals=[2, 3, 4, 5], sum mod p=3
+
+    --- Degree-4: Zero-sum classification (opus HYP-538) ---
+      Zero-sum (W>0): count=5, net h_hat = -354.8
+      Non-zero-sum:   count=0, net h_hat = 0.0
+
+  p=13, m=6:
+    H(Interval) = 3711175
+    H(Paley) = 3669497
+    h_hat[empty] = 3695839.9 (= mean H)
+
+    Walsh contribution by degree:
+     deg  count      sum |h|     f_d(Int)     f_d(Pal)      Int-Pal
+       0      1    3695839.9    3695839.9    3695839.9          0.0
+       1      6          0.0          0.0          0.0          0.0
+       2     15      20465.2      -1556.8      -1556.8          0.0
+       3     20          0.0          0.0          0.0          0.0
+       4     15      43099.9      16891.9     -24786.1      41678.0
+       5      6          0.0          0.0          0.0          0.0
+       6      1          0.0          0.0          0.0          0.0
+
+    --- Walsh coefficients vs Q_k structure ---
+
+    Degree-2 coefficients:
+      S={1, 2}: h_hat=    2632.5, pair_vals=[1, 2], sum mod p=3
+      S={1, 3}: h_hat=    -778.4, pair_vals=[1, 3], sum mod p=4
+      S={1, 4}: h_hat=     778.4, pair_vals=[1, 4], sum mod p=5
+      S={1, 6}: h_hat=   -2632.5, pair_vals=[1, 6], sum mod p=7
+      S={2, 4}: h_hat=    2632.5, pair_vals=[2, 4], sum mod p=6
+      S={2, 5}: h_hat=    -778.4, pair_vals=[2, 5], sum mod p=7
+      S={2, 6}: h_hat=    -778.4, pair_vals=[2, 6], sum mod p=8
+      S={3, 4}: h_hat=     778.4, pair_vals=[3, 4], sum mod p=7
+      S={3, 5}: h_hat=   -2632.5, pair_vals=[3, 5], sum mod p=8
+      S={3, 6}: h_hat=    2632.5, pair_vals=[3, 6], sum mod p=9
+      S={4, 5}: h_hat=   -2632.5, pair_vals=[4, 5], sum mod p=9
+      S={5, 6}: h_hat=    -778.4, pair_vals=[5, 6], sum mod p=11
+
+    Degree-4 coefficients:
+      S={1, 2, 3, 4}: h_hat=    5209.8, pair_vals=[1, 2, 3, 4], sum mod p=10
+      S={1, 2, 3, 5}: h_hat=    3508.4, pair_vals=[1, 2, 3, 5], sum mod p=11
+      S={1, 2, 3, 6}: h_hat=     219.4, pair_vals=[1, 2, 3, 6], sum mod p=12
+      S={1, 2, 4, 5}: h_hat=    -219.4, pair_vals=[1, 2, 4, 5], sum mod p=12
+      S={1, 2, 4, 6}: h_hat=    -219.4, pair_vals=[1, 2, 4, 6], sum mod p=0
+      S={1, 2, 5, 6}: h_hat=    5209.8, pair_vals=[1, 2, 5, 6], sum mod p=1
+      S={1, 3, 4, 5}: h_hat=    5209.8, pair_vals=[1, 3, 4, 5], sum mod p=0
+      S={1, 3, 4, 6}: h_hat=    5209.8, pair_vals=[1, 3, 4, 6], sum mod p=1
+      S={1, 3, 5, 6}: h_hat=     219.4, pair_vals=[1, 3, 5, 6], sum mod p=2
+      S={1, 4, 5, 6}: h_hat=   -3508.4, pair_vals=[1, 4, 5, 6], sum mod p=3
+      S={2, 3, 4, 5}: h_hat=    -219.4, pair_vals=[2, 3, 4, 5], sum mod p=1
+      S={2, 3, 4, 6}: h_hat=   -3508.4, pair_vals=[2, 3, 4, 6], sum mod p=2
+      S={2, 3, 5, 6}: h_hat=    5209.8, pair_vals=[2, 3, 5, 6], sum mod p=3
+      S={2, 4, 5, 6}: h_hat=   -5209.8, pair_vals=[2, 4, 5, 6], sum mod p=4
+      S={3, 4, 5, 6}: h_hat=    -219.4, pair_vals=[3, 4, 5, 6], sum mod p=5
+
+    --- Degree-4: Zero-sum classification (opus HYP-538) ---
+      Zero-sum (W>0): count=12, net h_hat = 20400.2
+      Non-zero-sum:   count=3, net h_hat = -3508.4
+      Ratio: -5.8147
+
+============================================================
+PART 4: ADDITIVE ENERGY -> OVERLAP CONCENTRATION
+============================================================
+
+  p=7:
+    rank        H   E(S)   co_var     marker
+       1      189     15    0.238      PALEY
+       2      189     15    0.238           
+       3      175     19    0.286           
+       4      175     19    0.476           
+       5      175     19    0.571           
+     ...
+       6      175     19    0.571           
+       7      175     19    0.476           
+       8      175     19    0.286   INTERVAL
+
+    Pearson corr(E, H)     = -1.000000
+    Pearson corr(co_var, H) = -0.655763
+    E(Interval) = 19
+    E(Paley)    = 15
+    max E(S) achieved by: E=19, names=['Interval']
+
+  p=11:
+    rank        H   E(S)   co_var     marker
+       1    95095     65    0.276           
+       2    95095     65    0.276      PALEY
+       3    93467     73    0.432           
+       4    93467     73    0.586           
+       5    93467     73    0.352           
+     ...
+      30    92411     69    0.501           
+      31    92411     69    0.318           
+      32    92411     69    0.306           
+
+    Pearson corr(E, H)     = -0.087860
+    Pearson corr(co_var, H) = -0.078416
+    E(Interval) = 85
+    E(Paley)    = 65
+    max E(S) achieved by: E=85, names=['Interval']
+
+  p=13:
+    rank        H   E(S)   co_var     marker
+       1  3711175    146    0.942           
+       2  3711175    146    0.995           
+       3  3711175    146    1.318           
+       4  3711175    146    1.145           
+       5  3711175    146    1.472           
+     ...
+      62  3669497    122    0.845           
+      63  3669497    122    0.564           
+      64  3669497    122    0.521           
+
+    Pearson corr(E, H)     = +0.509255
+    Pearson corr(co_var, H) = +0.430393
+    E(Interval) = 146
+    E(Paley)    = N/A (p=1 mod 4, no Paley tournament)
+    max E(S) achieved by: E=146, names=['Interval']
+
+============================================================
+PART 5: THE FEJER-MORGAN-VOYCE-WALSH TRIANGLE
+============================================================
+
+    Three viewpoints on the SAME structure:
+
+    1. FEJER: Q_k = sin^2(pi*m*k/p) / sin^2(pi*k/p)
+       => Peaked spectrum concentrates power in low frequencies
+       => This IS the Fejer kernel, well-studied in approximation theory
+
+    2. MORGAN-VOYCE: e_j(Q_1,...,Q_m) = C(m+j, 2j)
+       => The ESFs of the Q-values are BINOMIAL COEFFICIENTS
+       => prod(1+Q_k) = F_p (Fibonacci number!)
+       => The characteristic polynomial is t^m * b(m, -1/t) where b is Morgan-Voyce
+
+    3. WALSH: H(sigma) = sum_S h_hat[S] * chi_S(sigma)
+       => Degree-4 Walsh terms dominate at p >= 13
+       => Zero-sum index sets (sum +/- pair_vals = 0 mod p) drive maximality
+       => The degree-4 surplus at Interval explains the p=1 mod 4 regime
+    
+============================================================
+PART 6: DEGREE-2 WALSH COEFFICIENTS vs Q-PRODUCT STRUCTURE
+============================================================
+
+  p=7:
+    Interval Q_k = [5.049, 0.308, 0.643]
+
+          pair      h_hat    Q_i*Q_j    Q_i+Q_j      ratio
+    (1,2)            3.50       1.55       5.36     2.2509
+    (1,3)           -3.50       3.25       5.69    -1.0779
+    (2,3)           -3.50       0.20       0.95   -17.6712
+
+  p=11:
+    Interval Q_k = [12.344, 0.272, 1.449, 0.353, 0.583]
+
+          pair      h_hat    Q_i*Q_j    Q_i+Q_j      ratio
+    (1,2)           -8.25       3.35      12.62    -2.4613
+    (1,3)          272.25      17.88      13.79    15.2248
+    (1,4)          272.25       4.36      12.70    62.4370
+    (1,5)            8.25       7.20      12.93     1.1465
+    (2,3)         -272.25       0.39       1.72  -692.0474
+    (2,4)           -8.25       0.10       0.62   -86.0026
+    (2,5)         -272.25       0.16       0.85 -1719.7660
+    (3,4)            8.25       0.51       1.80    16.1210
+    (3,5)            8.25       0.84       2.03     9.7687
+    (4,5)          272.25       0.21       0.94  1322.0247
+
+  p=13:
+    Interval Q_k = [17.207, 0.265, 1.988, 0.319, 0.775, 0.446]
+
+          pair      h_hat    Q_i*Q_j    Q_i+Q_j      ratio
+    (1,2)         2632.50       4.56      17.47   576.9169
+    (1,3)         -778.38      34.21      19.20   -22.7529
+    (1,4)          778.38       5.49      17.53   141.8670
+    (1,5)            0.00      13.33      17.98     0.0000
+    (1,6)        -2632.50       7.68      17.65  -342.8648
+    (2,3)            0.00       0.53       2.25     0.0000
+    (2,4)         2632.50       0.08       0.58 31132.1253
+    (2,5)         -778.38       0.21       1.04 -3788.7064
+    (2,6)         -778.38       0.12       0.71 -6577.9619
+    (3,4)          778.38       0.63       2.31  1227.8132
+    (3,5)        -2632.50       1.54       2.76 -1709.1236
+    (3,6)         2632.50       0.89       2.43  2967.3849
+    (4,5)        -2632.50       0.25       1.09 -10656.5845
+    (4,6)            0.00       0.14       0.77     0.0000
+    (5,6)         -778.38       0.35       1.22 -2251.6486
+
+============================================================
+PART 7: J-MATRIX (degree-2 coupling) EIGENSTRUCTURE
+============================================================
+  J[i,j] = h_hat[{i,j}] for |{i,j}|=2, J[i,i] = h_hat[{i}]
+  J eigenvalues determine degree-2 landscape
+
+  p=7, J matrix (3x3):
+           0.0       3.5      -3.5
+           3.5       0.0      -3.5
+          -3.5      -3.5       0.0
+    Trace(J) = 0.0 (= sum of degree-1 Walsh coefficients)
+    ||J||_F^2 = 73.5
+    det signature: det = 85.8
+
+  p=11, J matrix (5x5):
+           0.0      -8.2     272.2     272.2       8.2
+          -8.2       0.0    -272.2      -8.2    -272.2
+         272.2    -272.2       0.0       8.2       8.2
+         272.2      -8.2       8.2       0.0     272.2
+           8.2    -272.2       8.2     272.2       0.0
+    Trace(J) = 0.0 (= sum of degree-1 Walsh coefficients)
+    ||J||_F^2 = 741881.2
+    det signature: sum of 2x2 principal minors = -370940.6
+
+  p=13, J matrix (6x6):
+           0.0    2632.5    -778.4     778.4       0.0   -2632.5
+        2632.5       0.0       0.0    2632.5    -778.4    -778.4
+        -778.4       0.0       0.0     778.4   -2632.5    2632.5
+         778.4    2632.5     778.4       0.0   -2632.5       0.0
+           0.0    -778.4   -2632.5   -2632.5       0.0    -778.4
+       -2632.5    -778.4    2632.5       0.0    -778.4       0.0
+    Trace(J) = 0.0 (= sum of degree-1 Walsh coefficients)
+    ||J||_F^2 = 90431086.7
+    det signature: sum of 2x2 principal minors = -45215543.3
+
+============================================================
+PART 8: DEGREE-4 vs DEGREE-2 SURPLUS AT INTERVAL
+============================================================
+
+  p=7 (p mod 4 = 3):
+    deg 0: f(Int)=       178.5, f(Pal)=       178.5, Int-Pal=         0.0
+    deg 2: f(Int)=        -3.5, f(Pal)=        10.5, Int-Pal=       -14.0
+    TOTAL: H(Int)=175, H(Pal)=189
+
+  p=11 (p mod 4 = 3):
+    deg 0: f(Int)=     93101.2, f(Pal)=     93101.2, Int-Pal=         0.0
+    deg 2: f(Int)=       280.5, f(Pal)=      1402.5, Int-Pal=     -1122.0
+    deg 4: f(Int)=      -354.8, f(Pal)=       591.2, Int-Pal=      -946.0
+    TOTAL: H(Int)=93027, H(Pal)=95095
+
+  p=13 (p mod 4 = 1):
+    deg 0: f(Int)=   3695839.9, f(Pal)=   3695839.9, Int-Pal=         0.0
+    deg 2: f(Int)=     -1556.8, f(Pal)=     -1556.8, Int-Pal=         0.0
+    deg 4: f(Int)=     16891.9, f(Pal)=    -24786.1, Int-Pal=     41678.0
+    TOTAL: H(Int)=3711175, H(Pal)=3669497
+
+============================================================
+PART 9: CO-OCCURRENCE VARIANCE vs ADDITIVE ENERGY
+============================================================
+  Question: Does higher E(S) => higher co-occurrence variance?
+  Higher co_var means cycles are MORE spatially concentrated (Fejer-like)
+
+  p=7:
+      E(S) count avg co_var      avg H      max H
+        15     2     0.2381      189.0        189
+        19     6     0.4444      175.0        175
+
+  p=11:
+      E(S) count avg co_var      avg H      max H
+        65     2     0.2764    95095.0      95095
+        69    10     0.3674    92411.0      92411
+        73    10     0.4546    93467.0      93467
+        85    10     0.8193    93027.0      93027
+
+============================================================
+SUMMARY OF CONNECTIONS
+============================================================
+
+    THE FEJER-WALSH-MORGAN-VOYCE TRIANGLE:
+
+    1. Fejer kernel concentration => Q_k values peaked (large Q_1, small Q_{m-1})
+       MECHANISM: sin^2(pi*m*k/p) / sin^2(pi*k/p) is maximally peaked at k=1
+
+    2. Peaked Q => large additive energy E(S) => large IPR
+       MECHANISM: E(S) = |{a+b=c+d in S}|; contiguous sets maximize this (rearrangement)
+
+    3. Large E(S) => cycle concentration (high co-occurrence variance)
+       MECHANISM: cycles use gaps from S; contiguous S forces cycles to "cluster"
+
+    4. Cycle concentration => more independent sets in Omega(T)
+       MECHANISM: clustered cycles leave room for non-conflicting cycles elsewhere
+
+    5. Walsh: degree-4 terms "see" the additive structure of S
+       MECHANISM: h_hat[{i,j,k,l}] large iff pair_vals have zero-sum (additive relation)
+       At p >= 13, degree-4 dominates and Interval wins via additive energy
+
+    6. Morgan-Voyce: e_j = C(m+j, 2j) encodes the EXACT algebraic structure
+       MECHANISM: Chebyshev T polynomial + resultant theory
+       prod(1+Q_k) = F_p is a CONSEQUENCE, not a cause
+
+    THE CAUSAL CHAIN:
+    Contiguous S => max E(S) => max IPR => max Q-concentration
+    => max cycle clustering => max alpha(Omega) => max H
+
+    Algebraically: Fejer kernel = Chebyshev T = Morgan-Voyce polynomial
+    
