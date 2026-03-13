@@ -161,18 +161,38 @@ by coincidence. Under the exactness hypothesis:
 
 This matches the p=7 pattern exactly.
 
+## p=11 Complete Topological Landscape (S68)
+
+**HYP-552 REFUTED**: At p=11, there are FOUR distinct topological types,
+not two. Organized by Z_p* orbits:
+
+| Orbit | Size | β profile | χ | χ/eigenspace | S-S=Z_p*? |
+|-------|------|-----------|---|--------------|-----------|
+| Interval | 10 | [1,1,0,...,0] | 0 | 0 | NO |
+| Paley | 2 | [1,0,0,0,0,5,15,0,...] | 11 | 1 | YES (perfect) |
+| {1,2,3,4,6} | 10 | [1,0,0,0,0,0,21,0,...] | 22 | 2 | YES |
+| {1,6,7,8,9} | 10 | [1,0,0,0,0,14,13,0,...] | 0 | 0 | YES |
+
+**Difference set criterion (HYP-559)**: Deep anomaly ⟺ S-S covers Z_p*.
+PERFECT correlation: 22/22 deep have full S-S, 10/10 shallow have incomplete.
+
+Anomaly patterns (Δ_m = r_m^(0) - r_m^(k≥1)):
+- Interval: Δ = (-1, 0, 0, ...) — stops at m=1
+- Paley: Δ = (-1,+1,-1,+1,-1,-4, 0, ...) — alternating ±1, jump at m=6
+- {1,2,3,4,6}: Δ = (-1,+1,-1,+1,-1,+1, 0, ...) — clean ±1 alternation
+- {1,6,7,8,9}: Δ = (-1,+1,-1,+1,-1,-2, 0, ...) — alternating ±1, small jump
+
 ## Consequences
 
-1. **Topological dichotomy**: For all circulant tournaments at p=7,11:
-   - Paley: β has high-dimensional concentration (β₄=6 or β₅=5,β₆=15)
-   - ALL others: β = [1, 1, 0, ..., 0] (circle topology)
+1. **Topological landscape is RICHER than expected**: At p=7, exactly 2 types.
+   At p=11, at least 4 types. The number of types grows with p.
 
 2. **Acyclicity mechanism**: The Interval chain complex is acyclic at k≥1
    because ALL boundary ranks are constant across eigenspaces (m≥2).
    No eigenspace has "room" for homology.
 
-3. **Paley anomaly creates homology**: Paley's k=0 rank differs from k≥1,
-   creating a gap that allows β_m ≠ 0. This is driven by QR symmetry.
+3. **Deep anomaly creates homology**: Any S with S-S = Z_p* has deep
+   anomaly, creating gaps that allow β_m ≠ 0 at high degrees.
 
 4. **Spectral-topological-H connection**:
    - Flat spectrum (Paley) → QR symmetry → deep k=0 anomaly → complex topology
