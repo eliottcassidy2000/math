@@ -1,0 +1,30 @@
+d=0: |A_d| = 1
+d=1: |A_d| = 5
+d=2: |A_d| = 25
+d=3: |A_d| = 110
+d=4: |A_d| = 430
+d=5: |A_d| = 1430
+d=6: |A_d| = 3970
+d=7: |A_d| = 8735
+d=8: |A_d| = 14395
+d=9: |A_d| = 15745
+d=10: |A_d| = 8645
+
+Computing Omega bases...
+  Omega_0 = 1
+  Omega_1 = 5
+  Omega_2 = 20
+  Omega_3 = 70
+  Omega_4 = 205
+  Omega_5 = 460
+  Omega_6 = 700
+init_gesdd failed init
+  Omega_7 = 8178
+Traceback (most recent call last):
+  File "/tmp/p11_eigenspace.py", line 93, in <module>
+    omega_bases[d] = compute_omega_basis(d, diffseqs[d])
+  File "/tmp/p11_eigenspace.py", line 76, in compute_omega_basis
+    U, S, Vt = np.linalg.svd(C, full_matrices=True)
+  File "/home/e/.local/lib/python3.10/site-packages/numpy/linalg/linalg.py", line 1681, in svd
+    u, s, vh = gufunc(a, signature=signature, extobj=extobj)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 18.4 GiB for an array with shape (35145, 35145) and data type complex128

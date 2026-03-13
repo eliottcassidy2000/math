@@ -1,0 +1,25 @@
+d=0: |A|=1
+d=1: |A|=5
+d=2: |A|=25
+d=3: |A|=110
+d=4: |A|=430
+d=5: |A|=1430
+d=6: |A|=3970
+d=7: |A|=8735
+d=8: |A|=14395
+d=9: |A|=15745
+d=10: |A|=8645
+
+k=1 eigenspace boundary ranks:
+  d=1: stacked (1, 5)
+    rank([C;B])=1, rank(C)=0, R_1=1
+  d=2: stacked (10, 25)
+    rank([C;B])=9, rank(C)=5, R_2=4
+  d=3: stacked (65, 110)
+    rank([C;B])=56, rank(C)=40, R_3=16
+  d=4: stacked (360, 430)
+    rank([C;B])=279, rank(C)=225, R_4=54
+  d=5: stacked (1650, 1430)
+    rank([C;B])=1121, rank(C)=970, R_5=151
+  d=6: stacked (6320, 3970)
+    rank([C;B])=3579, rank(C)=3270, R_6=309
