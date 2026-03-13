@@ -1,0 +1,144 @@
+=== OMEGA DIMENSION ANALYSIS ===
+
+P_7 (m=3): Omega vs (m)_d / d! = C(m,d) and vs m^d / d!
+  d=0: Omega=1, C(3,d)=1, m^d/d!=1
+  d=1: Omega=3, C(3,d)=3, m^d/d!=3
+  d=2: Omega=6, C(3,d)=3, m^d/d!=4
+  d=3: Omega=9, C(3,d)=1, m^d/d!=4
+  d=4: Omega=9, C(3,d)=0, m^d/d!=3
+  d=5: Omega=6, C(3,d)=0, m^d/d!=2
+  d=6: Omega=3, C(3,d)=0, m^d/d!=1
+
+P_11 (m=5): Omega / m
+  d=0: Omega=1, Omega/m=1/5
+  d=1: Omega=5, Omega/m=1
+  d=2: Omega=20, Omega/m=4
+  d=3: Omega=70, Omega/m=14
+  d=4: Omega=205, Omega/m=41
+  d=5: Omega=460, Omega/m=92
+  d=6: Omega=700, Omega/m=140
+  d=7: Omega=690, Omega/m=138
+  d=8: Omega=450, Omega/m=90
+  d=9: Omega=180, Omega/m=36
+  d=10: Omega=30, Omega/m=6
+
+Ratios Omega_d / Omega_{d-1}:
+P_7: [Fraction(3, 1), Fraction(2, 1), Fraction(3, 2), Fraction(1, 1), Fraction(2, 3), Fraction(1, 2)]
+P_11: [Fraction(5, 1), Fraction(4, 1), Fraction(7, 2), Fraction(41, 14), Fraction(92, 41), Fraction(35, 23), Fraction(69, 70), Fraction(15, 23), Fraction(2, 5), Fraction(1, 6)]
+
+Rank(C_d) = |A_d| - Omega_d:
+P_7: [0, 0, 3, 12, 30, 39, 24]
+P_11: [0, 0, 5, 40, 225, 970, 3270, 8045, 13945, 15565, 8615]
+
+=== BOUNDARY RANK RECURSION ===
+R_d = alternating sum of Omega: R_{d+1} = Omega_d - R_d for acyclic degrees
+
+P_7 (m=3): R from bottom = [0, 0, 3, 3]
+  R from top (d=5...7): [3, 3, 0]
+  R_m = 3
+  R_{m+2} = 3
+  O_m - R_m = 6 (= R_{m+1} + β_m)
+  O_{m+1} - R_{m+2} = 6 (= R_{m+1} + β_{m+1})
+  6 == 6? YES ✓
+  β_m = m(m-3)/2 = 0
+  R_{m+1} = 6 - 0 = 6
+
+P_11 (m=5): R from bottom = [0, 0, 5, 15, 55, 150]
+  R from top (d=7...11): [390, 300, 150, 30, 0]
+  R_m = 150
+  R_{m+2} = 390
+  O_m - R_m = 310 (= R_{m+1} + β_m)
+  O_{m+1} - R_{m+2} = 310 (= R_{m+1} + β_{m+1})
+  310 == 310? YES ✓
+  β_m = m(m-3)/2 = 5
+  R_{m+1} = 310 - 5 = 305
+
+=== GENERATING FUNCTION ANALYSIS ===
+Omega(x) = sum Omega_d * x^d
+
+P_7 (m=3, p=7):
+  Omega(1) = 37
+  Omega(1) / m = 37/3
+  Omega(-1) = chi = 1
+  Omega as polynomial coefficients:
+  Palindrome check (Omega_d vs Omega_{2m-d}):
+    d=0: Omega=1, Omega_{2m-d}=3, ratio=1/3
+    d=1: Omega=3, Omega_{2m-d}=6, ratio=1/2
+    d=2: Omega=6, Omega_{2m-d}=9, ratio=2/3
+    d=3: Omega=9, Omega_{2m-d}=9, ratio=1
+
+P_11 (m=5, p=11):
+  Omega(1) = 2811
+  Omega(1) / m = 2811/5
+  Omega(-1) = chi = 1
+  Omega as polynomial coefficients:
+  Palindrome check (Omega_d vs Omega_{2m-d}):
+    d=0: Omega=1, Omega_{2m-d}=30, ratio=1/30
+    d=1: Omega=5, Omega_{2m-d}=180, ratio=1/36
+    d=2: Omega=20, Omega_{2m-d}=450, ratio=2/45
+    d=3: Omega=70, Omega_{2m-d}=690, ratio=7/69
+    d=4: Omega=205, Omega_{2m-d}=700, ratio=41/140
+    d=5: Omega=460, Omega_{2m-d}=460, ratio=1
+
+=== |A_d| ANALYSIS ===
+For p ≡ 3 mod 4: -1 is NQR, so -QR = NQR.
+A_2 = m * m = m² (since s_2 = -s_1 is NQR, always allowed)
+  P_7: A_2 = 9, m² = 9. Match: True
+  P_11: A_2 = 25, m² = 25. Match: True
+
+A_3 formula: m(m-1)(2m+1)/2
+  P_7: A_3 = 21, predicted = 21. Match: True
+  P_11: A_3 = 110, predicted = 110. Match: True
+
+=== |A_d| FORMULAS ===
+
+P_7 (m=3):
+  d=0: |A_d| = 1 = 1 ✓
+  d=1: |A_d| = 3 = 3 ✓
+  d=2: |A_d| = 9 = 9 ✓
+  d=3: |A_d| = 21 = 21 ✓
+  d=4: |A_d| = 39 
+
+P_11 (m=5):
+  d=0: |A_d| = 1 = 1 ✓
+  d=1: |A_d| = 5 = 5 ✓
+  d=2: |A_d| = 25 = 25 ✓
+  d=3: |A_d| = 110 = 110 ✓
+  d=4: |A_d| = 430 
+
+=== DEGREE 4: CASE ANALYSIS ===
+
+P_7 (m=3): A_3 case split:
+  QQ: 3 triples, 0 forbidden, 3 valid → 9
+  QN: 6 triples, 1 forbidden, 2 valid → 12
+  NQ: 6 triples, 1 forbidden, 2 valid → 12
+  NN: 6 triples, 2 forbidden, 1 valid → 6
+  Total A_4 = 39
+  Actual A_4 = 39
+  Match: True
+  A_3 = 21 = {'QQ': 3, 'QN': 6, 'NQ': 6, 'NN': 6}
+
+P_11 (m=5): A_3 case split:
+  QQ: 20 triples, 0 forbidden, 5 valid → 100
+  QN: 30 triples, 1 forbidden, 4 valid → 120
+  NQ: 30 triples, 1 forbidden, 4 valid → 120
+  NN: 30 triples, 2 forbidden, 3 valid → 90
+  Total A_4 = 430
+  Actual A_4 = 430
+  Match: True
+  A_3 = 110 = {'QQ': 20, 'QN': 30, 'NQ': 30, 'NN': 30}
+
+=== A_4 DIRECT FORMULA SEARCH ===
+  P_7 (m=3): A_4 = 39, A_4/m = 13, A_4/m(m-1) = 13/2, A_4/A_3 = 13/7
+  P_11 (m=5): A_4 = 430, A_4/m = 86, A_4/m(m-1) = 43/2, A_4/A_3 = 43/11
+  P_19 (m=9): A_4 = 5436, A_4/m = 604, A_4/m(m-1) = 151/2, A_4/A_3 = 151/19
+
+=== P_19 (m=9) diff-seq counts ===
+  d=0: |A_d| = 1
+  d=1: |A_d| = 9
+  d=2: |A_d| = 81
+  d=3: |A_d| = 684
+  d=4: |A_d| = 5436
+  d=5: |A_d| = 40284
+  d=6: |A_d| = 277236
+  d=7: |A_d| = 1759914
