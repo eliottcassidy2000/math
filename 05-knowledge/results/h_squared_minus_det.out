@@ -1,0 +1,382 @@
+========================================================================
+H² - det(I+2A) ANALYSIS
+========================================================================
+
+--- Part 1: Is (H² - det)/8 always a non-negative integer? ---
+
+n=3:
+  H=  1  det=     1  H²=     1  H²-det=     0  (H²-det)/8=      0  α₁= 0 α₂= 0  c3= 0 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  All divisible by 8: True
+  All non-negative: True
+
+n=4:
+  H=  1  det=     1  H²=     1  H²-det=     0  (H²-det)/8=      0  α₁= 0 α₂= 0  c3= 0 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  5  det=     1  H²=    25  H²-det=    24  (H²-det)/8=      3  α₁= 2 α₂= 0  c3= 2 c5= 0
+  All divisible by 8: True
+  All non-negative: True
+
+n=5:
+  H=  1  det=     1  H²=     1  H²-det=     0  (H²-det)/8=      0  α₁= 0 α₂= 0  c3= 0 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  5  det=     1  H²=    25  H²-det=    24  (H²-det)/8=      3  α₁= 2 α₂= 0  c3= 2 c5= 0
+  H=  5  det=     1  H²=    25  H²-det=    24  (H²-det)/8=      3  α₁= 2 α₂= 0  c3= 2 c5= 0
+  H=  9  det=     9  H²=    81  H²-det=    72  (H²-det)/8=      9  α₁= 4 α₂= 0  c3= 3 c5= 1
+  H=  9  det=    25  H²=    81  H²-det=    56  (H²-det)/8=      7  α₁= 4 α₂= 0  c3= 3 c5= 1
+  H= 11  det=     1  H²=   121  H²-det=   120  (H²-det)/8=     15  α₁= 5 α₂= 0  c3= 4 c5= 1
+  H= 13  det=    49  H²=   169  H²-det=   120  (H²-det)/8=     15  α₁= 6 α₂= 0  c3= 4 c5= 2
+  H= 15  det=    25  H²=   225  H²-det=   200  (H²-det)/8=     25  α₁= 7 α₂= 0  c3= 5 c5= 2
+  H= 15  det=    81  H²=   225  H²-det=   144  (H²-det)/8=     18  α₁= 7 α₂= 0  c3= 4 c5= 3
+  All divisible by 8: True
+  All non-negative: True
+
+n=6:
+  H=  1  det=     1  H²=     1  H²-det=     0  (H²-det)/8=      0  α₁= 0 α₂= 0  c3= 0 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  3  det=     9  H²=     9  H²-det=     0  (H²-det)/8=      0  α₁= 1 α₂= 0  c3= 1 c5= 0
+  H=  5  det=     1  H²=    25  H²-det=    24  (H²-det)/8=      3  α₁= 2 α₂= 0  c3= 2 c5= 0
+  H=  5  det=     1  H²=    25  H²-det=    24  (H²-det)/8=      3  α₁= 2 α₂= 0  c3= 2 c5= 0
+  H=  5  det=     1  H²=    25  H²-det=    24  (H²-det)/8=      3  α₁= 2 α₂= 0  c3= 2 c5= 0
+  H=  9  det=     9  H²=    81  H²-det=    72  (H²-det)/8=      9  α₁= 4 α₂= 0  c3= 3 c5= 1
+  H=  9  det=     9  H²=    81  H²-det=    72  (H²-det)/8=      9  α₁= 4 α₂= 0  c3= 3 c5= 1
+  H=  9  det=    25  H²=    81  H²-det=    56  (H²-det)/8=      7  α₁= 4 α₂= 0  c3= 3 c5= 1
+  H=  9  det=    25  H²=    81  H²-det=    56  (H²-det)/8=      7  α₁= 4 α₂= 0  c3= 3 c5= 1
+  H=  9  det=    81  H²=    81  H²-det=     0  (H²-det)/8=      0  α₁= 2 α₂= 1  c3= 2 c5= 0
+  H= 11  det=     1  H²=   121  H²-det=   120  (H²-det)/8=     15  α₁= 5 α₂= 0  c3= 4 c5= 1
+  H= 11  det=     1  H²=   121  H²-det=   120  (H²-det)/8=     15  α₁= 5 α₂= 0  c3= 4 c5= 1
+  H= 13  det=    49  H²=   169  H²-det=   120  (H²-det)/8=     15  α₁= 6 α₂= 0  c3= 4 c5= 2
+  H= 13  det=    49  H²=   169  H²-det=   120  (H²-det)/8=     15  α₁= 6 α₂= 0  c3= 4 c5= 2
+  H= 15  det=     1  H²=   225  H²-det=   224  (H²-det)/8=     28  α₁= 7 α₂= 0  c3= 4 c5= 3
+  H= 15  det=     1  H²=   225  H²-det=   224  (H²-det)/8=     28  α₁= 7 α₂= 0  c3= 4 c5= 3
+  H= 15  det=    25  H²=   225  H²-det=   200  (H²-det)/8=     25  α₁= 7 α₂= 0  c3= 5 c5= 2
+  H= 15  det=    25  H²=   225  H²-det=   200  (H²-det)/8=     25  α₁= 7 α₂= 0  c3= 5 c5= 2
+  H= 15  det=    81  H²=   225  H²-det=   144  (H²-det)/8=     18  α₁= 7 α₂= 0  c3= 4 c5= 3
+  H= 15  det=    81  H²=   225  H²-det=   144  (H²-det)/8=     18  α₁= 7 α₂= 0  c3= 4 c5= 3
+  H= 17  det=     1  H²=   289  H²-det=   288  (H²-det)/8=     36  α₁= 8 α₂= 0  c3= 4 c5= 4
+  H= 17  det=    49  H²=   289  H²-det=   240  (H²-det)/8=     30  α₁= 6 α₂= 1  c3= 4 c5= 2
+  H= 19  det=     9  H²=   361  H²-det=   352  (H²-det)/8=     44  α₁= 9 α₂= 0  c3= 5 c5= 4
+  H= 19  det=     9  H²=   361  H²-det=   352  (H²-det)/8=     44  α₁= 9 α₂= 0  c3= 5 c5= 4
+  H= 23  det=     1  H²=   529  H²-det=   528  (H²-det)/8=     66  α₁=11 α₂= 0  c3= 6 c5= 5
+  H= 23  det=     1  H²=   529  H²-det=   528  (H²-det)/8=     66  α₁=11 α₂= 0  c3= 6 c5= 5
+  H= 23  det=    25  H²=   529  H²-det=   504  (H²-det)/8=     63  α₁= 9 α₂= 1  c3= 5 c5= 4
+  H= 23  det=    25  H²=   529  H²-det=   504  (H²-det)/8=     63  α₁= 9 α₂= 1  c3= 5 c5= 4
+  H= 25  det=     1  H²=   625  H²-det=   624  (H²-det)/8=     78  α₁=12 α₂= 0  c3= 6 c5= 6
+  H= 25  det=     1  H²=   625  H²-det=   624  (H²-det)/8=     78  α₁=12 α₂= 0  c3= 6 c5= 6
+  H= 27  det=     9  H²=   729  H²-det=   720  (H²-det)/8=     90  α₁=11 α₂= 1  c3= 5 c5= 6
+  H= 27  det=     9  H²=   729  H²-det=   720  (H²-det)/8=     90  α₁=11 α₂= 1  c3= 5 c5= 6
+  H= 29  det=     1  H²=   841  H²-det=   840  (H²-det)/8=    105  α₁=10 α₂= 2  c3= 6 c5= 4
+  H= 29  det=     1  H²=   841  H²-det=   840  (H²-det)/8=    105  α₁=12 α₂= 1  c3= 6 c5= 6
+  H= 29  det=     1  H²=   841  H²-det=   840  (H²-det)/8=    105  α₁=12 α₂= 1  c3= 6 c5= 6
+  H= 31  det=    49  H²=   961  H²-det=   912  (H²-det)/8=    114  α₁=13 α₂= 1  c3= 6 c5= 7
+  H= 31  det=    49  H²=   961  H²-det=   912  (H²-det)/8=    114  α₁=13 α₂= 1  c3= 6 c5= 7
+  H= 33  det=     1  H²=  1089  H²-det=  1088  (H²-det)/8=    136  α₁=12 α₂= 2  c3= 6 c5= 6
+  H= 33  det=     9  H²=  1089  H²-det=  1080  (H²-det)/8=    135  α₁=14 α₂= 1  c3= 7 c5= 7
+  H= 33  det=     9  H²=  1089  H²-det=  1080  (H²-det)/8=    135  α₁=14 α₂= 1  c3= 7 c5= 7
+  H= 33  det=     9  H²=  1089  H²-det=  1080  (H²-det)/8=    135  α₁=16 α₂= 0  c3= 7 c5= 9
+  H= 33  det=     9  H²=  1089  H²-det=  1080  (H²-det)/8=    135  α₁=16 α₂= 0  c3= 7 c5= 9
+  H= 37  det=     1  H²=  1369  H²-det=  1368  (H²-det)/8=    171  α₁=14 α₂= 2  c3= 6 c5= 8
+  H= 37  det=     9  H²=  1369  H²-det=  1360  (H²-det)/8=    170  α₁=14 α₂= 2  c3= 7 c5= 7
+  H= 37  det=    25  H²=  1369  H²-det=  1344  (H²-det)/8=    168  α₁=16 α₂= 1  c3= 7 c5= 9
+  H= 41  det=     1  H²=  1681  H²-det=  1680  (H²-det)/8=    210  α₁=16 α₂= 2  c3= 8 c5= 8
+  H= 43  det=     1  H²=  1849  H²-det=  1848  (H²-det)/8=    231  α₁=19 α₂= 1  c3= 8 c5=11
+  H= 43  det=     1  H²=  1849  H²-det=  1848  (H²-det)/8=    231  α₁=19 α₂= 1  c3= 8 c5=11
+  H= 45  det=     1  H²=  2025  H²-det=  2024  (H²-det)/8=    253  α₁=14 α₂= 4  c3= 8 c5= 6
+  All divisible by 8: True
+  All non-negative: True
+
+
+--- Part 2: What does (H²-det)/8 depend on? ---
+
+Testing: (H²-det)/8 vs α₂, α₁·(α₁-1)/2, c3·(c3-1)/2, etc.
+
+n=3:
+  H=  1  (H²-det)/8=    0  α₁= 0 α₂= 0  C(α₁,2)=   0  α₁²=   0  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+
+n=4:
+  H=  1  (H²-det)/8=    0  α₁= 0 α₂= 0  C(α₁,2)=   0  α₁²=   0  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  5  (H²-det)/8=    3  α₁= 2 α₂= 0  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   0  match: ✗
+
+n=5:
+  H=  1  (H²-det)/8=    0  α₁= 0 α₂= 0  C(α₁,2)=   0  α₁²=   0  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  5  (H²-det)/8=    3  α₁= 2 α₂= 0  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  5  (H²-det)/8=    3  α₁= 2 α₂= 0  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    9  α₁= 4 α₂= 0  C(α₁,2)=   6  α₁²=  16  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    7  α₁= 4 α₂= 0  C(α₁,2)=   6  α₁²=  16  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 11  (H²-det)/8=   15  α₁= 5 α₂= 0  C(α₁,2)=  10  α₁²=  25  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 13  (H²-det)/8=   15  α₁= 6 α₂= 0  C(α₁,2)=  15  α₁²=  36  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   18  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   25  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+
+n=6:
+  H=  1  (H²-det)/8=    0  α₁= 0 α₂= 0  C(α₁,2)=   0  α₁²=   0  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  3  (H²-det)/8=    0  α₁= 1 α₂= 0  C(α₁,2)=   0  α₁²=   1  α₂(1+2α₁+2α₂)=   0  match: ✓
+  H=  5  (H²-det)/8=    3  α₁= 2 α₂= 0  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  5  (H²-det)/8=    3  α₁= 2 α₂= 0  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  5  (H²-det)/8=    3  α₁= 2 α₂= 0  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    9  α₁= 4 α₂= 0  C(α₁,2)=   6  α₁²=  16  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    7  α₁= 4 α₂= 0  C(α₁,2)=   6  α₁²=  16  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    9  α₁= 4 α₂= 0  C(α₁,2)=   6  α₁²=  16  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    7  α₁= 4 α₂= 0  C(α₁,2)=   6  α₁²=  16  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H=  9  (H²-det)/8=    0  α₁= 2 α₂= 1  C(α₁,2)=   1  α₁²=   4  α₂(1+2α₁+2α₂)=   7  match: ✗
+  H= 11  (H²-det)/8=   15  α₁= 5 α₂= 0  C(α₁,2)=  10  α₁²=  25  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 11  (H²-det)/8=   15  α₁= 5 α₂= 0  C(α₁,2)=  10  α₁²=  25  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 13  (H²-det)/8=   15  α₁= 6 α₂= 0  C(α₁,2)=  15  α₁²=  36  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 13  (H²-det)/8=   15  α₁= 6 α₂= 0  C(α₁,2)=  15  α₁²=  36  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   28  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   28  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   18  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   25  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   18  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 15  (H²-det)/8=   25  α₁= 7 α₂= 0  C(α₁,2)=  21  α₁²=  49  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 17  (H²-det)/8=   36  α₁= 8 α₂= 0  C(α₁,2)=  28  α₁²=  64  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 17  (H²-det)/8=   30  α₁= 6 α₂= 1  C(α₁,2)=  15  α₁²=  36  α₂(1+2α₁+2α₂)=  15  match: ✗
+  H= 19  (H²-det)/8=   44  α₁= 9 α₂= 0  C(α₁,2)=  36  α₁²=  81  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 19  (H²-det)/8=   44  α₁= 9 α₂= 0  C(α₁,2)=  36  α₁²=  81  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 23  (H²-det)/8=   66  α₁=11 α₂= 0  C(α₁,2)=  55  α₁²= 121  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 23  (H²-det)/8=   66  α₁=11 α₂= 0  C(α₁,2)=  55  α₁²= 121  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 23  (H²-det)/8=   63  α₁= 9 α₂= 1  C(α₁,2)=  36  α₁²=  81  α₂(1+2α₁+2α₂)=  21  match: ✗
+  H= 23  (H²-det)/8=   63  α₁= 9 α₂= 1  C(α₁,2)=  36  α₁²=  81  α₂(1+2α₁+2α₂)=  21  match: ✗
+  H= 25  (H²-det)/8=   78  α₁=12 α₂= 0  C(α₁,2)=  66  α₁²= 144  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 25  (H²-det)/8=   78  α₁=12 α₂= 0  C(α₁,2)=  66  α₁²= 144  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 27  (H²-det)/8=   90  α₁=11 α₂= 1  C(α₁,2)=  55  α₁²= 121  α₂(1+2α₁+2α₂)=  25  match: ✗
+  H= 27  (H²-det)/8=   90  α₁=11 α₂= 1  C(α₁,2)=  55  α₁²= 121  α₂(1+2α₁+2α₂)=  25  match: ✗
+  H= 29  (H²-det)/8=  105  α₁=10 α₂= 2  C(α₁,2)=  45  α₁²= 100  α₂(1+2α₁+2α₂)=  50  match: ✗
+  H= 29  (H²-det)/8=  105  α₁=12 α₂= 1  C(α₁,2)=  66  α₁²= 144  α₂(1+2α₁+2α₂)=  27  match: ✗
+  H= 29  (H²-det)/8=  105  α₁=12 α₂= 1  C(α₁,2)=  66  α₁²= 144  α₂(1+2α₁+2α₂)=  27  match: ✗
+  H= 31  (H²-det)/8=  114  α₁=13 α₂= 1  C(α₁,2)=  78  α₁²= 169  α₂(1+2α₁+2α₂)=  29  match: ✗
+  H= 31  (H²-det)/8=  114  α₁=13 α₂= 1  C(α₁,2)=  78  α₁²= 169  α₂(1+2α₁+2α₂)=  29  match: ✗
+  H= 33  (H²-det)/8=  135  α₁=16 α₂= 0  C(α₁,2)= 120  α₁²= 256  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 33  (H²-det)/8=  136  α₁=12 α₂= 2  C(α₁,2)=  66  α₁²= 144  α₂(1+2α₁+2α₂)=  58  match: ✗
+  H= 33  (H²-det)/8=  135  α₁=14 α₂= 1  C(α₁,2)=  91  α₁²= 196  α₂(1+2α₁+2α₂)=  31  match: ✗
+  H= 33  (H²-det)/8=  135  α₁=14 α₂= 1  C(α₁,2)=  91  α₁²= 196  α₂(1+2α₁+2α₂)=  31  match: ✗
+  H= 33  (H²-det)/8=  135  α₁=16 α₂= 0  C(α₁,2)= 120  α₁²= 256  α₂(1+2α₁+2α₂)=   0  match: ✗
+  H= 37  (H²-det)/8=  171  α₁=14 α₂= 2  C(α₁,2)=  91  α₁²= 196  α₂(1+2α₁+2α₂)=  66  match: ✗
+  H= 37  (H²-det)/8=  168  α₁=16 α₂= 1  C(α₁,2)= 120  α₁²= 256  α₂(1+2α₁+2α₂)=  35  match: ✗
+  H= 37  (H²-det)/8=  170  α₁=14 α₂= 2  C(α₁,2)=  91  α₁²= 196  α₂(1+2α₁+2α₂)=  66  match: ✗
+  H= 41  (H²-det)/8=  210  α₁=16 α₂= 2  C(α₁,2)= 120  α₁²= 256  α₂(1+2α₁+2α₂)=  74  match: ✗
+  H= 43  (H²-det)/8=  231  α₁=19 α₂= 1  C(α₁,2)= 171  α₁²= 361  α₂(1+2α₁+2α₂)=  41  match: ✗
+  H= 43  (H²-det)/8=  231  α₁=19 α₂= 1  C(α₁,2)= 171  α₁²= 361  α₂(1+2α₁+2α₂)=  41  match: ✗
+  H= 45  (H²-det)/8=  253  α₁=14 α₂= 4  C(α₁,2)=  91  α₁²= 196  α₂(1+2α₁+2α₂)= 148  match: ✗
+
+--- Part 3: Detailed formula search ---
+
+Checking: (H²-det)/8 vs various formulas:
+ n    H    det  (H²-d)/8  α₁  α₂  α₃  α₁α₂ C(α₁,2)     Δ
+ 3    1      1         0   0   0   0     0       0     0
+ 3    3      9         0   1   0   0     0       0     0
+ 4    1      1         0   0   0   0     0       0     0
+ 4    3      9         0   1   0   0     0       0     0
+ 4    5      1         3   2   0   0     0       1     3
+ 4    3      9         0   1   0   0     0       0     0
+ 5    1      1         0   0   0   0     0       0     0
+ 5    3      9         0   1   0   0     0       0     0
+ 5    5      1         3   2   0   0     0       1     3
+ 5    3      9         0   1   0   0     0       0     0
+ 5    9      9         9   4   0   0     0       6     9
+ 5    5      1         3   2   0   0     0       1     3
+ 5    9     25         7   4   0   0     0       6     7
+ 5    3      9         0   1   0   0     0       0     0
+ 5   11      1        15   5   0   0     0      10    15
+ 5   15     81        18   7   0   0     0      21    18
+ 5   13     49        15   6   0   0     0      15    15
+ 5   15     25        25   7   0   0     0      21    25
+ 6    1      1         0   0   0   0     0       0     0
+ 6    3      9         0   1   0   0     0       0     0
+ 6    5      1         3   2   0   0     0       1     3
+ 6    3      9         0   1   0   0     0       0     0
+ 6    9      9         9   4   0   0     0       6     9
+ 6    5      1         3   2   0   0     0       1     3
+ 6    9     25         7   4   0   0     0       6     7
+ 6    3      9         0   1   0   0     0       0     0
+ 6   11      1        15   5   0   0     0      10    15
+ 6   17      1        36   8   0   0     0      28    36
+ 6    9      9         9   4   0   0     0       6     9
+ 6   15      1        28   7   0   0     0      21    28
+ 6    5      1         3   2   0   0     0       1     3
+ 6   19      9        44   9   0   0     0      36    44
+ 6    9     25         7   4   0   0     0       6     7
+ 6   15      1        28   7   0   0     0      21    28
+ 6    3      9         0   1   0   0     0       0     0
+ 6   23      1        66  11   0   0     0      55    66
+ 6   11      1        15   5   0   0     0      10    15
+ 6   19      9        44   9   0   0     0      36    44
+ 6   23      1        66  11   0   0     0      55    66
+ 6   15     81        18   7   0   0     0      21    18
+ 6   13     49        15   6   0   0     0      15    15
+ 6   27      9        90  11   1   0    11      55    79
+ 6   23     25        63   9   1   0     9      36    54
+ 6   17     49        30   6   1   0     6      15    24
+ 6    9     81         0   2   1   0     2       1    -2
+ 6   33      9       135  16   0   0     0     120   135
+ 6   25      1        78  12   0   0     0      66    78
+ 6   15     25        25   7   0   0     0      21    25
+ 6   37      1       171  14   2   0    28      91   143
+ 6   33      1       136  12   2   0    24      66   112
+ 6   31     49       114  13   1   0    13      78   101
+ 6   23     25        63   9   1   0     9      36    54
+ 6   37     25       168  16   1   0    16     120   152
+ 6   31     49       114  13   1   0    13      78   101
+ 6   25      1        78  12   0   0     0      66    78
+ 6   29      1       105  10   2   0    20      45    85
+ 6   33      9       135  14   1   0    14      91   121
+ 6   27      9        90  11   1   0    11      55    79
+ 6   29      1       105  12   1   0    12      66    93
+ 6   15     81        18   7   0   0     0      21    18
+ 6   13     49        15   6   0   0     0      15    15
+ 6   29      1       105  12   1   0    12      66    93
+ 6   41      1       210  16   2   0    32     120   178
+ 6   37      9       170  14   2   0    28      91   142
+ 6   33      9       135  14   1   0    14      91   121
+ 6   15     25        25   7   0   0     0      21    25
+ 6   43      1       231  19   1   0    19     171   212
+ 6   43      1       231  19   1   0    19     171   212
+ 6   33      9       135  16   0   0     0     120   135
+ 6   45      1       253  14   4   0    56      91   197
+
+--- Part 4: Factor H²-det completely ---
+
+H²-det = (H-√det)·(H+√det):
+  H=  1  √det=  1  H-√det=   0  H+√det=   2  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  1  √det=  1  H-√det=   0  H+√det=   2  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  5  √det=  1  H-√det=   4  H+√det=   6  product/4=    6  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=3
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  1  √det=  1  H-√det=   0  H+√det=   2  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  5  √det=  1  H-√det=   4  H+√det=   6  product/4=    6  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=3
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  9  √det=  3  H-√det=   6  H+√det=  12  product/4=   18  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=9
+  H=  5  √det=  1  H-√det=   4  H+√det=   6  product/4=    6  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=3
+  H=  9  √det=  5  H-√det=   4  H+√det=  14  product/4=   14  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=7
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H= 11  √det=  1  H-√det=  10  H+√det=  12  product/4=   30  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=15
+  H= 15  √det=  9  H-√det=   6  H+√det=  24  product/4=   36  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=18
+  H= 13  √det=  7  H-√det=   6  H+√det=  20  product/4=   30  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=15
+  H= 15  √det=  5  H-√det=  10  H+√det=  20  product/4=   50  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=25
+  H=  1  √det=  1  H-√det=   0  H+√det=   2  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  5  √det=  1  H-√det=   4  H+√det=   6  product/4=    6  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=3
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H=  9  √det=  3  H-√det=   6  H+√det=  12  product/4=   18  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=9
+  H=  5  √det=  1  H-√det=   4  H+√det=   6  product/4=    6  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=3
+  H=  9  √det=  5  H-√det=   4  H+√det=  14  product/4=   14  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=7
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H= 11  √det=  1  H-√det=  10  H+√det=  12  product/4=   30  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=15
+  H= 17  √det=  1  H-√det=  16  H+√det=  18  product/4=   72  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=36
+  H=  9  √det=  3  H-√det=   6  H+√det=  12  product/4=   18  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=9
+  H= 15  √det=  1  H-√det=  14  H+√det=  16  product/4=   56  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=28
+  H=  5  √det=  1  H-√det=   4  H+√det=   6  product/4=    6  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=3
+  H= 19  √det=  3  H-√det=  16  H+√det=  22  product/4=   88  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=44
+  H=  9  √det=  5  H-√det=   4  H+√det=  14  product/4=   14  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=7
+  H= 15  √det=  1  H-√det=  14  H+√det=  16  product/4=   56  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=28
+  H=  3  √det=  3  H-√det=   0  H+√det=   6  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H= 23  √det=  1  H-√det=  22  H+√det=  24  product/4=  132  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=66
+  H= 11  √det=  1  H-√det=  10  H+√det=  12  product/4=   30  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=15
+  H= 19  √det=  3  H-√det=  16  H+√det=  22  product/4=   88  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=44
+  H= 23  √det=  1  H-√det=  22  H+√det=  24  product/4=  132  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=66
+  H= 15  √det=  9  H-√det=   6  H+√det=  24  product/4=   36  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=18
+  H= 13  √det=  7  H-√det=   6  H+√det=  20  product/4=   30  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=15
+  H= 27  √det=  3  H-√det=  24  H+√det=  30  product/4=  180  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=90
+  H= 23  √det=  5  H-√det=  18  H+√det=  28  product/4=  126  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=63
+  H= 17  √det=  7  H-√det=  10  H+√det=  24  product/4=   60  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=30
+  H=  9  √det=  9  H-√det=   0  H+√det=  18  product/4=    0  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=0
+  H= 33  √det=  3  H-√det=  30  H+√det=  36  product/4=  270  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=135
+  H= 25  √det=  1  H-√det=  24  H+√det=  26  product/4=  156  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=78
+  H= 15  √det=  5  H-√det=  10  H+√det=  20  product/4=   50  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=25
+  H= 37  √det=  1  H-√det=  36  H+√det=  38  product/4=  342  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=171
+  H= 33  √det=  1  H-√det=  32  H+√det=  34  product/4=  272  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=136
+  H= 31  √det=  7  H-√det=  24  H+√det=  38  product/4=  228  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=114
+  H= 23  √det=  5  H-√det=  18  H+√det=  28  product/4=  126  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=63
+  H= 37  √det=  5  H-√det=  32  H+√det=  42  product/4=  336  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=168
+  H= 31  √det=  7  H-√det=  24  H+√det=  38  product/4=  228  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=114
+  H= 25  √det=  1  H-√det=  24  H+√det=  26  product/4=  156  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=78
+  H= 29  √det=  1  H-√det=  28  H+√det=  30  product/4=  210  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=105
+  H= 33  √det=  3  H-√det=  30  H+√det=  36  product/4=  270  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=135
+  H= 27  √det=  3  H-√det=  24  H+√det=  30  product/4=  180  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=90
+  H= 29  √det=  1  H-√det=  28  H+√det=  30  product/4=  210  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=105
+  H= 15  √det=  9  H-√det=   6  H+√det=  24  product/4=   36  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=18
+  H= 13  √det=  7  H-√det=   6  H+√det=  20  product/4=   30  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=15
+  H= 29  √det=  1  H-√det=  28  H+√det=  30  product/4=  210  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=105
+  H= 41  √det=  1  H-√det=  40  H+√det=  42  product/4=  420  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=210
+  H= 37  √det=  3  H-√det=  34  H+√det=  40  product/4=  340  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=170
+  H= 33  √det=  3  H-√det=  30  H+√det=  36  product/4=  270  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=135
+  H= 15  √det=  5  H-√det=  10  H+√det=  20  product/4=   50  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=25
+  H= 43  √det=  1  H-√det=  42  H+√det=  44  product/4=  462  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=231
+  H= 43  √det=  1  H-√det=  42  H+√det=  44  product/4=  462  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=231
+  H= 33  √det=  3  H-√det=  30  H+√det=  36  product/4=  270  mod4(H-√det)=2  mod4(H+√det)=0  (H²-det)/8=135
+  H= 45  √det=  1  H-√det=  44  H+√det=  46  product/4=  506  mod4(H-√det)=0  mod4(H+√det)=2  (H²-det)/8=253
+
+ANALYSIS:
+  H is always odd. √det is always odd.
+  So H ± √det are both even.
+  H² - det = (H-√det)(H+√det) = even × even.
+
+  More precisely: H ≡ 1 (mod 2), √det ≡ 1 (mod 2)
+  H - √det ≡ 0 (mod 2)
+  H + √det ≡ 0 (mod 2)
+
+  For divisibility by 8: need one of the factors ≡ 0 (mod 4).
+  Since H ≡ √det (mod 2), they're both odd.
+  H = 2k+1, √det = 2j+1, so H-√det = 2(k-j), H+√det = 2(k+j+1)
+  (k-j)(k+j+1) = k²+k-j²-j = ... one of these is always even!
+  Because (k-j) and (k+j+1) have different parity:
+    k-j is even ⟺ k+j is even ⟺ k+j+1 is odd
+    k-j is odd ⟺ k+j is odd ⟺ k+j+1 is even
+  So EXACTLY ONE of (k-j), (k+j+1) is even.
+  Therefore (k-j)(k+j+1) is even, and (H-√det)(H+√det) = 4(k-j)(k+j+1) is divisible by 8.
+
+  PROVED: H² - det(I+2A) ≡ 0 (mod 8) for all tournaments!
+
+  This is because H and √det are both odd, and the factorization
+  (H-√det)(H+√det) = 2·even · 2·something = 4·even = 8k.
+
+
+--- Part 5: Summary ---
+
+PROVED IDENTITIES:
+  1. det(I+2A) is always a perfect square (HYP-788)
+  2. √det(I+2A) is always odd
+  3. H² - det(I+2A) ≡ 0 (mod 8)  [proved above, elementary]
+  4. H² ≥ det(I+2A)  [observed, not yet proved in general]
+
+OPEN:
+  5. What does (H²-det)/8 count combinatorially?
+  6. Is (H²-det)/8 always a polynomial in α₁, α₂, α₃?
+  7. Does H² = det when T has no 3-cycles (only transitive)?
+
+Check Q7: does H=√det when c3=0?
+  n=3, H=1, √det=1, H=√det: True
+  n=3, H=1, √det=1, H²=det: TRUE, α₁=0 α₂=0
+  n=3, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=4, H=1, √det=1, H=√det: True
+  n=4, H=1, √det=1, H²=det: TRUE, α₁=0 α₂=0
+  n=4, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=4, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=5, H=1, √det=1, H=√det: True
+  n=5, H=1, √det=1, H²=det: TRUE, α₁=0 α₂=0
+  n=5, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=5, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=5, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=6, H=1, √det=1, H=√det: True
+  n=6, H=1, √det=1, H²=det: TRUE, α₁=0 α₂=0
+  n=6, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=6, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=6, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=6, H=3, √det=3, H²=det: TRUE, α₁=1 α₂=0
+  n=6, H=9, √det=9, H²=det: TRUE, α₁=2 α₂=1
