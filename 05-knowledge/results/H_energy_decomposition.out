@@ -1,0 +1,79 @@
+======================================================================
+H-ENERGY DECOMPOSITION: Understanding non-monotonicity
+======================================================================
+
+======================================================================
+H-ENERGY DECOMPOSITION at p=7
+======================================================================
+
+  Full decomposition (grouped by E):
+     E        H   a0     a1     a2    a3    a4     c3    c5    c7     c9    c11
+    15      189    1     80      7     0     0  14  42  318  0  0
+    19      175    1     59     14     0     0  14  28  395  0  0
+
+  Verification of OCF decomposition:
+    E=15: H=189, sum(a_j*2^j) = 189, match: True
+    E=19: H=175, sum(a_j*2^j) = 175, match: True
+
+  Alpha variation across energy levels:
+    alpha_0: [1, 1]
+    alpha_1: [80, 59]
+    alpha_2: [7, 14]
+    alpha_3: [0, 0]
+    alpha_4: [0, 0]
+
+  Cycle count decomposition:
+    E=15: c3=14, c5=42, c7=318, c9=0, c11=0, alpha_1=374
+    E=19: c3=14, c5=28, c7=395, c9=0, c11=0, alpha_1=437
+
+  H contribution analysis:
+    E=15: H=189 = 1*1 + 80*2 + 7*4
+    E=19: H=175 = 1*1 + 59*2 + 14*4
+
+  Testing H as function of cycle counts:
+    Corr(H, c_5) = 1.000000
+    Corr(H, c_7) = -1.000000
+
+======================================================================
+H-ENERGY DECOMPOSITION at p=11
+======================================================================
+
+  Full decomposition (grouped by E):
+     E        H   a0     a1     a2    a3    a4     c3    c5    c7     c9    c11
+    65    85855    1  21169  10879     0     0  55  594  11220  216938  4438890
+    69    82907    1  19629  10912     0     0  55  572  11374  216190  4441783
+    73    83963    1  19541  11220     0     0  55  550  11693  213176  4465136
+    85    81235    1  18397  11110     0     0  55  484  12749  199624  4621963
+
+  Verification of OCF decomposition:
+    E=65: H=85855, sum(a_j*2^j) = 85855, match: True
+    E=69: H=82907, sum(a_j*2^j) = 82907, match: True
+    E=73: H=83963, sum(a_j*2^j) = 83963, match: True
+    E=85: H=81235, sum(a_j*2^j) = 81235, match: True
+
+  Alpha variation across energy levels:
+    alpha_0: [1, 1, 1, 1]
+    alpha_1: [21169, 19629, 19541, 18397]
+    alpha_2: [10879, 10912, 11220, 11110]
+    alpha_3: [0, 0, 0, 0]
+    alpha_4: [0, 0, 0, 0]
+
+  Cycle count decomposition:
+    E=65: c3=55, c5=594, c7=11220, c9=216938, c11=4438890, alpha_1=4667697
+    E=69: c3=55, c5=572, c7=11374, c9=216190, c11=4441783, alpha_1=4669974
+    E=73: c3=55, c5=550, c7=11693, c9=213176, c11=4465136, alpha_1=4690610
+    E=85: c3=55, c5=484, c7=12749, c9=199624, c11=4621963, alpha_1=4834875
+
+  H contribution analysis:
+    E=65: H=85855 = 1*1 + 21169*2 + 10879*4
+    E=69: H=82907 = 1*1 + 19629*2 + 10912*4
+    E=73: H=83963 = 1*1 + 19541*2 + 11220*4
+    E=85: H=81235 = 1*1 + 18397*2 + 11110*4
+
+  Testing H as function of cycle counts:
+    Corr(H, c_5) = 0.869803
+    Corr(H, c_7) = -0.828501
+    Corr(H, c_9) = 0.804341
+    Corr(H, c_11) = -0.791559
+
+DONE.

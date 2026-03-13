@@ -1,0 +1,1104 @@
+Paley p=11, S=[1, 3, 4, 5, 9]
+
+=== k=5 ===
+  352 active sets, c_5 = 594
+  V=[0, 1, 2, 3, 4], n(V)=1, overlap_nV=589, w_full=589, weighted=1345, n_conf=347
+  V=[0, 1, 2, 3, 5], n(V)=1, overlap_nV=584, w_full=584, weighted=1345, n_conf=346
+  V=[0, 1, 2, 3, 6], n(V)=2, overlap_nV=585, w_full=586, weighted=1340, n_conf=347
+  V=[0, 1, 2, 3, 7], n(V)=3, overlap_nV=585, w_full=587, weighted=1335, n_conf=347
+  V=[0, 1, 2, 3, 8], n(V)=2, overlap_nV=585, w_full=586, weighted=1340, n_conf=347
+
+  w_full range: [584, 591]
+  w_full values: [584, 586, 587, 589, 591]
+  n(V)=1: w_full in [584, 589], count=165
+  n(V)=2: w_full in [586, 591], count=132
+  n(V)=3: w_full in [587], count=55
+
+=== k=7 ===
+  330 active sets, c_7 = 3960
+  V=[0, 1, 2, 3, 4], n(V)=11, overlap_nV=3949, w_full=3959, weighted=17563, n_conf=329
+  V=[0, 1, 2, 3, 4], n(V)=9, overlap_nV=3951, w_full=3959, weighted=17577, n_conf=329
+  V=[0, 1, 2, 3, 4], n(V)=13, overlap_nV=3947, w_full=3959, weighted=17549, n_conf=329
+  V=[0, 1, 2, 3, 4], n(V)=9, overlap_nV=3951, w_full=3959, weighted=17577, n_conf=329
+  V=[0, 1, 2, 3, 4], n(V)=11, overlap_nV=3949, w_full=3959, weighted=17563, n_conf=329
+
+  w_full range: [3959, 3959]
+  w_full values: [3959]
+  n(V)=9: w_full in [3959], count=110
+  n(V)=11: w_full in [3959], count=55
+  n(V)=13: w_full in [3959], count=55
+  n(V)=15: w_full in [3959], count=110
+
+
+=== 5-CYCLE ORBIT ANALYSIS ===
+  352 orbits
+
+  Orbit [0, 1, 2, 3, 4]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 2, 3, 5]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 3, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 3, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 2, 4, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 5, 6]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 6, 7]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 2, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 3, 4, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 4, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 5, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 6, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 6, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 3, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 5, 6]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 5, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 4, 5, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 6, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 7, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 4, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 5, 6, 7]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 5, 6, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 1, 5, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 5, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 6, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 6, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 7, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 1, 8, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 3, 4, 5]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 5, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 3, 6, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 6, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 5, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 6, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 6, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 4, 6, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 4, 6, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 7, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 4, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 6, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 7, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 5, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 8, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 2, 6, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 2, 8, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 5, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 6, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 6, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 7, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 3, 4, 7, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 3, 4, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 5, 6, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 3, 5, 6, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 5, 7, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 3, 5, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 5, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 3, 6, 7, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 3, 6, 8, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 3, 7, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 4, 5, 6, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 4, 5, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 4, 5, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 4, 5, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [0, 4, 6, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 4, 7, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 5, 6, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 5, 6, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 6, 7, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 6, 8, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [0, 7, 8, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 3, 4, 5]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 3, 4, 6]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 4, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 6, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 7, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 3, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 5, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 5, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 6, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 7, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 5, 6, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 5, 6, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 5, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 5, 8, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 5, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 6, 7, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 2, 6, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 6, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 2, 7, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 5, 6]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 6, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 3, 4, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 5, 6, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 5, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 5, 7, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 3, 5, 7, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 3, 5, 8, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 3, 5, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 6, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 6, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 3, 6, 8, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 3, 7, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 8, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 4, 6, 7, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 4, 6, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 4, 6, 8, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 4, 6, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 4, 7, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [1, 5, 6, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 5, 6, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [1, 7, 8, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 5, 6]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 3, 4, 5, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 8, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 3, 4, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 6, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 6, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 6, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 3, 6, 7, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 3, 6, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 3, 7, 8, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 3, 8, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 4, 5, 6, 7]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 4, 5, 7, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 4, 5, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 4, 6, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 4, 6, 8, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 4, 7, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 4, 7, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 5, 6, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [2, 5, 6, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 5, 7, 8, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [2, 6, 7, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 6, 7]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [3, 4, 5, 6, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [3, 4, 6, 7, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 4, 6, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 4, 7, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 4, 8, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [3, 5, 6, 7, 8]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 5, 7, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [3, 6, 7, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [4, 5, 6, 7, 8]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [4, 5, 6, 7, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [4, 5, 6, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [4, 5, 8, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [4, 6, 7, 8, 9]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [5, 6, 7, 8, 9]: n(V)=1, w_full=589
+    Overlap breakdown: {1: 160, 2: 132, 3: 55}
+
+  Orbit [5, 6, 7, 8, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 2: 130, 3: 54}
+
+  Orbit [5, 7, 8, 9, 10]: n(V)=1, w_full=584
+    Overlap breakdown: {1: 162, 3: 54, 2: 130}
+
+  Orbit [6, 7, 8, 9, 10]: n(V)=1, w_full=589
+    Overlap breakdown: {2: 132, 3: 55, 1: 160}
+
+  Orbit [0, 1, 2, 3, 6]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 3: 54, 2: 130}
+
+  Orbit [0, 1, 2, 3, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 4, 6]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 4, 7]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 1, 2, 4, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 5, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 5, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 6, 9]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 1, 2, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 5, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 5, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 6, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 6, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 1, 3, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 6, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 5, 6, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 5, 6, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 5, 8, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 1, 6, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 6, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 4, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 4, 8]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 2, 3, 4, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 6, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 5, 6]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 5, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 6, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 9, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 2, 6, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 7, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 5, 6]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 5, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 6, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 5, 6, 7]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 3, 5, 6, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 5, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 6, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 6, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 7, 8, 9]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 3, 7, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 5, 6, 8]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 4, 5, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 5, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 6, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 7, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 7, 9, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [0, 5, 6, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 5, 6, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 5, 7, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 5, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 4, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 4, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 5, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 5, 8]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [1, 2, 3, 5, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 6, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 7, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [1, 2, 3, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 6, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 5, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 5, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 6, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 6, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 5, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 5, 9]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [1, 3, 4, 5, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 5, 6, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 5, 6, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 6, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 6, 7]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 6, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 6, 7, 8]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [1, 4, 6, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 7, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 8, 9, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [1, 5, 6, 7, 9]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [1, 5, 7, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 5, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 6, 7, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 6, 7, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 5, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 5, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 6, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 6, 9]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [2, 3, 4, 6, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 6, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 7, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 4, 5, 6, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 4, 5, 6, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [2, 4, 5, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 4, 6, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 4, 6, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 5, 6, 7, 8]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 5, 6, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 5, 6, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 5, 7, 8, 9]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [2, 5, 7, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 6, 7, 8, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [2, 6, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 7, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 6, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 7, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 7, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [3, 4, 6, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 4, 7, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 5, 6, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 5, 7, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 6, 7, 8, 9]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 6, 7, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 6, 8, 9, 10]: n(V)=2, w_full=591
+    Overlap breakdown: {1: 165, 2: 130, 3: 55}
+
+  Orbit [4, 5, 6, 7, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [4, 5, 6, 8, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [4, 6, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [4, 7, 8, 9, 10]: n(V)=2, w_full=586
+    Overlap breakdown: {1: 163, 3: 54, 2: 130}
+
+  Orbit [0, 1, 2, 3, 7]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 4, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 5, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 2, 6, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 5, 6]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 3, 8, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 6, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 4, 7, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 5, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 1, 6, 7, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 4, 6]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 3, 8, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 5, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 4, 7, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 5, 6, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 2, 7, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 5, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 4, 7, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 5, 7, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 6, 7, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 3, 6, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 5, 6, 7]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 4, 8, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 5, 6, 8, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [0, 5, 7, 8, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 4, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 5, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 3, 6, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 4, 6, 7]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 5, 7, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 2, 7, 8, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 5, 7]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 4, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 5, 8, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 3, 6, 7, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 6, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 5, 8, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 4, 7, 8, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 5, 6, 7, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [1, 6, 8, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 5, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 4, 7, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 5, 7, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 3, 6, 8, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 4, 5, 6, 8]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 4, 6, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 5, 6, 7, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 5, 8, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [2, 6, 7, 8, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 4, 5, 6, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 4, 6, 8, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 5, 6, 7, 9]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [3, 7, 8, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+  Orbit [4, 5, 7, 9, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 3: 54, 2: 130}
+
+  Orbit [4, 6, 7, 8, 10]: n(V)=3, w_full=587
+    Overlap breakdown: {1: 163, 2: 130, 3: 54}
+
+
+=== VERTEX PARTICIPATION ===
+
+  k=3: vertex participation counts: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+         vertex cycle weights:       [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+
+  k=5: vertex participation counts: [160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160]
+         vertex cycle weights:       [270, 270, 270, 270, 270, 270, 270, 270, 270, 270, 270]
+
+  k=7: vertex participation counts: [210, 210, 210, 210, 210, 210, 210, 210, 210, 210, 210]
+         vertex cycle weights:       [2520, 2520, 2520, 2520, 2520, 2520, 2520, 2520, 2520, 2520, 2520]
+
+DONE.
