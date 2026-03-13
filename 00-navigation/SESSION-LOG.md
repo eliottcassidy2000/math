@@ -13,6 +13,48 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S67 — 2026-03-12: Walsh degree dominance + topological dichotomy + imaginary spectrum
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S67 (context compaction recovery)
+**Summary of work:**
+  Deep repo exploration finding novel connections across spectral, algebraic, and topological structures.
+
+  MAJOR FINDINGS:
+
+  1. **PARSEVAL CONSTANCY (HYP-527)**: Σ_{t=1}^m y_t² = pm/4 is CONSTANT
+     across all circulant orientations (Parseval identity for sine system).
+     H depends on σ ONLY through higher moments Σy⁴, Σy⁶, ...
+
+  2. **H = POLYNOMIAL IN y-MOMENTS (HYP-528)**: Exact fit at p=7 (2 moments),
+     p=11 (4 moments), p=13 (5+ moments). The y-moments parameterize a sphere.
+
+  3. **WALSH DEGREE DOMINANCE SHIFT (HYP-529, CONFIRMED p=7,11,13,17)**:
+     deg-4/deg-2 variance ratio: 0.00 → 0.19 → 4.42 → 11.94 (monotonic).
+     Phase transition = when degree-4 overtakes degree-2.
+     Degree-6 emerges at p=17 (28.4%). Progressive spectral migration.
+
+  4. **THREE EQUIVALENT VIEWS UNIFIED (HYP-530)**:
+     Walsh degree dominance ↔ Ising α₁ vs α₂ ↔ IPR correlation sign flip.
+     Same phenomenon seen from Walsh, thermodynamic, and spectral angles.
+
+  5. **TOPOLOGICAL DICHOTOMY (HYP-531, CONFIRMED p=7)**:
+     Paley: β=[1,0,0,0,6,0,0], χ=p=7 (no 1-holes, six 4-dim cavities)
+     Interval: β=[1,1,0,0,0,0,0], χ=0 (one 1-hole, no higher homology)
+     EXACTLY 2 topological types among 8 circulant tournaments at p=7.
+
+  6. **χ=p FOR PALEY (HYP-532)**: Euler characteristic χ(T_p) = p
+     for Paley tournaments. Verified p=7 (χ=7) and p=11 (χ=11).
+
+**New contributions:** HYP-527 through HYP-532; scripts imaginary_spectrum_optimization.py,
+  moment_coefficient_transition.py, walsh_degree_dominance.py, p17_walsh_decomposition.py,
+  interval_betti_comparison.py, topological_spectral_bridge.py
+**Unresolved threads:**
+  - Prove Walsh deg-4/deg-2 ratio monotonically increasing → proves HYP-480
+  - Compute Interval Betti at p=11 (p=13+ would determine if topological type changes at crossover)
+  - Connect co_occ_k linearity (kind-pasteur S59b) to Walsh degree structure
+  - p=29 computation needs C++ Held-Karp
+
 <<<<<<< HEAD
 ## opus-2026-03-12-S65 — 2026-03-12: Walsh difference formula + additive energy = IPR + 5 new discoveries
 
