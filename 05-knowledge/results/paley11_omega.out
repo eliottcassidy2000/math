@@ -1,0 +1,37 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+P_11: QR = [1, 3, 4, 5, 9]
+
+======================================================================
+COMPUTING Ω DIMENSIONS FOR P_11
+======================================================================
+
+Enumerating paths up to m=8+1:
+  m=1: 55 paths (0.0s)
+  m=2: 275 paths (0.0s)
+  m=3: 1210 paths (0.0s)
+  m=4: 4730 paths (0.0s)
+  m=5: 15730 paths (0.0s)
+  m=6: 43670 paths (0.0s)
+  m=7: 96085 paths (0.1s)
+  m=8: 158345 paths (0.1s)
+  m=9: 173195 paths (0.2s)
+
+Computing Ω dimensions:
+  Ω_0 = 11 (=1×11) (0.0s)
+  Ω_1 = 55 (=5×11) (0.0s)
+    Junk faces: 55, building sparse J matrix...
+    J matrix built (0.0s)
+    Computing JJ^T (55×55)...
+    rank(J) = 55 (0.0s)
+  Ω_2 = 220 (=20×11) (0.0s)
+    Junk faces: 440, building sparse J matrix...
+    J matrix built (0.0s)
+    Computing JJ^T (440×440)...
+    rank(J) = 440 (0.3s)
+  Ω_3 = 770 (=70×11) (0.3s)
+    Junk faces: 2750, building sparse J matrix...
+    J matrix built (0.1s)
+    Computing JJ^T (2750×2750)...
+    rank(J) = 2475 (47.4s)
+  Ω_4 = 2255 (=205×11) (47.7s)

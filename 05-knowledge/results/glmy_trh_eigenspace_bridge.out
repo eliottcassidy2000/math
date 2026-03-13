@@ -1,0 +1,90 @@
+======================================================================
+GLMY Ω/p vs TRH EIGENSPACE Ω AT P_7
+======================================================================
+  GLMY Ω/7:              [1, 3, 6, 9, 9, 6, 3]
+  TRH regular paths/7:   [1, 3, 3, 3, 3, 3, 3]
+  Match? False
+
+  NO MATCH at P_7!
+  GLMY Ω/7 starts [1,3,6,...] while TRH regular/7 is [1,3,3,3,...]
+
+======================================================================
+WHAT ARE THE S70 'PER-EIGENSPACE Ω' VALUES?
+======================================================================
+  The S70 per-eigenspace Ω for P_11 was [1,5,20,70,205,460,700,690,...]
+  The GLMY Ω/11 we just computed is    [1,5,20,70,205,...]
+  They match through m=4!
+
+  But for P_7:
+  S70 per-eigenspace Ω would be [1,3,3,3,3,3,3] (regular paths/7)
+  GLMY Ω/7 is [1,3,6,9,9,6,3]
+  They DON'T match!
+
+  WAIT: S70 used 'regular paths' with a different boundary convention.
+  Perhaps S70's 'Ω_m per eigenspace' for P_11 is NOT just regular_paths/11.
+  S70 used the circulant_homology.py which computes Ω as a SUBSPACE
+  (like GLMY) but of REGULAR paths (not all directed paths).
+
+======================================================================
+RESOLVING THE CONVENTIONS
+======================================================================
+
+  Three chain complexes:
+  1. GLMY: A_m = directed m-paths, Ω_m = {u: ∂u ∈ span(A_{m-1})}, ∂ = full boundary
+  2. TRH: A_m = regular m-paths, no Ω (work on A_m), ∂ = interior boundary
+  3. circulant_homology: A_m = regular m-paths, Ω_m = {u: ∂u ∈ span(A_{m-1})}, ∂ = full boundary
+
+  The S70 "per-eigenspace Ω" was from convention 3: regular paths + full boundary + Ω subspace.
+  Convention 3 projects to eigenspace k of Z_p.
+
+  The GLMY Ω (convention 1) uses ALL directed paths, not just regular ones.
+  For P_7: there are WAY more directed paths than regular paths (63 vs 21 at m=2).
+
+  But the Ω subspace filters them down. For P_7: GLMY Ω_2 = 42.
+  And convention 3 Ω_2 = ??? (need to compute).
+
+======================================================================
+CONVENTION 3 (REGULAR PATHS + Ω SUBSPACE) FOR P_7
+======================================================================
+  m=0: 7 regular paths
+  m=1: 21 regular paths
+  m=2: 21 regular paths
+  m=3: 21 regular paths
+  m=4: 21 regular paths
+  m=5: 21 regular paths
+  m=6: 21 regular paths
+
+  Computing Ω (regular paths + full boundary + Ω subspace):
+  Ω_0 = 7
+  Ω_1 = 21
+  Ω_2 = 21 (no junk)
+  Ω_3 = 21 - 21 = 0
+  Ω_4 = 21 - 21 = 0
+  Ω_5 = 21 - 21 = 0
+  Ω_6 = 21 - 21 = 0
+
+  Convention 3 Ω: [7, 21, 21, 0, 0, 0, 0]
+  Convention 3 Ω/7: [1, 3, 3, 0, 0, 0, 0]
+  GLMY Ω/7:        [1, 3, 6, 9, 9, 6, 3]
+
+  P_11 GLMY Ω/11 (computed): [1, 5, 20, 70, 205, ...]
+
+======================================================================
+CONVENTION 3 FOR P_11 (REGULAR + Ω + FULL BOUNDARY)
+======================================================================
+  m=0: 11 regular paths
+  m=1: 55 regular paths
+  m=2: 110 regular paths
+    Ω_2 = 110
+  m=3: 220 regular paths
+    Ω_3 = 220 - 110 = 110
+  m=4: 440 regular paths
+    Ω_4 = 440 - 440 = 0
+  m=5: 715 regular paths
+    Ω_5 = 715 - 715 = 0
+
+  Convention 3 Ω (P_11): [11, 55, 110, 110, 0, 0]
+  Convention 3 Ω/11:     [1, 5, 10, 10, 0, 0]
+  GLMY Ω/11:             [1, 5, 20, 70, 205, ...]
+
+DONE.
