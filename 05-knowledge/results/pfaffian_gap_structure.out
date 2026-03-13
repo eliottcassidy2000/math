@@ -1,0 +1,272 @@
+========================================================================
+THE H-PFAFFIAN GAP STRUCTURE
+========================================================================
+
+--- PART 1: Pfaffian computation for even n ---
+
+n = 4:
+  H=  1 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  1 Q=ab/2=    0 | α₁= 0 α₂= 0 det_check=1 pf²=1
+  H=  3 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  3 Q=ab/2=    0 | α₁= 1 α₂= 0 det_check=9 pf²=9
+  H=  3 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  3 Q=ab/2=    0 | α₁= 1 α₂= 0 det_check=9 pf²=9
+  H=  5 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2=  2 b=(H+|Pf|)/2=  3 Q=ab/2=    3 | α₁= 2 α₂= 0 det_check=1 pf²=1
+
+n = 6:
+  H=  1 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  1 Q=ab/2=    0 | α₁= 0 α₂= 0 det_check=1 pf²=1
+  H=  3 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  3 Q=ab/2=    0 | α₁= 1 α₂= 0 det_check=9 pf²=9
+  H=  3 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  3 Q=ab/2=    0 | α₁= 1 α₂= 0 det_check=9 pf²=9
+  H=  3 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  3 Q=ab/2=    0 | α₁= 1 α₂= 0 det_check=9 pf²=9
+  H=  3 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  3 Q=ab/2=    0 | α₁= 1 α₂= 0 det_check=9 pf²=9
+  H=  5 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2=  2 b=(H+|Pf|)/2=  3 Q=ab/2=    3 | α₁= 2 α₂= 0 det_check=1 pf²=1
+  H=  5 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2=  2 b=(H+|Pf|)/2=  3 Q=ab/2=    3 | α₁= 2 α₂= 0 det_check=1 pf²=1
+  H=  5 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2=  2 b=(H+|Pf|)/2=  3 Q=ab/2=    3 | α₁= 2 α₂= 0 det_check=1 pf²=1
+  H=  9 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2=  3 b=(H+|Pf|)/2=  6 Q=ab/2=    9 | α₁= 4 α₂= 0 det_check=9 pf²=9
+  H=  9 Pf(S)=  -5 |Pf|=  5 a=(H-|Pf|)/2=  2 b=(H+|Pf|)/2=  7 Q=ab/2=    7 | α₁= 4 α₂= 0 det_check=25 pf²=25
+  H=  9 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2=  3 b=(H+|Pf|)/2=  6 Q=ab/2=    9 | α₁= 4 α₂= 0 det_check=9 pf²=9
+  H=  9 Pf(S)=  +5 |Pf|=  5 a=(H-|Pf|)/2=  2 b=(H+|Pf|)/2=  7 Q=ab/2=    7 | α₁= 4 α₂= 0 det_check=25 pf²=25
+  H=  9 Pf(S)=  +9 |Pf|=  9 a=(H-|Pf|)/2=  0 b=(H+|Pf|)/2=  9 Q=ab/2=    0 | α₁= 2 α₂= 1 det_check=81 pf²=81
+  H= 11 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2=  5 b=(H+|Pf|)/2=  6 Q=ab/2=   15 | α₁= 5 α₂= 0 det_check=1 pf²=1
+  H= 11 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2=  5 b=(H+|Pf|)/2=  6 Q=ab/2=   15 | α₁= 5 α₂= 0 det_check=1 pf²=1
+  H= 13 Pf(S)=  -7 |Pf|=  7 a=(H-|Pf|)/2=  3 b=(H+|Pf|)/2= 10 Q=ab/2=   15 | α₁= 6 α₂= 0 det_check=49 pf²=49
+  H= 13 Pf(S)=  -7 |Pf|=  7 a=(H-|Pf|)/2=  3 b=(H+|Pf|)/2= 10 Q=ab/2=   15 | α₁= 6 α₂= 0 det_check=49 pf²=49
+  H= 15 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2=  7 b=(H+|Pf|)/2=  8 Q=ab/2=   28 | α₁= 7 α₂= 0 det_check=1 pf²=1
+  H= 15 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2=  7 b=(H+|Pf|)/2=  8 Q=ab/2=   28 | α₁= 7 α₂= 0 det_check=1 pf²=1
+  H= 15 Pf(S)=  -9 |Pf|=  9 a=(H-|Pf|)/2=  3 b=(H+|Pf|)/2= 12 Q=ab/2=   18 | α₁= 7 α₂= 0 det_check=81 pf²=81
+  H= 15 Pf(S)=  +5 |Pf|=  5 a=(H-|Pf|)/2=  5 b=(H+|Pf|)/2= 10 Q=ab/2=   25 | α₁= 7 α₂= 0 det_check=25 pf²=25
+  H= 15 Pf(S)=  -9 |Pf|=  9 a=(H-|Pf|)/2=  3 b=(H+|Pf|)/2= 12 Q=ab/2=   18 | α₁= 7 α₂= 0 det_check=81 pf²=81
+  H= 15 Pf(S)=  +5 |Pf|=  5 a=(H-|Pf|)/2=  5 b=(H+|Pf|)/2= 10 Q=ab/2=   25 | α₁= 7 α₂= 0 det_check=25 pf²=25
+  H= 17 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2=  8 b=(H+|Pf|)/2=  9 Q=ab/2=   36 | α₁= 8 α₂= 0 det_check=1 pf²=1
+  H= 17 Pf(S)=  +7 |Pf|=  7 a=(H-|Pf|)/2=  5 b=(H+|Pf|)/2= 12 Q=ab/2=   30 | α₁= 6 α₂= 1 det_check=49 pf²=49
+  H= 19 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2=  8 b=(H+|Pf|)/2= 11 Q=ab/2=   44 | α₁= 9 α₂= 0 det_check=9 pf²=9
+  H= 19 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2=  8 b=(H+|Pf|)/2= 11 Q=ab/2=   44 | α₁= 9 α₂= 0 det_check=9 pf²=9
+  H= 23 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 11 b=(H+|Pf|)/2= 12 Q=ab/2=   66 | α₁=11 α₂= 0 det_check=1 pf²=1
+  H= 23 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2= 11 b=(H+|Pf|)/2= 12 Q=ab/2=   66 | α₁=11 α₂= 0 det_check=1 pf²=1
+  H= 23 Pf(S)=  +5 |Pf|=  5 a=(H-|Pf|)/2=  9 b=(H+|Pf|)/2= 14 Q=ab/2=   63 | α₁= 9 α₂= 1 det_check=25 pf²=25
+  H= 23 Pf(S)=  -5 |Pf|=  5 a=(H-|Pf|)/2=  9 b=(H+|Pf|)/2= 14 Q=ab/2=   63 | α₁= 9 α₂= 1 det_check=25 pf²=25
+  H= 25 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 12 b=(H+|Pf|)/2= 13 Q=ab/2=   78 | α₁=12 α₂= 0 det_check=1 pf²=1
+  H= 25 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 12 b=(H+|Pf|)/2= 13 Q=ab/2=   78 | α₁=12 α₂= 0 det_check=1 pf²=1
+  H= 27 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2= 12 b=(H+|Pf|)/2= 15 Q=ab/2=   90 | α₁=11 α₂= 1 det_check=9 pf²=9
+  H= 27 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2= 12 b=(H+|Pf|)/2= 15 Q=ab/2=   90 | α₁=11 α₂= 1 det_check=9 pf²=9
+  H= 29 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 14 b=(H+|Pf|)/2= 15 Q=ab/2=  105 | α₁=10 α₂= 2 det_check=1 pf²=1
+  H= 29 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 14 b=(H+|Pf|)/2= 15 Q=ab/2=  105 | α₁=12 α₂= 1 det_check=1 pf²=1
+  H= 29 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2= 14 b=(H+|Pf|)/2= 15 Q=ab/2=  105 | α₁=12 α₂= 1 det_check=1 pf²=1
+  H= 31 Pf(S)=  -7 |Pf|=  7 a=(H-|Pf|)/2= 12 b=(H+|Pf|)/2= 19 Q=ab/2=  114 | α₁=13 α₂= 1 det_check=49 pf²=49
+  H= 31 Pf(S)=  +7 |Pf|=  7 a=(H-|Pf|)/2= 12 b=(H+|Pf|)/2= 19 Q=ab/2=  114 | α₁=13 α₂= 1 det_check=49 pf²=49
+  H= 33 Pf(S)=  -3 |Pf|=  3 a=(H-|Pf|)/2= 15 b=(H+|Pf|)/2= 18 Q=ab/2=  135 | α₁=16 α₂= 0 det_check=9 pf²=9
+  H= 33 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2= 16 b=(H+|Pf|)/2= 17 Q=ab/2=  136 | α₁=12 α₂= 2 det_check=1 pf²=1
+  H= 33 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2= 15 b=(H+|Pf|)/2= 18 Q=ab/2=  135 | α₁=14 α₂= 1 det_check=9 pf²=9
+  H= 33 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2= 15 b=(H+|Pf|)/2= 18 Q=ab/2=  135 | α₁=14 α₂= 1 det_check=9 pf²=9
+  H= 33 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2= 15 b=(H+|Pf|)/2= 18 Q=ab/2=  135 | α₁=16 α₂= 0 det_check=9 pf²=9
+  H= 37 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 18 b=(H+|Pf|)/2= 19 Q=ab/2=  171 | α₁=14 α₂= 2 det_check=1 pf²=1
+  H= 37 Pf(S)=  +5 |Pf|=  5 a=(H-|Pf|)/2= 16 b=(H+|Pf|)/2= 21 Q=ab/2=  168 | α₁=16 α₂= 1 det_check=25 pf²=25
+  H= 37 Pf(S)=  +3 |Pf|=  3 a=(H-|Pf|)/2= 17 b=(H+|Pf|)/2= 20 Q=ab/2=  170 | α₁=14 α₂= 2 det_check=9 pf²=9
+  H= 41 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2= 20 b=(H+|Pf|)/2= 21 Q=ab/2=  210 | α₁=16 α₂= 2 det_check=1 pf²=1
+  H= 43 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 21 b=(H+|Pf|)/2= 22 Q=ab/2=  231 | α₁=19 α₂= 1 det_check=1 pf²=1
+  H= 43 Pf(S)=  +1 |Pf|=  1 a=(H-|Pf|)/2= 21 b=(H+|Pf|)/2= 22 Q=ab/2=  231 | α₁=19 α₂= 1 det_check=1 pf²=1
+  H= 45 Pf(S)=  -1 |Pf|=  1 a=(H-|Pf|)/2= 22 b=(H+|Pf|)/2= 23 Q=ab/2=  253 | α₁=14 α₂= 4 det_check=1 pf²=1
+
+
+--- PART 2: Signed Pfaffian — does sign matter? ---
+
+The Pfaffian has a SIGN (±). Does the sign carry information?
+Note: Pf(S) depends on the labeling of vertices.
+Under permutation σ: Pf(P^T S P) = sign(σ) · Pf(S)
+So the sign is labeling-dependent, but |Pf| is an invariant.
+
+n = 4: signs observed
+  H=  1 |Pf|=  1 signs={1}
+  H=  3 |Pf|=  3 signs={1, -1}
+  H=  5 |Pf|=  1 signs={-1}
+
+n = 6: signs observed
+  H=  1 |Pf|=  1 signs={-1}
+  H=  3 |Pf|=  3 signs={1, -1}
+  H=  5 |Pf|=  1 signs={1, -1}
+  H=  9 |Pf|=  3 signs={1, -1}
+  H=  9 |Pf|=  5 signs={1, -1}
+  H=  9 |Pf|=  9 signs={1}
+  H= 11 |Pf|=  1 signs={1, -1}
+  H= 13 |Pf|=  7 signs={-1}
+  H= 15 |Pf|=  1 signs={1, -1}
+  H= 15 |Pf|=  5 signs={1}
+  H= 15 |Pf|=  9 signs={-1}
+  H= 17 |Pf|=  1 signs={1}
+  H= 17 |Pf|=  7 signs={1}
+  H= 19 |Pf|=  3 signs={1, -1}
+  H= 23 |Pf|=  1 signs={1, -1}
+  H= 23 |Pf|=  5 signs={1, -1}
+  H= 25 |Pf|=  1 signs={-1}
+  H= 27 |Pf|=  3 signs={1, -1}
+  H= 29 |Pf|=  1 signs={1, -1}
+  H= 31 |Pf|=  7 signs={1, -1}
+  H= 33 |Pf|=  1 signs={1}
+  H= 33 |Pf|=  3 signs={1, -1}
+  H= 37 |Pf|=  1 signs={-1}
+  H= 37 |Pf|=  3 signs={1}
+  H= 37 |Pf|=  5 signs={1}
+  H= 41 |Pf|=  1 signs={1}
+  H= 43 |Pf|=  1 signs={1, -1}
+  H= 45 |Pf|=  1 signs={-1}
+
+
+--- PART 3: Sub-Pfaffians for odd n ---
+
+n = 3:
+  H=  1 det(I+2A)=   1 √det=  1 | sub_Pfs=[-1, -1, -1] | Σ(-1)^i·Pf=-1→1 | Σ(-1)^(i+1)·Pf=1→1 | Σ_raw=-3→9
+  H=  3 det(I+2A)=   9 √det=  3 | sub_Pfs=[-1, 1, -1] | Σ(-1)^i·Pf=-3→9 | Σ(-1)^(i+1)·Pf=3→9 | Σ_raw=-1→1
+
+n = 5:
+  H=  1 det(I+2A)=   1 √det=  1 | sub_Pfs=[1, 1, 1, 1, 1] | Σ(-1)^i·Pf=1→1 | Σ(-1)^(i+1)·Pf=-1→1 | Σ_raw=5→25
+  H=  3 det(I+2A)=   9 √det=  3 | sub_Pfs=[1, -1, 1, 3, 3] | Σ(-1)^i·Pf=3→9 | Σ(-1)^(i+1)·Pf=-3→9 | Σ_raw=7→49
+  H=  3 det(I+2A)=   9 √det=  3 | sub_Pfs=[1, 3, 1, -1, -3] | Σ(-1)^i·Pf=-3→9 | Σ(-1)^(i+1)·Pf=3→9 | Σ_raw=1→1
+  H=  3 det(I+2A)=   9 √det=  3 | sub_Pfs=[1, -3, -3, -1, 1] | Σ(-1)^i·Pf=3→9 | Σ(-1)^(i+1)·Pf=-3→9 | Σ_raw=-5→25
+  H=  5 det(I+2A)=   1 √det=  1 | sub_Pfs=[1, 3, 3, 1, -1] | Σ(-1)^i·Pf=-1→1 | Σ(-1)^(i+1)·Pf=1→1 | Σ_raw=7→49
+  H=  5 det(I+2A)=   1 √det=  1 | sub_Pfs=[1, -1, -3, -3, -1] | Σ(-1)^i·Pf=1→1 | Σ(-1)^(i+1)·Pf=-1→1 | Σ_raw=-7→49
+  H=  9 det(I+2A)=   9 √det=  3 | sub_Pfs=[1, -1, -1, -1, 1] | Σ(-1)^i·Pf=3→9 | Σ(-1)^(i+1)·Pf=-3→9 | Σ_raw=-1→1
+  H=  9 det(I+2A)=  25 √det=  5 | sub_Pfs=[1, -3, -1, 1, 3] | Σ(-1)^i·Pf=5→25 | Σ(-1)^(i+1)·Pf=-5→25 | Σ_raw=1→1
+  H= 11 det(I+2A)=   1 √det=  1 | sub_Pfs=[1, 1, 1, -1, -1] | Σ(-1)^i·Pf=1→1 | Σ(-1)^(i+1)·Pf=-1→1 | Σ_raw=1→1
+  H= 13 det(I+2A)=  49 √det=  7 | sub_Pfs=[3, -1, -1, -3, 1] | Σ(-1)^i·Pf=7→49 | Σ(-1)^(i+1)·Pf=-7→49 | Σ_raw=-1→1
+  H= 15 det(I+2A)=  81 √det=  9 | sub_Pfs=[3, -1, 1, -1, 3] | Σ(-1)^i·Pf=9→81 | Σ(-1)^(i+1)·Pf=-9→81 | Σ_raw=5→25
+  H= 15 det(I+2A)=  25 √det=  5 | sub_Pfs=[-1, 1, -1, 1, -1] | Σ(-1)^i·Pf=-5→25 | Σ(-1)^(i+1)·Pf=5→25 | Σ_raw=-1→1
+
+
+--- PART 4: The Pfaffian as graph matching count ---
+
+
+RECALL: For a skew-symmetric matrix S, Pf(S) = Σ_{perfect matchings M} sign(M) · ∏_{(i,j)∈M} S_{ij}
+
+For S = A - A^T (tournament skew-adjacency):
+  S_{ij} = +1 if i→j, -1 if j→i
+
+So Pf(S) = Σ over perfect matchings of the complete graph K_n,
+  with sign from the matching orientation.
+
+For even n, |Pf(S)|² = det(S) = det(I+2A).
+
+The MATCHING INTERPRETATION is:
+  H = number of Hamiltonian paths (using I(CG,2) = OCF)
+  |Pf(S)| = |signed count of perfect matchings in K_n with tournament orientation|
+  Q = (H² - Pf²)/8 measures how much H "exceeds" the matching count
+
+This connects to DIMER theory!
+
+
+--- PART 5: |Pf(S)| in terms of α-vector ---
+
+For each tournament, express |Pf(S)| via the α_k:
+  H = 1 + 2α₁ + 4α₂ + ...,  |Pf(S)| = ???
+
+n = 3:
+  H=  1 |Pf|=  1 a=(H-|Pf|)/2=  0 | α₁= 0 α₂= 0 | a-α₁+α₂= +0
+  H=  3 |Pf|=  3 a=(H-|Pf|)/2=  0 | α₁= 1 α₂= 0 | a-α₁+α₂= -1
+
+n = 4:
+  H=  1 |Pf|=  1 a=(H-|Pf|)/2=  0 | α₁= 0 α₂= 0 | a-α₁+α₂= +0
+  H=  3 |Pf|=  3 a=(H-|Pf|)/2=  0 | α₁= 1 α₂= 0 | a-α₁+α₂= -1
+  H=  5 |Pf|=  1 a=(H-|Pf|)/2=  2 | α₁= 2 α₂= 0 | a-α₁+α₂= +0
+
+n = 5:
+  H=  1 |Pf|=  1 a=(H-|Pf|)/2=  0 | α₁= 0 α₂= 0 | a-α₁+α₂= +0
+  H=  3 |Pf|=  3 a=(H-|Pf|)/2=  0 | α₁= 1 α₂= 0 | a-α₁+α₂= -1
+  H=  5 |Pf|=  1 a=(H-|Pf|)/2=  2 | α₁= 2 α₂= 0 | a-α₁+α₂= +0
+  H=  9 |Pf|=  3 a=(H-|Pf|)/2=  3 | α₁= 4 α₂= 0 | a-α₁+α₂= -1
+  H=  9 |Pf|=  5 a=(H-|Pf|)/2=  2 | α₁= 4 α₂= 0 | a-α₁+α₂= -2
+  H= 11 |Pf|=  1 a=(H-|Pf|)/2=  5 | α₁= 5 α₂= 0 | a-α₁+α₂= +0
+  H= 13 |Pf|=  7 a=(H-|Pf|)/2=  3 | α₁= 6 α₂= 0 | a-α₁+α₂= -3
+  H= 15 |Pf|=  9 a=(H-|Pf|)/2=  3 | α₁= 7 α₂= 0 | a-α₁+α₂= -4
+  H= 15 |Pf|=  5 a=(H-|Pf|)/2=  5 | α₁= 7 α₂= 0 | a-α₁+α₂= -2
+
+n = 6:
+  H=  1 |Pf|=  1 a=(H-|Pf|)/2=  0 | α₁= 0 α₂= 0 | a-α₁+α₂= +0
+  H=  3 |Pf|=  3 a=(H-|Pf|)/2=  0 | α₁= 1 α₂= 0 | a-α₁+α₂= -1
+  H=  5 |Pf|=  1 a=(H-|Pf|)/2=  2 | α₁= 2 α₂= 0 | a-α₁+α₂= +0
+  H=  9 |Pf|=  3 a=(H-|Pf|)/2=  3 | α₁= 4 α₂= 0 | a-α₁+α₂= -1
+  H=  9 |Pf|=  5 a=(H-|Pf|)/2=  2 | α₁= 4 α₂= 0 | a-α₁+α₂= -2
+  H=  9 |Pf|=  9 a=(H-|Pf|)/2=  0 | α₁= 2 α₂= 1 | a-α₁+α₂= -1
+  H= 11 |Pf|=  1 a=(H-|Pf|)/2=  5 | α₁= 5 α₂= 0 | a-α₁+α₂= +0
+  H= 13 |Pf|=  7 a=(H-|Pf|)/2=  3 | α₁= 6 α₂= 0 | a-α₁+α₂= -3
+  H= 15 |Pf|=  1 a=(H-|Pf|)/2=  7 | α₁= 7 α₂= 0 | a-α₁+α₂= +0
+  H= 15 |Pf|=  9 a=(H-|Pf|)/2=  3 | α₁= 7 α₂= 0 | a-α₁+α₂= -4
+  H= 15 |Pf|=  5 a=(H-|Pf|)/2=  5 | α₁= 7 α₂= 0 | a-α₁+α₂= -2
+  H= 17 |Pf|=  1 a=(H-|Pf|)/2=  8 | α₁= 8 α₂= 0 | a-α₁+α₂= +0
+  H= 17 |Pf|=  7 a=(H-|Pf|)/2=  5 | α₁= 6 α₂= 1 | a-α₁+α₂= +0
+  H= 19 |Pf|=  3 a=(H-|Pf|)/2=  8 | α₁= 9 α₂= 0 | a-α₁+α₂= -1
+  H= 23 |Pf|=  1 a=(H-|Pf|)/2= 11 | α₁=11 α₂= 0 | a-α₁+α₂= +0
+  H= 23 |Pf|=  5 a=(H-|Pf|)/2=  9 | α₁= 9 α₂= 1 | a-α₁+α₂= +1
+  H= 25 |Pf|=  1 a=(H-|Pf|)/2= 12 | α₁=12 α₂= 0 | a-α₁+α₂= +0
+  H= 27 |Pf|=  3 a=(H-|Pf|)/2= 12 | α₁=11 α₂= 1 | a-α₁+α₂= +2
+  H= 29 |Pf|=  1 a=(H-|Pf|)/2= 14 | α₁=10 α₂= 2 | a-α₁+α₂= +6
+  H= 29 |Pf|=  1 a=(H-|Pf|)/2= 14 | α₁=12 α₂= 1 | a-α₁+α₂= +3
+  H= 31 |Pf|=  7 a=(H-|Pf|)/2= 12 | α₁=13 α₂= 1 | a-α₁+α₂= +0
+  H= 33 |Pf|=  3 a=(H-|Pf|)/2= 15 | α₁=16 α₂= 0 | a-α₁+α₂= -1
+  H= 33 |Pf|=  1 a=(H-|Pf|)/2= 16 | α₁=12 α₂= 2 | a-α₁+α₂= +6
+  H= 33 |Pf|=  3 a=(H-|Pf|)/2= 15 | α₁=14 α₂= 1 | a-α₁+α₂= +2
+  H= 37 |Pf|=  1 a=(H-|Pf|)/2= 18 | α₁=14 α₂= 2 | a-α₁+α₂= +6
+  H= 37 |Pf|=  5 a=(H-|Pf|)/2= 16 | α₁=16 α₂= 1 | a-α₁+α₂= +1
+  H= 37 |Pf|=  3 a=(H-|Pf|)/2= 17 | α₁=14 α₂= 2 | a-α₁+α₂= +5
+  H= 41 |Pf|=  1 a=(H-|Pf|)/2= 20 | α₁=16 α₂= 2 | a-α₁+α₂= +6
+  H= 43 |Pf|=  1 a=(H-|Pf|)/2= 21 | α₁=19 α₂= 1 | a-α₁+α₂= +3
+  H= 45 |Pf|=  1 a=(H-|Pf|)/2= 22 | α₁=14 α₂= 4 | a-α₁+α₂=+12
+
+
+--- PART 6: The Pfaffian vs Chromatic number ---
+
+
+For EVEN n, |Pf(S)| is odd (since det(S) = Pf² and √det is odd).
+|Pf(S)| = 1 + 2k for some non-negative integer k.
+
+Key patterns observed:
+  α₂=0, all 3-cycles pairwise share vertices:
+    |Pf| depends on whether CG has "balanced" or "unbalanced" cycle distribution
+
+  When H = |Pf|: all cycles through every vertex → no "free" cycles → Q=0
+  When H > |Pf|: some cycles NOT sharing a common vertex → Q > 0
+
+CONJECTURE: |Pf(S)| relates to the independence number of some
+graph derived from the conflict graph, possibly the LINE GRAPH of CG
+or the INTERSECTION GRAPH of the vertex sets of cycles.
+
+
+========================================================================
+SYNTHESIS — THE COMPLETE PICTURE
+========================================================================
+
+THE THREE QUANTITIES:
+  H(T)     = I(CG(T), 2)     = Σ_k 2^k α_k     [path count]
+  |Pf(S)|  = √det(I+2A)      = ???               [matching count]
+  Q(T)     = (H²-Pf²)/8      = ab/2              [gap]
+
+PROVEN IDENTITIES:
+  1. det(I+2A) = Pf(S)²  for even n  (THM-174)
+  2. det(I+2A) = (Σ w_i)² for odd n  (THM-174)
+  3. H²-Pf² ≡ 0 (mod 8)              (HYP-850)
+  4. H ≥ |Pf(S)| always               (observed, not proved)
+
+RECURRENCE STRUCTURE:
+  H satisfies deletion recurrence: H(T) = H(T-v) + 2μ_v
+  Pf satisfies: ???
+    For even n→odd n-1: delete row/col → sub-Pfaffian (cofactor expansion)
+    For odd n→even n-1: Pf(S_{ii}) are the components of the w-vector
+
+  Q = ab/2 where a+b = H:
+    Under deletion T→T-v:
+    Q(T) - Q(T-v) = μ_v(H-μ_v)/2 + [Pf(S_{T-v})²-Pf(S_T)²]/8
+
+THE DEEP CONNECTION:
+  H counts Hamiltonian PATHS (order matters, all vertices)
+  |Pf| counts signed perfect MATCHINGS (pairing matters, all vertices)
+  Both are "global" graph invariants requiring all n vertices
+  The gap Q measures the "excess structure" that paths see but matchings don't
+
+This is analogous to:
+  In a bipartite graph: det(A) counts signed matchings
+  For planar graphs: permanent ≈ Pfaffian (FKT theorem)
+  For tournaments: H ≈ Pf through the OCF/independence poly bridge
+
+OPEN QUESTIONS:
+  1. Can we express |Pf(S)| directly in terms of {α_k}?
+  2. Does |Pf(S)| have its own independence polynomial interpretation?
+  3. What is the Pfaffian recurrence under vertex deletion?
+  4. Is there a "Pfaffian OCF" — Pf(S) = I(G', 2) for some graph G'?
+  5. Does Q = ab/2 have a combinatorial interpretation as counting
+     something specific (pairs of paths? cycle configurations?)
+
