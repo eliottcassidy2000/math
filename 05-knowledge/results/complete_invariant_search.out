@@ -1,0 +1,90 @@
+======================================================================
+ANALYSIS 1: n=7 — LAMBDA DEGREE SEQUENCE COMPLETENESS
+======================================================================
+  Processed 500000/2097152...
+  Processed 1000000/2097152...
+  Processed 1500000/2097152...
+  Processed 2000000/2097152...
+
+Total (score, sorted_lam) classes: 288
+  UNRESOLVED: score=(2, 2, 3, 3, 3, 3, 5), sl=...(21 vals), H=[105, 109, 111]
+    deg_seq=(6, 8, 8, 10, 10, 10, 14): H=[109, 111]
+  UNRESOLVED: score=(2, 2, 3, 3, 3, 4, 4), sl=...(21 vals), H=[131, 133]
+    deg_seq=(8, 8, 8, 10, 12, 12, 14): H=[131, 133]
+  UNRESOLVED: score=(1, 3, 3, 3, 3, 4, 4), sl=...(21 vals), H=[105, 109, 111]
+    deg_seq=(6, 8, 8, 10, 10, 10, 14): H=[109, 111]
+  UNRESOLVED: score=(1, 3, 3, 3, 3, 3, 5), sl=...(21 vals), H=[95, 99]
+    deg_seq=(6, 6, 8, 8, 8, 12, 12): H=[95, 99]
+  UNRESOLVED: score=(2, 2, 2, 3, 3, 4, 5), sl=...(21 vals), H=[91, 93, 103]
+    deg_seq=(4, 8, 8, 8, 10, 10, 12): H=[91, 93]
+  UNRESOLVED: score=(2, 2, 3, 3, 3, 4, 4), sl=...(21 vals), H=[129, 133, 135, 137, 139]
+    deg_seq=(8, 8, 10, 10, 12, 12, 12): H=[133, 135, 137]
+  UNRESOLVED: score=(1, 2, 3, 3, 4, 4, 4), sl=...(21 vals), H=[91, 93, 103]
+    deg_seq=(4, 8, 8, 8, 10, 10, 12): H=[91, 93]
+  UNRESOLVED: score=(2, 2, 3, 3, 3, 4, 4), sl=...(21 vals), H=[141, 143]
+    deg_seq=(8, 8, 10, 10, 12, 12, 12): H=[141, 143]
+  UNRESOLVED: score=(2, 3, 3, 3, 3, 3, 4), sl=...(21 vals), H=[151, 153, 159]
+    deg_seq=(10, 10, 10, 10, 12, 12, 14): H=[151, 153]
+
+Ambiguous sorted-lambda classes: 55
+Resolved by lambda degree sequence: 46
+Unresolved: 9
+
+======================================================================
+ANALYSIS 2: WALK INVARIANTS FOR UNRESOLVED CASES
+======================================================================
+
+  Score (2, 2, 3, 3, 3, 3, 5): walk invariants resolve = False
+    combined invariant: H=[109, 111]
+      H=109, bits=4728
+      H=111, bits=4658
+
+  Score (2, 2, 3, 3, 3, 4, 4): walk invariants resolve = True
+
+  Score (1, 3, 3, 3, 3, 4, 4): walk invariants resolve = False
+    combined invariant: H=[109, 111]
+      H=109, bits=9388
+      H=111, bits=9653
+
+  Score (1, 3, 3, 3, 3, 3, 5): walk invariants resolve = True
+
+  Score (2, 2, 2, 3, 3, 4, 5): walk invariants resolve = True
+
+  Score (2, 2, 3, 3, 3, 4, 4): walk invariants resolve = True
+
+  Score (1, 2, 3, 3, 4, 4, 4): walk invariants resolve = True
+
+  Score (2, 2, 3, 3, 3, 4, 4): walk invariants resolve = True
+
+  Score (2, 3, 3, 3, 3, 3, 4): walk invariants resolve = True
+
+======================================================================
+ANALYSIS 3: THE {2,1,0} OVERLAP WEIGHT CONNECTION
+======================================================================
+
+THE {2,1,0} OVERLAP HIERARCHY:
+
+Level 0: Score sequence
+  -> Determines c3 (number of 3-cycle vertex sets)
+
+Level 1: Overlap weight HISTOGRAM (sorted counts of 0,1,2 overlaps)
+  -> Same as sorted lambda histogram (proved: ov0+ov1+ov2 = C(c3,2),
+     and ov2 = sum C(lam,2), so ov histogram <-> sorted lambda)
+  -> Does NOT determine alpha_2 or H in general
+
+Level 2: Overlap weight MATRIX (which cycle pairs have which overlap)
+  -> Labeled lambda graph (up to isomorphism)
+  -> DETERMINES H at n=5, n=6 (proved), and n=7 (checking)
+
+Level 3: Full tournament adjacency
+  -> Contains all information
+
+The {2,1,0} overlap weights between 3-cycle pairs are a TERNARY code.
+The sorted histogram is the "measurable" part.
+The labeled assignment is the "non-measurable" part.
+The non-measurable part determines alpha_2 and hence H.
+
+
+======================================================================
+DONE.
+======================================================================

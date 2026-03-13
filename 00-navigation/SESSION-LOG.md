@@ -32,6 +32,28 @@ Entry format:
 
 ---
 
+## kind-pasteur-2026-03-13-S61 — 2026-03-13: Deep Overlap Weight Analysis + Lambda Completeness
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S60 (continued through 14+ context windows)
+**Summary of work:**
+- **THM-165 (Coefficient-2 Theorem):** Directed Hamiltonian cycles contribute exactly 2 to H. Verified n=5,7.
+- **THM-166 (OCF Decomposition):** H = 1 + 2*alpha_1 + 4*alpha_2 for n<=8. Exhaustive verification n=3-6.
+- **THM-167 (Quadratic H Formula):** H = disj_33^2 - 23*disj_33 + 301 for ALL 2640 regular n=7 tournaments. Paley (disj=7) farthest from parabola minimum -> max H=189.
+- **THM-168 (Lambda Completeness):** Pair-coverage histogram determines H at n=5 (100%), n=7 (66% of score classes). Fails for 20/59 n=7 score classes due to disjointness geometry ambiguity.
+- **LABELED LAMBDA does NOT determine H at n=7.** Two tournaments with isomorphic lambda graphs (verified via 5040 permutation check) have H=109 vs H=111, differing only in c7_dir (8 vs 9). Arc orientation is genuinely non-measurable.
+- **Hidden invariant found:** Ambiguous lambda cases have same c3,c5,c7 but different alpha_2 (disjointness count). Triple overlap resolves all cases.
+- **BIBD characterization:** Paley T_7 = unique (7,3,2)-BIBD = minimum disjoint pairs via Jensen's inequality on sum C(lambda,2).
+- **Vitali analogy formalized:** Sorted lambda = "measurable", labeled lambda = "non-measurable" content, Vitali quotient = the sorting operation that destroys geometric arrangement info. At the labeled level, ARC ORIENTATION is the irreducible non-measurable content.
+- **Cycle-disjointness constraint:** c5_dir + 2*disj_33 = 56 (rigid) for regular n=7. NOT at n=6.
+- **Paley T_7 perfectly uniform:** every 5-subset has c5=2, every vertex has 9 overlap-1 pairs.
+
+**New contributions:** THM-165, THM-166, THM-167, THM-168, HYP-743 through HYP-752
+**Scripts:** ocf_directed_fix.py, n7_regular_cycle_spectrum.py, cycle_disjointness_constraint.py, constraint_proof_exploration.py, vitali_overlap_hidden_structure.py, overlap_mechanism_deep.py, quadratic_formula_exploration.py, lambda_completeness_boundary.py, hidden_invariant_search.py, labeled_lambda_graph.py, complete_invariant_search.py, deepest_ambiguity.py, complete_invariant_search.py
+**Unresolved threads:** Labeled lambda + c7 as complete invariant at n=7? Combinatorial proof of c5+2*disj=56. Generalization of quadratic formula beyond n=7 regular.
+
+---
+
 ## opus-2026-03-13-S67j — 2026-03-13: Cross-Field Bridges — 10 connections to other domains
 
 **Account:** opus
