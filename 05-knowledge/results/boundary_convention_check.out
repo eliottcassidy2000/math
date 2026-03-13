@@ -1,0 +1,109 @@
+======================================================================
+BOUNDARY CONVENTION COMPARISON
+======================================================================
+
+==================================================
+  Transitive T_5
+==================================================
+  Omega:  [5, 10, 10, 5, 1]
+  FULL boundary:     β = [1, 0, 0, 0, 0]   ranks = [4, 6, 4, 1]
+  INTERIOR boundary: β = [5, 4, 0, 0, 0]   ranks = [0, 6, 4, 1]
+  chi (FULL) = 1, chi (INTERIOR) = 1
+  *** DIFFERENT BETTI! ***
+    β_0: FULL=1, INT=5
+    β_1: FULL=0, INT=4
+
+==================================================
+  Paley P_7
+==================================================
+    WARNING: d^2 != 0 at m=3 for FULL!
+    WARNING: d^2 != 0 at m=4 for FULL!
+    WARNING: d^2 != 0 at m=5 for FULL!
+    WARNING: d^2 != 0 at m=6 for FULL!
+  Omega:  [7, 21, 21, 21, 21, 21, 21]
+  FULL boundary:     β = [1, 0, -12, -18, -18, -18, 0]   ranks = [6, 15, 18, 21, 18, 21]
+  INTERIOR boundary: β = [7, 0, 0, 21, 21, 21, 21]   ranks = [0, 21, 0, 0, 0, 0]
+  chi (FULL) = 7, chi (INTERIOR) = 7
+  *** DIFFERENT BETTI! ***
+    β_0: FULL=1, INT=7
+    β_2: FULL=-12, INT=0
+    β_3: FULL=-18, INT=21
+    β_4: FULL=-18, INT=21
+    β_5: FULL=-18, INT=21
+    β_6: FULL=0, INT=21
+
+==================================================
+  Interval n=7
+==================================================
+    WARNING: d^2 != 0 at m=3 for FULL!
+    WARNING: d^2 != 0 at m=4 for FULL!
+    WARNING: d^2 != 0 at m=5 for FULL!
+    WARNING: d^2 != 0 at m=6 for FULL!
+  Omega:  [7, 21, 21, 35, 56, 49, 14]
+  FULL boundary:     β = [1, 1, -13, -20, -20, -6, 0]   ranks = [6, 14, 20, 35, 41, 14]
+  INTERIOR boundary: β = [7, 7, 0, 14, 14, 7, 0]   ranks = [0, 14, 7, 14, 28, 14]
+  chi (FULL) = -7, chi (INTERIOR) = -7
+  *** DIFFERENT BETTI! ***
+    β_0: FULL=1, INT=7
+    β_1: FULL=1, INT=7
+    β_2: FULL=-13, INT=0
+    β_3: FULL=-20, INT=14
+    β_4: FULL=-20, INT=14
+    β_5: FULL=-6, INT=7
+
+==================================================
+  Regular n=5
+==================================================
+    WARNING: d^2 != 0 at m=3 for FULL!
+    WARNING: d^2 != 0 at m=4 for FULL!
+  Omega:  [5, 10, 5, 5, 5]
+  FULL boundary:     β = [1, 1, -4, -4, 0]   ranks = [4, 5, 4, 5]
+  INTERIOR boundary: β = [5, 5, 0, 5, 5]   ranks = [0, 5, 0, 0]
+  chi (FULL) = 0, chi (INTERIOR) = 0
+  *** DIFFERENT BETTI! ***
+    β_0: FULL=1, INT=5
+    β_1: FULL=1, INT=5
+    β_2: FULL=-4, INT=0
+    β_3: FULL=-4, INT=5
+    β_4: FULL=0, INT=5
+
+======================================================================
+CHECKING d^2 = 0 FOR BOTH CONVENTIONS
+======================================================================
+
+  FULL boundary:
+    m=2: d^2 zero? True, max|d^2|=0
+    m=3: d^2 zero? False, max|d^2|=1
+    m=4: d^2 zero? False, max|d^2|=1
+    m=5: d^2 zero? False, max|d^2|=1
+    m=6: d^2 zero? False, max|d^2|=1
+
+  INTERIOR boundary:
+    m=2: d^2 zero? True, max|d^2|=0
+    m=3: d^2 zero? True, max|d^2|=0
+    m=4: d^2 zero? True, max|d^2|=0
+    m=5: d^2 zero? True, max|d^2|=0
+    m=6: d^2 zero? True, max|d^2|=0
+
+======================================================================
+WHICH CONVENTION MATCHES path_homology_v2.py?
+======================================================================
+  For tournaments: Ω_p = A_p (all faces of regular paths are regular)
+  Therefore: FULL boundary on regular paths = GLMY path homology
+
+  S70 reported: Transitive T_5 β = (5, 4, 0, 0, 0)
+  Our FULL result for T_5: see above
+
+  Transitive T_3:
+    Omega = [3, 3, 1]
+    FULL: β = [1, 0, 0]
+    INT:  β = [3, 2, 0]
+    Expected (GLMY literature): β = [1, 0, 0] for acyclic
+
+  Cyclic C_3:
+    Omega = [3, 3, 0]
+    FULL: β = [1, 1, 0]
+    INT:  β = [3, 3, 0]
+    Expected (GLMY): β = [1, 1, 0] (one 1-cycle)
+
+DONE.
