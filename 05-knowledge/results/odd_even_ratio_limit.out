@@ -1,0 +1,517 @@
+======================================================================
+ODD/EVEN RATIO LIMIT ANALYSIS
+======================================================================
+
+log(F_odd)/log(F_even) for large p:
+  p=    7: ratio = 8.55349468
+  p=   11: ratio = 7.27015148
+  p=   19: ratio = 6.63083859
+  p=   23: ratio = 6.50351905
+  p=   31: ratio = 6.35844748
+  p=   43: ratio = 6.25004730
+  p=   47: ratio = 6.22710713
+  p=   59: ratio = 6.17802132
+  p=   67: ratio = 6.15555850
+  p=   71: ratio = 6.14631583
+  p=   79: ratio = 6.13075836
+  p=   83: ratio = 6.12414998
+  p=  103: ratio = 6.09905807
+  p=  107: ratio = 6.09520064
+  p=  127: ratio = 6.07965449
+  p=  131: ratio = 6.07712947
+  p=  139: ratio = 6.07252591
+  p=  151: ratio = 6.06655546
+  p=  163: ratio = 6.06148215
+  p=  167: ratio = 6.05995631
+  p=  179: ratio = 6.05579561
+  p=  191: ratio = 6.05216686
+  p=  199: ratio = 6.04999491
+
+
+=== ANALYTICAL DERIVATION ===
+
+Numerical integrals over [0, pi/2]:
+  I_odd  = int log(1 + 1/(4sin^2 u)) du = 1.51166266
+  I_even = int log(1 + 1/(4cos^2 u)) du = 1.51166266
+  I_odd / I_even = 1.00000000
+
+Per-mode average contributions:
+  p=997: n_odd=249, n_even=249
+    avg log(1+Q) per odd mode:  1.648297
+    avg log(1+Q) per even mode: 0.275251 (log(5/4)=0.223144)
+    ratio of averages: 5.988338
+    ratio of totals:   5.988338
+    n_odd/n_even = 1.000000
+    total ratio = (avg_odd/avg_even) * (n_odd/n_even) = 5.988338
+  p=1999: n_odd=500, n_even=499
+    avg log(1+Q) per odd mode:  1.647823
+    avg log(1+Q) per even mode: 0.275003 (log(5/4)=0.223144)
+    ratio of averages: 5.992024
+    ratio of totals:   6.004032
+    n_odd/n_even = 1.002004
+    total ratio = (avg_odd/avg_even) * (n_odd/n_even) = 6.004032
+  p=4999: n_odd=1250, n_even=1249
+    avg log(1+Q) per odd mode:  1.649028
+    avg log(1+Q) per even mode: 0.275011 (log(5/4)=0.223144)
+    ratio of averages: 5.996230
+    ratio of totals:   6.001031
+    n_odd/n_even = 1.000801
+    total ratio = (avg_odd/avg_even) * (n_odd/n_even) = 6.001031
+
+
+Ratio at very large p:
+  p=  503: ratio = 6.01899241, log_odd=206.8745, log_even=34.3703
+  p=  523: ratio = 6.01822436, log_odd=215.1237, log_even=35.7454
+  p=  547: ratio = 6.01737729, log_odd=225.0227, log_even=37.3955
+  p=  563: ratio = 6.01685293, log_odd=231.6220, log_even=38.4955
+  p=  571: ratio = 6.01660183, log_odd=234.9217, log_even=39.0456
+  p=  587: ratio = 6.01612030, log_odd=241.5210, log_even=40.1456
+  p=  599: ratio = 6.01577612, log_odd=246.4705, log_even=40.9707
+  p=  607: ratio = 6.01555427, log_odd=249.7701, log_even=41.5207
+  p=  619: ratio = 6.01523230, log_odd=254.7196, log_even=42.3458
+  p=  631: ratio = 6.01492264, log_odd=259.6691, log_even=43.1708
+  p=  643: ratio = 6.01462460, log_odd=264.6186, log_even=43.9959
+  p=  647: ratio = 6.01452773, log_odd=266.2684, log_even=44.2709
+  p=  659: ratio = 6.01424419, log_odd=271.2179, log_even=45.0959
+  p=  683: ratio = 6.01370715, log_odd=281.1169, log_even=46.7460
+  p=  691: ratio = 6.01353646, log_odd=284.4166, log_even=47.2961
+  p=  719: ratio = 6.01296912, log_odd=295.9654, log_even=49.2212
+  p=  727: ratio = 6.01281509, log_odd=299.2651, log_even=49.7712
+  p=  739: ratio = 6.01259032, log_odd=304.2146, log_even=50.5963
+  p=  743: ratio = 6.01251701, log_odd=305.8644, log_even=50.8713
+  p=  751: ratio = 6.01237276, log_odd=309.1641, log_even=51.4213
+  p=  787: ratio = 6.01176007, log_odd=324.0125, log_even=53.8965
+  p=  811: ratio = 6.01138195, log_odd=333.9115, log_even=55.5465
+  p=  823: ratio = 6.01120119, log_odd=338.8610, log_even=56.3716
+  p=  827: ratio = 6.01114211, log_odd=340.5108, log_even=56.6466
+  p=  839: ratio = 6.01096826, log_odd=345.4603, log_even=57.4717
+  p=  859: ratio = 6.01068934, log_odd=353.7095, log_even=58.8467
+  p=  863: ratio = 6.01063512, log_odd=355.3593, log_even=59.1218
+  p=  883: ratio = 6.01037139, log_odd=363.6085, log_even=60.4968
+  p=  887: ratio = 6.01032007, log_odd=365.2583, log_even=60.7719
+  p=  907: ratio = 6.01007032, log_odd=373.5075, log_even=62.1469
+  p=  911: ratio = 6.01002169, log_odd=375.1573, log_even=62.4220
+  p=  919: ratio = 6.00992570, log_odd=378.4570, log_even=62.9720
+  p=  947: ratio = 6.00960256, log_odd=390.0058, log_even=64.8971
+  p=  967: ratio = 6.00938325, log_odd=398.2549, log_even=66.2722
+  p=  971: ratio = 6.00934047, log_odd=399.9048, log_even=66.5472
+  p=  983: ratio = 6.00921424, log_odd=404.8543, log_even=67.3722
+  p=  991: ratio = 6.00913179, log_odd=408.1539, log_even=67.9223
+  p= 1019: ratio = 6.00885345, log_odd=419.7027, log_even=69.8474
+  p= 1031: ratio = 6.00873880, log_odd=424.6522, log_even=70.6724
+  p= 1039: ratio = 6.00866385, log_odd=427.9519, log_even=71.2225
+  p= 1051: ratio = 6.00855356, log_odd=432.9014, log_even=72.0475
+  p= 1063: ratio = 6.00844577, log_odd=437.8509, log_even=72.8726
+  p= 1087: ratio = 6.00823736, log_odd=447.7499, log_even=74.5227
+  p= 1091: ratio = 6.00820351, log_odd=449.3997, log_even=74.7977
+  p= 1103: ratio = 6.00810347, log_odd=454.3492, log_even=75.6227
+  p= 1123: ratio = 6.00794148, log_odd=462.5983, log_even=76.9978
+  p= 1151: ratio = 6.00772419, log_odd=474.1472, log_even=78.9229
+  p= 1163: ratio = 6.00763428, log_odd=479.0967, log_even=79.7480
+  p= 1171: ratio = 6.00757537, log_odd=482.3963, log_even=80.2980
+  p= 1187: ratio = 6.00745993, log_odd=488.9956, log_even=81.3981
+  p= 1223: ratio = 6.00721126, log_odd=503.8441, log_even=83.8732
+  p= 1231: ratio = 6.00715798, log_odd=507.1438, log_even=84.4232
+  p= 1259: ratio = 6.00697685, log_odd=518.6926, log_even=86.3484
+  p= 1279: ratio = 6.00685234, log_odd=526.9418, log_even=87.7234
+  p= 1283: ratio = 6.00682790, log_odd=528.5916, log_even=87.9985
+  p= 1291: ratio = 6.00677949, log_odd=531.8913, log_even=88.5485
+  p= 1303: ratio = 6.00670798, log_odd=536.8408, log_even=89.3735
+  p= 1307: ratio = 6.00668444, log_odd=538.4906, log_even=89.6486
+  p= 1319: ratio = 6.00661467, log_odd=543.4401, log_even=90.4736
+  p= 1327: ratio = 6.00656886, log_odd=546.7397, log_even=91.0236
+  p= 1367: ratio = 6.00634788, log_odd=563.2380, log_even=93.7738
+  p= 1399: ratio = 6.00618021, log_odd=576.4367, log_even=95.9739
+  p= 1423: ratio = 6.00605942, log_odd=586.3357, log_even=97.6240
+  p= 1427: ratio = 6.00603969, log_odd=587.9855, log_even=97.8990
+  p= 1439: ratio = 6.00598114, log_odd=592.9350, log_even=98.7241
+  p= 1447: ratio = 6.00594265, log_odd=596.2347, log_even=99.2741
+  p= 1451: ratio = 6.00592356, log_odd=597.8845, log_even=99.5491
+  p= 1459: ratio = 6.00588570, log_odd=601.1842, log_even=100.0992
+  p= 1471: ratio = 6.00582969, log_odd=606.1337, log_even=100.9242
+  p= 1483: ratio = 6.00577459, log_odd=611.0832, log_even=101.7493
+  p= 1487: ratio = 6.00575642, log_odd=612.7330, log_even=102.0243
+  p= 1499: ratio = 6.00570249, log_odd=617.6825, log_even=102.8493
+  p= 1511: ratio = 6.00564942, log_odd=622.6320, log_even=103.6744
+  p= 1523: ratio = 6.00559719, log_odd=627.5815, log_even=104.4994
+  p= 1531: ratio = 6.00556283, log_odd=630.8811, log_even=105.0495
+  p= 1543: ratio = 6.00551195, log_odd=635.8306, log_even=105.8745
+  p= 1559: ratio = 6.00544534, log_odd=642.4299, log_even=106.9746
+  p= 1567: ratio = 6.00541254, log_odd=645.7296, log_even=107.5246
+  p= 1571: ratio = 6.00539627, log_odd=647.3794, log_even=107.7996
+  p= 1579: ratio = 6.00536397, log_odd=650.6791, log_even=108.3497
+  p= 1583: ratio = 6.00534795, log_odd=652.3289, log_even=108.6247
+  p= 1607: ratio = 6.00525347, log_odd=662.2279, log_even=110.2748
+  p= 1619: ratio = 6.00520729, log_odd=667.1774, log_even=111.0998
+  p= 1627: ratio = 6.00517688, log_odd=670.4771, log_even=111.6498
+  p= 1663: ratio = 6.00504365, log_odd=685.3256, log_even=114.1250
+  p= 1667: ratio = 6.00502921, log_odd=686.9754, log_even=114.4000
+  p= 1699: ratio = 6.00491609, log_odd=700.1740, log_even=116.6001
+  p= 1723: ratio = 6.00483401, log_odd=710.0730, log_even=118.2502
+  p= 1747: ratio = 6.00475420, log_odd=719.9720, log_even=119.9003
+  p= 1759: ratio = 6.00471510, log_odd=724.9215, log_even=120.7254
+  p= 1783: ratio = 6.00463851, log_odd=734.8205, log_even=122.3755
+  p= 1787: ratio = 6.00462594, log_odd=736.4703, log_even=122.6505
+  p= 1811: ratio = 6.00455171, log_odd=746.3693, log_even=124.3006
+  p= 1823: ratio = 6.00451533, log_odd=751.3188, log_even=125.1256
+  p= 1831: ratio = 6.00449134, log_odd=754.6185, log_even=125.6757
+  p= 1847: ratio = 6.00444399, log_odd=761.2178, log_even=126.7757
+  p= 1867: ratio = 6.00438595, log_odd=769.4669, log_even=128.1508
+  p= 1871: ratio = 6.00437449, log_odd=771.1168, log_even=128.4258
+  p= 1879: ratio = 6.00435171, log_odd=774.4164, log_even=128.9759
+  p= 1907: ratio = 6.00427351, log_odd=785.9653, log_even=130.9010
+  p= 1931: ratio = 6.00420829, log_odd=795.8642, log_even=132.5511
+  p= 1951: ratio = 6.00415517, log_odd=804.1134, log_even=133.9262
+  p= 1979: ratio = 6.00408261, log_odd=815.6622, log_even=135.8513
+  p= 1987: ratio = 6.00406225, log_odd=818.9619, log_even=136.4013
+  p= 1999: ratio = 6.00403202, log_odd=823.9114, log_even=137.2263
+  p= 2003: ratio = 6.00402203, log_odd=825.5612, log_even=137.5014
+  p= 2011: ratio = 6.00400215, log_odd=828.8609, log_even=138.0514
+  p= 2027: ratio = 6.00396288, log_odd=835.4602, log_even=139.1515
+  p= 2039: ratio = 6.00393383, log_odd=840.4097, log_even=139.9765
+  p= 2063: ratio = 6.00387675, log_odd=850.3087, log_even=141.6266
+  p= 2083: ratio = 6.00383019, log_odd=858.5578, log_even=143.0017
+  p= 2087: ratio = 6.00382098, log_odd=860.2077, log_even=143.2767
+  p= 2099: ratio = 6.00379358, log_odd=865.1572, log_even=144.1017
+  p= 2111: ratio = 6.00376649, log_odd=870.1066, log_even=144.9268
+  p= 2131: ratio = 6.00372201, log_odd=878.3558, log_even=146.3019
+  p= 2143: ratio = 6.00369573, log_odd=883.3053, log_even=147.1269
+  p= 2179: ratio = 6.00361861, log_odd=898.1538, log_even=149.6021
+  p= 2203: ratio = 6.00356860, log_odd=908.0528, log_even=151.2522
+  p= 2207: ratio = 6.00356037, log_odd=909.7026, log_even=151.5272
+  p= 2239: ratio = 6.00349560, log_odd=922.9012, log_even=153.7273
+  p= 2243: ratio = 6.00348763, log_odd=924.5511, log_even=154.0023
+  p= 2251: ratio = 6.00347178, log_odd=927.8507, log_even=154.5524
+  p= 2267: ratio = 6.00344042, log_odd=934.4501, log_even=155.6524
+  p= 2287: ratio = 6.00340184, log_odd=942.6992, log_even=157.0275
+  p= 2311: ratio = 6.00335643, log_odd=952.5982, log_even=158.6776
+  p= 2339: ratio = 6.00330462, log_odd=964.1470, log_even=160.6027
+  p= 2347: ratio = 6.00329005, log_odd=967.4467, log_even=161.1527
+  p= 2351: ratio = 6.00328280, log_odd=969.0965, log_even=161.4278
+  p= 2371: ratio = 6.00324692, log_odd=977.3457, log_even=162.8028
+  p= 2383: ratio = 6.00322568, log_odd=982.2952, log_even=163.6279
+  p= 2399: ratio = 6.00319769, log_odd=988.8945, log_even=164.7280
+  p= 2411: ratio = 6.00317694, log_odd=993.8440, log_even=165.5530
+  p= 2423: ratio = 6.00315640, log_odd=998.7935, log_even=166.3781
+  p= 2447: ratio = 6.00311593, log_odd=1008.6925, log_even=168.0282
+  p= 2459: ratio = 6.00309598, log_odd=1013.6420, log_even=168.8532
+  p= 2467: ratio = 6.00308280, log_odd=1016.9416, log_even=169.4032
+  p= 2503: ratio = 6.00302450, log_odd=1031.7901, log_even=171.8784
+  p= 2531: ratio = 6.00298031, log_odd=1043.3389, log_even=173.8035
+  p= 2539: ratio = 6.00296786, log_odd=1046.6386, log_even=174.3535
+  p= 2543: ratio = 6.00296167, log_odd=1048.2884, log_even=174.6285
+  p= 2551: ratio = 6.00294934, log_odd=1051.5881, log_even=175.1786
+  p= 2579: ratio = 6.00290679, log_odd=1063.1369, log_even=177.1037
+  p= 2591: ratio = 6.00288883, log_odd=1068.0864, log_even=177.9287
+  p= 2647: ratio = 6.00280720, log_odd=1091.1840, log_even=181.7790
+  p= 2659: ratio = 6.00279015, log_odd=1096.1335, log_even=182.6040
+  p= 2663: ratio = 6.00278451, log_odd=1097.7834, log_even=182.8790
+  p= 2671: ratio = 6.00277326, log_odd=1101.0830, log_even=183.4291
+  p= 2683: ratio = 6.00275652, log_odd=1106.0325, log_even=184.2541
+  p= 2687: ratio = 6.00275097, log_odd=1107.6823, log_even=184.5291
+  p= 2699: ratio = 6.00273443, log_odd=1112.6318, log_even=185.3542
+  p= 2707: ratio = 6.00272349, log_odd=1115.9315, log_even=185.9042
+  p= 2711: ratio = 6.00271804, log_odd=1117.5813, log_even=186.1792
+  p= 2719: ratio = 6.00270719, log_odd=1120.8810, log_even=186.7292
+  p= 2731: ratio = 6.00269103, log_odd=1125.8305, log_even=187.5543
+  p= 2767: ratio = 6.00264341, log_odd=1140.6790, log_even=190.0294
+  p= 2791: ratio = 6.00261234, log_odd=1150.5779, log_even=191.6795
+  p= 2803: ratio = 6.00259701, log_odd=1155.5274, log_even=192.5046
+  p= 2819: ratio = 6.00257677, log_odd=1162.1268, log_even=193.6046
+  p= 2843: ratio = 6.00254684, log_odd=1172.0258, log_even=195.2547
+  p= 2851: ratio = 6.00253697, log_odd=1175.3254, log_even=195.8048
+  p= 2879: ratio = 6.00250287, log_odd=1186.8742, log_even=197.7299
+  p= 2887: ratio = 6.00249325, log_odd=1190.1739, log_even=198.2799
+  p= 2903: ratio = 6.00247417, log_odd=1196.7732, log_even=199.3800
+  p= 2927: ratio = 6.00244594, log_odd=1206.6722, log_even=201.0301
+  p= 2939: ratio = 6.00243200, log_odd=1211.6217, log_even=201.8551
+  p= 2963: ratio = 6.00240445, log_odd=1221.5207, log_even=203.5052
+  p= 2971: ratio = 6.00239537, log_odd=1224.8204, log_even=204.0553
+  p= 2999: ratio = 6.00236396, log_odd=1236.3692, log_even=205.9804
+  p= 3011: ratio = 6.00235068, log_odd=1241.3187, log_even=206.8054
+
+
+=== THE RATIO DIVERGES! ===
+The ratio log(F_odd)/log(F_even) is NOT converging to 6.
+It's slowly increasing because log(F_odd) grows as m*log(phi)*2
+while log(F_even) grows as m*log(5/4)/2.
+The asymptotic ratio should be: 2*log(phi) / (log(5/4)/2)
+  = 4*log(phi)/log(5/4) = 8.626049
+
+  Corrected asymptotic ratio = 4*log(phi)/log(5/4) - 1 = 7.626049
+  Compare with observed: ~6.0
+
+  4*log(phi)/log(5/4) = 8.626049
+  4*log(phi)/log(5/4) - 1 = 7.626049
+
+
+Actual growth rates:
+  p=  103, m=  51: log(F)/m=0.956080, log(F_odd)/m=0.821403, log(F_even)/m=0.134677, log(F_even)/(m/2)=0.274741
+  p=  107, m=  53: log(F)/m=0.956320, log(F_odd)/m=0.821536, log(F_even)/m=0.134784, log(F_even)/(m/2)=0.274752
+  p=  127, m=  63: log(F)/m=0.957289, log(F_odd)/m=0.822072, log(F_even)/m=0.135217, log(F_even)/(m/2)=0.274796
+  p=  131, m=  65: log(F)/m=0.957447, log(F_odd)/m=0.822159, log(F_even)/m=0.135287, log(F_even)/(m/2)=0.274803
+  p=  139, m=  69: log(F)/m=0.957735, log(F_odd)/m=0.822319, log(F_even)/m=0.135416, log(F_even)/(m/2)=0.274815
+  p=  151, m=  75: log(F)/m=0.958110, log(F_odd)/m=0.822526, log(F_even)/m=0.135584, log(F_even)/(m/2)=0.274832
+  p=  163, m=  81: log(F)/m=0.958430, log(F_odd)/m=0.822703, log(F_even)/m=0.135726, log(F_even)/(m/2)=0.274846
+  p=  167, m=  83: log(F)/m=0.958526, log(F_odd)/m=0.822757, log(F_even)/m=0.135769, log(F_even)/(m/2)=0.274850
+  p=  179, m=  89: log(F)/m=0.958789, log(F_odd)/m=0.822902, log(F_even)/m=0.135887, log(F_even)/(m/2)=0.274862
+  p=  191, m=  95: log(F)/m=0.959018, log(F_odd)/m=0.823029, log(F_even)/m=0.135989, log(F_even)/(m/2)=0.274872
+  p=  199, m=  99: log(F)/m=0.959156, log(F_odd)/m=0.823105, log(F_even)/m=0.136051, log(F_even)/(m/2)=0.274878
+  p=  211, m= 105: log(F)/m=0.959343, log(F_odd)/m=0.823209, log(F_even)/m=0.136134, log(F_even)/(m/2)=0.274886
+  p=  223, m= 111: log(F)/m=0.959509, log(F_odd)/m=0.823301, log(F_even)/m=0.136208, log(F_even)/(m/2)=0.274893
+  p=  227, m= 113: log(F)/m=0.959561, log(F_odd)/m=0.823329, log(F_even)/m=0.136231, log(F_even)/(m/2)=0.274895
+  p=  239, m= 119: log(F)/m=0.959705, log(F_odd)/m=0.823409, log(F_even)/m=0.136296, log(F_even)/(m/2)=0.274901
+  p=  251, m= 125: log(F)/m=0.959836, log(F_odd)/m=0.823482, log(F_even)/m=0.136354, log(F_even)/(m/2)=0.274907
+  p=  263, m= 131: log(F)/m=0.959954, log(F_odd)/m=0.823547, log(F_even)/m=0.136407, log(F_even)/(m/2)=0.274912
+  p=  271, m= 135: log(F)/m=0.960027, log(F_odd)/m=0.823588, log(F_even)/m=0.136439, log(F_even)/(m/2)=0.274915
+  p=  283, m= 141: log(F)/m=0.960129, log(F_odd)/m=0.823644, log(F_even)/m=0.136485, log(F_even)/(m/2)=0.274920
+  p=  307, m= 153: log(F)/m=0.960309, log(F_odd)/m=0.823744, log(F_even)/m=0.136565, log(F_even)/(m/2)=0.274927
+  p=  311, m= 155: log(F)/m=0.960337, log(F_odd)/m=0.823759, log(F_even)/m=0.136577, log(F_even)/(m/2)=0.274929
+  p=  331, m= 165: log(F)/m=0.960463, log(F_odd)/m=0.823829, log(F_even)/m=0.136634, log(F_even)/(m/2)=0.274934
+  p=  347, m= 173: log(F)/m=0.960554, log(F_odd)/m=0.823879, log(F_even)/m=0.136674, log(F_even)/(m/2)=0.274938
+  p=  359, m= 179: log(F)/m=0.960616, log(F_odd)/m=0.823914, log(F_even)/m=0.136702, log(F_even)/(m/2)=0.274940
+  p=  367, m= 183: log(F)/m=0.960656, log(F_odd)/m=0.823936, log(F_even)/m=0.136720, log(F_even)/(m/2)=0.274942
+  p=  379, m= 189: log(F)/m=0.960712, log(F_odd)/m=0.823967, log(F_even)/m=0.136745, log(F_even)/(m/2)=0.274944
+  p=  383, m= 191: log(F)/m=0.960730, log(F_odd)/m=0.823977, log(F_even)/m=0.136753, log(F_even)/(m/2)=0.274945
+  p=  419, m= 209: log(F)/m=0.960876, log(F_odd)/m=0.824058, log(F_even)/m=0.136818, log(F_even)/(m/2)=0.274951
+  p=  431, m= 215: log(F)/m=0.960919, log(F_odd)/m=0.824082, log(F_even)/m=0.136837, log(F_even)/(m/2)=0.274953
+  p=  439, m= 219: log(F)/m=0.960946, log(F_odd)/m=0.824097, log(F_even)/m=0.136849, log(F_even)/(m/2)=0.274954
+  p=  443, m= 221: log(F)/m=0.960960, log(F_odd)/m=0.824104, log(F_even)/m=0.136855, log(F_even)/(m/2)=0.274955
+  p=  463, m= 231: log(F)/m=0.961023, log(F_odd)/m=0.824140, log(F_even)/m=0.136884, log(F_even)/(m/2)=0.274958
+  p=  467, m= 233: log(F)/m=0.961035, log(F_odd)/m=0.824146, log(F_even)/m=0.136889, log(F_even)/(m/2)=0.274958
+  p=  479, m= 239: log(F)/m=0.961070, log(F_odd)/m=0.824165, log(F_even)/m=0.136905, log(F_even)/(m/2)=0.274960
+  p=  487, m= 243: log(F)/m=0.961092, log(F_odd)/m=0.824178, log(F_even)/m=0.136915, log(F_even)/(m/2)=0.274961
+  p=  491, m= 245: log(F)/m=0.961103, log(F_odd)/m=0.824184, log(F_even)/m=0.136919, log(F_even)/(m/2)=0.274961
+  p=  499, m= 249: log(F)/m=0.961124, log(F_odd)/m=0.824196, log(F_even)/m=0.136929, log(F_even)/(m/2)=0.274962
+  p=  503, m= 251: log(F)/m=0.961135, log(F_odd)/m=0.824201, log(F_even)/m=0.136933, log(F_even)/(m/2)=0.274962
+  p=  523, m= 261: log(F)/m=0.961184, log(F_odd)/m=0.824229, log(F_even)/m=0.136955, log(F_even)/(m/2)=0.274964
+  p=  547, m= 273: log(F)/m=0.961239, log(F_odd)/m=0.824259, log(F_even)/m=0.136980, log(F_even)/(m/2)=0.274967
+  p=  563, m= 281: log(F)/m=0.961272, log(F_odd)/m=0.824278, log(F_even)/m=0.136995, log(F_even)/(m/2)=0.274968
+  p=  571, m= 285: log(F)/m=0.961289, log(F_odd)/m=0.824287, log(F_even)/m=0.137002, log(F_even)/(m/2)=0.274969
+  p=  587, m= 293: log(F)/m=0.961320, log(F_odd)/m=0.824304, log(F_even)/m=0.137016, log(F_even)/(m/2)=0.274970
+  p=  599, m= 299: log(F)/m=0.961342, log(F_odd)/m=0.824316, log(F_even)/m=0.137026, log(F_even)/(m/2)=0.274971
+  p=  607, m= 303: log(F)/m=0.961356, log(F_odd)/m=0.824324, log(F_even)/m=0.137032, log(F_even)/(m/2)=0.274972
+  p=  619, m= 309: log(F)/m=0.961377, log(F_odd)/m=0.824335, log(F_even)/m=0.137041, log(F_even)/(m/2)=0.274973
+  p=  631, m= 315: log(F)/m=0.961397, log(F_odd)/m=0.824346, log(F_even)/m=0.137050, log(F_even)/(m/2)=0.274973
+  p=  643, m= 321: log(F)/m=0.961416, log(F_odd)/m=0.824357, log(F_even)/m=0.137059, log(F_even)/(m/2)=0.274974
+  p=  647, m= 323: log(F)/m=0.961422, log(F_odd)/m=0.824361, log(F_even)/m=0.137062, log(F_even)/(m/2)=0.274974
+  p=  659, m= 329: log(F)/m=0.961440, log(F_odd)/m=0.824371, log(F_even)/m=0.137070, log(F_even)/(m/2)=0.274975
+  p=  683, m= 341: log(F)/m=0.961475, log(F_odd)/m=0.824390, log(F_even)/m=0.137085, log(F_even)/(m/2)=0.274977
+  p=  691, m= 345: log(F)/m=0.961486, log(F_odd)/m=0.824396, log(F_even)/m=0.137090, log(F_even)/(m/2)=0.274977
+  p=  719, m= 359: log(F)/m=0.961523, log(F_odd)/m=0.824416, log(F_even)/m=0.137106, log(F_even)/(m/2)=0.274979
+  p=  727, m= 363: log(F)/m=0.961532, log(F_odd)/m=0.824422, log(F_even)/m=0.137111, log(F_even)/(m/2)=0.274979
+  p=  739, m= 369: log(F)/m=0.961547, log(F_odd)/m=0.824430, log(F_even)/m=0.137117, log(F_even)/(m/2)=0.274980
+  p=  743, m= 371: log(F)/m=0.961552, log(F_odd)/m=0.824432, log(F_even)/m=0.137119, log(F_even)/(m/2)=0.274980
+  p=  751, m= 375: log(F)/m=0.961561, log(F_odd)/m=0.824437, log(F_even)/m=0.137123, log(F_even)/(m/2)=0.274980
+  p=  787, m= 393: log(F)/m=0.961600, log(F_odd)/m=0.824459, log(F_even)/m=0.137141, log(F_even)/(m/2)=0.274982
+  p=  811, m= 405: log(F)/m=0.961625, log(F_odd)/m=0.824473, log(F_even)/m=0.137152, log(F_even)/(m/2)=0.274983
+  p=  823, m= 411: log(F)/m=0.961637, log(F_odd)/m=0.824479, log(F_even)/m=0.137157, log(F_even)/(m/2)=0.274983
+  p=  827, m= 413: log(F)/m=0.961640, log(F_odd)/m=0.824481, log(F_even)/m=0.137159, log(F_even)/(m/2)=0.274984
+  p=  839, m= 419: log(F)/m=0.961652, log(F_odd)/m=0.824488, log(F_even)/m=0.137164, log(F_even)/(m/2)=0.274984
+  p=  859, m= 429: log(F)/m=0.961670, log(F_odd)/m=0.824498, log(F_even)/m=0.137172, log(F_even)/(m/2)=0.274985
+  p=  863, m= 431: log(F)/m=0.961673, log(F_odd)/m=0.824500, log(F_even)/m=0.137173, log(F_even)/(m/2)=0.274985
+  p=  883, m= 441: log(F)/m=0.961690, log(F_odd)/m=0.824509, log(F_even)/m=0.137181, log(F_even)/(m/2)=0.274986
+  p=  887, m= 443: log(F)/m=0.961693, log(F_odd)/m=0.824511, log(F_even)/m=0.137183, log(F_even)/(m/2)=0.274986
+  p=  907, m= 453: log(F)/m=0.961710, log(F_odd)/m=0.824520, log(F_even)/m=0.137190, log(F_even)/(m/2)=0.274986
+  p=  911, m= 455: log(F)/m=0.961713, log(F_odd)/m=0.824522, log(F_even)/m=0.137191, log(F_even)/(m/2)=0.274987
+  p=  919, m= 459: log(F)/m=0.961719, log(F_odd)/m=0.824525, log(F_even)/m=0.137194, log(F_even)/(m/2)=0.274987
+  p=  947, m= 473: log(F)/m=0.961740, log(F_odd)/m=0.824537, log(F_even)/m=0.137203, log(F_even)/(m/2)=0.274988
+  p=  967, m= 483: log(F)/m=0.961754, log(F_odd)/m=0.824544, log(F_even)/m=0.137209, log(F_even)/(m/2)=0.274988
+  p=  971, m= 485: log(F)/m=0.961757, log(F_odd)/m=0.824546, log(F_even)/m=0.137211, log(F_even)/(m/2)=0.274988
+  p=  983, m= 491: log(F)/m=0.961765, log(F_odd)/m=0.824550, log(F_even)/m=0.137214, log(F_even)/(m/2)=0.274989
+  p=  991, m= 495: log(F)/m=0.961770, log(F_odd)/m=0.824553, log(F_even)/m=0.137217, log(F_even)/(m/2)=0.274989
+  p= 1019, m= 509: log(F)/m=0.961788, log(F_odd)/m=0.824563, log(F_even)/m=0.137225, log(F_even)/(m/2)=0.274990
+  p= 1031, m= 515: log(F)/m=0.961795, log(F_odd)/m=0.824567, log(F_even)/m=0.137228, log(F_even)/(m/2)=0.274990
+  p= 1039, m= 519: log(F)/m=0.961800, log(F_odd)/m=0.824570, log(F_even)/m=0.137230, log(F_even)/(m/2)=0.274990
+  p= 1051, m= 525: log(F)/m=0.961807, log(F_odd)/m=0.824574, log(F_even)/m=0.137233, log(F_even)/(m/2)=0.274991
+  p= 1063, m= 531: log(F)/m=0.961814, log(F_odd)/m=0.824578, log(F_even)/m=0.137236, log(F_even)/(m/2)=0.274991
+  p= 1087, m= 543: log(F)/m=0.961828, log(F_odd)/m=0.824585, log(F_even)/m=0.137242, log(F_even)/(m/2)=0.274991
+  p= 1091, m= 545: log(F)/m=0.961830, log(F_odd)/m=0.824587, log(F_even)/m=0.137243, log(F_even)/(m/2)=0.274991
+  p= 1103, m= 551: log(F)/m=0.961837, log(F_odd)/m=0.824590, log(F_even)/m=0.137246, log(F_even)/(m/2)=0.274992
+  p= 1123, m= 561: log(F)/m=0.961847, log(F_odd)/m=0.824596, log(F_even)/m=0.137251, log(F_even)/(m/2)=0.274992
+  p= 1151, m= 575: log(F)/m=0.961861, log(F_odd)/m=0.824604, log(F_even)/m=0.137257, log(F_even)/(m/2)=0.274993
+  p= 1163, m= 581: log(F)/m=0.961867, log(F_odd)/m=0.824607, log(F_even)/m=0.137260, log(F_even)/(m/2)=0.274993
+  p= 1171, m= 585: log(F)/m=0.961871, log(F_odd)/m=0.824609, log(F_even)/m=0.137262, log(F_even)/(m/2)=0.274993
+  p= 1187, m= 593: log(F)/m=0.961878, log(F_odd)/m=0.824613, log(F_even)/m=0.137265, log(F_even)/(m/2)=0.274993
+  p= 1223, m= 611: log(F)/m=0.961894, log(F_odd)/m=0.824622, log(F_even)/m=0.137272, log(F_even)/(m/2)=0.274994
+  p= 1231, m= 615: log(F)/m=0.961898, log(F_odd)/m=0.824624, log(F_even)/m=0.137274, log(F_even)/(m/2)=0.274994
+  p= 1259, m= 629: log(F)/m=0.961909, log(F_odd)/m=0.824631, log(F_even)/m=0.137279, log(F_even)/(m/2)=0.274995
+  p= 1279, m= 639: log(F)/m=0.961917, log(F_odd)/m=0.824635, log(F_even)/m=0.137282, log(F_even)/(m/2)=0.274995
+  p= 1283, m= 641: log(F)/m=0.961919, log(F_odd)/m=0.824636, log(F_even)/m=0.137283, log(F_even)/(m/2)=0.274995
+  p= 1291, m= 645: log(F)/m=0.961922, log(F_odd)/m=0.824638, log(F_even)/m=0.137284, log(F_even)/(m/2)=0.274995
+  p= 1303, m= 651: log(F)/m=0.961927, log(F_odd)/m=0.824640, log(F_even)/m=0.137287, log(F_even)/(m/2)=0.274996
+  p= 1307, m= 653: log(F)/m=0.961928, log(F_odd)/m=0.824641, log(F_even)/m=0.137287, log(F_even)/(m/2)=0.274996
+  p= 1319, m= 659: log(F)/m=0.961933, log(F_odd)/m=0.824644, log(F_even)/m=0.137289, log(F_even)/(m/2)=0.274996
+  p= 1327, m= 663: log(F)/m=0.961936, log(F_odd)/m=0.824645, log(F_even)/m=0.137291, log(F_even)/(m/2)=0.274996
+  p= 1367, m= 683: log(F)/m=0.961950, log(F_odd)/m=0.824653, log(F_even)/m=0.137297, log(F_even)/(m/2)=0.274996
+  p= 1399, m= 699: log(F)/m=0.961961, log(F_odd)/m=0.824659, log(F_even)/m=0.137302, log(F_even)/(m/2)=0.274997
+  p= 1423, m= 711: log(F)/m=0.961969, log(F_odd)/m=0.824663, log(F_even)/m=0.137305, log(F_even)/(m/2)=0.274997
+  p= 1427, m= 713: log(F)/m=0.961970, log(F_odd)/m=0.824664, log(F_even)/m=0.137306, log(F_even)/(m/2)=0.274997
+  p= 1439, m= 719: log(F)/m=0.961974, log(F_odd)/m=0.824666, log(F_even)/m=0.137307, log(F_even)/(m/2)=0.274997
+  p= 1447, m= 723: log(F)/m=0.961976, log(F_odd)/m=0.824668, log(F_even)/m=0.137309, log(F_even)/(m/2)=0.274998
+  p= 1451, m= 725: log(F)/m=0.961977, log(F_odd)/m=0.824668, log(F_even)/m=0.137309, log(F_even)/(m/2)=0.274998
+  p= 1459, m= 729: log(F)/m=0.961980, log(F_odd)/m=0.824670, log(F_even)/m=0.137310, log(F_even)/(m/2)=0.274998
+  p= 1471, m= 735: log(F)/m=0.961984, log(F_odd)/m=0.824672, log(F_even)/m=0.137312, log(F_even)/(m/2)=0.274998
+  p= 1483, m= 741: log(F)/m=0.961987, log(F_odd)/m=0.824674, log(F_even)/m=0.137313, log(F_even)/(m/2)=0.274998
+  p= 1487, m= 743: log(F)/m=0.961988, log(F_odd)/m=0.824674, log(F_even)/m=0.137314, log(F_even)/(m/2)=0.274998
+  p= 1499, m= 749: log(F)/m=0.961992, log(F_odd)/m=0.824676, log(F_even)/m=0.137316, log(F_even)/(m/2)=0.274998
+  p= 1511, m= 755: log(F)/m=0.961995, log(F_odd)/m=0.824678, log(F_even)/m=0.137317, log(F_even)/(m/2)=0.274998
+  p= 1523, m= 761: log(F)/m=0.961999, log(F_odd)/m=0.824680, log(F_even)/m=0.137319, log(F_even)/(m/2)=0.274998
+  p= 1531, m= 765: log(F)/m=0.962001, log(F_odd)/m=0.824681, log(F_even)/m=0.137320, log(F_even)/(m/2)=0.274999
+  p= 1543, m= 771: log(F)/m=0.962004, log(F_odd)/m=0.824683, log(F_even)/m=0.137321, log(F_even)/(m/2)=0.274999
+  p= 1559, m= 779: log(F)/m=0.962008, log(F_odd)/m=0.824685, log(F_even)/m=0.137323, log(F_even)/(m/2)=0.274999
+  p= 1567, m= 783: log(F)/m=0.962010, log(F_odd)/m=0.824687, log(F_even)/m=0.137324, log(F_even)/(m/2)=0.274999
+  p= 1571, m= 785: log(F)/m=0.962012, log(F_odd)/m=0.824687, log(F_even)/m=0.137324, log(F_even)/(m/2)=0.274999
+  p= 1579, m= 789: log(F)/m=0.962014, log(F_odd)/m=0.824688, log(F_even)/m=0.137325, log(F_even)/(m/2)=0.274999
+  p= 1583, m= 791: log(F)/m=0.962015, log(F_odd)/m=0.824689, log(F_even)/m=0.137326, log(F_even)/(m/2)=0.274999
+  p= 1607, m= 803: log(F)/m=0.962021, log(F_odd)/m=0.824692, log(F_even)/m=0.137328, log(F_even)/(m/2)=0.274999
+  p= 1619, m= 809: log(F)/m=0.962024, log(F_odd)/m=0.824694, log(F_even)/m=0.137330, log(F_even)/(m/2)=0.275000
+  p= 1627, m= 813: log(F)/m=0.962026, log(F_odd)/m=0.824695, log(F_even)/m=0.137331, log(F_even)/(m/2)=0.275000
+  p= 1663, m= 831: log(F)/m=0.962034, log(F_odd)/m=0.824700, log(F_even)/m=0.137335, log(F_even)/(m/2)=0.275000
+  p= 1667, m= 833: log(F)/m=0.962035, log(F_odd)/m=0.824700, log(F_even)/m=0.137335, log(F_even)/(m/2)=0.275000
+  p= 1699, m= 849: log(F)/m=0.962043, log(F_odd)/m=0.824704, log(F_even)/m=0.137338, log(F_even)/(m/2)=0.275000
+  p= 1723, m= 861: log(F)/m=0.962048, log(F_odd)/m=0.824707, log(F_even)/m=0.137341, log(F_even)/(m/2)=0.275001
+  p= 1747, m= 873: log(F)/m=0.962053, log(F_odd)/m=0.824710, log(F_even)/m=0.137343, log(F_even)/(m/2)=0.275001
+  p= 1759, m= 879: log(F)/m=0.962056, log(F_odd)/m=0.824712, log(F_even)/m=0.137344, log(F_even)/(m/2)=0.275001
+  p= 1783, m= 891: log(F)/m=0.962061, log(F_odd)/m=0.824714, log(F_even)/m=0.137346, log(F_even)/(m/2)=0.275001
+  p= 1787, m= 893: log(F)/m=0.962061, log(F_odd)/m=0.824715, log(F_even)/m=0.137347, log(F_even)/(m/2)=0.275001
+  p= 1811, m= 905: log(F)/m=0.962066, log(F_odd)/m=0.824717, log(F_even)/m=0.137349, log(F_even)/(m/2)=0.275001
+  p= 1823, m= 911: log(F)/m=0.962069, log(F_odd)/m=0.824719, log(F_even)/m=0.137350, log(F_even)/(m/2)=0.275001
+  p= 1831, m= 915: log(F)/m=0.962070, log(F_odd)/m=0.824720, log(F_even)/m=0.137350, log(F_even)/(m/2)=0.275001
+  p= 1847, m= 923: log(F)/m=0.962073, log(F_odd)/m=0.824721, log(F_even)/m=0.137352, log(F_even)/(m/2)=0.275002
+  p= 1867, m= 933: log(F)/m=0.962077, log(F_odd)/m=0.824723, log(F_even)/m=0.137353, log(F_even)/(m/2)=0.275002
+  p= 1871, m= 935: log(F)/m=0.962078, log(F_odd)/m=0.824724, log(F_even)/m=0.137354, log(F_even)/(m/2)=0.275002
+  p= 1879, m= 939: log(F)/m=0.962079, log(F_odd)/m=0.824725, log(F_even)/m=0.137354, log(F_even)/(m/2)=0.275002
+  p= 1907, m= 953: log(F)/m=0.962084, log(F_odd)/m=0.824727, log(F_even)/m=0.137357, log(F_even)/(m/2)=0.275002
+  p= 1931, m= 965: log(F)/m=0.962088, log(F_odd)/m=0.824730, log(F_even)/m=0.137359, log(F_even)/(m/2)=0.275002
+  p= 1951, m= 975: log(F)/m=0.962092, log(F_odd)/m=0.824732, log(F_even)/m=0.137360, log(F_even)/(m/2)=0.275002
+  p= 1979, m= 989: log(F)/m=0.962097, log(F_odd)/m=0.824734, log(F_even)/m=0.137362, log(F_even)/(m/2)=0.275003
+  p= 1987, m= 993: log(F)/m=0.962098, log(F_odd)/m=0.824735, log(F_even)/m=0.137363, log(F_even)/(m/2)=0.275003
+  p= 1999, m= 999: log(F)/m=0.962100, log(F_odd)/m=0.824736, log(F_even)/m=0.137364, log(F_even)/(m/2)=0.275003
+  p= 2003, m=1001: log(F)/m=0.962100, log(F_odd)/m=0.824736, log(F_even)/m=0.137364, log(F_even)/(m/2)=0.275003
+  p= 2011, m=1005: log(F)/m=0.962102, log(F_odd)/m=0.824737, log(F_even)/m=0.137365, log(F_even)/(m/2)=0.275003
+  p= 2027, m=1013: log(F)/m=0.962104, log(F_odd)/m=0.824739, log(F_even)/m=0.137366, log(F_even)/(m/2)=0.275003
+  p= 2039, m=1019: log(F)/m=0.962106, log(F_odd)/m=0.824740, log(F_even)/m=0.137367, log(F_even)/(m/2)=0.275003
+  p= 2063, m=1031: log(F)/m=0.962110, log(F_odd)/m=0.824742, log(F_even)/m=0.137368, log(F_even)/(m/2)=0.275003
+  p= 2083, m=1041: log(F)/m=0.962113, log(F_odd)/m=0.824743, log(F_even)/m=0.137370, log(F_even)/(m/2)=0.275003
+  p= 2087, m=1043: log(F)/m=0.962113, log(F_odd)/m=0.824744, log(F_even)/m=0.137370, log(F_even)/(m/2)=0.275003
+  p= 2099, m=1049: log(F)/m=0.962115, log(F_odd)/m=0.824745, log(F_even)/m=0.137371, log(F_even)/(m/2)=0.275003
+  p= 2111, m=1055: log(F)/m=0.962117, log(F_odd)/m=0.824746, log(F_even)/m=0.137371, log(F_even)/(m/2)=0.275003
+  p= 2131, m=1065: log(F)/m=0.962120, log(F_odd)/m=0.824747, log(F_even)/m=0.137373, log(F_even)/(m/2)=0.275004
+  p= 2143, m=1071: log(F)/m=0.962122, log(F_odd)/m=0.824748, log(F_even)/m=0.137373, log(F_even)/(m/2)=0.275004
+  p= 2179, m=1089: log(F)/m=0.962127, log(F_odd)/m=0.824751, log(F_even)/m=0.137376, log(F_even)/(m/2)=0.275004
+  p= 2203, m=1101: log(F)/m=0.962130, log(F_odd)/m=0.824753, log(F_even)/m=0.137377, log(F_even)/(m/2)=0.275004
+  p= 2207, m=1103: log(F)/m=0.962130, log(F_odd)/m=0.824753, log(F_even)/m=0.137377, log(F_even)/(m/2)=0.275004
+  p= 2239, m=1119: log(F)/m=0.962135, log(F_odd)/m=0.824755, log(F_even)/m=0.137379, log(F_even)/(m/2)=0.275004
+  p= 2243, m=1121: log(F)/m=0.962135, log(F_odd)/m=0.824756, log(F_even)/m=0.137379, log(F_even)/(m/2)=0.275004
+  p= 2251, m=1125: log(F)/m=0.962136, log(F_odd)/m=0.824756, log(F_even)/m=0.137380, log(F_even)/(m/2)=0.275004
+  p= 2267, m=1133: log(F)/m=0.962138, log(F_odd)/m=0.824757, log(F_even)/m=0.137381, log(F_even)/(m/2)=0.275004
+  p= 2287, m=1143: log(F)/m=0.962141, log(F_odd)/m=0.824759, log(F_even)/m=0.137382, log(F_even)/(m/2)=0.275004
+  p= 2311, m=1155: log(F)/m=0.962144, log(F_odd)/m=0.824760, log(F_even)/m=0.137383, log(F_even)/(m/2)=0.275005
+  p= 2339, m=1169: log(F)/m=0.962147, log(F_odd)/m=0.824762, log(F_even)/m=0.137385, log(F_even)/(m/2)=0.275005
+  p= 2347, m=1173: log(F)/m=0.962148, log(F_odd)/m=0.824763, log(F_even)/m=0.137385, log(F_even)/(m/2)=0.275005
+  p= 2351, m=1175: log(F)/m=0.962148, log(F_odd)/m=0.824763, log(F_even)/m=0.137385, log(F_even)/(m/2)=0.275005
+  p= 2371, m=1185: log(F)/m=0.962151, log(F_odd)/m=0.824764, log(F_even)/m=0.137386, log(F_even)/(m/2)=0.275005
+  p= 2383, m=1191: log(F)/m=0.962152, log(F_odd)/m=0.824765, log(F_even)/m=0.137387, log(F_even)/(m/2)=0.275005
+  p= 2399, m=1199: log(F)/m=0.962154, log(F_odd)/m=0.824766, log(F_even)/m=0.137388, log(F_even)/(m/2)=0.275005
+  p= 2411, m=1205: log(F)/m=0.962155, log(F_odd)/m=0.824767, log(F_even)/m=0.137388, log(F_even)/(m/2)=0.275005
+  p= 2423, m=1211: log(F)/m=0.962157, log(F_odd)/m=0.824768, log(F_even)/m=0.137389, log(F_even)/(m/2)=0.275005
+  p= 2447, m=1223: log(F)/m=0.962159, log(F_odd)/m=0.824769, log(F_even)/m=0.137390, log(F_even)/(m/2)=0.275005
+  p= 2459, m=1229: log(F)/m=0.962160, log(F_odd)/m=0.824770, log(F_even)/m=0.137391, log(F_even)/(m/2)=0.275005
+  p= 2467, m=1233: log(F)/m=0.962161, log(F_odd)/m=0.824770, log(F_even)/m=0.137391, log(F_even)/(m/2)=0.275005
+  p= 2503, m=1251: log(F)/m=0.962165, log(F_odd)/m=0.824772, log(F_even)/m=0.137393, log(F_even)/(m/2)=0.275005
+  p= 2531, m=1265: log(F)/m=0.962168, log(F_odd)/m=0.824774, log(F_even)/m=0.137394, log(F_even)/(m/2)=0.275006
+  p= 2539, m=1269: log(F)/m=0.962169, log(F_odd)/m=0.824774, log(F_even)/m=0.137394, log(F_even)/(m/2)=0.275006
+  p= 2543, m=1271: log(F)/m=0.962169, log(F_odd)/m=0.824775, log(F_even)/m=0.137395, log(F_even)/(m/2)=0.275006
+  p= 2551, m=1275: log(F)/m=0.962170, log(F_odd)/m=0.824775, log(F_even)/m=0.137395, log(F_even)/(m/2)=0.275006
+  p= 2579, m=1289: log(F)/m=0.962173, log(F_odd)/m=0.824776, log(F_even)/m=0.137396, log(F_even)/(m/2)=0.275006
+  p= 2591, m=1295: log(F)/m=0.962174, log(F_odd)/m=0.824777, log(F_even)/m=0.137397, log(F_even)/(m/2)=0.275006
+  p= 2647, m=1323: log(F)/m=0.962179, log(F_odd)/m=0.824780, log(F_even)/m=0.137399, log(F_even)/(m/2)=0.275006
+  p= 2659, m=1329: log(F)/m=0.962180, log(F_odd)/m=0.824781, log(F_even)/m=0.137400, log(F_even)/(m/2)=0.275006
+  p= 2663, m=1331: log(F)/m=0.962181, log(F_odd)/m=0.824781, log(F_even)/m=0.137400, log(F_even)/(m/2)=0.275006
+  p= 2671, m=1335: log(F)/m=0.962181, log(F_odd)/m=0.824781, log(F_even)/m=0.137400, log(F_even)/(m/2)=0.275006
+  p= 2683, m=1341: log(F)/m=0.962182, log(F_odd)/m=0.824782, log(F_even)/m=0.137401, log(F_even)/(m/2)=0.275006
+  p= 2687, m=1343: log(F)/m=0.962183, log(F_odd)/m=0.824782, log(F_even)/m=0.137401, log(F_even)/(m/2)=0.275006
+  p= 2699, m=1349: log(F)/m=0.962184, log(F_odd)/m=0.824783, log(F_even)/m=0.137401, log(F_even)/(m/2)=0.275006
+  p= 2707, m=1353: log(F)/m=0.962185, log(F_odd)/m=0.824783, log(F_even)/m=0.137401, log(F_even)/(m/2)=0.275006
+  p= 2711, m=1355: log(F)/m=0.962185, log(F_odd)/m=0.824783, log(F_even)/m=0.137402, log(F_even)/(m/2)=0.275006
+  p= 2719, m=1359: log(F)/m=0.962186, log(F_odd)/m=0.824784, log(F_even)/m=0.137402, log(F_even)/(m/2)=0.275006
+  p= 2731, m=1365: log(F)/m=0.962187, log(F_odd)/m=0.824784, log(F_even)/m=0.137402, log(F_even)/(m/2)=0.275006
+  p= 2767, m=1383: log(F)/m=0.962190, log(F_odd)/m=0.824786, log(F_even)/m=0.137404, log(F_even)/(m/2)=0.275006
+  p= 2791, m=1395: log(F)/m=0.962192, log(F_odd)/m=0.824787, log(F_even)/m=0.137405, log(F_even)/(m/2)=0.275007
+  p= 2803, m=1401: log(F)/m=0.962193, log(F_odd)/m=0.824788, log(F_even)/m=0.137405, log(F_even)/(m/2)=0.275007
+  p= 2819, m=1409: log(F)/m=0.962194, log(F_odd)/m=0.824788, log(F_even)/m=0.137406, log(F_even)/(m/2)=0.275007
+  p= 2843, m=1421: log(F)/m=0.962196, log(F_odd)/m=0.824789, log(F_even)/m=0.137407, log(F_even)/(m/2)=0.275007
+  p= 2851, m=1425: log(F)/m=0.962197, log(F_odd)/m=0.824790, log(F_even)/m=0.137407, log(F_even)/(m/2)=0.275007
+  p= 2879, m=1439: log(F)/m=0.962199, log(F_odd)/m=0.824791, log(F_even)/m=0.137408, log(F_even)/(m/2)=0.275007
+  p= 2887, m=1443: log(F)/m=0.962199, log(F_odd)/m=0.824791, log(F_even)/m=0.137408, log(F_even)/(m/2)=0.275007
+  p= 2903, m=1451: log(F)/m=0.962201, log(F_odd)/m=0.824792, log(F_even)/m=0.137409, log(F_even)/(m/2)=0.275007
+  p= 2927, m=1463: log(F)/m=0.962203, log(F_odd)/m=0.824793, log(F_even)/m=0.137409, log(F_even)/(m/2)=0.275007
+  p= 2939, m=1469: log(F)/m=0.962203, log(F_odd)/m=0.824794, log(F_even)/m=0.137410, log(F_even)/(m/2)=0.275007
+  p= 2963, m=1481: log(F)/m=0.962205, log(F_odd)/m=0.824795, log(F_even)/m=0.137411, log(F_even)/(m/2)=0.275007
+  p= 2971, m=1485: log(F)/m=0.962206, log(F_odd)/m=0.824795, log(F_even)/m=0.137411, log(F_even)/(m/2)=0.275007
+  p= 2999, m=1499: log(F)/m=0.962208, log(F_odd)/m=0.824796, log(F_even)/m=0.137412, log(F_even)/(m/2)=0.275007
+  p= 3011, m=1505: log(F)/m=0.962209, log(F_odd)/m=0.824796, log(F_even)/m=0.137412, log(F_even)/(m/2)=0.275007
+
+  Expected log(F)/m -> 2*log(phi) = 0.962424
+  Expected log(F_even)/(m/2) -> log(5/4) = 0.223144
+
+  Asymptotic ratio = (2*log(phi) - log(5/4)/2) / (log(5/4)/2)
+                   = 7.626049
+                   = 4*log(phi)/log(5/4) - 1
+                   = 7.626049
+
+  Checking for clean form:
+  4*log(phi)/log(5/4) = 8.6260494148
+  Is it close to an integer? 0.373951
+  Nearest integer: 9
+  Ratio/phi = 5.331192
+  Ratio - phi = 7.008015
+  Ratio*log(2) = 5.979122
+
+
+=== RECONCILE WITH PALEY det(I+A) ===
+The circulant parameterization needs checking.
+
+Paley orientation set (QRs in {1,..,m}):
+  p=7: QR mod p = [1, 2, 4], Paley S = [1, 2]
+  p=11: QR mod p = [1, 3, 4, 5, 9], Paley S = [1, 3, 4, 5]
+  p=19: QR mod p = [1, 4, 5, 6, 7, 9, 11, 16, 17], Paley S = [1, 4, 5, 6, 7, 9]
+  p=23: QR mod p = [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18], Paley S = [1, 2, 3, 4, 6, 8, 9]
+  p=31: QR mod p = [1, 2, 4, 5, 7, 8, 9, 10, 14, 16, 18, 19, 20, 25, 28], Paley S = [1, 2, 4, 5, 7, 8, 9, 10, 14]
+  p=43: QR mod p = [1, 4, 6, 9, 10, 11, 13, 14, 15, 16, 17, 21, 23, 24, 25, 31, 35, 36, 38, 40, 41], Paley S = [1, 4, 6, 9, 10, 11, 13, 14, 15, 16, 17, 21]
+
+det(I+A) with CORRECT Paley identification:
+
+  p=7, Paley S = [1, 2]:
+    S=[3]                 : det=     32.00, sum4=   105.0, var=0.3079
+    S=[1, 2]              : det=     32.00, sum4=   105.0, var=0.3079 <-- PALEY
+    S=[1]                 : det=      4.00, sum4=   133.0, var=0.8735
+    S=[1, 3]              : det=      4.00, sum4=   133.0, var=0.8735
+    S=[1, 2, 3]           : det=      4.00, sum4=   133.0, var=0.8735
+    ...
+    S=[2]                 : det=      4.00, sum4=   133.0, var=0.8735
+    S=[2, 3]              : det=      4.00, sum4=   133.0, var=0.8735
+    S=[]                  : det=      4.00, sum4=   133.0, var=0.8735
+
+    Paley rank by det(I+A):    2/8
+    Paley rank by sum|lam|^4:  2/8 (1=min)
+    Paley rank by spec_var:    2/8 (1=min)
+
+  p=11, Paley S = [1, 3, 4, 5]:
+    S=[2]                 : det=   1458.00, sum4=   715.0, var=0.8826
+    S=[1, 3, 4, 5]        : det=   1458.00, sum4=   715.0, var=0.8826 <-- PALEY
+    S=[1, 4]              : det=    138.00, sum4=   759.0, var=1.4294
+    S=[2, 3, 5]           : det=    138.00, sum4=   759.0, var=1.4294
+    S=[5]                 : det=    138.00, sum4=   803.0, var=1.5366
+    ...
+    S=[2, 4]              : det=      6.00, sum4=   935.0, var=2.2649
+    S=[2, 5]              : det=      6.00, sum4=   935.0, var=2.2649
+    S=[2, 3]              : det=      6.00, sum4=   935.0, var=2.2649
+
+    Paley rank by det(I+A):    2/32
+    Paley rank by sum|lam|^4:  2/32 (1=min)
+    Paley rank by spec_var:    2/32 (1=min)
+
+
+DONE — odd_even_ratio_limit.py complete
