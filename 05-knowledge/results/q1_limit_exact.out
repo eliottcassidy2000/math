@@ -1,0 +1,176 @@
+EXACT DERIVATION OF Q_1/ΣQ LIMIT
+============================================================
+
+THEOREM: For Interval tournament C_p^{1..m} with m=(p-1)/2:
+
+  Q_1 = 1/(4·sin²(π/(2p)))
+
+Proof: Let x = π/p. Then
+  sin(mπ/p) = sin((p-1)π/(2p)) = sin(π/2 - x/2) = cos(x/2)
+  sin(π/p)  = sin(x) = 2·sin(x/2)·cos(x/2)
+
+  Q_1 = cos²(x/2) / sin²(x)
+       = cos²(x/2) / [4·sin²(x/2)·cos²(x/2)]
+       = 1 / [4·sin²(x/2)]
+       = 1 / [4·sin²(π/(2p))]   □
+
+Verification:
+  p=   7: Q1_direct = 5.04891734, formula = 5.04891734, match = True
+  p=  11: Q1_direct = 12.34353752, formula = 12.34353752, match = True
+  p=  13: Q1_direct = 17.20685727, formula = 17.20685727, match = True
+  p=  17: Q1_direct = 29.36529789, formula = 29.36529789, match = True
+  p=  23: Q1_direct = 53.68231728, formula = 53.68231728, match = True
+  p=  97: Q1_direct = 953.41435459, formula = 953.41435459, match = True
+  p= 197: Q1_direct = 3932.25715037, formula = 3932.25715037, match = True
+  p= 499: Q1_direct = 25229.15938162, formula = 25229.15938162, match = True
+  p= 997: Q1_direct = 100714.25176451, formula = 100714.25176451, match = True
+
+COROLLARY: Q_1/ΣQ = 2 / [(p²-1)·sin²(π/(2p))]
+
+  Since ΣQ = m(m+1)/2 = (p²-1)/8,
+  Q_1/ΣQ = [1/(4sin²(π/(2p)))] / [(p²-1)/8]
+         = 2 / [(p²-1)·sin²(π/(2p))]
+
+LIMIT (PROVED):
+  Q_1/ΣQ → 8/π² = 0.810569469139 as p → ∞
+
+Proof: sin(π/(2p)) = π/(2p) - O(p⁻³)
+  sin²(π/(2p)) = π²/(4p²) · (1 - π²/(12p²) + O(p⁻⁴))
+  (p²-1)·sin²(π/(2p)) = π²/4 · (1-1/p²)(1-π²/(12p²)+...) → π²/4
+  Q_1/ΣQ = 2/(π²/4) = 8/π²  □
+
+ASYMPTOTIC EXPANSION:
+  Q_1/ΣQ = 8/π² + 8(12+π²)/(12π²) · p⁻² + O(p⁻⁴)
+  = 0.8105694691 + 1.4772361358/p² + O(p⁻⁴)
+
+Verification of asymptotic expansion (should be O(p⁻⁴) residual):
+  p=   7: exact-8/π² = 3.09e-02, (exact-8/π²)·p² = 1.514921 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8466
+  p=  11: exact-8/π² = 1.23e-02, (exact-8/π²)·p² = 1.492297 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8224
+  p=  23: exact-8/π² = 2.80e-03, (exact-8/π²)·p² = 1.480657 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8099
+  p=  97: exact-8/π² = 1.57e-04, (exact-8/π²)·p² = 1.477428 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8064
+  p= 197: exact-8/π² = 3.81e-05, (exact-8/π²)·p² = 1.477283 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8063
+  p= 499: exact-8/π² = 5.93e-06, (exact-8/π²)·p² = 1.477243 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8062
+  p= 997: exact-8/π² = 1.49e-06, (exact-8/π²)·p² = 1.477238 (expect 1.477236), O(p⁻⁴) residual·p⁴ = 1.8061
+
+
+============================================================
+NOW: Q_1/m² EXACT LIMIT
+============================================================
+
+Q_1/m² = 1/(4m²·sin²(π/(2p)))
+       = 1/(4·((p-1)/2)²·sin²(π/(2p)))
+       = 1/((p-1)²·sin²(π/(2p)))
+
+As p→∞: (p-1)²·sin²(π/(2p)) → p²·(π/(2p))² = π²/4
+So Q_1/m² → 4/π² = 0.4052847346
+
+Convergence of Q_1/m²:
+  p=    7: Q_1/m² = 0.5609908155, 4/π² = 0.4052847346, diff = 1.56e-01, diff·p = 1.0899
+  p=   11: Q_1/m² = 0.4937415008, 4/π² = 0.4052847346, diff = 8.85e-02, diff·p = 0.9730
+  p=   23: Q_1/m² = 0.4436555147, 4/π² = 0.4052847346, diff = 3.84e-02, diff·p = 0.8825
+  p=   97: Q_1/m² = 0.4138083136, 4/π² = 0.4052847346, diff = 8.52e-03, diff·p = 0.8268
+  p=  197: Q_1/m² = 0.4094395200, 4/π² = 0.4052847346, diff = 4.15e-03, diff·p = 0.8185
+  p=  499: Q_1/m² = 0.4069153624, 4/π² = 0.4052847346, diff = 1.63e-03, diff·p = 0.8137
+  p=  997: Q_1/m² = 0.4060993039, 4/π² = 0.4052847346, diff = 8.15e-04, diff·p = 0.8121
+  p= 4999: Q_1/m² = 0.4054469429, 4/π² = 0.4052847346, diff = 1.62e-04, diff·p = 0.8109
+
+Observation: diff ∝ 1/p. The next-order correction:
+  Q_1/m² = 4/π² + c₁/p + c₂/p² + ...
+
+Predicted c₁ = 8/π² = 0.810569
+  p=  997: diff·p = 0.812126 (expect 0.810569)
+  p= 4999: diff·p = 0.810879 (expect 0.810569)
+
+
+============================================================
+TROPICAL CONSTANT κ REVISITED
+============================================================
+
+κ = log(max subset prod) / log(F_p)
+max subset prod = ∏{Q_k : Q_k > 1}
+
+How many Q_k > 1?
+Q_k > 1 ⟺ sin²(mπk/p) > sin²(πk/p)
+       ⟺ |sin(mπk/p)| > |sin(πk/p)|
+
+  p=  23: 4/11 modes > 1 (0.3636), κ = 0.690002
+  p=  97: 16/48 modes > 1 (0.3333), κ = 0.675178
+  p= 197: 33/98 modes > 1 (0.3367), κ = 0.673195
+  p= 499: 83/249 modes > 1 (0.3333), κ = 0.672074
+  p= 997: 166/498 modes > 1 (0.3333), κ = 0.671715
+
+Fraction of Q_k > 1 → 1/3 (confirmed from previous analysis)
+κ → ??? Let's check convergence more carefully:
+
+Kappa values (last 10):
+  p=4919: κ = 0.67143108
+  p=4921: κ = 0.67143105
+  p=4931: κ = 0.67143090
+  p=4949: κ = 0.67143064
+  p=4951: κ = 0.67143061
+  p=4967: κ = 0.67143038
+  p=4969: κ = 0.67143035
+  p=4987: κ = 0.67143009
+  p=4997: κ = 0.67142995
+  p=4999: κ = 0.67142992
+
+Final value: κ = 0.67142992
+2/3 = 0.66666667
+Diff from 2/3: 4.76e-03
+
+
+============================================================
+THE FRACTION Q_k > 1: EXACT ANALYSIS
+============================================================
+
+Q_k > 1 ⟺ |sin(mπk/p)| > |sin(πk/p)|
+Let θ = πk/p ∈ (0, π/2) for k = 1,...,m.
+Then Q_k > 1 ⟺ |sin(mθ)| > |sin(θ)|
+
+For large m, sin(mθ) oscillates rapidly. The fraction of θ ∈ (0,π/2)
+where |sin(mθ)| > |sin(θ)| converges to:
+  ∫_0^{π/2} P(|sin(mθ)| > sin(θ)) dθ · (2/π)
+
+For large m, sin(mθ) is approximately equidistributed on [-1,1]
+with density 1/(π√(1-x²)). So:
+  P(|sin(mθ)| > sin(θ)) = P(|X| > sin(θ)) where X ~ arcsin distr.
+  = 2·(1/π)·arccos(sin(θ)) = 2·(1/π)·(π/2 - θ) = 1 - 2θ/π
+
+Average over θ ~ Uniform(0, π/2):
+  ∫_0^{π/2} (1 - 2θ/π) · (2/π) dθ = (2/π)[θ - θ²/π]_0^{π/2}
+  = (2/π)(π/2 - π/4) = (2/π)(π/4) = 1/2
+
+But we observed 1/3, not 1/2! The discrepancy is because the
+equidistribution assumption breaks down: for small θ, mθ is NOT
+large enough for equidistribution. The θ ≈ 0 region contributes
+disproportionately because Q_k > 1 there always (Q_1 is huge).
+
+Let me re-examine numerically, separating the contribution of
+Q_1 (always > 1) from the bulk.
+
+Bulk (k≥2) fraction with Q_k > 1:
+  p=1931: 0.332988
+  p=1937: 0.332989
+  p=1939: 0.332645
+  p=1949: 0.332991
+  p=1951: 0.332649
+  p=1957: 0.332651
+  p=1961: 0.332993
+  p=1979: 0.332996
+  p=1981: 0.332659
+  p=1997: 0.332999
+
+Bulk limit: 0.332999
+Is it 1/3 too? No, with k=1 included:
+
+Total fraction (all k):
+  p=1931: 0.333679
+  p=1937: 0.333678
+  p=1939: 0.333333
+  p=1949: 0.333676
+  p=1951: 0.333333
+  p=1957: 0.333333
+  p=1961: 0.333673
+  p=1979: 0.333670
+  p=1981: 0.333333
+  p=1997: 0.333667
