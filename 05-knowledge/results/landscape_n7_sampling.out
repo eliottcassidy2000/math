@@ -1,0 +1,65 @@
+======================================================================
+VERIFYING DP HAMILTONIAN PATH COUNT
+======================================================================
+  n=3: 8/8 correct
+  n=4: 50/50 correct
+  n=5: 50/50 correct
+
+======================================================================
+n=7 LANDSCAPE SAMPLING (m=21, 2^21 = 2,097,152 tournaments)
+======================================================================
+  Sampling 5000 random tournaments...
+    1000/5000 done (28/s), cache size: 73490
+    2000/5000 done (30/s), cache size: 137745
+    3000/5000 done (32/s), cache size: 197369
+    4000/5000 done (33/s), cache size: 252808
+  Done in 145.7s (cache size: 304227)
+
+  Unique final H values: [123, 135, 159, 171, 175, 189]
+  Maximum H reached: 189
+  Minimum final H: 123
+  Fraction reaching max H: 520/5000 = 10.4%
+
+  *** SPURIOUS LOCAL MAXIMA DETECTED at n=7 ***
+    H=123: 68 (1.4%)
+      Score sequence: (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(5))
+    H=135: 126 (2.5%)
+      Score sequence: (np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(5))
+    H=159: 2175 (43.5%)
+      Score sequence: (np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(4))
+    H=171: 862 (17.2%)
+      Score sequence: (np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3))
+    H=175: 1249 (25.0%)
+      Score sequence: (np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3))
+    H=189: 520 (10.4%)
+      Score sequence: (np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3))
+
+  Steps statistics:
+    Mean: 2.8
+    Max: 6
+    Min: 0
+
+  Checking regular tournament H value:
+    H(P_7) = 189
+    Score sequence: (np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3))
+    Is this the max? True
+
+======================================================================
+n=8 LANDSCAPE QUICK CHECK (m=28)
+======================================================================
+  Sampling 500 random tournaments...
+    100/500 done (6/s)
+    200/500 done (6/s)
+    300/500 done (6/s)
+    400/500 done (6/s)
+  Done in 84.0s
+  Unique final H values: [477, 657, 661]
+  Max H: 661
+  Fraction at max: 476/500
+  SPURIOUS LOCAL MAXIMA at n=8 (even)
+    H=477: 3 (0.6%)
+    H=657: 21 (4.2%)
+    H=661: 476 (95.2%)
+
+
+DONE — landscape_n7_sampling.py complete
