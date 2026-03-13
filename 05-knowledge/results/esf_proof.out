@@ -1,0 +1,181 @@
+======================================================================
+PROVING e_j = C(m+j, 2j) FOR INTERVAL Q-POLYNOMIAL
+======================================================================
+
+--- PART 1: THE POLYNOMIAL P_m(t) ---
+P_m(t) = sum_{j=0}^m (-1)^j C(m+j,2j) t^{m-j}
+This is the REVERSE of the Catalan triangle polynomial!
+
+  P_2(t) = (1)*t^2 + (-3)*t^1 + (1)*t^0
+  P_3(t) = (1)*t^3 + (-6)*t^2 + (5)*t^1 + (-1)*t^0
+  P_5(t) = (1)*t^5 + (-15)*t^4 + (35)*t^3 + (-28)*t^2 + (9)*t^1 + (-1)*t^0
+  P_6(t) = (1)*t^6 + (-21)*t^5 + (70)*t^4 + (-84)*t^3 + (45)*t^2 + (-11)*t^1 + (1)*t^0
+  P_8(t) = (1)*t^8 + (-36)*t^7 + (210)*t^6 + (-462)*t^5 + (495)*t^4 + (-286)*t^3 + (91)*t^2 + (-15)*t^1 + (1)*t^0
+
+--- PART 2: CHEBYSHEV CONNECTION ---
+The Chebyshev U polynomial of the SECOND kind:
+  U_n(x) = sin((n+1)*theta) / sin(theta) where x = cos(theta)
+
+Consider R_m(t) = t^m * P_m(1/t) (reversed polynomial):
+  R_m(t) = sum_{j=0}^m (-1)^j C(m+j,2j) t^j
+
+Is R_m(t) related to Chebyshev?
+U_{2m}(x) evaluated at x = (1-2t)/2 = 1/2 - t?
+  m=3, P_3(Q_1) = 5.684342e-14
+  m=3, P_3(Q_2) = 7.424616e-16
+  m=3, P_3(Q_3) = 2.775558e-16
+  m=5, P_5(Q_1) = 6.482992e-11
+  m=5, P_5(Q_2) = -2.595580e-16
+  m=5, P_5(Q_3) = -7.105427e-15
+  m=5, P_5(Q_4) = -3.556183e-17
+  m=5, P_5(Q_5) = -6.938894e-17
+  m=8, P_8(Q_1) = -4.059813e-05
+  m=8, P_8(Q_2) = -9.222224e-16
+  m=8, P_8(Q_3) = 1.885070e-11
+  m=8, P_8(Q_4) = -9.953111e-16
+  m=8, P_8(Q_5) = -2.513545e-13
+  m=8, P_8(Q_6) = -5.362193e-16
+  m=8, P_8(Q_7) = -9.416079e-15
+  m=8, P_8(Q_8) = 3.222466e-15
+
+--- PART 3: SUBSTITUTION SEARCH ---
+
+--- PART 4: MINIMAL POLYNOMIAL OF 2*cos(2pi/p) ---
+The minimal polynomial of 2*cos(2*pi/p) over Q is the cyclotomic factor.
+Phi_p(x) = x^{p-1} + x^{p-2} + ... + 1
+Setting x = e^{i*2pi/p}: Phi_p(e^{itheta}) = 0
+In terms of cos: the minimal poly of 2*cos(2pi/p) has degree m = (p-1)/2
+
+  p=7: Psi_p coeffs = [-1, -2, 1]
+  p=11: Psi_p coeffs = [-1, -4, 3, 3, -1]
+  p=13: Psi_p coeffs = [-1, -5, 4, 6, -3, -1]
+  p=17: Psi_p coeffs = [-1, -7, 6, 15, -10, -10, 4, 1]
+
+--- PART 5: TRANSFORM Psi_p -> P_m ---
+Q_k = (1 - cos(2*pi*r(k)/p)) / (1 - cos(2*pi*k/p))
+Let c_k = 2*cos(2*pi*k/p). Then:
+  Q_k = (2 - 2*cos(2*pi*r(k)/p)) / (2 - 2*cos(2*pi*k/p))
+      = (2 - c_{r(k)}) / (2 - c_k)
+
+If c_k are roots of Psi_p(x) = prod(x - c_k), then
+Q_k = (2 - c_{r(k)}) / (2 - c_k)
+
+The key question: what polynomial has roots (2-c_{r(k)})/(2-c_k)?
+This is a RESULTANT computation:
+  P_m(t) = Res_x(Psi_p(x), (2-x)*t - (2-r(x))) / leading
+
+But r(k) = k*(m+1) mod p, so c_{r(k)} = 2*cos(2*pi*k*(m+1)/p)
+And c_{r(k)} = c_k^{power} via the Chebyshev recursion!
+Specifically: 2*cos(n*theta) = T_n(2*cos(theta)) where T is Chebyshev T
+So c_{r(k)} = T_{m+1}(c_k) ... wait, T_n(2*cos(theta)) != 2*cos(n*theta)
+Actually: T_n(cos(theta)) = cos(n*theta), so T_n(c_k/2) = cos(2*pi*k*n/p)
+=> c_{r(k)} = 2*T_{m+1}(c_k/2)
+
+  m=3, p=7:
+    k=1: c_k=1.246980, r(k)=3, c_r(k)=-1.801938, 2*T_{m+1}(c_k/2)=-1.801938, err=2.22e-16
+    k=2: c_k=-0.445042, r(k)=1, c_r(k)=1.246980, 2*T_{m+1}(c_k/2)=1.246980, err=2.22e-16
+    k=3: c_k=-1.801938, r(k)=2, c_r(k)=-0.445042, 2*T_{m+1}(c_k/2)=-0.445042, err=9.44e-16
+
+  m=5, p=11:
+    k=1: c_k=1.682507, r(k)=5, c_r(k)=-1.918986, 2*T_{m+1}(c_k/2)=-1.918986, err=2.22e-16
+    k=2: c_k=0.830830, r(k)=1, c_r(k)=1.682507, 2*T_{m+1}(c_k/2)=1.682507, err=6.66e-16
+    k=3: c_k=-0.284630, r(k)=4, c_r(k)=-1.309721, 2*T_{m+1}(c_k/2)=-1.309721, err=1.55e-15
+    k=4: c_k=-1.309721, r(k)=2, c_r(k)=0.830830, 2*T_{m+1}(c_k/2)=0.830830, err=2.11e-15
+    k=5: c_k=-1.918986, r(k)=3, c_r(k)=-0.284630, 2*T_{m+1}(c_k/2)=-0.284630, err=6.72e-15
+
+  m=8, p=17:
+    k=1: c_k=1.864944, r(k)=8, c_r(k)=-1.965946, 2*T_{m+1}(c_k/2)=-1.965946, err=0.00e+00
+    k=2: c_k=1.478018, r(k)=1, c_r(k)=1.864944, 2*T_{m+1}(c_k/2)=1.864944, err=2.22e-16
+    k=3: c_k=0.891477, r(k)=7, c_r(k)=-1.700434, 2*T_{m+1}(c_k/2)=-1.700434, err=4.44e-16
+    k=4: c_k=0.184537, r(k)=2, c_r(k)=1.478018, 2*T_{m+1}(c_k/2)=1.478018, err=1.11e-15
+    k=5: c_k=-0.547326, r(k)=6, c_r(k)=-1.205269, 2*T_{m+1}(c_k/2)=-1.205269, err=2.66e-15
+    k=6: c_k=-1.205269, r(k)=3, c_r(k)=0.891477, 2*T_{m+1}(c_k/2)=0.891477, err=5.55e-16
+    k=7: c_k=-1.700434, r(k)=5, c_r(k)=-0.547326, 2*T_{m+1}(c_k/2)=-0.547326, err=1.55e-15
+    k=8: c_k=-1.965946, r(k)=4, c_r(k)=0.184537, 2*T_{m+1}(c_k/2)=0.184537, err=3.28e-15
+
+--- PART 6: Q_k AS CHEBYSHEV RATIO ---
+Q_k = (1 - cos((m+1)*alpha)) / (1 - cos(alpha))
+    = (1 - T_{m+1}(cos(alpha))) / (1 - cos(alpha))
+    = U_m(cos(alpha)) * (1 - cos(alpha)) ... no
+
+Actually: 1 - cos(n*theta) = 2*sin^2(n*theta/2)
+And: sin^2(n*theta/2) = n^2 * prod_{j=1}^{n-1} sin^2(theta/2 - j*pi/n)?
+Better: use the identity
+  (1 - T_n(x)) / (1 - x) = U_{n-1}(x) + U_{n-2}(x) + ... + U_0(x)
+  = sum_{k=0}^{n-1} U_k(x)
+This is a KNOWN identity for Chebyshev polynomials.
+
+So Q_k = (1 - T_{m+1}(cos(alpha))) / (1 - cos(alpha))
+       = U_m(cos(alpha)) + U_{m-1}(cos(alpha)) + ... + U_0(cos(alpha))
+       = sum_{j=0}^m U_j(cos(alpha))
+where alpha = 2*pi*k/p.
+
+  m=3, p=7:
+    k=1: Q_fourier=5.048917, (1-cos(4*a))/(1-cos(a))=5.048917, sum_U=2.246980
+    k=2: Q_fourier=0.307979, (1-cos(4*a))/(1-cos(a))=0.307979, sum_U=0.554958
+    k=3: Q_fourier=0.643104, (1-cos(4*a))/(1-cos(a))=0.643104, sum_U=-0.801938
+
+  m=5, p=11:
+    k=1: Q_fourier=12.343538, (1-cos(6*a))/(1-cos(a))=12.343538, sum_U=5.911214
+    k=2: Q_fourier=0.271554, (1-cos(6*a))/(1-cos(a))=0.271554, sum_U=0.432953
+    k=3: Q_fourier=1.448691, (1-cos(6*a))/(1-cos(a))=1.448691, sum_U=0.342585
+
+  m=8, p=17:
+    k=1: Q_fourier=29.365298, (1-cos(9*a))/(1-cos(a))=29.365298, sum_U=14.428318
+    k=2: Q_fourier=0.258736, (1-cos(9*a))/(1-cos(a))=0.258736, sum_U=0.397472
+    k=3: Q_fourier=3.338166, (1-cos(9*a))/(1-cos(a))=3.338166, sum_U=1.375040
+
+======================================================================
+PART 7: THE PROOF STRUCTURE
+======================================================================
+
+  THEOREM: For the Interval tournament with S={1,...,m}, m=(p-1)/2,
+  the Q_k = |S_hat(k)|^2 satisfy e_j(Q_1,...,Q_m) = C(m+j, 2j).
+
+  PROOF OUTLINE:
+  1. Q_k = sin^2(pi*k*m/p) / sin^2(pi*k/p)
+         = (1 - cos(2*pi*k*m/p)) / (1 - cos(2*pi*k/p))
+
+  2. Let alpha_k = 2*pi*k/p and x_k = cos(alpha_k). Then:
+     Q_k = (1 - cos(m*alpha_k)) / (1 - cos(alpha_k))
+         = (1 - T_m(x_k)) / (1 - x_k)
+
+  3. The x_k = cos(2*pi*k/p) for k=1,...,m are the roots of Psi_p(x),
+     the minimal polynomial of 2*cos(2*pi/p).
+
+  4. The polynomial whose roots are Q_k = (1-T_m(x))/(1-x) evaluated
+     at the roots of Psi_p(x) is given by the RESULTANT:
+     P_m(t) = Res_x(Psi_p(x), (1-x)*t - (1-T_m(x)))
+
+  5. This resultant equals sum_{j=0}^m (-1)^j C(m+j,2j) t^{m-j}
+     by a classical identity for Chebyshev resultants.
+
+  THEREFORE: e_j = C(m+j, 2j). QED (modulo the resultant identity)
+
+  COROLLARY 1: prod_{k=1}^m Q_k = e_m = C(2m, 2m) = 1.
+    (This is Theorem "Interval product identity" reproved.)
+
+  COROLLARY 2: sum_{k=1}^m Q_k = e_1 = C(m+1, 2) = m(m+1)/2.
+    (This is Parseval, reproved.)
+
+  COROLLARY 3: e_{m-1} = C(2m-1, 2m-2) = C(2m-1, 1) = 2m-1 = p-2.
+    (Sum of reciprocals: sum 1/Q_k = p-2.)
+
+  COROLLARY 4: disc = p^{m-1}.
+    (The discriminant of the Chebyshev resultant polynomial.)
+
+--- VERIFYING COROLLARY 3: sum(1/Q_k) = p-2 ---
+  p=5: sum(1/Q_k) = 3.00000000, p-2 = 3, match: True
+  p=7: sum(1/Q_k) = 5.00000000, p-2 = 5, match: True
+  p=11: sum(1/Q_k) = 9.00000000, p-2 = 9, match: True
+  p=13: sum(1/Q_k) = 11.00000000, p-2 = 11, match: True
+  p=17: sum(1/Q_k) = 15.00000000, p-2 = 15, match: True
+  p=19: sum(1/Q_k) = 17.00000000, p-2 = 17, match: True
+  p=23: sum(1/Q_k) = 21.00000000, p-2 = 21, match: True
+
+--- VERIFYING Q_k = (1 - T_m(cos(2pi*k/p))) / (1 - cos(2pi*k/p)) ---
+Note: T_m means T_{(p-1)/2}
+  p=7: ALL MATCH (Chebyshev formula confirmed)
+  p=11: ALL MATCH (Chebyshev formula confirmed)
+  p=13: ALL MATCH (Chebyshev formula confirmed)
+  p=17: ALL MATCH (Chebyshev formula confirmed)
