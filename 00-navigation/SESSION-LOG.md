@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67i — 2026-03-13: Fibonacci-Vitali-Ergodic Trinity — unified measurability framework
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67h (context recovery after compaction)
+**Summary of work:**
+- **Fibonacci word analysis**: Mode pattern (Q_k > 1) is NOT Sturmian but periodic-prefix (101010...000). Factor complexity n+1 up to ~m/3 then plateaus. (HYP-725)
+- **Pisano period dichotomy (HYP-726)**: pi(p)|(p-1) iff (5/p)=+1. Always pi(p)|(p²-1).
+- **PALEY IDENTIFICATION CORRECTED (HYP-727)**: Must use QR∩{1,..,m}, not {1,..,m}. With correct ID, Paley maximizes det(I+A) and minimizes sum|λ|⁴.
+- **Odd/even log ratio diverges (HYP-728)**: NOT 6 — approaches 4·log(φ)/log(5/4)-1 ≈ 7.63. Slow convergence due to O(log p/p) correction.
+- **UNIFIED MEASURABILITY (HYP-729)**: Regular tournaments have H_4=0 EXACTLY in Walsh-Hadamard decomposition. H = H_0 + H_2 with no degree-4 correction. Non-regular tournaments have H_4≠0. The "non-measurable fraction" grows from 0% (n≤4) to 1.27% (n=5) to 1.72% (n=6).
+- **φ = ENERGY PER TOPOLOGICAL SPHERE (HYP-730)**: Each S^{m+1} in the homotopy decomposition of P_p carries average spectral weight → log(φ). This is the deepest geometric interpretation of the golden ratio in this project.
+- **Reidemeister torsion conjecture (HYP-731, OPEN)**: tau(P_p) should relate to F_p. Boundary matrix implementation has d²≠0 issue; needs GLMY-specific face conditions.
+- **Integrated kind-pasteur-S61 work**: Walsh-Hadamard Fourier structure, Z_v bridge measure, Vitali tournament analysis.
+
+**New contributions:** HYP-725-731, 6 scripts, unified Fibonacci-Walsh-Vitali bridge
+**Scripts created:** fibonacci_word_ergodic.py, odd_even_ratio_limit.py, unified_measurability.py, diagonal_fibonacci_homology.py, reidemeister_torsion_paley.py
+**Key formula:** avg spectral weight per S^{m+1} sphere = log(F_p)/(p-1) → log(φ)
+**Unresolved:** Reidemeister torsion (GLMY boundary implementation), NM fraction limit as n→∞, Fibonacci word deeper structure
+
 ## opus-2026-03-13-S71b — 2026-03-13: Orbit Complex Analysis & P_19 Ω Extension (6th context window)
 
 **Account:** opus
