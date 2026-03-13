@@ -1,0 +1,185 @@
+======================================================================
+SIGN ALTERNATION IN CYCLE-LENGTH WALSH COEFFICIENTS
+Hypothesis: sign(h_hat_{c_k}[{a,b}]) = (-1)^{(k-3)/2} * chi(ab)
+======================================================================
+
+### p=7 ###
+
+  Verifying alternation at p=7:
+    k    pair           h_hat   sign  chi(ab)  (-1)^e  expected   match
+    5  (1,2)          3.5000      +        +       -         -      NO
+    5  (1,3)         -3.5000      -        -       -         +      NO
+    5  (2,3)         -3.5000      -        -       -         +      NO
+    7  (1,2)        -19.2500      -        +       +         +      NO
+    7  (1,3)         19.2500      +        -       +         -      NO
+    7  (2,3)         19.2500      +        -       +         -      NO
+
+  Total: 0/6 match the alternation formula
+  By cycle length:
+    c_3: PASS (0 nonzero coefficients)
+    c_5: FAIL (3 nonzero coefficients)
+    c_7: FAIL (3 nonzero coefficients)
+
+======================================================================
+EIGENVALUE EXPLANATION at p=7
+======================================================================
+
+  Paley tournament:
+    lambda_0 = 2.0 (= m = 3)
+    Re(lambda_t) for t!=0: min=-1.123490, max=0.400969 (should be -0.5)
+    Im(lambda_t) = D_t: ['1.757', '0.541', '-0.348', '0.348', '-0.541']
+
+    Re(z^k) expansion coefficients (z = -1/2 + iD):
+      k=3: D^2 coeff =     1.5000, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=5: D^2 coeff =     1.2500, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=7: D^2 coeff =     0.6562, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+
+  Interval tournament:
+    lambda_0 = 3.0 (= m = 3)
+    Re(lambda_t) for t!=0: min=-0.500000, max=-0.500000 (should be -0.5)
+    Im(lambda_t) = D_t: ['2.191', '-0.241', '0.627', '-0.627', '0.241']
+
+    Re(z^k) expansion coefficients (z = -1/2 + iD):
+      k=3: D^2 coeff =     1.5000, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=5: D^2 coeff =     1.2500, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=7: D^2 coeff =     0.6562, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+
+### p=11 ###
+
+  Verifying alternation at p=11:
+    k    pair           h_hat   sign  chi(ab)  (-1)^e  expected   match
+    5  (1,3)         -5.5000      -        +       -         -     YES
+    5  (1,4)         -5.5000      -        +       -         -     YES
+    5  (2,3)          5.5000      +        -       -         +     YES
+    7  (1,2)        -16.5000      -        -       +         -     YES
+    7  (1,3)         96.2500      +        +       +         +     YES
+    7  (1,4)         96.2500      +        +       +         +     YES
+    7  (2,3)        -96.2500      -        -       +         -     YES
+    7  (2,4)        -16.5000      -        -       +         -     YES
+    7  (3,4)         16.5000      +        +       +         +     YES
+    9  (1,2)        423.5000      +        -       -         +     YES
+    9  (1,3)      -1177.0000      -        +       -         -     YES
+    9  (1,4)      -1177.0000      -        +       -         -     YES
+    9  (2,3)       1177.0000      +        -       -         +     YES
+    9  (2,4)        423.5000      +        -       -         +     YES
+    9  (3,4)       -423.5000      -        +       -         -     YES
+   11  (1,2)      -6701.7500      -        -       +         -     YES
+   11  (1,3)      12540.0000      +        +       +         +     YES
+   11  (1,4)      12540.0000      +        +       +         +     YES
+   11  (2,3)     -12540.0000      -        -       +         -     YES
+   11  (2,4)      -6701.7500      -        -       +         -     YES
+   11  (3,4)       6701.7500      +        +       +         +     YES
+
+  Total: 35/35 match the alternation formula
+  By cycle length:
+    c_3: PASS (0 nonzero coefficients)
+    c_5: PASS (5 nonzero coefficients)
+    c_7: PASS (10 nonzero coefficients)
+    c_9: PASS (10 nonzero coefficients)
+    c_11: PASS (10 nonzero coefficients)
+
+======================================================================
+EIGENVALUE EXPLANATION at p=11
+======================================================================
+
+  Paley tournament:
+    lambda_0 = 4.0 (= m = 5)
+    Re(lambda_t) for t!=0: min=-1.341254, max=0.459493 (should be -0.5)
+    Im(lambda_t) = D_t: ['2.568', '-0.903', '1.377', '0.668', '1.118']
+
+    Re(z^k) expansion coefficients (z = -1/2 + iD):
+      k=3: D^2 coeff =     1.5000, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=5: D^2 coeff =     1.2500, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=7: D^2 coeff =     0.6562, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=9: D^2 coeff =     0.2812, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=11: D^2 coeff =     0.1074, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+
+  Interval tournament:
+    lambda_0 = 5.0 (= m = 5)
+    Re(lambda_t) for t!=0: min=-0.500000, max=-0.500000 (should be -0.5)
+    Im(lambda_t) = D_t: ['3.478', '-0.147', '1.095', '-0.321', '0.577']
+
+    Re(z^k) expansion coefficients (z = -1/2 + iD):
+      k=3: D^2 coeff =     1.5000, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=5: D^2 coeff =     1.2500, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=7: D^2 coeff =     0.6562, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=9: D^2 coeff =     0.2812, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=11: D^2 coeff =     0.1074, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+
+======================================================================
+THM-155 FROM SIGN ALTERNATION at p=11
+======================================================================
+  c5 + 2*ov2 = 924
+
+  Implication: h_hat_ov2 = -h_hat_c5 / 2
+  So ov2 Walsh has OPPOSITE sign to c5 Walsh at every pair.
+    (1,3): h_hat_c5 =    -5.5000 (sign -), h_hat_ov2 =     2.7500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (1,4): h_hat_c5 =    -5.5000 (sign -), h_hat_ov2 =     2.7500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (2,3): h_hat_c5 =     5.5000 (sign +), h_hat_ov2 =    -2.7500 (sign -), chi(ab) = -
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (2,5): h_hat_c5 =     5.5000 (sign +), h_hat_ov2 =    -2.7500 (sign -), chi(ab) = -
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (4,5): h_hat_c5 =    -5.5000 (sign -), h_hat_ov2 =     2.7500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+
+  Eigenvalue explanation:
+  Re(z^5) has D^2 coefficient with sign (-1)^1 = -1 (anti-product)
+  tr(A^4) ~ sum |z|^4 has D^2 coefficient with sign +1 (product)
+  The cancellation c5+2*ov2=const is FORCED by these opposite signs
+  combining with the magnitude relationship.
+
+### p=13 ###
+
+  Total: 29/48 match the alternation formula
+  By cycle length:
+    c_3: PASS (0 nonzero coefficients)
+    c_5: FAIL (6 nonzero coefficients)
+    c_7: FAIL (6 nonzero coefficients)
+    c_9: FAIL (12 nonzero coefficients)
+    c_11: FAIL (12 nonzero coefficients)
+    c_13: FAIL (12 nonzero coefficients)
+
+======================================================================
+EIGENVALUE EXPLANATION at p=13
+======================================================================
+
+  Interval tournament:
+    lambda_0 = 6.0 (= m = 6)
+    Re(lambda_t) for t!=0: min=-0.500000, max=-0.500000 (should be -0.5)
+    Im(lambda_t) = D_t: ['4.118', '-0.123', '1.318', '-0.262', '0.724']
+
+    Re(z^k) expansion coefficients (z = -1/2 + iD):
+      k=3: D^2 coeff =     1.5000, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=5: D^2 coeff =     1.2500, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=7: D^2 coeff =     0.6562, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=9: D^2 coeff =     0.2812, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+      k=11: D^2 coeff =     0.1074, sign=+, expected (-1)^{(k-3)/2} = +, MATCH
+      k=13: D^2 coeff =     0.0381, sign=+, expected (-1)^{(k-3)/2} = -, FAIL
+
+======================================================================
+THM-155 FROM SIGN ALTERNATION at p=13
+======================================================================
+  c5 + 2*ov2 = 2184
+
+  Implication: h_hat_ov2 = -h_hat_c5 / 2
+  So ov2 Walsh has OPPOSITE sign to c5 Walsh at every pair.
+    (1,3): h_hat_c5 =    -6.5000 (sign -), h_hat_ov2 =     3.2500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (1,4): h_hat_c5 =     6.5000 (sign +), h_hat_ov2 =    -3.2500 (sign -), chi(ab) = +
+          c5 sign matches -chi(ab)? NO, ov2 sign matches chi(ab)? NO
+    (2,5): h_hat_c5 =    -6.5000 (sign -), h_hat_ov2 =     3.2500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (2,6): h_hat_c5 =    -6.5000 (sign -), h_hat_ov2 =     3.2500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+    (3,4): h_hat_c5 =     6.5000 (sign +), h_hat_ov2 =    -3.2500 (sign -), chi(ab) = +
+          c5 sign matches -chi(ab)? NO, ov2 sign matches chi(ab)? NO
+    (5,6): h_hat_c5 =    -6.5000 (sign -), h_hat_ov2 =     3.2500 (sign +), chi(ab) = +
+          c5 sign matches -chi(ab)? YES, ov2 sign matches chi(ab)? YES
+
+  Eigenvalue explanation:
+  Re(z^5) has D^2 coefficient with sign (-1)^1 = -1 (anti-product)
+  tr(A^4) ~ sum |z|^4 has D^2 coefficient with sign +1 (product)
+  The cancellation c5+2*ov2=const is FORCED by these opposite signs
+  combining with the magnitude relationship.

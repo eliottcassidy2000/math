@@ -1,0 +1,156 @@
+
+######################################################################
+# p = 7
+######################################################################
+
+======================================================================
+SIGN ANALYSIS BY RESONANCE CLASS at p=7
+======================================================================
+
+  Resonance classes:
+    q=(2,): 2 pairs
+    q=(3,): 1 pairs
+
+  Sign*chi(ab) pattern by cycle length within each resonance class:
+
+    Resonance q=(2,):
+      c_ 5: sign*chi = +, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 FAIL
+      c_ 7: sign*chi = -, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 FAIL
+
+    Resonance q=(3,):
+      c_ 5: sign*chi = +, consistent=True, n_nonzero=1/1, (-1)^(k-3)/2 FAIL, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_ 7: sign*chi = -, consistent=True, n_nonzero=1/1, (-1)^(k-3)/2 FAIL, alt(-1)^(k-q)/2*chi(q) MATCH
+
+  Testing Gauss sum sign formula at p=7:
+  sign = chi(q_min) * (-1)^((k-q_min)/2) * chi(ab)
+    c_ 5: 1/1
+    c_ 7: 1/1
+
+  Overall: 2/2
+
+======================================================================
+COMPREHENSIVE SIGN FORMULA SEARCH at p=7
+======================================================================
+  (-1)^(k-1)/2*chi(q)           : 4/6 = 66.7%
+  (-1)^(k+1)/2*chi(q)           : 2/6 = 33.3%
+  (-1)^(k-3)/2*chi(q)           : 2/6 = 33.3%
+  chi(q)*(-1)^(k-q)/2           : 2/2 = 100.0%
+  (-1)^(k-3)/2                  : 0/6 = 0.0%
+
+######################################################################
+# p = 11
+######################################################################
+
+======================================================================
+SIGN ANALYSIS BY RESONANCE CLASS at p=11
+======================================================================
+
+  Resonance classes:
+    q=(2,): 3 pairs
+    q=(3,): 2 pairs
+    q=(4,): 3 pairs
+    q=(5,): 2 pairs
+
+  Sign*chi(ab) pattern by cycle length within each resonance class:
+
+    Resonance q=(2,):
+      c_ 7: sign*chi = +, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+      c_ 9: sign*chi = -, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+      c_11: sign*chi = +, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+
+    Resonance q=(3,):
+      c_ 5: sign*chi = -, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_ 7: sign*chi = +, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_ 9: sign*chi = -, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_11: sign*chi = +, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+
+    Resonance q=(4,):
+      c_ 5: sign*chi = -, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+      c_ 7: sign*chi = +, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+      c_ 9: sign*chi = -, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+      c_11: sign*chi = +, consistent=True, n_nonzero=3/3, (-1)^(k-3)/2 MATCH
+
+    Resonance q=(5,):
+      c_ 7: sign*chi = +, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) FAIL
+      c_ 9: sign*chi = -, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) FAIL
+      c_11: sign*chi = +, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) FAIL
+
+  Testing Gauss sum sign formula at p=11:
+  sign = chi(q_min) * (-1)^((k-q_min)/2) * chi(ab)
+    c_ 5: 2/2
+    c_ 7: 2/4
+    c_ 9: 2/4
+    c_11: 2/4
+
+  Overall: 8/14
+
+======================================================================
+COMPREHENSIVE SIGN FORMULA SEARCH at p=11
+======================================================================
+  (-1)^(k-3)/2                  : 35/35 = 100.0%
+  (-1)^(k+1)/2*chi(q)           : 26/35 = 74.3%
+  (-1)^(k-3)/2*chi(q)           : 26/35 = 74.3%
+  (-1)^(k-1)/2*chi(q)           : 9/35 = 25.7%
+  chi(q)*(-1)^(k-q)/2           : 8/14 = 57.1%
+
+######################################################################
+# p = 13
+######################################################################
+
+======================================================================
+SIGN ANALYSIS BY RESONANCE CLASS at p=13
+======================================================================
+
+  Resonance classes:
+    q=(2,): 4 pairs
+    q=(3,): 3 pairs
+    q=(4,): 3 pairs
+    q=(5,): 3 pairs
+    q=(6,): 2 pairs
+
+  Sign*chi(ab) pattern by cycle length within each resonance class:
+
+    Resonance q=(2,):
+      c_ 9: sign*chi = +, consistent=False, n_nonzero=4/4, (-1)^(k-3)/2 FAIL
+      c_11: sign*chi = -, consistent=False, n_nonzero=4/4, (-1)^(k-3)/2 FAIL
+      c_13: sign*chi = +, consistent=False, n_nonzero=4/4, (-1)^(k-3)/2 FAIL
+
+    Resonance q=(3,):
+      c_ 5: sign*chi = -, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_ 7: sign*chi = +, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_ 9: sign*chi = -, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_11: sign*chi = +, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+      c_13: sign*chi = -, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 MATCH, alt(-1)^(k-q)/2*chi(q) MATCH
+
+    Resonance q=(4,):
+      c_ 5: sign*chi = +, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 FAIL
+      c_ 7: sign*chi = -, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 FAIL
+      c_ 9: sign*chi = +, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 FAIL
+      c_11: sign*chi = -, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 FAIL
+      c_13: sign*chi = +, consistent=False, n_nonzero=3/3, (-1)^(k-3)/2 FAIL
+
+    Resonance q=(5,):
+
+    Resonance q=(6,):
+      c_ 9: sign*chi = -, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH
+      c_11: sign*chi = +, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH
+      c_13: sign*chi = -, consistent=True, n_nonzero=2/2, (-1)^(k-3)/2 MATCH
+
+  Testing Gauss sum sign formula at p=13:
+  sign = chi(q_min) * (-1)^((k-q_min)/2) * chi(ab)
+    c_ 5: 2/3
+    c_ 7: 2/3
+    c_ 9: 2/3
+    c_11: 2/3
+    c_13: 2/3
+
+  Overall: 10/15
+
+======================================================================
+COMPREHENSIVE SIGN FORMULA SEARCH at p=13
+======================================================================
+  (-1)^(k-3)/2                  : 29/48 = 60.4%
+  (-1)^(k+1)/2*chi(q)           : 29/48 = 60.4%
+  (-1)^(k-3)/2*chi(q)           : 29/48 = 60.4%
+  (-1)^(k-1)/2*chi(q)           : 19/48 = 39.6%
+  chi(q)*(-1)^(k-q)/2           : 10/15 = 66.7%
