@@ -1,0 +1,141 @@
+======================================================================
+PRODUCT IDENTITY: prod(Q_k, k≠0)
+======================================================================
+  n= 3: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=2.0 (pred), 2.0000 (actual)
+  n= 5: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=6.0 (pred), 6.0000 (actual)
+  n= 7: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=12.0 (pred), 12.0000 (actual)
+  n= 9: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=20.0 (pred), 20.0000 (actual)
+  n=11: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=30.0 (pred), 30.0000 (actual)
+  n=13: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=42.0 (pred), 42.0000 (actual)
+  n=15: prod(Q_k,k≠0)=      1.0000, sum(Q_k,k≠0)=56.0 (pred), 56.0000 (actual)
+
+======================================================================
+CHI / n FOR INTERVAL TOURNAMENTS
+======================================================================
+  n=3: Omega=[3, 3, 0]
+        per_eig_Omega=[1, 1, 0]
+        alt_Omega=0, chi/n=0
+        per_eig_chi=0
+        predicted (-1)^1=0
+
+  n=5: Omega=[5, 10, 5, 5, 5]
+        per_eig_Omega=[1, 2, 1, 1, 1]
+        alt_Omega=0, chi/n=0
+        per_eig_chi=0
+        predicted (-1)^2=0
+
+  n=7: Omega=[7, 21, 21, 35, 56, 49, 14]
+        per_eig_Omega=[1, 3, 3, 5, 8, 7, 2]
+        alt_Omega=-7, chi/n=-1
+        per_eig_chi=-1
+        predicted (-1)^3=-1
+
+  n=9: Omega=[9, 36, 54, 126, 279, 450, 468, 288, 99]
+        per_eig_Omega=[1, 4, 6, 14, 31, 50, 52, 32, 11]
+        alt_Omega=9, chi/n=1
+        per_eig_chi=1
+        predicted (-1)^4=1
+
+======================================================================
+ALGEBRAIC ANALYSIS: prod(Q_k) for Interval
+======================================================================
+
+  n=5, m=2:
+    prod Q_k = 1.000000
+    prod sin(m*pi*k/n) = 0.312500
+    prod sin(pi*k/n) = 0.312500
+    n/2^(n-1) = 0.312500
+    ratio = 1.000000
+    ratio^2 = 1.000000
+    => gcd(m,n)=1: m*k permutes residues mod n
+    => prod sin(m*pi*k/n) = prod sin(pi*k/n)
+    => prod Q_k = 1  QED
+
+  n=7, m=3:
+    prod Q_k = 1.000000
+    prod sin(m*pi*k/n) = 0.109375
+    prod sin(pi*k/n) = 0.109375
+    n/2^(n-1) = 0.109375
+    ratio = 1.000000
+    ratio^2 = 1.000000
+    => gcd(m,n)=1: m*k permutes residues mod n
+    => prod sin(m*pi*k/n) = prod sin(pi*k/n)
+    => prod Q_k = 1  QED
+
+  n=9, m=4:
+    prod Q_k = 1.000000
+    prod sin(m*pi*k/n) = 0.035156
+    prod sin(pi*k/n) = 0.035156
+    n/2^(n-1) = 0.035156
+    ratio = 1.000000
+    ratio^2 = 1.000000
+    => gcd(m,n)=1: m*k permutes residues mod n
+    => prod sin(m*pi*k/n) = prod sin(pi*k/n)
+    => prod Q_k = 1  QED
+
+  n=11, m=5:
+    prod Q_k = 1.000000
+    prod sin(m*pi*k/n) = 0.010742
+    prod sin(pi*k/n) = 0.010742
+    n/2^(n-1) = 0.010742
+    ratio = 1.000000
+    ratio^2 = 1.000000
+    => gcd(m,n)=1: m*k permutes residues mod n
+    => prod sin(m*pi*k/n) = prod sin(pi*k/n)
+    => prod Q_k = 1  QED
+
+======================================================================
+GENERALIZATION: prod(Q_k, k≠0) = 1 for ANY circulant with gcd(|S_generator|,n)=1?
+======================================================================
+  Paley p=7, QR=[1, 2, 4]: prod(Q_k,k≠0) = 64.0000
+    Predicted ((p+1)/4)^(p-1) = 64.0000
+  Paley p=11, QR=[1, 3, 4, 5, 9]: prod(Q_k,k≠0) = 59049.0000
+    Predicted ((p+1)/4)^(p-1) = 59049.0000
+
+======================================================================
+DEEP STRUCTURE: per-eigenspace chi and Morgan-Voyce
+======================================================================
+
+  Interval n=5 (m=2):
+    per-eig Omega: [1, 2, 1, 1, 1]
+    sum = 6
+    F_5 = 5
+    sum/F_n = 1.200000
+    alt sum = 0
+      omega_0^per = 1, C(4,0)=1, ratio=1.0000
+      omega_1^per = 2, C(4,1)=4, ratio=0.5000
+      omega_2^per = 1, C(4,2)=6, ratio=0.1667
+      omega_3^per = 1, C(4,3)=4, ratio=0.2500
+      omega_4^per = 1, C(4,4)=1, ratio=1.0000
+
+  Interval n=7 (m=3):
+    per-eig Omega: [1, 3, 3, 5, 8, 7, 2]
+    sum = 29
+    F_7 = 13
+    sum/F_n = 2.230769
+    alt sum = -1
+      omega_0^per = 1, C(6,0)=1, ratio=1.0000
+      omega_1^per = 3, C(6,1)=6, ratio=0.5000
+      omega_2^per = 3, C(6,2)=15, ratio=0.2000
+      omega_3^per = 5, C(6,3)=20, ratio=0.2500
+      omega_4^per = 8, C(6,4)=15, ratio=0.5333
+      omega_5^per = 7, C(6,5)=6, ratio=1.1667
+      omega_6^per = 2, C(6,6)=1, ratio=2.0000
+
+  Interval n=9 (m=4):
+    per-eig Omega: [1, 4, 6, 14, 31, 50, 52, 32, 11]
+    sum = 201
+    F_9 = 34
+    sum/F_n = 5.911765
+    alt sum = 1
+      omega_0^per = 1, C(8,0)=1, ratio=1.0000
+      omega_1^per = 4, C(8,1)=8, ratio=0.5000
+      omega_2^per = 6, C(8,2)=28, ratio=0.2143
+      omega_3^per = 14, C(8,3)=56, ratio=0.2500
+      omega_4^per = 31, C(8,4)=70, ratio=0.4429
+      omega_5^per = 50, C(8,5)=56, ratio=0.8929
+      omega_6^per = 52, C(8,6)=28, ratio=1.8571
+      omega_7^per = 32, C(8,7)=8, ratio=4.0000
+      omega_8^per = 11, C(8,8)=1, ratio=11.0000
+
+DONE.
