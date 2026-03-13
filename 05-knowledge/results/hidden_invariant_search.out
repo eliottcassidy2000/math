@@ -1,0 +1,115 @@
+======================================================================
+ANALYSIS 1: FINDING ALL AMBIGUOUS TOURNAMENTS AT n=7
+======================================================================
+Found 20160 tournaments with target score and lambda
+
+  H=25: 10080 tournaments
+    c5_dir = [6]
+    c7_dir = [0]
+    total cycles = [12]
+    alpha_2 = [0]
+    bits=371: c5=6, c7=0, nc=12, alpha2=0
+    bits=374: c5=6, c7=0, nc=12, alpha2=0
+    bits=378: c5=6, c7=0, nc=12, alpha2=0
+
+  H=29: 10080 tournaments
+    c5_dir = [6]
+    c7_dir = [0]
+    total cycles = [12]
+    alpha_2 = [1]
+    bits=739: c5=6, c7=0, nc=12, alpha2=1
+    bits=746: c5=6, c7=0, nc=12, alpha2=1
+    bits=747: c5=6, c7=0, nc=12, alpha2=1
+
+======================================================================
+ANALYSIS 2: WHAT DISTINGUISHES H=25 FROM H=29?
+======================================================================
+
+  H=25 tournament (bits=371):
+    Out-degrees: [4, 2, 0, 3, 3, 4, 5]
+    c5=6, c7=0, nc=12, alpha2=0
+
+  H=29 tournament (bits=739):
+    Out-degrees: [3, 3, 0, 2, 4, 4, 5]
+    c5=6, c7=0, nc=12, alpha2=1
+
+  Delta: nc(29)-nc(25) = 0, alpha2(29)-alpha2(25) = 1
+  Check: 2*delta_nc + 4*delta_a2 = 4
+  Actual delta H = 4 = 4
+
+  c5: t25=6, t29=6
+  c7: t25=0, t29=0
+  c3: t25=6, t29=6
+  => c3 and c5 are SAME. Difference must be in c7!
+     c7 difference = 0
+     This gives alpha_1 difference = 0
+     2*delta_alpha1 = 0 = delta H? YES
+
+======================================================================
+ANALYSIS 3: SYSTEMATIC — WHAT DISTINGUISHES ALL AMBIGUOUS CASES?
+======================================================================
+
+  Score (0, 2, 3, 3, 4, 4, 5):
+    lambda=... (21 values), H=[25, 29]
+    c5=[6], c7=[0]
+      (c5=6, c7=0) -> H = [25, 29] [STILL AMBIGUOUS]
+    => (c5, c7) does NOT resolve! Deeper invariant needed.
+
+  Score (1, 1, 2, 3, 4, 5, 5):
+    lambda=... (21 values), H=[27, 29]
+    c5=[4, 5], c7=[1]
+      (c5=4, c7=1) -> H = 29
+      (c5=5, c7=1) -> H = 27
+    => (c5, c7) RESOLVES the ambiguity!
+
+  Score (1, 2, 2, 3, 3, 4, 6):
+    lambda=... (21 values), H=[25, 29]
+    c5=[6], c7=[0]
+      (c5=6, c7=0) -> H = [25, 29] [STILL AMBIGUOUS]
+    => (c5, c7) does NOT resolve! Deeper invariant needed.
+
+======================================================================
+ANALYSIS 4: n=6 AMBIGUOUS CASES — WHAT RESOLVES?
+======================================================================
+
+  Score (1, 2, 2, 3, 3, 4):
+    lambda=..., H=[25, 29]
+    c5=[6]
+      c5=6 -> H = [25, 29] [STILL AMBIGUOUS]
+
+  Score (1, 2, 3, 3, 3, 3):
+    lambda=..., H=[33, 37]
+    c5=[7]
+      c5=7 -> H = [33, 37] [STILL AMBIGUOUS]
+
+  Score (2, 2, 2, 2, 3, 4):
+    lambda=..., H=[33, 37]
+    c5=[7]
+      c5=7 -> H = [33, 37] [STILL AMBIGUOUS]
+
+======================================================================
+ANALYSIS 5: TRIPLE OVERLAP INVARIANT
+======================================================================
+
+  Score (0, 2, 3, 3, 4, 4, 5), target lambda:
+
+  H=25: 10080 tournaments
+    Triple overlap histograms: 1
+      {0: 6, 1: 13, 2: 1}: 10080
+    Per-vertex cycle distributions: [(0, 2, 2, 2, 3, 4, 5)]
+    Cycle degree distributions: [(5, 5, 5, 5, 5, 5)]
+
+  H=29: 10080 tournaments
+    Triple overlap histograms: 1
+      {0: 8, 1: 11, 2: 1}: 10080
+    Per-vertex cycle distributions: [(0, 2, 2, 3, 3, 3, 5)]
+    Cycle degree distributions: [(4, 4, 5, 5, 5, 5)]
+
+  Triple overlap resolves ambiguity: True
+  Cycle degree histogram resolves ambiguity: True
+  Per-vertex cycle count resolves ambiguity: True
+
+
+======================================================================
+DONE.
+======================================================================
