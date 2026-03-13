@@ -41,19 +41,26 @@ def qr(p):
     return sorted(set((a*a)%p for a in range(1,p)))
 
 def sparse_rank(cols_data, n_rows, prime):
-    """Sparse Gaussian elimination mod prime. Returns rank."""
+    """Sparse Gaussian elimination mod prime. Returns rank.
+    FIXED: Handles fill-in correctly by restarting row scan after each pivot subtraction.
+    """
     pivots = {}
     rank = 0
     for col_idx, col in enumerate(cols_data):
         work = dict(col)
-        for r in sorted(work.keys()):
-            if r in pivots and r in work:
-                piv_data = pivots[r]
-                factor = work[r]
-                for pr, pv in piv_data.items():
-                    work[pr] = (work.get(pr, 0) - factor * pv) % prime
-                    if work[pr] == 0:
-                        del work[pr]
+        changed = True
+        while changed:
+            changed = False
+            for r in sorted(work.keys()):
+                if r in pivots and r in work:
+                    piv_data = pivots[r]
+                    factor = work[r]
+                    for pr, pv in piv_data.items():
+                        work[pr] = (work.get(pr, 0) - factor * pv) % prime
+                        if work[pr] == 0:
+                            del work[pr]
+                    changed = True
+                    break
         if not work:
             continue
         pivot_row = min(work.keys())
