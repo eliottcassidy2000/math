@@ -1,0 +1,386 @@
+==============================================================================
+  Q(x) DIVISIBILITY ANALYSIS — THE PATH TO H ≥ |Pf|
+==============================================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 1: R(x) = Q(x)/x — THE REDUCED GAP POLYNOMIAL                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Q(x) = I(CG,x)² - det(I+xA) = x · R(x)
+At x=2: Q(2) = 2·R(2) = H² - Pf²
+So R(2) = (H² - Pf²)/2 = (H-|Pf|)(H+|Pf|)/2
+
+Since H and |Pf| are both odd: H-|Pf| and H+|Pf| are both even.
+So (H-|Pf|)(H+|Pf|)/2 is even·even/2 = even.
+Actually R(2) = (H²-Pf²)/2. We know H²-Pf² ≡ 0 (mod 8), so R(2) ≡ 0 (mod 4).
+
+
+n=3:
+  H=1: Q(x)=0 identically → R(x)=0
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    R(x) = Q(x)/x = -(x - 2)*(x + 1)
+    R(2) = 0, Q(2) = 0 = H²-Pf² = 3²-3² = 0
+    R(2) mod 4 = 0
+    R(2)=0! So Q(x) = x(x-2)·S(x) with S(x) = -x - 1
+    S(2) = nan
+
+n=4:
+  H=1: Q(x)=0 identically → R(x)=0
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    R(x) = Q(x)/x = -(x - 2)*(x + 1)
+    R(2) = 0, Q(2) = 0 = H²-Pf² = 3²-3² = 0
+    R(2) mod 4 = 0
+    R(2)=0! So Q(x) = x(x-2)·S(x) with S(x) = -x - 1
+    S(2) = nan
+  H=5: Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+    R(x) = Q(x)/x = x**3 - 2*x**2 + 4*x + 4
+    R(2) = 12, Q(2) = 24 = H²-Pf² = 5²-1² = 24
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+
+n=5:
+  H=1: Q(x)=0 identically → R(x)=0
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    R(x) = Q(x)/x = -(x - 2)*(x + 1)
+    R(2) = 0, Q(2) = 0 = H²-Pf² = 3²-3² = 0
+    R(2) mod 4 = 0
+    R(2)=0! So Q(x) = x(x-2)·S(x) with S(x) = -x - 1
+    S(2) = nan
+  H=5: Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+    R(x) = Q(x)/x = x**3 - 2*x**2 + 4*x + 4
+    R(2) = 12, Q(2) = 24 = H²-Pf² = 5²-1² = 24
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+  H=9: Q(x) = -x*(x**4 - 3*x**3 + 3*x**2 - 16*x - 8)
+    R(x) = Q(x)/x = -x**4 + 3*x**3 - 3*x**2 + 16*x + 8
+    R(2) = 36, Q(2) = 72 = H²-Pf² = 9²-3² = 72
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+  H=9: Q(x) = -x*(x**4 - 2*x**3 + 3*x**2 - 16*x - 8)
+    R(x) = Q(x)/x = -x**4 + 2*x**3 - 3*x**2 + 16*x + 8
+    R(2) = 28, Q(2) = 56 = H²-Pf² = 9²-5² = 56
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+  H=11: Q(x) = -x*(x**4 - 4*x**3 + 4*x**2 - 25*x - 10)
+    R(x) = Q(x)/x = -x**4 + 4*x**3 - 4*x**2 + 25*x + 10
+    R(2) = 60, Q(2) = 120 = H²-Pf² = 11²-1² = 120
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+  H=15: Q(x) = -x*(3*x**4 - 3*x**3 + 4*x**2 - 49*x - 14)
+    R(x) = Q(x)/x = -3*x**4 + 3*x**3 - 4*x**2 + 49*x + 14
+    R(2) = 72, Q(2) = 144 = H²-Pf² = 15²-9² = 144
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+  H=13: Q(x) = -x*(2*x**4 - 3*x**3 + 4*x**2 - 36*x - 12)
+    R(x) = Q(x)/x = -2*x**4 + 3*x**3 - 4*x**2 + 36*x + 12
+    R(2) = 60, Q(2) = 120 = H²-Pf² = 13²-7² = 120
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+  H=15: Q(x) = -x*(2*x**4 - 5*x**3 + 5*x**2 - 49*x - 14)
+    R(x) = Q(x)/x = -2*x**4 + 5*x**3 - 5*x**2 + 49*x + 14
+    R(2) = 100, Q(2) = 200 = H²-Pf² = 15²-5² = 200
+    R(2) mod 4 = 0
+    R(2) ≠ 0 → Q(x) NOT divisible by x(x-2)
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 2: WHY Q(2) ≥ 0? — THE ALGEBRAIC MECHANISM                           ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+We have Q(x) = I(CG,x)² - det(I+xA).
+
+Method: write det(I+xA) in terms of I(CG,x) directly.
+
+At x=2: I(CG,2) = H, and det(I+2A) = Pf(S)². We need H² ≥ Pf².
+
+Approach: Use the matrix-tree theorem generalization.
+det(I+xA) involves ALL substructures of A, while I(CG,x) only involves
+independent sets of odd cycles. The "extra" terms in det should not
+overwhelm the independence polynomial.
+
+Let's look at det(I+xA) as a polynomial in x and compare its coefficients
+with those of I(CG,x)².
+
+Coefficient-by-coefficient comparison: I(CG,x)² vs det(I+xA)
+
+n=3:
+  H=1, α=[1]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+
+  H=3, α=[1, 1]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           2           0         2
+       2           1           0         1
+       3           0           1        -1
+
+
+n=4:
+  H=1, α=[1]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+
+  H=3, α=[1, 1]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           2           0         2
+       2           1           0         1
+       3           0           1        -1
+
+  H=5, α=[1, 2]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           4           0         4
+       2           4           0         4
+       3           0           2        -2
+       4           0          -1         1
+
+
+n=5:
+  H=1, α=[1]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+
+  H=3, α=[1, 1]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           2           0         2
+       2           1           0         1
+       3           0           1        -1
+
+  H=5, α=[1, 2]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           4           0         4
+       2           4           0         4
+       3           0           2        -2
+       4           0          -1         1
+
+  H=9, α=[1, 4]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           8           0         8
+       2          16           0        16
+       3           0           3        -3
+       4           0          -3         3
+       5           0           1        -1
+
+  H=9, α=[1, 4]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1           8           0         8
+       2          16           0        16
+       3           0           3        -3
+       4           0          -2         2
+       5           0           1        -1
+
+  H=11, α=[1, 5]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1          10           0        10
+       2          25           0        25
+       3           0           4        -4
+       4           0          -4         4
+       5           0           1        -1
+
+  H=15, α=[1, 7]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1          14           0        14
+       2          49           0        49
+       3           0           4        -4
+       4           0          -3         3
+       5           0           3        -3
+
+  H=13, α=[1, 6]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1          12           0        12
+       2          36           0        36
+       3           0           4        -4
+       4           0          -3         3
+       5           0           2        -2
+
+  H=15, α=[1, 7]:
+     deg    [x^d] I²   [x^d] det      diff
+       0           1           1         0
+       1          14           0        14
+       2          49           0        49
+       3           0           5        -5
+       4           0          -5         5
+       5           0           2        -2
+
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 3: SIGN PATTERN OF Q(x) — IS x=2 ALWAYS IN THE POSITIVE REGION?      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+For Q(x) not identically zero:
+- Q(0) = 0 always
+- Q(2) ≥ 0 always (this is H ≥ |Pf|)
+- Q(x) can be negative for some x > 0
+
+WHERE are the sign changes? Is x=2 always between roots (or at a root)?
+
+
+n=3:
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    Real roots: -1.0000, 0.0000, 2.0000
+    Q(2) = 0
+    Signs: Q(0.5)=+1.1, Q(1.0)=+2.0, Q(1.5)=+1.9, Q(2.0)=00.0, Q(2.5)=-4.4, Q(3.0)=-12.0
+
+
+n=4:
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    Real roots: -1.0000, 0.0000, 2.0000
+    Q(2) = 0
+    Signs: Q(0.5)=+1.1, Q(1.0)=+2.0, Q(1.5)=+1.9, Q(2.0)=00.0, Q(2.5)=-4.4, Q(3.0)=-12.0
+
+  H=5: Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+    Real roots: -0.6850, 0.0000
+    Q(2) = 24
+    Signs: Q(0.5)=+2.8, Q(1.0)=+7.0, Q(1.5)=+13.3, Q(2.0)=+24.0, Q(2.5)=+42.8, Q(3.0)=+75.0
+
+
+n=5:
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    Real roots: -1.0000, 0.0000, 2.0000
+    Q(2) = 0
+    Signs: Q(0.5)=+1.1, Q(1.0)=+2.0, Q(1.5)=+1.9, Q(2.0)=00.0, Q(2.5)=-4.4, Q(3.0)=-12.0
+
+  H=5: Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+    Real roots: -0.6850, 0.0000
+    Q(2) = 24
+    Signs: Q(0.5)=+2.8, Q(1.0)=+7.0, Q(1.5)=+13.3, Q(2.0)=+24.0, Q(2.5)=+42.8, Q(3.0)=+75.0
+
+  H=9: Q(x) = -x*(x**4 - 3*x**3 + 3*x**2 - 16*x - 8)
+    Real roots: -0.4442, 0.0000, 3.5830
+    Q(2) = 72
+    Signs: Q(0.5)=+7.8, Q(1.0)=+23.0, Q(1.5)=+45.5, Q(2.0)=+72.0, Q(2.5)=+92.7, Q(3.0)=+87.0
+
+  H=9: Q(x) = -x*(x**4 - 2*x**3 + 3*x**2 - 16*x - 8)
+    Real roots: -0.4485, 0.0000, 3.0349
+    Q(2) = 56
+    Signs: Q(0.5)=+7.7, Q(1.0)=+22.0, Q(1.5)=+40.4, Q(2.0)=+56.0, Q(2.5)=+53.6, Q(3.0)=+6.0
+
+  H=11: Q(x) = -x*(x**4 - 4*x**3 + 4*x**2 - 25*x - 10)
+    Real roots: -0.3694, 0.0000, 4.4688
+    Q(2) = 120
+    Signs: Q(0.5)=+11.0, Q(1.0)=+34.0, Q(1.5)=+70.4, Q(2.0)=+120.0, Q(2.5)=+177.3, Q(3.0)=+228.0
+
+  H=15: Q(x) = -x*(3*x**4 - 3*x**3 + 4*x**2 - 49*x - 14)
+    Real roots: -0.2777, 0.0000, 2.8078
+    Q(2) = 144
+    Signs: Q(0.5)=+18.8, Q(1.0)=+59.0, Q(1.5)=+110.2, Q(2.0)=+144.0, Q(2.5)=+103.0, Q(3.0)=-111.0
+
+  H=13: Q(x) = -x*(2*x**4 - 3*x**3 + 4*x**2 - 36*x - 12)
+    Real roots: -0.3188, 0.0000, 3.0240
+    Q(2) = 120
+    Signs: Q(0.5)=+14.6, Q(1.0)=+45.0, Q(1.5)=+85.5, Q(2.0)=+120.0, Q(2.5)=+114.4, Q(3.0)=+9.0
+
+  H=15: Q(x) = -x*(2*x**4 - 5*x**3 + 5*x**2 - 49*x - 14)
+    Real roots: -0.2756, 0.0000, 3.7277
+    Q(2) = 200
+    Signs: Q(0.5)=+18.9, Q(1.0)=+61.0, Q(1.5)=+124.5, Q(2.0)=+200.0, Q(2.5)=+263.1, Q(3.0)=+267.0
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 4: SEARCHING FOR THE BRIDGE — det vs perm vs I²                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+At x=2:
+  det(I+2A) = Pf(S)²   (THM-174)
+  I(CG,2)² = H²        (OCF squared)
+  H² ≥ Pf²             (observed, need proof)
+
+Could there be a matrix M(x) such that:
+  perm(M) = I(CG,x)²  and  det(M) = det(I+xA)?
+
+Then |det| ≤ perm (Hadamard-type inequality) would give H² ≥ |Pf|² = det.
+
+Let's check: for the "2-or-0" matrix M = I+2A at x=2:
+  M_{ij} ∈ {0, 1, 2}
+  det(M) = Pf(S)²
+  perm(M) = ???
+
+Comparing det(I+2A) vs perm(I+2A) vs H² for small tournaments:
+  n      H   det(I+2A)    perm(I+2A)        H²    perm=H²?
+-------------------------------------------------------
+  3      1           1            -1         1           ✗
+  3      3           9            -9         9           ✗
+  4      1           1             1         1           ✓
+  4      3           9             9         9           ✓
+  4      5           1            33        25           ✗
+  5      1           1            -1         1           ✗
+  5      3           9            -9         9           ✗
+  5      5           1           -33        25           ✗
+  5      9           9          -105        81           ✗
+  5     11           1          -129       121           ✗
+  5     15          81          -177       225           ✗
+  5     13          49          -145       169           ✗
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 5: perm(I+2A) vs H² — IS THE PERMANENT EQUAL TO H²?                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  n=3: 0/8 have perm(I+2A) = H² (0/8)
+  n=4: 40/64 have perm(I+2A) = H² (40/64)
+  n=5: 0/1024 have perm(I+2A) = H² (0/1024)
+  n=6: 1760/32768 have perm(I+2A) = H² (1760/32768)
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 6: IF perm = H², THEN THE PROOF IS:                                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+If perm(I+2A) = H² for all tournaments, then:
+
+  H² = perm(I+2A)         (conjectured identity)
+  Pf² = det(I+2A)         (THM-174)
+  perm(M) ≥ |det(M)|      (for nonneg real M: trivially perm ≥ |det| by
+                            definition since perm uses + while det uses ±)
+
+Wait: perm ≥ |det| is NOT true in general!
+For M with nonneg entries: det can be negative while perm is always ≥ 0.
+But |det| ≤ perm is also not always true.
+
+HOWEVER: for our M = I+2A with entries in {0, 1, 2}:
+  det(M) = Pf² ≥ 0 (always nonneg! a perfect square!)
+  perm(M) = H² ≥ 0 (always nonneg!)
+
+The question is: does perm(M) ≥ det(M) for our specific class of matrices?
+M is a {0,1,2}-matrix with 1s on diagonal, 0 or 2 off-diagonal, where
+exactly one of M_{ij}, M_{ji} is 2 and the other is 0 for i ≠ j.
+
+This is a TOURNAMENT MATRIX — a very special structure.
+For tournament matrices: perm ≥ det ⟺ H² ≥ Pf² ⟺ H ≥ |Pf|.
+
+Checking perm(I+2A) ≥ det(I+2A) for tournament matrices:
+  n=3: 8 violations in 8 tournaments ✗ VIOLATIONS
+  n=4: 0 violations in 64 tournaments ✓ ALL PASS
+  n=5: 1024 violations in 1024 tournaments ✗ VIOLATIONS
+  n=6: 0 violations in 32768 tournaments ✓ ALL PASS
+
+════════════════════════════════════════════════════════════════════════════════
+SYNTHESIS
+════════════════════════════════════════════════════════════════════════════════
+
+TWO CONJECTURES:
+
+CONJECTURE A: perm(I+2A) = H(T)² for all tournaments T.
+  If true, this gives H as a permanent, connecting to Valiant's theory.
+
+CONJECTURE B: perm(M) ≥ det(M) for all tournament matrices M = I+2A.
+  Combined with Conj A and THM-174: H² = perm ≥ det = Pf² → H ≥ |Pf|.
+
+Note: perm ≥ det for nonneg matrices is related to the van der Waerden
+conjecture (proved by Egorychev and Falikman). For doubly stochastic
+matrices, perm ≥ n!/n^n. For our {0,1,2} tournament matrices, there may
+be a direct proof using the tournament structure.
+
+THE 2-3 CONNECTION:
+  Matrix entries are 0, 1, 2 — the TRINITY numbers.
+  perm counts unsigned weighted permutations with weights 0, 1, 2.
+  det counts signed weighted permutations with weights 0, 1, 2.
+  The difference perm - det = Q involves CROSS TERMS between + and - signs.
+
