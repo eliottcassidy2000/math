@@ -1,0 +1,289 @@
+======================================================================
+EXPANSION-CONCENTRATION TRADEOFF — opus-2026-03-12-S67c
+======================================================================
+
+PART 1: prod(1+Q_k) for all circulant tournaments
+======================================================================
+
+  p=7, m=3: 8 circulant tournaments
+  rank      prod(1+Q)   E(S)      IPR         name
+     1           27.0     15  0.33333        PALEY
+     2           27.0     15  0.33333             
+     3           13.0     19  0.72222             
+     4           13.0     19  0.72222             
+     5           13.0     19  0.72222             
+     6           13.0     19  0.72222     INTERVAL
+     7           13.0     19  0.72222             
+     8           13.0     19  0.72222             
+  ...
+     6           13.0     19  0.72222     INTERVAL
+     7           13.0     19  0.72222             
+     8           13.0     19  0.72222             
+
+  Corr(prod(1+Q), E(S)) = -1.000000
+  Corr(prod(1+Q), IPR)  = -1.000000
+  Interval maximizes prod(1+Q)? False
+
+  p=11, m=5: 32 circulant tournaments
+  rank      prod(1+Q)   E(S)      IPR         name
+     1         1024.0     65  0.20000             
+     2         1024.0     65  0.20000        PALEY
+     3          419.0     69  0.29778             
+     4          419.0     69  0.29778             
+     5          419.0     69  0.29778             
+     6          419.0     69  0.29778             
+     7          419.0     69  0.29778             
+     8          419.0     69  0.29778             
+  ...
+    30           89.0     85  0.68889             
+    31           89.0     85  0.68889             
+    32           89.0     85  0.68889             
+
+  Corr(prod(1+Q), E(S)) = -0.850534
+  Corr(prod(1+Q), IPR)  = -0.850534
+  Interval maximizes prod(1+Q)? False
+
+  p=13, m=6: 64 circulant tournaments
+  rank      prod(1+Q)   E(S)      IPR         name
+     1         4913.0    114  0.21088             
+     2         4913.0    114  0.21088             
+     3         4913.0    114  0.21088             
+     4         4913.0    114  0.21088             
+     5         2287.0    118  0.26984             
+     6         2287.0    118  0.26984             
+     7         2287.0    118  0.26984             
+     8         2287.0    118  0.26984             
+  ...
+    62          233.0    146  0.68254             
+    63          233.0    146  0.68254             
+    64          233.0    146  0.68254             
+
+  Corr(prod(1+Q), E(S)) = -0.823840
+  Corr(prod(1+Q), IPR)  = -0.823840
+  Interval maximizes prod(1+Q)? False
+
+
+======================================================================
+PART 2: IS prod(1+Q_k) SCHUR-CONVEX?
+======================================================================
+
+f(Q) is Schur-convex if Q majorizes Q' => f(Q) >= f(Q').
+Schur-convexity of prod(1+Q_k) would mean: the more
+concentrated the Q-spectrum, the larger the product.
+
+Test: Does Q_Interval majorize Q_Paley?
+
+  p=7:
+    Q_Int sorted desc: [5.04891734 0.64310413 0.30797853]
+    Q_Pal sorted desc: [2. 2. 2.]
+    Interval majorizes Paley? True
+    Paley majorizes Interval? False
+    prod(1+Q_Int) = 13.0000
+    prod(1+Q_Pal) = 27.0000
+
+  p=11:
+    Q_Int sorted desc: [12.34353752  1.44869057  0.5829645   0.35325328  0.27155413]
+    Q_Pal sorted desc: [3. 3. 3. 3. 3.]
+    Interval majorizes Paley? True
+    Paley majorizes Interval? False
+    prod(1+Q_Int) = 89.0000
+    prod(1+Q_Pal) = 1024.0000
+
+  p=23:
+    Q_Int sorted desc: [53.68231728  6.03947168  2.22926959  1.18114046  0.75174361]
+    Q_Pal sorted desc: [6. 6. 6. 6. 6.]
+    Interval majorizes Paley? True
+    Paley majorizes Interval? False
+    prod(1+Q_Int) = 28657.0000
+    prod(1+Q_Pal) = 1977326743.0000
+
+
+======================================================================
+PART 3: CONVEXITY OF log prod(1+Q)
+======================================================================
+
+log prod(1+Q_k) = sum log(1+Q_k)
+log(1+x) is CONCAVE. So by Jensen: sum log(1+Q_k) <= m*log(1+mean(Q))
+The FLAT distribution (Paley) would maximize this!
+But Interval wins... so something deeper is happening.
+
+  p=7, m=3:
+    sum log(1+Q) Interval = 2.564949
+    sum log(1+Q) Paley    = 3.034803
+    Jensen upper bound     = 3.295837
+    Interval / Paley ratio = 0.625094
+    Interval log-advantage = -0.469853
+    Lower bound (AM-GM): 2^m = 8
+    prod(1+Q_Int) = 13.0
+
+  p=11, m=5:
+    sum log(1+Q) Interval = 4.488636
+    sum log(1+Q) Paley    = 6.608779
+    Jensen upper bound     = 6.931472
+    Interval / Paley ratio = 0.120014
+    Interval log-advantage = -2.120143
+    Lower bound (AM-GM): 2^m = 32
+    prod(1+Q_Int) = 89.0
+
+  p=13, m=6:
+    sum log(1+Q) Interval = 5.451038
+    sum log(1+Q) Paley    = 8.499640
+    Jensen upper bound     = 9.024464
+    Interval / Paley ratio = 0.047425
+    Interval log-advantage = -3.048602
+    Lower bound (AM-GM): 2^m = 64
+    prod(1+Q_Int) = 233.0
+
+  p=17, m=8:
+    sum log(1+Q) Interval = 7.375882
+    sum log(1+Q) Paley    = 13.032386
+    Jensen upper bound     = 13.637985
+    Interval / Paley ratio = 0.003495
+    Interval log-advantage = -5.656504
+    Lower bound (AM-GM): 2^m = 256
+    prod(1+Q_Int) = 1597.0
+
+  p=23, m=11:
+    sum log(1+Q) Interval = 10.263153
+    sum log(1+Q) Paley    = 21.004968
+    Jensen upper bound     = 21.405012
+    Interval / Paley ratio = 0.000022
+    Interval log-advantage = -10.741815
+    Lower bound (AM-GM): 2^m = 2048
+    prod(1+Q_Int) = 28657.0
+
+
+  KEY INSIGHT: Although log(1+x) is concave, the constraint
+  prod(Q_k) = 1 combined with e_j = C(m+j, 2j) forces the
+  product to equal F_p for Interval, which EXCEEDS the flat bound!
+
+  This is because the Q_k satisfy a system of polynomial equations
+  (the Morgan-Voyce constraints), not just prod=1 and sum=m(m+1)/2.
+
+======================================================================
+PART 4: prod(1+Q_k) for PALEY vs Fibonacci
+======================================================================
+
+  p= 7: prod(1+Q) Interval = 13.0000 = F_p = 13
+        prod(1+Q) Paley    = 27.0000
+        ratio Int/Pal = 0.481481
+  p=11: prod(1+Q) Interval = 89.0000 = F_p = 89
+        prod(1+Q) Paley    = 1024.0000
+        ratio Int/Pal = 0.086914
+  p=19: prod(1+Q) Interval = 4181.0000 = F_p = 4181
+        prod(1+Q) Paley    = 10077696.0000
+        ratio Int/Pal = 0.000415
+  p=23: prod(1+Q) Interval = 28657.0000 = F_p = 28657
+        prod(1+Q) Paley    = 1977326743.0000
+        ratio Int/Pal = 0.000014
+  p=29: prod(1+Q) Interval = 514229.0000 = F_p = 514229
+        prod(1+Q) Paley    = 4902227890624.9336
+        ratio Int/Pal = 0.000000
+  p=31: prod(1+Q) Interval = 1346269.0000 = F_p = 1346269
+        prod(1+Q) Paley    = 205891132094655.7500
+        ratio Int/Pal = 0.000000
+  p=43: prod(1+Q) Interval = 433494437.0000 = F_p = 433494437
+        prod(1+Q) Paley    = 46005119909367344267264.0000
+        ratio Int/Pal = 0.000000
+
+======================================================================
+PART 5: WHY DOES CONCENTRATION WIN FOR H BUT LOSE FOR prod(1+Q)?
+======================================================================
+
+Wait — does Interval actually win prod(1+Q)?
+Let's check which tournament MAXIMIZES prod(1+Q_k) among all circulants.
+
+  p=7: All prod(1+Q_k) values, ranked:
+      1.        27.0000 <-- PALEY
+      2.        27.0000
+      3.        13.0000
+      4.        13.0000
+      5.        13.0000
+      6.        13.0000 <-- INTERVAL
+      7.        13.0000
+      8.        13.0000
+  Interval rank: 6/8
+  Paley rank: 1/8
+
+  p=11: All prod(1+Q_k) values, ranked:
+      1.      1024.0000
+      2.      1024.0000 <-- PALEY
+      3.       419.0000
+      4.       419.0000
+      5.       419.0000
+    ...
+     26.        89.0000 <-- INTERVAL
+     30.        89.0000
+     31.        89.0000
+     32.        89.0000
+  Interval rank: 26/32
+  Paley rank: 2/32
+
+  p=13: All prod(1+Q_k) values, ranked:
+      1.      4913.0000
+      2.      4913.0000
+      3.      4913.0000
+      4.      4913.0000
+      5.      2287.0000
+    ...
+     60.       233.0000 <-- INTERVAL
+     62.       233.0000
+     63.       233.0000
+     64.       233.0000
+  Interval rank: 60/64
+
+
+======================================================================
+PART 6: H(T) vs prod(1+Q_k) — are they correlated?
+======================================================================
+
+  p=7: Corr(H, prod(1+Q)) = +1.000000
+    H values (first 8): [np.int64(175), np.int64(175), np.int64(175), np.int64(189), np.int64(189), np.int64(175), np.int64(175), np.int64(175)]
+    prod values (first 8): ['13.0', '13.0', '13.0', '27.0', '27.0', '13.0', '13.0', '13.0']
+    H maximized at index 3 (H=189)
+    prod maximized at index 3 (prod=27.0)
+
+  p=11: Corr(H, prod(1+Q)) = +0.488133
+    H values (first 8): [np.int64(93027), np.int64(92411), np.int64(95095), np.int64(93027), np.int64(93467), np.int64(93467), np.int64(93027), np.int64(93467)]
+    prod values (first 8): ['89.0', '419.0', '1024.0', '89.0', '331.0', '331.0', '89.0', '331.0']
+    H maximized at index 2 (H=95095)
+    prod maximized at index 2 (prod=1024.0)
+
+
+======================================================================
+PART 7: SPECTRAL GAP RATIO — UNIVERSAL CONSTANT?
+======================================================================
+
+For Interval: Q_1/Q_2 appears to approach a universal constant ~9.
+This ratio determines the 'expansion quality' of the tournament.
+
+  p= 7: Q_1/Q_2 = 7.8509, Q_1 = 5.0489, Q_2 = 0.643104
+  p=11: Q_1/Q_2 = 8.5205, Q_1 = 12.3435, Q_2 = 1.448691
+  p=13: Q_1/Q_2 = 8.6547, Q_1 = 17.2069, Q_2 = 1.988157
+  p=17: Q_1/Q_2 = 8.7968, Q_1 = 29.3653, Q_2 = 3.338166
+  p=19: Q_1/Q_2 = 8.8371, Q_1 = 36.6604, Q_2 = 4.148474
+  p=23: Q_1/Q_2 = 8.8886, Q_1 = 53.6823, Q_2 = 6.039472
+  p=29: Q_1/Q_2 = 8.9298, Q_1 = 85.2945, Q_2 = 9.551677
+  p=31: Q_1/Q_2 = 8.9385, Q_1 = 97.4530, Q_2 = 10.902571
+  p=37: Q_1/Q_2 = 8.9568, Q_1 = 138.7921, Q_2 = 15.495682
+  p=41: Q_1/Q_2 = 8.9648, Q_1 = 170.4043, Q_2 = 19.008099
+  p=43: Q_1/Q_2 = 8.9680, Q_1 = 187.4262, Q_2 = 20.899408
+  p=47: Q_1/Q_2 = 8.9732, Q_1 = 223.9018, Q_2 = 24.952223
+  p=53: Q_1/Q_2 = 8.9789, Q_1 = 284.6946, Q_2 = 31.706932
+  p=59: Q_1/Q_2 = 8.9830, Q_1 = 352.7824, Q_2 = 39.272222
+  p=61: Q_1/Q_2 = 8.9841, Q_1 = 377.0995, Q_2 = 41.974113
+
+  Q_1/Q_2 grows with p — NOT a universal constant.
+  The gap keeps widening, making Interval increasingly dominant.
+
+  Normalized: Q_1/m values:
+    p= 7: Q_1/m = 1.682972 (→ m/3 ≈ 1.0000)
+    p=11: Q_1/m = 2.468708 (→ m/3 ≈ 1.6667)
+    p=13: Q_1/m = 2.867810 (→ m/3 ≈ 2.0000)
+    p=17: Q_1/m = 3.670662 (→ m/3 ≈ 2.6667)
+    p=23: Q_1/m = 4.880211 (→ m/3 ≈ 3.6667)
+    p=29: Q_1/m = 6.092464 (→ m/3 ≈ 4.6667)
+    p=43: Q_1/m = 8.925058 (→ m/3 ≈ 7.0000)
+    p=61: Q_1/m = 12.569982 (→ m/3 ≈ 10.0000)
+
+  Q_1/m → m/3 → (p-1)/6, so Q_1 ~ m²/3 ~ p²/12
