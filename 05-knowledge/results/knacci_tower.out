@@ -1,0 +1,458 @@
+======================================================================
+THE k-NACCI TOWER IN TOURNAMENTS
+======================================================================
+
+======================================================================
+STANDARD k-NACCI CONSTANTS
+======================================================================
+
+For standard k-nacci: f(n) = f(n-1) + f(n-2) + ... + f(n-k)
+  k           name     constant                      sequence (first 10)
+---------------------------------------------------------------------------
+  2      Fibonacci     1.618034   [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+  3     Tribonacci     1.839287   [1, 1, 2, 4, 7, 13, 24, 44, 81, 149]
+  4     Tetranacci     1.927562   [1, 1, 2, 4, 8, 15, 29, 56, 108]
+  5     Pentanacci     1.965948   [1, 1, 2, 4, 8, 16, 31, 61]
+  6      Hexanacci     1.983583   [1, 1, 2, 4, 8, 16, 32]
+  7     Heptanacci     1.991964   [1, 1, 2, 4, 8, 16]
+  8      Octanacci     1.996031   [1, 1, 2, 4, 8]
+  9      Ennanacci     1.998029   [1, 1, 2, 4]
+
+k-nacci constants converge to 2 as k → ∞
+(because the dominant root of x^k = x^{k-1} + ... + 1 → 2)
+
+======================================================================
+WEIGHTED k-NACCI WITH OCF WEIGHTS (1, 2, 4, 8, ...)
+======================================================================
+
+OCF channel weights: 2^0=1, 2^1=2, 2^2=4, 2^3=8, ...
+Weighted k-nacci: f(n) = 1·f(n-1) + 2·f(n-2) + 4·f(n-3) + ...
+
+  k           name     constant                                      seq
+---------------------------------------------------------------------------
+  2    w-Fibonacci     2.000000   [1, 1, 3, 5, 11, 21, 43, 85]
+  3   w-Tribonacci     2.467504   [1, 1, 3, 9, 19, 49, 123, 297]
+  4   w-Tetranacci     2.698069   [1, 1, 3, 9, 27, 65, 179, 489]
+  5   w-Pentanacci     2.820830   [1, 1, 3, 9, 27, 81, 211, 601]
+  6    w-Hexanacci     2.890197   [1, 1, 3, 9, 27, 81, 243]
+  7   w-Heptanacci     2.931142   [1, 1, 3, 9, 27, 81]
+  8    w-Octanacci     2.956097   [1, 1, 3, 9, 27]
+  9    w-Ennanacci     2.971669   [1, 1, 3, 9]
+
+Weighted k-nacci constants:
+  k=2: λ_dom = 2.000000, ratio to k-nacci = 1.236068
+  k=3: λ_dom = 2.467504, ratio to k-nacci = 1.341555
+  k=4: λ_dom = 2.698069, ratio to k-nacci = 1.399731
+  k=5: λ_dom = 2.820830, ratio to k-nacci = 1.434844
+  k=6: λ_dom = 2.890197, ratio to k-nacci = 1.457059
+  k=7: λ_dom = 2.931142, ratio to k-nacci = 1.471484
+  k=8: λ_dom = 2.956097, ratio to k-nacci = 1.480988
+  k=9: λ_dom = 2.971669, ratio to k-nacci = 1.487300
+
+======================================================================
+THE ODD k-NACCI TOWER IN TOURNAMENTS
+======================================================================
+
+In tournaments, only ODD cycles exist (Rédei: all HP counts are odd).
+The relevant k-nacci levels use k = 3, 5, 7, 9, ...
+
+LEVEL 1: TRIBONACCI (k=3, 3-cycles)
+  Activated at n=3. Period 3.
+  Packing disjoint 3-cycles: α_j^(3) counts j-tuples of disjoint 3-cycles.
+  New channel every 3 vertices.
+
+LEVEL 2: PENTANACCI (k=5, 5-cycles)
+  Activated at n=5. Period 5.
+  5-cycles first contribute to α₁ at n=5.
+  Disjoint (5,5) pairs need n≥10 — activates new MIXED channel.
+  But (3,5) disjoint pairs need n≥8 — activates CROSS-LEVEL channel.
+
+LEVEL 3: HEPTANACCI (k=7, 7-cycles)
+  Activated at n=7. Period 7.
+  7-cycles contribute to α₁ at n=7.
+  (3,7) disjoint pairs need n≥10. (5,7) need n≥12. (7,7) need n≥14.
+
+GENERAL: The (k₁, k₂, ..., k_j) disjoint tuple needs n ≥ k₁+k₂+...+k_j.
+
+Disjoint cycle configurations by required n:
+                   config  min n  channel   weight
+-------------------------------------------------------
+  (                 3+3)      6      α_2        4
+  (                 3+5)      8      α_2        4
+  (               3+3+3)      9      α_3        8
+  (                 3+7)     10      α_2        4
+  (                 5+5)     10      α_2        4
+  (               3+3+5)     11      α_3        8
+  (             3+3+3+3)     12      α_4       16
+  (                 3+9)     12      α_2        4
+  (                 5+7)     12      α_2        4
+  (               3+3+7)     13      α_3        8
+  (               3+5+5)     13      α_3        8
+  (                3+11)     14      α_2        4
+  (             3+3+3+5)     14      α_4       16
+  (                 5+9)     14      α_2        4
+  (                 7+7)     14      α_2        4
+  (           3+3+3+3+3)     15      α_5       32
+  (               3+3+9)     15      α_3        8
+  (               3+5+7)     15      α_3        8
+  (               5+5+5)     15      α_3        8
+  (                3+13)     16      α_2        4
+  (             3+3+3+7)     16      α_4       16
+  (             3+3+5+5)     16      α_4       16
+  (                5+11)     16      α_2        4
+  (                 7+9)     16      α_2        4
+  (              3+3+11)     17      α_3        8
+  (           3+3+3+3+5)     17      α_5       32
+  (               3+5+9)     17      α_3        8
+  (               3+7+7)     17      α_3        8
+  (               5+5+7)     17      α_3        8
+  (                3+15)     18      α_2        4
+
+======================================================================
+CROSS-LEVEL INTERACTIONS: THE k-NACCI PRODUCT
+======================================================================
+
+The full independence polynomial I_{CG}(x) is NOT a simple k-nacci.
+It's a PRODUCT of k-nacci levels, because cycles of different lengths
+interact through vertex sharing.
+
+I_{CG}(x) = I_{CG|3-cycles}(x) × I_{CG|5-cycles|conditioned on 3-cycles}(x) × ...
+
+This product structure is the CLUSTER EXPANSION from statistical mechanics:
+
+  ln Z = ln Z_3 + ln Z_5|3 + ln Z_7|3,5 + ...
+
+  where Z_k|{prev} is the partition function for k-cycles conditioned
+  on the placement of shorter cycles.
+
+THE TOWER:
+  Level 1 (tribonacci):  Z_3 — 3-cycle gas, period 3
+  Level 2 (pentanacci):  Z_5|3 — 5-cycle gas conditioned on 3-cycle gas
+  Level 3 (heptanacci):  Z_7|3,5 — 7-cycle gas conditioned on both
+
+Each level adds a new k-nacci layer to the tower.
+The TOTAL partition function is the product: Z = Z_3 · Z_5|3 · Z_7|3,5 · ...
+
+
+======================================================================
+COMPUTATION: DECOMPOSE H INTO k-NACCI LEVELS
+======================================================================
+
+n=6: Decomposition into k-nacci levels
+   H   c3   c5  α₁(3)  α₁(5)  α₂(33)  α₂(35)  H_3only  H_full  5c_frac
+--------------------------------------------------------------------------------
+   9    3    1      3      1       0       0        7       9    0.222
+   9    3    1      3      1       0       0        7       9    0.222
+  11    4    1      4      1       0       0        9      11    0.182
+  15    4    3      4      3       0       0        9      15    0.400
+  13    4    2      4      2       0       0        9      13    0.308
+  15    5    2      5      2       0       0       11      15    0.267
+  17    4    4      4      4       0       0        9      17    0.471
+   9    3    1      3      1       0       0        7       9    0.222
+  15    4    3      4      3       0       0        9      15    0.400
+  19    5    4      5      4       0       0       11      19    0.421
+   9    3    1      3      1       0       0        7       9    0.222
+  15    4    3      4      3       0       0        9      15    0.400
+  27    5    6      5      6       1       0       15      27    0.444
+  23    5    4      5      4       1       0       15      23    0.348
+  17    4    2      4      2       1       0       13      17    0.235
+   9    2    0      2      0       1       0        9       9    0.000
+  23    6    5      6      5       0       0       13      23    0.435
+  11    4    1      4      1       0       0        9      11    0.182
+  19    5    4      5      4       0       0       11      19    0.421
+  23    6    5      6      5       0       0       13      23    0.435
+  33    7    9      7      9       0       0       15      33    0.545
+  25    6    6      6      6       0       0       13      25    0.480
+  37    6    8      6      8       2       0       21      37    0.432
+  33    6    6      6      6       2       0       21      33    0.364
+  31    6    7      6      7       1       0       17      31    0.452
+  23    5    4      5      4       1       0       15      23    0.348
+  27    5    6      5      6       1       0       15      27    0.444
+  29    6    6      6      6       1       0       17      29    0.414
+  15    4    3      4      3       0       0        9      15    0.400
+  13    4    2      4      2       0       0        9      13    0.308
+  37    7    9      7      9       1       0       19      37    0.486
+  31    6    7      6      7       1       0       17      31    0.452
+  25    6    6      6      6       0       0       13      25    0.480
+  29    6    6      6      6       1       0       17      29    0.414
+  37    7    7      7      7       2       0       23      37    0.378
+  29    6    4      6      4       2       0       21      29    0.276
+  29    6    6      6      6       1       0       17      29    0.414
+  33    7    7      7      7       1       0       19      33    0.424
+  41    8    8      8      8       2       0       25      41    0.390
+  37    7    7      7      7       2       0       23      37    0.378
+  33    7    7      7      7       1       0       19      33    0.424
+  37    7    9      7      9       1       0       19      37    0.486
+  15    5    2      5      2       0       0       11      15    0.267
+  43    8   11      8     11       1       0       21      43    0.512
+  43    8   11      8     11       1       0       21      43    0.512
+  33    7    9      7      9       0       0       15      33    0.545
+  45    8    6      8      6       4       0       33      45    0.267
+  45    8   12      8     12       1       0       21      45    0.533
+
+Verification: H = H_full? (should be yes for all)
+
+======================================================================
+THE k-NACCI HIERARCHY: ACTIVATION THRESHOLDS
+======================================================================
+
+ACTIVATION THRESHOLDS for each (k₁,...,k_j) disjoint type:
+
+Single cycles (α₁ contributions):
+  3-cycle:  n ≥ 3   (tribonacci level 1)
+  5-cycle:  n ≥ 5   (pentanacci level 2)
+  7-cycle:  n ≥ 7   (heptanacci level 3)
+  9-cycle:  n ≥ 9   (ennanacci level 4)
+
+Disjoint pairs (α₂ contributions):
+  (3,3):    n ≥ 6   (tribonacci² — two independent tribonacci layers)
+  (3,5):    n ≥ 8   (tri×penta cross-term)
+  (3,7):    n ≥ 10  (tri×hepta cross-term)
+  (5,5):    n ≥ 10  (pentanacci² — two independent pentanacci layers)
+  (5,7):    n ≥ 12  (penta×hepta cross-term)
+  (7,7):    n ≥ 14  (heptanacci²)
+
+Disjoint triples (α₃ contributions):
+  (3,3,3):  n ≥ 9   (tribonacci³)
+  (3,3,5):  n ≥ 11  (tribonacci² × pentanacci)
+  (3,5,5):  n ≥ 13  (tribonacci × pentanacci²)
+  (3,3,7):  n ≥ 13  (tribonacci² × heptanacci)
+  (5,5,5):  n ≥ 15  (pentanacci³)
+  (3,5,7):  n ≥ 15  (tri × penta × hepta — FULL CROSS-TERM)
+
+THE PATTERN:
+  At n, the active disjoint types are all (k₁,...,k_j) with
+  k₁+...+k_j ≤ n, each k_i odd ≥ 3.
+
+  This is the set of PARTITIONS OF n INTO ODD PARTS ≥ 3.
+  The number of such partitions is OEIS A000726 (partitions into odd parts ≥ 3).
+
+Active disjoint types by n:
+  n= 3: 1 single types + 0 multi types = 1 total
+  n= 4: 1 single types + 0 multi types = 1 total
+  n= 5: 2 single types + 0 multi types = 2 total
+  n= 6: 2 single types + 1 multi types = 3 total
+         multi types: [(3, 3)]
+  n= 7: 3 single types + 0 multi types = 3 total
+  n= 8: 3 single types + 1 multi types = 4 total
+         multi types: [(3, 5)]
+  n= 9: 4 single types + 1 multi types = 5 total
+         multi types: [(3, 3, 3)]
+  n=10: 4 single types + 2 multi types = 6 total
+         multi types: [(3, 7), (5, 5)]
+  n=11: 5 single types + 1 multi types = 6 total
+         multi types: [(3, 3, 5)]
+  n=12: 5 single types + 3 multi types = 8 total
+         multi types: [(3, 3, 3, 3), (3, 9), (5, 7)]
+  n=13: 6 single types + 2 multi types = 8 total
+  n=14: 6 single types + 4 multi types = 10 total
+  n=15: 7 single types + 4 multi types = 11 total
+  n=16: 7 single types + 5 multi types = 12 total
+  n=17: 8 single types + 5 multi types = 13 total
+  n=18: 8 single types + 8 multi types = 16 total
+
+======================================================================
+THE GENERATING FUNCTION: PARTITIONS INTO ODD PARTS ≥ 3
+======================================================================
+
+The number of active channel types at n is related to:
+  p_odd≥3(n) = number of partitions of n into odd parts ≥ 3
+
+This is the PARTITION FUNCTION restricted to odd parts ≥ 3.
+
+Generating function:
+  Σ p_odd≥3(n) x^n = ∏_{k=1}^∞ 1/(1 - x^{2k+1})
+                    = 1/(1-x³) · 1/(1-x⁵) · 1/(1-x⁷) · ...
+
+Each factor 1/(1-x^{2k+1}) is a GEOMETRIC SERIES representing
+the number of (2k+1)-cycles that can be packed.
+
+THE k-NACCI TOWER IS THE EULER PRODUCT:
+  Z(x) = ∏_{k=0}^∞ Z_{2k+3}(x)
+
+  where Z_{2k+3}(x) is the partition function for (2k+3)-cycle gas.
+
+This connects to:
+  - Euler's partition theorem
+  - The Dedekind eta function
+  - Modular forms and Ramanujan's work on partitions!
+
+p_odd≥3(n) for n=0..30:
+  [1, 0, 0, 1, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 6, 8, 8, 10, 12, 13, 15, 18, 20, 23, 27, 30, 34, 40]
+
+First nonzero after p(0)=1: p(3)=1, p(5)=1, p(6)=1
+This is: how many ways to write n as sum of odd numbers ≥ 3
+
+Sequence for n=0..20: [1, 0, 0, 1, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 6, 8, 8, 10]
+(This should match OEIS A000726 shifted, or a related sequence)
+
+======================================================================
+FIBONACCI → TRIBONACCI → ... → THE FULL TOWER
+======================================================================
+
+THE HIERARCHY OF RECURRENCES IN TOURNAMENT THEORY:
+
+LEVEL 0: FIBONACCI (k=2)
+  Where: Independence polynomial on path graphs
+  Tournament analog: Linear chains of conflicting cycles
+  Recurrence: f(n) = f(n-1) + f(n-2)
+  Constant: φ = 1.618...
+  Weight: OCF base weight is 2 (= φ² - φ + 1 ≈ 2.000)
+
+LEVEL 1: TRIBONACCI (k=3) — THE DOMINANT LEVEL
+  Where: 3-cycle packing, disjoint 3-cycle collections
+  Tournament analog: THE fundamental structure (3-cycle is tournament atom)
+  Recurrence: f(n) = f(n-1) + f(n-2) + f(n-3)
+  Constant: τ = 1.839...
+  Weighted: f(n) = f(n-1) + 2f(n-2) + 4f(n-3), λ = 2.468
+
+LEVEL 2: PENTANACCI (k=5)
+  Where: 5-cycle packing, enters at n=5
+  Tournament analog: Long cycles that span most vertices
+  Recurrence: f(n) = f(n-1) + ... + f(n-5)
+  Constant: ψ = 1.966...
+  At n=6: 5-cycles contribute 15-50% of H for high-H classes
+
+LEVEL 3: HEPTANACCI (k=7)
+  Where: 7-cycle packing, enters at n=7
+  Tournament analog: Hamiltonian-like cycles
+  At n=7: 7-cycles are HC, contribute to α₁ but not α₂ (use all vertices)
+  At n=8+: 7-cycles can form disjoint pairs with 3-cycles
+
+CONVERGENCE: As k → ∞, the k-nacci constant → 2.
+  This means ALL levels converge to the same growth rate!
+  The base-2 weighting in the OCF (weights 1, 2, 4, 8, ...)
+  is EXACTLY this convergence: 2^k / (k-nacci constant)^k → 1.
+
+THE DEEP REASON:
+  The OCF weights 2^k arise because each independent set of size k
+  contributes x^k to I(x), evaluated at x=2.
+
+  The k-nacci constant for the k-th odd cycle is ~2 for large k.
+  So the OCF evaluation at x=2 sits EXACTLY at the convergence point
+  of the k-nacci tower!
+
+  x=2 is the CRITICAL POINT where all levels of the hierarchy
+  contribute equally. This is why H captures so much structure:
+  it's the partition function evaluated at the universal fixed point.
+
+k-nacci constants approaching 2:
+  k= 2: λ = 1.61803399, gap to 2 = 0.38196601
+  k= 3: λ = 1.83928676, gap to 2 = 0.16071324
+  k= 4: λ = 1.92756198, gap to 2 = 0.07243802
+  k= 5: λ = 1.96594824, gap to 2 = 0.03405176
+  k= 6: λ = 1.98358284, gap to 2 = 0.01641716
+  k= 7: λ = 1.99196420, gap to 2 = 0.00803580
+  k= 8: λ = 1.99603118, gap to 2 = 0.00396882
+  k= 9: λ = 1.99802947, gap to 2 = 0.00197053
+  k=10: λ = 1.99901863, gap to 2 = 0.00098137
+  k=11: λ = 1.99951040, gap to 2 = 0.00048960
+  k=12: λ = 1.99975550, gap to 2 = 0.00024450
+  k=13: λ = 1.99987783, gap to 2 = 0.00012217
+  k=14: λ = 1.99993894, gap to 2 = 0.00006106
+
+======================================================================
+THE x=2 UNIVERSALITY
+======================================================================
+
+WHY x=2 IS SPECIAL:
+
+The independence polynomial I_G(x) evaluated at different x gives:
+  x=0: I(0) = 1 (trivial — empty set only)
+  x=1: I(1) = total number of independent sets (counting problem)
+  x=2: I(2) = H(T) (Hamiltonian path count — OCF)
+  x→∞: I(x) ~ α_max · x^{ν(G)} (dominated by max independent set)
+
+At x=1: the k-nacci constants are ~φ, τ, ψ, ... all < 2
+  → lower levels dominate, higher levels negligible
+  → FIBONACCI structure dominates
+
+At x=2: the k-nacci constants are ~2, 2, 2, ...
+  → ALL LEVELS CONTRIBUTE EQUALLY
+  → The FULL TOWER is active
+  → This is why H is so rich: it captures the ENTIRE hierarchy
+
+At x>2: higher levels DOMINATE
+  → The structure becomes dominated by large-cycle packings
+  → PENTANACCI/HEPTANACCI behavior
+
+CRITICAL EXPONENT:
+  The "critical" x where level k transitions from negligible to dominant:
+    x_c(k) = k-nacci constant for k
+
+  For k=2: x_c = φ ≈ 1.618
+  For k=3: x_c = τ ≈ 1.839
+  For k=5: x_c ≈ 1.966
+  For k=7: x_c ≈ 1.992
+  For k→∞: x_c → 2
+
+  At x=2, ALL levels have x > x_c, meaning ALL are in the
+  "active/non-trivial" regime. x=2 is the smallest integer
+  where the ENTIRE tower is active!
+
+THIS IS THE DEEP REASON H = I(2):
+  The OCF evaluates at x=2 because Rédei's theorem guarantees
+  odd parity, and the base-2 structure of the independence polynomial
+  naturally aligns with the binary weighting of cycle collections.
+
+  But from the k-nacci perspective, x=2 is special because it's
+  the CONVERGENCE POINT of the entire odd-k-nacci tower.
+
+Critical values x_c(k) for odd k:
+  k= 3: x_c = 1.839287, 2 - x_c = 0.160713
+  k= 5: x_c = 1.965948, 2 - x_c = 0.034052
+  k= 7: x_c = 1.991964, 2 - x_c = 0.008036
+  k= 9: x_c = 1.998029, 2 - x_c = 0.001971
+  k=11: x_c = 1.999510, 2 - x_c = 0.000490
+  k=13: x_c = 1.999878, 2 - x_c = 0.000122
+  k=15: x_c = 1.999969, 2 - x_c = 0.000031
+  k=17: x_c = 1.999992, 2 - x_c = 0.000008
+  k=19: x_c = 1.999998, 2 - x_c = 0.000002
+
+======================================================================
+SYNTHESIS: THE k-NACCI TOWER AND TOURNAMENT STRUCTURE
+======================================================================
+
+                    THE TOURNAMENT k-NACCI TOWER
+
+                         x = 2 (OCF evaluation point)
+                           ↓
+    k=∞  ────────────────2.000── all levels active ──────────
+    k=9  ────────────1.998──────────────────────────────────
+    k=7  ──────────1.992────────────────────────────────────
+    k=5  ────────1.966──────────────────────────────────────
+    k=3  ──────1.839────────────────────────────────────────  ← TRIBONACCI
+    k=2  ────1.618──────────────────────────────────────────  ← FIBONACCI
+              ↑           ↑
+          x=φ (Fibonacci  x=2 (OCF)
+           dominates)     (all levels
+                           contribute)
+
+CONCLUSIONS:
+
+1. Tournament fractal structure is TRIBONACCI at its core
+   because the 3-cycle (size 3) is the tournament atom.
+
+2. The full structure is a TOWER of k-nacci recurrences,
+   one for each odd k ≥ 3.
+
+3. The OCF evaluation at x=2 is special: it's the point
+   where ALL levels of the tower become simultaneously active.
+
+4. The "Fibonacci → Tribonacci → ..." progression is:
+   - Fibonacci (k=2): abstract graph theory, paths
+   - Tribonacci (k=3): DOMINANT in tournaments (3-cycles)
+   - Pentanacci (k=5): correction term (5-cycles)
+   - Heptanacci (k=7): fine structure (7-cycles)
+   - ...converging to k=∞, constant=2
+
+5. The PARTITION FUNCTION interpretation:
+   H = ∏_{k=0}^∞ Z_{2k+3}(2)
+   is an EULER PRODUCT over odd-cycle gas partition functions.
+
+6. The CONNECTION TO RAMANUJAN:
+   Ramanujan's partition function p(n) counts partitions into all parts.
+   Our function counts partitions into ODD parts ≥ 3.
+   The Ramanujan tournament P_p optimizes EACH factor in the product.
+   This is the spectral-combinatorial duality in action.
+
