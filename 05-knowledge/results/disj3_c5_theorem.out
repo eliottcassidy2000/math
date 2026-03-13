@@ -1,0 +1,156 @@
+======================================================================
+DISJ3 = -C5/2 + CONST(P) THEOREM
+======================================================================
+
+============================================================
+PART 1: Verify const(p) at key primes
+============================================================
+
+  p=7, m=3:
+    c3=14 (formula: 14)
+    Interval: c5=28, disj3=14
+    const(p) = 28.0
+    Cross-check: 28.0 OK
+
+  p=11, m=5:
+    c3=55 (formula: 55)
+    Interval: c5=484, disj3=550
+    const(p) = 792.0
+    Cross-check: 792.0 OK
+
+  p=13, m=6:
+    c3=91 (formula: 91)
+    Interval: c5=1274, disj3=1820
+    const(p) = 2457.0
+    Cross-check: 2457.0 OK
+
+  p=17, m=8:
+    c3=204 (formula: 204)
+    Interval: c5=5712, disj3=11424
+    const(p) = 14280.0
+    Cross-check: 14280.0 OK
+
+  p=19, m=9:
+    c3=285 (formula: 285)
+    Interval: c5=10488, disj3=23940
+    const(p) = 29184.0
+    Cross-check: 29184.0 OK
+
+  p=23, m=11:
+    c3=506 (formula: 506)
+    Interval: c5=29348, disj3=83490
+    const(p) = 98164.0
+    Cross-check: 98164.0 OK
+
+============================================================
+PART 2: Pattern in const(p)
+============================================================
+
+     p    m     c3    C(c3,2)      const   const/c3    const/p
+     7    3     14         91         28     2.0000     4.0000
+    11    5     55       1485        792    14.4000    72.0000
+    13    6     91       4095       2457    27.0000   189.0000
+    17    8    204      20706      14280    70.0000   840.0000
+    19    9    285      40470      29184   102.4000  1536.0000
+    23   11    506     127765      98164   194.0000  4268.0000
+
+  Trying const(p) = a*C(p,5) + b*C(p,4) + c*C(p,3):
+    a = 2.984848, b = -2.566667, c = 1.575758
+    p=7: predicted = 28.0000, actual = 28, error = 0.0000
+    p=11: predicted = 792.0000, actual = 792, error = 0.0000
+    p=13: predicted = 2457.0000, actual = 2457, error = 0.0000
+    p=17: predicted = 13433.0909, actual = 14280, error = 846.9091
+    p=19: predicted = 26286.3273, actual = 29184, error = 2897.6727
+    p=23: predicted = 80500.0000, actual = 98164, error = 17664.0000
+
+  Try: const = a*c3^2 + b*c3 + c*p:
+    a=0.363176, b=-7.234797, c=8.300676
+    p=7: c3=14, pred=28.0000, actual=28, err=0.0000
+    p=11: c3=55, pred=792.0000, actual=792, err=0.0000
+    p=13: c3=91, pred=2457.0000, actual=2457, err=0.0000
+    p=17: c3=204, pred=13779.1318, actual=14280, err=500.8682
+    p=19: c3=285, pred=27594.7399, actual=29184, err=1589.2601
+    p=23: c3=506, pred=89516.1554, actual=98164, err=8647.8446
+
+============================================================
+PART 3: Exhaustive 5-vertex tournament census
+============================================================
+
+  Distinct (c3, c5, ov1, ov2, disj, scores) patterns: 12
+   c3  c5  ov1  ov2 disj C(c3,2)  c5+2*disj           scores
+    0   0    0    0    0       0          0   (0, 1, 2, 3, 4)
+    1   0    0    0    0       0          0   (0, 1, 3, 3, 3)
+    1   0    0    0    0       0          0   (0, 2, 2, 2, 4)
+    1   0    0    0    0       0          0   (1, 1, 1, 3, 4)
+    2   0    0    1    0       1          0   (0, 2, 2, 3, 3)
+    2   0    0    1    0       1          0   (1, 1, 2, 2, 4)
+    3   1    0    3    0       3          1   (1, 1, 2, 3, 3)
+    3   1    1    2    0       3          1   (1, 1, 2, 3, 3)
+    4   1    2    4    0       6          1   (1, 2, 2, 2, 3)
+    4   2    3    3    0       6          2   (1, 2, 2, 2, 3)
+    4   3    3    3    0       6          3   (1, 2, 2, 2, 3)
+    5   2    5    5    0      10          2   (2, 2, 2, 2, 2)
+
+  c5 + 2*disj values: [0, 1, 2, 3]
+  c5 + 2*ov1 values: [0, 1, 3, 5, 8, 9, 12]
+  c5 + 2*(C(c3,2)-disj) values: [0, 2, 7, 13, 14, 15, 22]
+  c5 - 2*disj values: [0, 1, 2, 3]
+
+  c5 + 2*disj grouped by c3:
+    c3=0: [0]
+    c3=1: [0]
+    c3=2: [0]
+    c3=3: [1]
+    c3=4: [1, 2, 3]
+    c3=5: [2]
+
+============================================================
+PART 4: Looking for 5-vertex identity
+============================================================
+  Searching for a*c5 + b*disj + c*ov1 + d*ov2 = constant...
+  12 distinct patterns from 1024 tournaments
+  c5 + 2*ov2: [0, 2, 5, 7, 8, 9, 12]
+  c5 + 2*ov1: [0, 1, 3, 5, 8, 9, 12]
+  c5 - 2*disj: [0, 1, 2, 3]
+  c5 + 4*ov2: [0, 4, 9, 13, 14, 15, 17, 22]
+  c5 - 2*(ov1+ov2): [-18, -11, -10, -9, -5, -2, 0]
+
+  Checking sum over 5-subsets:
+
+  p=7, Interval:
+    sum_c5 (from 5-subsets) = 28 (global c5 = 28)
+    sum_ov1 = 49, sum_ov2 = 84, sum_disj = 0
+    Global: ov1=49, ov2=28, disj=14
+    ov1 pairs: each in exactly 1 five-subset. sum_ov1 = ov1_global = 49 OK
+    ov2 pairs: each in 3 five-subsets. sum_ov2/(p-4) = 28.0, ov2_global = 28
+    disj pairs: 0 five-subsets contain a disjoint pair. sum_disj = 0
+    *** CONFIRMED: no disjoint 3-cycle pairs within any 5-subset ***
+    c5 - 2*ov1 - 2*ov2 = -126
+
+  p=11, Interval:
+    sum_c5 (from 5-subsets) = 484 (global c5 = 484)
+    sum_ov1 = 715, sum_ov2 = 1540, sum_disj = 0
+    Global: ov1=715, ov2=220, disj=550
+    ov1 pairs: each in exactly 1 five-subset. sum_ov1 = ov1_global = 715 OK
+    ov2 pairs: each in 7 five-subsets. sum_ov2/(p-4) = 220.0, ov2_global = 220
+    disj pairs: 0 five-subsets contain a disjoint pair. sum_disj = 0
+    *** CONFIRMED: no disjoint 3-cycle pairs within any 5-subset ***
+    c5 - 2*ov1 - 2*ov2 = -1386
+
+============================================================
+PART 5: Verify c5 - 2*ov1 - 2*ov2 = const for all orientations
+============================================================
+
+  p=7, m=3:
+    c5 - 2*ov1 - 2*ov2 values: [-126]
+    *** CONSTANT = -126 ***
+
+  p=11, m=5:
+    c5 - 2*ov1 - 2*ov2 values: [-1386]
+    *** CONSTANT = -1386 ***
+
+  p=13, m=6:
+    c5 - 2*ov1 - 2*ov2 values: [-3276]
+    *** CONSTANT = -3276 ***
+
+DONE.

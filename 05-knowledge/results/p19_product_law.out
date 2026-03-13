@@ -77,4 +77,4 @@ PRODUCT LAW TEST at p=19, m=9
   chi(9)  = +1
 
   Computing H for 256 orientations (symmetry reduction from 512)...
-    12% (32/256), elapsed=473s, ETA=3308s
+    12% (32/256), elapsed=224s, ETA=1568s
