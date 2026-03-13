@@ -1,0 +1,169 @@
+"""
+PALEY vs INTERVAL RACE at p=17 — opus-2026-03-12-S67e
+
+p=17 ≡ 1 mod 4, so no Paley tournament exists.
+Compute H for Interval and a sample of other connection sets.
+Also check if the Interval is still the maximizer.
+"""
+
+import numpy as np
+from itertools import combinations
+from math import comb
+import time
+
+def is_qr(a, p):
+    if a % p == 0:
+        return False
+    return pow(a, (p-1)//2, p) == 1
+
+def qr_set(p):
+    return sorted([a for a in range(1, p) if is_qr(a, p)])
+
+def fourier_magnitudes(S, p):
+    m = (p - 1) // 2
+    omega = np.exp(2j * np.pi / p)
+    Q = []
+    for k in range(1, m + 1):
+        S_hat = sum(omega ** (s * k) for s in S)
+        Q.append(abs(S_hat) ** 2)
+    return np.array(Q)
+
+def count_hp_from_0(S, p):
+    """Count Hamiltonian paths starting from vertex 0 using bitmask DP."""
+    n = p
+    S_set = set(S)
+    # Precompute adjacency: for each vertex, which vertices can be reached
+    adj = {}
+    for v in range(n):
+        adj[v] = [(v + s) % n for s in S]
+
+    # dp[mask][v] = count
+    # Use array for inner dimension
+    # mask has n bits
+    full = (1 << n) - 1
+
+    # Start: vertex 0, mask = {0}
+    dp = {(1, 0): 1}
+
+    for step in range(1, n):
+        new_dp = {}
+        for (mask, v), count in dp.items():
+            for w in adj[v]:
+                if not (mask & (1 << w)):
+                    key = (mask | (1 << w), w)
+                    if key in new_dp:
+                        new_dp[key] += count
+                    else:
+                        new_dp[key] = count
+        dp = new_dp
+
+    return sum(dp.get((full, v), 0) for v in range(n))
+
+
+p = 17
+m = (p - 1) // 2  # = 8
+print(f"p = {p}, m = {m}")
+print(f"Number of valid connection sets: {comb(p-1, m) // 2} (by symmetry)")
+
+# First, compute H for the Interval
+S_int = list(range(1, m + 1))
+print(f"\nComputing H(Interval)...")
+t0 = time.time()
+H0_int = count_hp_from_0(S_int, p)
+t1 = time.time()
+print(f"  H_from_0(Interval) = {H0_int}")
+print(f"  H_total = {H0_int * p}")
+print(f"  Time: {t1-t0:.1f}s")
+
+Q_int = fourier_magnitudes(S_int, p)
+print(f"  prod(1+Q) = {np.prod(1+Q_int):.1f}")
+print(f"  Amplification = {H0_int / np.prod(1+Q_int):.4f}")
+
+# Now enumerate ALL valid connection sets
+print(f"\nEnumerating all valid connection sets...")
+valid_sets = []
+elements = list(range(1, p))
+for S in combinations(elements, m):
+    S = list(S)
+    ok = True
+    for s in S:
+        if (p - s) in S:
+            ok = False
+            break
+    if not ok:
+        continue
+    valid_sets.append(S)
+
+print(f"Total valid: {len(valid_sets)}")
+
+# Compute H for all
+results = []
+t0 = time.time()
+for i, S in enumerate(valid_sets):
+    if i % 50 == 0:
+        elapsed = time.time() - t0
+        if i > 0:
+            eta = elapsed / i * (len(valid_sets) - i)
+            print(f"  {i}/{len(valid_sets)}, elapsed {elapsed:.1f}s, ETA {eta:.1f}s")
+        else:
+            print(f"  Starting...")
+
+    H0 = count_hp_from_0(S, p)
+    Q = fourier_magnitudes(S, p)
+    prod_Q = np.prod(1 + Q)
+    var_Q = np.var(Q)
+    results.append((S, H0, prod_Q, var_Q))
+
+elapsed = time.time() - t0
+print(f"  Done in {elapsed:.1f}s")
+
+# Sort by H
+results.sort(key=lambda x: x[1], reverse=True)
+
+print(f"\nTop 10 by H_from_0:")
+print(f"  {'Rank':>4} {'H_from_0':>14} {'prod(1+Q)':>12} {'var(Q)':>10} {'amp':>12} S")
+for i, (S, H0, pq, vq) in enumerate(results[:10]):
+    amp = H0 / pq
+    print(f"  {i+1:>4} {H0:>14} {pq:>12.1f} {vq:>10.4f} {amp:>12.4f} {S}")
+
+print(f"\nBottom 3:")
+for i, (S, H0, pq, vq) in enumerate(results[-3:]):
+    amp = H0 / pq
+    print(f"  {len(results)-2+i:>4} {H0:>14} {pq:>12.1f} {vq:>10.4f} {amp:>12.4f} {S}")
+
+# H value distribution
+from collections import Counter
+H_counts = Counter(r[1] for r in results)
+print(f"\nH_from_0 distribution ({len(H_counts)} distinct values):")
+for h, count in sorted(H_counts.items(), reverse=True):
+    rep = [r for r in results if r[1] == h][0]
+    print(f"  H_from_0 = {h}: {count} sets, prod(1+Q) = {rep[2]:.1f}, var(Q) = {rep[3]:.4f}")
+
+# Is the interval the winner?
+if results[0][0] == S_int:
+    print(f"\n*** INTERVAL IS THE MAXIMIZER at p={p}! ***")
+else:
+    print(f"\n*** Interval is NOT the maximizer at p={p}. ***")
+    print(f"  Winner: S = {results[0][0]}")
+
+# Correlations
+H_vals = [r[1] for r in results]
+prod_vals = [r[2] for r in results]
+var_vals = [r[3] for r in results]
+print(f"\nCorrelations:")
+print(f"  Corr(H, prod(1+Q)) = {np.corrcoef(H_vals, prod_vals)[0,1]:.6f}")
+print(f"  Corr(H, var(Q))    = {np.corrcoef(H_vals, var_vals)[0,1]:.6f}")
+
+# Summary race table
+print(f"\n{'='*72}")
+print(f"RACE SUMMARY THROUGH p = {p}")
+print(f"{'='*72}")
+print(f"""
+  p  │ p mod 4 │ H_from_0(Int) │ Best/Int │ Winner
+─────┼─────────┼───────────────┼──────────┼────────
+   5 │       1 │             3 │ 1.000    │ Interval (tie)
+   7 │       3 │            25 │ 1.080    │ Paley
+  11 │       3 │          8457 │ 1.022    │ Paley
+  13 │       1 │        285475 │ 1.000    │ Interval
+  17 │       1 │    {H0_int:>10} │ {results[0][1]/H0_int:.3f}    │ {'Interval' if results[0][1] == H0_int else 'OTHER: '+str(results[0][0])}
+""")

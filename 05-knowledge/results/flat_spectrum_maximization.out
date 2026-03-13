@@ -1,0 +1,521 @@
+========================================================================
+PART 1: FLAT vs PEAKED SPECTRA — EMPIRICAL COMPARISON
+========================================================================
+
+--- p = 7, m = 3 ---
+  Interval S = [1, 2, 3]
+    Q_k = [5.0489, 0.3080, 0.6431]
+    prod(1+Q) = 13.0000
+    max/min Q = 16.3937
+    σ²(Q)/mean² = 1.1667 (coefficient of variation squared)
+  Paley S = [1, 2, 4]
+    Q_k = [2.0000, 2.0000, 2.0000]
+    prod(1+Q) = 27.0000
+    max/min Q = 1.0000
+    σ²(Q)/mean² = 0.0000
+
+  Difference multiset (how many ways d = a-b, a,b ∈ S):
+    Interval: {1: 2, 2: 1, 5: 1, 6: 2}
+    Paley:    {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+    Perfect difference set λ = m(m-1)/(p-1) = 1
+    QR difference values: {1} (FLAT = difference set!)
+
+--- p = 11, m = 5 ---
+  Interval S = [1, 2, 3, 4, 5]
+    Q_k = [12.3435, 0.2716, 1.4487, 0.3533, 0.5830]
+    prod(1+Q) = 89.0000
+    max/min Q = 45.4552
+    σ²(Q)/mean² = 2.4444 (coefficient of variation squared)
+  Paley S = [1, 3, 4, 5, 9]
+    Q_k = [3.0000, 3.0000, 3.0000, 3.0000, 3.0000]
+    prod(1+Q) = 1024.0000
+    max/min Q = 1.0000
+    σ²(Q)/mean² = 0.0000
+
+  Difference multiset (how many ways d = a-b, a,b ∈ S):
+    Interval: {1: 4, 2: 3, 3: 2, 4: 1, 7: 1, 8: 2, 9: 3, 10: 4}
+    Paley:    {1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 2, 10: 2}
+    Perfect difference set λ = m(m-1)/(p-1) = 2
+    QR difference values: {2} (FLAT = difference set!)
+
+--- p = 13, m = 6 ---
+  Interval S = [1, 2, 3, 4, 5, 6]
+    Q_k = [17.2069, 0.2652, 1.9882, 0.3189, 0.7747, 0.4462]
+    prod(1+Q) = 233.0000
+    max/min Q = 64.8855
+    σ²(Q)/mean² = 3.0952 (coefficient of variation squared)
+  Paley S = [1, 3, 4, 9, 10, 12]
+    Q_k = [1.6972, 5.3028, 1.6972, 1.6972, 5.3028, 5.3028]
+    prod(1+Q) = 4913.0000
+    max/min Q = 3.1244
+    σ²(Q)/mean² = 0.2653
+
+  Difference multiset (how many ways d = a-b, a,b ∈ S):
+    Interval: {1: 5, 2: 4, 3: 3, 4: 2, 5: 1, 8: 1, 9: 2, 10: 3, 11: 4, 12: 5}
+    Paley:    {1: 2, 2: 3, 3: 2, 4: 2, 5: 3, 6: 3, 7: 3, 8: 3, 9: 2, 10: 2, 11: 3, 12: 2}
+    Perfect difference set λ = m(m-1)/(p-1) = 2
+    QR difference values: {2, 3} (FLAT = difference set!)
+
+========================================================================
+PART 2: WHY FLAT SPECTRUM → H MAXIMIZATION (CONVEXITY)
+========================================================================
+
+SCHUR-CONCAVITY ARGUMENT:
+
+For the partition function Z = I(Ω, z) at fixed graph Ω, the quantity
+  prod(z + Q_k) = z^m + e_1 z^{m-1} + ... + e_m
+is a symmetric function of Q_k with fixed e_1 = m(p-m)/2.
+
+By AM-GM: prod(z+Q_k) ≤ (z + mean(Q))^m  iff Q_k all equal.
+
+Wait — that's the WRONG direction! AM-GM says:
+  (geometric mean) ≤ (arithmetic mean)
+  prod(z+Q_k)^{1/m} ≤ (1/m) Σ(z+Q_k) = z + mean(Q)
+
+So prod(z+Q_k) ≤ (z + mean(Q))^m with equality iff all Q_k equal.
+
+This means FLAT spectrum MAXIMIZES prod(1+Q_k)!
+
+But H = I(Ω, 2) ≠ prod(1+Q_k) in general. The relationship is:
+  H = p · amplification · prod(1+Q_k)
+
+For the Paley tournament:
+  prod(1+Q_k) is maximized (flat Q_k)
+  amplification factor varies
+
+Let's check if the H advantage comes entirely from the prod term.
+
+
+  p = 7:
+    Interval: H=25, prod(1+Q)=13.0, amp = H/(p·prod) = 0.274725
+    Paley:    H=27, prod(1+Q)=27.0, amp = H/(p·prod) = 0.142857
+    H ratio: Paley/Interval = 1.080000
+    prod ratio: 2.076923
+    amp ratio: 0.520000
+
+  p = 11:
+    Interval: H=8457, prod(1+Q)=89.0, amp = H/(p·prod) = 8.638407
+    Paley:    H=8645, prod(1+Q)=1024.0, amp = H/(p·prod) = 0.767489
+    H ratio: Paley/Interval = 1.022230
+    prod ratio: 11.505618
+    amp ratio: 0.088846
+
+========================================================================
+PART 3: DIFFERENCE SETS AND GAUSS SUMS
+========================================================================
+
+THEOREM (classical): For p ≡ 3 mod 4, the quadratic residues mod p
+form a (p, (p-1)/2, (p-3)/4)-difference set.
+
+Equivalently: |Ŝ(k)|² = constant for all k ≠ 0.
+
+PROOF SKETCH:
+  Ŝ(k) = Σ_{a∈QR} ω^{ak} = (1/2)(Σ_{a=1}^{p-1} ω^{ak} + Σ χ(a)ω^{ak})
+        = (1/2)(-1 + χ(k)^{-1} · g)  where g = Gauss sum
+
+  |Ŝ(k)|² = (1/4)|χ(k)g - 1|² = (1/4)(p + 1 - 2·Re(χ(k)·g̅))
+
+  For p ≡ 3 mod 4: g² = χ(-1)·p = (-1)·p = -p
+  So g = i√p (times a root of unity). Then g̅ = -g.
+
+  Re(χ(k)·g̅) = Re(-χ(k)·g) = -Re(χ(k)·g)
+
+  But Σ_k Re(χ(k)·g) = Re(g · Σ χ(k)) = 0, and each |Re(χ(k)·g)| ≤ √p.
+
+  Actually for p ≡ 3 mod 4:
+  g = i^{(p-1)/2} · √p · (some 4th root of unity)
+
+  The exact computation gives |Ŝ(k)|² = (p+1)/4 for ALL k.
+
+  p = 7: Q_k = 2.000000, (p+1)/4 = 2.000000, flat = True
+    prod(1+Q) = 27.0 = ((p+5)/4)^m = 27.0
+  p = 11: Q_k = 3.000000, (p+1)/4 = 3.000000, flat = True
+    prod(1+Q) = 1024.0 = ((p+5)/4)^m = 1024.0
+  p = 19: Q_k = 5.000000, (p+1)/4 = 5.000000, flat = True
+    prod(1+Q) = 10077696.0 = ((p+5)/4)^m = 10077696.0
+  p = 23: Q_k = 6.000000, (p+1)/4 = 6.000000, flat = True
+    prod(1+Q) = 1977326743.0 = ((p+5)/4)^m = 1977326743.0
+  p = 31: Q_k = 8.000000, (p+1)/4 = 8.000000, flat = True
+    prod(1+Q) = 205891132094639.5 = ((p+5)/4)^m = 205891132094649.0
+  p = 43: Q_k = 11.000000, (p+1)/4 = 11.000000, flat = True
+    prod(1+Q) = 46005119909392275210240.0 = ((p+5)/4)^m = 46005119909369701466112.0
+
+  For p ≡ 1 mod 4:
+  p = 5: Q range = [0.3820, 2.6180], ratio = 6.8541
+    Note: QR does NOT form a tournament for p ≡ 1 mod 4 (symmetric)
+  p = 13: Q range = [1.6972, 5.3028], ratio = 3.1244
+    Note: QR does NOT form a tournament for p ≡ 1 mod 4 (symmetric)
+  p = 17: Q range = [2.4384, 6.5616], ratio = 2.6909
+    Note: QR does NOT form a tournament for p ≡ 1 mod 4 (symmetric)
+  p = 29: Q range = [4.8074, 10.1926], ratio = 2.1202
+    Note: QR does NOT form a tournament for p ≡ 1 mod 4 (symmetric)
+  p = 37: Q range = [6.4586, 12.5414], ratio = 1.9418
+    Note: QR does NOT form a tournament for p ≡ 1 mod 4 (symmetric)
+  p = 41: Q range = [7.2984, 13.7016], ratio = 1.8773
+    Note: QR does NOT form a tournament for p ≡ 1 mod 4 (symmetric)
+
+========================================================================
+PART 4: AUTOMORPHISM GROUPS AND DIHEDRAL STRUCTURE
+========================================================================
+
+The Paley tournament C_p^{QR} has automorphism group:
+  Aut(C_p^QR) = AGL(1, p)_QR = {x ↦ ax + b : a ∈ QR(p), b ∈ F_p}
+
+This has order p · (p-1)/2 = p · m.
+
+Group structure:
+  AGL(1,p)_QR ≅ F_p ⋊ QR(p)* ≅ Z_p ⋊ Z_m
+
+  Translations: x ↦ x + b (form Z_p, act on vertices)
+  Dilations: x ↦ ax, a ∈ QR (form Z_m ≅ Z_{(p-1)/2})
+
+DIHEDRAL SUBGROUP:
+  For p ≡ 3 mod 4, -1 is NOT a QR (since (-1)^{(p-1)/2} = -1).
+  So the map x ↦ -x is NOT in the automorphism group.
+
+  However, if we consider the UNDIRECTED Paley graph (p ≡ 1 mod 4),
+  then x ↦ -x IS an automorphism, giving a dihedral structure.
+
+  For the tournament (p ≡ 3 mod 4):
+  The "reflections" are x ↦ ax where a has order 2 in QR*.
+  If (p-1)/2 is even, there exist involutions in QR*.
+
+  Example: p = 7, m = 3. QR = {1, 2, 4}.
+  Powers: 2^1=2, 2^2=4, 2^3=1. So QR* = <2> ≅ Z_3.
+  No involution in Z_3 → no dihedral subgroup from dilations alone.
+
+  BUT: Consider the extended group including x ↦ -x/a for a ∈ QR.
+  These are "orientation-reversing" maps.
+
+
+  p = 7: QR* = <2> ≅ Z_3
+    |Aut| = p · m = 21
+    No involutions in QR* (m = 3 is odd)
+    Orbits on frequency space: single orbit (flat Q_k)
+
+  p = 11: QR* = <3> ≅ Z_5
+    |Aut| = p · m = 55
+    No involutions in QR* (m = 5 is odd)
+    Orbits on frequency space: single orbit (flat Q_k)
+
+  p = 23: QR* = <2> ≅ Z_11
+    |Aut| = p · m = 253
+    No involutions in QR* (m = 11 is odd)
+    Orbits on frequency space: single orbit (flat Q_k)
+
+========================================================================
+PART 5: ENTROPY AND INFORMATION THEORY
+========================================================================
+
+INFORMATION-THEORETIC VIEW:
+
+Define the normalized Q-distribution: q_k = Q_k / Σ Q_k
+
+Shannon entropy: H_ent = -Σ q_k log(q_k)
+
+Maximum entropy (uniform): H_max = log(m)
+Interval (peaked): H_ent << H_max
+Paley (flat): H_ent = H_max exactly
+
+  p = 7, m = 3:
+    Interval: H_ent = 0.5370 / 1.0986 = 0.4888
+    Paley:    H_ent = 1.0986 / 1.0986 = 1.0000
+    Rényi-2: Interval IPR = 0.7222, Paley IPR = 0.3333 (= 1/m = 0.3333)
+  p = 11, m = 5:
+    Interval: H_ent = 0.6733 / 1.6094 = 0.4183
+    Paley:    H_ent = 1.6094 / 1.6094 = 1.0000
+    Rényi-2: Interval IPR = 0.6889, Paley IPR = 0.2000 (= 1/m = 0.2000)
+  p = 13, m = 6:
+    Interval: H_ent = 0.7088 / 1.7918 = 0.3956
+    Paley:    H_ent = 1.6525 / 1.7918 = 0.9223
+    Rényi-2: Interval IPR = 0.6825, Paley IPR = 0.2109 (= 1/m = 0.1667)
+  p = 17, m = 8:
+    Interval: H_ent = 0.7537 / 2.0794 = 0.3625
+    Paley:    H_ent = 1.9705 / 2.0794 = 0.9476
+    Rényi-2: Interval IPR = 0.6759, Paley IPR = 0.1512 (= 1/m = 0.1250)
+  p = 23, m = 11:
+    Interval: H_ent = 0.7908 / 2.3979 = 0.3298
+    Paley:    H_ent = 2.3979 / 2.3979 = 1.0000
+    Rényi-2: Interval IPR = 0.6717, Paley IPR = 0.0909 (= 1/m = 0.0909)
+  p = 29, m = 14:
+    Interval: H_ent = 0.8120 / 2.6391 = 0.3077
+    Paley:    H_ent = 2.5732 / 2.6391 = 0.9750
+    Rényi-2: Interval IPR = 0.6698, Paley IPR = 0.0806 (= 1/m = 0.0714)
+
+========================================================================
+PART 6: AM-GM BOUND AND THE FLAT SPECTRUM THEOREM
+========================================================================
+
+FLAT SPECTRUM THEOREM (to prove):
+
+Among all connection sets S ⊂ {1,...,p-1} with |S| = m,
+the one maximizing prod(1+Q_k) is the one with Q_k = constant.
+
+PROOF: By AM-GM inequality applied to (1+Q_k):
+  [Π(1+Q_k)]^{1/m} ≤ (1/m) Σ(1+Q_k) = 1 + (1/m)Σ Q_k = 1 + m/2
+
+  (since Σ Q_k = m²/2 = m(p-m)/2 at m=(p-1)/2... wait, Σ Q_k = m·mean(Q))
+
+Actually: Σ Q_k = Σ_{k=1}^m |Ŝ(k)|² = Σ_{a,b∈S} Σ_{k=1}^m ω^{(a-b)k}
+For a=b: contributes m·|S| = m²
+For a≠b: Σ_{k=1}^m ω^{(a-b)k} depends on whether sum over HALF the roots
+
+Parseval: Σ_{k=0}^{p-1} |Ŝ(k)|² = p·|S| = pm
+But Ŝ(0) = m, so Σ_{k=1}^{p-1} |Ŝ(k)|² = pm - m² = m(p-m)
+By symmetry |Ŝ(k)|² = |Ŝ(p-k)|², so Σ_{k=1}^m |Ŝ(k)|² = m(p-m)/2
+
+So Σ Q_k = m(p-m)/2 for ALL S.
+Mean(Q) = (p-m)/2 = (p+1)/4 (at m = (p-1)/2).
+
+  p=7: Σ Q_int = 6.0000, Σ Q_qr = 6.0000, m(p-m)/2 = 6.0
+  p=11: Σ Q_int = 15.0000, Σ Q_qr = 15.0000, m(p-m)/2 = 15.0
+  p=13: Σ Q_int = 21.0000, Σ Q_qr = 21.0000, m(p-m)/2 = 21.0
+  p=17: Σ Q_int = 36.0000, Σ Q_qr = 36.0000, m(p-m)/2 = 36.0
+
+So: prod(1+Q_k) ≤ (1 + (p+1)/4)^m = ((p+5)/4)^m
+
+Equality iff Q_k = (p+1)/4 for all k iff S is a DIFFERENCE SET.
+
+For p ≡ 3 mod 4: QR(p) IS a difference set → achieves the bound!
+For p ≡ 1 mod 4: QR(p) is NOT a connection set (since -1 ∈ QR,
+  the set is symmetric and doesn't give a tournament).
+
+QUESTION: For p ≡ 1 mod 4, can any S achieve Q_k = constant?
+
+
+  p = 5, searching for flattest S among all 6 sets:
+    Total valid connection sets: 4
+    Flattest: S = [1, 3], Q = [0.3820, 2.6180]
+      var(Q) = 1.250000, prod(1+Q) = 5.0000
+    Max prod(1+Q): S = [3, 4], Q = [2.6180, 0.3820]
+      var(Q) = 1.250000, prod(1+Q) = 5.0000
+      H = 3, H/p = 0
+
+  p = 13, searching for flattest S among all 924 sets:
+    Total valid connection sets: 64
+    Flattest: S = [2, 4, 5, 6, 10, 12], Q = [1.6972, 5.3028, 1.6972, 1.6972, 5.3028, 5.3028]
+      var(Q) = 3.250000, prod(1+Q) = 4913.0000
+    Max prod(1+Q): S = [1, 2, 3, 5, 6, 9], Q = [5.3028, 1.6972, 5.3028, 5.3028, 1.6972, 1.6972]
+      var(Q) = 3.250000, prod(1+Q) = 4913.0000
+
+========================================================================
+PART 7: H vs prod(1+Q) — IS H MONOTONE IN prod?
+========================================================================
+
+  p = 7:
+  S                            prod(1+Q)          H      H/p   H/(p·prod)
+  [1, 4, 5]                         13.0         25        3       0.2747
+  [1, 2, 3]                         13.0         25        3       0.2747
+  [1, 3, 5]                         13.0         25        3       0.2747
+  [2, 3, 6]                         13.0         25        3       0.2747
+  [2, 4, 6]                         13.0         25        3       0.2747
+  [4, 5, 6]                         13.0         25        3       0.2747
+  [1, 2, 4]                         27.0         27        3       0.1429
+  [3, 5, 6]                         27.0         27        3       0.1429
+
+  Correlation(prod(1+Q), H) = 1.000000
+
+  p = 11:
+  S                            prod(1+Q)          H      H/p   H/(p·prod)
+  [1, 4, 5, 8, 9]                   89.0       8457      768       8.6384
+  [2, 3, 6, 7, 10]                  89.0       8457      768       8.6384
+  [1, 2, 3, 4, 5]                   89.0       8457      768       8.6384
+  [1, 2, 6, 7, 8]                   89.0       8457      768       8.6384
+  [1, 3, 5, 7, 9]                   89.0       8457      768       8.6384
+  [2, 4, 6, 8, 10]                  89.0       8457      768       8.6384
+  [1, 3, 4, 6, 9]                   89.0       8457      768       8.6384
+  [3, 4, 5, 9, 10]                  89.0       8457      768       8.6384
+  [6, 7, 8, 9, 10]                  89.0       8457      768       8.6384
+  [2, 5, 7, 8, 10]                  89.0       8457      768       8.6384
+  [1, 3, 6, 7, 9]                  331.0       8497      772       2.3337
+  [1, 2, 4, 6, 8]                  331.0       8497      772       2.3337
+  [2, 4, 5, 8, 10]                 331.0       8497      772       2.3337
+  [1, 2, 3, 6, 7]                  331.0       8497      772       2.3337
+  [1, 2, 3, 4, 6]                  331.0       8497      772       2.3337
+  [1, 2, 4, 5, 8]                  331.0       8497      772       2.3337
+  [4, 5, 8, 9, 10]                 331.0       8497      772       2.3337
+  [3, 5, 7, 9, 10]                 331.0       8497      772       2.3337
+  [3, 6, 7, 9, 10]                 331.0       8497      772       2.3337
+  [5, 7, 8, 9, 10]                 331.0       8497      772       2.3337
+  [1, 6, 7, 8, 9]                  419.0       8401      763       1.8227
+  [1, 5, 7, 8, 9]                  419.0       8401      763       1.8227
+  [1, 2, 3, 5, 7]                  419.0       8401      763       1.8227
+  [1, 2, 5, 7, 8]                  419.0       8401      763       1.8227
+  [2, 3, 4, 5, 10]                 419.0       8401      763       1.8227
+  [4, 6, 8, 9, 10]                 419.0       8401      763       1.8227
+  [1, 4, 6, 8, 9]                  419.0       8401      763       1.8227
+  [2, 3, 4, 6, 10]                 419.0       8401      763       1.8227
+  [3, 4, 6, 9, 10]                 419.0       8401      763       1.8227
+  [2, 3, 5, 7, 10]                 419.0       8401      763       1.8227
+  [2, 6, 7, 8, 10]                1024.0       8645      785       0.7675
+  [1, 3, 4, 5, 9]                 1024.0       8645      785       0.7675
+
+  Correlation(prod(1+Q), H) = 0.488133
+
+========================================================================
+PART 8: THE DIHEDRAL CONNECTION — SYMMETRY & MAXIMIZATION
+========================================================================
+
+DIHEDRAL GROUPS AND TOURNAMENT AUTOMORPHISMS:
+
+The dihedral group D_p = <r, s | r^p = s^2 = (rs)^2 = 1> has order 2p.
+  r = rotation (vertex relabeling v ↦ v+1 mod p)
+  s = reflection (vertex relabeling v ↦ -v mod p)
+
+For a CIRCULANT tournament C_p^S:
+  - r is ALWAYS an automorphism (by definition of circulant)
+  - s is an automorphism iff S = p - S (the "palindrome" condition)
+
+For the Paley tournament (p ≡ 3 mod 4):
+  - S = QR(p). Is QR(p) = p - QR(p)?
+  - (p - a) mod p ∈ QR iff (-1)·a ∈ QR iff χ(-1)·χ(a) = 1
+  - χ(-1) = (-1)^{(p-1)/2} = -1 for p ≡ 3 mod 4
+  - So p - a ∈ QR iff a ∈ QNR. So QR ≠ p - QR.
+  - Therefore D_p is NOT in Aut(Paley) for p ≡ 3 mod 4.
+
+For the Interval S = {1,...,m}:
+  - p - S = {m+1,...,p-1}. Clearly S ≠ p - S.
+  - So D_p is NOT in Aut(Interval) either.
+
+HOWEVER: D_p acts on the UNDIRECTED Paley graph (p ≡ 1 mod 4).
+And for p ≡ 3 mod 4, the dihedral group D_{(p-1)/2} acts on the
+FREQUENCY SPACE {1,...,m} via the Galois group of Q(ζ_p).
+
+Let's check which circulant tournaments have D_p-symmetry.
+
+
+  p = 7: Connection sets with palindrome S = p - S:
+    NONE — D_p cannot be an automorphism of any circulant tournament on p vertices
+    (because S = p-S contradicts the tournament property S ∩ (p-S) = ∅)
+
+  p = 11: Connection sets with palindrome S = p - S:
+    NONE — D_p cannot be an automorphism of any circulant tournament on p vertices
+    (because S = p-S contradicts the tournament property S ∩ (p-S) = ∅)
+
+========================================================================
+PART 9: GENERALIZED RESONANCE FOR FLAT SPECTRA
+========================================================================
+
+For the Paley tournament with flat Q_k = c = (p+1)/4:
+
+  prod(1+Q_k) = (1+c)^m = ((p+5)/4)^m
+
+  prod(a+Q_k) = (a+c)^m   for all a
+
+  This is a MONOMIAL in (a+c), not a polynomial in a with
+  interesting structure like the Interval's Morgan-Voyce.
+
+The Interval's resonance cascade arises because the RECURRENCE
+  B_m = (2+x)B_{m-1} - B_{m-2}
+has a non-trivial interaction between levels (the -B_{m-2} term).
+
+For flat spectrum: prod(a+c) = (a+c)^m has NO recurrence — it's
+just exponentiation. The "resonance" is trivial (pure amplification).
+
+COMPARISON:
+  Interval: prod(1+Q) = F_p ~ φ^p/√5 (Fibonacci — needs resonance)
+  Paley: prod(1+Q) = ((p+5)/4)^m (exponential — no resonance needed)
+
+  Which grows faster?
+
+  Growth comparison:
+     p             F_p     ((p+5)/4)^m    ratio Paley/Fib
+     7              21            27.0           1.285714
+    11             144          1024.0           7.111111
+    13             377     (p≡1 mod 4)                N/A
+    17            2584     (p≡1 mod 4)                N/A
+    19            6765      10077696.0        1489.681596
+    23           46368    1977326743.0       42644.210296
+    29          832040     (p≡1 mod 4)                N/A
+    31         2178309 205891132094649.0    94518790.536443
+    37        39088169     (p≡1 mod 4)                N/A
+    41       267914296     (p≡1 mod 4)                N/A
+    43       701408733 46005119909369701466112.0 65589602388611.406250
+    47      4807526976 41753905413413119174115328.0 8685110998202565.000000
+
+========================================================================
+PART 10: THE DEEP CONNECTION — LATTICE GAS AT FLAT POTENTIAL
+========================================================================
+
+LATTICE GAS INTERPRETATION:
+
+H(T) = I(Ω(T), 2) = independence polynomial of Ω at z=2.
+
+For the Paley tournament with Q_k = c = (p+1)/4 for all k:
+  - The spectral input is UNIFORM across all channels
+  - Each Fourier mode contributes equally to path counting
+  - The amplification factor H/(p · prod(1+Q)) measures how
+    the odd-cycle structure of Ω adds to the spectral base
+
+KEY QUESTION: Is the amplification factor H/(p·(1+c)^m) smaller
+for Paley than for Interval? If so, the Paley tournament wins by
+brute-force spectral superiority (larger prod(1+Q)) despite having
+LESS graph-level amplification.
+
+From the data:
+  p=7: Interval amp = 1.923, Paley amp = 1.000
+  p=11: Interval amp = 95.02, Paley amp = 8.442
+
+So YES: Paley has LOWER amplification but HIGHER base.
+As p grows, does the base advantage overcome the amplification gap?
+
+ANALOGY: Two investment strategies:
+  - Interval: Low principal (F_p) × high multiplier (grows factorially)
+  - Paley: High principal ((1+c)^m) × low multiplier
+
+  For large p, which dominates?
+
+  Asymptotic growth rates:
+     p   log(F_p)   m·log(1+c)  Fib growth rate  Paley growth rate
+     7       2.56         3.30         0.366252           0.470834
+    11       4.49         6.93         0.408056           0.630134
+    19       8.34        16.13         0.438858           0.848728
+    23      10.26        21.41         0.446224           0.930653
+    31      14.11        32.96         0.455253           1.063173
+    43      19.89        52.18         0.462497           1.213559
+    47      21.81        58.99         0.464090           1.255188
+    59      27.59        80.41         0.467573           1.362798
+    67      31.44        95.38         0.469201           1.423616
+    71      33.36       103.06         0.469878           1.451484
+    79      37.21       118.74         0.471026           1.502992
+    83      39.14       126.73         0.471516           1.526900
+
+========================================================================
+SYNTHESIS: FLAT SPECTRUM MAXIMIZATION
+========================================================================
+
+MAIN FINDINGS:
+
+1. FLAT SPECTRUM THEOREM: prod(1+Q_k) is maximized when Q_k = constant
+   = (p+1)/4. This follows from AM-GM with constraint Σ Q_k = m(p-m)/2.
+
+2. DIFFERENCE SET CONNECTION: Q_k = constant ⟺ S is a difference set.
+   For p ≡ 3 mod 4, the quadratic residues QR(p) form a (p,m,(m-1)/2)-
+   difference set, achieving the bound.
+
+3. PALEY BEATS INTERVAL: At p=7 and p=11, the Paley tournament has
+   higher H than the Interval, despite the Interval's Fibonacci structure.
+   The advantage comes from the spectral base prod(1+Q), not from
+   the graph amplification factor.
+
+4. GROWTH RATE CROSSOVER: Paley's growth rate m·log((p+5)/4) ~ (p/2)·log(p/4)
+   dominates Fibonacci's p·log(φ) for large p. The crossover is:
+   (1/2)·log(p/4) > log(φ) ⟹ p > 4φ² ≈ 10.5
+   So for ALL p ≥ 11, the Paley spectral base grows faster than Fibonacci.
+
+5. TWO RESONANCE MECHANISMS:
+   - INTERVAL: Fibonacci resonance cascade (recurrence → φ-locking → F_p)
+     Beautiful mathematics but SUBOPTIMAL for H.
+   - PALEY: Flat resonance (AM-GM optimality → (1+c)^m)
+     Less romantic but DOMINANT for H.
+
+6. DIHEDRAL CONNECTION: The automorphism group AGL(1,p) for Paley
+   is NOT dihedral, but is a semidirect product Z_p ⋊ Z_m.
+   Dihedral D_p cannot be an automorphism of ANY circulant tournament
+   (since the reflection v↦-v would require S = p-S, contradicting
+   the tournament property).
+
+7. OPEN QUESTION: For p ≡ 1 mod 4, there is no Paley tournament.
+   What connection set achieves the flattest spectrum and highest H?
+   Does it involve quadratic residues in a modified way?
+
