@@ -1,0 +1,179 @@
+======================================================================
+LDPC CODES FROM PALEY TOURNAMENT STRUCTURE
+======================================================================
+
+  P_5: [n=5, k=1, d≥?] binary code
+    GF(2) rank of A = 4
+    Rate R = 0.2000
+    Row weight = column weight = 2
+    Density = 0.4000
+    Expected QR code dimension: 3
+    Match? False
+
+  P_7: [n=7, k=3, d≥?] binary code
+    GF(2) rank of A = 4
+    Rate R = 0.4286
+    Row weight = column weight = 3
+    Density = 0.4286
+    Expected QR code dimension: 4
+    Match? True
+
+  P_11: [n=11, k=0, d≥?] binary code
+    GF(2) rank of A = 11
+    Rate R = 0.0000
+    Row weight = column weight = 5
+    Density = 0.4545
+    Expected QR code dimension: 6
+    Match? False
+
+  P_13: [n=13, k=1, d≥?] binary code
+    GF(2) rank of A = 12
+    Rate R = 0.0769
+    Row weight = column weight = 6
+    Density = 0.4615
+    Expected QR code dimension: 7
+    Match? False
+
+  P_17: [n=17, k=9, d≥?] binary code
+    GF(2) rank of A = 8
+    Rate R = 0.5294
+    Row weight = column weight = 8
+    Density = 0.4706
+    Expected QR code dimension: 9
+    Match? True
+
+  P_19: [n=19, k=0, d≥?] binary code
+    GF(2) rank of A = 19
+    Rate R = 0.0000
+    Row weight = column weight = 9
+    Density = 0.4737
+    Expected QR code dimension: 10
+    Match? False
+
+  P_23: [n=23, k=11, d≥?] binary code
+    GF(2) rank of A = 12
+    Rate R = 0.4783
+    Row weight = column weight = 11
+    Density = 0.4783
+    Expected QR code dimension: 12
+    Match? True
+
+  P_29: [n=29, k=1, d≥?] binary code
+    GF(2) rank of A = 28
+    Rate R = 0.0345
+    Row weight = column weight = 14
+    Density = 0.4828
+    Expected QR code dimension: 15
+    Match? False
+
+  P_31: [n=31, k=15, d≥?] binary code
+    GF(2) rank of A = 16
+    Rate R = 0.4839
+    Row weight = column weight = 15
+    Density = 0.4839
+    Expected QR code dimension: 16
+    Match? True
+
+  P_37: [n=37, k=1, d≥?] binary code
+    GF(2) rank of A = 36
+    Rate R = 0.0270
+    Row weight = column weight = 18
+    Density = 0.4865
+    Expected QR code dimension: 19
+    Match? False
+
+  P_41: [n=41, k=21, d≥?] binary code
+    GF(2) rank of A = 20
+    Rate R = 0.5122
+    Row weight = column weight = 20
+    Density = 0.4878
+    Expected QR code dimension: 21
+    Match? True
+
+  P_43: [n=43, k=0, d≥?] binary code
+    GF(2) rank of A = 43
+    Rate R = 0.0000
+    Row weight = column weight = 21
+    Density = 0.4884
+    Expected QR code dimension: 22
+    Match? False
+
+  P_47: [n=47, k=23, d≥?] binary code
+    GF(2) rank of A = 24
+    Rate R = 0.4894
+    Row weight = column weight = 23
+    Density = 0.4894
+    Expected QR code dimension: 24
+    Match? True
+
+======================================================================
+SPECTRAL PROPERTIES: EIGENVALUES OVER GF(2) vs OVER C
+======================================================================
+
+  P_7 (m=3):
+    GF(2): rank=4, nullity=3
+    Real: rank=7, nullity=0
+    Eigenvalues (top 5): ['3.000', '-0.500', '-0.500', '-0.500', '-0.500']
+    Eigenvalues (bottom 3): ['-0.500', '-0.500', '-0.500']
+    Expected GF(2) nullity = (p+1)/2 = 4, actual = 3
+
+  P_11 (m=5):
+    GF(2): rank=11, nullity=0
+    Real: rank=11, nullity=0
+    Eigenvalues (top 5): ['5.000', '-0.500', '-0.500', '-0.500', '-0.500']
+    Eigenvalues (bottom 3): ['-0.500', '-0.500', '-0.500']
+    Expected GF(2) nullity = (p+1)/2 = 6, actual = 0
+
+  P_23 (m=11):
+    GF(2): rank=12, nullity=11
+    Real: rank=23, nullity=0
+    Eigenvalues (top 5): ['11.000', '-0.500', '-0.500', '-0.500', '-0.500']
+    Eigenvalues (bottom 3): ['-0.500', '-0.500', '-0.500']
+    Expected GF(2) nullity = (p+1)/2 = 12, actual = 11
+
+  P_47 (m=23):
+    GF(2): rank=24, nullity=23
+    Real: rank=47, nullity=0
+    Eigenvalues (top 5): ['23.000', '-0.500', '-0.500', '-0.500', '-0.500']
+    Eigenvalues (bottom 3): ['-0.500', '-0.500', '-0.500']
+    Expected GF(2) nullity = (p+1)/2 = 24, actual = 23
+
+======================================================================
+WEIGHT DISTRIBUTION OF PALEY QR CODE
+======================================================================
+
+  P_7 code: [7, 3]
+    8 codewords (3 free variables)
+    Weight distribution:
+      w=0: 1 codewords
+      w=4: 7 codewords
+    Minimum distance: d = 4
+    => [7, 3, 4] code
+    NOTE: This is the HAMMING [7,4,3] code!
+
+  P_11 code: [11, 0]
+    1 codewords (0 free variables)
+    Weight distribution:
+      w=0: 1 codewords
+    Minimum distance: d = 0
+    => [11, 0, 0] code
+
+======================================================================
+CONNECTION: QR CODE AND TOURNAMENT H(T)
+======================================================================
+  The Paley adjacency matrix A serves DUAL roles:
+  1. As tournament: H(T) = # Hamiltonian paths (topological)
+  2. As parity-check: C = ker(A mod 2) (algebraic)
+
+  The Fourier decomposition of H decomposes along the SAME
+  eigenspaces that give the QR code structure:
+  - k=0 eigenspace: λ_0=m, contributes to H_0 (constant)
+  - k∈QR eigenspaces: all have same |λ_k|, contribute to H_2
+  - k∈NQR eigenspaces: same |λ_k|, different phase, H_4+ terms
+
+  CONJECTURE: The weight enumerator of the QR code is related
+  to the partition function Z(β) = Σ exp(β·H(T))
+  via some transform (MacWilliams? Poisson summation?)
+
+
+DONE — circulant_ldpc_codes.py complete
