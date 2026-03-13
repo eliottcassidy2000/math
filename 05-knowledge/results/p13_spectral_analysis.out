@@ -1,0 +1,68 @@
+p=13, m=6, QR=[1, 3, 4, 9, 10, 12]
+
+======================================================================
+  EIGENVALUE CLASSIFICATION AT p=13 (64 orientations)
+======================================================================
+  Distinct (sum_4, sum_6) pairs: 5
+  Class sizes: [24, 12, 12, 12, 4]
+
+  sum_4=1482.0, sum_6=47580.0: 4 orientations
+    #QR distribution: [3] (values: [3, 3, 3, 3]...)
+    |det|=4374.0
+    |lam|: 6.000, 2.303, 2.303, 2.303, 2.303, 2.303, 2.303, 1.303, 1.303, 1.303, 1.303, 1.303, 1.303
+
+  sum_4=1534.0, sum_6=48204.0: 24 orientations
+    #QR distribution: [3] (values: [3, 3, 3, 3, 3]...)
+    |det|=786.0
+    |lam|: 6.000, 2.756, 2.756, 2.522, 2.522, 2.055, 2.055, 1.175, 1.175, 0.977, 0.977, 0.698, 0.698
+
+  sum_4=1586.0, sum_6=49218.0: 12 orientations
+    #QR distribution: [3] (values: [3, 3, 3, 3, 3]...)
+    |det|=474.0
+    |lam|: 6.000, 3.227, 3.227, 2.190, 2.190, 1.839, 1.839, 1.048, 1.048, 0.834, 0.834, 0.782, 0.782
+
+  sum_4=1690.0, sum_6=51636.0: 12 orientations
+    #QR distribution: [3] (values: [3, 3, 3, 3, 3]...)
+    |det|=162.0
+    |lam|: 6.000, 3.673, 3.673, 1.621, 1.621, 1.471, 1.471, 1.250, 1.250, 0.949, 0.949, 0.500, 0.500
+
+  sum_4=1898.0, sum_6=56862.0: 12 orientations
+    #QR distribution: [3] (values: [3, 3, 3, 3, 3]...)
+    |det|=6.0
+    |lam|: 6.000, 4.148, 4.148, 1.410, 1.410, 0.880, 0.880, 0.668, 0.668, 0.565, 0.565, 0.515, 0.515
+
+======================================================================
+  PALEY SPECTRUM AT p=13
+======================================================================
+  S_QR = [1, 3, 4, 9, 10, 12]
+  |lambda|: 6.000000, 2.302776, 2.302776, 2.302776, 2.302776, 2.302776, 2.302776, 1.302776, 1.302776, 1.302776, 1.302776, 1.302776, 1.302776
+  Flat spectrum? False
+
+======================================================================
+  c3 CONSTANCY AT p=13
+======================================================================
+  Formula: c3 = p(p-1)(p+1)/24 = 91
+  bits=0: c3 = 91 (expected 91), match=True
+  bits=29: c3 = 91 (expected 91), match=True
+  bits=31: c3 = 91 (expected 91), match=True
+  bits=63: c3 = 91 (expected 91), match=True
+
+======================================================================
+  c5 COMPARISON (selected orientations)
+======================================================================
+  Computing c5 for 5 representative orientations...
+  sum_4=1482.0: bits=5, c5=1482
+  sum_4=1534.0: bits=2, c5=1456
+  sum_4=1586.0: bits=1, c5=1430
+  sum_4=1690.0: bits=3, c5=1378
+  sum_4=1898.0: bits=0, c5=1274
+
+  -1 (=12) is QR at p=13
+  p mod 4 = 1
+  p=1 mod 4 means Paley T_13 is self-converse (T ~ T^op)
+  Anti-Paley has S=NQR = [2, 5, 6, 7, 8, 11]
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p13_spectral_analysis.py", line 198, in <module>
+    anti_bits = (1 << m) - 1 - paley_bits
+                ~~~~~~~~~~~~~^~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'int' and 'NoneType'
