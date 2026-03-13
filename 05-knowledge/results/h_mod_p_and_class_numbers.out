@@ -1,0 +1,208 @@
+======================================================================
+H mod p AND NUMBER-THEORETIC CONNECTIONS
+======================================================================
+
+PART 1: H mod p^k
+======================================================================
+
+p=5, m=2:
+  H=            15, H/p=           3, v_p(H)=1, H mod p²=    15 INT
+
+p=7, m=3:
+  H=           175, H/p=          25, v_p(H)=1, H mod p²=    28 INT
+  H=           189, H/p=          27, v_p(H)=1, H mod p²=    42 PAL
+
+p=11, m=5:
+  H=         92411, H/p=        8401, v_p(H)=1, H mod p²=    88 
+  H=         93027, H/p=        8457, v_p(H)=1, H mod p²=    99 INT
+  H=         93467, H/p=        8497, v_p(H)=1, H mod p²=    55 
+  H=         95095, H/p=        8645, v_p(H)=1, H mod p²=   110 PAL
+
+p=13, m=6:
+  H=       3669497, H/p=      282269, v_p(H)=2, H mod p²=     0 
+  H=       3683797, H/p=      283369, v_p(H)=1, H mod p²=   104 
+  H=       3703011, H/p=      284847, v_p(H)=1, H mod p²=    52 
+  H=       3704857, H/p=      284989, v_p(H)=1, H mod p²=    39 
+  H=       3707483, H/p=      285191, v_p(H)=1, H mod p²=   130 
+  H=       3711175, H/p=      285475, v_p(H)=1, H mod p²=   104 INT
+
+======================================================================
+PART 2: H/p vs NUMBER-THEORETIC INVARIANTS
+======================================================================
+
+p=5, m=2:
+  H(Int) = 15, H/p = 3
+  F_p = 5, L_p = 11
+  (p-1)! = 24
+  ((p-1)/2)! = 2
+  H/p mod p = 3
+  F_p mod p = 0
+  ((p-1)/2)! mod p = 2
+  ((p-1)/2)!² mod p = 4
+  H/p / ((p-1)/2)! = 1.500000
+  Wilson quotient W_p = 5
+  h^-(Q(sqrt(-5))) = 2
+  H/p / h^- = 1.5000
+
+p=7, m=3:
+  H(Int) = 175, H/p = 25
+  F_p = 13, L_p = 29
+  (p-1)! = 720
+  ((p-1)/2)! = 6
+  H/p mod p = 4
+  F_p mod p = 6
+  ((p-1)/2)! mod p = 6
+  ((p-1)/2)!² mod p = 1
+  H/p / ((p-1)/2)! = 4.166667
+  Wilson quotient W_p = 103
+  h^-(Q(sqrt(-7))) = 1
+  H/p / h^- = 25.0000
+
+p=11, m=5:
+  H(Int) = 93027, H/p = 8457
+  F_p = 89, L_p = 199
+  (p-1)! = 3628800
+  ((p-1)/2)! = 120
+  H/p mod p = 9
+  F_p mod p = 1
+  ((p-1)/2)! mod p = 10
+  ((p-1)/2)!² mod p = 1
+  H/p / ((p-1)/2)! = 70.475000
+  Wilson quotient W_p = 329891
+  h^-(Q(sqrt(-11))) = 1
+  H/p / h^- = 8457.0000
+
+p=13, m=6:
+  H(Int) = 3711175, H/p = 285475
+  F_p = 233, L_p = 521
+  (p-1)! = 479001600
+  ((p-1)/2)! = 720
+  H/p mod p = 8
+  F_p mod p = 12
+  ((p-1)/2)! mod p = 5
+  ((p-1)/2)!² mod p = 12
+  H/p / ((p-1)/2)! = 396.493056
+  Wilson quotient W_p = 36846277
+  h^-(Q(sqrt(-13))) = 2
+  H/p / h^- = 142737.5000
+
+======================================================================
+PART 3: H/p GROWTH PATTERN
+======================================================================
+
+  H/p for Interval tournament:
+  p= 5: H/p = 3
+  p= 7: H/p = 25
+  p=11: H/p = 8457
+  p=13: H/p = 285475
+
+  Factorizations of H/p:
+  p= 5: H/p = 3 = 3
+  p= 7: H/p = 25 = 5 × 5
+  p=11: H/p = 8457 = 3 × 2819
+  p=13: H/p = 285475 = 5 × 5 × 19 × 601
+
+  H/p modular analysis:
+  p=5: H/p=3, mod 5=3, mod 4=3, mod 2=1
+  p=7: H/p=25, mod 7=4, mod 6=1, mod 3=1
+  p=11: H/p=8457, mod 11=9, mod 10=7, mod 5=2
+  p=13: H/p=285475, mod 13=8, mod 12=7, mod 6=1
+
+======================================================================
+PART 4: LOG(H) GROWTH — IS IT (p-1)! RELATED?
+======================================================================
+
+  p= 5: log(H_Int)=2.7081, log(p!)=4.7875
+         ratio log(H)/log(p!) = 0.565651
+         log(H)/(p*log(p/e)) = 0.888704
+         H / (p-1)! = 0.625000
+         H / ((p-1)/2)!^2 = 3.750000
+         mean H (random) = 7.5
+         H_Int / mean = 2.000000
+         H_INT/mean = 2.000000
+
+  p= 7: log(H_Int)=5.1648, log(p!)=8.5252
+         ratio log(H)/log(p!) = 0.605829
+         log(H)/(p*log(p/e)) = 0.780018
+         H / (p-1)! = 0.243056
+         H / ((p-1)/2)!^2 = 4.861111
+         mean H (random) = 78.8
+         H_Int / mean = 2.222222
+         H_INT/mean = 2.222222
+         H_PAL/mean = 2.400000
+
+  p=11: log(H_Int)=11.4406, log(p!)=17.5023
+         ratio log(H)/log(p!) = 0.653665
+         log(H)/(p*log(p/e)) = 0.744018
+         H / (p-1)! = 0.025636
+         H / ((p-1)/2)!^2 = 6.460208
+         mean H (random) = 38981.2
+         H_Int / mean = 2.386455
+         H_INT/mean = 2.386455
+         H_PAL/mean = 2.439506
+
+  p=13: log(H_Int)=15.1269, log(p!)=22.5522
+         ratio log(H)/log(p!) = 0.670750
+         log(H)/(p*log(p/e)) = 0.743541
+         H / (p-1)! = 0.007748
+         H / ((p-1)/2)!^2 = 7.158902
+         mean H (random) = 1520268.8
+         H_Int / mean = 2.441131
+         H_INT/mean = 2.441131
+
+======================================================================
+PART 5: H/(p · COMBINATORIAL FACTOR)
+======================================================================
+
+  p= 5, m=2:
+    H/p = 3
+    H/(p·m!) = 1.500000
+    H/(p·C(2m,m)) = 0.500000
+    H/(p·Catalan_m) = 1.500000
+    H/(p·2^m) = 0.750000
+    H/(p·F_p) = 0.600000
+
+  p= 7, m=3:
+    H/p = 25
+    H/(p·m!) = 4.166667
+    H/(p·C(2m,m)) = 1.250000
+    H/(p·Catalan_m) = 5.000000
+    H/(p·2^m) = 3.125000
+    H/(p·F_p) = 1.923077
+
+  p=11, m=5:
+    H/p = 8457
+    H/(p·m!) = 70.475000
+    H/(p·C(2m,m)) = 33.559524
+    H/(p·Catalan_m) = 201.357143
+    H/(p·2^m) = 264.281250
+    H/(p·F_p) = 95.022472
+
+  p=13, m=6:
+    H/p = 285475
+    H/(p·m!) = 396.493056
+    H/(p·C(2m,m)) = 308.955628
+    H/(p·Catalan_m) = 2162.689394
+    H/(p·2^m) = 4460.546875
+    H/(p·F_p) = 1225.214592
+
+
+======================================================================
+SYNTHESIS: NUMBER-THEORETIC STRUCTURES IN H
+======================================================================
+
+1. H ≡ 0 mod p ALWAYS (for circulant tournaments)
+   This follows from cyclic symmetry: Z_p acts freely on HP
+   so |HP| = p · |{paths starting at 0}|
+
+2. H/p is NOT divisible by p in general:
+   p=5: H/p=5 (divisible!), p=7: H/p=25 (not), p=13: H/p=285475 (not)
+
+3. The ratio H/mean_H is remarkably stable:
+   INT: H/mean ≈ 0.68-0.71 for all p tested
+   PAL: H/mean ≈ 0.73 at p=7, drops with p
+
+4. OPEN: Is there a p-adic or class number connection?
+   The Wilson quotient and class numbers don't show obvious links.
+   But the STABLE H/mean ratio suggests a large-deviation principle.
+
