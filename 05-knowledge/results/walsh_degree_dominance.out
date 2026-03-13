@@ -1,0 +1,84 @@
+======================================================================
+WALSH DEGREE DOMINANCE: THE UNIFIED PHASE TRANSITION
+======================================================================
+
+  p  | deg-2 frac | deg-4 frac | ratio 4/2  | winner
+  ------------------------------------------------------------
+   7 |     100.0% |       0.0% |    0.0000  | Paley
+  11 |      84.1% |      15.9% |    0.1885  | Paley
+  13 |      18.4% |      81.6% |    4.4247  | Interval
+
+OBSERVATION: The crossover occurs when deg-4/deg-2 ratio crosses 1.0.
+  p=7:  ratio = 0.0000 → Paley
+  p=11: ratio = 0.1886 → Paley
+  p=13: ratio = 4.4248 → Interval
+
+The ratio JUMPS dramatically between p=11 and p=13.
+There is no intermediate prime to test (12 is not prime).
+
+======================================================================
+SCALING ANALYSIS
+======================================================================
+
+  Degree-2 variance scaling:
+    p=7→11: var ratio = 10093.6, p ratio = 1.57, exponent ≈ 20.40
+    p=11→13: var ratio = 121.9, p ratio = 1.18, exponent ≈ 28.75
+
+  Degree-4 variance scaling:
+    p=11→13: var ratio = 2861.5, p ratio = 1.18, exponent ≈ 47.64
+
+SCALING PREDICTION:
+  If deg-2 var ~ p^α and deg-4 var ~ p^β with β > α,
+  then deg-4/deg-2 ratio ~ p^{β-α} → ∞.
+
+  This means: for ALL sufficiently large p, degree 4 dominates,
+  and Interval (peaked spectrum) wins.
+
+  Combined with exhaustive verification at p=13 and p=17 (S66),
+  this strongly suggests HYP-480: Interval maximizes H for ALL p ≥ 13.
+
+======================================================================
+THE UNIFIED PICTURE: THREE EQUIVALENT VIEWS
+======================================================================
+
+═══════════════════════════════════════════════════════════════
+VIEW 1: WALSH DEGREE DOMINANCE (this work)
+═══════════════════════════════════════════════════════════════
+  H = H₀ + H₂(σ) + H₄(σ) + H₆(σ) + ...
+
+  H₂ = Σ_{|S|=2} Ĥ[S]·χ_S(σ)  ← favors FLAT spectrum
+  H₄ = Σ_{|S|=4} Ĥ[S]·χ_S(σ)  ← favors PEAKED spectrum
+
+  Crossover at p where Var(H₄) > Var(H₂).
+
+═══════════════════════════════════════════════════════════════
+VIEW 2: ISING DECOMPOSITION (THM-138)
+═══════════════════════════════════════════════════════════════
+  H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+
+  α₁ = Σ odd cycles (Paley has more at small p)
+  α₂ = Σ disjoint pairs (Interval has more, by O(p⁴), THM-142)
+
+  Crossover at p where 4Δα₂ > 2Δα₁.
+
+═══════════════════════════════════════════════════════════════
+VIEW 3: SPECTRAL/IPR (S65)
+═══════════════════════════════════════════════════════════════
+  IPR = (p·E(S) - (p-1)⁴) / (m(m+1))²
+
+  corr(H, IPR) < 0 at p=7,11 (flat spectrum wins)
+  corr(H, IPR) > 0 at p=13,17 (peaked spectrum wins)
+
+  Crossover at p where corr sign flips.
+
+═══════════════════════════════════════════════════════════════
+DICTIONARY:
+  Walsh deg-2 variance  ↔  α₁ variation  ↔  IPR (low-order)
+  Walsh deg-4 variance  ↔  α₂ variation  ↔  E(S) (high-order)
+
+  The three views are EQUIVALENT descriptions of the same phenomenon:
+  the competition between short-cycle COUNTING and cycle-pair
+  DISJOINTNESS for determining H.
+═══════════════════════════════════════════════════════════════
+
+DONE.

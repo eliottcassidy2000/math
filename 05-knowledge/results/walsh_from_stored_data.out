@@ -1,0 +1,33 @@
+======================================================================
+WALSH DEGREE DECOMPOSITION FROM STORED DATA
+======================================================================
+
+p=7: found 8 orientations (expected 8)
+  Walsh variance decomposition:
+    Degree 2: variance = 36.75 (100.0%)
+
+  H(Interval) = 175, H(max) = 189
+  Interval is max? False
+
+p=11: found 15 orientations (expected 32)
+  WARNING: incomplete data, skipping
+
+p=13: found 15 orientations (expected 64)
+  WARNING: incomplete data, skipping
+
+p=17: found 10 orientations (expected 256)
+  WARNING: incomplete data, skipping
+
+======================================================================
+DEGREE DOMINANCE RATIO SUMMARY
+======================================================================
+
+    p |  deg-4/deg-2 |     Winner
+  ----------------------------------------
+    7 |       0.0000 |      Paley
+
+======================================================================
+HIGHER DEGREE ANALYSIS AT p=17
+======================================================================
+
+DONE.

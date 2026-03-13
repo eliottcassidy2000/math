@@ -1,0 +1,44 @@
+p=17, m=8, 256 orientations
+Computing H for all 256 orientations...
+  32/256 done (70.8s)
+  64/256 done (140.9s)
+  96/256 done (210.9s)
+  128/256 done (280.5s)
+  160/256 done (350.5s)
+  192/256 done (420.6s)
+  224/256 done (490.7s)
+  256/256 done (560.5s)
+All 256 done in 560.5s
+
+Computing Walsh decomposition...
+
+Walsh variance decomposition at p=17:
+  Degree 2: variance = 160107274584877.81 (5.54%)
+  Degree 4: variance = 1911964571336955.25 (66.11%)
+  Degree 6: variance = 820086953224522.38 (28.36%)
+
+  deg-4/deg-2 ratio: 11.9418
+  deg-6/deg-2 ratio: 5.1221
+
+H(Interval) = 13689269499
+H(max)      = 13689269499
+Interval is max? True
+
+======================================================================
+COMPLETE DEGREE DOMINANCE DATA
+======================================================================
+
+    p |  deg-2% |  deg-4% |  ratio 4/2 |     Winner
+  -------------------------------------------------------
+    7 |  100.0% |    0.0% |     0.0000 |      Paley
+   11 |   84.1% |   15.9% |     0.1885 |      Paley
+   13 |   18.4% |   81.6% |     4.4248 |   Interval
+   17 |    5.5% |   66.1% |    11.9418 |   Interval
+
+  Trend: deg-4/deg-2 ratio at p=11,13,17: [0.1885, 4.4248, 11.941772016882117]
+  Ratio is INCREASING → degree-4 dominance strengthens with p
+  This strongly supports HYP-480: Interval wins for ALL p >= 13
+
+  Distinct H values at p=17: 16 out of 256
+
+DONE.
