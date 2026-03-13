@@ -1,0 +1,270 @@
+==============================================================================
+  Q(x) POLYNOMIAL STRUCTURE — ROOTS, FACTORS, AND THE x=2 MIRACLE
+==============================================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 1: ALL Q(x) POLYNOMIALS FOR n ≤ 6                                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+========================================================================
+n = 3:
+========================================================================
+
+  H=1, α=[1], #cycles=0
+  I(CG,x) = 1
+  Q(x) = 0
+  Q(2) = 0
+
+  H=3, α=[1, 1], #cycles=1
+  I(CG,x) = x + 1
+  Q(x) = -x*(x - 2)*(x + 1)
+  Q(2) = 0
+  Real roots: -1.0000, 0.0000, 2.0000
+  (x-2) DIVIDES Q! Quotient = -x*(x + 1)
+
+========================================================================
+n = 4:
+========================================================================
+
+  H=1, α=[1], #cycles=0
+  I(CG,x) = 1
+  Q(x) = 0
+  Q(2) = 0
+
+  H=3, α=[1, 1], #cycles=1
+  I(CG,x) = x + 1
+  Q(x) = -x*(x - 2)*(x + 1)
+  Q(2) = 0
+  Real roots: -1.0000, 0.0000, 2.0000
+  (x-2) DIVIDES Q! Quotient = -x*(x + 1)
+
+  H=5, α=[1, 2], #cycles=2
+  I(CG,x) = 2*x + 1
+  Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+  Q(2) = 24
+  Real roots: -0.6850, 0.0000
+
+========================================================================
+n = 5:
+========================================================================
+
+  H=1, α=[1], #cycles=0
+  I(CG,x) = 1
+  Q(x) = 0
+  Q(2) = 0
+
+  H=3, α=[1, 1], #cycles=1
+  I(CG,x) = x + 1
+  Q(x) = -x*(x - 2)*(x + 1)
+  Q(2) = 0
+  Real roots: -1.0000, 0.0000, 2.0000
+  (x-2) DIVIDES Q! Quotient = -x*(x + 1)
+
+  H=5, α=[1, 2], #cycles=2
+  I(CG,x) = 2*x + 1
+  Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+  Q(2) = 24
+  Real roots: -0.6850, 0.0000
+
+  H=9, α=[1, 4], #cycles=4
+  I(CG,x) = 4*x + 1
+  Q(x) = -x*(x**4 - 3*x**3 + 3*x**2 - 16*x - 8)
+  Q(2) = 72
+  Real roots: -0.4442, 0.0000, 3.5830
+
+  H=11, α=[1, 5], #cycles=5
+  I(CG,x) = 5*x + 1
+  Q(x) = -x*(x**4 - 4*x**3 + 4*x**2 - 25*x - 10)
+  Q(2) = 120
+  Real roots: -0.3694, 0.0000, 4.4688
+
+  H=15, α=[1, 7], #cycles=7
+  I(CG,x) = 7*x + 1
+  Q(x) = -x*(3*x**4 - 3*x**3 + 4*x**2 - 49*x - 14)
+  Q(2) = 144
+  Real roots: -0.2777, 0.0000, 2.8078
+
+  H=13, α=[1, 6], #cycles=6
+  I(CG,x) = 6*x + 1
+  Q(x) = -x*(2*x**4 - 3*x**3 + 4*x**2 - 36*x - 12)
+  Q(2) = 120
+  Real roots: -0.3188, 0.0000, 3.0240
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 2: WHEN DOES (x-2) DIVIDE Q(x)?                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+(x-2) | Q(x) ⟺ Q(2) = 0 ⟺ H² = det(I+2A) ⟺ H = |Pf(S)|
+
+So (x-2) divides Q(x) exactly when H = |Pf|.
+Let's catalog when this happens.
+
+  n=3: H=|Pf| in 8/8 tournaments = 100.0%
+  n=4: H=|Pf| in 40/64 tournaments = 62.5%
+  n=5: H=|Pf| in 240/1024 tournaments = 23.4%
+  n=6: H=|Pf| in 1760/32768 tournaments = 5.4%
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 3: R(x) = Q(x)/x — PATTERNS IN THE REDUCED POLYNOMIAL                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Since Q(0) = 0 always, Q(x) = x · R(x).
+R(2) = Q(2)/2 = (H² - Pf²)/2.
+
+We showed R(2) ≡ 0 (mod 4) always.
+QUESTION: Can we factor R(x) further? Is R(x) always ≡ 0 (mod x+1)?
+
+
+n=3:
+  H=3: R(x) = -(x - 2)*(x + 1)
+    R(-1) = 0, R(2) = 0
+    (x+1) divides R? YES
+    Q(x) = x(x+1)·S(x) where S(x) = 2 - x
+    S(2) = 0, so Q(2) = 2·3·S(2) = 0
+
+n=4:
+  H=3: R(x) = -(x - 2)*(x + 1)
+    R(-1) = 0, R(2) = 0
+    (x+1) divides R? YES
+    Q(x) = x(x+1)·S(x) where S(x) = 2 - x
+    S(2) = 0, so Q(2) = 2·3·S(2) = 0
+  H=5: R(x) = x**3 - 2*x**2 + 4*x + 4
+    R(-1) = -3, R(2) = 12
+    (x+1) divides R? NO
+
+n=5:
+  H=3: R(x) = -(x - 2)*(x + 1)
+    R(-1) = 0, R(2) = 0
+    (x+1) divides R? YES
+    Q(x) = x(x+1)·S(x) where S(x) = 2 - x
+    S(2) = 0, so Q(2) = 2·3·S(2) = 0
+  H=5: R(x) = x**3 - 2*x**2 + 4*x + 4
+    R(-1) = -3, R(2) = 12
+    (x+1) divides R? NO
+  H=9: R(x) = -x**4 + 3*x**3 - 3*x**2 + 16*x + 8
+    R(-1) = -15, R(2) = 36
+    (x+1) divides R? NO
+  H=9: R(x) = -x**4 + 2*x**3 - 3*x**2 + 16*x + 8
+    R(-1) = -14, R(2) = 28
+    (x+1) divides R? NO
+  H=11: R(x) = -x**4 + 4*x**3 - 4*x**2 + 25*x + 10
+    R(-1) = -24, R(2) = 60
+    (x+1) divides R? NO
+  H=15: R(x) = -3*x**4 + 3*x**3 - 4*x**2 + 49*x + 14
+    R(-1) = -45, R(2) = 72
+    (x+1) divides R? NO
+  H=13: R(x) = -2*x**4 + 3*x**3 - 4*x**2 + 36*x + 12
+    R(-1) = -33, R(2) = 60
+    (x+1) divides R? NO
+  H=15: R(x) = -2*x**4 + 5*x**3 - 5*x**2 + 49*x + 14
+    R(-1) = -47, R(2) = 100
+    (x+1) divides R? NO
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 4: COEFFICIENTS OF det(I+xA) — WHAT DO THEY COUNT?                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+det(I+xA) = Σ_k c_k x^k
+
+What is c_k combinatorially?
+  c_k = Σ_{|S|=k} det(A[S,S]) where A[S,S] is the k×k submatrix of A
+        on the row/column set S.
+
+  But det(A[S,S]) for a tournament submatrix counts...
+  signed permutations within S consistent with the tournament.
+
+For k=0: c_0 = 1 (empty minor = 1)
+For k=1: c_1 = tr(A) = 0 (diagonal is zero for tournament)
+For k=2: c_2 = Σ_{i<j} det([[A_ii, A_ij],[A_ji, A_jj]]) = Σ_{i<j} (0·0 - A_ij·A_ji)
+         = -Σ_{i<j} A_ij·A_ji = 0 (since exactly one of A_ij, A_ji is 1)
+         Wait: A_ij · A_ji = 0 for tournaments! So c_2 = 0.
+
+Actually: det(I+xA) = 1 + x·tr(A) + x²·(sum of 2×2 minors of A) + ...
+And tr(A) = 0 since diagonal is 0.
+For 2×2 minors: det([[0,a],[b,0]]) = -ab. For tournaments, ab = 0 always.
+So c_2 = 0 too!
+
+Interesting. So det(I+xA) = 1 + 0·x + 0·x² + c_3·x³ + ...
+What is c_3?
+
+
+n=3: Coefficient pattern of det(I+xA):
+  H=  1: c_0=1, c_1=0, c_2=0, c_3=0
+  H=  3: c_0=1, c_1=0, c_2=0, c_3=1
+  → 2 distinct coefficient patterns
+
+n=4: Coefficient pattern of det(I+xA):
+  H=  1: c_0=1, c_1=0, c_2=0, c_3=0, c_4=0
+  H=  3: c_0=1, c_1=0, c_2=0, c_3=1, c_4=0
+  H=  5: c_0=1, c_1=0, c_2=0, c_3=2, c_4=-1
+  → 3 distinct coefficient patterns
+
+n=5: Coefficient pattern of det(I+xA):
+  H=  1: c_0=1, c_1=0, c_2=0, c_3=0, c_4=0, c_5=0
+  H=  3: c_0=1, c_1=0, c_2=0, c_3=1, c_4=0, c_5=0
+  H=  5: c_0=1, c_1=0, c_2=0, c_3=2, c_4=-1, c_5=0
+  H=  9: c_0=1, c_1=0, c_2=0, c_3=3, c_4=-3, c_5=1
+  H=  9: c_0=1, c_1=0, c_2=0, c_3=3, c_4=-2, c_5=1
+  H= 11: c_0=1, c_1=0, c_2=0, c_3=4, c_4=-4, c_5=1
+  H= 15: c_0=1, c_1=0, c_2=0, c_3=4, c_4=-3, c_5=3
+  H= 13: c_0=1, c_1=0, c_2=0, c_3=4, c_4=-3, c_5=2
+  H= 15: c_0=1, c_1=0, c_2=0, c_3=5, c_4=-5, c_5=2
+  → 9 distinct coefficient patterns
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 5: c_3 = #{directed 3-cycles} — THE FUNDAMENTAL INVARIANT            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+The x³ coefficient of det(I+xA) is:
+  c_3 = Σ_{|S|=3} det(A[S,S])
+
+For a tournament on {i,j,k} with A[i,j]=1, A[j,k]=1, A[k,i]=1 (cycle i→j→k→i):
+  det([[0,1,0],[0,0,1],[1,0,0]]) = 0·0·0 + 1·1·1 + 0·0·0 - (0·0·0 + 0·1·0 + 1·0·1) = 1
+
+For the REVERSE cycle (i→k→j→i):
+  det([[0,0,1],[1,0,0],[0,1,0]]) = 0+0+0 - (1·0·0+0·0+0·1·1) = ... = 1
+
+Hmm, let me compute more carefully.
+
+For the 3-vertex transitive tournament A = [[0,1,1],[0,0,1],[0,0,0]]:
+  det(A) = 0
+
+For the 3-cycle A = [[0,1,0],[0,0,1],[1,0,0]]:
+  det(A) = 0·0·0 + 1·1·1 + 0·0·0 - 0·0·0 - 1·0·0 - 0·1·0 = 1
+
+So c_3 counts the number of directed 3-cycles in the tournament!
+
+  n=4: c_3 = #{3-cycles} in 64 tournaments: ✓ ALL MATCH
+  n=5: c_3 = #{3-cycles} in 1024 tournaments: ✓ ALL MATCH
+
+════════════════════════════════════════════════════════════════════════════════
+SYNTHESIS: THE Q(x) STRUCTURE AND THE 2-3 FRAMEWORK
+════════════════════════════════════════════════════════════════════════════════
+
+Q(x) = I(CG,x)² - det(I+xA)
+     = x · R(x)     where R(2) ≡ 0 (mod 4)
+
+Structure:
+  det(I+xA) = 1 + 0·x + 0·x² + c_3·x³ + c_4·x⁴ + ... + c_n·x^n
+  I(CG,x)² = (1 + α_1·x + α_2·x² + ...)²
+           = 1 + 2α_1·x + (α_1² + 2α_2)·x² + ...
+
+So Q(x) = 2α_1·x + (α_1²+2α_2)·x² + (2α_1α_2-c_3)·x³ + ...
+
+The x-coefficient of Q is 2α_1 (twice the number of cycles).
+The x²-coefficient is α_1² + 2α_2 (= (α_1+1)² - 1 + 2(α_2 - α_1))... no.
+
+At x=2: Q(2) = 4α_1 + 4(α_1²+2α_2) + 8(2α_1α_2-c_3) + ...
+       = H² - det(I+2A)
+       = H² - Pf(S)²
+
+This confirms: the gap H² - Pf² is determined by the interplay between
+the independence polynomial coefficients {α_k} and the tournament cycle
+structure coefficients {c_k}.
+
+THE KEY: x=2 is where these two polynomial families achieve the largest
+positive difference. At x=0 they agree (both = 1). At x=-1 they might
+agree again (making (x+1) sometimes a factor). At x=2 the gap is always
+nonneg — this is the H ≥ |Pf| inequality.
+
