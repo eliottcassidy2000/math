@@ -1,0 +1,188 @@
+======================================================================
+PALEY PERFECT ALIGNMENT THEOREM
+======================================================================
+
+======================================================================
+p=7, m=3, p mod 4 = 3
+======================================================================
+  QR = [1, 2, 4]
+  NQR = [3, 5, 6]
+  Paley sigma = (1, 1, -1)
+  NQR chords in {0,...,2}: [2]
+  Number of NQR chords: 1
+
+  --- Paley point analysis ---
+  H(Paley) = 189
+    deg 0:        +178.50  (1+ 0- 0zero)
+    deg 1:          +0.00  (0+ 0- 0zero)
+    deg 2:         +10.50  (3+ 0- 0zero)
+    deg 3:          +0.00  (0+ 0- 0zero)
+  Alignment score: 1.0000
+  *** PERFECT ALIGNMENT! ALL non-zero Walsh terms positive ***
+
+  --- Interval point analysis ---
+  H(Interval) = 175
+    deg 0:        +178.50  (1+ 0-)
+    deg 1:          +0.00  (0+ 0-)
+    deg 2:          -3.50  (1+ 2-)
+    deg 3:          +0.00  (0+ 0-)
+  Alignment score: 0.3333
+
+  --- Alignment scores for ALL 8 orientations ---
+
+    Top 5 by alignment:
+      H=         189, alignment=1.0000, sigma=(1, 1, -1) [PALEY]
+      H=         189, alignment=1.0000, sigma=(-1, -1, 1) [ANTI-PALEY]
+      H=         175, alignment=0.3333, sigma=(-1, -1, -1)
+      H=         175, alignment=0.3333, sigma=(1, -1, -1)
+      H=         175, alignment=0.3333, sigma=(-1, 1, -1)
+
+    Bottom 3 by alignment:
+      H=         175, alignment=0.3333, sigma=(1, -1, 1)
+      H=         175, alignment=0.3333, sigma=(-1, 1, 1)
+      H=         175, alignment=0.3333, sigma=(1, 1, 1)
+
+    Correlation(H, alignment) = 1.0000
+
+======================================================================
+p=11, m=5, p mod 4 = 3
+======================================================================
+  QR = [1, 3, 4, 5, 9]
+  NQR = [2, 6, 7, 8, 10]
+  Paley sigma = (1, -1, 1, 1, 1)
+  NQR chords in {0,...,4}: [1]
+  Number of NQR chords: 1
+
+  --- Paley point analysis ---
+  H(Paley) = 95095
+    deg 0:      +93101.25  (1+ 0- 0zero)
+    deg 1:          +0.00  (0+ 0- 0zero)
+    deg 2:       +1402.50  (10+ 0- 0zero)
+    deg 3:          +0.00  (0+ 0- 0zero)
+    deg 4:        +591.25  (5+ 0- 0zero)
+    deg 5:          +0.00  (0+ 0- 0zero)
+  Alignment score: 1.0000
+  *** PERFECT ALIGNMENT! ALL non-zero Walsh terms positive ***
+
+  --- Interval point analysis ---
+  H(Interval) = 93027
+    deg 0:      +93101.25  (1+ 0-)
+    deg 1:          +0.00  (0+ 0-)
+    deg 2:        +280.50  (6+ 4-)
+    deg 3:          +0.00  (0+ 0-)
+    deg 4:        -354.75  (1+ 4-)
+    deg 5:          +0.00  (0+ 0-)
+  Alignment score: 0.4667
+
+  --- Alignment scores for ALL 32 orientations ---
+
+    Top 5 by alignment:
+      H=       95095, alignment=1.0000, sigma=(-1, 1, -1, -1, -1) [ANTI-PALEY]
+      H=       95095, alignment=1.0000, sigma=(1, -1, 1, 1, 1) [PALEY]
+      H=       93467, alignment=0.4667, sigma=(-1, -1, 1, -1, -1)
+      H=       93467, alignment=0.4667, sigma=(1, -1, 1, -1, -1)
+      H=       93467, alignment=0.4667, sigma=(1, 1, 1, -1, -1)
+
+    Bottom 3 by alignment:
+      H=       92411, alignment=0.4667, sigma=(-1, 1, 1, -1, 1)
+      H=       92411, alignment=0.4667, sigma=(1, 1, 1, -1, 1)
+      H=       92411, alignment=0.4667, sigma=(-1, 1, 1, 1, 1)
+
+    Correlation(H, alignment) = 0.7753
+
+======================================================================
+p=13, m=6, p mod 4 = 1
+======================================================================
+  QR = [1, 3, 4, 9, 10, 12]
+  NQR = [2, 5, 6, 7, 8, 11]
+  Paley sigma = (1, -1, 1, 1, -1, -1)
+  NQR chords in {0,...,5}: [1, 4, 5]
+  Number of NQR chords: 3
+
+  --- Paley point analysis ---
+  H(Paley) = 3669497
+    deg 0:    +3695839.88  (1+ 0- 0zero)
+    deg 1:          +0.00  (0+ 0- 0zero)
+    deg 2:       -1556.75  (5+ 7- 0zero)
+    deg 3:          +0.00  (0+ 0- 0zero)
+    deg 4:      -24786.12  (4+ 11- 0zero)
+    deg 5:          +0.00  (0+ 0- 0zero)
+    deg 6:          +0.00  (0+ 0- 0zero)
+  Alignment score: 0.3333
+
+  --- Interval point analysis ---
+  H(Interval) = 3711175
+    deg 0:    +3695839.88  (1+ 0-)
+    deg 1:          +0.00  (0+ 0-)
+    deg 2:       -1556.75  (5+ 7-)
+    deg 3:          +0.00  (0+ 0-)
+    deg 4:      +16891.88  (8+ 7-)
+    deg 5:          +0.00  (0+ 0-)
+    deg 6:          +0.00  (0+ 0-)
+  Alignment score: 0.4815
+
+  --- Alignment scores for ALL 64 orientations ---
+
+    Top 5 by alignment:
+      H=     3704857, alignment=0.6296, sigma=(1, 1, -1, 1, -1, -1)
+      H=     3704857, alignment=0.6296, sigma=(1, 1, 1, 1, -1, -1)
+      H=     3704857, alignment=0.6296, sigma=(-1, -1, -1, -1, 1, -1)
+      H=     3704857, alignment=0.6296, sigma=(1, -1, -1, -1, 1, -1)
+      H=     3704857, alignment=0.6296, sigma=(1, 1, -1, -1, 1, -1)
+
+    Bottom 3 by alignment:
+      H=     3669497, alignment=0.3333, sigma=(1, -1, 1, -1, 1, 1)
+      H=     3669497, alignment=0.3333, sigma=(1, 1, -1, 1, 1, 1)
+      H=     3669497, alignment=0.3333, sigma=(-1, 1, 1, 1, 1, 1)
+
+    Correlation(H, alignment) = 0.7811
+
+======================================================================
+PALEY PERFECT ALIGNMENT: PROOF SKETCH
+======================================================================
+
+  CLAIM: At p=3 mod 4, the Paley orientation achieves PERFECT ALIGNMENT:
+    all non-zero Walsh coefficients h_hat[S] * prod_{i in S} sigma_P[i] > 0.
+
+  MECHANISM:
+  1. The Paley orientation has sigma_i = chi(i+1) where chi is the
+     Legendre symbol (QR -> +1, NQR -> -1).
+
+  2. For a Walsh coefficient h_hat[S] with |S|=d, the sign at Paley is:
+     sign = sign(h_hat[S]) * prod_{i in S} chi(i+1)
+          = sign(h_hat[S]) * chi(prod_{i in S}(i+1))
+
+  3. If h_hat[S] = f(|prod gaps|) * chi(prod gaps), then
+     sign = sign(f) * chi(prod)^2 = sign(f) > 0  (assuming f > 0)
+
+  This works iff the Walsh coefficient has the form:
+     h_hat[S] = |c(S)| * chi(prod_{i in S}(i+1))
+
+  i.e., the sign of h_hat is the Legendre symbol of the product of gaps.
+
+  VERIFICATION:
+
+  p=7:
+    S={0, 1}: h=     +3.50, prod_gaps=2, chi=+1, sign(h)=+1 [MATCH]
+    S={0, 2}: h=     -3.50, prod_gaps=3, chi=-1, sign(h)=-1 [MATCH]
+    S={1, 2}: h=     -3.50, prod_gaps=6, chi=-1, sign(h)=-1 [MATCH]
+    *** ALL WALSH COEFFICIENTS MATCH: sign(h) = chi(prod gaps) ***
+
+  p=11:
+    S={0, 1}: h=     -8.25, prod_gaps=2, chi=-1, sign(h)=-1 [MATCH]
+    S={0, 1, 2, 3}: h=   -118.25, prod_gaps=2, chi=-1, sign(h)=-1 [MATCH]
+    S={0, 1, 2, 4}: h=   -118.25, prod_gaps=8, chi=-1, sign(h)=-1 [MATCH]
+    S={0, 1, 3, 4}: h=   -118.25, prod_gaps=7, chi=-1, sign(h)=-1 [MATCH]
+    S={0, 2}: h=   +272.25, prod_gaps=3, chi=+1, sign(h)=+1 [MATCH]
+    S={0, 2, 3, 4}: h=   +118.25, prod_gaps=5, chi=+1, sign(h)=+1 [MATCH]
+    S={0, 3}: h=   +272.25, prod_gaps=4, chi=+1, sign(h)=+1 [MATCH]
+    S={0, 4}: h=     +8.25, prod_gaps=5, chi=+1, sign(h)=+1 [MATCH]
+    S={1, 2}: h=   -272.25, prod_gaps=6, chi=-1, sign(h)=-1 [MATCH]
+    S={1, 2, 3, 4}: h=   -118.25, prod_gaps=10, chi=-1, sign(h)=-1 [MATCH]
+    S={1, 3}: h=     -8.25, prod_gaps=8, chi=-1, sign(h)=-1 [MATCH]
+    S={1, 4}: h=   -272.25, prod_gaps=10, chi=-1, sign(h)=-1 [MATCH]
+    S={2, 3}: h=     +8.25, prod_gaps=1, chi=+1, sign(h)=+1 [MATCH]
+    S={2, 4}: h=     +8.25, prod_gaps=4, chi=+1, sign(h)=+1 [MATCH]
+    S={3, 4}: h=   +272.25, prod_gaps=9, chi=+1, sign(h)=+1 [MATCH]
+    *** ALL WALSH COEFFICIENTS MATCH: sign(h) = chi(prod gaps) ***
+

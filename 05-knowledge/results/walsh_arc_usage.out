@@ -1,0 +1,158 @@
+======================================================================
+WALSH COEFFICIENTS AND ARC USAGE IN H-PATHS
+======================================================================
+
+p=7, m=3, S_int=[1, 2, 3]
+
+  1. ARC USAGE (Interval)
+    H = 175 (enumerated in 0.0s)
+    Chord usage (avg per H-path per vertex):
+      gap 1: 50 total, 2.0000 per path
+      gap 2: 54 total, 2.1600 per path
+      gap 3: 46 total, 1.8400 per path
+      gap 4: 0 total, 0.0000 per path
+      gap 5: 0 total, 0.0000 per path
+      gap 6: 0 total, 0.0000 per path
+
+  2. GAP CO-USAGE (Interval)
+    Verified H = 175 (0.0s)
+
+    Single gap usage (total across all paths & vertices):
+      gap 1: 350
+      gap 2: 378
+      gap 3: 322
+
+    Co-usage matrix (normalized by H):
+         g= 1 g= 2 g= 3
+    g= 1  6.00  3.44  2.56
+    g= 2  3.44  6.40  3.12
+    g= 3  2.56  3.12  5.36
+
+  3. WALSH COEFFICIENTS
+    Degree-2 coefficients:
+      h[{0,1}] =    +3.50  (chords with gaps 1,2 or 6,5)
+      h[{0,2}] =    -3.50  (chords with gaps 1,3 or 6,4)
+      h[{1,2}] =    -3.50  (chords with gaps 2,3 or 5,4)
+
+  4. WALSH-USAGE CONNECTION
+    For chord pair (i,j), define:
+      U_(1, 2) = co-usage when both chords 'positive' (gap=i+1, j+1)
+      V_(1, 2) = co-usage when both chords 'negative' (gap=p-i-1, p-j-1)
+      W_(1, 2) = co-usage when mixed (one + one -)
+    Walsh coeff h[{i,j}] should be related to (U+V-2W)/4
+
+    chord pair (0,1): h_hat =  +3.50
+      gaps: pos=(1,2), neg=(6,5)
+      U=3.4400, V=0.0000, W=0.0000
+      (U+V-2W)/4 = 0.8600
+
+    chord pair (0,2): h_hat =  -3.50
+      gaps: pos=(1,3), neg=(6,4)
+      U=2.5600, V=0.0000, W=0.0000
+      (U+V-2W)/4 = 0.6400
+
+    chord pair (1,2): h_hat =  -3.50
+      gaps: pos=(2,3), neg=(5,4)
+      U=3.1200, V=0.0000, W=0.0000
+      (U+V-2W)/4 = 0.7800
+
+
+======================================================================
+CHORD INTERACTION STRUCTURE AT p=11
+======================================================================
+
+  Degree-2 Walsh coefficients at p=11:
+          pair      h_hat    gap_pos    gap_neg
+         {0,1}      -8.25      (1,2)     (10,9)
+         {0,2}    +272.25      (1,3)     (10,8)
+         {0,3}    +272.25      (1,4)     (10,7)
+         {0,4}      +8.25      (1,5)     (10,6)
+         {1,2}    -272.25      (2,3)      (9,8)
+         {1,3}      -8.25      (2,4)      (9,7)
+         {1,4}    -272.25      (2,5)      (9,6)
+         {2,3}      +8.25      (3,4)      (8,7)
+         {2,4}      +8.25      (3,5)      (8,6)
+         {3,4}    +272.25      (4,5)      (7,6)
+
+  Gap difference analysis:
+    {0,1}: gap (1,2), |diff|=1, sum mod p=3, h_hat=-8.25
+    {0,2}: gap (1,3), |diff|=2, sum mod p=4, h_hat=+272.25
+    {0,3}: gap (1,4), |diff|=3, sum mod p=5, h_hat=+272.25
+    {0,4}: gap (1,5), |diff|=4, sum mod p=6, h_hat=+8.25
+    {1,2}: gap (2,3), |diff|=1, sum mod p=5, h_hat=-272.25
+    {1,3}: gap (2,4), |diff|=2, sum mod p=6, h_hat=-8.25
+    {1,4}: gap (2,5), |diff|=3, sum mod p=7, h_hat=-272.25
+    {2,3}: gap (3,4), |diff|=1, sum mod p=7, h_hat=+8.25
+    {2,4}: gap (3,5), |diff|=2, sum mod p=8, h_hat=+8.25
+    {3,4}: gap (4,5), |diff|=1, sum mod p=9, h_hat=+272.25
+
+  QR(11) = [1, 3, 4, 5, 9]
+  NQR(11) = [2, 6, 7, 8, 10]
+
+  QR/NQR classification of chord pairs:
+    {0,1}: (1:QR, 2:NQR), product=2:NQR, h_hat=-8.25
+    {0,2}: (1:QR, 3:QR), product=3:QR, h_hat=+272.25
+    {0,3}: (1:QR, 4:QR), product=4:QR, h_hat=+272.25
+    {0,4}: (1:QR, 5:QR), product=5:QR, h_hat=+8.25
+    {1,2}: (2:NQR, 3:QR), product=6:NQR, h_hat=-272.25
+    {1,3}: (2:NQR, 4:QR), product=8:NQR, h_hat=-8.25
+    {1,4}: (2:NQR, 5:QR), product=10:NQR, h_hat=-272.25
+    {2,3}: (3:QR, 4:QR), product=1:QR, h_hat=+8.25
+    {2,4}: (3:QR, 5:QR), product=4:QR, h_hat=+8.25
+    {3,4}: (4:QR, 5:QR), product=9:QR, h_hat=+272.25
+
+======================================================================
+MULTIPLICATIVE CHARACTER CONNECTION
+======================================================================
+
+  The Walsh degree-2 coefficient h_hat[{i,j}] depends on whether
+  the gap product g_i * g_j is a QR or NQR mod p.
+
+  CONJECTURE: |h_hat[{i,j}]| has exactly 2 values:
+    Large: when g_i * g_j mod p is in one residue class
+    Small: when in the other
+
+  For p=11:
+    Large |h_hat| = 272.25 pairs: let's check their gap products
+    Small |h_hat| = 8.25 pairs: let's check their gap products
+
+  Large |h| pairs: [(1, 3, 3, 'QR'), (2, 3, 6, 'NQR'), (1, 4, 4, 'QR'), (2, 5, 10, 'NQR'), (4, 5, 9, 'QR')]
+  Small |h| pairs: [(1, 2, 2, 'NQR'), (2, 4, 8, 'NQR'), (3, 4, 1, 'QR'), (1, 5, 5, 'QR'), (3, 5, 4, 'QR')]
+
+  Large: 3/5 have QR product
+  Small: 3/5 have QR product
+
+======================================================================
+VERIFICATION AT p=13
+======================================================================
+  QR(13) = [1, 3, 4, 9, 10, 12]
+
+  Degree-2 Walsh coefficients:
+    {0,1}: gap (1,2), prod=2:NQR, h_hat=+2632.50
+    {0,2}: gap (1,3), prod=3:QR, h_hat=-778.38
+    {0,3}: gap (1,4), prod=4:QR, h_hat=+778.38
+    {0,5}: gap (1,6), prod=6:NQR, h_hat=-2632.50
+    {1,3}: gap (2,4), prod=8:NQR, h_hat=+2632.50
+    {1,4}: gap (2,5), prod=10:QR, h_hat=-778.38
+    {1,5}: gap (2,6), prod=12:QR, h_hat=-778.38
+    {2,3}: gap (3,4), prod=12:QR, h_hat=+778.38
+    {2,4}: gap (3,5), prod=2:NQR, h_hat=-2632.50
+    {2,5}: gap (3,6), prod=5:NQR, h_hat=+2632.50
+    {3,4}: gap (4,5), prod=7:NQR, h_hat=-2632.50
+    {4,5}: gap (5,6), prod=4:QR, h_hat=-778.38
+
+  Magnitude grouping:
+    |h|=2632.5: 6 pairs, 0 QR, 3 positive
+      (1,2): prod=2:NQR, +
+      (1,6): prod=6:NQR, -
+      (2,4): prod=8:NQR, +
+      (3,5): prod=2:NQR, -
+      (3,6): prod=5:NQR, +
+      (4,5): prod=7:NQR, -
+    |h|=778.38: 6 pairs, 6 QR, 2 positive
+      (1,3): prod=3:QR, -
+      (1,4): prod=4:QR, +
+      (2,5): prod=10:QR, -
+      (2,6): prod=12:QR, -
+      (3,4): prod=12:QR, +
+      (5,6): prod=4:QR, -
