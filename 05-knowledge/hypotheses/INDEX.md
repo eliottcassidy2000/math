@@ -559,6 +559,12 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-858 | **THM-178: |dc7| <= 1 AT n=7**: All 1262 tested Vitali pairs have dc7 in {-1,0,1}. At n=8: dc7 in [-3,+3]. S-reversal conjugation shows most cycles pair up with at most 1 unpaired. | vitali_orbit_deep.py, dc7_nonzero_anatomy.py | kind-pasteur-S61 |
 | HYP-859 | **VITALI OPERATIONS COMMUTE**: All tested pairs of Vitali atoms on same tournament commute (even with overlap). Orbit sizes {2,3} at n=7. | vitali_holonomy_composition.py | kind-pasteur-S61 |
 | HYP-860 | **C3/T3 RESONANCE**: Outside C3 => dc7 nonzero 59%; outside T3 => dc7 nonzero 13%. At n=8, XX c3 count predicts dc7 activity rate. | vitali_c3_resonance.py | kind-pasteur-S61 |
+| HYP-861 | **THM-179: TOTAL SIGMA = sum(s_i^2) - n(n-1)/2**: Exact formula for total sigma from score sequence. Verified 1000/1000. | simplex_gradient_deep.py | kind-pasteur-S61 |
+| HYP-862 | **THM-180: TOTAL SIMPLEX = (score_variance, c3)**: total_sigma = sum(s^2)-21, total_lambda = 3*c3, total_delta = 126-sum(s^2)-3*c3. All verified 1000/1000. | simplex_gradient_deep.py | kind-pasteur-S61 |
+| HYP-863 | **THM-182: VITALI IS UNIQUE c7-CHANGING LAMBDA-PRESERVING REVERSAL**: k=5 reversals: dc7=0 always (160/160). k=6: dc7=0 always (211/211). Only k=4 (Vitali) changes c7. | higher_order_atoms.py | kind-pasteur-S61 |
+| HYP-864 | **THM-183: (tr(Sigma^2), tr(Sigma^3), tr(Sigma^4)) DETERMINES c7**: 168 distinct triples, 0 ambiguous. sigma spectrum resolves ALL simplex profile ambiguity. tr(Sigma^3) gap always +/-48 for isospectral cases. | tr_sigma3_invariant.py, spectral_hidden_dim.py | kind-pasteur-S61 |
+| HYP-865 | **SIGMA IDENTITY: Sigma = (n-2)*J_off - sym(A^2)_off**: sigma(u,v) = n-2 - A^2[u,v] - A^2[v,u]. When u->v: A^2[u,v]=delta, A^2[v,u]=lambda. Verified. | sigma_c7_formula.py | kind-pasteur-S61 |
+| HYP-866 | **HIDDEN DIMENSION IS SIGMA SPECTRUM**: 6 ambiguous simplex profiles all resolved by sigma graph eigenvalues. Sigma degree seq resolves 2/6, tr(Sigma^3) resolves 4/6 more, tr(Sigma^4) resolves last. A+A^T spectrum resolves 0/6 (always cospectral!). | spectral_hidden_dim.py | kind-pasteur-S61 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

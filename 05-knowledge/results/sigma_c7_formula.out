@@ -1,0 +1,96 @@
+============================================================
+SIGMA-C7 FORMULA SEARCH AT n=7
+============================================================
+
+--- Full Linear Fit ---
+Features: ['c3', 'c5', 'tr_s2', 'tr_s3', 'tr_s4', 'tr_l2', 'tr_l3', 'total_sigma', 'ssq'] + const
+  c3: 0.127244
+  c5: -3.873433
+  tr_s2: -0.945375
+  tr_s3: -0.016735
+  tr_s4: 0.004594
+  tr_l2: 3.195317
+  tr_l3: 0.075202
+  total_sigma: -0.761498
+  ssq: -0.913600
+  const: -0.007243
+  RMSE: 5.7277, R^2: 0.994369
+
+--- Sigma Traces Only ---
+Features: ['total_sigma', 'tr_s2', 'tr_s3', 'tr_s4'] + const
+  total_sigma: -22.736424
+  tr_s2: -0.169021
+  tr_s3: -0.118008
+  tr_s4: 0.007541
+  const: 1319.966136
+  RMSE: 7.5754, R^2: 0.990149
+
+--- (c3, tr_s2, tr_s3, tr_s4) ---
+Features: ['c3', 'tr_s2', 'tr_s3', 'tr_s4'] + const
+  c3: 45.472848
+  tr_s2: -0.169021
+  tr_s3: -0.118008
+  tr_s4: 0.007541
+  const: -271.583558
+  RMSE: 7.5754, R^2: 0.990149
+
+--- Quadratic Features ---
+  RMSE: 0.2350, R^2: 0.999991
+
+--- Just c3, c5, and products ---
+  c3: -15.514065
+  c5: 0.513447
+  c3^2: 2.810732
+  c5^2: -0.120476
+  c3*c5: 0.218693
+  const: 27.471823
+  RMSE: 9.9150, R^2: 0.983125
+
+
+--- Sigma-to-A Relationship ---
+Sigma = A*A^T + A^T*A (off-diagonal)
+Let C = A*A^T + A^T*A. Then Sigma[u,v] = C[u,v] for u!=v, Sigma[u,u]=0.
+
+Verification: Sigma = C - diag(C) ?
+  Sigma == C_offdiag: True
+
+
+--- Key Identity ---
+For pair (u,v) with u->v:
+  A^2[u,v] = delta(u,v) (transitive witnesses)
+  A^2[v,u] = lambda(u,v) (cyclic witnesses = 3-cycle count)
+  sigma(u,v) = n-2 - delta - lambda = n-2 - A^2[u,v] - A^2[v,u]
+
+This means the sigma graph encodes COMPLEMENTARY information to A^2!
+Sigma = (n-2)*J_off - (A^2 + (A^2)^T)_off
+where J_off = all-ones with zero diagonal, and _off means zero diagonal.
+
+Verification:
+  Sigma == (n-2)*J_off - (A^2 + (A^2)^T)_off: True
+
+
+--- Exact Coefficient Search ---
+Unique (tr2, tr3, tr4, c7) tuples: 168
+
+Linear fit c7 = a*tr2 + b*tr3 + c*tr4 + d:
+  a=-0.43677003, b=-0.31088167, c=0.01201492, d=595.32242232
+  RMSE: 22.153838
+  -0.43677003 ~= -411/941 = -0.43676939
+  -0.31088167 ~= -60/193 = -0.31088083
+  0.01201492 ~= 9/749 = 0.01201602
+  595.32242232 ~= 363742/611 = 595.32242226
+
+
+Linear fit c7 = a*c3 + b*tr2 + c*tr3 + d*tr4 + e:
+  a=45.47284841, b=-0.16902056, c=-0.11800814, d=0.00754082, e=-271.58355812
+  RMSE: 7.575441
+  coeff[0] = 45.47284841 ~= 409483/9005
+  coeff[1] = -0.16902056 ~= -1101/6514
+  coeff[2] = -0.11800814 ~= -1019/8635
+  coeff[3] = 0.00754082 ~= 67/8885
+  coeff[4] = -271.58355812 ~= -2315793/8527
+  Max error: 55.1541
+  Predictions round to correct c7: False
+
+
+Done.

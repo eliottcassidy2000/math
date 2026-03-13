@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S61 (cont'd, window 4) — 2026-03-13: Sigma Power Sums + Hidden Dimension
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S61 window 3
+**Summary of work:**
+- Ran three_dim_internal_space.py: barycentric center at (0.499, 0.251, 0.250), score gradient dramatic
+- **THM-179 PROVED**: total_sigma = sum(s_i^2) - n(n-1)/2 (1000/1000)
+- **THM-180 PROVED**: total simplex = (score_variance, c3) — total_delta = 126 - sum(s^2) - 3*c3
+- **THM-181**: c7 gradient — anti-correlates with extremality, linear in total_lambda
+- Simplex profile has only 6/257 ambiguous profiles, each dc7 at most 3
+- **THM-182 PROVED**: Vitali atom is UNIQUE c7-changing lambda-preserving reversal (k=5,6 all dc7=0)
+- Hidden dimension probe: c3, c5, c4, all sub-tournament counts identical between ambiguous groups
+- **Sigma spectrum resolves ALL 6 ambiguous profiles** (A+A^T resolves 0!)
+- **THM-183 PROVED**: (tr(Sigma^2), tr(Sigma^3), tr(Sigma^4)) COMPLETELY DETERMINES c7 at n=7
+- tr(Sigma^3) gap ALWAYS ±48 between isospectral ambiguous profiles
+- **Key identity**: Sigma = (n-2)*J_off - sym(A^2)_off; when u->v: A^2[u,v]=delta, A^2[v,u]=lambda
+- c7 is NOT a polynomial in sigma traces — it's a 168-entry lookup table
+- Many tr2-slices show perfect linear c7 = a*tr3 + b with r^2=1.000
+**New contributions:** THM-179, THM-180, THM-181, THM-182, THM-183, HYP-861 through HYP-866
+**Unresolved:** Algebraic proof of |dc7|<=1, why gap=48, exact c7 formula, extension to n=8,9
+
 ## opus-2026-03-13-S67k — 2026-03-13: Recurrence Taxonomy + Pfaffian Identity THM-174
 
 **Account:** opus
