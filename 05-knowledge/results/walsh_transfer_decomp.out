@@ -1,0 +1,285 @@
+======================================================================
+TRANSFER MATRIX EIGENSPACE DECOMPOSITION
+======================================================================
+
+======================================================================
+p=5, m=2
+======================================================================
+
+  1. DISTINCT Q PROFILES
+    Q_sorted = (0.38196601, 2.61803399)
+    H = 15, 4 orientations
+    S_hat = ['(-0.500-1.539j)', '(-0.500+0.363j)']
+
+  2. POWER SUMS OF S_hat AND H
+     Testing: H = f(P_1, P_2, ...) where P_j = sum_k S_hat(k)^j
+
+    P_1 for first few sigmas:
+      sigma=(-1, -1): P_1 = -2.0000-0.0000j, P_2 = -4.0000+0.0000j
+      sigma=(1, -1): P_1 = -2.0000+0.0000j, P_2 = -4.0000+0.0000j
+      sigma=(-1, 1): P_1 = -2.0000-0.0000j, P_2 = -4.0000+0.0000j
+      sigma=(1, 1): P_1 = -2.0000+0.0000j, P_2 = -4.0000+0.0000j
+
+    P_1 should be -m = -2
+      P_1 = -2.000000-0.000000j
+      P_1 = -2.000000+0.000000j
+      P_1 = -2.000000-0.000000j
+
+    sum Q_k = sum |S_hat(k)|^2 (k=1..p-1) should be m(p-m) = 6
+      sum Q_k = 6.000000
+      sum Q_k = 6.000000
+      sum Q_k = 6.000000
+
+  3. TESTING PRODUCT RELATIONSHIPS
+    log(H) vs sum log(Q_k):
+      H=        15, log(H)=2.7081, log(prod Q_k)=-0.0000 (near zero)
+      H=        15, log(H)=2.7081, log(prod Q_k)=0.0000 (near zero)
+      H=        15, log(H)=2.7081, log(prod Q_k)=-0.0000 (near zero)
+      H=        15, log(H)=2.7081, log(prod Q_k)=-0.0000 (near zero)
+
+  4. SYMMETRIC FUNCTIONS OF Q_k
+    H=        15: e_1=3.0000, e_2=1.0000
+    H=        15: e_1=3.0000, e_2=1.0000
+    H=        15: e_1=3.0000, e_2=1.0000
+    H=        15: e_1=3.0000, e_2=1.0000
+
+  5. POLYNOMIAL FIT: H = sum c_j * e_j
+    Max residual = 0.000000
+    Is H = polynomial in e_j? YES
+    Coefficients:
+      c_0 = 15.0000000000
+      c_1 = 0.0000000000
+      c_2 = 0.0000000000
+
+  6. POLYNOMIAL IN POWER SUMS p_j = sum Q_k^j
+    Near-singular at column 1
+    Max residual = 0.000000
+    Is H = polynomial in p_j? YES
+    Coefficients:
+      c_0 = 15.0000000000
+      c_1 = 0.0000000000
+      c_2 = 0.0000000000
+
+  8. PERMANENT CONNECTION
+    H/p for each Q-profile:
+      Q = (0.38196601, 2.61803399): H/p = 3.000000, prod Q = 1.0000, H/(p*prod_Q) = 3.00000001
+
+  9. H AND CHARACTER SUMS
+    (Skipping character sum analysis for now)
+
+======================================================================
+p=7, m=3
+======================================================================
+
+  1. DISTINCT Q PROFILES
+    Q_sorted = (2.0, 2.0, 2.0)
+    H = 189, 2 orientations
+    S_hat = ['(-0.500+1.323j)', '(-0.500+1.323j)', '(-0.500-1.323j)']
+    Q_sorted = (0.30797853, 0.64310413, 5.04891734)
+    H = 175, 6 orientations
+    S_hat = ['(-0.500-2.191j)', '(-0.500+0.241j)', '(-0.500-0.627j)']
+
+  2. POWER SUMS OF S_hat AND H
+     Testing: H = f(P_1, P_2, ...) where P_j = sum_k S_hat(k)^j
+
+    P_1 for first few sigmas:
+      sigma=(1, 1, -1): P_1 = -3.0000+0.0000j, P_2 = -9.0000+0.0000j
+      sigma=(-1, -1, 1): P_1 = -3.0000+0.0000j, P_2 = -9.0000+0.0000j
+      sigma=(-1, -1, -1): P_1 = -3.0000+0.0000j, P_2 = -9.0000+0.0000j
+      sigma=(1, -1, -1): P_1 = -3.0000+0.0000j, P_2 = -9.0000+0.0000j
+
+    P_1 should be -m = -3
+      P_1 = -3.000000+0.000000j
+      P_1 = -3.000000+0.000000j
+      P_1 = -3.000000+0.000000j
+
+    sum Q_k = sum |S_hat(k)|^2 (k=1..p-1) should be m(p-m) = 12
+      sum Q_k = 12.000000
+      sum Q_k = 12.000000
+      sum Q_k = 12.000000
+
+  3. TESTING PRODUCT RELATIONSHIPS
+    log(H) vs sum log(Q_k):
+      H=       189, log(H)=5.2417, log(prod Q_k)=2.0794, ratio=2.5207
+      H=       189, log(H)=5.2417, log(prod Q_k)=2.0794, ratio=2.5207
+      H=       175, log(H)=5.1648, log(prod Q_k)=0.0000 (near zero)
+      H=       175, log(H)=5.1648, log(prod Q_k)=0.0000 (near zero)
+      H=       175, log(H)=5.1648, log(prod Q_k)=0.0000 (near zero)
+      H=       175, log(H)=5.1648, log(prod Q_k)=0.0000 (near zero)
+      H=       175, log(H)=5.1648, log(prod Q_k)=0.0000 (near zero)
+      H=       175, log(H)=5.1648, log(prod Q_k)=0.0000 (near zero)
+
+  4. SYMMETRIC FUNCTIONS OF Q_k
+    H=       189: e_1=6.0000, e_2=12.0000, e_3=8.0000
+    H=       189: e_1=6.0000, e_2=12.0000, e_3=8.0000
+    H=       175: e_1=6.0000, e_2=5.0000, e_3=1.0000
+    H=       175: e_1=6.0000, e_2=5.0000, e_3=1.0000
+    H=       175: e_1=6.0000, e_2=5.0000, e_3=1.0000
+    H=       175: e_1=6.0000, e_2=5.0000, e_3=1.0000
+    H=       175: e_1=6.0000, e_2=5.0000, e_3=1.0000
+    H=       175: e_1=6.0000, e_2=5.0000, e_3=1.0000
+
+  5. POLYNOMIAL FIT: H = sum c_j * e_j
+    Max residual = 1.000000
+    Is H = polynomial in e_j? NO
+    Linear-in-e_j model fails.
+
+  6. POLYNOMIAL IN POWER SUMS p_j = sum Q_k^j
+    Max residual = 1.410714
+    Is H = polynomial in p_j? NO
+
+  7. QUADRATIC IN e_j / MIXED PRODUCTS
+    10 mixed features, 8 data points
+
+  8. PERMANENT CONNECTION
+    H/p for each Q-profile:
+      Q = (2.0, 2.0, 2.0): H/p = 27.000000, prod Q = 8.0000, H/(p*prod_Q) = 3.37500000
+      Q = (0.30797853, 0.64310413, 5.04891734): H/p = 25.000000, prod Q = 1.0000, H/(p*prod_Q) = 24.99999995
+
+  9. H AND CHARACTER SUMS
+    (Skipping character sum analysis for now)
+
+======================================================================
+p=11, m=5
+======================================================================
+
+  1. DISTINCT Q PROFILES
+    Q_sorted = (3.0, 3.0, 3.0, 3.0, 3.0)
+    H = 95095, 2 orientations
+    S_hat = ['(-0.500-1.658j)', '(-0.500+1.658j)', '(-0.500-1.658j)', '(-0.500-1.658j)', '(-0.500-1.658j)']
+    Q_sorted = (0.42359878, 1.12323117, 2.21732077, 2.49380478, 8.74204451)
+    H = 93467, 10 orientations
+    S_hat = ['(-0.500-1.498j)', '(-0.500-0.417j)', '(-0.500-2.914j)', '(-0.500+1.403j)', '(-0.500+0.934j)']
+    Q_sorted = (0.27155413, 0.35325328, 0.5829645, 1.44869057, 12.34353752)
+    H = 93027, 10 orientations
+    S_hat = ['(-0.500-3.478j)', '(-0.500+0.147j)', '(-0.500-1.095j)', '(-0.500+0.321j)', '(-0.500-0.577j)']
+    Q_sorted = (0.25018403, 1.03286326, 3.60926448, 4.1154597, 5.99222853)
+    H = 92411, 10 orientations
+    S_hat = ['(-0.500-2.396j)', '(-0.500+1.966j)', '(-0.500+0.885j)', '(-0.500+1.833j)', '(-0.500-0.014j)']
+
+  2. POWER SUMS OF S_hat AND H
+     Testing: H = f(P_1, P_2, ...) where P_j = sum_k S_hat(k)^j
+
+    P_1 for first few sigmas:
+      sigma=(-1, 1, -1, -1, -1): P_1 = -5.0000+0.0000j, P_2 = -25.0000+0.0000j
+      sigma=(1, -1, 1, 1, 1): P_1 = -5.0000+0.0000j, P_2 = -25.0000+0.0000j
+      sigma=(-1, -1, 1, -1, -1): P_1 = -5.0000+0.0000j, P_2 = -25.0000+0.0000j
+      sigma=(1, -1, 1, -1, -1): P_1 = -5.0000+0.0000j, P_2 = -25.0000+0.0000j
+
+    P_1 should be -m = -5
+      P_1 = -5.000000+0.000000j
+      P_1 = -5.000000+0.000000j
+      P_1 = -5.000000+0.000000j
+
+    sum Q_k = sum |S_hat(k)|^2 (k=1..p-1) should be m(p-m) = 30
+      sum Q_k = 30.000000
+      sum Q_k = 30.000000
+      sum Q_k = 30.000000
+
+  3. TESTING PRODUCT RELATIONSHIPS
+    log(H) vs sum log(Q_k):
+      H=     95095, log(H)=11.4626, log(prod Q_k)=5.4931, ratio=2.0867
+      H=     95095, log(H)=11.4626, log(prod Q_k)=5.4931, ratio=2.0867
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93467, log(H)=11.4454, log(prod Q_k)=3.1355, ratio=3.6503
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=-0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     93027, log(H)=11.4406, log(prod Q_k)=0.0000 (near zero)
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+      H=     92411, log(H)=11.4340, log(prod Q_k)=3.1355, ratio=3.6466
+
+  4. SYMMETRIC FUNCTIONS OF Q_k
+    H=     95095: e_1=15.0000, e_2=90.0000, e_3=270.0000, e_4=405.0000
+    H=     95095: e_1=15.0000, e_2=90.0000, e_3=270.0000, e_4=405.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93467: e_1=15.0000, e_2=68.0000, e_3=127.0000, e_4=97.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     93027: e_1=15.0000, e_2=35.0000, e_3=28.0000, e_4=9.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+    H=     92411: e_1=15.0000, e_2=79.0000, e_3=171.0000, e_4=130.0000
+
+  5. POLYNOMIAL FIT: H = sum c_j * e_j
+    Max residual = 9230.149463
+    Is H = polynomial in e_j? NO
+    Linear-in-e_j model fails.
+
+  6. POLYNOMIAL IN POWER SUMS p_j = sum Q_k^j
+    Max residual = 2103.127076
+    Is H = polynomial in p_j? NO
+
+  7. QUADRATIC IN e_j / MIXED PRODUCTS
+    21 mixed features, 32 data points
+    Max residual = 1498119.268983
+    Is H = quadratic in e_j? NO
+
+  8. PERMANENT CONNECTION
+    H/p for each Q-profile:
+      Q = (3.0, 3.0, 3.0, 3.0, 3.0): H/p = 8645.000000, prod Q = 243.0000, H/(p*prod_Q) = 35.57613169
+      Q = (0.42359878, 1.12323117, 2.21732077, 2.49380478, 8.74204451): H/p = 8497.000000, prod Q = 23.0000, H/(p*prod_Q) = 369.43478015
+      Q = (0.27155413, 0.35325328, 0.5829645, 1.44869057, 12.34353752): H/p = 8457.000000, prod Q = 1.0000, H/(p*prod_Q) = 8457.00002253
+      Q = (0.25018403, 1.03286326, 3.60926448, 4.1154597, 5.99222853): H/p = 8401.000000, prod Q = 23.0000, H/(p*prod_Q) = 365.26086444
+
+  9. H AND CHARACTER SUMS
+    (Skipping character sum analysis for now)
+
+======================================================================
+SUMMARY
+======================================================================
+
+  Key findings:
+  1. C(k) = -1/2 for all k (universal: sum cos(2pi*k*i/p) over i=1..m)
+  2. Q_k constant = (p+1)/4 (Parseval average)
+  3. sum_k Q_k = m*(p-m) = m*(m+1) (Parseval total)
+  4. Gram matrix of centered Q_k = (p/4)(mI - J) — equicorrelated
+  5. H = F(sorted Q_k) — symmetric function, no chirality
+  6. F is NOT polynomial of any reasonable degree in elementary symm functions
+  7. The nonlinearity comes from the PERMANENT structure of H
+  8. Permanent of circulant does NOT simplify to product of eigenvalues
+    

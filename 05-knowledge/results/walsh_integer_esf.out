@@ -1,0 +1,261 @@
+======================================================================
+INTEGER ELEMENTARY SYMMETRIC FUNCTIONS OF Q_k
+======================================================================
+
+======================================================================
+p=5, m=2
+======================================================================
+
+  1. ELEMENTARY SYMMETRIC FUNCTIONS
+
+    Integrality check:
+    Max fractional part of any e_j: 7.77e-16
+    All e_j are integers: YES
+
+  2. TABLE OF (e_j) -> H
+
+       e_1      e_2        e_3        e_4        e_5        e_m            H  count
+    --------------------------------------------------------------------------------
+             3          1          1           15      4
+
+  3. PRODUCT OF Q_k (= e_m)
+
+    Interval |S_hat(k)|^2 formula:
+      k=1: sin^2(3/5*pi)/sin^2(1/5*pi) = 2.61803399 [actual: 2.61803399]
+      k=2: sin^2(6/5*pi)/sin^2(2/5*pi) = 0.38196601 [actual: 0.38196601]
+
+    prod Q_k (Interval) = 1.0000000000
+    Should be 1: YES
+
+    prod sin(k*pi/p), k=1..m: 0.5590169944
+    sqrt(p) / 2^m: 0.5590169944
+    prod sin(k*(m+1)*pi/p), k=1..m: -0.5590169944
+    These are equal: False
+
+    {k*(m+1) mod p : k=1,...,m} = [1, 3]
+    {1,...,m} = [1, 2]
+    Canonical mult set: [1, 2]
+    Canonical orig set: [1, 2]
+    Same multiset: True
+    => prod sin(k*(m+1)*pi/p) = prod sin(k*pi/p)
+    => prod Q_k (Interval) = 1 [PROVED]
+
+    Paley product: ((p+1)/4)^m = 2
+    Actual prod Q_k (Paley) = 1.000000
+
+  4. DISTINCT e_m = prod Q_k VALUES
+    e_m = 1 = 1, count = 4
+
+  5. POLYNOMIAL FIT H = polynomial(e_2, ..., e_m)
+    1 unique profiles, 1 variables
+
+  6. CHARACTERISTIC POLYNOMIAL OF Q_k
+    H=15: t^2 - 3*t^1 + 1*t^0 = 0
+           roots: [2.6180, 0.3820]
+
+======================================================================
+p=7, m=3
+======================================================================
+
+  1. ELEMENTARY SYMMETRIC FUNCTIONS
+
+    Integrality check:
+    Max fractional part of any e_j: 2.13e-14
+    All e_j are integers: YES
+
+  2. TABLE OF (e_j) -> H
+
+       e_1      e_2        e_3        e_4        e_5        e_m            H  count
+    --------------------------------------------------------------------------------
+             6         12          8          8          189      2
+             6          5          1          1          175      6
+
+  3. PRODUCT OF Q_k (= e_m)
+
+    Interval |S_hat(k)|^2 formula:
+      k=1: sin^2(4/7*pi)/sin^2(1/7*pi) = 5.04891734 [actual: 5.04891734]
+      k=2: sin^2(8/7*pi)/sin^2(2/7*pi) = 0.30797853 [actual: 0.30797853]
+      k=3: sin^2(12/7*pi)/sin^2(3/7*pi) = 0.64310413 [actual: 0.64310413]
+
+    prod Q_k (Interval) = 1.0000000000
+    Should be 1: YES
+
+    prod sin(k*pi/p), k=1..m: 0.3307189139
+    sqrt(p) / 2^m: 0.3307189139
+    prod sin(k*(m+1)*pi/p), k=1..m: 0.3307189139
+    These are equal: True
+
+    {k*(m+1) mod p : k=1,...,m} = [1, 4, 5]
+    {1,...,m} = [1, 2, 3]
+    Canonical mult set: [1, 2, 3]
+    Canonical orig set: [1, 2, 3]
+    Same multiset: True
+    => prod sin(k*(m+1)*pi/p) = prod sin(k*pi/p)
+    => prod Q_k (Interval) = 1 [PROVED]
+
+    Paley product: ((p+1)/4)^m = 8
+    Actual prod Q_k (Paley) = 8.000000
+
+  4. DISTINCT e_m = prod Q_k VALUES
+    e_m = 1 = 1, count = 6
+    e_m = 8 = 2 * 2 * 2, count = 2
+
+  5. POLYNOMIAL FIT H = polynomial(e_2, ..., e_m)
+    2 unique profiles, 2 variables
+
+  6. CHARACTERISTIC POLYNOMIAL OF Q_k
+    H=189: t^3 - 6*t^2 + 12*t^1 - 8*t^0 = 0
+           roots: [2.0000, 2.0000, 2.0000]
+    H=175: t^3 - 6*t^2 + 5*t^1 - 1*t^0 = 0
+           roots: [5.0489, 0.6431, 0.3080]
+
+======================================================================
+p=11, m=5
+======================================================================
+
+  1. ELEMENTARY SYMMETRIC FUNCTIONS
+
+    Integrality check:
+    Max fractional part of any e_j: 6.82e-13
+    All e_j are integers: YES
+
+  2. TABLE OF (e_j) -> H
+
+       e_1      e_2        e_3        e_4        e_5        e_m            H  count
+    --------------------------------------------------------------------------------
+            15         90        270        405        243        243        95095      2
+            15         68        127         97         23         23        93467     10
+            15         35         28          9          1          1        93027     10
+            15         79        171        130         23         23        92411     10
+
+  3. PRODUCT OF Q_k (= e_m)
+
+    Interval |S_hat(k)|^2 formula:
+      k=1: sin^2(6/11*pi)/sin^2(1/11*pi) = 12.34353752 [actual: 12.34353752]
+      k=2: sin^2(12/11*pi)/sin^2(2/11*pi) = 0.27155413 [actual: 0.27155413]
+      k=3: sin^2(18/11*pi)/sin^2(3/11*pi) = 1.44869057 [actual: 1.44869057]
+      k=4: sin^2(24/11*pi)/sin^2(4/11*pi) = 0.35325328 [actual: 0.35325328]
+      k=5: sin^2(30/11*pi)/sin^2(5/11*pi) = 0.58296450 [actual: 0.58296450]
+
+    prod Q_k (Interval) = 1.0000000000
+    Should be 1: YES
+
+    prod sin(k*pi/p), k=1..m: 0.1036445247
+    sqrt(p) / 2^m: 0.1036445247
+    prod sin(k*(m+1)*pi/p), k=1..m: 0.1036445247
+    These are equal: True
+
+    {k*(m+1) mod p : k=1,...,m} = [1, 2, 6, 7, 8]
+    {1,...,m} = [1, 2, 3, 4, 5]
+    Canonical mult set: [1, 2, 3, 4, 5]
+    Canonical orig set: [1, 2, 3, 4, 5]
+    Same multiset: True
+    => prod sin(k*(m+1)*pi/p) = prod sin(k*pi/p)
+    => prod Q_k (Interval) = 1 [PROVED]
+
+    Paley product: ((p+1)/4)^m = 243
+    Actual prod Q_k (Paley) = 243.000000
+
+  4. DISTINCT e_m = prod Q_k VALUES
+    e_m = 1 = 1, count = 10
+    e_m = 23 = 23, count = 20
+    e_m = 243 = 3 * 3 * 3 * 3 * 3, count = 2
+
+  5. POLYNOMIAL FIT H = polynomial(e_2, ..., e_m)
+    4 unique profiles, 4 variables
+
+  6. CHARACTERISTIC POLYNOMIAL OF Q_k
+    H=95095: t^5 - 15*t^4 + 90*t^3 - 270*t^2 + 405*t^1 - 243*t^0 = 0
+           roots: [3.0000, 3.0000, 3.0000, 3.0000, 3.0000]
+    H=93467: t^5 - 15*t^4 + 68*t^3 - 127*t^2 + 97*t^1 - 23*t^0 = 0
+           roots: [8.7420, 2.4938, 2.2173, 1.1232, 0.4236]
+    H=93027: t^5 - 15*t^4 + 35*t^3 - 28*t^2 + 9*t^1 - 1*t^0 = 0
+           roots: [12.3435, 1.4487, 0.5830, 0.3533, 0.2716]
+    H=92411: t^5 - 15*t^4 + 79*t^3 - 171*t^2 + 130*t^1 - 23*t^0 = 0
+           roots: [5.9922, 4.1155, 3.6093, 1.0329, 0.2502]
+
+======================================================================
+p=13, m=6
+======================================================================
+
+  1. ELEMENTARY SYMMETRIC FUNCTIONS
+
+    Integrality check:
+    Max fractional part of any e_j: 4.77e-12
+    All e_j are integers: YES
+
+  2. TABLE OF (e_j) -> H
+
+       e_1      e_2        e_3        e_4        e_5        e_m            H  count
+    --------------------------------------------------------------------------------
+            21         70         84         45         11 ...          1      3711175     12
+            21        122        305        357        180 ...         27      3707483     12
+            21        161        552        812        375 ...         53      3704857     12
+            21        174        721       1566       1701 ...        729      3703011      4
+            21        161        552        851        570 ...        131      3683797     12
+            21        148        448        604        362 ...         79      3669497     12
+
+  3. PRODUCT OF Q_k (= e_m)
+
+    Interval |S_hat(k)|^2 formula:
+      k=1: sin^2(7/13*pi)/sin^2(1/13*pi) = 17.20685727 [actual: 17.20685727]
+      k=2: sin^2(14/13*pi)/sin^2(2/13*pi) = 0.26518783 [actual: 0.26518783]
+      k=3: sin^2(21/13*pi)/sin^2(3/13*pi) = 1.98815654 [actual: 1.98815654]
+      k=4: sin^2(28/13*pi)/sin^2(4/13*pi) = 0.31886438 [actual: 0.31886438]
+      k=5: sin^2(35/13*pi)/sin^2(5/13*pi) = 0.77471922 [actual: 0.77471922]
+      k=6: sin^2(42/13*pi)/sin^2(6/13*pi) = 0.44621475 [actual: 0.44621475]
+
+    prod Q_k (Interval) = 1.0000000000
+    Should be 1: YES
+
+    prod sin(k*pi/p), k=1..m: 0.0563367387
+    sqrt(p) / 2^m: 0.0563367387
+    prod sin(k*(m+1)*pi/p), k=1..m: -0.0563367387
+    These are equal: False
+
+    {k*(m+1) mod p : k=1,...,m} = [1, 2, 3, 7, 8, 9]
+    {1,...,m} = [1, 2, 3, 4, 5, 6]
+    Canonical mult set: [1, 2, 3, 4, 5, 6]
+    Canonical orig set: [1, 2, 3, 4, 5, 6]
+    Same multiset: True
+    => prod sin(k*(m+1)*pi/p) = prod sin(k*pi/p)
+    => prod Q_k (Interval) = 1 [PROVED]
+
+    Paley product: ((p+1)/4)^m = 1838
+    Actual prod Q_k (Paley) = 79.000000
+
+  4. DISTINCT e_m = prod Q_k VALUES
+    e_m = 1 = 1, count = 12
+    e_m = 27 = 3 * 3 * 3, count = 12
+    e_m = 53 = 53, count = 12
+    e_m = 79 = 79, count = 12
+    e_m = 131 = 131, count = 12
+    e_m = 729 = 3 * 3 * 3 * 3 * 3 * 3, count = 4
+
+  5. POLYNOMIAL FIT H = polynomial(e_2, ..., e_m)
+    6 unique profiles, 5 variables
+    Linear model: max residual = 0.000000
+    Perfect fit: YES
+    H = 3286486.5491 + (11036.2678)*e_2 + (-5170.2136)*e_3 + (1991.9153)*e_4 + (-226.1864)*e_5 + (-700.4915)*e_6
+
+    Rational reconstruction:
+      c_0 = 3286486.5491478937 (not recognized)
+      c_1 = 11036.2677967239 (not recognized)
+      c_2 = -5170.2135593709 (not recognized)
+      c_3 = 117523/59
+      c_4 = -13345/59
+      c_5 = -41329/59
+
+  6. CHARACTERISTIC POLYNOMIAL OF Q_k
+    H=3711175: t^6 - 21*t^5 + 70*t^4 - 84*t^3 + 45*t^2 - 11*t^1 + 1*t^0 = 0
+           roots: [17.2069, 1.9882, 0.7747, 0.4462, 0.3189, 0.2652]
+    H=3707483: t^6 - 21*t^5 + 122*t^4 - 305*t^3 + 357*t^2 - 180*t^1 + 27*t^0 = 0
+           roots: [13.4941, 2.6292, 2.1642, 1.5625, 0.9000, 0.2501]
+    H=3704857: t^6 - 21*t^5 + 161*t^4 - 552*t^3 + 812*t^2 - 375*t^1 + 53*t^0 = 0
+           roots: [8.0432, 5.5999, 3.7177, 2.9851, 0.3573, 0.2967]
+    H=3703011: t^6 - 21*t^5 + 174*t^4 - 721*t^3 + 1566*t^2 - 1701*t^1 + 729*t^0 = 0
+           roots: [5.3028, 5.3028, 5.3028, 1.6972, 1.6972, 1.6972]
+    H=3683797: t^6 - 21*t^5 + 161*t^4 - 552*t^3 + 851*t^2 - 570*t^1 + 131*t^0 = 0
+           roots: [7.5930, 6.3603, 4.2231, 1.3817, 0.9552, 0.4867]
+    H=3669497: t^6 - 21*t^5 + 148*t^4 - 448*t^3 + 604*t^2 - 362*t^1 + 79*t^0 = 0
+           roots: [10.4160, 4.7974, 3.3801, 1.0993, 0.6949, 0.6122]
