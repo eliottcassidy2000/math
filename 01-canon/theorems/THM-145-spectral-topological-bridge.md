@@ -1,6 +1,6 @@
 # THM-145: Spectral-Topological Bridge (Conjecture)
 
-**Status:** CONJECTURE (verified p=7 exhaustive, p=11 exhaustive)
+**Status:** CONJECTURE (verified p=7, p=11, p=13 exhaustive)
 **Author:** opus-2026-03-12-S69
 **Dependencies:** THM-125 (constant symbol matrix), HYP-562 (integer ESF)
 
@@ -37,6 +37,19 @@ Note: e_0 = 1, e_1 = m(p-m)/2 are universal (same for all S).
 
 Each e_j pattern uniquely determines Ω.
 
+### p = 13 (exhaustive, 64 orientations, 6 orbits):
+| (e_2, e_3, e_4, e_5, e_6) | Ω profile | chi_per |
+|---------------------------|-----------|---------|
+| (70,84,45,11,1) | [1,6,30,140,556,1823,4983,11241,19730,24780,20344,9642,1989] | 1 |
+| (122,305,357,180,27) | [1,6,30,135,517,1622,4129,8436,13292,15078,11316,4988,977] | -3 |
+| (148,448,604,362,79) | [1,6,30,135,520,1627,3915,6965,9012,8325,5157,1906,321] | -8 |
+| (161,552,812,375,53) | [1,6,30,135,524,1675,4176,7707,10295,9681,6081,2298,399] | 4 |
+| (161,552,851,570,131) | [1,6,30,135,524,1663,4001,6876,8409,7266,4237,1493,238] | 1 |
+| (174,721,1566,1701,729) | [1,6,30,135,528,1707,4245,7503,9177,7770,4374,1488,237] | -17 |
+
+6 distinct e_j patterns → 6 distinct Ω profiles. Note e_2=161 appears twice but
+e_4 differs (812 vs 851), confirming higher ESFs are needed.
+
 ## Consequences
 
 1. **Q-spectrum encodes topology**: The Fourier magnitudes of S completely
@@ -60,7 +73,7 @@ Each e_j pattern uniquely determines Ω.
 1. What is the explicit map (e_2,...,e_m) → (Ω_3,...,Ω_{p-1})?
    Note: NOT a linear function of e_j (checked at p=7).
 
-2. Does the map extend to ALL primes? (Verified at p=7,11; need p=13.)
+2. Does the map extend to ALL primes? (Verified at p=7,11,13; need p=17.)
 
 3. Is the map a polynomial? A rational function? A piecewise formula?
 
