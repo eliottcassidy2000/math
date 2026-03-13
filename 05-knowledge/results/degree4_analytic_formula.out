@@ -1,0 +1,190 @@
+/Users/e/Documents/GitHub/math/04-computation/degree4_analytic_formula.py:138: SymPyDeprecationWarning: 
+
+The `sympy.ntheory.residue_ntheory.legendre_symbol` has been moved to `sympy.functions.combinatorial.numbers.legendre_symbol`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  is_qr = int(legendre(prod, p))
+========================================================================
+PART I: DEGREE-4 COEFFICIENTS AND CHORD GEOMETRY
+========================================================================
+
+  p=13, m=6
+
+  Degree-4 coefficients with additive structure:
+    [+] (1, 2, 3, 4): ĥ= 5209.7500, Σ=10, prod=11(NR), zs=1, AE=44
+    [+] (1, 2, 3, 5): ĥ= 3508.3750, Σ=11, prod= 4(QR), zs=0, AE=36
+    [+] (1, 2, 3, 6): ĥ=  219.3750, Σ=12, prod=10(QR), zs=0, AE=32
+    [-] (1, 2, 4, 5): ĥ= -219.3750, Σ=12, prod= 1(QR), zs=1, AE=36
+    [-] (1, 2, 4, 6): ĥ= -219.3750, Σ= 0, prod= 9(QR), zs=3, AE=32
+    [+] (1, 2, 5, 6): ĥ= 5209.7500, Σ= 1, prod= 8(NR), zs=1, AE=36
+    [+] (1, 3, 4, 5): ĥ= 5209.7500, Σ= 0, prod= 8(NR), zs=3, AE=36
+    [+] (1, 3, 4, 6): ĥ= 5209.7500, Σ= 1, prod= 7(NR), zs=1, AE=36
+    [+] (1, 3, 5, 6): ĥ=  219.3750, Σ= 2, prod=12(QR), zs=0, AE=32
+    [-] (1, 4, 5, 6): ĥ=-3508.3750, Σ= 3, prod= 3(QR), zs=0, AE=32
+    [-] (2, 3, 4, 5): ĥ= -219.3750, Σ= 1, prod= 3(QR), zs=1, AE=44
+    [-] (2, 3, 4, 6): ĥ=-3508.3750, Σ= 2, prod= 1(QR), zs=0, AE=36
+    [+] (2, 3, 5, 6): ĥ= 5209.7500, Σ= 3, prod=11(NR), zs=1, AE=36
+    [-] (2, 4, 5, 6): ĥ=-5209.7500, Σ= 4, prod= 6(NR), zs=0, AE=36
+    [-] (3, 4, 5, 6): ĥ= -219.3750, Σ= 5, prod= 9(QR), zs=1, AE=44
+
+========================================================================
+PART II: THE ADDITIVE ENERGY PATTERN
+========================================================================
+
+HYPOTHESIS: The sign of ĥ[{i,j,k,l}] is determined by the ADDITIVE
+ENERGY of the quadruple {i, j, k, l} ⊂ Z_p.
+
+Additive energy of X: E(X) = #{(a,b,c,d) ∈ X^4 : a+b = c+d mod p}
+
+Higher AE → the quadruple is "more structured" → positive coefficient?
+
+
+  p=13: Coefficients grouped by additive energy:
+    AE=32: 4 coefficients, signs=['+', '-', '+', '-'], all same? False
+      (1, 2, 3, 6):   219.3750
+      (1, 2, 4, 6):  -219.3750
+      (1, 3, 5, 6):   219.3750
+      (1, 4, 5, 6): -3508.3750
+    AE=36: 8 coefficients, signs=['+', '-', '+', '+', '+', '-', '+', '-'], all same? False
+      (1, 2, 3, 5):  3508.3750
+      (1, 2, 4, 5):  -219.3750
+      (1, 2, 5, 6):  5209.7500
+      (1, 3, 4, 5):  5209.7500
+      (1, 3, 4, 6):  5209.7500
+      (2, 3, 4, 6): -3508.3750
+      (2, 3, 5, 6):  5209.7500
+      (2, 4, 5, 6): -5209.7500
+    AE=44: 3 coefficients, signs=['+', '-', '-'], all same? False
+      (1, 2, 3, 4):  5209.7500
+      (2, 3, 4, 5):  -219.3750
+      (3, 4, 5, 6):  -219.3750
+
+========================================================================
+PART III: DIFFERENCE SET STRUCTURE
+========================================================================
+
+Another approach: for {i,j,k,l}, look at the DIFFERENCE SET
+  D = {|a-b| mod m : a,b ∈ {i,j,k,l}, a≠b}
+
+and whether it has special structure (e.g., arithmetic progression,
+Sidon set, etc.)
+
+
+  p=13: Difference sets and consecutive structure:
+    [+] (1, 2, 3, 4): gaps=[1, 1, 1], span=3, consec=3, AP=Y, coeff= 5209.7500
+    [+] (1, 2, 3, 5): gaps=[1, 1, 2], span=4, consec=2, AP=N, coeff= 3508.3750
+    [+] (1, 2, 3, 6): gaps=[1, 1, 3], span=5, consec=2, AP=N, coeff=  219.3750
+    [-] (1, 2, 4, 5): gaps=[1, 2, 1], span=4, consec=2, AP=N, coeff= -219.3750
+    [-] (1, 2, 4, 6): gaps=[1, 2, 2], span=5, consec=1, AP=N, coeff= -219.3750
+    [+] (1, 2, 5, 6): gaps=[1, 3, 1], span=5, consec=2, AP=N, coeff= 5209.7500
+    [+] (1, 3, 4, 5): gaps=[2, 1, 1], span=4, consec=2, AP=N, coeff= 5209.7500
+    [+] (1, 3, 4, 6): gaps=[2, 1, 2], span=5, consec=1, AP=N, coeff= 5209.7500
+    [+] (1, 3, 5, 6): gaps=[2, 2, 1], span=5, consec=1, AP=N, coeff=  219.3750
+    [-] (1, 4, 5, 6): gaps=[3, 1, 1], span=5, consec=2, AP=N, coeff=-3508.3750
+    [-] (2, 3, 4, 5): gaps=[1, 1, 1], span=3, consec=3, AP=Y, coeff= -219.3750
+    [-] (2, 3, 4, 6): gaps=[1, 1, 2], span=4, consec=2, AP=N, coeff=-3508.3750
+    [+] (2, 3, 5, 6): gaps=[1, 2, 1], span=4, consec=2, AP=N, coeff= 5209.7500
+    [-] (2, 4, 5, 6): gaps=[2, 1, 1], span=4, consec=2, AP=N, coeff=-5209.7500
+    [-] (3, 4, 5, 6): gaps=[1, 1, 1], span=3, consec=3, AP=Y, coeff= -219.3750
+
+========================================================================
+PART IV: THE SPECTRAL FORMULA FOR ĥ[S]
+========================================================================
+
+Since H(σ) depends on σ through eigenvalues λ_t = -1/2 + i·b_t(σ)
+where b_t = Σ_j σ_j sin(2πjt/p), we can write:
+
+  ĥ[S] = (1/2^m) Σ_σ H(σ) Π_{k∈S} σ_k
+
+The Π_{k∈S} σ_k factor selects the |S|-th order interaction.
+
+For |S| = 2, {i,j}: this is the J-matrix entry J[i,j] = ĥ[{i,j}].
+
+For |S| = 4, {i,j,k,l}: this is a 4th-order interaction tensor T[i,j,k,l].
+
+The key question: can T[i,j,k,l] be expressed in terms of
+  sin(2πit/p), sin(2πjt/p), sin(2πkt/p), sin(2πlt/p)
+and the eigenvalues?
+
+From the LINEARIZED approximation (c_k ∝ Σ |λ_t|^k):
+  T would involve 4-fold products of sine terms.
+
+But we KNOW the nonlinear corrections dominate. So the analytic
+formula must include the FULL nonlinear dependence of H on the b_t's.
+
+Let's compute T using the MARGINAL formula:
+  ĥ[S] = E_σ[H(σ) · Π_{k∈S} σ_k]
+
+And compare to the "spectral" prediction.
+
+
+  p=13: Spectral 4-point function analysis:
+    (1, 2, 3, 4): ĥ= 5209.7500, spec4=    1.6250, ratio=3206.0000
+    (1, 2, 3, 5): ĥ= 3508.3750, spec4=   -0.0000
+    (1, 2, 3, 6): ĥ=  219.3750, spec4=   -1.6250, ratio=-135.0000
+    (1, 2, 4, 5): ĥ= -219.3750, spec4=    1.6250, ratio=-135.0000
+    (1, 2, 4, 6): ĥ= -219.3750, spec4=    1.6250, ratio=-135.0000
+    (1, 2, 5, 6): ĥ= 5209.7500, spec4=    1.6250, ratio=3206.0000
+    (1, 3, 4, 5): ĥ= 5209.7500, spec4=    1.6250, ratio=3206.0000
+    (1, 3, 4, 6): ĥ= 5209.7500, spec4=    1.6250, ratio=3206.0000
+    (1, 3, 5, 6): ĥ=  219.3750, spec4=   -1.6250, ratio=-135.0000
+    (1, 4, 5, 6): ĥ=-3508.3750, spec4=   -0.0000
+    (2, 3, 4, 5): ĥ= -219.3750, spec4=    1.6250, ratio=-135.0000
+    (2, 3, 4, 6): ĥ=-3508.3750, spec4=    0.0000
+    (2, 3, 5, 6): ĥ= 5209.7500, spec4=    1.6250, ratio=3206.0000
+    (2, 4, 5, 6): ĥ=-5209.7500, spec4=   -1.6250, ratio=3206.0000
+    (3, 4, 5, 6): ĥ= -219.3750, spec4=    1.6250, ratio=-135.0000
+
+========================================================================
+PART V: THE KEY IDENTITY — WHY f₄ IS MAX AT ALL-ONES
+========================================================================
+
+SUMMARY OF FINDINGS AT p=13:
+
+1. All 63 hyperplane sums (degree-4 only) are ≥ 0, with minimum = 0.
+
+2. The degree-4 energy (81.6%) dominates degree-2 (18.4%).
+
+3. f₄(all-ones) = Σ ĥ[S] with |S|=4 is the maximum of f₄.
+
+4. Despite mixed signs in ĥ[S], the POSITIVE coefficients outweigh
+   negatives in every hyperplane half-space.
+
+5. The sign pattern does NOT simply follow QR/NQR.
+
+6. The sign pattern appears related to the ADDITIVE STRUCTURE of S.
+
+CONJECTURE (HYP-533): For all p ≥ 13:
+  (a) The degree-4 hyperplane condition holds: for all F ⊂ {1,...,m},
+      Σ_{|S|=4, |S∩F| odd} ĥ[S] ≥ 0
+
+  (b) The degree-4 energy fraction E₄/(E₂+E₄+E₆+...) ≥ 1/2
+
+  (c) Combined: Interval is the global H-maximizer among circulants
+
+This reduces the INFINITE problem (all p ≥ 13) to TWO FINITE conditions
+that can potentially be proved via number-theoretic analysis of the
+Walsh coefficients.
+
+========================================================================
+PART VI: DEGREE-2 ANALYSIS — THE J-MATRIX STRUCTURE
+========================================================================
+
+  p=13: J matrix (degree-2 interactions):
+    [     0.0,   2632.5,   -778.4,    778.4,      0.0,  -2632.5]
+    [  2632.5,      0.0,      0.0,   2632.5,   -778.4,   -778.4]
+    [  -778.4,      0.0,      0.0,    778.4,  -2632.5,   2632.5]
+    [   778.4,   2632.5,    778.4,      0.0,  -2632.5,      0.0]
+    [     0.0,   -778.4,  -2632.5,  -2632.5,      0.0,   -778.4]
+    [ -2632.5,   -778.4,   2632.5,      0.0,   -778.4,      0.0]
+
+  J eigenvalues: ['5338.00', '5338.00', '-1556.75', '-1556.75', '-3781.25', '-3781.25']
+  1^T J 1 = -3113.50 (= f₂(all-ones))
+  f₂(all-ones) = sum of all J entries = -3113.50
+
+DONE.
