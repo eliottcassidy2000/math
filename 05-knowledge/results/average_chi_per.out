@@ -1,0 +1,26 @@
+
+p = 5, m = 2, 2^m = 4
+  Σ chi_per = 0
+  Average chi_per = 0/4 = 0.0
+  Distribution: {0: 4}
+  Σ Ω_m by degree: [4, 8, 8, 8, 4]
+  Avg Ω_m: [1.00, 2.00, 2.00, 2.00, 1.00]
+  Σ(-1)^m <Ω_m> = 0.0000 (should equal avg chi_per = 0.0000)
+
+p = 7, m = 3, 2^m = 8
+  Σ chi_per = 2
+  Average chi_per = 2/8 = 0.25
+  Distribution: {0: 6, 1: 2}
+  Σ Ω_m by degree: [8, 24, 48, 84, 102, 66, 18]
+  Avg Ω_m: [1.00, 3.00, 6.00, 10.50, 12.75, 8.25, 2.25]
+  Σ(-1)^m <Ω_m> = 0.2500 (should equal avg chi_per = 0.2500)
+
+p = 11, m = 5, 2^m = 32
+  Σ chi_per = 22
+  Average chi_per = 22/32 = 0.6875
+  Distribution: {0: 20, 1: 2, 2: 10}
+  Σ Ω_m by degree: [32, 160, 640, 2280, 6660, 14830, 23970, 27830, 22370, 10990, 2440]
+  Avg Ω_m: [1.00, 5.00, 20.00, 71.25, 208.12, 463.44, 749.06, 869.69, 699.06, 343.44, 76.25]
+  Σ(-1)^m <Ω_m> = 0.6875 (should equal avg chi_per = 0.6875)
+
+DONE.
