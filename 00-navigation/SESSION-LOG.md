@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S67d — 2026-03-12: FIBONACCI DEEP DIVE PART 2 — LATTICE GAS BRIDGE & GALOIS SPLITTING
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S67c (context recovery)
+**Summary of work:**
+Continued deep exploration of Fibonacci connections, focusing on tiling interpretation, Galois splitting, and lattice gas bridge.
+
+**Key discoveries:**
+1. **Cassini-Morgan-Voyce identity**: B_{m-1}(x)·B_{m+1}(x) - B_m(x)² = x for ALL m, ALL x. Proved from transfer matrix determinant. Relates spectra at adjacent primes (HYP-589).
+
+2. **Unit product theorem**: prod(Q_k) = 1 exactly for Interval. Proved: B_m(0) = 1. Combined with AM = (m+1)/2, shows extreme spectral non-uniformity (HYP-587).
+
+3. **Cyclotomic discriminant**: disc(Q) = V(Q)² = p^{m-1} exactly. Verified at all tested primes (HYP-588). Confirms Q_k live in Q(cos 2π/p).
+
+4. **Galois splitting**: Q(√5) ⊂ K iff p ≡ ±1 mod 5 (QR). Partial products over QR/QNR indices factor F_p (HYP-590).
+
+5. **KAM stability connection**: Spectral concentration Q_1/ΣQ → 2/3, IPR → 2/3, N_eff → 3/2. Golden ratio φ² as transfer matrix fixed point. Metallic means: B_m(4)/B_{m-1}(4) → (1+√2)² (silver ratio squared) (HYP-591).
+
+6. **Lattice gas bridge**: H = I(Ω,2), F_p = I(∅,Q). The ratio I(Ω,z)/prod(z+Q) = 1.0 EXACTLY at z=3 for p=5 — a new "critical temperature"! At z=2 (physical): ratio ≈ 1.18.
+
+7. **H/p factorizations**: H/p = 5² (p=7), 3·2819 (p=11), 5²·19·601 (p=13). No simple Fibonacci pattern.
+
+8. **Determinantal search**: H cannot be expressed as simple det or perm of Q_k. Needs FULL eigenvalues λ_k (including phases).
+
+**New hypotheses:** HYP-587 through HYP-592
+**New scripts:** fibonacci_tiling_galois.py, lattice_gas_bridge_v2.py, fibonacci_determinant.py, kam_stability_connection.py
+**Unresolved:** OCF independent set polynomial mismatch (need correct Ω definition), Cassini → H recurrence, z=3 critical point meaning
+
 ## opus-2026-03-12-S67c — 2026-03-12: CROSS-FIELD CONNECTIONS & ADDITIVE COMBINATORICS BRIDGE
 
 **Account:** opus
