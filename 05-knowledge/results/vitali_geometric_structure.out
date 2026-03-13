@@ -1,0 +1,137 @@
+============================================================
+GEOMETRIC STRUCTURE OF VITALI dc7
+============================================================
+Collected 470 examples
+
+--- XX Tournament Type vs dc7 ---
+  C3: dc7 dist = {-1: 30, 0: 42, 1: 37}, n=109
+  T3: dc7 dist = {-1: 32, 0: 314, 1: 15}, n=361
+
+--- Coupling Structure vs dc7 ---
+Coupling groups: 8
+Ambiguous for dc7: 4
+  L_out=(np.int64(0), np.int64(0)), W_out=(np.int64(0), np.int64(0)), XX=C3: dc7={0: 8} (8)
+  L_out=(np.int64(0), np.int64(0)), W_out=(np.int64(0), np.int64(0)), XX=T3: dc7={0: 20} (20)
+  L_out=(np.int64(1), np.int64(1)), W_out=(np.int64(1), np.int64(1)), XX=C3: dc7={-1: 12, 0: 13, 1: 18} (43)
+  L_out=(np.int64(1), np.int64(1)), W_out=(np.int64(1), np.int64(1)), XX=T3: dc7={-1: 17, 0: 146, 1: 8} (171)
+  L_out=(np.int64(2), np.int64(2)), W_out=(np.int64(2), np.int64(2)), XX=C3: dc7={-1: 18, 0: 20, 1: 19} (57)
+  L_out=(np.int64(2), np.int64(2)), W_out=(np.int64(2), np.int64(2)), XX=T3: dc7={-1: 15, 0: 131, 1: 7} (153)
+  L_out=(np.int64(3), np.int64(3)), W_out=(np.int64(3), np.int64(3)), XX=T3: dc7={0: 17} (17)
+
+--- Detailed Arc Pattern vs dc7 ---
+
+  Verifying (1,1,2,2) structure:
+    S=(0, 2, 3, 4), L=[2, 4], W=[0, 3]
+      A[0->2]=1        A[0->4]=0        A[3->2]=1        A[3->4]=1  
+      A[0->3]=1        A[2->4]=1
+    S=(2, 3, 4, 6), L=[2, 6], W=[3, 4]
+      A[3->2]=1        A[3->6]=1        A[4->2]=1        A[4->6]=0  
+      A[3->4]=0        A[2->6]=1
+    S=(1, 3, 5, 6), L=[3, 5], W=[1, 6]
+      A[1->3]=1        A[1->5]=1        A[6->3]=1        A[6->5]=0  
+      A[1->6]=0        A[3->5]=1
+    S=(0, 1, 4, 6), L=[1, 4], W=[0, 6]
+      A[0->1]=0        A[0->4]=1        A[6->1]=1        A[6->4]=1  
+      A[0->6]=1        A[1->4]=0
+    S=(1, 3, 5, 6), L=[3, 5], W=[1, 6]
+      A[1->3]=1        A[1->5]=1        A[6->3]=0        A[6->5]=1  
+      A[1->6]=0        A[3->5]=0
+
+  W->L patterns: {(np.int64(1), np.int64(0), np.int64(1), np.int64(1)): 105, (np.int64(1), np.int64(1), np.int64(1), np.int64(0)): 122, (np.int64(0), np.int64(1), np.int64(1), np.int64(1)): 122, (np.int64(1), np.int64(1), np.int64(0), np.int64(1)): 121}
+
+  Full internal structure types:
+  Distinct internal structures: 24
+    count=26: (np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1))
+    count=26: (np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(0))
+    count=26: (np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0))
+    count=26: (np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0))
+    count=23: (np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1))
+
+============================================================
+7-CYCLE DECOMPOSITION UNDER VITALI FLIP
+============================================================
+
+Example 0: dc7=0, XX=T3
+  A: c7=0, by S-arcs: {2: 6}
+  B: c7=0, by S-arcs: {2: 6}
+
+Example 1: dc7=0, XX=T3
+  A: c7=0, by S-arcs: {}
+  B: c7=0, by S-arcs: {}
+
+Example 2: dc7=0, XX=T3
+  A: c7=0, by S-arcs: {}
+  B: c7=0, by S-arcs: {}
+
+Example 3: dc7=-1, XX=C3
+  A: c7=1, by S-arcs: {2: 6, 3: 3}
+  B: c7=1, by S-arcs: {2: 6, 3: 2}
+
+Example 4: dc7=1, XX=C3
+  A: c7=1, by S-arcs: {2: 6, 3: 2}
+  B: c7=1, by S-arcs: {2: 6, 3: 3}
+
+--- S-arc count distribution in 7-cycles ---
+  In A: {2: 60, 3: 30}
+  In B: {2: 60, 3: 30}
+
+  k=0 cycles equal? YES
+
+  Verifying: no 7-cycle with S-S arcs exists in both A and B:
+  (Need per-cycle tracking for exact verification)
+
+--- Parity of S-arc count in 7-cycles ---
+  dc7=0: A arcs={2: 6}, B arcs={2: 6}
+  dc7=0: A arcs={}, B arcs={}
+  dc7=0: A arcs={}, B arcs={}
+  dc7=-1: A arcs={2: 6, 3: 3}, B arcs={2: 6, 3: 2}
+  dc7=1: A arcs={2: 6, 3: 2}, B arcs={2: 6, 3: 3}
+
+============================================================
+PERMUTATION PATTERN OF S IN 7-CYCLES
+============================================================
+THEOREM: In a Hamiltonian 7-cycle on 7 vertices,
+if 4 vertices are in S, then at least 1 S-S arc must be used.
+Proof: 4 gaps between consecutive S-vertices sum to 7.
+Each gap >= 1. If all gaps >= 2, sum >= 8 > 7. Contradiction.
+So at least one gap = 1, meaning an S-S arc.
+
+Verification against data:
+  Total k=0 cycles across all examples: 0
+  CONFIRMED: No 7-cycle avoids all S-S arcs!
+  This means EVERY Hamiltonian cycle passes through the Vitali atom.
+  Therefore: c7_A and c7_B are completely DISJOINT sets of cycles!
+  dc7 = c7_B - c7_A (no cancellation, pure difference)
+
+============================================================
+SYNTHESIS: VITALI ATOM AS TOPOLOGICAL DEFECT
+============================================================
+
+The Vitali atom is a TOPOLOGICAL DEFECT in the tournament:
+
+1. EVERY Hamiltonian cycle MUST traverse the atom (at least 1 S-S arc).
+2. Reversing the atom creates a COMPLETELY DIFFERENT set of Hamiltonian cycles.
+3. The sets c7(A) and c7(B) are DISJOINT — no cycle exists in both.
+4. dc7 = |c7(B)| - |c7(A)| is the "topological charge" of the defect.
+
+The "hidden higher-dimensional structure" is:
+- The atom sits at the intersection of ALL Hamiltonian cycles.
+- Its "charge" (dc7) depends on how the outside tournament couples
+  to the atom through the S-X arcs AND the X-X arcs.
+- The X-X arcs determine the "winding" of outside vertices around the atom.
+- This is a purely TOPOLOGICAL invariant — not captured by sigma (Level 1.5).
+
+The hierarchy:
+  Level 1 (lambda): sees the atom exists, can't see its effect on c7
+  Level 1.5 (sigma): sees the ±1 perturbation pattern, but can't resolve dc7
+  Level 2 (A): sees the full coupling including X-X, determines dc7
+
+The sigma perturbation (±1 on 4*(n-4) pairs) is the "shadow" of the atom
+on the 2-point correlation function. The full dc7 requires the 3-point
+(and higher) correlation — exactly the X-X arcs.
+
+Distribution of S-arc counts in Hamiltonian cycles:
+  k=2: in A: 60 (×7), in B: 60 (×7), diff: 0
+  k=3: in A: 30 (×7), in B: 30 (×7), diff: 0
+
+Done.

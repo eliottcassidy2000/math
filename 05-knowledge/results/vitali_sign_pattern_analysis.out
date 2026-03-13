@@ -1,0 +1,203 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\vitali_sign_pattern_analysis.py:7: SyntaxWarning: invalid escape sequence '\{'
+  For SX pair (s,x): delta_sigma = -sum_{w in S\{s}} sign(s->w)*sign(x->w)
+============================================================
+SIGN PATTERN ANALYSIS OF DELTA_SIGMA
+============================================================
+Collected 200 examples
+
+--- Sign Pattern Structure ---
+Row sums (per s in S): {-3: 46, -1: 354, 1: 354, 3: 46}
+Col sums (per x outside): {0: 600}
+Total sign sum: {0: 200}
+Sign pattern rank: {np.int64(1): 84, np.int64(2): 116}
+
+Unique sign patterns: 79
+  count=7: [[1, -1, -1], [1, 1, -1], [-1, -1, 1], [-1, 1, 1]]
+  count=7: [[1, -1, -1], [1, -1, -1], [-1, 1, 1], [-1, 1, 1]]
+  count=6: [[1, 1, -1], [1, -1, -1], [-1, -1, 1], [-1, 1, 1]]
+  count=6: [[1, -1, 1], [-1, 1, -1], [1, -1, 1], [-1, 1, -1]]
+  count=6: [[-1, 1, -1], [1, -1, 1], [-1, 1, -1], [1, -1, 1]]
+  count=6: [[1, 1, 1], [-1, -1, -1], [1, 1, 1], [-1, -1, -1]]
+  count=6: [[1, 1, 1], [1, 1, 1], [-1, -1, -1], [-1, -1, -1]]
+  count=5: [[-1, 1, 1], [1, -1, -1], [-1, 1, 1], [1, -1, -1]]
+  count=5: [[-1, -1, 1], [-1, -1, 1], [1, 1, -1], [1, 1, -1]]
+  count=5: [[1, 1, -1], [-1, -1, 1], [-1, -1, 1], [1, 1, -1]]
+
+--- Sign Pattern vs dc7 ---
+Sign patterns: 79
+Ambiguous for dc7: 22
+Sign pattern does NOT determine dc7
+
+--- dc7 vs Row/Col Sum Structure ---
+  rows=(-3, -3, 3, 3), cols=(0, 0, 0): dc7={0: 23} (23 ex)
+  rows=(-1, -1, 1, 1), cols=(0, 0, 0): dc7={-1: 28, 0: 128, 1: 21} (177 ex)
+
+--- Loser/Winner Role in Sign Pattern ---
+Loser row sums: {-3: 16, -1: 180, 1: 174, 3: 30}
+Winner row sums: {-3: 30, -1: 174, 1: 180, 3: 16}
+
+--- Raw Term Analysis ---
+
+  Example: S=(0, 2, 3, 4), losers=[2, 4], winners=[0, 3]
+    s=0 (W): sign_s = [1, 1, -1]
+    s=2 (L): sign_s = [-1, -1, 1]
+    s=3 (W): sign_s = [-1, 1, 1]
+    s=4 (L): sign_s = [1, -1, -1]
+    x=1: sign_x(full) = [1, 1, -1, -1]
+      (s=0,x=1): sign_s=[1, 1, -1], sign_x=[1, -1, -1], dot=1, dsig=-1
+      (s=2,x=1): sign_s=[-1, -1, 1], sign_x=[1, -1, -1], dot=-1, dsig=1
+      (s=3,x=1): sign_s=[-1, 1, 1], sign_x=[1, 1, -1], dot=-1, dsig=1
+      (s=4,x=1): sign_s=[1, -1, -1], sign_x=[1, 1, -1], dot=1, dsig=-1
+    x=5: sign_x(full) = [1, 1, 1, 1]
+      (s=0,x=5): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=2,x=5): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=3,x=5): sign_s=[-1, 1, 1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=4,x=5): sign_s=[1, -1, -1], sign_x=[1, 1, 1], dot=-1, dsig=1
+    x=6: sign_x(full) = [-1, -1, 1, 1]
+      (s=0,x=6): sign_s=[1, 1, -1], sign_x=[-1, 1, 1], dot=-1, dsig=1
+      (s=2,x=6): sign_s=[-1, -1, 1], sign_x=[-1, 1, 1], dot=1, dsig=-1
+      (s=3,x=6): sign_s=[-1, 1, 1], sign_x=[-1, -1, 1], dot=1, dsig=-1
+      (s=4,x=6): sign_s=[1, -1, -1], sign_x=[-1, -1, 1], dot=-1, dsig=1
+
+  Example: S=(2, 3, 4, 6), losers=[2, 6], winners=[3, 4]
+    s=2 (L): sign_s = [-1, -1, 1]
+    s=3 (W): sign_s = [1, -1, 1]
+    s=4 (W): sign_s = [1, 1, -1]
+    s=6 (L): sign_s = [-1, -1, 1]
+    x=0: sign_x(full) = [1, 1, 1, 1]
+      (s=2,x=0): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=3,x=0): sign_s=[1, -1, 1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=4,x=0): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=6,x=0): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+    x=1: sign_x(full) = [1, 1, 1, 1]
+      (s=2,x=1): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=3,x=1): sign_s=[1, -1, 1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=4,x=1): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=6,x=1): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+    x=5: sign_x(full) = [1, 1, 1, 1]
+      (s=2,x=5): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=3,x=5): sign_s=[1, -1, 1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=4,x=5): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=6,x=5): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+
+  Example: S=(1, 3, 5, 6), losers=[3, 5], winners=[1, 6]
+    s=1 (W): sign_s = [1, 1, -1]
+    s=3 (L): sign_s = [-1, 1, -1]
+    s=5 (L): sign_s = [-1, -1, 1]
+    s=6 (W): sign_s = [1, 1, -1]
+    x=0: sign_x(full) = [1, 1, 1, 1]
+      (s=1,x=0): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=3,x=0): sign_s=[-1, 1, -1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=5,x=0): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=6,x=0): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+    x=2: sign_x(full) = [1, 1, 1, 1]
+      (s=1,x=2): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+      (s=3,x=2): sign_s=[-1, 1, -1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=5,x=2): sign_s=[-1, -1, 1], sign_x=[1, 1, 1], dot=-1, dsig=1
+      (s=6,x=2): sign_s=[1, 1, -1], sign_x=[1, 1, 1], dot=1, dsig=-1
+    x=4: sign_x(full) = [-1, -1, -1, -1]
+      (s=1,x=4): sign_s=[1, 1, -1], sign_x=[-1, -1, -1], dot=-1, dsig=1
+      (s=3,x=4): sign_s=[-1, 1, -1], sign_x=[-1, -1, -1], dot=1, dsig=-1
+      (s=5,x=4): sign_s=[-1, -1, 1], sign_x=[-1, -1, -1], dot=1, dsig=-1
+      (s=6,x=4): sign_s=[1, 1, -1], sign_x=[-1, -1, -1], dot=-1, dsig=1
+
+============================================================
+QUADRATIC FORM INTERPRETATION
+============================================================
+
+dc7 vs features of sign matrix:
+  total=+0, L_sum=-6, W_sum=+6: dc7={0: 8}
+  total=+0, L_sum=-2, W_sum=+2: dc7={-1: 15, 0: 63, 1: 12}
+  total=+0, L_sum=+2, W_sum=-2: dc7={-1: 13, 0: 65, 1: 9}
+  total=+0, L_sum=+6, W_sum=-6: dc7={0: 15}
+
+============================================================
+DIRECT dc7 FORMULA SEARCH
+============================================================
+Feature matrix: (200, 90), rank: 40
+Quadratic fit max error: 1.336721
+Perfect fit? False
+
+Linear fit max error: 1.209399
+
+--- Phi Analysis ---
+  phi=(-4, -4, -4): dc7={0: 8} (8 ex)
+  phi=(-4, -4, 4): dc7={0: 35} (35 ex)
+  phi=(-4, 0, 0): dc7={-1: 15, 0: 28, 1: 12} (55 ex)
+  phi=(-4, 4, 4): dc7={0: 26} (26 ex)
+  phi=(0, 0, 4): dc7={-1: 13, 0: 39, 1: 9} (61 ex)
+  phi=(4, 4, 4): dc7={0: 15} (15 ex)
+
+--- Full External Projection ---
+Distinct projection patterns: 43
+Ambiguous for dc7: 24
+  AMBIG proj=((-1, -1, -1, -1), (-1, -1, 1, 1), (1, 1, -1, -1)): dc7=Counter({0: 1, 1: 1})
+  AMBIG proj=((-1, -1, -1, -1), (-1, 1, -1, 1), (1, -1, 1, -1)): dc7=Counter({-1: 2, 1: 1, 0: 1})
+  AMBIG proj=((-1, -1, -1, -1), (-1, 1, 1, -1), (1, -1, -1, 1)): dc7=Counter({1: 3, -1: 1})
+  AMBIG proj=((-1, -1, -1, -1), (1, -1, -1, 1), (-1, 1, 1, -1)): dc7=Counter({0: 1, 1: 1})
+  AMBIG proj=((-1, -1, -1, -1), (1, 1, -1, -1), (-1, -1, 1, 1)): dc7=Counter({0: 2, -1: 1, 1: 1})
+  AMBIG proj=((-1, -1, 1, 1), (-1, -1, -1, -1), (1, 1, -1, -1)): dc7=Counter({0: 1, -1: 1})
+  AMBIG proj=((-1, -1, 1, 1), (1, 1, -1, -1), (-1, -1, -1, -1)): dc7=Counter({1: 2, 0: 1})
+  AMBIG proj=((-1, -1, 1, 1), (1, 1, 1, 1), (1, 1, -1, -1)): dc7=Counter({0: 2, -1: 1})
+  AMBIG proj=((-1, 1, -1, 1), (-1, -1, -1, -1), (1, -1, 1, -1)): dc7=Counter({-1: 3, 0: 1})
+  AMBIG proj=((-1, 1, -1, 1), (1, -1, 1, -1), (1, 1, 1, 1)): dc7=Counter({0: 2, -1: 1})
+  AMBIG proj=((-1, 1, 1, -1), (1, 1, 1, 1), (1, -1, -1, 1)): dc7=Counter({0: 7, 1: 1, -1: 1})
+  AMBIG proj=((1, -1, -1, 1), (-1, -1, -1, -1), (-1, 1, 1, -1)): dc7=Counter({0: 2, 1: 1})
+  AMBIG proj=((1, -1, -1, 1), (-1, 1, 1, -1), (-1, -1, -1, -1)): dc7=Counter({0: 2, -1: 2, 1: 1})
+  AMBIG proj=((1, -1, -1, 1), (-1, 1, 1, -1), (1, 1, 1, 1)): dc7=Counter({-1: 2, 0: 1, 1: 1})
+  AMBIG proj=((1, -1, -1, 1), (1, 1, 1, 1), (-1, 1, 1, -1)): dc7=Counter({0: 2, -1: 1, 1: 1})
+  AMBIG proj=((1, -1, 1, -1), (-1, 1, -1, 1), (-1, -1, -1, -1)): dc7=Counter({-1: 2, 0: 2})
+  AMBIG proj=((1, -1, 1, -1), (-1, 1, -1, 1), (1, 1, 1, 1)): dc7=Counter({0: 1, -1: 1})
+  AMBIG proj=((1, -1, 1, -1), (1, 1, 1, 1), (-1, 1, -1, 1)): dc7=Counter({0: 3, 1: 2, -1: 1})
+  AMBIG proj=((1, 1, -1, -1), (-1, -1, 1, 1), (-1, -1, -1, -1)): dc7=Counter({-1: 3, 0: 2})
+  AMBIG proj=((1, 1, 1, 1), (-1, -1, 1, 1), (1, 1, -1, -1)): dc7=Counter({-1: 1, 1: 1, 0: 1})
+  AMBIG proj=((1, 1, 1, 1), (-1, 1, -1, 1), (1, -1, 1, -1)): dc7=Counter({0: 3, -1: 2})
+  AMBIG proj=((1, 1, 1, 1), (1, -1, -1, 1), (-1, 1, 1, -1)): dc7=Counter({0: 4, -1: 1})
+  AMBIG proj=((1, 1, 1, 1), (1, -1, 1, -1), (-1, 1, -1, 1)): dc7=Counter({1: 2, -1: 1})
+  AMBIG proj=((1, 1, 1, 1), (1, 1, -1, -1), (-1, -1, 1, 1)): dc7=Counter({1: 1, 0: 1})
+
+============================================================
+INTERNAL + EXTERNAL = FULL PICTURE
+============================================================
+  bits=000100: arcs=['1->0', '2->0', '0->3', '2->1', '3->1', '3->2'], c3=2
+  bits=000110: arcs=['1->0', '0->2', '0->3', '2->1', '3->1', '3->2'], c3=2
+  bits=001100: arcs=['1->0', '2->0', '0->3', '1->2', '3->1', '3->2'], c3=2
+  bits=001101: arcs=['0->1', '2->0', '0->3', '1->2', '3->1', '3->2'], c3=2
+  bits=010001: arcs=['0->1', '2->0', '3->0', '2->1', '1->3', '3->2'], c3=2
+  bits=010010: arcs=['1->0', '0->2', '3->0', '2->1', '1->3', '3->2'], c3=2
+  bits=010011: arcs=['0->1', '0->2', '3->0', '2->1', '1->3', '3->2'], c3=2
+  bits=010100: arcs=['1->0', '2->0', '0->3', '2->1', '1->3', '3->2'], c3=2
+  bits=010101: arcs=['0->1', '2->0', '0->3', '2->1', '1->3', '3->2'], c3=2
+  bits=010110: arcs=['1->0', '0->2', '0->3', '2->1', '1->3', '3->2'], c3=2
+  bits=011001: arcs=['0->1', '2->0', '3->0', '1->2', '1->3', '3->2'], c3=2
+  bits=011101: arcs=['0->1', '2->0', '0->3', '1->2', '1->3', '3->2'], c3=2
+  bits=100010: arcs=['1->0', '0->2', '3->0', '2->1', '3->1', '2->3'], c3=2
+  bits=100110: arcs=['1->0', '0->2', '0->3', '2->1', '3->1', '2->3'], c3=2
+  bits=101001: arcs=['0->1', '2->0', '3->0', '1->2', '3->1', '2->3'], c3=2
+  bits=101010: arcs=['1->0', '0->2', '3->0', '1->2', '3->1', '2->3'], c3=2
+  bits=101011: arcs=['0->1', '0->2', '3->0', '1->2', '3->1', '2->3'], c3=2
+  bits=101100: arcs=['1->0', '2->0', '0->3', '1->2', '3->1', '2->3'], c3=2
+  bits=101101: arcs=['0->1', '2->0', '0->3', '1->2', '3->1', '2->3'], c3=2
+  bits=101110: arcs=['1->0', '0->2', '0->3', '1->2', '3->1', '2->3'], c3=2
+  bits=110010: arcs=['1->0', '0->2', '3->0', '2->1', '1->3', '2->3'], c3=2
+  bits=110011: arcs=['0->1', '0->2', '3->0', '2->1', '1->3', '2->3'], c3=2
+  bits=111001: arcs=['0->1', '2->0', '3->0', '1->2', '1->3', '2->3'], c3=2
+  bits=111011: arcs=['0->1', '0->2', '3->0', '1->2', '1->3', '2->3'], c3=2
+
+(1,1,2,2) tournaments on 4 vertices: 24
+
+(Internal, sorted-ext-scores) groups: 100
+Ambiguous for dc7: 29
+
+(Internal, full-ext-projection) groups: 161
+Ambiguous for dc7: 13
+  AMBIG: dc7=Counter({-1: 1, 0: 1})
+
+(Internal, full-ext, XX-arcs) groups: 193
+Ambiguous for dc7: 0
+Full local data DETERMINES dc7!
+
+This means: dc7 depends on the COMPLETE arc data around the Vitali atom.
+The sigma information (Level 1.5) does NOT suffice.
+
+Done.
