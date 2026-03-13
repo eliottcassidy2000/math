@@ -1,0 +1,112 @@
+======================================================================
+n=5: VERIFY t3=2 ⟺ d²≠0
+======================================================================
+  score=(0, 2, 2, 3, 3), t3=2, d²=0? False
+  score=(1, 1, 2, 2, 4), t3=2, d²=0? False
+
+======================================================================
+n=6: ISOMORPHISM-CLASS ANALYSIS OF d²=0
+======================================================================
+  56 isomorphism types at n=6
+
+  t3 vs d²=0 at n=6 (by isomorphism type):
+   t3   pass   fail  total
+    0      1      0      1
+    1      4      0      4
+    2      1      3      4
+    3      0      4      4
+    4      1      9     10
+    5      2      6      8
+    6      4      8     12
+    7      2      6      8
+    8      5      0      5
+
+  t3 values where ALL types pass: [0, 1, 8]
+  t3 values where ALL types fail: [3]
+  t3 values with MIXED results:   [2, 4, 5, 6, 7]
+
+  Detail for mixed t3 values:
+
+  t3=2: 1 pass, 3 fail
+    Passing scores: [(1, 1, 1, 4, 4, 4)]
+    Failing scores: [(0, 1, 3, 3, 4, 4), (0, 2, 2, 3, 3, 5), (1, 1, 2, 2, 4, 5)]
+
+  t3=4: 1 pass, 9 fail
+    Passing scores: [(1, 1, 2, 3, 4, 4)]
+    Failing scores: [(0, 2, 3, 3, 3, 4), (1, 1, 2, 3, 4, 4), (1, 2, 2, 2, 3, 5)]
+
+  t3=5: 2 pass, 6 fail
+    Passing scores: [(1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+    Failing scores: [(0, 3, 3, 3, 3, 3), (1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4), (2, 2, 2, 2, 2, 5)]
+
+  t3=6: 4 pass, 8 fail
+    Passing scores: [(1, 2, 2, 3, 3, 4)]
+    Failing scores: [(1, 2, 2, 3, 3, 4)]
+
+  t3=7: 2 pass, 6 fail
+    Passing scores: [(1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 3, 4)]
+    Failing scores: [(1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 3, 4)]
+
+======================================================================
+n=6: COMPLEMENT SYMMETRY CHECK
+======================================================================
+  d²=0(T) ⟺ d²=0(T^op): 56/56 agree, 0 disagree
+  t3(T) = t3(T^op): 56/56
+
+======================================================================
+n=6: ADDITIONAL INVARIANTS FOR MIXED t3
+======================================================================
+
+  t3=2 types:
+    score=(1, 1, 2, 2, 4, 5), t3=2, c4=1, trans=18, d²=0? False
+    score=(0, 2, 2, 3, 3, 5), t3=2, c4=1, trans=18, d²=0? False
+    score=(0, 1, 3, 3, 4, 4), t3=2, c4=1, trans=18, d²=0? False
+    score=(1, 1, 1, 4, 4, 4), t3=2, c4=0, trans=18, d²=0? True
+
+  t3=4 types:
+    score=(1, 2, 2, 2, 3, 5), t3=4, c4=4, trans=16, d²=0? False
+    score=(1, 1, 2, 3, 4, 4), t3=4, c4=6, trans=16, d²=0? True
+    score=(1, 1, 2, 3, 4, 4), t3=4, c4=4, trans=16, d²=0? False
+    score=(1, 1, 2, 3, 4, 4), t3=4, c4=4, trans=16, d²=0? False
+    score=(0, 2, 3, 3, 3, 4), t3=4, c4=4, trans=16, d²=0? False
+    score=(1, 2, 2, 2, 3, 5), t3=4, c4=3, trans=16, d²=0? False
+    score=(1, 2, 2, 2, 3, 5), t3=4, c4=3, trans=16, d²=0? False
+    score=(1, 1, 2, 3, 4, 4), t3=4, c4=3, trans=16, d²=0? False
+    score=(0, 2, 3, 3, 3, 4), t3=4, c4=3, trans=16, d²=0? False
+    score=(0, 2, 3, 3, 3, 4), t3=4, c4=3, trans=16, d²=0? False
+
+  t3=5 types:
+    score=(1, 2, 2, 2, 4, 4), t3=5, c4=6, trans=15, d²=0? False
+    score=(1, 1, 3, 3, 3, 4), t3=5, c4=6, trans=15, d²=0? False
+    score=(1, 2, 2, 2, 4, 4), t3=5, c4=6, trans=15, d²=0? True
+    score=(1, 2, 2, 2, 4, 4), t3=5, c4=5, trans=15, d²=0? False
+    score=(2, 2, 2, 2, 2, 5), t3=5, c4=5, trans=15, d²=0? False
+    score=(1, 1, 3, 3, 3, 4), t3=5, c4=5, trans=15, d²=0? False
+    score=(1, 1, 3, 3, 3, 4), t3=5, c4=6, trans=15, d²=0? True
+    score=(0, 3, 3, 3, 3, 3), t3=5, c4=5, trans=15, d²=0? False
+
+  t3=6 types:
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=9, trans=14, d²=0? True
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=9, trans=14, d²=0? True
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=6, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=6, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=6, trans=14, d²=0? False
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? True
+    score=(1, 2, 2, 3, 3, 4), t3=6, c4=7, trans=14, d²=0? True
+
+  t3=7 types:
+    score=(2, 2, 2, 2, 3, 4), t3=7, c4=9, trans=13, d²=0? True
+    score=(2, 2, 2, 2, 3, 4), t3=7, c4=8, trans=13, d²=0? False
+    score=(2, 2, 2, 2, 3, 4), t3=7, c4=9, trans=13, d²=0? False
+    score=(2, 2, 2, 2, 3, 4), t3=7, c4=9, trans=13, d²=0? False
+    score=(1, 2, 3, 3, 3, 3), t3=7, c4=9, trans=13, d²=0? False
+    score=(1, 2, 3, 3, 3, 3), t3=7, c4=9, trans=13, d²=0? False
+    score=(1, 2, 3, 3, 3, 3), t3=7, c4=8, trans=13, d²=0? False
+    score=(1, 2, 3, 3, 3, 3), t3=7, c4=9, trans=13, d²=0? True
+
+DONE.

@@ -1,0 +1,645 @@
+======================================================================
+ANALYSIS 1: FULL n=5 CHARACTERIZATION
+======================================================================
+
+n=5: 784 pass, 240 fail out of 1024
+
+--- Score sequence distribution ---
+  (0, 1, 2, 3, 4): 120 pass, 0 fail (0.0% fail)
+  (0, 1, 3, 3, 3): 40 pass, 0 fail (0.0% fail)
+  (0, 2, 2, 2, 4): 40 pass, 0 fail (0.0% fail)
+  (0, 2, 2, 3, 3): 0 pass, 120 fail (100.0% fail)
+  (1, 1, 1, 3, 4): 40 pass, 0 fail (0.0% fail)
+  (1, 1, 2, 2, 4): 0 pass, 120 fail (100.0% fail)
+  (1, 1, 2, 3, 3): 240 pass, 0 fail (0.0% fail)
+  (1, 2, 2, 2, 3): 280 pass, 0 fail (0.0% fail)
+  (2, 2, 2, 2, 2): 24 pass, 0 fail (0.0% fail)
+
+--- 3-cycle count distribution ---
+  t3=0: 120 pass, 0 fail (0.0% fail)
+  t3=1: 120 pass, 0 fail (0.0% fail)
+  t3=2: 0 pass, 240 fail (100.0% fail)
+  t3=3: 240 pass, 0 fail (0.0% fail)
+  t3=4: 280 pass, 0 fail (0.0% fail)
+  t3=5: 24 pass, 0 fail (0.0% fail)
+
+--- First failing degree m ---
+  m=4: 240 tournaments
+
+--- Vertex transitivity check (regular tournaments only) ---
+  Regular (score (2,2,2,2,2)): 24 pass, 0 fail
+    Passing regular tournament: VT=True, t3=5
+    Passing regular tournament: VT=True, t3=5
+    Passing regular tournament: VT=True, t3=5
+
+======================================================================
+ANALYSIS 2: SUBTOURNAMENT PATTERNS
+======================================================================
+
+--- 4-vertex subtournament types in pass vs fail ---
+
+Subtournament-4 type counts (averaged):
+  T4 type ss=(0, 1, 2, 3) t3=0: pass_avg=2.74, fail_avg=2.00
+  T4 type ss=(0, 2, 2, 2) t3=1: pass_avg=0.44, fail_avg=0.88
+  T4 type ss=(1, 1, 2, 2) t3=2: pass_avg=1.30, fail_avg=1.00
+  T4 type ss=(1, 1, 1, 3) t3=1: pass_avg=0.52, fail_avg=1.12
+
+======================================================================
+ANALYSIS 3: EXPLICIT d² MATRIX (first failing tournament)
+======================================================================
+
+Tournament adjacency matrix:
+[[0 0 0 1 0]
+ [1 0 0 0 0]
+ [1 1 0 0 0]
+ [0 1 1 0 0]
+ [1 1 1 1 0]]
+Score sequence: (1, 1, 2, 2, 4)
+3-cycles: 2
+First failing degree: m=4
+
+Paths at degree 4: 1
+Paths at degree 3: 3
+Paths at degree 2: 8
+
+d² = ∂_3 ∘ ∂_4 matrix (8×1):
+Number of nonzero entries: 2
+Max absolute value: 1
+Nonzero entries (row_path, col_path, value):
+  d²[(4, 1, 0), (4, 3, 2, 1, 0)] = 1
+    Source path: (4, 3, 2, 1, 0)
+    ∂((4, 3, 2, 1, 0)) contributions:
+      (-1) * (4, 2, 1, 0)
+          → (+1) * (4, 1, 0)
+          → (-1) * (4, 2, 0)
+  d²[(4, 2, 0), (4, 3, 2, 1, 0)] = -1
+    Source path: (4, 3, 2, 1, 0)
+    ∂((4, 3, 2, 1, 0)) contributions:
+      (-1) * (4, 2, 1, 0)
+          → (+1) * (4, 1, 0)
+          → (-1) * (4, 2, 0)
+
+======================================================================
+ANALYSIS 4: WHY FACES FAIL TO CANCEL
+======================================================================
+
+For the first failing path, trace which faces are regular vs not:
+
+  Path: (4, 3, 2, 1, 0)
+    Delete pos 1 (vertex 3): (4, 2, 1, 0) — regular? True
+      Delete pos 1 (vertex 2): (4, 1, 0) — regular? True
+      Delete pos 2 (vertex 1): (4, 2, 0) — regular? True
+    Delete pos 2 (vertex 2): (4, 3, 1, 0) — regular? False
+    Delete pos 3 (vertex 1): (4, 3, 2, 0) — regular? False
+
+  Path: (4, 3, 2, 1, 0)
+    Delete pos 1 (vertex 3): (4, 2, 1, 0) — regular? True
+      Delete pos 1 (vertex 2): (4, 1, 0) — regular? True
+      Delete pos 2 (vertex 1): (4, 2, 0) — regular? True
+    Delete pos 2 (vertex 2): (4, 3, 1, 0) — regular? False
+    Delete pos 3 (vertex 1): (4, 3, 2, 0) — regular? False
+
+======================================================================
+ANALYSIS 5: NEIGHBORHOOD CONDITIONS
+======================================================================
+
+For each edge a→b, compute |N+(a) ∩ N+(b)| (common out-neighbors):
+
+Failing tournament:
+  Common out-neighbor counts: Counter({0: 4, 1: 4, 2: 2})
+  Common in-neighbor counts: Counter({1: 4, 0: 4, 2: 2})
+
+======================================================================
+ANALYSIS 6: COMBINATORIAL CONDITIONS
+======================================================================
+
+--- Condition: All interior faces of regular paths are regular ---
+  All-faces-regular: 240 pass, 784 fail
+  d²=0 ⟺ all-faces-regular? Agreement: 480/1024 (46.9%)
+
+--- Condition: Regularity at degree m where d² is tested ---
+
+  all-faces-regular → d²=0? YES
+  d²=0 → all-faces-regular? NO
+
+======================================================================
+ANALYSIS 7: REGULARITY FAILURES IN FACES
+======================================================================
+
+For a failing tournament, show WHY faces are non-regular:
+Tournament:
+[[0 0 0 1 0]
+ [1 0 0 0 0]
+ [1 1 0 0 0]
+ [0 1 1 0 0]
+ [1 1 1 1 0]]
+
+  At m=3, 2 faces are non-regular:
+    Path (3, 2, 1, 0), delete pos 1 → (3, 1, 0)
+      Skip-one 3→0 FAILS at pos 1
+    Path (3, 2, 1, 0), delete pos 2 → (3, 2, 0)
+      Skip-one 3→0 FAILS at pos 1
+
+  At m=4, 2 faces are non-regular:
+    Path (4, 3, 2, 1, 0), delete pos 2 → (4, 3, 1, 0)
+      Skip-one 3→0 FAILS at pos 2
+    Path (4, 3, 2, 1, 0), delete pos 3 → (4, 3, 2, 0)
+      Skip-one 3→0 FAILS at pos 2
+
+======================================================================
+ANALYSIS 8: 3-CYCLE GRAPH STRUCTURE
+======================================================================
+
+Failing tournament 3-cycle graph:
+  2 cycles, 1 edges
+
+======================================================================
+ANALYSIS 9: ISOMORPHISM CLASSES AT n=5
+======================================================================
+
+12 isomorphism classes at n=5
+  Pass-only classes: 10
+  Fail-only classes: 2
+  Mixed classes: 0
+
+Details by iso class:
+  ss=(0, 1, 2, 3, 4) t3=0: 120 pass + 0 fail = 120 total [PASS]
+  ss=(0, 1, 3, 3, 3) t3=1: 40 pass + 0 fail = 40 total [PASS]
+  ss=(0, 2, 2, 3, 3) t3=2: 0 pass + 120 fail = 120 total [FAIL]
+  ss=(0, 2, 2, 2, 4) t3=1: 40 pass + 0 fail = 40 total [PASS]
+  ss=(1, 1, 2, 3, 3) t3=3: 120 pass + 0 fail = 120 total [PASS]
+  ss=(1, 1, 2, 2, 4) t3=2: 0 pass + 120 fail = 120 total [FAIL]
+  ss=(1, 1, 2, 3, 3) t3=3: 120 pass + 0 fail = 120 total [PASS]
+  ss=(1, 1, 1, 3, 4) t3=1: 40 pass + 0 fail = 40 total [PASS]
+  ss=(1, 2, 2, 2, 3) t3=4: 120 pass + 0 fail = 120 total [PASS]
+  ss=(1, 2, 2, 2, 3) t3=4: 40 pass + 0 fail = 40 total [PASS]
+  ss=(1, 2, 2, 2, 3) t3=4: 120 pass + 0 fail = 120 total [PASS]
+  ss=(2, 2, 2, 2, 2) t3=5: 24 pass + 0 fail = 24 total [PASS]
+
+======================================================================
+ANALYSIS 10: THE ALGEBRAIC OBSTACLE — DETAILED
+======================================================================
+
+Failing at m=4
+Regular 4-paths: [(4, 3, 2, 1, 0)]
+Regular 3-paths: [(3, 2, 1, 0), (4, 2, 1, 0), (4, 3, 2, 1)]
+Regular 2-paths: [(2, 1, 0), (3, 2, 1), (4, 0, 3), (4, 1, 0), (4, 2, 0), (4, 2, 1), (4, 3, 1), (4, 3, 2)]
+
+Manual ∂² computation:
+
+  ∂((4, 3, 2, 1, 0)):
+    (-1) * (4, 2, 1, 0)
+    pos 2: (4, 3, 1, 0) NOT REGULAR — missing from chain group
+    pos 3: (4, 3, 2, 0) NOT REGULAR — missing from chain group
+  ∂²((4, 3, 2, 1, 0)):
+    ∂((4, 2, 1, 0)): (+1) * (4, 1, 0)
+    ∂((4, 2, 1, 0)): (-1) * (4, 2, 0)
+  *** NET NONZERO: {(4, 1, 0): 1, (4, 2, 0): -1} ***
+
+======================================================================
+ANALYSIS 11: DOUBLE-DELETION REGULARITY
+======================================================================
+
+In standard simplicial homology, d²=0 because deleting pos i then j
+pairs with deleting pos j then i-1 (or i then j+1), and signs cancel.
+In TRH, this fails when one deletion produces a non-regular path.
+
+Checking: for PASSING tournaments, are ALL double-deletions regular?
+
+  d²=0 AND all faces regular: 240
+  d²=0 BUT some face non-regular: 544
+  d²≠0 AND some face non-regular: 240
+  d²≠0 BUT all faces regular: 0
+
+  → d²=0 does NOT require all faces regular (544 counterexamples)
+  → d²=0 can hold even when ∂ maps to paths outside the chain group
+     (meaning some terms are 'projected out' but the remaining ones still cancel)
+
+======================================================================
+ANALYSIS 12: FORBIDDEN SUBTOURNAMENT CHARACTERIZATION
+======================================================================
+
+4 isomorphism classes of 4-vertex tournaments
+  T4 types in pass-only: 0
+  T4 types in fail-only: 0
+  T4 types in both: 4
+
+======================================================================
+ANALYSIS 13: NAMED TOURNAMENT PROPERTIES
+======================================================================
+
+--- Property W (every transitive triple has a common friend/enemy) ---
+  d²=0 AND W: 0
+  d²=0 AND ¬W: 784
+  d²≠0 AND W: 0
+  d²≠0 AND ¬W: 240
+
+======================================================================
+ANALYSIS 14: SKIP-ONE CLOSURE PROPERTY
+======================================================================
+
+Face regularity requires THREE conditions when deleting interior vertex v_i:
+  1. v_{i-1} → v_{i+1} (new edge in face)
+  2. v_{i-2} → v_{i+1} (new skip-one, if i≥2)
+  3. v_{i-1} → v_{i+2} (new skip-one, if i≤m-2)
+
+Condition 1 (edge): v_{i-1} beats v_{i+1}
+Condition 2 (left skip): v_{i-2} beats v_{i+1}
+Condition 3 (right skip): v_{i-1} beats v_{i+2}
+
+For d²=0, we need: whenever conditions 1,2,3 create a 'missing' face,
+the missing contributions must cancel in the alternating sum.
+This is an algebraic cancellation, NOT just a combinatorial property.
+
+======================================================================
+ANALYSIS 15: TESTING CANDIDATE EQUIVALENT CONDITIONS
+======================================================================
+
+--- Condition: doubly regular ---
+  DR ∧ d²=0: 184
+  DR ∧ d²≠0: 0
+  ¬DR ∧ d²=0: 600
+  ¬DR ∧ d²≠0: 240
+
+--- Condition: complement also has d²=0 ---
+  d²=0(T) ⟺ d²=0(T^op): 1024/1024 (100.0%)
+
+======================================================================
+ANALYSIS 16: n=6 CONFIRMATION (sampling)
+======================================================================
+
+n=6 sample (500): 127 pass, 373 fail (74.6% fail)
+  First failing degree: {4: 373}
+  face-regular ⟺ d²=0 agreement: 398/500 (79.6%)
+
+======================================================================
+SUMMARY OF FINDINGS
+======================================================================
+
+Key results:
+1. At n=5: d²=0 depends on the isomorphism class of the tournament.
+2. The "all faces regular" condition is related but may not be equivalent.
+3. d²=0 is preserved under complementation (T → T^op).
+4. The algebraic obstacle: when deleting interior vertex v_i from a regular path,
+   the face may fail to be regular because:
+   (a) v_{i-1} → v_{i+1} (new edge) might go the wrong way
+   (b) v_{i-2} → v_{i+1} or v_{i-1} → v_{i+2} (new skip-ones) might fail
+5. For d²=0, missing faces must produce cancellation in the alternating sum.
+   This is an algebraic condition, not purely combinatorial.
+
+
+DONE.
+======================================================================
+VERIFICATION: n=5, d²≠0 ⟺ t3=2
+======================================================================
+
+t3 | d²=0 | d²≠0
+------------------------------
+  0 |  120 |    0  
+  1 |  120 |    0  
+  2 |    0 |  240  *** FAIL
+  3 |  240 |    0  
+  4 |  280 |    0  
+  5 |   24 |    0  
+
+PERFECT: d²≠0 ⟺ t3=2 at n=5: True
+
+======================================================================
+n=6: COMPLETE ENUMERATION — t3 vs d² (may take a few minutes)
+======================================================================
+  processed 5000/32768...
+  processed 10000/32768...
+  processed 15000/32768...
+  processed 20000/32768...
+  processed 25000/32768...
+  processed 30000/32768...
+
+Total n=6 tournaments: 32768
+
+t3 | d²=0 | d²≠0 | fail%
+---------------------------------------------
+   0 |   720 |     0 |   0.0%
+   1 |   960 |     0 |   0.0%
+   2 |    80 |  2160 |  96.4% (MIXED)
+   3 |     0 |  2880 | 100.0% (ALL FAIL)
+   4 |   720 |  5520 |  88.5% (MIXED)
+   5 |   480 |  3168 |  86.8% (MIXED)
+   6 |  2880 |  5760 |  66.7% (MIXED)
+   7 |   480 |  4320 |  90.0% (MIXED)
+   8 |  2640 |     0 |   0.0%
+
+Total: 8960 pass, 23808 fail (72.7%)
+First failing degree distribution: {4: 23808}
+
+Pure FAIL t3 values: [3]
+Pure PASS t3 values: [0, 1, 8]
+Mixed t3 values: [2, 4, 5, 6, 7]
+
+*** t3 alone does NOT characterize d²=0 at n=6 ***
+Need additional invariant. Checking score sequence + t3...
+  (score_seq, t3) has 6 mixed classes:
+    ss=(1, 1, 2, 3, 4, 4), t3=4: 720 pass, 2160 fail
+    ss=(1, 1, 3, 3, 3, 4), t3=5: 240 pass, 1440 fail
+    ss=(1, 2, 2, 2, 4, 4), t3=5: 240 pass, 1440 fail
+    ss=(1, 2, 2, 3, 3, 4), t3=6: 2880 pass, 5760 fail
+    ss=(1, 2, 3, 3, 3, 3), t3=7: 240 pass, 2160 fail
+    ss=(2, 2, 2, 2, 3, 4), t3=7: 240 pass, 2160 fail
+
+======================================================================
+WHY t3=2 AT n=5?
+======================================================================
+
+At n=5 with 5 vertices, C(5,3)=10 triples.
+Each triple is either a 3-cycle or a transitive triple.
+t3=2 means exactly 2 of the 10 triples form 3-cycles.
+
+The two iso classes with t3=2 are:
+  ss=(0,2,2,3,3): "near-transitive with two cycles"
+  ss=(1,1,2,2,4): "dominant vertex + two cycles"
+
+Both have a specific structural feature: the two 3-cycles share
+exactly one edge (they share 2 vertices), creating a "butterfly" pattern.
+
+Checking: do the two 3-cycles share vertices at t3=2?
+  ss=(1, 1, 2, 2, 4): cycles {0, 1, 3} & {0, 2, 3}, overlap=2
+
+Overlap distribution for t3=2 tournaments: {2: 240}
+
+======================================================================
+ADDITIONAL n=6 ANALYSIS: WHAT DISTINGUISHES PASS/FAIL AT MIXED t3?
+======================================================================
+
+--- t3=2 (mixed) ---
+  pass=80, fail=2160
+
+--- t3=4 (mixed) ---
+  pass=720, fail=5520
+
+--- t3=5 (mixed) ---
+  pass=480, fail=3168
+
+DONE.
+======================================================================
+n=6: STRUCTURE OF 3-CYCLE GRAPH
+======================================================================
+
+Collecting cycle graph properties for all n=6 tournaments...
+  5000/32768...
+  10000/32768...
+  15000/32768...
+  20000/32768...
+  25000/32768...
+  30000/32768...
+Done. Total: 32768
+
+==================================================
+t3=2: PASS vs FAIL analysis
+==================================================
+  80 pass, 2160 fail
+
+  edges:
+    0: 80 pass, 0 fail
+    1: 0 pass, 2160 fail
+
+  max_deg:
+    0: 80 pass, 0 fail
+    1: 0 pass, 2160 fail
+
+  coverage:
+    4: 0 pass, 2160 fail
+    6: 80 pass, 0 fail
+
+  edge_in_cycles:
+    5: 0 pass, 2160 fail
+    6: 80 pass, 0 fail
+
+==================================================
+t3=4: PASS vs FAIL analysis
+==================================================
+  720 pass, 5520 fail
+
+  edges:
+    3: 0 pass, 2640 fail
+    4: 0 pass, 2880 fail
+    6: 720 pass, 0 fail
+
+  max_deg:
+    2: 0 pass, 4080 fail
+    3: 720 pass, 1440 fail
+
+  coverage:
+    5: 0 pass, 3360 fail
+    6: 720 pass, 2160 fail
+
+  edge_in_cycles:
+    8: 0 pass, 1440 fail
+    9: 720 pass, 3600 fail
+    10: 0 pass, 480 fail
+
+==================================================
+t3=5: PASS vs FAIL analysis
+==================================================
+  480 pass, 3168 fail
+
+  edges:
+    5: 0 pass, 1728 fail
+    6: 480 pass, 1440 fail
+
+  max_deg:
+    2: 0 pass, 288 fail
+    3: 480 pass, 2880 fail
+
+  coverage:
+    5: 0 pass, 288 fail
+    6: 480 pass, 2880 fail
+
+  edge_in_cycles:
+    10: 0 pass, 1728 fail
+    11: 0 pass, 1440 fail
+    12: 480 pass, 0 fail
+
+==================================================
+t3=6: PASS vs FAIL analysis
+==================================================
+  2880 pass, 5760 fail
+
+  edges:
+    6: 0 pass, 2160 fail
+    7: 1440 pass, 3600 fail
+    9: 1440 pass, 0 fail
+
+  max_deg:
+    2: 0 pass, 720 fail
+    3: 2880 pass, 5040 fail
+
+  coverage:
+    6: 2880 pass, 5760 fail
+
+  edge_in_cycles:
+    11: 1440 pass, 720 fail
+    12: 1440 pass, 2160 fail
+    13: 0 pass, 2160 fail
+    14: 0 pass, 720 fail
+
+==================================================
+t3=7: PASS vs FAIL analysis
+==================================================
+  480 pass, 4320 fail
+
+  edges:
+    8: 0 pass, 1440 fail
+    9: 480 pass, 2880 fail
+
+  max_deg:
+    3: 480 pass, 4320 fail
+
+  coverage:
+    6: 480 pass, 4320 fail
+
+  edge_in_cycles:
+    13: 0 pass, 2880 fail
+    14: 480 pass, 1440 fail
+
+======================================================================
+TESTING: vertex-level cycle participation
+======================================================================
+
+Testing: (t3, cycle_participation_seq) as characterization...
+Re-scanning with cycle participation...
+
+Total (t3, cps) classes: 25
+Mixed classes: 0
+  *** (t3, cycle_participation_seq) PERFECTLY characterizes d²=0! ***
+
+======================================================================
+TESTING: isomorphism class as characterization
+======================================================================
+
+Grouping by tournament isomorphism class...
+Total iso classes: 56
+Mixed iso classes: 0
+
+  d²=0 IS an isomorphism invariant at n=6 (as expected)
+  Pass-only iso classes: 20
+  Fail-only iso classes: 36
+
+  Failing iso classes:
+    ss=(1, 1, 2, 2, 4, 5), t3=2, cps=(0, 0, 1, 1, 2, 2): 720 labeled
+    ss=(1, 1, 2, 3, 3, 5), t3=3, cps=(0, 1, 1, 1, 3, 3): 720 labeled
+    ss=(0, 2, 2, 3, 3, 5), t3=2, cps=(0, 0, 1, 1, 2, 2): 720 labeled
+    ss=(1, 1, 2, 3, 3, 5), t3=3, cps=(0, 1, 1, 2, 2, 3): 720 labeled
+    ss=(1, 2, 2, 2, 3, 5), t3=4, cps=(0, 2, 2, 2, 2, 4): 720 labeled
+    ss=(0, 2, 2, 3, 4, 4), t3=3, cps=(0, 1, 1, 1, 3, 3): 720 labeled
+    ss=(1, 1, 2, 3, 4, 4), t3=4, cps=(1, 1, 1, 2, 3, 4): 720 labeled
+    ss=(0, 1, 3, 3, 4, 4), t3=2, cps=(0, 0, 1, 1, 2, 2): 720 labeled
+    ss=(1, 2, 2, 2, 4, 4), t3=5, cps=(1, 2, 2, 2, 3, 5): 720 labeled
+    ss=(0, 2, 2, 3, 4, 4), t3=3, cps=(0, 1, 1, 2, 2, 3): 720 labeled
+    ss=(1, 1, 2, 3, 4, 4), t3=4, cps=(1, 1, 1, 2, 3, 4): 720 labeled
+    ss=(0, 2, 3, 3, 3, 4), t3=4, cps=(0, 2, 2, 2, 2, 4): 720 labeled
+    ss=(1, 1, 3, 3, 3, 4), t3=5, cps=(1, 2, 2, 2, 3, 5): 720 labeled
+    ss=(1, 2, 2, 2, 3, 5), t3=4, cps=(0, 2, 2, 2, 3, 3): 720 labeled
+    ss=(1, 2, 2, 2, 4, 4), t3=5, cps=(1, 2, 2, 3, 3, 4): 720 labeled
+    ss=(1, 1, 2, 3, 4, 4), t3=4, cps=(1, 1, 2, 2, 3, 3): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 2, 3, 4, 5): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 3, 3, 4, 4): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 3, 3, 4, 4): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 3, 3, 4, 4): 720 labeled
+    ss=(1, 1, 3, 3, 3, 4), t3=5, cps=(1, 2, 2, 3, 3, 4): 720 labeled
+    ss=(2, 2, 2, 2, 3, 4), t3=7, cps=(3, 3, 3, 3, 4, 5): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 3, 3, 4, 4): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 2, 3, 4, 5): 720 labeled
+    ss=(2, 2, 2, 2, 3, 4), t3=7, cps=(3, 3, 3, 3, 4, 5): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 3, 3, 4, 4): 720 labeled
+    ss=(1, 2, 2, 3, 3, 4), t3=6, cps=(2, 2, 3, 3, 4, 4): 720 labeled
+    ss=(2, 2, 2, 2, 3, 4), t3=7, cps=(2, 3, 3, 4, 4, 5): 720 labeled
+    ss=(0, 2, 3, 3, 3, 4), t3=4, cps=(0, 2, 2, 2, 3, 3): 720 labeled
+    ss=(1, 2, 3, 3, 3, 3), t3=7, cps=(3, 3, 3, 3, 4, 5): 720 labeled
+    ss=(1, 2, 3, 3, 3, 3), t3=7, cps=(2, 3, 3, 4, 4, 5): 720 labeled
+    ss=(1, 2, 3, 3, 3, 3), t3=7, cps=(3, 3, 3, 3, 4, 5): 720 labeled
+    ss=(1, 2, 2, 2, 3, 5), t3=4, cps=(0, 2, 2, 2, 3, 3): 240 labeled
+    ss=(0, 2, 3, 3, 3, 4), t3=4, cps=(0, 2, 2, 2, 3, 3): 240 labeled
+    ss=(2, 2, 2, 2, 2, 5), t3=5, cps=(0, 3, 3, 3, 3, 3): 144 labeled
+    ss=(0, 3, 3, 3, 3, 3), t3=5, cps=(0, 3, 3, 3, 3, 3): 144 labeled
+
+======================================================================
+THE KEY QUESTION: What local pattern causes d²≠0?
+======================================================================
+
+For a regular 4-path (a,b,c,d,e), interior faces are:
+  Delete pos 1 (b): (a,c,d,e) — regular iff a→d ("skip-two")
+  Delete pos 2 (c): (a,b,d,e) — regular iff a→d AND b→e ("skip-two" x2)
+  Delete pos 3 (d): (a,b,c,e) — regular iff b→e ("skip-two")
+
+The NEW regularity conditions are exactly the SKIP-TWO edges: a→d and b→e.
+
+In standard simplicial d²=0: deleting (i,j) pairs with deleting (j,i-1).
+Here, if a face is MISSING, the pairing is broken.
+
+The failure pattern: a regular 4-path where exactly one of {a→d, b→e}
+holds but not the other, creating an UNPAIRED face-of-face.
+
+Skip-two edge analysis for all n=5 regular 4-paths:
+  t3=2, d²=FAIL, paths4=1, skip2 patterns: {(True, False): 1}
+
+
+Full skip-two pattern analysis:
+
+  (t3, skip2_patterns) -> pass/fail:
+    t3=0, {(True, True): 1}: 120 pass, 0 fail [PASS]
+    t3=1, {}: 120 pass, 0 fail [PASS]
+    t3=2, {(False, True): 1}: 0 pass, 120 fail [FAIL]
+    t3=2, {(True, False): 1}: 0 pass, 120 fail [FAIL]
+    t3=3, {}: 120 pass, 0 fail [PASS]
+    t3=3, {(True, True): 1}: 120 pass, 0 fail [PASS]
+    t3=4, {}: 40 pass, 0 fail [PASS]
+    t3=4, {(False, False): 1}: 120 pass, 0 fail [PASS]
+    t3=4, {(False, True): 1, (True, False): 1}: 120 pass, 0 fail [PASS]
+    t3=5, {(False, False): 5}: 24 pass, 0 fail [PASS]
+
+DONE.
+
+======================================================================
+FINAL SYNTHESIS OF ALL FINDINGS
+======================================================================
+
+KEY DISCOVERY 1: At n=5, d²≠0 ⟺ t3=2 (PERFECT, 240/240)
+  - The ONLY tournaments where TRH d²≠0 are those with exactly 2 three-cycles
+  - All 2 iso classes with t3=2 fail; all other iso classes pass
+  - The two 3-cycles ALWAYS share exactly 2 vertices (overlap=2 for all 240)
+
+KEY DISCOVERY 2: The algebraic obstacle is the SKIP-TWO pattern
+  - For a regular 4-path (a,b,c,d,e), faces are regular iff "skip-two"
+    edges a→d and b→e exist
+  - At t3=2, the ONLY regular 4-path has exactly one skip-two edge
+    (either (True,False) or (False,True)), creating an unpaired face
+  - When BOTH skip-two edges are present or BOTH absent, faces cancel in pairs
+  - When exactly ONE is present, d²≠0
+
+KEY DISCOVERY 3: d²=0 is an ISOMORPHISM INVARIANT (verified n=5,6)
+  - At n=5: 10 pass-only iso classes, 2 fail-only, 0 mixed
+  - At n=6: 20 pass-only iso classes, 36 fail-only, 0 mixed
+
+KEY DISCOVERY 4: (t3, cycle_participation_sequence) PERFECTLY characterizes
+d²=0 at n=6 (25 classes, 0 mixed)
+  - t3 alone is insufficient at n=6 (5 mixed t3 values)
+  - But adding the sorted vector of per-vertex 3-cycle counts resolves all ambiguity
+
+KEY DISCOVERY 5: d²=0 is preserved under complementation T → T^op
+  - 100% agreement at n=5 (1024/1024)
+
+KEY DISCOVERY 6: All failures occur at degree m=4 (both n=5 and n=6)
+  - No failures at m=2 or m=3
+
+KEY DISCOVERY 7: The "all faces regular" condition is STRICTLY STRONGER
+  - "All faces regular" → d²=0 (YES)
+  - d²=0 → "all faces regular" (NO — 544 counterexamples at n=5)
+  - d²=0 can hold even with non-regular faces, via algebraic cancellation
+
+KEY DISCOVERY 8: At n=6 with t3=2, the 3-cycle graph structure matters:
+  - 2 disjoint 3-cycles (no shared vertices, 0 edges): d²=0 (80 pass)
+  - 2 overlapping 3-cycles (share 2 vertices, 1 edge): d²≠0 (2160 fail)
+
+STRUCTURAL THEOREM (CONJECTURE):
+  d²≠0 in TRH ⟺ there exists a regular 4-path (a,b,c,d,e) where
+  exactly one of {a→d, b→e} is an edge of the tournament.
+  Equivalently: the "skip-two parity" is odd for some regular 4-path.
