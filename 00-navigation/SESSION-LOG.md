@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67k — 2026-03-13: 28 Cross-Field Connections + so(n) Theorem
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67j (context recovery)
+**Summary of work:**
+- **TOURNAMENT LIE BRACKET = so(n) (HYP-786, MAJOR)**: The natural bracket [e_a, e_b] on arcs of K_n defines EXACTLY the special orthogonal Lie algebra so(n). Killing form = -2(n-2)·I. All tournaments give the SAME abstract Lie algebra — the tournament orientation is just a choice of basis for so(n). Verified n=3,4,5,7.
+- **RAMANUJAN TOURNAMENTS (HYP-770)**: Paley P_p has all nontrivial |λ_k| = √((p+1)/4). 100% of random tournaments have smaller spectral gap. Directed Alon-Boppana analog.
+- **MATCHING COMPLEX (HYP-771)**: Commuting arc reversals = matching complex M(K_n). f-vectors computed through n=8.
+- **CRYSTALLINE SPIN GLASS (HYP-772)**: Frustration = c3 EXACTLY. Uniform J=0.75 Ising model on L(K_n).
+- **TOURNAMENT CODES (HYP-773)**: H-max at n=5 is [[10,6,2]] code with binomial weight distribution.
+- **GAUSS SUMS = HEISENBERG CHARACTERS (HYP-774)**: Stone-von Neumann explains Ramanujan property.
+- **THREE-PILLAR BRIDGE**: Heisenberg + Frustration + Information Theory unified via symplectic form on Z_p*.
+- **RMT (HYP-777-778)**: Paley moments exceed random. Tournament moments m_1=m_2=0 universally. corr(H, det(I+A))=0.80.
+- **H(P_19) = 1,172,695,746,915 (HYP-776)**: First computation. H/E[H] = 2.527.
+- **4-VERTEX REVERSAL ABSENT AT n=5 (HYP-787)**: Confirms onset at n≥7 only.
+**New contributions:** HYP-770-778, HYP-786-787, cross-field synthesis updated to 28 connections
+**Unresolved threads:** so(n) representation theory → H formula; functor from tournaments to so(n) reps; asymptotic H(P_p)/E[H]
+
 ## opus-2026-03-13-S71b — 2026-03-13: Paley Topological Maximality + Cycle Cascade
 
 **Account:** opus
