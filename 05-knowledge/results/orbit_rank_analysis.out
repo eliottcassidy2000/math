@@ -1,0 +1,176 @@
+=== P_7 (m=3) ===
+Omega_orb: [1, 1, 2, 3, 3, 2, 1]
+R_orb:     [0, 0, 1, 1, 2, 1, 1, 0]
+β_orb:     [1, 0, 0, 0, 0, 0, 0]
+
+Bottom recursion (d=0..m):
+  R_1 = Omega_0 - R_0 = 1 - 0 = 1 ✗
+  R_2 = Omega_1 - R_1 = 1 - 1 = 0 ✗
+  R_3 = Omega_2 - R_2 = 2 - 0 = 2 ✗
+
+Top recursion (d=2m..m+2):
+  R_6 = Omega_6 - R_7 = 1 - 0 = 1 ✓
+  R_5 = Omega_5 - R_6 = 2 - 1 = 1 ✓
+
+Gap at d=3,4:
+  R_m = 2
+  R_{m+2} = 1
+  Budget at d=m: Omega_m - R_m = 1
+  Budget at d=m+1: Omega_{m+1} - R_{m+2} = 2
+  R_{m+1} = Budget - β_m = 1 - 0 = 1
+  R_{m+1} check = Budget2 - β_{m+1} = 2 - 0 = 2
+  Match: R_{m+1} = 2
+
+R_m as alternating sum of Omega_orb:
+  R_m = (+1)*1 + (-1)*1 + (+1)*2 = 2
+  Actual R_m = 2
+
+R_{m+2} as alternating sum:
+  R_{m+2} = (-1)*1 + (+1)*2 = 1
+  Actual R_{m+2} = 1
+
+R_d symmetry (R_d vs R_{2m+1-d}):
+  R_0=0, R_7=0  (r2=0)
+  R_1=0, R_6=1  ratio=0.0000
+  R_2=1, R_5=1  ratio=1.0000
+  R_3=1, R_4=2  ratio=0.5000
+  R_4=2, R_3=1  ratio=2.0000
+  R_5=1, R_2=1  ratio=1.0000
+  R_6=1, R_1=0  (r2=0)
+  R_7=0, R_0=0  (r2=0)
+
+=== P_11 (m=5) ===
+Omega_orb: [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+R_orb:     [0, 0, 1, 3, 11, 30, 61, 78, 60, 30, 6, 0]
+β_orb:     [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+
+Bottom recursion (d=0..m):
+  R_1 = Omega_0 - R_0 = 1 - 0 = 1 ✗
+  R_2 = Omega_1 - R_1 = 1 - 1 = 0 ✗
+  R_3 = Omega_2 - R_2 = 4 - 0 = 4 ✗
+  R_4 = Omega_3 - R_3 = 14 - 4 = 10 ✗
+  R_5 = Omega_4 - R_4 = 41 - 10 = 31 ✗
+
+Top recursion (d=2m..m+2):
+  R_10 = Omega_10 - R_11 = 6 - 0 = 6 ✓
+  R_9 = Omega_9 - R_10 = 36 - 6 = 30 ✓
+  R_8 = Omega_8 - R_9 = 90 - 30 = 60 ✓
+  R_7 = Omega_7 - R_8 = 138 - 60 = 78 ✓
+
+Gap at d=5,6:
+  R_m = 31
+  R_{m+2} = 78
+  Budget at d=m: Omega_m - R_m = 61
+  Budget at d=m+1: Omega_{m+1} - R_{m+2} = 62
+  R_{m+1} = Budget - β_m = 61 - 1 = 60
+  R_{m+1} check = Budget2 - β_{m+1} = 62 - 1 = 61
+  Match: R_{m+1} = 61
+
+R_m as alternating sum of Omega_orb:
+  R_m = (+1)*1 + (-1)*1 + (+1)*4 + (-1)*14 + (+1)*41 = 31
+  Actual R_m = 31
+
+R_{m+2} as alternating sum:
+  R_{m+2} = (-1)*6 + (+1)*36 + (-1)*90 + (+1)*138 = 78
+  Actual R_{m+2} = 78
+
+R_d symmetry (R_d vs R_{2m+1-d}):
+  R_0=0, R_11=0  (r2=0)
+  R_1=0, R_10=6  ratio=0.0000
+  R_2=1, R_9=30  ratio=0.0333
+  R_3=3, R_8=60  ratio=0.0500
+  R_4=11, R_7=78  ratio=0.1410
+  R_5=30, R_6=61  ratio=0.4918
+  R_6=61, R_5=30  ratio=2.0333
+  R_7=78, R_4=11  ratio=7.0909
+  R_8=60, R_3=3  ratio=20.0000
+  R_9=30, R_2=1  ratio=30.0000
+  R_10=6, R_1=0  (r2=0)
+  R_11=0, R_0=0  (r2=0)
+
+=== OMEGA ORBIT vs FULL ===
+
+P_7 (m=3): Omega_orb = [1, 1, 2, 3, 3, 2, 1]
+  Omega_full = [1, 3, 6, 9, 9, 6, 3]
+  Omega_full/m: [0, 1, 2, 3, 3, 2, 1]
+  Check: [0, 0, 0, 0, 0, 0]
+
+P_11 (m=5): Omega_orb = [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+  Omega_full = [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+  Omega_full/m: [0, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+  Check: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+=== β_m^{orb} = (m-3)/2 ANALYSIS ===
+
+Values:
+  m=3, p=7: β_m^orb = 0
+  m=5, p=11: β_m^orb = 1
+  m=7, p=15: β_m^orb = 2
+  m=9, p=19: β_m^orb = 3
+  m=11, p=23: β_m^orb = 4
+  m=13, p=27: β_m^orb = 5
+  m=15, p=31: β_m^orb = 6
+  m=17, p=35: β_m^orb = 7
+  m=19, p=39: β_m^orb = 8
+
+This is:
+  β_m^orb = (m-3)/2 = (p-7)/4
+  β_m = m*(m-3)/2
+  β_{m+1} = m*(m-3)/2 + (p-1) = m*(m-3)/2 + 2m = m*(m+1)/2 = C(m+1,2)
+
+=== ALTERNATING SUM DISCREPANCY ===
+
+P_7: R_m=1, alt_sum=2, diff=1
+  Correct alt_sum (d=1..m-1): 1
+  Match: ✓
+  R_{m+2}: recursion=1, alt_sum(d=m+2..2m)=1
+  Budget_m = Ω_m - R_m = 2
+  Budget_{m+1} = Ω_{m+1} - R_{m+2} = 2
+  R_{m+1} = 2
+  β_m = budget_m - R_{m+1} = 0
+  β_{m+1} = budget_{m+1} - R_{m+1} = 0
+
+P_11: R_m=30, alt_sum=31, diff=1
+  Correct alt_sum (d=1..m-1): 30
+  Match: ✓
+  R_{m+2}: recursion=78, alt_sum(d=m+2..2m)=78
+  Budget_m = Ω_m - R_m = 62
+  Budget_{m+1} = Ω_{m+1} - R_{m+2} = 62
+  R_{m+1} = 61
+  β_m = budget_m - R_{m+1} = 1
+  β_{m+1} = budget_{m+1} - R_{m+1} = 1
+
+
+=== BUDGET FORMULA ===
+
+For the orbit complex:
+  R_m = Σ_{d=1}^{m-1} (-1)^{m-1-d} Ω_d^{orb}
+  R_{m+2} = Σ_{d=m+2}^{2m} (-1)^{d-m-2} Ω_d^{orb}
+  Budget_m = Ω_m^{orb} - R_m
+  Budget_{m+1} = Ω_{m+1}^{orb} - R_{m+2}
+
+  β_m = β_{m+1} since Euler char = 1 and all other β = 0.
+  So: Budget_m + Budget_{m+1} = R_{m+1} + R_{m+1} + β_m + β_{m+1}
+      = 2R_{m+1} + 2β_m
+  And: R_{m+1} = Budget_m - β_m = Budget_{m+1} - β_{m+1}
+  So: β_m = (Budget_m - Budget_{m+1}) / 2 + ... hmm no.
+
+CHECK: Budget_m = Budget_{m+1}?
+  P_7: Budget_m=2, Budget_{m+1}=2 ✓ EQUAL
+  P_11: Budget_m=62, Budget_{m+1}=62 ✓ EQUAL
+
+If Budget_m = Budget_{m+1} = B, then:
+  β_m = B - R_{m+1}
+  β_{m+1} = B - R_{m+1}
+  So we need to determine R_{m+1} (or equivalently β_m).
+
+R_{m+1} is NOT determined by acyclicity alone.
+It depends on the actual rank of ∂_{m+1}^{orb} restricted to Omega_{m+1}^{orb}.
+
+The question becomes: what is the CORANK of ∂_{m+1}^{orb} at degree m+1?
+corank = dim(ker) = Omega_{m+1}^{orb} - R_{m+1}
+
+  P_7: ker(∂_{m+1}^orb) = 3 - 2 = 1
+    = R_{m+2} + β_{m+1} = 1 + 0 = 1
+  P_11: ker(∂_{m+1}^orb) = 140 - 61 = 79
+    = R_{m+2} + β_{m+1} = 78 + 1 = 79
