@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S68 — 2026-03-12: TOPOLOGICAL LANDSCAPE & DIFFERENCE SET CRITERION
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S68 (context recovery)
+**Summary of work:**
+Major discoveries about the topological landscape of circulant tournaments at p=11:
+
+1. **r_7 = 390 VERIFIED** for Paley T_11, confirming HYP-550 (anomaly depth D=(p+1)/2=6).
+
+2. **Per-eigenspace Betti decomposition** (HYP-557): At p=11, β₅=5 comes ENTIRELY from k=0 eigenspace (correcting THM-144's p=7 pattern where k=0 never contributes). β₆=15: k=0 contributes 5, each k≥1 contributes 1.
+
+3. **HYP-552 REFUTED**: At p=11, there are FOUR distinct topological types (not two):
+   - Interval orbit (10): β=[1,1,0,...], χ=0
+   - Paley orbit (2): β=[1,0,0,0,0,5,15,0,...], χ=11
+   - Orbit A of {1,2,3,4,6} (10): β=[1,0,...,0,21,0,...], χ=22
+   - Orbit B of {1,6,7,8,9} (10): β=[1,0,...,14,13,0,...], χ=0
+   Verified r_7 for orbits A (416) and B (337).
+
+4. **HYP-559: Difference set criterion**: Deep eigenspace anomaly ⟺ S-S covers all of Z_p*. PERFECT correlation at p=7 and p=11.
+
+5. **Growth pattern**: Deep anomaly fraction: 25% (p=7) → 69% (p=11) → 81% (p=13). Z_p* orbits: 2 → 4 → 6.
+
+**New contributions:** HYP-557, HYP-558, HYP-559, updated THM-144, circulant_topology_survey.py, paley_r7_verify.py
+**Unresolved threads:**
+- Compute full topology for p=13 orbits (6 orbits, need ranks)
+- Prove difference set criterion algebraically
+- Connect Walsh structure to eigenspace anomaly pattern
+- Can per-eigenspace chi values be predicted from S-S structure?
+
 ## opus-2026-03-12-S67b — 2026-03-12: DEGREE-4 WALSH MAXIMALITY BREAKTHROUGH
 
 **Account:** opus
