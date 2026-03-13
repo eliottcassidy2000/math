@@ -1,0 +1,37 @@
+======================================================================
+EIGENSPACE BETTI DECOMPOSITION FOR PALEY TOURNAMENTS
+======================================================================
+
+P_7: m=3, QR=[1, 2, 4], GF(463), ω=118
+  Enumerated through d=6 (0.0s)
+  A_d = [1, 3, 9, 21, 39, 45, 27]
+  k=0: Ω=[1, 3, 6, 9, 9, 6, 3], ∂r=[0, 0, 3, 3, 6, 3, 3], β=[1, 0, 0, 0, 0, 0, 0]
+  k=1 (QR): Ω=[1, 3, 6, 9, 9, 6, 3], ∂r=[0, 1, 2, 4, 5, 3, 3], β=[0, 0, 0, 0, 1, 0, 0]
+  k=3 (NQR): Ω=[1, 3, 6, 9, 9, 6, 3], ∂r=[0, 1, 2, 4, 5, 3, 3], β=[0, 0, 0, 0, 1, 0, 0]
+
+  Eigenspace identity (all Ω equal): True
+
+  PER-EIGENSPACE BETTI:
+    k=0: nonzero at [(0, 1)]
+    k=1: nonzero at [(4, 1)]
+    k=2: nonzero at [(4, 1)]
+    k=3: nonzero at [(4, 1)]
+    k=4: nonzero at [(4, 1)]
+    k=5: nonzero at [(4, 1)]
+    k=6: nonzero at [(4, 1)]
+
+  TOTAL β = [1, 0, 0, 0, 6, 0, 0]
+  χ = 7 (expected: p=7)
+
+  CONJECTURE VERIFICATION:
+    m = 3
+    m(m-3)/2 = 0
+    C(m+1,2) = 6
+    k=0: predicted [1, 0, 0, 0, 0, 0, 0]
+    k=0: actual    [1, 0, 0, 0, 0, 0, 0]
+    k=0 match: True
+    k≠0 all match β_{m+1}=1: True
+
+P_11: m=5, QR=[1, 3, 4, 5, 9], GF(463), ω=158
+  Enumerated through d=10 (0.2s)
+  A_d = [1, 5, 25, 110, 430, 1430, 3970, 8735, 14395, 15745, 8645]

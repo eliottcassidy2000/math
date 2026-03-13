@@ -6,3 +6,12 @@ Using QR-orbit quotient: all dimensions reduced by factor 9
   d=4: A=5436 (0.0s)
   d=5: A=40284 (0.1s)
   d=6: A=277236 (1.5s)
+  d=7: A=1759914 (12.7s)
+
+Building orbit representatives...
+  d=1: 9 seqs → 1 orbits (ratio 9.0) (12.7s)
+  d=2: 81 seqs → 9 orbits (ratio 9.0) (12.7s)
+  d=3: 684 seqs → 76 orbits (ratio 9.0) (12.7s)
+  d=4: 5436 seqs → 604 orbits (ratio 9.0) (12.7s)
+  d=5: 40284 seqs → 4476 orbits (ratio 9.0) (13.1s)
+  d=6: 277236 seqs → 30804 orbits (ratio 9.0) (16.2s)
