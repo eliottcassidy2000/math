@@ -1,0 +1,39 @@
+======================================================================
+EXACT ARITHMETIC at p=17, m=8
+======================================================================
+  Progress: 0/256 (0s)
+  Progress: 32/256 (0s)
+  Progress: 64/256 (1s)
+  Progress: 96/256 (1s)
+  Progress: 128/256 (2s)
+  Progress: 160/256 (2s)
+  Progress: 192/256 (3s)
+  Progress: 224/256 (3s)
+
+  Computed 256 orientations in 3.4s
+  16 unique D^2 multisets
+
+  --- EXACT c_k VERIFICATION ---
+  c_5: 16 types, 2 params, max_err = 0.0 EXACT
+  c_7: 16 types, 3 params, max_err = 0.0 EXACT
+  c_9: 16 types, 4 params, max_err = 0.0 EXACT
+  c_11: 16 types, 5 params, max_err = 0.0 EXACT
+  c_13: 16 types, 6 params, max_err = 0.0 EXACT
+  c_15: 16 types, 7 params, max_err = 0.0 EXACT
+  c_17: 16 types, 8 params, max_err = 0.0 EXACT
+
+  --- EXACT alpha_1 LINEAR TEST ---
+  alpha_1 = linear(S4,...,S16): 16 types, 8 params
+  Max error = 0.0000
+  *** GENUINE LINEAR IDENTITY CONFIRMED! ***
+  Coefficients:
+    S4: -2013/512 = -3.93164062
+    S6: 2569/256 = 10.03515625
+    S8: -2973/128 = -23.22656250
+    S10: 2951/80 = 36.88750000
+    S12: -94/3 = -31.33333333
+    S14: 11 = 11.00000000
+    S16: -1 = -1.00000000
+    const: 3314012710674576853/24576 = 134847522407005.89
+
+DONE.
