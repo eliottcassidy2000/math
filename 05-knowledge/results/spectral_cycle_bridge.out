@@ -1,0 +1,68 @@
+SPECTRAL-CYCLE BRIDGE AT p=11
+======================================================================
+  Progress: 1/32...
+  Progress: 9/32...
+  Progress: 17/32...
+  Progress: 25/32...
+
+======================================================================
+  CORRELATIONS
+======================================================================
+
+  With H:
+    corr(H, sum_4) = -0.087860
+    corr(H, sum_6) = -0.042933
+    corr(H, prod)  = 0.751858
+    corr(H, N)     = 0.437414
+    corr(H, c5)    = 0.087860
+    corr(H, c7)    = 0.187834
+    corr(H, c9)    = 0.340118
+    corr(H, c11)   = 0.988152
+
+  sum_4 with cycles:
+    corr(sum_4, N)  = -0.928612
+    corr(sum_4, c5) = -1.000000
+    corr(sum_4, c7) = -0.953296
+    corr(sum_4, c9) = -0.966455
+    corr(sum_4, c11)= -0.081677
+
+======================================================================
+  COMMON NEIGHBOR MATRIX ANALYSIS
+======================================================================
+
+  Paley (bits=29):
+    (AA^T)_d: d=0:5 d=1:2 d=2:2 d=3:2 d=4:2 d=5:2 d=6:2 d=7:2 d=8:2 d=9:2 d=10:2 
+    sum_4 from AAT: p * sum d^2 = 11 * 65 = 715
+    sum_4 from eigenvalues: 715.0
+    Match: True
+    tr(A^3) = 165 (expected: 3 * c3_directed = 3 * 110 = 330)
+
+  ClassC (bits=0):
+    (AA^T)_d: d=0:5 d=1:4 d=2:3 d=3:2 d=4:1 d=5:0 d=6:0 d=7:1 d=8:2 d=9:3 d=10:4 
+    sum_4 from AAT: p * sum d^2 = 11 * 85 = 935
+    sum_4 from eigenvalues: 935.0
+    Match: True
+    tr(A^3) = 165 (expected: 3 * c3_directed = 3 * 110 = 330)
+
+======================================================================
+  PALEY FLAT COMMON-NEIGHBOR PROPERTY
+======================================================================
+  Paley off-diagonal AA^T values: [2]
+  Expected: (p-3)/4 = 2.0
+  Flat? True
+  Predicted sum_4 = 715.0
+  Actual sum_4 = 715.0
+
+  KEY INSIGHT: Paley minimizes sum|lam|^4 because it has the
+  flattest common-neighbor distribution (2-transitivity).
+  Flatter spectrum => more uniform cycle distribution => higher H.
+
+======================================================================
+  COMMON-NEIGHBOR VARIANCE ACROSS ORIENTATIONS
+======================================================================
+  Paley: AAT_off_diag = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], mean=2.00, var=0.0000
+  ClassB: AAT_off_diag = [1, 1, 1, 1, 2, 2, 3, 3, 3, 3], mean=2.00, var=0.8000
+  ClassC: AAT_off_diag = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4], mean=2.00, var=2.0000
+  ClassD: AAT_off_diag = [1, 1, 2, 2, 2, 2, 2, 2, 3, 3], mean=2.00, var=0.4000
+
+DONE.
