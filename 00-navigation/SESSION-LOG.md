@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67k — 2026-03-13: Recurrence Taxonomy + Pfaffian Identity THM-174
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67k (context window 2)
+**Summary of work:**
+- **PROVED THM-174**: det(I+2A) = Pf(A-A^T)² for even n, = (Σ (-1)^i Pf(S_ii))² for odd n. Proof: matrix determinant lemma + skew quadratic form vanishing (x^T M x = 0 for skew M). Resolves HYP-788.
+- **PROVED HYP-850**: H² - det(I+2A) ≡ 0 (mod 8). Elementary parity argument.
+- **Jacobsthal unification**: I(P_m, 2) = J(m+2), I(C_m, 2) = j(m) = 2^m+(-1)^m.
+- **k-Jacobsthal tower**: roots converge to 3 as k→∞ (proved: t²=3t).
+- **x=2 universality**: x=2 is the unique positive integer where Fibonacci root is integer (=2).
+- **Deletion recurrence in α-coordinates**: Σ 2^k δ_k(v) = 2μ_v verified all n≤6.
+- **H-Pfaffian gap**: Q = (H²-Pf²)/8 = ab/2 where a=(H-|Pf|)/2, b=(H+|Pf|)/2.
+- **H ≥ |Pf(S)| verified** exhaustively for all n ≤ 7 (367 classes at n=7, zero violations).
+- **Complete 8-level recurrence taxonomy** with cross-level connections.
+- **THM-174 number collision**: kind-pasteur also uses THM-174 for sigma changes. Needs renumbering.
+**New contributions:** THM-174 (Pfaffian identity), HYP-846 (k-nacci x=2 universality), HYP-849 (Jacobsthal unification), HYP-850 (H²-det mod 8)
+**Scripts:** knacci_tower.py, jacobsthal_tournament.py, recurrence_overview_fast.py, det_recurrence_jacobsthal.py, h_squared_minus_det.py, deletion_jacobsthal_deep.py, q_combinatorial_meaning.py, pfaffian_identity.py, pfaffian_gap_structure.py, h_geq_pfaffian.py, recurrence_synthesis.py
+**Unresolved:** (1) Prove H ≥ |Pf(S)| for all n; (2) Express |Pf| in terms of α_k; (3) Find "Pfaffian OCF" graph; (4) Combinatorial meaning of Q; (5) THM-174 number collision with kind-pasteur
+
 ## kind-pasteur-2026-03-13-S61 (cont'd, window 3) — 2026-03-13: Sigma Change Proof + Topological Defect + Fiber Bundle + dc7 Anatomy
 
 **Account:** kind-pasteur

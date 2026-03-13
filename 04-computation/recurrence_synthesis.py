@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""
+FINAL RECURRENCE SYNTHESIS — THE COMPLETE TAXONOMY
+opus-2026-03-13-S67k
+
+This session explored "everything as recurrences" in tournament theory.
+Here is the complete picture.
+"""
+
+print("""
+╔══════════════════════════════════════════════════════════════════════╗
+║           TOURNAMENT RECURRENCE TAXONOMY — FINAL SYNTHESIS          ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║  LEVEL 0: ELEMENTARY SEQUENCES                                       ║
+║  ─────────────────────────────────────                               ║
+║  • I(K_m, 2) = 2m+1                         (arithmetic, complete)   ║
+║  • I(P_m, 2) = J(m+2) = (2^{m+2}-(-1)^m)/3  (Jacobsthal, path)    ║
+║  • I(C_m, 2) = j(m) = 2^m + (-1)^m          (Jacobsthal-Lucas)    ║
+║                                                                      ║
+║  The Jacobsthal recurrence: f(n) = f(n-1) + 2·f(n-2)               ║
+║  Root: 2 (the UNIQUE positive integer root for x=2 evaluation)      ║
+║                                                                      ║
+║  LEVEL 1: k-JACOBSTHAL TOWER                                        ║
+║  ──────────────────────────────                                      ║
+║  k-Jacobsthal: f(n) = f(n-1) + 2·f(n-2) + ... + 2^{k-1}·f(n-k)   ║
+║                                                                      ║
+║  k    root        name                                               ║
+║  2    2.000       Jacobsthal (standard)                              ║
+║  3    2.468       Tribonacci-Jacobsthal                              ║
+║  4    2.698       Tetranacci-Jacobsthal                              ║
+║  5    2.821       Pentanacci-Jacobsthal                              ║
+║  ∞    3.000       (limit: t² = 3t → t = 3)                         ║
+║                                                                      ║
+║  Standard k-nacci roots → 2; ratio k-Jacobsthal/k-nacci → 3/2      ║
+║                                                                      ║
+║  LEVEL 2: TOURNAMENT H AS INDEPENDENCE POLYNOMIAL                    ║
+║  ────────────────────────────────────────────────                    ║
+║  H(T) = I(CG(T), 2) = Σ_k 2^k α_k(T)                             ║
+║  where CG = conflict graph of odd-cycle collections                  ║
+║                                                                      ║
+║  When CG = disjoint paths: H = ∏ J(m_i + 2) (product of Jacobsthal)║
+║  When CG = single cycle:   H = j(m) (Jacobsthal-Lucas)             ║
+║  General CG: independence polynomial of arbitrary graph at x=2       ║
+║                                                                      ║
+║  LEVEL 3: DELETION RECURRENCE (TREE-STRUCTURED)                     ║
+║  ────────────────────────────────────────────────                    ║
+║  H(T) = H(T-v) + 2μ_v(T)    [Claim A, THM-070]                    ║
+║  α_k(T) = α_k(T-v) + δ_k(v)                                       ║
+║  Σ 2^k δ_k(v) = 2μ_v        [verified for all n ≤ 6]              ║
+║                                                                      ║
+║  LEVEL 4: PFAFFIAN/DETERMINANT (NEW THIS SESSION)                   ║
+║  ─────────────────────────────────────────────                      ║
+║  EVEN n: det(I+2A) = Pf(A-A^T)² = Pf(S)²        [THM-174]        ║
+║    Proof: det(J+S) = det(S)·(1+1^T S^{-1} 1) = det(S)             ║
+║    because x^T M x = 0 for skew M                                   ║
+║                                                                      ║
+║  ODD n:  det(I+2A) = (Σ_i (-1)^i Pf(S_ii))²     [THM-174]        ║
+║    where S_ii = S with row/col i removed                             ║
+║                                                                      ║
+║  COROLLARY: det(I+2A) is ALWAYS a perfect square  [HYP-788 proved] ║
+║  COROLLARY: H² - det ≡ 0 (mod 8)                  [HYP-850 proved] ║
+║  OBSERVED:  H ≥ √det(I+2A) = |Pf(S)| for all n ≤ 7                ║
+║                                                                      ║
+║  LEVEL 5: H-PFAFFIAN GAP                                            ║
+║  ──────────────────────────                                          ║
+║  Q = (H² - Pf²)/8 = a·b/2 where a=(H-|Pf|)/2, b=(H+|Pf|)/2      ║
+║  Q = 0 iff H = |Pf| (happens when ≤1 cycle or special structure)   ║
+║  Q satisfies coupled recurrence under deletion                       ║
+║                                                                      ║
+║  LEVEL 6: BOUNDARY RANK (SIGNED RECURRENCE)                         ║
+║  ─────────────────────────────────────────                          ║
+║  R_{d+1} = Ω_d - R_d - β_d                                         ║
+║  When β_d = 0: pure alternating recurrence R_{d+1} = Ω_d - R_d     ║
+║  Ω_d = #(d-paths in tournament), R_d = rank(∂_d)                   ║
+║                                                                      ║
+║  LEVEL 7: COUNTING/ENUMERATION                                      ║
+║  ──────────────────────────────                                      ║
+║  |Iso(n)| = A000568 (tournament isomorphism classes)                ║
+║  Burnside/Pólya formula — no finite recurrence                      ║
+║  But: exponential generating functions, Euler transform for          ║
+║  connected components                                                ║
+║                                                                      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  CROSS-LEVEL CONNECTIONS                                             ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║  • Jacobsthal (L0) ↔ H (L2): When CG is path graph                ║
+║  • H (L2) ↔ Deletion (L3): H(T) = H(T-v) + 2μ_v                  ║
+║  • H (L2) ↔ Pfaffian (L4): H² ≥ Pf², gap div by 8                ║
+║  • Deletion (L3) ↔ Pfaffian (L4): Schur complement = sub-Pfaffian ║
+║  • Boundary (L6) ↔ H (L2): HP = max-dimensional paths              ║
+║  • k-Jacobsthal (L1) ↔ H (L2): clique-free CG channels            ║
+║                                                                      ║
+║  THE FOUR MECHANISMS:                                                ║
+║  1. Jacobsthal sequences (simple CG structure: paths, cycles)        ║
+║  2. Independence polynomials at x=2 (general CG)                    ║
+║  3. Deletion trees (vertex removal → tree-structured recurrence)    ║
+║  4. Pfaffian/Schur complement (determinantal quantities)             ║
+║                                                                      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  KEY OPEN QUESTIONS                                                  ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║  1. PROVE H ≥ |Pf(S)| for all n (Q ≥ 0)                           ║
+║  2. Express |Pf(S)| in terms of {α_k}                              ║
+║  3. Find the "Pfaffian OCF": Pf(S) = I(G', 2) for what graph G'?  ║
+║  4. What does Q = (H²-Pf²)/8 count combinatorially?                ║
+║  5. Does the k-Jacobsthal tower encode cycle-type information?      ║
+║  6. Pfaffian recurrence under deletion?                              ║
+║  7. Connection between Pf and the Euler product H = ∏ Z_{2k+3}(2)  ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+""")
