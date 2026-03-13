@@ -1,0 +1,180 @@
+======================================================================
+ANALYSIS 1: FIBER SIZES OVER LAMBDA CLASSES AT n=5
+======================================================================
+  Total (score, lambda) classes at n=5: 12
+    score=(0, 1, 2, 3, 4), lambda=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0): 120 tournaments, H=[1]
+    score=(0, 1, 3, 3, 3), lambda=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1): 40 tournaments, H=[3]
+    score=(0, 2, 2, 2, 4), lambda=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1): 40 tournaments, H=[3]
+    score=(0, 2, 2, 3, 3), lambda=(0, 0, 0, 0, 0, 1, 1, 1, 1, 2): 120 tournaments, H=[5]
+    score=(1, 1, 1, 3, 4), lambda=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1): 40 tournaments, H=[3]
+    score=(1, 1, 2, 2, 4), lambda=(0, 0, 0, 0, 0, 1, 1, 1, 1, 2): 120 tournaments, H=[5]
+    score=(1, 1, 2, 3, 3), lambda=(0, 0, 0, 1, 1, 1, 1, 1, 1, 3): 120 tournaments, H=[9]
+    score=(1, 1, 2, 3, 3), lambda=(0, 0, 0, 1, 1, 1, 1, 1, 2, 2): 120 tournaments, H=[9]
+    score=(1, 2, 2, 2, 3), lambda=(0, 0, 1, 1, 1, 1, 2, 2, 2, 2): 120 tournaments, H=[11]
+    score=(1, 2, 2, 2, 3), lambda=(0, 1, 1, 1, 1, 1, 1, 2, 2, 2): 120 tournaments, H=[13]
+    score=(1, 2, 2, 2, 3), lambda=(1, 1, 1, 1, 1, 1, 1, 1, 1, 3): 40 tournaments, H=[15]
+    score=(2, 2, 2, 2, 2), lambda=(1, 1, 1, 1, 1, 2, 2, 2, 2, 2): 24 tournaments, H=[15]
+
+======================================================================
+ANALYSIS 2: GAUGE GROUP AT n=5
+======================================================================
+
+  score=(0, 1, 2, 3, 4): 120 tournaments, H=[1]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(1, 1, 2, 2, 4): 120 tournaments, H=[5]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(1, 1, 2, 3, 3): 120 tournaments, H=[9]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(0, 2, 2, 3, 3): 120 tournaments, H=[5]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(1, 1, 2, 3, 3): 120 tournaments, H=[9]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(1, 2, 2, 2, 3): 120 tournaments, H=[11]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(1, 2, 2, 2, 3): 120 tournaments, H=[13]
+    |Aut| of first tournament: 1
+    Orbit size = 5!/1 = 120
+    Number of orbits: 1
+
+  score=(1, 1, 1, 3, 4): 40 tournaments, H=[3]
+    |Aut| of first tournament: 3
+    Orbit size = 5!/3 = 40
+    Number of orbits: 1
+
+  score=(0, 2, 2, 2, 4): 40 tournaments, H=[3]
+    |Aut| of first tournament: 3
+    Orbit size = 5!/3 = 40
+    Number of orbits: 1
+
+  score=(0, 1, 3, 3, 3): 40 tournaments, H=[3]
+    |Aut| of first tournament: 3
+    Orbit size = 5!/3 = 40
+    Number of orbits: 1
+
+  score=(1, 2, 2, 2, 3): 40 tournaments, H=[15]
+    |Aut| of first tournament: 3
+    Orbit size = 5!/3 = 40
+    Number of orbits: 1
+
+  score=(2, 2, 2, 2, 2): 24 tournaments, H=[15]
+    |Aut| of first tournament: 5
+    Orbit size = 5!/5 = 24
+    Number of orbits: 1
+
+======================================================================
+ANALYSIS 3: H = f(LAMBDA) + 2*c_n_dir
+======================================================================
+
+THEOREM (H decomposition within lambda classes):
+
+For any two tournaments T1, T2 on n<=8 vertices with isomorphic labeled
+lambda graphs:
+  H(T1) - H(T2) = 2 * (c_n_dir(T1) - c_n_dir(T2))
+
+where c_n_dir = number of directed Hamiltonian cycles.
+
+Proof: Lambda isomorphism preserves c3_dir, c5_dir (for n=7: c3 is directly
+determined, and c5 is determined because 5-cycle structure is captured by
+the lambda graph up to the isolated c7 contribution).
+Also preserves alpha_2 (disjoint 3-cycle pairs depend only on vertex sets).
+So delta_H = 2 * delta_c_n_dir from the OCF decomposition.
+
+Note: This does NOT say lambda isomorphism preserves the individual 5-cycle
+counts per subset. It CAN redistribute 5-cycles among subsets while preserving
+the total c5_dir. What it DOES preserve is the sum c3_dir + c5_dir + alpha_2.
+
+
+  H=109: c3=11, c5=23, c7=8, alpha2=6
+    base = 1 + 2*(11+23) + 4*6 = 93
+    H = base + 2*c7 = 93 + 16 = 109
+    Actual H = 109
+
+  H=111: c3=11, c5=23, c7=9, alpha2=6
+    base = 1 + 2*(11+23) + 4*6 = 93
+    H = base + 2*c7 = 93 + 18 = 111
+    Actual H = 111
+
+======================================================================
+ANALYSIS 4: THE VITALI TOWER (FORMAL)
+======================================================================
+
+THE VITALI TOWER FOR TOURNAMENT H-DETERMINATION
+
+Let T_n = set of all tournaments on n labeled vertices.
+Define equivalence relations:
+
+  T1 ~_0 T2  iff  score(T1) = score(T2)
+  T1 ~_1 T2  iff  sorted_lambda(T1) = sorted_lambda(T2) and T1 ~_0 T2
+  T1 ~_2 T2  iff  lambda(T1) ~= lambda(T2) (isomorphic labeled lambda)
+  T1 ~_3 T2  iff  T1 = T2 (identity)
+
+The quotient tower: T_n/~_3  ->  T_n/~_2  ->  T_n/~_1  ->  T_n/~_0
+
+At each level, H is a function of the class:
+  Level 0: H is NOT a function of score class (multiple H per score)
+  Level 1: H is NOT a function of sorted lambda class (ambiguous)
+  Level 2: H is NOT a function of lambda iso class at n>=7 (c7 varies)
+  Level 3: H IS a function (trivially, since T determines everything)
+
+The "measurability defect" at each level:
+  Level 0->1: Sorted lambda resolves ~66% of score-ambiguous classes (n=7)
+  Level 1->2: Lambda iso resolves ~93% of sorted-lambda-ambiguous classes (n=7)
+  Level 2->3: c7_dir resolves the remaining 2 classes (n=7)
+
+The VITALI QUOTIENT Q_k = ~_k / ~_{k+1} captures what is lost at each step:
+  Q_0 = {sorted lambda histogram} / {score class}
+  Q_1 = {lambda iso class} / {sorted lambda}
+  Q_2 = {full tournament} / {lambda iso class}  <-- contains c7_dir
+
+The analogy with R/Q:
+  R = full tournament (uncountably many dimensions)
+  Q = lambda equivalence class (the "measurable" part)
+  The Vitali set = a cross-section picking one tournament per lambda class
+  Non-measurability = H is NOT determined by lambda alone at n>=7
+  But the non-measurable part is "almost trivial" (just one bit: c7 mod 1)
+
+CONJECTURE: For all n, the complete invariant is:
+  (lambda isomorphism class, c_n_dir)
+i.e., H = f(lambda) + 2*c_n_dir where f is a function of the lambda class.
+This would mean the Vitali tower has EXACTLY 4 levels for all n.
+
+======================================================================
+ANALYSIS 5: GAUGE FREEDOM AT n=6
+======================================================================
+  Total (score, lambda) classes at n=6: 47
+  Fiber size distribution:
+    size=80: 1 classes
+    size=144: 2 classes
+    size=240: 12 classes
+    size=720: 25 classes
+    size=1440: 6 classes
+    size=2880: 1 classes
+
+  Total tournaments: 32768 (should be 32768)
+  Total classes: 47
+  Average fiber size: 697.2
+
+  Largest fiber: score=(1, 2, 2, 3, 3, 4), 2880 tournaments, H=[25, 29]
+  Ambiguous classes: 3 (should be 0 if labeled lambda determines H)
+
+======================================================================
+DONE.
+======================================================================
