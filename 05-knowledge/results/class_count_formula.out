@@ -1,0 +1,88 @@
+
+p=3: m=1, 2^m=2 orientations
+  D^2 types: 1
+  sum_4 types: 1
+  D^2 class sizes: [2]
+  sum_4 class sizes: [2]
+  D^2 = sum_4 partition? True
+  QR = [1]
+    sum_4=3.0: size=2, #QR range=0-1, dist=[0, 1]
+
+p=5: m=2, 2^m=4 orientations
+  D^2 types: 1
+  sum_4 types: 1
+  D^2 class sizes: [4]
+  sum_4 class sizes: [4]
+  D^2 = sum_4 partition? True
+  QR = [1, 4]
+    sum_4=30.0: size=4, #QR range=1-1, dist=[1]
+
+p=7: m=3, 2^m=8 orientations
+  D^2 types: 2
+  sum_4 types: 2
+  D^2 class sizes: [6, 2]
+  sum_4 class sizes: [6, 2]
+  D^2 = sum_4 partition? True
+  QR = [1, 2, 4]
+    sum_4=105.0: size=2, #QR range=0-3, dist=[0, 3]
+    sum_4=133.0: size=6, #QR range=1-2, dist=[1, 2]
+
+p=11: m=5, 2^m=32 orientations
+  D^2 types: 4
+  sum_4 types: 4
+  D^2 class sizes: [10, 10, 10, 2]
+  sum_4 class sizes: [10, 10, 10, 2]
+  D^2 = sum_4 partition? True
+  QR = [1, 3, 4, 5, 9]
+    sum_4=715.0: size=2, #QR range=0-5, dist=[0, 5]
+    sum_4=759.0: size=10, #QR range=2-3, dist=[2, 3]
+    sum_4=803.0: size=10, #QR range=2-3, dist=[2, 3]
+    sum_4=935.0: size=10, #QR range=1-4, dist=[1, 4]
+
+p=13: m=6, 2^m=64 orientations
+  D^2 types: 6
+  sum_4 types: 5
+  D^2 class sizes: [12, 12, 12, 12, 12, 4]
+  sum_4 class sizes: [24, 12, 12, 12, 4]
+  D^2 = sum_4 partition? False
+  QR = [1, 3, 4, 9, 10, 12]
+    sum_4=1482.0: size=4, #QR range=3-3, dist=[3]
+    sum_4=1534.0: size=24, #QR range=3-3, dist=[3]
+    sum_4=1586.0: size=12, #QR range=3-3, dist=[3]
+    sum_4=1690.0: size=12, #QR range=3-3, dist=[3]
+    sum_4=1898.0: size=12, #QR range=3-3, dist=[3]
+
+p=17: m=8, 2^m=256 orientations
+  D^2 types: 16
+  sum_4 types: 9
+  D^2 class sizes: [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  sum_4 class sizes: [48, 48, 32, 32, 32, 16, 16, 16, 16]
+  D^2 = sum_4 partition? False
+
+p=19: m=9, 2^m=512 orientations
+  D^2 types: 30
+  sum_4 types: 14
+  D^2 class sizes: [18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 6, 2]
+  sum_4 class sizes: [90, 72, 54, 42, 36, 36, 36, 36, 36, 18, 18, 18, 18, 2]
+  D^2 = sum_4 partition? False
+
+
+D^2 type counts by prime:
+  p=3: 1 types
+  p=5: 1 types
+  p=7: 2 types
+  p=11: 4 types
+  p=13: 6 types
+  p=17: 16 types
+  p=19: 30 types
+
+sum_4 type counts by prime:
+  p=3: 1 types
+  p=5: 1 types
+  p=7: 2 types
+  p=11: 4 types
+  p=13: 5 types
+  p=17: 9 types
+  p=19: 14 types
+
+DONE.
