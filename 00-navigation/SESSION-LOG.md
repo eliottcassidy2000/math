@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S61 — 2026-03-13: Vitali Atom Complete Characterization
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S58 (overlap weight analysis)
+**Summary of work:**
+- **THM-169: COMPLETE VITALI ATOM CHARACTERIZATION**: Proved a perfect discriminator for when a lambda-preserving (1,1,2,2) 4-vertex reversal changes H(T). The conditions are: mixed_c3=4 AND either ext cyclic (always changes, 100%) or ext transitive with |B_s|=4 or |B_k|=4. Zero false positives/negatives on 5000+ tournaments.
+- **PFAFFIAN ODDNESS (HYP-796, PROVED)**: sqrt(det(I+2A)) is always odd for any tournament. Proof via Pf(J-I) = 1 for all even dimensions.
+- **COMPLEMENT SYMMETRY (HYP-797)**: Ps(T^c) = (-1)^{(n-1)/2} * Ps(T). Verified exhaustive n=5, sampled n=7.
+- **4-REVERSAL PHASE TRANSITION (HYP-799, PROVED exhaustive)**: Lambda-preserving (1,1,2,2) reversal NEVER changes H at n<=6 (exhaustive). Sharp transition at n=7.
+- **HAM PATH COMPLETION MECHANISM**: delta_c7 = sum of completion counts on AFTER endpoint pairs minus BEFORE. Only the EEESSSS threading pattern (4 subset vertices consecutive) is affected. Universal endpoint type distribution for ALL (1,1,2,2) tournaments.
+- **ZERO HAM PATH OVERLAP (HYP-822)**: Reversal maps ALL 5 Ham paths to 5 COMPLETELY DIFFERENT ones. Shared=0 universally.
+- **CYCLIC EXT => 100% CHANGE (HYP-823)**: Confirmed 48/48 with zero exceptions.
+- **W=0 DELTA ALWAYS ZERO**: Disjoint pair count preserved even when H changes — the "dark sector" is connectivity, not count.
+**New contributions:** THM-169. HYP-796 through HYP-802, HYP-820 through HYP-823. Scripts: pfaffian_oddness_and_vitali.py, vitali_atom_anatomy.py, parity_sign_deep.py, four_reversal_phase_transition.py, vitali_c7_mechanism.py, ham_path_vitali_mechanism.py, transitive_ext_discriminator.py
+**Unresolved threads:** (1) Extend to n=8,9 — does the discriminator generalize? (2) Connection to so(n) representation theory. (3) Can the THM-169 discriminator yield a closed-form for the number of lambda classes with ambiguity?
+
 ## opus-2026-03-13-S67k (cont'd) — 2026-03-13: Iso Class Graph, RG Flow, Fractal Structure
 
 **Account:** opus
