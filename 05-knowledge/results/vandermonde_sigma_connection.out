@@ -1,0 +1,104 @@
+======================================================================
+DOES (H, I(3)) ENCODE THE SAME INFO AS SIGMA?
+======================================================================
+
+n=7, 10000 samples, 52.5s
+
+c7 determination:
+  H alone: 46 ambiguous / 77
+  (H, I(3)): 30 ambiguous / 166
+  (lambda, H): 0 ambiguous / 9797
+  (lambda, I(3)): 0 ambiguous / 9797
+  (lambda, H, I(3)): 0 ambiguous / 9797
+  (lambda, α₁, α₂): 0 ambiguous / 9797
+
+======================================================================
+FORMULA: c7 = α₁ - c3 - c5 where c3,c5 are lambda-determined
+======================================================================
+
+Verifying formula: c7 = (5H - 4I₃ - 1)/6 - c3 - c5
+  FAIL: H=111, I3=181, c3=11, c5=25, c7_actual=9, c7_formula=-64.3, α₂=5
+  FAIL: H=83, I3=136, c3=10, c5=18, c7_actual=5, c7_formula=-49.7, α₂=4
+  FAIL: H=73, I3=118, c3=9, c5=17, c7_actual=4, c7_formula=-44.0, α₂=3
+  FAIL: H=43, I3=67, c3=7, c5=10, c7_actual=2, c7_formula=-26.0, α₂=1
+  FAIL: H=77, I3=130, c3=9, c5=14, c7_actual=5, c7_formula=-45.7, α₂=5
+  OK: 1, FAIL: 1999
+
+At n=7: α₂ counts only (3,3) disjoint 3-cycle pairs (3+5=8>7, 5+5=10>7)
+
+Is H lambda-determined at n=7? Ambiguous: 1/4942
+  Lambda group with multiple H values: [109, 111]
+Is I(3) lambda-determined at n=7? Ambiguous: 0/4932
+
+======================================================================
+KEY: α₂ IS LAMBDA-DETERMINED (SINCE IT'S ONLY (3,3) PAIRS)
+======================================================================
+Is α₂ lambda-determined at n=7? Ambiguous: 0/4920
+
+Conclusion: H = 1 + 2(c3 + c5 + c7) + 4·α₂
+  c3, c5, α₂ are lambda-determined
+  So: c7 = (H - 1 - 2c3 - 2c5 - 4α₂) / 2
+  c7 is (lambda, H)-determined
+
+  H is NOT lambda-determined (1 ambiguous groups)
+  The non-lambda part of H is exactly 2·c7
+  This is consistent with c7 NOT being lambda-determined
+
+  Checking: H variation = 2 × c7 variation within lambda fibers
+
+======================================================================
+CONNECTING TO I(3): WHAT DOES I(3) ADD BEYOND H?
+======================================================================
+
+  (I₃ - I₃_lambda_part) / (H - H_lambda_part) = 3c7 / 2c7 = 3/2
+  → I(3) adds NO new information beyond H (at n=7)!
+  → The 3/2 ratio is the SHADOW of the Vandermonde matrix
+  → But at n=9 (where α₃ > 0), I(3) WILL add new information
+
+  Ratio check (I₃_residual / H_residual) over 1595 samples with c7>0:
+  min=1.500000, max=1.500000, mean=1.500000
+  All exactly 3/2? True
+
+======================================================================
+FINAL SYNTHESIS
+======================================================================
+
+THE 2-3 STRUCTURE AT n=7 (max packing = 2):
+
+1. H = 1 + 2α₁ + 4α₂  (α₃=0 since 3+3+3=9 > 7)
+   I₃ = 1 + 3α₁ + 9α₂
+
+2. α₁ = c3 + c5 + c7  (total odd directed cycles)
+   α₂ = #{disjoint 3-cycle pairs}  (only type at n=7)
+
+3. c3, c5, α₂ are all lambda-determined.
+   c7 is NOT lambda-determined (but (lambda,sigma)-determined).
+
+4. The OCF formula:
+   H = [1 + 2c3 + 2c5 + 4α₂] + 2c7
+       ←── lambda-determined ──→   ←─ residual ─→
+
+5. I(3) = [1 + 3c3 + 3c5 + 9α₂] + 3c7
+          ←── lambda-determined ──→   ←─ residual ─→
+
+6. Residual ratio: 3c7 / 2c7 = 3/2  ALWAYS.
+   → I(3) carries NO information beyond H at n=7.
+   → The "3/2 ratio" is a THEOREM, not a coincidence.
+
+7. At n=9: α₃ = #{(3,3,3) triples} becomes possible.
+   H = 1 + 2α₁ + 4α₂ + 8α₃
+   I₃ = 1 + 3α₁ + 9α₂ + 27α₃
+   Now the Vandermonde extraction gives α₃ = (27(H-1) - 8(I₃-1))/18... wait
+
+   Better: with 3 unknowns, need 3 equations. Add I(4):
+   I₄ = 1 + 4α₁ + 16α₂ + 64α₃
+
+   Then the (2,3,4) Vandermonde system resolves α₁, α₂, α₃.
+
+8. DEEPER: "If you know 2 and 3, you have the keys to the universe"
+   At n ≤ 8 (where α₃=0), EXACTLY TWO evaluation points suffice.
+   2 and 3 are the first two positive integers ≥ 2.
+   They give the MINIMAL Vandermonde basis.
+   The extraction α₁, α₂ then combines with lambda to give EVERYTHING.
+
+Done.
