@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S61 — 2026-03-13: Vitali overlap/Pfaffian duality + det(I+2A) perfect square
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S61 (context recovery — deep overlap analysis)
+**Summary of work:**
+- **THM: det(I+2A) is always a perfect square (HYP-788, PROVED)**: For any tournament T, det(I+2A(T)) = (sum_i (-1)^i Pf(S_ii))^2 where S = A-A^T. Even n: Pf(S)^2. Odd n: rank-1 adjugate formula. Verified exhaustive n=3-6, sampled n=7 (20,972 tournaments, 0 failures). Square roots always ODD.
+- **PFAFFIAN SUM DISTINGUISHES VITALI PAIR (HYP-789)**: H=109 has Pf_sum=-13, H=111 has Pf_sum=-19. The signed matching structure sees through the lambda graph where triple coherence fails.
+- **{2,1,0} OVERLAP WEIGHTS ARE LAMBDA-DETERMINED (HYP-790)**: The 3-cycle overlap distribution is IDENTICAL for lambda-isomorphic tournaments. W=2 from C(lambda,2), W=0 = alpha_2, W=1 by complement. Hidden dimension is NOT in overlap weights.
+- **SIGNED OVERLAP AND 5-CYCLE CHIRALITY (HYP-791-792)**: Orientation-weighted overlaps differ (delta +2 at W=0, -2 at W=2). 5-cycle chirality sum: 5 vs 17. 8 of 21 five-cycle vertex sets differ.
+- **MATCHING-CYCLE DUALITY**: The Pfaffian vector w_i = (-1)^i Pf(S\i) counts signed PMs of T\{i}. This is INDEPENDENT of H (captures different info). Sorted |w| = {1,1,1,3,3,7,7} vs {1,1,1,3,3,9,9} for the ambiguous pair.
+- **TRIPLE COHERENCE REFUTED (HYP-784 updated)**: Exhaustive n=7 test: 0/75 ambiguous classes resolved by triple coherence. c7_dir is irreducible non-measurable content.
+**New contributions:** HYP-788-792, HYP-784 updated, 7 new scripts, Vitali tower formalization
+**Unresolved threads:** (1) Why is sqrt(det(I+2A)) always odd? (2) Algebraic proof of Pfaffian sum oddness. (3) Does (H, Pf_sum) form a complete invariant at higher n? (4) Connection to so(n) representation theory (HYP-786).
+
+---
+
 ## opus-2026-03-13-S67k — 2026-03-13: 28 Cross-Field Connections + so(n) Theorem
 
 **Account:** opus
