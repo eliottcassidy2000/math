@@ -1,0 +1,120 @@
+P_7: m=3, |A_3|/p = 21
+  Case (a) both OK:       3
+  Case (b) only f1 junk:  6
+  Case (c) only f2 junk:  6
+  Case (d) both junk:     6
+  Total junk rows:        12
+  rank(C_3) = 12
+  rank/|A_3| = 12/21 = 0.571429
+  4/p = 0.571429
+  Match: True
+
+  Junk rows from face 1: 6
+  Junk rows from face 2: 6
+
+  Face 1 junk detail:
+    r=3: count=4, N(r)=2, N(r)×m_adj=?
+    r=5: count=4, N(r)=2, N(r)×m_adj=?
+    r=6: count=4, N(r)=2, N(r)×m_adj=?
+
+  Case (d) analysis: both s+t ∉ QR AND t+u ∉ QR
+
+  Omega_3/p = 9
+  Expected: see known values
+
+============================================================
+
+P_11: m=5, |A_3|/p = 110
+  Case (a) both OK:       20
+  Case (b) only f1 junk:  30
+  Case (c) only f2 junk:  30
+  Case (d) both junk:     30
+  Total junk rows:        40
+  rank(C_3) = 40
+  rank/|A_3| = 40/110 = 0.363636
+  4/p = 0.363636
+  Match: True
+
+  Junk rows from face 1: 20
+  Junk rows from face 2: 20
+
+  Face 1 junk detail:
+    r=2: count=12, N(r)=3, N(r)×m_adj=?
+    r=6: count=12, N(r)=3, N(r)×m_adj=?
+    r=7: count=12, N(r)=3, N(r)×m_adj=?
+    r=8: count=12, N(r)=3, N(r)×m_adj=?
+    r=10: count=12, N(r)=3, N(r)×m_adj=?
+
+  Case (d) analysis: both s+t ∉ QR AND t+u ∉ QR
+
+  Omega_3/p = 70
+  Expected: see known values
+
+============================================================
+
+P_19: m=9, |A_3|/p = 684
+  Case (a) both OK:       144
+  Case (b) only f1 junk:  180
+  Case (c) only f2 junk:  180
+  Case (d) both junk:     180
+  Total junk rows:        144
+  rank(C_3) = 144
+  rank/|A_3| = 144/684 = 0.210526
+  4/p = 0.210526
+  Match: True
+
+  Junk rows from face 1: 72
+  Junk rows from face 2: 72
+
+  Face 1 junk detail:
+    r=2: count=40, N(r)=5, N(r)×m_adj=?
+    r=3: count=40, N(r)=5, N(r)×m_adj=?
+    r=8: count=40, N(r)=5, N(r)×m_adj=?
+    r=10: count=40, N(r)=5, N(r)×m_adj=?
+    r=12: count=40, N(r)=5, N(r)×m_adj=?
+    r=13: count=40, N(r)=5, N(r)×m_adj=?
+    r=14: count=40, N(r)=5, N(r)×m_adj=?
+    r=15: count=40, N(r)=5, N(r)×m_adj=?
+    r=18: count=40, N(r)=5, N(r)×m_adj=?
+
+  Case (d) analysis: both s+t ∉ QR AND t+u ∉ QR
+
+  Omega_3/p = 540
+  Expected: see known values
+
+============================================================
+
+P_23: m=11, |A_3|/p = 1265
+  Case (a) both OK:       275
+  Case (b) only f1 junk:  330
+  Case (c) only f2 junk:  330
+  Case (d) both junk:     330
+  Total junk rows:        220
+  rank(C_3) = 220
+  rank/|A_3| = 220/1265 = 0.173913
+  4/p = 0.173913
+  Match: True
+
+  Junk rows from face 1: 110
+  Junk rows from face 2: 110
+
+  Face 1 junk detail:
+    r=5: count=60, N(r)=6, N(r)×m_adj=?
+    r=7: count=60, N(r)=6, N(r)×m_adj=?
+    r=10: count=60, N(r)=6, N(r)×m_adj=?
+    r=11: count=60, N(r)=6, N(r)×m_adj=?
+    r=14: count=60, N(r)=6, N(r)×m_adj=?
+    r=15: count=60, N(r)=6, N(r)×m_adj=?
+    r=17: count=60, N(r)=6, N(r)×m_adj=?
+    r=19: count=60, N(r)=6, N(r)×m_adj=?
+    r=20: count=60, N(r)=6, N(r)×m_adj=?
+    r=21: count=60, N(r)=6, N(r)×m_adj=?
+    r=22: count=60, N(r)=6, N(r)×m_adj=?
+
+  Case (d) analysis: both s+t ∉ QR AND t+u ∉ QR
+
+  Omega_3/p = 1045
+  Expected: see known values
+
+============================================================
+
