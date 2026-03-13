@@ -1,0 +1,21 @@
+n=8: Finding lambda-preserving reversals and checking H variation...
+  ... trial 0: 0.0s, lam-preserving: 0, dH≠0: 0
+  trial 18, (0, 1, 4, 6): H=281→285, ΔH=4
+  trial 103, (0, 2, 3, 6): H=593→595, ΔH=2
+  trial 108, (0, 3, 4, 7): H=111→109, ΔH=-2
+  ... trial 250: 4.2s, lam-preserving: 6, dH≠0: 3
+  trial 254, (2, 4, 5, 7): H=365→359, ΔH=-6
+  trial 304, (2, 3, 5, 6): H=319→321, ΔH=2
+  trial 304, (4, 5, 6, 7): H=319→325, ΔH=6
+  trial 440, (3, 4, 6, 7): H=283→285, ΔH=2
+  trial 484, (0, 4, 5, 7): H=661→657, ΔH=-4
+  ... trial 500: 8.0s, lam-preserving: 12, dH≠0: 8
+  trial 660, (0, 1, 4, 7): H=435→433, ΔH=-2
+  trial 709, (2, 4, 5, 6): H=153→151, ΔH=-2
+  ... trial 750: 11.9s, lam-preserving: 18, dH≠0: 11
+
+Total: lambda-preserving (1,1,2,2): 20
+  Of which H changed: 13
+  |ΔH| distribution: {2: 7, 4: 3, 6: 3}
+
+Done.

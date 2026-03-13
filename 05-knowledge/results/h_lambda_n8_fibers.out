@@ -1,0 +1,10 @@
+  trial 5000: 27.1s, 5000 groups, 0 ambiguous
+  trial 10000: 54.7s, 9999 groups, 0 ambiguous
+  trial 15000: 80.7s, 14994 groups, 0 ambiguous
+
+n=8: 19990 lambda groups from 20000 samples, 106.8s
+H ambiguous: 0/19990 (0.000%)
+Gap distribution: {}
+(c3,c5) ambiguous: 0/19990
+
+Done.
