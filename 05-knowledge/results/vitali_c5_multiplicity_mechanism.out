@@ -1,0 +1,151 @@
+======================================================================
+c5 MULTIPLICITY CHANGE MECHANISM
+======================================================================
+  ... 500/2000, found 11 examples
+  ... 1000/2000, found 17 examples
+  ... 1500/2000, found 33 examples
+
+Total examples: 43
+
+======================================================================
+c5 MULTIPLICITY CHANGES BY |V cap S|
+======================================================================
+
+  |V cap S| = 2: 340 changes
+    delta distribution: {-2: 6, -1: 164, 1: 164, 2: 6}
+
+  |V cap S| = 4: 90 changes
+    delta distribution: {-1: 45, 1: 45}
+
+======================================================================
+c3 VERTEX SET CHANGES BY |V cap S|
+======================================================================
+  gained, |V cap S| = 2: 180
+  lost, |V cap S| = 2: 180
+
+======================================================================
+DISJOINT (c3,c5) PAIRS AND THE S-OVERLAP CONSTRAINT
+======================================================================
+
+For disjoint c3 and c5: |c3 cap S| + |c5 cap S| = 4
+  k=0, 4-k=4: c3 fully external, c5 = S + 1 ext. All 6 arcs reversed in c5.
+  k=1, 4-k=3: c3 has 1 S-vert + 2 ext. c5 has 3 S-verts.
+  k=2, 4-k=2: c3 has 2 S-verts + 1 ext. c5 has 2 S-verts.
+  k=3, 4-k=1: c3 has 3 S-verts. c5 has 1 S-vert => c5 INVARIANT.
+
+Only k=0,1,2 can cause c5 multiplicity change (need |c5 cap S| >= 2).
+k=3 is the "protected" case: c3 absorbs most of S, protecting c5.
+
+  c5 with |V cap S| = 1 changing: 0 (should be 0)
+
+======================================================================
+HOW THE c3 SWAP AFFECTS DISJOINT PAIR PRODUCTS
+======================================================================
+
+  Example 1 (dH=2):
+    Subset S = (1, 4, 5, 6)
+    Lost c3 [1, 2, 4] (cap S = 2):
+      Disjoint c5 [0, 3, 5, 6, 7]: mult 1->3 (delta=2)
+    Lost c3 [2, 5, 6] (cap S = 2):
+      Disjoint c5 [0, 1, 3, 4, 7]: mult 1->3 (delta=2)
+    Gained c3 [1, 2, 5] (cap S = 2):
+      Disjoint c5 [0, 3, 4, 6, 7]: mult 3->1 (delta=-2)
+    Gained c3 [2, 4, 6] (cap S = 2):
+      Disjoint c5 [0, 1, 3, 5, 7]: mult 3->1 (delta=-2)
+
+  Example 2 (dH=2):
+    Subset S = (2, 3, 5, 7)
+    Lost c3 [1, 2, 3] (cap S = 2):
+      Disjoint c5 [0, 4, 5, 6, 7]: mult 0->1 (delta=1)
+    Lost c3 [1, 5, 7] (cap S = 2):
+      Disjoint c5 [0, 2, 3, 4, 6]: mult 0->1 (delta=1)
+    Gained c3 [1, 2, 7] (cap S = 2):
+      Disjoint c5 [0, 3, 4, 5, 6]: mult 1->0 (delta=-1)
+    Gained c3 [1, 3, 5] (cap S = 2):
+      Disjoint c5 [0, 2, 4, 6, 7]: mult 1->0 (delta=-1)
+
+  Example 3 (dH=-2):
+    Subset S = (0, 2, 3, 5)
+    Lost c3 [0, 2, 7] (cap S = 2):
+      Disjoint c5 [1, 3, 4, 5, 6]: mult 1->3 (delta=2)
+    Lost c3 [3, 5, 7] (cap S = 2):
+      Disjoint c5 [0, 1, 2, 4, 6]: mult 1->3 (delta=2)
+    Gained c3 [0, 5, 7] (cap S = 2):
+      Disjoint c5 [1, 2, 3, 4, 6]: mult 3->1 (delta=-2)
+    Gained c3 [2, 3, 7] (cap S = 2):
+      Disjoint c5 [0, 1, 4, 5, 6]: mult 3->1 (delta=-2)
+
+  Example 4 (dH=2):
+    Subset S = (1, 2, 4, 7)
+    Lost c3 [0, 1, 2] (cap S = 2):
+      Disjoint c5 [3, 4, 5, 6, 7]: mult 1->2 (delta=1)
+    Lost c3 [0, 4, 7] (cap S = 2):
+      Disjoint c5 [1, 2, 3, 5, 6]: mult 1->2 (delta=1)
+    Lost c3 [1, 4, 6] (cap S = 2):
+      Disjoint c5 [0, 2, 3, 5, 7]: mult 1->3 (delta=2)
+    Lost c3 [2, 6, 7] (cap S = 2):
+      Disjoint c5 [0, 1, 3, 4, 5]: mult 1->3 (delta=2)
+    Gained c3 [0, 1, 4] (cap S = 2):
+      Disjoint c5 [2, 3, 5, 6, 7]: mult 2->1 (delta=-1)
+    Gained c3 [0, 2, 7] (cap S = 2):
+      Disjoint c5 [1, 3, 4, 5, 6]: mult 2->1 (delta=-1)
+    Gained c3 [1, 2, 6] (cap S = 2):
+      Disjoint c5 [0, 3, 4, 5, 7]: mult 3->1 (delta=-2)
+    Gained c3 [4, 6, 7] (cap S = 2):
+      Disjoint c5 [0, 1, 2, 3, 5]: mult 3->1 (delta=-2)
+
+  Example 5 (dH=-4):
+    Subset S = (1, 2, 4, 6)
+    Lost c3 [1, 4, 5] (cap S = 2):
+      Disjoint c5 [0, 2, 3, 6, 7]: mult 0->1 (delta=1)
+    Lost c3 [2, 5, 6] (cap S = 2):
+      Disjoint c5 [0, 1, 3, 4, 7]: mult 0->1 (delta=1)
+    Gained c3 [1, 2, 5] (cap S = 2):
+      Disjoint c5 [0, 3, 4, 6, 7]: mult 1->0 (delta=-1)
+    Gained c3 [4, 5, 6] (cap S = 2):
+      Disjoint c5 [0, 1, 2, 3, 7]: mult 1->0 (delta=-1)
+
+======================================================================
+THE COMPLETE PICTURE: VITALI SET ANALOGY
+======================================================================
+
+The Vitali set V in measure theory is constructed by choosing one
+representative from each equivalence class of R/Q. The key property:
+V is non-measurable because Q-translations of V tile R without overlap,
+but countably many disjoint translates can't cover a positive measure set.
+
+The Vitali ATOM in tournaments plays an analogous role:
+- The (1,1,2,2) reversal is like a "translation" of the tournament structure
+- It preserves the "measure-like" quantities (lambda graph, cycle counts)
+- But it changes the "non-measurable" quantity (Hamiltonian path count H)
+
+The {2,1,0} overlap structure IS the measure-theoretic structure:
+- W=2 (share edge): deterministic, preserved (like measurable sets)
+- W=1 (share vertex): conflict boundary (like the Lebesgue measurable sets)
+- W=0 (disjoint): independence (like the non-measurable sets)
+
+The Vitali atom acts at the boundary between W=1 and W=0:
+- It preserves the STATISTICAL distribution of overlaps
+  (like a measure-preserving transformation)
+- But it changes the SPECIFIC identities of cycles
+  (like a non-measurable set that looks the same statistically)
+- The i2 change is the "non-measurable" part:
+  it depends on the EXACT placement of cycles, not just their statistics
+
+At n=7, the Vitali atom can only change cycle COUNTS (c7), which is
+"measurable" — you can detect it from gross statistics.
+
+At n=8, the Vitali atom acts on the HIDDEN DIMENSION:
+- It changes c5 multiplicities (how many directed cycles per vertex set)
+- These multiplicities determine i2 via the bilinear form
+  i2 = sum over disjoint (VS_i, VS_j) of m_i * m_j
+- The change is "non-measurable" in the sense that:
+  total directed counts are preserved (delta_c3_dir = delta_c5_dir = 0)
+  overlap spectrum is preserved (delta_vs_disjoint = 0)
+  but the PRODUCT structure (bilinear form) changes
+
+This is a PERFECT analogy to Vitali non-measurability:
+the set "looks the same" under every statistical test (measure zero/one),
+but it has structure that is invisible to the sigma-algebra.
+
+Done.
