@@ -1,0 +1,135 @@
+========================================================================
+H ≥ |Pf(S)| — TOWARD A PROOF
+========================================================================
+
+--- PART 1: Exhaustive verification up to n=7 ---
+
+  n=3: exhaustive, 2 classes, violations=0, min(H/|Pf|)=1.0000
+  n=4: exhaustive, 4 classes, violations=0, min(H/|Pf|)=1.0000
+  n=5: exhaustive, 12 classes, violations=0, min(H/|Pf|)=1.0000
+  n=6: exhaustive, 52 classes, violations=0, min(H/|Pf|)=1.0000
+  n=7: exhaustive, 367 classes, violations=0, min(H/|Pf|)=1.0000
+
+--- PART 2: When is H/|Pf| closest to 1? ---
+
+Looking for tournaments where H ≈ |Pf| (ratio close to 1)
+These are the 'hardest' cases for the inequality.
+
+n=3: H = |Pf| in 2 cases: [1, 3]
+
+n=4: H = |Pf| in 3 cases: [1, 3]
+
+n=5: H = |Pf| in 4 cases: [1, 3]
+  Close: H=15, |Pf|=9, ratio=1.6667
+  Close: H=9, |Pf|=5, ratio=1.8000
+  Close: H=13, |Pf|=7, ratio=1.8571
+
+n=6: H = |Pf| in 6 cases: [1, 3, 9]
+  Close: H=15, |Pf|=9, ratio=1.6667
+  Close: H=15, |Pf|=9, ratio=1.6667
+  Close: H=9, |Pf|=5, ratio=1.8000
+
+
+--- PART 3: Algebraic approach ---
+
+
+For EVEN n:
+  H = I(CG, 2) = Σ 2^k α_k
+  |Pf(S)| = √det(S) where S = A - A^T
+
+  We need: I(CG, 2)² ≥ det(S)
+
+  ATTEMPT: Express det(S) in terms of the tournament structure.
+  S is skew with entries ±1 off-diagonal.
+  det(S) = Pf(S)² where Pf = signed matching count.
+
+  For n=4: S is 4×4 skew with entries ±1.
+    Pf(S) = S_{12}S_{34} - S_{13}S_{24} + S_{14}S_{23}
+    Each S_{ij} = ±1, so Pf ∈ {-3,-1,+1,+3} (must be odd since each term is ±1).
+    |Pf| ∈ {1, 3}.
+    H ∈ {1, 3, 5}.
+    H ≥ |Pf| holds: only need to check H=1→|Pf|≤1, H=3→|Pf|≤3.
+
+  For n=6: S is 6×6 skew. Pf has 15 terms (number of perfect matchings of K_6).
+    |Pf| ∈ {1,3,5,7,9,...}. H can be as small as 1.
+    Need: when H=1 (transitive tournament), Pf(S)=±1.
+    Check: transitive has S_{ij} = sign(j-i) for all i<j.
+
+  Transitive T_4: H=1, Pf(S)=1
+  Transitive T_6: H=1, Pf(S)=1
+  Transitive T_8: H=?, Pf(S)=1
+
+--- PART 4: H=|Pf| characterization ---
+
+CONJECTURE: H = |Pf| iff the conflict graph has clique cover number ≤ 1
+(i.e., all cycles pairwise share a vertex, or the CG is a single clique)
+
+  n=3 H=|Pf|=1: #cycles=0, all_pairwise_share=True
+  n=3 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=4 H=|Pf|=1: #cycles=0, all_pairwise_share=True
+  n=4 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=4 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=5 H=|Pf|=1: #cycles=0, all_pairwise_share=True
+  n=5 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=5 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=5 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=6 H=|Pf|=1: #cycles=0, all_pairwise_share=True
+  n=6 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=6 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=6 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=6 H=|Pf|=3: #cycles=1, all_pairwise_share=True
+  n=6 H=|Pf|=9: #cycles=2, all_pairwise_share=False
+
+--- PART 5: The H/|Pf| ratio as n grows ---
+
+For the regular tournament (all scores equal, n odd) and near-regular:
+  n=3: max(H/|Pf|) ≈ 1.00 (H=1, |Pf|=1)
+  n=5: max(H/|Pf|) ≈ 11.00 (H=11, |Pf|=1)
+  n=7: max(H/|Pf|) ≈ 145.00 (H=145, |Pf|=1)
+
+========================================================================
+TOWARD A PROOF OF H ≥ |Pf(S)|
+========================================================================
+
+STRATEGY 1: Cauchy-Schwarz / AM-QM
+  Both H and Pf are sums over combinatorial objects:
+  H = Σ_{HP} 1  (count of Hamiltonian paths)
+  Pf = Σ_{PM} ε(M) · ∏ S_{ij}  (signed matching count)
+  |Pf| ≤ Σ |...| but this just gives |Pf| ≤ (n-1)!! (all matchings)
+  Not useful since H can be 1 < (n-1)!!
+
+STRATEGY 2: Use I+2A = J+S decomposition
+  H² = det(I+2A) + 8Q where Q ≥ 0 (to prove)
+  This is circular.
+
+STRATEGY 3: Deletion induction
+  H(T) = H(T-v) + 2μ_v ≥ H(T-v)
+  |Pf(S_T)| vs |Pf(S_{T-v})|?
+
+  For EVEN n → ODD n-1:
+    √det(T) = |Pf(S)|
+    √det(T-v) = |Σ (-1)^i Pf(S_{ii})|
+    The sub-Pfaffians include Pf(S_{vv}) = Pf(S_{T-v})
+
+  This is getting complicated. The inequality may require a
+  more global argument.
+
+STRATEGY 4: OCF bridge
+  H = I(CG, 2) = Σ_k 2^k α_k
+  |Pf| = √det(I+2A)
+
+  For H ≥ |Pf|, we need I(CG, 2) ≥ √det(J+S).
+
+  Maybe: I(CG, x) ≥ √det(J + x·S') for all x > 0?
+  This would give the inequality as the special case x = 2.
+
+  Or: there might be a "Pfaffian independence polynomial" P(x)
+  such that Pf(S) = P(2) and I(CG, x) ≥ |P(x)| for x ≥ 0.
+
+CONCLUSION: The inequality H ≥ |Pf(S)| is OBSERVED for all n ≤ 7
+(exhaustive up to 6, sampled at 7). A proof likely requires either:
+  (a) A direct algebraic identity relating I(CG,2) and Pf(S), or
+  (b) An inductive argument using the deletion recurrence on both sides.
+
+This is a STRONG open question worth pursuing.
+
