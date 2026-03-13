@@ -1,0 +1,18 @@
+============================================================
+EXACT c5_dir FORMULA IN TERMS OF LAMBDA (n=5)
+============================================================
+
+Features: [1, S1, S2, S3, D2, trL2, trL3]
+Coefficients: ['-0.038690', '0.936813', '-0.319963', '0.194750', '0.146749', '-0.639927', '-0.040598']
+Max abs error: 0.129808
+Perfect fit? False
+
+============================================================
+VERIFICATION AT n=6
+============================================================
+  Trial 0: c5_direct=8, c5_formula=7.90
+  Trial 1: c5_direct=1, c5_formula=0.93
+  Trial 2: c5_direct=2, c5_formula=1.97
+  Restricted lambda formula works at n=6? False
+
+Done.

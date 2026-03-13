@@ -1,0 +1,55 @@
+============================================================
+THE 9 GROUPS: (S1, S2, S3) -> c5
+============================================================
+  S1= 0, S2=  0, S3=   0 -> c5=0
+  S1= 3, S2=  3, S3=   3 -> c5=0
+  S1= 6, S2=  8, S3=  12 -> c5=0
+  S1= 9, S2= 13, S3=  21 -> c5=1
+  S1= 9, S2= 15, S3=  33 -> c5=1
+  S1=12, S2= 18, S3=  30 -> c5=2
+  S1=12, S2= 18, S3=  36 -> c5=3
+  S1=12, S2= 20, S3=  36 -> c5=1
+  S1=15, S2= 25, S3=  45 -> c5=2
+
+Linear fit: c5 = -0.675325 + 0.705628*S1 + -0.558442*S2 + 0.129870*S3
+Max error: 0.675325
+
+Linear doesn't fit. Trying quadratic...
+Quadratic fit max error: 0.220423
+
+============================================================
+RELATIONSHIP TO SCORE SEQUENCE
+============================================================
+  Score (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)): S1=0, S2=0, S3=0, c5=0
+  Score (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)): S1=3, S2=3, S3=3, c5=0
+  Score (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)): S1=3, S2=3, S3=3, c5=0
+  Score (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)): S1=6, S2=8, S3=12, c5=0
+  Score (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)): S1=3, S2=3, S3=3, c5=0
+  Score (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)): S1=6, S2=8, S3=12, c5=0
+  Score (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)): 2 distinct (S1,S2,S3,c5) tuples
+    S1=9, S2=13, S3=21, c5=1
+    S1=9, S2=15, S3=33, c5=1
+  Score (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)): 3 distinct (S1,S2,S3,c5) tuples
+    S1=12, S2=18, S3=30, c5=2
+    S1=12, S2=18, S3=36, c5=3
+    S1=12, S2=20, S3=36, c5=1
+  Score (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)): S1=15, S2=25, S3=45, c5=2
+
+============================================================
+VERIFICATION AT n=6
+============================================================
+
+============================================================
+RESTRICTED vs FULL LAMBDA RELATIONSHIP
+============================================================
+
+Trial 0:
+  lambda_V(u,v) = lambda(u,v) - witness(k,u,v): VERIFIED for all pairs
+
+Trial 1:
+  lambda_V(u,v) = lambda(u,v) - witness(k,u,v): VERIFIED for all pairs
+
+Trial 2:
+  lambda_V(u,v) = lambda(u,v) - witness(k,u,v): VERIFIED for all pairs
+
+Done.

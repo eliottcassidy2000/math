@@ -1,0 +1,77 @@
+============================================================
+EXACT c5_dir FORMULA IN TERMS OF LAMBDA (n=5)
+============================================================
+
+--- Degree 1 Features ---
+Features (19): ['1', 'S1', 'S2', 'S3', 'S4', 'S5', 'D1', 'D2', 'D3', 'D4', 'D5', 'trL2', 'trL3', 'trL4', 'trL5', 'n0', 'n1', 'n2', 'n3']
+Matrix rank: 9
+Max abs error: 0.000000
+Perfect fit? True
+
+--- Degree 2 Features ---
+Features (47): ['1', 'S1', 'S2', 'S3', 'S4', 'S5', 'D1', 'D2', 'D3', 'D4']...
+Matrix rank: 9
+Max abs error: 0.000000
+Perfect fit? True
+
+--- Feature Importance (backward elimination) ---
+Minimal feature set (8 features):
+  ['D5', 'trL5', 'S1*D2', 'S1*D3', 'S2*S3', 'S3*D3', 'S3*trL3', 'D3*trL2']
+  Max error: 0.000000
+
+============================================================
+APPROACH 2: Group by canonical lambda, fit per-group
+============================================================
+Lambda groups: 208
+Ambiguous: 0
+c5 IS a function of lambda? True
+c5 range: [0, 1, 2, 3]
+
+Multiset lambda groups: 9
+Ambiguous: 0
+c5 determined by lambda MULTISET? True
+
+(S1,S2) groups: 8
+Ambiguous: 1
+
+--- Relationship between S2 and trL2 ---
+  S2=0, trL2=0, 2*S2=0, equal? True
+  S2=0, trL2=0, 2*S2=0, equal? True
+  S2=3, trL2=6, 2*S2=6, equal? True
+  S2=0, trL2=0, 2*S2=0, equal? True
+  S2=8, trL2=16, 2*S2=16, equal? True
+  S2=3, trL2=6, 2*S2=6, equal? True
+  S2=8, trL2=16, 2*S2=16, equal? True
+  S2=0, trL2=0, 2*S2=0, equal? True
+  S2=15, trL2=30, 2*S2=30, equal? True
+  S2=8, trL2=16, 2*S2=16, equal? True
+
+--- Checking redundancies ---
+  S1=0, D1=0, 2*S1=0 | S2=0, trL2=0, 2*S2=0 | D2=0
+  S1=0, D1=0, 2*S1=0 | S2=0, trL2=0, 2*S2=0 | D2=0
+  S1=3, D1=6, 2*S1=6 | S2=3, trL2=6, 2*S2=6 | D2=12
+  S1=0, D1=0, 2*S1=0 | S2=0, trL2=0, 2*S2=0 | D2=0
+  S1=6, D1=12, 2*S1=12 | S2=8, trL2=16, 2*S2=16 | D2=40
+
+============================================================
+POWER SUM SUFFICIENCY CHECK
+============================================================
+  S1..S1: 6 groups, 1 ambiguous
+  S1..S2: 8 groups, 1 ambiguous
+  S1..S3: 9 groups, 0 ambiguous
+  --> S1..S3 SUFFICE to determine c5!
+
+--- Adding vertex degree power sums ---
+  S1,S2,D2: 8 groups, 1 ambiguous
+  S1,S2,D3: 8 groups, 1 ambiguous
+  S1,S2,D2+D3: 8 groups, 1 ambiguous
+
+--- Adding matrix traces ---
+  S1,S2,trL3: 8 groups, 1 ambiguous
+  S1,S2,trL4: 9 groups, 0 ambiguous
+  S1,S2,trL5: 9 groups, 0 ambiguous
+
+--- Ambiguous (S1,S2) groups ---
+  S1=12, S2=18: c5 = [2, 3], lambda multisets: [(np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(2)), (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(3))]...
+
+Done.
