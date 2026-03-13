@@ -1,0 +1,229 @@
+======================================================================
+NEWTON IDENTITY / D^2 MULTISET ANALYSIS
+======================================================================
+
+======================================================================
+D^2 MULTISET STRUCTURE at p=7, m=3
+======================================================================
+  Gauss sum g = 0.0000+2.6458j
+  g^2 = -7.0000+0.0000j
+  |g|^2 = 7.0000 (should be p=7)
+  g^2/p = -1.0000+0.0000j
+  p = 3 mod 4: g^2 = -p = -7 (pure imaginary g)
+
+  2 unique D^2 multisets (out of 8 orientations)
+
+  Unique D^2 multisets:
+    [0.058, 0.3931, 4.7989]: count=6, sum=5.2500, sum_sq=23.1875
+    [1.75, 1.75, 1.75]: count=2, sum=5.2500, sum_sq=9.1875
+
+  --- D^2 value analysis ---
+  4 distinct D^2 values across all orientations:
+    D^2 = 0.057979
+    D^2 = 0.393104
+    D^2 = 1.750000
+    D^2 = 4.798917
+
+  Paley D^2 multiset: [1.75, 1.75, 1.75]
+  Expected uniform value: (p+1)/4 = 2.0
+  Max deviation from uniform: 0.25000000
+
+  Interval D^2 multiset: [0.057979, 0.393104, 4.798917]
+  Interval eigenvalues: ['-0.5000+2.1906j', '-0.5000-0.2408j', '-0.5000+0.6270j']
+
+  --- Eigenvalue-frequency relationship ---
+
+    bits=0, S=[6, 5, 4]:
+      t=1: lambda = -0.5000 + -2.1906i, |lambda|^2 = 5.0489, D^2 = 4.7989
+      t=2: lambda = -0.5000 + 0.2408i, |lambda|^2 = 0.3080, D^2 = 0.0580
+      t=3: lambda = -0.5000 + -0.6270i, |lambda|^2 = 0.6431, D^2 = 0.3931
+
+    bits=7, S=[1, 2, 3]:
+      t=1: lambda = -0.5000 + 2.1906i, |lambda|^2 = 5.0489, D^2 = 4.7989
+      t=2: lambda = -0.5000 + -0.2408i, |lambda|^2 = 0.3080, D^2 = 0.0580
+      t=3: lambda = -0.5000 + 0.6270i, |lambda|^2 = 0.6431, D^2 = 0.3931
+
+    bits=2, S=[6, 2, 4]:
+      t=1: lambda = -0.5000 + -0.2408i, |lambda|^2 = 0.3080, D^2 = 0.0580
+      t=2: lambda = -0.5000 + -0.6270i, |lambda|^2 = 0.6431, D^2 = 0.3931
+      t=3: lambda = -0.5000 + -2.1906i, |lambda|^2 = 5.0489, D^2 = 4.7989
+
+  --- Effective dimension of D^2 space ---
+  Singular values of centered D^2 matrix: ['6.4807', '6.4807', '0.0000']
+  Effective rank: 2 (out of m=3)
+  Fraction of variance: ['0.5000', '0.5000', '0.0000']
+
+======================================================================
+D^2 MULTISET STRUCTURE at p=11, m=5
+======================================================================
+  Gauss sum g = 0.0000+3.3166j
+  g^2 = -11.0000+0.0000j
+  |g|^2 = 11.0000 (should be p=11)
+  g^2/p = -1.0000+0.0000j
+  p = 3 mod 4: g^2 = -p = -11 (pure imaginary g)
+
+  4 unique D^2 multisets (out of 32 orientations)
+
+  Unique D^2 multisets:
+    [0.0002, 0.7829, 3.3593, 3.8655, 5.7422]: count=10, sum=13.7500, sum_sq=59.8125
+    [0.0216, 0.1033, 0.333, 1.1987, 12.0935]: count=10, sum=13.7500, sum_sq=147.8125
+    [0.1736, 0.8732, 1.9673, 2.2438, 8.492]: count=10, sum=13.7500, sum_sq=81.8125
+    [2.75, 2.75, 2.75, 2.75, 2.75]: count=2, sum=13.7500, sum_sq=37.8125
+
+  --- D^2 value analysis ---
+  16 distinct D^2 values across all orientations:
+    D^2 = 0.000184
+    D^2 = 0.021554
+    D^2 = 0.103253
+    D^2 = 0.173599
+    D^2 = 0.332964
+    D^2 = 0.782863
+    D^2 = 0.873231
+    D^2 = 1.198691
+    D^2 = 1.967321
+    D^2 = 2.243805
+    D^2 = 2.750000
+    D^2 = 3.359264
+    D^2 = 3.865460
+    D^2 = 5.742229
+    D^2 = 8.492045
+    D^2 = 12.093538
+
+  Paley D^2 multiset: [2.75, 2.75, 2.75, 2.75, 2.75]
+  Expected uniform value: (p+1)/4 = 3.0
+  Max deviation from uniform: 0.25000000
+
+  Interval D^2 multiset: [0.021554, 0.103253, 0.332964, 1.198691, 12.093538]
+  Interval eigenvalues: ['-0.5000+3.4776j', '-0.5000-0.1468j', '-0.5000+1.0948j', '-0.5000-0.3213j', '-0.5000+0.5770j']
+
+  --- Eigenvalue-frequency relationship ---
+
+    bits=0, S=[10, 9, 8, 7, 6]:
+      t=1: lambda = -0.5000 + -3.4776i, |lambda|^2 = 12.3435, D^2 = 12.0935
+      t=2: lambda = -0.5000 + 0.1468i, |lambda|^2 = 0.2716, D^2 = 0.0216
+      t=3: lambda = -0.5000 + -1.0948i, |lambda|^2 = 1.4487, D^2 = 1.1987
+      t=4: lambda = -0.5000 + 0.3213i, |lambda|^2 = 0.3533, D^2 = 0.1033
+      t=5: lambda = -0.5000 + -0.5770i, |lambda|^2 = 0.5830, D^2 = 0.3330
+
+    bits=31, S=[1, 2, 3, 4, 5]:
+      t=1: lambda = -0.5000 + 3.4776i, |lambda|^2 = 12.3435, D^2 = 12.0935
+      t=2: lambda = -0.5000 + -0.1468i, |lambda|^2 = 0.2716, D^2 = 0.0216
+      t=3: lambda = -0.5000 + 1.0948i, |lambda|^2 = 1.4487, D^2 = 1.1987
+      t=4: lambda = -0.5000 + -0.3213i, |lambda|^2 = 0.3533, D^2 = 0.1033
+      t=5: lambda = -0.5000 + 0.5770i, |lambda|^2 = 0.5830, D^2 = 0.3330
+
+    bits=10, S=[10, 2, 8, 4, 6]:
+      t=1: lambda = -0.5000 + -0.1468i, |lambda|^2 = 0.2716, D^2 = 0.0216
+      t=2: lambda = -0.5000 + -0.3213i, |lambda|^2 = 0.3533, D^2 = 0.1033
+      t=3: lambda = -0.5000 + -0.5770i, |lambda|^2 = 0.5830, D^2 = 0.3330
+      t=4: lambda = -0.5000 + -1.0948i, |lambda|^2 = 1.4487, D^2 = 1.1987
+      t=5: lambda = -0.5000 + -3.4776i, |lambda|^2 = 12.3435, D^2 = 12.0935
+
+  --- Polynomial constraints on D^2 values ---
+    Minimal poly coeffs (from roots): [np.float64(-0.0107), np.float64(58.3945), np.float64(-117.2187), np.float64(64.625), np.float64(-13.75), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(-0.0107), np.float64(0.6445), np.float64(-7.2187), np.float64(20.625), np.float64(-13.75), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(-5.6826), np.float64(45.3321), np.float64(-81.4688), np.float64(53.625), np.float64(-13.75), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(-157.2764), np.float64(285.957), np.float64(-207.9688), np.float64(75.625), np.float64(-13.75), np.float64(1.0)]
+
+  --- Effective dimension of D^2 space ---
+  Singular values of centered D^2 matrix: ['20.9762', '20.9762', '20.9762', '20.9762', '0.0000']
+  Effective rank: 4 (out of m=5)
+  Fraction of variance: ['0.2500', '0.2500', '0.2500', '0.2500', '0.0000']
+
+======================================================================
+D^2 MULTISET STRUCTURE at p=13, m=6
+======================================================================
+  Gauss sum g = 3.6056-0.0000j
+  g^2 = 13.0000-0.0000j
+  |g|^2 = 13.0000 (should be p=13)
+  g^2/p = 1.0000-0.0000j
+  p = 1 mod 4: g^2 = +p = 13 (real g)
+
+  6 unique D^2 multisets (out of 64 orientations)
+
+  Unique D^2 multisets:
+    [0.0001, 0.65, 1.3125, 1.9142, 2.3792, 13.2441]: count=12, sum=19.5000, sum_sq=186.8750
+    [0.0152, 0.0689, 0.1962, 0.5247, 1.7382, 16.9569]: count=12, sum=19.5000, sum_sq=290.8750
+    [0.0467, 0.1073, 2.7351, 3.4677, 5.3499, 7.7932]: count=12, sum=19.5000, sum_sq=108.8750
+    [0.2367, 0.7052, 1.1317, 3.9731, 6.1103, 7.343]: count=12, sum=19.5000, sum_sq=108.8750
+    [0.3622, 0.4449, 0.8493, 3.1301, 4.5474, 10.166]: count=12, sum=19.5000, sum_sq=134.8750
+    [1.4472, 1.4472, 1.4472, 5.0528, 5.0528, 5.0528]: count=4, sum=19.5000, sum_sq=82.8750
+
+  --- D^2 value analysis ---
+  32 distinct D^2 values across all orientations:
+    D^2 = 0.000062
+    D^2 = 0.015188
+    D^2 = 0.046747
+    D^2 = 0.068864
+    D^2 = 0.107306
+    D^2 = 0.196215
+    D^2 = 0.236668
+    D^2 = 0.362248
+    D^2 = 0.444924
+    D^2 = 0.524719
+    D^2 = 0.649970
+    D^2 = 0.705197
+    D^2 = 0.849333
+    D^2 = 1.131724
+    D^2 = 1.312531
+    D^2 = 1.447224
+    D^2 = 1.738157
+    D^2 = 1.914204
+    D^2 = 2.379172
+    D^2 = 2.735125
+    D^2 = 3.130092
+    D^2 = 3.467710
+    D^2 = 3.973131
+    D^2 = 4.547355
+    D^2 = 5.052776
+    D^2 = 5.349940
+    D^2 = 6.110303
+    D^2 = 7.342977
+    D^2 = 7.793171
+    D^2 = 10.166048
+    D^2 = 13.244062
+    D^2 = 16.956857
+
+  Interval D^2 multiset: [0.015188, 0.068864, 0.196215, 0.524719, 1.738157, 16.956857]
+  Interval eigenvalues: ['-0.5000+4.1179j', '-0.5000-0.1232j', '-0.5000+1.3184j', '-0.5000-0.2624j', '-0.5000+0.7244j', '-0.5000-0.4430j']
+
+  --- Eigenvalue-frequency relationship ---
+
+    bits=0, S=[12, 11, 10, 9, 8, 7]:
+      t=1: lambda = -0.5000 + -4.1179i, |lambda|^2 = 17.2069, D^2 = 16.9569
+      t=2: lambda = -0.5000 + 0.1232i, |lambda|^2 = 0.2652, D^2 = 0.0152
+      t=3: lambda = -0.5000 + -1.3184i, |lambda|^2 = 1.9882, D^2 = 1.7382
+      t=4: lambda = -0.5000 + 0.2624i, |lambda|^2 = 0.3189, D^2 = 0.0689
+      t=5: lambda = -0.5000 + -0.7244i, |lambda|^2 = 0.7747, D^2 = 0.5247
+      t=6: lambda = -0.5000 + 0.4430i, |lambda|^2 = 0.4462, D^2 = 0.1962
+
+    bits=63, S=[1, 2, 3, 4, 5, 6]:
+      t=1: lambda = -0.5000 + 4.1179i, |lambda|^2 = 17.2069, D^2 = 16.9569
+      t=2: lambda = -0.5000 + -0.1232i, |lambda|^2 = 0.2652, D^2 = 0.0152
+      t=3: lambda = -0.5000 + 1.3184i, |lambda|^2 = 1.9882, D^2 = 1.7382
+      t=4: lambda = -0.5000 + -0.2624i, |lambda|^2 = 0.3189, D^2 = 0.0689
+      t=5: lambda = -0.5000 + 0.7244i, |lambda|^2 = 0.7747, D^2 = 0.5247
+      t=6: lambda = -0.5000 + -0.4430i, |lambda|^2 = 0.4462, D^2 = 0.1962
+
+    bits=21, S=[1, 11, 3, 9, 5, 7]:
+      t=1: lambda = -0.5000 + 0.1232i, |lambda|^2 = 0.2652, D^2 = 0.0152
+      t=2: lambda = -0.5000 + 0.2624i, |lambda|^2 = 0.3189, D^2 = 0.0689
+      t=3: lambda = -0.5000 + 0.4430i, |lambda|^2 = 0.4462, D^2 = 0.1962
+      t=4: lambda = -0.5000 + 0.7244i, |lambda|^2 = 0.7747, D^2 = 0.5247
+      t=5: lambda = -0.5000 + 1.3184i, |lambda|^2 = 1.9882, D^2 = 1.7382
+      t=6: lambda = -0.5000 + 4.1179i, |lambda|^2 = 17.2069, D^2 = 16.9569
+
+  --- Polynomial constraints on D^2 values ---
+    Minimal poly coeffs (from roots): [np.float64(0.0032), np.float64(-51.4668), np.float64(170.7774), np.float64(-195.8125), np.float64(96.6875), np.float64(-19.5), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(0.0032), np.float64(-0.2793), np.float64(5.0273), np.float64(-26.8125), np.float64(44.6875), np.float64(-19.5), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(1.9836), np.float64(-62.8416), np.float64(455.1521), np.float64(-403.8124), np.float64(135.6875), np.float64(-19.5), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(33.6712), np.float64(-238.3419), np.float64(494.1524), np.float64(-403.8125), np.float64(135.6875), np.float64(-19.5), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(19.8079), np.float64(-135.1544), np.float64(320.2774), np.float64(-312.8125), np.float64(122.6875), np.float64(-19.5), np.float64(1.0)]
+    Minimal poly coeffs (from roots): [np.float64(391.0186), np.float64(-1042.7164), np.float64(1087.2771), np.float64(-559.8124), np.float64(148.6875), np.float64(-19.5), np.float64(1.0)]
+
+  --- Effective dimension of D^2 space ---
+  Singular values of centered D^2 matrix: ['35.3270', '35.3270', '35.3270', '35.3270', '35.3270', '0.0000']
+  Effective rank: 5 (out of m=6)
+  Fraction of variance: ['0.2000', '0.2000', '0.2000', '0.2000', '0.2000', '0.0000']
+
+DONE.

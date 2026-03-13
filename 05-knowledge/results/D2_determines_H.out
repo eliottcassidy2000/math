@@ -1,0 +1,122 @@
+======================================================================
+D^2 MULTISET -> H DETERMINATION TEST
+======================================================================
+
+======================================================================
+D^2 DETERMINES H? at p=7, m=3, testing 8 orientations
+======================================================================
+  Computed in 0.0s
+  2 unique D^2 multisets
+  *** D^2 multiset DETERMINES H at p=7 ***
+
+  Orbit types:
+    D^2=[0.058, 0.3931, 4.7989]: H=175, count=6
+    D^2=[1.75, 1.75, 1.75]: H=189, count=2
+
+  Dimension analysis:
+    m = 3 (number of eigenvalue pairs)
+    m-1 = 2 (dimension of D^2 hyperplane, since S2=const)
+    n_types = 2 (number of unique D^2 multisets)
+    Moments needed for LINEAR fit: n_types - 1 = 1
+    Available moment parameters: m-1 = 2
+    FIT IS TRIVIALLY EXACT (n_types-1 <= m-1)
+    Any 1 independent moments + const will fit H exactly
+
+======================================================================
+D^2 DETERMINES H? at p=11, m=5, testing 32 orientations
+======================================================================
+  Computed in 0.5s
+  4 unique D^2 multisets
+  *** D^2 multiset DETERMINES H at p=11 ***
+
+  Orbit types:
+    D^2=[0.0002, 0.7829, 3.3593, 3.8655, 5.7422]: H=92411, count=10
+    D^2=[0.0216, 0.1033, 0.333, 1.1987, 12.0935]: H=93027, count=10
+    D^2=[0.1736, 0.8732, 1.9673, 2.2438, 8.492]: H=93467, count=10
+    D^2=[2.75, 2.75, 2.75, 2.75, 2.75]: H=95095, count=2
+
+  Dimension analysis:
+    m = 5 (number of eigenvalue pairs)
+    m-1 = 4 (dimension of D^2 hyperplane, since S2=const)
+    n_types = 4 (number of unique D^2 multisets)
+    Moments needed for LINEAR fit: n_types - 1 = 3
+    Available moment parameters: m-1 = 4
+    FIT IS TRIVIALLY EXACT (n_types-1 <= m-1)
+    Any 3 independent moments + const will fit H exactly
+
+======================================================================
+D^2 DETERMINES H? at p=13, m=6, testing 64 orientations
+======================================================================
+  Computed in 5.1s
+  6 unique D^2 multisets
+  *** D^2 multiset DETERMINES H at p=13 ***
+
+  Orbit types:
+    D^2=[0.0001, 0.65, 1.3125, 1.9142, 2.3792, 13.2441]: H=3707483, count=12
+    D^2=[0.0152, 0.0689, 0.1962, 0.5247, 1.7382, 16.9569]: H=3711175, count=12
+    D^2=[0.0467, 0.1073, 2.7351, 3.4677, 5.3499, 7.7932]: H=3704857, count=12
+    D^2=[0.2367, 0.7052, 1.1317, 3.9731, 6.1103, 7.343]: H=3683797, count=12
+    D^2=[0.3622, 0.4449, 0.8493, 3.1301, 4.5474, 10.166]: H=3669497, count=12
+    D^2=[1.4472, 1.4472, 1.4472, 5.0528, 5.0528, 5.0528]: H=3703011, count=4
+
+  Dimension analysis:
+    m = 6 (number of eigenvalue pairs)
+    m-1 = 5 (dimension of D^2 hyperplane, since S2=const)
+    n_types = 6 (number of unique D^2 multisets)
+    Moments needed for LINEAR fit: n_types - 1 = 5
+    Available moment parameters: m-1 = 5
+    FIT IS TRIVIALLY EXACT (n_types-1 <= m-1)
+    Any 5 independent moments + const will fit H exactly
+
+======================================================================
+ORBIT TYPE COUNTS
+======================================================================
+
+     p   m    2^m  n_types  m-1 p mod 4 Trivial?
+     5   2      4        1    1       1      YES
+     7   3      8        2    2       3      YES
+    11   5     32        4    4       3      YES
+    13   6     64        6    5       1      YES
+    17   8    256       16    7       1       NO
+    19   9    512       30    8       3       NO
+    23  11   2048       94   10       3       NO
+    29  14  16384      343   13       1       NO
+    31  15  32768      436   14       3       NO
+
+  Sampling larger primes (128 orientations):
+    p=37, m=18: 128 types (of 128 sampled)
+    p=41, m=20: 128 types (of 128 sampled)
+    p=43, m=21: 128 types (of 128 sampled)
+    p=47, m=23: 128 types (of 128 sampled)
+    p=53, m=26: 128 types (of 128 sampled)
+    p=59, m=29: 128 types (of 128 sampled)
+    p=61, m=30: 128 types (of 128 sampled)
+
+======================================================================
+NONLINEAR MOMENT TESTS at p=11
+======================================================================
+  Linear(S4): max_err = 1911.25
+  Linear(S4,S6): max_err = 647.10
+  Linear(S4,S6,S8): max_err = 0.00
+  Linear(S4,S6,S8,S10): max_err = 0.00
+  Quadratic(S4): max_err = 1544.35
+  Quadratic(S4,S6): max_err = 0.00
+  Quadratic(S4,S6,S8): max_err = 0.00
+  Cubic(S4): max_err = 0.00
+  Cubic(S4,S6): max_err = 0.00
+
+======================================================================
+NONLINEAR MOMENT TESTS at p=13
+======================================================================
+  Linear(S4): max_err = 23354.93
+  Linear(S4,S6): max_err = 18335.80
+  Linear(S4,S6,S8): max_err = 17625.74
+  Linear(S4,S6,S8,S10): max_err = 403.39
+  Linear(S4,S6,S8,S10,S12): max_err = 0.00
+  Quadratic(S4): max_err = 21533.61
+  Quadratic(S4,S6): max_err = 10530.00
+  Quadratic(S4,S6,S8): max_err = 0.00
+  Cubic(S4): max_err = 17095.40
+  Cubic(S4,S6): max_err = 10530.00
+
+DONE.
