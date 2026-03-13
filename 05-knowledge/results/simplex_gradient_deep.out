@@ -1,0 +1,312 @@
+============================================================
+DEEP SIMPLEX GRADIENT ANALYSIS at n=7
+============================================================
+
+--- Ambiguous Simplex Profiles ---
+Total distinct profiles: 257
+Ambiguous profiles: 6
+
+  Ambiguous profile 1:
+    c7 values: [232, 235]
+    c7 distribution: {232: 11, 235: 11}
+    Total (sig,lam,del) = (46, 36, 23)
+    Score sequences: {(2, 2, 3, 3, 3, 4, 4)}
+    c3 values: [12]
+    c5 values: [27]
+    n_examples: 22
+    Distinct ordered pair-lists per c7:
+      c7=232: 11 distinct ordered pair-lists
+      c7=235: 11 distinct ordered pair-lists
+
+  Ambiguous profile 2:
+    c7 values: [191, 192]
+    c7 distribution: {191: 32, 192: 20}
+    Total (sig,lam,del) = (48, 33, 24)
+    Score sequences: {(2, 2, 3, 3, 3, 3, 5), (1, 3, 3, 3, 3, 4, 4)}
+    c3 values: [11]
+    c5 values: [23]
+    n_examples: 52
+    Distinct ordered pair-lists per c7:
+      c7=191: 32 distinct ordered pair-lists
+      c7=192: 20 distinct ordered pair-lists
+
+  Ambiguous profile 3:
+    c7 values: [279, 281]
+    c7 distribution: {279: 6, 281: 29}
+    Total (sig,lam,del) = (44, 39, 22)
+    Score sequences: {(2, 3, 3, 3, 3, 3, 4)}
+    c3 values: [13]
+    c5 values: [33]
+    n_examples: 35
+    Distinct ordered pair-lists per c7:
+      c7=279: 6 distinct ordered pair-lists
+      c7=281: 29 distinct ordered pair-lists
+
+  Ambiguous profile 4:
+    c7 values: [153, 154]
+    c7 distribution: {153: 7, 154: 12}
+    Total (sig,lam,del) = (50, 30, 25)
+    Score sequences: {(1, 3, 3, 3, 3, 3, 5)}
+    c3 values: [10]
+    c5 values: [18]
+    n_examples: 19
+    Distinct ordered pair-lists per c7:
+      c7=153: 7 distinct ordered pair-lists
+      c7=154: 12 distinct ordered pair-lists
+
+  Ambiguous profile 5:
+    c7 values: [227, 228]
+    c7 distribution: {227: 10, 228: 18}
+    Total (sig,lam,del) = (46, 36, 23)
+    Score sequences: {(2, 2, 3, 3, 3, 4, 4)}
+    c3 values: [12]
+    c5 values: [30]
+    n_examples: 28
+    Distinct ordered pair-lists per c7:
+      c7=227: 10 distinct ordered pair-lists
+      c7=228: 18 distinct ordered pair-lists
+
+  Ambiguous profile 6:
+    c7 values: [192, 193]
+    c7 distribution: {192: 12, 193: 28}
+    Total (sig,lam,del) = (48, 33, 24)
+    Score sequences: {(2, 2, 2, 3, 4, 4, 4)}
+    c3 values: [11]
+    c5 values: [25]
+    n_examples: 40
+    Distinct ordered pair-lists per c7:
+      c7=192: 12 distinct ordered pair-lists
+      c7=193: 28 distinct ordered pair-lists
+
+
+--- Sigma:Lambda:Delta by Score Sequence ---
+Distinct score sequences: 56
+  (0, 1, 2, 3, 4, 5, 6): n=  10, avg S:L:D = 70.0:0.0:35.0, avg c7=0.0
+  (0, 1, 2, 4, 4, 5, 5): n=  11, avg S:L:D = 66.0:6.0:33.0, avg c7=2.0
+  (0, 1, 3, 3, 3, 5, 6): n=   7, avg S:L:D = 68.0:3.0:34.0, avg c7=0.0
+  (0, 1, 3, 3, 4, 4, 6): n=   9, avg S:L:D = 66.0:6.0:33.0, avg c7=2.0
+  (0, 1, 3, 3, 4, 5, 5): n=  22, avg S:L:D = 64.0:9.0:32.0, avg c7=7.4
+  (0, 1, 3, 4, 4, 4, 5): n=  23, avg S:L:D = 62.0:12.0:31.0, avg c7=13.7
+  (0, 2, 2, 3, 3, 5, 6): n=   8, avg S:L:D = 66.0:6.0:33.0, avg c7=2.0
+  (0, 2, 2, 3, 4, 4, 6): n=  31, avg S:L:D = 64.0:9.0:32.0, avg c7=7.5
+  (0, 2, 2, 3, 4, 5, 5): n=  50, avg S:L:D = 62.0:12.0:31.0, avg c7=17.3
+  (0, 2, 2, 4, 4, 4, 5): n=  36, avg S:L:D = 60.0:15.0:30.0, avg c7=28.5
+  (0, 2, 3, 3, 3, 4, 6): n=  20, avg S:L:D = 62.0:12.0:31.0, avg c7=13.8
+  (0, 2, 3, 3, 3, 5, 5): n=  20, avg S:L:D = 60.0:15.0:30.0, avg c7=28.0
+  (0, 2, 3, 3, 4, 4, 5): n= 151, avg S:L:D = 58.0:18.0:29.0, avg c7=42.7
+  (0, 2, 3, 4, 4, 4, 4): n=  53, avg S:L:D = 56.0:21.0:28.0, avg c7=60.4
+  (0, 3, 3, 3, 3, 4, 5): n=  43, avg S:L:D = 56.0:21.0:28.0, avg c7=61.2
+  (0, 3, 3, 3, 4, 4, 4): n=  42, avg S:L:D = 54.0:24.0:27.0, avg c7=86.3
+  (1, 1, 2, 2, 4, 5, 6): n=  13, avg S:L:D = 66.0:6.0:33.0, avg c7=2.0
+  (1, 1, 2, 2, 5, 5, 5): n=   6, avg S:L:D = 64.0:9.0:32.0, avg c7=2.0
+  (1, 1, 2, 3, 3, 5, 6): n=  28, avg S:L:D = 64.0:9.0:32.0, avg c7=7.5
+  (1, 1, 2, 3, 4, 4, 6): n=  34, avg S:L:D = 62.0:12.0:31.0, avg c7=17.1
+  (1, 1, 2, 3, 4, 5, 5): n=  89, avg S:L:D = 60.0:15.0:30.0, avg c7=29.8
+  (1, 1, 2, 4, 4, 4, 5): n=  59, avg S:L:D = 58.0:18.0:29.0, avg c7=46.3
+  (1, 1, 3, 3, 3, 4, 6): n=  32, avg S:L:D = 60.0:15.0:30.0, avg c7=28.1
+  (1, 1, 3, 3, 3, 5, 5): n=  29, avg S:L:D = 58.0:18.0:29.0, avg c7=47.4
+  (1, 1, 3, 3, 4, 4, 5): n= 132, avg S:L:D = 56.0:21.0:28.0, avg c7=67.9
+  (1, 1, 3, 4, 4, 4, 4): n=  44, avg S:L:D = 54.0:24.0:27.0, avg c7=91.6
+  (1, 2, 2, 2, 3, 5, 6): n=  32, avg S:L:D = 62.0:12.0:31.0, avg c7=14.0
+  (1, 2, 2, 2, 4, 4, 6): n=  20, avg S:L:D = 60.0:15.0:30.0, avg c7=28.8
+  (1, 2, 2, 2, 4, 5, 5): n=  56, avg S:L:D = 58.0:18.0:29.0, avg c7=48.5
+  (1, 2, 2, 3, 3, 4, 6): n= 134, avg S:L:D = 58.0:18.0:29.0, avg c7=42.5
+  (1, 2, 2, 3, 3, 5, 5): n= 153, avg S:L:D = 56.0:21.0:28.0, avg c7=67.9
+  (1, 2, 2, 3, 4, 4, 5): n= 511, avg S:L:D = 54.0:24.0:27.0, avg c7=93.6
+  (1, 2, 2, 4, 4, 4, 4): n=  63, avg S:L:D = 52.0:27.0:26.0, avg c7=122.9
+  (1, 2, 3, 3, 3, 3, 6): n=  35, avg S:L:D = 56.0:21.0:28.0, avg c7=60.8
+  (1, 2, 3, 3, 3, 4, 5): n= 579, avg S:L:D = 52.0:27.0:26.0, avg c7=123.3
+  (1, 2, 3, 3, 4, 4, 4): n= 446, avg S:L:D = 50.0:30.0:25.0, avg c7=158.1
+  (1, 3, 3, 3, 3, 3, 5): n=  44, avg S:L:D = 50.0:30.0:25.0, avg c7=156.8
+  (1, 3, 3, 3, 3, 4, 4): n= 174, avg S:L:D = 48.0:33.0:24.0, avg c7=195.2
+  (2, 2, 2, 2, 2, 5, 6): n=   5, avg S:L:D = 60.0:15.0:30.0, avg c7=25.0
+  (2, 2, 2, 2, 3, 4, 6): n=  39, avg S:L:D = 56.0:21.0:28.0, avg c7=60.7
+  (2, 2, 2, 2, 3, 5, 5): n=  33, avg S:L:D = 54.0:24.0:27.0, avg c7=93.4
+  (2, 2, 2, 2, 4, 4, 5): n=  65, avg S:L:D = 52.0:27.0:26.0, avg c7=122.2
+  (2, 2, 2, 3, 3, 3, 6): n=  43, avg S:L:D = 54.0:24.0:27.0, avg c7=85.0
+  (2, 2, 2, 3, 3, 4, 5): n= 464, avg S:L:D = 50.0:30.0:25.0, avg c7=158.4
+  (2, 2, 2, 3, 4, 4, 4): n= 236, avg S:L:D = 48.0:33.0:24.0, avg c7=200.3
+  (2, 2, 3, 3, 3, 3, 5): n= 135, avg S:L:D = 48.0:33.0:24.0, avg c7=197.2
+  (2, 2, 3, 3, 3, 4, 4): n= 523, avg S:L:D = 46.0:36.0:23.0, avg c7=245.6
+  (2, 3, 3, 3, 3, 3, 4): n= 181, avg S:L:D = 44.0:39.0:22.0, avg c7=295.3
+  (3, 3, 3, 3, 3, 3, 3): n=  14, avg S:L:D = 42.0:42.0:21.0, avg c7=344.1
+
+
+--- Total Lambda = 3*c3 Verification ---
+  Match: 1000/1000
+
+
+--- Total Sigma Formula Verification ---
+  Total sigma = sum C(outdeg,2)+C(indeg,2): 1000/1000
+
+--- Compact Total Sigma Formula ---
+  total_sigma = sum(s_i^2) - n(n-1)/2: 1000/1000
+
+--- Total Delta Formula ---
+  total_delta = 126 - sum(s_i^2) - 3*c3: 1000/1000
+
+
+--- c7 as Function of (total_sigma, total_lambda) ---
+(total_sigma, total_lambda) -> c7 stats:
+  (42,42,21): n=  14, c7 range=[318,395], mean=344.1, std=15.4
+  (44,39,22): n= 181, c7 range=[274,340], mean=295.3, std=16.5
+  (46,36,23): n= 523, c7 range=[227,290], mean=245.6, std=15.0
+  (48,33,24): n= 545, c7 range=[177,244], mean=197.9, std=13.8
+  (50,30,25): n= 954, c7 range=[142,183], mean=158.2, std=10.2
+  (52,27,26): n= 707, c7 range=[103,163], mean=123.1, std=10.4
+  (54,24,27): n= 673, c7 range=[72,129], mean=92.4, std=10.4
+  (56,21,28): n= 455, c7 range=[56,85], mean=65.2, std=7.9
+  (58,18,29): n= 429, c7 range=[36,62], mean=44.2, std=7.0
+  (60,15,30): n= 204, c7 range=[19,51], mean=28.9, std=6.2
+  (62,12,31): n= 159, c7 range=[12,24], mean=15.6, std=3.8
+  (64, 9,32): n=  88, c7 range=[2,9], mean=7.0, std=2.1
+  (66, 6,33): n=  45, c7 range=[0,2], mean=1.8, std=0.6
+  (68, 3,34): n=  13, c7 range=[0,0], mean=0.0, std=0.0
+  (70, 0,35): n=  10, c7 range=[0,0], mean=0.0, std=0.0
+
+
+--- Total Simplex = (Score Variance, c3) ---
+total_sigma = sum(s_i^2) - n(n-1)/2 = n*Var(scores) + n*(n-1)^2/4 - n(n-1)/2
+  where Var = sum(s_i - mean)^2 / n, mean = (n-1)/2
+total_lambda = 3 * c3
+total_delta = n(n-1)(n-2)/2 + n(n-1)/2 - sum(s^2) - 3*c3
+
+So the 'total simplex position' is completely determined by (score_variance, c3)!
+The INDIVIDUAL pair positions carry additional structure beyond these totals.
+
+
+--- Lambda-Fiber Analysis ---
+Distinct lambda profiles: 149
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=235, c7 range=[152,154], distinct sigma profiles=4
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3): n=127, c7 range=[63,63], distinct sigma profiles=4
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 4): n=118, c7 range=[153,155], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3): n=111, c7 range=[42,42], distinct sigma profiles=2
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=110, c7 range=[232,235], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3): n=105, c7 range=[118,119], distinct sigma profiles=4
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4): n=102, c7 range=[191,193], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3): n=101, c7 range=[89,90], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3): n=93, c7 range=[109,112], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3): n=90, c7 range=[63,65], distinct sigma profiles=4
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=88, c7 range=[190,192], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3): n=84, c7 range=[56,56], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3): n=81, c7 range=[119,120], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3): n=76, c7 range=[80,80], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3): n=73, c7 range=[25,26], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=71, c7 range=[162,162], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3): n=70, c7 range=[36,36], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3): n=70, c7 range=[127,128], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3): n=65, c7 range=[142,142], distinct sigma profiles=2
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3): n=64, c7 range=[179,182], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 4): n=63, c7 range=[119,122], distinct sigma profiles=3
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3): n=56, c7 range=[30,30], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4): n=54, c7 range=[152,154], distinct sigma profiles=2
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=54, c7 range=[244,246], distinct sigma profiles=2
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=54, c7 range=[201,202], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 4): n=54, c7 range=[90,90], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 4): n=52, c7 range=[182,182], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 4): n=52, c7 range=[128,129], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3): n=51, c7 range=[163,163], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3): n=50, c7 range=[96,97], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3): n=50, c7 range=[82,83], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2): n=49, c7 range=[12,12], distinct sigma profiles=3
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=49, c7 range=[243,244], distinct sigma profiles=3
+  lam_profile=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=48, c7 range=[232,237], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3): n=48, c7 range=[54,54], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 4): n=46, c7 range=[106,106], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 4): n=46, c7 range=[163,163], distinct sigma profiles=1
+  lam_profile=(1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=45, c7 range=[279,281], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3): n=43, c7 range=[42,42], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 3): n=43, c7 range=[16,16], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 4): n=41, c7 range=[137,137], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2): n=41, c7 range=[2,2], distinct sigma profiles=2
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3): n=41, c7 range=[256,256], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2): n=41, c7 range=[6,6], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 3): n=40, c7 range=[9,9], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=40, c7 range=[211,211], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3): n=39, c7 range=[90,90], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 4): n=39, c7 range=[90,90], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3): n=38, c7 range=[128,128], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=38, c7 range=[172,172], distinct sigma profiles=2
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4): n=37, c7 range=[256,256], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2): n=35, c7 range=[16,16], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 4): n=33, c7 range=[172,172], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4): n=33, c7 range=[42,44], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=32, c7 range=[266,266], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 4): n=32, c7 range=[97,98], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3): n=31, c7 range=[137,137], distinct sigma profiles=1
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 4): n=30, c7 range=[146,146], distinct sigma profiles=1
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4): n=30, c7 range=[244,244], distinct sigma profiles=1
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=29, c7 range=[182,182], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 4): n=29, c7 range=[55,55], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4): n=28, c7 range=[85,85], distinct sigma profiles=1
+  lam_profile=(1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3): n=28, c7 range=[227,228], distinct sigma profiles=1
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 4): n=28, c7 range=[212,212], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 4): n=27, c7 range=[72,72], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3): n=26, c7 range=[151,151], distinct sigma profiles=1
+  lam_profile=(0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=26, c7 range=[303,303], distinct sigma profiles=1
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 4): n=24, c7 range=[202,204], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3): n=24, c7 range=[171,171], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4): n=24, c7 range=[98,99], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 4): n=24, c7 range=[49,49], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2): n=23, c7 range=[42,42], distinct sigma profiles=1
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4): n=22, c7 range=[163,163], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 4): n=22, c7 range=[24,24], distinct sigma profiles=1
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4): n=22, c7 range=[201,201], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2): n=22, c7 range=[36,36], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 4): n=21, c7 range=[64,64], distinct sigma profiles=1
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 5): n=21, c7 range=[129,129], distinct sigma profiles=1
+  lam_profile=(0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3): n=21, c7 range=[146,146], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3): n=21, c7 range=[57,57], distinct sigma profiles=1
+  lam_profile=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 4): n=21, c7 range=[147,147], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 4): n=21, c7 range=[71,71], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3): n=21, c7 range=[222,222], distinct sigma profiles=1
+  lam_profile=(1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3): n=21, c7 range=[291,293], distinct sigma profiles=2
+  lam_profile=(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3): n=21, c7 range=[78,78], distinct sigma profiles=1
+  lam_profile=(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 5): n=20, c7 range=[100,100], distinct sigma profiles=1
+
+  Lambda profiles ambiguous for c7: 29/149
+
+--- Sigma Determines c7 Within Lambda Fiber? ---
+  Total (lambda, sigma) pairs: 221
+  Ambiguous for c7: 19
+  19 cases where same (lambda, sigma) profiles give different c7
+
+--- Lambda Determines c7 Within Sigma Fiber? ---
+  Total (sigma, lambda) pairs: 221
+  Ambiguous for c7: 19
+
+
+--- Resolving the Ambiguity ---
+
+  Ambiguous profile 1: c7 in [232, 235]
+    c7=232: 11 examples, c5=[27], scores={(2, 2, 3, 3, 3, 4, 4)}
+    c7=235: 11 examples, c5=[27], scores={(2, 2, 3, 3, 3, 4, 4)}
+    c5 resolves ambiguity? NO (1 still ambig)
+
+  Ambiguous profile 2: c7 in [191, 192]
+    c7=191: 32 examples, c5=[23], scores={(2, 2, 3, 3, 3, 3, 5), (1, 3, 3, 3, 3, 4, 4)}
+    c7=192: 20 examples, c5=[23], scores={(2, 2, 3, 3, 3, 3, 5), (1, 3, 3, 3, 3, 4, 4)}
+    c5 resolves ambiguity? NO (1 still ambig)
+
+  Ambiguous profile 3: c7 in [279, 281]
+    c7=279: 6 examples, c5=[33], scores={(2, 3, 3, 3, 3, 3, 4)}
+    c7=281: 29 examples, c5=[33], scores={(2, 3, 3, 3, 3, 3, 4)}
+    c5 resolves ambiguity? NO (1 still ambig)
+
+  Ambiguous profile 4: c7 in [153, 154]
+    c7=153: 7 examples, c5=[18], scores={(1, 3, 3, 3, 3, 3, 5)}
+    c7=154: 12 examples, c5=[18], scores={(1, 3, 3, 3, 3, 3, 5)}
+    c5 resolves ambiguity? NO (1 still ambig)
+
+  Ambiguous profile 5: c7 in [227, 228]
+    c7=227: 10 examples, c5=[30], scores={(2, 2, 3, 3, 3, 4, 4)}
+    c7=228: 18 examples, c5=[30], scores={(2, 2, 3, 3, 3, 4, 4)}
+    c5 resolves ambiguity? NO (1 still ambig)
+
+  Ambiguous profile 6: c7 in [192, 193]
+    c7=192: 12 examples, c5=[25], scores={(2, 2, 2, 3, 4, 4, 4)}
+    c7=193: 28 examples, c5=[25], scores={(2, 2, 2, 3, 4, 4, 4)}
+    c5 resolves ambiguity? NO (1 still ambig)
+
+
+Done.

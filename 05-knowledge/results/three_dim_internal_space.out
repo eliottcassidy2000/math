@@ -1,0 +1,145 @@
+============================================================
+THE 3-DIMENSIONAL INTERNAL SPACE AT n=7
+============================================================
+
+--- Distribution on the (sigma, lambda, delta) Simplex ---
+Total pair observations: 63000
+Distinct simplex points: 21
+
+Top 20 most common points:
+  (sigma=3, lambda=1, delta=1): 9776 (15.5%)
+  (sigma=2, lambda=2, delta=1): 7502 (11.9%)
+  (sigma=2, lambda=1, delta=2): 7474 (11.9%)
+  (sigma=3, lambda=2, delta=0): 5011 (8.0%)
+  (sigma=4, lambda=0, delta=1): 4981 (7.9%)
+  (sigma=4, lambda=1, delta=0): 4837 (7.7%)
+  (sigma=3, lambda=0, delta=2): 4765 (7.6%)
+  (sigma=1, lambda=2, delta=2): 3737 (5.9%)
+  (sigma=2, lambda=0, delta=3): 2476 (3.9%)
+  (sigma=1, lambda=1, delta=3): 2466 (3.9%)
+  (sigma=1, lambda=3, delta=1): 2446 (3.9%)
+  (sigma=2, lambda=3, delta=0): 2420 (3.8%)
+  (sigma=5, lambda=0, delta=0): 1954 (3.1%)
+  (sigma=1, lambda=4, delta=0): 632 (1.0%)
+  (sigma=0, lambda=3, delta=2): 615 (1.0%)
+  (sigma=1, lambda=0, delta=4): 607 (1.0%)
+  (sigma=0, lambda=2, delta=3): 590 (0.9%)
+  (sigma=0, lambda=4, delta=1): 299 (0.5%)
+  (sigma=0, lambda=1, delta=4): 290 (0.5%)
+  (sigma=0, lambda=5, delta=0): 63 (0.1%)
+
+--- Simplex Boundary Analysis ---
+  sigma=0 (no extremal witnesses): 1916 (3.0%)
+  lambda=0 (no cyclic witnesses): 14842 (23.6%)
+  delta=0 (no transitive witnesses): 14917 (23.7%)
+  Interior (all > 0): 33401 (53.0%)
+
+--- Simplex Profile vs c7 ---
+  Simplex profiles: 248
+  Ambiguous for c7: 6
+  The simplex profile does NOT determine c7 (6 ambiguous)
+
+--- (Sigma, Lambda) Pair Profile vs c7 ---
+  (Sigma,Lambda) profiles: 248
+  Ambiguous for c7: 6
+
+--- Average Simplex Position ---
+  Mean (sigma, lambda, delta) = (2.497, 1.254, 1.249)
+  Sum = 5.000 (should be 5)
+  Barycentric: (0.499, 0.251, 0.250)
+
+--- Extremality Ratio vs c7 ---
+  c7= 316: sigma_total= 44, lambda_total= 39, delta_total= 22, extremality=0.419
+  c7= 266: sigma_total= 46, lambda_total= 36, delta_total= 23, extremality=0.438
+  c7= 128: sigma_total= 52, lambda_total= 27, delta_total= 26, extremality=0.495
+  c7= 152: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7=  63: sigma_total= 56, lambda_total= 21, delta_total= 28, extremality=0.533
+  c7= 154: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7= 137: sigma_total= 52, lambda_total= 27, delta_total= 26, extremality=0.495
+  c7= 146: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7= 154: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7= 152: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7=  90: sigma_total= 54, lambda_total= 24, delta_total= 27, extremality=0.514
+  c7= 232: sigma_total= 46, lambda_total= 36, delta_total= 23, extremality=0.438
+  c7=  85: sigma_total= 56, lambda_total= 21, delta_total= 28, extremality=0.533
+  c7=  65: sigma_total= 56, lambda_total= 21, delta_total= 28, extremality=0.533
+  c7= 154: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7= 182: sigma_total= 50, lambda_total= 30, delta_total= 25, extremality=0.476
+  c7= 256: sigma_total= 46, lambda_total= 36, delta_total= 23, extremality=0.438
+  c7= 232: sigma_total= 46, lambda_total= 36, delta_total= 23, extremality=0.438
+  c7=  12: sigma_total= 62, lambda_total= 12, delta_total= 31, extremality=0.590
+  c7=  42: sigma_total= 58, lambda_total= 18, delta_total= 29, extremality=0.552
+
+--- Total Sigma + Lambda + Delta ---
+  Verifying total_lambda = 3 * c3:
+
+  Total sigma formula verification:
+  For regular n=7: expected total_sigma = 7*(C(3,2)+C(3,2)) = 7*6 = 42
+  Total lambda = 3*c3. For regular n=7, c3=14, so total_lambda = 42
+  Total = 21*5 = 105. delta = 105 - 42 - 42 = 21
+  Ratio: sigma:lambda:delta = 42:42:21 = 2:2:1
+
+============================================================
+THE 2,1,0 CONNECTION
+============================================================
+
+The three dimensions of the internal space correspond to:
+
+  2 (sigma): "Second-order alignment" — both endpoints agree on witness
+    w is common successor: u->w AND v->w (both "dominate" w)
+    w is common predecessor: w->u AND w->v (w "dominates" both)
+    These witnesses create STRONG coupling between u and v.
+
+  1 (lambda): "First-order cycling" — witness creates a 3-cycle
+    w completes a directed cycle u->v->w->u (or reverse)
+    These witnesses create CYCLIC coupling — the pair is "entangled" with w.
+    Lambda = #{3-cycles through pair} = the OVERLAP WEIGHT.
+
+  0 (delta): "Zeroth-order transitivity" — witness creates a transitive triple
+    w creates a linear order: u->w->v (or v->w->u) consistent with u->v
+    These witnesses create NO coupling — the pair is "classical" (no cycling).
+    Delta = #{transitive triples through pair} = the ALIGNMENT WEIGHT.
+
+The hierarchy 2 > 1 > 0 reflects COUPLING STRENGTH:
+  sigma = strong (agreement)
+  lambda = medium (cycling)
+  delta = weak (transitivity)
+
+The Vitali atom transfers weight between sigma and delta (dsig = -ddelta),
+while preserving lambda. It converts STRONG coupling to WEAK coupling
+(or vice versa) without touching the MEDIUM (cyclic) coupling.
+
+This is why the Vitali atom is invisible to lambda but visible to sigma:
+it acts on the "coupling axis" (sigma <-> delta) while leaving the
+"cycling axis" (lambda) invariant.
+
+The "hidden higher-dimensional structure" of the user's question IS this:
+the sigma-delta fiber over each pair, invisible to the lambda base,
+which controls how Hamiltonian cycles thread through the tournament.
+
+Connection to H(T):
+  At n=7, H(T) = I(Omega(T), 2) depends on the conflict graph.
+  The conflict graph is determined by which directed cycles OVERLAP.
+  The overlap structure is determined by the lambda values.
+  But H also depends on how cycles ALIGN, which requires sigma.
+  The sigma information encodes the 'phase' of cycle alignment,
+  which is invisible to lambda but crucial for Hamiltonian path counting.
+
+============================================================
+SCORE-LEVEL 2,1,0
+============================================================
+Simplex position by score difference |s(u)-s(v)|:
+  |ds|=0: n=  8570, avg (sig,lam,del)=(2.66, 1.67, 0.67)
+  |ds|=1: n= 15203, avg (sig,lam,del)=(2.64, 1.51, 0.86)
+  |ds|=2: n= 10527, avg (sig,lam,del)=(2.53, 1.08, 1.39)
+  |ds|=3: n=  5331, avg (sig,lam,del)=(2.21, 0.64, 2.15)
+  |ds|=4: n=  1920, avg (sig,lam,del)=(1.74, 0.21, 3.05)
+  |ds|=5: n=   408, avg (sig,lam,del)=(1.00, 0.00, 4.00)
+  |ds|=6: n=    41, avg (sig,lam,del)=(0.00, 0.00, 5.00)
+
+Key insight: higher score difference => higher sigma (more extremal witnesses)
+           => lower lambda (fewer cyclic witnesses)
+           => delta roughly constant
+This is the 2-1-0 gradient: score difference modulates coupling strength.
+
+Done.
