@@ -1,0 +1,40 @@
+Cycle cascade analysis at n=7
+  disj    c3    c5    c7   c5+c7   count
+    14    14    28    17      45
+    10    14    36    15      51
+     7    14    42    24      66
+
+Total regular tournaments: 2640
+
+Distinct (disj, c3, c5, c7) classes: 3
+
+Per-disj values:
+  disj=7: c5 ∈ [42], c7 ∈ [24], count=240
+    c5=42, c7=24, c5+c7=66 (pred=66), n=240
+  disj=10: c5 ∈ [36], c7 ∈ [15], count=1680
+    c5=36, c7=15, c5+c7=51 (pred=51), n=1680
+  disj=14: c5 ∈ [28], c7 ∈ [17], count=720
+    c5=28, c7=17, c5+c7=45 (pred=45), n=720
+
+Quadratic fit for c5 and c7:
+  c5 = 0.0*disj^2 + -2.0*disj + 56.0
+  c7 = 0.5*disj^2 + -11.5*disj + 80.0
+  disj=7: c5_pred=42.0 (actual=42), c7_pred=24.0 (actual=24)
+  disj=10: c5_pred=36.0 (actual=36), c7_pred=15.0 (actual=15)
+  disj=14: c5_pred=28.0 (actual=28), c7_pred=17.0 (actual=17)
+
+============================================================
+FULL DECOMPOSITION
+============================================================
+disj=7: H=189, α₁=80, α₂=7
+  Check: 1 + 2*80 + 4*7 = 189
+  c5=42, c7=24
+  3-cycle overlap edges = C(14,2) - disj = 84
+disj=10: H=171, α₁=65, α₂=10
+  Check: 1 + 2*65 + 4*10 = 171
+  c5=36, c7=15
+  3-cycle overlap edges = C(14,2) - disj = 81
+disj=14: H=175, α₁=59, α₂=14
+  Check: 1 + 2*59 + 4*14 = 175
+  c5=28, c7=17
+  3-cycle overlap edges = C(14,2) - disj = 77

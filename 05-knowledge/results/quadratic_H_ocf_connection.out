@@ -1,0 +1,78 @@
+Analyzing regular tournaments at n=7
+OCF: H = I(Omega, 2) = sum alpha_k * 2^k
+
+H=175:
+  Cycles: {3: 14, 7: 17, 5: 28}
+  Total cycles: 59
+  disj_33 = 14
+  alpha (indep set counts): {0: 1, 1: 59, 2: 14, 3: 0}
+  I(Omega, 2) = 175
+  H == I(Omega,2): True
+  H = 1 + 2*59 + 4*14 = 175
+
+H=171:
+  Cycles: {5: 36, 7: 15, 3: 14}
+  Total cycles: 65
+  disj_33 = 10
+  alpha (indep set counts): {0: 1, 1: 65, 2: 10, 3: 0}
+  I(Omega, 2) = 171
+  H == I(Omega,2): True
+  H = 1 + 2*65 + 4*10 = 171
+
+H=189:
+  Cycles: {5: 42, 7: 24, 3: 14}
+  Total cycles: 80
+  disj_33 = 7
+  alpha (indep set counts): {0: 1, 1: 80, 2: 7, 3: 0}
+  I(Omega, 2) = 189
+  H == I(Omega,2): True
+  H = 1 + 2*80 + 4*7 = 189
+
+
+============================================================
+ANALYSIS: Why H = disj^2 - 23*disj + 301?
+============================================================
+H=171: alpha_1=65, alpha_2=10=10, alpha_3=0
+  alpha_2 == disj_33: True
+  c3=14, c5=36, c7=15, alpha_1=65
+  H from OCF = 171
+  H from quadratic = 171
+
+H=175: alpha_1=59, alpha_2=14=14, alpha_3=0
+  alpha_2 == disj_33: True
+  c3=14, c5=28, c7=17, alpha_1=59
+  H from OCF = 175
+  H from quadratic = 175
+
+H=189: alpha_1=80, alpha_2=7=7, alpha_3=0
+  alpha_2 == disj_33: True
+  c3=14, c5=42, c7=24, alpha_1=80
+  H from OCF = 189
+  H from quadratic = 189
+
+
+============================================================
+KEY INSIGHT: alpha_1 varies! c5 depends on the 3-cycle overlap structure.
+============================================================
+
+For regular n=7:
+  c3 = 14 (constant)
+  c5 = varies with overlap structure
+  c7 = varies
+  alpha_1 = c3 + c5 + c7 = varies
+
+The OCF says H = 1 + 2*alpha_1 + 4*alpha_2 + higher terms.
+Since alpha_2 = disj_33 (only disjoint 3-cycle pairs contribute),
+and alpha_k = 0 for k >= 3 at n=7,
+we need c5 + c7 as a function of disj_33.
+
+If H = disj^2 - 23*disj + 301 AND H = 1 + 2*(14+c5+c7) + 4*disj_33:
+  disj^2 - 23*disj + 301 = 29 + 2*c5 + 2*c7 + 4*disj
+  c5 + c7 = (disj^2 - 27*disj + 272) / 2
+
+This gives a FORMULA for c5+c7 in terms of disj_33!
+
+CHECK: disj=7:  c5+c7 = (49-189+272)/2 = 132/2 = 66
+       disj=10: c5+c7 = (100-270+272)/2 = 102/2 = 51
+       disj=14: c5+c7 = (196-378+272)/2 = 90/2 = 45
+
