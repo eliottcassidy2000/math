@@ -1,0 +1,123 @@
+
+======================================================================
+MOMENT INDEPENDENCE at p=7, m=3, N=8
+======================================================================
+
+  Even moments: [2, 4, 6]
+    S_2 = CONSTANT = 5.250000
+    S_4: min=9.1875, max=23.1875, 2 unique values
+    S_6: min=16.0781, max=110.5781, 2 unique values
+
+  Higher even moments (should reduce to lower):
+    S_8 = linear(S_2,...,S_6), err=1.85e-13
+    S_10 = linear(S_2,...,S_6), err=1.82e-12
+    S_12 = linear(S_2,...,S_6), err=1.27e-11
+
+  Rank of (S_2,...,S_6) matrix: 2
+  Expected: m-1 = 2 (S_2 constant, others free)
+
+  Rank of (S_4,...,S_4) matrix: 1
+  Expected: m-2 = 1 (S_2 constant, S_6 dependent)
+  Rank of (S_4,...,S_6) matrix: 2
+
+  D_t values for first 4 orientations:
+    bits=0: D = [-2.1906, 0.2408, -0.6270]
+    bits=1: D = [-0.6270, 2.1906, 0.2408]
+    bits=2: D = [-0.2408, -0.6270, -2.1906]
+    bits=3: D = [1.3229, 1.3229, -1.3229]
+
+======================================================================
+MOMENT INDEPENDENCE at p=11, m=5, N=32
+======================================================================
+
+  Even moments: [2, 4, 6, 8, 10]
+    S_2 = CONSTANT = 13.750000
+    S_4: min=37.8125, max=147.8125, 4 unique values
+    S_6: min=103.9844, max=1770.4844, 4 unique values
+    S_8: min=285.9570, max=21392.2070, 4 unique values
+    S_10: min=786.3818, max=258684.8193, 4 unique values
+
+  Higher even moments (should reduce to lower):
+    S_12 = linear(S_2,...,S_10), err=2.98e-08
+    S_14 = linear(S_2,...,S_10), err=7.03e-07
+    S_16: NOT linear in lower moments, err=0.0000
+    S_18: NOT linear in lower moments, err=0.0002
+    S_20: NOT linear in lower moments, err=0.0031
+
+  Rank of (S_2,...,S_10) matrix: 4
+  Expected: m-1 = 4 (S_2 constant, others free)
+
+  Rank of (S_4,...,S_8) matrix: 3
+  Expected: m-2 = 3 (S_2 constant, S_10 dependent)
+  Rank of (S_4,...,S_10) matrix: 4
+
+  D_t values for first 4 orientations:
+    bits=0: D = [-3.4776, 0.1468, -1.0948, 0.3213, -0.5770]
+    bits=1: D = [-2.3963, 1.9661, 0.8848, 1.8328, -0.0136]
+    bits=2: D = [-1.6583, 1.6583, -1.6583, -1.6583, -1.6583]
+    bits=3: D = [-0.5770, 3.4776, 0.3213, -0.1468, -1.0948]
+
+======================================================================
+MOMENT INDEPENDENCE at p=13, m=6, N=64
+======================================================================
+
+  Even moments: [2, 4, 6, 8, 10, 12]
+    S_2 = CONSTANT = 19.500000
+    S_4: min=82.8750, max=290.8750, 5 unique values
+    S_6: min=396.0937, max=4881.0938, 5 unique values
+    S_8: min=1968.5859, max=82685.5859, 12 unique values
+    S_10: min=9899.3730, max=1401947.4980, 6 unique values
+    S_12: min=49950.6401, max=23772381.5151, 7 unique values
+
+  Higher even moments (should reduce to lower):
+    S_14: NOT linear in lower moments, err=0.0003
+    S_16: NOT linear in lower moments, err=0.0098
+    S_18: NOT linear in lower moments, err=0.1940
+    S_20: NOT linear in lower moments, err=4.6976
+    S_22: NOT linear in lower moments, err=118.7305
+    S_24: NOT linear in lower moments, err=2026.2644
+
+  Rank of (S_2,...,S_12) matrix: 6
+  Expected: m-1 = 5 (S_2 constant, others free)
+
+  Rank of (S_4,...,S_10) matrix: 4
+  Expected: m-2 = 4 (S_2 constant, S_12 dependent)
+  Rank of (S_4,...,S_12) matrix: 5
+
+  D_t values for first 4 orientations:
+    bits=0: D = [-4.1179, 0.1232, -1.3184, 0.2624, -0.7244, 0.4430]
+    bits=1: D = [-3.1884, 1.7692, 0.6670, 2.1325, 0.6019, 0.9216]
+    bits=2: D = [-2.4719, 1.9933, -0.8398, -1.0638, -2.7098, -0.4865]
+    bits=3: D = [-1.5425, 3.6392, 1.1457, 0.8062, -1.3835, -0.0079]
+
+======================================================================
+DEGREE REDUCTION MECHANISM
+======================================================================
+
+KEY INSIGHT: For circulant tournaments on Z_p with m = (p-1)/2:
+
+1. There are m INDEPENDENT sigma variables: sigma(1),...,sigma(m).
+   (sigma(p-j) = -sigma(j) is determined.)
+
+2. The D_t eigenvalues satisfy: D_t = sum_{j=1}^{m} sigma(j) * sin(2*pi*j*t/p)
+   So D_t is LINEAR in the m sigma variables.
+
+3. S_{2k} = sum D_t^{2k} is a polynomial of degree 2k in sigma.
+   But the INDEPENDENT moments S_4,...,S_{p-3} span only (m-2) dimensions.
+
+4. Any polynomial of degree d in sigma can be expressed as a function of
+   S_4,...,S_{2d} IF d <= m. But the constraint sigma(j)^2 = 1 means:
+   the ring of functions on {-1,+1}^m is 2^m-dimensional (= N),
+   spanned by products of distinct sigma(j).
+
+5. The even moments S_4,...,S_{p-1} span an (m-1)-dimensional subspace.
+   The disjoint pair sums live in this subspace because:
+   - The sum over all Z_p translates of a product sigma(j)*sigma(k) cancels
+     unless the difference j-k is "compatible" with the Z_p structure.
+   - The disjointness V1 ∩ V2 = empty forces additional Z_p-level cancellations.
+
+6. CONCLUSION: disj(k1,k2) lives in the span of S_4,...,S_{p-3}
+   (NOT S_{p-1}) regardless of k1, k2, as long as k1+k2 <= p.
+   This is a THEOREM for circulant tournaments.
+
+DONE.

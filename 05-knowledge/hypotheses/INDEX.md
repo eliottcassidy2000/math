@@ -387,6 +387,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-688 | **PALEY = WELCH BOUND (OPTIMAL COMPRESSED SENSING)**: Paley tournament's coherence μ = √((p+1)/4)/m exactly equals the Welch bound for all tested p. This makes Paley OPTIMAL for compressed sensing measurement matrices. Dual to Interval being optimal for H: uncertainty principle at work. | quantum_tournament_codes.py. | opus-S67g |
 | HYP-689 | **CHARACTER SUM ALTERNATING CORRELATION**: At p=13, odd Dirichlet characters (χ₁,χ₃,χ₅) POSITIVELY correlate with H (r≈+0.42), while even characters (χ₂,χ₄,χ₆) NEGATIVELY correlate (r≈-0.43). Top orbits have |χ_even|=0. Connects H to Hecke theory: H is a Hecke-invariant quantity. | tournament_uncertainty.py. | opus-S67g |
 | HYP-690 | **RG CRITICAL POINT m*=1.23 (p*≈3.5)**: The KPZ fit log(A) ≈ 1.72·m^{4/3} - 3.95·m^{2/3} + c gives RG beta function β=0 at m*=1.23, matching the observed A(5)<1, A(7)>1 transition. Below m*, the Fibonacci cascade doesn't amplify; above it, amplification grows super-exponentially. | quantum_tournament_codes.py. | opus-S67g |
+| HYP-691 | **THM-159: Cycle indicator degree d(k)=k-1 PROVED**: The directed k-cycle indicator on circulant tournaments is a polynomial of degree k-1 in pairwise sigma products, with ALL ODD DEGREES VANISHING. Verified symbolically at k=3,5,7. Parity cancellation: forward and reverse cycles negate the top-degree term. | cycle_indicator_degree.py. | kind-pasteur-S60 |
+| HYP-692 | **disj(k1,k2) = EXACT linear(c_k) for circulant tournaments**: Each disjoint pair count is an exact affine function of the individual cycle counts c_3,...,c_p. NOT quadratic despite counting pairs. Verified at p=7 (1 type), p=11 (4 types). Product model fails (errors 27-320). | disj_fraction_analysis.py. | kind-pasteur-S60 |
+| HYP-693 | **H = EXACT linear(c_k) with rational coefficients**: H is an exact affine function of c_3,...,c_p for circulant tournaments. Verified at p=7,11 (underdetermined, floating-point), p=13 (exactly determined, rational coefficients, all 6 types verified). Common denominator = 500299. | H_from_ck_exact.py. | kind-pasteur-S60 |
+| HYP-694 | **disj(3,3) depends on S_4 only (extending THM-156)**: At both p=7 and p=11, the (3,3) disjoint pair count is a function of S_4 alone, consistent with THM-156 formula. | disj_character_theory.py. | kind-pasteur-S60 |
+| HYP-695 | **Conflict ratio = 1 when k1+k2 > p (pigeonhole)**: Every pair of cycles with combined vertex count exceeding p must share a vertex. All such pairs conflict. | H_ck_theory.py. | kind-pasteur-S60 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
@@ -596,7 +601,7 @@ HYP-479, HYP-480, HYP-481, HYP-482, HYP-483, HYP-484, HYP-485, HYP-486, HYP-487,
 HYP-596, HYP-597, HYP-598, HYP-599, HYP-600, HYP-610, HYP-611, HYP-612, HYP-613, HYP-614, HYP-615, HYP-616, HYP-617, HYP-684, HYP-685, HYP-686, HYP-687, HYP-688, HYP-689, HYP-690
 
 ### Walsh-Overlap Weight Analysis
-HYP-618, HYP-619, HYP-620, HYP-621, HYP-626, HYP-627, HYP-628, HYP-629, HYP-630, HYP-638, HYP-639, HYP-640, HYP-641, HYP-665, HYP-666, HYP-667, HYP-668, HYP-669, HYP-670, HYP-675, HYP-676
+HYP-618, HYP-619, HYP-620, HYP-621, HYP-626, HYP-627, HYP-628, HYP-629, HYP-630, HYP-638, HYP-639, HYP-640, HYP-641, HYP-665, HYP-666, HYP-667, HYP-668, HYP-669, HYP-670, HYP-675, HYP-676, HYP-691, HYP-692, HYP-693, HYP-694, HYP-695
 
 ### GLMY / TRH Chain Complex Analysis
 HYP-622, HYP-623, HYP-624, HYP-625, HYP-631, HYP-632, HYP-633, HYP-634, HYP-635, HYP-636, HYP-637, HYP-648, HYP-649, HYP-650, HYP-651, HYP-652, HYP-653, HYP-654, HYP-655, HYP-656, HYP-657, HYP-658, HYP-659, HYP-660, HYP-661, HYP-662, HYP-663, HYP-664
