@@ -29,10 +29,12 @@ Entry format:
 - **THM-183 PROVED**: (tr(Sigma^2), tr(Sigma^3), tr(Sigma^4)) COMPLETELY DETERMINES c7 at n=7
 - tr(Sigma^3) gap ALWAYS ±48 between isospectral ambiguous profiles
 - **Key identity**: Sigma = (n-2)*J_off - sym(A^2)_off; when u->v: A^2[u,v]=delta, A^2[v,u]=lambda
-- c7 is NOT a polynomial in sigma traces — it's a 168-entry lookup table
-- Many tr2-slices show perfect linear c7 = a*tr3 + b with r^2=1.000
+- **Sigma degree formula**: sigma_deg(u) = 5*s(u) + 15 - 2*S_out(u), verified 3500/3500
+- **Non-measurability quantified**: lambda captures 99.99% of c7 info (0.0005 bits residual)
+- At n=8: sigma power sums need tr5+ to fully resolve c7 (2 ambiguous triples from (tr2,tr3,tr4))
 **New contributions:** THM-179, THM-180, THM-181, THM-182, THM-183, HYP-861 through HYP-866
-**Unresolved:** Algebraic proof of |dc7|<=1, why gap=48, exact c7 formula, extension to n=8,9
+**Scripts created:** three_dim_internal_space.py, simplex_gradient_deep.py, hidden_dimension_probe.py, higher_order_atoms.py, spectral_hidden_dim.py, sigma_spectral_detail.py, tr_sigma3_invariant.py, sigma_c7_formula.py, sigma_a2_connection.py, vitali_nonmeasurable.py, measurability_n8.py
+**Unresolved:** Algebraic proof of |dc7|<=1, why gap=48, exact c7 formula at n>=8, connection to path homology via sigma structure
 
 ## opus-2026-03-13-S67k — 2026-03-13: Recurrence Taxonomy + Pfaffian Identity THM-174
 
