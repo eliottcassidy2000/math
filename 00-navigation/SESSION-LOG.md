@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S62d — 2026-03-12: p=19,23 verified, three-strategy proof framework, 30+ connections
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S62c (context compaction recovery)
+**Summary of work:**
+
+  MAJOR RESULTS:
+
+  1. **p=19 VERIFIED**: H(Int)=1,184,212,824,763 > H(Pal)=1,172,695,746,915 (+0.98%).
+     Both are local maxima. ALL 9 Paley swaps give IDENTICAL ΔH (dihedral symmetry proof).
+
+  2. **p=23 VERIFIED**: H(Int)=16,011,537,490,557,279 > H(Pal)=15,760,206,976,379,349 (+1.60%).
+     Margin GROWING with p. Asymptotic limit H_I/H_P → 1.061.
+
+  3. **Three Convergent Proof Strategies**:
+     a. SPECTRAL/RAMANUJAN: Paley is Ramanujan (quasi-random), Interval is NOT → persistent deviation
+     b. CHIRALITY/DIHEDRAL: mod-4 dichotomy (with kind-pasteur), reflection symmetry kills Paley at p≡1 mod 4
+     c. DISJOINTNESS/HARD-CORE: α₁(P)>α₁(I) but α_k(I)>α_k(P) for k≥2, hard-core gas Z higher for Interval
+
+  4. **New Connections**: Winding number coherence (wave interference), step variance (4x concentrated),
+     hard-core lattice gas, Hoffman bound on Ω, Ramanujan graph dichotomy
+
+  5. **Complete Causal Chain**: Step concentration → Peaked eigenvalue → Cycle clustering
+     → Higher disjointness → Larger independence polynomial → Higher H
+
+**New contributions:** HYP-505 through HYP-510, fast_H_p19.py, fast_H_p23.py,
+  schur_disjointness_proof.py, hardcore_lovasz_proof.py, asymptotic_H_formula.py
+**Unresolved threads:**
+  - Need explicit formula for constant c in H_I = E[H]·(1+c)
+  - Fourier uncertainty principle approach (new idea)
+  - p=29 computation (would need ~2 hours, feasible)
+  - Formal proof that s_k(I) > s_k(P) for all k≥3 and all p
+
+---
+
 ## opus-2026-03-12-S62c — 2026-03-12: 25+ cross-field connections, dihedral group theory, formal proof attempts
 
 **Account:** opus
