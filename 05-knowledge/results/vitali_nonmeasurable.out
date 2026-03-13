@@ -1,0 +1,57 @@
+============================================================
+LAMBDA MEASURABILITY AND SIGMA NON-MEASURABILITY AT n=7
+============================================================
+
+Distinct lambda graphs (from 20k samples): 19242
+  Total tournament space: 2^21 = 2097152
+  Lambda bits ~ log2(19242) = 14.2
+  Tournament bits = 21
+  => Lambda captures ~67.8% of information
+
+--- Lambda Fiber Sizes ---
+  Mean fiber size: 1.04
+  Max fiber size: 43
+  Fibers of size 1: 18618
+  Fibers of size >= 5: 7
+
+--- c7 Variation Within Lambda Fibers ---
+  Fibers with >= 2 tournaments: 624
+  c7 range distribution:
+    range=0: 619 fibers
+    range=1: 5 fibers
+
+  Fibers with c7 variation: 5/624 (0.8%)
+  Fibers with CONSTANT c7: 619/624 (99.2%)
+
+  Fibers with c5 variation: 0 (should be 0 by THM-172/173)
+  Fibers with score variation: 230
+
+--- Variance Decomposition ---
+  Total c7 variance: 5901.07
+  Between-lambda variance: 5901.07 (100.00%)
+  Within-lambda variance: 0.0018 (0.0000%)
+  => Lambda explains 100.00% of c7 variance!
+  => The non-measurable residual is only 0.0000%
+
+--- The Vitali Coset Structure ---
+  Number of cosets (lambda equivalence classes): 19242
+  Mean coset size (from sample): 1.0
+
+  Number of distinct c7 values per fiber (for fibers >= 3):
+    1 values: 74 fibers
+
+--- Information Theory ---
+  H(c7) = 6.3322 bits
+  H(c7 | lambda) = 0.0005 bits
+  I(lambda; c7) = 6.3317 bits = 99.99% of H(c7)
+  => Lambda captures 99.99% of c7 information
+  => The non-measurable residual is 0.01% = 0.0005 bits
+
+  For comparison:
+  I(scores; c7) = 3.4854 bits = 55.04% of H(c7)
+  I(lambda; c7) = 6.3317 bits = 99.99% of H(c7)
+  Lambda >> scores for c7 prediction
+  But lambda is NOT sufficient: 0.01% residual
+
+
+Done.
