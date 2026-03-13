@@ -1,0 +1,158 @@
+======================================================================
+PART 1: Beta basis at n=7
+======================================================================
+  H = b0 + 3*b1 + 9*b2: 400/400
+
+  Beta coefficient ranges:
+    b0 = I(Omega,-1): [-51, 0]
+    b1 = a1 - 2*a2:  [1, 44]
+    b2 = a2:         [0, 12]
+
+======================================================================
+PART 2: The 3-adic tower
+======================================================================
+  H mod 3 = b0 mod 3: 400/400
+  H mod 9 = (b0 + 3*b1) mod 9: 400/400
+  H mod 27 = H mod 27: 400/400 (tautological at n<=7)
+
+  b0 mod 3: {0: 117, 1: 145, 2: 138}
+  b1 mod 3: {0: 142, 1: 139, 2: 119}
+  H mod 9: {0: 39, 1: 59, 2: 59, 3: 32, 4: 48, 5: 48, 6: 46, 7: 38, 8: 31}
+
+======================================================================
+PART 3: The 2-adic tower
+======================================================================
+  H mod 2 = 1: 400/400
+  H mod 4 = 1 + 2*(a1 mod 2): 400/400
+  H mod 8 = (1+2*a1+4*a2) mod 8: 400/400 (tautological)
+
+  H mod 8 distribution: {1: 131, 3: 94, 5: 90, 7: 85}
+  H mod 8 possible values: [1, 3, 5, 7]
+  All odd: True
+
+======================================================================
+PART 4: CRT combinations
+======================================================================
+  H mod 6: {1: 145, 3: 117, 5: 138}
+  H mod 12: {1: 72, 3: 52, 5: 84, 7: 73, 9: 65, 11: 54}
+  H mod 36: {1: 38, 3: 16, 5: 18, 7: 18, 9: 27, 11: 11, 13: 14, 15: 24, 17: 18, 19: 21, 21: 16, 23: 30, 25: 20, 27: 12, 29: 48, 31: 34, 33: 22, 35: 13}
+  H mod 24: {1: 35, 3: 26, 5: 31, 7: 36, 9: 43, 11: 31, 13: 37, 15: 26, 17: 53, 19: 37, 21: 22, 23: 23}
+  H mod 72: {1: 9, 3: 6, 5: 8, 7: 10, 9: 19, 11: 11, 13: 4, 15: 10, 17: 15, 19: 17, 21: 6, 23: 11, 25: 16, 27: 6, 29: 20, 31: 22, 33: 14, 35: 1, 37: 29, 39: 10, 41: 10, 43: 8, 45: 8, 49: 10, 51: 14, 53: 3, 55: 4, 57: 10, 59: 19, 61: 4, 63: 6, 65: 28, 67: 12, 69: 8, 71: 12}
+
+======================================================================
+PART 5: The topological content b0 = I(Omega, -1)
+======================================================================
+  b0 range: [-51, 0]
+  b0 mean: -24.0
+  b0 < 0: 399, b0 = 0: 1, b0 > 0: 0
+
+  b0 mod 2: {0: 197, 1: 203}
+  (a1+a2) mod 2: {0: 203, 1: 197}
+  b0 mod 2 = 1 + a1 + a2 mod 2: 400/400
+
+======================================================================
+PART 6: The derivative b1 = a1 - 2*a2
+======================================================================
+  b1 range: [1, 44]
+  b1 mean: 20.6
+  b1 < 0: 0, b1 = 0: 0, b1 > 0: 400
+
+  b1 < 0 cases (a1 < 2*a2):
+
+======================================================================
+PART 7: Convexity structure
+======================================================================
+  Newton inequality a2 <= a1^2: 400/400
+  4*a2 <= a1^2 (real roots sufficient): 400/400
+  Newton ratio a2/a1^2: [0.0000, 0.0370], mean=0.0052
+
+======================================================================
+PART 8: b0, b1, b2 in terms of sigma matrix
+======================================================================
+  tr(Sigma^2) determined by score sequence: False
+
+  Correlations:
+    c3 vs tr(Sigma^2): r = -0.9545
+    c5 vs tr(Sigma^2): r = -0.9284
+    c7 vs tr(Sigma^2): r = -0.8395
+    c3 vs tr(Sigma^3): r = -0.9923
+
+======================================================================
+PART 9: COMPLETE MOD STRUCTURE SUMMARY
+======================================================================
+
+AT n=7 (and any n where alpha_k = 0 for k >= 3):
+
+H(T) = I(Omega(T), 2) = 1 + 2*a1 + 4*a2
+
+ALPHA BASIS (centered at x=0):
+  I(x) = 1 + a1*x + a2*x^2
+  a1 = total # directed odd cycles in T (with multiplicity)
+  a2 = # vertex-disjoint pairs of directed odd cycles
+
+BETA BASIS (centered at x=-1, i.e., y = x+1):
+  I(y-1) = b0 + b1*y + b2*y^2
+  b0 = 1 - a1 + a2 = I(Omega, -1) = reduced Euler char + 1
+  b1 = a1 - 2*a2 = I'(Omega, -1) = derivative at topology point
+  b2 = a2 = I''(Omega, -1)/2 = curvature at topology point
+
+2-ADIC TOWER (from alpha basis):
+  H mod 2 = 1                              [REDEI]
+  H mod 4 = 1 + 2*(a1 mod 2)               [cycle count parity]
+  H mod 8 = (1 + 2*a1 + 4*a2) mod 8        [requires a1 mod 4, a2 mod 2]
+  v_2(H-1) = 1 + v_2(a1 + 2*a2)
+
+3-ADIC TOWER (from beta basis):
+  H mod 3 = b0 mod 3 = I(Omega,-1) mod 3   [TOPOLOGY]
+  H mod 9 = (b0 + 3*b1) mod 9              [topology + derivative]
+  H mod 27 = H mod 27                       [exact at n<=7]
+
+CRT COMBINATIONS:
+  H mod 6  = CRT(1, b0 mod 3)              [Redei + topology]
+  H mod 12 = CRT(1+2*(a1%2), b0%3)          [cycle parity + topology]
+  H mod 36 = CRT(H%4, H%9)                 [requires b1]
+  H mod 72 = CRT(H%8, H%9)                 [requires a1%4, a2%2, b1%3]
+
+THE 2-3 BRIDGE:
+  x = 2 = -1 + 3
+  H = I(Omega, -1 + 3) = b0 + 3*b1 + 9*b2
+  The 3 in x = -1 + 3 IS the modular gap between
+  the counting point (x=2) and the topological point (x=-1).
+
+INTERPRETATION:
+  H is decomposed into three layers:
+  1. b0 (TOPOLOGICAL): the Euler characteristic of Ind(Omega)
+     - encodes the global structure of cycle conflicts
+     - determines H mod 3
+  2. b1 (DIFFERENTIAL): the sensitivity of I at the topology point
+     - b1 = a1 - 2*a2 measures "excess cycles beyond disjoint pairs"
+     - determines H mod 9 (together with b0)
+  3. b2 (GEOMETRIC): the curvature / number of disjoint pairs
+     - determines the exact value of H (given b0, b1)
+     - b2 = a2 >= 0 always (I is convex at x=-1)
+
+  Verification table (first 20 samples):
+      H   a1  a2   b0   b1  b2 H%3 b0%3 H%9  (b0+3b1)%9
+    157   54  12  -41   30  12   1    1   4           4
+    145   48  12  -35   24  12   1    1   1           1
+     73   28   4  -23   20   4   1    1   1           1
+    109   38   8  -29   22   8   1    1   1           1
+     37   14   2  -11   10   2   1    1   1           1
+     91   37   4  -32   29   4   1    1   1           1
+     65   28   2  -25   24   2   2    2   2           2
+    113   42   7  -34   28   7   2    2   5           5
+     89   36   4  -31   28   4   2    2   8           8
+     91   35   5  -29   25   5   1    1   1           1
+     59   25   2  -22   21   2   2    2   5           5
+    135   51   8  -42   35   8   0    0   0           0
+     39   19   0  -18   19   0   0    0   3           3
+     49   20   2  -17   16   2   1    1   4           4
+    103   37   7  -29   23   7   1    1   4           4
+     97   36   6  -29   24   6   1    1   7           7
+    133   50   8  -41   34   8   1    1   7           7
+    135   51   8  -42   35   8   0    0   0           0
+     15    7   0   -6    7   0   0    0   6           6
+     29   12   1  -10   10   1   2    2   2           2
+
+
+Done.
