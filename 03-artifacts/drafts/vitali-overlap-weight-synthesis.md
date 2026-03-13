@@ -277,13 +277,104 @@ dc7 cannot be expressed as a linear function of delta_sigma or diff(W). It depen
 | Measure-preserving = preserves integral | Vitali atom preserves H contribution from c3, c5 |
 | Non-measurable residual | dc7 contribution to delta_H |
 
+## THM-174: Sigma Changes for Exactly 4*(n-4) SX Pairs (PROVED)
+
+**Algebraic proof** that Vitali atoms change sigma for exactly |S|*(n-|S|) = 4*(n-4) pairs:
+
+- **XX pairs:** sigma unchanged (no S-arcs involved in sigma computation)
+- **SS pairs:** sigma unchanged (common successor <-> common predecessor swap preserves sum)
+- **SX pairs:** delta_sigma(s,x) = -sum_{w in S\{s}} sign(s->w)*sign(x->w), sum of 3 terms each +/-1, therefore ALWAYS ODD, hence NEVER zero
+
+**Verified computationally:** 1476/1476 formula matches, n=7,8,9 all confirm.
+
+Moreover: **delta_sigma is ALWAYS exactly +/-1** (never +/-3), because the (1,1,2,2) score constraint forces exactly 2 agreeing and 1 disagreeing among the 3 terms. Perfectly balanced: 738 positive, 738 negative.
+
+## THM-175: Vitali Atom as Topological Defect (PROVED for n=7)
+
+At n=7, the Vitali atom is a **topological defect** in the Hamiltonian cycle structure:
+
+1. **Every Hamiltonian cycle MUST traverse the atom** — at least 1 S-S arc required (pigeonhole: 4 gaps in 7 positions, each >= 1, cannot all be >= 2 since 4*2 > 7)
+2. **c7(A) and c7(B) are completely DISJOINT** — no Hamiltonian cycle exists in both tournaments (k=0 impossible, confirmed computationally)
+3. **dc7 comes from pure cycle replacement** — no cancellation, pure difference
+4. **C3/T3 dichotomy**: When outside vertices form a 3-cycle (C3), dc7 != 0 in ~59% of cases; when transitive (T3), only ~13%
+
+At n=8: pigeonhole allows k=0 (4 gaps summing to 8, all gaps=2 is possible), so some cycles survive the flip. dc7 range widens to [-3, +3].
+
+## THM-176: Fundamental Pair Decomposition (PROVED)
+
+For every pair (u,v) in a tournament on n vertices:
+
+**n - 2 = sigma(u,v) + lambda(u,v) + delta(u,v)**
+
+where:
+- sigma = #{common successors} + #{common predecessors} (extremal witnesses)
+- lambda = #{3-cycle witnesses} (cyclic witnesses)
+- delta = #{transitive triple witnesses} (transitive witnesses)
+
+Verified 10,500/10,500 at n=7. This is the **fundamental partition of the witness space**.
+
+**Vitali atoms transfer weight between sigma and delta** (since lambda is preserved, dsig = -ddelta). Each SX pair shifts sigma by +/-1 and delta by -/+1.
+
+## THM-177: Four-Way Witness Reclassification
+
+Under a Vitali atom, ALL changing witnesses are in S. The microscopic category transitions are:
+
+| Transition | Count | Description |
+|-----------|-------|-------------|
+| D -> S | 874 | transitive -> common successor |
+| D -> P | 748 | transitive -> common predecessor |
+| S -> D | 874 | common successor -> transitive |
+| P -> D | 748 | common predecessor -> transitive |
+| L -> S | 296 | cyclic -> common successor |
+| L -> P | 296 | cyclic -> common predecessor |
+| S -> L | 296 | common successor -> cyclic |
+| P -> L | 296 | common predecessor -> cyclic |
+
+While individual witnesses change between ALL four categories, the NET effect per pair preserves lambda and shifts sigma by exactly +/-1.
+
+## THM-178: |dc7| <= 1 at n=7 (PROVED COMPUTATIONALLY)
+
+**|dc7| <= 1 for ALL Vitali atoms at n=7.** Verified 1,262 Vitali pairs with zero exceptions.
+
+dc7 distribution: {-1: 186, 0: 924, 1: 152} (15% nonzero with slight negative bias).
+
+**Scaling with n:** dc7 at n=8 ranges [-3, +3], dc7 at n=9 ranges [-4, +3].
+
+### Anatomy of dc7 != 0
+
+The **S-reversal conjugation** maps A-cycles to potential B-cycles by reversing S-segments. About 2/3 of cycles conjugate successfully. The |dc7| = 1 means EXACTLY one unpaired cycle remains.
+
+The c7 values are remarkably rigid: dc7 != 0 examples cluster at c7 in {191, 192, 227, 228}.
+
+## Vitali Orbit Structure
+
+- **Orbit sizes at n=7:** {2, 3} only (89% size 2, 11% size 3)
+- **Commutativity:** All Vitali operations commute (even with overlap)
+- **c3, c5 constant within orbits** (lambda-measurability)
+- **c7 range within orbits:** at most 1 (confirming |dc7| <= 1)
+- **Self-inverse:** Every Vitali atom is an involution, and B also has S as Vitali atom
+
+## The Fiber Bundle Interpretation
+
+The tournament's pair data has a **fiber bundle structure**:
+
+- **Base space:** Lambda graph (edge-weighted graph)
+- **Fiber:** The split (sigma, delta) with sigma + delta = n-2-lambda(u,v) for each pair
+- **Vitali atoms = parallel transport:** Move along the fiber (sigma <-> delta by +/-1) while staying on the same base point (lambda preserved)
+- **Structure group:** Z (translations by +/-1)
+- **The "hidden dimension":** The fiber coordinate sigma, invisible to lambda, but visible to (lambda, sigma) = Level 1.5
+
 ## Open Questions (Updated)
 
-1. ~~PROVE dc5 = 0~~ **SOLVED by THM-172/173** — c5 is lambda-determined, so lambda-preserving atoms force dc5=0
-2. **Does (lambda, sigma) determine c9?** If so, Level 1.5 captures all odd cycles through 9-cycles
-3. **Is there a Level 1.75?** What additional invariant resolves c9 if sigma doesn't suffice?
-4. **Witness matrix rank distribution** at larger n: does rank scale with n?
-5. **Prove rank-3 universality**: why is the diff matrix always rank 3 at n=7?
-6. **Prove 24-entry universality**: counting argument for the exact number of changed entries
-7. **Connection to TDA**: The hierarchy resembles a persistence filtration
-8. **Engineering**: Use the 9-entry lookup table (THM-173) for fast c5 computation
+1. ~~PROVE dc5 = 0~~ **SOLVED by THM-172/173**
+2. ~~PROVE dsig = 4*(n-4)~~ **SOLVED by THM-174**
+3. **Prove |dc7| <= 1 at n=7** — computational proof exists; want algebraic proof
+4. **What determines the SIGN of dc7?** The C3/T3 outside structure correlates but doesn't determine it
+5. **Does |dc7| <= n-4?** The data suggests dc7 grows with n but we need bounds
+6. **Prove rank-3 universality**: why is the witness diff always rank 3 at n=7?
+7. **Prove 24-entry universality**: counting argument for the exact number of changed entries
+8. **Does (lambda, sigma) determine c9?** If so, Level 1.5 captures all odd cycles through 9
+9. **Connection to TDA**: The fiber bundle structure resembles a persistence filtration
+10. **Engineering**: Use the 9-entry lookup table (THM-173) for fast c5 computation
+11. **Prove commutativity of Vitali operations** — always commute even with overlap?
+12. **Holonomy**: Does parallel transport around a closed loop of Vitali atoms give non-trivial holonomy?

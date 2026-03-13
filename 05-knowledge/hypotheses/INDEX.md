@@ -552,6 +552,13 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-851 | **DELTA(k) PRESERVED UNDER VITALI ATOMS**: Row sums of witness matrix (= per-vertex 3-cycle counts delta(k)) are preserved by ALL Vitali atoms, not just total c3. Verified 100/100 at n=7. | vitali_higher_dim_structure.py | kind-pasteur-S61 |
 | HYP-852 | **dc7 NOT FIRST-ORDER**: dc7 cannot be expressed as linear function of delta_sigma (error 1.26) or diff(W) (error 1.17). It depends on interaction between diff and tournament structure. | witness_rank3_decomp.py | kind-pasteur-S61 |
 | HYP-853 | **A^2 DETERMINES A AT n=5**: Every n=5 tournament has a unique squared adjacency matrix. 0 tournaments share same A^2. (May not hold at larger n.) | sigma_algebra_hierarchy.py | kind-pasteur-S61 |
+| HYP-854 | **THM-174: SIGMA CHANGES EXACTLY 4*(n-4) SX PAIRS**: Algebraic proof: delta_sigma(s,x) = -sum_{w in S\{s}} sign(s->w)*sign(x->w), sum of 3 terms each +/-1, always odd, never 0. Verified 1476/1476 at n=7, also n=8,9. delta_sigma ALWAYS +/-1 (never +/-3). | sigma_change_proof.py | kind-pasteur-S61 |
+| HYP-855 | **THM-175: EVERY HAMILTONIAN CYCLE TRAVERSES VITALI ATOM (n=7)**: Pigeonhole: 4 gaps sum to 7, each >= 1, so cannot all be >= 2. Therefore k=0 impossible: c7(A) and c7(B) completely disjoint. FAILS at n=8 (gaps can all be 2). | vitali_geometric_structure.py | kind-pasteur-S61 |
+| HYP-856 | **THM-176: n-2 = sigma + lambda + delta**: Fundamental pair decomposition. sigma=common succ/pred, lambda=3-cycle witnesses, delta=transitive witnesses. Verified 10500/10500 at n=7. | overlap_weight_210_structure.py | kind-pasteur-S61 |
+| HYP-857 | **THM-177: FOUR-WAY WITNESS RECLASSIFICATION**: Vitali atoms cause D<->S, D<->P, L<->S, L<->P transitions (all 4 types). All changing witnesses in S. Net per pair: lambda preserved, sigma shifts +/-1. | overlap_weight_210_structure.py | kind-pasteur-S61 |
+| HYP-858 | **THM-178: |dc7| <= 1 AT n=7**: All 1262 tested Vitali pairs have dc7 in {-1,0,1}. At n=8: dc7 in [-3,+3]. S-reversal conjugation shows most cycles pair up with at most 1 unpaired. | vitali_orbit_deep.py, dc7_nonzero_anatomy.py | kind-pasteur-S61 |
+| HYP-859 | **VITALI OPERATIONS COMMUTE**: All tested pairs of Vitali atoms on same tournament commute (even with overlap). Orbit sizes {2,3} at n=7. | vitali_holonomy_composition.py | kind-pasteur-S61 |
+| HYP-860 | **C3/T3 RESONANCE**: Outside C3 => dc7 nonzero 59%; outside T3 => dc7 nonzero 13%. At n=8, XX c3 count predicts dc7 activity rate. | vitali_c3_resonance.py | kind-pasteur-S61 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |

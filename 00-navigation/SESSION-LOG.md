@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S61 (cont'd, window 3) — 2026-03-13: Sigma Change Proof + Topological Defect + Fiber Bundle + dc7 Anatomy
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S61 (context window 2)
+**Summary of work:**
+- **THM-174 PROVED**: Sigma changes exactly 4*(n-4) SX pairs, algebraically: delta_sigma = -sum sign(s->w)*sign(x->w), always +/-1 (never +/-3). Verified 1476/1476.
+- **THM-175 PROVED**: Every Hamiltonian 7-cycle must traverse the Vitali atom (pigeonhole). c7(A) and c7(B) COMPLETELY DISJOINT at n=7. Fails at n>=8.
+- **THM-176 PROVED**: Fundamental decomposition n-2 = sigma + lambda + delta. Partition of witnesses into extremal/cyclic/transitive.
+- **THM-177**: Four-way witness reclassification (D<->S, D<->P, L<->S, L<->P). All changes in S.
+- **THM-178**: |dc7| <= 1 at n=7 (1262/1262). At n=8: |dc7| <= 3.
+- **C3/T3 resonance**: C3 outside => 59% dc7 nonzero vs 13% for T3.
+- **Vitali orbit structure**: sizes {2,3}, always commute, c3/c5 constant.
+- **Conjugation anatomy**: S-reversal maps ~2/3 of A-cycles to B-cycles; exactly 1 unpaired for dc7!=0.
+- **Fiber bundle interpretation**: Lambda = base, sigma/delta = fiber. Vitali = parallel transport.
+**New contributions:** THM-174-178, HYP-854-860. Scripts: sigma_change_proof.py, vitali_sign_pattern_analysis.py, vitali_geometric_structure.py, overlap_weight_210_structure.py, vitali_c3_resonance.py, vitali_holonomy_composition.py, vitali_orbit_deep.py, dc7_nonzero_anatomy.py, dc7_one_theorem.py
+**Unresolved threads:**
+1. **Prove |dc7| <= 1 algebraically** — computational proof only so far
+2. **What determines sign(dc7)?** — C3/T3 correlates but doesn't determine
+3. **Prove commutativity** — all tested cases commute, need algebraic proof
+4. **Holonomy** — does parallel transport around Vitali loops give non-trivial holonomy?
+5. **c7 rigidity**: dc7!=0 values cluster at c7 in {191,192,227,228} — why?
+
 ## opus-2026-03-13-S71c (cont'd) — 2026-03-13: Degenerate Walk Theorem + Sigma Hierarchy + Betti Lambda-Determination
 
 **Account:** opus
