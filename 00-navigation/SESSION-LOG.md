@@ -13,6 +13,7 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+<<<<<<< HEAD
 ## opus-2026-03-12-S65 — 2026-03-12: Walsh difference formula + additive energy = IPR + 5 new discoveries
 
 **Account:** opus
@@ -112,6 +113,46 @@ Entry format:
     The joint cycle count J_k(0,v) should be expressible in terms of eigenvalues
     via the representation function r_S(v) = |S ∩ (v-S)|, whose Fourier transform
     is |λ_k|². This connection is clear but needs rigorous bound.
+
+---
+
+## kind-pasteur-2026-03-12-S59 — 2026-03-12: Overlap weight analysis — THM-141/142 co-occurrence + disjointness excess
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S58
+**Summary of work:** Deep exploration of overlap weight structure in conflict graphs Omega(T) for Paley vs Interval circulant tournaments. Proved two new theorems explaining the disjointness mechanism driving the Paley→Interval phase transition.
+
+  MAJOR RESULTS:
+
+  1. **THM-141 PROVED (Interval Co-occurrence Formula):**
+     For Interval S={1,...,m} on Z_p, the 3-cycle co-occurrence at gap d is co_occ_3(d) = min(d, p-d).
+     This is LINEAR in the gap. Paley has CONSTANT co-occurrence = (p+1)/4.
+     Verified computationally at p=7, 11, 13, 19.
+
+  2. **THM-142 PROVED (Disjointness Excess Formula):**
+     disjoint_3-3(Interval) - disjoint_3-3(Paley) = p(p-1)(p+1)(p-3)/192.
+     Proof via inclusion-exclusion: Interval's linear gradient creates more overlap=2 pairs,
+     which by I-E gives more disjoint pairs. Verified p=7 (Δ=7), p=11 (Δ=55), p=19 (Δ=570).
+
+  3. **MECHANISM IDENTIFIED:** Interval's locality (consecutive connection set) creates a bimodal
+     overlap distribution: more ov=0 AND more ov=2, fewer ov=1. The excess grows as O(p⁴),
+     overcoming Paley's O(p²) cycle count advantage at p≈13.
+
+  4. **DATA AT p=13:** Paley digraph at p≡1(mod 4) is NOT a tournament (S∩(-S)≠∅). Only Interval
+     data is valid. Interval has 91 vertex sets, 1820 disjoint pairs (44.44%).
+
+  5. **ADDITIVE STRUCTURE:** Interval has higher additive energy and Fourier concentration (L4/L2²)
+     at all p. Despite more additive structure, Interval has MORE disjoint pairs — the locality
+     effect dominates.
+
+**New contributions:** THM-141, THM-142, HYP-524/525/526, overlap_weight_analysis.py
+**Unresolved threads:**
+  - Extend disjointness analysis to 5-cycle pairs (needs sparse Omega for p≥11)
+  - Exact formula for alpha_2 (all-cycle disjoint pairs, not just 3-3)
+  - Prove HYP-515 rigorously (scaling argument for phase transition crossover)
+  - Investigate whether co_occ gradient persists for 5-cycles
+
+---
 
 ## opus-2026-03-12-S63 — 2026-03-12: Chirality dichotomy + p=17 exhaustive + NQR orbit pairing
 

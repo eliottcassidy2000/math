@@ -1,0 +1,542 @@
+======================================================================
+DEEP OVERLAP WEIGHT ANALYSIS
+======================================================================
+
+======================================================================
+p=7, Paley, S=[1, 2, 4]
+======================================================================
+
+  Total cycles (k<=7): 80 (enumerated in 0.0s)
+    k=3: 14 directed cycles
+    k=5: 42 directed cycles
+    k=7: 24 directed cycles
+
+  --- Alpha decomposition ---
+    alpha_0 = 1
+    alpha_1 = 80
+    alpha_2 = 7
+
+  --- Overlap weight spectrum ---
+    overlap=0:        7 pairs (  0.22%)
+    overlap=1:      147 pairs (  4.65%)
+    overlap=2:      357 pairs ( 11.30%)
+    overlap=3:      924 pairs ( 29.24%)
+    overlap=4:      420 pairs ( 13.29%)
+    overlap=5:     1029 pairs ( 32.56%)
+    overlap=7:      276 pairs (  8.73%)
+    Mean overlap = 3.921
+    Var overlap = 2.304
+    Std overlap = 1.518
+
+  --- Omega degree distribution ---
+    Avg degree = 78.8
+    Min degree = 78
+    Max degree = 79
+    Degree values: {78: 14, 79: 66}
+
+  --- Omega clique counts ---
+    1-cliques: 80
+    2-cliques: 3153
+    3-cliques: 81614
+
+  --- Shared differences vs vertex overlap ---
+    overlap=0: avg shared diffs = 6.00 (n=7)
+    overlap=1: avg shared diffs = 6.00 (n=63)
+    overlap=2: avg shared diffs = 6.00 (n=21)
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 14
+    Directed 3-cycles: 14
+    C(c3, 2) = 91
+    Disjoint 3-3 pairs: 7 (7.69%)
+    Overlap=1 pairs:    63 (69.23%)
+    Overlap=2 pairs:    21 (23.08%)
+    Overlap=3 pairs:    0 (0.00%)
+
+  --- 3-cycle gap anatomy ---
+    14 directed 3-cycles
+    Gap triple types (sorted):
+      (1, 2, 4): 14 cycles
+
+  --- Co-occurrence by gap (ALL cycles) ---
+    gap 1: 46 shared cycles (gap 6: 46)
+    gap 2: 46 shared cycles (gap 5: 46)
+    gap 3: 46 shared cycles (gap 4: 46)
+    gap 4: 46 shared cycles (gap 3: 46)
+    Co-occurrence mean = 46.00, variance = 0.00
+
+  --- Additive structure of S ---
+    Sum pairs in S: 3
+    Zero-sum triples: 6
+    Additive energy: 15
+    c3 = zero_sum / 3 = 2
+    Fourier |S_hat|^2: 9.0 2.0 2.0 2.0 2.0 2.0 2.0 
+    Fourier L4/L2^2 = 0.238095
+
+  --- Disjoint pair vertex analysis ---
+
+    Free vertex distribution (disjoint 3-3 pairs at p=7):
+    {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+    UNIFORM: each vertex is free in 1 pairs
+
+======================================================================
+p=7, Interval, S=[1, 2, 3]
+======================================================================
+
+  Total cycles (k<=7): 59 (enumerated in 0.0s)
+    k=3: 14 directed cycles
+    k=5: 28 directed cycles
+    k=7: 17 directed cycles
+
+  --- Alpha decomposition ---
+    alpha_0 = 1
+    alpha_1 = 59
+    alpha_2 = 14
+
+  --- Overlap weight spectrum ---
+    overlap=0:       14 pairs (  0.82%)
+    overlap=1:      112 pairs (  6.55%)
+    overlap=2:      238 pairs ( 13.91%)
+    overlap=3:      546 pairs ( 31.91%)
+    overlap=4:      182 pairs ( 10.64%)
+    overlap=5:      483 pairs ( 28.23%)
+    overlap=7:      136 pairs (  7.95%)
+    Mean overlap = 3.694
+    Var overlap = 2.500
+    Std overlap = 1.581
+
+  --- Omega degree distribution ---
+    Avg degree = 57.5
+    Min degree = 56
+    Max degree = 58
+    Degree values: {56: 14, 58: 45}
+
+  --- Omega clique counts ---
+    1-cliques: 59
+    2-cliques: 1697
+    3-cliques: 31725
+
+  --- Shared differences vs vertex overlap ---
+    overlap=0: avg shared diffs = 4.00 (n=14)
+    overlap=1: avg shared diffs = 2.57 (n=49)
+    overlap=2: avg shared diffs = 3.00 (n=28)
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 14
+    Directed 3-cycles: 14
+    C(c3, 2) = 91
+    Disjoint 3-3 pairs: 14 (15.38%)
+    Overlap=1 pairs:    49 (53.85%)
+    Overlap=2 pairs:    28 (30.77%)
+    Overlap=3 pairs:    0 (0.00%)
+
+  --- 3-cycle gap anatomy ---
+    14 directed 3-cycles
+    Gap triple types (sorted):
+      (1, 3, 3): 7 cycles
+      (2, 2, 3): 7 cycles
+
+  --- Co-occurrence by gap (ALL cycles) ---
+    gap 1: 31 shared cycles (gap 6: 31)
+    gap 2: 32 shared cycles (gap 5: 32)
+    gap 3: 34 shared cycles (gap 4: 34)
+    gap 4: 34 shared cycles (gap 3: 34)
+    Co-occurrence mean = 32.33, variance = 1.56
+
+  --- Additive structure of S ---
+    Sum pairs in S: 3
+    Zero-sum triples: 6
+    Additive energy: 19
+    c3 = zero_sum / 3 = 2
+    Fourier |S_hat|^2: 9.0 5.0 0.3 0.6 0.6 0.3 5.0 
+    Fourier L4/L2^2 = 0.301587
+
+  --- Disjoint pair vertex analysis ---
+
+    Free vertex distribution (disjoint 3-3 pairs at p=7):
+    {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+    UNIFORM: each vertex is free in 2 pairs
+
+======================================================================
+p=11, Paley, S=[1, 3, 4, 5, 9]
+======================================================================
+
+  Total cycles (k<=11): 21169 (enumerated in 0.1s)
+    k=3: 55 directed cycles
+    k=5: 594 directed cycles
+    k=7: 3960 directed cycles
+    k=9: 11055 directed cycles
+    k=11: 5505 directed cycles
+
+  [Skipping full Omega analysis: 21169 cycles too large]
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 55
+    Directed 3-cycles: 55
+    C(c3, 2) = 1485
+    Disjoint 3-3 pairs: 495 (33.33%)
+    Overlap=1 pairs:    825 (55.56%)
+    Overlap=2 pairs:    165 (11.11%)
+    Overlap=3 pairs:    0 (0.00%)
+    Mutually disjoint 3-3-3 triples: 550
+
+  --- 3-cycle gap anatomy ---
+    55 directed 3-cycles
+    Gap triple types (sorted):
+      (1, 1, 9): 11 cycles
+      (1, 5, 5): 11 cycles
+      (4, 9, 9): 11 cycles
+      (3, 3, 5): 11 cycles
+      (3, 4, 4): 11 cycles
+
+  --- Co-occurrence by gap (3-cycles only) ---
+    gap 1: 3 shared cycles (gap 10: 3)
+    gap 2: 3 shared cycles (gap 9: 3)
+    gap 3: 3 shared cycles (gap 8: 3)
+    gap 4: 3 shared cycles (gap 7: 3)
+    gap 5: 3 shared cycles (gap 6: 3)
+    gap 6: 3 shared cycles (gap 5: 3)
+    Co-occurrence mean = 3.00, variance = 0.00
+
+  --- Additive structure of S ---
+    Sum pairs in S: 10
+    Zero-sum triples: 15
+    Additive energy: 65
+    c3 = zero_sum / 3 = 5
+    Fourier |S_hat|^2: 25.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 3.0 
+    Fourier L4/L2^2 = 0.236364
+
+  --- Disjoint pair vertex analysis ---
+
+======================================================================
+p=11, Interval, S=[1, 2, 3, 4, 5]
+======================================================================
+
+  Total cycles (k<=11): 18397 (enumerated in 0.1s)
+    k=3: 55 directed cycles
+    k=5: 484 directed cycles
+    k=7: 3399 directed cycles
+    k=9: 9350 directed cycles
+    k=11: 5109 directed cycles
+
+  [Skipping full Omega analysis: 18397 cycles too large]
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 55
+    Directed 3-cycles: 55
+    C(c3, 2) = 1485
+    Disjoint 3-3 pairs: 550 (37.04%)
+    Overlap=1 pairs:    715 (48.15%)
+    Overlap=2 pairs:    220 (14.81%)
+    Overlap=3 pairs:    0 (0.00%)
+    Mutually disjoint 3-3-3 triples: 748
+
+  --- 3-cycle gap anatomy ---
+    55 directed 3-cycles
+    Gap triple types (sorted):
+      (2, 4, 5): 22 cycles
+      (1, 5, 5): 11 cycles
+      (3, 3, 5): 11 cycles
+      (3, 4, 4): 11 cycles
+
+  --- Co-occurrence by gap (3-cycles only) ---
+    gap 1: 1 shared cycles (gap 10: 1)
+    gap 2: 2 shared cycles (gap 9: 2)
+    gap 3: 3 shared cycles (gap 8: 3)
+    gap 4: 4 shared cycles (gap 7: 4)
+    gap 5: 5 shared cycles (gap 6: 5)
+    gap 6: 5 shared cycles (gap 5: 5)
+    Co-occurrence mean = 3.00, variance = 2.00
+
+  --- Additive structure of S ---
+    Sum pairs in S: 10
+    Zero-sum triples: 15
+    Additive energy: 85
+    c3 = zero_sum / 3 = 5
+    Fourier |S_hat|^2: 25.0 12.3 0.3 1.4 0.4 0.6 0.6 0.4 1.4 0.3 12.3 
+    Fourier L4/L2^2 = 0.309091
+
+  --- Disjoint pair vertex analysis ---
+
+======================================================================
+p=13, Paley, S=[1, 3, 4, 9, 10, 12]
+======================================================================
+
+  Total cycles (k<=7): 7306 (enumerated in 0.1s)
+    k=3: 52 directed cycles
+    k=5: 702 directed cycles
+    k=7: 6552 directed cycles
+
+  [Skipping full Omega analysis: 7306 cycles too large]
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 26
+    Directed 3-cycles: 52
+    C(c3, 2) = 325
+    Disjoint 3-3 pairs: 169 (52.00%)
+    Overlap=1 pairs:    117 (36.00%)
+    Overlap=2 pairs:    39 (12.00%)
+    Overlap=3 pairs:    0 (0.00%)
+    Mutually disjoint 3-3-3 triples: 286
+
+  --- 3-cycle gap anatomy ---
+    52 directed 3-cycles
+    Gap triple types (sorted):
+      (1, 3, 9): 26 cycles
+      (4, 10, 12): 26 cycles
+
+  --- Co-occurrence by gap (3-cycles only) ---
+    gap 1: 2 shared cycles (gap 12: 2)
+    gap 2: 0 shared cycles (gap 11: 0)
+    gap 3: 2 shared cycles (gap 10: 2)
+    gap 4: 2 shared cycles (gap 9: 2)
+    gap 5: 0 shared cycles (gap 8: 0)
+    gap 6: 0 shared cycles (gap 7: 0)
+    gap 7: 0 shared cycles (gap 6: 0)
+    Co-occurrence mean = 1.00, variance = 1.00
+
+  --- Additive structure of S ---
+    Sum pairs in S: 12
+    Zero-sum triples: 12
+    Additive energy: 114
+    c3 = zero_sum / 3 = 4
+    Fourier |S_hat|^2: 36.0 1.7 5.3 1.7 1.7 5.3 5.3 5.3 5.3 1.7 1.7 5.3 1.7 
+    Fourier L4/L2^2 = 0.243590
+
+======================================================================
+p=13, Interval, S=[1, 2, 3, 4, 5, 6]
+======================================================================
+
+  Total cycles (k<=7): 17212 (enumerated in 0.2s)
+    k=3: 91 directed cycles
+    k=5: 1274 directed cycles
+    k=7: 15847 directed cycles
+
+  [Skipping full Omega analysis: 17212 cycles too large]
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 91
+    Directed 3-cycles: 91
+    C(c3, 2) = 4095
+    Disjoint 3-3 pairs: 1820 (44.44%)
+    Overlap=1 pairs:    1820 (44.44%)
+    Overlap=2 pairs:    455 (11.11%)
+    Overlap=3 pairs:    0 (0.00%)
+    Mutually disjoint 3-3-3 triples: 7644
+
+  --- 3-cycle gap anatomy ---
+    91 directed 3-cycles
+    Gap triple types (sorted):
+      (2, 5, 6): 26 cycles
+      (3, 4, 6): 26 cycles
+      (1, 6, 6): 13 cycles
+      (3, 5, 5): 13 cycles
+      (4, 4, 5): 13 cycles
+
+  --- Co-occurrence by gap (3-cycles only) ---
+    gap 1: 1 shared cycles (gap 12: 1)
+    gap 2: 2 shared cycles (gap 11: 2)
+    gap 3: 3 shared cycles (gap 10: 3)
+    gap 4: 4 shared cycles (gap 9: 4)
+    gap 5: 5 shared cycles (gap 8: 5)
+    gap 6: 6 shared cycles (gap 7: 6)
+    gap 7: 6 shared cycles (gap 6: 6)
+    Co-occurrence mean = 3.50, variance = 2.92
+
+  --- Additive structure of S ---
+    Sum pairs in S: 15
+    Zero-sum triples: 21
+    Additive energy: 146
+    c3 = zero_sum / 3 = 7
+    Fourier |S_hat|^2: 36.0 17.2 0.3 2.0 0.3 0.8 0.4 0.4 0.8 0.3 2.0 0.3 17.2 
+    Fourier L4/L2^2 = 0.311966
+
+======================================================================
+p=19, Paley, S=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+======================================================================
+
+  Total cycles (k<=7): 435993 (enumerated in 4.9s)
+    k=3: 285 directed cycles
+    k=5: 11628 directed cycles
+    k=7: 424080 directed cycles
+
+  [Skipping full Omega analysis: 435993 cycles too large]
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 285
+    Directed 3-cycles: 285
+    C(c3, 2) = 40470
+    Disjoint 3-3 pairs: 23370 (57.75%)
+    Overlap=1 pairs:    15390 (38.03%)
+    Overlap=2 pairs:    1710 (4.23%)
+    Overlap=3 pairs:    0 (0.00%)
+    Mutually disjoint 3-3-3 triples: 650180
+
+  --- 3-cycle gap anatomy ---
+    285 directed 3-cycles
+    Gap triple types (sorted):
+      (1, 7, 11): 38 cycles
+      (5, 16, 17): 38 cycles
+      (4, 6, 9): 38 cycles
+      (1, 1, 17): 19 cycles
+      (1, 9, 9): 19 cycles
+      (4, 17, 17): 19 cycles
+      (6, 16, 16): 19 cycles
+      (11, 11, 16): 19 cycles
+      (4, 4, 11): 19 cycles
+      (5, 5, 9): 19 cycles
+      (5, 7, 7): 19 cycles
+      (6, 6, 7): 19 cycles
+
+  --- Co-occurrence by gap (3-cycles only) ---
+    gap 1: 5 shared cycles (gap 18: 5)
+    gap 2: 5 shared cycles (gap 17: 5)
+    gap 3: 5 shared cycles (gap 16: 5)
+    gap 4: 5 shared cycles (gap 15: 5)
+    gap 5: 5 shared cycles (gap 14: 5)
+    gap 6: 5 shared cycles (gap 13: 5)
+    gap 7: 5 shared cycles (gap 12: 5)
+    gap 8: 5 shared cycles (gap 11: 5)
+    gap 9: 5 shared cycles (gap 10: 5)
+    gap 10: 5 shared cycles (gap 9: 5)
+    Co-occurrence mean = 5.00, variance = 0.00
+
+  --- Additive structure of S ---
+    Sum pairs in S: 36
+    Zero-sum triples: 45
+    Additive energy: 369
+    c3 = zero_sum / 3 = 15
+    Fourier |S_hat|^2: 81.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 5.0 
+    Fourier L4/L2^2 = 0.239766
+
+======================================================================
+p=19, Interval, S=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+======================================================================
+
+  Total cycles (k<=7): 402135 (enumerated in 5.4s)
+    k=3: 285 directed cycles
+    k=5: 10488 directed cycles
+    k=7: 391362 directed cycles
+
+  [Skipping full Omega analysis: 402135 cycles too large]
+
+  --- 3-CYCLE FOCUSED ANALYSIS ---
+    3-cycle vertex sets: 285
+    Directed 3-cycles: 285
+    C(c3, 2) = 40470
+    Disjoint 3-3 pairs: 23940 (59.15%)
+    Overlap=1 pairs:    14250 (35.21%)
+    Overlap=2 pairs:    2280 (5.63%)
+    Overlap=3 pairs:    0 (0.00%)
+    Mutually disjoint 3-3-3 triples: 703304
+
+  --- 3-cycle gap anatomy ---
+    285 directed 3-cycles
+    Gap triple types (sorted):
+      (2, 8, 9): 38 cycles
+      (3, 7, 9): 38 cycles
+      (4, 6, 9): 38 cycles
+      (4, 7, 8): 38 cycles
+      (5, 6, 8): 38 cycles
+      (1, 9, 9): 19 cycles
+      (3, 8, 8): 19 cycles
+      (5, 5, 9): 19 cycles
+      (5, 7, 7): 19 cycles
+      (6, 6, 7): 19 cycles
+
+  --- Co-occurrence by gap (3-cycles only) ---
+    gap 1: 1 shared cycles (gap 18: 1)
+    gap 2: 2 shared cycles (gap 17: 2)
+    gap 3: 3 shared cycles (gap 16: 3)
+    gap 4: 4 shared cycles (gap 15: 4)
+    gap 5: 5 shared cycles (gap 14: 5)
+    gap 6: 6 shared cycles (gap 13: 6)
+    gap 7: 7 shared cycles (gap 12: 7)
+    gap 8: 8 shared cycles (gap 11: 8)
+    gap 9: 9 shared cycles (gap 10: 9)
+    gap 10: 9 shared cycles (gap 9: 9)
+    Co-occurrence mean = 5.00, variance = 6.67
+
+  --- Additive structure of S ---
+    Sum pairs in S: 36
+    Zero-sum triples: 45
+    Additive energy: 489
+    c3 = zero_sum / 3 = 15
+    Fourier |S_hat|^2: 81.0 36.7 0.3 4.1 0.3 1.5 0.3 0.8 0.4 0.5 0.5 0.4 0.8 0.3 1.5 0.3 4.1 0.3 36.7 
+    Fourier L4/L2^2 = 0.317739
+
+======================================================================
+COMPARATIVE SUMMARY
+======================================================================
+
+  p=7, Paley, S=[1, 2, 4]:
+    c3 vertex sets = 14
+    Disjoint 3-3 pairs = 7
+    Disjointness ratio = 0.076923
+    Zero-sum triples = 6
+    Additive energy = 15
+    Fourier L4/L2^2 = 0.238095
+    Co-occurrence var = 0.00
+
+  p=7, Interval, S=[1, 2, 3]:
+    c3 vertex sets = 14
+    Disjoint 3-3 pairs = 14
+    Disjointness ratio = 0.153846
+    Zero-sum triples = 6
+    Additive energy = 19
+    Fourier L4/L2^2 = 0.301587
+    Co-occurrence var = 0.67
+
+  p=11, Paley, S=[1, 3, 4, 5, 9]:
+    c3 vertex sets = 55
+    Disjoint 3-3 pairs = 495
+    Disjointness ratio = 0.333333
+    Zero-sum triples = 15
+    Additive energy = 65
+    Fourier L4/L2^2 = 0.236364
+    Co-occurrence var = 0.00
+
+  p=11, Interval, S=[1, 2, 3, 4, 5]:
+    c3 vertex sets = 55
+    Disjoint 3-3 pairs = 550
+    Disjointness ratio = 0.370370
+    Zero-sum triples = 15
+    Additive energy = 85
+    Fourier L4/L2^2 = 0.309091
+    Co-occurrence var = 2.00
+
+  p=13, Paley, S=[1, 3, 4, 9, 10, 12]:
+    c3 vertex sets = 26
+    Disjoint 3-3 pairs = 169
+    Disjointness ratio = 0.520000
+    Zero-sum triples = 12
+    Additive energy = 114
+    Fourier L4/L2^2 = 0.243590
+    Co-occurrence var = 1.00
+
+  p=13, Interval, S=[1, 2, 3, 4, 5, 6]:
+    c3 vertex sets = 91
+    Disjoint 3-3 pairs = 1820
+    Disjointness ratio = 0.444444
+    Zero-sum triples = 21
+    Additive energy = 146
+    Fourier L4/L2^2 = 0.311966
+    Co-occurrence var = 2.92
+
+  p=19, Paley, S=[1, 4, 5, 6, 7, 9, 11, 16, 17]:
+    c3 vertex sets = 285
+    Disjoint 3-3 pairs = 23370
+    Disjointness ratio = 0.577465
+    Zero-sum triples = 45
+    Additive energy = 369
+    Fourier L4/L2^2 = 0.239766
+    Co-occurrence var = 0.00
+
+  p=19, Interval, S=[1, 2, 3, 4, 5, 6, 7, 8, 9]:
+    c3 vertex sets = 285
+    Disjoint 3-3 pairs = 23940
+    Disjointness ratio = 0.591549
+    Zero-sum triples = 45
+    Additive energy = 489
+    Fourier L4/L2^2 = 0.317739
+    Co-occurrence var = 6.67
