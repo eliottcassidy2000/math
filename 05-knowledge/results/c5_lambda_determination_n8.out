@@ -1,0 +1,19 @@
+============================================================
+IS c5_dir A FUNCTION OF lambda? (n=8, sampled)
+============================================================
+  ... 5000/20000, groups=5000, ambiguous=0
+  ... 10000/20000, groups=9999, ambiguous=0
+  ... 15000/20000, groups=14994, ambiguous=0
+
+  Total lambda groups: 19990
+  Ambiguous: 0
+  c5 IS a function of lambda? True
+
+============================================================
+IS c7_dir A FUNCTION OF lambda? (n=8, sampled)
+============================================================
+  Total lambda groups: 9998
+  Ambiguous: 0
+  c7 IS a function of lambda? True
+
+Done.

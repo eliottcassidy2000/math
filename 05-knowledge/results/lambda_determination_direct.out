@@ -1,0 +1,34 @@
+============================================================
+DIRECT LAMBDA DETERMINATION TEST (n=7)
+============================================================
+  ... 500, found 30 Vitali pairs
+  ... 1000, found 58 Vitali pairs
+  ... 1500, found 95 Vitali pairs
+  ... 2000, found 123 Vitali pairs
+  ... 2500, found 144 Vitali pairs
+
+  Total Vitali pairs: 176
+  dc3 distribution: {0: 176}
+  dc5 distribution: {0: 176}
+  dc7 distribution: {-1: 25, 0: 132, 1: 19}
+  dc3 = 0 always? True
+  dc5 = 0 always? True
+  dc7 = 0 always? False
+============================================================
+DIRECT LAMBDA DETERMINATION TEST (n=8)
+============================================================
+  ... 500, found 11 Vitali pairs
+  ... 1000, found 19 Vitali pairs
+  ... 1500, found 26 Vitali pairs
+  ... 2000, found 40 Vitali pairs
+  ... 2500, found 54 Vitali pairs
+
+  Total Vitali pairs: 67
+  dc3 distribution: {0: 67}
+  dc5 distribution: {0: 67}
+  dc7 distribution: {-3: 1, -1: 15, 0: 31, 1: 12, 2: 7, 3: 1}
+  dc3 = 0 always? True
+  dc5 = 0 always? True
+  dc7 = 0 always? False
+
+Done.
