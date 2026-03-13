@@ -1,0 +1,181 @@
+======================================================================
+CHORD CO-PARTICIPATION THEOREM -- PROOF AND VERIFICATION
+======================================================================
+
+--- PART 1: THEOREM STATEMENT AND VERIFICATION ---
+
+THEOREM: For Paley T_p at p = 3 mod 4, chord pair (a,b) with
+min resonance q co-participates in 3-cycle gap triple iff:
+  chi(q) = +1 AND chi(q+1) = -1, OR
+  chi(q) = -1 AND chi(q-1) = +1
+
+  p=7: 3/3 correct, 0 wrong
+  p=11: 10/10 correct, 0 wrong
+  p=19: 36/36 correct, 0 wrong
+  p=23: 55/55 correct, 0 wrong
+  p=31: 105/105 correct, 0 wrong
+  p=43: 210/210 correct, 0 wrong
+
+
+--- PART 2: ALGEBRAIC PROOF ---
+
+For qa = b (positive resonance), a in QR:
+  qr(a) = a, chi(qa) = chi(q)*chi(a) = chi(q)
+  If chi(q)=+1: qr(b) = qa, g3 = p - a - qa = p - a(1+q)
+    chi(g3) = chi(-a(1+q)) = chi(-1)*chi(a)*chi(1+q)
+           = (-1)(+1)*chi(1+q) = -chi(1+q)
+  If chi(q)=-1: qr(b) = p-qa, g3 = p - a - (p-qa) = qa - a = a(q-1)
+    chi(g3) = chi(a)*chi(q-1) = (+1)*chi(q-1) = chi(q-1)
+
+For qa = b, a in QNR:
+  qr(a) = p-a, chi(qa) = chi(q)*chi(a) = chi(q)*(-1)
+  If chi(q)=+1: chi(qa)=-1, qr(b) = p-qa
+    g3 = p - (p-a) - (p-qa) = a + qa - p = a(1+q) - p
+    chi(g3) = chi(a(1+q)) = chi(a)*chi(1+q) = (-1)*chi(1+q) = -chi(1+q)
+  If chi(q)=-1: chi(qa)=+1, qr(b) = qa
+    g3 = p - (p-a) - qa = a - qa = a(1-q)
+    chi(g3) = chi(a)*chi(1-q) = (-1)*chi(-(q-1)) = (-1)*chi(-1)*chi(q-1)
+           = (-1)*(-1)*chi(q-1) = chi(q-1)
+
+CONCLUSION: chi(g3) depends ONLY on q, not on a:
+  chi(q)=+1 => chi(g3) = -chi(q+1)
+  chi(q)=-1 => chi(g3) = chi(q-1)
+
+Copart > 0 iff chi(g3) = +1, so:
+  chi(q)=+1: copart iff chi(q+1) = -1
+  chi(q)=-1: copart iff chi(q-1) = +1
+
+QED.
+
+
+--- PART 3: QR NEIGHBOR TRANSITION TABLE ---
+For each odd q < p, the co-participation depends on QR/QNR
+status of q and its even neighbor q+/-1:
+
+  p=7:
+    q= 3: chi(q)=-1, neighbor= 2, chi(nb)=+1, copart=Y
+    q= 5: chi(q)=-1, neighbor= 4, chi(nb)=+1, copart=Y
+    Summary: 2 copart=Y, 0 copart=N out of 2 odd q values
+
+  p=11:
+    q= 3: chi(q)=+1, neighbor= 4, chi(nb)=+1, copart=N
+    q= 5: chi(q)=+1, neighbor= 6, chi(nb)=-1, copart=Y
+    q= 7: chi(q)=-1, neighbor= 6, chi(nb)=-1, copart=N
+    q= 9: chi(q)=+1, neighbor=10, chi(nb)=-1, copart=Y
+    Summary: 2 copart=Y, 2 copart=N out of 4 odd q values
+
+  p=19:
+    q= 3: chi(q)=-1, neighbor= 2, chi(nb)=-1, copart=N
+    q= 5: chi(q)=+1, neighbor= 6, chi(nb)=+1, copart=N
+    q= 7: chi(q)=+1, neighbor= 8, chi(nb)=-1, copart=Y
+    q= 9: chi(q)=+1, neighbor=10, chi(nb)=-1, copart=Y
+    q=11: chi(q)=+1, neighbor=12, chi(nb)=-1, copart=Y
+    q=13: chi(q)=-1, neighbor=12, chi(nb)=-1, copart=N
+    q=15: chi(q)=-1, neighbor=14, chi(nb)=-1, copart=N
+    q=17: chi(q)=+1, neighbor=18, chi(nb)=-1, copart=Y
+    Summary: 4 copart=Y, 4 copart=N out of 8 odd q values
+
+  p=23:
+    q= 3: chi(q)=+1, neighbor= 4, chi(nb)=+1, copart=N
+    q= 5: chi(q)=-1, neighbor= 4, chi(nb)=+1, copart=Y
+    q= 7: chi(q)=-1, neighbor= 6, chi(nb)=+1, copart=Y
+    q= 9: chi(q)=+1, neighbor=10, chi(nb)=-1, copart=Y
+    q=11: chi(q)=-1, neighbor=10, chi(nb)=-1, copart=N
+    q=13: chi(q)=+1, neighbor=14, chi(nb)=-1, copart=Y
+    q=15: chi(q)=-1, neighbor=14, chi(nb)=-1, copart=N
+    q=17: chi(q)=-1, neighbor=16, chi(nb)=+1, copart=Y
+    q=19: chi(q)=-1, neighbor=18, chi(nb)=+1, copart=Y
+    q=21: chi(q)=-1, neighbor=20, chi(nb)=-1, copart=N
+    Summary: 6 copart=Y, 4 copart=N out of 10 odd q values
+
+  p=31:
+    q= 3: chi(q)=-1, neighbor= 2, chi(nb)=+1, copart=Y
+    q= 5: chi(q)=+1, neighbor= 6, chi(nb)=-1, copart=Y
+    q= 7: chi(q)=+1, neighbor= 8, chi(nb)=+1, copart=N
+    q= 9: chi(q)=+1, neighbor=10, chi(nb)=+1, copart=N
+    q=11: chi(q)=-1, neighbor=10, chi(nb)=+1, copart=Y
+    q=13: chi(q)=-1, neighbor=12, chi(nb)=-1, copart=N
+    q=15: chi(q)=-1, neighbor=14, chi(nb)=+1, copart=Y
+    q=17: chi(q)=-1, neighbor=16, chi(nb)=+1, copart=Y
+    q=19: chi(q)=+1, neighbor=20, chi(nb)=+1, copart=N
+    q=21: chi(q)=-1, neighbor=20, chi(nb)=+1, copart=Y
+    q=23: chi(q)=-1, neighbor=22, chi(nb)=-1, copart=N
+    q=25: chi(q)=+1, neighbor=26, chi(nb)=-1, copart=Y
+    q=27: chi(q)=-1, neighbor=26, chi(nb)=-1, copart=N
+    q=29: chi(q)=-1, neighbor=28, chi(nb)=+1, copart=Y
+    Summary: 8 copart=Y, 6 copart=N out of 14 odd q values
+
+  p=43:
+    q= 3: chi(q)=-1, neighbor= 2, chi(nb)=-1, copart=N
+    q= 5: chi(q)=-1, neighbor= 4, chi(nb)=+1, copart=Y
+    q= 7: chi(q)=-1, neighbor= 6, chi(nb)=+1, copart=Y
+    q= 9: chi(q)=+1, neighbor=10, chi(nb)=+1, copart=N
+    q=11: chi(q)=+1, neighbor=12, chi(nb)=-1, copart=Y
+    q=13: chi(q)=+1, neighbor=14, chi(nb)=+1, copart=N
+    q=15: chi(q)=+1, neighbor=16, chi(nb)=+1, copart=N
+    q=17: chi(q)=+1, neighbor=18, chi(nb)=-1, copart=Y
+    q=19: chi(q)=-1, neighbor=18, chi(nb)=-1, copart=N
+    q=21: chi(q)=+1, neighbor=22, chi(nb)=-1, copart=Y
+    q=23: chi(q)=+1, neighbor=24, chi(nb)=+1, copart=N
+    q=25: chi(q)=+1, neighbor=26, chi(nb)=-1, copart=Y
+    q=27: chi(q)=-1, neighbor=26, chi(nb)=-1, copart=N
+    q=29: chi(q)=-1, neighbor=28, chi(nb)=-1, copart=N
+    q=31: chi(q)=+1, neighbor=32, chi(nb)=-1, copart=Y
+    q=33: chi(q)=-1, neighbor=32, chi(nb)=-1, copart=N
+    q=35: chi(q)=+1, neighbor=36, chi(nb)=+1, copart=N
+    q=37: chi(q)=-1, neighbor=36, chi(nb)=+1, copart=Y
+    q=39: chi(q)=-1, neighbor=38, chi(nb)=+1, copart=Y
+    q=41: chi(q)=+1, neighbor=42, chi(nb)=-1, copart=Y
+    Summary: 10 copart=Y, 10 copart=N out of 20 odd q values
+
+  p=47:
+    q= 3: chi(q)=+1, neighbor= 4, chi(nb)=+1, copart=N
+    q= 5: chi(q)=-1, neighbor= 4, chi(nb)=+1, copart=Y
+    q= 7: chi(q)=+1, neighbor= 8, chi(nb)=+1, copart=N
+    q= 9: chi(q)=+1, neighbor=10, chi(nb)=-1, copart=Y
+    q=11: chi(q)=-1, neighbor=10, chi(nb)=-1, copart=N
+    q=13: chi(q)=-1, neighbor=12, chi(nb)=+1, copart=Y
+    q=15: chi(q)=-1, neighbor=14, chi(nb)=+1, copart=Y
+    q=17: chi(q)=+1, neighbor=18, chi(nb)=+1, copart=N
+    q=19: chi(q)=-1, neighbor=18, chi(nb)=+1, copart=Y
+    q=21: chi(q)=+1, neighbor=22, chi(nb)=-1, copart=Y
+    q=23: chi(q)=-1, neighbor=22, chi(nb)=-1, copart=N
+    q=25: chi(q)=+1, neighbor=26, chi(nb)=-1, copart=Y
+    q=27: chi(q)=+1, neighbor=28, chi(nb)=+1, copart=N
+    q=29: chi(q)=-1, neighbor=28, chi(nb)=+1, copart=Y
+    q=31: chi(q)=-1, neighbor=30, chi(nb)=-1, copart=N
+    q=33: chi(q)=-1, neighbor=32, chi(nb)=+1, copart=Y
+    q=35: chi(q)=-1, neighbor=34, chi(nb)=+1, copart=Y
+    q=37: chi(q)=+1, neighbor=38, chi(nb)=-1, copart=Y
+    q=39: chi(q)=-1, neighbor=38, chi(nb)=-1, copart=N
+    q=41: chi(q)=-1, neighbor=40, chi(nb)=-1, copart=N
+    q=43: chi(q)=-1, neighbor=42, chi(nb)=+1, copart=Y
+    q=45: chi(q)=-1, neighbor=44, chi(nb)=-1, copart=N
+    Summary: 12 copart=Y, 10 copart=N out of 22 odd q values
+
+
+--- PART 4: CONNECTION TO PRODUCT LAW ---
+
+The product law sign(h_hat[{a,b}]) = chi(ab) requires that
+the dominant D^{2n} contributions all have sign = chi(ab).
+
+From the resonance cascade:
+  sign(D^{2n} deg-2) * chi(ab) = chi(q) at onset
+
+So: sign = chi(q) * chi(ab).
+For product law: need chi(q) * chi(ab) = chi(ab), i.e., chi(q) = +1.
+But at p=19: chi(3) = -1, so 3-resonant pairs violate this!
+
+The RESOLUTION must come from higher-order terms overwhelming D^4.
+The co-participation theorem says: 3-resonant pairs have NO
+additive coupling through 3-cycles, which means their H-contribution
+comes from HIGHER-order cycle interactions, not from 3-cycle overlap.
+
+At p=19:
+  q=3 pairs: copart=N, sign(D^4)=-chi(ab), but D^6,D^8,... have +chi(ab)
+  q=5 pairs: copart=N, sign(D^6)=+chi(ab)
+  q=7 pairs: copart=Y, sign(D^8)=+chi(ab)
+  q=9 pairs: copart=Y, sign(D^10)=+chi(ab)
+
+The key question: for q=3 pairs at p=19, do D^6+D^8+... outweigh D^4?
+This is the content of the p=19 product law computation.
