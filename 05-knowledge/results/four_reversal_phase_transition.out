@@ -1,0 +1,164 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\four_reversal_phase_transition.py:22: SyntaxWarning: invalid escape sequence '\S'
+  External arcs (to/from V\S) are unchanged.
+======================================================================
+PART 1: 4-vertex reversals at n=5 — EXHAUSTIVE
+======================================================================
+  Total 4-reversals: 5120
+  Lambda-preserving: 640 (12.5%)
+  H-changing: 0
+
+  By sub-tournament type:
+    scores=(0, 1, 2, 3), c3=0: 1920 total, 240 pres lambda (12.5%), 0 change H
+    scores=(0, 2, 2, 2), c3=1: 640 total, 80 pres lambda (12.5%), 0 change H
+    scores=(1, 1, 1, 3), c3=1: 640 total, 80 pres lambda (12.5%), 0 change H
+    scores=(1, 1, 2, 2), c3=2: 1920 total, 240 pres lambda (12.5%), 0 change H
+
+======================================================================
+PART 2: 4-vertex reversals at n=6 — EXHAUSTIVE
+======================================================================
+  Total 4-reversals: 491520
+  Lambda-preserving: 9120 (1.9%)
+  H-changing (among lambda-preserving): 0
+  No H-changing 4-reversals at n=6
+
+  By sub-tournament type:
+    scores=(0, 1, 2, 3), c3=0: 2880 pres lambda, 0 change H
+    scores=(0, 2, 2, 2), c3=1: 960 pres lambda, 0 change H
+    scores=(1, 1, 1, 3), c3=1: 960 pres lambda, 0 change H
+    scores=(1, 1, 2, 2), c3=2: 4320 pres lambda, 0 change H
+
+======================================================================
+PART 3: 4-vertex reversals at n=7 — SAMPLING
+======================================================================
+  Total 4-reversals (sample): 350000
+  Lambda-preserving: 1119 (0.3%)
+  H-changing (among lambda-preserving): 199
+  Delta H values: {-2: 107, 2: 92}
+
+  By sub-tournament type:
+    scores=(0, 1, 2, 3), c3=0: 250 pres lambda, 0 change H (0.0% of lambda-pres)
+    scores=(0, 2, 2, 2), c3=1: 82 pres lambda, 0 change H (0.0% of lambda-pres)
+    scores=(1, 1, 1, 3), c3=1: 91 pres lambda, 0 change H (0.0% of lambda-pres)
+    scores=(1, 1, 2, 2), c3=2: 696 pres lambda, 199 change H (28.6% of lambda-pres)
+
+======================================================================
+PART 4: Cycle structure change under H-changing 4-reversal
+======================================================================
+  Found 20 H-changing examples
+    bits=1132243, subset=(1, 3, 4, 5): c3: 11 -> 11 (delta=0)
+    bits=1132243, subset=(1, 3, 4, 5): c5: 23 -> 23 (delta=0)
+    bits=1132243, subset=(1, 3, 4, 5): c7: 9 -> 8 (delta=-1)
+    H: 111 -> 109 (delta=-2)
+    Differing 5-cycle vertex sets: 6
+      (0, 1, 2, 3, 6): c5 2 -> 1, overlap with reversal set = 2
+      (0, 1, 2, 4, 6): c5 1 -> 2, overlap with reversal set = 2
+      (0, 1, 3, 4, 5): c5 3 -> 2, overlap with reversal set = 4
+    c7: 9 -> 8 (delta=-1)
+
+    bits=919897, subset=(0, 1, 2, 5): c3: 12 -> 12 (delta=0)
+    bits=919897, subset=(0, 1, 2, 5): c5: 30 -> 30 (delta=0)
+    bits=919897, subset=(0, 1, 2, 5): c7: 15 -> 14 (delta=-1)
+    H: 143 -> 141 (delta=-2)
+    Differing 5-cycle vertex sets: 6
+      (0, 1, 2, 3, 5): c5 2 -> 3, overlap with reversal set = 4
+      (0, 1, 2, 4, 5): c5 3 -> 2, overlap with reversal set = 4
+      (0, 2, 3, 4, 6): c5 3 -> 2, overlap with reversal set = 2
+    c7: 15 -> 14 (delta=-1)
+
+    bits=1119145, subset=(1, 2, 5, 6): c3: 11 -> 11 (delta=0)
+    bits=1119145, subset=(1, 2, 5, 6): c5: 23 -> 23 (delta=0)
+    bits=1119145, subset=(1, 2, 5, 6): c7: 9 -> 8 (delta=-1)
+    H: 111 -> 109 (delta=-2)
+    Differing 5-cycle vertex sets: 6
+      (0, 1, 2, 3, 4): c5 1 -> 2, overlap with reversal set = 2
+      (0, 1, 2, 5, 6): c5 3 -> 2, overlap with reversal set = 4
+      (0, 1, 3, 4, 5): c5 2 -> 1, overlap with reversal set = 2
+    c7: 9 -> 8 (delta=-1)
+
+    bits=1486031, subset=(1, 2, 3, 4): c3: 12 -> 12 (delta=0)
+    bits=1486031, subset=(1, 2, 3, 4): c5: 30 -> 30 (delta=0)
+    bits=1486031, subset=(1, 2, 3, 4): c7: 15 -> 14 (delta=-1)
+    H: 143 -> 141 (delta=-2)
+    Differing 5-cycle vertex sets: 6
+      (0, 1, 2, 5, 6): c5 3 -> 2, overlap with reversal set = 2
+      (0, 1, 4, 5, 6): c5 2 -> 3, overlap with reversal set = 2
+      (0, 2, 3, 5, 6): c5 2 -> 3, overlap with reversal set = 2
+    c7: 15 -> 14 (delta=-1)
+
+    bits=1776617, subset=(0, 1, 2, 5): c3: 12 -> 12 (delta=0)
+    bits=1776617, subset=(0, 1, 2, 5): c5: 30 -> 30 (delta=0)
+    bits=1776617, subset=(0, 1, 2, 5): c7: 14 -> 15 (delta=1)
+    H: 141 -> 143 (delta=2)
+    Differing 5-cycle vertex sets: 6
+      (0, 1, 2, 3, 5): c5 3 -> 2, overlap with reversal set = 4
+      (0, 1, 2, 5, 6): c5 2 -> 3, overlap with reversal set = 4
+      (0, 1, 3, 4, 6): c5 2 -> 3, overlap with reversal set = 2
+    c7: 14 -> 15 (delta=1)
+
+
+======================================================================
+PART 5: Conditions for non-trivial 4-reversal
+======================================================================
+  5-cycle composition (overlap with 4-set) for H-changing reversals:
+  Overlap with 4-set -> 5-cycle changes:
+    overlap=2: 40 changed, 20 same, net delta=0
+    overlap=3: 0 changed, 120 same, net delta=0
+    overlap=4: 20 changed, 10 same, net delta=0
+
+======================================================================
+PART 6: Why 4-reversal is trivial at n=5
+======================================================================
+  WHY 4-reversal is H-preserving at n=5:
+    - alpha_2 = 0 always (not enough vertices for disjoint pairs)
+    - H = 1 + 2*(c3 + c5)
+    - 4-reversal preserves c3 (vertex sets are the same, cycle existence preserved)
+    - 4-reversal preserves c5 (reversal maps cycles to reverse cycles)
+    - Therefore H is preserved.
+
+  WHY this breaks at n=7:
+    - alpha_2 > 0 possible (disjoint 3-cycle pairs exist)
+    - H = 1 + 2*(c3+c5+c7) + 4*alpha_2
+    - 4-reversal preserves c3 (on vertex sets not wholly in the 4-set)
+    - BUT: 5-cycles using MIXED vertices (some in 4-set, some outside)
+      can change direction! The reversal of internal arcs can create or
+      destroy directed 5-cycles that span the boundary.
+    - So c5 (counted over 5-vertex subsets) CAN change.
+    - And disjoint pair structure can change too.
+
+======================================================================
+PART 7: Alpha_2 at n=6 under 4-reversal
+======================================================================
+  n=6: NO H-changing 4-reversals (exhaustive)
+  Even though alpha_2 > 0 is possible at n=6,
+  the 4-reversal preserves it exactly.
+  The phase transition is SHARP at n=7.
+
+  Lambda-preserving 4-reversals at n=6:
+    c5 preserved: 800
+    c5 changed: 0
+
+======================================================================
+PART 8: Overlap weights W={2,1,0} under 4-reversal
+======================================================================
+  bits=1132243, subset=(1, 3, 4, 5), H: 111->109
+    |c3|: 11 -> 11
+    Same 3-cycle vertex sets? False
+    Overlap W=0: 6 -> 6
+    Overlap W=1: 32 -> 32
+    Overlap W=2: 17 -> 17
+  bits=919897, subset=(0, 1, 2, 5), H: 143->141
+    |c3|: 12 -> 12
+    Same 3-cycle vertex sets? False
+    Overlap W=0: 7 -> 7
+    Overlap W=1: 41 -> 41
+    Overlap W=2: 18 -> 18
+  bits=1119145, subset=(1, 2, 5, 6), H: 111->109
+    |c3|: 11 -> 11
+    Same 3-cycle vertex sets? False
+    Overlap W=0: 6 -> 6
+    Overlap W=1: 32 -> 32
+    Overlap W=2: 17 -> 17
+
+======================================================================
+DONE.
+======================================================================
