@@ -132,11 +132,42 @@ Arc reversal = double-pushout rewrite rule on tournament digraph. Two reversals 
 
 ---
 
-## VI. Open Questions
+## VI. Late-Session Discoveries
 
-1. Does the no-spurious-maxima property hold for ALL odd n?
-2. Is the spurious max value at even n determined by a closed-form function of n?
-3. Can the Reidemeister torsion of the GLMY complex be computed correctly? (HYP-731)
-4. Is there a quantum algorithm that exploits the degree-2 structure of H?
-5. What is the relationship between det(I+A) = spectral invariant and F_p = topological invariant?
-6. Can the tournament code [[m, log₂k, d]] at larger n be useful for quantum error correction?
+### 11. HYP-741 REFUTED: Landscape Rough at ALL n ≥ 6
+
+The odd/even dichotomy conjecture failed spectacularly:
+- n=7 (ODD): **6 distinct local max levels**, only 10.4% of starts reach global max
+- n=8 (EVEN): 95.2% success rate — EASIER than n=7
+
+The landscape roughness correlates with Fourier degree complexity, not parity.
+
+### 12. Regular n=7 Tournaments: Three Exact Classes
+
+Regular tournaments at n=7 split into exactly 3 isomorphism classes:
+
+| Class | H | c5 | c7 | det(I+A) | AA^T var | α₁ | α₂ |
+|-------|-----|-----|-----|----------|----------|----|----|
+| Paley | 189 | 42 | 24 | 32 | 0.000 | 80 | 7 |
+| Type B | 175 | 28 | 17 | 4 | 0.667 | 59 | 14 |
+| Type C | 171 | 36 | 15 | 8 | 0.286 | 65 | 10 |
+
+**H = 1 + 2α₁ + 4α₂ EXACTLY** (α₃=0 since 3 disjoint odd cycles need ≥9 > 7 vertices).
+
+**Paley wins** by maximizing total cycle count (doubly regular structure = maximum cycle embedding), despite having the FEWEST disjoint pairs.
+
+### 13. Paley QR Codes
+
+The Paley adjacency over GF(2) gives codes related to classical QR codes:
+- p=7: [7, 3, 4] simplex code
+- p=23: [23, 11, ...] near-Golay
+- Works when p ≡ ±1 mod 8; degenerate for p ≡ ±3 mod 8
+
+## VII. Open Questions (Updated)
+
+1. Why is the n=7 landscape HARDER than n=8? What determines landscape roughness?
+2. Can the Reidemeister torsion of the GLMY complex be computed correctly? (HYP-731)
+3. Is there a quantum algorithm that exploits the degree-2 structure of H?
+4. What is the relationship between det(I+A) = spectral and F_p = topological?
+5. Can the OCF formula H = 1 + 2α₁ + 4α₂ + ... be used for efficient H approximation?
+6. Do all regular tournaments at general odd n have CONSTANT cycle counts within class?
