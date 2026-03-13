@@ -1,0 +1,201 @@
+======================================================================
+GAUSS SUM STRUCTURE AND WALSH-LEGENDRE SIGN LAW
+======================================================================
+
+--- PART 1: GAUSS SUMS ---
+   p  mod4        Re(g)        Im(g)      |g|^2    sqrt(p)  g/i*sqrt(p)
+----------------------------------------------------------------------
+   5     1     2.236068    -0.000000     5.0000     2.2361    +1.000000
+   7     3     0.000000     2.645751     7.0000     2.6458    +1.000000
+  11     3     0.000000     3.316625    11.0000     3.3166    +1.000000
+  13     1     3.605551    -0.000000    13.0000     3.6056    +1.000000
+  17     1     4.123106     0.000000    17.0000     4.1231    +1.000000
+  19     3     0.000000     4.358899    19.0000     4.3589    +1.000000
+  23     3     0.000000     4.795832    23.0000     4.7958    +1.000000
+  29     1     5.385165     0.000000    29.0000     5.3852    +1.000000
+
+--- PART 2: D(k; sigma_Paley) = Im(partial Gauss sum) ---
+
+  p=7, m=3, QR=[1, 2, 4]
+  sigma_Paley = (1, 1, -1)
+    k=1: D= +1.322876, Im(partial_g)= +1.322876, g_k/g=1.000000+0.000000j, chi(k)=+1
+    k=2: D= +1.322876, Im(partial_g)= +1.322876, g_k/g=1.000000-0.000000j, chi(k)=+1
+    k=3: D= -1.322876, Im(partial_g)= -1.322876, g_k/g=-1.000000+0.000000j, chi(k)=-1
+
+  p=11, m=5, QR=[1, 3, 4, 5, 9]
+  sigma_Paley = (1, -1, 1, 1, 1)
+    k=1: D= +1.658312, Im(partial_g)= +1.658312, g_k/g=1.000000+0.000000j, chi(k)=+1
+    k=2: D= -1.658312, Im(partial_g)= -1.658312, g_k/g=-1.000000+0.000000j, chi(k)=-1
+    k=3: D= +1.658312, Im(partial_g)= +1.658312, g_k/g=1.000000-0.000000j, chi(k)=+1
+    k=4: D= +1.658312, Im(partial_g)= +1.658312, g_k/g=1.000000-0.000000j, chi(k)=+1
+    k=5: D= +1.658312, Im(partial_g)= +1.658312, g_k/g=1.000000-0.000000j, chi(k)=+1
+
+  p=13, m=6, QR=[1, 3, 4, 9, 10, 12]
+  sigma_Paley = (1, -1, 1, 1, -1, -1)
+    k=1: D= +0.667026, Im(partial_g)= +0.667026, g_k/g=1.000000+0.000000j, chi(k)=+1
+    k=2: D= +0.921593, Im(partial_g)= +0.921593, g_k/g=-1.000000+0.000000j, chi(k)=-1
+    k=3: D= -2.132453, Im(partial_g)= -2.132453, g_k/g=1.000000-0.000000j, chi(k)=+1
+    k=4: D= +3.188424, Im(partial_g)= +3.188424, g_k/g=1.000000-0.000000j, chi(k)=+1
+    k=5: D= +1.769207, Im(partial_g)= +1.769207, g_k/g=-1.000000+0.000000j, chi(k)=-1
+    k=6: D= +0.601870, Im(partial_g)= +0.601870, g_k/g=-1.000000+0.000000j, chi(k)=-1
+
+--- PART 3: D(k;sigma_Paley) FROM GAUSS SUM ---
+Testing: D(k;sigma_Paley) = Im(chi(k)*g)/2 = chi(k)*sqrt(p)/2 for p=3 mod 4
+
+  p=7 (3 mod 4):
+    k=1: D= +1.322876, full_D/2= +1.322876 (err=2.22e-16), chi(k)*sqrt(p)/2= +1.322876 (err=2.22e-16)
+    k=2: D= +1.322876, full_D/2= +1.322876 (err=4.44e-16), chi(k)*sqrt(p)/2= +1.322876 (err=2.22e-16)
+    k=3: D= -1.322876, full_D/2= -1.322876 (err=4.44e-16), chi(k)*sqrt(p)/2= -1.322876 (err=0.00e+00)
+  ==> CONFIRMED: D(k;sigma_Paley) = chi(k)*sqrt(p)/2 for all k
+
+  p=11 (3 mod 4):
+    k=1: D= +1.658312, full_D/2= +1.658312 (err=4.44e-16), chi(k)*sqrt(p)/2= +1.658312 (err=0.00e+00)
+    k=2: D= -1.658312, full_D/2= -1.658312 (err=2.22e-16), chi(k)*sqrt(p)/2= -1.658312 (err=4.44e-16)
+    k=3: D= +1.658312, full_D/2= +1.658312 (err=2.22e-16), chi(k)*sqrt(p)/2= +1.658312 (err=2.22e-16)
+    k=4: D= +1.658312, full_D/2= +1.658312 (err=4.44e-16), chi(k)*sqrt(p)/2= +1.658312 (err=2.22e-16)
+    k=5: D= +1.658312, full_D/2= +1.658312 (err=6.66e-16), chi(k)*sqrt(p)/2= +1.658312 (err=8.88e-16)
+  ==> CONFIRMED: D(k;sigma_Paley) = chi(k)*sqrt(p)/2 for all k
+
+  p=19 (3 mod 4):
+    k=1: D= +2.179449, full_D/2= +2.179449 (err=8.88e-16), chi(k)*sqrt(p)/2= +2.179449 (err=4.44e-16)
+    k=2: D= -2.179449, full_D/2= -2.179449 (err=0.00e+00), chi(k)*sqrt(p)/2= -2.179449 (err=4.44e-16)
+    k=3: D= -2.179449, full_D/2= -2.179449 (err=1.78e-15), chi(k)*sqrt(p)/2= -2.179449 (err=4.44e-16)
+    k=4: D= +2.179449, full_D/2= +2.179449 (err=1.78e-15), chi(k)*sqrt(p)/2= +2.179449 (err=8.88e-16)
+    k=5: D= +2.179449, full_D/2= +2.179449 (err=8.88e-16), chi(k)*sqrt(p)/2= +2.179449 (err=4.44e-16)
+    k=6: D= +2.179449, full_D/2= +2.179449 (err=2.66e-15), chi(k)*sqrt(p)/2= +2.179449 (err=0.00e+00)
+    k=7: D= +2.179449, full_D/2= +2.179449 (err=1.33e-15), chi(k)*sqrt(p)/2= +2.179449 (err=1.78e-15)
+    k=8: D= -2.179449, full_D/2= -2.179449 (err=5.77e-15), chi(k)*sqrt(p)/2= -2.179449 (err=2.22e-15)
+    k=9: D= +2.179449, full_D/2= +2.179449 (err=3.55e-15), chi(k)*sqrt(p)/2= +2.179449 (err=4.44e-16)
+  ==> CONFIRMED: D(k;sigma_Paley) = chi(k)*sqrt(p)/2 for all k
+
+  p=23 (3 mod 4):
+    k=1: D= +2.397916, full_D/2= +2.397916 (err=4.44e-16), chi(k)*sqrt(p)/2= +2.397916 (err=0.00e+00)
+    k=2: D= +2.397916, full_D/2= +2.397916 (err=8.88e-16), chi(k)*sqrt(p)/2= +2.397916 (err=1.33e-15)
+    k=3: D= +2.397916, full_D/2= +2.397916 (err=0.00e+00), chi(k)*sqrt(p)/2= +2.397916 (err=4.44e-16)
+    k=4: D= +2.397916, full_D/2= +2.397916 (err=3.11e-15), chi(k)*sqrt(p)/2= +2.397916 (err=3.11e-15)
+    k=5: D= -2.397916, full_D/2= -2.397916 (err=8.88e-16), chi(k)*sqrt(p)/2= -2.397916 (err=4.44e-16)
+    k=6: D= +2.397916, full_D/2= +2.397916 (err=2.22e-15), chi(k)*sqrt(p)/2= +2.397916 (err=0.00e+00)
+    k=7: D= -2.397916, full_D/2= -2.397916 (err=4.44e-16), chi(k)*sqrt(p)/2= -2.397916 (err=0.00e+00)
+    k=8: D= +2.397916, full_D/2= +2.397916 (err=6.66e-15), chi(k)*sqrt(p)/2= +2.397916 (err=8.88e-16)
+    k=9: D= +2.397916, full_D/2= +2.397916 (err=8.88e-16), chi(k)*sqrt(p)/2= +2.397916 (err=1.78e-15)
+    k=10: D= -2.397916, full_D/2= -2.397916 (err=2.66e-15), chi(k)*sqrt(p)/2= -2.397916 (err=8.88e-16)
+    k=11: D= -2.397916, full_D/2= -2.397916 (err=1.20e-14), chi(k)*sqrt(p)/2= -2.397916 (err=6.22e-15)
+  ==> CONFIRMED: D(k;sigma_Paley) = chi(k)*sqrt(p)/2 for all k
+
+--- PART 4: Q_k(Paley) = 1/4 + p/4 = (p+1)/4 ---
+Since D(k) = chi(k)*sqrt(p)/2, D^2 = p/4 for all k
+=> Q_k = 1/4 + p/4 = (p+1)/4 for all k
+This PROVES the flat Fourier spectrum from Gauss sum theory!
+
+--- PART 5: WALSH-TO-GAUSS CONNECTION ---
+h_hat[S] = (1/2^m) * sum_sigma H(sigma) * prod_{i in S} sigma_i
+At sigma_Paley: prod_{i in S} sigma_i = prod_{i in S} chi(i+1) = chi(prod(i+1))
+=> H(sigma_Paley) = sum_S h_hat[S] * chi(prod gaps in S)
+
+The Sign Law says: h_hat[S] * chi(prod gaps in S) = |h_hat[S]|
+i.e., every Walsh term is POSITIVE at sigma_Paley
+=> H(sigma_Paley) = sum |h_hat[S]| >= sum h_hat[S]*prod(sigma) for any sigma
+
+  p=7, m=3:
+    S=(0, 1), deg=2, gaps=[1, 2], prod=2, chi=+1, h_hat=     +3.5000, sign=+1, match=Y
+    S=(0, 2), deg=2, gaps=[1, 3], prod=3, chi=-1, h_hat=     -3.5000, sign=-1, match=Y
+    S=(1, 2), deg=2, gaps=[2, 3], prod=6, chi=-1, h_hat=     -3.5000, sign=-1, match=Y
+  Sign Law holds: True
+
+  p=11, m=5:
+    S=(0, 1), deg=2, gaps=[1, 2], prod=2, chi=-1, h_hat=     -8.2500, sign=-1, match=Y
+    S=(0, 2), deg=2, gaps=[1, 3], prod=3, chi=+1, h_hat=   +272.2500, sign=+1, match=Y
+    S=(1, 2), deg=2, gaps=[2, 3], prod=6, chi=-1, h_hat=   -272.2500, sign=-1, match=Y
+    S=(0, 3), deg=2, gaps=[1, 4], prod=4, chi=+1, h_hat=   +272.2500, sign=+1, match=Y
+    S=(1, 3), deg=2, gaps=[2, 4], prod=8, chi=-1, h_hat=     -8.2500, sign=-1, match=Y
+    S=(2, 3), deg=2, gaps=[3, 4], prod=12, chi=+1, h_hat=     +8.2500, sign=+1, match=Y
+    S=(0, 4), deg=2, gaps=[1, 5], prod=5, chi=+1, h_hat=     +8.2500, sign=+1, match=Y
+    S=(1, 4), deg=2, gaps=[2, 5], prod=10, chi=-1, h_hat=   -272.2500, sign=-1, match=Y
+    S=(2, 4), deg=2, gaps=[3, 5], prod=15, chi=+1, h_hat=     +8.2500, sign=+1, match=Y
+    S=(3, 4), deg=2, gaps=[4, 5], prod=20, chi=+1, h_hat=   +272.2500, sign=+1, match=Y
+    S=(0, 1, 2, 3), deg=4, gaps=[1, 2, 3, 4], prod=24, chi=-1, h_hat=   -118.2500, sign=-1, match=Y
+    S=(0, 1, 2, 4), deg=4, gaps=[1, 2, 3, 5], prod=30, chi=-1, h_hat=   -118.2500, sign=-1, match=Y
+    S=(0, 1, 3, 4), deg=4, gaps=[1, 2, 4, 5], prod=40, chi=-1, h_hat=   -118.2500, sign=-1, match=Y
+    S=(0, 2, 3, 4), deg=4, gaps=[1, 3, 4, 5], prod=60, chi=+1, h_hat=   +118.2500, sign=+1, match=Y
+    S=(1, 2, 3, 4), deg=4, gaps=[2, 3, 4, 5], prod=120, chi=-1, h_hat=   -118.2500, sign=-1, match=Y
+  Sign Law holds: True
+
+======================================================================
+PART 6: PROD Q_k VALUES AND PRIMALITY
+======================================================================
+
+  p=7, m=3:
+    prod Q_k = 1
+    prod Q_k = 8 = 2*2*2 (COMPOSITE)
+
+  p=11, m=5:
+    prod Q_k = 1
+    prod Q_k = 23 (PRIME)
+    prod Q_k = 243 = 3*3*3*3*3 (COMPOSITE)
+
+  p=13, m=6:
+    prod Q_k = 1
+    prod Q_k = 27 = 3*3*3 (COMPOSITE)
+    prod Q_k = 53 (PRIME)
+    prod Q_k = 79 (PRIME)
+    prod Q_k = 131 (PRIME)
+    prod Q_k = 729 = 3*3*3*3*3*3 (COMPOSITE)
+
+======================================================================
+PART 7: CHARACTERISTIC POLYNOMIAL AND DISCRIMINANT
+======================================================================
+Q_1,...,Q_m are roots of a degree-m polynomial with integer coefficients.
+prod Q_k = (-1)^m * constant term = e_m (the last ESF).
+The DISCRIMINANT of this polynomial might have number-theoretic meaning.
+
+  p=7 (Interval), m=3:
+    Q_vals = ['5.048917', '0.307979', '0.643104']
+    e_j = [6, 5, 1]
+    prod Q_k = 1
+    Discriminant = 49.0000 (rounded: 49)
+    disc / p^2 = 1
+
+  p=11 (Interval), m=5:
+    Q_vals = ['12.343538', '0.271554', '1.448691', '0.353253', '0.582964']
+    e_j = [15, 35, 28, 9, 1]
+    prod Q_k = 1
+    Discriminant = 14641.0000 (rounded: 14641)
+    disc / p^4 = 1
+
+  p=13 (Interval), m=6:
+    Q_vals = ['17.206857', '0.265188', '1.988157', '0.318864', '0.774719', '0.446215']
+    e_j = [21, 70, 84, 45, 11, 1]
+    prod Q_k = 1
+    Discriminant = 371293.0000 (rounded: 371293)
+    disc / p^5 = 1
+
+======================================================================
+PART 8: WALSH COEFFICIENTS — MAGNITUDE STRUCTURE
+======================================================================
+If h_hat[S] ~ product of Gauss/Jacobi sums, |h_hat[S]| ~ p^{|S|/2}
+
+  p=7, m=3:
+     deg  |S|      |h_hat|  |h_hat|/p^(d/2)    chi*h_hat
+       0    0     178.5000     178.50000000    +178.5000
+       2    2       3.5000       0.50000000      +3.5000
+       2    2       3.5000       0.50000000      +3.5000
+       2    2       3.5000       0.50000000      +3.5000
+
+  p=11, m=5:
+     deg  |S|      |h_hat|  |h_hat|/p^(d/2)    chi*h_hat
+       0    0   93101.2500   93101.25000000  +93101.2500
+       2    2       8.2500       0.75000000      +8.2500
+       2    2     272.2500      24.75000000    +272.2500
+       2    2     272.2500      24.75000000    +272.2500
+       2    2       8.2500       0.75000000      +8.2500
+       2    2     272.2500      24.75000000    +272.2500
+       2    2       8.2500       0.75000000      +8.2500
+       2    2     272.2500      24.75000000    +272.2500
+       2    2       8.2500       0.75000000      +8.2500
+       2    2       8.2500       0.75000000      +8.2500
+       2    2     272.2500      24.75000000    +272.2500
+       4    4     118.2500       0.97727273    +118.2500
+       4    4     118.2500       0.97727273    +118.2500
+       4    4     118.2500       0.97727273    +118.2500
+       4    4     118.2500       0.97727273    +118.2500
+       4    4     118.2500       0.97727273    +118.2500
