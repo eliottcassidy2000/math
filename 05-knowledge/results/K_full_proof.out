@@ -1,0 +1,99 @@
+======================================================================
+FULL ALGEBRAIC PROOF: K CONSTANT FOR REGULAR TOURNAMENTS
+======================================================================
+
+============================================================
+PART 1: Decomposing the 5-index sum
+============================================================
+
+============================================================
+PART 2: Score polynomial analysis
+============================================================
+
+============================================================
+PART 3: Direct combinatorial proof attempt
+============================================================
+
+============================================================
+PART 4: Hadamard products and trace identities
+============================================================
+  (A^2)_{ij} = m - A_{ij} - (A^T A)_{ij} for i!=j: True
+  <A, A^T A> = 21, expected n*C(m,2) = 21, OK
+  <A, (A^T A)^{o2}> = 27
+  sum A*L^2 values: [21, 27, 35] -- VARIES
+
+  sum_mu2 = 27
+  sum_A_L^2 = 27
+  n*m*(m-1)^2 - n*m*(m-1)^2 + sum_A_L^2 = 27
+  Indeed sum_mu2 = sum_A_L2: True
+
+============================================================
+PART 5: Express c5 in terms of the Gram matrix L = A^T A
+============================================================
+  (A^T)^4 = B^2: True
+  B^2 formula check: True
+  J coefficient: -(2m^2+2m+1) = -25
+  (A^T)^4 = (I+A)^4 - (2m^2+2m+1)*J: True
+
+  tr(A^5) = 180
+  <A, (I+A)^4> = 705
+  (2m^2+2m+1)*n*m = 525
+  <A,(I+A)^4> - (2m^2+2m+1)*nm = 180
+  Match: True
+
+  <A, A^k> values:
+  <A, I> = 0
+  <A, A> = n*m = 21
+  <A, A^2> = C(n,3)-c3 = 21 (= 21)
+  <A, A^3> = 51
+  <A, A^4> = 291
+  <A, A^3> constant for regular n=7: False, values: [35, 51, 63]
+  <A, A^4> constant for regular n=7: False, values: [273, 291, 315]
+
+  Constant part of tr(A^5) = -315
+  Variable part: 4*<A,A^3> + <A,A^4>
+  4*<A,A^3> + <A,A^4> + 5*<A,L^2> = [630] -- CONSTANT
+  5*(c5+sum_mu2) = 315
+  c5+sum_mu2 = 63
+  Expected: 63
+
+============================================================
+PART 6: Express L_{ij}^2 for edges
+============================================================
+
+  sum_mu2 = <A, A^2 o A^2> = 27
+  <A, L o L> = <A, (A^TA) o (A^TA)> = 27
+  Equal: True
+
+  Verification: sum_mu2 = sum_A_L^2 for ALL regular n=7:
+  All equal: True
+
+============================================================
+PART 7: The final algebraic identity
+============================================================
+  n=5: c5+sum_mu2 = 7
+  n=7: c5+sum_mu2 = 63
+  n=9: c5+sum_mu2 = 270
+  n=11: c5+sum_mu2 = 814
+  n=13: c5+sum_mu2 = 1989
+  n=15: c5+sum_mu2 = 4221
+  n=5: n(n-1)(n-3)(n^2+4n-17)/160 = 7
+  n=7: n(n-1)(n-3)(n^2+4n-17)/160 = 63
+  n=9: n(n-1)(n-3)(n^2+4n-17)/160 = 270
+  n=11: n(n-1)(n-3)(n^2+4n-17)/160 = 814
+  n=13: n(n-1)(n-3)(n^2+4n-17)/160 = 1989
+  n=15: n(n-1)(n-3)(n^2+4n-17)/160 = 4221
+
+============================================================
+PART 8: Proof via A^T = J-I-A expansion
+============================================================
+
+  <A,A^3> + sum_mu2 constant: False, values: [70, 78, 84]
+  <A,A^4> + sum_mu2 constant: False, values: [294, 318, 350]
+
+  Table of values for regular n=7:
+    c5  smu2  <A,A3>  <A,A4>  c5+smu2  4aa3+aa4+5smu2
+    28    35      35     315       63             630
+    36    27      51     291       63             630
+
+DONE.
