@@ -1,0 +1,111 @@
+======================================================================
+THE 7→8 TRANSITION: CROSS-LEVEL INTERACTIONS
+======================================================================
+
+n=7: α₂ decomposition by type (500 samples)
+  Total α₂ contributions: 2219
+  Type (3, 3): 2219 (100.0%)
+
+n=8: α₂ decomposition by type (200 samples)
+  trial 50: 0.9s
+  trial 100: 2.1s
+  trial 150: 2.9s
+  Total α₂ contributions: 5714, 3.8s
+  Type (3, 3): 3569 (62.5%)
+  Type (3, 5): 2145 (37.5%)
+
+======================================================================
+IS α₂^{35} LAMBDA-DETERMINED AT n=8?
+======================================================================
+
+n=8: 200 samples (slow — cycles at n=8 are expensive)
+  trial 0: 0.0s
+  trial 50: 1.0s
+  trial 100: 2.0s
+  trial 150: 3.0s
+
+  Lambda determines α₂^{33}? Ambiguous: 0/200
+  Lambda determines α₂^{35}? Ambiguous: 0/200
+  Lambda determines total α₂? Ambiguous: 0/200
+
+======================================================================
+THE k-NACCI GAP STRUCTURE AT k=7,8
+======================================================================
+
+k-nacci gaps and ratios at k=6,7,8,9:
+  k= 2: gap_2=0.38196601 (ratio=nan), gap_3=1.00000000 (ratio=nan)
+  k= 3: gap_2=0.16071324 (ratio=0.4208), gap_3=0.53249614 (ratio=0.5325)
+  k= 4: gap_2=0.07243802 (ratio=0.4507), gap_3=0.30193109 (ratio=0.5670)
+  k= 5: gap_2=0.03405176 (ratio=0.4701), gap_3=0.17917007 (ratio=0.5934)
+  k= 6: gap_2=0.01641716 (ratio=0.4821), gap_3=0.10980336 (ratio=0.6128)
+  k= 7: gap_2=0.00803580 (ratio=0.4895), gap_3=0.06885754 (ratio=0.6271) ←←←
+  k= 8: gap_2=0.00396882 (ratio=0.4939), gap_3=0.04390258 (ratio=0.6376) ←←←
+  k= 9: gap_2=0.00197053 (ratio=0.4965), gap_3=0.02833130 (ratio=0.6453)
+  k=10: gap_2=0.00098137 (ratio=0.4980), gap_3=0.01844469 (ratio=0.6510)
+  k=11: gap_2=0.00048960 (ratio=0.4989), gap_3=0.01208595 (ratio=0.6553)
+
+======================================================================
+7 AND 8 IN THE PARTITION FUNCTION
+======================================================================
+
+CRITICAL TRANSITIONS:
+
+n=7 (= 2³ - 1):
+  - LAST n where α₂ is SINGLE-TYPE (only (3,3) pairs)
+  - LAST prime n before 11 where Paley tournament exists
+  - The heptanacci level k=7 activates (7-cycles enter)
+  - But NO disjoint pairs involving 7-cycles (7+3=10 > 7)
+  - H is ALMOST lambda-determined (0.067% ambiguous)
+  - β₃ first appears (8.4% of tournaments)
+
+n=8 (= 2³):
+  - FIRST n where CROSS-LEVEL α₂ appears: (3,5) pairs
+  - The (3,5) disjoint pair needs 3+5=8 vertices — exactly n=8!
+  - This is the FIRST non-trivial coupling between k=3 and k=5 levels
+  - λ-preserving Vitali: |ΔH| ∈ {2,4,6} (multi-level)
+  - β₃ becomes more common (16%)
+  - First non-prime n where new structural features appear
+
+THE 2³ BOUNDARY:
+  At n < 2³: the odd-cycle gas has only SAME-LEVEL packing
+  At n = 2³: the first CROSS-LEVEL packing appears
+  At n = 2³+1 = 9: α₃ becomes possible (3+3+3=9)
+
+So 2³ = 8 is the THRESHOLD where the independence polynomial
+goes from 2-variable (α₁, α₂^{33}) to 3-variable
+(α₁, α₂^{33}, α₂^{35}).
+
+And 2³-1 = 7 is the LAST "pure" case!
+
+THE DEEP 2-3 CONNECTION:
+  2: base of k-nacci tower (convergence point)
+  3: base of weighted k-nacci tower
+  2³ = 8: threshold for cross-level interactions
+  3²-1 = 8: also 8! (coincidence?)
+  7 = 2³-1 = last pure case
+
+  The pair (7,8) = (2³-1, 2³) is the transition from
+  single-level to multi-level packing.
+
+======================================================================
+COMPUTATIONAL: α₂ SPLIT AT n=8 STATISTICS
+======================================================================
+
+α₂ type fractions at n=8:
+  Type (3, 3): 3569/5714 = 62.5%
+  Type (3, 5): 2145/5714 = 37.5%
+
+  α₂^{35} / α₂_total ratio:
+    mean = 0.3244
+    range = [0.0000, 0.4750]
+    median = 0.3636
+
+======================================================================
+THE WEIGHTED CHANNEL FORMULA AT n=7 vs n=8
+======================================================================
+
+  Cross-level contribution 4·α₂^{35} / H at n=8:
+    mean = 0.1140 (11.4%)
+    range = [0.0000, 0.1957]
+
+Done.
