@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67g — 2026-03-13: Fibonacci Resonance Deep Dive — Uncertainty Principle, Orbit Theory, Hecke Connection
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67f (context recovery)
+**Summary of work:**
+- Ran quantum_tournament_codes.py (connections 17-23): quantum error correction codes, compressed sensing, knot invariants, RG flow, Burgers turbulence, spectral moments, phyllotaxis
+- **CRITICAL CORRECTION**: Phyllotactic does NOT beat Interval — Paley actually has highest F-product by up to 69000× at p=23. But Interval wins H via amplification.
+- **AMPLIFICATION PARADOX discovered**: F-product ANTI-correlates with H at p≥11 (r=-0.035 at p=13). The independent-mode approximation is fundamentally misleading.
+- **ORBIT THEORY**: H depends ONLY on multiplier orbit of S under (Z/pZ)* (Muzychuk theorem). At p=13: 80 orbits, ALL with distinct H values. Interval orbit has MINIMUM F (=F_13=233) but MAXIMUM H (=3,711,175).
+- **TOURNAMENT UNCERTAINTY PRINCIPLE**: log(A) = -0.997·log(F) + 12.14 at p=13 (slope≈-1 means F·A≈const). Information conservation: H_total = H_freq + H_space ≈ 2.093 for all top orbits.
+- **HECKE CONNECTION**: Multiplier action = Hecke operator action. Character sums: odd characters positively correlate with H, even characters negatively correlate. Top orbits have |χ_even|=0.
+- **PALEY = WELCH BOUND**: Paley coherence exactly equals Welch bound — optimal for compressed sensing. Dual to Interval being optimal for H.
+- Deep exploration: thermodynamic formalism, crystal bases, symbolic dynamics, Catalan-Fibonacci duality, entropy production, Zeckendorf representations, golden string complexity, Schur rings, spectral tournament codes.
+**New contributions:** HYP-684 through HYP-690
+**Scripts created:** quantum_tournament_codes.py, fibonacci_resonance_deep.py, amplification_paradox.py, orbit_structure_H.py, tournament_uncertainty.py
+**Unresolved threads:**
+- Prove F·A≈const (uncertainty principle) analytically
+- Character sum pattern: WHY do even characters anti-correlate with H?
+- The p=7→p=11→p=13 crossover: what changes algebraically at p=13?
+- Hecke eigenform structure of H(orbit) — can we express H in terms of L-function values?
+
 ## opus-2026-03-13-S71b — 2026-03-13: chi(P_p)=p CONJECTURE — Betti Concentration for Paley Tournaments
 
 **Account:** opus
