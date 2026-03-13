@@ -1,0 +1,31 @@
+n=7: does (lambda, sigma) determine the tournament?
+  Non-unique pair #1: tr7=294 vs 294 (same=True)
+  Non-unique pair #2: tr7=1414 vs 1414 (same=True)
+  Non-unique pair #3: tr7=441 vs 441 (same=True)
+
+  (lambda,sigma) groups: 181611
+  Non-unique pairs found: 9478
+  c7 differences: 0
+  (lambda, sigma) does NOT uniquely determine tournaments at n=7.
+  But c7 (tr7) is still the same for all same-(lambda,sigma) tournaments!
+
+============================================================
+ALGEBRAIC FORMULA: A_ij = 1 iff d_i - d_j = n-1-sigma-2*lambda
+============================================================
+  Verified: 210000, Failed: 0
+  FORMULA VERIFIED! A_{ij}=1 iff d_i - d_j = n-1 - sigma(i,j) - 2*lambda(i,j)
+  This means (lambda, sigma, scores) UNIQUELY determine the tournament!
+  And since scores are determined by lambda (sum of lambda values per vertex),
+  (lambda, sigma) might determine scores too!
+
+  Do lambda values determine scores?
+    vertex 0: d_i=4, sum_j lambda(i,j)=4
+    vertex 1: d_i=1, sum_j lambda(i,j)=2
+    vertex 2: d_i=6, sum_j lambda(i,j)=0
+    vertex 3: d_i=4, sum_j lambda(i,j)=2
+    vertex 4: d_i=3, sum_j lambda(i,j)=8
+    vertex 5: d_i=2, sum_j lambda(i,j)=2
+    vertex 6: d_i=1, sum_j lambda(i,j)=6
+  Lambda determines scores? Ambiguous: 524/19235
+
+Done.
