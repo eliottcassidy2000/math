@@ -1,0 +1,83 @@
+======================================================================
+ADDITIVE ENERGY FORMULAS VERIFICATION
+======================================================================
+  p=  7, m=  3: E(Int)=        19, E(QR)=        15, ratio=1.266667 (limit 4/3=1.333333)
+  p= 11, m=  5: E(Int)=        85, E(QR)=        65, ratio=1.307692 (limit 4/3=1.333333)
+  p= 19, m=  9: E(Int)=       489, E(QR)=       369, ratio=1.325203 (limit 4/3=1.333333)
+  p= 23, m= 11: E(Int)=       891, E(QR)=       671, ratio=1.327869 (limit 4/3=1.333333)
+  p= 29, m= 14: E(Int)=      1834, E(QR)=      1379, ratio=1.329949 (limit 4/3=1.333333)
+  p= 31, m= 15: E(Int)=      2255, E(QR)=      1695, ratio=1.330383 (limit 4/3=1.333333)
+  p= 43, m= 21: E(Int)=      6181, E(QR)=      4641, ratio=1.331825 (limit 4/3=1.333333)
+  p= 47, m= 23: E(Int)=      8119, E(QR)=      6095, ratio=1.332075 (limit 4/3=1.333333)
+
+======================================================================
+DISJOINT 3-CYCLE PAIRS: ANALYTICAL APPROACH
+======================================================================
+
+  For a circulant tournament on Z_p with connection set S:
+  - A 3-cycle on {a, a+d1, a+d1+d2} exists iff d1, d2, -(d1+d2) each
+    map to the correct element of their complementary pair
+  - c_3 depends only on |S| = m (all regular tournaments have
+    c_3 = C(p,3) - p*C(m,2))
+  - But WHICH triples are 3-cycles depends on S
+
+  For the NUMBER of disjoint 3-cycle pairs:
+  alpha_2(3,3) = #{(C1, C2) : C1, C2 are 3-cycles, V(C1) cap V(C2) = empty} / 2
+
+  By circulant symmetry, we can fix one cycle and count disjoint others.
+
+
+  p=7, Paley:
+    c3 = 14, cycles through 0 = 6
+    disjoint_from_0 (total) = 6
+    avg disjoint per cycle = 1.00
+    alpha_2(3,3) = 7.0
+
+  p=7, Interval:
+    c3 = 14, cycles through 0 = 6
+    disjoint_from_0 (total) = 12
+    avg disjoint per cycle = 2.00
+    alpha_2(3,3) = 14.0
+
+  p=11, Paley:
+    c3 = 55, cycles through 0 = 15
+    disjoint_from_0 (total) = 270
+    avg disjoint per cycle = 18.00
+    alpha_2(3,3) = 495.0
+
+  p=11, Interval:
+    c3 = 55, cycles through 0 = 15
+    disjoint_from_0 (total) = 300
+    avg disjoint per cycle = 20.00
+    alpha_2(3,3) = 550.0
+
+======================================================================
+ASYMPTOTIC SCALING OF ISING DECOMPOSITION
+======================================================================
+
+    p    D1 (Paley adv)     D2+ (Int adv)    D1/D2+      D1/H_P     D2+/H_P
+    7                42                28    1.5000    0.222222    0.148148
+   11             5,544             3,476    1.5949    0.058300    0.036553
+   19     9,043,330,440    20,560,408,288    0.4398    0.007712    0.017533
+
+  KEY PATTERN:
+  - D1/D2+ ratio: 1.500 (p=7), 1.595 (p=11), 0.440 (p=19)
+  - The ratio INCREASES from p=7 to p=11, then DROPS sharply at p=19
+  - This is the signature of a PHASE TRANSITION
+
+  MECHANISM:
+  - D1 grows as alpha_1 grows (roughly exponentially in p)
+  - D2+ grows FASTER because the number of disjoint cycle packings
+    grows super-exponentially (combinatorial explosion of independent sets)
+  - At p <= 11: Paley's cycle count advantage dominates
+  - At p >= 19: Interval's packing advantage dominates
+
+  SCALING ARGUMENT:
+  - alpha_1 ~ (p-1)! / 2^{p-1} (dominated by c_{p-2} and c_p)
+  - Paley advantage in alpha_1: multiplicative factor ~1.1 (from quasi-random excess)
+  - alpha_2 ~ alpha_1^2 * (disjointness rate)
+  - Interval advantage in disjointness rate: additive energy factor ~4/3
+  - So: D1 ~ 0.1 * alpha_1, D2+ ~ 0.33 * alpha_1^2 * (disjointness rate)
+  - D2+ / D1 ~ 3.3 * alpha_1 * (disjointness rate) / 1
+  - This GROWS with p, eventually exceeding 1
+

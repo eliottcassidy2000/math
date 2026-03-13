@@ -33,6 +33,43 @@ For Paley (P) vs Interval (I) tournaments:
 
 3. **Phase transition at p ~ 13-19**: the alpha_2+ advantage overtakes alpha_1
 
+## HYP-480 Exhaustive Verification
+
+**VERIFIED at p=5, 7, 11, 13, 19** (all primes up to 19):
+
+| p | p mod 4 | Paley? | #circulants | Maximizer | H(max) | H(Int) | H(Paley) |
+|---|---------|--------|-------------|-----------|--------|--------|----------|
+| 5 | 1 | No | 4 | Interval | 15 | 15 | N/A |
+| 7 | 3 | Yes | 8 | **Paley** | 189 | 175 | 189 |
+| 11 | 3 | Yes | 32 | **Paley** | 95,095 | 93,027 | 95,095 |
+| 13 | 1 | No | 64 | **Interval** | 3,711,175 | 3,711,175 | N/A |
+| 19 | 3 | Yes | 512 | **Interval** | 1,184,212,824,763 | 1,184,212,824,763 | 1,172,695,746,915 |
+
+At p=13: 12 maximizers, all in orbit of Interval under Z_13^*. Only 6 distinct H values.
+At p=19: 18 maximizers (orbit of Interval under Z_19^*). Max/Min ratio = 1.0185.
+
+**Crossover**: Paley wins at p=7,11 (3 mod 4). Interval wins at p=13 (1 mod 4) and p=19 (3 mod 4).
+For p = 3 mod 4: crossover between p=11 and p=19.
+
+## Walsh-Fourier / SDP Analysis at p=19
+
+- H_0 (mean) = 1,167,587,042,102
+- SDP bound (degree-2) = H_0 + 9 * max_eig = 1,171,729,708,153
+- Actual max H = 1,184,212,824,763
+- **SDP gap = -12,483,116,610 (NEGATIVE!)**
+
+The degree-2 SDP UNDERESTIMATES the true maximum. Higher-order Walsh terms contribute
++12.5B to H(Interval) beyond what the quadratic model predicts.
+
+- Q(Paley) = sigma_P^T J sigma_P = -4,900,099,958 (Paley is NOT the quadratic maximizer!)
+- Q(Interval) = sigma_I^T J sigma_I = +1,117,343,600
+
+J eigenvalues: {-604M (x2), -544M, +163M (x2), +253M (x2), +460M (x2)}
+Spectrum splits into 4 doublets + 1 singlet (from circulant symmetry).
+
+Walsh energy by degree: 100% degree-0, ~0.06% degree-2, ~0.87% degree-4, ~0.46% degree-6, ~0.0002% degree-8.
+The dominant non-constant terms are degree-4 and degree-6 (higher-order Ising interactions).
+
 ## Quantitative Data (COMPLETE for p=7,11; partial p=19)
 
 ### Full alpha decomposition
@@ -138,8 +175,13 @@ So Paley's cycles are more "tangled" (share vertices), while Interval's are "ali
 
 - `04-computation/alpha_decomp_p11_full.py` — complete alpha_j verification at p=11
 - `04-computation/alpha_decomp_p19_fast.py` — cycle counts at p=19 via circulant symmetry
+- `04-computation/orientation_cube_p13.py` — exhaustive p=13 (64 circulants) with orbit analysis
+- `04-computation/orientation_cube_p19.py` — exhaustive p=19 (512 circulants) with Walsh-Fourier
+- `04-computation/additive_energy_disjointness_proof.py` — additive energy formula verification
 - `04-computation/trace_H_analytic.py` — cycle count comparison
 - `04-computation/thm136_all_k_proof.py` — trace alternation for all k
 - `05-knowledge/results/alpha_decomp_p11_full.out` — verified p=11 decomposition
 - `05-knowledge/results/alpha_decomp_p19_fast.out` — p=19 cycle counts
+- `05-knowledge/results/orientation_cube_p13.out` — p=13 exhaustive verification
+- `05-knowledge/results/orientation_cube_p19.out` — p=19 exhaustive verification + Walsh-Fourier
 - `05-knowledge/results/ising_phase_transition.out` — Hessian analysis (opus)
