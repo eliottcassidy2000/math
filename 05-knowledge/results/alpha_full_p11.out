@@ -1,0 +1,113 @@
+======================================================================
+FULL ALPHA DECOMPOSITION AT p=7 AND p=11
+======================================================================
+
+======================================================================
+p=7, m=3
+======================================================================
+
+  Interval: 36 cycle vertex sets
+    c_3 = 14
+    c_5 = 21
+    c_7 = 1
+
+  I(Omega, 2) = H = 129 (0.00s)
+  Alpha coefficients:
+    alpha_0 =        1 (contributes          1 =   0.78%)
+    alpha_1 =       36 (contributes         72 =  55.81%)
+    alpha_2 =       14 (contributes         56 =  43.41%)
+
+  Paley: 36 cycle vertex sets
+    c_3 = 14
+    c_5 = 21
+    c_7 = 1
+
+  I(Omega, 2) = H = 101 (0.00s)
+  Alpha coefficients:
+    alpha_0 =        1 (contributes          1 =   0.99%)
+    alpha_1 =       36 (contributes         72 =  71.29%)
+    alpha_2 =        7 (contributes         28 =  27.72%)
+
+======================================================================
+p=11, m=5
+======================================================================
+
+  Interval: 848 cycle vertex sets
+    c_3 = 55
+    c_5 = 407
+    c_7 = 330
+    c_9 = 55
+    c_11 = 1
+
+  alpha_1 = 848
+  alpha_2 = 4972 (0.0s)
+  Computing alpha_3...
+  alpha_3 = 1298 (0.6s)
+  alpha_3 by cycle type:
+    (3, 3, 3): 748
+    (3, 3, 5): 550
+
+  H decomposition:
+    1                   = 1
+    2*alpha_1 = 2*848 = 1696
+    4*alpha_2 = 4*4972 = 19888
+    8*alpha_3 = 8*1298 = 10384
+    H_3 = 31969
+    H = 93027
+    Remainder (16*alpha_4 + ...) = 61058
+
+  Percentage breakdown:
+    Level 0:  0.0011%
+    Level 1:  1.8231%
+    Level 2:  21.3787%
+    Level 3:  11.1624%
+    Level 4+: 65.6347%
+
+  Paley: 793 cycle vertex sets
+    c_3 = 55
+    c_5 = 352
+    c_7 = 330
+    c_9 = 55
+    c_11 = 1
+
+  alpha_1 = 793
+  alpha_2 = 3861 (0.0s)
+  Computing alpha_3...
+  alpha_3 = 935 (0.4s)
+  alpha_3 by cycle type:
+    (3, 3, 3): 550
+    (3, 3, 5): 385
+
+  H decomposition:
+    1                   = 1
+    2*alpha_1 = 2*793 = 1586
+    4*alpha_2 = 4*3861 = 15444
+    8*alpha_3 = 8*935 = 7480
+    H_3 = 24511
+    H = 95095
+    Remainder (16*alpha_4 + ...) = 70584
+
+  Percentage breakdown:
+    Level 0:  0.0011%
+    Level 1:  1.6678%
+    Level 2:  16.2406%
+    Level 3:  7.8658%
+    Level 4+: 74.2247%
+
+======================================================================
+INTERVAL vs PALEY COMPARISON
+======================================================================
+
+              Quantity     Interval        Paley  Delta (I-P)  Effect on H
+  --------------------------------------------------------------------
+               alpha_1          848          793           55          110
+               alpha_2         4972         3861         1111         4444
+               alpha_3         1298          935          363         2904
+        remainder (4+)        61058        70584        -9526        -9526
+                     H        93027        95095        -2068
+
+  Check: 2*d1 + 4*d2 + 8*d3 + d_rem = -2068 (should be -2068)
+
+  INSIGHT: At p=11, Interval advantage at levels 1-3: 7458
+  Paley advantage at level 4+: 9526
+  Paley wins by 2068 because level 4+ dominance.

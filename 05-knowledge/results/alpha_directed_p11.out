@@ -1,0 +1,110 @@
+======================================================================
+CORRECT OCF DECOMPOSITION USING DIRECTED CYCLES
+======================================================================
+
+======================================================================
+p=7, m=3
+======================================================================
+
+  Interval (S=[1, 2, 3]): 59 directed cycles (0.0s)
+    k=3: 14 vertex sets, 14 directed cycles
+           multiplicity dist: {1: 14}
+    k=5: 21 vertex sets, 28 directed cycles
+           multiplicity dist: {1: 14, 2: 7}
+    k=7: 1 vertex sets, 17 directed cycles
+           multiplicity dist: {17: 1}
+
+    I(Omega, 2) = H = 175
+    Alpha decomposition:
+      alpha_0 =        1, 2^0*alpha_0 =          1 (  0.57%)
+      alpha_1 =       59, 2^1*alpha_1 =        118 ( 67.43%)
+      alpha_2 =       14, 2^2*alpha_2 =         56 ( 32.00%)
+
+  Paley (S=[1, 2, 4]): 80 directed cycles (0.0s)
+    k=3: 14 vertex sets, 14 directed cycles
+           multiplicity dist: {1: 14}
+    k=5: 21 vertex sets, 42 directed cycles
+           multiplicity dist: {2: 21}
+    k=7: 1 vertex sets, 24 directed cycles
+           multiplicity dist: {24: 1}
+
+    I(Omega, 2) = H = 189
+    Alpha decomposition:
+      alpha_0 =        1, 2^0*alpha_0 =          1 (  0.53%)
+      alpha_1 =       80, 2^1*alpha_1 =        160 ( 84.66%)
+      alpha_2 =        7, 2^2*alpha_2 =         28 ( 14.81%)
+
+======================================================================
+p=11, m=5
+======================================================================
+
+  Interval (S=[1, 2, 3, 4, 5]): 18397 directed cycles (0.1s)
+    k=3: 55 vertex sets, 55 directed cycles
+           multiplicity dist: {1: 55}
+    k=5: 407 vertex sets, 484 directed cycles
+           multiplicity dist: {1: 330, 2: 77}
+    k=7: 330 vertex sets, 3399 directed cycles
+           multiplicity dist: {1: 44, 8: 77, 10: 77, 13: 11, 14: 77, 17: 44}
+    k=9: 55 vertex sets, 9350 directed cycles
+           multiplicity dist: {125: 11, 141: 11, 165: 11, 197: 11, 222: 11}
+    k=11: 1 vertex sets, 5109 directed cycles
+           multiplicity dist: {5109: 1}
+
+    n=18397 too large for full backtracking, computing alpha_1,2,3
+    alpha_1 = 18397
+    alpha_2 = 11110 (27.2s)
+    alpha_3 = 1474 (27.3s)
+
+    H decomposition:
+      Level 0: 1
+      Level 1: 2*18397 = 36794
+      Level 2: 4*11110 = 44440
+      Level 3: 8*1474 = 11792
+      H_3 = 93027
+      H = 93027
+      Remainder (Level 4+) = 0
+
+    Percentages:
+      Level 0: 0.0011%
+      Level 1: 39.5520%
+      Level 2: 47.7711%
+      Level 3: 12.6759%
+      Level 4+: 0.0000%
+
+  Paley (S=[1, 3, 4, 5, 9]): 21169 directed cycles (0.1s)
+    k=3: 55 vertex sets, 55 directed cycles
+           multiplicity dist: {1: 55}
+    k=5: 352 vertex sets, 594 directed cycles
+           multiplicity dist: {1: 165, 2: 132, 3: 55}
+    k=7: 330 vertex sets, 3960 directed cycles
+           multiplicity dist: {9: 110, 11: 55, 13: 55, 15: 110}
+    k=9: 55 vertex sets, 11055 directed cycles
+           multiplicity dist: {201: 55}
+    k=11: 1 vertex sets, 5505 directed cycles
+           multiplicity dist: {5505: 1}
+
+    n=21169 too large for full backtracking, computing alpha_1,2,3
+    alpha_1 = 21169
+    alpha_2 = 10879 (38.3s)
+    alpha_3 = 1155 (35.3s)
+
+    H decomposition:
+      Level 0: 1
+      Level 1: 2*21169 = 42338
+      Level 2: 4*10879 = 43516
+      Level 3: 8*1155 = 9240
+      H_3 = 95095
+      H = 95095
+      Remainder (Level 4+) = 0
+
+    Percentages:
+      Level 0: 0.0011%
+      Level 1: 44.5218%
+      Level 2: 45.7606%
+      Level 3: 9.7166%
+      Level 4+: 0.0000%
+
+  ============================================================
+  INTERVAL vs PALEY COMPARISON AT p=11
+  ============================================================
+  (see output above for details)
