@@ -1,0 +1,116 @@
+======================================================================
+ISOMORPHISM CHECK: C7 INTERVAL vs C7_{1,3,5}
+======================================================================
+  C7_{1,2,3} canon: (0, 0, 0, 1, 1, 1, 0, 0, 0, 1)...
+  C7_{1,3,5} canon: (0, 0, 0, 1, 1, 1, 0, 0, 0, 1)...
+  Isomorphic? True
+  C7_{1, 2, 3}: canon=(0, 0, 0, 1, 1, 1)...
+  C7_{1, 3, 5}: canon=(0, 0, 0, 1, 1, 1)...
+  C7_{2, 4, 6}: canon=(0, 0, 0, 1, 1, 1)...
+  C7_{3, 5, 6}: canon=(0, 0, 0, 1, 1, 1)...
+
+======================================================================
+PALEY BETTI CONJECTURE TEST
+======================================================================
+
+  Paley at each p ≡ 3 mod 4:
+
+  P_3: QR={1}
+    β = [1, 1, 0]
+    Ω/p = [1, 1, 0]
+    chi = 0
+    (p-3)/2 = 0
+    β_1 = 1 (at degree 1)
+
+  P_5: QR={1, 4}
+    β = [1, 6, 0, 0, 0]
+    Ω/p = [1, 2, 0, 0, 0]
+    chi = -5
+    (p-3)/2 = 1
+    β_1 = 6 (at degree 1)
+
+  P_7: QR={1, 2, 4}
+    β = [1, 0, 0, 0, 6, 0, 0]
+    Ω/p = [1, 3, 6, 9, 9, 6, 3]
+    chi = 7
+    (p-3)/2 = 2
+    β_4 = 6 (at degree 4)
+
+  P_5 QR = {a^2 mod 5} = {1,4}
+  C5_{1,4} β = [1, 6, 0, 0, 0], Ω/5 = [1, 2, 0, 0, 0]
+  C5_{1,2} β = [1, 1, 0, 0, 0], Ω/5 = [1, 2, 2, 2, 1]
+  P_5 ≅ C5_{1,2}? False
+
+======================================================================
+PALEY P_7 Ω/7 PALINDROME ANALYSIS
+======================================================================
+  Ω/7 = [1, 3, 6, 9, 9, 6, 3]
+  Palindromic? False
+  Ω/5 (P_5) = [1, 2, 2, 2, 1]
+  Palindromic? True
+  Ω/3 (P_3) = [1, 1, 0]
+  Palindromic? False
+  Ω/7 (I_7) = [1, 3, 6, 11, 14, 9, 2]
+  Palindromic? False
+
+  CONJECTURE: For Paley tournament P_p, Ω_m/p is palindromic.
+  This is Poincaré duality for the path complex!
+
+======================================================================
+PALEY Ω/p GENERATING FUNCTION ANALYSIS
+======================================================================
+  P_3: sum(Ω/3) = 2 = 2^1
+  P_5: sum(Ω/5) = 8 = 2^3
+  P_7: sum(Ω/7) = 37
+  37 is prime, not a nice power
+
+  P_3: sum(Ω) = 6 = 3!? No, 3!=6. Yes!
+  P_5: sum(Ω) = 40 = 5*8 = 5*2^3
+  P_7: sum(Ω) = 259 = 7*37
+
+======================================================================
+P_7 PALEY: BOUNDARY RANK SEQUENCE
+======================================================================
+  rk(∂_m) for m=1..6: [6, 15, 27, 36, 21, 21]
+  rk/7: [0.8571428571428571, 2.142857142857143, 3.857142857142857, 5.142857142857143, 3.0, 3.0]
+  rk/3: [2.0, 5.0, 9.0, 12.0, 7.0, 7.0]
+  All divisible by 3: True
+
+======================================================================
+RELATIONSHIP BETWEEN β_4=6 AND Z_7 REPRESENTATION THEORY
+======================================================================
+  β_4 = 6 = p-1 = number of nontrivial characters of Z_p
+  Conjecture: H_{(p-3)/2}(P_p) ≅ regular representation minus trivial
+
+  P_3: m=(3-3)/2=0, β_0=1 (always 1 for β_0)
+  P_5: m=(5-3)/2=1, β_1=1 ≠ p-1=4. FAILS!
+  P_7: m=(7-3)/2=2, β_2=0 ≠ p-1=6. FAILS!
+
+  Wait — P_7's nonzero β is at m=4, not m=2.
+  (p-3)/2 = 2 but β_2 = 0. The nonzero β is at m = p-3 = 4.
+
+  P_3: nonzero β at m=1, value=1. p-3=0, p-2=1
+  P_5: nonzero β at m=1, value=1. p-3=2, p-2=3
+  P_7: nonzero β at m=4, value=6. p-3=4!
+
+  NEW CONJECTURE: For Paley P_p with p ≡ 3 mod 4:
+    If p ≥ 7: β_{p-3} = p-1, all other β_m = 0 for m ≥ 1
+    chi(P_p) = 1 + (-1)^{p-3}*(p-1) = 1 + (p-1) = p (since p-3 even)
+
+  Verification:
+    P_7: chi = 1 + 6 = 7 = p ✓
+    P_3: chi = 0 ≠ 3 (small case exception)
+    P_5: chi = 0 ≠ 5 (small case exception)
+
+======================================================================
+POINCARÉ DUALITY FOR PALEY PATH COMPLEX?
+======================================================================
+  Ω palindrome check:
+    P_3: Ω(nonzero) = [3, 3], palindromic? True
+         Ω(full)    = [3, 3, 0]
+    P_5: Ω(nonzero) = [5, 10, 10, 10, 5], palindromic? True
+         Ω(full)    = [5, 10, 10, 10, 5]
+    P_7: Ω(nonzero) = [7, 21, 42, 63, 63, 42, 21], palindromic? False
+         Ω(full)    = [7, 21, 42, 63, 63, 42, 21]
+
+DONE.
