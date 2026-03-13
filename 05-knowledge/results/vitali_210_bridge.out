@@ -1,0 +1,240 @@
+======================================================================
+ANALYSIS 1: OVERLAP WEIGHT MATRIX SPECTRUM
+======================================================================
+
+--- n=3 (m=3, 8 tournaments) ---
+      H |  count |  alpha1 |  alpha2 |   avg_ov |   var_ov | overlap dist
+  ------+--------+---------+---------+----------+----------+--------------------
+
+--- n=4 (m=6, 64 tournaments) ---
+      H |  count |  alpha1 |  alpha2 |   avg_ov |   var_ov | overlap dist
+  ------+--------+---------+---------+----------+----------+--------------------
+      5 |     24 |       2 |       0 |    2.000 |    0.000 | 2:1
+
+--- n=5 (m=10, 1024 tournaments) ---
+      H |  count |  alpha1 |  alpha2 |   avg_ov |   var_ov | overlap dist
+  ------+--------+---------+---------+----------+----------+--------------------
+      5 |    240 |       2 |       0 |    2.000 |    0.000 | 2:1
+      9 |    240 |       4 |       0 |    2.417 |    0.403 | 1:0 2:2 3:3
+     11 |    120 |       5 |       0 |    2.200 |    0.560 | 1:2 2:4 3:4
+     13 |    120 |       5 |       0 |    2.100 |    0.690 | 1:3 2:3 3:4
+     15 |     64 |  [5, 6] |       0 |    2.062 |    0.681 | 1:3 2:3 3:4
+
+--- n=6 (m=15, 32768 tournaments) ---
+      H |  count |  alpha1 |  alpha2 |   avg_ov |   var_ov | overlap dist
+  ------+--------+---------+---------+----------+----------+--------------------
+      5 |   2160 |       2 |       0 |    2.000 |    0.000 | 2:1
+      9 |   2960 |  [2, 4] |  [0, 1] |    2.351 |    0.392 | 0:0 1:0 2:2 3:2
+     11 |   1440 |       5 |       0 |    2.200 |    0.560 | 1:2 2:4 3:4
+     13 |   1440 |       5 |       0 |    2.100 |    0.690 | 1:3 2:3 3:4
+     15 |   2208 | [5, 6, 7] |       0 |    2.425 |    0.701 | 1:2 2:5 3:7 4:1
+     17 |   1440 |  [6, 8] |  [0, 1] |    2.562 |    0.773 | 0:0 1:1 2:7 3:9 4:3
+     19 |   1440 |       9 |       0 |    2.583 |    0.799 | 1:4 2:13 3:13 4:6
+     23 |   2880 | [8, 11] |  [0, 1] |    2.469 |    0.885 | 0:0 1:5 2:15 3:14 4:6
+     25 |   1440 |      10 |       0 |    2.422 |    0.866 | 1:8 2:16 3:15 4:6
+     27 |    480 |       9 |       1 |    2.556 |    0.914 | 0:1 1:3 2:13 3:13 4:6
+     29 |   2880 | [10, 11] |  [1, 2] |    2.432 |    0.992 | 0:1 1:7 2:18 3:15 4:8
+     31 |   1440 |      10 |       1 |    2.356 |    0.985 | 0:1 1:8 2:16 3:14 4:6
+     33 |   2640 | [10, 12] | [0, 1, 2] |    2.389 |    0.973 | 0:1 1:9 2:22 3:17 4:8
+     37 |   3600 | [10, 12] |  [1, 2] |    2.374 |    1.012 | 0:1 1:10 2:23 3:18 4:9
+     41 |    720 |      14 |       2 |    2.396 |    1.008 | 0:2 1:14 2:36 3:24 4:15
+     43 |   1440 |      14 |       1 |    2.385 |    1.006 | 0:1 1:17 2:34 3:24 4:15
+     45 |    480 |      14 |  [1, 4] |    2.374 |    1.058 | 0:2 1:15 2:34 3:24 4:15
+
+======================================================================
+ANALYSIS 2: OVERLAP WEIGHT vs FOURIER COMPONENTS
+======================================================================
+
+--- n=5 ---
+
+  Global correlations:
+    corr(H_2, alpha_1) = 0.9899
+    corr(H_2, alpha_2) = 0.0000
+    corr(H_4, alpha_1) = 0.0667
+    corr(H_4, alpha_2) = 0.0000
+    corr(H_4, mean_overlap) = -0.2587
+    corr(H_4, var_overlap) = 0.3410
+
+  Within-score-class correlations (H_4 vs cycle metrics):
+    Score (1, 2, 2, 2, 3): corr(H4,a1)=0.000, corr(H4,a2)=0.000, corr(H4,mean_ov)=-0.884, corr(H4,var_ov)=0.884
+
+--- n=6 ---
+
+  Global correlations:
+    corr(H_2, alpha_1) = 0.9833
+    corr(H_2, alpha_2) = 0.6325
+    corr(H_4, alpha_1) = 0.0549
+    corr(H_4, alpha_2) = 0.5477
+    corr(H_4, mean_overlap) = -0.4135
+    corr(H_4, var_overlap) = 0.0149
+
+  Within-score-class correlations (H_4 vs cycle metrics):
+    Score (0, 2, 3, 3, 3, 4): corr(H4,a1)=0.000, corr(H4,a2)=0.000, corr(H4,mean_ov)=-0.884, corr(H4,var_ov)=0.884
+    Score (1, 1, 2, 3, 4, 4): corr(H4,a1)=0.000, corr(H4,a2)=0.577, corr(H4,mean_ov)=-0.136, corr(H4,var_ov)=0.191
+    Score (1, 1, 3, 3, 3, 4): corr(H4,a1)=-0.354, corr(H4,a2)=0.884, corr(H4,mean_ov)=-0.430, corr(H4,var_ov)=0.807
+    Score (1, 2, 2, 2, 3, 5): corr(H4,a1)=0.000, corr(H4,a2)=0.000, corr(H4,mean_ov)=-0.884, corr(H4,var_ov)=0.884
+    Score (1, 2, 2, 2, 4, 4): corr(H4,a1)=-0.354, corr(H4,a2)=0.884, corr(H4,mean_ov)=-0.430, corr(H4,var_ov)=0.807
+    Score (1, 2, 2, 3, 3, 4): corr(H4,a1)=-0.473, corr(H4,a2)=0.872, corr(H4,mean_ov)=-0.705, corr(H4,var_ov)=0.896
+    Score (1, 2, 3, 3, 3, 3): corr(H4,a1)=0.000, corr(H4,a2)=0.612, corr(H4,mean_ov)=-0.802, corr(H4,var_ov)=0.819
+    Score (2, 2, 2, 2, 3, 4): corr(H4,a1)=0.000, corr(H4,a2)=0.612, corr(H4,mean_ov)=-0.802, corr(H4,var_ov)=0.819
+    Score (2, 2, 2, 3, 3, 3): corr(H4,a1)=0.000, corr(H4,a2)=0.083, corr(H4,mean_ov)=-1.000, corr(H4,var_ov)=0.601
+
+======================================================================
+ANALYSIS 3: THE {2,1,0} ENCODING AS TERNARY CODE
+======================================================================
+
+At n=5: 3-cycle vertex sets have pairwise overlaps in {0,1,2}.
+This naturally defines a TERNARY CODE on C(alpha_1, 2) symbols.
+
+The code word for a tournament T is the vector of overlaps between
+all pairs of 3-cycle vertex sets, taking values in {0,1,2}.
+
+Question: Is this ternary code a complete invariant for H_4?
+If so, the overlap weight distribution ALONE determines H.
+
+
+  Score (1, 2, 2, 2, 3):
+    Overlap code determines H_4? NO
+    Number of distinct overlap codes: 2
+      code (1, 1, 1, 2, 2, 2): H4=[1.0, 3.0], count=160
+      code (1, 1, 2, 2, 2, 2): H4=[-1.0], count=120
+
+======================================================================
+ANALYSIS 4: OVERLAP WEIGHT MATRIX EIGENSTRUCTURE
+======================================================================
+
+The overlap weight matrix W[i,j] = |V(C_i) cap V(C_j)| is a symmetric
+matrix on the cycle space. Its eigenvalues encode the "spectral geometry"
+of the cycle interaction network.
+
+Conjecture: The eigenvalues of W relate to the Fourier degrees of H:
+  - The largest eigenvalue relates to H_0 (global average)
+  - The second eigenvalue relates to H_2 (score structure)
+  - The third eigenvalue relates to H_4 (cycle structure)
+
+
+--- n=5 ---
+      H |   nc |    sum_W |   mean_W |   Frob^2 |               scores
+  ------+------+----------+----------+----------+---------------------
+      5 |    2 |        4 |      2.0 |        8 | [(0, 2, 2, 3, 3), (1, 1, 2, 2, 4)]
+      9 |    4 | [28, 30] | [2.3333, 2.5] | [72, 78] | [(1, 1, 2, 3, 3)]
+     11 |    5 |       44 |      2.2 |      108 | [(1, 2, 2, 2, 3)]
+     13 |    5 |       42 |      2.1 |      102 | [(1, 2, 2, 2, 3)]
+     15 | [5, 6] | [42, 60] | [2.0, 2.1] | [102, 140] | [(1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+
+--- n=6 ---
+      H |   nc |    sum_W |   mean_W |   Frob^2 |               scores
+  ------+------+----------+----------+----------+---------------------
+      5 |    2 |        4 |      2.0 |        8 | [(0, 1, 3, 3, 4, 4), (0, 2, 2, 3, 3, 5)]
+      9 | [2, 4] | [0, 28, 30] | [0.0, 2.3333, 2.5] | [0, 72, 78] | [(0, 2, 2, 3, 4, 4), (1, 1, 1, 4, 4, 4)]
+     11 |    5 |       44 |      2.2 |      108 | [(0, 2, 3, 3, 3, 4), (1, 2, 2, 2, 3, 5)]
+     13 |    5 |       42 |      2.1 |      102 | [(0, 2, 3, 3, 3, 4), (1, 2, 2, 2, 3, 5)]
+     15 | [5, 6, 7] | [42, 60, 110] | [2.0, 2.1, 2.619] | [102, 140, 318] | [(0, 2, 3, 3, 3, 4), (0, 3, 3, 3, 3, 3)]
+     17 | [6, 8] | [68, 160] | [2.2667, 2.8571] | [184, 488] | [(1, 1, 2, 3, 4, 4)]
+     19 |    9 |      186 |   2.5833 |      538 | [(1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+     23 | [8, 11] | [132, 284] | [2.3571, 2.5818] | [364, 824] | [(1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+     25 |   10 |      218 |   2.4222 |      606 | [(1, 2, 2, 3, 3, 4)]
+     27 |    9 |      184 |   2.5556 |      536 | [(1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 4, 4)]
+     29 | [10, 11] | [212, 276] | [2.3556, 2.5091] | [588, 592, 800] | [(1, 2, 2, 3, 3, 4)]
+     31 |   10 |      212 |   2.3556 |      588 | [(1, 2, 2, 3, 3, 4)]
+     33 | [10, 12] | [212, 316, 320] | [2.3556, 2.3939, 2.4242] | [592, 884, 896] | [(1, 2, 2, 3, 3, 4), (1, 2, 3, 3, 3, 3)]
+     37 | [10, 12] | [212, 314] | [2.3556, 2.3788] | [592, 878, 882] | [(1, 2, 2, 3, 3, 4), (1, 2, 3, 3, 3, 3)]
+     41 |   14 |      436 |   2.3956 |     1228 | [(2, 2, 2, 3, 3, 3)]
+     43 |   14 |      434 |   2.3846 |     1218 | [(2, 2, 2, 3, 3, 3)]
+     45 |   14 |      432 |   2.3736 | [1212, 1224] | [(2, 2, 2, 3, 3, 3)]
+
+======================================================================
+ANALYSIS 5: FROM OVERLAP WEIGHT TO INDEPENDENCE POLYNOMIAL
+======================================================================
+
+The OCF gives H(T) = I(Omega(T), 2) = sum_{k>=0} alpha_k * 2^k.
+
+The conflict graph Omega has adjacency defined by overlap > 0.
+So the ternary structure {0,1,2} is COLLAPSED to binary {0, >0} = {independent, adjacent}.
+
+Question: Does the FULL overlap weight (not just binary) carry MORE information?
+Specifically, do two tournaments with the same Omega adjacency but different
+overlap weight distributions have the same H?
+
+Answer: YES, by definition — H depends only on Omega, not on the weights.
+But the weight distribution may help PREDICT H or explain its structure.
+
+
+n=5: Omega and weight diversity by H value:
+      H | #Omega types |  #weight types
+  ------+--------------+---------------
+      1 |            1 |              1
+      3 |            1 |              1
+      5 |            1 |              1
+      9 |            1 |              2
+     11 |            1 |              1
+     13 |            1 |              1
+     15 |            2 |              2
+
+======================================================================
+ANALYSIS 6: TERNARY INFORMATION CONTENT
+======================================================================
+
+The TERNARY information (overlap=0, 1, or 2) is RICHER than the binary
+Omega graph (overlap=0 vs >0). How much richer?
+
+For each tournament, define:
+  - I_binary = # distinct Omega adjacency classes (up to relabeling)
+  - I_ternary = # distinct overlap weight distributions
+  - I_H = # distinct H values
+
+The hierarchy: I_H <= I_ternary ?? I_binary
+
+If I_ternary > I_binary, then the ternary structure carries information
+BEYOND what Omega captures — but that information doesn't affect H!
+
+
+n=5: Ternary vs binary information by score class:
+                      Score |   #H |  #binary |  #ternary | ternary>binary?
+  --------------------------+------+----------+-----------+----------------
+            (0, 1, 2, 3, 4) |    1 |        1 |         1 | no
+            (0, 1, 3, 3, 3) |    1 |        1 |         1 | no
+            (0, 2, 2, 2, 4) |    1 |        1 |         1 | no
+            (0, 2, 2, 3, 3) |    1 |        1 |         1 | no
+            (1, 1, 1, 3, 4) |    1 |        1 |         1 | no
+            (1, 1, 2, 2, 4) |    1 |        1 |         1 | no
+            (1, 1, 2, 3, 3) |    1 |        1 |         2 | YES!
+            (1, 2, 2, 2, 3) |    3 |        1 |         2 | YES!
+            (2, 2, 2, 2, 2) |    1 |        1 |         1 | no
+
+  RESULT: Ternary carries MORE information than binary at n=5!
+  This means the overlap WEIGHT (not just adjacency) distinguishes
+  tournaments that have the same conflict graph Omega.
+
+n=6: Ternary vs binary information by score class:
+                      Score |   #H |  #binary |  #ternary | ternary>binary?
+  --------------------------+------+----------+-----------+----------------
+         (0, 1, 2, 3, 4, 5) |    1 |        1 |         1 | no
+         (0, 1, 2, 4, 4, 4) |    1 |        1 |         1 | no
+         (0, 1, 3, 3, 3, 5) |    1 |        1 |         1 | no
+         (0, 1, 3, 3, 4, 4) |    1 |        1 |         1 | no
+         (0, 2, 2, 2, 4, 5) |    1 |        1 |         1 | no
+         (0, 2, 2, 3, 3, 5) |    1 |        1 |         1 | no
+         (0, 2, 2, 3, 4, 4) |    1 |        1 |         2 | YES!
+         (0, 2, 3, 3, 3, 4) |    3 |        1 |         2 | YES!
+         (0, 3, 3, 3, 3, 3) |    1 |        1 |         1 | no
+         (1, 1, 1, 3, 4, 5) |    1 |        1 |         1 | no
+         (1, 1, 1, 4, 4, 4) |    1 |        1 |         1 | no
+         (1, 1, 2, 2, 4, 5) |    1 |        1 |         1 | no
+         (1, 1, 2, 3, 3, 5) |    1 |        1 |         2 | YES!
+         (1, 1, 2, 3, 4, 4) |    2 |        3 |         3 | no
+         (1, 1, 3, 3, 3, 4) |    3 |        3 |         3 | no
+         (1, 2, 2, 2, 3, 5) |    3 |        1 |         2 | YES!
+         (1, 2, 2, 2, 4, 4) |    3 |        3 |         3 | no
+         (1, 2, 2, 3, 3, 4) |    6 |        5 |         5 | no
+         (1, 2, 3, 3, 3, 3) |    2 |        3 |         4 | YES!
+         (2, 2, 2, 2, 2, 5) |    1 |        1 |         1 | no
+         (2, 2, 2, 2, 3, 4) |    2 |        3 |         4 | YES!
+         (2, 2, 2, 3, 3, 3) |    3 |        3 |         4 | YES!
+
+  RESULT: Ternary carries MORE information than binary at n=6!
+  This means the overlap WEIGHT (not just adjacency) distinguishes
+  tournaments that have the same conflict graph Omega.
+
+======================================================================
+DONE.
