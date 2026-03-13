@@ -1,0 +1,17 @@
+n=7: checking if Betti numbers are determined by lambda/sigma
+Computing Betti through β_3 for sampled tournaments...
+  trial 0: 0.1s
+  trial 500: 20.1s
+  trial 1000: 35.1s
+  trial 1500: 56.0s
+
+Done: 1988 lambda groups, 1998 sigma groups, 75.2s
+
+Lambda determines Betti? Ambiguous: 0
+(Lambda,sigma) determines Betti? Ambiguous: 0
+  β_0 lambda-determined? Ambiguous: 0
+  β_1 lambda-determined? Ambiguous: 0
+  β_2 lambda-determined? Ambiguous: 0
+  β_3 lambda-determined? Ambiguous: 0
+
+Done.
