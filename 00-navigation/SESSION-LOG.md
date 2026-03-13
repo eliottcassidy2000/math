@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71c (cont'd) — 2026-03-13: 2-and-3 Universality + Vandermonde Extraction
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71c (context window 15+)
+**Summary of work:**
+- **HYP-867 PROVED**: Vandermonde extraction — I(CG,2)=H and I(CG,3) together determine α₁ and α₂ separately via formulas α₂=(2I₃-3H+1)/6, α₁=(H-1-4α₂)/2. Verified 100/100 at n=7. For n≤8 where α₃=0, the pair (2,3) suffices.
+- **HYP-868 PROVED**: 3/2 residual ratio — within any lambda fiber, (I₃_residual)/(H_residual) = 3/2 exactly (1595/1595). I(3) adds NO information beyond H at n=7.
+- **HYP-869**: H almost lambda-determined at n=7 — only 31/46010 (0.067%) lambda fibers show ambiguity. ΔH=2 ALWAYS. Two fiber types: {109,111} and {141,143}. 50/50 split.
+- **HYP-870 PROVED**: (lambda, H) determines c7 with 0 ambiguity (9797/9797 groups).
+- **n=8 Vitali pairs**: lambda-preserving (1,1,2,2) reversals rare (20/1000), but 65% change H. |ΔH| ∈ {2,4,6} at n=8 (multi-level).
+- I(3) ≡ 1 (mod 3) trivially. I(3) mod 9 = 1+3α₁ (mod 9).
+- k-nacci → 2 and weighted k-nacci → 3: these form the minimal Vandermonde basis.
+- The deep structure: H = [lambda-part] + 2c7, I₃ = [lambda-part'] + 3c7.
+**New contributions:** HYP-867, HYP-868, HYP-869, HYP-870
+**Scripts:** two_and_three_universality.py, i3_mod3_proof.py, vandermonde_sigma_connection.py, h_lambda_fiber_structure.py, special_lambda_fibers.py, h_lambda_n8_fibers.py, h_lambda_n8_targeted.py, h_lambda_n8_vitali.py
+**Unresolved:** (1) Proper β₃ vs α computation (needs ∂₄), (2) H-lambda fiber characterization at n≥8, (3) does Vandermonde extend to α₃ at n=9?
+
 ## kind-pasteur-2026-03-13-S61 (cont'd, window 4) — 2026-03-13: Sigma Power Sums + Hidden Dimension
 
 **Account:** kind-pasteur
