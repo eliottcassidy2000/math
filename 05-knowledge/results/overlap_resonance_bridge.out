@@ -1,0 +1,250 @@
+======================================================================
+OVERLAP-RESONANCE BRIDGE ANALYSIS
+======================================================================
+
+--- PART 1: FOURIER STRUCTURE OF S ---
+For circulant tournaments, |S_hat(t)|^2 = Q_t determines the eigenvalue structure.
+Flat spectrum (Paley at p=3 mod 4) -> uniform eigenvalues -> rich cycle structure.
+
+  p=7 (p mod 4 = 3):
+
+    Paley: S = [1, 2, 4]
+      |S_hat(0)|^2 = 9.0 (= m^2 = 9)
+      |S_hat(t)|^2 for t=1..6: mean=2.000, var=1.000
+      Additive energy E(S) = 105.0
+      Flat-spectrum baseline Q_t = 1.000
+      Q range: [2.000, 2.000], ratio=1.000
+
+    Interval: S = [1, 2, 3]
+      |S_hat(0)|^2 = 9.0 (= m^2 = 9)
+      |S_hat(t)|^2 for t=1..6: mean=2.000, var=5.667
+      Additive energy E(S) = 133.0
+      Flat-spectrum baseline Q_t = 1.000
+      Q range: [0.308, 5.049], ratio=16.394
+
+  p=11 (p mod 4 = 3):
+
+    Paley: S = [1, 3, 4, 5, 9]
+      |S_hat(0)|^2 = 25.0 (= m^2 = 25)
+      |S_hat(t)|^2 for t=1..10: mean=3.000, var=1.000
+      Additive energy E(S) = 715.0
+      Flat-spectrum baseline Q_t = 2.000
+      Q range: [3.000, 3.000], ratio=1.000
+
+    Interval: S = [1, 2, 3, 4, 5]
+      |S_hat(0)|^2 = 25.0 (= m^2 = 25)
+      |S_hat(t)|^2 for t=1..10: mean=3.000, var=23.000
+      Additive energy E(S) = 935.0
+      Flat-spectrum baseline Q_t = 2.000
+      Q range: [0.272, 12.344], ratio=45.455
+
+  p=19 (p mod 4 = 3):
+
+    Paley: S = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+      |S_hat(0)|^2 = 81.0 (= m^2 = 81)
+      |S_hat(t)|^2 for t=1..18: mean=5.000, var=1.000
+      Additive energy E(S) = 7011.0
+      Flat-spectrum baseline Q_t = 4.000
+      Q range: [5.000, 5.000], ratio=1.000
+
+    Interval: S = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      |S_hat(0)|^2 = 81.0 (= m^2 = 81)
+      |S_hat(t)|^2 for t=1..18: mean=5.000, var=127.667
+      Additive energy E(S) = 9291.0
+      Flat-spectrum baseline Q_t = 4.000
+      Q range: [0.257, 36.660], ratio=142.669
+
+
+--- PART 2: CHORD CO-PARTICIPATION vs RESONANCE ---
+For each chord pair (a,b), count 3-cycles using both chords.
+Compare with resonance type (qa=+/-b mod p).
+
+  p=7:
+
+    Paley: S = [1, 2, 4]
+      Total directed 3-cycles: 14
+      (1,2): copart= 14, chi(ab)=+1, min_q=3
+      (1,3): copart= 14, chi(ab)=-1, min_q=3
+      (2,3): copart= 14, chi(ab)=-1, min_q=3
+
+    Interval: S = [1, 2, 3]
+      Total directed 3-cycles: 14
+      (1,2): copart=  0, chi(ab)=+1, min_q=3
+      (1,3): copart=  7, chi(ab)=-1, min_q=3
+      (2,3): copart=  7, chi(ab)=-1, min_q=3
+
+  p=11:
+
+    Paley: S = [1, 3, 4, 5, 9]
+      Total directed 3-cycles: 55
+      (1,2): copart= 11, chi(ab)=-1, min_q=5
+      (1,3): copart=  0, chi(ab)=+1, min_q=3
+      (1,4): copart=  0, chi(ab)=+1, min_q=3
+      (1,5): copart= 11, chi(ab)=+1, min_q=5
+      (2,3): copart=  0, chi(ab)=-1, min_q=3
+      (2,4): copart= 11, chi(ab)=-1, min_q=5
+      (2,5): copart=  0, chi(ab)=-1, min_q=3
+      (3,4): copart= 11, chi(ab)=+1, min_q=5
+      (3,5): copart= 11, chi(ab)=+1, min_q=5
+      (4,5): copart=  0, chi(ab)=+1, min_q=3
+
+    Interval: S = [1, 2, 3, 4, 5]
+      Total directed 3-cycles: 55
+      (1,2): copart=  0, chi(ab)=-1, min_q=5
+      (1,3): copart=  0, chi(ab)=+1, min_q=3
+      (1,4): copart=  0, chi(ab)=+1, min_q=3
+      (1,5): copart= 11, chi(ab)=+1, min_q=5
+      (2,3): copart=  0, chi(ab)=-1, min_q=3
+      (2,4): copart= 22, chi(ab)=-1, min_q=5
+      (2,5): copart= 22, chi(ab)=-1, min_q=3
+      (3,4): copart= 11, chi(ab)=+1, min_q=5
+      (3,5): copart= 11, chi(ab)=+1, min_q=5
+      (4,5): copart= 22, chi(ab)=+1, min_q=3
+
+
+--- PART 3: D^{2n} DEGREE-2 WALSH MAGNITUDE vs CHORD CO-PARTICIPATION ---
+Is |D^{2n} deg-2 at (a,b)| correlated with chord co-participation?
+
+  p=7 (Paley):
+    (1,2): copart= 14, chi=+1, q=  3  D^4=     -7.00  D^6=    -47.25
+    (1,3): copart= 14, chi=-1, q=  3  D^4=      7.00  D^6=     47.25
+    (2,3): copart= 14, chi=-1, q=  3  D^4=      7.00  D^6=     47.25
+
+  p=11 (Paley):
+    (1,2): copart= 11, chi=-1, q=  5  D^4=      0.00  D^6=    -33.00  D^8=   -924.00  D^10= -16781.87
+    (1,3): copart=  0, chi=+1, q=  3  D^4=     11.00  D^6=    206.25  D^8=   2825.62  D^10=  35139.84
+    (1,4): copart=  0, chi=+1, q=  3  D^4=     11.00  D^6=    206.25  D^8=   2825.63  D^10=  35139.84
+    (1,5): copart= 11, chi=+1, q=  5  D^4=      0.00  D^6=     33.00  D^8=    924.00  D^10=  16781.88
+    (2,3): copart=  0, chi=-1, q=  3  D^4=    -11.00  D^6=   -206.25  D^8=  -2825.62  D^10= -35139.84
+    (2,4): copart= 11, chi=-1, q=  5  D^4=      0.00  D^6=    -33.00  D^8=   -924.00  D^10= -16781.87
+    (2,5): copart=  0, chi=-1, q=  3  D^4=    -11.00  D^6=   -206.25  D^8=  -2825.62  D^10= -35139.84
+    (3,4): copart= 11, chi=+1, q=  5  D^4=      0.00  D^6=     33.00  D^8=    924.00  D^10=  16781.87
+    (3,5): copart= 11, chi=+1, q=  5  D^4=     -0.00  D^6=     33.00  D^8=    924.00  D^10=  16781.87
+    (4,5): copart=  0, chi=+1, q=  3  D^4=     11.00  D^6=    206.25  D^8=   2825.63  D^10=  35139.84
+
+
+--- PART 4: GAP ANATOMY AND DISJOINTNESS MECHANISM ---
+Two 3-cycles are disjoint iff their 6 vertices are distinct.
+For circulant T_p, a 3-cycle at (v, v+g1, v+g1+g2) is characterized by gap triple (g1,g2,g3).
+Question: which gap-triple pairs are more likely to produce disjoint cycles?
+
+  p=7, Paley:
+    Gap types: [(1, 2, 4)]
+    Disjointness between gap type pairs:
+      (1, 2, 4) × (1, 2, 4): disj=14/182 (7.7%)
+
+  p=7, Interval:
+    Gap types: [(1, 3, 3), (2, 2, 3)]
+    Disjointness between gap type pairs:
+      (1, 3, 3) × (1, 3, 3): disj=14/42 (33.3%)
+      (1, 3, 3) × (2, 2, 3): disj=0/49 (0.0%)
+      (2, 2, 3) × (2, 2, 3): disj=14/42 (33.3%)
+
+  p=11, Paley:
+    Gap types: [(1, 1, 9), (1, 5, 5), (3, 3, 5), (3, 4, 4)]
+    Disjointness between gap type pairs:
+      (1, 1, 9) × (1, 1, 9): disj=66/110 (60.0%)
+      (1, 1, 9) × (1, 5, 5): disj=44/121 (36.4%)
+      (1, 1, 9) × (3, 3, 5): disj=22/121 (18.2%)
+      (1, 1, 9) × (3, 4, 4): disj=22/121 (18.2%)
+      (1, 5, 5) × (1, 5, 5): disj=66/110 (60.0%)
+      (1, 5, 5) × (3, 3, 5): disj=44/121 (36.4%)
+      (1, 5, 5) × (3, 4, 4): disj=22/121 (18.2%)
+      (3, 3, 5) × (3, 3, 5): disj=66/110 (60.0%)
+      (3, 3, 5) × (3, 4, 4): disj=44/121 (36.4%)
+      (3, 4, 4) × (3, 4, 4): disj=66/110 (60.0%)
+
+  p=11, Interval:
+    Gap types: [(1, 5, 5), (2, 4, 5), (3, 3, 5), (3, 4, 4)]
+    Disjointness between gap type pairs:
+      (1, 5, 5) × (1, 5, 5): disj=66/110 (60.0%)
+      (1, 5, 5) × (2, 4, 5): disj=88/242 (36.4%)
+      (1, 5, 5) × (3, 3, 5): disj=44/121 (36.4%)
+      (1, 5, 5) × (3, 4, 4): disj=22/121 (18.2%)
+      (2, 4, 5) × (2, 4, 5): disj=198/462 (42.9%)
+      (2, 4, 5) × (3, 3, 5): disj=66/242 (27.3%)
+      (2, 4, 5) × (3, 4, 4): disj=88/242 (36.4%)
+      (3, 3, 5) × (3, 3, 5): disj=66/110 (60.0%)
+      (3, 3, 5) × (3, 4, 4): disj=44/121 (36.4%)
+      (3, 4, 4) × (3, 4, 4): disj=66/110 (60.0%)
+
+
+--- PART 5: ADDITIVE ENERGY AND CYCLE GENERATION ---
+E(S) = sum |S_hat(t)|^4 measures additive structure.
+Low E -> more 'random-looking' -> more uniform cycle distribution -> more total cycles.
+
+  p=7:
+    Paley: E(S)=   105.0, E/m^4=1.296296, zero_sum=   6, Q_var=1.000
+    Interval: E(S)=   133.0, E/m^4=1.641975, zero_sum=   6, Q_var=5.667
+
+  p=11:
+    Paley: E(S)=   715.0, E/m^4=1.144000, zero_sum=  15, Q_var=1.000
+    Interval: E(S)=   935.0, E/m^4=1.496000, zero_sum=  15, Q_var=23.000
+
+  p=19:
+    Paley: E(S)=  7011.0, E/m^4=1.068587, zero_sum=  45, Q_var=1.000
+    Interval: E(S)=  9291.0, E/m^4=1.416095, zero_sum=  45, Q_var=127.667
+
+  p=23:
+    Paley: E(S)= 15433.0, E/m^4=1.054095, zero_sum=  66, Q_var=1.000
+    Interval: E(S)= 20493.0, E/m^4=1.399699, zero_sum=  66, Q_var=231.000
+
+
+--- PART 6: SCALING OF KEY INVARIANTS ---
+How do disjointness ratio, additive energy ratio, etc. scale with p?
+  p=7, Paley: c3=14, disj_ratio=0.0769, E_norm=1.296296, Q_var=1.000
+  p=7, Interval: c3=14, disj_ratio=0.1538, E_norm=1.641975, Q_var=5.667
+  p=11, Paley: c3=55, disj_ratio=0.3333, E_norm=1.144000, Q_var=1.000
+  p=11, Interval: c3=55, disj_ratio=0.3704, E_norm=1.496000, Q_var=23.000
+  p=19, Paley: c3=285, disj_ratio=0.5775, E_norm=1.068587, Q_var=1.000
+  p=19, Interval: c3=285, disj_ratio=0.5915, E_norm=1.416095, Q_var=127.667
+  p=23, Paley: c3=506, disj_ratio=0.6436, E_norm=1.054095, Q_var=1.000
+  p=23, Interval: c3=506, disj_ratio=0.6535, E_norm=1.399699, Q_var=231.000
+
+
+--- PART 7: MULTIPLICATIVE vs ADDITIVE VIEWS ---
+Resonance = multiplicative: qa = +/-b mod p
+Co-occurrence = additive: vertices at gap d share cycles
+Walsh transform bridges the two!
+
+  p=7, Paley:
+    (1,2): a/b=4=3(canon), b-a=1=1(canon), chi(ab)=+1, min_q=3
+    (1,3): a/b=5=2(canon), b-a=2=2(canon), chi(ab)=-1, min_q=3
+    (2,3): a/b=3=3(canon), b-a=1=1(canon), chi(ab)=-1, min_q=3
+
+  p=11, Paley:
+    (1,2): a/b=6=5(canon), b-a=1=1(canon), chi(ab)=-1, min_q=5
+    (1,3): a/b=4=4(canon), b-a=2=2(canon), chi(ab)=+1, min_q=3
+    (1,4): a/b=3=3(canon), b-a=3=3(canon), chi(ab)=+1, min_q=3
+    (1,5): a/b=9=2(canon), b-a=4=4(canon), chi(ab)=+1, min_q=5
+    (2,3): a/b=8=3(canon), b-a=1=1(canon), chi(ab)=-1, min_q=3
+    (2,4): a/b=6=5(canon), b-a=2=2(canon), chi(ab)=-1, min_q=5
+    (2,5): a/b=7=4(canon), b-a=3=3(canon), chi(ab)=-1, min_q=3
+    (3,4): a/b=9=2(canon), b-a=1=1(canon), chi(ab)=+1, min_q=5
+    (3,5): a/b=5=5(canon), b-a=2=2(canon), chi(ab)=+1, min_q=5
+    (4,5): a/b=3=3(canon), b-a=1=1(canon), chi(ab)=+1, min_q=3
+
+
+--- PART 8: WHY PALEY MAXIMIZES H AT p=3 mod 4 ---
+Summary of evidence:
+
+1. FOURIER FLATNESS: Paley QR set has perfectly flat |S_hat(t)|^2 = p for t!=0
+   This gives MINIMUM additive energy E(S)
+   Interval has concentrated Fourier spectrum, higher energy
+
+2. UNIFORM CO-OCCURRENCE: In Paley T_p, every vertex pair appears in the same
+   number of 3-cycles. This uniformity extends to higher cycles.
+   Interval has non-uniform co-occurrence (gap d -> d shared 3-cycles).
+
+3. RESONANCE CONSTRUCTIVE INTERFERENCE: At p=3 mod 4, ALL odd q have
+   chi(q) consistent with chi(ab) in the D^{2n} Walsh decomposition.
+   This means ALL resonance levels contribute the SAME sign to h_hat.
+
+4. GAUSS SUM FACTORIZATION: D_k = sum sigma_l sin(2pi*k*l/p)
+   For sigma = QR indicators, D_k ~ Im(g(k)) = chi(k)*sqrt(p)
+   This gives D_k^{2n} = p^n for all k, maximizing trace contributions.
+
+5. OCF CONNECTION: H(T) = I(Omega(T), 2) = sum alpha_j * 2^j
+   Paley maximizes alpha_1 (total cycle count) while having fewer alpha_2
+   (disjoint pairs). The linear term 2*alpha_1 dominates 4*alpha_2.
+   More cycles with MORE overlap, each cycle contributes to H independently.
