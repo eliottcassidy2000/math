@@ -1,0 +1,272 @@
+======================================================================
+ANALYSIS 1: Z_v AS DETERMINISTIC FUNCTION OF SCORE
+======================================================================
+
+n=3: (n-1)/2 = 1.0
+  Score | Z_v values | -2(s-m)^2+2 | match?
+  ------+------------+-------------+-------
+      0 |       [-1] |        0.00 | NO
+      1 |        [1] |        2.00 | NO
+      2 |       [-1] |        0.00 | NO
+  Z_v deterministic by score? True
+  Z(s) = -2.0000 * s^2 + 4.0000 * s + -1.0000
+       = -2.0000 * (s - 1.0000)^2 + 1.0000
+  Vertex at s = 1.0000 = (n-1)/2 = 1.0? YES
+
+n=4: (n-1)/2 = 1.5
+  Score | Z_v values | -2(s-m)^2+2 | match?
+  ------+------------+-------------+-------
+      0 |       [-3] |       -2.50 | NO
+      1 |        [1] |        1.50 | NO
+      2 |        [1] |        1.50 | NO
+      3 |       [-3] |       -2.50 | NO
+  Z_v deterministic by score? True
+  Z(s) = -2.0000 * s^2 + 6.0000 * s + -3.0000
+       = -2.0000 * (s - 1.5000)^2 + 1.5000
+  Vertex at s = 1.5000 = (n-1)/2 = 1.5? YES
+
+n=5: (n-1)/2 = 2.0
+  Score | Z_v values | -2(s-m)^2+2 | match?
+  ------+------------+-------------+-------
+      0 |       [-6] |       -6.00 | YES
+      1 |        [0] |        0.00 | YES
+      2 |        [2] |        2.00 | YES
+      3 |        [0] |        0.00 | YES
+      4 |       [-6] |       -6.00 | YES
+  Z_v deterministic by score? True
+  Z(s) = -2.0000 * s^2 + 8.0000 * s + -6.0000
+       = -2.0000 * (s - 2.0000)^2 + 2.0000
+  Vertex at s = 2.0000 = (n-1)/2 = 2.0? YES
+
+n=6: (n-1)/2 = 2.5
+  Score | Z_v values | -2(s-m)^2+2 | match?
+  ------+------------+-------------+-------
+      0 |      [-10] |      -10.50 | NO
+      1 |       [-2] |       -2.50 | NO
+      2 |        [2] |        1.50 | NO
+      3 |        [2] |        1.50 | NO
+      4 |       [-2] |       -2.50 | NO
+      5 |      [-10] |      -10.50 | NO
+  Z_v deterministic by score? True
+  Z(s) = -2.0000 * s^2 + 10.0000 * s + -10.0000
+       = -2.0000 * (s - 2.5000)^2 + 2.5000
+  Vertex at s = 2.5000 = (n-1)/2 = 2.5? YES
+
+n=7: (too large, sampling)
+
+n=7: (n-1)/2 = 3.0
+  Score | Z_v values | -2(s-m)^2+2 | match?
+  ------+------------+-------------+-------
+      0 |      [-15] |      -16.00 | NO
+      1 |       [-5] |       -6.00 | NO
+      2 |        [1] |        0.00 | NO
+      3 |        [3] |        2.00 | NO
+      4 |        [1] |        0.00 | NO
+      5 |       [-5] |       -6.00 | NO
+      6 |      [-15] |      -16.00 | NO
+  Z_v deterministic by score? True
+  Z(s) = -2.0000 * s^2 + 12.0000 * s + -15.0000
+       = -2.0000 * (s - 3.0000)^2 + 3.0000
+  Vertex at s = 3.0000 = (n-1)/2 = 3.0? YES
+
+======================================================================
+ANALYSIS 2: DEGREE-4 FOURIER STRUCTURE
+======================================================================
+
+n=5 (m=10):
+  Number of non-zero degree-4 coefficients: 60
+  Distinct magnitudes: [0.125]
+
+  Support size distribution:
+    |support|=5: 60 terms, magnitudes = [0.125]
+      [(0, 1), (0, 2), (1, 3), (2, 4)]: coeff = 0.125000
+      [(0, 1), (0, 2), (1, 3), (3, 4)]: coeff = -0.125000
+      ... and 58 more
+
+  Graph structure of 4-edge subsets with non-zero coefficient:
+    Degree type (2, 2, 2, 1, 1) (support=5): 60 terms, |coeff| = 0.125000
+
+n=6 (m=15):
+  Number of non-zero degree-4 coefficients: 450
+  Distinct magnitudes: [0.125, 0.25]
+
+  Support size distribution:
+    |support|=5: 360 terms, magnitudes = [0.125]
+      [(0, 1), (0, 2), (1, 3), (2, 4)]: coeff = 0.125000
+      [(0, 1), (0, 2), (1, 3), (2, 5)]: coeff = 0.125000
+      ... and 358 more
+    |support|=6: 90 terms, magnitudes = [0.25]
+      [(0, 1), (0, 2), (3, 4), (3, 5)]: coeff = 0.250000
+      [(0, 1), (0, 2), (3, 4), (4, 5)]: coeff = -0.250000
+      ... and 88 more
+
+  Graph structure of 4-edge subsets with non-zero coefficient:
+    Degree type (2, 2, 1, 1, 1, 1) (support=6): 90 terms, |coeff| = 0.250000
+    Degree type (2, 2, 2, 1, 1) (support=5): 360 terms, |coeff| = 0.125000
+
+======================================================================
+ANALYSIS 3: MAXIMUM NON-ZERO FOURIER DEGREE
+======================================================================
+  n=3: max non-zero even degree = 2, predicted 2*floor((n-1)/2) = 2, match = True
+  n=4: max non-zero even degree = 2, predicted 2*floor((n-1)/2) = 2, match = True
+  n=5: max non-zero even degree = 4, predicted 2*floor((n-1)/2) = 4, match = True
+  n=6: max non-zero even degree = 4, predicted 2*floor((n-1)/2) = 4, match = True
+
+======================================================================
+ANALYSIS 4: H_2 AS EXACT FUNCTION OF SCORE SEQUENCE
+======================================================================
+
+n=3: c_2 = 0.500000, E[H] = 1.50
+  Score sequence -> H_2 deterministic? YES
+  Score seq            | sum(Z) | H_2       | H_0+H_2
+  ---------------------+--------+-----------+--------
+              (0, 1, 2) |     -1 |   -0.5000 |    1.00
+              (1, 1, 1) |      3 |    1.5000 |    3.00
+
+  Verify: sum(Z) = sum_v [-2(s_v - (n-1)/2)^2 + 2]?
+    (0, 1, 2): actual=-1, predicted=2, match=False
+    (1, 1, 1): actual=3, predicted=6, match=False
+
+n=4: c_2 = 0.500000, E[H] = 3.00
+  Score sequence -> H_2 deterministic? YES
+  Score seq            | sum(Z) | H_2       | H_0+H_2
+  ---------------------+--------+-----------+--------
+           (0, 1, 2, 3) |     -4 |   -2.0000 |    1.00
+           (0, 2, 2, 2) |      0 |    0.0000 |    3.00
+           (1, 1, 1, 3) |      0 |    0.0000 |    3.00
+           (1, 1, 2, 2) |      4 |    2.0000 |    5.00
+
+  Verify: sum(Z) = sum_v [-2(s_v - (n-1)/2)^2 + 2]?
+    (0, 1, 2, 3): actual=-4, predicted=-2, match=False
+    (0, 2, 2, 2): actual=0, predicted=2, match=False
+    (1, 1, 1, 3): actual=0, predicted=2, match=False
+    (1, 1, 2, 2): actual=4, predicted=6, match=False
+
+n=5: c_2 = 0.750000, E[H] = 7.50
+  Score sequence -> H_2 deterministic? YES
+  Score seq            | sum(Z) | H_2       | H_0+H_2
+  ---------------------+--------+-----------+--------
+        (0, 1, 2, 3, 4) |    -10 |   -7.5000 |    0.00
+        (0, 1, 3, 3, 3) |     -6 |   -4.5000 |    3.00
+        (0, 2, 2, 2, 4) |     -6 |   -4.5000 |    3.00
+        (0, 2, 2, 3, 3) |     -2 |   -1.5000 |    6.00
+        (1, 1, 1, 3, 4) |     -6 |   -4.5000 |    3.00
+        (1, 1, 2, 2, 4) |     -2 |   -1.5000 |    6.00
+        (1, 1, 2, 3, 3) |      2 |    1.5000 |    9.00
+        (1, 2, 2, 2, 3) |      6 |    4.5000 |   12.00
+        (2, 2, 2, 2, 2) |     10 |    7.5000 |   15.00
+
+  Verify: sum(Z) = sum_v [-2(s_v - (n-1)/2)^2 + 2]?
+    (0, 1, 2, 3, 4): actual=-10, predicted=-10, match=True
+    (0, 1, 3, 3, 3): actual=-6, predicted=-6, match=True
+    (0, 2, 2, 2, 4): actual=-6, predicted=-6, match=True
+    (0, 2, 2, 3, 3): actual=-2, predicted=-2, match=True
+    (1, 1, 1, 3, 4): actual=-6, predicted=-6, match=True
+    (1, 1, 2, 2, 4): actual=-2, predicted=-2, match=True
+    (1, 1, 2, 3, 3): actual=2, predicted=2, match=True
+    (1, 2, 2, 2, 3): actual=6, predicted=6, match=True
+    (2, 2, 2, 2, 2): actual=10, predicted=10, match=True
+
+n=6: c_2 = 1.500000, E[H] = 22.50
+  Score sequence -> H_2 deterministic? YES
+  Score seq            | sum(Z) | H_2       | H_0+H_2
+  ---------------------+--------+-----------+--------
+     (0, 1, 2, 3, 4, 5) |    -20 |  -30.0000 |   -7.50
+     (0, 1, 2, 4, 4, 4) |    -16 |  -24.0000 |   -1.50
+     (0, 1, 3, 3, 3, 5) |    -16 |  -24.0000 |   -1.50
+     (0, 1, 3, 3, 4, 4) |    -12 |  -18.0000 |    4.50
+     (0, 2, 2, 2, 4, 5) |    -16 |  -24.0000 |   -1.50
+     (0, 2, 2, 3, 3, 5) |    -12 |  -18.0000 |    4.50
+     (0, 2, 2, 3, 4, 4) |     -8 |  -12.0000 |   10.50
+     (0, 2, 3, 3, 3, 4) |     -4 |   -6.0000 |   16.50
+     (0, 3, 3, 3, 3, 3) |      0 |    0.0000 |   22.50
+     (1, 1, 1, 3, 4, 5) |    -16 |  -24.0000 |   -1.50
+     (1, 1, 1, 4, 4, 4) |    -12 |  -18.0000 |    4.50
+     (1, 1, 2, 2, 4, 5) |    -12 |  -18.0000 |    4.50
+     (1, 1, 2, 3, 3, 5) |     -8 |  -12.0000 |   10.50
+     (1, 1, 2, 3, 4, 4) |     -4 |   -6.0000 |   16.50
+     (1, 1, 3, 3, 3, 4) |      0 |    0.0000 |   22.50
+     (1, 2, 2, 2, 3, 5) |     -4 |   -6.0000 |   16.50
+     (1, 2, 2, 2, 4, 4) |      0 |    0.0000 |   22.50
+     (1, 2, 2, 3, 3, 4) |      4 |    6.0000 |   28.50
+     (1, 2, 3, 3, 3, 3) |      8 |   12.0000 |   34.50
+     (2, 2, 2, 2, 2, 5) |      0 |    0.0000 |   22.50
+     (2, 2, 2, 2, 3, 4) |      8 |   12.0000 |   34.50
+     (2, 2, 2, 3, 3, 3) |     12 |   18.0000 |   40.50
+
+  Verify: sum(Z) = sum_v [-2(s_v - (n-1)/2)^2 + 2]?
+    (0, 1, 2, 3, 4, 5): actual=-20, predicted=-23, match=False
+    (0, 1, 2, 4, 4, 4): actual=-16, predicted=-19, match=False
+    (0, 1, 3, 3, 3, 5): actual=-16, predicted=-19, match=False
+    (0, 1, 3, 3, 4, 4): actual=-12, predicted=-15, match=False
+    (0, 2, 2, 2, 4, 5): actual=-16, predicted=-19, match=False
+    (0, 2, 2, 3, 3, 5): actual=-12, predicted=-15, match=False
+    (0, 2, 2, 3, 4, 4): actual=-8, predicted=-11, match=False
+    (0, 2, 3, 3, 3, 4): actual=-4, predicted=-7, match=False
+    (0, 3, 3, 3, 3, 3): actual=0, predicted=-3, match=False
+    (1, 1, 1, 3, 4, 5): actual=-16, predicted=-19, match=False
+    (1, 1, 1, 4, 4, 4): actual=-12, predicted=-15, match=False
+    (1, 1, 2, 2, 4, 5): actual=-12, predicted=-15, match=False
+    (1, 1, 2, 3, 3, 5): actual=-8, predicted=-11, match=False
+    (1, 1, 2, 3, 4, 4): actual=-4, predicted=-7, match=False
+    (1, 1, 3, 3, 3, 4): actual=0, predicted=-3, match=False
+    (1, 2, 2, 2, 3, 5): actual=-4, predicted=-7, match=False
+    (1, 2, 2, 2, 4, 4): actual=0, predicted=-3, match=False
+    (1, 2, 2, 3, 3, 4): actual=4, predicted=1, match=False
+    (1, 2, 3, 3, 3, 3): actual=8, predicted=5, match=False
+    (2, 2, 2, 2, 2, 5): actual=0, predicted=-3, match=False
+    (2, 2, 2, 2, 3, 4): actual=8, predicted=5, match=False
+    (2, 2, 2, 3, 3, 3): actual=12, predicted=9, match=False
+
+n=7: (too large)
+
+======================================================================
+ANALYSIS 5: OVERLAP WEIGHT IN FOURIER DOMAIN
+======================================================================
+
+n=5: Understanding how cycle overlap connects to Fourier structure
+
+  bits=0: H=1, scores=[0, 1, 2, 3, 4]
+    OCF: alpha_1=0, alpha_2=0, H=1+0+0=1
+    Fourier: H_0=7.5, H_2=-7.50, H_4=1.00
+    Note: H_0+H_2 = 0.00, residual = 1.00
+    2*N = 0, H_2 = -7.50
+    4*alpha_2 = 0, H_4 = 1.00
+
+  bits=76: H=15, scores=[2, 2, 2, 2, 2]
+    OCF: alpha_1=6, alpha_2=0, H=1+12+0=13
+    Fourier: H_0=7.5, H_2=7.50, H_4=0.00
+    Note: H_0+H_2 = 15.00, residual = 0.00
+    2*N = 12, H_2 = 7.50
+    4*alpha_2 = 0, H_4 = 0.00
+
+  bits=120: H=5, scores=[1, 1, 2, 2, 4]
+    OCF: alpha_1=2, alpha_2=0, H=1+4+0=5
+    Fourier: H_0=7.5, H_2=-1.50, H_4=-1.00
+    Note: H_0+H_2 = 6.00, residual = -1.00
+    2*N = 4, H_2 = -1.50
+    4*alpha_2 = 0, H_4 = -1.00
+
+  bits=341: H=15, scores=[2, 2, 2, 2, 2]
+    OCF: alpha_1=6, alpha_2=0, H=1+12+0=13
+    Fourier: H_0=7.5, H_2=7.50, H_4=0.00
+    Note: H_0+H_2 = 15.00, residual = 0.00
+    2*N = 12, H_2 = 7.50
+    4*alpha_2 = 0, H_4 = 0.00
+
+  bits=682: H=15, scores=[2, 2, 2, 2, 2]
+    OCF: alpha_1=6, alpha_2=0, H=1+12+0=13
+    Fourier: H_0=7.5, H_2=7.50, H_4=0.00
+    Note: H_0+H_2 = 15.00, residual = 0.00
+    2*N = 12, H_2 = 7.50
+    4*alpha_2 = 0, H_4 = 0.00
+
+  bits=1023: H=1, scores=[0, 1, 2, 3, 4]
+    OCF: alpha_1=0, alpha_2=0, H=1+0+0=1
+    Fourier: H_0=7.5, H_2=-7.50, H_4=1.00
+    Note: H_0+H_2 = 0.00, residual = 1.00
+    2*N = 0, H_2 = -7.50
+    4*alpha_2 = 0, H_4 = 1.00
+
+======================================================================
+DONE.
