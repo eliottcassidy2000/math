@@ -24,10 +24,9 @@ COMPUTING H FOR ALL 512 ORIENTATIONS
   416/512 done, 1382.5s elapsed, ETA 319s
   448/512 done, 1451.9s elapsed, ETA 207s
   480/512 done, 1516.0s elapsed, ETA 101s
-5s
-  512/512 done, 1802.5s elapsed, ETA 0s
+  512/512 done, 1579.6s elapsed, ETA 0s
 
-  Total computation time: 1802.5s
+  Total computation time: 1579.6s
 
 ======================================================================
 TOP 20 H VALUES
@@ -136,3 +135,4 @@ SDP ANALYSIS
   SDP gap = -12483116610.08
   Q(Paley) = sigma_P^T J sigma_P = -4900099958.44
   Q(Interval) = sigma_I^T J sigma_I = 1117343599.62
+62
