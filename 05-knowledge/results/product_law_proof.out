@@ -1,0 +1,174 @@
+======================================================================
+PRODUCT LAW PROOF: sign(h_hat[{i,j}]) = chi(a_i * a_j)
+======================================================================
+
+--- PART 1: VERIFICATION AT LARGER PRIMES ---
+
+  p=7 (3 mod 4), m=3:
+    Product law: 3/3 correct
+
+  p=11 (3 mod 4), m=5:
+    Product law: 10/10 correct
+
+  p=19 (3 mod 4), m=9:
+    [Skipping exhaustive computation for p=19]
+    Testing product law on Gauss sum prediction:
+    Gauss sum: g = -9.5000-37.0506j, expected = 0.0000+4.3589j, match = False
+
+  p=23 (3 mod 4), m=11:
+    [Skipping exhaustive computation for p=23]
+    Testing product law on Gauss sum prediction:
+    Gauss sum: g = -11.5000-50.3562j, expected = 0.0000+4.7958j, match = False
+
+--- PART 2: MAGNITUDE FORMULA ---
+If sign = chi(a_i*a_j), what determines |h_hat|?
+Testing: |h_hat[{i,j}]| depends on a_i*a_j mod p only
+
+  p=7:
+    a*b mod p = 2: |h_hat| = [3.5]
+    a*b mod p = 3: |h_hat| = [3.5]
+    a*b mod p = 6: |h_hat| = [3.5]
+    Grouped by min(ab, p-ab):
+      key=1: |h_hat| = [3.5], count=1
+      key=2: |h_hat| = [3.5], count=1
+      key=3: |h_hat| = [3.5], count=1
+
+  p=11:
+    a*b mod p = 1: |h_hat| = [8.25]
+    a*b mod p = 2: |h_hat| = [8.25]
+    a*b mod p = 3: |h_hat| = [272.25]
+    a*b mod p = 4: |h_hat| = [272.25, 8.25]
+    a*b mod p = 5: |h_hat| = [8.25]
+    a*b mod p = 6: |h_hat| = [272.25]
+    a*b mod p = 8: |h_hat| = [8.25]
+    a*b mod p = 9: |h_hat| = [272.25]
+    a*b mod p = 10: |h_hat| = [272.25]
+    Grouped by min(ab, p-ab):
+      key=1: |h_hat| = [8.25, 272.25], count=2
+      key=2: |h_hat| = [8.25, 272.25], count=2
+      key=3: |h_hat| = [8.25, 272.25], count=2
+      key=4: |h_hat| = [8.25, 272.25], count=2
+      key=5: |h_hat| = [8.25, 272.25], count=2
+
+  p=13:
+    a*b mod p = 2: |h_hat| = [2632.5, 2632.5]
+    a*b mod p = 3: |h_hat| = [778.38]
+    a*b mod p = 4: |h_hat| = [778.38, 778.38]
+    a*b mod p = 5: |h_hat| = [0.0, 2632.5]
+    a*b mod p = 6: |h_hat| = [0.0, 2632.5]
+    a*b mod p = 7: |h_hat| = [2632.5]
+    a*b mod p = 8: |h_hat| = [2632.5]
+    a*b mod p = 10: |h_hat| = [778.38]
+    a*b mod p = 11: |h_hat| = [0.0]
+    a*b mod p = 12: |h_hat| = [778.38, 778.38]
+    Grouped by min(ab, p-ab):
+      key=1: |h_hat| = [778.38], count=2
+      key=2: |h_hat| = [0.0, 2632.5], count=3
+      key=3: |h_hat| = [778.38], count=2
+      key=4: |h_hat| = [778.38], count=2
+      key=5: |h_hat| = [0.0, 2632.5], count=3
+      key=6: |h_hat| = [0.0, 2632.5], count=3
+
+--- PART 3: GAUSS SUM ARGUMENT ---
+
+    PROOF SKETCH for p = 3 mod 4:
+
+    For a circulant tournament with connection set S, the transfer matrix
+    eigenvalue at frequency k is lambda_k = S_hat(k) = sum_{s in S} omega^{ks}.
+
+    Write lambda_k = C(k) + i*D(k;sigma) where:
+      C(k) = -1/2 (universal)
+      D(k;sigma) = sum_{i=1}^m sigma_i * sin(2*pi*k*(i+1)/p)
+
+    The Walsh coefficient h_hat[{i,j}] measures how sigma_i * sigma_j
+    affects H. By the OCF formula H = I(Omega(T), 2), the effect propagates
+    through cycle counts.
+
+    KEY LEMMA: h_hat[{i,j}] has the same sign as
+      sum_k w(k) * sin(2*pi*k*a_i/p) * sin(2*pi*k*a_j/p)
+    where w(k) is a positive weight function depending on |lambda_k|^2.
+
+    For p = 3 mod 4, the weight function w(k) relates to the Fejer kernel
+    at the Paley orientation (where all Q_k = (p+1)/4), and the product
+    sin(...)*sin(...) factors through the Gauss sum.
+
+    Specifically:
+      sum_k sin(2*pi*k*a/p) * sin(2*pi*k*b/p) = (p/2) * delta_{a,b}
+
+    But the WEIGHTED sum (with Fejer kernel weights) gives:
+      sum_k F_m(k) * sin(2*pi*k*a/p) * sin(2*pi*k*b/p)
+    which is NOT diagonal. It depends on (a-b) and (a+b) mod p.
+
+    The sign of this weighted sum is chi(a*b) by the Gauss sum identity
+    (using g^2 = (-1)^{(p-1)/2} * p = -p for p = 3 mod 4).
+    
+--- PART 4: WEIGHTED SUM VERIFICATION ---
+
+  p=7:
+    Fejer weights: ['5.049', '0.308', '0.643']
+
+    Weighted sum vs h_hat:
+    (1,2): a*b=2, chi(ab)=+1, WS=    3.5000, sign(WS)=+1, h_hat=      3.50, sign(h)=+1
+    (1,3): a*b=3, chi(ab)=-1, WS=    1.7500, sign(WS)=+1, h_hat=     -3.50, sign(h)=-1
+    (2,3): a*b=6, chi(ab)=-1, WS=    1.7500, sign(WS)=+1, h_hat=     -3.50, sign(h)=-1
+
+  p=11:
+    Fejer weights: ['12.344', '0.272', '1.449', '0.353', '0.583']
+
+    Weighted sum vs h_hat:
+    (1,2): a*b=2, chi(ab)=-1, WS=    5.5000, sign(WS)=+1, h_hat=     -8.25, sign(h)=-1
+    (1,3): a*b=3, chi(ab)=+1, WS=    5.5000, sign(WS)=+1, h_hat=    272.25, sign(h)=+1
+    (1,4): a*b=4, chi(ab)=+1, WS=    5.5000, sign(WS)=+1, h_hat=    272.25, sign(h)=+1
+    (1,5): a*b=5, chi(ab)=+1, WS=    2.7500, sign(WS)=+1, h_hat=      8.25, sign(h)=+1
+    (2,3): a*b=6, chi(ab)=-1, WS=   11.0000, sign(WS)=+1, h_hat=   -272.25, sign(h)=-1
+    (2,4): a*b=8, chi(ab)=-1, WS=    8.2500, sign(WS)=+1, h_hat=     -8.25, sign(h)=-1
+    (2,5): a*b=10, chi(ab)=-1, WS=    2.7500, sign(WS)=+1, h_hat=   -272.25, sign(h)=-1
+    (3,4): a*b=12, chi(ab)=+1, WS=    8.2500, sign(WS)=+1, h_hat=      8.25, sign(h)=+1
+    (3,5): a*b=15, chi(ab)=+1, WS=    2.7500, sign(WS)=+1, h_hat=      8.25, sign(h)=+1
+    (4,5): a*b=20, chi(ab)=+1, WS=    2.7500, sign(WS)=+1, h_hat=    272.25, sign(h)=+1
+
+--- PART 5: GAUSS SUM PRODUCT FORMULA ---
+Testing: h_hat[{i,j}] = C * (g_hat(a_i) * g_hat(a_j))
+where g_hat is some transform of the Gauss sum
+
+  p=7:
+    g_hat values: ['2.6458', '2.6458', '-2.6458']
+
+    h_hat / (g_hat_i * g_hat_j):
+    (1,2): ratio = 0.500000
+    (1,3): ratio = 0.500000
+    (2,3): ratio = 0.500000
+
+  p=11:
+    g_hat values: ['3.3166', '-3.3166', '3.3166', '3.3166', '3.3166']
+
+    h_hat / (g_hat_i * g_hat_j):
+    (1,2): ratio = 0.750000
+    (1,3): ratio = 24.750000
+    (1,4): ratio = 24.750000
+    (1,5): ratio = 0.750000
+    (2,3): ratio = 24.750000
+    (2,4): ratio = 0.750000
+    (2,5): ratio = 24.750000
+    (3,4): ratio = 0.750000
+    (3,5): ratio = 0.750000
+    (4,5): ratio = 24.750000
+
+--- PART 6: PRODUCT LAW FOR DEGREE 4 ---
+Testing: sign(h_hat[{i,j,k,l}]) = chi(a_i*a_j*a_k*a_l)?
+
+  p=11 (3 mod 4):
+    Product law (deg 4): 5/5 correct
+
+  p=13 (1 mod 4):
+    Product law (deg 4): 4/15 correct
+
+--- PART 7: g_hat FACTORIZATION AT DEGREE 4 ---
+
+  p=11:
+    h_hat / prod(g_hat):
+    {1, 2, 3, 4}: ratio = 0.977273
+    {1, 2, 3, 5}: ratio = 0.977273
+    {1, 2, 4, 5}: ratio = 0.977273
+    {1, 3, 4, 5}: ratio = 0.977273
+    {2, 3, 4, 5}: ratio = 0.977273
