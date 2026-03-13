@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71b — 2026-03-13: Constraint Structure Theorems & Per-Eigenspace Betti Verification
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71b (4th context window)
+**Summary of work:**
+- **PROVED degree-4 nullity = m²** via tensor-product coupling (HYP-680). Three disjoint junk blocks, each with full row rank. Blocks 1,3 (same sign -1) couple via complete bipartite sub-blocks indexed by NQR², each contributing nullity 1. Total = m².
+- **CORRECTED k=0 eigenspace**: k=0 is NOT contractible for P_11 (β_5=β_6=5=m(m-3)/2). HYP-677 updated to PARTIALLY-REFUTED. Only P_7 (m=3) has contractible k=0.
+- **VERIFIED P_11 k=0 Betti = [1,0,0,0,0,5,5,0,0,0,0]**: All 7 restricted boundary ranks match predictions (R = [0,0,5,15,55,150,305,390,300,150,30,0]).
+- **VERIFIED P_7 COMPLETE per-eigenspace**: k=0: β=[1,0,0,0,0,0,0], all k≠0: β=[0,0,0,0,1,0,0]. Total: β=[1,0,0,0,6,0,0], chi=7.
+- **P_11 k=1 eigenspace**: Verified β_d^{(1)}=0 for d=0,...,5. R_7 computation pending (complex SVD on 19200×8735).
+- **Comprehensive constraint structure theorem**: Complete proof chain for degrees 2-4. Sign pattern (-1)^i determines coupling. Degree 5+ nullity analyzed but no closed formula.
+- **Boundary rank recursion insight**: R_{d+1}=Omega_d-R_d holds everywhere except d=m,m+1 where β_m enters. R_{m+2}=O_{m+1}-O_m+R_m (independent of β_m).
+- **β_m = m(m-3)/2 is an independent invariant** not determined by Omega dims alone — requires boundary rank.
+**New contributions:** HYP-680 PROVED, HYP-677 PARTIALLY-REFUTED, constraint_structure_theorem.out, degree4_nullity_proof.out
+**Scripts created:** degree4_nullity_analysis.py, degree4_interblock.py, degree4_coupling_structure.py, degree5_nullity.py, eigenspace_k_nonzero.py, p11_betti_k0.py, p11_betti_fast.py, omega_recursive.py
+**Unresolved threads:**
+- P_11 k=1 d=7 boundary rank (verifies β_6^{(1)}=1)
+- Degree-5+ nullity closed formula
+- Algebraic proof of β_m = m(m-3)/2
+- Full Omega_d closed formula for arbitrary d
+
 ## opus-2026-03-13-S67g — 2026-03-13: Fibonacci Resonance Deep Dive — Uncertainty Principle, Orbit Theory, Hecke Connection
 
 **Account:** opus
