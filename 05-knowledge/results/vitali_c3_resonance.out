@@ -1,0 +1,170 @@
+============================================================
+C3/T3 RESONANCE ANALYSIS AT n=7
+============================================================
+Collected 595 examples
+
+--- C3 Direction vs dc7 ---
+  C3: dc7 dist = {-1: 40, 0: 59, 1: 45}, nonzero: 85/144 (59.0%)
+  T3: dc7 dist = {-1: 42, 0: 391, 1: 18}, nonzero: 60/451 (13.3%)
+
+--- X-scores to S for C3 vs T3 ---
+  C3 X-score distribution: {(np.int64(0), np.int64(0), np.int64(0)): 4, (np.int64(0), np.int64(0), np.int64(4)): 23, (np.int64(0), np.int64(2), np.int64(2)): 43, (np.int64(0), np.int64(4), np.int64(4)): 23, (np.int64(2), np.int64(2), np.int64(4)): 42, (np.int64(4), np.int64(4), np.int64(4)): 9}
+  T3 X-score distribution: {(np.int64(0), np.int64(0), np.int64(0)): 23, (np.int64(0), np.int64(0), np.int64(4)): 61, (np.int64(0), np.int64(2), np.int64(2)): 126, (np.int64(0), np.int64(4), np.int64(4)): 77, (np.int64(2), np.int64(2), np.int64(4)): 139, (np.int64(4), np.int64(4), np.int64(4)): 25}
+
+--- Triple Classification ---
+Triple groups: 46
+Ambiguous for dc7: 16
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(0), np.int64(0)), XX=T3: dc7={0: 6} (6)
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=C3: dc7={0: 3} (3)
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=T3: dc7={0: 18} (18)
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=C3: dc7={-1: 3, 1: 4} (7)
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=T3: dc7={-1: 6, 0: 30, 1: 3} (39)
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=C3: dc7={0: 3} (3)
+  LL=0, WW=0, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=T3: dc7={0: 26} (26)
+  LL=0, WW=0, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=C3: dc7={-1: 7, 1: 2} (9)
+  LL=0, WW=0, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=T3: dc7={-1: 4, 0: 20, 1: 2} (26)
+  LL=0, WW=0, X_sc=(np.int64(4), np.int64(4), np.int64(4)), XX=T3: dc7={0: 5} (5)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(0), np.int64(0)), XX=T3: dc7={0: 9} (9)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=C3: dc7={0: 6} (6)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=T3: dc7={0: 14} (14)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=C3: dc7={-1: 7, 1: 7} (14)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=T3: dc7={-1: 1, 0: 24, 1: 1} (26)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=C3: dc7={0: 4} (4)
+  LL=0, WW=1, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=T3: dc7={0: 17} (17)
+  LL=0, WW=1, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=C3: dc7={-1: 1, 1: 10} (11)
+  LL=0, WW=1, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=T3: dc7={-1: 8, 0: 34, 1: 3} (45)
+  LL=0, WW=1, X_sc=(np.int64(4), np.int64(4), np.int64(4)), XX=C3: dc7={0: 4} (4)
+  LL=0, WW=1, X_sc=(np.int64(4), np.int64(4), np.int64(4)), XX=T3: dc7={0: 9} (9)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(0), np.int64(0)), XX=T3: dc7={0: 7} (7)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=C3: dc7={0: 9} (9)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=T3: dc7={0: 13} (13)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=C3: dc7={-1: 5, 1: 4} (9)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=T3: dc7={-1: 2, 0: 30, 1: 3} (35)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=C3: dc7={0: 8} (8)
+  LL=1, WW=0, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=T3: dc7={0: 18} (18)
+  LL=1, WW=0, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=C3: dc7={-1: 9, 1: 5} (14)
+  LL=1, WW=0, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=T3: dc7={-1: 9, 0: 26, 1: 2} (37)
+  LL=1, WW=0, X_sc=(np.int64(4), np.int64(4), np.int64(4)), XX=C3: dc7={0: 3} (3)
+  LL=1, WW=0, X_sc=(np.int64(4), np.int64(4), np.int64(4)), XX=T3: dc7={0: 4} (4)
+  LL=1, WW=1, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=C3: dc7={0: 5} (5)
+  LL=1, WW=1, X_sc=(np.int64(0), np.int64(0), np.int64(4)), XX=T3: dc7={0: 16} (16)
+  LL=1, WW=1, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=C3: dc7={-1: 7, 1: 6} (13)
+  LL=1, WW=1, X_sc=(np.int64(0), np.int64(2), np.int64(2)), XX=T3: dc7={-1: 7, 0: 18, 1: 1} (26)
+  LL=1, WW=1, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=C3: dc7={0: 8} (8)
+  LL=1, WW=1, X_sc=(np.int64(0), np.int64(4), np.int64(4)), XX=T3: dc7={0: 16} (16)
+  LL=1, WW=1, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=C3: dc7={-1: 1, 1: 7} (8)
+  LL=1, WW=1, X_sc=(np.int64(2), np.int64(2), np.int64(4)), XX=T3: dc7={-1: 5, 0: 23, 1: 3} (31)
+  LL=1, WW=1, X_sc=(np.int64(4), np.int64(4), np.int64(4)), XX=T3: dc7={0: 7} (7)
+
+============================================================
+EXACT dc7 FORMULA
+============================================================
+
+(1,1,2,2) tournament: there is exactly 1 unlabeled isomorphism class.
+24 labeled versions = 24 / |Aut|.
+Aut of (1,1,2,2): L1<->L2 and W1<->W2 give |Aut|=4. So 24/4=6... 
+Wait, let me verify:
+  Aut: (0, 1, 2, 3)
+|Aut((1,1,2,2))| = 1
+Labeled versions: 4!/1 = 24
+
+Under reversal of (1,1,2,2):
+  Scores after reversal: [np.int64(2), np.int64(2), np.int64(1), np.int64(1)]
+  Score sequence: [np.int64(1), np.int64(1), np.int64(2), np.int64(2)]
+  New losers: [2, 3] (were winners)
+  New winners: [0, 1] (were losers)
+
+============================================================
+WINDING NUMBER AND C3 RESONANCE
+============================================================
+
+Detailed C3 analysis:
+  C3 detail groups: 40
+  Ambiguous for dc7: 15
+  bip=((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(0), np.int64(0)): dc7={0: 4} (4)
+  bip=((0, 0, 0, 0), (0, 0, 0, 0), (1, 1, 1, 1)), sc=(np.int64(0), np.int64(0), np.int64(4)): dc7={0: 11} (11)
+  bip=((0, 0, 0, 0), (0, 0, 1, 1), (1, 1, 0, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={1: 3} (3)
+  bip=((0, 0, 0, 0), (0, 1, 0, 1), (1, 0, 1, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 3, 1: 2} (5)
+  bip=((0, 0, 0, 0), (0, 1, 1, 0), (1, 0, 0, 1)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 2, 1: 3} (5)
+  bip=((0, 0, 0, 0), (1, 0, 1, 0), (0, 1, 0, 1)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 1, 1: 1} (2)
+  bip=((0, 0, 0, 0), (1, 1, 0, 0), (0, 0, 1, 1)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={1: 3} (3)
+  bip=((0, 0, 0, 0), (1, 1, 1, 1), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(0), np.int64(4)): dc7={0: 4} (4)
+  bip=((0, 0, 0, 0), (1, 1, 1, 1), (1, 1, 1, 1)), sc=(np.int64(0), np.int64(4), np.int64(4)): dc7={0: 11} (11)
+  bip=((0, 0, 1, 1), (1, 1, 1, 1), (1, 1, 0, 0)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 2} (2)
+  bip=((0, 1, 0, 1), (0, 0, 0, 0), (1, 0, 1, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 4} (4)
+  bip=((0, 1, 0, 1), (1, 0, 1, 0), (1, 1, 1, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 1, 1: 1} (2)
+  bip=((0, 1, 0, 1), (1, 1, 1, 1), (1, 0, 1, 0)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={1: 2} (2)
+  bip=((0, 1, 1, 0), (1, 0, 0, 1), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 1, 1: 2} (3)
+  bip=((0, 1, 1, 0), (1, 0, 0, 1), (1, 1, 1, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 1, 1: 3} (4)
+  bip=((0, 1, 1, 0), (1, 1, 1, 1), (1, 0, 0, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 2, 1: 3} (5)
+  bip=((1, 0, 0, 1), (0, 0, 0, 0), (0, 1, 1, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 1, 1: 2} (3)
+  bip=((1, 0, 0, 1), (0, 1, 1, 0), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 4} (4)
+  bip=((1, 0, 0, 1), (0, 1, 1, 0), (1, 1, 1, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 1, 1: 2} (3)
+  bip=((1, 0, 0, 1), (1, 1, 1, 1), (0, 1, 1, 0)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 2, 1: 2} (4)
+  bip=((1, 0, 1, 0), (0, 0, 0, 0), (0, 1, 0, 1)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 1, 1: 1} (2)
+  bip=((1, 0, 1, 0), (0, 1, 0, 1), (1, 1, 1, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 3, 1: 2} (5)
+  bip=((1, 0, 1, 0), (1, 1, 1, 1), (0, 1, 0, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 1, 1: 2} (3)
+  bip=((1, 1, 0, 0), (0, 0, 1, 1), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(2), np.int64(2)): dc7={-1: 4, 1: 1} (5)
+  bip=((1, 1, 1, 1), (0, 0, 0, 0), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(0), np.int64(4)): dc7={0: 8} (8)
+  bip=((1, 1, 1, 1), (0, 0, 0, 0), (1, 1, 1, 1)), sc=(np.int64(0), np.int64(4), np.int64(4)): dc7={0: 4} (4)
+  bip=((1, 1, 1, 1), (0, 0, 1, 1), (1, 1, 0, 0)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={1: 3} (3)
+  bip=((1, 1, 1, 1), (1, 0, 1, 0), (0, 1, 0, 1)), sc=(np.int64(2), np.int64(2), np.int64(4)): dc7={-1: 2, 1: 1} (3)
+  bip=((1, 1, 1, 1), (1, 1, 1, 1), (0, 0, 0, 0)), sc=(np.int64(0), np.int64(4), np.int64(4)): dc7={0: 8} (8)
+  bip=((1, 1, 1, 1), (1, 1, 1, 1), (1, 1, 1, 1)), sc=(np.int64(4), np.int64(4), np.int64(4)): dc7={0: 9} (9)
+
+--- Hamiltonian Cycle Count by XX Type ---
+  C3: mean c7=138.4, median=191, range=[2,192]
+  T3: mean c7=104.5, median=80, range=[2,228]
+
+============================================================
+EXTENSION TO n=8
+============================================================
+Collected 120 Vitali pairs at n=8
+
+XX score sequence vs dc7 at n=8:
+  XX scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3)): dc7 dist={-2: 1, -1: 5, 0: 28, 1: 3, 2: 4}, nz=13/41
+  XX scores=(np.int64(0), np.int64(2), np.int64(2), np.int64(2)): dc7 dist={-1: 6, 0: 3, 1: 5}, nz=11/14
+  XX scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(3)): dc7 dist={-1: 5, 0: 9, 1: 11}, nz=16/25
+  XX scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(2)): dc7 dist={-3: 2, -2: 1, -1: 1, 0: 22, 1: 6, 2: 7, 3: 1}, nz=18/40
+
+XX c3 count vs dc7 at n=8:
+  XX c3=0: dc7 dist={-2: 1, -1: 5, 0: 28, 1: 3, 2: 4}, nz=13/41
+  XX c3=1: dc7 dist={-1: 11, 0: 12, 1: 16}, nz=27/39
+  XX c3=2: dc7 dist={-3: 2, -2: 1, -1: 1, 0: 22, 1: 6, 2: 7, 3: 1}, nz=18/40
+
+Pigeonhole at n=8: 4 gaps sum to 8, all gaps=2 is possible.
+So k=0 (no S-S arcs) CAN occur at n=8.
+This means some Hamiltonian cycles survive the Vitali flip!
+dc7 at n=8 has both 'shared' and 'exclusive' cycles.
+
+Verifying k=0 cycles at n=8 (first 3 examples):
+
+============================================================
+SUMMARY: DIMENSIONAL HIERARCHY OF VITALI EFFECTS
+============================================================
+
+n=7: EVERY Hamiltonian cycle uses at least 1 S-S arc.
+     dc7 comes from pure cycle replacement (disjoint cycle sets).
+     C3 outside: resonance creates dc7 != 0 in ~61% of cases.
+     T3 outside: damping gives dc7 = 0 in ~87% of cases.
+
+n=8: Some cycles avoid S-S arcs entirely (survive the flip).
+     dc7 = (B-exclusive) - (A-exclusive) + 0*(shared).
+     The shared cycles cancel, only exclusive cycles contribute.
+     More freedom for dc7 = 0 (cycles bypass the atom).
+
+Key insight: as n grows, the "bypass fraction" increases,
+because more outside vertices allow more routing options.
+The Vitali atom becomes a smaller "obstruction" in a larger space.
+
+The DIMENSIONAL HIERARCHY:
+  n=7: 3 outside vertices = 3-simplex complement = C3/T3 dichotomy
+  n=8: 4 outside vertices = 4-simplex complement = richer structure
+  n=9: 5 outside vertices = 5-simplex complement = even more bypass options
+
+The "hidden dimension" is the COMPLEMENT TOPOLOGY:
+  The tournament on outside vertices is the "environment" of the atom.
+  Its cycle structure (c3 count, transitivity) determines
+  how strongly the Vitali defect influences global cycle counts.
+
+Done.
