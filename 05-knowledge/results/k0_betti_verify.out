@@ -1,0 +1,92 @@
+============================================================
+k=0 EIGENSPACE BETTI NUMBERS — VERIFICATION
+============================================================
+
+P_7: m=3, QR=[1, 2, 4]
+  d=1: A=3 (0.0s)
+  d=2: A=9 (0.0s)
+  d=3: A=21 (0.0s)
+  d=4: A=39 (0.0s)
+  d=5: A=45 (0.0s)
+  d=6: A=27 (0.0s)
+  d=1: computing constraint rank (A=3, junk=0)... Ω=3
+         computing combined rank (0+1 rows)... rank(∂)=0 (0.0s)
+  d=2: computing constraint rank (A=9, junk=3)... Ω=6
+         computing combined rank (3+3 rows)... rank(∂)=3 (0.0s)
+  d=3: computing constraint rank (A=21, junk=12)... Ω=9
+         computing combined rank (12+9 rows)... rank(∂)=3 (0.0s)
+  d=4: computing constraint rank (A=39, junk=39)... Ω=9
+         computing combined rank (39+21 rows)... rank(∂)=6 (0.0s)
+  d=5: computing constraint rank (A=45, junk=72)... Ω=6
+         computing combined rank (72+39 rows)... rank(∂)=3 (0.0s)
+  d=6: computing constraint rank (A=27, junk=66)... Ω=3
+         computing combined rank (66+45 rows)... rank(∂)=3 (0.0s)
+
+  Ω  = [1, 3, 6, 9, 9, 6, 3]
+  ∂r = [0, 0, 3, 3, 6, 3, 3]
+  β  = [1, 0, 0, 0, 0, 0, 0]
+  χ  = 1
+
+  Rank predictions (assuming β_d=0):
+    rank(∂_1) = 0: actual 0
+    rank(∂_2) = m = 3: actual 3
+    rank(∂_3) = m(m-2) = 3: actual 3
+    rank(∂_4) = Ω_3 - m(m-2) = 6: actual 6
+    rank(∂_5) = Ω_4 - rank(∂_4) = 3: actual 3
+
+P_11: m=5, QR=[1, 3, 4, 5, 9]
+  d=1: A=5 (0.0s)
+  d=2: A=25 (0.0s)
+  d=3: A=110 (0.0s)
+  d=4: A=430 (0.0s)
+  d=5: A=1430 (0.0s)
+  d=6: A=3970 (0.0s)
+  d=7: A=8735 (0.0s)
+  d=8: A=14395 (0.1s)
+  d=9: A=15745 (0.1s)
+  d=10: A=8645 (0.2s)
+  d=1: computing constraint rank (A=5, junk=0)... Ω=5
+         computing combined rank (0+1 rows)... rank(∂)=0 (0.2s)
+  d=2: computing constraint rank (A=25, junk=5)... Ω=20
+         computing combined rank (5+5 rows)... rank(∂)=5 (0.2s)
+  d=3: computing constraint rank (A=110, junk=40)... Ω=70
+         computing combined rank (40+25 rows)... rank(∂)=15 (0.2s)
+  d=4: computing constraint rank (A=430, junk=250)... Ω=205
+         computing combined rank (250+110 rows)... rank(∂)=55 (0.2s)
+  d=5: computing constraint rank (A=1430, junk=1220)... Ω=460
+         computing combined rank (1220+430 rows)... rank(∂)=150 (0.6s)
+  d=6: computing constraint rank (A=3970, junk=4890)... Ω=700
+         computing combined rank (4890+1430 rows)... rank(∂)=305 (1.5s)
+  d=7: computing constraint rank (A=8735, junk=15230)... Ω=690
+         computing combined rank (15230+3970 rows)... rank(∂)=390 (2.3s)
+  d=8: computing constraint rank (A=14395, junk=35145)... Ω=450
+         computing combined rank (35145+8735 rows)... rank(∂)=300 (3.0s)
+  d=9: computing constraint rank (A=15745, junk=52550)... Ω=180
+         computing combined rank (52550+14395 rows)... rank(∂)=150 (3.8s)
+  d=10: computing constraint rank (A=8645, junk=38675)... Ω=30
+         computing combined rank (38675+15745 rows)... rank(∂)=30 (4.3s)
+
+  Ω  = [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+  ∂r = [0, 0, 5, 15, 55, 150, 305, 390, 300, 150, 30]
+  β  = [1, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0]
+  χ  = 1
+
+  Rank predictions (assuming β_d=0):
+    rank(∂_1) = 0: actual 0
+    rank(∂_2) = m = 5: actual 5
+    rank(∂_3) = m(m-2) = 15: actual 15
+    rank(∂_4) = Ω_3 - m(m-2) = 55: actual 55
+    rank(∂_5) = Ω_4 - rank(∂_4) = 150: actual 150
+
+============================================================
+P_19: TESTING β_3=β_4=...=β_8=0
+============================================================
+
+P_19: m=9, QR=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+  d=1: A=9 (0.0s)
+  d=2: A=81 (0.0s)
+  d=3: A=684 (0.0s)
+  d=4: A=5436 (0.0s)
+  d=5: A=40284 (0.1s)
+  d=6: A=277236 (1.1s)
+  d=7: A=1759914 (9.8s)
