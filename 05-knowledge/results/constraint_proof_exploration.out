@@ -1,0 +1,249 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\constraint_proof_exploration.py:41: SyntaxWarning: invalid escape sequence '\ '
+  5-subset is V \ {a,b}... no, the complement of a 5-subset is a 2-subset.
+======================================================================
+EXPLORING THE CONSTRAINT c5_dir + 2*disj_33 = 56
+======================================================================
+
+Gathering one representative per H class...
+
+======================================================================
+ANALYSIS 1: WHAT c5_dir COUNTS PER 5-SUBSET
+======================================================================
+
+--- H=171 ---
+  c5_dir = 36, disj_33 = 10
+  c5_dir + 2*disj_33 = 56
+
+  5-subset analysis (complement = 2 vertices):
+    complement |  c5_dir |  c3_in |  c3_in*(c3_in-1)/2
+  -------------+---------+--------+-------------------
+        [5, 6] |       1 |      3 |                  3
+        [4, 6] |       2 |      4 |                  6
+        [4, 5] |       3 |      4 |                  6
+        [3, 6] |       2 |      5 |                 10
+        [3, 5] |       2 |      4 |                  6
+        [3, 4] |       1 |      3 |                  3
+        [2, 6] |       1 |      4 |                  6
+        [2, 5] |       1 |      4 |                  6
+        [2, 4] |       1 |      4 |                  6
+        [2, 3] |       1 |      4 |                  6
+        [1, 6] |       2 |      4 |                  6
+        [1, 5] |       2 |      5 |                 10
+        [1, 4] |       2 |      4 |                  6
+        [1, 3] |       3 |      4 |                  6
+        [1, 2] |       1 |      4 |                  6
+        [0, 6] |       3 |      4 |                  6
+        [0, 5] |       2 |      4 |                  6
+        [0, 4] |       2 |      5 |                 10
+        [0, 3] |       2 |      4 |                  6
+        [0, 2] |       1 |      4 |                  6
+        [0, 1] |       1 |      3 |                  3
+         TOTAL |      36 |     84 |                129
+
+  Check: each 3-cycle is in C(4,2)=6 five-subsets
+  Expected sum(c3_in) = 14 * 6 = 84, actual = 84
+
+  3-cycle overlap distribution:
+    overlap=0: 10 pairs
+    overlap=1: 57 pairs
+    overlap=2: 24 pairs
+  sum(C(c3_in,2)) = 129
+  ov1*1 + ov2*3 = 129
+  Match? True
+
+  c5_dir per 5-subset stats:
+    Distribution: {1: 9, 2: 9, 3: 3}
+    Sum = 36
+
+--- H=175 ---
+  c5_dir = 28, disj_33 = 14
+  c5_dir + 2*disj_33 = 56
+
+  5-subset analysis (complement = 2 vertices):
+    complement |  c5_dir |  c3_in |  c3_in*(c3_in-1)/2
+  -------------+---------+--------+-------------------
+        [5, 6] |       1 |      3 |                  3
+        [4, 6] |       1 |      4 |                  6
+        [4, 5] |       1 |      3 |                  3
+        [3, 6] |       2 |      5 |                 10
+        [3, 5] |       1 |      4 |                  6
+        [3, 4] |       1 |      3 |                  3
+        [2, 6] |       2 |      5 |                 10
+        [2, 5] |       2 |      5 |                 10
+        [2, 4] |       1 |      4 |                  6
+        [2, 3] |       1 |      3 |                  3
+        [1, 6] |       1 |      4 |                  6
+        [1, 5] |       2 |      5 |                 10
+        [1, 4] |       2 |      5 |                 10
+        [1, 3] |       1 |      4 |                  6
+        [1, 2] |       1 |      3 |                  3
+        [0, 6] |       1 |      3 |                  3
+        [0, 5] |       1 |      4 |                  6
+        [0, 4] |       2 |      5 |                 10
+        [0, 3] |       2 |      5 |                 10
+        [0, 2] |       1 |      4 |                  6
+        [0, 1] |       1 |      3 |                  3
+         TOTAL |      28 |     84 |                133
+
+  Check: each 3-cycle is in C(4,2)=6 five-subsets
+  Expected sum(c3_in) = 14 * 6 = 84, actual = 84
+
+  3-cycle overlap distribution:
+    overlap=0: 14 pairs
+    overlap=1: 49 pairs
+    overlap=2: 28 pairs
+  sum(C(c3_in,2)) = 133
+  ov1*1 + ov2*3 = 133
+  Match? True
+
+  c5_dir per 5-subset stats:
+    Distribution: {1: 14, 2: 7}
+    Sum = 28
+
+--- H=189 ---
+  c5_dir = 42, disj_33 = 7
+  c5_dir + 2*disj_33 = 56
+
+  5-subset analysis (complement = 2 vertices):
+    complement |  c5_dir |  c3_in |  c3_in*(c3_in-1)/2
+  -------------+---------+--------+-------------------
+        [5, 6] |       2 |      4 |                  6
+        [4, 6] |       2 |      4 |                  6
+        [4, 5] |       2 |      4 |                  6
+        [3, 6] |       2 |      4 |                  6
+        [3, 5] |       2 |      4 |                  6
+        [3, 4] |       2 |      4 |                  6
+        [2, 6] |       2 |      4 |                  6
+        [2, 5] |       2 |      4 |                  6
+        [2, 4] |       2 |      4 |                  6
+        [2, 3] |       2 |      4 |                  6
+        [1, 6] |       2 |      4 |                  6
+        [1, 5] |       2 |      4 |                  6
+        [1, 4] |       2 |      4 |                  6
+        [1, 3] |       2 |      4 |                  6
+        [1, 2] |       2 |      4 |                  6
+        [0, 6] |       2 |      4 |                  6
+        [0, 5] |       2 |      4 |                  6
+        [0, 4] |       2 |      4 |                  6
+        [0, 3] |       2 |      4 |                  6
+        [0, 2] |       2 |      4 |                  6
+        [0, 1] |       2 |      4 |                  6
+         TOTAL |      42 |     84 |                126
+
+  Check: each 3-cycle is in C(4,2)=6 five-subsets
+  Expected sum(c3_in) = 14 * 6 = 84, actual = 84
+
+  3-cycle overlap distribution:
+    overlap=0: 7 pairs
+    overlap=1: 63 pairs
+    overlap=2: 21 pairs
+  sum(C(c3_in,2)) = 126
+  ov1*1 + ov2*3 = 126
+  Match? True
+
+  c5_dir per 5-subset stats:
+    Distribution: {2: 21}
+    Sum = 42
+
+======================================================================
+ANALYSIS 2: COMBINATORIAL IDENTITY SEARCH
+======================================================================
+56 = 2*C(7,5) + c3_vsets = 2*21 + 14 = 56
+This would mean: c5_dir + 2*disj_33 = 2*C(n,n-2) + c3 for regular tournaments
+
+n=6, score (2,2,2,3,3,3): c5_dir + 2*disj_33 = [12, 13, 14]
+  (c5_dir, disj_33) pairs: [(6, 4, 14), (8, 2, 12), (11, 1, 13), (12, 1, 14)]
+
+n=6, score (2, 2, 2, 2, 3, 4): c5_dir + 2*disj_33 = [9, 11]
+  NOT constant (varies)
+
+n=6, score (1, 2, 3, 3, 3, 3): c5_dir + 2*disj_33 = [9, 11]
+  NOT constant (varies)
+
+======================================================================
+ANALYSIS 3: REGULARITY AND THE CONSTRAINT
+======================================================================
+
+3-cycles per vertex (for regular n=7):
+  H=171: {0: 6, 1: 6, 2: 6, 3: 6, 4: 6, 5: 6, 6: 6}
+  H=175: {0: 6, 1: 6, 2: 6, 3: 6, 4: 6, 5: 6, 6: 6}
+  H=189: {0: 6, 1: 6, 2: 6, 3: 6, 4: 6, 5: 6, 6: 6}
+
+Disjoint 3-3 pairs per free vertex:
+  H=171: disj_33=10, by_free={6: 1, 5: 1, 2: 4, 4: 1, 1: 1, 3: 1, 0: 1}
+  H=175: disj_33=14, by_free={5: 2, 3: 2, 6: 2, 4: 2, 1: 2, 2: 2, 0: 2}
+  H=189: disj_33=7, by_free={6: 1, 3: 1, 4: 1, 5: 1, 2: 1, 1: 1, 0: 1}
+
+c5_dir per 5-subset (grouped by complement pair):
+
+  H=171: c5_dir = 36
+    complement [5, 6]: c5 = 1
+    complement [4, 6]: c5 = 2
+    complement [4, 5]: c5 = 3
+    complement [3, 6]: c5 = 2
+    complement [3, 5]: c5 = 2
+    complement [3, 4]: c5 = 1
+    complement [2, 6]: c5 = 1
+    complement [2, 5]: c5 = 1
+    complement [2, 4]: c5 = 1
+    complement [2, 3]: c5 = 1
+    complement [1, 6]: c5 = 2
+    complement [1, 5]: c5 = 2
+    complement [1, 4]: c5 = 2
+    complement [1, 3]: c5 = 3
+    complement [1, 2]: c5 = 1
+    complement [0, 6]: c5 = 3
+    complement [0, 5]: c5 = 2
+    complement [0, 4]: c5 = 2
+    complement [0, 3]: c5 = 2
+    complement [0, 2]: c5 = 1
+    complement [0, 1]: c5 = 1
+
+  H=175: c5_dir = 28
+    complement [5, 6]: c5 = 1
+    complement [4, 6]: c5 = 1
+    complement [4, 5]: c5 = 1
+    complement [3, 6]: c5 = 2
+    complement [3, 5]: c5 = 1
+    complement [3, 4]: c5 = 1
+    complement [2, 6]: c5 = 2
+    complement [2, 5]: c5 = 2
+    complement [2, 4]: c5 = 1
+    complement [2, 3]: c5 = 1
+    complement [1, 6]: c5 = 1
+    complement [1, 5]: c5 = 2
+    complement [1, 4]: c5 = 2
+    complement [1, 3]: c5 = 1
+    complement [1, 2]: c5 = 1
+    complement [0, 6]: c5 = 1
+    complement [0, 5]: c5 = 1
+    complement [0, 4]: c5 = 2
+    complement [0, 3]: c5 = 2
+    complement [0, 2]: c5 = 1
+    complement [0, 1]: c5 = 1
+
+  H=189: c5_dir = 42
+    complement [5, 6]: c5 = 2
+    complement [4, 6]: c5 = 2
+    complement [4, 5]: c5 = 2
+    complement [3, 6]: c5 = 2
+    complement [3, 5]: c5 = 2
+    complement [3, 4]: c5 = 2
+    complement [2, 6]: c5 = 2
+    complement [2, 5]: c5 = 2
+    complement [2, 4]: c5 = 2
+    complement [2, 3]: c5 = 2
+    complement [1, 6]: c5 = 2
+    complement [1, 5]: c5 = 2
+    complement [1, 4]: c5 = 2
+    complement [1, 3]: c5 = 2
+    complement [1, 2]: c5 = 2
+    complement [0, 6]: c5 = 2
+    complement [0, 5]: c5 = 2
+    complement [0, 4]: c5 = 2
+    complement [0, 3]: c5 = 2
+    complement [0, 2]: c5 = 2
+    complement [0, 1]: c5 = 2
+
+======================================================================
+DONE.
