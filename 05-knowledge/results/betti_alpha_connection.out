@@ -1,0 +1,38 @@
+n=7: Computing β_3, H, c3, c5, α₁ for 500 samples...
+  trial 0: 0.1s
+  trial 100: 3.9s
+  trial 200: 7.2s
+  trial 300: 10.0s
+  trial 400: 13.4s
+Done: 17.4s
+
+Phase distribution:
+  SC, β₃=0: 0 (0.0%)
+  SC, β₃=1: 0 (0.0%)
+  NSC, β₁=1: 102 (20.4%)
+
+H statistics by phase:
+  NSC β₁=1: H mean=24.3, range=[3, 45]
+
+c3 statistics by phase:
+  NSC β₁=1: c3 mean=5.2, range=[1, 8]
+
+c5 statistics by phase:
+  NSC β₁=1: c5 mean=4.8, range=[0, 12]
+
+c7 (= α₁ - c3 - c5) statistics by phase:
+  NSC β₁=1: c7 mean=10.0, range=[1, 20]
+
+α₂ (disjoint 3-cycle pairs) statistics by phase:
+  NSC β₁=1: α₂ mean=0.8, range=[0, 2]
+
+β₃=1 iff c3 ≥ threshold?
+  c3 values with β₃=0: []
+  c3 values with β₃=1: []
+  Overlap: NONE
+  β₃ MIGHT be a threshold in c3!
+
+β₃=1 iff H ≥ threshold?
+  H overlap: 0 values
+
+Done.
