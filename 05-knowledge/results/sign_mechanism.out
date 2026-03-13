@@ -1,0 +1,105 @@
+======================================================================
+SIGN MECHANISM: D^4 and D^6 degree-2 Walsh
+======================================================================
+
+--- PART 1: D^4 SIGN vs CHI(ab) ---
+D^4_deg2 nonzero iff 3a = +/-b mod p (T1/T2 fire)
+Sign determined by WHICH fires and by C_sum
+
+  p=7, m=3:
+    Nonzero D^4: 3/3, zero: 0/3
+    -sign(D^4) matches chi(ab): 3/3
+    Pattern: 3a=b or a=3b mod p gives 3 pairs
+
+  p=11, m=5:
+    Nonzero D^4: 5/10, zero: 5/10
+    -sign(D^4) matches chi(ab): 0/5
+    Pattern: 3a=b or a=3b mod p gives 5 pairs
+
+  p=19, m=9:
+    Nonzero D^4: 9/36, zero: 27/36
+    -sign(D^4) matches chi(ab): 9/9
+    Pattern: 3a=b or a=3b mod p gives 9 pairs
+
+--- PART 2: D^6 DEGREE-2 WALSH ---
+
+  p=7:
+    (a=1,b=2): D^4=     -7.00, D^6=    -47.25, chi(ab)=+1
+    (a=1,b=3): D^4=      7.00, D^6=     47.25, chi(ab)=-1
+    (a=2,b=3): D^4=      7.00, D^6=     47.25, chi(ab)=-1
+
+  p=11:
+    (a=1,b=2): D^4=      0.00, D^6=    -33.00, chi(ab)=-1
+    (a=1,b=3): D^4=     11.00, D^6=    206.25, chi(ab)=+1
+    (a=1,b=4): D^4=     11.00, D^6=    206.25, chi(ab)=+1
+    (a=1,b=5): D^4=      0.00, D^6=     33.00, chi(ab)=+1
+    (a=2,b=3): D^4=    -11.00, D^6=   -206.25, chi(ab)=-1
+    (a=2,b=4): D^4=      0.00, D^6=    -33.00, chi(ab)=-1
+    (a=2,b=5): D^4=    -11.00, D^6=   -206.25, chi(ab)=-1
+    (a=3,b=4): D^4=      0.00, D^6=     33.00, chi(ab)=+1
+    (a=3,b=5): D^4=      0.00, D^6=     33.00, chi(ab)=+1
+    (a=4,b=5): D^4=     11.00, D^6=    206.25, chi(ab)=+1
+
+--- PART 3: COMBINED TRACE CONTRIBUTION AT p=11 ---
+
+  p=11, m=5
+  Coefficients of D^{2n} in Re((-1/2+iD)^k):
+    k=4: ['0.0625', '-1.5000', '1.0000']
+    k=6: ['0.0156', '-0.9375', '3.7500', '-1.0000']
+    k=8: ['0.0039', '-0.4375', '4.3750', '-7.0000', '1.0000']
+    k=10: ['0.0010', '-0.1758', '3.2812', '-13.1250', '11.2500', '-1.0000']
+
+  Full numerical degree-2 Walsh at p=11:
+    (a=1,b=2): h_hat=     -8.25, D^4=    0.00, D^6=  -33.00, chi=-1, sign=-1, match=True
+    (a=1,b=3): h_hat=    272.25, D^4=   11.00, D^6=  206.25, chi=+1, sign=+1, match=True
+    (a=1,b=4): h_hat=    272.25, D^4=   11.00, D^6=  206.25, chi=+1, sign=+1, match=True
+    (a=1,b=5): h_hat=      8.25, D^4=    0.00, D^6=   33.00, chi=+1, sign=+1, match=True
+    (a=2,b=3): h_hat=   -272.25, D^4=  -11.00, D^6= -206.25, chi=-1, sign=-1, match=True
+    (a=2,b=4): h_hat=     -8.25, D^4=    0.00, D^6=  -33.00, chi=-1, sign=-1, match=True
+    (a=2,b=5): h_hat=   -272.25, D^4=  -11.00, D^6= -206.25, chi=-1, sign=-1, match=True
+    (a=3,b=4): h_hat=      8.25, D^4=    0.00, D^6=   33.00, chi=+1, sign=+1, match=True
+    (a=3,b=5): h_hat=      8.25, D^4=    0.00, D^6=   33.00, chi=+1, sign=+1, match=True
+    (a=4,b=5): h_hat=    272.25, D^4=   11.00, D^6=  206.25, chi=+1, sign=+1, match=True
+
+--- PART 4: MULTIPLICATIVE RESONANCE ---
+For pairs (a,b), D^4_deg2 != 0 iff 3a = +/-b mod p.
+The VALUE is always +/- p (up to scaling).
+The SIGN is: +p if 3a = -b (i.e., a+3b = 0), -p if 3a = b.
+
+chi(ab) at these pairs:
+
+  p=7, chi(3)=-1:
+    a=-3b: a=1,b=2, ab=2, chi(ab)=+1, chi(-3b^2)=+1
+    3a=b: a=1,b=3, ab=3, chi(ab)=-1, chi(3a^2)=-1
+    a=3b: a=2,b=3, ab=6, chi(ab)=-1, chi(3b^2)=-1
+
+  p=11, chi(3)=+1:
+    3a=b: a=1,b=3, ab=3, chi(ab)=+1, chi(3a^2)=+1
+    a=3b: a=1,b=4, ab=4, chi(ab)=+1, chi(3b^2)=+1
+    a=-3b: a=2,b=3, ab=6, chi(ab)=-1, chi(-3b^2)=-1
+    3a=-b: a=2,b=5, ab=10, chi(ab)=-1, chi(-3a^2)=-1
+    a=3b: a=4,b=5, ab=20, chi(ab)=+1, chi(3b^2)=+1
+
+  p=19, chi(3)=-1:
+    3a=b: a=1,b=3, ab=3, chi(ab)=-1, chi(3a^2)=-1
+    a=-3b: a=1,b=6, ab=6, chi(ab)=+1, chi(-3b^2)=+1
+    3a=b: a=2,b=6, ab=12, chi(ab)=-1, chi(3a^2)=-1
+    a=3b: a=2,b=7, ab=14, chi(ab)=-1, chi(3b^2)=-1
+    3a=b: a=3,b=9, ab=27, chi(ab)=-1, chi(3a^2)=-1
+    a=-3b: a=4,b=5, ab=20, chi(ab)=+1, chi(-3b^2)=+1
+    3a=-b: a=4,b=7, ab=28, chi(ab)=+1, chi(-3a^2)=+1
+    a=3b: a=5,b=8, ab=40, chi(ab)=-1, chi(3b^2)=-1
+    a=3b: a=8,b=9, ab=72, chi(ab)=-1, chi(3b^2)=-1
+
+  p=23, chi(3)=+1:
+    3a=b: a=1,b=3, ab=3, chi(ab)=+1, chi(3a^2)=+1
+    a=3b: a=1,b=8, ab=8, chi(ab)=+1, chi(3b^2)=+1
+    3a=b: a=2,b=6, ab=12, chi(ab)=+1, chi(3a^2)=+1
+    a=-3b: a=2,b=7, ab=14, chi(ab)=-1, chi(-3b^2)=-1
+    3a=b: a=3,b=9, ab=27, chi(ab)=+1, chi(3a^2)=+1
+    a=3b: a=4,b=9, ab=36, chi(ab)=+1, chi(3b^2)=+1
+    3a=-b: a=4,b=11, ab=44, chi(ab)=-1, chi(-3a^2)=-1
+    a=-3b: a=5,b=6, ab=30, chi(ab)=-1, chi(-3b^2)=-1
+    3a=-b: a=5,b=8, ab=40, chi(ab)=-1, chi(-3a^2)=-1
+    a=3b: a=7,b=10, ab=70, chi(ab)=+1, chi(3b^2)=+1
+    a=3b: a=10,b=11, ab=110, chi(ab)=+1, chi(3b^2)=+1
