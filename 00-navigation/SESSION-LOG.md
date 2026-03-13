@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S69 — 2026-03-12: SPECTRAL-TOPOLOGICAL BRIDGE (THM-145)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S69 (context recovery)
+**Summary of work:**
+Deep exploration of the connection between Q-spectrum and GLMY path homology for circulant tournaments. Discovered and verified THM-145: the spectral-topological bridge.
+
+**Key discoveries:**
+1. **THM-145 (Spectral-Topological Bridge)**: The elementary symmetric functions e_j(Q_1,...,Q_m) UNIQUELY DETERMINE the per-eigenspace Ω profile. VERIFIED EXHAUSTIVELY at p=7 (2 orbits), p=11 (4 orbits), p=13 (6 orbits). The map Z^{m-1} → Z^p is well-defined.
+
+2. **Exact rational formula**: At p=13, Ω_m = affine function of e_j with rational coefficients. Denominators all divisible by 13 × 59, suggesting connection to design matrix determinant. NOT affine across primes.
+
+3. **Paley flat spectrum**: At p≡3 mod 4, Paley has Q_k = (p+1)/4 for all k. e_j = C(m,j)·((p+1)/4)^j. chi_per = 1 always. Ω/C(m,k) ratios: 1, 1, 2, 7, 41, 460 at p=11 (not in OEIS).
+
+4. **Universal low-degree Ω**: Ω_0=1, Ω_1=m, Ω_2=m(m-1) independent of orientation. Divergence begins at Ω_3.
+
+5. **H remarkably stable**: Hamilton path count varies ~3% across orbits at p=11, while total Ω varies 2×. H/p ≈ 8400-8650 at p=11.
+
+6. **Average chi_per**: Σ chi_per over all 2^m orientations: p=3→2, p=5→0, p=7→2, p=11→22, p=13→-128. No closed form found.
+
+**New contributions:** THM-145, HYP-592 through HYP-596
+**Scripts:** omega_from_Q.py, thm145_p13_verify.py, thm145_exact_rational.py, thm145_formula_search.py, paley_omega_structure.py, H_chi_bridge.py, average_chi_per.py, omega_gf_analysis.py, chi_per_sum_formula.py
+
+**Unresolved threads:**
+- Explicit formula for Ω_m = f(e_j): NOT affine (ugly rational coefficients). May be polynomial of higher degree or non-polynomial.
+- Verify THM-145 at p=17 (computationally expensive: 2^8 = 256 orientations)
+- Prove chi_per(Interval) = 0 at p≡3 mod 4 algebraically via Morgan-Voyce
+- Closed form for average chi_per
+- Connection between H and GLMY topology beyond chi_per
+
+---
+
 ## opus-2026-03-12-S67d — 2026-03-12: FIBONACCI DEEP DIVE PART 2 — LATTICE GAS BRIDGE & GALOIS SPLITTING
 
 **Account:** opus
