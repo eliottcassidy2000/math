@@ -1,0 +1,139 @@
+P_19 (m=9), QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+Working mod 997
+
+Known Ω_orb: [1, 1, 8, 60, 417, 2648, 15140, 76474]
+Need: Ω_8, Ω_9 to compute β_9
+
+R_orb (from bottom): [0, 0, 1, 7, 53, 364, 2284, 12856]
+R_8 = Ω_7 - R_7 = 76474 - 12856 = 63618
+R = [0, 0, 1, 7, 53, 364, 2284, 12856, 63618]
+
+=== Computing d=8 orbit reps ===
+  1137354 orbit reps in 1.0s
+
+  Building constraint matrix...
+    Built 50000/1137354 constraint columns, 107006 junk orbits
+    Built 100000/1137354 constraint columns, 225593 junk orbits
+    Built 150000/1137354 constraint columns, 292326 junk orbits
+    Built 200000/1137354 constraint columns, 332341 junk orbits
+    Built 250000/1137354 constraint columns, 388834 junk orbits
+    Built 300000/1137354 constraint columns, 430064 junk orbits
+    Built 350000/1137354 constraint columns, 479696 junk orbits
+    Built 400000/1137354 constraint columns, 528330 junk orbits
+    Built 450000/1137354 constraint columns, 567865 junk orbits
+    Built 500000/1137354 constraint columns, 606396 junk orbits
+    Built 550000/1137354 constraint columns, 656694 junk orbits
+    Built 600000/1137354 constraint columns, 714295 junk orbits
+    Built 650000/1137354 constraint columns, 756489 junk orbits
+    Built 700000/1137354 constraint columns, 806213 junk orbits
+    Built 750000/1137354 constraint columns, 839276 junk orbits
+    Built 800000/1137354 constraint columns, 882227 junk orbits
+    Built 850000/1137354 constraint columns, 917727 junk orbits
+    Built 900000/1137354 constraint columns, 954102 junk orbits
+    Built 950000/1137354 constraint columns, 989920 junk orbits
+    Built 1000000/1137354 constraint columns, 1017621 junk orbits
+    Built 1050000/1137354 constraint columns, 1059605 junk orbits
+    Built 1100000/1137354 constraint columns, 1092244 junk orbits
+  1112862 junk orbits in 48.9s
+
+  Computing rank...
+    Rank computation: 50000/1137354 columns processed, rank=50000
+    Rank computation: 100000/1137354 columns processed, rank=100000
+    Rank computation: 150000/1137354 columns processed, rank=146126
+    Rank computation: 200000/1137354 columns processed, rank=183677
+    Rank computation: 250000/1137354 columns processed, rank=226449
+    Rank computation: 300000/1137354 columns processed, rank=262019
+    Rank computation: 350000/1137354 columns processed, rank=302311
+    Rank computation: 400000/1137354 columns processed, rank=339590
+    Rank computation: 450000/1137354 columns processed, rank=372678
+    Rank computation: 500000/1137354 columns processed, rank=403448
+    Rank computation: 550000/1137354 columns processed, rank=438511
+    Rank computation: 600000/1137354 columns processed, rank=479117
+    Rank computation: 650000/1137354 columns processed, rank=512589
+    Rank computation: 700000/1137354 columns processed, rank=549546
+    Rank computation: 750000/1137354 columns processed, rank=578508
+    Rank computation: 800000/1137354 columns processed, rank=612425
+    Rank computation: 850000/1137354 columns processed, rank=642605
+    Rank computation: 900000/1137354 columns processed, rank=672643
+    Rank computation: 950000/1137354 columns processed, rank=702014
+    Rank computation: 1000000/1137354 columns processed, rank=726464
+    Rank computation: 1050000/1137354 columns processed, rank=759413
+    Rank computation: 1100000/1137354 columns processed, rank=787057
+  rank(C_8) = 805396 in 326.2s
+  Ω_8^orb = 1137354 - 805396 = 331958
+  R_9 = Ω_8 - R_8 = 331958 - 63618 = 268340
+
+=== Computing d=9 orbit reps ===
+  6010022 orbit reps in 5.8s
+
+  Building constraint matrix...
+    Built 50000/6010022 constraint columns, 160248 junk orbits
+    Built 100000/6010022 constraint columns, 289776 junk orbits
+    Built 150000/6010022 constraint columns, 395185 junk orbits
+    Built 200000/6010022 constraint columns, 489080 junk orbits
+    Built 250000/6010022 constraint columns, 594541 junk orbits
+    Built 300000/6010022 constraint columns, 691973 junk orbits
+    Built 350000/6010022 constraint columns, 808935 junk orbits
+    Built 400000/6010022 constraint columns, 945835 junk orbits
+    Built 450000/6010022 constraint columns, 1089340 junk orbits
+    Built 500000/6010022 constraint columns, 1227600 junk orbits
+    Built 550000/6010022 constraint columns, 1366210 junk orbits
+    Built 600000/6010022 constraint columns, 1461576 junk orbits
+    Built 650000/6010022 constraint columns, 1542011 junk orbits
+    Built 700000/6010022 constraint columns, 1600095 junk orbits
+    Built 750000/6010022 constraint columns, 1665646 junk orbits
+    Built 800000/6010022 constraint columns, 1730506 junk orbits
+    Built 850000/6010022 constraint columns, 1777034 junk orbits
+    Built 900000/6010022 constraint columns, 1832473 junk orbits
+    Built 950000/6010022 constraint columns, 1892101 junk orbits
+    Built 1000000/6010022 constraint columns, 1939137 junk orbits
+    Built 1050000/6010022 constraint columns, 1984829 junk orbits
+    Built 1100000/6010022 constraint columns, 2074797 junk orbits
+    Built 1150000/6010022 constraint columns, 2165958 junk orbits
+    Built 1200000/6010022 constraint columns, 2243984 junk orbits
+    Built 1250000/6010022 constraint columns, 2283048 junk orbits
+    Built 1300000/6010022 constraint columns, 2332813 junk orbits
+    Built 1350000/6010022 constraint columns, 2392590 junk orbits
+    Built 1400000/6010022 constraint columns, 2448925 junk orbits
+    Built 1450000/6010022 constraint columns, 2510453 junk orbits
+    Built 1500000/6010022 constraint columns, 2558236 junk orbits
+    Built 1550000/6010022 constraint columns, 2606281 junk orbits
+    Built 1600000/6010022 constraint columns, 2658806 junk orbits
+    Built 1650000/6010022 constraint columns, 2701384 junk orbits
+    Built 1700000/6010022 constraint columns, 2755416 junk orbits
+    Built 1750000/6010022 constraint columns, 2815747 junk orbits
+    Built 1800000/6010022 constraint columns, 2908020 junk orbits
+    Built 1850000/6010022 constraint columns, 2962889 junk orbits
+    Built 1900000/6010022 constraint columns, 2995508 junk orbits
+    Built 1950000/6010022 constraint columns, 3042659 junk orbits
+    Built 2000000/6010022 constraint columns, 3107734 junk orbits
+    Built 2050000/6010022 constraint columns, 3192834 junk orbits
+    Built 2100000/6010022 constraint columns, 3256148 junk orbits
+    Built 2150000/6010022 constraint columns, 3316738 junk orbits
+    Built 2200000/6010022 constraint columns, 3367808 junk orbits
+    Built 2250000/6010022 constraint columns, 3412045 junk orbits
+    Built 2300000/6010022 constraint columns, 3467186 junk orbits
+    Built 2350000/6010022 constraint columns, 3517461 junk orbits
+    Built 2400000/6010022 constraint columns, 3580231 junk orbits
+    Built 2450000/6010022 constraint columns, 3636744 junk orbits
+    Built 2500000/6010022 constraint columns, 3692593 junk orbits
+    Built 2550000/6010022 constraint columns, 3738271 junk orbits
+    Built 2600000/6010022 constraint columns, 3775493 junk orbits
+    Built 2650000/6010022 constraint columns, 3832099 junk orbits
+    Built 2700000/6010022 constraint columns, 3880037 junk orbits
+    Built 2750000/6010022 constraint columns, 3912163 junk orbits
+    Built 2800000/6010022 constraint columns, 3979040 junk orbits
+    Built 2850000/6010022 constraint columns, 4063863 junk orbits
+    Built 2900000/6010022 constraint columns, 4146573 junk orbits
+    Built 2950000/6010022 constraint columns, 4217561 junk orbits
+    Built 3000000/6010022 constraint columns, 4293980 junk orbits
+    Built 3050000/6010022 constraint columns, 4370682 junk orbits
+    Built 3100000/6010022 constraint columns, 4452661 junk orbits
+    Built 3150000/6010022 constraint columns, 4522547 junk orbits
+    Built 3200000/6010022 constraint columns, 4582153 junk orbits
+    Built 3250000/6010022 constraint columns, 4638166 junk orbits
+    Built 3300000/6010022 constraint columns, 4688689 junk orbits
+    Built 3350000/6010022 constraint columns, 4747471 junk orbits
+    Built 3400000/6010022 constraint columns, 4802498 junk orbits
+    Built 3450000/6010022 constraint columns, 4868281 junk orbits
+    Built 3500000/6010022 constraint columns, 4937727 junk orbits

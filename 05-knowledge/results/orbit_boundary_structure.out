@@ -1,2 +1,65 @@
 /usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+============================================================
+P_7 (m=3)
+============================================================
+
+Omega_orb: [1, 1, 2, 3, 3, 2, 1]
+
+--- Critical boundary ∂_4^orb ---
+  Source: 13 orbits, Omega=3
+  Target: 7 orbits, Omega=3
+  B shape: (7, 13)
+  rank(B) = 7
+  R_4^orb = 2
+  rank(B|Omega) = 2
+  ker(B|Omega) dim = 1
+
+  R_orb: [0, 0, 1, 1, 2, 1, 1, 0]
+  β_orb: [1, 0, 0, 0, 0, 0, 0]
+
+--- Kernel analysis at d=4 ---
+  dim(ker ∂_4|Omega) = 1
+  = R_5 + β_4 = 1 + 0
+  dim(im ∂_5|Omega) = 1
+  β_4 = ker - im = 1 - 1 = 0
+
+--- Kernel analysis at d=3 ---
+  dim(ker ∂_3|Omega) = 2
+  = R_4 + β_m = 2 + 0
+  dim(im ∂_4|Omega) = 2
+  β_m = ker - im = 2 - 2 = 0
+
+============================================================
+P_11 (m=5)
+============================================================
+
+Omega_orb: [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+
+--- Critical boundary ∂_6^orb ---
+  Source: 794 orbits, Omega=140
+  Target: 286 orbits, Omega=92
+  B shape: (286, 794)
+  rank(B) = 286
+  R_6^orb = 61
+  rank(B|Omega) = 61
+  ker(B|Omega) dim = 79
+
+  R_orb: [0, 0, 1, 3, 11, 30, 61, 78, 60, 30, 6, 0]
+  β_orb: [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+
+--- Kernel analysis at d=6 ---
+  dim(ker ∂_6|Omega) = 79
+  = R_7 + β_6 = 78 + 1
+  dim(im ∂_7|Omega) = 78
+  β_6 = ker - im = 79 - 78 = 1
+
+--- Kernel analysis at d=5 ---
+  dim(ker ∂_5|Omega) = 62
+  = R_6 + β_m = 61 + 1
+  dim(im ∂_6|Omega) = 61
+  β_m = ker - im = 62 - 61 = 1
+
+--- The β_m cycle (not a boundary) ---
+  Found 0 independent cycle(s)
+

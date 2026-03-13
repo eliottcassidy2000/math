@@ -1,0 +1,133 @@
+=== GENERATING FUNCTION ANALYSIS ===
+
+m=3: Omega_orb = [1, 1, 2, 3, 3, 2, 1]
+  EGF coefficients: [1.0, 1.0, 1.0, 0.5, 0.125, 0.016666666666666666, 0.001388888888888889]
+  P(1) = Σ Ω_d = 13
+  P(-1) = chi = 1
+  P'(1) = Σ d*Ω_d = 42
+  Budget_m = 2
+  β_m = (m-3)/2 = 0
+  R_4 = 2
+
+m=5: Omega_orb = [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+  EGF coefficients: [1.0, 1.0, 2.0, 2.3333333333333335, 1.7083333333333333, 0.7666666666666667, 0.19444444444444445, 0.02738095238095238, 0.002232142857142857, 9.92063492063492e-05, 1.6534391534391535e-06]
+  P(1) = Σ Ω_d = 563
+  P(-1) = chi = 1
+  P'(1) = Σ d*Ω_d = 3585
+  Budget_m = 62
+  β_m = (m-3)/2 = 1
+  R_6 = 61
+
+=== SEQUENCE ANALYSIS ===
+
+m=5 orbit Omega: [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+Ratios:
+  Ω_1/Ω_0 = 1/1 = 1 = 1.0000
+  Ω_2/Ω_1 = 4/1 = 4 = 4.0000
+  Ω_3/Ω_2 = 14/4 = 7/2 = 3.5000
+  Ω_4/Ω_3 = 41/14 = 41/14 = 2.9286
+  Ω_5/Ω_4 = 92/41 = 92/41 = 2.2439
+  Ω_6/Ω_5 = 140/92 = 35/23 = 1.5217
+  Ω_7/Ω_6 = 138/140 = 69/70 = 0.9857
+  Ω_8/Ω_7 = 90/138 = 15/23 = 0.6522
+  Ω_9/Ω_8 = 36/90 = 2/5 = 0.4000
+  Ω_10/Ω_9 = 6/36 = 1/6 = 0.1667
+
+Differences:
+  First:  [0, 3, 10, 27, 51, 48, -2, -48, -54, -30]
+  Second: [3, 7, 17, 24, -3, -50, -46, -6, 24]
+
+=== POLYNOMIAL FACTORING ===
+
+P_7 polynomial roots:
+  -0.996762 + 0.497973i
+  -0.996762 + -0.497973i
+  0.262435 + 0.689370i
+  0.262435 + -0.689370i
+  -0.265673 + 1.187342i
+  -0.265673 + -1.187342i
+
+P_11 polynomial roots:
+  -2.565943
+  -1.165105
+  0.231741 + 0.283311i
+  0.231741 + -0.283311i
+  -0.781511 + 0.425591i
+  -0.781511 + -0.425591i
+  -0.104765 + 0.580943i
+  -0.104765 + -0.580943i
+  -0.479941 + 1.130337i
+  -0.479941 + -1.130337i
+
+=== BUDGET FORMULA ANALYSIS ===
+
+=== FULL COMPLEX ANALYSIS ===
+
+Pattern verification:
+  p=  7 (m= 3): β_m=    0 = C(3,2)-3=3-3, β_{m+1}=    6 = C(4,2), χ =   7 ✓
+  p= 11 (m= 5): β_m=    5 = C(5,2)-5=10-5, β_{m+1}=   15 = C(6,2), χ =  11 ✓
+  p= 15 (m= 7): β_m=   14 = C(7,2)-7=21-7, β_{m+1}=   28 = C(8,2), χ =  15 ✓
+  p= 19 (m= 9): β_m=   27 = C(9,2)-9=36-9, β_{m+1}=   45 = C(10,2), χ =  19 ✓
+  p= 23 (m=11): β_m=   44 = C(11,2)-11=55-11, β_{m+1}=   66 = C(12,2), χ =  23 ✓
+  p= 27 (m=13): β_m=   65 = C(13,2)-13=78-13, β_{m+1}=   91 = C(14,2), χ =  27 ✓
+  p= 31 (m=15): β_m=   90 = C(15,2)-15=105-15, β_{m+1}=  120 = C(16,2), χ =  31 ✓
+  p= 35 (m=17): β_m=  119 = C(17,2)-17=136-17, β_{m+1}=  153 = C(18,2), χ =  35 ✓
+  p= 39 (m=19): β_m=  152 = C(19,2)-19=171-19, β_{m+1}=  190 = C(20,2), χ =  39 ✓
+
+=== REPRESENTATION THEORY ===
+
+INSIGHT: Z_p acts on diff-seqs by changing the 'forbidden' partial sum value.
+The diff-seq (s_1,...,s_d) with partial sums P_k starting from vertex v_0 = 0
+becomes the SAME diff-seq starting from v_0 = a, with partial sums P_k + a.
+The 'allowed' condition changes: P_k ∉ {0, a} → this is a different complex!
+
+So the correct action is on the PALEY GRAPH (the tournament itself),
+and the eigenspace decomposition of the BOUNDARY MAPS is what matters.
+
+Z_p acts TRIVIALLY on the diff-seq complex (diff-seqs are translation-invariant).
+So the 'eigenspace decomposition' must be with respect to a DIFFERENT action.
+
+The action used in the eigenspace decomposition is Z_m (multiplication by QR).
+Z_m has m eigenspaces. This is the correct decomposition.
+
+CORRECTED ANALYSIS:
+The chain complex C_d (paths) has |C_d| = p · |A_d| for d ≥ 1.
+Z_p acts freely on C_d (d ≥ 1), giving p orbits = |A_d| orbits.
+The orbit chain complex IS the diff-seq complex A_d.
+
+So the eigenspace decomposition under Z_p gives p eigenspaces:
+  k=0: invariant chains (sums over Z_p orbits)
+  k=1,...,p-1: nontrivial characters
+
+Each eigenspace has dim = |A_d| (the number of diff-seq orbits).
+THM-125 says Ω_d is the same for each eigenspace → all p eigenspaces
+have Ω_d^{(k)} = Ω_d (the diff-seq Omega from orbit computation).
+
+There are p eigenspaces, not m. So:
+  Full Ω_d (path-based) = p · Ω_d (diff-seq-based) for d ≥ 1
+  P_11: Full Ω_5 = 11 · 92 = 1012
+  But the file says Full Ω_5 = 460
+  11 · 92 = 1012, 5 · 92 = 460
+
+RESOLUTION: Two-level decomposition
+  Level 1: Z_p orbits on paths → diff-seq complex (÷ p)
+  Level 2: Z_m eigenspaces on diff-seqs → orbit complex (÷ m)
+  Total: path complex dim = p · m · orbit complex dim
+
+FINAL RESOLUTION:
+  Eigenspace decomposition is under Z_p (vertex translation)
+  k=0 = diff-seq complex (dim |A_d|)
+  k=0 has its own Z_m decomposition (orbit complex, dim |A_d|/m)
+
+  β_m comes ENTIRELY from Z_p k=0 eigenspace:
+    β_m^{k=0} = m · β_m^{orb} = m · (m-3)/2
+    β_m^{k≠0} = 0 (each)
+
+  β_{m+1} gets contributions from ALL eigenspaces:
+    β_{m+1}^{k=0} = m · (m-3)/2
+    β_{m+1}^{k≠0} = 1 (each, p-1 = 2m eigenspaces)
+    Total: m(m-3)/2 + 2m = m(m+1)/2 = C(m+1,2)
+
+  The single β_{m+1}^{k≠0} = 1 for each k ≠ 0 comes from
+  the rank shift theorem (HYP-710): the face-0 phase creates
+  a rank-1 defect that propagates to a single β at degree m+1.
