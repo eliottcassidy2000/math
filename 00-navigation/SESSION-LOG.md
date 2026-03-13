@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-12-S59c — 2026-03-12: MORGAN-VOYCE POLYNOMIAL & FIBONACCI IDENTITY
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S59c (context recovery — overlap weight analysis deep dive)
+**Summary of work:**
+Major discoveries connecting the Interval Q-polynomial to classical algebraic structures:
+
+1. **Gauss Sum Proof (HYP-568)**: D(k;sigma_Paley) = chi(k)*sqrt(p)/2 via half-sum doubling from chi(-1)=-1. This PROVES the flat Fourier spectrum Q_k=(p+1)/4 for Paley at p=3 mod 4.
+
+2. **Discriminant Identity (HYP-569)**: disc(Q_1,...,Q_m) = p^{m-1} for the Interval tournament. Verified at ALL primes p=5 through p=31 using mpmath high-precision arithmetic.
+
+3. **ESF Identity (HYP-570)**: e_j(Q_1,...,Q_m) = C(m+j, 2j) — the Morgan-Voyce polynomial coefficients (OEIS A085478). Verified at ALL primes p=5 through p=43.
+
+4. **Chebyshev Formula (HYP-574)**: Q_k = (1-T_m(cos(2pi*k/p)))/(1-cos(2pi*k/p)) where T_m is Chebyshev of the first kind.
+
+5. **Morgan-Voyce Connection (HYP-571)**: The characteristic polynomial of the Q_k is P_m(t) = t^m * b(m, -1/t) where b(m,x) is the Morgan-Voyce polynomial.
+
+6. **FIBONACCI PRODUCT IDENTITY (HYP-572)**: prod_{k=1}^m (1+Q_k) = F_p (the p-th Fibonacci number!). This follows from b(m,1) = F_{2m+1} = F_p.
+
+7. **Sum of Reciprocals (HYP-573)**: sum 1/Q_k = p-2, from e_{m-1} = C(2m-1,1) = 2m-1.
+
+8. **Fibonacci Maximality (ANTI-CORRELATION)**: Interval has the MINIMUM prod(1+Q_k) = F_p among all orientations, but MAXIMUM H at p=1 mod 4. At p=3 mod 4, Paley has MAX prod(1+Q_k) AND max H.
+
+**New contributions:** HYP-560 through HYP-574, 8 scripts in 04-computation/, 8 output files in 05-knowledge/results/
+**Unresolved threads:**
+- Prove e_j = C(m+j, 2j) analytically via Chebyshev resultant
+- Prove disc = p^{m-1} via Morgan-Voyce discriminant formula
+- Understand WHY the Fibonacci identity anti-correlates with H at p=1 mod 4
+- Find the exact functional form of H = F(Q_1,...,Q_m) — still unknown
+- Investigate the Morgan-Voyce / Fibonacci connection for NON-Interval orientations
+- Analytical proof of Walsh-Legendre Sign Law (partial: Gauss sum gives flat spectrum, sign law verified computationally)
+
 ## opus-2026-03-12-S68 — 2026-03-12: TOPOLOGICAL LANDSCAPE & DIFFERENCE SET CRITERION
 
 **Account:** opus
