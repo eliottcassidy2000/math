@@ -1,0 +1,584 @@
+========================================================================
+Q = (H² - det)/8 = a·b/2 WHERE a = (H-√det)/2, b = (H+√det)/2
+========================================================================
+
+--- PART 1: a, b decomposition ---
+
+n = 3:
+  H=  1 √det=  1 a=(H-S)/2=  0 b=(H+S)/2=  1 Q=ab/2=    0 α₁= 0 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+
+n = 4:
+  H=  1 √det=  1 a=(H-S)/2=  0 b=(H+S)/2=  1 Q=ab/2=    0 α₁= 0 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  5 √det=  1 a=(H-S)/2=  2 b=(H+S)/2=  3 Q=ab/2=    3 α₁= 2 α₂= 0
+
+n = 5:
+  H=  1 √det=  1 a=(H-S)/2=  0 b=(H+S)/2=  1 Q=ab/2=    0 α₁= 0 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  5 √det=  1 a=(H-S)/2=  2 b=(H+S)/2=  3 Q=ab/2=    3 α₁= 2 α₂= 0
+  H=  5 √det=  1 a=(H-S)/2=  2 b=(H+S)/2=  3 Q=ab/2=    3 α₁= 2 α₂= 0
+  H=  9 √det=  3 a=(H-S)/2=  3 b=(H+S)/2=  6 Q=ab/2=    9 α₁= 4 α₂= 0
+  H=  9 √det=  5 a=(H-S)/2=  2 b=(H+S)/2=  7 Q=ab/2=    7 α₁= 4 α₂= 0
+  H= 11 √det=  1 a=(H-S)/2=  5 b=(H+S)/2=  6 Q=ab/2=   15 α₁= 5 α₂= 0
+  H= 13 √det=  7 a=(H-S)/2=  3 b=(H+S)/2= 10 Q=ab/2=   15 α₁= 6 α₂= 0
+  H= 15 √det=  9 a=(H-S)/2=  3 b=(H+S)/2= 12 Q=ab/2=   18 α₁= 7 α₂= 0
+  H= 15 √det=  5 a=(H-S)/2=  5 b=(H+S)/2= 10 Q=ab/2=   25 α₁= 7 α₂= 0
+
+n = 6:
+  H=  1 √det=  1 a=(H-S)/2=  0 b=(H+S)/2=  1 Q=ab/2=    0 α₁= 0 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  3 √det=  3 a=(H-S)/2=  0 b=(H+S)/2=  3 Q=ab/2=    0 α₁= 1 α₂= 0
+  H=  5 √det=  1 a=(H-S)/2=  2 b=(H+S)/2=  3 Q=ab/2=    3 α₁= 2 α₂= 0
+  H=  5 √det=  1 a=(H-S)/2=  2 b=(H+S)/2=  3 Q=ab/2=    3 α₁= 2 α₂= 0
+  H=  5 √det=  1 a=(H-S)/2=  2 b=(H+S)/2=  3 Q=ab/2=    3 α₁= 2 α₂= 0
+  H=  9 √det=  3 a=(H-S)/2=  3 b=(H+S)/2=  6 Q=ab/2=    9 α₁= 4 α₂= 0
+  H=  9 √det=  5 a=(H-S)/2=  2 b=(H+S)/2=  7 Q=ab/2=    7 α₁= 4 α₂= 0
+  H=  9 √det=  3 a=(H-S)/2=  3 b=(H+S)/2=  6 Q=ab/2=    9 α₁= 4 α₂= 0
+  H=  9 √det=  5 a=(H-S)/2=  2 b=(H+S)/2=  7 Q=ab/2=    7 α₁= 4 α₂= 0
+  H=  9 √det=  9 a=(H-S)/2=  0 b=(H+S)/2=  9 Q=ab/2=    0 α₁= 2 α₂= 1
+  H= 11 √det=  1 a=(H-S)/2=  5 b=(H+S)/2=  6 Q=ab/2=   15 α₁= 5 α₂= 0
+  H= 11 √det=  1 a=(H-S)/2=  5 b=(H+S)/2=  6 Q=ab/2=   15 α₁= 5 α₂= 0
+  H= 13 √det=  7 a=(H-S)/2=  3 b=(H+S)/2= 10 Q=ab/2=   15 α₁= 6 α₂= 0
+  H= 13 √det=  7 a=(H-S)/2=  3 b=(H+S)/2= 10 Q=ab/2=   15 α₁= 6 α₂= 0
+  H= 15 √det=  1 a=(H-S)/2=  7 b=(H+S)/2=  8 Q=ab/2=   28 α₁= 7 α₂= 0
+  H= 15 √det=  1 a=(H-S)/2=  7 b=(H+S)/2=  8 Q=ab/2=   28 α₁= 7 α₂= 0
+  H= 15 √det=  9 a=(H-S)/2=  3 b=(H+S)/2= 12 Q=ab/2=   18 α₁= 7 α₂= 0
+  H= 15 √det=  5 a=(H-S)/2=  5 b=(H+S)/2= 10 Q=ab/2=   25 α₁= 7 α₂= 0
+  H= 15 √det=  9 a=(H-S)/2=  3 b=(H+S)/2= 12 Q=ab/2=   18 α₁= 7 α₂= 0
+  H= 15 √det=  5 a=(H-S)/2=  5 b=(H+S)/2= 10 Q=ab/2=   25 α₁= 7 α₂= 0
+  H= 17 √det=  1 a=(H-S)/2=  8 b=(H+S)/2=  9 Q=ab/2=   36 α₁= 8 α₂= 0
+  H= 17 √det=  7 a=(H-S)/2=  5 b=(H+S)/2= 12 Q=ab/2=   30 α₁= 6 α₂= 1
+  H= 19 √det=  3 a=(H-S)/2=  8 b=(H+S)/2= 11 Q=ab/2=   44 α₁= 9 α₂= 0
+  H= 19 √det=  3 a=(H-S)/2=  8 b=(H+S)/2= 11 Q=ab/2=   44 α₁= 9 α₂= 0
+  H= 23 √det=  1 a=(H-S)/2= 11 b=(H+S)/2= 12 Q=ab/2=   66 α₁=11 α₂= 0
+  H= 23 √det=  1 a=(H-S)/2= 11 b=(H+S)/2= 12 Q=ab/2=   66 α₁=11 α₂= 0
+  H= 23 √det=  5 a=(H-S)/2=  9 b=(H+S)/2= 14 Q=ab/2=   63 α₁= 9 α₂= 1
+  H= 23 √det=  5 a=(H-S)/2=  9 b=(H+S)/2= 14 Q=ab/2=   63 α₁= 9 α₂= 1
+  H= 25 √det=  1 a=(H-S)/2= 12 b=(H+S)/2= 13 Q=ab/2=   78 α₁=12 α₂= 0
+  H= 25 √det=  1 a=(H-S)/2= 12 b=(H+S)/2= 13 Q=ab/2=   78 α₁=12 α₂= 0
+  H= 27 √det=  3 a=(H-S)/2= 12 b=(H+S)/2= 15 Q=ab/2=   90 α₁=11 α₂= 1
+  H= 27 √det=  3 a=(H-S)/2= 12 b=(H+S)/2= 15 Q=ab/2=   90 α₁=11 α₂= 1
+  H= 29 √det=  1 a=(H-S)/2= 14 b=(H+S)/2= 15 Q=ab/2=  105 α₁=10 α₂= 2
+  H= 29 √det=  1 a=(H-S)/2= 14 b=(H+S)/2= 15 Q=ab/2=  105 α₁=12 α₂= 1
+  H= 29 √det=  1 a=(H-S)/2= 14 b=(H+S)/2= 15 Q=ab/2=  105 α₁=12 α₂= 1
+  H= 31 √det=  7 a=(H-S)/2= 12 b=(H+S)/2= 19 Q=ab/2=  114 α₁=13 α₂= 1
+  H= 31 √det=  7 a=(H-S)/2= 12 b=(H+S)/2= 19 Q=ab/2=  114 α₁=13 α₂= 1
+  H= 33 √det=  3 a=(H-S)/2= 15 b=(H+S)/2= 18 Q=ab/2=  135 α₁=16 α₂= 0
+  H= 33 √det=  1 a=(H-S)/2= 16 b=(H+S)/2= 17 Q=ab/2=  136 α₁=12 α₂= 2
+  H= 33 √det=  3 a=(H-S)/2= 15 b=(H+S)/2= 18 Q=ab/2=  135 α₁=14 α₂= 1
+  H= 33 √det=  3 a=(H-S)/2= 15 b=(H+S)/2= 18 Q=ab/2=  135 α₁=14 α₂= 1
+  H= 33 √det=  3 a=(H-S)/2= 15 b=(H+S)/2= 18 Q=ab/2=  135 α₁=16 α₂= 0
+  H= 37 √det=  1 a=(H-S)/2= 18 b=(H+S)/2= 19 Q=ab/2=  171 α₁=14 α₂= 2
+  H= 37 √det=  5 a=(H-S)/2= 16 b=(H+S)/2= 21 Q=ab/2=  168 α₁=16 α₂= 1
+  H= 37 √det=  3 a=(H-S)/2= 17 b=(H+S)/2= 20 Q=ab/2=  170 α₁=14 α₂= 2
+  H= 41 √det=  1 a=(H-S)/2= 20 b=(H+S)/2= 21 Q=ab/2=  210 α₁=16 α₂= 2
+  H= 43 √det=  1 a=(H-S)/2= 21 b=(H+S)/2= 22 Q=ab/2=  231 α₁=19 α₂= 1
+  H= 43 √det=  1 a=(H-S)/2= 21 b=(H+S)/2= 22 Q=ab/2=  231 α₁=19 α₂= 1
+  H= 45 √det=  1 a=(H-S)/2= 22 b=(H+S)/2= 23 Q=ab/2=  253 α₁=14 α₂= 4
+
+
+--- PART 2: What is a = (H-√det)/2? ---
+
+Hypothesis: a = (H-√det)/2 counts something related to cycles.
+Since H = Σ 2^k α_k and √det = ???
+
+Let's express √det in terms of α_k:
+  n=3 H=  1 α₁= 0 a=  0 √det=  1 | transitive
+  n=3 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=4 H=  1 α₁= 0 a=  0 √det=  1 | transitive
+  n=4 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=4 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=4 H=  5 α₁= 2 a=  2 √det=  1 | √det = H-2a = 5-4 = 1 | a/α₁ = 1.000
+  n=5 H=  1 α₁= 0 a=  0 √det=  1 | transitive
+  n=5 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=5 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=5 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=5 H=  5 α₁= 2 a=  2 √det=  1 | √det = H-2a = 5-4 = 1 | a/α₁ = 1.000
+  n=5 H=  5 α₁= 2 a=  2 √det=  1 | √det = H-2a = 5-4 = 1 | a/α₁ = 1.000
+  n=5 H=  9 α₁= 4 a=  3 √det=  3 | √det = H-2a = 9-6 = 3 | a/α₁ = 0.750
+  n=5 H=  9 α₁= 4 a=  2 √det=  5 | √det = H-2a = 9-4 = 5 | a/α₁ = 0.500
+  n=5 H= 11 α₁= 5 a=  5 √det=  1 | √det = H-2a = 11-10 = 1 | a/α₁ = 1.000
+  n=5 H= 13 α₁= 6 a=  3 √det=  7 | √det = H-2a = 13-6 = 7 | a/α₁ = 0.500
+  n=5 H= 15 α₁= 7 a=  3 √det=  9 | √det = H-2a = 15-6 = 9 | a/α₁ = 0.429
+  n=5 H= 15 α₁= 7 a=  5 √det=  5 | √det = H-2a = 15-10 = 5 | a/α₁ = 0.714
+  n=6 H=  1 α₁= 0 a=  0 √det=  1 | transitive
+  n=6 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=6 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=6 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=6 H=  3 α₁= 1 a=  0 √det=  3 | √det = H-2a = 3-0 = 3 | a/α₁ = 0.000
+  n=6 H=  5 α₁= 2 a=  2 √det=  1 | √det = H-2a = 5-4 = 1 | a/α₁ = 1.000
+  n=6 H=  5 α₁= 2 a=  2 √det=  1 | √det = H-2a = 5-4 = 1 | a/α₁ = 1.000
+  n=6 H=  5 α₁= 2 a=  2 √det=  1 | √det = H-2a = 5-4 = 1 | a/α₁ = 1.000
+  n=6 H=  9 α₁= 4 a=  3 √det=  3 | √det = H-2a = 9-6 = 3 | a/α₁ = 0.750
+  n=6 H=  9 α₁= 4 a=  2 √det=  5 | √det = H-2a = 9-4 = 5 | a/α₁ = 0.500
+  n=6 H=  9 α₁= 4 a=  3 √det=  3 | √det = H-2a = 9-6 = 3 | a/α₁ = 0.750
+  n=6 H=  9 α₁= 4 a=  2 √det=  5 | √det = H-2a = 9-4 = 5 | a/α₁ = 0.500
+  n=6 H= 11 α₁= 5 a=  5 √det=  1 | √det = H-2a = 11-10 = 1 | a/α₁ = 1.000
+  n=6 H= 11 α₁= 5 a=  5 √det=  1 | √det = H-2a = 11-10 = 1 | a/α₁ = 1.000
+  n=6 H= 13 α₁= 6 a=  3 √det=  7 | √det = H-2a = 13-6 = 7 | a/α₁ = 0.500
+  n=6 H= 13 α₁= 6 a=  3 √det=  7 | √det = H-2a = 13-6 = 7 | a/α₁ = 0.500
+  n=6 H= 15 α₁= 7 a=  7 √det=  1 | √det = H-2a = 15-14 = 1 | a/α₁ = 1.000
+  n=6 H= 15 α₁= 7 a=  7 √det=  1 | √det = H-2a = 15-14 = 1 | a/α₁ = 1.000
+  n=6 H= 15 α₁= 7 a=  3 √det=  9 | √det = H-2a = 15-6 = 9 | a/α₁ = 0.429
+  n=6 H= 15 α₁= 7 a=  5 √det=  5 | √det = H-2a = 15-10 = 5 | a/α₁ = 0.714
+  n=6 H= 15 α₁= 7 a=  3 √det=  9 | √det = H-2a = 15-6 = 9 | a/α₁ = 0.429
+  n=6 H= 15 α₁= 7 a=  5 √det=  5 | √det = H-2a = 15-10 = 5 | a/α₁ = 0.714
+  n=6 H= 17 α₁= 8 a=  8 √det=  1 | √det = H-2a = 17-16 = 1 | a/α₁ = 1.000
+  n=6 H= 19 α₁= 9 a=  8 √det=  3 | √det = H-2a = 19-16 = 3 | a/α₁ = 0.889
+  n=6 H= 19 α₁= 9 a=  8 √det=  3 | √det = H-2a = 19-16 = 3 | a/α₁ = 0.889
+  n=6 H= 23 α₁=11 a= 11 √det=  1 | √det = H-2a = 23-22 = 1 | a/α₁ = 1.000
+  n=6 H= 23 α₁=11 a= 11 √det=  1 | √det = H-2a = 23-22 = 1 | a/α₁ = 1.000
+  n=6 H= 25 α₁=12 a= 12 √det=  1 | √det = H-2a = 25-24 = 1 | a/α₁ = 1.000
+  n=6 H= 25 α₁=12 a= 12 √det=  1 | √det = H-2a = 25-24 = 1 | a/α₁ = 1.000
+  n=6 H= 33 α₁=16 a= 15 √det=  3 | √det = H-2a = 33-30 = 3 | a/α₁ = 0.938
+  n=6 H= 33 α₁=16 a= 15 √det=  3 | √det = H-2a = 33-30 = 3 | a/α₁ = 0.938
+
+--- PART 3: Is Q related to C(a₁, 2) or similar? ---
+
+Testing: Q vs C(a,2)=a(a-1)/2, Q vs a², Q vs C(α₁,2)=α₁(α₁-1)/2:
+  n=3 H=  1 a=  0 b=  1 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=3 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=4 H=  1 a=  0 b=  1 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=4 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=4 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=4 H=  5 a=  2 b=  3 Q=    3 | C(a,2)=    1 a²=    4 C(α₁,2)=    1 | Q-C(a,2)=    2 Q-a²=   -1
+  n=5 H=  1 a=  0 b=  1 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=5 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=5 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=5 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=5 H=  5 a=  2 b=  3 Q=    3 | C(a,2)=    1 a²=    4 C(α₁,2)=    1 | Q-C(a,2)=    2 Q-a²=   -1
+  n=5 H=  5 a=  2 b=  3 Q=    3 | C(a,2)=    1 a²=    4 C(α₁,2)=    1 | Q-C(a,2)=    2 Q-a²=   -1
+  n=5 H=  9 a=  3 b=  6 Q=    9 | C(a,2)=    3 a²=    9 C(α₁,2)=    6 | Q-C(a,2)=    6 Q-a²=    0
+  n=5 H=  9 a=  2 b=  7 Q=    7 | C(a,2)=    1 a²=    4 C(α₁,2)=    6 | Q-C(a,2)=    6 Q-a²=    3
+  n=5 H= 11 a=  5 b=  6 Q=   15 | C(a,2)=   10 a²=   25 C(α₁,2)=   10 | Q-C(a,2)=    5 Q-a²=  -10
+  n=5 H= 13 a=  3 b= 10 Q=   15 | C(a,2)=    3 a²=    9 C(α₁,2)=   15 | Q-C(a,2)=   12 Q-a²=    6
+  n=5 H= 15 a=  3 b= 12 Q=   18 | C(a,2)=    3 a²=    9 C(α₁,2)=   21 | Q-C(a,2)=   15 Q-a²=    9
+  n=5 H= 15 a=  5 b= 10 Q=   25 | C(a,2)=   10 a²=   25 C(α₁,2)=   21 | Q-C(a,2)=   15 Q-a²=    0
+  n=6 H=  1 a=  0 b=  1 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=6 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=6 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=6 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=6 H=  3 a=  0 b=  3 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    0 | Q-C(a,2)=    0 Q-a²=    0
+  n=6 H=  5 a=  2 b=  3 Q=    3 | C(a,2)=    1 a²=    4 C(α₁,2)=    1 | Q-C(a,2)=    2 Q-a²=   -1
+  n=6 H=  5 a=  2 b=  3 Q=    3 | C(a,2)=    1 a²=    4 C(α₁,2)=    1 | Q-C(a,2)=    2 Q-a²=   -1
+  n=6 H=  5 a=  2 b=  3 Q=    3 | C(a,2)=    1 a²=    4 C(α₁,2)=    1 | Q-C(a,2)=    2 Q-a²=   -1
+  n=6 H=  9 a=  3 b=  6 Q=    9 | C(a,2)=    3 a²=    9 C(α₁,2)=    6 | Q-C(a,2)=    6 Q-a²=    0
+  n=6 H=  9 a=  2 b=  7 Q=    7 | C(a,2)=    1 a²=    4 C(α₁,2)=    6 | Q-C(a,2)=    6 Q-a²=    3
+  n=6 H=  9 a=  3 b=  6 Q=    9 | C(a,2)=    3 a²=    9 C(α₁,2)=    6 | Q-C(a,2)=    6 Q-a²=    0
+  n=6 H=  9 a=  2 b=  7 Q=    7 | C(a,2)=    1 a²=    4 C(α₁,2)=    6 | Q-C(a,2)=    6 Q-a²=    3
+  n=6 H=  9 a=  0 b=  9 Q=    0 | C(a,2)=    0 a²=    0 C(α₁,2)=    1 | Q-C(a,2)=    0 Q-a²=    0
+  n=6 H= 11 a=  5 b=  6 Q=   15 | C(a,2)=   10 a²=   25 C(α₁,2)=   10 | Q-C(a,2)=    5 Q-a²=  -10
+  n=6 H= 11 a=  5 b=  6 Q=   15 | C(a,2)=   10 a²=   25 C(α₁,2)=   10 | Q-C(a,2)=    5 Q-a²=  -10
+  n=6 H= 13 a=  3 b= 10 Q=   15 | C(a,2)=    3 a²=    9 C(α₁,2)=   15 | Q-C(a,2)=   12 Q-a²=    6
+  n=6 H= 13 a=  3 b= 10 Q=   15 | C(a,2)=    3 a²=    9 C(α₁,2)=   15 | Q-C(a,2)=   12 Q-a²=    6
+  n=6 H= 15 a=  7 b=  8 Q=   28 | C(a,2)=   21 a²=   49 C(α₁,2)=   21 | Q-C(a,2)=    7 Q-a²=  -21
+  n=6 H= 15 a=  7 b=  8 Q=   28 | C(a,2)=   21 a²=   49 C(α₁,2)=   21 | Q-C(a,2)=    7 Q-a²=  -21
+  n=6 H= 15 a=  3 b= 12 Q=   18 | C(a,2)=    3 a²=    9 C(α₁,2)=   21 | Q-C(a,2)=   15 Q-a²=    9
+  n=6 H= 15 a=  5 b= 10 Q=   25 | C(a,2)=   10 a²=   25 C(α₁,2)=   21 | Q-C(a,2)=   15 Q-a²=    0
+  n=6 H= 15 a=  3 b= 12 Q=   18 | C(a,2)=    3 a²=    9 C(α₁,2)=   21 | Q-C(a,2)=   15 Q-a²=    9
+  n=6 H= 15 a=  5 b= 10 Q=   25 | C(a,2)=   10 a²=   25 C(α₁,2)=   21 | Q-C(a,2)=   15 Q-a²=    0
+  n=6 H= 17 a=  8 b=  9 Q=   36 | C(a,2)=   28 a²=   64 C(α₁,2)=   28 | Q-C(a,2)=    8 Q-a²=  -28
+  n=6 H= 17 a=  5 b= 12 Q=   30 | C(a,2)=   10 a²=   25 C(α₁,2)=   15 | Q-C(a,2)=   20 Q-a²=    5
+  n=6 H= 19 a=  8 b= 11 Q=   44 | C(a,2)=   28 a²=   64 C(α₁,2)=   36 | Q-C(a,2)=   16 Q-a²=  -20
+  n=6 H= 19 a=  8 b= 11 Q=   44 | C(a,2)=   28 a²=   64 C(α₁,2)=   36 | Q-C(a,2)=   16 Q-a²=  -20
+  n=6 H= 23 a= 11 b= 12 Q=   66 | C(a,2)=   55 a²=  121 C(α₁,2)=   55 | Q-C(a,2)=   11 Q-a²=  -55
+  n=6 H= 23 a= 11 b= 12 Q=   66 | C(a,2)=   55 a²=  121 C(α₁,2)=   55 | Q-C(a,2)=   11 Q-a²=  -55
+  n=6 H= 23 a=  9 b= 14 Q=   63 | C(a,2)=   36 a²=   81 C(α₁,2)=   36 | Q-C(a,2)=   27 Q-a²=  -18
+  n=6 H= 23 a=  9 b= 14 Q=   63 | C(a,2)=   36 a²=   81 C(α₁,2)=   36 | Q-C(a,2)=   27 Q-a²=  -18
+  n=6 H= 25 a= 12 b= 13 Q=   78 | C(a,2)=   66 a²=  144 C(α₁,2)=   66 | Q-C(a,2)=   12 Q-a²=  -66
+  n=6 H= 25 a= 12 b= 13 Q=   78 | C(a,2)=   66 a²=  144 C(α₁,2)=   66 | Q-C(a,2)=   12 Q-a²=  -66
+  n=6 H= 27 a= 12 b= 15 Q=   90 | C(a,2)=   66 a²=  144 C(α₁,2)=   55 | Q-C(a,2)=   24 Q-a²=  -54
+  n=6 H= 27 a= 12 b= 15 Q=   90 | C(a,2)=   66 a²=  144 C(α₁,2)=   55 | Q-C(a,2)=   24 Q-a²=  -54
+  n=6 H= 29 a= 14 b= 15 Q=  105 | C(a,2)=   91 a²=  196 C(α₁,2)=   45 | Q-C(a,2)=   14 Q-a²=  -91
+  n=6 H= 29 a= 14 b= 15 Q=  105 | C(a,2)=   91 a²=  196 C(α₁,2)=   66 | Q-C(a,2)=   14 Q-a²=  -91
+  n=6 H= 29 a= 14 b= 15 Q=  105 | C(a,2)=   91 a²=  196 C(α₁,2)=   66 | Q-C(a,2)=   14 Q-a²=  -91
+  n=6 H= 31 a= 12 b= 19 Q=  114 | C(a,2)=   66 a²=  144 C(α₁,2)=   78 | Q-C(a,2)=   48 Q-a²=  -30
+  n=6 H= 31 a= 12 b= 19 Q=  114 | C(a,2)=   66 a²=  144 C(α₁,2)=   78 | Q-C(a,2)=   48 Q-a²=  -30
+  n=6 H= 33 a= 15 b= 18 Q=  135 | C(a,2)=  105 a²=  225 C(α₁,2)=  120 | Q-C(a,2)=   30 Q-a²=  -90
+  n=6 H= 33 a= 16 b= 17 Q=  136 | C(a,2)=  120 a²=  256 C(α₁,2)=   66 | Q-C(a,2)=   16 Q-a²= -120
+  n=6 H= 33 a= 15 b= 18 Q=  135 | C(a,2)=  105 a²=  225 C(α₁,2)=   91 | Q-C(a,2)=   30 Q-a²=  -90
+  n=6 H= 33 a= 15 b= 18 Q=  135 | C(a,2)=  105 a²=  225 C(α₁,2)=   91 | Q-C(a,2)=   30 Q-a²=  -90
+  n=6 H= 33 a= 15 b= 18 Q=  135 | C(a,2)=  105 a²=  225 C(α₁,2)=  120 | Q-C(a,2)=   30 Q-a²=  -90
+  n=6 H= 37 a= 18 b= 19 Q=  171 | C(a,2)=  153 a²=  324 C(α₁,2)=   91 | Q-C(a,2)=   18 Q-a²= -153
+  n=6 H= 37 a= 16 b= 21 Q=  168 | C(a,2)=  120 a²=  256 C(α₁,2)=  120 | Q-C(a,2)=   48 Q-a²=  -88
+  n=6 H= 37 a= 17 b= 20 Q=  170 | C(a,2)=  136 a²=  289 C(α₁,2)=   91 | Q-C(a,2)=   34 Q-a²= -119
+  n=6 H= 41 a= 20 b= 21 Q=  210 | C(a,2)=  190 a²=  400 C(α₁,2)=  120 | Q-C(a,2)=   20 Q-a²= -190
+  n=6 H= 43 a= 21 b= 22 Q=  231 | C(a,2)=  210 a²=  441 C(α₁,2)=  171 | Q-C(a,2)=   21 Q-a²= -210
+  n=6 H= 43 a= 21 b= 22 Q=  231 | C(a,2)=  210 a²=  441 C(α₁,2)=  171 | Q-C(a,2)=   21 Q-a²= -210
+  n=6 H= 45 a= 22 b= 23 Q=  253 | C(a,2)=  231 a²=  484 C(α₁,2)=   91 | Q-C(a,2)=   22 Q-a²= -231
+
+--- PART 4: a in terms of cycles ---
+
+What is a = (H-√det)/2 for tournaments with known √det?
+
+For transitive tournament: H=1, det=1, S=1, a=0, b=1, Q=0
+For 3-cycle tournament: H=3, det=9, S=3, a=0, b=3, Q=0
+  So α₁=1 but a=0! This means a ≠ α₁ in general.
+
+Wait — the unique tournament on 4 vertices with H=5:
+  H=5, det=1, S=1, a=2, b=3, Q=3
+  α₁=2, a=2, so a=α₁ here!
+
+KEY PATTERN:
+  n=3 H=  1 √det=  1 a=  0 α₁= 0 a-α₁=  +0 | α₂=0
+  n=3 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=4 H=  1 √det=  1 a=  0 α₁= 0 a-α₁=  +0 | α₂=0
+  n=4 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=4 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=4 H=  5 √det=  1 a=  2 α₁= 2 a-α₁=  +0 | α₂=0
+  n=5 H=  1 √det=  1 a=  0 α₁= 0 a-α₁=  +0 | α₂=0
+  n=5 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=5 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=5 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=5 H=  5 √det=  1 a=  2 α₁= 2 a-α₁=  +0 | α₂=0
+  n=5 H=  5 √det=  1 a=  2 α₁= 2 a-α₁=  +0 | α₂=0
+  n=5 H=  9 √det=  3 a=  3 α₁= 4 a-α₁=  -1 | α₂=0
+  n=5 H=  9 √det=  5 a=  2 α₁= 4 a-α₁=  -2 | α₂=0
+  n=5 H= 11 √det=  1 a=  5 α₁= 5 a-α₁=  +0 | α₂=0
+  n=5 H= 13 √det=  7 a=  3 α₁= 6 a-α₁=  -3 | α₂=0
+  n=5 H= 15 √det=  9 a=  3 α₁= 7 a-α₁=  -4 | α₂=0
+  n=5 H= 15 √det=  5 a=  5 α₁= 7 a-α₁=  -2 | α₂=0
+  n=6 H=  1 √det=  1 a=  0 α₁= 0 a-α₁=  +0 | α₂=0
+  n=6 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=6 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=6 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=6 H=  3 √det=  3 a=  0 α₁= 1 a-α₁=  -1 | α₂=0
+  n=6 H=  5 √det=  1 a=  2 α₁= 2 a-α₁=  +0 | α₂=0
+  n=6 H=  5 √det=  1 a=  2 α₁= 2 a-α₁=  +0 | α₂=0
+  n=6 H=  5 √det=  1 a=  2 α₁= 2 a-α₁=  +0 | α₂=0
+  n=6 H=  9 √det=  3 a=  3 α₁= 4 a-α₁=  -1 | α₂=0
+  n=6 H=  9 √det=  5 a=  2 α₁= 4 a-α₁=  -2 | α₂=0
+  n=6 H=  9 √det=  3 a=  3 α₁= 4 a-α₁=  -1 | α₂=0
+  n=6 H=  9 √det=  5 a=  2 α₁= 4 a-α₁=  -2 | α₂=0
+  n=6 H=  9 √det=  9 a=  0 α₁= 2 a-α₁=  -2 | α₂=1
+  n=6 H= 11 √det=  1 a=  5 α₁= 5 a-α₁=  +0 | α₂=0
+  n=6 H= 11 √det=  1 a=  5 α₁= 5 a-α₁=  +0 | α₂=0
+  n=6 H= 13 √det=  7 a=  3 α₁= 6 a-α₁=  -3 | α₂=0
+  n=6 H= 13 √det=  7 a=  3 α₁= 6 a-α₁=  -3 | α₂=0
+  n=6 H= 15 √det=  1 a=  7 α₁= 7 a-α₁=  +0 | α₂=0
+  n=6 H= 15 √det=  1 a=  7 α₁= 7 a-α₁=  +0 | α₂=0
+  n=6 H= 15 √det=  9 a=  3 α₁= 7 a-α₁=  -4 | α₂=0
+  n=6 H= 15 √det=  5 a=  5 α₁= 7 a-α₁=  -2 | α₂=0
+  n=6 H= 15 √det=  9 a=  3 α₁= 7 a-α₁=  -4 | α₂=0
+  n=6 H= 15 √det=  5 a=  5 α₁= 7 a-α₁=  -2 | α₂=0
+  n=6 H= 17 √det=  1 a=  8 α₁= 8 a-α₁=  +0 | α₂=0
+  n=6 H= 17 √det=  7 a=  5 α₁= 6 a-α₁=  -1 | α₂=1
+  n=6 H= 19 √det=  3 a=  8 α₁= 9 a-α₁=  -1 | α₂=0
+  n=6 H= 19 √det=  3 a=  8 α₁= 9 a-α₁=  -1 | α₂=0
+  n=6 H= 23 √det=  1 a= 11 α₁=11 a-α₁=  +0 | α₂=0
+  n=6 H= 23 √det=  1 a= 11 α₁=11 a-α₁=  +0 | α₂=0
+  n=6 H= 23 √det=  5 a=  9 α₁= 9 a-α₁=  +0 | α₂=1
+  n=6 H= 23 √det=  5 a=  9 α₁= 9 a-α₁=  +0 | α₂=1
+  n=6 H= 25 √det=  1 a= 12 α₁=12 a-α₁=  +0 | α₂=0
+  n=6 H= 25 √det=  1 a= 12 α₁=12 a-α₁=  +0 | α₂=0
+  n=6 H= 27 √det=  3 a= 12 α₁=11 a-α₁=  +1 | α₂=1
+  n=6 H= 27 √det=  3 a= 12 α₁=11 a-α₁=  +1 | α₂=1
+  n=6 H= 29 √det=  1 a= 14 α₁=10 a-α₁=  +4 | α₂=2
+  n=6 H= 29 √det=  1 a= 14 α₁=12 a-α₁=  +2 | α₂=1
+  n=6 H= 29 √det=  1 a= 14 α₁=12 a-α₁=  +2 | α₂=1
+  n=6 H= 31 √det=  7 a= 12 α₁=13 a-α₁=  -1 | α₂=1
+  n=6 H= 31 √det=  7 a= 12 α₁=13 a-α₁=  -1 | α₂=1
+  n=6 H= 33 √det=  3 a= 15 α₁=16 a-α₁=  -1 | α₂=0
+  n=6 H= 33 √det=  1 a= 16 α₁=12 a-α₁=  +4 | α₂=2
+  n=6 H= 33 √det=  3 a= 15 α₁=14 a-α₁=  +1 | α₂=1
+  n=6 H= 33 √det=  3 a= 15 α₁=14 a-α₁=  +1 | α₂=1
+  n=6 H= 33 √det=  3 a= 15 α₁=16 a-α₁=  -1 | α₂=0
+  n=6 H= 37 √det=  1 a= 18 α₁=14 a-α₁=  +4 | α₂=2
+  n=6 H= 37 √det=  5 a= 16 α₁=16 a-α₁=  +0 | α₂=1
+  n=6 H= 37 √det=  3 a= 17 α₁=14 a-α₁=  +3 | α₂=2
+  n=6 H= 41 √det=  1 a= 20 α₁=16 a-α₁=  +4 | α₂=2
+  n=6 H= 43 √det=  1 a= 21 α₁=19 a-α₁=  +2 | α₂=1
+  n=6 H= 43 √det=  1 a= 21 α₁=19 a-α₁=  +2 | α₂=1
+  n=6 H= 45 √det=  1 a= 22 α₁=14 a-α₁=  +8 | α₂=4
+
+--- PART 5: √det as independence polynomial of SOMETHING ---
+
+Recall H = I(CG, 2). Is √det also an independence polynomial?
+
+Let's check: for each tournament, is √det of the form 1 + 2k for some k?
+  n=3 H=  1 √det=  1 = 1+2· 0
+  n=3 H=  3 √det=  3 = 1+2· 1
+  n=4 H=  1 √det=  1 = 1+2· 0
+  n=4 H=  3 √det=  3 = 1+2· 1
+  n=4 H=  3 √det=  3 = 1+2· 1
+  n=4 H=  5 √det=  1 = 1+2· 0
+  n=5 H=  1 √det=  1 = 1+2· 0
+  n=5 H=  3 √det=  3 = 1+2· 1
+  n=5 H=  3 √det=  3 = 1+2· 1
+  n=5 H=  3 √det=  3 = 1+2· 1
+  n=5 H=  5 √det=  1 = 1+2· 0
+  n=5 H=  5 √det=  1 = 1+2· 0
+  n=5 H=  9 √det=  3 = 1+2· 1
+  n=5 H=  9 √det=  5 = 1+2· 2
+  n=5 H= 11 √det=  1 = 1+2· 0
+  n=5 H= 13 √det=  7 = 1+2· 3
+  n=5 H= 15 √det=  9 = 1+2· 4
+  n=5 H= 15 √det=  5 = 1+2· 2
+  n=6 H=  1 √det=  1 = 1+2· 0
+  n=6 H=  3 √det=  3 = 1+2· 1
+  n=6 H=  3 √det=  3 = 1+2· 1
+  n=6 H=  3 √det=  3 = 1+2· 1
+  n=6 H=  3 √det=  3 = 1+2· 1
+  n=6 H=  5 √det=  1 = 1+2· 0
+  n=6 H=  5 √det=  1 = 1+2· 0
+  n=6 H=  5 √det=  1 = 1+2· 0
+  n=6 H=  9 √det=  3 = 1+2· 1
+  n=6 H=  9 √det=  5 = 1+2· 2
+  n=6 H=  9 √det=  3 = 1+2· 1
+  n=6 H=  9 √det=  5 = 1+2· 2
+  n=6 H=  9 √det=  9 = 1+2· 4
+  n=6 H= 11 √det=  1 = 1+2· 0
+  n=6 H= 11 √det=  1 = 1+2· 0
+  n=6 H= 13 √det=  7 = 1+2· 3
+  n=6 H= 13 √det=  7 = 1+2· 3
+  n=6 H= 15 √det=  1 = 1+2· 0
+  n=6 H= 15 √det=  1 = 1+2· 0
+  n=6 H= 15 √det=  9 = 1+2· 4
+  n=6 H= 15 √det=  5 = 1+2· 2
+  n=6 H= 15 √det=  9 = 1+2· 4
+  n=6 H= 15 √det=  5 = 1+2· 2
+  n=6 H= 17 √det=  1 = 1+2· 0
+  n=6 H= 17 √det=  7 = 1+2· 3
+  n=6 H= 19 √det=  3 = 1+2· 1
+  n=6 H= 19 √det=  3 = 1+2· 1
+  n=6 H= 23 √det=  1 = 1+2· 0
+  n=6 H= 23 √det=  1 = 1+2· 0
+  n=6 H= 23 √det=  5 = 1+2· 2
+  n=6 H= 23 √det=  5 = 1+2· 2
+  n=6 H= 25 √det=  1 = 1+2· 0
+  n=6 H= 25 √det=  1 = 1+2· 0
+  n=6 H= 27 √det=  3 = 1+2· 1
+  n=6 H= 27 √det=  3 = 1+2· 1
+  n=6 H= 29 √det=  1 = 1+2· 0
+  n=6 H= 29 √det=  1 = 1+2· 0
+  n=6 H= 29 √det=  1 = 1+2· 0
+  n=6 H= 31 √det=  7 = 1+2· 3
+  n=6 H= 31 √det=  7 = 1+2· 3
+  n=6 H= 33 √det=  3 = 1+2· 1
+  n=6 H= 33 √det=  1 = 1+2· 0
+  n=6 H= 33 √det=  3 = 1+2· 1
+  n=6 H= 33 √det=  3 = 1+2· 1
+  n=6 H= 33 √det=  3 = 1+2· 1
+  n=6 H= 37 √det=  1 = 1+2· 0
+  n=6 H= 37 √det=  5 = 1+2· 2
+  n=6 H= 37 √det=  3 = 1+2· 1
+  n=6 H= 41 √det=  1 = 1+2· 0
+  n=6 H= 43 √det=  1 = 1+2· 0
+  n=6 H= 43 √det=  1 = 1+2· 0
+  n=6 H= 45 √det=  1 = 1+2· 0
+
+--- PART 6: √det and the COMPLEMENT conflict graph ---
+
+Idea: if H = I(CG, 2), maybe √det = I(CG_complement, 2)?
+Or √det = I(some_subgraph, 2)?
+
+Let's check: √det as I(G, 2) for small cases
+  I(empty, 2) = 1 (zero vertices)
+  I(K_1, 2) = 3
+  I(K_2, 2) = 5
+  I(K_3, 2) = 7
+  I(P_2, 2) = 5
+  I(C_3, 2) = 7
+
+Known I(G,2) values:
+  1 → empty graph
+  3 → K₁
+  5 → K₂ or P₂
+  7 → K₃ or C₃
+  9 → K₁+K₁ (= 3·3) or K₄ (1+8)
+  11 → P₃
+  15 → K₁+K₂ (= 3·5)
+  25 → K₂+K₂ (= 5·5) or P₄ (=21)? No, P₄ gives 21
+  25 → K₂+K₂ (= 5·5)
+  49 → K₃+K₃ (= 7·7) or C₃+C₃
+  81 → K₁+K₁+K₁+K₁ (= 3⁴)
+
+√det values seen:
+  √det =    1 = 1 | I(disjoint union of K_*)? YES
+  √det =    3 = 3 | I(disjoint union of K_*)? YES
+  √det =    5 = 5 | I(disjoint union of K_*)? YES
+  √det =    7 = 7 | I(disjoint union of K_*)? YES
+  √det =    9 = 3·3 | I(disjoint union of K_*)? YES
+
+--- PART 7: √det = product of I(K_{m_i}, 2) = ∏(2m_i + 1)? ---
+
+HYPOTHESIS: √det = ∏(2m_i + 1) for some multiset {m_i}
+This would mean √det = I(K_{m_1} ⊔ K_{m_2} ⊔ ..., 2)
+
+Checking: √det always a product of odd numbers:
+  1 = 1 (empty)
+  3 = 3 = I(K_1, 2)
+  5 = 5 = I(K_2, 2)
+  7 = 7 = I(K_3, 2)
+  9 = 9 = 3·3 = I(K_1⊔K_1, 2)
+
+AMAZING! Every √det value we see is a PRODUCT of numbers of the form (2m+1),
+which are exactly the values I(K_m, 2).
+
+So √det = I(G, 2) for some graph G that is a disjoint union of complete graphs!
+
+CONJECTURE: √det(I+2A) = I(CG_compressed, 2)
+where CG_compressed is obtained from CG by contracting each clique to a single vertex
+weighted by the clique size, and I(K_m, 2) = 2m+1.
+
+Actually, more precisely:
+  H = I(CG, 2) = Σ 2^k α_k
+  √det = ∏ I(K_{c_i}, 2) = ∏ (2c_i + 1)
+where {c_i} is related to the CLIQUE COVER of the conflict graph!
+
+
+--- PART 8: Testing clique cover hypothesis ---
+
+n = 3:
+  H=  1 √det=  1 | no cycles → √det should be 1: ✓
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+
+n = 4:
+  H=  1 √det=  1 | no cycles → √det should be 1: ✓
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  5 √det=  1 | 2 cycles, vertex clique sizes: [2, 2, 1, 1]
+
+n = 5:
+  H=  1 √det=  1 | no cycles → √det should be 1: ✓
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  5 √det=  1 | 2 cycles, vertex clique sizes: [2, 2, 1, 1]
+  H=  5 √det=  1 | 2 cycles, vertex clique sizes: [2, 2, 1, 1]
+  H=  9 √det=  3 | 4 cycles, vertex clique sizes: [4, 4, 2, 2, 2]
+  H=  9 √det=  5 | 4 cycles, vertex clique sizes: [4, 3, 3, 2, 2]
+  H= 11 √det=  1 | 5 cycles, vertex clique sizes: [5, 3, 3, 3, 3]
+  H= 13 √det=  7 | 6 cycles, vertex clique sizes: [5, 5, 4, 4, 4]
+  H= 15 √det=  9 | 7 cycles, vertex clique sizes: [6, 6, 5, 5, 5]
+  H= 15 √det=  5 | 7 cycles, vertex clique sizes: [5, 5, 5, 5, 5]
+
+n = 6:
+  H=  1 √det=  1 | no cycles → √det should be 1: ✓
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  3 √det=  3 | 1 cycles, vertex clique sizes: [1, 1, 1]
+  H=  5 √det=  1 | 2 cycles, vertex clique sizes: [2, 2, 1, 1]
+  H=  5 √det=  1 | 2 cycles, vertex clique sizes: [2, 2, 1, 1]
+  H=  5 √det=  1 | 2 cycles, vertex clique sizes: [2, 2, 1, 1]
+  H=  9 √det=  3 | 4 cycles, vertex clique sizes: [4, 4, 2, 2, 2]
+  H=  9 √det=  5 | 4 cycles, vertex clique sizes: [4, 3, 3, 2, 2]
+  H=  9 √det=  3 | 4 cycles, vertex clique sizes: [4, 4, 2, 2, 2]
+  H=  9 √det=  5 | 4 cycles, vertex clique sizes: [4, 3, 3, 2, 2]
+  H=  9 √det=  9 | 2 cycles, vertex clique sizes: [1, 1, 1, 1, 1, 1]
+  H= 11 √det=  1 | 5 cycles, vertex clique sizes: [5, 3, 3, 3, 3]
+  H= 11 √det=  1 | 5 cycles, vertex clique sizes: [5, 3, 3, 3, 3]
+  H= 13 √det=  7 | 6 cycles, vertex clique sizes: [5, 5, 4, 4, 4]
+  H= 13 √det=  7 | 6 cycles, vertex clique sizes: [5, 5, 4, 4, 4]
+  H= 15 √det=  1 | 7 cycles, vertex clique sizes: [7, 6, 5, 3, 3, 3]
+  H= 15 √det=  1 | 7 cycles, vertex clique sizes: [7, 6, 5, 3, 3, 3]
+  H= 15 √det=  9 | 7 cycles, vertex clique sizes: [6, 6, 5, 5, 5]
+  H= 15 √det=  5 | 7 cycles, vertex clique sizes: [5, 5, 5, 5, 5]
+  H= 15 √det=  9 | 7 cycles, vertex clique sizes: [6, 6, 5, 5, 5]
+  H= 15 √det=  5 | 7 cycles, vertex clique sizes: [5, 5, 5, 5, 5]
+  H= 17 √det=  1 | 8 cycles, vertex clique sizes: [8, 8, 4, 4, 4, 4]
+  H= 17 √det=  7 | 6 cycles, vertex clique sizes: [5, 5, 4, 4, 2, 2]
+  H= 19 √det=  3 | 9 cycles, vertex clique sizes: [9, 7, 5, 5, 5, 4]
+  H= 19 √det=  3 | 9 cycles, vertex clique sizes: [9, 7, 5, 5, 5, 4]
+  H= 23 √det=  1 | 11 cycles, vertex clique sizes: [11, 7, 7, 6, 6, 6]
+  H= 23 √det=  1 | 11 cycles, vertex clique sizes: [11, 7, 7, 6, 6, 6]
+  H= 23 √det=  5 | 9 cycles, vertex clique sizes: [8, 7, 7, 5, 5, 3]
+  H= 23 √det=  5 | 9 cycles, vertex clique sizes: [8, 7, 7, 5, 5, 3]
+  H= 25 √det=  1 | 12 cycles, vertex clique sizes: [11, 10, 8, 7, 6, 6]
+  H= 25 √det=  1 | 12 cycles, vertex clique sizes: [11, 10, 8, 7, 6, 6]
+  H= 27 √det=  3 | 11 cycles, vertex clique sizes: [10, 10, 7, 7, 7, 4]
+  H= 27 √det=  3 | 11 cycles, vertex clique sizes: [10, 10, 7, 7, 7, 4]
+  H= 29 √det=  1 | 10 cycles, vertex clique sizes: [8, 8, 6, 6, 5, 5]
+  H= 29 √det=  1 | 12 cycles, vertex clique sizes: [11, 8, 8, 8, 7, 6]
+  H= 29 √det=  1 | 12 cycles, vertex clique sizes: [11, 8, 8, 8, 7, 6]
+  H= 31 √det=  7 | 13 cycles, vertex clique sizes: [11, 11, 9, 9, 7, 6]
+  H= 31 √det=  7 | 13 cycles, vertex clique sizes: [11, 11, 9, 9, 7, 6]
+  H= 33 √det=  3 | 16 cycles, vertex clique sizes: [15, 11, 11, 11, 9, 9]
+  H= 33 √det=  1 | 12 cycles, vertex clique sizes: [10, 10, 8, 8, 6, 6]
+  H= 33 √det=  3 | 14 cycles, vertex clique sizes: [12, 10, 10, 9, 8, 7]
+  H= 33 √det=  3 | 14 cycles, vertex clique sizes: [12, 10, 10, 9, 8, 7]
+  H= 33 √det=  3 | 16 cycles, vertex clique sizes: [15, 11, 11, 11, 9, 9]
+  H= 37 √det=  1 | 14 cycles, vertex clique sizes: [12, 12, 10, 10, 7, 7]
+  H= 37 √det=  5 | 16 cycles, vertex clique sizes: [14, 12, 11, 10, 10, 9]
+  H= 37 √det=  3 | 14 cycles, vertex clique sizes: [12, 10, 9, 9, 8, 8]
+  H= 41 √det=  1 | 16 cycles, vertex clique sizes: [12, 12, 11, 11, 9, 9]
+  H= 43 √det=  1 | 19 cycles, vertex clique sizes: [15, 14, 13, 13, 12, 12]
+  H= 43 √det=  1 | 19 cycles, vertex clique sizes: [15, 14, 13, 13, 12, 12]
+  H= 45 √det=  1 | 14 cycles, vertex clique sizes: [9, 9, 9, 9, 9, 9]
+
+
+--- PART 9: ALTERNATIVE — √det and the skew-adjacency Pfaffian ---
+
+
+Actually, for skew-symmetric matrices, det(S) = Pf(S)² (Pfaffian squared).
+And I+2A = J+S where J = all-ones, S = A-A^T (skew).
+
+For ODD n: det(J+S) = det of (n×n) matrix with J rank-1 + skew S.
+  J has eigenvalue n (once) and 0 (n-1 times).
+  S has eigenvalues ±iλ_k and 0 (for odd n).
+
+  det(J+S) = n · ∏ (1 + λ_k²) ... by matrix-tree type theorem?
+  Actually det(J+S) where J=all-ones might factor as n · Pf'(something).
+
+For EVEN n: det(J+S) with S skew n×n.
+  S has eigenvalues ±iλ_k.
+  J+S eigenvalues mix the rank-1 and skew parts.
+
+In either case, det(I+2A) = det(J+S) is a perfect square.
+The Pfaffian connection is: for a skew matrix S:
+  det(xI + S) = Pf(xI + S)² (only for even n)
+  For odd n, det(S) = 0.
+
+But J+S is NOT of the form xI+S (since J ≠ xI).
+
+Pfaffian of S = A-A^T for even n:
+
+  n = 4:
+    H=  1 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H=  3 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  3 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  5 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+
+  n = 6:
+    H=  1 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H=  3 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  3 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  3 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  3 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  5 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H=  5 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H=  5 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H=  9 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  9 det(S)=    25 Pf(S)=±  5 det(J+S)=    25 √det=  5
+    H=  9 det(S)=     9 Pf(S)=±  3 det(J+S)=     9 √det=  3
+    H=  9 det(S)=    25 Pf(S)=±  5 det(J+S)=    25 √det=  5
+    H=  9 det(S)=    81 Pf(S)=±  9 det(J+S)=    81 √det=  9
+    H= 11 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H= 11 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H= 13 det(S)=    49 Pf(S)=±  7 det(J+S)=    49 √det=  7
+    H= 13 det(S)=    49 Pf(S)=±  7 det(J+S)=    49 √det=  7
+    H= 15 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H= 15 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H= 15 det(S)=    81 Pf(S)=±  9 det(J+S)=    81 √det=  9
+    H= 15 det(S)=    25 Pf(S)=±  5 det(J+S)=    25 √det=  5
+    H= 15 det(S)=    81 Pf(S)=±  9 det(J+S)=    81 √det=  9
+    H= 15 det(S)=    25 Pf(S)=±  5 det(J+S)=    25 √det=  5
+    H= 43 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H= 43 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+    H= 45 det(S)=     1 Pf(S)=±  1 det(J+S)=     1 √det=  1
+
+
+SUMMARY:
+  Q = (H²-det)/8 = a·b/2 where a=(H-√det)/2, b=(H+√det)/2
+  Q = 0 iff H = √det iff a = 0
+  √det is always a product of numbers (2m+1) for non-negative integers m
+  This suggests √det = I(G', 2) for some graph G' related to CG
+  The exact relationship G' ↔ CG is the next puzzle.
+

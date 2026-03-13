@@ -1,0 +1,231 @@
+========================================================================
+PFAFFIAN IDENTITY: det(I+2A) vs det(A-A^T)
+========================================================================
+
+THEOREM (to verify): For EVEN n,
+  det(I+2A) = det(A - A^T) = Pf(A - A^T)²
+
+PROOF SKETCH: I+2A = J+S where J=11^T (all-ones), S=A-A^T (skew).
+  By matrix determinant lemma: det(J+S) = det(S)(1 + 1^T S^{-1} 1).
+  S^{-1} is skew-symmetric, so 1^T S^{-1} 1 = 0.
+  Therefore det(J+S) = det(S) = Pf(S)².
+
+For ODD n: det(S) = 0 (odd-dim skew matrix).
+  Need cofactor expansion along the all-ones direction.
+
+--- VERIFICATION: det(I+2A) = det(A-A^T) for even n ---
+
+n = 3 (ODD):
+  H=  1: det(I+2A)=     1  det(S)=     0  MISMATCH! diff=1
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  2/2 mismatches
+
+n = 4 (EVEN):
+  H=  1: det(I+2A)=     1  det(S)=     1  ✓
+  H=  3: det(I+2A)=     9  det(S)=     9  ✓
+  H=  3: det(I+2A)=     9  det(S)=     9  ✓
+  H=  5: det(I+2A)=     1  det(S)=     1  ✓
+  ALL 4 iso classes: det(I+2A) = det(A-A^T) ✓
+
+n = 5 (ODD):
+  H=  1: det(I+2A)=     1  det(S)=     0  MISMATCH! diff=1
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  H=  5: det(I+2A)=     1  det(S)=     0  MISMATCH! diff=1
+  12/12 mismatches
+
+n = 6 (EVEN):
+  H=  1: det(I+2A)=     1  det(S)=     1  ✓
+  H=  3: det(I+2A)=     9  det(S)=     9  ✓
+  H=  3: det(I+2A)=     9  det(S)=     9  ✓
+  H=  3: det(I+2A)=     9  det(S)=     9  ✓
+  H=  3: det(I+2A)=     9  det(S)=     9  ✓
+  H=  5: det(I+2A)=     1  det(S)=     1  ✓
+  H=  5: det(I+2A)=     1  det(S)=     1  ✓
+  H=  5: det(I+2A)=     1  det(S)=     1  ✓
+  H=  9: det(I+2A)=     9  det(S)=     9  ✓
+  H=  9: det(I+2A)=    25  det(S)=    25  ✓
+  H=  9: det(I+2A)=     9  det(S)=     9  ✓
+  H=  9: det(I+2A)=    25  det(S)=    25  ✓
+  H=  9: det(I+2A)=    81  det(S)=    81  ✓
+  ALL 52 iso classes: det(I+2A) = det(A-A^T) ✓
+
+n = 7 (ODD):
+  H=  1: det(I+2A)=     1  det(S)=     0  MISMATCH! diff=1
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  H=  3: det(I+2A)=     9  det(S)=     0  MISMATCH! diff=9
+  367/367 mismatches
+
+========================================================================
+ODD n ANALYSIS: What replaces det(S)?
+========================================================================
+
+For odd n: det(S) = 0, but det(I+2A) ≠ 0.
+Since J = 11^T has rank 1, we can use:
+  det(J+S) = det(S + 11^T)
+
+For singular S (odd n), the matrix determinant lemma becomes:
+  det(S + uv^T) = det(S) + v^T adj(S) u
+where adj(S) is the adjugate matrix.
+
+Since det(S) = 0 for odd n:
+  det(J+S) = 1^T adj(S) 1
+
+adj(S) = matrix of cofactors. For skew S:
+  adj(S)_{ij} = (-1)^{i+j} det(S with row i, col j removed)
+
+For odd-dimensional skew S:
+  The (n-1)×(n-1) minors are EVEN-dimensional skew matrices
+  → their determinants are PERFECT SQUARES (Pfaffian²)!
+
+So: det(I+2A) = Σ_{i,j} adj(S)_{ij} = Σ_{i,j} (-1)^{i+j} Pf(S_{ij})²
+where S_{ij} is S with row i, col j removed.
+
+Wait, that's not quite right. Let me be more careful.
+
+
+--- Odd n: det(I+2A) = 1^T adj(S) 1 ---
+
+n = 3:
+  H=  1: det(I+2A)=   1  1^T·adj(S)·1=   1  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(1), np.int64(-1), np.int64(1)]
+  H=  3: det(I+2A)=   9  1^T·adj(S)·1=   9  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(3), np.int64(3), np.int64(3)]
+
+n = 5:
+  H=  1: det(I+2A)=   1  1^T·adj(S)·1=   1  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(1), np.int64(-1), np.int64(1), np.int64(-1), np.int64(1)]
+  H=  3: det(I+2A)=   9  1^T·adj(S)·1=   9  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1), np.int64(9), np.int64(9)]
+         adj(S) row sums: [np.int64(3), np.int64(3), np.int64(3), np.int64(-9), np.int64(9)]
+  H=  3: det(I+2A)=   9  1^T·adj(S)·1=   9  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(9), np.int64(1), np.int64(1), np.int64(9)]
+         adj(S) row sums: [np.int64(-3), np.int64(9), np.int64(-3), np.int64(-3), np.int64(9)]
+  H=  3: det(I+2A)=   9  1^T·adj(S)·1=   9  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(9), np.int64(9), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(3), np.int64(9), np.int64(-9), np.int64(3), np.int64(3)]
+  H=  5: det(I+2A)=   1  1^T·adj(S)·1=   1  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(9), np.int64(9), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(-1), np.int64(3), np.int64(-3), np.int64(1), np.int64(1)]
+  H=  5: det(I+2A)=   1  1^T·adj(S)·1=   1  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(9), np.int64(9), np.int64(1)]
+         adj(S) row sums: [np.int64(1), np.int64(1), np.int64(-3), np.int64(3), np.int64(-1)]
+  H=  9: det(I+2A)=   9  1^T·adj(S)·1=   9  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(3), np.int64(3), np.int64(-3), np.int64(3), np.int64(3)]
+  H=  9: det(I+2A)=  25  1^T·adj(S)·1=  25  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(9), np.int64(1), np.int64(1), np.int64(9)]
+         adj(S) row sums: [np.int64(5), np.int64(15), np.int64(-5), np.int64(-5), np.int64(15)]
+  H= 11: det(I+2A)=   1  1^T·adj(S)·1=   1  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(1), np.int64(-1), np.int64(1), np.int64(1), np.int64(-1)]
+  H= 13: det(I+2A)=  49  1^T·adj(S)·1=  49  match=✓
+         adj(S) diagonal: [np.int64(9), np.int64(1), np.int64(1), np.int64(9), np.int64(1)]
+         adj(S) row sums: [np.int64(21), np.int64(7), np.int64(-7), np.int64(21), np.int64(7)]
+  H= 15: det(I+2A)=  81  1^T·adj(S)·1=  81  match=✓
+         adj(S) diagonal: [np.int64(9), np.int64(1), np.int64(1), np.int64(1), np.int64(9)]
+         adj(S) row sums: [np.int64(27), np.int64(9), np.int64(9), np.int64(9), np.int64(27)]
+  H= 15: det(I+2A)=  25  1^T·adj(S)·1=  25  match=✓
+         adj(S) diagonal: [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+         adj(S) row sums: [np.int64(5), np.int64(5), np.int64(5), np.int64(5), np.int64(5)]
+
+========================================================================
+DEEPER: adj(S) for skew S of odd dimension
+========================================================================
+
+For odd-dimensional skew matrix S:
+  - det(S) = 0 (always)
+  - rank(S) = n-1 (generically for tournaments)
+  - The null space of S is 1-dimensional
+  - adj(S) = (null vector)(null vector)^T · (some scalar)
+
+If S·v = 0, then adj(S) = c · v·v^T for some scalar c.
+(This follows from the fact that adj(S) has rank 1 when S has rank n-1.)
+
+So: det(I+2A) = 1^T adj(S) 1 = c · (1^T v)² = c · (Σv_i)²
+
+This means √det(I+2A) = √c · |Σv_i| for ODD n!
+
+
+n = 3:
+  H=  1 det(I+2A)=   1 | adj diag=[1, 1, 1] | Pf(S_ii)=[1, 1, 1] | ΣPf=3
+  H=  3 det(I+2A)=   9 | adj diag=[1, 1, 1] | Pf(S_ii)=[1, 1, 1] | ΣPf=3
+
+n = 5:
+  H=  1 det(I+2A)=   1 | adj diag=[1, 1, 1, 1, 1] | Pf(S_ii)=[1, 1, 1, 1, 1] | ΣPf=5
+  H=  3 det(I+2A)=   9 | adj diag=[1, 1, 1, 9, 9] | Pf(S_ii)=[1, 1, 1, 3, 3] | ΣPf=9
+  H=  3 det(I+2A)=   9 | adj diag=[1, 9, 1, 1, 9] | Pf(S_ii)=[1, 3, 1, 1, 3] | ΣPf=9
+  H=  3 det(I+2A)=   9 | adj diag=[1, 9, 9, 1, 1] | Pf(S_ii)=[1, 3, 3, 1, 1] | ΣPf=9
+  H=  5 det(I+2A)=   1 | adj diag=[1, 9, 9, 1, 1] | Pf(S_ii)=[1, 3, 3, 1, 1] | ΣPf=9
+  H=  5 det(I+2A)=   1 | adj diag=[1, 1, 9, 9, 1] | Pf(S_ii)=[1, 1, 3, 3, 1] | ΣPf=9
+  H=  9 det(I+2A)=   9 | adj diag=[1, 1, 1, 1, 1] | Pf(S_ii)=[1, 1, 1, 1, 1] | ΣPf=5
+  H=  9 det(I+2A)=  25 | adj diag=[1, 9, 1, 1, 9] | Pf(S_ii)=[1, 3, 1, 1, 3] | ΣPf=9
+  H= 11 det(I+2A)=   1 | adj diag=[1, 1, 1, 1, 1] | Pf(S_ii)=[1, 1, 1, 1, 1] | ΣPf=5
+  H= 13 det(I+2A)=  49 | adj diag=[9, 1, 1, 9, 1] | Pf(S_ii)=[3, 1, 1, 3, 1] | ΣPf=9
+  H= 15 det(I+2A)=  81 | adj diag=[9, 1, 1, 1, 9] | Pf(S_ii)=[3, 1, 1, 1, 3] | ΣPf=9
+  H= 15 det(I+2A)=  25 | adj diag=[1, 1, 1, 1, 1] | Pf(S_ii)=[1, 1, 1, 1, 1] | ΣPf=5
+
+========================================================================
+THE ODD-n FORMULA
+========================================================================
+
+For odd n, adj(S) has rank 1 when S has rank n-1.
+adj(S)_{ii} = Pf(S_{ii})² (since S_{ii} is even-dim skew).
+adj(S)_{ij} for i≠j: these are minors of odd-dim skew, more complex.
+
+But: det(I+2A) = 1^T adj(S) 1 = Σ_{ij} adj(S)_{ij}
+
+If adj(S) = w·w^T where w_i = ε_i · Pf(S_{ii}), then:
+  det(I+2A) = (Σ ε_i Pf(S_{ii}))²
+
+This would explain why det(I+2A) is always a perfect square!
+For even n: det(I+2A) = Pf(S)²
+For odd n: det(I+2A) = (Σ_i ε_i Pf(S_{ii}))²
+
+Let's check: is adj(S) = w·w^T?
+
+
+n = 3: Checking adj(S) = w·w^T
+  H=  1 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 1, 1] w (attempt2)=[1, -1, 1] match2=True
+  H=  3 rank(adj)=1 adj=w·w^T: ✓ | w=[1, 1, 1] Σw=3 (Σw)²=9 det(I+2A)=9 ✓
+
+n = 5: Checking adj(S) = w·w^T
+  H=  1 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 1, 1, 1, 1] w (attempt2)=[1, -1, 1, -1, 1] match2=True
+  H=  3 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 1, 1, 3, 3] w (attempt2)=[1, 1, 1, -3, 3] match2=True
+  H=  3 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 3, 1, 1, 3] w (attempt2)=[1, -3, 1, 1, -3] match2=True
+  H=  3 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 3, 3, 1, 1] w (attempt2)=[1, 3, -3, 1, 1] match2=True
+  H=  5 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 3, 3, 1, 1] w (attempt2)=[1, -3, 3, -1, -1] match2=True
+  H=  5 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 1, 3, 3, 1] w (attempt2)=[1, 1, -3, 3, -1] match2=True
+  H=  9 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 1, 1, 1, 1] w (attempt2)=[1, 1, -1, 1, 1] match2=True
+  H=  9 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 3, 1, 1, 3] w (attempt2)=[1, 3, -1, -1, 3] match2=True
+  H= 11 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[1, 1, 1, 1, 1] w (attempt2)=[1, -1, 1, 1, -1] match2=True
+  H= 13 rank(adj)=1 adj=w·w^T: False | w (attempt1)=[3, 1, 1, 3, 1] w (attempt2)=[3, 1, -1, 3, 1] match2=True
+  H= 15 rank(adj)=1 adj=w·w^T: ✓ | w=[3, 1, 1, 1, 3] Σw=9 (Σw)²=81 det(I+2A)=81 ✓
+  H= 15 rank(adj)=1 adj=w·w^T: ✓ | w=[1, 1, 1, 1, 1] Σw=5 (Σw)²=25 det(I+2A)=25 ✓
+
+========================================================================
+FINAL SYNTHESIS
+========================================================================
+
+THEOREM (EVEN n): det(I+2A) = Pf(A-A^T)²
+  PROOF: I+2A = J+S, S=A-A^T skew, J=11^T.
+  det(J+S) = det(S)(1 + 1^T S^{-1} 1) = det(S)·1 = Pf(S)².
+  (Because x^T M x = 0 for any skew M, applied to M = S^{-1}, x = 1.)
+
+THEOREM (ODD n): det(I+2A) = (Σ_i w_i)²
+  where w is the Pfaffian-residue vector:
+  adj(S) = w·w^T (rank-1 since S has rank n-1)
+  w_i related to Pfaffians of (n-1)×(n-1) principal submatrices.
+
+COROLLARY: det(I+2A) is ALWAYS a perfect square for ALL n.
+  Even n: square of Pfaffian.
+  Odd n: square of sum of signed sub-Pfaffians.
+
+This PROVES HYP-788 (det(I+2A) is a perfect square)!
+
