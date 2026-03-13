@@ -315,6 +315,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-615 | **ISING MODEL EXACT MAPPING**: Tournament Fibonacci cascade maps to 1D Ising model at β·J = arctanh(√5/3) = log(φ²) = 0.9624. Magnetization M = √5/3. Correlation length ξ = 1/(4logφ) ≈ 0.52. | ising_anyon_bridge.py. | opus-S67f |
 | HYP-616 | **FIBONACCI-CHEBYSHEV TRIG IDENTITY**: F_p = prod_{k=1}^m (1 + sin²(mπk/p)/sin²(πk/p)) and prod(sin²(πk/p)+sin²(mπk/p)) = F_p·p/2^{p-1}. Verified to 10 digits for p=7,11,13,17,23. | ising_anyon_bridge.py. | opus-S67f |
 | HYP-617 | **2D FREE ENERGY CONVERGENCE**: The "free energy" f_2D = log(A)/m² converges: 0.02(p=7), 0.16(p=11), 0.18(p=13), 0.20(p=17,19), suggesting A(p) = partition function of a 2D system on Ω. NOTE: KPZ fit (HYP-610) shows m^{4/3} dominates over m², so true exponent is sub-quadratic. | ising_anyon_bridge.py, kpz_deep_dive.py. | opus-S67f |
+| HYP-618 | **c_3 ORIENTATION INVARIANCE**: For ANY circulant tournament on Z_p, c_3 (number of 3-cycle vertex sets) is CONSTANT across all 2^m orientations. Equals C(p,3)-p*C(m,2), depending only on regularity. Has ZERO degree-2 (and higher) Walsh content. | cycle_walsh_decomposition.py. Verified p=7 (c_3=14 all 8 orientations), p=11 (c_3=55 all 32 orientations). | kind-pasteur-S60 |
+| HYP-619 | **OCF CANCELLATION MECHANISM**: Walsh coefficients of H arise from MASSIVE cancellation between alpha_1 (total cycles, weight 2) and alpha_2+ (independent sets, weight 4+). At p=7: h_hat_alpha_1=-15.75 (wrong sign), h_hat_alpha_2=8.75 (right sign), h_hat_H=2(-15.75)+4(8.75)=3.5. The product law sign survives through nonlinear OCF weighting. At p=11: |h_hat_alpha_1|=11454 but |h_hat_H|=272 (96% cancellation). | cycle_walsh_decomposition.py, hhat_magnitude_formula.py. | kind-pasteur-S60 |
+| HYP-620 | **c_k WALSH SIGN ALTERNATION**: Degree-2 Walsh of c_k for resonance level q alternates sign as function of k. At p=11, q=3: signs -,+,-,+ for k=5,7,9,11. At p=7, q=3: signs +,- for k=5,7. Pattern: sign = -chi(q) * (-1)^{(k-q-2)/2} * chi(ab) for onset k=q+2. | cycle_walsh_decomposition.py. | kind-pasteur-S60 |
+| HYP-621 | **UNIVERSAL EVEN-DEGREE PRODUCT LAW**: sign(h_hat[S]) = chi(product of gaps in S) for ALL even-degree Walsh coefficients, not just degree 2. Verified at p=11: ALL 5 degree-4 coefficients have |h_hat_4|=118.25 with sign=chi(prod gaps). Combined with degree-2, ALL even-degree Walsh magnitudes are constant within each "resonance class". | gauss_walsh_magnitude.py. | kind-pasteur-S60 |
 | HYP-434 | chi(T) distribution at n=8: chi=1 (81.75%), chi=0 (17.55%), chi=2 (0.65%), chi=3 (0.05%) | 2000 random tournaments, full complex max_p=7. chi=2 from β_4=1, chi=3 from β_4=2. chi=3 ONLY from near-regular score (3,3,3,3,4,4,4,4) with c3=20 (maximum). No chi<0 or chi>3 seen. | kind-pasteur-S50 |
 | HYP-435 | β_4>0 requires c3 >= 16 at n=8 (out of max 20) | 2000 samples: c3 range for β_4=1 is 16-20, most common c3=18,19. β_4=2 only at c3=20. Highly cyclic structure required. Contrast: β_3>0 allows c3 as low as 7. | kind-pasteur-S50 |
 | HYP-436 | Unique chi=3 tournament has β_4=2, score (3,3,3,3,4,4,4,4), c3=20 | In 2000 samples, exactly 1 tournament had chi=3. Regular-adjacent score (differs by 1 from regular) with max possible c3=20. Consistent with earlier HYP-324 (β_4=5 at c3=20 from regular score). | kind-pasteur-S50 |
@@ -525,6 +529,9 @@ HYP-479, HYP-480, HYP-481, HYP-482, HYP-483, HYP-484, HYP-485, HYP-486, HYP-487,
 
 ### Cross-field connections (Fibonacci resonance cascade)
 HYP-596, HYP-597, HYP-598, HYP-599, HYP-600, HYP-610, HYP-611, HYP-612, HYP-613, HYP-614, HYP-615, HYP-616, HYP-617
+
+### Walsh-Overlap Weight Analysis
+HYP-618, HYP-619, HYP-620, HYP-621
 
 ### Dimensional meta-patterns (simplex perspective)
 HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310, HYP-311, HYP-312, HYP-313, HYP-314, HYP-315

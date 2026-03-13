@@ -1,0 +1,122 @@
+======================================================================
+CYCLE-COUNT WALSH DECOMPOSITION
+======================================================================
+
+============================================================
+p = 7, m = 3
+============================================================
+
+  Cycle count ranges across orientations:
+    c_3: min=14, max=14, mean=14.00
+    c_5: min=28, max=42, mean=31.50
+    c_7: min=318, max=395, mean=375.75
+
+  --- Degree-2 Walsh of c_k ---
+
+  c_3 degree-2 Walsh:
+    ALL ZERO (c_3 has no degree-2 Walsh content)
+
+  c_5 degree-2 Walsh:
+    q=3: |h_hat_c5| = [3.5], sign=chi(ab): ALL OK
+      (0,1): h_hat_c5=    3.5000, chi(ab)=+1
+      (0,2): h_hat_c5=   -3.5000, chi(ab)=-1
+      (1,2): h_hat_c5=   -3.5000, chi(ab)=-1
+
+  c_7 degree-2 Walsh:
+    q=3: |h_hat_c7| = [19.25], sign=chi(ab): FAILS
+      (0,1): h_hat_c7=  -19.2500, chi(ab)=+1
+      (0,2): h_hat_c7=   19.2500, chi(ab)=-1
+      (1,2): h_hat_c7=   19.2500, chi(ab)=-1
+
+  --- Degree-2 Walsh of H ---
+    q=3: |h_hat_H| = [3.5]
+
+  --- Degree-2 Walsh of alpha_1 = total cycles ---
+    q=3: |h_hat_total| = [15.75], sign=chi(ab): FAILS
+      (0,1): val=  -15.7500, chi(ab)=+1
+      (0,2): val=   15.7500, chi(ab)=-1
+      (1,2): val=   15.7500, chi(ab)=-1
+
+============================================================
+p = 11, m = 5
+============================================================
+
+  Cycle count ranges across orientations:
+    c_3: min=55, max=55, mean=55.00
+    c_5: min=484, max=594, mean=539.00
+    c_7: min=11220, max=12749, mean=11893.75
+    c_9: min=199624, max=216938, mean=210118.00
+    c_11: min=4438890, max=4621963, mean=4505206.25
+
+  --- Degree-2 Walsh of c_k ---
+
+  c_3 degree-2 Walsh:
+    ALL ZERO (c_3 has no degree-2 Walsh content)
+
+  c_5 degree-2 Walsh:
+    q=3: |h_hat_c5| = [5.5], sign=chi(ab): FAILS
+      (0,2): h_hat_c5=   -5.5000, chi(ab)=+1
+      (0,3): h_hat_c5=   -5.5000, chi(ab)=+1
+      (1,2): h_hat_c5=    5.5000, chi(ab)=-1
+      (1,4): h_hat_c5=    5.5000, chi(ab)=-1
+      (3,4): h_hat_c5=   -5.5000, chi(ab)=+1
+
+  c_7 degree-2 Walsh:
+    q=3: |h_hat_c7| = [96.25], sign=chi(ab): ALL OK
+      (0,2): h_hat_c7=   96.2500, chi(ab)=+1
+      (0,3): h_hat_c7=   96.2500, chi(ab)=+1
+      (1,2): h_hat_c7=  -96.2500, chi(ab)=-1
+      (1,4): h_hat_c7=  -96.2500, chi(ab)=-1
+      (3,4): h_hat_c7=   96.2500, chi(ab)=+1
+    q=5: |h_hat_c7| = [16.5], sign=chi(ab): ALL OK
+      (0,1): h_hat_c7=  -16.5000, chi(ab)=-1
+      (0,4): h_hat_c7=   16.5000, chi(ab)=+1
+      (1,3): h_hat_c7=  -16.5000, chi(ab)=-1
+      (2,3): h_hat_c7=   16.5000, chi(ab)=+1
+      (2,4): h_hat_c7=   16.5000, chi(ab)=+1
+
+  c_9 degree-2 Walsh:
+    q=3: |h_hat_c9| = [1177.0], sign=chi(ab): FAILS
+      (0,2): h_hat_c9=-1177.0000, chi(ab)=+1
+      (0,3): h_hat_c9=-1177.0000, chi(ab)=+1
+      (1,2): h_hat_c9= 1177.0000, chi(ab)=-1
+      (1,4): h_hat_c9= 1177.0000, chi(ab)=-1
+      (3,4): h_hat_c9=-1177.0000, chi(ab)=+1
+    q=5: |h_hat_c9| = [423.5], sign=chi(ab): FAILS
+      (0,1): h_hat_c9=  423.5000, chi(ab)=-1
+      (0,4): h_hat_c9= -423.5000, chi(ab)=+1
+      (1,3): h_hat_c9=  423.5000, chi(ab)=-1
+      (2,3): h_hat_c9= -423.5000, chi(ab)=+1
+      (2,4): h_hat_c9= -423.5000, chi(ab)=+1
+
+  c_11 degree-2 Walsh:
+    q=3: |h_hat_c11| = [12540.0], sign=chi(ab): ALL OK
+      (0,2): h_hat_c11=12540.0000, chi(ab)=+1
+      (0,3): h_hat_c11=12540.0000, chi(ab)=+1
+      (1,2): h_hat_c11=-12540.0000, chi(ab)=-1
+      (1,4): h_hat_c11=-12540.0000, chi(ab)=-1
+      (3,4): h_hat_c11=12540.0000, chi(ab)=+1
+    q=5: |h_hat_c11| = [6701.75], sign=chi(ab): ALL OK
+      (0,1): h_hat_c11=-6701.7500, chi(ab)=-1
+      (0,4): h_hat_c11= 6701.7500, chi(ab)=+1
+      (1,3): h_hat_c11=-6701.7500, chi(ab)=-1
+      (2,3): h_hat_c11= 6701.7500, chi(ab)=+1
+      (2,4): h_hat_c11= 6701.7500, chi(ab)=+1
+
+  --- Degree-2 Walsh of H ---
+    q=3: |h_hat_H| = [272.25]
+    q=5: |h_hat_H| = [8.25]
+
+  --- Degree-2 Walsh of alpha_1 = total cycles ---
+    q=3: |h_hat_total| = [11453.75], sign=chi(ab): ALL OK
+      (0,2): val=11453.7500, chi(ab)=+1
+      (0,3): val=11453.7500, chi(ab)=+1
+      (1,2): val=-11453.7500, chi(ab)=-1
+      (1,4): val=-11453.7500, chi(ab)=-1
+      (3,4): val=11453.7500, chi(ab)=+1
+    q=5: |h_hat_total| = [6294.75], sign=chi(ab): ALL OK
+      (0,1): val=-6294.7500, chi(ab)=-1
+      (0,4): val= 6294.7500, chi(ab)=+1
+      (1,3): val=-6294.7500, chi(ab)=-1
+      (2,3): val= 6294.7500, chi(ab)=+1
+      (2,4): val= 6294.7500, chi(ab)=+1
