@@ -1,0 +1,59 @@
+======================================================================
+CONFLICT GRAPH OMEGA SPECTRUM at p=7
+======================================================================
+
+  Interval (bits=000, S=[4, 5, 6]):
+    |V(Omega)| = 59
+    |E(Omega)| = 1697
+    by_len: {3: 14, 5: 28, 7: 17}
+    alpha_1=59, alpha_2=14, H=175
+    Degree dist: {56: 14, 58: 45}
+    Mean degree: 57.5254
+    Top 5 eigenvalues: ['57.5375', '0.8019', '0.8019', '0.8019', '0.8019']
+    Bottom 5 eigenvalues: ['-2.2470', '-2.2470', '-2.2470', '-2.5375', '-3.0000']
+    Spectral gap: 56.7355
+    I(x) = 1 + 59x + 14x^2
+    Discriminant: 3425
+    Roots: -0.017018, -4.197268
+    H = I(2) = 1 + 118 + 56 = 175
+    |E(Omega_complement)| = 14
+    Edge density Omega: 0.9918
+
+  Paley-orbit (bits=011, S=[1, 2, 4]):
+    |V(Omega)| = 80
+    |E(Omega)| = 3153
+    by_len: {3: 14, 5: 42, 7: 24}
+    alpha_1=80, alpha_2=7, H=189
+    Degree dist: {78: 14, 79: 66}
+    Mean degree: 78.8250
+    Top 5 eigenvalues: ['78.8268', '0.0000', '0.0000', '0.0000', '0.0000']
+    Bottom 5 eigenvalues: ['-2.0000', '-2.0000', '-2.0000', '-2.0000', '-2.0000']
+    Spectral gap: 78.8268
+    I(x) = 1 + 80x + 7x^2
+    Discriminant: 6372
+    Roots: -0.012514, -11.416058
+    H = I(2) = 1 + 160 + 28 = 189
+    |E(Omega_complement)| = 7
+    Edge density Omega: 0.9978
+
+
+======================================================================
+COMPARISON: INTERVAL vs PALEY Omega
+======================================================================
+
+  Key differences:
+  - Paley: alpha_1=80, alpha_2=7  -> fewer cycles but denser conflict graph
+  - Interval: alpha_1=59, alpha_2=14 -> fewer cycles but more independent pairs
+
+  The Paley Omega has MORE vertices (80 vs 59) but FEWER independent pairs (7 vs 14).
+  This means Paley's conflict graph is DENSER: more overlap between cycles.
+
+  This is the BIBD property in action: Paley arranges 3-cycles so they overlap
+  more uniformly, leaving fewer opportunities for disjoint packing.
+  But it has MORE cycles overall.
+
+  At H = 1 + 2*alpha_1 + 4*alpha_2:
+  Paley: 1 + 160 + 28 = 189
+  Interval: 1 + 118 + 56 = 175
+  
+DONE.
