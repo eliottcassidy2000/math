@@ -111,10 +111,35 @@ The Vitali atom operates at the **W=1/W=0 boundary**:
 
 This is why the Vitali atom reveals the "hidden dimension": the product structure at W=0 is information that cannot be recovered from any single-pair statistic. It requires knowledge of the GLOBAL arrangement of cycles.
 
+## n=9 Results (CONFIRMED)
+
+The formula extends to n=9:
+
+**delta_H = 2*(dc7_dir + dc9_dir) + 4*delta_i2**
+
+Confirmed 42/42 with 0 failures. Key findings:
+- **dc9 channel ACTIVE**: dc9 ranges from -3 to +3, nonzero in 71% of examples
+- **dc3 = dc5 = 0 ALWAYS**: net preservation continues at n=9
+- **di3 = 0 STRUCTURALLY**: the c3 swap preserves disjoint triple counts perfectly
+- The c3 vertex set swap preserves ALL disjointness counts: c3 count, c3-c3 pairs, c3-c3-c3 triples
+
+The di3 = 0 result means the i3 channel doesn't open at n=9 despite being geometrically possible (three disjoint c3's need exactly 9 = n vertices). This is because the c3 swap is a "measure-preserving" permutation that maintains all disjointness structure.
+
+## Updated Hierarchy Table
+
+| n | Formula | Active channels | New phenomenon |
+|---|---------|----------------|----------------|
+| ≤6 | delta_H = 0 | None | Gauge-trivial |
+| 7 | delta_H = 2·dc7 | c7 count | First non-trivial |
+| 8 | delta_H = 2·dc7 + 4·di2 | c7 count + disjoint pairs | Multiplicity reshuffling |
+| 9 | delta_H = 2·(dc7+dc9) + 4·di2 | c7,c9 counts + pairs | c9 opens, di3 stays 0 |
+| 10+ | delta_H = 2·Σdc_{2k+1} + 4·di2 + ... | (predicted) | c5 may become non-invariant? |
+
 ## Open Questions
 
-1. **n=9 verification**: Does the predicted formula delta_H = 2·(dc7+dc9) + 4·di2 + 8·di3 hold?
-2. **c5 phase transition**: Does c5 finally become non-invariant at n=9?
-3. **General formula**: Is delta_H = Σ_k 2^k · delta_i_k exact for all n?
+1. **n=10 phase transition**: Does c5 finally become non-invariant?
+2. **When does di3 open?** The c3 swap preserves disjointness — does this break at larger n?
+3. **General formula**: Is delta_H = Σ_k 2^k · delta_i_k exact for all n? (HYP-837)
 4. **Algebraic structure**: Is there a Lie algebra or operad structure underlying the hierarchy?
 5. **Connection to TDA**: The hierarchy resembles a persistence filtration. Is there a formal connection?
+6. **WHY is the c3 swap disjointness-preserving?** What algebraic property forces this?

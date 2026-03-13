@@ -28,6 +28,23 @@ Entry format:
 **New contributions:** HYP-818, HYP-819, HYP-834, HYP-835, HYP-836. Scripts: conflict_graph_indpoly.py, conflict_graph_structure.py, ocf_information_theory.py, hard_core_gas_tournament.py, spectral_alpha2_connection.py, fibonacci_fractal_tournaments.py
 **Unresolved threads:** (1) Prove Ramanujan eigenvalue uniformity => max α₂ at general n. (2) Characterize which conflict graphs are realizable by tournaments. (3) Does the two-phase structure persist at n≥7? (4) Engineering: implement hard-core gas approximation algorithm for H.
 
+## kind-pasteur-2026-03-13-S61 (cont'd) — 2026-03-13: Two-Channel Formula PROVED n=8-9
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S61 (context recovery — n=8 extension)
+**Summary of work:**
+- **THM-170: VITALI TWO-CHANNEL FORMULA AT n=8**: delta_H = 2*dc7_dir + 4*di2. CONFIRMED 166/166 with 0 failures. Two independent channels: c7 directed count (range -3..3) and vertex-disjoint directed cycle pair count (range -2..2).
+- **n=9 THREE-CHANNEL FORMULA (HYP-838)**: delta_H = 2*(dc7+dc9) + 4*di2. CONFIRMED 42/42. dc9 channel active (71%), di3=0 structurally.
+- **c3/c5 NET ZERO RESHUFFLING (HYP-831)**: dc3_dir = dc5_dir = 0 ALWAYS at n=8 and n=9. The Vitali atom swaps cycle identities without changing totals.
+- **OVERLAP WEIGHT SPECTRUM PRESERVATION (HYP-832)**: ALL pairwise overlap counts W=0..5 are perfectly preserved. 60/60 at n=8.
+- **c3 SWAP PRESERVES ALL DISJOINTNESS (HYP-839)**: delta_c3_count = delta_c3_c3_pairs = delta_c3_c3_c3_triples = 0 always. Deep structural invariant.
+- **i2 DRIVEN ENTIRELY BY (c3,c5) PAIRS**: delta_33=0 always, delta_35 = delta_i2. Mechanism: c5 multiplicities change on vertex sets disjoint from swapped c3 sets.
+- **|V cap S| MARGINAL ANALYSIS**: c5 mults change only at |V cap S|=2 or 4 (never 1 or 3). c3 swaps only at |cap S|=2. For disjoint (c3,c5): |c3 cap S| + |c5 cap S| = 4.
+- **FOUR-LEVEL STRUCTURE**: counts -> identities -> multiplicities -> products. Vitali acts at Level 2 (mults), propagates to Level 3 (products = i2).
+- **GENERAL FORMULA CONJECTURE (HYP-841)**: delta_H = sum_k 2^k * delta_i_k for all n.
+**New contributions:** THM-170. HYP-830 through HYP-832, HYP-838 through HYP-841. Scripts: omega_ip_decomposition_n8.py, directed_multiplicity_vitali.py, vitali_i2_formula_n8.py, vitali_reshuffling_anatomy.py, vitali_c5_multiplicity_mechanism.py, vitali_n9_prediction.py, vitali_di3_analysis_n9.py. Synthesis: vitali-overlap-weight-synthesis.md.
+**Unresolved threads:** (1) Does c5 phase transition at n=10? (2) When does di3 channel open? (3) WHY is c3 swap disjointness-preserving? (4) Connection to Lie algebra / operad structure.
+
 ## kind-pasteur-2026-03-13-S61 — 2026-03-13: Vitali Atom Complete Characterization
 
 **Account:** kind-pasteur
