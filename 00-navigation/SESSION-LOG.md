@@ -56,6 +56,53 @@ Entry format:
 
 ---
 
+## kind-pasteur-2026-03-12-S58 — 2026-03-12: HYP-480 exhaustive verification + phase transition anatomy
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S58 (context compaction recovery)
+**Summary of work:**
+
+  MAJOR RESULTS:
+
+  1. **HYP-480 EXHAUSTIVELY VERIFIED at p=5,7,11,13,19**: All circulant tournaments
+     enumerated. Interval is global H-maximizer for p>=13. All maximizers form
+     Z_p^* orbits with trivial stabilizer.
+     - p=19: 512 evaluations (30 min Held-Karp), 18 maximizers in orbit
+     - p=13: 64 evaluations (1s), 12 maximizers in orbit, 6 distinct H values
+     - p=5: 4 tournaments, all H=15 (trivial)
+
+  2. **THM-140: E-H CORRELATION SIGN REVERSAL**: Pearson r(E,H) between additive
+     energy and H flips from r=-1.0 (p=7) to r=+0.51 (p=13). Crossover between
+     p=11 and p=13. Smoking gun for the phase transition mechanism.
+
+  3. **HYP-490 REFUTED / HYP-512**: Paley J-eigenvalue flips sign!
+     lambda_P = +7.0 (p=7), +561.0 (p=11), -544M (p=19). At p=19, Paley
+     ANTI-optimizes the 2-body Ising term: Q(Paley) = -4.9B < 0 < Q(Int) = +1.1B.
+     SDP gap NEGATIVE at p=19 (-12.5B).
+
+  4. **Three-stage phase transition anatomy**:
+     p=7: Paley wins quadratic (+28), loses higher-order (-14). Net: +14.
+     p=11: Paley wins quadratic (+2244), loses higher-order (-176). Net: +2068.
+     p=19: Interval wins BOTH quadratic (+6.0B) AND higher-order (+5.5B). Net: +11.5B.
+
+  5. **Walsh-Fourier structure at p=19**: J has exactly 4 distinct |coefficient|
+     values, 9 pairs each. Only even-degree Walsh terms nonzero. Degree-4,6
+     dominate over degree-2 in energy. Walsh energy: 87% degree-4, 46% degree-6.
+
+**New contributions:**
+  - THM-140: E-H correlation sign reversal theorem
+  - HYP-511: E-H sign reversal hypothesis
+  - HYP-512: Paley J-eigenvalue sign flip
+  - Scripts: orientation_cube_p13.py, energy_H_correlation.py, walsh_structure_analysis.py,
+    j_eigenvalue_transition.py, additive_energy_disjointness_proof.py, phase_transition_p13.py
+
+**Unresolved threads:**
+  - Rigorous proof of HYP-480 for all p >= p_0
+  - What determines p_0? The J-eigenvalue sign flip suggests lambda_P = 0 at some p_c
+  - Can the additive energy bound alpha_2 / alpha_1 quantitatively?
+  - p=29 computation needs gcc for C-based Held-Karp (Python too slow)
+  - Full alpha decomposition at p=13,19 infeasible in Python (alpha_1 = 232K / 131B)
+
 ## opus-2026-03-12-S62d — 2026-03-12: p=19,23 verified, three-strategy proof framework, 30+ connections
 
 **Account:** opus

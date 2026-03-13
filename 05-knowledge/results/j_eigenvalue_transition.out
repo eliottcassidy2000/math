@@ -1,0 +1,98 @@
+======================================================================
+J-EIGENVALUE TRANSITION: TRACKING THE PALEY EIGENVALUE SIGN FLIP
+======================================================================
+
+============================================================
+p=5, m=2, 4 orientations, Paley N/A
+============================================================
+  Computation time: 0.0s
+  H_0 (mean) = 15.00
+  J eigenvalues: [np.float64(0.0), np.float64(0.0)]
+  Max eigenvalue: 0.00
+  Min eigenvalue: 0.00
+
+  Interval sigma = (0, 0)
+  Q(Interval) = 0.00
+  sum(J) = 0.00
+
+  SDP bound = H_0 + m*max_eig = 15.00
+  Actual max H = 15
+  SDP gap = 0.00 (NEGATIVE)
+
+============================================================
+p=7, m=3, 8 orientations, Paley EXISTS
+============================================================
+  Computation time: 0.0s
+  H_0 (mean) = 178.50
+  J eigenvalues: [np.float64(-3.5000000000000004), np.float64(-3.499999999999999), np.float64(7.000000000000002)]
+  Max eigenvalue: 7.00
+  Min eigenvalue: -3.50
+
+  Paley sigma = (0, 0, 1)
+  Q(Paley) = sigma^T J sigma = 21.00
+  lambda_P = Q/m = 7.00
+  Paley IS an eigenvector of J with eigenvalue 7.00
+
+  Interval sigma = (0, 0, 0)
+  Q(Interval) = -7.00
+  sum(J) = -7.00
+
+  SDP bound = H_0 + m*max_eig = 199.50
+  Actual max H = 189
+  SDP gap = 10.50 (POSITIVE)
+
+  KEY: lambda_P = 7.00, sign = POSITIVE
+
+============================================================
+p=11, m=5, 32 orientations, Paley EXISTS
+============================================================
+  Computation time: 0.1s
+  H_0 (mean) = 93101.25
+  J eigenvalues: [np.float64(-435.41097302997224), np.float64(-435.4109730299722), np.float64(154.9109730299721), np.float64(154.91097302997215), np.float64(561.0000000000002)]
+  Max eigenvalue: 561.00
+  Min eigenvalue: -435.41
+
+  Paley sigma = (0, 1, 0, 0, 0)
+  Q(Paley) = sigma^T J sigma = 2805.00
+  lambda_P = Q/m = 561.00
+  Paley IS an eigenvector of J with eigenvalue 561.00
+
+  Interval sigma = (0, 0, 0, 0, 0)
+  Q(Interval) = 561.00
+  sum(J) = 561.00
+
+  SDP bound = H_0 + m*max_eig = 95906.25
+  Actual max H = 95095
+  SDP gap = 811.25 (POSITIVE)
+
+  KEY: lambda_P = 561.00, sign = POSITIVE
+
+============================================================
+p=13, m=6, 64 orientations, Paley N/A
+============================================================
+  Computation time: 0.7s
+  H_0 (mean) = 3695839.88
+  J eigenvalues: [np.float64(-3781.2487509250695), np.float64(-3781.248750925069), np.float64(-1556.7499999999993), np.float64(-1556.749999999999), np.float64(5337.9987509250695), np.float64(5337.998750925071)]
+  Max eigenvalue: 5338.00
+  Min eigenvalue: -3781.25
+
+  Interval sigma = (0, 0, 0, 0, 0, 0)
+  Q(Interval) = -3113.50
+  sum(J) = -3113.50
+
+  SDP bound = H_0 + m*max_eig = 3727867.87
+  Actual max H = 3711175
+  SDP gap = 16692.87 (POSITIVE)
+
+============================================================
+p=19, m=9, 512 orientations (from precomputed data)
+============================================================
+  J eigenvalues: [-604M(x2), -544M(x1), +163M(x2), +253M(x2), +460M(x2)]
+  Paley eigenvalue = -544M (NEGATIVE)
+  Q(Paley) = -4,900,099,958
+  Q(Interval) = +1,117,343,600
+
+======================================================================
+PALEY EIGENVALUE TRANSITION TABLE
+======================================================================
+    p    m         lambda_P      sign          max_eig       SDP_gap    H winner
