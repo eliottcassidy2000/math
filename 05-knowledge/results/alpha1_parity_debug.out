@@ -1,0 +1,103 @@
+======================================================================
+TEST: Integer preservation in matrix_power
+======================================================================
+  A dtype: int64
+  A^5 dtype: int64
+  A^5 trace: 10, type: <class 'numpy.int64'>
+  A^5 trace / 5: 2.0
+  A^5 trace // 5: 2
+
+  Random 7x7, A^7 dtype: int64
+  Max entry in A^7: 823
+  Int power A^7 dtype: int64
+  Match with np version: True
+  Exact match: True
+
+======================================================================
+FIXED: alpha_1 parity check with integer matrix power
+======================================================================
+  Matches: 104/200
+  First 5 mismatches:
+    bits=121958, H=157, alpha_1=355, (H-1)/2 mod 2 = 0, alpha_1 mod 2 = 1
+    bits=1414414, H=109, alpha_1=181, (H-1)/2 mod 2 = 0, alpha_1 mod 2 = 1
+    bits=259178, H=37, alpha_1=77, (H-1)/2 mod 2 = 0, alpha_1 mod 2 = 1
+    bits=1692743, H=91, alpha_1=184, (H-1)/2 mod 2 = 1, alpha_1 mod 2 = 0
+    bits=732180, H=113, alpha_1=177, (H-1)/2 mod 2 = 0, alpha_1 mod 2 = 1
+
+  Checking np.linalg.matrix_power vs int_matrix_power:
+  Disagreements: 0/100
+
+======================================================================
+tr(Sigma^3) gap 12-divisibility: WHY?
+======================================================================
+
+At n=7, all tr(Sigma^3) gaps between ambiguous simplex profiles are
+divisible by 12 = 4 * 3 = 2^2 * 3.
+
+Sigma = (n-2)*J_off - sym(A^2)_off (from THM-179 region)
+
+tr(Sigma^k) involves traces of products of A^2 symmetrization.
+
+The factor 12:
+  - Factor 4 = 2^2: comes from sigma being an even function of A
+    (sigma(u,v) counts common successors + predecessors)
+  - Factor 3: comes from 3-cycle structure
+
+Actually, let me think about this more carefully.
+
+tr(Sigma^3) = sum_{i,j,k} Sigma[i,j] * Sigma[j,k] * Sigma[k,i]
+
+Since Sigma is symmetric: this is 2 * (sum over ordered triples) +
+diagonal terms. But Sigma has 0 diagonal (Sigma[i,i] = 0 by def).
+
+So tr(Sigma^3) = sum_{distinct i,j,k} Sigma[i,j]*Sigma[j,k]*Sigma[k,i]
+Note this counts DIRECTED triangles in the Sigma graph.
+
+Each undirected triangle {i,j,k} contributes:
+  2 * Sigma[i,j]*Sigma[j,k]*Sigma[k,i] (two orientations)
+
+Hmm wait, tr(Sigma^3) = sum_i (Sigma^3)[i,i] = sum_i sum_j sum_k Sigma[i,j]*Sigma[j,k]*Sigma[k,i]This automatically includes all orderings. Each unordered triple {i,j,k}
+appears in 6 ordered triples (i,j,k), (i,k,j), (j,i,k), (j,k,i), (k,i,j), (k,j,i).
+Due to symmetry of Sigma, the product is the same for:
+  (i,j,k) and (k,j,i): S[i,j]S[j,k]S[k,i] = S[k,i]S[i,j]S[j,k] (reordered)
+So each unordered triple contributes 6 * S[i,j]*S[j,k]*S[k,i] to tr(Sigma^3).
+Wait: 2 * the sum over CYCLIC orderings. There are 2 cyclic orderings
+per unordered triple. And 3 rotations per cyclic ordering.
+So 2 * 3 = 6 terms per unordered triple, each equal.
+
+tr(Sigma^3) = 6 * sum_{i<j<k} S[i,j]*S[j,k]*S[k,i]
+Wait, that's not right either. S[i,j]*S[j,k]*S[k,i] = S[j,i]*S[i,k]*S[k,j]
+by symmetry. So the two cyclic orderings give the SAME product.
+And 3 rotations also give the same product.
+So: tr(Sigma^3) = 6 * sum_{i<j<k} S[i,j]*S[j,k]*S[k,i]? No...
+
+Let me just verify: for Sigma symmetric:
+tr(Sigma^3) = sum_i,j,k S[i,j]S[j,k]S[k,i]
+For fixed unordered {i,j,k} with i<j<k:
+  ordered triples with all distinct: (i,j,k),(i,k,j),(j,i,k),(j,k,i),(k,i,j),(k,j,i)
+  (i,j,k): S[i,j]S[j,k]S[k,i] = p
+  (i,k,j): S[i,k]S[k,j]S[j,i] = p (by symmetry of S)
+  (j,i,k): S[j,i]S[i,k]S[k,j] = p
+  (j,k,i): S[j,k]S[k,i]S[i,j] = p
+  (k,i,j): S[k,i]S[i,j]S[j,k] = p
+  (k,j,i): S[k,j]S[j,i]S[i,k] = p
+All 6 are equal to p = S[i,j]*S[j,k]*S[k,i].
+
+So tr(Sigma^3) = 6 * sum_{i<j<k} S[i,j]*S[j,k]*S[k,i]
+
+Therefore tr(Sigma^3) is always divisible by 6!
+
+And if the difference of two tr(Sigma^3) values is divisible by 12,
+that means the difference of sum_{i<j<k} S[i,j]*S[j,k]*S[k,i] is
+divisible by 2.
+
+Since sigma values are integers, the product S[i,j]*S[j,k]*S[k,i]
+is an integer. The question is: why is the DIFFERENCE of sums always even?
+
+
+  tr(Sigma^3) mod 6: {0: 2000}
+  Always divisible by 6: True
+  tr(Sigma^3) mod 12: {0: 2000}
+
+
+Done.
