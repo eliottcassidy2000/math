@@ -1,0 +1,505 @@
+======================================================================
+ANALYSIS 1: DEGENERATE CASES AS AXIOMS OF TOURNAMENT THEORY
+======================================================================
+
+The degenerate tournaments n=0,1,2 encode the AXIOMS of the theory:
+
+n=0: The EMPTY tournament
+  - Vertices: none. Edges: none.
+  - H(T_0) = 1 (empty permutation = identity in S_0)
+  - Omega(T_0) = empty graph
+  - I(empty, 2) = 1 (empty product)
+  - OCF: H = 1 + 0 = 1 (no cycles exist)
+  - AXIOM: The empty sum of odd cycles contributes 1 to H.
+  - This is the MULTIPLICATIVE IDENTITY for H under disjoint union.
+  - Dimension of orientation space: C(0,2) = 0. A single point.
+
+n=1: The TRIVIAL tournament
+  - Vertices: {0}. Edges: none.
+  - H(T_1) = 1 (unique permutation of 1 element)
+  - Omega(T_1) = empty graph (no odd cycles on 1 vertex)
+  - OCF: H = 1
+  - AXIOM: A single vertex contributes 1 path (itself).
+  - Dimension: C(1,2) = 0. Still a single point.
+  - The tournament space at n=0 and n=1 are INDISTINGUISHABLE
+    from the orientation-space perspective. Both are 0-dimensional.
+
+n=2: The FIRST NONTRIVIAL case
+  - Vertices: {0,1}. Edges: one directed edge.
+  - H(T_2) = 1 (unique Hamiltonian path: winner -> loser)
+  - Orientation space: {0,1}^1 = two points (0->1 or 1->0)
+  - Both are isomorphic! S_2 swaps them.
+  - Omega(T_2) = empty (no odd cycles on 2 vertices)
+  - OCF: H = 1
+  - AXIOM: The first edge introduces DIRECTION but no cycles.
+  - This is where ANTISYMMETRY enters: A[i][j] + A[j][i] = 1.
+  - Dimension: C(2,2) = 1. The orientation space is a LINE SEGMENT.
+  - The S_2 action identifies the two endpoints: Z_2 quotient.
+
+======================================================================
+ANALYSIS 2: BINARY HYPERCUBE AND VITALI QUOTIENT STRUCTURE
+======================================================================
+
+n=2: dimension=1, |space|=2
+  S_2 orbits: 1
+  Orbit sizes: [2]
+  |S_n| = 2
+
+  VITALI ANALOGY:
+    Base space: {0,1}^1  (2 points)
+    Group: S_2 acting by relabeling (2 elements)
+    Equivalence classes: 1 orbits
+    'Vitali set' (canonical reps): 1 points out of 2
+    Selection ratio: 0.500000
+    Average orbit size: 2.0
+
+  H-LEVEL SET STRUCTURE:
+    H=1: 2 tournaments (100.00%), 1 orbit(s)
+    H-level sets are MEASURABLE: unions of full S_n-orbits
+
+  SIGMA EMBEDDING in {-1,+1}^1:
+
+  WALSH-HADAMARD FOURIER ANALYSIS OF H:
+    H as function on {-1,+1}^1
+    Degree 0: 1 non-zero terms, energy = 1.0000
+      S={}: hat(H) = 1.0000
+    Total Parseval energy: 1.0000
+    Expected: E[H^2] = 1.0000
+
+n=3: dimension=3, |space|=8
+  S_3 orbits: 2
+  Orbit sizes: [6, 2]
+  |S_n| = 6
+
+  VITALI ANALOGY:
+    Base space: {0,1}^3  (8 points)
+    Group: S_3 acting by relabeling (6 elements)
+    Equivalence classes: 2 orbits
+    'Vitali set' (canonical reps): 2 points out of 8
+    Selection ratio: 0.250000
+    Average orbit size: 4.0
+
+  H-LEVEL SET STRUCTURE:
+    H=1: 6 tournaments (75.00%), 1 orbit(s)
+    H=3: 2 tournaments (25.00%), 1 orbit(s)
+    H-level sets are MEASURABLE: unions of full S_n-orbits
+
+  SIGMA EMBEDDING in {-1,+1}^3:
+
+  WALSH-HADAMARD FOURIER ANALYSIS OF H:
+    H as function on {-1,+1}^3
+    Degree 0: 1 non-zero terms, energy = 2.2500
+      S={}: hat(H) = 1.5000
+    Degree 2: 3 non-zero terms, energy = 0.7500
+      S=(0,1),(0,2): hat(H) = -0.5000
+      S=(0,1),(1,2): hat(H) = 0.5000
+      S=(0,2),(1,2): hat(H) = -0.5000
+    Total Parseval energy: 3.0000
+    Expected: E[H^2] = 3.0000
+
+n=4: dimension=6, |space|=64
+  S_4 orbits: 4
+  Orbit sizes: [24, 24, 8, 8]
+  |S_n| = 24
+
+  VITALI ANALOGY:
+    Base space: {0,1}^6  (64 points)
+    Group: S_4 acting by relabeling (24 elements)
+    Equivalence classes: 4 orbits
+    'Vitali set' (canonical reps): 4 points out of 64
+    Selection ratio: 0.062500
+    Average orbit size: 16.0
+
+  H-LEVEL SET STRUCTURE:
+    H=1: 24 tournaments (37.50%), 1 orbit(s)
+    H=3: 16 tournaments (25.00%), 2 orbit(s)
+    H=5: 24 tournaments (37.50%), 1 orbit(s)
+    H-level sets are MEASURABLE: unions of full S_n-orbits
+
+  SIGMA EMBEDDING in {-1,+1}^6:
+
+  WALSH-HADAMARD FOURIER ANALYSIS OF H:
+    H as function on {-1,+1}^6
+    Degree 0: 1 non-zero terms, energy = 9.0000
+      S={}: hat(H) = 3.0000
+    Degree 2: 12 non-zero terms, energy = 3.0000
+      S=(0,1),(0,2): hat(H) = -0.5000
+      S=(0,1),(0,3): hat(H) = -0.5000
+      S=(0,1),(1,2): hat(H) = 0.5000
+      S=(0,1),(1,3): hat(H) = 0.5000
+      S=(0,2),(0,3): hat(H) = -0.5000
+      S=(0,2),(1,2): hat(H) = -0.5000
+      S=(0,2),(2,3): hat(H) = 0.5000
+      S=(0,3),(1,3): hat(H) = -0.5000
+      S=(0,3),(2,3): hat(H) = -0.5000
+      S=(1,2),(1,3): hat(H) = -0.5000
+      S=(1,2),(2,3): hat(H) = 0.5000
+      S=(1,3),(2,3): hat(H) = -0.5000
+    Total Parseval energy: 12.0000
+    Expected: E[H^2] = 12.0000
+
+n=5: dimension=10, |space|=1024
+  S_5 orbits: 12
+  Orbit sizes: [120, 120, 120, 120, 120, 120, 120, 40, 40, 40, 40, 24]
+  |S_n| = 120
+
+  VITALI ANALOGY:
+    Base space: {0,1}^10  (1024 points)
+    Group: S_5 acting by relabeling (120 elements)
+    Equivalence classes: 12 orbits
+    'Vitali set' (canonical reps): 12 points out of 1024
+    Selection ratio: 0.011719
+    Average orbit size: 85.3
+
+  H-LEVEL SET STRUCTURE:
+    H=1: 120 tournaments (11.72%), 1 orbit(s)
+    H=3: 120 tournaments (11.72%), 3 orbit(s)
+    H=5: 240 tournaments (23.44%), 2 orbit(s)
+    H=9: 240 tournaments (23.44%), 2 orbit(s)
+    H=11: 120 tournaments (11.72%), 1 orbit(s)
+    H=13: 120 tournaments (11.72%), 1 orbit(s)
+    H=15: 64 tournaments (6.25%), 2 orbit(s)
+    H-level sets are MEASURABLE: unions of full S_n-orbits
+
+  SIGMA EMBEDDING in {-1,+1}^10:
+
+  WALSH-HADAMARD FOURIER ANALYSIS OF H:
+    H as function on {-1,+1}^10
+    Degree 0: 1 non-zero terms, energy = 56.2500
+    Degree 2: 30 non-zero terms, energy = 16.8750
+    Degree 4: 60 non-zero terms, energy = 0.9375
+    Total Parseval energy: 74.0625
+    Expected: E[H^2] = 74.0625
+
+n=6: dimension=15, |space|=32768
+  S_6 orbits: 56
+  Orbit sizes: [720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 720, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 240, 144, 144, 80]
+  |S_n| = 720
+
+  VITALI ANALOGY:
+    Base space: {0,1}^15  (32768 points)
+    Group: S_6 acting by relabeling (720 elements)
+    Equivalence classes: 56 orbits
+    'Vitali set' (canonical reps): 56 points out of 32768
+    Selection ratio: 0.001709
+    Average orbit size: 585.1
+
+  H-LEVEL SET STRUCTURE:
+    H=1: 720 tournaments (2.20%), 1 orbit(s)
+    H=3: 960 tournaments (2.93%), 4 orbit(s)
+    H=5: 2160 tournaments (6.59%), 3 orbit(s)
+    H=9: 2960 tournaments (9.03%), 5 orbit(s)
+    H=11: 1440 tournaments (4.39%), 2 orbit(s)
+    H=13: 1440 tournaments (4.39%), 2 orbit(s)
+    H=15: 2208 tournaments (6.74%), 6 orbit(s)
+    H=17: 1440 tournaments (4.39%), 2 orbit(s)
+    H=19: 1440 tournaments (4.39%), 2 orbit(s)
+    H=23: 2880 tournaments (8.79%), 4 orbit(s)
+    H=25: 1440 tournaments (4.39%), 2 orbit(s)
+    H=27: 480 tournaments (1.46%), 2 orbit(s)
+    H=29: 2880 tournaments (8.79%), 4 orbit(s)
+    H=31: 1440 tournaments (4.39%), 2 orbit(s)
+    H=33: 2640 tournaments (8.06%), 5 orbit(s)
+    H=37: 3600 tournaments (10.99%), 5 orbit(s)
+    H=41: 720 tournaments (2.20%), 1 orbit(s)
+    H=43: 1440 tournaments (4.39%), 2 orbit(s)
+    H=45: 480 tournaments (1.46%), 2 orbit(s)
+    H-level sets are MEASURABLE: unions of full S_n-orbits
+
+======================================================================
+ANALYSIS 3: THE Z/3Z GRADING AND NON-MEASURABILITY
+======================================================================
+
+The skew-symmetric matrix sigma_{ij} takes values in {-1, 0, +1}.
+These are the elements of Z/3Z (identifying -1 with 2).
+
+In the Vitali construction:
+  - [0,1] is partitioned by Q-cosets: x ~ y iff x-y in Q
+  - Representatives form V, a non-measurable set
+  - Key: Q is DENSE in R, so cosets are "everywhere"
+
+In tournaments:
+  - {-1,+1}^{C(n,2)} is partitioned by S_n-orbits: T ~ T' iff T ~ T'
+  - Representatives form the "canonical tournament set"
+  - Key: S_n acts TRANSITIVELY on some orbits, creating structure
+
+The Z/3Z grading {-1,0,+1} reveals:
+  - sigma_{ij} + sigma_{ji} = 0 (antisymmetry = "completeness")
+  - sigma_{ii} = 0 (diagonal = "irreflexivity")
+  - These TWO constraints define the tournament variety in Z^{n^2}
+
+At n=2: sigma = [[0, s], [-s, 0]] where s in {-1,+1}
+  The ONLY degree of freedom is the sign of s.
+  This is a 0-dimensional sphere S^0 = {-1, +1}.
+
+At n=3: sigma has 3 free entries (upper triangle).
+  Constraint: each 3-element minor has det != 0 (strong tournament)
+  Actually: a tournament IS a complete antisymmetric digraph.
+  The space is {-1,+1}^3, a 0-skeleton of the 3-cube.
+
+THE VITALI PHENOMENON IN TOURNAMENT LIMITS:
+
+  n=2: max_H=1, #maximal=2/2 (100.00%)
+    E[H]=1.00, Var(H)=0.00, CV=0.0000
+    #distinct H values: 1
+  n=3: max_H=3, #maximal=2/8 (25.00%)
+    E[H]=1.50, Var(H)=0.75, CV=0.5774
+    #distinct H values: 2
+  n=4: max_H=5, #maximal=24/64 (37.50%)
+    E[H]=3.00, Var(H)=3.00, CV=0.5774
+    #distinct H values: 3
+  n=5: max_H=15, #maximal=64/1024 (6.25%)
+    E[H]=7.50, Var(H)=17.81, CV=0.5627
+    #distinct H values: 7
+  n=6: max_H=45, #maximal=480/32768 (1.46%)
+    E[H]=22.50, Var(H)=146.25, CV=0.5375
+    #distinct H values: 19
+
+======================================================================
+ANALYSIS 4: HIDDEN DIMENSIONAL TRANSITIONS AT n=0,1,2,3
+======================================================================
+
+The "hidden higher-dimensional structure" emerges from the DIMENSION JUMPS:
+
+  n=0 -> n=1: dim 0 -> dim 0 (no new edges possible)
+    INVARIANT: H=1 in both cases.
+    TRANSITION: Nothing changes. This is the GROUND STATE.
+
+  n=1 -> n=2: dim 0 -> dim 1 (one edge appears)
+    INVARIANT: H=1 still! The first edge doesn't create cycles.
+    TRANSITION: DIRECTION is born. The tournament lives on S^0 = {-1,+1}.
+    The Z/2Z symmetry (swap 0<->1) identifies the two orientations.
+    ANALOGY: In the Vitali construction, this is like [0,1] being
+    identified under x <-> 1-x. A single orbit.
+
+  n=2 -> n=3: dim 1 -> dim 3 (two more edges)
+    INVARIANT: H can now be 1 or 3!
+    TRANSITION: The FIRST ODD CYCLE (3-cycle) appears.
+    The 3-cube {-1,+1}^3 has 8 vertices. S_3 (6 elements) acts.
+    Two orbits: transitive (H=1, 6 copies) and cyclic (H=3, 2 copies).
+    ANALOGY: The Vitali quotient now has 2 classes. The cyclic
+    tournament is the "special" element (higher H), analogous
+    to the irrational representative in Vitali's construction.
+
+    KEY: At n=3, the conflict graph Omega(T) is either:
+      - empty (transitive tournament, H=1)
+      - single vertex (3-cycle tournament, H=3=1+2*1)
+    The cycle creates a new "dimension" in the H-decomposition.
+
+  n=3 -> n=4: dim 3 -> dim 6 (three more edges)
+    The dimension DOUBLES. The tournament space explodes from 8 to 64.
+    S_4 (24 elements) acts, giving 4 orbits.
+    H-values: {1, 3, 5} — now H=5 appears (the regular tournament).
+
+  n=4 -> n=5: dim 6 -> dim 10 (four more edges)
+    1024 tournaments, 12 orbits.
+    H-values: {1, 3, 5, 9, 11, 13, 15} — full odd spectrum opens up.
+
+DIMENSION JUMP TABLE:
+  n   dim    |space|    |S_n|   orbits             H-values
+------------------------------------------------------------
+  0     0          1        1        1                  [1]
+  1     0          1        1        1                  [1]
+  2     1          2        2        1                  [1]
+  3     3          8        6        2               [1, 3]
+  4     6         64       24        4            [1, 3, 5]
+  5    10       1024      120       12 [1, 3, 5, 9, 11, 13, 15]
+  6    15      32768      720       56 [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+======================================================================
+ANALYSIS 5: OVERLAP WEIGHT AS VITALI COSET MEASURE
+======================================================================
+
+Connection between Vitali cosets and overlap weight:
+
+In the Vitali construction:
+  - mu(V + q) = mu(V) for all q in Q (translation invariance)
+  - sum_{q in Q} mu(V + q) = mu([0,1]) = 1
+  - If mu(V) = 0, the sum is 0 != 1. Contradiction.
+  - If mu(V) > 0, the sum diverges != 1. Contradiction.
+
+In tournaments:
+  - The overlap weight w(C) = |edges shared with neighbors in Omega|
+  - The "Vitali invariant" is: is there a UNIFORM measure on cycles
+    such that the overlap structure is translation-invariant?
+
+For CIRCULANT tournaments: YES! Z_p acts by translation, and:
+  - All vertices are equivalent (vertex-transitivity)
+  - Cycle vertex sets are cosets: C + i = C shifted by i
+  - The co-occurrence matrix is CIRCULANT
+
+For NON-circulant tournaments: The Vitali phenomenon appears!
+  - Some vertices participate in more cycles than others
+  - The "co-occurrence variance" measures non-uniformity
+  - Paley: variance = 0 (perfect uniformity) [Vitali-MEASURABLE]
+  - Interval: variance > 0 (non-uniform) [Vitali-like non-uniformity]
+
+
+  --- n=3: Co-occurrence analysis ---
+    canon=  0 (orbit= 6), H=  1, scores=[0, 1, 2], c3=0 (transitive)
+    canon=  2 (orbit= 2), H=  3, scores=[1, 1, 1], c3=1, v_part=[1, 1, 1], co_var=0.00
+
+  --- n=4: Co-occurrence analysis ---
+    canon=  0 (orbit=24), H=  1, scores=[0, 1, 2, 3], c3=0 (transitive)
+    canon=  2 (orbit= 8), H=  3, scores=[1, 1, 1, 3], c3=1, v_part=[1, 1, 1, 0], co_var=0.19
+    canon=  4 (orbit=24), H=  5, scores=[1, 1, 2, 2], c3=2, v_part=[2, 1, 1, 2], co_var=0.25
+    canon=  5 (orbit= 8), H=  3, scores=[0, 2, 2, 2], c3=1, v_part=[1, 0, 1, 1], co_var=0.19
+
+  --- n=5: Co-occurrence analysis ---
+    canon=  0 (orbit=120), H=  1, scores=[0, 1, 2, 3, 4], c3=0 (transitive)
+    canon=  2 (orbit=40), H=  3, scores=[1, 1, 1, 3, 4], c3=1, v_part=[1, 1, 1, 0, 0], co_var=0.24
+    canon=  4 (orbit=120), H=  5, scores=[1, 1, 2, 2, 4], c3=2, v_part=[2, 1, 1, 2, 0], co_var=0.56
+    canon=  5 (orbit=40), H=  3, scores=[0, 2, 2, 2, 4], c3=1, v_part=[1, 0, 1, 1, 0], co_var=0.24
+    canon=  8 (orbit=120), H=  9, scores=[1, 1, 2, 3, 3], c3=3, v_part=[3, 1, 1, 1, 3], co_var=0.96
+    canon=  9 (orbit=120), H=  5, scores=[0, 2, 2, 3, 3], c3=2, v_part=[2, 0, 1, 1, 2], co_var=0.56
+    canon= 10 (orbit=120), H=  9, scores=[1, 1, 2, 3, 3], c3=3, v_part=[3, 2, 1, 1, 2], co_var=0.56
+    canon= 11 (orbit=40), H=  3, scores=[0, 1, 3, 3, 3], c3=1, v_part=[1, 0, 0, 1, 1], co_var=0.24
+    canon= 12 (orbit=120), H= 11, scores=[1, 2, 2, 2, 3], c3=4, v_part=[4, 2, 2, 2, 2], co_var=0.64
+    canon= 40 (orbit=40), H= 15, scores=[1, 2, 2, 2, 3], c3=4, v_part=[3, 2, 2, 2, 3], co_var=0.24
+    canon= 41 (orbit=120), H= 13, scores=[1, 2, 2, 2, 3], c3=4, v_part=[3, 2, 2, 3, 2], co_var=0.24
+    canon= 76 (orbit=24), H= 15, scores=[2, 2, 2, 2, 2], c3=5, v_part=[3, 3, 3, 3, 3], co_var=0.00
+
+======================================================================
+ANALYSIS 6: THE {2,1,0} INTERPRETATION
+======================================================================
+
+The user asks about "tournaments of n 2, 1 and 0."
+Three possible interpretations, ALL illuminating:
+
+INTERPRETATION A: Score values {0, 1, 2}
+  At n=3, scores are permutations of (0, 1, 2):
+    - Transitive: scores (0, 1, 2) — a dominance hierarchy
+    - 3-cycle: scores (1, 1, 1) — perfect balance
+  The score SUM is always C(n,2) = 3.
+  Score = out-degree = "power" of each vertex.
+  {0, 1, 2} = {loser, neutral, winner} at n=3.
+
+INTERPRETATION B: Overlap multiplicities {0, 1, 2}
+  Two cycles can share 0, 1, or 2 vertices (never 3, since
+  3 shared vertices = same cycle for 3-cycles).
+  The overlap weight W[i,j] in {0, 1, 2} determines whether
+  cycles are disjoint (0), adjacent (1-2), or identical (3).
+  This is the CONFLICT GRAPH'S edge weighting.
+
+INTERPRETATION C: The ternary "tournament state" per vertex pair
+  For (i,j): 0 = "no edge" (diagonal), 1 = i->j, 2 = j->i
+  This gives a TERNARY encoding: each pair has state in Z/3Z.
+  A tournament is a function f: C(n,2) -> {1, 2} with f(j,i) = 3 - f(i,j).
+  Including the diagonal: f: [n]^2 -> {0, 1, 2}.
+
+  THIS IS THE TRIT REPRESENTATION:
+    n=0: 0 trits. 1 state.
+    n=1: 1 trit (the self-loop = 0). 1 state.
+    n=2: 4 trits, but only 1 free (others constrained). 2 states = 1 free trit.
+    n=3: 9 trits, but only 3 free. 8 states = 2^3. (NOT 3^3!)
+
+  The constraint sigma_{ij} + sigma_{ji} = 0, sigma_{ii} = 0
+  kills the ternary freedom: the actual DOF is BINARY, not ternary.
+
+  But the APPEARANCE is ternary: {beat, lose, self} = {2, 0, 1}
+  or equivalently {+1, -1, 0} in the skew-symmetric representation.
+
+
+  n=0:
+    Full matrix: 0x0 = 0 entries
+    Diagonal (=0): 0 entries
+    Antisymmetric pairs: 0
+    Free binary DOF: 0
+    Ternary 'apparent' DOF: 0 entries in {0,1,2}
+    Constraint ratio: 0 constrained out of 0
+
+  n=1:
+    Full matrix: 1x1 = 1 entries
+    Diagonal (=0): 1 entries
+    Antisymmetric pairs: 0
+    Free binary DOF: 0
+    Ternary 'apparent' DOF: 1 entries in {0,1,2}
+    Constraint ratio: 1 constrained out of 1
+    Information: 0 bits = 0.00 trits
+
+  n=2:
+    Full matrix: 2x2 = 4 entries
+    Diagonal (=0): 2 entries
+    Antisymmetric pairs: 1
+    Free binary DOF: 1
+    Ternary 'apparent' DOF: 4 entries in {0,1,2}
+    Constraint ratio: 3 constrained out of 4
+    Information: 1 bits = 0.63 trits
+
+  n=3:
+    Full matrix: 3x3 = 9 entries
+    Diagonal (=0): 3 entries
+    Antisymmetric pairs: 3
+    Free binary DOF: 3
+    Ternary 'apparent' DOF: 9 entries in {0,1,2}
+    Constraint ratio: 6 constrained out of 9
+    Information: 3 bits = 1.89 trits
+
+  n=4:
+    Full matrix: 4x4 = 16 entries
+    Diagonal (=0): 4 entries
+    Antisymmetric pairs: 6
+    Free binary DOF: 6
+    Ternary 'apparent' DOF: 16 entries in {0,1,2}
+    Constraint ratio: 10 constrained out of 16
+    Information: 6 bits = 3.79 trits
+
+======================================================================
+ANALYSIS 7: ASYMPTOTIC NON-MEASURABILITY
+======================================================================
+
+The Vitali set is non-measurable because:
+  1. The group Q is infinite, creating infinitely many cosets
+  2. Translation invariance forces mu(V) = const for all cosets
+  3. But sum of infinitely many equal non-negative numbers is 0 or infinity
+
+In tournaments, the "limiting" version:
+  1. S_n grows as n! but |space| grows as 2^{C(n,2)} = 2^{n(n-1)/2}
+  2. Average orbit size = |space|/|orbits| ~ n! (by Burnside)
+  3. Number of orbits ~ 2^{n(n-1)/2} / n!
+
+The ratio 2^{n(n-1)/2} / n! grows SUPER-EXPONENTIALLY:
+
+  n= 1: log2|space|=    0, log2(n!)=    0.0, log2(orbits)~     0.0
+  n= 2: log2|space|=    1, log2(n!)=    1.0, log2(orbits)~     0.0
+  n= 3: log2|space|=    3, log2(n!)=    2.6, log2(orbits)~     0.4
+  n= 4: log2|space|=    6, log2(n!)=    4.6, log2(orbits)~     1.4
+  n= 5: log2|space|=   10, log2(n!)=    6.9, log2(orbits)~     3.1
+  n= 6: log2|space|=   15, log2(n!)=    9.5, log2(orbits)~     5.5
+  n= 7: log2|space|=   21, log2(n!)=   12.3, log2(orbits)~     8.7
+  n= 8: log2|space|=   28, log2(n!)=   15.3, log2(orbits)~    12.7
+  n= 9: log2|space|=   36, log2(n!)=   18.5, log2(orbits)~    17.5
+  n=10: log2|space|=   45, log2(n!)=   21.8, log2(orbits)~    23.2
+  n=11: log2|space|=   55, log2(n!)=   25.3, log2(orbits)~    29.7
+  n=12: log2|space|=   66, log2(n!)=   28.8, log2(orbits)~    37.2
+  n=13: log2|space|=   78, log2(n!)=   32.5, log2(orbits)~    45.5
+  n=14: log2|space|=   91, log2(n!)=   36.3, log2(orbits)~    54.7
+  n=15: log2|space|=  105, log2(n!)=   40.3, log2(orbits)~    64.7
+
+At n=15: ~53 bits for S_n vs ~105 bits for space => ~2^52 orbits.
+The "canonical representative set" has density ~2^{-53} in the space.
+This is extremely sparse — like the Vitali set's representatives
+being measure-zero if measurable.
+
+DEEP ANALOGY: As n -> infinity:
+  - The "Vitali density" = |orbits|/|space| -> 0 super-exponentially
+  - But |orbits| -> infinity super-exponentially
+  - This is EXACTLY the Vitali paradox: each representative has
+    "measure zero" but there are "too many" of them.
+
+  - For tournaments: the H-maximizer (Paley/interval) becomes
+    exponentially rare in the total space (density -> 0)
+  - But it carries an exponentially large fraction of total H
+  - This is a "tournament Vitali phenomenon": the maximizer is
+    non-measurable in the sense that its contribution to E[H]
+    is disproportionate to its measure.
+
+H-CONCENTRATION (fraction of total H in maximizers):
+  n=2: max_H=1, count=2/2 (100.0%), carries 100.0% of total H-sum
+  n=3: max_H=3, count=2/8 (25.0%), carries 50.0% of total H-sum
+  n=4: max_H=5, count=24/64 (37.5%), carries 62.5% of total H-sum
+  n=5: max_H=15, count=64/1024 (6.2%), carries 12.5% of total H-sum
+  n=6: max_H=45, count=480/32768 (1.5%), carries 2.9% of total H-sum
+
+======================================================================
+DONE.
