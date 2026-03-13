@@ -1,0 +1,266 @@
+
+======================================================================
+FLIP GRAPH SPECTRAL ANALYSIS: n = 3
+======================================================================
+Number of iso classes: 2
+Flip graph adjacency matrix: 2×2
+Number of edges: 1
+
+Eigenvalues (descending):
+  λ_0 = 1.000000
+  λ_1 = -1.000000
+
+Degree range: [1, 1]
+λ₁ (largest) = 1.000000
+λ₂ (second)  = -1.000000
+Spectral gap = 2.000000
+Average degree = 1.00
+Ramanujan bound = 2√(d̄-1) = 0.0000
+|λ₂| ≤ Ramanujan? NO (1.0000 vs 0.0000)
+Max |non-trivial eigenvalue| = 1.0000
+
+Correlation of H with eigenvectors:
+  corr(H, v_0) = 0.4472 (λ_0 = 1.0000)
+  corr(H, v_1) = 0.8944 (λ_1 = -1.0000)
+
+Laplacian eigenvalues:
+  μ_0 = 0.000000
+  μ_1 = 2.000000
+
+Fiedler value (algebraic connectivity) = 2.000000
+Cheeger constant h ≥ 1.000000
+
+H values sorted: [1, 3]
+Bipartite? YES (eigenvalue symmetry)
+
+Score classes: 2
+Flip edges within same score: 0
+Flip edges across scores: 1
+Fraction same-score: 0.000
+
+======================================================================
+FLIP GRAPH SPECTRAL ANALYSIS: n = 4
+======================================================================
+Number of iso classes: 4
+Flip graph adjacency matrix: 4×4
+Number of edges: 5
+
+Eigenvalues (descending):
+  λ_0 = 2.561553
+  λ_1 = 0.000000
+  λ_2 = -1.000000
+  λ_3 = -1.561553
+
+Degree range: [2, 3]
+λ₁ (largest) = 2.561553
+λ₂ (second)  = 0.000000
+Spectral gap = 2.561553
+Average degree = 2.50
+Ramanujan bound = 2√(d̄-1) = 2.4495
+|λ₂| ≤ Ramanujan? YES (0.0000 vs 2.4495)
+Max |non-trivial eigenvalue| = 1.5616
+
+Correlation of H with eigenvectors:
+  corr(H, v_0) = 0.1105 (λ_0 = 2.5616)
+  corr(H, v_1) = 0.4264 (λ_1 = 0.0000)
+  corr(H, v_2) = 0.0000 (λ_2 = -1.0000)
+  corr(H, v_3) = 0.8978 (λ_3 = -1.5616)
+
+Laplacian eigenvalues:
+  μ_0 = 0.000000
+  μ_1 = 2.000000
+  μ_2 = 4.000000
+  μ_3 = 4.000000
+
+Fiedler value (algebraic connectivity) = 2.000000
+Cheeger constant h ≥ 1.000000
+
+H values sorted: [1, 3, 3, 5]
+Bipartite? NO (1 positive, 2 negative eigenvalues)
+
+Score classes: 4
+Flip edges within same score: 0
+Flip edges across scores: 5
+Fraction same-score: 0.000
+
+======================================================================
+FLIP GRAPH SPECTRAL ANALYSIS: n = 5
+======================================================================
+Number of iso classes: 12
+Flip graph adjacency matrix: 12×12
+Number of edges: 30
+
+Eigenvalues (descending):
+  λ_0 = 5.582284
+  λ_1 = 1.941704
+  λ_2 = 1.223361
+  λ_3 = 1.000000
+  λ_4 = 0.321619
+  λ_5 = 0.033439
+  λ_6 = -0.416286
+  λ_7 = -1.000000
+  λ_8 = -1.183960
+  λ_9 = -1.751221
+  λ_10 = -2.495848
+  λ_11 = -3.255093
+
+Degree range: [2, 7]
+λ₁ (largest) = 5.582284
+λ₂ (second)  = 1.941704
+Spectral gap = 3.640580
+Average degree = 5.00
+Ramanujan bound = 2√(d̄-1) = 4.0000
+|λ₂| ≤ Ramanujan? YES (1.9417 vs 4.0000)
+Max |non-trivial eigenvalue| = 3.2551
+
+Correlation of H with eigenvectors:
+  corr(H, v_0) = 0.0278 (λ_0 = 5.5823)
+  corr(H, v_1) = 0.0099 (λ_1 = 1.9417)
+  corr(H, v_2) = 0.0031 (λ_2 = 1.2234)
+  corr(H, v_3) = 0.1466 (λ_3 = 1.0000)
+  corr(H, v_4) = 0.0000 (λ_4 = 0.3216)
+  corr(H, v_5) = 0.3041 (λ_5 = 0.0334)
+
+Laplacian eigenvalues:
+  μ_0 = 0.000000
+  μ_1 = 1.602589
+  μ_2 = 2.281418
+  μ_3 = 2.763932
+  μ_4 = 4.000000
+  μ_5 = 4.035817
+  ... (showing first 6 of 12)
+
+Fiedler value (algebraic connectivity) = 1.602589
+Cheeger constant h ≥ 0.801294
+
+H values sorted: [1, 3, 3, 3, 5, 5, 9, 9, 11, 13, 15, 15]
+Bipartite? NO (eigenvalue symmetry)
+
+Score classes: 9
+Flip edges within same score: 3
+Flip edges across scores: 27
+Fraction same-score: 0.100
+
+======================================================================
+FLIP GRAPH SPECTRAL ANALYSIS: n = 6
+======================================================================
+Number of iso classes: 56
+Flip graph adjacency matrix: 56×56
+Number of edges: 290
+
+Eigenvalues (descending):
+  λ_0 = 11.669710
+  λ_1 = 6.793729
+  λ_2 = 5.010690
+  λ_3 = 4.343434
+  λ_4 = 4.250540
+  λ_5 = 4.010054
+  λ_6 = 3.904682
+  λ_7 = 3.706459
+  λ_8 = 3.318487
+  λ_9 = 3.055753
+  λ_10 = 2.780110
+  λ_11 = 2.620752
+  λ_12 = 2.058227
+  λ_13 = 1.765449
+  λ_14 = 1.704453
+  λ_15 = 1.546141
+  λ_16 = 1.143195
+  λ_17 = 0.972147
+  λ_18 = 0.959710
+  λ_19 = 0.866232
+  λ_20 = 0.688754
+  λ_21 = 0.512067
+  λ_22 = 0.328462
+  λ_23 = 0.320644
+  λ_24 = 0.184029
+  λ_25 = 0.180781
+  λ_26 = -0.019711
+  λ_27 = -0.088168
+  λ_28 = -0.282674
+  λ_29 = -0.380969
+  λ_30 = -0.502076
+  λ_31 = -0.773142
+  λ_32 = -0.836400
+  λ_33 = -0.951858
+  λ_34 = -1.145717
+  λ_35 = -1.329989
+  λ_36 = -1.452040
+  λ_37 = -1.592376
+  λ_38 = -1.624887
+  λ_39 = -1.745489
+  λ_40 = -1.905317
+  λ_41 = -2.083619
+  λ_42 = -2.123952
+  λ_43 = -2.265893
+  λ_44 = -2.607367
+  λ_45 = -2.738322
+  λ_46 = -2.859742
+  λ_47 = -3.030452
+  λ_48 = -3.252214
+  λ_49 = -3.627626
+  λ_50 = -3.881452
+  λ_51 = -4.447921
+  λ_52 = -4.580321
+  λ_53 = -4.694235
+  λ_54 = -5.392463
+  λ_55 = -6.478296
+
+Degree range: [3, 14]
+λ₁ (largest) = 11.669710
+λ₂ (second)  = 6.793729
+Spectral gap = 4.875981
+Average degree = 10.36
+Ramanujan bound = 2√(d̄-1) = 6.1179
+|λ₂| ≤ Ramanujan? NO (6.7937 vs 6.1179)
+Max |non-trivial eigenvalue| = 6.7937
+
+Correlation of H with eigenvectors:
+  corr(H, v_0) = 0.0120 (λ_0 = 11.6697)
+  corr(H, v_1) = 0.0000 (λ_1 = 6.7937)
+  corr(H, v_2) = 0.0000 (λ_2 = 5.0107)
+  corr(H, v_3) = 0.0003 (λ_3 = 4.3434)
+  corr(H, v_4) = 0.0172 (λ_4 = 4.2505)
+  corr(H, v_5) = 0.0022 (λ_5 = 4.0101)
+
+Laplacian eigenvalues:
+  μ_0 = -0.000000
+  μ_1 = 1.960390
+  μ_2 = 2.543654
+  μ_3 = 2.743763
+  μ_4 = 3.073901
+  μ_5 = 3.331885
+  ... (showing first 6 of 56)
+
+Fiedler value (algebraic connectivity) = 1.960390
+Cheeger constant h ≥ 0.980195
+
+H values sorted: [1, 3, 3, 3, 3, 5, 5, 5, 9, 9, 9, 9, 9, 11, 11, 13, 13, 15, 15, 15, 15, 15, 15, 17, 17, 19, 19, 23, 23, 23, 23, 25, 25, 27, 27, 29, 29, 29, 29, 31, 31, 33, 33, 33, 33, 33, 37, 37, 37, 37, 37, 41, 43, 43, 45, 45]
+Bipartite? NO (26 positive, 30 negative eigenvalues)
+
+Score classes: 22
+Flip edges within same score: 52
+Flip edges across scores: 238
+Fraction same-score: 0.179
+
+======================================================================
+SYNTHESIS: FLIP GRAPH SPECTRAL PROPERTIES
+======================================================================
+
+Key findings:
+1. The flip graph is NOT regular — degree varies by class
+2. H-maximizers have LOW degree (isolated peaks)
+3. Mid-H classes have HIGH degree (crossroads/saddle points)
+4. The spectral gap grows with n, suggesting fast mixing
+5. Most flip edges cross score classes (arc reversal usually changes score)
+6. The Laplacian Fiedler value gives the MCMC mixing rate
+
+RAMANUJAN QUESTION: The flip graph is not k-regular, so the classical
+Ramanujan condition doesn't apply directly. But the ratio
+|λ₂|/λ₁ measures how "expander-like" the graph is.
+A small ratio means good expansion (fast mixing, no bottlenecks).
+
+ENGINEERING APPLICATION: The spectral gap of the flip graph determines
+how quickly randomized tournament optimization algorithms converge.
+A large spectral gap → MCMC on tournament space mixes rapidly.
+
