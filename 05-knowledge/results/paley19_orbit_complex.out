@@ -1,0 +1,8 @@
+P_19: QR = [1, 4, 5, 6, 7, 9, 11, 16, 17], m = 9, working mod 997
+  Deg 1: 9 seqs, 1 orbits (0.0s)
+  Deg 2: 81 seqs, 9 orbits (0.0s)
+  Deg 3: 684 seqs, 76 orbits (0.0s)
+  Deg 4: 5436 seqs, 604 orbits (0.0s)
+  Deg 5: 40284 seqs, 4476 orbits (0.2s)
+  Deg 6: 277236 seqs, 30804 orbits (1.8s)
+  Deg 7: 1759914 seqs, 195546 orbits (15.4s)

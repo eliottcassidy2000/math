@@ -1,0 +1,91 @@
+======================================================================
+TRANSITIVE SUB-TOURNAMENT COUNTS FOR PALEY PRIMES (p ≡ 3 mod 4)
+======================================================================
+
+P_3 (m=1, QR=[1]):
+  t_ 1 =            3  (d=0)
+  t_ 2 =            3  (d=1)
+  t_ 3 =            0  (d=2)
+  t_k/p: [1, 1]
+  chi_transitive = 0
+  chi_t / p = 0.0
+  Time: 0.0s
+
+P_7 (m=3, QR=[1, 2, 4]):
+  t_ 1 =            7  (d=0)
+  t_ 2 =           21  (d=1)
+  t_ 3 =           21  (d=2)
+  t_ 4 =            0  (d=3)
+  t_k/p: [1, 3, 3]
+  chi_transitive = 7
+  chi_t / p = 1.0
+  GLMY Omega/p = [1, 3, 6, 9, 9, 6, 3]
+  chi_GLMY = 7
+  chi match: True
+  Omega_d/p vs t_{d+1}/p:
+    d=0: Omega/p=1, t/p=1, diff=0
+    d=1: Omega/p=3, t/p=3, diff=0
+    d=2: Omega/p=6, t/p=3, diff=3
+    d=3: Omega/p=9, t/p=0, diff=9
+    d=4: Omega/p=9, t/p=0, diff=9
+    d=5: Omega/p=6, t/p=0, diff=6
+    d=6: Omega/p=3, t/p=0, diff=3
+  Time: 0.0s
+
+P_11 (m=5, QR=[1, 3, 4, 5, 9]):
+  t_ 1 =           11  (d=0)
+  t_ 2 =           55  (d=1)
+  t_ 3 =          110  (d=2)
+  t_ 4 =           55  (d=3)
+  t_k/p: [1, 5, 10, 5]
+  chi_transitive = 11
+  chi_t / p = 1.0
+  GLMY Omega/p = [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+  chi_GLMY = 11
+  chi match: True
+  Omega_d/p vs t_{d+1}/p:
+    d=0: Omega/p=1, t/p=1, diff=0
+    d=1: Omega/p=5, t/p=5, diff=0
+    d=2: Omega/p=20, t/p=10, diff=10
+    d=3: Omega/p=70, t/p=5, diff=65
+    d=4: Omega/p=205, t/p=0, diff=205
+    d=5: Omega/p=460, t/p=0, diff=460
+    d=6: Omega/p=700, t/p=0, diff=700
+    d=7: Omega/p=690, t/p=0, diff=690
+    d=8: Omega/p=450, t/p=0, diff=450
+    d=9: Omega/p=180, t/p=0, diff=180
+    d=10: Omega/p=30, t/p=0, diff=30
+  Time: 0.0s
+
+P_19 (m=9, QR=[1, 4, 5, 6, 7, 9, 11, 16, 17]):
+  t_ 1 =           19  (d=0)
+  t_ 2 =          171  (d=1)
+  t_ 3 =          684  (d=2)
+  t_ 4 =         1026  (d=3)
+  t_ 5 =          342  (d=4)
+  t_k/p: [1, 9, 36, 54, 18]
+  chi_transitive = -152
+  chi_t / p = -8.0
+  Time: 7.2s
+
+P_23 (m=11, QR=[1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]):
+  t_ 1 =           23  (d=0)
+  t_ 2 =          253  (d=1)
+  t_ 3 =         1265  (d=2)
+  t_ 4 =         2530  (d=3)
+  t_ 5 =         1518  (d=4)
+  t_k/p: [1, 11, 55, 110, 66]
+  chi_transitive = 23
+  chi_t / p = 1.0
+  Time: 109.5s
+
+======================================================================
+PATTERN ANALYSIS
+======================================================================
+For Paley primes p ≡ 3 mod 4:
+  p=3:  chi_t = ? (computed above)
+  p=7:  chi_t = ? (computed above)
+  p=11: chi_t = ? (computed above)
+  Conjecture: chi(P_p) = p for p ≡ 3 mod 4, p >= 7
+
+DONE.
