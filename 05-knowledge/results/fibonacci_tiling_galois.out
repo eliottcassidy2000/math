@@ -1,0 +1,471 @@
+======================================================================
+FIBONACCI TILING & GALOIS SPLITTING — opus-2026-03-12-S67d
+======================================================================
+
+PART 1: FIBONACCI AS TILING COUNT — CAN WE TILE TOURNAMENTS?
+======================================================================
+
+F_n = number of tilings of 1×(n-1) strip with squares and dominoes
+F_p = prod(1+Q_k) for the Interval tournament on p vertices
+
+QUESTION: Is there a tiling model on the tournament where:
+  - Each tiling has weight 1
+  - Total count = prod(1+Q_k)?
+
+Transfer matrix comparison:
+  Fibonacci:    T_F = [[1,1],[1,0]], eigenvalues φ, ψ = (1±√5)/2
+  Morgan-Voyce: T_B = [[3,-1],[1,0]], eigenvalues φ², ψ²
+
+KEY: T_B = T_F², i.e., the MV transfer matrix is the SQUARE
+of the Fibonacci transfer matrix!
+
+T_F² = [[2, 1], [1, 1]] — NOT equal to T_B = [[3,-1],[1,0]]
+
+Eigenvalue relationship:
+  φ = 1.618034, φ² = 2.618034
+  ψ = -0.618034, ψ² = 0.381966
+  φ² + ψ² = 3.000000 = 3 (trace of T_B)
+  φ² · ψ² = 1.000000 = 1 (det of T_B)
+
+Verifying B_m(1) = F_p (p=2m+1):
+  m=1, p=3: B_m(1) = 2, F_p = 2, match = True
+  m=2, p=5: B_m(1) = 5, F_p = 5, match = True
+  m=3, p=7: B_m(1) = 13, F_p = 13, match = True
+  m=4, p=9: B_m(1) = 34, F_p = 34, match = True
+  m=5, p=11: B_m(1) = 89, F_p = 89, match = True
+  m=6, p=13: B_m(1) = 233, F_p = 233, match = True
+  m=7, p=15: B_m(1) = 610, F_p = 610, match = True
+  m=8, p=17: B_m(1) = 1597, F_p = 1597, match = True
+  m=9, p=19: B_m(1) = 4181, F_p = 4181, match = True
+
+======================================================================
+PART 2: BINET FORMULA AND GALOIS SPLITTING OF prod(1+Q_k)
+======================================================================
+
+Galois structure: K = Q(cos 2π/p), [K:Q] = m = (p-1)/2
+
+Q(√5) ⊂ K iff 5 is a quadratic residue mod p:
+  p= 5: (5/p) = +0, Q(√5) ⊂ K: ramified
+  p= 7: (5/p) = -1, Q(√5) ⊂ K: NO
+  p=11: (5/p) = +1, Q(√5) ⊂ K: YES
+  p=13: (5/p) = -1, Q(√5) ⊂ K: NO
+  p=17: (5/p) = -1, Q(√5) ⊂ K: NO
+  p=19: (5/p) = +1, Q(√5) ⊂ K: YES
+  p=23: (5/p) = -1, Q(√5) ⊂ K: NO
+  p=29: (5/p) = +1, Q(√5) ⊂ K: YES
+  p=31: (5/p) = +1, Q(√5) ⊂ K: YES
+  p=37: (5/p) = -1, Q(√5) ⊂ K: NO
+  p=41: (5/p) = +1, Q(√5) ⊂ K: YES
+  p=43: (5/p) = -1, Q(√5) ⊂ K: NO
+
+By QR: (5/p) = (p/5). So Q(√5) ⊂ K iff p ≡ ±1 mod 5
+
+Galois action on Q_k for Interval tournament:
+
+p=7, m=3:
+  Q_k = [5.0489 0.308  0.6431]
+  QR indices: [1, 2]
+  QNR indices: [3]
+  prod(1+Q_k) over QR: 7.911854
+  prod(1+Q_k) over QNR: 1.643104
+  Product = 13.000000 = F_7 = 13
+  Ratio QR/QNR = 4.815187
+  Sum QR+QNR = 9.554958
+  (Sum)² - 5*(F_p)² = -753.702775
+  prod(1+Q) first half: 6.048917
+  prod(1+Q) second half: 2.149145
+  L_p = F_6 + F_8 = 8 + 21 = 29
+  Binet: F_p = (φ^p - ψ^p)/√5, L_p = φ^p + ψ^p
+  φ^p = (L_p + F_p·√5)/2 = 29.034442
+  ψ^p = (L_p - F_p·√5)/2 = -0.034442
+
+p=11, m=5:
+  Q_k = [12.3435  0.2716  1.4487  0.3533  0.583 ]
+  QR indices: [1, 3, 4, 5]
+  QNR indices: [2]
+  prod(1+Q_k) over QR: 69.993088
+  prod(1+Q_k) over QNR: 1.271554
+  Product = 89.000000 = F_11 = 89
+  Ratio QR/QNR = 55.045307
+  Sum QR+QNR = 71.264642
+  (Sum)² - 5*(F_p)² = -34526.350790
+  prod(1+Q) first half: 16.967030
+  prod(1+Q) second half: 5.245467
+  L_p = F_10 + F_12 = 55 + 144 = 199
+  Binet: F_p = (φ^p - ψ^p)/√5, L_p = φ^p + ψ^p
+  φ^p = (L_p + F_p·√5)/2 = 199.005025
+  ψ^p = (L_p - F_p·√5)/2 = -0.005025
+
+p=13, m=6:
+  Q_k = [17.2069  0.2652  1.9882  0.3189  0.7747  0.4462]
+  QR indices: [1, 3, 4]
+  QNR indices: [2, 5, 6]
+  prod(1+Q_k) over QR: 71.752737
+  prod(1+Q_k) over QNR: 3.247263
+  Product = 233.000000 = F_13 = 233
+  Ratio QR/QNR = 22.096375
+  Sum QR+QNR = 75.000000
+  (Sum)² - 5*(F_p)² = -265820.000000
+  prod(1+Q) first half: 68.832468
+  prod(1+Q) second half: 3.385030
+  L_p = F_12 + F_14 = 144 + 377 = 521
+  Binet: F_p = (φ^p - ψ^p)/√5, L_p = φ^p + ψ^p
+  φ^p = (L_p + F_p·√5)/2 = 521.001919
+  ψ^p = (L_p - F_p·√5)/2 = -0.001919
+
+======================================================================
+PART 3: CASSINI-TYPE IDENTITIES FOR B_m(x)
+======================================================================
+
+Cassini: F_{n-1}F_{n+1} - F_n² = (-1)^n
+For B_m: is there B_{m-1}(x)B_{m+1}(x) - B_m(x)² = f(x)?
+
+  x = 1:
+    m=1: B_0·B_2 - B_m² = 1
+    m=2: B_1·B_3 - B_m² = 1
+    m=3: B_2·B_4 - B_m² = 1
+    m=4: B_3·B_5 - B_m² = 1
+    m=5: B_4·B_6 - B_m² = 1
+    m=6: B_5·B_7 - B_m² = 1
+    m=7: B_6·B_8 - B_m² = 1
+
+  x = 2:
+    m=1: B_0·B_2 - B_m² = 2
+    m=2: B_1·B_3 - B_m² = 2
+    m=3: B_2·B_4 - B_m² = 2
+    m=4: B_3·B_5 - B_m² = 2
+    m=5: B_4·B_6 - B_m² = 2
+    m=6: B_5·B_7 - B_m² = 2
+    m=7: B_6·B_8 - B_m² = 2
+
+  x = 3:
+    m=1: B_0·B_2 - B_m² = 3
+    m=2: B_1·B_3 - B_m² = 3
+    m=3: B_2·B_4 - B_m² = 3
+    m=4: B_3·B_5 - B_m² = 3
+    m=5: B_4·B_6 - B_m² = 3
+    m=6: B_5·B_7 - B_m² = 3
+    m=7: B_6·B_8 - B_m² = 3
+
+  x = 4:
+    m=1: B_0·B_2 - B_m² = 4
+    m=2: B_1·B_3 - B_m² = 4
+    m=3: B_2·B_4 - B_m² = 4
+    m=4: B_3·B_5 - B_m² = 4
+    m=5: B_4·B_6 - B_m² = 4
+    m=6: B_5·B_7 - B_m² = 4
+    m=7: B_6·B_8 - B_m² = 4
+
+  x = -1:
+    m=1: B_0·B_2 - B_m² = -1
+    m=2: B_1·B_3 - B_m² = -1
+    m=3: B_2·B_4 - B_m² = -1
+    m=4: B_3·B_5 - B_m² = -1
+    m=5: B_4·B_6 - B_m² = -1
+    m=6: B_5·B_7 - B_m² = -1
+    m=7: B_6·B_8 - B_m² = -1
+
+======================================================================
+PART 4: CONTINUED FRACTION STRUCTURE
+======================================================================
+
+Morgan-Voyce polynomials satisfy B_m(x) = (2+x)B_{m-1}(x) - B_{m-2}(x)
+with B_0 = 1, B_1 = 2+x.
+
+This means B_m/B_{m-1} has the continued fraction expansion:
+  B_m/B_{m-1} = (2+x) - 1/((2+x) - 1/((2+x) - ...))
+which is a periodic CF with period 1!
+
+Convergence of B_m(1)/B_{m-1}(1) = F_{2m+1}/F_{2m-1} → φ²:
+  m= 1: B_m/B_0 = 2.0000000000, φ² = 2.6180339887, diff = 6.18e-01
+  m= 2: B_m/B_1 = 2.5000000000, φ² = 2.6180339887, diff = 1.18e-01
+  m= 3: B_m/B_2 = 2.6000000000, φ² = 2.6180339887, diff = 1.80e-02
+  m= 4: B_m/B_3 = 2.6153846154, φ² = 2.6180339887, diff = 2.65e-03
+  m= 5: B_m/B_4 = 2.6176470588, φ² = 2.6180339887, diff = 3.87e-04
+  m= 6: B_m/B_5 = 2.6179775281, φ² = 2.6180339887, diff = 5.65e-05
+  m= 7: B_m/B_6 = 2.6180257511, φ² = 2.6180339887, diff = 8.24e-06
+  m= 8: B_m/B_7 = 2.6180327869, φ² = 2.6180339887, diff = 1.20e-06
+  m= 9: B_m/B_8 = 2.6180338134, φ² = 2.6180339887, diff = 1.75e-07
+  m=10: B_m/B_9 = 2.6180339632, φ² = 2.6180339887, diff = 2.56e-08
+  m=11: B_m/B_10 = 2.6180339850, φ² = 2.6180339887, diff = 3.73e-09
+
+Fixed point of x ↦ (2+1) - 1/x = 3 - 1/x: x = (3+√5)/2 = φ² = 2.618034
+Compare: fixed point of x ↦ 1 + 1/x: x = (1+√5)/2 = φ = 1.618034
+
+======================================================================
+PART 5: B_m(x) AS LATTICE GAS PARTITION FUNCTION
+======================================================================
+
+CRUCIAL CONNECTION: Both H(T) and prod(1+Q_k) arise from
+lattice gas / hard-core polymer models!
+
+H(T) = I(Ω(T), 2) = hard-core lattice gas on odd-cycle graph at activity 2
+prod(1+Q_k) = ???
+
+Q: Can prod(1+Q_k) be written as a hard-core partition function too?
+
+prod(1+Q_k) = I(empty graph on m vertices, with activities Q_k)
+  = sum_{A ⊆ [m]} prod_{k∈A} Q_k
+
+By contrast, H = I(Ω(T), 2) uses the ODD-CYCLE graph with uniform activity 2.
+
+So the ratio H / prod(1+Q_k) compares:
+  - Hard-core gas on Ω(T) vs no-exclusion gas on {Q_k}
+  - The GRAPH STRUCTURE in Ω(T) excludes some configurations
+
+  p=7: H(Int) = 175, prod(1+Q) = 13.0 = F_7 = 13
+         H / F_p = 13.461538
+         H / (p · F_p) = 1.923077
+         H / p = 25
+         (H/p) / F_p = 1.923077
+         Ratio chain: H/p/F_p = 1.923077
+
+  p=11: H(Int) = 93027, prod(1+Q) = 89.0 = F_11 = 89
+         H / F_p = 1045.247191
+         H / (p · F_p) = 95.022472
+         H / p = 8457
+         (H/p) / F_p = 95.022472
+         Ratio chain: H/p/F_p = 95.022472
+
+  p=13: H(Int) = 3711175, prod(1+Q) = 233.0 = F_13 = 233
+         H / F_p = 15927.789700
+         H / (p · F_p) = 1225.214592
+         H / p = 285475
+         (H/p) / F_p = 1225.214592
+         Ratio chain: H/p/F_p = 1225.214592
+
+
+======================================================================
+PART 6: DOES H SATISFY A FIBONACCI-LIKE RECURRENCE?
+======================================================================
+
+H(Int, p) values:
+  p= 3, m=1: H=               3, F_p=       2, H/p=             1
+  p= 5, m=2: H=              25, F_p=       5, H/p=             5
+  p= 7, m=3: H=             175, F_p=      13, H/p=            25
+  p=11, m=5: H=           93027, F_p=      89, H/p=          8457
+  p=13, m=6: H=         3711175, F_p=     233, H/p=        285475
+  p=17, m=8: H=     13689269499, F_p=    1597, H/p=     805251147
+
+Checking ratios H(p)/H(q) for consecutive primes:
+  H(5)/H(3) = 8.3333, expected ~5.0000
+  H(7)/H(5) = 7.0000, expected ~10.5000
+  H(11)/H(7) = 531.5829, expected ~495.0000
+  H(13)/H(11) = 39.8935, expected ~39.0000
+  H(17)/H(13) = 3688.6618, expected ~3570.0000
+
+Checking: Is H/p a Fibonacci-like combination?
+  p=3: H/p = 1 = F_1
+  p=5: H/p = 5 = F_5
+
+======================================================================
+PART 7: CHEBYSHEV POLYNOMIALS AND THE UNIFIED FRAMEWORK
+======================================================================
+
+Chebyshev U_m connection:
+U_m(cos θ) = sin((m+1)θ) / sin θ
+B_m(x) = U_m(1 + x/2)
+
+  m=0: B_m(1) = 1, U_m(3/2) = 1, F_1 = 1, match = True
+  m=1: B_m(1) = 2, U_m(3/2) = 3, F_3 = 2, match = False
+  m=2: B_m(1) = 5, U_m(3/2) = 8, F_5 = 5, match = False
+  m=3: B_m(1) = 13, U_m(3/2) = 21, F_7 = 13, match = False
+  m=4: B_m(1) = 34, U_m(3/2) = 55, F_9 = 34, match = False
+  m=5: B_m(1) = 89, U_m(3/2) = 144, F_11 = 89, match = False
+  m=6: B_m(1) = 233, U_m(3/2) = 377, F_13 = 233, match = False
+  m=7: B_m(1) = 610, U_m(3/2) = 987, F_15 = 610, match = False
+
+THE UNIFIED VIEW:
+
+1. Interval Q_k = |D_m(2πk/p)|² = Dirichlet kernel squared
+2. prod(1+Q_k) = B_m(1) = U_m(3/2) = F_p
+3. U_m(3/2) = value of Chebyshev polynomial at x = 3/2 = cos(iθ)
+   where θ = arccosh(3/2) ≈ 0.9624
+   cosh(0.9624) = 1.499974
+
+======================================================================
+PART 8: PARAMETRIC DEFORMATION — FROM F_p TO H(T)
+======================================================================
+
+prod(a + Q_k) = a^m · B_m(1/a) = a^m · U_m(1 + 1/(2a))
+
+At a=2: prod(2+Q_k) = 2^m · B_m(1/2) = 2^m · U_m(5/4)
+At a=1: prod(1+Q_k) = B_m(1) = U_m(3/2) = F_p
+At a→∞: prod(a+Q_k) → a^m (trivial)
+
+Parametric values of prod(a+Q_k) for Interval, p=7 and p=11:
+
+p=7, m=3, Q = [5.0489 0.308  0.6431]:
+  a=  0.5: prod(a+Q) =             5.12, a^m·B_m(1/a) =             5.12, ratio to H = 34.146341
+  a=  1.0: prod(a+Q) =            13.00, a^m·B_m(1/a) =            13.00, ratio to H = 13.461538
+  a=  1.5: prod(a+Q) =            25.38, a^m·B_m(1/a) =            25.38, ratio to H = 6.896552
+  a=  2.0: prod(a+Q) =            43.00, a^m·B_m(1/a) =            43.00, ratio to H = 4.069767
+  a=  3.0: prod(a+Q) =            97.00, a^m·B_m(1/a) =            97.00, ratio to H = 1.804124
+  a=  4.0: prod(a+Q) =           181.00, a^m·B_m(1/a) =           181.00, ratio to H = 0.966851
+  a=  5.0: prod(a+Q) =           301.00, a^m·B_m(1/a) =           301.00, ratio to H = 0.581395
+  a= 10.0: prod(a+Q) =          1651.00, a^m·B_m(1/a) =          1651.00, ratio to H = 0.105996
+  H/p / F_p = 1.923077
+
+p=11, m=5, Q = [12.3435  0.2716  1.4487  0.3533  0.583 ]:
+  a=  0.5: prod(a+Q) =            17.84, a^m·B_m(1/a) =            17.84, ratio to H = 5213.422067
+  a=  1.0: prod(a+Q) =            89.00, a^m·B_m(1/a) =            89.00, ratio to H = 1045.247191
+  a=  1.5: prod(a+Q) =           279.16, a^m·B_m(1/a) =           279.16, ratio to H = 333.243479
+  a=  2.0: prod(a+Q) =           683.00, a^m·B_m(1/a) =           683.00, ratio to H = 136.203514
+  a=  3.0: prod(a+Q) =          2683.00, a^m·B_m(1/a) =          2683.00, ratio to H = 34.672754
+  a=  4.0: prod(a+Q) =          7589.00, a^m·B_m(1/a) =          7589.00, ratio to H = 12.258137
+  a=  5.0: prod(a+Q) =         17621.00, a^m·B_m(1/a) =         17621.00, ratio to H = 5.279326
+  a= 10.0: prod(a+Q) =        287891.00, a^m·B_m(1/a) =        287891.00, ratio to H = 0.323133
+  H/p / F_p = 95.022472
+
+p=13, m=6, Q = [17.2069  0.2652  1.9882  0.3189  0.7747  0.4462]:
+  a=  0.5: prod(a+Q) =            33.30, a^m·B_m(1/a) =            33.30, ratio to H = 111457.156265
+  a=  1.0: prod(a+Q) =           233.00, a^m·B_m(1/a) =           233.00, ratio to H = 15927.789700
+  a=  1.5: prod(a+Q) =           927.48, a^m·B_m(1/a) =           927.48, ratio to H = 4001.334254
+  a=  2.0: prod(a+Q) =          2731.00, a^m·B_m(1/a) =          2731.00, ratio to H = 1358.906994
+  a=  3.0: prod(a+Q) =         14209.00, a^m·B_m(1/a) =         14209.00, ratio to H = 261.184812
+  a=  4.0: prod(a+Q) =         49661.00, a^m·B_m(1/a) =         49661.00, ratio to H = 74.730171
+  a=  5.0: prod(a+Q) =        136681.00, a^m·B_m(1/a) =        136681.00, ratio to H = 27.152091
+  a= 10.0: prod(a+Q) =       3888611.00, a^m·B_m(1/a) =       3888611.00, ratio to H = 0.954370
+  H/p / F_p = 1225.214592
+
+======================================================================
+PART 9: FIBONACCI LATTICE AND QUASICRYSTAL STRUCTURE
+======================================================================
+
+Golden angle: 2π(2-φ) = 2π/φ² ≈ 137.5078° ≈ 2.4000 rad
+
+Fibonacci permutation σ: k ↦ k·a mod p for various a:
+
+p=7: golden element a = round(p/φ²) mod p = 3
+  S_int = [1, 2, 3]
+  σ_3(S_int) = [2, 3, 6]
+  Overlap with Paley: 1/3
+
+p=11: golden element a = round(p/φ²) mod p = 4
+  S_int = [1, 2, 3, 4, 5]
+  σ_4(S_int) = [1, 4, 5, 8, 9]
+  Overlap with Paley: 4/5
+
+p=13: golden element a = round(p/φ²) mod p = 5
+  S_int = [1, 2, 3, 4, 5, 6]
+  σ_5(S_int) = [2, 4, 5, 7, 10, 12]
+  Overlap with Paley: 3/6
+
+======================================================================
+PART 10: TRANSFER MATRIX TRACE FORMULA FOR H
+======================================================================
+
+Rook placement interpretation:
+H = #{σ ∈ S_p : σ(i+1) - σ(i) mod p ∈ S for all i}
+
+For S = {1,...,m} (Interval):
+  Each step goes forward by 1 to m positions (mod p)
+  This is like a PAWN moving on a circular chessboard!
+
+Bipartite matching formulation:
+  H = perm(M) where M is a (p-1)×p matrix
+  M[i,v] = 1 iff vertex v can be visited at step i
+  This permanent counts Hamiltonian paths.
+
+======================================================================
+PART 11: THE LATTICE GAS BRIDGE — OCF MEETS FIBONACCI
+======================================================================
+
+Fibonacci = independent set polynomial of path graph:
+  F_n = I(P_{n-2}, 1)
+
+OCF = independent set polynomial of odd-cycle graph:
+  H(T) = I(Ω(T), 2)
+
+For the Interval tournament:
+  F_p = prod(1+Q_k) = independent set poly of ??? at activity ???
+
+Verify: F_n = I(P_{n-2}, 1):
+Standard result: number of independent sets of P_n (n vertices) = F_{n+2}
+  P_1 (1 vertices): F_3 = 2
+  P_2 (2 vertices): F_4 = 3
+  P_3 (3 vertices): F_5 = 5
+  P_4 (4 vertices): F_6 = 8
+  P_5 (5 vertices): F_7 = 13
+  P_6 (6 vertices): F_8 = 21
+  P_7 (7 vertices): F_9 = 34
+
+Graph sizes:
+  p=7: Ω(Int) has 3 vertices, P_5 = P_5 has 5 vertices
+  p=11: Ω(Int) has 5 vertices, P_9 = P_9 has 9 vertices
+  p=13: Ω(Int) has 6 vertices, P_11 = P_11 has 11 vertices
+
+======================================================================
+PART 12: CLUSTER EXPANSION — EXPRESSING H/F_p
+======================================================================
+
+Both H and F_p are partition functions (independent set polys).
+Their RATIO R = H/F_p = I(Ω,2)/I(∅,Q_k) measures the effect of:
+  (a) Changing the graph from empty to Ω(T)
+  (b) Changing activities from Q_k to uniform 2
+
+p=7: log(H/F_p) = 2.599837
+  = log(175) - log(13)
+  H/F_p = 13.461538
+  (H/F_p)/p = 1.923077
+  sum log(Q_k) = 0.000000
+  log(H/F_p) / sum_log(Q) = 15611497622829778.000000
+  C(2m,m) = 20
+  H / (p · F_p · m!) = 0.320513
+
+p=11: log(H/F_p) = 6.952009
+  = log(93027) - log(89)
+  H/F_p = 1045.247191
+  (H/F_p)/p = 95.022472
+  sum log(Q_k) = -0.000000
+  log(H/F_p) / sum_log(Q) = -15654531856776372.000000
+  C(2m,m) = 252
+  H / (p · F_p · m!) = 0.791854
+
+p=13: log(H/F_p) = 9.675821
+  = log(3711175) - log(233)
+  H/F_p = 15927.789700
+  (H/F_p)/p = 1225.214592
+  sum log(Q_k) = -0.000000
+  log(H/F_p) / sum_log(Q) = -9683560497758268.000000
+  C(2m,m) = 924
+  H / (p · F_p · m!) = 1.701687
+
+
+======================================================================
+SYNTHESIS: THE FIBONACCI-TOURNAMENT DICTIONARY (EXTENDED)
+======================================================================
+
+TIER 1 — PROVEN IDENTITIES:
+  prod(1+Q_k) = F_p (Fibonacci number)
+  prod(a+Q_k) = a^m · B_m(1/a) (Morgan-Voyce)
+  B_m(x) = U_m(1+x/2) (Chebyshev of 2nd kind)
+  B_m(1) = F_{2m+1} = F_p
+  B_m(4) = Pell_{2m+1}
+  T_B eigenvalues = φ², ψ² (golden ratio squared)
+  CF: B_m/B_{m-1} = [3; 3, 3, ...] → φ² (periodic CF)
+
+TIER 2 — STRUCTURAL PARALLELS:
+  F_n = I(P_{n-2}, 1) — independent sets of path
+  H(T) = I(Ω(T), 2) — independent sets of odd-cycle graph
+  Both are lattice gas partition functions!
+  Fibonacci: activity 1 on path graph
+  Tournament: activity 2 on odd-cycle graph
+
+TIER 3 — KEY QUESTIONS:
+  Q1: Is there a graph homomorphism Ω(Int) → P_{p-2}?
+  Q2: Does the cluster expansion of H/F_p have a nice form?
+  Q3: Can the Binet splitting φ^p, ψ^p be matched to Galois orbits of Q_k?
+  Q4: Does Cassini-type identity B_{m-1}·B_{m+1} - B_m² = (-1)^m
+      have a tournament interpretation?
+
+TIER 4 — PROOF STRATEGY:
+  The path from Fibonacci to H-maximization goes:
+  (1) Interval Q_k are zeros of B_m(1/x) (up to scaling)
+  (2) B_m encodes the Chebyshev/Dirichlet kernel structure
+  (3) The Q_k are maximally CONCENTRATED (largest max, smallest min)
+  (4) This concentration → max additive energy E(S)
+  (5) Max E(S) → max Walsh degree-4 terms → max H
+  (6) The Fibonacci identity prod(1+Q_k) = F_p is a SHADOW
+      of the deeper: Q_k structure determines H
+
