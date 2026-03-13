@@ -2,6 +2,19 @@
 """
 eigenspace_uniformity_analysis.py
 
+*** WARNING: THIS SCRIPT'S CONCLUSION IS INCORRECT ***
+It uses interior-only boundary (TRH convention: removes vertices 1..m-1),
+NOT the full GLMY boundary (removes ALL vertices 0..m including endpoints).
+GLMY face_0 removes the first vertex, shifting the face to start at d_1 ≠ 0,
+which introduces a k-dependent phase omega^{k*d_1}. Therefore B_k ≠ B_0.
+
+Our per-eigenspace data CONFIRMS B_k ≠ B_0:
+  P_11 k=0: rk(d) = [0, 0, 5, 15, 55, 150, 305, 390]
+  P_11 k≠0: rk(d) = [0, 1, 4, 16, 54, 151, 309, 390]
+
+See MISTAKE-021 for the TRH vs GLMY boundary confusion.
+
+Original (incorrect) description:
 Investigate WHY all eigenspaces k=0,...,p-1 of circulant tournaments on Z_p
 have IDENTICAL Betti numbers (Eigenspace Betti Uniformity).
 
