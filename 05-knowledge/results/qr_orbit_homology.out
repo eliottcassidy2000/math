@@ -1,0 +1,62 @@
+
+P_7: m=3
+  d=1: A=3, #orbits=1, orbit sizes=[3], A/m=✓ (1)
+  d=2: A=9, #orbits=3, orbit sizes=[3], A/m=✓ (3)
+  d=3: A=21, #orbits=7, orbit sizes=[3], A/m=✓ (7)
+
+  Omega_d divisibility by m=3:
+  d=1: A=3, A mod m = 0, A/m = 1, Ω=3, Ω mod m = 0, Ω/m = 1
+  d=2: A=9, A mod m = 0, A/m = 3, Ω=6, Ω mod m = 0, Ω/m = 2
+  d=3: A=21, A mod m = 0, A/m = 7, Ω=9, Ω mod m = 0, Ω/m = 3
+  d=4: A=39, A mod m = 0, A/m = 13, Ω=9, Ω mod m = 0, Ω/m = 3
+  d=5: A=45, A mod m = 0, A/m = 15, Ω=6, Ω mod m = 0, Ω/m = 2
+  d=6: A=27, A mod m = 0, A/m = 9, Ω=3, Ω mod m = 0, Ω/m = 1
+
+  QR sub-complex for j≠0 (dims = Ω_d/m for d≥1, 0 at d=0):
+    dims = [0, 1, 2, 3, 3, 2, 1]
+    predicted ranks (β_d=0 for d<m) = [0, 0, 1, 1, 2, 1, 1]
+    χ = 0 (should be 0 for j≠0)
+    β (predicted, exact below m) = [0, 0, 0, 0, 0, 0, 0]
+    β_m = β_4 = 0
+    Expected: (m-3)/2 = 0
+
+P_11: m=5
+  d=1: A=5, #orbits=1, orbit sizes=[5], A/m=✓ (1)
+  d=2: A=25, #orbits=5, orbit sizes=[5], A/m=✓ (5)
+  d=3: A=110, #orbits=22, orbit sizes=[5], A/m=✓ (22)
+
+  Omega_d divisibility by m=5:
+  d=1: A=5, A mod m = 0, A/m = 1, Ω=5, Ω mod m = 0, Ω/m = 1
+  d=2: A=25, A mod m = 0, A/m = 5, Ω=20, Ω mod m = 0, Ω/m = 4
+  d=3: A=110, A mod m = 0, A/m = 22, Ω=70, Ω mod m = 0, Ω/m = 14
+  d=4: A=430, A mod m = 0, A/m = 86, Ω=205, Ω mod m = 0, Ω/m = 41
+  d=5: A=1430, A mod m = 0, A/m = 286, Ω=460, Ω mod m = 0, Ω/m = 92
+  d=6: A=3970, A mod m = 0, A/m = 794, Ω=700, Ω mod m = 0, Ω/m = 140
+  d=7: A=8735, A mod m = 0, A/m = 1747, Ω=690, Ω mod m = 0, Ω/m = 138
+  d=8: A=14395, A mod m = 0, A/m = 2879, Ω=450, Ω mod m = 0, Ω/m = 90
+  d=9: A=15745, A mod m = 0, A/m = 3149, Ω=180, Ω mod m = 0, Ω/m = 36
+  d=10: A=8645, A mod m = 0, A/m = 1729, Ω=30, Ω mod m = 0, Ω/m = 6
+
+  QR sub-complex for j≠0 (dims = Ω_d/m for d≥1, 0 at d=0):
+    dims = [0, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]
+    predicted ranks (β_d=0 for d<m) = [0, 0, 1, 3, 11, 30, 62, 78, 60, 30, 6]
+    χ = 0 (should be 0 for j≠0)
+    β (predicted, exact below m) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    β_m = β_6 = 0
+    Expected: (m-3)/2 = 1
+
+P_19: m=9
+  d=1: A=9, #orbits=1, orbit sizes=[9], A/m=✓ (1)
+  d=2: A=81, #orbits=9, orbit sizes=[9], A/m=✓ (9)
+  d=3: A=684, #orbits=76, orbit sizes=[9], A/m=✓ (76)
+
+  Omega_d divisibility by m=9:
+  d=1: A=9, A mod m = 0, A/m = 1
+  d=2: A=81, A mod m = 0, A/m = 9
+  d=3: A=684, A mod m = 0, A/m = 76
+  d=4: A=5436, A mod m = 0, A/m = 604
+  d=5: A=40284, A mod m = 0, A/m = 4476
+  d=6: A=277236, A mod m = 0, A/m = 30804
+  d=7: A=1759914, A mod m = 0, A/m = 195546
+
+============================================================
