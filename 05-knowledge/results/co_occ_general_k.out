@@ -1,0 +1,232 @@
+======================================================================
+GENERAL co_occ_k(d) ANALYSIS
+======================================================================
+
+======================================================================
+p=7, Paley, S=[1, 2, 4]
+======================================================================
+
+  k=3: 14 vertex sets, 6 through 0 (0.0s)
+    co_occ_k profile: [2, 2, 2, 2] (symmetric: True)
+    CONSTANT: True (value = 2.0)
+    Variance: 0.0000
+    J_k (directed) profile: [2, 2, 2, 2]
+    Avg directed cycles per vertex set: 1.0000
+    Disjoint k-k pairs: 7/91 (7.69%) [0.0s]
+
+  k=5: 21 vertex sets, 15 through 0 (0.0s)
+    co_occ_k profile: [10, 10, 10, 10] (symmetric: True)
+    CONSTANT: True (value = 10.0)
+    Variance: 0.0000
+    J_k (directed) profile: [20, 20, 20, 20]
+    Avg directed cycles per vertex set: 2.0000
+
+======================================================================
+p=7, Interval, S=[1, 2, 3]
+======================================================================
+
+  k=3: 14 vertex sets, 6 through 0 (0.0s)
+    co_occ_k profile: [1, 2, 3, 3] (symmetric: True)
+    Linear fit: 0.00 + 1.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 0, slope = 1
+    Variance: 0.6667
+    J_k (directed) profile: [1, 2, 3, 3]
+    Avg directed cycles per vertex set: 1.0000
+    Disjoint k-k pairs: 14/91 (15.38%) [0.0s]
+
+  k=5: 21 vertex sets, 15 through 0 (0.0s)
+    co_occ_k profile: [10, 10, 10, 10] (symmetric: True)
+    Linear fit: 10.00 + 0.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 10, slope = 0
+    Variance: 0.0000
+    J_k (directed) profile: [13, 13, 14, 14]
+    Avg directed cycles per vertex set: 1.3333
+
+======================================================================
+p=11, Paley, S=[1, 3, 4, 5, 9]
+======================================================================
+
+  k=3: 55 vertex sets, 15 through 0 (0.0s)
+    co_occ_k profile: [3, 3, 3, 3, 3, 3] (symmetric: True)
+    CONSTANT: True (value = 3.0)
+    Variance: 0.0000
+    J_k (directed) profile: [3, 3, 3, 3, 3, 3]
+    Avg directed cycles per vertex set: 1.0000
+    Disjoint k-k pairs: 495/1485 (33.33%) [0.0s]
+
+  k=5: 352 vertex sets, 160 through 0 (0.0s)
+    co_occ_k profile: [64, 64, 64, 64, 64, 64] (symmetric: True)
+    CONSTANT: True (value = 64.0)
+    Variance: 0.0000
+    J_k (directed) profile: [108, 108, 108, 108, 108, 108]
+    Avg directed cycles per vertex set: 1.6875
+    Disjoint k-k pairs: 726/61776 (1.18%) [0.0s]
+
+  k=7: 330 vertex sets, 210 through 0 (0.0s)
+    co_occ_k profile: [126, 126, 126, 126, 126, 126] (symmetric: True)
+    CONSTANT: True (value = 126.0)
+    Variance: 0.0000
+    J_k (directed) profile: [1512, 1512, 1512, 1512, 1512, 1512]
+    Avg directed cycles per vertex set: 12.0000
+
+  k=9: 55 vertex sets, 45 through 0 (0.0s)
+    co_occ_k profile: [36, 36, 36, 36, 36, 36] (symmetric: True)
+    CONSTANT: True (value = 36.0)
+    Variance: 0.0000
+    J_k (directed) profile: [7236, 7236, 7236, 7236, 7236, 7236]
+    Avg directed cycles per vertex set: 201.0000
+
+======================================================================
+p=11, Interval, S=[1, 2, 3, 4, 5]
+======================================================================
+
+  k=3: 55 vertex sets, 15 through 0 (0.0s)
+    co_occ_k profile: [1, 2, 3, 4, 5, 5] (symmetric: True)
+    Linear fit: 0.00 + 1.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 0, slope = 1
+    Variance: 2.0000
+    J_k (directed) profile: [1, 2, 3, 4, 5, 5]
+    Avg directed cycles per vertex set: 1.0000
+    Disjoint k-k pairs: 550/1485 (37.04%) [0.0s]
+
+  k=5: 407 vertex sets, 185 through 0 (0.0s)
+    co_occ_k profile: [68, 71, 74, 77, 80, 80] (symmetric: True)
+    Linear fit: 65.00 + 3.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 65, slope = 3
+    Variance: 18.0000
+    J_k (directed) profile: [78, 84, 87, 91, 100, 100]
+    Avg directed cycles per vertex set: 1.1892
+    Disjoint k-k pairs: 1122/82621 (1.36%) [0.0s]
+
+  k=7: 330 vertex sets, 210 through 0 (0.0s)
+    co_occ_k profile: [126, 126, 126, 126, 126, 126] (symmetric: True)
+    Linear fit: 126.00 + 0.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 126, slope = 0
+    Variance: 0.0000
+    J_k (directed) profile: [1232, 1260, 1296, 1333, 1368, 1368]
+    Avg directed cycles per vertex set: 10.3000
+
+  k=9: 55 vertex sets, 45 through 0 (0.0s)
+    co_occ_k profile: [36, 36, 36, 36, 36, 36] (symmetric: True)
+    Linear fit: 36.00 + 0.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 36, slope = 0
+    Variance: 0.0000
+    J_k (directed) profile: [6075, 6091, 6115, 6147, 6172, 6172]
+    Avg directed cycles per vertex set: 170.0000
+
+======================================================================
+p=13, Interval, S=[1, 2, 3, 4, 5, 6]
+======================================================================
+
+  k=3: 91 vertex sets, 21 through 0 (0.0s)
+    co_occ_k profile: [1, 2, 3, 4, 5, 6, 6] (symmetric: True)
+    Linear fit: 0.00 + 1.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 0, slope = 1
+    Variance: 2.9167
+    J_k (directed) profile: [1, 2, 3, 4, 5, 6, 6]
+    Avg directed cycles per vertex set: 1.0000
+    Disjoint k-k pairs: 1820/4095 (44.44%) [0.0s]
+
+  k=5: 1092 vertex sets, 420 through 0 (0.0s)
+    co_occ_k profile: [125, 131, 137, 143, 149, 155, 155] (symmetric: True)
+    Linear fit: 119.00 + 6.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 119, slope = 6
+    Variance: 105.0000
+    J_k (directed) profile: [140, 152, 159, 165, 174, 190, 190]
+    Avg directed cycles per vertex set: 1.1667
+    Disjoint k-k pairs: 26754/595686 (4.49%) [0.1s]
+
+  k=7: 1703 vertex sets, 917 through 0 (0.1s)
+    co_occ_k profile: [456, 457, 458, 459, 460, 461, 461] (symmetric: True)
+    Linear fit: 455.00 + 1.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 455, slope = 1
+    Variance: 2.9167
+    J_k (directed) profile: [3932, 4056, 4190, 4331, 4472, 4618, 4618]
+    Avg directed cycles per vertex set: 9.3053
+
+  k=9: 715 vertex sets, 495 through 0 (0.5s)
+    co_occ_k profile: [330, 330, 330, 330, 330, 330, 330] (symmetric: True)
+    Linear fit: 330.00 + 0.00*d (max residual: 0.0000)
+    EXACTLY LINEAR: True
+    Exact intercept = 330, slope = 0
+    Variance: 0.0000
+    J_k (directed) profile: [47125, 47543, 48017, 48521, 49056, 49610, 49610]
+    Avg directed cycles per vertex set: 146.4000
+
+======================================================================
+SLOPE PATTERN: co_occ_k(d) = a_k + b_k * d for Interval
+======================================================================
+
+  p=7:
+    k=3: intercept=0.00, slope=1.00, max_res=0.0000
+    k=5: intercept=10.00, slope=0.00, max_res=0.0000
+    Slope sequence: ['1.00', '0.00']
+
+  p=11:
+    k=3: intercept=0.00, slope=1.00, max_res=0.0000
+    k=5: intercept=65.00, slope=3.00, max_res=0.0000
+    k=7: intercept=126.00, slope=0.00, max_res=0.0000
+    k=9: intercept=36.00, slope=0.00, max_res=0.0000
+    Slope sequence: ['1.00', '3.00', '0.00', '0.00']
+
+  p=13:
+    k=3: intercept=0.00, slope=1.00, max_res=0.0000
+    k=5: intercept=119.00, slope=6.00, max_res=0.0000
+    k=7: intercept=455.00, slope=1.00, max_res=0.0000
+    k=9: intercept=330.00, slope=0.00, max_res=0.0000
+    Slope sequence: ['1.00', '6.00', '1.00', '0.00']
+
+======================================================================
+CONNECTION TO FEJER KERNEL
+======================================================================
+
+  p=11, Interval eigenvalues |lambda_r|^2:
+    r=0: 25.0000
+    r=1: 12.3435
+    r=2: 0.2716
+    r=3: 1.4487
+    r=4: 0.3533
+    r=5: 0.5830
+    r=6: 0.5830
+    r=7: 0.3533
+    r=8: 1.4487
+    r=9: 0.2716
+    r=10: 12.3435
+
+  Spectral derivative analysis (p=11):
+    k=3, d=1: J_k=1.00, diff=1.00
+    k=3, d=2: J_k=2.00, diff=1.00
+    k=3, d=3: J_k=3.00, diff=1.00
+    k=3, d=4: J_k=4.00, diff=1.00
+    k=3, d=5: J_k=5.00, diff=0.00
+    k=3, d=6: J_k=5.00, diff=0.00
+    k=5, d=1: J_k=78.00, diff=6.00
+    k=5, d=2: J_k=84.00, diff=3.00
+    k=5, d=3: J_k=87.00, diff=4.00
+    k=5, d=4: J_k=91.00, diff=9.00
+    k=5, d=5: J_k=100.00, diff=0.00
+    k=5, d=6: J_k=100.00, diff=0.00
+
+======================================================================
+DISJOINTNESS EXCESS BY CYCLE LENGTH
+======================================================================
+
+  p=11, k=3:
+    Paley: 55 vertex sets, 495 disjoint pairs
+    Interval: 55 vertex sets, 550 disjoint pairs
+    Excess: 55
+    THM-142 prediction: 55 (match: True)
+
+  p=11, k=5:
+    Paley: 352 vertex sets, 726 disjoint pairs
+    Interval: 407 vertex sets, 1122 disjoint pairs
+    Excess: 396
