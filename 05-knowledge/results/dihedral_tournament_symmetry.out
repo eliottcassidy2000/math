@@ -1,0 +1,198 @@
+======================================================================
+DIHEDRAL GROUP STRUCTURE IN PALEY TOURNAMENTS
+======================================================================
+
+  P_5 (m=2):
+    Aut(P_p) = AGL(1,5) = Z_5 ⋊ Z_2
+    |Aut| = 10
+    p ≡ 1 (mod 4)
+    -1 in QR? True (expected: True)
+    p ≡ 1 mod 4: AGL contains x -> -x (orientation-preserving)
+    Irreps of AGL(1,5):
+      2 one-dimensional (from Z_m quotient)
+      2 representations of dimension 2 (from QR and NQR orbits)
+      Check: 2*1^2 + 2*2^2 = 10 = p*m = 10
+
+  P_7 (m=3):
+    Aut(P_p) = AGL(1,7) = Z_7 ⋊ Z_3
+    |Aut| = 21
+    p ≡ 3 (mod 4)
+    -1 in QR? False (expected: False)
+    p ≡ 3 mod 4: AGL is CHIRAL (no orientation-reversing automorphism)
+    Tournament is self-complementary via x -> -x (NOT an automorphism)
+    Irreps of AGL(1,7):
+      3 one-dimensional (from Z_m quotient)
+      2 representations of dimension 3 (from QR and NQR orbits)
+      Check: 3*1^2 + 2*3^2 = 21 = p*m = 21
+
+  P_11 (m=5):
+    Aut(P_p) = AGL(1,11) = Z_11 ⋊ Z_5
+    |Aut| = 55
+    p ≡ 3 (mod 4)
+    -1 in QR? False (expected: False)
+    p ≡ 3 mod 4: AGL is CHIRAL (no orientation-reversing automorphism)
+    Tournament is self-complementary via x -> -x (NOT an automorphism)
+    Irreps of AGL(1,11):
+      5 one-dimensional (from Z_m quotient)
+      2 representations of dimension 5 (from QR and NQR orbits)
+      Check: 5*1^2 + 2*5^2 = 55 = p*m = 55
+
+  P_13 (m=6):
+    Aut(P_p) = AGL(1,13) = Z_13 ⋊ Z_6
+    |Aut| = 78
+    p ≡ 1 (mod 4)
+    -1 in QR? True (expected: True)
+    p ≡ 1 mod 4: AGL contains x -> -x (orientation-preserving)
+    Irreps of AGL(1,13):
+      6 one-dimensional (from Z_m quotient)
+      2 representations of dimension 6 (from QR and NQR orbits)
+      Check: 6*1^2 + 2*6^2 = 78 = p*m = 78
+
+  P_19 (m=9):
+    Aut(P_p) = AGL(1,19) = Z_19 ⋊ Z_9
+    |Aut| = 171
+    p ≡ 3 (mod 4)
+    -1 in QR? False (expected: False)
+    p ≡ 3 mod 4: AGL is CHIRAL (no orientation-reversing automorphism)
+    Tournament is self-complementary via x -> -x (NOT an automorphism)
+    Irreps of AGL(1,19):
+      9 one-dimensional (from Z_m quotient)
+      2 representations of dimension 9 (from QR and NQR orbits)
+      Check: 9*1^2 + 2*9^2 = 171 = p*m = 171
+
+  P_23 (m=11):
+    Aut(P_p) = AGL(1,23) = Z_23 ⋊ Z_11
+    |Aut| = 253
+    p ≡ 3 (mod 4)
+    -1 in QR? False (expected: False)
+    p ≡ 3 mod 4: AGL is CHIRAL (no orientation-reversing automorphism)
+    Tournament is self-complementary via x -> -x (NOT an automorphism)
+    Irreps of AGL(1,23):
+      11 one-dimensional (from Z_m quotient)
+      2 representations of dimension 11 (from QR and NQR orbits)
+      Check: 11*1^2 + 2*11^2 = 253 = p*m = 253
+
+======================================================================
+DIHEDRAL ACTION ON SCORE SEQUENCES
+======================================================================
+
+  n=5: score sequences live in {0,...,4}^5
+    Regular score: (2,...,2)
+    Score sequences and deviations:
+      (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)) dev=(np.float64(-2.0), np.float64(-1.0), np.float64(0.0), np.float64(1.0), np.float64(2.0)) |dev|²=10.0 count=120
+      (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)) dev=(np.float64(-2.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)) |dev|²=8.0 count=40
+      (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)) dev=(np.float64(-2.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(2.0)) |dev|²=8.0 count=40
+      (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)) dev=(np.float64(-2.0), np.float64(0.0), np.float64(0.0), np.float64(1.0), np.float64(1.0)) |dev|²=6.0 count=120
+      (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)) dev=(np.float64(-1.0), np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(2.0)) |dev|²=8.0 count=40
+      (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)) dev=(np.float64(-1.0), np.float64(-1.0), np.float64(0.0), np.float64(0.0), np.float64(2.0)) |dev|²=6.0 count=120
+      (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)) dev=(np.float64(-1.0), np.float64(-1.0), np.float64(0.0), np.float64(1.0), np.float64(1.0)) |dev|²=4.0 count=240
+      (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)) dev=(np.float64(-1.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(1.0)) |dev|²=2.0 count=280
+      (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)) dev=(np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)) |dev|²=0.0 count=24
+
+  n=7: score sequences live in {0,...,6}^7
+    Regular score: (3,...,3)
+
+======================================================================
+GAUSS SUM EIGENVALUES → FIBONACCI PRODUCT → GOLDEN RATIO
+======================================================================
+
+  P_7 (m=3):
+    det(I+A) = 32.00
+    F_7 = 13
+    det(I+A) / F_p = 2.461538
+    log(det)/log(F_p) = 1.351191
+    λ_0 = 3.00
+    λ_1 = -0.5000 + 1.3229i, |λ_1| = 1.4142
+    λ_2 = -0.5000 + 1.3229i, |λ_2| = 1.4142
+    λ_3 = -0.5000 + -1.3229i, |λ_3| = 1.4142
+    |λ_QR| = 1.414214 (all 3 same? True)
+    |λ_NQR| = 1.414214 (all 3 same? True)
+
+  P_11 (m=5):
+    det(I+A) = 1458.00
+    F_11 = 89
+    det(I+A) / F_p = 16.382022
+    log(det)/log(F_p) = 1.622947
+    λ_0 = 5.00
+    λ_1 = -0.5000 + 1.6583i, |λ_1| = 1.7321
+    λ_2 = -0.5000 + -1.6583i, |λ_2| = 1.7321
+    λ_3 = -0.5000 + 1.6583i, |λ_3| = 1.7321
+    |λ_QR| = 1.732051 (all 5 same? True)
+    |λ_NQR| = 1.732051 (all 5 same? True)
+
+  P_19 (m=9):
+    det(I+A) = 19531250.00
+    F_19 = 4181
+    det(I+A) / F_p = 4671.430280
+    log(det)/log(F_p) = 2.013302
+    λ_0 = 9.00
+    λ_1 = -0.5000 + 2.1794i, |λ_1| = 2.2361
+    λ_2 = -0.5000 + -2.1794i, |λ_2| = 2.2361
+    λ_3 = -0.5000 + -2.1794i, |λ_3| = 2.2361
+    |λ_QR| = 2.236068 (all 9 same? True)
+    |λ_NQR| = 2.236068 (all 9 same? True)
+
+  P_23 (m=11):
+    det(I+A) = 4353564672.00
+    F_23 = 28657
+    det(I+A) / F_p = 151919.763827
+    log(det)/log(F_p) = 2.162519
+    λ_0 = 11.00
+    λ_1 = -0.5000 + 2.3979i, |λ_1| = 2.4495
+    λ_2 = -0.5000 + 2.3979i, |λ_2| = 2.4495
+    λ_3 = -0.5000 + 2.3979i, |λ_3| = 2.4495
+    |λ_QR| = 2.449490 (all 11 same? True)
+    |λ_NQR| = 2.449490 (all 11 same? True)
+
+  P_31 (m=15):
+    det(I+A) = 562949953421311.44
+    F_31 = 1346269
+    det(I+A) / F_p = 418155623.743332
+    log(det)/log(F_p) = 2.406616
+    λ_0 = 15.00
+    |λ_QR| = 2.828427 (all 15 same? True)
+    |λ_NQR| = 2.828427 (all 15 same? True)
+
+  P_43 (m=21):
+    det(I+A) = 162805498773679691005952.00
+    F_43 = 433494437
+    det(I+A) / F_p = 375565370343333.125000
+    log(det)/log(F_p) = 2.687474
+    λ_0 = 21.00
+    |λ_QR| = 3.316625 (all 21 same? True)
+    |λ_NQR| = 3.316625 (all 21 same? True)
+
+  P_67 (m=33):
+    det(I+A) = 1368652901771583297248817498631968798015488.00
+    F_67 = 44945570212853
+    det(I+A) / F_p = 30451341373352791387121123328.000000
+    log(det)/log(F_p) = 3.086300
+    λ_0 = 33.00
+    |λ_QR| = 4.123106 (all 33 same? True)
+    |λ_NQR| = 4.123106 (all 33 same? True)
+
+  P_83 (m=41):
+    det(I+A) = 68271646134828562497870276793858024321318565339230896128.00
+    F_83 = 99194853094755497
+    det(I+A) / F_p = 688257948924147634391984361742815723520.000000
+    log(det)/log(F_p) = 3.285046
+    λ_0 = 41.00
+    |λ_QR| = 4.582576 (all 41 same? True)
+    |λ_NQR| = 4.582576 (all 41 same? True)
+
+======================================================================
+DIHEDRAL SYMMETRY BREAKING: EVEN vs ODD n
+======================================================================
+  n odd: Regular tournaments exist, full dihedral symmetry D_m preserves score (m,...,m)
+  n even: No regular tournament, best is 'almost regular' (m,m,...,m+1,m+1,...)
+          Dihedral symmetry broken: D_m -> S_{n/2} × S_{n/2}
+  This explains WHY the H landscape has spurious maxima at even n:
+  The symmetry-breaking from D_m to S_{n/2}² creates 'frustration'
+  in the spin glass, manifesting as local optima in the flip graph.
+
+  CONJECTURE (HYP-741): At odd n, the H landscape has no spurious
+  local maxima. At even n, spurious maxima exist with H = f(n)
+  determined by the degree-4 Fourier energy barrier.
+
+
+DONE — dihedral_tournament_symmetry.py complete
