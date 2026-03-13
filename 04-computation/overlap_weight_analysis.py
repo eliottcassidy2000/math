@@ -142,7 +142,7 @@ def count_independent_sets(adj, n):
             if not (mask & (1 << w)):  # w is not excluded
                 # Add w to independent set
                 new_mask = mask | nbr[w]
-                backtrack(w + 1, new_mask, size + 1)
+                backtrack(w, new_mask, size + 1)
 
     backtrack(-1, 0, 0)
     return alpha

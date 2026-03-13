@@ -179,7 +179,7 @@ def compute_H_p7(A, p):
         for w in range(v + 1, n_cyc):
             if not (mask & (1 << w)):
                 new_mask = mask | nbr[w]
-                backtrack(w + 1, new_mask, size + 1)
+                backtrack(w, new_mask, size + 1)
     backtrack(-1, 0, 0)
 
     H = sum(alpha[j] * (2**j) for j in range(len(alpha)))

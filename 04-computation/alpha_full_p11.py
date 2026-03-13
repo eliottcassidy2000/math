@@ -110,7 +110,7 @@ def independence_polynomial_backtrack(cycles, x=2):
         alpha[size] += 1
         for w in range(v, n):
             if not (excluded & (1 << w)):
-                backtrack(w + 1, excluded | nbr[w], size + 1)
+                backtrack(w, excluded | nbr[w], size + 1)
 
     backtrack(-1, 0, 0)
 
@@ -145,7 +145,7 @@ def independence_poly_chunked(cycles, x=2):
             alpha[size] += 1
             for w in range(v, n):
                 if w not in excluded:
-                    backtrack(w + 1, excluded | nbr[w], size + 1)
+                    backtrack(w, excluded | nbr[w], size + 1)
 
         backtrack(0, set(), 0)
 
