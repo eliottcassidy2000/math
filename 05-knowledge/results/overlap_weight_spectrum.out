@@ -1,0 +1,52 @@
+======================================================================
+OVERLAP WEIGHT SPECTRUM at p=7
+======================================================================
+  bits=0: S=[6, 5, 4], H=175, N=59, c_k={3: 14, 5: 28, 7: 17}, w_range=2, var=1.0, unique_w=2
+  bits=1: S=[1, 5, 4], H=175, N=59, c_k={3: 14, 5: 28, 7: 17}, w_range=2, var=1.0, unique_w=2
+  bits=2: S=[6, 2, 4], H=175, N=59, c_k={3: 14, 5: 28, 7: 17}, w_range=2, var=1.0, unique_w=2
+  bits=3: S=[1, 2, 4], H=189, N=80, c_k={3: 14, 5: 42, 7: 24}, w_range=1, var=0.2, unique_w=2 <-- PALEY
+  bits=4: S=[6, 5, 3], H=189, N=80, c_k={3: 14, 5: 42, 7: 24}, w_range=1, var=0.2, unique_w=2
+  bits=5: S=[1, 5, 3], H=175, N=59, c_k={3: 14, 5: 28, 7: 17}, w_range=2, var=1.0, unique_w=2
+  bits=6: S=[6, 2, 3], H=175, N=59, c_k={3: 14, 5: 28, 7: 17}, w_range=2, var=1.0, unique_w=2
+  bits=7: S=[1, 2, 3], H=175, N=59, c_k={3: 14, 5: 28, 7: 17}, w_range=2, var=1.0, unique_w=2
+
+Ranked by H:
+  H=189: N=80, w_range=1, var=0.2, unique_w=2 <-- PALEY
+  H=189: N=80, w_range=1, var=0.2, unique_w=2
+  H=175: N=59, w_range=2, var=1.0, unique_w=2
+  H=175: N=59, w_range=2, var=1.0, unique_w=2
+  H=175: N=59, w_range=2, var=1.0, unique_w=2
+  H=175: N=59, w_range=2, var=1.0, unique_w=2
+  H=175: N=59, w_range=2, var=1.0, unique_w=2
+  H=175: N=59, w_range=2, var=1.0, unique_w=2
+
+Correlation analysis:
+  corr(H, N_total) = 1.0000
+  corr(H, w_var) = -1.0000
+
+
+======================================================================
+OVERLAP WEIGHT SPECTRUM at p=11 (selected orientations)
+======================================================================
+
+  Paley: S=[1, 3, 4, 5, 9], H=95095, N_total=21169
+    c_k: {3: 55, 5: 594, 7: 3960, 9: 11055, 11: 5505}
+    k=3: 55 cycles, w in [20996], range=0
+    k=5: 352 cycles, w in [21152, 21155, 21156, 21158, 21161], range=9
+
+  Interval: S=[1, 2, 3, 4, 5], H=93027, N_total=18397
+    c_k: {3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+    k=3: 55 cycles, w in [18214], range=0
+    k=5: 407 cycles, w in [18380, 18382, 18385, 18388], range=8
+
+  Alt1: S=[1, 10, 3, 8, 5], H=53097, N_total=10070
+    c_k: {3: 22, 5: 363, 7: 2134, 9: 4895, 11: 2656}
+    k=3: 22 cycles, w in [9911, 9925], range=14
+    k=5: 231 cycles, w in [10049, 10056, 10057, 10058, 10059]..., range=14
+
+  Alt2: S=[10, 2, 8, 4, 5], H=93467, N_total=19541
+    c_k: {3: 55, 5: 550, 7: 3586, 9: 10197, 11: 5153}
+    k=3: 55 cycles, w in [19352, 19355, 19381], range=29
+    k=5: 374 cycles, w in [19520, 19521, 19524, 19526, 19528]..., range=16
+
+DONE.

@@ -1,0 +1,88 @@
+
+============================================================
+  Paley p=7, S=[1, 2, 4], H=189, |Omega|=80
+============================================================
+
+  Degree distribution: {78: 14, 79: 66}
+  Mean degree: 78.83
+
+  Top 10 eigenvalues:
+    lambda_0 = 78.8268
+    lambda_1 = 0.0000
+    lambda_2 = 0.0000
+    lambda_3 = 0.0000
+    lambda_4 = 0.0000
+    lambda_5 = -0.0000
+    lambda_6 = -0.0000
+    lambda_7 = -0.0000
+    lambda_8 = -1.0000
+    lambda_9 = -1.0000
+
+  Bottom 5 eigenvalues:
+    lambda_75 = -2.0000
+    lambda_76 = -2.0000
+    lambda_77 = -2.0000
+    lambda_78 = -2.0000
+    lambda_79 = -2.0000
+
+  Hoffman bound: alpha(Omega) <= 1.9795
+  Lovasz theta approx: 40.4134
+
+  Independent set counts (alpha_j):
+    alpha_0 = 1
+    alpha_1 = 80
+    alpha_2 = 7
+
+  H = I(Omega, 2) = 189
+  H from Held-Karp = 189
+  Match: True
+
+  Independence polynomial degree: 2
+  Real roots: ['-11.4161', '-0.0125']
+
+  Spectral gap (lambda_0 - lambda_1): 78.8268
+
+============================================================
+  Interval p=7, S=[1, 2, 3], H=175, |Omega|=59
+============================================================
+
+  Degree distribution: {56: 14, 58: 45}
+  Mean degree: 57.53
+
+  Top 10 eigenvalues:
+    lambda_0 = 57.5375
+    lambda_1 = 0.8019
+    lambda_2 = 0.8019
+    lambda_3 = 0.8019
+    lambda_4 = 0.8019
+    lambda_5 = -0.5550
+    lambda_6 = -0.5550
+    lambda_7 = -0.5550
+    lambda_8 = -0.5550
+    lambda_9 = -1.0000
+
+  Bottom 5 eigenvalues:
+    lambda_54 = -2.2470
+    lambda_55 = -2.2470
+    lambda_56 = -2.2470
+    lambda_57 = -2.5375
+    lambda_58 = -3.0000
+
+  Hoffman bound: alpha(Omega) <= 2.9238
+  Lovasz theta approx: 20.1792
+
+  Independent set counts (alpha_j):
+    alpha_0 = 1
+    alpha_1 = 59
+    alpha_2 = 14
+
+  H = I(Omega, 2) = 175
+  H from Held-Karp = 175
+  Match: True
+
+  Independence polynomial degree: 2
+  Real roots: ['-4.1973', '-0.0170']
+
+  Spectral gap (lambda_0 - lambda_1): 56.7355
+
+DONE.

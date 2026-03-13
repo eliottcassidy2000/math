@@ -392,6 +392,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-693 | **H = EXACT linear(c_k) with rational coefficients**: H is an exact affine function of c_3,...,c_p for circulant tournaments. Verified at p=7,11 (underdetermined, floating-point), p=13 (exactly determined, rational coefficients, all 6 types verified). Common denominator = 500299. | H_from_ck_exact.py. | kind-pasteur-S60 |
 | HYP-694 | **disj(3,3) depends on S_4 only (extending THM-156)**: At both p=7 and p=11, the (3,3) disjoint pair count is a function of S_4 alone, consistent with THM-156 formula. | disj_character_theory.py. | kind-pasteur-S60 |
 | HYP-695 | **Conflict ratio = 1 when k1+k2 > p (pigeonhole)**: Every pair of cycles with combined vertex count exceeding p must share a vertex. All such pairs conflict. | H_ck_theory.py. | kind-pasteur-S60 |
+| HYP-696 | **THM-160: w(C) = N_total - 1 - C_odd(comp(V)) PROVED**: Overlap weight of any directed cycle C equals total cycles minus 1 minus cycles on the complement of V(C). Trivial by complementary counting. | master_overlap_formula.out. | kind-pasteur-S60 |
+| HYP-697 | **C_odd(comp) constant for 3-cycle complements at Paley p=11**: ALL 165 eight-element subsets of Paley T_11 have C_odd = 172. Pair-type symmetry (pair_qr = pair_nqr = 3) drives c3(comp) near-constancy; higher cycles compensate exactly. NOT true for non-Paley orientations (0/32 constant). | constant_complement.out. | kind-pasteur-S60 |
+| HYP-698 | **corr(H, N_total) = 1.000 at p=7**: H is perfectly correlated with total directed odd cycle count N_total across all 8 circulant orientations. Paley maximizes both. corr(H, w_var) = -1.000 (anti-correlated with overlap weight variance). | overlap_weight_spectrum.out. | kind-pasteur-S60 |
+| HYP-699 | **D(V) = c_5(complement(V)) determines overlap weight variation at k=5**: The overlap weight deficit for 5-cycles is exactly the 5-cycle count on the complement. D(V) is constant on difference-multiset orbits (21 types at p=11). Values {2,4,6,7,9} at Paley p=11. | complement_cycle_analysis.out. | kind-pasteur-S60 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
@@ -601,7 +605,7 @@ HYP-479, HYP-480, HYP-481, HYP-482, HYP-483, HYP-484, HYP-485, HYP-486, HYP-487,
 HYP-596, HYP-597, HYP-598, HYP-599, HYP-600, HYP-610, HYP-611, HYP-612, HYP-613, HYP-614, HYP-615, HYP-616, HYP-617, HYP-684, HYP-685, HYP-686, HYP-687, HYP-688, HYP-689, HYP-690
 
 ### Walsh-Overlap Weight Analysis
-HYP-618, HYP-619, HYP-620, HYP-621, HYP-626, HYP-627, HYP-628, HYP-629, HYP-630, HYP-638, HYP-639, HYP-640, HYP-641, HYP-665, HYP-666, HYP-667, HYP-668, HYP-669, HYP-670, HYP-675, HYP-676, HYP-691, HYP-692, HYP-693, HYP-694, HYP-695
+HYP-618, HYP-619, HYP-620, HYP-621, HYP-626, HYP-627, HYP-628, HYP-629, HYP-630, HYP-638, HYP-639, HYP-640, HYP-641, HYP-665, HYP-666, HYP-667, HYP-668, HYP-669, HYP-670, HYP-675, HYP-676, HYP-691, HYP-692, HYP-693, HYP-694, HYP-695, HYP-696, HYP-697, HYP-698, HYP-699
 
 ### GLMY / TRH Chain Complex Analysis
 HYP-622, HYP-623, HYP-624, HYP-625, HYP-631, HYP-632, HYP-633, HYP-634, HYP-635, HYP-636, HYP-637, HYP-648, HYP-649, HYP-650, HYP-651, HYP-652, HYP-653, HYP-654, HYP-655, HYP-656, HYP-657, HYP-658, HYP-659, HYP-660, HYP-661, HYP-662, HYP-663, HYP-664
