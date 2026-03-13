@@ -13,6 +13,55 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S67b — 2026-03-12: DEGREE-4 WALSH MAXIMALITY BREAKTHROUGH
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S67 (2nd context compaction recovery)
+**Summary of work:**
+  Continued deep exploration of Walsh structure for H-maximization proof.
+  Multiple BREAKTHROUGH results discovered.
+
+  MAJOR FINDINGS:
+
+  1. **LOG-SUPERMODULARITY FAILS (HYP-533)**: FKG approach completely ruled out.
+     Violations at all p tested. FKG lattice condition also fails.
+
+  2. **DEGREE-4 MAXIMALITY AT ALL-ONES (HYP-535)**: THE KEY DISCOVERY.
+     f₄(σ) is maximized at σ = all-ones (Interval) for BOTH p=13 AND p=17.
+     Despite mixed-sign Walsh coefficients, positive ones dominate in
+     EVERY hyperplane half-space. The degree-4 hyperplane condition
+     Σ_{|S∩F| odd, |S|=4} ĥ[S] ≥ 0 holds for ALL 63 flip sets at p=13.
+
+  3. **DEGREE-2 HURTS INTERVAL (HYP-536)**: f₂(all-ones) = -3114 at p=13
+     (negative!). J-matrix eigenvalues: {5338×2, -1557×2, -3781×2}.
+     Degree-2 alone predicts a DIFFERENT maximizer.
+
+  4. **DEGREE-4 DOMINANCE WINS (HYP-537)**: f₄ surplus (+16892) overcomes
+     f₂ deficit (-3114). Energy ratio E₄/E₂ = 4.4 (p=13), 11.9 (p=17).
+
+  5. **ZERO-SUM CHARACTERIZATION (HYP-539)**: Degree-4 coefficients are
+     classified by W = #{±i±j±k±l ≡ 0 mod p}. W=2 group has net sum +20400,
+     W=0 group has net sum -3508. Additive structure drives positivity.
+
+  6. **SPECTRAL RATIO QUANTIZATION**: ĥ[S]/C₄(S) takes only values
+     ±3206, ±135, ∞. Three magnitude classes with quantized amplification.
+
+  7. **ALL degree-1 Walsh coefficients are EXACTLY 0** (complement symmetry).
+
+  PROOF ARCHITECTURE:
+    A. f₄ maximized at all-ones (verified p=13,17; conjecture all p≥13)
+    B. E₄ dominates E₂ + E₆ + ... (verified, ratio growing monotonically)
+    C. Combined: Interval is global H-maximizer among circulants for p≥13
+    D. p=7,11: Paley wins (exhaustive). p=5: all tied.
+
+**New contributions:** HYP-533 through HYP-539, boolean_fkg_proof.py,
+  walsh_positivity_test.py, degree4_walsh_structure.py, degree4_max_mechanism.py,
+  degree4_analytic_formula.py, degree4_asymptotic.py
+**Unresolved threads:**
+  - Prove degree-4 hyperplane condition for ALL p ≥ 13 (not just p=13,17)
+  - Analytic formula for ĥ[{i,j,k,l}] in terms of W and position
+  - Connection to Gauss sums and additive combinatorics for asymptotic proof
+
 ## opus-2026-03-12-S67 — 2026-03-12: Walsh degree dominance + topological dichotomy + imaginary spectrum
 
 **Account:** opus
