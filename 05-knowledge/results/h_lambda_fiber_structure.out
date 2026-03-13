@@ -1,0 +1,68 @@
+======================================================================
+H-VALUE LAMBDA FIBER STRUCTURE AT n=7
+======================================================================
+  trial 10000: 21.8s, 9798 lambda groups
+  trial 20000: 43.5s, 19243 lambda groups
+  trial 30000: 66.8s, 28360 lambda groups
+  trial 40000: 90.7s, 37289 lambda groups
+
+Done: 46010 lambda groups, 114.6s
+
+H ambiguous lambda groups: 31/46010
+Max H range within a fiber: 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [109, 111], c3c5 = [(11, 23)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [109, 111], c3c5 = [(11, 23)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [109, 111], c3c5 = [(11, 23)], ΔH = 2
+  H ∈ [109, 111], c3c5 = [(11, 23)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [109, 111], c3c5 = [(11, 23)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [109, 111], c3c5 = [(11, 23)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+  H ∈ [141, 143], c3c5 = [(12, 30)], ΔH = 2
+
+(c3,c5) ambiguous within lambda fibers: 0/46010
+
+======================================================================
+H MOD STRUCTURE WITHIN LAMBDA FIBERS
+======================================================================
+Lambda determines H mod 4? Ambiguous: 31/46010
+Lambda determines H mod 8? Ambiguous: 31/46010
+
+======================================================================
+H-LAMBDA GAP DISTRIBUTION
+======================================================================
+
+Gap distribution for ambiguous lambda groups:
+  {2: 31}
+
+======================================================================
+FRACTION OF TOURNAMENTS IN AMBIGUOUS FIBERS
+======================================================================
+  Tournaments in ambiguous lambda fibers: 63/50000 = 0.126%
+
+======================================================================
+I(3) - H = LAMBDA_DIFF + c7
+======================================================================
+  I₃ - H = α₁ + 5α₂ = (c3+c5+c7) + 5α₂
+  Lambda-determined part of (I₃-H): c3+c5+5α₂
+  Non-lambda part: c7 (coefficient 1)
+  vs in H: coefficient of c7 is 2
+  So (I₃ - H) - lambda_part = c7 DIRECTLY
+
+  c7 from (I₃-H) formula: 1000/1000 match
+
+======================================================================
+THE DEEP STRUCTURE: SIGMA vs H FOR c7 DETERMINATION
+======================================================================
+  Both (lambda, H) and (lambda, sigma) determine c7.
+  H is a scalar; sigma is a matrix.
+  H compresses sigma's c7-relevant info losslessly!
+  This is because c7 has only 1 bit of non-lambda info (per THM-182).
+
+Done.
