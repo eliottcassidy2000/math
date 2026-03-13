@@ -1,0 +1,282 @@
+==============================================================================
+  x-DEFORMATION OF THE PFAFFIAN IDENTITY — det(I + xA)
+==============================================================================
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 1: SYMBOLIC det(I + xA) FOR n=3                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+n=3 tournaments — det(I + x·A) as polynomial in x:
+
+  T(bits=000): det(I+xA) = 1
+    expanded: 1
+    at x=2: 1
+    coefficients: [1]
+
+  T(bits=010): det(I+xA) = (x + 1)*(x**2 - x + 1)
+    expanded: x**3 + 1
+    at x=2: 9
+    coefficients: [1, 0, 0, 1]
+
+  2 distinct polynomials from 8 tournaments
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 2: SYMBOLIC det(I + xA) FOR n=4                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+n=4: 3 distinct determinant polynomials from 64 tournaments
+
+  bits=000000: det = 1
+    expanded: 1
+    at x=2: 1 = √1² (✓ square)
+
+  bits=000100: det = -x**4 + 2*x**3 + 1
+    expanded: -x**4 + 2*x**3 + 1
+    at x=2: 1 = √1² (✓ square)
+
+  bits=000010: det = (x + 1)*(x**2 - x + 1)
+    expanded: x**3 + 1
+    at x=2: 9 = √9² (✓ square)
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 3: IS det(I+xA) A PERFECT SQUARE POLYNOMIAL IN x?                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+At x=2, det(I+2A) = Pf(S)² is always a perfect square (THM-174).
+QUESTION: Is det(I+xA) a perfect square as a polynomial in x?
+
+n=3:
+  det = 1: degree 0 → SQUARE
+  det = x**3 + 1: degree 3 (ODD) → NOT a perfect square polynomial
+
+n=4:
+  det = 1: degree 0
+  det = (x + 1)*(x**2 - x + 1): degree 3 → NOT a perfect square polynomial
+  det = -x**4 + 2*x**3 + 1: degree 4, leading/trailing coeff not positive square
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 4: det(I+xA) vs H(x) = I(CG, x) — NUMERICAL COMPARISON              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+We know H(2) = I(CG, 2) and det(I+2A) = Pf(S)² ≤ H(2)².
+What about det(I+xA) vs I(CG, x)² for other x?
+
+n=4: det(I+xA) vs I(CG,x)² at various x values
+(showing one representative per H-value)
+
+  H=1 (bits=000000):
+    det(I+xA) = 1
+      x= 0: det =     1
+      x= 1: det =     1
+      x= 2: det =     1  H² = 1, gap = 0
+      x= 3: det =     1
+      x= 4: det =     1
+      x=-1: det =     1
+
+  H=3 (bits=000010):
+    det(I+xA) = (x + 1)*(x**2 - x + 1)
+      x= 0: det =     1
+      x= 1: det =     2
+      x= 2: det =     9  H² = 9, gap = 0
+      x= 3: det =    28
+      x= 4: det =    65
+      x=-1: det =     0
+
+  H=5 (bits=000100):
+    det(I+xA) = -x**4 + 2*x**3 + 1
+      x= 0: det =     1
+      x= 1: det =     2
+      x= 2: det =     1  H² = 25, gap = 24
+      x= 3: det =   -26
+      x= 4: det =  -127
+      x=-1: det =    -2
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 5: INDEPENDENCE POLYNOMIAL I(CG, x) — THE H(x) GENERALIZATION        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+H(x) = I(CG(T), x) = Σ_k α_k(T) · x^k
+
+At x=2 this gives H(T).
+What is the polynomial itself?
+
+n=3:
+  H=1, α=[1]
+    I(CG,x) = 1
+    det(I+xA) = 1
+    I(CG,x)² - det(I+xA) = 0
+
+  H=3, α=[1, 1]
+    I(CG,x) = x + 1
+    det(I+xA) = (x + 1)*(x**2 - x + 1)
+    I(CG,x)² - det(I+xA) = -x*(x - 2)*(x + 1)
+      diff at x=0: 0
+      diff at x=1: 2
+      diff at x=2: 0
+      diff at x=3: -12
+      diff at x=-1: 0
+      diff at x=-2: 8
+
+
+n=4:
+  H=1, α=[1]
+    I(CG,x) = 1
+    det(I+xA) = 1
+    I(CG,x)² - det(I+xA) = 0
+
+  H=3, α=[1, 1]
+    I(CG,x) = x + 1
+    det(I+xA) = (x + 1)*(x**2 - x + 1)
+    I(CG,x)² - det(I+xA) = -x*(x - 2)*(x + 1)
+      diff at x=0: 0
+      diff at x=1: 2
+      diff at x=2: 0
+      diff at x=3: -12
+      diff at x=-1: 0
+      diff at x=-2: 8
+
+  H=5, α=[1, 2]
+    I(CG,x) = 2*x + 1
+    det(I+xA) = -x**4 + 2*x**3 + 1
+    I(CG,x)² - det(I+xA) = x*(x**3 - 2*x**2 + 4*x + 4)
+      diff at x=0: 0
+      diff at x=1: 7
+      diff at x=2: 24
+      diff at x=3: 75
+      diff at x=-1: 3
+      diff at x=-2: 40
+
+
+n=5:
+  H=1, α=[1]
+    I(CG,x) = 1
+    det(I+xA) = 1
+    I(CG,x)² - det(I+xA) = 0
+
+  H=3, α=[1, 1]
+    I(CG,x) = x + 1
+    det(I+xA) = (x + 1)*(x**2 - x + 1)
+    I(CG,x)² - det(I+xA) = -x*(x - 2)*(x + 1)
+      diff at x=0: 0
+      diff at x=1: 2
+      diff at x=2: 0
+      diff at x=3: -12
+      diff at x=-1: 0
+      diff at x=-2: 8
+
+  H=5, α=[1, 2]
+    I(CG,x) = 2*x + 1
+    det(I+xA) = -x**4 + 2*x**3 + 1
+    I(CG,x)² - det(I+xA) = x*(x**3 - 2*x**2 + 4*x + 4)
+      diff at x=0: 0
+      diff at x=1: 7
+      diff at x=2: 24
+      diff at x=3: 75
+      diff at x=-1: 3
+      diff at x=-2: 40
+
+  H=9, α=[1, 4]
+    I(CG,x) = 4*x + 1
+    det(I+xA) = x**5 - 3*x**4 + 3*x**3 + 1
+    I(CG,x)² - det(I+xA) = -x*(x**4 - 3*x**3 + 3*x**2 - 16*x - 8)
+      diff at x=0: 0
+      diff at x=1: 23
+      diff at x=2: 72
+      diff at x=3: 87
+      diff at x=-1: 15
+      diff at x=-2: 152
+
+  H=11, α=[1, 5]
+    I(CG,x) = 5*x + 1
+    det(I+xA) = x**5 - 4*x**4 + 4*x**3 + 1
+    I(CG,x)² - det(I+xA) = -x*(x**4 - 4*x**3 + 4*x**2 - 25*x - 10)
+      diff at x=0: 0
+      diff at x=1: 34
+      diff at x=2: 120
+      diff at x=3: 228
+      diff at x=-1: 24
+      diff at x=-2: 208
+
+  H=15, α=[1, 7]
+    I(CG,x) = 7*x + 1
+    det(I+xA) = (x**2 - x + 1)*(3*x**3 + x + 1)
+    I(CG,x)² - det(I+xA) = -x*(3*x**4 - 3*x**3 + 4*x**2 - 49*x - 14)
+      diff at x=0: 0
+      diff at x=1: 59
+      diff at x=2: 144
+      diff at x=3: -111
+      diff at x=-1: 45
+      diff at x=-2: 344
+
+  H=13, α=[1, 6]
+    I(CG,x) = 6*x + 1
+    det(I+xA) = (2*x**2 - x + 1)*(x**3 - x**2 + x + 1)
+    I(CG,x)² - det(I+xA) = -x*(2*x**4 - 3*x**3 + 4*x**2 - 36*x - 12)
+      diff at x=0: 0
+      diff at x=1: 45
+      diff at x=2: 120
+      diff at x=3: 9
+      diff at x=-1: 33
+      diff at x=-2: 264
+
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PART 6: THE GAP FORMULA I(CG,x)² - det(I+xA)                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+For each tournament T, define:
+  Q(x) = I(CG(T), x)² - det(I + xA)
+
+At x=2: Q(2) = H² - Pf² = 8·q (always divisible by 8).
+At x=0: Q(0) = 1² - 1 = 0 (trivially).
+At x=-2: Q(-2) = I(CG,-2)² - det(I-2A).
+
+QUESTION: Does Q(x) have a nice factorization? Is it always ≥ 0 for x ≥ 0?
+
+n=5: Analyzing Q(x) = I(CG,x)² - det(I+xA)
+
+Found 9 distinct Q(x) polynomials:
+
+  H=1: Q(x) = 0
+    Q(x) = 0 identically!
+
+  H=3: Q(x) = -x*(x - 2)*(x + 1)
+    Q(0)=0, Q(1)=2, Q(2)=0, Q(-1)=0
+
+  H=5: Q(x) = x*(x**3 - 2*x**2 + 4*x + 4)
+    Q(0)=0, Q(1)=7, Q(2)=24, Q(-1)=3
+
+  H=9: Q(x) = -x*(x**4 - 3*x**3 + 3*x**2 - 16*x - 8)
+    Q(0)=0, Q(1)=23, Q(2)=72, Q(-1)=15
+
+  H=9: Q(x) = -x*(x**4 - 2*x**3 + 3*x**2 - 16*x - 8)
+    Q(0)=0, Q(1)=22, Q(2)=56, Q(-1)=14
+
+  H=11: Q(x) = -x*(x**4 - 4*x**3 + 4*x**2 - 25*x - 10)
+    Q(0)=0, Q(1)=34, Q(2)=120, Q(-1)=24
+
+  H=13: Q(x) = -x*(2*x**4 - 3*x**3 + 4*x**2 - 36*x - 12)
+    Q(0)=0, Q(1)=45, Q(2)=120, Q(-1)=33
+
+  H=15: Q(x) = -x*(3*x**4 - 3*x**3 + 4*x**2 - 49*x - 14)
+    Q(0)=0, Q(1)=59, Q(2)=144, Q(-1)=45
+
+  H=15: Q(x) = -x*(2*x**4 - 5*x**3 + 5*x**2 - 49*x - 14)
+    Q(0)=0, Q(1)=61, Q(2)=200, Q(-1)=47
+
+
+════════════════════════════════════════════════════════════════════════════════
+KEY FINDING SUMMARY
+════════════════════════════════════════════════════════════════════════════════
+
+If Q(x) = 0 identically for some tournaments, those are the cases where
+I(CG,x)² = det(I+xA) as POLYNOMIALS, not just at x=2.
+
+If Q(x) factors as x² · P(x) with P(x) ≥ 0 for x ≥ 0, this would explain
+why Q(2) = 8q with q ≥ 0.
+
+The x-deformation reveals the algebraic structure behind the H ≥ |Pf| inequality.
+
