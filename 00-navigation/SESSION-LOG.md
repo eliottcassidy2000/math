@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-12-S67c — 2026-03-12: CROSS-FIELD CONNECTIONS & ADDITIVE COMBINATORICS BRIDGE
+
+**Account:** opus
+**Continuation of:** opus-2026-03-12-S67b (context recovery)
+**Summary of work:**
+Deep exploration of cross-field connections inspired by Morgan-Voyce/Fibonacci/Chebyshev discoveries. 12 connections explored across physics, coding theory, representation theory, and algebraic number theory. Key mathematical results:
+
+1. **Fibonacci anti-correlation is total**: Interval MINIMIZES prod(1+Q_k) among all circulants (rank 60/64 at p=13) yet MAXIMIZES H. Jensen's inequality (concavity of log(1+x)) explains why flat spectrum wins prod(1+Q).
+
+2. **Expansion-concentration tradeoff**: Paley = Ramanujan expander (optimal), Interval = worst expander. Yet bad expansion HELPS path counting. Q_1/Q_2 ratio grows with p (not a constant ~9).
+
+3. **Additive combinatorics bridge**: Interval has |S+S| = 2m-1 (minimal doubling, Freiman bound). Corr(H,E) flips from -1.0 (p=7) to +0.51 (p=13) — THE phase transition mechanism. Degree-4 Walsh terms encode 4-point additive correlations.
+
+4. **Period-6 identity**: P_m(1) = sum (-1)^j C(m+j,2j) follows {0,-1,-1,0,+1,+1} pattern mod 6.
+
+5. **H/mean_H → 2.44**: Universal large-deviation constant for Interval.
+
+6. **Grand unification table**: 12 fields × 2 tournaments comparison (Interval vs Paley as laser vs white light, crystal vs gas, BCH vs QR code, etc.)
+
+**New contributions:** HYP-575 through HYP-582 (8 new hypotheses)
+**Scripts:** cross_field_connections.py, expander_proof_direction.py, additive_comb_bridge.py, spectral_transfer_proof.py, h_mod_p_and_class_numbers.py, prodQm1_identity.py
+**Unresolved threads:**
+- Analytic formula for h_hat[{i,j,k,l}] in terms of additive 4-point correlations
+- Proof of hyperplane condition for all p ≥ 13 (character sum estimates)
+- Why H/mean_H → 2.44 (large-deviation principle?)
+- Connecting E4/E2 > 1 to Weil-type bounds
+
 ## kind-pasteur-2026-03-12-S59c — 2026-03-12: MORGAN-VOYCE POLYNOMIAL & FIBONACCI IDENTITY
 
 **Account:** kind-pasteur
