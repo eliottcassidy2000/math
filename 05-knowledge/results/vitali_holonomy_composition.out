@@ -1,0 +1,46 @@
+============================================================
+MULTIPLE VITALI ATOMS AND COMPOSITION
+============================================================
+Found 7 tournaments with >= 2 Vitali atoms
+Atom count distribution: {2: 7}
+
+============================================================
+COMMUTATIVITY OF VITALI OPERATIONS
+============================================================
+  S1=(0, 2, 3, 4), S2=(1, 3, 4, 6), overlap=2, commute=True, c7: A=227, S1S2=154, S2S1=154
+  S1=(0, 1, 4, 6), S2=(0, 2, 4, 5), overlap=2, commute=True, c7: A=227, S1S2=154, S2S1=154
+  S1=(0, 1, 5, 6), S2=(3, 4, 5, 6), overlap=2, commute=True, c7: A=227, S1S2=154, S2S1=154
+
+============================================================
+SELF-INVERSE PROPERTY
+============================================================
+
+Self-inverse: 14 / 14 (always true by construction)
+Reverse also Vitali: 14 (does B also have S as Vitali atom?)
+
+============================================================
+VITALI ORBIT SIZE
+============================================================
+  Example 0: 2 atoms, orbit size = 3, c7 values = [(227, 1), (228, 2)]
+  Example 1: 2 atoms, orbit size = 3, c7 values = [(227, 1), (228, 2)]
+  Example 2: 2 atoms, orbit size = 3, c7 values = [(227, 1), (228, 2)]
+  Example 3: 2 atoms, orbit size = 3, c7 values = [(227, 1), (228, 2)]
+  Example 4: 2 atoms, orbit size = 3, c7 values = [(227, 1), (228, 2)]
+
+============================================================
+dc7 FROM MICROSCOPIC WITNESS TRANSITIONS
+============================================================
+Feature matrix: (285, 12), rank: 9
+dc7 = linear(dsig per SX pair)?  Max error: 1.160590
+
+Full features (dsig + XX + SX arcs): shape=(285, 27), rank=21
+Linear fit error: 1.362894
+Quadratic features: shape=(285, 405), rank=167
+Quadratic fit error: 1.122044
+
+Just arcs (XX + SX): shape=(285, 15), rank=12
+Linear fit error: 1.295240
+Quadratic of arcs: shape=(285, 135), rank=64
+Quadratic fit error: 1.453272
+
+Done.

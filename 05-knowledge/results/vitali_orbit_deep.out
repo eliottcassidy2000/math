@@ -1,0 +1,86 @@
+============================================================
+VITALI ORBIT STRUCTURE AT n=7
+============================================================
+Found 100 distinct orbits
+
+Orbit size distribution: {2: 89, 3: 11}
+
+Orbital c7 patterns:
+  Orbit size 2:
+    c7=(154, 154): 18 orbits
+    c7=(80, 80): 17 orbits
+    c7=(42, 42): 16 orbits
+    c7=(2, 2): 15 orbits
+    c7=(191, 192): 13 orbits
+  Orbit size 3:
+    c7=(227, 228, 228): 11 orbits
+
+Are c3 and c5 constant within orbits?
+  c3 constant: True
+  c5 constant: True
+
+c7 range within orbits: Counter({0: 76, 1: 24})
+
+Atom counts within orbits:
+  (1, 1): 89 orbits
+  (1, 1, 2): 11 orbits
+
+============================================================
+dc7 ALWAYS +-1 AT n=7?
+============================================================
+Total Vitali pairs tested: 1262
+dc7 distribution: {-1: 186, 0: 924, 1: 152}
+|dc7| <= 1 always? True
+
+============================================================
+dc7 AT n=8
+============================================================
+Total Vitali pairs at n=8: 266
+dc7 distribution at n=8: {-3: 4, -2: 11, -1: 46, 0: 132, 1: 49, 2: 22, 3: 2}
+Max |dc7| at n=8: 3
+
+============================================================
+COMBINATORIAL dc7 AT n=7
+============================================================
+Analyzed 30 Vitali pairs
+
+Distinct interleaving patterns: 16
+  ('S', 'S', 'S', 'S', 'X', 'X', 'X') (S-arcs=3)
+  ('S', 'S', 'S', 'X', 'S', 'X', 'X') (S-arcs=2)
+  ('S', 'S', 'S', 'X', 'X', 'S', 'X') (S-arcs=2)
+  ('S', 'S', 'S', 'X', 'X', 'X', 'S') (S-arcs=3)
+  ('S', 'S', 'X', 'S', 'S', 'X', 'X') (S-arcs=2)
+  ('S', 'S', 'X', 'S', 'X', 'X', 'S') (S-arcs=2)
+  ('S', 'S', 'X', 'X', 'S', 'S', 'X') (S-arcs=2)
+  ('S', 'S', 'X', 'X', 'S', 'X', 'S') (S-arcs=2)
+  ('S', 'S', 'X', 'X', 'X', 'S', 'S') (S-arcs=3)
+  ('S', 'X', 'S', 'S', 'S', 'X', 'X') (S-arcs=2)
+  ('S', 'X', 'S', 'S', 'X', 'X', 'S') (S-arcs=2)
+  ('S', 'X', 'S', 'X', 'X', 'S', 'S') (S-arcs=2)
+  ('S', 'X', 'X', 'S', 'S', 'S', 'X') (S-arcs=2)
+  ('S', 'X', 'X', 'S', 'S', 'X', 'S') (S-arcs=2)
+  ('S', 'X', 'X', 'S', 'X', 'S', 'S') (S-arcs=2)
+  ('S', 'X', 'X', 'X', 'S', 'S', 'S') (S-arcs=3)
+
+Pattern counts (A vs B):
+
+  Example 0: dc7=0
+
+  Example 1: dc7=0
+
+  Example 2: dc7=0
+
+  Example 3: dc7=0
+
+  Example 4: dc7=0
+
+============================================================
+SUMMARY
+============================================================
+dc7 at n=7: always in {-1, 0, 1}
+dc7 at n=8: range = [-3, 3]
+All Vitali operations commute: TRUE (in all tested cases)
+Vitali orbits: size always 1 (trivial) or 3 (two atoms)
+c3, c5 constant within orbits: c3=True, c5=True
+
+Done.
