@@ -1,0 +1,88 @@
+======================================================================
+REIDEMEISTER TORSION OF PALEY TOURNAMENTS
+======================================================================
+
+============================================================
+  P_5 (m = 2)
+============================================================
+
+  Chain complex dimensions:
+    C_0 = 5
+    C_1 = 10
+    C_2 = 10
+    C_3 = 10
+    C_4 = 10
+    d_1: 5x10, rank=4
+    d_2: 10x10, rank=10
+    d_3: 10x10, rank=8
+    d_4: 10x10, rank=10
+
+  Betti numbers:
+    beta_0 = 1  (dim=5, rank_out=0, rank_in=4)
+    beta_1 = -4  (dim=10, rank_out=4, rank_in=10)
+    beta_2 = -8  (dim=10, rank_out=10, rank_in=8)
+    beta_3 = -8  (dim=10, rank_out=8, rank_in=10)
+    beta_4 = 0  (dim=10, rank_out=10, rank_in=0)
+
+  Torsion computation (det' of d_d^T d_d):
+    d_1: 4 nonzero eigs, log(det')=2.995732, sign=(-1)^2=+
+    d_2: 10 nonzero eigs, log(det')=1.386294, sign=(-1)^3=-
+    d_3: 8 nonzero eigs, log(det')=3.218876, sign=(-1)^4=+
+    d_4: 10 nonzero eigs, log(det')=1.386294, sign=(-1)^5=-
+
+  TORSION: tau(P_5) = exp(3.442019) = 31.250000
+  F_5 = 5
+  tau / F_p = 6.250000
+  log(tau) / log(F_p) = 2.138647
+  log(tau) = 3.442019
+  log(F_p) = 1.609438
+  det(I+A) = 3.00
+  log(det(I+A)) = 1.098612
+
+============================================================
+  P_7 (m = 3)
+============================================================
+
+  Chain complex dimensions:
+    C_0 = 7
+    C_1 = 21
+    C_2 = 63
+    C_3 = 147
+    C_4 = 273
+    C_5 = 315
+    C_6 = 189
+    d_1: 7x21, rank=6
+    d_2: 21x63, rank=21
+    d_3: 63x147, rank=63
+    d_4: 147x273, rank=147
+    d_5: 273x315, rank=267
+    d_6: 315x189, rank=189
+
+  Betti numbers:
+    beta_0 = 1  (dim=7, rank_out=0, rank_in=6)
+    beta_1 = -6  (dim=21, rank_out=6, rank_in=21)
+    beta_2 = -21  (dim=63, rank_out=21, rank_in=63)
+    beta_3 = -63  (dim=147, rank_out=63, rank_in=147)
+    beta_4 = -141  (dim=273, rank_out=147, rank_in=267)
+    beta_5 = -141  (dim=315, rank_out=267, rank_in=189)
+    beta_6 = 0  (dim=189, rank_out=189, rank_in=0)
+
+  Torsion computation (det' of d_d^T d_d):
+    d_1: 6 nonzero eigs, log(det')=5.837730, sign=(-1)^2=+
+    d_2: 21 nonzero eigs, log(det')=18.558626, sign=(-1)^3=-
+    d_3: 63 nonzero eigs, log(det')=48.840064, sign=(-1)^4=+
+    d_4: 147 nonzero eigs, log(det')=100.474592, sign=(-1)^5=-
+    d_5: 267 nonzero eigs, log(det')=86.067182, sign=(-1)^6=+
+    d_6: 189 nonzero eigs, log(det')=107.057033, sign=(-1)^7=-
+
+  TORSION: tau(P_7) = exp(-85.345275) = 0.000000
+  F_7 = 13
+  tau / F_p = 0.000000
+  log(tau) / log(F_p) = -33.273669
+  log(tau) = -85.345275
+  log(F_p) = 2.564949
+  det(I+A) = 32.00
+  log(det(I+A)) = 3.465736
+
+
+DONE — reidemeister_torsion_paley.py complete
