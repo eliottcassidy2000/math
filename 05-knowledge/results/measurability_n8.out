@@ -1,0 +1,34 @@
+============================================================
+MEASURABILITY ANALYSIS AT n=8
+============================================================
+
+Distinct lambda graphs (from 5k samples): 4999
+  Lambda bits ~ log2(4999) = 12.3
+  Tournament bits = 28
+  => Lambda captures ~43.9% of bits
+
+--- c7 Within Lambda Fibers ---
+  Multi-tournament fibers: 1
+    range=0: 1
+  c7 varying fibers: 0/1 (0.0%)
+
+--- Variance Decomposition ---
+  Total c7 variance: 40079.60
+  Within-lambda variance: 0.0000
+  Lambda explains 100.0000% of c7 variance
+
+--- Information Theory ---
+  H(c7) = 8.8992 bits
+  H(c7 | lambda) = 0.0000 bits
+  I(lambda; c7) = 8.8992 bits = 100.00% of H(c7)
+
+--- Sigma Power Sums at n=8 ---
+  (tr_s2, tr_s3, tr_s4) -> c7: 1279 groups, 2 ambiguous
+    (552, 8304, 190360): c7 in [434, 442]
+    (600, 9744, 231736): c7 in [308, 316]
+  (tr_s2, tr_s3) -> c7: 737 groups, 298 ambiguous
+
+  I(scores; c7) = 4.1118 bits = 46.20%
+
+
+Done.
