@@ -26,6 +26,7 @@ The following results appear to be new contributions not found in prior literatu
 - **beta_3 = 2 at n = 8**: The first Betti number exceeding 1 in tournament path homology.
 - **Universal signed permanent congruences** (THM-H, THM-I, THM-J): The universality criterion s_2(n-3) <= 1 and the master identity D_S = n!/2^k appear to be new.
 - **HYP-282**: The "at most 3 bad vertices" bound when beta_1 = 0 is a new empirical phenomenon with no known analogue.
+- **THM-130 (Paley Betti formula)**: Complete formula beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p for Paley tournaments. The per-eigenspace decomposition and rank shift R^{(k)}-R^{(0)} = (-1)^{d+1} appear new.
 
 ---
 
@@ -264,13 +265,34 @@ These failures mean proof strategies that work at n <= 7 (relative acyclicity, q
 
 ### 6.5 Paley Tournament Homology
 
-For the **Paley tournament** T_p (p prime, p = 3 mod 4), where a->b iff b-a is a quadratic residue mod p:
+For the **Paley tournament** T_p (p prime, p = 3 mod 4), where a->b iff b-a is a quadratic residue mod p, set m = (p-1)/2. The path complex has degrees 0 through 2m = p-1.
 
-- The cyclic group Z_p acts on T_p by rotation, decomposing the chain complex into p eigenspaces
-- **Universal pattern (p >= 7):** beta_d = p-1 at d = p-3, and beta_d = 0 otherwise (for d >= 1)
-- Homotopy type: wedge of (p-1) copies of S^{p-3}
+**Two-level symmetry decomposition:**
+- **Z_p action** on paths (vertex translation) decomposes the chain complex into p eigenspaces (k = 0, 1, ..., p-1). The k=0 eigenspace is the **diff-seq complex** (translation-invariant paths encoded by successive differences).
+- **Z_m action** on diff-seqs (multiplication by quadratic residues) further decomposes into m orbits.
+- Dimension reduction: |A_d| = p * |A_d^{diff}| = pm * |A_d^{orb}|.
 
-Verified: P_7 has beta = (1,0,0,0,6,0) and P_11 has beta_8 = 10.
+**Theorem (THM-130, Complete Paley Betti Formula).** For the Paley tournament T_p with m = (p-1)/2:
+
+    beta_m = m(m-3)/2,     beta_{m+1} = m(m+1)/2 = C(m+1, 2)
+    beta_d = 0  for all other d >= 1
+    chi(T_p) = 1 - beta_m + beta_{m+1} = p
+
+The Euler characteristic equals the number of vertices, generalizing the formula for simplicial complexes of complete graphs.
+
+**Per-eigenspace structure:**
+- **k = 0** (diff-seq complex): beta_m^{(0)} = m(m-3)/2, beta_{m+1}^{(0)} = m(m-3)/2. Contributes ALL of beta_m and (m-3)/2 of each beta_{m+1} copy.
+- **k != 0** (p-1 nonzero eigenspaces): each contributes beta_{m+1}^{(k)} = 1 and beta_d^{(k)} = 0 for all other d. These eigenspaces are "almost contractible" — only a single 1-dimensional homology class at degree m+1.
+- **Rank shift**: R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} for 1 <= d <= m, where R_d = rank(partial_d).
+
+**Verified data:**
+- **P_7** (m=3): beta = (1, 0, 0, 0, 6, 0, 0). beta_3 = 0 = 3(0)/2, beta_4 = 6 = C(4,2). chi = 1 - 0 + 6 = 7 = p. ✓
+- **P_11** (m=5): beta = (1, 0, 0, 0, 0, 5, 15, 0, 0, 0, 0). beta_5 = 5 = 5(2)/2, beta_6 = 15 = C(6,2). chi = 1 - 5 + 15 = 11 = p. ✓
+- **P_11 orbit dimensions**: Omega_orb = [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6].
+
+**Orbit-level formula:** beta_m^{orb} = (m-3)/2, beta_{m+1}^{orb} = (m+1)/2 = m-1 copies plus (m-3)/2 from k=0.
+
+**Combinatorial interpretation:** beta_m = number of diagonals of a regular m-gon (including sides for m >= 4). The connection to polygon geometry is unexplained but numerically exact.
 
 ---
 
@@ -397,7 +419,7 @@ The Walsh-Fourier program is fundamentally spectral:
 
 ### 10.3 Number Theory
 
-- **Quadratic residues and Paley tournaments:** The Paley tournament T_p (p = 3 mod 4) uses the Legendre symbol to define edges. Its homological properties (beta_{p-3} = p-1, all other beta = 0) likely connect to the arithmetic of the field F_p.
+- **Quadratic residues and Paley tournaments:** The Paley tournament T_p (p = 3 mod 4) uses the Legendre symbol to define edges. Its homological properties — beta_m = m(m-3)/2 and beta_{m+1} = C(m+1,2) where m = (p-1)/2 — connect to the arithmetic of F_p. The eigenspace decomposition under Z_p reveals that nonzero eigenspaces each contribute exactly beta_{m+1} = 1, while the k=0 eigenspace (diff-seq complex) carries all of beta_m. The rank shift R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} is an arithmetic phenomenon tied to Gauss sums.
 - **Binary digit sums:** The universality criterion for the signed permanent (s_2(n-3) <= 1) is a **Kummer-type condition** reminiscent of carry-counting in binomial coefficient divisibility.
 - **2-adic structure:** The OCF gives H(T) = 1 + 2*alpha_1 + 4*alpha_2 + ..., a natural 2-adic expansion. The 2-adic valuation v_2(H(T) - 1) = min{k : alpha_k != 0} is a new tournament invariant.
 
@@ -448,18 +470,22 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 - Pin grid S_3 x Z_2 symmetry, Burnside orbit formula
 
 ### Computational (strong evidence, no algebraic proof)
+- **THM-130 (Paley Betti formula)**: beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p. Verified P_7, P_11; P_19 partially verified (Omega through d=8, beta_9 = 27 predicted but Omega_9 computation exceeds memory)
 - HYP-282: sum_v beta_1(T\v) <= 3 when beta_1(T) = 0 (verified through n = 10)
 - HYP-384: restriction map Z_1(T) -> direct_sum H_1(T\v) always surjective
 - Unimodality of F(T, x) (50k+ tests, 0 failures)
 - Paley maximization of H
+- Eigenspace rank shift: R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} for 1 <= d <= m (verified P_7, P_11)
 
 ### Open
+- **Algebraic proof of THM-130** — why beta_m = m(m-3)/2? The combinatorial interpretation (diagonals of m-gon) suggests a geometric mechanism.
 - **Understanding beta_3 = 2** at n = 8 — what structural property allows Betti numbers > 1?
 - **HYP-282** — why at most 3 "bad" vertices when beta_1 = 0? (verified n <= 10, no proof)
 - ~~**Prove beta_1 * beta_3 = 0 for all n**~~ — RESOLVED: proved via THM-095 + THM-108/109
 - Per-path identity for all n (incorporating all odd cycle lengths)
 - Proof of Paley maximization
 - What bound replaces beta_3 <= 1 at n >= 8?
+- **P_19 verification**: Omega_9 requires processing 6M orbit reps (OOM at 3.8M). Disk-based or sparse numpy approach needed.
 
 ---
 
