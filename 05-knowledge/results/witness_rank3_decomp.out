@@ -1,0 +1,116 @@
+============================================================
+RANK-3 DECOMPOSITION OF WITNESS DIFF
+============================================================
+Collected 80 non-trivial Vitali examples
+
+--- Per-outside-vertex decomposition ---
+
+Example 0: S=(0, 2, 3, 4), outside=[1, 5, 6], dc7=0
+  Outside k=1: changes [(0, 3, -1), (0, 4, 1), (2, 3, 1), (2, 4, -1)]
+  Outside k=6: changes [(0, 3, 1), (0, 4, -1), (2, 3, -1), (2, 4, 1)]
+  S-vertex k=0: changes [(1, 3, -1), (1, 4, 1), (3, 6, 1), (4, 6, -1)]
+  S-vertex k=2: changes [(1, 3, 1), (1, 4, -1), (3, 6, -1), (4, 6, 1)]
+  S-vertex k=3: changes [(0, 1, -1), (0, 6, 1), (1, 2, 1), (2, 6, -1)]
+  S-vertex k=4: changes [(0, 1, 1), (0, 6, -1), (1, 2, -1), (2, 6, 1)]
+
+  Column-wise analysis (which pairs change):
+    pair (0,1) [SX]: +1 at k=[4], -1 at k=[3]
+    pair (0,3) [SS]: +1 at k=[6], -1 at k=[1]
+    pair (0,4) [SS]: +1 at k=[1], -1 at k=[6]
+    pair (0,6) [SX]: +1 at k=[3], -1 at k=[4]
+    pair (1,2) [SX]: +1 at k=[3], -1 at k=[4]
+    pair (1,3) [SX]: +1 at k=[2], -1 at k=[0]
+    pair (1,4) [SX]: +1 at k=[0], -1 at k=[2]
+    pair (2,3) [SS]: +1 at k=[1], -1 at k=[6]
+    pair (2,4) [SS]: +1 at k=[6], -1 at k=[1]
+    pair (2,6) [SX]: +1 at k=[4], -1 at k=[3]
+    pair (3,6) [SX]: +1 at k=[0], -1 at k=[2]
+    pair (4,6) [SX]: +1 at k=[2], -1 at k=[0]
+
+Example 1: S=(0, 1, 4, 6), outside=[2, 3, 5], dc7=-1
+  Outside k=2: changes [(0, 1, -1), (0, 6, 1), (1, 4, 1), (4, 6, -1)]
+  Outside k=5: changes [(0, 1, 1), (0, 6, -1), (1, 4, -1), (4, 6, 1)]
+  S-vertex k=0: changes [(1, 2, -1), (1, 5, 1), (2, 6, 1), (5, 6, -1)]
+  S-vertex k=1: changes [(0, 2, -1), (0, 5, 1), (2, 4, 1), (4, 5, -1)]
+  S-vertex k=4: changes [(1, 2, 1), (1, 5, -1), (2, 6, -1), (5, 6, 1)]
+  S-vertex k=6: changes [(0, 2, 1), (0, 5, -1), (2, 4, -1), (4, 5, 1)]
+
+  Column-wise analysis (which pairs change):
+
+Example 2: S=(1, 3, 5, 6), outside=[0, 2, 4], dc7=1
+  Outside k=2: changes [(1, 5, -1), (1, 6, 1), (3, 5, 1), (3, 6, -1)]
+  Outside k=4: changes [(1, 5, 1), (1, 6, -1), (3, 5, -1), (3, 6, 1)]
+  S-vertex k=1: changes [(2, 5, -1), (2, 6, 1), (4, 5, 1), (4, 6, -1)]
+  S-vertex k=3: changes [(2, 5, 1), (2, 6, -1), (4, 5, -1), (4, 6, 1)]
+  S-vertex k=5: changes [(1, 2, -1), (1, 4, 1), (2, 3, 1), (3, 4, -1)]
+  S-vertex k=6: changes [(1, 2, 1), (1, 4, -1), (2, 3, -1), (3, 4, 1)]
+
+  Column-wise analysis (which pairs change):
+
+Example 3: S=(1, 3, 4, 5), outside=[0, 2, 6], dc7=0
+  Outside k=0: changes [(1, 3, 1), (1, 5, -1), (3, 4, -1), (4, 5, 1)]
+  Outside k=6: changes [(1, 3, -1), (1, 5, 1), (3, 4, 1), (4, 5, -1)]
+  S-vertex k=1: changes [(0, 3, 1), (0, 5, -1), (3, 6, -1), (5, 6, 1)]
+  S-vertex k=3: changes [(0, 1, 1), (0, 4, -1), (1, 6, -1), (4, 6, 1)]
+  S-vertex k=4: changes [(0, 3, -1), (0, 5, 1), (3, 6, 1), (5, 6, -1)]
+  S-vertex k=5: changes [(0, 1, -1), (0, 4, 1), (1, 6, 1), (4, 6, -1)]
+
+  Column-wise analysis (which pairs change):
+
+Example 4: S=(0, 2, 4, 5), outside=[1, 3, 6], dc7=1
+  Outside k=1: changes [(0, 2, 1), (0, 4, -1), (2, 5, -1), (4, 5, 1)]
+  Outside k=6: changes [(0, 2, -1), (0, 4, 1), (2, 5, 1), (4, 5, -1)]
+  S-vertex k=0: changes [(1, 2, 1), (1, 4, -1), (2, 6, -1), (4, 6, 1)]
+  S-vertex k=2: changes [(0, 1, 1), (0, 6, -1), (1, 5, -1), (5, 6, 1)]
+  S-vertex k=4: changes [(0, 1, -1), (0, 6, 1), (1, 5, 1), (5, 6, -1)]
+  S-vertex k=5: changes [(1, 2, -1), (1, 4, 1), (2, 6, 1), (4, 6, -1)]
+
+  Column-wise analysis (which pairs change):
+
+============================================================
+dc7 CORRELATION WITH DIFF STRUCTURE
+============================================================
+dc7 distribution: {-1: 20, 0: 46, 1: 14}
+
+Polarization pattern vs dc7:
+  pol=(np.int64(0), np.int64(0), np.int64(0)): dc7 mean=-0.07, values=Counter({0: 46, -1: 20, 1: 14})
+
+============================================================
+SIGMA CHANGE VS dc7
+============================================================
+dc7 vs sigma change:
+  dc7   sum_dsig   sum_|dsig|  n_changed
+    0          0           12         12
+   -1          0           12         12
+    1          0           12         12
+    0          0           12         12
+    1          0           12         12
+   -1          0           12         12
+    0          0           12         12
+    0          0           12         12
+   -1          0           12         12
+    1          0           12         12
+    1          0           12         12
+    0          0           12         12
+   -1          0           12         12
+    0          0           12         12
+    1          0           12         12
+   -1          0           12         12
+    0          0           12         12
+   -1          0           12         12
+    0          0           12         12
+    0          0           12         12
+
+Regression: dc7 = linear function of delta_sigma
+  X shape: (60, 21), rank: 20
+  Max error: 1.262926
+  Perfect fit? False
+
+  dc7 = c * sum(delta_sigma)?
+  c = 0.000000, max error = 1.000000
+
+  dc7 = linear function of diff(W)?
+  X shape: (60, 147), rank: 14
+  Max error: 1.167487
+
+Done.
