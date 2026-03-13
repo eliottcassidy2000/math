@@ -1,0 +1,442 @@
+======================================================================
+PART 1: ANATOMY OF H-CHANGING vs H-PRESERVING 4-REVERSALS AT n=7
+======================================================================
+  ... 200/2000 tournaments processed, 4 changing, 7 preserving
+  ... 400/2000 tournaments processed, 8 changing, 17 preserving
+  ... 600/2000 tournaments processed, 10 changing, 25 preserving
+  ... 800/2000 tournaments processed, 12 changing, 34 preserving
+  ... 1000/2000 tournaments processed, 15 changing, 44 preserving
+  ... 1200/2000 tournaments processed, 15 changing, 55 preserving
+  ... 1400/2000 tournaments processed, 23 changing, 67 preserving
+  ... 1600/2000 tournaments processed, 27 changing, 77 preserving
+  ... 1800/2000 tournaments processed, 32 changing, 87 preserving
+
+Total H-changing reversals: 36
+Total H-preserving reversals: 91
+Ratio changing: 0.283
+
+--- External arc patterns (sorted (in,out) per external vertex) ---
+
+Pattern                          Changing Preserving    Change%
+((np.int64(0), np.int64(4)), (np.int64(0), np.int64(4)), (np.int64(0), np.int64(4)))          0          7       0.0%
+((np.int64(0), np.int64(4)), (np.int64(0), np.int64(4)), (np.int64(4), np.int64(0)))          0         19       0.0%
+((np.int64(0), np.int64(4)), (np.int64(2), np.int64(2)), (np.int64(2), np.int64(2)))         17         27      38.6%
+((np.int64(0), np.int64(4)), (np.int64(4), np.int64(0)), (np.int64(4), np.int64(0)))          0         19       0.0%
+((np.int64(2), np.int64(2)), (np.int64(2), np.int64(2)), (np.int64(4), np.int64(0)))         19         15      55.9%
+((np.int64(4), np.int64(0)), (np.int64(4), np.int64(0)), (np.int64(4), np.int64(0)))          0          4       0.0%
+
+--- External tournament type (3-vertex sub-tournament scores) ---
+
+Ext Type               Changing Preserving    Change%
+(np.int64(0), np.int64(1), np.int64(2))         19         85      18.3%
+(np.int64(1), np.int64(1), np.int64(1))         17          6      73.9%
+
+--- 7-cycle count changes ---
+  (c7_before, c7_after, delta_H): count
+  (8, 9, 2): 10
+  (9, 8, -2): 7
+  (14, 15, 2): 8
+  (15, 14, -2): 11
+
+======================================================================
+PART 2: THREADING ANALYSIS — How 7-cycles pass through the 4-subset
+======================================================================
+
+Detailed analysis of first 5 H-changing reversals:
+
+  Example 1: subset=(0, 1, 4, 6), ext=[2, 3, 5], dH=-2
+    7-cycles before: 9, after: 8
+    Threading patterns (S=subset, E=external):
+      EEESSSS: 3 -> 2  CHANGED
+      EESESSS: 3 -> 3
+      EESSESS: 1 -> 1
+      EESSSES: 2 -> 2
+    Arcs subset->ext: 0->2 0->3 1->3 1->5 4->2 4->3 6->3 6->5 
+    Arcs ext->subset: 2->1 2->6 5->0 5->4 
+
+  Example 2: subset=(1, 3, 5, 6), ext=[0, 2, 4], dH=2
+    7-cycles before: 8, after: 9
+    Threading patterns (S=subset, E=external):
+      EEESSSS: 2 -> 3  CHANGED
+      EESESSS: 2 -> 2
+      EESSESS: 1 -> 1
+      EESSSES: 3 -> 3
+    Arcs subset->ext: 1->4 3->4 5->2 6->2 
+    Arcs ext->subset: 0->1 0->3 0->5 0->6 2->1 2->3 4->5 4->6 
+
+  Example 3: subset=(0, 2, 4, 5), ext=[1, 3, 6], dH=2
+    7-cycles before: 8, after: 9
+    Threading patterns (S=subset, E=external):
+      EEESSSS: 2 -> 3  CHANGED
+      EESESSS: 2 -> 2
+      EESSESS: 1 -> 1
+      EESSSES: 3 -> 3
+    Arcs subset->ext: 0->1 2->6 4->6 5->1 
+    Arcs ext->subset: 1->2 1->4 3->0 3->2 3->4 3->5 6->0 6->5 
+
+  Example 4: subset=(0, 1, 3, 4), ext=[2, 5, 6], dH=-2
+    7-cycles before: 15, after: 14
+    Threading patterns (S=subset, E=external):
+      EEESSSS: 3 -> 2  CHANGED
+      EESESSS: 6 -> 6
+      EESSESS: 2 -> 2
+      EESSSES: 4 -> 4
+    Arcs subset->ext: 0->2 0->5 1->2 1->6 3->2 3->5 4->2 4->6 
+    Arcs ext->subset: 5->1 5->4 6->0 6->3 
+
+  Example 5: subset=(0, 2, 4, 6), ext=[1, 3, 5], dH=-2
+    7-cycles before: 15, after: 14
+    Threading patterns (S=subset, E=external):
+      EEESSSS: 3 -> 2  CHANGED
+      EESESSS: 4 -> 4
+      EESSESS: 2 -> 2
+      EESSSES: 6 -> 6
+    Arcs subset->ext: 0->3 2->3 4->5 6->5 
+    Arcs ext->subset: 1->0 1->2 1->4 1->6 3->4 3->6 5->0 5->2 
+
+======================================================================
+PART 3: WHAT DISTINGUISHES THE 28.6% — LOCAL PREDICTABILITY
+======================================================================
+
+Computing predictive features on fresh sample...
+  ... 300 processed, 19 valid reversals
+  ... 600 processed, 44 valid reversals
+  ... 900 processed, 67 valid reversals
+  ... 1200 processed, 96 valid reversals
+
+Total valid: 119, changing: 36, preserving: 83
+
+--- Feature: arc_balance (out-in) ---
+  balance=-12: changing=0, preserving=5, rate=0.0%
+  balance=-4: changing=19, preserving=42, rate=31.1%
+  balance=4: changing=17, preserving=29, rate=37.0%
+  balance=12: changing=0, preserving=7, rate=0.0%
+
+--- Feature: full_scores of 4-subset ---
+  scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(2)): changing=0, preserving=5, rate=0.0%
+  scores=(np.int64(2), np.int64(2), np.int64(3), np.int64(3)): changing=19, preserving=42, rate=31.1%
+  scores=(np.int64(3), np.int64(3), np.int64(4), np.int64(4)): changing=17, preserving=29, rate=37.0%
+  scores=(np.int64(4), np.int64(4), np.int64(5), np.int64(5)): changing=0, preserving=7, rate=0.0%
+
+--- Feature: mixed_c3 (3-cycles with 2 subset + 1 ext) ---
+  mixed_c3=0: changing=0, preserving=44, rate=0.0%
+  mixed_c3=4: changing=36, preserving=39, rate=48.0%
+
+--- Feature: ext_c3 (3-cycle in external vertices) ---
+  ext_c3=0: changing=17, preserving=74, rate=18.7%
+  ext_c3=1: changing=19, preserving=9, rate=67.9%
+
+--- Feature: arc_sig (subset vertex (out_to_ext, in_from_ext) sorted) ---
+  arc_sig=((np.int64(0), np.int64(3)), (np.int64(0), np.int64(3)), (np.int64(0), np.int64(3)), (np.int64(0), np.int64(3))): changing=0, preserving=5, rate=0.0%
+  arc_sig=((np.int64(1), np.int64(2)), (np.int64(1), np.int64(2)), (np.int64(1), np.int64(2)), (np.int64(1), np.int64(2))): changing=19, preserving=42, rate=31.1%
+  arc_sig=((np.int64(2), np.int64(1)), (np.int64(2), np.int64(1)), (np.int64(2), np.int64(1)), (np.int64(2), np.int64(1))): changing=17, preserving=29, rate=37.0%
+  arc_sig=((np.int64(3), np.int64(0)), (np.int64(3), np.int64(0)), (np.int64(3), np.int64(0)), (np.int64(3), np.int64(0))): changing=0, preserving=7, rate=0.0%
+
+--- Feature: out_arcs (total arcs from subset to ext) ---
+  out_arcs=0: changing=0, preserving=5, rate=0.0%
+  out_arcs=4: changing=19, preserving=42, rate=31.1%
+  out_arcs=8: changing=17, preserving=29, rate=37.0%
+  out_arcs=12: changing=0, preserving=7, rate=0.0%
+
+======================================================================
+PART 4: THE HIDDEN DIMENSION — {2,1,0} OVERLAP WEIGHTS AND VITALI
+======================================================================
+
+Overlap weight analysis for H-changing examples:
+
+  Example 1: subset=(0, 1, 4, 6), dH=-2
+    3-cycles: 11 -> 11 (net change: 0)
+    Lost: [{2, 4, 6}, {0, 5, 6}, {1, 4, 5}, {0, 1, 2}]
+    Gained: [{4, 5, 6}, {0, 1, 5}, {1, 2, 4}, {0, 2, 6}]
+    Common: 7
+    Overlap of lost cycles with common cycles:
+      {2, 4, 6}: W=0:1, W=1:5, W=2:1
+      {0, 5, 6}: W=0:0, W=1:4, W=2:3
+      {1, 4, 5}: W=0:0, W=1:4, W=2:3
+      {0, 1, 2}: W=0:1, W=1:3, W=2:3
+    Overlap of gained cycles with common cycles:
+      {4, 5, 6}: W=0:0, W=1:5, W=2:2
+      {0, 1, 5}: W=0:0, W=1:3, W=2:4
+      {1, 2, 4}: W=0:1, W=1:4, W=2:2
+      {0, 2, 6}: W=0:1, W=1:4, W=2:2
+    5-cycles: 23 -> 23 (net change: 0)
+    Lost: 19, Gained: 19
+    7-cycles: 9 -> 8 (delta=-1)
+    Lost 7-cycles: 9
+      (0, 2, 6, 3, 5, 4, 1), internal arcs: ['4->1', '1->0']
+      (0, 3, 5, 2, 6, 4, 1), internal arcs: ['6->4', '4->1', '1->0']
+      (0, 2, 6, 4, 1, 3, 5), internal arcs: ['6->4', '4->1']
+    Gained 7-cycles: 8
+      (0, 3, 5, 2, 1, 4, 6), internal arcs: ['1->4', '4->6', '6->0']
+      (0, 3, 5, 4, 2, 1, 6), internal arcs: ['1->6', '6->0']
+      (0, 2, 1, 6, 3, 5, 4), internal arcs: ['1->6', '4->0']
+
+  Example 2: subset=(1, 3, 5, 6), dH=2
+    3-cycles: 11 -> 11 (net change: 0)
+    Lost: [{1, 2, 5}, {2, 3, 6}, {3, 4, 5}, {1, 4, 6}]
+    Gained: [{3, 4, 6}, {2, 3, 5}, {1, 2, 6}, {1, 4, 5}]
+    Common: 7
+    Overlap of lost cycles with common cycles:
+      {1, 2, 5}: W=0:0, W=1:5, W=2:2
+      {2, 3, 6}: W=0:0, W=1:3, W=2:4
+      {3, 4, 5}: W=0:1, W=1:4, W=2:2
+      {1, 4, 6}: W=0:1, W=1:4, W=2:2
+    Overlap of gained cycles with common cycles:
+      {3, 4, 6}: W=0:1, W=1:3, W=2:3
+      {2, 3, 5}: W=0:0, W=1:4, W=2:3
+      {1, 2, 6}: W=0:0, W=1:4, W=2:3
+      {1, 4, 5}: W=0:1, W=1:5, W=2:1
+    5-cycles: 23 -> 23 (net change: 0)
+    Lost: 19, Gained: 19
+    7-cycles: 8 -> 9 (delta=1)
+    Lost 7-cycles: 8
+      (0, 1, 4, 5, 3, 6, 2), internal arcs: ['5->3', '3->6']
+      (0, 3, 6, 1, 4, 5, 2), internal arcs: ['3->6', '6->1']
+      (0, 1, 3, 4, 6, 5, 2), internal arcs: ['1->3', '6->5']
+    Gained 7-cycles: 9
+      (0, 3, 1, 4, 5, 6, 2), internal arcs: ['3->1', '5->6']
+      (0, 6, 3, 5, 1, 4, 2), internal arcs: ['6->3', '3->5', '5->1']
+      (0, 5, 1, 6, 3, 4, 2), internal arcs: ['5->1', '1->6', '6->3']
+
+  Example 3: subset=(0, 2, 4, 5), dH=2
+    3-cycles: 11 -> 11 (net change: 0)
+    Lost: [{1, 2, 5}, {4, 5, 6}, {0, 1, 4}, {0, 2, 6}]
+    Gained: [{0, 4, 6}, {1, 4, 5}, {2, 5, 6}, {0, 1, 2}]
+    Common: 7
+    Overlap of lost cycles with common cycles:
+      {1, 2, 5}: W=0:1, W=1:4, W=2:2
+      {4, 5, 6}: W=0:0, W=1:3, W=2:4
+      {0, 1, 4}: W=0:1, W=1:4, W=2:2
+      {0, 2, 6}: W=0:0, W=1:5, W=2:2
+    Overlap of gained cycles with common cycles:
+      {0, 4, 6}: W=0:0, W=1:4, W=2:3
+      {1, 4, 5}: W=0:1, W=1:3, W=2:3
+      {2, 5, 6}: W=0:0, W=1:4, W=2:3
+      {0, 1, 2}: W=0:1, W=1:5, W=2:1
+    5-cycles: 23 -> 23 (net change: 0)
+    Lost: 19, Gained: 19
+    7-cycles: 8 -> 9 (delta=1)
+    Lost 7-cycles: 8
+      (0, 1, 6, 3, 2, 5, 4), internal arcs: ['2->5', '5->4', '4->0']
+      (0, 1, 2, 5, 4, 6, 3), internal arcs: ['2->5', '5->4']
+      (0, 5, 1, 4, 2, 6, 3), internal arcs: ['0->5', '4->2']
+    Gained 7-cycles: 9
+      (0, 4, 6, 3, 5, 1, 2), internal arcs: ['0->4', '2->0']
+      (0, 4, 5, 1, 6, 3, 2), internal arcs: ['0->4', '4->5', '2->0']
+      (0, 1, 2, 6, 3, 4, 5), internal arcs: ['4->5', '5->0']
+
+======================================================================
+PART 5: n=6 IMPOSSIBILITY — WHY c5 and c3 ALONE DETERMINE H
+======================================================================
+
+Exhaustive analysis of why c5 is invariant under lambda-preserving 4-reversal at n=6:
+  Lambda-preserving (1,1,2,2) 4-reversals at n=6: 4320
+  c5 changed: 0
+  c5 preserved: 4320
+  => c5 invariance at n=6: PROVED (exhaustive)
+
+  At n=7: a 5-cycle can intersect the 4-subset in {3, 4} vertices
+  and the 3-cycle complement in {1, 2} vertices.
+  There are C(4,3)*C(3,2) + C(4,4)*C(3,1) = 4*3 + 1*3 = 15 such 5-vertex subsets
+  (all 21 5-subsets intersect the 4-subset in at least 2 vertices)
+  But only those with 3+ can have their internal arcs changed.
+
+======================================================================
+PART 6: THE DIMENSIONAL EXPLANATION
+======================================================================
+
+The {2,1,0} overlap weight structure connects to a hidden higher-dimensional
+structure in tournaments. Think of it this way:
+
+- At n=5: The 4-vertex subset spans "almost everything" (4 of 5 vertices).
+  Only 1 external vertex. The overlap weight space is 1-dimensional.
+  The reversal is gauge-trivial because there's no room for non-trivial
+  interaction between the 4-subset and the exterior.
+
+- At n=6: The 4-vertex subset leaves 2 external vertices.
+  The overlap weight space is 2-dimensional.
+  But c5 is still preserved because every 5-cycle must use 4 of 6 vertices,
+  and the lambda graph constrains the 5-cycle structure completely.
+
+- At n=7: The 4-vertex subset leaves 3 external vertices.
+  The overlap weight space is 3-dimensional.
+  Now 7-cycles exist that THREAD through both the 4-subset AND all 3 external
+  vertices. The lambda graph constrains c3 and c5, but the 7-cycle threading
+  has a degree of freedom that lambda doesn't capture.
+
+This is the "hidden higher-dimensional structure buried in tournaments of n 2,1,0":
+the overlap weights W=2,1,0 describe a filtration of cycle interactions,
+and the Vitali atom lives in the kernel of the W=2 and W=1 constraints
+but is detected by the W=0 (disjoint) structure at the 7-cycle level.
+
+
+======================================================================
+PART 7: COHOMOLOGICAL INTERPRETATION — IS THE VITALI ATOM A COBOUNDARY?
+======================================================================
+
+Is delta_H determined by c7 threading through all 4 subset vertices?
+  Example 1: c7_A=9, c7_B=8, through_all_A=9, through_all_B=8
+    (All 7-cycles pass through all 4 subset vertices trivially: n=7)
+  Example 2: c7_A=8, c7_B=9, through_all_A=8, through_all_B=9
+    (All 7-cycles pass through all 4 subset vertices trivially: n=7)
+  Example 3: c7_A=8, c7_B=9, through_all_A=8, through_all_B=9
+    (All 7-cycles pass through all 4 subset vertices trivially: n=7)
+  Example 4: c7_A=15, c7_B=14, through_all_A=15, through_all_B=14
+    (All 7-cycles pass through all 4 subset vertices trivially: n=7)
+  Example 5: c7_A=15, c7_B=14, through_all_A=15, through_all_B=14
+    (All 7-cycles pass through all 4 subset vertices trivially: n=7)
+
+  Key insight: since every 7-cycle uses all 7 vertices,
+  the reversal changes a 7-cycle iff it uses an ODD number of internal arcs.
+  (An arc from subset vertex i to subset vertex j is reversed; if the cycle
+   uses an even number of such arcs, the reversal cancels out.)
+
+  Counting 7-cycles by number of INTERNAL arcs used:
+
+  Example 1 (dH=-2): 9 total 7-cycles
+    2 internal arcs: 6 cycles
+    3 internal arcs: 3 cycles
+  After reversal: 8 total 7-cycles
+    2 internal arcs: 6 cycles
+    3 internal arcs: 2 cycles
+
+  Example 2 (dH=2): 8 total 7-cycles
+    2 internal arcs: 6 cycles
+    3 internal arcs: 2 cycles
+  After reversal: 9 total 7-cycles
+    2 internal arcs: 6 cycles
+    3 internal arcs: 3 cycles
+
+  Example 3 (dH=2): 8 total 7-cycles
+    2 internal arcs: 6 cycles
+    3 internal arcs: 2 cycles
+  After reversal: 9 total 7-cycles
+    2 internal arcs: 6 cycles
+    3 internal arcs: 3 cycles
+
+======================================================================
+PART 8: THE EXACT MECHANISM — WHICH INTERNAL ARC CONFIGURATIONS SURVIVE?
+======================================================================
+
+Possible internal arc counts in a 7-cycle with 4 subset + 3 external vertices:
+  Distribution of 3 ext in 4 gaps -> internal arcs:
+  (3,0,0,0) -> 3 internal arcs
+  (2,1,0,0) -> 2 internal arcs
+  (1,1,1,0) -> 1 internal arc
+  (cannot fill all 4 gaps with only 3 ext vertices)
+
+  So internal arc count is in {1, 2, 3}.
+  Reversal flips all internal arcs.
+  A cycle SURVIVES reversal iff ALL its internal arcs are in BOTH directions
+  in the original tournament (impossible for tournament: each arc has one direction).
+  So NO cycle survives the reversal in its original form.
+  Instead, cycles map to OTHER potential cycles.
+
+  The delta_c7 = c7(B) - c7(A) counts the NET change in valid 7-cycles.
+
+Verifying with concrete example:
+  Tournament A: 9 7-cycles, B: 8 7-cycles
+  Of A's 9 cycles: 0 survive in B, 9 lost
+  Gained in B: 8
+  Net: -1 = delta_c7
+
+======================================================================
+PART 9: INTERNAL ARC PARITY AND THE COBOUNDARY MAP
+======================================================================
+Direct reversal mapping of 7-cycles:
+
+  Example 1 (dH=-2):
+    Cycle (0, 2, 6, 3, 5, 4, 1): sub_order=[0, 6, 4, 1], internal=[(4, 1), (1, 0)], #ext=5
+    Cycle (0, 2, 6, 4, 1, 3, 5): sub_order=[0, 6, 4, 1], internal=[(6, 4), (4, 1)], #ext=5
+    Cycle (0, 3, 5, 2, 6, 4, 1): sub_order=[0, 6, 4, 1], internal=[(6, 4), (4, 1), (1, 0)], #ext=4
+    Cycle (0, 3, 5, 4, 2, 6, 1): sub_order=[0, 4, 6, 1], internal=[(6, 1), (1, 0)], #ext=5
+    Cycle (0, 4, 2, 6, 1, 3, 5): sub_order=[0, 4, 6, 1], internal=[(0, 4), (6, 1)], #ext=5
+
+  Example 2 (dH=2):
+    Cycle (0, 1, 3, 4, 6, 5, 2): sub_order=[1, 3, 6, 5], internal=[(1, 3), (6, 5)], #ext=5
+    Cycle (0, 1, 4, 5, 3, 6, 2): sub_order=[1, 5, 3, 6], internal=[(5, 3), (3, 6)], #ext=5
+    Cycle (0, 1, 5, 3, 4, 6, 2): sub_order=[1, 5, 3, 6], internal=[(1, 5), (5, 3)], #ext=5
+    Cycle (0, 3, 4, 6, 1, 5, 2): sub_order=[3, 6, 1, 5], internal=[(6, 1), (1, 5)], #ext=5
+    Cycle (0, 3, 6, 1, 4, 5, 2): sub_order=[3, 6, 1, 5], internal=[(3, 6), (6, 1)], #ext=5
+
+  Example 3 (dH=2):
+    Cycle (0, 1, 2, 5, 4, 6, 3): sub_order=[0, 2, 5, 4], internal=[(2, 5), (5, 4)], #ext=5
+    Cycle (0, 1, 2, 6, 3, 5, 4): sub_order=[0, 2, 5, 4], internal=[(5, 4), (4, 0)], #ext=5
+    Cycle (0, 1, 6, 3, 2, 5, 4): sub_order=[0, 2, 5, 4], internal=[(2, 5), (5, 4), (4, 0)], #ext=4
+    Cycle (0, 2, 5, 1, 4, 6, 3): sub_order=[0, 2, 5, 4], internal=[(0, 2), (2, 5)], #ext=5
+    Cycle (0, 2, 5, 1, 6, 3, 4): sub_order=[0, 2, 5, 4], internal=[(0, 2), (2, 5), (4, 0)], #ext=4
+
+======================================================================
+PART 10: THE DEFINITIVE TEST — WHAT PREDICTS H-CHANGE?
+======================================================================
+
+Testing: is delta_c7 = c7_even - c7_odd ?
+  Correct predictions: 14/40
+
+Testing: is delta_c7 = 2*(c7_even - c7_odd)?
+  Correct: 20/60
+
+       Label  delta  c7_1  c7_2  c7_3   dH
+    CHANGING     -1     0     6     3   -2
+    CHANGING      1     0     6     2    2
+    CHANGING      1     0     6     2    2
+    CHANGING     -1     0    12     3   -2
+    CHANGING     -1     0    12     3   -2
+    CHANGING      1     0     6     2    2
+    CHANGING      1     0    12     2    2
+    CHANGING      1     0    12     2    2
+    CHANGING     -1     0    12     3   -2
+    CHANGING      1     0     6     2    2
+    CHANGING     -1     0    12     3   -2
+    CHANGING     -1     0     6     3   -2
+    CHANGING     -1     0    12     3   -2
+    CHANGING      1     0     6     2    2
+    CHANGING     -1     0     6     3   -2
+    CHANGING     -1     0     6     3   -2
+    CHANGING     -1     0     6     3   -2
+    CHANGING      1     0    12     2    2
+    CHANGING      1     0    12     2    2
+    CHANGING      1     0     6     2    2
+    CHANGING     -1     0    12     3   -2
+    CHANGING      1     0     6     2    2
+    CHANGING     -1     0    12     3   -2
+    CHANGING     -1     0    12     3   -2
+    CHANGING      1     0    12     2    2
+    CHANGING      1     0    12     2    2
+    CHANGING      1     0     6     2    2
+    CHANGING     -1     0    12     3   -2
+    CHANGING     -1     0    12     3   -2
+    CHANGING      1     0    12     2    2
+  PRESERVING      0     0     6     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     6     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     5    0
+  PRESERVING      0     0     0     5    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     5    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     6     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     5    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     5    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     6     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     0     0    0
+  PRESERVING      0     0     6     0    0
+
+
+Done. See vitali_c7_mechanism.out for full results.
