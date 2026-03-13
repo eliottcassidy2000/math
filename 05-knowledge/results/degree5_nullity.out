@@ -1,0 +1,48 @@
+
+============================================================
+P_7 (m=3): |A_5| = 45, |A_5|/p = 6
+  |junk_f1| = 21
+  |junk_f2| = 15
+  |junk_f3| = 15
+  |junk_f4| = 21
+  Total junk rows = 72
+
+  Constraint matrix: 72 × 45
+  rank(C_5) = 39
+  nullity = 33
+  m² = 9
+  2*m² = 18
+  nullity / m² = 3.6667
+  Omega_5/p = 6 - 39 = -33
+  Block 1: 21 rows, rank = 21, nullity = 0
+  Block 2: 15 rows, rank = 15, nullity = 0
+  Block 3: 15 rows, rank = 15, nullity = 0
+  Block 4: 21 rows, rank = 21, nullity = 0
+
+SUMMARY: nullity=33, m²=9, 2m²=18
+  ratio nullity/m² = 3.6667
+============================================================
+
+============================================================
+P_11 (m=5): |A_5| = 1430, |A_5|/p = 130
+  |junk_f1| = 340
+  |junk_f2| = 270
+  |junk_f3| = 270
+  |junk_f4| = 340
+  Total junk rows = 1220
+
+  Constraint matrix: 1220 × 1430
+  rank(C_5) = 970
+  nullity = 250
+  m² = 25
+  2*m² = 50
+  nullity / m² = 10.0000
+  Omega_5/p = 130 - 970 = -840
+  Block 1: 340 rows, rank = 340, nullity = 0
+  Block 2: 270 rows, rank = 270, nullity = 0
+  Block 3: 270 rows, rank = 270, nullity = 0
+  Block 4: 340 rows, rank = 340, nullity = 0
+
+SUMMARY: nullity=250, m²=25, 2m²=50
+  ratio nullity/m² = 10.0000
+============================================================

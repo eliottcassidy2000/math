@@ -1,0 +1,19 @@
+  building d=0, |A|=1
+  building d=1, |A|=5
+  building d=2, |A|=25
+P_11 (m=5) — fast modular rank:
+  d    |A_d|     junk     rank  nullity    Omega
+  0        1        0        0        0        1
+  1        5        0        0        0        5
+  2       25        5        5        0       20
+  building d=3, |A|=110
+  3      110       40       40        0       70
+  building d=4, |A|=430
+  4      430      250      225       25      205
+  building d=5, |A|=1430
+  5     1430     1220      970      250      460
+  building d=6, |A|=3970
+  6     3970     4890     3270     1620      700
+  building d=7, |A|=8735
+  7     8735    15230     8045     7185      690
+  building d=8, |A|=14395
