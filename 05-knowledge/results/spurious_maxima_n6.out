@@ -1,0 +1,61 @@
+======================================================================
+SPURIOUS LOCAL MAXIMA AT n=6
+======================================================================
+Computing H for all 32768 tournaments...
+  Done in 11.7s
+  Global max: H=45
+  H distribution: [np.int64(1), np.int64(3), np.int64(5), np.int64(9), np.int64(11), np.int64(13), np.int64(15), np.int64(17), np.int64(19), np.int64(23), np.int64(25), np.int64(27), np.int64(29), np.int64(31), np.int64(33), np.int64(37), np.int64(41), np.int64(43), np.int64(45)]
+
+  Local maxima: 1200
+  Genuine (H=45): 480
+  Spurious: 720
+
+  Spurious max H values: [np.int64(37)]
+    H=37: 720 spurious local maxima
+
+  Score sequences of spurious maxima:
+    scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), H=37: 720 tournaments
+
+  Score sequences of genuine maxima (H=45):
+    scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 480 tournaments
+
+  Flip distance from spurious to nearest genuine max:
+    H=37: min_dist=2, max_dist=2, mean=2.0
+
+  Basin analysis (steepest ascent):
+    Basins reaching global max: 28928/32768 (88.3%)
+    Basins stuck at spurious: 3840/32768 (11.7%)
+      Stuck at H=37: 3840
+
+  Random start success rate: 901/1000 = 90.1%
+    Mean steps when successful: 2.0
+
+  Analysis of near-regular tournaments at n=6:
+  (n-1)/2 = 2.5, so no regular tournaments exist at n=6)
+
+  H values by score sequence:
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)) (Var=2.92): H in [1]
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)) (Var=2.58): H in [3]
+    (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)) (Var=2.58): H in [3]
+    (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)) (Var=2.25): H in [5]
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)) (Var=2.58): H in [3]
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)) (Var=2.25): H in [5]
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)) (Var=1.92): H in [9]
+    (np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)) (Var=1.58): H in [11, 13, 15]
+    (np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)) (Var=1.25): H in [15]
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)) (Var=2.58): H in [3]
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)) (Var=2.25): H in [9]
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)) (Var=2.25): H in [5]
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)) (Var=1.92): H in [9]
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)) (Var=1.58): H in [15, 17]
+    (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)) (Var=1.25): H in [19, 23, 27]
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)) (Var=1.58): H in [11, 13, 15]
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)) (Var=1.25): H in [19, 23, 27]
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)) (Var=0.92): H in [23, 25, 29, 31, 33, 37]
+    (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)) (Var=0.58): H in [33, 37]
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)) (Var=1.25): H in [15]
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)) (Var=0.58): H in [33, 37]
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)) (Var=0.25): H in [41, 43, 45]
+
+
+DONE — spurious_maxima_n6.py complete

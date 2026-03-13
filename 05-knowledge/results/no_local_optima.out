@@ -1,0 +1,102 @@
+======================================================================
+NO LOCAL OPTIMA IN H LANDSCAPE
+======================================================================
+
+  n=3 (m=3, N=8, 0.0s):
+    Global max: H=3
+    Global min: H=1
+    Local maxima: 2 (all global? True)
+    Local minima: 6 (all global? True)
+    Spurious local max: 0
+    Spurious local min: 0
+    Distinct H values: [np.int64(1), np.int64(3)]
+    *** DISCONNECTED superlevel at H>=3: 1/2 reachable
+    All superlevel sets connected? (checked all 1 thresholds)
+
+  n=4 (m=6, N=64, 0.0s):
+    Global max: H=5
+    Global min: H=1
+    Local maxima: 24 (all global? True)
+    Local minima: 24 (all global? True)
+    Spurious local max: 0
+    Spurious local min: 0
+    Distinct H values: [np.int64(1), np.int64(3), np.int64(5)]
+    All superlevel sets connected? (checked all 2 thresholds)
+
+  n=5 (m=10, N=1024, 0.1s):
+    Global max: H=15
+    Global min: H=1
+    Local maxima: 64 (all global? True)
+    Local minima: 120 (all global? True)
+    Spurious local max: 0
+    Spurious local min: 0
+    Distinct H values: [np.int64(1), np.int64(3), np.int64(5), np.int64(9), np.int64(11), np.int64(13), np.int64(15)]
+    *** DISCONNECTED superlevel at H>=13: 92/184 reachable
+    *** DISCONNECTED superlevel at H>=15: 1/64 reachable
+    All superlevel sets connected? (checked all 6 thresholds)
+
+======================================================================
+n=6 CHECK (m=15, N=32768)
+======================================================================
+  Building all 32768 tournaments and computing H via det(I+A)...
+  Computed in 12.3s
+  Global max: H=45
+  Global min: H=1
+  Local maxima: 1200 (all global? False)
+  Local minima: 720
+  SPURIOUS LOCAL MAXIMA: 720
+  Distinct H values: [np.int64(1), np.int64(3), np.int64(5), np.int64(9), np.int64(11), np.int64(13), np.int64(15), np.int64(17), np.int64(19), np.int64(23), np.int64(25), np.int64(27), np.int64(29), np.int64(31), np.int64(33), np.int64(37), np.int64(41), np.int64(43), np.int64(45)]
+  Steepest ascent from transitive: 2 steps, H path: [1, 17, 37]
+
+======================================================================
+CAUSAL STRUCTURE: ARC REVERSAL COMMUTATIVITY
+======================================================================
+  Two arc reversals COMMUTE iff their arcs share NO vertex.
+  The non-commutativity graph = LINE GRAPH L(K_n)
+
+  n=3: m=3 arcs, L(K_n) has 3 edges, 0 independent pairs
+    Independent fraction: 0/3 = 0.0000
+    Max commuting set: 1 (= maximum matching in K_n = floor(n/2))
+    => Can simultaneously reverse 1 arcs without causal conflict
+
+  n=4: m=6 arcs, L(K_n) has 12 edges, 3 independent pairs
+    Independent fraction: 3/15 = 0.2000
+    Max commuting set: 2 (= maximum matching in K_n = floor(n/2))
+    => Can simultaneously reverse 2 arcs without causal conflict
+
+  n=5: m=10 arcs, L(K_n) has 30 edges, 15 independent pairs
+    Independent fraction: 15/45 = 0.3333
+    Max commuting set: 2 (= maximum matching in K_n = floor(n/2))
+    => Can simultaneously reverse 2 arcs without causal conflict
+
+  n=6: m=15 arcs, L(K_n) has 60 edges, 45 independent pairs
+    Independent fraction: 45/105 = 0.4286
+    Max commuting set: 3 (= maximum matching in K_n = floor(n/2))
+    => Can simultaneously reverse 3 arcs without causal conflict
+
+  n=7: m=21 arcs, L(K_n) has 105 edges, 105 independent pairs
+    Independent fraction: 105/210 = 0.5000
+    Max commuting set: 3 (= maximum matching in K_n = floor(n/2))
+    => Can simultaneously reverse 3 arcs without causal conflict
+
+======================================================================
+LANDSCAPE GEOMETRY: GRADIENT STATISTICS AT n=5
+======================================================================
+  H= 1:  120 tournaments, |∇H|=10.39±0.00, upward arcs: 6.0±0.0
+  H= 3:  120 tournaments, |∇H|=12.13±0.91, upward arcs: 6.3±0.5
+  H= 5:  240 tournaments, |∇H|=12.49±0.00, upward arcs: 4.0±0.0
+  H= 9:  240 tournaments, |∇H|=12.16±0.33, upward arcs: 3.5±0.5
+  H=11:  120 tournaments, |∇H|=10.39±0.00, upward arcs: 3.0±0.0
+  H=13:  120 tournaments, |∇H|=14.00±0.00, upward arcs: 3.0±0.0
+  H=15:   64 tournaments, |∇H|=14.13±3.20, upward arcs: 0.0±0.0
+
+======================================================================
+PATTERN: LOCAL MAX COUNT = GLOBAL MAX COUNT
+======================================================================
+  n=3: 2 global max tournaments (H=3)
+  n=4: 24 global max tournaments (H=5)
+  n=5: 64 global max tournaments (H=15)
+  n=6: 480 global max tournaments (H=45)
+
+
+DONE — no_local_optima.py complete
