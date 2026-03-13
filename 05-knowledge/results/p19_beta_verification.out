@@ -1,0 +1,53 @@
+P_19 β_9 verification status:
+
+Ω_orb = [1, 1, 8, 60, 417, 2648, 15140, 76474, 331958] (d=0..8)
+
+R (bottom): [0, 0, 1, 7, 53, 364, 2284, 12856, 63618, 268340]
+
+R_9 = Ω_8 - R_8 = 331958 - 63618 = 268340
+
+To compute β_9 = Ω_9 - R_9 - R_10:
+  R_9 = 268340 (known)
+  Ω_9 = ? (need 6M orbit reps, ~20min+ computation)
+  R_10 = ? (need top-half Ω values)
+
+Predicted (THM-130):
+  β_9^orb = (m-3)/2 = 3
+  β_9 = m(m-3)/2 = 27
+  β_10 = m(m+1)/2 = 45
+  χ = 1 - 27 + 45 = 19 = p ✓
+
+Bottom recursion consistency:
+  R_9 (alt sum) = 268340
+  R_9 (recursion) = 268340
+  Match: ✓
+
+If β_9 = 3:
+  Budget = R_9 + β_9 + R_10
+  Budget = Ω_9 - R_9 = Ω_9 - 268340
+  R_10 = Budget - β_9 = Ω_9 - 268340 - 3 = Ω_9 - 268343
+
+Ω growth pattern:
+  Ω_1/Ω_0 = 1/1 = 1.0000
+  Ω_2/Ω_1 = 8/1 = 8.0000
+  Ω_3/Ω_2 = 60/8 = 7.5000
+  Ω_4/Ω_3 = 417/60 = 6.9500
+  Ω_5/Ω_4 = 2648/417 = 6.3501
+  Ω_6/Ω_5 = 15140/2648 = 5.7175
+  Ω_7/Ω_6 = 76474/15140 = 5.0511
+  Ω_8/Ω_7 = 331958/76474 = 4.3408
+
+Ratios: ['1.000', '8.000', '7.500', '6.950', '6.350', '5.718', '5.051', '4.341']
+
+Ratio differences:
+  ['7.000', '-0.500', '-0.550', '-0.600', '-0.633', '-0.666', '-0.710']
+
+Crude estimate: Ω_9 ≈ 331958 × 3.63 ≈ 1205007
+
+From streaming data: rank/reps was ~85% at 3.8M/6M reps
+Extrapolating: Ω_9 ≈ 1,000,000 to 1,200,000
+
+COMPARISON: P_11 ratio at d=m = 2.244, at d=m+1 = 1.522
+P_19 ratio at d=m-1 = 4.341
+P_19 ratio at d=m should be lower (approaching peak), estimated 2.5-4
+Ω_9 estimate: 331958×3 = 995874 to 331958×4 = 1327832
