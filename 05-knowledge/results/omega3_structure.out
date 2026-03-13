@@ -1,0 +1,49 @@
+======================================================================
+OMEGA_3 STRUCTURE: n = 5
+======================================================================
+  Omega_3 values: [3, 5]
+  t_3 values: [0, 1, 2, 3, 4, 5]
+  Ordered TT values: [5, 6, 7, 8, 9, 10]
+  c_4 (oriented 4-cycles) values: [0, 4, 8, 12, 16, 20]
+  Non-trans 4-sets values: [0, 2, 3, 4, 5]
+
+  Correlations with Omega_3:
+    corr(Omega_3, t_3) = 0.000000
+    corr(Omega_3, TT) = 0.000000
+    corr(Omega_3, c_4) = 0.333333
+    corr(Omega_3, NT4) = -0.333333
+
+  c_4 → Omega_3 mapping:
+    c_4=0: Omega_3 ∈ [3, 5]
+    c_4=4: Omega_3 ∈ [3]
+    c_4=8: Omega_3 ∈ [3]
+    c_4=12: Omega_3 ∈ [3, 5]
+    c_4=16: Omega_3 ∈ [5]
+    c_4=20: Omega_3 ∈ [5]
+
+  NT4 → Omega_3 mapping:
+    NT4=0: Omega_3 ∈ [5]
+    NT4=2: Omega_3 ∈ [3]
+    NT4=3: Omega_3 ∈ [3, 5]
+    NT4=4: Omega_3 ∈ [3, 5]
+    NT4=5: Omega_3 ∈ [3, 5]
+
+  Looking for formula Omega_3 = a*TT + b:
+    T=0: TT=10, C(n,3)-t3=10, match: True
+    T=1: TT=10, C(n,3)-t3=10, match: True
+    T=100: TT=7, C(n,3)-t3=7, match: True
+    T=500: TT=10, C(n,3)-t3=10, match: True
+
+  Omega_3 per 4-vertex subset:
+    T=0: Omega_3=5, sum per-subset=5, per-sub=[1, 1, 1, 1, 1]
+    T=100: Omega_3=3, sum per-subset=3, per-sub=[1, 0, 1, 0, 1]
+    T=500: Omega_3=5, sum per-subset=5, per-sub=[1, 1, 1, 1, 1]
+    T=900: Omega_3=3, sum per-subset=3, per-sub=[0, 1, 1, 0, 1]
+
+  omega3_on_subset values by tournament type:
+    scores (0, 1, 2, 3): omega3_local ∈ [1], counts = Counter({1: 1920})
+    scores (0, 2, 2, 2): omega3_local ∈ [0], counts = Counter({0: 640})
+    scores (1, 1, 1, 3): omega3_local ∈ [0], counts = Counter({0: 640})
+    scores (1, 1, 2, 2): omega3_local ∈ [1], counts = Counter({1: 1920})
+
+DONE.
