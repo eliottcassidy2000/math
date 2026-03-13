@@ -1,0 +1,120 @@
+======================================================================
+PART 1: LAMBDA-PRESERVING (1,1,2,2) REVERSALS AT n=8
+======================================================================
+  ... 100/1000, 2 valid reversals so far
+  ... 200/1000, 4 valid reversals so far
+  ... 300/1000, 8 valid reversals so far
+  ... 400/1000, 13 valid reversals so far
+  ... 500/1000, 17 valid reversals so far
+  ... 600/1000, 21 valid reversals so far
+  ... 700/1000, 25 valid reversals so far
+  ... 800/1000, 28 valid reversals so far
+  ... 900/1000, 29 valid reversals so far
+
+Total valid lambda-preserving (1,1,2,2) reversals: 33
+  Changing: 21 (63.6%)
+  Preserving: 12 (36.4%)
+
+  delta_H distribution:
+    delta_H=-6: 3
+    delta_H=-4: 2
+    delta_H=-2: 9
+    delta_H=0: 12
+    delta_H=2: 2
+    delta_H=4: 2
+    delta_H=6: 3
+
+  delta_c5 distribution (changing only):
+    delta_c5=0: 21
+
+  delta_c7 distribution (changing only):
+    delta_c7=-1: 11
+    delta_c7=0: 2
+    delta_c7=1: 6
+    delta_c7=2: 2
+
+  Checking delta_H = 2*delta_c5 + 4*delta_c7 + ...:
+    dH=6, dc5=0, dc7=1, 2*dc5+4*dc7=4
+    dH=-2, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+    dH=-2, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+    dH=-2, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+    dH=-2, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+    dH=-6, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+    dH=-4, dc5=0, dc7=0, 2*dc5+4*dc7=0
+    dH=-2, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+    dH=4, dc5=0, dc7=2, 2*dc5+4*dc7=8
+    dH=-6, dc5=0, dc7=-1, 2*dc5+4*dc7=-4
+
+  mixed_c3 distribution:
+    mixed_c3=0: changing=0, preserving=2, rate=0.0%
+    mixed_c3=4: changing=20, preserving=9, rate=69.0%
+    mixed_c3=8: changing=1, preserving=1, rate=50.0%
+
+  External tournament type (4-vertex scores):
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(3)): changing=6, preserving=7, rate=46.2%
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(2)): changing=4, preserving=0, rate=100.0%
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3)): changing=6, preserving=0, rate=100.0%
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(2)): changing=5, preserving=5, rate=50.0%
+
+======================================================================
+PART 2: CROSS-TAB AT n=8 — MIXED_C3 vs EXT TYPE
+======================================================================
+  mixed_c3=0, ext=(np.int64(0), np.int64(1), np.int64(2), np.int64(3)): changing=0, preserving=2, rate=0.0%
+  mixed_c3=4, ext=(np.int64(0), np.int64(1), np.int64(2), np.int64(3)): changing=6, preserving=5, rate=54.5%
+  mixed_c3=4, ext=(np.int64(0), np.int64(2), np.int64(2), np.int64(2)): changing=4, preserving=0, rate=100.0%
+  mixed_c3=4, ext=(np.int64(1), np.int64(1), np.int64(1), np.int64(3)): changing=5, preserving=0, rate=100.0%
+  mixed_c3=4, ext=(np.int64(1), np.int64(1), np.int64(2), np.int64(2)): changing=5, preserving=4, rate=55.6%
+  mixed_c3=8, ext=(np.int64(1), np.int64(1), np.int64(1), np.int64(3)): changing=1, preserving=0, rate=100.0%
+  mixed_c3=8, ext=(np.int64(1), np.int64(1), np.int64(2), np.int64(2)): changing=0, preserving=1, rate=0.0%
+
+======================================================================
+PART 3: DOES c5 NOW CHANGE? (New at n=8)
+======================================================================
+  Reversals with delta_c5 != 0: 0 out of 33
+  c5 is STILL invariant at n=8!
+  This means the phase transition for c5 is at n>=9 (if it exists)
+
+======================================================================
+PART 4: DELTA DECOMPOSITION — WHAT DRIVES delta_H AT n=8?
+======================================================================
+  delta_H values: Counter({0: 12, -2: 9, 6: 3, -6: 3, -4: 2, 4: 2, 2: 2})
+  All delta_H even? True
+
+  |delta_H| distribution:
+    |delta_H|=2: 11
+    |delta_H|=4: 4
+    |delta_H|=6: 6
+
+======================================================================
+PART 5: THE DIMENSIONAL HIERARCHY AT n=8
+======================================================================
+
+  Detailed cycle analysis for H-changing examples at n=8:
+
+  Example 1: dH=6, dc5=0, dc7=1
+    mixed_c3=4, ext=(np.int64(1), np.int64(1), np.int64(2), np.int64(2))
+
+  Example 2: dH=-2, dc5=0, dc7=-1
+    mixed_c3=4, ext=(np.int64(0), np.int64(2), np.int64(2), np.int64(2))
+
+  Example 3: dH=-2, dc5=0, dc7=-1
+    mixed_c3=4, ext=(np.int64(0), np.int64(1), np.int64(2), np.int64(3))
+
+  Example 4: dH=-2, dc5=0, dc7=-1
+    mixed_c3=4, ext=(np.int64(0), np.int64(2), np.int64(2), np.int64(2))
+
+  Example 5: dH=-2, dc5=0, dc7=-1
+    mixed_c3=4, ext=(np.int64(0), np.int64(1), np.int64(2), np.int64(3))
+
+======================================================================
+SUMMARY
+======================================================================
+
+At n=8:
+- Lambda-preserving (1,1,2,2) reversals: 33 valid
+- H-changing: 21 (63.6%)
+- c5 invariance: HOLDS
+- delta_H values: {6: 3, -2: 9, -6: 3, -4: 2, 4: 2, 2: 2}
+- All delta_H even: True
+
+Done.
