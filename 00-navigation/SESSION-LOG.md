@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71 — 2026-03-13: MAJOR — Per-Eigenspace Betti Structure, chi(P_p)=p, QR Scaling Symmetry
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71 (context recovery x2)
+**Summary of work:**
+Computed per-eigenspace Betti numbers for Paley tournaments P_7 and P_11, discovering that each k≠0 eigenspace has exactly β=1 at degree (p+1)/2 (HYP-657). Proved chi(P_p)=p follows from chi_per_eigenspace=1. Showed chi_per=1 is UNIQUE to Paley arc sets via n=11 survey (2 of 32 sets). Identified QR multiplicative scaling symmetry as the key structural property.
+
+**Key discoveries:**
+1. **HYP-657 (Per-eigenspace Betti)**: β^(k≠0) = δ_{m,(p+1)/2} for Paley P_p. Verified P_7, P_11.
+2. **HYP-658 (k=0 chi=1)**: chi^(0) = 1. P_7: β^(0)=[1,0,...,0]. P_11: β^(0)=[1,0,0,0,0,5,5,0,0,0,0].
+3. **HYP-660 (Rank alternation)**: rk^(k≠0) - rk^(0) = (-1)^{m+1} for m=1...(p-3)/2.
+4. **chi_per PALEY-SPECIFIC**: n=11 survey — chi_per=1 only for QR and -QR (2 of 32 arc sets).
+5. **QR scaling symmetry**: φ_a(D) = a·D (a ∈ QR) is an automorphism of the Paley diff-seq complex. Gives Z_{(p-1)/2} symmetry unique to Paley.
+6. **Lefschetz**: L(g)=0 for non-identity g ∈ Z_p, consistent with free action.
+7. **P_19 partial**: k=0 rk(d) = [0,0,9,63,477,...], k≠0 rk(d) = [0,1,8,64,476,...].
+
+**New contributions:** HYP-657, HYP-658, HYP-659, HYP-660. Updated HYP-648, HYP-650.
+**Unresolved threads:**
+- Prove chi_per=1 for all Paley P_p (verified p=7,11 only)
+- Prove β^(k≠0) = 1 at (p+1)/2 (why this specific degree?)
+- Compute P_19 full Betti (needs C/C++ implementation)
+- P_11 Ω/p sequence [1,5,20,70,205,460,700,690,450,180,30] not in OEIS
+
+---
+
 ## opus-2026-03-13-S70 — 2026-03-13: GLMY Path Homology Deep Dive — Omega Formulas, Betti Numbers, Eigenspace Uniformity
 
 **Account:** opus
