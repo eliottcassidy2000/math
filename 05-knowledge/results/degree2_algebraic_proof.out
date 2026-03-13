@@ -1,0 +1,183 @@
+======================================================================
+ALGEBRAIC PROOF: DEGREE-2 WALSH VIA DELTA FUNCTIONS
+======================================================================
+
+--- PART 1: VERIFICATION AT p=7 ---
+  p=7, m=3, pairs=[(1, 6), (2, 5), (3, 4)]
+  H = 231 - (1/2)*tr(A^4)
+  h_hat_H[{i,j}] = -(1/2) * deg2_trA4[{i,j}]
+
+  (a=1,b=2): tr4_walsh = -7.0000, h_hat = 3.5000, chi(ab)=+1, sign=+1, match=True
+  (a=1,b=3): tr4_walsh = 7.0000, h_hat = -3.5000, chi(ab)=-1, sign=-1, match=True
+  (a=2,b=3): tr4_walsh = 7.0000, h_hat = -3.5000, chi(ab)=-1, sign=-1, match=True
+
+--- PART 2: VERIFICATION AT p=11 ---
+  p=11, m=5
+  NOTE: At p=11, H is NOT just -(1/2)*tr(A^4).
+  H depends on tr(A^4), tr(A^5), tr(A^7), ..., tr(A^p)
+  The degree-2 Walsh of H involves ALL these traces.
+  But tr(A^3) has NO degree-2 content (c3 is constant).
+  Let's compute degree-2 Walsh of each tr(A^k).
+
+  tr(A^k) has degree-2 Walsh only for EVEN k:
+  k=4: from D^4 term (coefficient 1)
+  k=6: from D^6 (coeff 1) and D^4 (coeff -15/4) and D^2 (coeff 0)
+  k=8: from D^8, D^6, D^4
+  k=10: from D^10, ..., D^4
+
+  D^4 degree-2 Walsh coefficients:
+    (a=1,b=2): D^4_deg2 =     0.0000, chi(ab)=-1
+    (a=1,b=3): D^4_deg2 =    11.0000, chi(ab)=+1
+    (a=1,b=4): D^4_deg2 =    11.0000, chi(ab)=+1
+    (a=1,b=5): D^4_deg2 =     0.0000, chi(ab)=+1
+    (a=2,b=3): D^4_deg2 =   -11.0000, chi(ab)=-1
+    (a=2,b=4): D^4_deg2 =     0.0000, chi(ab)=-1
+    (a=2,b=5): D^4_deg2 =   -11.0000, chi(ab)=-1
+    (a=3,b=4): D^4_deg2 =     0.0000, chi(ab)=+1
+    (a=3,b=5): D^4_deg2 =     0.0000, chi(ab)=+1
+    (a=4,b=5): D^4_deg2 =    11.0000, chi(ab)=+1
+
+--- PART 3: STRUCTURE OF THE FORMULA ---
+T1 + T2 + 12*C_sum where:
+  T1 = (3p/2)[d(a-b)-d(a+b)] - (p/2)[d(3a-b)-d(3a+b)]
+  T2 = (3p/2)[d(a-b)-d(a+b)] - (p/2)[d(a-3b)-d(a+3b)]
+  C = sum_{c=1}^m [6p*d(a-b) - 6p*d(a+b)
+       - 3*delta(a-b+2c) - 3*delta(a-b-2c)
+       + 3*delta(a+b+2c) + 3*delta(a+b-2c)]
+
+For a != b (off-diagonal): d(a-b)=0, d(a+b)=0 if a+b < p.
+  So T1_base = T2_base = 0 (from the 3p/2 terms).
+  T1 reduces to -(p/2)*[d(3a-b)-d(3a+b)]
+  T2 reduces to -(p/2)*[d(a-3b)-d(a+3b)]
+  These are nonzero only when 3a=+/-b or a=+/-3b mod p.
+
+KEY: The sign of h_hat depends on WHICH delta terms fire.
+For p=3 mod 4: 3 is always a QR or NQR in a specific pattern.
+
+--- PART 4: ANALYTICAL TEST AT p=19 ---
+
+  p=19 (3 mod 4), m=9:
+    D^4 sign vs chi(ab): 9/36
+    (This tests D^4 contribution only, not full h_hat)
+
+  p=23 (3 mod 4), m=11:
+    D^4 sign vs chi(ab): 0/55
+    (This tests D^4 contribution only, not full h_hat)
+
+  p=29 (1 mod 4), m=14:
+    D^4 sign vs chi(ab): 9/91
+    (This tests D^4 contribution only, not full h_hat)
+
+  p=31 (3 mod 4), m=15:
+    D^4 sign vs chi(ab): 15/105
+    (This tests D^4 contribution only, not full h_hat)
+
+--- PART 5: HIGHER D^{2n} CONTRIBUTIONS ---
+For complete degree-2 Walsh of H, need ALL even-power D terms.
+Key: D^{2n} degree-2 Walsh at {i,j} involves sums like:
+  sum_k sin(ka)^{2n-1}*sin(kb) and mixed products with other sines.
+These reduce to sums of delta(ma +/- nb +/- ... mod p).
+
+The FULL degree-2 Walsh of H = sum of contributions from:
+  c_4 = (1/4)*tr(A^4):    D^4 only
+  c_5 = (1/5)*tr(A^5):    D^5 only (odd powers -> NO deg-2)
+  c_6 = (1/6)*tr(A^6):    D^6 and D^4
+  c_7 = (1/7)*tr(A^7):    D^7 and D^5 (odd -> NO deg-2)
+  ...
+  c_p = (1/p)*tr(A^p):    D^p down to D^4
+
+Only EVEN k contribute to degree-2 Walsh of H.
+And for each even k, the D^4 contribution has coefficient
+C(k,4)*(-1/2)^{k-4} (from binomial expansion).
+
+--- PART 6: D^4 CONTRIBUTION THROUGH OCF ---
+H = sum_{j=0}^{floor(p/3)} 2^j * alpha_j
+alpha_j depends on products of eigenvalue magnitudes Q_k.
+Q_k = 1/4 + D_k^2. So Q_k^n involves D_k^{2n}.
+
+The degree-2 Walsh of Q_k^n comes from D_k^{2n} terms.
+But alpha_j is a symmetric polynomial in Q_k's,
+and the OCF structure means alpha_j = P_j(Q_1,...,Q_m).
+
+For the SIGN of h_hat at degree 2:
+The D^4 term already captures chi(ab) for p=7 (degree 2 only).
+For larger p, higher D^{2n} terms can REINFORCE or CANCEL.
+At p=3 mod 4, the Gauss sum structure ensures all terms
+have CONSISTENT signs, giving the product law.
+
+--- PART 7: WHICH DELTA TERMS FIRE ---
+
+  p=7:
+    (a=1,b=2): chi(ab)=+1, D^4_deg2=   -7.00, fires: ['a+3b=0', 'a+b+2*2=0', 'a-b-2*3=0']
+    (a=1,b=3): chi(ab)=-1, D^4_deg2=    7.00, fires: ['3a-b=0', 'a-b+2*1=0', 'a+b-2*2=0']
+    (a=2,b=3): chi(ab)=-1, D^4_deg2=    7.00, fires: ['a-3b=0', 'a+b+2*1=0', 'a-b-2*3=0']
+
+  p=11:
+    (a=1,b=2): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*4=0', 'a-b-2*5=0']
+    (a=1,b=3): chi(ab)=+1, D^4_deg2=   11.00, fires: ['3a-b=0', 'a-b+2*1=0', 'a+b-2*2=0']
+    (a=1,b=4): chi(ab)=+1, D^4_deg2=   11.00, fires: ['a-3b=0', 'a+b+2*3=0', 'a-b-2*4=0']
+    (a=1,b=5): chi(ab)=+1, D^4_deg2=    0.00, fires: ['a-b+2*2=0', 'a+b-2*3=0']
+    (a=2,b=3): chi(ab)=-1, D^4_deg2=  -11.00, fires: ['a+3b=0', 'a+b+2*3=0', 'a-b-2*5=0']
+    (a=2,b=4): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a-b+2*1=0', 'a+b-2*3=0']
+    (a=2,b=5): chi(ab)=-1, D^4_deg2=  -11.00, fires: ['3a+b=0', 'a+b+2*2=0', 'a-b-2*4=0']
+    (a=3,b=4): chi(ab)=+1, D^4_deg2=    0.00, fires: ['a+b+2*2=0', 'a-b-2*5=0']
+    (a=3,b=5): chi(ab)=+1, D^4_deg2=    0.00, fires: ['a-b+2*1=0', 'a+b-2*4=0']
+    (a=4,b=5): chi(ab)=+1, D^4_deg2=   11.00, fires: ['a-3b=0', 'a+b+2*1=0', 'a-b-2*5=0']
+
+  p=13:
+    (a=1,b=2): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*5=0', 'a-b-2*6=0']
+    (a=1,b=3): chi(ab)=+1, D^4_deg2=   13.00, fires: ['3a-b=0', 'a-b+2*1=0', 'a+b-2*2=0']
+    (a=1,b=4): chi(ab)=+1, D^4_deg2=  -13.00, fires: ['a+3b=0', 'a+b+2*4=0', 'a-b-2*5=0']
+    (a=1,b=5): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a-b+2*2=0', 'a+b-2*3=0']
+    (a=2,b=3): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*4=0', 'a-b-2*6=0']
+    (a=2,b=4): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a-b+2*1=0', 'a+b-2*3=0']
+    (a=2,b=5): chi(ab)=+1, D^4_deg2=   13.00, fires: ['a-3b=0', 'a+b+2*3=0', 'a-b-2*5=0']
+    (a=3,b=4): chi(ab)=+1, D^4_deg2=  -13.00, fires: ['3a+b=0', 'a+b+2*3=0', 'a-b-2*6=0']
+    (a=3,b=5): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a-b+2*1=0', 'a+b-2*4=0']
+    (a=4,b=5): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*2=0', 'a-b-2*6=0']
+
+  p=19:
+    (a=1,b=2): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*8=0', 'a-b-2*9=0']
+    (a=1,b=3): chi(ab)=-1, D^4_deg2=   19.00, fires: ['3a-b=0', 'a-b+2*1=0', 'a+b-2*2=0']
+    (a=1,b=4): chi(ab)=+1, D^4_deg2=    0.00, fires: ['a+b+2*7=0', 'a-b-2*8=0']
+    (a=1,b=5): chi(ab)=+1, D^4_deg2=    0.00, fires: ['a-b+2*2=0', 'a+b-2*3=0']
+    (a=2,b=3): chi(ab)=+1, D^4_deg2=    0.00, fires: ['a+b+2*7=0', 'a-b-2*9=0']
+    (a=2,b=4): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a-b+2*1=0', 'a+b-2*3=0']
+    (a=2,b=5): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*6=0', 'a-b-2*8=0']
+    (a=3,b=4): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a+b+2*6=0', 'a-b-2*9=0']
+    (a=3,b=5): chi(ab)=-1, D^4_deg2=    0.00, fires: ['a-b+2*1=0', 'a+b-2*4=0']
+    (a=4,b=5): chi(ab)=+1, D^4_deg2=  -19.00, fires: ['a+3b=0', 'a+b+2*5=0', 'a-b-2*9=0']
+
+--- PART 8: SIGN MECHANISM ---
+HYPOTHESIS: For p=3 mod 4, the NUMBER and TYPE of firing deltas
+is controlled by the Legendre character chi(ab).
+
+
+  p=7:
+    (a=1,b=2): chi=+1, sign(D^4)=-1, C_pos=1, C_neg=1, T=1
+    (a=1,b=3): chi=-1, sign(D^4)=+1, C_pos=1, C_neg=1, T=-1
+    (a=2,b=3): chi=-1, sign(D^4)=+1, C_pos=1, C_neg=1, T=-1
+
+  p=11:
+    (a=1,b=2): chi=-1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=1,b=3): chi=+1, sign(D^4)=+1, C_pos=1, C_neg=1, T=-1
+    (a=1,b=4): chi=+1, sign(D^4)=+1, C_pos=1, C_neg=1, T=-1
+    (a=2,b=3): chi=-1, sign(D^4)=-1, C_pos=1, C_neg=1, T=1
+    (a=2,b=4): chi=-1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=3,b=4): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+
+  p=19:
+    (a=1,b=2): chi=-1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=1,b=3): chi=-1, sign(D^4)=+1, C_pos=1, C_neg=1, T=-1
+    (a=1,b=4): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=2,b=3): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=2,b=4): chi=-1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=3,b=4): chi=-1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+
+  p=23:
+    (a=1,b=2): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=1,b=3): chi=+1, sign(D^4)=+1, C_pos=1, C_neg=1, T=-1
+    (a=1,b=4): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=2,b=3): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=2,b=4): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
+    (a=3,b=4): chi=+1, sign(D^4)=+0, C_pos=1, C_neg=1, T=0
