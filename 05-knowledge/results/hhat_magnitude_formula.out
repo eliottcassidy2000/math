@@ -1,0 +1,93 @@
+======================================================================
+|h_hat| MAGNITUDE FORMULA INVESTIGATION
+======================================================================
+
+p=7, m=3
+  H(Paley) = ?
+  H(Paley) = 189
+  Mean H = 178.5000
+
+  Degree-2 h_hat:
+    (0,1): gaps=(1,2), q=3, h_hat=      3.5000, |h_hat|=    3.5000, chi(prod)=+1
+    (0,2): gaps=(1,3), q=3, h_hat=     -3.5000, |h_hat|=    3.5000, chi(prod)=-1
+    (1,2): gaps=(2,3), q=3, h_hat=     -3.5000, |h_hat|=    3.5000, chi(prod)=-1
+
+  |h_hat| by q-level:
+    q=3: |h_hat| = 3.5000
+           = 3.5 = 14/4
+           val*4 = 14
+           val*4 / p = 2.000000
+           val*4 / p^2 = 0.285714
+
+  Formula check:
+
+p=11, m=5
+  H(Paley) = ?
+  H(Paley) = 95095
+  Mean H = 93101.2500
+
+  Degree-2 h_hat:
+    (0,1): gaps=(1,2), q=5, h_hat=     -8.2500, |h_hat|=    8.2500, chi(prod)=-1
+    (0,2): gaps=(1,3), q=3, h_hat=    272.2500, |h_hat|=  272.2500, chi(prod)=+1
+    (0,3): gaps=(1,4), q=3, h_hat=    272.2500, |h_hat|=  272.2500, chi(prod)=+1
+    (0,4): gaps=(1,5), q=5, h_hat=      8.2500, |h_hat|=    8.2500, chi(prod)=+1
+    (1,2): gaps=(2,3), q=3, h_hat=   -272.2500, |h_hat|=  272.2500, chi(prod)=-1
+    (1,3): gaps=(2,4), q=5, h_hat=     -8.2500, |h_hat|=    8.2500, chi(prod)=-1
+    (1,4): gaps=(2,5), q=3, h_hat=   -272.2500, |h_hat|=  272.2500, chi(prod)=-1
+    (2,3): gaps=(3,4), q=5, h_hat=      8.2500, |h_hat|=    8.2500, chi(prod)=+1
+    (2,4): gaps=(3,5), q=5, h_hat=      8.2500, |h_hat|=    8.2500, chi(prod)=+1
+    (3,4): gaps=(4,5), q=3, h_hat=    272.2500, |h_hat|=  272.2500, chi(prod)=+1
+
+  |h_hat| by q-level:
+    q=3: |h_hat| = 272.2500
+           = 272.25 = 1089/4
+           val*4 = 1089
+           val*4 / p = 99.000000
+           val*4 / p^2 = 9.000000
+    q=5: |h_hat| = 8.2500
+           = 8.25 = 33/4
+           val*4 = 33
+           val*4 / p = 3.000000
+           val*4 / p^2 = 0.272727
+
+  Formula check:
+
+
+============================================================
+RATIO ANALYSIS
+============================================================
+
+Formula candidates for |h_hat_2(q)|:
+  p=7, q=3: |h_hat|=3.5000
+    p^1 = 7
+    |h_hat| / p^1 = 0.500000
+    |h_hat| * 4 / p^2 = 0.285714
+    H(Paley) = ?
+  p=11, q=3: |h_hat|=272.2500
+    p^1 = 11
+    |h_hat| / p^1 = 24.750000
+    |h_hat| * 4 / p^2 = 9.000000
+    H(Paley) = 95095
+  p=11, q=5: |h_hat|=8.2500
+    p^2 = 121
+    |h_hat| / p^2 = 0.068182
+    |h_hat| * 4 / p^3 = 0.024793
+    H(Paley) = 95095
+
+
+PART 3: CONNECTION TO H VARIANCE
+
+  p=7:
+    mean(H) = 178.5000
+    Var(H)  = 36.7500
+    deg-2 energy = 36.7500
+    deg-2 fraction of Var = 1.0000
+    q=3: energy=36.7500, count=3, per-pair=12.2500, fraction=1.0000
+
+  p=11:
+    mean(H) = 93101.2500
+    Var(H)  = 440855.9375
+    deg-2 energy = 370940.6250
+    deg-2 fraction of Var = 0.8414
+    q=3: energy=370600.3125, count=5, per-pair=74120.0625, fraction=0.8406
+    q=5: energy=340.3125, count=5, per-pair=68.0625, fraction=0.0008
