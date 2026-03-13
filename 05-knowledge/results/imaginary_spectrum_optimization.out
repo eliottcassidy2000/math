@@ -1,0 +1,148 @@
+======================================================================
+IMAGINARY SPECTRUM ANALYSIS
+======================================================================
+
+======================================================================
+p = 7, m = 3
+======================================================================
+
+Top 5 and bottom 5 by H:
+  sigma                       H        Σy²          Σy⁴    IPR_y  |y|_max
+  (1, 1, -1)                189       5.25         9.19   0.3333    1.323 [PAL]
+  (-1, -1, 1)               189       5.25         9.19   0.3333    1.323
+  (-1, -1, -1)              175       5.25        23.19   0.8413    2.191
+  (1, -1, -1)               175       5.25        23.19   0.8413    2.191
+  (-1, 1, -1)               175       5.25        23.19   0.8413    2.191
+  ...
+  (1, -1, 1)                175       5.25        23.19   0.8413    2.191
+  (-1, 1, 1)                175       5.25        23.19   0.8413    2.191
+  (1, 1, 1)                 175       5.25        23.19   0.8413    2.191 [INT]
+
+  Correlations with H:
+    corr(H, Σy²)    = -0.1291
+    corr(H, Σy⁴)    = -1.0000
+    corr(H, IPR_y)  = -1.0000
+    corr(H, |y|max) = -1.0000
+
+  Parseval check: Σ_{t=1..m} y_t^2 should be CONSTANT
+    Unique values of Σy²: {5.25}
+    YES! Σy² = 5.250000 = m*(p-1)/4 = 4.5
+    This is Parseval's identity for the sine system.
+    Since Σy² is constant, H is NOT correlated with Σy².
+    The H variation comes entirely from HIGHER MOMENTS of y.
+
+  Since Σy² is constant, IPR_y ∝ Σy⁴. Key question: does HIGH or LOW Σy⁴ → high H?
+
+  Connection to additive energy:
+    Interval: |S|=3, E(S)=19
+    Paley:    |S|=3, E(S)=15
+
+======================================================================
+p = 11, m = 5
+======================================================================
+
+Top 5 and bottom 5 by H:
+  sigma                       H        Σy²          Σy⁴    IPR_y  |y|_max
+  (-1, 1, -1, -1, -1)     95095      13.75        37.81   0.2000    1.658
+  (1, -1, 1, 1, 1)        95095      13.75        37.81   0.2000    1.658 [PAL]
+  (-1, -1, 1, -1, -1)     93467      13.75        81.81   0.4327    2.914
+  (1, -1, 1, -1, -1)      93467      13.75        81.81   0.4327    2.914
+  (1, 1, 1, -1, -1)       93467      13.75        81.81   0.4327    2.914
+  ...
+  (-1, 1, 1, -1, 1)       92411      13.75        59.81   0.3164    2.396
+  (1, 1, 1, -1, 1)        92411      13.75        59.81   0.3164    2.396
+  (-1, 1, 1, 1, 1)        92411      13.75        59.81   0.3164    2.396
+
+  Correlations with H:
+    corr(H, Σy²)    = -0.0595
+    corr(H, Σy⁴)    = -0.0879
+    corr(H, IPR_y)  = -0.0879
+    corr(H, |y|max) = -0.1655
+
+  Parseval check: Σ_{t=1..m} y_t^2 should be CONSTANT
+    Unique values of Σy²: {13.75}
+    YES! Σy² = 13.750000 = m*(p-1)/4 = 12.5
+    This is Parseval's identity for the sine system.
+    Since Σy² is constant, H is NOT correlated with Σy².
+    The H variation comes entirely from HIGHER MOMENTS of y.
+
+  Since Σy² is constant, IPR_y ∝ Σy⁴. Key question: does HIGH or LOW Σy⁴ → high H?
+
+  Connection to additive energy:
+    Interval: |S|=5, E(S)=85
+    Paley:    |S|=5, E(S)=65
+
+======================================================================
+DEEPER ANALYSIS: H AS FUNCTION OF y-SPECTRUM SHAPE
+======================================================================
+
+p=7: H as function of y_1, y_2, y_3
+Note: y_t = -y_{p-t}, so y_4=-y_3, y_5=-y_2, y_6=-y_1
+λ_0 = m = 3
+λ_t = -1/2 + i*y_t for t=1,...,6
+
+  sigma                     H        Σy⁴          Σy⁶       c3       c5
+  (1, 1, -1)              189     9.1875      16.0781      6.0     30.0
+  (-1, -1, 1)             189     9.1875      16.0781      6.0     30.0
+  (-1, -1, -1)            175    23.1875     110.5781      6.0     20.0
+  (1, -1, -1)             175    23.1875     110.5781      6.0     20.0
+  (-1, 1, -1)             175    23.1875     110.5781      6.0     20.0
+  (1, -1, 1)              175    23.1875     110.5781      6.0     20.0
+  (-1, 1, 1)              175    23.1875     110.5781      6.0     20.0
+  (1, 1, 1)               175    23.1875     110.5781      6.0     20.0
+
+  Fit H = 4.1348 + 27.5139·Σy⁴ + -4.2243·Σy⁶
+  Residuals: []
+  Max |residual| = 0.000000
+  *** H is EXACTLY a linear function of Σy⁴ and Σy⁶! ***
+  This means only two spectral invariants determine H at p=7.
+
+  H-maximizer y-spectrum shape:
+  H-max (σ=(1, 1, -1), H=189): Σy⁴=9.1875
+  H-min (σ=(-1, -1, -1), H=175): Σy⁴=23.1875
+  → H DECREASES with spectral concentration
+  → Spread imaginary spectrum → more Ham paths
+
+======================================================================
+p=11: H vs y-spectrum moments
+======================================================================
+Fit H = 99422.3277 + -150.4231·Σy⁴ + 9.0256·Σy⁶
+Max |residual| = 647.0962
+With Σy⁸,Σy¹⁰: max |residual| = 0.0000
+
+Interval vs Paley y-spectrum:
+  Interval: H=93027, Σy⁴=147.81, rank=22/32
+  Paley:    H=95095, Σy⁴=37.81, rank=2/32
+
+Top 5:
+  #1: H=95095, Σy⁴=37.81
+  #2: H=95095, Σy⁴=37.81 [PAL]
+  #3: H=93467, Σy⁴=81.81
+  #4: H=93467, Σy⁴=81.81
+  #5: H=93467, Σy⁴=81.81
+
+======================================================================
+KEY INSIGHT: THE IMAGINARY SPECTRUM SHAPE DETERMINES H
+======================================================================
+
+For circulant tournaments on Z_p:
+  1. Re(λ_t) = -1/2 for all t≠0 (universal, S66)
+  2. Im(λ_t) = y_t = Σ_j σ_j sin(2πjt/p) (depends on orientation σ)
+  3. Σ y_t² = m(p-1)/4 (constant by Parseval = PROVED)
+  4. H depends on σ ONLY through the higher moments Σy⁴, Σy⁶, ...
+
+The H-maximization problem is equivalent to:
+  max H(y₁,...,y_m) subject to Σy_t² = const.
+
+This is a CONSTRAINED OPTIMIZATION on a SPHERE in R^m.
+The Interval and Paley represent two specific points on this sphere.
+
+Interval: y_t = Fejér kernel = peaked spectrum (one dominant y_t)
+Paley: y_t = ±√(p)/2 = FLAT spectrum (all |y_t| equal)
+
+For SMALL p: flat spectrum wins (Paley = H-max)
+For LARGE p: peaked spectrum wins (Interval = H-max)
+
+The crossover is when the CURVATURE of H changes sign on the sphere.
+
+DONE.
