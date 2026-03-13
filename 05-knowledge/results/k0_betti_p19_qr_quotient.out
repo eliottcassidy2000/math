@@ -1,0 +1,8 @@
+P_19: m=9, QR=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+Using QR-orbit quotient: all dimensions reduced by factor 9
+  d=1: A=9 (0.0s)
+  d=2: A=81 (0.0s)
+  d=3: A=684 (0.0s)
+  d=4: A=5436 (0.0s)
+  d=5: A=40284 (0.1s)
+  d=6: A=277236 (1.5s)
