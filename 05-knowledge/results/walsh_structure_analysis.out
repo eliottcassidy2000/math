@@ -1,0 +1,203 @@
+======================================================================
+WALSH-FOURIER CIRCULANT STRUCTURE
+======================================================================
+
+  Checking if J[i,j] = g(j-i mod m):
+    d=1: values = ['180376253.45', '-6284752.76', '-122158124.55', '-207724893.82', '122158124.55']... NOT CONSTANT
+    d=2: values = ['207724893.82', '180376253.45', '6284752.76', '-6284752.76', '-180376253.45']... NOT CONSTANT
+    d=3: values = ['122158124.55', '6284752.76', '180376253.45', '-207724893.82', '207724893.82']... NOT CONSTANT
+    d=4: values = ['122158124.55', '207724893.82', '-122158124.55', '180376253.45', '-180376253.45']... NOT CONSTANT
+    d=5: values = ['-207724893.82', '207724893.82', '-180376253.45', '-6284752.76', '122158124.55']... NOT CONSTANT
+    d=6: values = ['-6284752.76', '122158124.55', '207724893.82', '122158124.55', '6284752.76']... NOT CONSTANT
+    d=7: values = ['6284752.76', '-122158124.55', '207724893.82', '180376253.45', '6284752.76']... NOT CONSTANT
+    d=8: values = ['-180376253.45', '180376253.45', '-6284752.76', '-122158124.55', '-207724893.82']... NOT CONSTANT
+
+  J[i,j] values by (j-i) mod 9:
+    d=1: 8 distinct values: [-207724894.0, -180376253.0, -122158125.0, -6284753.0, 6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=2: 7 distinct values: [-180376253.0, -122158125.0, -6284753.0, 6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=3: 6 distinct values: [-207724894.0, -6284753.0, 6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=4: 7 distinct values: [-207724894.0, -180376253.0, -122158125.0, -6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=5: 7 distinct values: [-207724894.0, -180376253.0, -122158125.0, -6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=6: 6 distinct values: [-207724894.0, -6284753.0, 6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=7: 7 distinct values: [-180376253.0, -122158125.0, -6284753.0, 6284753.0, 122158125.0, 180376253.0, 207724894.0]
+    d=8: 8 distinct values: [-207724894.0, -180376253.0, -122158125.0, -6284753.0, 6284753.0, 122158125.0, 180376253.0, 207724894.0]
+
+  J[i,j] vs multiplicative structure:
+    J[0,1] =    180376253.45  pair (1,2), diff= 1, prod= 2
+    J[0,2] =    207724893.82  pair (1,3), diff= 2, prod= 3
+    J[0,3] =    122158124.55  pair (1,4), diff= 3, prod= 4
+    J[0,4] =    122158124.55  pair (1,5), diff= 4, prod= 5
+    J[0,5] =   -207724893.82  pair (1,6), diff= 5, prod= 6
+    J[0,6] =     -6284752.76  pair (1,7), diff= 6, prod= 7
+    J[0,7] =      6284752.76  pair (1,8), diff= 7, prod= 8
+    J[0,8] =   -180376253.45  pair (1,9), diff= 8, prod= 9
+    J[1,2] =     -6284752.76  pair (2,3), diff= 1, prod= 6
+    J[1,3] =    180376253.45  pair (2,4), diff= 2, prod= 8
+    J[1,4] =      6284752.76  pair (2,5), diff= 3, prod=10
+    J[1,5] =    207724893.82  pair (2,6), diff= 4, prod=12
+    J[1,6] =    207724893.82  pair (2,7), diff= 5, prod=14
+    J[1,7] =    122158124.55  pair (2,8), diff= 6, prod=16
+    J[1,8] =   -122158124.55  pair (2,9), diff= 7, prod=18
+    J[2,3] =   -122158124.55  pair (3,4), diff= 1, prod=12
+    J[2,4] =      6284752.76  pair (3,5), diff= 2, prod=15
+    J[2,5] =    180376253.45  pair (3,6), diff= 3, prod=18
+    J[2,6] =   -122158124.55  pair (3,7), diff= 4, prod= 2
+    J[2,7] =   -180376253.45  pair (3,8), diff= 5, prod= 5
+    J[2,8] =    207724893.82  pair (3,9), diff= 6, prod= 8
+    J[3,4] =   -207724893.82  pair (4,5), diff= 1, prod= 1
+    J[3,5] =     -6284752.76  pair (4,6), diff= 2, prod= 5
+    J[3,6] =   -207724893.82  pair (4,7), diff= 3, prod= 9
+    J[3,7] =    180376253.45  pair (4,8), diff= 4, prod=13
+    J[3,8] =     -6284752.76  pair (4,9), diff= 5, prod=17
+    J[4,5] =    122158124.55  pair (5,6), diff= 1, prod=11
+    J[4,6] =   -180376253.45  pair (5,7), diff= 2, prod=16
+    J[4,7] =    207724893.82  pair (5,8), diff= 3, prod= 2
+    J[4,8] =   -180376253.45  pair (5,9), diff= 4, prod= 7
+    J[5,6] =   -180376253.45  pair (6,7), diff= 1, prod= 4
+    J[5,7] =   -122158124.55  pair (6,8), diff= 2, prod=10
+    J[5,8] =     -6284752.76  pair (6,9), diff= 3, prod=16
+    J[6,7] =      6284752.76  pair (7,8), diff= 1, prod=18
+    J[6,8] =    122158124.55  pair (7,9), diff= 2, prod= 6
+    J[7,8] =    207724893.82  pair (8,9), diff= 1, prod=15
+
+  Distinct |J| values:
+    |J| = 6284753: 9 pairs
+      (0,6) = pair (1,7), prod mod 19 = 7, Legendre = 1
+      (0,7) = pair (1,8), prod mod 19 = 8, Legendre = 18
+      (1,2) = pair (2,3), prod mod 19 = 6, Legendre = 1
+      (1,4) = pair (2,5), prod mod 19 = 10, Legendre = 18
+      (2,4) = pair (3,5), prod mod 19 = 15, Legendre = 18
+      (3,5) = pair (4,6), prod mod 19 = 5, Legendre = 1
+      (3,8) = pair (4,9), prod mod 19 = 17, Legendre = 1
+      (5,8) = pair (6,9), prod mod 19 = 16, Legendre = 1
+      (6,7) = pair (7,8), prod mod 19 = 18, Legendre = 18
+    |J| = 122158125: 9 pairs
+      (0,3) = pair (1,4), prod mod 19 = 4, Legendre = 1
+      (0,4) = pair (1,5), prod mod 19 = 5, Legendre = 1
+      (1,7) = pair (2,8), prod mod 19 = 16, Legendre = 1
+      (1,8) = pair (2,9), prod mod 19 = 18, Legendre = 18
+      (2,3) = pair (3,4), prod mod 19 = 12, Legendre = 18
+      (2,6) = pair (3,7), prod mod 19 = 2, Legendre = 18
+      (4,5) = pair (5,6), prod mod 19 = 11, Legendre = 1
+      (5,7) = pair (6,8), prod mod 19 = 10, Legendre = 18
+      (6,8) = pair (7,9), prod mod 19 = 6, Legendre = 1
+    |J| = 180376253: 9 pairs
+      (0,1) = pair (1,2), prod mod 19 = 2, Legendre = 18
+      (0,8) = pair (1,9), prod mod 19 = 9, Legendre = 1
+      (1,3) = pair (2,4), prod mod 19 = 8, Legendre = 18
+      (2,5) = pair (3,6), prod mod 19 = 18, Legendre = 18
+      (2,7) = pair (3,8), prod mod 19 = 5, Legendre = 1
+      (3,7) = pair (4,8), prod mod 19 = 13, Legendre = 18
+      (4,6) = pair (5,7), prod mod 19 = 16, Legendre = 1
+      (4,8) = pair (5,9), prod mod 19 = 7, Legendre = 1
+      (5,6) = pair (6,7), prod mod 19 = 4, Legendre = 1
+    |J| = 207724894: 9 pairs
+      (0,2) = pair (1,3), prod mod 19 = 3, Legendre = 18
+      (0,5) = pair (1,6), prod mod 19 = 6, Legendre = 1
+      (1,5) = pair (2,6), prod mod 19 = 12, Legendre = 18
+      (1,6) = pair (2,7), prod mod 19 = 14, Legendre = 18
+      (2,8) = pair (3,9), prod mod 19 = 8, Legendre = 18
+      (3,4) = pair (4,5), prod mod 19 = 1, Legendre = 1
+      (3,6) = pair (4,7), prod mod 19 = 9, Legendre = 1
+      (4,7) = pair (5,8), prod mod 19 = 2, Legendre = 18
+      (7,8) = pair (8,9), prod mod 19 = 15, Legendre = 18
+
+  Q(Interval) = sum J[i,j] = 1117343599.60
+  Q(Paley) = -4900099958.64
+  s_Paley = [1, -1, -1, 1, 1, 1, 1, -1, 1]
+
+  Key insight:
+  Q(Int) = 1117343599.60 > Q(Paley) = -4900099958.64
+  But SDP bound uses max_eig, not the sum.
+  Sum of all J[i,j] = Q(Int) for s=(+1,...,+1)
+
+======================================================================
+ORBIT STRUCTURE OF MAXIMIZERS
+======================================================================
+
+  p=13, m=6, |Z_p^*| = 12
+  |Orbit(Int)| = 12
+  Expected maximizers = 12
+  Stabilizer = [1]
+  |Stab| = 1
+  |Orbit| = |Z_p^*|/|Stab| = 12
+  # valid tournament connection sets in orbit: 12/12
+
+  p=19, m=9, |Z_p^*| = 18
+  |Orbit(Int)| = 18
+  Expected maximizers = 18
+  Stabilizer = [1]
+  |Stab| = 1
+  |Orbit| = |Z_p^*|/|Stab| = 18
+  # valid tournament connection sets in orbit: 18/18
+  (p ≡ 3 mod 4: all orbit elements are valid connection sets)
+
+======================================================================
+ADDITIVE ENERGY IS ORBIT-INVARIANT
+======================================================================
+  p=7: E(Int) = 19, orbit energies = {19}
+  CONFIRMED: additive energy is constant on orbit
+  p=11: E(Int) = 85, orbit energies = {85}
+  CONFIRMED: additive energy is constant on orbit
+  p=13: E(Int) = 146, orbit energies = {146}
+  CONFIRMED: additive energy is constant on orbit
+  p=19: E(Int) = 489, orbit energies = {489}
+  CONFIRMED: additive energy is constant on orbit
+
+  This is expected: E(S) = #{(a,b,c,d) in S^4 : a+b=c+d}.
+  Under scaling S -> aS: (a*x + a*y = a*z + a*w) iff (x+y = z+w),
+  so E(aS) = E(S). Additive energy is scale-invariant.
+
+  But NOT translation-invariant! E(S+t) can differ from E(S).
+  The orbit maximizers are related by SCALING, not translation.
+
+
+======================================================================
+H vs ADDITIVE ENERGY ACROSS ALL CIRCULANT TOURNAMENTS
+======================================================================
+
+  p=7, m=3:
+    E(S)                     S      marker
+      19             [1, 2, 3]    INTERVAL
+      19             [2, 3, 6]            
+      19             [1, 3, 5]            
+      19             [2, 4, 6]            
+      19             [1, 4, 5]            
+      19             [4, 5, 6]            
+      15             [3, 5, 6]            
+      15             [1, 2, 4]       PALEY
+
+  p=11, m=5:
+    E(S)                     S      marker
+      85       [1, 2, 3, 4, 5]    INTERVAL
+      85      [3, 4, 5, 9, 10]            
+      85       [1, 4, 5, 8, 9]            
+      85       [1, 3, 5, 7, 9]            
+      85      [2, 5, 7, 8, 10]            
+      85       [1, 3, 4, 6, 9]            
+      85      [2, 4, 6, 8, 10]            
+      85      [2, 3, 6, 7, 10]            
+      85       [1, 2, 6, 7, 8]            
+      85      [6, 7, 8, 9, 10]            
+      73       [1, 2, 4, 5, 8]            
+      73      [2, 4, 5, 8, 10]            
+      73      [4, 5, 8, 9, 10]            
+      73      [3, 5, 7, 9, 10]            
+      73      [5, 7, 8, 9, 10]            
+      73       [1, 2, 3, 4, 6]            
+      73       [1, 2, 4, 6, 8]            
+      73       [1, 2, 3, 6, 7]            
+      73       [1, 3, 6, 7, 9]            
+      73      [3, 6, 7, 9, 10]            
+      69      [2, 3, 4, 5, 10]            
+      69       [1, 2, 3, 5, 7]            
+      69      [2, 3, 5, 7, 10]            
+      69       [1, 2, 5, 7, 8]            
+      69       [1, 5, 7, 8, 9]            
+      69      [2, 3, 4, 6, 10]            
+      69      [3, 4, 6, 9, 10]            
+      69       [1, 4, 6, 8, 9]            
+      69      [4, 6, 8, 9, 10]            
+      69       [1, 6, 7, 8, 9]            
+      65       [1, 3, 4, 5, 9]       PALEY
+      65      [2, 6, 7, 8, 10]            

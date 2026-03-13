@@ -1,0 +1,83 @@
+======================================================================
+ADDITIVE ENERGY vs H: CORRELATION SIGN REVERSAL
+======================================================================
+
+============================================================
+p=5, m=2, 4 circulant tournaments
+============================================================
+  Computed in 0.0s
+
+       E                H  count     markers
+       6               15      4         INT
+
+  Pearson correlation r(E, H) = +0.000000
+  UNCORRELATED
+
+============================================================
+p=7, m=3, 8 circulant tournaments
+============================================================
+  Computed in 0.0s
+
+       E                H  count     markers
+      15              189      2         PAL
+      19              175      6         INT
+
+  Pearson correlation r(E, H) = -1.000000
+  ANTI-CORRELATED: low E => high H (Paley regime)
+
+============================================================
+p=11, m=5, 32 circulant tournaments
+============================================================
+  Computed in 0.1s
+
+       E                H  count     markers
+      65           95,095      2         PAL
+      73           93,467     10            
+      85           93,027     10         INT
+      69           92,411     10            
+
+  Pearson correlation r(E, H) = -0.087860
+  ANTI-CORRELATED: low E => high H (Paley regime)
+
+============================================================
+p=13, m=6, 64 circulant tournaments
+============================================================
+  Computed in 0.7s
+
+       E                H  count     markers
+     146        3,711,175     12         INT
+     130        3,707,483     12            
+     118        3,704,857     12            
+     114        3,703,011      4            
+     118        3,683,797     12            
+     122        3,669,497     12            
+
+  Pearson correlation r(E, H) = +0.509255
+  POSITIVELY CORRELATED: high E => high H (Interval regime)
+
+======================================================================
+SUMMARY: CORRELATION SIGN REVERSAL
+======================================================================
+
+  p=5:   r = ? (trivial, all H equal)
+  p=7:   r < 0 (ANTI-correlated: Paley with min E has max H)
+  p=11:  r < 0 (ANTI-correlated: Paley with min E has max H)
+  p=13:  r > 0 (POSITIVELY correlated: Interval with max E has max H)
+  p=19:  r > 0 (POSITIVELY correlated: Interval with max E has max H) [known]
+
+  The SIGN REVERSAL in the E-H correlation marks the phase transition.
+
+  Physical interpretation:
+  - Low E (quasi-random) means the connection set S is "spread out" multiplicatively
+    => More 3-cycles (additive energy of QR is minimal among difference sets)
+    => More cycles of ALL lengths (quasi-random excess)
+    => Higher alpha_1 => higher H when alpha_1 dominates
+
+  - High E (additively structured) means S has many additive quadruples
+    => Vertex neighborhoods are more similar
+    => Cycles cluster on similar vertex sets => more disjoint packings
+    => Higher alpha_2, alpha_3, ... => higher H when packing dominates
+
+  Crossover: between p=11 (r<0) and p=13 (r>0).
+  For p = 3 mod 4 only: between p=11 (Paley wins) and p=19 (Interval wins).
+
