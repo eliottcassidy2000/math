@@ -1,0 +1,36 @@
+Paley tournament P_7 adjacency matrix:
+  [0, 1, 1, 0, 1, 0, 0]
+  [0, 0, 1, 1, 0, 1, 0]
+  [0, 0, 0, 1, 1, 0, 1]
+  [1, 0, 0, 0, 1, 1, 0]
+  [0, 1, 0, 0, 0, 1, 1]
+  [1, 0, 1, 0, 0, 0, 1]
+  [1, 1, 0, 1, 0, 0, 0]
+
+Edge count: 21 (expected 21 = 21 for tournament)
+Tournament check: PASSED
+t3 = 14
+Out-degrees: [3, 3, 3, 3, 3, 3, 3]
+
+Computing Betti numbers...
+
+beta = [1, 0, 0, 0, 6, 0, 0]
+Betti vector: beta_0=1, beta_1=0, beta_2=0, beta_3=0, beta_4=6, beta_5=0, beta_6=0
+
+Allowed path counts |A_d|:
+  |A_0| = 7
+  |A_1| = 21
+  |A_2| = 63
+  |A_3| = 147
+  |A_4| = 273
+  |A_5| = 315
+  |A_6| = 189
+  dim(Omega_0) = 7
+  dim(Omega_1) = 21
+  dim(Omega_2) = 42
+  dim(Omega_3) = 63
+  dim(Omega_4) = 63
+  dim(Omega_5) = 42
+  dim(Omega_6) = 21
+
+Euler characteristic chi = sum (-1)^d beta_d = 7
