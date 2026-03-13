@@ -1,0 +1,135 @@
+======================================================================
+GENERAL DISJOINTNESS EXCESS ANALYSIS
+======================================================================
+
+======================================================================
+p=7, m=3
+  Paley S=[1, 2, 4]
+  Interval S=[1, 2, 3]
+======================================================================
+
+--- k=3 ---
+  Paley: 14 vertex sets, 7 disjoint pairs
+  Interval: 14 vertex sets, 14 disjoint pairs
+  Excess: 7 (0.0s)
+
+  Overlap distribution:
+    ov=0: Paley=     7, Interval=    14, diff=     7
+    ov=1: Paley=    63, Interval=    49, diff=   -14
+    ov=2: Paley=    21, Interval=    28, diff=     7
+
+  Inclusion-Exclusion decomposition:
+    Level 0: C(n,2): Pal=91, Int=91, diff=0
+    Level 1: p*C(n_0,2): Pal=105, Int=105, diff=0
+      n_0: Pal=6, Int=6
+    Level 2: p*sum C(co_occ(d),2): Pal=21, Int=28, diff=7
+
+    I-E level 2 prediction:
+      Paley: 7 (actual 7, err=0)
+      Interval: 14 (actual 14, err=0)
+      Excess: 7 (actual 7, err=0)
+      k=3: I-E level 2 is EXACT (confirmed)
+
+======================================================================
+p=11, m=5
+  Paley S=[1, 3, 4, 5, 9]
+  Interval S=[1, 2, 3, 4, 5]
+======================================================================
+
+--- k=3 ---
+  Paley: 55 vertex sets, 495 disjoint pairs
+  Interval: 55 vertex sets, 550 disjoint pairs
+  Excess: 55 (0.0s)
+
+  Overlap distribution:
+    ov=0: Paley=   495, Interval=   550, diff=    55
+    ov=1: Paley=   825, Interval=   715, diff=  -110
+    ov=2: Paley=   165, Interval=   220, diff=    55
+
+  Inclusion-Exclusion decomposition:
+    Level 0: C(n,2): Pal=1485, Int=1485, diff=0
+    Level 1: p*C(n_0,2): Pal=1155, Int=1155, diff=0
+      n_0: Pal=15, Int=15
+    Level 2: p*sum C(co_occ(d),2): Pal=165, Int=220, diff=55
+
+    I-E level 2 prediction:
+      Paley: 495 (actual 495, err=0)
+      Interval: 550 (actual 550, err=0)
+      Excess: 55 (actual 55, err=0)
+      k=3: I-E level 2 is EXACT (confirmed)
+
+--- k=5 ---
+  Paley: 352 vertex sets, 726 disjoint pairs
+  Interval: 407 vertex sets, 1122 disjoint pairs
+  Excess: 396 (0.0s)
+
+  Overlap distribution:
+    ov=0: Paley=   726, Interval=  1122, diff=   396
+    ov=1: Paley= 10120, Interval= 13596, diff=  3476
+    ov=2: Paley= 27060, Interval= 35596, diff=  8536
+    ov=3: Paley= 19800, Interval= 26796, diff=  6996
+    ov=4: Paley=  4070, Interval=  5511, diff=  1441
+
+  Inclusion-Exclusion decomposition:
+    Level 0: C(n,2): Pal=61776, Int=82621, diff=20845
+    Level 1: p*C(n_0,2): Pal=139920, Int=187220, diff=47300
+      n_0: Pal=160, Int=185
+    Level 2: p*sum C(co_occ(d),2): Pal=110880, Int=149050, diff=38170
+
+    I-E level 2 prediction:
+      Paley: 32736 (actual 726, err=32010)
+      Interval: 44451 (actual 1122, err=43329)
+      Excess: 11715 (actual 396, err=11319)
+
+    Level 3: sum_triples C(n_triple, 2):
+      Paley=36080, Interval=48840
+    I-E level 3 prediction:
+      Paley: -3344 (actual 726, err=-4070)
+      Interval: -4389 (actual 1122, err=-5511)
+      Excess: -1045 (actual 396)
+
+======================================================================
+ANALYTICAL DISJOINTNESS EXCESS FROM THM-143
+======================================================================
+
+For k=3, THM-142 excess = p(p-1)(p+1)(p-3)/192:
+
+  p=7: c3_int=14, c3_pal=9
+
+  p=11: c3_int=55, c3_pal=44
+
+  p=19: c3_int=285, c3_pal=253
+
+  p=23: c3_int=506, c3_pal=460
+
+======================================================================
+EXCESS SCALING FROM SLOPE
+======================================================================
+
+The key quantity: sum_{d=1}^m C(a+bd, 2) - m*C(c, 2)
+where a,b from THM-143 (Interval) and c = constant co_occ (Paley)
+
+k=3:
+  p=7: slope=1, var_co_occ=0.7, p*var=4.7
+  p=11: slope=1, var_co_occ=2.0, p*var=22.0
+  p=19: slope=1, var_co_occ=6.7, p*var=126.7
+  p=23: slope=1, var_co_occ=10.0, p*var=230.0
+  p=31: slope=1, var_co_occ=18.7, p*var=578.7
+  p=43: slope=1, var_co_occ=36.7, p*var=1576.7
+  p=47: slope=1, var_co_occ=44.0, p*var=2068.0
+k=5:
+  p=7: slope=0, var_co_occ=0.0, p*var=0.0
+  p=11: slope=3, var_co_occ=18.0, p*var=198.0
+  p=19: slope=21, var_co_occ=2940.0, p*var=55860.0
+  p=23: slope=36, var_co_occ=12960.0, p*var=298080.0
+  p=31: slope=78, var_co_occ=113568.0, p*var=3520608.0
+  p=43: slope=171, var_co_occ=1072170.0, p*var=46103310.0
+  p=47: slope=210, var_co_occ=1940400.0, p*var=91198800.0
+k=7:
+  p=7: slope=0, var_co_occ=0.0, p*var=0.0
+  p=11: slope=0, var_co_occ=0.0, p*var=0.0
+  p=19: slope=35, var_co_occ=8166.7, p*var=155166.7
+  p=23: slope=126, var_co_occ=158760.0, p*var=3651480.0
+  p=31: slope=715, var_co_occ=9542866.7, p*var=295828866.7
+  p=43: slope=3876, var_co_occ=550857120.0, p*var=23686856160.0
+  p=47: slope=5985, var_co_occ=1576089900.0, p*var=74076225300.0

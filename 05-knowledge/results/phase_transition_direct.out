@@ -1,0 +1,102 @@
+======================================================================
+PHASE TRANSITION: H(T) for Paley vs Interval
+======================================================================
+
+======================================================================
+p=7, m=3
+======================================================================
+
+  Paley: 36 odd-cycle vertex sets (0.0s)
+    k=3: 14 vertex sets
+    k=5: 21 vertex sets
+    k=7: 1 vertex sets
+
+    Omega too large (36 vertices) for direct IP computation
+    Using formula H = det(I + 2*A_omega)... (not implemented)
+
+    alpha_1 = 36
+    alpha_2 = 7 (0.0s)
+    H >= 1 + 2*36 + 4*7 = 101
+
+  Interval: 36 odd-cycle vertex sets (0.0s)
+    k=3: 14 vertex sets
+    k=5: 21 vertex sets
+    k=7: 1 vertex sets
+
+    Omega too large (36 vertices) for direct IP computation
+    Using formula H = det(I + 2*A_omega)... (not implemented)
+
+    alpha_1 = 36
+    alpha_2 = 14 (0.0s)
+    H >= 1 + 2*36 + 4*14 = 129
+
+======================================================================
+p=11, m=5
+======================================================================
+
+  Paley: 793 odd-cycle vertex sets (0.1s)
+    k=3: 55 vertex sets
+    k=5: 352 vertex sets
+    k=7: 330 vertex sets
+    k=9: 55 vertex sets
+    k=11: 1 vertex sets
+
+    Omega too large (793 vertices) for direct IP computation
+    Using formula H = det(I + 2*A_omega)... (not implemented)
+
+    alpha_1 = 793
+    alpha_2 = 3861 (0.0s)
+    H >= 1 + 2*793 + 4*3861 = 17031
+
+  Interval: 848 odd-cycle vertex sets (0.1s)
+    k=3: 55 vertex sets
+    k=5: 407 vertex sets
+    k=7: 330 vertex sets
+    k=9: 55 vertex sets
+    k=11: 1 vertex sets
+
+    Omega too large (848 vertices) for direct IP computation
+    Using formula H = det(I + 2*A_omega)... (not implemented)
+
+    alpha_1 = 848
+    alpha_2 = 4972 (0.1s)
+    H >= 1 + 2*848 + 4*4972 = 21585
+
+======================================================================
+p=13, m=6
+======================================================================
+
+  Interval: 3680 odd-cycle vertex sets (0.9s)
+    k=3: 91 vertex sets
+    k=5: 1092 vertex sets
+    k=7: 1703 vertex sets
+    k=9: 715 vertex sets
+    k=11: 78 vertex sets
+    k=13: 1 vertex sets
+
+    Omega too large (3680 vertices) for direct IP computation
+    Using formula H = det(I + 2*A_omega)... (not implemented)
+
+    alpha_1 = 3680
+    alpha_2 = 69342 (1.0s)
+    H >= 1 + 2*3680 + 4*69342 = 284729
+
+======================================================================
+PHASE TRANSITION SUMMARY
+======================================================================
+
+  p=7:
+    Paley:    H = 101
+    Interval: H = 129
+    Winner: Interval
+    Ratio Int/Pal: 1.277228
+
+  p=11:
+    Paley:    H = 17031
+    Interval: H = 21585
+    Winner: Interval
+    Ratio Int/Pal: 1.267395
+
+  p=13:
+    Interval: H = 284729
+    (no Paley at p=1 mod 4)
