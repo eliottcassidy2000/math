@@ -1,0 +1,26 @@
+P_19: m=9, QR=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+Computing Omega_5...
+  d=1: A=9 (0.0s)
+  d=2: A=81 (0.0s)
+  d=3: A=684 (0.0s)
+  d=4: A=5436 (0.0s)
+  d=5: A=40284 (0.2s)
+
+  Building constraint matrix for d=5: 40284 columns
+  Junk rows: 18216
+  Building sparse column data...
+  Total nonzeros: 82620, avg per column: 2.05
+  Starting sparse Gaussian elimination...
+    processed 5000/40284 columns, rank=4056
+    processed 10000/40284 columns, rank=7712
+    processed 15000/40284 columns, rank=11305
+    processed 20000/40284 columns, rank=14717
+    processed 25000/40284 columns, rank=18047
+    processed 30000/40284 columns, rank=20969
+    processed 35000/40284 columns, rank=24229
+    processed 40000/40284 columns, rank=27502
+  rank=27682, Omega_5=12602 (0.2s)
+
+  P_19 k=0 Omega = [1, 9, 72, 540, 3753, 12602]
+  Omega_5/Omega_4 = 3.3578
+  Expected from m=9 pattern: 12602
