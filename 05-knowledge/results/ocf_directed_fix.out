@@ -1,0 +1,397 @@
+======================================================================
+ANALYSIS 1: OCF VERIFICATION WITH DIRECTED CYCLES
+======================================================================
+
+n=3: Verifying H = I(Omega_directed, 2)
+  ALL 8 tournaments MATCH! H = I(Omega_directed, 2)
+
+  Alpha decomposition by H:
+    H=1: nc=[0], alpha=[1], I=1
+    H=3: nc=[1], alpha=[1, 1], I=3
+
+n=4: Verifying H = I(Omega_directed, 2)
+  ALL 64 tournaments MATCH! H = I(Omega_directed, 2)
+
+  Alpha decomposition by H:
+    H=1: nc=[0], alpha=[1], I=1
+    H=3: nc=[1], alpha=[1, 1], I=3
+    H=5: nc=[2], alpha=[1, 2], I=5
+
+n=5: Verifying H = I(Omega_directed, 2)
+  ALL 1024 tournaments MATCH! H = I(Omega_directed, 2)
+
+  Alpha decomposition by H:
+    H=1: nc=[0], alpha=[1], I=1
+    H=3: nc=[1], alpha=[1, 1], I=3
+    H=5: nc=[2], alpha=[1, 2], I=5
+    H=9: nc=[4], alpha=[1, 4], I=9
+    H=11: nc=[5], alpha=[1, 5], I=11
+    H=13: nc=[6], alpha=[1, 6], I=13
+    H=15: nc=[7], alpha=[1, 7], I=15
+
+n=6: Verifying H = I(Omega_directed, 2)
+  ALL 32768 tournaments MATCH! H = I(Omega_directed, 2)
+
+  Alpha decomposition by H:
+    H=1: nc=[0], alpha=[1], I=1
+    H=3: nc=[1], alpha=[1, 1], I=3
+    H=5: nc=[2], alpha=[1, 2], I=5
+    H=9: nc=[2, 4], alpha=[1, 4], I=9
+    H=11: nc=[5], alpha=[1, 5], I=11
+    H=13: nc=[6], alpha=[1, 6], I=13
+    H=15: nc=[7], alpha=[1, 7], I=15
+    H=17: nc=[6, 8], alpha=[1, 8], I=17
+    H=19: nc=[9], alpha=[1, 9], I=19
+    H=23: nc=[9, 11], alpha=[1, 11], I=23
+    H=25: nc=[12], alpha=[1, 12], I=25
+    H=27: nc=[11], alpha=[1, 11, 1], I=27
+    H=29: nc=[10, 12], alpha=[1, 10, 2], I=29
+    H=31: nc=[13], alpha=[1, 13, 1], I=31
+    H=33: nc=[12, 14, 16], alpha=[1, 16], I=33
+    H=37: nc=[14, 16], alpha=[1, 14, 2], I=37
+    H=41: nc=[16], alpha=[1, 16, 2], I=41
+    H=43: nc=[19], alpha=[1, 19, 1], I=43
+    H=45: nc=[14, 20], alpha=[1, 14, 4], I=45
+
+======================================================================
+ANALYSIS 2: DIRECTED CYCLE BREAKDOWN AT n=5
+======================================================================
+  Score (0, 1, 2, 3, 4): H=[1], nc=0, c3_dir=0, c5_dir=0
+  Score (0, 1, 3, 3, 3): H=[3], nc=1, c3_dir=1, c5_dir=0
+  Score (0, 2, 2, 2, 4): H=[3], nc=1, c3_dir=1, c5_dir=0
+  Score (0, 2, 2, 3, 3): H=[5], nc=2, c3_dir=2, c5_dir=0
+  Score (1, 1, 1, 3, 4): H=[3], nc=1, c3_dir=1, c5_dir=0
+  Score (1, 1, 2, 2, 4): H=[5], nc=2, c3_dir=2, c5_dir=0
+  Score (1, 1, 2, 3, 3): H=[9], nc=4, c3_dir=3, c5_dir=1
+
+  Score (1, 2, 2, 2, 3):
+    H=11: count=120, nc=[5], c3_dir=[4], c5_dir=[1]
+    H=13: count=120, nc=[6], c3_dir=[4], c5_dir=[2]
+    H=15: count=40, nc=[7], c3_dir=[4], c5_dir=[3]
+  Score (2, 2, 2, 2, 2): H=[15], nc=7, c3_dir=5, c5_dir=2
+
+======================================================================
+ANALYSIS 3: THE COEFFICIENT-2 THEOREM
+======================================================================
+
+THEOREM (Coefficient-2 for longest cycles):
+  For a directed k-cycle C using ALL n vertices (Hamiltonian cycle, k=n),
+  C conflicts with every other cycle in Omega(T) since it uses all vertices.
+  Therefore, adding C to Omega increases alpha_1 by 1 but leaves alpha_j
+  unchanged for j >= 2.
+
+  Consequence: I(Omega, 2) increases by exactly 2^1 = 2.
+
+  This explains:
+  - At n=5, score class (1,2,2,2,3): H = 9 + 2*c5_dir
+    (c5 are Hamiltonian 5-cycles, each adding 2 to H)
+  - At n=7, regular: H = 141 + 2*c7_dir
+    (c7 are Hamiltonian 7-cycles, each adding 2 to H)
+
+  The pattern: within a fixed score class (or regular class), the ONLY
+  cycle length that varies independently is the HAMILTONIAN one (length n).
+  All shorter cycle counts are either score-determined (c3) or constrained
+  by the graph structure to not affect H independently (c5 at n=7).
+
+Verification at n=5, score class (1,2,2,2,3):
+  bits=12: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=28: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=40: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=41: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=42: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=44: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=57: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=68: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=69: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=70: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=72: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=73: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=74: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=77: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=78: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=85: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=89: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=92: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=93: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=97: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=99: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=101: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=104: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=106: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=107: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=108: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=109: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=121: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=138: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=152: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=153: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=154: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=156: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=170: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=185: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=194: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=195: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=198: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=200: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=201: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=203: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=204: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=206: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=209: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=211: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=213: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=216: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=218: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=219: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=220: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=221: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=227: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=233: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=234: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=235: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=249: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=262: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=266: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=268: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=270: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=276: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=277: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=278: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=280: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=281: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=282: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=285: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=286: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=290: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=291: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=294: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=296: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=297: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=299: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=300: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=302: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=305: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=307: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=309: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=312: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=314: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=315: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=316: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=317: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=322: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=323: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=324: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=325: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=327: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=330: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=332: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=334: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=337: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=339: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=340: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=342: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=343: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=345: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=348: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=349: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=353: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=354: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=357: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=358: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=359: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=361: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=362: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=363: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=369: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=371: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=373: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=377: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=394: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=402: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=403: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=406: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=408: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=409: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=411: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=412: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=414: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=426: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=435: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=441: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=442: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=443: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=450: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=451: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=454: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=458: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=465: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=466: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=469: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=470: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=471: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=473: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=474: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=475: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=483: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=499: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=524: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=540: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=548: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=549: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=550: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=552: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=553: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=554: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=557: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=558: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=565: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=569: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=572: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=573: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=580: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=581: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=582: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=588: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=597: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=609: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=611: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=612: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=614: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=615: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=617: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=620: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=621: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=629: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=646: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=650: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=652: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=654: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=660: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=661: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=662: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=664: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=665: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=666: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=669: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=670: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=674: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=675: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=678: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=680: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=681: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=683: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=684: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=686: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=689: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=691: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=693: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=696: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=698: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=699: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=700: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=701: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=706: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=707: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=708: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=709: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=711: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=714: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=716: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=718: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=721: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=723: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=724: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=726: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=727: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=729: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=732: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=733: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=737: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=738: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=741: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=742: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=743: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=745: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=746: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=747: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=753: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=755: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=757: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=761: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=774: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=788: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=789: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=790: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=796: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=802: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=803: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=804: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=805: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=807: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=810: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=812: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=814: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=817: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=819: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=820: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=822: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=823: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=825: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=828: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=829: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=838: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=853: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=867: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=869: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=870: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=871: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=885: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=902: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=914: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=915: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=916: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=917: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=919: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=922: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=924: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=926: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=930: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=931: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=934: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=938: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=945: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=946: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=949: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=950: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=951: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=953: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=954: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=955: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=966: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=979: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=981: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=982: H=13, c5_dir=2, 2*c5_dir=4, H - 2*c5_dir = 9
+  bits=983: H=15, c5_dir=3, 2*c5_dir=6, H - 2*c5_dir = 9
+  bits=995: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+  bits=1011: H=11, c5_dir=1, 2*c5_dir=2, H - 2*c5_dir = 9
+
+======================================================================
+ANALYSIS 4: REGULAR n=7 WITH DIRECTED CYCLE COUNTING
+======================================================================
+Scanning 2097152 tournaments for regular ones...
+Found 2640 regular tournaments
+
+Directed cycle decomposition:
+      H |   cnt |    nc |  c3_dir |  c5_dir |  c7_dir |   H-2*c7
+  ------+-------+-------+---------+---------+---------+---------
+    171 |  1680 |    65 |      14 |      36 |      15 | 141
+    175 |   720 |    59 |      14 |      28 |      17 | 141
+    189 |   240 |    80 |      14 |      42 |      24 | 141
+
+OCF verification (one per class):
+  H=171: nc=65 too large for exact IS enumeration
+  H=175: nc=59 too large for exact IS enumeration
+  H=189: nc=80 too large for exact IS enumeration
+
+======================================================================
+DONE.
