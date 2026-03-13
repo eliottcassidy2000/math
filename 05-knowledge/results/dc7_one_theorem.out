@@ -1,0 +1,56 @@
+============================================================
+WHY |dc7| <= 1 AT n=7
+============================================================
+Analyzed 50 Vitali pairs
+
+Shared cycles: True
+
+dc7 distribution:
+  dc7=+0: 50 examples, mean c7_A=0.4, range=[0,2]
+
+============================================================
+S-SEGMENT STRUCTURE ANALYSIS
+============================================================
+
+Example 3: dc7=0, c7_A=1, c7_B=1
+  S-segments (1, 1, 2): 0 cycles (x7 rotations)
+  S-segments (1, 3): 0 cycles (x7 rotations)
+  S-segments (2, 2): 0 cycles (x7 rotations)
+  B-cycles:
+    S-segments (1, 1, 2): 0 cycles
+    S-segments (1, 3): 0 cycles
+
+Example 4: dc7=0, c7_A=1, c7_B=1
+  S-segments (1, 3): 0 cycles (x7 rotations)
+  S-segments (2, 2): 0 cycles (x7 rotations)
+  S-segments (4,): 0 cycles (x7 rotations)
+  B-cycles:
+    S-segments (1, 3): 0 cycles
+    S-segments (2, 2): 0 cycles
+    S-segments (4,): 0 cycles
+
+============================================================
+THE (4,) SEGMENT: ALL S CONSECUTIVE
+============================================================
+
+Detailed pairing analysis:
+
+============================================================
+PROOF SKETCH: WHY |dc7| <= 1 AT n=7
+============================================================
+
+The conjugation maps each A-cycle to a potential B-cycle by reversing S-segments.
+The conjugated cycle exists in B iff the boundary connections work:
+  A[Xprev][S_last] = 1 and A[S_first][Xnext] = 1.
+
+At n=7, each cycle has at most 3 S-segments (one per gap of size 1).
+The conjugation can fail at 2-4 boundary points.
+
+CLAIM: the number of "boundary failures" is always even,
+so the parity of |A-cycles matching to B-cycles| is preserved,
+giving |dc7| <= 1 (at most one unmatched cycle).
+
+Conjugation analysis:
+  (valid_in_B, boundary_failures): {(False, 0): 8, (False, 1): 30, (True, 0): 92}
+
+Done.

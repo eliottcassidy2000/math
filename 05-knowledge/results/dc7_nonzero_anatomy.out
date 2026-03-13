@@ -1,0 +1,295 @@
+============================================================
+ANATOMY OF dc7 != 0 CASES AT n=7
+============================================================
+Found 20 dc7 != 0 examples
+
+========================================
+Example 0: dc7=-1, c7_A=228, c7_B=227
+S=(0, 2, 3, 6), outside=[1, 4, 5]
+  Unique cycles: A=15, B=14
+  Shared: 0
+
+  A-only cycles (15):
+    (0, 2, 3, 5, 1, 6, 4) [SSSXXSX] S-arcs=[(0, 2), (2, 3)] X-arcs=[(5, 1)]
+    (0, 2, 3, 5, 4, 1, 6) [SSSXXXS] S-arcs=[(0, 2), (2, 3), (6, 0)] X-arcs=[(5, 4), (4, 1)]
+    (0, 2, 3, 5, 6, 4, 1) [SSSXSXX] S-arcs=[(0, 2), (2, 3)] X-arcs=[(4, 1)]
+    (0, 2, 4, 1, 3, 5, 6) [SSXXSXS] S-arcs=[(0, 2), (6, 0)] X-arcs=[(4, 1)]
+    (0, 2, 4, 3, 5, 1, 6) [SSXSXXS] S-arcs=[(0, 2), (6, 0)] X-arcs=[(5, 1)]
+    (0, 2, 6, 4, 3, 5, 1) [SSSXSXX] S-arcs=[(0, 2), (2, 6)] X-arcs=[(5, 1)]
+    (0, 3, 5, 1, 2, 6, 4) [SSXXSSX] S-arcs=[(0, 3), (2, 6)] X-arcs=[(5, 1)]
+    (0, 3, 5, 2, 4, 1, 6) [SSXSXXS] S-arcs=[(0, 3), (6, 0)] X-arcs=[(4, 1)]
+    (0, 3, 5, 2, 6, 4, 1) [SSXSSXX] S-arcs=[(0, 3), (2, 6)] X-arcs=[(4, 1)]
+    (0, 3, 5, 4, 1, 2, 6) [SSXXXSS] S-arcs=[(0, 3), (2, 6), (6, 0)] X-arcs=[(5, 4), (4, 1)]
+
+  B-only cycles (14):
+    (0, 5, 1, 6, 2, 4, 3) [SXXSSXS] S-arcs=[(6, 2), (3, 0)] X-arcs=[(5, 1)]
+    (0, 5, 1, 6, 3, 2, 4) [SXXSSSX] S-arcs=[(6, 3), (3, 2)] X-arcs=[(5, 1)]
+    (0, 5, 1, 6, 4, 3, 2) [SXXSXSS] S-arcs=[(3, 2), (2, 0)] X-arcs=[(5, 1)]
+    (0, 5, 2, 4, 1, 6, 3) [SXSXXSS] S-arcs=[(6, 3), (3, 0)] X-arcs=[(4, 1)]
+    (0, 5, 4, 1, 6, 3, 2) [SXXXSSS] S-arcs=[(6, 3), (3, 2), (2, 0)] X-arcs=[(5, 4), (4, 1)]
+    (0, 5, 6, 2, 4, 1, 3) [SXSSXXS] S-arcs=[(6, 2), (3, 0)] X-arcs=[(4, 1)]
+    (0, 5, 6, 3, 2, 4, 1) [SXSSSXX] S-arcs=[(6, 3), (3, 2)] X-arcs=[(4, 1)]
+    (0, 5, 6, 4, 1, 3, 2) [SXSXXSS] S-arcs=[(3, 2), (2, 0)] X-arcs=[(4, 1)]
+    (0, 6, 2, 4, 3, 5, 1) [SSSXSXX] S-arcs=[(0, 6), (6, 2)] X-arcs=[(5, 1)]
+    (0, 6, 3, 5, 1, 2, 4) [SSSXXSX] S-arcs=[(0, 6), (6, 3)] X-arcs=[(5, 1)]
+
+  Conjugation analysis:
+    A-cycle (0, 2, 3, 5, 1, 6, 4) -> conj (0, 5, 1, 6, 4, 3, 2) : SUCCESS (in B)
+    A-cycle (0, 2, 3, 5, 4, 1, 6) -> conj (0, 5, 4, 1, 6, 3, 2) : SUCCESS (in B)
+    A-cycle (0, 2, 3, 5, 6, 4, 1) -> conj (0, 5, 6, 4, 1, 3, 2) : SUCCESS (in B)
+    A-cycle (0, 2, 4, 1, 3, 5, 6) -> conj (2, 0, 4, 1, 3, 5, 6) : FAILS at arcs [(0, 4)]
+    A-cycle (0, 2, 4, 3, 5, 1, 6) -> conj (2, 0, 4, 3, 5, 1, 6) : FAILS at arcs [(0, 4)]
+    A-cycle (0, 2, 6, 4, 3, 5, 1) -> conj (6, 2, 0, 4, 3, 5, 1) : FAILS at arcs [(0, 4)]
+    A-cycle (0, 3, 5, 1, 2, 6, 4) -> conj (0, 5, 1, 6, 2, 4, 3) : SUCCESS (in B)
+    A-cycle (0, 3, 5, 2, 4, 1, 6) -> conj (0, 5, 2, 4, 1, 6, 3) : SUCCESS (in B)
+    A-cycle (0, 3, 5, 2, 6, 4, 1) -> conj (0, 5, 6, 2, 4, 1, 3) : SUCCESS (in B)
+    A-cycle (0, 3, 5, 4, 1, 2, 6) -> conj (3, 0, 5, 4, 1, 6, 2) : FAILS at arcs [(2, 3)]
+    A-cycle (0, 5, 1, 2, 3, 6, 4) -> conj (0, 5, 1, 6, 3, 2, 4) : SUCCESS (in B)
+    A-cycle (0, 5, 1, 2, 4, 3, 6) -> conj (0, 5, 1, 2, 4, 6, 3) : FAILS at arcs [(4, 6)]
+    A-cycle (0, 5, 2, 3, 6, 4, 1) -> conj (0, 5, 6, 3, 2, 4, 1) : SUCCESS (in B)
+    A-cycle (0, 5, 2, 4, 1, 3, 6) -> conj (0, 5, 2, 4, 1, 6, 3) : SUCCESS (in B)
+    A-cycle (0, 5, 4, 1, 2, 3, 6) -> conj (0, 5, 4, 1, 6, 3, 2) : SUCCESS (in B)
+
+  Reverse conjugation (B -> A):
+    B-cycle (0, 5, 1, 6, 2, 4, 3) -> conj (0, 5, 1, 2, 6, 4, 3) : FAILS at arcs [(3, 0)]
+    B-cycle (0, 5, 1, 6, 3, 2, 4) -> conj (0, 5, 1, 2, 3, 6, 4) : SUCCESS (in A)
+    B-cycle (0, 5, 1, 6, 4, 3, 2) -> conj (0, 5, 1, 6, 4, 2, 3) : FAILS at arcs [(4, 2), (3, 0)]
+    B-cycle (0, 5, 2, 4, 1, 6, 3) -> conj (0, 5, 2, 4, 1, 3, 6) : SUCCESS (in A)
+    B-cycle (0, 5, 4, 1, 6, 3, 2) -> conj (0, 5, 4, 1, 2, 3, 6) : SUCCESS (in A)
+    B-cycle (0, 5, 6, 2, 4, 1, 3) -> conj (0, 5, 2, 6, 4, 1, 3) : FAILS at arcs [(3, 0)]
+    B-cycle (0, 5, 6, 3, 2, 4, 1) -> conj (0, 5, 2, 3, 6, 4, 1) : SUCCESS (in A)
+    B-cycle (0, 5, 6, 4, 1, 3, 2) -> conj (0, 5, 6, 4, 1, 2, 3) : FAILS at arcs [(3, 0)]
+    B-cycle (0, 6, 2, 4, 3, 5, 1) -> conj (2, 6, 0, 4, 3, 5, 1) : FAILS at arcs [(0, 4)]
+    B-cycle (0, 6, 3, 5, 1, 2, 4) -> conj (0, 5, 1, 2, 4, 3, 6) : SUCCESS (in A)
+    B-cycle (0, 6, 3, 5, 2, 4, 1) -> conj (0, 5, 2, 4, 1, 3, 6) : SUCCESS (in A)
+    B-cycle (0, 6, 3, 5, 4, 1, 2) -> conj (0, 5, 4, 1, 2, 3, 6) : SUCCESS (in A)
+    B-cycle (0, 6, 4, 1, 3, 5, 2) -> conj (6, 0, 4, 1, 3, 5, 2) : FAILS at arcs [(0, 4)]
+    B-cycle (0, 6, 4, 3, 5, 1, 2) -> conj (6, 0, 4, 3, 5, 1, 2) : FAILS at arcs [(0, 4)]
+
+========================================
+Example 1: dc7=1, c7_A=191, c7_B=192
+S=(1, 3, 4, 5), outside=[0, 2, 6]
+  Unique cycles: A=8, B=9
+  Shared: 0
+
+  A-only cycles (8):
+    (0, 6, 2, 1, 5, 4, 3) [XXXSSSS] S-arcs=[(1, 5), (5, 4), (4, 3)] X-arcs=[(0, 6), (6, 2)]
+    (0, 6, 2, 4, 3, 1, 5) [XXXSSSS] S-arcs=[(4, 3), (3, 1), (1, 5)] X-arcs=[(0, 6), (6, 2)]
+    (0, 6, 3, 1, 5, 2, 4) [XXSSSXS] S-arcs=[(3, 1), (1, 5)] X-arcs=[(0, 6)]
+    (0, 6, 3, 2, 1, 5, 4) [XXSXSSS] S-arcs=[(1, 5), (5, 4)] X-arcs=[(0, 6)]
+    (0, 6, 3, 2, 4, 1, 5) [XXSXSSS] S-arcs=[(4, 1), (1, 5)] X-arcs=[(0, 6)]
+    (0, 6, 3, 5, 2, 4, 1) [XXSSXSS] S-arcs=[(3, 5), (4, 1)] X-arcs=[(0, 6)]
+    (0, 6, 5, 2, 4, 3, 1) [XXSXSSS] S-arcs=[(4, 3), (3, 1)] X-arcs=[(0, 6)]
+    (0, 6, 5, 4, 3, 2, 1) [XXSSSXS] S-arcs=[(5, 4), (4, 3)] X-arcs=[(0, 6)]
+
+  B-only cycles (9):
+    (0, 6, 2, 1, 3, 4, 5) [XXXSSSS] S-arcs=[(1, 3), (3, 4), (4, 5)] X-arcs=[(0, 6), (6, 2)]
+    (0, 6, 2, 1, 4, 5, 3) [XXXSSSS] S-arcs=[(1, 4), (4, 5), (5, 3)] X-arcs=[(0, 6), (6, 2)]
+    (0, 6, 2, 4, 5, 1, 3) [XXXSSSS] S-arcs=[(4, 5), (5, 1), (1, 3)] X-arcs=[(0, 6), (6, 2)]
+    (0, 6, 3, 2, 1, 4, 5) [XXSXSSS] S-arcs=[(1, 4), (4, 5)] X-arcs=[(0, 6)]
+    (0, 6, 3, 2, 4, 5, 1) [XXSXSSS] S-arcs=[(4, 5), (5, 1)] X-arcs=[(0, 6)]
+    (0, 6, 3, 4, 5, 2, 1) [XXSSSXS] S-arcs=[(3, 4), (4, 5)] X-arcs=[(0, 6)]
+    (0, 6, 5, 1, 3, 2, 4) [XXSSSXS] S-arcs=[(5, 1), (1, 3)] X-arcs=[(0, 6)]
+    (0, 6, 5, 2, 1, 3, 4) [XXSXSSS] S-arcs=[(1, 3), (3, 4)] X-arcs=[(0, 6)]
+    (0, 6, 5, 3, 2, 1, 4) [XXSSXSS] S-arcs=[(5, 3), (1, 4)] X-arcs=[(0, 6)]
+
+  Conjugation analysis:
+    A-cycle (0, 6, 2, 1, 5, 4, 3) -> conj (0, 6, 2, 3, 4, 5, 1) : FAILS at arcs [(2, 3)]
+    A-cycle (0, 6, 2, 4, 3, 1, 5) -> conj (0, 6, 2, 5, 1, 3, 4) : FAILS at arcs [(2, 5)]
+    A-cycle (0, 6, 3, 1, 5, 2, 4) -> conj (0, 6, 5, 1, 3, 2, 4) : SUCCESS (in B)
+    A-cycle (0, 6, 3, 2, 1, 5, 4) -> conj (0, 6, 3, 2, 4, 5, 1) : SUCCESS (in B)
+    A-cycle (0, 6, 3, 2, 4, 1, 5) -> conj (0, 6, 3, 2, 5, 1, 4) : FAILS at arcs [(2, 5)]
+    A-cycle (0, 6, 3, 5, 2, 4, 1) -> conj (0, 6, 5, 3, 2, 1, 4) : SUCCESS (in B)
+    A-cycle (0, 6, 5, 2, 4, 3, 1) -> conj (0, 6, 5, 2, 1, 3, 4) : SUCCESS (in B)
+    A-cycle (0, 6, 5, 4, 3, 2, 1) -> conj (0, 6, 3, 4, 5, 2, 1) : SUCCESS (in B)
+
+  Reverse conjugation (B -> A):
+    B-cycle (0, 6, 2, 1, 3, 4, 5) -> conj (0, 6, 2, 5, 4, 3, 1) : FAILS at arcs [(2, 5)]
+    B-cycle (0, 6, 2, 1, 4, 5, 3) -> conj (0, 6, 2, 3, 5, 4, 1) : FAILS at arcs [(2, 3)]
+    B-cycle (0, 6, 2, 4, 5, 1, 3) -> conj (0, 6, 2, 3, 1, 5, 4) : FAILS at arcs [(2, 3)]
+    B-cycle (0, 6, 3, 2, 1, 4, 5) -> conj (0, 6, 3, 2, 5, 4, 1) : FAILS at arcs [(2, 5)]
+    B-cycle (0, 6, 3, 2, 4, 5, 1) -> conj (0, 6, 3, 2, 1, 5, 4) : SUCCESS (in A)
+    B-cycle (0, 6, 3, 4, 5, 2, 1) -> conj (0, 6, 5, 4, 3, 2, 1) : SUCCESS (in A)
+    B-cycle (0, 6, 5, 1, 3, 2, 4) -> conj (0, 6, 3, 1, 5, 2, 4) : SUCCESS (in A)
+    B-cycle (0, 6, 5, 2, 1, 3, 4) -> conj (0, 6, 5, 2, 4, 3, 1) : SUCCESS (in A)
+    B-cycle (0, 6, 5, 3, 2, 1, 4) -> conj (0, 6, 3, 5, 2, 4, 1) : SUCCESS (in A)
+
+========================================
+Example 2: dc7=-1, c7_A=192, c7_B=191
+S=(0, 1, 3, 4), outside=[2, 5, 6]
+  Unique cycles: A=9, B=8
+  Shared: 0
+
+  A-only cycles (9):
+    (0, 1, 2, 6, 4, 5, 3) [SSXXSXS] S-arcs=[(0, 1), (3, 0)] X-arcs=[(2, 6)]
+    (0, 1, 4, 2, 6, 5, 3) [SSSXXXS] S-arcs=[(0, 1), (1, 4), (3, 0)] X-arcs=[(2, 6), (6, 5)]
+    (0, 1, 4, 5, 3, 2, 6) [SSSXSXX] S-arcs=[(0, 1), (1, 4)] X-arcs=[(2, 6)]
+    (0, 2, 6, 5, 1, 4, 3) [SXXXSSS] S-arcs=[(1, 4), (4, 3), (3, 0)] X-arcs=[(2, 6), (6, 5)]
+    (0, 2, 6, 5, 3, 1, 4) [SXXXSSS] S-arcs=[(3, 1), (1, 4), (4, 0)] X-arcs=[(2, 6), (6, 5)]
+    (0, 5, 1, 2, 6, 4, 3) [SXSXXSS] S-arcs=[(4, 3), (3, 0)] X-arcs=[(2, 6)]
+    (0, 5, 1, 4, 3, 2, 6) [SXSSSXX] S-arcs=[(1, 4), (4, 3)] X-arcs=[(2, 6)]
+    (0, 5, 3, 1, 2, 6, 4) [SXSSXXS] S-arcs=[(3, 1), (4, 0)] X-arcs=[(2, 6)]
+    (0, 5, 3, 1, 4, 2, 6) [SXSSSXX] S-arcs=[(3, 1), (1, 4)] X-arcs=[(2, 6)]
+
+  B-only cycles (8):
+    (0, 2, 6, 5, 3, 4, 1) [SXXXSSS] S-arcs=[(3, 4), (4, 1), (1, 0)] X-arcs=[(2, 6), (6, 5)]
+    (0, 3, 2, 6, 4, 5, 1) [SSXXSXS] S-arcs=[(0, 3), (1, 0)] X-arcs=[(2, 6)]
+    (0, 3, 4, 2, 6, 5, 1) [SSSXXXS] S-arcs=[(0, 3), (3, 4), (1, 0)] X-arcs=[(2, 6), (6, 5)]
+    (0, 3, 4, 5, 1, 2, 6) [SSSXSXX] S-arcs=[(0, 3), (3, 4)] X-arcs=[(2, 6)]
+    (0, 4, 5, 1, 3, 2, 6) [SSXSSXX] S-arcs=[(0, 4), (1, 3)] X-arcs=[(2, 6)]
+    (0, 5, 1, 3, 4, 2, 6) [SXSSSXX] S-arcs=[(1, 3), (3, 4)] X-arcs=[(2, 6)]
+    (0, 5, 3, 2, 6, 4, 1) [SXSXXSS] S-arcs=[(4, 1), (1, 0)] X-arcs=[(2, 6)]
+    (0, 5, 3, 4, 1, 2, 6) [SXSSSXX] S-arcs=[(3, 4), (4, 1)] X-arcs=[(2, 6)]
+
+  Conjugation analysis:
+    A-cycle (0, 1, 2, 6, 4, 5, 3) -> conj (1, 0, 2, 6, 4, 5, 3) : FAILS at arcs [(3, 1)]
+    A-cycle (0, 1, 4, 2, 6, 5, 3) -> conj (0, 2, 6, 5, 3, 4, 1) : SUCCESS (in B)
+    A-cycle (0, 1, 4, 5, 3, 2, 6) -> conj (0, 5, 3, 2, 6, 4, 1) : SUCCESS (in B)
+    A-cycle (0, 2, 6, 5, 1, 4, 3) -> conj (0, 2, 6, 5, 3, 4, 1) : SUCCESS (in B)
+    A-cycle (0, 2, 6, 5, 3, 1, 4) -> conj (0, 2, 6, 5, 4, 1, 3) : FAILS at arcs [(5, 4), (3, 0)]
+    A-cycle (0, 5, 1, 2, 6, 4, 3) -> conj (0, 5, 1, 2, 6, 3, 4) : FAILS at arcs [(6, 3), (4, 0)]
+    A-cycle (0, 5, 1, 4, 3, 2, 6) -> conj (0, 5, 3, 4, 1, 2, 6) : SUCCESS (in B)
+    A-cycle (0, 5, 3, 1, 2, 6, 4) -> conj (0, 5, 1, 3, 2, 6, 4) : FAILS at arcs [(4, 0)]
+    A-cycle (0, 5, 3, 1, 4, 2, 6) -> conj (0, 5, 4, 1, 3, 2, 6) : FAILS at arcs [(5, 4)]
+
+  Reverse conjugation (B -> A):
+    B-cycle (0, 2, 6, 5, 3, 4, 1) -> conj (0, 2, 6, 5, 1, 4, 3) : SUCCESS (in A)
+    B-cycle (0, 3, 2, 6, 4, 5, 1) -> conj (3, 0, 2, 6, 4, 5, 1) : FAILS at arcs [(1, 3)]
+    B-cycle (0, 3, 4, 2, 6, 5, 1) -> conj (0, 2, 6, 5, 1, 4, 3) : SUCCESS (in A)
+    B-cycle (0, 3, 4, 5, 1, 2, 6) -> conj (0, 5, 1, 2, 6, 4, 3) : SUCCESS (in A)
+    B-cycle (0, 4, 5, 1, 3, 2, 6) -> conj (0, 5, 3, 1, 2, 6, 4) : SUCCESS (in A)
+    B-cycle (0, 5, 1, 3, 4, 2, 6) -> conj (0, 5, 4, 3, 1, 2, 6) : FAILS at arcs [(5, 4)]
+    B-cycle (0, 5, 3, 2, 6, 4, 1) -> conj (0, 5, 3, 2, 6, 1, 4) : FAILS at arcs [(6, 1)]
+    B-cycle (0, 5, 3, 4, 1, 2, 6) -> conj (0, 5, 1, 4, 3, 2, 6) : SUCCESS (in A)
+
+========================================
+Example 3: dc7=-1, c7_A=192, c7_B=191
+S=(2, 3, 5, 6), outside=[0, 1, 4]
+  Unique cycles: A=9, B=8
+  Shared: 0
+
+  A-only cycles (9):
+    (0, 1, 2, 4, 6, 3, 5) [XXSXSSS] S-arcs=[(6, 3), (3, 5)] X-arcs=[(0, 1)]
+    (0, 1, 2, 6, 3, 4, 5) [XXSSSXS] S-arcs=[(2, 6), (6, 3)] X-arcs=[(0, 1)]
+    (0, 1, 3, 2, 4, 5, 6) [XXSSXSS] S-arcs=[(3, 2), (5, 6)] X-arcs=[(0, 1)]
+    (0, 1, 3, 4, 5, 2, 6) [XXSXSSS] S-arcs=[(5, 2), (2, 6)] X-arcs=[(0, 1)]
+    (0, 1, 3, 5, 2, 4, 6) [XXSSSXS] S-arcs=[(3, 5), (5, 2)] X-arcs=[(0, 1)]
+    (0, 1, 5, 2, 6, 3, 4) [XXSSSSX] S-arcs=[(5, 2), (2, 6), (6, 3)] X-arcs=[(0, 1), (4, 0)]
+    (0, 1, 5, 6, 3, 2, 4) [XXSSSSX] S-arcs=[(5, 6), (6, 3), (3, 2)] X-arcs=[(0, 1), (4, 0)]
+    (0, 1, 6, 3, 2, 4, 5) [XXSSSXS] S-arcs=[(6, 3), (3, 2)] X-arcs=[(0, 1)]
+    (0, 1, 6, 3, 5, 2, 4) [XXSSSSX] S-arcs=[(6, 3), (3, 5), (5, 2)] X-arcs=[(0, 1), (4, 0)]
+
+  B-only cycles (8):
+    (0, 1, 2, 3, 4, 6, 5) [XXSSXSS] S-arcs=[(2, 3), (6, 5)] X-arcs=[(0, 1)]
+    (0, 1, 2, 4, 5, 3, 6) [XXSXSSS] S-arcs=[(5, 3), (3, 6)] X-arcs=[(0, 1)]
+    (0, 1, 2, 5, 3, 4, 6) [XXSSSXS] S-arcs=[(2, 5), (5, 3)] X-arcs=[(0, 1)]
+    (0, 1, 3, 4, 6, 2, 5) [XXSXSSS] S-arcs=[(6, 2), (2, 5)] X-arcs=[(0, 1)]
+    (0, 1, 3, 6, 2, 4, 5) [XXSSSXS] S-arcs=[(3, 6), (6, 2)] X-arcs=[(0, 1)]
+    (0, 1, 5, 3, 6, 2, 4) [XXSSSSX] S-arcs=[(5, 3), (3, 6), (6, 2)] X-arcs=[(0, 1), (4, 0)]
+    (0, 1, 6, 2, 3, 4, 5) [XXSSSXS] S-arcs=[(6, 2), (2, 3)] X-arcs=[(0, 1)]
+    (0, 1, 6, 2, 5, 3, 4) [XXSSSSX] S-arcs=[(6, 2), (2, 5), (5, 3)] X-arcs=[(0, 1), (4, 0)]
+
+  Conjugation analysis:
+    A-cycle (0, 1, 2, 4, 6, 3, 5) -> conj (0, 1, 2, 4, 5, 3, 6) : SUCCESS (in B)
+    A-cycle (0, 1, 2, 6, 3, 4, 5) -> conj (0, 1, 3, 6, 2, 4, 5) : SUCCESS (in B)
+    A-cycle (0, 1, 3, 2, 4, 5, 6) -> conj (0, 1, 2, 3, 4, 6, 5) : SUCCESS (in B)
+    A-cycle (0, 1, 3, 4, 5, 2, 6) -> conj (0, 1, 3, 4, 6, 2, 5) : SUCCESS (in B)
+    A-cycle (0, 1, 3, 5, 2, 4, 6) -> conj (0, 1, 2, 5, 3, 4, 6) : SUCCESS (in B)
+    A-cycle (0, 1, 5, 2, 6, 3, 4) -> conj (0, 1, 3, 6, 2, 5, 4) : FAILS at arcs [(5, 4)]
+    A-cycle (0, 1, 5, 6, 3, 2, 4) -> conj (0, 1, 2, 3, 6, 5, 4) : FAILS at arcs [(5, 4)]
+    A-cycle (0, 1, 6, 3, 2, 4, 5) -> conj (0, 1, 2, 3, 6, 4, 5) : FAILS at arcs [(6, 4)]
+    A-cycle (0, 1, 6, 3, 5, 2, 4) -> conj (0, 1, 2, 5, 3, 6, 4) : FAILS at arcs [(6, 4)]
+
+  Reverse conjugation (B -> A):
+    B-cycle (0, 1, 2, 3, 4, 6, 5) -> conj (0, 1, 3, 2, 4, 5, 6) : SUCCESS (in A)
+    B-cycle (0, 1, 2, 4, 5, 3, 6) -> conj (0, 1, 2, 4, 6, 3, 5) : SUCCESS (in A)
+    B-cycle (0, 1, 2, 5, 3, 4, 6) -> conj (0, 1, 3, 5, 2, 4, 6) : SUCCESS (in A)
+    B-cycle (0, 1, 3, 4, 6, 2, 5) -> conj (0, 1, 3, 4, 5, 2, 6) : SUCCESS (in A)
+    B-cycle (0, 1, 3, 6, 2, 4, 5) -> conj (0, 1, 2, 6, 3, 4, 5) : SUCCESS (in A)
+    B-cycle (0, 1, 5, 3, 6, 2, 4) -> conj (0, 1, 2, 6, 3, 5, 4) : FAILS at arcs [(5, 4)]
+    B-cycle (0, 1, 6, 2, 3, 4, 5) -> conj (0, 1, 3, 2, 6, 4, 5) : FAILS at arcs [(6, 4)]
+    B-cycle (0, 1, 6, 2, 5, 3, 4) -> conj (0, 1, 3, 5, 2, 6, 4) : FAILS at arcs [(6, 4)]
+
+========================================
+Example 4: dc7=-1, c7_A=228, c7_B=227
+S=(2, 3, 4, 5), outside=[0, 1, 6]
+  Unique cycles: A=15, B=14
+  Shared: 0
+
+  A-only cycles (15):
+    (0, 3, 1, 2, 5, 4, 6) [XSXSSSX] S-arcs=[(2, 5), (5, 4)] X-arcs=[(6, 0)]
+    (0, 3, 2, 5, 1, 4, 6) [XSSSXSX] S-arcs=[(3, 2), (2, 5)] X-arcs=[(6, 0)]
+    (0, 3, 2, 5, 4, 6, 1) [XSSSSXX] S-arcs=[(3, 2), (2, 5), (5, 4)] X-arcs=[(6, 1), (1, 0)]
+    (0, 3, 2, 5, 6, 1, 4) [XSSSXXS] S-arcs=[(3, 2), (2, 5)] X-arcs=[(6, 1)]
+    (0, 3, 6, 1, 2, 5, 4) [XSXXSSS] S-arcs=[(2, 5), (5, 4)] X-arcs=[(6, 1)]
+    (0, 5, 1, 2, 4, 3, 6) [XSXSSSX] S-arcs=[(2, 4), (4, 3)] X-arcs=[(6, 0)]
+    (0, 5, 1, 4, 3, 2, 6) [XSXSSSX] S-arcs=[(4, 3), (3, 2)] X-arcs=[(6, 0)]
+    (0, 5, 3, 1, 2, 4, 6) [XSSXSSX] S-arcs=[(5, 3), (2, 4)] X-arcs=[(6, 0)]
+    (0, 5, 3, 2, 4, 6, 1) [XSSSSXX] S-arcs=[(5, 3), (3, 2), (2, 4)] X-arcs=[(6, 1), (1, 0)]
+    (0, 5, 3, 2, 6, 1, 4) [XSSSXXS] S-arcs=[(5, 3), (3, 2)] X-arcs=[(6, 1)]
+
+  B-only cycles (14):
+    (0, 3, 1, 4, 5, 2, 6) [XSXSSSX] S-arcs=[(4, 5), (5, 2)] X-arcs=[(6, 0)]
+    (0, 3, 4, 5, 1, 2, 6) [XSSSXSX] S-arcs=[(3, 4), (4, 5)] X-arcs=[(6, 0)]
+    (0, 3, 4, 5, 2, 6, 1) [XSSSSXX] S-arcs=[(3, 4), (4, 5), (5, 2)] X-arcs=[(6, 1), (1, 0)]
+    (0, 3, 4, 5, 6, 1, 2) [XSSSXXS] S-arcs=[(3, 4), (4, 5)] X-arcs=[(6, 1)]
+    (0, 3, 5, 1, 4, 2, 6) [XSSXSSX] S-arcs=[(3, 5), (4, 2)] X-arcs=[(6, 0)]
+    (0, 3, 5, 2, 6, 1, 4) [XSSSXXS] S-arcs=[(3, 5), (5, 2)] X-arcs=[(6, 1)]
+    (0, 3, 5, 6, 1, 4, 2) [XSSXXSS] S-arcs=[(3, 5), (4, 2)] X-arcs=[(6, 1)]
+    (0, 3, 6, 1, 4, 5, 2) [XSXXSSS] S-arcs=[(4, 5), (5, 2)] X-arcs=[(6, 1)]
+    (0, 5, 1, 2, 3, 4, 6) [XSXSSSX] S-arcs=[(2, 3), (3, 4)] X-arcs=[(6, 0)]
+    (0, 5, 1, 4, 2, 3, 6) [XSXSSSX] S-arcs=[(4, 2), (2, 3)] X-arcs=[(6, 0)]
+
+  Conjugation analysis:
+    A-cycle (0, 3, 1, 2, 5, 4, 6) -> conj (0, 3, 1, 4, 5, 2, 6) : SUCCESS (in B)
+    A-cycle (0, 3, 2, 5, 1, 4, 6) -> conj (0, 5, 2, 3, 1, 4, 6) : SUCCESS (in B)
+    A-cycle (0, 3, 2, 5, 4, 6, 1) -> conj (0, 4, 5, 2, 3, 6, 1) : FAILS at arcs [(0, 4)]
+    A-cycle (0, 3, 2, 5, 6, 1, 4) -> conj (0, 5, 2, 3, 6, 1, 4) : SUCCESS (in B)
+    A-cycle (0, 3, 6, 1, 2, 5, 4) -> conj (0, 3, 6, 1, 4, 5, 2) : SUCCESS (in B)
+    A-cycle (0, 5, 1, 2, 4, 3, 6) -> conj (0, 5, 1, 3, 4, 2, 6) : FAILS at arcs [(1, 3)]
+    A-cycle (0, 5, 1, 4, 3, 2, 6) -> conj (0, 5, 1, 2, 3, 4, 6) : SUCCESS (in B)
+    A-cycle (0, 5, 3, 1, 2, 4, 6) -> conj (0, 3, 5, 1, 4, 2, 6) : SUCCESS (in B)
+    A-cycle (0, 5, 3, 2, 4, 6, 1) -> conj (0, 4, 2, 3, 5, 6, 1) : FAILS at arcs [(0, 4)]
+    A-cycle (0, 5, 3, 2, 6, 1, 4) -> conj (0, 2, 3, 5, 6, 1, 4) : FAILS at arcs [(0, 2)]
+    A-cycle (0, 5, 3, 6, 1, 2, 4) -> conj (0, 3, 5, 6, 1, 4, 2) : SUCCESS (in B)
+    A-cycle (0, 5, 4, 3, 1, 2, 6) -> conj (0, 3, 4, 5, 1, 2, 6) : SUCCESS (in B)
+    A-cycle (0, 5, 4, 3, 2, 6, 1) -> conj (0, 2, 3, 4, 5, 6, 1) : FAILS at arcs [(0, 2)]
+    A-cycle (0, 5, 4, 3, 6, 1, 2) -> conj (0, 3, 4, 5, 6, 1, 2) : SUCCESS (in B)
+    A-cycle (0, 5, 6, 1, 4, 3, 2) -> conj (0, 5, 6, 1, 2, 3, 4) : SUCCESS (in B)
+
+  Reverse conjugation (B -> A):
+    B-cycle (0, 3, 1, 4, 5, 2, 6) -> conj (0, 3, 1, 2, 5, 4, 6) : SUCCESS (in A)
+    B-cycle (0, 3, 4, 5, 1, 2, 6) -> conj (0, 5, 4, 3, 1, 2, 6) : SUCCESS (in A)
+    B-cycle (0, 3, 4, 5, 2, 6, 1) -> conj (0, 2, 5, 4, 3, 6, 1) : FAILS at arcs [(0, 2)]
+    B-cycle (0, 3, 4, 5, 6, 1, 2) -> conj (0, 5, 4, 3, 6, 1, 2) : SUCCESS (in A)
+    B-cycle (0, 3, 5, 1, 4, 2, 6) -> conj (0, 5, 3, 1, 2, 4, 6) : SUCCESS (in A)
+    B-cycle (0, 3, 5, 2, 6, 1, 4) -> conj (0, 2, 5, 3, 6, 1, 4) : FAILS at arcs [(0, 2)]
+    B-cycle (0, 3, 5, 6, 1, 4, 2) -> conj (0, 5, 3, 6, 1, 2, 4) : SUCCESS (in A)
+    B-cycle (0, 3, 6, 1, 4, 5, 2) -> conj (0, 3, 6, 1, 2, 5, 4) : SUCCESS (in A)
+    B-cycle (0, 5, 1, 2, 3, 4, 6) -> conj (0, 5, 1, 4, 3, 2, 6) : SUCCESS (in A)
+    B-cycle (0, 5, 1, 4, 2, 3, 6) -> conj (0, 5, 1, 3, 2, 4, 6) : FAILS at arcs [(1, 3)]
+    B-cycle (0, 5, 2, 3, 1, 4, 6) -> conj (0, 3, 2, 5, 1, 4, 6) : SUCCESS (in A)
+    B-cycle (0, 5, 2, 3, 4, 6, 1) -> conj (0, 4, 3, 2, 5, 6, 1) : FAILS at arcs [(0, 4)]
+    B-cycle (0, 5, 2, 3, 6, 1, 4) -> conj (0, 3, 2, 5, 6, 1, 4) : SUCCESS (in A)
+    B-cycle (0, 5, 6, 1, 2, 3, 4) -> conj (0, 5, 6, 1, 4, 3, 2) : SUCCESS (in A)
+
+============================================================
+SUMMARY
+============================================================
+dc7 distribution among nonzero: {-1: 11, 1: 9}
+
+c7_A vs c7_B for dc7 != 0:
+  dc7=-1: c7_A=228, c7_B=227
+  dc7=+1: c7_A=191, c7_B=192
+  dc7=-1: c7_A=192, c7_B=191
+  dc7=-1: c7_A=192, c7_B=191
+  dc7=-1: c7_A=228, c7_B=227
+  dc7=+1: c7_A=191, c7_B=192
+  dc7=-1: c7_A=192, c7_B=191
+  dc7=-1: c7_A=192, c7_B=191
+  dc7=+1: c7_A=191, c7_B=192
+  dc7=-1: c7_A=228, c7_B=227
+
+XX type among dc7 != 0: {'T3': 8, 'C3': 12}
+
+Done.
