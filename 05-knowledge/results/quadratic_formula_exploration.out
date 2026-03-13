@@ -1,0 +1,186 @@
+======================================================================
+ANALYSIS 1: DERIVING THE QUADRATIC FORMULA COEFFICIENTS
+======================================================================
+
+Checking pair-coverage of 3-cycles:
+
+  H=189 (Paley/BIBD):
+    Pair coverage distribution: {2: 21}
+    lambda values: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+  H=171:
+    Pair coverage distribution: {1: 3, 2: 15, 3: 3}
+
+  H=175:
+    Pair coverage distribution: {1: 7, 2: 7, 3: 7}
+
+======================================================================
+ANALYSIS 2: PAIR-COVERAGE -> DISJOINTNESS -> H
+======================================================================
+
+Pair-coverage variance analysis:
+
+  H=175: sum_lam=42, sum_lam2=98, var_lam=0.6667, disj=14
+    lambda dist: {1: 7, 2: 7, 3: 7}
+    overlap-2 from lambda = sum C(lam,2) = 28
+    ov0=14, ov1=49, ov2=28
+    Check: ov0+ov1+ov2 = 91
+
+FORMULA: disj = sum_edges C(lambda_e, 2) - 14
+         = sum_edges lambda_e*(lambda_e-1)/2 - 14
+         = (sum lambda_e^2 - sum lambda_e)/2 - 14
+         = (sum_lam2 - 42)/2 - 14
+         = sum_lam2/2 - 35
+  H=175: sum_lam2=98, disj_pred=14, disj_actual=14, match=YES
+
+======================================================================
+ANALYSIS 3: H AS A FUNCTION OF LAMBDA VARIANCE
+======================================================================
+Computing directly:
+  H=189 (BIBD): var_lam=0, H = 189
+  H=171: sum_lam2=90, var_lam=0.285714 = 6/21
+    H predicted = 171.00
+  H=175: sum_lam2=98, var_lam=0.666667 = 14/21
+    H predicted = 175.00
+
+  Parabola vertex: var_lam = 3/7 = 0.428571
+  H at vertex = 168.75
+
+  H(disj) = disj^2 - 23*disj + 301
+  Minimum at disj = 23/2 = 11.5
+  H_min = 168.75
+  Paley (disj=7) is FARTHEST from minimum -> HIGHEST H
+  H=171 (disj=10) and H=175 (disj=14) bracket the minimum
+
+======================================================================
+ANALYSIS 4: NON-REGULAR SCORE CLASSES AT n=7
+======================================================================
+Non-regular score classes (sampled):
+
+  Score (0, 2, 3, 3, 4, 4, 5): c3=[6], disj in [0, 1, 2], H in [23, 25, 29, 31, 33, 37]
+    disj does NOT determine H: [(0, [23, 25]), (2, [29, 33, 37]), (1, [29, 31])]
+
+  Score (0, 3, 3, 3, 4, 4, 4): c3=[8], disj in [1, 2, 4], H in [41, 43, 45]
+    disj does NOT determine H: [(1, [43, 45])]
+
+  Score (1, 1, 2, 3, 4, 5, 5): c3=[5], disj in [0, 1, 2, 3], H in [25, 27, 29, 31, 33]
+    disj does NOT determine H: [(0, [25, 27, 33])]
+
+  Score (1, 1, 2, 4, 4, 4, 5): c3=[6], disj in [0, 2, 3], H in [33, 35, 41, 45, 51]
+    disj does NOT determine H: [(2, [35, 41, 45, 51])]
+
+  Score (1, 1, 3, 3, 3, 5, 5): c3=[6], disj in [0, 2, 3], H in [31, 41, 51]
+    disj DETERMINES H: [(0, 31), (2, 51), (3, 41)]...
+    Quadratic fit: H = -6.667*disj^2 + 23.333*disj + 31.000
+    All points fit: True
+
+  Score (1, 1, 3, 3, 4, 4, 5): c3=[7], disj in [0, 1, 2, 3, 4], H in [37, 39, 43, 45, 49, 51, 53, 55, 59, 69]
+    disj does NOT determine H: [(2, [45, 49, 51]), (3, [49, 53, 55]), (0, [37, 39])]
+
+  Score (1, 2, 2, 2, 4, 5, 5): c3=[6], disj in [0, 2, 3], H in [33, 35, 41, 45, 51]
+    disj does NOT determine H: [(2, [35, 41, 45, 51])]
+
+  Score (1, 2, 2, 3, 3, 4, 6): c3=[6], disj in [0, 1, 2], H in [23, 25, 29, 31, 33, 37]
+    disj does NOT determine H: [(1, [29, 31]), (2, [29, 33, 37]), (0, [23, 25])]
+
+  Score (1, 2, 2, 3, 3, 5, 5): c3=[7], disj in [0, 1, 2, 3, 4], H in [37, 39, 43, 45, 49, 51, 53, 55, 59, 69]
+    disj does NOT determine H: [(3, [49, 53, 55]), (0, [37, 39]), (4, [51, 59, 69])]
+
+  Score (1, 2, 2, 3, 4, 4, 5): c3=[8], disj in [0, 2, 3, 4, 5, 6], H in [45, 47, 49, 53, 55, 59, 61, 65, 67, 69, 71, 73, 77, 85, 93]
+    disj does NOT determine H: [(0, [45, 47, 49]), (3, [61, 65]), (2, [53, 55, 59])]
+
+  Score (1, 2, 2, 4, 4, 4, 4): c3=[9], disj in [2, 5, 6], H in [65, 69, 75, 81, 83, 89, 91]
+    disj does NOT determine H: [(6, [83, 91]), (2, [65, 69, 75]), (5, [81, 89])]
+
+  Score (1, 2, 3, 3, 3, 4, 5): c3=[9], disj in [0, 2, 3, 4, 5, 6, 7, 8], H in [51, 65, 67, 69, 71, 73, 75, 77, 79, 81, 87, 91, 99, 111, 117, 123]
+    disj does NOT determine H: [(8, [111, 117, 123]), (4, [71, 73, 75, 77, 79]), (3, [67, 73, 75])]
+
+  Score (1, 2, 3, 3, 4, 4, 4): c3=[10], disj in [0, 2, 4, 5, 6, 7, 8], H in [69, 79, 81, 83, 89, 91, 93, 95, 97, 101, 103, 109, 113, 115, 117]
+    disj does NOT determine H: [(5, [89, 91, 93, 95, 101]), (4, [81, 83, 89, 91]), (7, [103, 109, 113, 117])]
+
+  Score (1, 3, 3, 3, 3, 3, 5): c3=[10], disj in [4, 5, 6, 10], H in [83, 93, 95, 99, 135]
+    disj does NOT determine H: [(6, [95, 99])]
+
+  Score (1, 3, 3, 3, 3, 4, 4): c3=[11], disj in [4, 5, 6, 7, 8, 9], H in [101, 105, 109, 111, 113, 115, 121, 123, 129]
+    disj does NOT determine H: [(6, [101, 109, 111]), (8, [109, 111, 113, 121]), (5, [105, 111])]
+
+  Score (2, 2, 2, 2, 4, 4, 5): c3=[9], disj in [2, 5, 6], H in [65, 69, 75, 81, 83, 89, 91]
+    disj does NOT determine H: [(2, [65, 69, 75]), (6, [83, 91]), (5, [81, 89])]
+
+  Score (2, 2, 2, 3, 3, 3, 6): c3=[8], disj in [1, 2, 4], H in [41, 43, 45]
+    disj does NOT determine H: [(1, [43, 45])]
+
+  Score (2, 2, 2, 3, 3, 4, 5): c3=[10], disj in [0, 2, 4, 5, 6, 7, 8], H in [69, 79, 81, 83, 89, 91, 93, 95, 97, 101, 103, 109, 113, 115, 117]
+    disj does NOT determine H: [(4, [81, 83, 89, 91]), (8, [95, 103, 109, 115]), (6, [89, 93, 97, 101, 103])]
+
+  Score (2, 2, 2, 3, 4, 4, 4): c3=[11], disj in [1, 6, 7, 9, 10], H in [99, 105, 109, 115, 117, 123, 127, 129, 135]
+    disj does NOT determine H: [(6, [105, 109, 115, 117]), (7, [115, 123, 135]), (10, [123, 129])]
+
+  Score (2, 2, 3, 3, 3, 3, 5): c3=[11], disj in [4, 5, 6, 7, 8, 9], H in [101, 105, 109, 111, 113, 115, 121, 123, 129]
+    disj does NOT determine H: [(7, [115, 123]), (8, [109, 111, 113, 121]), (6, [101, 109, 111])]
+
+  Score (2, 2, 3, 3, 3, 4, 4): c3=[12], disj in [5, 6, 7, 8, 9, 10, 11, 12], H in [121, 123, 125, 129, 131, 133, 135, 137, 139, 141, 143, 145]
+    disj does NOT determine H: [(7, [129, 137, 141, 143]), (8, [123, 131, 133, 135, 137, 139, 141, 143]), (6, [121, 125])]
+
+  Score (2, 3, 3, 3, 3, 3, 4): c3=[13], disj in [7, 8, 9, 10, 12], H in [147, 151, 153, 155, 157, 159]
+    disj does NOT determine H: [(10, [151, 153, 155, 159]), (8, [147, 151, 153]), (12, [151, 157, 159])]
+
+======================================================================
+ANALYSIS 5: THE VITALI CONNECTION
+======================================================================
+
+VITALI SET ANALOGY FOR TOURNAMENT CYCLE STRUCTURE:
+
+Level 0 (Rational): Score sequence
+  - Determined by out-degrees (local information)
+  - Determines c3 (Rao's formula)
+  - "Measurable" in the sense of Lebesgue
+
+Level 1 (Algebraic): Pair-coverage histogram {lambda_{uv}}
+  - Determines disjoint pair count via sum C(lambda,2) - C(nc3,2)*7/(7-1)
+  - At n=7 regular: DETERMINES H (quadratic formula)
+  - At n=6: does NOT determine H (need c5 information)
+
+Level 2 (Real): Full tournament adjacency
+  - Contains all information including c5, c7, etc.
+  - The "non-measurable" part: c5 at n=6, invisible at n=7 regular
+
+The PHASE TRANSITION at n=7 regular:
+  The constraint c5+2*disj=56 makes the "non-measurable" 5-cycle
+  information REDUNDANT — it's determined by the "algebraic" pair-coverage.
+  This is why n=7 regular has only 3 H-classes: the Vitali partition
+  collapses to the pair-coverage partition.
+
+At n=6, the Vitali partition is FINER than the pair-coverage partition.
+The non-measurable "choice" of which 5-cycles exist cannot be deduced
+from the 3-cycle structure alone.
+
+======================================================================
+ANALYSIS 6: VERTEX-UNIFORMITY AND BIBD AT n=7
+======================================================================
+Vertex-transitivity check:
+  Circulant: S=[4, 5, 6], H=175
+  Circulant: S=[3, 5, 6], H=189
+  Circulant: S=[2, 4, 6], H=175
+  Circulant: S=[2, 3, 6], H=175
+  Circulant: S=[1, 4, 5], H=175
+  Circulant: S=[1, 3, 5], H=175
+  Circulant: S=[1, 2, 4], H=189
+  Circulant: S=[1, 2, 3], H=175
+
+Paley = unique regular circulant at n=7 (up to complement)
+
+======================================================================
+ANALYSIS 7: WHAT DETERMINES c5 AT n=6? (THE NON-MEASURABLE PART)
+======================================================================
+Score (2, 2, 2, 3, 3, 3): 2640 tournaments
+Distinct (lambda_hist, disj) classes: 4
+  lambda=(0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2), disj=4: count=240, H=[45], c5=[6]
+  lambda=(0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3), disj=2: count=720, H=[41], c5=[8]
+  lambda=(1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3), disj=1: count=1440, H=[43], c5=[11]
+  lambda=(1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2), disj=1: count=240, H=[45], c5=[12]
+
+
+======================================================================
+DONE.
+======================================================================
