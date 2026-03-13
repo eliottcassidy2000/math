@@ -1,0 +1,143 @@
+======================================================================
+FIBONACCI IDENTITY AND H-MAXIMIZATION
+======================================================================
+
+============================================================
+p = 7, m = 3, F_p = 13
+============================================================
+
+--- PART 1: prod(1+Q_k) DISTRIBUTION ---
+  prod(1+Q)=        27, count=  2, H=[189] <-- PALEY
+  prod(1+Q)=        13, count=  6, H=[175] <-- INTERVAL, = F_7
+
+--- PART 2: CORRELATION prod(1+Q) vs H ---
+  Rank correlation (Pearson): 1.000000
+  prod(1+Q) at max H: 27
+  prod(1+Q) at min H: 13
+
+--- PART 3: PALEY vs INTERVAL ---
+  Paley: Q_k = [2.0000, 2.0000, 2.0000]
+         H = 189
+         prod(1+Q) = 27
+         prod Q = 8
+  Interval: Q_k = [5.0489, 0.3080, 0.6431]
+            H = 175
+            prod(1+Q) = 13
+            prod Q = 1
+
+--- PART 4: INTERVAL POLYNOMIAL AT PALEY Q ---
+  P_m((p+1)/4) = P_3(2.0) = -7.000000
+  This should be zero only if Paley = Interval (impossible)
+
+--- PART 5: Q-PROFILE BY H VALUE ---
+  H=     189: count=  2, #Q-profiles=1, sumQ=6.0, prodQ=8, prod(1+Q)=27
+  H=     175: count=  6, #Q-profiles=1, sumQ=6.0, prodQ=1, prod(1+Q)=13
+
+============================================================
+p = 11, m = 5, F_p = 89
+============================================================
+
+--- PART 1: prod(1+Q_k) DISTRIBUTION ---
+  prod(1+Q)=      1024, count=  2, H=[95095] <-- PALEY
+  prod(1+Q)=       419, count= 10, H=[92411]
+  prod(1+Q)=       331, count= 10, H=[93467]
+  prod(1+Q)=        89, count= 10, H=[93027] <-- INTERVAL, = F_11
+
+--- PART 2: CORRELATION prod(1+Q) vs H ---
+  Rank correlation (Pearson): 0.488133
+  prod(1+Q) at max H: 1024
+  prod(1+Q) at min H: 419
+
+--- PART 3: PALEY vs INTERVAL ---
+  Paley: Q_k = [3.0000, 3.0000, 3.0000, 3.0000, 3.0000]
+         H = 95095
+         prod(1+Q) = 1024
+         prod Q = 243
+  Interval: Q_k = [12.3435, 0.2716, 1.4487, 0.3533, 0.5830]
+            H = 93027
+            prod(1+Q) = 89
+            prod Q = 1
+
+--- PART 4: INTERVAL POLYNOMIAL AT PALEY Q ---
+  P_m((p+1)/4) = P_5(3.0) = -253.000000
+  This should be zero only if Paley = Interval (impossible)
+
+--- PART 5: Q-PROFILE BY H VALUE ---
+  H=   95095: count=  2, #Q-profiles=1, sumQ=15.0, prodQ=243, prod(1+Q)=1024
+  H=   93467: count= 10, #Q-profiles=1, sumQ=15.0, prodQ=23, prod(1+Q)=331
+  H=   93027: count= 10, #Q-profiles=1, sumQ=15.0, prodQ=1, prod(1+Q)=89
+  H=   92411: count= 10, #Q-profiles=1, sumQ=15.0, prodQ=23, prod(1+Q)=419
+
+============================================================
+p = 13, m = 6, F_p = 233
+============================================================
+
+--- PART 1: prod(1+Q_k) DISTRIBUTION ---
+  prod(1+Q)=      4913, count=  4, H=[3703011]
+  prod(1+Q)=      2287, count= 12, H=[3683797]
+  prod(1+Q)=      1975, count= 12, H=[3704857]
+  prod(1+Q)=      1663, count= 12, H=[3669497] <-- PALEY
+  prod(1+Q)=      1013, count= 12, H=[3707483]
+  prod(1+Q)=       233, count= 12, H=[3711175] <-- INTERVAL, = F_13
+
+--- PART 2: CORRELATION prod(1+Q) vs H ---
+  Rank correlation (Pearson): -0.287191
+  prod(1+Q) at max H: 233
+  prod(1+Q) at min H: 1663
+
+--- PART 3: PALEY vs INTERVAL ---
+  Paley: Q_k = [0.6949, 1.0993, 4.7974, 10.4160, 3.3801, 0.6122]
+         H = 3669497
+         prod(1+Q) = 1663
+         prod Q = 79
+  Interval: Q_k = [17.2069, 0.2652, 1.9882, 0.3189, 0.7747, 0.4462]
+            H = 3711175
+            prod(1+Q) = 233
+            prod Q = 1
+
+--- PART 4: INTERVAL POLYNOMIAL AT PALEY Q ---
+  P_m((p+1)/4) = P_6(3.5) = -1774.703125
+  This should be zero only if Paley = Interval (impossible)
+
+--- PART 5: Q-PROFILE BY H VALUE ---
+  H= 3711175: count= 12, #Q-profiles=1, sumQ=21.0, prodQ=1, prod(1+Q)=233
+  H= 3707483: count= 12, #Q-profiles=1, sumQ=21.0, prodQ=27, prod(1+Q)=1013
+  H= 3704857: count= 12, #Q-profiles=1, sumQ=21.0, prodQ=53, prod(1+Q)=1975
+  H= 3703011: count=  4, #Q-profiles=1, sumQ=21.0, prodQ=729, prod(1+Q)=4913
+  H= 3683797: count= 12, #Q-profiles=1, sumQ=21.0, prodQ=131, prod(1+Q)=2287
+  H= 3669497: count= 12, #Q-profiles=1, sumQ=21.0, prodQ=79, prod(1+Q)=1663
+
+============================================================
+PART 6: PRODUCT INEQUALITY ANALYSIS
+============================================================
+Testing: Does max prod(1+Q_k) <=> max H?
+
+  p=7: max_H_sigma = max_prod(1+Q)_sigma? YES
+    max H = 189, at prod(1+Q) = 27
+    max prod(1+Q) = 27
+
+  p=11: max_H_sigma = max_prod(1+Q)_sigma? YES
+    max H = 95095, at prod(1+Q) = 1024
+    max prod(1+Q) = 1024
+
+  p=13: max_H_sigma = max_prod(1+Q)_sigma? NO
+    max H = 3711175, at prod(1+Q) = ?
+    max prod(1+Q) = 4913
+
+============================================================
+PART 7: FIBONACCI TABLE (INTERVAL)
+============================================================
+   p   m          F_p    prod(1+Q)  match
+----------------------------------------
+   5   2            5            5      1
+   7   3           13           13      1
+  11   5           89           89      1
+  13   6          233          233      1
+  17   8         1597         1597      1
+  19   9         4181         4181      1
+  23  11        28657        28657      1
+  29  14       514229       514229      1
+  31  15      1346269      1346269      1
+  37  18     24157817     24157817      1
+  41  20    165580141    165580141      1
+  43  21    433494437    433494437      1
