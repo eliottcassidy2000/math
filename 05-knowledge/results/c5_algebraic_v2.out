@@ -1,0 +1,91 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\c5_algebraic_v2.py:8: SyntaxWarning: invalid escape sequence '\{'
+  For each w in V\{u,v}, exactly ONE of four categories:
+============================================================
+CORRECT IDENTITIES: (A^2)[u][v] decomposition
+============================================================
+
+bits=0, scores=[0, 1, 2, 3, 4]
+
+bits=1, scores=[0, 1, 2, 3, 4]
+
+bits=42, scores=[1, 2, 2, 2, 3]
+
+bits=100, scores=[1, 1, 2, 3, 3]
+
+bits=1023, scores=[0, 1, 2, 3, 4]
+All identities verified.
+
+============================================================
+IS sigma(u,v) DETERMINED BY lambda(u,v)?
+============================================================
+lambda -> sigma values:
+  lambda=0: sigma in [np.int64(0), np.int64(1), np.int64(2), np.int64(3)]
+  lambda=1: sigma in [np.int64(0), np.int64(1), np.int64(2)]
+  lambda=2: sigma in [np.int64(0), np.int64(1)]
+  lambda=3: sigma in [np.int64(0)]
+
+============================================================
+FINDING c5 AS SYMMETRIC POLYNOMIAL IN LAMBDA ENTRIES
+============================================================
+
+--- Lagrange interpolation approach ---
+The 9 groups define c5 as a function of (n1, n2, n3):
+  f(0, 0, 0) = 0
+  f(3, 0, 0) = 0
+  f(4, 1, 0) = 0
+  f(5, 2, 0) = 1
+  f(6, 0, 1) = 1
+  f(6, 3, 0) = 2
+  f(9, 0, 1) = 3
+  f(4, 4, 0) = 1
+  f(5, 5, 0) = 2
+
+============================================================
+CUBIC FIT ON FULL DATASET
+============================================================
+Features: 19, rank: 9
+Max error: 0.000000
+
+Minimal set (8 features):
+  ['S2', 'S3', 'D3', 'disj', 'S1*S2', 'S1*S3', 'S1*disj', 'S1*tri']
+  Error: 0.000000
+
+============================================================
+THE WITNESS STRUCTURE
+============================================================
+Witness matrix W[k][(u,v)] at n=5:
+
+bits=40, c5=3, scores=[1, 2, 2, 2, 3]
+  lambda: [1, 1, 1, 3, 1, 1, 1, 1, 1, 1]
+  W (5x10 witness matrix):
+    k=0: [0, 0, 0, 0, 0, 0, 1, 0, 1, 1]  sum=3
+    k=1: [0, 0, 0, 1, 0, 0, 0, 1, 0, 0]  sum=2
+    k=2: [0, 0, 0, 1, 0, 1, 0, 0, 0, 0]  sum=2
+    k=3: [0, 0, 0, 1, 1, 0, 0, 0, 0, 0]  sum=2
+    k=4: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0]  sum=3
+  Col sums = lambda: [1, 1, 1, 3, 1, 1, 1, 1, 1, 1]
+  Row sums = delta(k): verified
+
+bits=120, c5=0, scores=[1, 1, 2, 2, 4]
+  lambda: [0, 1, 1, 2, 0, 0, 0, 0, 1, 1]
+  W (5x10 witness matrix):
+    k=0: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]  sum=2
+    k=1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  sum=0
+    k=2: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]  sum=1
+    k=3: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]  sum=1
+    k=4: [0, 1, 1, 0, 0, 0, 0, 0, 0, 0]  sum=2
+  Col sums = lambda: [0, 1, 1, 2, 0, 0, 0, 0, 1, 1]
+  Row sums = delta(k): verified
+
+bits=341, c5=2, scores=[2, 2, 2, 2, 2]
+  lambda: [2, 2, 1, 1, 1, 1, 2, 2, 1, 2]
+  W (5x10 witness matrix):
+    k=0: [0, 0, 0, 0, 1, 0, 1, 1, 0, 0]  sum=3
+    k=1: [0, 1, 0, 1, 0, 0, 0, 0, 0, 1]  sum=3
+    k=2: [1, 0, 1, 0, 0, 0, 0, 0, 0, 1]  sum=3
+    k=3: [0, 1, 0, 0, 0, 0, 1, 0, 1, 0]  sum=3
+    k=4: [1, 0, 0, 0, 0, 1, 0, 1, 0, 0]  sum=3
+  Col sums = lambda: [2, 2, 1, 1, 1, 1, 2, 2, 1, 2]
+  Row sums = delta(k): verified
+
+Done.

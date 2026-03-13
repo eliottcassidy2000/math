@@ -1,0 +1,8 @@
+============================================================
+VERIFYING: A^2 = f(A, lambda)
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\c5_algebraic_decomposition.py", line 139, in <module>
+    assert A2[u][v] == expected, f"FAIL at bits={bits}, ({u},{v})"
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: FAIL at bits=0, (1,0)
