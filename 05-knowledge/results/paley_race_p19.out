@@ -1,0 +1,80 @@
+p = 19, m = 9
+Interval: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Paley:    [1, 4, 5, 6, 7, 9, 11, 16, 17]
+
+Q_k Interval: [36.6604, 0.2570, 4.1485, 0.2795, 1.5493, 0.3232, 0.8357, 0.4014, 0.5450]
+Q_k Paley:    [5.0000, 5.0000, 5.0000, 5.0000, 5.0000, 5.0000, 5.0000, 5.0000, 5.0000]
+prod(1+Q) Interval: 4181.0
+prod(1+Q) Paley:    10077696.0
+Q_k Paley all = 5.0000? True
+
+Computing H(Interval)...
+    Step 2/19: 9 masks, 9 paths
+    Step 3/19: 81 masks, 81 paths
+    Step 4/19: 564 masks, 684 paths
+    Step 5/19: 2556 masks, 5316 paths
+    Step 6/19: 7938 masks, 38724 paths
+    Step 7/19: 18060 masks, 264432 paths
+    Step 8/19: 31572 masks, 1665594 paths
+    Step 9/19: 43686 masks, 9598110 paths
+    Step 10/19: 48611 masks, 50425326 paths
+    Step 11/19: 43758 masks, 239163254 paths
+    Step 12/19: 31824 masks, 1009460156 paths
+    Step 13/19: 18564 masks, 3734059828 paths
+    Step 14/19: 8568 masks, 11871360636 paths
+    Step 15/19: 3060 masks, 31536774070 paths
+    Step 16/19: 816 masks, 67204120635 paths
+    Step 17/19: 153 masks, 107760462793 paths
+    Step 18/19: 18 masks, 115642276825 paths
+    Step 19/19: 1 masks, 62326990777 paths
+  H_from_0 = 62326990777
+  H_total = 1184212824763
+  Time: 2.9s
+  Amplification = 14907197.0287
+
+Computing H(Paley)...
+    Step 2/19: 9 masks, 9 paths
+    Step 3/19: 81 masks, 81 paths
+    Step 4/19: 534 masks, 684 paths
+    Step 5/19: 2448 masks, 5436 paths
+    Step 6/19: 7803 masks, 40284 paths
+    Step 7/19: 17976 masks, 277236 paths
+    Step 8/19: 31536 masks, 1759914 paths
+    Step 9/19: 43677 masks, 10236186 paths
+    Step 10/19: 48610 masks, 54090198 paths
+    Step 11/19: 43758 masks, 257104350 paths
+    Step 12/19: 31824 masks, 1085708988 paths
+    Step 13/19: 18564 masks, 4009718916 paths
+    Step 14/19: 8568 masks, 12687188760 paths
+    Step 15/19: 3060 masks, 33438648852 paths
+    Step 16/19: 816 masks, 70476534819 paths
+    Step 17/19: 153 masks, 111361494699 paths
+    Step 18/19: 18 masks, 117266659317 paths
+    Step 19/19: 1 masks, 61720828785 paths
+  H_from_0 = 61720828785
+  H_total = 1172695746915
+  Time: 3.0s
+  Amplification = 6124.4980
+
+============================================================
+RESULT: Paley/Interval ratio at p=19: 0.990274
+  *** INTERVAL wins by 0.9726%! ***
+  *** The crossover has happened! Fibonacci resonance dominates! ***
+
+============================================================
+THE COMPLETE RACE TABLE
+============================================================
+
+  p  │ p mod 4 │ H_from_0(Int) │ H_from_0(Best) │ Best/Int │ Winner
+─────┼─────────┼───────────────┼────────────────┼──────────┼─────────
+   5 │       1 │             3 │              3 │ 1.000    │ Interval
+   7 │       3 │            25 │             27 │ 1.080    │ Paley
+  11 │       3 │          8457 │           8645 │ 1.022    │ Paley
+  13 │       1 │        285475 │         285475 │ 1.000    │ Interval
+  17 │       1 │     805251147 │      805251147 │ 1.000    │ Interval
+  19 │       3 │   62326990777 │    62326990777 │ 1.000    │ Interval
+
+Amplification factors:
+  p=19 Interval: A = 14907197.0287
+  p=19 Paley:    A = 6124.4980
+  prod ratio:    2410.3554
