@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S67k (cont'd) — 2026-03-13: Fibonacci-OCF-Lattice Gas Triangle
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S67k (context recovery)
+**Summary of work:**
+- **HYP-818 CONFIRMED**: H(T) = I_{CG(T)}(2) — Hamiltonian path count equals independence polynomial of odd-cycle conflict graph at x=2. Verified 74/74 iso classes (n=3..6). Fixed cycle-counting bug (multiple directed cycles per vertex set).
+- **HYP-819**: Conflict graph completeness transition at n=6. For n≤5, all CGs with ≥2 cycles are complete (every pair shares a vertex). At n=6, 25 of 56 classes have non-complete CGs with α₂>0.
+- **Multi-channel OCF information decomposition**: H = 1 + 2α₁ + 4α₂ + 8α₃ + ... is a weighted sum via independent channels. Channel 1 (2α₁) carries 84% of H at n=6. α₁ alone carries 66.5% of iso class entropy; (α₁,α₂) together carry 78.5%.
+- **Hard-core lattice gas interpretation**: H = Z_{CG}(λ=2), partition function of hard-core gas at fugacity 2. ALL tournament CGs at n≤6 are in non-uniqueness regime (λ >> λ_c). Mean-field approximation H ≈ 1+2α₁ excellent.
+- **SURPRISE: Two H-maximization phases**: H=45 at n=6 achieved by (α₁=20,α₂=1, Ramanujan-like) OR (α₁=14,α₂=4, disjoint-rich). Two different hard-core gas phases, both achieving same max H through different channel balances.
+- **Unification with THM-170**: kind-pasteur's delta_H = 2*dc7 + 4*di2 is the differential form of our H = 1 + 2α₁ + 4α₂.
+- **n=9 three-channel confirmation**: kind-pasteur verified delta_H = 2*(dc7+dc9) + 4*di2 at n=9 (42/42), exactly as our framework predicted.
+**New contributions:** HYP-818, HYP-819, HYP-834, HYP-835, HYP-836. Scripts: conflict_graph_indpoly.py, conflict_graph_structure.py, ocf_information_theory.py, hard_core_gas_tournament.py, spectral_alpha2_connection.py, fibonacci_fractal_tournaments.py
+**Unresolved threads:** (1) Prove Ramanujan eigenvalue uniformity => max α₂ at general n. (2) Characterize which conflict graphs are realizable by tournaments. (3) Does the two-phase structure persist at n≥7? (4) Engineering: implement hard-core gas approximation algorithm for H.
+
 ## kind-pasteur-2026-03-13-S61 — 2026-03-13: Vitali Atom Complete Characterization
 
 **Account:** kind-pasteur
