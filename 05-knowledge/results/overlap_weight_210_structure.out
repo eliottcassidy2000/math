@@ -1,0 +1,183 @@
+============================================================
+OVERLAP WEIGHT (LAMBDA) FILTRATION AT n=7
+============================================================
+
+--- Lambda Value Distribution ---
+Total pairs sampled: 21000
+  lambda=0: 4942 (23.5%)
+  lambda=1: 8359 (39.8%)
+  lambda=2: 5535 (26.4%)
+  lambda=3: 1836 (8.7%)
+  lambda=4: 312 (1.5%)
+  lambda=5: 16 (0.1%)
+
+--- Lambda-Sigma Joint Distribution ---
+  lambda=0: sigma distribution = {0: 21, 1: 182, 2: 848, 3: 1630, 4: 1632, 5: 629}
+  lambda=1: sigma distribution = {0: 96, 1: 822, 2: 2530, 3: 3295, 4: 1616}
+  lambda=2: sigma distribution = {0: 190, 1: 1232, 2: 2425, 3: 1688}
+  lambda=3: sigma distribution = {0: 205, 1: 811, 2: 820}
+  lambda=4: sigma distribution = {0: 91, 1: 221}
+  lambda=5: sigma distribution = {0: 16}
+
+--- Lambda + Sigma Relationship ---
+  lambda + sigma distribution: {0: 21, 1: 278, 2: 1860, 3: 5597, 4: 8254, 5: 4990}
+
+--- Verifying: sigma + lambda + delta = n-2 ---
+  Verified: 10500/10500
+  CONFIRMED: sigma + lambda + delta = n-2 for all pairs!
+  This is the FUNDAMENTAL DECOMPOSITION:
+    n-2 = sigma + lambda + delta
+    n-2 = (common succ/pred) + (3-cycles) + (transitive triples)
+
+  This means the 'overlap weight' lambda and sigma are COMPLEMENTARY
+  views of the same n-2 dimensional space of witnesses.
+
+============================================================
+VITALI ATOM EFFECT ON (sigma, lambda, delta) DECOMPOSITION
+============================================================
+Collected 3012 changes
+
+--- Verifying dsig = -ddelta ---
+  dsig = -ddelta always? True
+  CONFIRMED: Vitali atoms TRANSFER weight between sigma and delta!
+  When sigma goes up by 1, delta goes down by 1 (and vice versa).
+  Lambda is the CONSERVED quantity; sigma and delta are conjugate variables.
+
+--- Change Distribution by Pair Type ---
+  XX: no changes (confirmed)
+  SX: dsig dist = {-1: 1506, 1: 1506}
+  SS: no changes (confirmed)
+
+--- Lambda Values of Changed Pairs ---
+  SX: lambda distribution = {0: 1004, 1: 1206, 2: 660, 3: 142}
+    lambda=0: dsig = {-1: 502, 1: 502}
+    lambda=1: dsig = {-1: 603, 1: 603}
+    lambda=2: dsig = {-1: 330, 1: 330}
+    lambda=3: dsig = {-1: 71, 1: 71}
+
+============================================================
+FIBER BUNDLE INTERPRETATION
+============================================================
+
+The tournament's pair data has a FIBER BUNDLE structure:
+
+  Base space: Lambda graph (edge-weighted graph with lambda values)
+  Fiber over each pair (u,v): the split (sigma, delta) with sigma + delta = n-2-lambda(u,v)
+
+  Vitali atoms act as PARALLEL TRANSPORT in this bundle:
+    They move along the fiber (changing sigma <-> delta by +-1)
+    while staying on the same base point (lambda preserved).
+
+  The "hidden higher-dimensional structure" is precisely this fiber:
+    - Lambda (the base) is 1-dimensional: just a non-negative integer per pair
+    - The fiber is ALSO 1-dimensional: sigma ranges from 0 to n-2-lambda
+    - Together: (lambda, sigma) is a 2D lattice point per pair
+    - The Vitali atom shifts sigma by +-1 for SX pairs only
+
+  The topology of the fiber bundle:
+    - The fiber is discrete (integer sigma values)
+    - The structure group is Z (translations by +-1)
+    - Vitali atoms generate Z-actions on the fiber
+    - The "parallel transport" around a closed loop of Vitali atoms
+      may give a non-trivial holonomy (net sigma shift)
+
+
+============================================================
+DELTA = TRANSITIVE TRIPLES: THE 'HIDDEN' COMPONENT
+============================================================
+Does the SET of delta-witnesses (not just count) carry extra info?
+
+Category patterns per (lambda, sigma):
+  (lam=0, sig=0): 1 distinct witness patterns
+    ('D', 'D', 'D', 'D', 'D')
+  (lam=0, sig=1): 2 distinct witness patterns
+    ('D', 'D', 'D', 'D', 'S')
+    ('D', 'D', 'D', 'D', 'P')
+  (lam=0, sig=2): 3 distinct witness patterns
+    ('D', 'D', 'D', 'P', 'P')
+    ('D', 'D', 'D', 'S', 'S')
+    ('D', 'D', 'D', 'P', 'S')
+  (lam=0, sig=3): 4 distinct witness patterns
+  (lam=0, sig=4): 5 distinct witness patterns
+  (lam=0, sig=5): 6 distinct witness patterns
+  (lam=1, sig=0): 1 distinct witness patterns
+    ('D', 'D', 'D', 'D', 'L')
+  (lam=1, sig=1): 2 distinct witness patterns
+    ('D', 'D', 'D', 'L', 'S')
+    ('D', 'D', 'D', 'L', 'P')
+  (lam=1, sig=2): 3 distinct witness patterns
+    ('D', 'D', 'L', 'S', 'S')
+    ('D', 'D', 'L', 'P', 'S')
+    ('D', 'D', 'L', 'P', 'P')
+  (lam=1, sig=3): 4 distinct witness patterns
+  (lam=1, sig=4): 5 distinct witness patterns
+  (lam=2, sig=0): 1 distinct witness patterns
+    ('D', 'D', 'D', 'L', 'L')
+  (lam=2, sig=1): 2 distinct witness patterns
+    ('D', 'D', 'L', 'L', 'S')
+    ('D', 'D', 'L', 'L', 'P')
+  (lam=2, sig=2): 3 distinct witness patterns
+    ('D', 'L', 'L', 'P', 'S')
+    ('D', 'L', 'L', 'P', 'P')
+    ('D', 'L', 'L', 'S', 'S')
+  (lam=2, sig=3): 4 distinct witness patterns
+  (lam=3, sig=0): 1 distinct witness patterns
+    ('D', 'D', 'L', 'L', 'L')
+  (lam=3, sig=1): 2 distinct witness patterns
+    ('D', 'L', 'L', 'L', 'S')
+    ('D', 'L', 'L', 'L', 'P')
+  (lam=3, sig=2): 3 distinct witness patterns
+    ('L', 'L', 'L', 'P', 'S')
+    ('L', 'L', 'L', 'P', 'P')
+    ('L', 'L', 'L', 'S', 'S')
+  (lam=4, sig=0): 1 distinct witness patterns
+    ('D', 'L', 'L', 'L', 'L')
+  (lam=4, sig=1): 2 distinct witness patterns
+    ('L', 'L', 'L', 'L', 'S')
+    ('L', 'L', 'L', 'L', 'P')
+  (lam=5, sig=0): 1 distinct witness patterns
+    ('L', 'L', 'L', 'L', 'L')
+
+============================================================
+THE 2-1-0 STRUCTURE: WINNER-DRAW-LOSER LAYERS
+============================================================
+
+Witness w categories relative to pair (u,v):
+  2-winner: w beats both u and v (common predecessor of u,v)
+  0-loser: w loses to both u and v (common successor of u,v)
+  1-mixer: w beats one, loses to other
+
+FUNDAMENTAL THEOREM:
+  For pair (u,v) with arc u->v:
+  sigma(u,v) = #{w: w beats both u,v} + #{w: w loses to both u,v}
+  lambda(u,v) = #{w: (w->u, v->w) forming 3-cycle v->w->u->v}
+  delta(u,v) = #{w: (u->w, w->v) forming transitive u->w->v}
+
+  The 3 categories (sigma, lambda, delta) = (extremal, cyclic, transitive)
+  partition all n-2 witnesses of each pair.
+
+  Vitali atoms shift weight from 'transitive' to 'cyclic' (or vice versa)
+  for SX pairs, while preserving the extremal count... wait, no!
+  Since sigma changes by +-1 and lambda is preserved,
+  delta changes by -/+1. So the TRANSFER is between sigma and delta:
+  extremal <-> transitive, NOT cyclic!
+
+  This means Vitali atoms convert TRANSITIVE witnesses into EXTREMAL witnesses
+  (or vice versa) for SX pairs, leaving CYCLIC witnesses unchanged.
+
+--- Verification: Which Category Shifts? ---
+
+Category transitions (from -> to):
+  D -> P: 748
+  D -> S: 874
+  L -> P: 296
+  L -> S: 296
+  P -> D: 748
+  P -> L: 296
+  S -> D: 874
+  S -> L: 296
+
+Category transitions by witness location:
+  w in S: {('S', 'D'): 874, ('L', 'P'): 296, ('P', 'L'): 296, ('D', 'S'): 874, ('D', 'P'): 748, ('S', 'L'): 296, ('L', 'S'): 296, ('P', 'D'): 748}
+
+Done.
