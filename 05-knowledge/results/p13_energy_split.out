@@ -1,0 +1,155 @@
+======================================================================
+DETAILED ANALYSIS OF E=118 SPLIT AT p=13
+======================================================================
+
+E=118 entries: 24
+
+  H = 3683797 (12 orientations):
+    bits=  2, S=[12, 2, 10, 9, 8, 7]
+    bits=  6, S=[12, 2, 3, 9, 8, 7]
+    bits= 22, S=[12, 2, 3, 9, 5, 7]
+    bits= 28, S=[12, 11, 3, 4, 5, 7]
+    bits= 29, S=[1, 11, 3, 4, 5, 7]
+    bits= 30, S=[12, 2, 3, 4, 5, 7]
+    bits= 33, S=[1, 11, 10, 9, 8, 6]
+    bits= 34, S=[12, 2, 10, 9, 8, 6]
+    bits= 35, S=[1, 2, 10, 9, 8, 6]
+    bits= 41, S=[1, 11, 10, 4, 8, 6]
+    bits= 57, S=[1, 11, 10, 4, 5, 6]
+    bits= 61, S=[1, 11, 3, 4, 5, 6]
+    Moments: S4=108.8750, S6=688.5937, S8=4552.3359
+    S10=30857.8105, S12=212739.7886
+    D^2 vals: [6.1103, 3.9731, 0.7052, 1.1317, 7.343, 0.2367]
+    Cycle counts: c3=91 c5=1456 c7=40547 c9=1116704 c11=32997094 c13=1004598978 
+
+  H = 3704857 (12 orientations):
+    bits= 11, S=[1, 2, 10, 4, 8, 7]
+    bits= 15, S=[1, 2, 3, 4, 8, 7]
+    bits= 16, S=[12, 11, 10, 9, 5, 7]
+    bits= 17, S=[1, 11, 10, 9, 5, 7]
+    bits= 19, S=[1, 2, 10, 9, 5, 7]
+    bits= 27, S=[1, 2, 10, 4, 5, 7]
+    bits= 36, S=[12, 11, 3, 9, 8, 6]
+    bits= 44, S=[12, 11, 3, 4, 8, 6]
+    bits= 46, S=[12, 2, 3, 4, 8, 6]
+    bits= 47, S=[1, 2, 3, 4, 8, 6]
+    bits= 48, S=[12, 11, 10, 9, 5, 6]
+    bits= 52, S=[12, 11, 3, 9, 5, 6]
+    Moments: S4=108.8750, S6=688.5938, S8=4708.3359
+    S10=33782.8105, S12=249624.0386
+    D^2 vals: [0.1073, 5.3499, 0.0467, 7.7932, 3.4677, 2.7351]
+    Cycle counts: c3=91 c5=1456 c7=40547 c9=1116548 c11=32999434 c13=1004577216 
+
+  --- COMPARISON (H=3683797 vs H=3704857) ---
+    S2: 19.500000 vs 19.500000, diff = 0.000000
+    S4: 108.875000 vs 108.875000, diff = 0.000000
+    S6: 688.593750 vs 688.593750, diff = 0.000000
+    S8: 4552.335937 vs 4708.335938, diff = 156.000000
+    S10: 30857.810547 vs 33782.810547, diff = 2925.000000
+    S12: 212739.788574 vs 249624.038574, diff = 36884.250000
+
+    Cycle count differences:
+      c3: 91 (same)
+      c5: 1456 (same)
+      c7: 40547 (same)
+      c9: 1116704 vs 1116548, diff = -156
+      c11: 32997094 vs 32999434, diff = 2340
+      c13: 1004598978 vs 1004577216, diff = -21762
+
+    Sorted D^2 spectrum:
+      Lo: [0.236668, 0.705197, 1.131724, 3.973131, 6.110303, 7.342977]
+      Hi: [0.046747, 0.107306, 2.735125, 3.46771, 5.34994, 7.793171]
+    Same D^2 multiset: False
+
+    Sorted Fourier |S_hat|^2 spectrum:
+      Lo: [0.4867, 0.4867, 0.9552, 0.9552, 1.3817, 1.3817, 4.2231, 4.2231, 6.3603, 6.3603, 7.593, 7.593, 36.0]
+      Hi: [0.2967, 0.2967, 0.3573, 0.3573, 2.9851, 2.9851, 3.7177, 3.7177, 5.5999, 5.5999, 8.0432, 8.0432, 36.0]
+    Same Fourier spectrum: False
+
+    alpha_1 (total cycles): 1038754870 vs 1038735292, diff = -19578
+
+    Delta H = 21060
+    Delta H / 2 = 10530.0
+    Delta H / 4 = 5265.0
+    Delta H / 8 = 2632.5
+    H difference in terms of OCF: 2*da1 + 4*da2 + 8*da3 + ...
+
+======================================================================
+ALL ORBIT TYPES AT p=13
+======================================================================
+
+     E          H    c3    c5    c7     c9    c11      c13   alpha1 count
+   114    3703011    91  1482 40287 1118628 32985069 1004661885 1038807442     4
+   118    3683797    91  1456 40547 1116704 32997094 1004598978 1038754870    12
+   118    3704857    91  1456 40547 1116548 32999434 1004577216 1038735292    12
+   122    3669497    91  1430 41002 1111166 33053384 1004097750 1038304823    12
+   130    3707483    91  1378 42107 1094240 33279649 1001327697 1035745162    12
+   146    3711175    91  1274 44512 1048194 34086104 988105488 1023285663    12
+
+  --- Does cycle profile (c3,...,c13) determine H? ---
+  Cycle profile determines H: True
+  (c3,c5,c7) determines H: False
+
+  --- Quadratic moment fits ---
+  Linear H = f(S4,S6,S8): max_err = 17625.74
+  Quadratic H = f(S4,S6,S8,S4^2,S4*S6,S6^2): max_err = 0.00
+  H = f(S4,S6,S8,S10,S4^2,S4*S6): max_err = 0.00
+
+======================================================================
+p mod 4 ANALYSIS
+======================================================================
+  p=13 = 1 mod 4
+  -1 is a QR mod 13: True
+  QR set: [1, 3, 4, 9, 10, 12]
+  Since -1 is QR, QR set is symmetric under negation
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p13_energy_split.py", line 360, in <module>
+    analyze_p13_split()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\p13_energy_split.py", line 296, in analyze_p13_split
+    print(f"  => QR is NOT a valid connection set (S \u2229 (-S) != empty)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2229' in position 41: character maps to <undefined>
+    bits= 27, S=[1, 2, 4, 5, 7, 10], H=3704857
+    bits= 28, S=[3, 4, 5, 7, 11, 12], H=3683797
+    bits= 29, S=[1, 3, 4, 5, 7, 11], H=3683797
+    bits= 30, S=[2, 3, 4, 5, 7, 12], H=3683797
+    bits= 33, S=[1, 6, 8, 9, 10, 11], H=3683797
+    bits= 34, S=[2, 6, 8, 9, 10, 12], H=3683797
+    bits= 35, S=[1, 2, 6, 8, 9, 10], H=3683797
+    bits= 36, S=[3, 6, 8, 9, 11, 12], H=3704857
+    bits= 41, S=[1, 4, 6, 8, 10, 11], H=3683797
+    bits= 44, S=[3, 4, 6, 8, 11, 12], H=3704857
+    bits= 46, S=[2, 3, 4, 6, 8, 12], H=3704857
+    bits= 47, S=[1, 2, 3, 4, 6, 8], H=3704857
+    bits= 48, S=[5, 6, 9, 10, 11, 12], H=3704857
+    bits= 52, S=[3, 5, 6, 9, 11, 12], H=3704857
+    bits= 57, S=[1, 4, 5, 6, 10, 11], H=3683797
+    bits= 61, S=[1, 3, 4, 5, 6, 11], H=3683797
+
+======================================================================
+MOMENT COUNT BY PRIME (how many S_k moments to determine H)
+======================================================================
+
+  p=7, m=3, 8 orientations, 2 unique H values
+    H = f(S4): max_err = 0.0000 EXACT
+    => H needs 1 moments at p=7 (m-1=2, p mod 4 = 3)
+
+  p=11, m=5, 32 orientations, 4 unique H values
+    H = f(S4): max_err = 1911.2500 
+    H = f(S4,S6): max_err = 647.0962 
+    H = f(S4,S6,S8): max_err = 0.0000 EXACT
+    => H needs 3 moments at p=11 (m-1=4, p mod 4 = 3)
+
+  p=13, m=6, 64 orientations, 6 unique H values
+    H = f(S4): max_err = 23354.9276 
+    H = f(S4,S6): max_err = 18335.8036 
+    H = f(S4,S6,S8): max_err = 17625.7410 
+    H = f(S4,S6,S8,S10): max_err = 403.3914 
+    H = f(S4,S6,S8,S10,S12): max_err = 0.0000 EXACT
+    => H needs 5 moments at p=13 (m-1=5, p mod 4 = 1)
+
+DONE.

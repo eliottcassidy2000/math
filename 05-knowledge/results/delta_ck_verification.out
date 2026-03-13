@@ -1,0 +1,56 @@
+======================================================================
+DELTA(c_k) VERIFICATION via eigenvalue expansion
+======================================================================
+
+  Known moment deltas (H_hi - H_lo):
+    Delta(S8) = 156.0000
+    Delta(S10) = 2925.0000
+    Delta(S12) = 36884.2500
+
+    k      Predicted     Actual  Match
+  ------------------------------------
+    3         0.0000          0   True
+    5         0.0000          0   True
+    7         0.0000          0   True
+    9      -156.0000       -156   True
+      = (-1.000000)*Delta(S8)=-156.00
+   11      2340.0000       2340   True
+      = (-3.750000)*Delta(S8)=-585.00 + (1.000000)*Delta(S10)=2925.00
+   13    -21762.0000     -21762   True
+      = (-6.187500)*Delta(S8)=-965.25 + (5.500000)*Delta(S10)=16087.50 + (-1.000000)*Delta(S12)=-36884.25
+
+  --- Why c3, c5, c7 have Delta = 0 ---
+    c_3: Re(z^3) has D^{2r} for r=0,...,1, max D power = 2
+      Max D power 2 < 8, so no S8 (or higher) dependence
+      Since Delta(S4)=0, Delta(S6)=0: Delta(c_3)=0
+    c_5: Re(z^5) has D^{2r} for r=0,...,2, max D power = 4
+      Max D power 4 < 8, so no S8 (or higher) dependence
+      Since Delta(S4)=0, Delta(S6)=0: Delta(c_5)=0
+    c_7: Re(z^7) has D^{2r} for r=0,...,3, max D power = 6
+      Max D power 6 < 8, so no S8 (or higher) dependence
+      Since Delta(S4)=0, Delta(S6)=0: Delta(c_7)=0
+
+  --- S10 CANCELLATION at p=11 ---
+  At p=11, m=5, H = f(S4,S6,S8) exactly (S10 not needed)
+  This means: sum_{k odd} (2/k) * coeff_S10_in_Re(z^k) = 0
+  when summed with appropriate alpha_j weights
+
+  S_10 coefficient in alpha_1 = sum c_k for p=11:
+    c_11: (2/11)*C(11,10)*(-1/2)^1*(-1)^5 = 1.00000000
+    Total S10 coeff in alpha_1 = 1.00000000 = 1
+
+  S_12 coefficient in alpha_1 = sum c_k for p=13:
+    c_13: (2/13)*C(13,12)*(-1/2)^1*(-1)^6 = -1.00000000
+    Total S12 coeff in alpha_1 = -1.00000000 = -1
+
+  --- S_{p-1} coefficient in alpha_1 for various primes ---
+    p= 7 (mod 4 = 3): S_6 coeff in alpha_1 = 1.00000000 = 1
+    p=11 (mod 4 = 3): S_10 coeff in alpha_1 = 1.00000000 = 1
+    p=13 (mod 4 = 1): S_12 coeff in alpha_1 = -1.00000000 = -1
+    p=17 (mod 4 = 1): S_16 coeff in alpha_1 = -1.00000000 = -1
+    p=19 (mod 4 = 3): S_18 coeff in alpha_1 = 1.00000000 = 1
+    p=23 (mod 4 = 3): S_22 coeff in alpha_1 = 1.00000000 = 1
+
+  PATTERN: Does S_{p-1} coeff vanish for p = 3 mod 4?
+
+DONE.
