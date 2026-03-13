@@ -1,0 +1,28 @@
+P_19 (m=9), QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+
+--- d=0 ---
+  |A_d| = 1
+  Omega_0 = 1 (no constraints)
+
+--- d=1 ---
+  |A_d| = 9
+  Omega_1 = 9 (no constraints)
+
+--- d=2 ---
+  |A_d| = 81
+  C shape: (9, 81), ~0.0 MB
+  rank(C) = 9, Omega_2 = 72
+
+--- d=3 ---
+  |A_d| = 684
+  C shape: (144, 684), ~0.1 MB
+  rank(C) = 144, Omega_3 = 540
+
+--- d=4 ---
+  |A_d| = 5436
+  C shape: (1764, 5436), ~9.6 MB
+  rank(C) = 1683, Omega_4 = 3753
+
+--- d=5 ---
+  |A_d| = 40284
+  C shape: (18216, 40284), ~733.8 MB

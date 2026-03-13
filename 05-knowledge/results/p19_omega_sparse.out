@@ -1,0 +1,40 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+P_19 (m=9), QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+
+--- d=0 ---
+  |A_d| = 1 (0.0s)
+  Omega_0 = 1 (no constraints)
+
+--- d=1 ---
+  |A_d| = 9 (0.0s)
+  Omega_1 = 9 (no constraints)
+
+--- d=2 ---
+  |A_d| = 81 (0.0s)
+  C_sparse: (9, 81), nnz=45 (0.0s)
+    Matrix shape: 9 x 81
+    Dense SVD (0 MB)...
+  rank(C) = 9, Omega_2 = 72 (0.0s)
+
+--- d=3 ---
+  |A_d| = 684 (0.0s)
+  C_sparse: (144, 684), nnz=720 (0.0s)
+    Matrix shape: 144 x 684
+    Dense SVD (1 MB)...
+  rank(C) = 144, Omega_3 = 540 (0.0s)
+
+--- d=4 ---
+  |A_d| = 5436 (0.0s)
+  C_sparse: (1764, 5436), nnz=8460 (0.0s)
+    Matrix shape: 1764 x 5436
+    Dense SVD (77 MB)...
+  rank(C) = 1683, Omega_4 = 3753 (17.3s)
+
+--- d=5 ---
+  |A_d| = 40284 (0.1s)
+  C_sparse: (18216, 40284), nnz=82620 (0.1s)
+    Matrix shape: 18216 x 40284
+    Dense would be 5871 MB, too large
+    C^T C also too large (12982 MB)
+    Using C C^T (18216x18216, 2655 MB)...

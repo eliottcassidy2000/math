@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-13-S71b — 2026-03-13: Rank Shift Theorem & P_11 k=1 Complete Verification (5th context window)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-13-S71b (5th context window)
+**Summary of work:**
+- **RANK SHIFT THEOREM PROVED (HYP-710)**: For Paley P_p, R_d^{(k)}-R_d^{(0)} = (-1)^{d+1} for d=1..m, then β_m^{(0)}-1 at d=m+1, then 0. Face-0 phase ω^{k·s_1} creates rank-1 perturbation at d=1; acyclicity propagates it. β_{m+1}^{(k)}=1 is AUTOMATIC consequence. β_m^{(0)} is sole free parameter.
+- **P_11 k=1 R_7 = 390 CONFIRMED**: Over GF(23) and GF(67). Gives β_6^{(1)} = 700-309-390 = 1 ✓. Complete P_11 eigenspace structure now verified.
+- **A_4 CLOSED FORMULA PROVED (HYP-711)**: |A_4| = m(m-1)(2m²-m-2)/2 via QQ/QN/NQ/NN case split. Verified P_7, P_11, P_19.
+- **Tang-Yau paper (arXiv:2602.04140)**: Their eigenspace decomposition = our THM-125. Their work on small S; ours on large S=QR.
+- **Orbit complex analysis**: β_m^{orb} = (m-3)/2. One Z_m-orbit cycle per degree. P_11 orbit β = [1,0,0,0,0,1,1,0,0,0,0].
+- **Homology generators for P_7**: H_4 generator in k=1 eigenspace uses 33/39 diff-seqs. Z_m orbits visible.
+- **P_19 computation**: Omega through d=4 = [1,9,72,540,3753]. d=5 in progress (18216×18216 eigvalsh).
+
+**New contributions:** HYP-710 (Rank Shift), HYP-711 (A_4 formula), p11_eigenspace_complete.out
+**Scripts created:** eigenspace_rank_shift.py, omega_closed_formula.py, p11_k1_d7_rank.py, symbol_matrix_paley.py, p19_omega_sparse.py, homology_generators.py, beta_m_representation.py
+**Unresolved threads:**
+- P_19 Omega_5 computation (in progress)
+- Algebraic proof of β_m = m(m-3)/2 (orbit β = (m-3)/2)
+- Closed formula for Omega_d at arbitrary d (proved through d=4)
+- Orbit complex explicit computation for P_11
+
 ## kind-pasteur-2026-03-13-S60 — 2026-03-13: Overlap Weight Deep Analysis + Spectral H-Maximization
 
 **Account:** kind-pasteur
