@@ -1,0 +1,150 @@
+======================================================================
+ORBIT ANALYSIS OF H-MAXIMIZERS AT p=17
+======================================================================
+QR = [1, 2, 4, 8, 9, 13, 15, 16]
+|QR| = m = 8
+
+Computing all 256 orientations...
+
+H value distribution (16 distinct values):
+  H = 13689269499: 16 orientations
+  H = 13627838945: 16 orientations
+  H = 13560055389: 16 orientations
+  H = 13551813041: 16 orientations
+  H = 13551423911: 16 orientations
+  H = 13544403013: 16 orientations
+  H = 13540194969: 16 orientations
+  H = 13526567225: 16 orientations
+  H = 13519308361: 16 orientations
+  H = 13507244311: 16 orientations
+  H = 13506158929: 16 orientations
+  H = 13496380733: 16 orientations
+  H = 13492503135: 16 orientations
+  H = 13491417243: 16 orientations
+  H = 13486964977: 16 orientations
+  H = 13478929757: 16 orientations
+
+--- MAXIMUM H = 13689269499: 16 orientations ---
+  σ = (1, 1, 1, 1, 1, 1, 1, 1), A(σ) = 0
+  σ = (1, 1, 1, 1, -1, -1, -1, -1), A(σ) = 4
+  σ = (1, 1, -1, -1, 1, 1, -1, -1), A(σ) = 0
+  σ = (1, 1, -1, -1, -1, 1, 1, 1), A(σ) = 2
+  σ = (1, -1, 1, 1, -1, 1, 1, -1), A(σ) = -2
+  σ = (1, -1, 1, -1, 1, 1, -1, 1), A(σ) = -2
+  σ = (1, -1, 1, -1, 1, -1, 1, -1), A(σ) = -4
+  σ = (1, -1, -1, 1, 1, -1, 1, 1), A(σ) = 2
+  σ = (-1, 1, 1, -1, -1, 1, -1, -1), A(σ) = -2
+  σ = (-1, 1, -1, 1, -1, 1, -1, 1), A(σ) = 4
+  σ = (-1, 1, -1, 1, -1, -1, 1, -1), A(σ) = 2
+  σ = (-1, 1, -1, -1, 1, -1, -1, 1), A(σ) = 2
+  σ = (-1, -1, 1, 1, 1, -1, -1, -1), A(σ) = -2
+  σ = (-1, -1, 1, 1, -1, -1, 1, 1), A(σ) = 0
+  σ = (-1, -1, -1, -1, 1, 1, 1, 1), A(σ) = -4
+  σ = (-1, -1, -1, -1, -1, -1, -1, -1), A(σ) = 0
+
+--- QR ORBIT STRUCTURE ---
+Total QR orbits: 32
+
+Orbits at H_max:
+  Orbit 0: 8 members
+    (-1, -1, -1, -1, -1, -1, -1, -1)  A=0
+    (-1, -1, -1, -1, 1, 1, 1, 1)  A=-4
+    (-1, -1, 1, 1, -1, -1, 1, 1)  A=0
+    (-1, 1, -1, 1, -1, 1, -1, 1)  A=4
+    (1, -1, 1, -1, 1, -1, 1, -1)  A=-4
+    (1, 1, -1, -1, 1, 1, -1, -1)  A=0
+    (1, 1, 1, 1, -1, -1, -1, -1)  A=4
+    (1, 1, 1, 1, 1, 1, 1, 1)  A=0
+  Orbit 28: 8 members
+    (-1, -1, 1, 1, 1, -1, -1, -1)  A=-2
+    (-1, 1, -1, -1, 1, -1, -1, 1)  A=2
+    (-1, 1, -1, 1, -1, -1, 1, -1)  A=2
+    (-1, 1, 1, -1, -1, 1, -1, -1)  A=-2
+    (1, -1, -1, 1, 1, -1, 1, 1)  A=2
+    (1, -1, 1, -1, 1, 1, -1, 1)  A=-2
+    (1, -1, 1, 1, -1, 1, 1, -1)  A=-2
+    (1, 1, -1, -1, -1, 1, 1, 1)  A=2
+
+--- ORBITS PER H VALUE ---
+  H = 13689269499: 16 orientations in 2 QR orbit(s)
+  H = 13627838945: 16 orientations in 2 QR orbit(s)
+  H = 13560055389: 16 orientations in 2 QR orbit(s)
+  H = 13551813041: 16 orientations in 2 QR orbit(s)
+  H = 13551423911: 16 orientations in 2 QR orbit(s)
+  H = 13544403013: 16 orientations in 2 QR orbit(s)
+  H = 13540194969: 16 orientations in 2 QR orbit(s)
+  H = 13526567225: 16 orientations in 2 QR orbit(s)
+  H = 13519308361: 16 orientations in 2 QR orbit(s)
+  H = 13507244311: 16 orientations in 2 QR orbit(s)
+  H = 13506158929: 16 orientations in 2 QR orbit(s)
+  H = 13496380733: 16 orientations in 2 QR orbit(s)
+  H = 13492503135: 16 orientations in 2 QR orbit(s)
+  H = 13491417243: 16 orientations in 2 QR orbit(s)
+  H = 13486964977: 16 orientations in 2 QR orbit(s)
+  H = 13478929757: 16 orientations in 2 QR orbit(s)
+
+--- KEY QUESTION ---
+H-maximizers span 2 QR orbits.
+Multiple algebraically distinct tournaments achieve the maximum.
+
+--- CONNECTION SET ANALYSIS ---
+  σ = (1, 1, 1, 1, 1, 1, 1, 1)
+  S = [1, 2, 3, 4, 5, 6, 7, 8] (connection set within {1,...,m})
+  S_full = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] (all elements)
+  Consecutive differences: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  Additive energy E(S) = 3856
+  σ = (1, 1, 1, 1, -1, -1, -1, -1)
+  S = [1, 2, 3, 4] (connection set within {1,...,m})
+  S_full = [1, 2, 3, 4, 13, 14, 15, 16] (all elements)
+  Consecutive differences: [1, 1, 1, 9, 1, 1, 1]
+  Additive energy E(S) = 296
+  σ = (1, 1, -1, -1, 1, 1, -1, -1)
+  S = [1, 2, 5, 6] (connection set within {1,...,m})
+  S_full = [1, 2, 5, 6, 11, 12, 15, 16] (all elements)
+  Consecutive differences: [1, 3, 1, 5, 1, 3, 1]
+  Additive energy E(S) = 288
+  σ = (1, 1, -1, -1, -1, 1, 1, 1)
+  S = [1, 2, 6, 7, 8] (connection set within {1,...,m})
+  S_full = [1, 2, 6, 7, 8, 9, 10, 11, 15, 16] (all elements)
+  Consecutive differences: [1, 4, 1, 1, 1, 1, 1, 4, 1]
+  Additive energy E(S) = 630
+  σ = (1, -1, 1, 1, -1, 1, 1, -1)
+  S = [1, 3, 4, 6, 7] (connection set within {1,...,m})
+  S_full = [1, 3, 4, 6, 7, 10, 11, 13, 14, 16] (all elements)
+  Consecutive differences: [2, 1, 2, 1, 3, 1, 2, 1, 2]
+  Additive energy E(S) = 630
+
+
+======================================================================
+COMPARISON: p=13 ORBIT STRUCTURE
+======================================================================
+QR = [1, 3, 4, 9, 10, 12]
+Total QR orbits: 12
+Maximum H = 3711175
+Number of H-maximizers: 12
+Number of orbits at max: 2
+  Orbit: 6 members
+    (-1, -1, -1, -1, -1, -1)  A=0  S=[]
+    (-1, -1, 1, 1, -1, -1)  A=4  S=[3, 4]
+    (-1, 1, 1, -1, 1, 1)  A=-4  S=[2, 3, 5, 6]
+    (1, -1, -1, 1, -1, -1)  A=4  S=[1, 4]
+    (1, 1, -1, -1, 1, 1)  A=-4  S=[1, 2, 5, 6]
+    (1, 1, 1, 1, 1, 1)  A=0  S=[1, 2, 3, 4, 5, 6]
+  Orbit: 6 members
+    (-1, -1, -1, 1, 1, 1)  A=-2  S=[4, 5, 6]
+    (-1, 1, -1, 1, -1, 1)  A=-2  S=[2, 4, 6]
+    (-1, 1, -1, 1, 1, -1)  A=-2  S=[2, 4, 5]
+    (1, -1, 1, -1, -1, 1)  A=2  S=[1, 3, 6]
+    (1, -1, 1, -1, 1, -1)  A=2  S=[1, 3, 5]
+    (1, 1, 1, -1, -1, -1)  A=2  S=[1, 2, 3]
+
+Orbits per H value:
+  H = 3711175: 12 orientations in 2 orbit(s)
+  H = 3707483: 12 orientations in 2 orbit(s)
+  H = 3704857: 12 orientations in 2 orbit(s)
+  H = 3703011: 4 orientations in 2 orbit(s)
+  H = 3683797: 12 orientations in 2 orbit(s)
+  H = 3669497: 12 orientations in 2 orbit(s)
+
+
+DONE.
