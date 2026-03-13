@@ -1,0 +1,567 @@
+========================================================================
+det(I+2A) RECURRENCE ANALYSIS
+========================================================================
+
+--- Part 1: I+2A = J+S Decomposition ---
+For tournament T with adjacency A (A_{ij} = 1 if i→j):
+  A + A^T = J - I  (all pairs have exactly one arc)
+  S = A - A^T  (skew-symmetric)
+  2A = (J-I) + S
+  I + 2A = J + S
+
+So det(I+2A) = det(J+S) where:
+  J = all-ones matrix (rank 1, eigenvalue n with eigenvector 1)
+  S = skew-symmetric (eigenvalues purely imaginary)
+
+--- Part 2: How det(I+2A) changes under vertex deletion ---
+
+n=3:
+  H=  1  det=       1  √det=1  sub_dets=[1, 1, 1]  sub_Hs=[1, 1, 1]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1]  sub_Hs=[1, 1, 1]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+
+n=4:
+  H=  1  det=       1  √det=1  sub_dets=[1, 1, 1, 1]  sub_Hs=[1, 1, 1, 1]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9]  sub_Hs=[1, 1, 1, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9]  sub_Hs=[1, 1, 1, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  5  det=       1  √det=1  sub_dets=[1, 1, 9, 9]  sub_Hs=[1, 1, 3, 3]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+
+n=5:
+  H=  1  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 1]  sub_Hs=[1, 1, 1, 1, 1]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[1, 1, 1, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[1, 1, 1, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[1, 1, 1, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  5  det=       1  √det=1  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[1, 1, 3, 3, 5]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  5  det=       1  √det=1  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[1, 1, 3, 3, 5]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  9  det=       9  √det=3  sub_dets=[1, 1, 1, 1, 1]  sub_Hs=[1, 1, 5, 5, 5]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  9  det=      25  √det=5  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[1, 3, 3, 5, 5]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H= 11  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 1]  sub_Hs=[1, 5, 5, 5, 5]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 13  det=      49  √det=7  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[3, 3, 5, 5, 5]
+         v=0: det/sub_det=5.4, √det/√sub_det=2.3333
+  H= 15  det=      81  √det=9  sub_dets=[1, 1, 1, 9, 9]  sub_Hs=[3, 3, 5, 5, 5]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 15  det=      25  √det=5  sub_dets=[1, 1, 1, 1, 1]  sub_Hs=[5, 5, 5, 5, 5]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+
+n=6:
+  H=  1  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 1, 1]  sub_Hs=[1, 1, 1, 1, 1, 1]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9, 9]  sub_Hs=[1, 1, 1, 3, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9, 9]  sub_Hs=[1, 1, 1, 3, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9, 9]  sub_Hs=[1, 1, 1, 3, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  3  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 9, 9]  sub_Hs=[1, 1, 1, 3, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  5  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 9, 9]  sub_Hs=[1, 1, 3, 3, 5, 5]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  5  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 9, 9]  sub_Hs=[1, 1, 3, 3, 5, 5]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  5  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 9, 9]  sub_Hs=[1, 1, 3, 3, 5, 5]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H=  9  det=       9  √det=3  sub_dets=[1, 1, 1, 1, 1, 9]  sub_Hs=[1, 1, 5, 5, 5, 9]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  9  det=      25  √det=5  sub_dets=[1, 1, 1, 9, 9, 25]  sub_Hs=[1, 3, 3, 5, 5, 9]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H=  9  det=       9  √det=3  sub_dets=[1, 1, 1, 1, 1, 9]  sub_Hs=[1, 1, 5, 5, 5, 9]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H=  9  det=      25  √det=5  sub_dets=[1, 1, 1, 9, 9, 25]  sub_Hs=[1, 3, 3, 5, 5, 9]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H=  9  det=      81  √det=9  sub_dets=[9, 9, 9, 9, 9, 9]  sub_Hs=[3, 3, 3, 3, 3, 3]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 11  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 1, 1]  sub_Hs=[1, 5, 5, 5, 5, 11]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 11  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 1, 1]  sub_Hs=[1, 5, 5, 5, 5, 11]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 13  det=      49  √det=7  sub_dets=[1, 1, 1, 9, 9, 49]  sub_Hs=[3, 3, 5, 5, 5, 13]
+         v=0: det/sub_det=5.4, √det/√sub_det=2.3333
+  H= 13  det=      49  √det=7  sub_dets=[1, 1, 1, 9, 9, 49]  sub_Hs=[3, 3, 5, 5, 5, 13]
+         v=0: det/sub_det=5.4, √det/√sub_det=2.3333
+  H= 15  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 25, 25]  sub_Hs=[1, 3, 5, 9, 9, 9]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 15  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 25, 25]  sub_Hs=[1, 3, 5, 9, 9, 9]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 15  det=      81  √det=9  sub_dets=[1, 1, 1, 9, 9, 81]  sub_Hs=[3, 3, 5, 5, 5, 15]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 15  det=      25  √det=5  sub_dets=[1, 1, 1, 1, 1, 25]  sub_Hs=[5, 5, 5, 5, 5, 15]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H= 15  det=      81  √det=9  sub_dets=[1, 1, 1, 9, 9, 81]  sub_Hs=[3, 3, 5, 5, 5, 15]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 15  det=      25  √det=5  sub_dets=[1, 1, 1, 1, 1, 25]  sub_Hs=[5, 5, 5, 5, 5, 15]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H= 17  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 9, 9]  sub_Hs=[1, 1, 9, 9, 9, 9]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 17  det=      49  √det=7  sub_dets=[1, 1, 9, 9, 25, 25]  sub_Hs=[3, 3, 5, 5, 9, 9]
+         v=0: det/sub_det=5.4, √det/√sub_det=2.3333
+  H= 19  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 25, 25]  sub_Hs=[1, 5, 9, 9, 9, 11]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 19  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 25, 25]  sub_Hs=[1, 5, 9, 9, 9, 11]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 23  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 9, 9]  sub_Hs=[1, 9, 9, 11, 11, 11]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 23  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 9, 9]  sub_Hs=[1, 9, 9, 11, 11, 11]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 23  det=      25  √det=5  sub_dets=[1, 1, 9, 9, 25, 49]  sub_Hs=[3, 5, 5, 9, 9, 13]
+         v=0: det/sub_det=2.8, √det/√sub_det=1.6667
+  H= 23  det=      25  √det=5  sub_dets=[1, 1, 9, 9, 25, 49]  sub_Hs=[3, 5, 5, 9, 9, 13]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H= 25  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 49, 49]  sub_Hs=[3, 5, 9, 11, 13, 13]
+         v=0: det/sub_det=0.1, √det/√sub_det=0.3333
+  H= 25  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 49, 49]  sub_Hs=[3, 5, 9, 11, 13, 13]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 27  det=       9  √det=3  sub_dets=[9, 9, 9, 9, 9, 81]  sub_Hs=[3, 3, 9, 9, 9, 15]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 27  det=       9  √det=3  sub_dets=[9, 9, 9, 9, 9, 81]  sub_Hs=[3, 3, 9, 9, 9, 15]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 29  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 25, 25]  sub_Hs=[5, 5, 9, 9, 11, 11]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 29  det=       1  √det=1  sub_dets=[1, 9, 9, 25, 25, 49]  sub_Hs=[3, 9, 9, 9, 11, 13]
+         v=0: det/sub_det=0.1, √det/√sub_det=0.3333
+  H= 29  det=       1  √det=1  sub_dets=[1, 9, 9, 25, 25, 49]  sub_Hs=[3, 9, 9, 9, 11, 13]
+         v=0: det/sub_det=0.1, √det/√sub_det=0.3333
+  H= 31  det=      49  √det=7  sub_dets=[1, 1, 25, 25, 49, 81]  sub_Hs=[5, 5, 9, 9, 13, 15]
+         v=0: det/sub_det=49.0, √det/√sub_det=7.0000
+  H= 31  det=      49  √det=7  sub_dets=[1, 1, 25, 25, 49, 81]  sub_Hs=[5, 5, 9, 9, 13, 15]
+         v=0: det/sub_det=49.0, √det/√sub_det=7.0000
+  H= 33  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 81, 81]  sub_Hs=[3, 11, 11, 11, 15, 15]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 33  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 49, 49]  sub_Hs=[5, 5, 9, 9, 13, 13]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 33  det=       9  √det=3  sub_dets=[1, 1, 9, 25, 25, 49]  sub_Hs=[5, 9, 9, 11, 13, 15]
+         v=0: det/sub_det=9.0, √det/√sub_det=3.0000
+  H= 33  det=       9  √det=3  sub_dets=[1, 1, 9, 25, 25, 49]  sub_Hs=[5, 9, 9, 11, 13, 15]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 33  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 81, 81]  sub_Hs=[3, 11, 11, 11, 15, 15]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 37  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 81, 81]  sub_Hs=[5, 5, 9, 9, 15, 15]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 37  det=      25  √det=5  sub_dets=[1, 1, 25, 49, 49, 81]  sub_Hs=[5, 9, 11, 13, 13, 15]
+         v=0: det/sub_det=25.0, √det/√sub_det=5.0000
+  H= 37  det=       9  √det=3  sub_dets=[1, 1, 1, 9, 49, 49]  sub_Hs=[5, 9, 11, 11, 13, 13]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+  H= 41  det=       1  √det=1  sub_dets=[1, 1, 9, 9, 25, 25]  sub_Hs=[9, 9, 11, 11, 15, 15]
+         v=0: det/sub_det=0.1, √det/√sub_det=0.3333
+  H= 43  det=       1  √det=1  sub_dets=[1, 25, 25, 49, 49, 81]  sub_Hs=[9, 11, 13, 13, 15, 15]
+         v=0: det/sub_det=0.0, √det/√sub_det=0.2000
+  H= 43  det=       1  √det=1  sub_dets=[1, 25, 25, 49, 49, 81]  sub_Hs=[9, 11, 13, 13, 15, 15]
+         v=0: det/sub_det=0.0, √det/√sub_det=0.2000
+  H= 45  det=       1  √det=1  sub_dets=[1, 1, 1, 1, 1, 1]  sub_Hs=[11, 11, 11, 11, 11, 11]
+         v=0: det/sub_det=1.0, √det/√sub_det=1.0000
+
+========================================================================
+Part 3: H vs √det(I+2A)
+========================================================================
+
+For each iso class, compute H and √det(I+2A).
+Question: are H and √det related by a recurrence?
+
+
+n=3:
+  H=  1  √det=    1  H/√det=   1.000  H mod 3=1  √det mod 3=1  (H-1)/2=0
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+
+n=4:
+  H=  1  √det=    1  H/√det=   1.000  H mod 3=1  √det mod 3=1  (H-1)/2=0
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  5  √det=    1  H/√det=   5.000  H mod 3=2  √det mod 3=1  (H-1)/2=2
+
+n=5:
+  H=  1  √det=    1  H/√det=   1.000  H mod 3=1  √det mod 3=1  (H-1)/2=0
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  5  √det=    1  H/√det=   5.000  H mod 3=2  √det mod 3=1  (H-1)/2=2
+  H=  5  √det=    1  H/√det=   5.000  H mod 3=2  √det mod 3=1  (H-1)/2=2
+  H=  9  √det=    3  H/√det=   3.000  H mod 3=0  √det mod 3=0  (H-1)/2=4
+  H=  9  √det=    5  H/√det=   1.800  H mod 3=0  √det mod 3=2  (H-1)/2=4
+  H= 11  √det=    1  H/√det=  11.000  H mod 3=2  √det mod 3=1  (H-1)/2=5
+  H= 13  √det=    7  H/√det=   1.857  H mod 3=1  √det mod 3=1  (H-1)/2=6
+  H= 15  √det=    9  H/√det=   1.667  H mod 3=0  √det mod 3=0  (H-1)/2=7
+  H= 15  √det=    5  H/√det=   3.000  H mod 3=0  √det mod 3=2  (H-1)/2=7
+
+n=6:
+  H=  1  √det=    1  H/√det=   1.000  H mod 3=1  √det mod 3=1  (H-1)/2=0
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  3  √det=    3  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=1
+  H=  5  √det=    1  H/√det=   5.000  H mod 3=2  √det mod 3=1  (H-1)/2=2
+  H=  5  √det=    1  H/√det=   5.000  H mod 3=2  √det mod 3=1  (H-1)/2=2
+  H=  5  √det=    1  H/√det=   5.000  H mod 3=2  √det mod 3=1  (H-1)/2=2
+  H=  9  √det=    3  H/√det=   3.000  H mod 3=0  √det mod 3=0  (H-1)/2=4
+  H=  9  √det=    5  H/√det=   1.800  H mod 3=0  √det mod 3=2  (H-1)/2=4
+  H=  9  √det=    3  H/√det=   3.000  H mod 3=0  √det mod 3=0  (H-1)/2=4
+  H=  9  √det=    5  H/√det=   1.800  H mod 3=0  √det mod 3=2  (H-1)/2=4
+  H=  9  √det=    9  H/√det=   1.000  H mod 3=0  √det mod 3=0  (H-1)/2=4
+  H= 11  √det=    1  H/√det=  11.000  H mod 3=2  √det mod 3=1  (H-1)/2=5
+  H= 11  √det=    1  H/√det=  11.000  H mod 3=2  √det mod 3=1  (H-1)/2=5
+  H= 13  √det=    7  H/√det=   1.857  H mod 3=1  √det mod 3=1  (H-1)/2=6
+  H= 13  √det=    7  H/√det=   1.857  H mod 3=1  √det mod 3=1  (H-1)/2=6
+  H= 15  √det=    1  H/√det=  15.000  H mod 3=0  √det mod 3=1  (H-1)/2=7
+  H= 15  √det=    1  H/√det=  15.000  H mod 3=0  √det mod 3=1  (H-1)/2=7
+  H= 15  √det=    9  H/√det=   1.667  H mod 3=0  √det mod 3=0  (H-1)/2=7
+  H= 15  √det=    5  H/√det=   3.000  H mod 3=0  √det mod 3=2  (H-1)/2=7
+  H= 15  √det=    9  H/√det=   1.667  H mod 3=0  √det mod 3=0  (H-1)/2=7
+  H= 15  √det=    5  H/√det=   3.000  H mod 3=0  √det mod 3=2  (H-1)/2=7
+  H= 17  √det=    1  H/√det=  17.000  H mod 3=2  √det mod 3=1  (H-1)/2=8
+  H= 17  √det=    7  H/√det=   2.429  H mod 3=2  √det mod 3=1  (H-1)/2=8
+  H= 19  √det=    3  H/√det=   6.333  H mod 3=1  √det mod 3=0  (H-1)/2=9
+  H= 19  √det=    3  H/√det=   6.333  H mod 3=1  √det mod 3=0  (H-1)/2=9
+  H= 23  √det=    1  H/√det=  23.000  H mod 3=2  √det mod 3=1  (H-1)/2=11
+  H= 23  √det=    1  H/√det=  23.000  H mod 3=2  √det mod 3=1  (H-1)/2=11
+  H= 23  √det=    5  H/√det=   4.600  H mod 3=2  √det mod 3=2  (H-1)/2=11
+  H= 23  √det=    5  H/√det=   4.600  H mod 3=2  √det mod 3=2  (H-1)/2=11
+  H= 25  √det=    1  H/√det=  25.000  H mod 3=1  √det mod 3=1  (H-1)/2=12
+  H= 25  √det=    1  H/√det=  25.000  H mod 3=1  √det mod 3=1  (H-1)/2=12
+  H= 27  √det=    3  H/√det=   9.000  H mod 3=0  √det mod 3=0  (H-1)/2=13
+  H= 27  √det=    3  H/√det=   9.000  H mod 3=0  √det mod 3=0  (H-1)/2=13
+  H= 29  √det=    1  H/√det=  29.000  H mod 3=2  √det mod 3=1  (H-1)/2=14
+  H= 29  √det=    1  H/√det=  29.000  H mod 3=2  √det mod 3=1  (H-1)/2=14
+  H= 29  √det=    1  H/√det=  29.000  H mod 3=2  √det mod 3=1  (H-1)/2=14
+  H= 31  √det=    7  H/√det=   4.429  H mod 3=1  √det mod 3=1  (H-1)/2=15
+  H= 31  √det=    7  H/√det=   4.429  H mod 3=1  √det mod 3=1  (H-1)/2=15
+  H= 33  √det=    3  H/√det=  11.000  H mod 3=0  √det mod 3=0  (H-1)/2=16
+  H= 33  √det=    1  H/√det=  33.000  H mod 3=0  √det mod 3=1  (H-1)/2=16
+  H= 33  √det=    3  H/√det=  11.000  H mod 3=0  √det mod 3=0  (H-1)/2=16
+  H= 33  √det=    3  H/√det=  11.000  H mod 3=0  √det mod 3=0  (H-1)/2=16
+  H= 33  √det=    3  H/√det=  11.000  H mod 3=0  √det mod 3=0  (H-1)/2=16
+  H= 37  √det=    1  H/√det=  37.000  H mod 3=1  √det mod 3=1  (H-1)/2=18
+  H= 37  √det=    5  H/√det=   7.400  H mod 3=1  √det mod 3=2  (H-1)/2=18
+  H= 37  √det=    3  H/√det=  12.333  H mod 3=1  √det mod 3=0  (H-1)/2=18
+  H= 41  √det=    1  H/√det=  41.000  H mod 3=2  √det mod 3=1  (H-1)/2=20
+  H= 43  √det=    1  H/√det=  43.000  H mod 3=1  √det mod 3=1  (H-1)/2=21
+  H= 43  √det=    1  H/√det=  43.000  H mod 3=1  √det mod 3=1  (H-1)/2=21
+  H= 45  √det=    1  H/√det=  45.000  H mod 3=0  √det mod 3=1  (H-1)/2=22
+
+--- Key observations ---
+1. √det is ALWAYS odd (confirmed)
+2. H and √det are NOT equal in general (only at n=3)
+3. H/√det varies: can be 1, 3, 5, ... (always odd?)
+
+--- H/√det analysis ---
+
+n=3: H/√det values:
+  H/√det = 1.0000  (2 classes)
+
+n=4: H/√det values:
+  H/√det = 1.0000  (3 classes)
+  H/√det = 5.0000  (1 classes)
+
+n=5: H/√det values:
+  H/√det = 1.0000  (4 classes)
+  H/√det = 1.6667  (1 classes)
+  H/√det = 1.8000  (1 classes)
+  H/√det = 1.8571  (1 classes)
+  H/√det = 3.0000  (2 classes)
+  H/√det = 5.0000  (2 classes)
+  H/√det = 11.0000  (1 classes)
+
+n=6: H/√det values:
+  H/√det = 1.0000  (6 classes)
+  H/√det = 1.6667  (2 classes)
+  H/√det = 1.8000  (2 classes)
+  H/√det = 1.8571  (2 classes)
+  H/√det = 2.4286  (1 classes)
+  H/√det = 3.0000  (4 classes)
+  H/√det = 4.4286  (2 classes)
+  H/√det = 4.6000  (2 classes)
+  H/√det = 5.0000  (3 classes)
+  H/√det = 6.3333  (2 classes)
+  H/√det = 7.4000  (1 classes)
+  H/√det = 9.0000  (2 classes)
+  H/√det = 11.0000  (6 classes)
+  H/√det = 12.3333  (1 classes)
+  H/√det = 15.0000  (2 classes)
+  H/√det = 17.0000  (1 classes)
+  H/√det = 23.0000  (2 classes)
+  H/√det = 25.0000  (2 classes)
+  H/√det = 29.0000  (3 classes)
+  H/√det = 33.0000  (1 classes)
+  H/√det = 37.0000  (1 classes)
+  H/√det = 41.0000  (1 classes)
+  H/√det = 43.0000  (2 classes)
+  H/√det = 45.0000  (1 classes)
+
+========================================================================
+Part 4: Cofactor Expansion and Jacobsthal
+========================================================================
+
+For the matrix M = I + 2A = J + S, where J = 11^T and S = A-A^T:
+
+det(M) = det(J + S)
+
+By the matrix determinant lemma (rank-1 update):
+  det(J + S) = det(S) · (1 + 1^T S^{-1} 1)     [if S invertible]
+
+For odd n: det(S) = 0 (skew-symmetric with odd dimension).
+  So we need the adjugate: det(J+S) = 1^T adj(S) 1
+
+For even n: det(S) = Pf(S)^2 (Pfaffian squared).
+  det(J+S) = Pf(S)^2 · (1 + 1^T S^{-1} 1)
+
+JACOBSTHAL CONNECTION:
+  The Jacobsthal number J(n) = (2^n - (-1)^n)/3.
+  Note that 3 divides 2^n - (-1)^n always.
+
+  For the transitive tournament T_n (acyclic, score sequence 0,1,...,n-1):
+    H(T_n) = 1 (only one HP)
+    det(I+2A(T_n)) = 1
+
+  For the cyclic tournament C_3:
+    H(C_3) = 3 = J(4)
+    det(I+2A(C_3)) = 9 = J(4)^2
+
+  CONJECTURE: √det(I+2A) divides some Jacobsthal number?
+
+√det values and their Jacobsthal status:
+
+  n=3: √det values = [1, 3]
+    √det=1: Jacobsthal? True, sd mod 3 = 1, (sd²-1)/8 = 0
+    √det=3: Jacobsthal? True, sd mod 3 = 0, (sd²-1)/8 = 1
+
+  n=4: √det values = [1, 3]
+    √det=1: Jacobsthal? True, sd mod 3 = 1, (sd²-1)/8 = 0
+    √det=3: Jacobsthal? True, sd mod 3 = 0, (sd²-1)/8 = 1
+
+  n=5: √det values = [1, 3, 5, 7, 9]
+    √det=1: Jacobsthal? True, sd mod 3 = 1, (sd²-1)/8 = 0
+    √det=3: Jacobsthal? True, sd mod 3 = 0, (sd²-1)/8 = 1
+    √det=5: Jacobsthal? True, sd mod 3 = 2, (sd²-1)/8 = 3
+    √det=7: Jacobsthal? False, sd mod 3 = 1, (sd²-1)/8 = 6
+    √det=9: Jacobsthal? False, sd mod 3 = 0, (sd²-1)/8 = 10
+
+  n=6: √det values = [1, 3, 5, 7, 9]
+    √det=1: Jacobsthal? True, sd mod 3 = 1, (sd²-1)/8 = 0
+    √det=3: Jacobsthal? True, sd mod 3 = 0, (sd²-1)/8 = 1
+    √det=5: Jacobsthal? True, sd mod 3 = 2, (sd²-1)/8 = 3
+    √det=7: Jacobsthal? False, sd mod 3 = 1, (sd²-1)/8 = 6
+    √det=9: Jacobsthal? False, sd mod 3 = 0, (sd²-1)/8 = 10
+
+========================================================================
+Part 5: det(I+2A) for Special Tournaments
+========================================================================
+
+Paley P_3 (the 3-cycle):
+  H = 3, det(I+2A) = 9, √det = 3
+
+Transitive tournaments (H=1):
+  n=2: H=1, det(I+2A)=1
+  n=3: H=1, det(I+2A)=1
+  n=4: H=1, det(I+2A)=1
+  n=5: H=1, det(I+2A)=1
+  n=6: H=1, det(I+2A)=1
+  n=7: H=1, det(I+2A)=1
+
+Paley P_5 (QR={1,4}, directed 5-cycle):
+  H = 10, det(I+2A) = 125, √det = None
+
+Paley P_7 (QR={1,2,4}):
+  H = 189, det(I+2A) = 2401, √det = 49
+
+--- Eigenvalue product ---
+det(I+2A) = ∏(1+2λ_k) where λ_k are eigenvalues of A
+  P_3: eigenvalues of A = [np.float64(0.9999999999999998), np.float64(-0.5000000000000003), np.float64(-0.5000000000000003)]...
+    ∏(1+2λ) = 9.0 + 0.0i, det = 9
+  P_5: eigenvalues of A = [np.float64(1.9999999999999998), np.float64(0.6180339887498948), np.float64(0.6180339887498947), np.float64(-1.618033988749894)]...
+    ∏(1+2λ) = 125.0 + 0.0i, det = 125
+  P_7: eigenvalues of A = [np.float64(3.0000000000000013), np.float64(-0.4999999999999998), np.float64(-0.4999999999999998), np.float64(-0.4999999999999998)]...
+    ∏(1+2λ) = 2401.0 + -0.0i, det = 2401
+
+========================================================================
+Part 6: DUAL RECURRENCES — H (additive) vs det (multiplicative)
+========================================================================
+
+Under vertex deletion T → T-v:
+
+ADDITIVE (H):
+  H(T) = H(T-v) + 2·Σ_{C∋v} μ(C)
+  Delta is ALWAYS positive (removing vertex can't increase H? No...)
+  Delta is ALWAYS even.
+
+MULTIPLICATIVE (det):
+  det(I+2A(T)) = det(I+2A(T-v)) · factor(v)
+  Question: what is factor(v)?
+
+  By Schur complement: if M = [[M_{-v}, w], [w^T, m_vv]]:
+    det(M) = det(M_{-v}) · (m_vv - w^T M_{-v}^{-1} w)
+  where m_vv = 1 + 2·0 = 1 (diagonal of I+2A) and
+  w is the column/row of interactions with v.
+
+  So factor(v) = 1 - w^T (J+S)_{-v}^{-1} w
+  where w = (1+2A_v) is the v-th column of I+2A (minus diagonal).
+  Actually w = (J+S)_{v column, minus diagonal entry}.
+
+Let's compute the multiplicative factors:
+
+
+n=4:
+  H=  1  det=     1  factors=[1.0, 1.0, 1.0, 1.0]
+    ∏ factors = 1.00, det^4/(∏ sub_dets) = 1.00
+  H=  3  det=     9  factors=[9.0, 9.0, 9.0, 1.0]
+    ∏ factors = 729.00, det^4/(∏ sub_dets) = 729.00
+  H=  3  det=     9  factors=[9.0, 1.0, 9.0, 9.0]
+    ∏ factors = 729.00, det^4/(∏ sub_dets) = 729.00
+  H=  5  det=     1  factors=[1.0, 0.11, 0.11, 1.0]
+    ∏ factors = 0.01, det^4/(∏ sub_dets) = 0.01
+
+n=5:
+  H=  1  det=     1  factors=[1.0, 1.0, 1.0, 1.0, 1.0]
+    ∏ factors = 1.00, det^5/(∏ sub_dets) = 1.00
+  H=  3  det=     9  factors=[9.0, 9.0, 9.0, 1.0, 1.0]
+    ∏ factors = 729.00, det^5/(∏ sub_dets) = 729.00
+  H=  3  det=     9  factors=[9.0, 1.0, 9.0, 9.0, 1.0]
+    ∏ factors = 729.00, det^5/(∏ sub_dets) = 729.00
+  H=  3  det=     9  factors=[9.0, 1.0, 1.0, 9.0, 9.0]
+    ∏ factors = 729.00, det^5/(∏ sub_dets) = 729.00
+  H=  5  det=     1  factors=[1.0, 0.11, 0.11, 1.0, 1.0]
+    ∏ factors = 0.01, det^5/(∏ sub_dets) = 0.01
+  H=  5  det=     1  factors=[1.0, 1.0, 0.11, 0.11, 1.0]
+    ∏ factors = 0.01, det^5/(∏ sub_dets) = 0.01
+
+========================================================================
+Part 7: Sign Patterns of det(I+2A)
+========================================================================
+Is det(I+2A) always positive?
+  n=3: 2 classes, 0 negative det, 0 zero det
+  n=4: 4 classes, 0 negative det, 0 zero det
+  n=5: 12 classes, 0 negative det, 0 zero det
+  n=6: 52 classes, 0 negative det, 0 zero det
+
+========================================================================
+Part 8: H × √det Products and Sums
+========================================================================
+Exploring H + √det, H - √det, H × √det, H² - det:
+
+n=3:
+  H=  1  √det=   1  H+√det=   2  H-√det=   0  H·√det=     1  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+
+n=4:
+  H=  1  √det=   1  H+√det=   2  H-√det=   0  H·√det=     1  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  5  √det=   1  H+√det=   6  H-√det=   4  H·√det=     5  H²-det=      24
+
+n=5:
+  H=  1  √det=   1  H+√det=   2  H-√det=   0  H·√det=     1  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  5  √det=   1  H+√det=   6  H-√det=   4  H·√det=     5  H²-det=      24
+  H=  5  √det=   1  H+√det=   6  H-√det=   4  H·√det=     5  H²-det=      24
+  H=  9  √det=   3  H+√det=  12  H-√det=   6  H·√det=    27  H²-det=      72
+  H=  9  √det=   5  H+√det=  14  H-√det=   4  H·√det=    45  H²-det=      56
+  H= 11  √det=   1  H+√det=  12  H-√det=  10  H·√det=    11  H²-det=     120
+  H= 13  √det=   7  H+√det=  20  H-√det=   6  H·√det=    91  H²-det=     120
+  H= 15  √det=   9  H+√det=  24  H-√det=   6  H·√det=   135  H²-det=     144
+  H= 15  √det=   5  H+√det=  20  H-√det=  10  H·√det=    75  H²-det=     200
+
+n=6:
+  H=  1  √det=   1  H+√det=   2  H-√det=   0  H·√det=     1  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  3  √det=   3  H+√det=   6  H-√det=   0  H·√det=     9  H²-det=       0
+  H=  5  √det=   1  H+√det=   6  H-√det=   4  H·√det=     5  H²-det=      24
+  H=  5  √det=   1  H+√det=   6  H-√det=   4  H·√det=     5  H²-det=      24
+  H=  5  √det=   1  H+√det=   6  H-√det=   4  H·√det=     5  H²-det=      24
+  H=  9  √det=   3  H+√det=  12  H-√det=   6  H·√det=    27  H²-det=      72
+  H=  9  √det=   5  H+√det=  14  H-√det=   4  H·√det=    45  H²-det=      56
+  H=  9  √det=   3  H+√det=  12  H-√det=   6  H·√det=    27  H²-det=      72
+  H=  9  √det=   5  H+√det=  14  H-√det=   4  H·√det=    45  H²-det=      56
+  H=  9  √det=   9  H+√det=  18  H-√det=   0  H·√det=    81  H²-det=       0
+  H= 11  √det=   1  H+√det=  12  H-√det=  10  H·√det=    11  H²-det=     120
+  H= 11  √det=   1  H+√det=  12  H-√det=  10  H·√det=    11  H²-det=     120
+  H= 13  √det=   7  H+√det=  20  H-√det=   6  H·√det=    91  H²-det=     120
+  H= 13  √det=   7  H+√det=  20  H-√det=   6  H·√det=    91  H²-det=     120
+  H= 15  √det=   1  H+√det=  16  H-√det=  14  H·√det=    15  H²-det=     224
+  H= 15  √det=   1  H+√det=  16  H-√det=  14  H·√det=    15  H²-det=     224
+  H= 15  √det=   9  H+√det=  24  H-√det=   6  H·√det=   135  H²-det=     144
+  H= 15  √det=   5  H+√det=  20  H-√det=  10  H·√det=    75  H²-det=     200
+  H= 15  √det=   9  H+√det=  24  H-√det=   6  H·√det=   135  H²-det=     144
+  H= 15  √det=   5  H+√det=  20  H-√det=  10  H·√det=    75  H²-det=     200
+  H= 17  √det=   1  H+√det=  18  H-√det=  16  H·√det=    17  H²-det=     288
+  H= 17  √det=   7  H+√det=  24  H-√det=  10  H·√det=   119  H²-det=     240
+  H= 19  √det=   3  H+√det=  22  H-√det=  16  H·√det=    57  H²-det=     352
+  H= 19  √det=   3  H+√det=  22  H-√det=  16  H·√det=    57  H²-det=     352
+  H= 23  √det=   1  H+√det=  24  H-√det=  22  H·√det=    23  H²-det=     528
+  H= 23  √det=   1  H+√det=  24  H-√det=  22  H·√det=    23  H²-det=     528
+  H= 23  √det=   5  H+√det=  28  H-√det=  18  H·√det=   115  H²-det=     504
+  H= 23  √det=   5  H+√det=  28  H-√det=  18  H·√det=   115  H²-det=     504
+  H= 25  √det=   1  H+√det=  26  H-√det=  24  H·√det=    25  H²-det=     624
+  H= 25  √det=   1  H+√det=  26  H-√det=  24  H·√det=    25  H²-det=     624
+  H= 27  √det=   3  H+√det=  30  H-√det=  24  H·√det=    81  H²-det=     720
+  H= 27  √det=   3  H+√det=  30  H-√det=  24  H·√det=    81  H²-det=     720
+  H= 29  √det=   1  H+√det=  30  H-√det=  28  H·√det=    29  H²-det=     840
+  H= 29  √det=   1  H+√det=  30  H-√det=  28  H·√det=    29  H²-det=     840
+  H= 29  √det=   1  H+√det=  30  H-√det=  28  H·√det=    29  H²-det=     840
+  H= 31  √det=   7  H+√det=  38  H-√det=  24  H·√det=   217  H²-det=     912
+  H= 31  √det=   7  H+√det=  38  H-√det=  24  H·√det=   217  H²-det=     912
+  H= 33  √det=   3  H+√det=  36  H-√det=  30  H·√det=    99  H²-det=    1080
+  H= 33  √det=   1  H+√det=  34  H-√det=  32  H·√det=    33  H²-det=    1088
+  H= 33  √det=   3  H+√det=  36  H-√det=  30  H·√det=    99  H²-det=    1080
+  H= 33  √det=   3  H+√det=  36  H-√det=  30  H·√det=    99  H²-det=    1080
+  H= 33  √det=   3  H+√det=  36  H-√det=  30  H·√det=    99  H²-det=    1080
+  H= 37  √det=   1  H+√det=  38  H-√det=  36  H·√det=    37  H²-det=    1368
+  H= 37  √det=   5  H+√det=  42  H-√det=  32  H·√det=   185  H²-det=    1344
+  H= 37  √det=   3  H+√det=  40  H-√det=  34  H·√det=   111  H²-det=    1360
+  H= 41  √det=   1  H+√det=  42  H-√det=  40  H·√det=    41  H²-det=    1680
+  H= 43  √det=   1  H+√det=  44  H-√det=  42  H·√det=    43  H²-det=    1848
+  H= 43  √det=   1  H+√det=  44  H-√det=  42  H·√det=    43  H²-det=    1848
+  H= 45  √det=   1  H+√det=  46  H-√det=  44  H·√det=    45  H²-det=    2024
+
+========================================================================
+SYNTHESIS
+========================================================================
+
+THE DUAL RECURRENCE STRUCTURE:
+
+                    TOURNAMENT T
+                    /          \
+           H(T) = I(CG,2)     det(I+2A) = (Pf sum)²
+           (ADDITIVE)          (MULTIPLICATIVE)
+           |                   |
+  H = H' + 2Σμ         det = det' · (Schur factor)
+  (Jacobsthal            (Jacobsthal-multiplicative
+   additive tower)        tower?)
+           |                   |
+           \                  /
+            Both encode tournament structure
+            H captures CYCLE information
+            det captures MATCHING information
+
+KEY FINDING: H and √det are NOT simply related.
+  At n=3: H = √det always (both = 1 or 3)
+  At n=4: H/√det ∈ {1, 5}
+  At n≥5: H/√det takes many rational values
+
+BUT: H² - det takes suggestive values.
+  H² is the "doubled" additive invariant
+  det is the multiplicative invariant
+  Their DIFFERENCE should encode the "interaction" term.
+
+The JACOBSTHAL connection:
+  H follows a Jacobsthal ADDITIVE recurrence (evaluation of indep poly at x=2)
+  det follows a MULTIPLICATIVE recurrence (product of eigenvalue factors)
+  Both are connected through x=2 being the Jacobsthal evaluation point.
+
+OPEN: Is there a single recurrence that generates BOTH H and √det simultaneously?
+  Perhaps: (H, √det) → (H', √det') under vertex deletion?
+  This would be a 2D recurrence connecting the additive and multiplicative worlds.
+
