@@ -1,0 +1,90 @@
+======================================================================
+THEOREM (THM-EIG-CONTRACT): k=0 eigenspace is CONTRACTIBLE for P_7
+opus-2026-03-13-S71b — VERIFIED computationally
+======================================================================
+
+STATEMENT: For P_7, the k=0 eigenspace chain complex
+  ... → Omega_d^{(0)} → Omega_{d-1}^{(0)} → ... → Omega_0^{(0)} → F → 0
+is exact (contractible). All Betti numbers β_d^{(0)} = 0 for d ≥ 1,
+with β_0^{(0)} = 1.
+
+COMPUTED DATA (P_7, m=3):
+
+  k=0: bdry_ranks = [0, 0, 3, 3, 6, 3, 3, 0]
+       beta = [1, 0, 0, 0, 0, 0, 0]
+       chi^{(0)} = 1
+
+  k≠0 (all 6 eigenspaces identical):
+       bdry_ranks = [0, 1, 2, 4, 5, 3, 3, 0]
+       beta = [0, 0, 0, 0, 1, 0, 0]
+       chi^{(k)} = 1
+
+CONSEQUENCE: chi(P_7) = 7 * 1 = 7 = p. ✓
+
+Total Betti: [1, 0, 0, 0, 6, 0, 0]
+  β_0 = 1 (from k=0)
+  β_4 = 6 (from k≠0, each contributing β_4 = 1)
+  β_{m+1} = p-1 = 6 = C(m+1, 2) ✓
+
+======================================================================
+KEY STRUCTURAL RESULTS
+======================================================================
+
+1. Z_m ACTS FREELY ON DIFF-SEQS (d ≥ 1):
+   The QR multiplication group Z_m = {q ∈ QR} acts on diff-seqs by
+   g_q: (s_1,...,s_d) → (qs_1,...,qs_d).
+   Fixed points: q*s_i = s_i ⟹ q = 1 (since s_i ≠ 0).
+   So the action is free for all d ≥ 1.
+
+2. HOPF TRACE FORMULA for g ∈ Z_m, g ≠ id:
+   L(g) = sum_d (-1)^d tr(g | Omega_d^{(0)})
+        = tr(g | Omega_0^{(0)}) + sum_{d≥1} (-1)^d * 0
+        = 1
+
+   Also L(g) = sum_d (-1)^d tr(g | H_d^{(0)}) = 1.
+
+3. AVERAGING OVER Z_m:
+   (1/m) sum_{g ∈ Z_m} L(g) = (chi^{(0)} + m - 1) / m
+   = sum_d (-1)^d dim(H_d^{(0), Z_m})
+   = chi of the Z_m-invariant homology (orbit complex Euler char)
+
+   So: chi^{(0)} = m * chi^{orbit} - m + 1.
+
+   If the orbit complex is acyclic (chi^{orbit} = 1):
+   chi^{(0)} = 1. ✓
+
+4. WHY chi^{(k)} = chi^{(0)} FOR ALL k:
+   All eigenspaces have the same Omega dims (THM-125).
+   chi^{(k)} = sum (-1)^d Omega_d^{(k)} = sum (-1)^d Omega_d^{(0)} = chi^{(0)}.
+   Therefore chi = p * chi^{(0)}.
+
+======================================================================
+PER-EIGENSPACE BETTI DECOMPOSITION (P_7)
+======================================================================
+
+The (p-1) non-zero eigenspaces form 2 orbits under Z_m action:
+  - QR orbit: {k : k ∈ QR} = {1, 2, 4}, size m = 3
+  - NQR orbit: {k : k ∈ NQR} = {3, 5, 6}, size m = 3
+
+For P_7: both orbits have the same Betti: β = [0,0,0,0,1,0,0].
+
+General pattern: each non-zero eigenspace has chi^{(k)} = 1, with:
+  β_{m+1}^{(k)} - β_m^{(k)} = 1
+
+For P_7 (m=3): β_3 = 0, β_4 = 1 in each k≠0 eigenspace.
+Total: β_3 = 0 = m(m-3)/2, β_4 = 6 = C(4,2). ✓
+
+======================================================================
+CONJECTURE (HYP-675): k=0 eigenspace is contractible for ALL P_p, p ≥ 7.
+
+This implies:
+  - chi(P_p) = p for all Paley primes p ≥ 7
+  - β_d^{(0)} = 0 for all d ≥ 1
+  - The orbit complex (Z_m quotient) is acyclic
+
+Verification status:
+  P_7:  VERIFIED ✓ (this file)
+  P_11: COMPUTING... (boundary ranks for all 11 eigenspaces)
+  P_19: NOT FEASIBLE (OOM at degree 9+)
+
+======================================================================
