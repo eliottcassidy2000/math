@@ -1,0 +1,154 @@
+======================================================================
+ANALYSIS 1: BALANCE CONDITION FREQUENCY BY n
+======================================================================
+
+  n=5: Balance condition requires outside vertex w to beat ALL or NONE of S
+    Total (tournament, S) pairs: 5120
+    Balanced: 640 (12.5%)
+
+  n=6: Balance condition requires ALL 4 vertices in S to have SAME out-degree to outside
+    Total (tournament, S) pairs: 491520
+    Balanced: 34560 (7.0%)
+
+  n=7: Balance requires ALL 4 vertices in S to have SAME out-degree to 3 outside vertices
+
+  Case 1 (bits=4658): S=[1, 2, 3, 5], outside=[0, 4, 6]
+    vertex 1: out-degree to outside = 1
+    vertex 2: out-degree to outside = 1
+    vertex 3: out-degree to outside = 1
+    vertex 5: out-degree to outside = 1
+
+
+  DETAILED: Lambda preservation for a in S, b outside S:
+    lambda[1][0]: changes from x=[(2, 'in_S'), (5, 'in_S')]
+    lambda[1][4]: changes from x=[(2, 'in_S'), (5, 'in_S')]
+    lambda[2][0]: changes from x=[(1, 'in_S'), (3, 'in_S')]
+    lambda[2][4]: changes from x=[(1, 'in_S'), (3, 'in_S')]
+    lambda[3][0]: changes from x=[(2, 'in_S'), (5, 'in_S')]
+    lambda[3][4]: changes from x=[(2, 'in_S'), (5, 'in_S')]
+    lambda[5][0]: changes from x=[(1, 'in_S'), (3, 'in_S')]
+    lambda[5][4]: changes from x=[(1, 'in_S'), (3, 'in_S')]
+
+  Lambda comparison (old vs new):
+    ALL lambda values preserved!
+
+======================================================================
+ANALYSIS 2: WHY c7 CHANGES UNDER THE REVERSAL
+======================================================================
+    9 directed HCs
+    HC (0, 6, 1, 5, 2, 4, 3): 2 S-internal arcs: [(1, 5), (5, 2)]
+    HC (0, 6, 1, 5, 3, 2, 4): 3 S-internal arcs: [(1, 5), (5, 3), (3, 2)]
+    HC (0, 6, 2, 1, 5, 4, 3): 2 S-internal arcs: [(2, 1), (1, 5)]
+    HC (0, 6, 2, 4, 1, 5, 3): 2 S-internal arcs: [(1, 5), (5, 3)]
+    HC (0, 6, 3, 1, 5, 2, 4): 3 S-internal arcs: [(3, 1), (1, 5), (5, 2)]
+    HC (0, 6, 3, 2, 1, 5, 4): 3 S-internal arcs: [(3, 2), (2, 1), (1, 5)]
+    HC (0, 6, 5, 2, 4, 3, 1): 2 S-internal arcs: [(5, 2), (3, 1)]
+    HC (0, 6, 5, 3, 2, 4, 1): 2 S-internal arcs: [(5, 3), (3, 2)]
+    HC (0, 6, 5, 4, 3, 2, 1): 2 S-internal arcs: [(3, 2), (2, 1)]
+    After reversal: 8 directed HCs
+    Shared: 0, Destroyed: 9, Created: 8
+    Net change: -1
+    DESTROYED: (0, 6, 1, 5, 2, 4, 3)
+    DESTROYED: (0, 6, 1, 5, 3, 2, 4)
+    DESTROYED: (0, 6, 2, 1, 5, 4, 3)
+    DESTROYED: (0, 6, 2, 4, 1, 5, 3)
+    DESTROYED: (0, 6, 3, 1, 5, 2, 4)
+    DESTROYED: (0, 6, 3, 2, 1, 5, 4)
+    DESTROYED: (0, 6, 5, 2, 4, 3, 1)
+    DESTROYED: (0, 6, 5, 3, 2, 4, 1)
+    DESTROYED: (0, 6, 5, 4, 3, 2, 1)
+    CREATED:   (0, 6, 1, 2, 3, 5, 4)
+    CREATED:   (0, 6, 1, 2, 5, 4, 3)
+    CREATED:   (0, 6, 2, 3, 5, 4, 1)
+    CREATED:   (0, 6, 2, 4, 3, 5, 1)
+    CREATED:   (0, 6, 2, 5, 4, 1, 3)
+    CREATED:   (0, 6, 3, 5, 1, 2, 4)
+    CREATED:   (0, 6, 5, 1, 2, 4, 3)
+    CREATED:   (0, 6, 5, 4, 1, 2, 3)
+
+  H=109: lambda-preserving S = [1, 2, 4, 5]
+    8 directed HCs
+    HC (0, 6, 1, 5, 2, 4, 3): 3 S-internal arcs: [(1, 5), (5, 2), (2, 4)]
+    HC (0, 6, 1, 5, 4, 3, 2): 2 S-internal arcs: [(1, 5), (5, 4)]
+    HC (0, 6, 2, 4, 1, 5, 3): 3 S-internal arcs: [(2, 4), (4, 1), (1, 5)]
+    HC (0, 6, 4, 1, 5, 3, 2): 2 S-internal arcs: [(4, 1), (1, 5)]
+    HC (0, 6, 4, 3, 1, 5, 2): 2 S-internal arcs: [(1, 5), (5, 2)]
+    HC (0, 6, 5, 2, 4, 3, 1): 2 S-internal arcs: [(5, 2), (2, 4)]
+    HC (0, 6, 5, 3, 2, 4, 1): 2 S-internal arcs: [(2, 4), (4, 1)]
+    HC (0, 6, 5, 4, 3, 1, 2): 2 S-internal arcs: [(5, 4), (1, 2)]
+    After reversal: 9 directed HCs
+    Shared: 0, Destroyed: 8, Created: 9
+    Net change: 1
+    DESTROYED: (0, 6, 1, 5, 2, 4, 3)
+    DESTROYED: (0, 6, 1, 5, 4, 3, 2)
+    DESTROYED: (0, 6, 2, 4, 1, 5, 3)
+    DESTROYED: (0, 6, 4, 1, 5, 3, 2)
+    DESTROYED: (0, 6, 4, 3, 1, 5, 2)
+    DESTROYED: (0, 6, 5, 2, 4, 3, 1)
+    DESTROYED: (0, 6, 5, 3, 2, 4, 1)
+    DESTROYED: (0, 6, 5, 4, 3, 1, 2)
+    CREATED:   (0, 6, 1, 4, 2, 5, 3)
+    CREATED:   (0, 6, 1, 4, 5, 3, 2)
+    CREATED:   (0, 6, 2, 1, 4, 5, 3)
+    CREATED:   (0, 6, 2, 5, 1, 4, 3)
+    CREATED:   (0, 6, 4, 2, 5, 3, 1)
+    CREATED:   (0, 6, 4, 3, 2, 5, 1)
+    CREATED:   (0, 6, 4, 5, 3, 2, 1)
+    CREATED:   (0, 6, 5, 1, 4, 3, 2)
+    CREATED:   (0, 6, 5, 3, 1, 4, 2)
+
+======================================================================
+ANALYSIS 3: THE PARTITION 4+3=7
+======================================================================
+
+  Distribution of S-internal arc counts in HCs:
+    2 S-internal arcs: 6 HCs (67%)
+    3 S-internal arcs: 3 HCs (33%)
+
+======================================================================
+ANALYSIS 4: PREDICTION FOR n=8
+======================================================================
+
+At n=7: 4-vertex reversal affects C(4,2)=6 out of C(7,2)=21 arcs (28.6%).
+Balance requires all 4 S-vertices to have same out-degree to 3 outside vertices.
+
+At n=8: 4-vertex reversal affects 6/28 = 21.4% of arcs. Outside has 4.
+Same balance condition, but with more outside flexibility.
+
+PREDICTION: Lambda-preserving 4-vertex reversals that change c_n exist for ALL n >= 7.
+The onset is EXACTLY at n=7 because:
+1. 4+3=7 is the first partition where outside has >= 3 vertices
+2. 3 outside vertices = enough routing options for HCs
+3. The balance condition (equal out-degree to outside) has multiple solutions
+
+For n=5: outside=1, only two routing options. Too rigid.
+For n=6: outside=2, three routing options. Still too rigid (no c6 to change anyway,
+   since c6 is always 0 for tournaments and 6-cycles don't exist as they'd be even).
+For n=7: outside=3, four routing options. Just enough freedom for c7 to vary.
+
+WAIT: Actually the issue at n=6 is simpler: there ARE no Hamiltonian 6-cycles
+in a tournament on 6 vertices (6 is even). So c6 doesn't exist.
+The largest odd cycle at n=6 is c5. But c5 involves 5 vertices, leaving only 1 out.
+A 4-vertex reversal on 5-cycles: S has 4 of the 5 cycle vertices,
+plus 1 outside vertex = not enough freedom.
+
+This gives the KEY INSIGHT: n=7 onset because it's the FIRST n where:
+- n is odd (so c_n exists as directed Hamiltonian cycles)
+- n - 4 = 3 >= 3 outside vertices (enough routing flexibility)
+- The balance condition can be satisfied non-trivially
+
+======================================================================
+ANALYSIS 5: THE 2:1 FIBER RATIO
+======================================================================
+  Checking lambda-preserving reversals for H=111 tournaments:
+    bits=4658: rev at S=(1, 2, 3, 5), H_rev=109
+
+  Checking lambda-preserving reversals for H=109 tournaments:
+    bits=4728: rev at S=(1, 2, 4, 5), H_rev=111
+    Total reversals: 1
+    bits=9388: rev at S=(1, 4, 5, 6), H_rev=111
+    Total reversals: 1
+
+======================================================================
+DONE.
+======================================================================
