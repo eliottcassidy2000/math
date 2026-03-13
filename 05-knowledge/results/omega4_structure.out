@@ -1,0 +1,49 @@
+======================================================================
+OMEGA_4 STRUCTURE: n = 5 (regular HPs)
+======================================================================
+  Omega_4 values: [0, 1, 2, 5]
+  Omega_4 distribution: {0: 280, 1: 600, 2: 120, 5: 24}
+
+======================================================================
+OMEGA_4 STRUCTURE: n = 6
+======================================================================
+  Total tournaments: 32768
+  Computing Omega_4 for all tournaments...
+    5000/32768...
+    10000/32768...
+    15000/32768...
+    20000/32768...
+    25000/32768...
+    30000/32768...
+  Omega_4 values at n=6: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16]
+  Distribution: {0: 80, 2: 720, 3: 6240, 4: 7920, 5: 2880, 6: 6480, 7: 1440, 8: 1440, 9: 2880, 10: 1728, 12: 240, 16: 720}
+
+  Verifying Omega_4 = sum over 5-vertex subsets...
+    CONFIRMED: Omega_4 = sum over C(6,5)=6 five-vertex subsets (500 checked)
+
+  omega4_local by 5-vertex tournament type (score sequence):
+    scores=(0, 1, 2, 3, 4), t3=0: omega4_local ∈ [1], counts=Counter({1: 23040})
+    scores=(0, 1, 3, 3, 3), t3=1: omega4_local ∈ [0], counts=Counter({0: 7680})
+    scores=(0, 2, 2, 2, 4), t3=1: omega4_local ∈ [0], counts=Counter({0: 7680})
+    scores=(0, 2, 2, 3, 3), t3=2: omega4_local ∈ [1], counts=Counter({1: 23040})
+    scores=(1, 1, 1, 3, 4), t3=1: omega4_local ∈ [0], counts=Counter({0: 7680})
+    scores=(1, 1, 2, 2, 4), t3=2: omega4_local ∈ [1], counts=Counter({1: 23040})
+    scores=(1, 1, 2, 3, 3), t3=3: omega4_local ∈ [0, 1], counts=Counter({1: 23040, 0: 23040})
+    scores=(1, 2, 2, 2, 3), t3=4: omega4_local ∈ [0, 1, 2], counts=Counter({2: 23040, 1: 23040, 0: 7680})
+    scores=(2, 2, 2, 2, 2), t3=5: omega4_local ∈ [5], counts=Counter({5: 4608})
+
+  Is omega4_local a function of (score_seq, t3)?
+    NOT determined at scores=(1, 1, 2, 3, 3), t3=3: vals=[0, 1]
+    NOT determined at scores=(1, 2, 2, 2, 3), t3=4: vals=[0, 1, 2]
+
+  Is omega4_local a function of score_seq alone?
+    NOT determined at scores=(1, 1, 2, 3, 3): vals=[0, 1]
+    NOT determined at scores=(1, 2, 2, 2, 3): vals=[0, 1, 2]
+
+  Correlations:
+    corr(Omega_4, t3) = 0.534522
+
+  C(6,5) = 6
+  Correction = C(n,5) - Omega_4: values = [-10, -6, -4, -3, -2, -1, 0, 1, 2, 3, 4, 6]
+
+DONE.

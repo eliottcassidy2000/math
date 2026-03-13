@@ -1,0 +1,92 @@
+======================================================================
+OMEGA_4 FINER INVARIANTS: n = 6
+======================================================================
+  Collecting data...
+    5000/32768...
+    10000/32768...
+    15000/32768...
+    20000/32768...
+    25000/32768...
+    30000/32768...
+
+  Number of 5-vertex tournament isomorphism types: 12
+
+  omega4_local by isomorphism type:
+    iso=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), scores=(0, 1, 2, 3, 4), t3=0, tt=10, c4=0: omega4_local=1 (all 23040 agree)
+    iso=(0, 0, 0, 0, 0, 0, 0, 0, 1, 0), scores=(0, 1, 3, 3, 3), t3=1, tt=9, c4=0: omega4_local=0 (all 7680 agree)
+    iso=(0, 0, 0, 0, 0, 0, 1, 0, 0, 0), scores=(0, 2, 2, 3, 3), t3=2, tt=8, c4=4: omega4_local=1 (all 23040 agree)
+    iso=(0, 0, 0, 0, 0, 0, 1, 0, 0, 1), scores=(0, 2, 2, 2, 4), t3=1, tt=9, c4=0: omega4_local=0 (all 7680 agree)
+    iso=(0, 0, 0, 1, 0, 0, 0, 0, 0, 0), scores=(1, 1, 2, 3, 3), t3=3, tt=7, c4=12: omega4_local=1 (all 23040 agree)
+    iso=(0, 0, 0, 1, 0, 0, 0, 0, 0, 1), scores=(1, 1, 2, 2, 4), t3=2, tt=8, c4=4: omega4_local=1 (all 23040 agree)
+    iso=(0, 0, 0, 1, 0, 0, 0, 0, 1, 0), scores=(1, 1, 2, 3, 3), t3=3, tt=7, c4=8: omega4_local=0 (all 23040 agree)
+    iso=(0, 0, 0, 1, 0, 0, 0, 0, 1, 1), scores=(1, 1, 1, 3, 4), t3=1, tt=9, c4=0: omega4_local=0 (all 7680 agree)
+    iso=(0, 0, 0, 1, 0, 0, 1, 0, 0, 0), scores=(1, 2, 2, 2, 3), t3=4, tt=6, c4=16: omega4_local=2 (all 23040 agree)
+    iso=(0, 0, 0, 1, 0, 1, 0, 0, 0, 0), scores=(1, 2, 2, 2, 3), t3=4, tt=6, c4=12: omega4_local=0 (all 7680 agree)
+    iso=(0, 0, 0, 1, 0, 1, 0, 0, 0, 1), scores=(1, 2, 2, 2, 3), t3=4, tt=6, c4=12: omega4_local=1 (all 23040 agree)
+    iso=(0, 0, 1, 1, 0, 0, 1, 0, 0, 0), scores=(2, 2, 2, 2, 2), t3=5, tt=5, c4=20: omega4_local=5 (all 4608 agree)
+
+  Is omega4_local determined by isomorphism type?
+    YES — omega4_local is a function of tournament isomorphism type
+
+  SUMMARY TABLE:
+  scores                 t3   tt   c4 o4_local
+  -------------------- ---- ---- ---- --------
+  (0, 1, 2, 3, 4)         0   10    0        1
+  (0, 1, 3, 3, 3)         1    9    0        0
+  (0, 2, 2, 3, 3)         2    8    4        1
+  (0, 2, 2, 2, 4)         1    9    0        0
+  (1, 1, 2, 3, 3)         3    7   12        1
+  (1, 1, 2, 2, 4)         2    8    4        1
+  (1, 1, 2, 3, 3)         3    7    8        0
+  (1, 1, 1, 3, 4)         1    9    0        0
+  (1, 2, 2, 2, 3)         4    6   16        2
+  (1, 2, 2, 2, 3)         4    6   12        0
+  (1, 2, 2, 2, 3)         4    6   12        1
+  (2, 2, 2, 2, 2)         5    5   20        5
+
+  Correction B = 5 - omega4_local:
+    scores=(0, 1, 2, 3, 4)      t3=0, B=4
+    scores=(0, 1, 3, 3, 3)      t3=1, B=5
+    scores=(0, 2, 2, 3, 3)      t3=2, B=4
+    scores=(0, 2, 2, 2, 4)      t3=1, B=5
+    scores=(1, 1, 2, 3, 3)      t3=3, B=4
+    scores=(1, 1, 2, 2, 4)      t3=2, B=4
+    scores=(1, 1, 2, 3, 3)      t3=3, B=5
+    scores=(1, 1, 1, 3, 4)      t3=1, B=5
+    scores=(1, 2, 2, 2, 3)      t3=4, B=3
+    scores=(1, 2, 2, 2, 3)      t3=4, B=5
+    scores=(1, 2, 2, 2, 3)      t3=4, B=4
+    scores=(2, 2, 2, 2, 2)      t3=5, B=0
+
+  Parity analysis:
+    scores=(0, 1, 2, 3, 4)      t3≡0 c4≡0 o4=1
+    scores=(0, 1, 3, 3, 3)      t3≡1 c4≡0 o4=0
+    scores=(0, 2, 2, 3, 3)      t3≡0 c4≡0 o4=1
+    scores=(0, 2, 2, 2, 4)      t3≡1 c4≡0 o4=0
+    scores=(1, 1, 2, 3, 3)      t3≡1 c4≡0 o4=1
+    scores=(1, 1, 2, 2, 4)      t3≡0 c4≡0 o4=1
+    scores=(1, 1, 2, 3, 3)      t3≡1 c4≡0 o4=0
+    scores=(1, 1, 1, 3, 4)      t3≡1 c4≡0 o4=0
+    scores=(1, 2, 2, 2, 3)      t3≡0 c4≡0 o4=2
+    scores=(1, 2, 2, 2, 3)      t3≡0 c4≡0 o4=0
+    scores=(1, 2, 2, 2, 3)      t3≡0 c4≡0 o4=1
+    scores=(2, 2, 2, 2, 2)      t3≡1 c4≡0 o4=5
+
+  Is omega4_local = f(t3, c4)?
+    t3=0, c4=0: omega4_local ∈ [1] [YES]
+    t3=1, c4=0: omega4_local ∈ [0] [YES]
+    t3=2, c4=4: omega4_local ∈ [1] [YES]
+    t3=3, c4=8: omega4_local ∈ [0] [YES]
+    t3=3, c4=12: omega4_local ∈ [1] [YES]
+    t3=4, c4=12: omega4_local ∈ [0, 1] [NO]
+    t3=4, c4=16: omega4_local ∈ [2] [YES]
+    t3=5, c4=20: omega4_local ∈ [5] [YES]
+
+  Neighborhood analysis for Omega_4 at n=6:
+    T=0: Omega_4=6
+    T=100: Omega_4=3
+    T=500: Omega_4=3
+    T=1000: Omega_4=4
+    T=5000: Omega_4=4
+
+DONE.

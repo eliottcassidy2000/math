@@ -1,0 +1,91 @@
+======================================================================
+ALL 12 TOURNAMENT TYPES ON 5 VERTICES
+======================================================================
+  Found 12 types
+
+  Type scores                t3   c4   c5   O2   O3   O4 C4-C5
+  ---- ---                  --- ---- ---- ---- ---- ---- -----
+     1 (0, 1, 2, 3, 4)        0    0    0   10    5    1     0
+     2 (0, 1, 3, 3, 3)        1    0    0    9    3    0     0
+     3 (0, 2, 2, 3, 3)        2    4    0    8    3    1     4
+     4 (0, 2, 2, 2, 4)        1    0    0    9    3    0     0
+     5 (1, 1, 2, 3, 3)        3   12    5    7    5    1     7
+     6 (1, 1, 2, 2, 4)        2    4    0    8    3    1     4
+     7 (1, 1, 2, 3, 3)        3    8    5    7    3    0     3
+     8 (1, 1, 1, 3, 4)        1    0    0    9    3    0     0
+     9 (1, 2, 2, 2, 3)        4   16    5    6    5    2    11
+    10 (1, 2, 2, 2, 3)        4   12   15    6    3    0    -3
+    11 (1, 2, 2, 2, 3)        4   12   10    6    3    1     2
+    12 (2, 2, 2, 2, 2)        5   20   10    5    5    5    10
+
+  Is omega4_local = f(t3, c5)?
+    t3=0, c5=0: omega4_local ∈ [1] [YES]
+    t3=1, c5=0: omega4_local ∈ [0] [YES]
+    t3=2, c5=0: omega4_local ∈ [1] [YES]
+    t3=3, c5=5: omega4_local ∈ [0, 1] [NO]
+    t3=4, c5=5: omega4_local ∈ [2] [YES]
+    t3=4, c5=10: omega4_local ∈ [1] [YES]
+    t3=4, c5=15: omega4_local ∈ [0] [YES]
+    t3=5, c5=10: omega4_local ∈ [5] [YES]
+
+  Is omega4_local = f(c4, c5)?
+    c4=0, c5=0: omega4_local ∈ [0, 1] [NO]
+    c4=4, c5=0: omega4_local ∈ [1] [YES]
+    c4=8, c5=5: omega4_local ∈ [0] [YES]
+    c4=12, c5=5: omega4_local ∈ [1] [YES]
+    c4=12, c5=10: omega4_local ∈ [1] [YES]
+    c4=12, c5=15: omega4_local ∈ [0] [YES]
+    c4=16, c5=5: omega4_local ∈ [2] [YES]
+    c4=20, c5=10: omega4_local ∈ [5] [YES]
+
+  Is omega4_local = f(o3)?
+    Omega_3=3: omega4_local ∈ [0, 1] [NO]
+    Omega_3=5: omega4_local ∈ [1, 2, 5] [NO]
+
+  Fitting omega4_local = a*t3 + b*c5 + c*t3^2 + d*c5^2 + e*t3*c5 + f:
+    coeffs = [-0.81572482 -0.53267813  0.40786241  0.0014742   0.06167076  0.7027027 ]
+    residuals = [1.64496314]
+    scores=(0, 1, 2, 3, 4)      actual=1, predicted=0.7027
+    scores=(0, 1, 3, 3, 3)      actual=0, predicted=0.2948
+    scores=(0, 2, 2, 3, 3)      actual=1, predicted=0.7027
+    scores=(0, 2, 2, 2, 4)      actual=0, predicted=0.2948
+    scores=(1, 1, 2, 3, 3)      actual=1, predicted=0.2248
+    scores=(1, 1, 2, 2, 4)      actual=1, predicted=0.7027
+    scores=(1, 1, 2, 3, 3)      actual=0, predicted=0.2248
+    scores=(1, 1, 1, 3, 4)      actual=0, predicted=0.2948
+    scores=(1, 2, 2, 2, 3)      actual=2, predicted=2.5725
+    scores=(1, 2, 2, 2, 3)      actual=0, predicted=0.0074
+    scores=(1, 2, 2, 2, 3)      actual=1, predicted=1.2531
+    scores=(2, 2, 2, 2, 2)      actual=5, predicted=4.7248
+
+  Trying omega4_local = a*Omega_3 + b*t3 + c*c5 + d:
+    coeffs = [ 0.73042169  0.76506024 -0.12771084 -3.05873494]
+    actual=1, predicted=0.5934
+    actual=0, predicted=-0.1024
+    actual=1, predicted=0.6627
+    actual=0, predicted=-0.1024
+    actual=1, predicted=2.2500
+    actual=1, predicted=0.6627
+    actual=0, predicted=0.7892
+    actual=0, predicted=-0.1024
+    actual=2, predicted=3.0151
+    actual=0, predicted=0.2771
+    actual=1, predicted=0.9157
+    actual=5, predicted=3.1416
+
+  Full Omega profile by type:
+  scores                t3   c5 |  O0  O1  O2  O3  O4 |  chi
+  (0, 1, 2, 3, 4)        0    0 |   5  10  10   5   1 |    1
+  (0, 1, 3, 3, 3)        1    0 |   5  10   9   3   0 |    1
+  (0, 2, 2, 3, 3)        2    0 |   5  10   8   3   1 |    1
+  (0, 2, 2, 2, 4)        1    0 |   5  10   9   3   0 |    1
+  (1, 1, 2, 3, 3)        3    5 |   5  10   7   5   1 |   -2
+  (1, 1, 2, 2, 4)        2    0 |   5  10   8   3   1 |    1
+  (1, 1, 2, 3, 3)        3    5 |   5  10   7   3   0 |   -1
+  (1, 1, 1, 3, 4)        1    0 |   5  10   9   3   0 |    1
+  (1, 2, 2, 2, 3)        4    5 |   5  10   6   5   2 |   -2
+  (1, 2, 2, 2, 3)        4   15 |   5  10   6   3   0 |   -2
+  (1, 2, 2, 2, 3)        4   10 |   5  10   6   3   1 |   -1
+  (2, 2, 2, 2, 2)        5   10 |   5  10   5   5   5 |    0
+
+DONE.
