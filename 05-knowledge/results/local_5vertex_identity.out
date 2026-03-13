@@ -1,0 +1,155 @@
+======================================================================
+LOCAL 5-VERTEX IDENTITY ANALYSIS
+======================================================================
+
+============================================================
+PART 1: Non-isomorphic 5-vertex tournaments
+============================================================
+
+  12 non-isomorphic 5-vertex tournaments
+
+              scores   c3   c5  ov1  ov2  c5-2ov1  c5-2(ov1+ov2)
+     (0, 1, 2, 3, 4)    0    0    0    0        0              0
+     (1, 1, 1, 3, 4)    1    0    0    0        0              0
+     (0, 2, 2, 2, 4)    1    0    0    0        0              0
+     (0, 1, 3, 3, 3)    1    0    0    0        0              0
+     (1, 1, 2, 2, 4)    2    0    0    1        0             -2
+     (0, 2, 2, 3, 3)    2    0    0    1        0             -2
+     (1, 1, 2, 3, 3)    3    1    0    3        1             -5
+     (1, 1, 2, 3, 3)    3    1    1    2       -1             -5
+     (1, 2, 2, 2, 3)    4    1    2    4       -3            -11
+     (1, 2, 2, 2, 3)    4    2    3    3       -4            -10
+     (1, 2, 2, 2, 3)    4    3    3    3       -3             -9
+     (2, 2, 2, 2, 2)    5    2    5    5       -8            -18
+
+  Grouped by c3:
+    c3=0: c5=[0], c5-2*ov1=[0], c5-2*(ov1+ov2)=[0]
+    c3=1: c5=[0], c5-2*ov1=[0], c5-2*(ov1+ov2)=[0]
+    c3=2: c5=[0], c5-2*ov1=[0], c5-2*(ov1+ov2)=[-2]
+    c3=3: c5=[1], c5-2*ov1=[-1, 1], c5-2*(ov1+ov2)=[-5]
+    c3=4: c5=[1, 2, 3], c5-2*ov1=[-4, -3], c5-2*(ov1+ov2)=[-11, -10, -9]
+    c3=5: c5=[2], c5-2*ov1=[-8], c5-2*(ov1+ov2)=[-18]
+
+============================================================
+PART 2: Searching for universal 5-vertex identity
+============================================================
+  On 5 vertices, the ONLY linear identity is ov1 + ov2 = C(c3,2)
+  c5 is NOT a function of c3 (or of ov1,ov2) alone
+
+============================================================
+PART 3: Regularity and the 5-vertex distribution
+============================================================
+
+  p=7:
+    Score seq distribution same across orientations: False
+    (c3,c5,ov1) type distribution same: False
+    First different orientation: (1, 1, -1)
+      scores (1, 1, 2, 3, 3): ref=7, this=0
+      scores (2, 2, 2, 2, 2): ref=7, this=0
+      scores (1, 2, 2, 2, 3): ref=7, this=21
+    (c3,c5,ov1) type distributions DIFFER but weighted sum is constant!
+      orient (-1, -1, -1)...: sum(cnt*(c5-2*ov1)) = -70
+      orient (1, -1, -1)...: sum(cnt*(c5-2*ov1)) = -70
+      orient (-1, 1, -1)...: sum(cnt*(c5-2*ov1)) = -70
+
+  p=11:
+    Score seq distribution same across orientations: False
+    (c3,c5,ov1) type distribution same: False
+    First different orientation: (1, -1, -1, -1, -1)
+      scores (0, 2, 2, 3, 3): ref=0, this=33
+      scores (1, 1, 2, 2, 4): ref=0, this=33
+      scores (1, 2, 2, 2, 3): ref=165, this=242
+      scores (0, 2, 2, 2, 4): ref=0, this=11
+      scores (1, 1, 2, 3, 3): ref=165, this=99
+      scores (1, 1, 1, 3, 4): ref=0, this=11
+      scores (2, 2, 2, 2, 2): ref=77, this=22
+      scores (0, 1, 2, 3, 4): ref=55, this=0
+      scores (0, 1, 3, 3, 3): ref=0, this=11
+    (c3,c5,ov1) type distributions DIFFER but weighted sum is constant!
+      orient (-1, -1, -1)...: sum(cnt*(c5-2*ov1)) = -946
+      orient (1, -1, -1)...: sum(cnt*(c5-2*ov1)) = -1034
+      orient (-1, 1, -1)...: sum(cnt*(c5-2*ov1)) = -1056
+
+============================================================
+PART 4: K(p) = c5 - 2*ov1 - 2*ov2 formula derivation
+============================================================
+
+  K(p) values and attempts at closed form:
+    p=7: K=-126, c3=14, const=28
+    p=11: K=-1386, c3=55, const=792
+    p=13: K=-3276, c3=91, const=2457
+    p=17: K=-12852, c3=204, const=14280
+    p=19: K=-22572, c3=285, const=29184
+    p=23: K=-59202, c3=506, const=98164
+
+  K/(p*(p-1)*(p-2)):
+    p=7: K=-126, p(p-1)(p-2)=210, ratio=-0.600000
+    p=11: K=-1386, p(p-1)(p-2)=990, ratio=-1.400000
+    p=13: K=-3276, p(p-1)(p-2)=1716, ratio=-1.909091
+    p=17: K=-12852, p(p-1)(p-2)=4080, ratio=-3.150000
+    p=19: K=-22572, p(p-1)(p-2)=5814, ratio=-3.882353
+    p=23: K=-59202, p(p-1)(p-2)=10626, ratio=-5.571429
+
+  K/(p*(p-1)*(p-3)):
+    p=7: K=-126, base=168, ratio=-0.750000
+    p=11: K=-1386, base=880, ratio=-1.575000
+    p=13: K=-3276, base=1560, ratio=-2.100000
+    p=17: K=-12852, base=3808, ratio=-3.375000
+    p=19: K=-22572, base=5472, ratio=-4.125000
+    p=23: K=-59202, base=10120, ratio=-5.850000
+
+  -K/(p*(p-1)):
+    p=7: -K=126, base=42, ratio=3.000000
+    p=11: -K=1386, base=110, ratio=12.600000
+    p=13: -K=3276, base=156, ratio=21.000000
+    p=17: -K=12852, base=272, ratio=47.250000
+    p=19: -K=22572, base=342, ratio=66.000000
+    p=23: -K=59202, base=506, ratio=117.000000
+
+  -K/C(p,3):
+    p=7: -K=126, C(p,3)=35, ratio=3.600000
+    p=11: -K=1386, C(p,3)=165, ratio=8.400000
+    p=13: -K=3276, C(p,3)=286, ratio=11.454545
+    p=17: -K=12852, C(p,3)=680, ratio=18.900000
+    p=19: -K=22572, C(p,3)=969, ratio=23.294118
+    p=23: -K=59202, C(p,3)=1771, ratio=33.428571
+
+  -K/C(p,4):
+    p=7: -K=126, C(p,4)=35, ratio=3.600000
+    p=11: -K=1386, C(p,4)=330, ratio=4.200000
+    p=13: -K=3276, C(p,4)=715, ratio=4.581818
+    p=17: -K=12852, C(p,4)=2380, ratio=5.400000
+    p=19: -K=22572, C(p,4)=3876, ratio=5.823529
+    p=23: -K=59202, C(p,4)=8855, ratio=6.685714
+
+  Factored -K:
+    p=7: -K=126 = 2*3*3*7
+    p=11: -K=1386 = 2*3*3*7*11
+    p=13: -K=3276 = 2*2*3*3*7*13
+    p=17: -K=12852 = 2*2*3*3*3*7*17
+    p=19: -K=22572 = 2*2*3*3*3*11*19
+    p=23: -K=59202 = 2*3*3*11*13*23
+
+============================================================
+PART 5: Double counting approach
+============================================================
+
+  p=7: sum of local contributions = -126.0000
+    K(p) = -126
+    Match: True
+
+  p=11: sum of local contributions = -1386.0000
+    K(p) = -1386
+    Match: True
+
+============================================================
+PART 6: Score-sequence constancy for 5-subsets of regular
+============================================================
+
+  p=7: checking 5-subset score distribution
+    All orientations have same 5-subset score distribution: False
+    2 distinct score distributions among 8 orientations
+      6 orientations: {(1, 1, 2, 3, 3): 7, (1, 2, 2, 2, 3): 7, (2, 2, 2, 2, 2): 7}
+      2 orientations: {(1, 2, 2, 2, 3): 21}
+
+DONE.

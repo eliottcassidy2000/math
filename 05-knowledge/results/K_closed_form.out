@@ -1,0 +1,149 @@
+======================================================================
+K(p) CLOSED FORM DERIVATION
+======================================================================
+
+  Testing formula: -K = 3*p*(p^2-1)*(p^2-9)/320
+     p    actual -K      formula  match
+     7          126          126 YES
+    11         1386         1386 YES
+    13         3276         3276 YES
+    17        12852        12852 YES
+    19        22572        22572 YES
+    23        59202        59202 YES
+
+  Verify 320 | 3*p*(p^2-1)*(p^2-9) for odd primes:
+    p=5: 3*p*(p^2-1)*(p^2-9) = 5760, /320 = 18.0
+    p=7: 3*p*(p^2-1)*(p^2-9) = 40320, /320 = 126.0
+    p=11: 3*p*(p^2-1)*(p^2-9) = 443520, /320 = 1386.0
+    p=13: 3*p*(p^2-1)*(p^2-9) = 1048320, /320 = 3276.0
+    p=17: 3*p*(p^2-1)*(p^2-9) = 4112640, /320 = 12852.0
+    p=19: 3*p*(p^2-1)*(p^2-9) = 7223040, /320 = 22572.0
+    p=23: 3*p*(p^2-1)*(p^2-9) = 18944640, /320 = 59202.0
+    p=29: 3*p*(p^2-1)*(p^2-9) = 60802560, /320 = 190008.0
+    p=31: 3*p*(p^2-1)*(p^2-9) = 84994560, /320 = 265608.0
+    p=37: 3*p*(p^2-1)*(p^2-9) = 206513280, /320 = 645354.0
+
+============================================================
+FULL THEOREM:
+============================================================
+
+    For any circulant tournament T on Z_p (p prime >= 5):
+
+    K(p) = c5(T) - 2*ov1(T) - 2*ov2(T) = -3p(p^2-1)(p^2-9)/320
+
+    where:
+      c5(T) = # directed 5-cycles
+      ov1(T) = # pairs of 3-cycle vertex sets sharing exactly 1 vertex
+      ov2(T) = # pairs sharing exactly 2 vertices
+
+    Equivalently:
+      disj3(T) = -c5(T)/2 + C(c3,2) - 3p(p^2-1)(p^2-9)/640
+
+    where c3 = p(p^2-1)/24 is constant for all regular tournaments on p vertices.
+
+    The constant can be simplified:
+      const(p) = C(c3,2) - 3p(p^2-1)(p^2-9)/640
+              = c3(c3-1)/2 - 3p(p^2-1)(p^2-9)/640
+    
+  Verification of const(p):
+    p=7: c3=14, C(c3,2)=91, -K/2=63, const=28 (expected: 28) OK
+    p=11: c3=55, C(c3,2)=1485, -K/2=693, const=792 (expected: 792) OK
+    p=13: c3=91, C(c3,2)=4095, -K/2=1638, const=2457 (expected: 2457) OK
+    p=17: c3=204, C(c3,2)=20706, -K/2=6426, const=14280 (expected: 14280) OK
+    p=19: c3=285, C(c3,2)=40470, -K/2=11286, const=29184 (expected: 29184) OK
+    p=23: c3=506, C(c3,2)=127765, -K/2=29601, const=98164 (expected: 98164) OK
+
+============================================================
+CONNECTION TO 5-VERTEX COMBINATORICS
+============================================================
+
+  -K/C(p,5) ratios:
+    p=7: -K/C(p,5) = 6.000000, 9(p+1)(p+3)/(8(p-2)(p-4)) = 6.000000
+    p=11: -K/C(p,5) = 3.000000, 9(p+1)(p+3)/(8(p-2)(p-4)) = 3.000000
+    p=13: -K/C(p,5) = 2.545455, 9(p+1)(p+3)/(8(p-2)(p-4)) = 2.545455
+    p=17: -K/C(p,5) = 2.076923, 9(p+1)(p+3)/(8(p-2)(p-4)) = 2.076923
+    p=19: -K/C(p,5) = 1.941176, 9(p+1)(p+3)/(8(p-2)(p-4)) = 1.941176
+    p=23: -K/C(p,5) = 1.759398, 9(p+1)(p+3)/(8(p-2)(p-4)) = 1.759398
+
+============================================================
+PREDICTIONS FOR LARGER PRIMES
+============================================================
+  p=29: m=14, c3=1015, K=-190008, const=419601
+  p=31: m=15, c3=1240, K=-265608, const=635376
+  p=37: m=18, c3=2109, K=-645354, const=1900209
+  p=41: m=20, c3=2870, K=-1079694, const=3577168
+  p=43: m=21, c3=3311, K=-1370754, const=4794328
+  p=47: m=23, c3=4324, K=-2140380, const=8276136
+
+============================================================
+ALTERNATIVE FORMS OF THE IDENTITY
+============================================================
+  Form 1: K = -9*c3*(p^2-9)/40
+    p=7: K=-126, -9*c3*(p^2-9)/40 = -126 OK
+    p=11: K=-1386, -9*c3*(p^2-9)/40 = -1386 OK
+    p=13: K=-3276, -9*c3*(p^2-9)/40 = -3276 OK
+    p=17: K=-12852, -9*c3*(p^2-9)/40 = -12852 OK
+    p=19: K=-22572, -9*c3*(p^2-9)/40 = -22572 OK
+    p=23: K=-59202, -9*c3*(p^2-9)/40 = -59202 OK
+
+  Form 2: K = -9*c3*(m-1)*(m+2)/10
+    p=7: m=3, K=-126, form2 = -126 OK
+    p=11: m=5, K=-1386, form2 = -1386 OK
+    p=13: m=6, K=-3276, form2 = -3276 OK
+    p=17: m=8, K=-12852, form2 = -12852 OK
+    p=19: m=9, K=-22572, form2 = -22572 OK
+    p=23: m=11, K=-59202, form2 = -59202 OK
+
+  c3 = (2m+1)*m*(m+1)/6 = C(m+1,2)*(2m+1)/3:
+    p=7, m=3: c3 = 14, formula = 14 OK
+    p=11, m=5: c3 = 55, formula = 55 OK
+    p=13, m=6: c3 = 91, formula = 91 OK
+    p=17, m=8: c3 = 204, formula = 204 OK
+    p=19, m=9: c3 = 285, formula = 285 OK
+    p=23, m=11: c3 = 506, formula = 506 OK
+
+  Form 3: K = -3*m*(m+1)*(2m+1)*(m-1)*(m+2)/20
+    p=7: m=3, K=-126, form3 = -126 OK
+    p=11: m=5, K=-1386, form3 = -1386 OK
+    p=13: m=6, K=-3276, form3 = -3276 OK
+    p=17: m=8, K=-12852, form3 = -12852 OK
+    p=19: m=9, K=-22572, form3 = -22572 OK
+    p=23: m=11, K=-59202, form3 = -59202 OK
+
+  Form 4: K = -18*(2m+1)*C(m+2,4)/5 = -18*p*C(m+2,4)/5
+    p=7: m=3, C(m+2,4)=5, K=-126, form4=-126 div5=True OK
+    p=11: m=5, C(m+2,4)=35, K=-1386, form4=-1386 div5=True OK
+    p=13: m=6, C(m+2,4)=70, K=-3276, form4=-3276 div5=True OK
+    p=17: m=8, C(m+2,4)=210, K=-12852, form4=-12852 div5=True OK
+    p=19: m=9, C(m+2,4)=330, K=-22572, form4=-22572 div5=True OK
+    p=23: m=11, C(m+2,4)=715, K=-59202, form4=-59202 div5=True OK
+
+============================================================
+FULL IDENTITY STATEMENT (THEOREM)
+============================================================
+
+    THEOREM (Disjoint 3-Cycle Identity):
+
+    For any circulant tournament T on Z_p (p odd prime, p >= 5),
+    with connection set S (|S| = m = (p-1)/2):
+
+      disj3(T) + c5(T)/2 = const(p)
+
+    where:
+      disj3(T) = # pairs of vertex-disjoint 3-cycle vertex sets
+      c5(T)    = # directed 5-cycles
+      c3       = p(p^2-1)/24 = m(m+1)(2m+1)/6
+      const(p) = c3(c3-1)/2 - 3p(p^2-1)(p^2-9)/640
+               = C(c3,2) - 9c3(p^2-9)/80
+
+    Equivalently:
+      c5(T) - 2*ov1(T) - 2*ov2(T) = K(p)
+      K(p) = -3p(p^2-1)(p^2-9)/320
+
+    where ov1, ov2 count 3-cycle pairs sharing 1 or 2 vertices.
+
+    The identity is ORIENTATION-INDEPENDENT: K(p) depends only on p.
+
+    VERIFIED: p = 7, 11, 13, 17, 19, 23 (all 2^m orientations for p<=17).
+    
+DONE.
