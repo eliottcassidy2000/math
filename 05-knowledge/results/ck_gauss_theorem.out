@@ -1,0 +1,188 @@
+======================================================================
+THEOREM VERIFICATION: c_5 Walsh = eps(a,b) * p/2 for q=3, 0 otherwise
+======================================================================
+
+============================================================
+p=7, m=3, 2^m=8
+============================================================
+  Verify tr(A^5)/5 = c_5 at base S=[1, 2, 3]:
+    c5_exact = 28, c5_trace = 28.0, match = True
+
+  Degree-2 Walsh coefficients:
+    ALL 3 pairs MATCH (max error = 0.000000)
+
+  Sign law verification:
+    q=3: (0,1) ga=1,gb=2, h_hat=  3.5000, chi(ab)=+1, sign·chi=+1, ε=+1
+    q=3: (0,2) ga=1,gb=3, h_hat= -3.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (1,2) ga=2,gb=3, h_hat= -3.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+
+============================================================
+p=11, m=5, 2^m=32
+============================================================
+  Verify tr(A^5)/5 = c_5 at base S=[1, 2, 3, 4, 5]:
+    c5_exact = 484, c5_trace = 484.0, match = True
+
+  Degree-2 Walsh coefficients:
+    ALL 10 pairs MATCH (max error = 0.000000)
+
+  Sign law verification:
+    q=3: (0,2) ga=1,gb=3, h_hat= -5.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (0,3) ga=1,gb=4, h_hat= -5.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (1,2) ga=2,gb=3, h_hat=  5.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (1,4) ga=2,gb=5, h_hat=  5.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (3,4) ga=4,gb=5, h_hat= -5.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+
+============================================================
+p=13, m=6, 2^m=64
+============================================================
+  Verify tr(A^5)/5 = c_5 at base S=[1, 2, 3, 4, 5, 6]:
+    c5_exact = 1274, c5_trace = 1274.0, match = True
+
+  Degree-2 Walsh coefficients:
+    ALL 15 pairs MATCH (max error = 0.000000)
+
+  Sign law verification:
+    q=3: (0,2) ga=1,gb=3, h_hat= -6.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (0,3) ga=1,gb=4, h_hat=  6.5000, chi(ab)=+1, sign·chi=+1, ε=+1
+    q=3: (1,4) ga=2,gb=5, h_hat= -6.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (1,5) ga=2,gb=6, h_hat= -6.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (2,3) ga=3,gb=4, h_hat=  6.5000, chi(ab)=+1, sign·chi=+1, ε=+1
+    q=3: (4,5) ga=5,gb=6, h_hat= -6.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+
+============================================================
+p=17, m=8, 2^m=256
+============================================================
+  Verify tr(A^5)/5 = c_5 at base S=[1, 2, 3, 4, 5, 6, 7, 8]:
+    c5_exact = 5712, c5_trace = 5712.0, match = True
+
+  Degree-2 Walsh coefficients:
+    ALL 28 pairs MATCH (max error = 0.000000)
+
+  Sign law verification:
+    q=3: (0,2) ga=1,gb=3, h_hat= -8.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (0,5) ga=1,gb=6, h_hat= -8.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (1,4) ga=2,gb=5, h_hat=  8.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (1,5) ga=2,gb=6, h_hat= -8.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (2,7) ga=3,gb=8, h_hat=  8.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (3,4) ga=4,gb=5, h_hat=  8.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (3,6) ga=4,gb=7, h_hat= -8.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (6,7) ga=7,gb=8, h_hat= -8.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+
+============================================================
+p=19, m=9, 2^m=512
+============================================================
+  Verify tr(A^5)/5 = c_5 at base S=[1, 2, 3, 4, 5, 6, 7, 8, 9]:
+    c5_exact = 10488, c5_trace = 10488.0, match = True
+
+  Degree-2 Walsh coefficients:
+    ALL 36 pairs MATCH (max error = 0.000000)
+
+  Sign law verification:
+    q=3: (0,2) ga=1,gb=3, h_hat= -9.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (0,5) ga=1,gb=6, h_hat=  9.5000, chi(ab)=+1, sign·chi=+1, ε=+1
+    q=3: (1,5) ga=2,gb=6, h_hat= -9.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (1,6) ga=2,gb=7, h_hat= -9.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (2,8) ga=3,gb=9, h_hat= -9.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (3,4) ga=4,gb=5, h_hat=  9.5000, chi(ab)=+1, sign·chi=+1, ε=+1
+    q=3: (3,6) ga=4,gb=7, h_hat=  9.5000, chi(ab)=+1, sign·chi=+1, ε=+1
+    q=3: (4,7) ga=5,gb=8, h_hat= -9.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+    q=3: (7,8) ga=8,gb=9, h_hat= -9.5000, chi(ab)=-1, sign·chi=+1, ε=-1
+
+============================================================
+p=23, m=11, 2^m=2048
+============================================================
+  Verify tr(A^5)/5 = c_5 at base S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]:
+    c5_exact = 29348, c5_trace = 29348.0, match = True
+
+  Degree-2 Walsh coefficients:
+    ALL 55 pairs MATCH (max error = 0.000000)
+
+  Sign law verification:
+    q=3: (0,2) ga=1,gb=3, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (0,7) ga=1,gb=8, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (1,5) ga=2,gb=6, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (1,6) ga=2,gb=7, h_hat= 11.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (2,8) ga=3,gb=9, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (3,8) ga=4,gb=9, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (3,10) ga=4,gb=11, h_hat= 11.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (4,5) ga=5,gb=6, h_hat= 11.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (4,7) ga=5,gb=8, h_hat= 11.5000, chi(ab)=-1, sign·chi=-1, ε=+1
+    q=3: (6,9) ga=7,gb=10, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+    q=3: (9,10) ga=10,gb=11, h_hat=-11.5000, chi(ab)=+1, sign·chi=-1, ε=-1
+
+  p=29: SKIPPED (2^m = 16384 too large)
+
+  p=31: SKIPPED (2^m = 32768 too large)
+
+
+======================================================================
+LEMMA: All closed 5-walks in tournaments are simple
+======================================================================
+
+  Proof: A non-simple closed walk of odd length k decomposes into two
+  closed sub-walks of lengths d and k-d, where one is odd (>= 3) and
+  the other is even.
+
+  In a tournament, the minimum even closed walk has length 4 (directed
+  4-cycle: a -> b -> c -> d -> a; exists iff the 4-vertex sub-tournament
+  has a Hamiltonian directed cycle, which happens iff it's NOT a
+  transitive tournament).
+
+  The minimum odd closed walk has length 3 (directed 3-cycle).
+
+  Therefore, the minimum non-simple closed walk of odd length in a
+  tournament has length >= 3 + 4 = 7.
+
+  For k = 3: no non-simple walks possible.
+  For k = 5: no non-simple walks possible (5 < 7).
+  For k = 7: non-simple walks exist (3-cycle + 4-cycle sharing a vertex).
+
+  Consequence: tr(A^k)/k = c_k exactly for k = 3, 5 in any tournament.
+  For k >= 7, a correction term involving products of shorter cycle
+  counts is needed.
+    
+======================================================================
+NON-SIMPLE 7-WALK CORRECTION
+======================================================================
+
+  For k=7: tr(A^7) = 7*c_7 + N_7 where N_7 counts closed 7-walks that
+  revisit at least one vertex.
+
+  Decomposition: Each non-simple closed 7-walk is a 3-cycle and a 4-cycle
+  sharing exactly one vertex. For vertex v:
+    N_7(v) = (# directed 3-cycles through v) * (# directed 4-cycles through v)
+
+  N_7 = sum_v N_7(v) * (# ways to arrange the shared vertex)
+
+  For a circulant tournament: by Z_p symmetry, N_7(v) is the same for all v.
+  So N_7 = p * N_7(0) * arrangement_factor.
+
+  The arrangement factor: a closed 7-walk a1->...->a7->a1 with a1=a4
+  can be decomposed in different ways:
+  - (a1 a2 a3) as 3-cycle at positions 1-3, (a4 a5 a6 a7) as 4-cycle at 4-7
+  - etc. There are 7 rotations * 1 decomposition each...
+
+  Actually: in the walk a1->a2->a3->a4->a5->a6->a7->a1 with a_i = a_j:
+  - If j-i = 3: split into 3-walk + 4-walk
+  - If j-i = 4: split into 4-walk + 3-walk
+  Both cases are valid. The correction formula:
+
+  N_7 = sum over vertices v, sum over 3-cycles C3 through v,
+        sum over 4-cycles C4 through v: (# interleavings) * (overlap factor)
+    
+
+Numerical verification at p=11:
+  base S=[6, 7, 8, 9, 10]: c7_exact=3399, tr/7=12749.0, N_7=65450 (= tr - 7*c7)
+    3-cycles through v=0: 15
+    4-cycles through v=0: 80
+    Predicted N_7 = 7 * 11 * 15 * 80 = 92400
+    Actual N_7 = 65450
+    Ratio = 0.7083333333333334
+  Paley S=[1, 2, 4, 6, 8]: c7_exact=3586, tr/7=11693.0, N_7=56749 (= tr - 7*c7)
+    3-cycles through v=0: 15
+    4-cycles through v=0: 68
+    Predicted N_7 = 7 * 11 * 15 * 68 = 78540
+    Actual N_7 = 56749
+    Ratio = 0.7225490196078431
+
+DONE.
