@@ -1,0 +1,336 @@
+======================================================================
+PART 1: HILBERT'S 3RD PROBLEM AND DEHN INVARIANTS
+======================================================================
+
+Hilbert's 3rd Problem (1900):
+  Can every polyhedron be cut into finitely many pieces
+  and reassembled into a cube of equal volume?
+
+  Answer: NO (Dehn, 1901)
+  The OBSTRUCTION is the Dehn invariant:
+  D(P) = Σ_edges (length(e) ⊗ dihedral_angle(e)/π) ∈ R ⊗_Q R/Q
+
+  Two polyhedra are scissors-congruent ⟺ same volume AND same Dehn invariant
+  (Sydler, 1965 — complete characterization)
+
+Platonic solid Dehn invariants:
+
+  Solid           V  E   F  angle/π         Dehn=0?
+  Tetrahedron      4  6   4  0.391827π = arccos(1/3)          NO
+  Cube             8 12   6  0.500000π = π/2                  YES
+  Octahedron       6 12   8  0.608173π = π-arccos(1/3)        NO
+  Dodecahedron    20 30  12  0.647584π = arccos(-1/√5)        NO
+  Icosahedron     12 30  20  0.767720π = arccos(-√5/3)        NO
+
+  ONLY the cube has Dehn invariant 0!
+  Therefore only the cube is scissors-congruent to itself-as-cube.
+  The tetrahedron CANNOT be cut into a cube.
+
+  WHY the cube is special:
+    Cube dihedral angle = π/2 → θ/π = 1/2 = 1/KEY₁
+    This is RATIONAL → contributes 0 to Dehn invariant
+    ALL other Platonic dihedral angles are IRRATIONAL multiples of π
+
+  Niven's theorem: cos(rπ) ∈ Q only for r ∈ {0, 1/6, 1/4, 1/3, 1/2, 2/3, 3/4, 5/6, 1}
+  Denominators: {1, 2, 3, 4, 6} = divisors of 12 = h(E₆)
+  Primitive denominators: {1, 2, 3} = {1, KEY₁, KEY₂}
+  These are EXACTLY the building blocks of the tournament keys!
+
+======================================================================
+PART 2: THE h-VECTOR OF THE PERMUTOHEDRON
+======================================================================
+
+The permutohedron Π_n is the convex hull of all permutations of (1,...,n)
+Its f-vector encodes face counts; its h-vector gives the Eulerian numbers
+
+  n=1: h = [1]
+       Σh = 1 = 1!, alt Σ = 1
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=2: h = [1, 1]
+       Σh = 2 = 2!, alt Σ = 0
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=3: h = [1, 4, 1]
+       Σh = 6 = 3!, alt Σ = -2
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=4: h = [1, 11, 11, 1]
+       Σh = 24 = 4!, alt Σ = 0
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=5: h = [1, 26, 66, 26, 1]
+       Σh = 120 = 5!, alt Σ = 16
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=6: h = [1, 57, 302, 302, 57, 1]
+       Σh = 720 = 6!, alt Σ = 0
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=7: h = [1, 120, 1191, 2416, 1191, 120, 1]
+       Σh = 5040 = 7!, alt Σ = -272
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+  n=8: h = [1, 247, 4293, 15619, 15619, 4293, 247, 1]
+       Σh = 40320 = 8!, alt Σ = 0
+       all h_k ≥ 0: ✓  (Dehn-Sommerville: h_k = h_{n-1-k})
+       palindromic: ✓
+
+KEY PROPERTIES:
+  1. h_k ≥ 0 always (non-negativity)
+  2. h_k = h_{n-1-k} (palindrome = Dehn-Sommerville)
+  3. Σ h_k = n! (sum = factorial)
+  4. For even n: alternating sum = 0
+  5. For odd n: alternating sum = (-1)^{(n-1)/2} · E_{n-1}
+     where E_k are the Euler (tangent/secant) numbers
+
+======================================================================
+PART 3: ALTERNATING SUMS AND THE (2,3) RECURRENCE
+======================================================================
+
+Alternating sums of Eulerian numbers:
+  n= 1: Σ(-1)^k A(n,k) =        1
+  n= 2: Σ(-1)^k A(n,k) =        0
+  n= 3: Σ(-1)^k A(n,k) =       -2
+  n= 4: Σ(-1)^k A(n,k) =        0
+  n= 5: Σ(-1)^k A(n,k) =       16
+  n= 6: Σ(-1)^k A(n,k) =        0
+  n= 7: Σ(-1)^k A(n,k) =     -272
+  n= 8: Σ(-1)^k A(n,k) =        0
+  n= 9: Σ(-1)^k A(n,k) =     7936
+  n=10: Σ(-1)^k A(n,k) =        0
+  n=11: Σ(-1)^k A(n,k) =  -353792
+
+  |alternating sums| for odd n:
+    n=1: |alt| = 1
+    n=3: |alt| = 2
+    n=5: |alt| = 16
+    n=7: |alt| = 272
+    n=9: |alt| = 7936
+    n=11: |alt| = 353792
+
+  Check (2,3) recurrence for these values:
+    a_2 = 16, 5a_1 - 6a_0 = 4, match: ✗
+    a_3 = 272, 5a_2 - 6a_1 = 68, match: ✗
+    a_4 = 7936, 5a_3 - 6a_2 = 1264, match: ✗
+    a_5 = 353792, 5a_4 - 6a_3 = 38048, match: ✗
+
+  They DON'T satisfy the (2,3) recurrence directly.
+  But they DO grow as ~(2/π)^n · n!, which involves KEY₁ and π.
+
+======================================================================
+PART 4: SIMPLEX DECOMPOSITION AND n!
+======================================================================
+
+An n-cube can be decomposed into n! simplices (Coxeter):
+
+  n=1: 1 simplices tile [0,1]^1
+       Vol(simplex) = 1/1 = 1/1!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_1
+
+  n=2: 2 simplices tile [0,1]^2
+       Vol(simplex) = 1/2 = 1/2!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_2
+
+  n=3: 6 simplices tile [0,1]^3
+       Vol(simplex) = 1/6 = 1/3!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_3
+
+  n=4: 24 simplices tile [0,1]^4
+       Vol(simplex) = 1/24 = 1/4!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_4
+
+  n=5: 120 simplices tile [0,1]^5
+       Vol(simplex) = 1/120 = 1/5!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_5
+
+  n=6: 720 simplices tile [0,1]^6
+       Vol(simplex) = 1/720 = 1/6!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_6
+
+  n=7: 5040 simplices tile [0,1]^7
+       Vol(simplex) = 1/5040 = 1/7!
+       Each simplex = {x : x_σ(1) ≤ ... ≤ x_σ(n)} for σ ∈ S_7
+
+  CRITICAL DIMENSIONS:
+    n=2: 2 = KEY₁ triangles tile a square
+    n=3: 6 = h(G₂) tetrahedra tile a cube
+    n=4: 24 = |BT| → E₆ 4-simplices tile a 4-cube
+    n=5: 120 = |BI| → E₈ 5-simplices tile a 5-cube
+    n=6: 720 = |BT|·h(E₈) 6-simplices tile a 6-cube
+
+  The McKay correspondence appears:
+    n!:  2!, 3!, 4!, 5!, 6!
+    =    2,  6,  24, 120, 720
+    =    KEY₁, h(G₂), |BT|, |BI|, |S₆|
+
+  The h-vector of this simplicial decomposition is the Eulerian numbers.
+  Dehn-Sommerville ⟺ h_k = h_{n-1-k} ⟺ A(n,k) = A(n,n-1-k)
+  This is the SYMMETRY of Eulerian numbers.
+
+  For the simplex-in-cube packing:
+  The DESCENT STATISTIC on S_n gives the h-vector.
+  Ascent k ↔ face of dimension k in the permutohedron.
+  The non-negativity h_k ≥ 0 follows from counting.
+  It's STRUCTURAL, not just numerical.
+
+======================================================================
+PART 5: THE DEHN INVARIANT AS A (2,3) OBSTRUCTION
+======================================================================
+
+Why does the Dehn invariant obstruct scissors congruence?
+
+  The Dehn invariant D ∈ R ⊗_Q R/Q is a tensor product:
+  D(P) = Σ_edges ℓ(e) ⊗ (θ(e)/π mod Q)
+
+  D = 0 ⟺ all dihedral angles are RATIONAL multiples of π
+  (more precisely: the ℓ-weighted sum is Q-trivial)
+
+  Rational angles (Niven): θ/π = p/q with q | 12 = h(E₆)
+    q=1: θ = 0, π  (trivial)
+    q=2: θ = π/2   (right angle) — the CUBE
+    q=3: θ = π/3, 2π/3 (equilateral)
+    q=4: θ = π/4, 3π/4 (diagonal)
+    q=6: θ = π/6, 5π/6 (hexagonal)
+
+  Polytopes with all-rational dihedral angles (D=0):
+    Cube (π/2)
+    Right prisms over regular n-gons for n | 12
+      n=3: triangular prism (angles π/3, π/2)
+      n=4: cube (angle π/2)
+      n=6: hexagonal prism (angles π/3, π/2)
+    These have n | 12 = h(E₆) = KEY₁²·KEY₂
+
+  THE (2,3) CONNECTION:
+    The rational angle denominators divide 12 = KEY₁²·KEY₂
+    The primitive denominators are 1, KEY₁, KEY₂
+    Scissors congruence to cube requires angles in π·Q
+    The ONLY regular polyhedron with this property is the CUBE
+    Because the cube's angle π/2 has denominator KEY₁
+
+  In higher dimensions:
+    The simplex ×ⁿ decomposition uses n! pieces
+    The Dehn-Sommerville h-vector is palindromic
+    Non-negativity h_k ≥ 0 is a TOPOLOGICAL fact
+    (it follows from the Cohen-Macaulay property)
+
+    The FAILURE of Hilbert's 3rd problem in 3D is because:
+    arccos(1/3)/π is IRRATIONAL (tetrahedron angle)
+    This irrationality = inability to express in terms of KEY₁, KEY₂
+    The (2,3) world controls what is scissors-congruent!
+
+======================================================================
+PART 6: NON-NEGATIVITY AND REAL ROOTS
+======================================================================
+
+Eulerian polynomial E_n(t) = Σ_k A(n,k) t^k:
+
+  n=1: E_1(t) = 1 (constant, no roots)
+
+  n=2: E_2(t) = 1t^0 + 1t^1
+       all real: True, all negative: True
+       roots: ['-1.0000']
+
+  n=3: E_3(t) = 1t^0 + 4t^1 + 1t^2
+       all real: True, all negative: True
+       roots: ['-3.7321', '-0.2679']
+
+  n=4: E_4(t) = 1t^0 + 11t^1 + 11t^2 + 1t^3
+       all real: True, all negative: True
+       roots: ['-9.8990', '-1.0000', '-0.1010']
+
+  n=5: E_5(t) = 1t^0 + 26t^1 + 66t^2 + 26t^3 + 1t^4
+       all real: True, all negative: True
+       roots: ['-23.2039', '-2.3225', '-0.4306', '-0.0431']
+
+  n=6: E_6(t) = 1t^0 + 57t^1 + 302t^2 + 302t^3 + 57t^4 + 1t^5
+       all real: True, all negative: True
+       roots: ['-51.2184', '-4.5419', '-1.0000', '-0.2202', '-0.0195']
+
+  n=7: E_7(t) = 1t^0 + 120t^1 + 1191t^2 + 2416t^3 + 1191t^4 + 120t^5 + 1t^6
+       all real: True, all negative: True
+       roots: ['-109.3052', '-8.1596', '-1.8682', '-0.5353', '-0.1226', '-0.0091']
+
+  ALL Eulerian polynomials have REAL NEGATIVE roots!
+  This is a theorem of Frobenius (1910).
+
+  Consequences of real-rootedness:
+    1. Log-concavity: A(n,k)² ≥ A(n,k-1)·A(n,k+1)
+    2. Unimodality: A(n,0) ≤ A(n,1) ≤ ... ≤ A(n,⌊n/2⌋)
+    3. The h-vector is a PF-sequence
+    4. Interlacing with E_{n+1}(t)
+
+  Tournament polynomial f(z) = z² - 5z + 6 = (z-2)(z-3):
+    All roots real and POSITIVE (keys = 2, 3)
+    This is the REVERSE of Eulerian (which has negative roots)
+    f(z) = E_2(-z) shifted? No... but there's a connection:
+
+    E_2(t) = 1 + t → root at t = -1
+    f(z) = z² - 5z + 6 → roots at z = 2, 3
+    The Eulerian root -1 and tournament roots 2,3 satisfy:
+    (-1)·2·3 = -6 = -h(G₂) = -f(0)
+
+  GAMMA NON-NEGATIVITY:
+    A palindromic polynomial h(t) = Σ h_k t^k with h_k=h_{d-k}
+    can be written as h(t) = Σ γ_i t^i (1+t)^{d-2i}
+    Gamma-non-negativity: all γ_i ≥ 0
+    This is STRONGER than non-negativity of h_k
+
+  Euler gamma-vectors:
+    n=2: γ = [1], all ≥ 0: ✓
+    n=3: γ = [1, 2], all ≥ 0: ✓
+    n=4: γ = [1, 8], all ≥ 0: ✓
+    n=5: γ = [1, 22, 16], all ≥ 0: ✓
+    n=6: γ = [1, 52, 136], all ≥ 0: ✓
+    n=7: γ = [1, 114, 720, 272], all ≥ 0: ✓
+
+  YES — Eulerian polynomials are gamma-non-negative!
+  This was proved by Foata-Schützenberger (1970).
+  It implies unimodality AND log-concavity as corollaries.
+
+======================================================================
+PART 7: THE TOURNAMENT CONNECTION
+======================================================================
+
+How this all connects to tournaments:
+
+  1. SIMPLEX DECOMPOSITION: n! simplices tile [0,1]^n
+     The h-vector of this decomposition = Eulerian numbers
+     The alternating sum = 0 for even n (Dehn-Sommerville)
+     n! at n=5 gives |BI|=120 → E₈ connection
+
+  2. DEHN INVARIANT: only cube (angle π/2) has D=0
+     Denominator of π/2 is KEY₁ = 2
+     All other Platonic angles are irrational/π
+     The (2,3) keys determine scissors congruence
+
+  3. TOURNAMENT POLYNOMIAL: f(z)=(z-2)(z-3)
+     Evaluations f(n) encode Lie data
+     f(8) = 30 = h(E₈) = #edges in 30-edge trinity
+     f(10) = 56 = T(6) = dim(V_E₇)
+
+  4. ALTERNATING SUMS: Eulerian alt sums are tangent numbers
+     These grow as ~(2/π)^n · n!
+     The factor 2/π involves KEY₁ and the circle constant
+     Related to Bernoulli numbers B_{2k}
+
+  5. THE UNIFIED PICTURE:
+     • Simplices tile cubes (n! count)
+     • Cubes are unique scissors-congruent (Dehn = 0)
+     • The obstruction involves irrational angles
+     • The rational angles have denominators dividing h(E₆)=12
+     • The Eulerian h-vector is palindromic, non-negative, real-rooted
+     • All these properties descend from the (2,3) keys
+
+  ONE SENTENCE:
+    Hilbert's 3rd problem fails because arccos(1/3)/π is irrational,
+    and this irrationality is measured by the Dehn invariant which lives
+    in R ⊗_Q R/Q — a tensor product whose denominator structure is
+    controlled by {1, KEY₁, KEY₂} = the Niven denominators.

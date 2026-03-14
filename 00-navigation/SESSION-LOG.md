@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S79 — 2026-03-14: The (2,3,5) Universe — Petersen Graph & Lie Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S78
+**Summary of work:**
+Deep exploration of the (2,3,5) structure connecting tournament theory, Lie groups, Platonic solids, and the Petersen graph. Produced 8 computational scripts with full synthesis. Major theme: "2 and 3 are the keys to the universe" — f(z)=(z-2)(z-3) as organizing principle.
+
+**Critical findings:**
+1. **f(10)=56=T(6)=dim(V_E₇)** (HYP-1082): Tournament polynomial at Petersen vertex count gives T(6). f(2k)=T(m) ONLY at k∈{2,3,5}.
+2. **Petersen eigenvalues = {KEY₂, 1, -KEY₁}** (HYP-1083): Spectrum {3,1,-2} with multiplicities {1,5,4}={unit, KEY₁+KEY₂, rank(F₄)}.
+3. **30-edge trinity** (HYP-1084): Icos, dodec, J(5,2) all with 30 edges and |Aut|=120. V(icos)·V(dodec)=240=#roots(E₈).
+4. **Independence polynomial I_k/C(5,k) = {1,KEY₁,KEY₂,KEY₂,1}** (HYP-1085): Multiplier product=18=h(E₇), sum=10=V(P).
+5. **ω·α=8=rank(E₈)** (HYP-1086): Clique×independence = rank of maximal exceptional.
+6. **S₅ subgroup indices = Lie data** (HYP-1087): All index values are key tournament/Lie numbers.
+7. **2²+3²+5²-2·3·5 = 8 = rank(E₈)** (HYP-1088): Markov-like identity for (2,3,5).
+8. **k-nacci convergence rate = 1/KEY₁** (HYP-1089): Geometric convergence with base 1/2.
+9. **dim=rank·(h+1) universal** (HYP-1091): h+1∈{M₃, 2²+3², 3³-2³, M₅} for exceptionals.
+10. **P(Petersen,3)=120=|BI|** (HYP-1092): Chromatic polynomial at χ=KEY₂ gives automorphism group.
+11. **Pythagorean comma = 3^h(E₆)/2^(h(E₇)+1)**: Musical comma from Lie data.
+12. **Coxeter ratios follow Fibonacci fractions**: h(E₈)/h(E₇)=5/3=F₅/F₄, etc.
+
+**New contributions:** HYP-1082 through HYP-1093 (12 hypotheses), 8 scripts in 04-computation/
+**Unresolved threads:** Is T(6)=56=dim(V_E₇) structurally deep or coincidence? Can the Petersen-Lie dictionary be formalized?
+
+---
+
 ## opus-2026-03-14-S71e — 2026-03-14: Co-Jump Mechanism & H=21 Structural Proof
 
 **Account:** opus
