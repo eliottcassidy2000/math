@@ -1,0 +1,133 @@
+======================================================================
+FOURIER LEVEL DECOMPOSITION AT n=7
+opus-2026-03-14-S89
+======================================================================
+
+  n=7, m=21, total=2097152
+
+  Step 1: Computing H for all 2097152 tournaments...
+    Done in 76.8s
+    Mean(H) = 78.75
+    sum(H) = 165150720.0
+
+  Step 2: Fast Walsh-Hadamard Transform...
+    Done in 4.5s
+
+  Step 3: Computing level energies...
+    Done in 0.6s
+
+    E_0 = Mean² = 6201.562500 (expected 6201.562500)
+
+  FOURIER LEVEL ENERGIES:
+    Level  0: E_0 =     6201.562500, E_0/E_0 =   1.0000000000, C(21,0) =        1, avg ĉ² = 6201.5625000000
+    Level  2: E_2 =     1476.562500, E_2/E_0 =   0.2380952381, C(21,2) =      210, avg ĉ² =   7.0312500000
+    Level  4: E_4 =      132.890625, E_4/E_0 =   0.0214285714, C(21,4) =     5985, avg ĉ² =   0.0222039474
+    Level  6: E_6 =        2.460938, E_6/E_0 =   0.0003968254, C(21,6) =    54264, avg ĉ² =   0.0000453512
+
+    Total Var = 1611.914062
+    Var/Mean² = 0.2599206349
+    Expected: 0.2599206349
+
+  EXACT LEVEL RATIOS (as fractions):
+    E_2/E_0 = 5/21 = 0.2380952381
+    E_4/E_0 = 3/140 = 0.0214285714
+    E_6/E_0 = 1/2520 = 0.0003968254
+
+    Total Var/Mean² = 131/504 = 0.2599206349
+    Expected: 131/504 = 0.2599206349
+    Match: True
+
+======================================================================
+PART 2: LEVEL STRUCTURE ANALYSIS
+======================================================================
+
+  Active Fourier levels (nonzero energy): [2, 4, 6]
+  Number of active levels: 3
+  Only even levels? True
+
+  Level contributions to Var/Mean²:
+    Level  2: 5/21 = 0.2380952381 (91.60% of Var)
+    Level  4: 3/140 = 0.0214285714 (8.24% of Var)
+    Level  6: 1/2520 = 0.0003968254 (0.15% of Var)
+
+======================================================================
+PART 3: COEFFICIENT MAGNITUDE ANALYSIS
+======================================================================
+
+  Level 2: 105/210 nonzero coefficients
+    |ĉ| = 3.750000: 105 coefficients
+
+  Level 4: 1890/5985 nonzero coefficients
+    |ĉ| = 0.187500: 1260 coefficients
+    |ĉ| = 0.375000: 630 coefficients
+
+  Level 6: 2520/54264 nonzero coefficients
+    |ĉ| = 0.031250: 2520 coefficients
+
+======================================================================
+PART 4: THE H=63 FOURIER OBSTRUCTION
+======================================================================
+
+  H values near 63:
+    H= 55:    20160 ##########
+    H= 57:    13440 ######
+    H= 59:    40320 ####################
+    H= 61:     5040 ##
+    H= 63:        0 
+    H= 65:    55440 ###########################
+    H= 67:    30240 ###############
+    H= 69:    40320 ####################
+    H= 71:    35280 #################
+    H= 73:    40320 ####################
+
+  H mod 64 distribution for H values divisible by... 
+  H ≡ 63 mod 64 (the 63-family):
+    Values: [127]
+    Total tournaments: 5040
+  H ≡ 63 mod 128: [], total=0
+
+  H mod 7 for forbidden values:
+    7 ≡ 0 mod 7
+    21 ≡ 0 mod 7
+    63 ≡ 0 mod 7
+    All ≡ 0 mod 7
+
+  Achievable H values ≡ 0 mod 7: [35, 49, 77, 91, 105, 133, 147, 175, 189]
+  Missing H values ≡ 0 mod 7 in range: [7, 21, 63, 119, 161]
+
+  H mod 9 for forbidden values:
+    7 ≡ 7 mod 9
+    21 ≡ 3 mod 9
+    63 ≡ 0 mod 9
+
+  H mod 21 for forbidden values:
+    7 ≡ 7 mod 21
+    21 ≡ 0 mod 21
+    63 ≡ 0 mod 21
+
+======================================================================
+PART 5: COMPARISON WITH n=5 AND n=6
+======================================================================
+
+  Level structure comparison:
+    n=5 (m=10): levels 2, 4 only
+    n=7 (m=21): levels [2, 4, 6]
+    
+    n=5: even levels only? True
+    n=7: even levels only? True
+
+  H-spectrum sizes: 2, 3, 7, 19, 77
+    Differences: 1, 4, 12, 58
+    Ratios: 1.5, 2.33, 2.71, 4.05
+    77/19 = 77/19 ≈ 4.053
+    19/7 = 19/7 ≈ 2.714
+    7/3 = 7/3 ≈ 2.333
+    2×3 = 6, 3×7 = 21 (!), 7×19 = 133, 19×77 = 1463
+    Product of consecutive: 6, 21, 133, 1463
+    21 = forbidden! 133 = appears in H-spectrum at n=7!
+
+  Trying to find recurrence for spectrum sizes 2, 3, 7, 19, 77:
+
+======================================================================
+DONE — FOURIER LEVEL DECOMPOSITION n=7
+======================================================================

@@ -1,0 +1,219 @@
+======================================================================
+FORBIDDEN VALUE PATTERN: 7 × 3^k
+opus-2026-03-14-S89
+======================================================================
+
+  Computing H-spectrum at n=3...
+    Done in 0.0s, 2 distinct H values
+
+  Computing H-spectrum at n=4...
+    Done in 0.0s, 3 distinct H values
+
+  Computing H-spectrum at n=5...
+    Done in 0.0s, 7 distinct H values
+
+  Computing H-spectrum at n=6...
+    Done in 2.3s, 19 distinct H values
+
+  Computing H-spectrum at n=7...
+    Done in 0.0s, 77 distinct H values
+
+======================================================================
+PART 1: STATUS OF 7 × 3^k VALUES
+======================================================================
+
+  7 × 3^0 = 7:
+    n=3: max_H=    3, count=       0, out of range
+    n=4: max_H=    5, count=       0, out of range
+    n=5: max_H=   15, count=       0, FORBIDDEN (in range)
+    n=6: max_H=   45, count=       0, FORBIDDEN (in range)
+    n=7: max_H=  189, count=       0, FORBIDDEN (in range)
+
+  7 × 3^1 = 21:
+    n=3: max_H=    3, count=       0, out of range
+    n=4: max_H=    5, count=       0, out of range
+    n=5: max_H=   15, count=       0, out of range
+    n=6: max_H=   45, count=       0, FORBIDDEN (in range)
+    n=7: max_H=  189, count=       0, FORBIDDEN (in range)
+
+  7 × 3^2 = 63:
+    n=3: max_H=    3, count=       0, out of range
+    n=4: max_H=    5, count=       0, out of range
+    n=5: max_H=   15, count=       0, out of range
+    n=6: max_H=   45, count=       0, out of range
+    n=7: max_H=  189, count=       0, FORBIDDEN (in range)
+
+  7 × 3^3 = 189:
+    n=3: max_H=    3, count=       0, out of range
+    n=4: max_H=    5, count=       0, out of range
+    n=5: max_H=   15, count=       0, out of range
+    n=6: max_H=   45, count=       0, out of range
+    n=7: max_H=  189, count=     240, ACHIEVABLE
+
+  7 × 3^4 = 567:
+    n=3: max_H=    3, count=       0, out of range
+    n=4: max_H=    5, count=       0, out of range
+    n=5: max_H=   15, count=       0, out of range
+    n=6: max_H=   45, count=       0, out of range
+    n=7: max_H=  189, count=       0, out of range
+
+  7 × 3^5 = 1701:
+    n=3: max_H=    3, count=       0, out of range
+    n=4: max_H=    5, count=       0, out of range
+    n=5: max_H=   15, count=       0, out of range
+    n=6: max_H=   45, count=       0, out of range
+    n=7: max_H=  189, count=       0, out of range
+
+======================================================================
+PART 2: REPUNIT AND CYCLOTOMIC STRUCTURE
+======================================================================
+
+  Forbidden values and their representations:
+    7 = R₃(2) = Φ₃(2) = 2²+2+1 = 111₂
+    21 = R₃(4) = Φ₃(4) = 4²+4+1 = 111₄ = 3×7
+    63 = R₆(2) = 2⁶-1 = 111111₂ = 333₄ = 9×7
+    189 = 7×27 = 7×3³ — ACHIEVABLE at n=7!
+
+  WHY 189 survives:
+    189 in binary: 10111101
+    189 in base 4: 2331₄
+
+  The key: 63 = 333₄ (repdigit in base 4), but 189 = 2331₄ (NOT repdigit)
+  The repdigit/repunit connection is the obstruction, not just 7×3^k!
+
+  Repdigits in base 4:
+    1₄ = 1
+    11₄ = 5
+    111₄ = 21 — FORBIDDEN at n=6
+    1111₄ = 85
+    11111₄ = 341
+    2₄ = 2 — FORBIDDEN at n=3
+    22₄ = 10 — FORBIDDEN at n=5
+    222₄ = 42 — FORBIDDEN at n=6
+    2222₄ = 170 — FORBIDDEN at n=7
+    22222₄ = 682
+    3₄ = 3
+    33₄ = 15
+    333₄ = 63 — FORBIDDEN at n=7
+    3333₄ = 255
+    33333₄ = 1023
+
+======================================================================
+PART 3: OCF LEVEL DECOMPOSITION
+======================================================================
+
+  Computing N_2(n) for n=3..7:
+    n=3: N_2=3, P(n,2)=6, E_2/E_0 = 1/3 = 0.3333333333
+    n=4: N_2=3, P(n,2)=12, E_2/E_0 = 1/12 = 0.0833333333
+    n=5: N_2=0, P(n,2)=20, E_2/E_0 = 0 = 0.0000000000
+    n=6: N_2=0, P(n,2)=30, E_2/E_0 = 0 = 0.0000000000
+    n=7: N_2=0, P(n,2)=42, E_2/E_0 = 0 = 0.0000000000
+
+  Computing N_4(n) for n=3..7:
+    n=3: not enough edges for 4-subsets
+    n=4: N_4=15, P(n,4)=24, E_4/E_0 = 5/48 = 0.1041666667
+    n=5: N_4=135, P(n,4)=120, E_4/E_0 = 3/80 = 0.0375000000
+    n=6: N_4=330, P(n,4)=360, E_4/E_0 = 11/1080 = 0.0101851852
+    n=7: N_4=315, P(n,4)=840, E_4/E_0 = 1/560 = 0.0017857143
+
+  Computing N_6(n=7) — this may take a moment...
+    n=7: N_6=23604, P(n,6)=5040, E_6/E_0 = 281/75600 = 0.0037169312
+    (computed in 0.0s)
+
+  Computing master formula check at n=7:
+
+  RECHECK: Does N_2(7)=0?
+    N_2(7) = 0
+
+  FORMULA INVESTIGATION:
+  From level4_counting.out: N_2(5)=30, N_2(6)=60
+  But 2 edges can cover at most 4 vertices!
+  So 'N_2' must mean something else.
+  
+  Possible interpretation: N_2 is not edge-covering,
+  but rather the number of 2-element subsets S of [m]
+  such that the corresponding flip changes ALL vertices.
+  Or: N_2 counts something in the Fourier expansion.
+
+  Level-by-level Fourier energy for n=5:
+    Mean = 7.5
+    Fourier energy by level:
+      level  2: E_2 =      16.8750, E_2/E_0 = 0.3000000000
+      level  4: E_4 =       0.9375, E_4/E_0 = 0.0166666667
+    Total Var = 17.8125
+    Var/Mean² = 0.3166666667
+    Expected: 0.3166666667
+
+======================================================================
+PART 4: CONE AND FORBIDDEN VALUE MECHANISM
+======================================================================
+
+  Forbidden value 7 across n:
+    n=3: max_H=3, H=7 present: False
+    n=4: max_H=5, H=7 present: False
+    n=5: max_H=15, H=7 present: False
+    n=6: max_H=45, H=7 present: False
+    n=7: max_H=189, H=7 present: False
+
+  Forbidden value 21 across n:
+    n=3: max_H=3, H=21 present: False
+    n=4: max_H=5, H=21 present: False
+    n=5: max_H=15, H=21 present: False
+    n=6: max_H=45, H=21 present: False
+    n=7: max_H=189, H=21 present: False
+
+  Forbidden value 63 across n:
+    n=5: max_H=15, H=63 present: False
+    n=6: max_H=45, H=63 present: False
+    n=7: max_H=189, H=63 present: False
+
+  H-spectrum sizes: n=3→2 n=4→3 n=5→7 n=6→19 n=7→77 
+  Sizes: [2, 3, 7, 19, 77]
+  Ratios: 1.5000 2.3333 2.7143 4.0526 
+
+  GCD of spectrum counts:
+    n=3: GCD = 2
+    n=4: GCD = 8
+    n=5: GCD = 8
+    n=6: GCD = 16
+    n=7: GCD = 16
+
+======================================================================
+PART 5: THE REPDIGIT HYPOTHESIS
+======================================================================
+
+  Repdigits in base 2 (repunits): 1, 3, 7, 15, 31, 63, 127, 255, ...
+    = 2^k - 1 for k=1,2,3,4,5,6,7,8,...
+    Odd ones: all of them
+    Which are forbidden?
+    R_1 = 1: n=3:OK, n=4:OK, n=5:OK, n=6:OK, n=7:OK
+    R_3 = 3: n=3:OK, n=4:OK, n=5:OK, n=6:OK, n=7:OK
+    R_7 = 7: n=3:OOR, n=4:OOR, n=5:FORB, n=6:FORB, n=7:FORB
+    R_15 = 15: n=3:OOR, n=4:OOR, n=5:OK, n=6:OK, n=7:OK
+    R_31 = 31: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OK, n=7:OK
+    R_63 = 63: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:FORB
+    R_127 = 127: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:OK
+    R_255 = 255: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:OOR
+    R_511 = 511: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:OOR
+
+  Repdigits in base 4:
+    1₄ = 1: n=3:OK, n=4:OK, n=5:OK, n=6:OK, n=7:OK
+    11₄ = 5: n=3:OOR, n=4:OK, n=5:OK, n=6:OK, n=7:OK
+    111₄ = 21: n=3:OOR, n=4:OOR, n=5:OOR, n=6:FORB, n=7:FORB
+    1111₄ = 85: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:OK
+    3₄ = 3: n=3:OK, n=4:OK, n=5:OK, n=6:OK, n=7:OK
+    33₄ = 15: n=3:OOR, n=4:OOR, n=5:OK, n=6:OK, n=7:OK
+    333₄ = 63: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:FORB
+    3333₄ = 255: n=3:OOR, n=4:OOR, n=5:OOR, n=6:OOR, n=7:OOR
+
+  Repunits R_k(2) = 2^k - 1 where k ≡ 0 mod 3:
+    R_3(2) = 7 = 7
+      At n=7: FORBIDDEN
+    R_6(2) = 63 = 3 × 3 × 7
+      At n=7: FORBIDDEN
+    R_9(2) = 511 = 7 × 73
+    R_12(2) = 4095 = 3 × 3 × 5 × 7 × 13
+
+======================================================================
+DONE — FORBIDDEN 7×3^k ANALYSIS
+======================================================================
