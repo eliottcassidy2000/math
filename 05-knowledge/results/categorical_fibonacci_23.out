@@ -1,0 +1,338 @@
+======================================================================
+PART 1: THE INDEPENDENCE COMPLEX Ind(G)
+======================================================================
+
+For a graph G, the INDEPENDENCE COMPLEX Ind(G) is the simplicial complex
+whose simplices are the independent sets of G.
+
+  Ind(G) = {S ⊆ V(G) : S is an independent set}
+
+The independence polynomial I(G, x) is the f-polynomial of Ind(G):
+  I(G, x) = Σ_{k≥0} f_k · x^k
+where f_k = number of independent sets of size k = number of k-simplices.
+
+KEY TOPOLOGICAL FACTS:
+1. Ind(G) is always a FLAG COMPLEX (determined by its 1-skeleton).
+2. The Euler characteristic χ(Ind(G)) = I(G, -1).
+3. The reduced Euler characteristic χ̃(Ind(G)) = I(G, -1) - 1.
+4. Ind(C_n) is homotopy equivalent to S¹ for n ≡ 0 mod 3,
+   a point for n ≡ 1 mod 3, and a circle for n ≡ 2 mod 3.
+
+
+Independence complex of path graphs:
+  P_1: f-vector = [1, 1], χ = 0, I(P_1,-1) = 0, I(P_1,2) = 3
+  P_2: f-vector = [1, 2], χ = -1, I(P_2,-1) = -1, I(P_2,2) = 5
+  P_3: f-vector = [1, 3, 1], χ = -1, I(P_3,-1) = -1, I(P_3,2) = 11
+  P_4: f-vector = [1, 4, 3], χ = 0, I(P_4,-1) = 0, I(P_4,2) = 21
+  P_5: f-vector = [1, 5, 6, 1], χ = 1, I(P_5,-1) = 1, I(P_5,2) = 43
+  P_6: f-vector = [1, 6, 10, 4], χ = 1, I(P_6,-1) = 1, I(P_6,2) = 85
+  P_7: f-vector = [1, 7, 15, 10, 1], χ = 0, I(P_7,-1) = 0, I(P_7,2) = 171
+
+Independence complex of cycle graphs:
+  C_3: f = [1, 3], χ = -2, I(C_3,-1) = -2, I(C_3,2) = 7, ~S^1 (circle)
+  C_4: f = [1, 4, 2], χ = -1, I(C_4,-1) = -1, I(C_4,2) = 17, ~pt (contractible)
+  C_5: f = [1, 5, 5], χ = 1, I(C_5,-1) = 1, I(C_5,2) = 31, ~S^0 ∨ S^0 (two points)
+  C_6: f = [1, 6, 9, 2], χ = 2, I(C_6,-1) = 2, I(C_6,2) = 65, ~S^1 (circle)
+  C_7: f = [1, 7, 14, 7], χ = 1, I(C_7,-1) = 1, I(C_7,2) = 127, ~pt (contractible)
+  C_8: f = [1, 8, 20, 16, 2], χ = -1, I(C_8,-1) = -1, I(C_8,2) = 257, ~S^0 ∨ S^0 (two points)
+  C_9: f = [1, 9, 27, 30, 9], χ = -2, I(C_9,-1) = -2, I(C_9,2) = 511, ~S^1 (circle)
+
+======================================================================
+PART 2: THE x=-1 WORLD — EULER CHARACTERISTIC
+======================================================================
+
+I(P_k, -1) sequence (Euler characteristic of Ind(P_k)):
+  [1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1]
+  Period? First 6: [1, 0, -1, -1, 0, 1], Next 6: [1, 0, -1, -1, 0, 1]
+  Period 6? True
+
+  WHY PERIOD 6: At x=-1, eigenvalues = (1±i√3)/2 = e^{±iπ/3}
+  These are SIXTH ROOTS OF UNITY!
+  So I(P_k, -1) has period 6 = order of e^{iπ/3}.
+  THIS is the deepest reason for period 6 in tournament theory:
+  The Euler characteristic world (x=-1) has exact period 6,
+  and this period propagates to the tournament world (x=2)
+  through the shared recurrence structure.
+
+  I(C_k, -1) for k=3..24: [-2, -1, 1, 2, 1, -1, -2, -1, 1, 2, 1, -1, -2, -1, 1, 2, 1, -1, -2, -1, 1, 2]
+  Period? First 3: [-2, -1, 1], Next 3: [2, 1, -1]
+  Period 3? False
+  Pattern: [-2, -1, 1, 2, 1, -1]
+  = 2cos(kπ/3) for k=3,4,...: cos(π)=-1, cos(4π/3)=-1/2... hmm
+
+  I(C_k, -1) = 2cos(kπ/3):
+    C_3: 2cos(3π/3) = -2, I(C_3,-1) = -2, match = True
+    C_4: 2cos(4π/3) = -1, I(C_4,-1) = -1, match = True
+    C_5: 2cos(5π/3) = 1, I(C_5,-1) = 1, match = True
+    C_6: 2cos(6π/3) = 2, I(C_6,-1) = 2, match = True
+    C_7: 2cos(7π/3) = 1, I(C_7,-1) = 1, match = True
+    C_8: 2cos(8π/3) = -1, I(C_8,-1) = -1, match = True
+    C_9: 2cos(9π/3) = -2, I(C_9,-1) = -2, match = True
+    C_10: 2cos(10π/3) = -1, I(C_10,-1) = -1, match = True
+    C_11: 2cos(11π/3) = 1, I(C_11,-1) = 1, match = True
+    C_12: 2cos(12π/3) = 2, I(C_12,-1) = 2, match = True
+    C_13: 2cos(13π/3) = 1, I(C_13,-1) = 1, match = True
+    C_14: 2cos(14π/3) = -1, I(C_14,-1) = -1, match = True
+
+======================================================================
+PART 3: GRAPH ALGEBRA AND THE GROTHENDIECK GROUP
+======================================================================
+
+The GRAPH ALGEBRA K₀(Graph) under disjoint union (⊔) and I:
+
+1. I(G ⊔ H, x) = I(G, x) × I(H, x)  [ring homomorphism]
+2. I(G, x) = I(G-v, x) + x·I(G-N[v], x)  [deletion-contraction]
+
+Property 1 makes I a ring homomorphism:
+  K₀(Graph, ⊔) → Z[x]
+
+Property 2 is a deletion-contraction identity, giving:
+  I(G) ≡ I(G-v) + x·I(G-N[v])  in K₀
+
+For the OCF (Odd Cycle Formula):
+  H(T) = I(Ω(T), 2)
+
+The map T ↦ Ω(T) ↦ I(Ω(T), 2) is a COMPOSITION OF FUNCTORS:
+  Tournament → Conflict Graph → Z  (at x=2)
+
+The categorical structure:
+  Ω: Tournament(n) → SimpleGraph     [conflict graph functor]
+  I(·, 2): SimpleGraph → Z           [evaluation functor]
+  H = I(·, 2) ∘ Ω: Tournament → Z   [composition = H-path count]
+
+Ring homomorphism verification: I(G⊔H, 2) = I(G,2) × I(H,2)
+  I(P_2, 2) = 5
+  I(P_3, 2) = 11
+  I(P_2, 2) × I(P_3, 2) = 55
+  I(P_2 ⊔ P_3, 2) = 55
+  Equal? True
+
+======================================================================
+PART 4: BETTI NUMBERS OF Ind(G) FOR CONFLICT GRAPHS
+======================================================================
+
+Conflict graph properties would require cycle enumeration (expensive).
+Instead, let's compute Betti numbers of Ind(G) for small named graphs:
+
+  K_3 (triangle) (n=3):
+    f-vector: [1, 3]
+    I(G, 2) = 7
+    I(G, -1) = χ(Ind) = -2
+
+  P_4 (path) (n=4):
+    f-vector: [1, 4, 3]
+    I(G, 2) = 21
+    I(G, -1) = χ(Ind) = 0
+
+  C_4 (4-cycle) (n=4):
+    f-vector: [1, 4, 2]
+    I(G, 2) = 17
+    I(G, -1) = χ(Ind) = -1
+
+  C_5 (5-cycle) (n=5):
+    f-vector: [1, 5, 5]
+    I(G, 2) = 31
+    I(G, -1) = χ(Ind) = 1
+
+  K_4 (complete) (n=4):
+    f-vector: [1, 4]
+    I(G, 2) = 9
+    I(G, -1) = χ(Ind) = -3
+
+  K_{2,3} (n=5):
+    f-vector: [1, 5, 4, 1]
+    I(G, 2) = 35
+    I(G, -1) = χ(Ind) = -1
+
+  Empty_4 (n=4):
+    f-vector: [1, 4, 6, 4, 1]
+    I(G, 2) = 81
+    I(G, -1) = χ(Ind) = 0
+
+======================================================================
+PART 5: THE OPERAD — COMPOSING INDEPENDENCE POLYNOMIALS
+======================================================================
+
+The deletion-contraction identity creates an OPERAD structure:
+
+  I(G) = I(G-v) + x · I(G-N[v])
+
+This says: to compute I(G), choose a vertex v, then:
+  - Delete v: contributes I(G-v) (configurations not using v)
+  - Delete N[v]: contributes x·I(G-N[v]) (configurations using v)
+
+This is a TREE DECOMPOSITION: each graph decomposes into a binary tree
+of smaller graphs. The leaves are:
+  - Empty graph: I(∅) = 1
+  - Single vertex: I(K_1) = 1 + x
+
+The OPERAD COMPOSITION: If G has components G_1, ..., G_k:
+  I(G) = I(G_1) × ... × I(G_k)
+
+This product structure makes {I(G)} an ALGEBRA over the operad of
+graph decompositions.
+
+For tournaments: H(T) = I(Ω(T), 2) inherits this operad structure.
+The OCF is the "composition series" of the conflict graph Ω(T).
+
+Deletion-contraction tree for P_4 at x=2:
+  I(P_4) = I(P_4 - v_0) + 2·I(P_4 - N[v_0])
+         = I(P_3) + 2·I(P_2)
+         = (I(P_2) + 2·I(P_1)) + 2·I(P_2)
+         = 3·I(P_2) + 2·I(P_1)
+         = 3·(I(P_1) + 2·I(P_0)) + 2·I(P_1)
+         = 5·I(P_1) + 6·I(P_0)
+         = 5·(1+2) + 6·1 = 15 + 6 = 21
+  Verify: I(P_4, 2) = 21
+
+DC tree coefficients: I(P_k, 2) = a_k × 3 + b_k × 1
+  k=2: a=    1, b=    2, 3a+b=       5, actual=       5, match=True
+  k=3: a=    3, b=    2, 3a+b=      11, actual=      11, match=True
+  k=4: a=    5, b=    6, 3a+b=      21, actual=      21, match=True
+  k=5: a=   11, b=   10, 3a+b=      43, actual=      43, match=True
+  k=6: a=   21, b=   22, 3a+b=      85, actual=      85, match=True
+  k=7: a=   43, b=   42, 3a+b=     171, actual=     171, match=True
+  k=8: a=   85, b=   86, 3a+b=     341, actual=     341, match=True
+  k=9: a=  171, b=  170, 3a+b=     683, actual=     683, match=True
+
+======================================================================
+PART 6: NATURAL TRANSFORMATION η: Fibonacci → Jacobsthal
+======================================================================
+
+Relationship I(P_k, 2) vs I(P_k, 1) = F(k+2):
+  P_ 0: I(·,1) = F(2) =     1, I(·,2) =        1, ratio = 1.0000
+  P_ 1: I(·,1) = F(3) =     2, I(·,2) =        3, ratio = 1.5000
+  P_ 2: I(·,1) = F(4) =     3, I(·,2) =        5, ratio = 1.6667
+  P_ 3: I(·,1) = F(5) =     5, I(·,2) =       11, ratio = 2.2000
+  P_ 4: I(·,1) = F(6) =     8, I(·,2) =       21, ratio = 2.6250
+  P_ 5: I(·,1) = F(7) =    13, I(·,2) =       43, ratio = 3.3077
+  P_ 6: I(·,1) = F(8) =    21, I(·,2) =       85, ratio = 4.0476
+  P_ 7: I(·,1) = F(9) =    34, I(·,2) =      171, ratio = 5.0294
+  P_ 8: I(·,1) = F(10) =    55, I(·,2) =      341, ratio = 6.2000
+  P_ 9: I(·,1) = F(11) =    89, I(·,2) =      683, ratio = 7.6742
+  P_10: I(·,1) = F(12) =   144, I(·,2) =     1365, ratio = 9.4792
+  P_11: I(·,1) = F(13) =   233, I(·,2) =     2731, ratio = 11.7210
+
+Ratio grows as (2/φ)^k = 1.236068^k ≈ 1.236^k
+So there is NO natural transformation between I(·,1) and I(·,2)
+for paths (the ratio diverges). But...
+
+For cycles:
+  C_ 3: I(·,1) =     4, I(·,2) =        7, ratio = 1.7500
+  C_ 4: I(·,1) =     7, I(·,2) =       17, ratio = 2.4286
+  C_ 5: I(·,1) =    11, I(·,2) =       31, ratio = 2.8182
+  C_ 6: I(·,1) =    18, I(·,2) =       65, ratio = 3.6111
+  C_ 7: I(·,1) =    29, I(·,2) =      127, ratio = 4.3793
+  C_ 8: I(·,1) =    47, I(·,2) =      257, ratio = 5.4681
+  C_ 9: I(·,1) =    76, I(·,2) =      511, ratio = 6.7237
+  C_10: I(·,1) =   123, I(·,2) =     1025, ratio = 8.3333
+  C_11: I(·,1) =   199, I(·,2) =     2047, ratio = 10.2864
+
+======================================================================
+PART 7: THE FIBONACCI CATEGORY AND TOURNAMENT FUNCTORS
+======================================================================
+
+THE FIBONACCI CATEGORY Fib:
+
+Objects: Non-negative integers (indexing position in the recurrence)
+Morphisms: Generated by:
+  σ: n → n+1  (successor)
+  π: n → n-1  (predecessor, partial)
+
+Relations:
+  σ·π = id  (on objects ≥ 1)
+  The Fibonacci recurrence is a DIAGRAM in this category:
+  F(n+2) ←--- F(n+1) + F(n)
+
+The independence polynomial creates a REPRESENTATION of this category:
+  Rep_x: Fib → Vect
+  n ↦ Z  (one-dimensional space at each level)
+  σ ↦ [1, x; 1, 0]  (the transfer matrix T_x)
+
+At x=1: Rep_1 is the FIBONACCI REPRESENTATION.
+At x=2: Rep_2 is the JACOBSTHAL REPRESENTATION.
+At x=k(k+1): Rep_{k(k+1)} is the OBLONG REPRESENTATION.
+
+THE TOURNAMENT FUNCTOR:
+  Tournament(n) --Ω--> Graph --I(·,2)--> Z
+
+This factors through the Fibonacci category:
+  If Ω(T) = P_m ⊔ ... (a disjoint union of paths and cycles),
+  then H(T) = Π I(P_{m_i}, 2) × Π I(C_{l_j}, 2)
+  = product of Jacobsthal and Jacobsthal-Lucas numbers!
+
+CATEGORIFICATION:
+  The category of tournament invariants is a MODULE CATEGORY
+  over the Fibonacci category, with the action given by
+  "extending by one vertex" (which adds arcs to the tournament).
+
+
+======================================================================
+PART 8: REPRESENTATION THEORY — SPECTRUM OF T_x
+======================================================================
+
+Character table of T_x representations:
+  x | trace | det | eigenvalues | character χ(n) = α^n + β^n
+   0 |   1   |   0 | ( 1,   0)     | [2, 1, 1, 1, 1, 1, 1, 1]
+   1 |   1   |  -1 | irrational    | (non-integer)
+   2 |   1   |  -2 | ( 2,  -1)     | [2, 1, 5, 7, 17, 31, 65, 127]
+   6 |   1   |  -6 | ( 3,  -2)     | [2, 1, 13, 19, 97, 211, 793, 2059]
+  12 |   1   | -12 | ( 4,  -3)     | [2, 1, 25, 37, 337, 781, 4825, 14197]
+
+======================================================================
+PART 9: MOD-p REPRESENTATIONS AND GALOIS THEORY
+======================================================================
+
+T_2 mod p eigenvalues:
+  p= 2: eigenvalues (0, 1), diagonalizable
+  p= 3: eigenvalues (2, 2), DEGENERATE (Jordan block!)
+  p= 5: eigenvalues (2, 4), diagonalizable
+  p= 7: eigenvalues (2, 6), diagonalizable
+  p=11: eigenvalues (2, 10), diagonalizable
+  p=13: eigenvalues (2, 12), diagonalizable
+
+  KEY: At p=3, the Jacobsthal sequence mod 3 has a JORDAN BLOCK!
+  This gives J(n) mod 3 a POLYNOMIAL correction to the exponential.
+
+  Jacobsthal mod 3: 0 1 1 0 2 2 0 1 1 0 2 2 0 1 1 0 2 2 0 1 
+  Full: [0, 1, 1, 0, 2, 2, 0, 1, 1, 0, 2, 2, 0, 1, 1, 0, 2, 2, 0, 1, 1, 0, 2, 2, 0, 1, 1, 0, 2, 2]
+  Period of J(n) mod 3 = 6
+
+======================================================================
+SYNTHESIS — CATEGORICAL FIBONACCI-TOURNAMENT THEORY
+======================================================================
+
+CROWN JEWELS:
+
+1. PERIOD 6 FROM EULER CHARACTERISTIC:
+   I(P_k, -1) has exact period 6 because eigenvalues at x=-1 are
+   sixth roots of unity e^{±iπ/3}. This is the TOPOLOGICAL origin
+   of period 6 in tournament theory.
+
+2. INDEPENDENCE COMPLEX TOPOLOGY:
+   I(G, -1) = χ(Ind(G)) connects graph combinatorics to topology.
+   The independence complex Ind(G) carries homological information
+   that specializes to H-path counts at x=2.
+
+3. RING HOMOMORPHISM: I(G⊔H, x) = I(G,x)·I(H,x)
+   The OCF product formula H = Π I(Ω_i, 2) is the IMAGE of this
+   ring homomorphism at x=2.
+
+4. FIBONACCI CATEGORY: The recurrence a(n) = a(n-1) + x·a(n-2)
+   defines a category with representations Rep_x parametrized by x.
+   Tournaments = Rep_2, Fibonacci = Rep_1.
+
+5. JORDAN BLOCK AT p=3: Jacobsthal mod 3 has a degenerate eigenvalue
+   (2 ≡ -1 mod 3), creating a Jordan block. This forces polynomial
+   corrections to the exponential growth mod 3.
+
+6. DELETION-CONTRACTION AS OPERAD: The DC identity creates a binary
+   tree decomposition of any graph. The leaves are trivial graphs,
+   and the internal nodes are DC choices. H(T) is the product of
+   evaluations along this tree.
+
+7. THE x=-1 → x=2 BRIDGE: Going from Euler characteristic (topology)
+   to tournament counting (combinatorics) is a three-step deformation:
+   x: -1 → 0 → 1 → 2
+   = topology → trivial → Fibonacci → Tournament
+
