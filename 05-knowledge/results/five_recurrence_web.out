@@ -1,0 +1,418 @@
+
+======================================================================
+  PART 1: F(5) = 5 — THE FIBONACCI FIXED POINT
+======================================================================
+
+Fibonacci sequence: F(0)=0, F(1)=1, F(n) = F(n-1)+F(n-2)
+
+  F( 0) =    0  ← FIXED POINT
+  F( 1) =    1  ← FIXED POINT
+  F( 2) =    1
+  F( 3) =    2
+  F( 4) =    3
+  F( 5) =    5  ← FIXED POINT
+  F( 6) =    8
+  F( 7) =   13
+  F( 8) =   21
+  F( 9) =   34
+  F(10) =   55
+  F(11) =   89
+  F(12) =  144  ← F(12) = 144
+
+Fixed points of F: {n : F(n) = n}
+  F(0) = 0 ✓ (trivial)
+  F(1) = 1 ✓ (trivial)
+  F(5) = 5 ✓ (NON-TRIVIAL)
+  F(12) = 144 ≠ 12
+
+CLAIM: 5 is the ONLY prime fixed point of the Fibonacci sequence.
+  (0 and 1 are the only other fixed points.)
+
+PROOF: F(n)/n → φ^{n-1}/√5/n → ∞ as n → ∞
+  So F(n) > n for all sufficiently large n.
+  Check: F(6)=8>6, F(7)=13>7, ... all subsequent F(n)>n.
+  And F(2)=1<2, F(3)=2<3, F(4)=3<4.
+  So the ONLY nontrivial fixed point is F(5)=5. QED
+
+This makes 5 SELF-REFERENTIAL in the Fibonacci sequence,
+just as 2 is self-referential in the Jacobsthal evaluation x=2.
+
+======================================================================
+  PART 2: LUCAS NUMBERS — L(5) = 11
+======================================================================
+
+Lucas sequence: L(0)=2, L(1)=1, L(n) = L(n-1)+L(n-2)
+
+  L( 0) =    2  ← KEY NUMBER
+  L( 1) =    1
+  L( 2) =    3  ← KEY NUMBER
+  L( 3) =    4
+  L( 4) =    7  ← KEY NUMBER
+  L( 5) =   11  ← KEY NUMBER
+  L( 6) =   18
+  L( 7) =   29
+  L( 8) =   47
+  L( 9) =   76
+  L(10) =  123
+
+REMARKABLE: The Lucas sequence at n=0,1,2,3,4,5 gives:
+  L(0) = 2   (first key)
+  L(1) = 1   (identity)
+  L(2) = 3   (second key)
+  L(3) = 4   (= 2²)
+  L(4) = 7   (= 2³-1, Mersenne prime, transition)
+  L(5) = 11  (decimal pair number!)
+
+So the Lucas sequence GENERATES the hierarchy numbers!
+  L(0)=2, L(2)=3, L(4)=7, L(5)=11
+  And L is evaluated at 5 to get 11!
+
+The bridge: 5 maps to 11 under the Lucas map.
+This is the Q(√5) bridge in disguise!
+  L(n) = φ^n + (-1/φ)^n
+  L(5) = φ⁵ + (-1/φ)⁵ = φ⁵ - 1/φ⁵
+  φ⁵ = 11.090170
+  1/φ⁵ = 0.090170
+  φ⁵ - 1/φ⁵ = 11.000000
+  φ⁵ + (-1/φ)⁵ = 11.000000
+  = 11.000000 ✓
+
+Fibonacci-Lucas identities at n=5:
+  F(5) = 5 = 5
+  L(5) = 11 = 11
+  F(5) · L(5) = 5 · 11 = 55 = F(10)
+  Check: F(10) = 55 = 55 ✓
+  L(5)² - 5·F(5)² = 121 - 125 = -4 = -4·(-1)⁵
+  This is the identity L(n)² - 5F(n)² = 4(-1)^n ✓
+
+  F(2·5) = F(5)·L(5) = 5·11 = 55
+  This means: 5 and 11 are LINKED via doubling in Fibonacci!
+  The (5, 11) pair in the hierarchy corresponds to
+  the (n, 2n) doubling in Fibonacci: F(2n) = F(n)·L(n).
+
+======================================================================
+  PART 3: PENTANACCI COMPANION MATRIX
+======================================================================
+
+5-nacci companion matrix:
+[[1. 1. 1. 1. 1.]
+ [1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]]
+
+Eigenvalues:
+  λ_1 = 1.9659482366+0.0000000000j  |λ| = 1.9659482366
+  λ_2 = 0.1953765946+0.8488536405j  |λ| = 0.8710479417
+  λ_3 = 0.1953765946-0.8488536405j  |λ| = 0.8710479417
+  λ_4 = -0.6783507130+0.4585361873j  |λ| = 0.8187888158
+  λ_5 = -0.6783507130-0.4585361873j  |λ| = 0.8187888158
+
+Dominant eigenvalue ≈ 1.9659482366
+Characteristic polynomial: det(M5 - λI) = 0
+Coefficients: [1, -1, -1, -1, -1, -1]
+= λ⁵ - λ⁴ - λ³ - λ² - λ - 1
+
+Weighted 5-nacci companion matrix:
+Eigenvalues:
+  λ_1 = 2.8208299300+0.0000000000j  |λ| = 2.8208299300
+  λ_2 = 0.3300452982+1.5612151896j  |λ| = 1.5957201406
+  λ_3 = 0.3300452982-1.5612151896j  |λ| = 1.5957201406
+  λ_4 = -1.2404602632+0.8299514698j  |λ| = 1.4925016271
+  λ_5 = -1.2404602632-0.8299514698j  |λ| = 1.4925016271
+
+Dominant eigenvalue ≈ 2.8208299300
+
+======================================================================
+  PART 4: QR₅ TOURNAMENT EIGENSTRUCTURE
+======================================================================
+
+QR₅ adjacency matrix:
+[[0 1 0 0 1]
+ [1 0 1 0 0]
+ [0 1 0 1 0]
+ [0 0 1 0 1]
+ [1 0 0 1 0]]
+
+Skew-symmetric S = A - A^T:
+[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]]
+
+Eigenvalues of A (QR₅):
+  2.00000000
+  0.61803399
+  0.61803399
+  -1.61803399
+  -1.61803399
+
+Eigenvalues of S = A-A^T:
+
+Quadratic Gauss sum g(5) = 2.23606798-0.00000000j
+|g(5)|² = 5.00000000 (should be 5)
+g(5)² = 5.00000000-0.00000000j (should be ±5)
+
+So the Gauss sum for p=5 has |g|² = 5.
+The eigenvalues of QR₅ involve (1±√5)/2 = φ, 1/φ
+This is the FIBONACCI connection again!
+
+det(I + 2A) for QR₅:
+  det(I + 2A) = 125.0000
+  H(QR₅) = 10
+  H² = 100
+
+S is 5×5 (odd dimension) → no classical Pfaffian.
+But for each vertex v, Pfaffian of S[V\v] exists:
+  v=0: det(S[V\0]) = 0.0000, Pf² = 0.0000, Pf = ±0.0000
+  v=1: det(S[V\1]) = 0.0000, Pf² = 0.0000, Pf = ±0.0000
+  v=2: det(S[V\2]) = 0.0000, Pf² = 0.0000, Pf = ±0.0000
+  v=3: det(S[V\3]) = 0.0000, Pf² = 0.0000, Pf = ±0.0000
+  v=4: det(S[V\4]) = 0.0000, Pf² = 0.0000, Pf = ±0.0000
+
+======================================================================
+  PART 5: FIBONACCI MOD 5 — THE WALL-SUN-SUN CONNECTION
+======================================================================
+
+Fibonacci mod p: the Pisano period π(p)
+
+π(2) = 3:   F mod 2 = 0,1,1,0,1,1,...
+π(3) = 8:   F mod 3 = 0,1,1,2,0,2,2,1,0,...
+π(5) = 20:  F mod 5 = 0,1,1,2,3,0,3,3,1,4,0,4,4,3,2,0,2,2,4,1,0,...
+π(7) = 16:  F mod 7 = ...
+
+  p= 2: π(p)=   3, F(p) mod p = 1, F(p) mod p² = 1
+  p= 3: π(p)=   8, F(p) mod p = 2, F(p) mod p² = 2
+  p= 5: π(p)=  20, F(p) mod p = 0, F(p) mod p² = 5
+  p= 7: π(p)=  16, F(p) mod p = 6, F(p) mod p² = 13
+  p=11: π(p)=  10, F(p) mod p = 1, F(p) mod p² = 89
+  p=13: π(p)=  28, F(p) mod p = 12, F(p) mod p² = ?
+
+KEY: F(5) = 5 ≡ 0 (mod 5).
+Moreover: F(5) = 5 ≡ 5 (mod 25), so v₅(F(5)) = 1 (not 2).
+Wall-Sun-Sun primes: p where p² | F(p-1) or p² | F(p+1).
+5 is NOT a Wall-Sun-Sun prime (F(4)=3, F(6)=8, neither ≡ 0 mod 25).
+
+Fibonacci entry point α(p) = min{n>0 : p | F(n)}:
+  α( 2) =    3 
+  α( 3) =    4 
+  α( 5) =    5 ← p divides F(p)!
+  α( 7) =    8 
+  α(11) =   10 
+  α(13) =    7 
+  α(17) =    9 
+  α(19) =   18 
+
+5 is the ONLY prime p where α(p) = p (entry point equals the prime).
+For all other primes, α(p) divides p±1 but ≠ p.
+
+This is EQUIVALENT to F(5)=5: the entry point of 5 in Fibonacci is 5 itself.
+
+======================================================================
+  PART 6: THE DISCRIMINANT CREATES THE FIELD
+======================================================================
+
+The second-order recurrence hierarchy:
+
+  Recurrence    Discriminant    Roots             Number field
+  ──────────    ────────────    ─────             ────────────
+  f=f+0f        Δ=1            1, 0              Q
+  f=f+1f        Δ=5            φ, -1/φ           Q(√5)
+  f=f+2f        Δ=9            2, -1             Q
+  f=f+3f        Δ=13           r, s              Q(√13)
+  f=f+4f        Δ=17           r, s              Q(√17)
+  f=f+5f        Δ=21           r, s              Q(√21)
+  f=f+6f        Δ=25           3, -2             Q
+  f=f+7f        Δ=29           r, s              Q(√29)
+  ...
+  f=f+11f       Δ=45=9·5       (1±3√5)/2         Q(√5) again!
+  f=f+12f       Δ=49           4, -3             Q
+
+PATTERN: Rational roots (Δ = perfect square) at x = k(k-1):
+  x = 0, 2, 6, 12, 20, 30, 42, 56, ...
+  These are the OBLONG NUMBERS (pronic numbers).
+
+Q(√5) appears at x = 1, 11, 31, 61, 101, ...
+  x = (5m²-1)/4 for odd m
+
+The FULL hierarchy of number fields:
+Field → x values (first few):
+  Q           : x = [0, 2, 6, 12, 20, 30, 42, 56]  (+2 more)
+  Q(√5)       : x = [1, 11, 31, 61]
+  Q(√13)      : x = [3, 29, 81]
+  Q(√17)      : x = [4, 38]
+  Q(√21)      : x = [5, 47]
+  Q(√29)      : x = [7, 65]
+  Q(√33)      : x = [8, 74]
+  Q(√37)      : x = [9, 83]
+  Q(√41)      : x = [10, 92]
+  Q(√53)      : x = [13]
+  Q(√57)      : x = [14]
+  Q(√61)      : x = [15]
+  Q(√65)      : x = [16]
+  Q(√69)      : x = [17]
+  Q(√73)      : x = [18]
+  Q(√77)      : x = [19]
+  Q(√85)      : x = [21]
+  Q(√89)      : x = [22]
+  Q(√93)      : x = [23]
+  Q(√97)      : x = [24]
+  Q(√101)     : x = [25]
+  Q(√105)     : x = [26]
+  Q(√109)     : x = [27]
+  Q(√113)     : x = [28]
+  Q(√129)     : x = [32]
+  Q(√133)     : x = [33]
+  Q(√137)     : x = [34]
+  Q(√141)     : x = [35]
+  Q(√145)     : x = [36]
+  Q(√149)     : x = [37]
+  Q(√157)     : x = [39]
+  Q(√161)     : x = [40]
+  Q(√165)     : x = [41]
+  Q(√173)     : x = [43]
+  Q(√177)     : x = [44]
+  Q(√181)     : x = [45]
+  Q(√185)     : x = [46]
+  Q(√193)     : x = [48]
+  Q(√197)     : x = [49]
+  Q(√201)     : x = [50]
+  Q(√205)     : x = [51]
+  Q(√209)     : x = [52]
+  Q(√213)     : x = [53]
+  Q(√217)     : x = [54]
+  Q(√221)     : x = [55]
+  Q(√229)     : x = [57]
+  Q(√233)     : x = [58]
+  Q(√237)     : x = [59]
+  Q(√241)     : x = [60]
+  Q(√249)     : x = [62]
+  Q(√253)     : x = [63]
+  Q(√257)     : x = [64]
+  Q(√265)     : x = [66]
+  Q(√269)     : x = [67]
+  Q(√273)     : x = [68]
+  Q(√277)     : x = [69]
+  Q(√281)     : x = [70]
+  Q(√285)     : x = [71]
+  Q(√293)     : x = [73]
+  Q(√301)     : x = [75]
+  Q(√305)     : x = [76]
+  Q(√309)     : x = [77]
+  Q(√313)     : x = [78]
+  Q(√317)     : x = [79]
+  Q(√321)     : x = [80]
+  Q(√329)     : x = [82]
+  Q(√337)     : x = [84]
+  Q(√341)     : x = [85]
+  Q(√345)     : x = [86]
+  Q(√349)     : x = [87]
+  Q(√353)     : x = [88]
+  Q(√357)     : x = [89]
+  Q(√365)     : x = [91]
+  Q(√373)     : x = [93]
+  Q(√377)     : x = [94]
+  Q(√381)     : x = [95]
+  Q(√385)     : x = [96]
+  Q(√389)     : x = [97]
+  Q(√393)     : x = [98]
+  Q(√397)     : x = [99]
+
+======================================================================
+  PART 7: THE 5-10-11 TRIANGLE
+======================================================================
+
+Three numbers linked by 5:
+  5 = F(5) = L(5)/11 · 5 (Fibonacci fixed point)
+  10 = 2·5 = F(5)·L(0) (Fibonacci·Lucas)
+  11 = L(5) (Lucas at 5)
+
+The TRIANGLE:
+  5 ──(×2)──→ 10 ──(+1)──→ 11
+  ↑                            ↑
+  F(n=5)                    L(n=5)
+
+In tournament terms:
+  5 = bridge modulus (2+3)
+  10 = x + x³ = 2 + 8 (digit shift)
+  11 = 1 + x + x³ = 1 + 2 + 8 (digit shift + 1)
+
+The Q(√5) field connects all three:
+  F(5) = 5, in Q(√5) via Binet: F(n) = (φⁿ-ψⁿ)/√5
+  L(5) = 11, in Q(√5) via Lucas: L(n) = φⁿ+ψⁿ
+  F(10) = 55 = 5·11 = F(5)·L(5)
+  F(5)·L(5) = F(2·5) = F(10)
+
+And the KEY identity: F(n)·L(n) = F(2n)
+At n=5: 5·11 = 55 = F(10)
+At n=10: F(10)·L(10) = 55·123 = 6765 = F(20)
+Check: F(20) = 6765 = correct!
+  F(20) = 6765, 55·123 = 6765
+
+THE TOWER:
+  F(5) = 5
+  F(10) = F(5)·L(5) = 5·11 = 55
+  F(20) = F(10)·L(10) = 55·123 = 6765
+  Each doubling multiplies by a Lucas number.
+  This is the 'doubling formula' for Fibonacci.
+
+======================================================================
+  PART 8: SYNTHESIS — EVERYTHING IS RECURRENCES
+======================================================================
+
+THE COMPLETE WEB OF RECURRENCES THROUGH 5:
+
+1. FIBONACCI: F(n) = F(n-1) + F(n-2)
+   F(5) = 5 (fixed point)
+   Discriminant = 5 (creates Q(√5))
+   Roots: φ = (1+√5)/2 = 1.618...
+
+2. LUCAS: L(n) = L(n-1) + L(n-2)
+   L(5) = 11 (maps 5 to 11)
+   Same discriminant, same field Q(√5)
+   Product: F(5)·L(5) = F(10) = 55
+
+3. JACOBSTHAL: J(n) = J(n-1) + 2J(n-2)
+   J(5) = 11 (ALSO maps to 11!)
+   Discriminant = 9 = 3² (RATIONAL)
+   Roots: 2, -1
+
+   J(5) = 11 = 11 ✓
+
+AMAZING: Both Lucas AND Jacobsthal map 5 to 11!
+  L(5) = 11  (via Fibonacci recurrence with initial (2,1))
+  J(5) = 11  (via Jacobsthal recurrence with initial (0,1))
+
+  Lucas uses the x=1 recurrence (Fibonacci world)
+  Jacobsthal uses the x=2 recurrence (tournament world)
+  BOTH reach 11 at n=5!
+
+This is the DEEPEST bridge:
+  5 is where the Fibonacci world (x=1) and
+  the tournament world (x=2) AGREE on an output value.
+  At n=5: L_fib(5) = J_jac(5) = 11.
+
+4. PENTANACCI: T(n) = T(n-1)+T(n-2)+T(n-3)+T(n-4)+T(n-5)
+   Dominant root → 2 (98.3%)
+   The '5-step lookback' in the k-nacci
+
+5. Q(√5) TOWER: G₁₁(n) = G(n-1) + 11G(n-2)
+   Root = 3φ-1 ≈ 3.854
+   G₁₁(n) ≡ F(n) (mod 5)
+   Connects x=1 to x=11 via Q(√5)
+
+SUMMARY:
+  The number 5 is the UNIQUE fixed point of the Fibonacci map
+  among primes. It sits at the intersection of:
+    - The Fibonacci recurrence (x=1): F(5) = 5
+    - The Jacobsthal recurrence (x=2): J(5) = 11 = L(5)
+    - The number field Q(√5) connecting x=1 and x=11
+    - The pentanacci getting 98.3% of the way to 2
+    - The forbidden residue barrier at n=5
+    - The 5-cycle that enables cross-level coupling at n=8
+
+  In the user's words: 5 IS the mortar between 2 and 3.
+  Without it, the bricks don't hold together.
+
+Done.
