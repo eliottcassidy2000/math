@@ -1,0 +1,47 @@
+======================================================================
+COMPREHENSIVE REVIEW — VERIFY, CORRECT, EXTEND, APPLY
+kind-pasteur-2026-03-14-S99
+======================================================================
+
+======================================================================
+SECTION 1: VERIFICATION OF KEY CLAIMS
+======================================================================
+
+  CLAIM 1: |A_n(omega_3)| = max_H for some n
+    n=2: |A_2(omega_3)| = 1.0000 ≈ 1 = max_H(1)
+    n=3: |A_3(omega_3)| = 3.0000 ≈ 3 = max_H(3)
+    n=4: |A_4(omega_3)| = 9.0000 ≈ 9 NOT a max_H value
+    n=5: |A_5(omega_3)| = 39.0000 ≈ 39 NOT a max_H value
+    n=6: |A_6(omega_3)| = 189.0000 ≈ 189 = max_H(7)
+    n=7: |A_7(omega_3)| = 1107.0000 ≈ 1107 NOT a max_H value
+    n=8: |A_8(omega_3)| = 7281.0000 ≈ 7281 NOT a max_H value
+
+  VERIFICATION: A_6(omega_3) = 94.50 + -163.68i
+    |A_6(omega_3)| = 189.000000
+    = 189? True
+
+  CLAIM 2: Forbidden H = |PG(2, F_{2^k})|
+    |PG(2, F_2)| = 2^2+2+1 = 7 = H_forb_1 ✓
+    |PG(2, F_4)| = 4^2+4+1 = 21 = H_forb_2 ✓
+    |PG(2, F_8)| = 8^2+8+1 = 73 — IS achievable (not forbidden) ✓
+    CLAIM VERIFIED.
+
+  CLAIM 3: |GL(3, F_2)| = 168 = 8 * 21
+    (2^3-1)(2^3-2)(2^3-4) = 7*6*4 = 168
+    168 = 8 * 21? True ✓
+    168 = dim(O) * H_forb_2 ✓
+
+  CLAIM 4: deg(H) = 2*floor((n-1)/2)
+    n=3 (odd): deg = 2*1 = 2 = n-1 ✓
+    n=4 (even): deg = 2*1 = 2 = n-2 ✓ (top terms cancel)
+    n=5 (odd): deg = 2*2 = 4 = n-1 ✓
+    n=6 (even): deg = 2*2 = 4 = n-2 ✓ (verified by agent)
+    PROOF: path reversal involution pairs P with P^rev,
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\comprehensive_review.py", line 358, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\comprehensive_review.py", line 111, in main
+    print(f"    des(P) + des(P^rev) = n-1. For even n: (-1)^des + (-1)^{n-1-des} = 0. \u2713")
+                                                                        ^
+UnboundLocalError: cannot access local variable 'n' where it is not associated with a value
