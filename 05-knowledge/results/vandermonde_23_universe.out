@@ -1,0 +1,114 @@
+======================================================================
+PART 1: THE I(Ω,x) POLYNOMIAL
+======================================================================
+
+  n=5 (exhaustive):
+    bits=0: I(Ω,x) = 1 + 0x, H=I(Ω,2)=1=1
+    bits=40: I(Ω,x) = 1 + 7x, H=I(Ω,2)=15=15
+    bits=341: I(Ω,x) = 1 + 7x, H=I(Ω,2)=15=15
+
+  n=7 (3 samples):
+    trial 0: I(Ω,x) = 1 + 54x + 12x²
+      I(2)=157=H=157, I(3)=271
+    trial 1: I(Ω,x) = 1 + 48x + 12x²
+      I(2)=145=H=145, I(3)=253
+    trial 2: I(Ω,x) = 1 + 28x + 4x²
+      I(2)=73=H=73, I(3)=121
+
+======================================================================
+PART 2: GENERALIZED VANDERMONDE — OTHER EVALUATION POINTS
+======================================================================
+  Vandermonde determinant V(a,b) = ab(b-a) for degree-2 extraction:
+    V(2,3) = 6
+    V(2,4) = 16
+    V(2,5) = 30
+    V(2,6) = 48
+    V(3,4) = 12
+    V(3,5) = 30
+    V(3,6) = 54
+    V(4,5) = 20
+    V(4,6) = 48
+    V(5,6) = 30
+
+  KEY: V(2,3)=6 is the MINIMUM over all consecutive integer pairs!
+  This means (2,3) gives the best integrality guarantee.
+  Using (2,3), we need (2I₃-3H+1) ≡ 0 (mod 6).
+  Using (2,4), we'd need a combination ≡ 0 (mod 16) — harder to guarantee.
+
+======================================================================
+PART 3: I(Ω, -1) = 1 - α₁ + α₂
+======================================================================
+  I(-1) = 2 + I₃ - 2H
+  Or equivalently: I(-1) = 2I₃ - 2H - (I₃ - 2) = ...
+  Let's verify: I(-1) = 1 - α₁ + α₂ = 2 + I₃ - 2H
+  Verified: 500/500
+
+  I(-1) = 1 - α₁ + α₂
+  = 1 - (total directed odd cycles) + (vertex-disjoint pairs)
+  This is an alternating sum over the independence structure!
+  For the complete graph: I_Kn(-1) = 0 or 1 (chromatic polynomial at -1).
+  For the conflict graph Ω(T): I(-1) counts a signed quantity.
+
+  Distribution of I(-1) at n=7 (1000 samples):
+    mean: -24.64
+    std: 11.87
+    range: [-57, 0]
+    I(-1) > 0: 0/1000
+    I(-1) = 0: 3/1000
+    I(-1) < 0: 997/1000
+
+======================================================================
+PART 4: JACOBSTHAL NUMBERS AND THE CONFLICT GRAPH
+======================================================================
+
+  Jacobsthal numbers J(n) = (2^n - (-1)^n)/3:
+    J( 1) = 1
+    J( 2) = 1
+    J( 3) = 3
+    J( 4) = 5
+    J( 5) = 11
+    J( 6) = 21
+    J( 7) = 43
+    J( 8) = 85
+    J( 9) = 171
+    J(10) = 341
+    J(11) = 683
+
+  J(n) mod 4 pattern: [1, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+  J(n) mod 6 pattern: [1, 1, 3, 5, 5, 3, 1, 1, 3, 5, 5, 3, 1, 1, 3, 5, 5, 3, 1]
+
+======================================================================
+PART 5: CHARACTERISTIC POLYNOMIAL OF THE CONFLICT GRAPH
+======================================================================
+
+  SUMMARY OF THE 2-3 UNIVERSE:
+
+  At n ≤ 8, the conflict graph Ω(T) has independence polynomial:
+    I(Ω, x) = 1 + α₁x + α₂x²
+
+  This polynomial is COMPLETELY determined by TWO evaluations:
+    I(Ω, 2) = H     (the Hamiltonian path count)
+    I(Ω, 3) = I₃    (the "3-evaluation")
+
+  The recovery is via the Vandermonde system:
+    α₂ = (2I₃ - 3H + 1) / 6
+    α₁ = (H - 1 - 4α₂) / 2
+
+  Integrality is guaranteed by:
+    H ≡ 1 (mod 2)    [Rédei's theorem]
+    I₃ ≡ 1 (mod 3)    [trivial from I₃ = 1 + 3α₁ + 9α₂]
+
+  The Vandermonde determinant V(2,3) = 6 is MINIMAL:
+    Among all pairs (a,b) of positive integers with a<b,
+    V(a,b) = ab(b-a) ≥ 2·3·1 = 6.
+    Equality iff (a,b) = (2,3).
+
+  So 2 and 3 are literally THE optimal evaluation points!
+  They give the tightest integrality constraint (mod 6)
+  and the most efficient extraction of (α₁, α₂).
+
+  "If one knows 2 and 3, one has the keys to the universe."
+  This is LITERALLY TRUE for tournament independence polynomials
+  at n ≤ 8, and approximately true for larger n where α₃ is small.
+
+Done.
