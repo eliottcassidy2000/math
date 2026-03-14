@@ -1,0 +1,133 @@
+======================================================================
+PART 1: H VIA TRANSFER MATRIX / PERMANENT
+======================================================================
+n=4: DP agrees with brute force: 64/64
+n=5: DP agrees with brute force: 1024/1024
+
+H of Paley tournaments via DP:
+  T_3 (Paley): H = 3, scores = [1], regular = True
+  C_5 (directed): H = 15
+  T_7 (Paley): H = 189, scores = [3], regular = True
+  T_11 (Paley): H = 95095, scores = [5], regular = True
+
+Computing H for Paley T_11...
+  T_11 (Paley): H = 95095
+  11! = 39916800
+  H/11! = 0.00238233
+  11!/2^10 = 38981.25
+
+======================================================================
+PART 2: TRANSFER MATRIX EIGENVALUES
+======================================================================
+
+n=4: Spectral radius vs H:
+  H= 1: mean spec_radius=0.0000, mean max_real_eig=0.0000
+  H= 3: mean spec_radius=1.0000, mean max_real_eig=1.0000
+  H= 5: mean spec_radius=1.3953, mean max_real_eig=1.3953
+
+n=5: Spectral radius vs H:
+  H= 1: mean spec_radius=0.0000, mean max_real_eig=0.0000
+  H= 3: mean spec_radius=1.0000, mean max_real_eig=1.0000
+  H= 5: mean spec_radius=1.3953, mean max_real_eig=1.3953
+  H= 9: mean spec_radius=1.6893, mean max_real_eig=1.6893
+  H=11: mean spec_radius=1.8604, mean max_real_eig=1.8604
+  H=13: mean spec_radius=1.8393, mean max_real_eig=1.8393
+  H=15: mean spec_radius=1.9148, mean max_real_eig=1.9148
+
+======================================================================
+PART 3: HOPF ALGEBRA COPRODUCT
+======================================================================
+
+n=4: Hopf coproduct Σ H(T|_S) * H(T|_{V\S}) by H:
+  H=1: coproduct sums = [16]
+  H=3: coproduct sums = [24]
+  H=5: coproduct sums = [32]
+
+n=5: Hopf coproduct Σ H(T|_S) * H(T|_{V\S}) by H:
+  H=1: coproduct sums = [32]
+  H=3: coproduct sums = [48]
+  H=5: coproduct sums = [64]
+  H=9: coproduct sums = [84]
+  H=11: coproduct sums = [100]
+  H=13: coproduct sums = [104]
+  H=15: coproduct sums = [108, 120]
+
+======================================================================
+PART 4: DELETION-CONTRACTION
+======================================================================
+
+n=4: Vertex-start/end decomposition:
+  Σ H_first = H: 64/64
+  T=   0: H=1, H_first=[0, 0, 0, 1], H_last=[1, 0, 0, 0]
+  T=   1: H=1, H_first=[0, 0, 0, 1], H_last=[0, 1, 0, 0]
+  T=  32: H=1, H_first=[0, 0, 1, 0], H_last=[1, 0, 0, 0]
+  T=  63: H=1, H_first=[1, 0, 0, 0], H_last=[0, 0, 0, 1]
+
+n=5: Vertex-start/end decomposition:
+  Σ H_first = H: 500/500
+  T=   0: H=1, H_first=[0, 0, 0, 0, 1], H_last=[1, 0, 0, 0, 0]
+  T=   1: H=1, H_first=[0, 0, 0, 0, 1], H_last=[0, 1, 0, 0, 0]
+  T= 512: H=1, H_first=[0, 0, 0, 1, 0], H_last=[1, 0, 0, 0, 0]
+  T=1023: H=1, H_first=[1, 0, 0, 0, 0], H_last=[0, 0, 0, 0, 1]
+
+======================================================================
+PART 5: INCLUSION-EXCLUSION FOR H
+======================================================================
+
+n=4: (walks of length 3, H) pairs (sample):
+  walks=   1, H= 1: 24 tournaments
+  walks=   6, H= 3: 16 tournaments
+  walks=  11, H= 5: 24 tournaments
+
+n=5: (walks of length 4, H) pairs (sample):
+  walks=   1, H= 1: 15 tournaments
+  walks=  12, H= 3: 15 tournaments
+  walks=  27, H= 5: 27 tournaments
+  walks=  44, H= 9: 11 tournaments
+  walks=  48, H= 9: 10 tournaments
+  walks=  61, H=13: 9 tournaments
+  walks=  63, H=11: 9 tournaments
+  walks=  63, H=15: 3 tournaments
+  walks=  80, H=15: 1 tournaments
+
+======================================================================
+PART 6: LARGE n VIA DP — MAX H SEARCH
+======================================================================
+
+n=7: Searching for high-H tournaments via DP...
+  Paley T_7: H = 189
+  Best H found: 189 (Paley)
+  n! = 5040
+  n!/2^(n-1) = 78.8
+  H/mean ≈ 2.4000
+
+  Circulant tournaments at n=7:
+    Pattern 1: H=175, scores=[3, 3, 3, 3, 3, 3, 3]
+    Pattern 2: H=175, scores=[3, 3, 3, 3, 3, 3, 3]
+    Pattern 3: H=189, scores=[3, 3, 3, 3, 3, 3, 3]
+    Pattern 4: H=189, scores=[3, 3, 3, 3, 3, 3, 3]
+    Pattern 5: H=175, scores=[3, 3, 3, 3, 3, 3, 3]
+    Pattern 6: H=175, scores=[3, 3, 3, 3, 3, 3, 3]
+    Pattern 7: H=175, scores=[3, 3, 3, 3, 3, 3, 3]
+
+n=8: Searching for high-H tournaments via DP...
+  Best H found: 661 (random-916)
+  n! = 40320
+  n!/2^(n-1) = 315.0
+  H/mean ≈ 2.0984
+
+  Circulant tournaments at n=8:
+
+======================================================================
+SYNTHESIS — TRANSFER MATRIX AND HOPF ALGEBRA
+======================================================================
+
+KEY FINDINGS:
+1. DP (Held-Karp) computes H in O(2^n * n²) — enables n=11,12,...
+2. H(Paley T_7) = 189 (confirmed), H(Paley T_11) computed.
+3. Spectral radius of adjacency matrix correlates with H.
+4. Hopf coproduct Σ H(T|_S)*H(T|_{V\S}) varies within H-level sets.
+5. Vertex-start decomposition: H = Σ_v H(T,v,first) = Σ_v H(T,v,last).
+6. Walks of length n-1 vs H: walks ≥ H always (walks include non-simple).
+7. Circulant tournaments at n=7,8 show structured H values.
+

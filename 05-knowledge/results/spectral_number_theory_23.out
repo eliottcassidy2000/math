@@ -1,0 +1,334 @@
+  n=6: 0/32768
+  n=6: 5000/32768
+  n=6: 10000/32768
+  n=6: 15000/32768
+  n=6: 20000/32768
+  n=6: 25000/32768
+  n=6: 30000/32768
+======================================================================
+PART 1: PFAFFIAN OF SKEW-ADJACENCY MATRIX
+======================================================================
+
+n=4: det(skew-adjacency) by H:
+  H= 1: det distribution = {1: 24}
+  H= 3: det distribution = {9: 16}
+  H= 5: det distribution = {1: 24}
+
+n=5: det(skew-adjacency) by H:
+  H= 1: det distribution = {0: 120}
+  H= 3: det distribution = {0: 120}
+  H= 5: det distribution = {0: 240}
+  H= 9: det distribution = {0: 240}
+  H=11: det distribution = {0: 120}
+  H=13: det distribution = {0: 120}
+  H=15: det distribution = {0: 64}
+
+n=6: det(skew-adjacency) by score sequence:
+  Score=(0, 1, 2, 3, 4, 5): det distribution = {1: 720}
+  Score=(0, 1, 2, 4, 4, 4): det distribution = {9: 240}
+  Score=(0, 1, 3, 3, 3, 5): det distribution = {9: 240}
+  Score=(0, 1, 3, 3, 4, 4): det distribution = {1: 720}
+  Score=(0, 2, 2, 2, 4, 5): det distribution = {9: 240}
+  Score=(0, 2, 2, 3, 3, 5): det distribution = {1: 720}
+  Score=(0, 2, 2, 3, 4, 4): det distribution = {9: 720, 25: 720}
+  Score=(0, 2, 3, 3, 3, 4): det distribution = {1: 720, 49: 720, 81: 240}
+  Score=(0, 3, 3, 3, 3, 3): det distribution = {25: 144}
+  Score=(1, 1, 1, 3, 4, 5): det distribution = {9: 240}
+
+======================================================================
+PART 2: EIGENVALUE SPECTRA
+======================================================================
+
+n=4: Distinct spectra by H:
+  H= 1: 1 distinct spectra
+    (np.float64(2.4142), np.float64(0.4142), np.float64(-0.4142), np.float64(-2.4142)): 24 tournaments
+  H= 3: 1 distinct spectra
+    (np.float64(1.7321), np.float64(1.7321), np.float64(-1.7321), np.float64(-1.7321)): 16 tournaments
+  H= 5: 1 distinct spectra
+    (np.float64(2.4142), np.float64(0.4142), np.float64(-0.4142), np.float64(-2.4142)): 24 tournaments
+
+n=5: Distinct spectra by H:
+  H= 1: 1 distinct spectra
+    (np.float64(3.0777), np.float64(0.7265), np.float64(0.0), np.float64(-0.7265), np.float64(-3.0777)): 120 tournaments
+  H= 3: 1 distinct spectra
+    (np.float64(2.6458), np.float64(1.7321), np.float64(0.0), np.float64(-1.7321), np.float64(-2.6458)): 120 tournaments
+  H= 5: 1 distinct spectra
+    (np.float64(2.6458), np.float64(1.7321), np.float64(0.0), np.float64(-1.7321), np.float64(-2.6458)): 240 tournaments
+  H= 9: 2 distinct spectra
+    (np.float64(3.0777), np.float64(0.7265), np.float64(0.0), np.float64(-0.7265), np.float64(-3.0777)): 120 tournaments
+    (np.float64(2.6458), np.float64(1.7321), np.float64(0.0), np.float64(-1.7321), np.float64(-2.6458)): 120 tournaments
+  H=11: 1 distinct spectra
+    (np.float64(3.0777), np.float64(0.7265), np.float64(0.0), np.float64(-0.7265), np.float64(-3.0777)): 120 tournaments
+  H=13: 1 distinct spectra
+    (np.float64(2.6458), np.float64(1.7321), np.float64(0.0), np.float64(-1.7321), np.float64(-2.6458)): 120 tournaments
+  H=15: 2 distinct spectra
+    (np.float64(2.6458), np.float64(1.7321), np.float64(0.0), np.float64(-1.7321), np.float64(-2.6458)): 40 tournaments
+    (np.float64(3.0777), np.float64(0.7265), np.float64(0.0), np.float64(-0.7265), np.float64(-3.0777)): 24 tournaments
+
+======================================================================
+PART 3: ARITHMETIC OF H VALUES
+======================================================================
+
+n=3: Achievable H values:
+  H=  1 = 1
+  H=  3 = 3
+  Gaps: [2]
+  All gaps even: True
+  GCD of all H: 1
+  Mean H = 1.5000 = 12/8
+  n!/2^(n-1) = 1.5000
+
+n=4: Achievable H values:
+  H=  1 = 1
+  H=  3 = 3
+  H=  5 = 5
+  Gaps: [2, 2]
+  All gaps even: True
+  GCD of all H: 1
+  Mean H = 3.0000 = 192/64
+  n!/2^(n-1) = 3.0000
+
+n=5: Achievable H values:
+  H=  1 = 1
+  H=  3 = 3
+  H=  5 = 5
+  H=  9 = 3^2
+  H= 11 = 11
+  H= 13 = 13
+  H= 15 = 3 × 5
+  Gaps: [2, 2, 4, 2, 2, 2]
+  All gaps even: True
+  GCD of all H: 1
+  Mean H = 7.5000 = 7680/1024
+  n!/2^(n-1) = 7.5000
+
+n=6: Achievable H values:
+  H=  1 = 1
+  H=  3 = 3
+  H=  5 = 5
+  H=  9 = 3^2
+  H= 11 = 11
+  H= 13 = 13
+  H= 15 = 3 × 5
+  H= 17 = 17
+  H= 19 = 19
+  H= 23 = 23
+  H= 25 = 5^2
+  H= 27 = 3^3
+  H= 29 = 29
+  H= 31 = 31
+  H= 33 = 3 × 11
+  H= 37 = 37
+  H= 41 = 41
+  H= 43 = 43
+  H= 45 = 3^2 × 5
+  Gaps: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 4, 2, 2]
+  All gaps even: True
+  GCD of all H: 1
+
+======================================================================
+PART 4: H mod p PATTERNS
+======================================================================
+
+n=4: H values modular structure:
+  mod  2: present=[1], missing=[0]
+  mod  3: present=[0, 1, 2], missing=[]
+  mod  5: present=[0, 1, 3], missing=[2, 4]
+  mod  7: present=[1, 3, 5], missing=[0, 2, 4, 6]
+  mod 11: present=[1, 3, 5], missing=[0, 2, 4, 6, 7, 8, 9, 10]
+
+n=5: H values modular structure:
+  mod  2: present=[1], missing=[0]
+  mod  3: present=[0, 1, 2], missing=[]
+  mod  5: present=[0, 1, 3, 4], missing=[2]
+  mod  7: present=[1, 2, 3, 4, 5, 6], missing=[0]
+  mod 11: present=[0, 1, 2, 3, 4, 5, 9], missing=[6, 7, 8, 10]
+
+n=6: H values modular structure:
+  mod  2: present=[1], missing=[0]
+  mod  3: present=[0, 1, 2], missing=[]
+  mod  5: present=[0, 1, 2, 3, 4], missing=[]
+  mod  7: present=[1, 2, 3, 4, 5, 6], missing=[0]
+  mod 11: present=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], missing=[]
+
+======================================================================
+PART 5: PALEY TOURNAMENT H VALUES
+======================================================================
+
+  p=3: Paley tournament
+    H = 3
+    Scores = [1, 1, 1]
+    Regular: True
+    H/n! = 0.500000
+    max possible H = 3
+
+  p=7: Paley tournament
+    H = 189
+    Scores = [3, 3, 3, 3, 3, 3, 3]
+    Regular: True
+    H/n! = 0.037500
+    max possible H = 189
+
+  p=11: Paley tournament (too large for full H computation)
+    Scores: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] (should be all 5)
+    Regular: True
+    3-cycles: 55
+
+======================================================================
+PART 6: QUADRATIC RESIDUE PATTERNS
+======================================================================
+
+n=5: All regular tournaments (score = (2,2,2,2,2)):
+  bits=  76: H=15, c3=5
+  bits= 105: H=15, c3=5
+  bits= 202: H=15, c3=5
+  bits= 217: H=15, c3=5
+  bits= 284: H=15, c3=5
+  bits= 298: H=15, c3=5
+  bits= 313: H=15, c3=5
+  bits= 326: H=15, c3=5
+  bits= 341: H=15, c3=5
+  bits= 355: H=15, c3=5
+  bits= 410: H=15, c3=5
+  bits= 467: H=15, c3=5
+  bits= 556: H=15, c3=5
+  bits= 613: H=15, c3=5
+  bits= 668: H=15, c3=5
+  bits= 682: H=15, c3=5
+  bits= 697: H=15, c3=5
+  bits= 710: H=15, c3=5
+  bits= 725: H=15, c3=5
+  bits= 739: H=15, c3=5
+  bits= 806: H=15, c3=5
+  bits= 821: H=15, c3=5
+  bits= 918: H=15, c3=5
+  bits= 947: H=15, c3=5
+
+======================================================================
+PART 7: CHARACTERISTIC POLYNOMIALS
+======================================================================
+
+n=4: Characteristic polynomials by H:
+  H= 1: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)): 24 tournaments
+  H= 3: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-1), np.int64(0)): 16 tournaments
+  H= 5: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-2), np.int64(-1)): 24 tournaments
+
+n=5: Characteristic polynomials by H:
+  H= 1: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)): 120 tournaments
+  H= 3: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-1), np.int64(0), np.int64(0)): 120 tournaments
+  H= 5: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-2), np.int64(-1), np.int64(0)): 240 tournaments
+  H= 9: 2 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-3), np.int64(-3), np.int64(-1)): 120 tournaments
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-3), np.int64(-2), np.int64(-1)): 120 tournaments
+  H=11: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-4), np.int64(-4), np.int64(-1)): 120 tournaments
+  H=13: 1 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-4), np.int64(-3), np.int64(-2)): 120 tournaments
+  H=15: 2 distinct char polys
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-4), np.int64(-3), np.int64(-3)): 40 tournaments
+    χ(λ) coeffs = (np.int64(1), np.int64(0), np.int64(0), np.int64(-5), np.int64(-5), np.int64(-2)): 24 tournaments
+
+======================================================================
+PART 8: TRACE POWERS = CLOSED WALKS
+======================================================================
+
+n=4: Trace powers by H value:
+  H= 1: 1 distinct trace sequences
+    tr(A^1..4) = (0, 0, 0, 0): 24 tournaments
+  H= 3: 1 distinct trace sequences
+    tr(A^1..4) = (0, 0, 3, 0): 16 tournaments
+  H= 5: 1 distinct trace sequences
+    tr(A^1..4) = (0, 0, 6, 4): 24 tournaments
+
+n=5: Trace powers by H value:
+  H= 1: 1 distinct trace sequences
+    tr(A^1..5) = (0, 0, 0, 0, 0): 120 tournaments
+  H= 3: 1 distinct trace sequences
+    tr(A^1..5) = (0, 0, 3, 0, 0): 120 tournaments
+  H= 5: 1 distinct trace sequences
+    tr(A^1..5) = (0, 0, 6, 4, 0): 240 tournaments
+  H= 9: 2 distinct trace sequences
+    tr(A^1..5) = (0, 0, 9, 12, 5): 120 tournaments
+    tr(A^1..5) = (0, 0, 9, 8, 5): 120 tournaments
+  H=11: 1 distinct trace sequences
+    tr(A^1..5) = (0, 0, 12, 16, 5): 120 tournaments
+  H=13: 1 distinct trace sequences
+    tr(A^1..5) = (0, 0, 12, 12, 10): 120 tournaments
+  H=15: 2 distinct trace sequences
+    tr(A^1..5) = (0, 0, 12, 12, 15): 40 tournaments
+    tr(A^1..5) = (0, 0, 15, 20, 10): 24 tournaments
+
+======================================================================
+PART 9: DETERMINANT AND PERMANENT OF ADJACENCY
+======================================================================
+
+n=4: det(A) and perm(A) by H:
+  H= 1: det distribution = {0: 24}
+         perm distribution = {0: 24}
+  H= 3: det distribution = {0: 16}
+         perm distribution = {0: 16}
+  H= 5: det distribution = {-1: 24}
+         perm distribution = {1: 24}
+
+  Checking: is perm(A) always related to H?
+    H=1: perm(A) values = [0]
+    H=3: perm(A) values = [0]
+    H=5: perm(A) values = [1]
+
+n=5: det(A) and perm(A) by H:
+  H= 1: det distribution = {0: 120}
+         perm distribution = {0: 120}
+  H= 3: det distribution = {0: 120}
+         perm distribution = {0: 120}
+  H= 5: det distribution = {0: 240}
+         perm distribution = {0: 240}
+  H= 9: det distribution = {1: 240}
+         perm distribution = {1: 240}
+  H=11: det distribution = {1: 120}
+         perm distribution = {1: 120}
+  H=13: det distribution = {2: 120}
+         perm distribution = {2: 120}
+  H=15: det distribution = {2: 24, 3: 40}
+         perm distribution = {2: 24, 3: 40}
+
+  Checking: is perm(A) always related to H?
+    H=1: perm(A) values = [0]
+    H=3: perm(A) values = [0]
+    H=5: perm(A) values = [0]
+    H=9: perm(A) values = [1]
+    H=11: perm(A) values = [1]
+    H=13: perm(A) values = [2]
+    H=15: perm(A) values = [2, 3]
+
+======================================================================
+SYNTHESIS — SPECTRAL AND NUMBER-THEORETIC STRUCTURE
+======================================================================
+
+KEY FINDINGS:
+1. PFAFFIAN: det(skew-adjacency) varies by H value.
+   For even n: Pfaffian² = det gives a tournament invariant.
+
+2. EIGENVALUES: Pure imaginary eigenvalues of skew-adjacency.
+   Different H values can have same or different spectra.
+
+3. ARITHMETIC: H values are always odd, gaps always even (Rédei parity).
+   GCD of all H values = 1. H mod p patterns show forbidden residues.
+
+4. PALEY: Paley tournament T_p achieves extremal H values.
+   These are vertex-transitive (regular scores).
+
+5. CHARACTERISTIC POLYNOMIALS: Different H values have different
+   typical char polys. This connects spectrum to HP count.
+
+6. TRACE POWERS: tr(A^k) counts closed walks. tr(A^3)/3 = # 3-cycles.
+   This gives a direct connection between spectrum and cycle structure.
+
+7. PERMANENT: perm(A) counts matchings in the tournament.
+   Different from H but related combinatorially.
+
