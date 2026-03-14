@@ -1,0 +1,440 @@
+======================================================================
+PART 1: THE FACTORIZATION-PACKING DICTIONARY
+======================================================================
+
+  n= 3 =        3: max k=1
+    alpha_1: 1 types [(3,)]
+
+  n= 4 =      2*2: max k=1
+    alpha_1: 1 types [(3,)]
+
+  n= 5 =        5: max k=1
+    alpha_1: 2 types [(3,), (5,)]
+    NEW at alpha_1: [(5,)]
+
+  n= 6 =      2*3: max k=2
+    alpha_1: 2 types [(3,), (5,)]
+    alpha_2: 1 types [(3, 3)]
+    NEW at alpha_2: [(3, 3)]
+
+  n= 7 =        7: max k=2
+    alpha_1: 3 types [(3,), (5,), (7,)]
+    alpha_2: 1 types [(3, 3)]
+    NEW at alpha_1: [(7,)]
+
+  n= 8 =    2*2*2: max k=2
+    alpha_1: 3 types [(3,), (5,), (7,)]
+    alpha_2: 2 types [(3, 3), (3, 5)]
+    NEW at alpha_2: [(3, 5)]
+
+  n= 9 =      3*3: max k=3
+    alpha_1: 4 types [(3,), (5,), (7,), (9,)]
+    alpha_2: 2 types [(3, 3), (3, 5)]
+    alpha_3: 1 types [(3, 3, 3)]
+    NEW at alpha_1: [(9,)]
+    NEW at alpha_3: [(3, 3, 3)]
+
+  n=10 =      2*5: max k=3
+    alpha_1: 4 types [(3,), (5,), (7,), (9,)]
+    alpha_2: 4 types [(3, 3), (3, 5), (3, 7), (5, 5)]
+    alpha_3: 1 types [(3, 3, 3)]
+    NEW at alpha_2: [(3, 7), (5, 5)]
+
+  n=11 =       11: max k=3
+    alpha_1: 5 types [(3,), (5,), (7,), (9,), (11,)]
+    alpha_2: 4 types [(3, 3), (3, 5), (3, 7), (5, 5)]
+    alpha_3: 2 types [(3, 3, 3), (3, 3, 5)]
+    NEW at alpha_1: [(11,)]
+    NEW at alpha_3: [(3, 3, 5)]
+
+  n=12 =    2*2*3: max k=4
+    alpha_1: 5 types [(3,), (5,), (7,), (9,), (11,)]
+    alpha_2: 6 types [(3, 3), (3, 5), (3, 7), (3, 9), (5, 5)]...
+    alpha_3: 2 types [(3, 3, 3), (3, 3, 5)]
+    alpha_4: 1 types [(3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 9), (5, 7)]
+    NEW at alpha_4: [(3, 3, 3, 3)]
+
+  n=13 =       13: max k=4
+    alpha_1: 6 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 6 types [(3, 3), (3, 5), (3, 7), (3, 9), (5, 5)]...
+    alpha_3: 4 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 5, 5)]
+    alpha_4: 1 types [(3, 3, 3, 3)]
+    NEW at alpha_1: [(13,)]
+    NEW at alpha_3: [(3, 3, 7), (3, 5, 5)]
+
+  n=14 =      2*7: max k=4
+    alpha_1: 6 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 9 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 4 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 5, 5)]
+    alpha_4: 2 types [(3, 3, 3, 3), (3, 3, 3, 5)]
+    NEW at alpha_2: [(3, 11), (5, 9), (7, 7)]
+    NEW at alpha_4: [(3, 3, 3, 5)]
+
+  n=15 =      3*5: max k=5
+    alpha_1: 7 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 9 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 7 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 5, 5)]...
+    alpha_4: 2 types [(3, 3, 3, 3), (3, 3, 3, 5)]
+    alpha_5: 1 types [(3, 3, 3, 3, 3)]
+    NEW at alpha_1: [(15,)]
+    NEW at alpha_3: [(3, 3, 9), (3, 5, 7), (5, 5, 5)]
+    NEW at alpha_5: [(3, 3, 3, 3, 3)]
+
+  n=16 =  2*2*2*2: max k=5
+    alpha_1: 7 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 12 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 7 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 5, 5)]...
+    alpha_4: 4 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 5, 5)]
+    alpha_5: 1 types [(3, 3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 13), (5, 11), (7, 9)]
+    NEW at alpha_4: [(3, 3, 3, 7), (3, 3, 5, 5)]
+
+  n=17 =       17: max k=5
+    alpha_1: 8 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 12 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 11 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 4 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 5, 5)]
+    alpha_5: 2 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5)]
+    NEW at alpha_1: [(17,)]
+    NEW at alpha_3: [(3, 3, 11), (3, 5, 9), (3, 7, 7)]
+    NEW at alpha_5: [(3, 3, 3, 3, 5)]
+
+  n=18 =    2*3*3: max k=6
+    alpha_1: 8 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 16 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 11 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 7 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 5, 5)]...
+    alpha_5: 2 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5)]
+    alpha_6: 1 types [(3, 3, 3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 15), (5, 13), (7, 11)]
+    NEW at alpha_4: [(3, 3, 3, 9), (3, 3, 5, 7), (3, 5, 5, 5)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 3)]
+
+  n=19 =       19: max k=6
+    alpha_1: 9 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 16 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 16 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 7 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 5, 5)]...
+    alpha_5: 4 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 5, 5)]
+    alpha_6: 1 types [(3, 3, 3, 3, 3, 3)]
+    NEW at alpha_1: [(19,)]
+    NEW at alpha_3: [(3, 3, 13), (3, 5, 11), (3, 7, 9)]
+    NEW at alpha_5: [(3, 3, 3, 3, 7), (3, 3, 3, 5, 5)]
+
+  n=20 =    2*2*5: max k=6
+    alpha_1: 9 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 20 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 16 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 12 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 4 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 5, 5)]
+    alpha_6: 2 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5)]
+    NEW at alpha_2: [(3, 17), (5, 15), (7, 13)]
+    NEW at alpha_4: [(3, 3, 3, 11), (3, 3, 5, 9), (3, 3, 7, 7)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 5)]
+
+  n=21 =      3*7: max k=7
+    alpha_1: 10 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 20 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 23 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 12 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 7 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 5, 5)]...
+    alpha_6: 2 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5)]
+    alpha_7: 1 types [(3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_1: [(21,)]
+    NEW at alpha_3: [(3, 3, 15), (3, 5, 13), (3, 7, 11)]
+    NEW at alpha_5: [(3, 3, 3, 3, 9), (3, 3, 3, 5, 7), (3, 3, 5, 5, 5)]
+    NEW at alpha_7: [(3, 3, 3, 3, 3, 3, 3)]
+
+  n=22 =     2*11: max k=7
+    alpha_1: 10 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 25 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 23 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 18 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 7 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 5, 5)]...
+    alpha_6: 4 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 5, 5)]
+    alpha_7: 1 types [(3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 19), (5, 17), (7, 15)]
+    NEW at alpha_4: [(3, 3, 3, 13), (3, 3, 5, 11), (3, 3, 7, 9)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 5, 5)]
+
+  n=23 =       23: max k=7
+    alpha_1: 11 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 25 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 31 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 18 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 12 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 4 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 5, 5)]
+    alpha_7: 2 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5)]
+    NEW at alpha_1: [(23,)]
+    NEW at alpha_3: [(3, 3, 17), (3, 5, 15), (3, 7, 13)]
+    NEW at alpha_5: [(3, 3, 3, 3, 11), (3, 3, 3, 5, 9), (3, 3, 3, 7, 7)]
+    NEW at alpha_7: [(3, 3, 3, 3, 3, 3, 5)]
+
+  n=24 =  2*2*2*3: max k=8
+    alpha_1: 11 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 30 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 31 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 27 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 12 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 7 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 5, 5)]...
+    alpha_7: 2 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5)]
+    alpha_8: 1 types [(3, 3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 21), (5, 19), (7, 17)]
+    NEW at alpha_4: [(3, 3, 3, 15), (3, 3, 5, 13), (3, 3, 7, 11)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 5, 7), (3, 3, 3, 5, 5, 5)]
+    NEW at alpha_8: [(3, 3, 3, 3, 3, 3, 3, 3)]
+
+  n=25 =      5*5: max k=8
+    alpha_1: 12 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 30 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 41 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 27 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 19 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 7 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 5, 5)]...
+    alpha_7: 4 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 5, 5)]
+    alpha_8: 1 types [(3, 3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_1: [(25,)]
+    NEW at alpha_3: [(3, 3, 19), (3, 5, 17), (3, 7, 15)]
+    NEW at alpha_5: [(3, 3, 3, 3, 13), (3, 3, 3, 5, 11), (3, 3, 3, 7, 9)]
+    NEW at alpha_7: [(3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 5, 5)]
+
+  n=26 =     2*13: max k=8
+    alpha_1: 12 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 36 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 41 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 38 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 19 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 12 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 11)]...
+    alpha_7: 4 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 5, 5)]
+    alpha_8: 2 types [(3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 5)]
+    NEW at alpha_2: [(3, 23), (5, 21), (7, 19)]
+    NEW at alpha_4: [(3, 3, 3, 17), (3, 3, 5, 15), (3, 3, 7, 13)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 11), (3, 3, 3, 3, 5, 9), (3, 3, 3, 3, 7, 7)]
+    NEW at alpha_8: [(3, 3, 3, 3, 3, 3, 3, 5)]
+
+  n=27 =    3*3*3: max k=9
+    alpha_1: 13 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 36 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 53 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 38 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 29 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 12 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 11)]...
+    alpha_7: 7 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 5, 5)]...
+    alpha_8: 2 types [(3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 5)]
+    alpha_9: 1 types [(3, 3, 3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_1: [(27,)]
+    NEW at alpha_3: [(3, 3, 21), (3, 5, 19), (3, 7, 17)]
+    NEW at alpha_5: [(3, 3, 3, 3, 15), (3, 3, 3, 5, 13), (3, 3, 3, 7, 11)]
+    NEW at alpha_7: [(3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 5, 7), (3, 3, 3, 3, 5, 5, 5)]
+    NEW at alpha_9: [(3, 3, 3, 3, 3, 3, 3, 3, 3)]
+
+  n=28 =    2*2*7: max k=9
+    alpha_1: 13 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 42 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 53 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 53 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 29 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 19 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 11)]...
+    alpha_7: 7 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 5, 5)]...
+    alpha_8: 4 types [(3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 5, 5)]
+    alpha_9: 1 types [(3, 3, 3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 25), (5, 23), (7, 21)]
+    NEW at alpha_4: [(3, 3, 3, 19), (3, 3, 5, 17), (3, 3, 7, 15)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 13), (3, 3, 3, 3, 5, 11), (3, 3, 3, 3, 7, 9)]
+    NEW at alpha_8: [(3, 3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 5, 5)]
+
+  n=29 =       29: max k=9
+    alpha_1: 14 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 42 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 67 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 53 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 42 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 19 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 11)]...
+    alpha_7: 12 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 3, 11)]...
+    alpha_8: 4 types [(3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 5, 5)]
+    alpha_9: 2 types [(3, 3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 3, 5)]
+    NEW at alpha_1: [(29,)]
+    NEW at alpha_3: [(3, 3, 23), (3, 5, 21), (3, 7, 19)]
+    NEW at alpha_5: [(3, 3, 3, 3, 17), (3, 3, 3, 5, 15), (3, 3, 3, 7, 13)]
+    NEW at alpha_7: [(3, 3, 3, 3, 3, 3, 11), (3, 3, 3, 3, 3, 5, 9), (3, 3, 3, 3, 3, 7, 7)]
+    NEW at alpha_9: [(3, 3, 3, 3, 3, 3, 3, 3, 5)]
+
+  n=30 =    2*3*5: max k=10
+    alpha_1: 14 types [(3,), (5,), (7,), (9,), (11,)]...
+    alpha_2: 49 types [(3, 3), (3, 5), (3, 7), (3, 9), (3, 11)]...
+    alpha_3: 67 types [(3, 3, 3), (3, 3, 5), (3, 3, 7), (3, 3, 9), (3, 3, 11)]...
+    alpha_4: 71 types [(3, 3, 3, 3), (3, 3, 3, 5), (3, 3, 3, 7), (3, 3, 3, 9), (3, 3, 3, 11)]...
+    alpha_5: 42 types [(3, 3, 3, 3, 3), (3, 3, 3, 3, 5), (3, 3, 3, 3, 7), (3, 3, 3, 3, 9), (3, 3, 3, 3, 11)]...
+    alpha_6: 30 types [(3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 11)]...
+    alpha_7: 12 types [(3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 3, 11)]...
+    alpha_8: 7 types [(3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 5), (3, 3, 3, 3, 3, 3, 3, 7), (3, 3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 3, 5, 5)]...
+    alpha_9: 2 types [(3, 3, 3, 3, 3, 3, 3, 3, 3), (3, 3, 3, 3, 3, 3, 3, 3, 5)]
+    alpha_10: 1 types [(3, 3, 3, 3, 3, 3, 3, 3, 3, 3)]
+    NEW at alpha_2: [(3, 27), (5, 25), (7, 23)]
+    NEW at alpha_4: [(3, 3, 3, 21), (3, 3, 5, 19), (3, 3, 7, 17)]
+    NEW at alpha_6: [(3, 3, 3, 3, 3, 15), (3, 3, 3, 3, 5, 13), (3, 3, 3, 3, 7, 11)]
+    NEW at alpha_8: [(3, 3, 3, 3, 3, 3, 3, 9), (3, 3, 3, 3, 3, 3, 5, 7), (3, 3, 3, 3, 3, 5, 5, 5)]
+    NEW at alpha_10: [(3, 3, 3, 3, 3, 3, 3, 3, 3, 3)]
+
+======================================================================
+PART 2: EVALUATION POINTS AND VANDERMONDE STRUCTURE
+======================================================================
+
+    n max_k               points          det               primes  new_prime
+    3     1                    2            1                               -
+    4     1                    2            1                               -
+    5     1                    2            1                               -
+    6     2                  2,3            1                               -
+    7     2                  2,3            1                               -
+    8     2                  2,3            1                               -
+    9     3                2,3,4            2                    2          2
+   10     3                2,3,4            2                    2          -
+   11     3                2,3,4            2                    2          -
+   12     4              2,3,4,5           12                  2,3          3
+   13     4              2,3,4,5           12                  2,3          -
+   14     4              2,3,4,5           12                  2,3          -
+   15     5            2,3,4,5,6          288                  2,3          -
+   16     5            2,3,4,5,6          288                  2,3          -
+   17     5            2,3,4,5,6          288                  2,3          -
+   18     6          2,3,4,5,6,7        34560                2,3,5          5
+   19     6          2,3,4,5,6,7        34560                2,3,5          -
+   20     6          2,3,4,5,6,7        34560                2,3,5          -
+   21     7        2,3,4,5,6,7,8     24883200                2,3,5          -
+   22     7        2,3,4,5,6,7,8     24883200                2,3,5          -
+   23     7        2,3,4,5,6,7,8     24883200                2,3,5          -
+   24     8      2,3,4,5,6,7,8,9 125411328000              2,3,5,7          7
+   25     8      2,3,4,5,6,7,8,9 125411328000              2,3,5,7          -
+   26     8      2,3,4,5,6,7,8,9 125411328000              2,3,5,7          -
+   27     9   2,3,4,5,6,7,8,9,10 5056584744960000              2,3,5,7          -
+   28     9   2,3,4,5,6,7,8,9,10 5056584744960000              2,3,5,7          -
+   29     9   2,3,4,5,6,7,8,9,10 5056584744960000              2,3,5,7          -
+   30    10 2,3,4,5,6,7,8,9,10,11 1834933472251084800000              2,3,5,7          -
+
+======================================================================
+PART 3: THE KEYS TO THE UNIVERSE — BY LEVEL
+======================================================================
+
+  LEVEL 0 (n = 3-5): Only alpha_1 nonzero. I(x) is LINEAR.
+    Key: {2} alone suffices. H determines everything.
+    "One who knows 2 has the key."
+
+  LEVEL 1 (n = 6-8): alpha_1, alpha_2 nonzero. I(x) is QUADRATIC.
+    Keys: {2, 3}. H and I_3 determine everything.
+    Vandermonde det = 6 = 2*3.
+    "One who knows 2 and 3 has the keys to the universe."
+
+  LEVEL 2 (n = 9-11): alpha_1, alpha_2, alpha_3 nonzero. I(x) CUBIC.
+    Keys: {2, 3, 4}. Need I(4) too.
+    Vandermonde det = 48 = 2^4 * 3. Still only primes 2,3!
+    4 = 2^2: "second-order knowledge of 2."
+    "2 and 3 remain the keys, with deeper knowledge of 2."
+
+  LEVEL 3 (n = 12-14): alpha_4 appears. I(x) QUARTIC.
+    Keys: {2, 3, 4, 5}. Need I(5).
+    Vandermonde det = 1440 = 2^5 * 3^2 * 5. PRIME 5 ENTERS!
+    "A third key (5) joins the ring."
+
+  LEVEL 4 (n = 15-17): alpha_5 appears. I(x) QUINTIC.
+    Keys: {2, 3, 4, 5, 6}. Need I(6) = I(2*3).
+    Vandermonde det = 207360 = ... includes 2,3,5.
+    6 = 2*3: "composite knowledge of 2 and 3."
+
+  LEVEL 5 (n = 18-20): alpha_6 appears.
+    Keys: {2, 3, 4, 5, 6, 7}. PRIME 7 ENTERS!
+    "A fourth key (7) joins."
+
+  PATTERN:
+    New prime p first needed at n = 3(p-1) (because alpha_{p-1} first at n=3(p-1)).
+    p=2: n=3 (alpha_1)
+    p=3: n=6 (alpha_2)
+    p=5: n=12 (alpha_4)  → Wait, 3*(5-1)=12, but 5 first enters the
+         Vandermonde at points {2,3,4,5} which is needed at n=9.
+         Hmm, let me recheck.
+
+  Actually the Vandermonde for alpha_{max_k} at n needs points 2,...,max_k+1.
+  max_k = floor(n/3).
+  The highest evaluation point is floor(n/3)+1.
+  Prime p enters when floor(n/3)+1 >= p, i.e., n >= 3(p-1).
+
+  p=5: first at n >= 3*4 = 12 (max_k=4, highest point=5). ✓
+  p=7: first at n >= 3*6 = 18 (max_k=6, highest point=7). ✓
+  p=11: first at n >= 3*10 = 30. ✓
+  p=13: first at n >= 3*12 = 36. ✓
+
+  So the "prime key sequence" for tournament theory is:
+    2, 3, 5, 7, 11, 13, ... (ALL PRIMES! Each enters at n = 3(p-1).)
+
+  This is because:
+    - The cycle lengths are odd >= 3
+    - Shortest cycle = 3, so max packing = floor(n/3)
+    - Need floor(n/3)+1 evaluation points
+    - Point m=p (prime) enters when m <= max_k+1
+
+  Prime entry verification:
+    p= 2: enters at n= 3, max_k=1, highest point=2 ✓
+    p= 3: enters at n= 6, max_k=2, highest point=3 ✓
+    p= 5: enters at n=12, max_k=4, highest point=5 ✓
+    p= 7: enters at n=18, max_k=6, highest point=7 ✓
+    p=11: enters at n=30, max_k=10, highest point=11 ✓
+    p=13: enters at n=36, max_k=12, highest point=13 ✓
+    p=17: enters at n=48, max_k=16, highest point=17 ✓
+    p=19: enters at n=54, max_k=18, highest point=19 ✓
+    p=23: enters at n=66, max_k=22, highest point=23 ✓
+    p=29: enters at n=84, max_k=28, highest point=29 ✓
+
+======================================================================
+PART 4: 9=3² AND 10=5*2 IN THE FULL PICTURE
+======================================================================
+
+  n=9 = 3²:
+    - alpha_3 first appears (3 disjoint 3-cycles covering all 9 vertices)
+    - 3² = the "square" of the fundamental cycle length
+    - Vandermonde still only needs primes {2,3} (since 4=2²)
+    - The "3-structure" reaches its first self-replication
+
+  n=10 = 5*2:
+    - alpha_2^{55} first appears (two disjoint 5-cycles)
+    - alpha_2^{37} first appears (disjoint 3-cycle and 7-cycle)
+    - 5*2 = the product of the two fundamental numbers
+    - The 5-cycle "pairs up" for the first time
+    - Still max_k=3, so no new evaluation point needed
+
+  n=12 = 2²*3:
+    - alpha_4 first appears (4 disjoint 3-cycles)
+    - PRIME 5 enters the Vandermonde (points {2,3,4,5})
+    - The "universe expands" — 2 and 3 are no longer sufficient
+    - 12 = 2²*3: the factorization combines both key primes
+
+  n=15 = 3*5:
+    - alpha_5 first appears (5 disjoint 3-cycles)
+    - Also possible: (3,3,3,3,3) or (5,5,5) or (3,3,3,3,5) etc.
+    - Evaluation point 6 = 2*3 needed — still composite!
+    - The "3*5 = product of distinct primes" factorization allows
+      BOTH 3-cycle and 5-cycle packings simultaneously
+
+  DEEP STRUCTURE:
+  The sequence of "new phenomena" at each n follows the multiplicative
+  structure of integers:
+    n=3 (prime): 3-cycles appear (alpha_1)
+    n=6 (2*3): pairs of 3-cycles (alpha_2)
+    n=8 (2³): (3,5) pairs (alpha_2^{35})
+    n=9 (3²): triples of 3-cycles (alpha_3)
+    n=10 (2*5): (5,5) and (3,7) pairs (alpha_2^{55}, alpha_2^{37})
+    n=12 (2²*3): quadruples of 3-cycles (alpha_4), PRIME 5 ENTERS
+    n=15 (3*5): quintuples of 3-cycles (alpha_5)
+    n=18 (2*3²): alpha_6, PRIME 7 ENTERS
+
+  The FUNDAMENTAL FREQUENCIES are the odd primes 3, 5, 7, 11, ...
+  (the odd cycle lengths). The tournament structure at size n is
+  determined by which "harmonics" fit: which sums of odd primes
+  are <= n.
+
+  "2 and 3 are the keys to the universe" means:
+  3 is the fundamental frequency (smallest odd cycle).
+  2 is the multiplier (binary evaluation point, parity).
+  Together, they generate the first two levels (n <= 8).
+  Higher harmonics (5, 7, 11, ...) create new "octaves" but
+  the fundamental (3) and its binary partner (2) remain dominant.
+
+Done.

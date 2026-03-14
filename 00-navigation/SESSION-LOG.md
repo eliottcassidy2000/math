@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71e — 2026-03-14: n=9/10 Structure, Gap Formula, I(-1) Characterization
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71d
+**Summary of work:**
+Deep exploration of how 9=3² and 10=5·2 change the tournament 2-3 framework. Discovered the single-flip gap formula, proved I(-1)=1 characterizes transitive tournaments, and analyzed k-nacci convergence rates and the tournament polynomial z²-5z+6.
+
+**Critical findings:**
+1. **nine_and_ten.py**: H = 1+2α₁+4α₂+8α₃ verified 200/200 at n=9. α₃>0 in 88% of tournaments (mean 4.27). Vandermonde(2,3,4) det=48=2⁴·3 — ONLY primes 2,3 through n≤11.
+2. **SINGLE-FLIP GAP FORMULA (HYP-980)**: For transitive tournament with one edge reversed (gap g): dc_{2k+1} = C(g-1, 2k-1). Total α₁ = 2^{g-2}. Cycle counts depend ONLY on gap, not edge position. Universal across all tested n.
+3. **I(-1)=1 IFF TRANSITIVE (HYP-978)**: Verified exhaustive n≤6, sampled n≤9. Count = n! (all labelings of unique transitive). Proof: α₁=0 ↔ no odd cycles ↔ transitive (shortcutting argument).
+4. **I(-1) ≤ 1 for ALL tournaments**: Equivalent to non-negative alternating sum of independence numbers. Verified exhaustive n≤6, sampled n≤8.
+5. **k-nacci correction**: Weighted k-nacci (weights 1,...,k) → φ²≈2.618, NOT 3. The DOUBLED k-nacci → 3 at rate 2/3^k. General r-nacci error: (r-1)/r^k. Higher r converges FASTER.
+6. **Tournament polynomial z²-5z+6**: All I(x) discriminants positive at n=7 (always 2 real negative roots). Second differences = 2α₂ (constant). Power sums 2^k+3^k satisfy the recurrence.
+7. **Information hierarchy**: Level 1 (α₁) carries ~53% of H, Level 2 (α₂) ~43%, Level 3 (α₃) only ~4%.
+
+**New contributions:**
+- HYP-978 through HYP-984 added to hypothesis index
+- Scripts: nine_and_ten.py, nine_squared_deep.py, i_neg1_threshold.py, i_neg1_equals_1_proof.py, knacci_convergence.py, tournament_polynomial_23.py
+
+**Unresolved threads:**
+- Prove I(-1) ≤ 1 algebraically (non-negative alternating sum of independence numbers)
+- Explore the φ²≈2.618 appearance in weighted k-nacci — what tournament invariant does I(φ²) represent?
+- Run computation at n=10 to verify α₂^{55} and α₂^{37} first appearances
+- Is the discriminant of I(x) always positive (real roots) for ALL tournament conflict graphs?
+
+---
+
 ## kind-pasteur-2026-03-14-S64 — 2026-03-14: Deep 2-3 Algebra + Forbidden H Breakthrough
 
 **Account:** kind-pasteur
