@@ -1,0 +1,544 @@
+======================================================================
+CONE-HOMOLOGY SYNTHESIS
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: THE 480 DIVISIBILITY
+======================================================================
+  GCD of all counts: 16
+  Counts / 16:
+    H=  1:   720 / 16 = 45
+    H=  3:   960 / 16 = 60
+    H=  5:  2160 / 16 = 135
+    H=  9:  2960 / 16 = 185
+    H= 11:  1440 / 16 = 90
+    H= 13:  1440 / 16 = 90
+    H= 15:  2208 / 16 = 138
+    H= 17:  1440 / 16 = 90
+    H= 19:  1440 / 16 = 90
+    H= 23:  2880 / 16 = 180
+    H= 25:  1440 / 16 = 90
+    H= 27:   480 / 16 = 30
+    H= 29:  2880 / 16 = 180
+    H= 31:  1440 / 16 = 90
+    H= 33:  2640 / 16 = 165
+    H= 37:  3600 / 16 = 225
+    H= 41:   720 / 16 = 45
+    H= 43:  1440 / 16 = 90
+    H= 45:   480 / 16 = 30
+
+  48 = 2^4 * 3
+  48 = |Aut(T_3)| * |T_3|? |S_3| = 6, 6*8 = 48
+  48 = |GL(2,F_3)| = 48. YES!
+  |GL(2,F_3)| = (9-1)(9-3) = 8*6 = 48
+
+  Counts / 48:
+    H=  1: 15
+    H=  3: 20
+    H=  5: 45
+    H=  9: 185/3
+    H= 11: 30
+    H= 13: 30
+    H= 15: 46
+    H= 17: 30
+    H= 19: 30
+    H= 23: 60
+    H= 25: 30
+    H= 27: 10
+    H= 29: 60
+    H= 31: 30
+    H= 33: 55
+    H= 37: 75
+    H= 41: 15
+    H= 43: 30
+    H= 45: 10
+
+  6! = 720 = count(H=1) = count(H=41)
+  720/48 = 15
+  Counts that are multiples of 720: [(1, 720), (5, 2160), (11, 1440), (13, 1440), (17, 1440), (19, 1440), (23, 2880), (25, 1440), (29, 2880), (31, 1440), (37, 3600), (41, 720), (43, 1440)]
+
+======================================================================
+PART 2: MIXED CONES AND H VALUE GENERATION
+======================================================================
+
+  All possible n=4 tournaments as cones of n=3:
+  Base tournament + new vertex with 3 arc choices (beat/lose to each of 3 vertices)
+
+  T_3 (H=1, specific) -> n=4 via mixed cones:
+    pattern=ddd (beats 0): H=1
+    pattern=Ddd (beats 1): H=1
+    pattern=dDd (beats 1): H=3
+    pattern=DDd (beats 2): H=1
+    pattern=ddD (beats 1): H=5
+    pattern=DdD (beats 2): H=3
+    pattern=dDD (beats 2): H=5
+    pattern=DDD (beats 3): H=1
+
+  C_3 (H=3) -> n=4 via mixed cones:
+    pattern=ddd (beats 0): H=3
+    pattern=Ddd (beats 1): H=5
+    pattern=dDd (beats 1): H=5
+    pattern=DDd (beats 2): H=5
+    pattern=ddD (beats 1): H=5
+    pattern=DdD (beats 2): H=5
+    pattern=dDD (beats 2): H=5
+    pattern=DDD (beats 3): H=3
+
+  C_3 (H=3) -> n=4 via mixed cones:
+    pattern=ddd (beats 0): H=3
+    pattern=Ddd (beats 1): H=5
+    pattern=dDd (beats 1): H=5
+    pattern=DDd (beats 2): H=5
+    pattern=ddD (beats 1): H=5
+    pattern=DdD (beats 2): H=5
+    pattern=dDD (beats 2): H=5
+    pattern=DDD (beats 3): H=3
+
+======================================================================
+PART 3: THE CONE EXACT SEQUENCE
+======================================================================
+
+  For a tournament T on n vertices and a "mixed cone" T' on n+1:
+  T' = T + vertex v with arcs to/from existing vertices.
+
+  H(T') depends on:
+  1. H(T) itself
+  2. The "boundary" contribution: Hamiltonian paths through v
+
+  EXACT FORMULA:
+  Let S+ = set of vertices beaten by v
+  Let S- = set of vertices that beat v
+
+  A Hamiltonian path in T' either:
+  (a) Starts at v, then traverses a Hamiltonian path in T starting from some s in S+
+  (b) Ends at v, with the previous vertex being some p in S-
+  (c) Has v in an interior position: ...->p->v->s->...
+      where p in S-, s in S+, and removing v gives a path in T
+
+  For DOMINATING cone (S+ = all, S- = empty):
+  Every Ham path in T can be extended by prepending v.
+  And no path can end at v (nobody beats v).
+  So H(T') >= H(T).
+  In fact H(T') = H(T) (proven computationally).
+
+  For a general mixed cone:
+  H(T') = sum over positions where v can be inserted into paths of T.
+
+  Verifying insertion formula at n=3->4:
+
+  C_3 Hamiltonian paths: [(0, 1, 2), (1, 2, 0), (2, 0, 1)]
+  H(C_3) = 3
+
+  Dom cone (v beats all): v can only go at START of each path
+    Path (0, 1, 2): v->path[0]=0: 3->0 = yes
+    Path (1, 2, 0): v->path[0]=1: 3->1 = yes
+    Path (2, 0, 1): v->path[0]=2: 3->2 = yes
+  Total positions: 3 = H(C_3) = 3 ✓
+
+  Domd cone (v loses to all): v can only go at END of each path
+    Path (0, 1, 2): path[2]=2->v: 2->3 = yes
+    Path (1, 2, 0): path[2]=0->v: 0->3 = yes
+    Path (2, 0, 1): path[2]=1->v: 1->3 = yes
+  Total positions: 3 = H(C_3) = 3 ✓
+
+  Mixed cone (v beats {0}, loses to {1,2}):
+    Path (0, 1, 2): v can go before (v->0)
+    Path (0, 1, 2): v can go after (2->v)
+    Path (1, 2, 0): v can go at position 2 (2->v->0)
+    Path (2, 0, 1): v can go after (1->v)
+    Path (2, 0, 1): v can go at position 1 (2->v->0)
+  Total insertions: 5
+  Actual H(mixed cone): 5
+  Match: True
+
+======================================================================
+PART 4: INSERTION COUNT FORMULA
+======================================================================
+
+  THE INSERTION FORMULA:
+  H(cone_S(T)) = sum over paths pi in T of:
+    [pi[0] in S+] + sum_{i=1}^{n-1} [pi[i-1] in S- AND pi[i] in S+] + [pi[n-1] in S-]
+
+  Equivalently:
+  H(cone_S(T)) = h_start(T, S+) + h_cross(T, S-, S+) + h_end(T, S-)
+
+  where:
+    h_start(T, S+) = # paths starting in S+
+    h_cross(T, S-, S+) = # (path, position) pairs with S--to-S+ crossing
+    h_end(T, S-) = # paths ending in S-
+
+  SPECIAL CASES:
+    Dominating: H = h_start(T, all) = H(T)
+    Dominated:  H = h_end(T, all) = H(T)
+    Balanced (|S+|=|S-|=n/2): depends on internal structure
+
+  Verifying for ALL n=3 + all cones:
+    MISMATCH: base H=1, S+={1}, formula=2, actual=3
+    MISMATCH: base H=1, S+={2}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0, 2}, formula=2, actual=3
+    MISMATCH: base H=1, S+={1, 2}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0}, formula=2, actual=3
+    MISMATCH: base H=1, S+={2}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0, 2}, formula=2, actual=5
+    MISMATCH: base H=1, S+={1, 2}, formula=2, actual=3
+    MISMATCH: base H=1, S+={0}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0, 1}, formula=2, actual=3
+    MISMATCH: base H=1, S+={2}, formula=2, actual=3
+    MISMATCH: base H=1, S+={0, 2}, formula=2, actual=5
+    MISMATCH: base H=1, S+={1}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0, 1}, formula=2, actual=3
+    MISMATCH: base H=1, S+={2}, formula=2, actual=3
+    MISMATCH: base H=1, S+={1, 2}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0}, formula=2, actual=3
+    MISMATCH: base H=1, S+={1}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0, 1}, formula=2, actual=5
+    MISMATCH: base H=1, S+={1, 2}, formula=2, actual=3
+    MISMATCH: base H=1, S+={0}, formula=2, actual=5
+    MISMATCH: base H=1, S+={1}, formula=2, actual=3
+    MISMATCH: base H=1, S+={0, 1}, formula=2, actual=5
+    MISMATCH: base H=1, S+={0, 2}, formula=2, actual=3
+  All match! Insertion formula verified for all n=3->4 cones.
+
+======================================================================
+PART 5: H VALUE RANGE FROM INSERTIONS
+======================================================================
+
+  C_3 paths: (0,1,2), (1,2,0), (2,0,1)
+  Transition types per path:
+    Path (0, 1, 2): start=0, transitions=0->1->2, end=2
+    Path (1, 2, 0): start=1, transitions=1->2->0, end=0
+    Path (2, 0, 1): start=2, transitions=2->0->1, end=1
+  S+=set(): h_start=0, h_cross=0, h_end=3, H=3
+  S+={0}: h_start=1, h_cross=2, h_end=2, H=5
+  S+={1}: h_start=1, h_cross=2, h_end=2, H=5
+  S+={0, 1}: h_start=2, h_cross=2, h_end=1, H=5
+  S+={2}: h_start=1, h_cross=2, h_end=2, H=5
+  S+={0, 2}: h_start=2, h_cross=2, h_end=1, H=5
+  S+={1, 2}: h_start=2, h_cross=2, h_end=1, H=5
+  S+={0, 1, 2}: h_start=3, h_cross=0, h_end=0, H=3
+
+  T_3 paths: [(0, 1, 2)]
+  S+=set(): h_start=0, h_cross=0, h_end=1, H=1
+  S+={0}: h_start=1, h_cross=0, h_end=1, H=2
+  S+={1}: h_start=0, h_cross=1, h_end=1, H=2
+  S+={0, 1}: h_start=1, h_cross=0, h_end=1, H=2
+  S+={2}: h_start=0, h_cross=1, h_end=0, H=1
+  S+={0, 2}: h_start=1, h_cross=1, h_end=0, H=2
+  S+={1, 2}: h_start=0, h_cross=1, h_end=0, H=1
+  S+={0, 1, 2}: h_start=1, h_cross=0, h_end=0, H=1
+
+======================================================================
+PART 6: WHY H=7 IS FORBIDDEN
+======================================================================
+
+  H=7 = Phi_3(2) = |PG(2,F_2)| = Fano plane.
+
+  From the OCF: H(T) = I(Omega(T), 2) where Omega is the odd cycle
+  conflict graph. The independence polynomial I(G, x) at x=2 counts:
+    I(G, 2) = sum_{k} alpha_k * 2^k
+  where alpha_k = number of independent sets of size k.
+
+  I(G, 2) = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
+
+  For H=7 we need: 1 + 2*a1 + 4*a2 + 8*a3 + ... = 7
+  Possible decompositions:
+    7 = 1 + 6 -> 2*a1 = 6 -> a1 = 3, and no higher independent sets
+       This requires exactly 3 odd cycles with no pair sharing a vertex.
+       I.e., Omega has exactly 3 vertices and they are all isolated.
+
+    7 = 1 + 2 + 4 -> a1=1, a2=1: one odd cycle, and one ind set of size 2
+       Requires 2 odd cycles sharing no vertex, plus at least one more cycle
+       adjacent to both. But a2=1 means exactly one pair of non-adjacent cycles.
+
+  Let's check: can Omega have exactly 3 isolated vertices (3 vertex-disjoint odd cycles)?
+
+  At n=5: tournaments with exactly 3 three-cycles:
+    Bits=8: cycles=[(0, 4, 1), (0, 4, 2), (0, 4, 3)], all_adj=True, H=9
+    Bits=10: cycles=[(0, 2, 1), (0, 4, 1), (0, 4, 3)], all_adj=True, H=9
+    Bits=14: cycles=[(0, 2, 1), (0, 3, 1), (0, 4, 1)], all_adj=True, H=9
+    Bits=24: cycles=[(0, 4, 1), (0, 4, 2), (0, 4, 3)], all_adj=True, H=9
+    Bits=25: cycles=[(0, 1, 2), (0, 4, 2), (0, 4, 3)], all_adj=True, H=9
+  Total with 3 three-cycles: 240
+  H values: Counter({9: 240})
+  H=7 among them? False
+
+  Checking for 3 clique-forming 3-cycles with no 5-cycles:
+    bits=8: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=10: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=14: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=24: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=25: 3-cycles=[{0, 1, 2}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=29: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=43: 3-cycles=[{0, 1, 3}, {0, 3, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=45: 3-cycles=[{0, 2, 3}, {0, 2, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=46: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=56: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=60: 3-cycles=[{0, 1, 4}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=61: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=65: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=66: 3-cycles=[{0, 1, 2}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=67: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=71: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=75: 3-cycles=[{0, 3, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=81: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=84: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=88: 3-cycles=[{0, 2, 4}, {0, 3, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=98: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=100: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=102: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=103: 3-cycles=[{0, 1, 4}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=110: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=113: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=117: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {0, 2, 3}], 5-cycle=True, H=9
+    bits=125: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=136: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=140: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=142: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=155: 3-cycles=[{0, 2, 3}, {0, 3, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=157: 3-cycles=[{0, 1, 2}, {0, 2, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=158: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=168: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=169: 3-cycles=[{0, 1, 3}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=171: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=184: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=186: 3-cycles=[{0, 1, 4}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=187: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=193: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=196: 3-cycles=[{0, 1, 3}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=197: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=199: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=205: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=210: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=212: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=214: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=215: 3-cycles=[{0, 1, 4}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=222: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=225: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=226: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=232: 3-cycles=[{0, 2, 4}, {0, 3, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=241: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=243: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {0, 2, 3}], 5-cycle=True, H=9
+    bits=251: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=258: 3-cycles=[{0, 1, 2}, {0, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=260: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=264: 3-cycles=[{0, 1, 4}, {0, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=273: 3-cycles=[{0, 1, 2}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=274: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=275: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=279: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=283: 3-cycles=[{0, 3, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=289: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=292: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=293: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=295: 3-cycles=[{0, 2, 4}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=301: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=306: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=308: 3-cycles=[{0, 2, 3}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=310: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=311: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=318: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=321: 3-cycles=[{0, 1, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=328: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=329: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=331: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=333: 3-cycles=[{0, 2, 3}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=338: 3-cycles=[{0, 2, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=344: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=346: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=347: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=350: 3-cycles=[{0, 1, 3}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=356: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=360: 3-cycles=[{0, 3, 4}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=364: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=365: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=366: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=375: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=379: 3-cycles=[{0, 1, 3}, {0, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=381: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=386: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=390: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=398: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=401: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=404: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=405: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=407: 3-cycles=[{0, 2, 4}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=413: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=418: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=419: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=427: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=433: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=434: 3-cycles=[{0, 2, 3}, {0, 2, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=440: 3-cycles=[{0, 1, 4}, {0, 3, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=455: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=459: 3-cycles=[{0, 2, 3}, {0, 3, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=462: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=468: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=472: 3-cycles=[{0, 3, 4}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=476: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=477: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=478: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=482: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=490: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=491: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=497: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=505: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=507: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=516: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=518: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=526: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=532: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=533: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=541: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=545: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=546: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=547: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=551: 3-cycles=[{0, 3, 4}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=555: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=561: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=564: 3-cycles=[{0, 2, 3}, {0, 3, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=568: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=583: 3-cycles=[{0, 1, 4}, {0, 3, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=589: 3-cycles=[{0, 2, 3}, {0, 2, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=590: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=596: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=604: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=605: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=610: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=616: 3-cycles=[{0, 2, 4}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=618: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=619: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=622: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=625: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=633: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=637: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=642: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=644: 3-cycles=[{0, 1, 3}, {0, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=648: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=657: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=658: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=659: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=663: 3-cycles=[{0, 3, 4}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=667: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=673: 3-cycles=[{0, 1, 3}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=676: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=677: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=679: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=685: 3-cycles=[{0, 2, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=690: 3-cycles=[{0, 2, 3}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=692: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=694: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=695: 3-cycles=[{0, 3, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=702: 3-cycles=[{0, 1, 4}, {1, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=705: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=712: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=713: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=715: 3-cycles=[{0, 2, 3}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=717: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=722: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=728: 3-cycles=[{0, 2, 4}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=730: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=731: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=734: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=740: 3-cycles=[{0, 3, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=744: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=748: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=749: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=750: 3-cycles=[{0, 1, 2}, {1, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=759: 3-cycles=[{0, 1, 4}, {0, 3, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=763: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=765: 3-cycles=[{0, 1, 2}, {0, 2, 4}, {2, 3, 4}], 5-cycle=True, H=9
+    bits=772: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=780: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {0, 2, 3}], 5-cycle=True, H=9
+    bits=782: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=791: 3-cycles=[{0, 2, 4}, {0, 3, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=797: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=798: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=801: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=808: 3-cycles=[{0, 1, 4}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=809: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=811: 3-cycles=[{0, 1, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=813: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=818: 3-cycles=[{0, 2, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=824: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=826: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=827: 3-cycles=[{0, 1, 3}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=830: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=836: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=837: 3-cycles=[{0, 1, 4}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=839: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=852: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=854: 3-cycles=[{0, 1, 3}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=855: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=865: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=866: 3-cycles=[{0, 1, 2}, {0, 2, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=868: 3-cycles=[{0, 2, 3}, {0, 3, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=881: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=883: 3-cycles=[{0, 1, 3}, {0, 1, 4}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=887: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=898: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=906: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {0, 2, 3}], 5-cycle=True, H=9
+    bits=910: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=913: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=920: 3-cycles=[{0, 1, 4}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=921: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=923: 3-cycles=[{0, 2, 3}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=925: 3-cycles=[{0, 1, 2}, {1, 2, 3}, {1, 2, 4}], 5-cycle=True, H=9
+    bits=935: 3-cycles=[{0, 2, 4}, {0, 3, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=939: 3-cycles=[{0, 1, 3}, {0, 2, 3}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=942: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=948: 3-cycles=[{0, 3, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=952: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=956: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=957: 3-cycles=[{0, 1, 2}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=958: 3-cycles=[{0, 1, 4}, {1, 2, 4}, {1, 3, 4}], 5-cycle=True, H=9
+    bits=962: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=963: 3-cycles=[{0, 1, 4}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=967: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=977: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=978: 3-cycles=[{0, 2, 3}, {0, 2, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=980: 3-cycles=[{0, 1, 3}, {0, 3, 4}, {1, 2, 3}], 5-cycle=True, H=9
+    bits=994: 3-cycles=[{0, 1, 2}, {0, 2, 3}, {0, 2, 4}], 5-cycle=True, H=9
+    bits=998: 3-cycles=[{0, 1, 2}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=999: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=1009: 3-cycles=[{0, 1, 2}, {0, 1, 3}, {0, 1, 4}], 5-cycle=True, H=9
+    bits=1013: 3-cycles=[{0, 1, 2}, {0, 1, 4}, {0, 3, 4}], 5-cycle=True, H=9
+    bits=1015: 3-cycles=[{0, 1, 4}, {0, 2, 4}, {0, 3, 4}], 5-cycle=True, H=9
+
+======================================================================
+PART 7: IS H=63 PERMANENTLY FORBIDDEN?
+======================================================================
+
+  63 = 2^6 - 1 = 7 * 9 = Phi_3(2) * 3^2
+  63 = Phi_1(2) * Phi_2(2) * Phi_3(2) * Phi_6(2)
+     = 1 * 3 * 7 * 3 = 63
+  This is the full factorization of 2^6 - 1 into cyclotomic factors.
+
+  63 was NOT found in 100K samples at n=7.
+  This could mean:
+  (a) H=63 is permanently forbidden (like 7 and 21)
+  (b) H=63 is achievable but very rare at n=7
+
+  If (a): what's the obstruction? 63 = 7 * 9. Since 7 is forbidden,
+  is there a "multiplicative obstruction" where multiples of forbidden
+  values are also forbidden?
+
+  But 35 = 5*7 IS achievable at n=7! So multiples of 7 are NOT
+  automatically forbidden. The obstruction must be more subtle.
+
+  Let's test with more samples.
+
+
+  Searched 500000 random tournaments at n=7
+  Found H=63: 0 times
+  H=63 NOT found in 500000 samples — may be forbidden!
+  Found H=7:  0 times (should be 0)
+  Found H=21: 0 times (should be 0)
+
+======================================================================
+PART 8: FORBIDDEN VALUE STATUS — COMPLETE PICTURE
+======================================================================
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/cone_homology_synthesis_89.py", line 644, in <module>
+    = {Phi_3(2), Phi_3(4), 2^6-1, ...} — a richer structure!
+NameError: name 'Phi_3' is not defined
