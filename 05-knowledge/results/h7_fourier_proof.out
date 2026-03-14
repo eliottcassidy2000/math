@@ -1,0 +1,185 @@
+============================================================
+FOURIER BOUNDS ON H
+============================================================
+  n=3: mean H = 1.5
+         Fourier bound: H ∈ [0.0, 3.0]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? False
+  n=4: mean H = 3.0
+         Fourier bound: H ∈ [-8.2, 14.2]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=5: mean H = 7.5
+         Fourier bound: H ∈ [-52.5, 67.5]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=6: mean H = 22.5
+         Fourier bound: H ∈ [-618.4, 663.4]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=7: mean H = 78.8
+         Fourier bound: H ∈ [-3526.7, 3684.2]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=8: mean H = 315.0
+         Fourier bound: H ∈ [-71952.9, 72582.9]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=9: mean H = 1417.5
+         Fourier bound: H ∈ [-406323.8, 409158.8]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=10: mean H = 7087.5
+         Fourier bound: H ∈ [-15477163.7, 15491338.7]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+  n=11: mean H = 38981.2
+         Fourier bound: H ∈ [-82559851.8, 82637814.3]
+         Actual min H = 1 (transitive)
+         H=7 possible by bound? True
+
+============================================================
+EXACT NONZERO FOURIER COUNT (from THM-077)
+============================================================
+  n=3: deg-2 terms=3, |coeff|=0.5000
+         max deviation from mean ≥ 1.5
+         mean=1.5, min_H_bound=0.0
+  n=4: deg-2 terms=12, |coeff|=0.5000
+         max deviation from mean ≥ 6.0
+         mean=3.0, min_H_bound=-3.0
+  n=5: deg-2 terms=30, |coeff|=0.7500
+         max deviation from mean ≥ 48.8
+         mean=7.5, min_H_bound=-41.2
+  n=6: deg-2 terms=60, |coeff|=1.5000
+         max deviation from mean ≥ 260.6
+         mean=22.5, min_H_bound=-238.1
+  n=7: deg-2 terms=105, |coeff|=3.7500
+         max deviation from mean ≥ 3211.7
+         mean=78.8, min_H_bound=-3132.9
+
+============================================================
+THE STRUCTURAL PROOF: Ω=K₃ IMPOSSIBLE FOR TOURNAMENTS
+============================================================
+
+THEOREM: No tournament T has Ω(T) = K₃.
+
+PROOF:
+  Ω(T) = K₃ requires exactly 3 odd cycles C₁, C₂, C₃ in T,
+  with every pair sharing at least one vertex.
+
+  CASE 1: All three are 3-cycles.
+    Let C₁ = (a→b→c→a), C₂ = (d→e→f→d), C₃ = (g→h→i→g).
+    Each pair shares a vertex, so the vertex sets have pairwise
+    non-empty intersection.
+
+    Sub-case 1a: All share a common vertex v.
+      WLOG v=a=d=g. Then C₁=(v→b→c→v), C₂=(v→e→f→v), C₃=(v→h→i→v).
+      If {b,c}∩{e,f}=∅ and {b,c}∩{h,i}=∅ and {e,f}∩{h,i}=∅:
+        T has ≥7 vertices: v,b,c,e,f,h,i.
+        The sub-tournament on {b,c,e,f,h,i} must have 0 directed 3-cycles
+        (else we'd have >3 total). This means it's transitive.
+        But in a 7-vertex tournament, the arcs between the 3 "cycle pairs"
+        {b,c}, {e,f}, {h,i} create 5-cycles through v.
+        Specifically: v→b→?→?→?→v using vertices from different cycles.
+        Since the sub-tournament on 6 vertices is transitive,
+        there exists a Hamiltonian path b₁→b₂→...→b₆ through {b,c,e,f,h,i}.
+        The 5-cycle v→b₁→b₂→b₃→b₄→v exists iff b₄→v.
+        Since v has 3 in-neighbors {c,f,i} among the 6 vertices,
+        we need b₄ ∈ {c,f,i}. In the transitive order, this happens
+        for specific configurations.
+
+        *** NEED TO VERIFY: does every such configuration create
+            at least one additional odd cycle (5-cycle or 7-cycle)? ***
+
+    Sub-case 1b: Some cycle pairs share 2 vertices.
+      If C₁ and C₂ share 2 vertices, say C₁=(a→b→c→a) and C₂=(a→b→d→a).
+      This means a→b is an arc in both. For C₂: a→b→d→a, so b→d→a.
+      For C₁: a→b→c→a, so b→c→a.
+      Now c and d are both beat by b and both beat a.
+      The arc between c and d creates either c→d or d→c.
+      If c→d: then a→b→c→d→a is a 4-cycle (EVEN, not counted in Ω).
+      If d→c: then a→b→d→c→a is a 4-cycle (EVEN, not counted).
+      Either way, no new ODD cycle from {a,b,c,d} alone.
+      But the sub-tournament on {a,b,c,d} has 4 vertices.
+      It has t₃ ≥ 2 (C₁ and C₂) and possibly more.
+
+      Actually: {a,b,c,d}. Arcs: a→b, b→c, c→a (from C₁), b→d, d→a (from C₂).
+      Remaining: c vs d. If c→d: {a,b,c,d} has arcs a→b, b→c, b→d, c→a, c→d, d→a.
+      3-cycles: (a→b→c→a)✓, (a→b→d→a)✓, (b→c→d→? : need d→b, but b→d)✗.
+      So t₃=2 on these 4 vertices. c→d case: no new 3-cycle.
+      If d→c: arcs a→b, b→c, b→d, c→a, d→a, d→c.
+      3-cycles: (a→b→c→a)✓, (a→b→d→a)✓, (b→d→c→? : need c→b, but b→c)✗.
+      So t₃=2 again. Good.
+
+      Now C₃ must share a vertex with both C₁ and C₂.
+      C₃ shares with C₁ ⟹ C₃ ∩ {a,b,c} ≠ ∅.
+      C₃ shares with C₂ ⟹ C₃ ∩ {a,b,d} ≠ ∅.
+      C₃ is a 3-cycle using (some of {a,b,c,d}) ∪ (new vertices).
+
+      If C₃ entirely within {a,b,c,d}: we showed t₃=2 on these, so C₃
+      must be one of C₁ or C₂. But C₃ is distinct. Contradiction.
+
+      So C₃ uses at least one new vertex e.
+      C₃ = (x→y→e→x) or similar, with x,y ∈ {a,b,c,d}.
+      This creates a 5-vertex sub-tournament {a,b,c,d,e}.
+      Need: no OTHER 3-cycle or 5-cycle is created.
+
+      *** This requires very specific arc patterns. ***
+      *** Computational verification needed. ***
+
+  CASE 2: One or more cycles have length ≥ 5.
+    A 5-cycle uses 5 vertices. Three 5-cycles all pairwise sharing vertices
+    use at most 15 vertices. But each 5-cycle creates MANY sub-3-cycles
+    (a 5-vertex tournament typically has 1-5 directed 3-cycles).
+    So having a 5-cycle almost always means t₃ ≥ 1, adding to the count.
+
+    Exception: if T restricted to the 5-cycle vertices has t₃=0
+    (transitive on those 5), but then the 5-cycle doesn't exist
+    in a transitive tournament. Contradiction.
+
+    Actually: a directed 5-cycle on vertices {a,b,c,d,e} requires
+    a→b→c→d→e→a. The sub-tournament on these 5 has this 5-cycle
+    plus ALL other arcs. These other arcs create 3-cycles.
+    For the 5-cycle a→b→c→d→e→a, the remaining arcs are:
+    a-c, a-d, b-d, b-e, c-e. If ALL go "forward" (a→c, a→d, b→d, b→e, c→e),
+    the tournament has score sequence (4,3,2,1,0) — TRANSITIVE! But then
+    there's no 5-cycle. Contradiction.
+
+    So a 5-cycle always coexists with at least one 3-cycle.
+    Therefore if we have a 5-cycle as one of our 3 cycles,
+    we automatically have a 3-cycle as another, but then the
+    total cycle count is ≥ 3 only if we have exactly
+    {one 5-cycle, two 3-cycles, no other cycles}. Unlikely.
+
+Verification: 5-cycle subtournament 3-cycle count
+  5-cycle: 0→1→2→3→4→0
+  Remaining 5 arcs: (0,2),(0,3),(1,3),(1,4),(2,4)
+  Each can go either way: 2^5 = 32 completions
+
+  5-cycle completions: t₃ ∈ [3, 5]
+  t₃ ≥ 3 ALWAYS when a 5-cycle exists on 5 vertices
+
+  PROVED: A directed 5-cycle always creates ≥3 directed 3-cycles!
+  Therefore: if Ω has a 5-cycle vertex, it also has ≥3 3-cycle vertices.
+  This means α₁ ≥ 1 + 3 = 4 just from one 5-cycle.
+
+  Checking conflict between 5-cycle and its forced 3-cycles:
+
+  Key: 3-cycles forced by a 5-cycle are subsets of the SAME 5 vertices.
+  So they automatically share vertices with the 5-cycle (conflict).
+  And two 3-cycles on 5 vertices can share 0, 1, or 2 vertices.
+  Independent pair possible only if they use disjoint 3-subsets of (0, Ellipsis, 4).
+  But C(5,3)=10 triples, and disjoint pairs of triples from 5 vertices
+  require 6 vertices — IMPOSSIBLE! So on 5 vertices, ALL pairs of 3-cycles
+  share at least one vertex!
+
+  THEREFORE: On 5 vertices, any 5-cycle + its forced 3-cycles gives
+  a conflict graph that is COMPLETE (all pairwise conflicting).
+  The independence number of this Ω restricted to 5 vertices is 1.
+  So α₂ = 0 is satisfied, but α₁ ≥ 1 + min_t3 = 4 > 3
+  whenever min_t3 ≥ 3, which... let me check.
+  YES! min_t3=3 ≥ 3, so α₁ ≥ 4 > 3 and I(Ω,2) ≥ 1+4·2=9 > 7.
+
+============================================================
+DONE
+============================================================

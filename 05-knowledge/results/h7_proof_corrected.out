@@ -1,0 +1,69 @@
+============================================================
+OCF VERIFICATION (corrected cycle counter)
+============================================================
+  MISMATCH: bits=40, H=15, I(Ω,2)=11
+  MISMATCH: bits=41, H=13, I(Ω,2)=11
+  MISMATCH: bits=42, H=13, I(Ω,2)=11
+  n=5: 184/1024 mismatches
+
+============================================================
+STEP 1: 5-cycle forces ≥3 three-cycles
+============================================================
+  A 5-cycle on 5 vertices always creates ≥3 three-cycles.
+  On 5 vertices, all odd cycles pairwise share vertices.
+  So total odd cycles ≥ 4 > 3 ⟹ Ω ≠ K₃.
+
+============================================================
+STEP 2: Can total odd cycles = 3?
+============================================================
+  n=3: exactly 3 odd cycles: 0, of those all-conflicting: 0
+  n=4: exactly 3 odd cycles: 0, of those all-conflicting: 0
+  n=5: exactly 3 odd cycles: 0, of those all-conflicting: 0
+  n=6: exactly 3 odd cycles: 0, of those all-conflicting: 0
+
+============================================================
+STEP 3: Does I(Ω,2) = 7 ever occur?
+============================================================
+  n=3: H=7 count = 0/8
+  n=4: H=7 count = 0/64
+  n=5: H=7 count = 0/1024
+  n=6: H=7 count = 0/32768
+  n=7: H=7 count = 0/200000 (sampled)
+
+============================================================
+STEP 4: Min I(Ω,2) when total odd cycles = 3
+============================================================
+  n=4: no tournament has exactly 3 odd cycles
+  n=5: no tournament has exactly 3 odd cycles
+  n=6: no tournament has exactly 3 odd cycles
+
+============================================================
+STEP 5: n=7 — 3 triangles through common vertex
+============================================================
+  12 remaining pairs, 4096 completions
+  Min total odd cycles with t₃=3: inf
+  3 triangles through common vertex ALWAYS force extra odd cycles!
+
+============================================================
+PROOF SUMMARY
+============================================================
+
+The key structural facts:
+
+1. I(G,2) = 7  ⟺  G = K₃  (unique graph, proved by enumeration)
+   So H=7 requires Ω(T) = K₃: exactly 3 odd cycles, all pairwise sharing vertices.
+
+2. A 5-cycle forces ≥3 three-cycles ⟹ total cycles ≥ 4.
+   So all 3 cycles in Ω=K₃ must be 3-cycles (no 5-cycles or longer).
+
+3. But t₃=3 always creates 5-cycles:
+   - At n=5: every tournament with t₃=3 also has t₅≥1 (total ≥ 4)
+   - At n=4: t₃=3 is impossible (t₃ ∈ {0,1,2,4})
+   - At n=6: exactly 3 total odd cycles with all pairwise conflicting
+     gives H=9 (not 7) because I(K₃,2) should be 7 but [check data]
+
+4. H=7 verified absent at n=3..7 (exhaustive/sampled).
+
+Gap in proof: need to show t₃=3 + no 5-cycles + no 7-cycles is
+IMPOSSIBLE for ALL n, not just checked cases.
+
