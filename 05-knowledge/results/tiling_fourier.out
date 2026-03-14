@@ -1,0 +1,251 @@
+======================================================================
+THE TILING MODEL AND FOURIER ANALYSIS
+kind-pasteur-2026-03-14-S110g
+======================================================================
+
+======================================================================
+THE TRIANGULAR GRID FOR n=5
+======================================================================
+
+  The grid (i,j) for 0 <= i < j <= 4:
+  Path arcs (diagonal y=x+1): (0,1),(1,2),(2,3),(3,4)
+  Non-path arcs: (0,2),(0,3),(0,4),(1,3),(1,4),(2,4)
+
+  j:  1 2 3 4
+  i=0: P . . .
+  i=1:   P . .
+  i=2:     P .
+  i=3:       P
+
+  Anti-diagonals (gap c):
+    c=1: [(0, 1), (1, 2), (2, 3), (3, 4)]
+    c=2: [(0, 2), (1, 3), (2, 4)]
+    c=3: [(0, 3), (1, 4)]
+    c=4: [(0, 4)]
+
+======================================================================
+FOURIER SUBSETS AS GRID PATTERNS
+======================================================================
+
+  Ham path edges: [(0, 3), (1, 2), (1, 4), (2, 3)]
+    j:  1  2  3  4
+    i=0:  .  .  X  .
+    i=1:     X  .  X
+    i=2:        X  .
+    i=3:           .
+
+  Ham path edges: [(0, 3), (0, 4), (1, 2), (2, 4)]
+    j:  1  2  3  4
+    i=0:  .  .  X  X
+    i=1:     X  .  .
+    i=2:        .  X
+    i=3:           .
+
+  Ham path edges: [(0, 4), (1, 3), (2, 3), (2, 4)]
+    j:  1  2  3  4
+    i=0:  .  .  .  X
+    i=1:     .  X  .
+    i=2:        X  X
+    i=3:           .
+
+  Ham path edges: [(0, 2), (1, 2), (1, 4), (3, 4)]
+    j:  1  2  3  4
+    i=0:  .  X  .  .
+    i=1:     X  .  X
+    i=2:        .  .
+    i=3:           X
+
+  Ham path edges: [(0, 1), (0, 2), (1, 3), (2, 4)]
+    j:  1  2  3  4
+    i=0:  X  X  .  .
+    i=1:     .  X  .
+    i=2:        .  X
+    i=3:           .
+
+======================================================================
+ANTI-DIAGONALS AND THE 'GAP' STRUCTURE
+======================================================================
+
+  Gap distribution of Hamiltonian paths at n=5:
+    Gaps (1, 1, 1, 1): 1 paths
+    Gaps (1, 1, 1, 2): 2 paths
+    Gaps (1, 1, 1, 3): 2 paths
+    Gaps (1, 1, 1, 4): 4 paths
+    Gaps (1, 1, 2, 2): 5 paths
+    Gaps (1, 1, 2, 3): 10 paths
+    Gaps (1, 1, 2, 4): 4 paths
+    Gaps (1, 1, 3, 3): 3 paths
+    Gaps (1, 1, 3, 4): 2 paths
+    Gaps (1, 2, 2, 2): 2 paths
+    Gaps (1, 2, 2, 3): 2 paths
+    Gaps (1, 2, 2, 4): 6 paths
+    Gaps (1, 2, 3, 3): 4 paths
+    Gaps (1, 2, 3, 4): 4 paths
+    Gaps (1, 3, 3, 4): 2 paths
+    Gaps (2, 2, 2, 3): 2 paths
+    Gaps (2, 2, 3, 3): 3 paths
+    Gaps (2, 2, 3, 4): 2 paths
+
+======================================================================
+THE y=x DIAGONAL AND TOURNAMENT ISOMORPHISM
+======================================================================
+
+  The y=x line in the triangular grid passes through the CENTER of the grid.
+  It separates the grid into "upper" and "lower" triangles.
+
+  Actually: for the triangular grid with cells (i,j), 0 <= i < j <= n-1,
+  the "y=x" diagonal isn't a cell but the REFLECTION axis.
+  Reflecting (i,j) gives (n-1-j, n-1-i): this is the COMPLEMENT operation.
+  T -> T^c (flip all arcs) corresponds to reflecting across y=x.
+
+  The perpendicular to y=x is the anti-diagonal direction.
+  Anti-diagonal c: cells (i, i+c) for fixed c.
+
+  TOURNAMENT ISOMORPHISM: Two tournaments are isomorphic iff one can
+  be obtained from the other by RELABELING vertices (permuting rows/columns
+  of the grid simultaneously). This is the action of S_n on the grid.
+
+  The isomorphism classes correspond to ORBITS of S_n on the grid.
+  The number of orbits grows much slower than the number of tournaments.
+
+  TILINGS AND ISOMORPHISM:
+  A tiling of the grid = a tournament with a FIXED Hamiltonian path.
+  Two tilings are "isomorphic" if there's a vertex permutation that
+  maps one to the other AND preserves the path.
+  The stabilizer of the path = the identity (paths are rigid).
+  So each tiling is its own "isomorphism class" with respect to the path.
+  But different paths through the SAME tournament give different tilings.
+
+  The number of tilings = number of (tournament, path) pairs = sum_T H(T).
+  The number of tournaments = 2^m.
+  The ratio = Mean(H) = n!/2^(n-1).
+  
+
+======================================================================
+ANTI-DIAGONALS AS FOURIER MODES
+======================================================================
+
+  CONJECTURE: The Fourier level structure is related to the
+  anti-diagonal structure of the grid.
+
+  Anti-diagonal c has (n-c) cells.
+  Level 2 involves PAIRS of arcs.
+  Level 4 involves QUADRUPLES.
+
+  Are level-2 coefficients concentrated on specific anti-diagonals?
+
+  From the exact formula: |H_hat(e1,e2)| = (n-2)!/2^(n-2) for ADJACENT pairs.
+  Adjacent = sharing a vertex.
+  In the grid: (i,j) and (j,k) are "adjacent" and sit on different anti-diags.
+
+  The Fourier level 2 connects cells that SHARE a vertex (row or column index).
+  This is NOT anti-diagonal structure -- it's ROW/COLUMN structure.
+
+  The anti-diagonals are the "gap" structure.
+  The rows/columns are the "vertex" structure.
+  Fourier levels use VERTEX structure (adjacency).
+  Anti-diagonals use GAP structure.
+
+  These are DUAL to each other!
+  Vertex structure: which vertices are involved.
+  Gap structure: what distance apart in the path.
+  
+
+======================================================================
+THE COMPLEMENT SYMMETRY ON THE GRID
+======================================================================
+
+  THE COMPLEMENT SYMMETRY PROVES ODD LEVELS VANISH:
+
+  H(T) = H(T^c) (complement preserves path count).
+  chi_S(T^c) = (-1)^|S| * chi_S(T) (complement flips all signs).
+  Therefore: H_hat(S) = (-1)^|S| * H_hat(S).
+  For ODD |S|: H_hat(S) = 0. QED.
+
+  THIS IS THE TILING PROOF OF THE DEGREE DROP!
+
+  On the grid: the complement flips all non-path cells.
+  This creates a Z/2 symmetry that kills odd Fourier modes.
+  The even modes survive because (-1)^(even) = +1.
+
+  The y=x reflection (complement) IS the reason H has only even Fourier levels.
+  
+
+======================================================================
+THE PATH REVERSAL ON THE GRID
+======================================================================
+
+  Path reversal: P = (v_0,...,v_(n-1)) -> P^rev = (v_(n-1),...,v_0).
+  On the grid: this maps cell (i,j) to cell (n-1-j, n-1-i).
+  This IS the y=x reflection of the grid!
+
+  The path reversal is the ANTI-DIAGONAL reflection.
+  Cells on anti-diagonal c map to cells on anti-diagonal c
+  (the anti-diagonals are preserved by y=x reflection).
+
+  Combined with complement (which also relates to y=x):
+  - Complement: flips cell values, preserves grid positions.
+  - Path reversal: permutes cell positions (y=x reflection), preserves values.
+  - Together: they generate a Z/2 x Z/2 symmetry.
+
+  The FOURIER ANALYSIS respects both:
+  - Complement kills odd levels (proved above).
+  - Path reversal: for |S| even, chi_S(P)*chi_S(P^rev) = +1.
+    This gives the factor of 2 in |N(S)| = 2 * M(S).
+
+  The TWO Z/2 symmetries combine to give the 4^r in |N(S)|^2:
+  4 = 2 * 2 = (complement factor) * (reversal factor).
+  Each even-length block contributes a factor of 4 = 2^2 to |N|^2.
+  The 2's come from complement symmetry and reversal symmetry separately.
+  
+
+======================================================================
+THE GRID PERSPECTIVE ON THE PROOF
+======================================================================
+
+  THE PROOF IN TILING LANGUAGE:
+
+  1. A tournament with fixed path = a tiling of the triangular grid.
+  2. The complement symmetry (y=x reflection + color flip) kills odd levels.
+  3. At even level 2k: only LINEAR FORESTS with ALL-EVEN components contribute.
+  4. Each such forest has |N(S)|^2 = 4^r * ((n-2k)!)^2.
+     The 4^r comes from: 2^r directions (each block forward/backward)
+     times 2 from path reversal. Actually: (2 * 2^r)^2 / 4 = 4^r.
+     Wait: |N| = 2 * (n-2k)! * 2^(r-1)? Let me recheck.
+
+     At n=5, type (4,): |N| = 2. (n-2k)! = 1. 2^r = 2. N = 2*1*2/2 = 2. CHECK.
+     At n=6, type (4,): |N| = 4. (n-2k)! = 2. 2^r = 2. N = 2*2*2/2 = 4. CHECK.
+     At n=6, type (2,2): |N| = 8. (n-2k)! = 2. 2^r = 4. N = 2*2*4/2 = 8. CHECK.
+     At n=7, type (2,2): |N| = 24. (n-2k)! = 6. 2^r = 4. N = 2*6*4/2 = 24. CHECK.
+
+     So |N(S)| = (n-2k)! * 2^r. And |N|^2 = ((n-2k)!)^2 * 4^r. CONFIRMED.
+
+     The formula: |N(S)| = (n-2k)! * 2^r.
+     (n-2k)! = arrangements of free vertices.
+     2^r = direction choices for r blocks.
+     No separate reversal factor! The 2 is ALREADY in (n-2k)! because
+     (n-2k)! counts ALL directed arrangements including reversed ones.
+
+  5. The count of nonzero S of each type and the total sum of N^2
+     gives E_2k = ((n-2k)!)^2 * [sum count*4^r] / 2^(2(n-1)).
+
+  6. E_2k/E_0 = ((n-2k)!)^2 * [sum count*4^r] / (n!)^2
+             = 2*(n-2k)^k / P(n,2k).
+
+  7. This requires: sum_types count*4^r = 2*(n-2k)^k * (n!/((n-2k)!))^2 / P(n,2k) ... hmm.
+     Actually: sum count*4^r = 2*(n-2k)^k * n!^2 / (((n-2k)!)^2 * P(n,2k)).
+     P(n,2k) = n!/(n-2k)!.
+     sum = 2*(n-2k)^k * n! / (n-2k)!.
+     = 2*(n-2k)^k * P(n, 2k)? No: P(n,2k) = n!/(n-2k)!.
+     sum = 2*(n-2k)^k * n!^2 / ((n-2k)!^2 * n!/(n-2k)!)
+         = 2*(n-2k)^k * n! / (n-2k)!.
+     = 2*(n-2k)^k * P(n, n-2k)? No.
+     Let me just compute:
+  
+  n=5: required sum count*4^r = 240.0
+  n=6: required sum count*4^r = 2880.0
+  n=7: required sum count*4^r = 15120.0
+
+======================================================================
+DONE — THE GRID IS THE ROSETTA STONE
+======================================================================
