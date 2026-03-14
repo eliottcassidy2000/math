@@ -1,0 +1,348 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\knot_tournament_bridge.py:6: SyntaxWarning: invalid escape sequence '\e'
+  1. THM-083 (F_T = F_{T\e} + (x-1)*F(T/e)) IS a skein relation
+C:\Users\Eliott\Documents\GitHub\math\04-computation\knot_tournament_bridge.py:175: SyntaxWarning: invalid escape sequence '\e'
+  Check: F_T(x) = F_{T\e}(x) + (x-1)*F(T/e, x) at x=2 (i.e., H values)
+======================================================================
+KNOT-TOURNAMENT BRIDGE EXPLORATION
+kind-pasteur-2026-03-14-S69
+======================================================================
+
+======================================================================
+PART A: TOURNAMENT ALEXANDER POLYNOMIAL det(t*M - M^T)
+======================================================================
+
+--- n = 3 ---
+Total tournaments: 8
+Distinct Alexander polynomials: 2
+
+Alexander polynomial distribution:
+  [0, 0, 0, 0]: 6 tournaments
+  [1, 0, 0, -1]: 2 tournaments
+
+(H, det(M), symmetric?) distribution:
+  H=1, det(M)=0, sym=False: 6
+  H=3, det(M)=1, sym=False: 2
+
+--- n = 4 ---
+Total tournaments: 64
+Distinct Alexander polynomials: 2
+
+Alexander polynomial distribution:
+  [0, 0, 0, 0, 0]: 40 tournaments
+  [-1, 0, 3, 0, -1]: 24 tournaments
+
+(H, det(M), symmetric?) distribution:
+  H=1, det(M)=0, sym=False: 24
+  H=3, det(M)=0, sym=False: 16
+  H=5, det(M)=-1, sym=False: 24
+
+--- n = 5 ---
+Total tournaments: 1024
+Distinct Alexander polynomials: 7
+
+Alexander polynomial distribution:
+  [0, 0, 0, 0, 0, 0]: 480 tournaments
+  [1, 0, -5, 5, 0, -1]: 120 tournaments
+  [1, 2, -3, 3, -2, -1]: 120 tournaments
+  [1, 0, -3, 3, 0, -1]: 120 tournaments
+  [8, 13, 8, -8, -13, -8]: 120 tournaments
+  [36, 108, 36, -36, -108, -36]: 40 tournaments
+  [3, 0, 0, 0, 0, -3]: 24 tournaments
+
+(H, det(M), symmetric?) distribution:
+  H=1, det(M)=0, sym=False: 120
+  H=3, det(M)=0, sym=False: 120
+  H=5, det(M)=0, sym=False: 240
+  H=9, det(M)=1, sym=False: 240
+  H=11, det(M)=1, sym=False: 120
+  H=13, det(M)=8, sym=False: 120
+  H=15, det(M)=3, sym=False: 24
+  H=15, det(M)=36, sym=False: 40
+
+======================================================================
+PART B: SKEIN RELATION F_T = F_{T\e} + (x-1)*F(T/e) at x=2
+======================================================================
+
+--- n = 3 ---
+  FAILURE: arc (0, 2), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 2), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 1), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=2
+  Checked 24 arcs, failures: 12
+
+--- n = 4 ---
+  FAILURE: arc (0, 2), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 2), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (0, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=5, H_del=2, H_con=1
+  FAILURE: arc (2, 3), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 0), H=5, H_del=1, H_con=0
+  FAILURE: arc (0, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 2), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 3), H=3, H_del=1, H_con=0
+  FAILURE: arc (3, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 1), H=5, H_del=1, H_con=0
+  FAILURE: arc (1, 2), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 0), H=5, H_del=2, H_con=1
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 1), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (0, 2), H=5, H_del=2, H_con=1
+  FAILURE: arc (1, 3), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 0), H=5, H_del=1, H_con=0
+  FAILURE: arc (0, 2), H=5, H_del=1, H_con=0
+  FAILURE: arc (2, 1), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 0), H=5, H_del=2, H_con=1
+  FAILURE: arc (0, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 3), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 0), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 1), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (3, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=3, H_del=2, H_con=3
+  FAILURE: arc (0, 2), H=3, H_del=2, H_con=3
+  FAILURE: arc (0, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 3), H=3, H_del=1, H_con=0
+  FAILURE: arc (3, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=5, H_del=2, H_con=1
+  FAILURE: arc (2, 3), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 1), H=5, H_del=1, H_con=0
+  FAILURE: arc (1, 2), H=5, H_del=1, H_con=0
+  FAILURE: arc (2, 0), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 1), H=5, H_del=2, H_con=1
+  FAILURE: arc (0, 3), H=5, H_del=2, H_con=1
+  FAILURE: arc (1, 2), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 1), H=5, H_del=1, H_con=0
+  Checked 120 arcs, failures: 75
+
+--- n = 5 ---
+  FAILURE: arc (0, 2), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (0, 4), H=1, H_del=1, H_con=8
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 2), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=8
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (0, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (1, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (2, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (0, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=8
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (0, 1), H=5, H_del=2, H_con=1
+  FAILURE: arc (0, 4), H=5, H_del=4, H_con=7
+  FAILURE: arc (1, 4), H=5, H_del=4, H_con=9
+  FAILURE: arc (2, 3), H=5, H_del=2, H_con=1
+  FAILURE: arc (2, 4), H=5, H_del=3, H_con=6
+  FAILURE: arc (3, 0), H=5, H_del=1, H_con=0
+  FAILURE: arc (3, 4), H=5, H_del=4, H_con=5
+  FAILURE: arc (0, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 4), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 0), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 2), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 4), H=3, H_del=3, H_con=12
+  FAILURE: arc (2, 3), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 4), H=3, H_del=2, H_con=3
+  FAILURE: arc (3, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (3, 4), H=3, H_del=2, H_con=3
+  FAILURE: arc (0, 1), H=5, H_del=1, H_con=0
+  FAILURE: arc (0, 4), H=5, H_del=4, H_con=5
+  FAILURE: arc (1, 2), H=5, H_del=2, H_con=1
+  FAILURE: arc (1, 4), H=5, H_del=4, H_con=7
+  FAILURE: arc (2, 4), H=5, H_del=4, H_con=9
+  FAILURE: arc (3, 0), H=5, H_del=2, H_con=1
+  FAILURE: arc (3, 4), H=5, H_del=3, H_con=6
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=8
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (3, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=9, H_del=4, H_con=1
+  FAILURE: arc (0, 3), H=9, H_del=8, H_con=3
+  FAILURE: arc (1, 3), H=9, H_del=7, H_con=8
+  FAILURE: arc (1, 4), H=9, H_del=8, H_con=3
+  FAILURE: arc (3, 4), H=9, H_del=4, H_con=1
+  FAILURE: arc (4, 0), H=9, H_del=1, H_con=0
+  FAILURE: arc (0, 2), H=5, H_del=2, H_con=1
+  FAILURE: arc (1, 0), H=5, H_del=4, H_con=5
+  FAILURE: arc (1, 2), H=5, H_del=3, H_con=6
+  FAILURE: arc (1, 3), H=5, H_del=4, H_con=9
+  FAILURE: arc (1, 4), H=5, H_del=4, H_con=7
+  FAILURE: arc (3, 4), H=5, H_del=2, H_con=1
+  FAILURE: arc (4, 0), H=5, H_del=1, H_con=0
+  FAILURE: arc (0, 1), H=9, H_del=3, H_con=0
+  FAILURE: arc (1, 2), H=9, H_del=3, H_con=2
+  FAILURE: arc (1, 3), H=9, H_del=7, H_con=6
+  FAILURE: arc (1, 4), H=9, H_del=9, H_con=4
+  FAILURE: arc (2, 3), H=9, H_del=5, H_con=6
+  FAILURE: arc (2, 4), H=9, H_del=7, H_con=6
+  FAILURE: arc (3, 4), H=9, H_del=3, H_con=2
+  FAILURE: arc (4, 0), H=9, H_del=3, H_con=0
+  FAILURE: arc (0, 3), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=3, H_del=3, H_con=6
+  FAILURE: arc (1, 3), H=3, H_del=3, H_con=6
+  FAILURE: arc (1, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (2, 0), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 4), H=3, H_del=2, H_con=3
+  FAILURE: arc (3, 4), H=3, H_del=1, H_con=0
+  FAILURE: arc (4, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 1), H=11, H_del=4, H_con=1
+  FAILURE: arc (0, 2), H=11, H_del=8, H_con=1
+  FAILURE: arc (1, 3), H=11, H_del=8, H_con=5
+  FAILURE: arc (1, 4), H=11, H_del=9, H_con=6
+  FAILURE: arc (2, 3), H=11, H_del=5, H_con=4
+  FAILURE: arc (2, 4), H=11, H_del=8, H_con=5
+  FAILURE: arc (3, 0), H=11, H_del=8, H_con=1
+  FAILURE: arc (4, 0), H=11, H_del=4, H_con=1
+  FAILURE: arc (0, 2), H=5, H_del=1, H_con=0
+  FAILURE: arc (1, 0), H=5, H_del=4, H_con=7
+  FAILURE: arc (1, 2), H=5, H_del=4, H_con=5
+  FAILURE: arc (1, 3), H=5, H_del=3, H_con=6
+  FAILURE: arc (1, 4), H=5, H_del=4, H_con=9
+  FAILURE: arc (2, 3), H=5, H_del=2, H_con=1
+  FAILURE: arc (4, 0), H=5, H_del=2, H_con=1
+  FAILURE: arc (0, 1), H=9, H_del=1, H_con=0
+  FAILURE: arc (1, 2), H=9, H_del=4, H_con=1
+  FAILURE: arc (1, 4), H=9, H_del=8, H_con=3
+  FAILURE: arc (2, 0), H=9, H_del=8, H_con=3
+  FAILURE: arc (2, 4), H=9, H_del=7, H_con=8
+  FAILURE: arc (4, 0), H=9, H_del=4, H_con=1
+  FAILURE: arc (1, 0), H=1, H_del=1, H_con=8
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (3, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 1), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (0, 4), H=1, H_del=1, H_con=8
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (0, 2), H=3, H_del=1, H_con=0
+  FAILURE: arc (0, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (0, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (1, 0), H=3, H_del=1, H_con=0
+  FAILURE: arc (1, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (1, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (2, 1), H=3, H_del=1, H_con=0
+  FAILURE: arc (2, 3), H=3, H_del=2, H_con=3
+  FAILURE: arc (2, 4), H=3, H_del=3, H_con=6
+  FAILURE: arc (0, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (0, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 1), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=8
+  FAILURE: arc (0, 4), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 3), H=1, H_del=1, H_con=2
+  FAILURE: arc (1, 4), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 0), H=1, H_del=1, H_con=2
+  FAILURE: arc (2, 3), H=1, H_del=1, H_con=4
+  FAILURE: arc (2, 4), H=1, H_del=1, H_con=8
+  Checked 200 arcs, failures: 141
+
+======================================================================
+PART C: CHORD DIAGRAM CROSSING NUMBER vs H(T)
+======================================================================
+
+--- n = 4 ---
+  H -> crossing numbers (min, max, mean):
+    H=  1: cross in [   1,    1], mean=   1.00, count=24
+    H=  3: cross in [   1,    1], mean=   1.00, count=16
+    H=  5: cross in [   1,    1], mean=   1.00, count=24
+
+  H -> writhe (min, max, mean):
+    H=  1: writhe in [ -6,   6], mean=  0.00
+    H=  3: writhe in [ -4,   4], mean=  0.00
+    H=  5: writhe in [ -4,   4], mean=  0.00
+
+--- n = 5 ---
+  H -> crossing numbers (min, max, mean):
+    H=  1: cross in [   5,    5], mean=   5.00, count=120
+    H=  3: cross in [   5,    5], mean=   5.00, count=120
+    H=  5: cross in [   5,    5], mean=   5.00, count=240
+    H=  9: cross in [   5,    5], mean=   5.00, count=240
+    H= 11: cross in [   5,    5], mean=   5.00, count=120
+    H= 13: cross in [   5,    5], mean=   5.00, count=120
+    H= 15: cross in [   5,    5], mean=   5.00, count=64
+
+  H -> writhe (min, max, mean):
+    H=  1: writhe in [-10,  10], mean=  0.00
+    H=  3: writhe in [ -8,   8], mean=  0.00
+    H=  5: writhe in [ -8,   8], mean=  0.00
+    H=  9: writhe in [ -8,   8], mean=  0.00
+    H= 11: writhe in [ -6,   6], mean=  0.00
+    H= 13: writhe in [ -6,   6], mean=  0.00
+    H= 15: writhe in [ -6,   6], mean=  0.00
+
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\knot_tournament_bridge.py", line 771, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\knot_tournament_bridge.py", line 506, in main
+    print("PART D: TOURNAMENT \u2192 BRAID WORD")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 19: character maps to <undefined>

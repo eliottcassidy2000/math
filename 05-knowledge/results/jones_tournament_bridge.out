@@ -1,0 +1,552 @@
+    ... 1000/1024 (1052.0/s)
+    ... 1000/32768 (388.2/s)
+    ... 2000/32768 (366.7/s)
+    ... 3000/32768 (340.9/s)
+    ... 4000/32768 (333.4/s)
+    ... 5000/32768 (341.0/s)
+    ... 6000/32768 (340.0/s)
+    ... 7000/32768 (305.4/s)
+    ... 8000/32768 (308.4/s)
+    ... 9000/32768 (310.4/s)
+    ... 10000/32768 (302.6/s)
+    ... 11000/32768 (295.6/s)
+    ... 12000/32768 (292.1/s)
+    ... 13000/32768 (295.8/s)
+    ... 14000/32768 (298.7/s)
+    ... 15000/32768 (294.3/s)
+    ... 16000/32768 (297.7/s)
+    ... 17000/32768 (304.3/s)
+    ... 18000/32768 (300.1/s)
+    ... 19000/32768 (297.7/s)
+    ... 20000/32768 (294.3/s)
+    ... 21000/32768 (289.9/s)
+    ... 22000/32768 (282.8/s)
+    ... 23000/32768 (279.2/s)
+    ... 24000/32768 (274.6/s)
+    ... 25000/32768 (275.2/s)
+    ... 26000/32768 (276.1/s)
+    ... 27000/32768 (277.2/s)
+    ... 28000/32768 (280.1/s)
+    ... 29000/32768 (283.6/s)
+    ... 30000/32768 (284.4/s)
+    ... 31000/32768 (285.4/s)
+    ... 32000/32768 (287.6/s)
+========================================================================
+JONES-TOURNAMENT BRIDGE: Topological Polynomial Invariants
+========================================================================
+
+========================================================================
+  n = 3
+========================================================================
+
+  Enumerating all 8 tournaments
+  Completed in 0.0s
+
+  EULER CHARACTERISTIC (chi = sum (-1)^k beta_k):
+    Distribution: {np.int64(0): 2, np.int64(1): 6}
+    Range: [0, 1]
+    Mean: 0.7500
+
+  BETTI NUMBER DISTRIBUTION (top 15 most common):
+    beta=[np.int64(1), 0, 0]             count=     6  ( 75.0%)
+    beta=[np.int64(1), np.int64(1), 0]   count=     2  ( 25.0%)
+
+  H(T) DISTRIBUTION (distinct values):
+    Values: [1, 3]
+    Range: [1, 3]
+
+  TOTAL BETTI (J_T(1) = sum beta_k):
+    Distribution: {np.int64(1): 6, np.int64(2): 2}
+
+  JONES-LIKE POLYNOMIAL J_T(q) = sum beta_k q^k (examples):
+    beta=[np.int64(1), 0, 0]            => J_T(q) = 1
+       J_T(-1) = chi = 1,  J_T(1) = 1,  H = 1
+    beta=[np.int64(1), np.int64(1), 0]  => J_T(q) = 1 + q
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 3
+
+  CHI vs H(T) RELATIONSHIP:
+    chi=  0: H values = [3], count=2
+    chi=  1: H values = [1], count=6
+
+  chi == 1 for all tournaments? False
+
+  CHI mod PATTERNS:
+    chi mod 2: {np.int64(0): 2, np.int64(1): 6}
+    chi mod 3: {np.int64(0): 2, np.int64(1): 6}
+    chi mod 4: {np.int64(0): 2, np.int64(1): 6}
+
+  H(T) mod chi(T) (when chi != 0):
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+
+  Pearson correlation(chi, H) = -1.000000
+  Pearson correlation(total_betti, H) = 1.000000
+
+  BETA_1 vs H:
+    beta_1=  0: mean H =     1.00, range [1, 1], count=6
+    beta_1=  1: mean H =     3.00, range [3, 3], count=2
+
+========================================================================
+  n = 4
+========================================================================
+
+  Enumerating all 64 tournaments
+  Completed in 0.0s
+
+  EULER CHARACTERISTIC (chi = sum (-1)^k beta_k):
+    Distribution: {np.int64(0): 24, np.int64(1): 40}
+    Range: [0, 1]
+    Mean: 0.6250
+
+  BETTI NUMBER DISTRIBUTION (top 15 most common):
+    beta=[np.int64(1), 0, 0, 0]          count=    40  ( 62.5%)
+    beta=[np.int64(1), np.int64(1), 0, 0]  count=    24  ( 37.5%)
+
+  H(T) DISTRIBUTION (distinct values):
+    Values: [1, 3, 5]
+    Range: [1, 5]
+
+  TOTAL BETTI (J_T(1) = sum beta_k):
+    Distribution: {np.int64(1): 40, np.int64(2): 24}
+
+  JONES-LIKE POLYNOMIAL J_T(q) = sum beta_k q^k (examples):
+    beta=[np.int64(1), 0, 0, 0]         => J_T(q) = 1
+       J_T(-1) = chi = 1,  J_T(1) = 1,  H = 1
+    beta=[np.int64(1), np.int64(1), 0, 0] => J_T(q) = 1 + q
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 5
+
+  CHI vs H(T) RELATIONSHIP:
+    chi=  0: H values = [5], count=24
+    chi=  1: H values = [1, 3], count=40
+
+  chi == 1 for all tournaments? False
+
+  CHI mod PATTERNS:
+    chi mod 2: {np.int64(0): 24, np.int64(1): 40}
+    chi mod 3: {np.int64(0): 24, np.int64(1): 40}
+    chi mod 4: {np.int64(0): 24, np.int64(1): 40}
+
+  H(T) mod chi(T) (when chi != 0):
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+
+  Pearson correlation(chi, H) = -0.894427
+  Pearson correlation(total_betti, H) = 0.894427
+
+  BETA_1 vs H:
+    beta_1=  0: mean H =     1.80, range [1, 3], count=40
+    beta_1=  1: mean H =     5.00, range [5, 5], count=24
+
+========================================================================
+  n = 5
+========================================================================
+
+  Enumerating all 1024 tournaments
+  Completed in 1.0s
+
+  EULER CHARACTERISTIC (chi = sum (-1)^k beta_k):
+    Distribution: {np.int64(0): 304, np.int64(1): 720}
+    Range: [0, 1]
+    Mean: 0.7031
+
+  BETTI NUMBER DISTRIBUTION (top 15 most common):
+    beta=[np.int64(1), 0, 0, 0, 0]       count=   720  ( 70.3%)
+    beta=[np.int64(1), np.int64(1), 0, 0, 0]  count=   304  ( 29.7%)
+
+  H(T) DISTRIBUTION (distinct values):
+    Values: [1, 3, 5, 9, 11, 13, 15]
+    Range: [1, 15]
+
+  TOTAL BETTI (J_T(1) = sum beta_k):
+    Distribution: {np.int64(1): 720, np.int64(2): 304}
+
+  JONES-LIKE POLYNOMIAL J_T(q) = sum beta_k q^k (examples):
+    beta=[np.int64(1), 0, 0, 0, 0]      => J_T(q) = 1
+       J_T(-1) = chi = 1,  J_T(1) = 1,  H = 1
+    beta=[np.int64(1), np.int64(1), 0, 0, 0] => J_T(q) = 1 + q
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 9
+
+  CHI vs H(T) RELATIONSHIP:
+    chi=  0: H values = [9, 11, 15], count=304
+    chi=  1: H values = [1, 3, 5, 9, 13], count=720
+
+  chi == 1 for all tournaments? False
+
+  CHI mod PATTERNS:
+    chi mod 2: {np.int64(0): 304, np.int64(1): 720}
+    chi mod 3: {np.int64(0): 304, np.int64(1): 720}
+    chi mod 4: {np.int64(0): 304, np.int64(1): 720}
+
+  H(T) mod chi(T) (when chi != 0):
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=9, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+
+  Pearson correlation(chi, H) = -0.546963
+  Pearson correlation(total_betti, H) = 0.546963
+
+  BETA_1 vs H:
+    beta_1=  0: mean H =     6.00, range [1, 13], count=720
+    beta_1=  1: mean H =    11.05, range [9, 15], count=304
+
+========================================================================
+  n = 6
+========================================================================
+
+  Enumerating all 32768 tournaments
+  Completed in 112.9s
+
+  EULER CHARACTERISTIC (chi = sum (-1)^k beta_k):
+    Distribution: {np.int64(0): 5120, np.int64(1): 27648}
+    Range: [0, 1]
+    Mean: 0.8438
+
+  BETTI NUMBER DISTRIBUTION (top 15 most common):
+    beta=[np.int64(1), 0, 0, 0, 0, 0]    count= 27648  ( 84.4%)
+    beta=[np.int64(1), np.int64(1), 0, 0, 0, 0]  count=  4800  ( 14.6%)
+    beta=[np.int64(1), 0, 0, np.int64(1), 0, 0]  count=   320  (  1.0%)
+
+  H(T) DISTRIBUTION (distinct values):
+    Values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+    Range: [1, 45]
+
+  TOTAL BETTI (J_T(1) = sum beta_k):
+    Distribution: {np.int64(1): 27648, np.int64(2): 5120}
+
+  JONES-LIKE POLYNOMIAL J_T(q) = sum beta_k q^k (examples):
+    beta=[np.int64(1), 0, 0, 0, 0, 0]   => J_T(q) = 1
+       J_T(-1) = chi = 1,  J_T(1) = 1,  H = 1
+    beta=[np.int64(1), np.int64(1), 0, 0, 0, 0] => J_T(q) = 1 + q
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 17
+    beta=[np.int64(1), 0, 0, np.int64(1), 0, 0] => J_T(q) = 1 + q^3
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 9
+
+  CHI vs H(T) RELATIONSHIP:
+    chi=  0: H values = [9, 17, 23, 27, 33, 37, 41, 45], count=5120
+    chi=  1: H values = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 29, 31, 33, 37, 43], count=27648
+
+  chi == 1 for all tournaments? False
+
+  CHI mod PATTERNS:
+    chi mod 2: {np.int64(0): 5120, np.int64(1): 27648}
+    chi mod 3: {np.int64(0): 5120, np.int64(1): 27648}
+    chi mod 4: {np.int64(0): 5120, np.int64(1): 27648}
+
+  H(T) mod chi(T) (when chi != 0):
+    H=1, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=9, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0    ... 500/5000 (34.3/s)
+    ... 1000/5000 (27.2/s)
+    ... 1500/5000 (25.7/s)
+    ... 2000/5000 (23.9/s)
+    ... 2500/5000 (23.3/s)
+    ... 3000/5000 (22.6/s)
+    ... 3500/5000 (21.1/s)
+    ... 4000/5000 (21.1/s)
+    ... 4500/5000 (21.2/s)
+    ... 5000/5000 (21.2/s)
+
+    H=9, chi=1, H mod chi = 0
+    H=3, chi=1, H mod chi = 0
+    H=11, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+    H=9, chi=1, H mod chi = 0
+    H=1, chi=1, H mod chi = 0
+    H=9, chi=1, H mod chi = 0
+    H=15, chi=1, H mod chi = 0
+    H=5, chi=1, H mod chi = 0
+
+  Pearson correlation(chi, H) = -0.260208
+  Pearson correlation(total_betti, H) = 0.260208
+
+  BETA_1 vs H:
+    beta_1=  0: mean H =    21.32, range [1, 45], count=27968
+    beta_1=  1: mean H =    29.40, range [17, 45], count=4800
+
+========================================================================
+  n = 7
+========================================================================
+
+  Sampling 5000 tournaments (out of 2097152)
+  Completed in 235.4s
+
+  EULER CHARACTERISTIC (chi = sum (-1)^k beta_k):
+    Distribution: {np.int64(0): 625, np.int64(1): 4375}
+    Range: [0, 1]
+    Mean: 0.8750
+
+  BETTI NUMBER DISTRIBUTION (top 15 most common):
+    beta=[np.int64(1), 0, 0, 0, 0, 0, 0]  count=  4374  ( 87.5%)
+    beta=[np.int64(1), 0, 0, np.int64(1), 0, 0, 0]  count=   402  (  8.0%)
+    beta=[np.int64(1), np.int64(1), 0, 0, 0, 0, 0]  count=   223  (  4.5%)
+    beta=[np.int64(1), np.int64(1), 0, 0, np.int64(1), 0, 0]  count=     1  (  0.0%)
+
+  H(T) DISTRIBUTION (distinct values):
+    Values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171, 175]
+    Range: [1, 175]
+
+  TOTAL BETTI (J_T(1) = sum beta_k):
+    Distribution: {np.int64(1): 4374, np.int64(2): 625, np.int64(3): 1}
+
+  JONES-LIKE POLYNOMIAL J_T(q) = sum beta_k q^k (examples):
+    beta=[np.int64(1), 0, 0, 0, 0, 0, 0] => J_T(q) = 1
+       J_T(-1) = chi = 1,  J_T(1) = 1,  H = 29
+    beta=[np.int64(1), 0, 0, np.int64(1), 0, 0, 0] => J_T(q) = 1 + q^3
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 41
+    beta=[np.int64(1), np.int64(1), 0, 0, 0, 0, 0] => J_T(q) = 1 + q
+       J_T(-1) = chi = 0,  J_T(1) = 2,  H = 175
+    beta=[np.int64(1), np.int64(1), 0, 0, np.int64(1), 0, 0] => J_T(q) = 1 + q + q^4
+       J_T(-1) = chi = 1,  J_T(1) = 3,  H = 99
+
+  CHI vs H(T) RELATIONSHIP:
+    chi=  0: H values = [15, 31, 33, 41, 47, 51, 61, 67, 69, 81, 91, 93, 105, 111, 117, 123, 127, 129, 133, 135, 137, 141, 151, 153, 159, 175], count=625
+    chi=  1: H values = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 49, 51, 53, 55, 57, 59, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171], count=4375
+
+  chi == 1 for all tournaments? False
+
+  CHI mod PATTERNS:
+    chi mod 2: {np.int64(0): 625, np.int64(1): 4375}
+    chi mod 3: {np.int64(0): 625, np.int64(1): 4375}
+    chi mod 4: {np.int64(0): 625, np.int64(1): 4375}
+
+  H(T) mod chi(T) (when chi != 0):
+    H=29, chi=1, H mod chi = 0
+    H=33, chi=1, H mod chi = 0
+    H=89, chi=1, H mod chi = 0
+    H=131, chi=1, H mod chi = 0
+    H=97, chi=1, H mod chi = 0
+    H=31, chi=1, H mod chi = 0
+    H=77, chi=1, H mod chi = 0
+    H=71, chi=1, H mod chi = 0
+    H=35, chi=1, H mod chi = 0
+    H=81, chi=1, H mod chi = 0
+    H=33, chi=1, H mod chi = 0
+    H=133, chi=1, H mod chi = 0
+    H=101, chi=1, H mod chi = 0
+    H=151, chi=1, H mod chi = 0
+    H=123, chi=1, H mod chi = 0
+    H=31, chi=1, H mod chi = 0
+    H=13, chi=1, H mod chi = 0
+    H=41, chi=1, H mod chi = 0
+
+  Pearson correlation(chi, H) = -0.212806
+  Pearson correlation(total_betti, H) = 0.212740
+
+  BETA_1 vs H:
+    beta_1=  0: mean H =    77.99, range [1, 171], count=4776
+    beta_1=  1: mean H =    90.38, range [33, 175], count=224
+
+========================================================================
+PART 4: KAUFFMAN STATE SUM K(A) = sum_{{T'}} A^{{H(T')}}
+========================================================================
+
+  --- n = 3 ---
+
+  Computing Kauffman state sum for n=3...
+  Total tournaments: 8
+  H distribution: {1: 6, 3: 2}
+  K(A) = 6A + 2A^3
+  K(1) = 8 (= 2^C(3,2) = 8)
+  K(-1) = -8
+  K(2) = 28
+  All H values odd? True
+  Tournaments with even H: 0, odd H: 8
+  K(A) / A^1 = 6 + 2A^2
+  Palindromic around (min+max)/2? False
+  GCD of all coefficients: 2
+  K(A) / 2 = 3A + A^3
+
+  --- n = 4 ---
+
+  Computing Kauffman state sum for n=4...
+  Total tournaments: 64
+  H distribution: {1: 24, 3: 16, 5: 24}
+  K(A) = 24A + 16A^3 + 24A^5
+  K(1) = 64 (= 2^C(4,2) = 64)
+  K(-1) = -64
+  K(2) = 944
+  All H values odd? True
+  Tournaments with even H: 0, odd H: 64
+  K(A) / A^1 = 24 + 16A^2 + 24A^4
+  Palindromic around (min+max)/2? True
+  GCD of all coefficients: 8
+  K(A) / 8 = 3A + 2A^3 + 3A^5
+
+  --- n = 5 ---
+
+  Computing Kauffman state sum for n=5...
+  Total tournaments: 1024
+  H distribution: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+  K(A) = 120A + 120A^3 + 240A^5 + 240A^9 + 120A^11 + 120A^13 + 64A^15
+  K(1) = 1024 (= 2^C(5,2) = 1024)
+  K(-1) = -1024
+  K(2) = 3457712
+  All H values odd? True
+  Tournaments with even H: 0, odd H: 1024
+  K(A) / A^1 = 120 + 120A^2 + 240A^4 + 240A^8 + 120A^10 + 120A^12 + 64A^14
+  Palindromic around (min+max)/2? False
+  GCD of all coefficients: 8
+  K(A) / 8 = 15A + 15A^3 + 30A^5 + 30A^9 + 15A^11 + 15A^13 + 8A^15
+
+========================================================================
+PART 5: DEEP CHI ANALYSIS
+========================================================================
+
+  Summary table:
+    n   #tours                     chi values   chi constant?
+  --- -------- ------------------------------ ---------------
+    3        8     [np.int64(0), np.int64(1)]              NO
+    4       64     [np.int64(0), np.int64(1)]              NO
+    5     1024     [np.int64(0), np.int64(1)]              NO
+    6    32768     [np.int64(0), np.int64(1)]              NO
+    7     5000     [np.int64(0), np.int64(1)]              NO
+
+========================================================================
+PART 6: JONES POLYNOMIAL TYPE DISTRIBUTION
+========================================================================
+
+  n=3: 2 distinct J_T(q) types
+    J_T(q) = 1                                    chi=  1  sum=  1  count=    6 ( 75.0%)
+    J_T(q) = 1 + q                                chi=  0  sum=  2  count=    2 ( 25.0%)
+
+  n=4: 2 distinct J_T(q) types
+    J_T(q) = 1                                    chi=  1  sum=  1  count=   40 ( 62.5%)
+    J_T(q) = 1 + q                                chi=  0  sum=  2  count=   24 ( 37.5%)
+
+  n=5: 2 distinct J_T(q) types
+    J_T(q) = 1                                    chi=  1  sum=  1  count=  720 ( 70.3%)
+    J_T(q) = 1 + q                                chi=  0  sum=  2  count=  304 ( 29.7%)
+
+  n=6: 3 distinct J_T(q) types
+    J_T(q) = 1                                    chi=  1  sum=  1  count=27648 ( 84.4%)
+    J_T(q) = 1 + q                                chi=  0  sum=  2  count= 4800 ( 14.6%)
+    J_T(q) = 1 + q^3                              chi=  0  sum=  2  count=  320 (  1.0%)
+
+========================================================================
+PART 7: SCORE SEQUENCE vs CHI
+========================================================================
+
+  n=3:
+    score=[0, 1, 2]: chi=[np.int64(1)], H=[1]
+    score=[1, 1, 1]: chi=[np.int64(0)], H=[3]
+
+  n=4:
+    score=[0, 1, 2, 3]: chi=[np.int64(1)], H=[1]
+    score=[0, 2, 2, 2]: chi=[np.int64(1)], H=[3]
+    score=[1, 1, 1, 3]: chi=[np.int64(1)], H=[3]
+    score=[1, 1, 2, 2]: chi=[np.int64(0)], H=[5]
+
+  n=5:
+    score=[0, 1, 2, 3, 4]: chi=[np.int64(1)], H=[1]
+    score=[0, 1, 3, 3, 3]: chi=[np.int64(1)], H=[3]
+    score=[0, 2, 2, 2, 4]: chi=[np.int64(1)], H=[3]
+    score=[0, 2, 2, 3, 3]: chi=[np.int64(1)], H=[5]
+    score=[1, 1, 1, 3, 4]: chi=[np.int64(1)], H=[3]
+    score=[1, 1, 2, 2, 4]: chi=[np.int64(1)], H=[5]
+    score=[1, 1, 2, 3, 3]: chi=[np.int64(0), np.int64(1)], H=[9]
+    score=[1, 2, 2, 2, 3]: chi=[np.int64(0), np.int64(1)], H=[11, 13, 15]
+    score=[2, 2, 2, 2, 2]: chi=[np.int64(0)], H=[15]
+
+  n=6:
+    score=[0, 1, 2, 3, 4, 5]: chi=[np.int64(1)], H=[1]
+    score=[0, 1, 2, 4, 4, 4]: chi=[np.int64(1)], H=[3]
+    score=[0, 1, 3, 3, 3, 5]: chi=[np.int64(1)], H=[3]
+    score=[0, 1, 3, 3, 4, 4]: chi=[np.int64(1)], H=[5]
+    score=[0, 2, 2, 2, 4, 5]: chi=[np.int64(1)], H=[3]
+    score=[0, 2, 2, 3, 3, 5]: chi=[np.int64(1)], H=[5]
+    score=[0, 2, 2, 3, 4, 4]: chi=[np.int64(1)], H=[9]
+    score=[0, 2, 3, 3, 3, 4]: chi=[np.int64(1)], H=[11, 13, 15]
+    score=[0, 3, 3, 3, 3, 3]: chi=[np.int64(1)], H=[15]
+    score=[1, 1, 1, 3, 4, 5]: chi=[np.int64(1)], H=[3]
+    score=[1, 1, 1, 4, 4, 4]: chi=[np.int64(0)], H=[9]
+    score=[1, 1, 2, 2, 4, 5]: chi=[np.int64(1)], H=[5]
+    score=[1, 1, 2, 3, 3, 5]: chi=[np.int64(1)], H=[9]
+    score=[1, 1, 2, 3, 4, 4]: chi=[np.int64(0), np.int64(1)], H=[15, 17]
+    score=[1, 1, 3, 3, 3, 4]: chi=[np.int64(0), np.int64(1)], H=[19, 23, 27]
+    score=[1, 2, 2, 2, 3, 5]: chi=[np.int64(1)], H=[11, 13, 15]
+    score=[1, 2, 2, 2, 4, 4]: chi=[np.int64(0), np.int64(1)], H=[19, 23, 27]
+    score=[1, 2, 2, 3, 3, 4]: chi=[np.int64(0), np.int64(1)], H=[23, 25, 29, 31, 33, 37]
+    score=[1, 2, 3, 3, 3, 3]: chi=[np.int64(0), np.int64(1)], H=[33, 37]
+    score=[2, 2, 2, 2, 2, 5]: chi=[np.int64(1)], H=[15]
+    score=[2, 2, 2, 2, 3, 4]: chi=[np.int64(0), np.int64(1)], H=[33, 37]
+    score=[2, 2, 2, 3, 3, 3]: chi=[np.int64(0), np.int64(1)], H=[41, 43, 45]
+
+========================================================================
+PART 8: BETA_0 (connected components)
+========================================================================
+  n=3: beta_0 distribution = {np.int64(1): 8}
+  n=4: beta_0 distribution = {np.int64(1): 64}
+  n=5: beta_0 distribution = {np.int64(1): 1024}
+  n=6: beta_0 distribution = {np.int64(1): 32768}
+  n=7: beta_0 distribution = {np.int64(1): 5000}
+
+========================================================================
+PART 9: SEARCHING FOR chi-H FORMULAS
+========================================================================
+
+  n=3: chi is a FUNCTION of H? True
+    H=  1 => chi=1
+    H=  3 => chi=0
+  n=3: H == chi (mod 2)? False
+  n=3: gcd(H - chi) = 3
+
+  n=4: chi is a FUNCTION of H? True
+    H=  1 => chi=1
+    H=  3 => chi=1
+    H=  5 => chi=0
+  n=4: H == chi (mod 2)? False
+  n=4: gcd(H - chi) = 1
+
+  n=5: chi is a FUNCTION of H? False
+    H=  9 => chi in [np.int64(0), np.int64(1)]
+  n=5: H == chi (mod 2)? False
+  n=5: gcd(H - chi) = 1
+
+  n=6: chi is a FUNCTION of H? False
+    H=  9 => chi in [np.int64(0), np.int64(1)]
+    H= 17 => chi in [np.int64(0), np.int64(1)]
+    H= 23 => chi in [np.int64(0), np.int64(1)]
+    H= 33 => chi in [np.int64(0), np.int64(1)]
+    H= 37 => chi in [np.int64(0), np.int64(1)]
+  n=6: H == chi (mod 2)? False
+  n=6: gcd(H - chi) = 1
+
+========================================================================
+DONE
+========================================================================

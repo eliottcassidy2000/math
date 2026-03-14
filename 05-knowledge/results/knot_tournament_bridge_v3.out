@@ -1,0 +1,516 @@
+======================================================================
+KNOT-TOURNAMENT BRIDGE v3 -- kind-pasteur-2026-03-14-S69
+======================================================================
+======================================================================
+PART 1: DELETION-CONTRACTION VERIFICATION (CORRECTED)
+  THM-082: H(D) = H(D\e) + H(D/e)
+  Convention: x->w iff x->u; w->x iff v->x
+======================================================================
+
+--- n = 3 ---
+  24 checks, 0 failures <-- ALL PASS
+
+--- n = 4 ---
+  384 checks, 0 failures <-- ALL PASS
+
+--- n = 5 ---
+  10240 checks, 0 failures <-- ALL PASS
+
+======================================================================
+PART 2: ARC-FLIP SKEIN RELATION (corrected DC)
+  H(T) - H(T') = H(T/e) - H(T'/e')
+  where T' flips arc e
+======================================================================
+
+--- n = 3 ---
+  24 flips, 0 failures <-- ALL PASS
+  Delta_H distribution: {-2: 6, 0: 12, 2: 6}
+
+--- n = 4 ---
+  384 flips, 0 failures <-- ALL PASS
+  Delta_H distribution: {-4: 24, -2: 96, 0: 144, 2: 96, 4: 24}
+
+--- n = 5 ---
+  10240 flips, 0 failures <-- ALL PASS
+  Delta_H distribution: {-12: 40, -8: 360, -6: 600, -4: 1200, -2: 1800, 0: 2240, 2: 1800, 4: 1200, 6: 600, 8: 360, 12: 40}
+
+======================================================================
+PART 3: WRITHE vs H -- DEEP CORRELATION ANALYSIS
+  Writhe = #{ascending arcs} - #{descending arcs}
+  Analogy: knot writhe measures 'twistedness'
+======================================================================
+
+--- n = 4 ---
+  Correlation(H, writhe) = 0.000000
+  Correlation(H, |writhe|) = -0.274721
+  Correlation(H, writhe^2) = -0.298142
+  Linear fit H ~ 3.4000 + -0.066667 * writhe^2
+  R^2 = 0.088889
+  H at writhe=0: mean=3.40, range=[1,5]
+  H at |writhe|=6: always H={1}
+
+--- n = 5 ---
+  Correlation(H, writhe) = 0.000000
+  Correlation(H, |writhe|) = -0.249342
+  Correlation(H, writhe^2) = -0.264906
+  Linear fit H ~ 8.3333 + -0.083333 * writhe^2
+  R^2 = 0.070175
+  H at writhe=0: mean=8.38, range=[1,15]
+  H at |writhe|=10: always H={1}
+
+--- n = 6 ---
+  Correlation(H, writhe) = -0.003989
+  Correlation(H, |writhe|) = -0.199806
+  Correlation(H, writhe^2) = -0.214839
+  Linear fit H ~ 23.9653 + -0.115870 * writhe^2
+  R^2 = 0.046156
+  H at |writhe|=15: always H={1}
+
+======================================================================
+PART 4: 'ALEXANDER POLYNOMIAL' OF TOURNAMENT ADJACENCY
+  P_T(t) = det(t*A - A^T) where A is adjacency matrix
+  For skew-symmetric S = A - A^T, det(S) = Pfaff(S)^2 (even n)
+======================================================================
+
+--- n = 3 ---
+  H -> det(t*A - A^T) spectra:
+  H=  1: 1 distinct spectra (of 6 tournaments)
+    t -> det: {-1: -2, 0: 0, 1: 0, 2: -2, 3: -6}
+  H=  3: 1 distinct spectra (of 2 tournaments)
+    t -> det: {-1: -2, 0: -1, 1: 0, 2: 7, 3: 26}
+
+  NOTE: det(A-A^T) for n=3:
+    Distinct values: [0]
+    (n odd => always 0)
+
+--- n = 4 ---
+  H -> det(t*A - A^T) spectra:
+  H=  1: 1 distinct spectra (of 24 tournaments)
+    t -> det: {-1: -3, 0: 0, 1: 1, 2: 6, 3: 21}
+  H=  3: 1 distinct spectra (of 16 tournaments)
+    t -> det: {-1: -3, 0: 0, 1: 9, 2: 42, 3: 117}
+  H=  5: 1 distinct spectra (of 24 tournaments)
+    t -> det: {-1: -3, 0: -1, 1: 1, 2: -3, 3: -43}
+
+  NOTE: det(A-A^T) for n=4:
+    Distinct values: [1, 9]
+    (n even => Pfaffian^2, always >=0)
+
+--- n = 5 ---
+  H -> det(t*A - A^T) spectra:
+  H=  1: 1 distinct spectra (of 120 tournaments)
+    t -> det: {-1: -4, 0: 0, 1: 0, 2: -10, 3: -60}
+  H=  3: 1 distinct spectra (of 120 tournaments)
+    t -> det: {-1: -4, 0: 0, 1: 0, 2: -28, 3: -156}
+  H=  5: 1 distinct spectra (of 240 tournaments)
+    t -> det: {-1: -4, 0: 0, 1: 0, 2: -46, 3: -252}
+  H=  9: 1 distinct spectra (of 240 tournaments)
+    t -> det: {-1: -4, 0: -1, 1: 0, 2: 17, 3: 164}
+  H= 11: 1 distinct spectra (of 120 tournaments)
+    t -> det: {-1: -4, 0: -1, 1: 0, 2: -1, 3: 68}
+  H= 13: 1 distinct spectra (of 120 tournaments)
+    t -> det: {-1: -4, 0: -2, 1: 0, 2: 80, 3: 580}
+  H= 15: 2 distinct spectra (of 64 tournaments)
+    t -> det: {-1: -4, 0: -3, 1: 0, 2: 161, 3: 1092}
+    t -> det: {-1: -4, 0: -2, 1: 0, 2: 62, 3: 484}
+
+  NOTE: det(A-A^T) for n=5:
+    Distinct values: [0]
+    (n odd => always 0)
+
+--- n = 6 ---
+  H -> det(t*A - A^T) spectra:
+  H=  1: 1 distinct spectra (of 90 tournaments)
+    t -> det: {-1: -5, 0: 0, 1: 1, 2: 22, 3: 183}
+  H=  3: 1 distinct spectra (of 116 tournaments)
+    t -> det: {-1: -5, 0: 0, 1: 9, 2: 112, 3: 663}
+  H=  5: 1 distinct spectra (of 249 tournaments)
+    t -> det: {-1: -5, 0: 0, 1: 1, 2: 40, 3: 375}
+  H=  9: 3 distinct spectra (of 319 tournaments)
+    t -> det: {-1: -5, 0: 0, 1: 9, 2: 130, 3: 855}
+    t -> det: {-1: -5, 0: 0, 1: 25, 2: 292, 3: 1623}
+    t -> det: {-1: -5, 0: 1, 1: 81, 2: 931, 3: 5239}
+  H= 11: 1 distinct spectra (of 144 tournaments)
+    t -> det: {-1: -5, 0: 0, 1: 1, 2: 58, 3: 567}
+  H= 13: 1 distinct spectra (of 147 tournaments)
+    t -> det: {-1: -5, 0: 0, 1: 49, 2: 544, 3: 2871}
+  H= 15: 3 distinct spectra (of 222 tournaments)
+    t -> det: {-1: -5, 0: -1, 1: 1, 2: -23, 3: -457}
+    t -> det: {-1: -5, 0: 0, 1: 25, 2: 310, 3: 1815}
+    t -> det: {-1: -5, 0: 0, 1: 81, 2: 868, 3: 4407}
+  H= 17: 2 distinct spectra (of 143 tournaments)
+    t -> det: {-1: -5, 0: -1, 1: 1, 2: -23, 3: -457}
+    t -> det: {-1: -5, 0: 0, 1: 49, 2: 544, 3: 2871}
+  H= 19: 1 distinct spectra (of 131 tournaments)
+    t -> det: {-1: -5, 0: -1, 1: 9, 2: 67, 3: 23}
+  H= 23: 2 distinct spectra (of 246 tournaments)
+    t -> det: {-1: -5, 0: -1, 1: 1, 2: -5, 3: -265}
+    t -> det: {-1: -5, 0: -1, 1: 25, 2: 229, 3: 791}
+  H= 25: 1 distinct spectra (of 123 tournaments)
+    t -> det: {-1: -5, 0: -2, 1: 1, 2: -86, 3: -1289}
+  H= 27: 1 distinct spectra (of 41 tournaments)
+    t -> det: {-1: -5, 0: -2, 1: 9, 2: -14, 3: -1001}
+  H= 29: 3 distinct spectra (of 244 tournaments)
+    t -> det: {-1: -5, 0: -2, 1: 1, 2: -86, 3: -1289}
+    t -> det: {-1: -5, 0: -1, 1: 1, 2: -5, 3: -265}
+    t -> det: {-1: -5, 0: -1, 1: 81, 2: 805, 3: 3575}
+  H= 31: 1 distinct spectra (of 129 tournaments)
+    t -> det: {-1: -5, 0: -2, 1: 49, 2: 400, 3: 1015}
+  H= 33: 3 distinct spectra (of 202 tournaments)
+    t -> det: {-1: -5, 0: -3, 1: 9, 2: -77, 3: -1833}
+    t -> det: {-1: -5, 0: -2, 1: 1, 2: -86, 3: -1289}
+    t -> det: {-1: -5, 0: -2, 1: 9, 2: 4, 3: -809}
+  H= 37: 3 distinct spectra (of 281 tournaments)
+    t -> det: {-1: -5, 0: -3, 1: 1, 2: -167, 3: -2313}
+    t -> det: {-1: -5, 0: -3, 1: 25, 2: 85, 3: -1065}
+    t -> det: {-1: -5, 0: -2, 1: 9, 2: 4, 3: -809}
+  H= 41: 1 distinct spectra (of 42 tournaments)
+    t -> det: {-1: -5, 0: -2, 1: 1, 2: -68, 3: -1097}
+  H= 43: 1 distinct spectra (of 99 tournaments)
+    t -> det: {-1: -5, 0: -4, 1: 1, 2: -230, 3: -3145}
+  H= 45: 2 distinct spectra (of 32 tournaments)
+    t -> det: {-1: -5, 0: -4, 1: 49, 2: 256, 3: -841}
+    t -> det: {-1: -5, 0: -1, 1: 1, 2: 13, 3: -73}
+
+  NOTE: det(A-A^T) for n=6:
+    Distinct values: [1, 9, 25, 49, 81]
+    (n even => Pfaffian^2, always >=0)
+
+======================================================================
+PART 5: 'REIDEMEISTER MOVES' ON TOURNAMENTS
+  Knot: R1=loop, R2=bigon, R3=triangle
+  Tournament: source/sink removal, 3-cycle reversal, etc.
+======================================================================
+
+  3-CYCLE REVERSAL: reverse all 3 arcs of a directed 3-cycle
+
+  --- n = 4 ---
+    64 3-cycle reversals
+    Delta_H distribution: {0: 64}
+    *** H IS INVARIANT UNDER 3-CYCLE REVERSAL! ***
+
+  --- n = 5 ---
+    2560 3-cycle reversals
+    Delta_H distribution: {-4: 120, -2: 240, 0: 1840, 2: 240, 4: 120}
+    H is NOT invariant under 3-cycle reversal
+    Delta always even: True
+
+  --- n = 6 ---
+    14030 3-cycle reversals
+    Delta_H distribution: {-14: 108, -10: 108, -8: 357, -6: 231, -4: 1193, -2: 1425, 0: 7042, 2: 1473, 4: 1232, 6: 247, 8: 372, 10: 122, 14: 120}
+    H is NOT invariant under 3-cycle reversal
+    Delta always even: True
+
+======================================================================
+PART 6: SIGNED HAMILTONIAN PATH COUNT F(T, -1)
+  F(T, -1) = sum_{paths P} (-1)^{fwd(P)}
+  Analogous to: signature of knot, or Jones at t=-1
+======================================================================
+
+--- n = 3 ---
+  F(-1) distribution:
+    F(-1)=  -1:     6 tournaments
+    F(-1)=   1:     2 tournaments
+
+  F(-1) mod 2: always odd? True
+  F(-1) mod 4 distribution: Counter({3: 6, 1: 2})
+
+  F(-1) vs H:
+    H=  1: F(-1) in [-1, 1]
+    H=  3: F(-1) in [-1]
+
+--- n = 4 ---
+  F(-1) distribution:
+    F(-1)=  -3:     5 tournaments
+    F(-1)=  -1:    27 tournaments
+    F(-1)=   1:    27 tournaments
+    F(-1)=   3:     5 tournaments
+
+  F(-1) mod 2: always odd? True
+  F(-1) mod 4 distribution: Counter({3: 32, 1: 32})
+
+  F(-1) vs H:
+    H=  1: F(-1) in [-1, 1]
+    H=  3: F(-1) in [-3, -1, 1, 3]
+    H=  5: F(-1) in [-3, -1, 1, 3]
+
+--- n = 5 ---
+  F(-1) distribution:
+    F(-1)=  -9:     4 tournaments
+    F(-1)=  -7:    10 tournaments
+    F(-1)=  -5:    14 tournaments
+    F(-1)=  -3:    62 tournaments
+    F(-1)=  -1:   212 tournaments
+    F(-1)=   1:   402 tournaments
+    F(-1)=   3:   218 tournaments
+    F(-1)=   5:    86 tournaments
+    F(-1)=   7:    16 tournaments
+
+  F(-1) mod 2: always odd? True
+  F(-1) mod 4 distribution: Counter({1: 560, 3: 464})
+
+  F(-1) vs H:
+    H=  1: F(-1) in [-1, 1]
+    H=  3: F(-1) in [-3, -1, 1, 3]
+    H=  5: F(-1) in [-5, -3, -1, 1, 3, 5]
+    H=  9: F(-1) in [-7, -3, -1, 1, 3, 5]
+    H= 11: F(-1) in [-9, -3, -1, 1, 3, 5, 7]
+    H= 13: F(-1) in [-5, -3, -1, 1, 3, 5]
+    H= 15: F(-1) in [-5, -1, 3, 7]
+
+--- n = 6 ---
+  F(-1) distribution:
+    F(-1)= -21:     5 tournaments
+    F(-1)= -19:     9 tournaments
+    F(-1)= -17:    19 tournaments
+    F(-1)= -15:    55 tournaments
+    F(-1)= -13:    94 tournaments
+    F(-1)= -11:   185 tournaments
+    F(-1)=  -9:   345 tournaments
+    F(-1)=  -7:   498 tournaments
+    F(-1)=  -5:   743 tournaments
+    F(-1)=  -3:   922 tournaments
+    F(-1)=  -1:   959 tournaments
+    F(-1)=   1:   584 tournaments
+    F(-1)=   3:   258 tournaments
+    F(-1)=   5:   156 tournaments
+    F(-1)=   7:    69 tournaments
+    F(-1)=   9:    54 tournaments
+    F(-1)=  11:    20 tournaments
+    F(-1)=  13:    10 tournaments
+    F(-1)=  15:     8 tournaments
+    F(-1)=  17:     3 tournaments
+    F(-1)=  21:     4 tournaments
+
+  F(-1) mod 2: always odd? True
+  F(-1) mod 4 distribution: Counter({3: 2520, 1: 2480})
+
+  F(-1) vs H:
+    H=  1: F(-1) in [-1, 1]
+    H=  3: F(-1) in [-3, -1, 1, 3]
+    H=  5: F(-1) in [-5, -3, -1, 1, 3, 5]
+    H=  9: F(-1) in [-9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+    H= 11: F(-1) in [-11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11]
+    H= 13: F(-1) in [-13, -9, -7, -5, -3, -1, 1, 3, 5, 9, 13]
+    H= 15: F(-1) in [-15, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15]
+    H= 17: F(-1) in [-13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 15]
+    H= 19: F(-1) in [-15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 17]
+    H= 23: F(-1) in [-19, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15, 21]
+    H= 25: F(-1) in [-17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11]
+    H= 27: F(-1) in [-15, -11, -9, -7, -5, -3, -1, 1, 3, 5, 9]
+    H= 29: F(-1) in [-15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13]
+    H= 31: F(-1) in [-17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+    H= 33: F(-1) in [-21, -19, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 15]
+    H= 37: F(-1) in [-21, -19, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9]
+    H= 41: F(-1) in [-21, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 7, 9, 11]
+    H= 43: F(-1) in [-19, -17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5]
+    H= 45: F(-1) in [-17, -15, -13, -11, -9, -7, -5, -3, -1, 1, 3]
+
+======================================================================
+PART 7: KAUFFMAN STATE SUM K_n(A) = sum_T A^{H(T)}
+  Generating function over ALL 2^C(n,2) tournaments
+======================================================================
+
+--- n = 3 ---
+  K_3(A) = 6*A^1 + 2*A^3
+  Mean H = 1.5000
+  n!/2^(n-1) = 1.5000
+  Var H = 0.7500
+  Mean H = n!/2^(n-1)? True
+  K'_n(1)/K_n(1) = mean log_H = 0.2747
+  Count ratios:
+    K[H=3]/K[H=1] = 0.3333
+
+--- n = 4 ---
+  K_4(A) = 24*A^1 + 16*A^3 + 24*A^5
+  Mean H = 3.0000
+  n!/2^(n-1) = 3.0000
+  Var H = 3.0000
+  Mean H = n!/2^(n-1)? True
+  K'_n(1)/K_n(1) = mean log_H = 0.8782
+  Count ratios:
+    K[H=3]/K[H=1] = 0.6667
+    K[H=5]/K[H=3] = 1.5000
+
+--- n = 5 ---
+  K_5(A) = 120*A^1 + 120*A^3 + 240*A^5 + 240*A^9 + 120*A^11 + 120*A^13 + 64*A^15
+  Mean H = 7.5000
+  n!/2^(n-1) = 7.5000
+  Var H = 17.8125
+  Mean H = n!/2^(n-1)? True
+  K'_n(1)/K_n(1) = mean log_H = 1.7718
+  Count ratios:
+    K[H=3]/K[H=1] = 1.0000
+    K[H=5]/K[H=3] = 2.0000
+    K[H=9]/K[H=5] = 1.0000
+    K[H=11]/K[H=9] = 0.5000
+    K[H=13]/K[H=11] = 1.0000
+    K[H=15]/K[H=13] = 0.5333
+
+======================================================================
+PART 8: TRANSFER MATRIX AS 'SEIFERT MATRIX'
+  In knot theory: det(V - V^T) = determinant of knot
+  For tournaments: det(M - M^T) and det(M + M^T)
+  where M[a,b] = #{Ham paths from a to b}
+======================================================================
+
+--- n = 3 ---
+  H=  1: det(M) in [0], det(M+M^T) in [0], signature in [0]
+  H=  3: det(M) in [1], det(M+M^T) in [2], signature in [-1]
+
+--- n = 4 ---
+  H=  1: det(M) in [0], det(M+M^T) in [0], signature in [0]
+  H=  3: det(M) in [0], det(M+M^T) in [0], signature in [0]
+  H=  5: det(M) in [-1], det(M+M^T) in [1], signature in [0]
+
+--- n = 5 ---
+  H=  1: det(M) in [0], det(M+M^T) in [0], signature in [0]
+  H=  3: det(M) in [0], det(M+M^T) in [0], signature in [0]
+  H=  5: det(M) in [0], det(M+M^T) in [0], signature in [0]
+  H=  9: det(M) in [1], det(M+M^T) in [-8], signature in [-1]
+  H= 11: det(M) in [1], det(M+M^T) in [-4], signature in [-1]
+  H= 13: det(M) in [8], det(M+M^T) in [6], signature in [-3]
+  H= 15: det(M) in [3, 36], det(M+M^T) in [-72, 6], signature in [-3, -1]
+
+  Example M for H=9:
+    [0, 0, 0, 0, 1]
+    [1, 0, 1, 2, 0]
+    [0, 1, 0, 1, 0]
+    [0, 0, 1, 0, 0]
+    [0, 0, 0, 1, 0]
+
+  Example M for H=15:
+    [0, 0, 0, 0, 3]
+    [1, 0, 0, 2, 0]
+    [1, 2, 0, 0, 0]
+    [1, 0, 2, 0, 0]
+    [0, 1, 1, 1, 0]
+
+======================================================================
+PART 9: KNOT-TOURNAMENT DICTIONARY SUMMARY
+======================================================================
+  Knot / Link                                   <-> Tournament T
+  Crossings                                     <-> Arcs (directed edges)
+  Writhe (sum of signs)                         <-> |writhe| = |#asc - #desc arcs|
+  Reidemeister moves                            <-> Arc flips (single), 3-cycle reversals?
+  Skein relation V(K+)-t*V(K-)=(..)*V(K0)       <-> H(T)-H(T')=H(T/e)-H(T'/e') [THM-082]
+  Jones polynomial V(K,t)                       <-> Forward polynomial F(T,x)
+  Jones at t=-1 = det(knot)                     <-> F(T,-1) = signed Ham path count
+  Seifert matrix V                              <-> Transfer matrix M[a,b]
+  Alexander poly det(t*V-V^T)                   <-> det(t*M-M^T)
+  det(V-V^T) = knot determinant                 <-> det(M-M^T)
+  Kauffman bracket <K>                          <-> State sum K_n(A) = sum_T A^{H(T)}
+  Khovanov homology                             <-> GLMY path homology
+  Euler char of Khovanov = Jones                <-> Euler char of GLMY = ??
+  Unknot (trivial knot)                         <-> Transitive tournament (H=1)
+  Alternating knots                             <-> Regular tournaments?
+
+======================================================================
+PART 10: PATH HOMOLOGY EULER CHARACTERISTIC
+  chi = sum (-1)^k * beta_k
+  Khovanov analogy: chi(Kh) = Jones polynomial
+  What does chi equal for tournament path homology?
+======================================================================
+
+--- n = 3 ---
+  H -> chi, Betti numbers:
+    H=  1: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(0), np.int64(0)], chi = 1
+    H=  3: chi in [np.int64(3)], Betti patterns: 1
+      beta = [1, np.int64(-2), np.int64(0)], chi = 3
+
+  All chi values: [np.int64(1), np.int64(3)]
+  Chi constant: False
+
+--- n = 4 ---
+  H -> chi, Betti numbers:
+    H=  1: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(0), np.int64(0), np.int64(0)], chi = 1
+    H=  3: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-2), np.int64(-2), np.int64(0)], chi = 1
+    H=  5: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-3), np.int64(-3), np.int64(0)], chi = 1
+
+  All chi values: [np.int64(1)]
+  Chi constant: True
+  *** chi = 1 for ALL tournaments at n=4 ***
+
+--- n = 5 ---
+  H -> chi, Betti numbers:
+    H=  1: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(0), np.int64(0), np.int64(0), np.int64(0)], chi = 1
+    H=  3: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-2), np.int64(-4), np.int64(-2), np.int64(0)], chi = 1
+    H=  5: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-3), np.int64(-6), np.int64(-3), np.int64(0)], chi = 1
+    H=  9: chi in [np.int64(3)], Betti patterns: 1
+      beta = [1, np.int64(-4), np.int64(-8), np.int64(-6), np.int64(0)], chi = 3
+    H= 11: chi in [np.int64(3)], Betti patterns: 1
+      beta = [1, np.int64(-4), np.int64(-9), np.int64(-7), np.int64(0)], chi = 3
+    H= 13: chi in [np.int64(5)], Betti patterns: 1
+      beta = [1, np.int64(-4), np.int64(-9), np.int64(-9), np.int64(0)], chi = 5
+    H= 15: chi in [np.int64(5), np.int64(7)], Betti patterns: 2
+      beta = [1, np.int64(-4), np.int64(-8), np.int64(-10), np.int64(0)], chi = 7
+      beta = [1, np.int64(-4), np.int64(-8), np.int64(-8), np.int64(0)], chi = 5
+
+  All chi values: [np.int64(1), np.int64(3), np.int64(5), np.int64(7)]
+  Chi constant: False
+
+--- n = 6 ---
+  H -> chi, Betti numbers:
+    H=  1: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)], chi = 1
+    H=  3: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-2), np.int64(-6), np.int64(-6), np.int64(-2), np.int64(0)], chi = 1
+    H=  5: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-3), np.int64(-9), np.int64(-9), np.int64(-3), np.int64(0)], chi = 1
+    H=  9: chi in [np.int64(-3), np.int64(1)], Betti patterns: 2
+      beta = [1, np.int64(-4), np.int64(-12), np.int64(-15), np.int64(-7), np.int64(0)], chi = 1
+      beta = [1, np.int64(-4), np.int64(-8), np.int64(-8), np.int64(-8), np.int64(0)], chi = -3
+    H= 11: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-4), np.int64(-13), np.int64(-17), np.int64(-8), np.int64(0)], chi = 1
+    H= 13: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-4), np.int64(-13), np.int64(-20), np.int64(-11), np.int64(0)], chi = 1
+    H= 15: chi in [np.int64(1)], Betti patterns: 3
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-21), np.int64(-12), np.int64(0)], chi = 1
+      beta = [1, np.int64(-4), np.int64(-13), np.int64(-18), np.int64(-9), np.int64(0)], chi = 1
+      beta = [1, np.int64(-4), np.int64(-12), np.int64(-21), np.int64(-13), np.int64(0)], chi = 1
+    H= 17: chi in [np.int64(-3), np.int64(1)], Betti patterns: 2
+      beta = [1, np.int64(-5), np.int64(-13), np.int64(-20), np.int64(-16), np.int64(0)], chi = -3
+      beta = [1, np.int64(-5), np.int64(-13), np.int64(-16), np.int64(-8), np.int64(0)], chi = 1
+    H= 19: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-24), np.int64(-14), np.int64(0)], chi = 1
+    H= 23: chi in [np.int64(-3), np.int64(1)], Betti patterns: 2
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-26), np.int64(-21), np.int64(0)], chi = -3
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-23), np.int64(-14), np.int64(0)], chi = 1
+    H= 25: chi in [np.int64(1)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-28), np.int64(-18), np.int64(0)], chi = 1
+    H= 27: chi in [np.int64(-3)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-13), np.int64(-22), np.int64(-18), np.int64(0)], chi = -3
+    H= 29: chi in [np.int64(-7), np.int64(-3)], Betti patterns: 3
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-30), np.int64(-24), np.int64(0)], chi = -3
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-26), np.int64(-24), np.int64(0)], chi = -7
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-28), np.int64(-23), np.int64(0)], chi = -3
+    H= 31: chi in [np.int64(-3)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-32), np.int64(-26), np.int64(0)], chi = -3
+    H= 33: chi in [np.int64(-7), np.int64(-3), np.int64(1)], Betti patterns: 3
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-32), np.int64(-26), np.int64(0)], chi = -3
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-29), np.int64(-20), np.int64(0)], chi = 1
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-26), np.int64(-25), np.int64(0)], chi = -7
+    H= 37: chi in [np.int64(-7), np.int64(-3)], Betti patterns: 3
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-34), np.int64(-28), np.int64(0)], chi = -3
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-32), np.int64(-30), np.int64(0)], chi = -7
+      beta = [1, np.int64(-5), np.int64(-13), np.int64(-25), np.int64(-25), np.int64(0)], chi = -7
+    H= 41: chi in [np.int64(-7)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-30), np.int64(-29), np.int64(0)], chi = -7
+    H= 43: chi in [np.int64(-3)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-15), np.int64(-35), np.int64(-29), np.int64(0)], chi = -3
+    H= 45: chi in [np.int64(-15)], Betti patterns: 1
+      beta = [1, np.int64(-5), np.int64(-14), np.int64(-25), np.int64(-28), np.int64(4)], chi = -15
+
+  All chi values: [np.int64(-15), np.int64(-7), np.int64(-3), np.int64(1)]
+  Chi constant: False
+
+======================================================================
+EXPLORATION COMPLETE
+======================================================================
