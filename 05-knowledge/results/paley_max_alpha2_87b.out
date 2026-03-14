@@ -1,0 +1,86 @@
+======================================================================
+PART 1: THE PALEY TOURNAMENT QR_7
+======================================================================
+Quadratic residues mod 7: [1, 2, 4]
+QR_7 adjacency matrix:
+  0110100
+  0011010
+  0001101
+  1000110
+  0100011
+  1010001
+  1101000
+Scores: [3, 3, 3, 3, 3, 3, 3] (all 3 → regular)
+
+α₁ (3-cycles) = 14
+α₂ (disjoint pairs) = 7
+H (Hamiltonian paths) = 189
+
+Transitive triples: 21
+Cyclic triples: 14
+Total: 35 = C(7,3)
+
+======================================================================
+PART 2: ALL REGULAR TOURNAMENTS ON n=7
+======================================================================
+Total tournaments: 2^21 = 2097152
+Enumerating regular tournaments (score 3 for all vertices)...
+
+Total regular tournaments on n=7: 2640
+
+Classifying regular tournaments by (α₁, α₂, H)...
+
+  α₁   α₂      H    count
+  14    7    189      240
+  14   10    171     1680
+  14   14    175      720
+
+Regular tournaments with α₂=14 (max): 720
+Regular tournaments with α₂=13: 0
+
+QR_7 has (α₁,α₂,H) = (14, 7, 189)
+Max α₂=14 classes: [(14, 14, 175)]
+
+======================================================================
+PART 3: THE 21 TRANSITIVE TRIPLES = H_forb_2
+======================================================================
+For ANY regular tournament on n=7:
+  3-cycles = C(7,3) - n × C((n-1)/2, 2)
+           = 35 - 7 × C(3,2)
+           = 35 - 7 × 3
+           = 35 - 21 = 14
+  Transitive triples = 21 = H_forb_2
+
+This is NOT a coincidence!
+  21 = n × C((n-1)/2, 2) for n=7
+     = 7 × C(3,2) = 7 × 3 = 21
+     = C(7,2) = 21
+
+In general for regular tournaments on n vertices (n odd):
+  transitive triples = n × C((n-1)/2, 2)
+  For n=3: 3 × C(1,2) = 0 (every triple is a 3-cycle!)
+  For n=5: 5 × C(2,2) = 5
+  For n=7: 7 × C(3,2) = 21
+  For n=9: 9 × C(4,2) = 54
+
+α₂ values among regular n=7 tournaments: [7, 10, 14]
+So α₁=14 is constant but α₂ varies — the TOPOLOGY varies!
+
+======================================================================
+PART 4: QR_7 SPECIAL PROPERTIES
+======================================================================
+Common out-neighbor counts for arcs i→j in QR_7: {1: 21}
+  QR_7 is doubly-regular with parameter λ = 1
+|Aut(QR_7)| = 21
+  Compare: 7 × 3 = 21 (cyclic × QR translations)
+  Compare: |GL(3,F_2)| = 168 = 8 × 21
+
+======================================================================
+PART 5: ISOMORPHISM CLASSIFICATION OF max-α₂ TOURNAMENTS
+======================================================================
+Max-α₂=14 tournaments: 720
+QR_7 has max α₂: False
+
+Isomorphism classes among max-α₂=14 tournaments: 1
+  Class 0: H=175, |Aut|=7, orbit size=720
+  Total from orbit sizes: 720 (should be 720)
