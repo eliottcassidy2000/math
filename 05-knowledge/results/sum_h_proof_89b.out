@@ -1,0 +1,109 @@
+======================================================================
+Sum H = n! · 2^{m-n+1}: PROOF AND CONSEQUENCES
+======================================================================
+
+Verification:
+  n=3: m=3, Sum H = 12, n!·2^(m-n+1) = 12, match = True
+  n=4: m=6, Sum H = 192, n!·2^(m-n+1) = 192, match = True
+  n=5: m=10, Sum H = 7680, n!·2^(m-n+1) = 7680, match = True
+  n=6: m=15, Sum H = 737280, n!·2^(m-n+1) = 737280, match = True
+  n=7: m=21, n!·2^(m-n+1) = 165150720 (not verified exhaustively)
+
+======================================================================
+EXACT E[t_k] FORMULAS
+======================================================================
+
+For a random tournament on 5 vertices:
+  Total directed 5-cycles across all tournaments: 768
+  Average t₅ per tournament: 0.75
+  Expected: ?
+
+  Derivation:
+    Directed 5-cycles on 5 labeled vertices: (5-1)! = 24 = 24
+    Each constrains 5 arcs, probability = (1/2)^5 = 1/32
+    E[t₅ on 5 verts] = 24/32 = 3/4 = 0.75
+    Matches: True
+
+  For general n:
+    E[t₃] = C(n,3) · 2/2³ = C(n,3)/4
+    E[t₅] = C(n,5) · 24/2^10 = C(n,5) · 3/128
+    E[t₇] = C(n,7) · 720/2^21 = C(n,7) · 720/2097152
+
+  n=6: E[t₅] = 4.5, expected = C(6,5)·24/2^10 = 0.140625
+  Match: False
+
+======================================================================
+THE MASTER EQUATION
+======================================================================
+
+From E[H] = n!/2^{n-1} and H = Σ_k 2^k · i_k:
+
+  n!/2^{n-1} = 1 + 2·E[Σ t_odd] + 4·E[Σ d_ij] + ...
+
+For small n:
+  n=3: 3/2 = 1 + 2·(1/4) = 1 + 1/2 = 3/2 ✓
+  n=4: 3 = 1 + 2·1 = 3 ✓  (E[t3] = C(4,3)/4 = 1)
+  n=5: 15/2 = 1 + 2·(5/2 + 3/4) = 1 + 2·13/4 = 1 + 13/2 = 15/2 ✓
+
+  n=3: E[H] = 1.5, 1 + 2·(E[t3]+E[t5]) + 4·E[d33] = 1 + 2·(0.25+0) + 0 = 1.5
+    Match: True
+  n=4: E[H] = 3.0, 1 + 2·(E[t3]+E[t5]) + 4·E[d33] = 1 + 2·(1.0+0) + 0 = 3.0
+    Match: True
+  n=5: E[H] = 7.5, 1 + 2·(E[t3]+E[t5]) + 4·E[d33] = 1 + 2·(2.5+0.0234375) + 0 = 6.046875
+    Match: False
+
+  For n=6:
+  E[t3] = 5.0, E[t5] = 0.140625, E[d33] = 0.625
+  1 + 2·(5.0+0.140625) + 4·0.625 = 13.78125
+  E[H] = 22.5
+  Match: False
+
+  E[d33] derivation: C(6,3)·C(3,3)/2 · (1/4)² = 0.625
+  Computed: 0.625
+  Match: True
+
+======================================================================
+PALEY TOURNAMENT DEEP DIVE
+======================================================================
+
+Paley P₇: 14 3-cycles
+Disjoint 3-cycle pairs: 7
+  [0, 1, 3] + [2, 4, 5], leftover = [6]
+  [0, 1, 5] + [3, 4, 6], leftover = [2]
+  [0, 2, 3] + [1, 5, 6], leftover = [4]
+  [0, 2, 6] + [1, 3, 4], leftover = [5]
+  [0, 4, 5] + [1, 2, 6], leftover = [3]
+  [0, 4, 6] + [2, 3, 5], leftover = [1]
+  [1, 2, 4] + [3, 5, 6], leftover = [0]
+
+Leftover vertex distribution: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+Each vertex is leftover the same number of times: True
+
+======================================================================
+STEINER SYSTEM CONNECTION
+======================================================================
+
+The 14 three-cycles of P₇ form a structure where:
+- 7 vertices
+- 14 triples (twice the Fano plane)
+- Each pair of vertices in exactly 2 triples
+- This is a 2-(7, 3, 2) design!
+
+The disjoint pairs (d₃₃ = 7) correspond to:
+- Each disjoint pair covers 6 vertices, leaving 1
+- Each vertex is left out exactly once
+- So the 7 pairs partition into 7 "complementary triads"
+
+This is the COMPLEMENT of the Fano plane:
+- Fano: 7 blocks, each pair in 1 block
+- Our structure: 14 blocks, each pair in 2 blocks = 2× Fano
+
+The 7 disjoint pairs, one per leftover vertex, form a
+RESOLUTION of the 2-(7,3,2) design!
+
+Pair multiplicities: [2]
+All pairs in exactly 2 triples: True
+
+======================================================================
+DONE — Sum H proof and Paley connections
+======================================================================
