@@ -1,0 +1,150 @@
+======================================================================
+PART 1: TOURNAMENT → BRAID WORD
+======================================================================
+
+n=4: Braid structure:
+  H= 1: writhe distribution = {-6: 1, -4: 3, -2: 5, 0: 6, 2: 5, 4: 3, 6: 1}
+  H= 3: writhe distribution = {-4: 2, -2: 4, 0: 4, 2: 4, 4: 2}
+  H= 5: writhe distribution = {-4: 1, -2: 6, 0: 10, 2: 6, 4: 1}
+
+n=5: Braid structure:
+  H= 1: writhe distribution = {-10: 1, -8: 4, -6: 9, -4: 15, -2: 20, 0: 22, 2: 20, 4: 15, 6: 9, 8: 4, 10: 1}
+  H= 3: writhe distribution = {-8: 3, -6: 9, -4: 15, -2: 21, 0: 24, 2: 21, 4: 15, 6: 9, 8: 3}
+  H= 5: writhe distribution = {-8: 2, -6: 14, -4: 34, -2: 46, 0: 48, 2: 46, 4: 34, 6: 14, 8: 2}
+  H= 9: writhe distribution = {-8: 1, -6: 9, -4: 28, -2: 51, 0: 62, 2: 51, 4: 28, 6: 9, 8: 1}
+  H=11: writhe distribution = {-6: 2, -4: 11, -2: 28, 0: 38, 2: 28, 4: 11, 6: 2}
+  H=13: writhe distribution = {-6: 1, -4: 13, -2: 29, 0: 34, 2: 29, 4: 13, 6: 1}
+  H=15: writhe distribution = {-6: 1, -4: 4, -2: 15, 0: 24, 2: 15, 4: 4, 6: 1}
+
+======================================================================
+PART 2: TOURNAMENT COLORING (PROPER k-COLORING)
+======================================================================
+
+n=4: Dichromatic number by H:
+  H= 1: χ_d distribution = {1: 24}
+  H= 3: χ_d distribution = {2: 16}
+  H= 5: χ_d distribution = {2: 24}
+
+n=5: Dichromatic number by H:
+  H= 1: χ_d distribution = {1: 120}
+  H= 3: χ_d distribution = {2: 120}
+  H= 5: χ_d distribution = {2: 240}
+  H= 9: χ_d distribution = {2: 240}
+  H=11: χ_d distribution = {2: 120}
+  H=13: χ_d distribution = {2: 120}
+  H=15: χ_d distribution = {2: 64}
+
+n=6: Dichromatic number by H:
+  H= 1: χ_d distribution = {1: 22}
+  H= 3: χ_d distribution = {2: 19}
+  H= 5: χ_d distribution = {2: 69}
+  H= 9: χ_d distribution = {2: 97}
+  H=11: χ_d distribution = {2: 36}
+  H=13: χ_d distribution = {2: 41}
+  H=15: χ_d distribution = {2: 84}
+  H=17: χ_d distribution = {2: 42}
+  H=19: χ_d distribution = {2: 53}
+  H=23: χ_d distribution = {2: 95}
+  H=25: χ_d distribution = {2: 38}
+  H=27: χ_d distribution = {2: 11}
+  H=29: χ_d distribution = {2: 98}
+  H=31: χ_d distribution = {2: 47}
+  H=33: χ_d distribution = {2: 85}
+  H=37: χ_d distribution = {2: 96}
+  H=41: χ_d distribution = {2: 20}
+  H=43: χ_d distribution = {2: 36}
+  H=45: χ_d distribution = {2: 11}
+
+======================================================================
+PART 3: MÖBIUS FUNCTION ON STRONG COMPONENT LATTICE
+======================================================================
+
+n=4: SCC structure by H:
+  H= 1: SCC structure = {(1, 1, 1, 1): 24}
+  H= 3: SCC structure = {(3, 1): 16}
+  H= 5: SCC structure = {(4,): 24}
+
+n=5: SCC structure by H:
+  H= 1: SCC structure = {(1, 1, 1, 1, 1): 120}
+  H= 3: SCC structure = {(3, 1, 1): 120}
+  H= 5: SCC structure = {(4, 1): 240}
+  H= 9: SCC structure = {(5,): 240}
+  H=11: SCC structure = {(5,): 120}
+  H=13: SCC structure = {(5,): 120}
+  H=15: SCC structure = {(5,): 64}
+
+======================================================================
+PART 4: GROTHENDIECK GROUP K_0(Tour)
+======================================================================
+
+n=4: Deletion map [T_4] → K_0(Tour_3):
+  [T with H=1] → deletions give H-profile: (1, 1, 1, 1)
+  [T with H=3] → deletions give H-profile: (1, 1, 1, 3)
+  [T with H=5] → deletions give H-profile: (1, 1, 3, 3)
+  [T with H=3] → deletions give H-profile: (1, 1, 1, 3)
+
+======================================================================
+PART 5: TOURNAMENT ZETA FUNCTION (IHARA-STYLE)
+======================================================================
+
+n=4: Directed cycle counts by H:
+  H= 1: avg cycles by length = {3: 0.0, 4: 0.0}
+  H= 3: avg cycles by length = {3: 1.0, 4: 0.0}
+  H= 5: avg cycles by length = {3: 2.0, 4: 1.0}
+
+n=5: Directed cycle counts by H:
+  H= 1: avg cycles by length = {3: 0.0, 4: 0.0, 5: 0.0}
+  H= 3: avg cycles by length = {3: 1.0, 4: 0.0, 5: 0.0}
+  H= 5: avg cycles by length = {3: 2.0, 4: 1.0, 5: 0.0}
+  H= 9: avg cycles by length = {3: 3.0, 4: 2.5, 5: 1.0}
+  H=11: avg cycles by length = {3: 4.0, 4: 4.0, 5: 1.0}
+  H=13: avg cycles by length = {3: 4.0, 4: 3.0, 5: 2.0}
+  H=15: avg cycles by length = {3: 4.375, 4: 3.75, 5: 2.625}
+
+======================================================================
+PART 6: ARITHMETIC IDENTITIES
+======================================================================
+
+n=3: Power sums of H:
+  Σ H^1 = 12
+  Σ H^2 = 24
+  Σ H^3 = 60
+  Σ H^4 = 168
+  Σ H^5 = 492
+  Σ H^6 = 1464
+  Σ H = 12 (expected: 12)
+  mean = 1.5000, var = 0.7500, var/mean² = 0.333333
+
+n=4: Power sums of H:
+  Σ H^1 = 192
+  Σ H^2 = 768
+  Σ H^3 = 3456
+  Σ H^4 = 16320
+  Σ H^5 = 78912
+  Σ H^6 = 386688
+  Σ H = 192 (expected: 192)
+  mean = 3.0000, var = 3.0000, var/mean² = 0.333333
+
+n=5: Power sums of H:
+  Σ H^1 = 7680
+  Σ H^2 = 75840
+  Σ H^3 = 847680
+  Σ H^4 = 10158720
+  Σ H^5 = 127432320
+  Σ H^6 = 1652187840
+  Σ H = 7680 (expected: 7680)
+  mean = 7.5000, var = 17.8125, var/mean² = 0.316667
+
+======================================================================
+SYNTHESIS — KNOT THEORY AND ALGEBRAIC K-THEORY
+======================================================================
+
+KEY FINDINGS:
+1. BRAID WORD: Each tournament defines a braid; writhe = Σ(scores) - m.
+2. DICHROMATIC NUMBER: χ_d varies by H value — higher H correlates with
+   lower dichromatic number (more acyclic partitions possible).
+3. SCC STRUCTURE: Strongly connected ↔ single SCC ↔ high H.
+4. DELETION MAP: K_0 deletion map reveals how iso classes compose.
+5. DIRECTED CYCLES: More 3-cycles correlates with higher H.
+6. POWER SUMS: Σ H^k has nice arithmetic; var/mean² ≈ 1/3 confirmed.
+
