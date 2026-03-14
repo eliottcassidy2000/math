@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-14-S63 — 2026-03-14: Modular Towers, Eisenstein Integers, and Forbidden H Values
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S62
+**Summary of work:**
+Continued deep exploration of the 2-3 duality, focusing on modular towers, Eisenstein integers, and the (a1,a2) lattice structure.
+
+**Critical findings:**
+1. **CRT Tower** (HYP-920-921): I(b) mod (b+1) = I(-1) mod (b+1). Only 3 evaluations (b=2,3,4) recover I(-1) exactly at n=7 via CRT with lcm(3,4,5)=60.
+2. **Generating function identity** (HYP-922): G(1/2) = H + 1 + 2*alpha_2. The z=1/2 generating function exceeds H by exactly 1 + 2*(disjoint pairs).
+3. **Eisenstein connection** (HYP-923, 930): I(omega) in Z[omega] has Eisenstein norm N(I(omega)) always 0 or 1 mod 3 (never 2). I(omega) mod (1-omega) = I(1) mod 3.
+4. **Reduced formula** (HYP-924-925): H = 3 - 2*b0 + 6*b2 from constraint b0+b1+b2=1. H mod 6 depends ONLY on b0 mod 3.
+5. **Forbidden H values** (HYP-926-927): H=7 impossible at all n (THM-029). H=21 also impossible at n<=7 (all 5 decompositions unachievable). H=63 also a gap. Total 9 gaps in [1,159] at n=7.
+6. **No modular obstructions** (HYP-928): H mod m achieves ALL odd residues for m up to 72. Gaps are lattice constraints, not modular.
+7. **Exhaustive lattice** at n=5,6: n=5 has 7 lattice points (all a2=0). n=6 has 27 points. Score sequence does NOT determine (a1,a2).
+8. **Directed cycle counting** (HYP-932): Each cyclic triple gives exactly 1 directed 3-cycle (not 2) in a tournament. Critical for correct alpha_1 count.
+9. **10-11 positional number theory**: 10=1010_2 ("2 with 2"), 11=1011_2 ("2 with 3"). Vandermonde at (2,3) minimal with det=6. 1729=7*13*19 all primes =1 mod 6.
+10. **Phase transition table**: b0<0 goes 72.5% (n=5) to 100% (n=9). Average a2/a1 matches C(n-3,3)/8 prediction.
+
+**New contributions:** HYP-920 through HYP-932 (13 new hypotheses, all confirmed)
+**Scripts:** ten_eleven_deep.py, two_three_tower_deep.py, eisenstein_forbidden.py, forbidden_H_analysis.py, lattice_boundary.py
+**Unresolved threads:**
+- Prove H=21 impossible for ALL n (currently confirmed only n<=7)
+- Characterize the full boundary of achievable (a1,a2) lattice
+- Does N(I(omega)) have number-theoretic significance beyond mod 3?
+- Eisenstein factorization of I(omega): when is it an Eisenstein prime?
+- The 37 missing residues mod 216: can they be explained by lattice geometry?
+
 ## kind-pasteur-2026-03-13-S62 — 2026-03-13: Deep 2-3 Duality with Correct Cycle Counts
 
 **Account:** kind-pasteur
