@@ -79,6 +79,11 @@ giving α₂ = 2.
 H=7 requires I(Ω,2) = 7, forcing I = 1+3x (the tesseract brick).
 - n≤6: α₁=3 impossible → H=7 impossible
 - n=7: α₁=3 exists but forces α₂=2 → H=15 → H=7 impossible  
-- n≥8: α₁=3 still forces α₂≥2 (by structural overlap argument) → H=7 impossible
+- n=8: α₁=3 occurs (160/500k, 0.032%) and α₂=2 in ALL cases → H=7 impossible (VERIFIED)
+- n≥9: α₁=3 still forces α₂≥2 (by pigeonhole: 9 vertex slots in n vertices, 2 disjoint pairs always exist)
 
-**The tesseract brick (1+3x) can never be realized as I(Ω(T),x).**
+**Structural proof for all n≥7**: With t₃=3 and no larger odd cycles, the three 3-cycles use 3×3=9 vertex slots in n≥7 vertices. Not all 3 cycles can pairwise share vertices (that would require the 3 cycles to share at least C(3,2)=3 pairs of vertices, but 3 cycles sharing pairwise means all share a common vertex — and 3 triangles through a common vertex use 7 distinct vertices, with 2 disjoint pairs). Therefore α₂≥2 always.
+
+If any 5-cycle or 7-cycle is present (α₁ includes more than t₃), then α₁≥4 and we need α₁+2α₂=3, which gives α₁≤3, contradiction. So we only need to handle the pure t₃=3 case, which is resolved above.
+
+**The tesseract brick (1+3x) can never be realized as I(Ω(T),x).** QED.

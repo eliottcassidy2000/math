@@ -1,0 +1,65 @@
+
+  α₁=3 example #1:
+    cycle: (0, 1, 5) (len=3)
+    cycle: (2, 4, 7) (len=3)
+    cycle: (3, 4, 7) (len=3)
+    α₂ = 2
+    H_approx = 15
+
+  α₁=3 example #2:
+    cycle: (0, 1, 2) (len=3)
+    cycle: (0, 5, 2) (len=3)
+    cycle: (3, 4, 7) (len=3)
+    α₂ = 2
+    H_approx = 15
+
+  α₁=3 example #3:
+    cycle: (0, 2, 7) (len=3)
+    cycle: (1, 5, 3) (len=3)
+    cycle: (3, 4, 5) (len=3)
+    α₂ = 2
+    H_approx = 15
+
+  α₁=3 example #4:
+    cycle: (0, 2, 1) (len=3)
+    cycle: (1, 6, 2) (len=3)
+    cycle: (4, 5, 7) (len=3)
+    α₂ = 2
+    H_approx = 15
+
+  α₁=3 example #5:
+    cycle: (0, 3, 7) (len=3)
+    cycle: (2, 4, 6) (len=3)
+    cycle: (4, 6, 5) (len=3)
+    α₂ = 2
+    H_approx = 15
+  50000/500000 done (1556/s, ETA 289s)
+  100000/500000 done (1630/s, ETA 245s)
+  150000/500000 done (1662/s, ETA 211s)
+  200000/500000 done (1677/s, ETA 179s)
+  250000/500000 done (1707/s, ETA 146s)
+  300000/500000 done (1702/s, ETA 118s)
+  350000/500000 done (1702/s, ETA 88s)
+  400000/500000 done (1667/s, ETA 60s)
+  450000/500000 done (1679/s, ETA 30s)
+
+============================================================
+Completed 500000 tournaments in 296.9s
+============================================================
+
+α₁ ≤ 5 distribution:
+  α₁=0: 72 (0.0144%)
+  α₁=1: 149 (0.0298%)
+  α₁=2: 440 (0.0880%)
+  α₁=3: 160 (0.0320%)
+  α₁=4: 599 (0.1198%)
+
+α₁=3 results:
+  Total found: 160
+  α₂ distribution:
+    α₂=2: 160 (100.0%)
+  H distribution:
+    H=15: 160
+
+  ✓ α₁=3 always has α₂≥2 at n=8
+    H=7 proof holds for n=8
