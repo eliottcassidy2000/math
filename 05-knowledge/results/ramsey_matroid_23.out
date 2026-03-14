@@ -1,0 +1,575 @@
+======================================================================
+  Part 1: RAMSEY NUMBERS R(m,n)
+======================================================================
+
+Ramsey's theorem: For any m,n >= 2, there exists R(m,n) such that
+any 2-coloring of K_{R(m,n)} contains a monochromatic K_m or K_n.
+
+Known Ramsey numbers R(m,n):
+  R(2,2) =   2 = KEY1
+  R(2,3) =   3 = KEY2
+  R(2,4) =   4 = KEY1^2
+  R(2,5) =   5 = KEY_SUM
+  R(2,6) =   6 = h(G2)
+  R(2,7) =   7 = H_forb_1
+  R(2,8) =   8 = KEY1^3
+  R(2,9) =   9 = KEY2^2
+  R(2,10) =  10 = V(Pet)
+  R(3,3) =   6 = h(G2)
+  R(3,4) =   9 = KEY2^2
+  R(3,5) =  14 = dim(G2)
+  R(3,6) =  18 = KEY1*KEY2^2
+  R(3,7) =  23
+  R(3,8) =  28 = C(8,2)
+  R(3,9) =  36
+  R(4,4) =  18 = KEY1*KEY2^2
+  R(4,5) =  25 = KEY_SUM^2
+  R(5,5) =  43
+
+  CROWN JEWELS IN RAMSEY NUMBERS:
+  R(KEY1, KEY2) = KEY2 = 3 (trivial)
+  R(KEY2, KEY2) = h(G2) = 6!
+  R(KEY2, KEY1^2) = KEY2^2 = 9!
+  R(KEY2, KEY_SUM) = dim(G2) = 14!
+  R(KEY2, h(G2)) = 18 = KEY1 * KEY2^2
+  R(KEY2, H_forb_1) = 23 = |BT| - 1!
+  R(KEY2, KEY1^3) = C(8,2) = 28!
+  R(KEY2, KEY2^2) = 36 = h(E6) * KEY2 = KEY1^2 * KEY2^2
+  R(KEY1^2, KEY1^2) = 18 = KEY1 * KEY2^2
+  R(KEY1^2, KEY_SUM) = KEY_SUM^2 = 25!
+
+  R(3,7) = 23 = |BT| - 1!
+  The Ramsey number R(KEY2, H_forb_1) is ONE LESS THAN |BT|!
+
+  R(3,5) = 14 = dim(G2)
+  R(3,8) = 28 = C(8,2) = |Theta_7| (exotic spheres!)
+
+  Ramsey numbers are DEEPLY connected to tournament vocabulary!
+
+The DIAGONAL Ramsey numbers R(n,n):
+  R(2,2) = 2 = KEY1
+  R(3,3) = 6 = h(G2)
+  R(4,4) = 18 = KEY1 * KEY2^2
+  R(5,5) = 43-48 (unknown exact value!)
+
+  R(KEY2, KEY2) = h(G2)!
+  The diagonal Ramsey number at KEY2 is the Coxeter number of G_2!
+
+======================================================================
+  Part 2: CHROMATIC POLYNOMIAL AND (2,3)
+======================================================================
+
+The chromatic polynomial P(G, k) counts proper k-colorings of graph G.
+
+For the complete graph K_n:
+  P(K_n, k) = k * (k-1) * (k-2) * ... * (k-n+1) = k^{(n)} (falling factorial)
+
+  P(K_{KEY1}, k) = k(k-1) = k^2 - k (KEY1 vertices)
+  P(K_{KEY2}, k) = k(k-1)(k-2) = k^3 - 3k^2 + 2k
+  P(K_{KEY_SUM}, k) = k(k-1)(k-2)(k-3)(k-4)
+
+  Evaluating at tournament constants:
+  P(K_{KEY2}, KEY1) = 2*1*0 = 0 (can't 2-color K_3!)
+  P(K_{KEY2}, KEY2) = 3*2*1 = 6 = h(G2)!
+  P(K_{KEY2}, KEY1^2) = 4*3*2 = 24 = |BT|!
+  P(K_{KEY2}, KEY_SUM) = 5*4*3 = 60
+
+  P(K_3, 4) = |BT| = 24!
+  The number of proper 4-colorings of the triangle is |BT|!
+
+For the Petersen graph Pet:
+  P(Pet, k) = k^10 - 15k^9 + 105k^8 - 455k^7 + 1353k^6 - 2861k^5
+              + 4275k^4 - 4305k^3 + 2606k^2 - 704k
+
+  P(Pet, KEY2) = P(Pet, 3) = ... let me compute.
+
+Chromatic polynomial of the Petersen graph P(Pet, k):
+  P(Pet, 1) =            0
+  P(Pet, 2) =            0
+  P(Pet, 3) =          120 = |BI|
+  P(Pet, 4) =        12960
+  P(Pet, 5) =       332880
+  P(Pet, 6) =      3868080
+  P(Pet, 7) =     27767880
+
+  P(Pet, 2) = 0: Petersen graph is NOT 2-colorable!
+  P(Pet, 3) = 120: 120 proper 3-colorings
+  P(Pet, 4) = 12960 = 2^5 * 3^4 * 5
+  The chromatic number chi(Pet) = KEY2 = 3!
+
+======================================================================
+  Part 3: STIRLING NUMBERS AND (2,3)
+======================================================================
+Stirling numbers of the second kind S(n,k):
+(Number of partitions of n-set into k nonempty subsets)
+
+     k:      0      1      2      3      4      5      6      7
+  n=0:      1      0      0      0      0      0      0      0
+  n=1:      0      1      0      0      0      0      0      0
+  n=2:      0      1      1      0      0      0      0      0
+  n=3:      0      1      3      1      0      0      0      0
+  n=4:      0      1      7      6      1      0      0      0
+  n=5:      0      1     15     25     10      1      0      0
+  n=6:      0      1     31     90     65     15      1      0
+  n=7:      0      1     63    301    350    140     21      1
+
+Tournament vocabulary in Stirling numbers S(n,k):
+  S(3,2) = 3 = KEY2
+  S(4,2) = 7 = H_forb_1
+  S(4,3) = 6 = h(G2)
+  S(5,2) = 15 = C(6,2)
+  S(5,3) = 25 = KEY_SUM^2
+  S(5,4) = 10 = V(Pet)
+  S(6,5) = 15 = C(6,2)
+  S(7,2) = 63 = H_forb_3
+  S(7,6) = 21 = H_forb_2
+  S(8,7) = 28 = C(8,2)
+
+Bell numbers B_n = sum_k S(n,k):
+  B_ 0 =        1 = unit
+  B_ 1 =        1 = unit
+  B_ 2 =        2 = KEY1
+  B_ 3 =        5 = KEY_SUM
+  B_ 4 =       15 = C(6,2)
+  B_ 5 =       52
+  B_ 6 =      203
+  B_ 7 =      877
+  B_ 8 =     4140
+  B_ 9 =    21147
+  B_10 =   115975
+  B_11 =   678570
+
+  B_0 = 1, B_1 = 1, B_2 = 2 = KEY1, B_3 = 5 = KEY_SUM!
+  B_4 = 15 = C(6,2), B_5 = 52 = KEY1^2 * 13, B_6 = 203
+
+  B_2 = KEY1, B_3 = KEY_SUM!
+  The Bell numbers at positions KEY1 and KEY2 give KEY1 and KEY_SUM!
+
+  S(4,2) = 7 = H_forb_1!
+  S(5,2) = 15 = C(6,2)!
+  S(5,3) = 25 = KEY_SUM^2!
+  S(6,2) = 31 = Mersenne prime!
+  S(6,3) = 90 = KEY1 * KEY2^2 * V(Pet)
+  S(7,2) = 63 = H_forb_3!
+
+  S(n,2) = 2^{n-1} - 1 = KEY1^{n-1} - 1!
+  These are the MERSENNE NUMBERS!
+  S(KEY2+1, KEY1) = KEY1^KEY2 - 1 = H_forb_1 = 7!
+  S(H_forb_1, KEY1) = KEY1^h(G2) - 1 = 63 = H_forb_3!
+
+  The Stirling numbers S(n,2) ARE the Mersenne sequence!
+  This is the same sequence that generates the forbidden values!
+
+======================================================================
+  Part 4: TUTTE POLYNOMIAL AND TOURNAMENTS
+======================================================================
+
+The Tutte polynomial T(G; x, y) is the universal graph invariant
+satisfying deletion-contraction.
+
+  T(G; x, y) = sum_{A subset E} (x-1)^{r(E)-r(A)} * (y-1)^{|A|-r(A)}
+
+For the complete graph K_n:
+  The chromatic polynomial: P(K_n, k) = (-1)^n * k * T(K_n; 1-k, 0)
+  The flow polynomial: F(K_n, k) = (-1)^{|E|-|V|+1} * T(K_n; 0, 1-k)
+
+Special evaluations of T(K_n; x, y):
+  T(K_n; 1, 1) = number of spanning trees = n^{n-2} (Cayley's formula)
+  T(K_n; 2, 1) = number of spanning forests
+  T(K_n; 1, 2) = number of spanning connected subgraphs
+  T(K_n; 2, 0) = number of acyclic orientations
+
+Spanning trees of K_n (Cayley's formula):
+
+  |spanning trees of K_1| = 1^0 = 1 = unit
+  |spanning trees of K_2| = 2^0 = 1 = unit
+  |spanning trees of K_3| = 3^1 = 3 = KEY2
+  |spanning trees of K_4| = 4^2 = 16 = KEY1^4
+  |spanning trees of K_5| = 5^3 = 125
+  |spanning trees of K_6| = 6^4 = 1296
+  |spanning trees of K_7| = 7^5 = 16807
+  |spanning trees of K_8| = 8^6 = 262144
+  |spanning trees of K_9| = 9^7 = 4782969
+
+  K_2: 1 tree
+  K_3: 3 = KEY2 trees
+  K_4: 16 = KEY1^4 trees
+  K_5: 125 = KEY_SUM^3 trees
+  K_6: 1296 = KEY1^4 * KEY2^4 = (KEY1*KEY2)^4 = h(G2)^4 trees
+  K_7: 16807 = H_forb_1^KEY_SUM = 7^5 trees!
+
+  K_3 has KEY2 spanning trees
+  K_5 has KEY_SUM^KEY2 spanning trees!
+  K_7 has H_forb_1^KEY_SUM spanning trees!
+
+Acyclic orientations:
+  The number of acyclic orientations of K_n = n! (every permutation
+  gives a unique acyclic orientation = total order = transitive tournament).
+
+  T(K_n; 2, 0) = n!
+  K_2: 2! = 2 = KEY1
+  K_3: 3! = 6 = h(G2)
+  K_4: 4! = 24 = |BT|!
+  K_5: 5! = 120 = |BI|!
+
+  The acyclic orientations of K_n are exactly the TRANSITIVE TOURNAMENTS!
+  And their count = n! = factorial.
+  |acyclic orientations of K_4| = 4! = |BT| = 24!
+
+======================================================================
+  Part 5: PARKING FUNCTIONS
+======================================================================
+
+A parking function of length n is a sequence (a_1, ..., a_n)
+with 1 <= a_i <= n such that the sorted sequence b_1 <= ... <= b_n
+satisfies b_i <= i.
+
+Number of parking functions of length n = (n+1)^{n-1}.
+
+  PF(1) = (2)^0 = 1 = unit
+  PF(2) = (3)^1 = 3 = KEY2
+  PF(3) = (4)^2 = 16 = KEY1^4
+  PF(4) = (5)^3 = 125
+  PF(5) = (6)^4 = 1296
+  PF(6) = (7)^5 = 16807
+  PF(7) = (8)^6 = 262144
+  PF(8) = (9)^7 = 4782969
+
+  PF(1) = 1
+  PF(2) = 3 = KEY2
+  PF(3) = 16 = KEY1^4
+  PF(4) = 125 = KEY_SUM^3 = KEY_SUM^KEY2
+  PF(5) = 1296 = h(G2)^4 = 6^4
+
+  PF(KEY1) = KEY2!
+  PF(KEY2) = KEY1^4!
+  PF(KEY1^2) = KEY_SUM^KEY2!
+  PF(KEY_SUM) = h(G2)^4!
+
+  Parking functions of length KEY1 = KEY2 (three parking functions!)
+  Parking functions of length KEY2 = KEY1^4 (sixteen!)
+  Related to Cayley: PF(n) = (n+1)^{n-1} = (n+1) * n^{n-2} when adjusted.
+
+======================================================================
+  Part 6: NARAYANA NUMBERS AND (2,3)
+======================================================================
+Narayana numbers N(n,k):
+(Number of Dyck paths of length 2n with k peaks)
+
+  n=1: [1]  sum = 1 = C_1 = unit
+  n=2: [1, 1]  sum = 2 = C_2 = KEY1
+  n=3: [1, 3, 1]  sum = 5 = C_3 = KEY_SUM
+  n=4: [1, 6, 6, 1]  sum = 14 = C_4 = dim(G2)
+  n=5: [1, 10, 20, 10, 1]  sum = 42 = C_5 = KEY1*H_forb_2
+  n=6: [1, 15, 50, 50, 15, 1]  sum = 132 = C_6
+  n=7: [1, 21, 105, 175, 105, 21, 1]  sum = 429 = C_7
+
+  The Narayana triangle contains:
+  N(3,2) = 3 = KEY2
+  N(4,2) = 6 = h(G2), N(4,3) = 6 = h(G2)
+  N(5,2) = 10 = V(Pet), N(5,3) = 20 = V(Dodec), N(5,4) = 10 = V(Pet)
+  N(6,3) = 50 = KEY1 * KEY_SUM^2
+  N(7,2) = 21 = H_forb_2!
+
+  N(7,2) = H_forb_2 = 21!
+  N(5,2) = V(Pet) = 10!
+
+  The Narayana numbers are RICH in tournament vocabulary!
+
+======================================================================
+  Part 7: EULERIAN NUMBERS AND (2,3)
+======================================================================
+Eulerian numbers A(n,k) (perms with k ascents):
+  n=1: [1]
+  n=2: [1, 1]
+  n=3: [1, 4, 1]
+  n=4: [1, 11, 11, 1]
+  n=5: [1, 26, 66, 26, 1]
+  n=6: [1, 57, 302, 302, 57, 1]
+  n=7: [1, 120, 1191, 2416, 1191, 120, 1]
+
+  KEY Eulerian numbers:
+  A(3,1) = 4 = KEY1^2
+  A(4,1) = 11, A(4,2) = 11
+  A(5,1) = 26, A(5,2) = 66
+  A(5,2) = 66 = KEY1 * KEY2 * 11 = h(G2) * 11
+
+  The Eulerian numbers A(n,k) satisfy:
+  sum_k A(n,k) = n! (sum over all descents = total permutations)
+  A(n,0) = 1 for all n (identity permutation)
+
+  CONNECTION TO TOURNAMENTS:
+  The a_k(T) = deformed Eulerian numbers (THM-062) satisfy:
+  a_k(T) = A(n,k) + sum_I 2^{parts} c_k I(T)
+
+  The Eulerian numbers are the "AVERAGE" tournament contribution!
+  The tournament-specific part comes from the invariant polynomial I(T).
+
+  The number of permutations of [n] with 0 descents:
+  A(n,0) = 1 for all n — the TRANSITIVE tournament's Hamiltonian path!
+
+======================================================================
+  Part 8: YOUNG TABLEAUX AND HOOK LENGTHS
+======================================================================
+Standard Young tableaux counts f^lambda (hook length formula):
+
+  Partitions of 3:
+    (3,): hooks = [3, 2, 1], f^lambda = 1 = unit
+    (2, 1): hooks = [3, 1, 1], f^lambda = 2 = KEY1
+    (1, 1, 1): hooks = [3, 2, 1], f^lambda = 1 = unit
+    sum (f^lambda)^2 = 6 = 3! = h(G2)
+
+  Partitions of 4:
+    (4,): hooks = [4, 3, 2, 1], f^lambda = 1 = unit
+    (3, 1): hooks = [4, 2, 1, 1], f^lambda = 3 = KEY2
+    (2, 2): hooks = [3, 2, 2, 1], f^lambda = 2 = KEY1
+    (2, 1, 1): hooks = [4, 2, 1, 1], f^lambda = 3 = KEY2
+    (1, 1, 1, 1): hooks = [4, 3, 2, 1], f^lambda = 1 = unit
+    sum (f^lambda)^2 = 24 = 4! = |BT|
+
+  Partitions of 5:
+    (5,): hooks = [5, 4, 3, 2, 1], f^lambda = 1 = unit
+    (4, 1): hooks = [5, 3, 2, 1, 1], f^lambda = 4 = KEY1^2
+    (3, 2): hooks = [4, 3, 2, 1, 1], f^lambda = 5 = KEY_SUM
+    (3, 1, 1): hooks = [5, 2, 2, 1, 1], f^lambda = 6 = h(G2)
+    (2, 2, 1): hooks = [4, 3, 2, 1, 1], f^lambda = 5 = KEY_SUM
+    (2, 1, 1, 1): hooks = [5, 3, 2, 1, 1], f^lambda = 4 = KEY1^2
+    (1, 1, 1, 1, 1): hooks = [5, 4, 3, 2, 1], f^lambda = 1 = unit
+    sum (f^lambda)^2 = 120 = 5! = |BI|
+
+  KEY OBSERVATIONS:
+  For n = KEY2 = 3: sum (f^lambda)^2 = 1 + 4 + 1 = h(G2)!
+  For n = KEY1^2 = 4: sum = 1 + 9 + 4 + 9 + 1 = |BT|!
+  For n = KEY_SUM = 5: sum = 1 + 16 + 25 + 16 + 25 + 16 + 1 = ... let me check.
+
+  sum (f^lambda)^2 for n=3 = 6 = 3! = h(G2)
+  sum (f^lambda)^2 for n=4 = 24 = 4! = |BT|
+  sum (f^lambda)^2 for n=5 = 120 = 5! = |BI|
+
+  This is the RSK correspondence: sum (f^lambda)^2 = n!
+  So: 3! = h(G2), 4! = |BT|, 5! = |BI|!
+
+  The factorials 3!, 4!, 5! ARE the tournament constants h(G2), |BT|, |BI|!
+  This is because:
+  h(G2) = 3! = KEY2!
+  |BT| = 4! = (KEY1^2)!
+  |BI| = 5! = KEY_SUM!
+
+  But also: |BT| = 24 = 2^3 * 3 ≠ 4! in the "group" sense...
+  Wait: 4! = 24 = |BT|. Yes! |BT| is literally 4-factorial!
+  |BI| = 120 = 5! = KEY_SUM!
+
+  CROWN JEWEL: The binary polyhedral group orders are FACTORIALS!
+  |BT| = (KEY1^2)! = 4!
+  |BI| = KEY_SUM! = 5!
+  h(G2) = KEY2! = 3!
+  And |BO| = 48 = 2 * 4! = 2 * |BT| (not a factorial, but 2 * 4!)
+
+======================================================================
+  Part 9: DEDEKIND NUMBERS
+======================================================================
+Dedekind numbers D(n) (antichains in the Boolean lattice B_n):
+  D(0) =          2 = KEY1
+  D(1) =          3 = KEY2
+  D(2) =          6 = h(G2)
+  D(3) =         20 = V(Dodec)
+  D(4) =        168
+  D(5) =       7581
+  D(6) =    7828354
+
+  D(0) = 2 = KEY1
+  D(1) = 3 = KEY2
+  D(2) = 6 = h(G2)
+  D(3) = 20 = V(Dodec)!
+
+  The Dedekind numbers START with KEY1, KEY2, h(G2), V(Dodec)!
+  Four tournament constants in a row!
+
+  D(4) = 168 = KEY1^3 * KEY2 * H_forb_1 = 8 * 21 = KEY1^3 * H_forb_2
+  D(5) = 7581 = KEY2 * KEY_SUM^2 * ... hmm, let me factor.
+
+  D(4) = 2^3 * 3 * 7
+  D(5) = 3 * 7 * 19^2
+  D(6) = 2 * 359 * 10903
+
+======================================================================
+  Part 10: MOBIUS FUNCTION AND POSETS
+======================================================================
+
+The Mobius function mu(P) of a finite poset P:
+  mu(hat{0}, hat{1}) = sum over chains, with signs.
+
+For the Boolean lattice B_n: mu(hat{0}, hat{1}) = (-1)^n
+For the partition lattice Pi_n: mu(hat{0}, hat{1}) = (-1)^{n-1} (n-1)!
+
+The Mobius function of Pi_n:
+  |mu(Pi_n)| = (n-1)! (unsigned)
+
+  n = KEY1: |mu| = 1! = 1
+  n = KEY2: |mu| = 2! = 2 = KEY1
+  n = KEY1^2: |mu| = 3! = 6 = h(G2)
+  n = KEY_SUM: |mu| = 4! = 24 = |BT|!
+  n = h(G2): |mu| = 5! = 120 = |BI|!
+
+  |mu(Pi_{KEY_SUM})| = |BT|!
+  |mu(Pi_{h(G2)})| = |BI|!
+
+  The Mobius function of the partition lattice gives
+  ANOTHER appearance of |BT| and |BI|!
+
+TOURNAMENTS AS POSETS:
+  A transitive tournament IS a total order = linear poset.
+  mu(total order on n) = (-1)^{n-1} (alternating boundary)
+
+  For a NON-transitive tournament:
+  The tournament is NOT a poset (it has cycles).
+  But we can study the ACYCLIC CONDENSATION:
+  Condense each strongly connected component to a point.
+  The result IS a poset (the DAG of SCCs).
+
+  For a tournament T with k strongly connected components:
+  The condensation has k vertices, forming a LINEAR order (Redei!).
+
+  Redei's theorem guarantees: the condensation of any tournament
+  is a TOTAL ORDER. So tournaments are "almost posets"
+  with cyclic components inside.
+
+  The NUMBER of 3-cycles in a tournament T on n vertices:
+  c_3(T) = C(n,3) - sum_{v} C(s_v, 2)
+  where s_v = score of vertex v.
+
+  The Mobius function of the POSET OF TOURNAMENT-ACYCLIC ORDERINGS...
+  is related to the Redei polynomial H(T)!
+
+======================================================================
+  Part 11: FIBONACCI, LUCAS, AND (2,3)
+======================================================================
+Fibonacci numbers F_n:
+  F_ 0 =     0
+  F_ 1 =     1 = unit
+  F_ 2 =     1 = unit
+  F_ 3 =     2 = KEY1
+  F_ 4 =     3 = KEY2
+  F_ 5 =     5 = KEY_SUM
+  F_ 6 =     8 = KEY1^3
+  F_ 7 =    13
+  F_ 8 =    21 = H_forb_2
+  F_ 9 =    34
+  F_10 =    55
+  F_11 =    89
+  F_12 =   144
+  F_13 =   233
+  F_14 =   377
+
+Lucas numbers L_n:
+  L_ 0 =     2 = KEY1
+  L_ 1 =     1 = unit
+  L_ 2 =     3 = KEY2
+  L_ 3 =     4 = KEY1^2
+  L_ 4 =     7 = H_forb_1
+  L_ 5 =    11
+  L_ 6 =    18 = KEY1*KEY2^2
+  L_ 7 =    29
+  L_ 8 =    47
+  L_ 9 =    76
+  L_10 =   123
+  L_11 =   199
+
+  Fibonacci tournament constants:
+  F_3 = 2 = KEY1, F_4 = 3 = KEY2, F_5 = 5 = KEY_SUM
+  F_6 = 8 = KEY1^3, F_8 = 21 = H_forb_2
+
+  Lucas tournament constants:
+  L_0 = 2 = KEY1, L_2 = 3 = KEY2, L_4 = 7 = H_forb_1!
+  L_5 = 11, L_6 = 18, L_8 = 47
+
+  L_4 = H_forb_1 = 7!
+  The Lucas number at position KEY1^2 = 4 is the forbidden value!
+
+  The golden ratio phi = (1 + sqrt(KEY_SUM))/2 = F_{n+1}/F_n as n -> inf.
+  phi^2 = phi + 1 (the Fibonacci recurrence for phi)
+  phi^2 - phi - 1 = 0: roots phi and -1/phi
+
+  Compare with tournament polynomial f(z) = z^2 - KEY_SUM*z + h(G2):
+  z^2 - 5z + 6 = 0: roots KEY1 and KEY2.
+
+  BOTH polynomials are quadratics with discriminant 1!
+  f(z) = z^2 - 5z + 6, disc = 25 - 24 = 1
+  g(z) = z^2 - z - 1, disc = 1 + 4 = 5 = KEY_SUM!
+
+  The Fibonacci polynomial has discriminant KEY_SUM!
+  The tournament polynomial has discriminant 1 (unit)!
+
+======================================================================
+  Part 12: GRAND SYNTHESIS — COMBINATORICS IS (2,3)
+======================================================================
+
+======================================================================
+  COMBINATORICS = THE (2,3) LANGUAGE OF COUNTING
+======================================================================
+
+1. RAMSEY NUMBERS:
+   R(KEY2, KEY2) = h(G2) = 6
+   R(KEY2, KEY_SUM) = dim(G2) = 14
+   R(KEY2, H_forb_1) = |BT| - 1 = 23!
+   R(KEY2, KEY1^3) = C(8,2) = 28 = |Theta_7|
+
+2. STIRLING NUMBERS:
+   S(n,2) = 2^{n-1} - 1 = Mersenne = forbidden sequence!
+   S(4,2) = H_forb_1, S(7,2) = H_forb_3
+   Bell: B_2 = KEY1, B_3 = KEY_SUM
+
+3. FACTORIALS = BINARY POLYHEDRAL GROUPS:
+   3! = h(G2), 4! = |BT|, 5! = |BI|
+   The group orders ARE factorials!
+
+4. CATALAN AND NARAYANA:
+   C_2 = KEY1, C_3 = KEY_SUM, C_4 = dim(G2)
+   N(7,2) = H_forb_2, N(5,2) = V(Pet)
+
+5. CAYLEY'S FORMULA:
+   K_5 spanning trees = KEY_SUM^KEY2 = 125
+   K_7 spanning trees = H_forb_1^KEY_SUM
+   Acyclic orientations of K_4 = |BT|!
+
+6. DEDEKIND NUMBERS:
+   D(0)=KEY1, D(1)=KEY2, D(2)=h(G2), D(3)=V(Dodec)
+   FOUR consecutive tournament constants!
+
+7. FIBONACCI/LUCAS:
+   F_3=KEY1, F_4=KEY2, F_5=KEY_SUM, F_6=KEY1^3, F_8=H_forb_2
+   L_4 = H_forb_1 = 7 (Lucas at KEY1^2 = forbidden value!)
+
+8. TUTTE POLYNOMIAL:
+   Chromatic P(K_3, 4) = |BT| = 24 (4-colorings of triangle!)
+   Petersen graph chi = KEY2
+
+9. PARKING FUNCTIONS:
+   PF(KEY1) = KEY2, PF(KEY2) = KEY1^4
+   PF(n) = (n+1)^{n-1}
+
+10. YOUNG TABLEAUX:
+    RSK: sum (f^lambda)^2 = n!
+    3! = h(G2), 4! = |BT|, 5! = |BI|
+
+THE META-INSIGHT:
+  Combinatorics is the study of COUNTING.
+  And counting is controlled by (2,3):
+
+  - Factorials: n! at n=3,4,5 give h(G2), |BT|, |BI|
+  - Powers of 2: 2^n - 1 gives Mersenne/forbidden sequence
+  - Fibonacci: recurrence from phi = (1+sqrt(KEY_SUM))/2
+  - Catalan: C_n = C(2n,n)/(n+1), always in tournament vocabulary
+
+  The deepest reason:
+  EVERY counting formula ultimately involves factorials,
+  binomial coefficients, and powers of small primes.
+  Since KEY1 = 2 and KEY2 = 3 are the smallest primes,
+  they appear in EVERY denominator via:
+  - n! = prod_{p prime} p^{sum floor(n/p^k)}
+  - The 2-adic and 3-adic valuations dominate
+
+  COUNTING IS (2,3) BECAUSE 2 AND 3 ARE THE SMALLEST PRIMES.
+  THIS IS THE ULTIMATE REASON FOR THE UNIVERSALITY OF THE
+  TOURNAMENT VOCABULARY.
+
