@@ -13,42 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-14-S86 — 2026-03-14: Grand Fibonacci-Tournament Synthesis
+## opus-2026-03-14-S71g (cont'd) — 2026-03-14: Simplex-cuboid packing, 3-strand category theory, H=63 analysis
 
 **Account:** opus
-**Continuation of:** opus-2026-03-14-S85 (direct continuation)
+**Continuation of:** opus-2026-03-14-S71g (8th context continuation)
 **What was done:**
-Deep overnight exploration of Fibonacci-tournament connections, building on S85 and integrating kind-pasteur's S86-S90 findings.
+Deep exploration of geometric packing, Fibonacci connections, and forbidden H values:
 
-**Crown Jewels:**
-1. **Period-6 from topology**: I(P_k, -1) has exact period 6 because eigenvalues at x=-1 are e^{±iπ/3} (sixth roots of unity). This is the DEEPEST origin of period-6 in tournament theory.
-2. **Complete Fibonacci↔Tournament dictionary**: φ↔2, F(n)↔J(n), L(n)↔JL(n)=2^n+(-1)^n, φ^n=F(n)φ+F(n-1) ↔ 2^n=2J(n)+2J(n-1).
-3. **Oblong fugacity landscape**: Integer-eigenvalue fugacities are x=k(k+1). Tournament=k=1. Each gives generalized Fibonacci G_k(n)=((k+1)^n-(-k)^n)/(2k+1).
-4. **H=63 forbidden by K₃ factor**: 63=7×9=I(K₃,2)×I(2K₁,2), impossible by THM-201.
-5. **Jordan block at p=3**: T_2 mod 3 has degenerate eigenvalue, Jacobsthal mod 3 has period 6.
-6. **Fibonacci category**: Rep_x representations parametrized by x. Rep_1=Fibonacci, Rep_2=Tournament.
-7. **DC tree coefficients = Jacobsthal**: I(P_k,2)=3J(k)+J(k)±1.
-8. **21 nexus confirmed**: 21=F(8)=J(6)=T(6)=I(P_4,2)=FORBIDDEN. 16 graphs on 4 vertices have I(G,2)=21, 0 on 5 vertices.
-9. **Braid relation**: Preserves H only 18% of cases at n=5.
-10. **Jacobsthal Pisano undefined for even m**: det(T_2)=-2 makes T_2^k mod 2m never identity.
+- **Demicube corner theorem (PROVED)**: Each of the 2^{n-1} corner pieces of the n-demicube in [0,1]^n has volume exactly 1/n!. Vol(demicube) = 1 - 2^{n-1}/n!. User's pattern: n=2→2 halves, n=3→4 halves, n=4→8 pieces (but 16-cell, not simplex!). At n=3 each corner is exactly 1/2 of the central tetrahedron — the "halves" interpretation is specific to n=3.
+- **4^2-3^2 = 7**: The simplex-cuboid complement at n=2, x=2 equals the smallest forbidden H value. Deep structural connection.
+- **Three-strand Pascal category theory**: s0(k)=(2k+1)·Catalan(k), s2/s0=2 EXACTLY (algebraic proof). The ratio 2 = OCF evaluation parameter. I(G,2) always odd, so strand values (including even numbers) are NOT directly realizable as independence polynomial values — connection is analogical, not functorial.
+- **H=63 analysis**: 63=9×7=3²×7. All disconnected factorizations blocked by THM-201/202. Connected graphs with I(G,2)=63 DO EXIST at n=7 (many with 11 edges, α=3, various degree sequences). So H=63 impossibility requires proving these specific graphs cannot be Ω(T).
+- **x=2 unique integer point**: The recurrence I(P_k,x) has characteristic roots (1±√(1+4x))/2. At x=2, both roots are integers (2,-1) — unique among positive integers.
+- **Period-6 universality**: Fibonacci mod 4 and Pascal mod 2 both give period-6 structures through LCM(2,3).
 
-**Scripts created:**
-- fibonacci_23_composition.py — Pisano periods, Fibonacci word, unified recurrence
-- fibonacci_tournament_deep_23.py — golden ratio in spectra, Fibonacci tournaments, Zeckendorf
-- braid_writhe_period6_23.py — braid operations, writhe statistics, period-6 structure
-- fibonacci_grand_synthesis_23.py — master alignment table, 21 nexus, eigenvalue landscape
-- oblong_fugacity_23.py — integer eigenvalue hierarchy, k-tournament conjecture
-- categorical_fibonacci_23.py — independence complex topology, Fibonacci category, Jordan block
-
-**Hypotheses added:** HYP-1297 through HYP-1313 (17 new hypotheses)
-
-**Unresolved threads:**
-- Complete proof that H=21 is forbidden for all n (3 remaining Ω graph cases)
-- k-tournament interpretation at x=6 (k=2) — what combinatorial objects do they count?
-- Natural transformation between Rep_1 and Rep_2 (diverges on paths — no simple map)
-- Full braid group action on tournament space
-
----
+**New contributions:** HYP-1293-1296, simplex_cuboid_packing.py, demicube_continuation.py, category_three_strand.py, h63_forbidden_analysis.py, h63_connected_graphs.py
+**Unresolved:** H=63 connected case (need to check if 11-edge graphs can be Ω(T)). H=21 remaining 3 cases. Full n=7 exhaustive I=63 count.
 
 ## opus-2026-03-14-S71g — 2026-03-14: THM-200/201/202 — H=7 impossible, K₃ component impossible, P₄ Omega impossible
 

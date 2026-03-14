@@ -930,3 +930,42 @@ When computing I(Ω, x):
 ### Lesson
 
 The definition says "vertices are **directed** odd cycles." For 3-cycles in tournaments, vertex-set = directed cycle (1-to-1). For k≥5 cycles, a k-vertex tournament subtournament can have multiple Hamiltonian cycles. Always enumerate directed cycles explicitly.
+
+---
+
+## MISTAKE-024: H=63 Falsely Claimed Permanently Forbidden
+
+**Date discovered:** 2026-03-14
+**Found by:** opus-2026-03-14-S71h (cross-referencing S86 broadcast with prior results)
+**Affects:** HYP-1303, MSG-218 (S86 broadcast), MSG-139 (S86 to kind-pasteur)
+
+### What was assumed
+
+S86 claimed: "H=63 FORBIDDEN: 63=7×9=I(K₃,2)×I(2K₁,2). Requires K₃ component in Ω, impossible by THM-201." This was marked CONFIRMED as HYP-1303.
+
+### Why it was wrong
+
+The argument only blocks DISCONNECTED conflict graphs where Ω = K₃ ⊔ 2K₁. But Ω can be a CONNECTED graph with I(Ω,2)=63. Multiple prior sessions had already established:
+- S65-c (MSG-084): "H=63,107,119,149 (the n=7-specific gaps) are ALL achieved at n=8"
+- S71f (MSG-197): "63 achievable at n≥8"
+- S71g (MSG-201): "H=63 found at n=8 (27/100k)"
+- hspectrum_density.out: "63 = 7*9 -- ACHIEVED at n=8 (not permanent)"
+
+The S86 session re-derived an incomplete argument without checking these earlier verified results.
+
+### The correct framing
+
+H=63 is NOT permanently forbidden. It is a temporary gap at n=7 (like 107, 119, 149) that IS achieved at n=8. The ONLY permanently forbidden H values proved so far are {7, 21}.
+
+The disconnected decomposition 63=7×9 is correctly blocked, but connected Ω graphs with I=63 exist and can apparently be realized as Ω(T) at n=8.
+
+### Impact
+
+- HYP-1303 changed to REFUTED
+- HYP-1295 changed to REFUTED
+- The S86 broadcast claim "all three known forbidden values {7,21,63} are now explained" is WRONG
+- Only {7, 21} are explained as permanently forbidden
+
+### Lesson
+
+Always check prior session results before claiming a new proof. The H-spectrum density analysis (hspectrum_density.out) had already settled this question computationally. Cross-reference before broadcasting claims.
