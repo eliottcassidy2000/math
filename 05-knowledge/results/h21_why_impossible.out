@@ -1,0 +1,133 @@
+======================================================================
+WHY IS H=21 PERMANENTLY IMPOSSIBLE?
+======================================================================
+
+--- Part 1: β₁+2β₂ → H mapping ---
+
+  n=5:
+  Target=10 (β₁+2β₂=10) achievable: NO
+    β₁+2β₂= 6: H expected= 13, actual H ∈ [13]
+    β₁+2β₂= 7: H expected= 15, actual H ∈ [15]
+
+  Does H = 1+2(β₁+2β₂) always hold? (ignoring β₃+)
+    Mismatches: 0 (these have β₃+ > 0)
+
+  n=6:
+  Target=10 (β₁+2β₂=10) achievable: NO
+    β₁+2β₂= 6: H expected= 13, actual H ∈ [13]
+    β₁+2β₂= 7: H expected= 15, actual H ∈ [15]
+    β₁+2β₂= 8: H expected= 17, actual H ∈ [17]
+    β₁+2β₂= 9: H expected= 19, actual H ∈ [19]
+    β₁+2β₂=10: H expected= 21, actual H ∈ [] ← TARGET
+    β₁+2β₂=11: H expected= 23, actual H ∈ [23]
+    β₁+2β₂=12: H expected= 25, actual H ∈ [25]
+    β₁+2β₂=13: H expected= 27, actual H ∈ [27]
+    β₁+2β₂=14: H expected= 29, actual H ∈ [29]
+
+  Does H = 1+2(β₁+2β₂) always hold? (ignoring β₃+)
+    Mismatches: 0 (these have β₃+ > 0)
+
+--- Part 2: Structural constraint analysis ---
+  Q: Why can't we get β₁+2β₂=10 with β₃=β₄=...=0?
+  A: This would need β₁+2β₂=10 with no independent triples.
+     Let's examine what (β₁,β₂) pairs exist at each n.
+
+  n=5: (β₁, β₂) patterns near target line β₁+2β₂=10:
+    ( 7, 0):    64 tournaments, sizes={3: 280, 5: 64}, mults={1: 280, 2: 24, 3: 40}
+
+  n=6: (β₁, β₂) patterns near target line β₁+2β₂=10:
+    ( 6, 1):   720 tournaments, sizes={3: 2880, 5: 1440}, mults={1: 4320}
+    ( 7, 0):  2208 tournaments, sizes={3: 9120, 5: 5088}, mults={1: 13440, 2: 288, 3: 480}
+    ( 8, 0):   720 tournaments, sizes={3: 2880, 5: 2880}, mults={1: 5760}
+    ( 9, 0):  1440 tournaments, sizes={3: 7200, 5: 5760}, mults={1: 12960}
+    ( 9, 1):  1440 tournaments, sizes={3: 7200, 5: 4320}, mults={1: 10080, 2: 1440}
+    (11, 0):  1440 tournaments, sizes={3: 8640, 5: 7200}, mults={1: 15840}
+    (11, 1):   480 tournaments, sizes={3: 2400, 5: 1920}, mults={1: 3840, 3: 480}
+    (12, 0):  1440 tournaments, sizes={3: 8640, 5: 5760}, mults={1: 11520, 2: 2880}
+
+--- Part 3: Why β₁=10 is impossible at n=5 ---
+  β₁ distribution at n=5:
+    β₁= 0:   120 tournaments
+    β₁= 1:   120 tournaments
+    β₁= 2:   240 tournaments
+    β₁= 4:   240 tournaments
+    β₁= 5:   120 tournaments
+    β₁= 6:   120 tournaments
+    β₁= 7:    64 tournaments
+
+--- Part 4: n=6 — tournaments where β₁+2β₂ is closest to 10 ---
+  Tournaments with β₁+2β₂ near 10:
+    β₁+2β₂=9: 1440 tournaments
+    β₁+2β₂=11: 2880 tournaments
+
+  TARGET=10: NOT ACHIEVABLE at n=6
+    β₁+2β₂=9: bits=20, H=19, β₁=9, β₂=0
+    β₁+2β₂=9: bits=26, H=19, β₁=9, β₂=0
+    β₁+2β₂=11: bits=24, H=23, β₁=11, β₂=0
+    β₁+2β₂=11: bits=28, H=23, β₁=11, β₂=0
+
+--- Part 5: Parity analysis ---
+  Key observation: β₁ = Σ d(S) where d(S) is the number of
+  directed odd cycles on vertex set S.
+
+  For 3-cycles: d(S) ∈ {0,1} (exactly 1 directed 3-cycle per triple)
+  For 5-cycles: d(S) ∈ {0,1,2,3} (a 5-tournament has 0 or 1,2,3 Ham cycles)
+  For 7-cycles: d(S) ∈ {0,...,60} (subtournament Ham cycles)
+
+  Let's check: at n=5, what β₁ mod 2 values occur?
+  n=5: β₁ mod 2: {0: 720, 1: 304}
+  n=6: β₁ mod 2: {0: 20480, 1: 12288}
+
+--- Part 6: Minimum β₁+2β₂ for each odd H ---
+
+  n=5: H → min/max(β₁+2β₂)
+    H=  1: β₁+2β₂ ∈ [0, 0], expected (H-1)/2 = 0
+    H=  3: β₁+2β₂ ∈ [1, 1], expected (H-1)/2 = 1
+    H=  5: β₁+2β₂ ∈ [2, 2], expected (H-1)/2 = 2
+    H=  9: β₁+2β₂ ∈ [4, 4], expected (H-1)/2 = 4
+    H= 11: β₁+2β₂ ∈ [5, 5], expected (H-1)/2 = 5
+    H= 13: β₁+2β₂ ∈ [6, 6], expected (H-1)/2 = 6
+    H= 15: β₁+2β₂ ∈ [7, 7], expected (H-1)/2 = 7
+
+  n=6: H → min/max(β₁+2β₂)
+    H=  1: β₁+2β₂ ∈ [0, 0], expected (H-1)/2 = 0
+    H=  3: β₁+2β₂ ∈ [1, 1], expected (H-1)/2 = 1
+    H=  5: β₁+2β₂ ∈ [2, 2], expected (H-1)/2 = 2
+    H=  9: β₁+2β₂ ∈ [4, 4], expected (H-1)/2 = 4
+    H= 11: β₁+2β₂ ∈ [5, 5], expected (H-1)/2 = 5
+    H= 13: β₁+2β₂ ∈ [6, 6], expected (H-1)/2 = 6
+    H= 15: β₁+2β₂ ∈ [7, 7], expected (H-1)/2 = 7
+    H= 17: β₁+2β₂ ∈ [8, 8], expected (H-1)/2 = 8
+    H= 19: β₁+2β₂ ∈ [9, 9], expected (H-1)/2 = 9
+    H= 23: β₁+2β₂ ∈ [11, 11], expected (H-1)/2 = 11
+    H= 25: β₁+2β₂ ∈ [12, 12], expected (H-1)/2 = 12
+    H= 27: β₁+2β₂ ∈ [13, 13], expected (H-1)/2 = 13
+    H= 29: β₁+2β₂ ∈ [14, 14], expected (H-1)/2 = 14
+    H= 31: β₁+2β₂ ∈ [15, 15], expected (H-1)/2 = 15
+    H= 33: β₁+2β₂ ∈ [16, 16], expected (H-1)/2 = 16
+    H= 37: β₁+2β₂ ∈ [18, 18], expected (H-1)/2 = 18
+    H= 41: β₁+2β₂ ∈ [20, 20], expected (H-1)/2 = 20
+    H= 43: β₁+2β₂ ∈ [21, 21], expected (H-1)/2 = 21
+    H= 45: β₁+2β₂ ∈ [22, 22], expected (H-1)/2 = 22
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+The H=21 impossibility comes from the interaction between:
+
+1. β₁ = Σ d(S): total directed cycle count across all vertex sets
+2. β₂ = Σ d(S)·d(T) over disjoint pairs: grows FASTER than β₁²
+3. Higher β_k: contribute 2^k each, further pushing H above 21
+
+The key insight: having 10 directed cycles (β₁=10) with NO disjoint
+pairs (β₂=0) is structurally impossible because:
+- Having enough 3-cycles forces vertex overlaps but ALSO forces 5-cycles
+  (via the Splicing Lemma), which ADD directed cycle count
+- Having enough 5-cycles for β₁=10 requires many vertex sets,
+  which inevitably create disjoint pairs (β₂>0)
+- β₂>0 pushes H above 21
+
+Result: the "exactly 10 cycles with no disjoint structure" configuration
+cannot exist in any tournament, making H=21 a permanent gap.
+

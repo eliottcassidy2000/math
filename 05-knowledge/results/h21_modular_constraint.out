@@ -1,0 +1,87 @@
+======================================================================
+MODULAR CONSTRAINT BLOCKING H=21
+======================================================================
+
+--- Part 1: β₁ = t₃ + d₅ decomposition at n=5 ---
+  (t₃, d₅) → β₁ at n=5:
+    t₃=0, d₅=0: β₁=0, count=120
+    t₃=1, d₅=0: β₁=1, count=120
+    t₃=2, d₅=0: β₁=2, count=240
+    t₃=3, d₅=1: β₁=4, count=240
+    t₃=4, d₅=1: β₁=5, count=120
+    t₃=4, d₅=2: β₁=6, count=120
+    t₃=4, d₅=3: β₁=7, count=40
+    t₃=5, d₅=2: β₁=7, count=24
+
+  β₁ decompositions:
+    β₁=0: from [(0, 0)]
+    β₁=1: from [(1, 0)]
+    β₁=2: from [(2, 0)]
+    β₁=4: from [(3, 1)]
+    β₁=5: from [(4, 1)]
+    β₁=6: from [(4, 2)]
+    β₁=7: from [(4, 3), (5, 2)]
+
+--- Part 2: The β₁=3 gap at n=5 ---
+  β₁=3 would need (t₃,d₅) with t₃+d₅=3:
+    (3,0): t₃=3 forces d₅≥1 (HYP-1022 — 3 directed 3-cycles force a 5-cycle)
+    (2,1): d₅=1 means one 5-set has exactly 1 directed Ham cycle
+    (1,2): d₅=2 means a 5-set has 2 directed Ham cycles
+    (0,3): d₅=3 means a 5-set has 3 directed Ham cycles
+
+  Do (2,1), (1,2), (0,3) exist?
+    (2,1): DOES NOT EXIST (0 tournaments)
+    (1,2): DOES NOT EXIST (0 tournaments)
+    (0,3): DOES NOT EXIST (0 tournaments)
+    (3,0): DOES NOT EXIST (0 tournaments)
+
+--- Part 3: β₁+2β₂ decomposition at n=6 ---
+  β₁+2β₂ distribution at n=6 (near 10):
+    β₁+2β₂= 7:  2208 tournaments
+    β₁+2β₂= 8:  1440 tournaments
+    β₁+2β₂= 9:  1440 tournaments
+    β₁+2β₂=10:     0 tournaments ← TARGET (H=21)
+    β₁+2β₂=11:  2880 tournaments
+    β₁+2β₂=12:  1440 tournaments
+    β₁+2β₂=13:   480 tournaments
+
+  β₁+2β₂=9 decompositions (t₃, d₅, β₂):
+    t₃=5, d₅=4, β₂=0 → β₁+2β₂=9: 1440 tournaments
+
+  β₁+2β₂=10: NO TOURNAMENTS
+
+  β₁+2β₂=11 decompositions (t₃, d₅, β₂):
+    t₃=5, d₅=4, β₂=1 → β₁+2β₂=11: 1440 tournaments
+    t₃=6, d₅=5, β₂=0 → β₁+2β₂=11: 1440 tournaments
+
+--- Part 4: t₃ distribution at n=6 ---
+  t₃ values at n=6: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    t₃= 0:   720 tournaments
+    t₃= 1:   960 tournaments
+    t₃= 2:  2240 tournaments
+    t₃= 3:  2880 tournaments
+    t₃= 4:  6240 tournaments
+    t₃= 5:  3648 tournaments
+    t₃= 6:  8640 tournaments
+    t₃= 7:  4800 tournaments
+    t₃= 8:  2640 tournaments
+
+  Key: C(6,3)=20, each triple contributes exactly 1 directed 3-cycle
+  so t₃ = number of 'cyclic triples' in the tournament
+  t₃ ranges from 0 (transitive) to 10 (maximum for n=6)
+
+--- Part 5: Why β₁+2β₂ skips 10 ---
+  At n=6 with no 7-cycles (n<7):
+  β₁ = t₃ + d₅
+  β₂ = Σ_{disjoint (S,T)} d(S)·d(T)
+
+  For β₁+2β₂=10 we need:
+  Case β₂=0: β₁=10, so t₃+d₅=10. Max t₃ at n=6 is 10.
+  Case β₂=1: β₁=8, so t₃+d₅=8, plus exactly 1 disjoint weighted pair
+  etc.
+
+  But t₃+d₅=10 with β₂=0 means all cycle vertex sets intersect.
+  At t₃=10 (max), does d₅=0 and β₂=0 hold?
+
+  Scanning all n=6 tournaments with β₁+2β₂ in [8,12]:
+  (If no FOUND message, β₁+2β₂=10 is impossible at n=6)
