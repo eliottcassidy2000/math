@@ -1,0 +1,331 @@
+======================================================================
+PART 1: THE 30-EDGE TRINITY
+======================================================================
+
+Three graphs with 30 = h(E₈) = 2·3·5 edges:
+
+                 Graph   V   E   F  Reg   χ      Aut
+-------------------------------------------------------
+           Icosahedron  12  30  20    5   4      120
+          Dodecahedron  20  30  12    3   4      120
+        J(5,2) = L(K₅)  10  30   —    6   5      120
+
+ALL THREE have |Aut| = 120 = |BI| = |S₅|!
+This is because:
+  Icosahedron: Aut = A₅ × Z₂, |Aut| = 120
+  Dodecahedron: dual of icosahedron, same Aut
+  J(5,2) = complement of K(5,2): Aut = S₅, |S₅| = 120
+
+Vertex count sum: 12 + 20 + 10 = 42
+  42 = f(9) = (9-2)(9-3) = 7·6
+  42 = 6·7 = h(G₂)·rank(E₇)
+
+Edge counts: all 30 = h(E₈)
+  Icosahedron: 30 = 12·5/2 = V·deg/2
+  Dodecahedron: 30 = 20·3/2 = V·deg/2
+  J(5,2): 30 = 10·6/2 = V·deg/2
+
+V·degree = 60 = |A₅| for all three!
+  60 = half of |BI| = |S₅|/2
+  60 = order of the icosahedral rotation group
+
+Duality structure:
+  Icosahedron (V=12,F=20) ↔ Dodecahedron (V=20,F=12)
+  They are DUAL polyhedra
+  12 = h(E₆) = h(F₄)
+  20 = f(7) = 5·4 = (KEY₁+KEY₂)·KEY₁²
+  J(5,2): V=10, no faces (not planar)
+
+======================================================================
+PART 2: WHY 30 = THE UNIVERSAL EDGE COUNT
+======================================================================
+
+30 = 2·3·5 has unique arithmetic properties:
+
+  30 = LCM(1,2,3,4,5,6) = LCM(1,...,KEY₁·KEY₂)
+  30 = primorial(5) = product of primes up to 5
+  φ(30) = 8 = rank(E₈)
+  σ(30) = 1+2+3+5+6+10+15+30 = 72
+  τ(30) = 8 = number of divisors = rank(E₈)
+
+Divisors of 30: [1, 2, 3, 5, 6, 10, 15, 30]
+  Count: 8 = rank(E₈)
+  Sum: 72 = 72 = 8·9 = rank(E₈)·CS_boundary
+
+σ(30) = 72 = f(11) = (11-2)(11-3) = 9·8
+  = rank(E₈) · CS_boundary
+  = KEY₁³ · KEY₂²
+
+Divisor lattice of 30:
+       30
+      /|\
+     / | \
+    6 10 15
+   /|  |  |\
+  2 3  5   \
+   \|  |  /
+    1 (root)
+
+Divisors as tournament/Lie data:
+    1: φ(1) =  1, 30/1 = 30  unit
+    2: φ(2) =  1, 30/2 = 15  KEY₁ = det(E₇)
+    3: φ(3) =  2, 30/3 = 10  KEY₂ = det(E₆)
+    5: φ(5) =  4, 30/5 =  6  KEY₁+KEY₂ = #exceptionals
+    6: φ(6) =  2, 30/6 =  5  KEY₁·KEY₂ = h(G₂)
+   10: φ(10) =  4, 30/10 =  3  #Petersen vertices
+   15: φ(15) =  8, 30/15 =  2  #Petersen edges
+   30: φ(30) =  8, 30/30 =  1  h(E₈)
+
+Möbius function on divisors of 30:
+  μ( 1) =  1
+  μ( 2) = -1
+  μ( 3) = -1
+  μ( 5) = -1
+  μ( 6) =  1
+  μ(10) =  1
+  μ(15) =  1
+  μ(30) = -1
+  Σ μ(d) = 0
+  Σ μ(d)·(30/d) = 8 = φ(30)
+
+======================================================================
+PART 3: THE SIMPLEX PACKING CONNECTION
+======================================================================
+
+Simplex-in-cube packing ratios:
+
+  n=1: simplex/cube = 1/1! = 1.00000000
+  n=2: simplex/cube = 1/2! = 0.50000000
+  n=3: simplex/cube = 1/3! = 0.16666667
+  n=4: simplex/cube = 1/4! = 0.04166667
+  n=5: simplex/cube = 1/5! = 0.00833333
+  n=6: simplex/cube = 1/6! = 0.00138889
+  n=7: simplex/cube = 1/7! = 0.00019841
+
+Cube tessellation by simplices:
+  n=2: 2 = KEY₁ triangles tile a square
+  n=3: 6 = KEY₁·KEY₂ tetrahedra tile a cube
+  n=4: 24 = |BT| 4-simplices tile a 4-cube
+  n=5: 120 = |BI| 5-simplices tile a 5-cube
+  n=6: 720 = |S₆| = 6! 6-simplices tile a 6-cube
+
+THE SIMPLEX COUNT = n! IS THE McKAY GROUP ORDER:
+  n=3: 3! = 6 (dihedral)
+  n=4: 4! = 24 = |BT| → E₆
+  n=5: 5! = 120 = |BI| → E₈
+  n=6: 6! = 720 = |BT|·h(E₈)
+
+  The n=5 case is special:
+  To tile a 5-cube with simplices requires |BI| = 120 simplices
+  And |BI| is the McKay group for E₈!
+
+The n=9 simplex packing:
+  9! = 362880 simplices to tile a 9-cube
+  362880 = 362880
+  = 2^7·3^4·5^1·7^1
+  = KEY₁^7 · KEY₂^4 · (KEY₁+KEY₂) · (KEY₁²+KEY₂)
+
+  9!/h(E₈) = 362880/30 = 12096
+  = 12096 = 12096 = 2^5 · 3^3 · 14 = ... 
+  9!/|BI| = 362880/120 = 3024 = 3024
+  9!/|BT| = 362880/24 = 15120 = 15120 = C(10,2)·... 
+
+======================================================================
+PART 4: THE (2,3,5) RECURRENCE BACKBONE — DEFINITIVE
+======================================================================
+
+THE RECURRENCE BACKBONE:
+
+Layer 1: The characteristic equation
+  z² - 5z + 6 = 0
+  Roots: 2, 3
+  Sum: 5, Product: 6, Discriminant: 1
+
+Layer 2: The recurrence
+  a(n) = 5·a(n-1) - 6·a(n-2)
+  General solution: A·2ⁿ + B·3ⁿ
+  Asymptotic: 3ⁿ dominates (KEY₂ wins)
+
+Layer 3: The k-nacci limits
+  Standard k-nacci: root → 2 = KEY₁ as k→∞
+  Weight-2 k-nacci: root → 3 = KEY₂ as k→∞
+  Weight-w k-nacci: root → w+1 as k→∞
+  The GAP between limits: KEY₂ - KEY₁ = 1
+
+Layer 4: The polynomial evaluations
+  f(n) = (n-2)(n-3) bridges numbers to Lie/tournament data:
+    f( 0) =   6 = h(G₂)
+    f( 1) =   2 = KEY₁
+    f( 5) =   6 = h(G₂) [palindrome]
+    f( 6) =  12 = h(E₆) = T(5)
+    f( 8) =  30 = h(E₈)
+    f(10) =  56 = T(6) = dim(V_E₇)
+    f(11) =  72 = rank(E₈)·CS_boundary
+
+Layer 5: The sieve
+  [1, 30) splits into two complementary parts:
+  Tournament side: multiples of {2,3,5} → 21 numbers
+  Exponent side: coprime to 30 → 8 = rank(E₈) numbers
+  E₈ exponents = {1,7,11,13,17,19,23,29} = totatives of 30
+
+Layer 6: The Petersen graph K(5,2)
+  10 = 2·5 vertices, 15 edges, 30 non-edges = h(E₈)
+  Eigenvalues {3, 1, -2} = {KEY₂, 1, -KEY₁}
+  |Aut| = 120 = |BI| → E₈
+  |det(A)| = 48 = |BO| → E₇
+  f(10) = 56 = T(6) = dim(V_E₇)
+
+Layer 7: The 30-edge trinity
+  Icosahedron (12V, 30E, 20F)
+  Dodecahedron (20V, 30E, 12F)
+  J(5,2) (10V, 30E)
+  All with |Aut| = 120 = |BI|
+  Vertex sum: 12+20+10 = 42 = f(9)
+
+Layer 8: The boundary
+  1/2+1/3+1/5 = 31/30 > 1 → E₈ exists
+  1/2+1/3+1/7 < 1 → NO E₉
+  The (2,3,5) triple is the last spherical triple
+  EQUIVALENT: the Petersen graph K(5,2) exists but K(7,2) doesn't
+  work the same way (K(7,2) has different properties)
+
+======================================================================
+PART 5: THE DIVISOR SUM σ(30) = 72 = f(11)
+======================================================================
+
+72 = σ(30) = sum of divisors of h(E₈):
+  72 = 8·9 = rank(E₈) · CS_boundary
+  72 = f(11) = (11-2)(11-3)
+  72 = |W(E₆)|/6! = 51840/720
+  72 = |W(E₇)|/8! = 2903040/40320
+  72 = 2³·3² = KEY₁³·KEY₂²
+
+f(universal E-exponents):
+  f(1) = (1-2)(1-3) = -1·-2 = 2
+  f(7) = (7-2)(7-3) = 5·4 = 20
+  f(11) = (11-2)(11-3) = 9·8 = 72
+
+f at universal E-exponents: {2, 20, 72}
+  2 = KEY₁
+  20 = KEY₁² · (KEY₁+KEY₂) = 4·5
+  72 = KEY₁³ · KEY₂² = 8·9
+  Pattern: KEY₁^k · product, with k = 1, 2, 3
+
+======================================================================
+PART 6: THE ICOSAHEDRON-DODECAHEDRON DUALITY
+======================================================================
+
+The 12-20-30 triangle:
+  12 = h(E₆) = h(F₄) = T(5) = KEY₁²·KEY₂
+  20 = f(7) = KEY₁²·(KEY₁+KEY₂)
+  30 = h(E₈) = KEY₁·KEY₂·(KEY₁+KEY₂)
+
+  12 + 20 = 32 = KEY₁⁵
+  12 · 20 = 240 = f(18) = dim(so(16))
+  30² / (12·20) = 900/240 = 3.75
+  = 15/4 = (KEY₂·(KEY₁+KEY₂))/KEY₁²
+
+12 · 20 = 240 = number of roots of E₈!
+  E₈ has 240 roots (120 positive + 120 negative)
+  = V(Icos) · V(Dodec)
+  = h(E₆) · f(7)
+
+E₈ roots and the icosahedron:
+  The 240 roots of E₈ project to vertices of two concentric
+  icosahedra (12+12=24 vertices in R³)
+  The remaining 240-24 = 216 project to other polytopes
+  But the icosahedral shadow is real!
+
+NON-COINCIDENCE:
+  #roots(E₈) = 240 = V(icos) · V(dodec) = 12 · 20
+  The E₈ root system projects to icosahedral geometry
+  This is the H₃ (non-crystallographic) Coxeter connection
+  H₃ has Coxeter number... well, it's non-crystallographic
+  but its diagram is o---o---o with labels 5,3
+  The label 5 = KEY₁+KEY₂ appears!
+
+======================================================================
+PART 7: THE n=9 TRANSITION — 3²=3×3
+======================================================================
+
+n=9 summary:
+  9 = KEY₂² = 3²
+  C(9,2) = 36 = (KEY₁·KEY₂)²
+  #3-cycles in regular T₉ = 30 = h(E₈)
+  f(9) = 42 = V(icos)+V(dodec)+V(Petersen)
+  9 = h(E₇)/det(E₇) = CS boundary
+  9 = h∨(F₄) = dual Coxeter number
+  9 = rank(E₈)+1
+
+3×3 in the exceptional Jordan algebra J₃(O):
+  3×3 Hermitian matrices over octonions
+  Diagonal: 3 real entries → dim 3
+  Off-diagonal: 3 octonion entries → dim 3·8 = 24 = |BT|
+  Total: dim(J₃(O)) = 27 = KEY₂³ = dim(V_E₆)
+
+  27 + 2 = 29 = h(E₈)-1 (largest E₈ exponent)
+  27 - 1 = 26 = 2·13
+
+Structure group of J₃(O):
+  Aut(J₃(O)) = F₄ (rank 4, dim 52)
+  Str(J₃(O)) = E₆ (rank 6, dim 78)
+  dim(E₆)/dim(F₄) = 78/52 = 3/2 = KEY₂/KEY₁
+
+3×3 parallel:
+  Tournament T₉: 3×3 grid of vertices
+    'Diagonal': 3 row-tournaments (each has T(3)=2 types)
+    'Off-diagonal': 3 inter-row blocks (9 arcs each)
+    Total arcs: 3·3 + 3·9 = 9+27 = 36 = C(9,2) ✓
+
+  Jordan J₃(O): 3×3 Hermitian matrix
+    Diagonal: 3 real entries (dim 3)
+    Off-diagonal: 3 octonion entries (dim 24)
+    Total dim: 3+24 = 27 = dim(V_E₆)
+
+Off-diagonal/diagonal ratio:
+  Tournament: 9/3 = 3 = KEY₂
+  Jordan: 8/1 = 8 = rank(E₈)
+  Ratio of ratios: 8/3 = rank(E₈)/KEY₂
+
+======================================================================
+PART 8: GRAND SYNTHESIS — THE (2,3,5) UNIVERSE
+======================================================================
+
+EVERYTHING FLOWS FROM (2,3,5):
+
+ARITHMETIC:
+  2·3·5 = 30 = h(E₈)
+  φ(30) = 8 = rank(E₈)
+  σ(30) = 72 = f(11)
+  τ(30) = 8 = rank(E₈)
+
+GEOMETRY:
+  (2,3,3) → E₆ (tetrahedron)
+  (2,3,4) → E₇ (cube/octahedron)
+  (2,3,5) → E₈ (dodecahedron/icosahedron)
+  30-edge trinity: icos, dodec, J(5,2)
+  V(icos)·V(dodec) = 12·20 = 240 = #roots(E₈)
+
+RECURRENCES:
+  z²-5z+6 = (z-2)(z-3)
+  k-nacci → 2, weight-2 → 3
+  Bifurcation at log(3/2)
+  3ⁿ-2ⁿ = corner piece sequence
+
+COMBINATORICS:
+  Petersen K(5,2): 10V, 15E, complement 30E
+  f(10) = 56 = T(6) = dim(V_E₇)
+  f(2k) = T(m) at k ∈ {2,3,5}
+  T(n) > n! first at n=10
+
+SIEVE:
+  Tournament theory uses ×{2,3,5}
+  Lie exponents avoid ×{2,3,5}
+  E₈ exponents = totatives of 30
+  The two theories partition all integers
+
+THE ONE-LINE SUMMARY:
+  The triple (2,3,5) generates the tournament polynomial,
+  the ADE classification, and the Petersen graph,
+  making the Complementary Sieve the fundamental structure
+  underlying both tournament theory and Lie theory.
