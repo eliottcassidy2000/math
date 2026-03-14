@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71e (cont.) — 2026-03-14: Simplex-Cuboid Packing Framework
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71e
+**Summary of work:**
+Explored the user's insight: simplices as (x+1)^n, cuboids as (x+2)^n, packing simplices inside cuboids. Built comprehensive framework connecting this to tournament theory, k-nacci limits, Walsh structure, and Hadamard matrices. Also verified H=7 impossible at n=7.
+
+**Critical findings:**
+1. **Cuboid = binomial sum of simplices** (HYP-1000): (x+2)^n = sum C(n,k)(x+1)^k. At x=1: 3^n = sum C(n,k)2^k.
+2. **Simplex = alternating sum of cuboid** (HYP-1001): (x+1)^n = sum C(n,k)(-1)^{n-k}(x+2)^k. This is inclusion-exclusion/Möbius inversion.
+3. **Corner pieces = odd cycles** (HYP-1005): I(3)-I(2) = sum α_k(3^k-2^k). Corner piece sizes 1,5,19,65,211,...
+4. **n=3 unique "halves" property** (HYP-1003): Regular simplex in cube gives 4=2^{n-1} corners, each half the simplex volume. ONLY works at n=3. At n=7: corners are 2.4× the simplex.
+5. **Hadamard connection** (HYP-1004): Regular simplex inscribable in {0,1}^n at n=3,7,11,15,... (≡3 mod 4).
+6. **n! = top finite difference** (HYP-1002): Δ^n[(r+1)^n] = n! always. Connects hedroids to Stirling numbers.
+7. **EGF factorization** (HYP-1007): e^{3x} = e^{2x}·e^x. Cuboid = simplex ⊗ correction.
+8. **9=3² nested packing** (HYP-1008): (x+2)^9 = ((x+2)^3)^3 gives hierarchical simplex decomposition.
+9. **H=7 impossible at n=7** (strengthens HYP-992): For ALL 6 dc3=3 score sequences, H∈{9,15} only. α₂>0 forced.
+10. **Effective dimension** (HYP-1006): m=log(H)/log(3) measures "simplex-ness". 7 distinct values at n=5.
+
+**New hypotheses:** HYP-1000 through HYP-1008 (9 hypotheses, all CONFIRMED)
+**New scripts:** simplex_cuboid_packing.py, simplex_in_cube_higher.py, simplex_cube_hadamard.py, simplex_cuboid_789.py, packing_both_directions.py, hedroid_interpolation.py, h7_check.py, h7_check_v2.py, h7_check_v3.py
+
+**Key connections established:**
+- k-nacci → 2 (simplex limit) ↔ I(Ω,2)=H ↔ (x+1)^n at x=1
+- doubled k-nacci → 3 (cuboid limit) ↔ I(Ω,3) ↔ (x+2)^n at x=1
+- Ratio 3/2 appears everywhere: volume, Walsh, k-nacci, corner pieces
+- Tournament cyclicity spectrum: transitive (I=1) to regular (I maximal)
+
 ## opus-2026-03-14-S74 — 2026-03-14: Cyclotomic Tournament Dictionary, The Forbidden 3, Modular Theory
 
 **Account:** opus
