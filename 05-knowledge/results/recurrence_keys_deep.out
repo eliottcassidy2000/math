@@ -1,0 +1,634 @@
+======================================================================
+PART 1: THE FUNDAMENTAL RECURRENCE z² = 5z - 6
+======================================================================
+
+  z² - 5z + 6 = (z-2)(z-3) = 0
+
+  The general solution: a(n) = A·2ⁿ + B·3ⁿ
+
+  Special sequences:
+  a(n) = 2ⁿ:     1, 2, 4,  8, 16,  32,  64, 128, 256, 512, 1024 ...
+  a(n) = 3ⁿ:     1, 3, 9, 27, 81, 243, 729 ...
+  a(n) = 3ⁿ-2ⁿ:  0, 1, 5, 19, 65, 211, 665 ...
+  a(n) = 2·3ⁿ-2ⁿ: 1, 4, 14, 46, 146, 454 ... (sum 3^k+2^k?)
+
+  2^n: [1, 2, 4, 8, 16, 32, 64, 128]... satisfies z²=5z-6? True
+  3^n: [1, 3, 9, 27, 81, 243, 729, 2187]... satisfies z²=5z-6? True
+  3^n-2^n: [0, 1, 5, 19, 65, 211, 665, 2059]... satisfies z²=5z-6? True
+  5^n: [1, 5, 25, 125, 625, 3125, 15625, 78125]... satisfies z²=5z-6? False
+  6^n: [1, 6, 36, 216, 1296, 7776, 46656, 279936]... satisfies z²=5z-6? False
+
+  5^n does NOT satisfy z²=5z-6. It satisfies z=5z-0? No.
+  5^n satisfies a(n)=5·a(n-1), a 1st-order recurrence.
+  6^n satisfies a(n)=6·a(n-1).
+
+  I(x) = 1 + α₁·x + α₂·x² + α₃·x³ + ...
+  Fixing α₂,α₃,..., I(x) is LINEAR in α₁.
+  So I(2) and I(3) are linear in α₁:
+    I(2) = (1+4α₂+8α₃+...) + 2α₁
+    I(3) = (1+9α₂+27α₃+...) + 3α₁
+
+  The RATIO I(3)/I(2) approaches 3/2 as α₁ → ∞
+  because the linear terms dominate: 3α₁/(2α₁) = 3/2
+
+======================================================================
+PART 2: k-NACCI SEQUENCES AND THE KEY 2
+======================================================================
+
+  FIBONACCI: a(n) = a(n-1) + a(n-2)
+    Ratio → φ = (1+√5)/2 ≈ 1.618
+
+  TRIBONACCI: a(n) = a(n-1) + a(n-2) + a(n-3)
+    Ratio → ≈ 1.839
+
+  k-NACCI: a(n) = a(n-1) + a(n-2) + ... + a(n-k)
+    Ratio → 2 as k → ∞
+
+  k= 2: ratio = 1.6180339887, |ratio-2| = 3.82e-01, (1/2)^k = 2.50e-01, err/(1/2)^k = 1.5279
+  k= 3: ratio = 1.8392867552, |ratio-2| = 1.61e-01, (1/2)^k = 1.25e-01, err/(1/2)^k = 1.2857
+  k= 4: ratio = 1.9275619755, |ratio-2| = 7.24e-02, (1/2)^k = 6.25e-02, err/(1/2)^k = 1.1590
+  k= 5: ratio = 1.9659482366, |ratio-2| = 3.41e-02, (1/2)^k = 3.12e-02, err/(1/2)^k = 1.0897
+  k= 6: ratio = 1.9835828434, |ratio-2| = 1.64e-02, (1/2)^k = 1.56e-02, err/(1/2)^k = 1.0507
+  k= 7: ratio = 1.9919641966, |ratio-2| = 8.04e-03, (1/2)^k = 7.81e-03, err/(1/2)^k = 1.0286
+  k= 8: ratio = 1.9960311797, |ratio-2| = 3.97e-03, (1/2)^k = 3.91e-03, err/(1/2)^k = 1.0160
+  k= 9: ratio = 1.9980294703, |ratio-2| = 1.97e-03, (1/2)^k = 1.95e-03, err/(1/2)^k = 1.0089
+  k=10: ratio = 1.9990186327, |ratio-2| = 9.81e-04, (1/2)^k = 9.77e-04, err/(1/2)^k = 1.0049
+  k=11: ratio = 1.9995104020, |ratio-2| = 4.90e-04, (1/2)^k = 4.88e-04, err/(1/2)^k = 1.0027
+  k=12: ratio = 1.9997555009, |ratio-2| = 2.44e-04, (1/2)^k = 2.44e-04, err/(1/2)^k = 1.0015
+  k=13: ratio = 1.9998778327, |ratio-2| = 1.22e-04, (1/2)^k = 1.22e-04, err/(1/2)^k = 1.0008
+  k=14: ratio = 1.9999389387, |ratio-2| = 6.11e-05, (1/2)^k = 6.10e-05, err/(1/2)^k = 1.0004
+
+  The error |ratio_k - 2| ≈ C · (1/2)^k
+  k-nacci approaches the KEY 2 at rate (1/2)^k
+
+======================================================================
+PART 3: WEIGHTED k-NACCI AND THE KEY 3
+======================================================================
+
+  WEIGHTED k-NACCI: a(n) = 2·a(n-1) + 2·a(n-2) + ... + 2·a(n-k)
+  Wait, what weight gives 3?
+
+  Consider: a(n) = c·[a(n-1) + a(n-2) + ... + a(n-k)]
+  The ratio r satisfies r^k = c·(r^{k-1} + ... + r + 1) = c·(r^k-1)/(r-1)
+  So r^k(r-1) = c(r^k-1)
+  As k→∞: r→c+1 (since r^k dominates)
+
+  c=1: standard k-nacci, ratio → 2 = 1+1
+  c=2: weighted k-nacci, ratio → 3 = 2+1
+  c=m: ratio → m+1
+
+  The KEY 2 is (1+1)-nacci, the KEY 3 is (2+1)-nacci!
+
+  k= 2: ratio = 2.7320508076, |ratio-3| = 2.68e-01, (2/3)^k = 4.44e-01, err/(2/3)^k = 0.6029
+  k= 3: ratio = 2.9196395658, |ratio-3| = 8.04e-02, (2/3)^k = 2.96e-01, err/(2/3)^k = 0.2712
+  k= 4: ratio = 2.9744492446, |ratio-3| = 2.56e-02, (2/3)^k = 1.98e-01, err/(2/3)^k = 0.1294
+  k= 5: ratio = 2.9916541014, |ratio-3| = 8.35e-03, (2/3)^k = 1.32e-01, err/(2/3)^k = 0.0634
+  k= 6: ratio = 2.9972413302, |ratio-3| = 2.76e-03, (2/3)^k = 8.78e-02, err/(2/3)^k = 0.0314
+  k= 7: ratio = 2.9990835473, |ratio-3| = 9.16e-04, (2/3)^k = 5.85e-02, err/(2/3)^k = 0.0157
+  k= 8: ratio = 2.9996949203, |ratio-3| = 3.05e-04, (2/3)^k = 3.90e-02, err/(2/3)^k = 0.0078
+  k= 9: ratio = 2.9998983585, |ratio-3| = 1.02e-04, (2/3)^k = 2.60e-02, err/(2/3)^k = 0.0039
+  k=10: ratio = 2.9999661260, |ratio-3| = 3.39e-05, (2/3)^k = 1.73e-02, err/(2/3)^k = 0.0020
+  k=11: ratio = 2.9999887095, |ratio-3| = 1.13e-05, (2/3)^k = 1.16e-02, err/(2/3)^k = 0.0010
+  k=12: ratio = 2.9999962366, |ratio-3| = 3.76e-06, (2/3)^k = 7.71e-03, err/(2/3)^k = 0.0005
+  k=13: ratio = 2.9999987455, |ratio-3| = 1.25e-06, (2/3)^k = 5.14e-03, err/(2/3)^k = 0.0002
+  k=14: ratio = 2.9999995818, |ratio-3| = 4.18e-07, (2/3)^k = 3.43e-03, err/(2/3)^k = 0.0001
+
+  The error |ratio_k - 3| ≈ C · (2/3)^k
+  Weighted k-nacci approaches the KEY 3 at rate (2/3)^k
+
+======================================================================
+PART 4: THE CONVERGENCE RATES AND TOURNAMENT STRUCTURE
+======================================================================
+
+  k-nacci → 2 at rate (1/2)^k
+  weighted k-nacci → 3 at rate (2/3)^k
+
+  Note: 1/2 and 2/3 are the RECIPROCALS of the keys!
+  The convergence rate of each key is the reciprocal of the other:
+    key 2: convergence rate = 1/3... no wait
+    rate to 2: (1/2)^k = inverse of key 2
+    rate to 3: (2/3)^k = (key 2)/(key 3)... the ratio of keys!
+
+  (1/2)^k: the binary shrinkage rate
+  (2/3)^k: the ternary-vs-binary residual rate
+
+  TOURNAMENT CONNECTION:
+  α_k decays roughly as (1/2)^k of α_1 in the 'generic' case.
+  This means the higher-order terms in I(x) = 1 + α₁x + α₂x² + ...
+  decay geometrically, making I(x) CONVERGENT for |x| < 2.
+
+  The radius of convergence of the 'normalized' independence
+  polynomial is related to the inverse of the max eigenvalue
+  of the conflict graph, which is bounded by α₁.
+
+======================================================================
+PART 5: 5 AND 6 — SUM AND PRODUCT OF KEYS
+======================================================================
+
+  5 = 2 + 3 (sum of keys)
+  6 = 2 · 3 (product of keys)
+  The characteristic polynomial: z² - 5z + 6 = 0
+
+  5 in tournament theory:
+    - n=5 is the FIRST non-trivial tournament size
+    - At n=5: H ∈ {1,3,5,9,11,13,15} — exactly 7 values
+    - The max H at n=5 is 15 = 2⁴-1 = 2^{n-1}-1
+    - I(5) = 1 + 5α₁ + 25α₂ + ... (discriminant Δ=1!)
+
+  6 in tournament theory:
+    - n=6 is where α₂ first appears (disjoint cycle pairs)
+    - At n=6: H does NOT determine (α₁,α₂)
+    - 6 = 3! = volume of 3-cube in simplex units
+    - The product 2·3=6 is the 'unit cell' of the tournament lattice
+
+  I(x) values at n=5 (α₂=0, I(x)=1+α₁·x):
+     H   α₁   I(5)   I(6) I(5)mod6 I(6)mod5
+     1    0      1      1        1        1
+     3    1      6      7        0        2
+     5    2     11     13        5        3
+     9    4     21     25        3        0
+    11    5     26     31        2        1
+    13    6     31     37        1        2
+    15    7     36     43        0        3
+
+  I(5) mod 6: always 1. Because I(5)=1+5α₁, and 5≡-1(mod6),
+  so I(5)=1+(-1)^1·α₁ = 1-α₁ mod 6... no.
+  Actually: I(5)=1+5α₁. 5α₁ mod 6: depends on α₁ mod 6.
+  Hmm, let me check: 1+5·0=1, 1+5·1=6, 1+5·2=11, 1+5·3=16, 1+5·4=21, 1+5·5=26, 1+5·6=31, 1+5·7=36
+  I(5) mod 6 for α₁=0..7: [1, 0, 5, 4, 3, 2, 1, 0]
+  Pattern: [1, 0, 5, 4, 3, 2] repeats with period 6
+
+  I(6) mod 5: always 1! Because I(6)=1+6α₁, and 6≡1(mod5),
+  so I(6)≡1+α₁ (mod5). For α₁=0,1,...,6: {} [1, 2, 3, 4, 0, 1, 2]
+  Actually I(6) mod 5 for α₁=0..7: [1, 2, 3, 4, 0, 1, 2, 3]
+  Hmm: 1+6α₁ mod 5 = 1+α₁ mod 5: [1, 2, 3, 4, 0, 1, 2, 3]
+  So I(6)≡1+α₁ (mod 5), NOT always 1.
+
+  KEY INSIGHT: I(x) mod (x+1) and I(x) mod (x-1):
+    I(x) mod (x-1): substitute x≡1 → I(1) = 1+α₁+α₂+... = total indep sets
+    I(x) mod (x+1): substitute x≡-1 → I(-1) = 1-α₁+α₂-... = Euler char
+
+  So: I(5) mod 6 = I(-1) mod 6 (since 5≡-1 mod 6)
+       I(5) mod 4 = I(1) mod 4 (since 5≡1 mod 4)
+
+  Verification:
+    H=1: I(5)=1, I(5)mod6=1, I(-1)mod6=1  |  I(5)mod4=1, I(1)mod4=1
+    H=3: I(5)=6, I(5)mod6=0, I(-1)mod6=0  |  I(5)mod4=2, I(1)mod4=2
+    H=5: I(5)=11, I(5)mod6=5, I(-1)mod6=5  |  I(5)mod4=3, I(1)mod4=3
+    H=9: I(5)=21, I(5)mod6=3, I(-1)mod6=3  |  I(5)mod4=1, I(1)mod4=1
+    H=11: I(5)=26, I(5)mod6=2, I(-1)mod6=2  |  I(5)mod4=2, I(1)mod4=2
+    H=13: I(5)=31, I(5)mod6=1, I(-1)mod6=1  |  I(5)mod4=3, I(1)mod4=3
+    H=15: I(5)=36, I(5)mod6=0, I(-1)mod6=0  |  I(5)mod4=0, I(1)mod4=0
+
+======================================================================
+PART 6: 7=2²+3 AND 8=2³ — THE NEXT LEVEL
+======================================================================
+
+  7 = 2² + 3 = 4 + 3
+  8 = 2³ = 8
+
+  7 in tournament theory:
+    - Φ₃(2) = 7 (3rd cyclotomic polynomial at 2)
+    - H=7 is FORBIDDEN (the 'Forbidden 3': α₁=3 impossible at n≤6)
+    - n=7: first n where dc3=3 with dc5=0 is possible
+    - 7 values of H at n=5: {1,3,5,9,11,13,15}
+    - The H spectrum at n=7 starts {1,3,5,9,11,13,15,...} = same as n=5!
+
+  8 in tournament theory:
+    - 8 = 2³ = coefficient of α₃ in I(2)
+    - At n≥9: I(2) = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+    - 8 is the weight of 'triple disjoint cycles'
+    - 8 = max(H) at n=4 (wait: max H at n=4 is 5, not 8)
+    - Hmm, 8 appears: at n=5, H∈{1,3,5,9,11,13,15} — 8 is NOT an H value!
+    - 8 = 2³ is a STRUCTURAL number, not a spectral number
+
+  7 = 2² + 3:
+  In I(x): the coefficient of α₁ is x, of α₂ is x².
+  At x=2: contribution of (α₁=1, α₂=1) to H is 2+4 = 6
+  At x=3: contribution of (α₁=1, α₂=1) to I(3) is 3+9 = 12
+  7 = 2²+3 is the contribution at x=2 from α₂=1 AND α₁=1... wait
+  Actually 4+3 is just a number-theoretic decomposition.
+
+  MORE PRECISELY:
+  7 = Φ₃(2) = 1+2+4 = 2³-1 = sum of powers of 2 up to 2²
+  This is 'all bits set in 3-bit binary': 111₂ = 7
+  In independence polynomial: 1 + 2·1 + 4·1 = 7 corresponds to
+  α₁=1, α₂=1 (one cycle plus one disjoint pair)
+  But wait: if you have a disjoint pair, you have at least 2 cycles,
+  so α₁ ≥ 2. So (α₁=1, α₂=1) is IMPOSSIBLE.
+  THIS is why 7 = 1+2+4 can't arise as H with α_k ∈ {0,1}!
+
+  For α₂ > 0, we need α₁ ≥ 2 (at least 2 cycles for a disjoint pair).
+  Actually: α₂ independent sets of size 2 need ≥ 2 cycles for EACH pair,
+  but different pairs can share cycles. So α₁ ≥ 2 when α₂ ≥ 1.
+
+  If α₂=1: need ≥ 2 cycles. Minimum H = 1 + 2·2 + 4·1 = 9.
+  If α₂=2: need ≥ 3 cycles. Minimum H = 1 + 2·3 + 4·2 = 15.
+  If α₂=k: need ≥ (k+1) cycles. Min H = 1 + 2(k+1) + 4k = 6k+3.
+
+  α₂=0: min α₁=1, min H = 3
+  α₂=1: min α₁=2, min H = 9
+  α₂=2: min α₁=3, min H = 15
+  α₂=3: min α₁=4, min H = 21
+  α₂=4: min α₁=5, min H = 27
+
+======================================================================
+PART 7: 10 AND 11 AS SHIFTED ONES
+======================================================================
+
+  10 = 1·10¹ + 0·10⁰ = '10' in base 10
+  11 = 1·10¹ + 1·10⁰ = '11' in base 10
+
+  In base 2: 10₂ = 2, 11₂ = 3 (THE KEYS!)
+  In base 3: 10₃ = 3, 11₃ = 4
+
+  '10' in base b = b (the base itself)
+  '11' in base b = b+1
+
+  So '10' and '11' are the UNIVERSAL representation of
+  (base, base+1) — the first 'non-trivial' pair.
+
+  For the tournament recurrence z²-5z+6=0:
+  The roots are 2='10₂' and 3='11₂'
+  In base 10: 10 and 11 are similarly 'shifted ones'
+
+  CYCLOTOMIC VALUES:
+    Φ₁(2) = 1   (trivial)
+    Φ₂(2) = 3   (key)
+    Φ₃(2) = 7   (forbidden)
+    Φ₄(2) = 5   (sum of keys)
+    Φ₅(2) = 31  (Mersenne prime)
+    Φ₆(2) = 3   (= Φ₂(2)!)
+   Φ₁₀(2) = 11  ('11' = shifted 1)
+   Φ₁₂(2) = 13
+
+  Where does 10 appear?
+  Φ_d(2) = 10 for some d?
+  Φ_d(2) for d=1..30:
+    Φ_ 1(2) = 1 ← trivial
+    Φ_ 2(2) = 3 ← KEY
+    Φ_ 3(2) = 7 ← FORBIDDEN
+    Φ_ 4(2) = 5 ← SUM of keys
+    Φ_ 5(2) = 31
+    Φ_ 6(2) = 3 ← KEY
+    Φ_ 7(2) = 127
+    Φ_ 8(2) = 17
+    Φ_ 9(2) = 73
+    Φ_10(2) = 11 ← 11!
+    Φ_11(2) = 2047
+    Φ_12(2) = 13
+    Φ_13(2) = 8191
+    Φ_14(2) = 43
+    Φ_15(2) = 151
+    Φ_16(2) = 257
+    Φ_17(2) = 131071
+    Φ_18(2) = 57
+    Φ_19(2) = 524287
+    Φ_20(2) = 205
+    Φ_21(2) = 2359
+    Φ_22(2) = 683
+    Φ_23(2) = 8388607
+    Φ_24(2) = 241
+    Φ_25(2) = 1082401
+    Φ_26(2) = 2731
+    Φ_27(2) = 262657
+    Φ_28(2) = 3277
+    Φ_29(2) = 536870911
+    Φ_30(2) = 331
+
+  Φ_d(2) = 10 never appears! Because 10=2·5, and if Φ_d(2)=10,
+  then 2|Φ_d(2), but Φ_d(2) is always odd for d≥2 (since Φ_d(2)|(2^d-1) which is odd).
+  And Φ₁(2)=1. So 10 CANNOT be a cyclotomic value at 2.
+
+  11 = Φ₁₀(2). Period 10 = 2·5 = product of (key 2) and (sum of keys 5).
+
+======================================================================
+PART 8: THE ALTERNATING SUM AND SIMPLEX PACKING — PRECISE CONNECTION
+======================================================================
+
+  I(-1) = 1 - α₁ + α₂ - α₃ + ...
+
+  GEOMETRIC INTERPRETATION via Inclusion-Exclusion:
+  Each odd cycle C contributes a 'twist' to the simplex arrangement.
+  The SIGNED count of simplices is:
+    I(-1) = [empty set] - [single cycles] + [disjoint pairs] - [triples] + ...
+           = 1 - α₁ + α₂ - α₃ + ...
+
+  This is EXACTLY the Euler characteristic of the independence complex!
+
+  For SIMPLEX PACKING:
+  Given H simplices arranged in n-space, we can ask:
+  What is the 'effective dimension' of their arrangement?
+
+  The Euler characteristic I(-1) measures the 'net algebraic count'
+  after canceling overlapping regions with alternating signs.
+
+  HILBERT'S 3RD PROBLEM:
+  Dehn's invariant for the tournament polytope O(T) is determined by
+  the dihedral angles of the simplices.
+  In a SIMPLEX ARRANGEMENT, the dihedral angles are all π/2 or π/3
+  (since the simplices come from hyperplane arrangements x_σ(i)>x_σ(j)).
+
+  The dihedral angle between adjacent simplices (sharing a facet) is
+  determined by a SINGLE arc reversal in the tournament.
+  An arc reversal changes one inequality x_i > x_j to x_j > x_i.
+
+  DEHN INVARIANT OF O(T):
+  D(O(T)) = Σ_{facets F} vol(F) ⊗ θ(F)
+  where θ(F) is the dihedral angle at facet F.
+
+  For the ORDER POLYTOPE, every internal dihedral angle is π
+  (the facets between adjacent simplices are flat).
+  So the Dehn invariant only has contributions from BOUNDARY facets.
+
+  BOUNDARY FACETS of O(T):
+  These are the facets of the n-cube: x_i = 0 or x_i = 1.
+  The dihedral angle at each boundary facet is π/2.
+
+  D(O(T)) = Σ_{boundary facets} vol(F) ⊗ π/2
+          = (total boundary facet volume) ⊗ π/2
+
+  Since π/2 is irrational/π (well, π/2 is 1/2 in units of π,
+  so π/2 ⊗_Q R/πQ = 1/2 which is NOT zero).
+
+  The total boundary facet volume depends on H and the arrangement.
+  For the transitive tournament: O(T) = standard simplex,
+  boundary facet volume = (n+1)/(n-1)! (sum of n+1 facets).
+
+======================================================================
+PART 9: THE 5-6 PATTERN IN TOURNAMENT SPECTRA
+======================================================================
+
+  H spectrum pattern:
+    n=3: [1, 3]
+         diffs: [2]
+    n=4: [1, 3, 5]
+         diffs: [2, 2]
+    n=5: [1, 3, 5, 9, 11, 13, 15]
+         diffs: [2, 2, 4, 2, 2, 2]
+    n=6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+         diffs: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 4, 2, 2]
+
+  n=5 diffs: [2,2,4,2,2,2] — gaps of 2 and 4
+  n=6 diffs: more complex, but...
+
+  At n=5: H mod 5 values:
+    H ≡ 0 (mod 5): [5, 15]
+    H ≡ 1 (mod 5): [1, 11]
+    H ≡ 3 (mod 5): [3, 13]
+    H ≡ 4 (mod 5): [9]
+
+  At n=5: H mod 6 values:
+    H ≡ 1 (mod 6): [1, 13]
+    H ≡ 3 (mod 6): [3, 9, 15]
+    H ≡ 5 (mod 6): [5, 11]
+
+  PATTERN: H mod 6 only takes values {1, 3, 5} at n=5 — always ODD mod 6.
+  Because H is always odd (Rédei) and H mod 3 alternates: 1,0,2,0,2,1,0
+
+======================================================================
+PART 10: ALTERNATING SUM NON-NEGATIVITY AND KRUSKAL-KATONA
+======================================================================
+
+  The claim: α₁ - α₂ + α₃ - ... ≥ 0 for ALL tournaments.
+  Equivalently: I(-1) ≤ 1.
+
+  This is a constraint on the f-vector of the independence complex
+  of the conflict graph CG(T).
+
+  The Kruskal-Katona theorem constrains f-vectors of simplicial complexes.
+  But α₁ ≥ α₂ is STRONGER than what KK gives in general.
+
+  WHY should α₁ ≥ α₂ hold for TOURNAMENT conflict graphs?
+  Not all graphs G have this property!
+
+  KEY STRUCTURAL PROPERTY of CG(T):
+  All odd cycles through vertex v form a CLIQUE in CG(T).
+  (Because any two cycles sharing v share a vertex.)
+
+  This means: the NEIGHBORHOOD of every vertex in CG(T)
+  contains a large clique (all cycles through any shared vertex).
+
+  CONSEQUENCE: The independence number is bounded.
+  An independent set in CG(T) can contain at most ONE cycle
+  through any given vertex v.
+
+  With n vertices in the tournament, an independent set of k
+  disjoint cycles uses at least 3k vertices (each cycle has ≥3 vertices).
+  So α_k = 0 for k > ⌊n/3⌋.
+
+  More precisely: a set of k disjoint odd cycles uses
+  at least 3k vertices (if all are 3-cycles) and at most n vertices.
+  So k ≤ ⌊n/3⌋.
+
+  WHY α₁ ≥ α₂:
+  Each disjoint PAIR {C₁, C₂} contributes to α₂.
+  But C₁ and C₂ individually contribute to α₁.
+  So α₂ ≤ C(α₁, 2) trivially.
+  But we need the stronger α₁ ≥ α₂.
+
+  CLAIM: In any graph G where every vertex has a neighborhood
+  containing a large clique, α₁(G) ≥ α₂(G).
+  (Not obvious — this is specific to tournament CGs.)
+
+  VERIFICATION at n=6:
+    Checked 32768 tournaments
+    α₂ > α₁ violations: 0
+    Max ratio α₂/α₁: 0.5000
+
+======================================================================
+PART 11: THE RECURRENCE VIEW OF EVERYTHING
+======================================================================
+
+  THESIS: Every key quantity in tournament theory satisfies
+  a recurrence with characteristic polynomial (z-2)(z-3) = z²-5z+6.
+
+  1. H(T) = I(2) = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+     View as: H = Σ 2^k α_k (evaluation at z=2)
+
+  2. I(3) = 1 + 3α₁ + 9α₂ + 27α₃ + ...
+     View as: I(3) = Σ 3^k α_k (evaluation at z=3)
+
+  3. For FIXED α-sequence, the function f(x) = Σ x^k α_k satisfies:
+     f(x) at x=2: H
+     f(x) at x=3: I(3)
+     The RATIO f(3)/f(2) → 3/2 generically
+
+  4. The DIFFERENCE I(3) - I(2) = α₁ + 5α₂ + 19α₃ + ...
+     = Σ (3^k - 2^k) α_k
+     3^k - 2^k satisfies the SAME recurrence z²=5z-6!
+
+  5. The SUM I(3) + I(2) = 2 + 5α₁ + 13α₂ + 35α₃ + ...
+     = 2 + Σ (3^k + 2^k) α_k
+     3^k + 2^k ALSO satisfies z²=5z-6!
+
+  Verification that 3^k+2^k satisfies a(n)=5a(n-1)-6a(n-2):
+    Sequence: [2, 5, 13, 35, 97, 275, 793, 2315, 6817, 20195]
+    a(2) = 13, 5a(1)-6a(0) = 13, match: True
+    a(3) = 35, 5a(2)-6a(1) = 35, match: True
+    a(4) = 97, 5a(3)-6a(2) = 97, match: True
+    a(5) = 275, 5a(4)-6a(3) = 275, match: True
+    a(6) = 793, 5a(5)-6a(4) = 793, match: True
+    a(7) = 2315, 5a(6)-6a(5) = 2315, match: True
+
+  EVERY linear combination A·2^k + B·3^k satisfies z²=5z-6.
+  So EVERY evaluation I(x) is connected to I(2) and I(3) via this recurrence.
+
+  Does I(x) satisfy a recurrence in x?
+  I(x) = 1 + α₁x + α₂x² is a POLYNOMIAL, not a recurrence.
+  But the COEFFICIENTS {1, α₁, α₂, ...} can be viewed as
+  the Hadamard product of {1, α₁, α₂, ...} with {1, x, x², ...}
+
+  The generating function Σ α_k z^k has radius of convergence
+  related to the max eigenvalue of CG(T).
+
+======================================================================
+PART 12: THE TRINITY — 2, 3, AND ∞
+======================================================================
+
+  THREE REGIMES OF THE INDEPENDENCE POLYNOMIAL:
+
+  I(-1) ← TOPOLOGY    (Euler characteristic, Dehn invariant)
+  I(1)  ← COUNTING    (total independent sets)
+  I(2)  ← GEOMETRY    (Hamiltonian paths, volume)
+  I(3)  ← TERNARY     (3-colorings of independent sets)
+  I(∞)  ← ASYMPTOTICS (independence number)
+
+  The key RATIOS:
+    I(2)/I(1) = H/(1+α₁+α₂+...) ← 'binary amplification'
+    I(3)/I(2) = I(3)/H ← 'ternary/binary ratio → 3/2'
+    I(2)/I(-1) = H/(1-α₁+α₂-...) ← 'volume/topology ratio'
+
+  Ratios at n=5 (α₂=0):
+     H   α₁ I(-1) I(1) I(2) I(3)   I2/I1   I3/I2
+     1    0     1    1    1    1  1.0000  1.0000
+     3    1     0    2    3    4  1.5000  1.3333
+     5    2    -1    3    5    7  1.6667  1.4000
+     9    4    -3    5    9   13  1.8000  1.4444
+    11    5    -4    6   11   16  1.8333  1.4545
+    13    6    -5    7   13   19  1.8571  1.4615
+    15    7    -6    8   15   22  1.8750  1.4667
+
+  I(2)/I(1) → 2 as α₁ → ∞ (binary amplification → factor of 2)
+  I(3)/I(2) → 3/2 as α₁ → ∞ (ternary vs binary → 50% more)
+  These limits are the KEYS: 2 and 3/2 = 3/2.
+
+======================================================================
+PART 13: SIMPLEX PACKING AND NON-NEGATIVITY — THE DEEP WHY
+======================================================================
+
+  WHY is I(-1) ≤ 1 for tournament conflict graphs?
+
+  SIMPLEX PACKING ARGUMENT:
+  O(T) = union of H simplices Δ_σ, one per Hamiltonian path σ.
+  These simplices form a TRIANGULATION of O(T).
+  The Euler characteristic of a triangulated polytope is 1
+  (convex polytope ≅ ball, χ(ball) = 1).
+
+  BUT: χ(O(T)) = 1 is about the POLYTOPE, not the independence complex.
+  The independence complex Δ(CG(T)) has χ(Δ) = I(-1).
+
+  Are they related? YES, via the NERVE THEOREM:
+  If the H simplices {Δ_σ} cover O(T) and all intersections are
+  contractible, then χ(O(T)) = χ(nerve of {Δ_σ}).
+
+  The nerve of {Δ_σ} is the simplicial complex whose vertices
+  are the H Hamiltonian paths, and whose faces are sets of
+  paths with non-empty common intersection.
+
+  But the independence complex is about the CYCLE STRUCTURE,
+  not the path structure. The connection is more subtle.
+
+  TOPOLOGICAL ARGUMENT (sketch):
+  The conflict graph CG(T) has chromatic number ≤ n-2
+  (since the max independent set uses ≤ ⌊n/3⌋ cycles,
+  and the total number of cycles is bounded).
+  By Kruskal-Katona + chromatic number bounds,
+  the alternating sum α₁-α₂+... is controlled.
+
+  DEEPER: The independence complex of CG(T) might be
+  SHELLABLE (admits a shelling order), which would imply
+  the h-vector is non-negative, and in particular χ ≤ 1.
+
+  The independence complex at n=5:
+  CG(T) has α₁ vertices and α₂ edges.
+  Since α₂=0 at n=5, the independence complex is
+  a disjoint union of α₁ points (0-dimensional).
+  Its Euler characteristic is α₁ (number of components).
+  Wait: χ(α₁ points) = α₁. But I(-1) = 1 - α₁.
+  Hmm, that's the REDUCED Euler char: χ̃ = χ - 1 = α₁ - 1.
+  And I(-1) = 1 + χ̃ = χ. No wait...
+
+  Let me be careful:
+  Independence complex Δ = {S ⊆ V(CG): S is independent}
+  This includes the EMPTY SET as a face.
+  f_{-1} = 1 (empty face), f_0 = α₁ (vertices), f_1 = α₂ (edges), ...
+  χ(Δ) = f_{-1} - f_0 + f_1 - ... = 1 - α₁ + α₂ - ... = I(-1)
+
+  So I(-1) = χ(Δ) (Euler characteristic of independence complex).
+  For a contractible complex: χ = 1.
+  I(-1) ≤ 1 means χ(Δ) ≤ 1.
+
+  At n=5: Δ = {∅} ∪ {{c}: c ∈ cycles} (since α₂=0)
+  This is a discrete set of α₁ points plus the empty face.
+  χ = 1 - α₁. So I(-1) = 1 - α₁ ∈ {1, 0, -1, -3, -4, -5, -6}
+
+  At n=6: Δ has edges too (disjoint pairs = α₂).
+  χ = 1 - α₁ + α₂.
+
+======================================================================
+PART 14: THE 2-3 BRIDGE VIA BERNOULLI NUMBERS
+======================================================================
+
+  The Bernoulli numbers B_n satisfy:
+    Σ B_n x^n/n! = x/(e^x - 1)
+
+  At x=1: Σ B_n/n! = 1/(e-1)
+  At x=log2: involves powers of 2
+  At x=log3: involves powers of 3
+
+  The Euler numbers E_n (not Bernoulli) satisfy:
+    Σ E_n x^n/n! = 1/cosh(x) = 2/(e^x + e^{-x})
+
+  Alternating permutations are counted by Euler numbers.
+  TANGENT NUMBERS = E_{2n+1} (odd-index Euler numbers)
+
+  CONNECTION: The deformed Eulerian numbers a_k(T) = A(n,k) + correction.
+  The correction depends on the independence polynomial!
+  So the 2-3 recurrence acts on the CORRECTION to the Eulerian distribution.
+
+  Eulerian numbers A(5,k) for k=0..4:
+    A(5,k) = [1, 26, 66, 26, 1]
+    Sum = 120 = 5! = 120
+
+  For a tournament T with α₁ odd cycles:
+    a_k(T) = A(5,k) + correction_k
+    The corrections sum to 0 (total is always n!)
+    The corrections are controlled by α₁
+
+
+======================================================================
+DONE — Keys to the Universe Summary
+======================================================================
+
+  2 and 3 are the roots of z² - 5z + 6 = 0
+  5 = 2+3 (sum, first non-trivial n)
+  6 = 2·3 (product, first α₂ appears)
+  7 = 2²+3 = Φ₃(2) (forbidden H value)
+  8 = 2³ (weight of triple cycles in I(2))
+  10 = NOT a cyclotomic value (even = impossible)
+  11 = Φ₁₀(2) (period 10 = 2·5)
+
+  k-nacci → 2 at rate (1/2)^k
+  weighted(2) k-nacci → 3 at rate (2/3)^k
+  Convergence rates are key/key: 1/2 and 2/3
+
+  I(-1) = Euler characteristic ≤ 1 (topology)
+  I(1) = total independent sets (counting)
+  I(2) = H = Hamiltonian paths (geometry)
+  I(3) = ternary evaluation (the other key)
+
+  Alternating sum non-negativity ⟺ α₁ ≥ α₂
+  ⟺ simplex dominance in independence complex
+  ⟺ tournament polytope has bounded topological complexity
+
