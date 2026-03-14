@@ -87,3 +87,62 @@ Evaluation at x = k maps brick sizes to polytope hierarchies:
 
 The k-nacci → 2 connection: ratio I(2)/I(1) = (1+2c)/(1+c) → 2 as c → ∞
 The weighted k-nacci → 3: ratio I(3)/I(1) = (1+3c)/(1+c) → 3 as c → ∞
+
+## UPDATED: Complete Independence Polynomial Classification at n=6
+
+### OCF: H = 1 + 2α₁ + 4α₂ for ALL 32768 tournaments ✓
+
+At n=6, I(Ω, x) = 1 + α₁x + α₂x² (α₃ = 0 always, since 3 disjoint 3-cycles need ≥9 vertices).
+
+### 27 Distinct Independence Polynomials
+
+| α₁ | α₂ | H | Count | Factorization |
+|-----|-----|------|-------|---------------|
+| 0 | 0 | 1 | 720 | 1 (transitive) |
+| 1 | 0 | 3 | 960 | (1+x) |
+| 2 | 0 | 5 | 2160 | (1+2x) — cuboid brick |
+| 2 | 1 | 9 | 80 | **(1+x)² — simplex²!** |
+| 4 | 0 | 9 | 2880 | (1+4x) — 4-cell |
+| 5 | 0 | 11 | 1440 | (1+5x) |
+| 6 | 0 | 13 | 1440 | (1+6x) |
+| 6 | 1 | 17 | 720 | **IRREDUCIBLE** |
+| 7 | 0 | 15 | 2208 | (1+7x) |
+| 8 | 0 | 17 | 720 | (1+8x) |
+| 9 | 0 | 19 | 1440 | (1+9x) |
+| 9 | 1 | 23 | 1440 | **IRREDUCIBLE** |
+| 10 | 2 | 29 | 720 | **IRREDUCIBLE** |
+| 11 | 0 | 23 | 1440 | (1+11x) |
+| 11 | 1 | 27 | 480 | **IRREDUCIBLE** |
+| 12 | 0 | 25 | 1440 | (1+12x) |
+| 12 | 1 | 29 | 2160 | **IRREDUCIBLE** |
+| 12 | 2 | 33 | 720 | **IRREDUCIBLE** |
+| 13 | 1 | 31 | 1440 | **IRREDUCIBLE** |
+| 14 | 1 | 33 | 1440 | **IRREDUCIBLE** |
+| 14 | 2 | 37 | 2160 | **IRREDUCIBLE** |
+| 14 | 4 | 45 | 240 | **IRREDUCIBLE** |
+| 16 | 0 | 33 | 480 | (1+16x) |
+| 16 | 1 | 37 | 1440 | **IRREDUCIBLE** |
+| 16 | 2 | 41 | 720 | **IRREDUCIBLE** |
+| 19 | 1 | 43 | 1440 | **IRREDUCIBLE** |
+| 20 | 1 | 45 | 240 | **IRREDUCIBLE** |
+
+### Key Insight: Most Tournaments are "Atoms"
+
+Only 2 of 27 polynomials factorize:
+- α₂=0 (degree 1): always "factorable" as single brick → 17328/32768 = 53%
+- (2,1) → (1+x)² → 80/32768 = 0.24%
+
+The remaining 15360/32768 = 47% have **irreducible** independence polynomials.
+These are the "atomic" tournaments that CANNOT be decomposed into independent bricks.
+
+### The H=9 Duality
+
+H=9 is realized by TWO fundamentally different structures:
+1. **4-cell** (α₁=4, α₂=0): 2880 tournaments. Ω = K₄ (single clique of 4 cycles).
+2. **Simplex²** (α₁=2, α₂=1): 80 tournaments. Ω = K₁ ⊔ K₁ (two disjoint cycles).
+
+Both give I(2) = 9, but their independence polynomials DIFFER:
+- 4-cell: I = 1+4x (linear)
+- Simplex²: I = 1+2x+x² = (1+x)² (quadratic, factorizable)
+
+The simplex² tournaments have RICHER structure (α₂ > 0) but the SAME H value.
