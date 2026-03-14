@@ -1,0 +1,672 @@
+======================================================================
+  Part 1: ELLIPTIC CURVES AND THE (2,3) DISCRIMINANT
+======================================================================
+
+An elliptic curve E in short Weierstrass form:
+  y^2 = x^3 + a*x + b
+
+The discriminant: Delta = -16(4a^3 + 27b^2)
+
+  The coefficients in Delta:
+  -16 = -KEY1^4
+  4 = KEY1^2
+  27 = KEY2^3
+
+  Delta = -KEY1^4 * (KEY1^2 * a^3 + KEY2^3 * b^2)
+
+  The FUNDAMENTAL INVARIANTS of an elliptic curve use
+  ONLY KEY1 and KEY2!
+
+  The j-invariant: j = -1728 * (4a)^3 / Delta
+  = -KEY1^6 * KEY2^3 * a^3 / Delta
+  (since 1728 = 12^3 = (KEY1^2 * KEY2)^3 = h(E6)^3)
+
+  j = -h(E6)^3 * (KEY1^2 * a)^3 / Delta
+
+  1728 = 12^3 = h(E6)^3 = KEY1^6 * KEY2^3
+  This is THE number that appears everywhere in elliptic curve theory!
+
+Special j-invariant values:
+  j =            0: j=0: y^2 = x^3 (cusp), CM by Z[zeta_3]
+  j =         1728: j=1728 = h(E6)^3: y^2 = x^3 + x, CM by Z[i]
+  j =         8000: j=8000 = 20^3: CM by Z[sqrt(-2)]
+  j =        -3375: j=-3375 = -15^3: CM by Z[(1+sqrt(-7))/2]
+  j =        54000: j=54000: CM disc -12
+  j =       287496: j=287496 = 66^3: CM disc -16
+  j =     16581375: j=16581375 = 255^3: CM disc -28
+
+  j = 0: CM by Z[omega] where omega = e^{2*pi*i/KEY2} (cube root of unity)
+  j = 1728 = h(E6)^3: CM by Z[i] where i = e^{2*pi*i/KEY1^2} (4th root)
+
+  The TWO special CM values are:
+  j = 0 (related to KEY2, the cube root)
+  j = h(E6)^3 = 1728 (related to KEY1, the square root)
+
+  At j = 0: the curve has automorphism group Z/6 = Z/h(G2)
+  At j = 1728: the curve has automorphism group Z/4 = Z/KEY1^2
+  At generic j: automorphism group Z/2 = Z/KEY1
+
+======================================================================
+  Part 2: MODULAR CURVES X_0(N)
+======================================================================
+Genus of modular curves X_0(N):
+(X_0(N) parametrizes pairs (E, C) where C is a cyclic N-isogeny)
+
+  g(X_0( 1)) =  0 N=unit [RATIONAL!]
+  g(X_0( 2)) =  0 N=KEY1 [RATIONAL!]
+  g(X_0( 3)) =  0 N=KEY2 [RATIONAL!]
+  g(X_0( 4)) =  0 N=KEY1^2 [RATIONAL!]
+  g(X_0( 5)) =  0 N=KEY_SUM [RATIONAL!]
+  g(X_0( 6)) =  0 N=h(G2) [RATIONAL!]
+  g(X_0( 7)) =  0 N=H_forb_1 [RATIONAL!]
+  g(X_0( 8)) =  0 N=KEY1^3 [RATIONAL!]
+  g(X_0( 9)) =  0 N=KEY2^2 [RATIONAL!]
+  g(X_0(10)) =  0 N=V(Pet) [RATIONAL!]
+  g(X_0(11)) =  1 g=unit [ELLIPTIC]
+  g(X_0(12)) =  0 N=h(E6) [RATIONAL!]
+  g(X_0(13)) =  0 [RATIONAL!]
+  g(X_0(14)) =  1 N=dim(G2) g=unit [ELLIPTIC]
+  g(X_0(15)) =  1 N=C(6,2) g=unit [ELLIPTIC]
+  g(X_0(16)) =  0 N=KEY1^4 [RATIONAL!]
+  g(X_0(17)) =  1 g=unit [ELLIPTIC]
+  g(X_0(18)) =  0 [RATIONAL!]
+  g(X_0(19)) =  1 g=unit [ELLIPTIC]
+  g(X_0(20)) =  1 N=V(Dodec) g=unit [ELLIPTIC]
+  g(X_0(21)) =  1 N=H_forb_2 g=unit [ELLIPTIC]
+  g(X_0(22)) =  2 g=KEY1
+  g(X_0(23)) =  2 g=KEY1
+  g(X_0(24)) =  1 N=|BT| g=unit [ELLIPTIC]
+  g(X_0(25)) =  0 [RATIONAL!]
+  g(X_0(26)) =  2 g=KEY1
+  g(X_0(27)) =  1 N=KEY2^3 g=unit [ELLIPTIC]
+  g(X_0(28)) =  2 N=C(8,2) g=KEY1
+  g(X_0(29)) =  2 g=KEY1
+  g(X_0(30)) =  3 N=h(E8) g=KEY2
+  g(X_0(31)) =  2 g=KEY1
+  g(X_0(32)) =  1 g=unit [ELLIPTIC]
+  g(X_0(33)) =  3 g=KEY2
+  g(X_0(34)) =  3 g=KEY2
+  g(X_0(35)) =  3 g=KEY2
+  g(X_0(36)) =  1 g=unit [ELLIPTIC]
+  g(X_0(37)) =  2 g=KEY1
+  g(X_0(38)) =  4 g=KEY1^2
+  g(X_0(39)) =  3 g=KEY2
+  g(X_0(40)) =  3 g=KEY2
+  g(X_0(41)) =  3 g=KEY2
+  g(X_0(42)) =  5 g=KEY_SUM
+  g(X_0(43)) =  3 g=KEY2
+  g(X_0(44)) =  4 g=KEY1^2
+  g(X_0(45)) =  3 g=KEY2
+  g(X_0(46)) =  5 g=KEY_SUM
+  g(X_0(47)) =  4 g=KEY1^2
+  g(X_0(48)) =  3 N=|BO| g=KEY2
+  g(X_0(49)) =  1 g=unit [ELLIPTIC]
+  g(X_0(50)) =  2 g=KEY1
+
+  X_0(N) is RATIONAL (genus 0) for:
+  N = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 16, 18, 25
+  = 1, KEY1, KEY2, KEY1^2, KEY_SUM, h(G2), H_forb_1, KEY1^3, KEY2^2, V(Pet), h(E6), 13, KEY1^4, 18, KEY_SUM^2
+
+  The LAST rational modular curve is X_0(25) = X_0(KEY_SUM^2)!
+  After that, all have positive genus.
+
+  X_0(N) is ELLIPTIC (genus 1) for:
+  N = 11, 14, 15, 17, 19, 20, 21, 24, 27, 32, 36, 49
+  Including: N = 14 = dim(G2), N = 21 = H_forb_2, N = 24 = |BT|!
+
+  g(X_0(|BT|)) = 1 — the modular curve at level |BT| = 24 is ELLIPTIC!
+  g(X_0(H_forb_2)) = 1 — at level H_forb_2 = 21 too!
+
+======================================================================
+  Part 3: ELLIPTIC CURVES OVER F_p
+======================================================================
+Point counts #E(F_p) for small curves:
+
+E: y^2 = x^3 - x  (j = 1728 = h(E6)^3, CM disc -4)
+  p= 2: #E(F_p) =   3, a_p =    0
+  p= 3: #E(F_p) =   4, a_p =    0
+  p= 5: #E(F_p) =   8, a_p =   -2 (KEY1)
+  p= 7: #E(F_p) =   8, a_p =    0
+  p=11: #E(F_p) =  12, a_p =    0
+  p=13: #E(F_p) =   8, a_p =    6 (h(G2))
+  p=17: #E(F_p) =  16, a_p =    2 (KEY1)
+  p=19: #E(F_p) =  20, a_p =    0
+  p=23: #E(F_p) =  24, a_p =    0
+  p=29: #E(F_p) =  40, a_p =  -10 (V(Pet))
+  p=31: #E(F_p) =  32, a_p =    0
+
+E: y^2 = x^3 + 1  (j = 0, CM disc -3)
+  p= 2: #E(F_p) =   3, a_p =    0
+  p= 3: #E(F_p) =   4, a_p =    0
+  p= 5: #E(F_p) =   6, a_p =    0
+  p= 7: #E(F_p) =  12, a_p =   -4 (KEY1^2)
+  p=11: #E(F_p) =  12, a_p =    0
+  p=13: #E(F_p) =  12, a_p =    2 (KEY1)
+  p=17: #E(F_p) =  18, a_p =    0
+  p=19: #E(F_p) =  12, a_p =    8 (KEY1^3)
+  p=23: #E(F_p) =  24, a_p =    0
+  p=29: #E(F_p) =  30, a_p =    0
+  p=31: #E(F_p) =  36, a_p =   -4 (KEY1^2)
+
+  HASSE'S THEOREM: |a_p| <= 2*sqrt(p)
+  For p = KEY1 = 2: |a_p| <= 2*sqrt(2) ≈ 2.83
+  For p = KEY2 = 3: |a_p| <= 2*sqrt(3) ≈ 3.46
+
+  The TRACE of Frobenius a_p is the key arithmetic datum.
+  For CM curves, a_p is determined by the splitting of p in the CM field.
+
+======================================================================
+  Part 4: SUPERSINGULAR ELLIPTIC CURVES
+======================================================================
+Number of supersingular j-invariants in characteristic p:
+  p =   2:   1 supersingular j-values  p=KEY1, #ss=unit
+  p =   3:   1 supersingular j-values  p=KEY2, #ss=unit
+  p =   5:   1 supersingular j-values  p=KEY_SUM, #ss=unit
+  p =   7:   1 supersingular j-values  p=H_forb_1, #ss=unit
+  p =  11:   1 supersingular j-values  #ss=unit
+  p =  13:   1 supersingular j-values  #ss=unit
+  p =  17:   2 supersingular j-values  #ss=KEY1
+  p =  19:   2 supersingular j-values  #ss=KEY1
+  p =  23:   2 supersingular j-values  #ss=KEY1
+  p =  29:   3 supersingular j-values  #ss=KEY2
+  p =  31:   3 supersingular j-values  #ss=KEY2
+  p =  37:   3 supersingular j-values  #ss=KEY2
+  p =  41:   4 supersingular j-values  #ss=KEY1^2
+  p =  43:   4 supersingular j-values  #ss=KEY1^2
+  p =  47:   4 supersingular j-values  #ss=KEY1^2
+
+  The number of supersingular j-values ≈ p/12 = p/h(E6).
+
+  The supersingular j-values are related to the
+  EICHLER-DEURING MASS FORMULA:
+  sum_{E ss} 1/|Aut(E)| = (p-1)/24 = (p-1)/|BT|
+
+  For p = |BT|+1 = 25 (not prime)... skip.
+  For p = |BI|+1 = 121 (not prime)... skip.
+
+  The mass formula has |BT| = 24 in the denominator!
+  This is the SAME 24 that appears in:
+  - chi(K3) = 24
+  - pi_3^s = Z/24
+  - |BT| = 24
+  - Ramanujan tau(2) = -24
+  - Leech lattice dimension = 24
+
+  DEURING'S FORMULA: For p ≥ 5:
+  #{supersingular j in F_p} = floor(p/12) + correction
+  where correction depends on p mod 12 = p mod h(E6)!
+
+  The correction is ±1 depending on whether p ≡ 1 (mod 12)
+  (no extra) or p ≡ 11 (mod 12) (add 1), etc.
+
+======================================================================
+  Part 5: CLASS NUMBERS h(-d)
+======================================================================
+Class numbers h(-d) for small discriminants:
+(h(-d) = number of ideal classes in Q(sqrt(-d)))
+
+  h(-  3) =   1  h=unit, d=KEY2
+  h(-  7) =   1  h=unit, d=H_forb_1
+  h(-  8) =   1  h=unit, d=KEY1^3
+  h(- 11) =   1  h=unit
+  h(- 12) =   2  h=KEY1, d=h(E6)
+  h(- 15) =   2  h=KEY1, d=C(6,2)
+  h(- 19) =   1  h=unit
+  h(- 23) =   3  h=KEY2
+  h(- 24) =   2  h=KEY1, d=|BT|
+  h(- 28) =   2  h=KEY1, d=C(8,2)
+  h(- 31) =   3  h=KEY2
+  h(- 35) =   2  h=KEY1
+  h(- 39) =   4  h=KEY1^2
+  h(- 40) =   2  h=KEY1
+  h(- 43) =   1  h=unit
+  h(- 44) =   4  h=KEY1^2
+  h(- 47) =   5  h=KEY_SUM
+  h(- 51) =   2  h=KEY1
+  h(- 55) =   4  h=KEY1^2
+  h(- 56) =   4  h=KEY1^2, d=C(8,3)
+  h(- 59) =   3  h=KEY2
+  h(- 60) =   4  h=KEY1^2
+  h(- 67) =   1  h=unit
+  h(- 71) =   7  h=H_forb_1
+  h(- 76) =   4  h=KEY1^2
+  h(- 79) =   5  h=KEY_SUM
+  h(- 83) =   3  h=KEY2
+  h(- 87) =   6  h=h(G2)
+  h(- 88) =   2  h=KEY1
+  h(- 91) =   2  h=KEY1
+  h(- 92) =   6  h=h(G2)
+  h(- 95) =   8  h=KEY1^3
+
+  KEY OBSERVATIONS:
+  h(-3) = 1: Q(sqrt(-3)) has unique factorization.
+    This is the CM field for j = 0 (related to KEY2)!
+
+  h(-4) = 1: Q(sqrt(-1)) = Q(i) has unique factorization.
+    This is the CM field for j = 1728 = h(E6)^3 (related to KEY1)!
+
+  h(-7) = 1: Q(sqrt(-7)) has class number 1.
+    d = H_forb_1! The forbidden value gives a PID!
+
+  h(-23) = 3 = KEY2: d = |BT| - 1 has class number KEY2!
+  h(-24) = 2 = KEY1: d = |BT| has class number KEY1!
+
+  The Heegner numbers (d with h(-d) = 1):
+  d = 1, 2, 3, 4, 7, 8, 11, 19, 43, 67, 163
+
+  = 1, KEY1, KEY2, KEY1^2, H_forb_1, KEY1^3, 11, 19, 43, 67, 163
+
+  The first FIVE Heegner numbers are tournament constants!
+  And there are exactly 9 = KEY2^2 Heegner numbers (counting d > 0)!
+
+  Actually there are 9 imaginary quadratic fields with h=1,
+  with discriminants -3, -4, -7, -8, -11, -19, -43, -67, -163.
+
+  The 9 = KEY2^2 Heegner numbers:
+    1. d = 3 = KEY2
+    2. d = 4 = KEY1^2
+    3. d = 7 = H_forb_1
+    4. d = 8 = KEY1^3
+    5. d = 11
+    6. d = 19
+    7. d = 43
+    8. d = 67
+    9. d = 163
+
+  e^(pi*sqrt(163)) = 262537412640768743.99999999999925...
+  = (640320)^3 + 744 (approximately!)
+  640320 = 2^6 * 3 * 5 * 23 * 29
+  744 = |BT| * 31
+  This is Ramanujan's ALMOST-INTEGER!
+
+======================================================================
+  Part 6: BSD CONJECTURE AND L-FUNCTIONS
+======================================================================
+
+The Birch and Swinnerton-Dyer conjecture:
+  For an elliptic curve E/Q with L-function L(E, s):
+
+  ord_{s=1} L(E, s) = rank(E(Q))
+
+  AND: the leading Taylor coefficient involves:
+  L^{(r)}(E, 1) / r! = Omega_E * Reg_E * |Sha_E| * prod c_p / |E(Q)_tors|^2
+
+The torsion subgroup E(Q)_tors:
+  By Mazur's theorem (1977), the possible torsion groups are:
+  Z/n for n = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12
+  Z/2 x Z/2n for n = 1, 2, 3, 4
+
+  The possible orders |E(Q)_tors|:
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 16
+  = unit, KEY1, KEY2, KEY1^2, KEY_SUM, h(G2), H_forb_1, KEY1^3, KEY2^2, V(Pet), h(E6), KEY1^4
+
+  THESE ARE ALL TOURNAMENT CONSTANTS!
+  The possible torsion orders are:
+  1, KEY1, KEY2, KEY1^2, KEY_SUM, h(G2), H_forb_1, KEY1^3, KEY2^2, V(Pet), h(E6), KEY1^4
+
+  Plus the groups Z/2 x Z/2, Z/2 x Z/4, Z/2 x Z/6, Z/2 x Z/8
+  with orders 4, 8, 12, 16.
+
+  The LARGEST cyclic torsion = Z/12 = Z/h(E6)
+  The LARGEST torsion order = 16 = KEY1^4
+
+  Mazur's theorem says: no curve has torsion Z/13 or larger cyclic.
+  The CUTOFF after h(E6) = 12!
+  (Skipping 11 — no Z/11 torsion exists!)
+
+======================================================================
+  Part 7: FERMAT'S LAST THEOREM AND (2,3)
+======================================================================
+
+Fermat's Last Theorem: x^n + y^n = z^n has no nontrivial integer solutions for n >= 3.
+
+The proof (Wiles, 1995) uses:
+  1. Frey curve: E_{a,b,c}: y^2 = x(x - a^p)(x + b^p)
+     associated to a hypothetical solution a^p + b^p = c^p.
+
+  2. Ribet's theorem: E_{a,b,c} is not modular (level lowering).
+
+  3. Modularity theorem (Wiles + Taylor-Wiles):
+     All semistable elliptic curves over Q are modular.
+
+  4. Contradiction: E is both modular (by Wiles) and not modular (by Ribet).
+
+The KEY role of (2,3):
+  The Frey curve has discriminant:
+  Delta = 2^{-8} * (abc)^{2p}
+  The minimal discriminant involves powers of KEY1 = 2!
+
+  Ribet's level lowering:
+  The conductor of E drops to N = 2 (!)
+  There are NO modular forms of weight 2 and level 2.
+  (Because X_0(2) has genus 0!)
+  Contradiction!
+
+  So the KEY step is: X_0(KEY1) has genus 0!
+  The rational modular curve at level KEY1 provides the contradiction.
+
+  ALTERNATIVE: For p = 3 (KEY2), the proof uses:
+  The Frey curve for a^3 + b^3 = c^3 has conductor involving 2 and 3.
+  Euler already proved FLT for n = 3 = KEY2 and n = 4 = KEY1^2.
+
+  The FIRST two cases of FLT (n=3, n=4) correspond to KEY2 and KEY1^2!
+
+  Kummer's approach: FLT holds for regular primes.
+  The first IRREGULAR prime is 37.
+  Regular primes < 100: 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 43, 47, ...
+  KEY2, KEY_SUM, H_forb_1 are ALL regular primes!
+  All tournament primes are regular!
+
+======================================================================
+  Part 8: GALOIS REPRESENTATIONS AND SERRE'S CONJECTURE
+======================================================================
+
+Serre's conjecture (now theorem, Khare-Wintenberger 2009):
+  Every odd, irreducible, continuous representation
+  rho: Gal(Q-bar/Q) -> GL_2(F_p)
+  arises from a modular form.
+
+  The weight k(rho) and level N(rho) are determined by rho.
+
+  The MINIMAL WEIGHT formula involves:
+  k(rho) in {2, 3, 4, ..., p+1} for "ordinary" representations.
+  The maximum weight is p + 1:
+  At p = KEY1: max weight = KEY2 = 3
+  At p = KEY2: max weight = KEY1^2 = 4
+  At p = KEY_SUM: max weight = h(G2) = 6
+  At p = H_forb_1: max weight = KEY1^3 = 8
+
+  The max weight at tournament primes:
+  p = 2 -> 3 = KEY2
+  p = 3 -> 4 = KEY1^2
+  p = 5 -> 6 = h(G2)
+  p = 7 -> 8 = KEY1^3
+  Always: max weight = p + 1 = tournament constant!
+
+The mod-p Galois representations of elliptic curves:
+  E[p] = kernel of multiplication by p = (Z/p)^2
+
+  E[KEY1] = (Z/KEY1)^2: the 2-torsion (related to roots of cubic)
+  E[KEY2] = (Z/KEY2)^2: the 3-torsion
+  E[KEY_SUM] = (Z/KEY_SUM)^2: the 5-torsion
+  E[H_forb_1] = (Z/H_forb_1)^2: the 7-torsion
+
+  The action of Gal(Q-bar/Q) on E[p] gives:
+  rho_{E,p}: Gal(Q-bar/Q) -> GL_2(F_p)
+
+  For p = KEY1: rho_{E,2} determines the splitting field of the cubic x^3 + ax + b.
+  For p = KEY2: rho_{E,3} is related to the 3-division polynomial of degree 4.
+
+  The IMAGE of rho_{E,p}:
+  For "most" E: image = GL_2(F_p) (Serre's open image theorem).
+  |GL_2(F_2)| = 6 = h(G2) = S_3
+  |GL_2(F_3)| = 48 = |BO|!
+
+  CROWN JEWEL: |GL_2(F_{KEY2})| = |BO| = 48!
+  The mod-3 Galois representation has image inside
+  the binary octahedral group (up to 2-fold cover)!
+
+Orders of GL_2(F_p) for tournament primes:
+  |GL_2(F_2)| =          6 = 2 * 3 = h(G2)
+  |GL_2(F_3)| =         48 = 2^4 * 3 = |BO|
+  |GL_2(F_5)| =        480 = 2^5 * 3 * 5
+  |GL_2(F_7)| =       2016 = 2^5 * 3^2 * 7
+  |GL_2(F_11)| =      13200 = 2^4 * 3 * 5^2 * 11
+  |GL_2(F_13)| =      26208 = 2^5 * 3^2 * 7 * 13
+
+Orders of SL_2(F_p):
+  |SL_2(F_2)| =          6 = 2 * 3 = h(G2)
+  |SL_2(F_3)| =         24 = 2^3 * 3 = |BT|
+  |SL_2(F_5)| =        120 = 2^3 * 3 * 5 = |BI|
+  |SL_2(F_7)| =        336 = 2^4 * 3 * 7
+  |SL_2(F_11)| =       1320 = 2^3 * 3 * 5 * 11
+  |SL_2(F_13)| =       2184 = 2^3 * 3 * 7 * 13
+
+  |SL_2(F_2)| = 6 = h(G2)
+  |SL_2(F_3)| = 24 = |BT|!
+  |SL_2(F_5)| = 120 = |BI|!
+  |SL_2(F_7)| = 336 = KEY1^4 * H_forb_2
+
+  CROWN JEWELS:
+  SL_2(F_2) = S_3 (symmetric group, order h(G2))
+  SL_2(F_3) = 2.A_4 = BT (binary tetrahedral, order |BT|!)
+  SL_2(F_5) = 2.A_5 = BI (binary icosahedral, order |BI|!)
+
+  THE SL_2 GROUPS OVER TOURNAMENT FIELDS ARE THE BINARY POLYHEDRAL GROUPS!
+  SL_2(F_2) = S_KEY2 (order h(G2))
+  SL_2(F_3) = BT (order |BT|!)
+  SL_2(F_5) = BI (order |BI|!)
+
+======================================================================
+  Part 9: IWASAWA THEORY AT p=2 AND p=3
+======================================================================
+
+Iwasawa theory studies the growth of arithmetic invariants
+in Z_p-extensions (towers of number fields).
+
+The Iwasawa mu and lambda invariants:
+  For the cyclotomic Z_p-extension of Q:
+  mu = 0 (Ferrero-Washington theorem for all p)
+  lambda = 0 for p = KEY1 and p = KEY2 (regular primes!)
+
+  For p = KEY1 = 2:
+  The 2-part of the class group of Q(zeta_{2^n}):
+  h_2(Q(zeta_4)) = 1 (trivially)
+  h_2(Q(zeta_8)) = 1
+  h_2(Q(zeta_16)) = 1
+  The Iwasawa invariants: mu = 0, lambda = 0 for Q at p=2.
+
+  For p = KEY2 = 3:
+  Similarly mu = 0, lambda = 0.
+
+  For p = 37 (FIRST irregular prime):
+  lambda > 0 (the 37-part of class numbers grows!)
+  37 is irregular because B_32 has 37 in its numerator.
+  B_32/32 has 37 dividing the numerator.
+
+The KUMMER-VANDIVER CONJECTURE:
+  p does not divide h^+(Q(zeta_p)) (the plus part of the class number).
+  Verified for all p < 163577856.
+  True for all tournament primes (trivially, as they're regular).
+
+  If Kummer-Vandiver fails for some prime p, it would be
+  the FIRST counterexample to a major conjecture in number theory.
+
+At p = KEY1 = 2:
+  Iwasawa's Main Conjecture relates:
+  Char(X_inf) = L_p(s, chi) (p-adic L-function)
+
+  The 2-adic L-function L_2(s) encodes:
+  L_2(1 - 2k) = (1 - 2^{2k-1}) * B_{2k} / 2k
+  = (1 - KEY1^{2k-1}) * B_{2k} / 2k
+
+  At k=1: L_2(-1) = (1 - KEY1) * B_2/2 = (1-2) * (1/6)/2 = -1/12 = -1/h(E6)!
+  The 2-adic L-function at s = -1 is -1/h(E6)!
+
+======================================================================
+  Part 10: SHIMURA VARIETIES AND LANGLANDS
+======================================================================
+
+The Langlands program connects:
+  Automorphic representations <-> Galois representations
+
+For GL_1: Class Field Theory (abelian case)
+  The Artin reciprocity law: Gal(K^ab/K) = C_K / C_K^0
+  (adele class group modulo connected component)
+
+  For K = Q: Gal(Q^ab/Q) = Z-hat^* (profinite completion of Z^*)
+  = prod_p Z_p^*
+
+  The p-component Z_p^* for tournament primes:
+  Z_2^* = {±1} × (1 + 4*Z_2) = Z/KEY1 × Z_2
+  Z_3^* = {±1, ±omega} × (1 + 3*Z_3) = Z/(KEY2-1) × Z/(KEY2) × ... hmm
+  Actually Z_3^* = Z/2 × Z_3 (for p odd: Z/(p-1) × Z_p)
+
+  |Z_2^*/Z_2^{*n}| for small n:
+  n=1: 1
+  n=2: 2 = KEY1
+  n=4: 4 = KEY1^2
+  n=8: 8 = KEY1^3
+
+For GL_2: Modularity (the case proved by Wiles et al.)
+  Every elliptic curve E/Q corresponds to a weight-2 newform f.
+  The level N_f = conductor of E.
+
+  SMALLEST CONDUCTORS of elliptic curves:
+  N = 11: the curve y^2 + y = x^3 - x^2 - 10x - 20
+    Cremona label: 11a1
+    Rank 0, #E(Q)_tors = 5 = KEY_SUM!
+    First curve with positive conductor.
+
+  N = 14 = dim(G2): y^2 + xy + y = x^3 + 4x - 6
+    Rank 0, #E(Q)_tors = 6 = h(G2)!
+
+  N = 15 = C(6,2): several curves
+  N = 17: rank 0
+  N = 19: rank 0
+
+  N = 37: FIRST curve of rank 1!
+    y^2 + y = x^3 + x^2 - 23x - 50
+    Rank 1, generator has large height.
+    37 = the first IRREGULAR prime too!
+
+  The smallest conductor with rank 1 is 37.
+  The smallest conductor with rank 2 is 389.
+  The smallest conductor with rank 3 is 5077.
+
+Shimura varieties:
+  For G = GL_2: the Shimura variety = modular curves X_0(N)
+  For G = GSp_4: Siegel modular 3-folds
+  For G = GU(2,1): Picard modular surfaces
+
+  The DIMENSION of the Shimura variety for GL_n is n(n-1)/2:
+  GL_2: dim = 1 (curves)
+  GL_3: dim = 3 = KEY2 (threefolds!)
+  GL_4: dim = 6 = h(G2) (sixfolds!)
+  GL_5: dim = 10 = V(Pet) (tenfolds!)
+
+  CROWN JEWEL: The Shimura variety dimension for GL_n is C(n,2)!
+  GL_n: dim = C(n,2) = triangular number!
+  This is the SAME formula as the number of edges in a tournament!
+  T(n,2) = C(n,2) = number of matches in a round-robin tournament!
+
+======================================================================
+  Part 11: WEIL CONJECTURES AND ZETA FUNCTIONS
+======================================================================
+
+The zeta function of an elliptic curve E/F_p:
+  Z(E/F_p, T) = (1 - a_p*T + p*T^2) / ((1-T)(1-pT))
+
+  The numerator 1 - a_p*T + p*T^2 has roots alpha, beta with
+  |alpha| = |beta| = sqrt(p) (Riemann hypothesis for curves, Hasse).
+
+  For E: y^2 = x^3 + 1 over F_7:
+
+  #E(F_7) = 12, a_7 = -4
+  Z(E/F_7, T) = (1 - -4*T + 7*T^2) / ((1-T)(1-7T))
+  Roots of numerator: alpha, beta with alpha*beta = 7 = H_forb_1
+  alpha + beta = -4
+
+The Riemann zeta function:
+  zeta(s) = prod_{p prime} 1/(1 - p^{-s})
+
+  Special values:
+  zeta(2) = pi^2/6 = pi^2/h(G2)
+  zeta(4) = pi^4/90 = pi^4/(KEY2^2 * V(Pet))
+  zeta(6) = pi^6/945 = pi^6/(KEY2^3 * KEY_SUM * H_forb_1)
+  zeta(8) = pi^8/9450 = pi^8/(KEY1 * KEY2^3 * KEY_SUM^2 * H_forb_1)
+  zeta(10) = pi^10/93555
+
+  zeta(2k) = (-1)^{k+1} * (2*pi)^{2k} * B_{2k} / (2 * (2k)!)
+  The denominators involve Bernoulli numbers — same ones
+  controlling im(J) and exotic spheres!
+
+  zeta(-1) = -1/12 = -1/h(E6) (Ramanujan's "sum" 1+2+3+... = -1/12)
+  zeta(-3) = 1/120 = 1/|BI|
+  zeta(-5) = -1/252 = -1/C(10,5)
+  zeta(-7) = 1/240 = 1/|Phi(E8)|!
+  zeta(-9) = -1/132
+  zeta(-11) = 691/32760
+
+  zeta(negative odd integers) = -B_{2k+2}/(2k+2):
+  zeta(-1) = -B_2/2 = -1/h(E6)
+  zeta(-3) = B_4/4 = -1/|BI| (wait: B_4 = -1/30, so B_4/4 = -1/120 = -1/|BI|? No.)
+
+Zeta function at negative integers:
+  zeta(1-2k) = -B_{2k}/(2k)
+  zeta( -1) =           -1/12  (denom 12) denom=h(E6)
+  zeta( -3) =           1/120  (denom 120) denom=|BI|
+  zeta( -5) =          -1/252  (denom 252)
+  zeta( -7) =           1/240  (denom 240) denom=|Phi(E8)|
+  zeta( -9) =          -1/132  (denom 132)
+  zeta(-11) =       691/32760  (denom 32760)
+  zeta(-13) =           -1/12  (denom 12) denom=h(E6)
+
+======================================================================
+  Part 12: GRAND SYNTHESIS — ARITHMETIC GEOMETRY IS (2,3)
+======================================================================
+
+======================================================================
+  ARITHMETIC GEOMETRY = THE (2,3) FABRIC OF NUMBER
+======================================================================
+
+1. ELLIPTIC CURVE DISCRIMINANT:
+   Delta = -KEY1^4 * (KEY1^2 * a^3 + KEY2^3 * b^2)
+   j = -h(E6)^3 * (KEY1^2 * a)^3 / Delta
+   1728 = h(E6)^3 = KEY1^6 * KEY2^3
+
+2. CM SPECIAL VALUES:
+   j = 0: CM by Z[zeta_3] (KEY2-fold symmetry)
+   j = h(E6)^3: CM by Z[i] (KEY1-fold symmetry)
+   Automorphisms: Z/h(G2) and Z/KEY1^2 respectively
+
+3. MODULAR CURVES:
+   X_0(N) rational for N up to KEY_SUM^2 = 25
+   g(X_0(|BT|)) = 1 (level |BT| is elliptic!)
+   g(X_0(H_forb_1)) = 0 (level H_forb_1 is rational!)
+
+4. HEEGNER NUMBERS:
+   9 = KEY2^2 imaginary quadratic fields with h = 1
+   First five: KEY1, KEY2, KEY1^2, H_forb_1, KEY1^3
+
+5. MAZUR'S THEOREM:
+   Torsion orders: 1 through h(E6) and KEY1^4
+   All are tournament constants!
+
+6. SL_2 OVER TOURNAMENT FIELDS:
+   SL_2(F_{KEY1}) = S_{KEY2} (order h(G2) = 6)
+   SL_2(F_{KEY2}) = BT (order |BT| = 24!)
+   SL_2(F_{KEY_SUM}) = BI (order |BI| = 120!)
+
+7. FERMAT'S LAST THEOREM:
+   Proved via X_0(KEY1) having genus 0
+   First cases: n = KEY2 and n = KEY1^2
+   All tournament primes are regular
+
+8. SHIMURA VARIETY DIMENSIONS:
+   GL_n Shimura variety has dim C(n,2) = tournament edge count!
+
+9. ZETA SPECIAL VALUES:
+   zeta(-1) = -1/h(E6), zeta(-3) = 1/|BI|
+   zeta(-7) = 1/|Phi(E8)|
+   Denominators = tournament vocabulary
+
+10. SUPERSINGULAR MASS:
+    sum 1/|Aut(E)| = (p-1)/|BT|
+    The mass formula has |BT| = 24 in the denominator!
+
+THE DEEPEST INSIGHT:
+   The elliptic curve discriminant Delta = -16(4a^3 + 27b^2)
+   has coefficients -16 = -KEY1^4, 4 = KEY1^2, 27 = KEY2^3.
+
+   An elliptic curve IS a (2,3) object:
+   It is a curve of degree (KEY1 + KEY2) = 6 in weighted projective space
+   P(KEY1, KEY2, 1) with weights KEY1 and KEY2 on y and x.
+
+   The Weierstrass equation y^2 = x^3 is literally:
+   (variable of weight KEY1)^KEY1 = (variable of weight KEY2)^... no.
+   y has weight 3, x has weight 2: y^2 has weight 6, x^3 has weight 6.
+   The curve LIVES in the (2,3) graded world!
+
+   ARITHMETIC GEOMETRY IS THE (2,3) ARITHMETIC OF CURVES.
+
