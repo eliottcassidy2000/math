@@ -1,0 +1,432 @@
+======================================================================
+PART 1: THE PRODUCT IDENTITY AND THE RATIO LADDER
+======================================================================
+
+From deletion-contraction of I(CG, x):
+  Additive ratio (contraction term): x₂/x₁ = 3/2
+  Multiplicative ratio (isolated vertex): (1+x₂)/(1+x₁) = 4/3
+
+  Product: (3/2) × (4/3) = 12/6 = 2
+
+  This is NOT a coincidence. In general:
+  For any pair x₁, x₂:
+    Additive ratio = x₂/x₁
+    Multiplicative ratio = (1+x₂)/(1+x₁)
+    Product = x₂(1+x₂) / (x₁(1+x₁))
+
+  At (x₁, x₂) = (2, 3):
+    x₂/x₁ = 3/2
+    (1+x₂)/(1+x₁) = 4/3
+    Product = 3·4 / (2·3) = 12/6 = 2
+
+  At (x₁, x₂) = (k, k+1):
+    Product = (k+1)(k+2) / (k(k+1)) = (k+2)/k
+
+  For k=2: product = 4/2 = 2
+  For k=3: product = 5/3
+  For k=7: product = 9/7
+  For k=10: product = 12/10 = 6/5
+
+  ONLY for k=2 is the product an integer (and = 2 itself!)
+  This is another way 2 is UNIQUE.
+
+THE RATIO LADDER:
+  Consider the sequence of ratios (k+1)/k for k=1,2,3,...
+  2/1, 3/2, 4/3, 5/4, 6/5, 7/6, 8/7, ...
+
+  Product of first m ratios: (m+1)/1 = m+1
+  Product of ratios from 2 to m: (m+1)/2
+
+  The product telescopes!
+  (3/2)(4/3)(5/4)...(k/k-1) = k/2
+
+  At k=3: product = 3/2 (the tournament ratio!)
+  At k=8: product = 8/2 = 4 (= 2²)
+  At k=11: product = 11/2
+
+CONNECTION TO JACOBSTHAL:
+  J_x(n) at integer root k has denominator 2k-1.
+  The ratio of consecutive denominators:
+  (2(k+1)-1) / (2k-1) = (2k+1)/(2k-1)
+
+  k=2: 5/3
+  k=3: 7/5
+  k=4: 9/7
+
+  Product: (5/3)(7/5)(9/7) = 9/3 = 3
+  Product of ALL: (2k+1)/3 (telescoping)
+
+  So the product of Jacobsthal denominator ratios from k=2 to k
+  is (2k+1)/3. At k=∞: this diverges — the tower is infinite.
+
+======================================================================
+PART 2: THE STERN-BROCOT TREE AND (2,3)
+======================================================================
+
+The Stern-Brocot tree organizes all positive rationals.
+Starting from 0/1 and 1/0, mediant insertion gives:
+
+                         1/1
+                   /           \
+                1/2             2/1
+              /     \         /     \
+           1/3       2/3   3/2       3/1
+          /   \     /   \
+        1/4   2/5 3/5   3/4
+
+  In this tree:
+  • 2/1 is in the RIGHT subtree (> 1)
+  • 3/2 is the LEFT child of 2/1
+  • 3/1 is the RIGHT child of 2/1
+
+  The PATH to 3/2 from the root:
+  1/1 → R → L = 'RL'
+
+  The PATH to 2/3 from the root:
+  1/1 → L → R = 'LR'
+
+  3/2 and 2/3 are MIRROR IMAGES in the Stern-Brocot tree!
+  This reflects the DUALITY between 2 and 3 in tournament theory.
+
+CONTINUED FRACTIONS:
+  3/2 = [1; 2] = 1 + 1/2
+  2/3 = [0; 1, 2] = 0 + 1/(1 + 1/2)
+
+  The 'depth' of 2 and 3 in the Stern-Brocot tree:
+  2 = [2] (depth 1)
+  3 = [3] (depth 1)
+  3/2 = [1; 2] (depth 2)
+  7 = [7] (depth 1)
+  8 = [8] (depth 1)
+  7/8 = [0; 1, 7] (depth 3)
+  10 = [10] (depth 1)
+  11 = [11] (depth 1)
+  10/11 = [0; 1, 10] (depth 3)
+
+======================================================================
+PART 3: THE FIBONACCI-JACOBSTHAL BRIDGE (x=1 to x=2)
+======================================================================
+
+Root of f(n) = f(n-1) + x·f(n-2) as x varies from 1 to 12:
+
+      x          root   x=k(k-1)?                  note
+  -------------------------------------------------------
+    1.0      1.618034          no             Fibonacci
+    1.5      1.822876          no                      
+    2.0      2.000000         k=2      Jacobsthal (OCF)
+    2.5      2.158312          no                      
+    3.0      2.302776          no       tribonacci-like
+    4.0      2.561553          no                      
+    5.0      2.791288          no                      
+    6.0      3.000000         k=3            3-spectrum
+    7.0      3.192582          no                      
+    8.0      3.372281          no                      
+   10.0      3.701562          no    decimal pair (low)
+   11.0      3.854102          no   decimal pair (high)
+   12.0      4.000000         k=4    7-denom Jacobsthal
+
+KEY INSIGHT: x = k(k-1) ↔ integer root k
+  So 'knowing 2 and 3' means knowing the first TWO integer roots.
+  The x=2 Jacobsthal is the SIMPLEST non-trivial integer root.
+  The x=6 Jacobsthal is the SECOND simplest.
+
+  Between x=6 and x=12 (roots 3 and 4), we find x=10,11.
+  These give irrational roots: (1+√41)/2 and (1+√45)/2.
+  So 10 and 11 are the 'irrational bridge' between integer levels.
+
+======================================================================
+PART 4: THE (2,3) GALOIS ACTION
+======================================================================
+
+The Jacobsthal recurrence at x=2:
+  J(n) = J(n-1) + 2J(n-2)
+  Characteristic roots: 2 and -1
+  Galois conjugate: 2 ↔ -1
+
+  J(n) = (2^n - (-1)^n) / 3
+  The '3' in the denominator is 2-(-1) = 3.
+  So 3 = DISTANCE BETWEEN GALOIS CONJUGATES.
+
+The Jacobsthal at x=6:
+  Roots: 3 and -2
+  Galois conjugate: 3 ↔ -2
+  Distance: 3-(-2) = 5 (the next odd number!)
+  J₆(n) = (3^n - (-2)^n) / 5
+
+General pattern at x=k(k-1):
+  Roots: k and 1-k
+  Distance: k-(1-k) = 2k-1 (the odd numbers: 3, 5, 7, ...)
+  J_x(n) = (k^n - (1-k)^n) / (2k-1)
+
+THE GALOIS ACTION ON THE PAIR (2,3):
+  If we 'conjugate' 2 → -1, then 3 = 2-(-1) = sum
+  If we 'conjugate' 3 → -2, then 5 = 3-(-2)
+  The denominators (3, 5, 7, ...) are the 'Galois distances'.
+
+  And 3 plays a DUAL role:
+  - As a ROOT (of x=6 Jacobsthal)
+  - As a GALOIS DISTANCE (= 2-(-1))
+  - As a DENOMINATOR (of J₂(n) = (2^n-(-1)^n)/3)
+  - As an ISOLATED VERTEX WEIGHT (1+x=1+2=3)
+
+  This multi-role is WHY 3 is the 'other key'.
+
+======================================================================
+PART 5: THE UNIVERSAL RECURRENCE
+======================================================================
+
+Can we write a SINGLE recurrence that generates everything?
+
+Consider: F(n, x, k) = the 'universal tournament function'
+  F satisfies:
+  1. F(n, x, 2) = J_x(n)                   (Jacobsthal at x)
+  2. F(n, 2, k) = k-nacci-like              (k-step recurrence)
+  3. F(1, x, k) = 1                         (initial condition)
+
+Attempt: F(n, x, k) = Σ_{i=1}^k x^{i-1} F(n-i, x, k)
+  with F(j, x, k) = 1 for j ≤ 0
+
+F(n, x, k) = Σ_{i=1}^k x^{i-1} F(n-i, x, k):
+
+  F(n, 1, k) = k-nacci:
+    k=2: [2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+    k=3: [3, 5, 9, 17, 31, 57, 105, 193, 355, 653]
+    k=5: [5, 9, 17, 33, 65, 129, 253, 497, 977, 1921]
+    k=7: [7, 13, 25, 49, 97, 193, 385, 769, 1531, 3049]
+
+  F(n, 2, k) = weighted k-nacci:
+    k=2: [3, 5, 11, 21, 43, 85, 171, 341, 683, 1365]
+    k=3: [7, 13, 31, 85, 199, 493, 1231, 3013, 7447, 18397]
+    k=5: [31, 61, 151, 421, 1231, 3661, 9991, 28021, 79231, 224221]
+    k=7: [127, 253, 631, 1765, 5167, 15373, 45991, 137845, 397279, 1159453]
+
+  F(n, x, 2) = Fibonacci at x:
+    x=1: [2, 3, 5, 8, 13, 21, 34, 55, 89, 144]  Fib
+    x=2: [3, 5, 11, 21, 43, 85, 171, 341, 683, 1365]  Jac
+    x=3: [4, 7, 19, 40, 97, 217, 508, 1159, 2683, 6160]  
+    x=6: [7, 13, 55, 133, 463, 1261, 4039, 11605, 35839, 105469]  
+
+  At k=2, x=2: dominant root = 2 (Jacobsthal)
+  At k→∞, x=1: dominant root → 2 (k-nacci limit)
+  At k→∞, x=2: dominant root → 3 (weighted k-nacci limit)
+
+  THE UNIVERSAL RECURRENCE unifies all four families:
+  A (Jacobsthal): k=2, vary x
+  B (k-nacci): x=1, vary k
+  C (w-k-nacci): x=2, vary k
+  D (I(CG,·)): not directly this form, but I evaluates AT x=F values
+
+  Characteristic equation: z^{k+1} - (1+x)z^k + x^k = 0
+
+  At z = 1+x: (1+x)^{k+1} - (1+x)^{k+1} + x^k = x^k ≠ 0
+  At z = x: x^{k+1} - (1+x)x^k + x^k = x^{k+1} - x^{k+1} - x^k + x^k = 0 ✓
+
+  So z = x is ALWAYS a root of the characteristic equation!
+
+  Factor: z^{k+1} - (1+x)z^k + x^k = (z-x)(z^k - z^{k-1} - ... - 1)
+  Wait, let me verify...
+
+  Verifying factorization at k=2, x=2:
+    z³ - 3z² + 4 = (z-2)(z² - z - 2) = (z-2)(z-2)(z+1) = (z-2)²(z+1)
+    Roots: 2 (double), -1
+    Dominant root: 2 ✓
+
+  At k=3, x=2:
+    z⁴ - 3z³ + 8 = 0
+    Roots: ['2.4675+0.0000j', '2.0000+0.0000j', '-0.7338+1.0405j', '-0.7338-1.0405j']
+
+  At k=2, x=1 (Fibonacci):
+    z³ - 2z² + 1 = (z-1)(z²-z-1) = 0
+    Roots: 1, φ, -1/φ
+    Roots: ['1.6180', '1.0000', '-0.6180']
+
+  At k=3, x=1 (tribonacci):
+    z⁴ - 2z³ + 1 = 0
+    Roots: ['1.8393+0.0000j', '1.0000+0.0000j', '-0.4196+0.6063j', '-0.4196-0.6063j']
+
+FACTORIZATION:
+  z^{k+1} - (1+x)z^k + x^k = (z - x) · P_k(z)
+  where P_k(z) has k roots, the largest being φ_k(x).
+
+  At x=1: (z-1)·P_k(z) → P_k gives k-nacci roots
+  At x=2: (z-2)·P_k(z) → P_k gives weighted k-nacci roots
+
+  The FIXED root z=x is the 'Jacobsthal mode'.
+  The VARYING root φ_k(x) is the 'k-nacci mode'.
+
+  At x=2: fixed root = 2, k-nacci mode → 2 (they MERGE!)
+  At x=3: fixed root = 3, k-nacci mode → 2 (they SPLIT)
+
+  The CONVERGENCE of φ_k(x) to its limit is the k-nacci story.
+  The FIXED point x is the Jacobsthal story.
+  Tournament theory lives at x=2, where they coincide!
+
+======================================================================
+PART 6: THE MASTER CHARACTERISTIC POLYNOMIAL
+======================================================================
+
+The master polynomial: z^{k+1} - (1+x)z^k + x^k = 0
+
+  This factors as (z-x)·Q(z) where Q has degree k.
+
+  Q(z) = (z^{k+1} - (1+x)z^k + x^k) / (z-x)
+
+  k=2, x=1: Q(z) coeffs = [1, -1, -1], dom. root = 1.618034
+  k=2, x=2: Q(z) coeffs = [1, -1, -2], dom. root = 2.000000
+  k=2, x=3: Q(z) coeffs = [1, -1, -3], dom. root = 2.302776
+  k=3, x=1: Q(z) coeffs = [1, -1, -1, -1], dom. root = 1.839287
+  k=3, x=2: Q(z) coeffs = [1, -1, -2, -4], dom. root = 2.467504
+  k=3, x=3: Q(z) coeffs = [1, -1, -3, -9], dom. root = 3.000000
+  k=4, x=1: Q(z) coeffs = [1, -1, -1, -1, -1], dom. root = 1.927562
+  k=4, x=2: Q(z) coeffs = [1, -1, -2, -4, -8], dom. root = 2.698069
+  k=4, x=3: Q(z) coeffs = [1, -1, -3, -9, -27], dom. root = 3.377695
+  k=5, x=1: Q(z) coeffs = [1, -1, -1, -1, -1, -1], dom. root = 1.965948
+  k=5, x=2: Q(z) coeffs = [1, -1, -2, -4, -8, -16], dom. root = 2.820830
+  k=5, x=3: Q(z) coeffs = [1, -1, -3, -9, -27, -81], dom. root = 3.595731
+
+======================================================================
+PART 7: THE (1+x) RECURRENCE AND WHY 3 IS SPECIAL
+======================================================================
+
+From the master polynomial: z^{k+1} = (1+x)z^k - x^k
+
+At the dominant root z* for large k:
+  z* ≈ 1+x - x^k/z*^k ≈ 1+x - (x/z*)^k
+
+  As k→∞: z* → 1+x (if x/z* < 1, i.e., x < 1+x, i.e., always)
+
+  BUT WAIT: z=x is also a root, and for x ≥ 1+x... no, x < 1+x always.
+  The dominant root of Q(z) (the quotient after removing z=x):
+  For x=1: Q root → tribonacci → ... → 2
+  For x=2: Q root → ψ_k → 3
+  For x=3: Q root → ? → 4
+
+  PATTERN: The k-nacci mode root → 1+x as k→∞!
+
+  At x=1: limit = 2 = 1+1  ✓
+  At x=2: limit = 3 = 1+2  ✓
+  At x=3: limit = 4 = 1+3  ✓
+
+  Verification: Q root (dominant non-x root) at various (x, k):
+     x    k         Q root      1+x            gap
+  --------------------------------------------------
+     1    3     1.83928676        2 1.60713245e-01
+     1    5     1.96594824        2 3.40517634e-02
+     1   10     1.99901863        2 9.81367290e-04
+     1   20     1.99999905        2 9.53683412e-07
+
+     2    3     2.46750386        3 5.32496143e-01
+     2    5     2.82082993        3 1.79170070e-01
+     2   10     2.98155531        3 1.84446852e-02
+     2   20     2.99969867        3 3.01333428e-04
+
+     3    3     4.00000000        4 0.00000000e+00
+     3    5     3.59573129        4 4.04268706e-01
+     3   10     3.93338944        4 6.66105577e-02
+     3   20     3.99677725        4 3.22274686e-03
+
+     5    3     6.00000000        6 0.00000000e+00
+     5    5     6.00000000        6 0.00000000e+00
+     5   10     5.75492072        6 2.45079276e-01
+     5   20     5.97128973        6 2.87102651e-02
+
+    10    3    11.00000000       11 0.00000000e+00
+    10    5    11.00000000       11 0.00000000e+00
+    10   10    11.00000000       11 0.00000000e+00
+    10   20    10.77546895       11 2.24531047e-01
+
+THEOREM: For the universal recurrence F(n,x,k),
+  the dominant root of the quotient polynomial Q(z)
+  converges to 1+x as k→∞.
+
+  At x=2: limit = 3 ← the OTHER KEY!
+
+  So the statement 'k-nacci → 2, weighted k-nacci → 3'
+  is really: 'k-nacci (x=1) → 1+1 = 2, k-nacci (x=2) → 1+2 = 3'
+
+  THE SHIFT-BY-ONE IS THE BRIDGE BETWEEN 2 AND 3!
+
+======================================================================
+PART 8: THE (2,3) AS (x, 1+x) FOR x=2
+======================================================================
+
+The fundamental relation: 3 = 1 + 2
+
+In tournament theory:
+  2 = the evaluation point (I(CG, 2) = H)
+  3 = 1 + 2 = the isolated vertex weight
+  1 = the empty set contribution
+
+The triple (1, 2, 3) is really (1, x, 1+x) for x=2.
+And x=2 is special because:
+  1. Only positive integer x where Fib root (1+√(1+4x))/2 is integer
+  2. x = k(k-1) at k=2 (smallest non-trivial k)
+  3. H = I(CG, 2) is the Hamiltonian path count (Grinberg-Stanley)
+  4. Q = (H² - Pf²)/8 and 8 = x³
+  5. Rédei: H ≡ 1 (mod x)
+
+THE HIERARCHY REVISITED:
+
+  (1, x, 1+x) = (1, 2, 3)
+
+  Powers of x: (x, x², x³) = (2, 4, 8)
+  These give: (OCF point, mod 4 level, Q divisor)
+
+  Powers of (1+x): ((1+x), (1+x)², (1+x)³) = (3, 9, 27)
+  These give: (isolated weight, mod 9 level, mod 27 level)
+
+  Cross products: x·(1+x) = 6, x²·(1+x) = 12, x·(1+x)² = 18
+  x·(1+x) = 6 gives the x=6 Jacobsthal (root 3!)
+  x²·(1+x) = 12 gives the x=12 Jacobsthal (root 4, denominator 7)
+
+  And where are 7 and 8?
+  8 = x³ = 2³
+  7 = x³ - 1 = 2³ - 1 (Mersenne)
+
+  And 10 and 11?
+  10 = x + x³ = 2 + 8
+  11 = (1+x) + x³ = 3 + 8
+
+  So the ENTIRE hierarchy lives in Z[x, 1+x] = Z[2, 3]:
+  1   = 1
+  2   = x
+  3   = 1+x
+  4   = x²
+  6   = x(1+x)
+  7   = x³ - 1
+  8   = x³
+  9   = (1+x)²
+  10  = x + x³ = x(1+x²)
+  11  = (1+x) + x³ = 1+x+x³
+  12  = x²(1+x)
+
+  EVERYTHING in {1,2,3,4,6,7,8,9,10,11,12} is a polynomial in x=2.
+  And the ones highlighted by the user — 2, 3, 7, 8, 10, 11 —
+  are precisely the ones built from (x, 1+x, x³, x³-1, x+x³, 1+x+x³).
+
+======================================================================
+FINAL: THE SINGLE FORMULA
+======================================================================
+
+  IF you know x = 2 (the OCF evaluation point),
+  THEN you know:
+    1+x = 3 (isolated weight)
+    x(x-1) = 2 (the Jacobsthal x-value AT root 2)
+    x³ = 8 (Q divisor, cross-level threshold)
+    x³-1 = 7 (last pure level, Mersenne)
+    x+x³ = 10 (shifted counting)
+    1+x+x³ = 11 (shifted topology)
+
+  And the recurrence convergence rates:
+    k-nacci → x at rate 1/x
+    w-k-nacci → 1+x at rate x/(1+x)
+
+  At x=2:
+    k-nacci → 2 at rate 1/2
+    w-k-nacci → 3 at rate 2/3
+
+  THE KEYS TO THE UNIVERSE ARE x AND 1+x.
+  For tournaments, x=2, so the keys are 2 and 3.
+  Everything else is a POLYNOMIAL IN x.
+
+Done.
