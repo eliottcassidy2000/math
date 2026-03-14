@@ -1,0 +1,158 @@
+======================================================================
+PART 1: FINDING A MIDDLE-CLASS REPRESENTATIVE
+======================================================================
+Middle-class tournament adjacency:
+  0010011
+  1000011
+  0100101
+  1110000
+  1101000
+  0011100
+  0001110
+
+Automorphism group:
+  |Aut| = 3
+  Automorphisms:
+    (0, 1, 2, 3, 4, 5, 6)
+    (3, 4, 2, 5, 6, 0, 1)
+    (5, 6, 2, 0, 1, 3, 4)
+    id
+    (0 3 5) (1 4 6)
+    (0 5 3) (1 6 4)
+    (3, 4, 2, 5, 6, 0, 1) has order 3
+    (5, 6, 2, 0, 1, 3, 4) has order 3
+  Aut ≅ Z₃
+
+Score sequence (sorted): [3, 3, 3, 3, 3, 3, 3]
+
+Out-neighborhoods:
+  v=0: out=[2, 5, 6], in=[1, 3, 4]
+  v=1: out=[0, 5, 6], in=[2, 3, 4]
+  v=2: out=[1, 4, 6], in=[0, 3, 5]
+  v=3: out=[0, 1, 2], in=[4, 5, 6]
+  v=4: out=[0, 1, 3], in=[2, 5, 6]
+  v=5: out=[2, 3, 4], in=[0, 1, 6]
+  v=6: out=[3, 4, 5], in=[0, 1, 2]
+
+3-cycles (14):
+  [0, 1, 2]
+  [0, 2, 4]
+  [0, 3, 5]
+  [0, 3, 6]
+  [0, 4, 5]
+  [0, 4, 6]
+  [1, 2, 5]
+  [1, 3, 5]
+  [1, 3, 6]
+  [1, 4, 5]
+  [1, 4, 6]
+  [2, 3, 4]
+  [2, 3, 6]
+  [2, 5, 6]
+
+Both-cyclic pairs (α₂=10):
+  [0, 2, 4] | [1, 3, 5] → uncov 6
+  [0, 2, 4] | [1, 3, 6] → uncov 5
+  [0, 3, 5] | [1, 4, 6] → uncov 2
+  [0, 3, 6] | [1, 2, 5] → uncov 4
+  [0, 3, 6] | [1, 4, 5] → uncov 2
+  [0, 4, 5] | [1, 3, 6] → uncov 2
+  [0, 4, 5] | [2, 3, 6] → uncov 1
+  [0, 4, 6] | [1, 2, 5] → uncov 3
+  [0, 4, 6] | [1, 3, 5] → uncov 2
+  [1, 4, 5] | [2, 3, 6] → uncov 0
+
+Uncovered vertex distribution: {0: 1, 1: 1, 2: 4, 3: 1, 4: 1, 5: 1, 6: 1}
+  NOT uniform — some vertices more covered than others
+
+======================================================================
+PART 2: Z₃ ORBIT STRUCTURE
+======================================================================
+Generator: (3, 4, 2, 5, 6, 0, 1)
+Cycle decomposition: [(0, 3, 5), (1, 4, 6)]
+Fixed points: [2]
+3-cycles: [(0, 3, 5), (1, 4, 6)]
+
+Vertex partition under Z₃:
+  Fixed: [2]
+  Orbit: (0, 3, 5)
+  Orbit: (1, 4, 6)
+
+  Fixed vertex 2:
+    Out-neighbors: [1, 4, 6]
+    In-neighbors:  [0, 3, 5]
+    Orbit (0, 3, 5): 0 out, 3 in
+    Orbit (1, 4, 6): 3 out, 0 in
+
+======================================================================
+PART 3: THE THREE CLASSES COMPARED
+======================================================================
+
+  QR₇:
+    α₂=7, H=189
+    Doubly-regular parameter: {1: 21}
+    Vertex-cycle counts: [6, 6, 6, 6, 6, 6, 6]
+    H = 189 = 3 × 3 × 3 × 7
+
+  Middle:
+    α₂=10, H=171
+    Doubly-regular parameter: {1: 15, 0: 3, 2: 3}
+    Vertex-cycle counts: [6, 6, 6, 6, 6, 6, 6]
+    H = 171 = 3 × 3 × 19
+
+  AP₇:
+    α₂=14, H=175
+    Doubly-regular parameter: {0: 7, 1: 7, 2: 7}
+    Vertex-cycle counts: [6, 6, 6, 6, 6, 6, 6]
+    H = 175 = 5 × 5 × 7
+
+======================================================================
+PART 4: WHAT MAKES THE MIDDLE CLASS SPECIAL?
+======================================================================
+
+THE THREE REGULAR TOURNAMENT CLASSES ON n=7:
+
+  QR₇ (Multiplicative):
+    - Connection set {1,2,4} = quadratic residues
+    - α₂ = 7 (minimum), H = 189 = 27 × 7 = 3³ × 7
+    - |Aut| = 21 = 3 × 7 (LARGEST symmetry)
+    - Doubly-regular with λ=1
+    - Vertex-cycle incidence: uniform (each vertex in 6 cycles)
+    - Cycles spread maximally → fewest disjoint pairs
+
+  Middle (Non-circulant):
+    - NOT invariant under any rotation
+    - α₂ = 10 (middle), H = 171 = 9 × 19
+    - |Aut| = 3 (Z₃ — SMALLEST symmetry)
+    - NOT doubly-regular
+    - 1 fixed point + 2 orbits of 3 under Z₃
+    - BREAKS the circulant pattern
+
+  AP₇ (Additive):
+    - Connection set {1,2,3} = consecutive residues
+    - α₂ = 14 (maximum), H = 175 = 25 × 7 = 5² × 7
+    - |Aut| = 7 (Z₇ — pure rotation)
+    - Vertex-cycle incidence: uniform (each vertex in 6 cycles)
+    - Cycles clustered → most disjoint pairs
+
+THE PATTERN:
+  |Aut|: 21 > 7 > 3
+  α₂:     7 < 10 < 14
+  H:     189 > 175 > 171
+
+  More symmetry → fewer disjoint cycles → higher H
+  (Symmetry "forces" cycles to overlap, reducing independence)
+
+  H factorizations:
+    189 = 3³ × 7  (pure Mersenne structure)
+    175 = 5² × 7  (Fibonacci × Mersenne)
+    171 = 3² × 19 (p=3 × p=19, Jacobsthal primes)
+
+  All three H values share factor 7... wait, 171/7 = 24.43, not integer.
+  171 = 9 × 19. 189 = 27 × 7. 175 = 25 × 7.
+  Only QR and AP share the factor 7!
+  Middle has H = 171 = 9 × 19, with NO factor of 7.
+
+  The FORBIDDEN value 7 divides H for QR and AP but NOT for Middle.
+  The middle class AVOIDS the forbidden number!
+

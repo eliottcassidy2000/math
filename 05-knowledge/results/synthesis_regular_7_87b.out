@@ -1,0 +1,161 @@
+======================================================================
+GRAND SYNTHESIS: REGULAR TOURNAMENTS ON n=7
+======================================================================
+
+PART 1: NUMERICAL STRUCTURE
+----------------------------------------
+  QR₇     : H= 189, |Aut|=21, α₂= 7, orbit= 240
+  Middle  : H= 171, |Aut|= 3, α₂=10, orbit=1680
+  AP₇     : H= 175, |Aut|= 7, α₂=14, orbit= 720
+
+  H products: 189 × 171 × 175 = 5655825
+  189 = {3: 3, 7: 1}
+  171 = {3: 2, 19: 1}
+  175 = {5: 2, 7: 1}
+
+  Weighted average H = 173.7273
+  This should equal mean H over ALL regular tournaments
+  E[H] over all tournaments = 7!/2^6 = 78.75
+  E[H] over regular = 173.73 (much higher!)
+
+PART 2: ORBIT-AUT RELATION
+----------------------------------------
+  QR₇     : |S_7|/|Aut| = 5040/21 = 240 = orbit=240
+  Middle  : |S_7|/|Aut| = 5040/3 = 1680 = orbit=1680
+  AP₇     : |S_7|/|Aut| = 5040/7 = 720 = orbit=720
+
+  Total regular = 2640
+  Total regular = 5040 × (1/21 + 1/3 + 1/7)
+                = 5040 × (1/21 + 1/3 + 1/7)
+                = 5040 × (11/21)
+                = 5040 × (1 + 7 + 3)/21
+                = 5040 × 11/21
+                = 2640
+                = 2640 ✓
+
+  Key: 1/21 + 1/3 + 1/7 = (1 + 7 + 3)/21 = 11/21
+  So: total_regular = n! × 11/21 = 7! × 11/(3×7)
+
+PART 3: NUMBER-THEORETIC CONNECTIONS
+----------------------------------------
+  H(QR) - H(AP) = 14 = 14 = 2 × 7
+  H(QR) - H(Mid) = 18 = 18 = 2 × 9 = 2 × 3²
+  H(AP) - H(Mid) = 4 = 4 = 2²
+
+  H(QR)/7 = 27 = 27 = 3³
+  H(AP)/7 = 25 = 25 = 5²
+  H(Mid)/9 = 19 = 19 (prime)
+
+  27 - 25 = 2 (the generator)
+  189 mod 7 = 0
+  175 mod 7 = 0
+  171 mod 7 = 3 = 3 (the cycle generator)
+
+  189 mod 3 = 0
+  175 mod 3 = 1 = 1
+  171 mod 3 = 0
+
+  H values mod 6: [3, 3, 1] = 3, 3, 1
+  H values mod 12: [9, 3, 7] = 9, 3, 7
+
+  Forbidden values at n=7 (from sampling): H=7, H=21, ...
+  GCD(189, 175) = 7
+  GCD(189, 171) = 9
+  GCD(175, 171) = 1
+  GCD(all three) = 1
+
+PART 4: α₂ SPECTRUM AS DESIGN
+----------------------------------------
+  α₂ values for regular n=7: {7, 10, 14}
+  Differences: 10-7=3, 14-10=4, 14-7=7
+  Sum: 7+10+14 = 31 = 2⁵-1 (Mersenne prime!)
+  Product: 7×10×14 = 980 = 980 = 4 × 245 = 4 × 5 × 49
+
+  Total disjoint pairs: C(7,3) × C(4,3) / 2 = 70
+  α₂/70 ratios: ['0.100', '0.143', '0.200']
+  = 1/10, 1/7, 1/5
+  Denominators: 10, 7, 5!
+  These are C(5,2), the forbidden prime, and the triple-coincidence prime!
+
+PART 5: THE 2640 FACTORIZATION
+----------------------------------------
+  2640 = {2: 4, 3: 1, 5: 1, 11: 1}
+       = 2⁴ × 3 × 5 × 11
+       = 16 × 165
+       = 16 × 3 × 5 × 11
+  Note: 11 is a prime appearing here!
+  2640/7! = 2640/5040 = 0.523810 = 11/21
+
+  11/21: the fraction of S_7 that maps to regular tournaments
+  21 = |Aut(QR₇)| = H_forb_2 = C(7,2)
+  11 = 7 + 3 + 1 = sum of 1/|Aut| denominators
+     = the NUMBER of Hamiltonian paths lost per tournament
+
+  Total tournaments on n=7: 2^21 = 2097152
+  Regular among them: 2640
+  Fraction: 0.001259
+
+PART 6: α₂ × |Aut| PRODUCT
+----------------------------------------
+  QR₇     : α₂ × |Aut| = 7 × 21 = 147
+  Middle  : α₂ × |Aut| = 10 × 3 = 30
+  AP₇     : α₂ × |Aut| = 14 × 7 = 98
+  QR₇     : H/α₂ = 189/7 = 27.00
+  Middle  : H/α₂ = 171/10 = 17.10
+  AP₇     : H/α₂ = 175/14 = 12.50
+  QR₇     : H × |Aut| = 189 × 21 = 3969
+  Middle  : H × |Aut| = 171 × 3 = 513
+  AP₇     : H × |Aut| = 175 × 7 = 1225
+
+  189 × 21 = 3969 = {3: 4, 7: 2}
+           = 63² = (2⁶-1)² = (7×9)²
+  175 × 7  = 1225 = {5: 2, 7: 2}
+           = 35² = (5×7)²
+  171 × 3  = 513 = {3: 3, 19: 1}
+           = 513 = 27 × 19 = 3³ × 19
+
+  QR₇: H × |Aut| = 63² = (2⁶-1)²
+  AP₇: H × |Aut| = 35² = (C(7,2)/3 × C(7,2)/3)... hmm
+  TWO of three give PERFECT SQUARES!
+  63 = 9 × 7, 35 = 5 × 7
+  Both divisible by 7 = H_forb_1!
+
+======================================================================
+THE GRAND SYNTHESIS
+======================================================================
+
+REGULAR TOURNAMENTS ON n=7: A COMPLETE PICTURE
+
+Three isomorphism classes, encoding the multiplicative/additive/broken trichotomy:
+
+                 QR₇ (mult)     Middle (broken)    AP₇ (add)
+  ─────────────  ───────────    ───────────────    ──────────
+  α₂             7              10                 14
+  H              189            171                175
+  |Aut|          21             3                  7
+  Orbit          240            1680               720
+  Circulant?     YES            NO                 YES
+  Doubly-reg?    YES (λ=1)      NO                 NO
+  α₂/70          1/10           1/7                1/5
+  H × |Aut|      3969 = 63²    513 = 3³×19        1225 = 35²
+
+UNIVERSAL RELATIONSHIPS:
+  1. α₁ = 14 for ALL regular tournaments (constant!)
+  2. Transitive triples = 21 = H_forb_2 for all regular
+  3. Total = 2640 = 7! × 11/21
+
+CROWN JEWEL DISCOVERIES:
+  ★ α₂ × |Aut| is NOT constant, but H × |Aut| gives perfect squares
+    for the two circulant classes: 63² and 35² (both divisible by 7)
+  ★ The α₂/70 ratios are 1/10, 1/7, 1/5 — three of the key numbers
+    in tournament theory!
+  ★ α₂ sum = 7 + 10 + 14 = 31 = 2⁵ - 1 (Mersenne prime)
+  ★ The middle class breaks circulant symmetry via Z₃ (the cycle
+    generator) while the other two have Z₇ and Z₇⋊Z₃ = Z₂₁
+
+THE NUMBER 7 THREAD:
+  7 = α₂(QR₇) = H_forb_1 = |Fano| = Mersenne prime M₃
+  7 | H(QR₇) and H(AP₇) but NOT H(Middle)
+  7 | |Aut(QR₇)| and |Aut(AP₇)| but NOT |Aut(Middle)|
+  The middle class is the UNIQUE class that avoids 7 entirely!
+
