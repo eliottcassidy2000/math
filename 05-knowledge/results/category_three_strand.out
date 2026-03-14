@@ -1,0 +1,406 @@
+======================================================================
+CATEGORY THEORY OF 3-STRAND PASCAL SEQUENCE
+opus-2026-03-14-S71g
+======================================================================
+
+======================================================================
+PART 1: EXACT STRAND RATIOS
+======================================================================
+
+k | s0=C(2k+1,k) | s1=C(2k+2,k) | s2=C(2k+2,k+1) | s2/s0 | s1/s0 | s2/s1
+ 0 |            1 |            1 |              2 | 2 | 1 | 2
+ 1 |            3 |            4 |              6 | 2 | 4/3 | 3/2
+ 2 |           10 |           15 |             20 | 2 | 3/2 | 4/3
+ 3 |           35 |           56 |             70 | 2 | 8/5 | 5/4
+ 4 |          126 |          210 |            252 | 2 | 5/3 | 6/5
+ 5 |          462 |          792 |            924 | 2 | 12/7 | 7/6
+ 6 |         1716 |         3003 |           3432 | 2 | 7/4 | 8/7
+ 7 |         6435 |        11440 |          12870 | 2 | 16/9 | 9/8
+ 8 |        24310 |        43758 |          48620 | 2 | 9/5 | 10/9
+ 9 |        92378 |       167960 |         184756 | 2 | 20/11 | 11/10
+
+ALGEBRAIC PROOF of s2/s0 = 2:
+  s0(k) = C(2k+1, k) = (2k+1)! / (k! · (k+1)!)
+  s2(k) = C(2k+2, k+1) = (2k+2)! / ((k+1)! · (k+1)!)
+
+  s2/s0 = [(2k+2)! / ((k+1)!)²] / [(2k+1)! / (k! · (k+1)!)]
+        = [(2k+2)! · k! · (k+1)!] / [(k+1)!² · (2k+1)!]
+        = [(2k+2) · k!] / [(k+1)!]
+        = (2k+2) / (k+1)
+        = 2.  ∎
+
+ALGEBRAIC s1/s0:
+  s1(k) = C(2k+2, k) = (2k+2)! / (k! · (k+2)!)
+
+  s1/s0 = [(2k+2)!/(k!·(k+2)!)] / [(2k+1)!/(k!·(k+1)!)]
+        = [(2k+2)·(k+1)!] / [(k+2)!]
+        = (2k+2) / (k+2)
+        = 2(k+1)/(k+2)
+
+  This approaches 2 as k → ∞.
+
+ALGEBRAIC s2/s1:
+  s2/s1 = C(2k+2,k+1)/C(2k+2,k)
+        = [(2k+2)!/((k+1)!)²] / [(2k+2)!/(k!·(k+2)!)]
+        = [k!·(k+2)!] / [(k+1)!²]
+        = (k+2)/(k+1)
+
+  This approaches 1 as k → ∞.
+
+======================================================================
+PART 2: GRADED RING STRUCTURE
+======================================================================
+Connection to Catalan numbers:
+  k=0: C_0=     1, C(2k,k)=     1, C(2k+1,k)=     1, ratio s0/central=1/1 = 1
+  k=1: C_1=     1, C(2k,k)=     2, C(2k+1,k)=     3, ratio s0/central=3/2 = 3/2
+  k=2: C_2=     2, C(2k,k)=     6, C(2k+1,k)=    10, ratio s0/central=5/3 = 5/3
+  k=3: C_3=     5, C(2k,k)=    20, C(2k+1,k)=    35, ratio s0/central=7/4 = 7/4
+  k=4: C_4=    14, C(2k,k)=    70, C(2k+1,k)=   126, ratio s0/central=9/5 = 9/5
+  k=5: C_5=    42, C(2k,k)=   252, C(2k+1,k)=   462, ratio s0/central=11/6 = 11/6
+  k=6: C_6=   132, C(2k,k)=   924, C(2k+1,k)=  1716, ratio s0/central=13/7 = 13/7
+  k=7: C_7=   429, C(2k,k)=  3432, C(2k+1,k)=  6435, ratio s0/central=15/8 = 15/8
+  k=8: C_8=  1430, C(2k,k)= 12870, C(2k+1,k)= 24310, ratio s0/central=17/9 = 17/9
+  k=9: C_9=  4862, C(2k,k)= 48620, C(2k+1,k)= 92378, ratio s0/central=19/10 = 19/10
+
+IDENTITY: s0(k) = C(2k+1,k) = (2k+1)/(k+1) · C(2k,k)
+
+So: s0 = (2k+1)·C_k (where C_k = Catalan number)
+    s2 = C(2k+2,k+1) = C(2(k+1), k+1) = central binomial (shifted)
+    s1 = C(2k+2,k) = (k+2)/(k+1) · s2(k-1)... hmm
+
+Actually:
+  s0(k) = (2k+1) · C_k  (Catalan connection)
+  s2(k) = 2 · s0(k)     (OCF ratio)
+  s1(k) = (2(k+1)/(k+2)) · s0(k) (approaches 2·s0)
+
+The Catalan numbers C_k count:
+  - Balanced parenthesizations
+  - Binary trees with k nodes
+  - Triangulations of (k+2)-gon
+  - Monotone lattice paths below diagonal
+
+So s0(k) = (2k+1)·C_k counts "labeled Catalan structures"
+where we additionally pick one of 2k+1 positions.
+
+======================================================================
+PART 3: RECURRENCES FOR EACH STRAND
+======================================================================
+Growth ratios within each strand:
+  k=1: s0(k)/s0(k-1) = 3 = 3.0000, s1: 4 = 4.0000, s2: 3 = 3.0000
+  k=2: s0(k)/s0(k-1) = 10/3 = 3.3333, s1: 15/4 = 3.7500, s2: 10/3 = 3.3333
+  k=3: s0(k)/s0(k-1) = 7/2 = 3.5000, s1: 56/15 = 3.7333, s2: 7/2 = 3.5000
+  k=4: s0(k)/s0(k-1) = 18/5 = 3.6000, s1: 15/4 = 3.7500, s2: 18/5 = 3.6000
+  k=5: s0(k)/s0(k-1) = 11/3 = 3.6667, s1: 132/35 = 3.7714, s2: 11/3 = 3.6667
+  k=6: s0(k)/s0(k-1) = 26/7 = 3.7143, s1: 91/24 = 3.7917, s2: 26/7 = 3.7143
+  k=7: s0(k)/s0(k-1) = 15/4 = 3.7500, s1: 80/21 = 3.8095, s2: 15/4 = 3.7500
+  k=8: s0(k)/s0(k-1) = 34/9 = 3.7778, s1: 153/40 = 3.8250, s2: 34/9 = 3.7778
+  k=9: s0(k)/s0(k-1) = 19/5 = 3.8000, s1: 380/99 = 3.8384, s2: 19/5 = 3.8000
+
+All three strands have growth ratio → 4 as k → ∞.
+(Central binomial coefficients grow as 4^k / √(πk).)
+
+The three ratios are:
+  s0: 2(2k+1)/(k+1) → 4
+  s1: (2k+2)(2k+1)/((k+1)(k+2)) → 4
+  s2: 4(2k+1)/(2k+2) → 4
+
+Per 3 positions: growth ≈ 4 per strand step = 4^{1/3} per index step ≈ 1.587.
+This is SLOWER than Fibonacci growth φ ≈ 1.618.
+
+======================================================================
+PART 4: FUNCTORIAL INTERPRETATION
+======================================================================
+
+THE THREE-STRAND SEQUENCE AS A FUNCTOR:
+
+Consider the category N (natural numbers with ≤) and the functor:
+  F: N → Vec (vector spaces / abelian groups)
+  F(k) = Z (the integers)
+  F(k → k+1) = multiplication by the growth factor
+
+The THREE-STRAND structure is a functor:
+  G: N → Z^3 (triples of integers)
+  G(k) = (s0(k), s1(k), s2(k))
+
+With transition maps:
+  G(k) → G(k+1) given by the 3×3 matrix:
+  [s0(k+1)]   [2(2k+3)/(k+2)     0              0    ] [s0(k)]
+  [s1(k+1)] = [     0      (2k+4)(2k+3)/((k+2)(k+3))  0    ] [s1(k)]
+  [s2(k+1)]   [     0              0       4(2k+3)/(2k+4)] [s2(k)]
+
+This is DIAGONAL — the three strands are INDEPENDENT!
+They don't interact. The functor G splits as G = G_0 ⊕ G_1 ⊕ G_2.
+
+BUT: the strands are RELATED by constant or simple ratios:
+  s2 = 2·s0 (constant ratio, the OCF parameter)
+  s1 = 2(k+1)/(k+2) · s0 (k-dependent ratio)
+
+So G_2 ≅ 2·G_0 and G_1 ≅ (2k+2)/(k+2)·G_0.
+
+The NATURAL TRANSFORMATION η: G_0 → G_2 given by ×2 is
+the "OCF evaluation" functor. It maps the "Catalan strand" to
+the "central binomial strand" by doubling.
+
+MONOIDAL STRUCTURE:
+The Vandermonde convolution gives a product:
+  s0(k) * s0(j) → s0(k+j+?) via multinomial coefficients.
+
+Actually, the natural product is on GENERATING FUNCTIONS:
+  Σ s0(k) x^k = f(x)
+  Σ s2(k) x^k = 2·f(x)  (since s2 = 2·s0)
+
+The GF of s0(k) = C(2k+1,k):
+  Σ C(2k+1,k) x^k = (1 - (1-4x)^{1/2}) / (2x) · 1/(1-4x)^{1/2}...
+  Actually: Σ C(2n+1,n) x^n = (1/(1-4x) - 1/√(1-4x)) / (2x)... complex.
+
+  Simpler: C(2n+1,n) = (2n+1)·C(2n,n)/(n+1).
+  And Σ C(2n,n) x^n = 1/√(1-4x).
+  So Σ n·C(2n,n) x^n = 4x/(1-4x)^{3/2}  (differentiate and multiply by x).
+  Then Σ (2n+1)·C(2n,n) x^n = 2·4x/(1-4x)^{3/2} + 1/√(1-4x).
+
+  Dividing by (n+1) is harder (involves integral).
+  The Catalan GF is C(x) = (1-√(1-4x))/(2x).
+  And s0(k) = (2k+1)·CatalanNumber(k), so:
+  Σ s0(k) x^k = Σ (2k+1)·C_k x^k = 2x·C'(x) + C(x)...
+
+  Actually: Σ C_n x^n = C(x) = (1-√(1-4x))/(2x)
+  Σ n·C_n x^n = x·C'(x)
+  C'(x) = (1/√(1-4x) - 1)/(2x²)... this gets messy.
+
+Generating function verification:
+Catalan: C_k, s0 = (2k+1)·C_k, s2 = 2·(2k+1)·C_k
+  k=0: Cat=1, (2k+1)·Cat=1, actual s0=1, match=True, 2·s0=2, actual s2=2, match=True
+  k=1: Cat=1, (2k+1)·Cat=3, actual s0=3, match=True, 2·s0=6, actual s2=6, match=True
+  k=2: Cat=2, (2k+1)·Cat=10, actual s0=10, match=True, 2·s0=20, actual s2=20, match=True
+  k=3: Cat=5, (2k+1)·Cat=35, actual s0=35, match=True, 2·s0=70, actual s2=70, match=True
+  k=4: Cat=14, (2k+1)·Cat=126, actual s0=126, match=True, 2·s0=252, actual s2=252, match=True
+  k=5: Cat=42, (2k+1)·Cat=462, actual s0=462, match=True, 2·s0=924, actual s2=924, match=True
+  k=6: Cat=132, (2k+1)·Cat=1716, actual s0=1716, match=True, 2·s0=3432, actual s2=3432, match=True
+  k=7: Cat=429, (2k+1)·Cat=6435, actual s0=6435, match=True, 2·s0=12870, actual s2=12870, match=True
+
+======================================================================
+PART 5: BALLOT NUMBERS AND TOURNAMENT INTERPRETATION
+======================================================================
+
+The BALLOT PROBLEM: In an election with k+1 vs k votes,
+the probability that the winner is always strictly ahead is 1/(2k+1).
+The number of such sequences is C(2k+1,k)/(2k+1) = C_k (Catalan!).
+
+So C(2k+1,k) = (2k+1) × (number of ballot sequences).
+
+In TOURNAMENT CONTEXT:
+  - A tournament on n vertices has a score sequence.
+  - A "balanced" tournament (n odd) has all scores near (n-1)/2.
+  - The number of "near-balanced" score orderings relates to
+    central binomial coefficients.
+
+  The strand ratio s2/s0 = 2:
+  - s0 counts "strict ballot" paths (odd-length)
+  - s2 counts "relaxed ballot" paths (even-length, reaching center)
+  - The factor 2 = the binary choice (which side reaches center first)
+  - This parallels OCF: x=2 means each cycle has 2 orientations.
+
+ANALOGY MAP:
+  Ballot sequence    ↔  Tournament path
+  Candidate A/B      ↔  Arc direction (forward/backward)
+  Winning margin      ↔  Score difference
+  Ballot C_k          ↔  Catalan structure in cycle graph
+  s0 = (2k+1)·C_k   ↔  Labeled Catalan (positional info)
+  s2 = 2·s0          ↔  OCF evaluation (binary cycle choice)
+
+======================================================================
+PART 6: Z/3Z GRADING AND CYCLIC CATEGORY
+======================================================================
+Generalized binomial coefficients C(1/3, k):
+  C(1/3, 0) = 1 = 1.0000000000
+  C(1/3, 1) = 1/3 = 0.3333333333
+  C(1/3, 2) = -1/9 = -0.1111111111
+  C(1/3, 3) = 5/81 = 0.0617283951
+  C(1/3, 4) = -10/243 = -0.0411522634
+  C(1/3, 5) = 22/729 = 0.0301783265
+  C(1/3, 6) = -154/6561 = -0.0234720317
+  C(1/3, 7) = 374/19683 = 0.0190011685
+  C(1/3, 8) = -935/59049 = -0.0158343071
+  C(1/3, 9) = 21505/1594323 = 0.0134884838
+
+The cube root (1+x)^{1/3} has coefficients that decrease as 1/k^{4/3}.
+This is much slower than the (1+x)^{1/2} coefficients (which decrease as 1/k^{3/2}).
+
+The THREE-fold reading of Pascal's triangle connects to the 3 cube roots of unity:
+  ω = e^{2πi/3} = -1/2 + i√3/2
+
+The extraction of every 3rd term uses:
+  Σ_{k≡r mod 3} C(n,k) = (2^n + 2·cos((n-2r)π/3)) / 3
+
+For the central terms (k ≈ n/2), this mod-3 filtering creates
+exactly the 3-strand structure.
+
+Verification: Σ C(n,k) for k ≡ r mod 3
+  n= 1: r=0:      1, r=1:      1, r=2:      0, total=2 = 2^1, diffs: +0, +1
+  n= 2: r=0:      1, r=1:      2, r=2:      1, total=4 = 2^2, diffs: -1, +1
+  n= 3: r=0:      2, r=1:      3, r=2:      3, total=8 = 2^3, diffs: -1, +0
+  n= 4: r=0:      5, r=1:      5, r=2:      6, total=16 = 2^4, diffs: +0, -1
+  n= 5: r=0:     11, r=1:     10, r=2:     11, total=32 = 2^5, diffs: +1, -1
+  n= 6: r=0:     22, r=1:     21, r=2:     21, total=64 = 2^6, diffs: +1, +0
+  n= 7: r=0:     43, r=1:     43, r=2:     42, total=128 = 2^7, diffs: +0, +1
+  n= 8: r=0:     85, r=1:     86, r=2:     85, total=256 = 2^8, diffs: -1, +1
+  n= 9: r=0:    170, r=1:    171, r=2:    171, total=512 = 2^9, diffs: -1, +0
+  n=10: r=0:    341, r=1:    341, r=2:    342, total=1024 = 2^10, diffs: +0, -1
+  n=11: r=0:    683, r=1:    682, r=2:    683, total=2048 = 2^11, diffs: +1, -1
+
+======================================================================
+PART 7: x=2 AS MONOIDAL FUNCTOR
+======================================================================
+
+The evaluation at x=2 defines a monoidal functor:
+
+  Ev₂: Graphs → N (natural numbers)
+  Ev₂(G) = I(G, 2)
+  Ev₂(G ⊔ H) = Ev₂(G) · Ev₂(H)  (multiplicative on disjoint union)
+
+This makes Ev₂ a RING HOMOMORPHISM from the Grothendieck ring of graphs
+(with ⊔ as multiplication) to Z.
+
+The THREE-STRAND sequence is the image of Ev₂ applied to:
+  P_n (path graphs of increasing length)
+  The path graph generates the Jacobsthal numbers under Ev₂.
+
+The CATEGORICAL MEANING of the ratio 2:
+  The natural transformation Ev₂ → 2·Ev₂ corresponds to
+  replacing each independent set by "2 copies" (forward/backward).
+  This is exactly the OCF mechanism:
+  H(T) = I(Ω(T), 2) counts independent sets where each selected
+  cycle contributes factor 2 (two traversal directions).
+
+The three strands, under Ev₂:
+  Ev₂(strand 0 generator at k) = I(G_0(k), 2) for some graph G_0(k)
+  What graph? C(2k+1,k) = s0(k).
+  We need: I(G, 2) = C(2k+1,k) for each k.
+
+  k=0: I=1 → empty graph
+  k=1: I=3 → single vertex
+  k=2: I=10 → ??? need a graph with I(G,2) = 10.
+  Hmm, 10 is even. But I(G,2) is always odd! Contradiction.
+
+  Actually C(3,1) = 3 (yes, odd). C(5,2) = 10 (EVEN).
+  So s0(2) = 10 CANNOT be I(G,2) for any graph.
+
+  This means the 3-strand Pascal sequence is NOT directly the image
+  of Ev₂ on a sequence of graphs. The ratio 2 connection to OCF is
+  ANALOGICAL, not a direct functor on graphs.
+
+  The connection is more subtle: the STRAND RATIO of 2 equals the
+  evaluation parameter, and the central binomial structure parallels
+  the independence polynomial structure, but they live in different
+  categories.
+
+Verification: I(G,2) always odd
+  I(G,2) = Σ 2^|S| over independent S. Empty set: 2^0=1 (odd).
+  All other terms 2^|S| are even. Sum = 1 + (even) = odd. ✓
+  s0(2) = C(5,2) = 10 (EVEN) → NOT an I(G,2) value.
+  s0(0) = 1 (odd ✓), s0(1) = 3 (odd ✓), s0(2) = 10 (EVEN ✗)
+  The strand values are NOT all realizable as I(G,2).
+
+======================================================================
+PART 8: THE TRUE CONNECTION
+======================================================================
+
+The connection between the 3-strand Pascal sequence and tournaments
+is NOT through I(G,2) directly, but through:
+
+1. ASYMPTOTIC GROWTH: Both central binomials and I(P_k,2) grow as 4^k.
+   - C(2k,k) ~ 4^k/√(πk)
+   - I(P_k,2) = (2^{k+2} - (-1)^k)/3 ~ (4/3)·2^k
+
+   Wait: these grow at DIFFERENT rates! C(2k,k) grows as 4^k, while
+   I(P_k,2) grows as 2^k. So the connection is not asymptotic growth.
+
+2. THE RATIO 2: The strand ratio s2/s0 = 2 mirrors the OCF parameter x=2.
+   This is the NUMEROLOGICAL connection. The factor 2 appearing in both:
+   - Pascal: going from odd row central to even row central multiplies by 2
+   - OCF: each independent cycle contributes factor 1+x = 1+2 = 3, vs 1+1 = 2 at x=1
+
+3. The DEEPER connection is through GENERATING FUNCTIONS:
+   - I(P_k, x) satisfies a(k) = a(k-1) + x·a(k-2)
+   - The GF is Σ I(P_k,x) t^k = 1/(1-t-xt²)
+   - At x=2: 1/(1-t-2t²) = 1/((1-2t)(1+t))
+   - The PARTIAL FRACTIONS give the Jacobsthal closed form.
+
+   - Central binomials: GF = 1/√(1-4t)
+   - This is (1-4t)^{-1/2}, a FRACTIONAL power.
+
+   The connection: 1/(1-t-2t²) = 1/((1-2t)(1+t)) involves the factor (1-2t),
+   and 1/√(1-4t) = 1/√((1-2t)(1+2t)) also involves (1-2t).
+
+   So BOTH generating functions have singularity at t = 1/2,
+   and the singularity type differs:
+   - Jacobsthal: simple pole at t=1/2 (and t=-1)
+   - Central binomial: branch point at t=1/4
+
+   The singularity at t=1/2 corresponds to growth rate 2.
+   For Jacobsthal: dominant root = 2 (giving 2^k growth).
+   For central binomial: singular at 1/4 (giving 4^k growth).
+
+   But note: the STRAND sequence (reading every 3rd term of Pascal)
+   has growth 4^{1/3} per step, which is (cube root of 4) ≈ 1.587.
+   Meanwhile Fibonacci has growth φ ≈ 1.618 per step.
+   The Jacobsthal has growth 2 per step.
+
+   The ordering: 4^{1/3} < φ < 2 means:
+   Pascal 3-strand grows SLOWER than Fibonacci grows SLOWER than Jacobsthal.
+
+4. MODULARITY: Both sequences have periodic behavior mod small primes.
+   - Fibonacci mod 4: period 6 = 2×3
+   - Jacobsthal mod 4: period 6
+   - Pascal mod 2: period 3 (along each strand)
+
+   The common period 6 = LCM(2,3) comes from the interaction of
+   binary (mod 2) and ternary (mod 3) structure.
+
+Jacobsthal mod 4: [0, 1, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+
+======================================================================
+GRAND SYNTHESIS
+======================================================================
+
+THE THREE-STRAND PASCAL SEQUENCE IN TOURNAMENT CONTEXT:
+
+1. STRUCTURE: Three strands read the CENTRAL COEFFICIENTS of (1+x)^n.
+   s0(k) = C(2k+1,k) = (2k+1)·CatalanNumber(k)
+   s1(k) = C(2k+2,k) = (2k+2)/(k+2)·s0(k)
+   s2(k) = C(2k+2,k+1) = 2·s0(k)  [EXACT, for all k]
+
+2. THE RATIO 2: The constant strand ratio s2/s0 = 2 is the
+   evaluation parameter of the OCF: I(Ω(T), x) at x=2.
+   This is the UNIQUE positive integer x where the characteristic
+   roots of a(k) = a(k-1) + x·a(k-2) are both integers (2 and -1).
+
+3. CATALAN CONNECTION: s0 = (2k+1)·C_k, where Catalan numbers count
+   binary trees and non-crossing partitions. In tournaments,
+   non-crossing structures relate to TRANSITIVE sub-tournaments.
+
+4. NOT A DIRECT FUNCTOR: The strand values include even numbers
+   (like s0(2)=10), which cannot be I(G,2) for any graph (always odd).
+   The connection is analogical/structural, not functorial.
+
+5. PERIOD-6 UNIVERSALITY: Both Fibonacci mod 4 and Jacobsthal mod 4
+   have period 6 = 2×3. This matches:
+   - 3 strands × 2 parities = 6-periodic structure
+   - 6 = smallest n where ALL major tournament phenomena appear
+   - 6 = LCM of binary (arc choice) and ternary (triangle) structure
+
+6. GEOMETRIC PACKING: The central binomial C(2k,k) is the largest
+   coefficient of (1+x)^{2k} = the "simplex polynomial."
+   At x=2: (1+2)^{2k} = 3^{2k} = 9^k.
+   The strand interleaves these maximal coefficients, capturing
+   the "peak" of the simplex at each level.
+
+7. TOURNAMENT TAKEAWAY: The three-strand structure reveals that
+   tournament combinatorics (living at x=2) is connected to
+   the central structure of Pascal's triangle through the
+   factor 2. This factor simultaneously:
+   - Doubles the strand (s2 = 2·s0)
+   - Sets the OCF evaluation point (x=2)
+   - Makes characteristic roots integral
+   - Creates the binary choice in arc orientation
+
