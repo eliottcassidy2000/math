@@ -90,6 +90,30 @@
 **Status:** NEW — background.
 **What:** The MPSS connects magnitude homology (page 1) to path homology (page 2). Bigraded path homology satisfies Kunneth, Mayer-Vietoris, excision. Could provide extra structure for tournament path homology via the bigraded version.
 
+### INV-144: Awan-Bernardi B-polynomial for Digraphs (arXiv:1610.01839)
+**Source:** Web research kind-pasteur-2026-03-14-S69
+**Status:** NEW — high priority connection
+**What:** Awan and Bernardi defined a Tutte polynomial for directed graphs satisfying deletion-contraction B(D) expressed via B(D\a) and B(D/a). Published JCTB 2020. Our F_T(x) = F_{T\e}(x) + (x-1)*F(T/e,x) is structurally the same type of relation. The B-polynomial is a 3-variable polynomial detecting acyclicity, strong connectivity, and directed paths.
+**Next step:** Read paper, check if F(T,x) is a specialization of their B-polynomial.
+
+### INV-145: Sazdanovic-Yip Categorification of Chromatic Function (arXiv:1506.03133)
+**Source:** Web research kind-pasteur-2026-03-14-S69
+**Status:** NEW — highest priority for categorification
+**What:** Sazdanovic and Yip categorified the chromatic symmetric function using Khovanov-style techniques. Combined with Mitrovic-Stojadinovic chromatic-Redei-Berge bridge (arXiv:2506.08841), this suggests categorifying F(T,x) via long exact sequences in homology, producing "Khovanov homology for tournaments."
+**Next step:** Read and check if the deletion-contraction for F(T,x) lifts to a long exact sequence in GLMY path homology.
+
+### INV-146: Asao Magnitude-Path Spectral Sequence (arXiv:2201.08047)
+**Source:** Web research kind-pasteur-2026-03-14-S69
+**Status:** NEW — connects magnitude and path homology
+**What:** Asao proved magnitude homology and GLMY path homology are pages of the same spectral sequence. Published Bull. London Math. Soc. 2023. Magnitude homology categorifies magnitude (Hepworth-Willerton, arXiv:1505.04125), analogous to Khovanov categorifying Jones. This creates an indirect chain: Khovanov ↔ magnitude homology ↔ path homology.
+**Next step:** Understand what the spectral sequence looks like for tournaments.
+
+### INV-147: Hepworth Reachability Homology (arXiv:2312.01378)
+**Source:** Web research kind-pasteur-2026-03-14-S69
+**Status:** NEW — unifies magnitude and path homology
+**What:** Hepworth defined reachability homology of digraphs, unifying magnitude and path homology. Satisfies homotopy invariance, Kunneth, excision, Mayer-Vietoris. Published IMRN 2025. Potentially the "right" homology theory for tournaments.
+**Next step:** Compute reachability homology for small tournaments, compare to GLMY.
+
 ### INV-050: Fourier Decomposition Proof of OCF — OCF PROVED AT n=5 AND n=7
 **Source:** opus-2026-03-06-S11b (continued^7, ^8)
 **Status:** OCF PROVED AT n=5 AND n=7 via Fourier decomposition. All identities at both n proved.
