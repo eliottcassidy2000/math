@@ -1,0 +1,306 @@
+
+======================================================================
+1. E8 THETA FUNCTION COEFFICIENTS
+======================================================================
+
+E8 theta function: Theta_{E8}(q) = 1 + 240*Sigma sigma_3(n)*q^n
+Also equals E_4(q), the weight-4 Eisenstein series for SL(2,Z)
+
+First coefficients a(n) = 240*sigma_3(n) for n >= 1:
+   n   sigma_3(n)    a(n)=240*s3                       factored
+----------------------------------------------------------------------
+   0            0              1  1 (constant term)
+   1            1            240  240 = #roots(E8)
+   2            9           2160  240 * KEY2^2 = 2160
+   3           28           6720  240 * C(8,2) = 6720
+   4           73          17520  240 * 73
+   5          126          30240  240 * 126
+   6          252          60480  240 * 252
+   7          344          82560  240 * 344
+   8          585         140400  240 * 585
+   9          757         181680  240 * 757
+  10         1134         272160  240 * 1134
+  11         1332         319680  240 * 1332
+  12         2044         490560  240 * 2044
+  13         2198         527520  240 * 2198
+  14         3096         743040  240 * 3096
+  15         3528         846720  240 * 3528
+  16         4681        1123440  240 * 4681
+  17         4914        1179360  240 * 4914
+  18         6813        1635120  240 * 6813
+  19         6860        1646400  240 * 6860
+  20         9198        2207520  240 * 9198
+
+Key values:
+  a(0) = 1
+  a(1) = 240 = #roots(E8) = V(icos)*V(dodec)
+  a(2) = 240*9 = 240*KEY2^2 = 2160
+  a(3) = 240*28 = 240*C(8,2) = 6720
+  a(4) = 240*73 = 17520
+  a(5) = 240*126 = 30240
+
+  sigma_3(2) = 1+8 = 9 = KEY2^2
+  sigma_3(3) = 1+27 = 28 = C(rank(E8), 2)
+  sigma_3(5) = 1+125 = 126 = C(9,4) = C(KEY2^2, rank(F4))
+  sigma_3(6) = 1+8+27+216 = 252 = C(10,5) = C(V(Petersen), KEY1+KEY2)
+                                         = |tau(3)| from Ramanujan!
+
+======================================================================
+2. sigma_3 AND TOURNAMENT NUMBERS
+======================================================================
+
+sigma_3(n) through the tournament lens:
+
+  sigma_3( 1) =        1
+  sigma_3( 2) =        9 = KEY2^2
+  sigma_3( 3) =       28 = C(8,2) = C(rank(E8),2)
+  sigma_3( 4) =       73
+  sigma_3( 5) =      126 = C(9,4)
+  sigma_3( 6) =      252 = C(10,5) = C(V(P),5) = |tau(3)|
+  sigma_3( 7) =      344
+  sigma_3( 8) =      585
+  sigma_3( 9) =      757
+  sigma_3(10) =     1134
+  sigma_3(11) =     1332
+  sigma_3(12) =     2044
+  sigma_3(13) =     2198
+  sigma_3(14) =     3096
+  sigma_3(15) =     3528
+  sigma_3(16) =     4681
+  sigma_3(17) =     4914
+  sigma_3(18) =     6813
+  sigma_3(19) =     6860
+  sigma_3(20) =     9198
+  sigma_3(21) =     9632
+  sigma_3(22) =    11988
+  sigma_3(23) =    12168
+  sigma_3(24) =    16380
+  sigma_3(25) =    15751
+  sigma_3(26) =    19782
+  sigma_3(27) =    20440
+  sigma_3(28) =    25112
+  sigma_3(29) =    24390
+  sigma_3(30) =    31752
+
+sigma_3(6) = 252 is the ONLY sigma_3 value that equals C(10,k) for any k!
+  And C(10,5) = 252 is the middle binomial coefficient of row 10 = V(Petersen)
+
+======================================================================
+3. sigma_3(30) — THE E8 COXETER NUMBER
+======================================================================
+
+sigma_3(30) = sigma_3(h(E8)):
+
+  Divisors of 30: [1, 2, 3, 5, 6, 10, 15, 30]
+  Number of divisors: 8 = rank(E8) = 2^3
+
+  1^3 = 1
+  2^3 = 8
+  3^3 = 27
+  5^3 = 125
+  6^3 = 216
+  10^3 = 1000
+  15^3 = 3375
+  30^3 = 27000
+
+  sigma_3(30) = sum = 31752
+
+  31752 = ?
+    / 2    / 2    / 2    / 3    / 3    / 3    / 3    / 7    / 7
+
+  a(30) = 240 * sigma_3(30) = 240 * 31752 = 7620480
+  = the number of E8 lattice vectors at norm 30 = h(E8)
+
+======================================================================
+4. WEIGHT-4 EISENSTEIN SERIES E_4 AND E_6
+======================================================================
+
+E_4(q) = Theta_{E8}(q) (by Jacobi's theorem)
+E_6(q) = 1 - 504*sum sigma_5(n)*q^n
+
+Eisenstein series comparison:
+   n    E_4 coeff    E_6 coeff        ratio
+--------------------------------------------------
+   0            1            1            1
+   1          240         -504       -10/21
+   2         2160       -16632       -10/77
+   3         6720      -122976      -10/183
+   4        17520      -532728   -730/22197
+   5        30240     -1575504      -10/521
+   6        60480     -4058208      -10/671
+   7        82560     -8471232   -430/44121
+   8       140400    -17047800     -26/3157
+   9       181680    -29883672 -7570/1245153
+  10       272160    -51991632     -30/5731
+
+Leading coefficients:
+  E_4: 240 = #roots(E8)
+  E_6: -504 = -504
+  504 = 7*72 = H_forb_1 * sigma(30)
+      = 7*72 = 504
+  504/240 = 21/10 = 21/10 = H_forb_2/V(Petersen)
+
+======================================================================
+5. MODULAR DISCRIMINANT AND TOURNAMENT POLYNOMIAL
+======================================================================
+
+The modular discriminant: Delta = (E_4^3 - E_6^2) / 1728
+
+  1728 = 12^3 = h(E6)^3 = h(F4)^3
+       = KEY1^6 * KEY2^3
+       = (KEY1*KEY2)^3 * KEY1^3 = h(G2)^3 * KEY1^3
+
+  1728 = 2^6 * 3^3 = KEY1^6 * KEY2^3
+  In the tournament recurrence a = A*2^n + B*3^n:
+  1728 appears when A*2^6 + B*3^3 = A*64 + B*27 = 1728
+  One solution: A=27=KEY2^3, B=0: 27*64 = 1728 ✓
+  So 1728 = KEY2^3 * KEY1^6 (pure tournament recurrence)
+
+j-invariant: j = E_4^3 / Delta = 1728*E_4^3/(E_4^3 - E_6^2)
+  j = q^{-1} + 744 + 196884q + ...
+  744 = 8*93 = rank(E8) * 93
+  744 = 24*31 = |BT|*(h(E8)+1)
+  744 = 744
+  93 = 3*31 = KEY2*(h(E8)+1)
+
+  196884 = 196883 + 1 (Monster moonshine: dim(V_nat) + 1)
+  196883 = 47 * 59 * 71
+  These primes: 47, 59, 71 are ALL primes
+  47 = 48-1 = |BO|-1
+  59 = prime
+  71 = 72-1 = sigma(30)-1
+
+======================================================================
+6. JACOBI THETA AND TOURNAMENT RECURRENCE
+======================================================================
+
+The four Jacobi theta functions at the nome q:
+  theta_2(q) = 2*sum q^{(n+1/2)^2}
+  theta_3(q) = sum q^{n^2}
+  theta_4(q) = sum (-1)^n q^{n^2}
+
+Key identity: theta_3^8 = Theta_{E8}
+(because E8 is the lattice of 8-dimensional theta functions)
+
+Also: theta_2^4 + theta_4^4 = theta_3^4 (Jacobi!)
+This is a CUBIC relation in the 4th powers — analogous to the
+tournament recurrence which is a LINEAR relation in 2^n and 3^n.
+
+theta_3(q)^k counts representations as sum of k squares:
+  theta_3^1: r_1(n) = #{n = a^2}
+  theta_3^2: r_2(n) = #{n = a^2+b^2} (Gauss circle)
+  theta_3^4: r_4(n) = 8*sigma_1(n) for odd n (Jacobi)
+  theta_3^8: r_8(n) = 16*sigma_3(n) = a(n)/15
+
+r_8(n) — representations as sum of 8 squares:
+  r_8( 1) =       16 = 16 *      1
+  r_8( 2) =      112 = 16 *      7
+  r_8( 3) =      448 = 16 *     28
+  r_8( 4) =     1136 = 16 *     71
+  r_8( 5) =     2016 = 16 *    126
+  r_8( 6) =     3136 = 16 *    196
+  r_8( 7) =     5504 = 16 *    344
+  r_8( 8) =     9328 = 16 *    583
+  r_8( 9) =    12112 = 16 *    757
+  r_8(10) =    14112 = 16 *    882
+
+For E8 lattice vectors (which are DIFFERENT from r_8 for Z^8):
+  E8 norm-n count = 240*sigma_3(n) for n >= 1
+  Ratio: 240/16 = 15 = C(h(G2), KEY1) = C(6,2)
+  The E8 lattice has 15 = C(6,2) times more vectors than Z^8!
+
+======================================================================
+7. EISENSTEIN PRIMES AND THE TOURNAMENT POLYNOMIAL
+======================================================================
+
+Eisenstein integers Z[omega] where omega = e^{2pi*i/3}:
+  omega^2 + omega + 1 = 0  (this IS Phi_3(omega) = 0!)
+
+The tournament polynomial z^2-5z+6 over Z[omega]:
+  At z=omega: omega^2 - 5*omega + 6 = (-omega-1) - 5*omega + 6 = -6*omega + 5
+  At z=omega^2: omega^4 - 5*omega^2 + 6 = omega - 5*(-omega-1) + 6 = 6*omega + 11
+
+Eisenstein norms of f evaluated at 3rd roots of unity:
+  N(f(omega)) = N(5 - 6*omega) = 25 + 30 + 36 = 91
+  = 91 = 7*13 = H_forb_1 * (h(F4)+1)
+  = Phi_3(2) * Phi_3(3) = Phi_3(KEY1) * Phi_3(KEY2)
+
+  N(f(omega^2)) = N(11 + 6*omega) = 121 - 66 + 36 = 91
+  = 91 = same! (conjugate symmetry)
+
+  91 = 7*13 = Phi_3(2)*Phi_3(3)
+  This is the norm of f(z) at primitive cube roots!
+  The NORM factors into products of cyclotomic values at KEY1 and KEY2.
+
+For comparison, over Gaussian integers Z[i]:
+  f(i) = 5 - 5i, N(f(i)) = 50 = 2*25 = KEY1*KEY1^4
+  f(-i) = 5 + 5i, N(f(-i)) = 50
+  50 = 2*5^2 = KEY1*(KEY1+KEY2)^2
+
+======================================================================
+8. THE MODULAR GROUP AND (2,3)
+======================================================================
+
+The modular group PSL(2,Z) = Z/2 * Z/3
+(free product of cyclic groups of order KEY1 and KEY2!)
+
+Generators: S: z -> -1/z (order 2 = KEY1)
+            T: z -> z+1 (infinite order)
+            ST has order 3 = KEY2
+
+This means:
+  PSL(2,Z) is the MOST FUNDAMENTAL (2,3)-object in all of mathematics.
+  It is literally Z/KEY1 * Z/KEY2.
+
+The fundamental domain has:
+  Vertices at i, rho=e^(2pi*i/3), oo
+  Angles: pi/KEY2 at rho, pi/KEY1 at i
+  Hyperbolic area = pi/3 = pi/KEY2
+
+Finite quotients of PSL(2,Z):
+  PSL(2,2) = S_3, order 6 = h(G2)
+  PSL(2,3) = A_4, order 12 = h(E6)
+  PSL(2,5) = A_5, order 60 = |BI|/2
+  PSL(2,7) = GL(3,2), order 168 = H_forb_1*|BT|
+
+  |PSL(2,p)| = p(p-1)(p+1)/2 for prime p:
+  |PSL(2, 2)| =      3
+  |PSL(2, 3)| =     12 = h(E6) = h(F4)
+  |PSL(2, 5)| =     60 = |BI|/2 = |A5|
+  |PSL(2, 7)| =    168 = H_forb_1 * |BT| = rank(E8)*H_forb_2
+  |PSL(2,11)| =    660 = ...
+  |PSL(2,13)| =   1092 = 12*91 = h(E6)*Phi3(2)*Phi3(3)
+
+|PSL(2,5)|/|PSL(2,3)| = 60/12 = 5 = KEY1+KEY2
+|PSL(2,7)|/|PSL(2,5)| = 168/60 = 14/5
+|PSL(2,3)|/|PSL(2,2)| = 12/6 = 2 = KEY1
+
+======================================================================
+9. SUMMARY: MODULAR FORMS THROUGH (2,3)
+======================================================================
+
+======================================================================
+THETA/MODULAR TOURNAMENT DICTIONARY
+======================================================================
+
+Modular form                    Value          Tournament/Lie
+----------------------------------------------------------------------
+E_4 leading coeff               240            #roots(E8)
+E_6 leading coeff               504            7*72 = H_forb_1*sigma(30)
+504/240                         21/10          H_forb_2/V(Petersen)
+1728 = E_4^3/Delta norm         12^3           h(E6)^3
+j-inv constant term             744            |BT|*(h(E8)+1)
+j-inv q coeff                   196884         dim(V_Monster)+1
+sigma_3(2)                      9              KEY2^2
+sigma_3(3)                      28             C(rank(E8),2)
+sigma_3(6)                      252            C(V(Petersen),5) = |tau(3)|
+PSL(2,Z)                        Z/2*Z/3        Z/KEY1 * Z/KEY2
+|PSL(2,5)|                      60             |A5| = |BI|/2
+|PSL(2,7)|                      168            H_forb_1*|BT|
+N(f(omega)) in Z[omega]         91             Phi3(KEY1)*Phi3(KEY2)
+Discriminant exponent           24             |BT|
+r_8/E8 ratio                    15             C(h(G2),2)
+
+The deepest connection: PSL(2,Z) = Z/KEY1 * Z/KEY2
+The entire theory of modular forms is built on the free product
+of the two tournament keys.
