@@ -1,0 +1,187 @@
+  0% done...
+  9% done...
+  19% done...
+  29% done...
+  39% done...
+  49% done...
+  59% done...
+  69% done...
+  79% done...
+  89% done...
+  99% done...
+======================================================================
+N=6 DISCRIMINANT SEARCH
+What invariant completes H = 1 + 2t₃ + 2t₅ + ??? at n=6?
+======================================================================
+
+Enumerating all 32768 tournaments on n=6 vertices (m=15 arcs)...
+Number of transitive tournaments: 720 (should be 720=720)
+
+Done! Computed 32768 tournaments.
+
+======================================================================
+PART 1: Residual ε = H - 1 - 2(t₃ + t₅)
+======================================================================
+
+  (t₃=2, t₅=0): ε ∈ [0, 4], count=2240
+    e₃₃ (edge-sharing pairs) discriminates? True
+      e₃₃=0 → ε=4
+      e₃₃=1 → ε=0
+    (e₃₃, v₃₃) discriminates? True
+    Hamming dist discriminates? True
+    Score seq discriminates? True
+
+  (t₃=4, t₅=2): ε ∈ [0, 4], count=2160
+    e₃₃ (edge-sharing pairs) discriminates? False
+    (e₃₃, v₃₃) discriminates? True
+    Hamming dist discriminates? False
+    Score seq discriminates? True
+
+  (t₃=5, t₅=4): ε ∈ [0, 4], count=2880
+    e₃₃ (edge-sharing pairs) discriminates? True
+      e₃₃=5 → ε=4
+      e₃₃=6 → ε=0
+    (e₃₃, v₃₃) discriminates? True
+    Hamming dist discriminates? False
+    Score seq discriminates? False
+
+  (t₃=6, t₅=6): ε ∈ [0, 4, 8], count=4320
+    e₃₃ (edge-sharing pairs) discriminates? False
+    (e₃₃, v₃₃) discriminates? True
+    Hamming dist discriminates? False
+    Score seq discriminates? False
+
+  (t₃=7, t₅=7): ε ∈ [4, 8], count=2880
+    e₃₃ (edge-sharing pairs) discriminates? False
+    (e₃₃, v₃₃) discriminates? True
+    Hamming dist discriminates? False
+    Score seq discriminates? False
+
+  (t₃=7, t₅=9): ε ∈ [0, 4], count=1920
+    e₃₃ (edge-sharing pairs) discriminates? True
+      e₃₃=8 → ε=4
+      e₃₃=9 → ε=0
+    (e₃₃, v₃₃) discriminates? True
+    Hamming dist discriminates? False
+    Score seq discriminates? False
+
+Total non-constant (t₃,t₅) groups: 6 / 22
+
+======================================================================
+PART 2: Does (t₃, t₅, e₃₃) determine H?
+======================================================================
+(t₃, t₅, e₃₃) groups: 28
+Non-determined: 3
+
+(t₃, t₅, e₃₃) leaves 3 groups non-determined
+  (4, 2, 3) → H ∈ [13, 17]
+  (6, 6, 7) → H ∈ [25, 29, 33]
+  (7, 7, 9) → H ∈ [33, 37]
+
+======================================================================
+PART 3: Does (t₃, t₅, e₃₃, v₃₃) determine H?
+======================================================================
+(t₃, t₅, e₃₃, v₃₃) groups: 32
+Non-determined: 0
+*** (t₃, t₅, e₃₃, v₃₃) DETERMINES H at n=6! ***
+
+======================================================================
+PART 4: Does (t₃, t₅, e₃₃, d₃₃) determine H?
+======================================================================
+(t₃, t₅, e₃₃, d₃₃) groups: 32
+Non-determined: 0
+
+======================================================================
+PART 5: Does (t₃, t₅, score_seq) determine H?
+======================================================================
+(t₃, t₅, score_seq) groups: 39
+Non-determined: 7
+
+(t₃, t₅, score_seq) leaves 7 groups non-determined
+  t₃=5, t₅=4, score=(1, 1, 3, 3, 3, 4) → H ∈ [19, 23]
+  t₃=5, t₅=4, score=(1, 2, 2, 2, 4, 4) → H ∈ [19, 23]
+  t₃=6, t₅=6, score=(1, 2, 2, 3, 3, 4) → H ∈ [25, 29, 33]
+  t₃=7, t₅=7, score=(1, 2, 3, 3, 3, 3) → H ∈ [33, 37]
+  t₃=7, t₅=7, score=(2, 2, 2, 2, 3, 4) → H ∈ [33, 37]
+
+======================================================================
+PART 6: Does (t₃, t₅, ham_dist) determine H?
+======================================================================
+(t₃, t₅, ham_dist) groups: 25
+Non-determined: 5
+
+======================================================================
+PART 7: Linear regression H ~ a + b·t₃ + c·t₅ + d·e₃₃
+======================================================================
+H = -1.5000 + 3.0000·t₃ + 2.0000·t₅ + 0.0000·e₃₃
+R² = 0.961538
+Max |residual| = 10.5000
+Exact matches: 0/32768
+
+H = -1.5000 + 3.0000·t₃ + 2.0000·t₅ + 0.0000·e₃₃ + 0.0000·v₃₃
+R² = 0.961538
+Max |residual| = 10.5000
+
+H = 1.0000 + 2.0000·t₃ + 2.0000·t₅ + 0.0000·e₃₃ + 4.0000·d₃₃ + 0.0000·v₃₃
+R² = 1.000000
+Max |residual| = 0.0000
+
+With ham_dist: R² = 1.000000, Max |resid| = 0.0000
+
+======================================================================
+PART 8: EXACT residual ε = H - 1 - 2(t₃+t₅) vs e₃₃
+======================================================================
+  (t₃=2, t₅=0): ε = 4.0 + -4.0·e₃₃  [EXACT!]
+  (t₃=5, t₅=4): ε = 24.0 + -4.0·e₃₃  [EXACT!]
+  (t₃=6, t₅=6): ε ~ 8.80 + -0.80·e₃₃  max_resid=4.80
+  (t₃=7, t₅=9): ε = 36.0 + -4.0·e₃₃  [EXACT!]
+
+======================================================================
+PART 9: CROWN JEWEL TEST — does H = 1 + 2(t₃+t₅) + 2·e₃₃ work?
+======================================================================
+H = 1 + 2(t₃+t₅+e₃₃): 1680/32768 exact
+H = 1 + 2(t₃+t₅) + 1·e₃₃: 1680/32768 exact
+H = 1 + 2(t₃+t₅) + 2·e₃₃: 1680/32768 exact
+H = 1 + 2(t₃+t₅) + 3·e₃₃: 1680/32768 exact
+H = 1 + 2(t₃+t₅) + 4·e₃₃: 1680/32768 exact
+H = 1 + 2(t₃+t₅) + 6·e₃₃: 1680/32768 exact
+
+======================================================================
+PART 10: The ε distribution — does ε depend on e₃₃ alone?
+======================================================================
+  e₃₃=0: ε range [0, 4], mean=0.18, unique=2
+  e₃₃=1: ε range [0, 0], mean=0.00, unique=1
+  e₃₃=2: ε range [0, 0], mean=0.00, unique=1
+  e₃₃=3: ε range [0, 4], mean=0.71, unique=2
+  e₃₃=4: ε range [0, 0], mean=0.00, unique=1
+  e₃₃=5: ε range [0, 4], mean=3.33, unique=2
+  e₃₃=6: ε range [0, 4], mean=2.20, unique=2
+  e₃₃=7: ε range [0, 8], mean=4.57, unique=3
+  e₃₃=8: ε range [4, 4], mean=4.00, unique=1
+  e₃₃=9: ε range [0, 8], mean=3.62, unique=3
+  e₃₃=10: ε range [4, 4], mean=4.00, unique=1
+  e₃₃=12: ε range [8, 16], mean=10.00, unique=2
+
+======================================================================
+PART 11: Fibonaccian / π connections in H-spectrum
+======================================================================
+Distinct H values at n=6: 19
+H range: [1, 45]
+All H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+All H values odd? True
+H values that are Fibonacci: [1, 3, 5, 13]
+H mod 6 distribution: {1: 11520, 3: 9728, 5: 11520}
+
+π connections:
+  C(6,2) = 15 = m, and 15/π ≈ 4.7746
+  32768 / π² ≈ 3320.0925
+  Mean H = 22.5000
+  Mean H / 6! = 0.031250
+  6!/π³ = 23.2211
+  Sum of all H = 737280
+  Sum H / 2^15 = 22.5000
+  Sum H / (6! · 2^15) = 0.031250
+
+======================================================================
+DONE
+======================================================================

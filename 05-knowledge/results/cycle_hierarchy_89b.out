@@ -1,0 +1,144 @@
+======================================================================
+CYCLE HIERARCHY — DO ODD CYCLE COUNTS DETERMINE H?
+opus-2026-03-14-S89b
+======================================================================
+
+======================================================================
+PART 1: n=5 — (t3, t5) → H
+======================================================================
+
+  n=5: Grouping by (t3, t5) → H:
+    (t3=0, t5=0): {1: 120} ✓
+    (t3=1, t5=0): {3: 120} ✓
+    (t3=2, t5=0): {5: 240} ✓
+    (t3=3, t5=1): {9: 240} ✓
+    (t3=4, t5=1): {11: 120} ✓
+    (t3=4, t5=2): {13: 120} ✓
+    (t3=4, t5=3): {15: 40} ✓
+    (t3=5, t5=2): {15: 24} ✓
+
+  (t3, t5) determines H at n=5? True
+
+======================================================================
+PART 2: n=6 — (t3, t5) → H
+======================================================================
+  Computing t3 and t5 for all 32768 tournaments at n=6...
+  Done. 22 distinct (t3, t5) pairs.
+
+    (t3= 2, t5=  0): {5: 2160, 9: 80}
+    (t3= 4, t5=  2): {13: 1440, 17: 720}
+    (t3= 5, t5=  4): {19: 1440, 23: 1440}
+    (t3= 6, t5=  6): {25: 1440, 29: 2160, 33: 720}
+    (t3= 7, t5=  7): {33: 1440, 37: 1440}
+    (t3= 7, t5=  9): {33: 480, 37: 1440}
+
+  Total groups: 22
+  Non-determined: 6
+  (t3, t5) determines H at n=6? False
+
+  Need more invariants. Let's check (t3, t5, scores):
+  (t3, t5, scores): 39 groups, 7 non-determined
+
+  Still non-determined groups (showing first 10):
+    (5, 4, (1, 1, 3, 3, 3, 4)): {19: 720, 23: 720}
+    (5, 4, (1, 2, 2, 2, 4, 4)): {19: 720, 23: 720}
+    (6, 6, (1, 2, 2, 3, 3, 4)): {25: 1440, 29: 2160, 33: 720}
+    (7, 7, (1, 2, 3, 3, 3, 3)): {33: 720, 37: 720}
+    (7, 7, (2, 2, 2, 2, 3, 4)): {33: 720, 37: 720}
+    (7, 9, (1, 2, 3, 3, 3, 3)): {33: 240, 37: 720}
+    (7, 9, (2, 2, 2, 2, 3, 4)): {33: 240, 37: 720}
+
+======================================================================
+PART 3: CONNECTION TO THE ODD CYCLE COLLECTION FORMULA
+======================================================================
+
+  The OCF states:
+    H(T) ≡ 1 (mod 2)  always
+    H(T) = sum over independent odd cycle sets of contributions
+
+  If the OCF gives H as a function of CYCLE STRUCTURE,
+  then the odd cycle counts (t3, t5, t7, ...) should suffice.
+
+  But "cycle structure" is more than just COUNTS — it includes
+  the INTERSECTION PATTERN of cycles (which cycles share vertices).
+
+  The fact that t3 alone determines H for n≤4 but not n≥5
+  shows that the intersection pattern matters starting at n=5
+  (where the first non-trivial cycle intersections appear).
+
+  The t5 discriminates at n=5 because the 5-cycle on all 5 vertices
+  encodes the GLOBAL cycle structure (how the 3-cycles interact).
+
+  CONJECTURE (Cycle Hierarchy):
+  For each n, there exists a set of odd cycle counts
+  (t3, t5, ..., t_{2k+1}) with 2k+1 ≤ n such that
+  the tuple (t3, t5, ..., t_{2k+1}) determines H(T).
+
+  At n=3: t3 suffices
+  At n=4: t3 suffices
+  At n=5: (t3, t5) suffices
+  At n=6: (t3, t5, ?) — need to check
+
+  But from our data: (t3, t5) does NOT determine H at n=6.
+  The missing invariant is NOT just scores — it's something deeper.
+  Likely the INTERSECTION GRAPH of 3-cycles (which pairs of
+  3-cycles share an edge).
+
+
+======================================================================
+PART 4: EXACT H FORMULAS
+======================================================================
+
+  For n ≤ 4:  H = 1 + 2·t3  (EXACT)
+
+  For n = 5:  H = 1 + 2·t3 + 2·ε5(T)
+  where ε5(T) depends on the 5-cycle count:
+    If t3 ≤ 3: ε5 = 0 (t3 alone determines)
+    If t3 = 4: ε5 = t5 - 1 (so H = 1 + 2·4 + 2·(t5-1) = 2t5 + 7)
+    Actually: for t3=4, H = 11 when t5=1, H=13 when t5=2, H=15 when t5=3
+    H = 2·t5 + 9? No: 2·1+9=11 ✓, 2·2+9=13 ✓, 2·3+9=15 ✓ YES!
+    For t3=5: H=15, t5=?
+
+  t3=5: H=15, t5=2
+
+  Complete (t3, t5, H) table at n=5:
+    t3=0, t5=0: H=1 (count=120), H-2t5=1
+    t3=1, t5=0: H=3 (count=120), H-2t5=3
+    t3=2, t5=0: H=5 (count=240), H-2t5=5
+    t3=3, t5=1: H=9 (count=240), H-2t5=7
+    t3=4, t5=1: H=11 (count=120), H-2t5=9
+    t3=4, t5=2: H=13 (count=120), H-2t5=9
+    t3=4, t5=3: H=15 (count=40), H-2t5=9
+    t3=5, t5=2: H=15 (count=24), H-2t5=11
+
+======================================================================
+PART 5: UNIVERSAL FORMULA — H = 1 + 2t3 + 2t5 + ... ?
+======================================================================
+
+  Testing H = 1 + 2(t3 + t5) at n=5:
+    Correct: 1024/1024 (1.0000)
+
+  Testing H = 1 + 2t3 + a·t5 at n=5 for various a:
+    a=0: 480/1024 correct (0.4688)
+    a=1: 480/1024 correct (0.4688)
+    a=2: 1024/1024 correct (1.0000)
+    a=3: 480/1024 correct (0.4688)
+    a=4: 480/1024 correct (0.4688)
+    a=5: 480/1024 correct (0.4688)
+    a=6: 480/1024 correct (0.4688)
+    a=7: 480/1024 correct (0.4688)
+    a=8: 480/1024 correct (0.4688)
+    a=9: 480/1024 correct (0.4688)
+
+  Exact regression H = c0 + c1*t3 + c2*t5 at n=5:
+    c0 = 1 = 1.000000
+    c1 = 2 = 2.000000
+    c2 = 2 = 2.000000
+    H ≈ 1.00 + 2.00·t3 + 2.00·t5
+    R² = 1.000000
+    Max residual: 0.000000
+    *** H = 1 + 2·t3 + 2·t5 EXACTLY! ***
+
+======================================================================
+DONE — CYCLE HIERARCHY
+======================================================================

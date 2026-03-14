@@ -1,0 +1,126 @@
+
+============================================================
+n=3: m=3, total=8 tournaments
+============================================================
+  *** PERFECT: H = 1 + 2t₃ + 2t₅ + 4d₃₃ exact for ALL 8 tournaments! ***
+
+============================================================
+n=4: m=6, total=64 tournaments
+============================================================
+  *** PERFECT: H = 1 + 2t₃ + 2t₅ + 4d₃₃ exact for ALL 64 tournaments! ***
+
+============================================================
+n=5: m=10, total=1024 tournaments
+============================================================
+  *** PERFECT: H = 1 + 2t₃ + 2t₅ + 4d₃₃ exact for ALL 1024 tournaments! ***
+
+============================================================
+n=6: m=15, total=32768 tournaments
+============================================================
+  *** PERFECT: H = 1 + 2t₃ + 2t₅ + 4d₃₃ exact for ALL 32768 tournaments! ***
+
+============================================================
+n=7: SAMPLING (2^21 = 2097152 too large for exhaustive)
+============================================================
+  MISMATCH: H=49, pred=45, t3=8, t5=14, d33=0, diff=4
+  MISMATCH: H=79, pred=71, t3=10, t5=21, d33=2, diff=8
+  MISMATCH: H=137, pred=111, t3=12, t5=29, d33=7, diff=26
+  3960/5000 mismatches, max error = 34
+
+  Testing if we need t₇ (7-cycles) and/or d₃₅ (disjoint 3+5 pairs)...
+
+  Computing t₇ for 100 mismatched cases...
+  Collected 50 mismatches
+  Residuals (H - predicted): [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]
+  GCD of residuals: 2
+  Residuals / 2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+  Computing t₇ for first 20 mismatches (SLOW!)...
+    t₃=8, t₅=14, d₃₃=0, t₇=2, resid=4, resid-2t₇=0
+    t₃=10, t₅=21, d₃₃=2, t₇=4, resid=8, resid-2t₇=0
+    t₃=12, t₅=29, d₃₃=7, t₇=13, resid=26, resid-2t₇=0
+    t₃=9, t₅=20, d₃₃=8, t₇=13, resid=26, resid-2t₇=0
+    t₃=10, t₅=18, d₃₃=4, t₇=5, resid=10, resid-2t₇=0
+    t₃=11, t₅=20, d₃₃=6, t₇=7, resid=14, resid-2t₇=0
+    t₃=7, t₅=9, d₃₃=2, t₇=2, resid=4, resid-2t₇=0
+    t₃=6, t₅=8, d₃₃=0, t₇=1, resid=2, resid-2t₇=0
+    t₃=11, t₅=21, d₃₃=6, t₇=8, resid=16, resid-2t₇=0
+    t₃=10, t₅=18, d₃₃=5, t₇=6, resid=12, resid-2t₇=0
+    t₃=9, t₅=17, d₃₃=4, t₇=5, resid=10, resid-2t₇=0
+    t₃=10, t₅=18, d₃₃=8, t₇=10, resid=20, resid-2t₇=0
+    t₃=9, t₅=16, d₃₃=4, t₇=5, resid=10, resid-2t₇=0
+    t₃=12, t₅=26, d₃₃=8, t₇=11, resid=22, resid-2t₇=0
+    t₃=9, t₅=17, d₃₃=3, t₇=5, resid=10, resid-2t₇=0
+    t₃=7, t₅=9, d₃₃=3, t₇=2, resid=4, resid-2t₇=0
+    t₃=11, t₅=25, d₃₃=7, t₇=11, resid=22, resid-2t₇=0
+    t₃=10, t₅=16, d₃₃=6, t₇=6, resid=12, resid-2t₇=0
+    t₃=10, t₅=20, d₃₃=4, t₇=7, resid=14, resid-2t₇=0
+    t₃=12, t₅=29, d₃₃=8, t₇=12, resid=24, resid-2t₇=0
+
+============================================================
+HIERARCHY STRUCTURE
+============================================================
+
+The formula H = 1 + 2t₃ + 2t₅ + 4d₃₃ suggests a HIERARCHY:
+
+Level 0: Constant term 1 (= 2⁰)
+Level 1: Individual odd cycles, coefficient 2¹ = 2
+  - t₃: 3-cycles (need 3 vertices)
+  - t₅: 5-cycles (need 5 vertices)
+  - t₇: 7-cycles (need 7 vertices)
+Level 2: Disjoint cycle PAIRS, coefficient 2² = 4
+  - d₃₃: disjoint 3-cycle pairs (need 6 vertices)
+  - d₃₅: disjoint 3+5 pairs (need 8 vertices)
+  - d₅₅: disjoint 5+5 pairs (need 10 vertices)
+Level 3: Disjoint cycle TRIPLES, coefficient 2³ = 8
+  - d₃₃₃: disjoint 3+3+3 triples (need 9 vertices)
+
+CONJECTURE (General formula):
+H(T) = Σ_{I ⊂ OddCycles(T), pairwise disjoint} 2^|I|
+
+where the sum is over all independent sets I of pairwise
+vertex-disjoint odd directed cycles in T.
+
+This would give:
+  H = 1 + 2·(# odd cycles) + 4·(# disjoint pairs) + 8·(# disjoint triples) + ...
+  H = Σ_k 2^k · (# independent sets of size k in the cycle intersection graph)
+  H = independence polynomial of the odd-cycle intersection graph, evaluated at x=2
+
+This is the INDEPENDENCE POLYNOMIAL at x=2!
+
+
+============================================================
+INDEPENDENCE POLYNOMIAL TEST at n=5
+============================================================
+Independence polynomial IP(2) matches H for n=5: True (0 errors)
+
+============================================================
+INDEPENDENCE POLYNOMIAL TEST at n=6 (full)
+============================================================
+*** INDEPENDENCE POLYNOMIAL IP(2) = H EXACT for ALL 32768 tournaments at n=6! ***
+
+============================================================
+SUMMARY OF THE CROWN JEWEL
+============================================================
+
+THEOREM (THM-209): For tournaments on n ≤ 6 vertices:
+
+  H(T) = Σ_{S ⊆ OddCyc(T), pairwise disjoint} 2^|S|
+
+Equivalently: H = IP(OddCycleGraph(T), 2)
+
+where IP(G, x) = Σ_k i_k(G) x^k is the independence polynomial
+and OddCycleGraph has:
+  - Vertices = directed odd cycles in T
+  - Edges = cycles sharing at least one vertex
+
+Coefficients follow the power-of-2 hierarchy:
+  2^0 = 1  (empty set — the base Hamiltonian path)
+  2^1 = 2  (each individual odd cycle)
+  2^2 = 4  (each disjoint pair)
+  2^3 = 8  (each disjoint triple)
+
+This UNIFIES all previous results:
+  THM-208 (H=1+2t₃ for n≤4) is a special case
+  The n=5 formula H=1+2t₃+2t₅ is a special case
+
