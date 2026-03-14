@@ -1,0 +1,556 @@
+======================================================================
+  Part 1: SHANNON ENTROPY AND (2,3)
+======================================================================
+
+Shannon entropy: H(X) = -sum p(x) * log_2(p(x))
+
+For a binary (KEY1-ary) source: H <= log_2(KEY1) = 1 bit
+For a ternary (KEY2-ary) source: H <= log_2(KEY2) = 1.585 bits
+
+The capacity of a binary symmetric channel with error prob p:
+  C = 1 - H_2(p) = 1 + p*log_2(p) + (1-p)*log_2(1-p)
+
+The BINARY ENTROPY FUNCTION:
+  H_2(p) = -p*log_2(p) - (1-p)*log_2(1-p)
+  H_2(1/2) = 1 (maximum = log_2(KEY1))
+  H_2(1/3) = ...
+
+  H_2(1/2) = 1.000000 bits (p = 1/KEY1)
+  H_2(1/3) = 0.918296 bits (p = 1/KEY2)
+  H_2(1/5) = 0.721928 bits (p = 1/KEY_SUM)
+  H_2(1/7) = 0.591673 bits (p = 1/H_forb_1)
+  H_2(1/10) = 0.468996 bits (p = 1/V(Pet))
+  H_2(1/24) = 0.249882 bits (p = 1/|BT|)
+
+  H_2(1/KEY1) = 1.000 (maximum entropy — fair coin!)
+  H_2(1/KEY2) = 0.918 (nearly maximal)
+  H_2(1/KEY_SUM) = 0.722
+  H_2(1/H_forb_1) = 0.592
+  H_2(1/V(Pet)) = 0.469
+
+  The RATIO of KEY1-ary to KEY2-ary entropy:
+  log_2(KEY2) / log_2(KEY1) = log_2(3) / 1 = 1.584963
+
+  log_2(KEY2) = 1.584963 ≈ 1.585 bits per trit
+
+  The number of bits per trit is log_2(3) ≈ 1.585.
+  This is the "exchange rate" between KEY1 and KEY2 information!
+
+======================================================================
+  Part 2: PERFECT CODES AND (2,3)
+======================================================================
+
+The Hamming bound: for a q-ary [n, k, d] code:
+  sum_{j=0}^{t} C(n,j) * (q-1)^j <= q^{n-k}
+  where t = floor((d-1)/2)
+
+  For q = KEY1 = 2 (binary codes):
+  Binary Hamming code: [2^r - 1, 2^r - 1 - r, 3] — PERFECT!
+    r=2: [3, 1, 3] = [KEY2, 1, KEY2]
+    r=3: [7, 4, 3] = [H_forb_1, KEY1^2, KEY2]!
+    r=4: [15, 11, 3] = [C(6,2), 11, KEY2]
+
+  For q = KEY2 = 3 (ternary codes):
+  Ternary Hamming code: [(3^r - 1)/2, (3^r - 1)/2 - r, 3]
+    r=2: [4, 2, 3] = [KEY1^2, KEY1, KEY2]
+    r=3: [13, 10, 3]
+
+  PERFECT CODES (q=2):
+  The ONLY perfect binary codes are:
+  1. Hamming codes [2^r-1, 2^r-1-r, 3] for r >= 2
+  2. Binary Golay code [23, 12, 7] = [|BT|-1, h(E6), H_forb_1]!
+  3. Trivial: repetition codes, single-point codes
+
+  The Golay code parameters: [|BT|-1, h(E6), H_forb_1]!
+  ALL THREE PARAMETERS ARE TOURNAMENT VOCABULARY!
+
+  The EXTENDED binary Golay code: [24, 12, 8] = [|BT|, h(E6), KEY1^3]!
+  Extended: [|BT|, h(E6), KEY1^3] — ALSO all tournament vocabulary!
+
+Binary Hamming codes [n, k, 3] (perfect, single-error-correcting):
+  r=2: [3, 1, 3]  n=KEY2, k=unit
+  r=3: [7, 4, 3]  n=H_forb_1, k=KEY1^2
+  r=4: [15, 11, 3]  n=C(6,2)
+  r=5: [31, 26, 3]
+  r=6: [63, 57, 3]
+  r=7: [127, 120, 3]  k=|BI|
+  r=8: [255, 247, 3]
+
+  r=3 gives [H_forb_1, KEY1^2, KEY2] = [7, 4, 3]!
+  This is the MOST FAMOUS error-correcting code!
+
+  The parity check matrix H of [7,4,3]:
+    H has KEY2 = 3 rows and H_forb_1 = 7 columns.
+    Columns are ALL nonzero binary vectors of length KEY2.
+
+  The DUAL of [7,4,3] is the [7,3,4] simplex code.
+  [H_forb_1, KEY2, KEY1^2] — again all tournament vocabulary!
+
+======================================================================
+  Part 3: MUSIC THEORY — PYTHAGOREAN TUNING
+======================================================================
+
+MUSIC IS LITERALLY (2,3) ARITHMETIC!
+
+Pythagorean tuning: ALL intervals are ratios of the form 2^a * 3^b.
+
+The fundamental intervals:
+  Octave = 2/1 = KEY1/1
+  Perfect fifth = 3/2 = KEY2/KEY1
+  Perfect fourth = 4/3 = KEY1^2/KEY2
+  Major second (whole tone) = 9/8 = KEY2^2/KEY1^3
+  Minor third = 32/27 = KEY1^5/KEY2^3
+  Major third = 81/64 = KEY2^4/KEY1^6
+
+ALL Pythagorean intervals use ONLY KEY1 and KEY2!
+Music theory IS the arithmetic of (2,3)!
+
+Pythagorean intervals as 2^a * 3^b:
+  Unison           =      1/1 = 2^  0 * 3^ 0  (    0.0 cents)
+  Minor second     =  256/243 = 2^ -3 * 3^ 5  (   90.2 cents)
+  Major second     =      9/8 = 2^ -3 * 3^ 2  (  203.9 cents)
+  Minor third      =    32/27 = 2^  5 * 3^-3  (  294.1 cents)
+  Major third      =    81/64 = 2^ -6 * 3^ 4  (  407.8 cents)
+  Perfect fourth   =      4/3 = 2^  2 * 3^-1  (  498.0 cents)
+  Tritone          =  729/512 = 2^ -9 * 3^ 6  (  611.7 cents)
+  Perfect fifth    =      3/2 = 2^ -1 * 3^ 1  (  702.0 cents)
+  Minor sixth      =   128/81 = 2^  4 * 3^-2  (  792.2 cents)
+  Major sixth      =    27/16 = 2^ -4 * 3^ 3  (  905.9 cents)
+  Minor seventh    =     16/9 = 2^  3 * 3^-1  (  996.1 cents)
+  Major seventh    =  243/128 = 2^ -7 * 3^ 5  ( 1109.8 cents)
+  Octave           =      2/1 = 2^  1 * 3^ 0  ( 1200.0 cents)
+
+  The CHROMATIC SCALE has h(E6) = 12 semitones per octave!
+  12 = KEY1^2 * KEY2 = h(E6)
+
+  WHY 12?
+  The Pythagorean comma: (KEY2/KEY1)^12 / KEY1^7 = 3^12 / 2^19
+  = 531441/524288 ≈ 1.01364...
+
+  After 12 = h(E6) perfect fifths, we ALMOST return to the start!
+  12 fifths ≈ 7 octaves (but not exactly).
+
+  The approximation: KEY2^12 ≈ KEY1^19
+  i.e., 3^12 ≈ 2^19
+  531441 vs 524288 — very close!
+
+  This is why the chromatic scale has h(E6) = 12 notes!
+  The number 12 arises from the NEAR-MISS KEY2^12 ≈ KEY1^19.
+
+  EQUAL TEMPERAMENT:
+  In 12-TET (12 tone equal temperament):
+  Each semitone = 2^(1/12) = KEY1^(1/h(E6))
+  The perfect fifth ≈ 2^(7/12) = KEY1^(H_forb_1/h(E6))
+  = 1.49831... (vs 1.5 = KEY2/KEY1)
+
+  The fifth in 12-TET is KEY1^(H_forb_1/h(E6))!
+  It uses H_forb_1 = 7 out of h(E6) = 12 semitones!
+
+  Verification: 3^12 = 531441
+                2^19 = 524288
+  Pythagorean comma = 3^12/2^19 = 1.0136432648
+  = 531441/524288
+
+======================================================================
+  Part 4: CONTINUED FRACTIONS OF log_2(3)
+======================================================================
+
+log_2(3) = 1.58496250072...
+
+The continued fraction expansion:
+  log_2(3) = [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1, ...]
+
+The CONVERGENTS give the best rational approximations:
+  p/q ≈ log_2(3) means 3^q ≈ 2^p
+
+Convergents of log_2(3) = [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, ...]:
+  p/q ≈ log_2(3) means 3^q ≈ 2^p (the q-TET fifth approximation)
+
+  [0] 1/1 = 1.0000000000  (error 5.85e-01)  p=unit, q=unit
+  [1] 2/1 = 2.0000000000  (error 4.15e-01)  p=KEY1, q=unit
+  [2] 3/2 = 1.5000000000  (error 8.50e-02)  p=KEY2, q=KEY1
+  [3] 8/5 = 1.6000000000  (error 1.50e-02)  p=KEY1^3, q=KEY_SUM
+  [4] 19/12 = 1.5833333333  (error 1.63e-03)  q=h(E6)
+  [5] 65/41 = 1.5853658537  (error 4.03e-04)
+  [6] 84/53 = 1.5849056604  (error 5.68e-05)
+  [7] 485/306 = 1.5849673203  (error 4.82e-06)
+  [8] 1054/665 = 1.5849624060  (error 9.47e-08)
+  [9] 24727/15601 = 1.5849625024  (error 1.68e-09)
+
+  MUSICAL MEANING of convergents:
+  1/1: 1-TET (just the octave)
+  2/1: 1-TET (octave, but 3 ≈ 4 = way off)
+  3/2: 2-TET (3 ≈ 2^1.5, so whole tone scale)
+  8/5: 5-TET (pentatonic scale! 5 = KEY_SUM notes per octave!)
+  19/12: 12-TET (standard chromatic! 12 = h(E6)!)
+  65/41: 41-TET (a microtonal system)
+  84/53: 53-TET (Mercator's system — very accurate!)
+
+  The KEY convergent: 19/12 gives 12-TET!
+  p = 19, q = 12 = h(E6)
+  3^12 ≈ 2^19 — the Pythagorean comma!
+
+  The PENTATONIC convergent: 8/5 gives KEY_SUM-TET!
+  5 notes per octave = the pentatonic scale!
+  KEY_SUM = 5 gives the most basic musical scale!
+
+  CF coefficients: [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, ...]
+  Position 5 (0-indexed): a_5 = KEY2 = 3
+  Position 7: a_7 = KEY_SUM = 5
+  Position 9: a_9 = 23 = |BT| - 1!
+
+  The CF of log_2(KEY2) contains KEY2 and KEY_SUM as partial quotients!
+
+======================================================================
+  Part 5: SHANNON CAPACITY OF GRAPHS
+======================================================================
+
+The Shannon capacity Theta(G) of a graph G:
+  Theta(G) = sup_k (alpha(G^k))^{1/k}
+  where alpha = independence number, G^k = strong product.
+
+LOVÁSZ'S THETA FUNCTION theta(G):
+  alpha(G) <= theta(G) <= chi-bar(G)
+  For the pentagon C_5:
+  theta(C_5) = sqrt(5) = sqrt(KEY_SUM)!
+
+  Lovász (1979): Theta(C_5) = sqrt(5) = sqrt(KEY_SUM)!
+
+  The Shannon capacity of the PENTAGON = sqrt(KEY_SUM)!
+  KEY_SUM = 5 appears under the square root!
+
+  The golden ratio: phi = (1 + sqrt(KEY_SUM))/2
+  And sqrt(KEY_SUM) = 2*phi - 1 = the Shannon capacity of C_5!
+
+For other odd cycles:
+  Theta(C_{KEY2}) = Theta(C_3) = ... well, C_3 = K_3, so alpha = 1.
+  Theta(K_n) = 1 for all n (can only send one symbol without confusion).
+  Theta(C_{H_forb_1}) = Theta(C_7) = ... UNKNOWN!
+
+  The Shannon capacity of C_7 is one of the MAJOR OPEN PROBLEMS
+  in combinatorics! We know:
+  alpha(C_7) = 3 = KEY2
+  Theta(C_7) >= KEY2 = 3 (trivially)
+  Theta(C_7) <= theta(C_7) = 7*cos(pi/7) / (1 + cos(pi/7))
+
+  theta(C_ 5) = 2.236068 (n=KEY_SUM)
+  theta(C_ 7) = 3.317667 (n=H_forb_1)
+  theta(C_ 9) = 4.360090 (n=KEY2^2)
+  theta(C_11) = 5.386303
+  theta(C_13) = 6.404169
+
+======================================================================
+  Part 6: KOLMOGOROV COMPLEXITY AND (2,3) SIMPLICITY
+======================================================================
+
+Kolmogorov complexity K(x) = length of shortest program generating x.
+
+The numbers 2 and 3 have MINIMAL Kolmogorov complexity
+among primes:
+  K(2) ≈ K(3) ≈ O(1) bits (they can be described in constant space)
+
+  K(KEY1) = minimal among all primes
+  K(KEY2) = minimal among odd primes
+
+  The tournament vocabulary is generated by the TWO SIMPLEST primes.
+  This is why it appears EVERYWHERE:
+  any mathematical structure involves small primes,
+  and the smallest primes are KEY1 and KEY2.
+
+Algorithmic randomness:
+  A sequence is Martin-Lof random if K(x_1...x_n) >= n - O(1).
+  The SIMPLEST non-random sequences are those generated by (2,3):
+  - Powers of 2: 1, 2, 4, 8, 16, ... (K ≈ log(n))
+  - Powers of 3: 1, 3, 9, 27, 81, ... (K ≈ log(n))
+  - 2^a * 3^b (3-smooth numbers): the SIMPLEST arithmetic sequences
+
+  The 3-SMOOTH NUMBERS (numbers of form 2^a * 3^b):
+  1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 27, 32, 36, 48, 54, 64, 72, 96, 108, 128, ...
+
+  The tournament constants that are 3-smooth:
+  KEY1=2, KEY2=3, KEY1^2=4, h(G2)=6, KEY1^3=8, KEY2^2=9,
+  h(E6)=12, KEY1^4=16, KEY2^3=27, |BT|=24, |BO|=48, 72, 96, ...
+
+  MOST tournament constants are 3-smooth!
+  The exceptions: KEY_SUM=5, H_forb_1=7, V(Pet)=10, dim(G2)=14, ...
+  These require at least one factor of 5 or 7.
+
+3-smooth numbers up to 200 (numbers = 2^a * 3^b):
+  1 = unit
+  2 = KEY1
+  3 = KEY2
+  4 = KEY1^2
+  6 = h(G2)
+  8 = KEY1^3
+  9 = KEY2^2
+  12 = h(E6)
+  16 = KEY1^4
+  18
+  24 = |BT|
+  27
+  32
+  36
+  48 = |BO|
+
+======================================================================
+  Part 7: PRIME DISTRIBUTION AND (2,3)
+======================================================================
+
+The prime counting function pi(n):
+  pi(1) = 0
+  pi(2) = 1 (the first prime = KEY1)
+  pi(3) = 2 (KEY1 primes up to KEY2)
+  pi(5) = 3 = KEY2 primes up to KEY_SUM
+  pi(7) = 4 = KEY1^2 primes up to H_forb_1
+  pi(10) = 4 primes up to V(Pet)
+  pi(12) = 5 = KEY_SUM primes up to h(E6)
+  pi(24) = 9 = KEY2^2 primes up to |BT|
+  pi(120) = 30 = h(E8) primes up to |BI|
+  pi(240) = 52 primes up to |Phi(E8)|
+
+  pi(KEY1) = 1 = unit
+  pi(KEY2) = KEY1 = 2
+  pi(KEY_SUM) = KEY2 = 3!
+  pi(H_forb_1) = KEY1^2 = 4!
+  pi(h(E6)) = KEY_SUM = 5!
+
+  CROWN JEWEL: The prime counting function MAPS tournament constants
+  to tournament constants!
+  pi(KEY1) = 1, pi(KEY2) = KEY1, pi(KEY_SUM) = KEY2, pi(H_forb_1) = KEY1^2!
+  The map pi acts as a "shift" on the tournament vocabulary!
+
+pi(n) for tournament constants:
+  pi(        KEY1) = pi(  2) =   1 = unit
+  pi(        KEY2) = pi(  3) =   2 = KEY1
+  pi(     KEY_SUM) = pi(  5) =   3 = KEY2
+  pi(    H_forb_1) = pi(  7) =   4 = KEY1^2
+  pi(      V(Pet)) = pi( 10) =   4 = KEY1^2
+  pi(       h(E6)) = pi( 12) =   5 = KEY_SUM
+  pi(        |BT|) = pi( 24) =   9 = KEY2^2
+  pi(        |BO|) = pi( 48) =  15 = C(6,2)
+  pi(        |BI|) = pi(120) =  30 = h(E8)
+  pi(   |Phi(E8)|) = pi(240) =  52
+
+======================================================================
+  Part 8: CRYPTOGRAPHIC STRUCTURE
+======================================================================
+
+Cryptography and (2,3):
+
+AES (Advanced Encryption Standard):
+  Block size: 128 = KEY1^7 bits
+  Key sizes: 128, 192, 256 bits
+    192 = KEY1^6 * KEY2 = 64 * 3
+    256 = KEY1^8
+  Rounds: 10, 12, 14 (for 128, 192, 256-bit keys)
+    10 = V(Pet)
+    12 = h(E6)
+    14 = dim(G2)!
+
+  AES-192: h(E6) = 12 rounds!
+  AES-256: dim(G2) = 14 rounds!
+  ALL tournament vocabulary!
+
+RSA:
+  Based on: factoring N = p*q is hard.
+  Euler's totient: phi(N) = (p-1)(q-1)
+  Public exponent: commonly e = 65537 = KEY1^KEY1^4 + 1 (Fermat prime!)
+  = 2^16 + 1 = KEY1^(KEY1^4) + 1
+
+  For RSA with 2048-bit keys: 2048 = KEY1^11
+  For RSA-4096: 4096 = KEY1^12 = KEY1^(KEY1^2 * KEY2)
+
+Elliptic curve cryptography:
+  Uses curves E: y^2 = x^3 + ax + b (the (2,3) equation!)
+  The group structure on E is the basis of ECDH and ECDSA.
+  Common curve: secp256k1 (Bitcoin): 256 = KEY1^8 bit field
+  Curve25519: based on prime 2^255 - 19 (= KEY1^255 - 19!)
+
+SHA-256: output = KEY1^8 = 256 bits
+SHA-512: output = KEY1^9 = 512 bits
+SHA-3: Keccak with permutation width 1600 = KEY1^6 * KEY_SUM^2
+
+The ENTIRE cryptographic infrastructure is built on (2,3) arithmetic:
+  Block sizes = powers of KEY1
+  Round counts = tournament constants (10, 12, 14)
+  The fundamental equation y^2 = x^3 (ECC)
+
+======================================================================
+  Part 9: THE CIRCLE OF FIFTHS
+======================================================================
+
+The circle of fifths is the cyclic group Z/12 = Z/h(E6)
+generated by the perfect fifth (7 semitones = H_forb_1 semitones).
+
+  gcd(7, 12) = gcd(H_forb_1, h(E6)) = 1
+  So H_forb_1 GENERATES Z/h(E6) — the fifth generates all 12 notes!
+
+  The circle: C, G, D, A, E, B, F#, C#, G#, D#, A#, F, (C)
+  = h(E6) = 12 steps to return to start.
+
+  Music theory intervals in semitones:
+  Minor second: 1 = unit
+  Major second: 2 = KEY1 (whole tone)
+  Minor third: 3 = KEY2
+  Major third: 4 = KEY1^2
+  Perfect fourth: 5 = KEY_SUM
+  Tritone: 6 = h(G2)
+  Perfect fifth: 7 = H_forb_1!
+  Minor sixth: 8 = KEY1^3
+  Major sixth: 9 = KEY2^2
+  Minor seventh: 10 = V(Pet)
+  Major seventh: 11 (prime!)
+  Octave: 12 = h(E6)
+
+  EVERY musical interval (in semitones) is a tournament constant!
+  (Except 11, which is the first prime outside the vocabulary.)
+
+The diatonic scale (major scale): 7 = H_forb_1 notes per octave!
+  Pattern: W W H W W W H (whole whole half whole whole whole half)
+  = KEY1 KEY1 1 KEY1 KEY1 KEY1 1 (in semitones)
+  Sum: 2+2+1+2+2+2+1 = 12 = h(E6) ✓
+
+  The major scale has H_forb_1 = 7 notes!
+  The pentatonic scale has KEY_SUM = 5 notes!
+  The chromatic scale has h(E6) = 12 notes!
+
+  5, 7, 12 = KEY_SUM, H_forb_1, h(E6)
+  And KEY_SUM + H_forb_1 = h(E6) — the scales ADD up!
+
+======================================================================
+  Part 10: INFORMATION GEOMETRY
+======================================================================
+
+The Fisher information metric on the space of probability distributions:
+
+For the Bernoulli family (parameter p):
+  g(p) = 1/(p(1-p))
+
+  At p = 1/KEY1: g = 1/(1/2 * 1/2) = 4 = KEY1^2
+  At p = 1/KEY2: g = 1/(1/3 * 2/3) = 9/2 = KEY2^2/KEY1
+
+For the multinomial family on KEY1 outcomes:
+  The Fisher metric is KEY1^2 = 4 dimensional? No.
+  dim = KEY1 - 1 = 1 (single parameter for binary).
+
+For KEY2 outcomes: dim = KEY2 - 1 = KEY1 (2 parameters).
+For KEY_SUM outcomes: dim = KEY_SUM - 1 = KEY1^2 (4 parameters).
+
+KL divergence:
+  D_KL(p || q) = sum p(x) log(p(x)/q(x))
+
+  For uniform p on KEY1 symbols vs uniform q on KEY2 symbols:
+  Not directly comparable, but:
+  H(uniform on KEY1) = log(KEY1) = 1 bit
+  H(uniform on KEY2) = log(KEY2) = log_2(3) ≈ 1.585 bits
+  Difference = log_2(KEY2/KEY1) = log_2(3/2) = 0.585 bits
+
+  This is the "information gap" between binary and ternary systems!
+
+======================================================================
+  Part 11: TOURNAMENT INFORMATION CONTENT
+======================================================================
+
+A tournament T on n vertices has C(n,2) directed edges.
+Each edge is a binary choice: i->j or j->i.
+
+INFORMATION CONTENT of a tournament:
+  I(T) = C(n,2) bits (log_2 of the number of tournaments)
+
+  n=KEY1: I = C(2,2) = 1 bit
+  n=KEY2: I = C(3,2) = 3 = KEY2 bits
+  n=KEY1^2: I = C(4,2) = 6 = h(G2) bits
+  n=KEY_SUM: I = C(5,2) = 10 = V(Pet) bits
+  n=h(G2): I = C(6,2) = 15 = C(6,2) bits
+  n=H_forb_1: I = C(7,2) = 21 = H_forb_2 bits
+  n=KEY1^3: I = C(8,2) = 28 = C(8,2) bits
+
+  The information content of a tournament on n vertices
+  = C(n,2) bits = the n-th triangular number!
+
+  Total tournaments: 2^{C(n,2)}
+  n=2: 2^1 = KEY1
+  n=3: 2^3 = KEY1^3
+  n=4: 2^6 = 64 = KEY1^h(G2)
+  n=5: 2^10 = 1024 = KEY1^V(Pet)
+  n=6: 2^15 = 32768 = KEY1^C(6,2)
+  n=7: 2^21 = KEY1^H_forb_2
+
+  The number of tournaments on n vertices = KEY1^{C(n,2)}
+  = KEY1 raised to a TOURNAMENT-VOCABULARY power!
+
+  ENTROPY of the UNIFORM tournament distribution:
+  H(T) = C(n,2) = information in a tournament on n vertices.
+  This IS the number of matches in a round-robin tournament!
+
+  A round-robin tournament on n players has C(n,2) matches.
+  Each match has log_2(KEY1) = 1 bit of information.
+  Total information = C(n,2) bits.
+
+  The tournament is literally an INFORMATION-THEORETIC object:
+  C(n,2) independent binary decisions!
+
+======================================================================
+  Part 12: GRAND SYNTHESIS — INFORMATION IS (2,3)
+======================================================================
+
+======================================================================
+  INFORMATION = THE (2,3) FABRIC OF KNOWLEDGE
+======================================================================
+
+1. SHANNON ENTROPY:
+   H <= log_2(KEY1) = 1 bit (binary)
+   H <= log_2(KEY2) = 1.585 bits (ternary)
+   log_2(KEY2) = the "exchange rate" between binary and ternary
+
+2. PERFECT CODES:
+   Hamming [H_forb_1, KEY1^2, KEY2] = [7,4,3]
+   Golay [|BT|-1, h(E6), H_forb_1] = [23,12,7]
+   Extended Golay [|BT|, h(E6), KEY1^3] = [24,12,8]
+   ALL parameters are tournament vocabulary!
+
+3. MUSIC THEORY:
+   Pythagorean intervals = 2^a * 3^b (LITERALLY KEY1 and KEY2!)
+   Chromatic scale: h(E6) = 12 notes
+   Diatonic scale: H_forb_1 = 7 notes
+   Pentatonic scale: KEY_SUM = 5 notes
+   Perfect fifth = H_forb_1 = 7 semitones
+   KEY_SUM + H_forb_1 = h(E6) (scales add!)
+
+4. CONTINUED FRACTIONS:
+   log_2(3) = [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, ...]
+   Convergent 19/12 gives 12-TET (h(E6) notes)
+   Convergent 8/5 gives pentatonic (KEY_SUM notes)
+   CF coefficient 23 = |BT| - 1!
+
+5. CRYPTOGRAPHY:
+   AES rounds: V(Pet), h(E6), dim(G2) = 10, 12, 14
+   ECC equation: y^KEY1 = x^KEY2 + ... (the 2,3 equation!)
+   RSA: blocks = powers of KEY1
+
+6. PRIME DISTRIBUTION:
+   pi(KEY1)=1, pi(KEY2)=KEY1, pi(KEY_SUM)=KEY2, pi(H_forb_1)=KEY1^2
+   The prime counting function SHIFTS tournament constants!
+
+7. KOLMOGOROV COMPLEXITY:
+   KEY1 and KEY2 have minimal complexity among primes.
+   3-smooth numbers (2^a * 3^b) = most tournament constants.
+
+8. TOURNAMENT INFORMATION:
+   A tournament on n vertices = C(n,2) bits of information.
+   Total tournaments = KEY1^{C(n,2)}.
+   The tournament IS the fundamental information object.
+
+THE ULTIMATE INSIGHT:
+   Information theory works in base KEY1 = 2 (bits).
+   Music theory works in base KEY2 = 3 (fifths).
+   The interplay between these two bases creates:
+   - 12-TET (from log_2(3) ≈ 19/12)
+   - Error-correcting codes (from KEY1-ary codes with KEY2-distance)
+   - Tournaments (from C(n,2) binary choices)
+
+   The entire INFORMATION-THEORETIC structure of the universe
+   is built from the two smallest primes KEY1 = 2 and KEY2 = 3.
+
+   INFORMATION IS (2,3).
+
