@@ -1,0 +1,150 @@
+======================================================================
+PART 1: n=5 EXHAUSTIVE — DIRECTED vs VERTEX-SET CYCLE COUNTS
+======================================================================
+  n=5: computed 1024 tournaments in 0.5s
+
+   dc3  dc5  vc3  vc5   α₁   α₂     H   cnt | dc5/vc5
+  ──── ──── ──── ──── ──── ──── ───── ─────-+-───────
+     0    0    0    0    0    0     1   120 | —
+     1    0    1    0    1    0     3   120 | —
+     2    0    2    0    2    0     5   240 | —
+     3    1    3    1    4    0     9   240 | 1.0
+     4    1    4    1    5    0    11   120 | 1.0
+     4    2    4    1    6    0    13   120 | 2.0
+     4    3    4    1    7    0    15    40 | 3.0
+     5    2    5    1    7    0    15    24 | 2.0
+
+  H = 1 + 2α₁ + 4α₂ verified: True
+
+======================================================================
+PART 2: n=7 SAMPLE (200 tournaments) — DIRECTED CYCLE ANALYSIS
+======================================================================
+  trial 0: 0.0s, H=157, α₁=54 (dc3=13,dc5=26,dc7=15), α₂=12
+  trial 50: 0.3s, H=111, α₁=43 (dc3=11,dc5=23,dc7=9), α₂=6
+  trial 100: 0.6s, H=111, α₁=39 (dc3=11,dc5=19,dc7=9), α₂=8
+  trial 150: 0.9s, H=137, α₁=54 (dc3=12,dc5=29,dc7=13), α₂=7
+  Done: 1.2s
+
+  Directed vs vertex-set cycle counts at n=7:
+  5-cycles: dc/vc ratio: mean=1.38, max=3.00
+  7-cycles: dc/vc ratio: mean=5.67, max=15.00
+
+  dc5 range: [0, 33]
+  vc5 range: [0, 19]
+  dc7 range: [0, 15]
+  vc7 range: [0, 1]
+
+  Directed 5-cycles per vertex-set: mean=1.38
+  Directed 7-cycles per vertex-set: mean=5.67
+  (Max possible: 5-cycles=12, 7-cycles=360)
+
+  α₁: mean=30.0, range=[2, 60]
+  α₂: mean=4.5, range=[0, 12]
+  H:  mean=79.0, range=[5, 157]
+
+  H = 1 + 2α₁ + 4α₂ verified: True
+  Vandermonde extraction verified: True
+
+  I₃/H ratio: mean=1.638475
+  3/2 = 1.5
+  Deviation from 3/2: mean=0.138475
+
+======================================================================
+PART 3: DIRECTED CYCLE MULTIPLICITY AT n=5 vs n=7
+======================================================================
+
+  n=5 champion (bits=40, H=15):
+    dc3=4, dc5=3
+    α₁=7
+    vertex-set {0, 1, 2, 3, 4}: 3 directed cycles
+      5-cycle: 0→2→3→1→4→0
+      5-cycle: 0→3→1→2→4→0
+      5-cycle: 0→1→2→3→4→0
+
+======================================================================
+PART 4: 3/2 RATIO WITHIN LAMBDA FIBERS (corrected)
+======================================================================
+  I₃/H as function of (α₁, α₂):
+  I₃/H = (1+3α₁+9α₂) / (1+2α₁+4α₂)
+  For α₂=0: → 3/2 as α₁ → ∞
+  For large α₂, α₁ fixed: → 9/4 = 2.25
+
+  α₂=  0 ( 22 tours): I₃/H mean=1.465767, α₁ mean=10
+  α₂=  1 ( 17 tours): I₃/H mean=1.593397, α₁ mean=12
+  α₂=  2 ( 30 tours): I₃/H mean=1.617015, α₁ mean=21
+  α₂=  3 ( 12 tours): I₃/H mean=1.654379, α₁ mean=22
+  α₂=  4 ( 19 tours): I₃/H mean=1.654574, α₁ mean=30
+  α₂=  5 ( 15 tours): I₃/H mean=1.666414, α₁ mean=34
+  α₂=  6 ( 29 tours): I₃/H mean=1.678143, α₁ mean=37
+  α₂=  7 ( 18 tours): I₃/H mean=1.683807, α₁ mean=42
+  α₂=  8 ( 27 tours): I₃/H mean=1.689341, α₁ mean=46
+  α₂= 10 (  7 tours): I₃/H mean=1.717602, α₁ mean=48
+  α₂= 12 (  3 tours): I₃/H mean=1.743355, α₁ mean=49
+
+======================================================================
+PART 5: k-NACCI CONVERGENCE CONSTANTS
+======================================================================
+
+    k      C₂=(φ_k-2)·2^k      C₃=(ψ_k-3)·(3/2)^k       C₃/C₂
+    3       -1.2857059583           -1.7971744824    1.397811
+    4       -1.1590083923           -1.5285261273    1.318822
+    5       -1.0896564273           -1.3605727189    1.248625
+    6       -1.0506980208           -1.2507288726    1.190379
+    7       -1.0285828346           -1.1764955607    1.143802 ←
+    8       -1.0160179877           -1.1251750575    1.107436 ←
+    9       -1.0089112257           -1.0891502063    1.079530
+   10       -1.0049201049           -1.0636134923    1.058406
+   11       -1.0026967485           -1.0454053045    1.042594
+   12       -1.0014681607           -1.0323833152    1.030870
+   13       -1.0007944270           -1.0230610037    1.022249
+   14       -1.0004275267           -1.0163899106    1.015956
+   15       -1.0002289620           -1.0116224720    1.011391
+   16       -1.0001220928           -1.0082221477    1.008099
+   17       -1.0000648564           -1.0058025632    1.005737
+   18       -1.0000343337           -1.0040852056    1.004051
+   19       -1.0000181207           -1.0028694451    1.002851
+   20       -1.0000095349           -1.0020110098    1.002001
+   21       -1.0000050059           -1.0014064092    1.001401
+   22       -1.0000026356           -1.0009816181    1.000979
+   23       -1.0000013784           -1.0006838477    1.000682
+   24       -1.0000007525           -1.0004755691    1.000475
+   25       -1.0000003427           -1.0003301829    1.000330
+   26       -1.0000000894           -1.0002288917    1.000229
+   27       -1.0000001788           -1.0001584456    1.000158
+   28       -1.0000003576           -1.0001095328    1.000109
+   29       -1.0000004768           -1.0000756257    1.000075
+
+======================================================================
+PART 6: SYNTHESIS
+======================================================================
+
+KEY FINDING: DIRECTED CYCLE MULTIPLICITY
+
+At n=5, a 5-vertex tournament with a 5-cycle can have 1, 2, or 3
+distinct directed 5-cycles on those same 5 vertices. This is because
+a tournament on k vertices can have multiple Hamiltonian cycles.
+
+The OCF counts EACH directed cycle as a separate vertex of Ω.
+This makes α₁ larger than the vertex-set count, which means:
+
+  I(Ω, 2) = 1 + 2·(TRUE α₁) + 4·(TRUE α₂) = H
+
+where TRUE α₁ counts directed cycles, not vertex-sets.
+
+IMPLICATION FOR THE 7→8 TRANSITION:
+  At n=7, the number of directed 7-cycles on 7 vertices can be
+  very large (up to 360 per tournament). Each contributes to α₁.
+  The "extra" directed cycles (beyond vertex-set counting) become
+  increasingly important at larger n.
+
+  At n=8, directed 5-cycles on 5 of the 8 vertices pair with
+  directed 3-cycles on the remaining 3. The cross-level α₂
+  counts ALL pairings of directed cycles (not just vertex-sets).
+
+THE 2-3 FRAMEWORK (corrected):
+  I(Ω, 2) = H (OCF, proved)
+  I(Ω, 3) = 1 + 3α₁ + 9α₂ (at n≤8 where α₃=0)
+  Vandermonde: α₂ = (2I₃ - 3H + 1)/6, α₁ = (H-1-4α₂)/2
+  This works with DIRECTED cycle counts.
+
+Done.
