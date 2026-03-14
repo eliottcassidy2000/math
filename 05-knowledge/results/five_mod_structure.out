@@ -1,0 +1,237 @@
+
+======================================================================
+  PART 1: G₁₁ ≡ Fib (mod 5) — PROOF
+======================================================================
+
+Fibonacci: f(n) = f(n-1) + 1·f(n-2), roots in Q(√5)
+G₁₁:      g(n) = g(n-1) + 11·g(n-2), roots in Q(√5)
+
+Both sequences satisfy the SAME recurrence modulo 5!
+Because 11 ≡ 1 (mod 5), so:
+  g(n) = g(n-1) + 11·g(n-2) ≡ g(n-1) + 1·g(n-2) = f(n) (mod 5)
+
+PROOF: If a(n) = a(n-1) + c·a(n-2) with a(0)=0, a(1)=1,
+and b(n) = b(n-1) + c'·b(n-2) with b(0)=0, b(1)=1,
+then c ≡ c' (mod p) implies a(n) ≡ b(n) (mod p) for all n.
+Here c=1, c'=11, p=5, and 11 ≡ 1 (mod 5). QED.
+
+All x ≡ 1 (mod 5) give G_x ≡ Fib (mod 5):
+  x=  1 (x mod 5 = 1): [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+  x=  6 (x mod 5 = 1): [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+  x= 11 (x mod 5 = 1): [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+  x= 16 (x mod 5 = 1): [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+  x= 21 (x mod 5 = 1): [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+  x= 31 (x mod 5 = 1): [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+
+x ≡ 2 (mod 5) gives G_x ≡ Jacobsthal (mod 5):
+  x=  2 (x mod 5 = 2): [1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3]
+  x=  7 (x mod 5 = 2): [1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3]
+  x= 12 (x mod 5 = 2): [1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3]
+  x= 17 (x mod 5 = 2): [1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3, 0, 1, 1, 3]
+
+MOD-5 CLASSES:
+  x ≡ 0 (mod 5): f(n) = f(n-1) + 0 → f(n) = 1 for all n (trivial)
+  x ≡ 1 (mod 5): Fibonacci pattern (Pisano period 20 mod 5)
+  x ≡ 2 (mod 5): Jacobsthal pattern
+  x ≡ 3 (mod 5): x=3 pattern
+  x ≡ 4 (mod 5): x=4 pattern
+  x ≡ 0 (mod 5): Pisano period mod 5 = 1, pattern = [1]
+  x ≡ 1 (mod 5): Pisano period mod 5 = 20, pattern = [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0, 2, 2, 4, 1, 0]
+  x ≡ 2 (mod 5): Pisano period mod 5 = 4, pattern = [1, 1, 3, 0]
+  x ≡ 3 (mod 5): Pisano period mod 5 = 24, pattern = [1, 1, 4, 2, 4, 0, 2, 2, 3, 4, 3, 0, 4, 4, 1, 3, 1, 0, 3, 3, 2, 1, 2, 0]
+  x ≡ 4 (mod 5): Pisano period mod 5 = 6, pattern = [1, 1, 0, 4, 4, 0]
+
+======================================================================
+  PART 2: H mod 5 — FORBIDDEN RESIDUES
+======================================================================
+
+n=3: all 8 tournaments
+  H values: [1, 3]
+  H mod 5: {1: 6, 3: 2}
+  Missing residues mod 5: {0, 2, 4}
+
+n=4: all 64 tournaments
+  H values: [1, 3, 5]
+  H mod 5: {0: 24, 1: 24, 3: 16}
+  Missing residues mod 5: {2, 4}
+
+n=5: all 1024 tournaments
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  H mod 5: {0: 304, 1: 240, 3: 240, 4: 240}
+  Missing residues mod 5: {2}
+
+n=6: all 32768 tournaments
+  Time: 8.5s
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  H mod 5: {0: 6288, 1: 4320, 2: 5520, 3: 9360, 4: 7280}
+  Missing residues mod 5: set()
+
+n=7: sampling 2000 random tournaments
+  H mod 5: {0: 337, 1: 466, 2: 300, 3: 459, 4: 438}
+  Missing residues mod 5: NONE — all residues appear
+
+======================================================================
+  PART 3: H mod p FOR SMALL PRIMES (n=5)
+======================================================================
+
+Using all 1024 tournaments at n=5:
+  mod  2: residues = [1], missing = [0]
+  mod  3: residues = [0, 1, 2], missing = none
+  mod  5: residues = [0, 1, 3, 4], missing = [2]
+  mod  7: residues = [1, 2, 3, 4, 5, 6], missing = [0]
+  mod 11: residues = [0, 1, 2, 3, 4, 5, 9], missing = [6, 7, 8, 10]
+  mod 13: residues = [0, 1, 2, 3, 5, 9, 11], missing = [4, 6, 7, 8, 10, 12]
+
+Using all 32768 tournaments at n=6:
+  mod  2: residues = [1], missing = [0]
+  mod  3: residues = [0, 1, 2], missing = none
+  mod  5: residues = [0, 1, 2, 3, 4], missing = none
+  mod  7: residues = [1, 2, 3, 4, 5, 6], missing = [0]
+  mod 11: residues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], missing = none
+  mod 13: residues = [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12], missing = [8]
+
+======================================================================
+  PART 4: OCF STRUCTURE MOD 5
+======================================================================
+
+H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+H mod 5 = (1 + 2α₁ + 4α₂ + 3α₃ + ...) mod 5
+Since 8 ≡ 3, 16 ≡ 1, 32 ≡ 2, 64 ≡ 4, 128 ≡ 3 (mod 5)
+The powers of 2 mod 5 cycle: 1, 2, 4, 3, 1, 2, 4, 3, ...
+Period 4.
+
+At n=5: H = 1 + 2α₁
+H mod 5 as function of α₁ mod 5:
+  α₁ ≡ 0 → H ≡ 1 (mod 5)
+  α₁ ≡ 1 → H ≡ 3 (mod 5)
+  α₁ ≡ 2 → H ≡ 0 (mod 5)
+  α₁ ≡ 3 → H ≡ 2 (mod 5)
+  α₁ ≡ 4 → H ≡ 4 (mod 5)
+
+So H ≡ 2 (mod 5) requires α₁ ≡ 3 (mod 5).
+Question: can α₁ ≡ 3 (mod 5) occur at n=5?
+
+α₁ values at n=5: [0, 1, 2, 4, 5, 6, 7]
+α₁ mod 5: [0, 1, 2, 4]
+Is 3 in α₁ mod 5? 3 ∉ the set
+
+======================================================================
+  PART 5: H MOD 5 AND PISANO PERIOD
+======================================================================
+
+Fibonacci Pisano period mod 5 = π(5) = 20
+Fibonacci mod 5: [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0, 2, 2, 4, 1, 0]
+
+Jacobsthal Pisano period mod 5:
+  Period = 4
+  Pattern: [1, 1, 3, 0]
+
+KEY OBSERVATION:
+  Fibonacci mod 5 period = 20
+  Jacobsthal mod 5 period = 4
+  Ratio = 20/4 = 5.0
+
+
+======================================================================
+  PART 6: QUINTIC SYMMETRY
+======================================================================
+
+At n=5, the cyclic group Z₅ acts on tournaments by vertex rotation.
+This creates 5-fold orbits (plus fixed points under rotation).
+
+Number of Z₅-orbits: 208
+Orbit size distribution: {1: 4, 5: 204}
+
+Fixed points (tournaments invariant under rotation):
+  H = 15, adjacency: (1, 0, 1, 0, 1, 0, 1, 1, 0, 1)
+  H = 15, adjacency: (1, 1, 0, 0, 1, 1, 0, 1, 1, 1)
+  H = 15, adjacency: (0, 1, 0, 1, 0, 1, 0, 0, 1, 0)
+  H = 15, adjacency: (0, 0, 1, 1, 0, 0, 1, 0, 0, 0)
+
+H values by orbit size:
+  Size 1: H ∈ [15]
+  Size 5: H ∈ [1, 3, 5, 9, 11, 13, 15]
+
+======================================================================
+  PART 7: PENTAGONAL NUMBERS AND H
+======================================================================
+
+Generalized pentagonal numbers: [0, 1, 2, 5, 7, 12, 15, 22, 26, 35, 40, 51, 57, 70, 77, 92, 100, 117, 126, 145]
+Standard pentagonal numbers: [1, 5, 12, 22, 35, 51, 70, 92, 117]
+
+H values at n=5: [1, 3, 5, 9, 11, 13, 15]
+  H=1 IS a pentagonal number!
+  H=3 is not pentagonal
+  H=5 IS a pentagonal number!
+  H=9 is not pentagonal
+  H=11 is not pentagonal
+  H=13 is not pentagonal
+  H=15 IS a pentagonal number!
+
+α₁ values at n=5 (sorted):  [0, 1, 2, 4, 5, 6, 7]
+α₁ values modulo 5:  [0, 1, 2, 4]
+
+WHY α₁ ≠ 3 at n=5:
+  α₁ = dc3 + dc5
+  dc3 ∈ {0, 1, 2, 3, 4, 5, ...} (number of directed 3-cycles)
+  dc5 ∈ {0, 1, 2, 3, ...} (number of directed 5-cycles)
+
+(dc3, dc5) pair distribution at n=5:
+ dc3  dc5   α₁  count
+   0    0    0    120
+   1    0    1    120
+   2    0    2    240
+   3    1    4    240
+   4    1    5    120
+   4    2    6    120
+   4    3    7     40
+   5    2    7     24
+
+CONCLUSION: α₁ takes values {0,1,2,4,5,6,7}
+α₁=3 is IMPOSSIBLE at n=5.
+This means H ≡ 2 (mod 5) is FORBIDDEN at n=5.
+
+WHY? α₁=3 requires dc3+dc5=3.
+Possible: (3,0), (2,1), (1,2), (0,3)
+  (3,0): 3 directed 3-cycles, no 5-cycles
+  Let's check each...
+  (dc3=3, dc5=0): 0 tournaments ← IMPOSSIBLE
+  (dc3=2, dc5=1): 0 tournaments ← IMPOSSIBLE
+  (dc3=1, dc5=2): 0 tournaments ← IMPOSSIBLE
+  (dc3=0, dc5=3): 0 tournaments ← IMPOSSIBLE
+
+dc3 distribution at n=5:
+  dc3 values: {0: 120, 1: 120, 2: 240, 3: 240, 4: 280, 5: 24}
+  dc3=3: 240 tournaments
+
+CORRECTION: dc3 here counts directed 3-cycles,
+where each triple contributes 0 or 1.
+dc3 ranges from 0 to 4 at n=5 (not 3!).
+
+Actually, in the classic scoring theorem:
+dc3 = C(n,3) - Σ C(s_i, 2) where s_i are scores.
+For n=5: C(5,3) = 10
+Scores sum to C(5,2)=10, and s_i ∈ {0,1,2,3,4}
+
+Score sequences and dc3 for n=5:
+  scores=(0, 1, 2, 3, 4), Σ C(s_i,2)=10, dc3=10-Σ=0
+  scores=(0, 1, 3, 3, 3), Σ C(s_i,2)=9, dc3=10-Σ=1
+  scores=(0, 2, 2, 2, 4), Σ C(s_i,2)=9, dc3=10-Σ=1
+  scores=(0, 2, 2, 3, 3), Σ C(s_i,2)=8, dc3=10-Σ=2
+  scores=(1, 1, 1, 3, 4), Σ C(s_i,2)=9, dc3=10-Σ=1
+  scores=(1, 1, 2, 2, 4), Σ C(s_i,2)=8, dc3=10-Σ=2
+  scores=(1, 1, 2, 3, 3), Σ C(s_i,2)=7, dc3=10-Σ=3
+  scores=(1, 2, 2, 2, 3), Σ C(s_i,2)=6, dc3=10-Σ=4
+  scores=(2, 2, 2, 2, 2), Σ C(s_i,2)=5, dc3=10-Σ=5
+
+So dc3 ∈ {0, 2, 4} for n=5 (ALWAYS EVEN).
+And dc5 ∈ {0, 1, 2, 3} (from the enumeration).
+
+α₁ = dc3 + dc5 with dc3 even, dc5 ∈ {0,1,2,3}:
+Achievable α₁: dc3 even → α₁ parity = dc5 parity
+Actually achievable α₁: [0, 2, 5, 6, 7]
+α₁ = 3 would need (dc3=2,dc5=1) or (dc3=0,dc5=3)
+  (2,1) count: 0
+  (0,3) count: 0
+
+Done.
