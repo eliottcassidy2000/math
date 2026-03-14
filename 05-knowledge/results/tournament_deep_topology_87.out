@@ -1,0 +1,374 @@
+======================================================================
+PART 1: THE TOURNAMENT CUBE — H-LANDSCAPE TOPOLOGY
+======================================================================
+
+--- n = 3 ---
+  Cube dimension: 3
+  Total tournaments: 8
+  H distribution: {1: 6, 3: 2}
+
+  H-gradient on cube (avg uphill, downhill, level neighbors):
+    H=1: up=1.0 down=0.0 level=2.0  (count=6)
+    H=3: up=0.0 down=3.0 level=0.0  (count=2)
+
+  Critical points of H-landscape:
+    Local minima: 6
+    Local maxima: 2
+
+  Level set analysis (each H value):
+    H=1: 6 tournaments, 1 connected component(s) in flip graph
+    H=3: 2 tournaments, 2 connected component(s) in flip graph
+
+--- n = 4 ---
+  Cube dimension: 6
+  Total tournaments: 64
+  H distribution: {1: 24, 3: 16, 5: 24}
+
+  H-gradient on cube (avg uphill, downhill, level neighbors):
+    H=1: up=3.0 down=0.0 level=3.0  (count=24)
+    H=3: up=3.0 down=3.0 level=0.0  (count=16)
+    H=5: up=0.0 down=3.0 level=3.0  (count=24)
+
+  Critical points of H-landscape:
+    Local minima: 24
+    Local maxima: 24
+
+  Level set analysis (each H value):
+    H=1: 24 tournaments, 1 connected component(s) in flip graph
+    H=3: 16 tournaments, 16 connected component(s) in flip graph
+    H=5: 24 tournaments, 1 connected component(s) in flip graph
+
+--- n = 5 ---
+  Cube dimension: 10
+  Total tournaments: 1024
+  H distribution: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+
+  H-gradient on cube (avg uphill, downhill, level neighbors):
+    H=1: up=6.0 down=0.0 level=4.0  (count=120)
+    H=3: up=6.3 down=3.0 level=0.7  (count=120)
+    H=5: up=4.0 down=3.0 level=3.0  (count=240)
+    H=9: up=3.5 down=3.5 level=3.0  (count=240)
+    H=11: up=3.0 down=5.0 level=2.0  (count=120)
+    H=13: up=3.0 down=7.0 level=0.0  (count=120)
+    H=15: up=0.0 down=10.0 level=0.0  (count=64)
+
+  Critical points of H-landscape:
+    Local minima: 120
+    Local maxima: 64
+
+  Level set analysis (each H value):
+    H=1: 120 tournaments, 1 connected component(s) in flip graph
+    H=3: 120 tournaments, 80 connected component(s) in flip graph
+    H=5: 240 tournaments, 10 connected component(s) in flip graph
+    H=9: 240 tournaments, 1 connected component(s) in flip graph
+    H=11: 120 tournaments, 30 connected component(s) in flip graph
+    H=13: 120 tournaments, 120 connected component(s) in flip graph
+    H=15: 64 tournaments, 64 connected component(s) in flip graph
+
+======================================================================
+PART 2: INDEPENDENCE COMPLEX OF Ω(T)
+======================================================================
+
+For each tournament T, Ω(T) is the conflict graph of odd cycles.
+Ind(Ω(T)) is the simplicial complex of independent sets.
+χ(Ind) = I(Ω, -1) — the Euler characteristic.
+H(T) = I(Ω, 2) — the tournament evaluation.
+The DEFORMATION x: -1 → 2 bridges topology and counting.
+
+--- n = 3 ---
+
+  Topology of Ind(Ω(T)) grouped by H:
+  H=1 (6 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [1]
+    f-vector (6x): f_0=1
+    Topological amplification H/χ = 1/1 = 1.000
+  H=3 (2 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [0]
+    f-vector (2x): f_0=1, f_1=1
+
+--- n = 4 ---
+
+  Topology of Ind(Ω(T)) grouped by H:
+  H=1 (24 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [1]
+    f-vector (24x): f_0=1
+    Topological amplification H/χ = 1/1 = 1.000
+  H=3 (16 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [0]
+    f-vector (16x): f_0=1, f_1=1
+  H=5 (24 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [-1]
+    f-vector (24x): f_0=1, f_1=2
+    Topological amplification H/χ = 5/-1 = -5.000
+
+--- n = 5 ---
+
+  Topology of Ind(Ω(T)) grouped by H:
+  H=1 (120 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [1]
+    f-vector (120x): f_0=1
+    Topological amplification H/χ = 1/1 = 1.000
+  H=3 (120 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [0]
+    f-vector (120x): f_0=1, f_1=1
+  H=5 (240 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [-1]
+    f-vector (240x): f_0=1, f_1=2
+    Topological amplification H/χ = 5/-1 = -5.000
+  H=9 (240 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [-3]
+    f-vector (240x): f_0=1, f_1=4
+    Topological amplification H/χ = 9/-3 = -3.000
+  H=11 (120 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [-4]
+    f-vector (120x): f_0=1, f_1=5
+    Topological amplification H/χ = 11/-4 = -2.750
+  H=13 (120 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [-5]
+    f-vector (120x): f_0=1, f_1=6
+    Topological amplification H/χ = 13/-5 = -2.600
+  H=15 (64 tournaments):
+    Euler chars χ(Ind) = I(Ω,-1): [-6]
+    f-vector (64x): f_0=1, f_1=7
+    Topological amplification H/χ = 15/-6 = -2.500
+
+======================================================================
+PART 3: THE x-DEFORMATION — I(Ω, x) from topology to counting
+======================================================================
+
+I(Ω, -1) = Euler characteristic (topology)
+I(Ω, 0) = 1 (trivial)
+I(Ω, 1) = #independent sets (combinatorics)
+I(Ω, 2) = H (tournament count)
+
+The interpolation I(Ω, x) for x ∈ {-1, 0, 1, 2, 3} shows how
+topology deforms into counting.
+
+--- n = 5: Full interpolation table ---
+   H  #cyc  I(-1)  I(0)  I(1)  I(2)   I(3)   I(4)
+-------------------------------------------------------
+   1     0      1     1     1     1      1      1
+   3     1      0     1     2     3      4      5
+   5     2     -1     1     3     5      7      9
+   9     4     -3     1     5     9     13     17
+  11     5     -4     1     6    11     16     21
+  15     7     -6     1     8    15     22     29
+  13     6     -5     1     7    13     19     25
+
+======================================================================
+PART 4: FLIP GRAPH — GRADIENT FLOW AND MORSE THEORY
+======================================================================
+
+--- n = 4 ---
+  Morse critical points on H-landscape:
+    H=1: 24 min, 0 max (of 24 total)
+    H=5: 0 min, 24 max (of 24 total)
+  Total critical: 48 of 64
+
+  ΔH distribution for single arc flips:
+    ΔH = -4: 24 (fraction = 0.0625)
+    ΔH = -2: 96 (fraction = 0.2500)
+    ΔH = +0: 144 (fraction = 0.3750)
+    ΔH = +2: 96 (fraction = 0.2500)
+    ΔH = +4: 24 (fraction = 0.0625)
+  Symmetry check: ΔH=+k count == ΔH=-k count?
+    YES — perfectly symmetric (as expected from T↔T^op)
+
+--- n = 5 ---
+  Morse critical points on H-landscape:
+    H=1: 120 min, 0 max (of 120 total)
+    H=15: 0 min, 64 max (of 64 total)
+  Total critical: 184 of 1024
+
+  ΔH distribution for single arc flips:
+    ΔH = -12: 40 (fraction = 0.0039)
+    ΔH = -8: 360 (fraction = 0.0352)
+    ΔH = -6: 600 (fraction = 0.0586)
+    ΔH = -4: 1200 (fraction = 0.1172)
+    ΔH = -2: 1800 (fraction = 0.1758)
+    ΔH = +0: 2240 (fraction = 0.2188)
+    ΔH = +2: 1800 (fraction = 0.1758)
+    ΔH = +4: 1200 (fraction = 0.1172)
+    ΔH = +6: 600 (fraction = 0.0586)
+    ΔH = +8: 360 (fraction = 0.0352)
+    ΔH = +12: 40 (fraction = 0.0039)
+  Symmetry check: ΔH=+k count == ΔH=-k count?
+    YES — perfectly symmetric (as expected from T↔T^op)
+
+======================================================================
+PART 5: SUBLEVEL SET FILTRATION — DISCRETE PERSISTENT HOMOLOGY
+======================================================================
+
+--- n = 4 ---
+  Sublevel sets T_≤h = {T : H(T) ≤ h} on flip graph:
+     h   |T_≤h|  components  new_verts  new_edges
+     1       24           1         24         72
+     3       40           1         16         48
+     5       64           1         24        144
+
+  Full flip graph: V=64, E=192, χ = V-E = -128
+  (This is Q_6: V=2^6=64, E=6*2^5=192)
+
+--- n = 5 ---
+  Sublevel sets T_≤h = {T : H(T) ≤ h} on flip graph:
+     h   |T_≤h|  components  new_verts  new_edges
+     1      120           1        120        480
+     3      240           1        120        440
+     5      480           1        240       1440
+     9      720           1        240       1560
+    11      840           1        120        840
+    13      960           1        120        840
+    15     1024           1         64        640
+
+  Full flip graph: V=1024, E=5120, χ = V-E = -4096
+  (This is Q_10: V=2^10=1024, E=10*2^9=5120)
+
+======================================================================
+PART 6: THE α-VECTOR — TOPOLOGICAL TYPE OF Ω(T)
+======================================================================
+
+The OCF decomposes H = 1 + α₁·2 + α₂·4 + α₃·8 + ...
+Each αₖ counts independent sets of size k in Ω(T).
+The tuple (α₁, α₂, ...) is the TOPOLOGICAL fingerprint of Ω.
+
+--- n = 5 ---
+  Distinct α-vectors: 7
+  Most common α-vectors:
+    α=(2,): count=240, H=5, χ=-1
+    α=(4,): count=240, H=9, χ=-3
+    α=(0,): count=120, H=1, χ=1
+    α=(1,): count=120, H=3, χ=0
+    α=(5,): count=120, H=11, χ=-4
+    α=(6,): count=120, H=13, χ=-5
+    α=(7,): count=64, H=15, χ=-6
+
+  H values with multiple α-vectors (I(Ω,2) same but I(Ω,x) differs):
+    NONE — H determines α-vector uniquely at n=5!
+--- n = 6 ---
+  Distinct α-vectors: 27
+  Most common α-vectors:
+    α=(4,): count=245, H=9, χ=-3
+    α=(2,): count=207, H=5, χ=-1
+    α=(7,): count=159, H=15, χ=-6
+    α=(12, 1): count=108, H=29, χ=-10
+    α=(5,): count=106, H=11, χ=-4
+    α=(6,): count=106, H=13, χ=-5
+    α=(1,): count=103, H=3, χ=0
+    α=(14, 2): count=90, H=37, χ=-11
+    α=(9,): count=88, H=19, χ=-8
+    α=(9, 1): count=88, H=23, χ=-7
+
+  H values with multiple α-vectors (I(Ω,2) same but I(Ω,x) differs):
+    H=9: 2 distinct α-vectors: {(2, 1), (4,)}
+    H=17: 2 distinct α-vectors: {(6, 1), (8,)}
+    H=23: 2 distinct α-vectors: {(11,), (9, 1)}
+    H=29: 2 distinct α-vectors: {(12, 1), (10, 2)}
+    H=33: 3 distinct α-vectors: {(14, 1), (12, 2), (16,)}
+    Total: 7 H values with non-unique α-vector
+
+======================================================================
+PART 7: DEFORMATION SPECTRUM — I(Ω, x) AS POLYNOMIAL
+======================================================================
+
+For each distinct Ω-type, I(Ω, x) is a polynomial in x.
+The roots of this polynomial tell us where the deformation
+has 'phase transitions' (zeros).
+
+--- n = 5: Roots of I(Ω, x) ---
+  Distinct I(Ω, x) polynomials: 7
+  H=1: I(Ω,x) = 1  χ=1  roots≈none in [-3, 1)
+  H=3: I(Ω,x) = 1 + 1x  χ=0  roots≈none in [-3, 1)
+  H=5: I(Ω,x) = 1 + 2x  χ=-1  roots≈none in [-3, 1)
+  H=9: I(Ω,x) = 1 + 4x  χ=-3  roots≈none in [-3, 1)
+  H=11: I(Ω,x) = 1 + 5x  χ=-4  roots≈none in [-3, 1)
+  H=13: I(Ω,x) = 1 + 6x  χ=-5  roots≈-0.167
+  H=15: I(Ω,x) = 1 + 7x  χ=-6  roots≈-0.143
+
+======================================================================
+PART 8: REDUCED BETTI NUMBERS AND HOMOLOGICAL DIMENSION
+======================================================================
+
+For a simplicial complex K with f-vector (f₀, f₁, ...),
+the reduced Euler char χ̃ = -1 + f₀ - f₁ + f₂ - ...
+For independence complex: χ̃(Ind(G)) = I(G,-1) - 1
+By Euler-Poincaré: χ̃ = Σ (-1)^i β̃_i
+
+We can't compute Betti numbers directly without homology,
+but we can get the HOMOLOGICAL DIMENSION (max nonempty face)
+and the alternating sum constraint.
+
+--- n = 5: Independence complex dimensions ---
+     H  dim(Ind)  χ(Ind)  χ̃(Ind)                           interpretation
+     1        -1       1        0                        void (transitive)
+     3         0       0       -1                          discrete points
+     5         0      -1       -2                          discrete points
+     9         0      -3       -4                          discrete points
+    11         0      -4       -5                          discrete points
+    13         0      -5       -6                          discrete points
+    15         0      -6       -7                          discrete points
+
+======================================================================
+PART 9: FIBONACCI STRANDS IN INDEPENDENCE COMPLEX TOPOLOGY
+======================================================================
+
+The independence complex Ind(P_k) of the path graph P_k
+has χ = I(P_k, -1), which has period 6.
+
+Period-6 sequence: I(P_k, -1) for k=0,1,2,...
+k:       0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+I,-1:    1    0   -1   -1    0    1    1    0   -1   -1    0    1    1    0   -1   -1    0    1    1    0
+I, 0:    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+I, 1:    1    2    3    5    8   13   21   34   55   89  144  233  377  610  987 1597 2584 4181 6765 10946
+I, 2:    1    3    5   11   21   43   85  171  341  683 1365 2731 5461 10923 21845 43691 87381 174763 349525 699051
+I, 3:    1    4    7   19   40   97  217  508 1159 2683 6160 14209 32689 75316 173383 399331 919480 2117473 4875913 11228332
+
+Period-6 of I(P_k, -1): [1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, 1]
+Minimal period: 6
+
+I(C_k, -1) for k=3..15 (theoretical: 2cos(kπ/3)):
+  k=3: I(C_3, -1) = -2 = 2cos(3π/3)
+  k=4: I(C_4, -1) = -1 = 2cos(4π/3)
+  k=5: I(C_5, -1) = 1 = 2cos(5π/3)
+  k=6: I(C_6, -1) = 2 = 2cos(6π/3)
+  k=7: I(C_7, -1) = 1 = 2cos(7π/3)
+  k=8: I(C_8, -1) = -1 = 2cos(8π/3)
+  k=9: I(C_9, -1) = -2 = 2cos(9π/3)
+  k=10: I(C_10, -1) = -1 = 2cos(10π/3)
+  k=11: I(C_11, -1) = 1 = 2cos(11π/3)
+  k=12: I(C_12, -1) = 2 = 2cos(12π/3)
+  k=13: I(C_13, -1) = 1 = 2cos(13π/3)
+  k=14: I(C_14, -1) = -1 = 2cos(14π/3)
+  k=15: I(C_15, -1) = -2 = 2cos(15π/3)
+
+★ INSIGHT: The period-6 of I(P_k,-1) = {1,0,-1,-1,0,1,...}
+  means the homotopy type of Ind(P_k) cycles through 6 phases.
+  Phase 0 (k≡0 mod 6): χ̃=0 — contractible
+  Phase 1 (k≡1 mod 6): χ̃=-1 — S^odd homotopy type
+  Phase 2 (k≡2 mod 6): χ̃=-2 — two-sphere type
+  Phase 3 (k≡3 mod 6): χ̃=-2 — two-sphere type
+  Phase 4 (k≡4 mod 6): χ̃=-1 — S^odd homotopy type
+  Phase 5 (k≡5 mod 6): χ̃=0 — contractible
+
+======================================================================
+PART 10: TOPOLOGICAL AMPLIFICATION — H/χ RATIO
+======================================================================
+
+The ratio H/χ = I(Ω,2)/I(Ω,-1) measures how much
+the fugacity jump from -1 to 2 'amplifies' the topology.
+This is a measure of the ALGEBRAIC RICHNESS of Ω.
+
+n=5: Amplification H/χ:
+  H=1: χ=1, H/χ=1.00
+  H=5: χ=-1, H/χ=-5.00
+  H=9: χ=-3, H/χ=-3.00
+  H=11: χ=-4, H/χ=-2.75
+  H=13: χ=-5, H/χ=-2.60
+  H=15: χ=-6, H/χ=-2.50
+
+  Tournaments with χ < 0: 784
+  Tournaments with χ = 0: 0
+  Examples: [(5, -1), (5, -1), (9, -3), (5, -1), (9, -3)]
+
+======================================================================
+EXPLORATION COMPLETE
+======================================================================
