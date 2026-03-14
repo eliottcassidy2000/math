@@ -1,0 +1,370 @@
+======================================================================
+PART 1: CARTAN DETERMINANT SEQUENCE AND SIMPLEX PACKING
+======================================================================
+
+  The Cartan matrix A_{n-1} encodes the type A root system.
+  Its determinant is the index [weight lattice : root lattice] = n.
+
+  n= 2: det(A_1) =    2, n! =        2, vol(orthoscheme) = 1/2, eigenvalue range [2.000, 2.000]
+  n= 3: det(A_2) =    3, n! =        6, vol(orthoscheme) = 1/6, eigenvalue range [1.000, 3.000]
+  n= 4: det(A_3) =    4, n! =       24, vol(orthoscheme) = 1/24, eigenvalue range [0.586, 3.414]
+  n= 5: det(A_4) =    5, n! =      120, vol(orthoscheme) = 1/120, eigenvalue range [0.382, 3.618]
+  n= 6: det(A_5) =    6, n! =      720, vol(orthoscheme) = 1/720, eigenvalue range [0.268, 3.732]
+  n= 7: det(A_6) =    7, n! =     5040, vol(orthoscheme) = 1/5040, eigenvalue range [0.198, 3.802]
+  n= 8: det(A_7) =    8, n! =    40320, vol(orthoscheme) = 1/40320, eigenvalue range [0.152, 3.848]
+  n= 9: det(A_8) =    9, n! =   362880, vol(orthoscheme) = 1/362880, eigenvalue range [0.121, 3.879]
+  n=10: det(A_9) =   10, n! =  3628800, vol(orthoscheme) = 1/3628800, eigenvalue range [0.098, 3.902]
+  n=11: det(A_10) =   11, n! = 39916800, vol(orthoscheme) = 1/39916800, eigenvalue range [0.081, 3.919]
+  n=12: det(A_11) =   12, n! = 479001600, vol(orthoscheme) = 1/479001600, eigenvalue range [0.068, 3.932]
+
+  KEY: det(A₁) = 2, det(A₂) = 3 — these are the tournament keys!
+  det(A_{n-1}) = n means n is fundamentally a 'Cartan index'.
+
+  CHEBYSHEV PRODUCT IDENTITY:
+  n = ∏_{k=1}^{n-1} (2 - 2cos(kπ/n))
+
+  n=2: ∏ = 2.000000 (should be 2)
+  n=3: ∏ = 3.000000 (should be 3)
+  n=4: ∏ = 4.000000 (should be 4)
+  n=5: ∏ = 5.000000 (should be 5)
+  n=6: ∏ = 6.000000 (should be 6)
+  n=7: ∏ = 7.000000 (should be 7)
+  n=8: ∏ = 8.000000 (should be 8)
+  n=9: ∏ = 9.000000 (should be 9)
+
+  This connects to cyclotomic polynomials:
+  Φ_n(2) = ∏_{gcd(k,n)=1} (2 - 2cos(2πk/n))
+
+  Φ_n(2) values:
+    Φ_ 1(2) = 1
+    Φ_ 2(2) = 3
+    Φ_ 3(2) = 7
+    Φ_ 4(2) = 5
+    Φ_ 5(2) = 31
+    Φ_ 6(2) = 3
+    Φ_ 7(2) = 127
+    Φ_ 8(2) = 17
+    Φ_ 9(2) = 73
+    Φ_10(2) = 11
+    Φ_11(2) = 2047
+    Φ_12(2) = 13
+    Φ_13(2) = 8191
+    Φ_14(2) = 43
+    Φ_15(2) = 151
+
+======================================================================
+PART 2: EXTENDING α₁ ≥ α₂ BEYOND n=9
+======================================================================
+
+  S75 proof bounds (3-cycles only): works for n ≤ 9
+
+  EXTENSION: if average cycle length L > 3, bound extends!
+  Need: (L²-n)α₁ ≥ n(L-3) [for α₁ > 0]
+
+  L=3: unconditional for n ≤ 9
+  L=5: unconditional for n ≤ 25
+    n=10: need α₁ ≥ 1.3
+    n=15: need α₁ ≥ 3.0
+    n=20: need α₁ ≥ 8.0
+  L=7: unconditional for n ≤ 49
+    n=10: need α₁ ≥ 1.0
+    n=15: need α₁ ≥ 1.8
+    n=20: need α₁ ≥ 2.8
+    n=25: need α₁ ≥ 4.2
+    n=30: need α₁ ≥ 6.3
+  L=9: unconditional for n ≤ 81
+    n=10: need α₁ ≥ 0.8
+    n=15: need α₁ ≥ 1.4
+    n=20: need α₁ ≥ 2.0
+    n=25: need α₁ ≥ 2.7
+    n=30: need α₁ ≥ 3.5
+    n=50: need α₁ ≥ 9.7
+  L=11: unconditional for n ≤ 121
+    n=10: need α₁ ≥ 0.7
+    n=15: need α₁ ≥ 1.1
+    n=20: need α₁ ≥ 1.6
+    n=25: need α₁ ≥ 2.1
+    n=30: need α₁ ≥ 2.6
+    n=50: need α₁ ≥ 5.6
+
+  Expected cycle counts in random tournaments:
+
+  n=7:
+    ℓ= 3: E[dc_ℓ] =          8.8
+    ℓ= 5: E[dc_ℓ] =         15.8
+    ℓ= 7: E[dc_ℓ] =          5.6
+    Total expected cycles: 30.1, avg length: 4.79
+
+  n=9:
+    ℓ= 3: E[dc_ℓ] =         21.0
+    ℓ= 5: E[dc_ℓ] =         94.5
+    ℓ= 7: E[dc_ℓ] =        202.5
+    ℓ= 9: E[dc_ℓ] =         78.8
+    Total expected cycles: 396.8, avg length: 6.71
+
+  n=11:
+    ℓ= 3: E[dc_ℓ] =         41.2
+    ℓ= 5: E[dc_ℓ] =        346.5
+    ℓ= 7: E[dc_ℓ] =       1856.2
+    ℓ= 9: E[dc_ℓ] =       4331.2
+    ℓ=11: E[dc_ℓ] =       1771.9
+    Total expected cycles: 8347.1, avg length: 8.78
+
+  n=15:
+    ℓ= 3: E[dc_ℓ] =        113.8
+    ℓ= 5: E[dc_ℓ] =       2252.2
+    ℓ= 7: E[dc_ℓ] =      36196.9
+    ℓ= 9: E[dc_ℓ] =     394143.8
+    ℓ=11: E[dc_ℓ] =    2418609.4
+    ℓ=13: E[dc_ℓ] =    6139546.9
+    ℓ=15: E[dc_ℓ] =    2660470.3
+    Total expected cycles: 11651333.2, avg length: 12.89
+
+  n=20:
+    ℓ= 3: E[dc_ℓ] =        285.0
+    ℓ= 5: E[dc_ℓ] =      11628.0
+    ℓ= 7: E[dc_ℓ] =     436050.0
+    ℓ= 9: E[dc_ℓ] =   13226850.0
+    ℓ=11: E[dc_ℓ] =  297604125.0
+    ℓ=13: E[dc_ℓ] = 4532739750.0
+    ℓ=15: E[dc_ℓ] = 41247931725.0
+    Total expected cycles: 46091950413.0, avg length: 14.78
+
+======================================================================
+PART 3: THE SIMPLEX-CUBOID PACKING RATIO AT EACH n
+======================================================================
+
+  The ratio (x+2)^n / (x+1)^n = ((x+2)/(x+1))^n
+  At x=1: (3/2)^n — grows exponentially
+
+  n= 1: (3/2)^n =      1.500, n! =        1, 2^n =     2, corners =        0
+  n= 2: (3/2)^n =      2.250, n! =        2, 2^n =     4, corners = N/A (no Hadamard)
+  n= 3: (3/2)^n =      3.375, n! =        6, 2^n =     8, corners =        4
+  n= 4: (3/2)^n =      5.062, n! =       24, 2^n =    16, corners = N/A (no Hadamard)
+  n= 5: (3/2)^n =      7.594, n! =      120, 2^n =    32, corners = N/A (no Hadamard)
+  n= 6: (3/2)^n =     11.391, n! =      720, 2^n =    64, corners = N/A (no Hadamard)
+  n= 7: (3/2)^n =     17.086, n! =     5040, 2^n =   128, corners =      120
+  n= 8: (3/2)^n =     25.629, n! =    40320, 2^n =   256, corners = N/A (no Hadamard)
+  n= 9: (3/2)^n =     38.443, n! =   362880, 2^n =   512, corners = N/A (no Hadamard)
+  n=10: (3/2)^n =     57.665, n! =  3628800, 2^n =  1024, corners = N/A (no Hadamard)
+  n=11: (3/2)^n =     86.498, n! = 39916800, 2^n =  2048, corners =     2036
+  n=12: (3/2)^n =    129.746, n! = 479001600, 2^n =  4096, corners = N/A (no Hadamard)
+
+  Volume ratios for Hadamard simplices:
+  (Regular simplex inscribed in unit cube)
+
+  n=1: cube/simplex = 1, corners = 0, each corner/simplex = 0.0000, 
+  n=2: cube/simplex = 2, corners = 1, each corner/simplex = 1.0000, 
+  n=3: cube/simplex = 3, corners = 4, each corner/simplex = 0.5000, = 1/2 ✓
+  n=7: cube/simplex = 157.5, corners = 120, each corner/simplex = 1.3042, 
+
+  The 'halves' property (each corner = simplex/2) holds ONLY at n=2,3!
+  At n=7: each corner = 1.29× the simplex — they're LARGER than the simplex.
+
+======================================================================
+PART 4: THE (x+1)/(x+2) FRAMEWORK FOR TOURNAMENTS
+======================================================================
+
+  Computing I(Ω, x) for all n=5 tournaments:
+
+    α₁  H=I(2)  I(3) I(-1) I(3)/I(2)  count
+     0       1     1     1    1.0000    120
+     1       3     4     0    1.3333    120
+     2       5     7    -1    1.4000    240
+     4       9    13    -3    1.4444    240
+     5      11    16    -4    1.4545    120
+     6      13    19    -5    1.4615    120
+     7      15    22    -6    1.4667     64
+
+  SIMPLEX-CUBOID DECOMPOSITION of I(Ω, x):
+  I(Ω, x) = 1 + α₁x + α₂x² + ...
+  In the (x+1)^k basis: simplex decomposition
+  In the (x+2)^k basis: cuboid decomposition
+
+  Basis change: x = (x+1) - 1 = (x+2) - 2
+  So: I = 1 + α₁((x+1)-1) = (1-α₁) + α₁(x+1)
+  At n=5 (α₂=0): I = (1-α₁) + α₁·(x+1)
+  This is LINEAR in (x+1)!
+
+  Simplex coefficients [c₀, c₁]: I = c₀ + c₁(x+1)
+  c₀ = I(x=-1) = I(-1) = 1-α₁
+  c₁ = α₁
+
+  Cuboid coefficients [d₀, d₁]: I = d₀ + d₁(x+2)
+  d₀ = I(x=-2) = I(-2) = 1-2α₁
+  d₁ = α₁
+
+  At x=1 (key 2): I(1) = (1-α₁) + 2α₁ = 1+α₁ (= H for 3-cycles only)
+  Wait, I(2) = H. Let me recompute.
+  I(x) = 1 + α₁x: I(2) = 1+2α₁ = H. ✓
+  In simplex basis: I = (1-α₁) + α₁(x+1)
+    At x=2: (1-α₁) + 3α₁ = 1+2α₁ = H. ✓
+
+  H - I(-1) = Σ αₖ(2^k - (-1)^k)
+  For k=1: coefficient 3 = 2+1
+  For k=2: coefficient 3 = 4-1
+  For k=3: coefficient 9 = 8+1
+  For k=4: coefficient 15 = 16-1
+
+  These are 2^k + (-1)^{k+1} = 3, 3, 9, 15, 33, 63, ...
+  For k=1,2: both equal 3! The first two levels contribute equally.
+  This is why α₁ ≥ α₂ is 'natural': levels 1 and 2 have equal weight in H-I(-1).
+
+======================================================================
+PART 5: THE α₁≥α₂ EXTENSION — AVERAGE CYCLE LENGTH BOUND
+======================================================================
+
+  For n=10, need a sharper bound than Cauchy-Schwarz on vertices.
+  Alternative: use the EDGE clique structure.
+
+  For each arc u→v, the 3-cycles through this arc form a clique in CG.
+  Number of such 3-cycles = |N_out(v) ∩ N_in(u)| = common out-neighbors
+
+  n=5: checking edge-clique structure
+    checked 784 tournaments
+  n=6: checking edge-clique structure
+    max α₂/α₁ = 0.5000 at α₁=2, α₂=1
+    checked 31088 tournaments
+  n=7: checking edge-clique structure
+    max α₂/α₁ = 1.0000 at α₁=12, α₂=12
+    checked 2083712 tournaments
+
+======================================================================
+PART 6: THE PACKING PATTERN — HOW IT CONTINUES
+======================================================================
+
+  THE PACKING PATTERN:
+
+  n=2: equilateral triangle in bounding rectangle
+    Vol ratio = 2. Two corners, each = triangle/2.
+    'Complementary piece' = 1 triangle
+
+  n=3: regular tetrahedron in unit cube (Hadamard)
+    Vol ratio = 3. Four corners, each = tet/2.
+    'Complementary piece' = 2 tets
+
+  THE RATIO cube/simplex = n+1 - 1 = n at n=2,3
+  Does this continue?
+
+  n= 1: simplex vol = 1.000000e+00, cube/simplex = 1.0, corners = 0, each/simplex = 0.0000
+  n= 3: simplex vol = 3.333333e-01, cube/simplex = 3.0, corners = 4, each/simplex = 0.5000
+  n= 7: simplex vol = 6.349206e-03, cube/simplex = 157.5, corners = 120, each/simplex = 1.3042
+  n=15: simplex vol = 1.002329e-07, cube/simplex = 9976763.7, corners = 32752, each/simplex = 304.6154
+
+  CHECKING: is cube/simplex always = n for Hadamard?
+  n=7: vol = 6.3492063492e-03, 1/vol = 157.5
+
+======================================================================
+PART 7: THE n+1 DECOMPOSITION — WHY cube = n·simplex AT n=3
+======================================================================
+
+  At n=3, the regular tet uses vertices {0000, 1100, 1010, 0110}
+  Wait: {(0,0,0), (1,1,0), (1,0,1), (0,1,1)} in R³
+  These are the EVEN-WEIGHT vertices of {0,1}³.
+  The ODD-WEIGHT vertices {(1,0,0), (0,1,0), (0,0,1), (1,1,1)}
+  form ANOTHER regular tet — the COMPLEMENT!
+
+  The cube is decomposed into:
+  - Tet₁ (even weight vertices)
+  - Tet₂ (odd weight vertices)
+  - 4 corner orthoschemes (joining vertices of Tet₁ and Tet₂)
+
+  Vol(Tet₁) = Vol(Tet₂) = 1/3
+  Vol(4 corners) = 1 - 2/3 = 1/3
+  Each corner = 1/12 = (1/3)/4 = Tet/4? No...
+  Wait: from our earlier result, each corner = Tet/2 = 1/6
+  4 × 1/6 = 2/3. But 1 - 1/3 = 2/3. ✓
+  (We're only considering ONE tet, not both)
+
+  With both tets:
+  Cube = Tet₁ + Tet₂ + 4 edges × ... no, they overlap
+  Actually: Cube = 6 orthoschemes (= 3! chambers)
+  = n! = 6 chambers of the type A₂ arrangement
+  Tet₁ uses 2 chambers (even permutations)
+  Tet₂ uses 2 chambers (odd permutations)
+  Remaining: 2 chambers form the 'twist' region
+
+  TOURNAMENT INTERPRETATION:
+  Transitive tournament: H=1 (1 chamber)
+  Regular tournament: H=3 (3 chambers)
+  Total chambers = 6 = 3!
+  H ranges from 1 to 3 at n=3.
+
+  H=3 means the tournament 'fills' 3/6 = 1/2 of the cube
+  = volume of ONE regular tet = 1/3... no
+  Volume = H × vol(orthoscheme) = 3 × 1/6 = 1/2
+  At n=3: vol(union of 3 chambers) = 3/6 = 1/2
+  This equals (1/3 + 1/6) = the tet + 1 corner
+
+  REMARKABLE: For the regular 3-tournament,
+  the 3 HP chambers = 3 even permutations = one regular tet!
+  vol(3 chambers) = 1/2 ≠ vol(tet) = 1/3
+  Because the orthoscheme (1/6) ≠ tet slice (1/3 per tet)
+
+  The orthoscheme {x₀≥x₁≥x₂} is a RIGHT simplex (1/6 of cube)
+  The regular tet (1/3 of cube) consists of 2 orthoschemes
+  So tet = 2 chambers. But H=3, and the 3 chambers aren't 1.5 tets...
+
+======================================================================
+PART 8: THE MASTER IDENTITY — det(A_{n-1})=n AND packing
+======================================================================
+
+  SYNTHESIS: det(A_{n-1}) = n encodes the fundamental packing ratio
+
+  The Cartan matrix A_{n-1} of type A has:
+  - Diagonal entries: 2 (= KEY₁)
+  - Off-diagonal: -1 (adjacent) or 0
+  - Determinant: n
+  - Eigenvalues: 2 - 2cos(kπ/n), k=1,...,n-1
+
+  The ratio cube/Hadamard-simplex depends on the NORMALIZATION.
+  In the standard {0,1}^n embedding:
+    n=3: ratio = 3 = det(A₂)
+    n=7: ratio ≈ 315/2 ≠ 7
+
+  But in the WEIGHT LATTICE normalization:
+    The weight lattice Λ_w has index n = det(A_{n-1}) in the root lattice Λ_r
+    Vol(Λ_w)/Vol(Λ_r) = n (up to normalization)
+    This IS the fundamental packing ratio!
+
+  CONNECTION TO OCF:
+  H(T) = I(Ω, 2) = I(Ω, det(A₁))
+  I(Ω, 3) = I(Ω, det(A₂))
+  The evaluation points are CARTAN DETERMINANTS!
+
+  I(Ω, n) = I(Ω, det(A_{n-1})) for small n
+  At n=5: I(Ω, 5) = I(Ω, det(A₄))
+  This gives the PENTAGONAL evaluation of the independence polynomial.
+
+  I(Ω, k) for all n=5 tournaments:
+    α₁  I(2)=H   I(3)   I(4)   I(5)
+     0       1      1      1      1  (×120)
+     1       3      4      5      6  (×120)
+     2       5      7      9     11  (×240)
+     4       9     13     17     21  (×240)
+     5      11     16     21     26  (×120)
+     6      13     19     25     31  (×120)
+     7      15     22     29     36  (×64)
+
+  RATIOS I(k+1)/I(k):
+    α₁ I(3)/I(2) I(4)/I(3) I(5)/I(4)
+     0    1.0000    1.0000    1.0000
+     1    1.3333    1.2500    1.2000
+     2    1.4000    1.2857    1.2222
+     4    1.4444    1.3077    1.2353
+     5    1.4545    1.3125    1.2381
+     6    1.4615    1.3158    1.2400
+     7    1.4667    1.3182    1.2414
+
+  As α₁→∞: I(k)/I(k-1) → k/(k-1)
+  I(3)/I(2) → 3/2, I(4)/I(3) → 4/3, I(5)/I(4) → 5/4
+  These are consecutive Cartan determinant RATIOS!
+
+  CONJECTURE (HYP-1009):
+  For any tournament T with α₁ cycles:
+  I(k+1)/I(k) → (k+1)/k as α₁→∞
+  This is the ratio of consecutive Cartan determinants.
+  The 'simplex' tournament (H=1) has ratio = 1 (degenerate)
+  The 'maximally cyclic' tournament approaches (k+1)/k
+
+Done.
