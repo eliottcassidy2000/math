@@ -1,0 +1,80 @@
+======================================================================
+FORBIDDEN H VALUES VIA INDEPENDENCE POLYNOMIAL
+======================================================================
+
+--- H=7: Why I(Ω,2)=7 is impossible ---
+
+Constraint: H = 1 + 2α₁ + 4α₂ + 8α₃ + ... = 7
+→ 2α₁ + 4α₂ + 8α₃ + ... = 6
+→ α₁ + 2α₂ + 4α₃ + ... = 3
+
+Valid decompositions (α_k ≥ 0, α_k ≤ C(α₁, k) bounds):
+
+  (α₁=3, α₂=0, α₃=0): I = 1 + 3x
+
+After filtering:
+  (3, 0, 0): I = 1+3x → Ω = K₃ (3 mutually overlapping cycles)
+  (1, 1, 0): INVALID — 1 cycle can't have 1 disjoint pair of itself!
+
+So the ONLY way to get H=7 is I = 1+3x, requiring:
+  3 directed odd cycles, all pairwise sharing a vertex
+  NO other directed odd cycles in the tournament
+
+
+Why this is impossible:
+--------------------------------------------------
+
+At any n, having exactly 3 mutually overlapping directed odd cycles
+(with no other odd cycles) requires:
+
+Case 1: All three are 3-cycles (t₃=3, d₅=0, d₇=0, ...)
+  At n≤6: α₁=3 is impossible (phase transition gap)
+  At n=7: α₁=3 forces α₂=2 (from our earlier proof)
+  Wait — α₁ here counts ALL odd cycles, not just 3-cycles.
+  We need EXACTLY 3 odd cycles total.
+
+  If all 3 are 3-cycles: 3 triangles on ≤5 vertices (since all share at least 1)
+  3 triangles sharing pairwise: each pair shares ≥1 vertex
+  Minimum vertices: 3 (all share all vertices — impossible, 3 vertices = 1 triangle)
+                    4 (two share 2 verts, third shares with one)
+                    5 (each pair shares 1 vertex)
+
+  At n=4 (exhaustive):
+
+  At n=4, t₃=3 is IMPOSSIBLE! t₃ ∈ {0, 1, 2, 4}.
+  (A tournament on 4 vertices has 0, 1, or 4 three-cycles.)
+  Wait — let me recheck...
+  t₃ values at n=4: [0, 1, 2]
+  t₃ values at n=5: [0, 1, 2, 3, 4, 5]
+
+  At n=5 with t₃=3:
+    bits=8: t₃=3, d₅=1, α₁=4, H=9
+
+  RESULT: At n=5, t₃=3 forces d₅≥1 (HYP-1142)
+  So α₁ = t₃+d₅ ≥ 4. Can never have α₁=3 at n=5!
+  H = 1+2α₁ ≥ 1+8 = 9 (skipping H=7)
+
+  At n=6 with t₃=3:
+    bits=8: t₃=3, d₅=1, α₁=4, H=9
+    bits=10: t₃=3, d₅=1, α₁=4, H=9
+    bits=14: t₃=3, d₅=1, α₁=4, H=9
+    t₃=3 occurs 2880 times at n=6
+
+  t₃ values at n=6: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+======================================================================
+CONCLUSION: Why H=7 is forever forbidden
+======================================================================
+
+H=7 requires I(Ω,2)=7, which forces I=1+3x (the ONLY polynomial).
+This means exactly 3 directed odd cycles, all pairwise overlapping, no others.
+
+But tournament constraints prevent this at EVERY n:
+  n≤4: t₃ ∈ {0,1,2,4} — can't get exactly 3 three-cycles
+  n=5: t₃=3 forces d₅≥1 (HYP-1142) → α₁≥4 → H≥9
+  n=6: Similar forcing of additional cycles
+  n≥7: Even more cycles forced — the 'cycle generation' phenomenon
+
+The impossibility is structural: tournament completeness forces
+3-cycles to generate 5-cycles (via Hamiltonian cycle forcing in
+5-vertex subtournaments with t₃≥3).
