@@ -1,0 +1,301 @@
+
+======================================================================
+1. SPECTRAL DATA RECAP
+======================================================================
+
+Tournament polynomial: z²-5z+6 = (z-2)(z-3)
+  Roots: [2, 3]
+
+Petersen adjacency spectrum:
+  λ = +3, multiplicity = 1
+  λ = +1, multiplicity = 5
+  λ = -2, multiplicity = 4
+
+======================================================================
+2. TOURNAMENT POLYNOMIAL AT PETERSEN EIGENVALUES
+======================================================================
+
+f(z) = z²-5z+6 evaluated at Petersen eigenvalues:
+  f(+3) =    0  (mult=1, contribution = 0)
+  f(+1) =    2  (mult=5, contribution = 10)
+  f(-2) =   20  (mult=4, contribution = 80)
+
+  Tr(f(A_P)) = Σ mult·f(λ) = 90
+  = f(3)·1 + f(1)·5 + f(-2)·4
+  = 0 + 10 + 80
+  = 0 + 10 + 80 = 90
+
+  Note: f(3)=0 because 3=KEY₂ is a root!
+  So the dominant eigenvalue contributes NOTHING.
+  The trace is entirely from the 'error' eigenvalues.
+
+======================================================================
+3. PETERSEN MINIMAL POLY AT TOURNAMENT ROOTS
+======================================================================
+
+p(z) = z³-2z²-5z+6 evaluated at tournament polynomial roots:
+  p(KEY₁) = p(2) = -4
+  p(KEY₂) = p(3) = 0
+  p(KEY₁+KEY₂) = p(5) = 56
+  p(KEY₁·KEY₂) = p(6) = 120
+
+  p(2) = 8-8-10+6 = -4
+  p(3) = 27-18-15+6 = 0
+  p(2) = -4 ← NEGATIVE! (2 is between roots 1 and 3)
+  p(3) = 0 ← ZERO! (3 IS a root)
+
+The shared root 3 = KEY₂ is the bridge between the two polynomials.
+  gcd of z²-5z+6 and z³-2z²-5z+6:
+  z²-5z+6 = (z-2)(z-3)
+  z³-2z²-5z+6 = (z-3)(z-1)(z+2)
+  GCD = (z-3)
+
+======================================================================
+4. COMPOSITION OF POLYNOMIALS
+======================================================================
+
+What is f(p(z))? Tournament polynomial composed with Petersen:
+  f(p(z)) = p(z)² - 5·p(z) + 6
+  = [p(z) - 2][p(z) - 3]
+  = [z³-2z²-5z+4][z³-2z²-5z+3]
+
+  f(p(z)) at small integers:
+    z=-3: p(z)=   -24, f(p(z))=       702
+    z=-2: p(z)=     0, f(p(z))=         6
+    z=-1: p(z)=     8, f(p(z))=        30
+    z=+0: p(z)=     6, f(p(z))=        12
+    z=+1: p(z)=     0, f(p(z))=         6
+    z=+2: p(z)=    -4, f(p(z))=        42
+    z=+3: p(z)=     0, f(p(z))=         6
+    z=+4: p(z)=    18, f(p(z))=       240
+    z=+5: p(z)=    56, f(p(z))=      2862
+
+  Roots of f(p(z)) = 0: p(z) = 2 or p(z) = 3
+  p(z) = 2: z³-2z²-5z+4 = 0
+  p(z) = 3: z³-2z²-5z+3 = 0 → (z-3)(z-1)(z+1) = 0? No...
+
+  Roots of p(z)=2: [-1.85577251  0.67836283  3.17740968]
+  Roots of p(z)=3: [-1.77338741  0.51996937  3.25341804]
+
+  What about p(f(z))? Petersen composed with tournament:
+  p(f(z)) = f(z)³ - 2f(z)² - 5f(z) + 6
+  = [f(z)-3][f(z)-1][f(z)+2]
+  = [(z-2)(z-3)-3][(z-2)(z-3)-1][(z-2)(z-3)+2]
+    z=-3: f(z)=  30, p(f(z))=          25056
+    z=-2: f(z)=  20, p(f(z))=           7106
+    z=-1: f(z)=  12, p(f(z))=           1386
+    z=+0: f(z)=   6, p(f(z))=            120
+    z=+1: f(z)=   2, p(f(z))=             -4
+    z=+2: f(z)=   0, p(f(z))=              6
+    z=+3: f(z)=   0, p(f(z))=              6
+    z=+4: f(z)=   2, p(f(z))=             -4
+    z=+5: f(z)=   6, p(f(z))=            120
+    z=+6: f(z)=  12, p(f(z))=           1386
+    z=+7: f(z)=  20, p(f(z))=           7106
+
+======================================================================
+5. SPECTRAL ZETA FUNCTIONS
+======================================================================
+
+The spectral zeta function: ζ_G(s) = Σ |λ_i|^{-s}
+(only meaningful for non-zero eigenvalues)
+
+Petersen spectral zeta (with signs):
+  ζ_P(1) = 1/3^1 + 5 + 4·(-2)^{-1} = 3.333333  (= 10/3)
+  ζ_P(2) = 1/3^2 + 5 + 4·(-2)^{-2} = 6.111111  (= 55/9)
+  ζ_P(3) = 1/3^3 + 5 + 4·(-2)^{-3} = 4.537037  (= 245/54)
+  ζ_P(4) = 1/3^4 + 5 + 4·(-2)^{-4} = 5.262346  (= 1705/324)
+  ζ_P(5) = 1/3^5 + 5 + 4·(-2)^{-5} = 4.879115  (= 9485/1944)
+  ζ_P(6) = 1/3^6 + 5 + 4·(-2)^{-6} = 5.063872  (= 59065/11664)
+
+Petersen heat kernel trace: Tr(e^{-tA}) = Σ mult·e^{-t·λ}
+  = e^{-3t} + 5·e^{-t} + 4·e^{2t}
+  t=0.1: Tr = 10.150616
+  t=0.5: Tr = 14.128911
+  t=1.0: Tr = 31.445409
+  t=2.0: Tr = 219.071755
+
+At t=0: Tr = 1+5+4 = 10 = |V(Petersen)| ✓
+As t→∞: dominated by 4·e^{2t} (the -2 eigenvalue)
+
+======================================================================
+6. KRONECKER PRODUCT OF SPECTRA
+======================================================================
+
+Kronecker product T ⊗ P (treat tournament as 2×2 matrix with eigenvalues 2,3):
+
+Eigenvalues of Kronecker product = all products λ_T × λ_P:
+  2·+3 = +6  (mult=1)
+  2·+1 = +2  (mult=5)
+  2·-2 = -4  (mult=4)
+  3·+3 = +9  (mult=1)
+  3·+1 = +3  (mult=5)
+  3·-2 = -6  (mult=4)
+
+Distinct eigenvalues of T⊗P:
+  λ = -6, total multiplicity = 4
+  λ = -4, total multiplicity = 4
+  λ = +2, total multiplicity = 5
+  λ = +3, total multiplicity = 5
+  λ = +6, total multiplicity = 1
+  λ = +9, total multiplicity = 1
+
+Trace of T⊗P = Σ mult·λ = 0
+  = Tr(T)·Tr(P) = (2+3)·(3+5-8) = 5·0 = 0... 
+  Wait: Tr(P) = 3·1 + 1·5 + (-2)·4 = 3+5-8 = 0
+  So Tr(T⊗P) = Tr(T)·Tr(P) = 5·0 = 0 ✓
+
+======================================================================
+7. RAMANUJAN PROPERTY
+======================================================================
+
+A k-regular graph is Ramanujan if all non-trivial eigenvalues satisfy
+|λ| ≤ 2√(k-1).
+
+Petersen: k=3, so bound = 2√2 ≈ 2.8284
+  Non-trivial eigenvalues: 1, -2
+  |1| = 1 ≤ 2.8284 ✓
+  |-2| = 2 ≤ 2.8284 ✓
+  Petersen IS Ramanujan!
+
+The Ramanujan bound for k-regular graphs:
+  k= 2: 2√(k-1) = 2√1 = 2.0000
+  k= 3: 2√(k-1) = 2√2 = 2.8284
+  k= 4: 2√(k-1) = 2√3 = 3.4641
+  k= 5: 2√(k-1) = 2√4 = 4.0000
+  k= 6: 2√(k-1) = 2√5 = 4.4721
+  k= 7: 2√(k-1) = 2√6 = 4.8990
+  k= 8: 2√(k-1) = 2√7 = 5.2915
+  k= 9: 2√(k-1) = 2√8 = 5.6569
+  k=10: 2√(k-1) = 2√9 = 6.0000
+  k=11: 2√(k-1) = 2√10 = 6.3246
+
+The spectral gap of Petersen: λ₁ - λ₂ = 3 - 1 = 2 = KEY₁
+For a 3-regular Ramanujan graph, the BEST possible gap is 3 - 2√2 ≈ 0.17
+Petersen has gap 2, far exceeding the Ramanujan minimum.
+In fact, gap = KEY₁ and max eigenvalue = KEY₂.
+
+======================================================================
+8. THE IHARA ZETA FUNCTION
+======================================================================
+
+The Ihara zeta function of a regular graph relates to the adjacency spectrum.
+
+For a q+1 regular graph G with adjacency eigenvalues λ_1,...,λ_n:
+  ζ_G(u)^{-1} = (1-u²)^{(q-1)n/2} · Π_i (1 - λ_i u + q u²)
+
+For Petersen (3-regular, so q=2):
+  ζ_P(u)^{-1} = (1-u²)^5 · (1-3u+2u²)(1-u+2u²)^5(1+2u+2u²)^4
+
+Individual factors (1 - λu + 2u²):
+  λ=+3: 1 - (3)u + 2u² = 2u² -3u + 1  (disc=1)
+    Roots: u = 1.0000, 0.5000
+  λ=+1: 1 - (1)u + 2u² = 2u² -1u + 1  (disc=-7)
+    Roots: u = 0.2500 ± 0.6614i  (complex, |u| = 0.7071)
+    |u|² = 1/q = 1/2 ← ON THE RAMANUJAN CIRCLE!
+  λ=-2: 1 - (-2)u + 2u² = 2u² +2u + 1  (disc=-4)
+    Roots: u = -0.5000 ± 0.5000i  (complex, |u| = 0.7071)
+    |u|² = 1/q = 1/2 ← ON THE RAMANUJAN CIRCLE!
+
+For Ramanujan graphs, all non-trivial zeros lie on |u| = q^{-1/2} = 1/√2
+  1/√2 = 0.707107
+  = 1/√KEY₁ = √(1/KEY₁)
+
+This is the graph-theoretic analogue of the Riemann Hypothesis!
+The Petersen graph satisfies this GRH analog, as expected for Ramanujan graphs.
+
+======================================================================
+9. SPECTRAL TOURNAMENT POLYNOMIAL: f(A) WHERE A = ADJACENCY
+======================================================================
+
+f(A_Petersen) = A² - 5A + 6I:
+
+  Eigenvalues of f(A): f(3)=0, f(1)=2, f(-2)=20
+  So f(A) has eigenvalues 0 (mult 1), 2 (mult 5), 20 (mult 4)
+
+  Tr(f(A)) = 0·1 + 2·5 + 20·4 = 90
+  det(f(A)) = 0^1 · 2^5 · 20^4 = 0  (singular!)
+
+  rank(f(A)) = 9
+  nullity(f(A)) = 1
+  The null space is the eigenspace of λ=3 (the KEY₂ eigenspace)
+  = span of the all-ones vector (1,1,...,1)
+
+  f(A) matrix (should have eigenvalues 0,2,20):
+       9  -5   1   1  -5  -5   1   1   1   1
+      -5   9  -5   1   1   1  -5   1   1   1
+       1  -5   9  -5   1   1   1  -5   1   1
+       1   1  -5   9  -5   1   1   1  -5   1
+      -5   1   1  -5   9   1   1   1   1  -5
+      -5   1   1   1   1   9   1  -5  -5   1
+       1  -5   1   1   1   1   9   1  -5  -5
+       1   1  -5   1   1  -5   1   9   1  -5
+       1   1   1  -5   1  -5  -5   1   9   1
+       1   1   1   1  -5   1  -5  -5   1   9
+
+  Diagonal entries of f(A): [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+  All diagonal = 9 = f(0)+d = 6+3... 
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/spectral_composition.py", line 293, in <module>
+    print(f"  Actually: (A²)_{ii} = degree = 3, A_{ii} = 0")
+NameError: name 'ii' is not defined. Did you mean: 'pi'?
+  rank(f(A)) = 9
+  nullity(f(A)) = 1
+  The null space is the eigenspace of λ=3 (the KEY₂ eigenspace)
+  = span of the all-ones vector (1,1,...,1)
+
+  f(A) matrix (should have eigenvalues 0,2,20):
+       9  -5   1   1  -5  -5   1   1   1   1
+      -5   9  -5   1   1   1  -5   1   1   1
+       1  -5   9  -5   1   1   1  -5   1   1
+       1   1  -5   9  -5   1   1   1  -5   1
+      -5   1   1  -5   9   1   1   1   1  -5
+      -5   1   1   1   1   9   1  -5  -5   1
+       1  -5   1   1   1   1   9   1  -5  -5
+       1   1  -5   1   1  -5   1   9   1  -5
+       1   1   1  -5   1  -5  -5   1   9   1
+       1   1   1   1  -5   1  -5  -5   1   9
+
+  Diagonal entries of f(A): [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+  All diagonal = 9 = f(0)+d = 6+3... 
+  Actually: (A²)_{ii} = degree = 3, A_{ii} = 0
+  f(A)_{ii} = 3 - 0 + 6 = 9 = KEY₂² ✓
+
+  Off-diagonal: check (i,j) adjacent vs non-adjacent:
+  f(A) when i~j: -5
+  f(A) when i not~j: 1
+  (checking another non-adj pair: f(A)_03 = 1)
+
+  BEAUTIFUL STRUCTURE:
+  f(A)_{i,i} = 9 = KEY₂²
+  f(A)_{i,j} = -5 = -(KEY₁+KEY₂) when i~j
+  f(A)_{i,j} = 1 = 1 when i≁j
+
+  f(A) = 9I - 5A + (J-I-A)... wait
+  f(A) = A² - 5A + 6I
+  For Petersen (strongly regular (10,3,0,1)): A² = 3I + 0·A + 1·(J-I-A)
+  A² = 3I + J - I - A = 2I - A + J
+  f(A) = (2I - A + J) - 5A + 6I = 8I - 6A + J
+  = rank(E₈)·I - h(G₂)·A + J
+  = 8I - 6A + J
+
+  Verify: 8I-6A+J has eigenvalues:
+  On all-1 vector: 8-6·3+10 = 8-18+10 = 0 ✓ (matches f(3)=0)
+  On 1-eigenvectors: 8-6·1+0 = 2 ✓ (matches f(1)=2)
+  On (-2)-eigenvectors: 8-6·(-2)+0 = 20 ✓ (matches f(-2)=20)
+
+  *** f(A_Petersen) = rank(E₈)·I - h(G₂)·A + J ***
+  The tournament polynomial of the Petersen adjacency decomposes into
+  exactly three Lie-meaningful terms!
+
+======================================================================
+GRAND SYNTHESIS: SPECTRAL COMPOSITION
+======================================================================
+
+1. f(A_P) = 8I - 6A + J = rank(E₈)·I - h(G₂)·A + J
+2. The null space of f(A_P) is the all-1 eigenspace (graph regularity)
+3. Petersen IS Ramanujan: Ihara zeros on |u|=1/√2=1/√KEY₁
+4. The spectral gap of Petersen = KEY₁ = 2
+5. Tr(f(A_P)) = 90 = 9·10 = KEY₂²·V(Petersen)
+6. The tournament polynomial at Petersen eigenvalues: f(3)=0, f(1)=2, f(-2)=20
+7. The shared root KEY₂=3 is the bridge: gcd(f,p) = (z-3)
