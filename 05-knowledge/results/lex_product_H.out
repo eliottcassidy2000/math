@@ -1,0 +1,92 @@
+======================================================================
+LEXICOGRAPHIC PRODUCT AND H — DEEP EXPLORATION
+kind-pasteur-2026-03-14-S81
+======================================================================
+
+  === 2 lex 2 (product size 4) ===
+    H(T1 lex T2) = H(T1) * H(T2)^2 : VERIFIED for ALL 4 pairs!
+
+  === 2 lex 3 (product size 6) ===
+    H(T1 lex T2) = H(T1) * H(T2)^2 : VERIFIED for ALL 16 pairs!
+
+  === 3 lex 2 (product size 6) ===
+    FORMULA FAILS: 4 / 16 counterexamples
+      H1=3, H2=1, H_prod=45, predicted=3, ratio=15.0
+      H1=3, H2=1, H_prod=45, predicted=3, ratio=15.0
+      H1=3, H2=1, H_prod=45, predicted=3, ratio=15.0
+      H1=3, H2=1, H_prod=45, predicted=3, ratio=15.0
+    H_prod / (H1 * H2) values: [15.0]
+
+  === 2 lex 4 (product size 8) ===
+    H(T1 lex T2) = H(T1) * H(T2)^2 : VERIFIED for ALL 128 pairs!
+
+  3 lex 3: n_prod=9, too large, skipping
+
+======================================================================
+DIRECT (TENSOR) PRODUCT: T1 x T2
+  (i1,j1) -> (i2,j2) iff T1[i1][i2]=1 AND T2[j1][j2]=1
+======================================================================
+
+  === 2 x 2 (product size 4) ===
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+
+  === 2 x 3 (product size 6) ===
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=3: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=3: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+
+  === 3 x 2 (product size 6) ===
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=3, H2=1: NOT a tournament (tensor product)
+    H1=3, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+    H1=1, H2=1: NOT a tournament (tensor product)
+
+======================================================================
+SUBSTITUTION PRODUCT: T1[v <- T2]
+  Replace vertex v in T1 with a copy of T2
+  Arcs to/from v in T1 become arcs to/from ALL of T2
+======================================================================
+
+  === 3[0 <- 2] (product size 4) ===
+    16 substitutions computed
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=3, H2=1: H_sub=5, H_sub/(H1*H2)=1.6666666666666667
+    H1=3, H2=1: H_sub=5, H_sub/(H1*H2)=1.6666666666666667
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    Distinct H_sub/(H1*H2) ratios: [1.0, 1.666667]
+
+  === 3[0 <- 3] (product size 5) ===
+    64 substitutions computed
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=3: H_sub=3, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=3: H_sub=3, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    H1=1, H2=1: H_sub=1, H_sub/(H1*H2)=1.0
+    Distinct H_sub/(H1*H2) ratios: [1.0, 1.666667, 3.0]
+
+======================================================================
+DONE
+======================================================================
