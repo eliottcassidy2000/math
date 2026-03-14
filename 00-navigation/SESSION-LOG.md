@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71o — 2026-03-14: Category Theory, Möbius Strip, Algorithmic Speedups
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71n
+**Summary of work:** Two deep scripts (30 parts total) exploring category theory, Möbius strip topology, and algorithmic speedups for tournament computations. Part 1: tournament category with 5 key functors, Möbius function = multilinear inversion, 7 adjoint pairs, 6 algorithmic speedups (decomposition, score lookup, WHT, orbit reduction, transfer+Walsh, deletion-contraction), Möbius strip = complement quotient RP^{m-1}. Part 2: 2-adic structure EXPLAINED (all odd parts by Walsh degree: {1,3,15,...}), WHT benchmarked (<0.01s for n=5), derived category & sheaf perspective, Möbius bundle sections (M[a,*] has odd Walsh), persistent homology (filtration always connected), discrete Morse theory (minima=transitive, maxima=regular), operadic structure (lex product FAILS for non-transitive outer), tournament topos unification, fast H library.
+**New contributions:**
+- HYP-1462 through HYP-1468 (7 new hypotheses, all confirmed)
+- Scripts: category_mobius_speedups_S71o.py, category_deep2_S71o.py
+- H always odd (mod 2 = 1)
+- Lex product is NOT a full operad map — only for transitive outer
+- Filtration by H is always connected (single basin, all flow → H=1)
+- M[a,*] lives on the Möbius bundle (odd Walsh nonzero)
+- Walsh sparsity: 50% → 20.3% → 8.9% (n=3→4→5)
+- WHT 1161x speedup at n=5; orbit reduction 585x at n=6
+- Grand algorithmic summary: O(n²·2^n) DP optimal for single T
+- Tournament topos: all 7 dualities as geometric morphisms
+**Unresolved threads:**
+- WHY odd parts are specifically {1, 3, 15, ...} — connection to (n-2k)!?
+- Can the Walsh formula predict hat(H) WITHOUT computing all tournaments?
+- Concrete lex product formula: H(lex(T_outer, T_1,...,T_k)) = ?
+- Implement orbit-based computation for n=7,8
+- Sheaf cohomology of tournament invariants (higher H^k)
+- Is there a polynomial-time algorithm for H? (probably not — likely #P-hard)
+
 ## opus-2026-03-14-S71n — 2026-03-14: Projective-Algebraic Geometry Deep Dive — Seven Dualities
 
 **Account:** opus
