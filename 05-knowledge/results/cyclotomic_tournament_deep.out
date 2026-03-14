@@ -1,0 +1,528 @@
+======================================================================
+PART 1: CYCLOTOMIC DICTIONARY — Φ_d(2) FOR d = 1..30
+======================================================================
+
+    d        Φ_d(2)  φ(d)  prime?  notes
+  ---        ------  ----  ------  -----
+    1             1     1          ← HIERARCHY
+    2             3     1     yes  ← HIERARCHY, Rédei parity
+    3             7     2     yes  ← HIERARCHY, n=7 barrier
+    4             5     2     yes  ← HIERARCHY, F(5)=5
+    5            31     4     yes  ← HIERARCHY, Mersenne prime, 2⁵-1
+    6             3     2     yes  ← HIERARCHY, Rédei parity
+    7           127     6     yes  
+    8            17     4     yes  
+    9            73     6     yes  
+   10            11     4     yes  ← HIERARCHY, L(5)=J(5)
+   11          2047    10          
+   12            13     4     yes  
+   13          8191    12     yes  
+   14            43     6     yes  
+   15           151     8     yes  
+   16           257     8     yes  
+   17        131071    16     yes  
+   18            57     6          
+   19        524287    18     yes  
+   20           205     8          
+   21          2359    12          
+   22           683    10     yes  
+   23       8388607    22          
+   24           241     8     yes  
+   25       1082401    20          
+   26          2731    12     yes  
+   27        262657    18     yes  
+   28          3277    12          
+   29     536870911    28          
+   30           331     8     yes  
+
+======================================================================
+PART 2: MERSENNE FACTORIZATION 2^n - 1 = ∏_{d|n} Φ_d(2)
+======================================================================
+  n= 1: 2^1-1 =        1 = Φ_1=1
+  n= 2: 2^2-1 =        3 = Φ_1=1 · Φ_2=3
+  n= 3: 2^3-1 =        7 = Φ_1=1 · Φ_3=7
+  n= 4: 2^4-1 =       15 = Φ_1=1 · Φ_2=3 · Φ_4=5
+  n= 5: 2^5-1 =       31 = Φ_1=1 · Φ_5=31
+  n= 6: 2^6-1 =       63 = Φ_1=1 · Φ_2=3 · Φ_3=7 · Φ_6=3
+  n= 7: 2^7-1 =      127 = Φ_1=1 · Φ_7=127
+  n= 8: 2^8-1 =      255 = Φ_1=1 · Φ_2=3 · Φ_4=5 · Φ_8=17
+  n= 9: 2^9-1 =      511 = Φ_1=1 · Φ_3=7 · Φ_9=73
+  n=10: 2^10-1 =     1023 = Φ_1=1 · Φ_2=3 · Φ_5=31 · Φ_10=11
+  n=11: 2^11-1 =     2047 = Φ_1=1 · Φ_11=2047
+  n=12: 2^12-1 =     4095 = Φ_1=1 · Φ_2=3 · Φ_3=7 · Φ_4=5 · Φ_6=3 · Φ_12=13
+  n=13: 2^13-1 =     8191 = Φ_1=1 · Φ_13=8191
+  n=14: 2^14-1 =    16383 = Φ_1=1 · Φ_2=3 · Φ_7=127 · Φ_14=43
+  n=15: 2^15-1 =    32767 = Φ_1=1 · Φ_3=7 · Φ_5=31 · Φ_15=151
+
+======================================================================
+PART 3: THE (5,6)-RECURRENCE x(n) = 5x(n-1) - 6x(n-2)
+======================================================================
+
+  This recurrence has characteristic polynomial z²-5z+6 = (z-2)(z-3).
+  General solution: x(n) = A·2^n + B·3^n
+
+  Different initial conditions give different sequences:
+
+             name   x(0)   x(1)  x(2..8)
+  ---------------  -----  -----  ------------------------------
+              2^n      1      2  4, 8, 16, 32, 64, 128, 256
+              3^n      1      3  9, 27, 81, 243, 729, 2187, 6561
+        3^n - 2^n      0      1  5, 19, 65, 211, 665, 2059, 6305
+        3^n + 2^n      2      7  23, 73, 227, 697, 2123, 6433, 19427
+      2·3^n - 2^n      1      4  14, 46, 146, 454, 1394, 4246, 12866
+       H=1 (init)      1      5  19, 65, 211, 665, 2059, 6305, 19171
+       H=3 (init)      3      9  27, 81, 243, 729, 2187, 6561, 19683
+
+======================================================================
+PART 4: I(x) AT x = 5, 6, 7, 8 — FORMULAS FROM OCF
+======================================================================
+
+  The OCF gives I(Ω, x) = Σ_S x^|S| where S ranges over independent sets.
+  With x=2: H = I(2) = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+
+  For general x:
+    I(x) = 1 + x·α₁ + x²·α₂ + x³·α₃ + ...
+
+  where α_k = number of independent sets of size k in CG(T).
+
+  So the FULL information is encoded in the sequence (α₁, α₂, α₃, ...).
+
+  At n=5 (where α₂ is the max level):
+    I(x) = 1 + x·α₁ + x²·α₂
+
+  Relations:
+    I(2) = H = 1 + 2α₁ + 4α₂
+    I(3) = 1 + 3α₁ + 9α₂
+    I(5) = 1 + 5α₁ + 25α₂
+    I(6) = 1 + 6α₁ + 36α₂
+    I(7) = 1 + 7α₁ + 49α₂
+    I(8) = 1 + 8α₁ + 64α₂
+
+  FORMULAS (using α₂ = (H - 1 - 2α₁)/4):
+
+    I(3) = (9H + (-6)α₁ + (-5)) / 4
+         = (9H -6·α₁ -5) / 4
+
+    I(5) = (25H + (-30)α₁ + (-21)) / 4
+         = (25H -30·α₁ -21) / 4
+
+    I(6) = (36H + (-48)α₁ + (-32)) / 4
+         = (36H -48·α₁ -32) / 4
+         = (9H -12·α₁ -8) / 1
+
+    I(7) = (49H + (-70)α₁ + (-45)) / 4
+         = (49H -70·α₁ -45) / 4
+
+    I(8) = (64H + (-96)α₁ + (-60)) / 4
+         = (64H -96·α₁ -60) / 4
+         = (16H -24·α₁ -15) / 1
+
+    I(11) = (121H + (-198)α₁ + (-117)) / 4
+         = (121H -198·α₁ -117) / 4
+
+======================================================================
+PART 5: VERIFY I(x) FORMULAS AT n=5
+======================================================================
+
+  Enumerating all 1024 tournaments at n=5...
+  Checked 1024 tournaments.
+
+  Verification results:
+    I( 2) formula: ✓ ALL CORRECT
+    I( 3) formula: ✓ ALL CORRECT
+    I( 5) formula: ✓ ALL CORRECT
+    I( 6) formula: ✓ ALL CORRECT
+    I( 7) formula: ✓ ALL CORRECT
+    I( 8) formula: ✓ ALL CORRECT
+    I(11) formula: ✓ ALL CORRECT
+
+======================================================================
+PART 6: I(x) MOD SMALL PRIMES AT n=5
+======================================================================
+  I(2) mod 5: FORBIDDEN residues [2]
+    Distribution: 0:304, 1:240, 3:240, 4:240
+  I(2) mod 7: FORBIDDEN residues [0]
+    Distribution: 1:184, 2:240, 3:120, 4:120, 5:240, 6:120
+  I(2) mod 11: FORBIDDEN residues [6, 7, 8, 10]
+    Distribution: 0:120, 1:120, 2:120, 3:120, 4:64, 5:240, 9:240
+  I(5) mod 5: FORBIDDEN residues [0, 2, 3, 4]
+    Distribution: 1:1024
+  I(5) mod 7: FORBIDDEN residues [2]
+    Distribution: 0:240, 1:184, 3:120, 4:240, 5:120, 6:120
+  I(5) mod 11: FORBIDDEN residues [2, 5, 7, 8]
+    Distribution: 0:240, 1:120, 3:64, 4:120, 6:120, 9:120, 10:240
+  I(6) mod 3: FORBIDDEN residues [0, 2]
+    Distribution: 1:1024
+  I(6) mod 5: FORBIDDEN residues [4]
+    Distribution: 0:240, 1:240, 2:240, 3:304
+  I(6) mod 7: FORBIDDEN residues [5]
+    Distribution: 0:120, 1:184, 2:120, 3:120, 4:240, 6:240
+  I(6) mod 11: FORBIDDEN residues [0, 5, 6, 8]
+    Distribution: 1:120, 2:240, 3:240, 4:120, 7:120, 9:120, 10:64
+  I(7) mod 5: FORBIDDEN residues [2]
+    Distribution: 0:304, 1:240, 3:240, 4:240
+  I(7) mod 7: FORBIDDEN residues [0, 2, 3, 4, 5, 6]
+    Distribution: 1:1024
+  I(7) mod 11: FORBIDDEN residues [0, 2, 5, 9]
+    Distribution: 1:120, 3:120, 4:240, 6:64, 7:240, 8:120, 10:120
+  I(8) mod 5: FORBIDDEN residues [0]
+    Distribution: 1:240, 2:304, 3:240, 4:240
+  I(8) mod 7: FORBIDDEN residues [4]
+    Distribution: 0:120, 1:184, 2:120, 3:240, 5:240, 6:120
+  I(8) mod 11: FORBIDDEN residues [3, 4, 7, 10]
+    Distribution: 0:240, 1:120, 2:64, 5:120, 6:240, 8:120, 9:120
+
+======================================================================
+PART 7: 7 = Φ₃(2) — MEANING OF CYCLOTOMIC STRUCTURE
+======================================================================
+
+  WHY 7 = Φ₃(2):
+
+  Φ₃(x) = x² + x + 1. At x=2: 4+2+1 = 7.
+
+  The roots of Φ₃(x) are the primitive 3rd roots of unity: ω, ω².
+  So 7 = (2-ω)(2-ω²) where ω = e^{2πi/3}.
+
+  In F₇: since Φ₃(2) = 0 mod 7, we have 2²+2+1 ≡ 0 (mod 7).
+  This means 2 is a primitive cube root of unity in F₇!
+  Indeed: 2³ = 8 ≡ 1 (mod 7), and ord₇(2) = 3.
+
+  For tournaments: H ≡ 1 (mod 2) always (Rédei).
+  Since ord₇(2) = 3, the powers of 2 cycle through {1, 2, 4} mod 7.
+
+  In the OCF: H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+  Mod 7:      H ≡ 1 + 2α₁ + 4α₂ + 1·α₃ + 2α₄ + 4α₅ + ...  (mod 7)
+
+  The coefficients cycle with period 3: {2, 4, 1, 2, 4, 1, ...}
+  This is because 2³ ≡ 1 (mod 7), which IS the cyclotomic condition!
+
+  Powers of 2 mod 7:
+    2^0 = 1 ≡ 1 (mod 7)
+    2^1 = 2 ≡ 2 (mod 7)
+    2^2 = 4 ≡ 4 (mod 7)
+    2^3 = 8 ≡ 1 (mod 7)
+    2^4 = 16 ≡ 2 (mod 7)
+    2^5 = 32 ≡ 4 (mod 7)
+    2^6 = 64 ≡ 1 (mod 7)
+    2^7 = 128 ≡ 2 (mod 7)
+    2^8 = 256 ≡ 4 (mod 7)
+    2^9 = 512 ≡ 1 (mod 7)
+
+  Period = 3 = order of the cyclotomic polynomial Φ₃.
+  The period-3 cycling means: H mod 7 depends only on
+  (α₁ mod 7, α₂ mod 7, (α₁+α₂+α₃) mod 7, ...)
+
+  COMPARISON WITH OTHER HIERARCHY PRIMES:
+  3 = Φ₂(2): ord₃(2) = 2, period-2 cycling: {2,1,2,1,...}
+  5 = Φ₄(2): ord₅(2) = 4, period-4 cycling: {2,4,3,1,...}
+  7 = Φ₃(2): ord₇(2) = 3, period-3 cycling: {2,4,1,...}
+  11= Φ₁₀(2): ord₁₁(2)= 10, period-10 cycling
+  31= Φ₅(2): ord₃₁(2) = 5, period-5 cycling
+
+  DEEP PATTERN: Φ_d(2) = p ↔ ord_p(2) = d
+  The cyclotomic index d IS the multiplicative order of 2 mod p!
+  This is NOT a coincidence — it's the definition of cyclotomic polynomials.
+
+  TOURNAMENT MEANING:
+  H mod p has OCF coefficients cycling with period d = ord_p(2).
+  Shorter period = MORE constraints on H mod p.
+  ord₃(2)=2: very constrained → only H≡1(mod2) survives
+  ord₇(2)=3: 3-periodic → still quite constrained at small n
+  ord₅(2)=4: 4-periodic → less constrained, but still interesting
+
+======================================================================
+PART 8: (5,6)-RECURRENCE CONNECTING I(2) AND I(3)
+======================================================================
+
+  Since I(x) = 1 + x·α₁ + x²·α₂ (at n=5), we have:
+
+    I(2) = H = 1 + 2α₁ + 4α₂
+    I(3) = 1 + 3α₁ + 9α₂
+
+  So: I(3) - I(2) = α₁ + 5α₂
+  And: 3·I(2) - 2·I(3) = 1 - 6α₂
+
+  More generally, for the (5,6)-recurrence:
+    x(n) = 5x(n-1) - 6x(n-2)  has roots 2, 3.
+
+  Apply this to I(x) viewed as evaluating at x=2,3,4,...:
+    I(x+1) = 5·I(x) - 6·I(x-1)?
+
+  NO — I is a polynomial in x, not a linear recurrence in x.
+  But we CAN write:
+    I(x) = 1 + α₁·x + α₂·x² = quadratic in x
+
+  Three evaluations determine it completely:
+    I(0) = 1 (always)
+    I(2) = H
+    I(3) = (9H - 5 - 6α₁)/4  (from the formula)
+
+  So I(x) is determined by (H, α₁), which is determined by
+  any two evaluations at x ≠ 0.
+
+  I(2)=H and I(3) determine all I(x) at n=5:
+
+      H    α₁  I(2)  I(3)   I(5)   I(6)    I(7)    I(8)
+      1     0     1     1      1      1       1       1
+      3     1     3     4      6      7       8       9
+      5     2     5     7     11     13      15      17
+      9     4     9    13     21     25      29      33
+     11     5    11    16     26     31      36      41
+     15     7    15    22     36     43      50      57
+     13     6    13    19     31     37      43      49
+
+======================================================================
+PART 9: I(6) = I(2·3) — THE PRODUCT-KEY EVALUATION
+======================================================================
+
+  I(6) is special because 6 = 2·3 (product of keys).
+
+  At n=5: I(6) = 1 + 6α₁ + 36α₂
+         = (36H + (-48)α₁ + (-32)) / 4
+         = 9H - 12α₁ - 8
+
+  When α₂=0: I(6) = 1 + 6α₁ = 1 + 6·(H-1)/2 = 3H - 2 ✓
+
+  The I(6) spectrum at n=5:
+
+    I(6)  count
+       1    120
+       7    120
+      13    240
+      25    240
+      31    120
+      37    120
+      43     64
+
+  I(6) values: [1, 7, 13, 25, 31, 37, 43]
+  All ≡ 1 (mod 6)? True
+  All ≡ 1 (mod 2)? True
+  All ≡ 1 (mod 3)? True
+
+======================================================================
+PART 10: VANDERMONDE RECOVERY — (α₁,α₂) FROM (I(a), I(b))
+======================================================================
+
+  I(a) = 1 + a·α₁ + a²·α₂
+  I(b) = 1 + b·α₁ + b²·α₂
+
+  Solve:  [a  a²] [α₁]   [I(a)-1]
+          [b  b²] [α₂] = [I(b)-1]
+
+  Determinant = ab(b-a) = ab·V(a,b) where V is Vandermonde.
+
+  Minimal |det| over positive integers a<b:
+    (a,b)=(1,2): det = 1·2·1 = 2
+    (a,b)=(1,3): det = 1·3·2 = 6
+    (a,b)=(2,3): det = 2·3·1 = 6
+
+  The KEYS (2,3) give det = 6 = 2·3 = product of keys!
+  This is V(2,3) = 6, the Vandermonde determinant.
+
+  Inversion formulas from (H, I(3)):
+    α₁ = (3(H-1) - (I(3)-1)) / 6
+    α₂ = ((I(3)-1) - 2(H-1)) / 6
+
+  Or equivalently:
+    α₁ = (3H - I(3) - 2) / 6
+    α₂ = (I(3) - 2H + 1) / 6
+
+  Verification:
+  α₁ recovery from (H, I(3)): ✗ ERRORS
+
+======================================================================
+PART 11: DECOMPOSITIONS OF 7 AND 8 IN THE (2,3) UNIVERSE
+======================================================================
+
+  SEVEN = 2² + 3 = 2·2 + 3     (quadratic + linear)
+        = Φ₃(2)                  (cyclotomic)
+        = 2³ - 1                  (Mersenne)
+        = L(4) = Lucas(4)         (in the x=1 world)
+        = C(7,1) = 7             (trivial but: 7 vertices!)
+
+  EIGHT = 2³                     (pure exponential)
+        = 2·3 + 2 = 6 + 2       (product of keys + first key)
+        = 3² - 1                  (near-square of second key)
+        = F(6) = Fibonacci(6)     (in the Fib world)
+        = C(8,3)/7 = 56/7 = 8   (3-cycles per vertex at n=8)
+
+  KEY STRUCTURAL DIFFERENCE:
+  7 = Φ₃(2) is IRREDUCIBLE over Z — it's a prime, a cyclotomic unit.
+  8 = 2³ is COMPOSITE (as a prime factorization) — pure power of first key.
+
+  In tournament theory:
+  7: α₁+2α₂ ≡ 3 (mod 7) impossible at n≤6 → H never ≡ 0 (mod 7)
+  8: H values at n=5 are {1,3,5,9,11,13,15} — all odd, none divisible by 8
+     At n=5, max H = 15, so 8 divides no H value because H ≤ 15 and H odd.
+     At n=6, H can reach ~80+, so 8 doesn't divide odd numbers → NEVER.
+     Wait: H is always odd! So H mod 8 ∈ {1,3,5,7} always.
+
+  H mod 8 at n=5:
+  {1: 360, 3: 240, 5: 360, 7: 64}
+
+  H mod 7 at n=5:
+  {1: 184, 2: 240, 3: 120, 4: 120, 5: 240, 6: 120}
+  Forbidden: [0]
+
+======================================================================
+PART 12: THE RATIO I(3)/H AND ITS ASYMPTOTICS
+======================================================================
+
+  At n=5: I(3)/H = (9H - 5 - 6α₁) / (4H)
+
+  If α₁ ≈ c·H for large H:
+    I(3)/H ≈ (9 - 6c)/4
+
+  For c = (H-1)/(2H) ≈ 1/2:
+    I(3)/H ≈ (9-3)/4 = 3/2
+
+  This is the "3/2 ratio" observed in cycle_multiplicity.out!
+
+  More precisely: I(3)/I(2) → (3/2)^? as n → ∞
+
+  If α₂ << α₁ << H, then:
+    I(3)/I(2) ≈ (1 + 3α₁)/(1 + 2α₁) → 3/2 as α₁ → ∞
+
+  The 3/2 ratio IS the ratio of the keys!
+
+  At n=5:
+    I(3)/H range: [1.0000, 1.4667]
+    I(3)/H mean:  1.3735
+    3/2 = 1.5000
+    Convergence to 3/2 requires α₂/H → 0.
+
+  Ratio I(x)/H means at n=5:
+    I(3)/H = 1.3735  (→ 3/2 = 1.500)
+    I(5)/H = 2.1205  (→ 5/2 = 2.500)
+    I(6)/H = 2.4940  (→ 6/2 = 3.000)
+    I(7)/H = 2.8675  (→ 7/2 = 3.500)
+    I(8)/H = 3.2410  (→ 8/2 = 4.000)
+
+  PATTERN: I(x)/H → x/2 as α₂/H → 0 (sparse regime)
+  This is because I(x) ≈ 1 + x·α₁ ≈ x·(H-1)/2 + 1 ≈ xH/2
+
+======================================================================
+PART 13: WHY (5,6) = (2+3, 2·3) IS THE NATURAL PAIR
+======================================================================
+
+  The characteristic polynomial of the (2,3)-universe is:
+    z² - (2+3)z + 2·3 = z² - 5z + 6
+
+  By Vieta's formulas:
+    sum of roots = 5 = 2+3
+    product of roots = 6 = 2·3
+
+  The coefficients (5,6) encode the universe completely:
+    Given 5 and 6, you can recover 2 and 3 via the quadratic formula.
+    z = (5 ± √(25-24))/2 = (5 ± 1)/2 ∈ {2, 3}
+
+  The discriminant Δ = 5² - 4·6 = 25 - 24 = 1.
+  A PERFECT SQUARE! This is why 2 and 3 are both integers.
+
+  Δ = 1 is the smallest possible positive discriminant.
+  So (2,3) is the UNIQUE pair of consecutive integers whose
+  sum and product give discriminant 1.
+
+  More: (n, n+1) has discriminant (2n+1)² - 4n(n+1) = 4n²+4n+1-4n²-4n = 1.
+  So ALL consecutive integer pairs have discriminant 1!
+  But (2,3) is the FIRST non-trivial pair (after (0,1) and (1,2)).
+
+  And (1,2) gives z²-3z+2, which has sum=3, product=2.
+  So the (1,2)-universe has coefficients (3,2) — the KEYS REVERSED!
+
+  CHAIN OF CONSECUTIVE-INTEGER UNIVERSES:
+       roots   sum  prod    Δ             char poly  notes
+  (0,1):     1     0    1  z²-1z+0  ← trivial
+  (1,2):     3     2    1  z²-3z+2  ← keys reversed
+  (2,3):     5     6    1  z²-5z+6  ← THE KEYS
+  (3,4):     7    12    1  z²-7z+12  sum=7 hierarchy
+  (4,5):     9    20    1  z²-9z+20  
+  (5,6):    11    30    1  z²-11z+30  sum=11 hierarchy
+  (6,7):    13    42    1  z²-13z+42  
+  (7,8):    15    56    1  z²-15z+56  sum=15 hierarchy
+
+======================================================================
+PART 14: THE +2 SHIFT — ADDING THE FIRST KEY
+======================================================================
+
+  (5,6) + 2 → (7,8) [adding first key to both]
+
+  What does "+2" mean in tournament theory?
+
+  H = 1 + 2α₁ + 4α₂ + ...
+  If we shift x → x+2:
+    I(x+2) = 1 + (x+2)α₁ + (x+2)²α₂ + ...
+           = 1 + xα₁ + 2α₁ + x²α₂ + 4xα₂ + 4α₂ + ...
+           = I(x) + 2α₁ + 4xα₂ + 4α₂ + higher
+
+  At n=5:
+    I(x+2) = I(x) + 2α₁ + (4x+4)α₂
+
+  In particular:
+    I(7) = I(5) + 2α₁ + 24α₂
+    I(8) = I(6) + 2α₁ + 28α₂
+
+  The "+2 shift" adds 2α₁ plus correction terms involving α₂.
+  When α₂ = 0: I(x+2) = I(x) + 2α₁ = I(x) + (H-1) exactly!
+
+  So in the sparse regime (α₂=0):
+    I(7) = I(5) + H - 1
+    I(8) = I(6) + H - 1
+
+  The (5,6)→(7,8) shift IS "adding one copy of (H-1)"!
+
+  Verification at n=5:
+  Sparse (α₂=0): 1024 tournaments
+  I(7) = I(5) + H-1: 1024/1024 correct
+  I(8) = I(6) + H-1: 1024/1024 correct
+
+  General case (with α₂):
+  I(7) = I(5) + 2α₁ + 24α₂: 1024/1024 correct
+  I(8) = I(6) + 2α₁ + 28α₂: 1024/1024 correct
+
+======================================================================
+PART 15: SYNTHESIS — THE GRAND RECURRENCE WEB
+======================================================================
+
+  THE CYCLOTOMIC-TOURNAMENT DICTIONARY:
+
+  Level 0 (trivial):
+    1 = Φ₁(2) — the empty tournament, I(x) = 1
+
+  Level 1 (Rédei):
+    3 = Φ₂(2) — parity (H odd), period-2 in OCF mod 3
+
+  Level 2 (emergence):
+    7 = Φ₃(2) — first barrier broken at n=7, period-3 cycling
+    5 = Φ₄(2) — bridge number (F(5)=5), period-4 cycling
+
+  Level 3 (Mersenne):
+    31 = Φ₅(2) = 2⁵-1 — Mersenne prime, period-5 cycling
+    11 = Φ₁₀(2) — L(5)=J(5), the Lucas-Jacobsthal bridge
+
+  THE (5,6) ENCODING:
+    z² - 5z + 6 = 0 encodes (2,3) as (sum, product).
+    Discriminant = 1 (perfect square, consecutive integers).
+    The recurrence x(n) = 5x(n-1) - 6x(n-2) generates ALL
+    linear combinations A·2ⁿ + B·3ⁿ.
+
+  THE (5,6) → (7,8) BRIDGE:
+    Adding the first key (2) shifts (sum,product) to (7,8).
+    In tournament space: I(7) = I(5) + 2α₁ + 24α₂.
+    In sparse regime: I(x+2) = I(x) + H - 1.
+    7 = Φ₃(2) is cyclotomic (irreducible, prime).
+    8 = 2³ is exponential (composite, pure power).
+
+  THE CONVERGENCE:
+    k-nacci → 2 at rate (1/2)^k
+    weighted k-nacci → 3 at rate (2/3)^k
+    I(x)/H → x/2 in sparse regime
+    I(3)/H → 3/2 = ratio of keys
+
+  THE FIVE PRIMES WHERE 2 IS PRIMITIVE ROOT:
+    3 (Φ₂), 5 (Φ₄), 11 (Φ₁₀), 13 (Φ₁₂), 19 (Φ₁₈)
+    Period of 2 mod p = deg(Φ_d) = φ(d) = p-1.
+    These are the primes where H mod p is MAXIMALLY informative.
+
+
+Done.
