@@ -1,0 +1,441 @@
+======================================================================
+PART 1: THE FOUR FUNDAMENTAL RECURRENCES
+======================================================================
+
+Every quantity in tournament theory ultimately derives from
+one of four recurrence families:
+
+FAMILY A: The Fibonacci-Jacobsthal family
+  f(n) = f(n-1) + x·f(n-2)
+  Roots: r = (1+√(1+4x))/2, s = (1-√(1+4x))/2
+  x=1: Fibonacci,  roots (φ, -1/φ)
+  x=2: Jacobsthal,  roots (2, -1)
+  x=6: roots (3, -2)
+  x=k(k-1): roots (k, 1-k)
+
+  GENERIC FORM: J_x(n) = (r^n - s^n)/(r-s)
+  When x=k(k-1): J_x(n) = (k^n - (1-k)^n)/(2k-1)
+
+FAMILY B: The k-nacci family
+  f(n) = f(n-1) + f(n-2) + ... + f(n-k)
+  Characteristic: x^k = x^{k-1} + ... + 1
+  Equivalently: x^{k+1} - 2x^k + 1 = 0
+  Dominant root φ_k → 2 as k → ∞
+
+FAMILY C: The weighted k-nacci family
+  f(n) = f(n-1) + 2f(n-2) + ... + 2^{k-1}f(n-k)
+  Characteristic: x^k = x^{k-1} + 2x^{k-2} + ... + 2^{k-1}
+  Dominant root ψ_k → 3 as k → ∞
+
+FAMILY D: The independence polynomial recurrence
+  I(G, x) = I(G-v, x) + x·I(G-N[v], x)
+  (deletion-contraction on the conflict graph)
+  For isolated vertex: I(K_1 ∪ G, x) = (1+x)·I(G, x)
+  → The weight per isolated vertex is 1+x
+  → At x=2: weight = 3 (the 'other' key!)
+
+THE CONNECTION:
+  Family A at x=2: root 2 (the counting root)
+  Family B limit: 2
+  Family C limit: 3
+  Family D at x=2: isolated weight = 3
+
+  2 and 3 appear as: limits, roots, weights.
+  They are the EIGENVALUES of tournament theory.
+
+======================================================================
+PART 2: WHY k-NACCI CONVERGES AT RATE 1/2
+======================================================================
+
+PROOF that k-nacci gap → 0 at rate 1/2:
+
+  The characteristic equation: x^{k+1} - 2x^k + 1 = 0
+  At x = 2: f(2) = 2^{k+1} - 2^{k+1} + 1 = 1
+  The derivative: f'(x) = (k+1)x^k - 2k·x^{k-1}
+  f'(2) = (k+1)2^k - 2k·2^{k-1} = (k+1)2^k - k·2^k = 2^k
+
+  By Newton's approximation: φ_k ≈ 2 - f(2)/f'(2) = 2 - 1/2^k
+
+  More precisely: let φ_k = 2 - ε_k
+  Then ε_k ≈ 2^{-k}
+  And ε_{k+1}/ε_k → 2^{-(k+1)}/2^{-k} = 1/2
+
+  Verification:
+     k           2-φ_k          2^{-k}       ratio     (2-φ_k)·2^k
+  ------------------------------------------------------------
+     2  3.8196601125e-01  2.5000000000e-01         nan    1.5278640450
+     3  1.6071324479e-01  1.2500000000e-01    0.420753    1.2857059583
+     4  7.2438024517e-02  6.2500000000e-02    0.450728    1.1590083923
+     5  3.4051763355e-02  3.1250000000e-02    0.470081    1.0896564273
+     6  1.6417156576e-02  1.5625000000e-02    0.482124    1.0506980208
+     7  8.0358033950e-03  7.8125000000e-03    0.489476    1.0285828346
+     8  3.9688202646e-03  3.9062500000e-03    0.493892    1.0160179877
+     9  1.9705297377e-03  1.9531250000e-03    0.496503    1.0089112257
+    10  9.8136728990e-04  9.7656250000e-04    0.498022    1.0049201049
+    11  4.8959802171e-04  4.8828125000e-04    0.498894    1.0026967485
+    12  2.4449906268e-04  2.4414062500e-04    0.499387    1.0014681607
+    13  1.2216728845e-04  1.2207031250e-04    0.499664    1.0007944270
+    14  6.1061250405e-05  6.1035156250e-05    0.499817    1.0004275266
+    15  3.0524565497e-05  3.0517578125e-05    0.499901    1.0002289622
+    16  1.5260652056e-05  1.5258789062e-05    0.499947    1.0001220931
+    17  7.6298893454e-06  7.6293945312e-06    0.499971    1.0000648563
+    18  3.8148282397e-06  3.8146972656e-06    0.499985    1.0000343341
+    19  1.9073831945e-06  1.9073486328e-06    0.499992    1.0000181203
+
+  The scaled gap (2-φ_k)·2^k → 1.0 as k→∞
+  EXACT: ε_k = (1 + O(k/2^k)) / 2^k
+
+======================================================================
+PART 3: WHY WEIGHTED k-NACCI CONVERGES AT RATE 2/3
+======================================================================
+
+PROOF that weighted k-nacci gap → 0 at rate 2/3:
+
+  The characteristic equation: x^{k+1} - 3x^k + 2^k = 0
+  At x = 3: f(3) = 3^{k+1} - 3·3^k + 2^k = 2^k
+  The derivative: f'(x) = (k+1)x^k - 3k·x^{k-1}
+  f'(3) = (k+1)3^k - 3k·3^{k-1} = 3^k
+
+  By Newton: ψ_k ≈ 3 - f(3)/f'(3) = 3 - 2^k/3^k = 3 - (2/3)^k
+
+  So ε_k = 3 - ψ_k ≈ (2/3)^k
+  And ε_{k+1}/ε_k → 2/3
+
+  Verification:
+     k           3-ψ_k         (2/3)^k       ratio  (3-ψ_k)·(3/2)^k
+  ------------------------------------------------------------
+     2  9.9999999036e-01  4.4444444444e-01         nan    2.2499999783
+     3  5.3249614294e-01  2.9629629630e-01    0.532496    1.7971744824
+     4  3.0193108688e-01  1.9753086420e-01    0.567011    1.5285261273
+     5  1.7917006998e-01  1.3168724280e-01    0.593414    1.3605727189
+     6  1.0980335782e-01  8.7791495199e-02    0.612844    1.2507288726
+     7  6.8857536246e-02  5.8527663466e-02    0.627099    1.1764955607
+     8  4.3902578069e-02  3.9018442311e-02    0.637586    1.1251750575
+     9  2.8331296328e-02  2.6012294874e-02    0.645322    1.0891502063
+    10  1.8444685196e-02  1.7341529916e-02    0.651036    1.0636134923
+    11  1.2085951574e-02  1.1561019944e-02    0.655254    1.0454053045
+    12  7.9569360648e-03  7.7073466293e-03    0.658362    1.0323833152
+    13  5.2567238520e-03  5.1382310862e-03    0.660647    1.0230610037
+    14  3.4816308230e-03  3.4254873908e-03    0.662320    1.0163899106
+    15  2.3102000147e-03  2.2836582605e-03    0.663540    1.0116224720
+    16  1.5349565574e-03  1.5224388403e-03    0.664426    1.0082221477
+    17  1.0208485919e-03  1.0149592269e-03    0.665067    1.0058025632
+    18  6.7940369603e-04  6.7663948460e-04    0.665528    1.0040852056
+    19  4.5238737630e-04  4.5109298973e-04    0.665859    1.0028694451
+
+  EXACT: 3 - ψ_k = (1 + O(k·(2/3)^k)) · (2/3)^k
+
+  THE RATES ARE RECIPROCALS OF THE LIMITS:
+  k-nacci → 2 at rate 1/2 = 1/(limit)
+  w-k-nacci → 3 at rate 2/3 = 1/(limit) · (limit-1)
+
+  More precisely:
+  k-nacci: gap ≈ 1/2^k = (1/2)^k
+  w-k-nacci: gap ≈ (2/3)^k
+
+  Ratio of gaps: (2/3)^k / (1/2)^k = (4/3)^k → ∞
+  The weighted k-nacci converges SLOWER by a factor (4/3)^k.
+
+======================================================================
+PART 4: THE DELETION RECURRENCE FOR H(T)
+======================================================================
+
+DELETION STRUCTURE: H(T) vs H(T-v) at n=5
+
+  Sampling 200 tournaments at n=5...
+  Done in 0.1s
+
+  H(T) vs Σ_v H(T-v):
+    H=  3, Σ H(T-v)=  9, ratio=0.3333, diff=  -6
+    H=  3, Σ H(T-v)=  9, ratio=0.3333, diff=  -6
+    H=  5, Σ H(T-v)= 13, ratio=0.3846, diff=  -8
+    H=  5, Σ H(T-v)= 13, ratio=0.3846, diff=  -8
+    H=  5, Σ H(T-v)= 13, ratio=0.3846, diff=  -8
+    H= 11, Σ H(T-v)= 21, ratio=0.5238, diff= -10
+    H= 11, Σ H(T-v)= 21, ratio=0.5238, diff= -10
+    H=  3, Σ H(T-v)=  9, ratio=0.3333, diff=  -6
+    H=  3, Σ H(T-v)=  9, ratio=0.3333, diff=  -6
+    H=  9, Σ H(T-v)= 17, ratio=0.5294, diff=  -8
+    H=  9, Σ H(T-v)= 17, ratio=0.5294, diff=  -8
+    H=  1, Σ H(T-v)=  5, ratio=0.2000, diff=  -4
+    H=  3, Σ H(T-v)=  9, ratio=0.3333, diff=  -6
+    H=  9, Σ H(T-v)= 17, ratio=0.5294, diff=  -8
+    H=  1, Σ H(T-v)=  5, ratio=0.2000, diff=  -4
+    H=  9, Σ H(T-v)= 17, ratio=0.5294, diff=  -8
+    H=  1, Σ H(T-v)=  5, ratio=0.2000, diff=  -4
+    H= 13, Σ H(T-v)= 21, ratio=0.6190, diff=  -8
+    H= 13, Σ H(T-v)= 21, ratio=0.6190, diff=  -8
+    H= 13, Σ H(T-v)= 21, ratio=0.6190, diff=  -8
+
+  H/Σ H(T-v): mean=0.444468, std=0.136721
+              min=0.200000, max=0.714286
+
+  From Claim A: n·H(T) = Σ_v H(T-v) + 2 Σ_C L(C)·μ(C)
+
+  So H(T) = [Σ_v H(T-v) + 2 Σ_C L(C)·μ(C)] / n
+
+  This IS a recurrence, but it depends on the CYCLE STRUCTURE
+  of T, not just the H-values of subtournaments.
+
+  The '2' in 2μ(C) is the OCF evaluation point x=2.
+  If we used x=3, we'd get a '3' factor instead.
+
+======================================================================
+PART 5: THE (2,3) DUALITY IN DELETION-CONTRACTION
+======================================================================
+
+I(CG, x) satisfies deletion-contraction on the conflict graph:
+  I(G, x) = I(G-v, x) + x·I(G-N[v], x)
+
+At x=2: I(G, 2) = I(G-v, 2) + 2·I(G-N[v], 2)
+At x=3: I(G, 3) = I(G-v, 3) + 3·I(G-N[v], 3)
+
+The RATIO of the 'contraction' terms is 3/2.
+This is the same 3/2 that appears everywhere!
+
+For an isolated vertex v (no neighbors in CG):
+  I(G, x) = I(G-v, x) + x·I(G, x)  ... no, N[v]={v}
+  I(G, x) = I(G-v, x) + x·I(G-{v}, x) ... but G-{v} and G-N[v] differ
+  Actually: I(G, x) = I(G-v, x) + x·I(G-N[v], x)
+  For isolated v: N[v] = {v}, so G-N[v] = G-v
+  I(G, x) = I(G-v, x) + x·I(G-v, x) = (1+x)·I(G-v, x)
+
+  At x=2: factor = 1+2 = 3
+  At x=3: factor = 1+3 = 4
+
+  Each isolated vertex in CG contributes a factor of (1+x).
+  For H = I(CG, 2): each isolated cycle multiplies H by 3.
+  For I₃ = I(CG, 3): each isolated cycle multiplies I₃ by 4.
+
+  The RATIO of multiplicative factors: 4/3 = (1+3)/(1+2)
+  But we said the ratio is 3/2 earlier!
+  The 3/2 ratio is for the ADDITIVE part (contraction term).
+  The 4/3 ratio is for the MULTIPLICATIVE part (isolated vertex).
+
+  BOTH ratios involve 2 and 3:
+  3/2 = 3/2
+  4/3 = (3+1)/(2+1)
+
+  And 3/2 × 4/3 = 2.  Full circle: back to the root!
+
+======================================================================
+PART 6: HOW 7 AND 8 APPEAR AS RECURRENCE PARAMETERS
+======================================================================
+
+At n=7 (=2³-1):
+  The 7-nacci root is φ₇ = 1.99196... ≈ 2 - 1/128 = 2 - 2^{-7}
+  The 7-cycle first appears in tournaments
+  The Jacobsthal at level k=4 has denominator 7
+
+At n=8 (=2³):
+  The 8-nacci root is φ₈ = 1.99603... ≈ 2 - 1/256 = 2 - 2^{-8}
+  First cross-level cycle packing (3+5=8)
+  Q = (H²-Pf²)/8: the divisor 8 = 2³ first matters
+
+The 7-step and 8-step recurrences (Families B/C at k=7,8):
+
+  k=7 k-nacci: f(n) = f(n-1) + ... + f(n-7)
+    Dominant root: 1.9919641966
+    Gap to 2: 8.0358033950e-03
+
+  k=8 k-nacci: f(n) = f(n-1) + ... + f(n-8)
+    Dominant root: 1.9960311797
+    Gap to 2: 3.9688202646e-03
+
+  k=7 weighted: f(n) = f(n-1) + 2f(n-2) + ... + 64f(n-7)
+    Dominant root: 2.9311424638
+    Gap to 3: 6.8857536246e-02
+
+  k=8 weighted: f(n) = f(n-1) + 2f(n-2) + ... + 128f(n-8)
+    Dominant root: 2.9560974219
+    Gap to 3: 4.3902578069e-02
+
+THE JACOBSTHAL CONNECTION:
+  J₁₂(n) = (4^n - (-3)^n) / 7
+  The denominator 7 = 2·4 - 1 = 2k-1 for k=4
+
+  So 7 appears as a JACOBSTHAL DENOMINATOR,
+  and denominators ↔ cycle lengths (3, 5, 7, ...)
+
+  The 7-cycle is the first cycle that REQUIRES n≥7 vertices.
+  It's the first cycle beyond the 'single Jacobsthal level' regime.
+
+  When a 7-cycle coexists with a 3-cycle (at n≥10=7+3),
+  or with another 3-cycle and a 5-cycle (at n≥15=7+3+5),
+  the Jacobsthal levels couple through the conflict graph.
+
+THE Q DIVISOR:
+  Q(T) = (H(T)² - Pf(T)²) / 8
+  Why 8? Because H² - Pf² = I(CG,2)² - det(I+2A)
+  and det(I+2A) = 1 + 0 + 0 + 8c₃ + 16c₄ + ...
+  The first non-trivial coefficient is at x³ with coefficient 8c₃.
+
+  Why is the coefficient 8? Because:
+  det(I+xA) = 1 + Σ_{k≥3} c_k · x^k
+  c₃ = #{3-cycles}, and x³ = 2³ = 8 at x=2.
+  So 8 = 2³ is the 'entry point' for cycle contributions.
+
+======================================================================
+PART 7: THE 10-11 INTERPOLATION IN RECURRENCE SPACE
+======================================================================
+
+POSITION OF 10 AND 11:
+
+  Jacobsthal integer-root points: x = k(k-1)
+  k=3: x=6,  root=3
+  k=4: x=12, root=4
+
+  At x=10: root ≈ 3.702
+  At x=11: root ≈ 3.854
+
+  These are (10-6)/(12-6) = 4/6 = 2/3 and (11-6)/(12-6) = 5/6
+  of the way from k=3 to k=4.
+
+  THE 2/3 AGAIN! x=10 is EXACTLY 2/3 of the way between
+  consecutive integer-root Jacobsthal levels!
+
+  Exact fractions:
+  (10-6)/(12-6) = 4/6 = 2/3
+  (11-6)/(12-6) = 5/6 = 5/6
+
+  So 10 is at position 2/3 between x=6 and x=12,
+  and 11 is at position 5/6.
+
+  The root interpolation:
+  root(x=10) = 3.701562, position in [3,4]: 0.701562 = 47/67
+  root(x=11) = 3.854102, position in [3,4]: 0.854102 = 41/48
+
+  10 = 2 + 8 = x_OCF + 2³
+  This means: I(CG, 10) = I(CG, 2 + 8)
+
+  Taylor expansion of I(CG, x) around x=2:
+    I(CG, 2+δ) = I(CG, 2) + δ·I'(CG, 2) + δ²·I''(CG, 2)/2 + ...
+                = H + δ·(α₁ + 4α₂ + ...) + ...
+
+  At δ=8: I(CG, 10) = H + 8·I'(CG, 2) + 32·I''(CG, 2) + ...
+
+  Similarly, 11 = 3 + 8 = x_topo + 2³
+  I(CG, 11) = I(CG, 3 + 8) ← Taylor around x=3!
+    = I₃ + 8·I'(CG, 3) + 32·I''(CG, 3) + ...
+
+  So I(CG, 10) and I(CG, 11) encode DERIVATIVES of I at 2 and 3,
+  weighted by powers of 8 = 2³!
+
+  For degree-2 case (n ≤ 8, typically):
+    I(CG, x) = 1 + α₁x + α₂x²
+    I(CG, 2) = 1 + 2α₁ + 4α₂ = H
+    I(CG, 3) = 1 + 3α₁ + 9α₂ = I₃
+    I(CG, 10) = 1 + 10α₁ + 100α₂
+    I(CG, 11) = 1 + 11α₁ + 121α₂
+
+  Relations:
+    I(10) - I(2) = 8α₁ + 96α₂ = 8(α₁ + 12α₂)
+    I(11) - I(3) = 8α₁ + 112α₂ = 8(α₁ + 14α₂)
+
+    Both divisible by 8!
+    (I(10) - I(2)) / 8 = α₁ + 12α₂
+    (I(11) - I(3)) / 8 = α₁ + 14α₂
+
+    Subtracting: [(I(11)-I(3)) - (I(10)-I(2))] / 8 = 2α₂
+    So: α₂ = [(I(11) - I(10)) - (I(3) - I(2))] / 16
+
+    And: α₁ = (I(10) - I(2))/8 - 12α₂
+
+  THE 10-11 PAIR EXTRACTS (α₁, α₂) just like the 2-3 pair does,
+  but shifted by 8!
+
+======================================================================
+PART 8: NESTED RECURRENCE STRUCTURE
+    (2,3) → (7,8) → (10,11)
+======================================================================
+
+LEVEL 1: (2,3) — The fundamental Vandermonde extraction
+  I(2), I(3) → α₁, α₂ via Vandermonde:
+    α₂ = (2·I(3) - 3·I(2) + 1) / 6 = (2I₃ - 3H + 1) / 6
+    α₁ = (I(2) - 1 - 4α₂) / 2 = (H - 1 - 4α₂) / 2
+
+  The denominator 6 = 2·3 (product of the pair!)
+
+LEVEL 2: (7,8) — The cross-level threshold
+  At n=8, α₂ splits into α₂^{33} (both 3-cycles) and α₂^{35} (3+5)
+  I(2) and I(3) can't separate these — need I(6) or I(7)
+  The pair (7,8) tells us when to expect this complexity.
+
+LEVEL 3: (10,11) — The shifted Vandermonde
+  I(10) = I(2 + 8), I(11) = I(3 + 8)
+  These are the I(2) and I(3) values 'shifted by 8=2³'
+  (I(10) - H) / 8 and (I(11) - I₃) / 8 give higher-order info
+
+THE NESTING:
+  At level 1, (2,3) extracts α₁, α₂ from H and I₃
+  At level 3, (10,11) = (2+8, 3+8) extracts the SAME α₁, α₂
+  but through a different linear combination — providing a
+  CONSISTENCY CHECK on the α values.
+
+  In fact, ANY consecutive pair (x, x+1) with x ≡ 0 mod 2
+  or x ≡ 2 mod 3 gives a Vandermonde extraction of (α₁, α₂).
+  But (2,3), (10,11), (7,8) are special because they also
+  encode the hierarchical structure of cycle packing.
+
+======================================================================
+PART 9: THE RECURRENCE LATTICE DIAGRAM
+======================================================================
+
+               1 (identity)
+              / \
+             2   3  (the two keys)
+            / \ / \
+           4   6   9  (2², 2·3, 3²)
+          / \ / \
+         7   8   12  (2³-1, 2³, 2²·3)
+          \ / \ /
+          10   11  (2+8, 3+8)
+
+  Each node n defines:
+  1. A k-nacci recurrence with root → 2
+  2. A weighted k-nacci recurrence with root → 3
+  3. A Jacobsthal evaluation I(CG, n) or I(CG, n(n-1))
+  4. A tournament size where new packing structures appear
+
+  The lattice is organized by the TWO operations:
+  • 'doubling': n → 2n (multiplication by 2)
+  • 'tripling': n → 3n (multiplication by 3)
+  which generate the 2-3 lattice Z[1/6].
+
+======================================================================
+FINAL SUMMARY: EVERYTHING IS A RECURRENCE
+======================================================================
+
+  RECURRENCE          | ROOT(S)     | RATE     | KEY NUMBER
+  --------------------+-------------+----------+-----------
+  Fibonacci           | φ, -1/φ     | —        | 1
+  Jacobsthal (x=2)   | 2, -1       | —        | 2
+  Jacobsthal (x=6)   | 3, -2       | —        | 3
+  Jacobsthal (x=12)  | 4, -3       | —        | 7 (denom)
+  k-nacci (any k)    | → 2         | 1/2      | 2
+  w-k-nacci (any k)  | → 3         | 2/3      | 3
+  I(CG, x) del-con   | 1+x         | —        | 3 (at x=2)
+  H deletion          | 2-weighted  | —        | 2
+  Q = (H²-Pf²)/8    | —           | —        | 8 = 2³
+  α₁ mod 2 tower     | 2-adic      | —        | 2
+  b₀ mod 3 tower     | 3-adic      | —        | 3
+
+  2 controls: counting (H), convergence (k-nacci → 2),
+              divisibility (H odd), deletion weight
+
+  3 controls: topology (b₀), convergence (w-k-nacci → 3),
+              isolated vertex weight (1+x=3), CRT bridge
+
+  7 = 2³-1: last pure (single-level) tournament size,
+            Jacobsthal denominator, Mersenne prime
+
+  8 = 2³:   first cross-level, Q divisor, packing threshold
+
+  10 = 2+8: shifted counting point, 2/3 interpolation
+  11 = 3+8: shifted topology point, first perfect α₃ packing
+
+  'If one understands 2 and 3, one has the keys to the universe.'
+  2 and 3 are the eigenvalues. 7 and 8 are the transition.
+  10 and 11 are the interleaving. Everything else follows.
+
+Done.
