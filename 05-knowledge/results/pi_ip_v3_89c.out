@@ -1,0 +1,131 @@
+======================================================================
+PART 1: P_7 — IP coefficients
+======================================================================
+  t_3(P_7) = 14
+  t_5(P_7) = 42
+  t_7(P_7) = 24
+
+  Total odd cycles (IP_1): c₁ = 80
+  Disjoint pairs (IP_2): c₂ = 7
+
+  IP(G, 2) = 1 + 80×2 + 7×4 = 189
+  H(P_7) = 189
+  Match: ✓
+
+  IP(G(P_7), x) = 1 + 80x + 7x²
+  IP(G, -1) = -72
+  IP(G,  0) = 1
+  IP(G,  1) = 88
+  IP(G,  2) = 189
+  IP(G,  3) = 304
+
+  The 7 disjoint pairs:
+    {0, 4, 6} ∥ {2, 3, 5} (lengths 3,3)
+    {0, 4, 5} ∥ {1, 2, 6} (lengths 3,3)
+    {0, 2, 6} ∥ {1, 3, 4} (lengths 3,3)
+    {0, 2, 3} ∥ {1, 5, 6} (lengths 3,3)
+    {0, 1, 5} ∥ {3, 4, 6} (lengths 3,3)
+    {0, 1, 3} ∥ {2, 4, 5} (lengths 3,3)
+    {1, 2, 4} ∥ {3, 5, 6} (lengths 3,3)
+
+  These 7 pairs form 7//7 = 1 orbit(s) under Z/7Z
+
+======================================================================
+PART 2: P_11 — IP coefficients
+======================================================================
+  Finding 3-cycles... t_3(P_11) = 55
+  Finding 5-cycles... t_5(P_11) = 594
+  Finding 7-cycles... t_7(P_11) = 3960
+  Finding 9-cycles... t_9(P_11) = 11055
+  Finding 11-cycles... t_11(P_11) = 5505
+
+  Total odd cycles (IP_1): c₁ = 21169
+
+  Counting disjoint pairs...
+  Cycles by length: [(3, 55), (5, 594), (7, 3960), (9, 11055), (11, 5505)]
+    (3,3)-disjoint pairs: 495
+    (3,5)-disjoint pairs: 3630
+    (3,7)-disjoint pairs: 4840
+    (5,5)-disjoint pairs: 1914
+
+  Total disjoint pairs (IP_2): c₂ = 10879
+
+  Counting disjoint triples...
+  Checking (3,3,3) triples among 55 3-cycles...
+    (3,3,3) triples: 550
+    (3,3,5) triples: 605
+    Total triples (IP_3): c₃ = 1155
+
+  IP(G(P_11), 2) = 1 + 21169×2 + 10879×4 + 1155×8
+  = 95095
+  H(P_11) = 95095
+  Match: ✓
+
+======================================================================
+PART 3: IP polynomial structure
+======================================================================
+
+  P_7: IP(G, x) = 1 + 80x + 7x²
+  Zeros: x = (-80 ± √(6400-28))/14 = (-80 ± √6372)/14
+  Discriminant = 6372 = 79²?
+  √6372 = 79 (exact: False)
+  Zeros: x ≈ -0.012514 and -11.416058
+
+  P_11: IP(G, x) = 1 + 21169x + 10879x² + 1155x³
+  Zeros:
+    x = -6.672075
+    x = -2.746926
+    x = -0.000047
+
+======================================================================
+PART 4: IP decomposition of H = 1 + 2c₁ + 4c₂ + 8c₃
+======================================================================
+
+  P_7: H = 189
+    Level 0 (empty set):     1
+    Level 1 (single cycles): 2×80 = 160  (84.7%)
+    Level 2 (disjoint pairs): 4×7 = 28   (14.8%)
+    Total: 189 ✓
+
+  P_11: H = 95095
+    Level 0: 1
+    Level 1: 2×21169 = 42338  (44.5%)
+    Level 2: 4×10879 = 43516  (45.8%)
+    Level 3: 8×1155 = 9240  (9.7%)
+    Total: 95095
+    Matches H: ✓
+
+======================================================================
+PART 5: The 7 disjoint pairs in P_7 — orbits under Z/7Z
+======================================================================
+
+  Disjoint pairs:
+    {0, 4, 6} ∥ {2, 3, 5} (lengths 3,3), vertex union = {0, 2, 3, 4, 5, 6}
+    {0, 4, 5} ∥ {1, 2, 6} (lengths 3,3), vertex union = {0, 1, 2, 4, 5, 6}
+    {0, 2, 6} ∥ {1, 3, 4} (lengths 3,3), vertex union = {0, 1, 2, 3, 4, 6}
+    {0, 2, 3} ∥ {1, 5, 6} (lengths 3,3), vertex union = {0, 1, 2, 3, 5, 6}
+    {0, 1, 5} ∥ {3, 4, 6} (lengths 3,3), vertex union = {0, 1, 3, 4, 5, 6}
+    {0, 1, 3} ∥ {2, 4, 5} (lengths 3,3), vertex union = {0, 1, 2, 3, 4, 5}
+    {1, 2, 4} ∥ {3, 5, 6} (lengths 3,3), vertex union = {1, 2, 3, 4, 5, 6}
+
+======================================================================
+SUMMARY
+======================================================================
+
+  IP DECOMPOSITION OF H(P_p):
+
+  P_7:  IP = 1 + 80x + 7x²
+        H = 1 + 160 + 28 = 189
+        Cycle contributions: 84.7% level 1, 14.8% level 2
+
+  P_11: IP = 1 + 21169x + 10879x² + 1155x³
+        H = 1 + 42338 + 43516 + 9240 = 95095
+        ✓ matches 95095
+
+  The IP degree = max packing number ≤ floor(p/3).
+
+  As p grows, higher-order packing terms become more important.
+  The convergence of H/E[H] may relate to how many packing
+  levels contribute.
+
+Done!
