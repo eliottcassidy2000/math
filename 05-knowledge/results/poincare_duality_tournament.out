@@ -1,0 +1,214 @@
+======================================================================
+POINCARE DUALITY FOR TOURNAMENT PATH HOMOLOGY
+kind-pasteur-2026-03-14-S69
+======================================================================
+
+======================================================================
+PART 1: RAW PATH COUNTS vs OMEGA DIMS
+  Raw = #{d-paths}, Omega = #{regular d-paths}
+  Transitive has raw = C(n, d+1) * (d+1)! = P(n, d+1)
+======================================================================
+
+--- TRANSITIVE n=3 ---
+  Raw    = [3, 3, 1]
+  Omega  = [3, 3, 1]
+  Betti  = [1, 0, 0]
+  Raw palindromic: False
+  Omega palindromic: False
+
+--- TRANSITIVE n=4 ---
+  Raw    = [4, 6, 4, 1]
+  Omega  = [4, 6, 4, 1]
+  Betti  = [1, 0, 0, 0]
+  Raw palindromic: False
+  Omega palindromic: False
+
+--- TRANSITIVE n=5 ---
+  Raw    = [5, 10, 10, 5, 1]
+  Omega  = [5, 10, 10, 5, 1]
+  Betti  = [1, 0, 0, 0, 0]
+  Raw palindromic: False
+  Omega palindromic: False
+
+--- TRANSITIVE n=6 ---
+  Raw    = [6, 15, 20, 15, 6, 1]
+  Omega  = [6, 15, 20, 15, 6, 1]
+  Betti  = [1, 0, 0, 0, 0, 0]
+  Raw palindromic: False
+  Omega palindromic: False
+
+--- TRANSITIVE n=7 ---
+  Raw    = [7, 21, 35, 35, 21, 7, 1]
+  Omega  = [7, 21, 35, 35, 21, 7, 1]
+  Betti  = [1, 0, 0, 0, 0, 0, 0]
+  Raw palindromic: False
+  Omega palindromic: False
+
+======================================================================
+PART 2: PALINDROME CLASSIFICATION at n=5
+======================================================================
+  Total: 1024
+  Raw palindromic: 0
+  Omega palindromic: 24
+
+  Palindromic tournaments by score sequence:
+    score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)): 24 tournaments, H in [15]
+      Omega = [5, 10, 10, 10, 5]
+
+  Which score sequences have palindromic tournaments:
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)): 0 palindromic, 120 non-palindromic
+    (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)): 0 palindromic, 40 non-palindromic
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)): 0 palindromic, 40 non-palindromic
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)): 0 palindromic, 120 non-palindromic
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)): 0 palindromic, 40 non-palindromic
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)): 0 palindromic, 120 non-palindromic
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)): 0 palindromic, 240 non-palindromic
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)): 0 palindromic, 280 non-palindromic
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)): 24 palindromic, 0 non-palindromic
+
+======================================================================
+PART 3: CIRCULANT TOURNAMENT PALINDROMY
+  Circulant: A[i][j] = 1 iff (j-i) mod n in S
+======================================================================
+
+--- n = 5 ---
+  4 valid circulant connection sets
+    S=(1, 2): H=15, Omega=[5, 10, 10, 10, 5], palindromic=True
+    S=(1, 3): H=15, Omega=[5, 10, 10, 10, 5], palindromic=True
+    S=(2, 4): H=15, Omega=[5, 10, 10, 10, 5], palindromic=True
+    S=(3, 4): H=15, Omega=[5, 10, 10, 10, 5], palindromic=True
+
+--- n = 7 ---
+  8 valid circulant connection sets
+    S=(1, 2, 3): H=175, Omega=[7, 21, 42, 77, 98, 63, 14], palindromic=False
+    S=(1, 2, 4): H=189, Omega=[7, 21, 42, 63, 63, 42, 21], palindromic=False
+    S=(1, 3, 5): H=175, Omega=[7, 21, 42, 77, 98, 63, 14], palindromic=False
+    S=(1, 4, 5): H=175, Omega=[7, 21, 42, 77, 98, 63, 14], palindromic=False
+    S=(2, 3, 6): H=175, Omega=[7, 21, 42, 77, 98, 63, 14], palindromic=False
+    S=(2, 4, 6): H=175, Omega=[7, 21, 42, 77, 98, 63, 14], palindromic=False
+    S=(3, 5, 6): H=189, Omega=[7, 21, 42, 63, 63, 42, 21], palindromic=False
+    S=(4, 5, 6): H=175, Omega=[7, 21, 42, 77, 98, 63, 14], palindromic=False
+
+--- n = 9 ---
+  16 valid circulant connection sets
+    S=(1, 2, 3, 4): H=3267, Omega=[9, 36, 108, 297, 630, 909, 819], palindromic=False
+    S=(1, 2, 3, 5): H=3357, Omega=[9, 36, 108, 270, 513, 666, 567], palindromic=False
+    S=(1, 2, 4, 6): H=3357, Omega=[9, 36, 108, 270, 513, 666, 567], palindromic=False
+    S=(1, 2, 5, 6): H=3267, Omega=[9, 36, 108, 297, 630, 909, 819], palindromic=False
+    S=(1, 3, 4, 7): H=3159, Omega=[9, 36, 108, 288, 558, 675, 432], palindromic=False
+    S=(1, 3, 5, 7): H=3267, Omega=[9, 36, 108, 297, 630, 909, 819], palindromic=False
+    S=(1, 4, 6, 7): H=3159, Omega=[9, 36, 108, 288, 558, 675, 432], palindromic=False
+    S=(1, 5, 6, 7): H=3357, Omega=[9, 36, 108, 270, 513, 666, 567], palindromic=False
+    S=(2, 3, 4, 8): H=3357, Omega=[9, 36, 108, 270, 513, 666, 567], palindromic=False
+    S=(2, 3, 5, 8): H=3159, Omega=[9, 36, 108, 288, 558, 675, 432], palindromic=False
+
+======================================================================
+PART 4: POINCARE POLYNOMIAL P(T,t) = sum Omega_k * t^k
+  Duality: P(T,t) = t^{n-1} * P(T, 1/t)?
+  Equivalently: Omega_k = Omega_{n-1-k}
+======================================================================
+
+  Transitive:
+    n=7, H=1
+    Omega = [7, 21, 35, 35, 21, 7, 1]
+    Betti = [1, 0, 0, 0, 0, 0, 0]
+    Chi = 1
+    sum(Omega) = 127
+    Alt sum((-1)^k * Omega_k) = 1
+    P(1) = 127 (total dim of path space)
+    Omega is 'almost palindromic' (Omega[0:-1] reversed = Omega[-2::-1])
+
+  Paley T_7:
+    n=7, H=189
+    Omega = [7, 21, 42, 63, 63, 42, 21]
+    Betti = [1, 0, 0, 0, 6, 0, 0]
+    Chi = 7
+    sum(Omega) = 259
+    Alt sum((-1)^k * Omega_k) = 7
+    P(1) = 259 (total dim of path space)
+
+  Cyclic interval n=5:
+    n=5, H=15
+    Omega = [5, 10, 10, 10, 5]
+    Betti = [1, 1, 0, 0, 0]
+    Chi = 0
+    sum(Omega) = 40
+    Alt sum((-1)^k * Omega_k) = 0
+    P(1) = 40 (total dim of path space)
+    *** Omega is PALINDROMIC (Poincare duality) ***
+
+======================================================================
+PART 5: WHAT DETERMINES OMEGA (POINCARE POLYNOMIAL)?
+  Is Omega determined by H? By score? By cycle counts?
+======================================================================
+
+--- n = 5 ---
+  H -> #distinct Omega:
+    H=  1: 1 distinct Omega
+    H=  3: 1 distinct Omega
+    H=  5: 1 distinct Omega
+    H=  9: 2 distinct Omega
+    H= 11: 1 distinct Omega
+    H= 13: 1 distinct Omega
+    H= 15: 2 distinct Omega
+
+  score -> #distinct Omega:
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)): 1
+    (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)): 1
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)): 1
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)): 1
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)): 1
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)): 1
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)): 2
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)): 3
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)): 1
+
+--- n = 6 ---
+  H -> #distinct Omega:
+    H=  1: 1 distinct Omega
+    H=  3: 1 distinct Omega
+    H=  5: 1 distinct Omega
+    H=  9: 3 distinct Omega
+    H= 11: 1 distinct Omega
+    H= 13: 1 distinct Omega
+    H= 15: 3 distinct Omega
+    H= 17: 2 distinct Omega
+    H= 19: 1 distinct Omega
+    H= 23: 2 distinct Omega
+    H= 25: 1 distinct Omega
+    H= 27: 1 distinct Omega
+    H= 29: 3 distinct Omega
+    H= 31: 1 distinct Omega
+    H= 33: 3 distinct Omega
+    H= 37: 3 distinct Omega
+    H= 41: 1 distinct Omega
+    H= 43: 1 distinct Omega
+    H= 45: 2 distinct Omega
+
+  score -> #distinct Omega:
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)): 1
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)): 1
+    (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)): 1
+    (np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)): 1
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)): 1
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)): 1
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): 2
+    (np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): 3
+    (np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 1
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)): 1
+    (np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)): 1
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)): 1
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)): 2
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)): 3
+    (np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)): 3
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)): 3
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)): 3
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)): 8
+    (np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)): 4
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)): 1
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)): 4
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 4
+
+======================================================================
+DONE
+======================================================================
