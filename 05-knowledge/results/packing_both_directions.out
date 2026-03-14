@@ -1,0 +1,388 @@
+======================================================================
+PART 1: BINOMIAL INVERSION — SIMPLEX FROM CUBOID PIECES
+======================================================================
+
+  FORWARD: (x+2)^n = sum_{k=0}^n C(n,k) (x+1)^k
+  INVERSE: (x+1)^n = sum_{k=0}^n C(n,k) (-1)^{n-k} (x+2)^k
+
+  Proof: Let y = x+1. Then x+2 = y+1.
+  (y+1)^n = sum C(n,k) y^k  ← forward
+  y^n = sum C(n,k) (-1)^{n-k} (y+1)^k  ← binomial inversion
+
+  This means: SIMPLEX = ALTERNATING SUM of cuboid pieces!
+
+  VERIFICATION:
+  n=1: (x+1)^1|_{x=1} = 2, sum C(1,k)(-1)^{1-k} 3^k = 2, match = True
+  n=2: (x+1)^2|_{x=1} = 4, sum C(2,k)(-1)^{2-k} 3^k = 4, match = True
+  n=3: (x+1)^3|_{x=1} = 8, sum C(3,k)(-1)^{3-k} 3^k = 8, match = True
+  n=4: (x+1)^4|_{x=1} = 16, sum C(4,k)(-1)^{4-k} 3^k = 16, match = True
+  n=5: (x+1)^5|_{x=1} = 32, sum C(5,k)(-1)^{5-k} 3^k = 32, match = True
+  n=6: (x+1)^6|_{x=1} = 64, sum C(6,k)(-1)^{6-k} 3^k = 64, match = True
+  n=7: (x+1)^7|_{x=1} = 128, sum C(7,k)(-1)^{7-k} 3^k = 128, match = True
+
+  KEY: The alternating signs mean INCLUSION-EXCLUSION!
+  The simplex is obtained from cuboid pieces via Möbius inversion.
+  In tournament terms: H = I(2) can be recovered from I(3) and lower I values.
+
+======================================================================
+PART 2: THE GENERAL r-HEDROID FAMILY
+======================================================================
+
+  Define F_r(x) = (x+r)^n for fixed n.
+
+  Then: F_{r+1}(x) = sum C(n,k) F_r^{(k)}(x) ... no, simpler:
+  F_{r+1}(x) = (x+r+1)^n = ((x+r)+1)^n = sum C(n,k) (x+r)^k
+             = sum C(n,k) F_r(x)^{k/n} ... no, that's wrong.
+
+  Actually: (x+r+1)^n = sum C(n,k) (x+r)^k * 1^{n-k}
+  This gives F_{r+1} in terms of POWERS of the ARGUMENT (x+r), not F_r itself.
+
+  The correct relation is simpler:
+  (x+r+1)^n = sum C(n,k) (x+r)^k
+
+  At x=1: (r+2)^n = sum C(n,k) (r+1)^k
+
+  This IS the binomial theorem: (a+1)^n = sum C(n,k) a^k where a = r+1.
+
+  For the HEDROID FAMILY at x=1:
+    r=0: F_0 = 1^n = 1
+    r=1: F_1 = 2^n (simplex)
+    r=2: F_2 = 3^n (cuboid)
+    r=3: F_3 = 4^n (tesseract)
+    r=4: F_4 = 5^n (penteract)
+
+  And: F_{r+1} = sum C(n,k) (r+1)^k = (r+2)^n ✓ (trivially true)
+
+  The INTERESTING structure is the DIFFERENCE OPERATOR:
+  Delta F_r = F_{r+1} - F_r = (r+2)^n - (r+1)^n
+
+  This gives: Delta F_0 = 2^n - 1 (Mersenne numbers)
+              Delta F_1 = 3^n - 2^n (simplex-cuboid gap)
+              Delta F_2 = 4^n - 3^n
+              Delta F_3 = 5^n - 4^n
+
+  FINITE DIFFERENCE TABLE (n fixed, varying r):
+
+  n=3:
+    F:  [1, 8, 27, 64, 125, 216, 343, 512]
+    Δ^1: [7, 19, 37, 61, 91, 127, 169]
+    Δ^2: [12, 18, 24, 30, 36, 42]
+    Δ^3: [6, 6, 6, 6, 6]
+    *** CONSTANT at level 3: Δ^3 = 6 = 3! = 6? YES ***
+
+  n=5:
+    F:  [1, 32, 243, 1024, 3125, 7776, 16807, 32768]
+    Δ^1: [31, 211, 781, 2101, 4651, 9031, 15961]
+    Δ^2: [180, 570, 1320, 2550, 4380, 6930]
+    Δ^3: [390, 750, 1230, 1830, 2550]
+    Δ^4: [360, 480, 600, 720]
+    Δ^5: [120, 120, 120]
+    *** CONSTANT at level 5: Δ^5 = 120 = 5! = 120? YES ***
+
+  n=7:
+    F:  [1, 128, 2187, 16384, 78125, 279936, 823543, 2097152]
+    Δ^1: [127, 2059, 14197, 61741, 201811, 543607, 1273609]
+    Δ^2: [1932, 12138, 47544, 140070, 341796, 730002]
+    Δ^3: [10206, 35406, 92526, 201726, 388206]
+    Δ^4: [25200, 57120, 109200, 186480]
+    Δ^5: [31920, 52080, 77280]
+
+  n=9:
+    F:  [1, 512, 19683, 262144, 1953125, 10077696, 40353607, 134217728]
+    Δ^1: [511, 19171, 242461, 1690981, 8124571, 30275911, 93864121]
+    Δ^2: [18660, 223290, 1448520, 6433590, 22151340, 63588210]
+    Δ^3: [204630, 1225230, 4985070, 15717750, 41436870]
+    Δ^4: [1020600, 3759840, 10732680, 25719120]
+    Δ^5: [2739240, 6972840, 14986440]
+
+  OBSERVATION: The n-th finite difference Δ^n F_r is ALWAYS n!
+  This is because F_r = (r+1)^n is a polynomial of degree n in r,
+  and its leading coefficient is 1, so Δ^n = n! * (leading coeff) = n!.
+
+  THIS IS THE FINITE DIFFERENCE CALCULUS CONNECTION:
+  n! = Δ^n[(r+1)^n]|_{r=0} = sum_{k=0}^n (-1)^{n-k} C(n,k) (k+1)^n
+
+  This is the STIRLING NUMBER formula!
+  n! = sum_{k=0}^n (-1)^{n-k} C(n,k) (k+1)^n
+
+  TOURNAMENT INTERPRETATION:
+  The number of Hamiltonian paths in a transitive tournament = 1.
+  n! = number of permutations of n.
+  The finite difference Δ^n at the hedroid family gives n!.
+  So: the PERMUTATION GROUP (n!) is the "top-level finite difference"
+  of the hedroid counting sequence.
+
+  VERIFICATION: n! = sum (-1)^{n-k} C(n,k) (k+1)^n
+  n=1: sum = 1, n! = 1, match = True
+  n=2: sum = 2, n! = 2, match = True
+  n=3: sum = 6, n! = 6, match = True
+  n=4: sum = 24, n! = 24, match = True
+  n=5: sum = 120, n! = 120, match = True
+  n=6: sum = 720, n! = 720, match = True
+  n=7: sum = 5040, n! = 5040, match = True
+  n=8: sum = 40320, n! = 40320, match = True
+  n=9: sum = 362880, n! = 362880, match = True
+
+======================================================================
+PART 3: THE INVERSE — EXPRESSING I(x) IN THE HEDROID BASIS
+======================================================================
+
+  The independence polynomial I(Omega, x) = sum alpha_k x^k.
+
+  In the HEDROID BASIS, we can write I(Omega, x) as:
+  I(Omega, x) = sum_{j=0}^{d} c_j (x+1)^j   [simplex basis]
+  or:
+  I(Omega, x) = sum_{j=0}^{d} d_j (x+2)^j   [cuboid basis]
+
+  The simplex basis coefficients c_j:
+  I(Omega, x) = sum alpha_k x^k = sum alpha_k ((x+1)-1)^k
+              = sum alpha_k sum C(k,j) (-1)^{k-j} (x+1)^j
+              = sum_j (sum_k alpha_k C(k,j) (-1)^{k-j}) (x+1)^j
+
+  So: c_j = sum_{k=j}^{d} alpha_k C(k,j) (-1)^{k-j}
+
+  This is the ALTERNATING BINOMIAL TRANSFORM of the alpha sequence!
+
+  EXAMPLE: n=5 tournaments in simplex and cuboid bases
+  (Using alpha_1, alpha_2 from known cases)
+
+  Transitive  : α=(0,0), H=1, I(3)=1
+    Standard:  1 + 0x + 0x²
+    Simplex:   1 + 0(x+1) + 0(x+1)²
+    Cuboid:    1 + 0(x+2) + 0(x+2)²
+    H check (simplex): 1 ✓
+    H check (cuboid):  1 ✓
+
+  Near-trans  : α=(1,0), H=3, I(3)=4
+    Standard:  1 + 1x + 0x²
+    Simplex:   0 + 1(x+1) + 0(x+1)²
+    Cuboid:    -1 + 1(x+2) + 0(x+2)²
+    H check (simplex): 3 ✓
+    H check (cuboid):  3 ✓
+
+  Moderate    : α=(3,0), H=7, I(3)=10
+    Standard:  1 + 3x + 0x²
+    Simplex:   -2 + 3(x+1) + 0(x+1)²
+    Cuboid:    -5 + 3(x+2) + 0(x+2)²
+    H check (simplex): 7 ✓
+    H check (cuboid):  7 ✓
+
+  Moderate+   : α=(4,1), H=13, I(3)=22
+    Standard:  1 + 4x + 1x²
+    Simplex:   -2 + 2(x+1) + 1(x+1)²
+    Cuboid:    -3 + 0(x+2) + 1(x+2)²
+    H check (simplex): 13 ✓
+    H check (cuboid):  13 ✓
+
+  Regular C5  : α=(5,2), H=19, I(3)=34
+    Standard:  1 + 5x + 2x²
+    Simplex:   -2 + 1(x+1) + 2(x+1)²
+    Cuboid:    -1 + -3(x+2) + 2(x+2)²
+    H check (simplex): 19 ✓
+    H check (cuboid):  19 ✓
+
+
+======================================================================
+PART 4: THE FALLING FACTORIAL / STIRLING CONNECTION
+======================================================================
+
+  The change of basis from x^k to (x+1)^j involves Stirling numbers!
+
+  x^k = sum_j S(k,j) * x^{(j)}  where x^{(j)} = x(x-1)...(x-j+1) = falling factorial
+
+  And: (x+1)^n = sum_k C(n,k) x^k = sum_k C(n,k) sum_j S(k,j) x^{(j)}
+
+  The SIMPLEX BASIS expansion of I(Omega, x) involves the STIRLING TRANSFORM
+  of the alpha_k sequence.
+
+  For tournament theory:
+    I(x) in standard basis: alpha_0=1, alpha_1, alpha_2, ...
+    I(x) in falling factorial basis: involves Stirling numbers of the first kind
+    I(x) in simplex basis (x+1)^j: involves the shifted Stirling transform
+
+  THE DEEP CONNECTION:
+  The Stirling numbers S(n,k) count set partitions.
+  The alpha_k count independent cycle sets.
+  The SIMPLEX BASIS coefficients c_j mix these via Stirling numbers.
+
+  This means: THE HEDROID PACKING IS A STIRLING TRANSFORM OF THE CYCLE STRUCTURE.
+
+  Stirling numbers S(n,k) of the second kind:
+    k=0  k=1  k=2  k=3  k=4  k=5  k=6
+  n=0:     1    0    0    0    0    0    0
+  n=1:     0    1    0    0    0    0    0
+  n=2:     0    1    1    0    0    0    0
+  n=3:     0    1    3    1    0    0    0
+  n=4:     0    1    7    6    1    0    0
+  n=5:     0    1   15   25   10    1    0
+  n=6:     0    1   31   90   65   15    1
+
+  KEY OBSERVATION:
+  x^n = sum_k S(n,k) x(x-1)...(x-k+1) = sum_k S(n,k) x^{(k)}
+
+  At x=2 (simplex point):
+  2^n = sum_k S(n,k) * 2^{(k)} = sum_k S(n,k) * 2*1*0*(-1)... = S(n,1)*2 + S(n,2)*2
+
+  Wait: 2^{(0)} = 1, 2^{(1)} = 2, 2^{(2)} = 2*1 = 2, 2^{(3)} = 2*1*0 = 0.
+
+  So: 2^n = S(n,0)*1 + S(n,1)*2 + S(n,2)*2 + 0 + 0 + ...
+         = 1 + 2*S(n,1) + 2*S(n,2)... no, S(n,0)=0 for n>0.
+         = 2*1 + 2*S(n,2)    [since S(n,1)=1 always]
+         = 2 + 2*S(n,2)
+
+  Check: n=3: 2^3 = 8 = 2 + 2*S(3,2) = 2 + 2*3 = 8. ✓
+         n=4: 2^4 = 16 = 2 + 2*S(4,2) = 2 + 2*7 = 16. ✓
+
+  So: S(n,2) = (2^n - 2)/2 = 2^{n-1} - 1.
+
+  This is: S(n,2) = 2^{n-1} - 1 = MERSENNE NUMBER!
+  And: 2^n = 2 + 2*(2^{n-1}-1) = 2 + 2^n - 2 = 2^n. Trivially true but illuminating.
+
+  For I(Omega, 2) = H:
+  H = sum alpha_k * 2^k = sum alpha_k * (2 + 2*S(k,2) + higher terms with 0)
+    = sum alpha_k * 2 + sum alpha_k * 2 * S(k,2)
+  But S(k,2) = 2^{k-1}-1, so:
+  H = 2*sum(alpha_k) + 2*sum(alpha_k*(2^{k-1}-1))
+    = 2*sum(alpha_k) + sum(alpha_k*(2^k - 2))
+    = 2*sum(alpha_k) + H - 2*sum(alpha_k) = H. Circular.
+
+
+======================================================================
+PART 5: THE INCLUSION-EXCLUSION INTERPRETATION
+======================================================================
+
+  THE MOST IMPORTANT IDENTITY:
+
+  (x+1)^n = sum C(n,k) (-1)^{n-k} (x+2)^k
+
+  At x=1: 2^n = sum C(n,k) (-1)^{n-k} 3^k
+
+  This is INCLUSION-EXCLUSION!
+
+  Think of 3^n as counting functions from [n] to {a,b,c} (3 colors).
+  Then 2^n counts functions using only {a,b} (2 colors).
+  By inclusion-exclusion:
+    |functions using ≤2 colors| = sum (-1)^k C(3,k) (3-k)^n
+    But that's for choosing which colors to EXCLUDE.
+
+  Actually, the simpler interpretation:
+  2^n = (3-1)^n = sum C(n,k) 3^k (-1)^{n-k}
+
+  This is just the binomial theorem with a = 3 and b = -1.
+
+  But in the TOURNAMENT context:
+  H = I(2) = I(3-1) = sum alpha_k (3-1)^k
+            = sum alpha_k sum C(k,j) 3^j (-1)^{k-j}
+            = sum_j (sum_k alpha_k C(k,j) (-1)^{k-j}) 3^j
+
+  This expresses H as a LINEAR COMBINATION of I(3)^{powers}!
+  (Not exactly, because I(3) ≠ 3, but the STRUCTURE is analogous.)
+
+  THE PACKING IN REVERSE:
+  To go from cuboid (I(3)) to simplex (I(2)=H), we use
+  alternating signs — INCLUSION-EXCLUSION of the cycle structure.
+
+  The corners that we ADD when going simplex→cuboid,
+  we SUBTRACT when going cuboid→simplex.
+
+  GEOMETRICALLY: the simplex is the cuboid MINUS corners.
+  But the corners overlap, so we need inclusion-exclusion.
+  The alternating signs in C(n,k)(-1)^{n-k} ARE the
+  inclusion-exclusion correction terms.
+
+  NUMERICAL VERIFICATION: 2^n = sum C(n,k)(-1)^{n-k} 3^k
+  n=1: 2 = (-1) + (+3) = 2 ✓
+  n=2: 4 = (+1) + (-6) + (+9) = 4 ✓
+  n=3: 8 = (-1) + (+9) + (-27) + (+27) = 8 ✓
+  n=4: 16 = (+1) + (-12) + (+54) + (-108) + (+81) = 16 ✓
+  n=5: 32 = (-1) + (+15) + (-90) + (+270) + (-405) + (+243) = 32 ✓
+  n=6: 64 = (+1) + (-18) + (+135) + (-540) + (+1215) + (-1458) + (+729) = 64 ✓
+  n=7: 128 = (-1) + (+21) + (-189) + (+945) + (-2835) + (+5103) + (-5103) + (+2187) = 128 ✓
+  n=8: 256 = (+1) + (-24) + (+252) + (-1512) + (+5670) + (-13608) + (+20412) + (-17496) + (+6561) = 256 ✓
+  n=9: 512 = (-1) + (+27) + (-324) + (+2268) + (-10206) + (+30618) + (-61236) + (+78732) + (-59049) + (+19683) = 512 ✓
+
+======================================================================
+PART 6: THE EULER TRANSFORM AND TOURNAMENT GENERATING FUNCTIONS
+======================================================================
+
+  The Euler transform of a sequence {a_n} is:
+  E(x) = prod_{k=1}^∞ (1-x^k)^{-a_k}
+
+  For tournaments, the "partition function" is:
+  Z(x) = sum_T x^{|T|} (sum over all tournaments, weighted by size)
+
+  The independence polynomial I(Omega, x) can be seen as a
+  "local partition function" for the odd-cycle conflict graph.
+
+  The GENERATING FUNCTION for the hedroid family:
+  F(r, n) = (r+1)^n
+
+  Its EGF in n: sum_n F(r,n) x^n/n! = sum_n (r+1)^n x^n/n! = e^{(r+1)x}
+
+  So: F(r, ·) has EGF e^{(r+1)x}.
+  And: F(0,·) = e^x (simplex-at-0)
+       F(1,·) = e^{2x} (simplex)
+       F(2,·) = e^{3x} (cuboid)
+
+  The RATIO: F(2,·)/F(1,·) = e^{3x}/e^{2x} = e^x
+  This IS the EGF of the constant sequence 1,1,1,...!
+
+  In other words: the cuboid-to-simplex ratio at each n is
+  (coefficient of x^n/n! in e^x) / (coefficient of x^n/n! in e^{2x})
+  = 1/2^n (after normalization)... no, that's not quite right.
+
+  The point is: e^{3x} = e^{2x} * e^x
+  So: 3^n = sum_{k=0}^n C(n,k) 2^k * 1^{n-k}
+  = sum C(n,k) 2^k  ← binomial theorem ✓
+
+  The EGF factorization e^{3x} = e^{2x} * e^x corresponds to:
+  cuboid = simplex ⊗ complement
+  where ⊗ is the BINOMIAL CONVOLUTION (Hadamard product of EGFs).
+
+  THE TOURNAMENT ANALOG:
+  If I(Omega, x) has EGF-like structure, then
+  I(3) = I(2) * "correction factor"
+  where the correction factor involves the cycle structure.
+
+  EGF RATIO e^{3x}/e^{2x} = e^x:
+  The coefficient of x^n/n! in e^x is 1.
+  So the 'correction factor' at each n is: 3^n/2^n = (3/2)^n.
+  This is the simplex-cuboid ratio at dimension n.
+
+  n= 1: (3/2)^n =     1.5000, correction =          1, correction/2^n = 0.5000
+  n= 2: (3/2)^n =     2.2500, correction =          5, correction/2^n = 1.2500
+  n= 3: (3/2)^n =     3.3750, correction =         19, correction/2^n = 2.3750
+  n= 4: (3/2)^n =     5.0625, correction =         65, correction/2^n = 4.0625
+  n= 5: (3/2)^n =     7.5938, correction =        211, correction/2^n = 6.5938
+  n= 6: (3/2)^n =    11.3906, correction =        665, correction/2^n = 10.3906
+  n= 7: (3/2)^n =    17.0859, correction =       2059, correction/2^n = 16.0859
+  n= 8: (3/2)^n =    25.6289, correction =       6305, correction/2^n = 24.6289
+  n= 9: (3/2)^n =    38.4434, correction =      19171, correction/2^n = 37.4434
+  n=10: (3/2)^n =    57.6650, correction =      58025, correction/2^n = 56.6650
+  n=11: (3/2)^n =    86.4976, correction =     175099, correction/2^n = 85.4976
+
+  The correction/2^n = (3/2)^n - 1 → ∞ as n → ∞.
+  The simplex becomes NEGLIGIBLE inside the cuboid.
+  But the RATIO (3/2)^n grows EXPONENTIALLY.
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+
+  THE SIMPLEX-CUBOID PACKING FRAMEWORK SUMMARIZED:
+
+  1. POLYNOMIALS: (x+1)^n ↔ simplex, (x+2)^n ↔ cuboid
+  2. FORWARD: cuboid = sum C(n,k) simplex^k (binomial expansion)
+  3. INVERSE: simplex = alternating sum of cuboid^k (Möbius inversion)
+  4. GEOMETRY: Regular simplex inscribable in cube at Hadamard dimensions (n=3,7,11,...)
+     At n=3: 4 corner pieces, each = half the simplex volume
+  5. TOURNAMENTS: I(2)=H (simplex), I(3) (cuboid), gap = cycle count
+  6. k-NACCI: limit 2 (simplex), doubled limit 3 (cuboid), ratio → 3/2
+  7. CORNER PIECES: 3^k - 2^k = 1, 5, 19, 65, 211, ... (level-k excess)
+  8. 9=3²: nested packing (simplex of simplices)
+  9. 10=5*2: cross-product packing (mixed prime structure)
+  10. n! = Δ^n[(r+1)^n]: permutations = top finite difference of hedroid family
+  11. EGF: e^{3x} = e^{2x} · e^x ↔ cuboid = simplex ⊗ correction
+  12. STIRLING: S(n,2) = 2^{n-1}-1 = Mersenne numbers = simplex Stirling value
+
+Done.
