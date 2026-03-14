@@ -1,0 +1,63 @@
+======================================================================
+PROVE THE GRAND ENERGY FORMULA
+kind-pasteur-2026-03-14-S107d
+======================================================================
+
+======================================================================
+STEP 1: RESTATE THE FORMULA IN PARSEVAL FORM
+======================================================================
+
+  The formula: E_2k / E_0 = 2 * (n-2k)^k / P(n, 2k).
+
+  Multiply both sides by E_0:
+    E_2k = 2 * (n-2k)^k * E_0 / P(n, 2k)
+         = 2 * (n-2k)^k * (n!)^2 / (2^(2(n-1)) * P(n,2k))
+
+  Now: P(n,2k) = n!/(n-2k)!. So:
+    E_2k = 2 * (n-2k)^k * (n!)^2 / (2^(2(n-1)) * n!/(n-2k)!)
+         = 2 * (n-2k)^k * n! * (n-2k)! / 2^(2(n-1))
+
+  E_2k = sum over |S|=2k of H_hat(S)^2.
+
+  And H_hat(S) = (1/2^m) * sum over all T: H(T) * chi_S(T).
+  So H_hat(S)^2 = (1/2^(2m)) * sum_(T,T') H(T)*H(T') * chi_S(T)*chi_S(T').
+
+  E_2k = sum_S (1/2^(2m)) * sum_(T,T') H(T)*H(T') * chi_S(T)*chi_S(T')
+       = (1/2^(2m)) * sum_(T,T') H(T)*H(T') * [sum_S chi_S(T)*chi_S(T')]
+
+  The inner sum [sum_S chi_S(T)*chi_S(T')] depends only on
+  the HAMMING DISTANCE d(T,T') between tournaments T and T'
+  (number of arcs where they differ).
+
+  In the {-1,+1} basis: chi_S(T)*chi_S(T') = prod_e y_e(T)*y_e(T').
+  If T and T' agree on arc e: y_e(T)*y_e(T') = 1.
+  If they disagree: y_e(T)*y_e(T') = -1.
+
+  Let d = d(T,T') = number of arcs where T and T' differ.
+  Then chi_S(T)*chi_S(T') = (-1)**(|S inter D|)
+  where D = set of arcs where T and T' differ, |D| = d.
+
+  sum_S chi_S(T)*chi_S(T') = sum_S (-1)**(|S inter D|)
+
+  This is a standard combinatorial sum:
+  = sum_(j=0) C(d,j) * C(m-d, 2k-j) * (-1)**j
+
+  This is the Krawtchouk polynomial K_2k(d; m)!
+  K_2k(d; m) = sum_j (-1)**j C(d,j) C(m-d, 2k-j)
+
+  So: E_2k = (1/2^(2m)) * sum_(T,T') H(T)*H(T') * K_2k(d(T,T'); m)
+
+  This is a DOUBLE SUM over all pairs of tournaments,
+  weighted by H*H' and the Krawtchouk polynomial.
+
+======================================================================
+STEP 2: THE KRAWTCHOUK APPROACH
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\prove_grand_formula.py", line 541, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\prove_grand_formula.py", line 165, in main
+    E_2k = (1/2^(2m)) * sum_(d=0)^{m} K_2k(d; m) * C(d)
+                                   ^
+UnboundLocalError: cannot access local variable 'm' where it is not associated with a value
