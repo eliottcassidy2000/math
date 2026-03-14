@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S89b — 2026-03-14: CROWN JEWEL — Independence Polynomial Formula H = IP(G, 2)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S89b (context overflow, resumed)
+**Summary of work:** Discovered and verified the Independence Polynomial formula H(T) = IP(G(T), 2) where G(T) is the odd-cycle disjointness graph. This is the BIGGEST SINGLE DISCOVERY in the project — a closed-form expression for H as a sum over pairwise vertex-disjoint odd cycle packings with weight 2^k per k-packing. Verified exhaustively through n=7 (2M tournaments) and by sampling through n=10. Also discovered the Fano plane embedding in the Paley tournament and proved the Sum H identity.
+**New contributions:**
+- **THM-209**: H = IP(OddCycleDisjointnessGraph, 2) — verified n=3 through n=10
+- **THM-210**: Sum_T H(T) = n!·2^{m-n+1} — PROVED (double counting)
+- **THM-211**: Paley P₇ three-cycles form 2-(7,3,2) design = 2× Fano plane
+- Fano plane PG(2,2) literally embedded in Paley tournament (all 7 lines = 3-cycles)
+- d₃₃(P₇) = 7 disjoint pairs form resolution (each vertex leftover exactly once)
+- H mod 6 ∈ {1,3,5} perfectly encodes total_cycles mod 3
+- H mod 4 = 1 iff #cycles even, 3 iff #cycles odd
+- Morse theory: all local minima = transitive (H=1), all maxima = regular (H=max)
+- All sublevel sets L_h connected (single-basin topology)
+- E[t_k] = C(n,k)·(k-1)!/2^k; master equation verified
+- 11 scripts, exhaustive C verifier for n=7
+**Unresolved threads:**
+- PROOF of THM-209 (the formula is verified but not proved)
+- Extension to n≥11 (need faster algorithms)
+- Connection to chromatic symmetric function and e-positivity
+- Asymptotic behavior of IP as n→∞
+- Whether the Fano/Baer subplane structure generalizes to P_p for other primes
+
 ## opus-2026-03-14-S71p — 2026-03-14: Hertzsprung, Eight, and Vitali Atoms
 
 **Account:** opus
