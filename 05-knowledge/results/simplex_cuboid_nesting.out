@@ -2,764 +2,384 @@
 SIMPLEX-IN-CUBE NESTING: How n-simplices sit inside n-cubes
 ========================================================================
 
-STANDARD CONSTRUCTION:
-  The n-cube [0,1]^n has 2^n vertices.
-  An n-simplex has n+1 vertices.
-  We inscribe the simplex by choosing n+1 vertices of the cube.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 1: COXETER DECOMPOSITION — The n-cube as n! simplices
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  The CANONICAL embedding uses alternating vertices. For the cube {0,1}^n,
-  pick vertices whose coordinates sum to the same parity. There are two
-  such sets, each of size 2^{n-1}. We need n+1 vertices for an n-simplex.
+The unit n-cube [0,1]^n can be decomposed into n! congruent simplices,
+one for each permutation σ ∈ S_n:
 
-  For n=2: square vertices (0,0),(1,0),(0,1),(1,1)
-    Even parity: (0,0),(1,1) — only 2, need 3 for triangle
-    So parity doesn't directly give a simplex for all n.
+  Δ_σ = { x ∈ [0,1]^n : 0 ≤ x_{σ(1)} ≤ x_{σ(2)} ≤ ··· ≤ x_{σ(n)} ≤ 1 }
 
-  BETTER: The standard regular simplex inscribed in the cube uses
-  vertices of the cube, but not the parity construction for small n.
+Each simplex has volume 1/n!. They tile the cube perfectly.
+The simplex Δ_id (identity permutation) has vertices:
+  v_0 = (0,...,0), v_1 = (1,0,...,0), v_2 = (1,1,0,...,0), ..., v_n = (1,...,1)
 
+This is a RIGHT-ANGLED simplex (orthoscheme), not regular.
+Its complement in the cube consists of the other n! - 1 simplices.
 
-========================================================================
-SECTION 2: Simplicial decomposition of the n-cube
-========================================================================
+  n │ n! simplices │     Vol each │   complement
+────────────────────────────────────────────────
+  1 │            1 │          1/1 │            0
+  2 │            2 │          1/2 │            1
+  3 │            6 │          1/6 │            5
+  4 │           24 │         1/24 │           23
+  5 │          120 │        1/120 │          119
+  6 │          720 │        1/720 │          719
+  7 │         5040 │       1/5040 │         5039
+  8 │        40320 │      1/40320 │        40319
+  9 │       362880 │     1/362880 │       362879
+ 10 │      3628800 │    1/3628800 │      3628799
 
-KNOWN RESULT: The n-cube can be decomposed into n! simplices, each of
-equal volume 1/n!. This is the "order polytope" or "Coxeter decomposition".
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 2: n=3 — REGULAR TETRAHEDRON IN CUBE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-The decomposition: for each permutation σ ∈ S_n, define the simplex
-  Δ_σ = { x ∈ [0,1]^n : x_{σ(1)} ≤ x_{σ(2)} ≤ ... ≤ x_{σ(n)} }
+The 8 vertices of the unit cube split by coordinate-sum parity:
 
-These n! simplices tile [0,1]^n perfectly:
-  - Each has volume 1/n!
-  - They share (n-1)-dimensional faces
-  - Their union is the entire cube
-  - Total volume: n! × (1/n!) = 1 ✓
+  Even parity (sum ≡ 0 mod 2): (0,0,0), (1,1,0), (1,0,1), (0,1,1)
+  Odd  parity (sum ≡ 1 mod 2): (1,0,0), (0,1,0), (0,0,1), (1,1,1)
 
-  n=2: cube decomposes into 2 simplices, each of volume 1/2
-  n=3: cube decomposes into 6 simplices, each of volume 1/6
-  n=4: cube decomposes into 24 simplices, each of volume 1/24
-  n=5: cube decomposes into 120 simplices, each of volume 1/120
-  n=6: cube decomposes into 720 simplices, each of volume 1/720
-  n=7: cube decomposes into 5040 simplices, each of volume 1/5040
+The 4 even-parity vertices form a REGULAR tetrahedron:
+  All pairwise Euclidean distances = √2.
 
-========================================================================
-SECTION 3: Inscribed simplex in cube — vertex choices
-========================================================================
+  Vol(regular tetrahedron) = 1/3
+  Pairwise distances: {1.414214}  →  REGULAR ✓
 
-For a REGULAR simplex inscribed in {0,1}^n, we need n+1 vertices of the
-cube such that all pairwise distances are equal.
+The 4 unused (odd-parity) vertices each generate a corner piece:
+each unused vertex + its 3 cube-adjacent tetrahedron vertices
+form a right tetrahedron.
 
-Vertex (v_1,...,v_n) of the cube has v_i ∈ {0,1}.
-Distance² between two vertices = Hamming distance.
-For equidistance, all pairs must have the same Hamming distance d.
+  Corner at (1, 0, 0): adjacent to [(0, 0, 0), (1, 1, 0), (1, 0, 1)], vol = 1/6
+  Corner at (0, 1, 0): adjacent to [(0, 0, 0), (1, 1, 0), (0, 1, 1)], vol = 1/6
+  Corner at (0, 0, 1): adjacent to [(0, 0, 0), (1, 0, 1), (0, 1, 1)], vol = 1/6
+  Corner at (1, 1, 1): adjacent to [(1, 1, 0), (1, 0, 1), (0, 1, 1)], vol = 1/6
 
-This is possible when a Hadamard-type construction exists.
+  Total: 1/3 + 4×(1/6) = 1 ✓
 
-SIMPLEST CONSTRUCTION (not always regular):
-  Use vertices: e_0 = (0,...,0) and e_i = i-th standard basis vector.
-  This gives the STANDARD SIMPLEX (right-angled, not regular).
-  Volume = 1/n!
+  RESULT: 1 tetrahedron + 4 corner pieces = 5 pieces total
+  Complement = 4 pieces
 
-  The complement [0,1]^n \ Δ has volume 1 - 1/n!.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 3: n=2 — TRIANGLE IN SQUARE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Standard (right-angled) simplex inscribed in cube:
---------------------------------------------------
-  n=2: Vol(simplex)/Vol(cube) = 1/2 = 0.500000, complement fraction = 0.500000
-  n=3: Vol(simplex)/Vol(cube) = 1/6 = 0.166667, complement fraction = 0.833333
-  n=4: Vol(simplex)/Vol(cube) = 1/24 = 0.041667, complement fraction = 0.958333
-  n=5: Vol(simplex)/Vol(cube) = 1/120 = 0.008333, complement fraction = 0.991667
-  n=6: Vol(simplex)/Vol(cube) = 1/720 = 0.001389, complement fraction = 0.998611
-  n=7: Vol(simplex)/Vol(cube) = 1/5040 = 0.000198, complement fraction = 0.999802
-  n=8: Vol(simplex)/Vol(cube) = 1/40320 = 0.000025, complement fraction = 0.999975
+The 4 vertices of the unit square: (0,0), (1,0), (0,1), (1,1).
+We cannot inscribe an EQUILATERAL triangle (no 3 square vertices are
+equidistant — distances are always 1,1,√2).
 
-========================================================================
-SECTION 4: Complementary pieces — the Coxeter decomposition view
-========================================================================
+Instead, take any 3 vertices, e.g., (0,0), (1,0), (0,1).
+This right triangle has area = 1/2.
+The complement is the other right triangle: area = 1/2.
 
-KEY INSIGHT: The Coxeter decomposition of the n-cube into n! simplices
-gives us the answer directly.
+The diagonal of the square splits it into 2 congruent right triangles.
+  → 2 pieces total (= 2! = n!)
+  → 1 complement piece (= n! - 1 = 1)
 
-The STANDARD simplex Δ_id corresponds to the identity permutation:
-  Δ_id = { x : 0 ≤ x_1 ≤ x_2 ≤ ... ≤ x_n ≤ 1 }
+This IS the Coxeter decomposition for n=2:
+  Δ_{(1,2)} = { x_1 ≤ x_2 } (below diagonal)
+  Δ_{(2,1)} = { x_2 ≤ x_1 } (above diagonal)
 
-This is ONE of the n! simplices in the decomposition.
-The complement consists of the OTHER n! - 1 simplices.
 
-So the answer is:
-  n=2: 2! - 1 = 1 extra piece?  But the user says 2...
-
-Wait — the user's construction uses a REGULAR (equilateral) simplex,
-not the right-angled standard simplex. Let me reconsider.
-
-Let's examine each dimension carefully.
-
-========================================================================
-SECTION 5: Dimension-by-dimension analysis
-========================================================================
-
-n=2: TRIANGLE IN SQUARE
-  Square vertices: A=(0,0), B=(1,0), C=(1,1), D=(0,1)
-
-  Equilateral triangle inscribed in square:
-    Cannot use 3 square vertices to get equilateral triangle!
-    (distances would be 1,1,√2 — not equilateral)
-
-  So the user must mean: a triangle with vertices at 3 of the 4
-  square vertices, e.g., A=(0,0), B=(1,0), D=(0,1).
-  This is a RIGHT triangle (the standard simplex).
-
-  Complement: the other right triangle BCD.
-  Pieces: 1 + 1 = 2 total. Complement = 1 piece.
-
-  BUT the user says "2 halves on either side" (2 extra pieces, 3 total).
-  This suggests a DIFFERENT construction...
-
-  AH — perhaps the user means an equilateral triangle centered in
-  the square, NOT with vertices at cube vertices. Then the triangle
-  has vertices touching the EDGES of the square, and the complement
-  has 2 pieces (one on each side of a dividing line)... no, that
-  gives 3 extra pieces typically.
-
-  OR: The user counts the triangle itself as one piece, so:
-  n=2: 3 pieces total (triangle + 2 halves) → 2 complement pieces
-  n=3: 5 pieces total (tetra + 4 halves) → 4 complement pieces
-
-  Pattern check: complement pieces = 2, 4, ?, ?, ...
-  Could be: 2^n - 2? No, 2^2-2=2 ✓, 2^3-2=6 ✗
-  Could be: 2(n-1)? 2,4,6,8... matches n=2,3!
-  Could be: n!-1? 1,5 — no.
-  Could be: C(n+1,2)-1? 2,5 — no.
-
-
-========================================================================
-SECTION 6: Schläfli orthoscheme and cube dissection
-========================================================================
-
-THE CORRECT FRAMEWORK: A regular n-simplex CAN be inscribed in an
-n-cube with vertices at cube vertices, but only for certain n.
-
-For n=3: A regular tetrahedron inscribed in a cube uses 4 of the 8
-vertices. Specifically, take alternate vertices:
-  (0,0,0), (1,1,0), (1,0,1), (0,1,1)
-These form a regular tetrahedron with edge length √2.
-
-The complement (cube minus tetrahedron) consists of 4 congruent
-right-angled tetrahedra (corner pieces), one at each unused vertex.
-
-n=2: We CANNOT inscribe an equilateral triangle with vertices at
-square vertices (max 2 at distance 1, one at √2).
-
-Let me reconsider the user's framing. Perhaps:
-  n=2 means a 2-simplex (triangle) with 3 vertices at cube vertices.
-  Using (0,0), (1,0), (0,1): right triangle, complement = 1 piece.
-  Using (0,0), (1,0), (1,1): right triangle, complement = 1 piece.
-
-Hmm. Let me think about n=2 differently: maybe the user means
-embedding a 1-simplex (line segment = diagonal) in a 2-cube (square)?
-  The diagonal of a square splits it into 2 triangles. Extra pieces = 2.
-
-And n=3: embedding a... no, that doesn't match either.
-
-REINTERPRETATION: The user's "n-simplex in n-cube" likely refers to
-the REGULAR simplex inscribed in the cube using alternate vertices
-(when possible), or more generally, to Hadamard simplex embeddings.
-
-For n=3: regular tetrahedron in cube → 4 corner tetrahedra cut off.
-This is the well-known construction. Let me verify and extend.
-
-
-========================================================================
-SECTION 7: n=3 — Regular tetrahedron in cube
-========================================================================
-Tetrahedron vertices (alternating cube vertices):
-  V0 = [0. 0. 0.]
-  V1 = [1. 1. 0.]
-  V2 = [1. 0. 1.]
-  V3 = [0. 1. 1.]
-
-Pairwise distances:
-  |V0-V1| = 1.4142
-  |V0-V2| = 1.4142
-  |V0-V3| = 1.4142
-  |V1-V2| = 1.4142
-  |V1-V3| = 1.4142
-  |V2-V3| = 1.4142
-
-Vol(tetrahedron) = 1/3
-Vol(cube) = 1
-Vol(complement) = 2/3
-Number of corner pieces: 4 (one at each unused vertex)
-Vol(each corner piece) = (2/3)/4 = 1/6
-Check: corner piece is right tetrahedron with legs 1,1,1/2... 
-  Actually: each corner piece has vertices at one unused cube vertex
-  plus the 3 adjacent tetrahedron vertices.
-
-Unused cube vertices: [array([0., 0., 1.]), array([0., 1., 0.]), array([1., 0., 0.]), array([1., 1., 1.])]
-These are the 'even parity' vertices: (1,0,0),(0,1,0),(0,0,1),(1,1,1)
-
-Each corner right-tetrahedron has 3 perpendicular edges of length 1
-Volume = 1×1×1/6 = 1/6
-Total complement volume = 4 × 1/6 = 2/3 ✓
-
-So n=3: 1 tetrahedron + 4 corner pieces = 5 total pieces
-Complement = 4 pieces ✓ (matches user's claim)
-
-========================================================================
-SECTION 8: General n — alternating-vertex simplex in n-cube
-========================================================================
-
-CONSTRUCTION: In {0,1}^n, take the vertices of one "parity class":
-  Even parity: {v : v_1 + v_2 + ... + v_n ≡ 0 (mod 2)} — has 2^{n-1} vertices
-  Odd parity:  {v : v_1 + v_2 + ... + v_n ≡ 1 (mod 2)} — has 2^{n-1} vertices
-
-For n=3: 2^2 = 4 even-parity vertices → exactly the 4 we need for a tetrahedron.
-  These form a regular simplex (all pairwise Hamming distances equal).
-  Wait: Hamming distance between any two even-parity vertices is always even.
-  For n=3, Hamming distance is always 2 (Euclidean distance √2). ✓ Regular!
-
-For general n: any two vertices in the same parity class have even
-Hamming distance. The distances are NOT all equal for n>3.
-  n=4: even parity vertices have Hamming distances 2 or 4.
-  So they do NOT form a regular simplex.
-
-BETTER CONSTRUCTION: Use Hadamard matrices or other constructions.
-But the simplest generalization is the COXETER DECOMPOSITION.
-
-Parity class sizes and distance spectra:
-  n=2: 2 even-parity vertices, Hamming distances: [2], REGULAR
-  n=3: 4 even-parity vertices, Hamming distances: [2], REGULAR
-  n=4: 8 even-parity vertices, Hamming distances: [2, 4], NOT regular
-  n=5: 16 even-parity vertices, Hamming distances: [2, 4], NOT regular
-  n=6: 32 even-parity vertices, Hamming distances: [2, 4, 6], NOT regular
-  n=7: 64 even-parity vertices, Hamming distances: [2, 4, 6], NOT regular
-
-========================================================================
-SECTION 9: n=2 revisited — the diagonal construction
-========================================================================
-
-For n=2, the user says: "triangle in square with 2 halves on either side"
-giving 3 total pieces. This makes sense as:
-
-Take the square [0,1]^2 with vertices A=(0,0), B=(1,0), C=(1,1), D=(0,1).
-Choose 3 vertices, say A, B, D (a right triangle = standard 2-simplex).
-  Triangle ABD has area 1/2.
-  Complement = triangle BCD, also area 1/2.
-  Total pieces: 2 (not 3).
-
-BUT if we choose A, B, C (three consecutive vertices):
-  Triangle ABC has area 1/2.
-  Complement = triangle ACD, area 1/2.
-  Total pieces: 2.
-
-For 3 pieces, we need a triangle that's NOT one of the diagonal halves.
-This happens if we inscribe a triangle with vertices NOT all at corners,
-or use a different decomposition.
-
-ALTERNATIVE: Maybe "2 halves" means the simplex IS one half, and the
-complement is the other half, giving "2 halves on either side" of the
-hypotenuse. Then "2 halves" = 2 total (the simplex + 1 complement).
-
-With this reading:
-  n=2: total = 1 + 1 = 2 (simplex + 1 complement)
-  n=3: total = 1 + 4 = 5 (simplex + 4 corner pieces)
-
-Complement count: 1, 4, ?, ...
-
-WAIT — let me re-read: "2 halves on either side" for n=2 means
-the simplex divides the square into 2 halves. The simplex IS one half.
-There is 1 complementary piece.
-
-And for n=3: "4 halves around it" means 4 complementary pieces.
-
-So: complement pieces = 1, 4, ?, ...
-
-
-========================================================================
-SECTION 10: Coxeter decomposition — n! - 1 complement pieces
-========================================================================
-
-THE RIGHT FRAMEWORK (Coxeter/order polytope decomposition):
-
-The n-cube [0,1]^n decomposes into n! simplices via:
-  Δ_σ = { x ∈ [0,1]^n : 0 ≤ x_{σ(1)} ≤ x_{σ(2)} ≤ ... ≤ x_{σ(n)} ≤ 1 }
-
-Each has volume 1/n!. They tile the cube perfectly.
-
-If we pick ONE simplex (say the identity: x_1 ≤ x_2 ≤ ... ≤ x_n),
-the complement consists of n! - 1 other simplices.
-
-BUT these n! - 1 simplices are NOT the "corner pieces" from the
-tetrahedron construction. The Coxeter simplices are right-angled
-(orthoschemes), not regular.
-
-For n=3 with the REGULAR tetrahedron construction:
-  The 4 corner pieces are NOT Coxeter simplices. Let me verify
-  by computing volumes differently.
-
-Actually, let me just directly compute for the alternating-vertex
-tetrahedron construction at n=3:
-
-  Tetrahedron T with vertices (0,0,0), (1,1,0), (1,0,1), (0,1,1)
-  Vol(T) = 1/3
-
-  The 4 unused vertices are (1,0,0), (0,1,0), (0,0,1), (1,1,1).
-  Each unused vertex, together with the 3 adjacent tet vertices,
-  forms a right tetrahedron of volume 1/6.
-  4 × 1/6 = 2/3
-  1/3 + 2/3 = 1 ✓
-
-  So for n=3: complement = 4 pieces of volume 1/6 each. ✓
-
-For the n=3 Coxeter decomposition:
-  6 simplices of volume 1/6 each. Complement of one = 5 pieces.
-  This is DIFFERENT from the alternating construction (4 pieces).
-
-
-========================================================================
-SECTION 11: Alternating-vertex simplex — general n
-========================================================================
-
-For n=3: the alternating (Hamming-parity) construction works perfectly
-because we have exactly n+1 = 4 vertices in one parity class.
-This only works when 2^{n-1} = n+1, i.e., n=3.
-
-For other n, we need a DIFFERENT set of n+1 cube vertices that
-form a regular simplex. This exists iff a Hadamard matrix of
-order n+1 exists (Hadamard conjecture: exists for all n+1 ≡ 0 mod 4).
-
-But the Coxeter (right-angled) simplex ALWAYS works:
-  Take Δ_id = { 0 ≤ x_1 ≤ x_2 ≤ ... ≤ x_n ≤ 1 }
-  This is a simplex with n+1 vertices:
-    v_0 = (0,0,...,0)
-    v_1 = (1,0,...,0)
-    v_2 = (1,1,...,0)
-    ...
-    v_n = (1,1,...,1)
-  Volume = 1/n!
-  Complement = n! - 1 simplices (the other Coxeter simplices)
-
-Let me compute for both constructions where applicable.
-
-COXETER DECOMPOSITION (right-angled simplex in n-cube):
--------------------------------------------------------
-  n       n!   complement    Vol(simplex)    Vol ratio
--------------------------------------------------------
-  2        2            1             1/2   0.50000000
-  3        6            5             1/6   0.16666667
-  4       24           23            1/24   0.04166667
-  5      120          119           1/120   0.00833333
-  6      720          719           1/720   0.00138889
-  7     5040         5039          1/5040   0.00019841
-  8    40320        40319         1/40320   0.00002480
-  9   362880       362879        1/362880   0.00000276
-
-========================================================================
-SECTION 12: Regular simplex inscribed in n-cube (Hadamard)
-========================================================================
-
-A REGULAR n-simplex can be inscribed with vertices at {0,1}^n vertices
-iff there exists a Hadamard matrix of order n+1.
-
-Hadamard matrices exist for n+1 = 1, 2, 4, 8, 12, 16, 20, 24, ...
-So regular simplices in cubes exist for n = 0, 1, 3, 7, 11, 15, 19, 23, ...
-
-For n=3: the regular tetrahedron in the cube.
-  4 vertices chosen from 8. Complement = 4 corner right-tetrahedra.
-
-For n=7: a regular 7-simplex in {0,1}^7.
-  8 vertices chosen from 128 (those with even parity sums).
-  Each vertex has all-pairs Hamming distance 4, Euclidean distance 2.
-
-For n=1: segment [0,1] has 2 vertices = 2-simplex? No, 1-simplex.
-  The 1-simplex IS the 1-cube. Complement = empty. 0 pieces.
-
-For n=2: NO regular triangle in the square (Hadamard order 3 doesn't exist).
-
-
-========================================================================
-SECTION 13: n=3 complement — detailed geometry
-========================================================================
-
-For the regular tetrahedron in the cube (n=3):
-
-Tetrahedron vertices (even parity): (0,0,0), (1,1,0), (1,0,1), (0,1,1)
-Unused vertices (odd parity):       (1,0,0), (0,1,0), (0,0,1), (1,1,1)
-
-Each unused vertex v has 3 cube-adjacent tetrahedron vertices.
-The convex hull of {v} ∪ {3 adjacent tet vertices} is a right tetrahedron.
-
-For v = (1,0,0):
-  Adjacent tet vertices: (0,0,0), (1,1,0), (1,0,1)
-  This is a right tetrahedron at (1,0,0).
-  Three edges from (1,0,0): lengths 1, 1, 1 (perpendicular).
-  Volume = 1/6.
-
-For v = (1,1,1):
-  Adjacent tet vertices: (1,1,0), (1,0,1), (0,1,1)
-  Same shape: right tetrahedron at (1,1,1).
-  Volume = 1/6.
-
-All 4 corner pieces are CONGRUENT (related by the symmetry group of the
-tetrahedron inscribed in the cube = S_4, order 24).
-
-IMPORTANT: These 4 corner pieces are themselves simplices!
-The complement decomposes into exactly 4 simplicial pieces.
-
-
-========================================================================
-SECTION 14: Computational verification
-========================================================================
-
-n=3: Regular tetrahedron in cube
-  Vol(tetrahedron) = 0.333333 = 1/3
-  Vol(corner 0) = 0.166667 = 1/6
-  Vol(corner 1) = 0.166667 = 1/6
-  Vol(corner 2) = 0.166667 = 1/6
-  Vol(corner 3) = 0.166667 = 1/6
-  Total = 1.000000 (should be 1.0)
-  Complement pieces = 4
-
-========================================================================
-SECTION 15: Higher dimensions — non-Hadamard case
-========================================================================
-
-For general n, we use the COXETER simplex (right-angled, not regular):
-  Δ_id = { 0 ≤ x_1 ≤ x_2 ≤ ... ≤ x_n ≤ 1 }
-
-The complement of Δ_id in [0,1]^n consists of n! - 1 other Coxeter
-simplices, each of volume 1/n!.
-
-But these are NOT necessarily "corner pieces" — they're permutation
-simplices.
-
-For the REGULAR simplex in cube (Hadamard case, n=3,7,11,...):
-We can compute the complement structure.
-
-Let me think about this more carefully for n=3:
-  The Coxeter decomposition gives 6 simplices.
-  The regular tetrahedron consists of EXACTLY 2 Coxeter simplices.
-  Each corner piece is exactly 1 Coxeter simplex.
-  Total: 2 + 4 = 6 = 3! ✓
-
-Verifying: regular tetrahedron = union of Coxeter simplices at n=3
-Coxeter simplex for permutation σ = {x : 0 ≤ x_{σ(1)} ≤ ... ≤ x_{σ(n)} ≤ 1}
-
-  σ=(1,2,3): vertices ['(0, 0, 0)', '(1, 0, 0)', '(1, 1, 0)', '(1, 1, 1)']
-    centroid = (0.75,0.50,0.25), inside tetrahedron: True
-  σ=(1,3,2): vertices ['(0, 0, 0)', '(1, 0, 0)', '(1, 0, 1)', '(1, 1, 1)']
-    centroid = (0.75,0.25,0.50), inside tetrahedron: True
-  σ=(2,1,3): vertices ['(0, 0, 0)', '(0, 1, 0)', '(1, 1, 0)', '(1, 1, 1)']
-    centroid = (0.50,0.75,0.25), inside tetrahedron: True
-  σ=(2,3,1): vertices ['(0, 0, 0)', '(0, 1, 0)', '(0, 1, 1)', '(1, 1, 1)']
-    centroid = (0.25,0.75,0.50), inside tetrahedron: True
-  σ=(3,1,2): vertices ['(0, 0, 0)', '(0, 0, 1)', '(1, 0, 1)', '(1, 1, 1)']
-    centroid = (0.50,0.25,0.75), inside tetrahedron: True
-  σ=(3,2,1): vertices ['(0, 0, 0)', '(0, 0, 1)', '(0, 1, 1)', '(1, 1, 1)']
-    centroid = (0.25,0.50,0.75), inside tetrahedron: True
-
-Checking which Coxeter simplices lie inside the regular tetrahedron:
-  σ=(1,2,3): NOT fully inside
-  σ=(1,3,2): NOT fully inside
-  σ=(2,1,3): NOT fully inside
-  σ=(2,3,1): NOT fully inside
-  σ=(3,1,2): NOT fully inside
-  σ=(3,2,1): NOT fully inside
-
-========================================================================
-SECTION 16: Complement piece counts — summary table
-========================================================================
-
-TWO DIFFERENT CONSTRUCTIONS:
-
-A) COXETER (right-angled simplex, exists for ALL n):
-   Simplex = { 0 ≤ x_1 ≤ ... ≤ x_n ≤ 1 }, volume = 1/n!
-   Complement = n! - 1 simplicial pieces, each volume 1/n!
-
-B) HADAMARD (regular simplex, exists for n=1,3,7,11,15,19,23,...):
-   Simplex = convex hull of n+1 alternate-parity cube vertices
-   For n=3: volume = 1/3, complement = 4 pieces each volume 1/6
-   The simplex consists of (n+1)!/2^n Coxeter simplices
-   Complement: 2^{n-1} - (n+1) unused cube vertices → pieces?
-
-   Actually at n=3: 2^3 = 8 vertices, 4 used, 4 unused → 4 corner pieces.
-   At n=7: 2^7 = 128, 8 used, 120 unused → how many pieces?
-
-CONSTRUCTION A — Coxeter decomposition:
-  n     simplex vol   # complement    comp. vol
---------------------------------------------------
-  1             1/1              0          0/1
-  2             1/2              1          1/2
-  3             1/6              5          5/6
-  4            1/24             23        23/24
-  5           1/120            119      119/120
-  6           1/720            719      719/720
-  7          1/5040           5039    5039/5040
-  8         1/40320          40319  40319/40320
-  9        1/362880         362879 362879/362880
- 10       1/3628800        3628799 3628799/3628800
-
-
-CONSTRUCTION B — Regular (Hadamard) simplex:
-(Only exists for certain n)
-  n  2^n verts   used  unused     simplex vol  corner pieces
------------------------------------------------------------------
-  1         2      2       0               1              0
-  3         8      4       4             1/3              4
-  7       128      8     120           2/315              ?
-
-n=7 Hadamard simplex vertices in {0,1}^7:
-  V0 = (1, 1, 1, 1, 1, 1, 1)  (coord sum = 7)
-  V1 = (0, 1, 0, 1, 0, 1, 0)  (coord sum = 3)
-  V2 = (1, 0, 0, 1, 1, 0, 0)  (coord sum = 3)
-  V3 = (0, 0, 1, 1, 0, 0, 1)  (coord sum = 3)
-  V4 = (1, 1, 1, 0, 0, 0, 0)  (coord sum = 3)
-  V5 = (0, 1, 0, 0, 1, 0, 1)  (coord sum = 3)
-  V6 = (1, 0, 0, 0, 0, 1, 1)  (coord sum = 3)
-  V7 = (0, 0, 1, 0, 1, 1, 0)  (coord sum = 3)
-  Pairwise squared distances: [4]
-  REGULAR
-  Volume = 0.00634921
-  As fraction: 2/315
-  Complement volume = 0.99365079
-
-========================================================================
-SECTION 17: Corner pieces and complement structure
-========================================================================
-
-For the regular tetrahedron in the 3-cube:
-  - The complement = 4 congruent right tetrahedra
-  - Each right tetrahedron is at an unused vertex
-  - The complement is a SIMPLICIAL complex
-
-For n=3, the key insight is that each unused vertex is adjacent (shares
-a cube edge) to exactly 3 simplex vertices, forming a corner tetrahedron.
-
-At n=7, each unused vertex is adjacent to some simplex vertices.
-But the complement structure is more complex.
-
-Instead, let me focus on the COXETER decomposition and count how
-many Coxeter simplices comprise the Hadamard simplex.
-
-n=3: Coxeter simplices inside the regular tetrahedron
-  Inside: 6, Outside: 0
-  Volume check: 6/6 = 1.0000 vs 1/3 = 0.3333
-
-========================================================================
-SECTION 18: Volume ratios and combinatorial connections
-========================================================================
-
-VOLUME RATIOS for the Coxeter (right-angled) simplex:
-
-  Vol(simplex) / Vol(cube) = 1/n!
-
-This ratio appears everywhere in combinatorics:
-  - 1/n! = probability that n uniform random variables are in order
-  - 1/n! = coefficient in e^x expansion
-  - The n! simplices correspond to the n! permutations of coordinates
-
-CONNECTION TO TOURNAMENTS:
-  The number of tournaments on n vertices = 2^{C(n,2)}
-  The number of labeled acyclic tournaments = n!
-
-  Volume ratio 1/n! connects to:
-  - Probability of drawing a transitive tournament at random
-    (NOT 1/n!, but related via permutations)
-  - Eulerian numbers: A(n,k) counts permutations with k descents
-    These appear in the f-vector of the permutohedron
-  - The Coxeter decomposition is essentially the braid arrangement
-
-Volume ratios and piece counts:
-  n            1/n!     n!-1   2^C(n,2)           ratio
--------------------------------------------------------
-  2             1/2        1          2             1/2
-  3             1/6        5          8             5/6
-  4            1/24       23         64           23/24
-  5           1/120      119       1024         119/120
-  6           1/720      719      32768         719/720
-  7          1/5040     5039    2097152       5039/5040
-  8         1/40320    40319  268435456     40319/40320
-  9        1/362880   362879 68719476736   362879/362880
-
-========================================================================
-SECTION 19: Resolving the user's pattern — 2, 4, ?, ?, ...
-========================================================================
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 4: MAX-VOLUME SIMPLEX INSCRIBED IN n-CUBE (vertices at {0,1}^n)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For each n, we find the maximum volume of an n-simplex whose n+1
+vertices are chosen from the 2^n vertices of {0,1}^n.
+
+This is related to the HADAMARD MAXIMAL DETERMINANT PROBLEM:
+  max |det(M)| over (n+1)×(n+1) matrices with entries in {0,1}
+  = max simplex volume × n!
+
+  n=1: Vol =        1, Coxeter cells =   1/1    , unused verts =   0, regular = YES, #1 max simplices
+        Vertices: [(0,), (1,)]
+        Dist² set: [1.0]
+
+  n=2: Vol =      1/2, Coxeter cells =   1/2    , unused verts =   1, regular =  no, #4 max simplices
+        Vertices: [(0, 0), (1, 0), (0, 1)]
+        Dist² set: [1.0, 2.0]
+
+  n=3: Vol =      1/3, Coxeter cells =   2/6    , unused verts =   4, regular = YES, #2 max simplices
+        Vertices: [(0, 0, 0), (1, 1, 0), (1, 0, 1), (0, 1, 1)]
+        Dist² set: [2.0]
+
+  n=4: Vol =      1/8, Coxeter cells =   3/24   , unused verts =  11, regular =  no, #16 max simplices
+        Vertices: [(0, 0, 0, 0), (1, 1, 0, 0), (1, 0, 1, 0), (1, 0, 0, 1), (0, 1, 1, 1)]
+        Dist² set: [2.0, 3.0]
+
+  n=5: Vol =     1/24, Coxeter cells =   5/120  , unused verts =  26, regular =  no, #320 max simplices
+        Vertices: [(0, 0, 0, 0, 0), (1, 1, 0, 0, 0), (1, 0, 1, 0, 0), (0, 1, 1, 1, 0), (0, 1, 1, 0, 1), (1, 0, 0, 1, 1)]
+        Dist² set: [2.0, 3.0, 4.0]
+
+  n=6: C(64,7) = 621,216,192 — too many for brute force, using known results
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 5: HADAMARD SIMPLEX — Regular simplex in n-cube
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A REGULAR n-simplex can be inscribed in {0,1}^n IFF a Hadamard matrix
+of order n+1 exists. This requires n+1 ≡ 0 (mod 4) [for n≥3], so:
+
+  n = 1, 3, 7, 11, 15, 19, 23, 27, 31, ...
+
+For n=3: the regular tetrahedron (analyzed above).
+For n=7: use the Sylvester-Hadamard construction H_8.
+
+n=7 Hadamard simplex vertices:
+  V0 = (1, 1, 1, 1, 1, 1, 1)  (sum = 7)
+  V1 = (0, 1, 0, 1, 0, 1, 0)  (sum = 3)
+  V2 = (1, 0, 0, 1, 1, 0, 0)  (sum = 3)
+  V3 = (0, 0, 1, 1, 0, 0, 1)  (sum = 3)
+  V4 = (1, 1, 1, 0, 0, 0, 0)  (sum = 3)
+  V5 = (0, 1, 0, 0, 1, 0, 1)  (sum = 3)
+  V6 = (1, 0, 0, 0, 0, 1, 1)  (sum = 3)
+  V7 = (0, 0, 1, 0, 1, 1, 0)  (sum = 3)
+
+Pairwise squared distances: [4]
+Regular: YES
+
+Volume = 2/315 ≈ 0.00634921
+Coxeter cells: 32 of 5040
+Complement Coxeter cells: 5008
+Unused cube vertices: 120 = 120
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 6: CORNER PIECE ANALYSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+At n=3, each of the 4 unused cube vertices gives rise to exactly 1
+corner simplex (right tetrahedron), and these 4 corner pieces exactly
+tile the complement. This works because:
+
+  1. Each unused vertex v is adjacent (Hamming distance 1) to exactly
+     n simplex vertices.
+  2. The convex hull of {v} ∪ {adjacent simplex vertices} is a right
+     simplex of volume 1/n!.
+  3. The 2^n - (n+1) such right simplices tile the complement.
+
+Does this hold for general n? Let's check adjacency counts.
+
+
+n=2: 1 unused vertices
+  (1, 1): 2 adjacent simplex vertices
+  Adjacency distribution: {2: 1}
+  Complement volume: 1/2
+  Sum of corner volumes: 1/2
+  Corner pieces EXACTLY tile complement ✓
+
+n=3: 4 unused vertices
+  (0, 0, 1): 3 adjacent simplex vertices
+  (0, 1, 0): 3 adjacent simplex vertices
+  (1, 0, 0): 3 adjacent simplex vertices
+  (1, 1, 1): 3 adjacent simplex vertices
+  Adjacency distribution: {3: 4}
+  Complement volume: 2/3
+  Sum of corner volumes: 2/3
+  Corner pieces EXACTLY tile complement ✓
+
+n=4: 11 unused vertices
+  (0, 0, 0, 1): 2 adjacent simplex vertices
+  (0, 0, 1, 0): 2 adjacent simplex vertices
+  (0, 0, 1, 1): 1 adjacent simplex vertices
+  (0, 1, 0, 0): 2 adjacent simplex vertices
+  (0, 1, 0, 1): 1 adjacent simplex vertices
+  (0, 1, 1, 0): 1 adjacent simplex vertices
+  (1, 0, 0, 0): 4 adjacent simplex vertices
+  (1, 0, 1, 1): 2 adjacent simplex vertices
+  (1, 1, 0, 1): 2 adjacent simplex vertices
+  (1, 1, 1, 0): 2 adjacent simplex vertices
+  (1, 1, 1, 1): 1 adjacent simplex vertices
+  Adjacency distribution: {1: 4, 2: 6, 4: 1}
+  Complement volume: 7/8
+  Sum of corner volumes: 1/24
+  Corner pieces do NOT tile complement (gap = 0.833333)
+
+n=5: 26 unused vertices
+  Adjacency distribution: {0: 3, 1: 17, 2: 5, 3: 1}
+  Complement volume: 23/24
+  Sum of corner volumes: 0
+  Corner pieces do NOT tile complement (gap = 0.958333)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 7: HOW MANY COXETER CELLS IN THE MAX INSCRIBED SIMPLEX?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The max-volume inscribed simplex occupies k Coxeter cells of volume 1/n!.
+So k = Vol(simplex) × n!
+
+  n │        Vol │  k cells │       n! │  comp cells │  2^n-(n+1)
+────────────────────────────────────────────────────────────
+  1 │          1 │        1 │        1 │           0 │          0
+  2 │        1/2 │        1 │        2 │           1 │          1
+  3 │        1/3 │        2 │        6 │           4 │          4
+  4 │        1/8 │        3 │       24 │          21 │         11
+  5 │       1/24 │        5 │      120 │         115 │         26
+  7 │      2/315 │       32 │     5040 │        5008 │        120
+
+Coxeter cells in simplex: 1, 1, 2, 3, ?, ?, 32, ...
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 8: VOLUME RATIOS — How much of the cube does the simplex fill?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Three different simplices in the n-cube:
+  A) Coxeter orthoscheme: Vol = 1/n!  (right-angled, always exists)
+  B) Max-volume inscribed: Vol = max over (n+1)-subsets of {0,1}^n
+  C) Hadamard (regular): Vol = √(n+1)·((n+1)/4)^{n/2}/n!  (when exists)
+
+  n │   Coxeter 1/n! │  Max inscribed │        Regular
+──────────────────────────────────────────────────────
+  1 │            1/1 │              1 │              1
+  2 │            1/2 │            1/2 │            ---
+  3 │            1/6 │            1/3 │            1/3
+  4 │           1/24 │            1/8 │            ---
+  5 │          1/120 │           1/24 │            ---
+  6 │          1/720 │              ? │            ---
+  7 │         1/5040 │          2/315 │          2/315
+  8 │        1/40320 │              ? │            ---
+  9 │       1/362880 │              ? │            ---
+ 10 │      1/3628800 │              ? │            ---
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 9: CONNECTION TO TOURNAMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The Coxeter decomposition connects cubes, simplices, and tournaments:
+
+1. Each of the n! Coxeter simplices corresponds to a PERMUTATION σ ∈ S_n.
+   Each permutation defines a TRANSITIVE TOURNAMENT on [n]:
+     vertex i beats vertex j iff σ(i) < σ(j).
+
+2. So: n! Coxeter simplices ↔ n! transitive tournaments ↔ n! linear orders.
+
+3. The n-cube [0,1]^n tiles into these n! simplices the same way the
+   set of all orderings decomposes into n! total orders.
+
+4. The user's binomial connection:
+     (x+1)^n at x=2: 3^n
+     (x+2)^n at x=2: 4^n
+     Difference: 4^n - 3^n
+   This is the number of {0,1,2,3}^n points NOT in {0,1,2}^n.
+   In a scaled cube, this counts lattice points in the "outer shell."
+
+  n │       n! │   2^C(n,2) │  n!/2^C(n,2) │    4^n-3^n
+────────────────────────────────────────────────────
+  2 │        2 │          2 │            1 │          7
+  3 │        6 │          8 │          3/4 │         37
+  4 │       24 │         64 │          3/8 │        175
+  5 │      120 │       1024 │       15/128 │        781
+  6 │      720 │      32768 │      45/2048 │       3367
+  7 │     5040 │    2097152 │   315/131072 │      14197
+  8 │    40320 │  268435456 │  315/2097152 │      58975
+  9 │   362880 │ 68719476736 │ 2835/536870912 │     242461
+
+Note: n!/2^{C(n,2)} = fraction of tournaments that are transitive.
+This goes to 0 exponentially — most tournaments have cycles.
+The Coxeter simplex (vol = 1/n!) captures the "transitive fraction"
+of the cube's geometry.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 10: RESOLVING THE PATTERN — "2 halves, 4 halves, ?, ..."
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 The user observes:
-  n=2: 2 extra pieces (complement of triangle in square)
-  n=3: 4 extra pieces (complement of tetrahedron in cube)
+  n=2: "equilateral triangle in square, 2 halves on either side"
+  n=3: "tetrahedron in cube, 4 halves around it"
 
-RECONCILIATION:
+INTERPRETATION: "halves" = complement pieces. The user asks how this
+pattern continues.
 
-Interpretation 1: Coxeter decomposition
-  n=2: complement = 2! - 1 = 1 piece. Doesn't match "2".
-  Unless counting: the simplex DIVIDES the square into 2 pieces total.
-  n=3: complement = 3! - 1 = 5 pieces. Doesn't match "4".
-  ✗ Doesn't fit.
+For the REGULAR (Hadamard) simplex construction:
+  n=3: 4 unused vertices → 4 corner simplices → 4 complement pieces
 
-Interpretation 2: Regular simplex, corner pieces
-  n=2: can't inscribe regular triangle. ✗
-  n=3: 4 corner pieces. ✓
+For the COXETER (right-angled) simplex:
+  n=2: 2 total pieces (diagonal cuts square in half)
+  n=3: 6 total pieces (but complement = 5, not 4)
 
-Interpretation 3: RIGHT simplex (standard simplex), counting faces
-  n=2: standard simplex = right triangle. The hypotenuse cuts the square.
-    On one side: the simplex. On the other: the complement (1 piece).
-    But there are 2 "halves" total. Count = 2.
-  n=3: standard simplex occupies 1 Coxeter cell.
-    The complement has 5 pieces. Doesn't match 4. ✗
+RECONCILIATION: The user's n=2 case ("2 halves") = 2 total pieces
+in the Coxeter decomposition. The n=3 case ("4 halves around it")
+= the 4 corner pieces of the regular tetrahedron construction.
 
-Interpretation 4: The DIAGONAL construction
-  n=2: diagonal of square creates 2 pieces. ✓
-  n=3: the "main diagonal" plane... creates how many pieces?
+These are DIFFERENT constructions! For n=2 there is no regular simplex
+in the square, so the Coxeter view (2 total) applies.
 
-  Actually: inscribe the simplex using vertices along the main diagonal
-  staircase: (0,0,...,0), (1,0,...,0), (1,1,...,0), ..., (1,1,...,1).
-  The complement of this simplex consists of n! - 1 pieces.
-  n=2: 1 piece. ✗
+THE TWO NATURAL SEQUENCES:
 
-Interpretation 5: n-simplex embedded as n+1 cube vertices,
-  complement = number of unused vertices?
-  n=2: 4 - 3 = 1. ✗
-  n=3: 8 - 4 = 4. ✓
-  n=4: 16 - 5 = 11. ?
+Sequence A (Coxeter): complement pieces = n! - 1
+  n:           1     2     3     4     5     6     7     8
+  pieces:      0     1     5    23   119   719  5039 40319
+  (0, 1, 5, 23, 119, 719, 5039, 40319)
 
-  For n=3 regular: complement pieces = unused vertices = 4. ✓
-  But n=2 doesn't have a regular embedding.
+Sequence B (Hadamard corner pieces): 2^n - (n+1)
+  n:           1     2     3     4     5     6     7     8     9    10    11
+  pieces:      0     1     4    11    26    57   120   247   502  1013  2036
+  (0, 1, 4, 11, 26, 57, 120, 247, 502, 1013, 2036)
+  = OEIS A000325
 
-BEST INTERPRETATION: The user's n=2 case might be counting differently.
-"2 halves on either side" = the simplex cuts the square into 2 halves
-(total 2 pieces, one of which IS the simplex).
+For the Hadamard case (n = 3, 7, 11, 15, 19, 23, ...):
+  The complement of the regular simplex has AT MOST 2^n - (n+1)
+  convex corner pieces, one per unused vertex.
 
-Then:
-  n=2: 2 pieces total (simplex + 1 complement)
-  n=3: 5 pieces total (simplex + 4 complement)
+  At n=3: 4 corners, each with vol 1/6, total 4/6 = 2/3 ✓
+  At n=7: 120 unused vertices, but corner pieces may overlap or
+  have lower dimension — need careful analysis.
 
-Extra pieces: 1, 4, ?, ...
+n=7: adjacency of unused vertices to simplex vertices:
+  120 unused vertices
+  Adjacency distribution (# adjacent simplex verts → count):
+    0 adjacent: 64 vertices
+    1 adjacent: 56 vertices
 
-OR the user counts "halves" as the non-simplex pieces:
-  n=2: "2 halves" but actually 1 complement piece of the right triangle.
-  Hmm, unless they mean the diagonal creates 2 triangles and the inscribed
-  one is one of them, with the "2 halves" being the 2 triangles total.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PART 11: MASTER SUMMARY TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-I think the most productive path is to explore BOTH constructions:
+  n │     n! │  Coxeter │  Max Vol │ Max cells │ Comp cells │ Unused │ Regular?
+──────────────────────────────────────────────────────────────────────────
+  1 │      1 │        0 │        1 │         1 │          0 │      0 │      YES
+  2 │      2 │        1 │      1/2 │         1 │          1 │      1 │       no
+  3 │      6 │        5 │      1/3 │         2 │          4 │      4 │      YES
+  4 │     24 │       23 │      1/8 │         3 │         21 │     11 │       no
+  5 │    120 │      119 │     1/24 │         5 │        115 │     26 │       no
+  6 │    720 │      719 │        ? │         ? │          ? │     57 │        ?
+  7 │   5040 │     5039 │    2/315 │        32 │       5008 │    120 │      YES
 
+ANSWERS TO THE USER'S QUESTIONS:
 
-========================================================================
-SECTION 20: DEFINITIVE ANSWER — Two constructions compared
-========================================================================
+1. PIECES when n-simplex inscribed in n-cube:
 
-╔══════════════════════════════════════════════════════════════════════╗
-║                    CONSTRUCTION A: COXETER                          ║
-║                (Right-angled simplex, ALL n)                        ║
-╚══════════════════════════════════════════════════════════════════════╝
+   COXETER construction (right-angled simplex, all n):
+     Total pieces = n!. Complement pieces = n! - 1.
+     n=2: 2 total (matches "2 halves")
+     n=3: 6 total, 5 complement
+     n=4: 24 total, 23 complement
 
-Simplex: Δ = { x ∈ [0,1]^n : x_1 ≤ x_2 ≤ ... ≤ x_n }
-Vertices: (0,...,0), (1,0,...,0), (1,1,0,...,0), ..., (1,...,1)
-Volume: 1/n!
-Complement pieces: n! - 1  (each also volume 1/n!)
-All pieces are CONGRUENT (related by coordinate permutations).
+   HADAMARD construction (regular simplex, n=3,7,11,...):
+     n=3: 5 total (1 tetra + 4 corners)
+     n=7: 1 simplex + up to 120 corner pieces
 
-  n    Vol(simplex)   # total pieces   # complement
-----------------------------------------------------
-  1             1/1                1              0
-  2             1/2                2              1
-  3             1/6                6              5
-  4            1/24               24             23
-  5           1/120              120            119
-  6           1/720              720            719
-  7          1/5040             5040           5039
-  8         1/40320            40320          40319
-  9        1/362880           362880         362879
- 10       1/3628800          3628800        3628799
+2. VOLUME RATIOS:
+   Coxeter: Vol(simplex)/Vol(cube) = 1/n! always.
+   Max inscribed: 1/2, 1/3, 1/8, ?, ?, 2/315, ... (Hadamard bound)
 
-╔══════════════════════════════════════════════════════════════════════╗
-║              CONSTRUCTION B: HADAMARD (Regular simplex)             ║
-║            (n = 1, 3, 7, 11, 15, 19, 23, ...)                      ║
-╚══════════════════════════════════════════════════════════════════════╝
+3. The user's pattern "2, 4, ?, ?" is BEST explained as:
+   n=2: 2 total Coxeter pieces (the diagonal cuts the square in 2)
+   n=3: 4 corner pieces (regular tetrahedron complement)
+   n=4: 23 Coxeter complement pieces (no regular simplex exists)
+   n=5: 119 Coxeter complement pieces
 
-Simplex: convex hull of n+1 cube vertices, all pairwise equidistant.
-Complement: consists of 2^n - (n+1) unused cube vertices generating
-corner simplices.
+   The n=2 and n=3 cases use DIFFERENT constructions, which is why
+   a single clean sequence is hard to find.
 
-For n=3: complement = 4 corner right tetrahedra, each vol = 1/6.
-The regular simplex has vol = 1/3 = 2 Coxeter simplices.
+   If forced to one sequence: n! - 1 = 1, 5, 23, 119, 719, ...
+   (Coxeter complement) grows as n! and has no simpler form.
 
-Key relationship:
-  Vol(Hadamard simplex) / Vol(cube) = (n+1)^{(n+1)/2} / (2^n · n!)
-  (when the Hadamard simplex has max volume among inscribed simplices)
+4. TOURNAMENT CONNECTION:
+   The n! Coxeter simplices ↔ n! transitive tournaments on n vertices.
+   The simplex-in-cube geometry IS the geometry of linear orders
+   inside the space of all orderings.
 
-  n     simplex vol    comp. vol  Coxeter cells    comp. cells
---------------------------------------------------------------
-  1              1            0              1              0
-  3            1/3          2/3              2              4
-  7          2/315      313/315             32           5008
-
-========================================================================
-SECTION 21: n=4 — 4-simplex in 4-cube
-========================================================================
-
-n=4: No Hadamard matrix of order 5 exists (5 is not 1,2, or ≡0 mod 4).
-So we use the Coxeter construction.
-
-Coxeter simplex: { 0 ≤ x_1 ≤ x_2 ≤ x_3 ≤ x_4 ≤ 1 }
-5 vertices: (0,0,0,0), (1,0,0,0), (1,1,0,0), (1,1,1,0), (1,1,1,1)
-Volume: 1/24
-Complement: 23 pieces, each volume 1/24.
-
-Can we also inscribe a simplex using 5 vertices of {0,1}^4?
-Yes! But it won't be regular.
-
-Maximum volume 4-simplex in {0,1}^4:
-  Volume = 0.125000 = 1/8
-  Vertices:
-    (0, 0, 0, 0)
-    (1, 1, 1, 0)
-    (1, 0, 0, 1)
-    (0, 1, 0, 1)
-    (0, 0, 1, 1)
-  Coxeter cells occupied: 3
-  Pairwise distances²:
-    |V0-V1|² = 3    |V0-V2|² = 2    |V0-V3|² = 2    |V0-V4|² = 2    |V1-V2|² = 3    |V1-V3|² = 3    |V1-V4|² = 3    |V2-V3|² = 2    |V2-V4|² = 2    |V3-V4|² = 2
-  Number of max-volume inscribed 4-simplices: 16
-
-========================================================================
-SECTION 22: Complement structure for max-volume inscribed simplices
-========================================================================
-
-For a simplex S inscribed with vertices at cube vertices, the complement
-cube \ S can be triangulated into simplices. The number of pieces
-depends on the specific choice of vertices.
-
-Using the Coxeter decomposition as the common refinement:
-  Each inscribed simplex S is a union of k Coxeter simplices.
-  The complement consists of n! - k Coxeter simplices.
-
-But these n! - k Coxeter simplices may glue together into fewer
-convex pieces (the complement may not be simplicial in the
-coarsest decomposition).
-
-For n=3 (regular tetrahedron):
-  S occupies 2 Coxeter cells. Complement = 4 Coxeter cells.
-  The 4 cells group into 4 corner tetrahedra (each is 1 cell).
-  So complement = 4 pieces (matching the user's count).
-
-The complement pieces at each unused vertex:
-
-n=2: max inscribed simplex volume = 1/2
-      Coxeter cells in simplex: 1 of 2
-      Complement Coxeter cells: 1
-      Unused cube vertices: 1
-      Vertices: [(0, 0), (1, 0), (0, 1)]
-
-n=3: max inscribed simplex volume = 1/3
-      Coxeter cells in simplex: 2 of 6
-      Complement Coxeter cells: 4
-      Unused cube vertices: 4
-      Vertices: [(0, 0, 0), (1, 1, 0), (1, 0, 1), (0, 1, 1)]
-
-n=4: max inscribed simplex volume = 1/8
-      Coxeter cells in simplex: 3 of 24
-      Complement Coxeter cells: 21
-      Unused cube vertices: 11
-      Vertices: [(0, 0, 0, 0), (1, 1, 1, 0), (1, 0, 0, 1), (0, 1, 0, 1), (0, 0, 1, 1)]
-
-n=5: max inscribed simplex volume = 1/24

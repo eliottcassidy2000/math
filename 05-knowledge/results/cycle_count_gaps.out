@@ -1,0 +1,115 @@
+======================================================================
+CYCLE COUNT GAPS AND IMPOSSIBLE H VALUES
+======================================================================
+
+n=3:
+  Total tournaments: 8
+  Cycle count range: 0 to 1
+  Missing counts: []
+  Distribution: {0: 6, 1: 2}
+  Corresponding absent H (if Ω complete): []
+
+  Cycle length breakdown (t₃, c₅, ...):
+    (none), total=0: 6
+    (c3=1), total=1: 2
+
+n=4:
+  Total tournaments: 64
+  Cycle count range: 0 to 2
+  Missing counts: []
+  Distribution: {0: 24, 1: 16, 2: 24}
+  Corresponding absent H (if Ω complete): []
+
+  Cycle length breakdown (t₃, c₅, ...):
+    (none), total=0: 24
+    (c3=1), total=1: 16
+    (c3=2), total=2: 24
+
+n=5:
+  Total tournaments: 1024
+  Cycle count range: 0 to 7
+  Missing counts: [3]
+  Distribution: {0: 120, 1: 120, 2: 240, 4: 240, 5: 120, 6: 120, 7: 64}
+  Corresponding absent H (if Ω complete): [7]
+
+  Cycle length breakdown (t₃, c₅, ...):
+    (none), total=0: 120
+    (c3=1), total=1: 120
+    (c3=2), total=2: 240
+    (c3=3, c5=1), total=4: 240
+    (c3=4, c5=1), total=5: 120
+    (c3=4, c5=2), total=6: 120
+    (c3=4, c5=3), total=7: 40
+    (c3=5, c5=2), total=7: 24
+
+n=6: (3-cycles and 5-cycles only — ignoring potential 7-cycles... wait, n=6 has no 7-cycles)
+     Actually max odd cycle length at n=6 is 5 (6 vertices, no 7-cycle possible)
+  Total tournaments: 32768
+  Cycle count range: 0 to 20
+  Missing counts: [3, 15, 17, 18]
+  Corresponding absent H (if Ω complete): [7, 31, 35, 37]
+  Distribution: {0: 720, 1: 960, 2: 2240, 4: 2880, 5: 1440, 6: 2160, 7: 2208, 8: 720, 9: 2880, 10: 720, 11: 1920, 12: 4320, 13: 1440, 14: 3840, 16: 2640, 19: 1440, 20: 240}
+
+  (t₃, c₅) distribution:
+    t₃= 0, c₅= 0, total=  0:   720
+    t₃= 1, c₅= 0, total=  1:   960
+    t₃= 2, c₅= 0, total=  2:  2240
+    t₃= 3, c₅= 1, total=  4:  2880
+    t₃= 4, c₅= 1, total=  5:  1440
+    t₃= 4, c₅= 2, total=  6:  2160
+    t₃= 4, c₅= 3, total=  7:  1920
+    t₃= 4, c₅= 4, total=  8:   720
+    t₃= 5, c₅= 2, total=  7:   288
+    t₃= 5, c₅= 4, total=  9:  2880
+    t₃= 5, c₅= 6, total= 11:   480
+    t₃= 6, c₅= 4, total= 10:   720 ← total=10!
+    t₃= 6, c₅= 5, total= 11:  1440
+    t₃= 6, c₅= 6, total= 12:  4320
+    t₃= 6, c₅= 7, total= 13:  1440
+    t₃= 6, c₅= 8, total= 14:   720
+    t₃= 7, c₅= 7, total= 14:  2880
+    t₃= 7, c₅= 9, total= 16:  1920
+    t₃= 8, c₅= 6, total= 14:   240
+    t₃= 8, c₅= 8, total= 16:   720
+    t₃= 8, c₅=11, total= 19:  1440
+    t₃= 8, c₅=12, total= 20:   240
+
+======================================================================
+WHY IS TOTAL=3 IMPOSSIBLE?
+======================================================================
+
+Checking: does t₃=3 always force c₅≥1 at n=6?
+  Cases with t₃=3 at n=6:
+    t₃=3, c₅=1: 2880 tournaments
+  YES: t₃=3 always has c₅≥1 at n=6!
+
+Cases near total=10 at n=6:
+  t₃= 4, c₅= 4, total=8: 720
+  t₃= 5, c₅= 4, total=9: 2880
+  t₃= 5, c₅= 6, total=11: 480
+  t₃= 6, c₅= 4, total=10: 720
+  t₃= 6, c₅= 5, total=11: 1440
+  t₃= 6, c₅= 6, total=12: 4320
+
+======================================================================
+THE STRUCTURAL EXPLANATION
+======================================================================
+
+At n=5: tournament on 5 vertices has C(5,3)=10 triples.
+Each triple is either a 3-cycle (t₃) or transitive (10-t₃).
+t₃ ranges from 0 to 4 (max for n=5).
+
+The 5-cycle structure:
+  A directed Hamiltonian cycle on 5 vertices uses all 5 vertices.
+  The number of directed 5-cycles in a 5-tournament depends on
+  the tournament structure, not just t₃ — but t₃≥3 forces c₅≥1.
+
+WHY t₃=3 forces c₅≥1 at n=5:
+  3 directed 3-cycles on C(5,3)=10 triples means 7 transitive triples.
+  The 3 cyclic triples create a pattern that, combined with the arc
+  directions of the transitive triples, must form at least one
+  directed Hamiltonian cycle (5-cycle).
+
+This is related to the 'packing' constraint: 3 triangles in a
+tournament on 5 vertices create enough cyclic structure to force
+a Hamiltonian cycle.

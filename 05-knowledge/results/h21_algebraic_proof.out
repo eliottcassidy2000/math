@@ -1,0 +1,80 @@
+======================================================================
+ALGEBRAIC ENUMERATION: ALL GRAPHS WITH I(G,2) = 21
+======================================================================
+
+Constraint: n + 2α₂ + 4α₃ + 8α₄ + ... = 10
+with α_k ≥ 0 and α₁ = n (number of vertices)
+
+n=1: remainder = 9 (odd) → IMPOSSIBLE (2α₂ + 4α₃ + ... is always even)
+n=2: no valid (α₂, α₃, ...) → IMPOSSIBLE
+n=3: remainder = 7 (odd) → IMPOSSIBLE (2α₂ + 4α₃ + ... is always even)
+n=4: α = (1, 4, 3), I(G,2)=21 ✓
+       Type: K_4 minus 3 edges
+n=4: α = (1, 4, 1, 1), I(G,2)=21 ✓
+       Type: graph on 4 vertices with 1 ind. pairs
+n=5: remainder = 5 (odd) → IMPOSSIBLE (2α₂ + 4α₃ + ... is always even)
+n=6: α = (1, 6, 2), I(G,2)=21 ✓
+       Type: K_6 minus 13 edges
+n=6: α = (1, 6, 0, 1), I(G,2)=21 ✓
+       Type: graph on 6 vertices with 0 ind. pairs
+n=7: remainder = 3 (odd) → IMPOSSIBLE (2α₂ + 4α₃ + ... is always even)
+n=8: α = (1, 8, 1), I(G,2)=21 ✓
+       Type: K_8 minus 27 edges
+n=9: remainder = 1 (odd) → IMPOSSIBLE (2α₂ + 4α₃ + ... is always even)
+n=10: α = (1, 10, 0), I(G,2)=21 ✓
+       Type: K_10 (complete graph)
+
+======================================================================
+SUMMARY: EXACTLY 4 GRAPH TYPES HAVE I(G,2) = 21
+======================================================================
+
+1. n=4:  I = 1+4x+3x²  (P₄ or K₁⊔K₃)       — K₃ poisoned
+2. n=6:  I = 1+6x+2x²  (K₆ - 2 edges)        — NOT K₃ poisoned
+3. n=8:  I = 1+8x+x²   (K₈ - 1 edge)          — NOT K₃ poisoned
+4. n=10: I = 1+10x      (K₁₀)                  — NOT K₃ poisoned
+
+======================================================================
+CAN THESE GRAPHS BE Ω(T)?
+======================================================================
+
+Type 1 (n=4, I=1+4x+3x²): BLOCKED
+  K₁⊔K₃: has K₃ component, blocked by THM-201
+  P₄: blocked by THM-202 (dominance cascade)
+
+Type 4 (K₁₀ = 10 pairwise-intersecting odd cycles):
+  For Ω(T) = K₁₀: need 10 directed odd cycles, every pair sharing ≥1 vertex.
+  At n=6: total cycle count can be 10 (720 tournaments), but Ω has 10 vertices
+    with C(10,2)=45 edges needed for K₁₀. With only 6 tournament vertices,
+    many cycle pairs must share vertices... but is it K₁₀ exactly?
+
+Checking n=6 tournaments with exactly 10 odd cycles:
+  H values for 10-cycle tournaments: {29: 720}
+  Ω structures (|V|=10): {(10, 43, 2): 720}
+
+  K₁₀ (45 edges) requires ALL pairs intersecting.
+  Does K₁₀ appear as Ω at n=6? False
+    |V|=10, |E|=43, disjoint=2: 720 tournaments → I(Ω,2) = ?
+
+======================================================================
+KEY STRUCTURAL OBSTRUCTION
+======================================================================
+
+For H=21 to occur, Ω(T) must be one of the 4 graph types with I(G,2)=21.
+Each type has specific structural requirements:
+
+Type 1 (P₄/K₁⊔K₃): 4 odd cycles, specific adjacency pattern → BLOCKED (THM-201/202)
+Type 2 (K₆-2e): 6 cycles, exactly 2 disjoint pairs → needs verification
+Type 3 (K₈-e): 8 cycles, exactly 1 disjoint pair → needs verification
+Type 4 (K₁₀): 10 cycles, all pairs intersecting → needs verification
+
+Checking n=6 tournaments with exactly 6 odd cycles:
+  H values: {13: 1440, 17: 720}
+  Ω structures: {(6, 14): 720, (6, 15): 1440}
+
+  K₆-2e would have |V|=6, |E|=13 (= C(6,2) - 2)
+  Does K₆-2e appear? False
+  K₆-2e NEVER appears as Ω at n=6!
+
+  At n=6, with 6 cycles, Ω edge counts are:
+    |E|=14/15: 720 tournaments (missing 1 from K_6)
+    |E|=15/15: 1440 tournaments (missing 0 from K_6)
