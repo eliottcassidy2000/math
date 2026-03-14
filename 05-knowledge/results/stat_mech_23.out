@@ -1,0 +1,178 @@
+======================================================================
+PART 1: PARTITION FUNCTION Z(β)
+======================================================================
+
+n=4: H distribution: {1: 24, 3: 16, 5: 24}
+
+       β            Z(β)      <H>_β   Var(H)_β         F(β)
+   -1.00            9.79     1.2289     0.5375       2.2811
+    0.00           64.00     3.0000     3.0000       0.0000
+    0.50          403.66     4.2526     1.7204     -12.0011
+    1.00         3948.52     4.7711     0.5375      -8.2811
+
+  β=1 Boltzmann distribution:
+    P(H=1) = 0.016522
+    P(H=3) = 0.081390
+    P(H=5) = 0.902088
+
+n=5: H distribution: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+
+       β            Z(β)      <H>_β   Var(H)_β         F(β)
+   -1.00           51.77     1.3608     0.8726       3.9468
+    0.00         1024.00     7.5000    17.8125       0.0000
+    0.50       250158.30    13.2204     4.7299     -24.8597
+    1.00    271474711.64    14.4586     1.1851     -19.4194
+
+  β=1 Boltzmann distribution:
+    P(H=1) = 0.000001
+    P(H=3) = 0.000009
+    P(H=5) = 0.000131
+    P(H=9) = 0.007164
+    P(H=11) = 0.026466
+    P(H=13) = 0.195560
+    P(H=15) = 0.770669
+
+======================================================================
+PART 2: SPECIFIC HEAT C(β) = β² Var_β(H)
+======================================================================
+
+n=4: Specific heat:
+  Max specific heat: C = 0.5623 at β = 0.821
+  Critical temperature T_c = 1/β_c = 1.2183
+
+  Fine scan near β_c:
+    β=0.8057: C=0.5620, <H>=4.6372
+    β=0.8158: C=0.5623, <H>=4.6458
+    β=0.8259: C=0.5623, <H>=4.6543
+    β=0.8360: C=0.5622, <H>=4.6625
+
+n=5: Specific heat:
+  Max specific heat: C = 1.2673 at β = 0.719
+  Critical temperature T_c = 1/β_c = 1.3899
+
+  Fine scan near β_c:
+    β=0.7043: C=1.2669, <H>=13.9364
+    β=0.7144: C=1.2672, <H>=13.9618
+    β=0.7245: C=1.2672, <H>=13.9865
+    β=0.7346: C=1.2669, <H>=14.0106
+
+======================================================================
+PART 3: ENTROPY S(β) = log Z + β<H>
+======================================================================
+
+n=4: Entropy at various β:
+  β=0: S = log(2^m) = 4.1589 = 6 log 2 = 4.1589
+  β=0.1: S = 1.0659 (max = 4.1589)
+  β=0.5: S = 0.7682 (max = 4.1589)
+  β=1.0: S = 0.3649 (max = 4.1589)
+  β=2.0: S = 0.0682 (max = 4.1589)
+  β=5.0: S = 0.0003 (max = 4.1589)
+
+n=5: Entropy at various β:
+  β=0: S = log(2^m) = 6.9315 = 10 log 2 = 6.9315
+  β=0.1: S = 1.8451 (max = 6.9315)
+  β=0.5: S = 1.2549 (max = 6.9315)
+  β=1.0: S = 0.6527 (max = 6.9315)
+  β=2.0: S = 0.1510 (max = 6.9315)
+  β=5.0: S = 0.0009 (max = 6.9315)
+
+======================================================================
+PART 4: LEE-YANG ZEROS
+======================================================================
+
+n=4: Lee-Yang zeros of Z(z):
+  Degree of Z: 5
+  Number of zeros: 5
+  Zeros on unit circle (|z|≈1): 4
+  Zeros near unit circle (||z|-1|<0.1): 4
+  Negative real zeros: 0
+    z = 0.000000 (|z|=0.0000)
+    z = -0.577350 + 0.816497i (|z|=1.0000)
+    z = -0.577350 + -0.816497i (|z|=1.0000)
+    z = 0.577350 + 0.816497i (|z|=1.0000)
+    z = 0.577350 + -0.816497i (|z|=1.0000)
+
+n=5: Lee-Yang zeros of Z(z):
+  Degree of Z: 15
+  Number of zeros: 15
+  Zeros on unit circle (|z|≈1): 4
+  Zeros near unit circle (||z|-1|<0.1): 4
+  Negative real zeros: 0
+    z = 0.000000 (|z|=0.0000)
+    z = 0.400372 + 0.719218i (|z|=0.8231)
+    z = 0.400372 + -0.719218i (|z|=0.8231)
+    z = -0.400372 + 0.719218i (|z|=0.8231)
+    z = -0.400372 + -0.719218i (|z|=0.8231)
+    z = 0.915786 + 0.424049i (|z|=1.0092)
+    z = 0.915786 + -0.424049i (|z|=1.0092)
+    z = -0.915786 + 0.424049i (|z|=1.0092)
+    z = -0.915786 + -0.424049i (|z|=1.0092)
+    z = 0.764996 + 0.895991i (|z|=1.1781)
+    z = 0.764996 + -0.895991i (|z|=1.1781)
+    z = -0.764996 + 0.895991i (|z|=1.1781)
+    z = -0.764996 + -0.895991i (|z|=1.1781)
+    z = 0.000000 + 1.429539i (|z|=1.4295)
+    z = 0.000000 + -1.429539i (|z|=1.4295)
+
+======================================================================
+PART 5: SIMULATED ANNEALING FOR MAX-H
+======================================================================
+
+n=7: Simulated annealing max H = 189
+  mean H = 78.75
+  H/mean = 2.4000
+  Scores: [3, 3, 3, 3, 3, 3, 3]
+
+n=8: Simulated annealing max H = 661
+  mean H = 315.00
+  H/mean = 2.0984
+  Scores: [3, 3, 3, 3, 4, 4, 4, 4]
+
+n=9: Simulated annealing max H = 3303
+  mean H = 1417.50
+  H/mean = 2.3302
+  Scores: [4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+======================================================================
+PART 6: CORRELATION FUNCTIONS <σ_ij σ_kl>
+======================================================================
+
+n=4, β=0:
+  Arc means: ['0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000']
+  All means zero: True
+  Mean connected correlation: 0.000000
+  Max |connected correlation|: 0.000000
+
+n=4, β=0.5:
+  Arc means: ['0.0000', '-0.0000', '0.0000', '0.0000', '-0.0000', '-0.0000']
+  All means zero: True
+  Mean connected correlation: -0.055671
+  Max |connected correlation|: 0.208767
+
+n=4, β=1.0:
+  Arc means: ['-0.0000', '0.0000', '-0.0000', '-0.0000', '0.0000', '0.0000']
+  All means zero: True
+  Mean connected correlation: -0.078717
+  Max |connected correlation|: 0.295189
+
+n=4, β=2.0:
+  Arc means: ['0.0000', '-0.0000', '0.0000', '-0.0000', '-0.0000', '-0.0000']
+  All means zero: True
+  Mean connected correlation: -0.087758
+  Max |connected correlation|: 0.329093
+
+======================================================================
+SYNTHESIS — STATISTICAL MECHANICS
+======================================================================
+
+KEY FINDINGS:
+1. PARTITION FUNCTION: Z(β) = Σ N_h exp(βh) is a polynomial in z=exp(β).
+2. SPECIFIC HEAT: Has a maximum at critical β_c, indicating a crossover
+   (finite-size analog of phase transition).
+3. ENTROPY: Goes from log(2^m) at β=0 (uniform) to 0 as β→∞ (max-H only).
+4. LEE-YANG ZEROS: Zeros of Z(z) have specific patterns.
+   Not all on unit circle (unlike true Ising).
+5. SIMULATED ANNEALING: Finds near-optimal H for larger n.
+6. CORRELATION FUNCTIONS: At β=0, all arc correlations are zero.
+   At β>0, arcs become correlated via the H landscape.
+
