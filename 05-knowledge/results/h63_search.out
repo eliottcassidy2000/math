@@ -1,0 +1,74 @@
+============================================================
+TARGETED SEARCH FOR FORBIDDEN H VALUES
+============================================================
+
+n = 8 (5000 random tournaments):
+  Progress: 1000/5000
+  Progress: 2000/5000
+  Progress: 3000/5000
+  Progress: 4000/5000
+  Progress: 5000/5000
+  H range: [5, 661]
+  Distinct H values seen: 314
+  H=   7: absent
+  H=  21: absent
+  H=  63: FOUND (1x, 0.02%)
+  H= 107: FOUND (6x, 0.12%)
+  H= 119: FOUND (9x, 0.18%)
+  H= 149: FOUND (12x, 0.24%)
+  Near H=63: H=57(4), H=59(10), H=63(1), H=65(14), H=67(6), H=69(11)
+  Near H=107: H=101(13), H=103(13), H=105(13), H=107(6), H=109(29), H=111(23), H=113(13)
+  Near H=119: H=113(13), H=115(20), H=117(16), H=119(9), H=121(4), H=123(22), H=125(4)
+  Near H=149: H=143(12), H=145(8), H=147(7), H=149(12), H=151(11), H=153(17), H=155(24)
+
+n = 9 (5000 random tournaments):
+  Progress: 1000/5000
+  Progress: 2000/5000
+  Progress: 3000/5000
+  Progress: 4000/5000
+  Progress: 5000/5000
+  H range: [9, 3255]
+  Distinct H values seen: 1282
+  H=   7: absent
+  H=  21: absent
+  H=  63: absent
+  H= 107: FOUND (1x, 0.02%)
+  H= 119: absent
+  H= 149: FOUND (1x, 0.02%)
+  Near H=63: H=59(1), H=67(1)
+  Near H=107: H=101(1), H=103(3), H=105(3), H=107(1), H=109(1), H=113(1)
+  Near H=119: H=113(1), H=115(1), H=117(2), H=125(2)
+  Near H=149: H=143(1), H=145(4), H=149(1), H=153(1), H=155(2)
+
+n = 10 (1000 random tournaments):
+  Progress: 1000/1000
+  H range: [291, 14547]
+  Distinct H values seen: 927
+  H=   7: absent
+  H=  21: absent
+  H=  63: absent
+  H= 107: absent
+  H= 119: absent
+  H= 149: absent
+
+============================================================
+STRUCTURED SEARCH AT n=9
+============================================================
+
+  Looking for H near 63 via score-constrained sampling...
+    trial 823: H=63, scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(5), np.int64(5), np.int64(6), np.int64(6), np.int64(7)]
+
+  H=7: not found in 3000 structured trials
+
+  H=21: not found in 3000 structured trials
+
+  H=63 FOUND!
+    trial 823: scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(5), np.int64(5), np.int64(6), np.int64(6), np.int64(7)]
+
+  H=107: not found in 3000 structured trials
+
+  H=119 FOUND!
+    trial 1177: scores=[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(5), np.int64(6), np.int64(8)]
+
+  H=149 FOUND!
+    trial 1495: scores=[np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5), np.int64(8)]
