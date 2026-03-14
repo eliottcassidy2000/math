@@ -1,0 +1,346 @@
+======================================================================
+PART 1: FINDING THE MAX-α₂ TOURNAMENT
+======================================================================
+Max-α₂ tournament adjacency:
+  0000111
+  1000011
+  1100001
+  1110000
+  0111000
+  0011100
+  0001110
+
+Checking if circulant (invariant under i→i+1 mod 7):
+  Vertex 0 → [4, 5, 6] (connection set)
+  YES — circulant with connection set [4, 5, 6]
+
+QR_7 connection set: {1, 2, 4} (quadratic residues mod 7)
+Max-α₂ connection set: [4, 5, 6]
+QR_7 complement (NQR_7): [3, 5, 6]
+
+======================================================================
+PART 2: ALL CIRCULANT REGULAR TOURNAMENTS ON 7 VERTICES
+======================================================================
+All 8 circulant connection sets:
+  S=[1, 2, 3]: α₁=14, α₂=14, H=175
+  S=[1, 2, 4]: α₁=14, α₂=7, H=189 ← QR_7
+  S=[1, 3, 5]: α₁=14, α₂=14, H=175
+  S=[1, 4, 5]: α₁=14, α₂=14, H=175
+  S=[2, 3, 6]: α₁=14, α₂=14, H=175
+  S=[2, 4, 6]: α₁=14, α₂=14, H=175
+  S=[3, 5, 6]: α₁=14, α₂=7, H=189 ← NQR_7 (complement of QR_7)
+  S=[4, 5, 6]: α₁=14, α₂=14, H=175
+
+======================================================================
+PART 3: IDENTIFYING THE MAX-α₂ CIRCULANT
+======================================================================
+MAX α₂=14 circulant: S = [1, 2, 3]
+Adjacency matrix:
+  0111000
+  0011100
+  0001110
+  0000111
+  1000011
+  1100001
+  1110000
+
+Cyclic 3-subsets (14):
+  [0, 1, 4]
+  [0, 2, 4]
+  [0, 2, 5]
+  [0, 3, 4]
+  [0, 3, 5]
+  [0, 3, 6]
+  [1, 2, 5]
+  [1, 3, 5]
+  [1, 3, 6]
+  [1, 4, 5]
+  [1, 4, 6]
+  [2, 3, 6]
+  [2, 4, 6]
+  [2, 5, 6]
+
+Both-cyclic disjoint pairs (14):
+  [0, 1, 4] | [2, 3, 6] → uncov 5
+  [0, 1, 4] | [2, 5, 6] → uncov 3
+  [0, 2, 4] | [1, 3, 5] → uncov 6
+  [0, 2, 4] | [1, 3, 6] → uncov 5
+  [0, 2, 5] | [1, 3, 6] → uncov 4
+  [0, 2, 5] | [1, 4, 6] → uncov 3
+  [0, 3, 4] | [1, 2, 5] → uncov 6
+  [0, 3, 4] | [2, 5, 6] → uncov 1
+  [0, 3, 5] | [1, 4, 6] → uncov 2
+  [0, 3, 5] | [2, 4, 6] → uncov 1
+  [0, 3, 6] | [1, 2, 5] → uncov 4
+  [0, 3, 6] | [1, 4, 5] → uncov 2
+  [1, 3, 5] | [2, 4, 6] → uncov 0
+  [1, 4, 5] | [2, 3, 6] → uncov 0
+
+Uncovered vertex counts: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+MAX α₂=14 circulant: S = [1, 3, 5]
+Adjacency matrix:
+  0101010
+  0010101
+  1001010
+  0100101
+  1010010
+  0101001
+  1010100
+
+Cyclic 3-subsets (14):
+  [0, 1, 2]
+  [0, 1, 4]
+  [0, 1, 6]
+  [0, 3, 4]
+  [0, 3, 6]
+  [0, 5, 6]
+  [1, 2, 3]
+  [1, 2, 5]
+  [1, 4, 5]
+  [2, 3, 4]
+  [2, 3, 6]
+  [2, 5, 6]
+  [3, 4, 5]
+  [4, 5, 6]
+
+Both-cyclic disjoint pairs (14):
+  [0, 1, 2] | [3, 4, 5] → uncov 6
+  [0, 1, 2] | [4, 5, 6] → uncov 3
+  [0, 1, 4] | [2, 3, 6] → uncov 5
+  [0, 1, 4] | [2, 5, 6] → uncov 3
+  [0, 1, 6] | [2, 3, 4] → uncov 5
+  [0, 1, 6] | [3, 4, 5] → uncov 2
+  [0, 3, 4] | [1, 2, 5] → uncov 6
+  [0, 3, 4] | [2, 5, 6] → uncov 1
+  [0, 3, 6] | [1, 2, 5] → uncov 4
+  [0, 3, 6] | [1, 4, 5] → uncov 2
+  [0, 5, 6] | [1, 2, 3] → uncov 4
+  [0, 5, 6] | [2, 3, 4] → uncov 1
+  [1, 2, 3] | [4, 5, 6] → uncov 0
+  [1, 4, 5] | [2, 3, 6] → uncov 0
+
+Uncovered vertex counts: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+MAX α₂=14 circulant: S = [1, 4, 5]
+Adjacency matrix:
+  0100110
+  0010011
+  1001001
+  1100100
+  0110010
+  0011001
+  1001100
+
+Cyclic 3-subsets (14):
+  [0, 1, 2]
+  [0, 1, 6]
+  [0, 2, 4]
+  [0, 2, 5]
+  [0, 3, 5]
+  [0, 5, 6]
+  [1, 2, 3]
+  [1, 3, 5]
+  [1, 3, 6]
+  [1, 4, 6]
+  [2, 3, 4]
+  [2, 4, 6]
+  [3, 4, 5]
+  [4, 5, 6]
+
+Both-cyclic disjoint pairs (14):
+  [0, 1, 2] | [3, 4, 5] → uncov 6
+  [0, 1, 2] | [4, 5, 6] → uncov 3
+  [0, 1, 6] | [2, 3, 4] → uncov 5
+  [0, 1, 6] | [3, 4, 5] → uncov 2
+  [0, 2, 4] | [1, 3, 5] → uncov 6
+  [0, 2, 4] | [1, 3, 6] → uncov 5
+  [0, 2, 5] | [1, 3, 6] → uncov 4
+  [0, 2, 5] | [1, 4, 6] → uncov 3
+  [0, 3, 5] | [1, 4, 6] → uncov 2
+  [0, 3, 5] | [2, 4, 6] → uncov 1
+  [0, 5, 6] | [1, 2, 3] → uncov 4
+  [0, 5, 6] | [2, 3, 4] → uncov 1
+  [1, 2, 3] | [4, 5, 6] → uncov 0
+  [1, 3, 5] | [2, 4, 6] → uncov 0
+
+Uncovered vertex counts: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+MAX α₂=14 circulant: S = [2, 3, 6]
+Adjacency matrix:
+  0011001
+  1001100
+  0100110
+  0010011
+  1001001
+  1100100
+  0110010
+
+Cyclic 3-subsets (14):
+  [0, 1, 2]
+  [0, 1, 6]
+  [0, 2, 4]
+  [0, 2, 5]
+  [0, 3, 5]
+  [0, 5, 6]
+  [1, 2, 3]
+  [1, 3, 5]
+  [1, 3, 6]
+  [1, 4, 6]
+  [2, 3, 4]
+  [2, 4, 6]
+  [3, 4, 5]
+  [4, 5, 6]
+
+Both-cyclic disjoint pairs (14):
+  [0, 1, 2] | [3, 4, 5] → uncov 6
+  [0, 1, 2] | [4, 5, 6] → uncov 3
+  [0, 1, 6] | [2, 3, 4] → uncov 5
+  [0, 1, 6] | [3, 4, 5] → uncov 2
+  [0, 2, 4] | [1, 3, 5] → uncov 6
+  [0, 2, 4] | [1, 3, 6] → uncov 5
+  [0, 2, 5] | [1, 3, 6] → uncov 4
+  [0, 2, 5] | [1, 4, 6] → uncov 3
+  [0, 3, 5] | [1, 4, 6] → uncov 2
+  [0, 3, 5] | [2, 4, 6] → uncov 1
+  [0, 5, 6] | [1, 2, 3] → uncov 4
+  [0, 5, 6] | [2, 3, 4] → uncov 1
+  [1, 2, 3] | [4, 5, 6] → uncov 0
+  [1, 3, 5] | [2, 4, 6] → uncov 0
+
+Uncovered vertex counts: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+MAX α₂=14 circulant: S = [2, 4, 6]
+Adjacency matrix:
+  0010101
+  1001010
+  0100101
+  1010010
+  0101001
+  1010100
+  0101010
+
+Cyclic 3-subsets (14):
+  [0, 1, 2]
+  [0, 1, 4]
+  [0, 1, 6]
+  [0, 3, 4]
+  [0, 3, 6]
+  [0, 5, 6]
+  [1, 2, 3]
+  [1, 2, 5]
+  [1, 4, 5]
+  [2, 3, 4]
+  [2, 3, 6]
+  [2, 5, 6]
+  [3, 4, 5]
+  [4, 5, 6]
+
+Both-cyclic disjoint pairs (14):
+  [0, 1, 2] | [3, 4, 5] → uncov 6
+  [0, 1, 2] | [4, 5, 6] → uncov 3
+  [0, 1, 4] | [2, 3, 6] → uncov 5
+  [0, 1, 4] | [2, 5, 6] → uncov 3
+  [0, 1, 6] | [2, 3, 4] → uncov 5
+  [0, 1, 6] | [3, 4, 5] → uncov 2
+  [0, 3, 4] | [1, 2, 5] → uncov 6
+  [0, 3, 4] | [2, 5, 6] → uncov 1
+  [0, 3, 6] | [1, 2, 5] → uncov 4
+  [0, 3, 6] | [1, 4, 5] → uncov 2
+  [0, 5, 6] | [1, 2, 3] → uncov 4
+  [0, 5, 6] | [2, 3, 4] → uncov 1
+  [1, 2, 3] | [4, 5, 6] → uncov 0
+  [1, 4, 5] | [2, 3, 6] → uncov 0
+
+Uncovered vertex counts: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+MAX α₂=14 circulant: S = [4, 5, 6]
+Adjacency matrix:
+  0000111
+  1000011
+  1100001
+  1110000
+  0111000
+  0011100
+  0001110
+
+Cyclic 3-subsets (14):
+  [0, 1, 4]
+  [0, 2, 4]
+  [0, 2, 5]
+  [0, 3, 4]
+  [0, 3, 5]
+  [0, 3, 6]
+  [1, 2, 5]
+  [1, 3, 5]
+  [1, 3, 6]
+  [1, 4, 5]
+  [1, 4, 6]
+  [2, 3, 6]
+  [2, 4, 6]
+  [2, 5, 6]
+
+Both-cyclic disjoint pairs (14):
+  [0, 1, 4] | [2, 3, 6] → uncov 5
+  [0, 1, 4] | [2, 5, 6] → uncov 3
+  [0, 2, 4] | [1, 3, 5] → uncov 6
+  [0, 2, 4] | [1, 3, 6] → uncov 5
+  [0, 2, 5] | [1, 3, 6] → uncov 4
+  [0, 2, 5] | [1, 4, 6] → uncov 3
+  [0, 3, 4] | [1, 2, 5] → uncov 6
+  [0, 3, 4] | [2, 5, 6] → uncov 1
+  [0, 3, 5] | [1, 4, 6] → uncov 2
+  [0, 3, 5] | [2, 4, 6] → uncov 1
+  [0, 3, 6] | [1, 2, 5] → uncov 4
+  [0, 3, 6] | [1, 4, 5] → uncov 2
+  [1, 3, 5] | [2, 4, 6] → uncov 0
+  [1, 4, 5] | [2, 3, 6] → uncov 0
+
+Uncovered vertex counts: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+
+======================================================================
+PART 4: THE THREE REGULAR TOURNAMENT CLASSES
+======================================================================
+Circulant connection sets grouped by α₂:
+  α₂=7: [([1, 2, 4], 189), ([3, 5, 6], 189)]
+  α₂=14: [([1, 2, 3], 175), ([1, 3, 5], 175), ([1, 4, 5], 175), ([2, 3, 6], 175), ([2, 4, 6], 175), ([4, 5, 6], 175)]
+
+Total regular tournaments: 2640
+Circulant contributions:
+  S=[1, 2, 3]: |Aut|=7, orbit=720, α₂=14, H=175
+  S=[1, 2, 4]: |Aut|=21, orbit=240, α₂=7, H=189
+  S=[1, 3, 5]: |Aut|=7, orbit=720, α₂=14, H=175
+  S=[1, 4, 5]: |Aut|=7, orbit=720, α₂=14, H=175
+  S=[2, 3, 6]: |Aut|=7, orbit=720, α₂=14, H=175
+  S=[2, 4, 6]: |Aut|=7, orbit=720, α₂=14, H=175
+  S=[3, 5, 6]: |Aut|=21, orbit=240, α₂=7, H=189
+  S=[4, 5, 6]: |Aut|=7, orbit=720, α₂=14, H=175
+
+Non-circulant regular tournaments?
+  Distinct class: S=[1, 2, 3], orbit=720, α₂=14
+  Distinct class: S=[1, 2, 4], orbit=240, α₂=7
+  Total from distinct circulant classes: 960
+  Total regular tournaments: 2640
+  Non-circulant: 1680
+
+  There ARE non-circulant regular tournaments on n=7!
+  The 'middle' class (α₂=10, count=1680) has orbit 1680 = 7!/3
+  This means |Aut|=3 — NOT divisible by 7, so NOT circulant!
+
+======================================================================
+PART 5: CONNECTION SET ↔ α₂ PATTERN
+======================================================================
+  S=[1, 2, 3]: α₂=14, sums=[3, 4, 5], prods=[2, 3, 6], AP(d=1)
+  S=[1, 2, 4]: α₂= 7, sums=[3, 5, 6], prods=[2, 4, 1], QR
+  S=[1, 3, 5]: α₂=14, sums=[4, 6, 1], prods=[3, 5, 1], AP(d=2)
+  S=[1, 4, 5]: α₂=14, sums=[5, 6, 2], prods=[4, 5, 6], 
+  S=[2, 3, 6]: α₂=14, sums=[5, 1, 2], prods=[6, 5, 4], 
+  S=[2, 4, 6]: α₂=14, sums=[6, 1, 3], prods=[1, 5, 3], AP(d=2)
+  S=[3, 5, 6]: α₂= 7, sums=[1, 2, 4], prods=[1, 4, 2], NQR
+  S=[4, 5, 6]: α₂=14, sums=[2, 3, 4], prods=[6, 3, 2], AP(d=1)
+
+SYNTHESIS:
+  The connection set determines the α₂ value for circulant tournaments.
+  QR_7 = {1,2,4}: minimizes α₂ (=7) — most "ordered" cycle structure
+  NQR_7 = {3,5,6}: also α₂=7 — isomorphic to QR_7 complement
+  Max α₂=14 sets: specific 3-element subsets of Z_7 — most "disordered"
+
+  The α₂ spectrum {7, 10, 14} for regular tournaments on n=7
+  mirrors the structure of 3-element subsets of Z_7 under
+  the natural action of the affine group AGL(1,7).
+
