@@ -1,0 +1,102 @@
+======================================================================
+CORRECT H=21 STRUCTURAL ANALYSIS (DIRECTED CYCLES)
+======================================================================
+
+--- Part 1: Correct α₁ (directed cycle count) vs H ---
+
+  n=5:
+    H=15 ← α₁ ∈ [7]
+    H=17: NOT ACHIEVED
+    H=19: NOT ACHIEVED
+    H=21: NOT ACHIEVED
+    H=23: NOT ACHIEVED
+    H=25: NOT ACHIEVED
+    α₁=10: NOT ACHIEVED
+
+  n=6:
+    H=15 ← α₁ ∈ [7]
+    H=17 ← α₁ ∈ [6, 8]
+    H=19 ← α₁ ∈ [9]
+    H=21: NOT ACHIEVED
+    H=23 ← α₁ ∈ [9, 11]
+    H=25 ← α₁ ∈ [12]
+    α₁=10 → H ∈ [29]
+
+--- Part 2: n=5 detailed --- 
+  Key: 5-element vertex set can have up to 12 directed Hamiltonian cycles
+  (actually at most 3 for a tournament on 5 vertices)
+  n=5 tournaments by #directed 5-cycles: {0: 480, 1: 360, 2: 144, 3: 40}
+
+--- Part 3: H=7 with correct directed-cycle α₁ ---
+  H=7 requires α₁=3, all pairwise intersecting.
+  With directed cycles: 3 could be:
+    (a) 3 directed 3-cycles (same as vertex-set analysis)
+    (b) 2 directed 3-cycles + 1 directed 5-cycle
+    (c) 1 directed 3-cycle + 2 directed 5-cycles on same vertex set
+    (d) 3 directed 5-cycles on same vertex set
+
+  Case (c) and (d): at n=5, a subtournament has ≤3 directed 5-cycles.
+  3 cycles on same 5-element set are all pairwise adjacent (same vertices).
+  This gives α₁=3, α₂=0, I=7. BUT:
+  If the tournament has ANY 3-cycle, α₁ increases!
+
+  So H=7 requires: 3 directed cycles with NO additional cycles.
+  With directed counting: a 5-vertex set with 3 Ham cycles + 0 three-cycles
+  would need the tournament to have no cyclic triples.
+  NO tournament at n=5 has 0 three-cycles with any 5-cycles!
+  (A tournament without 3-cycles is transitive → no odd cycles at all)
+
+--- Part 4: What (α₁_correct, α₂) gives H=21? ---
+  Still need 10 = α₁ + 2α₂ + 4α₃ + ...
+  Where α₁ now counts DIRECTED cycles.
+
+  INSIGHT: Two directed cycles on the SAME vertex set are always
+  adjacent (share all vertices). So they can never be in the same
+  independent set. This means the multiplicity d(S) of a vertex set
+  S contributes a FACTOR of d(S) to the count of independent sets
+  that include exactly one cycle from S.
+
+  In other words: I(Ω, x) = sum over collections of pairwise-disjoint
+  vertex sets, product of d(S_i) × x^k where k = number of sets.
+
+  So H = I(Ω,2) = sum_{k≥0} 2^k × Σ_{pairwise-disjoint k-tuples} Π d(S_i)
+  = sum_{k≥0} 2^k × β_k
+  where β_k = Σ Π d(S_i) over all k-tuples of pairwise-disjoint vertex sets.
+
+  For H=21: 1 + 2β₁ + 4β₂ + ... = 21
+  20 = 2β₁ + 4β₂ + ...
+  10 = β₁ + 2β₂ + ...
+
+  β₁ = Σ d(S) over all vertex sets S with an odd cycle
+  β₂ = Σ_{disjoint pairs (S,T)} d(S)·d(T)
+
+--- Part 5: β₁ distribution ---
+
+  n=5:
+    β₁=10: NOT ACHIEVED
+
+  n=6:
+    H=19 ← β₁ ∈ [9]
+    H=23 ← β₁ ∈ [9, 11]
+    H=25 ← β₁ ∈ [12]
+    β₁=10 → H ∈ [29]
+    β₁=8 → H ∈ [17]
+    β₁=9 → H ∈ [19, 23]
+    β₁=10 → H ∈ [29]
+    β₁=11 → H ∈ [23, 27]
+    β₁=12 → H ∈ [25, 29, 33]
+
+--- Part 6: (β₁,β₂) → H near 21 ---
+
+  n=5: (β₁,β₂) → H for 15 ≤ H ≤ 27:
+    ( 7, 0): H ∈ [15], expected 1+2·7+4·0 = 15 ✓
+
+  n=6: (β₁,β₂) → H for 15 ≤ H ≤ 27:
+    ( 6, 1): H ∈ [17], expected 1+2·6+4·1 = 17 ✓
+    ( 7, 0): H ∈ [15], expected 1+2·7+4·0 = 15 ✓
+    ( 8, 0): H ∈ [17], expected 1+2·8+4·0 = 17 ✓
+    ( 9, 0): H ∈ [19], expected 1+2·9+4·0 = 19 ✓
+    ( 9, 1): H ∈ [23], expected 1+2·9+4·1 = 23 ✓
+    (11, 0): H ∈ [23], expected 1+2·11+4·0 = 23 ✓
+    (11, 1): H ∈ [27], expected 1+2·11+4·1 = 27 ✓
+    (12, 0): H ∈ [25], expected 1+2·12+4·0 = 25 ✓
