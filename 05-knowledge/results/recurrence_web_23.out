@@ -1,0 +1,409 @@
+
+======================================================================
+  Part 1: THE FUNDAMENTAL RECURRENCE a(n) = 5a(n-1) - 6a(n-2)
+======================================================================
+
+Characteristic polynomial: z^2 - 5z + 6 = (z-2)(z-3)
+General solution: a(n) = A*2^n + B*3^n
+
+Important sequences satisfying a(n) = 5a(n-1) - 6a(n-2):
+
+  Name                        a(0)   a(1)  Formula               First terms
+----------------------------------------------------------------------------------------------------
+  Powers of 2                    1      2  2^n                   [1, 2, 4, 8, 16, 32, 64, 128]
+  Powers of 3                    1      3  3^n                   [1, 3, 9, 27, 81, 243, 729, 2187]
+  Corner piece                   0      1  3^n - 2^n             [0, 1, 5, 19, 65, 211, 665, 2059]
+  Sum of powers                  2      5  2^n + 3^n             [2, 5, 13, 35, 97, 275, 793, 2315]
+  Lie recurrence                 0      6  6*(3^n - 2^n)         [0, 6, 30, 114, 390, 1266, 3990, 12354]
+  H_forb(n)                      0      7  7*3^n (partial)       [7, 21, 63, 189, 567, 1701]
+  Petersen vertices              0     10  10*... (partial)      [10, -10]
+
+The corner piece c(n) = 3^n - 2^n:
+  c(0)=0, c(1)=1, c(2)=5, c(3)=19, c(4)=65, c(5)=211, c(6)=665, ...
+  [0, 1, 5, 19, 65, 211, 665, 2059, 6305, 19171, 58025, 175099]
+
+  c(1) = 1 = unit
+  c(2) = 5 = KEY_SUM
+  c(3) = 19 (prime)
+  c(4) = 65 = 5*13 = KEY_SUM * Phi_3(KEY2)
+  c(5) = 211 (prime)
+  c(6) = 665 = 5*7*19 = KEY_SUM * H_forb_1 * 19
+
+Corner piece factorizations:
+  c( 1) =          1 = 1
+  c( 2) =          5 = 5
+  c( 3) =         19 = 19
+  c( 4) =         65 = 5 * 13
+  c( 5) =        211 = 211
+  c( 6) =        665 = 5 * 7 * 19
+  c( 7) =       2059 = 29 * 71
+  c( 8) =       6305 = 5 * 13 * 97
+  c( 9) =      19171 = 19 * 1009
+  c(10) =      58025 = 5^2 * 11 * 211
+  c(11) =     175099 = 23^2 * 331
+  c(12) =     527345 = 5 * 7 * 13 * 19 * 61
+  c(13) =    1586131 = 53 * 29927
+  c(14) =    4766585 = 5 * 29 * 71 * 463
+  c(15) =   14316139 = 19 * 211 * 3571
+
+======================================================================
+  Part 2: EVERY LIE NUMBER AS L*(3^n - 2^n)
+======================================================================
+
+Key insight: every Lie number L gives a sequence L*(3^n - 2^n)
+satisfying the same recurrence a(n) = 5a(n-1) - 6a(n-2)
+
+    1*(3^n-2^n) =         unit: [0, 1, 5, 19, 65, 211]
+    2*(3^n-2^n) =         KEY1: [0, 2, 10, 38, 130, 422]
+    3*(3^n-2^n) =         KEY2: [0, 3, 15, 57, 195, 633]
+    5*(3^n-2^n) =      KEY_SUM: [0, 5, 25, 95, 325, 1055]
+    6*(3^n-2^n) =        h(G2): [0, 6, 30, 114, 390, 1266]
+    7*(3^n-2^n) =     H_forb_1: [0, 7, 35, 133, 455, 1477]
+    8*(3^n-2^n) =     rank(E8): [0, 8, 40, 152, 520, 1688]
+   10*(3^n-2^n) =       V(Pet): [0, 10, 50, 190, 650, 2110]
+   12*(3^n-2^n) =        h(E6): [0, 12, 60, 228, 780, 2532]
+   14*(3^n-2^n) =      dim(G2): [0, 14, 70, 266, 910, 2954]
+   18*(3^n-2^n) =        h(E7): [0, 18, 90, 342, 1170, 3798]
+   24*(3^n-2^n) =         |BT|: [0, 24, 120, 456, 1560, 5064]
+   30*(3^n-2^n) =        h(E8): [0, 30, 150, 570, 1950, 6330]
+
+OBSERVATION: Every row starts at 0, passes through L (at n=1),
+  then through 5L, 19L, 65L, 211L, ...
+
+The h(G2)=6 row: 0, 6, 30, 114, 390, 1266, ...
+  h(G2)*(3^2-2^2) = 6*5 = 30 = h(E8)!
+  h(G2) at n=1 gives h(E8) at n=2!
+
+The h(E6)=12 row: 0, 12, 60, 228, 780, 2532, ...
+  h(E6)*(3^2-2^2) = 12*5 = 60 = |BI|/2
+
+The |BT|=24 row: 0, 24, 120, 456, 1560, 5064, ...
+  |BT|*(3^2-2^2) = 24*5 = 120 = |BI|!
+  |BT| at n=1 gives |BI| at n=2!
+
+======================================================================
+  Part 3: PYTHAGOREAN TUNING: MUSIC AND THE (2,3) MONOID
+======================================================================
+
+In Pythagorean tuning, all intervals are ratios 2^a * 3^b:
+
+The circle of fifths generates intervals by stacking 3/2:
+
+     0.00c  Unison                     1/1 = 2^0*3^0
+    90.22c  Minor Second               256/243 = 2^8/3^5
+   203.91c  Major Second               9/8 = 2^-3*3^2
+   294.13c  Minor Third                32/27 = 2^5/3^3
+   407.82c  Major Third                81/64 = 2^-6*3^4
+   498.04c  Perfect Fourth             4/3 = 2^2/3^1
+   588.27c  Tritone (Dim 5th)          1024/729 = 2^10/3^6
+   611.73c  Tritone (Aug 4th)          729/512 = 2^-9*3^6
+   701.96c  Perfect Fifth              3/2 = 2^-1*3^1
+   792.18c  Minor Sixth                128/81 = 2^7/3^4
+   905.87c  Major Sixth                27/16 = 2^-4*3^3
+   996.09c  Minor Seventh              16/9 = 2^4/3^2
+  1109.78c  Major Seventh              243/128 = 2^-7*3^5
+
+The Pythagorean comma:
+  (3/2)^12 / 2^7 = 3^12 / 2^19 = 531441/524288 = 1.0136432648
+  = 23.4600 cents
+  3^12 = 531441, 2^19 = 524288
+  Pythagorean comma = 3^12 / 2^19 ≈ 23.46 cents
+
+  12 = h(E6), 19 is prime
+  The comma exists because 3^12 ≈ 2^19 but not equal
+  i.e., 3^{h(E6)} ≈ 2^{19} — the E6 Coxeter number controls the comma!
+
+Related musical-mathematical coincidences:
+  12-TET: 12 notes per octave = h(E6)
+  Circle of fifths: 12 fifths = h(E6) fifths ≈ 7 octaves
+  Perfect fifth: 3/2 = KEY2/KEY1 = 701.96 cents
+  Equal tempered fifth: 2^(7/12) = 700 cents
+  Difference: 1.96 cents = (7/h(E6)) * comma
+
+  7 = H_forb_1 notes in the diatonic scale!
+  5 = KEY_SUM notes in the pentatonic scale!
+  12 = h(E6) notes in the chromatic scale!
+  The major scales: C, D, E, F, G, A, B = 7 = H_forb_1 notes
+
+======================================================================
+  Part 4: THE STERN-BROCOT TREE AND (2,3) MEDIANTS
+======================================================================
+
+The Stern-Brocot tree is the complete binary tree of all positive rationals.
+The mediant of a/b and c/d is (a+c)/(b+d).
+
+Starting from 0/1 and 1/0:
+  Level 0: 1/1
+  Level 1: 1/2, 2/1
+  Level 2: 1/3, 2/3, 3/2, 3/1
+  Level 3: 1/4, 2/5, 3/5, 3/4, 4/3, 5/3, 5/2, 4/1
+
+The 3/2 node (perfect fifth) is at position (right, left) in the tree.
+  Path: R L = take right then left from root 1/1
+  The matrix path: R = [[1,1],[0,1]], L = [[1,0],[1,1]]
+  RL = [[2,1],[1,1]] maps 0/1, 1/0 to 2/1, 3/2
+
+Positions of KEY1/KEY2 and KEY2/KEY1 in the Stern-Brocot tree:
+  2/3: path = R L L (right, left, left)
+  3/2: path = R L (right, left)
+  The perfect fifth 3/2 is CLOSER to the root than 2/3!
+
+Stern's diatomic sequence s(n):
+  s(0)=0, s(1)=1, s(2n)=s(n), s(2n+1)=s(n)+s(n+1)
+  [0, 1, 1, 2, 1, 3, 2, 3, 1, 4, 3, 5, 2, 5, 3, 4, 1, 5, 4, 7, 3, 8, 5, 7, 2, 7, 5, 8, 3, 7, 4, 5]
+
+  s(n)/s(n+1) enumerates all positive rationals exactly once!
+
+  Positions of s(n)=2: [3, 6, 12, 24]
+  Positions of s(n)=3: [5, 7, 10, 14, 20, 28]
+
+  s(n)=2 at: 3, 4, 10, 12, ... = positions where 2 appears
+  s(n)=3 at: 5, 8, 11, 16, ... = positions where 3 appears
+
+======================================================================
+  Part 5: THE (2,3) RECURRENCE AND BERNOULLI NUMBERS
+======================================================================
+
+Bernoulli numbers B_n and the (2,3) universe:
+
+  B_ 0 =               1 =     1.000000
+  B_ 1 =            -1/2 =    -0.500000
+  B_ 2 =             1/6 =     0.166667
+  B_ 4 =           -1/30 =    -0.033333
+  B_ 6 =            1/42 =     0.023810
+  B_ 8 =           -1/30 =    -0.033333
+  B_10 =            5/66 =     0.075758
+  B_12 =       -691/2730 =    -0.253114
+  B_14 =             7/6 =     1.166667
+
+Key Bernoulli values:
+  B_0 = 1
+  B_1 = -1/2 = -1/KEY1
+  B_2 = 1/6 = 1/h(G2)
+  B_4 = -1/30 = -1/h(E8)
+  B_6 = 1/42 = 1/f(9)
+  B_8 = -1/30 = -1/h(E8) again!
+  B_10 = 5/66 = KEY_SUM/(h(G2)*11)
+  B_12 = -691/2730 = -691/(h(E8)*91)
+
+The denominators of B_{2k}/(2k):
+  Von Staudt-Clausen: denom(B_{2k}) = prod_{(p-1)|2k} p
+
+  denom(B_2) = 6 = h(G2)
+  denom(B_4) = 30 = h(E8)
+  denom(B_6) = 42 = f(9)
+  denom(B_8) = 30 = h(E8)
+  denom(B_10) = 66 = h(G2)*11
+  denom(B_12) = 2730 = 2*3*5*7*13 = h(E8)*91
+
+  Bernoulli denominators are products of tournament vocabulary!
+
+======================================================================
+  Part 6: FIBONACCI, TRIBONACCI, AND THE (2,3) CHARACTERISTIC POLY
+======================================================================
+
+Comparing characteristic polynomials:
+
+  Fibonacci:  z^2 - z - 1 = 0, roots = (1±sqrt(5))/2
+              Golden ratio phi = (1+sqrt(5))/2 = 1.618034
+  Tournament: z^2 - 5z + 6 = 0, roots = 2, 3
+              f(z) = (z-2)(z-3)
+
+  Fibonacci: sum=1, product=-1 (roots add to 1, multiply to -1)
+  Tournament: sum=5=KEY_SUM, product=6=h(G2) (roots add to 5, multiply to 6)
+
+  The tournament polynomial is 'multiplicatively Fibonacci-like':
+  If F(z) = z^2 - z - 1, then f(z) = z^2 - 5z + 6
+  Coefficients: -1 -> -5 (multiply by KEY_SUM)
+                -1 -> +6 (multiply by -h(G2))
+
+Tribonacci polynomial: z^3 - z^2 - z - 1 = 0
+  Tribonacci constant ≈ 1.8393
+
+The (2,3,5) polynomial:
+  (z-2)(z-3)(z-5) = z^3 - 10z^2 + 31z - 30
+  Coefficients: -10 = -V(Petersen)
+                 31 = 31 (prime)
+                -30 = -h(E8)
+
+  The (2,3,5) polynomial has h(E8) as its constant term!
+  And V(Petersen) as its z^2 coefficient!
+
+(2,3,5) polynomial g(z) = z^3 - 10z^2 + 31z - 30 at special points:
+  g( -3) =     -240
+  g( -2) =     -140
+  g( -1) =      -72  <-- -|Phi(E6)|
+  g(  0) =      -30  <-- -h(E8)
+  g(  1) =       -8  <-- -rank(E8)
+  g(  2) =        0  <-- 0=root
+  g(  3) =        0  <-- 0=root
+  g(  4) =       -2
+  g(  5) =        0  <-- 0=root
+  g(  6) =       12  <-- h(E6)
+  g(  7) =       40
+  g(  8) =       90
+  g(  9) =      168  <-- |GL(3,2)|
+  g( 10) =      280
+  g( 11) =      432
+  g( 12) =      630
+
+Recurrence: a(n) = 10a(n-1) - 31a(n-2) + 30a(n-3)
+General solution: a(n) = A*2^n + B*3^n + C*5^n
+
+Corner pieces:
+  c_{2,3}(n) = 3^n - 2^n  (the (2,3) corner)
+  c_{3,5}(n) = 5^n - 3^n  (the (3,5) corner)
+  c_{2,5}(n) = 5^n - 2^n  (the (2,5) corner)
+
+  3^n-2^n   : [0, 1, 5, 19, 65, 211, 665, 2059]
+  5^n-3^n   : [0, 2, 16, 98, 544, 2882, 14896, 75938]
+  5^n-2^n   : [0, 3, 21, 117, 609, 3093, 15561, 77997]
+
+At n=2:
+  3^2-2^2 = 5 = KEY_SUM
+  5^2-3^2 = 16 = KEY1^4
+  5^2-2^2 = 21 = H_forb_2!
+
+  5^2 - 2^2 = (5-2)(5+2) = 3*7 = KEY2 * H_forb_1 = 21 = H_forb_2 ✓
+
+======================================================================
+  Part 7: THE ZETA FUNCTION OF THE (2,3) MONOID
+======================================================================
+
+The Dirichlet series (zeta function) of the monoid M = <2,3>:
+
+  Z_M(s) = sum_{m in M} m^{-s} = sum_{a,b >= 0} (2^a * 3^b)^{-s}
+         = (sum 2^{-as})(sum 3^{-bs})
+         = 1/(1-2^{-s}) * 1/(1-3^{-s})
+
+This is a product of TWO geometric series!
+
+Special values:
+  Z_M(1) = 2 * 3/2 = 3 = 3.000000
+  Z_M(2) = 4/3 * 9/8 = 3/2 = 1.500000
+  Z_M(3) = 8/7 * 27/26 = 108/91 = 1.186813
+  Z_M(4) = 16/15 * 81/80 = 27/25 = 1.080000
+
+  Z_M(1) = 2 * 3/2 = 3  (divergent, but formal value = KEY2)
+  Z_M(2) = 4/3 * 9/8 = 3/2 = KEY2/KEY1 (the PERFECT FIFTH!)
+  Z_M(3) = 8/7 * 27/26 = 216/182 = 108/91 = ... 
+
+  Z_M(2) = 3/2 is the perfect fifth!!
+  The zeta function of the (2,3) monoid at s=2 IS the musical fifth!
+
+1/Z_M(s) = (1-2^{-s})(1-3^{-s}):
+  1/Z_M(1) = 1/3 = 0.333333
+  1/Z_M(2) = 2/3 = 0.666667
+  1/Z_M(3) = 91/108 = 0.842593
+
+  1/Z_M(1) = (1/2)(2/3) = 1/3 = 1/KEY2
+  1/Z_M(2) = (3/4)(8/9) = 2/3 = KEY1/KEY2 (the perfect fourth!)
+  The reciprocal at s=2 is the PERFECT FOURTH = KEY1/KEY2!
+
+======================================================================
+  Part 8: COLLATZ-LIKE MAPS ON THE (2,3) WORLD
+======================================================================
+
+The Collatz conjecture uses the map n -> 3n+1 (odd) or n/2 (even).
+In the (2,3) world, consider simpler maps:
+
+Map 1: n -> n*3 (if n is a power of 2) else n/3 (if divisible by 3) else n*2
+This is a random walk on the (2,3) lattice Z^2.
+
+Map on exponents (a,b) in 2^a * 3^b:
+  The lattice Z^2 with coordinates (v_2(n), v_3(n))
+
+  All Lie numbers in this lattice:
+  (a, b) -> 2^a * 3^b:
+    (0,0) ->    1 = unit
+    (0,1) ->    3 = KEY2
+    (0,2) ->    9 = KEY2^2
+    (0,3) ->   27 = KEY2^3
+    (1,0) ->    2 = KEY1
+    (1,1) ->    6 = h(G2)
+    (1,2) ->   18 = h(E7)
+    (1,3) ->   54 = 2*27
+    (2,0) ->    4 = KEY1^2
+    (2,1) ->   12 = h(E6)
+    (2,2) ->   36 = 6^2
+    (3,0) ->    8 = rank(E8)
+    (3,1) ->   24 = |BT|
+    (3,2) ->   72 = 8*9
+    (4,0) ->   16 = KEY1^4
+    (4,1) ->   48 = |BO|
+
+Note: the lattice points form a CONVEX region
+  (0,0)=1, (1,0)=2, (0,1)=3, (2,0)=4, (1,1)=6, (3,0)=8, (0,2)=9, ...
+  Lie numbers 30=h(E8) and 120=|BI| are NOT on this lattice (need factor 5)
+
+======================================================================
+  Part 9: THE (2,3,5) TOWER: RAMANUJAN'S CONTINUED FRACTION
+======================================================================
+
+Ramanujan's continued fraction R(q):
+  R(q) = q^(1/5) / (1 + q/(1 + q^2/(1 + q^3/(1 + ...))))
+
+At q = e^{-2pi}: R(e^{-2pi}) = sqrt(5) * (phi^{5/2} * ... )
+  involves sqrt(5) = sqrt(KEY_SUM)
+
+The Rogers-Ramanujan continued fraction connects to:
+  - The golden ratio phi = (1+sqrt(5))/2
+  - Modular equations of level 5 = KEY_SUM
+  - The icosahedron (symmetry group uses 5)
+
+The j-invariant and Rogers-Ramanujan:
+  j(tau) = 1/q + 744 + 196884q + ...
+  744 = 24 * 31 = |BT| * 31
+  196884 = 12 * 16407 = h(E6) * 16407 = ... 
+  196884 = 2^2 * 3 * 16407 = 4 * 49221 = ...
+
+  196884 = 2^2 * 3^3 * 1823
+  = 2^2 * 3 * 16407
+  = 12 * 16407 = h(E6) * 16407
+  196884 = 196883 + 1 (Monstrous Moonshine: dim(rep_M) + 1)
+
+  196883 = 47 * 59 * 71
+  These are three primes in arithmetic progression:
+  47, 59, 71 with common difference 12 = h(E6)!
+
+======================================================================
+  Part 10: GRAND SYNTHESIS: THE RECURRENCE WEB
+======================================================================
+
+======================================================================
+  THE (2,3) UNIVERSE AS A WEB OF RECURRENCES
+======================================================================
+
+1. FUNDAMENTAL RECURRENCE: a(n) = 5a(n-1) - 6a(n-2)
+   Char poly (z-2)(z-3), general solution A*2^n + B*3^n
+
+2. CORNER PIECE: c(n) = 3^n - 2^n = 0, 1, 5, 19, 65, 211, ...
+   Every Lie number L gives sequence L*c(n)
+   KEY: h(G2)*c(2) = 6*5 = 30 = h(E8)
+        |BT|*c(2) = 24*5 = 120 = |BI|
+
+3. MUSIC: Z_M(2) = 3/2 = perfect fifth
+   1/Z_M(2) = 2/3 = perfect fourth
+   Pythagorean comma: 3^12/2^19, where 12 = h(E6)
+   Diatonic scale: 7 = H_forb_1 notes
+   Chromatic scale: 12 = h(E6) notes
+
+4. THE (2,3,5) POLYNOMIAL: z^3 - 10z^2 + 31z - 30
+   Coefficients: V(Petersen), 31, h(E8)
+   5^2 - 2^2 = 21 = H_forb_2
+
+5. BERNOULLI DENOMINATORS: 6, 30, 42, 30, 66, 2730, ...
+   = h(G2), h(E8), f(9), h(E8), ... — all tournament vocabulary!
+
+6. MONSTROUS MOONSHINE: 196883 = 47*59*71
+   Arithmetic progression with common difference 12 = h(E6)
+
+7. THE STERN-BROCOT TREE places 3/2 (the fifth) at depth 2
+   and 2/3 (the fourth) at depth 3 — the keys appear at
+   depths KEY1 and KEY2!
+
+THE WEB:
+  Every mathematical structure touched by (2,3) participates in
+  the recurrence a(n) = 5a(n-1) - 6a(n-2). The Lie algebras,
+  the music, the number theory, the combinatorics — they are all
+  eigenvectors of the same shift operator with eigenvalues 2 and 3.
