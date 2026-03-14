@@ -1,0 +1,461 @@
+======================================================================
+DEEP FORBIDDEN VALUE ANALYSIS at n=7
+opus-2026-03-14-S89
+======================================================================
+
+  Achieved: 76 values
+  Forbidden: 19 values
+  Forbidden: [7, 21, 35, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+  Interior forbidden (neighbors achieved): [7, 21, 35, 63, 107, 119, 149, 173]
+  Tail/sparse forbidden: [161, 163, 165, 167, 169, 177, 179, 181, 183, 185, 187]
+
+======================================================================
+PART 1: NUMBER THEORY OF INTERIOR FORBIDDEN VALUES
+======================================================================
+
+  H = 7:
+    Factorization: 7
+    Binary: 0b111
+    Base 2: 111 (REPDIGIT)
+    Base 6: 11 (REPDIGIT)
+    Base 8: 7 (REPDIGIT)
+    Base 9: 7 (REPDIGIT)
+    = 2^3 - 1 (MERSENNE)
+    = (q^3 - 1)/(q - 1) with q=2 (REPUNIT in base 2)
+    = 2^3 - 1
+    = (q^2 - 1)/(q - 1) with q=6 (REPUNIT in base 6)
+    = |PG(2, F_2)| (projective 2-space over F_2)
+    Mod 7: 0
+    Mod 8: 7
+    Mod 9: 7
+    Mod 16: 7
+    Mod 21: 7
+
+  H = 21:
+    Factorization: 3 * 7
+    Binary: 0b10101
+    Base 4: 111 (REPDIGIT)
+    Base 6: 33 (REPDIGIT)
+    = (q^3 - 1)/(q - 1) with q=4 (REPUNIT in base 4)
+    = |PG(2, F_4)| (projective 2-space over F_4)
+    Mod 7: 0
+    Mod 8: 5
+    Mod 9: 3
+    Mod 16: 5
+    Mod 21: 0
+
+  H = 35:
+    Factorization: 5 * 7
+    Binary: 0b100011
+    Base 6: 55 (REPDIGIT)
+    = 6^2 - 1
+    Mod 7: 0
+    Mod 8: 3
+    Mod 9: 8
+    Mod 16: 3
+    Mod 21: 14
+
+  H = 63:
+    Factorization: 3 * 3 * 7
+    Binary: 0b111111
+    Base 2: 111111 (REPDIGIT)
+    Base 4: 333 (REPDIGIT)
+    Base 8: 77 (REPDIGIT)
+    = 2^6 - 1 (MERSENNE)
+    = (q^6 - 1)/(q - 1) with q=2 (REPUNIT in base 2)
+    = 2^6 - 1
+    = 4^3 - 1
+    = |PG(5, F_2)| (projective 5-space over F_2)
+    Mod 7: 0
+    Mod 8: 7
+    Mod 9: 0
+    Mod 16: 15
+    Mod 21: 0
+
+  H = 107:
+    Factorization: 107
+    Binary: 0b1101011
+    Mod 7: 2
+    Mod 8: 3
+    Mod 9: 8
+    Mod 16: 11
+    Mod 21: 2
+
+  H = 119:
+    Factorization: 7 * 17
+    Binary: 0b1110111
+    Mod 7: 0
+    Mod 8: 7
+    Mod 9: 2
+    Mod 16: 7
+    Mod 21: 14
+
+  H = 149:
+    Factorization: 149
+    Binary: 0b10010101
+    Mod 7: 2
+    Mod 8: 5
+    Mod 9: 5
+    Mod 16: 5
+    Mod 21: 2
+
+  H = 173:
+    Factorization: 173
+    Binary: 0b10101101
+    Mod 7: 5
+    Mod 8: 5
+    Mod 9: 2
+    Mod 16: 13
+    Mod 21: 5
+
+======================================================================
+PART 2: RELATIONSHIPS AMONG INTERIOR FORBIDDEN VALUES
+======================================================================
+  7, 21: diff=14, gcd=7, ratio=3.0000
+    21 = 3 * 7
+  7, 35: diff=28, gcd=7, ratio=5.0000
+    35 = 5 * 7
+  7, 63: diff=56, gcd=7, ratio=9.0000
+    63 = 9 * 7
+  7, 107: diff=100, gcd=1, ratio=15.2857
+  7, 119: diff=112, gcd=7, ratio=17.0000
+    119 = 17 * 7
+  7, 149: diff=142, gcd=1, ratio=21.2857
+  7, 173: diff=166, gcd=1, ratio=24.7143
+  21, 35: diff=14, gcd=7, ratio=1.6667
+  21, 63: diff=42, gcd=21, ratio=3.0000
+    63 = 3 * 21
+  21, 107: diff=86, gcd=1, ratio=5.0952
+  21, 119: diff=98, gcd=7, ratio=5.6667
+  21, 149: diff=128, gcd=1, ratio=7.0952
+  21, 173: diff=152, gcd=1, ratio=8.2381
+  35, 63: diff=28, gcd=7, ratio=1.8000
+  35, 107: diff=72, gcd=1, ratio=3.0571
+  35, 119: diff=84, gcd=7, ratio=3.4000
+  35, 149: diff=114, gcd=1, ratio=4.2571
+  35, 173: diff=138, gcd=1, ratio=4.9429
+  63, 107: diff=44, gcd=1, ratio=1.6984
+  63, 119: diff=56, gcd=7, ratio=1.8889
+  63, 149: diff=86, gcd=1, ratio=2.3651
+  63, 173: diff=110, gcd=1, ratio=2.7460
+  107, 119: diff=12, gcd=1, ratio=1.1121
+  107, 149: diff=42, gcd=1, ratio=1.3925
+  107, 173: diff=66, gcd=1, ratio=1.6168
+  119, 149: diff=30, gcd=1, ratio=1.2521
+  119, 173: diff=54, gcd=1, ratio=1.4538
+  149, 173: diff=24, gcd=1, ratio=1.1611
+
+  [7, 21, 35]: all multiples of 7! (7, 3*7, 9*7)
+  119 = 7 * 17 (also multiple of 7!)
+  107 is prime, 149 is prime
+
+  Multiples of 7 among interior: [7, 21, 35, 63, 119]
+  Non-multiples of 7 among interior: [107, 149, 173]
+  107 mod 7 = 2
+  149 mod 7 = 2
+
+======================================================================
+PART 3: SYMMETRY OF FORBIDDEN VALUES AROUND MEAN
+======================================================================
+  Mean = 315/4 = 78.75
+  Max H = 189
+
+  For each forbidden value f, check if (2*Mean - f) = (157.5 - f) is achieved:
+    f=  7: 2*Mean-f = 150.5, not an odd integer
+    f= 21: 2*Mean-f = 136.5, not an odd integer
+    f= 35: 2*Mean-f = 122.5, not an odd integer
+    f= 63: 2*Mean-f = 94.5, not an odd integer
+    f=107: 2*Mean-f = 50.5, not an odd integer
+    f=119: 2*Mean-f = 38.5, not an odd integer
+    f=149: 2*Mean-f = 8.5, not an odd integer
+    f=161: 2*Mean-f = -3.5, not an odd integer
+    f=163: 2*Mean-f = -5.5, not an odd integer
+    f=165: 2*Mean-f = -7.5, not an odd integer
+    f=167: 2*Mean-f = -9.5, not an odd integer
+    f=169: 2*Mean-f = -11.5, not an odd integer
+    f=173: 2*Mean-f = -15.5, not an odd integer
+    f=177: 2*Mean-f = -19.5, not an odd integer
+    f=179: 2*Mean-f = -21.5, not an odd integer
+    f=181: 2*Mean-f = -23.5, not an odd integer
+    f=183: 2*Mean-f = -25.5, not an odd integer
+    f=185: 2*Mean-f = -27.5, not an odd integer
+    f=187: 2*Mean-f = -29.5, not an odd integer
+
+  Check: max + min = 189 + 1 = 190. Is 190 - f achieved for each f?
+    f=  7: 190-f=183: FORBIDDEN
+    f= 21: 190-f=169: FORBIDDEN
+    f= 35: 190-f=155: ACHIEVED
+    f= 63: 190-f=127: ACHIEVED
+    f=107: 190-f= 83: ACHIEVED
+    f=119: 190-f= 71: ACHIEVED
+    f=149: 190-f= 41: ACHIEVED
+    f=161: 190-f= 29: ACHIEVED
+    f=163: 190-f= 27: ACHIEVED
+    f=165: 190-f= 25: ACHIEVED
+    f=167: 190-f= 23: ACHIEVED
+    f=169: 190-f= 21: FORBIDDEN
+    f=173: 190-f= 17: ACHIEVED
+    f=177: 190-f= 13: ACHIEVED
+    f=179: 190-f= 11: ACHIEVED
+    f=181: 190-f=  9: ACHIEVED
+    f=183: 190-f=  7: FORBIDDEN
+    f=185: 190-f=  5: ACHIEVED
+    f=187: 190-f=  3: ACHIEVED
+
+======================================================================
+PART 4: COMPREHENSIVE BASE REPRESENTATION
+======================================================================
+
+  H = 7:
+    Base 2: 111
+    Base 3: 21
+    Base 4: 13
+    Base 5: 12
+    Base 6: 11
+    Base 7: 10
+    Base 8: 7
+    Base 9: 7
+
+  H = 21:
+    Base 2: 10101
+    Base 3: 210
+    Base 4: 111
+    Base 5: 41
+    Base 6: 33
+    Base 7: 30
+    Base 8: 25
+    Base 9: 23
+
+  H = 35:
+    Base 2: 100011
+    Base 3: 1022
+    Base 4: 203
+    Base 5: 120
+    Base 6: 55
+    Base 7: 50
+    Base 8: 43
+    Base 9: 38
+
+  H = 63:
+    Base 2: 111111
+    Base 3: 2100
+    Base 4: 333
+    Base 5: 223
+    Base 6: 143
+    Base 7: 120
+    Base 8: 77
+    Base 9: 70
+
+  H = 107:
+    Base 2: 1101011
+    Base 3: 10222
+    Base 4: 1223
+    Base 5: 412
+    Base 6: 255
+    Base 7: 212
+    Base 8: 153
+    Base 9: 128
+
+  H = 119:
+    Base 2: 1110111
+    Base 3: 11102
+    Base 4: 1313
+    Base 5: 434
+    Base 6: 315
+    Base 7: 230
+    Base 8: 167
+    Base 9: 142
+
+  H = 149:
+    Base 2: 10010101
+    Base 3: 12112
+    Base 4: 2111
+    Base 5: 1044
+    Base 6: 405
+    Base 7: 302
+    Base 8: 225
+    Base 9: 175
+
+  H = 173:
+    Base 2: 10101101
+    Base 3: 20102
+    Base 4: 2231
+    Base 5: 1143
+    Base 6: 445
+    Base 7: 335
+    Base 8: 255
+    Base 9: 212
+
+======================================================================
+PART 5: THE 7-21-63 PATTERN -- REPUNIT STRUCTURE
+======================================================================
+  7, 21, 63 = 7*1, 7*3, 7*9 = 7*3^0, 7*3^1, 7*3^2
+  = 7 * {1, 3, 9} = 7 * powers of 3
+  Next would be: 7 * 27 = 189 = max(H at n=7)!
+  Is 189 forbidden? False
+  No! 189 IS achieved (it's the maximum). The pattern breaks at 7*3^3.
+
+  7*3^k series: 7, 21, 63, 189, 567, ...
+  At n=7: 7 FORBIDDEN, 21 FORBIDDEN, 63 FORBIDDEN, 189 ACHIEVED (max)
+  The forbidden pattern is 7*3^k for 0 <= k <= 2
+  And 7*3^3 = 189 is the MAXIMUM value -- the pattern terminates!
+
+  Max/Mean = 189/78.75 = 2.4000
+  Min/Mean = 1/78.75 = 0.012698
+
+======================================================================
+PART 6: FORBIDDEN VALUES AT SMALLER n
+======================================================================
+  n=3: forbidden = [] (all achieved)
+  n=4: forbidden = [] (all achieved)
+  n=5: forbidden = [7]
+  n=6: achieved = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  n=6: forbidden = [7, 21, 35, 39]
+  n=7: forbidden = [7, 21, 35, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+  n=6 forbidden: [7, 21, 35, 39]
+    7 = 7, binary=0b111
+    21 = 3*7, binary=0b10101
+    35 = 5*7, binary=0b100011
+    39 = 3*13, binary=0b100111
+
+  Is 7 forbidden at each n?
+    n=3: 7 > max(3), N/A
+    n=4: 7 > max(5), N/A
+    n=5: 7 FORBIDDEN (in [1,15] but not achieved)
+    n=6: True
+    n=7: True
+
+======================================================================
+PART 7: FACTORIAL AND MEAN CONNECTIONS
+======================================================================
+  n=3: Mean = 3/2 = 1.5000
+  n=4: Mean = 3 = 3.0000
+  n=5: Mean = 15/2 = 7.5000
+  n=6: Mean = 45/2 = 22.5000
+  n=7: Mean = 315/4 = 78.7500
+  n=8: Mean = 315 = 315.0000
+  n=9: Mean = 2835/2 = 1417.5000
+
+  At n=5: Mean = 7.5, forbidden value 7 = Mean - 0.5
+  At n=7: Mean = 78.75, forbidden 7 is far below mean
+  H=7: H/Mean = 0.088889
+  H=21: H/Mean = 0.266667
+  H=35: H/Mean = 0.444444
+  H=63: H/Mean = 0.800000
+  H=107: H/Mean = 1.358730
+  H=119: H/Mean = 1.511111
+  H=149: H/Mean = 1.892063
+  H=173: H/Mean = 2.196825
+
+  63/Mean = 63/(315/4) = 63*4/315 = 4/5 = 0.8
+  This is 4/5! The forbidden value 63 = 4/5 * Mean.
+  Check: 4/5 * 315/4 = 315/5 = 63. YES!
+
+  315 = 315 = 5 * 63 = 7 * 45 = 9 * 35 = 5 * 7 * 9
+  Mean = 315/4. So 63 = Mean * 4/5 = (4*Mean)/5
+
+======================================================================
+PART 8: THE INNER FORBIDDEN VALUES 107, 119, 149
+======================================================================
+  107 + 149 = 256 = 2^8 !!!
+  107 + 119 = 226
+  119 + 149 = 268
+  107 + 119 + 149 = 375
+  107 + 82 = 189 (max). So 189 - 107 = 82 = 82. H=82 is even, N/A.
+  190 - 107 = 83 = 83. Is 83 achieved? True
+  190 - 119 = 71 = 71. Is 71 achieved? True
+  190 - 149 = 41 = 41. Is 41 achieved? True
+
+  Walsh lattice equation: 120*S2 + 6*S4a + 12*S4b + S6 = 32H - 2520
+    H=7: target = -2296
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 27944
+    120*p2 + 6*p4a + 12*p4b + p6 = 13972
+    p6 mod 6 = 4
+    H=21: target = -1848
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 28392
+    120*p2 + 6*p4a + 12*p4b + p6 = 14196
+    p6 mod 6 = 0
+    H=35: target = -1400
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 28840
+    120*p2 + 6*p4a + 12*p4b + p6 = 14420
+    p6 mod 6 = 2
+    H=63: target = -504
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 29736
+    120*p2 + 6*p4a + 12*p4b + p6 = 14868
+    p6 mod 6 = 0
+    H=107: target = 904
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 31144
+    120*p2 + 6*p4a + 12*p4b + p6 = 15572
+    p6 mod 6 = 2
+    H=119: target = 1288
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 31528
+    120*p2 + 6*p4a + 12*p4b + p6 = 15764
+    p6 mod 6 = 2
+    H=149: target = 2248
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 32488
+    120*p2 + 6*p4a + 12*p4b + p6 = 16244
+    p6 mod 6 = 2
+    H=173: target = 3016
+    240*p2 + 12*p4a + 24*p4b + 2*p6 = 33256
+    120*p2 + 6*p4a + 12*p4b + p6 = 16628
+    p6 mod 6 = 2
+
+======================================================================
+PART 9: MERSENNE NUMBERS AND FORBIDDEN VALUES
+======================================================================
+  Mersenne numbers: [1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047]
+  In H-spectrum range [1, 189]:
+    2^1-1 = 1: ACHIEVED
+    2^2-1 = 3: ACHIEVED
+    2^3-1 = 7: FORBIDDEN
+    2^4-1 = 15: ACHIEVED
+    2^5-1 = 31: ACHIEVED
+    2^6-1 = 63: FORBIDDEN
+    2^7-1 = 127: ACHIEVED
+
+  Only 2^3-1 = 7 and 2^6-1 = 63 are forbidden.
+  Pattern: 2^(3k)-1 for k=1,2. Next: 2^9-1 = 511 (outside range).
+
+======================================================================
+PART 10: SUMMARY AND CONJECTURES
+======================================================================
+
+  FINDINGS:
+  1. 18 forbidden values at n=7, split into:
+     - 6 "interior" forbidden: {7, 21, 63, 107, 119, 149}
+     - 12 "tail" forbidden: {161-187} (gap near max)
+
+  2. The 7-21-63 pattern: 7*3^k for k=0,1,2.
+     - 7*3^3 = 189 = max(H), which IS achieved.
+     - So the pattern is 7*3^k for k < log_3(max/7).
+
+  3. Projective space connection:
+     - 7 = |PG(2, F_2)| = Fano plane
+     - 21 = |PG(2, F_4)|
+     - 63 = |PG(5, F_2)| = 2^6 - 1
+
+  4. 107 + 149 = 256 = 2^8 (power of 2 sum!)
+
+  5. Repunit structure:
+     - 7 = 111_2
+     - 21 = 111_4
+     - 63 = 111111_2 = 333_4
+
+  6. Only Mersenne primes 2^3-1 and 2^6-1 are forbidden (not 2^k-1 in general).
+
+  7. C3 = triangle count is purely level-2 Walsh.
+     All forbidden values are in range [1, max] and NOT extreme (small z-scores).
+     The obstruction is structural (Walsh lattice), not statistical.
+
+  CONJECTURES:
+  - CONJ-F1: H=7 is forbidden for ALL n >= 5.
+  - CONJ-F2: H=21 is forbidden for ALL n >= 7.
+  - CONJ-F3: The "interior" forbidden values grow as 7*3^k.
+  - CONJ-F4: The number of interior forbidden values at n grows logarithmically.
+
+
+======================================================================
+DONE -- DEEP FORBIDDEN VALUE ANALYSIS
+======================================================================
