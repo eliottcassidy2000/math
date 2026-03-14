@@ -1,0 +1,346 @@
+======================================================================
+|dH| ALWAYS EVEN: THE WALSH DERIVATIVE STRUCTURE
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: THE TRIVIAL PROOF
+======================================================================
+
+  THEOREM: For any tournament T and any arc e, |H(T) - H(T^e)| is even,
+  where T^e is T with arc e reversed.
+
+  PROOF: By Redei's theorem, H(T) is odd for all T.
+  H(T) - H(T^e) = odd - odd = even. QED.
+
+  This is not deep — it's a CONSEQUENCE of Redei.
+  But the STRUCTURE of dH = H(T) - H(T^e) is much richer.
+
+======================================================================
+PART 2: FINE DIVISIBILITY OF dH
+======================================================================
+
+  n=3: dH divisibility by powers of 2:
+        0:      12 (0.5000)
+      2^1:      12 (0.5000)
+
+  n=3: Signed dH distribution:
+    dH =   -2:       6  (symmetric: dH=2 has 6)
+    dH =    0:      12
+    dH =    2:       6  (symmetric: dH=-2 has 6)
+  Symmetric about 0? True
+  Mean dH = 0.000000
+  Var(dH) = E[dH^2] = 2.0000
+  sqrt(Var) = 1.4142
+
+  n=4: dH divisibility by powers of 2:
+        0:     144 (0.3750)
+      2^1:     192 (0.5000)
+      2^2:      48 (0.1250)
+
+  n=4: Signed dH distribution:
+    dH =   -4:      24  (symmetric: dH=4 has 24)
+    dH =   -2:      96  (symmetric: dH=2 has 96)
+    dH =    0:     144
+    dH =    2:      96  (symmetric: dH=-2 has 96)
+    dH =    4:      24  (symmetric: dH=-4 has 24)
+  Symmetric about 0? True
+  Mean dH = 0.000000
+  Var(dH) = E[dH^2] = 4.0000
+  sqrt(Var) = 2.0000
+
+  n=5: dH divisibility by powers of 2:
+        0:    2240 (0.2188)
+      2^1:    4800 (0.4688)
+      2^2:    2480 (0.2422)
+      2^3:     720 (0.0703)
+
+  n=5: Signed dH distribution:
+    dH =  -12:      40  (symmetric: dH=12 has 40)
+    dH =   -8:     360  (symmetric: dH=8 has 360)
+    dH =   -6:     600  (symmetric: dH=6 has 600)
+    dH =   -4:    1200  (symmetric: dH=4 has 1200)
+    dH =   -2:    1800  (symmetric: dH=2 has 1800)
+    dH =    0:    2240
+    dH =    2:    1800  (symmetric: dH=-2 has 1800)
+    dH =    4:    1200  (symmetric: dH=-4 has 1200)
+    dH =    6:     600  (symmetric: dH=-6 has 600)
+    dH =    8:     360  (symmetric: dH=-8 has 360)
+    dH =   12:      40  (symmetric: dH=-12 has 40)
+  Symmetric about 0? True
+  Mean dH = 0.000000
+  Var(dH) = E[dH^2] = 15.0000
+  sqrt(Var) = 3.8730
+
+  n=6: dH divisibility by powers of 2:
+        0:   71040 (0.1445)
+      2^1:  230400 (0.4688)
+      2^2:  105600 (0.2148)
+      2^3:   67200 (0.1367)
+      2^4:   15840 (0.0322)
+      2^5:    1440 (0.0029)
+
+  n=6: Signed dH distribution:
+    dH =  -32:     720  (symmetric: dH=32 has 720)
+    dH =  -26:    1440  (symmetric: dH=26 has 1440)
+    dH =  -24:    3360  (symmetric: dH=24 has 3360)
+    dH =  -22:    1440  (symmetric: dH=22 has 1440)
+    dH =  -20:    2160  (symmetric: dH=20 has 2160)
+    dH =  -18:    9120  (symmetric: dH=18 has 9120)
+    dH =  -16:    7920  (symmetric: dH=16 has 7920)
+    dH =  -14:   12960  (symmetric: dH=14 has 12960)
+    dH =  -12:   12480  (symmetric: dH=12 has 12480)
+    dH =  -10:   23040  (symmetric: dH=10 has 23040)
+    dH =   -8:   30240  (symmetric: dH=8 has 30240)
+    dH =   -6:   31200  (symmetric: dH=6 has 31200)
+    dH =   -4:   38160  (symmetric: dH=4 has 38160)
+    dH =   -2:   36000  (symmetric: dH=2 has 36000)
+    dH =    0:   71040
+    dH =    2:   36000  (symmetric: dH=-2 has 36000)
+    dH =    4:   38160  (symmetric: dH=-4 has 38160)
+    dH =    6:   31200  (symmetric: dH=-6 has 31200)
+    dH =    8:   30240  (symmetric: dH=-8 has 30240)
+    dH =   10:   23040  (symmetric: dH=-10 has 23040)
+    dH =   12:   12480  (symmetric: dH=-12 has 12480)
+    dH =   14:   12960  (symmetric: dH=-14 has 12960)
+    dH =   16:    7920  (symmetric: dH=-16 has 7920)
+    dH =   18:    9120  (symmetric: dH=-18 has 9120)
+    dH =   20:    2160  (symmetric: dH=-20 has 2160)
+    dH =   22:    1440  (symmetric: dH=-22 has 1440)
+    dH =   24:    3360  (symmetric: dH=-24 has 3360)
+    dH =   26:    1440  (symmetric: dH=-26 has 1440)
+    dH =   32:     720  (symmetric: dH=-32 has 720)
+  Symmetric about 0? True
+  Mean dH = 0.000000
+  Var(dH) = E[dH^2] = 84.0000
+  sqrt(Var) = 9.1652
+
+======================================================================
+PART 3: WALSH DERIVATIVE -- dH AS DIRECTIONAL DERIVATIVE
+======================================================================
+
+  In the Walsh-Fourier framework:
+  H(T) = sum_S H_hat[S] * chi_S(T)
+
+  When we flip edge e, we get T^e.
+  chi_S(T^e) = chi_S(T) * (-1)^{[e in S]}
+
+  So: H(T^e) = sum_S H_hat[S] * chi_S(T) * (-1)^{[e in S]}
+
+  dH_e(T) = H(T) - H(T^e)
+          = sum_S H_hat[S] * chi_S(T) * (1 - (-1)^{[e in S]})
+          = 2 * sum_{S: e in S} H_hat[S] * chi_S(T)
+
+  So dH_e is EXACTLY TWICE the "restriction to S containing e."
+  This is the WALSH DERIVATIVE of H in direction e.
+
+  |dH| is even because dH is always 2 * (some integer).
+  The "some integer" is the Walsh restriction to sets containing e.
+
+  DEEPER: dH_e = 0 iff sum_{S: e in S} H_hat[S] * chi_S(T) = 0.
+  This means H is "insensitive" to edge e at tournament T
+  iff the Walsh components through e cancel at T.
+
+  Verification for n=3:
+    H values: [1, 1, 3, 1, 1, 3, 1, 1]
+    H_hat: [1.5, 0.0, 0.0, -0.5, 0.0, 0.5, -0.5, 0.0]
+
+    Walsh derivative for edge 0 (arc (0, 1)):
+    Sets containing edge 0: [1, 3, 5, 7]
+    T=000: actual dH = +0, formula 2*sum = +0.0, match = True
+    T=001: actual dH = +0, formula 2*sum = +0.0, match = True
+    T=010: actual dH = +2, formula 2*sum = +2.0, match = True
+    T=011: actual dH = -2, formula 2*sum = -2.0, match = True
+    T=100: actual dH = -2, formula 2*sum = -2.0, match = True
+    T=101: actual dH = +2, formula 2*sum = +2.0, match = True
+    T=110: actual dH = +0, formula 2*sum = +0.0, match = True
+    T=111: actual dH = +0, formula 2*sum = +0.0, match = True
+
+======================================================================
+PART 4: THE EDGE FLIP GRAPH (H-LEVEL SETS)
+======================================================================
+
+  n=3: Tournament counts by H value:
+    H=  1:     6 tournaments, avg same-H neighbors = 2.00/3
+    H=  3:     2 tournaments, avg same-H neighbors = 0.00/3
+
+  n=4: Tournament counts by H value:
+    H=  1:    24 tournaments, avg same-H neighbors = 3.00/6
+    H=  3:    16 tournaments, avg same-H neighbors = 0.00/6
+    H=  5:    24 tournaments, avg same-H neighbors = 3.00/6
+
+  n=5: Tournament counts by H value:
+    H=  1:   120 tournaments, avg same-H neighbors = 4.00/10
+    H=  3:   120 tournaments, avg same-H neighbors = 0.67/10
+    H=  5:   240 tournaments, avg same-H neighbors = 3.00/10
+    H=  9:   240 tournaments, avg same-H neighbors = 3.00/10
+    H= 11:   120 tournaments, avg same-H neighbors = 2.00/10
+    H= 13:   120 tournaments, avg same-H neighbors = 0.00/10
+    H= 15:    64 tournaments, avg same-H neighbors = 0.00/10
+
+======================================================================
+PART 5: EDGE SENSITIVITY BY POSITION (n=5)
+======================================================================
+
+  n=5: Average |dH| for each edge:
+    Edge (0, 1): avg |dH| = 3.0000
+    Edge (0, 2): avg |dH| = 3.0000
+    Edge (0, 3): avg |dH| = 3.0000
+    Edge (0, 4): avg |dH| = 3.0000
+    Edge (1, 2): avg |dH| = 3.0000
+    Edge (1, 3): avg |dH| = 3.0000
+    Edge (1, 4): avg |dH| = 3.0000
+    Edge (2, 3): avg |dH| = 3.0000
+    Edge (2, 4): avg |dH| = 3.0000
+    Edge (3, 4): avg |dH| = 3.0000
+
+  ALL EDGES HAVE THE SAME AVERAGE |dH|!
+  This is because all edges are equivalent under S_n symmetry.
+  (Any edge can be mapped to any other by relabeling vertices.)
+
+======================================================================
+PART 6: dH AND THE CONE FUNCTOR
+======================================================================
+
+  If T' = Cone_top(T), then T' has one extra vertex v* beating everyone.
+  What happens to dH when we flip an arc of T'?
+
+  Case 1: Flip an arc e of T (not involving v*).
+    Then Cone_top(T^e) = (Cone_top(T))^e.
+    By THM-205: H(Cone_top(T^e)) = H(T^e).
+    So dH_{Cone_top(T)}(e) = H(Cone_top(T)) - H(Cone_top(T)^e)
+                            = H(T) - H(T^e) = dH_T(e).
+    The sensitivity of CONE EDGES is IDENTICAL to the original!
+
+  Case 2: Flip a cone arc (v* -> w becomes w -> v*).
+    After flip, v* no longer beats w. Now v* has one predecessor.
+    H changes because v* can no longer always be first.
+    This is a NEW kind of sensitivity not present in T.
+
+  Verification of Case 1 (n=3 -> 4):
+  Case 1 verified: dH is preserved under coning for all original edges.
+
+  Case 2: Sensitivity of CONE edges (n=3 -> 4):
+    T=000 (H=1), flip cone arc 3->0: H_cone=1, H_flipped=5, dH=-4
+    T=000 (H=1), flip cone arc 3->1: H_cone=1, H_flipped=3, dH=-2
+    T=000 (H=1), flip cone arc 3->2: H_cone=1, H_flipped=1, dH=+0
+    T=001 (H=1), flip cone arc 3->0: H_cone=1, H_flipped=3, dH=-2
+    T=001 (H=1), flip cone arc 3->1: H_cone=1, H_flipped=5, dH=-4
+    T=001 (H=1), flip cone arc 3->2: H_cone=1, H_flipped=1, dH=+0
+    T=010 (H=3), flip cone arc 3->0: H_cone=3, H_flipped=5, dH=-2
+    T=010 (H=3), flip cone arc 3->1: H_cone=3, H_flipped=5, dH=-2
+    T=010 (H=3), flip cone arc 3->2: H_cone=3, H_flipped=5, dH=-2
+    T=011 (H=1), flip cone arc 3->0: H_cone=1, H_flipped=1, dH=+0
+    T=011 (H=1), flip cone arc 3->1: H_cone=1, H_flipped=5, dH=-4
+    T=011 (H=1), flip cone arc 3->2: H_cone=1, H_flipped=3, dH=-2
+    T=100 (H=1), flip cone arc 3->0: H_cone=1, H_flipped=5, dH=-4
+    T=100 (H=1), flip cone arc 3->1: H_cone=1, H_flipped=1, dH=+0
+    T=100 (H=1), flip cone arc 3->2: H_cone=1, H_flipped=3, dH=-2
+    T=101 (H=3), flip cone arc 3->0: H_cone=3, H_flipped=5, dH=-2
+    T=101 (H=3), flip cone arc 3->1: H_cone=3, H_flipped=5, dH=-2
+    T=101 (H=3), flip cone arc 3->2: H_cone=3, H_flipped=5, dH=-2
+    T=110 (H=1), flip cone arc 3->0: H_cone=1, H_flipped=3, dH=-2
+    T=110 (H=1), flip cone arc 3->1: H_cone=1, H_flipped=1, dH=+0
+    T=110 (H=1), flip cone arc 3->2: H_cone=1, H_flipped=5, dH=-4
+    T=111 (H=1), flip cone arc 3->0: H_cone=1, H_flipped=1, dH=+0
+    T=111 (H=1), flip cone arc 3->1: H_cone=1, H_flipped=3, dH=-2
+    T=111 (H=1), flip cone arc 3->2: H_cone=1, H_flipped=5, dH=-4
+
+======================================================================
+PART 7: HYPERCUBE LAPLACIAN OF H
+======================================================================
+
+  The tournament hypercube Q_m has vertices = 2^m tournaments.
+  The Laplacian: (Delta H)(T) = m * H(T) - sum_{e} H(T^e)
+  where the sum is over all m neighbors (single arc flips).
+
+  Equivalently: (Delta H)(T) = sum_e dH_e(T) = sum_e (H(T) - H(T^e))
+
+  From the Walsh decomposition:
+  (Delta H)(T) = sum_e 2 * sum_{S: e in S} H_hat[S] * chi_S(T)
+              = 2 * sum_S |S| * H_hat[S] * chi_S(T)
+
+  So the Laplacian multiplies each Walsh coefficient by 2|S|.
+  This is the STANDARD hypercube Laplacian eigenvalue: lambda_S = 2|S|.
+
+  n=3: Laplacian of H on Q_3:
+    max(Delta H) = 6, min(Delta H) = -2, mean = 0.0000
+    Lap/H ratios: [-2.0, 2.0] 
+  n=4: Laplacian of H on Q_6:
+    max(Delta H) = 8, min(Delta H) = -8, mean = 0.0000
+    Lap/H ratios: [-8.0, 0.0, 1.6] 
+  n=5: Laplacian of H on Q_10:
+    max(Delta H) = 42, min(Delta H) = -22, mean = 0.0000
+    Lap/H ratios: [-22.0, -6.0, -2.8, 0.6667, 0.9091, 2.0, 2.8] 
+
+======================================================================
+PART 8: MAXIMUM EDGE SENSITIVITY
+======================================================================
+
+  n=3:
+    Max single-flip |dH| = 2 (at H=1)
+    Max total sensitivity = 6
+    Avg total sensitivity = 3.00
+    Max total / m = 2.00
+    Max single / max(H) = 0.6667
+
+  n=4:
+    Max single-flip |dH| = 4 (at H=1)
+    Max total sensitivity = 12
+    Avg total sensitivity = 9.00
+    Max total / m = 2.00
+    Max single / max(H) = 0.8000
+
+  n=5:
+    Max single-flip |dH| = 12 (at H=3)
+    Max total sensitivity = 42
+    Avg total sensitivity = 30.00
+    Max total / m = 4.20
+    Max single / max(H) = 0.8000
+
+  n=6:
+    Max single-flip |dH| = 32 (at H=5)
+    Max total sensitivity = 128
+    Avg total sensitivity = 105.12
+    Max total / m = 8.53
+    Max single / max(H) = 0.7111
+
+======================================================================
+PART 9: HOW OFTEN IS dH DIVISIBLE BY 4?
+======================================================================
+
+  n=3 (total flips = 24):
+    dH = 0:                12 (0.5000)
+    4 | dH (not 8):         0 (0.0000)
+    8 | dH:                 0 (0.0000)
+    2 | dH, 4 !| dH:       12 (0.5000)
+    H mod 4 distribution: {1: 6, 3: 2}
+    dH mod 4 distribution (nonzero): {2: 12}
+
+  n=4 (total flips = 384):
+    dH = 0:               144 (0.3750)
+    4 | dH (not 8):        48 (0.1250)
+    8 | dH:                 0 (0.0000)
+    2 | dH, 4 !| dH:      192 (0.5000)
+    H mod 4 distribution: {1: 48, 3: 16}
+    dH mod 4 distribution (nonzero): {0: 48, 2: 192}
+
+  n=5 (total flips = 10240):
+    dH = 0:              2240 (0.2188)
+    4 | dH (not 8):      2480 (0.2422)
+    8 | dH:               720 (0.0703)
+    2 | dH, 4 !| dH:     4800 (0.4688)
+    H mod 4 distribution: {1: 720, 3: 304}
+    dH mod 4 distribution (nonzero): {0: 3200, 2: 4800}
+
+  n=6 (total flips = 491520):
+    dH = 0:             71040 (0.1445)
+    4 | dH (not 8):    105600 (0.2148)
+    8 | dH:             84480 (0.1719)
+    2 | dH, 4 !| dH:   230400 (0.4688)
+    H mod 4 distribution: {1: 20480, 3: 12288}
+    dH mod 4 distribution (nonzero): {0: 190080, 2: 230400}
+
+======================================================================
+DONE -- dH ALWAYS EVEN, WALSH DERIVATIVE STRUCTURE
+======================================================================
