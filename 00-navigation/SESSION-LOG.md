@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71i — 2026-03-14: Baer tower refuted, Jacobsthal-Fano bridge, K₃ poison mechanism
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71h
+**What was done:**
+Deep Baer subplane investigation following user's "focus on baer subplanes" directive:
+
+- **Fixed baer_subplane_deep.py** (TypeError in F4 format string) and ran to completion. Full output: PG(2,F₄) = 3 × PG(2,F₂) Baer partition, I-polynomial ↔ Baer correspondence, simplex-cuboid complement C(2)=7=|PG(2,F₂)|.
+- **BAER TOWER CONJECTURE REFUTED at k=2**: H=273=|PG(2,F₁₆)| IS achievable (THM-115 data shows only H=7 and H=21 are permanently forbidden). The Baer hierarchy does NOT propagate forbiddenness beyond level 1.
+- **K₃ poison mechanism analysis**: Precisely quantified why only {7,21} are forbidden. At I(G,2)=7: 1 graph type (K₃), blocked. At I(G,2)=21: 6 independence sequences, all blocked. At I(G,2)=273: 63+ sequences, too many to block. The achievability threshold is around v≈21-35.
+- **JACOBSTHAL-FANO BRIDGE (NEW)**: I(P₄,2)=21=Φ₃(4)=|PG(2,F₄)|! The path graph P₄ carries the K₃ poison root x=-1/3 since I(P₄,x)=(1+x)(1+3x). The Jacobsthal sequence hits forbidden values with period 6=LCM(2,3).
+- **Verified formula**: I(P_n,2) = (2^{n+2}-(-1)^n)/3. Divisible by 7 iff n≡4 mod 6. Period-6 structure connects to tournament period.
+- **Simplex-cuboid-Baer synthesis**: 21 = 3 × 7 = simplex_eval × complement = Baer_count × Fano_size. The Baer structure is DESCRIPTIVE (explains arithmetic) not PREDICTIVE (doesn't generate new forbidden values).
+
+**New contributions:**
+- HYP-1348 (Baer tower conjecture — REFUTED at k≥2)
+- HYP-1349 (I-polynomial ↔ Baer partition — CONFIRMED for k=0,1)
+- HYP-1350 (C(2)=4²-3²=7=|PG(2,F₂)| — CONFIRMED)
+- HYP-1351 (7|C(n) iff n≡0 mod 2 — CONFIRMED)
+- HYP-1352 (Only {7,21} permanently forbidden — CONFIRMED computationally)
+- 5 new scripts + output files in 04-computation/ and 05-knowledge/results/
+
+**Unresolved threads:**
+1. Complete algebraic proof that H=21 is forbidden for ALL n (THM-115 framework)
+2. The Jacobsthal period-6 = tournament period connection needs deeper explanation
+3. Does the K₃ poison root -1/3 have a representation-theoretic interpretation?
+4. User's simplex nesting question: exact count of corner pieces at n≥4
+
 ## opus-2026-03-14-S87b — 2026-03-14: QR₇-CP(7) crown jewel, Fano-BIBD bridge, regular tournament trichotomy
 
 **Account:** opus
