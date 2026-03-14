@@ -1,0 +1,92 @@
+======================================================================
+TOURNAMENT DYNAMICS
+kind-pasteur-2026-03-14-S71
+======================================================================
+
+======================================================================
+PART 1: MAJORITY DYNAMICS
+  Each arc aligns with the majority of 2-path mediators
+  Question: Does this converge? To what?
+======================================================================
+
+--- n = 5 ---
+  Trial 0: H trajectory = [9, 1]
+  Trial 1: H trajectory = [13, 1]
+  Trial 2: H trajectory = [5, 1]
+
+  Fixed point H values: {1: 12}
+  Cycle lengths: {1: 12, 2: 8}
+
+--- n = 6 ---
+  Trial 0: H trajectory = [41, 1]
+  Trial 1: H trajectory = [9, 1]
+  Trial 2: H trajectory = [15, 15]
+
+  Fixed point H values: {1: 15}
+  Cycle lengths: {1: 15, 2: 5}
+
+--- n = 7 ---
+  Trial 0: H trajectory = [157, 9, 1]
+  Trial 1: H trajectory = [145, 1]
+  Trial 2: H trajectory = [73, 1]
+
+  Fixed point H values: {1: 8}
+  Cycle lengths: {1: 8, 2: 2}
+
+======================================================================
+PART 2: TRIANGLE STRESS DYNAMICS (TRANSITIVIZATION)
+  Each arc flips to minimize 3-cycles through it
+  Expected: converges to transitive tournament
+======================================================================
+
+--- n = 5 ---
+  Trial 0: H: [1], c3: [0]
+  Trial 1: H: [9, 1], c3: [3, 0]
+  Trial 2: H: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], c3: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  Trial 3: H: [13, 1], c3: [4, 0]
+  Trial 4: H: [5, 1], c3: [2, 0]
+
+--- n = 6 ---
+  Trial 0: H: [5, 1], c3: [2, 0]
+  Trial 1: H: [37, 5, 1], c3: [7, 2, 0]
+  Trial 2: H: [9, 1], c3: [3, 0]
+  Trial 3: H: [23, 1], c3: [6, 0]
+  Trial 4: H: [1], c3: [0]
+
+======================================================================
+PART 3: SIMULATED ANNEALING FOR H-MAXIMIZATION
+  Can SA escape the H=37 trap at n=6?
+======================================================================
+
+--- n = 6 ---
+  SA results (20 runs): {45: 20}
+  Fraction reaching H=45: 20/20
+
+--- n = 7 ---
+  SA results (10 runs): {171: 3, 175: 2, 189: 5}
+  Fraction reaching H=189: 5/10
+
+======================================================================
+PART 4: RANDOM WALK MIXING ON H-LANDSCAPE
+  Random walk: flip a random arc at each step
+  How quickly does the H distribution converge to equilibrium?
+======================================================================
+
+  n=5, 200 random walks of length 50
+  Mean H at each step:
+    step   0: mean=7.32, std=4.27
+    step   5: mean=7.32, std=4.12
+    step  10: mean=7.47, std=4.44
+    step  15: mean=7.39, std=4.40
+    step  20: mean=7.62, std=4.30
+    step  25: mean=7.30, std=4.29
+    step  30: mean=7.09, std=4.12
+    step  35: mean=7.48, std=4.24
+    step  40: mean=7.59, std=4.22
+    step  45: mean=7.42, std=4.05
+
+  Equilibrium mean H = n!/2^(n-1) = 7.50
+
+======================================================================
+DONE
+======================================================================
