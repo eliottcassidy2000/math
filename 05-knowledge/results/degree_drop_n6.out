@@ -1,0 +1,191 @@
+======================================================================
+DEGREE DROP ANALYSIS: H(T) AS SYMBOLIC POLYNOMIAL AT n=6
+kind-pasteur-2026-03-14-S68
+======================================================================
+
+  n = 6
+  Number of arc variables: 15
+  Arcs: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)]
+  n! = 720 permutations to expand
+  Each path uses 5 = 5 arcs
+  Each product expands to 2^5 = 32 terms
+  Total terms before collection: 720 * 32 = 23040
+
+  Expanding H(T) as symbolic multilinear polynomial...
+  Expanded 720 permutations.
+
+======================================================================
+DEGREE ANALYSIS
+======================================================================
+
+  Maximum degree: 4
+  Minimum degree: 0
+
+  Nonzero coefficient counts by degree:
+    Degree 0:     1 nonzero out of C(15,0) = 1 possible
+    Degree 1:    10 nonzero out of C(15,1) = 15 possible
+    Degree 2:    78 nonzero out of C(15,2) = 105 possible
+    Degree 3:   198 nonzero out of C(15,3) = 455 possible
+    Degree 4:   450 nonzero out of C(15,4) = 1365 possible
+
+  **************************************************
+  *** DEGREE DROP CONFIRMED! Max degree = 4 = n-2 ***
+  *** All degree-5 monomials cancel! ***
+  **************************************************
+
+======================================================================
+MONOMIAL DETAILS BY DEGREE
+======================================================================
+
+  Degree 0: 1 nonzero monomials
+    Coefficient range: [1, 1]
+    Sum of coefficients: 1
+      +1 * 1
+
+  Degree 1: 10 nonzero monomials
+    Coefficient range: [2, 16]
+    Sum of coefficients: 52
+      +2 * x02
+      +4 * x03
+      +8 * x04
+      +16 * x05
+      +2 * x13
+      +4 * x14
+      +8 * x15
+      +2 * x24
+      +4 * x25
+      +2 * x35
+
+  Degree 2: 78 nonzero monomials
+    Coefficient range: [-8, 16]
+    Sum of coefficients: 84
+
+  Degree 3: 198 nonzero monomials
+    Coefficient range: [-8, 8]
+    Sum of coefficients: -272
+
+  Degree 4: 450 nonzero monomials
+    Coefficient range: [-4, 4]
+    Sum of coefficients: 136
+
+======================================================================
+QUINTIC (DEGREE-5) CANCELLATION ANALYSIS
+======================================================================
+
+  Quintic monomials appearing (before cancellation): 360
+  Quintic monomials surviving (nonzero after sum): 0
+  Quintic monomials that cancelled to zero: 360
+  Total possible quintic monomials C(15,5) = 3003
+
+  *** ALL quintic monomials cancel! ***
+
+  Examples of quintic cancellation (first 10):
+      x01*x02*x13*x24*x35: +1 and -1 => net 0
+      x01*x02*x13*x24*x45: +1 and -1 => net 0
+      x01*x02*x13*x25*x34: +1 and -1 => net 0
+      x01*x02*x13*x25*x45: +1 and -1 => net 0
+      x01*x02*x13*x34*x45: +1 and -1 => net 0
+      x01*x02*x13*x35*x45: +1 and -1 => net 0
+      x01*x02*x14*x23*x35: +1 and -1 => net 0
+      x01*x02*x14*x23*x45: +1 and -1 => net 0
+      x01*x02*x14*x25*x34: +1 and -1 => net 0
+      x01*x02*x14*x25*x35: +1 and -1 => net 0
+
+======================================================================
+DEGREE-3 ANALYSIS: TRIANGLE VS NON-TRIANGLE TRIPLES
+======================================================================
+
+  Total vertex triples: C(6,3) = 20
+  Triangle arc-triples: 20
+  Total arc-triples C(15,3): 455
+  Non-triangle arc-triples: 435
+
+  Triangle triples with nonzero cubic coeff: 0
+  Triangle triples with zero cubic coeff: 20
+  Non-triangle triples with nonzero cubic coeff: 198
+  Non-triangle triples with zero cubic coeff: 237
+
+  *** ALL triangle triples have zero cubic coefficient (as expected) ***
+
+======================================================================
+DEGREE-4 ANALYSIS
+======================================================================
+
+  Number of nonzero quartic monomials: 450
+  Total possible quartic monomials C(15,4) = 1365
+  Coefficient range: [-4, 4]
+  Sum of all quartic coefficients: 136
+
+  Quartic monomials by number of vertices spanned:
+    5 vertices: 360 monomials
+    6 vertices: 90 monomials
+
+======================================================================
+VERIFICATION: CHECK POLYNOMIAL AGAINST BRUTE-FORCE H(T)
+======================================================================
+  Trial 0: H(poly)=23, H(brute)=23  [OK]
+  Trial 1: H(poly)=33, H(brute)=33  [OK]
+  Trial 2: H(poly)=27, H(brute)=27  [OK]
+  Trial 3: H(poly)=13, H(brute)=13  [OK]
+  Trial 4: H(poly)=13, H(brute)=13  [OK]
+
+======================================================================
+COMPARISON TABLE: DEGREE DROP ACROSS n
+======================================================================
+
+    n   n-1   max_deg   drop        status
+  ---  ----  --------  -----  ------------
+    4     3         2      1     CONFIRMED
+    5     4         4      0       NO DROP
+    6     5         4      1     CONFIRMED
+
+======================================================================
+CONSTANT TERM AND LINEAR ANALYSIS
+======================================================================
+
+  Constant term (H when all arcs point upward): 1
+  Number of nonzero linear monomials: 10
+  Linear coefficient range: [2, 16]
+  Sum of linear coefficients: 52
+  Linear monomials:
+    +2 * x02
+    +4 * x03
+    +8 * x04
+    +16 * x05
+    +2 * x13
+    +4 * x14
+    +8 * x15
+    +2 * x24
+    +4 * x25
+    +2 * x35
+
+======================================================================
+QUADRATIC ANALYSIS
+======================================================================
+
+  Number of nonzero quadratic monomials: 78
+  Total possible C(15,2) = 105
+  Coefficient range: [-8, 16]
+  Sum of quadratic coefficients: 84
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+
+  H(T) at n=6 as multilinear polynomial in 15 arc variables:
+  Maximum degree: 4
+  DEGREE DROP: from n-1=5 to n-2=4
+  All degree-5 terms cancel despite 720 permutations contributing them.
+  Pattern: n=4 drops, n=5 does NOT, n=6 drops?
+  Conjecture: EVEN n has degree drop, ODD n does not?
+
+  Total nonzero monomials: 737
+    Degree 0: 1
+    Degree 1: 10
+    Degree 2: 78
+    Degree 3: 198
+    Degree 4: 450
+
+======================================================================
+DONE
+======================================================================

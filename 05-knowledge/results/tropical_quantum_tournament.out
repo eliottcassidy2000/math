@@ -1,0 +1,266 @@
+======================================================================
+TROPICAL & QUANTUM TOURNAMENTS
+kind-pasteur-2026-03-14-S71
+======================================================================
+
+======================================================================
+PART 1: PERMANENT OF TOURNAMENT ADJACENCY MATRIX
+  perm(A) = sum over permutations sigma: prod A[i][sigma(i)]
+  This counts CYCLE COVERS, not Hamiltonian paths!
+  perm(A) = sum over all cycle covers of T
+  Compare: H(T) = sum over Ham PATHS (not cycle covers)
+======================================================================
+
+--- n = 3 ---
+  H=  1: perm(A) in [0]
+  H=  3: perm(A) in [-1]
+
+--- n = 4 ---
+  H=  1: perm(A) in [0]
+  H=  3: perm(A) in [0]
+  H=  5: perm(A) in [1]
+
+--- n = 5 ---
+  H=  1: perm(A) in [0]
+  H=  3: perm(A) in [0]
+  H=  5: perm(A) in [0]
+  H=  9: perm(A) in [-1]
+  H= 11: perm(A) in [-1]
+  H= 13: perm(A) in [-2]
+  H= 15: perm(A) in [-3, -2]
+
+======================================================================
+PART 2: PERMANENT, DETERMINANT, and H
+  perm(A) = unsigned cycle cover count
+  det(A) = signed cycle cover count
+  H(T) = Hamiltonian path count
+  Question: Is there a FORMULA relating them?
+======================================================================
+
+--- n = 3 ---
+  Correlation(H, perm(A)) = -1.000000
+  Correlation(H, det(A)) = 1.000000
+  perm(A) + perm(A^op) values: [-2, 0]
+  H -> perm(A)-perm(A^op):
+    H=  1: diff in [0]
+    H=  3: diff in [0]
+
+--- n = 4 ---
+  Correlation(H, perm(A)) = 0.894427
+  Correlation(H, det(A)) = -0.894427
+  perm(A) + perm(A^op) values: [0, 2]
+  H -> perm(A)-perm(A^op):
+    H=  1: diff in [0]
+    H=  3: diff in [0]
+    H=  5: diff in [0]
+
+--- n = 5 ---
+  Correlation(H, perm(A)) = -0.927173
+  Correlation(H, det(A)) = 0.927173
+  perm(A) + perm(A^op) values: [-6, -4, -2, 0]
+  H -> perm(A)-perm(A^op):
+    H=  1: diff in [0]
+    H=  3: diff in [0]
+    H=  5: diff in [0]
+    H=  9: diff in [0]
+    H= 11: diff in [0]
+    H= 13: diff in [0]
+    H= 15: diff in [0]
+
+======================================================================
+PART 3: TROPICAL TOURNAMENT — SHORTEST HAMILTONIAN PATH
+  Assign weight w(i->j) = 0 if i->j, infinity if j->i
+  Then min-weight Ham path = min # 'wrong-direction' arcs = 0
+  More interesting: w(i->j) = |i-j| (displacement cost)
+  Or: w(i->j) = 1 - T[i][j] (number of backward arcs)
+======================================================================
+
+--- n = 4 ---
+  H -> min backward arcs in any Ham path:
+    H=  1: min_back in [0, 1, 2, 3], mean_back=1.50
+    H=  3: min_back in [0, 1, 2], mean_back=1.50
+    H=  5: min_back in [0, 1, 2], mean_back=1.50
+
+--- n = 5 ---
+  H -> min backward arcs in any Ham path:
+    H=  1: min_back in [0, 1, 2, 3, 4], mean_back=2.00
+    H=  3: min_back in [0, 1, 2, 3], mean_back=2.00
+    H=  5: min_back in [0, 1, 2, 3], mean_back=2.00
+    H=  9: min_back in [0, 1, 2, 3], mean_back=2.00
+    H= 11: min_back in [0, 1, 2, 3], mean_back=2.00
+    H= 13: min_back in [0, 1, 2], mean_back=2.00
+    H= 15: min_back in [0, 1, 2], mean_back=2.00
+
+--- n = 6 ---
+  H -> min backward arcs in any Ham path:
+    H=  1: min_back in [2, 3, 4, 5], mean_back=3.06
+    H=  3: min_back in [2, 3, 4], mean_back=3.05
+    H=  5: min_back in [2, 3, 4], mean_back=3.04
+    H=  9: min_back in [2, 3, 4], mean_back=3.02
+    H= 11: min_back in [2, 3, 4], mean_back=3.04
+    H= 13: min_back in [2, 3], mean_back=3.04
+    H= 15: min_back in [2, 3, 4], mean_back=3.01
+    H= 17: min_back in [2, 3, 4], mean_back=2.99
+    H= 19: min_back in [2, 3, 4], mean_back=3.03
+    H= 23: min_back in [2, 3, 4], mean_back=3.03
+    H= 25: min_back in [2, 3], mean_back=3.03
+    H= 27: min_back in [2, 3], mean_back=2.98
+    H= 29: min_back in [2, 3], mean_back=3.03
+    H= 31: min_back in [2, 3], mean_back=2.98
+    H= 33: min_back in [2, 3], mean_back=3.03
+
+======================================================================
+PART 4: KEMENY DISTANCE — TOURNAMENT AS VOTING SYSTEM
+  Kemeny distance = min # arc flips to make transitive
+  = min # pairwise comparisons to change for a total order
+  Connection to H: more transitive (low Kemeny) = low H?
+======================================================================
+
+--- n = 4 ---
+  H -> Kemeny distance:
+    H=  1: Kemeny in [0]
+    H=  3: Kemeny in [1]
+    H=  5: Kemeny in [1]
+
+  Correlation(H, Kemeny) = 0.894427
+
+--- n = 5 ---
+  H -> Kemeny distance:
+    H=  1: Kemeny in [0]
+    H=  3: Kemeny in [1]
+    H=  5: Kemeny in [1]
+    H=  9: Kemeny in [1, 2]
+    H= 11: Kemeny in [2]
+    H= 13: Kemeny in [2]
+    H= 15: Kemeny in [2, 3]
+
+  Correlation(H, Kemeny) = 0.884438
+
+--- n = 6 ---
+  H -> Kemeny distance:
+    H=  1: Kemeny in [0]
+    H=  3: Kemeny in [1]
+    H=  5: Kemeny in [1]
+    H=  9: Kemeny in [1, 2]
+    H= 11: Kemeny in [2]
+    H= 13: Kemeny in [2]
+    H= 15: Kemeny in [2, 3]
+    H= 17: Kemeny in [1, 2]
+    H= 19: Kemeny in [2]
+    H= 23: Kemeny in [2]
+    H= 25: Kemeny in [3]
+    H= 27: Kemeny in [2]
+    H= 29: Kemeny in [3]
+    H= 31: Kemeny in [3]
+    H= 33: Kemeny in [2, 3]
+
+  Correlation(H, Kemeny) = 0.863124
+
+======================================================================
+PART 5: TOURNAMENT ENTROPY AND INFORMATION CONTENT
+  Score entropy: S = -sum (s_i/total) log(s_i/total)
+  H-entropy: log2(H) measures 'disorder' of tournament
+  Question: Is log2(H) ~ n * score_entropy?
+======================================================================
+
+--- n = 5 ---
+  Correlation(logH, score_entropy) = 0.933317
+  Correlation(logH, score_variance) = -0.969606
+  Correlation(logH, c3) = 0.969606
+  Correlation(H, score_entropy) = 0.925935
+  Correlation(H, score_variance) = -0.973329
+
+  H-maximizer (H=15):
+    score_entropy = 2.2464
+    score_var = 0.4000
+    c3 = 4
+    log2(H) = 3.9069
+  Max entropy = 2.3219: H in [15]
+
+--- n = 6 ---
+  Correlation(logH, score_entropy) = 0.925494
+  Correlation(logH, score_variance) = -0.960606
+  Correlation(logH, c3) = 0.960606
+  Correlation(H, score_entropy) = 0.902717
+  Correlation(H, score_variance) = -0.959371
+
+  H-maximizer (H=45):
+    score_entropy = 2.5559
+    score_var = 0.2500
+    c3 = 8
+    log2(H) = 5.4919
+  Max entropy = 2.5559: H in [41, 43, 45]
+
+--- n = 7 ---
+  Correlation(logH, score_entropy) = 0.901845
+  Correlation(logH, score_variance) = -0.960999
+  Correlation(logH, c3) = 0.960999
+  Correlation(H, score_entropy) = 0.826593
+  Correlation(H, score_variance) = -0.915988
+
+  H-maximizer (H=121):
+    score_entropy = 2.7433
+    score_var = 0.8571
+    c3 = 11
+    log2(H) = 6.9189
+  Max entropy = 2.7433: H in [101, 105, 109, 111, 121]
+
+======================================================================
+PART 6: QUANTUM TOURNAMENT — COMPLEX PERMANENT
+  Replace T[i][j] with z[i][j] = T[i][j] * e^{i*theta}
+  Quantum H = permanent of amplitude matrix
+  Connection to BosonSampling
+======================================================================
+
+--- n = 4, phase theta ---
+
+  bits=0, H=1, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3))
+    theta=0.0000: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=0.5236: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=0.7854: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=1.0472: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=1.5708: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=3.1416: perm = 0.0000 + 0.0000i, |perm|=0.0000
+
+  bits=15, H=1, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3))
+    theta=0.0000: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=0.5236: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=0.7854: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=1.0472: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=1.5708: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=3.1416: perm = 0.0000 + 0.0000i, |perm|=0.0000
+
+  bits=63, H=1, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3))
+    theta=0.0000: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=0.5236: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=0.7854: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=1.0472: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=1.5708: perm = 0.0000 + 0.0000i, |perm|=0.0000
+    theta=3.1416: perm = 0.0000 + 0.0000i, |perm|=0.0000
+
+======================================================================
+PART 7: H-LANDSCAPE ON THE TOURNAMENT HYPERCUBE
+  Tournaments = vertices of C(n,2)-dim hypercube
+  H(T) is a function on this hypercube
+  Question: How many local maxima? Saddle points?
+======================================================================
+
+--- n = 4 ---
+  Total tournaments: 64
+  Local maxima: 24 (37.5%)
+  Local minima: 24 (37.5%)
+  Saddle points: 16 (25.0%)
+  Global max H: known from earlier
+  H values at local maxima: [5]
+
+--- n = 5 ---
+  Total tournaments: 1024
+  Local maxima: 64 (6.2%)
+  Local minima: 120 (11.7%)
+  Saddle points: 840 (82.0%)
+  Global max H: known from earlier
+  H values at local maxima: [15]
+
+======================================================================
+DONE
+======================================================================
