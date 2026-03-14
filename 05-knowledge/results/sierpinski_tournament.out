@@ -1,0 +1,230 @@
+======================================================================
+PART 1: THE SIERPINSKI TOURNAMENT HIERARCHY
+======================================================================
+
+Level 1: C₃ (3-cycle on 3 vertices)
+  H = 3
+  α₁ = 1, α₂ = 0
+  I(-1) = 0
+
+Level 2: C₃ ⊠ C₃ (lex product, 9 vertices)
+  H = 3159
+  α₁ = 30, α₂ = 111, α₃ = 37
+  I(2) via 3-cycles = 801
+  I(-1) = 45
+  log₂(H) = 11.6253
+
+Level 3: C₃ ⊠ C₃ ⊠ C₃ (27 vertices)
+  α₁(3-cyc) = 819
+  α₂(3,3) = 233397
+  α₃(3,3,3) = 29338554
+
+======================================================================
+PART 2: THE FRACTAL SCALING
+======================================================================
+
+Level  n      H        α₁       α₂       α₃       log₂H      α₁/n    
+1      3      3        1        0        0        1.5850     0.3333  
+2      9      3159     30       111      37       11.6253    3.3333  
+3      27     ?        819      233397   29338554 ?          30.3333 
+
+SCALING ANALYSIS:
+  α₁: 1 → 30 → 819
+  Ratios: 30.0, 27.3
+  If fractal: α₁(level k) ≈ α₁(level 1) · r^k
+  r_α₁ = 30.0
+  Predicted level 3: 900, actual: 819
+
+  α₂: 0 → 111 → 233397
+  α₃: 0 → 37 → 29338554
+
+======================================================================
+PART 3: THE log₂(3) DIMENSION
+======================================================================
+
+  log₂(3) = 1.584963
+  This is the Hausdorff dimension of the Sierpinski triangle.
+
+  In tournament theory:
+  2 = KEY₁ (independence polynomial eval point)
+  3 = KEY₂ (vertices per elementary cycle)
+  log₂(3) = log(cycle_size) / log(eval_point)
+
+  The ENTROPY of the 3-cycle:
+  A 3-cycle has H=3 (three Ham paths).
+  log₂(3) = 1.584963 bits per vertex.
+  This is the 'information content' of one tournament vertex
+  in the 3-cycle configuration.
+
+  COMPARISON with k-cycle entropy:
+  3-cycle: H=3, entropy = log₂(3)/3 = 0.5283 bits/vertex
+  5-cycle: H=5, entropy = log₂(5)/5 = 0.4644 bits/vertex
+  7-cycle: H=7, entropy = log₂(7)/7 = 0.4011 bits/vertex
+  9-cycle: H=9, entropy = log₂(9)/9 = 0.3522 bits/vertex
+  11-cycle: H=11, entropy = log₂(11)/11 = 0.3145 bits/vertex
+
+  The entropy per vertex DECREASES with cycle length!
+  3-cycle: 0.528 bits/vertex (MAXIMUM for odd cycles)
+  This explains why 3-cycles dominate the structure:
+  They are the MOST EFFICIENT carriers of 'tournament information'.
+
+======================================================================
+PART 4: THE RECURRENCE CONNECTION
+======================================================================
+
+  The tournament polynomial z² - 5z + 6 = 0 has roots 2, 3.
+  General solution: x_n = A·2ⁿ + B·3ⁿ
+
+  For the Sierpinski tournament at level k:
+  n = 3^k (vertices)
+  α₁ ~ C · 3^k (3-cycles, proportional to n)
+  H ~ D · r^k for some growth rate r
+
+  H(level 1) = 3 = 3¹
+  H(level 2) = 3159
+  H(level 2) / H(level 1) = 1053.00
+  H(level 2) / H(level 1)² = 351.00
+  H(level 2) / H(level 1)³ = 117.00
+
+  H(level 2) = 3^7.3347
+  If H(level k) = 3^(f(k)) for some superlinear f:
+    f(1) = 1, f(2) = 7.3347
+    If f(k) = k²: 3^1 = 3 ✓, 3^4 = 81 ✗
+    If f(k) = k·log₂(3): 3^1.585 = 5.7 
+
+======================================================================
+PART 5: THE WEIGHT-THRESHOLD INTERPLAY
+======================================================================
+
+  OCF: H = Σ_{k≥0} 2^k · α_k
+  The weight at level k is 2^k (from KEY₁^k).
+  The threshold for α_k > 0 is n ≥ 3k (from KEY₂ · k).
+
+  Weight × Threshold table:
+  k    weight 2^k   threshold 3k   product    ratio w/t 
+  1    2            3              6          0.6667    
+  2    4            6              24         0.6667    
+  3    8            9              72         0.8889    
+  4    16           12             192        1.3333    
+  5    32           15             480        2.1333    
+  6    64           18             1152       3.5556    
+  7    128          21             2688       6.0952    
+  8    256          24             6144       10.6667   
+  9    512          27             13824      18.9630   
+
+  The weight/threshold ratio 2^k/(3k) grows SUPER-EXPONENTIALLY.
+  This means: higher-order independence sets are EXPONENTIALLY
+  more valuable per set, but SUPER-EXPONENTIALLY rarer.
+
+  The NET contribution of level k to H:
+  2^k · α_k ≈ 2^k · C(α₁, k) · p_k
+  where p_k = probability that k random cycles are disjoint
+  p_k ≈ (1 - 3k/n)^{3k} ≈ e^{-9k²/n}
+
+  For the 'typical' contribution to be O(1):
+  2^k · C(α₁,k) · e^{-9k²/n} ≈ 1
+  k* ≈ √(n · ln(2)/9) ≈ √(0.077n)
+
+  n=  3: k* ≈ 0.48, max_k = ⌊n/3⌋ = 1
+  n=  9: k* ≈ 0.83, max_k = ⌊n/3⌋ = 3
+  n= 27: k* ≈ 1.44, max_k = ⌊n/3⌋ = 9
+  n= 81: k* ≈ 2.50, max_k = ⌊n/3⌋ = 27
+
+======================================================================
+PART 6: THE DEEP STRUCTURE — WHY 2 AND 3?
+======================================================================
+
+  Why does H = I(CG(T), 2) use evaluation at x = 2?
+  Because each disjoint cycle contributes a FACTOR of 2:
+  two orientations around the cycle.
+
+  Why are cycles of length 3 dominant?
+  Because 3 is the SMALLEST odd number > 1.
+  An odd cycle must have ≥ 3 vertices.
+
+  Why is z² - 5z + 6 = (z-2)(z-3) = 0 the 'universal' polynomial?
+  Because 2 and 3 are the first two primes.
+  2 = the evaluation point (binary choice per cycle)
+  3 = the cycle length (minimum odd cycle)
+  5 = 2 + 3 = the 'diameter' of the key pair
+  6 = 2 · 3 = the 'area' of the key pair
+
+  The polynomial z² - 5z + 6 encodes:
+  z = 2: I(2) = H (Hamiltonian path count)
+  z = 3: I(3) = H + 3α₁ + ... (next evaluation)
+  z = 6: I(6) = I(2·3) = ... (product evaluation)
+
+  THE BRIDGE TO RECURRENCES:
+  Any sequence x_n = 5x_{n-1} - 6x_{n-2} satisfies
+  x_n = A·2ⁿ + B·3ⁿ for constants A, B.
+
+  For tournaments: the 'sequence' is the independence polynomial.
+  I(x) = Σ α_k x^k is a POLYNOMIAL, not a recurrence.
+  But the EVALUATION POINTS 2, 3 are the recurrence roots.
+
+  The k-nacci limit of 2 corresponds to:
+  I(2) = H = the 'physical' count (always odd).
+  The weighted k-nacci limit of 3 corresponds to:
+  I(3) = the 'next-level' evaluation.
+
+  I(3) - I(2) = α₁ + 5α₂ + 19α₃ + 65α₄ + ...
+  The coefficients 1, 5, 19, 65 = 3^k - 2^k.
+  These are the CORNER PIECE sizes in simplex-cuboid packing!
+
+  CORNER PIECE SEQUENCE: 3^k - 2^k
+  k=1: 3^1 - 2^1 = 3 - 2 = 1
+  k=2: 3^2 - 2^2 = 9 - 4 = 5
+  k=3: 3^3 - 2^3 = 27 - 8 = 19
+  k=4: 3^4 - 2^4 = 81 - 16 = 65
+  k=5: 3^5 - 2^5 = 243 - 32 = 211
+  k=6: 3^6 - 2^6 = 729 - 64 = 665
+  k=7: 3^7 - 2^7 = 2187 - 128 = 2059
+
+  The corner pieces grow as 3^k (since 3 > 2).
+  Their ratio to 3^k is 1 - (2/3)^k → 1.
+  Their ratio to 2^k is (3/2)^k - 1 → ∞.
+
+  SYNTHESIS:
+  I(3) - I(2) = Σ (3^k - 2^k) · α_k
+  = Σ (corner piece at level k) × (independent set count)
+  = total 'corner volume' in the simplex-cuboid packing
+
+  The difference I(3) - I(2) measures the GAP between
+  the cuboid (3^k) and the simplex (2^k) at each level.
+  This gap is the RESIDUE of the packing.
+
+======================================================================
+PART 7: THE 9 = 3² MANIFESTO (EXTENDED)
+======================================================================
+
+  NINE REASONS WHY 9 IS THE BOUNDARY:
+
+  1. CAUCHY-SCHWARZ: 9 = 3² = (vertices/cycle)².
+     The CS bound on vertex-cycle incidences is tight at n = 9.
+
+  2. PERFECT PARTITION: V = C₁ ∪ C₂ ∪ C₃ with |Cᵢ| = 3.
+     9 = 3·3 is the first n where ⌊n/3⌋ = n/3 = 3 = cycle length.
+
+  3. INDEPENDENCE DEPTH: max indep set size = ⌊9/3⌋ = 3.
+     I(x) has degree 3 for the first time.
+
+  4. TRIBONACCI: k=3 regime begins, root ≈ 1.839.
+     Steepest convergence slope from 2.
+
+  5. CARTAN: det(A₈) = 9. Tournament on 9 vertices lives
+     in the Weyl chamber structure of A₈.
+
+  6. PALEY FAILURE: 9 ≡ 1 (mod 4), so no Paley tournament.
+     The √q Ramsey barrier α = ω = √9 = 3.
+
+  7. SIERPINSKI LEVEL 2: 9 = 3^2 is the first 'meta-triangle'.
+     Self-similar structure of 3 blocks of 3.
+
+  8. ENTROPY MAXIMUM: 3-cycles have max info per vertex
+     (log₂(3)/3 ≈ 0.5283 bits/vertex).
+     At n = 9, three max-entropy cycles cover all vertices.
+
+  9. CORNER-PIECE TRANSITION: at n = 9, the cubic corner piece
+     3³ - 2³ = 19 first appears in I(3) - I(2).
+     The coefficient of α₃ is 19 (the gap between
+     3-cuboid and 2-simplex at level 3).
