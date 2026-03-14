@@ -1,0 +1,332 @@
+======================================================================
+GLMY PATH HOMOLOGY EULER CHARACTERISTIC
+kind-pasteur-2026-03-14-S69
+======================================================================
+
+======================================================================
+n = 3
+======================================================================
+
+  H -> Betti numbers -> Euler characteristic:
+
+  H=  1 (   6 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0], chi = 1
+
+  H=  3 (   2 tournaments):
+    chi values: [0]
+    beta = [1, 1, 0], chi = 0
+
+  GLOBAL CHI ANALYSIS:
+    Distinct chi values: [0, 1]
+    Chi distribution: {1: 6, 0: 2}
+    Chi always = 1? False
+    Chi determined by H? True
+    Chi always odd? False
+
+  OMEGA DIMENSIONS (path space sizes):
+    H=  1: Omega = [3, 3, 1]
+    H=  3: Omega = [3, 3, 0]
+
+  Correlation(H, chi) = -1.000000
+
+======================================================================
+n = 4
+======================================================================
+
+  H -> Betti numbers -> Euler characteristic:
+
+  H=  1 (  24 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0], chi = 1
+
+  H=  3 (  16 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0], chi = 1
+
+  H=  5 (  24 tournaments):
+    chi values: [0]
+    beta = [1, 1, 0, 0], chi = 0
+
+  GLOBAL CHI ANALYSIS:
+    Distinct chi values: [0, 1]
+    Chi distribution: {1: 40, 0: 24}
+    Chi always = 1? False
+    Chi determined by H? True
+    Chi always odd? False
+
+  OMEGA DIMENSIONS (path space sizes):
+    H=  1: Omega = [4, 6, 4, 1]
+    H=  3: Omega = [4, 6, 3, 0]
+    H=  5: Omega = [4, 6, 3, 1]
+
+  Correlation(H, chi) = -0.894427
+
+======================================================================
+n = 5
+======================================================================
+
+  H -> Betti numbers -> Euler characteristic:
+
+  H=  1 ( 120 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0], chi = 1
+
+  H=  3 ( 120 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0], chi = 1
+
+  H=  5 ( 240 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0], chi = 1
+
+  H=  9 ( 240 tournaments):
+    chi values: [0, 1]
+    beta = [1, 0, 0, 0, 0], chi = 1
+    beta = [1, 1, 0, 0, 0], chi = 0
+
+  H= 11 ( 120 tournaments):
+    chi values: [0]
+    beta = [1, 1, 0, 0, 0], chi = 0
+
+  H= 13 ( 120 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0], chi = 1
+
+  H= 15 (  64 tournaments):
+    chi values: [0]
+    beta = [1, 1, 0, 0, 0], chi = 0
+
+  GLOBAL CHI ANALYSIS:
+    Distinct chi values: [0, 1]
+    Chi distribution: {1: 720, 0: 304}
+    Chi always = 1? False
+    Chi determined by H? False
+    Chi always odd? False
+
+  OMEGA DIMENSIONS (path space sizes):
+    H=  1: Omega = [5, 10, 10, 5, 1]
+    H=  3: Omega = [5, 10, 9, 3, 0]
+    H=  5: Omega = [5, 10, 9, 4, 1]
+    H=  9: Omega = [5, 10, 9, 3, 0]
+    H=  9: Omega = [5, 10, 9, 5, 1]
+    H= 11: Omega = [5, 10, 10, 7, 2]
+    H= 13: Omega = [5, 10, 9, 4, 1]
+    H= 15: Omega = [5, 10, 8, 3, 0]
+    H= 15: Omega = [5, 10, 10, 10, 5]
+
+  Correlation(H, chi) = -0.546963
+
+======================================================================
+n = 6
+======================================================================
+
+  H -> Betti numbers -> Euler characteristic:
+
+  H=  1 (  84 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H=  3 ( 103 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H=  5 ( 207 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H=  9 ( 253 tournaments):
+    chi values: [0, 1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+    beta = [1, 0, 0, 1, 0, 0], chi = 0
+
+  H= 11 ( 106 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 13 ( 106 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 15 ( 158 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 17 ( 105 tournaments):
+    chi values: [0, 1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  H= 19 (  88 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 23 ( 158 tournaments):
+    chi values: [0, 1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  H= 25 (  70 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 27 (  29 tournaments):
+    chi values: [0]
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  H= 29 ( 144 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 31 (  72 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 33 ( 107 tournaments):
+    chi values: [0, 1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  H= 37 ( 144 tournaments):
+    chi values: [0, 1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  H= 41 (  18 tournaments):
+    chi values: [0]
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  H= 43 (  36 tournaments):
+    chi values: [1]
+    beta = [1, 0, 0, 0, 0, 0], chi = 1
+
+  H= 45 (  12 tournaments):
+    chi values: [0]
+    beta = [1, 0, 0, 1, 0, 0], chi = 0
+    beta = [1, 1, 0, 0, 0, 0], chi = 0
+
+  GLOBAL CHI ANALYSIS:
+    Distinct chi values: [0, 1]
+    Chi distribution: {1: 1758, 0: 242}
+    Chi always = 1? False
+    Chi determined by H? False
+    Chi always odd? False
+
+  OMEGA DIMENSIONS (path space sizes):
+    H=  1: Omega = [6, 15, 20, 15, 6, 1]
+    H=  3: Omega = [6, 15, 19, 12, 3, 0]
+    H=  5: Omega = [6, 15, 19, 13, 5, 1]
+    H=  9: Omega = [6, 15, 18, 9, 0, 0]
+    H=  9: Omega = [6, 15, 19, 12, 3, 0]
+    H=  9: Omega = [6, 15, 19, 14, 6, 1]
+    H= 11: Omega = [6, 15, 20, 17, 9, 2]
+    H= 13: Omega = [6, 15, 19, 13, 5, 1]
+    H= 15: Omega = [6, 15, 18, 11, 3, 0]
+    H= 15: Omega = [6, 15, 19, 12, 3, 0]
+    H= 15: Omega = [6, 15, 20, 20, 15, 5]
+    H= 17: Omega = [6, 15, 19, 12, 4, 1]
+    H= 17: Omega = [6, 15, 19, 15, 6, 1]
+    H= 19: Omega = [6, 15, 20, 15, 6, 1]
+    H= 23: Omega = [6, 15, 19, 13, 5, 1]
+    H= 23: Omega = [6, 15, 21, 20, 10, 2]
+    H= 25: Omega = [6, 15, 20, 16, 7, 1]
+    H= 27: Omega = [6, 15, 18, 12, 3, 0]
+    H= 29: Omega = [6, 15, 20, 14, 4, 0]
+    H= 29: Omega = [6, 15, 20, 15, 7, 2]
+    H= 29: Omega = [6, 15, 21, 19, 11, 3]
+    H= 31: Omega = [6, 15, 19, 12, 3, 0]
+    H= 33: Omega = [6, 15, 19, 14, 6, 1]
+    H= 33: Omega = [6, 15, 20, 17, 6, 0]
+    H= 33: Omega = [6, 15, 21, 21, 14, 4]
+    H= 37: Omega = [6, 15, 18, 13, 5, 1]
+    H= 37: Omega = [6, 15, 20, 15, 6, 1]
+    H= 37: Omega = [6, 15, 21, 20, 12, 3]
+    H= 41: Omega = [6, 15, 22, 28, 22, 7]
+    H= 43: Omega = [6, 15, 21, 20, 11, 2]
+    H= 45: Omega = [6, 15, 21, 18, 9, 3]
+    H= 45: Omega = [6, 15, 24, 33, 27, 9]
+
+  Correlation(H, chi) = -0.280972
+
+======================================================================
+n = 7 (sample 500)
+======================================================================
+
+  H -> chi (sample):
+    H=  3: chi in [1], count=1
+    H=  5: chi in [1], count=5
+    H=  9: chi in [1], count=9
+    H= 11: chi in [1], count=3
+    H= 13: chi in [1], count=2
+    H= 15: chi in [0, 1], count=10
+    H= 17: chi in [1], count=7
+    H= 19: chi in [1], count=3
+    H= 23: chi in [1], count=7
+    H= 25: chi in [1], count=5
+    H= 27: chi in [1], count=4
+    H= 29: chi in [1], count=16
+    H= 31: chi in [0, 1], count=7
+    H= 33: chi in [0, 1], count=15
+    H= 35: chi in [1], count=1
+    H= 37: chi in [1], count=15
+    H= 39: chi in [1], count=2
+    H= 41: chi in [0, 1], count=11
+    H= 43: chi in [1], count=2
+    H= 45: chi in [1], count=4
+    H= 49: chi in [1], count=7
+    H= 51: chi in [0, 1], count=9
+    H= 53: chi in [1], count=6
+    H= 55: chi in [1], count=5
+    H= 57: chi in [1], count=4
+    H= 59: chi in [1], count=12
+    H= 61: chi in [0], count=1
+    H= 65: chi in [1], count=24
+    H= 67: chi in [0, 1], count=9
+    H= 69: chi in [0, 1], count=7
+    H= 71: chi in [1], count=11
+    H= 73: chi in [1], count=8
+    H= 75: chi in [1], count=8
+    H= 77: chi in [1], count=5
+    H= 79: chi in [1], count=6
+    H= 81: chi in [0, 1], count=14
+    H= 83: chi in [1], count=8
+    H= 85: chi in [1], count=1
+    H= 89: chi in [1], count=10
+    H= 91: chi in [0, 1], count=17
+    H= 93: chi in [0, 1], count=7
+    H= 95: chi in [1], count=7
+    H= 97: chi in [1], count=14
+    H= 99: chi in [1], count=3
+    H=101: chi in [1], count=10
+    H=103: chi in [1], count=22
+    H=105: chi in [0], count=1
+    H=109: chi in [1], count=27
+    H=111: chi in [0, 1], count=10
+    H=113: chi in [1], count=2
+    H=115: chi in [1], count=8
+    H=117: chi in [0, 1], count=6
+    H=121: chi in [1], count=6
+    H=123: chi in [0, 1], count=9
+    H=129: chi in [0, 1], count=9
+    H=131: chi in [1], count=9
+    H=133: chi in [0, 1], count=4
+    H=135: chi in [0], count=7
+    H=137: chi in [0, 1], count=9
+    H=139: chi in [1], count=6
+    H=141: chi in [1], count=4
+    H=143: chi in [1], count=3
+    H=145: chi in [1], count=2
+    H=147: chi in [1], count=1
+    H=151: chi in [0, 1], count=7
+    H=153: chi in [0, 1], count=4
+    H=157: chi in [1], count=1
+    H=159: chi in [0], count=1
+
+  GLOBAL (n=7):
+    Distinct chi: [0, 1]
+    Chi distribution: {1: 441, 0: 59}
+    Correlation(H, chi) = -0.228568
+
+======================================================================
+DONE
+======================================================================
