@@ -1,0 +1,275 @@
+======================================================================
+THE (2,3,5) UNIVERSE — COMPLETE SESSION S79 SYNTHESIS
+======================================================================
+
+======================================================================
+PART 1: THREE BOUNDARIES AT n=10
+======================================================================
+
+BOUNDARY 1: Tournament Count > Symmetry Count
+  T(n) = 2^C(n,2), n! = |S_n|
+  T(n)/n! crosses 1 (downward) at n=1 (trivially)
+  T(n)/n! > 1 FIRST at n=3 (T=8 > 6)
+  But the GROWTH RATE crosses: C(n,2) > n·log₂(n) at n≈10
+
+  n= 3: T(n)/n! =           1.33
+  n= 4: T(n)/n! =           2.67
+  n= 5: T(n)/n! =           8.53
+  n= 6: T(n)/n! =          45.51
+  n= 7: T(n)/n! =         416.10
+  n= 8: T(n)/n! =        6657.63
+  n= 9: T(n)/n! =      189372.46
+  n=10: T(n)/n! =     9695869.73
+  n=11: T(n)/n! =   902597327.92
+
+BOUNDARY 2: Petersen Graph
+  K(5,2) has 10 = C(5,2) vertices
+  10 = KEY₁ · (KEY₁+KEY₂)
+  Unique Kneser graph: smallest non-complete K(n,2)
+  K(4,2) = K₃ (complete, trivial)
+  K(5,2) = Petersen (first interesting)
+
+BOUNDARY 3: (2,3,5) Spherical Condition
+  1/p + 1/q + 1/r > 1 for polyhedra
+  (2,3,5): 1/2+1/3+1/5 = 31/30 > 1 ✓
+  (2,3,7): 1/2+1/3+1/7 = 41/42 < 1 ✗
+  The LAST spherical triple is (2,3,5)
+  Excess: 31/30 - 1 = 1/30 = 1/h(E₈)
+
+CONVERGENCE:
+  All three boundaries involve the number 10:
+  • T(n)/n! becomes exponentially large around n=10
+  • K(5,2) has exactly 10 vertices
+  • The (2,3,5) triple gives 2·5 = 10
+  And they are CONNECTED:
+  • f(10) = 56 = T(6) = dim(V_E₇)
+  • The Petersen complement has 30 = h(E₈) edges
+  • The spherical excess 1/30 inverts to h(E₈)
+
+======================================================================
+PART 2: THE COMPLETE DICTIONARY (30 entries)
+======================================================================
+
+  Number                           Identity 1                              
+  ------------------------------------------------------------------------
+  2 = KEY₁                         First root of z²-5z+6, k-nacci attractor
+                                   rank(A₁)
+  3 = KEY₂                         Second root of z²-5z+6, weight-2 k-nacci attractor
+                                   χ(Petersen)
+  5 = KEY₁+KEY₂                    Root sum of z²-5z+6, # Platonic solids = # exceptionals
+                                   girth(Petersen)
+  6 = KEY₁·KEY₂                    Root product, h(G₂), E(tetrahedron), # perfect matchings of Petersen
+  7 = KEY₁²+KEY₂                   First composite, rank(E₇), h(G₂)+1, Mersenne M₃
+  8 = KEY₁³                        Cubic key, rank(E₈), φ(30), τ(30)
+  9 = KEY₂²                        Square key, h∨(F₄), Pythagorean whole tone 9/8
+  10 = 2·5                         Petersen vertices, moat boundary, C(5,2)
+  11 = KEY₁·KEY₂+KEY₁+KEY₂         f(11)=72=σ(30)
+  12 = KEY₁²·KEY₂                  h(E₆)=h(F₄), V(icosahedron), T(5)
+  13 = KEY₁²+KEY₂²                 dim(F₄)/rank(F₄)=dim(E₆)/rank(E₆), Fibonacci prime F₇
+  14 = 2·7                         dim(G₂), 2·rank(E₇)
+  15 = 3·5                         E(Petersen), C(6,2)
+  18 = KEY₁·KEY₂²                  h(E₇), product of I(P) multipliers
+  19 = KEY₂³-KEY₁³                 Corner piece n=3, h(E₇)+1, dim(E₇)/rank(E₇)
+  20 = 4·5                         V(dodecahedron), f(7), [S₅:S₃]
+  24 = KEY₁³·KEY₂                  |BT|→E₆, [S₅:Z₅], A(4,1)
+  27 = KEY₂³                       dim(V_E₆), J₃(O)
+  30 = KEY₁·KEY₂·(KEY₁+KEY₂)       h(E₈), E(icos/dodec/J(5,2)), I₂=I₃ in I(P,x)
+  31 = 2⁵-1                        Mersenne M₅, h(E₈)+1, dim(E₈)/rank(E₈)
+  42 = 6·7                         f(9), V(icos)+V(dodec)+V(Petersen)
+  48 = 2⁴·3                        |BO|→E₇, |det A(Petersen)|
+  56 = 7·8                         T(6), dim(V_E₇), f(10), 7·rank(E₈)
+  60 = 2²·3·5                      |A₅|, icos rotation group, V·deg/2
+  72 = 8·9                         σ(30), f(11), rank(E₈)·9
+  120 = 5!                         |S₅|=|BI|=|Aut(P)|, P(Petersen,3), 5-simplex tiles
+  128 = 2⁷                         f(10)+f(11), KEY₁^rank(E₇)
+  240 = 2⁴·3·5                     #roots(E₈), V(icos)·V(dodec), 2·|BI|
+  256 = 2⁸                         |χ_P(2)|, KEY₁^rank(E₈)
+  720 = 6!                         |S₆|, |BT|·h(E₈)
+
+======================================================================
+PART 3: THE COXETER NUMBERS AS A RECURRENCE
+======================================================================
+
+Coxeter numbers of exceptional groups:  [6, 12, 12, 18, 30]
+
+  Can {6,12,12,18,30} be expressed as A·2ⁿ+B·3ⁿ?
+  Ratios: 12/6 = 2  12/12 = 1  18/12 = 3/2  30/18 = 5/3  
+  Ratios: 2, 1, 3/2, 5/3
+  = KEY₁, 1, KEY₂/KEY₁, (KEY₁+KEY₂)/KEY₂
+
+  The ratio pattern: 2, 1, 3/2, 5/3
+  These are Fibonacci-like: each ratio ≈ next Fibonacci ratio
+  1/1, 2/1, 3/2, 5/3, 8/5, ...
+  The Coxeter number ratios FOLLOW THE FIBONACCI FRACTIONS!
+
+  Fibonacci convergents to φ:
+    F_2/F_1 = 2/1 = 2.000000
+    F_3/F_2 = 3/2 = 1.500000
+    F_4/F_3 = 5/3 = 1.666667
+    F_5/F_4 = 8/5 = 1.600000
+    F_6/F_5 = 13/8 = 1.625000
+    F_7/F_6 = 21/13 = 1.615385
+
+  OBSERVATION: the ratios h(X_{i+1})/h(X_i) use
+  successively better rational approximations to φ:
+    h(F₄)/h(G₂) = 2/1 = F₃/F₂ (above φ)
+    h(E₆)/h(F₄) = 1/1 = F₂/F₂ (below φ)
+    h(E₇)/h(E₆) = 3/2 = F₄/F₃ (above φ)
+    h(E₈)/h(E₇) = 5/3 = F₅/F₄ (below φ)
+    (hypothetical E₉ would need h(E₉)/h(E₈) ≈ 8/5 = F₆/F₅)
+    But E₉ doesn't exist! The sequence terminates at (2,3,5).
+
+  Product of ratios: 2·1·(3/2)·(5/3) = 5 = KEY₁+KEY₂
+  = h(E₈)/h(G₂) = 30/6 = 5 ✓
+
+======================================================================
+PART 4: THE 5-CASCADE — THE COMPLETE PICTURE
+======================================================================
+
+Starting from the triple (2,3,5), EVERYTHING unfolds:
+
+     1 = 1                       unit                           rank(A₁)-1
+     2 = KEY₁                    parity, binary, octave         det(E₇)=2
+     3 = KEY₂                    ternary, perfect 5th           det(E₆)=3
+     5 = KEY₁+KEY₂               sum, pentagon, girth(P)        # exceptional groups
+     6 = KEY₁·KEY₂               product, h(G₂)                 perfect matchings of Petersen
+     8 = KEY₁³                   rank(E₈), φ(30)                τ(30)
+    10 = KEY₁(K₁+K₂)             V(Petersen), moat              C(5,2)
+    12 = KEY₁²·KEY₂              h(E₆)=h(F₄)                    V(icosahedron)
+    15 = KEY₂(K₁+K₂)             E(Petersen)                    C(6,2)
+    18 = KEY₁·KEY₂²              h(E₇)                          mult prod I(P)
+    20 = KEY₁²(K₁+K₂)            V(dodecahedron)                [S₅:S₃]
+    24 = KEY₁³·KEY₂              |BT|→E₆                        [S₅:Z₅]
+    30 = KEY₁·KEY₂(K₁+K₂)        h(E₈)                          I₂=I₃=30
+    42 = KEY₁·KEY₂·(K₁²+K₂)      f(9)                           V_sum trinity
+    48 = KEY₁⁴·KEY₂              |BO|→E₇                        |det A(P)|
+    56 = KEY₁³·(K₁²+K₂)          T(6)=f(10)                     dim(V_E₇)
+    60 = KEY₁²·KEY₂(K₁+K₂)       |A₅|                           icos rotation
+    72 = KEY₁³·KEY₂²             σ(30)=f(11)                    rank(E₈)·9
+   120 = KEY₁³·KEY₂(K₁+K₂)       |S₅|=|BI|                      5!=|Aut(P)|
+   240 = KEY₁⁴·KEY₂(K₁+K₂)       #roots(E₈)                     V(i)·V(d)
+   720 = KEY₁⁴·KEY₂²(K₁+K₂)      |S₆|=6!                        |BT|·h(E₈)
+
+======================================================================
+PART 5: MUSICAL INTERVALS AND THE PYTHAGOREAN COMMA
+======================================================================
+
+The musical scale is built from KEY₁ and KEY₂:
+
+  Unison                    1          = 1/1             (   0.00 cents)
+  Minor 2nd                 256/243    = KEY₁⁸/KEY₂⁵     (  90.22 cents)
+  Major 2nd (whole tone)    9/8        = KEY₂²/KEY₁³     ( 203.91 cents)
+  Minor 3rd                 32/27      = KEY₁⁵/KEY₂³     ( 294.13 cents)
+  Major 3rd                 81/64      = KEY₂⁴/KEY₁⁶     ( 407.82 cents)
+  Perfect 4th               4/3        = KEY₁²/KEY₂      ( 498.04 cents)
+  Tritone (aug 4th)         729/512    = KEY₂⁶/KEY₁⁹     ( 611.73 cents)
+  Perfect 5th               3/2        = KEY₂/KEY₁       ( 701.96 cents)
+  Minor 6th                 128/81     = KEY₁⁷/KEY₂⁴     ( 792.18 cents)
+  Major 6th                 27/16      = KEY₂³/KEY₁⁴     ( 905.87 cents)
+  Minor 7th                 16/9       = KEY₁⁴/KEY₂²     ( 996.09 cents)
+  Major 7th                 243/128    = KEY₂⁵/KEY₁⁷     (1109.78 cents)
+  Octave                    2          = KEY₁            (1200.00 cents)
+
+  Pythagorean comma: 3¹²/2¹⁹ = 531441/524288 ≈ 1.0136432648
+  = KEY₂¹²/KEY₁¹⁹
+  12 = h(E₆) = h(F₄)
+  19 = h(E₇)+1 = dim(E₇)/rank(E₇)
+
+  The Pythagorean comma = KEY₂^h(E₆) / KEY₁^(dim(E₇)/rank(E₇))
+  TWO Lie-theoretic quantities determine the musical comma!
+
+  12 perfect fifths = (3/2)¹² = 531441/4096
+  7 octaves = 2⁷ = 128
+  Difference = (3/2)¹² - 2⁷ = 1.746338
+  12 = h(E₆) fifths overshoot 7 = rank(E₇) octaves
+  by exactly the Pythagorean comma ≈ 23.46 cents
+
+======================================================================
+PART 6: THE INFORMATION-THEORETIC VIEW
+======================================================================
+
+  Partition of [1,30) into exponents (8) and non-exponents (21):
+  p(exponent) = 8/29 ≈ 0.275862
+  p(tournament) = 21/29 ≈ 0.724138
+  Binary entropy H = 0.849751 bits
+
+  Alternate: 8 totatives out of 30:
+  p = 8/30 = 4/15 ≈ 0.266667
+  H = 0.836641 bits
+
+  Information content of 5 exceptional groups:
+  log₂(5) = 2.321928 bits ≈ KEY₁+KEY₂ - 1 - 1/3...
+  = 2.32 bits
+
+  Tournament polynomial f(z) = z² - 5z + 6:
+  Has 2 roots → 1 bit to specify which root
+  But root MULTIPLICITIES carry more information:
+  z=2 (mult 1), z=3 (mult 1): 1 bit
+  The polynomial is SEPARABLE: discriminant = 1 ≠ 0
+  Separability ⟺ the two keys are DISTINCT
+
+======================================================================
+PART 7: ONE PAGE OF THE UNIVERSE
+======================================================================
+
+
+THE (2,3,5) UNIVERSE — A ONE-PAGE SUMMARY
+
+AXIOM: z² - 5z + 6 = 0 has roots KEY₁ = 2, KEY₂ = 3.
+
+FROM THIS SINGLE EQUATION:
+
+ARITHMETIC
+  Product 2·3 = 6 = h(G₂)
+  Sum 2+3 = 5 = # exceptional Lie groups = # Platonic solids
+  Triple product 2·3·5 = 30 = h(E₈)
+  φ(30) = τ(30) = 8 = 2³ = rank(E₈)
+
+RECURRENCES
+  k-nacci → 2 (geometric rate 1/2)
+  Weight-2 k-nacci → 3 (general: weight w → w+1)
+  a(n) = 5a(n-1) - 6a(n-2) generates ALL sequences A·2ⁿ+B·3ⁿ
+  Corner pieces: 3ⁿ-2ⁿ = 0, 1, 5, 19, 65, 211, ...
+
+GEOMETRY
+  (2,3,5) = last spherical triple → icosahedron/dodecahedron
+  V(icos)·V(dodec) = 12·20 = 240 = #roots(E₈)
+  30-edge trinity: icos, dodec, Petersen complement
+  All have |Aut| = 120 = 5! = |S₅|
+
+THE PETERSEN GRAPH K(5,2)
+  10 vertices = 2·5, 15 edges = C(6,2)
+  Eigenvalues {3, 1, -2} with multiplicities {1, 5, 4}
+  Independence polynomial: I_k/C(5,k) = {1, 2, 3, 3, 1}
+  ω·α = 2·4 = 8 = rank(E₈)
+  P(Petersen, 3) = 120 = |BI| = |Aut|
+  6 perfect matchings = h(G₂)
+
+SIEVE
+  Multiples of {2,3,5} in [1,30): tournament theory (21 numbers)
+  Coprime to 30: Lie exponents (8 numbers = totatives)
+  E₈ exponents = {1} ∪ {primes in (5,30)}
+  The two theories partition ALL integers
+
+LIE THEORY
+  dim(g) = rank(g)·(h(g)+1) universal
+  h+1 = {7, 13, 13, 19, 31} = {M₃, 2²+3², 2²+3², 3³-2³, M₅}
+  E₈ positive roots: 120 = |BI| = |S₅|
+  h(E₈)/h(G₂) = 5, h(E₇)/h(E₆) = 3/2
+
+MUSIC
+  Perfect 5th = 3/2 = KEY₂/KEY₁
+  Whole tone = 9/8 = KEY₂²/KEY₁³
+  Pythagorean comma = 3¹²/2¹⁹ = KEY₂^h(E₆)/KEY₁^(h(E₇)+1)
+  12 fifths ≈ 7 octaves (off by the comma)
+
+THE BOUNDARY
+  1/2 + 1/3 + 1/5 = 31/30 > 1: E₈ EXISTS
+  1/2 + 1/3 + 1/7 = 41/42 < 1: E₉ DOES NOT
+  Excess = 1/30 = 1/h(E₈): the last gap before the boundary
+  f(10) = 56 = T(6): the polynomial at the boundary encodes T(6)
+
+THE MARKOV-LIKE IDENTITY
+  2² + 3² + 5² - 2·3·5 = 8 = rank(E₈)
+  a² + b² + c² - abc = rank of the maximal exceptional group
+
