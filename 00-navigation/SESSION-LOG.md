@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71h (cont'd) — 2026-03-14: Ω(T) completeness theorem, cycle-count gaps, H≠21 structural proof
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71g (9th context continuation)
+**What was done:**
+Deep structural analysis of the conflict graph Ω(T) and forbidden H values:
+
+- **Ω(T) always complete at n≤5 (PROVED)**: Every pair of directed odd cycles shares a vertex, so Ω = K_m. Gives H = 1 + 2m. Fails at n=6 (47% of tournaments have disjoint cycle pairs).
+- **Cycle-count gap theorem**: At n=5, total odd cycle count = 3 is IMPOSSIBLE. Reason: t₃=3 forces c₅≥1 (3 triangles in 5-tournament force a Hamiltonian 5-cycle). Persists at n=6. Explains H≠7 when Ω is complete.
+- **Complete algebraic enumeration of I(G,2)=21**: Exactly 4 graph types — P₄/K₁⊔K₃ (n=4), K₆-2e (n=6), K₈-e (n=8), K₁₀ (n=10). Proved algebraically via α₁+2α₂+4α₃+...=10.
+- **K₆-2e and K₁₀ never appear as Ω(T) at n=6**: Exhaustive check shows 6-cycle Ω has 14 or 15 edges (never 13 = K₆-2e), and 10-cycle Ω has 43 edges (never 45 = K₁₀).
+- **H=21 absent at n≤6 (exhaustive)**: Confirmed H spectrum at n=6 has 19 values, 21 not among them.
+- **OCF bug fix**: Original Ω computation collapsed multiple directed cycles on same vertex set into one. Fixed to correctly enumerate all directed odd cycles via canonical rotation.
+- **Fibonacci-Jacobsthal bridge**: I(P_n, 2) = Σ C(n-j,j)·2^j (Jacobsthal = weighted Pascal diagonals). Verified.
+- **3-strand Pascal**: Trinomial triangle (1+x+x²)^n, diags → tribonacci. Category theory: tournaments as enriched categories over ({0,1}, max, min), 3-cycles = defect from transitivity.
+- **Simplex-cuboid nesting**: Coxeter decomposition gives n! simplices. Regular simplex exists iff Hadamard matrix of order n+1 exists (n=1,3,7,11,...). Corner pieces: n=3 has 4.
+
+**Scripts created:** omega_correct.py, omega_always_complete.py, omega_n6_h21_search.py, omega_structure_check.py, cycle_count_gaps.py, h21_algebraic_proof.py, h21_proof_complete.py, fibonacci_pascal_3strand.py, simplex_cuboid_nesting.py, omega_independence_bound.py
+**New hypotheses:** HYP-1318 through HYP-1322
+**Key finding:** MISTAKE-024 (H=63 not permanently forbidden, correcting S86)
+
 ## opus-2026-03-14-S87 — 2026-03-14: Deep tournament topology — BIBD, Jacobsthal Pisano, phase transitions
 
 **Account:** opus
