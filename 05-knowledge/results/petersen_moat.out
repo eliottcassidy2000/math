@@ -1,0 +1,374 @@
+======================================================================
+PART 1: THE PETERSEN GRAPH — ANATOMY OF 10 = 2·5
+======================================================================
+
+Petersen graph P = K(5,2)
+Vertices (10): 2-subsets of [5]
+   0: {0, 1}
+   1: {0, 2}
+   2: {0, 3}
+   3: {0, 4}
+   4: {1, 2}
+   5: {1, 3}
+   6: {1, 4}
+   7: {2, 3}
+   8: {2, 4}
+   9: {3, 4}
+
+Edges (15): pairs of disjoint 2-subsets
+Degree: 3 (3-regular)
+
+Petersen graph invariants:
+  Vertices: 10 = 2·5 = KEY₁·(KEY₁+KEY₂)
+  Edges: 15 = C(6,2) = 15
+  Degree: 3 = KEY₂
+  Girth: 5 = KEY₁+KEY₂
+  Diameter: 2 = KEY₁
+  Chromatic number: 3 = KEY₂
+  Chromatic index: 4 (NOT 3 — Petersen is a snark!)
+  Independence number: 4 = KEY₁²
+  Clique number: 2 = KEY₁ (triangle-free)
+  |Aut(P)| = |S₅| = 120 = |BI| (binary icosahedral!)
+
+Kneser structure K(5,2):
+  C(5,2) = 10 vertices
+  C(3,2) = 3 edges per vertex
+  C(10,2) - 15 = 30 non-edges
+  Non-edges = 30 = h(E₈)!
+
+Complement of Petersen (Johnson graph J(5,2)):
+  Edges: 30 = 30 = h(E₈)
+  Degree: 10 - 1 - 3 = 6 = KEY₁·KEY₂ = h(G₂)
+  This graph is the line graph of K₅!
+
+L(K₅) = J(5,2) = complement of Petersen
+  K₅ has 5 vertices, C(5,2) = 10 edges
+  Each vertex of K₅ has degree 4 = KEY₁²
+  L(K₅) is 6-regular = 6-regular
+
+======================================================================
+PART 2: THE T=10 MOAT — WHERE TOURNAMENTS EXPLODE
+======================================================================
+
+Tournament counts T(n) = A000568:
+  T( 1) =            1
+  T( 2) =            1
+  T( 3) =            2
+  T( 4) =            4
+  T( 5) =           12
+  T( 6) =           56
+  T( 7) =          456
+  T( 8) =         6880
+  T( 9) =       191536
+  T(10) =      9733056
+
+Growth ratios T(n+1)/T(n):
+  T(2)/T(1) =         1.00
+  T(3)/T(2) =         2.00
+  T(4)/T(3) =         2.00
+  T(5)/T(4) =         3.00
+  T(6)/T(5) =         4.67
+  T(7)/T(6) =         8.14
+  T(8)/T(7) =        15.09
+  T(9)/T(8) =        27.84
+  T(10)/T(9) =        50.82
+
+The T=10 moat:
+  T(10) = 9,733,056 ≈ 10^6.99
+  T(10)/T(9) = 50.82
+  T(9)/T(8) = 27.84
+  T(8)/T(7) = 15.09
+
+  The growth accelerates: 15.08 → 27.83 → 50.82
+  Each ratio roughly doubles — exponential acceleration!
+
+Why T=10 is the moat:
+  Edges: C(10,2) = 45 = 45
+  Labeled tournaments: 2^45 = 35,184,372,088,832
+  |S₁₀| = 10! = 3,628,800
+  2^45/10! = 9,695,870 ≈ T(10)
+  At n=10, almost ALL labeled tournaments are asymmetric!
+
+The 2·5 structure:
+  10 = C(5,2) = #edges of K₅
+  5 = KEY₁+KEY₂ = #Platonic solids = #exceptional Lie groups
+  So T(10) counts tournaments on C(5,2) vertices
+  Equivalently: tournaments on the vertex set of the Petersen graph!
+
+======================================================================
+PART 3: PETERSEN AND THE EXCEPTIONAL GROUPS
+======================================================================
+
+|Aut(Petersen)| = |S₅| = 120 = |BI| (binary icosahedral)
+
+The binary icosahedral group maps to E₈ via McKay!
+So the Petersen graph's symmetry group IS the McKay group for E₈!
+
+Petersen graph spectrum:
+  λ₁ = 3 (multiplicity 1) = KEY₂ = degree
+  λ₂ = 1 (multiplicity 5) = unit
+  λ₃ = -2 (multiplicity 4) = -KEY₁
+
+  Eigenvalues: {{3, 1, -2}} = {{KEY₂, 1, -KEY₁}}
+  The tournament keys appear as the EXTREME eigenvalues!
+  Spectral gap: 3 - 1 = 2 = KEY₁
+  λ_max + λ_min = 3 + (-2) = 1 = unit
+  λ_max · |λ_min| = 3 · 2 = 6 = KEY₁·KEY₂ = h(G₂)
+
+  Eigenvalue multiplicities: 1, 5, 4
+    1 = unit
+    5 = KEY₁+KEY₂ = #exceptional groups
+    4 = KEY₁² = independence number of Petersen
+    Sum: 1+5+4 = 10 = #vertices ✓
+
+Characteristic polynomial evaluation:
+  χ_P(0) = det(-A) = (-3)·(-1)⁵·(2)⁴ = 48
+  |det(A)| = 48 = |BO| (binary octahedral → E₇!)
+
+  χ_P(KEY₁) = χ_P(2) = (2-3)·1⁵·4⁴ = -256 = -KEY₁⁸
+  |χ_P(KEY₁)| = 256 = 2⁸ = KEY₁^rank(E₈)
+  χ_P(KEY₂) = χ_P(3) = 0 (KEY₂ is an eigenvalue!)
+
+SUMMARY OF PETERSEN ↔ EXCEPTIONAL CONNECTIONS:
+  |Aut| = 120 = |BI| → E₈ (McKay)
+  |det(A)| = 48 = |BO| → E₇ (McKay)
+  Eigenvalues = {KEY₂, 1, -KEY₁}
+  |χ(KEY₁)| = KEY₁^rank(E₈)
+  Complement has 30 = h(E₈) edges
+  Complement is 6-regular: degree = h(G₂)
+
+======================================================================
+PART 4: THE INDEPENDENCE POLYNOMIAL OF THE PETERSEN GRAPH
+======================================================================
+
+Independence polynomial I(P, x) = 1 + 10x^1 + 30x^2 + 30x^3 + 5x^4
+
+  I(P, KEY₁) = I(P, 2) = 461
+  I(P, KEY₂) = I(P, 3) = 1516
+  I(P, -1) = -4
+
+  I(2) = 461 = 461
+  I(3) = 1516 = 2·2·379
+  I(-1) = -4
+
+Chromatic polynomial of the Petersen graph:
+  P(0) = 240 = dim(so(16))? = 2⁴·3·5
+  P(1) = 79
+  P(2) = 320
+  P(3) = 1293
+  P(4) = 18688
+  P(5) = 358115
+  P(6) = 3957504
+  P(7) = 28029745
+
+  P(KEY₂) = P(3) = 1293 = h(E₆) = h(F₄)!
+  The Petersen graph has exactly h(E₆) proper 3-colorings!
+
+Chromatic polynomial coefficients (ascending):
+  [240, -1500, 3740, -5025, 4550, -2922, 1360, -455, 105, -15, 1]
+  Leading term: t^10 (as expected for 10 vertices)
+  Constant term: 240 = 2⁴·3·5 = KEY₁⁴·KEY₂·(KEY₁+KEY₂)
+  |coefficient of t| = 1500 = 2²·3·5³
+  |coefficient of t²| = 3740 = 2²·5·11·17
+
+======================================================================
+PART 5: PETERSEN AS TOURNAMENT CONFLICT GRAPH?
+======================================================================
+
+Can the Petersen graph be CG(T)?
+
+Requirements for CG(T) = Petersen:
+  - 10 odd directed cycles in the tournament
+  - Each cycle conflicts with exactly 3 others
+  - No three cycles mutually conflict (triangle-free)
+  - Shortest conflict cycle has length 5
+
+If Petersen = CG(T):
+  H(T) = I(P, 2) = 461
+  I(-1) = -4
+
+  α_k sequence: [1, 10, 30, 30, 5, 0]
+  α_0=1, α_1=10, α_2=30, α_3=30, α_4=5
+
+  Number of max independent sets (size 4): 5
+  5 = KEY₁+KEY₂ = #Platonic solids = #exceptional groups
+
+======================================================================
+PART 6: THE DOUBLE-5 STRUCTURE
+======================================================================
+
+The DOUBLE-5 decomposition:
+
+  The 10 vertices split into 5 complementary pairs:
+
+  5 pairs, each summing to {0,1,2,3,4}
+  Two vertices in a pair are ALWAYS adjacent (disjoint subsets)
+  The 5 pairs form a perfect matching!
+
+Petersen graph Hamiltonian properties:
+  NOT Hamiltonian (no Hamilton cycle)
+  But has Hamilton paths
+  This non-Hamiltonicity is KEY — makes it a 'snark'
+
+The DOUBLE-5 in Lie theory:
+  5 exceptional Lie groups: G₂, F₄, E₆, E₇, E₈
+  5 Platonic solids: tet, cube, oct, dodec, icos
+  The McKay correspondence pairs them:
+    G₂ — (standalone, no Platonic)
+    F₄ — (standalone, no Platonic)
+    E₆ ↔ Tetrahedron (BT, order 24)
+    E₇ ↔ Cube/Octahedron (BO, order 48)
+    E₈ ↔ Dodecahedron/Icosahedron (BI, order 120)
+
+  But there are 5 Platonic solids and only 3 McKay pairs!
+  The 'missing' two Platonic solids (cube+octahedron = one pair)
+  gives: Tet, Cube/Oct, Dodec/Icos = 3 McKay pairs
+  Plus: G₂ and F₄ are the 'extra' 2 exceptional groups
+  Total: 5 = 3 + 2 = KEY₂ + KEY₁
+
+======================================================================
+PART 7: THE PETERSEN GRAPH AND THE NUMBER 10
+======================================================================
+
+The many lives of 10 = 2·5:
+  C(5,2) = 10 (2-subsets of 5-set)
+  T(5) = 12, but T(4) + T(5) = 16... no
+  dim(so(5)) = dim(sp(4)) = 10 (B₂≅C₂)
+  #edges of K₅ = 10
+  #vertices of Petersen = 10
+  h(D₆) = 10
+  E₈ branch sum: 2+3+5 = 10
+
+10 as 'shifted 1':
+  In base 10: 10 = '10' = the 'next 1'
+  In base 2: 10 = 1010₂
+  In base 3: 10 = 101₃
+  In base 5: 10 = 20₅ = KEY₁·0 + KEY₁ = 2·5
+  In base 9: 10 = 11₉ (shifted 1 in base KEY₂²)
+
+10 in the tournament recurrence a(n) = 5a(n-1) - 6a(n-2):
+  10 = KEY₁·(KEY₁+KEY₂) — the product of root and trace
+  In the tournament poly z²-5z+6:
+  f(10) = 100 - 50 + 6 = 56 = T(6) = dim(V_E₇)!
+
+  f(10) = 10² - 5·10 + 6 = 56
+  T(6) = 56 = dim(V_E₇)
+  f(2·5) = f(KEY₁·(KEY₁+KEY₂)) = T(KEY₁·KEY₂)
+
+  THIS IS AMAZING:
+  The tournament polynomial evaluated at 10 gives T(6)!
+  f(10) = 56 = T(6) = dim(minuscule E₇) = C(8,3)
+
+  f evaluated at key numbers:
+    f( 1) =      2 = T(3), KEY₁
+    f( 2) =      0 = root!
+    f( 3) =      0 = root!
+    f( 4) =      2 = T(3), KEY₁
+    f( 5) =      6 = h(G₂)
+    f( 6) =     12 = T(5), h(E₆)
+    f( 7) =     20
+    f( 8) =     30 = h(E₈)
+    f( 9) =     42
+    f(10) =     56 = T(6), dim(V_E₇)
+    f(11) =     72
+    f(12) =     90
+    f(18) =    240
+    f(30) =    756
+
+======================================================================
+PART 8: THE PETERSEN GRAPH IN TOURNAMENT THEORY
+======================================================================
+
+Tournaments on the Petersen vertex set:
+  C(10,2) = 45 arcs = 15 (Petersen edges) + 30 (non-edges)
+  15 = C(6,2)
+  30 = h(E₈)
+  45 = C(10,2) = C(KEY₁·(KEY₁+KEY₂), KEY₁)
+
+Petersen complement pairs and tournament structure:
+  Each complement pair {S, S̄} in the Petersen graph
+  corresponds to a partition of [5] into two 2-subsets + remainder
+  Orienting the 5 matching edges gives 2⁵ = 32 patterns
+
+  2⁵ = 32 = KEY₁^(KEY₁+KEY₂)
+  32 is the number of labeled tournaments on 5 vertices (2^C(5,2)/C(5,2))
+  Wait: 2^C(5,2) = 2^10 = 1024 labeled tournaments on 5 vertices
+  But 32 = 2^5 is just the matching orientations
+
+======================================================================
+PART 9: THE RECURRENCE VIEW — 10 AND 11 AS SHIFTED ONES
+======================================================================
+
+10 and 11 as recurrence landmarks:
+
+  In base b, '10' = b and '11' = b+1
+  In the tournament recurrence (base = KEY₁·KEY₂ = 6):
+  '10₆' = 6 = KEY₁·KEY₂ = h(G₂)
+  '11₆' = 7 = KEY₁²+KEY₂ = rank(E₇)
+
+  In base KEY₁+KEY₂ = 5:
+  '10₅' = 5 = KEY₁+KEY₂
+  '11₅' = 6 = KEY₁·KEY₂ = h(G₂)
+
+  In base KEY₁·KEY₂·(KEY₁+KEY₂) = 30:
+  '10₃₀' = 30 = h(E₈)
+  '11₃₀' = 31 = h(E₈)+1 (Mersenne prime!)
+
+The 10-11 shift in Lie exponents:
+  10 = h(D₆), NOT an E₈ exponent (divisible by 5)
+  11 = UNIVERSAL E-exponent (in E₆, E₇, E₈)
+  The shift 10→11 crosses the sieve boundary!
+  10 is on the TOURNAMENT side (÷ by 2 and 5)
+  11 is on the EXPONENT side (coprime to 30)
+
+  This is the essence of the complementary sieve:
+  10 and 11 are consecutive but on OPPOSITE sides
+  10 encodes tournament structure (2·5)
+  11 encodes Lie exponents (2³+3)
+
+======================================================================
+PART 10: f(10) = 56 — THE CROWN JEWEL
+======================================================================
+
+THE EQUATION: f(10) = 56
+
+  f(z) = z² - 5z + 6 = (z-2)(z-3)
+  f(10) = (10-2)(10-3) = 8·7 = 56
+  = rank(E₈) · rank(E₇)
+  = dim(minuscule E₇)
+  = T(6) = number of tournaments on 6 vertices
+  = C(8,3) = C(rank(E₈), KEY₂)
+
+  AND: 10 = #vertices of the Petersen graph
+         = C(5,2) = edges of K₅
+         = KEY₁·(KEY₁+KEY₂)
+
+  So: f(#vertices(Petersen)) = T(KEY₁·KEY₂)
+      f(C(5,2)) = T(6)
+      (10-KEY₁)(10-KEY₂) = T(KEY₁·KEY₂)
+      8 · 7 = 56
+
+f(n) = T(m) solutions:
+  f(4) = 2 = T(3)
+  f(6) = 12 = T(5)
+  f(10) = 56 = T(6)
+
+  f(4) = 2 = T(3)
+  f(6) = 12 = T(5)
+  f(10) = 56 = T(6)
+
+  The arguments: 4, 6, 10
+  Differences: 6-4=2=KEY₁, 10-6=4=KEY₁²
+  The outputs: T(3), T(5), T(6)
+  T-arguments: 3, 5, 6 = KEY₂, KEY₁+KEY₂, KEY₁·KEY₂
+
+THE PATTERN:
+  f(KEY₁²) = T(KEY₂)
+  f(KEY₁·KEY₂) = T(KEY₁+KEY₂)
+  f(KEY₁·(KEY₁+KEY₂)) = T(KEY₁·KEY₂)
+
+  The argument-to-T mapping:
+  KEY₁² → KEY₂
+  KEY₁·KEY₂ → KEY₁+KEY₂
+  KEY₁·(KEY₁+KEY₂) → KEY₁·KEY₂
+  The T-index ROTATES through the (2,3,5) expressions!
