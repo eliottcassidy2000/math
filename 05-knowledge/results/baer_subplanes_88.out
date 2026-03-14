@@ -1,0 +1,151 @@
+======================================================================
+PART 1: THE PROJECTIVE PLANE PG(2, F_4)
+======================================================================
+F_4 multiplication table:
+  0: 0 0 0 0
+  1: 0 1 α β
+  α: 0 α β 1
+  β: 0 β 1 α
+
+PG(2, F_4): 21 points
+  P 0: (0, 0, 1)
+  P 1: (0, 1, 0)
+  P 2: (0, 1, 1)
+  P 3: (0, 1, α)
+  P 4: (0, 1, β)
+  P 5: (1, 0, 0)
+  P 6: (1, 0, 1)
+  P 7: (1, 0, α)
+  P 8: (1, 0, β)
+  P 9: (1, 1, 0)
+  P10: (1, 1, 1)
+  P11: (1, 1, α)
+  P12: (1, 1, β)
+  P13: (1, α, 0)
+  P14: (1, α, 1)
+  P15: (1, α, α)
+  P16: (1, α, β)
+  P17: (1, β, 0)
+  P18: (1, β, 1)
+  P19: (1, β, α)
+  P20: (1, β, β)
+
+PG(2, F_4): 21 lines, each with 5 points
+  ✓ Each pair of points on exactly 1 line (projective plane axiom)
+
+======================================================================
+PART 2: BAER SUBPLANES — PG(2, F_2) INSIDE PG(2, F_4)
+======================================================================
+
+Natural F_2-rational subplane: 7 points
+  (0, 0, 1)
+  (0, 1, 0)
+  (0, 1, 1)
+  (1, 0, 0)
+  (1, 0, 1)
+  (1, 1, 0)
+  (1, 1, 1)
+
+Lines of the Baer subplane: 7
+  {(0,1,0), (1,0,0), (1,1,0)}
+  {(0,0,1), (0,1,0), (0,1,1)}
+  {(0,1,1), (1,0,0), (1,1,1)}
+  {(0,0,1), (1,1,0), (1,1,1)}
+  {(0,1,0), (1,0,1), (1,1,1)}
+  {(0,0,1), (1,0,0), (1,0,1)}
+  {(0,1,1), (1,0,1), (1,1,0)}
+
+Searching for all Baer subplanes (7-point sub-Fano-planes)...
+
+Total Baer subplanes (PG(2,F_2) inside PG(2,F_4)): 360
+
+======================================================================
+PART 3: BAER SUBPLANE INCIDENCE
+======================================================================
+  Baer subplanes per point: {120}
+  UNIFORM: each point in exactly 120 Baer subplanes
+  Baer subplanes per pair: {36}
+
+  2-(21,7,36) design!
+  b=360, v=21, k=7, r=120, λ=36
+  Fisher: b=360 ≥ v=21: True
+  bk=vr: 2520=2520: True
+
+======================================================================
+PART 4: BAER SUBPLANES AND FORBIDDEN VALUES
+======================================================================
+
+THE BAER SUBPLANE HIERARCHY:
+
+  PG(2, F_2) ⊂ PG(2, F_4)
+  (Fano plane)   (21-point plane)
+   7 points       21 points
+   7 lines        21 lines
+   3 pts/line     5 pts/line
+
+  The Fano plane is a BAER SUBPLANE of PG(2, F_4).
+  Baer subplanes satisfy: |subplane| = √|plane| in the sense
+  that q_sub = √(q_plane), so q=2, q²=4.
+
+  TOURNAMENT INTERPRETATION:
+  H_forb_1 = 7 = |PG(2, F_2)| (the subplane)
+  H_forb_2 = 21 = |PG(2, F_4)| (the plane)
+
+  The forbidden values encode a BAER PAIR!
+  The first forbidden value lives INSIDE the second as a substructure.
+  This is not just numerology — the Fano plane literally embeds in
+  the 21-point plane as a Baer subplane.
+
+NUMBER OF BAER SUBPLANES: 360
+  Compare: C(21,7) = 116280 total 7-subsets
+  So 360 / 116280 = fraction
+
+THE CHAIN:
+  |PG(2, F_2)| = 7 (H_forb_1)
+  |PG(2, F_4)| = 21 (H_forb_2)
+  |PG(2, F_8)| = 73 (NOT forbidden — escapes at n≈8)
+  |PG(2, F_16)| = 273 (way beyond tournament range)
+
+  F_4 = F_2² (quadratic extension)
+  F_16 = F_4² = F_2⁴ (another quadratic extension)
+  F_16 has F_4 as Baer sub-sub-field
+
+  So PG(2,F_2) ⊂ PG(2,F_4) ⊂ PG(2,F_16)
+  and |PG(2,F_16)| = 273 = 3 × 91 = 3 × 7 × 13
+  = 3 × H_forb_1 × Fibonacci prime
+
+  The Baer tower:
+  7 → 21 → 273 → ...
+  Each step: q → q² + q + 1 where q = previous field order squared
+
+======================================================================
+PART 5: BIBD ↔ BAER SUBPLANE CONNECTION
+======================================================================
+  Line types relative to Baer subplane:
+    Secant (3 pts): 7 (= 7 lines of Fano)
+    Tangent (1 pt): 14
+    External (0 pts): 0
+    Total: 21 = 21
+
+  Exterior points: 14
+  14 = 2 × 7 = α₁(regular tournament on 7)
+  The exterior of the Fano Baer subplane has EXACTLY
+  as many points as 3-cycles in a regular n=7 tournament!
+
+CROWN JEWEL: THE BAER SUBPLANE ↔ TOURNAMENT DICTIONARY
+
+  PG(2, F_4) structure          Tournament structure at n=7
+  ─────────────────────         ──────────────────────────
+  21 points                     21 transitive triples = H_forb_2
+  21 lines                      21 = C(7,2) arcs
+  7 Fano subplane points        7 = H_forb_1 = α₂(QR₇)
+  14 exterior points            14 = α₁ = 3-cycle count (regular)
+  5 points per line             5 = triple-coincidence prime
+  3 points in sub-line          3 = cycle generator
+
+  7 + 14 = 21 (Fano + exterior = full plane)
+  This is ALSO: α₂(QR₇) + α₁ = 7 + 14 = 21 = H_forb_2
+
+  The forbidden values ENCODE the Baer decomposition:
+  H_forb_2 = H_forb_1 + 2 × H_forb_1 = 7 + 14 = 21
+
