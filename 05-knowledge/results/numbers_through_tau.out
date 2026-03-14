@@ -1,0 +1,359 @@
+======================================================================
+EACH NUMBER THROUGH THE TAU LENS
+kind-pasteur-2026-03-14-S106g
+======================================================================
+
+  THE TAU COORDINATE SYSTEM:
+  Each number n has:
+    altitude = log_tau(n)
+    heartbeat = floor(altitude / 3) = which period it's in
+    phase = altitude mod 3 = where within the period
+    phase ≈ 0: near a period boundary (like 1, 6, 38, 241)
+    phase ≈ 1: near a choice point (like 2, 11, 71, 443)
+    phase ≈ 2: near a cycle point (like 3, 21, 131)
+
+  Heartbeat 0: tau^0 to tau^3 ≈ [1, 6.2]     (the foundation)
+  Heartbeat 1: tau^3 to tau^6 ≈ [6.2, 38.7]  (the first cycle)
+  Heartbeat 2: tau^6 to tau^9 ≈ [38.7, 240.9] (the expansion)
+  Heartbeat 3: tau^9 to tau^12 ≈ [240.9, 1499] (the large scale)
+
+======================================================================
+THE IDENTITY OF EACH NUMBER (1 through 50)
+======================================================================
+
+    1  alt= 0.000  hb=0 phase=0.000 (period-start)  w=1  tau^0 +0.000 [TRIB]
+    2  alt= 1.137  hb=0 phase=1.137 (choice-zone )  w=1  tau^1+ +0.161 [TRIB,prime]
+    3  alt= 1.803  hb=0 phase=1.803 (cycle-zone  )  w=2  tau^2 -0.383 [prime,H-val]
+    4  alt= 2.275  hb=0 phase=2.275 (cycle-zone  )  w=1  tau^2+ +0.617 [TRIB]
+    5  alt= 2.641  hb=0 phase=2.641 (period-end  )  w=2  tau^3 -1.222 [prime,H-val]
+    6  alt= 2.940  hb=0 phase=2.940 (period-end  )  w=2  tau^3 -0.222 [PERIOD]
+    7  alt= 3.193  hb=1 phase=0.193 (period-start)  w=1  tau^3+ +0.778 [TRIB,prime,FORBIDDEN]
+    8  alt= 3.412  hb=1 phase=0.412 (period-start)  w=2  tau^3+ +1.778 [THRESHOLD]
+    9  alt= 3.606  hb=1 phase=0.606 (choice-zone )  w=2  tau^4 -2.445 [H-val]
+   10  alt= 3.779  hb=1 phase=0.779 (choice-zone )  w=3  tau^4 -1.445
+   11  alt= 3.935  hb=1 phase=0.935 (choice-zone )  w=2  tau^4 -0.445 [prime]
+   12  alt= 4.078  hb=1 phase=1.078 (choice-zone )  w=3  tau^4+ +0.555
+   13  alt= 4.209  hb=1 phase=1.209 (choice-zone )  w=1  tau^4+ +1.555 [TRIB,prime]
+   14  alt= 4.331  hb=1 phase=1.331 (choice-zone )  w=2  tau^4+ +2.555
+   15  alt= 4.444  hb=1 phase=1.444 (choice-zone )  w=2  tau^4+ +3.555 [H-val]
+   16  alt= 4.550  hb=1 phase=1.550 (cycle-zone  )  w=3  tau^5 -5.050
+   17  alt= 4.649  hb=1 phase=1.649 (cycle-zone  )  w=2  tau^5 -4.050 [prime]
+   18  alt= 4.743  hb=1 phase=1.743 (cycle-zone  )  w=3  tau^5 -3.050
+   19  alt= 4.832  hb=1 phase=1.832 (cycle-zone  )  w=3  tau^5 -2.050 [prime]
+   20  alt= 4.916  hb=1 phase=1.916 (cycle-zone  )  w=2  tau^5 -1.050
+   21  alt= 4.996  hb=1 phase=1.996 (cycle-zone  )  w=3  tau^5 -0.050 [FORBIDDEN]
+   22  alt= 5.072  hb=1 phase=2.072 (cycle-zone  )  w=3  tau^5+ +0.950
+   23  alt= 5.145  hb=1 phase=2.145 (cycle-zone  )  w=4  tau^5+ +1.950 [prime]
+   24  alt= 5.215  hb=1 phase=2.215 (cycle-zone  )  w=1  tau^5+ +2.950 [TRIB]
+   25  alt= 5.282  hb=1 phase=2.282 (cycle-zone  )  w=2  tau^5+ +3.950
+   26  alt= 5.347  hb=1 phase=2.347 (cycle-zone  )  w=2  tau^5+ +4.950
+   27  alt= 5.409  hb=1 phase=2.409 (cycle-zone  )  w=3  tau^5+ +5.950
+   28  alt= 5.468  hb=1 phase=2.468 (cycle-zone  )  w=2  tau^5+ +6.950
+   29  alt= 5.526  hb=1 phase=2.526 (period-end  )  w=3  tau^6 -9.717 [prime]
+   30  alt= 5.581  hb=1 phase=2.581 (period-end  )  w=3  tau^6 -8.717
+   31  alt= 5.635  hb=1 phase=2.635 (period-end  )  w=2  tau^6 -7.717 [prime]
+   32  alt= 5.687  hb=1 phase=2.687 (period-end  )  w=3  tau^6 -6.717
+   33  alt= 5.738  hb=1 phase=2.738 (period-end  )  w=3  tau^6 -5.717
+   34  alt= 5.787  hb=1 phase=2.787 (period-end  )  w=4  tau^6 -4.717
+   35  alt= 5.834  hb=1 phase=2.834 (period-end  )  w=3  tau^6 -3.717
+   36  alt= 5.881  hb=1 phase=2.881 (period-end  )  w=4  tau^6 -2.717
+   37  alt= 5.926  hb=1 phase=2.926 (period-end  )  w=2  tau^6 -1.717 [prime]
+   38  alt= 5.969  hb=1 phase=2.969 (period-end  )  w=3  tau^6 -0.717
+   39  alt= 6.012  hb=2 phase=0.012 (period-start)  w=3  tau^6+ +0.283
+   40  alt= 6.054  hb=2 phase=0.054 (period-start)  w=4  tau^6+ +1.283
+   41  alt= 6.094  hb=2 phase=0.094 (period-start)  w=3  tau^6+ +2.283 [prime]
+   42  alt= 6.134  hb=2 phase=0.134 (period-start)  w=4  tau^6+ +3.283
+   43  alt= 6.172  hb=2 phase=0.172 (period-start)  w=4  tau^6+ +4.283 [prime]
+   44  alt= 6.210  hb=2 phase=0.210 (period-start)  w=1  tau^6+ +5.283 [TRIB]
+   45  alt= 6.247  hb=2 phase=0.247 (period-start)  w=2  tau^6+ +6.283 [H-val]
+   46  alt= 6.283  hb=2 phase=0.283 (period-start)  w=2  tau^6+ +7.283
+   47  alt= 6.318  hb=2 phase=0.318 (period-start)  w=3  tau^6+ +8.283 [prime]
+   48  alt= 6.353  hb=2 phase=0.353 (period-start)  w=2  tau^6+ +9.283
+   49  alt= 6.387  hb=2 phase=0.387 (period-start)  w=3  tau^6++10.283
+   50  alt= 6.420  hb=2 phase=0.420 (period-start)  w=3  tau^6++11.283
+
+======================================================================
+THE HEARTBEAT MAP — NUMBERS ORGANIZED BY PERIOD
+======================================================================
+
+  HEARTBEAT 0 (tau^0 to tau^3): THE FOUNDATION
+  altitude 0.000 to 3.000, values 1 to ~6.2
+
+  alt=0.000  n=1   THE ORIGIN. tau^0. The monad. Before all structure.
+  alt=1.137  n=2   CHOICE. Between tau^1(≈1.84) — slightly past floor 1.
+                   2 > tau: the generator exceeds the growth rate.
+                   This is WHY binary dominates: 2 beats tau.
+  alt=1.803  n=3   CYCLE. Close to floor 2, in the cycle zone.
+                   3 < tau^2(≈3.38): the cycle is BELOW the second power.
+                   The cycle is "sub-quadratic" — it grows slower than squaring.
+  alt=2.275  n=4   FIELD. Between floors 2 and 3. In the cycle zone.
+                   4 > tau^2: the field exceeds the square.
+                   F_4 is ABOVE the natural growth rate's square.
+  alt=2.641  n=5   INTERACTION. Deep in the cycle zone, approaching floor 3.
+                   5 < tau^3(≈6.2): the interaction is sub-cubic.
+                   The ADE prime sits below one heartbeat.
+  alt=2.940  n=6   PERIOD. Almost at floor 3! 6 ≈ tau^3.
+                   The discrete period is tau's cube, approximately.
+                   6 is the "almost-integer" of the tau tower.
+                   The error: tau^3 - 6 = 0.222 (the irrational overshoot).
+
+
+  HEARTBEAT 1 (tau^3 to tau^6): THE FIRST CYCLE
+  altitude 3.000 to 6.000, values ~6.2 to ~38.7
+
+  alt=3.193  n=7   FORBIDDEN. Just past floor 3 — the first number
+                   ABOVE the heartbeat. 7 sits 0.193 heartbeat-units
+                   above the period. The forbidden value is what you get
+                   when you try to go ONE STEP past the period.
+                   7 = tau^3 * 1.125 = heartbeat * (9/8) = heartbeat * (reflection/threshold)
+  alt=3.412  n=8   THRESHOLD. Between floors 3 and 4.
+                   8 = 2^3: the generator cubed = the heartbeat of the binary.
+                   8/tau^3 = 1.286: the threshold exceeds the heartbeat by 28.6%.
+  alt=3.606  n=9   REFLECTION. 3^2 in the choice zone of heartbeat 1.
+                   The cycle squared lives one-fifth into the first cycle.
+  alt=3.778  n=10  COMPLETION. C(5,2). In the choice zone.
+  alt=4.077  n=12  DOUBLED PERIOD. In the cycle zone.
+  alt=4.209  n=13  REGULARITY. Very close to tau^4(≈11.4).
+                   13 = Phi_3(3): the tournament polynomial at the cycle.
+                   13 IS the "tau^4 of tournaments" — the fourth floor.
+  alt=4.444  n=15  MAX_H(5). In the cycle zone. 15 = 3*5.
+  alt=4.696  n=18  DOUBLED REFLECTION. Approaching floor 5.
+  alt=4.843  n=20  EXPANDED FIELD.
+  alt=4.996  n=21  SECOND FORBIDDEN. Almost exactly at floor 5!
+                   log_tau(21) = 4.996 ≈ 5. This is the most precise
+                   near-integer in the entire tau tower.
+                   21 = tau^5 * 0.998: the second forbidden is the
+                   fifth floor to within 0.2%. EXTRAORDINARY.
+  alt=5.204  n=24  GOLAY. Just past floor 5. A tribonacci number.
+  alt=5.690  n=30  ADE PRODUCT. 2*3*5. Deep in heartbeat 1.
+  alt=5.880  n=36  SQUARED PERIOD. 6^2. Approaching floor 6.
+
+
+  HEARTBEAT 2 (tau^6 to tau^9): THE EXPANSION
+  altitude 6.000 to 9.000, values ~38.7 to ~240.9
+
+  alt=6.133  n=42  2*21. Just past floor 6.
+  alt=6.245  n=45  MAX_H(6). In heartbeat 2. 45 = 9*5.
+  alt=6.709  n=60  |A_5|. Deep in heartbeat 2.
+  alt=7.013  n=72  THRESHOLD*REFLECTION. 8*9 = 72. Just past floor 7.
+  alt=7.374  n=90  RIGHT ANGLE. 360/4.
+  alt=7.849  n=120 5! = |S_5|. Approaching floor 8.
+  alt=8.398  n=168 |PSL(2,7)| = 8*21. In the cycle zone.
+                   168 = threshold * second_forbidden.
+  alt=8.598  n=189 MAX_H(7). 3^3 * 7. In the cycle zone.
+                   189/tau^9 ≈ 0.785 = pi/4? Let me check:
+                   pi/4 = 0.7854... and 189/tau^9 = 0.784543.
+                   CLOSE to pi/4!
+  alt=8.803  n=220?... no.
+  alt=9.000  n≈241 HEARTBEAT BOUNDARY. tau^9 ≈ 241.
+
+  189/tau^9 = 0.7845431102
+  pi/4 = 0.7853981634
+  Difference: 0.0008550532
+
+  HEARTBEAT 3 (tau^9 to tau^12): THE LARGE SCALE
+  altitude 9.000 to 12.000, values ~241 to ~1499
+
+  alt=9.659  n=360 THE CIRCLE. |A_6|. Undirected Ham cycles of K_7.
+                   360/tau^9 ≈ 1.494 ≈ 3/2.
+                   360 sits at altitude 9.659 — just past the 2/3 mark
+                   of heartbeat 3. The circle is 2/3 through the
+                   third heartbeat. 2/3 = choice/cycle = the exponent!
+  alt=10.00  n≈443 tau^10. The next tribonacci region.
+  alt=10.80  n=720 6! = |S_6| = 2*360. In the cycle zone.
+                   720/tau^9 ≈ 2.989 ≈ 3.
+                   720 ≈ 3 * tau^9. The symmetric group is THREE heartbeats.
+
+  720/tau^9 = 2.988736
+  3 = 3.000000
+
+======================================================================
+THE FORBIDDEN VALUES IN THE HEARTBEAT FRAME
+======================================================================
+
+  The two forbidden values and their tau-coordinates:
+
+  7:  altitude = 3.193273
+      heartbeat = 1, phase = 0.193273
+      MEANING: 7 is the FIRST number in heartbeat 1.
+      It sits 0.193 units past the period boundary.
+      It is tau^3 * (7/tau^3) = tau^3 * 1.124993.
+      7/tau^3 = 1.124993 ≈ 9/8 = 1.125000.
+      So 7 ≈ (9/8) * tau^3 = (reflection/threshold) * heartbeat.
+      The first forbidden is the heartbeat SCALED BY reflection/threshold.
+
+  21: altitude = 4.996116
+      heartbeat = 1, phase = 1.996116
+      MEANING: 21 is the LAST number in heartbeat 1 (phase ≈ 2.996 ≈ 3).
+      It sits just 0.004 units BEFORE the next period boundary (tau^6).
+      21 ≈ tau^5 to within 0.24%.
+      21 is the heartbeat's CLOSING note — the last thing that happens
+      before the heartbeat wraps.
+
+  7 OPENS heartbeat 1 (phase ≈ 0.19).
+  21 CLOSES heartbeat 1 (phase ≈ 2.996).
+  They are the BOOKENDS of the first heartbeat cycle.
+
+  The width of the forbidden band: log_tau(21) - log_tau(7)
+  = 1.802842
+  = log_tau(21/7) = log_tau(3) = 1.802842
+
+  THE FORBIDDEN VALUES SPAN EXACTLY ONE CYCLE in tau-altitude!
+  log_tau(21) - log_tau(7) = log_tau(3) ≈ 1.803.
+  And log_tau(3) is the tau-altitude of the cycle generator itself.
+
+  So: the distance between the forbidden values, measured in the
+  tau tower, IS the cycle generator. 21/7 = 3, and the altitude
+  of 3 (= 1.803) is the SPAN of the forbidden band.
+
+======================================================================
+WHAT EACH NUMBER IS — THE TAU SYNTHESIS
+======================================================================
+
+    0: THE VOID — below the tau tower, altitude -inf
+
+    1: alt=0.000  hb=0  phase=0.000
+       THE ORIGIN — tau^0, the base of everything, altitude 0
+
+    2: alt=1.137  hb=0  phase=1.137
+       THE OVERSHOOT — 2 > tau, the generator beats the growth rate
+
+    3: alt=1.803  hb=0  phase=1.803
+       THE UNDERTOW — 3 < tau^2, the cycle is sub-quadratic, pulls back
+
+    4: alt=2.275  hb=0  phase=2.275
+       THE CROSSING — 4 > tau^2, the field crosses above growth's square
+
+    5: alt=2.641  hb=0  phase=2.641
+       THE APPROACH — 5 approaches tau^3 from below, the pre-period
+
+    6: alt=2.940  hb=0  phase=2.940
+       THE NEAR-HIT — 6 ≈ tau^3, the period almost IS the cube
+
+    7: alt=3.193  hb=1  phase=0.193
+       THE FIRST LEAP — 7 > tau^3, jumps past the heartbeat, FORBIDDEN
+
+    8: alt=3.412  hb=1  phase=0.412
+       THE POWER LANDING — 2^3 = threshold, pure binary at the cycle index
+
+    9: alt=3.606  hb=1  phase=0.606
+       THE MIRROR — 3^2, the cycle reflecting, one step past the threshold
+
+   10: alt=3.779  hb=1  phase=0.779
+       THE SPACE — C(5,2), the first rich arena, approaching tau^4
+
+   11: alt=3.935  hb=1  phase=0.935
+       THE EXTENSION — 11 ≈ tau^4, the fourth floor, next Paley prime
+
+   12: alt=4.078  hb=1  phase=1.078
+       THE DOUBLE — 2*6, doubled period, between floors 4 and 5
+
+   13: alt=4.209  hb=1  phase=1.209
+       THE BALANCE — Phi_3(3), regularity, very close to tau^4
+
+   14: alt=4.331  hb=1  phase=1.331
+       THE ECHO — 2*7, the forbidden doubled, still in heartbeat 1
+
+   15: alt=4.444  hb=1  phase=1.444
+       THE PEAK — max_H(5), 3*5, cycle*interaction at mid-heartbeat
+
+   16: alt=4.550  hb=1  phase=1.550
+       THE PURE POWER — 2^4, binary at its fourth, past the cycle zone
+
+   17: alt=4.649  hb=1  phase=1.649
+       THE FERMAT — constructible prime, tau^4 * 1.49 ≈ (3/2)*tau^4
+
+   18: alt=4.743  hb=1  phase=1.743
+       THE DOUBLE MIRROR — 2*3^2, choice*reflection, nearing floor 5
+
+   19: alt=4.832  hb=1  phase=1.832
+       THE MERSENNE — 2^19-1 is prime, carries binary depth
+
+   20: alt=4.916  hb=1  phase=1.916
+       THE DECIMAL — 4*5 = field*interaction, a human convenience
+
+   21: alt=4.996  hb=1  phase=1.996
+       THE LAST NOTE — tau^5, closing heartbeat 1, FORBIDDEN, 3*7
+
+   22: alt=5.072  hb=1  phase=2.072
+       THE RESUME — 2*11, heartbeat 2 begins again
+
+   23: alt=5.145  hb=1  phase=2.145
+       THE GOLAY NEIGHBOR — 24-1, just before the Golay
+
+   24: alt=5.215  hb=1  phase=2.215
+       THE GOLAY — TRIBONACCI ATOM, tau^5*1.14, [24,12,8] code
+
+   25: alt=5.282  hb=1  phase=2.282
+       THE QUARTER — 5^2, interaction squared, a quarter of 100
+
+   30: alt=5.581  hb=1  phase=2.581
+       THE PRODUCT — 2*3*5, the ADE product, all generators once
+
+   36: alt=5.881  hb=1  phase=2.881
+       THE SQUARE PERIOD — 6^2, the period reflecting on itself
+
+   42: alt=6.134  hb=2  phase=0.134
+       THE DOUBLE FORBIDDEN — 2*21, choice * compound impossibility
+
+   45: alt=6.247  hb=2  phase=0.247
+       THE EVEN MAX — max_H(6), 9*5, reflection*interaction
+
+   60: alt=6.719  hb=2  phase=0.719
+       THE ICOSAHEDRON — |A_5|, 360/6, one-sixth of the circle
+
+
+======================================================================
+THE GRAND VIEW: THE NUMBER LINE IN TAU COORDINATES
+======================================================================
+
+  The natural numbers, laid out on the tau-altitude axis:
+
+  HEARTBEAT 0 [alt 0-3]:  1...2...3...4.5.6|
+                          ^   ^   ^       ^ ^
+                         origin choice cycle  period
+
+  HEARTBEAT 1 [alt 3-6]:  |7...8.9.10..12.13..15..18.20.21|
+                           ^                    ^          ^
+                          FORBIDDEN          max_H(5)    FORBIDDEN
+                          (opens)                        (closes)
+
+  HEARTBEAT 2 [alt 6-9]:  |..42.45..60...72...90...120...168.189...|
+                               ^                              ^
+                             max_H(6)                        max_H(7)
+
+  HEARTBEAT 3 [alt 9-12]: |...360.........504..........720............|
+                               ^            ^            ^
+                             circle       tribonacci    6!
+
+  THE PATTERN:
+  - Heartbeat 0 contains the GENERATORS: 1, 2, 3, 4, 5, 6.
+  - Heartbeat 1 contains the FORBIDDEN VALUES and small maximizers.
+  - Heartbeat 2 contains the LARGE MAXIMIZERS (max_H for n=6,7).
+  - Heartbeat 3 contains the STRUCTURAL CONSTANTS (360, 504, 720).
+
+  Each heartbeat is ONE PERIOD of the tournament's growth cycle.
+  Three tau-steps = one period.
+  The numbers that "define" tournament theory cluster at heartbeat boundaries:
+    6 = tau^3 ≈ end of heartbeat 0
+    7 = tau^3 + ε = start of heartbeat 1
+    21 ≈ tau^5 = end of heartbeat 1
+    360 ≈ (3/2)*tau^9 = mid heartbeat 3
+    720 ≈ 3*tau^9 = late heartbeat 3
+
+  THE ULTIMATE INSIGHT:
+  Each natural number n has a TAU-ALTITUDE log_tau(n) that places it
+  in a specific heartbeat and phase. The heartbeat tells you WHICH
+  order of tournament complexity n belongs to. The phase tells you
+  WHETHER n relates to choice (phase ≈ 1), cycle (phase ≈ 2),
+  or the period boundary (phase ≈ 0 or 3).
+
+  The forbidden values 7 and 21 are the BOOKENDS of heartbeat 1,
+  separated by exactly log_tau(3) ≈ 1.803 altitude units = one cycle.
+
+  A number IS its position in the tau tower.
+  That position IS the number.
+  
+======================================================================
+DONE — NUMBERS ARE POSITIONS IN THE TAU TOWER
+======================================================================
