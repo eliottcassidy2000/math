@@ -1,0 +1,116 @@
+======================================================================
+H-LANDSCAPE DEEP INVESTIGATION
+kind-pasteur-2026-03-14-S71
+======================================================================
+
+======================================================================
+PART 1: EXHAUSTIVE LOCAL EXTREMA AT n=6
+  n=6: 2^15 = 32768 tournaments, 15-dim hypercube
+======================================================================
+  Total: 32768
+  Local maxima: 1200 (3.66%)
+  Local minima: 720 (2.20%)
+  Plateau (some flat neighbor): 24000 (73.24%)
+  H at local maxima: [37, 45]
+  H at local minima: [1]
+  UNIQUE local max? False
+
+======================================================================
+PART 2: GRADIENT ASCENT FROM RANDOM STARTS
+======================================================================
+
+--- n = 5 ---
+  500 gradient ascent runs:
+  Final H distribution: {15: 500}
+  All reach global max? True
+  Steps: mean=1.64, max=3, median=2
+  Steps distribution: {2: 263, 1: 166, 3: 43, 0: 28}
+
+--- n = 6 ---
+  500 gradient ascent runs:
+  Final H distribution: {45: 449, 37: 51}
+  All reach global max? False
+  Steps: mean=2.00, max=4, median=2
+  Steps distribution: {2: 248, 3: 121, 1: 113, 0: 11, 4: 7}
+
+======================================================================
+PART 3: SAMPLED LOCAL EXTREMA AT n=7
+  Check: does gradient ascent always reach H=189?
+======================================================================
+  200 gradient ascent runs:
+  Final H values: [135, 159, 171, 175, 189]
+  Final H distribution: {159: 84, 175: 58, 171: 32, 189: 19, 135: 7}
+  All reach H=189? False
+  Steps: mean=2.80, max=5
+
+======================================================================
+PART 4: H-FIBER CONNECTIVITY
+  Are all tournaments with H=k connected by arc flips
+  that preserve or increase H?
+======================================================================
+
+--- n = 5 ---
+  Global max H = 15, # maximizers = 64
+
+  Gradient descent from maximizer to H=1:
+    Path: [15, 3, 1]
+    Path: [15, 3, 1]
+    Path: [15, 3, 1]
+
+======================================================================
+PART 5: ARC-FLIP GRADIENT vs SCORE REGULARIZATION
+  Does maximizing H = regularizing scores?
+======================================================================
+
+  Trial 0: initial H=3, scores=[np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)], var=1.60
+    Final H=15, scores=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], var=0.40, steps=3
+    Score variance: 1.60 -> 0.40 (change=-1.20)
+
+  Trial 1: initial H=3, scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)], var=1.60
+    Final H=15, scores=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], var=0.40, steps=1
+    Score variance: 1.60 -> 0.40 (change=-1.20)
+
+  Trial 2: initial H=5, scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)], var=1.20
+    Final H=15, scores=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], var=0.40, steps=2
+    Score variance: 1.20 -> 0.40 (change=-0.80)
+
+  Trial 3: initial H=5, scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)], var=1.20
+    Final H=15, scores=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], var=0.40, steps=2
+    Score variance: 1.20 -> 0.40 (change=-0.80)
+
+  Trial 4: initial H=5, scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)], var=1.20
+    Final H=15, scores=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)], var=0.40, steps=2
+    Score variance: 1.20 -> 0.40 (change=-0.80)
+
+======================================================================
+PART 6: H=7 GAP IN THE LANDSCAPE
+  H=7 is impossible. How does the landscape 'skip' it?
+  At n=5: H goes 1,3,5 then jumps to 9,11,13,15
+  Are all H=5 tournaments adjacent to H=9 tournaments?
+======================================================================
+
+  n=5: 240 tournaments with H=5
+  Neighbor H values from H=5:
+    H=1: 240 total (1.0 per H=5 tournament)
+    H=3: 480 total (2.0 per H=5 tournament)
+    H=5: 720 total (3.0 per H=5 tournament)
+    H=9: 480 total (2.0 per H=5 tournament)
+    H=11: 240 total (1.0 per H=5 tournament)
+    H=13: 240 total (1.0 per H=5 tournament)
+
+  240 tournaments with H=9
+  Neighbor H values from H=9:
+    H=1: 120 total (0.5 per H=9 tournament)
+    H=3: 240 total (1.0 per H=9 tournament)
+    H=5: 480 total (2.0 per H=9 tournament)
+    H=9: 720 total (3.0 per H=9 tournament)
+    H=11: 360 total (1.5 per H=9 tournament)
+    H=13: 360 total (1.5 per H=9 tournament)
+    H=15: 120 total (0.5 per H=9 tournament)
+
+  Direct H=5 -> H=9 single-flip edges: 480
+  H=7 truly SKIPPED in the landscape (no tournament has H=7)
+
+======================================================================
+DONE
+======================================================================
