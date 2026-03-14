@@ -1,0 +1,445 @@
+======================================================================
+EISENSTEIN NORM OF THE F-POLYNOMIAL
+opus-2026-03-14-S71l
+======================================================================
+
+======================================================================
+PART 1: LOESCHIAN NUMBERS = NORMS IN Z[omega]
+======================================================================
+
+  Loeschian numbers up to 100:
+  [0, 1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28, 31, 36, 37, 39, 43, 48, 49, 52, 57, 61, 63, 64, 67, 73, 75, 76, 79, 81, 84, 91, 93, 97, 100]
+
+  Key forbidden/achievable values and Loeschian status:
+       7: Loeschian=True  (1^2 + 1*2 + 2^2 = 7)
+      21: Loeschian=True  (1^2 + 1*4 + 4^2 = 21)
+      63: Loeschian=True  (3^2 + 3*6 + 6^2 = 63)
+     189: Loeschian=True  (3^2 + 3*12 + 12^2 = 189)
+      35: Loeschian=False
+      39: Loeschian=True  (2^2 + 2*5 + 5^2 = 39)
+     273: Loeschian=True  (1^2 + 1*16 + 16^2 = 273)
+
+  Phi_3(x) = x^2 + x + 1 values:
+    Phi_3(1) = 3 = 1^2 + 1*1 + 1^2
+    Phi_3(2) = 7 = 1^2 + 1*2 + 2^2
+    Phi_3(3) = 13 = 1^2 + 1*3 + 3^2
+    Phi_3(4) = 21 = 1^2 + 1*4 + 4^2
+    Phi_3(5) = 31 = 1^2 + 1*5 + 5^2
+    Phi_3(6) = 43 = 1^2 + 1*6 + 6^2
+    Phi_3(7) = 57 = 1^2 + 1*7 + 7^2
+    Phi_3(8) = 73 = 1^2 + 1*8 + 8^2
+    Phi_3(9) = 91 = 1^2 + 1*9 + 9^2
+
+======================================================================
+PART 2: F(T, omega) AS EISENSTEIN INTEGER
+======================================================================
+
+  --- n = 5 ---
+    All |F(omega)|^2 are Loeschian: True
+    Distinct norms: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28, 31, 36, 37, 39, 43, 49, 52, 57, 61, 63, 67, 81, 91]...
+
+    Norm distribution by H value:
+      H=  1: |F(omega)|^2 in [1]
+      H=  3: |F(omega)|^2 in [3, 9]
+      H=  5: |F(omega)|^2 in [1, 4, 7, 13, 25]
+      H=  9: |F(omega)|^2 in [3, 9, 12, 21, 27]... (7 values)
+      H= 11: |F(omega)|^2 in [7, 13, 16, 19, 25]... (12 values)
+      H= 13: |F(omega)|^2 in [13, 16, 19, 25, 28]... (11 values)
+      H= 15: |F(omega)|^2 in [9, 36, 39, 63, 81]
+
+  --- n = 6 ---
+    All |F(omega)|^2 are Loeschian: True
+    Distinct norms: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28, 31, 36, 37, 39, 43, 48, 49, 52, 57, 61, 63, 64, 67, 73, 75, 76, 79]...
+
+    Norm distribution by H value:
+      H=  1: |F(omega)|^2 in [1]
+      H=  3: |F(omega)|^2 in [3, 9]
+      H=  5: |F(omega)|^2 in [1, 4, 7, 13, 25]
+      H=  9: |F(omega)|^2 in [3, 9, 12, 21, 27]... (9 values)
+      H= 11: |F(omega)|^2 in [1, 7, 13, 16, 19]... (15 values)
+      H= 13: |F(omega)|^2 in [7, 13, 16, 19, 25]... (17 values)
+      H= 15: |F(omega)|^2 in [3, 9, 12, 21, 27]... (20 values)
+      H= 17: |F(omega)|^2 in [4, 7, 13, 16, 19]... (27 values)
+      H= 19: |F(omega)|^2 in [13, 16, 19, 25, 28]... (30 values)
+      H= 23: |F(omega)|^2 in [7, 13, 16, 19, 25]... (43 values)
+      H= 25: |F(omega)|^2 in [19, 25, 28, 31, 37]... (41 values)
+      H= 27: |F(omega)|^2 in [21, 48, 57, 63, 75]... (22 values)
+      H= 29: |F(omega)|^2 in [7, 13, 19, 25, 28]... (56 values)
+      H= 31: |F(omega)|^2 in [25, 37, 43, 49, 52]... (57 values)
+      H= 33: |F(omega)|^2 in [21, 27, 36, 39, 48]... (48 values)
+      H= 37: |F(omega)|^2 in [31, 43, 49, 52, 61]... (73 values)
+      H= 41: |F(omega)|^2 in [43, 49, 61, 64, 73]... (76 values)
+      H= 43: |F(omega)|^2 in [61, 76, 79, 91, 97]... (75 values)
+      H= 45: |F(omega)|^2 in [57, 84, 93, 108, 117]... (47 values)
+
+======================================================================
+PART 3: EISENSTEIN LATTICE POINTS
+======================================================================
+
+  F(T, omega) = (G0 - G2) + (G1 - G2) * omega
+
+  So each tournament maps to an Eisenstein integer z = a + b*omega.
+  The NORM |z|^2 = a^2 + ab + b^2 is Loeschian by definition.
+
+  Key question: Which Eisenstein lattice points are ACHIEVABLE?
+  And how does this relate to the forbidden value 7?
+
+  n=5: Eisenstein lattice points (a, b) and their H values:
+    ( -9, -9): norm=243, H in [15]
+    ( -9, -7): norm=193, H in [11]
+    ( -9, -6): norm=171, H in [15]
+    ( -9, -5): norm=151, H in [13]
+    ( -9, -3): norm=117, H in [15]
+    ( -8, -5): norm=129, H in [11]
+    ( -8, -3): norm= 97, H in [13]
+    ( -7, -9): norm=193, H in [11]
+    ( -7, -7): norm=147, H in [13]
+    ( -7, -6): norm=127, H in [11]
+    ( -7, -5): norm=109, H in [9, 15]
+    ( -7, -4): norm= 93, H in [13]
+    ( -7, -3): norm= 79, H in [11]
+    ( -7, -1): norm= 57, H in [13]
+    ( -6, -9): norm=171, H in [15]
+    ( -6, -7): norm=127, H in [11]
+    ( -6, -6): norm=108, H in [15]
+    ( -6, -5): norm= 91, H in [13]
+    ( -6, -3): norm= 63, H in [9]
+    ( -6, -2): norm= 52, H in [13]
+    ( -6, -1): norm= 43, H in [11]
+    ( -6,  0): norm= 36, H in [15]
+    ( -6,  1): norm= 31, H in [13]
+    ( -5, -9): norm=151, H in [13]
+    ( -5, -8): norm=129, H in [11]
+    ( -5, -7): norm=109, H in [9, 15]
+    ( -5, -6): norm= 91, H in [13]
+    ( -5, -5): norm= 75, H in [5, 11]
+    ( -5, -4): norm= 61, H in [9]
+    ( -5, -3): norm= 49, H in [13]
+    ( -5, -2): norm= 39, H in [11]
+    ( -5, -1): norm= 31, H in [9]
+    ( -5,  0): norm= 25, H in [13]
+    ( -5,  1): norm= 21, H in [11]
+    ( -5,  2): norm= 19, H in [15]
+    ( -4, -7): norm= 93, H in [13]
+    ( -4, -5): norm= 61, H in [9]
+    ( -4, -4): norm= 48, H in [13]
+    ( -4, -3): norm= 37, H in [5, 11]
+    ( -4, -2): norm= 28, H in [9]
+    ( -4,  0): norm= 16, H in [11]
+    ( -4,  1): norm= 13, H in [9]
+    ( -4,  2): norm= 12, H in [13]
+    ( -4,  3): norm= 13, H in [11]
+    ( -3, -9): norm=117, H in [15]
+    ( -3, -8): norm= 97, H in [13]
+    ( -3, -7): norm= 79, H in [11]
+    ( -3, -6): norm= 63, H in [9]
+    ( -3, -5): norm= 49, H in [13]
+    ( -3, -4): norm= 37, H in [5, 11]
+    ( -3, -3): norm= 27, H in [3, 9]
+    ( -3, -1): norm= 13, H in [5, 11]
+    ( -3,  0): norm=  9, H in [9, 15]
+    ( -3,  1): norm=  7, H in [13]
+    ( -3,  2): norm=  7, H in [11]
+    ( -3,  3): norm=  9, H in [9]
+    ( -3,  4): norm= 13, H in [13]
+    ( -3,  6): norm= 27, H in [15]
+    ( -2, -6): norm= 52, H in [13]
+    ( -2, -5): norm= 39, H in [11]
+    ( -2, -4): norm= 28, H in [9]
+    ( -2, -2): norm= 12, H in [5]
+    ( -2, -1): norm=  7, H in [3, 9]
+    ( -2,  1): norm=  3, H in [5]
+    ( -2,  2): norm=  4, H in [9]
+    ( -2,  4): norm= 12, H in [11]
+    ( -2,  6): norm= 28, H in [13]
+    ( -1, -7): norm= 57, H in [13]
+    ( -1, -6): norm= 43, H in [11]
+    ( -1, -5): norm= 31, H in [9]
+    ( -1, -3): norm= 13, H in [5, 11]
+    ( -1, -2): norm=  7, H in [3, 9]
+    ( -1, -1): norm=  3, H in [1]
+    ( -1,  0): norm=  1, H in [5]
+    ( -1,  1): norm=  1, H in [3]
+    ( -1,  3): norm=  7, H in [5]
+    ( -1,  4): norm= 13, H in [9]
+    (  0, -6): norm= 36, H in [15]
+    (  0, -5): norm= 25, H in [13]
+    (  0, -4): norm= 16, H in [11]
+    (  0, -3): norm=  9, H in [9, 15]
+    (  0, -1): norm=  1, H in [5]
+    (  0,  1): norm=  1, H in [1]
+    (  0,  2): norm=  4, H in [5]
+    (  0,  3): norm=  9, H in [3]
+    (  0,  5): norm= 25, H in [5]
+    (  1, -6): norm= 31, H in [13]
+    (  1, -5): norm= 21, H in [11]
+    (  1, -4): norm= 13, H in [9]
+    (  1, -3): norm=  7, H in [13]
+    (  1, -2): norm=  3, H in [5]
+    (  1, -1): norm=  1, H in [3]
+    (  1,  0): norm=  1, H in [1]
+    (  1,  2): norm=  7, H in [3]
+    (  1,  4): norm= 21, H in [5]
+    (  1,  8): norm= 73, H in [9]
+    (  1, 10): norm=111, H in [11]
+    (  2, -5): norm= 19, H in [15]
+    (  2, -4): norm= 12, H in [13]
+    (  2, -3): norm=  7, H in [11]
+    (  2, -2): norm=  4, H in [9]
+    (  2,  0): norm=  4, H in [5]
+    (  2,  1): norm=  7, H in [3]
+    (  3, -4): norm= 13, H in [11]
+    (  3, -3): norm=  9, H in [9]
+    (  3, -1): norm=  7, H in [5]
+    (  3,  0): norm=  9, H in [3]
+    (  4, -3): norm= 13, H in [13]
+    (  4, -2): norm= 12, H in [11]
+    (  4, -1): norm= 13, H in [9]
+    (  4,  1): norm= 21, H in [5]
+    (  5,  0): norm= 25, H in [5]
+    (  6, -3): norm= 27, H in [15]
+    (  6, -2): norm= 28, H in [13]
+    (  8,  1): norm= 73, H in [9]
+    ( 10,  1): norm=111, H in [11]
+
+======================================================================
+PART 4: FROBENIUS ENDOMORPHISM AND F(T, omega)
+======================================================================
+
+  In Z[omega], the Frobenius (complex conjugation) acts as:
+    omega -> omega^2 = -1 - omega
+
+  For tournaments, complement T -> T^op gives:
+    F_k(T^op) = F_{n-1-k}(T)
+
+  So: G_j(T^op) = sum_{k equiv j mod 3} F_{n-1-k}(T)
+                 = sum_{k' equiv (n-1-j) mod 3} F_{k'}(T)
+                 = G_{(n-1-j) mod 3}(T)
+
+  For n=5 (n-1=4 equiv 1 mod 3):
+    G_0(T^op) = G_1(T), G_1(T^op) = G_0(T), G_2(T^op) = G_2(T)
+
+  So complement SWAPS G_0 and G_1, keeps G_2 fixed.
+
+  In Eisenstein coordinates:
+    a(T^op) = G_0(T^op) - G_2(T^op) = G_1(T) - G_2(T) = b(T)
+    b(T^op) = G_1(T^op) - G_2(T^op) = G_0(T) - G_2(T) = a(T)
+
+  So T -> T^op corresponds to (a,b) -> (b,a) in the Eisenstein lattice!
+  This is REFLECTION across the line a=b.
+
+  Verification at n=5:
+    Tested 200 tournaments: 200/200 satisfy (a,b) -> (b,a)
+
+======================================================================
+PART 5: WHY H=7 IS FORBIDDEN — THE EISENSTEIN VIEW
+======================================================================
+
+  H = F(T, 1) = G_0 + G_1 + G_2
+  |F(T, omega)|^2 = a^2 + ab + b^2 where a = G0-G2, b = G1-G2
+
+  For H=7: G_0 + G_1 + G_2 = 7.
+  Possible (G0, G1, G2) triples with G_j >= 0, sum = 7:
+  Many options. But the NORM constraint:
+  Which of these give |F(omega)|^2 = some value?
+
+  The question is NOT about the norm being 7 (it can be any value).
+  The question is: can ANY of these triples arise from a tournament?
+
+  n=5: (G0, G1, G2) triples by H value:
+    H=  1: [(0, 0, 1), (0, 1, 0), (1, 0, 0)]
+    H=  3: [(0, 0, 3), (0, 1, 2), (0, 2, 1), (0, 3, 0), (1, 0, 2), (1, 2, 0), (2, 0, 1), (2, 1, 0), (3, 0, 0)]
+    H=  5: [(0, 0, 5), (0, 1, 4), (0, 2, 3), (0, 3, 2), (0, 4, 1), (0, 5, 0), (1, 0, 4), (1, 1, 3), (1, 2, 2), (1, 3, 1), (1, 4, 0), (2, 0, 3), (2, 1, 2), (3, 0, 2), (3, 1, 1), (4, 0, 1), (4, 1, 0), (5, 0, 0)]
+    H=  9: [(0, 2, 7), (0, 3, 6), (0, 4, 5), (0, 5, 4), (0, 6, 3), (1, 2, 6), (1, 3, 5), (1, 4, 4), (1, 5, 3), (1, 6, 2), (1, 8, 0), (2, 0, 7), (2, 1, 6), (2, 2, 5), (2, 3, 4), (3, 0, 6), (3, 1, 5), (3, 2, 4), (4, 0, 5), (4, 1, 4), (5, 0, 4), (5, 1, 3), (6, 0, 3), (6, 1, 2), (8, 1, 0)]
+    H= 11: [(0, 2, 9), (0, 3, 8), (0, 4, 7), (0, 5, 6), (0, 6, 5), (0, 7, 4), (1, 2, 8), (1, 4, 6), (1, 5, 5), (1, 6, 4), (1, 7, 3), (1, 10, 0), (2, 0, 9), (2, 1, 8), (2, 2, 7), (2, 3, 6), (2, 4, 5), (3, 0, 8), (3, 2, 6), (4, 0, 7), (4, 1, 6), (4, 2, 5), (5, 0, 6), (5, 1, 5), (6, 0, 5), (6, 1, 4), (7, 0, 4), (7, 1, 3), (10, 1, 0)]
+    H= 13: [(0, 4, 9), (0, 5, 8), (0, 6, 7), (0, 7, 6), (1, 4, 8), (1, 5, 7), (1, 6, 6), (1, 7, 5), (1, 8, 4), (1, 9, 3), (2, 2, 9), (2, 3, 8), (2, 4, 7), (2, 6, 5), (3, 2, 8), (3, 3, 7), (4, 0, 9), (4, 1, 8), (4, 2, 7), (5, 0, 8), (5, 1, 7), (6, 0, 7), (6, 1, 6), (6, 2, 5), (7, 0, 6), (7, 1, 5), (8, 1, 4), (9, 1, 3)]
+    H= 15: [(0, 6, 9), (1, 4, 10), (1, 7, 7), (1, 8, 6), (1, 10, 4), (2, 2, 11), (2, 4, 9), (3, 3, 9), (3, 6, 6), (4, 1, 10), (4, 2, 9), (6, 0, 9), (6, 3, 6), (7, 1, 7), (8, 1, 6), (10, 1, 4)]
+
+======================================================================
+PART 6: FIBONACCI IN THE EISENSTEIN LATTICE
+======================================================================
+
+  The golden ratio phi = 1.618034 has a curious relationship with omega:
+  phi = 2*cos(pi/5) and omega = e^(2*pi*i/3)
+
+  Fibonacci numbers mod 3: 1,1,2,0,2,2,1,0,1,1,2,0,...  (period 8)
+  Lucas numbers mod 3:     2,1,0,1,1,2,0,2,2,1,0,1,...  (period 8)
+
+  The Pisano period pi(3) = 8.
+
+  In the Eisenstein lattice, Fibonacci numbers create a SPIRAL:
+  F_n + F_{n+1} * omega traces out an expanding hexagonal spiral.
+
+  Fibonacci Eisenstein points (F_n, F_{n+1}) and norms:
+    n= 0: (   0,   1), norm =      1 (Loeschian)
+    n= 1: (   1,   1), norm =      3 (Loeschian)
+    n= 2: (   1,   2), norm =      7 (Loeschian)
+    n= 3: (   2,   3), norm =     19 (Loeschian)
+    n= 4: (   3,   5), norm =     49 (Loeschian)
+    n= 5: (   5,   8), norm =    129
+    n= 6: (   8,  13), norm =    337
+    n= 7: (  13,  21), norm =    883
+    n= 8: (  21,  34), norm =   2311
+    n= 9: (  34,  55), norm =   6051
+    n=10: (  55,  89), norm =  15841
+    n=11: (  89, 144), norm =  41473
+
+======================================================================
+PART 7: TRINOMIAL COEFFICIENTS AS EISENSTEIN NORMS
+======================================================================
+
+  (1+x+x^2)^n = Phi_3(x)^n evaluated at x = omega gives:
+  Phi_3(omega) = omega^2 + omega + 1 = 0
+
+  So (1+omega+omega^2)^n = 0^n = 0 for n >= 1!
+
+  This means: the trinomial row (T(n,0), T(n,1), ..., T(n,2n))
+  satisfies: sum_k T(n,k) * omega^k = 0.
+
+  Splitting into residues mod 3:
+  G_0 + G_1*omega + G_2*omega^2 = 0
+
+  where G_j = sum_{k equiv j mod 3} T(n,k).
+
+  Since 1 + omega + omega^2 = 0:
+  G_0 = G_1 = G_2 = 3^n / 3 = 3^{n-1}.
+
+  This is obvious: each residue class sums to 3^{n-1}.
+  The trinomial coefficients are PERFECTLY balanced among the three classes.
+
+  BUT: tournament F-polynomials are NOT perfectly balanced!
+  The IMBALANCE is measured by |F(T, omega)|^2.
+
+  H=7 being forbidden means: no tournament can have a specific
+  imbalance pattern that gives H = G0+G1+G2 = 7.
+
+  The Eisenstein norm measures HOW UNBALANCED the F-polynomial is
+  among the three residue classes mod 3.
+
+  Trinomial row balance verification:
+    n=1: G = [1, 1, 1], balanced: True, each = 3^0 = 1
+    n=2: G = [3, 3, 3], balanced: True, each = 3^1 = 3
+    n=3: G = [9, 9, 9], balanced: True, each = 3^2 = 9
+    n=4: G = [27, 27, 27], balanced: True, each = 3^3 = 27
+    n=5: G = [81, 81, 81], balanced: True, each = 3^4 = 81
+    n=6: G = [243, 243, 243], balanced: True, each = 3^5 = 243
+    n=7: G = [729, 729, 729], balanced: True, each = 3^6 = 729
+
+======================================================================
+PART 8: THE EISENSTEIN FUNCTOR
+======================================================================
+
+  CATEGORY STRUCTURE:
+
+  Objects: Tournaments on [n]
+  Morphisms: Score-sequence-preserving maps? Or isomorphism classes?
+
+  The F-POLYNOMIAL is a functor: T -> F(T, x) in Z[x]/(x^n).
+  This factorizes through the EISENSTEIN MAP:
+
+  T --F(T,x)--> Z[x] --eval at omega--> Z[omega] --norm--> Z_{>=0}
+
+  The composite is the EISENSTEIN NORM FUNCTOR:
+    T |-> |F(T, omega)|^2
+
+  Properties of this functor:
+  1. It is NOT injective (many T have same norm)
+  2. It IS complement-compatible: norm(T) = norm(T^op)
+     (because (a,b) -> (b,a) preserves a^2+ab+b^2)
+  3. Its IMAGE is a subset of Loeschian numbers
+  4. It correlates strongly (r~0.84) with H
+
+  NATURAL TRANSFORMATIONS:
+  - The inclusion Z -> Z[omega] (rational tournaments)
+  - The norm Z[omega] -> Z (losing phase information)
+  - The projection Z[omega] -> Z/3Z (residue class)
+
+  The FIBER over a Loeschian number L = a^2+ab+b^2:
+  All tournaments T with |F(T,omega)|^2 = L.
+  This fiber has a natural GROUP ACTION by the unit group
+  of Z[omega], which is {+-1, +-omega, +-omega^2} (order 6).
+  
+  n=5: Loeschian norms and tournament counts:
+    |F(omega)|^2 =   1:   90 tournaments  (= 0^2 + 0*1 + 1^2)
+    |F(omega)|^2 =   3:  106 tournaments  (= 1^2 + 1*1 + 1^2)
+    |F(omega)|^2 =   4:    8 tournaments  (= 0^2 + 0*2 + 2^2)
+    |F(omega)|^2 =   7:   88 tournaments  (= 1^2 + 1*2 + 2^2)
+    |F(omega)|^2 =   9:   36 tournaments  (= 0^2 + 0*3 + 3^2)
+    |F(omega)|^2 =  12:   24 tournaments  (= 2^2 + 2*2 + 2^2)
+    |F(omega)|^2 =  13:  114 tournaments  (= 1^2 + 1*3 + 3^2)
+    |F(omega)|^2 =  16:    4 tournaments  (= 0^2 + 0*4 + 4^2)
+    |F(omega)|^2 =  19:   10 tournaments  (= 2^2 + 2*3 + 3^2)
+    |F(omega)|^2 =  21:   16 tournaments  (= 1^2 + 1*4 + 4^2)
+    |F(omega)|^2 =  25:   12 tournaments  (= 0^2 + 0*5 + 5^2)
+    |F(omega)|^2 =  27:   50 tournaments  (= 3^2 + 3*3 + 3^2)
+    |F(omega)|^2 =  28:   40 tournaments  (= 2^2 + 2*4 + 4^2)
+    |F(omega)|^2 =  31:   42 tournaments  (= 1^2 + 1*5 + 5^2)
+    |F(omega)|^2 =  36:    4 tournaments  (= 0^2 + 0*6 + 6^2)
+    |F(omega)|^2 =  37:   78 tournaments  (= 3^2 + 3*4 + 4^2)
+    |F(omega)|^2 =  39:   12 tournaments  (= 2^2 + 2*5 + 5^2)
+    |F(omega)|^2 =  43:    4 tournaments  (= 1^2 + 1*6 + 6^2)
+    |F(omega)|^2 =  48:    4 tournaments  (= 4^2 + 4*4 + 4^2)
+    |F(omega)|^2 =  49:   16 tournaments  (= 0^2 + 0*7 + 7^2)
+    |F(omega)|^2 =  52:   12 tournaments  (= 2^2 + 2*6 + 6^2)
+    |F(omega)|^2 =  57:    8 tournaments  (= 1^2 + 1*7 + 7^2)
+    |F(omega)|^2 =  61:    8 tournaments  (= 4^2 + 4*5 + 5^2)
+    |F(omega)|^2 =  63:   28 tournaments  (= 3^2 + 3*6 + 6^2)
+    |F(omega)|^2 =  73:   10 tournaments  (= 1^2 + 1*8 + 8^2)
+    |F(omega)|^2 =  75:   24 tournaments  (= 5^2 + 5*5 + 5^2)
+    |F(omega)|^2 =  79:   12 tournaments  (= 3^2 + 3*7 + 7^2)
+    |F(omega)|^2 =  91:   12 tournaments  (= 1^2 + 1*9 + 9^2)
+    |F(omega)|^2 =  93:    4 tournaments  (= 4^2 + 4*7 + 7^2)
+    |F(omega)|^2 =  97:   16 tournaments  (= 3^2 + 3*8 + 8^2)
+    |F(omega)|^2 = 108:    8 tournaments  (= 6^2 + 6*6 + 6^2)
+    |F(omega)|^2 = 109:   56 tournaments  (= 5^2 + 5*7 + 7^2)
+    |F(omega)|^2 = 111:    4 tournaments  (= 1^2 + 1*10 + 10^2)
+    |F(omega)|^2 = 117:   14 tournaments  (= 3^2 + 3*9 + 9^2)
+    |F(omega)|^2 = 127:    2 tournaments  (= 6^2 + 6*7 + 7^2)
+    |F(omega)|^2 = 129:   12 tournaments  (= 5^2 + 5*8 + 8^2)
+    |F(omega)|^2 = 147:   12 tournaments  (= 2^2 + 2*11 + 11^2)
+    |F(omega)|^2 = 151:   10 tournaments  (= 5^2 + 5*9 + 9^2)
+    |F(omega)|^2 = 171:    2 tournaments  (= 6^2 + 6*9 + 9^2)
+    |F(omega)|^2 = 193:   10 tournaments  (= 7^2 + 7*9 + 9^2)
+    |F(omega)|^2 = 243:    2 tournaments  (= 9^2 + 9*9 + 9^2)
+
+======================================================================
+PART 9: H vs EISENSTEIN NORM — THE CONSTRAINT SURFACE
+======================================================================
+
+  Given H = G0 + G1 + G2 and N = (G0-G2)^2 + (G0-G2)(G1-G2) + (G1-G2)^2:
+
+  Let s = G0+G1+G2 = H, and set u = G0-G2, v = G1-G2.
+  Then G2 = (s - u - v) / 3 ... wait, G0 = G2+u, G1 = G2+v.
+  So s = G2+u + G2+v + G2 = 3*G2 + u + v.
+  Thus G2 = (s - u - v)/3.
+
+  For G2 >= 0: u + v <= s = H.
+  For G0 >= 0: G2 + u >= 0, so u >= -(s-u-v)/3, so 4u+v >= -s... always true for u,v small.
+
+  The norm N = u^2 + uv + v^2.
+
+  Given H, the MAXIMUM possible norm is achieved when the G_j are
+  as UNBALANCED as possible.
+
+  If one G_j = H and others = 0: u = H, v = 0 (say), N = H^2.
+  If perfectly balanced: G0=G1=G2=H/3, u=v=0, N=0.
+
+  So 0 <= N <= H^2, with N=0 iff H divisible by 3 and balanced.
+
+  The constraint is: (H, N) must be ACHIEVABLE by some tournament.
+  
+  n=5: Achievable (H, Eisenstein_norm) pairs:
+    H=  1: norms = [1, 3]
+    H=  3: norms = [1, 7, 9, 27]
+    H=  5: norms = [1, 3, 4, 7, 12, 13, 21, 25, 37, 75]
+    H=  9: norms = [4, 7, 9, 13, 27, 28, 31, 61, 63, 73, 109]
+    H= 11: norms = [7, 12, 13, 16, 21, 37, 39, 43, 75, 79, 111, 127, 129, 193]
+    H= 13: norms = [7, 12, 13, 25, 28, 31, 48, 49, 52, 57, 91, 93, 97, 147, 151]
+    H= 15: norms = [9, 19, 27, 36, 108, 109, 117, 171, 243]
+
+  H=7 is forbidden: NO (7, N) pair exists for ANY N!
+  This means no partition of 7 into (G0, G1, G2) is achievable.
+
+======================================================================
+DONE — EISENSTEIN NORM OF F-POLYNOMIAL
+======================================================================
