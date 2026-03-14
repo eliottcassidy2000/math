@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71p — 2026-03-14: Hertzsprung, Eight, and Vitali Atoms
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71o
+**Summary of work:** Deep exploration connecting three threads — Hertzsprung's ménage problem, the number 8 (Bott periodicity, octonions, Clifford algebras), and Vitali atoms (measure theory on tournament space) — to tournament theory. 15 parts covering: ménage numbers and HP counts, Tournament HR diagram (score vs H classification), Fano plane / octonion structure at n=3, Vitali measure theory on the cube, Walsh eigenfunctions as heat equation modes, Bott mod-8 periodicity, Hertzsprung forbidden pattern matrix, Vitali cosets and equivalence classes, octonion norm and tournament energy, forbidden pattern decomposition (arc contributions), eightfold way classification, Vitali measure problem (two natural measures), derangement-HP counts, and the HV8 triangle grand synthesis.
+**New contributions:**
+- HYP-1469 through HYP-1475 (7 new hypotheses, all confirmed)
+- Script: hertzsprung_vitali_S71p.py
+- DERANGEMENT FRACTION = D_n/n! EXACTLY (universal identity)
+- sum(H) = n! * 2^{m-n+1} (each perm is HP of exactly 2^{m-n+1} tournaments)
+- TV(mu_H, mu_count) = 1/4 EXACTLY for n=3,4,5
+- Spectral energy exactly 75/25 at n=3,4
+- L^2(Q_m) = spin module of Cl(m) — Bott periodicity governs Walsh structure
+- perm(A) correlates with H (|r|>0.89) but does NOT determine it
+- Tournament HR diagram: 100% main sequence for n≤4, 72.7% at n=5
+- All arc contributions zero by S_n symmetry
+**Unresolved threads:**
+- Why TV = 1/4 exactly? Is this universal for all n?
+- Octonion multiplication table ↔ tournament structure at n=3 — make precise
+- Does mod-8 Clifford type predict qualitative changes in H distribution?
+- Derangement fraction D_n/n! — prove algebraically (should follow from symmetry)
+- Spectral energy 75/25 at n=3,4 — why exactly 3/4 and 1/4?
+
 ## opus-2026-03-14-S71o — 2026-03-14: Category Theory, Möbius Strip, Algorithmic Speedups
 
 **Account:** opus
