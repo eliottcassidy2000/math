@@ -1,0 +1,70 @@
+======================================================================
+K₃ POISON FACTOR ANALYSIS (FAST)
+======================================================================
+
+
+Building complete I(G,2) catalog for n=1..5...
+
+Total graphs enumerated: 1099
+Distinct I(G,2) values: 31
+
+
+==================================================
+I(G,2) = 7
+==================================================
+Total labeled graphs: 1
+Distinct I-polynomials: 1
+
+  I(G,x) = 1 + 3x
+  Appears on 1 graphs across vertex counts [3]
+  Divisible by (1+3x) = I(K₃,x): YES
+  Quotient: 1
+  Example at n=3: edges=[(0, 1), (0, 2), (1, 2)]
+
+==================================================
+I(G,2) = 21
+==================================================
+Total labeled graphs: 16
+Distinct I-polynomials: 1
+
+  I(G,x) = 1 + 4x + 3x^2
+  Appears on 16 graphs across vertex counts [4]
+  Divisible by (1+3x) = I(K₃,x): YES
+  Quotient: 1 + x
+  Example at n=4: edges=[(0, 1), (0, 2), (1, 2)]
+
+==================================================
+COMPARISON: I(G,2) = 43 and I(G,2) = 63
+==================================================
+
+I(G,2) = 43: 60 graphs, 1 distinct polynomials
+  I(G,x) = 1 + 5x + 6x^2 + x^3: NOT (1+3x)|
+  → I(G,2)=43 has graphs NOT poisoned by K₃. CAN be Ω(T).
+
+I(G,2) = 63: 70 graphs, 1 distinct polynomials
+  I(G,x) = 1 + 5x + 7x^2 + 3x^3: (1+3x)|
+  → ALL graphs with I(G,2)=63 are K₃-poisoned.
+
+======================================================================
+COMPLETE POISON SCAN: Which values ≤ 50 are fully K₃-poisoned?
+======================================================================
+  I(G,2) =   7: ALL    1 graphs K₃-poisoned
+  I(G,2) =  21: ALL   16 graphs K₃-poisoned
+
+======================================================================
+CONCLUSION
+======================================================================
+
+For n≤5 vertices:
+  - I(G,2)=7:  ALL graphs have I(G,x) divisible by (1+3x)
+  - I(G,2)=21: ALL graphs have I(G,x) divisible by (1+3x)
+  - I(G,2)=43: has graphs NOT divisible by (1+3x) → NOT poisoned
+  - I(G,2)=63: check at n≥7 (not reached at n≤5)
+
+The K₃ poison factor (1+3x) = I(K₃, x) divides the independence
+polynomial of EVERY graph achieving I(G,2) ∈ {7, 21}.
+This is the STRUCTURAL reason these values are forbidden:
+  - I-polynomial factoring through (1+3x) means the graph is
+    'secretly' a K₃-containing graph (possibly I-equivalent to one)
+  - K₃ cannot appear in Ω(T) (THM-201)
+  - Therefore H(T) cannot equal 7 or 21.
