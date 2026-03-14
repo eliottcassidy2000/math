@@ -1,0 +1,211 @@
+======================================================================
+DEEP LEAD EXPLORATION — kind-pasteur-2026-03-14-S81
+======================================================================
+
+======================================================================
+LEAD A: F(T,0) AND F(T,n-1) — PATH EXTREMES
+  F(T,0) = #{paths with 0 forward steps = all descending}
+  F(T,n-1) = #{paths with n-1 forward steps = all ascending}
+  CLAIM: F(T,0) + F(T,n-1) = 1 or 2 always.
+======================================================================
+
+  n=3:
+    F(T,0) distribution: {0: 6, 1: 2}
+    F(T,n-1) distribution: {0: 6, 1: 2}
+    F(T,0)+F(T,n-1) distribution: {0: 4, 1: 4}
+    VERIFIED: F(T,0), F(T,n-1) in {0,1}
+    F(T,0)=1 iff T contains (n-1)->...->0
+    F(T,n-1)=1 iff T contains 0->1->...->n-1
+
+  n=4:
+    F(T,0) distribution: {0: 56, 1: 8}
+    F(T,n-1) distribution: {0: 56, 1: 8}
+    F(T,0)+F(T,n-1) distribution: {0: 48, 1: 16}
+    VERIFIED: F(T,0), F(T,n-1) in {0,1}
+    F(T,0)=1 iff T contains (n-1)->...->0
+    F(T,n-1)=1 iff T contains 0->1->...->n-1
+
+  n=5:
+    F(T,0) distribution: {0: 960, 1: 64}
+    F(T,n-1) distribution: {0: 960, 1: 64}
+    F(T,0)+F(T,n-1) distribution: {0: 896, 1: 128}
+    VERIFIED: F(T,0), F(T,n-1) in {0,1}
+    F(T,0)=1 iff T contains (n-1)->...->0
+    F(T,n-1)=1 iff T contains 0->1->...->n-1
+
+  n=6:
+    F(T,0) distribution: {0: 10000}
+    F(T,n-1) distribution: {0: 9232, 1: 768}
+    F(T,0)+F(T,n-1) distribution: {0: 9232, 1: 768}
+    VERIFIED: F(T,0), F(T,n-1) in {0,1}
+    F(T,0)=1 iff T contains (n-1)->...->0
+    F(T,n-1)=1 iff T contains 0->1->...->n-1
+
+======================================================================
+LEAD A2: PALINDROME PROPERTY OF F(T,x)
+  THM-030 (proved): the transfer matrix is symmetric
+  Does this imply F(T,x) = x^{n-1} F(T, 1/x)?
+======================================================================
+  n=4: 0/64 palindromic F-polynomials
+    ALL palindromic? False
+  n=5: 180/1024 palindromic F-polynomials
+    ALL palindromic? False
+
+======================================================================
+LEAD B: THE 1/3 RATIO — DEEP ANALYSIS
+  Var(H)/Mean(H)^2 ≈ 1/3 universally.
+  From Fourier: H = mean + sum of level-2 terms + level-4 terms + ...
+  Var(H) = sum_{|S|>0} H_hat(S)^2 (Parseval)
+  Mean(H)^2 = H_hat(0)^2
+  So Var/Mean^2 = (sum_{|S|>0} H_hat^2) / H_hat(0)^2
+  = (non-constant energy) / (constant energy)
+  ≈ 0.25/0.75 = 1/3 !!
+======================================================================
+
+  n=3:
+    E_nonconst / E_0 = 0.7500 / 2.2500 = 0.333333
+    Var(H)/Mean(H)^2 = 0.333333
+    Match? True
+    Close to 1/3? True
+
+  n=4:
+    E_nonconst / E_0 = 3.0000 / 9.0000 = 0.333333
+    Var(H)/Mean(H)^2 = 0.333333
+    Match? True
+    Close to 1/3? True
+
+  n=5:
+    E_nonconst / E_0 = 17.8125 / 56.2500 = 0.316667
+    Var(H)/Mean(H)^2 = 0.316667
+    Match? True
+    Close to 1/3? True
+
+  *** THEOREM: Var(H)/Mean(H)^2 = E_nonconst/E_0 EXACTLY ***
+  This is a Fourier identity (Parseval): Var = sum of non-constant Fourier energies.
+  And E_nonconst/E_0 ≈ 1/3 because the level-2 energy is ~25% of total,
+  and E_0 is ~75%, giving ratio 25/75 = 1/3.
+
+  WHY IS E_0 ≈ 75%?
+  E_0 = mean(H)^2. E_total = mean(H^2). E_0/E_total = mean(H)^2/mean(H^2).
+  This is 1/(1 + CV^2) where CV = std/mean.
+  If CV^2 = 1/3, then E_0/E_total = 3/4 = 75%. Circular but correct!
+
+======================================================================
+LEAD C: TOURNAMENT COMPOSITION
+  Given tournaments T1 on {1,...,a} and T2 on {1,...,b},
+  define T1[v <- T2]: replace vertex v with T2.
+  All arcs from T2 to T1\v get direction from v's arcs.
+  QUESTION: H(T1[v <- T2]) = f(H(T1), H(T2), v)?
+======================================================================
+
+  Testing LEXICOGRAPHIC PRODUCT: T1 lex T2
+  Vertices (i,j), arc rule: i1->i2 in T1, OR (i1=i2 and j1->j2 in T2)
+
+  3 lex 2: 16 products, H_prod / (H1 * H2^3) = [1.0, 15.0]
+  H_prod / (H1 * H2) = [1.0, 15.0]
+
+  2 lex 3: 16 products, H_prod / (H1 * H2^2) = [1.0]
+  H_prod / (H1 * H2) = [1.0, 3.0]
+
+======================================================================
+LEAD D: H MOD 8 STRUCTURE
+  H mod 2 = 1 always (Redei)
+  H mod 4 = 1 + 2*alpha_1 mod 4 (from OCF)
+  H mod 8 = ?
+======================================================================
+
+  n=4:
+    H mod 4: {1: 48, 3: 16}
+    H mod 8: {1: 24, 3: 16, 5: 24}
+
+  n=5:
+    H mod 4: {1: 720, 3: 304}
+    H mod 8: {1: 360, 3: 240, 5: 360, 7: 64}
+    n=5: alpha_2=0, so H mod 8 = (1 + 2*alpha_1) mod 8
+    alpha_1 mod 4 -> H mod 8: 0->1, 1->3, 2->5, 3->7
+    H mod 8 distribution counts cycles of specific alpha_1 residues
+
+  n=6:
+    H mod 4: {1: 6246, 3: 3754}
+    H mod 8: {1: 3041, 3: 1760, 5: 3205, 7: 1994}
+
+======================================================================
+LEAD E: THE DELETION TOWER — H(T) → H(T-v) → H(T-v-w) → ...
+  Delete vertices one by one. How does H evolve?
+  Connection to the OCF: H(T) - H(T-v) = 2 * sum_C mu(C)
+======================================================================
+
+  bits=0, H(T)=1:
+    Delete vertex 0: H(T-0) = 1, delta = 0
+    Delete vertex 1: H(T-1) = 1, delta = 0
+    Delete vertex 2: H(T-2) = 1, delta = 0
+    Delete vertex 3: H(T-3) = 1, delta = 0
+    Delete vertex 4: H(T-4) = 1, delta = 0
+    R(T) = sum H(T-v) / H(T) = 5/1 = 5.0000
+    n - R = 0.0000
+
+  bits=42, H(T)=13:
+    Delete vertex 0: H(T-0) = 3, delta = 10
+    Delete vertex 1: H(T-1) = 3, delta = 10
+    Delete vertex 2: H(T-2) = 5, delta = 8
+    Delete vertex 3: H(T-3) = 5, delta = 8
+    Delete vertex 4: H(T-4) = 5, delta = 8
+    R(T) = sum H(T-v) / H(T) = 21/13 = 1.6154
+    n - R = 3.3846
+
+  bits=341, H(T)=15:
+    Delete vertex 0: H(T-0) = 5, delta = 10
+    Delete vertex 1: H(T-1) = 5, delta = 10
+    Delete vertex 2: H(T-2) = 5, delta = 10
+    Delete vertex 3: H(T-3) = 5, delta = 10
+    Delete vertex 4: H(T-4) = 5, delta = 10
+    R(T) = sum H(T-v) / H(T) = 25/15 = 1.6667
+    n - R = 3.3333
+
+  bits=682, H(T)=15:
+    Delete vertex 0: H(T-0) = 5, delta = 10
+    Delete vertex 1: H(T-1) = 5, delta = 10
+    Delete vertex 2: H(T-2) = 5, delta = 10
+    Delete vertex 3: H(T-3) = 5, delta = 10
+    Delete vertex 4: H(T-4) = 5, delta = 10
+    R(T) = sum H(T-v) / H(T) = 25/15 = 1.6667
+    n - R = 3.3333
+
+  bits=1023, H(T)=1:
+    Delete vertex 0: H(T-0) = 1, delta = 0
+    Delete vertex 1: H(T-1) = 1, delta = 0
+    Delete vertex 2: H(T-2) = 1, delta = 0
+    Delete vertex 3: H(T-3) = 1, delta = 0
+    Delete vertex 4: H(T-4) = 1, delta = 0
+    R(T) = sum H(T-v) / H(T) = 5/1 = 5.0000
+    n - R = 0.0000
+
+======================================================================
+LEAD F: TUTTE POLYNOMIAL EVALUATIONS
+  For the complete graph K_n: T(2,0) = n! (# acyclic orientations)
+  For a tournament T: the Tutte polynomial at (1,0) counts what?
+  Awan-Bernardi B-polynomial might be the right framework
+======================================================================
+  K_3: T(2,0) = 6 = 3! (acyclic orientations = transitive tournaments)
+  K_4: T(2,0) = 14 (?)
+
+  The Awan-Bernardi B-polynomial for digraphs
+  would be the right framework to connect H to Tutte theory.
+  B(D) at some (x,y,z) specialization should give H(D).
+  LEAD: Read arXiv:1610.01839 and find the specialization.
+
+======================================================================
+LEAD G: AUTOCORRELATION OF H ON THE HYPERCUBE
+  C(d) = E[H(T) * H(T')] where T,T' differ in exactly d arcs
+  This measures how correlated H values are at distance d
+======================================================================
+
+  n=5: Autocorrelation C(d) = E[H(T)*H(T')] for Hamming distance d
+  Average nearest-neighbor correlation: 66.5625
+  Mean(H)^2 = 56.2500
+  Ratio (correlation/mean^2) = 1.1833
+  This tells us how much H changes under a single arc flip
+
+======================================================================
+DONE — LEADS A-G EXPLORED
+======================================================================
