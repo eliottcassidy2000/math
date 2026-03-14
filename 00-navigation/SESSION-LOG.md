@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-14-S65 — 2026-03-14: Exponentiation, Cayley-Dickson, Dehn Invariant, Cubic I.P. Transition
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-12-S58
+**Summary of work:**
+Deep exploration of 2^3=8 vs 3^2=9 asymmetry, Cayley-Dickson tower parallels, tournament Dehn invariant D_T = I(omega), Z[omega]/Z[i] evaluations, and the cubic independence polynomial transition at n=9.
+
+**Critical findings:**
+1. **Exponentiation asymmetry 2^3<3^2** maps to tournament thresholds: n=8 (property losses) vs n=9 (cubic I.P. onset)
+2. **Tournament Dehn invariant** D_T = I(omega) in Z[omega] separates 52/75 achievable H values at n=7 (scissors-congruence obstruction)
+3. **Eisenstein norm** N(I(omega)) = a1^2-a1*a2+a2^2-a1-a2+1, never 2 mod 3
+4. **Gaussian evaluation** H = 5 - 4*Re(I(i)) + 2*Im(I(i)), constant 5=2+3
+5. **Phi_3(x) = x^2+x+1 NEVER achievable** as I(x) — a1=a2 impossible (all pairs disjoint contradicts a1>=a2+1)
+6. **Cubic I.P. transition at n=9=3^2**: 3 disjoint 3-cycles need 9 vertices. I.P. degree d requires n>=3d (arithmetic sequence 3,6,9,12,...)
+7. **H=7 PERMANENTLY FORBIDDEN** for all n: a1+2*a2=3, too small for any higher coefficient
+8. **H=21 PERMANENTLY FORBIDDEN** for all n: a3>=1 forces a1>=3, a2>=3 giving H>=27; without a3, quadratic case already proved impossible
+9. **Cayley-Dickson parallel**: property losses at dim 2^k (commutativity@4, associativity@8, alternativity@16) mirror tournament property losses at n=2^k
+10. **H mod 8** determines (a1 mod 2, a2 mod 2); v_2(H-1) has geometric decay distribution
+
+**New scripts:** exponentiation_cayley_dickson.py, hilbert3_dehn_tournament.py, z_omega_tower.py, cubic_transition_fast.py
+**New hypotheses:** HYP-1009 through HYP-1020 (12 hypotheses; numbering conflicts with opus agent)
+**Unresolved:** Whether H=63,107,119,149 are permanently forbidden; HYP numbering conflict with opus; alpha_1>=alpha_2 conjecture
+
+---
+
 ## opus-2026-03-14-S75 — 2026-03-14: Keys to the Universe — Recurrences, Simplex Packing, Hilbert's 3rd Problem
 
 **Account:** opus
