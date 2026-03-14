@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71l — 2026-03-14: Eisenstein-Fibonacci-Tribonacci Synthesis
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71l (context continuation)
+**What was done:**
+Deep exploration of the Eisenstein integer structure of the F-polynomial, connecting Fibonacci sequences, tribonacci constant, Baer subplanes, and simplex-cuboid nesting.
+
+- **Eulerian-Worpitzky**: E[F_k] = A(n,k)/2^{n-1} verified. |F(T,ω)|² always integer (Loeschian).
+- **Eisenstein F-polynomial**: F(T,ω) lives in Z[ω]. |F(T,ω)|² = Eisenstein/Loeschian norm. Complement T→T^op = (a,b)→(b,a) reflection. Fiber analysis by H value.
+- **Cassini-Eisenstein identity**: N(F_n, F_{n+1}) = F_{2n+1} - F_n·F_{n+1}. Ratios → φ².
+- **Phi_3(tau) = tau^3**: Tribonacci constant is fixed point of Phi_3(x)^{1/3}. Connects cyclotomic structure to tribonacci.
+- **Dual cyclotomic**: L(1,2) = 7 = Φ₃(2) and N(1,2) = 3 = Φ₆(2) from same pair (1,2).
+- **Simplex-cuboid nesting**: Corner count 2^n-(n+1) = nonlinear Walsh monomials. Hadamard dimensions n=2^k-1. Level-2 captures >90% of variance.
+- **Tribonacci base tournament**: tau^k = T_k·τ² + T_{k-1}·τ + T_{k-2}. Triangle of functors F_2/F_τ/F_ω. Forbidden 7·3^k becomes τ^{k+3}. τ→ω kills Φ₃ component.
+- **H=63 confirmed achievable at n=8** (correcting S89): Monte Carlo 100K finds 28 instances. Only {7,21} permanently forbidden.
+- **New hypotheses**: HYP-1413 to HYP-1419 (Eisenstein, Fibonacci, tribonacci connections).
+
+**New contributions:** HYP-1413–1419, scripts: eulerian_worpitzky_H.py, eisenstein_F_polynomial.py, fibonacci_eisenstein_deep.py, simplex_cuboid_eisenstein.py, tribonacci_base_tournament.py
+**Unresolved threads:** Prove |F(T,ω)|² determines H mod something; explore the tau→omega natural transformation more; verify Cassini-Eisenstein for Lucas/tribonacci analogues; complete the categorical framework.
+
 ## kind-pasteur-2026-03-14-S106 — 2026-03-14: Grand Energy Formula + Body of Mathematics + Tribonacci
 
 **Account:** kind-pasteur
