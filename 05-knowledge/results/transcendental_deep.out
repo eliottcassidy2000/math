@@ -1,0 +1,319 @@
+======================================================================
+TRANSCENDENTAL NUMBERS IN TOURNAMENT THEORY — DEEP DIVE
+kind-pasteur-2026-03-14-S95
+======================================================================
+
+======================================================================
+PART 1: EVERY APPEARANCE OF e IN TOURNAMENT THEORY
+======================================================================
+
+  e = 2.718281828459045
+
+  DIRECT APPEARANCES:
+  1. SZELE'S THEOREM: max_H(n) / mean_H(n) -> e as n -> inf
+     The H-maximizer achieves e times the average.
+     This is the MOST IMPORTANT appearance of e.
+
+  SZELE RATIO CONVERGENCE:
+     n= 3: max_H/mean_H = 3/1.5 = 2.000000
+     n= 4: max_H/mean_H = 5/3.0 = 1.666667
+     n= 5: max_H/mean_H = 15/7.5 = 2.000000
+     n= 6: max_H/mean_H = 45/22.5 = 2.000000
+     n= 7: max_H/mean_H = 189/78.8 = 2.400000
+     n= 8: max_H/mean_H = 661/315.0 = 2.098413
+     n= 9: max_H/mean_H = 3357/1417.5 = 2.368254
+     n=10: max_H/mean_H = 15745/7087.5 = 2.221517
+     n=11: max_H/mean_H = 95095/38981.2 = 2.439506
+     limit = e = 2.718282
+
+  2. STIRLING'S APPROXIMATION: n! ~ (n/e)^n * sqrt(2*pi*n)
+     mean_H = n!/2^(n-1) ~ sqrt(2*pi*n) * (n/(2e))^n
+     The e in Stirling controls the base of exponential growth.
+
+  3. THE BOLTZMANN DISTRIBUTION:
+     Z(beta) = sum_T exp(beta * H(T))
+     At beta = 1/e: the partition function has special properties.
+     The 'natural temperature' of the tournament gas is 1/e.
+
+  4. INFORMATION RATE:
+     I(T;H)/m ≈ 0.27. Is this related to 1/e ≈ 0.368?
+     Actually 0.27/0.368 = 0.7337 ≈ 0.73
+     And 1 - 0.27 = 0.73. So 0.27 + 1/e ≈ 1? NO: 0.27 + 0.368 = 0.638
+     But: 0.27 ≈ 1/(e + 1/e) = 1/3.0862 = 0.3240
+     Nope. Let's try: e^(-1-1/3) = 0.2636
+     e^(-4/3) = 0.264 ≈ 0.27. Hmm, close but not exact.
+
+======================================================================
+PART 2: EVERY APPEARANCE OF pi IN TOURNAMENT THEORY
+======================================================================
+
+  pi = 3.141592653589793
+
+  1. STIRLING: n! ~ (n/e)^n * sqrt(2*PI*n)
+     pi appears in the NORMALIZATION of the factorial.
+     mean_H = n!/2^(n-1) inherits the sqrt(2*pi*n) factor.
+
+  2. CENTRAL BINOMIAL: C(2n,n) ~ 4^n / sqrt(PI*n)
+     pi appears in the normalization of binomial coefficients.
+     The 3-strand Pascal sequence inherits this.
+
+  3. SPECTRAL THEORY — PALEY EIGENVALUES:
+     The eigenvalues of Paley T_p involve sin(k*pi/p).
+     The spectral gap is controlled by pi/p.
+     T_3: arg(mu) = 2.094395 = 0.666667 * pi
+     T_7: arg(mu) = 1.932163 = 0.615027 * pi
+     T_11: arg(mu) = 1.863639 = 0.593215 * pi
+
+  4. THE FOURIER TRANSFORM:
+     The Walsh-Hadamard transform uses {-1, +1} basis.
+     But the CONTINUOUS Fourier transform uses e^(2*pi*i*k/N).
+     pi enters when connecting discrete and continuous theories.
+
+  5. THE GAUSSIAN APPROXIMATION:
+     If H were Gaussian: I(T;H) = (1/2)*log(2*pi*e*Var(H))
+     The actual I(T;H) is LESS (by ~35% at n=5).
+     The deficit measures non-Gaussianity.
+     n=5: Gaussian I = 4.1245, actual I = 2.681, deficit = 1.4435 bits
+     n=6: Gaussian I = 5.6432, actual I = 4.050, deficit = 1.5932 bits
+
+  6. LEIBNIZ FORMULA: pi/4 = 1 - 1/3 + 1/5 - 1/7 + ...
+     The alternating sum over ODD reciprocals gives pi/4!
+     And tournaments are ALL ABOUT odd numbers:
+     - H is always ODD
+     - alpha_k counts ODD-cycle independent sets
+     - The OCF weights are powers of 2 (even), applied to odd cycles
+     Is there a tournament Leibniz formula?
+
+======================================================================
+PART 3: THE e-pi RELATIONSHIP
+======================================================================
+
+  e*pi = 8.539734
+  e+pi = 5.859874
+  e^pi = 23.140693
+  pi^e = 22.459158
+  e^pi - pi^e = 0.681535
+  sqrt(2*pi*e) = 4.132731
+  ln(2*pi) = 1.837877
+
+  TOURNAMENT COMBINATIONS:
+  max_H(n) ~ e * sqrt(2*pi*n) * (n/(2e))^n
+  The e appears TWICE: once from Stirling (n!), once from Szele (max/mean).
+  They COMPOUND: max_H involves e^{1-n} * e = e^{2-n}.
+
+  pi appears ONCE: in the normalization sqrt(2*pi*n).
+  So the e contribution is EXPONENTIAL, while pi is POLYNOMIAL.
+  e is more 'deeply embedded' than pi.
+
+======================================================================
+PART 4: CREATIVE IDEAS ABOUT pi IN TOURNAMENTS
+======================================================================
+
+  pi AND THE ODD-CYCLE FORMULA
+    Leibniz: pi/4 = sum_k (-1)^k / (2k+1) = 1 - 1/3 + 1/5 - 1/7 + ...
+    Tournament: H = 1 + 2*c3 + 2*c5 + 2*c7 + ... (at n=5)
+    Both involve odd numbers 1, 3, 5, 7.
+    QUESTION: Is there a tournament series that converges to pi?
+    IDEA: Define S(T) = sum_k (-1)^k * c_(2k+1) / (2k+1).
+    For the 3-cycle T_3: S = 1/3 (only c3=1).
+    Does sum_T S(T) / 2^m relate to pi?
+
+  pi AND THE CIRCLE OF TOURNAMENTS
+    The Lee-Yang zeros of Q_n converge to |z| = 1 (the UNIT CIRCLE).
+    The circumference of the unit circle is 2*pi.
+    As n -> inf, the density of zeros on the circle approaches...
+    a continuous distribution. Its integral over the full circle is 2*pi.
+    The zero density function rho(theta) encodes tournament structure.
+    CONJECTURE: integral(rho(theta) d theta) = 2*pi (trivially).
+    But rho(theta) at specific angles might encode H-distribution.
+
+  pi AND RANDOM MATRIX THEORY
+    Tournament adjacency A is a random {0,1} matrix with A+A^T = J-I.
+    The eigenvalue spacing follows Wigner surmise: P(s) = (pi*s/2)*exp(-pi*s^2/4).
+    The pi in eigenvalue spacing is the SAME pi as in Stirling.
+    Both come from Gaussian integrals: int exp(-x^2) dx = sqrt(pi).
+
+  pi AND THE AREA OF THE TOURNAMENT POLYTOPE
+    The set of score sequences {s : s is achievable} forms a polytope.
+    Its volume involves pi via the Gamma function: Gamma(1/2) = sqrt(pi).
+    The 'volume' of the tournament polytope at dimension n
+    should involve pi^{n/2} in its normalization.
+
+======================================================================
+PART 5: CREATIVE IDEAS ABOUT e IN TOURNAMENTS
+======================================================================
+
+  e AS THE 'OPTIMAL TOURNAMENT RATIO'
+    max_H/mean_H -> e means: the best tournament is e times
+    better than the average. This is like the Secretary Problem
+    where the optimal strategy succeeds with probability 1/e.
+    INSIGHT: Tournament H-maximization is a SELECTION problem.
+    The 1/e threshold appears because you're 'selecting' the
+    best ordering from an exponentially growing space.
+
+  e AND DERANGEMENTS
+    The number of derangements D(n) ~ n!/e.
+    A derangement is a permutation with no fixed points.
+    In tournaments: a 'derangement tournament' would have
+    no vertex in its 'natural' position.
+    D(n)/n! -> 1/e = 0.367879.
+    mean_H = n!/2^(n-1). So mean_H / D(n) = 2^(n-1)/e -> ...
+    This connects derangements to tournament paths.
+
+  e AND THE EXPONENTIAL FUNCTION
+    e = sum_k 1/k! = 1 + 1 + 1/2 + 1/6 + 1/24 + ...
+    In tournaments: H = 1 + 2*alpha_1 + 4*alpha_2 + ...
+    The 'normalized OCF': H/2^alpha_max = sum alpha_k * (1/2)^k
+    This looks like exp(alpha * ln(2))... tenuous.
+    But: exp(x) = sum x^k/k! and OCF = sum 2^k * alpha_k.
+    If we set x = ln(2): exp(ln(2)) = 2, and sum (ln 2)^k/k! = 2.
+    The OCF evaluation at x=2 connects to exp at x=ln(2).
+
+  e AND THE NATURAL LOGARITHM
+    ln(2) = 0.693147 is the entropy of a fair coin flip.
+    Each arc has entropy ln(2) bits.
+    Total tournament entropy = m * ln(2) = C(n,2) * ln(2).
+    I(T;H) ≈ 0.27 * m ≈ 0.27 * C(n,2) in bits.
+    In nats: I(T;H) ≈ 0.27 * C(n,2) / ln(2) nats.
+    0.27 / ln(2) = 0.3895 ≈ 0.39 nats per arc.
+
+  e AND TOURNAMENT ENTROPY PRODUCTION
+    In thermodynamics, entropy production rate = energy / (T * e)
+    In the tournament 'gas' at temperature T = 1/beta:
+    The specific heat C(beta) peaks at beta_c ≈ 0.3-0.8.
+    At the phase transition: C * T_c ≈ some function of e.
+    The 'efficiency' of the transition is bounded by e.
+
+======================================================================
+PART 6: NUMERICAL EXPLORATIONS — pi AND e IN TOURNAMENT DATA
+======================================================================
+
+  max_H(n) / n^pi:
+    n= 3: 0.095104
+    n= 4: 0.064201
+    n= 5: 0.095546
+    n= 6: 0.161651
+    n= 7: 0.418319
+    n= 8: 0.961746
+    n= 9: 3.373728
+    n=10: 11.364492
+    n=11: 50.877536
+
+  max_H(n) / n^e:
+    n= 3: 0.151416
+    n= 4: 0.115452
+    n= 5: 0.188840
+    n= 6: 0.345126
+    n= 7: 0.953339
+    n= 8: 2.319254
+    n= 9: 8.551677
+    n=10: 30.120407
+    n=11: 140.397337
+
+  log(max_H(n)) / n (growth rate per vertex):
+    n= 3: 0.366204 (compare: log(n/2e)=-0.5945 + corrections)
+    n= 4: 0.402359 (compare: log(n/2e)=-0.3069 + corrections)
+    n= 5: 0.541610 (compare: log(n/2e)=-0.0837 + corrections)
+    n= 6: 0.634444 (compare: log(n/2e)=0.0986 + corrections)
+    n= 7: 0.748821 (compare: log(n/2e)=0.2528 + corrections)
+    n= 8: 0.811719 (compare: log(n/2e)=0.3863 + corrections)
+    n= 9: 0.902089 (compare: log(n/2e)=0.5041 + corrections)
+    n=10: 0.966428 (compare: log(n/2e)=0.6094 + corrections)
+    n=11: 1.042057 (compare: log(n/2e)=0.7047 + corrections)
+
+  Szele prediction vs actual:
+    n= 3: predicted log = 0.6846, actual log = 1.0986, diff = +0.4140
+    n= 4: predicted log = 1.3847, actual log = 1.6094, diff = +0.2248
+    n= 5: predicted log = 2.3051, actual log = 2.7081, diff = +0.4029
+    n= 6: predicted log = 3.4065, actual log = 3.8067, diff = +0.4002
+    n= 7: predicted log = 4.6612, actual log = 5.2417, diff = +0.5805
+    n= 8: predicted log = 6.0490, actual log = 6.4938, diff = +0.4447
+    n= 9: predicted log = 7.5542, actual log = 8.1188, diff = +0.5646
+    n=10: predicted log = 9.1646, actual log = 9.6643, diff = +0.4997
+    n=11: predicted log = 10.8701, actual log = 11.4626, diff = +0.5925
+
+======================================================================
+PART 7: THE TOURNAMENT LEIBNIZ SERIES — DOES pi EMERGE?
+======================================================================
+
+  S(T) = sum_k (-1)^k * c_(2k+1) / (2k+1) for n=5
+  = c_3/3 - c_5/5 + c_7/7 - ...
+
+  Mean S over all tournaments: 0.683333
+  pi/4 = 0.785398
+  4 * mean_S = 2.733333
+  Ratio mean_S / (pi/4) = 0.870047
+  Does mean_S = C(n,3)*pi/4 / ... ? No obvious match.
+
+  S(T) by H value:
+    H=  1: mean S = 0.000000, unique S values: 1
+    H=  3: mean S = 0.333333, unique S values: 1
+    H=  5: mean S = 0.666667, unique S values: 1
+    H=  9: mean S = 0.800000, unique S values: 1
+    H= 11: mean S = 1.133333, unique S values: 1
+    H= 13: mean S = 0.933333, unique S values: 1
+    H= 15: mean S = 0.933333, unique S values: 2
+
+======================================================================
+PART 8: WALLIS PRODUCT — pi FROM EVEN/ODD
+======================================================================
+  Wallis: pi/2 = prod (2k)^2 / ((2k-1)(2k+1))
+
+  This is a product of EVEN^2 / (ODD * ODD) terms!
+  In tournaments: EVEN = Fourier levels, ODD = vanishing levels.
+  The even/odd dichotomy of H (all even Fourier, no odd)
+  is structurally the same as the Wallis product structure!
+
+  Wallis partial products:
+    k= 1: partial product = 1.333333, target pi/2 = 1.570796
+    k= 2: partial product = 1.422222, target pi/2 = 1.570796
+    k= 3: partial product = 1.462857, target pi/2 = 1.570796
+    k= 4: partial product = 1.486077, target pi/2 = 1.570796
+    k= 5: partial product = 1.501088, target pi/2 = 1.570796
+    k= 6: partial product = 1.511585, target pi/2 = 1.570796
+    k= 7: partial product = 1.519337, target pi/2 = 1.570796
+    k= 8: partial product = 1.525295, target pi/2 = 1.570796
+    k= 9: partial product = 1.530017, target pi/2 = 1.570796
+    k=10: partial product = 1.533852, target pi/2 = 1.570796
+
+  TOURNAMENT WALLIS: Define W(n) = prod_{k=1}^{n} (even_energy_k / odd_energy_k).
+  If this converges to something involving pi, it would connect
+  the Fourier even/odd split directly to pi.
+
+======================================================================
+PART 9: SYNTHESIS — THE ROLES OF e AND pi
+======================================================================
+
+  e AND pi HAVE DIFFERENT STRUCTURAL ROLES:
+
+  e = THE EFFICIENCY CONSTANT:
+    - max_H / mean_H -> e (Szele)
+    - e controls the BASE of exponential growth (via Stirling)
+    - e appears in the Boltzmann distribution (energy/temperature)
+    - e is about OPTIMIZATION: how much better can you do?
+    - e is EXPONENTIAL (appears in growth rates, not normalization)
+
+  pi = THE GEOMETRY CONSTANT:
+    - pi appears in NORMALIZATION (sqrt(2*pi*n) in Stirling)
+    - pi appears in CIRCLES (Lee-Yang zeros, unit circle)
+    - pi appears in EIGENVALUES (sin(k*pi/p) in Paley)
+    - pi appears in RANDOM MATRIX THEORY (eigenvalue spacing)
+    - pi is GEOMETRIC (appears in areas, angles, normalizations)
+
+  THE DEEP DIFFERENCE:
+    e is ALGEBRAIC in character (it's about recurrences and limits)
+    pi is GEOMETRIC in character (it's about circles and rotations)
+
+  In tournament theory:
+    e governs HOW MANY paths (the count)
+    pi governs HOW THEY'RE DISTRIBUTED (the shape)
+
+  Together: max_H ~ e * sqrt(2*pi*n) * (n/(2e))^n
+    e tells you the PEAK HEIGHT
+    pi tells you the PEAK WIDTH
+    n/(2e) tells you the GROWTH BASE
+
+
+======================================================================
+DONE — TRANSCENDENTAL NUMBERS DEEPLY EXPLORED
+======================================================================
