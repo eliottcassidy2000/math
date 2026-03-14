@@ -1,0 +1,303 @@
+======================================================================
+  α₁ PARITY ANALYSIS
+  α₁ = total # directed odd cycles in Ω(T)
+======================================================================
+
+======================================================================
+  n = 5: 1024 tournaments, 10 edges
+======================================================================
+
+α₁ parity: even=720, odd=304 (of 1024)
+
+Verifying H mod 4 = 1 + 2*(α₁ mod 2)...
+  VERIFIED: H mod 4 = 1 + 2*(α₁ mod 2) for all 1024 tournaments
+
+--- α₁ parity by score sequence ---
+  (0, 1, 2, 3, 4): 120 tourn, even=120, odd=0 [ALL EVEN]
+  (0, 1, 3, 3, 3): 40 tourn, even=0, odd=40 [ALL ODD]
+  (0, 2, 2, 2, 4): 40 tourn, even=0, odd=40 [ALL ODD]
+  (0, 2, 2, 3, 3): 120 tourn, even=120, odd=0 [ALL EVEN]
+  (1, 1, 1, 3, 4): 40 tourn, even=0, odd=40 [ALL ODD]
+  (1, 1, 2, 2, 4): 120 tourn, even=120, odd=0 [ALL EVEN]
+  (1, 1, 2, 3, 3): 240 tourn, even=240, odd=0 [ALL EVEN]
+  (1, 2, 2, 2, 3): 280 tourn, even=120, odd=160 [BOTH]
+  (2, 2, 2, 2, 2): 24 tourn, even=0, odd=24 [ALL ODD]
+
+--- α₁ parity by t₃ ---
+  t₃=0: 120 tourn, even=120, odd=0 [ALL EVEN]
+  t₃=1: 120 tourn, even=0, odd=120 [ALL ODD]
+  t₃=2: 240 tourn, even=240, odd=0 [ALL EVEN]
+  t₃=3: 240 tourn, even=240, odd=0 [ALL EVEN]
+  t₃=4: 280 tourn, even=120, odd=160 [BOTH]
+  t₃=5: 24 tourn, even=0, odd=24 [ALL ODD]
+
+--- Decomposition: α₁ = t₃ + d₅ ---
+--- d₅ parity analysis ---
+  t₃=0: d₅ even=120, d₅ odd=0
+  t₃=1: d₅ even=120, d₅ odd=0
+  t₃=2: d₅ even=240, d₅ odd=0
+  t₃=3: d₅ even=0, d₅ odd=240
+  t₃=4: d₅ even=120, d₅ odd=160
+  t₃=5: d₅ even=24, d₅ odd=0
+
+--- Does t₃ mod 2 determine α₁ mod 2? ---
+  t₃≡0 mod 2: α₁≡t₃ (mod 2) in 480, α₁≢t₃ in 160
+  t₃≡1 mod 2: α₁≡t₃ (mod 2) in 144, α₁≢t₃ in 240
+  => NO. Match=624, Mismatch=400
+
+--- Is d₅ always even? ---
+  d₅ odd in 400/1024 tournaments
+  => NO. d₅ can be odd.
+    bits=8: t₃=3, d₅=1, α₁=4
+
+--- Self-complementary tournament analysis ---
+  704 self-complementary tournaments found
+  α₁ parity among SC: even=480, odd=224
+    bits=0: ss=(0, 1, 2, 3, 4), t₃=0, d₅=0, α₁=0, α₁%2=0
+    bits=1: ss=(0, 1, 2, 3, 4), t₃=0, d₅=0, α₁=0, α₁%2=0
+    bits=3: ss=(0, 1, 2, 3, 4), t₃=0, d₅=0, α₁=0, α₁%2=0
+    bits=5: ss=(0, 2, 2, 2, 4), t₃=1, d₅=0, α₁=1, α₁%2=1
+    bits=7: ss=(0, 1, 2, 3, 4), t₃=0, d₅=0, α₁=0, α₁%2=0
+    bits=8: ss=(1, 1, 2, 3, 3), t₃=3, d₅=1, α₁=4, α₁%2=0
+    bits=10: ss=(1, 1, 2, 3, 3), t₃=3, d₅=1, α₁=4, α₁%2=0
+    bits=12: ss=(1, 2, 2, 2, 3), t₃=4, d₅=1, α₁=5, α₁%2=1
+    bits=14: ss=(1, 1, 2, 3, 3), t₃=3, d₅=1, α₁=4, α₁%2=0
+    bits=15: ss=(0, 1, 2, 3, 4), t₃=0, d₅=0, α₁=0, α₁%2=0
+
+--- (t₃, d₅) joint distribution ---
+  (t₃=0, d₅=0): 120 tourn, α₁=0, α₁%2=0
+  (t₃=1, d₅=0): 120 tourn, α₁=1, α₁%2=1
+  (t₃=2, d₅=0): 240 tourn, α₁=2, α₁%2=0
+  (t₃=3, d₅=1): 240 tourn, α₁=4, α₁%2=0
+  (t₃=4, d₅=1): 120 tourn, α₁=5, α₁%2=1
+  (t₃=4, d₅=2): 120 tourn, α₁=6, α₁%2=0
+  (t₃=4, d₅=3): 40 tourn, α₁=7, α₁%2=1
+  (t₃=5, d₅=2): 24 tourn, α₁=7, α₁%2=1
+
+--- d₅ mod 2 by score sequence ---
+  (0, 1, 2, 3, 4): d₅ even=120, d₅ odd=0 [ALL EVEN]
+  (0, 1, 3, 3, 3): d₅ even=40, d₅ odd=0 [ALL EVEN]
+  (0, 2, 2, 2, 4): d₅ even=40, d₅ odd=0 [ALL EVEN]
+  (0, 2, 2, 3, 3): d₅ even=120, d₅ odd=0 [ALL EVEN]
+  (1, 1, 1, 3, 4): d₅ even=40, d₅ odd=0 [ALL EVEN]
+  (1, 1, 2, 2, 4): d₅ even=120, d₅ odd=0 [ALL EVEN]
+  (1, 1, 2, 3, 3): d₅ even=0, d₅ odd=240 [ALL ODD]
+  (1, 2, 2, 2, 3): d₅ even=120, d₅ odd=160 [BOTH]
+  (2, 2, 2, 2, 2): d₅ even=24, d₅ odd=0 [ALL EVEN]
+
+--- Exploring d₅ mod 2 formula ---
+  bits=0: t₃=0, trans=10, d₅=0, d₅%2=0
+  bits=1: t₃=0, trans=10, d₅=0, d₅%2=0
+  bits=2: t₃=1, trans=9, d₅=0, d₅%2=0
+  bits=3: t₃=0, trans=10, d₅=0, d₅%2=0
+  bits=4: t₃=2, trans=8, d₅=0, d₅%2=0
+
+--- d₅ mod 2 as function of t₃ ---
+  t₃=0: d₅ mod 2 = 0 (DETERMINED)
+  t₃=1: d₅ mod 2 = 0 (DETERMINED)
+  t₃=2: d₅ mod 2 = 0 (DETERMINED)
+  t₃=3: d₅ mod 2 = 1 (DETERMINED)
+  t₃=4: d₅ mod 2 ∈ {0, 1} (NOT determined by t₃ alone)
+  t₃=5: d₅ mod 2 = 0 (DETERMINED)
+
+--- Trying degree-based formulas for d₅ mod 2 ---
+  d₅ ≡ s2 (mod 2): NO
+  d₅ ≡ sum_deg_sq (mod 2): NO
+  d₅ ≡ sum_deg_cube (mod 2): NO
+
+--- n=5 specific: d₅ = directed Hamiltonian cycles (canonicalized) ---
+  d₅ = # directed HCs starting at vertex 0
+    bits=0: d₅=0, HC(start=0)=0, match=True
+    bits=1: d₅=0, HC(start=0)=0, match=True
+    bits=2: d₅=0, HC(start=0)=0, match=True
+    bits=3: d₅=0, HC(start=0)=0, match=True
+    bits=4: d₅=0, HC(start=0)=0, match=True
+
+--- H mod 4 distribution ---
+  H ≡ 1 (mod 4): 720 tournaments
+  H ≡ 3 (mod 4): 304 tournaments
+
+======================================================================
+  SUMMARY for n=5
+======================================================================
+  α₁ even: 720/1024 (70.3%)
+  α₁ odd:  304/1024 (29.7%)
+  d₅ always even: False
+
+
+
+######################################################################
+# n=6 analysis (this may take a few minutes)
+######################################################################
+
+======================================================================
+  n = 6: 32768 tournaments, 15 edges
+======================================================================
+
+α₁ parity: even=20480, odd=12288 (of 32768)
+
+Verifying H mod 4 = 1 + 2*(α₁ mod 2)...
+  VERIFIED: H mod 4 = 1 + 2*(α₁ mod 2) for all 32768 tournaments
+
+--- α₁ parity by score sequence ---
+  (0, 1, 2, 3, 4, 5): 720 tourn, even=720, odd=0 [ALL EVEN]
+  (0, 1, 2, 4, 4, 4): 240 tourn, even=0, odd=240 [ALL ODD]
+  (0, 1, 3, 3, 3, 5): 240 tourn, even=0, odd=240 [ALL ODD]
+  (0, 1, 3, 3, 4, 4): 720 tourn, even=720, odd=0 [ALL EVEN]
+  (0, 2, 2, 2, 4, 5): 240 tourn, even=0, odd=240 [ALL ODD]
+  (0, 2, 2, 3, 3, 5): 720 tourn, even=720, odd=0 [ALL EVEN]
+  (0, 2, 2, 3, 4, 4): 1440 tourn, even=1440, odd=0 [ALL EVEN]
+  (0, 2, 3, 3, 3, 4): 1680 tourn, even=720, odd=960 [BOTH]
+  (0, 3, 3, 3, 3, 3): 144 tourn, even=0, odd=144 [ALL ODD]
+  (1, 1, 1, 3, 4, 5): 240 tourn, even=0, odd=240 [ALL ODD]
+  (1, 1, 1, 4, 4, 4): 80 tourn, even=80, odd=0 [ALL EVEN]
+  (1, 1, 2, 2, 4, 5): 720 tourn, even=720, odd=0 [ALL EVEN]
+  (1, 1, 2, 3, 3, 5): 1440 tourn, even=1440, odd=0 [ALL EVEN]
+  (1, 1, 2, 3, 4, 4): 2880 tourn, even=1440, odd=1440 [BOTH]
+  (1, 1, 3, 3, 3, 4): 1680 tourn, even=0, odd=1680 [ALL ODD]
+  (1, 2, 2, 2, 3, 5): 1680 tourn, even=720, odd=960 [BOTH]
+  (1, 2, 2, 2, 4, 4): 1680 tourn, even=0, odd=1680 [ALL ODD]
+  (1, 2, 2, 3, 3, 4): 8640 tourn, even=5760, odd=2880 [BOTH]
+  (1, 2, 3, 3, 3, 3): 2400 tourn, even=2400, odd=0 [ALL EVEN]
+  (2, 2, 2, 2, 2, 5): 144 tourn, even=0, odd=144 [ALL ODD]
+  (2, 2, 2, 2, 3, 4): 2400 tourn, even=2400, odd=0 [ALL EVEN]
+  (2, 2, 2, 3, 3, 3): 2640 tourn, even=1200, odd=1440 [BOTH]
+
+--- α₁ parity by t₃ ---
+  t₃=0: 720 tourn, even=720, odd=0 [ALL EVEN]
+  t₃=1: 960 tourn, even=0, odd=960 [ALL ODD]
+  t₃=2: 2240 tourn, even=2240, odd=0 [ALL EVEN]
+  t₃=3: 2880 tourn, even=2880, odd=0 [ALL EVEN]
+  t₃=4: 6240 tourn, even=2880, odd=3360 [BOTH]
+  t₃=5: 3648 tourn, even=0, odd=3648 [ALL ODD]
+  t₃=6: 8640 tourn, even=5760, odd=2880 [BOTH]
+  t₃=7: 4800 tourn, even=4800, odd=0 [ALL EVEN]
+  t₃=8: 2640 tourn, even=1200, odd=1440 [BOTH]
+
+--- Decomposition: α₁ = t₃ + d₅ ---
+--- d₅ parity analysis ---
+  t₃=0: d₅ even=720, d₅ odd=0
+  t₃=1: d₅ even=960, d₅ odd=0
+  t₃=2: d₅ even=2240, d₅ odd=0
+  t₃=3: d₅ even=0, d₅ odd=2880
+  t₃=4: d₅ even=2880, d₅ odd=3360
+  t₃=5: d₅ even=3648, d₅ odd=0
+  t₃=6: d₅ even=5760, d₅ odd=2880
+  t₃=7: d₅ even=0, d₅ odd=4800
+  t₃=8: d₅ even=1200, d₅ odd=1440
+
+--- Does t₃ mod 2 determine α₁ mod 2? ---
+  t₃≡0 mod 2: α₁≡t₃ (mod 2) in 12800, α₁≢t₃ in 7680
+  t₃≡1 mod 2: α₁≡t₃ (mod 2) in 4608, α₁≢t₃ in 7680
+  => NO. Match=17408, Mismatch=15360
+
+--- Is d₅ always even? ---
+  d₅ odd in 15360/32768 tournaments
+  => NO. d₅ can be odd.
+    bits=8: t₃=3, d₅=1, α₁=4
+
+--- (t₃, d₅) joint distribution ---
+  (t₃=0, d₅=0): 720 tourn, α₁=0, α₁%2=0
+  (t₃=1, d₅=0): 960 tourn, α₁=1, α₁%2=1
+  (t₃=2, d₅=0): 2240 tourn, α₁=2, α₁%2=0
+  (t₃=3, d₅=1): 2880 tourn, α₁=4, α₁%2=0
+  (t₃=4, d₅=1): 1440 tourn, α₁=5, α₁%2=1
+  (t₃=4, d₅=2): 2160 tourn, α₁=6, α₁%2=0
+  (t₃=4, d₅=3): 1920 tourn, α₁=7, α₁%2=1
+  (t₃=4, d₅=4): 720 tourn, α₁=8, α₁%2=0
+  (t₃=5, d₅=2): 288 tourn, α₁=7, α₁%2=1
+  (t₃=5, d₅=4): 2880 tourn, α₁=9, α₁%2=1
+  (t₃=5, d₅=6): 480 tourn, α₁=11, α₁%2=1
+  (t₃=6, d₅=4): 720 tourn, α₁=10, α₁%2=0
+  (t₃=6, d₅=5): 1440 tourn, α₁=11, α₁%2=1
+  (t₃=6, d₅=6): 4320 tourn, α₁=12, α₁%2=0
+  (t₃=6, d₅=7): 1440 tourn, α₁=13, α₁%2=1
+  (t₃=6, d₅=8): 720 tourn, α₁=14, α₁%2=0
+  (t₃=7, d₅=7): 2880 tourn, α₁=14, α₁%2=0
+  (t₃=7, d₅=9): 1920 tourn, α₁=16, α₁%2=0
+  (t₃=8, d₅=6): 240 tourn, α₁=14, α₁%2=0
+  (t₃=8, d₅=8): 720 tourn, α₁=16, α₁%2=0
+  (t₃=8, d₅=11): 1440 tourn, α₁=19, α₁%2=1
+  (t₃=8, d₅=12): 240 tourn, α₁=20, α₁%2=0
+
+--- d₅ mod 2 by score sequence ---
+  (0, 1, 2, 3, 4, 5): d₅ even=720, d₅ odd=0 [ALL EVEN]
+  (0, 1, 2, 4, 4, 4): d₅ even=240, d₅ odd=0 [ALL EVEN]
+  (0, 1, 3, 3, 3, 5): d₅ even=240, d₅ odd=0 [ALL EVEN]
+  (0, 1, 3, 3, 4, 4): d₅ even=720, d₅ odd=0 [ALL EVEN]
+  (0, 2, 2, 2, 4, 5): d₅ even=240, d₅ odd=0 [ALL EVEN]
+  (0, 2, 2, 3, 3, 5): d₅ even=720, d₅ odd=0 [ALL EVEN]
+  (0, 2, 2, 3, 4, 4): d₅ even=0, d₅ odd=1440 [ALL ODD]
+  (0, 2, 3, 3, 3, 4): d₅ even=720, d₅ odd=960 [BOTH]
+  (0, 3, 3, 3, 3, 3): d₅ even=144, d₅ odd=0 [ALL EVEN]
+  (1, 1, 1, 3, 4, 5): d₅ even=240, d₅ odd=0 [ALL EVEN]
+  (1, 1, 1, 4, 4, 4): d₅ even=80, d₅ odd=0 [ALL EVEN]
+  (1, 1, 2, 2, 4, 5): d₅ even=720, d₅ odd=0 [ALL EVEN]
+  (1, 1, 2, 3, 3, 5): d₅ even=0, d₅ odd=1440 [ALL ODD]
+  (1, 1, 2, 3, 4, 4): d₅ even=1440, d₅ odd=1440 [BOTH]
+  (1, 1, 3, 3, 3, 4): d₅ even=1680, d₅ odd=0 [ALL EVEN]
+  (1, 2, 2, 2, 3, 5): d₅ even=720, d₅ odd=960 [BOTH]
+  (1, 2, 2, 2, 4, 4): d₅ even=1680, d₅ odd=0 [ALL EVEN]
+  (1, 2, 2, 3, 3, 4): d₅ even=5760, d₅ odd=2880 [BOTH]
+  (1, 2, 3, 3, 3, 3): d₅ even=0, d₅ odd=2400 [ALL ODD]
+  (2, 2, 2, 2, 2, 5): d₅ even=144, d₅ odd=0 [ALL EVEN]
+  (2, 2, 2, 2, 3, 4): d₅ even=0, d₅ odd=2400 [ALL ODD]
+  (2, 2, 2, 3, 3, 3): d₅ even=1200, d₅ odd=1440 [BOTH]
+
+--- Exploring d₅ mod 2 formula ---
+  bits=0: t₃=0, trans=20, d₅=0, d₅%2=0
+  bits=1: t₃=0, trans=20, d₅=0, d₅%2=0
+  bits=2: t₃=1, trans=19, d₅=0, d₅%2=0
+  bits=3: t₃=0, trans=20, d₅=0, d₅%2=0
+  bits=4: t₃=2, trans=18, d₅=0, d₅%2=0
+
+--- d₅ mod 2 as function of t₃ ---
+  t₃=0: d₅ mod 2 = 0 (DETERMINED)
+  t₃=1: d₅ mod 2 = 0 (DETERMINED)
+  t₃=2: d₅ mod 2 = 0 (DETERMINED)
+  t₃=3: d₅ mod 2 = 1 (DETERMINED)
+  t₃=4: d₅ mod 2 ∈ {0, 1} (NOT determined by t₃ alone)
+  t₃=5: d₅ mod 2 = 0 (DETERMINED)
+  t₃=6: d₅ mod 2 ∈ {0, 1} (NOT determined by t₃ alone)
+  t₃=7: d₅ mod 2 = 1 (DETERMINED)
+  t₃=8: d₅ mod 2 ∈ {0, 1} (NOT determined by t₃ alone)
+
+--- Trying degree-based formulas for d₅ mod 2 ---
+  d₅ ≡ s2 (mod 2): NO
+  d₅ ≡ sum_deg_sq (mod 2): NO
+  d₅ ≡ sum_deg_cube (mod 2): NO
+
+--- H mod 4 distribution ---
+  H ≡ 1 (mod 4): 20480 tournaments
+  H ≡ 3 (mod 4): 12288 tournaments
+
+======================================================================
+  SUMMARY for n=6
+======================================================================
+  α₁ even: 20480/32768 (62.5%)
+  α₁ odd:  12288/32768 (37.5%)
+  d₅ always even: False
+
+
+
+######################################################################
+# n=7 sample (100 random tournaments)
+######################################################################
+
+n=7 sample (100 tournaments):
+  α₁ parity: even=53, odd=47
+  d₅ always even in sample: False
+  d₇ odd examples: 45
+    bits=1027150: t₃=12, d₅=29, d₇=13, α₁=54, α₁%2=0
+    bits=936213: t₃=9, d₅=20, d₇=13, α₁=42, α₁%2=0
+    bits=585264: t₃=10, d₅=18, d₇=5, α₁=33, α₁%2=1
+    bits=429895: t₃=11, d₅=20, d₇=7, α₁=38, α₁%2=0
+    bits=1769668: t₃=6, d₅=8, d₇=1, α₁=15, α₁%2=1
+
+  Checking α₁ ≡ t₃ (mod 2) at n=7:
+  α₁ ≡ t₃ (mod 2) in 52/100 samples
+  => α₁ ≢ t₃ (mod 2) in general at n=7
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================
