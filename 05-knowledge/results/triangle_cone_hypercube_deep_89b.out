@@ -1,0 +1,474 @@
+======================================================================
+DEEP TRIANGLE-CONE-HYPERCUBE TOPOLOGY
+opus-2026-03-14-S89b
+======================================================================
+
+======================================================================
+PART 1: THE TRIANGLE OVERLAP GRAPH (KNESER-LIKE)
+======================================================================
+
+  Each triangle {i,j,k} uses 3 edges. Two triangles OVERLAP if they
+  share at least one edge (equivalently, share at least 2 vertices).
+
+  The OVERLAP GRAPH:
+  - Vertices = C(n,3) triangles
+  - Edges = pairs of triangles sharing ≥1 edge (≥2 vertices)
+
+  Two triangles sharing 2 vertices share exactly 1 edge.
+  Two triangles sharing 3 vertices are the same triangle.
+
+  The number of pairs sharing exactly 2 vertices (1 edge):
+  Each edge is in C(n-2, 1) = n-2 triangles.
+  Total edge-triangle incidences: C(n,2) × (n-2) = C(n,3) × 3.
+  Pairs sharing an edge: C(n,2) × C(n-2, 2) / ... no,
+  For each edge, the C(n-2,1) = n-2 triangles using it form a clique.
+  Shared-edge pairs: C(n,2) × C(n-2, 2) ... wait.
+  Each pair of triangles sharing an edge: we pick the shared edge (C(n,2) ways)
+  and then two distinct third vertices (C(n-2, 2) ways).
+  So: total shared-edge triangle pairs = C(n,2) × C(n-2, 2).
+
+
+  n=3: 1 triangles, 0 overlapping pairs
+    Overlap graph: 1 vertices, 0 edges, degree=0
+    This is the LINE GRAPH of K_n restricted to triples
+    = the KNESER graph KG(n,2,1) overlap
+
+  n=4: 4 triangles, 6 overlapping pairs
+    Overlap graph: 4 vertices, 6 edges, degree=3
+    This is the LINE GRAPH of K_n restricted to triples
+    = the KNESER graph KG(n,2,1) overlap
+
+  n=5: 10 triangles, 30 overlapping pairs
+    Overlap graph: 10 vertices, 30 edges, degree=6
+    This is the LINE GRAPH of K_n restricted to triples
+    = the KNESER graph KG(n,2,1) overlap
+
+  n=6: 20 triangles, 90 overlapping pairs
+    Overlap graph: 20 vertices, 90 edges, degree=9
+    This is the LINE GRAPH of K_n restricted to triples
+    = the KNESER graph KG(n,2,1) overlap
+
+  n=7: 35 triangles, 210 overlapping pairs
+    Overlap graph: 35 vertices, 210 edges, degree=12
+    This is the LINE GRAPH of K_n restricted to triples
+    = the KNESER graph KG(n,2,1) overlap
+
+======================================================================
+PART 2: H ON HAMMING SHELLS — GAUSSIAN STRUCTURE
+======================================================================
+
+  n=3, m=3: Hamming shell analysis from T_0 (H=1)
+    r= 0: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+    r= 1: |shell|=    3, E[H]=    1.67, Var(H)=    0.89, H-range=[1,3]
+    r= 2: |shell|=    3, E[H]=    1.67, Var(H)=    0.89, H-range=[1,3]
+    r= 3: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+
+  n=4, m=6: Hamming shell analysis from T_0 (H=1)
+    r= 0: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+    r= 1: |shell|=    6, E[H]=    2.33, Var(H)=    2.22, H-range=[1,5]
+    r= 2: |shell|=   15, E[H]=    3.13, Var(H)=    2.92, H-range=[1,5]
+    r= 3: |shell|=   20, E[H]=    3.40, Var(H)=    3.04, H-range=[1,5]
+    r= 4: |shell|=   15, E[H]=    3.13, Var(H)=    2.92, H-range=[1,5]
+    r= 5: |shell|=    6, E[H]=    2.33, Var(H)=    2.22, H-range=[1,5]
+    r= 6: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+
+  n=5, m=10: Hamming shell analysis from T_0 (H=1)
+    r= 0: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+    r= 1: |shell|=   10, E[H]=    3.20, Var(H)=    5.96, H-range=[1,9]
+    r= 2: |shell|=   45, E[H]=    5.27, Var(H)=   12.37, H-range=[1,15]
+    r= 3: |shell|=  120, E[H]=    6.93, Var(H)=   16.06, H-range=[1,15]
+    r= 4: |shell|=  210, E[H]=    8.01, Var(H)=   17.53, H-range=[1,15]
+    r= 5: |shell|=  252, E[H]=    8.38, Var(H)=   17.87, H-range=[1,15]
+    r= 6: |shell|=  210, E[H]=    8.01, Var(H)=   17.53, H-range=[1,15]
+    r= 7: |shell|=  120, E[H]=    6.93, Var(H)=   16.06, H-range=[1,15]
+    r= 8: |shell|=   45, E[H]=    5.27, Var(H)=   12.37, H-range=[1,15]
+    r= 9: |shell|=   10, E[H]=    3.20, Var(H)=    5.96, H-range=[1,9]
+    r=10: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+
+  n=6, m=15: Hamming shell analysis from T_0 (H=1)
+    r= 0: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+    r= 1: |shell|=   15, E[H]=    4.47, Var(H)=   17.85, H-range=[1,17]
+    r= 2: |shell|=  105, E[H]=    8.73, Var(H)=   52.96, H-range=[1,37]
+    r= 3: |shell|=  455, E[H]=   13.20, Var(H)=   88.61, H-range=[1,41]
+    r= 4: |shell|= 1365, E[H]=   17.38, Var(H)=  116.16, H-range=[1,45]
+    r= 5: |shell|= 3003, E[H]=   20.85, Var(H)=  133.46, H-range=[1,45]
+    r= 6: |shell|= 5005, E[H]=   23.34, Var(H)=  142.28, H-range=[1,45]
+    r= 7: |shell|= 6435, E[H]=   24.63, Var(H)=  145.65, H-range=[1,45]
+    r= 8: |shell|= 6435, E[H]=   24.63, Var(H)=  145.65, H-range=[1,45]
+    r= 9: |shell|= 5005, E[H]=   23.34, Var(H)=  142.28, H-range=[1,45]
+    r=10: |shell|= 3003, E[H]=   20.85, Var(H)=  133.46, H-range=[1,45]
+    r=11: |shell|= 1365, E[H]=   17.38, Var(H)=  116.16, H-range=[1,45]
+    r=12: |shell|=  455, E[H]=   13.20, Var(H)=   88.61, H-range=[1,41]
+    r=13: |shell|=  105, E[H]=    8.73, Var(H)=   52.96, H-range=[1,37]
+    r=14: |shell|=   15, E[H]=    4.47, Var(H)=   17.85, H-range=[1,17]
+    r=15: |shell|=    1, E[H]=    1.00, Var(H)=    0.00, H-range=[1,1]
+
+======================================================================
+PART 3: CONE TOWER AND THE FIBONACCI LIMIT
+======================================================================
+
+  The cone tower: T → Cone(T) → Cone²(T) → ...
+  produces an infinite sequence of tournaments with H(T_n) = H(T).
+
+  T_n sits in Q_{m(n)} where m(n) = n(n-1)/2.
+  The dimension sequence: m(3)=3, m(4)=6, m(5)=10, m(6)=15, ...
+  Differences: 3, 4, 5, 6, ... = n (the number of new arcs)
+
+  This is a TRIANGULAR NUMBER sequence: m(n) = C(n,2).
+
+  The "density" of the cone image in Q_{m(n+1)}:
+  |image| = 2^{m(n)} out of 2^{m(n+1)} = 2^{m(n)+n} total.
+  Fraction: 2^{m(n)} / 2^{m(n)+n} = 2^{-n} → 0 exponentially.
+
+  So the cone image gets EXPONENTIALLY SPARSE:
+
+  n=3: m=3, m+n=6, density = 2^-3 = 1.25e-01
+  n=4: m=6, m+n=10, density = 2^-4 = 6.25e-02
+  n=5: m=10, m+n=15, density = 2^-5 = 3.12e-02
+  n=6: m=15, m+n=21, density = 2^-6 = 1.56e-02
+  n=7: m=21, m+n=28, density = 2^-7 = 7.81e-03
+  n=8: m=28, m+n=36, density = 2^-8 = 3.91e-03
+  n=9: m=36, m+n=45, density = 2^-9 = 1.95e-03
+  n=10: m=45, m+n=55, density = 2^-10 = 9.77e-04
+  n=11: m=55, m+n=66, density = 2^-11 = 4.88e-04
+
+  In the FIBONACCI interpretation:
+  - m(n) = C(n,2) = F_4=3, then C(4,2)=6, C(5,2)=10, C(7,2)=21=F_8
+  - The cone adds n dimensions: 3→6→10→15→21→...
+  - At F_4=3 → F_8=21 (four cones: 3→7), each adding n=3,4,5,6 dims
+  - The RATIO m(n+1)/m(n) = n/(n-2) → 1 as n → ∞
+
+  So asymptotically, each cone adds a VANISHING fraction of new dimensions.
+  The tournament "crystallizes" — most of its structure is determined
+  by the core, with diminishing returns from each new vertex.
+
+  This is analogous to:
+  - A FRACTAL approaching a limit shape
+  - A PROFINITE group converging to its completion
+  - A SERIES converging to a transcendental constant (like π!)
+
+
+======================================================================
+PART 4: THE 3-CYCLE COMPLEX
+======================================================================
+
+  n=3: 1 triangles, 2 distinct cycle patterns
+    #3-cycles distribution:
+      0 cycles: 6 tournaments
+      1 cycles: 2 tournaments
+    Mean #3-cycles: 0.25 (expected: 0.25)
+
+  n=4: 4 triangles, 11 distinct cycle patterns
+    #3-cycles distribution:
+      0 cycles: 24 tournaments
+      1 cycles: 16 tournaments
+      2 cycles: 24 tournaments
+    Mean #3-cycles: 1.00 (expected: 1.00)
+
+  n=5: 10 triangles, 208 distinct cycle patterns
+    #3-cycles distribution:
+      0 cycles: 120 tournaments
+      1 cycles: 120 tournaments
+      2 cycles: 240 tournaments
+      3 cycles: 240 tournaments
+      4 cycles: 280 tournaments
+      5 cycles: 24 tournaments
+    Mean #3-cycles: 2.50 (expected: 2.50)
+
+  n=6: 20 triangles, 8563 distinct cycle patterns
+    #3-cycles distribution:
+      0 cycles: 720 tournaments
+      1 cycles: 960 tournaments
+      2 cycles: 2240 tournaments
+      3 cycles: 2880 tournaments
+      4 cycles: 6240 tournaments
+      5 cycles: 3648 tournaments
+      6 cycles: 8640 tournaments
+      7 cycles: 4800 tournaments
+      8 cycles: 2640 tournaments
+    Mean #3-cycles: 5.00 (expected: 5.00)
+
+======================================================================
+PART 5: H vs #3-CYCLES — THE CORRELATION
+======================================================================
+
+  n=3: H as a function of #3-cycles t_3:
+    t_3=0: count=    6, E[H]=    1.00, H-values=[1]
+    t_3=1: count=    2, E[H]=    3.00, H-values=[3]
+
+  n=4: H as a function of #3-cycles t_3:
+    t_3=0: count=   24, E[H]=    1.00, H-values=[1]
+    t_3=1: count=   16, E[H]=    3.00, H-values=[3]
+    t_3=2: count=   24, E[H]=    5.00, H-values=[5]
+
+  n=5: H as a function of #3-cycles t_3:
+    t_3=0: count=  120, E[H]=    1.00, H-values=[1]
+    t_3=1: count=  120, E[H]=    3.00, H-values=[3]
+    t_3=2: count=  240, E[H]=    5.00, H-values=[5]
+    t_3=3: count=  240, E[H]=    9.00, H-values=[9]
+    t_3=4: count=  280, E[H]=   12.43, H-values=[11, 13, 15]
+    t_3=5: count=   24, E[H]=   15.00, H-values=[15]
+
+  n=6: H as a function of #3-cycles t_3:
+    t_3=0: count=  720, E[H]=    1.00, H-values=[1]
+    t_3=1: count=  960, E[H]=    3.00, H-values=[3]
+    t_3=2: count= 2240, E[H]=    5.14, H-values=[5, 9]
+    t_3=3: count= 2880, E[H]=    9.00, H-values=[9]
+    t_3=4: count= 6240, E[H]=   14.08, H-values=[11, 13, 15, 17]
+    t_3=5: count= 3648, E[H]=   21.32, H-values=[15, 19, 23, 27]
+    t_3=6: count= 8640, E[H]=   28.67, H-values=[23, 25, 29, 31, 33, 37]
+    t_3=7: count= 4800, E[H]=   35.40, H-values=[33, 37]
+    t_3=8: count= 2640, E[H]=   42.82, H-values=[41, 43, 45]
+
+======================================================================
+PART 6: THE H-t3 CORRELATION AND π
+======================================================================
+
+  n=6:
+    Mean(H) = 22.5000, Mean(t3) = 5.0000
+    Var(H) = 146.2500, Var(t3) = 3.7500
+    Cov(H, t3) = 22.5000
+    Correlation r(H, t3) = 0.960769
+    r² = 0.923077
+    1/π = 0.318310
+    r² - 1/π = 0.604767
+
+    Linear regression: H ≈ -7.5000 + 6.0000 × t3
+    Slope b = 6.000000
+    b × π = 18.849556
+
+======================================================================
+PART 7: THE HYPERCUBE LAPLACIAN OF H
+======================================================================
+
+  The Laplacian of H on Q_m is:
+    ΔH(T) = Σ_{e∈E(Q_m)} [H(T⊕e) - H(T)]
+           = Σ_e H(T⊕e) - m·H(T)
+
+  where the sum is over all m edges of the hypercube through T.
+
+  If H is HARMONIC (ΔH = 0), then H(T) = average of its neighbors.
+  This would mean H is an affine function on Q_m (impossible since
+  H takes different values at the same Hamming distance).
+
+  So ΔH ≠ 0. The question: what is the structure of ΔH?
+
+
+  n=3, m=3:
+    Mean(ΔH) = 0.0000
+    Var(ΔH) = 12.0000
+    ΔH values: [-6, 2]
+    ΔH distribution:
+      ΔH=  -6:     2 tournaments
+      ΔH=   2:     6 tournaments
+    ΔH/H ratios: [Fraction(-2, 1), Fraction(2, 1)]
+    ΔH always even? True
+    Σ ΔH = 0 (should be 0)
+
+  n=4, m=6:
+    Mean(ΔH) = 0.0000
+    Var(ΔH) = 48.0000
+    ΔH values: [-8, 0, 8]
+    ΔH distribution:
+      ΔH=  -8:    24 tournaments
+      ΔH=   0:    16 tournaments
+      ΔH=   8:    24 tournaments
+    ΔH/H ratios: [Fraction(-8, 5), Fraction(0, 1), Fraction(8, 1)]
+    ΔH always even? True
+    Σ ΔH = 0 (should be 0)
+
+  n=5, m=10:
+    Mean(ΔH) = 0.0000
+    Var(ΔH) = 330.0000
+    ΔH values: [-42, -30, -26, -10, -6, 14, 18, 22]
+    ΔH distribution:
+      ΔH= -42:    40 tournaments
+      ΔH= -30:    24 tournaments
+      ΔH= -26:   120 tournaments
+      ΔH= -10:   120 tournaments
+      ΔH=  -6:   240 tournaments
+      ΔH=  14:   240 tournaments
+      ΔH=  18:   120 tournaments
+      ΔH=  22:   120 tournaments
+    ΔH/H is NOT constant (7 distinct ratios)
+    ΔH always even? True
+    Σ ΔH = 0 (should be 0)
+
+  n=6, m=15:
+    Mean(ΔH) = 0.0000
+    Var(ΔH) = 2880.0000
+    ΔH values: [-108, -92, -76, -68, -60, -44, -36, -28, -4, 4, 20, 28, 36, 52, 60, 68]
+    ΔH distribution:
+      ΔH=-108:   480 tournaments
+      ΔH= -92:  2160 tournaments
+      ΔH= -76:   720 tournaments
+      ΔH= -68:  2880 tournaments
+      ΔH= -60:   720 tournaments
+      ΔH= -44:  1440 tournaments
+      ΔH= -36:  2400 tournaments
+      ΔH= -28:  2880 tournaments
+      ΔH=  -4:  1440 tournaments
+      ΔH=   4:  1440 tournaments
+      ΔH=  20:  2880 tournaments
+      ΔH=  28:  1440 tournaments
+      ΔH=  36:  2000 tournaments
+      ΔH=  52:  2160 tournaments
+      ΔH=  60:  4128 tournaments
+      ΔH=  68:  3600 tournaments
+    ΔH always even? True
+    Σ ΔH = 0 (should be 0)
+
+======================================================================
+PART 8: DECOMPOSING ΔH BY TRIANGLE CONTRIBUTION
+======================================================================
+
+  n=5: Edge flip dH vs triangle status
+    When edge is in ≥1 cyclic triangle: E[dH] = -2.1892 (5920 observations)
+    When edge is in 0 cyclic triangles: E[dH] = 3.0000 (4320 observations)
+    Difference: -5.1892
+
+======================================================================
+PART 9: FIBONACCI HEXAGONS IN Q_m — DO THEY TILE?
+======================================================================
+
+  At n=3: the 6 transitive tournaments form a HEXAGON in Q_3.
+  (Each has degree 2 in the transitive-to-transitive flip graph.)
+
+  At n≥4: do the n! transitive tournaments form a nice graph
+  structure in Q_m? Specifically, what's the flip distance between
+  transitive tournaments?
+
+
+  n=3: 6 transitive tournaments in Q_3
+    Pairwise Hamming distance distribution:
+      d=1: 6 pairs
+      d=2: 6 pairs
+      d=3: 3 pairs
+    Flip graph degree distribution:
+      degree 2: 6 tournaments
+    Min distance: 1, Max distance: 3
+    Diameter of transitive subgraph: 3
+
+  n=4: 24 transitive tournaments in Q_6
+    Pairwise Hamming distance distribution:
+      d=1: 36 pairs
+      d=2: 60 pairs
+      d=3: 72 pairs
+      d=4: 60 pairs
+      d=5: 36 pairs
+      d=6: 12 pairs
+    Flip graph degree distribution:
+      degree 3: 24 tournaments
+    Min distance: 1, Max distance: 6
+    Diameter of transitive subgraph: 6
+
+  n=5: 120 transitive tournaments in Q_10
+    Pairwise Hamming distance distribution:
+      d=1: 240 pairs
+      d=2: 540 pairs
+      d=3: 900 pairs
+      d=4: 1200 pairs
+      d=5: 1320 pairs
+      d=6: 1200 pairs
+      d=7: 900 pairs
+      d=8: 540 pairs
+      d=9: 240 pairs
+      d=10: 60 pairs
+    Flip graph degree distribution:
+      degree 4: 120 tournaments
+    Min distance: 1, Max distance: 10
+    Diameter of transitive subgraph: 10
+
+  n=6: 720 transitive tournaments in Q_15
+    Pairwise Hamming distance distribution:
+      d=1: 1800 pairs
+      d=2: 5040 pairs
+      d=3: 10440 pairs
+      d=4: 17640 pairs
+      d=5: 25560 pairs
+      d=6: 32400 pairs
+      d=7: 36360 pairs
+      d=8: 36360 pairs
+      d=9: 32400 pairs
+      d=10: 25560 pairs
+      d=11: 17640 pairs
+      d=12: 10440 pairs
+      d=13: 5040 pairs
+      d=14: 1800 pairs
+      d=15: 360 pairs
+    Flip graph degree distribution:
+      degree 5: 720 tournaments
+    Min distance: 1, Max distance: 15
+    Diameter of transitive subgraph: 15
+
+======================================================================
+PART 10: SYNTHESIS — THE TOURNAMENT COSMOS
+======================================================================
+
+  THE TOURNAMENT COSMOS has three fundamental scales:
+
+  MICROSCALE: THE TRIANGLE (Q_3)
+  - 8 tournaments: 6 transitive + 2 cyclic
+  - H takes values {1, 3} (minimum gap)
+  - The hexagon of transitive tournaments
+  - S_3 symmetry, period 6 = 2×3
+  - π enters through arctan(1/F_{2n}) → π/4
+
+  MESOSCALE: THE HYPERCUBE (Q_m)
+  - 2^m tournaments on n vertices
+  - H as a Morse function with n! minima and ~regular maxima
+  - The gradient flow decomposes Q_m into basins
+  - Triangle subcubes overlap in the Kneser-like complex
+  - Hamming shells carry Gaussian H-distributions (π appears)
+  - The Laplacian ΔH has rich structure (always even)
+
+  MACROSCALE: THE CONE TOWER
+  - T → Cone(T) → Cone²(T) → ... (infinite tower)
+  - H is invariant (THM-205)
+  - The spectrum Spec(n) ⊂ Spec(n+1) nests
+  - Density 2^{-n} → 0 (exponential sparsification)
+  - m(n) = C(n,2) = triangular numbers
+  - Fibonacci-triangular intersections: m(3)=3=F_4, m(7)=21=F_8, m(11)=55=F_10
+  - Baer subplane analogy: substructure controls invariant
+
+  THE UNIFYING THREAD: PERIOD 6
+  - |S_3| = 6 (triangle symmetry)
+  - π(4) = 6 (Fibonacci mod 4)
+  - m mod 6 has period 12 = 2×6
+  - The hexagonal flip graph in Q_3
+  - All of these reflect the Z/2Z × Z/3Z structure:
+    Z/2Z = arc chirality
+    Z/3Z = triangle rotation
+
+  THE π CONNECTION:
+  - Stirling: Mean(H) ~ √(2πn) × ...
+  - Gaussian: H on Hamming shells ~ Normal(μ, σ²) with √(2π) normalization
+  - Fibonacci: π/4 = Σ arctan(1/F_{2n}) telescopes via coefficient 3
+  - Volume: inscribed m-ball in Q_m has volume ∝ π^{m/2}
+  - Binary: π's digits encode a 3-tournament sequence that is cycle-rich (35% vs 25%)
+
+  THE FIBONACCI CONNECTION:
+  - Even-indexed Fibonacci: F_0, F_2, F_4=3, F_6=8, F_8=21, F_10=55
+    These ARE tournament arc counts m(n) for n = 3, 7, 11
+  - Bisection coefficient 3 = Φ_3(1) = |triangle edges|
+  - The {2,3} composition count gives Padovan numbers ~ p^n
+    where p = 1.3247... (the plastic constant)
+  - The Fibonacci growth rate φ = 1.618... and p satisfy:
+    φ² = φ + 1 (golden ratio)
+    p³ = p + 1 (plastic ratio)
+    Both are Pisot numbers (conjugates < 1 in modulus)
+
+  CROWN JEWELS:
+  1. Q_3 ≅ hexagonal flip graph (transitive sublevel)
+  2. m(7) = 21 = |PG(2,4)| = F_8
+  3. π cycle-richness of binary digits (35% > 25%)
+  4. Var(H)/Mean(H)² = 1/3 for n=3,4 (exactly!)
+  5. ΔH always even (Walsh derivative structure)
+  6. H-sublevel sets all connected (even L(1) at n=4!)
+  7. Corr(H, t3)² measures how much H is "explained by" 3-cycles
+  8. The cone tower is a Baer-like substructure preserving H
+
+
+======================================================================
+DONE — DEEP TRIANGLE-CONE-HYPERCUBE TOPOLOGY
+======================================================================
