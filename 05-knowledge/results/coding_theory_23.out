@@ -1,0 +1,184 @@
+======================================================================
+PART 1: HAMMING DISTANCE BETWEEN H-LEVEL SETS
+======================================================================
+
+n=4: Min Hamming distance between H-level sets:
+  d(H=1, H=3) = 1
+  d(H=1, H=5) = 1
+  d(H=3, H=5) = 1
+
+n=5: Min Hamming distance between H-level sets:
+  d(H=1, H=3) = 1
+  d(H=1, H=5) = 1
+  d(H=1, H=9) = 1
+  d(H=1, H=11) = 2
+  d(H=1, H=13) = 2
+  d(H=1, H=15) = 2
+  d(H=3, H=5) = 1
+  d(H=3, H=9) = 1
+  d(H=3, H=11) = 2
+  d(H=3, H=13) = 2
+  d(H=3, H=15) = 1
+  d(H=5, H=9) = 1
+  d(H=5, H=11) = 1
+  d(H=5, H=13) = 1
+  d(H=5, H=15) = 2
+  d(H=9, H=11) = 1
+  d(H=9, H=13) = 1
+  d(H=9, H=15) = 1
+  d(H=11, H=13) = 1
+  d(H=11, H=15) = 1
+  d(H=13, H=15) = 1
+
+======================================================================
+PART 2: COVERING RADIUS OF MAX-H SET
+======================================================================
+
+n=4: Max-H code (H=5):
+  Code size: 24
+  Covering radius: 1
+  Mean distance to code: 0.62
+  Code rate: 0.7642
+
+n=5: Max-H code (H=15):
+  Code size: 64
+  Covering radius: 3
+  Mean distance to code: 1.56
+  Code rate: 0.6000
+
+======================================================================
+PART 3: WEIGHT ENUMERATORS
+======================================================================
+
+n=4: Weight distribution by H:
+  H= 1: mean weight = 3.00, dist = {0: 1, 1: 3, 2: 5, 3: 6, 4: 5, 5: 3, 6: 1}
+  H= 3: mean weight = 3.00, dist = {1: 2, 2: 4, 3: 4, 4: 4, 5: 2}
+  H= 5: mean weight = 3.00, dist = {1: 1, 2: 6, 3: 10, 4: 6, 5: 1}
+
+n=5: Weight distribution by H:
+  H= 1: mean weight = 5.00, dist = {0: 1, 1: 4, 2: 9, 3: 15, 4: 20, 5: 22, 6: 20, 7: 15, 8: 9, 9: 4, 10: 1}
+  H= 3: mean weight = 5.00, dist = {1: 3, 2: 9, 3: 15, 4: 21, 5: 24, 6: 21, 7: 15, 8: 9, 9: 3}
+  H= 5: mean weight = 5.00, dist = {1: 2, 2: 14, 3: 34, 4: 46, 5: 48, 6: 46, 7: 34, 8: 14, 9: 2}
+  H= 9: mean weight = 5.00, dist = {1: 1, 2: 9, 3: 28, 4: 51, 5: 62, 6: 51, 7: 28, 8: 9, 9: 1}
+  H=11: mean weight = 5.00, dist = {2: 2, 3: 11, 4: 28, 5: 38, 6: 28, 7: 11, 8: 2}
+  H=13: mean weight = 5.00, dist = {2: 1, 3: 13, 4: 29, 5: 34, 6: 29, 7: 13, 8: 1}
+  H=15: mean weight = 5.00, dist = {2: 1, 3: 4, 4: 15, 5: 24, 6: 15, 7: 4, 8: 1}
+
+======================================================================
+PART 4: ΔH PER ARC FLIP — ERROR SENSITIVITY
+======================================================================
+
+n=4: |ΔH| by arc position:
+  Arc (0,1): mean |ΔH| = 1.50, max = 4, dist = {0: 24, 2: 32, 4: 8}
+  Arc (0,2): mean |ΔH| = 1.50, max = 4, dist = {0: 24, 2: 32, 4: 8}
+  Arc (0,3): mean |ΔH| = 1.50, max = 4, dist = {0: 24, 2: 32, 4: 8}
+  Arc (1,2): mean |ΔH| = 1.50, max = 4, dist = {0: 24, 2: 32, 4: 8}
+  Arc (1,3): mean |ΔH| = 1.50, max = 4, dist = {0: 24, 2: 32, 4: 8}
+  Arc (2,3): mean |ΔH| = 1.50, max = 4, dist = {0: 24, 2: 32, 4: 8}
+
+n=5: |ΔH| by arc position:
+  Arc (0,1): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (0,2): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (0,3): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (0,4): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (1,2): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (1,3): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (1,4): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (2,3): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (2,4): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+  Arc (3,4): mean |ΔH| = 3.00, max = 12, dist = {0: 224, 2: 360, 4: 240, 6: 120, 8: 72, 12: 8}
+
+======================================================================
+PART 5: GRAY CODE — H ALONG STANDARD GRAY CODE
+======================================================================
+
+n=4: H along Gray code:
+  H sequence: [1, 1, 1, 3, 5, 1, 3, 5, 5, 5, 1, 3, 1, 1, 3, 1, 1, 5, 3, 1, 1, 1, 5, 3, 5, 5, 3, 5, 5, 5, 5, 3, 1, 3, 5, 5, 3, 1, 1, 1, 1, 3, 1, 1, 3, 5, 5, 1, 3, 5, 5, 5, 5, 3, 5, 5, 3, 1, 1, 5, 5, 3, 1, 1]
+  ΔH sequence: [0, 0, 2, 2, -4, 2, 2, 0, 0, -4, 2, -2, 0, 2, -2, 0, 4, -2, -2, 0, 0, 4, -2, 2, 0, -2, 2, 0, 0, 0, -2, -2, 2, 2, 0, -2, -2, 0, 0, 0, 2, -2, 0, 2, 2, 0, -4, 2, 2, 0, 0, 0, -2, 2, 0, -2, -2, 0, 4, 0, -2, -2, 0]
+  All ΔH even: True
+  ΔH values: [-4, -2, 0, 2, 4]
+  Longest increasing run: 2
+  Longest decreasing run: 2
+
+======================================================================
+PART 6: MINIMUM DISTANCE OF H-LEVEL CODES
+======================================================================
+
+n=4: Minimum distance of H-level codes:
+  H= 1: [6, 4.6, 1] code with 24 codewords
+  H= 3: [6, 4.0, 2] code with 16 codewords
+  H= 5: [6, 4.6, 1] code with 24 codewords
+
+n=5: Minimum distance of H-level codes:
+  H= 1: [10, 6.9, 1] code with 120 codewords
+  H= 3: [10, 6.9, 1] code with 120 codewords
+  H= 5: [10, 7.9, 1] code with 240 codewords
+  H= 9: [10, 7.9, 1] code with 240 codewords
+  H=11: [10, 6.9, 1] code with 120 codewords
+  H=13: [10, 6.9, 2] code with 120 codewords
+  H=15: [10, 6.0, 2] code with 64 codewords
+
+======================================================================
+PART 7: H DISTRIBUTION IN HAMMING BALLS
+======================================================================
+
+  Center: bits=0 (H=1)
+    r=0: 1 tournaments, mean H = 1.00, dist = {1: 1}
+    r=1: 7 tournaments, mean H = 2.14, dist = {1: 4, 3: 2, 5: 1}
+    r=2: 22 tournaments, mean H = 2.82, dist = {1: 9, 3: 6, 5: 7}
+    r=3: 42 tournaments, mean H = 3.10, dist = {1: 15, 3: 10, 5: 17}
+    r=4: 57 tournaments, mean H = 3.11, dist = {1: 20, 3: 14, 5: 23}
+    r=5: 63 tournaments, mean H = 3.03, dist = {1: 23, 3: 16, 5: 24}
+    r=6: 64 tournaments, mean H = 3.00, dist = {1: 24, 3: 16, 5: 24}
+
+  Center: bits=63 (H=1)
+    r=0: 1 tournaments, mean H = 1.00, dist = {1: 1}
+    r=1: 7 tournaments, mean H = 2.14, dist = {1: 4, 3: 2, 5: 1}
+    r=2: 22 tournaments, mean H = 2.82, dist = {1: 9, 3: 6, 5: 7}
+    r=3: 42 tournaments, mean H = 3.10, dist = {1: 15, 3: 10, 5: 17}
+    r=4: 57 tournaments, mean H = 3.11, dist = {1: 20, 3: 14, 5: 23}
+    r=5: 63 tournaments, mean H = 3.03, dist = {1: 23, 3: 16, 5: 24}
+    r=6: 64 tournaments, mean H = 3.00, dist = {1: 24, 3: 16, 5: 24}
+
+  Center: bits=21 (H=5)
+    r=0: 1 tournaments, mean H = 5.00, dist = {5: 1}
+    r=1: 7 tournaments, mean H = 3.86, dist = {1: 1, 3: 2, 5: 4}
+    r=2: 22 tournaments, mean H = 3.18, dist = {1: 7, 3: 6, 5: 9}
+    r=3: 42 tournaments, mean H = 2.90, dist = {1: 17, 3: 10, 5: 15}
+    r=4: 57 tournaments, mean H = 2.89, dist = {1: 23, 3: 14, 5: 20}
+    r=5: 63 tournaments, mean H = 2.97, dist = {1: 24, 3: 16, 5: 23}
+    r=6: 64 tournaments, mean H = 3.00, dist = {1: 24, 3: 16, 5: 24}
+
+======================================================================
+PART 8: SPHERE PACKING ANALYSIS
+======================================================================
+
+n=4: Max-H set packing analysis:
+  |max-H set| = 24
+  d_min = 1, d_max = 6, mean = 3.13
+  Distance distribution: {1: 36, 2: 60, 3: 72, 4: 60, 5: 36, 6: 12}
+  Packing radius t = 0, ball size = 1
+  Sphere packing bound: ≤ 64
+  Actual: 24 (room for more)
+
+n=5: Max-H set packing analysis:
+  |max-H set| = 64
+  d_min = 2, d_max = 10, mean = 5.08
+  Distance distribution: {2: 180, 3: 200, 4: 300, 5: 624, 6: 300, 7: 200, 8: 180, 10: 32}
+  Packing radius t = 0, ball size = 1
+  Sphere packing bound: ≤ 1024
+  Actual: 64 (room for more)
+
+======================================================================
+SYNTHESIS — CODING THEORY CONNECTIONS
+======================================================================
+
+KEY FINDINGS:
+1. HAMMING DISTANCE: Min distance between consecutive H levels is always 1
+   (you can always flip one arc to change H by ±2).
+2. COVERING RADIUS: Every tournament is within a few flips of a max-H one.
+3. WEIGHT DISTRIBUTION: Mean weight = m/2 for all H levels (complement symmetry).
+4. ΔH PER ARC: All arcs have the SAME mean |ΔH| (vertex symmetry).
+5. GRAY CODE: H oscillates between values along the standard Gray code.
+6. SPHERE PACKING: Max-H set has specific packing density.
+
