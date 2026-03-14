@@ -1,0 +1,380 @@
+
+======================================================================
+  PART 1: THE Q(√5) TOWER
+======================================================================
+
+Second-order recurrence f(n) = f(n-1) + x·f(n-2)
+Discriminant Δ = 1 + 4x
+Roots = (1 ± √Δ) / 2
+
+x values where Δ involves √5 (i.e., Δ = 5m² for integer m):
+  x = (5m² - 1)/4, requiring m ≡ 1 or 3 (mod 4) for integer x
+
+   m        x          Δ           √Δ           r₊           r₋      r₊ in terms of φ
+------------------------------------------------------------------------------------------
+   1        1          5   1√5=  2.236     1.618034    -0.618034                    1φ
+   3       11         45   3√5=  6.708     3.854102    -2.854102               -1 + 3φ
+   5       31        125   5√5= 11.180     6.090170    -5.090170               -2 + 5φ
+   7       61        245   7√5= 15.652     8.326238    -7.326238               -3 + 7φ
+   9      101        405   9√5= 20.125    10.562306    -9.562306               -4 + 9φ
+  11      151        605  11√5= 24.597    12.798374   -11.798374              -5 + 11φ
+  13      211        845  13√5= 29.069    15.034442   -14.034442              -6 + 13φ
+  15      281       1125  15√5= 33.541    17.270510   -16.270510              -7 + 15φ
+  17      361       1445  17√5= 38.013    19.506578   -18.506578              -8 + 17φ
+  19      451       1805  19√5= 42.485    21.742646   -20.742646              -9 + 19φ
+  21      551       2205  21√5= 46.957    23.978714   -22.978714             -10 + 21φ
+  23      661       2645  23√5= 51.430    26.214782   -25.214782             -11 + 23φ
+  25      781       3125  25√5= 55.902    28.450850   -27.450850             -12 + 25φ
+  27      911       3645  27√5= 60.374    30.686918   -29.686918             -13 + 27φ
+  29     1051       4205  29√5= 64.846    32.922986   -31.922986             -14 + 29φ
+  31     1201       4805  31√5= 69.318    35.159054   -34.159054             -15 + 31φ
+  33     1361       5445  33√5= 73.790    37.395122   -36.395122             -16 + 33φ
+  35     1531       6125  35√5= 78.262    39.631190   -38.631190             -17 + 35φ
+  37     1711       6845  37√5= 82.735    41.867258   -40.867258             -18 + 37φ
+  39     1901       7605  39√5= 87.207    44.103326   -43.103326             -19 + 39φ
+
+PATTERN: The Q(√5) tower has x = 1, 11, 31, 61, 101, 151, ...
+Differences:  [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+Second differences:  [10, 10, 10, 10, 10, 10, 10, 10, 10]
+
+x values: [1, 11, 31, 61, 101, 151, 211, 281, 361, 451, 551, 661, 781, 911, 1051]
+These are x = (5m²-1)/4 for m = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]
+
+Comparison with known sequences:
+  m=1: x=1, 5·T(m-1)+m-1 = 0, Pent = 1
+  m=3: x=11, 5·T(m-1)+m-1 = 17, Pent = 12
+  m=5: x=31, 5·T(m-1)+m-1 = 54, Pent = 35
+  m=7: x=61, 5·T(m-1)+m-1 = 111, Pent = 70
+  m=9: x=101, 5·T(m-1)+m-1 = 188, Pent = 117
+  m=11: x=151, 5·T(m-1)+m-1 = 285, Pent = 176
+  m=13: x=211, 5·T(m-1)+m-1 = 402, Pent = 247
+  m=15: x=281, 5·T(m-1)+m-1 = 539, Pent = 330
+  m=17: x=361, 5·T(m-1)+m-1 = 696, Pent = 425
+  m=19: x=451, 5·T(m-1)+m-1 = 873, Pent = 532
+
+======================================================================
+  PART 2: THE FIBONACCI ↔ x=11 BRIDGE
+======================================================================
+
+Fibonacci (x=1): f(n) = f(n-1) + f(n-2)
+  Roots: φ = (1+√5)/2 ≈ 1.618, ψ = (1-√5)/2 ≈ -0.618
+  F(n) = (φⁿ - ψⁿ)/√5
+
+x=11 recurrence: f(n) = f(n-1) + 11·f(n-2)
+  Roots: (1+3√5)/2 = 3φ-1 ≈ 3.854, (1-3√5)/2 = -3/φ ≈ -2.854
+  G(n) = ((3φ-1)ⁿ - (-(3/φ))ⁿ) / (3√5)
+
+  3φ - 1 = 3.8541019662
+  (1+3√5)/2 = 3.8541019662
+  Match: True
+
+  n   Fib(n)     G₁₁(n)    G₁₁/Fib     G₁₁ mod 5
+   1         1           1      1.0000      1
+   2         1           1      1.0000      1
+   3         2          12      6.0000      2
+   4         3          23      7.6667      3
+   5         5         155     31.0000      0
+   6         8         408     51.0000      3
+   7        13        2113    162.5385      3
+   8        21        6601    314.3333      1
+   9        34       29844    877.7647      4
+  10        55      102455   1862.8182      0
+  11        89      430739   4839.7640      4
+  12       144     1557744  10817.6667      4
+  13       233     6295873  27020.9142      3
+  14       377    23431057  62151.3448      2
+  15       610    92685660  151943.7049      0
+
+G₁₁(n) mod 5: [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+Fib(n) mod 5: [1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0]
+
+Asymptotic ratio G₁₁(n)/F(n) → ((3φ-1)/φ)ⁿ / 3
+  (3φ-1)/φ = 3 - 1/φ = 2.3819660113
+  = (7-√5)/2 = 2.3819660113
+
+
+======================================================================
+  PART 3: 5-ADIC STRUCTURE OF TOURNAMENT NUMBERS
+======================================================================
+
+Jacobsthal numbers and their 5-adic valuations:
+   n            J(n)  v₅(J)  J mod 5 J mod 25
+   1               1      0        1        1
+   2               1      0        1        1
+   3               3      0        3        3
+   4               5      1        0        5
+   5              11      0        1       11
+   6              21      0        1       21
+   7              43      0        3       18
+   8              85      1        0       10
+   9             171      0        1       21
+  10             341      0        1       16
+  11             683      0        3        8
+  12            1365      1        0       15
+  13            2731      0        1        6
+  14            5461      0        1       11
+  15           10923      0        3       23
+  16           21845      1        0       20
+  17           43691      0        1       16
+  18           87381      0        1        6
+  19          174763      0        3       13
+  20          349525      2        0        0
+  21          699051      0        1        1
+  22         1398101      0        1        1
+  23         2796203      0        3        3
+  24         5592405      1        0        5
+  25        11184811      0        1       11
+  26        22369621      0        1       21
+  27        44739243      0        3       18
+  28        89478485      1        0       10
+  29       178956971      0        1       21
+
+J(n) ≡ 0 (mod 5) at n = [4, 8, 12, 16, 20, 24]
+Pattern: n ≡ [0, 0, 0, 0, 0, 0] (mod 4)
+
+2^{n(n-1)/2} mod 5 (tournament-related):
+  n= 1: edges=  0, 2^edges mod 5 = 1, v₅(2^edges-1) = inf
+  n= 2: edges=  1, 2^edges mod 5 = 2, v₅(2^edges-1) = 0
+  n= 3: edges=  3, 2^edges mod 5 = 3, v₅(2^edges-1) = 0
+  n= 4: edges=  6, 2^edges mod 5 = 4, v₅(2^edges-1) = 0
+  n= 5: edges= 10, 2^edges mod 5 = 4, v₅(2^edges-1) = 0
+  n= 6: edges= 15, 2^edges mod 5 = 3, v₅(2^edges-1) = 0
+  n= 7: edges= 21, 2^edges mod 5 = 2, v₅(2^edges-1) = 0
+  n= 8: edges= 28, 2^edges mod 5 = 1, v₅(2^edges-1) = 1
+  n= 9: edges= 36, 2^edges mod 5 = 1, v₅(2^edges-1) = 1
+  n=10: edges= 45, 2^edges mod 5 = 2, v₅(2^edges-1) = 0
+  n=11: edges= 55, 2^edges mod 5 = 3, v₅(2^edges-1) = 0
+  n=12: edges= 66, 2^edges mod 5 = 4, v₅(2^edges-1) = (too large)
+  n=13: edges= 78, 2^edges mod 5 = 4, v₅(2^edges-1) = (too large)
+  n=14: edges= 91, 2^edges mod 5 = 3, v₅(2^edges-1) = (too large)
+  n=15: edges=105, 2^edges mod 5 = 2, v₅(2^edges-1) = (too large)
+  n=16: edges=120, 2^edges mod 5 = 1, v₅(2^edges-1) = (too large)
+  n=17: edges=136, 2^edges mod 5 = 1, v₅(2^edges-1) = (too large)
+  n=18: edges=153, 2^edges mod 5 = 2, v₅(2^edges-1) = (too large)
+  n=19: edges=171, 2^edges mod 5 = 3, v₅(2^edges-1) = (too large)
+
+======================================================================
+  PART 4: PENTANACCI — OPTIMAL 5-STEP LOOKBACK
+======================================================================
+
+The k-nacci root φ_k satisfies z^{k+1} - 2z^k + 1 = 0 (z≠1).
+At k=5: z⁶ - 2z⁵ + 1 = 0
+
+Pentanacci characteristic roots:
+  r_1 = 1.9659482366+0.0000000000j  |r| = 1.9659482366
+  r_2 = 0.1953765946+0.8488536405j  |r| = 0.8710479417
+  r_3 = 0.1953765946-0.8488536405j  |r| = 0.8710479417
+  r_4 = -0.6783507130+0.4585361873j  |r| = 0.8187888158
+  r_5 = -0.6783507130-0.4585361873j  |r| = 0.8187888158
+
+Dominant root φ₅ = 1.965948236645486
+Gap to 2: 3.405176335451432e-02
+1/2⁵ = 3.125000000000000e-02
+Ratio (gap)/(1/32) = 1.089656427344458
+
+Gap comparison across k:
+   k             φ_k       gap=2-φ_k           1/2^k     gap/Fib_gap
+   2  1.618033988750 3.819660112501e-01 2.500000000000e-01  1.000000000000
+   3  1.839286755214 1.607132447858e-01 1.250000000000e-01  0.420752737292
+   4  1.927561975483 7.243802451707e-02 6.250000000000e-02  0.189645210264
+   5  1.965948236645 3.405176335451e-02 3.125000000000e-02  0.089148673839
+   6  1.983582843424 1.641715657567e-02 1.562500000000e-02  0.042980673914
+   7  1.991964196605 8.035803394965e-03 7.812500000000e-03  0.021038006415
+   8  1.996031179735 3.968820264585e-03 3.906250000000e-03  0.010390506348
+   9  1.998029470262 1.970529737712e-03 1.953125000000e-03  0.005158913829
+  10  1.999018632710 9.813672898979e-04 9.765625000000e-04  0.002569252920
+  11  1.999510401978 4.895980217126e-04 4.882812500000e-04  0.001281784262
+
+======================================================================
+  PART 5: GOLDEN RATIO φ IN H-VALUES
+======================================================================
+
+H(T) distribution at n=5 (all 1024 tournaments):
+  H=  1: count= 120, H mod 5 = 1
+  H=  3: count= 120, H mod 5 = 3
+  H=  5: count= 240, H mod 5 = 0
+  H=  9: count= 240, H mod 5 = 4
+  H= 11: count= 120, H mod 5 = 1
+  H= 13: count= 120, H mod 5 = 3
+  H= 15: count=  64, H mod 5 = 0
+
+H mod 5 distribution:
+  H ≡ 0 (mod 5): 304 (0.297)
+  H ≡ 1 (mod 5): 240 (0.234)
+  H ≡ 3 (mod 5): 240 (0.234)
+  H ≡ 4 (mod 5): 240 (0.234)
+
+H mod 2: all odd? True
+H mod 3: distribution = [0, 1, 2]
+H mod 5: distribution = [0, 1, 3, 4]
+H mod 7: distribution = [1, 2, 3, 4, 5, 6]
+
+======================================================================
+  PART 6: (3,5)-PACKING AT n=8
+======================================================================
+
+At n=8 = 2³, the first cross-level (3,5) packing appears.
+A disjoint (3-cycle, 5-cycle) pair uses 3+5=8 = ALL vertices.
+So at n=8, a (3,5) pair is a PARTITION of the vertex set.
+
+Sampling 500 random tournaments at n=8...
+  trial 0: 0.0s
+  trial 100: 0.0s
+  trial 200: 0.1s
+  trial 300: 0.1s
+  trial 400: 0.1s
+Done: 0.2s
+
+(3,5)-pair statistics at n=8:
+  Tournaments with ≥1 (3,5)-pair: 426/500 (85.2%)
+  Mean (3,5)-pair count: 7.51
+  Max (3,5)-pair count: 20
+  Distribution of pair counts:
+    0 pairs: 74 tournaments (14.8%)
+    1 pairs: 8 tournaments (1.6%)
+    2 pairs: 23 tournaments (4.6%)
+    3 pairs: 9 tournaments (1.8%)
+    4 pairs: 32 tournaments (6.4%)
+    5 pairs: 42 tournaments (8.4%)
+    6 pairs: 35 tournaments (7.0%)
+    7 pairs: 38 tournaments (7.6%)
+    8 pairs: 23 tournaments (4.6%)
+    9 pairs: 35 tournaments (7.0%)
+    10 pairs: 33 tournaments (6.6%)
+    11 pairs: 24 tournaments (4.8%)
+    12 pairs: 28 tournaments (5.6%)
+    13 pairs: 22 tournaments (4.4%)
+    14 pairs: 28 tournaments (5.6%)
+    15 pairs: 14 tournaments (2.8%)
+    16 pairs: 13 tournaments (2.6%)
+    17 pairs: 8 tournaments (1.6%)
+    18 pairs: 9 tournaments (1.8%)
+    19 pairs: 1 tournaments (0.2%)
+    20 pairs: 1 tournaments (0.2%)
+
+======================================================================
+  PART 7: MASTER POLYNOMIAL SPECIALIZATIONS AT x=2
+======================================================================
+
+Master polynomial: z^{k+1} - (1+x)z^k + x^k = 0
+At x=2: z^{k+1} - 3z^k + 2^k = 0
+
+k=2: Q_2 coefficients = [1, -1, -2]
+     remainder = 0 (should be 0)
+     dom root of Q_2 = 2.0000000000 (→ 3 as k→∞)
+
+k=3: Q_3 coefficients = [1, -1, -2, -4]
+     remainder = 0 (should be 0)
+     dom root of Q_3 = 2.4675038571 (→ 3 as k→∞)
+
+k=4: Q_4 coefficients = [1, -1, -2, -4, -8]
+     remainder = 0 (should be 0)
+     dom root of Q_4 = 2.6980689131 (→ 3 as k→∞)
+
+k=5: Q_5 coefficients = [1, -1, -2, -4, -8, -16]
+     remainder = 0 (should be 0)
+     dom root of Q_5 = 2.8208299300 (→ 3 as k→∞)
+
+k=6: Q_6 coefficients = [1, -1, -2, -4, -8, -16, -32]
+     remainder = 0 (should be 0)
+     dom root of Q_6 = 2.8901966422 (→ 3 as k→∞)
+
+k=7: Q_7 coefficients = [1, -1, -2, -4, -8, -16, -32, -64]
+     remainder = 0 (should be 0)
+     dom root of Q_7 = 2.9311424638 (→ 3 as k→∞)
+
+
+======================================================================
+  PART 8: 5-CYCLE CONTRIBUTION TO H AT n=5
+======================================================================
+
+At n=5: H = 1 + 2α₁ where α₁ = dc3 + dc5
+(No α₂ possible since 3+3=6 > 5)
+
+H = 1 + 2(dc3 + dc5) verified: 1024/1024 correct
+
+Relative contribution of 5-cycles vs 3-cycles to α₁:
+  Total dc3 across all tournaments: 2560
+  Total dc5 across all tournaments: 768
+  Total α₁ = dc3+dc5: 3328
+  dc5/α₁ = 0.2308
+  dc3/α₁ = 0.7692
+  dc5/dc3 = 0.3000
+
+H contribution analysis:
+  Mean H = 7.5000
+  Mean contribution from dc3: 2·mean(dc3) = 5.0000
+  Mean contribution from dc5: 2·mean(dc5) = 1.5000
+  Fraction of (H-1) from 5-cycles: 0.2308
+
+======================================================================
+  PART 9: Z₅ AND CYCLIC TOURNAMENT STRUCTURE
+======================================================================
+
+The unique tournament on Z₅ with arc i→j iff j-i ∈ {1,2} (mod 5):
+Adjacency matrix:
+  [0, 1, 1, 0, 0]
+  [0, 0, 1, 1, 0]
+  [0, 0, 0, 1, 1]
+  [1, 0, 0, 0, 1]
+  [1, 1, 0, 0, 0]
+
+H(Z₅ circulant) = 15
+dc3 = 5, dc5 = 2
+α₁ = 7
+H = 1 + 2·7 = 15
+
+The QUADRATIC RESIDUE tournament on Z₅:
+QR(5) = {1, 4} = {1, -1} mod 5
+Adjacency matrix:
+  [0, 1, 0, 0, 1]
+  [1, 0, 1, 0, 0]
+  [0, 1, 0, 1, 0]
+  [0, 0, 1, 0, 1]
+  [1, 0, 0, 1, 0]
+
+H(QR₅) = 10
+dc3 = 0, dc5 = 2
+α₁ = 2
+
+======================================================================
+  PART 10: SYNTHESIS — 5 AS DISCRIMINANT MODULUS
+======================================================================
+
+THEOREM (informal): 5 is the discriminant modulus of the
+tournament recurrence tower.
+
+Evidence:
+1. The second-order recurrence f(n) = f(n-1) + x·f(n-2)
+   has discriminant Δ = 1+4x.
+   At x=1: Δ = 5 (the Fibonacci case)
+   At x=2: Δ = 9 = 3² (the Jacobsthal/tournament case)
+
+2. The transition from irrational (√5) to rational (3)
+   discriminant happens at x = 1 → x = 2.
+   This is the SAME transition as Fibonacci → Jacobsthal.
+
+3. The integer-discriminant points are x = k(k-1):
+   x=0: Δ=1, x=2: Δ=9, x=6: Δ=25, x=12: Δ=49, ...
+   The discriminants are: 1², 3², 5², 7², 9², 11², ...
+   AND 5 APPEARS IN THIS SEQUENCE (at x=6, Δ=25=5²).
+
+4. The Q(√5) field connects:
+   x=1 (Fibonacci, Δ=5) ↔ x=11 (Δ=45=9·5) ↔ x=31 (Δ=125=25·5)
+   These x-values are (5m²-1)/4 for m=1,3,5,...
+
+5. At x=11: roots = (1±3√5)/2 = {3φ-1, 2-3φ}
+   So x=11 roots are EXACTLY 3× Fibonacci roots, shifted by -1.
+   The 'decimal pair' (10,11) connects to the golden ratio!
+
+6. The J₆ sequence (x=6 level, denominator 5) generates 7:
+   J₆(3) = (3³-(-2)³)/5 = (27+8)/5 = 35/5 = 7
+   So 5 GENERATES the (7,8) transition threshold.
+
+CONCLUSION: 5 is the algebraic number that makes the
+Fibonacci→Jacobsthal transition WORK. It is the discriminant
+of the base case (x=1), and through Q(√5) it threads through
+the entire hierarchy: 1→5→11→31→... All levels where the
+golden ratio echoes in the tournament structure.
+
+Done.
