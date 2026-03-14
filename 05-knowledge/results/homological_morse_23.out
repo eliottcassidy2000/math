@@ -1,0 +1,164 @@
+======================================================================
+PART 1: DOMINANCE POSET — ORDER COMPLEX
+======================================================================
+
+n=4: Dominance poset chain statistics:
+  Max chain length 2: 40 tournaments (62.5%)
+  Max chain length 4: 24 tournaments (37.5%)
+
+n=5: Dominance poset chain statistics:
+  Max chain length 1: 64 tournaments (6.2%)
+  Max chain length 2: 360 tournaments (35.2%)
+  Max chain length 3: 480 tournaments (46.9%)
+  Max chain length 5: 120 tournaments (11.7%)
+
+======================================================================
+PART 2: CLIQUE COMPLEX OF SCORE-EQUIVALENCE GRAPH
+======================================================================
+
+n=4: Score classes and their arc-flip graphs:
+  Score (0, 1, 2, 3): 24 tours, 1 components, H dist: {1: 24}
+  Score (1, 1, 1, 3): 8 tours, 8 components, H dist: {3: 8}
+  Score (1, 1, 2, 2): 24 tours, 1 components, H dist: {5: 24}
+  Score (0, 2, 2, 2): 8 tours, 8 components, H dist: {3: 8}
+
+n=5: Score classes and their arc-flip graphs:
+  Score (0, 1, 2, 3, 4): 120 tours, 1 components, H dist: {1: 120}
+  Score (1, 1, 1, 3, 4): 40 tours, 20 components, H dist: {3: 40}
+  Score (1, 1, 2, 2, 4): 120 tours, 5 components, H dist: {5: 120}
+  Score (0, 2, 2, 2, 4): 40 tours, 40 components, H dist: {3: 40}
+  Score (1, 1, 2, 3, 3): 240 tours, 1 components, H dist: {9: 240}
+  Score (0, 2, 2, 3, 3): 120 tours, 5 components, H dist: {5: 120}
+  Score (0, 1, 3, 3, 3): 40 tours, 20 components, H dist: {3: 40}
+  Score (1, 2, 2, 2, 3): 280 tours, 1 components, H dist: {11: 120, 13: 120, 15: 40}
+  Score (2, 2, 2, 2, 2): 24 tours, 24 components, H dist: {15: 24}
+
+======================================================================
+PART 3: EULER CHARACTERISTIC OF H-LEVEL SUBCOMPLEXES
+======================================================================
+
+n=4: H-level Euler characteristics:
+  H≥ 1: V=   64 E=  192 F=  240 χ=  112 (100.0% of tournaments)
+  H≥ 3: V=   40 E=   84 F=   54 χ=   10 (62.5% of tournaments)
+  H≥ 5: V=   24 E=   36 F=    6 χ=   -6 (37.5% of tournaments)
+
+n=5: H-level Euler characteristics:
+  H≥ 1: V= 1024 E= 5120 F=11520 χ= 7424 (100.0% of tournaments)
+  H≥ 3: V=  904 E= 4160 F= 8190 χ= 4934 (88.3% of tournaments)
+  H≥ 5: V=  784 E= 3360 F= 5910 χ= 3334 (76.6% of tournaments)
+  H≥ 9: V=  544 E= 2040 F= 2970 χ= 1474 (53.1% of tournaments)
+  H≥11: V=  304 E=  840 F=  690 χ=  154 (29.7% of tournaments)
+  H≥13: V=  184 E=  360 F=  180 χ=    4 (18.0% of tournaments)
+  H≥15: V=   64 E=    0 F=    0 χ=   64 (6.2% of tournaments)
+
+======================================================================
+PART 4: π₀ OF H-LEVEL SETS (ARC-FLIP CONNECTIVITY)
+======================================================================
+
+n=4: Connected components of H-level sets:
+  H= 1:    24 tournaments,   1 components (β₀)
+  H= 3:    16 tournaments,  16 components (β₀)
+  H= 5:    24 tournaments,   1 components (β₀)
+
+n=5: Connected components of H-level sets:
+  H= 1:   120 tournaments,   1 components (β₀)
+  H= 3:   120 tournaments,  80 components (β₀)
+  H= 5:   240 tournaments,  10 components (β₀)
+  H= 9:   240 tournaments,   1 components (β₀)
+  H=11:   120 tournaments,  30 components (β₀)
+  H=13:   120 tournaments, 120 components (β₀)
+  H=15:    64 tournaments,  64 components (β₀)
+
+======================================================================
+PART 5: CHAIN COMPLEX OF TOURNAMENT FLAG COMPLEX
+======================================================================
+
+n=4: Flag complex statistics (transitive sub-tournaments):
+  H= 1: f-vector=[4, 6, 4, 1] χ=0
+  H= 3: f-vector=[4, 6, 3, 0] χ=0
+  H= 5: f-vector=[4, 6, 2, 0] χ=1
+
+n=5: Flag complex statistics (transitive sub-tournaments):
+  H= 1: f-vector=[5, 10, 10, 5, 1] χ=0
+  H= 3: f-vector=[5, 10, 9, 3, 0] χ=0
+  H= 5: f-vector=[5, 10, 8, 2, 0] χ=0
+  H= 9: f-vector=[5, 10, 7, 2, 0] χ=1
+  H=11: f-vector=[5, 10, 6, 1, 0] χ=1
+  H=13: f-vector=[5, 10, 6, 0, 0] χ=0
+  H=15: f-vector=[5, 10, 6, 0, 0] χ=0
+
+======================================================================
+PART 6: DISCRETE MORSE FUNCTION — H AS MORSE FUNCTION
+======================================================================
+
+n=4: H as discrete Morse function:
+  Morse-critical cells (all neighbors different H): 16
+  Violations (>1 up-neighbor with H≤): 64
+  Violations (>1 down-neighbor with H≥): 64
+  Total vertices: 64
+  H is Morse: False
+
+n=5: H as discrete Morse function:
+  Morse-critical cells (all neighbors different H): 224
+  Violations (>1 up-neighbor with H≤): 1024
+  Violations (>1 down-neighbor with H≥): 960
+  Total vertices: 1024
+  H is Morse: False
+
+======================================================================
+PART 7: PERSISTENT HOMOLOGY PREVIEW
+======================================================================
+
+n=4: Sublevel set filtration (H ≤ h):
+  H≤ 1:    24 tours, β₀=   1 (added 24, merged 23)
+  H≤ 3:    40 tours, β₀=   1 (added 16, merged 16)
+  H≤ 5:    64 tours, β₀=   1 (added 24, merged 24)
+
+n=5: Sublevel set filtration (H ≤ h):
+  H≤ 1:   120 tours, β₀=   1 (added 120, merged 119)
+  H≤ 3:   240 tours, β₀=   1 (added 120, merged 120)
+  H≤ 5:   480 tours, β₀=   1 (added 240, merged 240)
+  H≤ 9:   720 tours, β₀=   1 (added 240, merged 240)
+  H≤11:   840 tours, β₀=   1 (added 120, merged 120)
+  H≤13:   960 tours, β₀=   1 (added 120, merged 120)
+  H≤15:  1024 tours, β₀=   1 (added 64, merged 64)
+
+======================================================================
+PART 8: SCORE FIBER INTERSECTIONS
+======================================================================
+
+n=4: Score × H intersection matrix:
+  Score\H       1     3     5
+  (0, 1, 2, 3)    24     0     0
+  (0, 2, 2, 2)     0     8     0
+  (1, 1, 1, 3)     0     8     0
+  (1, 1, 2, 2)     0     0    24
+  Score types: 4, H values: 3
+  Nonzero rows: 4, nonzero cols: 3
+
+n=5: Score × H intersection matrix:
+  Score\H       1     3     5     9    11    13    15
+  (0, 1, 2, 3, 4)   120     0     0     0     0     0     0
+  (0, 1, 3, 3, 3)     0    40     0     0     0     0     0
+  (0, 2, 2, 2, 4)     0    40     0     0     0     0     0
+  (0, 2, 2, 3, 3)     0     0   120     0     0     0     0
+  (1, 1, 1, 3, 4)     0    40     0     0     0     0     0
+  (1, 1, 2, 2, 4)     0     0   120     0     0     0     0
+  (1, 1, 2, 3, 3)     0     0     0   240     0     0     0
+  (1, 2, 2, 2, 3)     0     0     0     0   120   120    40
+  (2, 2, 2, 2, 2)     0     0     0     0     0     0    24
+  Score types: 9, H values: 7
+  Nonzero rows: 9, nonzero cols: 7
+
+======================================================================
+SYNTHESIS — HOMOLOGICAL MORSE THEORY
+======================================================================
+
+KEY FINDINGS:
+1. Flag complex (transitive sub-tournaments) has varying f-vectors by H value.
+2. H is NOT a discrete Morse function — too many violations.
+3. Persistent homology: sublevel filtration shows how β₀ evolves with H.
+4. Score × H intersection matrix encodes the joint distribution.
+5. H-level sets have interesting connectivity (π₀) structure.
+6. Dominance poset chain lengths correlate with tournament structure.
+
