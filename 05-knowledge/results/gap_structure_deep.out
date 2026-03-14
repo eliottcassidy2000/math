@@ -1,0 +1,205 @@
+======================================================================
+GAP STRUCTURE AND THE ROLE OF Phi_3(2) = 7
+======================================================================
+
+--- CYCLOTOMIC POLYNOMIALS AT x=2 ---
+Mersenne factorization: 2^n - 1 = prod_{d|n} Phi_d(2)
+  2^ 1 - 1 =      1
+  2^ 2 - 1 =      3
+  2^ 3 - 1 =      7
+  2^ 4 - 1 =     15
+  2^ 5 - 1 =     31
+  2^ 6 - 1 =     63
+  2^ 7 - 1 =    127
+  2^ 8 - 1 =    255
+  2^ 9 - 1 =    511
+  2^10 - 1 =   1023
+  2^11 - 1 =   2047
+  2^12 - 1 =   4095
+  Phi_ 1(2) =        1
+  Phi_ 2(2) =        3
+  Phi_ 3(2) =        7
+  Phi_ 4(2) =        5
+  Phi_ 5(2) =       31
+  Phi_ 6(2) =        3
+  Phi_ 7(2) =      127
+  Phi_ 8(2) =       17
+  Phi_ 9(2) =       73
+  Phi_10(2) =       11
+  Phi_11(2) =     2047
+  Phi_12(2) =       13
+  Phi_13(2) =     8191
+  Phi_14(2) =       43
+  Phi_15(2) =      151
+  Phi_16(2) =      257
+  Phi_17(2) =   131071
+  Phi_18(2) =       57
+  Phi_19(2) =   524287
+  Phi_20(2) =      205
+  Phi_21(2) =     2359
+  Phi_22(2) =      683
+  Phi_23(2) =  8388607
+  Phi_24(2) =      241
+
+--- GAP VALUES ---
+  H=7  = Phi_3(2) = 7
+  H=21 = 3 * 7 = Phi_2(2) * Phi_3(2) = 21
+  H=21 = (2^3-1) * 3 = 7*3 = 21
+  H=21 = 2^4 + 2^2 + 2^0 = 16+4+1 (alternating in binary)
+
+--- THE POLYNOMIAL IDENTITY ---
+  Phi_3(x) = x^2 + x + 1
+  x * Phi_3(x) = x^3 + x^2 + x = x(x+1)^2 - x
+  (x+1) * Phi_3(x) = x^3 + 2x^2 + 2x + 1
+    = (x^3 + 1) + 2x(x+1)
+    = (x+1)(x^2-x+1) + 2x(x+1)
+    = (x+1)(x^2+x+1)
+    = (x+1) * Phi_3(x)
+
+  At x=2: (2+1) * Phi_3(2) = 3 * 7 = 21
+
+  So 21 = Phi_2(2) * Phi_3(2) = (2+1)(2^2+2+1)
+       = (x+1)(x^2+x+1) at x=2
+       = Phi_6(-2) ... no, Phi_6(x) = x^2-x+1
+
+--- BINARY STRUCTURE ---
+  H=  1 (T=  0): binary =        1  ok
+  H=  3 (T=  1): binary =       11  ok
+  H=  5 (T=  2): binary =      101  ok
+  H=  7 (T=  3): binary =      111  GAP
+  H=  9 (T=  4): binary =     1001  ok
+  H= 11 (T=  5): binary =     1011  ok
+  H= 13 (T=  6): binary =     1101  ok
+  H= 15 (T=  7): binary =     1111  ok
+  H= 17 (T=  8): binary =    10001  ok
+  H= 19 (T=  9): binary =    10011  ok
+  H= 21 (T= 10): binary =    10101  GAP
+  H= 23 (T= 11): binary =    10111  ok
+  H= 25 (T= 12): binary =    11001  ok
+  H= 27 (T= 13): binary =    11011  ok
+
+Pattern:
+  H=7  = 111       (all 1s, length 3)
+  H=21 = 10101     (alternating, length 5)
+  H=63 = 111111    (all 1s, length 6) -- NOT permanent gap
+
+  7  = 2^3 - 1 = M_3   (Mersenne prime)
+  21 = ... not Mersenne
+  63 = 2^6 - 1 = M_6 = 9*7 -- NOT prime
+
+  But: 21 in binary is 10101 = sum_{k even} 2^k for k=0,2,4
+       = (2^5 - 1)/(2 - (-1)) = 31/3... no
+       = (2^5 + 1)/(2 + 1) = 33/3 = 11... no
+       = (4^3 - 1)/(4 - 1) = 63/3 = 21 YES!
+
+  So 21 = (4^3 - 1)/3 = (2^6 - 1)/(2^2 - 1)
+        = Phi_3(4) = Phi_3(2^2)
+        = (2^2)^2 + 2^2 + 1 = 16 + 4 + 1 = 21
+
+  REMARKABLE: 21 = Phi_3(4) = Phi_3(2^2)
+  And:        7 = Phi_3(2)
+
+  The gaps are Phi_3(2^1) = 7 and Phi_3(2^2) = 21!
+  Is Phi_3(2^3) = Phi_3(8) = 64+8+1 = 73 a gap?
+  H=73 at n=7: check achievability...
+  From n=7 spectrum: 73 IS achievable! So NOT a gap.
+
+  Why does the pattern break at Phi_3(2^3) = 73?
+  T = (73-1)/2 = 36. Since 36 > 13 = (3^3-1)/2,
+  cubic decomposition (26, 3, 1) works.
+  AND T=36 has many valid quadratic decompositions too.
+
+  The pattern Phi_3(2^k) gives gaps only for k=1,2.
+  At k=3: T=36 is well within reach of cubic I.P.
+
+======================================================================
+ADDITIVE AND MULTIPLICATIVE ROLES OF 2 AND 3
+======================================================================
+
+ADDITIVE (the evaluation point x=2):
+  H = 1 + 2*a1 + 4*a2 + 8*a3 + ...
+  Powers of 2 weight the independence structure
+  2^k = weight of k-element independent sets
+
+MULTIPLICATIVE (the hierarchy base 3 = 2+1):
+  3^k = minimum H from k disjoint cycles
+  (1+2)^k = binomial sum of weights
+  The 3^k bound comes from the PRODUCT (1+x)^k
+
+INTERPLAY:
+  The gap H=7 arises because:
+  - Additively: T=3 is too small for alpha_2 >= 1 (needs T >= 4)
+    and alpha_1=3 forces splicing
+  - Multiplicatively: 7 = 3^2 - 2 is just below the k=2 threshold
+
+  The gap H=21 arises because:
+  - Additively: T=10 is too small for alpha_3 >= 1 (needs T >= 13)
+  - Multiplicatively: 21 = 3^3 - 6 is below the k=3 threshold
+
+  In both cases: the gap is at Phi_3(2^k) for k=1,2.
+  Phi_3(x) = x^2+x+1 = (x^3-1)/(x-1)
+  At x=2: Phi_3(2) = (8-1)/(2-1) = 7
+  At x=4: Phi_3(4) = (64-1)/(4-1) = 21
+
+  The common factor: x^3-1 = (x-1)(x^2+x+1)
+  At x=2: 7 = (2^3-1)/(2-1)
+  At x=2^2: 21 = (2^6-1)/(2^2-1) = 63/3
+
+  Key identity: Phi_3(2^k) = (2^{3k}-1)/(2^k-1)
+  k=1: (8-1)/1 = 7
+  k=2: (64-1)/3 = 21
+  k=3: (512-1)/7 = 73 (NOT a gap)
+
+======================================================================
+THE 5 AND 6 CONNECTION
+======================================================================
+
+5 = 2 + 3 (additive combination)
+6 = 2 * 3 (multiplicative combination)
+
+In the gap structure:
+  Level 1 span: [3, 9) has 3 odd values: 3, 5, 7
+    GAP at position 3 of 3 (the last one)
+  Level 2 span: [9, 27) has 9 odd values: 9, 11, ..., 25
+    GAP at position 7 of 9 (= 21, the 7th odd in [9,25])
+
+  Position of gap within level:
+  Level 1: gap is 7 = 3rd odd in [3,8], position 3/3 = LAST
+  Level 2: gap is 21 = 7th odd in [9,26]
+    21 = 9 + 2*6 = 9 + 12. Position = 7.
+    Fraction: 7/9 ~ 0.778
+
+  The gap position within its level:
+  Level 1: at Phi_3(2) = 7, fraction = (7-3)/(9-3) = 4/6 = 2/3
+  Level 2: at 3*Phi_3(2) = 21, fraction = (21-9)/(27-9) = 12/18 = 2/3
+
+  BOTH gaps are at exactly the 2/3 mark within their level!
+  (7-3)/(9-3) = 4/6 = 2/3
+  (21-9)/(27-9) = 12/18 = 2/3
+
+  This is because Phi_3(2^k) = (2^{3k}-1)/(2^k-1)
+  and the level starts at 3^k, ends at 3^{k+1}.
+  Fraction = (Phi_3(2^k) - 3^k) / (3^{k+1} - 3^k)
+           = (Phi_3(2^k) - 3^k) / (2 * 3^k)
+  k=1: Phi_3(2^1)=7, level=[3,9), fraction = 4/6 = 2/3
+  k=2: Phi_3(2^2)=21, level=[9,27), fraction = 12/18 = 2/3
+  k=3: Phi_3(2^3)=73, level=[27,81), fraction = 46/54 = 23/27
+  k=4: Phi_3(2^4)=273, level=[81,243), fraction = 192/162 = 32/27
+
+  k=1: fraction = 2/3 (= 4/6)
+  k=2: fraction = 2/3 (= 12/18)
+  k=3: fraction = 19/27 (NOT exactly 2/3!)
+
+  For k=1,2: the fraction IS exactly 2/3.
+  This means the gap sits at the 2/3 mark of the level width.
+  The level width is 2*3^k, and the gap is at 2*3^k * (2/3) = (4/3)*3^k
+  above the level start. So gap = 3^k + (4/3)*3^k = (7/3)*3^k = 7*3^{k-1}.
+
+  k=1: gap = 7 * 3^0 = 7 CHECK
+  k=2: gap = 7 * 3^1 = 21 CHECK
+  k=3: gap would be 7 * 3^2 = 63 but this is NOT a permanent gap!
+
+  So the 2/3 pattern predicts gaps at 7, 21, 63, 189, ...
+  But 63 is NOT permanent (found at n=8).
+  The 2/3 pattern holds only for k=1,2.
+  At k>=3, the cubic I.P. provides achievability.

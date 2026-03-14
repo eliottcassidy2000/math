@@ -1,0 +1,179 @@
+======================================================================
+WHY DOES alpha_1=10 FORCE alpha_2>=2?
+======================================================================
+
+--- Part 1: All n=6 tournaments with alpha_1=10 ---
+Total tournaments: 32768
+Tournaments with alpha_1=10: 720
+
+alpha_2 distribution when alpha_1=10:
+  alpha_2=2: 720 tournaments (H=29)
+
+--- Part 2: Cycle structure of alpha_1=10 tournaments ---
+
+  Type (6 3-sets, 4 5-sets, 6 dir-3, 4 dir-5): 720 tournaments
+    Example: bits=153
+    3-cycles: {0, 2, 4}(1d) {0, 2, 5}(1d) {0, 3, 4}(1d) {0, 3, 5}(1d) {1, 2, 4}(1d) {1, 3, 4}(1d) 
+    5-cycles: {0, 1, 2, 3, 4}(1d) {0, 1, 2, 4, 5}(1d) {0, 1, 3, 4, 5}(1d) {0, 2, 3, 4, 5}(1d) 
+    alpha_2 = 2
+    Disjoint pairs (2):
+      {0, 2, 5} x {1, 3, 4} -> 1 directed pairs
+      {0, 3, 5} x {1, 2, 4} -> 1 directed pairs
+
+======================================================================
+THE COMPLEMENTARY 3-CYCLE MECHANISM
+======================================================================
+
+At n=6: two disjoint 3-vertex sets partition all 6 vertices.
+There are C(6,3)/2 = 10 complementary pairs of 3-vertex sets.
+
+Complementary 3-cycle pairs in alpha_1=10 tournaments:
+  0 complementary cycle pairs: 720 tournaments, alpha_2 range [2, 2]
+
+======================================================================
+WHY 10 = C(5,2) SPECIFICALLY?
+======================================================================
+
+alpha_1 = 10 decompositions (c3_directed + c5_directed = 10):
+  c3_dir=10, c5_dir=0: needs exactly 10 3-cycles
+  c3_dir=9, c5_dir=1: valid if 1-1 5-vertex sets
+  c3_dir=8, c5_dir=2: valid if 1-2 5-vertex sets
+  c3_dir=7, c5_dir=3: valid if 1-3 5-vertex sets
+  c3_dir=6, c5_dir=4: valid if 2-4 5-vertex sets
+  c3_dir=5, c5_dir=5: valid if 2-5 5-vertex sets
+  c3_dir=4, c5_dir=6: valid if 2-6 5-vertex sets
+  c3_dir=3, c5_dir=7: valid if 3-6 5-vertex sets
+  c3_dir=2, c5_dir=8: valid if 3-6 5-vertex sets
+  c3_dir=1, c5_dir=9: valid if 3-6 5-vertex sets
+  c3_dir=0, c5_dir=10: valid if 4-6 5-vertex sets
+
+Actual decompositions observed:
+  c3_dir=6, c5_dir=4 (6 3-sets, 4 5-sets): 720 tournaments
+
+======================================================================
+THE PIGEONHOLE ARGUMENT
+======================================================================
+
+At n=6, there are C(6,3)/2 = 10 complementary pairs of 3-sets.
+CLAIM: If a tournament has c3 >= 8 3-cycle vertex sets,
+then some complementary pair are both 3-cycles, giving alpha_2 >= 1.
+
+Min complementary cycle pairs by c3 (3-cycle vertex set count), n=6:
+  c3= 0: min comp pairs = 0, range [0, 0]
+  c3= 1: min comp pairs = 0, range [0, 0]
+  c3= 2: min comp pairs = 0, range [0, 0]
+  c3= 3: min comp pairs = 0, range [0, 0]
+  c3= 4: min comp pairs = 0, range [0, 0]
+  c3= 5: min comp pairs = 0, range [0, 0]
+  c3= 6: min comp pairs = 0, range [0, 0]
+  c3= 7: min comp pairs = 0, range [0, 0]
+  c3= 8: min comp pairs = 0, range [0, 0]
+
+======================================================================
+THE VERTEX-COVER ARGUMENT FOR alpha_1=10
+======================================================================
+
+Each 3-cycle uses 3 of 6 vertices. Each vertex appears in C(5,2)=10
+of the C(6,3)=20 possible 3-vertex subsets.
+
+If c3 3-vertex subsets are 3-cycles, then each of the 10 complementary
+pairs (S, S^c) has probability roughly (c3/20)^2 of both being cycles.
+Expected complementary cycle pairs ~ 10 * (c3/20)^2.
+
+For alpha_1=10 with only 3-cycles (c5=0):
+  c3=10 directed 3-cycles means c3=10 vertex sets are 3-cycles.
+  Expected comp pairs ~ 10 * (10/20)^2 = 10/4 = 2.5
+  MINIMUM comp pairs = ?
+
+
+======================================================================
+COMBINATORIAL LOWER BOUND ON COMPLEMENTARY PAIRS
+======================================================================
+
+Model: 20 3-vertex subsets of {0,...,5}, paired into 10 complementary pairs.
+Choose c3 of the 20 subsets. How few complementary pairs can be hit?
+
+  c3= 0: lower bound = max(0, 0-10) = 0, actual min = 0
+  c3= 1: lower bound = max(0, 1-10) = 0, actual min = 0
+  c3= 2: lower bound = max(0, 2-10) = 0, actual min = 0
+  c3= 3: lower bound = max(0, 3-10) = 0, actual min = 0
+  c3= 4: lower bound = max(0, 4-10) = 0, actual min = 0
+  c3= 5: lower bound = max(0, 5-10) = 0, actual min = 0
+  c3= 6: lower bound = max(0, 6-10) = 0, actual min = 0
+  c3= 7: lower bound = max(0, 7-10) = 0, actual min = 0
+  c3= 8: lower bound = max(0, 8-10) = 0, actual min = 0
+  c3= 9: lower bound = max(0, 9-10) = 0, actual min = ?
+  c3=10: lower bound = max(0, 10-10) = 0, actual min = ?
+  c3=11: lower bound = max(0, 11-10) = 1, actual min = ?
+  c3=12: lower bound = max(0, 12-10) = 2, actual min = ?
+  c3=13: lower bound = max(0, 13-10) = 3, actual min = ?
+  c3=14: lower bound = max(0, 14-10) = 4, actual min = ?
+  c3=15: lower bound = max(0, 15-10) = 5, actual min = ?
+  c3=16: lower bound = max(0, 16-10) = 6, actual min = ?
+  c3=17: lower bound = max(0, 17-10) = 7, actual min = ?
+  c3=18: lower bound = max(0, 18-10) = 8, actual min = ?
+  c3=19: lower bound = max(0, 19-10) = 9, actual min = ?
+  c3=20: lower bound = max(0, 20-10) = 10, actual min = ?
+
+KEY INSIGHT: the lower bound max(0, c3-10) comes from
+the 10 complementary pairs being a PERFECT MATCHING on 20 items.
+Any selection of c3 > 10 items from 20 must include both
+endpoints of at least c3-10 matched pairs.
+
+For alpha_1=10 with ONLY 3-cycles: c3=10 of the 20 subsets.
+  => at least max(0, 10-10)=0 complementary pairs FORCED.
+  But the ACTUAL minimum is higher because tournament structure constrains
+  which 10 of the 20 subsets can be 3-cycles.
+
+CRITICAL: Tournament structure prevents choosing an independent set!
+The achievable 3-cycle configurations are NOT arbitrary subsets.
+Regular tournament at n=5 (unique): c3=2, so 3-cycle vertex sets
+are highly constrained by the tournament orientation.
+
+======================================================================
+SCORE SEQUENCE AND 3-CYCLE COUNT
+======================================================================
+
+Score sequences and possible c3 values at n=6:
+  scores=(np.int8(0), np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(5)): c3=0 (formula), observed [0]
+  scores=(np.int8(0), np.int8(1), np.int8(2), np.int8(4), np.int8(4), np.int8(4)): c3=1 (formula), observed [1]
+  scores=(np.int8(0), np.int8(1), np.int8(3), np.int8(3), np.int8(3), np.int8(5)): c3=1 (formula), observed [1]
+  scores=(np.int8(0), np.int8(1), np.int8(3), np.int8(3), np.int8(4), np.int8(4)): c3=2 (formula), observed [2]
+  scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(2), np.int8(4), np.int8(5)): c3=1 (formula), observed [1]
+  scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(5)): c3=2 (formula), observed [2]
+  scores=(np.int8(0), np.int8(2), np.int8(2), np.int8(3), np.int8(4), np.int8(4)): c3=3 (formula), observed [3]
+  scores=(np.int8(0), np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(4)): c3=4 (formula), observed [4]
+  scores=(np.int8(0), np.int8(3), np.int8(3), np.int8(3), np.int8(3), np.int8(3)): c3=5 (formula), observed [5]
+  scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(3), np.int8(4), np.int8(5)): c3=1 (formula), observed [1]
+  scores=(np.int8(1), np.int8(1), np.int8(1), np.int8(4), np.int8(4), np.int8(4)): c3=2 (formula), observed [2]
+  scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(2), np.int8(4), np.int8(5)): c3=2 (formula), observed [2]
+  scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(3), np.int8(3), np.int8(5)): c3=3 (formula), observed [3]
+  scores=(np.int8(1), np.int8(1), np.int8(2), np.int8(3), np.int8(4), np.int8(4)): c3=4 (formula), observed [4]
+  scores=(np.int8(1), np.int8(1), np.int8(3), np.int8(3), np.int8(3), np.int8(4)): c3=5 (formula), observed [5]
+  scores=(np.int8(1), np.int8(2), np.int8(2), np.int8(2), np.int8(3), np.int8(5)): c3=4 (formula), observed [4]
+  scores=(np.int8(1), np.int8(2), np.int8(2), np.int8(2), np.int8(4), np.int8(4)): c3=5 (formula), observed [5]
+  scores=(np.int8(1), np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4)): c3=6 (formula), observed [6]
+  scores=(np.int8(1), np.int8(2), np.int8(3), np.int8(3), np.int8(3), np.int8(3)): c3=7 (formula), observed [7]
+  scores=(np.int8(2), np.int8(2), np.int8(2), np.int8(2), np.int8(2), np.int8(5)): c3=5 (formula), observed [5]
+  scores=(np.int8(2), np.int8(2), np.int8(2), np.int8(2), np.int8(3), np.int8(4)): c3=7 (formula), observed [7]
+  scores=(np.int8(2), np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(3)): c3=8 (formula), observed [8]
+
+OBSERVATION: c3 is UNIQUELY determined by score sequence!
+c3 = C(n,3) - sum C(s_i, 2)  (classical result)
+
+For c3=10 at n=6: need sum C(s_i,2) = 20-10 = 10
+Score sequences with sum C(s_i,2) = 10:
+
+======================================================================
+DEFINITIVE MECHANISM: WHY alpha_1=10 FORCES alpha_2>=2
+======================================================================
+
+  Score (np.int8(1), np.int8(2), np.int8(2), np.int8(3), np.int8(3), np.int8(4)) (c3=6): 720 tournaments with alpha_1=10
+    c3=6 vertex sets, 4 directed 5-cycles, need 6 directed 3-cycles: 720 tournaments
+    But c3 3-cycles means 6 directed 3-cycles (each vertex set gives exactly 1).
+    So alpha_1 = 6 + 4 = 10
+
+    COMPLEMENTARY PAIR ANALYSIS:
+    bits=153: 6 3-cycle sets, 0 complementary pairs -> alpha_2=2
+    bits=211: 6 3-cycle sets, 0 complementary pairs -> alpha_2=2
+    bits=300: 6 3-cycle sets, 0 complementary pairs -> alpha_2=2

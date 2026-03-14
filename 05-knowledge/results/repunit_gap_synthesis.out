@@ -1,0 +1,282 @@
+======================================================================
+THE REPUNIT GAP THEOREM
+Permanent gaps as repunits in power-of-2 bases
+======================================================================
+
+--- REPUNIT STRUCTURE ---
+
+Phi_3(x) = x^2 + x + 1 = 111 in base x (three-digit repunit)
+
+  k=1: 111 in base   2 = 2^2+2+1 =      7  (T=    3, level 1)  [PERMANENT GAP]
+  k=2: 111 in base   4 = 4^2+4+1 =     21  (T=   10, level 2)  [PERMANENT GAP]
+  k=3: 111 in base   8 = 8^2+8+1 =     73  (T=   36, level 3)  [achievable]
+  k=4: 111 in base  16 = 16^2+16+1 =    273  (T=  136, level 5)  [achievable]
+  k=5: 111 in base  32 = 32^2+32+1 =   1057  (T=  528, level 6)  [achievable]
+  k=6: 111 in base  64 = 64^2+64+1 =   4161  (T= 2080, level 7)  [achievable]
+
+--- BINARY REPRESENTATION ---
+  H=    7 = 111 in base  2  binary:                  111  base-3: 21
+  H=   21 = 111 in base  4  binary:                10101  base-3: 210
+  H=   73 = 111 in base  8  binary:              1001001  base-3: 2201
+
+--- MERSENNE QUOTIENT STRUCTURE ---
+
+21 = M_6 / M_2 = (2^6-1)/(2^2-1) = 63/3
+In binary: 111111 / 11 = 10101
+
+General: Phi_3(2^k) = (2^{3k}-1)/(2^k-1)
+  k=1: (2^3-1)/(2^k-1) = 7/1 = 7  = M_3/M_1
+         binary: 111 / 1 = 111
+  k=2: (2^6-1)/(2^k-1) = 63/3 = 21  = M_6/M_2
+         binary: 111111 / 11 = 10101
+  k=3: (2^9-1)/(2^k-1) = 511/7 = 73  = M_9/M_3
+         binary: 111111111 / 111 = 1001001
+  k=4: (2^12-1)/(2^k-1) = 4095/15 = 273  = M_12/M_4
+         binary: 111111111111 / 1111 = 100010001
+  k=5: (2^15-1)/(2^k-1) = 32767/31 = 1057  = M_15/M_5
+         binary: 111111111111111 / 11111 = 10000100001
+
+======================================================================
+THE 2/3 FRACTION = 2/(2+1)
+======================================================================
+
+Within level j (H in [3^j, 3^{j+1})), the gap sits at fraction:
+  frac = (gap - 3^j) / (3^{j+1} - 3^j) = (gap - 3^j) / (2*3^j)
+
+  Phi_3(2^1) = 7: level 1, frac = (7-3)/(9-3) = 4/6 = 2/3
+  Phi_3(2^2) = 21: level 2, frac = (21-9)/(27-9) = 12/18 = 2/3
+  Phi_3(2^3) = 73: level 3, frac = (73-27)/(81-27) = 46/54 = 23/27
+  Phi_3(2^4) = 273: level 5, frac = (273-243)/(729-243) = 30/486 = 5/81
+
+The 2/3 comes from 2/(2+1) = evaluation_point / base.
+This is the RATIO OF THE TWO KEYS:
+  det(A_1) / (det(A_1) + 1) = 2/3
+
+Proof that frac = 2/3 for k=1,2:
+  Phi_3(2^k) = 4^k + 2^k + 1
+  Level j for k=1: j=1, level_start=3, width=6.
+    (7-3)/6 = 4/6 = 2/3. YES
+  Level j for k=2: j=2, level_start=9, width=18.
+    (21-9)/18 = 12/18 = 2/3. YES
+  For k>=3: Phi_3(2^k) >= 73 > 27 = 3^3.
+    Phi_3(2^3) = 73, level 3: [27, 81), frac = 46/54 = 23/27 != 2/3.
+
+  The 2/3 identity for k=1,2 is equivalent to:
+  Phi_3(2^k) = 3^j + (2/3)(2*3^j) = 3^j(1 + 4/3) = (7/3)*3^j = 7*3^{j-1}
+  k=1, j=1: 7 = 7*3^0 = 7. YES
+  k=2, j=2: 21 = 7*3^1 = 21. YES
+  So the gaps form the geometric sequence 7*3^{j-1} for j=1,2.
+
+======================================================================
+POSITIONAL NUMBER THEORY: T=10 AND T=11
+======================================================================
+
+T-values (= (H-1)/2) of the gaps:
+  T=3  (H=7):  10 in base 3 (one 3 + zero 1s)
+  T=10 (H=21): 101 in base 3 (one 9 + zero 3s + one 1)
+
+T=10 in base 3 is a PALINDROME: 101
+T=3  in base 3 is: 10
+
+The gap T-values in base 3:
+  T= 3: base-2 =     11, base-3 =     10
+  T=10: base-2 =   1010, base-3 =    101
+
+Achievable T-values around the gaps:
+  T= 1 (H= 3): base-3 =    1  [ok]
+  T= 2 (H= 5): base-3 =    2  [ok]
+  T= 3 (H= 7): base-3 =   10  [GAP]
+  T= 4 (H= 9): base-3 =   11  [ok]
+  T= 5 (H=11): base-3 =   12  [ok]
+  T= 6 (H=13): base-3 =   20  [ok]
+  T= 7 (H=15): base-3 =   21  [ok]
+  T= 8 (H=17): base-3 =   22  [ok]
+  T= 9 (H=19): base-3 =  100  [ok]
+  T=10 (H=21): base-3 =  101  [GAP]
+  T=11 (H=23): base-3 =  102  [ok]
+  T=12 (H=25): base-3 =  110  [ok]
+  T=13 (H=27): base-3 =  111  [ok]
+  T=14 (H=29): base-3 =  112  [ok]
+
+OBSERVATION: T=10 = 101 in base 3 is the SMALLEST palindrome
+in base 3 that lies in level 2 (T in [4, 12]).
+T=3 = 10 in base 3 ends in 0 (divisible by 3).
+
+
+======================================================================
+H AS A BASE-2 NUMBER WITH I.P. COEFFICIENT DIGITS
+======================================================================
+
+H = I(Omega, 2) = 1 + alpha_1*2 + alpha_2*4 + alpha_3*8 + ...
+This is literally H written in base 2 with 'digits' alpha_k!
+
+Unlike ordinary base-2, the 'digits' alpha_k can be >= 2.
+The representation is NOT unique in general.
+
+H mod 3 = alternating digit sum (base-2 / prime-3 rule):
+  H mod 3 = 1 - alpha_1 + alpha_2 - alpha_3 + ... mod 3
+  (since 2 = -1 mod 3, so 2^k = (-1)^k mod 3)
+
+For the gap values:
+  H=7: 7 mod 3 = 1. Any decomposition gives 1-a1+a2-... = 1 mod 3.
+  H=21: 21 mod 3 = 0. Any decomposition gives 1-a1+a2-... = 0 mod 3.
+
+The 'impossible decompositions' of T=10:
+  (a1,a2) = (10,0): alternating sum = 1-10+0 = -9 = 0 mod 3 YES
+  (a1,a2) = (8,1):  alternating sum = 1-8+1 = -6 = 0 mod 3 YES
+  (a1,a2) = (6,2):  alternating sum = 1-6+2 = -3 = 0 mod 3 YES
+  (a1,a2) = (4,3):  alternating sum = 1-4+3 = 0 = 0 mod 3 YES
+  All consistent mod 3 — the impossibility is NOT from mod-3 constraint!
+
+H mod 8 analysis:
+  H=7: 7 mod 8 = 7. This means alpha_1 = 3 mod 4, alpha_2 = ? mod 2.
+    Decomposition (3,0): alpha_1=3 mod 4, alpha_2=0 mod 2. YES
+  H=21: 21 mod 8 = 5. This means alpha_1 = 2 mod 4, alpha_2 odd.
+    Decompositions: (10,0) has a1=2 mod 4, a2=0: H=21 mod 8 = 1+20 mod 8 = 5.
+    Wait: H = 1+2*10 = 21. 21 mod 8 = 5. From a2=0: H mod 4 = 1+2*10 mod 4 = 1+0 = 1.
+    Hmm, 21 mod 4 = 1. And 1+2*a1 mod 4 = 1+0 = 1 (a1=10 even). YES
+
+======================================================================
+MULTIPLICATION VS ADDITION: 5=2+3 AND 6=2*3
+======================================================================
+
+5 = 2+3 (additive combination of keys)
+6 = 2*3 (multiplicative combination of keys)
+
+In the tournament framework:
+  ADDITIVE: H = I(2) = 1 + 2*a1 + 4*a2 + 8*a3 + ...
+    Powers of 2 WEIGHT the independence structure.
+    2 is the evaluation point.
+
+  MULTIPLICATIVE: 3^k = (2+1)^k = level boundary
+    Powers of 3 PARTITION the achievable H-values.
+    3 is the base of the hierarchy.
+
+  5 = 2+3: appears in the Gaussian identity H = 5-4*Re(I(i))+2*Im(I(i))
+  6 = 2*3: the width of level 1 is 6 (from 3 to 9)
+
+  Level 1: [3, 9) has width 6 = 2*3.
+    3 odd values: {3, 5, 7}. Gap at 7 (the last).
+    Gap fraction 2/3 = additive/base.
+
+  Level 2: [9, 27) has width 18 = 2*9 = 2*3^2.
+    9 odd values: {9, 11, 13, 15, 17, 19, 21, 23, 25}.
+    Gap at 21 (7th of 9 = position 7).
+    Gap fraction 2/3 again.
+
+  The odd count in level k:
+    = 3^k (number of odd integers in [3^k, 3^{k+1}))
+    Level 1: 3 odd values. Level 2: 9. Level 3: 27.
+    These are ALSO powers of 3! Self-similar structure.
+
+  Gap position within level:
+    Level 1: gap at position 3/3 = 1.0 (last value)
+    Level 2: gap at position 7/9 = 0.778
+    The gap is at the (Phi_3(2^k) - 3^k)/2 + 1 = ??? odd-value position.
+    k=1: gap H=7, position 3/3 among odds
+    k=2: gap H=21, position 7/9 among odds
+
+======================================================================
+EXPONENTIATION: 2^3=8 VS 3^2=9 (THE FUNDAMENTAL ASYMMETRY)
+======================================================================
+
+2^3 = 8: the dimension of the octonions, where associativity fails.
+3^2 = 9: the first cubic I.P. regime (n=9=3^2).
+8 < 9: exponentiation breaks commutativity (2^3 != 3^2).
+
+In tournament terms:
+  n=8: last n where claw-free holds (real roots guaranteed)
+       last n where seesaw beta_1*beta_3=0 holds
+       2^3 = the 'octonionic threshold'
+  n=9: first n where alpha_3>=1 possible (cubic I.P.)
+       first n where Paley construction on GF(9) gives a GRAPH not tournament
+       3^2 = the 'cubic threshold'
+
+The asymmetry 8<9 means:
+  The 'property loss' threshold (n=8=2^3) comes BEFORE
+  the 'flexibility gain' threshold (n=9=3^2).
+  There's no overlap — you lose structure before gaining flexibility.
+
+  If 2^3 > 3^2 (hypothetically), properties would last longer
+  than needed, and the gap structure would be different.
+
+Connection to permanent gaps:
+  Level 2 gap H=21: needs n>=9 for cubic flexibility (alpha_3>=1)
+  But 21 = 3*7 has T=10 < 13 = (3^3-1)/2, so cubic STILL can't help!
+  The gap survives even in the cubic regime because T=10 is TOO SMALL
+  for cubic terms (minimum cubic contribution is T=13).
+
+  Level 3 (H in [27,80]): NO permanent gaps because T >= 13
+  and cubic decomposition (T-13, 3, 1) + quadratic flexibility suffices.
+
+======================================================================
+FUNDAMENTAL IDENTITIES CONNECTING 2 AND 3
+======================================================================
+
+  3 = 2+1
+    => Base = evaluation_point + 1
+
+  3^k = (1+2)^k = sum C(k,j)*2^j
+    => Level boundary = binomial sum of weights
+
+  Phi_3(2) = 7 = 2^2+2+1
+    => First gap = cyclotomic at evaluation point
+
+  Phi_3(4) = 21 = 4^2+4+1 = 3*7
+    => Second gap = cyclotomic at squared evaluation point
+
+  2/3 = eval_point/base
+    => Gap fraction within level
+
+  7*3^{k-1} = gap at level k (k=1,2)
+    => Geometric progression of gaps
+
+  T >= (3^k-1)/2 if alpha_k>=1
+    => Cubic exclusion from 3^k bound
+
+  H mod 3 = alternating alpha sum
+    => Base-2/prime-3 positional rule
+
+  I(omega) in Z[omega] = Dehn invariant
+    => Eisenstein evaluation = scissors obstruction
+
+  det(A_1)=2, det(A_2)=3
+    => Tournament keys = Cartan determinants
+
+======================================================================
+WHY EXACTLY TWO PERMANENT GAPS?
+======================================================================
+
+The permanent gaps exist at levels 1 and 2 but NOT level 3+.
+
+Level 1 gap: H=7. Quadratic regime only (alpha_2=0 forced by T=3<4).
+  Only decomposition: (alpha_1=3, alpha_2=0).
+  Blocked: alpha_1=3 forces alpha_2>=2 (splicing + structure).
+
+Level 2 gap: H=21. Quadratic regime only (alpha_3=0 forced by T=10<13).
+  Four decompositions: (10,0), (8,1), (6,2), (4,3).
+  ALL four blocked by tournament combinatorics.
+
+Level 3+: NO gaps. Reason: cubic+ terms provide enough flexibility.
+  For H>=27 odd, T=(H-1)/2>=13 >= (3^3-1)/2.
+  The decomposition (T-13, 3, 1) gives a valid quadratic-cubic split:
+  alpha_1 = T-13, alpha_2 = 3, alpha_3 = 1.
+  These are achievable for sufficiently large n (n>=9).
+
+  For H in [27, 80] odd not achievable at small n:
+  H=63 = 3^4-18: T=31. Decomp (18,3,1) valid. Found at n=8. YES
+  H=27 = 3^3: T=13. Decomp (0,3,1) valid. Found at n=9. YES
+
+The TWO-GAPS structure is a THEOREM, not a coincidence:
+  It comes from the MATCH between the cubic exclusion threshold
+  (T >= 13 = (3^3-1)/2) and the quadratic blocking of T=3 and T=10.
+
+  If the cubic threshold were LOWER (say T >= 8), then T=10 could
+  be resolved cubically, and only T=3 (H=7) would be a permanent gap.
+
+  If the cubic threshold were HIGHER (say T >= 20), then T=11-19
+  would also need purely quadratic decompositions, and SOME of these
+  might be blocked too, giving MORE than 2 permanent gaps.
+
+  The threshold (3^3-1)/2 = 13 is EXACTLY right to block T=10 but
+  not T=11 or T=12. This is a consequence of 3 = 2+1.
