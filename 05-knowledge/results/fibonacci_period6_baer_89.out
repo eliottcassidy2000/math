@@ -1,0 +1,459 @@
+======================================================================
+FIBONACCI {2,3} DECOMPOSITION AND PERIOD-6 STRUCTURE
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: FIBONACCI {1,2}-TILINGS AND {2,3} SHADOW
+======================================================================
+
+  Fibonacci (1,2-tilings):
+    F( 1) =      1
+    F( 2) =      1
+    F( 3) =      2
+    F( 4) =      3
+    F( 5) =      5
+    F( 6) =      8
+    F( 7) =     13
+    F( 8) =     21
+    F( 9) =     34
+    F(10) =     55
+    F(11) =     89
+    F(12) =    144
+    F(13) =    233
+    F(14) =    377
+    F(15) =    610
+
+  Padovan (2,3-tilings):
+  (Number of {2,3}-compositions of n)
+    Pad( 0) =    1
+    Pad( 1) =    0
+    Pad( 2) =    1
+    Pad( 3) =    1
+    Pad( 4) =    1
+    Pad( 5) =    2
+    Pad( 6) =    2
+    Pad( 7) =    3
+    Pad( 8) =    4
+    Pad( 9) =    5
+    Pad(10) =    7
+    Pad(11) =    9
+    Pad(12) =   12
+    Pad(13) =   16
+    Pad(14) =   21
+    Pad(15) =   28
+    Pad(16) =   37
+    Pad(17) =   49
+    Pad(18) =   65
+    Pad(19) =   86
+
+  The {2,3}-composition counts for small n:
+    n= 2:   1 compositions: [(2,)]
+    n= 3:   1 compositions: [(3,)]
+    n= 4:   1 compositions: [(2, 2)]
+    n= 5:   2 compositions: [(2, 3), (3, 2)]
+    n= 6:   2 compositions: [(2, 2, 2), (3, 3)]
+    n= 7:   3 compositions: [(2, 2, 3), (2, 3, 2), (3, 2, 2)]
+    n= 8:   4 compositions: [(2, 2, 2, 2), (2, 3, 3), (3, 2, 3), (3, 3, 2)]
+    n= 9:   5 compositions: [(2, 2, 2, 3), (2, 2, 3, 2), (2, 3, 2, 2), (3, 2, 2, 2), (3, 3, 3)]
+    n=10:   7 compositions: [(2, 2, 2, 2, 2), (2, 2, 3, 3), (2, 3, 2, 3), (2, 3, 3, 2), (3, 2, 2, 3), (3, 2, 3, 2), (3, 3, 2, 2)]
+    n=11:   9 compositions: [(2, 2, 2, 2, 3), (2, 2, 2, 3, 2), (2, 2, 3, 2, 2), (2, 3, 2, 2, 2), (2, 3, 3, 3), (3, 2, 2, 2, 2), (3, 2, 3, 3), (3, 3, 2, 3)]...
+    n=12:  12 compositions: [(2, 2, 2, 2, 2, 2), (2, 2, 2, 3, 3), (2, 2, 3, 2, 3), (2, 2, 3, 3, 2), (2, 3, 2, 2, 3), (2, 3, 2, 3, 2), (2, 3, 3, 2, 2), (3, 2, 2, 2, 3)]...
+    n=13:  16 compositions: [(2, 2, 2, 2, 2, 3), (2, 2, 2, 2, 3, 2), (2, 2, 2, 3, 2, 2), (2, 2, 3, 2, 2, 2), (2, 2, 3, 3, 3), (2, 3, 2, 2, 2, 2), (2, 3, 2, 3, 3), (2, 3, 3, 2, 3)]...
+    n=14:  21 compositions: [(2, 2, 2, 2, 2, 2, 2), (2, 2, 2, 2, 3, 3), (2, 2, 2, 3, 2, 3), (2, 2, 2, 3, 3, 2), (2, 2, 3, 2, 2, 3), (2, 2, 3, 2, 3, 2), (2, 2, 3, 3, 2, 2), (2, 3, 2, 2, 2, 3)]...
+
+======================================================================
+PART 2: PISANO PERIODS -- WHEN DOES F(n) mod m REPEAT?
+======================================================================
+
+  Pisano periods pi(m) for m = 2..20:
+    pi( 2) =    3
+    pi( 3) =    8
+    pi( 4) =    6
+    pi( 5) =   20
+    pi( 6) =   24
+    pi( 7) =   16
+    pi( 8) =   12
+    pi( 9) =   24
+    pi(10) =   60
+    pi(11) =   10
+    pi(12) =   24
+    pi(13) =   28
+    pi(14) =   48
+    pi(15) =   40
+    pi(16) =   24
+    pi(17) =   36
+    pi(18) =   24
+    pi(19) =   18
+    pi(20) =   60
+
+  KEY: pi(4) = 6. The Fibonacci sequence mod 4 has period 6:
+  F(n) mod 4: 0 1 1 2 3 1 0 1 1 2 3 1 0 1 1 
+  Repeating block:  [0, 1, 1, 2, 3, 1]
+  This means F(n) mod 4 = F(n+6) mod 4 for ALL n.
+
+  pi(2) = 3: F mod 2 has period 3: [0, 1, 1, 0, 1, 1, ...]
+  pi(3) = 8: F mod 3 has period 8: [0, 1, 1, 2, 0, 2, 2, 1, ...]
+  pi(4) = 6: F mod 4 has period 6: [0, 1, 1, 2, 3, 1, ...]
+  pi(7) = 16: F mod 7 has period 16
+
+  THE DEEP MEANING: In tournament theory mod 4:
+  - H(T) is always ODD (Redei), so H mod 2 = 1 always
+  - H(T) mod 4 is either 1 or 3 (since H is odd)
+  - The Fibonacci period pi(4) = 6 governs parity cycling
+  - After 6 steps of any Fibonacci-like recurrence mod 4,
+    we return to the starting state => HEXAGONAL SYMMETRY
+
+======================================================================
+PART 3: THE 6-FOLD RETURN
+======================================================================
+
+  Fibonacci matrix F = [[0,1],[1,1]] mod 4:
+    F^1 mod 4 = [[0, 1], [1, 1]]
+    F^2 mod 4 = [[1, 1], [1, 2]]
+    F^3 mod 4 = [[1, 2], [2, 3]]
+    F^4 mod 4 = [[2, 3], [3, 1]]
+    F^5 mod 4 = [[3, 1], [1, 0]]
+    F^6 mod 4 = [[1, 0], [0, 1]]
+    => F^6 = I mod 4 (period found!)
+    F^7 mod 4 = [[0, 1], [1, 1]]
+
+  The 6 states form a HEXAGONAL cycle:
+  State 0: (0,1) -> State 1: (1,1) -> State 2: (1,2)
+  State 3: (2,3) -> State 4: (3,1) -> State 5: (1,0)
+  State 6 = State 0: (0,1)
+
+  In the Fibonacci mod 4 sequence:
+    F( 0) =    0 = 0 mod 4
+    F( 1) =    1 = 1 mod 4
+    F( 2) =    1 = 1 mod 4
+    F( 3) =    2 = 2 mod 4
+    F( 4) =    3 = 3 mod 4
+    F( 5) =    5 = 1 mod 4
+    F( 6) =    8 = 0 mod 4
+    F( 7) =   13 = 1 mod 4
+    F( 8) =   21 = 1 mod 4
+    F( 9) =   34 = 2 mod 4
+    F(10) =   55 = 3 mod 4
+    F(11) =   89 = 1 mod 4
+    F(12) =  144 = 0 mod 4
+
+======================================================================
+PART 4: FIBONACCI DECOMPOSED INTO EVEN AND ODD INDEX
+======================================================================
+
+  Even-indexed Fibonacci: F(0), F(2), F(4), F(6), ...
+    F( 0) =      0
+    F( 2) =      1
+    F( 4) =      3  = 3*1 - 0 = 3
+    F( 6) =      8  = 3*3 - 1 = 8
+    F( 8) =     21  = 3*8 - 3 = 21
+    F(10) =     55  = 3*21 - 8 = 55
+    F(12) =    144  = 3*55 - 21 = 144
+    F(14) =    377  = 3*144 - 55 = 377
+    F(16) =    987  = 3*377 - 144 = 987
+    F(18) =   2584  = 3*987 - 377 = 2584
+
+  Odd-indexed Fibonacci: F(1), F(3), F(5), F(7), ...
+    F( 1) =      1
+    F( 3) =      2
+    F( 5) =      5  = 3*2 - 1 = 5
+    F( 7) =     13  = 3*5 - 2 = 13
+    F( 9) =     34  = 3*13 - 5 = 34
+    F(11) =     89  = 3*34 - 13 = 89
+    F(13) =    233  = 3*89 - 34 = 233
+    F(15) =    610  = 3*233 - 89 = 610
+    F(17) =   1597  = 3*610 - 233 = 1597
+    F(19) =   4181  = 3*1597 - 610 = 4181
+
+  BOTH bisections satisfy x(n) = 3*x(n-1) - x(n-2)!
+  The characteristic polynomial: t^2 - 3t + 1 = 0
+  Roots: (3 +/- sqrt(5))/2 = phi^2, 1/phi^2
+  So: F(2n) = (phi^(2n) - (-1/phi)^(2n)) / sqrt(5)
+         = (phi^(2n) - phi^(-2n)) / sqrt(5)
+
+  The coefficient 3 = phi^2 + 1/phi^2 = phi + 2 - phi = ?
+  Actually: phi^2 + (1/phi)^2 = phi^2 + phi^(-2)
+  phi^2 = phi + 1, so phi^(-2) = 1/(phi+1) = phi - 1 (since phi^2 = phi+1)
+  Wait: phi^(-1) = phi - 1, phi^(-2) = 2 - phi
+  Sum: (phi+1) + (2-phi) = 3. YES!
+
+  The 3 in the bisection recurrence = phi^2 + phi^(-2).
+  And 3 = Phi_3(1) = the cyclotomic value that governs tournaments!
+
+  Fibonacci ratios and their integer parts:
+    F(3)/F(2) = 2/1 = 2.000000, int part = 2
+    F(4)/F(3) = 3/2 = 1.500000, int part = 1
+    F(5)/F(4) = 5/3 = 1.666667, int part = 1
+    F(6)/F(5) = 8/5 = 1.600000, int part = 1
+    F(7)/F(6) = 13/8 = 1.625000, int part = 1
+    F(8)/F(7) = 21/13 = 1.615385, int part = 1
+    F(9)/F(8) = 34/21 = 1.619048, int part = 1
+    F(10)/F(9) = 55/34 = 1.617647, int part = 1
+    F(11)/F(10) = 89/55 = 1.618182, int part = 1
+    F(12)/F(11) = 144/89 = 1.617978, int part = 1
+    F(13)/F(12) = 233/144 = 1.618056, int part = 1
+    F(14)/F(13) = 377/233 = 1.618026, int part = 1
+    F(15)/F(14) = 610/377 = 1.618037, int part = 1
+
+======================================================================
+PART 5: TOURNAMENT DECOMPOSITION INTO EDGES AND TRIANGLES
+======================================================================
+  n=3: edges=3, triangles=1, edge in 1 triangles, 3*triangles/edges = 1.0 = 1
+  n=4: edges=6, triangles=4, edge in 2 triangles, 3*triangles/edges = 2.0 = 2
+  n=5: edges=10, triangles=10, edge in 3 triangles, 3*triangles/edges = 3.0 = 3
+  n=6: edges=15, triangles=20, edge in 4 triangles, 3*triangles/edges = 4.0 = 4
+  n=7: edges=21, triangles=35, edge in 5 triangles, 3*triangles/edges = 5.0 = 5
+  n=8: edges=28, triangles=56, edge in 6 triangles, 3*triangles/edges = 6.0 = 6
+  n=9: edges=36, triangles=84, edge in 7 triangles, 3*triangles/edges = 7.0 = 7
+
+  The incidence: 3 * C(n,3) / C(n,2) = n-2
+  This is the AVERAGE number of triangles per edge.
+  At n=7: each edge is in 5 triangles. 3*35/21 = 5.
+
+======================================================================
+PART 6: BAER SUBPLANES IN PG(2,q) AND TOURNAMENT SHADOWS
+======================================================================
+
+  PG(2,q) parameters:
+    q=2: 7 points, 7 lines, 3 points/line
+    q=3: 13 points, 13 lines, 4 points/line
+    q=4: 21 points, 21 lines, 5 points/line
+    q=5: 31 points, 31 lines, 6 points/line
+    q=7: 57 points, 57 lines, 8 points/line
+    q=8: 73 points, 73 lines, 9 points/line
+    q=9: 91 points, 91 lines, 10 points/line
+
+  Baer subplane PG(2,q) inside PG(2,q^2):
+    q=2: PG(2,4) has 21 pts, Baer sub has 7 pts (0.3333), 7 Baer lines, 14 secant-1 lines
+    q=3: PG(2,9) has 91 pts, Baer sub has 13 pts (0.1429), 13 Baer lines, 78 secant-1 lines
+    q=4: PG(2,16) has 273 pts, Baer sub has 21 pts (0.0769), 21 Baer lines, 252 secant-1 lines
+    q=5: PG(2,25) has 651 pts, Baer sub has 31 pts (0.0476), 31 Baer lines, 620 secant-1 lines
+
+  TOURNAMENT CONNECTION:
+  At q=2: PG(2,4) has 21 points. PG(2,2) = Fano plane has 7 points.
+  21 = C(7,2) = number of arcs in a 7-tournament!
+  7 = number of vertices = number of Fano points!
+
+  The Fano plane PG(2,2) as a Baer subplane of PG(2,4):
+  - 7 points of the Fano plane sit inside the 21-point plane
+  - The 7 lines of the Fano (each with 3 points) become
+    'Baer lines' in PG(2,4)
+  - The remaining 21 - 7 = 14 points are 'external'
+
+  In tournament terms:
+  - The 7 vertices of T_7 are the Fano points
+  - The 21 arcs of T_7 are the PG(2,4) points
+  - Each Fano line (3 points) corresponds to a TRIANGLE
+  - The 7 Fano lines = 7 special triangles
+
+  The Paley tournament on 7 vertices IS the Fano geometry:
+  QR(7) = {1, 2, 4} (quadratic residues mod 7)
+  The Fano lines are {0,1,3}, {1,2,4}, {2,3,5}, {3,4,6},
+                     {4,5,0}, {5,6,1}, {6,0,2}
+  Each is a translate of {0,1,3} mod 7.
+
+  Paley tournament T_7 (QR = {1,2,4}):
+  3-cycles: 14, transitive triples: 21
+  Total triples: 35 = C(7,3) = 35
+  3-cycle fraction: 14/35 = 0.4000
+  H(Paley_7) = 189
+  Mean(H) at n=7 = 78.75 = 78.8
+
+======================================================================
+PART 7: CONE ITERATION -- TOWER OF CONES
+======================================================================
+
+  Cone tower: starting from the 3-cycle C_3 (H=3):
+  C_3 has H = 3 on 3 vertices
+  Cone(C_3) has H = 3 on 4 vertices
+  Cone^2(C_3) has H = 3 on 5 vertices
+  Cone^k(C_3) has H = 3 on 3+k vertices
+
+  So H=3 is achieved at EVERY n >= 3.
+  Similarly, H=1 (transitive tournament) is achieved at every n >= 1.
+
+  Starting from T_3 (transitive, H=1):
+  Cone(T_3) has H = 1 on 4 vertices
+  This is the transitive T_4 (or one of its relabelings)
+
+  H-spectra (all achieved values) for n=3..6:
+  n=3: |Spec| = 2, values = [1, 3]
+  n=4: |Spec| = 3, values = [1, 3, 5]
+        Values from n=3 that appear (via coning): [1, 3]
+        NEW values at n=4: [5]
+  n=5: |Spec| = 7, values = [1, 3, 5, 9, 11, 13, 15]
+        Values from n=4 that appear (via coning): [1, 3, 5]
+        NEW values at n=5: [9, 11, 13, 15]
+  n=6: |Spec| = 19, values = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+        Values from n=5 that appear (via coning): [1, 3, 5, 9, 11, 13, 15]
+        NEW values at n=6: [17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+======================================================================
+PART 8: 6-FOLD SYMMETRY AND THE HEXAGONAL STRUCTURE
+======================================================================
+
+  S_3 (symmetric group on triangle) has order 6.
+  Elements: {e, r, r^2, s, sr, sr^2}
+  This is the SAME 6 as pi(4) = 6.
+
+  In tournament terms:
+  - A triangle (3 vertices) has S_3 symmetry
+  - The Fibonacci parity mod 4 has period 6
+  - The 6-fold return IS the S_3 action on the basic triangle
+
+  More precisely: the Fibonacci matrix F = [[0,1],[1,1]]
+  acts on (Z/4Z)^2 with order 6.
+  The group <F> mod 4 is isomorphic to Z/6Z.
+  And Z/6Z = Z/2Z x Z/3Z (Chinese Remainder Theorem).
+  The Z/2Z factor is the 'edge flip' (complement)
+  The Z/3Z factor is the 'triangle rotation'
+  Together: the 6-fold period encodes edge-flip x triangle-rotation!
+
+======================================================================
+PART 9: BAER SUBPLANE STRUCTURE IN THE H-SPECTRUM
+======================================================================
+  PG(2,9) has 91 points. Baer subplane PG(2,3) has 13 points.
+  Exterior of Baer: 91 - 13 = 78 points.
+  Our H-spectrum at n=7: 77 values.
+  Difference: 78 - 77 = 1. SO CLOSE!
+
+  Alternative: 77 = 7 * 11.
+  7 = Fano plane points, 11 = ?
+  11 = number of edges in a 5-tournament + 1? No, C(5,2)=10.
+  11 = first prime not dividing |S_7| = 5040? No, 11 doesn't divide 5040.
+  Actually 5040 = 7! and 5040/11 = 458.18... so 11 does not divide 7!.
+
+  The H-spectrum size sequence:
+    n=3: 2 = C(3,2) - 1 = 2
+    n=4: 3 = C(4,2) - 3 = 3
+    n=5: 7 = C(5,2) - 3 = 7
+    n=6: 19 = C(6,2) - ... hmm
+
+    n=3: |Spec|=2, m=3, forbidden = -1
+    n=4: |Spec|=3, m=6, forbidden = -1
+    n=5: |Spec|=7, m=10, forbidden = -3
+    n=6: |Spec|=19, m=15, forbidden = -8
+    n=7: |Spec|=77, m=21, forbidden = -38
+
+======================================================================
+PART 10: THE TRIANGLE-CONE-FIBONACCI TRINITY
+======================================================================
+
+  THREE PILLARS of tournament structure:
+
+  1. TRIANGLE (3-cycle C_3):
+     - The basic non-trivial tournament motif
+     - H(C_3) = 3 = Phi_3(1) = smallest cyclotomic value
+     - Source of ALL 3-cycle structure
+     - Corresponds to the 3 in Padovan recurrence x^3 = x + 1
+
+  2. CONE (universal source/sink):
+     - THM-205: H(Cone(T)) = H(T) -- preserves Hamiltonian path count
+     - The STABILIZATION operator: adds a vertex without changing H
+     - Creates the "tower" T -> Cone(T) -> Cone^2(T) -> ...
+     - The 2 in Padovan recurrence: Cone adds 1 vertex, using 1 edge = 2-tile
+
+  3. FIBONACCI (period-6 parity):
+     - F(n) mod 4 has period 6 = |S_3| = 2 * 3
+     - Governs the cyclic return of parity structure
+     - The Fibonacci matrix [[0,1],[1,1]] is order 6 mod 4
+     - Decomposes into {1,2}-tilings (edges and paths)
+
+  THE TRINITY:
+     Triangle provides the CONTENT (what structures exist)
+     Cone provides the STABILITY (structures persist across n)
+     Fibonacci provides the RHYTHM (structures repeat with period 6)
+
+  Together: the tournament world is built from triangles,
+  stabilized by cones, and pulsed by the Fibonacci heartbeat.
+
+  The three recurrence constants:
+     phi = 1.618... (Fibonacci, {1,2}-tiles, parity period)
+     p   = 1.325... (Padovan, {2,3}-tiles, edge-triangle decomposition)
+     tau = 1.839... (tribonacci, {1,2,3}-tiles, full spectral structure)
+
+  Note: tau^3 = tau^2 + tau + 1 = Phi_3(tau) = 6.222...
+  And Phi_3(phi) = phi^2 + phi + 1 = 3 + sqrt(5) = 5.236...
+  And Phi_3(p) = p^2 + p + 1 = 4.080...
+
+  The UNIFICATION: Phi_3 evaluated at each constant gives
+  the "interaction energy" of that constant's recurrence with
+  the triangle (the fundamental 3-vertex motif).
+
+======================================================================
+PART 11: EDGE SENSITIVITY -- HOW FLIPPING ONE ARC CHANGES H
+======================================================================
+
+  n=3: |dH| distribution when flipping one arc:
+    |dH| =   0:      6 pairs (0.5000)
+    |dH| =   2:      6 pairs (0.5000)
+    Mean |dH| = 1.0000
+    All |dH| even? True
+
+  n=4: |dH| distribution when flipping one arc:
+    |dH| =   0:     72 pairs (0.3750)
+    |dH| =   2:     96 pairs (0.5000)
+    |dH| =   4:     24 pairs (0.1250)
+    Mean |dH| = 1.5000
+    All |dH| even? True
+
+  n=5: |dH| distribution when flipping one arc:
+    |dH| =   0:   1120 pairs (0.2188)
+    |dH| =   2:   1800 pairs (0.3516)
+    |dH| =   4:   1200 pairs (0.2344)
+    |dH| =   6:    600 pairs (0.1172)
+    |dH| =   8:    360 pairs (0.0703)
+    |dH| =  12:     40 pairs (0.0078)
+    Mean |dH| = 3.0000
+    All |dH| even? True
+
+  n=6: |dH| distribution when flipping one arc:
+    |dH| =   0:  35520 pairs (0.1445)
+    |dH| =   2:  36000 pairs (0.1465)
+    |dH| =   4:  38160 pairs (0.1553)
+    |dH| =   6:  31200 pairs (0.1270)
+    |dH| =   8:  30240 pairs (0.1230)
+    |dH| =  10:  23040 pairs (0.0938)
+    |dH| =  12:  12480 pairs (0.0508)
+    |dH| =  14:  12960 pairs (0.0527)
+    |dH| =  16:   7920 pairs (0.0322)
+    |dH| =  18:   9120 pairs (0.0371)
+    |dH| =  20:   2160 pairs (0.0088)
+    |dH| =  22:   1440 pairs (0.0059)
+    |dH| =  24:   3360 pairs (0.0137)
+    |dH| =  26:   1440 pairs (0.0059)
+    |dH| =  32:    720 pairs (0.0029)
+    Mean |dH| = 7.0078
+    All |dH| even? True
+
+======================================================================
+PART 12: PROJECTIVE LINE PG(1,q) AND FORBIDDEN VALUES
+======================================================================
+  Forbidden value counts:
+    n=3: 0 forbidden (both odd values 1,3 achieved)
+    n=4: 0 forbidden (all 3 odd values 1,3,5 achieved)
+    n=5: 1 forbidden (7 is not achieved)
+    n=6: 4 forbidden ({7, 21, 35, 39})
+    n=7: 18 forbidden
+
+  Forbidden count sequence: 0, 0, 1, 4, 18
+  Differences: 0, 1, 3, 14
+  Ratios: -, inf, 4.0, 4.5
+
+  Note: 0, 0, 1, 4, 18 ~ 0, 0, 1, 4, 18
+  Check Catalan: C_0=1, C_1=1, C_2=2, C_3=5, C_4=14. No match.
+  Check Bell: B_0=1, B_1=1, B_2=2, B_3=5, B_4=15. No match.
+
+  18 = 2 * 3^2
+  Could the forbidden values grow like 2 * 3^(n-5)?
+    n=5: 1, n=6: 4 (would predict 2), n=7: 18 (would predict 6). No.
+
+  More likely: forbidden fraction ~ 1/5 at n=7 (18/95 = 0.189)
+  At n=6: 4/23 = 0.174
+  At n=5: 1/8 = 0.125
+  Increasing slowly... might approach some limit?
+
+======================================================================
+DONE -- FIBONACCI PERIOD-6 BAER STRUCTURE
+======================================================================
