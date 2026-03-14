@@ -5,6 +5,7 @@
 **Last full repo scour:** opus-2026-03-06-S10
 **Last web research:** kind-pasteur-2026-03-10-S50 (Tang-Yau circulant path homology, Schweser-Stiebitz-Toft Redei revisited, Mitrovic NC Redei, Satake DRT)
 **Last engineering update:** kind-pasteur-2026-03-10-S54 (sparse T_19 Omega computation, CLAUDE.md engineering mandate)
+**Last packing framework update:** opus-2026-03-14-S71f (nesting obstruction, (z-2)(z-3) recurrence, 2-Bridge)
 
 ---
 
@@ -1755,3 +1756,36 @@ vertices needed for Ω₃ chains.
 - Exceptions without doubling pair: coset structure (S = a + H for subgroup H)
 **Scripts:** beta2_doubling_closure_general.py, beta2_threshold_analysis.py
 **Next step:** (1) Find exact threshold formula (2) Prove for tournaments (|S|=(n-1)/2)
+
+### INV-148: Nesting Obstruction Theory — Why H=7 is Simplex-in-Cuboid
+**Source:** opus-2026-03-14-S71f
+**Status:** DISCOVERED. Algebraic framework established, geometric interpretation given.
+**What:** H=7 = (1+2(1+x))|_{x=2}: composing simplex (1+x) into cuboid (1+2y) gives 3+2x, which has constant term 3 ≠ 1 → NOT a valid independence polynomial. Tournament geometry prevents nesting/composition of brick structures, leaving only multiplicative (disjoint union) decomposition.
+**Key results:**
+- H=7 impossible = tesseract impossibility (HYP-1230)
+- H=21 = 3×7 inherits obstruction multiplicatively (THM-079)
+- α₁=3 forces α₂≥2 at n=7,8 (verified 500k samples each) → H=15 not 7
+- Structural proof for all n sketched (pigeonhole on 9 vertex slots in n≥7 vertices)
+**Scripts:** nesting_obstruction.py, alpha1_3_n8_verify.py
+**Next steps:** (1) Complete rigorous proof that α₁=3 → α₂≥2 for ALL n. (2) Publish nesting obstruction as appendix to main paper.
+
+### INV-149: The (z-2)(z-3) = 0 Recurrence — Simplex-OCF Bridge
+**Source:** opus-2026-03-14-S71f
+**Status:** DISCOVERED. Complete algebraic analysis.
+**What:** The characteristic polynomial (z-2)(z-3) with roots 2 (OCF point) and 3 (simplex value) generates the forbidden sequence via the pure z=3 orbit from seed 7: {7, 21, 63, 189, ...}. Only first two are permanently forbidden; 63+ are achievable at n≥8. Mixed orbit H = 3^{k+1} - 2^{k+1} gives all achievable values.
+**Scripts:** knacci_tournament_recurrence.py
+**Next steps:** (1) Does the recurrence connect to deletion-contraction? (2) Higher-order recurrences (z-2)(z-3)(z-5)=0 for cuboid inclusion?
+
+### INV-150: The 2-Bridge — Unified Origin of the Factor 2
+**Source:** opus-2026-03-14-S71f (connecting kind-pasteur S72 Degree Drop Theorem)
+**Status:** DISCOVERED. Three manifestations verified.
+**What:** The number 2 appears in: (a) I(Ω,2)=H (OCF evaluation), (b) top-degree coefficients ±2 (Degree Drop Theorem), (c) ΔH=2·Δα₁ (arc flip derivative). All arise from the binary arc choice / path reversal involution. 1+(-1)^{n-1} = 2 for odd n.
+**Scripts:** degree_drop_packing.py, delta_h_gap.py
+**Next steps:** (1) Prove ΔH=2·Δα₁+4·Δα₂ for general n. (2) Connect to Vassiliev theory formally.
+
+### INV-151: Simplicial Selection Interpretation
+**Source:** opus-2026-03-14-S71f
+**Status:** DISCOVERED. Geometric framework.
+**What:** Each tournament T selects H(T) simplices from the standard n!-simplex triangulation of [0,1]^n. H/n! = 1/2^{n-1} on average. The f-polynomial of Δ^{n-1} at x=2 gives 3^n (simplex brick), and the f-polynomial of □^n at x=2 gives 5^n (cuboid brick).
+**Scripts:** simplex_cuboid_geometry.py
+**Next steps:** (1) Is the selection pattern random-looking or structured? (2) Does the geometric constraint explain the ΔH gap?
