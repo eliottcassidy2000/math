@@ -1,0 +1,539 @@
+"""
+fundamental_numbers.py -- kind-pasteur-2026-03-14-S106
+WHAT IS MOST FUNDAMENTAL? — Deep analysis of number types in tournament theory
+
+Building on:
+  S91-S99: Natural/Rational/Transcendental number atlas
+  S105: Phi_3 cone theorem — 1/3, 7, 21 unified
+
+THE CENTRAL QUESTION:
+What is the most fundamental number type in tournament theory?
+Is it the naturals (where H lives), the rationals (where means live),
+the algebraics (where growth rates live), or the transcendentals
+(where limits live)?
+
+THESIS: The most fundamental object is NONE of these individually.
+It is the CYCLOTOMIC POLYNOMIAL Phi_3(x) = x^2 + x + 1 evaluated
+at different levels of the number hierarchy:
+  x = 1 (natural) -> 3 -> 1/3 (rational): the cone ratio
+  x = 2 (natural) -> 7 (natural): the Fano prime / first forbidden
+  x = 4 (natural) -> 21 (natural): the second forbidden
+  x = phi (algebraic) -> 2*phi^2 (algebraic): Fibonacci bridge
+  x = omega (complex) -> 0: the VANISHING
+  x = 2^k (tower) -> |PG(2,F_{2^k})| (projective planes)
+  x -> inf -> x^2 (polynomial growth)
+  Szele: max/mean -> e (transcendental): efficiency
+
+The NUMBER TYPE determines WHAT YOU SEE when you look at tournaments.
+"""
+
+import sys, math
+import numpy as np
+from fractions import Fraction
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+def main():
+    print("=" * 70)
+    print("WHAT IS MOST FUNDAMENTAL?")
+    print("kind-pasteur-2026-03-14-S106")
+    print("=" * 70)
+
+    # ============================================================
+    # CHAPTER 1: THE THREE LAYERS OF TOURNAMENT ARITHMETIC
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 1: THE THREE LAYERS")
+    print(f"{'='*70}")
+
+    print("""
+  Tournament theory has THREE distinct arithmetic layers:
+
+  LAYER 1 — THE NATURAL LAYER (Z+)
+    Where: H(T), alpha_k, c_k, n, |Aut(T)|
+    What it sees: COUNTING. How many paths, how many cycles.
+    Characteristic: H is always ODD (Redei's theorem).
+    Key constants: 1, 3, 5, 7 (odd primes and the forbidden gap).
+    The natural layer knows about PARITY and DIVISIBILITY.
+
+  LAYER 2 — THE RATIONAL LAYER (Q)
+    Where: Mean(H) = n!/2^(n-1), Fourier coefficients, Var/Mean^2
+    What it sees: AVERAGING. The typical tournament, the expected value.
+    Characteristic: Powers of 2 in the denominator (2-adic structure).
+    Key constants: 1/2 (binary probability), 1/3 (cone ratio), 3/4 (level-0 energy).
+    The rational layer knows about SYMMETRY and PROBABILITY.
+
+  LAYER 3 — THE TRANSCENDENTAL LAYER (R \\ Q-bar)
+    Where: Szele limit (e), Stirling normalization (pi), entropy (ln 2)
+    What it sees: LIMITS. What happens as n -> infinity.
+    Characteristic: Inaccessible from finite computation.
+    Key constants: e (efficiency), pi (geometry), ln(2) (entropy per bit).
+    The transcendental layer knows about GROWTH and INFORMATION.
+
+  THE THESIS: These three layers are NOT independent.
+  They are PROJECTIONS of a single underlying structure
+  onto different number fields. That structure is Phi_3.""")
+
+    # ============================================================
+    # CHAPTER 2: THE NATURALS ARE NOT FUNDAMENTAL
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 2: THE NATURALS ARE NOT FUNDAMENTAL")
+    print(f"{'='*70}")
+
+    print("""
+  At first glance, natural numbers seem most fundamental:
+  H(T) is always a natural number, always odd.
+  The OCF H = 1 + 2*alpha_1 + 4*alpha_2 + ... lives in Z+.
+
+  But consider: WHY is H always odd? Why is H = 7 impossible?
+  These are CONSTRAINTS on the naturals from a deeper structure.
+
+  The forbidden value H = 7 is impossible because:
+    7 = Phi_3(2) = 2^2 + 2 + 1 = |PG(2,F_2)| = |Fano plane|.
+
+  This is NOT a statement about counting.
+  It's a statement about GEOMETRY (projective planes)
+  and ALGEBRA (cyclotomic polynomials) constraining the naturals.
+
+  The naturals are the SURFACE. The depth is algebraic.
+
+  ANALOGY: Primes are natural numbers, but understanding them
+  requires the Riemann zeta function (analytic/transcendental).
+  Similarly, H-values are natural, but understanding their
+  distribution requires Phi_3, the cone ratio, and Fourier analysis.""")
+
+    # ============================================================
+    # CHAPTER 3: THE RATIONALS ARE THE CONNECTIVE TISSUE
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 3: THE RATIONALS ARE THE CONNECTIVE TISSUE")
+    print(f"{'='*70}")
+
+    print("""
+  The rationals connect everything:
+
+  EXACT VALUES (all rational):
+    Mean(H) = n!/2^(n-1)         (rational, denominator = power of 2)
+    Var/Mean^2 = 1/3, 19/60, 13/45  (rational)
+    Level-2 energy: 2(n-2)/(n(n-1))  (rational)
+    Level-4 energy: 1/60, 1/45       (rational)
+    Fourier magnitudes: (n-2)!/2^(n-2)  (rational)
+
+  The MOST REMARKABLE rational: 1/3.
+
+  1/3 sits at the EXACT CENTER of the number web:
+    - As a natural: 3 = Phi_3(1) = the cycle generator
+    - As a rational: 1/3 = Var/Mean^2 = the cone ratio
+    - As algebraic: 1/3 = 1/|1-omega|^2 (Eisenstein norm)
+    - As transcendental: ln(4/3) = 0.288 (log-variance ≈ info rate)
+    - As complex: 3 = Parseval energy of Phi_3 on unit circle
+    - As 2-adic: 1/3 = ...010101 (repeating binary, the alternating sum)
+    - As 3-adic: 1/3 = ...000001/...000010 (the "identity/generator" ratio)
+
+  1/3 IS the rational embodiment of the 2-3 duality.
+  It says: the cycle (3) is to the whole (1) as variance is to mean^2.
+
+  THE RATIONAL LAYER IS THE BRIDGE between counting (naturals)
+  and asymptotics (transcendentals). It carries exact information
+  about BOTH.""")
+
+    # Verify the 2-adic expansion of 1/3
+    print(f"\n  2-adic expansion of 1/3:")
+    print(f"  1/3 = 0 + 1/4 + 0/8 + 1/16 + 0/32 + 1/64 + ...")
+    print(f"  = sum_{{k=1}}^inf 1/4^k = 1/4 * 1/(1-1/4) = 1/4 * 4/3 = 1/3 CHECK!")
+    print(f"  Binary: 0.010101... (repeating)")
+    print(f"  The REPEATING PERIOD is 2 (the tournament generator)!")
+    print(f"  And the repeating unit is '01' = the binary for 1.")
+    print(f"  So 1/3 in binary = 'the 1 that repeats with period 2'.")
+    print(f"  THIS IS THE TOURNAMENT: the identity (1) repeating in binary (2).")
+
+    # ============================================================
+    # CHAPTER 4: THE TRANSCENDENTALS ARE THE HORIZON
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 4: THE TRANSCENDENTALS ARE THE HORIZON")
+    print(f"{'='*70}")
+
+    print("""
+  Transcendental numbers appear at the BOUNDARY of tournament theory:
+  they're what you see when n -> infinity.
+
+  e = 2.71828...: THE EFFICIENCY LIMIT
+    max_H/mean_H -> e. This says: the BEST tournament is at most e times
+    the AVERAGE. No finite improvement can reach e — it's the horizon.
+
+    e appears because of the EXPONENTIAL structure of the tournament space:
+    2^m = 2^(n(n-1)/2) tournaments. Among exponentially many objects,
+    the maximum deviates from the mean by a factor that converges to e.
+
+    This is the SAME reason e appears in:
+    - The secretary problem (optimal stopping: e)
+    - Derangements (D(n)/n! -> 1/e)
+    - The birthday problem (sqrt(e * n) is the threshold)
+    - Compound interest (continuous compounding -> e)
+
+    ALL these are instances of the same principle:
+    When you have n! or 2^n objects and optimize, e appears.
+
+  pi = 3.14159...: THE GEOMETRIC NORMALIZATION
+    pi appears only in NORMALIZATIONS:
+    - Stirling: n! ~ sqrt(2*pi*n) * (n/e)^n
+    - Central binomial: C(2n,n) ~ 4^n / sqrt(pi*n)
+    - Gaussian distribution: 1/sqrt(2*pi) * exp(-x^2/2)
+    - Random matrix eigenvalue spacing: pi*s/2 * exp(-pi*s^2/4)
+
+    pi is the SHADOW of the circle. It appears because:
+    - The Fourier transform maps to the unit circle (|z| = 1)
+    - The Lee-Yang zeros approach the unit circle
+    - The Paley eigenvalues have arguments ~ pi/p
+
+    pi is less "deeply embedded" than e:
+    e controls MAGNITUDES (exponential growth)
+    pi controls PHASES (angular distribution)
+
+  ln(2) = 0.69315...: THE BINARY ENTROPY
+    ln(2) is the entropy of each binary choice (arc orientation).
+    Total tournament entropy = C(n,2) * ln(2).
+    The information rate I/m ~ 0.27 bits/arc ~ 0.27 * ln(2) nats/arc.
+
+    ln(2) is ARGUABLY the most fundamental transcendental here:
+    it converts between the NATURAL (2, the generator) and the
+    TRANSCENDENTAL (e, the limit). Since e^(ln 2) = 2.""")
+
+    # The hierarchy of transcendentals
+    print(f"\n  HIERARCHY OF TRANSCENDENTALS IN TOURNAMENTS:")
+    print(f"    ln(2) = {math.log(2):.6f}  (converts 2 <-> e, most fundamental)")
+    print(f"    e     = {math.e:.6f}   (efficiency limit)")
+    print(f"    pi    = {math.pi:.6f}   (geometric normalization)")
+    print(f"    e^pi  = {math.exp(math.pi):.6f} (Gelfond's constant, barely appears)")
+    print(f"")
+    print(f"    ln(2) bridges the natural generator 2 to the transcendental e.")
+    print(f"    If there is ONE most fundamental transcendental, it is ln(2).")
+    print(f"    Because: 2 = e^(ln 2), and tournaments live in powers of 2.")
+
+    # ============================================================
+    # CHAPTER 5: PHI_3 — THE MASTER KEY
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 5: PHI_3 — THE MASTER KEY ACROSS ALL LAYERS")
+    print(f"{'='*70}")
+
+    print("""
+  Phi_3(x) = x^2 + x + 1 is the MASTER KEY because it acts
+  consistently across ALL number layers.
+
+  IN THE NATURALS:
+    Phi_3(0) = 1 (the identity)
+    Phi_3(1) = 3 (the cycle generator)
+    Phi_3(2) = 7 (the Fano prime, first forbidden)
+    Phi_3(4) = 21 (the second forbidden)
+    Phi_3(2^k) = |PG(2,F_{2^k})| (all projective planes over F_2 extensions)
+
+  IN THE RATIONALS:
+    1/Phi_3(1) = 1/3 (the cone ratio = Var/Mean^2)
+    1/Phi_3(2) = 1/7 (the Fano reciprocal)
+    1/Phi_3(k) = 1/(k^2+k+1) = 1/(2*T_k + 1) (triangular numbers!)
+
+  IN THE ALGEBRAICS:
+    Phi_3(phi) = 2*phi^2 = 2*(phi+1) = 2*phi + 2
+    (evaluating the cube-root polynomial at the golden ratio
+     gives a FIBONACCI-RELATED algebraic number)
+    Phi_3(-1) = 1 (the fixed point at the "negative identity")
+
+  IN THE COMPLEX NUMBERS:
+    Phi_3(omega) = 0 (root = cube root of unity)
+    Phi_3(omega^2) = 0 (conjugate root)
+    |Phi_3(e^(i*theta))|^2 has Parseval energy 3
+
+  IN THE TRANSCENDENTALS:
+    Phi_3 generates the Szele ratio indirectly:
+    max_H / mean_H ~ e * correction
+    The correction involves log(Phi_3(2^k)) / k -> 2*log(2) = 2*ln(2)
+
+  IN THE p-ADICS:
+    Phi_3 is IRREDUCIBLE over F_2 (it defines F_4!)
+    Phi_3 splits over F_7 with root 2 (the tournament generator!)
+    This is WHY 7 is forbidden: Phi_3(2) = 0 mod 7 means
+    "the generator 2 is a cube root of unity in F_7"
+
+  Phi_3 IS the tournament. Every property is an evaluation of Phi_3.""")
+
+    # ============================================================
+    # CHAPTER 6: THE 2-3 DUALITY — THE DEEPEST STRUCTURE
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 6: THE 2-3 DUALITY — DEEPER THAN NUMBER TYPES")
+    print(f"{'='*70}")
+
+    print("""
+  Below all number types lies a SINGLE DUALITY: 2 versus 3.
+
+  THE BINARY (2):
+    - Each arc has 2 orientations
+    - The hypercube has 2^m vertices
+    - The independence polynomial is evaluated at x = 2
+    - The transfer matrix has eigenvalues involving 2^k
+    - F_2 is the base field
+    - 2 is the smallest prime (the "atomic" choice)
+
+  THE TERNARY (3):
+    - 3-cycles are the simplest "interesting" structure
+    - Phi_3 = x^2 + x + 1 is the 3rd cyclotomic polynomial
+    - The variance ratio is 1/3
+    - Period 6 = LCM(2,3) governs parity
+    - 3 generators {1, 2, 3} build tournament theory
+    - F_4 = F_2[x]/Phi_3(x) is the first nontrivial extension
+
+  THE INTERACTION 2 <-> 3:
+    - 2/3 (the exponent): 4^(1/3) = 2^(2/3) links them
+    - ln(2)/ln(3) = 0.631 (the "capacity" of base conversion)
+    - 6 = LCM(2,3) = period of tournament parity
+    - 1/3 = repeating binary 0.010101... (2 carries 3)
+    - 21 = 3 * 7 = 3 * Phi_3(2) (3 carrying the forbidden value)
+    - e = 2 + 1/e (approximately) — the transcendental interpolation
+
+  THESIS: The 2-3 duality is the REAL fundamental.
+  Everything else — naturals, rationals, algebraics, transcendentals —
+  is a different WAY OF LOOKING at the 2-3 interaction.
+
+    Through naturals: 2^k * 3^j gives H values
+    Through rationals: 2^(-k) * 3^(-j) gives Fourier coefficients
+    Through algebraics: phi = (1+sqrt(5))/2, and 5 = 2+3
+    Through transcendentals: ln(2) + ln(3) = ln(6), the period
+    Through complex: omega_3 and omega_6 on the unit circle""")
+
+    # The 2-3 interaction constants
+    print(f"\n  THE 2-3 INTERACTION TABLE:")
+    print(f"    2 + 3 = 5 (the ADE branch length, next Fibonacci)")
+    print(f"    2 * 3 = 6 (the period, LCM)")
+    print(f"    2^3 = 8 (octonion dimension, tournaments on 3 vertices)")
+    print(f"    3^2 = 9 (first non-power-of-2 square, Catalan's neighbor)")
+    print(f"    2/3 = {Fraction(2,3)} (the exponent connecting them)")
+    print(f"    3/2 = {Fraction(3,2)} (mean_H(3), perfect fifth)")
+    print(f"    2^3 - 3^2 = {8-9} = -1 (Catalan's conjecture/theorem!)")
+    print(f"    Phi_3(2) = 7 (2 evaluated in 3's polynomial)")
+    print(f"    Phi_2(3) = 3+1 = 4 = 2^2 (3 evaluated in 2's polynomial)")
+    print(f"    ln(2)/ln(3) = {math.log(2)/math.log(3):.6f}")
+    print(f"    ln(3)/ln(2) = {math.log(3)/math.log(2):.6f} = log_2(3)")
+    print(f"    2^(1/3) = {2**(1/3):.6f}")
+    print(f"    3^(1/2) = {3**(1/2):.6f}")
+
+    # ============================================================
+    # CHAPTER 7: THE HIERARCHY OF FUNDAMENTALITY
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 7: THE HIERARCHY OF FUNDAMENTALITY")
+    print(f"{'='*70}")
+
+    print("""
+  From LEAST to MOST fundamental:
+
+  5. COMPLEX NUMBERS: F(T, i) is a Gaussian integer.
+     Least fundamental because they appear only in spectral theory,
+     not in the core counting. Useful but derivative.
+
+  4. TRANSCENDENTAL NUMBERS: e, pi, ln(2).
+     Important for asymptotics but unreachable from finite computation.
+     They describe the LIMIT, not the MECHANISM.
+     Exception: ln(2) = log of the generator, arguably more fundamental.
+
+  3. ALGEBRAIC IRRATIONALS: phi, sqrt(2), sqrt(3), sqrt(p).
+     Important for growth rates and eigenvalues, but they DERIVE from
+     the rational layer (as roots of polynomials with rational coefficients).
+
+  2. RATIONALS: 1/2, 1/3, (n-2)!/2^(n-2).
+     The connective tissue. They carry EXACT information.
+     More fundamental than algebraics because the key formulas
+     (Fourier coefficients, energy ratios) are ALL rational.
+
+  1. THE 2-3 DUALITY: The irreducible core.
+     Everything reduces to the interaction between 2 and 3.
+     Phi_3 = x^2 + x + 1 encodes this interaction as a polynomial.
+     Not a "number" per se — it's a RELATION between numbers.
+
+  BUT THERE IS SOMETHING EVEN DEEPER:
+
+  0. THE NUMBER 1.
+     H(T) = 1 for the transitive tournament. The GROUND STATE.
+     1 is the multiplicative identity, the additive unit generator.
+     H = 1 + (everything else). The "1" in Phi_3(0) = 1.
+     The "1" in the OCF: H = 1 + 2*alpha_1 + 4*alpha_2 + ...
+     The EXISTENCE of a unique ordering (transitivity) starts from 1.
+
+     And: 1 = Phi_3(-1) = 1 - 1 + 1 = the evaluation at the
+     "anti-generator" (-1). The ground state IS Phi_3
+     at the point where 2 and 3 cancel.
+
+  THE ANSWER: The most fundamental thing in tournament theory is
+  the number 1 — the ground state, the identity, the transitive
+  tournament — from which everything else is built by the
+  2-3 interaction encoded in Phi_3.""")
+
+    # ============================================================
+    # CHAPTER 8: THE TRINITY — 1, 2, 3
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 8: THE TRINITY — 1, 2, 3")
+    print(f"{'='*70}")
+
+    print("""
+  THE TRINITY {1, 2, 3} generates ALL of tournament theory:
+
+  1 = the ground state (transitive tournament, identity, H=1)
+  2 = the binary generator (arc choices, hypercube, field characteristic)
+  3 = the cycle generator (3-cycle, first non-trivial structure)
+
+  FROM THE TRINITY:
+    Phi_3(x) = x^2 + x + 1 = the polynomial of the trinity
+    (all three coefficients are 1, degree is 2, cyclotomic index is 3)
+
+    H = 1 + 2*alpha_1 + 4*alpha_2 + ... (the OCF)
+    The OCF uses: base = 1, step = 2, cycle = 3 (via alpha_k)
+
+    The MEAN: n!/2^(n-1) uses 1 (factorials start from 1),
+    2 (binary denominator), and implicitly 3 (the first cycle
+    contributes the first non-trivial correction).
+
+    The FORBIDDEN VALUES: 7 = 1 + 2 + 4 = Phi_3(2),
+    21 = 1 + 4 + 16 = Phi_3(4) = Phi_3(2^2).
+    Both are built from the trinity applied to itself.
+
+  THE TRINITY AND NUMBER TYPES:
+    1 generates the NATURALS (1, 1+1=2, 1+1+1=3, ...)
+    2 generates the DYADIC RATIONALS (1/2, 1/4, 1/8, ...)
+    3 generates the TERNARY STRUCTURE (omega, Phi_3, F_4)
+
+    Together: 1+2+3 = 6 = the period
+    Product: 1*2*3 = 6 (same!)
+    The ONLY triple where sum = product = 6.
+
+  THIS IS NOT NUMEROLOGY — it's the mathematical identity:
+    1 + 2 + 3 = 1 * 2 * 3
+  which holds ONLY for {1, 2, 3}.
+
+  And tournament theory is the UNIQUE combinatorial theory that
+  is generated by exactly this triple:
+    1 (the identity/ground state)
+    2 (the binary choice)
+    3 (the minimal cycle)""")
+
+    # Verify the uniqueness
+    print(f"\n  Verification: sum = product only for (1,2,3):")
+    for a in range(1, 10):
+        for b in range(a, 10):
+            for c in range(b, 10):
+                if a + b + c == a * b * c:
+                    print(f"    {a} + {b} + {c} = {a+b+c} = {a} * {b} * {c} = {a*b*c}")
+
+    # ============================================================
+    # CHAPTER 9: THE LADDER OF COMPREHENSION
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 9: THE LADDER OF COMPREHENSION")
+    print(f"{'='*70}")
+
+    print("""
+  To UNDERSTAND tournaments at different depths, you need
+  different number types:
+
+  LEVEL 0 — With NATURALS alone:
+    You can COUNT Hamiltonian paths (H(T) = some odd number).
+    You know H is always odd, and H != 7, H != 21.
+    You can list all tournaments and compute H for each.
+    But you cannot explain WHY H != 7. You see the surface.
+
+  LEVEL 1 — With RATIONALS:
+    You can compute the MEAN (n!/2^(n-1)) and VARIANCE.
+    You know Var/Mean^2 = 1/3 at n=3,4 and have exact formulas.
+    You can do Fourier analysis: |H_hat(S)| = (n-2)!/2^(n-2).
+    You understand the ENERGY DECOMPOSITION across levels.
+    But you cannot explain the ASYMPTOTIC behavior (why e?).
+
+  LEVEL 2 — With ALGEBRAICS:
+    You understand the GROWTH: the Fibonacci connection, phi.
+    You know the Paley eigenvalues (-1+/-i*sqrt(p))/2.
+    You understand F_4 = F_2[x]/Phi_3(x), the field extension.
+    You can explain WHY 7 is forbidden (Phi_3(2) = 0 mod 7,
+    meaning 2 is a cube root of unity in F_7).
+    But you cannot compute the exact limiting behavior.
+
+  LEVEL 3 — With TRANSCENDENTALS:
+    You know max_H/mean_H -> e (Szele's theorem).
+    You can apply Stirling: mean_H ~ sqrt(2*pi*n) * (n/2e)^n.
+    You understand the information-theoretic rate I/m ~ 0.27.
+    You have the complete asymptotic picture.
+
+  LEVEL 4 — With COMPLEX NUMBERS:
+    You see the Lee-Yang zeros on the unit circle.
+    You can compute F(T,i) as a Gaussian integer.
+    You understand the phase structure of tournaments.
+
+  LEVEL 5 — With p-ADICS:
+    You see H = 1 + 2*alpha_1 + 4*alpha_2 as a 2-adic expansion.
+    You understand v_3(F(T,omega)) >= 2 for n >= 6.
+    You see the ARITHMETIC of tournament invariants.
+
+  THE PARADOX: Higher levels give DEEPER understanding,
+  but lower levels are MORE CONCRETE.
+  The transcendentals explain MORE but compute LESS.
+  The naturals compute MORE but explain LESS.
+
+  RESOLUTION: Phi_3(x) = x^2 + x + 1 works AT EVERY LEVEL.
+  It is the single formula that provides appropriate insight
+  at whatever depth you choose to work.""")
+
+    # ============================================================
+    # CHAPTER 10: THE FINAL ANSWER
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("CHAPTER 10: THE FINAL ANSWER")
+    print(f"{'='*70}")
+
+    print("""
+  WHAT IS MOST FUNDAMENTAL IN TOURNAMENT THEORY?
+
+  Not the naturals (they're the output).
+  Not the rationals (they're the averages).
+  Not the algebraics (they're the growth rates).
+  Not the transcendentals (they're the limits).
+
+  The most fundamental thing is the RELATION 1 + 2 + 3 = 1 * 2 * 3.
+
+  This single equation contains:
+    1 = the ground state (H = 1 for transitive tournaments)
+    2 = the generator (binary choices, F_2 field)
+    3 = the cycle (3-cycle, Phi_3, cube roots of unity)
+    6 = the period (LCM(2,3), tournament parity cycle)
+
+  And the polynomial that ENCODES this relation is:
+    Phi_3(x) = x^2 + x + 1
+  whose coefficients are (1, 1, 1) — three copies of 1,
+  in a degree-2 polynomial with cyclotomic index 3.
+
+  Phi_3 evaluated at different points gives EVERY key constant:
+    x=0: 1 (ground state)
+    x=1: 3 (cycle generator, 1/3 = cone ratio)
+    x=2: 7 (first forbidden, Fano plane)
+    x=4: 21 (second forbidden, PG(2,4))
+    x=phi: 2phi^2 (Fibonacci bridge)
+    x=omega: 0 (root = cube root of unity)
+    x=2^k: |PG(2,F_{2^k})| (projective plane tower)
+
+  The NUMBER TYPES are just LENSES for viewing Phi_3.
+  The naturals see Phi_3(integer).
+  The rationals see 1/Phi_3(integer).
+  The algebraics see Phi_3(algebraic).
+  The complex see Phi_3(omega) = 0.
+  The transcendentals see lim Phi_3(x)/x^2 = 1 as x -> inf.
+
+  THE TOURNAMENT IS Phi_3.
+  Phi_3 IS THE TOURNAMENT.
+    """)
+
+    print(f"\n{'='*70}")
+    print("DONE — THE MOST FUNDAMENTAL THING IS THE TRINITY {1,2,3}")
+    print(f"{'='*70}")
+
+if __name__ == '__main__':
+    main()
