@@ -1,0 +1,176 @@
+======================================================================
+PART 1: TROPICAL PERMANENT OF TOURNAMENT
+======================================================================
+
+n=4:
+  Corr(H, permanent) = 0.894427
+  perm=0: H values = [1, 3]
+  perm=1: H values = [5]
+  Tropical H values: [3]
+  (tropical H = max forward arcs in a path)
+  Tropical permanent distribution: {3: 40, 4: 24}
+
+n=5:
+  Corr(H, permanent) = 0.927173
+  perm=0: H values = [1, 3, 5]
+  perm=1: H values = [9, 11]
+  perm=2: H values = [13, 15]
+  perm=3: H values = [15]
+  Tropical H values: [4]
+  (tropical H = max forward arcs in a path)
+  Tropical permanent distribution: {4: 480, 5: 544}
+
+======================================================================
+PART 2: QUANTUM TOURNAMENT STATE
+======================================================================
+
+n=4:
+  von Neumann entropy by H:
+    H=  1: mean S_vN = 0.774750, range [0.7747, 0.7747]
+    H=  3: mean S_vN = 1.251629, range [1.2516, 1.2516]
+    H=  5: mean S_vN = 1.577532, range [1.5775, 1.5775]
+  Max entropy (maximally mixed): log2(4) = 2.0000
+  Corr(H, S_vN) = 0.995608
+
+n=5:
+  von Neumann entropy by H:
+    H=  1: mean S_vN = 0.895940, range [0.8959, 0.8959]
+    H=  3: mean S_vN = 1.205591, range [1.2056, 1.2056]
+    H=  5: mean S_vN = 1.342177, range [1.3422, 1.3422]
+    H=  9: mean S_vN = 1.552625, range [1.5046, 1.6006]
+    H= 11: mean S_vN = 1.654945, range [1.6549, 1.6549]
+    H= 13: mean S_vN = 1.835800, range [1.8358, 1.8358]
+    H= 15: mean S_vN = 1.910464, range [1.9010, 1.9162]
+  Max entropy (maximally mixed): log2(5) = 2.3219
+  Corr(H, S_vN) = 0.978148
+
+======================================================================
+PART 3: QUANTUM WALK ON TOURNAMENT
+======================================================================
+
+n=4:
+  bits=0, H=1:
+    Skew eigenvalues: ['-2.4142i', '-0.4142i', '0.4142i', '2.4142i']
+    Max |P_ij - 1/n| at t=1: 11.047080
+  bits=32, H=1:
+    Skew eigenvalues: ['-2.4142i', '-0.4142i', '0.4142i', '2.4142i']
+    Max |P_ij - 1/n| at t=1: 11.047080
+  bits=63, H=1:
+    Skew eigenvalues: ['-2.4142i', '-0.4142i', '0.4142i', '2.4142i']
+    Max |P_ij - 1/n| at t=1: 11.047080
+
+n=5:
+  bits=0, H=1:
+    Skew eigenvalues: ['-3.0777i', '-0.7265i', '0.0000i', '0.7265i', '3.0777i']
+    Max |P_ij - 1/n| at t=1: 25.414977
+  bits=512, H=1:
+    Skew eigenvalues: ['-3.0777i', '-0.7265i', '0.0000i', '0.7265i', '3.0777i']
+    Max |P_ij - 1/n| at t=1: 25.414977
+  bits=1023, H=1:
+    Skew eigenvalues: ['-3.0777i', '-0.7265i', '0.0000i', '0.7265i', '3.0777i']
+    Max |P_ij - 1/n| at t=1: 25.414977
+
+======================================================================
+PART 4: TROPICAL DISTANCE MATRIX
+======================================================================
+
+n=5:
+  Diameter distribution (strongly connected): {2: 64, 3: 360, 4: 120}
+  Corr(H, Wiener index) = -0.962868
+  Diameter 2: mean H = 15.00, range [15, 15]
+  Diameter 3: mean H = 11.00, range [9, 13]
+  Diameter 4: mean H = 9.00, range [9, 9]
+
+n=6:
+  Diameter distribution (strongly connected): {2: 253, 3: 2264, 4: 761, 5: 99}
+  Corr(H, Wiener index) = -0.910197
+  Diameter 2: mean H = 43.32, range [43, 45]
+  Diameter 3: mean H = 31.05, range [17, 45]
+  Diameter 4: mean H = 20.27, range [15, 29]
+  Diameter 5: mean H = 17.00, range [17, 17]
+
+======================================================================
+PART 5: PERMANENT AND BOSON SAMPLING
+======================================================================
+
+n=4:
+  H=1: (perm, det) values = {(0, 0): 24}
+  H=3: (perm, det) values = {(0, 0): 16}
+  H=5: (perm, det) values = {(1, -1): 24}
+  Permanent values for H < max: [0]
+  Permanent values for H = max = 5: [1]
+
+n=5:
+  H=1: (perm, det) values = {(0, 0): 120}
+  H=3: (perm, det) values = {(0, 0): 120}
+  H=5: (perm, det) values = {(0, 0): 240}
+  H=9: (perm, det) values = {(1, 1): 240}
+  H=11: (perm, det) values = {(1, 1): 120}
+  H=13: (perm, det) values = {(2, 2): 120}
+  H=15: (perm, det) values = {(2, 2): 24, (3, 3): 40}
+  Permanent values for H < max: [0, 1, 2]
+  Permanent values for H = max = 15: [2, 3]
+
+======================================================================
+PART 6: CLASSICAL RANDOM WALK ENTROPY
+======================================================================
+
+n=5:
+  H=  1: mean entropy rate = 0.000000
+  H=  3: mean entropy rate = 0.254720
+  H=  5: mean entropy rate = 0.589504
+  H=  9: mean entropy rate = 0.679779
+  H= 11: mean entropy rate = 0.866092
+  H= 13: mean entropy rate = 0.832496
+  H= 15: mean entropy rate = 0.935150
+  Corr(H, entropy rate) = 0.865685
+
+n=6:
+  H=  1: mean entropy rate = 0.000000
+  H=  3: mean entropy rate = 0.223246
+  H=  5: mean entropy rate = 0.524952
+  H=  9: mean entropy rate = 0.735618
+  H= 11: mean entropy rate = 0.911800
+  H= 13: mean entropy rate = 0.886453
+  H= 15: mean entropy rate = 0.840406
+  H= 17: mean entropy rate = 0.791531
+  H= 19: mean entropy rate = 0.948282
+  H= 23: mean entropy rate = 0.994587
+  H= 25: mean entropy rate = 1.055259
+  H= 27: mean entropy rate = 1.034083
+  H= 29: mean entropy rate = 1.039716
+  H= 31: mean entropy rate = 1.048338
+  H= 33: mean entropy rate = 1.141403
+  H= 37: mean entropy rate = 1.165372
+  H= 41: mean entropy rate = 1.274201
+  H= 43: mean entropy rate = 1.264228
+  H= 45: mean entropy rate = 1.250698
+  Corr(H, entropy rate) = 0.840805
+
+======================================================================
+SYNTHESIS — TROPICAL AND QUANTUM CONNECTIONS
+======================================================================
+
+FINDINGS:
+
+1. TROPICAL PERMANENT: The tropical permanent (max matching score)
+   relates to tournament regularity. Tropical H = n-1 always
+   (every tournament has a Hamilton path).
+
+2. QUANTUM STATE: The tournament defines a bipartite state |T⟩.
+   Its von Neumann entropy S_vN correlates with H — more paths
+   means more entanglement.
+
+3. QUANTUM WALK: Skew-adjacency S = A - A^T drives unitary evolution.
+   Eigenvalues of S are purely imaginary; their distribution
+   characterizes tournament structure.
+
+4. PERMANENT: perm(A) = 0 for most non-transitive tournaments at n=4.
+   For max-H tournaments, perm > 0. This connects to boson sampling.
+
+5. WIENER INDEX: Shorter average distances (smaller Wiener) correlate
+   with larger H. Tournaments with more paths tend to be "shorter."
+
+6. ENTROPY RATE: Higher H correlates with higher random walk entropy
+   rate — more Hamiltonian paths ↔ more unpredictable random walks.
+

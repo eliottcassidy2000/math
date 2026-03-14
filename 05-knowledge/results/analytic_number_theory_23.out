@@ -1,0 +1,278 @@
+======================================================================
+PART 1: θ-SERIES Θ_n(q) = Σ_T q^{H(T)}
+======================================================================
+
+n=3: Θ_3(q) = 6·q^1 + 2·q^3
+  Θ_3(-1) = -8
+  Θ_3(i) = 4j
+  Θ_3(1) = 8 = 2^3
+  Θ'_3(1) = 12 = 8 · 1.5000
+
+n=4: Θ_4(q) = 24·q^1 + 16·q^3 + 24·q^5
+  Θ_4(-1) = -64
+  Θ_4(i) = 32j
+  Θ_4(1) = 64 = 2^6
+  Θ'_4(1) = 192 = 64 · 3.0000
+
+n=5: Θ_5(q) = 120·q^1 + 120·q^3 + 240·q^5 + 240·q^9 + 120·q^11 + 120·q^13 + 64·q^15
+  Θ_5(-1) = -1024
+  Θ_5(i) = 416j
+  Θ_5(1) = 1024 = 2^10
+  Θ'_5(1) = 7680 = 1024 · 7.5000
+
+n=6: Θ_6(q) = 720·q^1 + 960·q^3 + 2160·q^5 + 2960·q^9 + 1440·q^11 + 1440·q^13 + 2208·q^15 + 1440·q^17 + 1440·q^19 + 2880·q^23 + 1440·q^25 + 480·q^27 + 2880·q^29 + 1440·q^31 + 2640·q^33 + 3600·q^37 + 720·q^41 + 1440·q^43 + 480·q^45
+  Θ_6(-1) = -32768
+  Θ_6(i) = 8192j
+  Θ_6(1) = 32768 = 2^15
+  Θ'_6(1) = 737280 = 32768 · 22.5000
+
+======================================================================
+PART 2: H AS ARITHMETIC FUNCTION
+======================================================================
+
+n=5: Autocorrelation of H on Boolean hypercube:
+  d=  0 (bin=0000000000): R(d)/Var = 1.000000
+  d=  1 (bin=0000000001): R(d)/Var = 0.578947
+  d=  2 (bin=0000000010): R(d)/Var = 0.578947
+  d=  3 (bin=0000000011): R(d)/Var = 0.305263
+  d=  4 (bin=0000000100): R(d)/Var = 0.578947
+  d=  5 (bin=0000000101): R(d)/Var = 0.305263
+  d=  6 (bin=0000000110): R(d)/Var = 0.305263
+  d=  8 (bin=0000001000): R(d)/Var = 0.578947
+  d=  9 (bin=0000001001): R(d)/Var = 0.305263
+  d= 10 (bin=0000001010): R(d)/Var = 0.305263
+  d= 12 (bin=0000001100): R(d)/Var = 0.305263
+  d= 16 (bin=0000010000): R(d)/Var = 0.578947
+  d= 17 (bin=0000010001): R(d)/Var = 0.305263
+  d= 18 (bin=0000010010): R(d)/Var = 0.305263
+
+======================================================================
+PART 3: DIRICHLET SERIES D_n(s)
+======================================================================
+
+n=4: Dirichlet series D_4(s):
+  D_4(0) = 64 = 2^6
+  D_4(1) = 34.133333
+  D_4(2) = 26.737778
+  D_4(1) / 2^m = 0.533333
+  Σ (count/h) = 34.133333
+
+n=5: Dirichlet series D_5(s):
+  D_5(0) = 1024 = 2^10
+  D_5(1) = 259.073193
+  D_5(2) = 147.882535
+  D_5(1) / 2^m = 0.253001
+  Σ (count/h) = 259.073193
+
+n=6: Dirichlet series D_6(s):
+  D_6(0) = 32768 = 2^15
+  D_6(1) = 2935.633005
+  D_6(2) = 1008.644021
+  D_6(1) / 2^m = 0.089588
+  Σ (count/h) = 2935.633005
+
+======================================================================
+PART 4: p-ADIC VALUATION v_p(H)
+======================================================================
+
+Prime p = 3:
+  n=5: v_3(H) distribution:
+    v=0: 0.5859 (count=600, expected if uniform=0.6708)
+    v=1: 0.1797 (count=184, expected if uniform=0.2222)
+    v=2: 0.2344 (count=240, expected if uniform=0.0741)
+  n=6: v_3(H) distribution:
+    v=0: 0.7031 (count=23040, expected if uniform=0.6708)
+    v=1: 0.1772 (count=5808, expected if uniform=0.2222)
+    v=2: 0.1050 (count=3440, expected if uniform=0.0741)
+    v=3: 0.0146 (count=480, expected if uniform=0.0247)
+  n=7: v_3(H) distribution:
+    v=0: 0.6844 (count=34222, expected if uniform=0.6708)
+    v=1: 0.2072 (count=10362, expected if uniform=0.2222)
+    v=2: 0.0570 (count=2850, expected if uniform=0.0741)
+    v=3: 0.0258 (count=1290, expected if uniform=0.0247)
+    v=4: 0.0255 (count=1276, expected if uniform=0.0082)
+
+Prime p = 5:
+  n=5: v_5(H) distribution:
+    v=0: 0.7031 (count=720, expected if uniform=0.8003)
+    v=1: 0.2969 (count=304, expected if uniform=0.1600)
+  n=6: v_5(H) distribution:
+    v=0: 0.8081 (count=26480, expected if uniform=0.8003)
+    v=1: 0.1479 (count=4848, expected if uniform=0.1600)
+    v=2: 0.0439 (count=1440, expected if uniform=0.0320)
+  n=7: v_5(H) distribution:
+    v=0: 0.8298 (count=41490, expected if uniform=0.8003)
+    v=1: 0.1420 (count=7101, expected if uniform=0.1600)
+    v=2: 0.0260 (count=1302, expected if uniform=0.0320)
+    v=3: 0.0021 (count=107, expected if uniform=0.0064)
+
+Prime p = 7:
+  n=5: v_7(H) distribution:
+    v=0: 1.0000 (count=1024, expected if uniform=0.8572)
+  n=6: v_7(H) distribution:
+    v=0: 1.0000 (count=32768, expected if uniform=0.8572)
+  n=7: v_7(H) distribution:
+    v=0: 0.8913 (count=44565, expected if uniform=0.8572)
+    v=1: 0.0890 (count=4448, expected if uniform=0.1224)
+    v=2: 0.0197 (count=987, expected if uniform=0.0175)
+
+======================================================================
+PART 5: EULER PRODUCT STRUCTURE OF H
+======================================================================
+
+Factorization of achievable H values (treating odd primes as atoms):
+
+n=5:
+  H=  1: 1
+  H=  3: 3
+  H=  5: 5
+  H=  9: 3^2
+  H= 11: 11
+  H= 13: 13
+  H= 15: 3 × 5
+
+n=6:
+  H=  1: 1
+  H=  3: 3
+  H=  5: 5
+  H=  9: 3^2
+  H= 11: 11
+  H= 13: 13
+  H= 15: 3 × 5
+  H= 17: 17
+  H= 19: 19
+  H= 23: 23
+  H= 25: 5^2
+  H= 27: 3^3
+  H= 29: 29
+  H= 31: 31
+  H= 33: 3 × 11
+  H= 37: 37
+  H= 41: 41
+  H= 43: 43
+  H= 45: 3^2 × 5
+
+======================================================================
+PART 6: H mod p FOR SMALL PRIMES
+======================================================================
+
+H mod 3:
+  n=5: 0: 424/1024, 1: 240/1024, 2: 360/1024
+    Uniform: NO
+  n=6: 0: 9728/32768, 1: 11520/32768, 2: 11520/32768
+    Uniform: NO
+
+H mod 5:
+  n=5: 0: 304/1024, 1: 240/1024, 2: 0/1024, 3: 240/1024, 4: 240/1024
+    Uniform: NO
+  n=6: 0: 6288/32768, 1: 4320/32768, 2: 5520/32768, 3: 9360/32768, 4: 7280/32768
+    Uniform: NO
+
+H mod 7:
+  n=5: 0: 0/1024, 1: 184/1024, 2: 240/1024, 3: 120/1024, 4: 120/1024, 5: 240/1024, 6: 120/1024
+    Uniform: NO
+  n=6: 0: 0/32768, 1: 7248/32768, 2: 9440/32768, 3: 4320/32768, 4: 2880/32768, 5: 6240/32768, 6: 2640/32768
+    Uniform: NO
+
+H mod 11:
+  n=5: 0: 120/1024, 1: 120/1024, 2: 120/1024, 3: 120/1024, 4: 64/1024, 5: 240/1024, 6: 0/1024, 7: 0/1024, 8: 0/1024, 9: 240/1024, 10: 0/1024
+    Uniform: NO
+  n=6: 0: 4080/32768, 1: 4080/32768, 2: 1440/32768, 3: 2400/32768, 4: 5808/32768, 5: 2640/32768, 6: 1440/32768, 7: 2880/32768, 8: 2160/32768, 9: 4400/32768, 10: 1440/32768
+    Uniform: NO
+
+======================================================================
+PART 7: ARITHMETIC OF H(T_p) FOR PALEY TOURNAMENTS
+======================================================================
+
+Factorizations of H(T_p):
+  H(T_ 3) =                    3 = 3
+    p=3 divides H: True
+    H/mean = 2.000000
+    Number of divisors: 2
+  H(T_ 7) =                  189 = 3^3 × 7
+    p=7 divides H: True
+    H/mean = 2.400000
+    Number of divisors: 8
+  H(T_11) =                95095 = 5 × 7 × 11 × 13 × 19
+    p=11 divides H: True
+    H/mean = 2.439506
+    Number of divisors: 32
+  H(T_19) =        1172695746915 = 3^2 × 5 × 7 × 11 × 19 × 23 × 774463
+    p=19 divides H: True
+    H/mean = 2.527148
+    Number of divisors: 192
+  H(T_23) =    15760206976379349 = 3 × 11 × 23 × 167 × 4567 × 27225299
+    p=23 divides H: True
+    H/mean = 2.556980
+    Number of divisors: 64
+
+======================================================================
+PART 8: BINARY EXPANSION OF T = (H-1)/2
+======================================================================
+
+n=5: T = (H-1)/2 binary expansion vs cycle structure:
+  T values: [0, 1, 2, 4, 5, 6, 7]
+  In binary:
+    T=  0 (H=  1): binary=0b0, count=120
+    T=  1 (H=  3): binary=0b1, count=120
+    T=  2 (H=  5): binary=0b10, count=240
+    T=  4 (H=  9): binary=0b100, count=240
+    T=  5 (H= 11): binary=0b101, count=120
+    T=  6 (H= 13): binary=0b110, count=120
+    T=  7 (H= 15): binary=0b111, count=64
+
+Paley T = (H-1)/2 values:
+  T_p=3: T=1, binary=0b1
+    Hamming weight: 1/1 (100.0%)
+  T_p=7: T=94, binary=0b1011110
+    Hamming weight: 5/7 (71.4%)
+  T_p=11: T=47547, binary=0b1011100110111011
+    Hamming weight: 11/16 (68.8%)
+  T_p=19: T=586347873457, binary=0b1000100010000101000011101000010010110001
+    Hamming weight: 14/40 (35.0%)
+  T_p=23: T=7880103488189674, binary=0b11011111111101110100110010001001101001111010011101010
+    Hamming weight: 32/53 (60.4%)
+
+======================================================================
+PART 9: TOURNAMENT DIVISIBILITY LATTICE
+======================================================================
+
+n=5: H divisibility structure:
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  All pairwise GCDs: [1, 3, 5, 9, 11, 13, 15]
+  GCDs not in H: []
+  Closed under GCD: True
+
+n=6: H divisibility structure:
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  All pairwise GCDs: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  GCDs not in H: []
+  Closed under GCD: True
+
+======================================================================
+SYNTHESIS — ANALYTIC NUMBER THEORY CONNECTIONS
+======================================================================
+
+CROWN JEWELS:
+
+1. θ-SERIES: Θ_n(q) = Σ a_n(H) q^H is a polynomial in q with
+   only ODD powers (Rédei). Θ_n(-1) alternates sign.
+
+2. p-ADIC STRUCTURE: v_p(H) distribution is NOT uniform —
+   H values cluster at specific p-adic valuations.
+
+3. PALEY ARITHMETIC: H(T_p) is divisible by p (Z_p symmetry).
+   Factorizations involve small primes prominently.
+   H(T_7) = 3³ × 7, H(T_11) = 5 × 7 × 11 × 13 × 19.
+
+4. BINARY T = (H-1)/2: Hamming weight of T encodes cycle complexity.
+   Paley tournaments have high Hamming weight (~50% bits).
+
+5. GCD STRUCTURE: H values are NOT closed under GCD.
+   gcd(5, 9) = 1 which is achievable, but gcd(5, 15) = 5 ✓.
+   Missing GCDs include 7 (forbidden!).
+
+6. DIRICHLET SERIES: D_n(s) has contributions weighted by 1/H^s.
+   The missing terms (H=7, 21, 63) create "spectral gaps" in
+   the Dirichlet series.
+
