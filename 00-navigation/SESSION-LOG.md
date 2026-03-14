@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-14-S64 — 2026-03-14: Deep 2-3 Algebra + Forbidden H Breakthrough
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S63
+**Summary of work:**
+Deep exploration of the arithmetic of (2, 3) in tournament theory: five-six duality (5=2+3, 6=2*3), cyclotomic structure, super-multiplicativity, Eisenstein norm, and the forbidden H values at n=7.
+
+**Critical findings:**
+1. **five_six_duality.py (14 parts)**: I(5)=H+3*(a1+7*a2) where 7=n coincidence; I(2)*I(3)>I(6) always (super-multiplicative); step weights are odd numbers; I(b) mod b = 1 universally.
+2. **deeper_23_algebra.py (14 parts)**: Super-multiplicativity defect D = 6*(a1+2a2)*(a1+3a2) - a1 - 23a2 >= 0 with equality iff transitive. Cyclotomic: 21 = Phi_3(2)*Phi_6(2), 63 = 2^6-1. Eisenstein norm N never 2 mod 3.
+3. **FORBIDDEN H AT n=7 CORRECTED** (HYP-962): {7, 21, 63, 107, 119, 149}. Previous lists included 127, 147, 157 which are rare but achievable. 4/6 are divisible by 7=n. 500k samples confirm.
+4. **H=21 IMPOSSIBILITY MECHANISM**: When a2=0, achievable a1 values skip 10 (jumps 9->11). The c3-c5 joint constraint forces c5 to grow too fast with c3 for c3+c5=10 to be achievable. For a2>0, corresponding a1 values also not achievable.
+5. **Achievable a1 when a2=0**: {0,1,2,4,5,6,7,8,9,11,12,13,15,16,18,19,22,23,24,25,34} — gaps at 3, 10, 14, 17, 20-21.
+
+**New contributions:**
+- HYP-962 through HYP-968 (forbidden H corrected, CRT universality, super-multiplicativity, Eisenstein norm, cyclotomic structure, Taylor shift, step sequence)
+- Scripts: five_six_duality.py, deeper_23_algebra.py, h21_impossibility.py, a1_2a2_map.py, forbidden_boundary.py
+
+**Unresolved threads:**
+- PROVE that a1+2*a2=10 is impossible at ALL n (not just n=7)
+- Explain why 107 and 149 (both = 2 mod 7) are forbidden despite not being 7-divisible
+- Investigate forbidden H at n=5 ({7,9,11,13,15}) and n=6 ({7,21,35,39,...}) for patterns
+- The 7*{1,3,9,17,23} pattern in forbidden multiples of 7
+
 ## opus-2026-03-14-S71d — 2026-03-14: Keys to the Universe — The 2-3 Framework
 
 **Account:** opus
