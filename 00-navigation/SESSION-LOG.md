@@ -13,6 +13,44 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71m — 2026-03-14: Wild Ideas — Eigenfunction, Traps, Entropy, Projective Geometry
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71l
+**Files read:** CLAUDE.md warmup files, wild_ideas_S71m.py (created prior session)
+
+### Summary
+Open-ended "wild ideas" exploration session. Ran 6 scripts investigating 20+ wild ideas about tournament H. Major discoveries:
+
+### Key Findings
+1. **H is eigenfunction of Q_m adjacency at n=3,4** (HYP-1439): Z = alpha*H + beta exactly when H is purely Walsh degree 0+2. Breaks at n=5.
+2. **I(single arc; H) = 0** (HYP-1440): Single arc orientations are statistically independent of H. Disjoint arc pairs also zero. Triangle-adjacent pairs: identical MI ≈ 0.024 bits (HYP-1441).
+3. **No local maxima below global for n≤5, breaks at n=6** (HYP-1427 confirmed, HYP-1443): 720 H=37 "traps" appear at n=6 alongside 480 global max at H=45.
+4. **H=37 trap anatomy** (HYP-1444,1445,1449): All traps have score (1,2,2,3,3,4) with t3=6. Escape requires exactly 2 flips: trap → non-trap H=37 → H=45. 30 components of 24 each. Closed under complement.
+5. **H ≡ 0 mod 7 forbidden through n=6** (HYP-1442): Related to Φ_3(2) = 7.
+6. **H(H)/m ≈ 0.27 bits/arc** (HYP-1446): Entropy per arc remarkably stable across n=3-6.
+7. **H-gap structure** (HYP-1447): n=6 gaps = {7, 21, 35, 39}. Three divisible by 7, one (39=3×13) not.
+8. **GCD/n! = 1/3 at n=3,4** (HYP-1448): The 1/3 appears in multiplicity structure.
+
+### Scripts Created
+- `04-computation/wild_ideas_S71m.py` — 11 initial wild ideas (p-adic, quantum, tropical, Markov, bracket, entropy, det/perm, TDA, golden, mod-p, spanning trees)
+- `04-computation/wild_ideas_deep_S71m.py` — 12 deep dives (eigenfunction, entropy, multiplicities, forbidden residues, sublevel connectivity, Walsh eigenbasis, minimal polynomial, chromatic, products, partition function, symmetry breaking, Möbius order)
+- `04-computation/wild_ideas_part3_S71m.py` — 9 investigations (mod-7 cyclotomic, ord_p(2), pairwise MI, gradient flow, Lee-Yang zeros, matrix permanent, power means, Mersenne, inter-class distances)
+- `04-computation/no_local_max_S71m.py` — Local maxima analysis for n=3-6
+- `04-computation/H37_traps_S71m.py` — Deep analysis of H=37 traps at n=6
+- `04-computation/wild_final_S71m.py` — Final batch (gaps, additive structure, permutohedron, eigenvalues, Fibonacci, mixing time, isomorphism classes)
+
+### HYP Added: 1439-1449
+
+### Next Priorities
+- Projective and algebraic geometry connections to tournament theory
+- Prove H ≡ 0 mod 7 forbidden (why Φ_3(2) = 7 divides no H value for small n)
+- Investigate if the 0.27 bits/arc entropy is a universal constant
+- Prove single-arc independence I(arc;H)=0 from symmetry
+- Study the trap → non-trap → global max escape path algebraically
+
+---
+
 ## opus-2026-03-14-S71l — 2026-03-14: Eisenstein-Fibonacci-Tribonacci Synthesis
 
 **Account:** opus

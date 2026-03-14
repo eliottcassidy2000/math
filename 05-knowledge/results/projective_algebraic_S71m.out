@@ -1,0 +1,435 @@
+======================================================================
+PROJECTIVE & ALGEBRAIC GEOMETRY IN TOURNAMENT THEORY
+opus-2026-03-14-S71m
+======================================================================
+
+======================================================================
+PART 1: THE FANO PLANE PG(2,2) AND THE FORBIDDEN 7
+======================================================================
+
+  The FANO PLANE PG(2,2) is the smallest projective plane.
+  It has 7 points, 7 lines, 3 points per line, 3 lines per point.
+
+  |PG(2,q)| = q² + q + 1 = Φ_3(q)
+
+  At q=2: |PG(2,2)| = 7 = Φ_3(2) = the FORBIDDEN H value!
+  At q=4: |PG(2,4)| = 21 = Φ_3(4) = the SECOND forbidden value!
+
+  These are the ONLY permanently forbidden H values.
+
+  QUESTION: Is there a direct connection between the Fano plane
+  structure and why 7 is forbidden?
+
+  The Fano plane's incidence matrix is 7×7 with exactly 3 ones per row/column.
+  Its automorphism group is GL(3,2) = PSL(2,7), order 168 = 24*7.
+
+  A tournament on 7 vertices has C(7,2) = 21 = Φ_3(4) arcs!
+  So: the number of ARCS in a 7-tournament = the number of POINTS in PG(2,4).
+  And the number of VERTICES = the number of points in PG(2,2).
+
+  COINCIDENCE: For n-vertex tournament, m = C(n,2) = n(n-1)/2.
+  m = |PG(2,n-2)| when n(n-1)/2 = (n-2)² + (n-2) + 1 = n² - 3n + 3.
+  So n(n-1)/2 = n² - 3n + 3 → n² - n = 2n² - 6n + 6 → n² - 5n + 6 = 0
+  → (n-2)(n-3) = 0 → n = 2 or n = 3.
+
+  At n=3: m = 3 = |PG(2,1)| = 3 ✓ (PG(2,1) = triangle = 3 points)
+  At n=2: m = 1 = |PG(2,0)| = 1 ✓ (trivial)
+
+  So the arc count equals a projective plane size ONLY at n=2,3.
+  But the FORBIDDEN values 7,21 are Φ_3 at 2,4 = 2^1, 2^2.
+  These are the PRIME POWER orders of Galois fields!
+
+  PG(2, 2^k) has Φ_3(2^k) points.
+  Φ_3(2) = 7, Φ_3(4) = 21, Φ_3(8) = 73, Φ_3(16) = 273, ...
+
+  Are 73, 273 also special in the H-spectrum?
+  At n=7, max_H grows to ~315, so 73 is achievable.
+  We'd need to check if 73 has special properties.
+
+  Φ_3(q) = q² + q + 1 for small q:
+    Φ_3( 1) =    3  ← PG(2,1) exists (GF(1))
+    Φ_3( 2) =    7  ← PG(2,2) exists (GF(2))
+    Φ_3( 3) =   13  ← PG(2,3) exists (GF(3))
+    Φ_3( 4) =   21  ← PG(2,4) exists (GF(4))
+    Φ_3( 5) =   31  ← PG(2,5) exists (GF(5))
+    Φ_3( 6) =   43
+    Φ_3( 7) =   57  ← PG(2,7) exists (GF(7))
+    Φ_3( 8) =   73  ← PG(2,8) exists (GF(8))
+    Φ_3( 9) =   91  ← PG(2,9) exists (GF(9))
+    Φ_3(10) =  111
+    Φ_3(11) =  133  ← PG(2,11) exists (GF(11))
+    Φ_3(12) =  157
+    Φ_3(13) =  183  ← PG(2,13) exists (GF(13))
+    Φ_3(14) =  211
+    Φ_3(15) =  241
+    Φ_3(16) =  273  ← PG(2,16) exists (GF(16))
+    Φ_3(17) =  307  ← PG(2,17) exists (GF(17))
+    Φ_3(18) =  343
+    Φ_3(19) =  381  ← PG(2,19) exists (GF(19))
+
+======================================================================
+PART 2: TOURNAMENTS AS POINTS IN PROJECTIVE SPACE
+======================================================================
+
+  A tournament on n vertices is a point in F_2^m where m = C(n,2).
+  (F_2 = GF(2) = {0,1})
+
+  The PROJECTIVE SPACE PG(m-1, 2) has 2^m - 1 = 2^{C(n,2)} - 1 points.
+  Each nonzero vector in F_2^m corresponds to a point in PG(m-1, 2).
+
+  Tournaments correspond to ALL 2^m vectors (including the zero vector),
+  which are the AFFINE points of AG(m, 2).
+
+  The tournament T with all arcs oriented one way (the zero vector)
+  is the ORIGIN of this affine space.
+
+  Flipping an arc = adding a basis vector e_i.
+  The arc-flip graph Q_m is the Cayley graph of (F_2^m, +)
+  with respect to the standard basis.
+
+  PROJECTIVE DUALITY in PG(m-1, 2):
+  - A k-flat (k-dimensional subspace) ↔ an (m-1-k)-flat
+  - Points ↔ Hyperplanes
+
+  A HYPERPLANE in PG(m-1, 2) is defined by a linear form:
+  sum a_i x_i = 0 (mod 2), for some (a_1, ..., a_m) ≠ 0.
+
+  Each linear form partitions tournaments into two halves:
+  those satisfying the equation and those not.
+  There are 2^m - 1 = m + C(m,2) + ... hyperplanes.
+
+  QUESTION: Does the H function define a "variety" in this space?
+  The H-level sets {T : H(T) = h} are subsets of F_2^m.
+  Are they linear subspaces? Cosets? Algebraic varieties over F_2?
+
+
+  n=3: Testing if H-level sets are F_2-linear:
+    H=  1: 6 elements, subspace=N, coset=N
+    H=  3: 2 elements, subspace=N, coset=Y
+
+  n=4: Testing if H-level sets are F_2-linear:
+    H=  1: 24 elements, subspace=N, coset=N
+    H=  3: 16 elements, subspace=N, coset=Y
+    H=  5: 24 elements, subspace=N, coset=N
+
+  n=5: Testing if H-level sets are F_2-linear:
+    H=  1: 120 elements, subspace=N, coset=N
+    H=  3: 120 elements, subspace=N, coset=N
+    H=  5: 240 elements, subspace=N, coset=N
+    H=  9: 240 elements, subspace=N, coset=N
+    H= 11: 120 elements, subspace=N, coset=N
+    H= 13: 120 elements, subspace=N, coset=N
+    H= 15: 64 elements, subspace=N, coset=N
+
+======================================================================
+PART 3: THE TOURNAMENT IDEAL AND HILBERT FUNCTION
+======================================================================
+
+  In ALGEBRAIC GEOMETRY, we associate to a set of points S ⊆ F_q^m
+  the VANISHING IDEAL I(S) = {f ∈ F_q[x_1,...,x_m] : f(s) = 0 ∀s ∈ S}.
+
+  For tournaments: S = {T : H(T) = h} for fixed h.
+
+  Over F_2, every variable satisfies x_i² = x_i, so the polynomial ring
+  is F_2[x_1,...,x_m] / (x_1²-x_1, ..., x_m²-x_m).
+  This quotient ring has dimension 2^m (one basis element per subset of variables).
+
+  The HILBERT FUNCTION of I(S) counts:
+  dim(F_2[x]_d / I(S)_d) = number of degree-d polynomials not vanishing on S.
+
+  For the H=1 (transitive) tournaments:
+  |S| = n! (number of transitive tournaments).
+  The ideal I(S) has codimension n! in the full ring.
+
+  QUESTION: Does the Hilbert function of the H-level set ideal
+  have a nice form?
+
+  More concretely: how many degree-d monomials (= Walsh monomials)
+  are constant on the H-level set?
+
+
+  n=3: Walsh monomials constant on each H-level set:
+    H=  1: 1/8 Walsh monomials constant
+        degree 0: 1/1
+    H=  3: 4/8 Walsh monomials constant
+        degree 0: 1/1
+        degree 2: 3/3
+
+  n=4: Walsh monomials constant on each H-level set:
+    H=  1: 1/64 Walsh monomials constant
+        degree 0: 1/1
+    H=  3: 4/64 Walsh monomials constant
+        degree 0: 1/1
+        degree 4: 3/15
+    H=  5: 1/64 Walsh monomials constant
+        degree 0: 1/1
+
+  n=5: Walsh monomials constant on each H-level set:
+    H=  1: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+    H=  3: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+    H=  5: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+    H=  9: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+    H= 11: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+    H= 13: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+    H= 15: 1/1024 Walsh monomials constant
+        degree 0: 1/1
+
+======================================================================
+PART 4: GRASSMANNIANS AND PLÜCKER COORDINATES
+======================================================================
+
+  The GRASSMANNIAN Gr(k, n) parametrizes k-dimensional subspaces of F^n.
+  Its Plücker embedding maps Gr(k,n) → P(C(n,k)-1).
+
+  For tournaments: the M[a,b] matrix (HP count from a to b) is n×n.
+  Its rank determines a point in a Grassmannian.
+
+  If M has rank r, then the column space of M is a point in Gr(r, n).
+  The Plücker coordinates are the r×r minors of M.
+
+  QUESTION: What ranks does M achieve for different H values?
+  And do the Plücker coordinates encode interesting invariants?
+
+  Also: the TOURNAMENT VARIETY.
+  A tournament T can be encoded as a skew-symmetric matrix S.
+  S lives in the space of n×n skew-symmetric matrices, which has
+  dimension n(n-1)/2 = m. This is the LIE ALGEBRA so(n).
+
+  The Pfaffian of S (for even n) is a polynomial of degree n/2
+  in the m entries of S. The PFAFFIAN VARIETY is the zero set
+  of the Pfaffian in this ambient space.
+
+  TOURNAMENT CONNECTION:
+  - T is a "real point" of the skew-symmetric variety where all entries are ±1
+  - H(T) can be expressed as a polynomial in the entries of S
+  - The H-level sets are algebraic varieties cut out by H(T) = h
+
+  H=1, ss=(0, 1, 2, 3): rank(M) = 1, det(M) = 0
+    M = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 0]]
+  H=3, ss=(1, 1, 1, 3): rank(M) = 1, det(M) = 0
+    M = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [1, 1, 1, 0]]
+  H=5, ss=(1, 1, 2, 2): rank(M) = 4, det(M) = -1
+    M = [[0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1], [1, 0, 0, 0]]
+  H=3, ss=(0, 2, 2, 2): rank(M) = 1, det(M) = 0
+    M = [[0, 1, 0, 0], [0, 0, 0, 0], [0, 1, 0, 0], [0, 1, 0, 0]]
+
+======================================================================
+PART 5: PROJECTIVE DUALITY IN TOURNAMENT SPACE
+======================================================================
+
+  In PG(m-1, 2), each point P determines a hyperplane H_P (orthogonal complement).
+  Dually, each hyperplane determines a point.
+
+  For tournaments: each tournament T ∈ F_2^m determines a hyperplane
+  H_T = {S ∈ F_2^m : <T, S> = 0} where <T,S> = sum T_i S_i mod 2.
+
+  The dual of a tournament T is the set of tournaments S such that
+  the number of arcs where T and S AGREE is even (or equivalently,
+  their Hamming distance is even).
+
+  SELF-DUAL: T is self-dual iff <T, T> = 0 iff popcount(T) is even.
+  A tournament is self-dual in PG(m-1,2) iff it has an EVEN number of arcs
+  oriented in the "positive" direction.
+
+  QUESTION: Does the projective dual of the H-level set have
+  interesting properties?
+
+  More specifically: if L_h = {T : H(T) = h}, what is L_h^⊥?
+  L_h^⊥ = intersection of all hyperplanes H_T for T ∈ L_h
+         = {S : <T, S> = 0 for ALL T ∈ L_h}
+         = the F_2-linear span of L_h taken perpendicular.
+
+
+  n=3 (m=3):
+    H=  1: |L_h|=    6, span_dim=3, perp_dim=0
+           (Level set SPANS all of F_2^3)
+    H=  3: |L_h|=    2, span_dim=2, perp_dim=1
+
+  n=4 (m=6):
+    H=  1: |L_h|=   24, span_dim=6, perp_dim=0
+           (Level set SPANS all of F_2^6)
+    H=  3: |L_h|=   16, span_dim=5, perp_dim=1
+    H=  5: |L_h|=   24, span_dim=6, perp_dim=0
+           (Level set SPANS all of F_2^6)
+
+  n=5 (m=10):
+    H=  1: |L_h|=  120, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+    H=  3: |L_h|=  120, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+    H=  5: |L_h|=  240, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+    H=  9: |L_h|=  240, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+    H= 11: |L_h|=  120, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+    H= 13: |L_h|=  120, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+    H= 15: |L_h|=   64, span_dim=10, perp_dim=0
+           (Level set SPANS all of F_2^10)
+
+======================================================================
+PART 6: ALGEBRAIC DEGREE OF H
+======================================================================
+
+  H(T) is a polynomial in the arc variables x_1, ..., x_m ∈ {0,1}.
+  Over F_2, this is a multilinear polynomial (each x_i appears to power ≤ 1).
+
+  The DEGREE of H as a polynomial tells us the algebraic complexity.
+  From Walsh analysis:
+  - n=3: H has Walsh degree 2 (quadratic)
+  - n=4: H has Walsh degree 2 (quadratic)
+  - n=5: H has Walsh degree 4 (quartic)
+
+  But H is NOT a polynomial over R in the usual sense.
+  It's a polynomial FUNCTION on {0,1}^m → Z.
+
+  Every function {0,1}^m → Z can be uniquely written as
+  H = sum_S a_S * prod_{i ∈ S} x_i
+  where the a_S are integers.
+
+  The ALGEBRAIC DEGREE of H is max{|S| : a_S ≠ 0}.
+  This equals the Walsh degree by the theory of multilinear polynomials.
+
+  For the H-level curve {T : H(T) = h}:
+  This is a hypersurface of degree = algebraic degree of H
+  in the "tournament affine variety" {0,1}^m.
+
+  Over F_2: the equation H(x) = h mod 2 is always
+  H(x) ≡ 1 mod 2 (Rédei), so it defines the EMPTY set mod 2!
+  (Since h is always odd, H ≡ 1 mod 2, so H ≡ h mod 2 is always true.)
+
+  Over F_3: H mod 3 defines a nontrivial variety.
+  H(x) ≡ 0 mod 3 defines a cubic (or quadratic) hypersurface in F_3^m.
+
+
+  n=3: H as multilinear polynomial in arc variables x_0, x_1, x_2
+  (Arc encoding: x_0 = (0→1), x_1 = (0→2), x_2 = (1→2))
+    x=[0, 0, 0]: H = 1
+    x=[1, 0, 0]: H = 1
+    x=[0, 1, 0]: H = 3
+    x=[1, 1, 0]: H = 1
+    x=[0, 0, 1]: H = 1
+    x=[1, 0, 1]: H = 3
+    x=[0, 1, 1]: H = 1
+    x=[1, 1, 1]: H = 1
+
+  Multilinear coefficients:
+    a_{000} = +1  (1)
+    a_{010} = +2  (x_1)
+    a_{011} = -2  (x_0*x_1)
+    a_{101} = +2  (x_0*x_2)
+    a_{110} = -2  (x_1*x_2)
+
+  Verification:
+    x=[0, 0, 0]: H_poly = 1 = H = 1 ✓
+    x=[1, 0, 0]: H_poly = 1 = H = 1 ✓
+    x=[0, 1, 0]: H_poly = 3 = H = 3 ✓
+    x=[1, 1, 0]: H_poly = 1 = H = 1 ✓
+    x=[0, 0, 1]: H_poly = 1 = H = 1 ✓
+    x=[1, 0, 1]: H_poly = 3 = H = 3 ✓
+    x=[0, 1, 1]: H_poly = 1 = H = 1 ✓
+    x=[1, 1, 1]: H_poly = 1 = H = 1 ✓
+
+  n=4: H as multilinear polynomial in 6 arc variables
+  16 nonzero coefficients:
+    Degree 0: 1 terms
+      a = +1  (1)
+    Degree 1: 3 terms
+      a = +2  (x_1)
+      a = +4  (x_2)
+      a = +2  (x_4)
+    Degree 2: 12 terms
+
+  Algebraic degree of H at n=4: 2
+  (Should match Walsh degree = 2)
+
+======================================================================
+PART 7: THE UNITY OF DUALITY
+======================================================================
+
+  PROJECTIVE-ALGEBRAIC DUALITY in tournament theory:
+
+  1. POINT-HYPERPLANE DUALITY (projective):
+     Each tournament T ↔ hyperplane H_T = {S : <T,S> = 0 mod 2}
+     This is the standard projective duality in PG(m-1, 2).
+
+  2. TOURNAMENT-COMPLEMENT DUALITY (combinatorial):
+     T ↔ T^op (reverse all arcs) = complement in F_2^m
+     H(T) = H(T^op) for odd n (PROVED)
+     T^op = T ⊕ 1...1 (XOR with all-ones)
+
+  3. WALSH DUALITY (Fourier):
+     The Walsh transform maps H to its Fourier spectrum hat{H}.
+     hat{H}[S] lives in R, but the support {S : hat{H}[S] ≠ 0}
+     is an F_2-variety (depends on |S| mod 2).
+
+  4. HP-CYCLE DUALITY (OCF):
+     H counts paths, I(Omega, 2) counts independent sets of cycles.
+     H = I(Omega, 2) IS the OCF — paths and cycles are DUAL descriptions.
+
+  5. GRASSMANN DUALITY:
+     Gr(k, n) ≅ Gr(n-k, n) via taking orthogonal complement.
+     The M[a,b] matrix lives in the Grassmannian of its column space.
+     Its transpose M^T (which counts paths in reverse) gives the dual.
+
+  THE UNITY:
+  All five dualities are CONNECTED through the projective structure.
+
+  The Fano plane PG(2,2) has 7 points and 7 lines.
+  Under duality, points ↔ lines, and the incidence structure is SELF-DUAL.
+  PG(2,2) is the ONLY self-dual projective plane of smallest order.
+
+  The forbidden value 7 = |PG(2,2)| is thus tied to SELF-DUALITY:
+  - 7 = Φ_3(2) is self-dual under the Galois action on F_4
+  - The Fano plane's automorphism group GL(3,2) ≅ PSL(2,7)
+  - 7 | H is forbidden because the cyclotomic structure of Φ_3
+    prevents the independence polynomial from vanishing at the
+    primitive cube root of 2
+
+  THE DEEPER UNITY:
+  Projective geometry and algebraic geometry meet in the
+  MODULI SPACE of tournaments. The tournament space {0,1}^m
+  is a 0-dimensional algebraic variety (a finite set of points).
+  But the H function defines a FIBRATION:
+  π: {0,1}^m → Z, T ↦ H(T)
+
+  The fibers π^{-1}(h) are the H-level sets.
+  Their algebraic structure (ideal, Hilbert function, dimension)
+  encodes the geometry of the tournament landscape.
+
+  PROJECTIVE: The level sets live in PG(m-1, 2).
+  ALGEBRAIC: Their defining equations live in F_2[x_1,...,x_m].
+  THE DUALITY: A polynomial equation f(T) = 0 defines both
+  a projective variety AND an algebraic variety, and these are
+  connected by the incidence correspondence of PG(m-1, 2).
+
+
+  DEMONSTRATION for n=3:
+  Tournaments = F_2^3 = {000, 001, 010, 011, 100, 101, 110, 111}
+
+        T |   H |    T^op | H(T^op) | wt(T) | Self-dual?
+  ------- | --- | ------- | ------- | ----- | ----------
+      000 |   1 |     111 |       1 |     0 |        Yes
+      001 |   1 |     110 |       1 |     1 |         No
+      010 |   3 |     101 |       3 |     1 |         No
+      011 |   1 |     100 |       1 |     2 |        Yes
+      100 |   1 |     011 |       1 |     1 |         No
+      101 |   3 |     010 |       3 |     2 |        Yes
+      110 |   1 |     001 |       1 |     2 |        Yes
+      111 |   1 |     000 |       1 |     3 |         No
+
+  Observations:
+    H(T) = H(T^op) ✓ (proved for odd n)
+    Self-dual tournaments (even weight): 4 out of 8
+    The complement map T → T^op is a FIXED-POINT-FREE involution on PG(2, 2)
+
+======================================================================
+DONE — PROJECTIVE & ALGEBRAIC GEOMETRY
+======================================================================
