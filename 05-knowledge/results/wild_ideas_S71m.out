@@ -1,0 +1,394 @@
+======================================================================
+WILD IDEAS SESSION
+opus-2026-03-14-S71m
+======================================================================
+
+  Computing all tournaments for n=5...
+  Done: 1024 tournaments
+
+======================================================================
+IDEA 1: p-ADIC STRUCTURE OF H
+======================================================================
+
+  H is always odd (Redei's theorem). So v_2(H) = 0 always.
+  But what about v_3, v_5, v_7?
+
+  The 7-adic valuation is especially interesting:
+  H=7 is FORBIDDEN, meaning v_7(H) >= 1 is impossible at n<=6.
+  But at n=7, H can be divisible by 7 (e.g., H=35=5*7, H=91=7*13).
+
+  QUESTION: Is there a pattern in the p-adic valuations of the H spectrum?
+
+  n=5 H-spectrum: [1, 3, 5, 9, 11, 13, 15]
+
+  p-adic valuations of achievable H values at n=5:
+    H=  1: v_3=0, v_5=0, v_7=0, H mod 8 = 1, H mod 6 = 1
+    H=  3: v_3=1, v_5=0, v_7=0, H mod 8 = 3, H mod 6 = 3
+    H=  5: v_3=0, v_5=1, v_7=0, H mod 8 = 5, H mod 6 = 5
+    H=  9: v_3=2, v_5=0, v_7=0, H mod 8 = 1, H mod 6 = 3
+    H= 11: v_3=0, v_5=0, v_7=0, H mod 8 = 3, H mod 6 = 5
+    H= 13: v_3=0, v_5=0, v_7=0, H mod 8 = 5, H mod 6 = 1
+    H= 15: v_3=1, v_5=1, v_7=0, H mod 8 = 7, H mod 6 = 3
+
+  2-adic valuation of (H-1)/2:
+    H=  1: (H-1)/2 = 0, v_2((H-1)/2) = inf
+    H=  3: (H-1)/2 = 1, v_2((H-1)/2) = 0
+    H=  5: (H-1)/2 = 2, v_2((H-1)/2) = 1
+    H=  9: (H-1)/2 = 4, v_2((H-1)/2) = 2
+    H= 11: (H-1)/2 = 5, v_2((H-1)/2) = 0
+    H= 13: (H-1)/2 = 6, v_2((H-1)/2) = 1
+    H= 15: (H-1)/2 = 7, v_2((H-1)/2) = 0
+
+======================================================================
+IDEA 2: TOURNAMENT AS QUANTUM STATE
+======================================================================
+
+  Consider the 2^m dimensional Hilbert space where each basis state
+  corresponds to a tournament on n vertices (via arc orientations).
+
+  Define |psi_H> = (1/sqrt(N_H)) * sum_{T: H(T)=h} |T>
+
+  This is the uniform superposition over all tournaments with H = h.
+
+  The DENSITY MATRIX rho_H = |psi_H><psi_H| encodes the tournament
+  structure at fixed H value.
+
+  Question: Are the H-eigenspaces ORTHOGONAL in some natural sense?
+  The H operator: H_op |T> = H(T) |T> (diagonal in tournament basis).
+  Yes, H-eigenspaces are automatically orthogonal since H_op is Hermitian.
+
+  But more interesting: define the ARC FLIP operator F_e for each arc e.
+  F_e |T> = |T xor e> (flip a single arc).
+
+  Then H_op and F_e don't commute! The commutator [H_op, F_e] measures
+  how much flipping arc e changes H.
+
+
+  n=4: <H> = 3.0000, Var(H) = 3.0000
+
+  Building hypercube adjacency matrix for n=4...
+  ||[L, H]||_F = 39.1918
+  ||L||_F = 51.8459
+  ||H||_F = 27.7128
+  Relative commutator = 0.027277
+
+  Laplacian eigenvalues: [-0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0]
+
+  H-value entanglement under hypercube evolution:
+    H=1: 24 tournaments, flip destinations: H=1(50%) H=3(33%) H=5(17%)
+    H=3: 16 tournaments, flip destinations: H=1(50%) H=5(50%)
+    H=5: 24 tournaments, flip destinations: H=1(17%) H=3(33%) H=5(50%)
+
+======================================================================
+IDEA 3: TROPICAL TOURNAMENT THEORY
+======================================================================
+
+  In TROPICAL (max-plus) algebra: addition = max, multiplication = +.
+
+  The tropical permanent of the adjacency matrix A:
+  tperm(A) = max_sigma sum_i A[i][sigma(i)]
+
+  For a tournament: A[i][j] = 0 if i->j, -inf if j->i.
+  tperm(A) = max_sigma |{i: A[i][sigma(i)] = 0}|
+           = maximum number of "correctly oriented" arcs in a permutation.
+
+  But we want Hamiltonian PATHS, not cycles.
+  Tropical HP count: max_sigma sum_{i=1}^{n-1} A[sigma(i)][sigma(i+1)]
+  = max "forward arc" count across all orderings.
+
+  The TROPICAL H = maximum number of forward arcs in any single path.
+  For a transitive tournament: tropical H = n-1 (all arcs forward).
+  For any tournament: tropical H = n-1 (there's always a HP).
+
+  So tropical H is trivial! Everyone gets n-1.
+
+  MORE INTERESTING: The tropical SIGNED count.
+  Define w(P) = (number of forward arcs) - (number of backward arcs).
+  Then tropical w = max_P w(P) = ??? This is the MAX WEIGHT HP.
+
+  n=5: tropical max-weight HP for each tournament class:
+    H=  1: tropical max weight in [4]
+    H=  3: tropical max weight in [4]
+    H=  5: tropical max weight in [4]
+    H=  9: tropical max weight in [4]
+    H= 11: tropical max weight in [4]
+    H= 13: tropical max weight in [4]
+    H= 15: tropical max weight in [4]
+
+======================================================================
+IDEA 4: H AS MARKOV CHAIN STATIONARY DISTRIBUTION
+======================================================================
+
+  Define a random walk on tournaments:
+  At each step, choose a random arc and flip it.
+  The stationary distribution is UNIFORM (symmetric random walk on hypercube).
+
+  BUT: what if we weight the transition probabilities by H?
+  P(T -> T') = H(T') / sum_{T'' neighbors} H(T'')
+
+  This creates a METROPOLIS-like chain that favors high-H tournaments.
+  The stationary distribution would be proportional to H(T).
+
+  Alternative: The "H-weighted" random walk on the hypercube graph.
+  Transition rates proportional to H at the destination.
+  The spectral gap of this walk tells us about the "mixing time"
+  of tournament optimization.
+
+  n=4: P is stochastic? max|row_sum - 1| = 1.11e-16
+  Stationary distribution proportional to H? max/min ratio = 1.5714
+  Z_i (sum of neighbor H values): min=14, max=22, std=3.46
+  Z is NOT constant -> stationary dist is NOT proportional to H
+  Corr(Z, H) = 1.0000
+  Interpretation: neighbors of high-H tournaments also tend to have high H
+
+======================================================================
+IDEA 5: TOURNAMENT BRACKET POLYNOMIAL
+======================================================================
+
+  In knot theory, the BRACKET POLYNOMIAL uses the Kauffman state model:
+  Each crossing has two smoothings (A-type and B-type).
+  <K> = sum over states: A^a * B^b * (-A^2 - A^{-2})^{|s|-1}
+
+  TOURNAMENT ANALOG:
+  Each arc (i,j) has two orientations: i->j (A) and j->i (B).
+  A "state" is a tournament.
+  Define: <T> = sum over arcs: product of A^{arc_forward} * B^{arc_backward}
+  where forward/backward is relative to some reference ordering.
+
+  With A = q, B = q^{-1}:
+  <T> = q^{fwd - bwd} where fwd = forward arcs, bwd = backward arcs.
+
+  The SCORE SEQUENCE determines fwd and bwd:
+  fwd = sum s_i, bwd = C(n,2) - sum s_i.
+  So <T> = q^{2*sum(s_i) - C(n,2)}.
+
+  This is TOO SIMPLE. The bracket polynomial gets interesting through
+  the LOOP counting, which corresponds to CYCLE structure.
+
+  Better analog: Weight each HP P of T by q^{asc(P)} where
+  asc(P) is the number of ascents in P (viewed as a permutation).
+  Then F(T, q) is the F-POLYNOMIAL, which we already know!
+
+  F(T, q) = sum_P q^{asc(P)} where sum is over Hamiltonian paths.
+
+  F(T, 1) = H(T), F(T, 0) = F_0(T) in {0,1}.
+  F(T, -1) = "signed HP count" (alternating by ascent parity).
+
+  NEW IDEA: Define J(T, q) = F(T, q) / F(T_trans, q)
+  where T_trans is the transitive tournament.
+  F(T_trans, q) = q^0 + q^1 + ... + q^{n-1}... no, T_trans has exactly 1 HP.
+  So F(T_trans, q) = q^{C(n,2)} (all arcs ascending).
+  Wait: F_0(T_trans) = 1, all others = 0. So F(T_trans, q) = 1.
+  And F(T_trans^op, q) = q^{n-1} (one HP, all descents).
+  Hmm, that's not right either.
+
+  For the transitive tournament T_trans on [n] with i->j iff i<j:
+  The unique HP is 1->2->...->n, which has n-1 ascents.
+  So F(T_trans, q) = q^{n-1}.
+
+  J(T, q) = F(T, q) / q^{n-1} = sum_k F_k q^{k-(n-1)}
+           = sum_k F_k q^{k-n+1}
+
+
+  n=5: F(T, -1) statistics:
+    H=  1: F(-1) in [-1, 1]
+    H=  3: F(-1) in [-3, -1, 1, 3]
+    H=  5: F(-1) in [-5, -3, -1, 1, 3, 5]
+    H=  9: F(-1) in [-7, -3, -1, 1, 3, 5]
+    H= 11: F(-1) in [-9, -3, -1, 1, 3, 5, 7]
+    H= 13: F(-1) in [-5, -3, -1, 1, 3, 5]
+    H= 15: F(-1) in [-5, -1, 3, 7]
+
+  F(-1) values across all tournaments: [-9, -7, -5, -3, -1, 1, 3, 5, 7]
+  Is |F(-1)| always 1? False
+
+======================================================================
+IDEA 6: ENTROPY AND INFORMATION THEORY
+======================================================================
+
+  n=3 (m=3):
+    |H-spectrum| = 2
+    Shannon entropy H(H) = 0.8113 bits
+    Max possible = log2(2) = 1.0000 bits
+    Efficiency = 0.8113
+    Entropy per arc = 0.2704 bits/arc
+    Fraction of hypercube entropy = 0.2704
+
+  n=4 (m=6):
+    |H-spectrum| = 3
+    Shannon entropy H(H) = 1.5613 bits
+    Max possible = log2(3) = 1.5850 bits
+    Efficiency = 0.9851
+    Entropy per arc = 0.2602 bits/arc
+    Fraction of hypercube entropy = 0.2602
+
+  n=5 (m=10):
+    |H-spectrum| = 7
+    Shannon entropy H(H) = 2.6810 bits
+    Max possible = log2(7) = 2.8074 bits
+    Efficiency = 0.9550
+    Entropy per arc = 0.2681 bits/arc
+    Fraction of hypercube entropy = 0.2681
+
+======================================================================
+IDEA 7: DET vs PERM — THE SIGN STRUCTURE
+======================================================================
+
+  H(T) = permanent of a certain matrix (the HP adjacency).
+  But what about the DETERMINANT?
+
+  For tournament T with adjacency matrix A (A[i][j] = 1 if i->j):
+  perm(A) = sum_sigma prod A[sigma(i)][i] (counts directed cycles covering all vertices)
+  det(A) = sum_sigma (-1)^sigma prod A[sigma(i)][i] (signed version)
+
+  For the SKEW matrix B = A - A^T (B[i][j] = +1 if i->j, -1 if j->i):
+  pf(B) = Pfaffian (exists when n is even)
+  det(B) = pf(B)^2
+
+  The Pfaffian counts PERFECT MATCHINGS of the complete graph
+  with orientation signs. For tournaments:
+  pf(B) = sum over perfect matchings M: prod_{(i,j) in M} B[i][j]
+
+
+  n=4: det(A), det(B=A-A^T), perm(A) for each H class:
+    H=1: det(A) in [0], det(B) in [1], perm(A) in [0]
+    H=3: det(A) in [0], det(B) in [9], perm(A) in [0]
+    H=5: det(A) in [-1], det(B) in [1], perm(A) in [1]
+
+  n=5: det(B=A-A^T) and Pfaffian structure
+    H=  1: det(B) in [0]
+    H=  3: det(B) in [0]
+    H=  5: det(B) in [0]
+    H=  9: det(B) in [0]
+    H= 11: det(B) in [0]
+    H= 13: det(B) in [0]
+    H= 15: det(B) in [0]
+
+======================================================================
+IDEA 8: TOPOLOGICAL DATA ANALYSIS — H FILTRATION
+======================================================================
+
+  Define a filtration on the tournament hypercube by H value:
+  X_h = {T : H(T) <= h} for h = 1, 3, 5, ...
+
+  As h increases, more tournaments are "born."
+  The persistence diagram tracks when connected components
+  appear and merge.
+
+  For n=4: H-spectrum = {1, 3, 5}
+  X_1: 24 tournaments (transitive + isomorphic)
+  X_3: 24 + 16 = 40 tournaments
+  X_5: 40 + 24 = 64 = all tournaments
+
+  Question: How many connected components does X_h have?
+  (Connected via single arc flips)
+
+    X_1: 24 tournaments, 1 connected components
+    X_3: 40 tournaments, 1 connected components
+    X_5: 64 tournaments, 1 connected components
+
+  n=5 filtration:
+    X_  1:   120 tournaments,   1 components (delta=+1)
+    X_  3:   240 tournaments,   1 components (delta=+0)
+    X_  5:   480 tournaments,   1 components (delta=+0)
+    X_  9:   720 tournaments,   1 components (delta=+0)
+    X_ 11:   840 tournaments,   1 components (delta=+0)
+    X_ 13:   960 tournaments,   1 components (delta=+0)
+    X_ 15:  1024 tournaments,   1 components (delta=+0)
+
+======================================================================
+IDEA 9: GOLDEN/TRIBONACCI RATIOS IN H-MULTIPLICITIES
+======================================================================
+
+  n=5 H-value multiplicities and consecutive ratios:
+    H=  1:   120 tournaments
+    H=  3:   120 tournaments, ratio to prev = 1.0000 (phi=1.6180, tau=1.8393)
+    H=  5:   240 tournaments, ratio to prev = 2.0000 (phi=1.6180, tau=1.8393)
+    H=  9:   240 tournaments, ratio to prev = 1.0000 (phi=1.6180, tau=1.8393)
+    H= 11:   120 tournaments, ratio to prev = 0.5000 (phi=1.6180, tau=1.8393)
+    H= 13:   120 tournaments, ratio to prev = 1.0000 (phi=1.6180, tau=1.8393)
+    H= 15:    64 tournaments, ratio to prev = 0.5333 (phi=1.6180, tau=1.8393)
+
+  GCD of all multiplicities = 8
+  Normalized counts (divided by 8):
+    H=  1: 15
+    H=  3: 15
+    H=  5: 30
+    H=  9: 30
+    H= 11: 15
+    H= 13: 15
+    H= 15: 8
+  Normalized sequence: [15, 15, 30, 30, 15, 15, 8]
+  Sum = 128
+
+======================================================================
+IDEA 10: H mod p FOR VARIOUS PRIMES
+======================================================================
+
+  n=5, H mod 3:
+    H equiv  0 mod 3:   424 (41.4%)
+    H equiv  1 mod 3:   240 (23.4%)
+    H equiv  2 mod 3:   360 (35.2%)
+
+  n=5, H mod 5:
+    H equiv  0 mod 5:   304 (29.7%)
+    H equiv  1 mod 5:   240 (23.4%)
+    H equiv  3 mod 5:   240 (23.4%)
+    H equiv  4 mod 5:   240 (23.4%)
+
+  n=5, H mod 7:
+    H equiv  1 mod 7:   184 (18.0%)
+    H equiv  2 mod 7:   240 (23.4%)
+    H equiv  3 mod 7:   120 (11.7%)
+    H equiv  4 mod 7:   120 (11.7%)
+    H equiv  5 mod 7:   240 (23.4%)
+    H equiv  6 mod 7:   120 (11.7%)
+
+  n=5, H mod 8:
+    H equiv  1 mod 8:   360 (35.2%)
+    H equiv  3 mod 8:   240 (23.4%)
+    H equiv  5 mod 8:   360 (35.2%)
+    H equiv  7 mod 8:    64 (6.2%)
+
+  n=5, H mod 12:
+    H equiv  1 mod 12:   240 (23.4%)
+    H equiv  3 mod 12:   184 (18.0%)
+    H equiv  5 mod 12:   240 (23.4%)
+    H equiv  9 mod 12:   240 (23.4%)
+    H equiv 11 mod 12:   120 (11.7%)
+
+======================================================================
+IDEA 11: COMPLEXITY / SPANNING TREE COUNT OF Omega(T)
+======================================================================
+
+  The conflict graph Omega(T) is an undirected graph.
+  Its COMPLEXITY (number of spanning trees) is given by
+  the Matrix Tree Theorem: kappa = det(L_0) / n where
+  L is the Laplacian and L_0 is any cofactor.
+
+  For small Omega graphs:
+  - Empty graph (alpha_1 = 0): kappa = 0
+  - Single vertex (alpha_1 = 1): kappa = 1
+  - Two disjoint vertices: kappa = 0
+  - K_2 (edge): kappa = 1
+  - K_3 (triangle): kappa = 3
+  - Path P_3: kappa = 1
+
+  QUESTION: Does the complexity of Omega(T) correlate with H(T)?
+  H = I(Omega, 2) counts independent sets.
+  kappa counts spanning trees.
+  Are these related?
+
+
+  n=5: 3-cycle count (alpha_1 proxy) by H value:
+    H=  1: t3 in [0]
+    H=  3: t3 in [1]
+    H=  5: t3 in [2]
+    H=  9: t3 in [3]
+    H= 11: t3 in [4]
+    H= 13: t3 in [4]
+    H= 15: t3 in [4, 5]
+
+======================================================================
+DONE — WILD IDEAS SESSION
+======================================================================

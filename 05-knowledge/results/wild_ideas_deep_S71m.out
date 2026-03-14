@@ -1,0 +1,1529 @@
+======================================================================
+DEEP DIVE: WILD IDEAS FOLLOW-UP
+opus-2026-03-14-S71m
+======================================================================
+
+======================================================================
+DEEP DIVE 1: H AS EIGENFUNCTION OF HYPERCUBE ADJACENCY
+======================================================================
+
+  n=3 (m=3):
+    Z = sum of H(neighbors)
+    Best fit: Z = -1.000000 * H + 6.000000
+    Max residual: 0.0000000000
+    *** EXACT: Z = -1.0 * H + 6.0 ***
+    Eigenvalue interpretation: lambda = -1.0
+    m = 3, so m - lambda = 4.0, (m-lambda)/2 = 2.0
+    H - 1.500000*1 is eigenvector of Q_3 adjacency with eigenvalue -1.0
+
+  n=4 (m=6):
+    Z = sum of H(neighbors)
+    Best fit: Z = 2.000000 * H + 12.000000
+    Max residual: 0.0000000000
+    *** EXACT: Z = 2.0 * H + 12.0 ***
+    Eigenvalue interpretation: lambda = 2.0
+    m = 6, so m - lambda = 4.0, (m-lambda)/2 = 2.0
+    H - 3.000000*1 is eigenvector of Q_6 adjacency with eigenvalue 2.0
+
+  n=5 (m=10):
+    Z = sum of H(neighbors)
+    Best fit: Z = 5.789474 * H + 31.578947
+    Max residual: 10.4210526316
+    NOT exactly affine. Checking quadratic...
+    Z values by H class:
+      H=   1: Z in [32]
+      H=   3: Z in [48]
+      H=   5: Z in [64]
+      H=   9: Z in [84]
+      H=  11: Z in [100]
+      H=  13: Z in [104]
+      H=  15: Z in [108, 120]
+
+======================================================================
+DEEP DIVE 2: ENTROPY PER ARC
+======================================================================
+
+  n=3 (m=3):
+    |H-spectrum| = 2
+    Shannon entropy = 0.811278 bits
+    Entropy per arc = 0.270426 bits/arc
+    Efficiency = 0.811278
+    I(arc_0 ; H) = 0.000000 bits
+    I/H(H) = 0.000000
+
+  n=4 (m=6):
+    |H-spectrum| = 3
+    Shannon entropy = 1.561278 bits
+    Entropy per arc = 0.260213 bits/arc
+    Efficiency = 0.985057
+    I(arc_0 ; H) = 0.000000 bits
+    I/H(H) = 0.000000
+
+  n=5 (m=10):
+    |H-spectrum| = 7
+    Shannon entropy = 2.681040 bits
+    Entropy per arc = 0.268104 bits/arc
+    Efficiency = 0.955006
+    I(arc_0 ; H) = 0.000000 bits
+    I/H(H) = 0.000000
+
+  n=6 (m=15):
+    |H-spectrum| = 19
+    Shannon entropy = 4.050183 bits
+    Entropy per arc = 0.270012 bits/arc
+    Efficiency = 0.953449
+
+======================================================================
+DEEP DIVE 3: MULTIPLICITY STRUCTURE
+======================================================================
+
+  n=3 (m=3):
+    H-values: [1, 3]
+    Multiplicities: [6, 2]
+    GCD = 2
+    Normalized: [3, 1]
+    Sum of normalized = 4
+    Is power of 2? 4 = 2^2.00
+    GCD = 2 = n! * ? = 2/6 = 1/3
+    2^m / sum(norm) = 8 / 4 = 2.0
+    2^m / GCD = 4
+
+  n=4 (m=6):
+    H-values: [1, 3, 5]
+    Multiplicities: [24, 16, 24]
+    GCD = 8
+    Normalized: [3, 2, 3]
+    Sum of normalized = 8
+    Is power of 2? 8 = 2^3.00
+    GCD = 8 = n! * ? = 8/24 = 1/3
+    2^m / sum(norm) = 64 / 8 = 8.0
+    2^m / GCD = 8
+
+  n=5 (m=10):
+    H-values: [1, 3, 5, 9, 11, 13, 15]
+    Multiplicities: [120, 120, 240, 240, 120, 120, 64]
+    GCD = 8
+    Normalized: [15, 15, 30, 30, 15, 15, 8]
+    Sum of normalized = 128
+    Is power of 2? 128 = 2^7.00
+    GCD = 8 = n! * ? = 8/120 = 1/15
+    2^m / sum(norm) = 1024 / 128 = 8.0
+    2^m / GCD = 128
+
+======================================================================
+DEEP DIVE 4: FORBIDDEN RESIDUES
+======================================================================
+
+  n=3: H-spectrum = [1, 3]
+    H mod 3: missing residues = [2]
+    H mod 5: missing residues = [0, 2, 4]
+    H mod 7: missing residues = [0, 2, 4, 5, 6]
+    H mod 11: missing residues = [0, 2, 4, 5, 6, 7, 8, 9, 10]
+    H mod 13: missing residues = [0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    H ≡ 0 mod 7: FORBIDDEN (no H divisible by 7)
+
+  n=4: H-spectrum = [1, 3, 5]
+    H mod 3: rare residues = [1, 0, 2] (count=1)
+    H mod 5: missing residues = [2, 4]
+    H mod 7: missing residues = [0, 2, 4, 6]
+    H mod 11: missing residues = [0, 2, 4, 6, 7, 8, 9, 10]
+    H mod 13: missing residues = [0, 2, 4, 6, 7, 8, 9, 10, 11, 12]
+    H ≡ 0 mod 7: FORBIDDEN (no H divisible by 7)
+
+  n=5: H-spectrum = [1, 3, 5, 9, 11, 13, 15]
+    H mod 5: missing residues = [2]
+    H mod 7: missing residues = [0]
+    H mod 11: missing residues = [6, 7, 8, 10]
+    H mod 13: missing residues = [4, 6, 7, 8, 10, 12]
+    H ≡ 0 mod 7: FORBIDDEN (no H divisible by 7)
+
+  n=6: H-spectrum = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+    H mod 7: missing residues = [0]
+    H mod 11: rare residues = [2, 6, 7, 10] (count=1)
+    H mod 13: missing residues = [8]
+    H ≡ 0 mod 7: FORBIDDEN (no H divisible by 7)
+
+======================================================================
+DEEP DIVE 5: SUBLEVEL SET CONNECTIVITY
+======================================================================
+
+  The sublevel sets X_h = {T : H(T) <= h} are always connected
+  in the hypercube graph Q_m.
+
+  WHY? Consider two tournaments T, T' with H(T), H(T') <= h.
+  Can we find a path T = T_0, T_1, ..., T_k = T' in Q_m where
+  each T_i has H(T_i) <= h?
+
+  CLAIM: The path through the TRANSITIVE tournament works.
+  Every tournament can be "sorted" one arc flip at a time,
+  reaching the transitive tournament while (mostly) increasing H.
+
+  But wait — if H INCREASES along the path, the sublevel set condition
+  might be violated (we need H <= h, but if we increase H we go above h).
+
+  ALTERNATIVE: Maybe use the LEXICOGRAPHIC path.
+  Start at T, flip arcs one by one to match T'.
+  Each flip either increases or decreases H.
+
+  The question is: can we always order the arc flips so that
+  H never exceeds max(H(T), H(T'))?
+
+  Let's check: for each pair of tournaments in the SAME H class,
+  is there a path staying within that H class or below?
+
+  n=4, X_{1}: 24 tournaments, 24 reachable = CONNECTED
+          Level set {H=1}: 24 tournaments, 24 reachable = CONNECTED
+  n=4, X_{3}: 40 tournaments, 40 reachable = CONNECTED
+          Level set {H=3}: 16 tournaments, 1 reachable = DISCONNECTED
+  n=4, X_{5}: 64 tournaments, 64 reachable = CONNECTED
+          Level set {H=5}: 24 tournaments, 24 reachable = CONNECTED
+
+======================================================================
+DEEP DIVE 6: H IN THE LAPLACIAN EIGENBASIS
+======================================================================
+
+  The hypercube Q_m has known eigenvalues: m - 2k for k = 0, ..., m.
+  The eigenvectors are Walsh functions chi_S(T) = (-1)^{|T cap S|}.
+
+  H = sum_S hat{H}[S] * chi_S where hat{H}[S] is the Walsh coefficient.
+
+  If Z = alpha * H + beta, then H lives in a single eigenspace!
+  This means hat{H}[S] = 0 except for |S| in one particular value.
+
+  But we KNOW H has Walsh components at degrees 0, 2, 4, ..., n-1.
+  So Z = alpha * H + beta CAN'T hold exactly if H has multiple degrees.
+
+  The n=4 finding (corr = 1.0) must be because n=4 H is special.
+  Let's verify what Walsh degrees n=4 H has.
+
+  n=4 Walsh spectrum of H by degree:
+    Degree 0: energy = 9.000000 (75.00%)
+    Degree 2: energy = 3.000000 (25.00%)
+
+  n=3 Walsh spectrum of H by degree:
+    Degree 0: energy = 2.250000 (75.00%)
+    Degree 2: energy = 0.750000 (25.00%)
+
+  n=5 Walsh spectrum of H by degree:
+    Degree 0: energy = 56.250000 (75.95%)
+    Degree 2: energy = 16.875000 (22.78%)
+    Degree 4: energy = 0.937500 (1.27%)
+
+  Checking if n=4 H is purely degree 0 + degree d:
+  n=4 has degrees with nonzero energy:
+    Active degrees: [0, 2]
+    d = 2, m = 6
+    Predicted: Z = 2 * H + 12.0
+    = (6 - 2*2) * H + 2*2*3.0
+
+======================================================================
+DEEP DIVE 7: MINIMAL POLYNOMIAL OF THE H OPERATOR
+======================================================================
+
+  Treat H as a diagonal matrix on the tournament hypercube.
+  Its minimal polynomial is prod_{h in spectrum} (x - h).
+
+  For n=5: spectrum = {1, 3, 5, 9, 11, 13, 15}
+  MinPoly = (x-1)(x-3)(x-5)(x-9)(x-11)(x-13)(x-15)
+
+  Interesting: the H values at n=5 are {1,3,5,9,11,13,15}.
+  These are all ODD (Redei). But more: they avoid 7!
+
+  The minimal polynomial factors over Q. But what if we look at it mod p?
+
+
+  n=3: H-spectrum = [1, 3]
+    mod 2: roots at [1], HAS COLLISIONS
+      Collision at 1: [1, 3]
+    mod 3: roots at [0, 1], SPLITS COMPLETELY
+    mod 5: roots at [1, 3], SPLITS COMPLETELY
+    mod 7: roots at [1, 3], SPLITS COMPLETELY
+
+  n=4: H-spectrum = [1, 3, 5]
+    mod 2: roots at [1], HAS COLLISIONS
+      Collision at 1: [1, 3, 5]
+    mod 3: roots at [0, 1, 2], SPLITS COMPLETELY
+    mod 5: roots at [0, 1, 3], SPLITS COMPLETELY
+    mod 7: roots at [1, 3, 5], SPLITS COMPLETELY
+
+  n=5: H-spectrum = [1, 3, 5, 9, 11, 13, 15]
+    mod 2: roots at [1], HAS COLLISIONS
+      Collision at 1: [1, 3, 5, 9, 11, 13, 15]
+    mod 3: roots at [0, 1, 2], HAS COLLISIONS
+      Collision at 0: [3, 9, 15]
+      Collision at 1: [1, 13]
+      Collision at 2: [5, 11]
+    mod 5: roots at [0, 1, 3, 4], HAS COLLISIONS
+      Collision at 0: [5, 15]
+      Collision at 1: [1, 11]
+      Collision at 3: [3, 13]
+    mod 7: roots at [1, 2, 3, 4, 5, 6], HAS COLLISIONS
+      Collision at 1: [1, 15]
+
+======================================================================
+DEEP DIVE 8: CHROMATIC CONNECTIONS
+======================================================================
+
+  The conflict graph Omega(T) encodes the 3-cycle structure.
+  I(Omega, 2) = H counts independent sets of size <= 2.
+
+  But the CHROMATIC POLYNOMIAL chi(Omega, k) also involves
+  independent sets (proper k-colorings = k independent sets covering V).
+
+  For k=2: chi(Omega, 2) = 2 * I_exclusive(Omega, 2)
+  where I_exclusive counts independent sets of size EXACTLY |V|/2
+  using exactly 2 colors.
+
+  Actually chi(Omega, k) = sum over proper k-colorings.
+  This is the CHROMATIC polynomial, not the independence polynomial.
+
+  The INDEPENDENCE polynomial is I(Omega, x) = sum_k i_k * x^k
+  where i_k = number of independent sets of size k.
+  I(Omega, 1) = total number of independent sets.
+
+  H = I(Omega, 2) = sum_k i_k * 2^k = independence polynomial at x=2.
+
+  What about I(Omega, 1) = total independent sets?
+  And I(Omega, -1) = signed count?
+
+  BUG: I(Omega,2) = 27 != H = 1
+  BUG: I(Omega,2) = 27 != H = 1
+  BUG: I(Omega,2) = 7 != H = 3
+  BUG: I(Omega,2) = 27 != H = 1
+  BUG: I(Omega,2) = 27 != H = 1
+  BUG: I(Omega,2) = 7 != H = 3
+  BUG: I(Omega,2) = 27 != H = 1
+  BUG: I(Omega,2) = 27 != H = 1
+
+  n=3:
+    I(Omega, -1): spectrum = [-2, 0]
+    I(Omega,  1): spectrum = [4, 8]
+    I(Omega,  2): spectrum = [7, 27]
+    I(Omega,  3): spectrum = [10, 64]
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 81 != H = 5
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 189 != H = 3
+  BUG: I(Omega,2) = 729 != H = 1
+  BUG: I(Omega,2) = 729 != H = 1
+
+  n=4:
+    I(Omega, -1): spectrum = [0]
+    I(Omega,  1): spectrum = [20, 32, 64]
+    I(Omega,  2): spectrum = [81, 189, 729]
+    I(Omega,  3): spectrum = [208, 640, 4096]
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 573 != H = 15
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 1017 != H = 13
+  BUG: I(Omega,2) = 889 != H = 15
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 1449 != H = 11
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 2565 != H = 9
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 3429 != H = 9
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 6561 != H = 5
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 15309 != H = 3
+  BUG: I(Omega,2) = 59049 != H = 1
+  BUG: I(Omega,2) = 59049 != H = 1
+
+  n=5:
+    I(Omega, -1): spectrum = [0, 4]
+    I(Omega,  1): spectrum = [82, 112, 116, 136, 192, 224, 320, 512, 1024]
+    I(Omega,  2): spectrum = [573, 889, 1017, 1449, 2565, 3429, 6561, 15309, 59049]
+    I(Omega,  3): spectrum = [2164, 3460, 4432, 7456, 15232, 22144, 53248, 163840, 1048576]
+
+======================================================================
+DEEP DIVE 9: MULTIPLICATIVE vs ADDITIVE STRUCTURE
+======================================================================
+
+  H is always odd. Write H = 2k+1 for some k >= 0.
+  k = (H-1)/2 = number of "excess" HPs above the minimum.
+
+  For n=5: k values = {0, 1, 2, 4, 5, 6, 7}
+  Missing: k=3 (i.e., H=7).
+
+  Is k always avoiding 3? Or is 3 special?
+  At n=3: k in {0, 1}, missing everything > 1
+  At n=4: k in {0, 1, 2}, missing nothing? Actually H in {1,3,5}, k in {0,1,2}
+  At n=5: k in {0,1,2,4,5,6,7}, missing k=3
+
+  Deeper: is the SET of achievable k values a NUMERICAL SEMIGROUP?
+  (closed under addition for large enough values?)
+
+
+  n=3: k = (H-1)/2 values = [0, 1]
+    Gaps in [0, 1]: []
+    Closed under pairwise sums up to 1
+
+  n=4: k = (H-1)/2 values = [0, 1, 2]
+    Gaps in [0, 2]: []
+    Closed under pairwise sums up to 2
+
+  n=5: k = (H-1)/2 values = [0, 1, 2, 4, 5, 6, 7]
+    Gaps in [0, 7]: [3]
+    NOT closed under addition: [3] achievable as sums but not as k values
+
+  n=6: k = (H-1)/2 values = [0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 20, 21, 22]
+    Gaps in [0, 22]: [3, 10, 17, 19]
+    NOT closed under addition: [3, 10, 17, 19] achievable as sums but not as k values
+
+======================================================================
+DEEP DIVE 10: PARTITION FUNCTION INTERPRETATION
+======================================================================
+
+  In statistical mechanics, Z = sum_states exp(-beta * E(state)).
+  H = sum_P 1 counts Hamiltonian paths with uniform weight.
+
+  Define Z(T, beta) = sum_P exp(-beta * cost(P))
+  where cost(P) = number of "backward" arcs (descents) in P.
+
+  Z(T, 0) = H(T) (uniform weight).
+  Z(T, infinity) = F_0(T) (counts ONLY monotone HPs).
+
+  The FREE ENERGY F(beta) = -log Z(T, beta) / beta
+  and the ENTROPY S(beta) = beta^2 * dF/dbeta
+
+  Question: at what "temperature" 1/beta does the tournament
+  undergo a "phase transition" between ordered and disordered?
+
+
+  H=1: F-polynomial = [1, 0, 0, 0, 0]
+    F(1) = 1 = H
+
+  H=5: F-polynomial = [1, 4, 0, 0, 0]
+    F(1) = 5 = H
+    F(omega) = F(e^{2pi i/3}) = -1.0000+3.4641j, |F(omega)|^2 = 13.0000
+    F(-1) = -3
+    F(i) = 1.0000+4.0000j, |F(i)|^2 = 17.0000
+
+  H=9: F-polynomial = [1, 8, 0, 0, 0]
+    F(1) = 9 = H
+    F(omega) = F(e^{2pi i/3}) = -3.0000+6.9282j, |F(omega)|^2 = 57.0000
+    F(-1) = -7
+    F(i) = 1.0000+8.0000j, |F(i)|^2 = 65.0000
+
+  H=15: F-polynomial = [1, 8, 6, 0, 0]
+    F(1) = 15 = H
+    F(omega) = F(e^{2pi i/3}) = -6.0000+1.7321j, |F(omega)|^2 = 39.0000
+    F(-1) = -1
+    F(i) = -5.0000+8.0000j, |F(i)|^2 = 89.0000
+
+======================================================================
+DEEP DIVE 11: SYMMETRY BREAKING PATTERN
+======================================================================
+  n=5: 11 (H, score-seq) classes
+  Score sequences by H:
+    H=   1, score=(0, 1, 2, 3, 4): 120 tournaments
+    H=   3, score=(0, 1, 3, 3, 3): 40 tournaments
+    H=   3, score=(0, 2, 2, 2, 4): 40 tournaments
+    H=   3, score=(1, 1, 1, 3, 4): 40 tournaments
+    H=   5, score=(0, 2, 2, 3, 3): 120 tournaments
+    H=   5, score=(1, 1, 2, 2, 4): 120 tournaments
+    H=   9, score=(1, 1, 2, 3, 3): 240 tournaments
+    H=  11, score=(1, 2, 2, 2, 3): 120 tournaments
+    H=  13, score=(1, 2, 2, 2, 3): 120 tournaments
+    H=  15, score=(1, 2, 2, 2, 3): 40 tournaments
+    H=  15, score=(2, 2, 2, 2, 2): 24 tournaments
+
+======================================================================
+DEEP DIVE 12: MÖBIUS FUNCTION ON H-SPECTRUM ORDER
+======================================================================
+
+  Define a PARTIAL ORDER on the H-spectrum:
+  h1 <= h2 if there exists a sequence of arc flips
+  T_1 -> T_2 -> ... -> T_k where H(T_1) = h1, H(T_k) = h2,
+  and H is non-decreasing along the path.
+
+  This defines the "H-reachability order."
+
+  For n=4: Can we reach H=5 from H=1 via non-decreasing H path?
+  For n=5: What's the Hasse diagram of this order?
+
+
+  n=4: H-reachability:
+    From H=1: can reach [1, 3, 5]
+    From H=3: can reach [3, 5]
+    From H=5: can reach [5]
+
+  n=5: H-reachability:
+    From H=1: can reach [1, 3, 5, 9, 11, 13, 15]
+    From H=3: can reach [3, 5, 9, 11, 13, 15]
+    From H=5: can reach [5, 9, 11, 13, 15]
+    From H=9: can reach [9, 11, 13, 15]
+    From H=11: can reach [11, 13, 15]
+    From H=13: can reach [13, 15]
+    From H=15: can reach [15]
+    Reachability order is TOTAL
+
+======================================================================
+DONE — DEEP DIVES COMPLETE
+======================================================================
