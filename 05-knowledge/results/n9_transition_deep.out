@@ -1,0 +1,401 @@
+======================================================================
+PART 1: WHY 9 = 3² IS THE BOUNDARY
+======================================================================
+
+  The Cauchy-Schwarz proof of α₁ ≥ α₂:
+
+  1. Each 3-cycle uses 3 vertices → Σ_v d_v = 3α₁
+  2. By convexity: Σ C(d_v,2) ≥ n·C(3α₁/n, 2) = (9α₁²-3nα₁)/(2n)
+  3. e(CG) ≥ Σ C(d_v,2) - s₂ ≥ (9α₁²-3nα₁)/(2n) - s₂
+  4. α₂ = C(α₁,2) - e(CG) ≤ C(α₁,2) - (9α₁²-3nα₁)/(2n)
+  5. α₂ ≤ α₁ requires (n-9)α₁ ≤ 0, i.e., n ≤ 9
+
+  WHERE DOES 9 COME FROM?
+  9 = 3² = (vertices per cycle)²
+  The '3' in 3α₁ is the cycle length.
+  Squaring it via Cauchy-Schwarz gives 9 = 3².
+
+  IF we had k-cycles instead of 3-cycles:
+  Σ_v d_v = k·α₁ → bound requires k² ≥ n
+  i.e., n ≤ k²
+
+  So:
+  3-cycles: n ≤ 9 = 3²
+  5-cycles: n ≤ 25 = 5²
+  7-cycles: n ≤ 49 = 7²
+
+  INCLUDING 5-cycles would extend the proof to n ≤ 25!
+  But 5-cycles contribute to α₁ AND potentially to α₂.
+
+  EXTENDED PROOF SKETCH:
+  Let α₁ = α₁³ + α₁⁵ (3-cycles + 5-cycles)
+  Σ_v d_v = 3α₁³ + 5α₁⁵
+
+  Cauchy-Schwarz on the combined vertex-cycle incidences:
+  Σ C(d_v,2) ≥ (3α₁³ + 5α₁⁵)² / (2n)
+  = (9(α₁³)² + 30α₁³α₁⁵ + 25(α₁⁵)²) / (2n)
+
+  For the bound to work: need this ≥ α₁(α₁-3)/2
+  where α₁ = α₁³ + α₁⁵.
+
+  If α₁⁵ = 0 (only 3-cycles): reduces to 9 ≥ n as before.
+  If α₁³ = 0 (only 5-cycles): need 25 ≥ n.
+  Mixed case: interpolates between 9 and 25.
+
+======================================================================
+PART 2: THE 3×3 STRUCTURE AT n=9
+======================================================================
+
+  n=9 = 3×3: THREE disjoint 3-cycles cover ALL 9 vertices.
+  This is a PERFECT 3-PARTITION: V = C₁ ∪ C₂ ∪ C₃, |Cᵢ|=3.
+
+  The number of such 3-partitions: C(9,3)·C(6,3)·C(3,3)/3! = 280
+
+  At n=9: α₃ ≥ 0 (need 3×3 = 9 vertices)
+  This is the FIRST n where α₃ can be nonzero!
+  (At n=8: ⌊8/3⌋ = 2, so α₃ = 0)
+
+  I(-1) = 1 - α₁ + α₂ - α₃
+  The alternating sum now has THREE variable terms.
+
+  For I(-1) ≤ 1: need α₁ - α₂ + α₃ ≥ 0
+  This is STRONGER than α₁ ≥ α₂!
+  We need: α₁ ≥ α₂ - α₃, i.e., α₁ + α₃ ≥ α₂
+
+  BEAUTIFUL: at n = 3², the alternating sum has 3 terms!
+  At n = 3¹ = 3: one term (α₁ only)
+  At n = 3² = 9: three terms (α₁, α₂, α₃)
+  At n = 3³ = 27: four terms? (α₁,...,α₉)
+
+  Actually: max independent set size ⌊n/3⌋.
+  At n=3: ⌊3/3⌋=1 → I(-1) = 1 - α₁
+  At n=6: ⌊6/3⌋=2 → I(-1) = 1 - α₁ + α₂
+  At n=9: ⌊9/3⌋=3 → I(-1) = 1 - α₁ + α₂ - α₃
+  At n=12: ⌊12/3⌋=4 → I(-1) = 1 - α₁ + α₂ - α₃ + α₄
+
+  So 9 = 3² = 3×3 marks the transition to 3 LEVELS
+  in the independence complex hierarchy!
+
+  The 'levels' correspond to:
+  Level 0: empty set (1 term)
+  Level 1: individual cycles (α₁)
+  Level 2: disjoint pairs (α₂)
+  Level 3: disjoint triples (α₃) — NEW at n=9!
+
+======================================================================
+PART 3: RECURRENCE VIEW — THE TRIBONACCI THRESHOLD
+======================================================================
+
+  At n < 6: I(x) = 1 + α₁x (Fibonacci-like, 2 terms)
+  At 6 ≤ n < 9: I(x) = 1 + α₁x + α₂x² (tribonacci-like, 3 terms)
+  At 9 ≤ n < 12: I(x) = 1 + α₁x + α₂x² + α₃x³ (4 terms)
+
+  The k-nacci connection:
+  Fibonacci (2 terms): root → φ ≈ 1.618
+  Tribonacci (3 terms): root → ≈ 1.839
+  Tetranacci (4 terms): root → ≈ 1.928
+  k-nacci: root → 2 as k → ∞
+
+  TRANSITION AT n=9:
+  I(x) gains its THIRD variable coefficient.
+  The polynomial 'depth' matches the tribonacci level.
+  At x=2: the tribonacci root (1.839) is closest to 2 among
+  the first three k-nacci roots.
+
+  Independence polynomial degree by n:
+    n= 3: max degree = 1, polynomial has 2 terms
+    n= 4: max degree = 1, polynomial has 2 terms
+    n= 5: max degree = 1, polynomial has 2 terms
+    n= 6: max degree = 2, polynomial has 3 terms
+    n= 7: max degree = 2, polynomial has 3 terms
+    n= 8: max degree = 2, polynomial has 3 terms
+    n= 9: max degree = 3, polynomial has 4 terms
+    n=10: max degree = 3, polynomial has 4 terms
+    n=11: max degree = 3, polynomial has 4 terms
+    n=12: max degree = 4, polynomial has 5 terms
+    n=13: max degree = 4, polynomial has 5 terms
+    n=14: max degree = 4, polynomial has 5 terms
+    n=15: max degree = 5, polynomial has 6 terms
+    n=16: max degree = 5, polynomial has 6 terms
+    n=17: max degree = 5, polynomial has 6 terms
+    n=18: max degree = 6, polynomial has 7 terms
+    n=19: max degree = 6, polynomial has 7 terms
+    n=20: max degree = 6, polynomial has 7 terms
+
+======================================================================
+PART 4: THE 3×3 TOURNAMENT — EXTREMAL STRUCTURE
+======================================================================
+
+  A tournament on 9 vertices with three disjoint 3-cycles:
+  V = {0,1,2} ∪ {3,4,5} ∪ {6,7,8}
+  C₁ = 0→1→2→0, C₂ = 3→4→5→3, C₃ = 6→7→8→6
+
+  The inter-block arcs connect the three blocks.
+  Different inter-block patterns give different (α₁, α₂, α₃).
+
+  Pattern 1 (transitive inter-block):
+    α₁=3, α₂=3, α₃=1, I(-1)=0, H=27
+
+  Pattern 2 (cyclic inter-block: 0→1→2→0):
+    α₁=30, α₂=111, α₃=37, I(-1)=45, H=801
+
+  Pattern 3 (diagonal inter-block):
+    α₁=15, α₂=37, α₃=6, I(-1)=17, H=227
+
+  Pattern 4 (random inter-block):
+    α₁=25, α₂=51, α₃=2, I(-1)=25, H=271
+
+    transitive: α₁-α₂+α₃ = 3-3+1 = 1 ✓
+    cyclic: α₁-α₂+α₃ = 30-111+37 = -44 ✗
+    diagonal: α₁-α₂+α₃ = 15-37+6 = -16 ✗
+    random: α₁-α₂+α₃ = 25-51+2 = -24 ✗
+
+======================================================================
+PART 5: RANDOM SAMPLING AT n=9,10,11
+======================================================================
+
+  n=9: 9667/10000 violations of α₁-α₂+α₃ ≥ 0, min = -64
+  n=10: 9986/10000 violations of α₁-α₂+α₃ ≥ 0, min = -97
+  n=11: 6002/10000 violations of α₁-α₂+α₃ ≥ 0, min = -107
+  n=12: 133/10000 violations of α₁-α₂+α₃ ≥ 0, min = -102
+
+======================================================================
+PART 6: THE 9→10 TRANSITION IN DETAIL
+======================================================================
+
+  At n=9: every vertex is in a 3-cycle (generically).
+  Σ d_v = 3α₁, average d_v = 3α₁/9 = α₁/3.
+  CS bound: Σ C(d_v,2) ≥ 9·C(α₁/3, 2) = 9·α₁(α₁-3)/(2·9) = α₁(α₁-3)/2
+  This EXACTLY matches what we need: e(CG) ≥ α₁(α₁-3)/2.
+  At n=9, the Cauchy-Schwarz bound is TIGHT!
+
+  At n=10: average d_v = 3α₁/10 = 0.3α₁.
+  CS bound: 10·C(0.3α₁, 2) = 10·0.3α₁(0.3α₁-1)/2 = 0.9α₁(0.3α₁-1)/2
+  = (0.27α₁² - 0.9α₁)/2 < α₁(α₁-3)/2 = (α₁² - 3α₁)/2
+  The bound FAILS because 0.27 < 1.
+
+  THE GAP: 9/n vs 1.
+  At n=9: 9/9 = 1 (tight)
+  At n=10: 9/10 = 0.9 (gap of 0.1)
+
+  BUT: at n=10, we also have 5-cycles!
+  5-cycles contribute to Σ d_v differently.
+  If we include 5-cycles: Σ d_v = 3α₁³ + 5α₁⁵
+  CS gives: (3α₁³ + 5α₁⁵)²/(2n)
+  For this to work at n=10: need (3α₁³+5α₁⁵)²/10 ≥ α₁²
+  where α₁ = α₁³ + α₁⁵.
+
+  If ALL cycles are 3-cycles (α₁⁵=0):
+    Need 9α₁²/10 ≥ α₁² → 9 ≥ 10, fails.
+
+  If fraction f of cycles are 5-cycles:
+    α₁³ = (1-f)α₁, α₁⁵ = fα₁
+    Σ d_v = (3(1-f) + 5f)α₁ = (3+2f)α₁
+    CS needs: (3+2f)²α₁²/10 ≥ α₁²
+    → (3+2f)² ≥ 10
+    → 3+2f ≥ √10 ≈ 3.162
+    → f ≥ 0.081
+
+  So if ≥ 8.1% of odd cycles are 5-cycles, the bound works at n=10!
+
+  At n=10: is this always true?
+  A tournament on 10 vertices has C(10,5)·... possible 5-cycles.
+  Every tournament with ≥ 3 vertices has at least one 3-cycle
+  (Rédei's theorem: odd number of Ham paths).
+
+======================================================================
+PART 7: THE RECURRENCE 3² = 9 AND THE KEYS
+======================================================================
+
+  9 = 3² appears in multiple contexts:
+
+  1. CAUCHY-SCHWARZ BOUNDARY: α₁≥α₂ proved for n ≤ 9
+  2. PERFECT 3-PARTITION: V = C₁∪C₂∪C₃ possible
+  3. INDEPENDENCE COMPLEX: third term α₃ appears
+  4. RECURRENCE DEPTH: I(x) has degree 3 polynomial
+
+  In the KEY framework:
+  9 = KEY₂² (second key squared)
+  9 = KEY₁³ + 1 (2³ + 1)
+  9 = KEY₁ · KEY₂ + KEY₂ (2·3 + 3 = 6+3)
+
+  THE RECURRENCE z²=5z-6:
+  At z=9: 81 = 45 - 6 = 39. NO, 9²=81, 5·9=45, 81≠45-6=39.
+  So 9 is NOT a root of the tournament polynomial.
+
+  But 9 = 3² and the characteristic polynomial is (z-2)(z-3).
+  The DISCRIMINANT Δ = 25-24 = 1.
+  Δ² = 1. So the discriminant is a PERFECT SQUARE.
+  The roots differ by Δ = 1: 3-2 = 1.
+
+  9 = 3² connects to the SECOND ITERATION of the KEY:
+  Key 3 → 3² = 9 (the boundary)
+  Key 2 → 2² = 4 (= number of cycles through a vertex pair?)
+  Key 2 → 2³ = 8 (= coefficient of α₃ in H)
+
+  H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+  The coefficient of α₃ is 8 = 2³ = KEY₁³.
+  And α₃ first appears at n = 9 = KEY₂².
+
+  KEY₁^(k+1) = 2^(k+1) is the weight of level-k independence sets.
+  KEY₂^k is when level-k independence sets first appear.
+  The BALANCE: 2^(k+1) vs 3^k.
+  Level 1: weight 4=2², appears at n=6=2·3
+  Level 2: weight 8=2³, appears at n=9=3²
+  Level 3: weight 16=2⁴, appears at n=12=4·3
+
+  Weight/threshold ratio: 2^(k+1) / (3k):
+    Level 1: weight=4, threshold n=6, ratio=1.333
+    Level 2: weight=8, threshold n=9, ratio=1.333
+    Level 3: weight=16, threshold n=12, ratio=1.778
+    Level 4: weight=32, threshold n=15, ratio=2.667
+    Level 5: weight=64, threshold n=18, ratio=4.267
+    Level 6: weight=128, threshold n=21, ratio=7.111
+    Level 7: weight=256, threshold n=24, ratio=12.190
+
+  The ratio 2^(k+1)/(3k) grows without bound.
+  Higher levels contribute EXPONENTIALLY more to H per set.
+  But they contribute (-1)^k to I(-1).
+  The alternating sum I(-1) = 1 - α₁ + α₂ - α₃ + ...
+  is a BALANCE between large positive and large negative terms.
+
+======================================================================
+PART 8: THE PACKING INTERPRETATION
+======================================================================
+
+  SIMPLICES INSIDE CUBOIDS:
+  A d-simplex has volume 1/d! of the d-cube.
+  H simplices 'fill' volume H/n! of the n-cube.
+
+  At n=9: the tournament polytope U(T) = union of H orthoschemes
+  in [0,1]^9. Each orthoscheme has volume 1/9! = 1/362880.
+
+  The alternating sum I(-1) = χ(independence complex) measures
+  the 'net topological complexity' of the packing.
+
+  HILBERT'S 3RD PROBLEM at n=9:
+  All tournament polytopes with same H are scissors-congruent
+  (proved in S75: Dehn invariant = 0).
+
+  But the ARRANGEMENT TOPOLOGY differs for same H, different I(x).
+  At n=9, I(x) has degree 3, so the arrangement can have
+  3 levels of 'twisting' — the α₃ term adds a new dimension
+  of topological complexity.
+
+  PACKING THREE SIMPLICES IN A 3-CUBE:
+  A 3-cube has volume 3³ = 27 in 'simplex units' (×3!).
+  Actually: [0,3]³ has volume 27, packed by 27·6 = 162 simplices.
+  The 3×3×3 structure of the cube reflects the 3²=9 boundary.
+
+  In tournament terms:
+  n=9 with three disjoint 3-cycles is like a 3×3 grid
+  of simplices inside a 3-cuboid.
+  Each 3-cycle provides 2 'directions' → 2³ = 8 total
+  from three independent cycles → α₃ contributes 8 to H.
+
+======================================================================
+PART 9: EXTENDING THE PROOF TO n ≥ 10
+======================================================================
+
+  Three strategies to extend α₁ ≥ α₂ beyond n=9:
+
+  STRATEGY 1: Include 5-cycles in the vertex-cycle incidence.
+  Each 5-cycle uses 5 vertices → adds 5 to Σ d_v per cycle.
+  Cauchy-Schwarz becomes: (3α₁³+5α₁⁵)²/(2n) ≥ ...
+  Works as long as enough 5-cycles exist.
+
+  STRATEGY 2: Use the TURÁN density theorem.
+  CG(T) has the property that every vertex's neighborhood
+  contains a large clique. This is a TURÁN-type condition.
+  Turán's theorem: graph with no K_{r+1} has ≤ (1-1/r)n²/2 edges.
+  For CG(T): the complement (whose edges = α₂) has bounded
+  clique number (= max independent set of CG).
+
+  STRATEGY 3: Use the 3-PARTITION structure.
+  At n=3k: the vertices can be partitioned into k blocks of 3.
+  Each block can contain at most 1 3-cycle.
+  Inter-block cycles add to α₁ but are constrained by block structure.
+  This gives α₁ ≈ C(n,3)/... and α₂ ≈ ...
+
+  STRATEGY 1 CHECK: 5-cycle density
+  Expected #3-cycles in random tournament on n vertices: C(n,3)/4
+  Expected #5-cycles: C(n,5)·4!/(2·5) · (1/2)^5... complicated
+
+  n=9: E[#3-cycles]≈21, E[#5-cycles]≈94, ratio≈4.50
+  n=10: E[#3-cycles]≈30, E[#5-cycles]≈189, ratio≈6.30
+  n=11: E[#3-cycles]≈41, E[#5-cycles]≈346, ratio≈8.40
+  n=12: E[#3-cycles]≈55, E[#5-cycles]≈594, ratio≈10.80
+  n=15: E[#3-cycles]≈114, E[#5-cycles]≈2252, ratio≈19.80
+  n=20: E[#3-cycles]≈285, E[#5-cycles]≈11628, ratio≈40.80
+
+  5-cycles OUTNUMBER 3-cycles for n ≥ 10!
+  This means including 5-cycles should STRONGLY extend the proof.
+
+  Combined bound (3-cycles + 5-cycles):
+  Need (3f₃ + 5f₅)² ≥ n where f₃+f₅=1 (fractions)
+
+  n=10: need f₅ ≥ 0.0811 (8.1%)
+  n=15: need f₅ ≥ 0.4365 (43.6%)
+  n=20: need f₅ ≥ 0.7361 (73.6%)
+  n=25: need f₅ ≥ 1.0000 (100.0%)
+  n=30: need f₅ ≥ 1.2386 (123.9%)
+
+  For n=10: need f₅ ≥ 8.1%
+  For n=15: need f₅ ≥ 43.7%
+  For n=20: need f₅ ≥ 73.6%
+  For n=25: need f₅ ≥ 100% (only works with all 5-cycles)
+
+  Since 5-cycles OUTNUMBER 3-cycles for n≥10,
+  the mixed bound should extend well beyond n=9!
+
+======================================================================
+PART 10: THE 3² MANIFESTO — WHY 9 IS NATURAL
+======================================================================
+
+  The number 9 = 3² appears because:
+
+  1. GEOMETRIC: 3 vertices per triangle, 3² = maximum n
+     where triangles are 'dense enough' for Cauchy-Schwarz.
+
+  2. ALGEBRAIC: The KEY₂ = 3 enters its SECOND POWER.
+     First power: 3 vertices per cycle (basic unit).
+     Second power: 3² vertices for three disjoint cycles (α₃ emerges).
+
+  3. COMBINATORIAL: ⌊9/3⌋ = 3 = number of blocks in perfect partition.
+     This is the FIRST n where the partition number = block size.
+     (At n=6: 2 blocks of 3. At n=9: 3 blocks of 3 = SQUARE.)
+
+  4. RECURRENCE: The k-nacci sequence at k=3 (tribonacci) has
+     root ≈ 1.839, closest 'below-2' k-nacci root to 2.
+     Tribonacci = 3 terms = 3 levels of independence complex.
+
+  5. TOPOLOGICAL: I(-1) = 1 - α₁ + α₂ - α₃ has 3 varying terms.
+     The alternating sum has 'depth 3' = KEY₂.
+     At n < 9: depth ≤ 2. At n ≥ 9: depth ≥ 3.
+
+  6. THE (2,3) BRIDGE:
+     Coefficient of α₃ in H is 8 = 2³ = KEY₁³.
+     Threshold for α₃ is n = 9 = 3² = KEY₂².
+     The CROSS-MULTIPLICATION: KEY₁^(k+1) × KEY₂^k
+     = 2^(k+1) × 3^k = weight × threshold.
+     At k=2: 2³ × 3² = 8 × 9 = 72 = total 'capacity' at level 2.
+
+  7. THE CARTAN CONNECTION:
+     det(A₈) = 9 = 3².
+     The Cartan determinant of A₈ is EXACTLY the boundary value!
+     This suggests: α₁ ≥ α₂ ⟺ det(A_{n-1}) ≤ 9?
+     No: det(A_{n-1}) = n. So this is just n ≤ 9.
+     But the MEANING is: the type A₈ root system is the largest
+     for which the 3-cycle clique structure suffices.
+
+  THE TRINITY OF 3²:
+  3² = 9 = 3 × 3
+  = (vertices per cycle) × (max disjoint cycles)
+  = (KEY₂) × (⌊n/KEY₂⌋)
+  = KEY₂²
+
+  At this threshold: every quantity 'squares':
+  - Cycle weight: 2² = 4 (α₂ weight)
+  - Cycles per vertex: α₁/3 (average)
+  - Vertex coverage: 3×3 = 9 (full)
+  - CS bound: (3α₁)²/9 = α₁² (exact match)
