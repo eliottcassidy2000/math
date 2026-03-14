@@ -1,0 +1,66 @@
+============================================================
+ΔH Gap Analysis: Theoretical Bounds
+============================================================
+  n=3: max|Δt₃|=1, five_sets=0, max|Δd₅|≤0, max|Δα₁|≤1
+  n=4: max|Δt₃|=2, five_sets=0, max|Δd₅|≤0, max|Δα₁|≤2
+  n=5: max|Δt₃|=3, five_sets=1, max|Δd₅|≤3, max|Δα₁|≤6
+  n=6: max|Δt₃|=4, five_sets=4, max|Δd₅|≤12, max|Δα₁|≤16
+  n=7: max|Δt₃|=5, five_sets=10, max|Δd₅|≤30, max|Δα₁|≤35
+  n=8: max|Δt₃|=6, five_sets=20, max|Δd₅|≤60, max|Δα₁|≤66
+
+============================================================
+Why |Δα₁|=5 skips at n=5
+============================================================
+
+At n=5:
+  max|Δt₃| = 3 (3 triples contain the flipped arc)
+  max|Δd₅| = 3 (1 five-element set, at most 3 directed 5-cycles change)
+  max|Δα₁| = 6
+
+  |Δα₁| = 5 requires |Δt₃| + |Δd₅| = 5 with SAME SIGN
+  Possibilities: (3,2), (2,3)
+
+  But from the joint distribution (computed in delta_h_gap.py):
+    Only (Δt₃, Δd₅) pairs where signs match give high |Δα₁|:
+    (-3,-3)→6, (-3,-1)→4, (-2,-2)→4, (-1,-2)→3, (1,2)→3, (2,2)→4, (3,1)→4, (3,3)→6
+
+  Missing: (3,2) or (2,3) or (-3,-2) or (-2,-3)
+
+  WHY? Because Δt₃=3 (all 3 triples gain a cycle) constrains the
+  tournament structure so strongly that Δd₅ can only be 1 or 3, not 2.
+
+  Similarly, Δd₅=3 means the 5-cycle gains 3 directed cycles,
+  which constrains Δt₃ to be exactly 3 (forced by the same structure).
+
+  The (3,2) and (2,3) combinations require conflicting structural constraints.
+
+============================================================
+At n=6: gaps at |Δα₁| = 14, 15
+============================================================
+
+At n=6:
+  max|Δt₃| = 4
+  max|Δd₅| = 12 (4 five-sets × 3 max change each)
+  max|Δα₁| = 16
+
+  |ΔH/2| takes values {0,1,...,13,16} — skipping 14, 15.
+
+  |Δα₁| = 14 would need (4,10) or (3,11) or (2,12) — extreme near-max 5-cycle changes
+  |Δα₁| = 15 would need (3,12) or (4,11)
+  |Δα₁| = 16 achieved: needs (4,12) — ALL triples and ALL five-sets max out
+
+  So the gap is at |Δα₁| = max - 1 and max - 2.
+  At n=5: gap at |Δα₁| = max - 1 (= 5)
+  At n=6: gaps at |Δα₁| = max - 2 and max - 1 (= 14, 15)
+
+  This suggests: the EXTREME simultaneous change can happen (max),
+  but slightly-less-than-max requires contradictory constraints.
+
+Prediction for n=7:
+  max|Δt₃| = 5
+  max|Δd₅| ≤ 30
+  max|Δα₁| ≤ 35
+  Expected gaps near 34 and 33
+
+Note: 7-cycles add more, so actual max |Δα₁| is higher.
+The gap pattern should still appear near the max.
