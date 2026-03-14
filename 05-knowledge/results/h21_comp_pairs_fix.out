@@ -1,0 +1,87 @@
+======================================================================
+COMPLEMENTARY PAIR ANALYSIS (FIXED)
+======================================================================
+  10 complementary pairs
+
+--- t₃ → complementary pair count ---
+  t₃= 0: comp_pairs ∈ [0], 0/720 have ≥1
+  t₃= 1: comp_pairs ∈ [0], 0/960 have ≥1
+  t₃= 2: comp_pairs ∈ [0, 1], 80/2240 have ≥1
+  t₃= 3: comp_pairs ∈ [0], 0/2880 have ≥1
+  t₃= 4: comp_pairs ∈ [0, 1], 720/6240 have ≥1
+  t₃= 5: comp_pairs ∈ [0, 1], 1920/3648 have ≥1
+  t₃= 6: comp_pairs ∈ [0, 1, 2], 5760/8640 have ≥1
+  t₃= 7: comp_pairs ∈ [0, 1, 2], 4320/4800 have ≥1
+  t₃= 8: comp_pairs ∈ [1, 2, 4], 2640/2640 have ≥1
+
+--- alpha_1 → complementary pair count ---
+  α₁= 0: comp_pairs ∈ [0], 0/720 have ≥1
+  α₁= 1: comp_pairs ∈ [0], 0/960 have ≥1
+  α₁= 2: comp_pairs ∈ [0, 1], 80/2240 have ≥1
+  α₁= 4: comp_pairs ∈ [0], 0/2880 have ≥1
+  α₁= 5: comp_pairs ∈ [0], 0/1440 have ≥1
+  α₁= 6: comp_pairs ∈ [0, 1], 720/2160 have ≥1
+  α₁= 7: comp_pairs ∈ [0], 0/2208 have ≥1
+  α₁= 8: comp_pairs ∈ [0], 0/720 have ≥1
+  α₁= 9: comp_pairs ∈ [0, 1], 1440/2880 have ≥1
+  α₁=10: comp_pairs ∈ [2], 720/720 have ≥1
+  α₁=11: comp_pairs ∈ [0, 1], 480/1920 have ≥1
+  α₁=12: comp_pairs ∈ [0, 1, 2], 2880/4320 have ≥1
+  α₁=13: comp_pairs ∈ [1], 1440/1440 have ≥1
+  α₁=14: comp_pairs ∈ [1, 2, 4], 3840/3840 have ≥1
+  α₁=16: comp_pairs ∈ [0, 1, 2], 2160/2640 have ≥1
+  α₁=19: comp_pairs ∈ [1], 1440/1440 have ≥1
+  α₁=20: comp_pairs ∈ [1], 240/240 have ≥1
+
+--- Disjoint pair sources at n=6 ---
+  A 3-cycle uses 3 of 6 vertices.
+  A 5-cycle uses 5 of 6 vertices.
+  3+3=6: disjoint iff complementary.
+  3+5=8>6: ALWAYS share ≥2 vertices.
+  5+5=10>6: ALWAYS share ≥4 vertices.
+  Therefore alpha_2 at n=6 = #complementary both-cyclic pairs (weighted).
+
+--- Verify: alpha_2 = weighted comp pair count ---
+  CONFIRMED: alpha_2 = weighted complementary pair count at n=6
+
+--- KEY: When are complementary 3-cycles both cyclic? ---
+  Min t₃ with both-cyclic comp pair: 2
+  Max t₃ with both-cyclic comp pair: 8
+  t₃ distribution (tournaments with ≥1 both-cyclic comp pair):
+    t₃=2: 80 tournaments
+    t₃=4: 720 tournaments
+    t₃=5: 1920 tournaments
+    t₃=6: 5760 tournaments
+    t₃=7: 4320 tournaments
+    t₃=8: 2640 tournaments
+
+--- CONCLUSION ---
+  t₃=8 CAN have both-cyclic complementary pairs!
+
+--- alpha_1 values with alpha_2>0 at n=6 ---
+  α₁= 0: alpha_2 ∈ [0]
+  α₁= 1: alpha_2 ∈ [0]
+  α₁= 2: alpha_2 ∈ [0, 1]
+  α₁= 4: alpha_2 ∈ [0]
+  α₁= 5: alpha_2 ∈ [0]
+  α₁= 6: alpha_2 ∈ [0, 1]
+  α₁= 7: alpha_2 ∈ [0]
+  α₁= 8: alpha_2 ∈ [0]
+  α₁= 9: alpha_2 ∈ [0, 1]
+  α₁=10: alpha_2 ∈ [2]
+  α₁=11: alpha_2 ∈ [0, 1]
+  α₁=12: alpha_2 ∈ [0, 1, 2]
+  α₁=13: alpha_2 ∈ [1]
+  α₁=14: alpha_2 ∈ [1, 2, 4]
+  α₁=16: alpha_2 ∈ [0, 1, 2]
+  α₁=19: alpha_2 ∈ [1]
+  α₁=20: alpha_2 ∈ [1]
+
+  For H=21: need T=10 = alpha_1 + 2*alpha_2.
+  Check each alpha_1:
+    α₁= 0: need α₂=5, achievable=[0]: IN GAP
+    α₁= 2: need α₂=4, achievable=[0, 1]: IN GAP
+    α₁= 4: need α₂=3, achievable=[0]: IN GAP
+    α₁= 6: need α₂=2, achievable=[0, 1]: IN GAP
+    α₁= 8: need α₂=1, achievable=[0]: IN GAP
+    α₁=10: need α₂=0, achievable=[2]: IN GAP
