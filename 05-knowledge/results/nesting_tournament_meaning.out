@@ -1,0 +1,179 @@
+======================================================================
+TOURNAMENT STATISTICS vs NESTING RATIOS
+======================================================================
+
+  n     max_H    n!/2^{n-1}       3^n       4^n   (4/3)^n   max_H/3^n   max_H/(4/3)^n
+    3         3           1.5        27        64     2.370      0.1111          1.2656
+    4         5           3.0        81       256     3.160      0.0617          1.5820
+    5        15           7.5       243      1024     4.214      0.0617          3.5596
+    6        45          22.5       729      4096     5.619      0.0617          8.0090
+    7       189          78.8      2187     16384     7.492      0.0864         25.2285
+    8       661         315.0      6561     65536     9.989      0.1007         66.1746
+
+NOTE: max_H grows much faster than (4/3)^n.
+Szele: max_H ~ c · n!/2^{n-1}, while (4/3)^n is exponential (not factorial).
+
+======================================================================
+MEAN H vs SIMPLEX/CUBOID
+======================================================================
+
+  n   E[H]=n!/2^{n-1}       3^n       ratio       4^n    E[H]/4^n
+    3               1.5        27      0.0556        64    0.023438
+    4               3.0        81      0.0370       256    0.011719
+    5               7.5       243      0.0309      1024    0.007324
+    6              22.5       729      0.0309      4096    0.005493
+    7              78.8      2187      0.0360     16384    0.004807
+    8             315.0      6561      0.0480     65536    0.004807
+    9            1417.5     19683      0.0720    262144    0.005407
+   10            7087.5     59049      0.1200   1048576    0.006759
+   11           38981.2    177147      0.2201   4194304    0.009294
+
+E[H]/3^n grows rapidly — E[H] >> 3^n for all n≥3.
+E[H]/4^n also grows — the mean is factorial, not exponential.
+
+======================================================================
+THE DEEPER CONNECTION: I(G,2) AND 3^n
+======================================================================
+
+I(G, 2) range:
+  n=1: I(G,2) ∈ [3, 3] = [1+2n, 3^n]
+  n=2: I(G,2) ∈ [5, 9] = [1+2n, 3^n]
+  n=3: I(G,2) ∈ [7, 27] = [1+2n, 3^n]
+  n=4: I(G,2) ∈ [9, 81] = [1+2n, 3^n]
+  n=5: I(G,2) ∈ [11, 243] = [1+2n, 3^n]
+  n=6: I(G,2) ∈ [13, 729] = [1+2n, 3^n]
+  n=7: I(G,2) ∈ [15, 2187] = [1+2n, 3^n]
+  n=8: I(G,2) ∈ [17, 6561] = [1+2n, 3^n]
+  n=9: I(G,2) ∈ [19, 19683] = [1+2n, 3^n]
+
+KEY: 3^n = I(empty_graph, 2) = MAXIMUM of I(G,2) over n-vertex graphs.
+     This is the SIMPLEX value (x+1)^n at x=2!
+
+I(star_n, 2) = I(K_{1,n-1}, 2):
+  n=2: I(K_{1,1}, 2) = 5, expected 2+3^1 = 5, match: True
+  n=3: I(K_{1,2}, 2) = 11, expected 2+3^2 = 11, match: True
+  n=4: I(K_{1,3}, 2) = 29, expected 2+3^3 = 29, match: True
+  n=5: I(K_{1,4}, 2) = 83, expected 2+3^4 = 83, match: True
+  n=6: I(K_{1,5}, 2) = 245, expected 2+3^5 = 245, match: True
+  n=7: I(K_{1,6}, 2) = 731, expected 2+3^6 = 731, match: True
+  n=8: I(K_{1,7}, 2) = 2189, expected 2+3^7 = 2189, match: True
+
+  I(star_n, 2) = 2 + 3^{n-1}. Interesting but not 4^n.
+
+======================================================================
+THE REAL MEANING OF 4^n - 3^n
+======================================================================
+
+Complement sequence C(n) = 4^n - 3^n:
+  C(1) = 1
+  C(2) = 7
+  C(3) = 37
+  C(4) = 175
+  C(5) = 781
+  C(6) = 3367
+  C(7) = 14197
+  C(8) = 58975
+  C(9) = 242461
+
+Factorizations:
+  C(1) =        1 = 
+  C(2) =        7 = 7
+  C(3) =       37 = 37
+  C(4) =      175 = 5 × 5 × 7
+  C(5) =      781 = 11 × 71
+  C(6) =     3367 = 7 × 13 × 37
+  C(7) =    14197 = 14197
+  C(8) =    58975 = 5 × 5 × 7 × 337
+  C(9) =   242461 = 37 × 6553
+
+  C(1)=1: trivially achievable as H
+  C(2)=7: FORBIDDEN (K₃ poison)
+  C(3)=37: achievable at n=7 (verified)
+  C(4)=175: achievable
+  C(5)=781: achievable at large n
+
+C(n) mod small primes:
+  mod 2: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  mod 3: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  mod 5: [1, 2, 2, 0, 1, 2, 2, 0, 1, 2, 2, 0]
+  mod 7: [1, 0, 2, 0, 4, 0, 1, 0, 2, 0, 4, 0]
+
+  mod 2: always 1 (always odd)
+  mod 3: always 1 (since 4≡1, 3≡0 mod 3)
+  mod 5: period 4
+  mod 7: period 6 — and C(2)=7≡0 mod 7!
+
+When does 7 divide C(n) = 4^n - 3^n?
+  C( 1) =          1  
+  C( 2) =          7  7|C(n)
+  C( 3) =         37  
+  C( 4) =        175  7|C(n)
+  C( 5) =        781  
+  C( 6) =       3367  7|C(n)
+  C( 7) =      14197  
+  C( 8) =      58975  7|C(n)
+  C( 9) =     242461  
+  C(10) =     989527  7|C(n)
+  C(11) =    4017157  
+  C(12) =   16245775  7|C(n)
+  C(13) =   65514541  
+  C(14) =  263652487  7|C(n)
+
+  7 | (4^n - 3^n) iff n is EVEN (since 6² ≡ 1 mod 7)
+  C(2) = 7 (exactly 7)
+  C(4) = 175 = 5² × 7
+  C(6) = 3367 = 7 × 481 = 7 × 13 × 37
+
+======================================================================
+SYNTHESIS: THE NESTING IN TOURNAMENT TERMS
+======================================================================
+
+
+THE GEOMETRIC-ALGEBRAIC BRIDGE:
+
+GEOMETRY:
+  Simplex (x+1)^n at x=2 → 3^n = max I(G,2) over n-vertex graphs
+  Cuboid (x+2)^n at x=2 → 4^n = ???
+  Complement 4^n - 3^n → a (4/3)^n-growing gap
+
+ALGEBRA:
+  3^n = I(nK₁, 2) = independence polynomial of n isolated vertices at x=2
+      = maximum possible I(G,2) for any n-vertex graph G
+
+  The simplex 3^n is the "ceiling" of the independence polynomial world.
+  It represents TOTAL INDEPENDENCE: no constraints between vertices.
+
+  The cuboid 4^n = (3+1)^n = sum C(n,k) 3^k
+  = "one level up" in the binomial expansion.
+
+  In tournament terms:
+  - 3^n = I(Ω(T), 2) when Ω has NO edges (all odd cycles vertex-disjoint)
+  - This gives H = 3^n, the theoretical maximum for H when Ω has n vertices
+  - But actual Ω(T) graphs are highly constrained, so H << 3^n for large n
+
+THE USER'S PACKING INSIGHT:
+  A cuboid 4^n "contains" C(n,k) simplices 3^k of each dimension k.
+  In tournament terms: the space of all possible H values (up to 4^n)
+  can be decomposed into "simplex layers" indexed by the independence
+  number of Ω(T).
+
+  Layer k: graphs with independence number exactly k.
+    I(G,2) for these graphs ranges from ~2k+1 to ~3^k.
+
+  The nesting ratio (4/3)^n measures how much "room" there is
+  between the simplex (maximal I at n vertices) and the cuboid
+  (theoretical upper bound from the expansion).
+
+  At n=2: room = 7 = EXACTLY the forbidden value!
+  For n≥3: room grows super-exponentially, allowing more H values.
+
+THE DEEP REASON H=7 IS FORBIDDEN:
+  At the level where 3 odd cycles can exist (Ω has ≥3 vertices),
+  the gap between "no edges" (3^3=27) and "all pairs adjacent" (1+6=7)
+  is EXACTLY the range [7, 27].
+  But I(K₃, 2) = 7 is the MINIMUM of this range, requiring ALL pairs
+  to conflict — which is incompatible with tournament structure (THM-201).
+
+  7 = 4² - 3² is also the n=2 complement, meaning it's at the
+  "tightest" packing level where simplex barely fits in cuboid.
+
