@@ -1,0 +1,339 @@
+======================================================================
+PART 1: THE 3×3 GRID TOURNAMENT
+======================================================================
+
+Place 9 vertices on a 3×3 grid:
+  0 1 2
+  3 4 5
+  6 7 8
+
+Rows: {0,1,2}, {3,4,5}, {6,7,8}
+Columns: {0,3,6}, {1,4,7}, {2,5,8}
+Diagonals: {0,4,8}, {2,4,6}
+
+Grid tournament (transitive inter-row):
+  α₁=3, α₂=3, α₃=1
+  H = 27
+  I(2) = 1 + 2·3 + 4·3 + 8·1 = 27
+  α₁-α₂+α₃ = 1
+  I(-1) = 1 - 3 + 3 - 1 = 0
+
+Grid tournament (cyclic inter-row):
+  α₁=30, α₂=111, α₃=37
+  H = 3159
+  I(2) = 1 + 2·30 + 4·111 + 8·37 = 801
+  α₁-α₂+α₃ = -44
+  I(-1) = 45
+
+======================================================================
+PART 2: PRODUCT TOURNAMENTS T₃ ⊠ T₃
+======================================================================
+
+Define the LEXICOGRAPHIC PRODUCT T₁ ⊠ T₂:
+Vertices: {(i,j) : i ∈ V(T₁), j ∈ V(T₂)}
+Arc (i₁,j₁) → (i₂,j₂) iff:
+  i₁ → i₂ in T₁, OR
+  i₁ = i₂ and j₁ → j₂ in T₂
+
+C₃ ⊠ C₃:
+  α₁=30, α₂=111, α₃=37
+  H=3159, I(2)=801
+  α₁-α₂+α₃=-44, I(-1)=45
+
+C₃ ⊠ L₃:
+  α₁=27, α₂=108, α₃=36
+  H=2721, I(2)=775
+  α₁-α₂+α₃=-45, I(-1)=46
+
+L₃ ⊠ C₃:
+  α₁=3, α₂=3, α₃=1
+  H=27, I(2)=27
+  α₁-α₂+α₃=1, I(-1)=0
+
+L₃ ⊠ L₃:
+  α₁=0, α₂=0, α₃=0
+  H=1, I(2)=1
+  α₁-α₂+α₃=0, I(-1)=1
+
+======================================================================
+PART 3: THE QR₉ — QUADRATIC RESIDUE TOURNAMENT ON 9
+======================================================================
+
+Wait: 9 is not prime, so QR₉ doesn't exist in the usual sense.
+But 9 = 3², so we can use the FINITE FIELD GF(9).
+
+GF(9) = GF(3)[x]/(x²+1) since x²+1 is irreducible over GF(3)
+(since -1 is not a QR mod 3).
+
+GF(9) elements: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
+Squares in GF(9)*: {(1, 0), (0, 2), (2, 0), (0, 1)}
+Number of squares: 4 (should be 4 = (9-1)/2)
+
+9 ≡ 1 (mod 4), so -1 is a square in GF(9).
+Paley construction gives a GRAPH, not a tournament!
+This is fundamentally why 9 is different from primes 3,5,7,11...
+
+Paley GRAPH on GF(9): 18 edges (should be 9·4/2 = 18)
+This is the Paley graph P(9), which is self-complementary.
+Its clique number ω(P(9)) and independence number α(P(9)) are both 3.
+
+INSIGHT: The Paley GRAPH at q=9 has α=ω=3 = √9.
+This is Ramsey theory: R(3,3) = 6, but P(9) achieves α=ω=√q.
+The 'square root barrier' at q=9 is EXACTLY our n=9=3² boundary!
+
+======================================================================
+PART 4: THE 3×3 MAGIC SQUARE TOURNAMENT
+======================================================================
+
+Magic square of order 3:
+  2 7 6
+  9 5 1
+  4 3 8
+
+Use row/column/diagonal triples as forced 3-cycles.
+The magic square has rows, columns, and diagonals summing to 15.
+
+What if we orient by VALUE: a→b iff a < b?
+This gives the transitive tournament on {1,...,9}.
+But the 3-cycle structure of the magic square is interesting.
+
+Lines of the magic square (each sums to 15):
+  [2, 7, 6] (sum=15)
+  [9, 5, 1] (sum=15)
+  [4, 3, 8] (sum=15)
+  [2, 9, 4] (sum=15)
+  [7, 5, 3] (sum=15)
+  [6, 1, 8] (sum=15)
+  [2, 5, 8] (sum=15)
+  [6, 5, 4] (sum=15)
+
+Can we build a tournament where magic square lines are 3-cycles?
+A 3-cycle on {a,b,c} needs a→b→c→a or a→c→b→a.
+Each line constrains the orientation of 3 edges.
+We need consistency across all 8 lines.
+
+This is equivalent to finding a tournament on {1,...,9}
+where each magic square line forms a directed 3-cycle.
+
+Max magic-line 3-cycles found (100k random): 7/8
+  α₁=27, α₂=85, α₃=9
+  I(-1) = 50
+
+======================================================================
+PART 5: TENSOR FACTORIZATION OF α
+======================================================================
+
+For the lexicographic product T₁ ⊠ T₂:
+Does α_k(T₁⊠T₂) relate to α_k(T₁) and α_k(T₂)?
+
+C₃ (3-cycle): α₁=1
+L₃ (transitive): α₁=0
+
+Products:
+C₃ ⊠ C₃: α₁(T₁)=1, α₁(T₂)=1
+  α₁(product)=30
+  α₁(T₁)·C(3,3) + 3·α₁(T₂) + ... = ?
+  α₁(T₁)·1 + 3·α₁(T₂) = 4
+  3²·α₁(T₁) + 3·α₁(T₂) = 12
+  C(3,3)·α₁(T₁) + C(3,1)²·α₁(T₂) = 10
+
+C₃ ⊠ L₃: α₁(T₁)=1, α₁(T₂)=0
+  α₁(product)=27
+  α₁(T₁)·C(3,3) + 3·α₁(T₂) + ... = ?
+  α₁(T₁)·1 + 3·α₁(T₂) = 1
+  3²·α₁(T₁) + 3·α₁(T₂) = 9
+  C(3,3)·α₁(T₁) + C(3,1)²·α₁(T₂) = 1
+
+L₃ ⊠ C₃: α₁(T₁)=0, α₁(T₂)=1
+  α₁(product)=3
+  α₁(T₁)·C(3,3) + 3·α₁(T₂) + ... = ?
+  α₁(T₁)·1 + 3·α₁(T₂) = 3
+  3²·α₁(T₁) + 3·α₁(T₂) = 3
+  C(3,3)·α₁(T₁) + C(3,1)²·α₁(T₂) = 9
+
+L₃ ⊠ L₃: α₁(T₁)=0, α₁(T₂)=0
+  α₁(product)=0
+  α₁(T₁)·C(3,3) + 3·α₁(T₂) + ... = ?
+  α₁(T₁)·1 + 3·α₁(T₂) = 0
+  3²·α₁(T₁) + 3·α₁(T₂) = 0
+  C(3,3)·α₁(T₁) + C(3,1)²·α₁(T₂) = 0
+
+
+======================================================================
+PART 6: THE 3² = 9 AS ROOT SYSTEM RANK
+======================================================================
+
+det(A_k) = k+1 for type A root system.
+det(A₈) = 9 = 3².
+
+The Weyl group of A₈ is S₉ — permutations of 9 elements!
+The tournament on 9 vertices lives in the Weyl chamber structure of A₈.
+
+Number of Weyl chambers = |W(A₈)| = 9! = 362880
+Each Hamiltonian path corresponds to a Weyl chamber.
+
+The 3-cycles of the tournament correspond to...
+REFLECTIONS? No — 3-cycles in S₉ have order 3.
+The simple reflections are TRANSPOSITIONS (order 2).
+
+But: a 3-cycle (i j k) = (i j)(j k) — product of 2 adjacent transpositions
+when the vertices are adjacent in some ordering.
+So 3-cycles in the tournament correspond to LENGTH-2 ELEMENTS of W(A₈).
+
+The GEOMETRIC meaning of 3² = 9:
+
+The A₈ root system has 8 simple roots α₁,...,α₈.
+The Cartan matrix has size 8×8, det = 9.
+
+The 9 = det comes from the VOLUME of the fundamental domain.
+The fundamental domain of A₈ in the weight lattice has
+volume proportional to √det = 3.
+
+Tournament 3-cycles 'tile' the weight lattice of A₈!
+Each 3-cycle uses 3 vertices = 3 weights.
+Three disjoint 3-cycles = 9 weights = full coverage.
+The α₃ term counts these FULL TILINGS.
+
+
+======================================================================
+PART 7: THE TIC-TAC-TOE CONNECTION
+======================================================================
+
+Tic-tac-toe has 9 cells arranged in a 3×3 grid.
+Winning lines: 3 rows + 3 columns + 2 diagonals = 8 lines of 3.
+
+A tournament on the 9 cells:
+- 9 vertices, C(9,3)=84 possible 3-cycles
+- 8 of these 84 triples are 'winning lines'
+
+For a tournament where ALL 8 winning lines are 3-cycles:
+  α₁ ≥ 8
+  α₂ = ? (how many pairs of winning lines are disjoint?)
+
+  Disjoint pair: (0, 1, 2) and (3, 4, 5)
+  Disjoint pair: (0, 1, 2) and (6, 7, 8)
+  Disjoint pair: (3, 4, 5) and (6, 7, 8)
+  Disjoint pair: (0, 3, 6) and (1, 4, 7)
+  Disjoint pair: (0, 3, 6) and (2, 5, 8)
+  Disjoint pair: (1, 4, 7) and (2, 5, 8)
+
+Total disjoint pairs of winning lines: 6
+So if all 8 lines are 3-cycles: α₂ ≥ 6 (from these lines alone)
+
+Searching for tournaments where all 8 tic-tac-toe lines are 3-cycles...
+Found 7/500000 tournaments with all 8 lines as 3-cycles
+  Estimated total: ~962072 out of 68719476736
+  Fraction: 0.000014 ≈ (3/4)^8 = 0.100113?
+  (Each line is a 3-cycle with prob 3/4 if independent)
+  Example tournament with all 8 ttt-lines as 3-cycles:
+    α₁=26, α₂=80, α₃=9
+    H=2401
+    α₁-α₂+α₃ = -45
+
+======================================================================
+PART 8: THE 3-PARTITION THEOREM
+======================================================================
+
+The 3-PARTITION problem: given 3m numbers summing to m·T,
+can they be split into m triples each summing to T?
+This is STRONGLY NP-COMPLETE!
+
+Connection to tournaments:
+At n=9=3·3: can the vertices be partitioned into 3 triples,
+each forming a 3-cycle? This is asking for α₃ > 0.
+
+How common is α₃ > 0 at n=9?
+  n=9, 5000 random: α₃>0 in 4299 (86.0%), α₃=0 in 701
+
+Expected: since each triple has prob 3/4 of being a 3-cycle,
+and there are C(9,3,3,3)/3! = 280 partitions into three triples,
+α₃ should almost always be positive.
+
+======================================================================
+PART 9: THE NINE = THREE CUBED... NO, THREE SQUARED
+======================================================================
+
+CREATIVE SYNTHESIS:
+
+9 = 3² is the SELF-SIMILAR number for triangles.
+
+A triangle has 3 vertices.
+A 'meta-triangle' of triangles has 3² = 9 vertices.
+A 'meta-meta-triangle' has 3³ = 27 vertices.
+
+The Sierpinski triangle (fractal) at level k has 3^k vertices.
+At level 2 (k=2): 9 vertices, arranged as 3 triangles.
+
+In our tournament context:
+Level 0: single vertex (n=1)
+Level 1: 3-cycle (n=3, α₁=1)
+Level 2: 3×3 (n=9, α₃ can be 1)
+Level 3: 3×3×3 (n=27, α₉ can be 1)
+
+The FRACTAL dimension of the triangle is log(3)/log(2) ≈ 1.585.
+This is the ratio of our two keys: log(KEY₂)/log(KEY₁) = log3/log2!
+
+HAUSDORFF DIMENSION of Sierpinski triangle = log3/log2 ≈ 1.585
+  log(3)/log(2) = 1.732051... no wait
+  log(3)/log(2) = 1.584963
+  This is EXACTLY log₂(3), the Hausdorff dimension!
+
+And log₂(3) appears in the tournament theory:
+  The weight-to-threshold ratio 2^(k+1)/3^k → ∞
+  But 2^k/3^k = (2/3)^k → 0
+  The BALANCE point: 2^k = 3^k when k=0.
+  For k>0: 2^k < 3^k, so thresholds grow faster than weights.
+
+This means higher-order independence sets are RARE relative
+to their combinatorial weight in H = I(CG(T), 2).
+The 'energy' at level k is 2^k · α_k.
+But α_k drops as 3^(-k) (heuristically).
+Net contribution: (2/3)^k → 0 geometrically.
+
+This is EXACTLY the k-nacci convergence rate to 2!
+Weighted k-nacci converges to 3 at rate (2/3)^k.
+The SELF-SIMILAR fractal structure of tournaments at 3^k
+is what makes the Sierpinski dimension log₂(3) the
+fundamental constant connecting 2 and 3.
+
+======================================================================
+PART 10: THE THREE REGIMES
+======================================================================
+
+n=1 to 5 (pre-pairing): α₂ = 0, I(-1) = 1 - α₁ ≤ 1 trivially
+n=6 to 8 (pairing regime): α₂ > 0, α₃ = 0, need α₁ ≥ α₂
+n=9+ (triple regime): α₃ > 0, need α₁ - α₂ + α₃ ≥ 0
+
+Regime boundaries: n=6=2·3, n=9=3², n=12=4·3, n=15=5·3, ...
+Each boundary at n=3k introduces α_k.
+
+THE CORRESPONDENCE TO k-NACCI:
+k-nacci uses k previous terms in the recurrence.
+At the regime boundary n=3k, the independence polynomial
+I(x) has k+1 terms (degree k).
+The k-nacci with k terms converges to a root r_k.
+
+k-nacci roots (positive roots of x^k = x^{k-1} + ... + 1):
+  k=2: root = 1.618034, regime n ≤ 6, gap from 2: 0.381966
+  k=3: root = 1.839287, regime n ≤ 9, gap from 2: 0.160713
+  k=4: root = 1.927562, regime n ≤ 12, gap from 2: 0.072438
+  k=5: root = 1.965948, regime n ≤ 15, gap from 2: 0.034052
+  k=6: root = 1.983583, regime n ≤ 18, gap from 2: 0.016417
+  k=7: root = 1.991964, regime n ≤ 21, gap from 2: 0.008036
+  k=8: root = 1.996031, regime n ≤ 24, gap from 2: 0.003969
+  k=9: root = 1.998029, regime n ≤ 27, gap from 2: 0.001971
+
+THE CONVERGENCE: as k → ∞, root → 2.
+As n → ∞, the independence polynomial has more terms,
+the k-nacci root approaches 2, and I(2) = H.
+
+The tournament polynomial z²-5z+6=0 with roots 2 and 3
+captures both limits:
+  k-nacci → 2 (the smaller root)
+  weighted k-nacci → 3 (the larger root)
+
+9 = 3² is where the k=3 (tribonacci) regime begins.
+Tribonacci root ≈ 1.839, gap from 2 ≈ 0.161.
+This is the STEEPEST part of the convergence curve!
+(Fibonacci gap ≈ 0.382, tribonacci gap ≈ 0.161, 4-nacci gap ≈ 0.072)
+The gaps decay roughly as 1/2^k, matching the (2/3)^k rate.

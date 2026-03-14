@@ -1,0 +1,176 @@
+======================================================================
+PART 1: DETAILED n=5 ANALYSIS
+======================================================================
+
+T0: H=5
+  Vertex-set method: I(2)=5, match=True
+  Alpha: [1, 2]
+
+T1: H=11
+  Vertex-set method: I(2)=11, match=True
+  Alpha: [1, 5]
+
+T2: H=9
+  Vertex-set method: I(2)=9, match=True
+  Alpha: [1, 4]
+
+T3: H=13
+  Vertex-set method: I(2)=11, match=False
+    5-cycle on {0, 1, 2, 3, 4}: 2 directed cycles!
+  Alpha: [1, 5]
+  GAP = 2
+  Extra directed cycles (beyond 1 per vertex set): 1
+
+T4: H=5
+  Vertex-set method: I(2)=5, match=True
+  Alpha: [1, 2]
+
+T5: H=1
+  Vertex-set method: I(2)=1, match=True
+  Alpha: [1]
+
+T6: H=9
+  Vertex-set method: I(2)=9, match=True
+  Alpha: [1, 4]
+
+T7: H=1
+  Vertex-set method: I(2)=1, match=True
+  Alpha: [1]
+
+T8: H=5
+  Vertex-set method: I(2)=5, match=True
+  Alpha: [1, 2]
+
+T9: H=15
+  Vertex-set method: I(2)=11, match=False
+    5-cycle on {0, 1, 2, 3, 4}: 3 directed cycles!
+  Alpha: [1, 5]
+  GAP = 4
+  Extra directed cycles (beyond 1 per vertex set): 2
+
+======================================================================
+PART 2: COUNTING DIRECTED CYCLES CORRECTLY
+======================================================================
+
+On a set of k vertices, a directed cycle visits each vertex once
+in cyclic order. The number of distinct directed k-cycles on k
+labeled vertices is (k-1)! (fixing one vertex, permuting the rest).
+But in a tournament, at most SOME of these are actually directed.
+
+For 3 vertices: (3-1)! = 2 possible directed 3-cycles.
+A tournament on 3 vertices has exactly 1 or 0 directed 3-cycles.
+(It's 1 iff the tournament is NOT transitive.)
+
+For 5 vertices: (5-1)! = 24 possible directed 5-cycles.
+But as directed CYCLES: we identify cyclic rotations,
+so (5-1)! / 5... no, (5-1)! already fixes one vertex.
+Actually: there are (5-1)!/2 = 12 distinct unoriented cycles,
+each giving 1 directed cycle. So up to 12 directed 5-cycles.
+
+T0: H=9, #3-cycles=3, #directed-5-cycles=1
+  All cycles are on overlapping vertices at n=5
+  α₁=4, α₂=0 (complete conflict graph)
+  I(2) = 1 + 2·4 = 9
+  Match? True
+
+T1: H=9, #3-cycles=3, #directed-5-cycles=1
+  All cycles are on overlapping vertices at n=5
+  α₁=4, α₂=0 (complete conflict graph)
+  I(2) = 1 + 2·4 = 9
+  Match? True
+
+T2: H=5, #3-cycles=2, #directed-5-cycles=0
+  All cycles are on overlapping vertices at n=5
+  α₁=2, α₂=0 (complete conflict graph)
+  I(2) = 1 + 2·2 = 5
+  Match? True
+
+T3: H=1, #3-cycles=0, #directed-5-cycles=0
+  All cycles are on overlapping vertices at n=5
+  α₁=0, α₂=0 (complete conflict graph)
+  I(2) = 1 + 2·0 = 1
+  Match? True
+
+T4: H=3, #3-cycles=1, #directed-5-cycles=0
+  All cycles are on overlapping vertices at n=5
+  α₁=1, α₂=0 (complete conflict graph)
+  I(2) = 1 + 2·1 = 3
+  Match? True
+
+
+======================================================================
+PART 3: THE CORRECT OCF — WHAT ARE THE VERTICES OF Ω(T)?
+======================================================================
+
+HYPOTHESIS 1: Vertices = vertex sets supporting a directed odd cycle
+HYPOTHESIS 2: Vertices = individual directed odd cycles
+
+Testing at n=5:
+At n=5, every 3-cycle is on a unique vertex set (C(5,3)=10 possible),
+and there's only one 5-vertex set.
+So Hyp 1 and Hyp 2 agree for 3-cycles.
+For 5-cycles: Hyp 1 has 1 node, Hyp 2 has multiple nodes.
+
+QR_5: H = 10
+  Scores: [2, 2, 2, 2, 2] (should be all 2)
+  3-cycles: 0
+  Directed 5-cycles: 2
+    (0, 1, 2, 3, 4)
+    (0, 4, 3, 2, 1)
+
+  Hyp 1 (vertex sets): α = [1, 1], I(2) = 3
+  Hyp 2 (directed cycles): α = [1, 2], I(2) = 5
+  H = 10
+  Hyp 1 matches? False
+  Hyp 2 matches? False
+
+======================================================================
+PART 4: RE-READING THE DEFINITION MORE CAREFULLY
+======================================================================
+
+From definitions.md:
+  'Conflict graph Ω(T): vertices are directed odd cycles of T'
+
+'Directed odd cycles' most naturally means:
+Each cyclic sequence a→b→c→a is ONE directed cycle.
+Different orderings of the same vertex set that give different
+directed cycles are different vertices of Ω(T).
+
+But in a tournament on 3 vertices {a,b,c}:
+If a→b→c→a is a directed cycle, then a→c→b→a is NOT
+(because we'd need c→b, b→a, a→c, which is the reverse).
+In a tournament, exactly one of the two orientations works.
+So for 3-cycles: 1 directed cycle per vertex set.
+
+For 5-cycles on {a,b,c,d,e} in a tournament:
+Multiple distinct directed 5-cycles can exist!
+E.g., a→b→c→d→e→a AND a→c→e→b→d→a could both be directed cycles.
+
+
+======================================================================
+PART 5: EXHAUSTIVE n=5 WITH DIRECTED 5-CYCLES AS SEPARATE NODES
+======================================================================
+
+n=5 exhaustive (1024 tournaments):
+  H = I(2) matches (vertex-set method): 840/1024
+  H = I(2) matches (directed-cycle method): 1024/1024
+  I(-1) max (directed-cycle): 1
+  I(-1) > 1 violations (directed-cycle): 0
+
+======================================================================
+PART 6: THE REAL FORMULA — MAYBE NOT INDEPENDENCE POLYNOMIAL?
+======================================================================
+
+The OCF formula is: H(T) = Σ_{S independent in Ω(T)} 2^|S|
+This IS the independence polynomial at x=2.
+
+But WAIT: the original OCF from THM-070 says:
+H = I(Ω(T), 2)
+And this was VERIFIED at small n.
+
+Let me check if the verification used 3-cycles only!
+
+Using ONLY 3-cycles at n=5: 480/1024 match H=I(2)
+
+If this is <100%, then 3-cycles alone don't suffice.
+If 100%, then the OCF might only need 3-cycles!

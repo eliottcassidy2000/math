@@ -1,0 +1,116 @@
+======================================================================
+PART 1: EXHAUSTIVE CHECK AT n=5
+======================================================================
+
+  MISMATCH: H=9, I(2)=7, alpha=[1, 3], cycles=3
+  MISMATCH: H=9, I(2)=7, alpha=[1, 3], cycles=3
+  MISMATCH: H=11, I(2)=9, alpha=[1, 4], cycles=4
+n=5: 1024 tournaments
+  H = I(2) mismatches: 544
+  I(-1) range: [-4, 1]
+  I(-1) > 1 violations: 0
+  I(-1) ≤ 1 for all? True
+
+======================================================================
+PART 2: EXHAUSTIVE CHECK AT n=6
+======================================================================
+
+  Progress: 0/32768...
+  MISMATCH: H=9, I(2)=7, #3cyc=3, #5cyc=0, alpha=[1, 3]
+  MISMATCH: H=9, I(2)=7, #3cyc=3, #5cyc=0, alpha=[1, 3]
+  MISMATCH: H=11, I(2)=9, #3cyc=4, #5cyc=0, alpha=[1, 4]
+  Progress: 3276/32768...
+  Progress: 6552/32768...
+  Progress: 9828/32768...
+  Progress: 13104/32768...
+  Progress: 16380/32768...
+  Progress: 19656/32768...
+  Progress: 22932/32768...
+  Progress: 26208/32768...
+  Progress: 29484/32768...
+  Progress: 32760/32768...
+n=6: 32768 tournaments
+  H = I(2) mismatches: 28848
+  I(-1) range: [-6, 1]
+  I(-1) > 1 violations: 0
+
+======================================================================
+PART 3: RANDOM SAMPLING AT n=7,8,9
+======================================================================
+
+  n=7 MISMATCH at trial 0: H=103, I(2)=49
+    Cycles by length: {3: 10}
+    Alpha: [1, 10, 7]
+  n=7 MISMATCH at trial 1: H=91, I(2)=43
+    Cycles by length: {3: 9}
+    Alpha: [1, 9, 6]
+n=7: 200 random tournaments
+  H = I(2) mismatches: 196
+  I(-1) range: [-8, 1]
+  I(-1) > 1 violations: 0/200
+  α₁ ≥ α₂ (full CG): 168/200
+
+  n=8 MISMATCH at trial 0: H=553, I(2)=163
+    Cycles by length: {3: 19}
+    Alpha: [1, 19, 31]
+  n=8 MISMATCH at trial 1: H=89, I(2)=37
+    Cycles by length: {3: 10}
+    Alpha: [1, 10, 4]
+n=8: 200 random tournaments
+  H = I(2) mismatches: 200
+  I(-1) range: [-6, 19]
+  I(-1) > 1 violations: 129/200
+  α₁ ≥ α₂ (full CG): 69/200
+
+n=9: 100 random tournaments
+  H = I(2) mismatches: 0 (not checked)
+  I(-1) range: [3, 53]
+  I(-1) > 1 violations: 100/100
+  α₁ ≥ α₂ (full CG): 0/100
+
+
+======================================================================
+PART 4: WHAT IS GOING WRONG? CHORDLESS VS ALL CYCLES
+======================================================================
+
+KEY QUESTION: Does the OCF use CHORDLESS odd cycles or ALL odd cycles?
+
+The definition says 'directed odd cycles' — which could mean:
+  (a) All directed odd cycles (including those with chords)
+  (b) Only CHORDLESS directed odd cycles
+
+Testing both interpretations at n=5:
+  T0: H=5
+    Chordless: 2 cycles, I(2)=5, I(-1)=-1, alpha=[1, 2]
+    All:       2 cycles, I(2)=5, I(-1)=-1, alpha=[1, 2]
+    Match chordless? True  Match all? True
+
+  T1: H=11
+    Chordless: 4 cycles, I(2)=9, I(-1)=-3, alpha=[1, 4]
+    All:       5 cycles, I(2)=11, I(-1)=-4, alpha=[1, 5]
+    Match chordless? False  Match all? True
+
+  T2: H=9
+    Chordless: 3 cycles, I(2)=7, I(-1)=-2, alpha=[1, 3]
+    All:       4 cycles, I(2)=9, I(-1)=-3, alpha=[1, 4]
+    Match chordless? False  Match all? True
+
+  T3: H=13
+    Chordless: 4 cycles, I(2)=9, I(-1)=-3, alpha=[1, 4]
+    All:       5 cycles, I(2)=11, I(-1)=-4, alpha=[1, 5]
+    Match chordless? False  Match all? False
+
+  T4: H=5
+    Chordless: 2 cycles, I(2)=5, I(-1)=-1, alpha=[1, 2]
+    All:       2 cycles, I(2)=5, I(-1)=-1, alpha=[1, 2]
+    Match chordless? True  Match all? True
+
+
+======================================================================
+SUMMARY
+======================================================================
+
+This script determines:
+1. Whether H = I(Ω(T), 2) uses chordless or all odd cycles
+2. Whether I(-1) ≤ 1 holds for the FULL conflict graph
+3. Whether α₁ ≥ α₂ holds for the full CG
