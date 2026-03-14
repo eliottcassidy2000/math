@@ -1,0 +1,183 @@
+======================================================================
+PART 1: Paley vs Max H
+======================================================================
+
+  n | max H (A038375) | H(Paley) | H(Cyclic) | Paley=Max? | Cyclic=Max?
+  ------------------------------------------------------------------------
+   3 |               3 |        3 |         3 |       True |        True
+   7 |             189 |      189 |       175 |       True |       False
+  11 |           95095 |    95095 |     93027 |       True |       False
+  19 |               ? | 1172695746915 | 1184212824763 |          ? |           ?
+   4 |               5 |      N/A |       N/A |        N/A |           ?
+   5 |              15 |      N/A |        15 |        N/A |        True
+   6 |              45 |      N/A |       N/A |        N/A |           ?
+   8 |             661 |      N/A |       N/A |        N/A |           ?
+   9 |            3357 |      N/A |      3267 |        N/A |       False
+  10 |           15745 |      N/A |       N/A |        N/A |           ?
+
+======================================================================
+PART 2: Verify Exhaustively at n=3..7
+======================================================================
+
+  n=3: max H = 3 (achieved by 2 tournaments)
+    A038375(3) = 3
+    Match: True
+    H(Paley P_3) = 3, is max: True
+    H(Cyclic C_3) = 3, is max: True
+
+  n=4: max H = 5 (achieved by 24 tournaments)
+    A038375(4) = 5
+    Match: True
+
+  n=5: max H = 15 (achieved by 64 tournaments)
+    A038375(5) = 15
+    Match: True
+    H(Cyclic C_5) = 15, is max: True
+
+  n=6: max H = 45 (achieved by 480 tournaments)
+    A038375(6) = 45
+    Match: True
+    H(Paley P_7) = 189, is max: True
+    H(Cyclic C_7) = 175, is max: False
+
+======================================================================
+PART 3: Score Sequences of Max-H Tournaments
+======================================================================
+
+  n=3: max H = 3
+    scores = [1, 1, 1]
+
+  n=4: max H = 5
+    scores = [1, 1, 2, 2]
+
+  n=5: max H = 15
+    scores = [1, 2, 2, 2, 3]
+
+  n=6: max H = 45
+    scores = [2, 2, 2, 3, 3, 3]
+
+======================================================================
+PART 4: Ratios max H(n+1)/max H(n)
+======================================================================
+
+  n | max H | ratio(n)/ratio(n-1)
+   2 |          1 | 1.000000
+   3 |          3 | 3.000000
+   4 |          5 | 1.666667
+   5 |         15 | 3.000000
+   6 |         45 | 3.000000
+   7 |        189 | 4.200000
+   8 |        661 | 3.497354
+   9 |       3357 | 5.078669
+  10 |      15745 | 4.690200
+  11 |      95095 | 6.039695
+
+  Max H / Mean H:
+  n= 3: max/mean = 2.000000
+  n= 4: max/mean = 1.666667
+  n= 5: max/mean = 2.000000
+  n= 6: max/mean = 2.000000
+  n= 7: max/mean = 2.400000
+  n= 8: max/mean = 2.098413
+  n= 9: max/mean = 2.368254
+  n=10: max/mean = 2.221517
+  n=11: max/mean = 2.439506
+
+======================================================================
+PART 5: H(P_p) / max H — Is Paley Always Optimal?
+======================================================================
+  P_ 3: H(Paley) = 3, H(Cyclic) = 3
+         Paley/Cyclic = 1.000000
+         Paley/Mean = 2.000000
+  P_ 7: H(Paley) = 189, H(Cyclic) = 175
+         Paley/Cyclic = 1.080000
+         Paley/Mean = 2.400000
+  P_11: H(Paley) = 95095, H(Cyclic) = 93027
+         Paley/Cyclic = 1.022230
+         Paley/Mean = 2.439506
+  P_19: H(Paley) = 1172695746915, H(Cyclic) = 1184212824763
+         Paley/Cyclic = 0.990274
+         Paley/Mean = 2.527148
+
+======================================================================
+PART 6: The Max H / Mean H Ratio — Approaching e?
+======================================================================
+
+Max H / Mean H sequence:
+  n= 3: r = 2.000000
+  n= 4: r = 1.666667
+  n= 5: r = 2.000000
+  n= 6: r = 2.000000
+  n= 7: r = 2.400000
+  n= 8: r = 2.098413
+  n= 9: r = 2.368254
+  n=10: r = 2.221517
+  n=11: r = 2.439506
+
+  Avg of odd n: 2.2416
+  Avg of even n: 1.9966
+
+======================================================================
+PART 7: The Alon Bound — Maximum H ≤ c·n^{3/2}·n!/2^n
+======================================================================
+
+Alon bound analysis: max H ≤ c·n^{3/2}·n!/2^n
+log(max H / (n!/2^{n-1})) / log(n):
+  n= 3: max/mean = 2.000000, log ratio / log n = 0.6309
+  n= 4: max/mean = 1.666667, log ratio / log n = 0.3685
+  n= 5: max/mean = 2.000000, log ratio / log n = 0.4307
+  n= 6: max/mean = 2.000000, log ratio / log n = 0.3869
+  n= 7: max/mean = 2.400000, log ratio / log n = 0.4499
+  n= 8: max/mean = 2.098413, log ratio / log n = 0.3564
+  n= 9: max/mean = 2.368254, log ratio / log n = 0.3924
+  n=10: max/mean = 2.221517, log ratio / log n = 0.3466
+  n=11: max/mean = 2.439506, log ratio / log n = 0.3719
+
+  CONCLUSION: max H / mean H appears BOUNDED
+  The Paley tournament gives max/mean ≈ 2.4 for large p ≡ 3 mod 4
+  This suggests max H ~ c · n!/2^{n-1} with c ≈ e (Euler's number?)
+
+  e = 2.718282
+  Max odd-n ratio (n=11): 2.439506
+
+======================================================================
+PART 8: Paley H via Formula
+======================================================================
+  H(P_3) = 3, (2p-1)!! = 15, ratio = 0.200000
+  H(P_7) = 189, (2p-1)!! = 135135, ratio = 0.001399
+  H(P_11) = 95095, (2p-1)!! = 13749310575, ratio = 0.000007
+  H(P_19) = 1172695746915, (2p-1)!! = 8200794532637891559375, ratio = 0.000000
+  H(P_3) / (p!/2^{(p-1)/2}) = 1.000000
+  H(P_7) / (p!/2^{(p-1)/2}) = 0.300000
+  H(P_11) / (p!/2^{(p-1)/2}) = 0.076235
+  H(P_19) / (p!/2^{(p-1)/2}) = 0.004936
+  H(P_3) / C(p-1,(p-1)/2) = 1.500000
+  H(P_7) / C(p-1,(p-1)/2) = 9.450000
+  H(P_11) / C(p-1,(p-1)/2) = 377.361111
+  H(P_19) / C(p-1,(p-1)/2) = 24119616.349548
+  p=3, k=1: C(2k,k) = 2, H/C(2k,k) = 1.500000
+  p=7, k=3: C(2k,k) = 20, H/C(2k,k) = 9.450000
+  p=11, k=5: C(2k,k) = 252, H/C(2k,k) = 377.361111
+
+======================================================================
+PART 9: H(P_p) and the Central Binomial Coefficient
+======================================================================
+  H(P_3)/p = 1, H mod p = 0
+  H(P_7)/p = 27, H mod p = 0
+  H(P_11)/p = 8645, H mod p = 0
+  H(P_19)/p = 61720828785, H mod p = 0
+  H(P_3) = 3 = 3
+  H(P_7) = 189 = 3 × 3 × 3 × 7
+  H(P_11) = 95095 = 5 × 7 × 11 × 13 × 19
+
+  FACTORIZATIONS:
+  H(P_3) = 3
+  H(P_7) = 189 = 3³ × 7 = 27 × 7
+  H(P_11) = 95095 = 5 × 7 × 11 × 13 × 19
+  Check: 5 × 7 × 11 × 13 × 19 = 95095
+
+  p=3: C(p,k) = C(3,1) = 3
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/pi_maxH_89c.py", line 379, in <module>
+    print(f"  H/C(p,k) = {Fraction(H, c)}")
+NameError: name 'Fraction' is not defined
