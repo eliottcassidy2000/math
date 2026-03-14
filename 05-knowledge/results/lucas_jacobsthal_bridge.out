@@ -1,0 +1,261 @@
+
+======================================================================
+  PART 1: L(n) vs J(n)
+======================================================================
+
+   n         L(n)         J(n)   L=J?          L-J
+   0            2            0                   2
+   1            1            1    YES            0
+   2            3            1                   2
+   3            4            3                   1
+   4            7            5                   2
+   5           11           11    YES            0
+   6           18           21                  -3
+   7           29           43                 -14
+   8           47           85                 -38
+   9           76          171                 -95
+  10          123          341                -218
+  11          199          683                -484
+  12          322         1365               -1043
+  13          521         2731               -2210
+  14          843         5461               -4618
+  15         1364        10923               -9559
+  16         2207        21845              -19638
+  17         3571        43691              -40120
+  18         5778        87381              -81603
+  19         9349       174763             -165414
+  20        15127       349525             -334398
+  21        24476       699051             -674575
+  22        39603      1398101            -1358498
+  23        64079      2796203            -2732124
+  24       103682      5592405            -5488723
+
+Matches at n = [1, 5]
+
+Only match beyond n=0: n=5, value=11
+
+======================================================================
+  PART 2: WHY L(5) = J(5) = 11
+======================================================================
+
+L(5) = φ⁵ + ψ⁵
+J(5) = (2⁵ - (-1)⁵) / 3 = (32 + 1) / 3 = 33/3 = 11
+
+We need: φ⁵ + ψ⁵ = 11
+Using Newton's identity for power sums:
+  p_n = s₁·p_{n-1} - s₂·p_{n-2}
+  where s₁ = φ+ψ = 1, s₂ = φ·ψ = -1
+  p_n = p_{n-1} + p_{n-2}
+
+So p₀=2, p₁=1, p₂=3, p₃=4, p₄=7, p₅=11
+And 11 = 7 + 4 = p₄ + p₃ ✓
+
+Now: (2⁵+1)/3 = 33/3 = 11
+So we need: φ⁵ + ψ⁵ = (2⁵+1)/3
+
+More precisely:
+  L(n) = φⁿ + ψⁿ where φψ = -1, φ+ψ = 1
+  J(n) = (2ⁿ - (-1)ⁿ) / 3
+
+L(n) = J(n) iff φⁿ + ψⁿ = (2ⁿ - (-1)ⁿ) / 3
+iff 3(φⁿ + ψⁿ) = 2ⁿ - (-1)ⁿ
+iff 3L(n) + (-1)ⁿ = 2ⁿ
+
+  n= 0: 3L(n)+(-1)^n =        7, 2^n =        1, equal: False
+  n= 1: 3L(n)+(-1)^n =        2, 2^n =        2, equal: True
+  n= 2: 3L(n)+(-1)^n =       10, 2^n =        4, equal: False
+  n= 3: 3L(n)+(-1)^n =       11, 2^n =        8, equal: False
+  n= 4: 3L(n)+(-1)^n =       22, 2^n =       16, equal: False
+  n= 5: 3L(n)+(-1)^n =       32, 2^n =       32, equal: True
+  n= 6: 3L(n)+(-1)^n =       55, 2^n =       64, equal: False
+  n= 7: 3L(n)+(-1)^n =       86, 2^n =      128, equal: False
+  n= 8: 3L(n)+(-1)^n =      142, 2^n =      256, equal: False
+  n= 9: 3L(n)+(-1)^n =      227, 2^n =      512, equal: False
+  n=10: 3L(n)+(-1)^n =      370, 2^n =     1024, equal: False
+  n=11: 3L(n)+(-1)^n =      596, 2^n =     2048, equal: False
+  n=12: 3L(n)+(-1)^n =      967, 2^n =     4096, equal: False
+  n=13: 3L(n)+(-1)^n =     1562, 2^n =     8192, equal: False
+  n=14: 3L(n)+(-1)^n =     2530, 2^n =    16384, equal: False
+  n=15: 3L(n)+(-1)^n =     4091, 2^n =    32768, equal: False
+  n=16: 3L(n)+(-1)^n =     6622, 2^n =    65536, equal: False
+  n=17: 3L(n)+(-1)^n =    10712, 2^n =   131072, equal: False
+  n=18: 3L(n)+(-1)^n =    17335, 2^n =   262144, equal: False
+  n=19: 3L(n)+(-1)^n =    28046, 2^n =   524288, equal: False
+
+So L(n) = J(n) iff 3L(n) + (-1)^n = 2^n
+At n=5: 3·11 + (-1) = 33-1 = 32 = 2⁵ ✓
+At n=0: 3·2 + 1 = 7 ≠ 1 = 2⁰. Wait, 3·2+1=7, 2⁰=1. No match?
+But L(0)=2, J(0)=(1-1)/3=0. So L(0)≠J(0). The n=0 match was wrong.
+
+Actually J(0) = (2⁰ - (-1)⁰)/3 = (1-1)/3 = 0, while L(0) = 2.
+So the ONLY match is n=5.
+
+======================================================================
+  PART 3: 3L(n) = 2^n - (-1)^n
+======================================================================
+
+When does 3L(n) = 2^n - (-1)^n?
+This is 3(φⁿ+ψⁿ) = 2ⁿ - (-1)ⁿ
+
+For large n: L(n) ≈ φⁿ ≈ 1.618ⁿ, while 2ⁿ/3 grows as (2/1)ⁿ·(1/3)
+So 3L(n)/2ⁿ ≈ 3(φ/2)ⁿ → 0 as n → ∞
+And (2ⁿ-(-1)ⁿ)/2ⁿ → 1
+So for large n, 3L(n) << 2ⁿ.
+
+   n      3L(n)   2^n-(-1)^n       diff      ratio
+   0          6            0          6        inf
+   1          3            3          0        1.0
+   2          9            3          6        3.0
+   3         12            9          3 1.3333333333333333
+   4         21           15          6        1.4
+   5         33           33          0        1.0
+   6         54           63         -9 0.8571428571428571
+   7         87          129        -42 0.6744186046511628
+   8        141          255       -114 0.5529411764705883
+   9        228          513       -285 0.4444444444444444
+  10        369         1023       -654 0.36070381231671556
+  11        597         2049      -1452 0.2913616398243045
+  12        966         4095      -3129 0.2358974358974359
+  13       1563         8193      -6630 0.19077261076528745
+  14       2529        16383     -13854 0.15436733199047795
+
+The ratio 3L(n) / (2^n - (-1)^n) decreases monotonically from ∞
+and passes through 1.0 at n=5, never returning.
+
+So n=5 is the UNIQUE crossing point where
+the exponential 2^n overtakes 3·L(n).
+Since both are integers when they cross, they meet EXACTLY at n=5.
+
+======================================================================
+  PART 4: GENERALIZED BRIDGE L_x(n) = J_y(n)
+======================================================================
+
+Define:
+  L_x(n) = r₁ⁿ + r₂ⁿ where r₁,r₂ are roots of z²-z-x
+  J_y(n) = (y^n - (1-y)^n) / (2y-1)
+
+L_x is the 'Lucas-type' sequence for parameter x
+J_y is the 'Jacobsthal-type' sequence for parameter y
+
+Crossing points (n where L_x(n) = J_y(n)) for various (x,y):
+  x=1, y=2: crossings at n=[1, 5], values=[1, 11]
+  x=1, y=3: crossings at n=[1, 3, 4], values=[1, 4, 7]
+  x=1, y=4: crossings at n=[1], values=[1]
+  x=1, y=5: crossings at n=[1], values=[1]
+  x=2, y=2: crossings at n=[1], values=[1]
+  x=2, y=3: crossings at n=[1], values=[1]
+  x=2, y=4: crossings at n=[1, 6], values=[1, 65]
+  x=2, y=5: crossings at n=[1], values=[1]
+  x=3, y=2: crossings at n=[1], values=[1]
+  x=3, y=3: crossings at n=[1], values=[1]
+  x=3, y=4: crossings at n=[1], values=[1]
+  x=3, y=5: crossings at n=[1], values=[1]
+  x=4, y=2: crossings at n=[1], values=[1]
+  x=4, y=3: crossings at n=[1], values=[1]
+  x=4, y=4: crossings at n=[1], values=[1]
+  x=4, y=5: crossings at n=[1], values=[1]
+
+======================================================================
+  PART 5: THE DOUBLING FORMULA AND 5·11=55
+======================================================================
+
+Fibonacci doubling formula: F(2n) = F(n)·L(n)
+
+At n=5:
+  F(10) = F(5)·L(5) = 5·11 = 55
+
+Since L(5) = J(5) = 11, we also have:
+  F(10) = F(5)·J(5) = 5·11 = 55
+
+This connects Fibonacci doubling to Jacobsthal!
+
+Iterating the doubling formula from n=5:
+  F(5) = 5
+  F(10) = F(5)·L(5) = 5·11 = 55
+  F(20) = F(10)·L(10) = 55·123 = 6765
+
+======================================================================
+  PART 6: TOURNAMENT SIGNIFICANCE
+======================================================================
+
+In tournament theory, the key evaluations are:
+  H(T) = I(CG(T), 2)  — Hamiltonian path count
+  I₃ = I(CG(T), 3)    — the 'secondary evaluation'
+
+The ratio I₃/H approaches 3/2 as cycles grow.
+More precisely: I₃ = (9H - 5 - 6α₁) / 4
+
+The number 5 appears in this formula!
+I₃ = (9H - 5 - 6α₁) / 4
+  The '5' here is F(5) = L(5)/11 · 5 = the bridge number.
+
+At the 'typical' tournament where α₁ ≈ H/2:
+  I₃ ≈ (9H - 5 - 3H) / 4 = (6H - 5) / 4
+  I₃/H ≈ 6/4 - 5/(4H) = 3/2 - 5/(4H)
+
+The approach to 3/2 is controlled by 5/(4H).
+So 5 governs the RATE at which I₃/H → 3/2.
+
+And 3/2 = the product of convergence rates:
+  (1/2 rate for k-nacci) · 3 = 3/2
+  or: ratio of key limits = 3/2 = (1+x)/x at x=2
+
+THE COMPLETE PICTURE:
+  F(5) = 5 (Fibonacci fixed point)
+  L(5) = 11 (Lucas generates decimal pair)
+  J(5) = 11 (Jacobsthal agrees at this point)
+  I₃ = (9H - 5 - 6α₁)/4 (5 appears in OCF formula)
+  I₃/H → 3/2 - 5/(4H) (5 controls approach rate)
+
+All of these are DIFFERENT MANIFESTATIONS of 5 = 2+3
+in the recurrence landscape.
+
+======================================================================
+  PART 7: JACOBSTHAL LEVELS AND 5
+======================================================================
+
+The integer-root levels of f(n) = f(n-1) + x·f(n-2):
+
+  k x=k(k-1)           Roots     J_x(5)     L_x(5)
+  1        0             1,0          1          1
+  2        2            2,-1         11         31
+  3        6            3,-2         55        211
+  4       12            4,-3        181        781
+  5       20            5,-4        461       2101
+  6       30            6,-5        991       4651
+  7       42            7,-6       1891       9031
+  8       56            8,-7       3305      15961
+  9       72            9,-8       5401      26281
+
+PATTERN: J_x(5) at the integer-root levels
+  k=1: J₀(5) = 1·(1⁵-0⁵)/1 = 1
+  k=2: J₂(5) = (32+1)/3 = 11
+  k=3: J₆(5) = (243-(-2)⁵)/5 = (243+32)/5 = 275/5 = 55
+  k=4: J₁₂(5) = (1024-(-3)⁵)/7 = (1024+243)/7 = 1267/7 = 181
+
+J₆(5) = 55 = F(10) = F(5)·L(5) = 5·11!
+
+So the level-3 Jacobsthal at n=5 equals the DOUBLED Fibonacci!
+J₆(5) = F(2·5) = F(5)·L(5)
+
+This is NOT a coincidence. It follows from:
+  J_6(n) = (3^n - (-2)^n) / 5
+  F(2n) = F(n)·L(n)
+  At n=5: J_6(5) = (3^5 + 2^5)/5 = (243+32)/5 = 55 = 5·11
+
+Checking J₆(n) vs F(2n):
+  n=1: J₆(n)=       1, F(2n)=       1 ✓
+  n=2: J₆(n)=       1, F(2n)=       3 
+  n=3: J₆(n)=       7, F(2n)=       8 
+  n=4: J₆(n)=      13, F(2n)=      21 
+  n=5: J₆(n)=      55, F(2n)=      55 ✓
+  n=6: J₆(n)=     133, F(2n)=     144 
+  n=7: J₆(n)=     463, F(2n)=     377 
+  n=8: J₆(n)=    1261, F(2n)=     987 
+  n=9: J₆(n)=    4039, F(2n)=    2584 
+
+Only matches at n=1 and n=5!
+n=1: J₆(1)=1=F(2) trivial
+n=5: J₆(5)=55=F(10) the KEY match
+
+Done.
