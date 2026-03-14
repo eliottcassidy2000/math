@@ -1,0 +1,14 @@
+======================================================================
+PROOF: (alpha_1=6, alpha_2=2) IS IMPOSSIBLE
+======================================================================
+
+--- Part 1: Exhaustive alpha_1=6 spectrum ---
+  n=5: alpha_1=6 → alpha_2 ∈ [0]
+    Distribution: {0: 120}
+    (6,2) NOT found at n=5 ✓
+  n=6: alpha_1=6 → alpha_2 ∈ [0, 1]
+    Distribution: {0: 1440, 1: 720}
+    (6,2) NOT found at n=6 ✓
+    Progress n=7: 500000/2097152, (6,2): 0
+    Progress n=7: 1000000/2097152, (6,2): 0
+    Progress n=7: 1500000/2097152, (6,2): 0

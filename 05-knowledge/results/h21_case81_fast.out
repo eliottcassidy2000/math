@@ -1,0 +1,44 @@
+======================================================================
+FAST (8,1) IMPOSSIBILITY ANALYSIS
+======================================================================
+
+--- Part 1: Structure of alpha_1=8 with disjoint pair at n=6 ---
+  alpha_1=8 total: 720
+  Has disjoint 3-cycle pair: Counter({False: 720})
+  ZERO disjoint pairs → alpha_2=1 impossible at n=6 ✓
+
+--- Part 2: Targeted n=7 with forced 3-cycle {0,1,2} ---
+  If alpha_1=8 and alpha_2=1, there must be a disjoint pair.
+  Fix {0,1,2} as one cycle. The other must be on 3 of {3,4,5,6}.
+  Test all C(4,3)=4 choices for the second triangle.
+  Second tri=(3, 4, 5) orient=(3, 4, 5): a1=8: 0, (8,1): 0
+  Second tri=(3, 4, 5) orient=(3, 5, 4): a1=8: 0, (8,1): 0
+  Second tri=(3, 4, 6) orient=(3, 4, 6): a1=8: 0, (8,1): 0
+  Second tri=(3, 4, 6) orient=(3, 6, 4): a1=8: 0, (8,1): 0
+  Second tri=(3, 5, 6) orient=(3, 5, 6): a1=8: 0, (8,1): 0
+  Second tri=(3, 5, 6) orient=(3, 6, 5): a1=8: 0, (8,1): 0
+  Second tri=(4, 5, 6) orient=(4, 5, 6): a1=8: 0, (8,1): 0
+  Second tri=(4, 5, 6) orient=(4, 6, 5): a1=8: 0, (8,1): 0
+
+--- Part 3: n=8 sampling for (8,1) ---
+  Progress: 50000/200000, a1=8: 27, (8,1): 0
+  Progress: 100000/200000, a1=8: 45, (8,1): 0
+  Progress: 150000/200000, a1=8: 79, (8,1): 0
+
+  n=8 sampling (200000): a1=8 count = 110
+  a2 dist for a1=8: {0: 99, 7: 11}
+  (8,1) found: 0
+
+--- Part 4: Min alpha_2 with forced disjoint pair ---
+  At n=7, fixing {0,1,2} and {3,4,5} as disjoint cycles.
+  What is the minimum alpha_2 achievable?
+  Free edges: 15
+  alpha_1 distribution: {2: 6, 3: 24, 6: 36, 9: 126, 10: 144, 11: 42, 12: 180, 13: 144, 14: 498, 16: 216, 17: 144, 18: 204, 19: 108, 20: 192, 21: 504, 22: 270, 23: 252, 24: 540, 25: 324, 26: 390, 27: 504, 28: 1440, 29: 468, 30: 1092, 31: 738, 32: 360, 33: 906, 34: 792, 35: 1260, 36: 1494, 37: 1008, 38: 1296, 39: 912, 40: 1116, 41: 648, 42: 1368, 43: 810, 44: 996, 45: 1110, 46: 756, 47: 806, 48: 432, 49: 1404, 50: 1422, 51: 1164, 52: 594, 53: 186, 54: 702, 55: 756, 56: 306, 57: 576, 59: 360, 60: 288, 61: 162, 65: 186, 80: 6}
+  When alpha_1=8: alpha_2 dist = {}
+  Min alpha_2 when alpha_1=8: inf
+  *** alpha_2=1 IMPOSSIBLE with disjoint pair at n=7 ***
+
+--- Part 5: Reverse second triangle 3→5→4→3 ---
+  alpha_2 dist for alpha_1=8: {}
+
+--- Part 6: (6,2) case at n=7 (exhaustive) ---
