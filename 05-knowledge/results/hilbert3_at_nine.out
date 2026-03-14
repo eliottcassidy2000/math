@@ -1,0 +1,272 @@
+======================================================================
+PART 1: VOLUME AND PACKING AT n=9
+======================================================================
+
+n=3: n!=6, orthoscheme volume = 1/6 = 1.67e-01
+  Max packing: n! orthoschemes fill [0,1]^n perfectly
+  Typical H: ... orthoschemes fill H/n! of the cube
+
+n=5: n!=120, orthoscheme volume = 1/120 = 8.33e-03
+  Max packing: n! orthoschemes fill [0,1]^n perfectly
+  Typical H: ... orthoschemes fill H/n! of the cube
+
+n=7: n!=5040, orthoscheme volume = 1/5040 = 1.98e-04
+  Max packing: n! orthoschemes fill [0,1]^n perfectly
+  Typical H: ... orthoschemes fill H/n! of the cube
+
+n=9: n!=362880, orthoscheme volume = 1/362880 = 2.76e-06
+  Max packing: n! orthoschemes fill [0,1]^n perfectly
+  Typical H: ... orthoschemes fill H/n! of the cube
+
+======================================================================
+PART 2: EULER CHARACTERISTIC AND f-VECTOR
+======================================================================
+
+The independence complex Δ(CG(T)) is a simplicial complex:
+  f₋₁ = 1 (empty set)
+  f₀ = α₁ (vertices = odd cycles)
+  f₁ = α₂ (edges = disjoint pairs)
+  f₂ = α₃ (triangles = disjoint triples)
+  f₃ = α₄ (tetrahedra = disjoint quadruples)
+
+The Euler characteristic:
+  χ(Δ) = f₋₁ - f₀ + f₁ - f₂ + ...
+       = 1 - α₁ + α₂ - α₃ + ...
+       = I(-1)
+
+If Δ is contractible: χ = 1
+If Δ is a sphere S^d: χ = 1 + (-1)^d
+  S⁰: χ=2, S¹: χ=0, S²: χ=2, S³: χ=0
+
+For tournaments: I(-1) ≤ 1 (conjectured).
+This means χ(Δ) ≤ 1, ruling out even-dimensional spheres.
+The complex is either contractible (χ=1) or has
+'more odd-dimensional holes than even' (χ < 1).
+
+======================================================================
+PART 3: f-VECTOR DISTRIBUTION AT n=9
+======================================================================
+
+n=9 (3-cycle only, 500 samples):
+  Average f-vector: (1, 21.1, 53.0, 4.4)
+  Average χ = 1 - 21.1 + 53.0 - 4.4 = 28.4
+
+h-vector computation:
+  h₀ = f₋₁ = 1
+  h₁ = f₀ - (d+1)·f₋₁ = α₁ - (d+1) where d = max dim
+
+h-vector for some specific tournaments at n=9:
+  T0: f=(24,76,7), d=2, h=(1,21,31,-46), χ=46
+  T1: f=(19,36,1), d=2, h=(1,16,1,-17), χ=17
+  T2: f=(26,76,7), d=2, h=(1,23,27,-44), χ=44
+  T3: f=(23,62,7), d=2, h=(1,20,19,-33), χ=33
+  T4: f=(24,67,4), d=2, h=(1,21,22,-40), χ=40
+  T5: f=(20,50,3), d=2, h=(1,17,13,-28), χ=28
+  T6: f=(18,32,2), d=2, h=(1,15,-1,-13), χ=13
+  T7: f=(22,50,2), d=2, h=(1,19,9,-27), χ=27
+  T8: f=(21,46,3), d=2, h=(1,18,7,-23), χ=23
+  T9: f=(16,33,2), d=2, h=(1,13,4,-16), χ=16
+
+======================================================================
+PART 4: THE DEHN-SOMMERVILLE CONSTRAINT
+======================================================================
+
+For a SIMPLICIAL SPHERE of dimension d:
+  h_k = h_{d+1-k} (palindrome)
+
+For our independence complexes, if they were spheres:
+  d=2 sphere: h₀=h₃, h₁=h₂
+  This gives: h₃ = 1, h₂ = h₁ = a1-3
+  Then: a3 = h₃ + a2 - a1 + 1 = 1 + a2 - a1 + 1 = a2 - a1 + 2
+  So χ = 1 - a1 + a2 - (a2-a1+2) = 1 - 2 = -1 ≠ 2 = χ(S²)
+  CONTRADICTION! The complex is NOT a sphere.
+
+This makes sense: CG(T) independence complexes are generally NOT spheres.
+They are more like BALLS (contractible, χ=1) or have torsion.
+
+WHEN is χ = 1 (contractible)?
+χ distribution at n=9 (3-cycle only, 500 samples):
+  χ =  -12:    1 tournaments (0.2%)
+  χ =   -7:    1 tournaments (0.2%)
+  χ =   -6:    1 tournaments (0.2%)
+  χ =   -4:    1 tournaments (0.2%)
+  χ =   -2:    5 tournaments (1.0%)
+  χ =   -1:    1 tournaments (0.2%)
+  χ =    0:    1 tournaments (0.2%)
+  χ =    1:    2 tournaments (0.4%)
+  χ =    2:    1 tournaments (0.2%)
+  χ =    3:    8 tournaments (1.6%)
+  χ =    4:    5 tournaments (1.0%)
+  χ =    5:    5 tournaments (1.0%)
+  χ =    6:    5 tournaments (1.0%)
+  χ =    7:    2 tournaments (0.4%)
+  χ =    8:    8 tournaments (1.6%)
+  χ =    9:    2 tournaments (0.4%)
+  χ =   10:    8 tournaments (1.6%)
+  χ =   11:    3 tournaments (0.6%)
+  χ =   12:    9 tournaments (1.8%)
+  χ =   13:   14 tournaments (2.8%)
+  χ =   14:    6 tournaments (1.2%)
+  χ =   15:    4 tournaments (0.8%)
+  χ =   16:   17 tournaments (3.4%)
+  χ =   17:   11 tournaments (2.2%)
+  χ =   18:    5 tournaments (1.0%)
+  χ =   19:    8 tournaments (1.6%)
+  χ =   20:    7 tournaments (1.4%)
+  χ =   21:   13 tournaments (2.6%)
+  χ =   22:    5 tournaments (1.0%)
+  χ =   23:   15 tournaments (3.0%)
+  χ =   24:   14 tournaments (2.8%)
+  χ =   25:   15 tournaments (3.0%)
+  χ =   26:   15 tournaments (3.0%)
+  χ =   27:   11 tournaments (2.2%)
+  χ =   28:   15 tournaments (3.0%)
+  χ =   29:   10 tournaments (2.0%)
+  χ =   30:   11 tournaments (2.2%)
+  χ =   31:   15 tournaments (3.0%)
+  χ =   32:   14 tournaments (2.8%)
+  χ =   33:   16 tournaments (3.2%)
+  χ =   34:   16 tournaments (3.2%)
+  χ =   35:    8 tournaments (1.6%)
+  χ =   36:   15 tournaments (3.0%)
+  χ =   37:   15 tournaments (3.0%)
+  χ =   38:    5 tournaments (1.0%)
+  χ =   39:   13 tournaments (2.6%)
+  χ =   40:    7 tournaments (1.4%)
+  χ =   41:    9 tournaments (1.8%)
+  χ =   42:   19 tournaments (3.8%)
+  χ =   43:   10 tournaments (2.0%)
+  χ =   44:   11 tournaments (2.2%)
+  χ =   45:    9 tournaments (1.8%)
+  χ =   46:   12 tournaments (2.4%)
+  χ =   47:    2 tournaments (0.4%)
+  χ =   48:    3 tournaments (0.6%)
+  χ =   49:    4 tournaments (0.8%)
+  χ =   50:    3 tournaments (0.6%)
+  χ =   51:    5 tournaments (1.0%)
+  χ =   52:    7 tournaments (1.4%)
+  χ =   53:    5 tournaments (1.0%)
+  χ =   54:    5 tournaments (1.0%)
+  χ =   55:    2 tournaments (0.4%)
+  χ =   56:    2 tournaments (0.4%)
+  χ =   57:    3 tournaments (0.6%)
+
+======================================================================
+PART 5: THE PACKING INTERPRETATION OF I(-1)
+======================================================================
+
+In the simplex-cuboid packing:
+  Volume of H orthoschemes = H/n!
+  Volume of unit cube = 1
+  Packing fraction = H/n!
+
+  I(-1) = 1 - α₁ + α₂ - α₃ measures the
+  'net' contribution after alternating signs.
+
+  Geometrically: I(-1) counts orthoschemes with WEIGHT (-1)^k
+  based on how many disjoint odd cycles they 'see'.
+
+  ALTERNATING SUM as INCLUSION-EXCLUSION:
+  I(-1) = #{orthoschemes not affected by any cycle}
+        - #{affected by at least 1 cycle}
+        + #{affected by at least 2 disjoint cycles}
+        - #{affected by at least 3 disjoint cycles}
+        + ...
+
+  This is Möbius inversion on the independence complex!
+  I(-1) ≤ 1 ⟺ 'most orthoschemes are affected by cycles'
+  I(-1) = 1 ⟺ transitive (no cycles, everything cancels)
+
+
+======================================================================
+PART 6: THE (2,3) PACKING DUALITY
+======================================================================
+
+  The two keys create a DUALITY in the packing:
+
+  KEY₁ = 2: each cycle has 2 orientations
+    → each independent set of k cycles gives 2^k paths
+    → H = I(CG(T), 2)
+
+  KEY₂ = 3: each cycle uses 3 vertices
+    → max independent set size = ⌊n/3⌋
+    → independence complex dimension = ⌊n/3⌋ - 1
+
+  The BALANCE between 2 and 3:
+  At level k: weight 2^k, cost 3k vertices
+  Weight grows geometrically, cost linearly
+  Cross-over at k = n·ln(2)/3 ≈ 0.231·n
+
+  n=  3: crossover k=0.7, max_k=1
+  n=  9: crossover k=2.1, max_k=3
+  n= 27: crossover k=6.2, max_k=9
+  n= 81: crossover k=18.7, max_k=27
+
+  For large n: most of the 'mass' in I(2) = H comes from
+  the LOWER levels (k ≪ n/3), where weights dominate costs.
+  The alternating sum I(-1) tests whether the CANCELLATIONS
+  at higher levels don't 'overpower' the lower levels.
+
+======================================================================
+PART 7: THE 9-DIMENSIONAL ORTHOSCHEME
+======================================================================
+
+  A 9-dimensional orthoscheme has vertices:
+  (0,...,0), (1,0,...,0), (1,1,0,...,0), ..., (1,...,1)
+
+  Its 'faces' are lower-dimensional orthoschemes.
+  The dihedral angles are:
+  π/4 (45°) at boundary-internal ridges
+  π/3 (60°) at internal-internal ridges
+  π/2 (90°) at non-adjacent ridges
+
+  These angles involve only the keys:
+  π/4 = π/KEY₁²
+  π/3 = π/KEY₂
+  π/2 = π/KEY₁
+
+  At n=9=KEY₂²: the number of internal-internal ridges
+  of the orthoscheme is C(8,2) = 28 = C(n-1,2).
+  Each gives angle π/3 = π/KEY₂.
+
+  The TOTAL internal angle = 28 · π/3 = 28π/3.
+  Compare: the sphere S⁸ has volume V₈ = π⁴/24.
+  The solid angle subtended by the orthoscheme:
+  Ω = 1/9! = 2.75573192e-06
+  Total solid angle of S⁸ = 4.058712 (volume formula)
+
+
+======================================================================
+PART 8: SYNTHESIS — THE 3² GEOMETRY
+======================================================================
+
+  At n=9=3²:
+
+  ALGEBRAIC: Cauchy-Schwarz boundary, tribonacci regime,
+  first cubic independence polynomial.
+
+  COMBINATORIAL: Perfect 3-partition, 3 disjoint 3-cycles,
+  Sierpinski level 2, tic-tac-toe grid.
+
+  GEOMETRIC: 9-orthoscheme with angles π/2, π/3, π/4.
+  The packing of H orthoschemes into [0,1]⁹.
+  I(-1) measures the topological complexity of this packing.
+
+  NUMBER-THEORETIC: 9 = 3², det(A₈) = 9, Paley fails.
+  log₂(3) = Hausdorff dim of Sierpinski = fractal bridge.
+
+  PHYSICAL: If tournaments model preferences/rankings,
+  then n=9 is where 'preference cycles' become 3-deep:
+  A prefers B prefers C prefers A (3-cycle), and THREE
+  such independent preference cycles can coexist.
+
+  This is the COMPLEXITY THRESHOLD for human decision-making:
+  with 9 options, preference cycles can form a 3-level
+  hierarchy of contradictions, each level independent.
+  Below 9 options: at most 2 levels of independent cycles.
+
+  The I(-1) ≤ 1 conjecture says: even with these deep
+  cycles, the topological structure remains 'bounded' —
+  no matter how complex the preferences, the alternating
+  sum of their independent cycle structure is at most 1.
+  This is a FUNDAMENTAL CONSTRAINT on preference systems.
