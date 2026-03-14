@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-14-S105 — 2026-03-14: Cone geometry of 1/3, Phi_3 master formula, level-4 Fourier spectrum
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S104
+**What was done:**
+Deep creative exploration of the 1/3 ratio (Var/Mean^2) and cones, culminating in major Fourier spectrum discoveries:
+
+- **Cone interpretation of 1/3**: The tournament Var/Mean^2 = 1/3 at n=3,4 is geometrically the cone-to-cylinder volume ratio, coming from integral_0^1 t^2 dt = 1/3. H is a "discrete cone" on the hypercube.
+- **Phi_3 master formula**: 1/3, 7, 21 are ALL evaluations of Phi_3(x) = x^2+x+1 at x = 2^0, 2^1, 2^2. The cone ratio and forbidden values come from one polynomial! 1/3 = 1/Parseval energy of Phi_3 on the unit circle.
+- **Eisenstein integer norms**: Phi_3(b) = |1-b*omega^2|^2 in Z[omega]. Forbidden values are norms of Eisenstein integers.
+- **EXACT Var/Mean^2**: n=3: 1/3, n=4: 1/3, n=5: 19/60, n=6: 13/45. The 1/3 is NOT universal — ratio DECREASES at larger n.
+- **Level-4 Fourier coefficients at n=5**: ALL 60 nonzero coefficients have magnitude 1/8 = (n-4)!/2^(n-2), ALL cover all 5 vertices, ALL have degree sequence (1,1,1,2,3).
+- **Level-4 at n=6 — TWO magnitude classes**: 360 coefficients with |H_hat|=1/8 (inherited, cover 5 vertices) + 90 with |H_hat|=1/4 (new, cover 6 vertices). Hereditary structure: 360 = C(6,5)*60. Both classes contribute equal energy!
+- **Fourier energy decomposition**: E_2/E_0 = 2(n-2)/(n(n-1)) [proved]. E_4/E_0 = 1/60 at n=5, 1/45 at n=6 [computed exactly].
+
+**New contributions:** HYP-11xx (Phi_3 cone, level-4 uniform magnitude, hereditary structure)
+**Unresolved threads:** n=7 exact Var/Mean^2 (computation running), level-4 magnitude formula for general n, what determines nonzero vs zero at level 4
+
 ## opus-2026-03-14-S88 — 2026-03-14: Fibonacci-Baer-Period6 unification, Golay chain, quasicrystal bridge
 
 **Account:** opus
