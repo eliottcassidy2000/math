@@ -1,0 +1,365 @@
+======================================================================
+PART 1: THE f(n) = T(m) EQUATION — FULL ANALYSIS
+======================================================================
+
+Searching for f(n) = T(m):
+
+  T(1) = 1: 4·1+1 = 5, √=2.2361 NOT perfect square
+  T(2) = 1: 4·1+1 = 5, √=2.2361 NOT perfect square
+  T(3) = 2: 4·2+1 = 9 = 3², n = 4 or 1
+    f(4) = (4-2)(4-3) = 2·1 = 2
+    f(1) = (1-2)(1-3) = -1·-2 = 2
+  T(4) = 4: 4·4+1 = 17, √=4.1231 NOT perfect square
+  T(5) = 12: 4·12+1 = 49 = 7², n = 6 or -1
+    f(6) = (6-2)(6-3) = 4·3 = 12
+  T(6) = 56: 4·56+1 = 225 = 15², n = 10 or -5
+    f(10) = (10-2)(10-3) = 8·7 = 56
+  T(7) = 456: 4·456+1 = 1825, √=42.7200 NOT perfect square
+  T(8) = 6880: 4·6880+1 = 27521, √=165.8945 NOT perfect square
+
+SUMMARY: f(n) = T(m) has solutions:
+  n=1: f(1) = (-1)·(-2) = 2 = T(3)
+  n=4: f(4) = 2·1 = 2 = T(3)
+  n=6: f(6) = 4·3 = 12 = T(5)
+  n=10: f(10) = 8·7 = 56 = T(6)
+
+The f-T bridge values:
+  n=4:  4 = KEY₁² → T(KEY₂) = T(3) = 2
+  n=6:  6 = KEY₁·KEY₂ → T(KEY₁+KEY₂) = T(5) = 12
+  n=10: 10 = KEY₁·(KEY₁+KEY₂) → T(KEY₁·KEY₂) = T(6) = 56
+
+Algebraic pattern:
+  n = KEY₁·a → T(b)
+  (a, b) pairs: (2, 3), (3, 5), (5, 6)
+
+  Observation: the a-values are 2, 3, 5 = the tournament primes!
+  And the b-values are: 3=a₁+1, 5=a₂+2, 6=a₃+1
+
+Pattern through f(2k) = 2(k-1)(2k-3):
+  k= 1: f(2) = 2·0·-1 = 0
+  k= 2: f(4) = 2·1·1 = 2 = T(3)
+  k= 3: f(6) = 2·2·3 = 12 = T(5)
+  k= 4: f(8) = 2·3·5 = 30
+  k= 5: f(10) = 2·4·7 = 56 = T(6)
+  k= 6: f(12) = 2·5·9 = 90
+  k= 7: f(14) = 2·6·11 = 132
+  k= 8: f(16) = 2·7·13 = 182
+  k= 9: f(18) = 2·8·15 = 240
+  k=10: f(20) = 2·9·17 = 306
+  k=11: f(22) = 2·10·19 = 380
+  k=12: f(24) = 2·11·21 = 462
+  k=13: f(26) = 2·12·23 = 552
+  k=14: f(28) = 2·13·25 = 650
+
+f(2k) = T(m) at k ∈ {2, 3, 5} — the tournament primes!
+  k=KEY₁: f(2·KEY₁) = T(KEY₂)
+  k=KEY₂: f(2·KEY₂) = T(KEY₁+KEY₂)
+  k=KEY₁+KEY₂: f(2·(KEY₁+KEY₂)) = T(KEY₁·KEY₂)
+
+======================================================================
+PART 2: THE PETERSEN-LIE DICTIONARY — COMPLETE TABLE
+======================================================================
+
+THE PETERSEN-LIE DICTIONARY:
+
+            Petersen invariant  Value  =                  Lie interpretation
+---------------------------------------------------------------------------
+                      Vertices     10              C(5,2) = KEY₁·(KEY₁+KEY₂)
+                         Edges     15      C(6,2) = #pos.roots(G₂)+dim(G₂)+1
+        Non-edges (complement)     30                                  h(E₈)
+                        Degree      3                         KEY₂ = det(E₆)
+             Complement degree      6                      h(G₂) = KEY₁·KEY₂
+                         Girth      5              KEY₁+KEY₂ = #exceptionals
+                      Diameter      2                         KEY₁ = det(E₇)
+          χ (chromatic number)      3                                   KEY₂
+       α (independence number)      4                       KEY₁² = rank(F₄)
+             ω (clique number)      2                                   KEY₁
+               #max indep sets      5              KEY₁+KEY₂ = #exceptionals
+                      |Aut(P)|    120                      |BI| → E₈ (McKay)
+                      |det(A)|     48                      |BO| → E₇ (McKay)
+                         λ_max      3                                   KEY₂
+                         λ_min     -2                                  -KEY₁
+               λ_max + |λ_min|      5                              KEY₁+KEY₂
+               λ_max · |λ_min|      6                      KEY₁·KEY₂ = h(G₂)
+                      |χ_P(2)|    256                     KEY₁^rank(E₈) = 2⁸
+                         f(10)     56                       T(6) = dim(V_E₇)
+         Eigenval mult pattern  1,5,4                       1+5+4=10, 5=#exc
+
+======================================================================
+PART 3: THE n=9 TRANSITION — PETERSEN MINUS ONE
+======================================================================
+
+n=9 as Petersen-1:
+  9 = 10-1 = (Petersen vertices) - 1
+  9 = KEY₂² = 3²
+  C(9,2) = 36 = 6² = (KEY₁·KEY₂)²
+  C(10,2) - C(9,2) = 45-36 = 9 = KEY₂²
+  Adding the 10th vertex adds 9 new edges!
+
+Transition 9→10:
+  New arcs: 9 = KEY₂²
+  New arc orientations: 2⁹ = 512 = KEY₁^KEY₂²
+  T(10)/T(9) = ?/?
+
+n=9 as 3×3:
+  9 = 3×3 → arrange in a 3×3 grid
+  Row tournaments: 3 rows of 3-tournaments
+  Column tournaments: 3 columns of 3-tournaments
+  Each row/column has 2 possible tournament types
+  Row/column interaction: 9 inter-row edges per pair
+
+Latin square connection:
+  3×3 Latin squares: 12 = T(5) = h(E₆)
+  (There are 12 reduced 3×3 Latin squares)
+  This matches T(5)! Coincidence or structure?
+
+Verification: T(5) = 12
+  Non-isomorphic tournaments on 5 vertices:
+  1. Transitive T₅
+  2-12. Various non-transitive ones
+  (There are exactly 3 regular tournaments on 5)
+
+======================================================================
+PART 4: THE INDEPENDENCE POLYNOMIAL CASCADE
+======================================================================
+
+Petersen independence polynomial:
+  I(P, x) = 1x^0 + 10x^1 + 30x^2 + 30x^3 + 5x^4
+
+  Coefficients: {alpha_P}
+  α₁ = 10 = #vertices
+  α₂ = 30 = h(E₈) = #complement edges
+  α₃ = 30 = h(E₈) again!
+  α₄ = 5 = KEY₁+KEY₂ = #max independent sets
+
+STRIKING: α₂ = α₃ = 30 = h(E₈)
+  The Petersen graph has EQUAL numbers of independent pairs and triples!
+  This is related to the Petersen graph being 'almost self-complementary'
+
+  α₂ = #edges of complement = 30 ✓
+  α₃ = #independent triples = #triangles of complement
+  So the complement J(5,2) has exactly 30 edges AND 30 triangles!
+
+  Triangles in J(5,2) = L(K₅):
+    Type A (star): 5 · C(4,3) = 5 · 4 = 20
+    Type B (triangle): C(5,3) = 10
+    Total: 20 + 10 = 30 = h(E₈) ✓
+
+I(P, x) at special values:
+  I(P, -2) =    -59 = I(-KEY₁)
+  I(P, -1) =     -4 = Euler char of indep complex
+  I(P,  0) =      1
+  I(P,  1) =     76
+  I(P,  2) =    461 = H if Petersen were CG
+  I(P,  3) =   1516 = I(KEY₂)
+  I(P,  4) =   3721
+  I(P,  5) =   7676
+
+  I(P, -1) = -4 < 0 ≤ 1
+  If Petersen were CG(T), we'd need I(-1) ≤ 1
+  -4 ≤ 1 ✓ so the bound is satisfied
+  But is -4 achievable? Is Petersen realizable as CG?
+
+======================================================================
+PART 5: f(n) TABLE — TOURNAMENT POLYNOMIAL AS ROSETTA STONE
+======================================================================
+
+Complete f(n) table with Lie/tournament interpretations:
+
+  n   f(n) (n-2) (n-3) Interpretation
+-----------------------------------------------------------------
+  0      6    -2    -3   (0-2)(0-3) = 6 = h(G₂)
+  1      2    -1    -2   (1-2)(1-3) = 2 = KEY₁ = T(3)
+  2      0     0    -1   root (KEY₁)
+  3      0     1     0   root (KEY₂)
+  4      2     2     1   (4-2)(4-3) = 2 = KEY₁ = T(3)
+  5      6     3     2   (5-2)(5-3) = 6 = h(G₂) = KEY₁·KEY₂
+  6     12     4     3   (6-2)(6-3) = 12 = h(E₆) = T(5)
+  7     20     5     4   (7-2)(7-3) = 20
+  8     30     6     5   (8-2)(8-3) = 30 = h(E₈)
+  9     42     7     6   (9-2)(9-3) = 42
+ 10     56     8     7   (10-2)(10-3) = 56 = T(6) = dim(V_E₇)
+ 11     72     9     8   (11-2)(11-3) = 72 = 8·9 = rank(E₈)·CS_boundary
+ 12     90    10     9   (12-2)(12-3) = 90
+ 13    110    11    10   (13-2)(13-3) = 110
+ 14    132    12    11   (14-2)(14-3) = 132 = dim(E₇)-1
+ 15    156    13    12   (15-2)(15-3) = 156 = 12·13
+ 18    240    16    15   (18-2)(18-3) = 240 = dim(so(16))
+ 20    306    18    17   (20-2)(20-3) = 306 = 2·153 = 2·dim(B₈·...)
+ 30    756    28    27   (30-2)(30-3) = 756 = 4·189
+
+KEY EQUATIONS:
+  f(0) = 6 = h(G₂) — the tournament polynomial at 0
+  f(1) = 2 = KEY₁ — at unit
+  f(5) = 6 = h(G₂) — at KEY₁+KEY₂ (palindrome of f(0)!)
+  f(6) = 12 = h(E₆) = h(F₄) = T(5)
+  f(8) = 30 = h(E₈)
+  f(10) = 56 = T(6) = dim(V_E₇)
+  f(11) = 72 = rank(E₈)·CS_boundary
+
+PALINDROME: f(a) = f(5-a)
+  Because f(z) = (z-5/2)² - 1/4
+  Axis of symmetry: z = 5/2 = (KEY₁+KEY₂)/KEY₁
+
+  Palindromic pairs:
+    f(-2) = f(7) = 20
+    f(-1) = f(6) = 12
+    f(0) = f(5) = 6
+    f(1) = f(4) = 2
+    f(2) = f(3) = 0
+    f(3) = f(2) = 0
+    f(4) = f(1) = 2
+    f(5) = f(0) = 6
+    f(6) = f(-1) = 12
+    f(7) = f(-2) = 20
+
+Vertex form: f(z) = (z - 5/2)² - 1/4
+  Minimum: f(5/2) = -1/4
+  5/2 = (KEY₁+KEY₂)/KEY₁ — the same as h(E₈)/h(E₆)!
+  -1/4 = -1/KEY₁²
+
+======================================================================
+PART 6: THE PETERSEN GRAPH AS ADE BOUNDARY
+======================================================================
+
+BOUNDARY PHENOMENA:
+
+1. ADE classification boundary:
+   (2,3,5) → E₈ is the LAST exceptional
+   1/2+1/3+1/5 > 1 (spherical)
+   1/2+1/3+1/7 < 1 (hyperbolic, no exceptional)
+
+2. Petersen graph uniqueness:
+   K(5,2) is the smallest triangle-free graph with χ=3
+   It's the 'worst case' for many graph theory conjectures
+   Every counterexample to optimistic conjectures involves Petersen
+
+3. Tournament moat at n=10:
+   T(10) ≈ 10⁷ — first time T(n) > n!
+   At n=10, symmetry-breaking dominates
+   2^C(10,2)/10! = 2^45/10! ≈ T(10)
+
+T(n) vs n!:
+  T( 1) =            1, 1! =          1  T ≤ n!
+  T( 2) =            1, 2! =          2  T ≤ n!
+  T( 3) =            2, 3! =          6  T ≤ n!
+  T( 4) =            4, 4! =         24  T ≤ n!
+  T( 5) =           12, 5! =        120  T ≤ n!
+  T( 6) =           56, 6! =        720  T ≤ n!
+  T( 7) =          456, 7! =       5040  T ≤ n!
+  T( 8) =         6880, 8! =      40320  T ≤ n!
+
+T(n) first exceeds n! at n=10 = Petersen vertex count!
+This is the MOAT: beyond n=10, tournament enumeration
+surpasses factorial growth.
+
+======================================================================
+PART 7: THE 5-REGULARITY AND EXCEPTIONAL GROUPS
+======================================================================
+
+THE FIVE-FOLD SYMMETRY:
+
+In the Petersen graph:
+  - Built from 5-element set (Kneser K(5,2))
+  - Girth 5
+  - 5 maximum independent sets
+  - 5 complementary pairs
+  - Automorphism group acts on 5 elements (S₅)
+
+In exceptional Lie theory:
+  - 5 exceptional simple Lie algebras
+  - 5 = KEY₁+KEY₂ = third tournament prime
+  - E₈ branch lengths: 2+3+5 = 10 (sum = 2·5)
+  - Product: 2·3·5 = 30 = h(E₈)
+
+In Platonic solids:
+  - 5 Platonic solids
+  - Icosahedron: 12 vertices, 30 edges, 20 faces
+  - Dodecahedron: 20 vertices, 30 edges, 12 faces
+  - Both have 30 = h(E₈) edges!
+
+THE 30-EDGE TRINITY:
+  Icosahedron:        30 edges
+  Dodecahedron:       30 edges
+  Petersen complement: 30 edges
+  All equal h(E₈) = 30!
+
+  The Petersen complement = L(K₅) = J(5,2)
+  This is a 6-regular graph on 10 vertices with 30 edges
+  The icosahedron is a 5-regular graph on 12 vertices with 30 edges
+  The dodecahedron is a 3-regular graph on 20 vertices with 30 edges
+
+Euler characteristic check (V-E+F=2 for polyhedra):
+  Icosahedron: 12-30+20 = 2
+  Dodecahedron: 20-30+12 = 2
+  J(5,2) = L(K₅): not planar (contains K₅ as minor)
+
+======================================================================
+PART 8: THE FULL RECURRENCE PICTURE
+======================================================================
+
+Petersen spectrum and the tournament recurrence:
+
+  Petersen eigenvalues: 3, 1, -2
+  Tournament recurrence roots: 2, 3
+  Petersen eigenvalues = {KEY₂, 1, -KEY₁}
+  Tournament roots = {KEY₁, KEY₂}
+
+χ_P at tournament-related values:
+  χ_P( 0) =              48
+  χ_P( 1) =               0
+  χ_P( 2) =            -256
+  χ_P( 3) =               0
+  χ_P( 5) =         4917248
+  χ_P( 6) =        38400000
+  χ_P( 8) =       840350000
+  χ_P(10) =      8571080448
+
+Notable factorizations:
+  |χ_P(5)| = 4917248
+  = 2^11·7^4
+  = KEY₁^11 · (KEY₁²+KEY₂)^4
+
+======================================================================
+PART 9: SYNTHESIS — THE PETERSEN-TOURNAMENT-LIE TRIANGLE
+======================================================================
+
+THE GRAND TRIANGLE:
+
+  PETERSEN GRAPH
+      |\
+      | \
+      |  \
+      |   \
+  TOURNAMENT    LIE ALGEBRAS
+   THEORY       (EXCEPTIONAL)
+
+EDGE 1: Petersen → Tournament Theory
+  f(10) = 56 = T(6)
+  10 = #vertices, 15 = #edges
+  Complement has 30 = h(E₈) non-edges
+  |Aut(P)| = 120 = T(5)·10 = h(E₈)·4
+
+EDGE 2: Petersen → Lie Theory
+  |Aut(P)| = 120 = |BI| → E₈ (McKay)
+  |det(A_P)| = 48 = |BO| → E₇ (McKay)
+  Eigenvalues = {KEY₂, 1, -KEY₁}
+  |χ_P(KEY₁)| = KEY₁^rank(E₈)
+
+EDGE 3: Tournament Theory → Lie Theory
+  z²-5z+6 = (z-KEY₁)(z-KEY₂)
+  H(T) = I(CG(T), KEY₁)
+  E₈ exponents = sieve of [1,h) by {KEY₁, KEY₂, KEY₁+KEY₂}
+  #3-cycles in regular T₉ = h(E₈)
+
+THE CENTER: The number 5 = KEY₁+KEY₂
+  5 = #Platonic solids = #exceptionals
+  5 = girth of Petersen = third tournament prime
+  5 = base element of K(5,2) = last ADE parameter
+  10 = 2·5 = Petersen vertices = 'shifted 1'
+  30 = 2·3·5 = h(E₈) = Petersen complement edges
+
+ONE SENTENCE:
+  The Petersen graph K(5,2) is the combinatorial avatar of E₈,
+  encoding both tournament polynomial roots {2,3} as eigenvalues
+  and the ADE boundary (2,3,5) as its Kneser parameters.
