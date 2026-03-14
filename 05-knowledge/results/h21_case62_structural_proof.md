@@ -70,17 +70,40 @@ Double counting: t₃ · C(n-3,2) ≤ 2·C(n,5), giving t₃ ≤ n(n-1)(n-2)/30.
 
 The counting bound is loose, but the ACTUAL maximum grows as ~n/2.
 
-### Structural explanation for the gap
+### The Overlap-Concentration Dilemma (key structural insight)
 
-Tournaments with t₅=0 are "almost transitive" — every 5-element subtournament
-has at most 2 cyclic triples (well below the maximum of 5). The score sequences
-are extremely polarized (like (1,1,2,2,5,5,6,6) at n=8), corresponding to
-near-bipartite tournaments where most vertices either dominate or are dominated.
+**Dilemma**: α₂=2 requires OVERLAPPING triples (dp=2, not dp=C(t₃,2)), but overlapping triples create CONCENTRATED 5-subsets with t₃(sub) ≥ 3, which forces 5-cycles.
 
-Such tournaments have:
-- t₃ concentrated in "boundary" triples between the high and low score groups
-- 3-cycles forced to pair up, giving dp = t₃ (every pair disjoint)
-- No room for the "spread" overlap structure needed for dp = 2 with t₃ = 6
+**Data** (n=8, t₅=0, 1M samples):
+| t₃ | dp | count | C(t₃,2) | dp = C(t₃,2)? |
+|-----|-----|-------|---------|----------------|
+| 0 | 0 | 162 | 0 | ✓ |
+| 1 | 0 | 308 | 0 | ✓ |
+| 2 | 0 | 713 | 1 | overlapping |
+| 2 | 1 | 94 | 1 | ✓ |
+| 3 | 2 | 278 | 3 | overlapping |
+| 4 | 4 | 152 | 6 | overlapping |
+
+**Key observations:**
+1. At t₃ ≥ 3 with t₅=0: dp ≥ 2 always. No dp=0 or dp=1 possible.
+2. At t₃=4 with t₅=0: dp=4, not C(4,2)=6. But still dp > 2.
+3. Score sequences highly polarized: (1,1,2,2,5,5,6,6) for t₃=4.
+4. The near-bipartite structure forces triples to be spread across the partition.
+5. Overlapping triples require concentration → forces t₃(sub) ≥ 3 → t₅ ≥ 1.
+
+**Therefore**: dp=2 with t₃=6 is impossible when t₅=0, because:
+- t₃=6 with t₅=0 requires extreme spread (all 5-subsets have t₃(sub) ≤ 2)
+- This spread forces dp ≫ 2
+- Conversely, dp=2 requires overlap, which concentrates triples, creating 5-cycles
+
+### Tournaments with t₃=3, t₅=0 at n=7 (exhaustive)
+
+3360 such tournaments, ALL have dp=2 (not 0 or 1 or 3).
+alpha_2 = 2 always → H = 1+6+8 = 15 (not 7, not 21).
+These are the ONLY tournaments with alpha_1=3 and t₅=0.
+
+The pattern {A,B,C} where A∩B ≠ ∅, A⊥C, B⊥C (one overlapping pair, two disjoint pairs)
+is the UNIQUE structure at t₃=3 with t₅=0.
 
 ## PROOF STATUS
 
@@ -90,8 +113,11 @@ Such tournaments have:
 | Subcase B1 (5-VS, not in pair) | α₁ budget overflow | **PROVED for all n** |
 | Subcase B2, n ≤ 6 | Counting bound: t₃ ≤ 4 < 6 | **PROVED** |
 | Subcase B2, n = 7 | Exhaustive: max t₃ = 3 when t₅=0 | **PROVED** |
-| Subcase B2, n = 8 | Sampling 500k: max t₃ = 4 | **Strong evidence** |
-| Subcase B2, n ≥ 9 | Sampling + counting bound + structure | **Strong evidence** |
+| Subcase B2, n = 8 | Sampling 1M + overlap-concentration dilemma | **Strong evidence** |
+| Subcase B2, n ≥ 9 | Sampling + structure + dilemma | **Strong evidence** |
 
 **Overall: (6,2) is PROVED impossible for n ≤ 7, and strongly supported for all n.**
-**The remaining gap is showing max(t₃ | t₅=0) < 6 for all n, currently empirical for n ≥ 8.**
+
+The remaining formal gap: proving max(t₃ | t₅=0) < 6 for all n ≥ 8. The overlap-concentration
+dilemma provides a compelling structural argument but needs to be formalized into a rigorous
+proof for general n.
