@@ -1,0 +1,54 @@
+======================================================================
+INDEPENDENCE POLYNOMIALS OF Ω AT n=6
+======================================================================
+
+Distinct I(Ω,x) polynomials: 27
+
+All polynomials (sorted by frequency):
+  I = 1 + 4x^1                        I(2)=  9  count= 2880  H=[9] = (1+4x)
+  I = 1 + 7x^1                        I(2)= 15  count= 2208  H=[15] = (1+7x)
+  I = 1 + 2x^1                        I(2)=  5  count= 2160  H=[5] = (1+2x)
+  I = 1 + 14x^1 + 2x^2                I(2)= 37  count= 2160  H=[37]
+  I = 1 + 12x^1 + 1x^2                I(2)= 29  count= 2160  H=[29]
+  I = 1 + 5x^1                        I(2)= 11  count= 1440  H=[11] = (1+5x)
+  I = 1 + 9x^1                        I(2)= 19  count= 1440  H=[19] = (1+9x)
+  I = 1 + 11x^1                       I(2)= 23  count= 1440  H=[23] = (1+11x)
+  I = 1 + 6x^1                        I(2)= 13  count= 1440  H=[13] = (1+6x)
+  I = 1 + 9x^1 + 1x^2                 I(2)= 23  count= 1440  H=[23]
+  I = 1 + 12x^1                       I(2)= 25  count= 1440  H=[25] = (1+12x)
+  I = 1 + 13x^1 + 1x^2                I(2)= 31  count= 1440  H=[31]
+  I = 1 + 16x^1 + 1x^2                I(2)= 37  count= 1440  H=[37]
+  I = 1 + 14x^1 + 1x^2                I(2)= 33  count= 1440  H=[33]
+  I = 1 + 19x^1 + 1x^2                I(2)= 43  count= 1440  H=[43]
+  I = 1 + 1x^1                        I(2)=  3  count=  960  H=[3] = (1+1x)
+  I = 1                               I(2)=  1  count=  720  H=[1] = 
+  I = 1 + 8x^1                        I(2)= 17  count=  720  H=[17] = (1+8x)
+  I = 1 + 6x^1 + 1x^2                 I(2)= 17  count=  720  H=[17]
+  I = 1 + 12x^1 + 2x^2                I(2)= 33  count=  720  H=[33]
+  I = 1 + 10x^1 + 2x^2                I(2)= 29  count=  720  H=[29]
+  I = 1 + 16x^1 + 2x^2                I(2)= 41  count=  720  H=[41]
+  I = 1 + 11x^1 + 1x^2                I(2)= 27  count=  480  H=[27]
+  I = 1 + 16x^1                       I(2)= 33  count=  480  H=[33] = (1+16x)
+  I = 1 + 14x^1 + 4x^2                I(2)= 45  count=  240  H=[45]
+  I = 1 + 20x^1 + 1x^2                I(2)= 45  count=  240  H=[45]
+  I = 1 + 2x^1 + 1x^2                 I(2)=  9  count=   80  H=[9] = (1+1x)·(1+1x)
+
+Factorizable: 17408/32768 = 53.1%
+
+
+Degree-2 independence polynomials:
+  1+2x+1x² → I(2)=9, = (1+1x)·(1+1x), count=80
+  1+6x+1x² → I(2)=17, IRREDUCIBLE (disc=32), count=720
+  1+9x+1x² → I(2)=23, IRREDUCIBLE (disc=77), count=1440
+  1+10x+2x² → I(2)=29, IRREDUCIBLE (disc=92), count=720
+  1+11x+1x² → I(2)=27, IRREDUCIBLE (disc=117), count=480
+  1+12x+1x² → I(2)=29, IRREDUCIBLE (disc=140), count=2160
+  1+12x+2x² → I(2)=33, IRREDUCIBLE (disc=136), count=720
+  1+13x+1x² → I(2)=31, IRREDUCIBLE (disc=165), count=1440
+  1+14x+1x² → I(2)=33, IRREDUCIBLE (disc=192), count=1440
+  1+14x+2x² → I(2)=37, IRREDUCIBLE (disc=188), count=2160
+  1+14x+4x² → I(2)=45, IRREDUCIBLE (disc=180), count=240
+  1+16x+1x² → I(2)=37, IRREDUCIBLE (disc=252), count=1440
+  1+16x+2x² → I(2)=41, IRREDUCIBLE (disc=248), count=720
+  1+19x+1x² → I(2)=43, IRREDUCIBLE (disc=357), count=1440
+  1+20x+1x² → I(2)=45, IRREDUCIBLE (disc=396), count=240

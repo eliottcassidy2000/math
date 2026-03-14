@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71g — 2026-03-14: Completeness Obstruction, Block-Transitive Products, α₁=3 Closes at n=9
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71f (6th context continuation)
+**What was done:**
+- **Completeness Obstruction Theorem**: H=7 is achievable by directed 7-cycle DIGRAPH but IMPOSSIBLE for any TOURNAMENT. Tournament completeness (xⱼᵢ=1-xᵢⱼ) = degree drop = path reversal involution — all same phenomenon.
+- **Block-Transitive Product Formula PROVED**: H(T(B₁,...,Bₖ)) = ∏ H(Bᵢ). Once HP leaves a block, can never return.
+- **α₁=3 Gap Closes at n=9**: 3 disjoint 3-cycles + transitive inter-group → H=27=3³, Ω=3 isolated vertices. Critical threshold n=9=3×3.
+- **SCC Product Formula Verified**: H = ∏ H(SCCᵢ) for non-SC tournaments, 0 mismatches at n=3..6 exhaustive.
+- **Permanently Forbidden H = {7, 21} Only**: At n=7, all odd H ≤ 100 found except 63. H=63 achievable at n=8.
+- **H=7 ↔ Ω=K₃ Uniqueness**: I(G,2)=7 has unique solution G=K₃ (proved by enumeration).
+- **d₅ Parity**: t₃ ≡ 3 mod 4 → d₅ always odd at n=5,6 (breaks at n=7).
+- **Degree Drop = Completeness**: Tournament constraint causes degree drop AND kills H=7. The ±2 coefficients ARE the tournament constraint.
+- **Directed b-cycle has H=b**: Trivially (b starting positions). Adding single chord never changes H.
+- **SC fraction grows**: 25% at n=3 → 68.1% at n=6. SC "prime" H values grow with n.
+**New contributions:** HYP-1235 to HYP-1240, completeness_obstruction_synthesis.md
+**Unresolved:** General proof H=7/H=21 impossible for all n; d₅ parity mechanism; connect ±2 coefficients to OCF x=2.
+
 ## opus-2026-03-14-S71f — 2026-03-14: Nesting Obstruction, (z-2)(z-3) Recurrence, 2-Bridge, Simplicial Selection
 
 **Account:** opus

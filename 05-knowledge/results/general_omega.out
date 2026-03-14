@@ -1,0 +1,58 @@
+======================================================================
+DUAL H VALUES: Both clique and general Ω at n=6
+======================================================================
+
+H values with BOTH clique and general Ω:
+
+  H=17:
+    Clique (720): Ω sizes [8], α=[1, 8, 0, 0, 0]
+    General (720): Ω sizes [6], α=[1, 6, 1, 0, 0]
+    Same I(Ω,2)? clique=17, general=17
+
+  H=23:
+    Clique (1440): Ω sizes [11], α=[1, 11, 0, 0, 0]
+    General (1440): Ω sizes [9], α=[1, 9, 1, 0, 0]
+    Same I(Ω,2)? clique=23, general=23
+
+  H=33:
+    Clique (480): Ω sizes [16], α=[1, 16, 0, 0, 0]
+    General (2160): Ω sizes [12], α=[1, 12, 2, 0, 0]
+    Same I(Ω,2)? clique=33, general=33
+
+
+H values by structure type:
+  H=  1: clique=  720, general=    0  [CLIQUE ONLY]
+  H=  3: clique=  960, general=    0  [CLIQUE ONLY]
+  H=  5: clique= 2160, general=    0  [CLIQUE ONLY]
+  H=  9: clique= 2960, general=    0  [CLIQUE ONLY]
+  H= 11: clique= 1440, general=    0  [CLIQUE ONLY]
+  H= 13: clique= 1440, general=    0  [CLIQUE ONLY]
+  H= 15: clique= 2208, general=    0  [CLIQUE ONLY]
+  H= 17: clique=  720, general=  720  [BOTH]
+  H= 19: clique= 1440, general=    0  [CLIQUE ONLY]
+  H= 23: clique= 1440, general= 1440  [BOTH]
+  H= 25: clique= 1440, general=    0  [CLIQUE ONLY]
+  H= 27: clique=    0, general=  480  [GENERAL ONLY]
+  H= 29: clique=    0, general= 2880  [GENERAL ONLY]
+  H= 31: clique=    0, general= 1440  [GENERAL ONLY]
+  H= 33: clique=  480, general= 2160  [BOTH]
+  H= 37: clique=    0, general= 3600  [GENERAL ONLY]
+  H= 41: clique=    0, general=  720  [GENERAL ONLY]
+  H= 43: clique=    0, general= 1440  [GENERAL ONLY]
+  H= 45: clique=    0, general=  480  [GENERAL ONLY]
+
+
+Independence polynomials for general Ω at n=6:
+  H=17: α=[1, 6, 1, 0, 0], cycles=6, sizes=[6]
+  H=23: α=[1, 9, 1, 0, 0], cycles=9, sizes=[9]
+  H=27: α=[1, 11, 1, 0, 0], cycles=11, sizes=[11]
+  H=29: α=[1, 10, 2, 0, 0], cycles=10, sizes=[10]
+  H=29: α=[1, 12, 1, 0, 0], cycles=12, sizes=[12]
+  H=31: α=[1, 13, 1, 0, 0], cycles=13, sizes=[13]
+  H=33: α=[1, 12, 2, 0, 0], cycles=12, sizes=[12]
+  H=33: α=[1, 14, 1, 0, 0], cycles=14, sizes=[14]
+  H=37: α=[1, 14, 2, 0, 0], cycles=14, sizes=[14]
+  H=37: α=[1, 16, 1, 0, 0], cycles=16, sizes=[16]
+  H=41: α=[1, 16, 2, 0, 0], cycles=16, sizes=[16]
+  H=43: α=[1, 19, 1, 0, 0], cycles=19, sizes=[19]
+  H=45: α=[1, 14, 4, 0, 0], cycles=14, sizes=[14]
