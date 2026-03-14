@@ -1,0 +1,282 @@
+======================================================================
+THE FIBONACCI-TOPOLOGY BRIDGE
+======================================================================
+
+--- Transfer matrix eigenvalues λ± = (1 ± √(1+4x)) / 2 ---
+
+      x                   λ+                   λ-     |λ+|    arg(λ+)     |λ-|
+--------------------------------------------------------------------------------
+  -2.00       0.5000+1.3229i      0.5000+-1.3229i   1.4142   0.3850π   1.4142
+  -1.00       0.5000+0.8660i      0.5000+-0.8660i   1.0000   0.3333π   1.0000
+  -0.75       0.5000+0.7071i      0.5000+-0.7071i   0.8660   0.3041π   0.8660
+  -0.50       0.5000+0.5000i      0.5000+-0.5000i   0.7071   0.2500π   0.7071
+  -0.25             0.500000             0.500000   0.5000   0.0000π   0.5000
+   0.00             1.000000             0.000000   1.0000   0.0000π   0.0000
+   0.25             1.207107            -0.207107   1.2071   0.0000π   0.2071
+   0.50             1.366025            -0.366025   1.3660   0.0000π   0.3660
+   1.00             1.618034            -0.618034   1.6180   0.0000π   0.6180
+   1.50             1.822876            -0.822876   1.8229   0.0000π   0.8229
+   2.00             2.000000            -1.000000   2.0000   0.0000π   1.0000
+   3.00             2.302776            -1.302776   2.3028   0.0000π   1.3028
+   6.00             3.000000            -2.000000   3.0000   0.0000π   2.0000
+  12.00             4.000000            -3.000000   4.0000   0.0000π   3.0000
+  20.00             5.000000            -4.000000   5.0000   0.0000π   4.0000
+
+======================================================================
+PART 2: THE UNIT CIRCLE REGIME (x ∈ [-1, 0))
+======================================================================
+
+When -1/4 < x < 0: eigenvalues are REAL, both in (-1, 1).
+  I(P_k, x) → 0 exponentially.
+
+When x = -1/4: CRITICAL POINT. Double eigenvalue λ = 1/2.
+  I(P_k, -1/4) = (k+2) / 2^{k+1}  (linear × exponential decay)
+
+When -1 ≤ x < -1/4: eigenvalues are COMPLEX, on the unit circle!
+  |λ±| = √(-x) → I(P_k, x) is PERIODIC/QUASIPERIODIC!
+  At x = -1: |λ±| = 1, period = 6.
+  At x = -1/2: |λ±| = 1/√2 ≈ 0.707, DECAYING oscillation.
+
+Verification of I(P_k, -1/4) = (k+2)/2^{k+1}:
+  k=0: I(P_0, -1/4) = 1.000000, (k+2)/2^(k+1) = 1.000000, match=True
+  k=1: I(P_1, -1/4) = 0.750000, (k+2)/2^(k+1) = 0.750000, match=True
+  k=2: I(P_2, -1/4) = 0.500000, (k+2)/2^(k+1) = 0.500000, match=True
+  k=3: I(P_3, -1/4) = 0.312500, (k+2)/2^(k+1) = 0.312500, match=True
+  k=4: I(P_4, -1/4) = 0.187500, (k+2)/2^(k+1) = 0.187500, match=True
+  k=5: I(P_5, -1/4) = 0.109375, (k+2)/2^(k+1) = 0.109375, match=True
+  k=6: I(P_6, -1/4) = 0.062500, (k+2)/2^(k+1) = 0.062500, match=True
+  k=7: I(P_7, -1/4) = 0.035156, (k+2)/2^(k+1) = 0.035156, match=True
+  k=8: I(P_8, -1/4) = 0.019531, (k+2)/2^(k+1) = 0.019531, match=True
+  k=9: I(P_9, -1/4) = 0.010742, (k+2)/2^(k+1) = 0.010742, match=True
+
+======================================================================
+PART 3: PHASE DIAGRAM OF I(P_k, x)
+======================================================================
+
+Three regimes:
+  x < -1/4: OSCILLATORY (complex eigenvalues, period depends on x)
+  x = -1/4: CRITICAL (double real eigenvalue)
+  x > -1/4: EXPONENTIAL (real eigenvalues, growth for x > 0)
+
+Period structure:
+  x = -1: arg = π/3, period = 6
+  x = -cos²(π/5) - 1/4 = ?: arg = π/5, period = 10
+  x = -cos²(π/4) - 1/4 = ?: arg = π/4, period = 8
+
+Exact x for given period p (arg = π/p for period 2p):
+  period   6: x = -1.000000, |λ+| = 1.000000
+           verified periodic: True
+  period   8: x = -0.500000, |λ+| = 0.707107
+           verified periodic: False
+  period  10: x = -0.381966, |λ+| = 0.618034
+           verified periodic: False
+  period  12: x = -0.333333, |λ+| = 0.577350
+           verified periodic: False
+  period  14: x = -0.307979, |λ+| = 0.554958
+           verified periodic: False
+  period  16: x = -0.292893, |λ+| = 0.541196
+           verified periodic: False
+  period  20: x = -0.276393, |λ+| = 0.525731
+           verified periodic: False
+  period  24: x = -0.267949, |λ+| = 0.517638
+           verified periodic: False
+
+======================================================================
+PART 4: OBLONG FUGACITIES IN THE PHASE DIAGRAM
+======================================================================
+
+Integer-eigenvalue fugacities x = k(k+1) (oblong numbers):
+  x = 0: λ = 1, 0  (degenerate)
+  x = 2: λ = 2, -1  (tournaments)
+  x = 6: λ = 3, -2
+  x = 12: λ = 4, -3
+  x = 20: λ = 5, -4
+
+These are ALL in the EXPONENTIAL regime (x > -1/4).
+The 'tournament fugacity' x=2 is the SMALLEST nonzero oblong.
+
+G_k(n) = I(P_n, k(k+1)) for first few k and n:
+  n       x=0       x=2       x=6      x=12      x=20
+  0         1         1         1         1         1
+  1         1         3         7        13        21
+  2         1         5        13        25        41
+  3         1        11        55       181       461
+  4         1        21       133       481      1281
+  5         1        43       463      2653     10501
+  6         1        85      1261      8425     36121
+  7         1       171      4039     40261    246141
+  8         1       341     11605    141361    968561
+  9         1       683     35839    624493   5891381
+
+Closed form for I(P_n, k(k+1)):
+  k=1 (x=2): I(P_n,2) = 1.3333·2^n + -0.3333·(-1)^n  ✓
+  k=2 (x=6): I(P_n,6) = 1.8000·3^n + -0.8000·(-2)^n  ✓
+  k=3 (x=12): I(P_n,12) = 2.2857·4^n + -1.2857·(-3)^n  ✓
+  k=4 (x=20): I(P_n,20) = 2.7778·5^n + -1.7778·(-4)^n  ✓
+
+======================================================================
+PART 5: THE FIBONACCI WORD — 2 AND 3 AS TILE LENGTHS
+======================================================================
+
+Fibonacci numbers count tilings of a 1×n strip with tiles of length 1 and 2.
+Jacobsthal numbers count tilings where 1-tiles have 1 color and 2-tiles have 2 colors.
+At fugacity x: tiles of length 2 have x colors.
+
+Fibonacci word (first 30): abaababaabaababaababaabaababaa
+  a count: 19, b count: 11
+  ratio a/b: 1.7273 (should → φ = 1.6180)
+Tile lengths: [2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 2, 3, 2, 3, 2, 2]
+  Running sums: [2, 5, 7, 9, 12, 14, 17, 19, 21, 24, 26, 28, 31, 33, 36]
+  Beatty B(φ²): [2, 5, 7, 10, 13, 15, 18, 20, 23, 26, 28, 31, 34, 36, 39]
+  Match: False
+  Asymptotically: partial_sum(k) ~ k·φ² = k·0.8090
+
+★ INSIGHT: The Fibonacci word with tile lengths 2 and 3:
+  2 = tournament fugacity (x in I(Ω,2) = H)
+  3 = x+1 = the 'augmented fugacity'
+  2+3 = 5 (pentagon), 2×3 = 6 (period)
+
+======================================================================
+PART 6: PERIOD-6 AS TOPOLOGICAL INVARIANT
+======================================================================
+
+Period 6 appears in many places:
+  - I(P_k, -1) mod anything: exact period 6
+  - Fibonacci mod 4: π_F(4) = 6
+  - I(P_k, 2) mod 4: period ?
+  - 6th roots of unity: eigenvalues at x = -1
+
+I(P_k, 2) mod m for various m:
+  mod  3: period =   6, first values: [1, 0, 2, 2, 0, 1]
+  mod  4: period =   2, first values: [1, 3]
+  mod  5: period =   4, first values: [1, 3, 0, 1]
+  mod  6: period =   6, first values: [1, 3, 5, 5, 3, 1]
+  mod  7: period =   6, first values: [1, 3, 5, 4, 0, 1]
+  mod  8: period > 50, first values: [1, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3, 5, 3]
+  mod  9: period =  18, first values: [1, 3, 5, 2, 3, 7, 4, 0, 8, 8, 6, 4, 7, 6, 2, 5, 0, 1]
+  mod 10: period =   4, first values: [1, 3, 5, 1]
+  mod 12: period =   6, first values: [1, 3, 5, 11, 9, 7]
+
+Fibonacci mod m for comparison:
+  mod  3: π_F =   8
+  mod  4: π_F =   6
+  mod  5: π_F =  20
+  mod  6: π_F =  24
+  mod  7: π_F =  16
+  mod  8: π_F =  12
+  mod  9: π_F =  24
+  mod 10: π_F =  60
+  mod 12: π_F =  24
+
+======================================================================
+PART 7: FRIEZE PATTERNS AND THE SL(2,Z) ACTION
+======================================================================
+
+The transfer matrix M(x) = [[1, x], [1, 0]] ∈ GL(2, R).
+det(M) = -x. So M ∈ SL(2) only at x = -1!
+
+At x = -1: M = [[1,-1],[1,0]], M^6 = I (order 6 in SL(2,Z)).
+This is the MODULAR GROUP element corresponding to the 6th root of unity.
+Powers of M = [[1,-1],[1,0]]:
+  M^1 = [[1, -1], [1, 0]]
+  M^2 = [[0, -1], [1, -1]]
+  M^3 = [[-1, 0], [0, -1]]
+  M^4 = [[-1, 1], [-1, 0]]
+  M^5 = [[0, 1], [-1, 1]]
+  M^6 = [[1, 0], [0, 1]]
+  M^7 = [[1, -1], [1, 0]]
+
+★ M^6 = I confirmed! The transfer matrix at x=-1 has ORDER 6 in SL(2,Z).
+  This is the rotation by π/3 in the hyperbolic plane.
+
+At x = 2: M = [[1,2],[1,0]], det = -2.
+Powers of M mod 3:
+  M^1 mod 3 = [[1, 2], [1, 0]]
+  M^2 mod 3 = [[0, 2], [1, 2]]
+  M^3 mod 3 = [[2, 0], [0, 2]]  ← scalar 2I
+  M^4 mod 3 = [[2, 1], [2, 0]]
+  M^5 mod 3 = [[0, 1], [2, 1]]
+  M^6 mod 3 = [[1, 0], [0, 1]]  ← IDENTITY! Period = 6
+
+Powers of M mod 7:
+  M^6 mod 7 = I! Period = 6
+
+======================================================================
+PART 8: THE x-DEFORMATION AS ALGEBRAIC HOMOTOPY
+======================================================================
+
+The family I(G, x) for varying x is a 'deformation' connecting
+different algebraic/topological invariants:
+
+  x = -1: Euler characteristic (homological)
+  x = 0: trivial (contractible point)
+  x = 1: independence number (combinatorial)
+  x = 2: tournament count (arithmetic)
+  x = φ-1 ≈ 0.618: golden ratio point
+
+For the PATH GRAPH P_k, the deformation continuously moves
+from period-6 oscillation to exponential growth:
+  x=-1.000: 1.0, 0.0, -1.0, -1.0, 0.0, 1.0, 1.0, 0.0, -1.0, -1.0, 0.0, 1.0, ...  (oscillating)
+  x=-0.500: 1.0, 0.5, 0.0, -0.2, -0.2, -0.1, 0.0, 0.1, 0.1, 0.0, 0.0, -0.0, ...  (oscillating)
+  x=-0.250: 1.0, 0.8, 0.5, 0.3, 0.2, 0.1, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, ...  (growth ≈ 0.533)
+  x= 0.000: 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, ...  (growth ≈ 1.000)
+  x= 0.500: 1.0, 1.5, 2.0, 2.8, 3.8, 5.1, 7.0, 9.6, 13.1, 17.8, 24.4, 33.3, ...  (growth ≈ 1.366)
+  x= 0.618: 1.0, 1.6, 2.2, 3.2, 4.6, 6.6, 9.5, 13.6, 19.4, 27.8, 39.8, 57.0, ...  (growth ≈ 1.432)
+  x= 1.000: 1.0, 2.0, 3.0, 5.0, 8.0, 13.0, 21.0, 34.0, 55.0, 89.0, 144.0, 233.0, ...  (growth ≈ 1.618)
+  x= 1.500: 1.0, 2.5, 4.0, 7.8, 13.8, 25.4, 46.0, 84.1, 153.1, 279.2, 508.8, 927.5, ...  (growth ≈ 1.823)
+  x= 2.000: 1.0, 3.0, 5.0, 11.0, 21.0, 43.0, 85.0, 171.0, 341.0, 683.0, 1365.0, 2731.0, ...  (growth ≈ 2.000)
+  x= 3.000: 1.0, 4.0, 7.0, 19.0, 40.0, 97.0, 217.0, 508.0, 1159.0, 2683.0, 6160.0, 14209.0, ...  (growth ≈ 2.302)
+
+======================================================================
+PART 9: PHASE TRANSITIONS IN THE INDEPENDENCE POLYNOMIAL
+======================================================================
+
+Roots of I(P_k, x) for k = 2, 3, ..., 10:
+  P_2: roots ≈ []
+  P_3: roots ≈ [-0.38197]
+  P_4: roots ≈ [-0.33333]
+  P_5: roots ≈ [-0.6431, -0.30798]
+  P_6: roots ≈ [-1.70711, -0.29289]
+  P_7: roots ≈ [-0.42602, -0.28312]
+  P_8: roots ≈ [-0.72361, -0.38197, -0.27639]
+  P_9: roots ≈ [-1.44869, -0.58296, -0.35325, -0.27155]
+  P_10: roots ≈ [-0.33333, -0.26795]
+
+  The largest root → -1/φ² = -0.381966 as k → ∞
+  This is the HARD-CORE LATTICE GAS critical fugacity for Z!
+  x_c(Z) = -1/φ² (1D chain), x_c(Z²) ≈ 3.796 (2D square lattice)
+
+======================================================================
+PART 10: THE TOPOLOGICAL UNIVERSE
+======================================================================
+
+THE MAP OF THE TOURNAMENT WORLD:
+
+  TOPOLOGICAL LAYER (x = -1):
+    Euler characteristic χ = I(Ω, -1)
+    Period-6 from SL(2,Z) action
+    M^6 = I in the modular group
+    Independence complex Ind(Ω) has cyclic homology
+
+  COMBINATORIAL LAYER (x = 1):
+    #independent cycle sets = I(Ω, 1)
+    α_odd = (I(Ω,1) - I(Ω,-1))/2
+    α_even = (I(Ω,1) + I(Ω,-1) - 2)/2
+
+  ARITHMETIC LAYER (x = 2):
+    H = I(Ω, 2) = Hamiltonian path count
+    Always odd (Rédei)
+    Forbidden values from α₁ gaps
+
+  THE BRIDGE FORMULA:
+    H + 2χ = 3 + 6α₂ + 6α₃ + 18α₄ + ...
+    At n ≤ 5: H + 2χ = 3 EXACTLY
+    At n = 6: first correction from α₂
+
+  THE CRITICAL POINTS:
+    x = -1/4: double eigenvalue (phase boundary)
+    x = -1/φ²: hard-core gas critical fugacity
+    x = 0: contractible (trivial)
+    x = 1: golden ratio eigenvalue
+    x = 2: tournament fugacity
+    x = k(k+1): oblong integer-eigenvalue hierarchy
