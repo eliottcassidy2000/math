@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71d — 2026-03-14: Keys to the Universe — The 2-3 Framework
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71d (context continuation)
+**Summary of work:**
+Deep exploration of how 2 and 3 function as "keys to the universe" in tournament theory, with focus on the (α₁,α₂) lattice, determination hierarchy, and how n=7,8 change the structural landscape.
+
+**Critical findings:**
+1. **(H,I₃) complete coordinate system** (HYP-970): At n≤8, α₂=(2I₃-3H+1)/6 exactly recovers the independence polynomial. Vandermonde det=6.
+2. **V(2,3)=6 is the GLOBAL MINIMUM** of V(a,b)=ab(b-a) over positive integer pairs a<b. So (2,3) is literally the optimal evaluation pair.
+3. **Score→dc3 always** (classical, verified exhaustive n=5,6,7). But score↛{dc5,dc7,α₂,H} at n≥5.
+4. **(dc3,dc5,dc7)↛H** at n=7: 15/148 groups ambiguous. α₂ depends on intersection structure.
+5. **α₂ = dp33 exactly** at n=6,7 (only (3,3) disjoint pairs possible).
+6. **Forbidden H from lattice impossibility**: n=6 forbidden H={7,21,35,39} matches EXACTLY with (α₁,α₂) lattice gaps.
+7. **Lattice evolution**: n=5 (1D, max α₂=0) → n=6 (2D, 27pts) → n=7 (166pts) → n=8 (1141pts, α₂^{35} = 37.5%).
+8. **I(-1) = 1-α₁+α₂**: positive only for near-transitive tournaments (decreasing fraction).
+9. **MISTAKE-023 confirmed**: directed cycles vs vertex-sets matters at n≥5.
+10. **Convergence rate theorem PROVED**: φ_k=2-1/2^k+O(k/4^k), ψ_k=3-(2/3)^k+O(k(4/9)^k).
+
+**New contributions:** HYP-940–947, HYP-970–977; scripts: determination_power.py, intersection_structure.py, score_cycle_formula.py, keys_23_deep.py, alpha2_geometry.py, alpha2_gaps.py, lattice_transition_78.py, vandermonde_23_universe.py, i_neg1_nonpositive.py
+
+**Unresolved threads:**
+- Why is α₂=3 impossible at n=6, dc3=8? (complementary pair parity constraint)
+- Does I(-1)<0 for ALL tournaments at n≥8? (seems true from sampling)
+- How does α₃ change the Vandermonde structure at n=9?
+- MISTAKE-023 scripts not yet patched (4 old scripts still use vertex-set counting)
+
 ## opus-2026-03-14-S73 — 2026-03-14: The Role of 5 — Deep Exploration
 
 **Account:** opus
