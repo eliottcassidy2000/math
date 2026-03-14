@@ -1,0 +1,49 @@
+======================================================================
+CORRECTED Ω(T) COMPUTATION
+======================================================================
+
+Directed 5-cycle counts at n=5:
+----------------------------------------
+  Distribution of #(directed 5-cycles):
+    0 five-cycles: 480 tournaments
+    1 five-cycles: 360 tournaments
+    2 five-cycles: 144 tournaments
+    3 five-cycles: 40 tournaments
+
+======================================================================
+OCF VERIFICATION WITH CORRECTED Ω AT n=5
+======================================================================
+
+  *** OCF VERIFIED FOR ALL 1024 TOURNAMENTS AT n=5 ***
+
+Ω(T) catalog at n=5:
+  H=1:
+    |V|=0, |E|=0: 120 tournaments
+  H=3:
+    |V|=1, |E|=0: 120 tournaments
+  H=5:
+    |V|=2, |E|=1: 240 tournaments
+  H=9:
+    |V|=4, |E|=6: 240 tournaments
+  H=11:
+    |V|=5, |E|=10: 120 tournaments
+  H=13:
+    |V|=6, |E|=15: 120 tournaments
+  H=15:
+    |V|=7, |E|=21: 64 tournaments
+
+======================================================================
+OCF VERIFICATION AT n=4
+======================================================================
+
+  *** OCF VERIFIED FOR ALL 64 TOURNAMENTS AT n=4 ***
+
+OCF at n=3:
+  bits=0: H=1, |Ω|=0, I(Ω,2)=1 ✓
+  bits=1: H=1, |Ω|=0, I(Ω,2)=1 ✓
+  bits=2: H=3, |Ω|=1, I(Ω,2)=3 ✓
+  bits=3: H=1, |Ω|=0, I(Ω,2)=1 ✓
+  bits=4: H=1, |Ω|=0, I(Ω,2)=1 ✓
+  bits=5: H=3, |Ω|=1, I(Ω,2)=3 ✓
+  bits=6: H=1, |Ω|=0, I(Ω,2)=1 ✓
+  bits=7: H=1, |Ω|=0, I(Ω,2)=1 ✓

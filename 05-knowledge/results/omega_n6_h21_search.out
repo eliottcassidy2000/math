@@ -1,0 +1,60 @@
+======================================================================
+H SPECTRUM AND Ω STRUCTURE AT n=6
+======================================================================
+
+Phase 1: H value spectrum at n=6
+
+H=21 NOT found at n=6!
+
+H value distribution at n=6:
+  H=  1:   720 (  2.2%)
+  H=  3:   960 (  2.9%)
+  H=  5:  2160 (  6.6%)
+  H=  9:  2960 (  9.0%)
+  H= 11:  1440 (  4.4%)
+  H= 13:  1440 (  4.4%)
+  H= 15:  2208 (  6.7%)
+  H= 17:  1440 (  4.4%)
+  H= 19:  1440 (  4.4%)
+  H= 23:  2880 (  8.8%)
+  H= 25:  1440 (  4.4%)
+  H= 27:   480 (  1.5%)
+  H= 29:  2880 (  8.8%)
+  H= 31:  1440 (  4.4%)
+  H= 33:  2640 (  8.1%)
+  H= 37:  3600 ( 11.0%)
+  H= 41:   720 (  2.2%)
+  H= 43:  1440 (  4.4%)
+  H= 45:   480 (  1.5%)
+
+Total distinct H values at n=6: 19
+Range: 1 to 45
+
+H=7 NOT in n=6 spectrum (as expected)
+H=21 NOT in n=6 spectrum
+
+======================================================================
+KEY INSIGHT: What Ω structures arise at n=6?
+======================================================================
+
+H=17: checking Ω structures (first 3 examples)...
+  bits=16: |Ω|=8 (4 tri + 4 pent), |E|=28
+  bits=30: |Ω|=8 (4 tri + 4 pent), |E|=28
+  bits=48: |Ω|=8 (4 tri + 4 pent), |E|=28
+
+H=19: checking Ω structures (first 3 examples)...
+  bits=20: |Ω|=9 (5 tri + 4 pent), |E|=36
+  bits=26: |Ω|=9 (5 tri + 4 pent), |E|=36
+  bits=52: |Ω|=9 (5 tri + 4 pent), |E|=36
+
+H=21: absent from n=6 spectrum
+H=23: checking Ω structures (first 3 examples)...
+  bits=24: |Ω|=11 (6 tri + 5 pent), |E|=55
+  bits=28: |Ω|=11 (6 tri + 5 pent), |E|=55
+  bits=56: |Ω|=11 (6 tri + 5 pent), |E|=55
+
+H=25: checking Ω structures (first 3 examples)...
+  bits=89: |Ω|=12 (6 tri + 6 pent), |E|=66
+  bits=90: |Ω|=12 (6 tri + 6 pent), |E|=66
+  bits=92: |Ω|=12 (6 tri + 6 pent), |E|=66
+

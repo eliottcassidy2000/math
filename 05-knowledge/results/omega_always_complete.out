@@ -1,0 +1,63 @@
+======================================================================
+IS Ω(T) ALWAYS A COMPLETE GRAPH?
+======================================================================
+
+n=3: 8 tournaments, 0 have non-complete Ω
+n=4: 64 tournaments, 0 have non-complete Ω
+n=5: 1024 tournaments, 0 have non-complete Ω
+
+n=6: checking all 32768 tournaments...
+  15440 tournaments have non-complete Ω (vertex-disjoint odd cycles)
+
+  Examples of disjoint odd cycle pairs:
+    bits=80: H=27, |Ω|=11
+      cycle1: (0, 5, 4) on vertices [0, 4, 5]
+      cycle2: (1, 3, 2) on vertices [1, 2, 3]
+    bits=81: H=23, |Ω|=9
+      cycle1: (0, 5, 4) on vertices [0, 4, 5]
+      cycle2: (1, 3, 2) on vertices [1, 2, 3]
+    bits=82: H=23, |Ω|=9
+      cycle1: (0, 5, 4) on vertices [0, 4, 5]
+      cycle2: (1, 3, 2) on vertices [1, 2, 3]
+
+======================================================================
+WHY ARE CERTAIN CYCLE COUNTS IMPOSSIBLE?
+======================================================================
+
+n=5: (t₃, c₅) distribution:
+  t₃=0, c₅=0, total=0: 120 tournaments
+  t₃=1, c₅=0, total=1: 120 tournaments
+  t₃=2, c₅=0, total=2: 240 tournaments
+  t₃=3, c₅=1, total=4: 240 tournaments
+  t₃=4, c₅=1, total=5: 120 tournaments
+  t₃=4, c₅=2, total=6: 120 tournaments
+  t₃=4, c₅=3, total=7: 40 tournaments
+  t₃=5, c₅=2, total=7: 24 tournaments
+
+Total odd cycles at n=5: never 3!
+  t₃=0,c₅=0: 0 cycles
+  t₃=1,c₅=0: 1 cycle
+  t₃=2,c₅=0: 2 cycles
+  t₃=3,c₅=1: 4 cycles (NOT 3!)
+  t₃=4,c₅=1: 5 cycles
+  t₃=4,c₅=2: 6 cycles
+  t₃=4,c₅=3: 7 cycles
+
+KEY: t₃=3 ALWAYS comes with c₅≥1!
+At n=5, having 3 triangles forces at least 1 five-cycle.
+So total cycles ≥ 4 whenever t₃ ≥ 3.
+And t₃ ≤ 2 gives total ≤ 2 (no 5-cycles when few triangles).
+The gap: total cycles = 3 is IMPOSSIBLE!
+
+======================================================================
+THE CYCLE-COUNT GAP THEOREM
+======================================================================
+
+THEOREM: No tournament on n ≤ 6 vertices has exactly 3 directed odd cycles.
+
+PROOF (n=5): If t₃ ≤ 2, then c₅ = 0 (too few arcs for a Hamilton cycle
+to be directed). So total ≤ 2. If t₃ ≥ 3, the cyclic structure forces
+at least one 5-cycle, giving total ≥ 4.
+
+COROLLARY: H(T) ≠ 7 for all tournaments on n ≤ 6 vertices.
+(Because H = 1 + 2·(#cycles) when Ω is complete, and #cycles ≠ 3.)

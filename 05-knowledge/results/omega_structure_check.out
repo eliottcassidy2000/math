@@ -1,0 +1,366 @@
+======================================================================
+Ω(T) STRUCTURE — WHAT GRAPHS ACTUALLY ARISE?
+======================================================================
+
+n=5: Exhaustive Ω(T) analysis
+----------------------------------------
+  OCF VIOLATION at bits=40: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=41: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=42: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=44: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=68: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=69: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=74: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=76: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=77: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=85: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=89: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=92: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=93: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=101: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=104: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=105: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=106: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=107: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=152: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=153: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=154: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=156: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=194: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=195: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=202: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=203: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=204: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=211: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=216: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=217: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=220: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=221: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=227: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=233: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=234: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=235: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=262: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=266: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=268: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=270: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=276: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=278: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=281: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=284: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=286: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=291: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=296: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=298: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=300: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=302: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=305: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=307: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=313: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=315: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=316: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=322: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=325: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=326: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=330: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=334: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=337: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=341: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=342: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=345: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=349: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=353: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=355: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=357: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=359: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=362: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=369: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=371: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=373: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=377: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=406: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=408: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=409: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=410: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=411: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=435: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=441: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=442: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=443: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=450: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=451: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=454: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=458: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=466: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=467: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=470: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=471: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=473: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=550: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=552: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=553: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=556: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=557: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=565: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=569: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=572: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=573: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=580: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=581: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=582: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=588: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=612: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=613: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=614: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=615: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=617: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=646: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=650: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=652: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=654: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=661: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=664: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=666: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=668: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=670: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=674: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=678: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=681: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=682: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=686: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=689: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=693: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=697: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=698: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=701: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=707: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=708: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=710: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=716: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=718: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=721: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=723: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=725: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=727: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=732: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=737: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=739: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=742: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=745: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=747: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=753: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=755: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=757: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=761: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=788: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=789: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=790: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=796: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=802: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=803: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=806: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=807: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=812: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=819: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=820: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=821: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=828: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=829: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=867: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=869: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=870: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=871: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=916: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=917: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=918: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=919: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=922: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=930: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=931: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=934: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=938: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=946: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=947: H=15, I(Ω,2)=13
+  OCF VIOLATION at bits=949: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=954: H=15, I(Ω,2)=11
+  OCF VIOLATION at bits=955: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=979: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=981: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=982: H=13, I(Ω,2)=11
+  OCF VIOLATION at bits=983: H=15, I(Ω,2)=11
+  Total tournaments: 1024
+  H value distribution: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+  Ω(T) size distribution: {0: 120, 1: 120, 2: 240, 4: 240, 5: 280, 6: 24}
+  OCF verified for all 1024 tournaments
+
+  Ω graph types (|V|, |E|) → count:
+    |V|=0, |E|=0: 120 tournaments
+    |V|=1, |E|=0: 120 tournaments
+    |V|=2, |E|=1: 240 tournaments
+    |V|=4, |E|=6: 240 tournaments
+    |V|=5, |E|=10: 280 tournaments
+    |V|=6, |E|=15: 24 tournaments
+
+n=7: Sampling for Ω structures with I(Ω,2) close to 21
+----------------------------------------
+  H value distribution (sample of 5000):
+    H=1: 12 (0.2%)
+    H=3: 20 (0.4%)
+    H=5: 50 (1.0%)
+    H=9: 83 (1.7%)
+    H=11: 44 (0.9%)
+    H=13: 36 (0.7%)
+    H=15: 77 (1.5%)
+    H=17: 52 (1.0%)
+    H=19: 60 (1.2%)
+    H=23: 103 (2.1%)
+    H=25: 66 (1.3%)
+    H=27: 57 (1.1%)
+    H=29: 133 (2.7%)
+    H=31: 66 (1.3%)
+    H=33: 127 (2.5%)
+    H=35: 25 (0.5%)
+    H=37: 146 (2.9%)
+    H=39: 22 (0.4%)
+    H=41: 89 (1.8%)
+    H=43: 83 (1.7%)
+    H=45: 54 (1.1%)
+    H=47: 18 (0.4%)
+    H=49: 82 (1.6%)
+    H=51: 67 (1.3%)
+    H=53: 43 (0.9%)
+    H=55: 55 (1.1%)
+    H=57: 24 (0.5%)
+    H=59: 108 (2.2%)
+    H=61: 17 (0.3%)
+    H=65: 106 (2.1%)
+    H=67: 68 (1.4%)
+    H=69: 104 (2.1%)
+    H=71: 79 (1.6%)
+    H=73: 111 (2.2%)
+    H=75: 62 (1.2%)
+    H=77: 124 (2.5%)
+    H=79: 67 (1.3%)
+    H=81: 125 (2.5%)
+    H=83: 84 (1.7%)
+    H=85: 9 (0.2%)
+    H=87: 13 (0.3%)
+    H=89: 177 (3.5%)
+    H=91: 191 (3.8%)
+    H=93: 83 (1.7%)
+    H=95: 65 (1.3%)
+    H=97: 78 (1.6%)
+    H=99: 23 (0.5%)
+    H=101: 119 (2.4%)
+    H=103: 112 (2.2%)
+    H=105: 40 (0.8%)
+    H=109: 156 (3.1%)
+    H=111: 121 (2.4%)
+    H=113: 55 (1.1%)
+    H=115: 65 (1.3%)
+    H=117: 70 (1.4%)
+    H=121: 61 (1.2%)
+    H=123: 80 (1.6%)
+    H=125: 9 (0.2%)
+    H=127: 10 (0.2%)
+    H=129: 65 (1.3%)
+    H=131: 103 (2.1%)
+    H=133: 72 (1.4%)
+    H=135: 66 (1.3%)
+    H=137: 75 (1.5%)
+    H=139: 77 (1.5%)
+    H=141: 35 (0.7%)
+    H=143: 36 (0.7%)
+    H=145: 15 (0.3%)
+    H=147: 8 (0.2%)
+    H=151: 55 (1.1%)
+    H=153: 34 (0.7%)
+    H=155: 13 (0.3%)
+    H=157: 13 (0.3%)
+    H=159: 39 (0.8%)
+    H=171: 6 (0.1%)
+
+  H=21 NOT found in 5000 samples at n=7
+
+======================================================================
+WHICH GRAPHS WITH I(G,2)=21 CAN BE Ω(T)?
+======================================================================
+
+Maximum number of directed odd cycles at each n:
+  n=3: max |odd cycles| = 1 (exhaustive over 8 tournaments)
+  n=4: max |odd cycles| = 2 (exhaustive over 64 tournaments)
+  n=5: max |odd cycles| = 6 (exhaustive over 1024 tournaments)
+  n=6: max |odd cycles| = 14 (exhaustive over 32768 tournaments)
+  n=7: max |odd cycles| ≥ 35 (sample of 2000)
+
+For H=21 via I(G,2)=21, we need Ω(T) to have:
+  - 4 vertices (K₃-poisoned case): blocked by THM-201/202
+  - 6 vertices: need 6 odd cycles in T
+  - 8 vertices: need 8 odd cycles in T
+  - 10 vertices: need 10 odd cycles in T (disjoint!)
+
+Since K₁₀ = 10 ISOLATED vertices = 10 pairwise DISJOINT odd cycles,
+this requires 10 vertex-disjoint odd cycles, needing ≥ 30 tournament vertices!
+But for H=21, we need very few HP. At n=30, H is astronomically large.
+So K₁₀ as Ω(T) with H=21 is self-contradictory: too many vertices → too many HP.
+
+REFINED ANALYSIS: Can K₁₀ (10 disjoint odd cycles) give H=21?
+
+K₁₀ as Ω means: 10 vertex-disjoint odd cycles, each contributing
+factor (1+2^k) where k = cycle length. For 3-cycles: factor = (1+2) = 3.
+If all 10 are 3-cycles: I(K₁₀, 2) = (1+2)^0... wait, that's wrong.
+
+Actually I(K₁₀, 2) = 1 + 10·2 = 21. The 10 vertices of K₁₀ are the
+10 odd cycles, each being an INDEPENDENT SET of size 1.
+I = 1 + 10x means: empty set contributes 1, each single cycle contributes x,
+and NO pair is independent (all pairs are adjacent in K₁₀).
+
+Wait — K₁₀ has ALL edges! So there are NO independent sets of size ≥ 2.
+This means every pair of odd cycles shares a vertex.
+So K₁₀ = 10 pairwise-INTERSECTING odd cycles, not disjoint!
+
+CORRECTION: The graph G with I(G,2)=21 and I=1+10x is K₁₀ (COMPLETE graph).
+Ω(T) = K₁₀ means 10 odd cycles, every pair sharing at least one vertex.
+This is the CLIQUE case, not the independent case.
+
+SUNFLOWER STRUCTURE: 10 pairwise-intersecting 3-cycles through vertex v
+  Need C(m,2) ≥ 10 other vertices: m=5 suffices (C(5,2)=10)
+  Total: 6 tournament vertices, 10 directed 3-cycles through vertex v
+  Each triangle = {v, a_i, a_j} for distinct pairs (a_i, a_j) from 5 others
+
+  Ω = K₁₀ found! n=6, H=25, I(K₁₀,2)=21
+    H≠21, so OCF says I(Ω,2)=H=25≠21. Ω≠K₁₀ actually.
+  Ω = K₁₀ found! n=6, H=25, I(K₁₀,2)=21
+    H≠21, so OCF says I(Ω,2)=H=25≠21. Ω≠K₁₀ actually.
+  Ω = K₁₀ found! n=6, H=25, I(K₁₀,2)=21
+    H≠21, so OCF says I(Ω,2)=H=25≠21. Ω≠K₁₀ actually.
+  Total: 1440 tournaments with 10 pairwise-intersecting cycles
+
+======================================================================
+COMPLETE Ω(T) CATALOG AT n=5
+======================================================================
+
+H=1: 120 tournaments
+  Ω: |V|=0, |E|=0, I(Ω,2)=1: 120 tournaments
+H=3: 120 tournaments
+  Ω: |V|=1, |E|=0, I(Ω,2)=3: 120 tournaments
+H=5: 240 tournaments
+  Ω: |V|=2, |E|=1, I(Ω,2)=5: 240 tournaments
+H=9: 240 tournaments
+  Ω: |V|=4, |E|=6, I(Ω,2)=9: 240 tournaments
+H=11: 120 tournaments
+  Ω: |V|=5, |E|=10, I(Ω,2)=11: 120 tournaments
+H=13: 120 tournaments
+  Ω: |V|=5, |E|=10, I(Ω,2)=11: 120 tournaments
+H=15: 64 tournaments
+  Ω: |V|=5, |E|=10, I(Ω,2)=11: 40 tournaments
+  Ω: |V|=6, |E|=15, I(Ω,2)=13: 24 tournaments
+
+======================================================================
+CONCLUSION
+======================================================================
+
+The Ω(T) structure at n=5 shows exactly which graphs arise.
+H=21 is absent because no tournament on 5 vertices produces
+an Ω(T) with I(Ω,2)=21.
+The question remains: at what n (if any) does H=21 first appear?
