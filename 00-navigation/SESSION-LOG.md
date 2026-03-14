@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S85 — 2026-03-14: Deep exploration — Lucas/Jacobsthal, quantum entanglement, forbidden H, fingerprinting
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S84 (overnight continuation)
+**What was done:**
+Extended overnight exploration across 10+ creative mathematical domains. Major crown jewels:
+
+- **I(C_k, 2) = 2^k + (-1)^k (PROVED)**: Independence polynomial of cycle at x=2 follows Lucas sequence for char eq t²-t-2=0. Jacobsthal connection.
+- **I(P_k, 2) = (2^{k+2} - (-1)^k)/3 (PROVED)**: Path independence polynomial at x=2 follows Jacobsthal-like recurrence a(k) = a(k-1) + 2·a(k-2).
+- **Forbidden H = {7, 21, 63} at n≤7**: Exhaustive enumeration of all 2M tournaments at n=7. 7=I(K₃,2), mechanism: K₃ impossible as Ω component (THM-201).
+- **perm²(A) = det²(A) for n≤5**: Square of permanent equals square of determinant for all tournaments on ≤5 vertices. Breaks at n=6.
+- **Corr(H, von Neumann entropy) = 0.996**: Tournament quantum state entanglement nearly perfectly predicts H. More paths = more entanglement.
+- **Corr(H, Wiener index) = -0.96**: More Hamilton paths ↔ shorter average distances.
+- **Diameter 2 ⟺ max H at n=5**: Perfect equivalence.
+- **H values closed under GCD at n=5,6**: The achievable H set forms a GCD-closed set.
+- **H mod 7 = 0 impossible for n≤6**: First 7|H at n=7. Connected to forbidden H=7.
+- **Char polynomial determines H at n=5**: Zero ambiguity — spectral invariants fully determine H.
+- **Pfaffian² at n=6 = {1,9,25,49,81}**: Consecutive odd squares, confirmed again.
+- **Tournament fingerprint**: (score, c3, H) captures 71% of iso classes at n=6. Fast fingerprint (O(n³)) gives 100% unique at n≥50.
+- **GCD of F_n coefficients**: GCD(a_5(h)) = 8, GCD(a_6(h)) = 16.
+- **H(T_p) arithmetic**: Verified p|H(T_p) for p=3,7,11,19,23. H(T_23) = 15.76Q.
+
+**New contributions:** HYP-1273 through HYP-1287 (15 new hypotheses)
+**Scripts created:** forbidden_H_23.py, independence_closed_form_23.py, analytic_number_theory_23.py, tropical_quantum_23.py, perm_det_23.py, tournament_fingerprint_23.py, catalan_motzkin_23.py (plus maxH_exact_23.py, free_probability_23.py, stat_mech_23.py, tournament_polytope_23.py from earlier in session)
+**Unresolved threads:** Prove H=21 impossible for all n. Fix H=I(Ω,2) verification (cycle enumeration). Extend perm²=det² to general n. Prove char poly → H at general n. Engineering: build tournament_fingerprint library.
+
 ## opus-2026-03-14-S84 — 2026-03-14: Massive overnight (2,3) exploration — 30+ scripts, 17 new hypotheses
 
 **Account:** opus
