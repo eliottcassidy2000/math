@@ -1,0 +1,55 @@
+  Progress: 0/32768 (0.0%)
+  Progress: 5000/32768 (15.3%)
+  Progress: 10000/32768 (30.5%)
+  Progress: 15000/32768 (45.8%)
+  Progress: 20000/32768 (61.0%)
+  Progress: 25000/32768 (76.3%)
+  Progress: 30000/32768 (91.6%)
+Exhaustive n=6 H computation: 32768 tournaments, 15 arcs
+This may take a few minutes...
+
+============================================================
+EXHAUSTIVE n=6 RESULTS
+============================================================
+
+Total tournaments: 32768 (should be 32768)
+Max H = 45
+Distinct H values: 19
+Achievable H: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+Missing odd values: [7, 21, 35, 39]
+
+H distribution:
+  H=  1:   720 tournaments (0.021973)
+  H=  3:   960 tournaments (0.029297)
+  H=  5:  2160 tournaments (0.065918)
+  H=  9:  2960 tournaments (0.090332)
+  H= 11:  1440 tournaments (0.043945)
+  H= 13:  1440 tournaments (0.043945)
+  H= 15:  2208 tournaments (0.067383)
+  H= 17:  1440 tournaments (0.043945)
+  H= 19:  1440 tournaments (0.043945)
+  H= 23:  2880 tournaments (0.087891)
+  H= 25:  1440 tournaments (0.043945)
+  H= 27:   480 tournaments (0.014648)
+  H= 29:  2880 tournaments (0.087891)
+  H= 31:  1440 tournaments (0.043945)
+  H= 33:  2640 tournaments (0.080566)
+  H= 37:  3600 tournaments (0.109863)
+  H= 41:   720 tournaments (0.021973)
+  H= 43:  1440 tournaments (0.043945)
+  H= 45:   480 tournaments (0.014648)
+
+Mean(H) = 22.500000 (expected n!/2^(n-1) = 22.500000)
+Var(H) = 146.250000
+Var/Mean^2 = 0.2888888889
+
+Gap analysis:
+  H=7: factors=[7], h mod 6 = 1, h mod 8 = 7
+  H=21: factors=[3, 7], h mod 6 = 3, h mod 8 = 5
+  H=35: factors=[5, 7], h mod 6 = 5, h mod 8 = 3
+  H=39: factors=[3, 13], h mod 6 = 3, h mod 8 = 7
+
+Multiples of 7 analysis:
+  7*1 = 7: MISSING
+  7*3 = 21: MISSING
+  7*5 = 35: MISSING
