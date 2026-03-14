@@ -1,0 +1,255 @@
+======================================================================
+H ≈ 6·t3 + INTERCEPT — THE LINEAR H-TRIANGLE FORMULA
+opus-2026-03-14-S89b
+======================================================================
+
+======================================================================
+PART 1: EXACT REGRESSION H = a + b·t3
+======================================================================
+
+  n=3:
+    Slope b = 2 = 2.000000
+    Intercept a = 1 = 1.000000
+    R² = 1 = 1.000000
+    Mean(t3) = 1/4 = 0.2500
+    Mean(H) = 3/2 = 1.5000
+    *** SLOPE IS EXACTLY 2 ***
+    *** H = a + b·t3 EXACTLY (zero residuals) ***
+
+  n=4:
+    Slope b = 2 = 2.000000
+    Intercept a = 1 = 1.000000
+    R² = 1 = 1.000000
+    Mean(t3) = 1 = 1.0000
+    Mean(H) = 3 = 3.0000
+    *** SLOPE IS EXACTLY 2 ***
+    *** H = a + b·t3 EXACTLY (zero residuals) ***
+
+  n=5:
+    Slope b = 3 = 3.000000
+    Intercept a = 0 = 0.000000
+    R² = 18/19 = 0.947368
+    Mean(t3) = 5/2 = 2.5000
+    Mean(H) = 15/2 = 7.5000
+    Slope in simplest form: 3
+    t3=4: residuals = [-1.0, 1.0, 3.0]... (3 distinct)
+
+  n=6:
+    Slope b = 6 = 6.000000
+    Intercept a = -15/2 = -7.500000
+    R² = 12/13 = 0.923077
+    Mean(t3) = 5 = 5.0000
+    Mean(H) = 45/2 = 22.5000
+    *** SLOPE IS EXACTLY 6 ***
+    t3=2: residuals = [0.5, 4.5]... (2 distinct)
+    t3=4: residuals = [-5.5, -3.5, -1.5, 0.5]... (4 distinct)
+    t3=5: residuals = [-7.5, -3.5, 0.5, 4.5]... (4 distinct)
+    t3=6: residuals = [-5.5, -3.5, 0.5, 2.5, 4.5]... (6 distinct)
+    t3=7: residuals = [-1.5, 2.5]... (2 distinct)
+    t3=8: residuals = [0.5, 2.5, 4.5]... (3 distinct)
+
+======================================================================
+PART 2: THE SLOPE PATTERN
+======================================================================
+
+  Observed slopes:
+    n=3: b = 2
+    n=4: b = 2
+    n=5: b = ?
+    n=6: b = 6
+
+  The slope b = Cov(H, t3) / Var(t3).
+
+  For n=3: t3 ∈ {0, 1}, H ∈ {1, 3}
+    Perfectly correlated: H = 1 + 2·t3 exactly.
+
+  For n=4: t3 ∈ {0, 1, 2}, H ∈ {1, 3, 5}
+    Still perfect: H = 1 + 2·t3 exactly.
+
+  For n=5: t3 determines H for t3 ≤ 3 but NOT for t3=4.
+    The regression is no longer exact.
+
+  Mean(H) = n!/2^{n-1}. Mean(t3) = C(n,3)/4.
+  The ratio: Mean(H)/Mean(t3) = n!/(2^{n-1} · C(n,3)/4)
+                                = 4n!/(2^{n-1} · C(n,3))
+                                = 4·6·(n-3)!/(2^{n-1})
+                                = 24·(n-3)!/2^{n-1}
+
+  n=3: Mean(H)/Mean(t3) = 6 = 6.0000
+  n=4: Mean(H)/Mean(t3) = 3 = 3.0000
+  n=5: Mean(H)/Mean(t3) = 3 = 3.0000
+  n=6: Mean(H)/Mean(t3) = 9/2 = 4.5000
+  n=7: Mean(H)/Mean(t3) = 9 = 9.0000
+  n=8: Mean(H)/Mean(t3) = 45/2 = 22.5000
+  n=9: Mean(H)/Mean(t3) = 135/2 = 67.5000
+
+======================================================================
+PART 3: TRANSITIVE FLIP GRAPH = PERMUTOHEDRON
+======================================================================
+
+  THEOREM: The subgraph of Q_m induced on transitive tournaments
+  is isomorphic to the permutohedron Π_n.
+
+  PROOF SKETCH:
+  1. Each transitive tournament T corresponds to a unique
+     total ordering σ of the vertices: σ(1) beats σ(2) beats ... beats σ(n).
+     This is a permutation σ ∈ S_n.
+
+  2. Flipping arc (i,j) in T_σ changes the order of i and j.
+     If i and j are ADJACENT in σ (σ^{-1}(i) = σ^{-1}(j) ± 1),
+     then the result is another transitive tournament T_τ
+     where τ is obtained by swapping i and j in σ.
+
+  3. If i and j are NOT adjacent in σ, flipping (i,j) creates
+     a 3-CYCLE (with the vertex between them in the ordering).
+     So the result is NOT transitive.
+
+  4. Therefore: T_σ and T_τ are one-flip-apart transitive iff
+     σ and τ differ by an adjacent transposition.
+
+  5. This is EXACTLY the definition of the permutohedron!
+     The Cayley graph of S_n with generators {s_1, ..., s_{n-1}}
+     where s_i = (i, i+1).
+
+  COROLLARY: The transitive flip graph is (n-1)-regular.
+  (Each permutation has n-1 adjacent transpositions.)
+
+  The permutohedron has:
+  - n! vertices
+  - n!·(n-1)/2 edges
+  - Diameter = C(n,2) = m (the maximum: reverse the ordering)
+
+  n=3: #trans=6, #edges=6, diameter=3 (expected C(3,2)=3)
+  n=4: #trans=24, #edges=36, diameter=6 (expected C(4,2)=6)
+  n=5: #trans=120, #edges=240, diameter=10 (expected C(5,2)=10)
+  n=6: #trans=720, #edges=1800, diameter=15 (expected C(6,2)=15)
+
+======================================================================
+PART 4: H IS CONSTANT (=1) ON THE PERMUTOHEDRON
+======================================================================
+
+  Since all transitive tournaments have H = 1 (exactly one
+  Hamiltonian path: the score ordering itself), H is CONSTANT
+  on the permutohedron.
+
+  This makes H a "distance function" FROM the permutohedron:
+  H(T) = 1 iff T is transitive iff T is ON the permutohedron.
+
+  The LEVEL SETS of H:
+  - Level 1 = the permutohedron (n! vertices)
+  - Level 3 = tournaments one "step above" in H
+  - Level max = the "center" of the hypercube (most 3-cycles)
+
+  This is a STRATIFICATION of Q_m by concentric "shells" around
+  the permutohedron, where each shell has higher H.
+
+  The permutohedron is the "equator" of a higher-dimensional
+  analog of the sphere, with H playing the role of latitude.
+
+
+======================================================================
+PART 5: WHY H = 1 + 2·t3 IS EXACT FOR n ≤ 4
+======================================================================
+
+  For n ≤ 4, the 3-cycle count t3 COMPLETELY determines H.
+
+  WHY? At n=3: there is only one triangle {0,1,2}.
+  Either it's a 3-cycle (t3=1, H=3) or not (t3=0, H=1).
+  H = 1 + 2·t3 exactly.
+
+  At n=4: there are C(4,3) = 4 triangles.
+  The possible t3 values are 0, 1, 2.
+  (t3=3 is impossible at n=4! Because 3 overlapping 3-cycles
+   on 4 vertices force the fourth triangle to also be a 3-cycle.)
+  Wait, let me check: can t3=3 at n=4?
+
+  n=4: t3 → H mapping:
+    t3=0: H = [1]
+    t3=1: H = [3]
+    t3=2: H = [5]
+
+  So at n=4: t3 ∈ {0, 1, 2} and H = 1 + 2·t3 exactly.
+  t3 cannot be 3 at n=4 (one can verify: having 3 out of 4
+  triangles as 3-cycles forces the fourth to also be a 3-cycle,
+  giving t3=4, which is the regular tournament — but wait,
+  n=4 has C(4,3)=4 triangles).
+
+  Checking: t3 values that occur at n=4:
+    t3=0: 24 tournaments
+    t3=1: 16 tournaments
+    t3=2: 24 tournaments
+
+======================================================================
+PART 6: WHAT ADDITIONAL INVARIANT IS NEEDED FOR n ≥ 5?
+======================================================================
+
+  n=5, t3=4: 280 tournaments
+    Scores (1, 2, 2, 2, 3): H distribution = {11: 120, 13: 120, 15: 40}
+
+  Checking 5-cycle counts for t3=4 tournaments:
+    t5=1: {11: 120}
+    t5=2: {13: 120}
+    t5=3: {15: 40}
+
+======================================================================
+PART 7: THE RESIDUAL ε(T) = H - 1 - 2t3
+======================================================================
+
+  n=3: Residual ε = H - 1 - 2t3:
+    ε=  0:     8 tournaments (1.0000)
+    Range: [0, 0], Mean(ε) = 0.0000
+    ε = 0: 8/8 (1.0000)
+
+  n=4: Residual ε = H - 1 - 2t3:
+    ε=  0:    64 tournaments (1.0000)
+    Range: [0, 0], Mean(ε) = 0.0000
+    ε = 0: 64/64 (1.0000)
+
+  n=5: Residual ε = H - 1 - 2t3:
+    ε=  0:   480 tournaments (0.4688)
+    ε=  2:   360 tournaments (0.3516)
+    ε=  4:   144 tournaments (0.1406)
+    ε=  6:    40 tournaments (0.0391)
+    Range: [0, 6], Mean(ε) = 1.5000
+    ε = 0: 480/1024 (0.4688)
+
+  n=6: Residual ε = H - 1 - 2t3:
+    ε=  0:  3840 tournaments (0.1172)
+    ε=  2:  4320 tournaments (0.1318)
+    ε=  4:  1808 tournaments (0.0552)
+    ε=  6:  1920 tournaments (0.0586)
+    ε=  8:  2880 tournaments (0.0879)
+    ε= 10:  1440 tournaments (0.0439)
+    ε= 12:  2880 tournaments (0.0879)
+    ε= 16:  3360 tournaments (0.1025)
+    ε= 18:  3360 tournaments (0.1025)
+    ε= 20:   720 tournaments (0.0220)
+    ε= 22:  2880 tournaments (0.0879)
+    ε= 24:  1440 tournaments (0.0439)
+    ε= 26:  1440 tournaments (0.0439)
+    ε= 28:   480 tournaments (0.0146)
+    Range: [0, 28], Mean(ε) = 11.5000
+    ε = 0: 3840/32768 (0.1172)
+
+======================================================================
+PART 8: ε AS A FUNCTION OF HIGHER CYCLE COUNTS
+======================================================================
+
+  n=6: Grouping by (t3, score_sequence) → H:
+    t3=4, scores=(0, 2, 3, 3, 3, 4): H={11: 720, 13: 720, 15: 240}
+    t3=4, scores=(1, 1, 2, 3, 4, 4): H={15: 1440, 17: 1440}
+    t3=4, scores=(1, 2, 2, 2, 3, 5): H={11: 720, 13: 720, 15: 240}
+    t3=5, scores=(1, 1, 3, 3, 3, 4): H={19: 720, 23: 720, 27: 240}
+    t3=5, scores=(1, 2, 2, 2, 4, 4): H={19: 720, 23: 720, 27: 240}
+    t3=6, scores=(1, 2, 2, 3, 3, 4): H={23: 1440, 25: 1440, 29: 2880, 31: 1440, 33: 720, 37: 720}
+    t3=7, scores=(1, 2, 3, 3, 3, 3): H={33: 960, 37: 1440}
+    t3=7, scores=(2, 2, 2, 2, 3, 4): H={33: 960, 37: 1440}
+    t3=8, scores=(2, 2, 2, 3, 3, 3): H={41: 720, 43: 1440, 45: 480}
+
+  Total groups: 22
+  Non-determined (multiple H values): 9
+  Fraction determined: 0.5909
+
+======================================================================
+DONE — H ≈ 6·t3 REGRESSION AND PERMUTOHEDRON
+======================================================================
