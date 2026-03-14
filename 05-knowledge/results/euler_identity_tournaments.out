@@ -1,0 +1,156 @@
+======================================================================
+THE IMAGINARY UNIT i IN TOURNAMENT THEORY
+kind-pasteur-2026-03-14-S96
+======================================================================
+
+======================================================================
+PART 1: EULER'S IDENTITY e^{{i*pi}} + 1 = 0
+======================================================================
+
+  Euler: e^(i*pi) = -1
+  So: e^(i*pi) + 1 = 0
+
+  THE FIVE CONSTANTS AND THEIR TOURNAMENT ROLES:
+    0 = H(empty tournament) = the zero element
+    1 = H(transitive) = the unit / identity
+    e = max_H/mean_H limit = the efficiency
+    pi = normalization in sqrt(2*pi*n) = the geometry
+    i = sqrt(-1) = the ROTATION / PHASE
+
+  But tournaments also have a SIXTH fundamental constant:
+    2 = OCF fugacity = the binary choice
+
+  TOURNAMENT EULER IDENTITY?
+  e^(i*pi) = -1 relates e, pi, i
+  H = I(Omega, 2) relates H, Omega, 2
+  Can we find: f(e, pi, i, 2) = H for some f?
+
+  F(T, e^{i*pi}) = F(T, -1) = signed Ham path count
+  F(T, -1) is always ODD (proved)
+  So: Euler's e^{i*pi} = -1 applied to F gives the SIGNED count.
+
+  At theta = pi/2: F(T, i) = sum e^{i*pi*fwd/2}
+  = sum i^{fwd} = sum over paths: i^{fwd(P)}
+  This decomposes paths by fwd mod 4:
+    fwd ≡ 0 (mod 4): contributes +1 (real)
+    fwd ≡ 1 (mod 4): contributes +i (imaginary)
+    fwd ≡ 2 (mod 4): contributes -1 (real)
+    fwd ≡ 3 (mod 4): contributes -i (imaginary)
+
+======================================================================
+PART 2: F(T, i) — EVALUATING AT THE IMAGINARY UNIT
+======================================================================
+
+  n=5: Mean F(T, i) over all tournaments = -4.0000 + 0.0000i
+  |Mean F(T, i)| = 4.0000
+  Purely real? True
+  Purely imaginary? False
+
+  Sum F(T, i) over all 1024 tournaments = -4096.0000 + 0.0000i
+  = -4096 + 0i (should be integers!)
+
+  Each permutation appears in 2^{m-(n-1)} = 2^6 = 64 tournaments
+  Sum F(T, i) = 64 * sum_P i^{fwd(P)} = 64 * F(complete_graph, i)
+
+  Eulerian polynomial A_5(i) = -64 + 0i
+  Predicted: Sum F(T,i) = 64 * A_5(i) = -4096 + 0i
+  Actual: -4096 + 0i
+  Match: True
+
+======================================================================
+PART 3: EULERIAN POLYNOMIAL AT ROOTS OF UNITY
+======================================================================
+
+  n=2: Eulerian numbers A(2,k) = [1, 1]
+    A(2, 1) = 2 = 2!
+    A(2, -1) = 0
+    A(2, i) = 1 + 1i, |A| = 1.4142
+    A(2, omega_3) = 0.50 + 0.87i, |A| = 1.0000
+
+  n=3: Eulerian numbers A(3,k) = [1, 4, 1]
+    A(3, 1) = 6 = 3!
+    A(3, -1) = -2
+    A(3, i) = 0 + 4i, |A| = 4.0000
+    A(3, omega_3) = -1.50 + 2.60i, |A| = 3.0000
+
+  n=4: Eulerian numbers A(4,k) = [1, 11, 11, 1]
+    A(4, 1) = 24 = 4!
+    A(4, -1) = 0
+    A(4, i) = -10 + 10i, |A| = 14.1421
+    A(4, omega_3) = -9.00 + 0.00i, |A| = 9.0000
+
+  n=5: Eulerian numbers A(5,k) = [1, 26, 66, 26, 1]
+    A(5, 1) = 120 = 5!
+    A(5, -1) = 16
+    A(5, i) = -64 + 0i, |A| = 64.0000
+    A(5, omega_3) = -19.50 + -33.77i, |A| = 39.0000
+
+  n=6: Eulerian numbers A(6,k) = [1, 57, 302, 302, 57, 1]
+    A(6, 1) = 720 = 6!
+    A(6, -1) = 0
+    A(6, i) = -244 + -244i, |A| = 345.0681
+    A(6, omega_3) = 94.50 + -163.68i, |A| = 189.0000
+
+  n=7: Eulerian numbers A(7,k) = [1, 120, 1191, 2416, 1191, 120, 1]
+    A(7, 1) = 5040 = 7!
+    A(7, -1) = -272
+    A(7, i) = 0 + -2176i, |A| = 2176.0000
+    A(7, omega_3) = 1107.00 + -0.00i, |A| = 1107.0000
+
+======================================================================
+PART 4: i AND THE PALEY EIGENVALUES
+======================================================================
+
+  Paley T_3:
+    mu = -0.5000 + 0.8660i
+    = 1.0000 * e^(i * 2.0944)
+    = 1.0000 * e^(i * 0.6667 * pi)
+    |mu|^2 = (p+1)/4 = 1.0
+
+  Paley T_7:
+    mu = -0.5000 + 1.3229i
+    = 1.4142 * e^(i * 1.9322)
+    = 1.4142 * e^(i * 0.6150 * pi)
+    |mu|^2 = (p+1)/4 = 2.0
+
+  Paley T_11:
+    mu = -0.5000 + 1.6583i
+    = 1.7321 * e^(i * 1.8636)
+    = 1.7321 * e^(i * 0.5932 * pi)
+    |mu|^2 = (p+1)/4 = 3.0
+
+  Paley T_19:
+    mu = -0.5000 + 2.1794i
+    = 2.2361 * e^(i * 1.7963)
+    = 2.2361 * e^(i * 0.5718 * pi)
+    |mu|^2 = (p+1)/4 = 5.0
+
+  Paley T_23:
+    mu = -0.5000 + 2.3979i
+    = 2.4495 * e^(i * 1.7764)
+    = 2.4495 * e^(i * 0.5654 * pi)
+    |mu|^2 = (p+1)/4 = 6.0
+
+  THE PALEY EIGENVALUE MODULUS PROGRESSION:
+    p=3: |mu| = sqrt(1) = 1
+    p=7: |mu| = sqrt(2) = 1.414214
+    p=11: |mu| = sqrt(3) = 1.732051
+    p=19: |mu| = sqrt(5) = 2.236068
+    p=23: |mu| = sqrt(6) = 2.449490
+
+  (p+1)/4: 1, 2, 3, 5, 6 for p = 3, 7, 11, 19, 23
+  These are the FIRST FEW non-square integers!
+  The Paley eigenvalue modulus walks through sqrt(1), sqrt(2), sqrt(3), sqrt(5), sqrt(6)
+  SKIPPING sqrt(4) = 2 because p=15 is not prime!
+
+======================================================================
+PART 5: e^{{i*theta}} AS TOURNAMENT ROTATION
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\euler_identity_tournaments.py", line 463, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\euler_identity_tournaments.py", line 282, in main
+    with COMPLEX amplitudes e^(i*theta*x_{ij}) per arc.
+                                          ^^
+NameError: name 'ij' is not defined. Did you mean: 'ii'?
