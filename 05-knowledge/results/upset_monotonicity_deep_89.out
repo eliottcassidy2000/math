@@ -1,0 +1,191 @@
+======================================================================
+UPSET MONOTONICITY: DEEP STRUCTURE
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: HOW MUCH DOES H DECREASE WHEN FLIPPING AN UPSET ARC?
+======================================================================
+
+  n=3: dH for upset flips (grouped by score difference):
+
+  n=4: dH for upset flips (grouped by score difference):
+    Score diff 1: count=24, avg dH=4.00, min=4, max=4, all positive? True
+
+  n=5: dH for upset flips (grouped by score difference):
+    Score diff 1: count=960, avg dH=6.00, min=4, max=8, all positive? True
+    Score diff 2: count=160, avg dH=9.00, min=8, max=12, all positive? True
+
+  n=6: dH for upset flips (grouped by score difference):
+    Score diff 1: count=53760, avg dH=12.00, min=4, max=20, all positive? True
+    Score diff 2: count=15360, avg dH=18.00, min=8, max=26, all positive? True
+    Score diff 3: count=1920, avg dH=24.00, min=16, max=32, all positive? True
+
+======================================================================
+PART 2: PATH COUNTING — PATHS THROUGH THE FLIPPED ARC
+======================================================================
+
+  When we flip arc i->j to j->i:
+  dH = H(T) - H(T^{ij})
+     = (# paths using i->j in T) - (# paths using j->i in T^{ij})
+
+  Because paths NOT using the arc i->j (or j->i) are the same in both.
+
+  So: dH = #{paths through i->j in T} - #{paths through j->i in T^{ij}}
+
+  Now, #{paths through a->b} = #{(A,B) : A ends at a, B starts at b,
+  A union B = V\{a,b}, A cap B = empty}
+
+  Let P(a, S) = # Hamiltonian paths on S ending at a (in the induced sub-T on S cup {a}).
+  Let Q(b, S) = # Hamiltonian paths on S starting at b.
+
+  Then #{paths through a->b} = sum over partitions (A,B) of V\{a,b}
+  of P(a, A) * Q(b, B).
+
+  This is a CONVOLUTION: the product of two partition functions.
+
+
+  T=000010, H=3, scores=[1, 1, 1, 3]
+    Arc 1->0: 2/3 paths through it, scores (1,1)
+    Arc 0->2: 2/3 paths through it, scores (1,1)
+    Arc 3->0: 1/3 paths through it, scores (3,1)
+    Arc 2->1: 2/3 paths through it, scores (1,1)
+    Arc 3->1: 1/3 paths through it, scores (3,1)
+    Arc 3->2: 1/3 paths through it, scores (3,1)
+
+  T=000101, H=3, scores=[2, 0, 2, 2]
+    Arc 0->1: 1/3 paths through it, scores (2,0)
+    Arc 2->0: 2/3 paths through it, scores (2,2)
+    Arc 0->3: 2/3 paths through it, scores (2,2)
+    Arc 2->1: 1/3 paths through it, scores (2,0)
+    Arc 3->1: 1/3 paths through it, scores (2,0)
+    Arc 3->2: 2/3 paths through it, scores (2,2)
+
+======================================================================
+PART 3: H AS A PERMANENT AND dH AS A MINOR DIFFERENCE
+======================================================================
+
+  H(T) = permanent of a specific matrix derived from T.
+
+  The adjacency matrix A has A[i,j] = 1 if i->j, 0 otherwise.
+  The "path matrix" P has P[i,j] = A[i,j] for consecutive positions.
+
+  More precisely, H = sum over permutations sigma of
+  prod_{k=1}^{n-1} A[sigma(k), sigma(k+1)].
+
+  This is NOT the standard permanent (which would be
+  sum prod A[i, sigma(i)]), but a "path permanent."
+
+  The path permanent is the permanent of the (n-1) x (n-1) matrix
+  M where M[k, (i,j)] = [sigma assigns (i,j) to step k].
+
+  Actually, H = sum_{sigma in S_n} prod_{k=0}^{n-2} A[sigma(k), sigma(k+1)]
+
+  When we flip arc i->j, we change A[i,j] from 1 to 0 and A[j,i] from 0 to 1.
+
+  dH = H(T) - H(T^{ij})
+     = sum_sigma (prod_k A[sigma(k),sigma(k+1)] - prod_k A'[sigma(k),sigma(k+1)])
+  where A' is the flipped matrix.
+
+  A path sigma contributes to dH iff it uses the arc (i,j) in T
+  or the arc (j,i) in T'. Paths using neither contribute 0.
+
+  So dH = (# paths using i->j in T) - (# paths using j->i in T')
+
+
+======================================================================
+PART 4: SCORE-BASED BOUND ON PATH COUNTS THROUGH AN ARC
+======================================================================
+
+  n=3: Score-product heuristic predicts dH sign correctly:
+    No upset arcs at this n (all non-transitive have equal scores)
+
+  n=4: Score-product heuristic predicts dH sign correctly:
+    Correct: 24/24 (1.0000)
+    Wrong: 0/24
+
+  n=5: Score-product heuristic predicts dH sign correctly:
+    Correct: 1120/1120 (1.0000)
+    Wrong: 0/1120
+
+  n=6: Score-product heuristic predicts dH sign correctly:
+    Correct: 71040/71040 (1.0000)
+    Wrong: 0/71040
+
+======================================================================
+PART 5: GREEDY DESCENT — ALWAYS FLIP BIGGEST UPSET
+======================================================================
+
+  n=3: Steps to reach transitive via greedy upset-flip:
+    Max steps: 0
+    0 steps: 8 tournaments (1.0000)
+
+  n=4: Steps to reach transitive via greedy upset-flip:
+    Max steps: 1
+    0 steps: 40 tournaments (0.6250)
+    1 steps: 24 tournaments (0.3750)
+
+  n=5: Steps to reach transitive via greedy upset-flip:
+    Max steps: 2
+    0 steps: 264 tournaments (0.2578)
+    1 steps: 520 tournaments (0.5078)
+    2 steps: 240 tournaments (0.2344)
+
+  n=6: Steps to reach transitive via greedy upset-flip:
+    Max steps: 4
+    0 steps: 2048 tournaments (0.0625)
+    1 steps: 8820 tournaments (0.2692)
+    2 steps: 13284 tournaments (0.4054)
+    3 steps: 7560 tournaments (0.2307)
+    4 steps: 1056 tournaments (0.0322)
+
+======================================================================
+PART 6: THE BUBBLESORT CONNECTION
+======================================================================
+
+  INSIGHT: Flipping upset arcs in a tournament is EXACTLY like
+  performing bubble sort on the score sequence!
+
+  In bubble sort: if element i > element j and i is before j,
+  swap them. Each swap reduces the number of inversions by 1.
+
+  In tournament: if score(i) < score(j) but i beats j,
+  flip the arc. Each flip makes the tournament "more transitive."
+
+  The number of upset arcs = number of inversions in the score sequence.
+  (Not exactly, because the score sequence can have ties. But for
+  tournaments with distinct scores, this is exact.)
+
+  The MAXIMUM number of steps = maximum number of inversions
+  = C(n,2) for a "reverse-sorted" tournament.
+  But can a tournament have ALL arcs as upsets? Only if every arc
+  goes from low-score to high-score, which is... the transitive tournament
+  in REVERSE order? But the reverse of a transitive tournament IS transitive
+  (on the reverse ordering). So a tournament can't have all arcs as upsets.
+
+  Actually: the maximum number of inversions in a tournament's score
+  sequence is C(n,2)/2 or so (half the arcs).
+
+
+  n=3: Distribution of upset arc count:
+    0 upsets: 8 tournaments (1.0000)
+
+  n=4: Distribution of upset arc count:
+    0 upsets: 40 tournaments (0.6250)
+    1 upsets: 24 tournaments (0.3750)
+
+  n=5: Distribution of upset arc count:
+    0 upsets: 264 tournaments (0.2578)
+    1 upsets: 400 tournaments (0.3906)
+    2 upsets: 360 tournaments (0.3516)
+
+  n=6: Distribution of upset arc count:
+    0 upsets: 2048 tournaments (0.0625)
+    1 upsets: 5280 tournaments (0.1611)
+    2 upsets: 13440 tournaments (0.4102)
+    3 upsets: 9120 tournaments (0.2783)
+    4 upsets: 2880 tournaments (0.0879)
+
+======================================================================
+DONE -- UPSET MONOTONICITY DEEP ANALYSIS
+======================================================================
