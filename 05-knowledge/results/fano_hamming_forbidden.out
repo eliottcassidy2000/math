@@ -1,0 +1,247 @@
+
+======================================================================
+1. THE FANO PLANE AS H_FORBIDDEN
+======================================================================
+
+The Fano plane PG(2,2):
+  7 points, 7 lines, 3 points per line, 3 lines per point
+  = unique (7₃) configuration
+
+  Points: {1,2,3,4,5,6,7}
+  Lines:  {124, 235, 346, 457, 156, 267, 137}
+  (cyclic: line i contains {i, i+1, i+3} mod 7)
+
+  Automorphism group: GL(3,2) = PSL(2,7)
+  |GL(3,2)| = (2³-1)(2³-2)(2³-4) = 7·6·4 = 168
+  = 168 = 7·24 = H_forb₁·|BT|
+  = 168 = 8·21 = rank(E₈)·H_forb₂
+
+  Incidence matrix of Fano plane:
+    1 1 0 1 0 0 0
+    0 1 1 0 1 0 0
+    0 0 1 1 0 1 0
+    0 0 0 1 1 0 1
+    1 0 0 0 1 1 0
+    0 1 0 0 0 1 1
+    1 0 1 0 0 0 1
+
+  Each row has 3 ones (KEY₂ points per line)
+  Each column has 3 ones (KEY₂ lines per point)
+  M·Mᵀ = I + J (mod 2)? Let's check...
+
+  M·Mᵀ (over Z):
+    3 1 1 1 1 1 1
+    1 3 1 1 1 1 1
+    1 1 3 1 1 1 1
+    1 1 1 3 1 1 1
+    1 1 1 1 3 1 1
+    1 1 1 1 1 3 1
+    1 1 1 1 1 1 3
+
+  Diagonal entries: 3 = KEY₂ (points per line)
+  Off-diagonal: 1 = 1 (any two lines meet in exactly 1 point)
+  So M·Mᵀ = (KEY₂-1)·I + J = KEY₁·I + J
+
+======================================================================
+2. HAMMING CODE [7,4,3] AND TOURNAMENT POLYNOMIAL
+======================================================================
+
+The [7,4,3] Hamming code:
+  Length n = 7 = H_forb₁ = Φ₃(KEY₁)
+  Dimension k = 4 = rank(F₄) = KEY₁²
+  Distance d = 3 = KEY₂
+
+  Parameters: [Φ₃(KEY₁), KEY₁², KEY₂]
+
+  Parity check matrix (columns = binary reps of 1..7):
+    1 0 0 1 1 0 1
+    0 1 0 1 0 1 1
+    0 0 1 0 1 1 1
+
+  H is a 3×7 matrix = KEY₂ × Φ₃(KEY₁)
+  Redundancy: n-k = 7-4 = 3 = KEY₂
+  Rate: k/n = 4/7 = KEY₁²/Φ₃(KEY₁)
+
+Weight enumerator of Hamming [7,4,3]:
+  W(x,y) = x⁷ + 7x⁴y³ + 7x³y⁴ + y⁷
+  Codeword weights: 0(×1), 3(×7), 4(×7), 7(×1)
+  Total codewords: 1+7+7+1 = 16 = 2^4 = KEY1^(KEY1^2)
+  Number of weight-3 codewords: 7 = H_forb₁
+  Number of weight-4 codewords: 7 = H_forb₁
+  Symmetry: A_d = A_{n-d} (7 = 7)
+
+  Weight distribution [1, 0, 0, 7, 7, 0, 0, 1]
+  Sum = 16 = 2^4 ✓
+
+Weight enumerator at (1,2):
+  W(1,2) = 1 + 7·8 + 7·16 + 128 = 297
+  = 297
+
+Dual code: Hamming [7,3,4] (simplex code):
+  Length n = 7, Dimension k = 3, Distance d = 4 = KEY₁²
+  All nonzero codewords have weight 4 = KEY₁²
+  Number of nonzero codewords: 2³-1 = 7 = H_forb₁
+
+======================================================================
+3. THE GOLAY CODE AND PETERSEN/STEINER CONNECTION
+======================================================================
+
+The [23,12,7] binary Golay code G₂₃:
+  Length n = 23 (prime)
+  Dimension k = 12 = h(E₆) = h(F₄)
+  Distance d = 7 = H_forb₁ = Φ₃(KEY₁)
+
+  Hamming bound: Σ_{i=0}^3 C(23,i) = 2048
+  Number of codewords: 2^12 = 4096
+  4096 · 2048 = 8388608 = 2^23 = 8388608
+  PERFECT CODE! (meets Hamming bound with equality)
+
+The extended Golay code G₂₄ = [24,12,8]:
+  Length n = 24 = |BT|
+  Dimension k = 12 = h(E₆)
+  Distance d = 8 = rank(E₈)
+  Parameters: [|BT|, h(E₆), rank(E₈)]
+
+  Weight enumerator of G₂₄:
+    Weight  0:     1 codewords
+    Weight  8:   759 codewords
+    Weight 12:  2576 codewords
+    Weight 16:   759 codewords
+    Weight 24:     1 codewords
+  Total: 4096 = 2^12 = 4096 ✓
+
+  A_8 = 759 = 3·11·23
+  A_12 = 2576 = 2^5·80+16 = ... = 2576
+  759 = C(23,4)/C(7,4) = 253
+  Wait: 759 = 759. Let me check: C(23,4)/C(7,4) = 8855/35 = 253
+
+  The 759 octads form the Steiner system S(5,8,24):
+    Any 5 of 24 points lie in a unique octad
+    5 = KEY₁+KEY₂, 8 = rank(E₈), 24 = |BT|
+    S(KEY₁+KEY₂, rank(E₈), |BT|)
+
+======================================================================
+4. PETERSEN GRAPH IN THE GOLAY CODE
+======================================================================
+
+The Petersen graph appears in the Golay code construction!
+
+The Mathieu group M₁₂ acts on 12 points (= h(E₆) = k of Golay)
+M₂₄ acts on 24 points (= |BT| = n of extended Golay)
+
+  |M₁₂| = 95040
+  = 95040 = 2^6 · 3^3 · 5 · 11
+  = 8·11880 = rank(E₈)·11880
+  |M₂₄| = 244823040
+  = 244823040 = 2^10 · 3^3 · 5 · 7 · 11 · 23
+
+M₂₄ order factored through (2,3) vocabulary:
+  2^10 = KEY₁^10 = (rank(E₈))^(10/3)... messy
+  Better: |M₂₄| = 24! / (|Aut(G₂₄)| in some sense)
+
+The Petersen graph and S(5,8,24):
+  The 10 vertices of the Petersen graph correspond to 10 = C(5,2)
+  Steiner system S(2,3,7) is the Fano plane (7 = H_forb₁)
+  S(2,3,7) has b = C(7,2)/C(3,2) = 21/3 = 7 blocks
+  7 blocks of 3 elements from 7 points
+
+  Steiner chain: S(2,3,7) → S(3,6,22) → S(4,7,23) → S(5,8,24)
+  Or in our terms:
+    S(KEY₁, KEY₂, H_forb₁)
+    S(KEY₂, h(G₂), 22)
+    S(KEY₁², H_forb₁, 23)
+    S(KEY₁+KEY₂, rank(E₈), |BT|)
+
+======================================================================
+5. SPHERE PACKING AND KISSING NUMBERS
+======================================================================
+
+The lattice packing connection:
+
+  E₈ lattice: densest packing in dim 8 = rank(E₈)
+    Kissing number: 240 = #roots(E₈) = V(icos)·V(dodec)
+    Center density: 1/16 = 1/KEY₁⁴
+
+  Leech lattice Λ₂₄: densest packing in dim 24 = |BT|
+    Kissing number: 196560 = 2^4 · 3 · 5 · 7 · 13 · ... 
+    196560 = 196560
+    = 2^4 · 3 · 5 · 7 · 9 · 13 ... let me factor
+    196560 = 2^4 · 3^3 · 5 · 7 · 13
+
+Kissing numbers in key dimensions:
+  dim  1: τ =        2
+  dim  2: τ =        6 = h(G2) = KEY1*KEY2
+  dim  3: τ =       12 = h(E6) = h(F4)
+  dim  4: τ =       24 = |BT|
+  dim  8: τ =      240 = #roots(E8)
+  dim 24: τ =   196560 = 2^4*3*5*819
+
+  dim 1: τ(1) = 2 = KEY₁
+  dim 2: τ(2) = 6 = KEY₁·KEY₂ = h(G₂)
+  dim 3: τ(3) = 12 = h(E₆)
+  dim 4: τ(4) = 24 = |BT| = KEY₁·h(E₆)
+
+======================================================================
+6. CHANNEL CAPACITY AND THE (2,3) RATE
+======================================================================
+
+The Hamming [7,4,3] code has rate R = 4/7:
+  R = KEY₁²/Φ₃(KEY₁) = KEY₁²/(KEY₁²+KEY₁+1)
+
+The Shannon capacity of the binary symmetric channel:
+  C(p) = 1 - H(p) where H(p) = -p·log₂(p) - (1-p)·log₂(1-p)
+
+  Hamming rate R = 4/7 ≈ 0.571429
+  For R=4/7 to be capacity-achieving: H(p) = 3/7 = KEY₂/Φ₃(KEY₁)
+  The complementary rate 1-R = 3/7 = KEY₂/(KEY₁²+KEY₁+1)
+
+ALL binary perfect codes (Tietäväinen-van Lint-Zinoviev):
+  1. Trivial: [n, n, 1] — the whole space
+  2. Repetition: [n, 1, n] with n odd
+  3. Hamming: [2^r-1, 2^r-r-1, 3] for r ≥ 2
+  4. Golay: [23, 12, 7]
+
+Hamming codes [2^r-1, 2^r-r-1, 3]:
+  r=2: [3, 1, 3]  rate=1/3 ≈ 0.3333
+  r=3: [7, 4, 3]  rate=4/7 ≈ 0.5714
+  r=4: [15, 11, 3]  rate=11/15 ≈ 0.7333
+  r=5: [31, 26, 3]  rate=26/31 ≈ 0.8387
+  r=6: [63, 57, 3]  rate=19/21 ≈ 0.9048
+  r=7: [127, 120, 3]  rate=120/127 ≈ 0.9449
+
+  As r→∞: rate → 1 (tending to trivial)
+  First non-trivial: r=2: [3,1,3] rate=1/3 = 1/KEY₂
+  Second: r=3: [7,4,3] rate=4/7 = KEY₁²/H_forb₁
+  Third: r=4: [15,11,3] rate=11/15
+
+======================================================================
+7. SUMMARY: CODING THEORY THROUGH THE (2,3) LENS
+======================================================================
+
+======================================================================
+THE CODING THEORY — TOURNAMENT THEORY DICTIONARY
+======================================================================
+
+Object                     Coding theory        Tournament/Lie
+----------------------------------------------------------------------
+Fano plane                  PG(2,2), 7 points   H_forb₁ = Φ₃(KEY₁)
+Hamming code length         n = 7                = Φ₃(KEY₁)
+Hamming code dimension      k = 4                = KEY₁² = rank(F₄)
+Hamming code distance       d = 3                = KEY₂
+Hamming code redundancy     r = 3                = KEY₂
+Hamming code size           2⁴ = 16              = KEY₁^(KEY₁²)
+Extended Golay length       n = 24               = |BT|
+Extended Golay dimension    k = 12               = h(E₆)
+Extended Golay distance     d = 8                = rank(E₈)
+Golay distance              d = 7                = H_forb₁
+Octads in Steiner           759                  = 3·11·23
+Steiner S(5,8,24)           t=5, k=8, v=24      = (KEY₁+KEY₂, rank(E₈), |BT|)
+Kissing in dim 8            240                  = #roots(E₈)
+Kissing in dim 24           196560               (Leech)
+|GL(3,2)| = |PSL(2,7)|     168                  = H_forb₁ · |BT|
+|Aut(Fano)|                 168                  = rank(E₈) · H_forb₂
+
+The punchline: The first forbidden H value (7) is the Fano plane,
+the smallest projective plane, the foundation of all coding theory.
+The extended Golay code [|BT|, h(E₆), rank(E₈)] is the
+tournament-theoretic code par excellence.

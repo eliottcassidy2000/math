@@ -1,0 +1,301 @@
+
+======================================================================
+1. McKAY CORRESPONDENCE: THE (2,3,5) MAP
+======================================================================
+
+Finite subgroups of SU(2) and McKay correspondence:
+Group                |G| Dynkin  rank     h   |G|/h |G|/rank
+------------------------------------------------------------
+  Cyclic Z/2           2     A₁     1     2       1        2
+  Cyclic Z/3           3     A₂     2     3       1      3/2
+  Cyclic Z/4           4     A₃     3     4       1      4/3
+  Cyclic Z/5           5     A₄     4     5       1      5/4
+  Cyclic Z/6           6     A₅     5     6       1      6/5
+  BD₁ (Q₈)             8     D₃     3     4       2      8/3
+  BD₂                 12     D₄     4     6       2        3
+  BD₃                 16     D₅     5     8       2     16/5
+  BD₄                 20     D₆     6    10       2     10/3
+  BT                  24     E₆     6    12       2        4
+  BO                  48     E₇     7    18     8/3     48/7
+  BI                 120     E₈     8    30       4       15
+
+The EXCEPTIONAL groups:
+  BT: |BT|/h(E₆) = 24/12 = 2 = KEY₁
+  BO: |BO|/h(E₇) = 48/18 = 8/3 = 8/3 = rank(E₈)/KEY₂
+  BI: |BI|/h(E₈) = 120/30 = 4 = rank(F₄) = KEY₁²
+
+  |BT|·|BO|·|BI| = 24·48·120 = 138240
+  = 138240 = 2^10 · 3^3 · 5 = 138240
+
+======================================================================
+2. |G| AS TOURNAMENT POLYNOMIAL VALUES
+======================================================================
+
+Can McKay group orders be expressed via f(z)?
+
+Direct evaluations f(z) = z²-5z+6:
+  f( 0) =     6  = |Cyclic Z/6|
+  f( 1) =     2  = |Cyclic Z/2|
+  f( 2) =     0
+  f( 3) =     0
+  f( 4) =     2  = |Cyclic Z/2|
+  f( 5) =     6  = |Cyclic Z/6|
+  f( 6) =    12  = |BD₂|
+  f( 7) =    20  = |BD₄|
+  f( 8) =    30
+  f( 9) =    42
+  f(10) =    56
+  f(11) =    72
+  f(12) =    90
+  f(13) =   110
+  f(14) =   132
+
+  f(8) = 30 = h(E₈)
+  f(9) = 42 = 2·21 = 2·H_forb₂
+  f(10) = 56 = dim(V_E₇) = C(8,3)
+  f(11) = 72 = |BO|·3/2 = σ(30)
+  f(12) = 90 = Tr(f(A_P))
+  f(14) = 132 = dim(so(12))
+  f(15) = 156 = |BT|·13/2
+
+  f(z) hits no McKay group orders directly except possibly small ones.
+  But Petersen polynomial p(z) does:
+  p(0) = 6 = |Z/6| → A₅
+  p(5) = 56 = dim(V_E₇)
+  p(6) = 120 = |BI| → E₈!
+
+======================================================================
+3. COXETER NUMBER AS ORDER/RANK RATIO
+======================================================================
+
+For the exceptional groups, h = |G_McKay| / some_integer:
+
+  h(E₆) = 12 = |BT|/2 = |BT|/KEY₁
+  h(E₇) = 18 = |BO|/? ... 48/18 not integer
+  h(E₈) = 30 = |BI|/4 = |BI|/KEY₁²
+
+  But notice:
+  |BT| = 24 = 2·h(E₆) = KEY₁·h(E₆)
+  |BO| = 48 = 4·h(E₆) = KEY₁²·h(E₆) = 2·|BT|
+  |BI| = 120 = 10·h(E₆) = (KEY₁·(KEY₁+KEY₂))·h(E₆) = 5·|BT|
+
+  Ratios: |BO|/|BT| = 2 = KEY₁
+         |BI|/|BT| = 5 = KEY₁+KEY₂
+         |BI|/|BO| = 5/2 = (KEY₁+KEY₂)/KEY₁
+
+======================================================================
+4. McKAY QUIVER: AFFINE ADE EXTENDED DYNKIN
+======================================================================
+
+The McKay graph of G ⊂ SU(2) is the EXTENDED (affine) Dynkin diagram.
+Adjacency matrix eigenvalues of the affine extensions:
+
+Exponents and adjacency eigenvalues 2cos(π·m/h):
+
+  E₆ (h=12):
+    m= 1: 2cos(1π/12) = +1.931852
+    m= 4: 2cos(4π/12) = +1.000000
+    m= 5: 2cos(5π/12) = +0.517638
+    m= 7: 2cos(7π/12) = -0.517638
+    m= 8: 2cos(8π/12) = -1.000000
+    m=11: 2cos(11π/12) = -1.931852
+    Max eigenvalue: 1.931852
+    Min eigenvalue: -1.931852
+
+  E₇ (h=18):
+    m= 1: 2cos(1π/18) = +1.969616
+    m= 5: 2cos(5π/18) = +1.285575
+    m= 7: 2cos(7π/18) = +0.684040
+    m= 9: 2cos(9π/18) = +0.000000
+    m=11: 2cos(11π/18) = -0.684040
+    m=13: 2cos(13π/18) = -1.285575
+    m=17: 2cos(17π/18) = -1.969616
+    Max eigenvalue: 1.969616
+    Min eigenvalue: -1.969616
+
+  E₈ (h=30):
+    m= 1: 2cos(1π/30) = +1.989044
+    m= 7: 2cos(7π/30) = +1.486290
+    m=11: 2cos(11π/30) = +0.813473
+    m=13: 2cos(13π/30) = +0.415823
+    m=17: 2cos(17π/30) = -0.415823
+    m=19: 2cos(19π/30) = -0.813473
+    m=23: 2cos(23π/30) = -1.486290
+    m=29: 2cos(29π/30) = -1.989044
+    Max eigenvalue: 1.989044
+    Min eigenvalue: -1.989044
+
+
+======================================================================
+5. Du VAL SINGULARITIES AND THE MOAT
+======================================================================
+
+The Du Val (ADE) surface singularities C²/G:
+
+  A_n: xy = z^{n+1}  (G = Z/(n+1))
+  D_n: x² + y²z + z^{n-1} = 0  (G = BD_{n-2})
+  E₆:  x² + y³ + z⁴ = 0  (G = BT)
+  E₇:  x² + y³ + yz³ = 0  (G = BO)
+  E₈:  x² + y³ + z⁵ = 0  (G = BI)
+
+The E₈ singularity x² + y³ + z⁵ = 0 uses EXACTLY the triple (2,3,5)!
+  Degree in x: KEY₁
+  Degree in y: KEY₂
+  Degree in z: KEY₁+KEY₂
+
+The Milnor number of each singularity:
+  E₆: μ = rank = 6
+  E₇: μ = rank = 7
+  E₈: μ = rank = 8
+
+Relation to the moat:
+  The E₈ singularity uses exponents (2,3,5)
+  1/2 + 1/3 + 1/5 = 31/30 > 1  ← SPHERICAL
+  1/2 + 1/3 + 1/7 = 41/42 < 1  ← HYPERBOLIC
+  The moat at n=10 is the boundary between spherical and hyperbolic!
+  (2,3,5) is the LAST triple with 1/a+1/b+1/c > 1
+
+======================================================================
+6. THE MONSTROUS CONNECTION: j-INVARIANT
+======================================================================
+
+The j-invariant of the modular curve:
+  j(τ) = q⁻¹ + 744 + 196884q + ...
+  where q = e^{2πiτ}
+
+  744 = 8·93 = rank(E₈)·93
+  196884 = 196883 + 1 (Monster moonshine)
+  196883 = 47·59·71
+
+McKay's observation about the j-function coefficients:
+  j(τ)^{1/3} = q^{-1/3}(1 + 248q + 4124q² + ...)
+  248 = dim(E₈)!
+  The cube root of j expands in representations of E₈.
+
+  Furthermore: 1 + 248 + 4124 + ... are dimensions of E₈ representations
+  Coefficient 248 = dim(adjoint) = rank(E₈)·(h(E₈)+1) = 8·31
+
+======================================================================
+7. BINARY GROUP ORDERS AND TOURNAMENT RECURRENCE
+======================================================================
+
+The tournament recurrence a(n) = 5a(n-1) - 6a(n-2) with a=A·2ⁿ+B·3ⁿ
+
+Can we express |BT|, |BO|, |BI| in terms of 2ⁿ and 3ⁿ?
+  |BT| = 24 = 3·2³ = 3·8 = KEY₂·KEY₁³
+  |BO| = 48 = 3·2⁴ = 3·16 = KEY₂·KEY₁⁴
+  |BI| = 120 = ?
+  120 = 5·24 = 5·|BT| = (KEY₁+KEY₂)·|BT|
+  120 = 5·3·8 = 5·3·2³
+  120 = 2³·3·5 = KEY₁³·KEY₂·(KEY₁+KEY₂)
+
+Tournament recurrence solution a(n) = 3·2ⁿ (i.e. A=3, B=0):
+  a(0) = 3·2^0 = 3
+  a(1) = 3·2^1 = 6
+  a(2) = 3·2^2 = 12
+  a(3) = 3·2^3 = 24  = |BT|
+  a(4) = 3·2^4 = 48  = |BO|
+  a(5) = 3·2^5 = 96
+  a(6) = 3·2^6 = 192
+  a(7) = 3·2^7 = 384
+
+  |BT|=24=3·2³ and |BO|=48=3·2⁴ fit perfectly,
+  but |BI|=120≠96=3·2⁵. The binary icosahedral breaks the pattern!
+  The excess: 120 - 96 = 24 = |BT|
+  So |BI| = 3·2⁵ + |BT| = 3·2⁵ + 3·2³ = 3·(2⁵+2³) = 3·40
+  = 3·2³·(2²+1) = 3·2³·5 = |BT|·5
+
+More generally: a(n) = A·2ⁿ + B·3ⁿ
+If a(3)=|BT|=24, a(4)=|BO|=48:
+  B=0 forced, A=3, giving a(n)=3·2ⁿ
+  |BI| escapes this recurrence by 24 = |BT|
+
+If we fit BT,BI (skipping BO): a(n)=(12/5)·2ⁿ+(8/45)·3ⁿ
+  a(3) = 24 = 24.0
+  a(4) = 264/5 = 52.8
+  a(5) = 120 = 120.0
+  a(6) = 1416/5 = 283.2
+  a(7) = 696 = 696.0
+
+======================================================================
+8. REPRESENTATION DIMENSIONS AND (2,3) ARITHMETIC
+======================================================================
+
+Irreducible representation dimensions of the exceptional McKay groups:
+
+Binary tetrahedral BT (|BT|=24, 7 irreps):
+  dims: [1, 1, 1, 2, 2, 2, 3]
+  sum of squares: 24 = |BT| = 24 ✓
+  max dim = 3 = KEY₂
+
+Binary octahedral BO (|BO|=48, 8 irreps):
+  dims: [1, 1, 2, 2, 2, 3, 3, 4]
+  sum of squares: 48 = |BO| = 48 ✓
+  max dim = 4 = rank(F₄) = KEY₁²
+
+Binary icosahedral BI (|BI|=120, 9 irreps):
+  dims: [1, 2, 2, 3, 3, 4, 4, 5, 6]
+  sum of squares: 120 = |BI| = 120 ✓
+  max dim = 6 = h(G₂)
+
+Representation dimensions through (2,3) lens:
+  BT dims = {1, 1, 1, KEY₁, KEY₁, KEY₁, KEY₂}
+  BO dims = {1, 1, KEY₁, KEY₁, KEY₁, KEY₂, KEY₂, KEY₁²}
+  BI dims = {1, KEY₁, KEY₁, KEY₂, KEY₂, KEY₁², KEY₁², KEY₁+KEY₂, KEY₁·KEY₂}
+
+Number of irreps:
+  BT: 7 = Φ₃(KEY₁) = h(G₂)+1 = H_forbidden_1
+  BO: 8 = rank(E₈) = KEY₁³
+  BI: 9 = KEY₂² = h(E₇)/KEY₁
+
+======================================================================
+9. THE MOONSHINE CONNECTION: 24 AND LEECH LATTICE
+======================================================================
+
+|BT| = 24 connects to many '24' appearances:
+  24 = |BT|
+  24 = dim(Leech lattice)
+  24 = kissing number in dim 1... no, that's 2
+  24 = c/12 where c=2 for free boson... no
+  24 = 1·2·3·4 = 4! = factorial(KEY₁²)
+
+Ramanujan τ(n) (from Δ(τ) = q·Π(1-qⁿ)^24):
+  The exponent is 24 = |BT|
+  τ(2) = -24 = -|BT|
+  τ(3) = 252 = 0... let me compute
+  τ(1) = 1
+  τ(2) = -24 = -|BT|
+  τ(3) = 252 = 12·21 = h(E₆)·H_forb₂
+  τ(4) = -1472
+  τ(5) = 4830 = 2·3·5·7·23
+
+  |τ(2)| = 24 = |BT| → E₆
+  |τ(3)| = 252 = h(E₆)·H_forb₂ = 12·21
+  |τ(3)| / |τ(2)| = 252/24 = 21/2 = H_forb₂/KEY₁
+
+  τ(3) = 252 = dim of the adjoint of so(... )
+  Actually 252 = C(10,5)/2 = 126... no, 252 = C(10,5) = 252 ✓
+  252 = C(V(Petersen), KEY₁+KEY₂) ← binomial of Petersen vertices choose 5!
+
+======================================================================
+GRAND SYNTHESIS
+======================================================================
+
+The McKay correspondence maps the (2,3,5) triple to ADE via:
+  E₆ ↔ BT (|BT|=24=KEY₂·KEY₁³)
+  E₇ ↔ BO (|BO|=48=KEY₂·KEY₁⁴)
+  E₈ ↔ BI (|BI|=120=KEY₁³·KEY₂·(KEY₁+KEY₂))
+
+The number of irreps of the binary polyhedral groups:
+  BT: 7 = H_forb₁ = Φ₃(KEY₁)
+  BO: 8 = rank(E₈)
+  BI: 9 = KEY₂²
+
+The representation dimensions use only {1, KEY₁, KEY₂, KEY₁², KEY₁+KEY₂, KEY₁·KEY₂}
+— the complete (2,3) vocabulary up to degree 2.
+
+The Du Val singularity for E₈ is x²+y³+z⁵=0,
+using exponents (KEY₁, KEY₂, KEY₁+KEY₂) — the fundamental triple.
+
+τ(3)/τ(2) = 252/(-24) = -21/2 = -H_forb₂/KEY₁
+and τ(3) = C(10,5) = C(V(Petersen), 5).
