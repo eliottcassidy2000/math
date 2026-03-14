@@ -1,0 +1,352 @@
+======================================================================
+THE BINARY COEFFICIENT THEOREM AND SCORE-H STRATIFICATION
+opus-2026-03-14-S71n
+======================================================================
+
+======================================================================
+PART A: MULTILINEAR COEFFICIENTS — ALL +-2^k
+======================================================================
+
+  n=3 (m=3): Multilinear coefficient analysis
+    Degree 0: 1 nonzero, values: [1], +:1 -:0
+    Degree 1: 1 nonzero, values: [2], +:1 -:0
+    Degree 2: 3 nonzero, values: [2], +:1 -:2
+      Degree-2 sign analysis:
+        arcs (0, 1),(0, 2): coeff=-2, shared_vertices=1
+        arcs (0, 1),(1, 2): coeff=+2, shared_vertices=1
+        arcs (0, 2),(1, 2): coeff=-2, shared_vertices=1
+    2-adic valuation of |coefficients|:
+      v_2 = 0: 1 coefficients
+      v_2 = 1: 4 coefficients
+
+  n=4 (m=6): Multilinear coefficient analysis
+    Degree 0: 1 nonzero, values: [1], +:1 -:0
+    Degree 1: 3 nonzero, values: [2, 4], +:3 -:0
+    Degree 2: 12 nonzero, values: [2], +:4 -:8
+      Degree-2 sign analysis:
+        arcs (0, 1),(0, 2): coeff=-2, shared_vertices=1
+        arcs (0, 1),(0, 3): coeff=-2, shared_vertices=1
+        arcs (0, 2),(0, 3): coeff=-2, shared_vertices=1
+        arcs (0, 1),(1, 2): coeff=+2, shared_vertices=1
+        arcs (0, 2),(1, 2): coeff=-2, shared_vertices=1
+        arcs (0, 1),(1, 3): coeff=+2, shared_vertices=1
+        arcs (0, 3),(1, 3): coeff=-2, shared_vertices=1
+        arcs (1, 2),(1, 3): coeff=-2, shared_vertices=1
+        arcs (0, 2),(2, 3): coeff=+2, shared_vertices=1
+        arcs (0, 3),(2, 3): coeff=-2, shared_vertices=1
+        arcs (1, 2),(2, 3): coeff=+2, shared_vertices=1
+        arcs (1, 3),(2, 3): coeff=-2, shared_vertices=1
+    2-adic valuation of |coefficients|:
+      v_2 = 0: 1 coefficients
+      v_2 = 1: 14 coefficients
+      v_2 = 2: 1 coefficients
+
+  n=5 (m=10): Multilinear coefficient analysis
+    Degree 0: 1 nonzero, values: [1], +:1 -:0
+    Degree 1: 6 nonzero, values: [2, 4, 8], +:6 -:0
+    Degree 2: 34 nonzero, values: [2, 4], +:14 -:20
+      Degree-2 sign analysis:
+        arcs (0, 1),(0, 2): coeff=-2, shared_vertices=1
+        arcs (0, 1),(0, 3): coeff=-2, shared_vertices=1
+        arcs (0, 2),(0, 3): coeff=-2, shared_vertices=1
+        arcs (0, 1),(0, 4): coeff=-4, shared_vertices=1
+        arcs (0, 2),(0, 4): coeff=-2, shared_vertices=1
+        arcs (0, 3),(0, 4): coeff=-2, shared_vertices=1
+        arcs (0, 1),(1, 2): coeff=+2, shared_vertices=1
+        arcs (0, 2),(1, 2): coeff=-2, shared_vertices=1
+        arcs (0, 1),(1, 3): coeff=+2, shared_vertices=1
+        arcs (0, 3),(1, 3): coeff=-2, shared_vertices=1
+        arcs (0, 4),(1, 3): coeff=+4, shared_vertices=0
+        arcs (1, 2),(1, 3): coeff=-2, shared_vertices=1
+        arcs (0, 1),(1, 4): coeff=+4, shared_vertices=1
+        arcs (0, 2),(1, 4): coeff=+2, shared_vertices=0
+        arcs (0, 3),(1, 4): coeff=+4, shared_vertices=0
+    Degree 3: 35 nonzero, values: [2, 4], +:11 -:24
+    Degree 4: 60 nonzero, values: [2], +:34 -:26
+    2-adic valuation of |coefficients|:
+      v_2 = 0: 1 coefficients
+      v_2 = 1: 120 coefficients
+      v_2 = 2: 14 coefficients
+      v_2 = 3: 1 coefficients
+
+======================================================================
+PART B: SIGN PATTERN OF DEGREE-2 COEFFICIENTS
+======================================================================
+
+  Degree-2 coefficient sign vs arc adjacency:
+
+  n=3:
+    adj(0,0): 1 pairs, +:0 -:1, values: [-2]
+    adj(1,0): 1 pairs, +:1 -:0, values: [2]
+    adj(1,1): 1 pairs, +:0 -:1, values: [-2]
+
+  n=4:
+    adj(0,0): 4 pairs, +:0 -:4, values: [-2]
+    adj(1,0): 4 pairs, +:4 -:0, values: [2]
+    adj(1,1): 4 pairs, +:0 -:4, values: [-2]
+
+  n=5:
+    adj(0,0): 10 pairs, +:0 -:10, values: [-4, -2]
+    adj(1,0): 10 pairs, +:10 -:0, values: [2, 4]
+    adj(1,1): 10 pairs, +:0 -:10, values: [-4, -2]
+    disjoint: 4 pairs, +:4 -:0, values: [2, 4]
+
+======================================================================
+PART C: THE (1,2,2,2,3) STRATUM AT n=5
+======================================================================
+
+  Stratum (1,2,2,2,3): 280 tournaments
+  H distribution: {11: 120, 13: 120, 15: 40}
+  (H, t3) distribution:
+    H= 11, t3=4: 120 tournaments
+    H= 13, t3=4: 120 tournaments
+    H= 15, t3=4: 40 tournaments
+
+  Score + t3 -> H determination at n=5:
+    ((1, 2, 2, 2, 3), 4): H = [11, 13, 15] (NOT DETERMINED)
+
+======================================================================
+PART D: SCORE-H STRATIFICATION AT n=6
+======================================================================
+
+  Computing all 2^15 = 32768 tournaments at n=6...
+  Done.
+
+  Score strata at n=6:
+    (0, 1, 2, 3, 4, 5): |stratum|=720, H=1 (constant)
+    (0, 1, 2, 4, 4, 4): |stratum|=240, H=3 (constant)
+    (0, 1, 3, 3, 3, 5): |stratum|=240, H=3 (constant)
+    (0, 1, 3, 3, 4, 4): |stratum|=720, H=5 (constant)
+    (0, 2, 2, 2, 4, 5): |stratum|=240, H=3 (constant)
+    (0, 2, 2, 3, 3, 5): |stratum|=720, H=5 (constant)
+    (0, 2, 2, 3, 4, 4): |stratum|=1440, H=9 (constant)
+    (0, 2, 3, 3, 3, 4): |stratum|=1680, H_range=[11,15], #distinct=3
+    (0, 3, 3, 3, 3, 3): |stratum|=144, H=15 (constant)
+    (1, 1, 1, 3, 4, 5): |stratum|=240, H=3 (constant)
+    (1, 1, 1, 4, 4, 4): |stratum|=80, H=9 (constant)
+    (1, 1, 2, 2, 4, 5): |stratum|=720, H=5 (constant)
+    (1, 1, 2, 3, 3, 5): |stratum|=1440, H=9 (constant)
+    (1, 1, 2, 3, 4, 4): |stratum|=2880, H_range=[15,17], #distinct=2
+    (1, 1, 3, 3, 3, 4): |stratum|=1680, H_range=[19,27], #distinct=3
+    (1, 2, 2, 2, 3, 5): |stratum|=1680, H_range=[11,15], #distinct=3
+    (1, 2, 2, 2, 4, 4): |stratum|=1680, H_range=[19,27], #distinct=3
+    (1, 2, 2, 3, 3, 4): |stratum|=8640, H_range=[23,37], #distinct=6
+    (1, 2, 3, 3, 3, 3): |stratum|=2400, H_range=[33,37], #distinct=2
+    (2, 2, 2, 2, 2, 5): |stratum|=144, H=15 (constant)
+    (2, 2, 2, 2, 3, 4): |stratum|=2400, H_range=[33,37], #distinct=2
+    (2, 2, 2, 3, 3, 3): |stratum|=2640, H_range=[41,45], #distinct=3
+
+  Non-constant strata: 9/22
+
+  Score + t3 -> H determination at n=6:
+    ((0, 2, 3, 3, 3, 4), 4): H = [11, 13, 15]
+    ((1, 1, 2, 3, 4, 4), 4): H = [15, 17]
+    ((1, 1, 3, 3, 3, 4), 5): H = [19, 23, 27]
+    ((1, 2, 2, 2, 3, 5), 4): H = [11, 13, 15]
+    ((1, 2, 2, 2, 4, 4), 5): H = [19, 23, 27]
+  Strata where score+t3 doesn't determine H: 9/22
+
+======================================================================
+PART E: 2-ADIC STRUCTURE OF H
+======================================================================
+
+  n=3: H modular structure
+    mod  2: {1: 8}
+    mod  4: {1: 6, 3: 2}
+    mod  8: {1: 6, 3: 2}
+    mod 16: {1: 6, 3: 2}
+    v_2(H-1): {1: 2, 'inf': 6}
+
+  n=4: H modular structure
+    mod  2: {1: 64}
+    mod  4: {1: 48, 3: 16}
+    mod  8: {1: 24, 3: 16, 5: 24}
+    mod 16: {1: 24, 3: 16, 5: 24}
+    v_2(H-1): {1: 16, 2: 24, 'inf': 24}
+
+  n=5: H modular structure
+    mod  2: {1: 1024}
+    mod  4: {1: 720, 3: 304}
+    mod  8: {1: 360, 3: 240, 5: 360, 7: 64}
+    mod 16: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+    v_2(H-1): {1: 304, 2: 360, 3: 240, 'inf': 120}
+
+  n=6: H modular structure
+    mod  2: {1: 32768}
+    mod  4: {1: 20480, 3: 12288}
+    mod  8: {1: 9920, 3: 5760, 5: 10560, 7: 6528}
+    mod 16: {1: 4800, 3: 2400, 5: 5760, 7: 2880, 9: 5120, 11: 3360, 13: 4800, 15: 3648}
+    v_2(H-1): {1: 12288, 2: 10560, 3: 5120, 4: 1440, 5: 2640, 'inf': 720}
+
+======================================================================
+PART F: WHY +-2^k? — THE TRANSFER MATRIX EXPLANATION
+======================================================================
+
+  The multilinear expansion H(x) = sum_S c_S prod_{i in S} x_i
+  has c_S = sum_{T subset S} (-1)^{|S|-|T|} H(T)  (Mobius inversion).
+
+  But H(T) counts Hamiltonian paths in a tournament defined by T.
+  The key insight: H is computed via a TRANSFER MATRIX of size n x n,
+  where each entry is LINEAR in one arc variable x_k.
+
+  The permanent (or path sum) of this matrix is multilinear,
+  and the coefficients inherit the 2-adic structure from the
+  transfer matrix entries being +-1.
+
+  More precisely: H = sum_P prod_{i=0}^{n-2} A[P_i][P_{i+1}]
+  where A[i][j] = x_k (the variable for arc (i,j)) if i<j,
+  or 1-x_k if i>j.
+
+  Each product in the sum has n-1 factors, each +-1 or 0.
+  The coefficient c_S counts, with signs, the number of paths
+  that USE exactly the arcs in S (in the "positive" direction).
+
+  Since each path contributes +-1 to a specific coefficient,
+  the total coefficient is an INTEGER bounded by +-(n-1)!.
+  But it's always a power of 2 — WHY?
+
+  HYPOTHESIS: The coefficients are powers of 2 because the
+  transfer matrix has entries in {x, 1-x} which mod 2 are
+  constant (x ≡ 1-x mod 2), making the permanent mod 2^k
+  highly structured.
+
+  Let's verify: is c_S always +-2^{v(S)} where v(S) depends
+  only on the degree |S|?
+
+
+  n=3: v_2(c_S) by degree:
+    deg 0: v_2 distribution = {0: 1}
+    deg 1: v_2 distribution = {1: 1}
+    deg 2: v_2 distribution = {1: 3}
+  Check: v_2(c_S) = n-1-|S| = 2-|S|?
+    FAILS: S has degree 0, v_2=0, expected 2
+
+  n=4: v_2(c_S) by degree:
+    deg 0: v_2 distribution = {0: 1}
+    deg 1: v_2 distribution = {1: 2, 2: 1}
+    deg 2: v_2 distribution = {1: 12}
+  Check: v_2(c_S) = n-1-|S| = 3-|S|?
+    FAILS: S has degree 0, v_2=0, expected 3
+
+  n=5: v_2(c_S) by degree:
+    deg 0: v_2 distribution = {0: 1}
+    deg 1: v_2 distribution = {1: 3, 2: 2, 3: 1}
+    deg 2: v_2 distribution = {1: 27, 2: 7}
+    deg 3: v_2 distribution = {1: 30, 2: 5}
+    deg 4: v_2 distribution = {1: 60}
+  Check: v_2(c_S) = n-1-|S| = 4-|S|?
+    FAILS: S has degree 0, v_2=0, expected 4
+
+======================================================================
+PART G: COMPLEMENT INVARIANCE H(T) = H(T^op)
+======================================================================
+
+  We found H(T) = H(T^op) for ALL tournaments at n=3,4,5.
+  At n=6 (even n), this should FAIL.
+
+  WHY does it hold for odd n?
+
+  Proof: For odd n, every HP P = (v_0, v_1, ..., v_{n-1}) has
+  a reversed HP P^rev = (v_{n-1}, ..., v_1, v_0) in T^op.
+  The map P -> P^rev is a bijection HP(T) -> HP(T^op).
+  So H(T) = H(T^op). QED.
+
+  Wait — that's the TRIVIAL proof! It works for ALL n, not just odd.
+  P is an HP of T iff P^rev is an HP of T^op.
+  So H(T) = H(T^op) ALWAYS.
+
+  Let me verify at n=6:
+
+  n=6: H(T) = H(T^op): 32768/32768
+  YES! H(T) = H(T^op) for ALL tournaments at n=6 too!
+  This follows from: P -> P^rev is a bijection HP(T) -> HP(T^op).
+
+======================================================================
+PART H: FORMULA FOR MULTILINEAR COEFFICIENTS
+======================================================================
+
+  From the analysis above, if v_2(c_S) = n-1-|S|, then:
+  c_S = +-2^{n-1-|S|}
+
+  For n=3: c_emptyset = 1 (v_2=2 -> 2^2=4? No, c=1)
+  Hmm, let me recheck.
+
+  n=3: Explicit multilinear coefficients:
+    S=[], deg=0, c_S=1, |c_S|=1, v_2=0
+    S=[1], deg=1, c_S=2, |c_S|=2, v_2=1
+    S=[0, 1], deg=2, c_S=-2, |c_S|=2, v_2=1
+    S=[0, 2], deg=2, c_S=2, |c_S|=2, v_2=1
+    S=[1, 2], deg=2, c_S=-2, |c_S|=2, v_2=1
+
+  So c_emptyset = 1 (v_2 = 0), c_{1} = 2 (v_2 = 1), c_{i,j} = +-2 (v_2 = 1)
+  Expected n-1-deg: deg=0: 2, deg=1: 1, deg=2: 0
+  Actual: deg=0: 0, deg=1: 1, deg=2: 1
+  So v_2 = n-1-deg does NOT hold for the constant term!
+  But for deg >= 1: v_2(c_S) = 1 for all S at n=3.
+
+  n=4: v_2(c_S) pattern
+    deg 0: v_2 values = [0]
+    deg 1: v_2 values = [1, 2]
+    deg 2: v_2 values = [1]
+  Odd parts of c_S:
+    deg 0: odd parts = {1: 1}
+    deg 1: odd parts = {1: 3}
+    deg 2: odd parts = {1: 12}
+
+  n=5: v_2(c_S) pattern
+    deg 0: v_2 values = [0]
+    deg 1: v_2 values = [1, 2, 3]
+    deg 2: v_2 values = [1, 2]
+    deg 3: v_2 values = [1, 2]
+    deg 4: v_2 values = [1]
+  Odd parts of c_S:
+    deg 0: odd parts = {1: 1}
+    deg 1: odd parts = {1: 6}
+    deg 2: odd parts = {1: 34}
+    deg 3: odd parts = {1: 35}
+    deg 4: odd parts = {1: 60}
+
+======================================================================
+PART I: THE (1,2,2,2,3) SPLIT — FINER INVARIANTS
+======================================================================
+
+  H=11: 120 tournaments
+    t3: {4: 120}
+    t5: {1: 120}
+    3-subtournament H: {((1, 6), (3, 4)): 120}
+    Representative (bits=12):
+      [0, 0, 0, 1, 1]
+      [1, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0]
+      [0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 0]
+
+  H=13: 120 tournaments
+    t3: {4: 120}
+    t5: {2: 120}
+    3-subtournament H: {((1, 6), (3, 4)): 120}
+    Representative (bits=41):
+      [0, 1, 0, 0, 1]
+      [0, 0, 0, 1, 0]
+      [1, 1, 0, 0, 0]
+      [1, 0, 1, 0, 0]
+      [0, 1, 1, 1, 0]
+
+  H=15: 40 tournaments
+    t3: {4: 40}
+    t5: {3: 40}
+    3-subtournament H: {((1, 6), (3, 4)): 40}
+    Representative (bits=40):
+      [0, 0, 0, 0, 1]
+      [1, 0, 0, 1, 0]
+      [1, 1, 0, 0, 0]
+      [1, 0, 1, 0, 0]
+      [0, 1, 1, 1, 0]
+
+======================================================================
+PART J: THE n=5 MASTER FORMULA H = f(score, t3)
+======================================================================
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/projective_algebraic_deep4_S71n.py", line 668, in <module>
+    assert formula_data[key] == H, f"Mismatch: {key} -> {formula_data[key]} vs {H}"
+AssertionError: Mismatch: ((1, 2, 2, 2, 3), 4) -> 11 vs 15
