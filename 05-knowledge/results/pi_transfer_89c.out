@@ -1,0 +1,177 @@
+======================================================================
+PART 1: Circulant symmetry of H — paths from vertex 0
+======================================================================
+
+  P_3: H = 3, h₀ = 1, H/h₀ = 3.0, p = 3
+    H = p × h₀? ✓
+
+  P_7: H = 189, h₀ = 27, H/h₀ = 7.0, p = 7
+    H = p × h₀? ✓
+
+  P_11: H = 95095, h₀ = 8645, H/h₀ = 11.0, p = 11
+    H = p × h₀? ✓
+
+  P_19: H = 1172695746915, h₀ = 61720828785, H/h₀ = 19.0, p = 19
+    H = p × h₀? ✓
+
+======================================================================
+PART 2: Distribution of h_v (paths from each vertex)
+======================================================================
+
+  P_3: h_v = [1, 1, 1]
+    All equal? ✓
+    Sum = 3 = H = 3
+
+  P_7: h_v = [27, 27, 27, 27, 27, 27, 27]
+    All equal? ✓
+    Sum = 189 = H = 189
+
+  P_11: h_v = [8645, 8645, 8645, 8645, 8645, 8645, 8645, 8645, 8645, 8645, 8645]
+    All equal? ✓
+    Sum = 95095 = H = 95095
+
+======================================================================
+PART 3: Distribution of paths by ending vertex
+======================================================================
+
+  P_7: paths from 0, by ending vertex:
+    end at 0: 0 (start)
+    end at 1: 1 (QR)
+    end at 2: 1 (QR)
+    end at 3: 8 (NQR)
+    end at 4: 1 (QR)
+    end at 5: 8 (NQR)
+    end at 6: 8 (NQR)
+    Total ending at QR vertices: 3
+    Total ending at NQR vertices: 24
+    QR/NQR ratio: 1/8
+
+  P_11: paths from 0, by ending vertex:
+    end at 0: 0 (start)
+    end at 1: 628 (QR)
+    end at 2: 1101 (NQR)
+    end at 3: 628 (QR)
+    end at 4: 628 (QR)
+    end at 5: 628 (QR)
+    end at 6: 1101 (NQR)
+    end at 7: 1101 (NQR)
+    end at 8: 1101 (NQR)
+    end at 9: 628 (QR)
+    end at 10: 1101 (NQR)
+    Total ending at QR vertices: 3140
+    Total ending at NQR vertices: 5505
+    QR/NQR ratio: 628/1101
+
+======================================================================
+PART 4: The 'reduced' transfer matrix (QR classes)
+======================================================================
+
+  P_7:
+    QR r with QR (1-r): 1
+    QR r with NQR (1-r): 1
+    Total: 2 = (p-3)/2 = 2
+    |QR| = 3, |NQR| = 3
+    Arcs Q→Q: 3 (per QR vertex: 1.0)
+    Arcs Q→N: 6 (per QR vertex: 2.0)
+    Arcs N→Q: 3 (per NQR vertex: 1.0)
+    Arcs N→N: 3 (per NQR vertex: 1.0)
+    Arcs 0→Q: 3
+    Arcs 0→N: 0
+
+  P_11:
+    QR r with QR (1-r): 2
+    QR r with NQR (1-r): 2
+    Total: 4 = (p-3)/2 = 4
+    |QR| = 5, |NQR| = 5
+    Arcs Q→Q: 10 (per QR vertex: 2.0)
+    Arcs Q→N: 15 (per QR vertex: 3.0)
+    Arcs N→Q: 10 (per NQR vertex: 2.0)
+    Arcs N→N: 10 (per NQR vertex: 2.0)
+    Arcs 0→Q: 5
+    Arcs 0→N: 0
+
+  P_19:
+    QR r with QR (1-r): 4
+    QR r with NQR (1-r): 4
+    Total: 8 = (p-3)/2 = 8
+    |QR| = 9, |NQR| = 9
+    Arcs Q→Q: 36 (per QR vertex: 4.0)
+    Arcs Q→N: 45 (per QR vertex: 5.0)
+    Arcs N→Q: 36 (per NQR vertex: 4.0)
+    Arcs N→N: 36 (per NQR vertex: 4.0)
+    Arcs 0→Q: 9
+    Arcs 0→N: 0
+
+======================================================================
+PART 5: H(P_p) via eigenvalue structure?
+======================================================================
+
+  Checking H vs eigenvalue expressions:
+
+  p=3:
+    det(A) = 1
+    H = 3
+    H / det(A) = 3.000000
+    t_3 = 1
+    t_3 / C(p,3) = 1.000000
+    t_3 formula check: p(p-1)(2p-1-3(p-1))/... too messy
+
+  p=7:
+    det(A) = 24
+    H = 189
+    H / det(A) = 7.875000
+    t_3 = 14
+    t_3 / C(p,3) = 0.400000
+    t_3 formula check: p(p-1)(2p-1-3(p-1))/... too messy
+
+  p=11:
+    det(A) = 1215
+    H = 95095
+    H / det(A) = 78.267490
+    t_3 = 55
+    t_3 / C(p,3) = 0.333333
+    t_3 formula check: p(p-1)(2p-1-3(p-1))/... too messy
+
+  p=19:
+    det(A) = 17578125
+    H = 1172695746915
+    H / det(A) = 66713.358047
+    t_3 = 285
+    t_3 / C(p,3) = 0.294118
+    t_3 formula check: p(p-1)(2p-1-3(p-1))/... too messy
+
+  p=23:
+    det(A) = 3990767616
+    H = 15760206976379349
+    H / det(A) = 3949166.800190
+
+======================================================================
+PART 6: The Hamiltonian count ratio H(P_p) / H_max
+======================================================================
+
+  p=7:
+    H(P_p) = 189
+    H(C_p) = 175
+    Ratio H(P_p)/H(C_p) = 1.080000
+    Winner: Paley
+
+  p=11:
+    H(P_p) = 95095
+    H(C_p) = 93027
+    Ratio H(P_p)/H(C_p) = 1.022230
+    Winner: Paley
+
+  p=19:
+    H(P_p) = 1172695746915
+    H(C_p) = 1184212824763
+    Ratio H(P_p)/H(C_p) = 0.990274
+    Winner: Cyclic
+
+  p=23:
+    H(P_p) = 15760206976379349
+    H(C_p) = 16011537490557279
+    Ratio H(P_p)/H(C_p) = 0.984303
+    Winner: Cyclic
+
+
+Done!
