@@ -1,0 +1,147 @@
+======================================================================
+PART 1: EXHAUSTIVE α₂ STRUCTURE AT n=6
+======================================================================
+
+  α₂ = dp33 at n=6: True
+
+  dc3 → range of α₂ (exhaustive n=6):
+    dc3= 0: α₂ ∈ [0] (720 tournaments)
+    dc3= 1: α₂ ∈ [0] (960 tournaments)
+    dc3= 2: α₂ ∈ [0, 1] (2240 tournaments)
+    dc3= 3: α₂ ∈ [0] (2880 tournaments)
+    dc3= 4: α₂ ∈ [0, 1] (6240 tournaments)
+    dc3= 5: α₂ ∈ [0, 1] (3648 tournaments)
+    dc3= 6: α₂ ∈ [0, 1, 2] (8640 tournaments)
+    dc3= 7: α₂ ∈ [0, 1, 2] (4800 tournaments)
+    dc3= 8: α₂ ∈ [1, 2, 4] (2640 tournaments)
+
+======================================================================
+PART 2: MAX α₂ AS FUNCTION OF dc3
+======================================================================
+
+  At n=6: There are C(6,3)/2 = 10 complementary triple-pairs.
+  dp33 = #{pairs where BOTH triples are 3-cycles}
+  So dp33 ≤ 10.
+    dc3= 0: max(α₂) = 0
+    dc3= 1: max(α₂) = 0
+    dc3= 2: max(α₂) = 1
+    dc3= 3: max(α₂) = 0
+    dc3= 4: max(α₂) = 1
+    dc3= 5: max(α₂) = 1
+    dc3= 6: max(α₂) = 2
+    dc3= 7: max(α₂) = 2
+    dc3= 8: max(α₂) = 4
+
+======================================================================
+PART 3: COMPLEMENTARY 3-CYCLE ANALYSIS AT n=6
+======================================================================
+
+  bits=0: dc3=0, α₂=0
+
+  bits=100: dc3=1, α₂=0
+
+  bits=500: dc3=3, α₂=0
+
+  bits=1000: dc3=2, α₂=0
+
+======================================================================
+PART 4: DISJOINTNESS GRAPH AT n=7
+======================================================================
+  Disjointness graph on C(7,3)=35 triples:
+  Each vertex has degree 4 (choose 3 from 4 remaining vertices).
+  Total edges: 35*4/2 = 70.
+  α₂ = edges in induced subgraph on cyclic triples.
+  trial 0: dc3=13, α₂=12, dp33=12, density=0.154
+  trial 1: dc3=12, α₂=12, dp33=12, density=0.182
+  trial 2: dc3= 9, α₂=4, dp33=4, density=0.111
+  trial 3: dc3=10, α₂=8, dp33=8, density=0.178
+  trial 4: dc3= 7, α₂=2, dp33=2, density=0.095
+  trial 5: dc3=10, α₂=4, dp33=4, density=0.089
+  trial 6: dc3= 9, α₂=2, dp33=2, density=0.056
+  trial 7: dc3=10, α₂=7, dp33=7, density=0.156
+  trial 8: dc3=10, α₂=4, dp33=4, density=0.089
+  trial 9: dc3=10, α₂=5, dp33=5, density=0.111
+
+======================================================================
+PART 5: VERTEX COVERAGE SPREAD OF 3-CYCLES
+======================================================================
+
+  At n=7 (1000 samples):
+    corr(dc3, α₂) = 0.8631
+    corr(coverage, α₂) = 0.5606
+    corr(uniformity, α₂) = -0.6912
+
+  Partial correlation (α₂ ~ coverage | dc3):
+    dc3= 5: corr(coverage, α₂) = 0.3440 (n=36)
+    dc3= 6: corr(coverage, α₂) = 0.3040 (n=84)
+    dc3= 7: corr(coverage, α₂) = 0.4528 (n=98)
+    dc3= 8: corr(coverage, α₂) = 0.3454 (n=136)
+/home/e/.local/lib/python3.10/site-packages/numpy/lib/function_base.py:2897: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/e/.local/lib/python3.10/site-packages/numpy/lib/function_base.py:2898: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+    dc3= 9: corr(coverage, α₂) = nan (n=134)
+    dc3=10: corr(coverage, α₂) = nan (n=204)
+    dc3=11: corr(coverage, α₂) = nan (n=92)
+    dc3=12: corr(coverage, α₂) = nan (n=108)
+
+======================================================================
+PART 6: SCORE SEQUENCE AND COMPLEMENTARY PAIRS
+======================================================================
+
+  n=6 exhaustive:
+    22 distinct score sequences
+    score → dc3: 0/22 ambiguous
+    score → α₂:  7/22 ambiguous
+    (0, 1, 2, 3, 4, 5): dc3∈[0], α₂∈[0]
+    (0, 1, 2, 4, 4, 4): dc3∈[1], α₂∈[0]
+    (0, 1, 3, 3, 3, 5): dc3∈[1], α₂∈[0]
+    (0, 1, 3, 3, 4, 4): dc3∈[2], α₂∈[0]
+    (0, 2, 2, 2, 4, 5): dc3∈[1], α₂∈[0]
+    (0, 2, 2, 3, 3, 5): dc3∈[2], α₂∈[0]
+    (0, 2, 2, 3, 4, 4): dc3∈[3], α₂∈[0]
+    (0, 2, 3, 3, 3, 4): dc3∈[4], α₂∈[0]
+    (0, 3, 3, 3, 3, 3): dc3∈[5], α₂∈[0]
+    (1, 1, 1, 3, 4, 5): dc3∈[1], α₂∈[0]
+    (1, 1, 1, 4, 4, 4): dc3∈[2], α₂∈[1]
+    (1, 1, 2, 2, 4, 5): dc3∈[2], α₂∈[0]
+    (1, 1, 2, 3, 3, 5): dc3∈[3], α₂∈[0]
+    (1, 1, 2, 3, 4, 4): dc3∈[4], α₂∈[0, 1]
+    (1, 1, 3, 3, 3, 4): dc3∈[5], α₂∈[0, 1]
+    (1, 2, 2, 2, 3, 5): dc3∈[4], α₂∈[0]
+    (1, 2, 2, 2, 4, 4): dc3∈[5], α₂∈[0, 1]
+    (1, 2, 2, 3, 3, 4): dc3∈[6], α₂∈[0, 1, 2]
+    (1, 2, 3, 3, 3, 3): dc3∈[7], α₂∈[0, 1, 2]
+    (2, 2, 2, 2, 2, 5): dc3∈[5], α₂∈[0]
+    (2, 2, 2, 2, 3, 4): dc3∈[7], α₂∈[0, 1, 2]
+    (2, 2, 2, 3, 3, 3): dc3∈[8], α₂∈[1, 2, 4]
+
+======================================================================
+SUMMARY: GEOMETRY OF α₂
+======================================================================
+
+  1. α₂ = #{vertex-disjoint pairs of directed 3-cycles} (at n≤8)
+
+  2. At n=6: α₂ = #{complementary pair partitions where both are cyclic}
+     There are exactly 10 complementary pairs (partition of 6 into 3+3).
+     α₂ ranges from 0 to 4.
+
+  3. At n=7: α₂ = #{edges in the disjointness graph of 3-cycles}
+     The disjointness graph on C(7,3)=35 triples has degree 4.
+     α₂ ranges from 0 to ~12 depending on how many triples are cyclic
+     AND how they are arranged.
+
+  4. KEY FACT: dc3 does NOT determine α₂ because the ARRANGEMENT
+     of 3-cycles matters, not just their count.
+     Two tournaments with dc3=8 can have α₂=0 (all overlapping)
+     or α₂=6 (many disjoint).
+
+  5. Score sequence does NOT determine α₂ (at n≥6).
+     Score determines dc3 (classical formula), but the GEOMETRY
+     of where 3-cycles sit is not captured by scores alone.
+
+  6. This is why "knowing 3" (I(Ω,3)) adds information beyond
+     "knowing 2" (I(Ω,2)=H): the 3-evaluation captures the
+     intersection structure that α₂ encodes.
+
+Done.
