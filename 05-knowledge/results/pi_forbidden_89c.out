@@ -1,0 +1,277 @@
+======================================================================
+PART 1: Forbidden H Values — Full Analysis
+======================================================================
+
+  n=3: max H = 3
+    Possible odd values: [1, 3]
+    Actual H values:     [1, 3]
+    MISSING:             NONE
+
+  n=4: max H = 5
+    Possible odd values: [1, 3, 5]
+    Actual H values:     [1, 3, 5]
+    MISSING:             NONE
+
+  n=5: max H = 15
+    Possible odd values: [1, 3, 5, 7, 9, 11, 13, 15]
+    Actual H values:     [1, 3, 5, 9, 11, 13, 15]
+    MISSING:             [7]
+
+    For n=5: H = 1 + 2(t₃ + t₅)
+    H=7 means t₃ + t₅ = 3
+    Checking all tournaments for t₃ + t₅ = 3...
+    Distribution of t₃ + t₅:
+      t₃+t₅ = 0: 120 tournaments, H = 1
+      t₃+t₅ = 1: 120 tournaments, H = 3
+      t₃+t₅ = 2: 240 tournaments, H = 5
+      t₃+t₅ = 4: 240 tournaments, H = 9
+      t₃+t₅ = 5: 120 tournaments, H = 11
+      t₃+t₅ = 6: 120 tournaments, H = 13
+      t₃+t₅ = 7: 64 tournaments, H = 15
+
+    Joint distribution of (t₃, t₅):
+      (t₃=0, t₅=0): 120 tournaments, H = 1
+      (t₃=1, t₅=0): 120 tournaments, H = 3
+      (t₃=2, t₅=0): 240 tournaments, H = 5
+      (t₃=3, t₅=1): 240 tournaments, H = 9
+      (t₃=4, t₅=1): 120 tournaments, H = 11
+      (t₃=4, t₅=2): 120 tournaments, H = 13
+      (t₃=4, t₅=3): 40 tournaments, H = 15
+      (t₃=5, t₅=2): 24 tournaments, H = 15
+
+  n=6: max H = 45
+    Possible odd values: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45]
+    Actual H values:     [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+    MISSING:             [7, 21, 35, 39]
+
+======================================================================
+PART 2: WHY is t₃+t₅=3 impossible at n=5?
+======================================================================
+
+All (t₃, t₅) pairs at n=5:
+  t₃   t₅    count      H
+   0    0      120      1
+   1    0      120      3
+   2    0      240      5
+   3    1      240      9
+   4    1      120     11
+   4    2      120     13
+   4    3       40     15
+   5    2       24     15
+
+======================================================================
+PART 3: The Constraint — t₃ Determines t₅ at n=5?
+======================================================================
+
+t₃ → possible t₅ values:
+  t₃=0: t₅ ∈ [0]
+  t₃=1: t₅ ∈ [0]
+  t₃=2: t₅ ∈ [0]
+  t₃=3: t₅ ∈ [1]
+  t₃=4: t₅ ∈ [1, 2, 3]
+  t₃=5: t₅ ∈ [2]
+
+Achievable t₃+t₅: [0, 1, 2, 4, 5, 6, 7]
+Missing: [3]
+
+======================================================================
+PART 4: Missing H at n=6 — What Constraint?
+======================================================================
+
+Joint (t₃+t₅, d₃₃) distribution at n=6:
+
+   H    C=t₃+t₅    d₃₃    count
+   1          0      0      720
+   3          1      0      960
+   5          2      0     2160
+   9          4      0     2880
+   9          2      1       80
+  11          5      0     1440
+  13          6      0     1440
+  15          7      0     2208
+  17          8      0      720
+  17          6      1      720
+  19          9      0     1440
+  23         11      0     1440
+  23          9      1     1440
+  25         12      0     1440
+  27         11      1      480
+  29         10      2      720
+  29         12      1     2160
+  31         13      1     1440
+  33         16      0      480
+  33         12      2      720
+  33         14      1     1440
+  37         14      2     2160
+  37         16      1     1440
+  41         16      2      720
+  43         19      1     1440
+  45         14      4      240
+  45         20      1      240
+
+Missing H values at n=6: [7, 21, 35, 39]
+  H=7: need C+2d=3, possible (C,d) = [(1, 1), (3, 0)]
+    (C=1, d=1): MISSING
+    (C=3, d=0): MISSING
+  H=21: need C+2d=10, possible (C,d) = [(0, 5), (2, 4), (4, 3), (6, 2), (8, 1), (10, 0)]
+    (C=0, d=5): MISSING
+    (C=2, d=4): MISSING
+    (C=4, d=3): MISSING
+    (C=6, d=2): MISSING
+    (C=8, d=1): MISSING
+    (C=10, d=0): MISSING
+  H=35: need C+2d=17, possible (C,d) = [(1, 8), (3, 7), (5, 6), (7, 5), (9, 4), (11, 3), (13, 2), (15, 1), (17, 0)]
+    (C=1, d=8): MISSING
+    (C=3, d=7): MISSING
+    (C=5, d=6): MISSING
+    (C=7, d=5): MISSING
+    (C=9, d=4): MISSING
+    (C=11, d=3): MISSING
+    (C=13, d=2): MISSING
+    (C=15, d=1): MISSING
+    (C=17, d=0): MISSING
+  H=39: need C+2d=19, possible (C,d) = [(1, 9), (3, 8), (5, 7), (7, 6), (9, 5), (11, 4), (13, 3), (15, 2), (17, 1), (19, 0)]
+    (C=1, d=9): MISSING
+    (C=3, d=8): MISSING
+    (C=5, d=7): MISSING
+    (C=7, d=6): MISSING
+    (C=9, d=5): MISSING
+    (C=11, d=4): MISSING
+    (C=13, d=3): MISSING
+    (C=15, d=2): MISSING
+    (C=17, d=1): MISSING
+    (C=19, d=0): MISSING
+
+======================================================================
+PART 5: Score Sequence → H Mapping
+======================================================================
+
+  n=5: Score sequence → H values:
+    (0, 1, 2, 3, 4): H ∈ [1] (120 tournaments)
+    (0, 1, 3, 3, 3): H ∈ [3] (40 tournaments)
+    (0, 2, 2, 2, 4): H ∈ [3] (40 tournaments)
+    (0, 2, 2, 3, 3): H ∈ [5] (120 tournaments)
+    (1, 1, 1, 3, 4): H ∈ [3] (40 tournaments)
+    (1, 1, 2, 2, 4): H ∈ [5] (120 tournaments)
+    (1, 1, 2, 3, 3): H ∈ [9] (240 tournaments)
+    (1, 2, 2, 2, 3): H ∈ [11, 13, 15] (280 tournaments)
+    (2, 2, 2, 2, 2): H ∈ [15] (24 tournaments)
+
+  n=6: Score sequence → H values:
+    (0, 1, 2, 3, 4, 5): H ∈ [1] (720 tournaments)
+    (0, 1, 2, 4, 4, 4): H ∈ [3] (240 tournaments)
+    (0, 1, 3, 3, 3, 5): H ∈ [3] (240 tournaments)
+    (0, 1, 3, 3, 4, 4): H ∈ [5] (720 tournaments)
+    (0, 2, 2, 2, 4, 5): H ∈ [3] (240 tournaments)
+    (0, 2, 2, 3, 3, 5): H ∈ [5] (720 tournaments)
+    (0, 2, 2, 3, 4, 4): H ∈ [9] (1440 tournaments)
+    (0, 2, 3, 3, 3, 4): H ∈ [11, 13, 15] (1680 tournaments)
+    (0, 3, 3, 3, 3, 3): H ∈ [15] (144 tournaments)
+    (1, 1, 1, 3, 4, 5): H ∈ [3] (240 tournaments)
+    (1, 1, 1, 4, 4, 4): H ∈ [9] (80 tournaments)
+    (1, 1, 2, 2, 4, 5): H ∈ [5] (720 tournaments)
+    (1, 1, 2, 3, 3, 5): H ∈ [9] (1440 tournaments)
+    (1, 1, 2, 3, 4, 4): H ∈ [15, 17] (2880 tournaments)
+    (1, 1, 3, 3, 3, 4): H ∈ [19, 23, 27] (1680 tournaments)
+    (1, 2, 2, 2, 3, 5): H ∈ [11, 13, 15] (1680 tournaments)
+    (1, 2, 2, 2, 4, 4): H ∈ [19, 23, 27] (1680 tournaments)
+    (1, 2, 2, 3, 3, 4): H ∈ [23, 25, 29, 31, 33, 37] (8640 tournaments)
+    (1, 2, 3, 3, 3, 3): H ∈ [33, 37] (2400 tournaments)
+    (2, 2, 2, 2, 2, 5): H ∈ [15] (144 tournaments)
+    (2, 2, 2, 2, 3, 4): H ∈ [33, 37] (2400 tournaments)
+    (2, 2, 2, 3, 3, 3): H ∈ [41, 43, 45] (2640 tournaments)
+
+======================================================================
+PART 6: The Walsh Spectrum — Degree Structure of H
+======================================================================
+
+  n=3 (m=3): Walsh weight spectrum:
+    weight 0: energy = 144, fraction = 0.750000
+    weight 2: energy = 48, fraction = 0.250000
+    Odd-weight energy: 0 (should be 0 by H=H(T^op))
+
+  n=4 (m=6): Walsh weight spectrum:
+    weight 0: energy = 36864, fraction = 0.750000
+    weight 2: energy = 12288, fraction = 0.250000
+    Odd-weight energy: 0 (should be 0 by H=H(T^op))
+
+  n=5 (m=10): Walsh weight spectrum:
+    weight 0: energy = 58982400, fraction = 0.759494
+    weight 2: energy = 17694720, fraction = 0.227848
+    weight 4: energy = 983040, fraction = 0.012658
+    Odd-weight energy: 0 (should be 0 by H=H(T^op))
+
+======================================================================
+PART 7: H is a QUADRATIC Boolean Function (for small n)?
+======================================================================
+
+  n=5 (m=10): Full weight spectrum:
+    weight 0: 1 nonzero, energy fraction = 0.759494, max|ĥ| = 7680
+    weight 2: 30 nonzero, energy fraction = 0.227848, max|ĥ| = 768
+    weight 4: 60 nonzero, energy fraction = 0.012658, max|ĥ| = 128
+
+  *** Weight 4 appears at n=5! H is NOT quadratic for n≥5 ***
+
+======================================================================
+PART 8: NEW OEIS CANDIDATE SEQUENCES
+======================================================================
+
+NEW OEIS CANDIDATE SEQUENCES:
+
+1. Σ_T H(T)² for tournaments on n vertices:
+   a(n) = sum over all 2^{C(n,2)} tournaments T of H(T)²
+   Values: a(3)=24, a(4)=768, a(5)=75840, a(6)=21381120
+   Not in OEIS as of 2026-03-14.
+
+2. f(n) = Σ_{compatible (π,σ)} 2^{k(π,σ)} / n!
+   where (π,σ) compatible means the union of directed arcs forms
+   a consistent tournament, and k = shared arcs.
+   Values: f(3)=8, f(4)=32, f(5)=158, f(6)=928, f(7)=6350
+   Not in OEIS.
+
+3. max H(T) for tournaments on n vertices (odd n):
+   3, 5, 15, 45, ... (max = (2n-1)!! / something?)
+   Actually: max H at n=3 is 3, n=4 is 5, n=5 is 15, n=6 is 45
+   = 3, 5, 15, 45 = 3·1, 5·1, 5·3, 5·9
+   Ratios: 5/3, 3, 3 → seems to approach 3
+   Actually: 3, 5, 15, 45 are in OEIS (likely A001147 double factorials or similar)
+   3 = 3, 5 = 5, 15 = 3·5, 45 = 3·5·3
+   Let me check: 45/15 = 3, 15/5 = 3, 5/3 = 5/3
+   NOT a clean ratio.
+
+4. Number of distinct H values for tournaments on n vertices:
+   2, 3, 7, 19, ...
+   OEIS candidate.
+
+5. Missing H values (number of odd integers in [1, max H] not achieved):
+   0, 0, 1, 4, ...
+
+6. Signed Euler characteristic χ = #{H≡1 mod 4} - #{H≡3 mod 4}:
+   4, 32, 416, 8192, ...
+
+  n=3: max H = 3, #distinct = 2, #missing = 0
+  n=4: max H = 5, #distinct = 3, #missing = 0
+  n=5: max H = 15, #distinct = 7, #missing = 1
+  n=6: max H = 45, #distinct = 19, #missing = 4
+
+======================================================================
+PART 9: Why H is Even-Weight (degree 2k) on Q_m
+======================================================================
+
+THEOREM (Even-Weight Walsh Spectrum):
+H(T) = H(T^op) implies that the Walsh-Hadamard transform ĥ(S) = 0
+for all S with |S| odd.
+
+PROOF: T^op flips all m bits. Under Walsh transform, this multiplies
+χ_S by (-1)^|S|. Since H is invariant under complement, ĥ(S) must
+vanish for odd |S|.
+
+CONSEQUENCE: H is a polynomial of EVEN degree in the ±1 variables.
+The "lowest nontrivial" contribution is at weight 2 (pairs of arcs).
+
+At n=3,4: H is EXACTLY degree 2 (only weight 0 and 2).
+At n=5: Weight 4 also appears (H becomes degree 4).
+
+======================================================================
+END — opus-2026-03-14-S89c forbidden
+======================================================================
