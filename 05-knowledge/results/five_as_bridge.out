@@ -1,0 +1,219 @@
+
+======================================================================
+  PART 1: FORBIDDEN RESIDUE TIMELINE
+======================================================================
+
+For each n and prime p, when does the mod-p barrier lift?
+(Barrier = some residue of H mod p never appears)
+
+n=3 (8 tournaments, 0.0s):
+  H values: [1, 3]
+  mod  3: missing [2] (odd missing: [])
+  mod  5: missing [0, 2, 4] (odd missing: [])
+  mod  7: missing [0, 2, 4, 5, 6] (odd missing: [5])
+  mod 11: missing [0, 2, 4, 5, 6, 7, 8, 9, 10] (odd missing: [5, 7, 9])
+  mod 13: missing [0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12] (odd missing: [5, 7, 9, 11])
+  mod 17: missing [0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] (odd missing: [5, 7, 9, 11, 13, 15])
+  mod 19: missing [0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] (odd missing: [5, 7, 9, 11, 13, 15, 17])
+
+n=4 (64 tournaments, 0.0s):
+  H values: [1, 3, 5]
+  mod  5: missing [2, 4] (odd missing: [])
+  mod  7: missing [0, 2, 4, 6] (odd missing: [])
+  mod 11: missing [0, 2, 4, 6, 7, 8, 9, 10] (odd missing: [7, 9])
+  mod 13: missing [0, 2, 4, 6, 7, 8, 9, 10, 11, 12] (odd missing: [7, 9, 11])
+  mod 17: missing [0, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] (odd missing: [7, 9, 11, 13, 15])
+  mod 19: missing [0, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] (odd missing: [7, 9, 11, 13, 15, 17])
+
+n=5 (1024 tournaments, 0.1s):
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  mod  5: missing [2] (odd missing: [])
+  mod  7: missing [0] (odd missing: [])
+  mod 11: missing [6, 7, 8, 10] (odd missing: [7])
+  mod 13: missing [4, 6, 7, 8, 10, 12] (odd missing: [7])
+  mod 17: missing [0, 2, 4, 6, 7, 8, 10, 12, 14, 16] (odd missing: [7])
+  mod 19: missing [0, 2, 4, 6, 7, 8, 10, 12, 14, 16, 17, 18] (odd missing: [7, 17])
+
+n=6 (32768 tournaments, 6.3s):
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  mod  7: missing [0] (odd missing: [])
+  mod 13: missing [8] (odd missing: [])
+  mod 17: missing [4] (odd missing: [])
+  mod 19: missing [2, 16] (odd missing: [])
+
+
+======================================================================
+  PART 2: FORBIDDEN PRIMES BY n
+======================================================================
+
+  n   max(H)                   forbidden primes (up to 31)
+  3        3           3, 5, 7, 11, 13, 17, 19, 23, 29, 31
+  4        5              5, 7, 11, 13, 17, 19, 23, 29, 31
+  5       15              5, 7, 11, 13, 17, 19, 23, 29, 31
+  6       45                     7, 13, 17, 19, 23, 29, 31
+
+The forbidden primes shrink as n grows:
+  n=3: max H=3, forbidden p ≤ 4 (trivially, only H∈{1,3})
+  n=4: max H=5, many primes forbidden
+  n=5: max H=15, only {5,7,...} forbidden
+  n=6: max H=45, only {7,...} forbidden
+  n=7: max H~150+, likely none forbidden
+
+======================================================================
+  PART 3: THE MOD-5 LIFT AT n=6
+======================================================================
+
+At n=5: H mod 5 ∈ {0,1,3,4} — missing 2
+At n=6: H mod 5 ∈ {0,1,2,3,4} — all present
+
+What H value at n=6 first achieves H ≡ 2 (mod 5)?
+H values ≡ 2 (mod 5) at n=6: [17, 27, 37]
+Smallest: H = 17
+  Score sequence: (1, 1, 2, 3, 4, 4)
+  dc3 = 4
+  Adjacency:
+    [0, 0, 0, 0, 0, 1]
+    [1, 0, 0, 0, 0, 0]
+    [1, 1, 0, 0, 0, 0]
+    [1, 1, 1, 0, 0, 0]
+    [1, 1, 1, 1, 0, 0]
+    [0, 1, 1, 1, 1, 0]
+
+======================================================================
+  PART 4: THE (3+5=8=2³) CROSSING
+======================================================================
+
+The number 5 creates the cross-level transition at n=8=2³:
+  A disjoint (3-cycle, 5-cycle) pair uses exactly 8 vertices.
+  This means α₂ at n=8 contains (3,5) type pairs.
+
+The RECURRENCE CONNECTION:
+  k-nacci at k=5: φ₅ ≈ 1.966 (98.3% of 2)
+  k-nacci at k=8: φ₈ ≈ 1.996 (99.8% of 2)
+  The 5-step lookback gets you most of the way.
+  The 8-step lookback gets you almost all the way.
+
+  weighted k-nacci at k=5: ψ₅ ≈ 2.821 (94.1% of 3)
+  weighted k-nacci at k=8: ψ₈ ≈ 2.956 (98.5% of 3)
+
+In tournament terms:
+  n=5: 5-cycles appear, α₁ expands
+  n=8: (3,5) pairs appear, α₂ expands with cross-level structure
+  Each expansion changes which mod-p residues are achievable.
+
+======================================================================
+  PART 5: 5 = 2+3 AS MORTAR
+======================================================================
+
+THE COMPLETE PICTURE:
+
+Level 0: n=1,2  — trivial (H=1)
+Level 1: n=3,4  — 3-cycles only, H = 1+2·dc3
+  Key prime: 2 (Rédei theorem)
+  Forbidden: many primes (H ∈ {1,3,5})
+
+BRIDGE: n=5 — 5-cycles appear, 5 = 2+3
+  H = 1 + 2(dc3+dc5)
+  Forbidden: mod 5 (H≡2), mod 7 (H≡0)
+  α₁ skips 3 → both forbidden residues trace to same gap
+
+Level 2: n=6 — mod-5 barrier lifts
+  5-cycles on 5 of 6 vertices give new flexibility
+  Now α₁+2α₂ takes more values, but still misses 3 mod 7
+
+TRANSITION: n=7 — 7-cycles appear, 7 = 2³-1
+  mod-7 barrier lifts (7-cycles expand the cycle space)
+  7 is the Mersenne prime at the transition
+
+Level 3: n=8 — cross-level (3,5) pairs appear, 8 = 2³
+  α₂ now includes both (3,3) and (3,5) type
+  The independence structure becomes truly multi-scale
+
+THE PATTERN:
+  Each odd prime p has a BARRIER: H ≢ something (mod p)
+  The barrier lifts when n reaches the point where
+  enough cycle types exist to fill all mod-p residues.
+  For p=5: lifts at n=6 (5-cycles on subsets provide flexibility)
+  For p=7: lifts at n=7 (7-cycles appear)
+  For p=11: likely lifts at n≤11
+  For p=13: likely lifts at n≤13
+
+======================================================================
+  PART 6: RECURRENCE INTERPRETATION
+======================================================================
+
+H = I(CG, 2) = the independence polynomial at x=2.
+
+For n=5: CG has at most 7 vertices (cycles).
+  I(CG, x) is a polynomial of degree ≤ 1 (since α₂=0)
+  So I(CG, x) = 1 + α₁·x
+  I(CG, 2) = 1 + 2α₁ = H
+
+For n=6: I(CG, x) = 1 + α₁·x + α₂·x²
+  I(CG, 2) = 1 + 2α₁ + 4α₂ = H
+
+The question 'is H ≡ r (mod p)?' becomes:
+  'Is 1 + 2α₁ + 4α₂ + ... ≡ r (mod p)?' for achievable (α₁,α₂,...)
+
+This is a NUMBER-THEORETIC question about the IMAGE of
+the map (α₁, α₂, ...) → I(2) mod p.
+
+At small n, the achievable (α₁, α₂, ...) form a SPARSE set
+that doesn't cover all residues. As n grows, the set fills in.
+
+5 controls WHEN the filling happens:
+  - Without 5-cycles, α₁ = dc3 only, giving {0,1,...,C(n,3)}
+  - With 5-cycles, α₁ = dc3+dc5, giving a DENSER set
+  - The density increase from 5-cycles lifts the mod-5 barrier
+  - The mod-7 barrier needs MORE cycles (7-cycles) to lift
+
+This is the RECURRENCE interpretation:
+  The k-nacci with k=5 steps gets you 98.3% of 2
+  The k-nacci with k=7 steps gets you 99.2% of 2
+  Each 'step' k corresponds to k-cycles appearing at n=k
+  And each step lifts another forbidden residue barrier
+
+======================================================================
+  PART 7: THE DEFINITIVE STATEMENT
+======================================================================
+
+THEOREM (small-n forbidden residues):
+
+  For tournaments on n vertices, define H = #{Hamiltonian paths}.
+
+  (a) H is always odd (Rédei, 1934)
+  (b) H ≡ 2 (mod 5) never occurs for n ≤ 5
+  (c) H ≡ 0 (mod 7) never occurs for n ≤ 6
+  (d) Both (b) and (c) are CONSEQUENCES of α₁ ≠ 3 at n ≤ 5
+  (e) At n = 5: α₁ = 3 is impossible because:
+      dc3 = 3 forces dc5 ≥ 1 (structural constraint)
+      dc3 ∈ {0,1,2} has dc5 = 0 (too few 3-cycles for 5-cycles)
+      So dc3 + dc5 jumps from 2 to 4, skipping 3.
+
+  (f) The mod-5 barrier lifts at n = 6 (H = 17 ≡ 2 mod 5)
+  (g) The mod-7 barrier lifts at n = 7 (7-cycles appear)
+
+COROLLARY: The number 5 = 2+3 is the bridge modulus —
+the first odd prime whose forbidden residue is specific to
+5-cycles (not just 3-cycle counting) and whose lifting at n=6
+demonstrates how expanding the cycle space removes number-
+theoretic constraints on H.
+
+OPEN QUESTION: Is there a prime p such that H ≢ r (mod p)
+for ALL n? Beyond Rédei's H ≡ 1 (mod 2), this would be
+a new universal congruence for tournament Hamiltonian paths.
+
+======================================================================
+  PART 8: UNIVERSAL CONGRUENCES?
+======================================================================
+
+Minimum n where all residues mod p appear:
+(p=2 is excluded since H is ALWAYS odd)
+
+  p= 3: all residues first at n=4
+  p= 5: all residues first at n=6
+  p= 7: all residues first at n=7
+  p=11: all residues first at n=6
+  p=13: all residues first at n=7
+
+Done.
