@@ -1,0 +1,150 @@
+======================================================================
+VASSILIEV-TYPE INVARIANTS FOR TOURNAMENTS
+kind-pasteur-2026-03-14-S69
+======================================================================
+
+======================================================================
+PART 1: FINITE-TYPE ORDER OF H(T)
+  Check: for each k, does Delta_S H = 0 for ALL |S|=k+1?
+======================================================================
+
+--- n = 3 ---
+  k=1: 12/24 nonzero, max|Delta|=2
+  k=2: 24/24 nonzero, max|Delta|=2
+  k=3: ALL ZERO (8 tests). H is type 2!
+
+--- n = 4 ---
+  k=1: 240/384 nonzero, max|Delta|=4
+  k=2: 768/960 nonzero, max|Delta|=2
+  k=3: ALL ZERO (1280 tests). H is type 2!
+
+--- n = 5 ---
+  k=1: 769/1000 nonzero, max|Delta|=12
+  k=2: 3742/4500 nonzero, max|Delta|=6
+  k=3: 1910/5000 nonzero, max|Delta|=4
+  k=4: 1400/5000 nonzero, max|Delta|=2
+  k=5: ALL ZERO (5000 tests). H is type 4!
+
+======================================================================
+PART 2: k=1 FINITE DIFFERENCE (ARC-FLIP DELTAS)
+  Delta_e H = H(T) - H(T flip e)
+  This is our familiar arc-flip spectrum
+======================================================================
+
+--- n = 4 ---
+  Delta_e H distribution: {-4: 24, -2: 96, 0: 144, 2: 96, 4: 24}
+  All deltas even: True
+  Symmetric: True
+
+--- n = 5 ---
+  Delta_e H distribution: {-12: 40, -8: 360, -6: 600, -4: 1200, -2: 1800, 0: 2240, 2: 1800, 4: 1200, 6: 600, 8: 360, 12: 40}
+  All deltas even: True
+  Symmetric: True
+
+======================================================================
+PART 3: k=2 FINITE DIFFERENCE
+  Delta_{e1,e2} H = H(T) - H(T^e1) - H(T^e2) + H(T^{e1,e2})
+  If all zero, H would be of type 1 (linear in arc flips)
+======================================================================
+
+--- n = 4 ---
+  Total tests: 960
+  Delta_2 distribution: {-2: 384, 0: 192, 2: 384}
+  All zero: False
+
+  Adjacent vs non-adjacent arc pairs:
+    Adjacent arcs (shared vertex): {-2: 384, 2: 384}
+    Non-adjacent arcs (disjoint): {0: 192}
+
+--- n = 5 ---
+  Total tests: 9000
+  Delta_2 distribution: {-6: 161, -4: 1218, -2: 2493, 0: 1542, 2: 2321, 4: 1124, 6: 141}
+  All zero: False
+
+  Adjacent vs non-adjacent arc pairs:
+    Adjacent arcs (shared vertex): {-6: 83, -4: 564, -2: 911, 2: 861, 4: 508, 6: 73}
+    Non-adjacent arcs (disjoint): {-4: 61, -2: 317, 0: 758, 2: 307, 4: 57}
+
+======================================================================
+PART 4: DISJOINT ARC PAIRS — IS H ADDITIVE ON DISJOINT FLIPS?
+  If Delta_{e1,e2} H = 0 for disjoint arcs, then H decomposes
+  as a sum of 'local' contributions from vertex neighborhoods
+======================================================================
+
+--- n = 5 ---
+  Total disjoint pair tests: 7500
+  Disjoint Delta_2 distribution: {-4: 293, -2: 1652, 0: 3615, 2: 1648, 4: 292}
+  All zero (additive on disjoint flips): False
+
+--- n = 6 ---
+  Total disjoint pair tests: 10035
+  Disjoint Delta_2 distribution: {-16: 20, -12: 32, -10: 88, -8: 203, -6: 396, -4: 1079, -2: 1785, 0: 2901, 2: 1776, 4: 1042, 6: 383, 8: 209, 10: 66, 12: 43, 16: 12}
+  All zero (additive on disjoint flips): False
+
+======================================================================
+PART 5: 3-CYCLE REVERSAL AS 3-ARC FLIP
+  Reversing a 3-cycle = flipping 3 arcs simultaneously
+  This is the 'Reidemeister R3' move
+  Already verified: H-invariant at n=4, NOT at n>=5
+  New question: Delta_3 on 3-cycle arc triples?
+======================================================================
+
+--- n = 5 ---
+  3-cycle triples: Delta_3 distribution: {0: 426}
+  Non-cycle triples: Delta_3 distribution: {0: 1574}
+  3-cycle Delta_3 all zero: True
+
+======================================================================
+PART 6: OMEGA DIMENSION PALINDROME (POINCARE DUALITY)
+  For Paley T_7: Omega = [7,21,42,63,63,42,21] — palindromic!
+  For transitive: Omega = [n, C(n,2), ..., 1] = Pascal row
+  Question: which tournaments have palindromic Omega?
+======================================================================
+
+--- n = 4 ---
+  Palindromic Omega: 0/64
+
+  H -> Omega palindromy:
+    H=  1: 0/24 palindromic, 1 distinct Omega
+    H=  3: 0/16 palindromic, 1 distinct Omega
+    H=  5: 0/24 palindromic, 1 distinct Omega
+
+--- n = 5 ---
+  Palindromic Omega: 24/1024
+
+  H -> Omega palindromy:
+    H=  1: 0/120 palindromic, 1 distinct Omega
+    H=  3: 0/120 palindromic, 1 distinct Omega
+    H=  5: 0/240 palindromic, 1 distinct Omega
+    H=  9: 0/240 palindromic, 2 distinct Omega
+    H= 11: 0/120 palindromic, 1 distinct Omega
+    H= 13: 0/120 palindromic, 1 distinct Omega
+    H= 15: 24/64 palindromic, 2 distinct Omega
+
+--- n = 6 ---
+  Palindromic Omega: 0/2000
+
+  H -> Omega palindromy:
+    H=  1: 0/84 palindromic, 1 distinct Omega
+    H=  3: 0/103 palindromic, 1 distinct Omega
+    H=  5: 0/207 palindromic, 1 distinct Omega
+    H=  9: 0/253 palindromic, 3 distinct Omega
+    H= 11: 0/106 palindromic, 1 distinct Omega
+    H= 13: 0/106 palindromic, 1 distinct Omega
+    H= 15: 0/158 palindromic, 3 distinct Omega
+    H= 17: 0/105 palindromic, 2 distinct Omega
+    H= 19: 0/88 palindromic, 1 distinct Omega
+    H= 23: 0/158 palindromic, 2 distinct Omega
+    H= 25: 0/70 palindromic, 1 distinct Omega
+    H= 27: 0/29 palindromic, 1 distinct Omega
+    H= 29: 0/144 palindromic, 3 distinct Omega
+    H= 31: 0/72 palindromic, 1 distinct Omega
+    H= 33: 0/107 palindromic, 3 distinct Omega
+    H= 37: 0/144 palindromic, 3 distinct Omega
+    H= 41: 0/18 palindromic, 1 distinct Omega
+    H= 43: 0/36 palindromic, 1 distinct Omega
+    H= 45: 0/12 palindromic, 2 distinct Omega
+
+======================================================================
+DONE
+======================================================================
