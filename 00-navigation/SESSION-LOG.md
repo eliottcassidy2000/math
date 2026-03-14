@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71n — 2026-03-14: Projective-Algebraic Geometry Deep Dive — Seven Dualities
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71m
+**Summary of work:** Five deep scripts exploring tournament theory through projective and algebraic geometry. Unified seven dualities through the Segre embedding. Discovered: Walsh basis = Segre coordinate basis (proved), H is multiplicative under direct sum (partition function), all multilinear coefficients are ±2^k (binary polynomial), Gram matrix B = -2·D^T D for n≤4, Path-Star sign rule (100% for all n tested), score determines H for n≤4, |grad H|^2 constant at n=4, Cayley hyperdeterminant Det(H)=48≠0, decomposable↔low H / indecomposable↔high H. H(T)=H(T^op) proved universal by path reversal.
+**New contributions:**
+- HYP-1450 through HYP-1461 (12 new hypotheses, all confirmed)
+- Scripts: projective_algebraic_deep_S71n.py through deep5_S71n.py
+- Seven dualities identified: projective, complement, Walsh-Fourier, OCF, Grassmann, Segre-Veronese, statistical mechanics
+- Correspondence table: 16-row projective↔algebraic dictionary
+- Grand synthesis: tournament as 8 simultaneous mathematical objects
+- Incidence geometry: B[i,j] = -2·(D^T D)[i,j] relates Gram matrix to oriented incidence
+- Binary coefficient theorem: ALL c_S = ±2^k
+- Path-Star dichotomy: path config → positive, star → negative
+**Unresolved threads:**
+- Why do all multilinear coefficients have odd part = 1? (deeper 2-adic structure)
+- B ≠ -2·D^T D at n=5 for 9 pairs — what is the correction term?
+- Score+t3 fails at n=5,6 — what minimal set of invariants determines H?
+- The 7 dualities — is there an 8th (motivic/categorical)?
+- Prove |grad H|^2 = 4·m at n=4 algebraically
+- Tropical discriminant of H — when is the bend locus interesting?
+
 ## opus-2026-03-14-S89 (continuation) — 2026-03-14: Morse Theory, Upset Monotonicity, Fibonacci Period-6
 
 **Account:** opus
