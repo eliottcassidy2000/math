@@ -1,0 +1,51 @@
+======================================================================
+MINIMAL STATE FOR DETERMINISTIC STRIP TRANSITIONS
+kind-pasteur-2026-03-14-S78
+======================================================================
+
+======================================================================
+n = 4: testing minimal state candidates
+======================================================================
+  parent_class                            : deterministic=False, max_ambiguity=3, n_ambiguous=2/2
+  parent_class + strip                    : deterministic=False, max_ambiguity=2, n_ambiguous=2/4
+  parent_class + score_top + strip        : deterministic=False, max_ambiguity=2, n_ambiguous=2/4
+  parent_scores + strip                   : deterministic=False, max_ambiguity=2, n_ambiguous=2/4
+  parent_mask + strip                     : deterministic=True, max_ambiguity=1, n_ambiguous=0/8
+  boundary + strip                        : deterministic=False, max_ambiguity=2, n_ambiguous=2/4
+
+  parent_class + boundary + strip: deterministic=False
+
+======================================================================
+n = 5: testing minimal state candidates
+======================================================================
+  parent_class                            : deterministic=False, max_ambiguity=7, n_ambiguous=4/4
+  parent_class + strip                    : deterministic=False, max_ambiguity=5, n_ambiguous=12/12
+  parent_class + score_top + strip        : deterministic=False, max_ambiguity=5, n_ambiguous=12/12
+  parent_scores + strip                   : deterministic=False, max_ambiguity=5, n_ambiguous=12/12
+  parent_mask + strip                     : deterministic=True, max_ambiguity=1, n_ambiguous=0/64
+  boundary + strip                        : deterministic=False, max_ambiguity=6, n_ambiguous=8/8
+
+  parent_class + boundary + strip: deterministic=False
+
+======================================================================
+PART 2: THE BOUNDARY STATE — WHAT IT TELLS US
+  The boundary = last row of parent adjacency matrix
+  = how vertex n-1 beats/loses to vertices 1..n-2
+  Combined with parent class, this determines child class
+======================================================================
+
+  n=5: Boundaries per parent class:
+    class 0: 1 distinct boundaries
+      (1, 1, 1, 0) (out-degree from top = 3)
+    class 1: 1 distinct boundaries
+      (1, 0, 1, 0) (out-degree from top = 2)
+    class 2: 3 distinct boundaries
+      (0, 0, 1, 0) (out-degree from top = 1)
+      (0, 1, 1, 0) (out-degree from top = 2)
+      (1, 0, 1, 0) (out-degree from top = 2)
+    class 3: 1 distinct boundaries
+      (1, 1, 1, 0) (out-degree from top = 3)
+
+======================================================================
+DONE
+======================================================================
