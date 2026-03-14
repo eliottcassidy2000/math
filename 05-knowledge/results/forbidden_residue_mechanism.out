@@ -1,0 +1,320 @@
+======================================================================
+PART 1: WHY α₂ = 0 AT n=5
+======================================================================
+
+  α₂ = number of vertex-disjoint PAIRS of directed odd cycles.
+
+  At n=5, the smallest pair needs:
+  - Two 3-cycles: needs 6 vertices (3+3). But n=5 < 6. IMPOSSIBLE!
+  - A 3-cycle + 5-cycle: needs 3+5=8 vertices. IMPOSSIBLE!
+
+  Therefore α₂ = 0 at n=5. Always.
+
+  This means I(x) = 1 + α₁·x at n=5 (linear!).
+  And H = 1 + 2α₁, so α₁ = (H-1)/2.
+
+  THE REASON: n=5 is too small for vertex-disjoint pairs.
+  First α₂ > 0 at n=6 (two disjoint 3-cycles).
+
+  H values at n=5: [1, 3, 5, 9, 11, 13, 15]
+  α₁ values: [0, 1, 2, 4, 5, 6, 7]
+  H mod 5: [0, 1, 3, 4]
+  Missing mod 5: [2]
+
+======================================================================
+PART 2: THE α₁ GAP — WHY 3 IS MISSING
+======================================================================
+  Achievable (dc3, dc5) pairs at n=5:
+   dc3  dc5   α₁    H  H%5  H%7  count
+     0    0    0    1    1    1    120
+     1    0    1    3    3    3    120
+     2    0    2    5    0    5    240
+     3    1    4    9    4    2    240
+     4    1    5   11    1    4    120
+     4    2    6   13    3    6    120
+     4    3    7   15    0    1     40
+     5    2    7   15    0    1     24
+
+  α₁ values that DON'T appear: [3]
+
+  WHY α₁=3 is impossible:
+  Would need (dc3+dc5)=3, which requires one of:
+    (3,0): dc3=3 forces dc5≥1 (proven in S73)
+    (2,1): dc3=2 with dc5=1? Let's check...
+
+  Score sequence → (dc3, dc5) map:
+    (0, 1, 2, 3, 4): dc3={0}, dc5={0}, α₁={0}
+    (0, 1, 3, 3, 3): dc3={1}, dc5={0}, α₁={1}
+    (0, 2, 2, 2, 4): dc3={1}, dc5={0}, α₁={1}
+    (0, 2, 2, 3, 3): dc3={2}, dc5={0}, α₁={2}
+    (1, 1, 1, 3, 4): dc3={1}, dc5={0}, α₁={1}
+    (1, 1, 2, 2, 4): dc3={2}, dc5={0}, α₁={2}
+    (1, 1, 2, 3, 3): dc3={3}, dc5={1}, α₁={4}
+    (1, 2, 2, 2, 3): dc3={4}, dc5={1, 2, 3}, α₁={5, 6, 7}
+    (2, 2, 2, 2, 2): dc3={5}, dc5={2}, α₁={7}
+
+======================================================================
+PART 3: dc3 IS DETERMINED BY SCORE SEQUENCE
+======================================================================
+
+  At n=5, the number of directed 3-cycles is:
+    dc3 = C(5,3) - Σᵢ C(sᵢ, 2)
+  where s₁,...,s₅ is the score sequence (sorted).
+
+  This is because each triple of vertices either:
+  - Has a 3-cycle (if no vertex dominates the other two)
+  - Has a transitive triple (if some vertex beats both others)
+
+  The transitive triples are counted by Σ C(sᵢ, 2).
+  So dc3 = C(5,3) - Σ C(sᵢ, 2) = 10 - Σ C(sᵢ, 2).
+
+             score seq  Σ C(sᵢ,2)   dc3=10-Σ
+       (0, 1, 2, 3, 4)         10          0 ✓
+       (0, 1, 3, 3, 3)          9          1 ✓
+       (0, 2, 2, 2, 4)          9          1 ✓
+       (0, 2, 2, 3, 3)          8          2 ✓
+       (1, 1, 1, 3, 4)          9          1 ✓
+       (1, 1, 2, 2, 4)          8          2 ✓
+       (1, 1, 2, 3, 3)          7          3 ✓
+       (1, 2, 2, 2, 3)          6          4 ✓
+       (2, 2, 2, 2, 2)          5          5 ✓
+
+======================================================================
+PART 4: WHAT DETERMINES dc5?
+======================================================================
+
+  Score (1, 2, 2, 2, 3): dc5 ∈ [1, 2, 3]
+    dc5=1: 120 tournaments
+    dc5=2: 120 tournaments
+    dc5=3: 40 tournaments
+
+======================================================================
+PART 5: ACHIEVABLE (α₁, α₂) AT n=6
+======================================================================
+  Computing (dc3, dc5, H) for all 32768 tournaments at n=6...
+  Done in 8.4s
+
+  Achievable (α₁, α₂) pairs at n=6 (showing first 20):
+     α₁    α₂     H   α₁+2α₂  %7  count
+      0     0     1        0   0    720
+      1     0     3        1   1    960
+      2     0     5        2   2   2160
+      2     1     9        4   4     80
+      4     0     9        4   4   2880
+      5     0    11        5   5   1440
+      6     0    13        6   6   1440
+      6     1    17        8   1    720
+      7     0    15        7   0   2208
+      8     0    17        8   1    720
+      9     0    19        9   2   1440
+      9     1    23       11   4   1440
+     10     2    29       14   0    720
+     11     0    23       11   4   1440
+     11     1    27       13   6    480
+     12     0    25       12   5   1440
+     12     1    29       14   0   2160
+     12     2    33       16   2    720
+     13     1    31       15   1   1440
+     14     1    33       16   2   1440
+     14     2    37       18   4   2160
+     14     4    45       22   1    240
+     16     0    33       16   2    480
+     16     1    37       18   4   1440
+     16     2    41       20   6    720
+     19     1    43       21   0   1440
+     20     1    45       22   1    240
+
+  α₁+2α₂ values mod 7: [0, 1, 2, 4, 5, 6]
+  Missing mod 7: [3]
+
+  Range of α₁+2α₂: [0, 22]
+  All achievable values: [0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 20, 21, 22]
+
+======================================================================
+PART 6: STRUCTURE OF ACHIEVABLE α₁+2α₂
+======================================================================
+
+  CRITICAL INSIGHT:
+
+  α₁+2α₂ = (H-1)/2  ALWAYS!
+
+  Proof: H = 1 + 2α₁ + 4α₂ = 1 + 2(α₁ + 2α₂)
+  So α₁ + 2α₂ = (H-1)/2.
+
+  Therefore:
+    α₁+2α₂ ≡ 3 (mod 7)  ⟺  (H-1)/2 ≡ 3 (mod 7)  ⟺  H ≡ 7 ≡ 0 (mod 7)
+
+  So H ≡ 0 (mod 7) IS EQUIVALENT TO α₁+2α₂ ≡ 3 (mod 7).
+  This is just a restatement, not a deeper constraint!
+
+  Similarly:
+    H ≡ 2 (mod 5) ⟺ (H-1)/2 ≡ (2-1)/2... wait, need to be careful.
+    H ≡ 2 (mod 5): H = 5k+2, (H-1)/2 = (5k+1)/2.
+    This needs 5k+1 even, so k odd. H = 10m+7. (H-1)/2 = 5m+3.
+    So (H-1)/2 ≡ 3 (mod 5).
+
+    Or: H ≡ 2 (mod 5) means (H-1)/2 ≡ (H-1)/2 mod 5.
+    H=2: (H-1)/2 = 1/2 ≡ 3 (mod 5) [since 2·3=6≡1]
+    H=7: (H-1)/2 = 3 ≡ 3 (mod 5) ✓
+    H=12: (H-1)/2 = 11/2... H=12 is even, impossible (Rédei).
+
+  Actually H is always odd, so H ≡ 2 (mod 5) means H ∈ {7, 17, 27, ...}.
+  (H-1)/2 ∈ {3, 8, 13, ...} ≡ 3 (mod 5).
+
+  So: H ≡ 0 (mod 7) ⟺ (H-1)/2 ≡ 3 (mod 7)
+      H ≡ 2 (mod 5) ⟺ (H-1)/2 ≡ 3 (mod 5)
+
+  BOTH forbidden residues correspond to (H-1)/2 ≡ 3 mod p!
+  (for p=7 and p=5 respectively)
+
+  Verification:
+    H=  1: (H-1)/2=  0, mod 5=0, mod 7=0
+    H=  3: (H-1)/2=  1, mod 5=1, mod 7=1
+    H=  5: (H-1)/2=  2, mod 5=2, mod 7=2
+    H=  7: (H-1)/2=  3, mod 5=3, mod 7=3
+    H=  9: (H-1)/2=  4, mod 5=4, mod 7=4
+    H= 11: (H-1)/2=  5, mod 5=0, mod 7=5
+    H= 13: (H-1)/2=  6, mod 5=1, mod 7=6
+    H= 15: (H-1)/2=  7, mod 5=2, mod 7=0
+    H= 17: (H-1)/2=  8, mod 5=3, mod 7=1
+    H= 19: (H-1)/2=  9, mod 5=4, mod 7=2
+    H= 21: (H-1)/2= 10, mod 5=0, mod 7=3
+
+  The forbidden residue (H-1)/2 ≡ 3 (mod p) for p=5:
+  Achievable (H-1)/2 mod 5 at n=5: [0, 1, 2, 4] missing: [3]
+  Achievable (H-1)/2 mod 7 at n=5: [0, 1, 2, 4, 5, 6] missing: [3]
+
+======================================================================
+PART 7: WHY (H-1)/2 ≡ 3 IS SPECIAL
+======================================================================
+
+  At n=5: (H-1)/2 ∈ {0, 1, 2, 4, 5, 6, 7} — skips 3!
+
+  H ∈ {1, 3, 5, 9, 11, 13, 15}
+  (H-1)/2 ∈ {0, 1, 2, 4, 5, 6, 7}
+
+  The gap at 3 means H=7 is impossible at n=5.
+  7 = Φ₃(2)! The cyclotomic prime itself is the forbidden H value!
+
+  WHY is H=7 impossible at n=5?
+  H=7 would need α₁=3 (since α₂=0, H=1+2α₁).
+  α₁=3 is impossible because dc3+dc5=3 is impossible.
+
+  At n=6: what H values near 7 are achievable?
+
+  H values at n=6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]... (showing first 20)
+  Is H=7 achievable? False
+  H mod 7 at n=6: [1, 2, 3, 4, 5, 6]
+  Missing mod 7: [0]
+  Is H=14 achievable? False
+  Is H=21 achievable? False
+  Is H=35 achievable? False
+  H ≡ 0 (mod 7) at n=6: []
+
+======================================================================
+PART 8: GROWTH OF (H-1)/2 RANGE
+======================================================================
+  n=3: H ∈ [1, 3]
+       (H-1)/2 ∈ [0, 1]
+       missing: none
+       max (H-1)/2 = 1
+       missing mod 5: [2, 3, 4]
+       missing mod 7: [2, 3, 4, 5, 6]
+
+  n=4: H ∈ [1, 3, 5]
+       (H-1)/2 ∈ [0, 1, 2]
+       missing: none
+       max (H-1)/2 = 2
+       missing mod 5: [3, 4]
+       missing mod 7: [3, 4, 5, 6]
+
+  n=5: H ∈ [1, 3, 5, 9, 11, 13, 15]
+       (H-1)/2 ∈ [0, 1, 2, 4, 5, 6, 7]
+       missing: [3]
+       max (H-1)/2 = 7
+       missing mod 5: [3]
+       missing mod 7: [3]
+
+  n=6: H ∈ [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+       (H-1)/2 ∈ [0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 20, 21, 22]
+       missing: [3, 10, 17, 19]
+       max (H-1)/2 = 22
+       missing mod 5: []
+       missing mod 7: [3]
+
+======================================================================
+PART 9: THE PARITY OF (H-1)/2 AND TOURNAMENT STRUCTURE
+======================================================================
+
+  At n=5:  (H-1)/2 ∈ {0,1,2,4,5,6,7} — gap at 3
+  At n=6:  need to check if gap at (H-1)/2 ≡ 3 (mod 7) persists
+
+  The gap MUST close eventually because:
+  - H grows exponentially with n (max H ~ n!/e)
+  - The achievable H values become denser
+  - The arithmetic progressions fill up
+
+  The question is: WHEN does each gap close?
+  Answer from previous results:
+    H≡2 mod 5: lifts at n=6 (first H with (H-1)/2 ≡ 3 mod 5)
+    H≡0 mod 7: lifts at n=7 (first H with (H-1)/2 ≡ 3 mod 7)
+
+  Smallest H ≡ 0 (mod 7) found at n=7: 35
+  All H ≡ 0 (mod 7) found: [35, 49, 77, 91, 105, 133, 147, 175, 189]...
+
+======================================================================
+PART 10: SYNTHESIS — THE FORBIDDEN 3
+======================================================================
+
+  THE PATTERN: (H-1)/2 ≡ 3 (mod p) is the forbidden residue for
+  BOTH p=5 and p=7 (and implicitly for p=3 it's (H-1)/2 ≡ 1 mod 2,
+  which would mean H ≡ 3 mod 4, which IS achievable).
+
+  This is because:
+    H ≡ 0 (mod p) ⟺ (H-1)/2 ≡ (p-1)/2 (mod p)
+
+  For p=3: (p-1)/2 = 1. H≡0 mod 3 ⟺ (H-1)/2 ≡ 1 mod 3.
+  For p=5: (p-1)/2 = 2. H≡0 mod 5 ⟺ (H-1)/2 ≡ 2 mod 5.
+  For p=7: (p-1)/2 = 3. H≡0 mod 7 ⟺ (H-1)/2 ≡ 3 mod 7.
+
+  Wait — H≡2 mod 5, not H≡0 mod 5. Let me recheck.
+
+  H≡2 mod 5: (H-1)/2 = (5k+1)/2. For H odd: 5k+2 odd → 5k odd → k odd.
+  H=7: (H-1)/2=3≡3 mod 5. H=17: (H-1)/2=8≡3 mod 5.
+  So H≡2 mod 5 ⟹ (H-1)/2 ≡ 3 mod 5? Let me check more carefully.
+
+  Actually:
+  (H-1)/2 mod 5:
+  H=1: 0
+  H=3: 1
+  H=5: 2
+  H=7: 3  ← H≡2 mod 5, (H-1)/2≡3 mod 5
+  H=9: 4
+  H=11: 0
+  H=13: 1
+  H=15: 2
+  H=17: 3  ← H≡2 mod 5, (H-1)/2≡3 mod 5 ✓
+
+  Yes! H≡2 mod 5 ⟺ (H-1)/2 ≡ 3 mod 5.
+  And H≡0 mod 7 ⟺ (H-1)/2 ≡ 3 mod 7.
+
+  BOTH forbidden conditions give (H-1)/2 ≡ 3!
+
+  The number 3 itself is the universal forbidden residue for (H-1)/2.
+
+  WHY 3? Because at n=5, α₁=3 is the impossible value (dc3+dc5 can't sum to 3).
+  And α₁ = (H-1)/2 when α₂=0.
+
+  The impossibility of α₁=3 at n=5 creates the same gap mod 5 and mod 7!
+  It lifts at different n values because:
+  - Mod 5: the gap fills when α₂ > 0 compensates (n=6)
+  - Mod 7: the gap persists because α₁+2α₂ ≡ 3 (mod 7) is ALSO impossible at n=6
+
+  Universal pattern verification:
+  p=3: (H-1)/2 ≡ 3 mod 3 ⟺ H ≡ 1 mod 3  ← achievable at n=5
+  p=5: (H-1)/2 ≡ 3 mod 5 ⟺ H ≡ 2 mod 5  ← FORBIDDEN at n=5
+  p=7: (H-1)/2 ≡ 3 mod 7 ⟺ H ≡ 0 mod 7  ← FORBIDDEN at n=5
+  p=11: (H-1)/2 ≡ 3 mod 11 ⟺ H ≡ 7 mod 11  ← FORBIDDEN at n=5
+  p=13: (H-1)/2 ≡ 3 mod 13 ⟺ H ≡ 7 mod 13  ← FORBIDDEN at n=5
+
+Done.
