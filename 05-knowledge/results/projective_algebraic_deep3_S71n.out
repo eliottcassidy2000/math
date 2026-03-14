@@ -1,0 +1,494 @@
+======================================================================
+PROJECTIVE & ALGEBRAIC GEOMETRY — DEEPEST EXTENSION (PART 3)
+opus-2026-03-14-S71n
+======================================================================
+
+======================================================================
+PART 1: CAYLEY'S HYPERDETERMINANT AND TOURNAMENT SINGULARITIES
+======================================================================
+
+  For a 2x2x2 tensor T = (t_ijk), Cayley's hyperdeterminant is:
+  Det(T) = t000^2 t111^2 + t001^2 t110^2 + t010^2 t101^2 + t011^2 t100^2
+           - 2(t000 t001 t110 t111 + t000 t010 t101 t111
+              + t000 t011 t100 t111 + t001 t010 t101 t110
+              + t001 t011 t100 t110 + t010 t011 t100 t101)
+           + 4(t000 t011 t101 t110 + t001 t010 t100 t111)
+
+  For tournament H viewed as a tensor on {0,1}^m:
+  At n=3 (m=3): H is a 2x2x2 tensor!
+  H[x0,x1,x2] = number of Hamiltonian paths in tournament T(x0,x1,x2).
+
+  The SINGULARITIES of the Segre variety under H are detected
+  by the hyperdeterminant.
+
+  H tensor at n=3:
+    H[0,0,0] = 1
+    H[0,0,1] = 1
+    H[0,1,0] = 3
+    H[0,1,1] = 1
+    H[1,0,0] = 1
+    H[1,0,1] = 3
+    H[1,1,0] = 1
+    H[1,1,1] = 1
+
+  Cayley hyperdeterminant Det(H) = 48
+  Det(H) = 0 means H has a SINGULAR point on the Segre variety.
+  Since Det(H) = 48, H is NON-SINGULAR on (P^1)^3.
+
+======================================================================
+PART 2: SPECTRAL CURVE OF THE TOURNAMENT MATRIX
+======================================================================
+
+  For a tournament T with adjacency matrix A, the SPECTRAL CURVE is
+  C_T: det(xI - A) = 0  in  P^1 x P^{n-1}.
+
+  The eigenvalues of A lie on C_T. For tournaments:
+  - tr(A) = 0 (diagonal is 0)
+  - A + A^T = J - I (every off-diagonal entry sums to 1)
+  - So A = (J-I)/2 + B/2 where B is skew-symmetric
+  - Eigenvalues of A = (n-1)/2 + eigenvalues of B/2
+
+  The SKEW-SYMMETRIC MATRIX B = A - A^T = 2A - J + I has:
+  - B[i,j] = +1 if i->j, -1 if j->i, 0 if i=j
+  - B is the SIGNED ADJACENCY MATRIX
+
+  Eigenvalues of B: purely imaginary (B is real skew-symmetric).
+  B = i*H_B where H_B is Hermitian.
+  Eigenvalues of B: {0} union {+/- i*lambda_k} for some lambda_k > 0.
+  (0 always appears when n is odd.)
+
+
+  n=3: Spectral invariant distribution:
+  (eigenvalue magnitude |lambda|):
+    1.732051: 8 tournaments, H values = [1, 3]
+
+  n=4: Spectral invariant distribution:
+  (tr(B^T B) = sum of squared eigenvalue magnitudes):
+    12: 64 tournaments, H values = [1, 3, 5]
+
+  n=5: Spectral invariant distribution:
+  (tr(B^T B) = sum of squared eigenvalue magnitudes):
+    20: 1024 tournaments, H values = [1, 3, 5, 9, 11, 13, 15]
+
+======================================================================
+PART 3: FLAG VARIETY AND TOURNAMENT FILTRATIONS
+======================================================================
+
+  A tournament defines a TOTAL ORDER on vertices (its transitive closure),
+  but only if the tournament is transitive.
+
+  For general tournaments: the tournament defines a PARTIAL ORDER
+  via reachability: v >= w if there's a directed path v -> ... -> w.
+
+  But EVERY tournament is reachable from every other vertex!
+  (Strong connectivity for n >= 2.)
+
+  So the partial order is trivial. Instead, consider:
+
+  The SCORE SEQUENCE (s_1 <= s_2 <= ... <= s_n) defines a FLAG:
+  F_1 ⊂ F_2 ⊂ ... ⊂ F_n where F_k = {vertices with score <= s_k}.
+
+  But vertices with the same score are not distinguishable in this flag.
+  The flag type is determined by the PARTITION of n into groups of
+  equal scores.
+
+  The FLAG VARIETY Fl(d_1,...,d_k; n) parametrizes chains of subspaces.
+
+  QUESTION: Does H factor through the flag variety?
+  Answer: NO — H depends on more than the score sequence.
+  But H restricted to the flag stratum is simpler.
+
+
+  n=3: H variance within score sequence strata:
+    (0, 1, 2): |stratum|=6, H=1 (constant!)
+    (1, 1, 1): |stratum|=2, H=3 (constant!)
+
+  n=4: H variance within score sequence strata:
+    (0, 1, 2, 3): |stratum|=24, H=1 (constant!)
+    (0, 2, 2, 2): |stratum|=8, H=3 (constant!)
+    (1, 1, 1, 3): |stratum|=8, H=3 (constant!)
+    (1, 1, 2, 2): |stratum|=24, H=5 (constant!)
+
+  n=5: H variance within score sequence strata:
+    (0, 1, 2, 3, 4): |stratum|=120, H=1 (constant!)
+    (0, 1, 3, 3, 3): |stratum|=40, H=3 (constant!)
+    (0, 2, 2, 2, 4): |stratum|=40, H=3 (constant!)
+    (0, 2, 2, 3, 3): |stratum|=120, H=5 (constant!)
+    (1, 1, 1, 3, 4): |stratum|=40, H=3 (constant!)
+    (1, 1, 2, 2, 4): |stratum|=120, H=5 (constant!)
+    (1, 1, 2, 3, 3): |stratum|=240, H=9 (constant!)
+    (1, 2, 2, 2, 3): |stratum|=280, H=[11, 13, 15], mean=12.4
+    (2, 2, 2, 2, 2): |stratum|=24, H=15 (constant!)
+
+======================================================================
+PART 4: RESULTANT AND DISCRIMINANT STRUCTURE
+======================================================================
+
+  The DISCRIMINANT of H is the set of values h where the
+  fiber H^{-1}(h) is singular (has a multiple root).
+
+  But over F_2, EVERY fiber is "singular" in the algebraic sense.
+
+  More interesting: the TROPICAL DISCRIMINANT.
+  This is the set of h where the level set {H=h} has
+  "extra" structure (e.g., unusual F_2-rank, symmetry, etc.).
+
+  Even more interesting: the NEWTON POLYTOPE of H.
+  As a multilinear polynomial, H's Newton polytope is a
+  subpolytope of the unit cube [0,1]^m.
+
+  The support of H = set of monomials with nonzero coefficient.
+
+
+  n=3 (m=3): Newton polytope support
+    Total nonzero monomials: 5
+    By degree: {0: 1, 1: 1, 2: 3}
+    Max degree: 2
+    Coefficient magnitudes: {1: 1, 2: 4}
+    All coefficients are +-2^k: True
+
+  n=4 (m=6): Newton polytope support
+    Total nonzero monomials: 16
+    By degree: {0: 1, 1: 3, 2: 12}
+    Max degree: 2
+    Coefficient magnitudes: {1: 1, 2: 14, 4: 1}
+    All coefficients are +-2^k: True
+
+  n=5 (m=10): Newton polytope support
+    Total nonzero monomials: 136
+    By degree: {0: 1, 1: 6, 2: 34, 3: 35, 4: 60}
+    Max degree: 4
+    Coefficient magnitudes: {1: 1, 2: 120, 4: 14, 8: 1}
+    All coefficients are +-2^k: True
+
+======================================================================
+PART 5: THE MOMENT MAP — SYMPLECTIC GEOMETRY
+======================================================================
+
+  The torus T = (S^1)^m acts on (P^1)^m by rotation.
+  The MOMENT MAP mu: (P^1)^m -> R^m sends a point to its
+  "angular momentum" in each factor.
+
+  For (P^1)^m: mu(x) = (|x_1|^2/(|x_0|^2+|x_1|^2), ..., |x_m|^2/...).
+  On the Boolean lattice {0,1}^m: mu(x) = x itself!
+
+  So the tournament hypercube {0,1}^m IS the image of the moment map.
+  The SYMPLECTIC REDUCTION at level h gives the symplectic quotient.
+
+  For tournaments: mu^{-1}(x) = {x} (the moment map is injective on F_2).
+  But the H-fibers mu^{-1}(H=h) are the level sets of H restricted
+  to the moment polytope.
+
+  The DUISTERMAAT-HECKMAN theorem says:
+  The push-forward of the symplectic volume by H is piecewise polynomial.
+  For the tournament hypercube: this is the H-distribution!
+
+  Let's check: is the H-distribution piecewise polynomial in h?
+
+
+  n=3: H-distribution as function of h:
+    h=  1: count=    6, frac=0.750000
+    h=  3: count=    2, frac=0.250000
+    Symmetric about (h_min+h_max)/2 = 2.0: False
+    h_max + h_min = 4
+    H(T) = H(T^op): 8/8
+
+  n=4: H-distribution as function of h:
+    h=  1: count=   24, frac=0.375000
+    h=  3: count=   16, frac=0.250000
+    h=  5: count=   24, frac=0.375000
+    Symmetric about (h_min+h_max)/2 = 3.0: True
+    h_max + h_min = 6
+    H(T) = H(T^op): 64/64
+
+  n=5: H-distribution as function of h:
+    h=  1: count=  120, frac=0.117188
+    h=  3: count=  120, frac=0.117188
+    h=  5: count=  240, frac=0.234375
+    h=  9: count=  240, frac=0.234375
+    h= 11: count=  120, frac=0.117188
+    h= 13: count=  120, frac=0.117188
+    h= 15: count=   64, frac=0.062500
+    Symmetric about (h_min+h_max)/2 = 8.0: False
+    h_max + h_min = 16
+    H(T) = H(T^op): 1024/1024
+
+======================================================================
+PART 6: HESSIAN AND MORSE THEORY ON THE TOURNAMENT HYPERCUBE
+======================================================================
+
+  Morse theory on a discrete space: the FORMAN DISCRETE MORSE THEORY.
+
+  On the tournament hypercube Q_m with height function H:
+  A vertex is CRITICAL if it's a local extremum.
+  The MORSE INEQUALITY says:
+  #{critical points of index k} >= b_k(Q_m)
+
+  The Betti numbers of Q_m = {0,1}^m (as a simplicial complex of the cube):
+  b_k = C(m, k) (the hypercube has the topology of the m-torus!)
+
+  Wait — Q_m as a GRAPH has b_0 = 1 (connected), b_1 = C(m,2) - m + 1.
+  But as a CUBE COMPLEX: Q_m ~ (S^1)^m, so b_k = C(m,k).
+
+  For Morse theory on the graph Q_m with height H:
+  The HESSIAN of H at a critical point is the matrix of
+  second differences: D_{ij} = H(x + e_i + e_j) - H(x + e_i) - H(x + e_j) + H(x).
+
+  The INDEX of a critical point = number of negative eigenvalues of D.
+
+
+  n=3: Critical points of H on Q_3:
+    Local maxima: 2
+      H=3: 2 points, Hessian off-diag: 0 neg, 3 pos, 0 zero
+    Local minima: 6
+      H=1: 6 points, Hessian off-diag: 2 neg, 1 pos, 0 zero
+
+  n=4: Critical points of H on Q_6:
+    Local maxima: 24
+      H=5: 24 points, Hessian off-diag: 4 neg, 8 pos, 3 zero
+    Local minima: 24
+      H=1: 24 points, Hessian off-diag: 8 neg, 4 pos, 3 zero
+
+  n=5: Critical points of H on Q_10:
+    Local maxima: 64
+      H=15: 40 points, Hessian off-diag: 12 neg, 30 pos, 3 zero
+      H=15: 24 points, Hessian off-diag: 15 neg, 25 pos, 5 zero
+    Local minima: 120
+      H=1: 120 points, Hessian off-diag: 20 neg, 14 pos, 11 zero
+
+======================================================================
+PART 7: HODGE DECOMPOSITION OF THE H FUNCTION SPACE
+======================================================================
+
+  The space of functions {0,1}^m -> R has dimension 2^m.
+  The Walsh decomposition gives a grading by degree:
+  V = V_0 + V_1 + ... + V_m where V_k has dimension C(m,k).
+
+  This is EXACTLY the Hodge decomposition H^k(T^m) = C^{C(m,k)}
+  of the cohomology of the m-torus T^m = (S^1)^m.
+
+  The HODGE NUMBERS h^{p,q} of (P^1)^m are:
+  h^{p,q} = C(m,p) * C(m,q) / C(m,p+q) * something...
+
+  Actually, for (P^1)^m: H^{p,q} = C(m,p) * delta_{p,q}.
+  So the Hodge diamond is concentrated on the diagonal.
+
+  For tournaments: the Walsh decomposition places H in specific
+  Hodge components. Since H has Walsh components only at EVEN degrees
+  (for odd n), H lives in H^{0,0} + H^{2,2} + H^{4,4} + ...
+
+  The F-polynomial further decomposes: F_k(T) lives in
+  the degree-k part of some auxiliary Hodge structure.
+
+
+  n=3: Walsh-Hodge decomposition of H:
+    Degree  C(m,deg)  NonzeroCoeffs  Energy      FractionOfTotal
+        0        1              1         144  0.750000
+        2        3              3          48  0.250000
+
+  n=4: Walsh-Hodge decomposition of H:
+    Degree  C(m,deg)  NonzeroCoeffs  Energy      FractionOfTotal
+        0        1              1       36864  0.750000
+        2       15             12       12288  0.250000
+
+  n=5: Walsh-Hodge decomposition of H:
+    Degree  C(m,deg)  NonzeroCoeffs  Energy      FractionOfTotal
+        0        1              1    58982400  0.759494
+        2       45             30    17694720  0.227848
+        4      210             60      983040  0.012658
+
+======================================================================
+PART 8: THE TOURNAMENT ZETA FUNCTION
+======================================================================
+
+  Define the TOURNAMENT ZETA FUNCTION:
+  Z_n(s) = sum_T H(T)^{-s} = sum_h mult(h) * h^{-s}
+
+  This is an analogue of the RIEMANN ZETA FUNCTION where
+  "primes" are replaced by tournament H-values.
+
+  Properties:
+  - Z_n(0) = 2^m (total number of tournaments)
+  - Z_n(1) = sum_T 1/H(T) (harmonic sum)
+  - The ABSCISSA OF CONVERGENCE is sigma_c = 0
+    (since there are finitely many terms)
+
+  More interesting: the EULER PRODUCT.
+  If H is multiplicative under direct sum, then:
+  Z_n(s) = prod_{indecomposable T} (1 - H(T)^{-s})^{-1} ???
+
+  No — that's for a free abelian monoid of indecomposables.
+  The tournament direct sum is not free (different decompositions possible).
+
+  But the DIRICHLET SERIES is still well-defined:
+  sum_{h >= 1} a_h * h^{-s} where a_h = |{T : H(T) = h}|.
+
+
+  n=3: Tournament zeta function
+    Z_n(0) = 8 (total tournaments)
+    Z_n(1) = 6.666667 (harmonic sum)
+    Z_n(2) = 6.222222
+    Z_n(1) / 2^m = 0.833333 (normalized)
+    E[1/H] = 0.833333
+    E[H] = 1.500000
+    E[H] * E[1/H] = 1.250000
+    (= 1 if H and 1/H were 'independent', >1 by Jensen's)
+
+  n=4: Tournament zeta function
+    Z_n(0) = 64 (total tournaments)
+    Z_n(1) = 34.133333 (harmonic sum)
+    Z_n(2) = 26.737778
+    Z_n(1) / 2^m = 0.533333 (normalized)
+    E[1/H] = 0.533333
+    E[H] = 3.000000
+    E[H] * E[1/H] = 1.600000
+    (= 1 if H and 1/H were 'independent', >1 by Jensen's)
+
+  n=5: Tournament zeta function
+    Z_n(0) = 1024 (total tournaments)
+    Z_n(1) = 259.073193 (harmonic sum)
+    Z_n(2) = 147.882535
+    Z_n(1) / 2^m = 0.253001 (normalized)
+    E[1/H] = 0.253001
+    E[H] = 7.500000
+    E[H] * E[1/H] = 1.897509
+    (= 1 if H and 1/H were 'independent', >1 by Jensen's)
+
+======================================================================
+PART 9: THE PERIOD MAP — TOURNAMENTS AS HODGE STRUCTURES
+======================================================================
+
+  In algebraic geometry, the PERIOD MAP associates to a variety
+  its HODGE STRUCTURE (the decomposition of cohomology into
+  H^{p,q} pieces).
+
+  For tournaments: the "period" of a tournament T is the vector
+  of Walsh coefficients hat{H}[S] for all S.
+
+  This embeds the tournament in the PERIOD DOMAIN:
+  Omega = {sequences (a_S)_S : sum_S a_S W_S(x) >= 1 for all x}
+
+  The PERIOD MAP phi: T_n -> Omega sends T to its Walsh spectrum.
+
+  TORELLI THEOREM ANALOGUE: Is phi injective?
+  (Does the Walsh spectrum uniquely determine the tournament?)
+
+  Answer: YES! The Walsh spectrum determines H completely,
+  and H determines the tournament (? No — different T can have same H).
+
+  But the FULL Walsh spectrum of ALL functions (H, t3, t5, ...)
+  DOES determine T. The tournament IS its Walsh spectrum.
+
+  Actually: the Walsh spectrum of H alone determines
+  T only if H is injective on tournaments (rarely true).
+
+  The Walsh spectrum of the INDICATOR FUNCTION 1_T determines T
+  (trivially — it IS T in Walsh basis).
+
+  n=3: H-spectrum determines 2 out of 8 tournaments
+    (only 2 distinct H values)
+  n=4: H-spectrum determines 3 out of 64 tournaments
+    (only 3 distinct H values)
+  n=5: H-spectrum determines 7 out of 1024 tournaments
+    (only 7 distinct H values)
+
+======================================================================
+PART 10: THE GRAND SYNTHESIS — ALL STRUCTURES UNIFIED
+======================================================================
+
+  THE GRAND PICTURE:
+
+  A tournament on n vertices is simultaneously:
+
+  1. A POINT on the toric variety (P^1)^m
+     (projective geometry — Segre embedding)
+
+  2. A VECTOR in F_2^m
+     (algebraic geometry — affine coordinates)
+
+  3. A TENSOR in (C^2)^{otimes m}
+     (multilinear algebra — hyperdeterminant)
+
+  4. A FUNCTION on the Walsh spectrum
+     (harmonic analysis — Fourier dual)
+
+  5. A PARTITION FUNCTION for a statistical system
+     (physics — multiplicativity under direct sum)
+
+  6. An ELEMENT of the tournament monoid
+     (algebra — direct sum operation)
+
+  7. A CRITICAL POINT of the Segre variety under H
+     (Morse theory — Hessian and index)
+
+  8. A POINT on the period domain
+     (Hodge theory — Walsh-Hodge decomposition)
+
+  AND the H function is simultaneously:
+
+  1. A SECTION of O(1,...,1) on (P^1)^m
+     (line bundle — projective)
+
+  2. A MULTILINEAR POLYNOMIAL on F_2^m
+     (algebraic — polynomial ring)
+
+  3. A LINEAR FUNCTIONAL on P^{2^m-1}
+     (Segre-linearized — projective)
+
+  4. A HERMITIAN OPERATOR on L^2(F_2^m)
+     (spectral — eigenvalues are Walsh coefficients)
+
+  5. A HEIGHT FUNCTION on the moment polytope
+     (symplectic — Duistermaat-Heckman)
+
+  6. A PFAFFIAN/HYPERDETERMINANT of a tensor
+     (tensor algebra — Cayley)
+
+  ALL THESE VIEWPOINTS ARE CONNECTED BY THE SEGRE EMBEDDING.
+  The Segre embedding is the ROSETTA STONE of tournament theory.
+
+  The SIX DUALITIES are unified:
+
+  1. Projective (T <-> H-hyperplane): via Segre linearization
+  2. Complement (T <-> T^op): via F_2 involution x -> 1-x
+  3. Walsh-Fourier (tournament <-> spectrum): Segre coords = Walsh chars
+  4. OCF (paths <-> cycles): H = I(Omega, 2) [Grinberg-Stanley]
+  5. Grassmann (Gr(k,n) <-> Gr(n-k,n)): Plucker on tournament arcs
+  6. Segre-Veronese (product <-> polynomial): the bridge itself
+
+  And now a SEVENTH DUALITY:
+  7. Statistical mechanics (tournament <-> partition function):
+     H(T1 + T2) = H(T1) * H(T2) makes H a multiplicative character
+     on the tournament monoid. Its LOG is an additive character —
+     i.e., a HOMOMORPHISM to (R, +).
+     The dual space of characters IS the "spectrum" of the monoid.
+
+     This connects tournaments to NUMBER THEORY:
+     - The tournament monoid under direct sum ~ the positive integers under multiplication
+     - H is like a multiplicative arithmetic function
+     - The tournament zeta function Z_n(s) is the Dirichlet series
+     - "Prime tournaments" = indecomposable tournaments (not direct sums)
+     - The PRIME FACTORIZATION of a tournament is its decomposition
+       into indecomposable sub-tournaments
+
+  Indecomposable tournament count:
+  n=3: 2/8 indecomposable (25.0%)
+    Decomposable H: {1: 6}
+    Indecomposable H: {3: 2}
+  n=4: 24/64 indecomposable (37.5%)
+    Decomposable H: {1: 24, 3: 16}
+    Indecomposable H: {5: 24}
+  n=5: 544/1024 indecomposable (53.1%)
+    Decomposable H: {1: 120, 3: 120, 5: 240}
+    Indecomposable H: {9: 240, 11: 120, 13: 120, 15: 64}
+
+  ARITHMETIC TOURNAMENT ANALOGY:
+  ============================================
+  Integers           | Tournaments
+  ============================================
+  n ∈ Z+             | T tournament
+  n*m (mult)         | T1 + T2 (direct sum)
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/projective_algebraic_deep3_S71n.py", line 825, in <module>
+    print(f"  sigma_0(n)=#{div}  | H(T) = #HP")
+NameError: name 'div' is not defined. Did you mean: 'dir'?
