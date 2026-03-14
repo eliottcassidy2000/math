@@ -1,0 +1,179 @@
+======================================================================
+THEOREM: H(T) ≠ 7 FOR ANY TOURNAMENT T
+======================================================================
+
+STEP 1: Reduce to α₁=3, α₂=0
+--------------------------------------------------
+
+  H = I(Ω,2) = 1 + 2α₁ + 4α₂ + 8α₃ + ... = 7
+  ⟹ α₁ + 2α₂ + 4α₃ + ... = 3
+
+  Solutions with αₖ ≥ 0:
+    (3,0,0,...): α₁=3, all others 0
+    (1,1,0,...): α₁=1, α₂=1, all others 0
+
+  Case (1,1,0,...): α₁=1 means exactly 1 odd cycle.
+  α₂=1 means 1 pair of vertex-disjoint cycles.
+  But a 'pair' requires TWO cycles ⟹ α₁ ≥ 2. Contradiction.
+
+  ∴ Must have α₁=3, α₂=0: exactly 3 odd cycles, no disjoint pair.
+
+STEP 2: Classify the 3 odd cycles
+--------------------------------------------------
+
+  Let C₁,C₂,C₃ be the 3 odd cycles (lengths ℓ₁,ℓ₂,ℓ₃, all odd ≥ 3).
+  α₂=0 means: every pair shares at least 1 vertex.
+
+  SUBCASE A: All three are 3-cycles (ℓ₁=ℓ₂=ℓ₃=3)
+  SUBCASE B: At least one has length ≥ 5
+
+STEP 3: Subcase A — Three 3-cycles, pairwise intersecting
+--------------------------------------------------
+
+  Three 3-cycles use vertex sets V₁,V₂,V₃ with |Vᵢ|=3.
+  By α₂=0: Vᵢ ∩ Vⱼ ≠ ∅ for all i,j.
+
+  By Helly's property for finite sets, two sub-patterns:
+
+  Pattern (a): ∃ common vertex v ∈ V₁∩V₂∩V₃.
+    C₁ = v→a→b→v
+    C₂ = v→c→d→v
+    C₃ = v→e→f→v
+    (v beats a,c,e; b,d,f beat v)
+
+  Pattern (b): Pairwise intersection but no common vertex.
+    V₁∩V₂ = {x}, V₂∩V₃ = {y}, V₁∩V₃ = {z}, x≠y≠z≠x.
+    Total vertices: |V₁∪V₂∪V₃| = 3+3+3 - 1-1-1 = 6.
+
+STEP 3a: Pattern (a) — THE (b,d) TRAP
+--------------------------------------------------
+
+  Given: v→a→b→v and v→c→d→v in tournament T.
+  v beats a,c and b,d beat v.
+
+  CLAIM: The arc between b and d creates an extra 3-cycle.
+
+  For NO extra cycle through v:
+    Need d→a (otherwise v→a→...→d→v has shortcut through d)
+    Need b→c (otherwise v→c→...→b→v has shortcut through b)
+
+  Actually, more precisely:
+    0-cycle v→a→d→v requires a→d: avoid by d→a ✓
+    0-cycle v→c→b→v requires c→b: avoid by b→c ✓
+
+  Now arc (b,d) is TRAPPED:
+    If d→b: b→c (forced) + c→d (from C₂) + d→b ⟹ cycle {b,c,d}
+    If b→d: d→a (forced) + a→b (from C₁) + b→d ⟹ cycle {a,b,d}
+
+  EITHER WAY: an extra 3-cycle exists. dc3 > 3. α₁ > 3. ✗
+
+  NOTE: This argument requires d→a and b→c.
+  What if we DON'T force d→a? Then a→d, and v→a→d→v is a cycle.
+  But that's an EXTRA cycle through v. dc3 > 3. α₁ > 3. ✗
+  Similarly for b→c.
+
+  ∴ Pattern (a) always forces α₁ > 3. ✓
+
+  VERIFICATION at n=7:
+    Total tournaments with 3 fixed cycles through v=0: 32768
+    Of these with dc3=3 exactly: 0
+    CONFIRMED: dc3 > 3 in ALL cases. ✓
+
+STEP 3b: Pattern (b) — No common vertex
+--------------------------------------------------
+
+  V₁={a,x,z}, V₂={a,b,y}, V₃={b,z,w}
+  (or any configuration with 6 vertices, pairwise 1-vertex intersection)
+
+  Minimum n = 6 (all 6 vertices needed).
+
+  CLAIM: With 3 pairwise-intersecting 3-cycles on 6 vertices
+  and NO common vertex, the tournament always has extra odd cycles.
+
+  Pattern (b) at n=6: C₁={0,1,2}, C₂={0,3,4}, C₃={1,3,5}
+    Total valid tournaments: 512
+    With dc3=3: 0
+    With dc3>3: 512
+
+  CONFIRMED: dc3 > 3 in ALL pattern (b) cases at n=6. ✓
+
+  THE PATTERN (b) TRAP:
+  C₁: 0→1→2→0
+  C₂: 0→3→4→0
+  C₃: 1→3→5→1
+
+  Consider vertex 2 (in C₁ only).
+  The arc (2,3): both vertex 2 (from C₁) and vertex 3 (from C₂,C₃).
+    If 2→3: 2→3→4→? Need (4,2). If 4→2: cycle {2,3,4}.
+           If 2→4: cycle {0,2,4}? No: need 0→2, but 2→0. Not a cycle.
+    If 3→2: 3→2→0→3. But 0→3 (from C₂). Cycle {0,2,3}!
+      Wait: 3→2, 2→0, 0→3: YES this is a 3-cycle {0,2,3}!
+
+  So arc (2,3) is trapped:
+    2→3: may create {2,3,4} (if 4→2)
+    3→2: always creates {0,2,3} (since 2→0 from C₁ and 0→3 from C₂)
+
+  If 3→2 creates a cycle, try 2→3.
+  Then arc (2,4): 2→3→4→? and 4→0→? 
+    If 4→2: cycle {2,3,4}. Extra cycle.
+    If 2→4: 0→1→2→4→0. Is that valid? 0→1 ✓, 1→2 ✓, 2→4 ✓, 4→0 ✓.
+           That's a 4-cycle (even length). Not counted in α₁.
+           But check {0,2,4}: 0→2? 2→0. No. {2,4,5}: etc.
+
+
+  Checking ALL pattern (b) configurations at n=6:
+  (All permutations of shared vertices)
+
+  COMPREHENSIVE CHECK at n=6: all tournaments with exactly 3
+  pairwise-intersecting 3-cycles (any configuration)
+
+  At n=6 (exhaustive, 32768 tournaments):
+    dc3=3: 2880 tournaments
+    α₁=3: 0 tournaments
+
+  *** α₁=3 is IMPOSSIBLE at n=6! ***
+  The forcing mechanism works here too.
+
+STEP 4: The complete picture
+--------------------------------------------------
+
+  SUMMARY OF α₁=3 ACHIEVABILITY:
+    n=3: α₁ ∈ {0,1} (max dc3=1, max dc5=0). α₁=3 ✗
+    n=4: α₁ ∈ {0,1,2,3,4} — need to check. (even n)
+    n=5: α₁ ∈ {0,1,2,4,5,6,7}. α₁=3 SKIPPED ✗
+    n=6: see above
+    n=7: α₁=3 ✗ (h7_check exhaustive)
+
+  For even n: at n=4, tournaments on 4 vertices have
+  dc3 ∈ {0,1,2,4} and dc5=0 (only 4 vertices).
+    n=4: dc3 distribution: [(0, 24), (1, 16), (2, 24)]
+    dc3=3 NOT achievable at n=4. ✓
+
+  FOR LARGE n:
+  With α₁=3 and all cycles short (3-cycles):
+    Covered by the (b,d) trap argument.
+    3 three-cycles sharing pairwise ⟹ extra cycles forced.
+
+  With α₁=3 and longer cycles:
+    E.g., dc3=2, dc5=1: need 2 three-cycles + 1 five-cycle, no disjoint pair.
+    At n=8+: this COULD work in principle.
+    Need separate analysis.
+
+  Can dc3=2, dc5=1, α₂=0 exist at n=8?
+  This is an open sub-question. The (b,d) trap doesn't directly apply
+  when cycles have different lengths.
+
+  However, from HYP-1020 (kind-pasteur-S65):
+  Even with α₃>0 (cubic I.P.), 4α₃≥4>3 makes α₁+2α₂+4α₃=3 impossible.
+  So only quadratic I.P. matters: α₁+2α₂=3.
+  With α₂=0: α₁=3 (three cycles, no disjoint pair).
+  This is EXACTLY the case we're analyzing.
+
+  REMAINING GAP IN PROOF:
+  Need to show: for ALL n, 3 pairwise-intersecting odd cycles
+  in a tournament always force the existence of additional odd cycles.
+  Verified for n ≤ 7 exhaustively.
+  The (b,d) trap proves it for 3-cycles with common vertex.
+  Need: extension to mixed cycle lengths and no-common-vertex patterns.
+
+Done.
