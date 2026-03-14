@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S87 — 2026-03-14: Deep tournament topology — BIBD, Jacobsthal Pisano, phase transitions
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S86 (Fibonacci-tournament dictionary)
+**What was done:**
+Overnight creative exploration of tournament topology, Fibonacci connections, and modular arithmetic:
+
+- **H + 2χ = 3 + Σ c_k·α_k**: The correction coefficients c_k = 2^k + 2(-1)^k satisfy the Jacobsthal recurrence. At n≤5, α₂=0 so H+2χ=3 exactly; at n=6, corrections appear.
+- **Jacobsthal Pisano = matrix order (PROVED)**: π_J(m) = ord(M(2) mod m) for all odd m. Proof via M^n = [[J(n+1), 2J(n)], [J(n), 2J(n-1)]]. Verified for all odd m from 3 to 49.
+- **p=3 unique Jordan block**: disc(λ²-λ-2) = 9 = 3², making p=3 the ONLY prime where M(2) has a Jordan block. Order = LCM(ord_3(2), 3) = 6.
+- **Mod-3 unification**: 2 ≡ -1 mod 3 ⟹ M(2) ≡ M(-1) mod 3. Topology and arithmetic merge mod 3.
+- **α₂=3 impossible at n=6 (PROVED)**: Any 3 vertex-disjoint 3-cycle pairs from {0,...,5} force a 4th partition.
+- **2-(10,4,2) BIBD**: The 15 α₂=4 patterns form a balanced incomplete block design on C(6,2)=15 vertex-pairs. Each 3-subset determines unique 4th element (deterministic forcing).
+- **Complete n=6 topology**: (α₁,α₂) distribution for all 32768 tournaments. H+2χ ∈ {3,9,15,27}. Forbidden H = {7,21,35,39}.
+- **Phase transition map**: n=5 (first forbidden H), n=6 (first α₂>0), n=7 (α₂ but no α₃), n=8 (first α₃).
+- **SL(2,Z) connection**: M(-1) has order 6 in SL(2,Z). Period-6 structure = order of transfer matrix.
+- **Fibonacci-topology bridge**: I(P_k,2) mod 6 = {1,3,5,5,3,1} palindromic period-6.
+
+**Scripts created:** tournament_deep_topology_87.py, topology_crown_jewels_87.py, fibonacci_topology_bridge_87.py, n6_topology_fast_87.py, modular_tournament_87.py, alpha2_gap_and_pisano_87.py, petersen_alpha2_87.py, grand_topology_synthesis_87.py
+**New contributions:** HYP-1323 through HYP-1333 (11 hypotheses)
+**Unresolved threads:** n=7 α₂ spectrum (70 partitions), BIBD → Steiner system connection, Fano plane link to kind-pasteur's S97 octonion discovery
+
 ## opus-2026-03-14-S71g (cont'd) — 2026-03-14: Simplex-cuboid packing, 3-strand category theory, H=63 analysis
 
 **Account:** opus
