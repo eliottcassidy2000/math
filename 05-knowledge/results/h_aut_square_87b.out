@@ -1,0 +1,72 @@
+======================================================================
+n=3: ALL TOURNAMENTS
+======================================================================
+  T_000: H=1, |Aut|=1, H×|Aut|=1 = 1²  scores=[2, 1, 0]
+  T_001: H=1, |Aut|=1, H×|Aut|=1 = 1²  scores=[2, 1, 0]
+  T_010: H=3, |Aut|=3, H×|Aut|=9 = 3²  scores=[1, 1, 1]
+  T_011: H=1, |Aut|=1, H×|Aut|=1 = 1²  scores=[2, 1, 0]
+  T_100: H=1, |Aut|=1, H×|Aut|=1 = 1²  scores=[2, 1, 0]
+  T_101: H=3, |Aut|=3, H×|Aut|=9 = 3²  scores=[1, 1, 1]
+  T_110: H=1, |Aut|=1, H×|Aut|=1 = 1²  scores=[2, 1, 0]
+  T_111: H=1, |Aut|=1, H×|Aut|=1 = 1²  scores=[2, 1, 0]
+
+======================================================================
+n=5: REGULAR TOURNAMENTS
+======================================================================
+Regular tournaments on n=5: 24
+  H=15, |Aut|=5, orbit=24, H×|Aut|=75
+
+======================================================================
+n=7: THREE REGULAR CLASSES (from previous analysis)
+======================================================================
+  QR₇     : H=189, |Aut|=21, H×|Aut|=3969 = 63²
+  Middle  : H=171, |Aut|=3, H×|Aut|=513
+  AP₇     : H=175, |Aut|=7, H×|Aut|=1225 = 35²
+
+======================================================================
+n=4: ALL TOURNAMENT ISOMORPHISM CLASSES
+======================================================================
+Isomorphism classes at n=4: 4
+  H= 1, |Aut|= 1, orbit=24, scores=[3, 2, 1, 0], H×|Aut|=   1 = 1²
+  H= 3, |Aut|= 3, orbit= 8, scores=[3, 1, 1, 1], H×|Aut|=   9 = 3²
+  H= 3, |Aut|= 3, orbit= 8, scores=[2, 2, 2, 0], H×|Aut|=   9 = 3²
+  H= 5, |Aut|= 1, orbit=24, scores=[2, 2, 1, 1], H×|Aut|=   5
+
+Perfect squares: 3/4
+
+======================================================================
+n=6: ISOMORPHISM CLASSES (regular only)
+======================================================================
+n=6 is even → no regular tournaments (score=(n-1)/2 not integer)
+
+Checking all n=6 tournaments for H×|Aut| = perfect square...
+Perfect squares found at interesting H values:
+  H=1, |Aut|=1, H×|Aut|=1 = 1², count=720
+  H=3, |Aut|=3, H×|Aut|=9 = 3², count=960
+  H=9, |Aut|=1, H×|Aut|=9 = 3², count=2880
+  H=9, |Aut|=9, H×|Aut|=81 = 9², count=80
+
+======================================================================
+SUMMARY: H × |Aut| PATTERN
+======================================================================
+
+The H × |Aut| = perfect square phenomenon:
+
+n=3: The 3-cycle has H=3, |Aut|=3, H×|Aut|=9=3²  ✓
+     The transitive T has H=1, |Aut|=6, H×|Aut|=6  ✗
+
+n=5: Regular tournaments...
+n=7: QR₇ gives 63², AP₇ gives 35², Middle gives 513 (not square)
+
+PATTERN: Circulant tournaments with maximal symmetry tend to have
+H × |Aut| = perfect square. The Paley tournament always gives this.
+
+For QR_p:
+  H(QR_p) × |Aut(QR_p)| = ?
+  |Aut(QR_p)| = p(p-1)/2 (for p≡3 mod 4)
+  At p=3: H=3, |Aut|=3, product=9=3²
+  At p=7: H=189, |Aut|=21, product=3969=63²
+  63 = 3 × 21 = 3 × p(p-1)/2
+
+  Pattern: H(QR_p) × |Aut(QR_p)| = (something involving p)²
+
