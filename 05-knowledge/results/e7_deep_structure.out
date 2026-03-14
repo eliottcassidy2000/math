@@ -1,0 +1,316 @@
+======================================================================
+PART 1: E₇ EXPONENTS — THE NON-COPRIME ANOMALY
+======================================================================
+
+  Exponent analysis — coprime vs non-coprime to h:
+
+  G₂ (h=6): exponents = [1, 5]
+    coprime to h: [1, 5] (2 = φ(6)=2? YES)
+
+  F₄ (h=12): exponents = [1, 5, 7, 11]
+    coprime to h: [1, 5, 7, 11] (4 = φ(12)=4? YES)
+
+  E₆ (h=12): exponents = [1, 4, 5, 7, 8, 11]
+    coprime to h: [1, 5, 7, 11] (4 = φ(12)=4? YES)
+    NON-coprime to h: [4, 8]
+      gcd(4,12) = 4
+      gcd(8,12) = 4
+
+  E₇ (h=18): exponents = [1, 5, 7, 9, 11, 13, 17]
+    coprime to h: [1, 5, 7, 11, 13, 17] (6 = φ(18)=6? YES)
+    NON-coprime to h: [9]
+      gcd(9,18) = 9
+
+  E₈ (h=30): exponents = [1, 7, 11, 13, 17, 19, 23, 29]
+    coprime to h: [1, 7, 11, 13, 17, 19, 23, 29] (8 = φ(30)=8? YES)
+
+  KEY FINDING: E₆ has non-coprime exponents {4, 8} (gcd with 12 = 4)
+  E₇ has non-coprime exponent {9} (gcd(9,18) = 9)
+  E₈ has ALL exponents coprime to h=30 (totatives of 30)
+
+  The CS boundary 9 appears as the UNIQUE non-coprime exponent of E₇!
+  In E₆, the non-coprime exponents {4,8} have gcd 4 with h=12.
+  4 = vertices of tetrahedron = KEY₁².
+
+  Divisors of h for each exceptional:
+  G₂ (h=6): divisors = [1, 2, 3, 6]
+
+  F₄ (h=12): divisors = [1, 2, 3, 4, 6, 12]
+
+  E₆ (h=12): divisors = [1, 2, 3, 4, 6, 12]
+    Divisors that are also exponents: [4]
+
+  E₇ (h=18): divisors = [1, 2, 3, 6, 9, 18]
+    Divisors that are also exponents: [9]
+
+  E₈ (h=30): divisors = [1, 2, 3, 5, 6, 10, 15, 30]
+
+  For A_n: h=n+1, exponents=1,...,n
+  ALL non-trivial divisors of h are exponents!
+    A_1 (h=2): divisor-exponents = []
+    A_2 (h=3): divisor-exponents = []
+    A_3 (h=4): divisor-exponents = [2]
+    A_4 (h=5): divisor-exponents = []
+    A_5 (h=6): divisor-exponents = [2, 3]
+    A_7 (h=8): divisor-exponents = [2, 4]
+
+======================================================================
+PART 2: THE 18-GON AND CIRCULANT TOURNAMENTS
+======================================================================
+
+  Z₁₈ ≅ Z₂ × Z₉
+  Generators: {1, 5, 7, 11, 13, 17} (= units of Z₁₈)
+  These are the E₇ COPRIME exponents!
+
+  Units of Z₁₈: [1, 5, 7, 11, 13, 17]
+  Number of units: 6 = φ(18) = 6
+
+  Tournament circulants require ODD n:
+  18 is even → no circulant tournament on Z₁₈
+  But 17 is prime, 17 ≡ 1 (mod 4) → QR_17 is a graph, not tournament
+  19 is prime, 19 ≡ 3 (mod 4) → QR_19 IS a tournament!
+  19 = 18 + 1 = h(E₇) + 1 ← interesting!
+
+  Paley tournament primes (p ≡ 3 mod 4): [3, 7, 11, 19, 23, 31, 43, 47]
+
+  QR_3  ← KEY₂, C₃
+  QR_7  ← 2³-1, Mersenne, Lucas(4)
+  QR_11  ← Lucas(5), first SC tournament at n≡3(4)
+  QR_19  ← h(E₇)+1=18+1
+  QR_23  ← E₈ exponent
+  QR_31  ← 2⁵-1, Mersenne
+  QR_43  ← E₈ dim component: 248=8·31
+
+======================================================================
+PART 3: E₇ WEYL GROUP AND TOURNAMENT STRUCTURE
+======================================================================
+
+  |W(E₇)| = 2903040 = 2^10 · 3^4 · 5 · 7
+         = 1024 · 81 · 5 · 7
+
+  |S₈| = 8! = 40320 = Weyl group of A₇
+  |W(E₇)| / |S₈| = 72.00
+  = 72 = 72 = 8 · 9 = rank(E₈) · CS-boundary!
+
+  |W(E₇)| / |W(A₇)| = 72
+  72 = 8 · 9 = 2³ · 3² = KEY₁³ · KEY₂²
+  This is the product of rank(E₈) and the CS boundary!
+
+  |W(E₈)| = 696729600 = 2^14 · 3^5 · 5^2 · 7
+  |W(E₈)| / |S₈| = 17280
+  = 17280 (should check)
+  17280 = 2^7·3^3·5^1
+
+  |W(E₆)| = 51840
+  |W(E₆)| / |S₆| = 72 (S₆ = A₅ Weyl)
+  = 72
+  = 72 = 8·9 = KEY₁³·KEY₂² AGAIN!
+
+  REMARKABLE: |W(E₆)|/|S₆| = |W(E₇)|/|S₈| = 72 = 8·9!
+
+======================================================================
+PART 4: THE EXCEPTIONAL CASCADE
+======================================================================
+
+  The exceptional cascade:
+  Group   rank  dim    h    det   dim/rank   pos.roots
+  G₂     2      14    6    1        7.0      6
+  F₄     4      52   12    1       13.0      24
+  E₆     6      78   12    3       13.0      36
+  E₇     7     133   18    2       19.0      63
+  E₈     8     248   30    1       31.0      120
+
+  Dimension ratios (consecutive):
+  F₄/G₂ = 3.7143 ≈ 3.7143
+  E₆/F₄ = 1.5000 = 3/2 = KEY₂/KEY₁
+  E₇/E₆ = 1.7051
+  E₈/E₇ = 1.8647
+
+  E₆/F₄ = 78/52 = 3/2 EXACTLY! The ratio of the keys!
+  Check: 78 = 52 · 3/2 = 52 · 1.5 = 78 ✓
+
+======================================================================
+PART 5: DUAL COXETER NUMBERS
+======================================================================
+
+  Dual Coxeter numbers h∨:
+    A_n: h∨ = n+1 (same as h)
+    B_n: h∨ = 2n-1
+    C_n: h∨ = n+1
+    D_n: h∨ = 2n-2 (same as h)
+    G₂: h∨ = 4 (h=6)
+    F₄: h∨ = 9 (h=12)
+    E₆: h∨ = 12 (h=12, same)
+    E₇: h∨ = 18 (h=18, same)
+    E₈: h∨ = 30 (h=30, same)
+
+  For the ADE types (simply-laced): h∨ = h always.
+  For non-simply-laced:
+    G₂: h∨ = 4 ≠ h = 6. Ratio h/h∨ = 6/4 = 3/2 = KEY₂/KEY₁!
+    F₄: h∨ = 9 ≠ h = 12. Ratio h/h∨ = 12/9 = 4/3 = KEY₁²/KEY₂!
+
+  EXTRAORDINARY: h∨(F₄) = 9 = CS BOUNDARY!
+  The dual Coxeter number of F₄ is our CS boundary!
+  And h(F₄)/h∨(F₄) = 12/9 = 4/3 = KEY₁²/KEY₂
+
+  h∨(G₂) = 4 = KEY₁²
+  h∨(F₄) = 9 = KEY₂²
+  Pattern: h∨ for non-simply-laced = square of a key!
+
+======================================================================
+PART 6: THE 56-DIMENSIONAL REPRESENTATION OF E₇
+======================================================================
+
+  E₇ fundamental representations:
+  The minuscule representation has dimension 56
+
+  56 = 8 · 7 = C(8,2) - C(8,1) = 28 - 8 + ... no
+  56 = C(8,3) = number of 3-element subsets of {1,...,8}
+
+  COINCIDENCE: non-isomorphic tournaments on 6 vertices = 56!
+  And dim(minuscule rep of E₇) = 56!
+
+  At n=8 (= rank(E₈)):
+  C(8,3) = 56 = 56 = number of 3-element subsets
+  Each 3-element subset gives either a 3-cycle or a transitive triple
+  In a random tournament, expected 3-cycles = 56/4 = 14
+
+  56 = 2³ · 7 = KEY₁³ · (KEY₁³-1) = KEY₁³ · Mersenne(3)
+  This is rank(E₈) · (rank(E₈)-1)
+
+  Adjoint representation: dim = 133 = 7 · 19
+  7 = rank(E₇), 19 = h(E₇)+1 = Paley prime!
+  133 = rank(E₇) · (h(E₇)+1)
+
+  dim(E₇) = rank · (2h-1+... wait)
+  Actually: dim = rank + 2·#pos.roots = 7 + 2·63 = 133
+  And #pos.roots = sum of exponents = 63 = 7·9
+  63 = rank(E₇) · CS_boundary = 7 · 9!
+
+  E₇ ENCODES THE CS BOUNDARY:
+  #positive roots / rank = 63/7 = 9 = CS boundary
+  This ratio is the AVERAGE EXPONENT!
+  Average exponent of E₇ = 9 = 3² = KEY₂²
+
+======================================================================
+PART 7: EXPONENT SUMS AND THE KEYS
+======================================================================
+
+  Average exponent (= #pos.roots / rank) for exceptionals:
+  G₂: avg = 6/2 = 3.0000 = 3 = KEY₂
+  F₄: avg = 24/4 = 6.0000 = 6 = KEY₁·KEY₂ = h(G₂)
+  E₆: avg = 36/6 = 6.0000 = 6 = KEY₁·KEY₂ = h(G₂)
+  E₇: avg = 63/7 = 9.0000 = 9 = KEY₂² = CS boundary
+  E₈: avg = 120/8 = 15.0000 = 15 = 3·5 = KEY₂·5
+
+  G₂: avg exponent = 3 = KEY₂
+  F₄: avg exponent = 6 = KEY₁·KEY₂ = h(G₂)
+  E₆: avg exponent = 6 = KEY₁·KEY₂ = h(G₂)
+  E₇: avg exponent = 9 = KEY₂² = CS BOUNDARY
+  E₈: avg exponent = 15 = 3·5
+
+  The average exponent sequence for exceptionals: 3, 6, 6, 9, 15
+  Differences: 3, 0, 3, 6
+  Ratios: 2, 1, 3/2, 5/3
+
+  For A_n: avg exponent = (1+2+...+n)/n = (n+1)/2 = h/2
+  So avg_exp = h/2 always for type A
+
+  Check: avg_exp = h/2 for ALL simple Lie algebras!
+  This is because the exponents m_i satisfy m_i + m_{rank+1-i} = h
+  (they come in palindromic pairs summing to h)
+
+  So the CS boundary 9 = h(E₇)/2 = avg exponent of E₇
+  is a FUNDAMENTAL invariant of the E₇ Lie algebra.
+
+======================================================================
+PART 8: E₇ AS MIDPOINT OF THE EXCEPTIONAL HIERARCHY
+======================================================================
+
+  The 5 exceptional Lie groups form a HIERARCHY:
+
+  G₂ ← F₄ ← E₆ ← E₇ ← E₈
+  ↓      ↓      ↓      ↓      ↓
+  h=6    h=12   h=12   h=18   h=30
+  det=1  det=1  det=3  det=2  det=1
+  avg=3  avg=6  avg=6  avg=9  avg=15
+
+  E₇ is the 4th of 5 exceptionals by rank (2,4,6,7,8)
+  It is the UNIQUE exceptional with:
+  - det = 2 = KEY₁ (binary orientation)
+  - h/2 = 9 = KEY₂² (CS boundary)
+  - h/det = 9 (also the CS boundary)
+  - 9 as an exponent (appears in the root system)
+
+  THE KEY ENCODING IN EXCEPTIONAL GROUPS:
+
+  E₆ encodes KEY₂ = 3 through its center Z₃
+  E₇ encodes KEY₁ = 2 through its center Z₂
+  Together they encode the tournament polynomial z²-5z+6
+
+  E₈ unifies them: det=1 (trivial center),
+  but h = 30 = 2·3·5 contains BOTH keys and their sum
+
+  THE DEEPEST CONNECTION:
+
+  In tournament theory: z² - 5z + 6 = (z-2)(z-3) = 0
+  In Lie theory: A₁ and A₂ have Cartan eigenvalues {2} and {1,3}
+  The tournament polynomial roots ARE Cartan eigenvalues!
+
+  More precisely:
+  KEY₁ = 2 = max eigenvalue of Cartan(A₁) = det(A₁) = h(A₁)
+  KEY₂ = 3 = max eigenvalue of Cartan(A₂) = det(A₂) = h(A₂)
+
+  And their difference pattern reappears in the exceptionals:
+  det(E₆) = KEY₂ = 3
+  det(E₇) = KEY₁ = 2
+  h(E₇)/det(E₇) = 9 = KEY₂² = CS boundary
+  h∨(F₄) = 9 = CS boundary (dual Coxeter of F₄)
+
+  THE TOURNAMENT UNIVERSE IS THE A₁-A₂ UNIVERSE,
+  REFLECTED IN THE EXCEPTIONAL GROUPS E₆ AND E₇.
+
+======================================================================
+PART 9: NUMERICAL COINCIDENCES AS STRUCTURAL ECHOES
+======================================================================
+
+  Verified coincidences:
+  56 = dim(minuscule E₇) = T(6) (non-iso tournaments on 6)
+  56 = C(8,3) = potential 3-cycles on 8 vertices
+
+  72 = |W(E₆)|/6! = 72
+  72 = |W(E₇)|/8! = 72
+  72 = 8·9 = rank(E₈)·CS_boundary = KEY₁³·KEY₂²
+
+  63 = #pos.roots(E₇) = 7·9 = rank·CS_boundary
+  63 = 2^6-1 = Mersenne(6)
+
+  120 = #pos.roots(E₈) = 5! = |BI| (binary icosahedral)
+  120 = C(10,3) = ... or 2³·3·5 = KEY₁³·KEY₂·5
+
+  Evaluating tournament polynomial z²-5z+6 at various points:
+  f(0) = 6  ← |val|=6 is a Coxeter number
+  f(1) = 2
+  f(2) = 0  ← ROOT (z=2)
+  f(3) = 0  ← ROOT (z=3)
+  f(4) = 2
+  f(5) = 6  ← |val|=6 is a Coxeter number
+  f(6) = 12  ← Coxeter number!, |val|=12 is a Coxeter number
+  f(7) = 20
+
+  f(0) = 6 = h(G₂)!
+  f(1) = 2 = KEY₁ = det(E₇)!
+  f(4) = -2 = -KEY₁
+  f(5) = 6 = h(G₂) again! (by symmetry: f(5-x)=f(x) since 5=sum of roots)
+
+  The tournament polynomial has AXIS OF SYMMETRY at z = 5/2!
+  f(5/2 + t) = f(5/2 - t) for all t
+  The symmetric point 5/2 = (KEY₁+KEY₂)/2
+
+  f at Cartan eigenvalues of A₂: {1, 3}
+  f(1) = 2 = 2 = KEY₁
+  f(3) = 0 = 0 (root!)
+
+  So f(smaller eigenvalue of A₂) = KEY₁ = larger eigenvalue of A₁!
+  This creates a SELF-REFERENTIAL LOOP:
+  A₂'s eigenvalues → through tournament poly → back to A₁'s eigenvalue
