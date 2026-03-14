@@ -1,0 +1,191 @@
+============================================================
+K-NACCI SEQUENCES AND LIMIT RATIOS
+============================================================
+  k= 2: limit ratio = 1.6180339887
+  k= 3: limit ratio = 1.8392867552
+  k= 4: limit ratio = 1.9275619755
+  k= 5: limit ratio = 1.9659482366
+  k= 6: limit ratio = 1.9835828434
+  k= 7: limit ratio = 1.9919641966
+  k=10: limit ratio = 1.9990186327
+  k=20: limit ratio = 1.9999990463
+  k=50: limit ratio = 2.0000000000
+
+  As k→∞, the k-nacci ratio → 2.
+  This is because a[n] ≈ a[n-1] + a[n-2] + ... + a[n-k]
+  ≈ a[n-1] + a[n-1]/r + a[n-1]/r² + ... ≈ a[n-1] · r/(r-1)
+  So r = r/(r-1) → r²-r=r → r²=2r → r=2.
+
+============================================================
+WEIGHTED K-NACCI: limit ratio → 3
+============================================================
+  k= 2, weight=2: limit ratio = 2.7320508076
+  k= 3, weight=2: limit ratio = 2.9196395658
+  k= 5, weight=2: limit ratio = 2.9916541014
+  k=10, weight=2: limit ratio = 2.9999661260
+  k=20, weight=2: limit ratio = 2.9999999994
+
+  With weight w=2: r = w·r/(r-1) → r(r-1) = 2r → r² = 3r → r = 3!
+  This is the TOURNAMENT evaluation point!
+  weight=1: limit ratio = 1.999999 (expected 2)
+  weight=2: limit ratio = 3.000000 (expected 3)
+  weight=3: limit ratio = 4.000000 (expected 4)
+  weight=4: limit ratio = 5.000000 (expected 5)
+
+============================================================
+SIMPLEX (x+1)^n vs CUBOID (x+2)^n
+============================================================
+
+DIGRAPH:
+  Each pair (i,j) has INDEPENDENT arcs: xᵢⱼ, xⱼᵢ ∈ {0,1}
+  Per pair: (1+xᵢⱼ)(1+xⱼᵢ) = 4 states (no arc, i→j, j→i, both)
+  Independence polynomial per pair: 1 + x (one arc contributes x to weight)
+  Total: ∏ (1+x) = (1+x)^{n(n-1)} = SIMPLEX-type
+
+TOURNAMENT:
+  Each pair has CONSTRAINED arcs: xᵢⱼ + xⱼᵢ = 1
+  Per pair: 2 states (i→j or j→i)
+  For odd cycles: each pair contributes (x for forward) or (x for backward)
+  The constraint couples the two directions.
+
+  Key: I(Ω(T), x) at x=2.
+  The "2" comes from: each odd cycle in an independent set can be traversed
+  in 1 direction (since tournament determines direction), and the factor 2
+  accounts for... what exactly?
+
+Independence polynomial of edgeless graph on m vertices:
+  I(K̄_0, 2) = (1+2)^0 = 3^0 = 1
+  I(K̄_1, 2) = (1+2)^1 = 3^1 = 3
+  I(K̄_2, 2) = (1+2)^2 = 3^2 = 9
+  I(K̄_3, 2) = (1+2)^3 = 3^3 = 27
+  I(K̄_4, 2) = (1+2)^4 = 3^4 = 81
+  I(K̄_5, 2) = (1+2)^5 = 3^5 = 243
+
+For edgeless Ω (no conflicts): H = 3^(#cycles)
+  This is the CUBOID evaluation!
+  Each independent cycle contributes a factor of 3.
+
+============================================================
+PACKING: SIMPLICES INSIDE CUBOIDS
+============================================================
+
+The "packing" metaphor:
+
+1. DIGRAPH → TOURNAMENT (adding constraint xⱼᵢ = 1-xᵢⱼ):
+   - Reduces the state space from (1+x)^{n(n-1)} to something smaller
+   - The constraint "packs" the simplex into a cuboid
+
+2. Numerically:
+   - Simplex: (x+1)^m, at x=1 gives 2^m choices
+   - Cuboid: (x+2)^{m/2}, at x=1 gives 3^{m/2} choices
+   - Tournament has m/2 = C(n,2)/2 paired edges, but each has 2 (not 3) states
+   - The "3" appears in the independence polynomial: each independent cycle
+     contributes factor 3 = 1+2 to I(Ω, 2)
+
+3. The k-nacci connection:
+   - k-nacci ratio → 2 as k→∞ (digraph world)
+   - Weighted k-nacci ratio → 3 as k→∞ (tournament world)
+   - The weight=2 is the OCF evaluation point!
+
+4. Why (x+2)^n = cuboid?
+   (x+2)^n = sum_k C(n,k) x^k 2^{n-k}
+   Each position has 3 states: included-in-x (contributes x), or one of 2 "base" states.
+   For tournaments: each arc pair has arc i→j (contributes to cycles in one way)
+   or j→i (contributes differently), and the "2" counts the 2 options.
+
+============================================================
+EXAMPLE: n=5 tournament, simplex vs cuboid
+============================================================
+
+  H values at n=5: [1, 3, 5, 9, 11, 13, 15]
+  H=1 (transitive, Ω=empty): I(Ø,2) = 1 = (1+2)^0 = 3^0
+  H=3 (one 3-cycle, Ω=K₁): I(K₁,2) = 1+2 = 3 = 3^1
+  H=9 (Ω=?): I=9 = 1+8=1+2·4 (4 cycles, all pairwise sharing)
+     or I=9 = 1+2·1+4·... or I=9 = 3^2 (2 indep cycles)
+  bits=8: H=9, t₃=3
+
+============================================================
+THE (2,3) DUALITY: GRAPH vs TOURNAMENT
+============================================================
+
+  GRAPH/DIGRAPH (simplex = (x+1)^n):
+    - n independent dimensions
+    - Each dimension: present (x) or absent (1)
+    - At x=1: 2^n states (binary cube)
+    - k-nacci limit: 2
+
+  TOURNAMENT (cuboid = (x+2)^n):
+    - n paired dimensions (each pair constrained)
+    - Each pair: state A (x) or state B (2-x)... hmm
+    - Independent cycles contribute 3 = 1+2 each
+    - k-nacci limit (weighted): 3
+
+  The OCF evaluation point x=2 IS the cuboid constant:
+    I(Ω, 2) = sum_k α_k · 2^k
+    If Ω is edgeless: I = (1+2)^{|V|} = 3^{|V|}
+    This is the number of independent sets weighted by 2^{size}.
+
+  The Grinberg-Stanley theorem says this weighted count
+  equals the number of Hamiltonian paths.
+
+  PACKING METAPHOR:
+    (x+1)^n is a simplex (each arc independent)
+    (x+2)^{n/2} is a cuboid (each pair contributes factor x+2=4 when x=2)
+    Wait: at x=2, (2+1)^n = 3^n (simplex) and (2+2)^{n/2} = 4^{n/2} = 2^n (cuboid)
+
+    Actually, let me reconsider. The user said:
+    "simplices as (x+1)^n and cuboids as (x+2)^n"
+
+    At x=1: simplex = 2^n, cuboid = 3^n.
+    At x=2: simplex = 3^n, cuboid = 4^n.
+
+    The OCF evaluates at x=2.
+    I(Ω, 2) = sum α_k 2^k.
+    For independent Ω: I = 3^m (where m = #cycles).
+    For complete Ω: I = 1 + 2m.
+
+    The simplex (1+x)^m at x=2 = 3^m = I(edgeless, 2).
+    The cuboid (2+x)^m at x=2 = 4^m.
+
+    So the I polynomial for edgeless Ω IS the simplex at x=2!
+    And the cuboid would be I with some additional structure.
+
+  BETTER INTERPRETATION:
+    H(T) = I(Ω, 2).
+    For a tournament with m independent cycles: H = 3^m.
+    For a digraph: H could be anything (arcs independent).
+    Simplex volume = 1/n! × side^n. Cuboid volume = side₁ × ... × sideₙ.
+    Simplex fits inside cuboid when each sideᵢ ≥ appropriate bound.
+
+    The "packing" is: a tournament (with its constraints) has
+    H value that's always a value of I(G, 2) for some graph G.
+    The constraint PACKS the HP count into a structured polynomial form.
+
+============================================================
+POWERS OF 3: THE CUBOID H VALUES
+============================================================
+
+  H = 3^k means Ω has k independent (vertex-disjoint) cycles with
+  no other odd cycles. This is the "maximally cuboid" configuration.
+
+  3^0 = 1: transitive tournament (no cycles) — TRIVIAL CUBOID
+  3^1 = 3: one 3-cycle + transitive complement
+  3^2 = 9: two disjoint 3-cycles + transitive rest (n≥6)
+  3^3 = 27: three disjoint 3-cycles (n=9, verified!)
+  3^k: k disjoint 3-cycles on 3k vertices + transitive on remaining
+
+  These are the "block-transitive" tournaments!
+  H(T(B₁,...,Bₖ)) = ∏ H(Bᵢ) = 3^k when each block is a 3-cycle.
+
+  The H=7 impossibility shows: NOT all values ≡ 1 mod 2 are achievable.
+  Specifically: 7 ∉ {I(G, 2) : G = Ω(T) for some tournament T}.
+  This is because Ω(T) has structural constraints that graphs G don't.
+
+
+  Odd H ≤ 100 achievable: 47/50
+  Odd H ≤ 100 NOT achievable: [7, 21, 63]
+  Permanently forbidden: {7, 21} (proved for 7, conjectured for 21)
+
+============================================================
+DONE
+============================================================
