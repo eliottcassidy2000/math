@@ -1,0 +1,62 @@
+======================================================================
+SIMPLEX INSCRIBED IN HYPERCUBE — EXACT VOLUMES
+======================================================================
+
+============================================================
+n = 2: 2-cube has 4 vertices, need 3 for 2-simplex
+============================================================
+  Even-parity vertices: 2
+  Odd-parity vertices: 2
+  NO regular simplex found in {0,1}^2
+  (Regular simplex inscription requires Hadamard condition)
+
+============================================================
+n = 3: 3-cube has 8 vertices, need 4 for 3-simplex
+============================================================
+  Even-parity vertices: 4
+  Odd-parity vertices: 4
+  Regular simplex found!
+    Vertices: ((0, 0, 0), (1, 1, 0), (1, 0, 1), (0, 1, 1))
+    Parities: [0, 0, 0, 0]
+    Edge length: 1.414214 = sqrt(2)
+    Volume: 0.3333333333
+    Cube volume: 1
+    Ratio cube/simplex: 3.000000
+    *** EXACT: cube = 3 * simplex ***
+    Complement volume: 0.6666666667
+    Opposite-parity vertices: 4
+    Volume per corner piece: 0.1666666667
+    Corner/simplex ratio: 0.500000
+    *** EACH CORNER = HALF THE SIMPLEX ***
+    # of 'halves': 4 (each = simplex/2)
+    2^{n-1} = 4
+
+============================================================
+n = 4: 4-cube has 16 vertices, need 5 for 4-simplex
+============================================================
+  Even-parity vertices: 8
+  Odd-parity vertices: 8
+  NO regular simplex found in {0,1}^4
+  (Regular simplex inscription requires Hadamard condition)
+  Largest simplex from even-parity vertices:
+    Volume: 0.0833333333
+    Ratio cube/simplex: 12.000000
+    Edge lengths: [1.414214, 2.0]
+
+============================================================
+n = 5: 5-cube has 32 vertices, need 6 for 5-simplex
+============================================================
+  Even-parity vertices: 16
+  Odd-parity vertices: 16
+  NO regular simplex found in {0,1}^5
+  (Regular simplex inscription requires Hadamard condition)
+  Largest simplex from even-parity vertices:
+    Volume: 0.0333333333
+    Ratio cube/simplex: 30.000000
+    Edge lengths: [1.414214, 2.0]
+
+============================================================
+n = 6: 6-cube has 64 vertices, need 7 for 6-simplex
+============================================================
+  Even-parity vertices: 32
+  Odd-parity vertices: 32
