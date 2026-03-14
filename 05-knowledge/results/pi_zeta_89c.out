@@ -1,0 +1,177 @@
+======================================================================
+PART 1: H(P_p) Factorizations
+======================================================================
+  H(P_3) = 3 = 3
+    Distinct prime factors: [3]
+    Number of prime factors (with mult): 1
+    p divides H: True
+  H(P_7) = 189 = 3^3 × 7
+    Distinct prime factors: [3, 7]
+    Number of prime factors (with mult): 4
+    p divides H: True
+  H(P_11) = 95095 = 5 × 7 × 11 × 13 × 19
+    Distinct prime factors: [5, 7, 11, 13, 19]
+    Number of prime factors (with mult): 5
+    p divides H: True
+  H(P_19) = 1172695746915 = 3^2 × 5 × 7 × 11 × 19 × 23 × 774463
+    Distinct prime factors: [3, 5, 7, 11, 19, 23, 774463]
+    Number of prime factors (with mult): 8
+    p divides H: True
+
+  H(P_19) = 1172695746915
+         = 3^2 × 5 × 7 × 11 × 19 × 23 × 774463
+
+======================================================================
+PART 2: Divisibility by p — General Circulant Tournaments
+======================================================================
+
+n | H(T) for all regular tournaments on n vertices:
+
+  n=3: 2 regular tournaments
+    H mod 3: {0: 2}
+    ALL divisible by 3: True
+
+  n=5: 24 regular tournaments
+    H mod 5: {0: 24}
+    ALL divisible by 5: True
+
+  n=7: 2640 regular tournaments
+    H mod 7: {0: 960, 3: 1680}
+    ALL divisible by 7: False
+    Counterexamples: [171, 171, 171, 171, 171]
+
+======================================================================
+PART 3: H mod p for ALL tournaments on p vertices
+======================================================================
+
+  n=p=3: H mod 3 distribution:
+    H ≡ 0 mod 3: 2 (25.0%)
+    H ≡ 1 mod 3: 6 (75.0%)
+    H ≡ 2 mod 3: 0 (0.0%)
+
+  n=p=5: H mod 5 distribution:
+    H ≡ 0 mod 5: 304 (29.7%)
+    H ≡ 1 mod 5: 240 (23.4%)
+    H ≡ 2 mod 5: 0 (0.0%)
+    H ≡ 3 mod 5: 240 (23.4%)
+    H ≡ 4 mod 5: 240 (23.4%)
+
+  n=p=7: H mod 7 distribution:
+    H ≡ 0 mod 7: 227760 (10.9%)
+    H ≡ 1 mod 7: 228704 (10.9%)
+    H ≡ 2 mod 7: 328608 (15.7%)
+    H ≡ 3 mod 7: 309120 (14.7%)
+    H ≡ 4 mod 7: 347760 (16.6%)
+    H ≡ 5 mod 7: 359520 (17.1%)
+    H ≡ 6 mod 7: 295680 (14.1%)
+
+======================================================================
+PART 4: The Tournament Zeta Function and Euler Product
+======================================================================
+
+Odd-cycle disjointness graph components:
+
+  n=3: first few G(T) component structures:
+    T_0: components = []
+    T_1: components = []
+    T_2: components = [1]
+    T_3: components = []
+    T_4: components = []
+    T_5: components = [1]
+    T_6: components = []
+    T_7: components = []
+
+  n=4: first few G(T) component structures:
+    T_0: components = []
+    T_1: components = []
+    T_2: components = [1]
+    T_3: components = []
+    T_4: components = [2]
+    T_5: components = [1]
+    T_6: components = [2]
+    T_7: components = []
+    T_8: components = []
+    T_9: components = [1]
+
+======================================================================
+PART 5: Hard-Core Model — Fugacity and Phase Transition
+======================================================================
+
+Max degree of G(T) for random tournaments:
+  n=5: avg max degree Δ(G) = 1.7
+    Estimated λ_c ≈ 0.3106
+    We evaluate at λ=2: supercritical
+  n=7: avg max degree Δ(G) = 7.6
+    Estimated λ_c ≈ 0.0520
+    We evaluate at λ=2: supercritical
+  n=9: avg max degree Δ(G) = 18.1
+    Estimated λ_c ≈ 0.0208
+    We evaluate at λ=2: supercritical
+  n=11: avg max degree Δ(G) = 33.1
+    Estimated λ_c ≈ 0.0113
+    We evaluate at λ=2: supercritical
+
+======================================================================
+PART 6: H(P_19) = ? — Full Factorization
+======================================================================
+  H(P_19) = 1172695746915
+         = 3^2 × 5 × 7 × 11 × 19 × 23 × 774463
+  Prime factors: [3, 5, 7, 11, 19, 23, 774463]
+  Number of distinct prime factors: 7
+  Squarefree? False
+
+======================================================================
+PART 7: The Residue H mod p² for Paley
+======================================================================
+  H(P_3) mod p = 0, mod p² = 3, mod 2p = 3
+  H(P_7) mod p = 0, mod p² = 42, mod 2p = 7
+  H(P_11) mod p = 0, mod p² = 110, mod 2p = 11
+  H(P_19) mod p = 0, mod p² = 323, mod 2p = 19
+
+======================================================================
+PART 8: Maximum H Achieved by Doubly Regular Tournaments?
+======================================================================
+
+  n=7:
+    Cyclic C_7: doubly regular? False (common values: {0, 1, 2})
+    Paley P_7: doubly regular? True (common values: {1})
+    H(C_7) = 175, H(P_7) = 189
+    Winner: Paley
+
+  n=11:
+    Cyclic C_11: doubly regular? False (common values: {0, 1, 2, 3, 4})
+    Paley P_11: doubly regular? True (common values: {2})
+    H(C_11) = 93027, H(P_11) = 95095
+    Winner: Paley
+
+  n=19:
+    Cyclic C_19: doubly regular? False (common values: {0, 1, 2, 3, 4, 5, 6, 7, 8})
+    Paley P_19: doubly regular? True (common values: {4})
+    H(C_19) = 1184212824763, H(P_19) = 1172695746915
+    Winner: Cyclic
+
+======================================================================
+PART 9: π in H(P_p) / p! — Stirling's Approximation
+======================================================================
+
+H(P_p)/p! and the √(2πp) connection:
+  p= 3: H/p! = 5.00000000e-01
+         H/p! × √(2πp) = 2.17080376e+00
+         log(H/p!) = -0.6931
+         -(p-1)ln2 + ln(2.4) = -0.5108
+  p= 7: H/p! = 3.75000000e-02
+         H/p! × √(2πp) = 2.48696814e-01
+         log(H/p!) = -3.2834
+         -(p-1)ln2 + ln(2.4) = -3.2834
+  p=11: H/p! = 2.38233025e-03
+         H/p! × √(2πp) = 1.98056108e-02
+         log(H/p!) = -6.0397
+         -(p-1)ln2 + ln(2.4) = -6.0560
+  p=19: H/p! = 9.64030399e-06
+         H/p! × √(2πp) = 1.05331305e-04
+         log(H/p!) = -11.5496
+         -(p-1)ln2 + ln(2.4) = -11.6012
+
+======================================================================
+END — opus-2026-03-14-S89c zeta
+======================================================================
