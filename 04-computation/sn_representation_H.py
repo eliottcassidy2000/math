@@ -151,179 +151,90 @@ def conjugacy_classes(n):
 
 def character_table_sn(n):
     """Compute the character table of S_n using the Murnaghan-Nakayama rule.
-    Returns: (list of partitions, list of cycle_types, 2D table chi[i][j])
+    Returns: (list of partitions, list of conj_classes, 2D table chi[i][j])
     where chi[i][j] = character of irrep labeled by partition i, evaluated at conjugacy class j.
     """
     parts = list(partitions(n))
-    conj_classes = conjugacy_classes(n)
-    ctypes = [c[0] for c in conj_classes]
+    conj_cls = conjugacy_classes(n)
 
-    # Murnaghan-Nakayama rule
-    def mn_character(lam, mu):
-        """Character of irrep lambda at conjugacy class of type mu."""
-        if sum(mu) == 0:
-            return 1
-        # Remove first part of mu, apply MN recursion
-        return _mn_recurse(list(lam), list(mu))
+    # ── Rim hook (border strip) removal ──
+    # A rim hook of size r in partition lam is a connected skew shape
+    # along the SE boundary with r cells and no 2x2 block.
+    # Leg length = (number of rows it spans) - 1.
+    #
+    # Standard algorithm: convert partition to its "beta numbers" representation.
+    # beta_i = lam_i + (num_parts - 1 - i) for each row i.
+    # A rim hook of size r exists iff some beta_i - r is NOT already a beta number
+    # and is >= 0. The new partition is obtained by replacing beta_i with beta_i - r.
+    # The leg length = number of beta_j strictly between beta_i - r and beta_i.
 
-    def _mn_recurse(lam, mu):
-        """Recursive Murnaghan-Nakayama."""
-        if not mu:
-            if all(p == 0 for p in lam):
-                return 1
-            return 0
-        # Take the last part of mu
-        r = mu[-1]
-        mu_rest = mu[:-1]
-        total = 0
-        # Find all border strips of size r in the Young diagram of lam
-        for strip in border_strips(lam, r):
-            new_lam, height = strip
-            sign = (-1)**height
-            total += sign * _mn_recurse(new_lam, mu_rest)
-        return total
-
-    def border_strips(lam, r):
-        """Find all border strips (rim hooks) of size r that can be removed from lambda.
-        Returns list of (new_lambda, height) where height = #rows - 1."""
-        # Represent lambda as a list of parts
-        n_rows = len(lam)
-        # Pad with zeros
-        lam_padded = list(lam) + [0]*r
+    def remove_rim_hooks(lam, r):
+        """Find all rim hooks of size r removable from partition lam.
+        Returns list of (new_partition_tuple, leg_length)."""
+        if not lam:
+            return []
+        k = len(lam)  # number of parts (including trailing zeros if any)
+        # Compute beta numbers: beta_i = lam_i + (k - 1 - i)
+        beta = [lam[i] + (k - 1 - i) for i in range(k)]
+        beta_set = set(beta)
 
         results = []
-        # A border strip is a connected skew shape on the border
-        # Try all possible removals
-        _find_border_strips(lam_padded, r, 0, [], results)
-        return results
-
-    def _find_border_strips(lam, r, start_row, removed, results):
-        """Find border strips by removing r cells from the border."""
-        if r == 0:
-            # Check valid partition and connectivity
-            new_lam = list(lam)
+        for i in range(k):
+            new_b = beta[i] - r
+            if new_b < 0:
+                continue
+            if new_b in beta_set:
+                continue  # would create a duplicate beta number
+            # Compute leg length = number of beta_j strictly between new_b and beta[i]
+            leg = sum(1 for j in range(k) if j != i and new_b < beta[j] < beta[i])
+            # Build new beta set
+            new_beta = sorted([new_b if j == i else beta[j] for j in range(k)], reverse=True)
+            # Convert back to partition
+            new_lam = [new_beta[j] - (k - 1 - j) for j in range(k)]
             # Remove trailing zeros
             while new_lam and new_lam[-1] == 0:
                 new_lam.pop()
-            if not new_lam:
-                new_lam = []
-            # Check it's still a valid partition
-            for i in range(len(new_lam)-1):
-                if new_lam[i] < new_lam[i+1]:
-                    return
-            # Height = number of distinct rows touched - 1
-            rows_touched = set(row for row, _ in removed)
-            height = len(rows_touched) - 1
-            results.append((tuple(new_lam), height))
-            return
-        # This approach is too slow for large n. Use a cleaner method.
-        # ... Actually let's use the standard approach for border strip removal.
-        pass
-
-    # Actually, let me use a cleaner implementation of the MN rule.
-    # Use the standard formulation via rim hooks.
-
-    def remove_rim_hooks(partition, size):
-        """Find all rim hooks of given size removable from partition.
-        Returns list of (new_partition, leg_length)."""
-        lam = list(partition)
-        n_rows = len(lam)
-        if n_rows == 0:
-            return []
-
-        results = []
-        # For each possible bottom-right cell of the rim hook
-        # A rim hook starts at some cell on the boundary and goes up-left
-        # The boundary consists of cells (i, lam[i]-1) for each row i, and
-        # cells (n_rows, j) for j = 0, ..., lam[-1]-1 (below the diagram)
-
-        # Better approach: try removing a rim hook ending in each row
-        # A rim hook of size r ending in row `end_row` and starting in row `start_row`
-        # removes cells from the rightmost of rows start_row through end_row.
-
-        # Standard method: for each row i (bottom of hook), try hooks going up
-        for end_row in range(n_rows):
-            # The hook must include the rightmost cell of row end_row
-            # Going up from end_row, we remove cells from right side
-            cells_remaining = size
-            new_lam = list(lam)
-            valid = True
-            start_row = end_row
-
-            for row in range(end_row, -1, -1):
-                if cells_remaining <= 0:
-                    break
-                # How many cells can we remove from this row?
-                # Must keep at least lam[row+1] cells (if row+1 exists) to maintain partition shape
-                min_width = lam[row+1] if row+1 < n_rows else 0
-                # But for the hook to be connected, we must remove from the right
-                # and the removal must be contiguous on the border
-
-                # For a rim hook: remove all cells in this row from column `min_width` to `lam[row]-1`
-                # that are on the rim, up to cells_remaining
-                available = lam[row] - min_width
-                if available <= 0:
-                    valid = False
-                    break
-                remove_here = min(available, cells_remaining)
-                new_lam[row] = lam[row] - remove_here
-                cells_remaining -= remove_here
-                start_row = row
-
-                # Check rim hook connectivity: after removing from this row,
-                # the new row width must equal min_width (the row below's width)
-                # unless this is the bottom row of the hook
-                if row < end_row and new_lam[row] != (new_lam[row+1] if row+1 < len(new_lam) else 0):
-                    # Not a valid rim hook (gap in connectivity)
-                    # Actually, for a rim hook, each row's new width should equal
-                    # the ORIGINAL width of the row below (for internal rows)
-                    pass
-
-            if cells_remaining > 0:
-                valid = False
-
-            if valid and cells_remaining == 0:
-                # Verify it's a valid partition
-                ok = True
-                for row in range(len(new_lam)-1):
-                    if new_lam[row] < new_lam[row+1]:
-                        ok = False
-                        break
-                if ok:
-                    # Remove trailing zeros
-                    while new_lam and new_lam[-1] == 0:
-                        new_lam.pop()
-                    leg = end_row - start_row  # leg length = height
-                    result_tuple = (tuple(new_lam), leg)
-                    if result_tuple not in results:
-                        results.append(result_tuple)
-
+            results.append((tuple(new_lam), leg))
         return results
 
-    def mn_char(partition, cycle_type_mu):
-        """Compute character using Murnaghan-Nakayama rule recursively."""
-        if not cycle_type_mu:
-            if not partition or all(p == 0 for p in partition):
-                return 1
-            return 0
+    # Memoized MN character computation
+    _mn_cache = {}
 
-        mu = list(cycle_type_mu)
-        r = mu.pop()  # Remove last (smallest) cycle length
+    def mn_char(lam, mu):
+        """Compute chi^lam(mu) via Murnaghan-Nakayama rule.
+        lam = partition (irrep label), mu = cycle type (conjugacy class label)."""
+        key = (lam, mu)
+        if key in _mn_cache:
+            return _mn_cache[key]
+
+        if not mu:
+            result = 1 if (not lam or lam == ()) else 0
+            _mn_cache[key] = result
+            return result
+
+        # Peel off the last (smallest) part of mu
+        mu_list = list(mu)
+        r = mu_list.pop()
+        mu_rest = tuple(mu_list)
+
         total = 0
-        for new_lam, leg in remove_rim_hooks(partition, r):
-            sign = (-1)**leg
-            total += sign * mn_char(new_lam, tuple(mu))
+        for new_lam, leg in remove_rim_hooks(lam, r):
+            sign = (-1) ** leg
+            total += sign * mn_char(new_lam, mu_rest)
+
+        _mn_cache[key] = total
         return total
 
     # Build character table
     chi = []
+    ctypes = [c[0] for c in conj_cls]
     for lam in parts:
         row = []
         for ct in ctypes:
             row.append(mn_char(lam, ct))
         chi.append(row)
 
-    return parts, conj_classes, chi
+    return parts, conj_cls, chi
 
 
 def verify_character_table(parts, conj_classes, chi, n):
@@ -347,7 +258,9 @@ def verify_character_table(parts, conj_classes, chi, n):
         print(f"  Character table VERIFIED (row orthogonality)")
 
     # Print dimensions
-    dims = [chi[i][0] for i in range(len(parts))]  # chi(identity) = dimension
+    # Identity permutation has cycle type (1,1,...,1), which is LAST in reverse-sorted order
+    id_idx = num_classes - 1  # index of identity conjugacy class
+    dims = [chi[i][id_idx] for i in range(len(parts))]  # chi(identity) = dimension
     print(f"  Irrep dimensions: {dict(zip(parts, dims))}")
     print(f"  Sum of d^2 = {sum(d*d for d in dims)} (should be {n_fact})")
 
@@ -609,10 +522,12 @@ def main():
         mults = decompose_character(perm_char, conj_classes, chi, n)
         print(f"  Irrep multiplicities:")
         for i, lam in enumerate(parts):
-            dim = chi[i][0]
+            id_idx = len(conj_classes) - 1  # identity class is last
+            dim = chi[i][id_idx]
             print(f"    {str(lam):<15}: multiplicity = {mults[i]}, "
                   f"dim = {dim}, contributes {int(mults[i])*dim} to total dim")
-        total_dim = sum(int(mults[i]) * chi[i][0] for i in range(len(parts)))
+        id_idx = len(conj_classes) - 1
+        total_dim = sum(int(mults[i]) * chi[i][id_idx] for i in range(len(parts)))
         print(f"  Total dimension: {total_dim} (should be {total})")
 
         # Step 5: H as a vector — it's S_n-invariant, so lives in trivial component
