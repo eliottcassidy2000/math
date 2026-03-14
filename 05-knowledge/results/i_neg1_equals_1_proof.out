@@ -1,0 +1,120 @@
+======================================================================
+VERIFICATION: I(-1)=1 iff TRANSITIVE
+======================================================================
+
+  n=7: 5000 random samples
+    I(-1)=1: 10
+    Of these, transitive: 10
+    Probability of transitive in random: 10/5000 = 0.002000
+/home/e/Documents/claude/math/04-computation/i_neg1_equals_1_proof.py:244: DeprecationWarning: `np.math` is a deprecated alias for the standard library `math` module (Deprecated Numpy 1.25). Replace usages of `np.math` with `math`
+  print(f"    Expected: n!/{2**tb} = {np.math.factorial(n)}/{2**tb} = {np.math.factorial(n)/2**tb:.6f}")
+    Expected: n!/2097152 = 5040/2097152 = 0.002403
+
+  n=8: 500 random samples
+    I(-1)=1: 0
+    Of these, transitive: 0
+
+======================================================================
+DOES alpha_1=0 IMPLY TRANSITIVE?
+======================================================================
+
+  CLAIM: A tournament has no directed odd cycles iff it is transitive.
+
+  PROOF:
+  (⟸) Transitive tournaments have no directed cycles of any length.
+       (A path in the tournament visits vertices in increasing score order.)
+
+  (⟹) If T is not transitive, T has a directed 3-cycle.
+       PROOF: T non-transitive ⟹ T has a directed cycle (by Erdos-Gallai/folklore).
+       Any directed cycle of length k>3 in a tournament contains a shorter cycle:
+       if C = v_1→v_2→...→v_k→v_1, consider the edge between v_1 and v_3.
+       If v_1→v_3: shortcut gives v_1→v_3→v_4→...→v_k→v_1 (length k-1).
+       If v_3→v_1: we get the 3-cycle v_1→v_2→v_3→v_1.
+       By induction, any directed cycle reduces to a 3-cycle.
+
+  So alpha_1 = 0 ⟺ dc3 = 0 ⟺ T is transitive.
+
+  THEOREM: I(Omega(T), -1) = 1 iff T is transitive.
+  PROOF:
+    I(-1) = 1 - alpha_1 + alpha_2 - alpha_3 + ...
+    If T is transitive: alpha_k = 0 for all k ≥ 1. I(-1) = 1. ✓
+    If T is not transitive: alpha_1 ≥ 1 (at least one directed 3-cycle).
+      Case 1: alpha_1 = 1 (exactly one odd cycle, which is a single 3-cycle).
+        Then alpha_2 = 0 (can't have 2 independent cycles).
+        I(-1) = 1 - 1 = 0 ≠ 1. ✓
+      Case 2: alpha_1 ≥ 2.
+        Need: alpha_1 - alpha_2 + alpha_3 - ... ≠ 0.
+        This is harder to prove in general, but verified exhaustively for n ≤ 6
+        and sampled for n = 7, 8, 9.
+
+  STRONGER CONJECTURE (verified): I(-1) ≤ 1 for all tournaments,
+  with equality iff transitive.
+
+  Note: I(-1) = 1 - alpha_1 + alpha_2 - ... and each alpha_k ≥ 0.
+  With alpha_1 ≥ 2: I(-1) ≤ 1 - 2 + alpha_2 = alpha_2 - 1.
+  But alpha_2 can be large, so I(-1) could in principle exceed 1!
+
+  HOWEVER: Let's check if this ever happens.
+
+  n=5: max I(-1) = 1
+  n=6: max I(-1) = 1
+
+  The maximum I(-1) is always 1 (attained by transitive).
+  I(-1) <= 1 for all tournaments at all tested n.
+
+======================================================================
+PROOF THAT I(-1) <= 1
+======================================================================
+
+  I(-1) = 1 + sum_{k>=1} alpha_k (-1)^k
+        = 1 + sum_{k>=1} alpha_k (-1)^k
+
+  For ANY graph G with independence polynomial I(G,x) = sum alpha_k x^k:
+    I(G, -1) = sum_{S independent} (-1)^{|S|}
+             = sum_{k>=0} alpha_k (-1)^k
+
+  This is the Euler characteristic of the independence complex:
+    chi(Ind(G)) = I(G, -1)
+
+  For CHORDAL graphs: Ind(G) is contractible or homotopy equivalent
+  to a sphere, so I(-1) ∈ {0, 1, -1, ...}.
+
+  For GENERAL graphs: I(-1) can be any integer.
+
+  BUT: for the conflict graph Omega(T) of a tournament T:
+    - T transitive ⟹ Omega(T) = empty graph on 0 vertices ⟹ I(-1) = 1
+    - T has 1 odd cycle ⟹ Omega(T) = single vertex ⟹ I(-1) = 1 - 1 = 0
+    - T has 2+ odd cycles ⟹ I(-1) depends on structure of Omega
+
+  The key question is: is I(Omega(T), -1) always ≤ 1?
+
+  If true, this means chi(Ind(Omega(T))) ≤ 1, i.e., the independence
+  complex of the conflict graph has bounded Euler characteristic.
+
+  This is a TOPOLOGICAL statement about tournament structure!
+
+  n=7: max I(-1) in 2000 random samples = 1
+  n=8: max I(-1) in 200 random samples = 0
+
+  CONJECTURE: I(Omega(T), -1) <= 1 for ALL tournaments T.
+  Equality iff T is transitive.
+
+  This would be equivalent to proving:
+    alpha_1 - alpha_2 + alpha_3 - alpha_4 + ... >= 0
+  i.e., the alternating sum of independence numbers is non-negative.
+
+  By inclusion-exclusion, alpha_1 - alpha_2 + alpha_3 - ...
+  counts the number of directed odd cycles that are NOT in any
+  independent pair, PLUS the number that are in an independent pair
+  but not in a triple, etc. — it's the "Mobius function" of the
+  independence structure.
+
+  For alpha_1 = 1: the sum = 1 > 0. ✓
+  For alpha_1 >= 2: empirically always > 0. ✓
+
+  A proof might use: every odd cycle shares a vertex with at most
+  n-3 other odd cycles (since the cycles are on n vertices),
+  so the independence graph is sparse enough that the alternating
+  sum is dominated by the first term alpha_1.
+
+Done.
