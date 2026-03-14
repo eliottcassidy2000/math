@@ -1,0 +1,20 @@
+======================================================================
+CAN 3 DIRECTED 3-CYCLES SHARE A COMMON VERTEX AT n=7?
+======================================================================
+
+  Constructing tournaments with 3 cycles all containing vertex 0...
+  Fixed arcs: 0→1, 0→3, 0→5, 2→0, 4→0, 6→0, 1→2, 3→4, 5→6
+
+  Total tournaments with dc3=3 (from 3-through-vertex-0 construction): 0
+  H distribution: []
+  H=7 found: False (0 tournaments)
+
+======================================================================
+PART 2: EXHAUSTIVE CHECK FOR dc3=3, α₂=0 AT n=7
+======================================================================
+
+  Checking dc5 and dc7 for tournaments with dc3=3 and all cycles through v0:
+
+  Total with dc3=3, dc5=0, dc7=0: 0
+
+Done.
