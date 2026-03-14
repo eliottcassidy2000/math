@@ -888,3 +888,14 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-930 | I(omega) mod (1-omega) = I(1) mod 3 in Eisenstein integers Z[omega] | CONFIRMED | I(omega) = (1-a2)+(a1-a2)omega. Mod (1-omega): sum = 1+a1-2a2 = I(1) mod 3. 1000/1000 verified. | kind-pasteur-S63 |
 | HYP-931 | Score sequence does NOT determine (a1,a2) at n>=5 | CONFIRMED | n=5: score (1,2,2,2,3) maps to a1 in {5,6,7}. n=6: score (1,2,2,3,3,4) maps to 7 distinct (a1,a2). | kind-pasteur-S63 |
 | HYP-932 | In tournament, each cyclic triple has exactly 1 directed 3-cycle (not 2) | CONFIRMED | Verified: count_directed_ham_cycles([0,1,2]) = 1 for cyclic tournament. Reverse direction uses opposite arcs. | kind-pasteur-S63 |
+
+## opus-2026-03-14-S71d Hypotheses (continued)
+
+| HYP-940 | dc3 = C(n,3) - Σ C(s_i,2) (classical formula) | CONFIRMED | Exhaustive n=5 (1024/1024), n=6 (32768/32768), n=7 sample (500/500). Each triple is either cyclic or has a "king." | opus-S71d |
+| HYP-941 | Score sequence determines dc3 for ALL n | CONFIRMED | Classical result. Each king-triple at vertex i contributes to C(s_i,2). | opus-S71d |
+| HYP-942 | Score ↛ dc5 at n≥5 | CONFIRMED | n=5: score (1,2,2,2,3) → dc5 ∈ {1,2,3}. n=7: 31/46 scores ambiguous for dc5. | opus-S71d |
+| HYP-943 | Score ↛ H at n≥5 | CONFIRMED | n=5: 1/9 ambiguous (regular score). n=7: 34/46 ambiguous. | opus-S71d |
+| HYP-944 | α₂ = dp33 exactly at n=7 | CONFIRMED | Only (3,3) disjoint pairs possible (3+5=8>7). 500/500 match. | opus-S71d |
+| HYP-945 | (dc3,dc5,dc7) ↛ H at n=7 | CONFIRMED | 15/148 groups ambiguous. α₂ depends on cycle intersection structure, not counts. | opus-S71d |
+| HYP-946 | Score → H is almost universal at n=5 (only regular score ambiguous) | CONFIRMED | α₂=0 for all n=5 tournaments, so H = 1+2α₁. Only (1,2,2,2,3) has multiple α₁ values. | opus-S71d |
+| HYP-947 | n=5→n=7 transition: from "score almost determines H" to "massive ambiguity" | CONFIRMED | n=5: 1/9 ambiguous. n=7: 34/46 ambiguous. The gap grows because α₂>0 becomes common. | opus-S71d |

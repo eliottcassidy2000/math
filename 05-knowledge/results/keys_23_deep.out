@@ -1,0 +1,192 @@
+======================================================================
+PART 1: (H, I₃) AS COMPLETE COORDINATE SYSTEM (n≤8)
+======================================================================
+
+  H = I(Ω,2) = 1 + 2α₁ + 4α₂      (at n≤8, α₃=0)
+  I₃ = I(Ω,3) = 1 + 3α₁ + 9α₂
+
+  Solving:
+    3H = 3 + 6α₁ + 12α₂
+    2I₃ = 2 + 6α₁ + 18α₂
+    2I₃ - 3H = -1 + 6α₂
+    α₂ = (2I₃ - 3H + 1) / 6
+    α₁ = (H - 1 - 4α₂) / 2
+
+  So (H, I₃) ↔ (α₁, α₂) is a LINEAR bijection!
+  Knowing 2 and 3 gives the full independence polynomial.
+
+  n=5 exhaustive verification:
+    (H,I₃) → (α₁,α₂) reconstruction: 1024/1024
+
+  n=7 (500 samples):
+    (H,I₃) → (α₁,α₂) reconstruction: 500/500
+
+======================================================================
+PART 2: 2-ADIC AND 3-ADIC STRUCTURE
+======================================================================
+
+  n=5:
+    H mod 2: always 1 (Rédei)
+    H mod 3: {0: 424, 1: 240, 2: 360}
+    H mod 4: {1: 720, 3: 304}
+    H mod 6: {1: 240, 3: 424, 5: 360}
+
+  n=7:
+    H mod 2: always 1 (Rédei)
+    H mod 3: {0: 304, 1: 359, 2: 337}
+    H mod 4: {1: 563, 3: 437}
+    H mod 6: {1: 359, 3: 304, 5: 337}
+
+======================================================================
+PART 3: WHEN H ALONE SUFFICES
+======================================================================
+
+  H → (α₁,α₂) at n=7: 52/72 values of H are ambiguous
+
+  Examples of H with multiple (α₁,α₂) decompositions:
+    H= 15: [(3, 2), (7, 0)]
+    H= 17: [(6, 1), (8, 0)]
+    H= 23: [(9, 1), (11, 0)]
+    H= 27: [(11, 1), (13, 0)]
+    H= 29: [(10, 2), (12, 1)]
+    H= 31: [(9, 3), (13, 1), (15, 0)]
+    H= 33: [(12, 2), (14, 1), (16, 0)]
+    H= 37: [(14, 2), (16, 1), (18, 0)]
+    H= 41: [(14, 3), (16, 2)]
+    H= 45: [(14, 4), (18, 2), (20, 1), (22, 0)]
+    H= 49: [(18, 3), (20, 2), (24, 0)]
+    H= 51: [(17, 4), (21, 2)]
+    H= 53: [(20, 3), (22, 2)]
+    H= 55: [(21, 3), (23, 2)]
+    H= 57: [(22, 3), (26, 1)]
+    H= 59: [(21, 4), (25, 2)]
+    H= 65: [(22, 5), (24, 4), (26, 3), (28, 2)]
+    H= 67: [(23, 5), (27, 3), (29, 2)]
+    H= 69: [(24, 5), (26, 4)]
+    H= 71: [(25, 5), (27, 4)]
+    H= 73: [(28, 4), (30, 3)]
+    H= 75: [(27, 5), (29, 4), (31, 3), (33, 2)]
+    H= 77: [(28, 5), (30, 4)]
+    H= 79: [(31, 4), (35, 2)]
+    H= 81: [(28, 6), (30, 5), (32, 4)]
+
+======================================================================
+PART 4: CRITICAL TRANSITIONS
+======================================================================
+
+  n=3: Only dc3 matters. α₂=0. H = 1 + 2·dc3 ∈ {1,3}.
+       ONE evaluation (at 2) suffices.
+       k-nacci precision: 1/2^3 = 1/8.
+
+  n=5: dc3 and dc5 matter. α₂=0.
+       H = 1 + 2(dc3+dc5).
+       ONE evaluation (at 2) still suffices!
+       k-nacci precision: 1/2^5 = 1/32.
+
+  n=6: FIRST α₂ > 0 appears.
+       H = 1 + 2α₁ + 4α₂. Now 2 is NOT enough.
+       Need BOTH I(Ω,2) and I(Ω,3).
+       "Need to know 3."
+       k-nacci precision: 1/2^6 = 1/64.
+       Weighted precision: (2/3)^6 ≈ 1/11.4.
+
+  n=7: α₂ common (mean ≈ 4.5). Same structure as n=6.
+       Two evaluations (at 2 and 3) suffice.
+
+  n=9: FIRST α₃ > 0 (three disjoint 3-cycles).
+       H = 1 + 2α₁ + 4α₂ + 8α₃.
+       Need THREE evaluations: I(Ω,2), I(Ω,3), I(Ω,4).
+       "Need to know 4 = 2²" (deeper knowledge of 2).
+
+  THEREFORE:
+    "Knowing 2" = knowing I(Ω, 2) = H
+    "Knowing 3" = knowing I(Ω, 3), hence α₂
+    "Knowing 2 AND 3" = full invariant for n ≤ 8
+
+  The quote "keys to the universe" is LITERALLY TRUE:
+  for n ≤ 8, two evaluation points (2 and 3) determine I(Ω, x).
+
+======================================================================
+PART 5: INFORMATION CONTENT OF 2 AND 3
+======================================================================
+
+  n=7 statistics (1000 samples):
+    H:   mean=78.9, std=39.7
+    I₃:  mean=131.1, std=67.9
+    α₂:  mean=4.4, std=3.0
+    I₃/H ratio: mean=1.6365
+
+    corr(H, I₃) = 0.998999
+    corr(H, α₂) = 0.939811
+    corr(α₂, I₃-3H/2) = 1.000000
+
+    I₃ - 3H/2 = -(5+6α₁)/4 + 9α₂/2
+    This residual contains BOTH α₁ and α₂.
+    So I₃ doesn't just add α₂ info — it adds α₁ info too.
+    The LINEAR ALGEBRA of two equations in two unknowns
+    is the 'key' structure that 2 and 3 unlock.
+
+======================================================================
+PART 6: NUMEROLOGY OF 2 AND 3
+======================================================================
+
+  2 × 3 = 6:  The Vandermonde determinant |2-3| = 1.
+               det [[1, 2], [1, 3]] = 1.
+               This is WHY (H, I₃) → (α₁, α₂) is an INTEGER bijection!
+               No denominators needed (up to a factor of 6).
+
+  2 + 3 = 5:  The first n where dc5 > 0 (5-cycles appear).
+               Also the first n where score ↛ H.
+
+  2 - 3 = -1: 2 ≡ -1 (mod 3). This gives the Eisenstein structure.
+
+  2/3:        The convergence rate of weighted k-nacci.
+               Also the "forgetting rate" at x=2.
+
+  1/2 × 2/3 = 1/3: The Jacobsthal rate. 2^n mod 3 = (-1)^n.
+
+  The Vandermonde determinant being 1 is the KEY FACT:
+    It means the matrix [[2, 4], [3, 9]] has det = 18-12 = 6.
+    So α₂ = (2I₃-3H+1)/6 is ALWAYS an integer.
+    This integrality is guaranteed by the OCF structure.
+
+  CHECK: Does α₂ = (2I₃-3H+1)/6 give integer values?
+
+  Integrality check: (2I₃-3H+1) mod 6 = 0: 1000/1000
+  This integrality follows from H ≡ 1 (mod 2) and the OCF structure.
+
+======================================================================
+PART 7: BEYOND 2 AND 3 — THE α₃ FRONTIER
+======================================================================
+
+  α₃ first appears at n=9 (three vertex-disjoint 3-cycles).
+  At n=9: H = 1 + 2α₁ + 4α₂ + 8α₃.
+  Need I(Ω,2), I(Ω,3), I(Ω,4) to solve for (α₁, α₂, α₃).
+
+  The 3×3 system:
+    H  = 1 + 2α₁ +  4α₂ +   8α₃
+    I₃ = 1 + 3α₁ +  9α₂ +  27α₃
+    I₄ = 1 + 4α₁ + 16α₂ +  64α₃
+
+  Vandermonde matrix [[2,4,8],[3,9,27],[4,16,64]]:
+    det = 2·9·64 + 4·27·4 + 8·3·16 - 8·9·4 - 4·3·64 - 2·27·16
+        = 1152 + 432 + 384 - 288 - 768 - 864
+        = 48
+
+  So (α₁,α₂,α₃) can be recovered from (H,I₃,I₄) with denominator 48.
+  Integrality requires (certain combination) ≡ 0 (mod 48).
+
+  But 4 = 2²! So "knowing 4" is "deeper knowledge of 2," not new.
+  The TRULY new primes in the Vandermonde are 2, 3, 5, 7, ...
+  which are exactly the ODD PRIME cycle lengths in tournaments!
+
+  The "keys to the universe" — 2 and 3 — are the FIRST two:
+  2 = the evaluation point of OCF
+  3 = the first odd prime cycle length
+
+  For n ≤ 8: 2 and 3 suffice (α₃=0).
+  For n ≤ 14: 2, 3, and 5 suffice (α₄=0, since 4×3=12<15 needed).
+    Actually α₄=0 needs 4 disjoint odd cycles, min 12 vertices.
+  For general n: need evaluations at 2, 3, ..., floor(n/3)+1.
+
+Done.
