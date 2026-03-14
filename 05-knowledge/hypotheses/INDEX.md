@@ -859,3 +859,16 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-900 | 3/2 × 4/3 = 2: product of additive and multiplicative ratios equals root | CONFIRMED | Additive ratio = x₂/x₁ = 3/2, multiplicative = (1+x₂)/(1+x₁) = 4/3. Product = (k+2)/k = 2 only at k=2. | opus-S72 |
 | HYP-901 | Hierarchy {2,3,7,8,10,11} = {x, 1+x, x³-1, x³, x+x³, 1+x+x³} at x=2 | CONFIRMED | Polynomial ring Z[x]: 2=x, 3=1+x, 7=x³-1, 8=x³, 10=x+x³, 11=1+x+x³. All user-highlighted numbers live in Z[x]. | opus-S72 |
 | HYP-902 | 3 plays four simultaneous roles: root (of x=6 Jac), Galois distance (2-(-1)), denominator (of J₂), isolated weight (1+2) | CONFIRMED | Each role independently verified. The coincidence is structural: 3 = 2-(-1) = 1+2 = (2·2-1). | opus-S72 |
+
+## opus-2026-03-14-S71d Hypotheses
+
+| HYP-903 | α₁ counts DIRECTED odd cycles, not vertex-sets (MISTAKE-023) | CONFIRMED | At n=5: vertex-set method gives 184/1024 mismatches with OCF; directed-cycle method gives 0/1024. Definition says "directed odd cycles." | opus-S71d |
+| HYP-904 | φ_k = 2 - (1/2)^k - k/2^{2k+1} + O(k²/8^k) [exact k-nacci asymptotics] | CONFIRMED | PROVED: from ε·(2-ε)^k=1 via perturbation. Verified to 15+ decimals for k=3..19. | opus-S71d |
+| HYP-905 | ψ_k = 3 - (2/3)^k - k/3·(4/9)^k + O(k²·(8/27)^k) [weighted k-nacci] | CONFIRMED | PROVED: from ε·(3-ε)^k=2^k via perturbation. Verified to 15+ decimals for k=3..19. | opus-S71d |
+| HYP-906 | General: R_k = (1+c) - (c/(1+c))^k for geometric weights c^{j-1} | CONFIRMED | PROVED: master equation x^k(x-(1+c))+c^k=0 gives ε=(c/(1+c))^k. Unifies k-nacci (c=1) and weighted (c=2). | opus-S71d |
+| HYP-907 | n=8 α₂ splits: 62.5% type (3,3), 37.5% type (3,5) cross-level | CONFIRMED | 200 random n=8 tournaments: 3569 (3,3) + 2145 (3,5) pairs. First cross-level coupling. | opus-S71d |
+| HYP-908 | α₂^{35} (cross-level) IS lambda-determined at n=8 | CONFIRMED | 0/200 ambiguous lambda fibers for α₂^{35} at n=8. Lambda controls all α₂ components. | opus-S71d |
+| HYP-909 | n=7 directed 5-cycles per vertex-set: mean 1.38, 7-cycles per v-set: mean 5.67 | CONFIRMED | 200 random tournaments. Shows cycle multiplicity grows with cycle length. | opus-S71d |
+| HYP-910 | H = 1 + 2α₁ + 4α₂ at n≤7 with DIRECTED α₁ (α₃=0) | CONFIRMED | 200/200 at n=7, 1024/1024 at n=5. Three disjoint cycles need ≥9 vertices. | opus-S71d |
+| HYP-911 | I₃/H ratio NOT 3/2 globally (mean ≈ 1.64 at n=7), increases with α₂ | CONFIRMED | 200 samples: I₃/H = (1+3α₁+9α₂)/(1+2α₁+4α₂) → 9/4 as α₂ dominates. Earlier "3/2 ratio" was within λ-fibers. | opus-S71d |
+| HYP-912 | Cross-level contribution 4·α₂^{35}/H averages 11.4% at n=8 | CONFIRMED | 200 random n=8 tournaments. Range [0%, 19.6%]. | opus-S71d |
