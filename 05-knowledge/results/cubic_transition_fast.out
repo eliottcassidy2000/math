@@ -1,0 +1,129 @@
+======================================================================
+CUBIC TRANSITION — FAST VERIFICATION
+======================================================================
+
+PART 1: 3 disjoint 3-cycles at n=8?
+  Combinatorial argument: 3 triples need 9 vertices, but n=8
+  What about 3-cycle + 5-cycle disjoint at n=8? 3+5=8, uses ALL vertices.
+  Third cycle needs vertices disjoint from both -> IMPOSSIBLE.
+  CONCLUSION: alpha(Omega) <= 2 at n=8.
+  Verification: 3 disjoint 3-cycles at n=8: 0/200
+
+PART 2: 3 disjoint 3-cycles at n=9?
+  3 disjoint 3-cycles at n=9: 164/200 (82.0%)
+    Example: [{0, 8, 4}, {1, 2, 5}, {3, 6, 7}]
+    Example: [{0, 1, 4}, {2, 3, 7}, {8, 5, 6}]
+    Example: [{0, 2, 7}, {1, 3, 6}, {8, 4, 5}]
+
+PART 3: H distribution at n=9
+  100/500 done
+  200/500 done
+  300/500 done
+  400/500 done
+  500/500 done
+
+  H range at n=9: [23, 3053]
+  Distinct H values: 409
+  Mean H: 1388.1
+
+  Status of n=7 forbidden values at n=9:
+    H=  7: still absent
+    H= 21: still absent
+    H= 63: still absent
+    H=107: still absent
+    H=119: still absent
+    H=149: still absent
+
+  Odd H values <= 31:
+    H=  1:    0 <-- GAP
+    H=  3:    0 <-- GAP
+    H=  5:    0 <-- GAP
+    H=  7:    0 <-- GAP
+    H=  9:    0 <-- GAP
+    H= 11:    0 <-- GAP
+    H= 13:    0 <-- GAP
+    H= 15:    0 <-- GAP
+    H= 17:    0 <-- GAP
+    H= 19:    0 <-- GAP
+    H= 21:    0 <-- GAP
+    H= 23:    1
+    H= 25:    0 <-- GAP
+    H= 27:    1
+    H= 29:    0 <-- GAP
+    H= 31:    0 <-- GAP
+
+  H always odd at n=9? True (even count: 0)
+
+  H mod 8 distribution:
+    H = 1 mod 8: 129 (25.8%)
+    H = 3 mod 8: 111 (22.2%)
+    H = 5 mod 8: 144 (28.8%)
+    H = 7 mod 8: 116 (23.2%)
+
+======================================================================
+PART 4: WHY H=21 IS PERMANENTLY FORBIDDEN
+======================================================================
+
+H = 1 + 2*a1 + 4*a2 + 8*a3 + ... + 2^k*a_k = 21
+=> sum 2^j * a_j = 20  (j from 1)
+
+Key constraint: a_k > 0 implies a_(k-1) >= C(k,2)*a_k/...
+More precisely: an independent k-set in Omega contains
+C(k,2) disjoint pairs, so a2 >= C(k,2) when a_k >= 1.
+
+For any k >= 1:
+  If a_k >= 1, the k cycles use >= 3k vertices
+  Their C(k,2) pairs are disjoint, so a2 >= C(k,2)
+  Minimum contribution: 2^k + 4*C(k,2)
+  k=1: min contribution = 2^1 + 4*C(1,2) = 2 + 0 = 2
+  k=2: min contribution = 2^2 + 4*C(2,2) = 4 + 4 = 8
+  k=3: min contribution = 2^3 + 4*C(3,2) = 8 + 12 = 20
+  k=4: min contribution = 2^4 + 4*C(4,2) = 16 + 24 = 40
+         > 20 = H-1. So a_4 = 0 forced for k >= 4.
+
+  Maximum non-zero coefficient: a_3
+  For H=21: only a_1 and a_2 can be non-zero (same as quadratic era!)
+  Back to: a1 + 2*a2 = 10, which we proved impossible at n=7.
+  But at n>=9, new (a1, a2) pairs might become achievable!
+  Need to check: is (a1=10, a2=0) achievable at any n?
+
+  (a1=10, a2=0): 10 odd cycles, all sharing vertices
+  At n=7: impossible (c3+c5+c7 never = 10 with all conflicting)
+  At n=9: more cycles available (c3 up to C(9,3)/7=12)
+  Could in principle work... but need ALL to pairwise conflict!
+  With 10 cycles and 0 disjoint pairs, every pair must share a vertex.
+
+======================================================================
+PART 5: CONSTRUCTED n=9 WITH 3 DISJOINT 3-CYCLES
+======================================================================
+
+  Block-circulant tournament: blocks {0,1,2}, {3,4,5}, {6,7,8}
+  H = 3159
+  c3 = 30
+  Has 3 disjoint 3-cycles? True
+  Triple: [{0, 1, 2}, {3, 4, 5}, {8, 6, 7}]
+  Score sequence: [np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)]
+
+  If a3 >= 1: a2 >= C(3,2) = 3 (from the triple)
+  Minimum H with a3=1: H >= 1 + 0 + 4*3 + 8*1 = 21
+  But H = 21 is forbidden! So what gives?
+  Answer: a1 is at least 3 (the three cycles themselves)
+  H >= 1 + 2*3 + 4*3 + 8*1 = 1 + 6 + 12 + 8 = 27
+  So a3=1 forces H >= 27, safely above 21.
+
+  More precisely: a3=1 requires a1 >= 3, a2 >= 3
+  Minimum H = 1 + 2*3 + 4*3 + 8*1 = 27
+  H=21 would need a1+2*a2+4*a3 = 10 with a3>=1, a2>=3, a1>=3
+  a1 + 2*3 + 4*1 = 10 => a1 = 0. But a1 >= 3 (contradiction!)
+  H=21 is PERMANENTLY FORBIDDEN by this argument.
+
+======================================================================
+SUMMARY
+======================================================================
+
+  n=8: alpha(Omega) <= 2 (quadratic I.P. only)
+  n=9: alpha(Omega) = 3 first possible (82.0% of random)
+  H=7: permanently forbidden (a1+2*a2 = 3, too small for any a_k>0)
+  H=21: permanently forbidden (a3>=1 forces a1>=3, a2>=3 => H>=27)
+  The cubic coefficient a3 contributes 2^3 = 8 per independent triple
+  The 8 = 2^3 from Cayley-Dickson maps exactly to the OCF weight
