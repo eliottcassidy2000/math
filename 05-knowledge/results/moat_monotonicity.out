@@ -1,0 +1,48 @@
+======================================================================
+MOAT MONOTONICITY THEOREM — VERIFICATION
+======================================================================
+
+  S_3 = [1, 3]
+
+  S_4 = [1, 3, 5]
+  S_3 ⊆ S_4? True
+  New values at n=4: [5]
+
+  S_5 = [1, 3, 5, 9, 11, 13, 15]
+  S_4 ⊆ S_5? True
+  New values at n=5: [9, 11, 13, 15]
+
+  S_6 = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  S_5 ⊆ S_6? True
+  New values at n=6: [17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+======================================================================
+SOURCE VERTEX CONSTRUCTION VERIFICATION
+======================================================================
+
+  n=5 -> n=6 source/sink verification: 1024/1024 all correct
+  n=4 -> n=5 source verification: 64/64 all correct
+
+======================================================================
+MOAT MONOTONICITY THEOREM — SUMMARY
+======================================================================
+
+  THEOREM: S_n := {H(T) : T tournament on n vertices} satisfies S_n c S_{n+1}.
+
+  PROOF: Add source vertex w to T. w has no incoming edges, so w is not in
+  any directed cycle. Omega(T + w) = Omega(T). Hence H(T + w) = H(T).
+
+  Same argument works for sink vertex (reverse all edges to w).
+
+  VERIFIED: exhaustive at n=3,4,5,6 and source construction at n=4->5, n=5->6.
+
+  COROLLARY: The permanent moat is:
+    M = {v odd : v not in S_n for any n}
+
+  Known: M contains {7, 21} (proved for 7, empirical for 21).
+  By n=8 computation (100k samples): no other gap below 600.
+
+  OPEN QUESTION: Prove H=21 is impossible for ALL n.
+  Evidence: blocked at n=6 (exhaustive), n=7 (500k), n=8 (100k).
+  Mechanism: six-way block — every decomposition of T=10 independently impossible.
+
