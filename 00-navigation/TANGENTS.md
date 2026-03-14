@@ -688,4 +688,32 @@ NEW H-MAXIMIZER FAMILY? Satake constructs cyclotomic NDR tournaments for q ≡ 5
 MIXED GRAPH OCF? Schweser-Stiebitz-Toft show three stronger forms of Rédei: adding undirected vertices produces even H-count. This suggests an extension of OCF (H(T) = I(Omega(T), 2)) to MIXED DIGRAPHS. The mixed-graph version would count H-paths in T with some undirected edges, and OCF would give a signed cycle-covering formula. Potential application: modeling social choice with partial orders (some pairs comparable, some not).
 
 **T217** #ren-path-independence #embedding-theorem #beta2-zero | certainty: MEDIUM | source: kind-pasteur-2026-03-12-S55 (Ren arXiv:2504.15126)
+
+---
+
+## Knot Theory — Tournament Bridge (kind-pasteur-S69)
+
+**T218** #knot-tournament #skein-relation #dc-analogy | certainty: VERY HIGH | source: kind-pasteur-2026-03-14-S69
+The THM-082 deletion-contraction H(T)=H(T\e)+H(T/e) is a SKEIN RELATION: H(T)-H(T')=H(T/e)-H(T'/e') under arc flip. Direct analogy to Jones polynomial skein relation. F(T,x) plays the role of the Jones polynomial; the forward polynomial evaluated at roots of unity gives knot-like invariants.
+
+**T219** #vassiliev-type #finite-type #tournament | certainty: HIGH (verified n=3,4,5) | source: kind-pasteur-2026-03-14-S69
+H(T) is a FINITE-TYPE INVARIANT of tournaments (Vassiliev analogy). Type = 2 at n=3,4 and type = 4 at n=5. Triangle-triple Delta_3 vanishes universally (PROVED: Ham path uses ≤2 of 3 triangle arcs). At n=4, Delta_3=0 for ALL arc triples (not just triangles) — remarkable additional cancellation.
+
+**T220** #euler-characteristic #glmy #khovanov-analogy | certainty: VERY HIGH | source: kind-pasteur-2026-03-14-S69
+Chi(GLMY path homology) = 1 - beta_1 - beta_3 + beta_4 ∈ {0, 1} for most tournaments. Chi = 1 iff homologically trivial. Chi = 0 iff nontrivial (beta_1 or beta_3 > 0). EXCEPTION: Paley T_7 has chi = 7 = n (because beta_4 = 6). Cyclic interval n=9 has chi = 324 (beta_6 = 324). Khovanov analogy: chi categorifies a Boolean invariant (trivial vs nontrivial), not H.
+
+**T221** #poincare-duality #omega-palindrome #tournament-topology | certainty: HIGH | source: kind-pasteur-2026-03-14-S69
+Omega dims palindromic iff regular H-maximizer at odd n (24/1024 at n=5, all with H=15). Paley T_7 has ALMOST palindromic Omega = [7,21,42,63,63,42,21]. Cyclic interval T_5 has palindromic Omega = [5,10,10,10,5]. Poincare duality for tournament path homology holds selectively.
+
+**T222** #writhe #score-regularity #H-correlation | certainty: VERY HIGH | source: kind-pasteur-2026-03-14-S69
+Tournament writhe (= #ascending - #descending arcs) has correlation 0 with H (by T^op symmetry) but |writhe| has strong negative correlation with H (~-0.25). |writhe| = C(n,2) iff transitive (H=1). H-maximizers (regular tournaments) have writhe ≈ 0. "Balanced writhe = many Ham paths."
+
+**T223** #signed-redei #F-neg1 | certainty: VERY HIGH | source: kind-pasteur-2026-03-14-S69
+F(T,-1) = sum_{paths P} (-1)^{fwd(P)} is ALWAYS ODD for any tournament ("signed Redei theorem"). The signed count F(-1) is a finer invariant than H but does not determine it. Distribution skewed and not symmetric.
+
+**T224** #pfaffian-odd #tournament-adjacency | certainty: VERY HIGH | source: kind-pasteur-2026-03-14-S69
+For even n, det(A-A^T) for tournament adjacency A is always a perfect square of an ODD integer. Pfaffian values at n=6: {1,3,5,7,9}. At odd n, det(A-A^T)=0 always (skew-symmetric of odd dimension).
+
+**T225** #3cycle-reversal #reidemeister-R3 | certainty: HIGH | source: kind-pasteur-2026-03-14-S69
+3-cycle reversal (flipping all 3 arcs of a directed 3-cycle) preserves H at n=4 but NOT at n≥5. Also preserves chi at n=4. This is a "Reidemeister R3" move for tournaments, but only a partial invariance.
 REN EMBEDDING THEOREM AND BETA_2=0: Ren proves canonical embeddings from the independence complex of the underlying undirected graph into the path independence complex of the digraph. Our beta_2=0 result (ALL tournaments, exhaustive) may follow from this embedding: if the independence complex (of the undirected graph underlying the directed cycle structure) has trivial H_2, and the embedding preserves this, then beta_2=0 for tournaments. The seesaw mechanism (THM-095) might be a consequence. Worth investigating formally.

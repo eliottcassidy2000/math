@@ -1,0 +1,215 @@
+======================================================================
+SPECTRAL TOURNAMENT THEORY
+kind-pasteur-2026-03-14-S69
+======================================================================
+
+======================================================================
+PART 1: CHARACTERISTIC POLYNOMIAL det(xI - A) vs H(T)
+======================================================================
+
+--- n = 3 ---
+  H=  1: det(A) in [0], 1 eig patterns, max_re=0.000
+  H=  3: det(A) in [1], 1 eig patterns, max_re=1.000
+
+--- n = 4 ---
+  H=  1: det(A) in [0], 1 eig patterns, max_re=0.000
+  H=  3: det(A) in [0], 1 eig patterns, max_re=1.000
+  H=  5: det(A) in [-1], 1 eig patterns, max_re=1.395
+
+--- n = 5 ---
+  H=  1: det(A) in [0], 1 eig patterns, max_re=0.000
+  H=  3: det(A) in [0], 1 eig patterns, max_re=1.000
+  H=  5: det(A) in [0], 1 eig patterns, max_re=1.395
+  H=  9: det(A) in [1], 2 eig patterns, max_re=1.719
+  H= 11: det(A) in [1], 1 eig patterns, max_re=1.860
+  H= 13: det(A) in [2], 1 eig patterns, max_re=1.839
+  H= 15: det(A) in [2, 3], 3 eig patterns, max_re=2.000
+
+======================================================================
+PART 2: SPECTRAL GAP vs H
+  'Spectral gap' = largest real eigenvalue of A
+  Expected: H-maximizers have largest spectral gap
+======================================================================
+
+--- n = 5 ---
+  Correlation(H, spectral_radius) = 0.860853
+  Correlation(H, max_real_eigenvalue) = 0.860853
+  H-maximizer (H=15): spectral_radius in [np.float64(1.8637065278191873), np.float64(1.8637065278191882), np.float64(1.8637065278191884)]
+  H-minimizer (H=1): spectral_radius in [np.float64(0.0)]
+
+--- n = 6 ---
+  Correlation(H, spectral_radius) = 0.818894
+  Correlation(H, max_real_eigenvalue) = 0.818894
+  H-maximizer (H=45): spectral_radius in [np.float64(2.4142135623730896), np.float64(2.4142135623730905), np.float64(2.4142135623730914)]
+  H-minimizer (H=1): spectral_radius in [np.float64(0.0)]
+
+======================================================================
+PART 3: SKEW-SYMMETRIC SPECTRUM of S = A - A^T
+  S has purely imaginary eigenvalues (skew-sym)
+  For even n: Pfaffian(S) is always odd (HYP-1171)
+======================================================================
+
+--- n = 4 ---
+  H -> Pfaffian(A-A^T):
+    H=  1: Pfaff in [1]
+    H=  3: Pfaff in [3]
+    H=  5: Pfaff in [1]
+
+  H -> largest imaginary eigenvalues of A-A^T:
+    H=  1: top imag eigs: [(np.float64(2.41), np.float64(2.41), np.float64(0.41))]
+    H=  3: top imag eigs: [(np.float64(1.73), np.float64(1.73), np.float64(1.73))]
+    H=  5: top imag eigs: [(np.float64(2.41), np.float64(2.41), np.float64(0.41))]
+
+--- n = 5 ---
+
+  H -> largest imaginary eigenvalues of A-A^T:
+    H=  1: top imag eigs: [(np.float64(3.08), np.float64(3.08), np.float64(0.73))]
+    H=  3: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(1.73))]
+    H=  5: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(1.73))]
+    H=  9: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(1.73)), (np.float64(3.08), np.float64(3.08), np.float64(0.73))]
+    H= 11: top imag eigs: [(np.float64(3.08), np.float64(3.08), np.float64(0.73))]
+    H= 13: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(1.73))]
+    H= 15: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(1.73)), (np.float64(3.08), np.float64(3.08), np.float64(0.73))]
+
+--- n = 6 ---
+  H -> Pfaffian(A-A^T):
+    H=  1: Pfaff in [1]
+    H=  3: Pfaff in [3]
+    H=  5: Pfaff in [1]
+    H=  9: Pfaff in [3, 5, 9]
+    H= 11: Pfaff in [1]
+    H= 13: Pfaff in [7]
+    H= 15: Pfaff in [1, 5, 9]
+    H= 17: Pfaff in [1, 7]
+    H= 19: Pfaff in [3]
+    H= 23: Pfaff in [1, 5]
+    H= 25: Pfaff in [1]
+    H= 27: Pfaff in [3]
+    H= 29: Pfaff in [1, 9]
+    H= 31: Pfaff in [7]
+    H= 33: Pfaff in [1, 3]
+    H= 37: Pfaff in [1, 3, 5]
+    H= 41: Pfaff in [1]
+    H= 43: Pfaff in [1]
+    H= 45: Pfaff in [1, 7]
+
+  H -> largest imaginary eigenvalues of A-A^T:
+    H=  1: top imag eigs: [(np.float64(3.73), np.float64(3.73), np.float64(1.0))]
+    H=  3: top imag eigs: [(np.float64(3.43), np.float64(3.43), np.float64(1.73))]
+    H=  5: top imag eigs: [(np.float64(3.25), np.float64(3.25), np.float64(2.1))]
+    H=  9: top imag eigs: [(np.float64(3.0), np.float64(3.0), np.float64(1.73)), (np.float64(3.08), np.float64(3.08), np.float64(2.24)), (np.float64(3.43), np.float64(3.43), np.float64(1.73))]
+    H= 11: top imag eigs: [(np.float64(3.25), np.float64(3.25), np.float64(2.1))]
+    H= 13: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(2.65))]
+    H= 15: top imag eigs: [(np.float64(3.0), np.float64(3.0), np.float64(1.73)), (np.float64(3.08), np.float64(3.08), np.float64(2.24)), (np.float64(3.25), np.float64(3.25), np.float64(2.1))]
+    H= 17: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(2.65)), (np.float64(3.73), np.float64(3.73), np.float64(1.0))]
+    H= 19: top imag eigs: [(np.float64(3.43), np.float64(3.43), np.float64(1.73))]
+    H= 23: top imag eigs: [(np.float64(3.08), np.float64(3.08), np.float64(2.24)), (np.float64(3.73), np.float64(3.73), np.float64(1.0))]
+    H= 25: top imag eigs: [(np.float64(3.25), np.float64(3.25), np.float64(2.1))]
+    H= 27: top imag eigs: [(np.float64(3.43), np.float64(3.43), np.float64(1.73))]
+    H= 29: top imag eigs: [(np.float64(3.0), np.float64(3.0), np.float64(1.73)), (np.float64(3.25), np.float64(3.25), np.float64(2.1))]
+    H= 31: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(2.65))]
+    H= 33: top imag eigs: [(np.float64(3.25), np.float64(3.25), np.float64(2.1)), (np.float64(3.43), np.float64(3.43), np.float64(1.73))]
+    H= 37: top imag eigs: [(np.float64(3.08), np.float64(3.08), np.float64(2.24)), (np.float64(3.25), np.float64(3.25), np.float64(2.1)), (np.float64(3.43), np.float64(3.43), np.float64(1.73))]
+    H= 41: top imag eigs: [(np.float64(3.73), np.float64(3.73), np.float64(1.0))]
+    H= 43: top imag eigs: [(np.float64(3.25), np.float64(3.25), np.float64(2.1))]
+    H= 45: top imag eigs: [(np.float64(2.65), np.float64(2.65), np.float64(2.65)), (np.float64(3.73), np.float64(3.73), np.float64(1.0))]
+
+======================================================================
+PART 4: 'TOURNAMENT DETERMINANT' det(A) vs H
+  For a knot, the determinant = |Alexander(-1)| = |det(V-V^T)|
+  For tournament: det(A) is our 'tournament determinant'
+======================================================================
+
+--- n = 3 ---
+  H -> det(A):
+    H=  1: det in [0], count=6
+    H=  3: det in [1], count=2
+
+  det(A) ambiguous for H: 0/2 det values
+
+--- n = 4 ---
+  H -> det(A):
+    H=  1: det in [0], count=24
+    H=  3: det in [0], count=16
+    H=  5: det in [-1], count=24
+
+  det(A) ambiguous for H: 1/2 det values
+
+--- n = 5 ---
+  H -> det(A):
+    H=  1: det in [0], count=120
+    H=  3: det in [0], count=120
+    H=  5: det in [0], count=240
+    H=  9: det in [1], count=240
+    H= 11: det in [1], count=120
+    H= 13: det in [2], count=120
+    H= 15: det in [2, 3], count=64
+
+  det(A) ambiguous for H: 3/4 det values
+
+--- n = 6 ---
+  H -> det(A):
+    H=  1: det in [0], count=150
+    H=  3: det in [0], count=192
+    H=  5: det in [0], count=414
+    H=  9: det in [0, 1], count=532
+    H= 11: det in [0], count=244
+    H= 13: det in [0], count=248
+    H= 15: det in [-1, 0], count=362
+    H= 17: det in [-1, 0], count=233
+    H= 19: det in [-1], count=214
+    H= 23: det in [-1], count=413
+    H= 25: det in [-2], count=202
+    H= 27: det in [-2], count=73
+    H= 29: det in [-2, -1], count=402
+    H= 31: det in [-2], count=206
+    H= 33: det in [-3, -2], count=344
+    H= 37: det in [-3, -2], count=475
+    H= 41: det in [-2], count=78
+    H= 43: det in [-4], count=164
+    H= 45: det in [-4, -1], count=54
+
+  det(A) ambiguous for H: 5/6 det values
+
+======================================================================
+PART 5: EIGENVALUE STATISTICS (Random Matrix Theory)
+  Tournament A is a random {0,1} matrix with A+A^T = J-I
+  What is the eigenvalue distribution?
+======================================================================
+  n=8, 1000 samples
+  Eigenvalue real parts: mean=0.0000, std=1.1481, range=[-0.5000, 3.4464]
+  Eigenvalue imag parts: mean=0.0000, std=1.1481, range=[-2.4204, 2.4204]
+
+  Expected: mean real = (n-1)/2 = 3.5 (row sum average)
+  Note: A has row sums = out-degrees, trace = 0
+  So sum(eigenvalues) = trace(A) = 0, but eigenvalues not centered at 0
+
+  Correlation(H, spectral_radius) at n=8: 0.0336
+  Correlation(H, max_real_eig) at n=8: 0.0336
+  Mean H = 311.93, n!/2^(n-1) = 315.00
+
+======================================================================
+PART 6: det(A) FOR PALEY TOURNAMENTS
+======================================================================
+
+  Paley T_3:
+    det(A) = 1
+    Eigenvalues: [np.complex128(-0.5+0.866j), np.complex128(-0.5-0.866j), np.complex128(1+0j)]
+    Spectral radius = 1.0000
+    (p-1)/2 = 1.0
+
+  Paley T_7:
+    det(A) = 24
+    Eigenvalues: [np.complex128(3+0j), np.complex128(-0.5+1.3229j), np.complex128(-0.5-1.3229j), np.complex128(-0.5+1.3229j), np.complex128(-0.5-1.3229j), np.complex128(-0.5+1.3229j), np.complex128(-0.5-1.3229j)]
+    Spectral radius = 3.0000
+    (p-1)/2 = 3.0
+
+  Paley T_11:
+    det(A) = 1215
+    Eigenvalues: [np.complex128(5+0j), np.complex128(-0.5+1.6583j), np.complex128(-0.5-1.6583j), np.complex128(-0.5+1.6583j), np.complex128(-0.5-1.6583j), np.complex128(-0.5+1.6583j), np.complex128(-0.5-1.6583j), np.complex128(-0.5+1.6583j), np.complex128(-0.5-1.6583j), np.complex128(-0.5+1.6583j), np.complex128(-0.5-1.6583j)]
+    Spectral radius = 5.0000
+    (p-1)/2 = 5.0
+
+======================================================================
+DONE
+======================================================================
