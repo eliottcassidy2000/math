@@ -1,0 +1,213 @@
+======================================================================
+TOURNAMENT PARTITION FUNCTION & GENERATING FUNCTIONS
+kind-pasteur-2026-03-14-S74
+======================================================================
+
+======================================================================
+PART 1: H-GENERATING POLYNOMIAL P_n(q) = sum_T q^{H(T)}
+======================================================================
+
+  n=3: P_3(q) = 6*q^1 + 2*q^3
+  P(1) = 8
+  P(-1) = -8
+  P(0) = 0
+  All H odd: P(-1) = -8 = -8
+
+  Q_3(x) where P_3(q) = q * Q_3(q^2):
+  Q_3(x) = 6*x^0 + 2*x^1
+  Q(1) = 8 = P(1)
+  Q(0) = 6 = #{H=1} = n! (transitive tournaments)
+  Q(-1) = 4
+
+  n=4: P_4(q) = 24*q^1 + 16*q^3 + 24*q^5
+  P(1) = 64
+  P(-1) = -64
+  P(0) = 0
+  All H odd: P(-1) = -64 = -64
+
+  Q_4(x) where P_4(q) = q * Q_4(q^2):
+  Q_4(x) = 24*x^0 + 16*x^1 + 24*x^2
+  Q(1) = 64 = P(1)
+  Q(0) = 24 = #{H=1} = n! (transitive tournaments)
+  Q(-1) = 32
+
+  n=5: P_5(q) = 120*q^1 + 120*q^3 + 240*q^5 + 240*q^9 + 120*q^11 + 120*q^13 + 64*q^15
+  P(1) = 1024
+  P(-1) = -1024
+  P(0) = 0
+  All H odd: P(-1) = -1024 = -1024
+
+  Q_5(x) where P_5(q) = q * Q_5(q^2):
+  Q_5(x) = 120*x^0 + 120*x^1 + 240*x^2 + 240*x^4 + 120*x^5 + 120*x^6 + 64*x^7
+  Q(1) = 1024 = P(1)
+  Q(0) = 120 = #{H=1} = n! (transitive tournaments)
+  Q(-1) = 416
+
+  n=6: P_6(q) = 456*q^1 + 604*q^3 + 1350*q^5 + 1836*q^9 + 886*q^11 + 888*q^13 + 1358*q^15 + 884*q^17 + 878*q^19 + 1746*q^23 + 872*q^25 + 292*q^27 + 1746*q^29 + 876*q^31 + 1588*q^33 + 2168*q^37 + 426*q^41 + 860*q^43 + 286*q^45
+  P(1) = 20000
+  P(-1) = -20000
+  P(0) = 0
+  All H odd: P(-1) = -20000 = -20000
+
+======================================================================
+PART 2: TWO-VARIABLE G_n(q, t) = sum_T q^{H(T)} * t^{c3(T)}
+======================================================================
+
+  n=4: G_4(q, t) = 
+    + 24 * q^1 * t^0
+    + 16 * q^3 * t^1
+    + 24 * q^5 * t^2
+
+  G(1,t) = sum #{c3=k} * t^k:
+    + 24 * t^0
+    + 16 * t^1
+    + 24 * t^2
+
+  Is G separable? G(q,t) = P(q)*R(t)?
+    Separable: False
+
+  n=5: G_5(q, t) = 
+    + 120 * q^1 * t^0
+    + 120 * q^3 * t^1
+    + 240 * q^5 * t^2
+    + 240 * q^9 * t^3
+    + 120 * q^11 * t^4
+    + 120 * q^13 * t^4
+    + 40 * q^15 * t^4
+    + 24 * q^15 * t^5
+
+  G(1,t) = sum #{c3=k} * t^k:
+    + 120 * t^0
+    + 120 * t^1
+    + 240 * t^2
+    + 240 * t^3
+    + 280 * t^4
+    + 24 * t^5
+
+  Is G separable? G(q,t) = P(q)*R(t)?
+    Separable: False
+
+======================================================================
+PART 3: LEE-YANG ZEROS — COMPLEX ZEROS OF P_n(q)
+  In statistical mechanics, the zeros of the partition function
+  in the complex fugacity plane control phase transitions.
+======================================================================
+
+  n=3: P_3(q) has degree 3
+    #0 real roots: []
+    #1 conjugate pairs of complex roots
+    Root moduli: [np.float64(1.7321), np.float64(1.7321)]
+
+  n=4: P_4(q) has degree 5
+    #0 real roots: []
+    #2 conjugate pairs of complex roots
+    Root moduli: [np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)]
+    Modulus range: [1.0000, 1.0000]
+    All on unit circle? True
+    All on SOME circle? True
+
+  n=5: P_5(q) has degree 15
+    #0 real roots: []
+    #7 conjugate pairs of complex roots
+    Root moduli: [np.float64(0.8231), np.float64(0.8231), np.float64(0.8231), np.float64(0.8231), np.float64(1.0092), np.float64(1.0092), np.float64(1.0092), np.float64(1.0092), np.float64(1.1781), np.float64(1.1781)]
+    Modulus range: [0.8231, 1.4295]
+    All on unit circle? False
+    All on SOME circle? False
+
+======================================================================
+PART 4: MOMENTS AND CUMULANTS OF H
+  Under uniform distribution on tournaments
+======================================================================
+
+  n=3:
+    Mean = 1.5000 (= n!/2^(n-1) = 1.5000)
+    Variance = 0.7500
+    Skewness = 1.1547
+    Excess kurtosis = -0.6667
+    Var/Mean = 0.5000
+    Var/Mean^2 = 0.3333
+
+  n=4:
+    Mean = 3.0000 (= n!/2^(n-1) = 3.0000)
+    Variance = 3.0000
+    Skewness = 0.0000
+    Excess kurtosis = -1.6667
+    Var/Mean = 1.0000
+    Var/Mean^2 = 0.3333
+
+  n=5:
+    Mean = 7.5000 (= n!/2^(n-1) = 7.5000)
+    Variance = 17.8125
+    Skewness = 0.0686
+    Excess kurtosis = -1.1400
+    Var/Mean = 2.3750
+    Var/Mean^2 = 0.3167
+
+  n=6:
+    Mean = 22.3240 (= n!/2^(n-1) = 22.5000)
+    Variance = 146.5422
+    Skewness = 0.0222
+    Excess kurtosis = -1.1410
+    Var/Mean = 6.5643
+    Var/Mean^2 = 0.2940
+
+======================================================================
+PART 5: I(Omega, lambda) AS FUNCTION OF FUGACITY lambda
+  H = I(Omega, 2). What about I(Omega, lambda) for other lambda?
+======================================================================
+
+  bits=0: H=1, alpha_1=0
+  I(Omega, lambda) = 1 + 0*lambda
+    lambda= 0: I = 1
+    lambda= 1: I = 1
+    lambda= 2: I = 1
+    lambda= 3: I = 1
+    lambda= 5: I = 1
+    lambda=10: I = 1
+
+  bits=42: H=13, alpha_1=6
+  I(Omega, lambda) = 1 + 6*lambda
+    lambda= 0: I = 1
+    lambda= 1: I = 7
+    lambda= 2: I = 13
+    lambda= 3: I = 19
+    lambda= 5: I = 31
+    lambda=10: I = 61
+
+  bits=100: H=9, alpha_1=4
+  I(Omega, lambda) = 1 + 4*lambda
+    lambda= 0: I = 1
+    lambda= 1: I = 5
+    lambda= 2: I = 9
+    lambda= 3: I = 13
+    lambda= 5: I = 21
+    lambda=10: I = 41
+
+  bits=511: H=1, alpha_1=0
+  I(Omega, lambda) = 1 + 0*lambda
+    lambda= 0: I = 1
+    lambda= 1: I = 1
+    lambda= 2: I = 1
+    lambda= 3: I = 1
+    lambda= 5: I = 1
+    lambda=10: I = 1
+
+  bits=1023: H=1, alpha_1=0
+  I(Omega, lambda) = 1 + 0*lambda
+    lambda= 0: I = 1
+    lambda= 1: I = 1
+    lambda= 2: I = 1
+    lambda= 3: I = 1
+    lambda= 5: I = 1
+    lambda=10: I = 1
+
+  KEY: At lambda=2, I(Omega,2) = H(T). This is the TOURNAMENT POINT.
+  At lambda=3, I(Omega,3) = 1+3*alpha_1 = (3*H-1)/2 at n=5 (since H=1+2*alpha_1)
+  So I(Omega,3) = (3*H-1)/2 at n=5!
+
+  Verification: I(Omega,3) = (3*H-1)/2 at n=5:
+    All match: True (algebraic identity at n=5)
+
+======================================================================
+DONE
+======================================================================

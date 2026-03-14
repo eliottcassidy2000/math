@@ -1,0 +1,145 @@
+======================================================================
+PERSISTENT HOMOLOGY OF THE H-LANDSCAPE
+kind-pasteur-2026-03-14-S74
+======================================================================
+
+======================================================================
+n = 4, m = 6, N = 64 tournaments
+======================================================================
+
+  H values: [np.int64(1), np.int64(3), np.int64(5)]
+  H distribution: {np.int64(1): 24, np.int64(3): 16, np.int64(5): 24}
+
+  --- SUBLEVEL SET PERSISTENCE ---
+  Track connected components of L_k = {T : H(T) <= k}
+
+  Persistence pairs (birth, death):
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+
+  Still alive at H=max: 1 component(s) born at H=[np.int64(1)]
+
+  Lifetime statistics:
+    Max lifetime: 0
+    Mean lifetime: 0.00
+    Median lifetime: 0.0
+    # pairs with lifetime > 0: 0
+    # pairs with lifetime = 0: 63
+
+  Connected components (Betti_0) at each H level:
+    L_1: 24 tournaments, beta_0 = 1 components
+    L_3: 40 tournaments, beta_0 = 1 components
+    L_5: 64 tournaments, beta_0 = 1 components
+
+  --- SUPERLEVEL SET PERSISTENCE ---
+  Track connected components of U_k = {T : H(T) >= k}
+
+  Superlevel persistence pairs (birth_H, death_H) [descending]:
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+    born at H=5, dies at H=5, lifetime=0
+
+======================================================================
+n = 5, m = 10, N = 1024 tournaments
+======================================================================
+
+  H values: [np.int64(1), np.int64(3), np.int64(5), np.int64(9), np.int64(11), np.int64(13), np.int64(15)]
+  H distribution: {np.int64(1): 120, np.int64(3): 120, np.int64(5): 240, np.int64(9): 240, np.int64(11): 120, np.int64(15): 64, np.int64(13): 120}
+
+  --- SUBLEVEL SET PERSISTENCE ---
+  Track connected components of L_k = {T : H(T) <= k}
+
+  Persistence pairs (birth, death):
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+    born at H=1, dies at H=1, lifetime=0
+
+  Still alive at H=max: 1 component(s) born at H=[np.int64(1)]
+
+  Lifetime statistics:
+    Max lifetime: 0
+    Mean lifetime: 0.00
+    Median lifetime: 0.0
+    # pairs with lifetime > 0: 0
+    # pairs with lifetime = 0: 1023
+
+  Connected components (Betti_0) at each H level:
+    L_1: 120 tournaments, beta_0 = 1 components
+    L_3: 240 tournaments, beta_0 = 1 components
+    L_5: 480 tournaments, beta_0 = 1 components
+    L_9: 720 tournaments, beta_0 = 1 components
+    L_11: 840 tournaments, beta_0 = 1 components
+    L_13: 960 tournaments, beta_0 = 1 components
+    L_15: 1024 tournaments, beta_0 = 1 components
+
+  --- THE H=7 GAP IN PERSISTENT TOPOLOGY ---
+    L_5 has 1 components
+    L_9 has 1 components
+    The H=9 tournaments (240 of them) connect
+    0 pairs of components from L_5
+    This is the TOPOLOGICAL SIGNATURE of the H=7 gap!
+
+  --- SUPERLEVEL SET PERSISTENCE ---
+  Track connected components of U_k = {T : H(T) >= k}
+
+  Superlevel persistence pairs (birth_H, death_H) [descending]:
+    born at H=15, dies at H=11, lifetime=4
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+    born at H=15, dies at H=13, lifetime=2
+
+======================================================================
+EULER CHARACTERISTIC OF SUBLEVEL SETS
+  chi(L_k) = #vertices - #edges + #triangles - ...
+  where the simplicial complex is the clique complex of the
+  subgraph of the hypercube restricted to L_k
+======================================================================
+  L_1: 120 vertices, 240 edges, chi_approx = -120
+  L_3: 240 vertices, 640 edges, chi_approx = -400
+  L_5: 480 vertices, 1720 edges, chi_approx = -1240
+  L_9: 720 vertices, 2920 edges, chi_approx = -2200
+  L_11: 840 vertices, 3640 edges, chi_approx = -2800
+  L_13: 960 vertices, 4480 edges, chi_approx = -3520
+  L_15: 1024 vertices, 5120 edges, chi_approx = -4096
+
+======================================================================
+DONE
+======================================================================

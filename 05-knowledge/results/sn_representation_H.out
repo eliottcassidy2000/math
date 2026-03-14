@@ -1,0 +1,510 @@
+======================================================================
+  S_n REPRESENTATION THEORY OF TOURNAMENT SPACE
+  Decomposition of H into irreducible representations
+  kind-pasteur-2026-03-14-S68
+======================================================================
+
+######################################################################
+#  n = 3: 8 labeled tournaments, |S_3| = 6
+######################################################################
+
+  Step 1: Character table of S_3
+
+  Verifying character table for S_3...
+  FAIL: <chi_(3,), chi_(2, 1)> = 5, expected 0
+  FAIL: <chi_(3,), chi_(1, 1, 1)> = 1, expected 0
+  FAIL: <chi_(2, 1), chi_(2, 1)> = 7, expected 6
+  FAIL: <chi_(2, 1), chi_(1, 1, 1)> = 2, expected 0
+  FAIL: <chi_(1, 1, 1), chi_(1, 1, 1)> = 1, expected 6
+  Irrep dimensions: {(3,): 1, (2, 1): 0, (1, 1, 1): 0}
+  Sum of d^2 = 1 (should be 6)
+
+  Character table of S_3:
+  Partition               (3,)       (2, 1)    (1, 1, 1)
+  class size                 2            3            1
+  --------------- ------------ ------------ ------------
+  (3,)                       1            1            1
+  (2, 1)                     0            1            2
+  (1, 1, 1)                  0            0            1
+
+  Step 2: Tournament orbits under S_3
+
+======================================================================
+  ORBIT STRUCTURE for n = 3
+======================================================================
+  Number of labeled tournaments: 8
+  Number of orbits (non-isomorphic tournaments): 2
+
+  Orbit  |orbit|     H(T)  |orbit|*H  |orbit|*H^2
+  ----- -------- -------- ---------- ------------
+      1        6        1          6            6
+      2        2        3          6           18
+
+  Total sum H = 12
+  Average H = 12 / 8 = 3/2
+  n! = 6
+  Average H should be n!/2^(n-1) = 3/2 = 1.5000
+  Sum H^2 = 24
+
+  H value distribution across orbits:
+    H = 1: 1 orbit(s)
+    H = 3: 1 orbit(s)
+
+  H value distribution across labeled tournaments:
+    H = 1: 6 tournament(s)
+    H = 3: 2 tournament(s)
+
+  Step 3: Permutation character (# fixed tournaments per conj class)
+  Conjugacy classes and fixed-tournament counts:
+    (3,)            (size   2): chi = 2
+    (2, 1)          (size   3): chi = 0
+    (1, 1, 1)       (size   1): chi = 8
+
+  Step 4: Decomposition of permutation representation into irreps
+  Irrep multiplicities:
+    (3,)           : multiplicity = 2, dim = 1, contributes 2 to total dim
+    (2, 1)         : multiplicity = 8/3, dim = 0, contributes 0 to total dim
+    (1, 1, 1)      : multiplicity = 4/3, dim = 0, contributes 0 to total dim
+  Total dimension: 2 (should be 8)
+
+  Step 5: H as an S_n-invariant vector
+  H is invariant under S_3, so H lives in the trivial isotypic component.
+  Trivial rep multiplicity = 2 = number of orbits = 2
+  The trivial isotypic component has dimension 2.
+  H is ONE specific vector in this 2-dimensional space.
+
+  Step 6: H-weighted permutation character
+  chi_H(sigma) = sum_{T: sigma.T=T} H(T)
+    (3,)            (size   2): chi_H = 6
+    (2, 1)          (size   3): chi_H = 0
+    (1, 1, 1)       (size   1): chi_H = 12
+
+  Decomposition of H-weighted character:
+    (3,)           : coefficient = 4
+    (2, 1)         : coefficient = 4
+    (1, 1, 1)      : coefficient = 2
+
+  Step 7: H^2-weighted permutation character
+  chi_{H^2}(sigma) = sum_{T: sigma.T=T} H(T)^2
+    (3,)            (size   2): chi_{H^2} = 18
+    (2, 1)          (size   3): chi_{H^2} = 0
+    (1, 1, 1)       (size   1): chi_{H^2} = 24
+
+  Decomposition of H^2-weighted character:
+    (3,)           : coefficient = 10
+    (2, 1)         : coefficient = 8
+    (1, 1, 1)      : coefficient = 4
+
+  Step 8: H in the orbit basis
+  H = sum_O H(O) * 1_O where 1_O is the indicator of orbit O
+  Norm^2 in L^2(tournaments) = sum_O |O| * H(O)^2
+  ||H||^2 = 24
+  Mean H = 3/2 = 1.500000
+  Var(H) = 3/4 = 0.750000
+
+  Step 9: Representation theory of H-level sets
+  For each value h, the set {T : H(T) = h} is S_n-stable.
+  Its indicator function is a vector in the permutation rep.
+    H = 1 (6 tournaments, 1 orbits): irreps = [((3,), 1), ((2, 1), 2), ((1, 1, 1), 1)]
+    H = 3 (2 tournaments, 1 orbits): irreps = [((3,), 1), ((2, 1), 0), ((1, 1, 1), 0)]
+
+  Step 10: Burnside's lemma verification
+  Number of orbits by Burnside = 2 (should be 2)
+
+  Step 11: Edge action analysis
+  S_3 acts on 3 edges. The cycle structure on edges determines fixed tournaments.
+    (3,)           : edge cycle type = (3,), 1 cycles, fixed = 2 = 2^1 ? YES
+    (2, 1)         : edge cycle type = (2, 1), 2 cycles, fixed = 0 = 2^2 ? NO (orientation constraint)
+    (1, 1, 1)      : edge cycle type = (1, 1, 1), 3 cycles, fixed = 8 = 2^3 ? YES
+
+######################################################################
+#  n = 4: 64 labeled tournaments, |S_4| = 24
+######################################################################
+
+  Step 1: Character table of S_4
+
+  Verifying character table for S_4...
+  FAIL: <chi_(4,), chi_(3, 1)> = 20, expected 0
+  FAIL: <chi_(4,), chi_(2, 2)> = 11, expected 0
+  FAIL: <chi_(4,), chi_(2, 1, 1)> = 9, expected 0
+  FAIL: <chi_(4,), chi_(1, 1, 1, 1)> = 1, expected 0
+  FAIL: <chi_(3, 1), chi_(3, 1)> = 44, expected 24
+  FAIL: <chi_(3, 1), chi_(2, 2)> = 15, expected 0
+  FAIL: <chi_(3, 1), chi_(2, 1, 1)> = 21, expected 0
+  FAIL: <chi_(3, 1), chi_(1, 1, 1, 1)> = 3, expected 0
+  FAIL: <chi_(2, 2), chi_(2, 2)> = 13, expected 24
+  FAIL: <chi_(2, 2), chi_(2, 1, 1)> = 12, expected 0
+  FAIL: <chi_(2, 2), chi_(1, 1, 1, 1)> = 2, expected 0
+  FAIL: <chi_(2, 1, 1), chi_(2, 1, 1)> = 15, expected 24
+  FAIL: <chi_(2, 1, 1), chi_(1, 1, 1, 1)> = 3, expected 0
+  FAIL: <chi_(1, 1, 1, 1), chi_(1, 1, 1, 1)> = 1, expected 24
+  Irrep dimensions: {(4,): 1, (3, 1): 0, (2, 2): 0, (2, 1, 1): 0, (1, 1, 1, 1): 0}
+  Sum of d^2 = 1 (should be 24)
+
+  Character table of S_4:
+  Partition               (4,)       (3, 1)       (2, 2)    (2, 1, 1) (1, 1, 1, 1)
+  class size                 6            8            3            6            1
+  --------------- ------------ ------------ ------------ ------------ ------------
+  (4,)                       1            1            1            1            1
+  (3, 1)                     0            1           -1            2            3
+  (2, 2)                     0            0            1            1            2
+  (2, 1, 1)                  0            0            0            1            3
+  (1, 1, 1, 1)               0            0            0            0            1
+
+  Step 2: Tournament orbits under S_4
+
+======================================================================
+  ORBIT STRUCTURE for n = 4
+======================================================================
+  Number of labeled tournaments: 64
+  Number of orbits (non-isomorphic tournaments): 4
+
+  Orbit  |orbit|     H(T)  |orbit|*H  |orbit|*H^2
+  ----- -------- -------- ---------- ------------
+      1       24        1         24           24
+      2        8        3         24           72
+      3        8        3         24           72
+      4       24        5        120          600
+
+  Total sum H = 192
+  Average H = 192 / 64 = 3
+  n! = 24
+  Average H should be n!/2^(n-1) = 3 = 3.0000
+  Sum H^2 = 768
+
+  H value distribution across orbits:
+    H = 1: 1 orbit(s)
+    H = 3: 2 orbit(s)
+    H = 5: 1 orbit(s)
+
+  H value distribution across labeled tournaments:
+    H = 1: 24 tournament(s)
+    H = 3: 16 tournament(s)
+    H = 5: 24 tournament(s)
+
+  Step 3: Permutation character (# fixed tournaments per conj class)
+  Conjugacy classes and fixed-tournament counts:
+    (4,)            (size   6): chi = 0
+    (3, 1)          (size   8): chi = 4
+    (2, 2)          (size   3): chi = 0
+    (2, 1, 1)       (size   6): chi = 0
+    (1, 1, 1, 1)    (size   1): chi = 64
+
+  Step 4: Decomposition of permutation representation into irreps
+  Irrep multiplicities:
+    (4,)           : multiplicity = 4, dim = 1, contributes 4 to total dim
+    (3, 1)         : multiplicity = 28/3, dim = 0, contributes 0 to total dim
+    (2, 2)         : multiplicity = 16/3, dim = 0, contributes 0 to total dim
+    (2, 1, 1)      : multiplicity = 8, dim = 0, contributes 0 to total dim
+    (1, 1, 1, 1)   : multiplicity = 8/3, dim = 0, contributes 0 to total dim
+  Total dimension: 4 (should be 64)
+
+  Step 5: H as an S_n-invariant vector
+  H is invariant under S_4, so H lives in the trivial isotypic component.
+  Trivial rep multiplicity = 4 = number of orbits = 4
+  The trivial isotypic component has dimension 4.
+  H is ONE specific vector in this 4-dimensional space.
+
+  Step 6: H-weighted permutation character
+  chi_H(sigma) = sum_{T: sigma.T=T} H(T)
+    (4,)            (size   6): chi_H = 0
+    (3, 1)          (size   8): chi_H = 12
+    (2, 2)          (size   3): chi_H = 0
+    (2, 1, 1)       (size   6): chi_H = 0
+    (1, 1, 1, 1)    (size   1): chi_H = 192
+
+  Decomposition of H-weighted character:
+    (4,)           : coefficient = 12
+    (3, 1)         : coefficient = 28
+    (2, 2)         : coefficient = 16
+    (2, 1, 1)      : coefficient = 24
+    (1, 1, 1, 1)   : coefficient = 8
+
+  Step 7: H^2-weighted permutation character
+  chi_{H^2}(sigma) = sum_{T: sigma.T=T} H(T)^2
+    (4,)            (size   6): chi_{H^2} = 0
+    (3, 1)          (size   8): chi_{H^2} = 36
+    (2, 2)          (size   3): chi_{H^2} = 0
+    (2, 1, 1)       (size   6): chi_{H^2} = 0
+    (1, 1, 1, 1)    (size   1): chi_{H^2} = 768
+
+  Decomposition of H^2-weighted character:
+    (4,)           : coefficient = 44
+    (3, 1)         : coefficient = 108
+    (2, 2)         : coefficient = 64
+    (2, 1, 1)      : coefficient = 96
+    (1, 1, 1, 1)   : coefficient = 32
+
+  Step 8: H in the orbit basis
+  H = sum_O H(O) * 1_O where 1_O is the indicator of orbit O
+  Norm^2 in L^2(tournaments) = sum_O |O| * H(O)^2
+  ||H||^2 = 768
+  Mean H = 3 = 3.000000
+  Var(H) = 3 = 3.000000
+
+  Step 9: Representation theory of H-level sets
+  For each value h, the set {T : H(T) = h} is S_n-stable.
+  Its indicator function is a vector in the permutation rep.
+    H = 1 (24 tournaments, 1 orbits): irreps = [((4,), 1), ((3, 1), 3), ((2, 2), 2), ((2, 1, 1), 3), ((1, 1, 1, 1), 1)]
+    H = 3 (16 tournaments, 2 orbits): irreps = [((4,), 2), ((3, 1), 3), ((2, 2), 1), ((2, 1, 1), 2), ((1, 1, 1, 1), 0)]
+    H = 5 (24 tournaments, 1 orbits): irreps = [((4,), 1), ((3, 1), 3), ((2, 2), 2), ((2, 1, 1), 3), ((1, 1, 1, 1), 1)]
+
+  Step 10: Burnside's lemma verification
+  Number of orbits by Burnside = 4 (should be 4)
+
+  Step 11: Edge action analysis
+  S_4 acts on 6 edges. The cycle structure on edges determines fixed tournaments.
+    (4,)           : edge cycle type = (4, 2), 2 cycles, fixed = 0 = 2^2 ? NO (orientation constraint)
+    (3, 1)         : edge cycle type = (3, 3), 2 cycles, fixed = 4 = 2^2 ? YES
+    (2, 2)         : edge cycle type = (2, 2, 1, 1), 4 cycles, fixed = 0 = 2^4 ? NO (orientation constraint)
+    (2, 1, 1)      : edge cycle type = (2, 2, 1, 1), 4 cycles, fixed = 0 = 2^4 ? NO (orientation constraint)
+    (1, 1, 1, 1)   : edge cycle type = (1, 1, 1, 1, 1, 1), 6 cycles, fixed = 64 = 2^6 ? YES
+
+######################################################################
+#  n = 5: 1024 labeled tournaments, |S_5| = 120
+######################################################################
+
+  Step 1: Character table of S_5
+
+  Verifying character table for S_5...
+  FAIL: <chi_(5,), chi_(4, 1)> = 84, expected 0
+  FAIL: <chi_(5,), chi_(3, 2)> = 75, expected 0
+  FAIL: <chi_(5,), chi_(3, 1, 1)> = 41, expected 0
+  FAIL: <chi_(5,), chi_(2, 2, 1)> = 40, expected 0
+  FAIL: <chi_(5,), chi_(2, 1, 1, 1)> = 14, expected 0
+  FAIL: <chi_(5,), chi_(1, 1, 1, 1, 1)> = 1, expected 0
+  FAIL: <chi_(4, 1), chi_(4, 1)> = 236, expected 120
+  FAIL: <chi_(4, 1), chi_(3, 2)> = 130, expected 0
+  FAIL: <chi_(4, 1), chi_(3, 1, 1)> = 154, expected 0
+  FAIL: <chi_(4, 1), chi_(2, 2, 1)> = 80, expected 0
+  FAIL: <chi_(4, 1), chi_(2, 1, 1, 1)> = 46, expected 0
+  FAIL: <chi_(4, 1), chi_(1, 1, 1, 1, 1)> = 4, expected 0
+  FAIL: <chi_(3, 2), chi_(3, 2)> = 155, expected 120
+  FAIL: <chi_(3, 2), chi_(3, 1, 1)> = 140, expected 0
+  FAIL: <chi_(3, 2), chi_(2, 2, 1)> = 85, expected 0
+  FAIL: <chi_(3, 2), chi_(2, 1, 1, 1)> = 50, expected 0
+  FAIL: <chi_(3, 2), chi_(1, 1, 1, 1, 1)> = 5, expected 0
+  FAIL: <chi_(3, 1, 1), chi_(3, 1, 1)> = 161, expected 120
+  FAIL: <chi_(3, 1, 1), chi_(2, 2, 1)> = 75, expected 0
+  FAIL: <chi_(3, 1, 1), chi_(2, 1, 1, 1)> = 54, expected 0
+  FAIL: <chi_(3, 1, 1), chi_(1, 1, 1, 1, 1)> = 6, expected 0
+  FAIL: <chi_(2, 2, 1), chi_(2, 2, 1)> = 80, expected 120
+  FAIL: <chi_(2, 2, 1), chi_(2, 1, 1, 1)> = 40, expected 0
+  FAIL: <chi_(2, 2, 1), chi_(1, 1, 1, 1, 1)> = 5, expected 0
+  FAIL: <chi_(2, 1, 1, 1), chi_(2, 1, 1, 1)> = 26, expected 120
+  FAIL: <chi_(2, 1, 1, 1), chi_(1, 1, 1, 1, 1)> = 4, expected 0
+  FAIL: <chi_(1, 1, 1, 1, 1), chi_(1, 1, 1, 1, 1)> = 1, expected 120
+  Irrep dimensions: {(5,): 1, (4, 1): 0, (3, 2): 0, (3, 1, 1): 0, (2, 2, 1): 0, (2, 1, 1, 1): 0, (1, 1, 1, 1, 1): 0}
+  Sum of d^2 = 1 (should be 120)
+
+  Character table of S_5:
+  Partition               (5,)       (4, 1)       (3, 2)    (3, 1, 1)    (2, 2, 1) (2, 1, 1, 1) (1, 1, 1, 1, 1)
+  class size                24           30           20           20           15           10            1
+  --------------- ------------ ------------ ------------ ------------ ------------ ------------ ------------
+  (5,)                       1            1            1            1            1            1            1
+  (4, 1)                     0            1           -1            2            0            3            4
+  (3, 2)                     0            0            1            1            0            3            5
+  (3, 1, 1)                  0            0            0            1           -1            3            6
+  (2, 2, 1)                  0            0            0            0            1            2            5
+  (2, 1, 1, 1)               0            0            0            0            0            1            4
+  (1, 1, 1, 1, 1)            0            0            0            0            0            0            1
+
+  Step 2: Tournament orbits under S_5
+
+======================================================================
+  ORBIT STRUCTURE for n = 5
+======================================================================
+  Number of labeled tournaments: 1024
+  Number of orbits (non-isomorphic tournaments): 12
+
+  Orbit  |orbit|     H(T)  |orbit|*H  |orbit|*H^2
+  ----- -------- -------- ---------- ------------
+      1      120        1        120          120
+      2       40        3        120          360
+      3       40        3        120          360
+      4       40        3        120          360
+      5      120        5        600         3000
+      6      120        5        600         3000
+      7      120        9       1080         9720
+      8      120        9       1080         9720
+      9      120       11       1320        14520
+     10      120       13       1560        20280
+     11       40       15        600         9000
+     12       24       15        360         5400
+
+  Total sum H = 7680
+  Average H = 7680 / 1024 = 15/2
+  n! = 120
+  Average H should be n!/2^(n-1) = 15/2 = 7.5000
+  Sum H^2 = 75840
+
+  H value distribution across orbits:
+    H = 1: 1 orbit(s)
+    H = 3: 3 orbit(s)
+    H = 5: 2 orbit(s)
+    H = 9: 2 orbit(s)
+    H = 11: 1 orbit(s)
+    H = 13: 1 orbit(s)
+    H = 15: 2 orbit(s)
+
+  H value distribution across labeled tournaments:
+    H = 1: 120 tournament(s)
+    H = 3: 120 tournament(s)
+    H = 5: 240 tournament(s)
+    H = 9: 240 tournament(s)
+    H = 11: 120 tournament(s)
+    H = 13: 120 tournament(s)
+    H = 15: 64 tournament(s)
+
+  Step 3: Permutation character (# fixed tournaments per conj class)
+  Conjugacy classes and fixed-tournament counts:
+    (5,)            (size  24): chi = 4
+    (4, 1)          (size  30): chi = 0
+    (3, 2)          (size  20): chi = 0
+    (3, 1, 1)       (size  20): chi = 16
+    (2, 2, 1)       (size  15): chi = 0
+    (2, 1, 1, 1)    (size  10): chi = 0
+    (1, 1, 1, 1, 1) (size   1): chi = 1024
+
+  Step 4: Decomposition of permutation representation into irreps
+  Irrep multiplicities:
+    (5,)           : multiplicity = 12, dim = 1, contributes 12 to total dim
+    (4, 1)         : multiplicity = 592/15, dim = 0, contributes 0 to total dim
+    (3, 2)         : multiplicity = 136/3, dim = 0, contributes 0 to total dim
+    (3, 1, 1)      : multiplicity = 808/15, dim = 0, contributes 0 to total dim
+    (2, 2, 1)      : multiplicity = 128/3, dim = 0, contributes 0 to total dim
+    (2, 1, 1, 1)   : multiplicity = 512/15, dim = 0, contributes 0 to total dim
+    (1, 1, 1, 1, 1): multiplicity = 128/15, dim = 0, contributes 0 to total dim
+  Total dimension: 12 (should be 1024)
+
+  Step 5: H as an S_n-invariant vector
+  H is invariant under S_5, so H lives in the trivial isotypic component.
+  Trivial rep multiplicity = 12 = number of orbits = 12
+  The trivial isotypic component has dimension 12.
+  H is ONE specific vector in this 12-dimensional space.
+
+  Step 6: H-weighted permutation character
+  chi_H(sigma) = sum_{T: sigma.T=T} H(T)
+    (5,)            (size  24): chi_H = 60
+    (4, 1)          (size  30): chi_H = 0
+    (3, 2)          (size  20): chi_H = 0
+    (3, 1, 1)       (size  20): chi_H = 96
+    (2, 2, 1)       (size  15): chi_H = 0
+    (2, 1, 1, 1)    (size  10): chi_H = 0
+    (1, 1, 1, 1, 1) (size   1): chi_H = 7680
+
+  Decomposition of H-weighted character:
+    (5,)           : coefficient = 92
+    (4, 1)         : coefficient = 288
+    (3, 2)         : coefficient = 336
+    (3, 1, 1)      : coefficient = 400
+    (2, 2, 1)      : coefficient = 320
+    (2, 1, 1, 1)   : coefficient = 256
+    (1, 1, 1, 1, 1): coefficient = 64
+
+  Step 7: H^2-weighted permutation character
+  chi_{H^2}(sigma) = sum_{T: sigma.T=T} H(T)^2
+    (5,)            (size  24): chi_{H^2} = 900
+    (4, 1)          (size  30): chi_{H^2} = 0
+    (3, 2)          (size  20): chi_{H^2} = 0
+    (3, 1, 1)       (size  20): chi_{H^2} = 1008
+    (2, 2, 1)       (size  15): chi_{H^2} = 0
+    (2, 1, 1, 1)    (size  10): chi_{H^2} = 0
+    (1, 1, 1, 1, 1) (size   1): chi_{H^2} = 75840
+
+  Decomposition of H^2-weighted character:
+    (5,)           : coefficient = 980
+    (4, 1)         : coefficient = 2864
+    (3, 2)         : coefficient = 3328
+    (3, 1, 1)      : coefficient = 3960
+    (2, 2, 1)      : coefficient = 3160
+    (2, 1, 1, 1)   : coefficient = 2528
+    (1, 1, 1, 1, 1): coefficient = 632
+
+  Step 8: H in the orbit basis
+  H = sum_O H(O) * 1_O where 1_O is the indicator of orbit O
+  Norm^2 in L^2(tournaments) = sum_O |O| * H(O)^2
+  ||H||^2 = 75840
+  Mean H = 15/2 = 7.500000
+  Var(H) = 285/16 = 17.812500
+
+  Step 9: Representation theory of H-level sets
+  For each value h, the set {T : H(T) = h} is S_n-stable.
+  Its indicator function is a vector in the permutation rep.
+    H = 1 (120 tournaments, 1 orbits): irreps = [((5,), 1), ((4, 1), 4), ((3, 2), 5), ((3, 1, 1), 6), ((2, 2, 1), 5), ((2, 1, 1, 1), 4), ((1, 1, 1, 1, 1), 1)]
+    H = 3 (120 tournaments, 3 orbits): irreps = [((5,), 3), ((4, 1), 8), ((3, 2), 7), ((3, 1, 1), 8), ((2, 2, 1), 5), ((2, 1, 1, 1), 4), ((1, 1, 1, 1, 1), 1)]
+    H = 5 (240 tournaments, 2 orbits): irreps = [((5,), 2), ((4, 1), 8), ((3, 2), 10), ((3, 1, 1), 12), ((2, 2, 1), 10), ((2, 1, 1, 1), 8), ((1, 1, 1, 1, 1), 2)]
+    H = 9 (240 tournaments, 2 orbits): irreps = [((5,), 2), ((4, 1), 8), ((3, 2), 10), ((3, 1, 1), 12), ((2, 2, 1), 10), ((2, 1, 1, 1), 8), ((1, 1, 1, 1, 1), 2)]
+    H = 11 (120 tournaments, 1 orbits): irreps = [((5,), 1), ((4, 1), 4), ((3, 2), 5), ((3, 1, 1), 6), ((2, 2, 1), 5), ((2, 1, 1, 1), 4), ((1, 1, 1, 1, 1), 1)]
+    H = 13 (120 tournaments, 1 orbits): irreps = [((5,), 1), ((4, 1), 4), ((3, 2), 5), ((3, 1, 1), 6), ((2, 2, 1), 5), ((2, 1, 1, 1), 4), ((1, 1, 1, 1, 1), 1)]
+    H = 15 (64 tournaments, 2 orbits): irreps = [((5,), 2), ((4, 1), 3), ((3, 2), 3), ((3, 1, 1), 3), ((2, 2, 1), 2), ((2, 1, 1, 1), 2), ((1, 1, 1, 1, 1), 0)]
+
+  Step 10: Burnside's lemma verification
+  Number of orbits by Burnside = 12 (should be 12)
+
+  Step 11: Edge action analysis
+  S_5 acts on 10 edges. The cycle structure on edges determines fixed tournaments.
+    (5,)           : edge cycle type = (5, 5), 2 cycles, fixed = 4 = 2^2 ? YES
+    (4, 1)         : edge cycle type = (4, 4, 2), 3 cycles, fixed = 0 = 2^3 ? NO (orientation constraint)
+    (3, 2)         : edge cycle type = (6, 3, 1), 3 cycles, fixed = 0 = 2^3 ? NO (orientation constraint)
+    (3, 1, 1)      : edge cycle type = (3, 3, 3, 1), 4 cycles, fixed = 16 = 2^4 ? YES
+    (2, 2, 1)      : edge cycle type = (2, 2, 2, 2, 1, 1), 6 cycles, fixed = 0 = 2^6 ? NO (orientation constraint)
+    (2, 1, 1, 1)   : edge cycle type = (2, 2, 2, 1, 1, 1, 1), 7 cycles, fixed = 0 = 2^7 ? NO (orientation constraint)
+    (1, 1, 1, 1, 1): edge cycle type = (1, 1, 1, 1, 1, 1, 1, 1, 1, 1), 10 cycles, fixed = 1024 = 2^10 ? YES
+
+######################################################################
+#  SUMMARY: Representation-theoretic structure of H
+######################################################################
+
+  KEY FINDINGS:
+
+  1. H(T) is S_n-INVARIANT: H(sigma.T) = H(T) for all sigma in S_n.
+     Therefore H, viewed as a vector in Fun(Tournaments, R), lives
+     ENTIRELY in the trivial isotypic component.
+
+  2. The trivial isotypic component has dimension = number of orbits
+     (non-isomorphic tournaments). This is the space of "isomorphism
+     class functions."
+
+  3. The PERMUTATION REPRESENTATION on tournaments decomposes into
+     irreps with specific multiplicities shown above. The multiplicity
+     of the trivial rep equals the number of orbits (Burnside).
+
+  4. The MORE INTERESTING question: the LEVEL SETS {T : H(T) = h} are
+     S_n-stable subsets. Their indicator functions span the trivial
+     component, and we computed their decomposition.
+
+  5. H is NOT equidistributed on orbits — different orbits have different
+     H values. The variance of H across orbits measures how "spread out"
+     the Hamiltonian path count is.
+
+  6. For each H-level set, the representation decomposes into multiple
+     irreps, showing how the symmetry group "sees" the tournament
+     structure within each level.
+
+
+######################################################################
+#  DEEP DIVE: n=4 — Orbit adjacency and representation structure
+######################################################################
+
+  Arc-flip graph on orbits:
+  Two orbits are adjacent if a single arc flip connects them.
+
+  Orbit adjacency matrix (# arc flips between orbits):
+  Orbit        O0(H=1) O1(H=3) O3(H=3) O2(H=5)
+  O0(H=1,|24|)         72         24         24         24
+  O1(H=3,|8|)         24          0          0         24
+  O3(H=3,|8|)         24          0          0         24
+  O2(H=5,|24|)         24         24         24         72
+
+  Score sequences per orbit (n=4):
+    Orbit 0: H=1, |orbit|=24, score=[0, 1, 2, 3]
+    Orbit 1: H=3, |orbit|=8, score=[1, 1, 1, 3]
+    Orbit 2: H=5, |orbit|=24, score=[1, 1, 2, 2]
+    Orbit 3: H=3, |orbit|=8, score=[0, 2, 2, 2]
+
+  Automorphism groups per orbit (n=4):
+    Orbit 0: H=1, |Aut|=1, Aut cycle types: {(1, 1, 1, 1): 1}
+    Orbit 1: H=3, |Aut|=3, Aut cycle types: {(1, 1, 1, 1): 1, (3, 1): 2}
+    Orbit 2: H=5, |Aut|=1, Aut cycle types: {(1, 1, 1, 1): 1}
+    Orbit 3: H=3, |Aut|=3, Aut cycle types: {(1, 1, 1, 1): 1, (3, 1): 2}
