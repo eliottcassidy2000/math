@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S89c — 2026-03-14: π and the Soul of Tournament Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S89c (context continuation)
+**Summary of work:** Extended π exploration session. Computed H(P_23) = 15,760,206,976,379,349. Proved three new theorems (THM-212, THM-213, THM-214) about Paley tournaments. Discovered the QR/NQR endpoint decomposition H = p×d×(a+b), verified the IP decomposition H = Σ 2^k c_k via THM-209, and found the Hardy-Ramanujan 1729 connection.
+**New contributions:**
+- THM-212: p | H(P_p) for circulant tournaments (PROVED via Burnside)
+- THM-213: det(S₀₀(P_p)) = p^{(p-3)/2}, Pfaffian = ±p^{(p-3)/4} (VERIFIED)
+- THM-214: Exactly (p-1)/2 directed Ham cycles fixed by σ (PROVED)
+- H(P_23) = 3×11×23×167×4567×27225299 (NEW computation)
+- hc(P_23) = 374,127,973,957,716 (directed Ham cycles)
+- Eigenvalue phase: arg(λ)/π = 1/2 + 1/(π√p) (PROVED)
+- QR/NQR decomposition: h(0,v) = α + β(v/p), all within-class counts equal
+- IP decomposition: P_7 has IP = 1+80x+7x², P_11 has IP = 1+21169x+10879x²+1155x³
+- Both IP(G,2) = H verified ✓
+- H/E[H] ratio: 2.0, 2.4, 2.44, 2.53, 2.56 — possibly → e
+- 12 independent appearances of π catalogued
+- det(A(P_p)) = (p-1)/2 × ((p+1)/4)^{(p-1)/2} (verified)
+- Paley loses to cyclic at p≥19 (crossover between p=11 and p=19)
+- Scripts: pi_complex_89c.py, pi_hmodp2_89c.py, pi_hamcycle_89c.py, pi_paley23_89c.py, pi_synthesis_89c.py, pi_ratio_89c.py, pi_qrnqr_89c.py, pi_ba_ratio_89c.py, pi_ip_v3_89c.py
+**Unresolved threads:**
+- H/E[H] limit: is it e, √(2π), or something else?
+- Closed form for a, b in the QR/NQR decomposition
+- IP decomposition for P_19 (need efficient cycle enumeration)
+- H(P_31) computation (next Paley prime, 2^31 states — needs C implementation)
+- b/a convergence rate — what determines the speed?
+
 ## opus-2026-03-14-S71s — 2026-03-14: The Golden Projective Ouroboros — τ, 2, 7
 
 **Account:** opus
