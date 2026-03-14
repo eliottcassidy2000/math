@@ -1,0 +1,15 @@
+Computing Var/Mean^2 at n=8 via Monte Carlo (50000 samples)
+Prediction from grand formula: 59/252 = 0.2341269841
+  10000/50000 (6.7s): mean=313.22, Var/Mean^2=0.233037
+  20000/50000 (13.3s): mean=313.02, Var/Mean^2=0.232924
+  30000/50000 (19.9s): mean=313.53, Var/Mean^2=0.234003
+  40000/50000 (26.3s): mean=314.04, Var/Mean^2=0.235405
+  50000/50000 (32.8s): mean=313.52, Var/Mean^2=0.237222
+
+Final (32.8s):
+  Mean(H) = 313.5218 (expected: 315.0000)
+  Var(H)  = 23317.9330
+  Var/Mean^2 = 0.23722172
+  Predicted  = 0.23412698
+  Difference = 0.00309474
+  Within 1%: False

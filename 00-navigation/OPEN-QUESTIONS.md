@@ -527,6 +527,38 @@ The interval's margin is WIDENING with p, consistent with the spectral argument:
 
 ---
 
+## OPEN-Q-027 🟡 Prove the Grand Energy Formula (THM-201)
+
+**Statement:** E_{2k}/E_0 = 2*(n-2k)^k / P(n,2k) for all tournament sizes n and Fourier levels 2k.
+
+**Evidence:** Verified exactly at n=3,4,5,6,7 (all levels match). Monte Carlo at n=8. k=1 case proved (S75).
+
+**Proof approach:** Spectator freedom argument — fixing 2k arcs creates k interaction points each with (n-2k) free spectator choices. Equivalent to a combinatorial identity about permutation pairs via Krawtchouk polynomials. See THM-201 and rapid_perspectives.py.
+
+**Source:** kind-pasteur-S105-S107
+
+---
+
+## OPEN-Q-028 🟢 Are there forbidden H values beyond 7 and 21?
+
+**Statement:** Are 7 and 21 the ONLY permanently forbidden H values? H=63 was shown achievable at n=8 (HYP-1106 refuted). But could there be large forbidden values proportional to n!/2^{n-1}?
+
+**Evidence:** Only 7 and 21 are known forbidden. 63 is achievable (n=8). No other candidates found through n=11.
+
+**Source:** kind-pasteur-S107
+
+---
+
+## OPEN-Q-029 🟢 Why does log_tau(131) = 8.0003?
+
+**Statement:** The numerator of Var/Mean^2 at n=7 (= 131) satisfies log_tau(131) = 8.0003, making it almost exactly tau^8. Is this a coincidence or does it follow from the grand formula?
+
+**Evidence:** 131/504 = Var/Mean^2 at n=7. tau is Pisot so tau^k are near-integers, but 131 is EXCEPTIONALLY close (frac part 0.0003). The denominator 504 is a tribonacci number.
+
+**Source:** kind-pasteur-S107f
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.

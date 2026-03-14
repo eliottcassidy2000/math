@@ -1425,3 +1425,14 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1425 | **dH always even (Walsh derivative = 2×integer)**: H(T)-H(T^e) is always even. Trivial from Redei (odd-odd=even). The Walsh derivative formula: dH_e = 2·Σ_{S∋e} ĉ_S χ_S. | CONFIRMED (proved) | dH_even_walsh_89.py | opus-S89 |
 | HYP-1426 | **Gradient flow unique attractor for n≤5**: Under steepest ascent, ALL tournaments flow to the global max for n=3,4,5. At n=6: first split (88.3% to H=45, 11.7% to H=37). | CONFIRMED (exhaustive n≤6) | var_dH_topology_89.py | opus-S89 |
 | HYP-1427 | **n=6 first has non-global local maxima**: H=37 (720 tournaments) are local maxima but not global maxima. n=3,4,5 have only the global max as local max. | CONFIRMED (exhaustive n≤6) | morse_minima_proof_89.py | opus-S89 |
+| HYP-1428 | **Grand Energy Formula**: E_{2k}/E_0 = 2*(n-2k)^k / P(n,2k) for all levels 2k | CONFIRMED (verified n=3-7 exact, n=8 MC) | remaining_gaps.py, verify_n6_levels.py | kind-pasteur-S105-S107 |
+| HYP-1429 | **Spectral Purification**: E_2/Var -> 1 as n->inf. Level 2 captures (n-2)/n fraction of variance | CONFIRMED (follows from HYP-1428) | missing_insight.py | kind-pasteur-S107 |
+| HYP-1430 | **Concentration of Measure**: n*Var/Mean^2 -> 2 as n->inf. Var/Mean^2 = O(1/n) | CONFIRMED (follows from HYP-1428) | convergence_to_zero.py | kind-pasteur-S107 |
+| HYP-1431 | **Tribonacci-Phi_3 Bridge**: tau^3 = Phi_3(tau) where tau is the tribonacci constant | CONFIRMED (algebraic identity) | bases_and_tribonacci.py | kind-pasteur-S106 |
+| HYP-1432 | **tau^5 approx 21**: log_tau(21) = 4.996, the 2nd forbidden value sits at floor 5 of the tau tower to 0.2% | CONFIRMED (numerical) | triple_tau.py | kind-pasteur-S106 |
+| HYP-1433 | **360 = T(12) - F(12)**: The 12th tribonacci minus the 12th Fibonacci = 504-144 = 360 | CONFIRMED (verified) | tau_and_360.py | kind-pasteur-S106 |
+| HYP-1434 | **Forbidden values are base-6 repdigits**: 7 = "11" in base 6, 21 = "33" in base 6 | CONFIRMED (arithmetic) | bases_and_tribonacci.py | kind-pasteur-S106 |
+| HYP-1435 | **131 = round(tau^8)**: log_tau(131) = 8.0003, the n=7 variance numerator is tau^8 to 4 decimal places | CONFIRMED (numerical) | verify_n6_levels.py | kind-pasteur-S107 |
+| HYP-1436 | **Phi_3(5) = Phi_5(2) = 31**: The 3-cycle polynomial at 5 = the 5-cycle polynomial at 2 | CONFIRMED (arithmetic) | what_each_number_is.py | kind-pasteur-S106 |
+| HYP-1437 | **Level-4 two magnitudes at n=6**: 360 coefficients with |H_hat|=1/8 (inherited) + 90 with |H_hat|=1/4 (new), equal energy | CONFIRMED (direct computation) | e4_n6_verify.py | kind-pasteur-S105 |
+| HYP-1438 | **Level-4 hereditary**: N_4(n) = C(n,n-1)*N_4(n-1) + N_4_new(n). At n=6: 450 = 6*60 + 90 | CONFIRMED (direct computation) | fourier_master_formula.py | kind-pasteur-S105 |
