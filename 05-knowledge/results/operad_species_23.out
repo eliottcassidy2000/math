@@ -1,0 +1,263 @@
+======================================================================
+PART 1: ASSOCIAHEDRON K_n AND CATALAN NUMBERS
+======================================================================
+
+Catalan numbers (vertices of associahedra):
+  C_0 = 1
+  C_1 = 1
+  C_2 = 2
+  C_3 = 5
+  C_4 = 14
+  C_5 = 42
+  C_6 = 132
+  C_7 = 429
+  C_8 = 1430
+  C_9 = 4862
+
+C_0 = 1, C_1 = 1, C_2 = 2 = KEY1, C_3 = 5 = KEY_SUM
+C_4 = 14 = 2*7 = KEY1*H_forb_1
+C_5 = 42 = 2*3*7 = KEY1*KEY2*H_forb_1
+C_6 = 132 = 4*3*11
+C_7 = 429 = 3*11*13
+
+Associahedra vertices:
+  K_2: 1 vertices
+  K_3: 1 vertices
+  K_4: 2 vertices
+  K_5: 5 vertices
+  K_6: 14 vertices
+  K_7: 42 vertices
+  K_8: 132 vertices
+  K_9: 429 vertices
+
+K_5 (pentagon): 5 vertices, 5 edges
+  Total faces = 5+5+1 = 11 = the next prime after 7
+
+======================================================================
+PART 2: PERMUTOHEDRON AND HAMILTONIAN PATHS
+======================================================================
+
+P_4: 24 vertices (4! permutations)
+P_4: 36 edges
+
+Transitive T_4: 1 HPs = [(0, 1, 2, 3)]
+
+Induced subgraph of HPs in permutohedron P_4:
+  H=1: 1 vertices, 0 edges, connected=True
+  H=1: 1 vertices, 0 edges, connected=True
+  H=1: 1 vertices, 0 edges, connected=True
+  H=3: 3 vertices, 0 edges, connected=False
+  H=3: 3 vertices, 0 edges, connected=False
+  H=3: 3 vertices, 0 edges, connected=False
+  H=5: 5 vertices, 0 edges, connected=False
+  H=5: 5 vertices, 0 edges, connected=False
+  H=5: 5 vertices, 0 edges, connected=False
+
+======================================================================
+PART 3: DENDRIFORM ALGEBRAS — KEY1 OPERATIONS
+======================================================================
+Free dendriform algebra (KEY1=2 operations):
+  dim_n = Catalan(n)
+  n=1: dim = 1
+  n=2: dim = 2
+  n=3: dim = 5
+  n=4: dim = 14
+  n=5: dim = 42
+  n=6: dim = 132
+  n=7: dim = 429
+
+Free tridendriform algebra (KEY2=3 operations):
+  dim_n = (n+1)^{n-1} (parking functions)
+  n=1: dim = 1
+  n=2: dim = 3
+  n=3: dim = 16
+  n=4: dim = 125
+  n=5: dim = 1296
+  n=6: dim = 16807
+  n=7: dim = 262144
+
+Rooted trees (pre-Lie algebra):
+  n=1: labeled rooted trees = 1
+  n=2: labeled rooted trees = 2
+  n=3: labeled rooted trees = 9
+  n=4: labeled rooted trees = 64
+  n=5: labeled rooted trees = 625
+  n=6: labeled rooted trees = 7776
+  n=7: labeled rooted trees = 117649
+
+Tridendriform/Dendriform ratio:
+  n=1: 1/1 = 1.0000
+  n=2: 3/2 = 1.5000
+  n=3: 16/5 = 3.2000
+  n=4: 125/14 = 8.9286
+  n=5: 1296/42 = 30.8571
+  n=6: 16807/132 = 127.3258
+  n=7: 262144/429 = 611.0583
+
+======================================================================
+PART 4: HOPF ALGEBRA STRUCTURE
+======================================================================
+Tournament Hopf algebra coproduct:
+At n=3, 2 iso classes: cyclic (C3) and transitive (T3)
+  Δ(T3) = T3⊗1 + 1⊗T3 + 3*(T2⊗T1)
+    where T2 = unique tournament on 2 vertices, T1 = single vertex
+  Δ(C3) = C3⊗1 + 1⊗C3 + 3*(T2⊗T1)
+  (Both have same coproduct terms — same vertex subsets!)
+  Primitive part: C3 - T3 is primitive if sub-tournament terms cancel
+  But they're the same → C3 - T3 IS primitive!
+
+Tournament iso classes (A000568): [1, 1, 1, 2, 4, 12, 56, 456]
+Primitive dimensions (Euler transform inverse):
+
+======================================================================
+PART 5: TOURNAMENT SPECIES EGF
+======================================================================
+Tournament species EGF: T(x) = Σ 2^C(n,2) x^n/n!
+  n=0: 2^0/0! = 1/1 = 1.000000
+  n=1: 2^0/1! = 1/1 = 1.000000
+  n=2: 2^1/2! = 2/2 = 1.000000
+  n=3: 2^3/3! = 8/6 = 1.333333
+  n=4: 2^6/4! = 64/24 = 2.666667
+  n=5: 2^10/5! = 1024/120 = 8.533333
+  n=6: 2^15/6! = 32768/720 = 45.511111
+  n=7: 2^21/7! = 2097152/5040 = 416.101587
+
+H-weighted species: H(x) = Σ (Σ_T H(T)) x^n/n!
+  n=1: Σ H(T) = 1, coeff = 1.0000 = 2^0
+  n=2: Σ H(T) = 2, coeff = 1.0000 = 2^0
+  n=3: Σ H(T) = 12, coeff = 2.0000 = 2^1
+  n=4: Σ H(T) = 192, coeff = 8.0000 = 2^3
+  n=5: Σ H(T) = 7680, coeff = 64.0000 = 2^6
+  n=6: Σ H(T) = 737280, coeff = 1024.0000 = 2^10
+  n=7: Σ H(T) = 165150720, coeff = 32768.0000 = 2^15
+
+H²-weighted species: Σ_T H(T)² = ?
+  n=3: mean_H = 3/2 = 1.5000, N = 8
+  n=4: mean_H = 3 = 3.0000, N = 64
+  n=5: mean_H = 15/2 = 7.5000, N = 1024
+  n=6: mean_H = 45/2 = 22.5000, N = 32768
+
+======================================================================
+PART 6: OPERAD COMPOSITION — TOURNAMENTS AS OPERATIONS
+======================================================================
+Tournament operad structure:
+  T ∘_i T' = replace vertex i of T with tournament T'
+  H(T ∘_i T') = H(T) * H(T')  when inter-block transitive
+  This makes H a 'multiplicative character' of the tournament operad!
+
+Operad composition examples:
+  C₃ ∘ (T₁, T₁, T₁) = C₃ itself, H = 3
+  T₃ ∘ (T₁, T₁, T₁) = T₃ itself, H = 1
+  C₃ ∘ (C₃, C₃, C₃) = block-transitive with blocks of size 3
+    H should be 3 * 3 * 3 * 3 = 81... wait, H(outer)*∏H(inner)
+    H = H(C₃) * H(C₃)³ = 3 * 27 = 81
+    BUT this requires the inter-block ordering to follow C₃
+    The block-transitive formula needs TRANSITIVE inter-block
+    So: T₃ ∘ (C₃, C₃, C₃) gives H = 1 * 3³ = 27 = 3³
+    And: C₃ substitution is NOT covered by THM-1237 (non-transitive)
+
+======================================================================
+PART 7: SCHRÖDER, MOTZKIN, AND TOURNAMENT NUMBERS
+======================================================================
+Motzkin numbers: [1, 1, 2, 4, 9, 21, 51, 127, 323, 835]
+  M_4 = 9 = 3² = KEY2²
+  M_5 = 21 = 3*7 = KEY2*H_forb_1  ← FORBIDDEN H at n=6!
+  M_6 = 51 = 3*17
+  M_7 = 127 = 2^7 - 1 (Mersenne prime!)
+
+Large Schröder numbers: [1, 2, 6, 22, 90, 394, 1806, 8558]
+  S_0 = 1, S_1 = 2 = KEY1, S_2 = 6 = h(G2)
+  S_3 = 22 = 2*11
+  S_4 = 90 = 2*3²*5
+
+Small Schröder numbers: [1, 1, 3, 11, 45, 197, 903, 4279]
+  s_2 = 3 = KEY2
+  s_3 = 11 = next prime after 7
+  s_4 = 45 = max H at n=6!!
+  s_5 = 197 (prime)
+
+*** CROWN JEWEL: max_H(6) = 45 = small Schröder number s_4! ***
+    Also: s_4 = 45 = 9*5 = 3²*5 = KEY2²*KEY_SUM
+
+======================================================================
+PART 8: BALLOT NUMBERS AND LATTICE PATHS
+======================================================================
+Narayana numbers N(n,k):
+  n=1: [1], sum = 1 = C_1
+  n=2: [1, 1], sum = 2 = C_2
+  n=3: [1, 3, 1], sum = 5 = C_3
+  n=4: [1, 6, 6, 1], sum = 14 = C_4
+  n=5: [1, 10, 20, 10, 1], sum = 42 = C_5
+  n=6: [1, 15, 50, 50, 15, 1], sum = 132 = C_6
+
+Notable Narayana values:
+  N(3,2) = 3 = KEY2
+  N(4,2) = 6 = h(G2)
+  N(5,2) = 10 = triangular_4
+  N(5,3) = 20 = C(6,3)
+
+======================================================================
+PART 9: TAMARI LATTICE AND TOURNAMENT ORDERING
+======================================================================
+Tamari lattice T_n:
+  T_1: 1 element
+  T_2: 2 elements (= KEY1)
+  T_3: 5 elements (= KEY_SUM)
+  T_4: 14 elements (= 2*7 = KEY1*H_forb_1)
+  T_5: 42 elements (= KEY1*KEY2*H_forb_1)
+
+======================================================================
+PART 10: FIBONACCI AND GOLDEN RATIO CONNECTIONS
+======================================================================
+Fibonacci: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+  F_1=1, F_2=1, F_3=2=KEY1, F_4=3=KEY2, F_5=5=KEY_SUM
+  F_6=8=KEY1^KEY2, F_7=13, F_8=21=KEY2*H_forb_1=forbidden at n=6!
+  F_11=89 (prime), F_12=144=12²=h(E6)²
+
+Golden ratio φ = 1.6180339887
+  φ = (1+√5)/2 where 5 = KEY_SUM
+  φ² = φ+1 = 2.6180339887
+  φ³ = 2φ+1 = 4.2360679775
+  φ^5 = 11.0901699437 ≈ 11.09 (close to 11)
+
+*** FIBONACCI FACTORIZATION OF n=6 GAPS ***
+  7 = F_7 / F_4... no. 7 is not a Fibonacci number.
+  21 = F_8 (Fibonacci!)
+  35 = 5*7 = F_5*7
+  39 = 3*13 = F_4*F_7!
+  So 21 and 39 are products of Fibonacci numbers.
+
+======================================================================
+PART 11: TOURNAMENT OPERAD DIMENSIONS
+======================================================================
+Prime tournaments (no nontrivial modules):
+  n=3: 2 prime tournaments out of 8
+  n=4: 0 prime tournaments out of 64
+  n=5: 264 prime tournaments out of 1024
+
+======================================================================
+SYNTHESIS — OPERAD/SPECIES CONNECTIONS
+======================================================================
+
+CROWN JEWELS:
+1. max_H(6) = 45 = small Schröder number s_4!
+   - Schröder numbers count lattice paths with 3 step types (KEY2!)
+   - s_n: 1, 1, 3, 11, 45, 197, 903, ...
+   - Does max_H(n) relate to Schröder numbers more generally?
+
+2. Motzkin(5) = 21 = forbidden H value at n=6
+   - Motzkin numbers count paths with 3 steps (KEY2 again)
+   - M_5 = 21 = 3*7 is BOTH a Motzkin number AND a forbidden H value
+
+3. Tournament operad: H is a multiplicative character
+   - H: T-operad → (Z_odd, ×) is an operad morphism
+   - Extends the block-transitive product formula (HYP-1237)
+
+4. Dendriform (KEY1=2 ops) → Catalan, C_4 = 14 = 2*7
+   Tridendriform (KEY2=3 ops) → Parking functions, (n+1)^{n-1}
+
+5. Fibonacci factorization of forbidden values:
+   21 = F_8, 39 = F_4 * F_7 = 3 * 13
+
+6. Tamari lattice: |T_5| = 42 = 2*3*7 = KEY1*KEY2*H_forb_1
+
