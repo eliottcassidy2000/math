@@ -1,0 +1,432 @@
+======================================================================
+PART 1: I(Omega, x) spectrum at n=5 and n=7
+======================================================================
+
+  n=5: I(Omega, x) statistics:
+     x      min      max       mean        mod_x  always_1_mod_x
+    -1       -6        1       -1.7     {0: 200}             N/A
+     0        1        1        1.0          N/A             N/A
+     1        1        8        3.7     {0: 200}             N/A
+     2        1       15        6.4     {1: 200}            True
+     3        1       22        9.1     {1: 200}            True
+     5        1       36       14.5     {1: 200}            True
+     7        1       50       19.9     {1: 200}            True
+    10        1       71       28.0     {1: 200}            True
+    11        1       78       30.7     {1: 200}            True
+
+  n=7: I(Omega, x) statistics:
+     x      min      max       mean        mod_x  always_1_mod_x
+    -1      -51       -1      -24.7     {0: 100}             N/A
+     0        1        1        1.0          N/A             N/A
+     1        3       69       35.9     {0: 100}             N/A
+     2        5      157       80.1     {1: 100}            True
+     3        7      271      133.4     {1: 100}            True
+     5       11      571      267.9     {1: 100}            True
+     7       15      967      439.4     {1: 100}            True
+    10       21     1741      765.9     {1: 100}            True
+    11       23     2047      893.2     {1: 100}            True
+
+======================================================================
+PART 2: Vandermonde extraction from (I(b), I(b+1))
+======================================================================
+
+  Vandermonde extraction verification at n=7:
+
+  Trial 0: a1=54, a2=12
+    b= 2: I(2)=     157, I(3)=     271, a2_ext=12.0, a1_ext=54.0, match=YES
+    b= 3: I(3)=     271, I(4)=     409, a2_ext=12.0, a1_ext=54.0, match=YES
+    b= 5: I(5)=     571, I(6)=     757, a2_ext=12.0, a1_ext=54.0, match=YES
+    b= 7: I(7)=     967, I(8)=    1201, a2_ext=12.0, a1_ext=54.0, match=YES
+    b=10: I(10)=    1741, I(11)=    2047, a2_ext=12.0, a1_ext=54.0, match=YES
+
+  Trial 1: a1=48, a2=12
+    b= 2: I(2)=     145, I(3)=     253, a2_ext=12.0, a1_ext=48.0, match=YES
+    b= 3: I(3)=     253, I(4)=     385, a2_ext=12.0, a1_ext=48.0, match=YES
+    b= 5: I(5)=     541, I(6)=     721, a2_ext=12.0, a1_ext=48.0, match=YES
+    b= 7: I(7)=     925, I(8)=    1153, a2_ext=12.0, a1_ext=48.0, match=YES
+    b=10: I(10)=    1681, I(11)=    1981, a2_ext=12.0, a1_ext=48.0, match=YES
+
+  Trial 2: a1=28, a2=4
+    b= 2: I(2)=      73, I(3)=     121, a2_ext=4.0, a1_ext=28.0, match=YES
+    b= 3: I(3)=     121, I(4)=     177, a2_ext=4.0, a1_ext=28.0, match=YES
+    b= 5: I(5)=     241, I(6)=     313, a2_ext=4.0, a1_ext=28.0, match=YES
+    b= 7: I(7)=     393, I(8)=     481, a2_ext=4.0, a1_ext=28.0, match=YES
+    b=10: I(10)=     681, I(11)=     793, a2_ext=4.0, a1_ext=28.0, match=YES
+
+  Trial 3: a1=38, a2=8
+    b= 2: I(2)=     109, I(3)=     187, a2_ext=8.0, a1_ext=38.0, match=YES
+    b= 3: I(3)=     187, I(4)=     281, a2_ext=8.0, a1_ext=38.0, match=YES
+    b= 5: I(5)=     391, I(6)=     517, a2_ext=8.0, a1_ext=38.0, match=YES
+    b= 7: I(7)=     659, I(8)=     817, a2_ext=8.0, a1_ext=38.0, match=YES
+    b=10: I(10)=    1181, I(11)=    1387, a2_ext=8.0, a1_ext=38.0, match=YES
+
+  Trial 4: a1=14, a2=2
+    b= 2: I(2)=      37, I(3)=      61, a2_ext=2.0, a1_ext=14.0, match=YES
+    b= 3: I(3)=      61, I(4)=      89, a2_ext=2.0, a1_ext=14.0, match=YES
+    b= 5: I(5)=     121, I(6)=     157, a2_ext=2.0, a1_ext=14.0, match=YES
+    b= 7: I(7)=     197, I(8)=     241, a2_ext=2.0, a1_ext=14.0, match=YES
+    b=10: I(10)=     341, I(11)=     397, a2_ext=2.0, a1_ext=14.0, match=YES
+
+======================================================================
+PART 3: H in different bases
+======================================================================
+
+  H in bases 2, 3, 6, 10:
+      H        base2      base3    base6 base10   a1  a2
+    157     10011101      12211      421    157   54  12
+    145     10010001      12101      401    145   48  12
+     73      1001001       2201      201     73   28   4
+    109      1101101      11001      301    109   38   8
+     37       100101       1101      101     37   14   2
+     91      1011011      10101      231     91   37   4
+     65      1000001       2102      145     65   28   2
+    113      1110001      11012      305    113   42   7
+     89      1011001      10022      225     89   36   4
+     91      1011011      10101      231     91   35   5
+     59       111011       2012      135     59   25   2
+    135     10000111      12000      343    135   51   8
+     39       100111       1110      103     39   19   0
+     49       110001       1211      121     49   20   2
+    103      1100111      10211      251    103   37   7
+     97      1100001      10121      241     97   36   6
+    133     10000101      11221      341    133   50   8
+    135     10000111      12000      343    135   51   8
+     15         1111        120       23     15    7   0
+     29        11101       1002       45     29   12   1
+
+======================================================================
+PART 4: Base-2 representation of H and OCF structure
+======================================================================
+
+H = 1 + 2*a1 + 4*a2
+
+In binary: H = ...b3 b2 b1 1
+  bit 0 = 1 (always, Redei)
+  bit 1 = a1 mod 2 (cycle parity)
+  bits 2+ encode carries from a1 and a2
+
+H - 1 = 2*a1 + 4*a2 = 2*(a1 + 2*a2)
+(H-1)/2 = a1 + 2*a2
+
+In binary: (H-1)/2 = ...c2 c1 c0
+  c0 = a1 mod 2
+  c1 = (a1//2 + a2) mod 2 (carries!)
+  c2 = ((a1//2 + a2)//2 + ...) mod 2
+
+  Base-2 digits of (H-1)/2 vs a1, a2:
+    a1  a2  (H-1)/2      base2 a1%2 (a1//2+a2)%2
+    54  12       78    1001110    0            1
+    48  12       72    1001000    0            0
+    28   4       36     100100    0            0
+    38   8       54     110110    0            1
+    14   2       18      10010    0            1
+    37   4       45     101101    1            0
+    28   2       32     100000    0            0
+    42   7       56     111000    0            0
+    36   4       44     101100    0            0
+    35   5       45     101101    1            0
+    25   2       29      11101    1            0
+    51   8       67    1000011    1            1
+    19   0       19      10011    1            1
+    20   2       24      11000    0            0
+    37   7       51     110011    1            1
+
+======================================================================
+PART 5: Base-3 representation and the beta basis
+======================================================================
+
+In the beta basis: H = b0 + 3*b1 + 9*b2
+
+This is NOT the base-3 representation of H (because b0, b1, b2 can be
+negative or > 2). But it's a "signed ternary" representation.
+
+The base-3 representation of H IS meaningful though:
+  H mod 3 = last base-3 digit = b0 mod 3
+  (H - (H mod 3)) / 3 mod 3 = second-to-last digit
+
+The base-3 digits of H encode the 3-adic structure.
+
+  Base-3 digits of H:
+      H      base3    b0    b1  b2 H%3 b0%3
+    157      12211   -41    30  12   1    1
+    145      12101   -35    24  12   1    1
+     73       2201   -23    20   4   1    1
+    109      11001   -29    22   8   1    1
+     37       1101   -11    10   2   1    1
+     91      10101   -32    29   4   1    1
+     65       2102   -25    24   2   2    2
+    113      11012   -34    28   7   2    2
+     89      10022   -31    28   4   2    2
+     91      10101   -29    25   5   1    1
+     59       2012   -22    21   2   2    2
+    135      12000   -42    35   8   0    0
+     39       1110   -18    19   0   0    0
+     49       1211   -17    16   2   1    1
+    103      10211   -29    23   7   1    1
+
+======================================================================
+PART 6: I(Omega, b) and I(Omega, b+1) for various bases
+======================================================================
+
+For any base b:
+  "10" in base b = b
+  "11" in base b = b + 1
+
+  I(Omega, b) = 1 + a1*b + a2*b^2    = "1 a2 a1 1" in mixed-radix
+  I(Omega, b+1) = 1 + a1*(b+1) + a2*(b+1)^2
+
+The DIFFERENCE: I(b+1) - I(b) = a1 + (2b+1)*a2
+The RATIO: I(b+1)/I(b)
+
+At b=2: I(3)/I(2) = (1+3*a1+9*a2)/(1+2*a1+4*a2)
+  For a2=0: I(3)/I(2) = (1+3*a1)/(1+2*a1) -> 3/2 as a1 -> inf
+
+This 3/2 ratio is the k-nacci convergence ratio!
+
+  I(b+1)/I(b) ratios at n=7:
+    b= 2: mean=1.6385, min=1.4000, max=1.7591, limit=1.5000
+    b= 3: mean=1.4478, min=1.2857, max=1.5311, limit=1.3333
+    b= 5: mean=1.2873, min=1.1818, max=1.3378, limit=1.2000
+    b= 7: mean=1.2144, min=1.1333, max=1.2497, limit=1.1429
+    b=10: mean=1.1568, min=1.0952, max=1.1804, limit=1.1000
+
+======================================================================
+PART 7: Vandermonde determinants and the specialness of (2,3)
+======================================================================
+
+The Vandermonde determinant of (b, b+1) for extracting (a1, a2) is:
+  V = | 1  b    b^2   |
+      | 1  b+1  (b+1)^2 |
+
+  V_22 = det | b    b^2    | = b*(b+1)^2 - b^2*(b+1)= b*(b+1)*(b+1-b) = b*(b+1)
+              | b+1  (b+1)^2|
+
+So the Vandermonde factor is b*(b+1).
+
+For b=2: V = 2*3 = 6. The extraction formula divides by 6.
+For b=3: V = 3*4 = 12. Divides by 12.
+For b=10: V = 10*11 = 110. Divides by 110.
+
+The (2,3) pair has the SMALLEST Vandermonde determinant: 6 = 3!
+
+This means:
+  a2 = (2*I(3) - 3*H + 1) / 6
+
+  For this to be an INTEGER, we need 2*I(3) - 3*H + 1 = 0 mod 6.
+
+  Since H is odd (Redei): 3*H is odd. 2*I(3) is even. So 2*I(3)-3*H+1 is even.
+  Also I(3) = 1 mod 3 (proved), so 2*I(3) = 2 mod 3, and 3*H = 0 mod 3.
+  So 2*I(3) - 3*H + 1 = 2-0+1 = 3 = 0 mod 3.
+
+  Therefore 2*I(3) - 3*H + 1 is divisible by BOTH 2 and 3, hence by 6. CHECK!
+
+  a1= 54, a2=12: H= 157, I(3)=  271, 2*I(3)-3*H+1=   72, /6= 12, match_a2=True
+  a1= 48, a2=12: H= 145, I(3)=  253, 2*I(3)-3*H+1=   72, /6= 12, match_a2=True
+  a1= 28, a2= 4: H=  73, I(3)=  121, 2*I(3)-3*H+1=   24, /6=  4, match_a2=True
+  a1= 38, a2= 8: H= 109, I(3)=  187, 2*I(3)-3*H+1=   48, /6=  8, match_a2=True
+  a1= 14, a2= 2: H=  37, I(3)=   61, 2*I(3)-3*H+1=   12, /6=  2, match_a2=True
+  a1= 37, a2= 4: H=  91, I(3)=  148, 2*I(3)-3*H+1=   24, /6=  4, match_a2=True
+  a1= 28, a2= 2: H=  65, I(3)=  103, 2*I(3)-3*H+1=   12, /6=  2, match_a2=True
+  a1= 42, a2= 7: H= 113, I(3)=  190, 2*I(3)-3*H+1=   42, /6=  7, match_a2=True
+  a1= 36, a2= 4: H=  89, I(3)=  145, 2*I(3)-3*H+1=   24, /6=  4, match_a2=True
+  a1= 35, a2= 5: H=  91, I(3)=  151, 2*I(3)-3*H+1=   30, /6=  5, match_a2=True
+
+======================================================================
+PART 8: Base-6 representation — the natural base for H
+======================================================================
+
+Since H mod 6 is determined by (H mod 2, H mod 3) via CRT,
+and H mod 2 = 1 always, H mod 6 encodes ONLY the topology (H mod 3).
+
+In base 6:
+  H mod 6 = last digit = 1, 3, or 5 (always odd)
+
+  The base-6 representation of H is "the natural representation"
+  because 6 = 2*3 captures both fundamental primes simultaneously.
+
+  Base-6 digit 0 = Redei + topology
+  Base-6 digit 1 = (H//6) mod 6 = higher structure
+  etc.
+
+  Base-6 digit 0 distribution: {1: 185, 3: 149, 5: 166}
+  Base-6 digit 1 distribution: {0: 97, 1: 71, 2: 69, 3: 80, 4: 97, 5: 86}
+
+======================================================================
+PART 9: I(Omega, 10) and I(Omega, 11)
+======================================================================
+
+  I(10) and I(11) at n=7:
+    a1  a2     H    I(10)    I(11) I(10)%10 I(11)%11 last_digit_I10
+    54  12   157     1741     2047        1        1              1
+    48  12   145     1681     1981        1        1              1
+    28   4    73      681      793        1        1              1
+    38   8   109     1181     1387        1        1              1
+    14   2    37      341      397        1        1              1
+    37   4    91      771      892        1        1              1
+    28   2    65      481      551        1        1              1
+    42   7   113     1121     1310        1        1              1
+    36   4    89      761      881        1        1              1
+    35   5    91      851      991        1        1              1
+    25   2    59      451      518        1        1              1
+    51   8   135     1311     1530        1        1              1
+    19   0    39      191      210        1        1              1
+    20   2    49      401      463        1        1              1
+    37   7   103     1071     1255        1        1              1
+    36   6    97      961     1123        1        1              1
+    50   8   133     1301     1519        1        1              1
+    51   8   135     1311     1530        1        1              1
+     7   0    15       71       78        1        1              1
+    12   1    29      221      254        1        1              1
+
+  I(10) mod 10 = 1 always (trivially, since 10|10*a1 and 10|100*a2)
+  I(11) mod 11 = (1 + a1 + a2) mod 11 (since 11*a1 = 0 mod 11, 121*a2 = 0 mod 11)
+
+  I(11) mod 11 = 1 always (since 11 | 11*a1 and 11 | 121*a2)
+  In fact: I(b) mod b = 1 for ALL b (since b | b*a1 and b | b^2*a2)
+  This is just I(Omega, 0) = 1 mod b.
+
+======================================================================
+PART 10: Last decimal digit of H
+======================================================================
+  H mod 10: {1: 119, 3: 100, 5: 88, 7: 75, 9: 118}
+  H mod 5:  {0: 88, 1: 119, 2: 75, 3: 100, 4: 118}
+  Possible last digits: [1, 3, 5, 7, 9]
+  (H is odd, so last digit in {1,3,5,7,9})
+
+  CRT (mod 2=1, mod 5=r) -> mod 10:
+    r=0: H = 5 mod 10
+    r=1: H = 1 mod 10
+    r=2: H = 7 mod 10
+    r=3: H = 3 mod 10
+    r=4: H = 9 mod 10
+
+======================================================================
+PART 11: Binary self-similarity of 10 and 11
+======================================================================
+
+Binary representations:
+   2 = 10      (the original "10")
+   3 = 11      (the original "11")
+  10 = 1010    ("10" concatenated with "10")
+  11 = 1011    ("10" concatenated with "11")
+
+This is NOT a coincidence in the sense that:
+  10 = 2 * 5 = 2 * (4 + 1) = 8 + 2 = 1010_2
+  11 = 2 * 5 + 1 = 8 + 2 + 1 = 1011_2
+
+But it IS structurally meaningful:
+  10_decimal encodes "the pair (2,2)" in binary
+  11_decimal encodes "the pair (2,3)" in binary
+
+And (2,3) is the FUNDAMENTAL pair of tournament theory!
+
+Moreover:
+  10 + 11 = 21 = 3 * 7
+  10 * 11 = 110 = 2 * 5 * 11
+  11 - 10 = 1
+
+  21 = 3 * 7: product of first two odd primes (3-cycles and 7-vertex tournaments)
+  110 = 2 * 55 = 2 * 5 * 11: the Vandermonde factor for base 10
+
+
+======================================================================
+PART 12: n=11 — the first prime with I(Omega, 11) structure
+======================================================================
+  Paley T_11:
+    H = 95095
+    a1 = 21169 (total directed odd cycles)
+    H - 1 - 2*a1 = 52756 (= 4*a2 + 8*a3 + ...)
+    a2 <= 13189 (upper bound)
+    H mod 3 = 1
+    H mod 6 = 1
+    H mod 10 = 5
+    H mod 11 = 0
+    H mod 12 = 7
+    H/|Aut| = 1729 (= 1729 = 12^3 + 1^3 = 10^3 + 9^3)
+    1729 = Hardy-Ramanujan taxicab number!
+    1729 = 7 * 13 * 19
+    1729 mod 6 = 1
+    1729 mod 10 = 9
+
+======================================================================
+PART 13: 1729 and the 10-11 connection
+======================================================================
+
+H(T_11) / |Aut(T_11)| = 95095 / 55 = 1729
+
+1729 is the SMALLEST number expressible as sum of two cubes in two ways:
+  1729 = 12^3 + 1^3 = 10^3 + 9^3
+
+The 10 and 9 appear here! And:
+  12 = 2^2 * 3 (contains 2 and 3)
+  10 = 2 * 5
+   9 = 3^2
+   1 = 1
+
+  12^3 = (4*3)^3 = 64 * 27 = 2^6 * 3^3
+   1^3 = 1
+  10^3 = (2*5)^3 = 8 * 125 = 2^3 * 5^3
+   9^3 = 3^6
+
+  1729 = 2^6 * 3^3 + 1 = 2^3 * 5^3 + 3^6
+
+The factorization: 1729 = 7 * 13 * 19
+  7 = tournament order for first nontrivial Paley
+  13 = next prime after 11
+  19 = next Paley prime after 11
+
+  ALL THREE factors are primes p = 1 mod 6 (quadratic residue primes)!
+  7 = 1 mod 6, 13 = 1 mod 6, 19 = 1 mod 6
+
+  These are exactly the primes where Paley tournaments T_p are defined
+  with QR structure.
+
+  7 mod 6 = 1
+  13 mod 6 = 1
+  19 mod 6 = 1
+
+======================================================================
+PART 14: Universal residues of I(Omega, x)
+======================================================================
+
+For ANY graph G and ANY positive integer x:
+  I(G, x) mod x = I(G, 0) mod x = 1 mod x
+
+This is because I(G, x) = 1 + a1*x + a2*x^2 + ..., and all terms
+after 1 are divisible by x.
+
+Similarly:
+  I(G, x) mod (x-1) = I(G, 1) mod (x-1) = (1 + a1 + a2 + ...) mod (x-1)
+
+  I(G, x) mod (x+1) = I(G, -1) mod (x+1) = (1 - a1 + a2 - ...) mod (x+1)
+
+At x = 2 (H):
+  H mod 2 = I(G, 0) mod 2 = 1 (Redei)
+  H mod 1 = 0 (trivial)
+  H mod 3 = I(G, -1) mod 3 (topology!)
+
+At x = 10:
+  I(10) mod 10 = 1 (trivial)
+  I(10) mod 9 = I(G, 1) mod 9 (total independent sets mod 9)
+  I(10) mod 11 = I(G, -1) mod 11 (Euler char mod 11)
+
+At x = 11:
+  I(11) mod 11 = 1 (trivial)
+  I(11) mod 10 = I(G, 1) mod 10 (total indep sets mod 10)
+  I(11) mod 12 = I(G, -1) mod 12 (Euler char mod 12)
+
+So evaluating at x=10 and taking mod 11 gives I(G,-1) mod 11,
+and evaluating at x=11 and taking mod 12 gives I(G,-1) mod 12.
+
+The PAIR (10, 11) gives:
+  I(G, -1) mod 11 (from I(10) mod 11)
+  I(G, -1) mod 12 (from I(11) mod 12)
+
+  CRT: I(G, -1) mod 132 (since gcd(11,12)=1)!
+
+  Verification at n=7:
+    I(10) mod 11 = I(-1) mod 11: 200/200
+    I(11) mod 12 = I(-1) mod 12: 200/200
+
+
+Done.
