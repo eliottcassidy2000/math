@@ -1,0 +1,113 @@
+======================================================================
+TOURNAMENTS AS ERROR-CORRECTING CODES
+kind-pasteur-2026-03-14-S74
+======================================================================
+
+======================================================================
+n = 4, m = 6 (code length), N = 64 tournaments
+======================================================================
+
+  H-FIBER CODE PARAMETERS [n, k, d]:
+      H      |C|   min_d   max_d    avg_d     rate
+      1       24       1       6     3.13   0.7642
+      3       16       2       6     3.20   0.6667
+      5       24       1       6     3.13   0.7642
+
+  H-MAXIMIZER CODE (H=5):
+    Codewords: 24
+    Min distance: 1
+    Distance distribution: {1: 36, 2: 60, 3: 72, 4: 60, 5: 36, 6: 12}
+
+  TRANSITIVE CODE (H=1):
+    Codewords: 24
+    Min distance: 1
+    Max distance: 6
+    Distance distribution: {1: 36, 2: 60, 3: 72, 4: 60, 5: 36, 6: 12}
+
+  COVERING RADIUS (max dist to nearest H-maximizer): 1
+    This means: from ANY tournament, at most 1 arc flips to reach H=5
+
+  WEIGHT DISTRIBUTION of H=5 code:
+    weight 1: 1 codewords
+    weight 2: 6 codewords
+    weight 3: 10 codewords
+    weight 4: 6 codewords
+    weight 5: 1 codewords
+
+======================================================================
+n = 5, m = 10 (code length), N = 1024 tournaments
+======================================================================
+
+  H-FIBER CODE PARAMETERS [n, k, d]:
+      H      |C|   min_d   max_d    avg_d     rate
+      1      120       1      10     5.04   0.6907
+      3      120       1      10     5.04   0.6907
+      5      240       1      10     5.02   0.7907
+      9      240       1      10     5.02   0.7907
+     11      120       1      10     5.04   0.6907
+     13      120       2      10     5.04   0.6907
+     15       64       2      10     5.08   0.6000
+
+  H-MAXIMIZER CODE (H=15):
+    Codewords: 64
+    Min distance: 2
+    Distance distribution: {5: 624, 3: 200, 2: 180, 6: 300, 4: 300, 7: 200, 8: 180, 10: 32}
+
+  TRANSITIVE CODE (H=1):
+    Codewords: 120
+    Min distance: 1
+    Max distance: 10
+    Distance distribution: {1: 240, 2: 540, 3: 900, 4: 1200, 5: 1320, 6: 1200, 7: 900, 8: 540, 9: 240, 10: 60}
+
+  COVERING RADIUS (max dist to nearest H-maximizer): 3
+    This means: from ANY tournament, at most 3 arc flips to reach H=15
+
+  WEIGHT DISTRIBUTION of H=15 code:
+    weight 2: 1 codewords
+    weight 3: 4 codewords
+    weight 4: 15 codewords
+    weight 5: 24 codewords
+    weight 6: 15 codewords
+    weight 7: 4 codewords
+    weight 8: 1 codewords
+
+======================================================================
+n = 6, m = 15 (code length), N = 32768 tournaments
+======================================================================
+
+  H-FIBER CODE PARAMETERS [n, k, d]:
+      H      |C|   min_d   max_d    avg_d     rate
+      1      456       1      15     7.07   0.5889
+      3      604       1      15     7.14   0.6159
+      5     1350       1      14     7.22   0.6932
+      9     1836       1      15     7.27   0.7228
+     11      886       1      15     7.32   0.6527
+     13      888       2      15     7.26   0.6530
+     15     1358       1      15     7.26   0.6938
+     17      884       1      15     7.26   0.6525
+     19      878       1      15     7.28   0.6519
+     23     1746       1      15     7.26   0.7180
+     25      872       1      15     7.27   0.6512
+     27      292       2      15     7.28   0.5460
+     29     1746       1      15     7.25   0.7180
+     31      876       2      15     7.25   0.6517
+     33     1588       2      15     7.23   0.7089
+     37     2168       1      14     7.21   0.7388
+     41      426       1      15     7.16   0.5823
+     43      860       1      15     7.17   0.6499
+     45      286       1      15     7.17   0.5440
+
+  H-MAXIMIZER CODE (H=45):
+    Codewords: 286
+    Min distance: 1
+    Distance distribution: {1: 201, 2: 190, 5: 4650, 4: 3204, 6: 5858, 3: 1150, 7: 7628, 8: 7086, 9: 4712, 10: 3286, 11: 1996, 12: 616, 13: 66, 14: 66, 15: 46}
+
+  TRANSITIVE CODE (H=1):
+    Codewords: 456
+    Min distance: 1
+    Max distance: 15
+    Distance distribution: {1: 1070, 2: 2816, 3: 5489, 4: 8718, 5: 11860, 6: 14099, 7: 14830, 8: 13899, 9: 11611, 10: 8598, 11: 5586, 12: 3131, 13: 1442, 14: 495, 15: 96}
+
+======================================================================
+DONE
+======================================================================

@@ -85,83 +85,38 @@ def count_directed_3cycles(A, n):
     return count
 
 
-def build_omega(A, n):
-    """
-    Build the conflict graph Omega(T).
-    Vertices = directed 3-cycles.
-    Edges = pairs of 3-cycles sharing a vertex (i.e., conflicting).
-    """
-    cycles = []
-    for i in range(n):
-        for j in range(i + 1, n):
-            for k in range(j + 1, n):
-                if A[i][j] and A[j][k] and A[k][i]:
-                    cycles.append((i, j, k))
-                elif A[i][k] and A[k][j] and A[j][i]:
-                    cycles.append((i, k, j))
-    nc = len(cycles)
-    # Build adjacency: two cycles conflict if they share >= 1 vertex
-    adj = [[0] * nc for _ in range(nc)]
-    for a in range(nc):
-        sa = set(cycles[a])
-        for b in range(a + 1, nc):
-            sb = set(cycles[b])
-            if sa & sb:
-                adj[a][b] = 1
-                adj[b][a] = 1
-    return adj, nc, cycles
-
-
-def independence_polynomial_at_2(adj, nc):
-    """
-    Compute I(Omega, 2) = sum over independent sets S of 2^|S|.
-    This is the hard-core partition function at fugacity lambda=2.
-    """
-    if nc == 0:
-        return 1
-    # For small nc, enumerate via bitmask
-    if nc > 25:
-        # Fallback: just use alpha_0 and alpha_1 approximation
-        # (shouldn't happen for n <= 6)
-        return -1
-
-    total = 0
-    for mask in range(1 << nc):
-        # Check independence
-        independent = True
-        vertices = []
-        tmp = mask
-        idx = 0
-        while tmp:
-            if tmp & 1:
-                vertices.append(idx)
-            tmp >>= 1
-            idx += 1
-        for i in range(len(vertices)):
-            for j in range(i + 1, len(vertices)):
-                if adj[vertices[i]][vertices[j]]:
-                    independent = False
-                    break
-            if not independent:
-                break
-        if independent:
-            total += (1 << len(vertices))  # 2^|S|
-    return total
-
-
 def compute_H(A, n):
-    """Compute H(T) = I(Omega(T), 2) via the OCF."""
-    adj, nc, cycles = build_omega(A, n)
-    return independence_polynomial_at_2(adj, nc)
-
-
-def compute_H_fast(A, n):
     """
-    Faster H computation using the Hamiltonian path count directly
-    via transfer matrix for small n.
+    Compute H(T) = number of directed Hamiltonian paths in T.
+    Uses DP (Held-Karp) for efficiency: O(n^2 * 2^n).
+
+    H(T) = I(Omega(T), 2) by the OCF theorem (THM-002),
+    where Omega has ALL directed odd cycles as vertices.
+    Direct path counting is simpler and faster for small n.
     """
-    # Use the OCF method
-    return compute_H(A, n)
+    # dp[mask][v] = number of Hamiltonian paths ending at vertex v
+    # using exactly the vertices in mask
+    dp = [[0] * n for _ in range(1 << n)]
+
+    # Base: paths of length 1
+    for v in range(n):
+        dp[1 << v][v] = 1
+
+    # Fill DP
+    for mask in range(1, 1 << n):
+        for v in range(n):
+            if not (mask & (1 << v)):
+                continue
+            if dp[mask][v] == 0:
+                continue
+            for u in range(n):
+                if mask & (1 << u):
+                    continue
+                if A[v][u]:
+                    dp[mask | (1 << u)][u] += dp[mask][v]
+
+    full_mask = (1 << n) - 1
+    return sum(dp[full_mask][v] for v in range(n))
 
 
 # ─────────────────────────────────────────────
