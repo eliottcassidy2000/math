@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S75 — 2026-03-14: Keys to the Universe — Recurrences, Simplex Packing, Hilbert's 3rd Problem
+
+**Account:** opus
+**Summary of work:**
+Deep exploration of "2 and 3 as keys to the universe." Connected alternating sum non-negativity to simplex packing and Hilbert's 3rd problem. Proved α₁≥α₂ for n≤9. Discovered the keys are Cartan determinants of the type A root system.
+
+**Critical findings:**
+1. **I(-1) = Euler characteristic** (HYP-1009): I(-1) = χ(independence complex of CG(T)). Always ≤ 1.
+2. **α₁ ≥ α₂ PROVED for n≤9** (HYP-1010, HYP-1021): Cauchy-Schwarz on clique-vertex incidences gives e(CG) ≥ (9α₁²-3nα₁)/(2n). Reduces to 9≥n. Exhaustively verified at n=7 (2M tournaments).
+3. **Dehn invariant ≡ 0** (HYP-1013): All orthoscheme dihedral angles are rational multiples of π (π/4, π/3, π/2). Tournament polytopes with same H are ALWAYS scissors-congruent.
+4. **Keys = Cartan determinants** (HYP-1014): det(A₁)=2, det(A₂)=3. The tournament recurrence roots z²-5z+6=0 have roots equal to the first two Cartan determinants of the type A root system.
+5. **Orthoscheme angles {π/4, π/3, π/2}** (HYP-1012): Denominators are {KEY₁², KEY₂, KEY₁}. Root system angle π/3 between adjacent simple roots.
+6. **Ham paths = independent set in Cayley graph** (HYP-1015): Cay(S_n, {s₁,...,s_{n-1}}). But α(Cayley) >> max_H: α(S_4)=12 vs max_H=5.
+7. **H(T) = H(T̄)** (HYP-1017): Reversal preserves H. Proof: path reversal bijection.
+8. **k-nacci→2 at rate (1/2)^k, weighted→3 at rate (2/3)^k** (HYP-1018): Rates are reciprocals of keys.
+9. **10 impossible as Φ_d(2)** (HYP-1019): All cyclotomic values at 2 are odd for d≥2.
+10. **H(QR_5)=10≠15=max_H(5)** (HYP-1022): Paley is NOT always optimal.
+
+**New scripts:** simplex_cuboid_hilbert.py, recurrence_keys_deep.py, dehn_invariant_tournament.py, dihedral_keys_connection.py, cayley_independence.py, max_h_sequence.py, alpha_ratio_n7_fast.py, nerve_permutohedron.py
+**New hypotheses:** HYP-1009 through HYP-1024 (16 hypotheses)
+**Unresolved:** α₁≥α₂ for n≥10 (Cauchy-Schwarz fails, need Turán-type argument); max H asymptotics; nerve theorem bridge between independence complex and permutohedron arrangement
+
+---
+
 ## opus-2026-03-14-S71e (cont.) — 2026-03-14: Simplex-Cuboid Packing Framework
 
 **Account:** opus

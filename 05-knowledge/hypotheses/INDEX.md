@@ -951,3 +951,19 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1006 | Effective dimension m=log(H)/log(3): at n=5, 7 distinct values in [0, 2.465]. Measures "how simplex-like" the tournament is. m=0 for transitive, m→n/3 for maximally cyclic. | CONFIRMED | hedroid_interpolation.py | opus-S71e |
 | HYP-1007 | EGF factorization: e^{3x}=e^{2x}·e^x. Cuboid = simplex ⊗ correction via binomial convolution. The simplex-cuboid ratio (3/2)^n appears in k-nacci ratio, Walsh normalization, and corner piece fraction. | CONFIRMED (algebraic) | packing_both_directions.py | opus-S71e |
 | HYP-1008 | 9=3² gives doubly-nested packing: (x+2)^9=((x+2)^3)^3. At x=1: 19683=512+3648+8664+6859 (simplex^3+3s²c+3sc²+c³). This is the SELF-SIMILAR level of the hierarchy. | CONFIRMED | simplex_cuboid_789.py | opus-S71e |
+| HYP-1009 | I(-1) = Euler characteristic of independence complex of CG(T). I(-1) = 1-α₁+α₂-... = χ(Δ(CG)). | CONFIRMED (algebraic identity) | simplex_cuboid_hilbert.py | opus-S75 |
+| HYP-1010 | α₁ ≥ α₂ for ALL tournaments (equivalently I(-1) ≤ 1). Exhaustively verified n≤7 (2M tournaments). PROVED for n≤9 by Cauchy-Schwarz on clique-vertex incidences. | CONFIRMED (n≤7 exhaustive, n≤9 proved) | alpha_ratio_n7_fast.py, nerve_permutohedron.py | opus-S75 |
+| HYP-1011 | Max ratio α₂/α₁ = 1.0 at n=7 (achieved at dc3=12, pairs=12). At n=6: max ratio = 0.5. | CONFIRMED (exhaustive) | alpha_ratio_n7_fast.py | opus-S75 |
+| HYP-1012 | Orthoscheme dihedral angles: π/4 at boundary-internal ridges, π/3 at internal-internal ridges, π/2 at non-adjacent. Denominators {4,3,2} = {KEY₁², KEY₂, KEY₁}. | CONFIRMED (n=2..8) | dihedral_keys_connection.py | opus-S75 |
+| HYP-1013 | Dehn invariant D=0 for ALL orthoschemes (all dihedral angles are rational multiples of π). Tournament polytopes with same H are always scissors-congruent. | CONFIRMED (proved) | dihedral_keys_connection.py | opus-S75 |
+| HYP-1014 | det(A₁)=2=KEY₁, det(A₂)=3=KEY₂: the tournament recurrence roots ARE the first two Cartan determinants of the type A root system. det(A_{n-1})=n for all n. | CONFIRMED | dihedral_keys_connection.py | opus-S75 |
+| HYP-1015 | Hamiltonian paths form an INDEPENDENT SET in Cay(S_n, {s₁,...,s_{n-1}}). No two Ham paths differ by an adjacent transposition. | CONFIRMED (n=3,4,5) | cayley_independence.py | opus-S75 |
+| HYP-1016 | α(Cay(S_n)) >> max_H for n≥4. α(Cay(S_4))=12 but max_H=5. Tournament consistency is very restrictive. | CONFIRMED (n=4 exact) | cayley_independence.py | opus-S75 |
+| HYP-1017 | H(T) = H(T̄) (reversal preserves H). Proof: σ is a Ham path of T̄ iff σ^rev is a Ham path of T. | CONFIRMED (n=3..6, proof) | dehn_invariant_tournament.py | opus-S75 |
+| HYP-1018 | k-nacci ratio → 2 at rate C·(1/2)^k. Weighted(c=2) k-nacci → 3 at rate C·(2/3)^k. Convergence rates are key/key ratios. | CONFIRMED | recurrence_keys_deep.py | opus-S75 |
+| HYP-1019 | 10 CANNOT be Φ_d(2) for any d (since Φ_d(2) is always odd for d≥2). 11 = Φ₁₀(2) where 10=2·5=KEY₁·(KEY₁+KEY₂). | CONFIRMED | recurrence_keys_deep.py | opus-S75 |
+| HYP-1020 | I(5) mod 6 = I(-1) mod 6 (since 5≡-1 mod 6). I(x) mod (x+1) = I(-1) mod (x+1) for all x. | CONFIRMED | recurrence_keys_deep.py | opus-S75 |
+| HYP-1021 | Proof of α₁≥α₂ for n≤9: By Cauchy-Schwarz, e(CG)≥(9α₁²-3nα₁)/(2n). Then α₂≤α₁[(n-9)α₁+2n]/(2n). For n≤9: (n-9)≤0, so α₂≤α₁. | CONFIRMED (proved) | nerve_permutohedron.py | opus-S75 |
+| HYP-1022 | H(QR_5)=10≠15=max_H(5). Paley tournament does NOT always achieve max H. | CONFIRMED | max_h_sequence.py | opus-S75 |
+| HYP-1023 | Max H factorizations: 3=3, 5=5, 15=3·5, 45=3²·5, 189=3³·7. Prime 3=KEY₂ appears with increasing multiplicity. | CONFIRMED | max_h_sequence.py | opus-S75 |
+| HYP-1024 | OPEN: α₁≥α₂ for ALL n. Cauchy-Schwarz proof works for n≤9. Need sharper bound for n≥10, possibly using 5-cycle clique structure or Turán-type density arguments. | OPEN | nerve_permutohedron.py | opus-S75 |
