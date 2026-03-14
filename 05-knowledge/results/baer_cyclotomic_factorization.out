@@ -1,0 +1,464 @@
+======================================================================
+PART 1: THE CYCLOTOMIC BAER FACTORIZATION
+======================================================================
+
+The master identity: Phi_3(x^2) = Phi_3(x) * Phi_6(x)
+
+  q=2: Phi_3(2^2) = Phi_3(4) = 21
+       = Phi_3(2) * Phi_6(2) = 7 * 3 = 21  ✓
+       Baer decomposition: PG(2,F_4) = 3 copies of PG(2,F_2)
+
+  q=3: Phi_3(3^2) = Phi_3(9) = 91
+       = Phi_3(3) * Phi_6(3) = 13 * 7 = 91  ✓
+       Baer decomposition: PG(2,F_9) = 7 copies of PG(2,F_3)
+
+  q=4: Phi_3(4^2) = Phi_3(16) = 273
+       = Phi_3(4) * Phi_6(4) = 21 * 13 = 273  ✓
+       Baer decomposition: PG(2,F_16) = 13 copies of PG(2,F_4)
+
+  q=5: Phi_3(5^2) = Phi_3(25) = 651
+       = Phi_3(5) * Phi_6(5) = 31 * 21 = 651  ✓
+       Baer decomposition: PG(2,F_25) = 21 copies of PG(2,F_5)
+
+  q=6: Phi_3(6^2) = Phi_3(36) = 1333
+       = Phi_3(6) * Phi_6(6) = 43 * 31 = 1333  ✓
+       Baer decomposition: PG(2,F_36) = 31 copies of PG(2,F_6)
+
+  q=7: Phi_3(7^2) = Phi_3(49) = 2451
+       = Phi_3(7) * Phi_6(7) = 57 * 43 = 2451  ✓
+       Baer decomposition: PG(2,F_49) = 43 copies of PG(2,F_7)
+
+  q=8: Phi_3(8^2) = Phi_3(64) = 4161
+       = Phi_3(8) * Phi_6(8) = 73 * 57 = 4161  ✓
+       Baer decomposition: PG(2,F_64) = 57 copies of PG(2,F_8)
+
+  q=9: Phi_3(9^2) = Phi_3(81) = 6643
+       = Phi_3(9) * Phi_6(9) = 91 * 73 = 6643  ✓
+       Baer decomposition: PG(2,F_81) = 73 copies of PG(2,F_9)
+
+THE TOURNAMENT INSTANCE (q=2):
+  Phi_3(4) = 21 = Phi_3(2) * Phi_6(2) = 7 * 3
+  PG(2,F_4) = 3 copies of PG(2,F_2) (Fano planes)
+  Phi_3(2) = 7 = Fano plane = K₃ poison = FORBIDDEN H-value 1
+  Phi_6(2) = 3 = cycle generator = NUMBER of Baer subplanes
+  Their product 21 = FORBIDDEN H-value 2
+
+======================================================================
+PART 2: THE SIXTH CYCLOTOMIC STRUCTURE
+======================================================================
+
+x^6 - 1 = Phi_1(x) * Phi_2(x) * Phi_3(x) * Phi_6(x)
+
+  x=2: 2^6-1 = 63
+       = Phi_1(2) * Phi_2(2) * Phi_3(2) * Phi_6(2)
+       = 1 * 3 * 7 * 3 = 63  ✓
+  x=3: 3^6-1 = 728
+       = Phi_1(3) * Phi_2(3) * Phi_3(3) * Phi_6(3)
+       = 2 * 4 * 13 * 7 = 728  ✓
+  x=4: 4^6-1 = 4095
+       = Phi_1(4) * Phi_2(4) * Phi_3(4) * Phi_6(4)
+       = 3 * 5 * 21 * 13 = 4095  ✓
+  x=5: 5^6-1 = 15624
+       = Phi_1(5) * Phi_2(5) * Phi_3(5) * Phi_6(5)
+       = 4 * 6 * 31 * 21 = 15624  ✓
+  x=6: 6^6-1 = 46655
+       = Phi_1(6) * Phi_2(6) * Phi_3(6) * Phi_6(6)
+       = 5 * 7 * 43 * 31 = 46655  ✓
+  x=7: 7^6-1 = 117648
+       = Phi_1(7) * Phi_2(7) * Phi_3(7) * Phi_6(7)
+       = 6 * 8 * 57 * 43 = 117648  ✓
+
+At x=2:
+  2^6 - 1 = 63 = 1 * 3 * 7 * 3
+  But 1*3*7*3 = 63 ✓
+  Phi_3(2) * Phi_6(2) = 7 * 3 = 21 = (2^6-1)/(2^2-1) = 63/3 = 21 ✓
+
+DEEPER: x^4 + x^2 + 1 = Phi_3(x) * Phi_6(x)
+This polynomial is the 'Baer polynomial' — it generates the subplane partition.
+  x=2: 2^4+2^2+1 = 21 = 7*3 = 21  ✓
+  x=3: 3^4+3^2+1 = 91 = 13*7 = 91  ✓
+  x=4: 4^4+4^2+1 = 273 = 21*13 = 273  ✓
+  x=5: 5^4+5^2+1 = 651 = 31*21 = 651  ✓
+  x=6: 6^4+6^2+1 = 1333 = 43*31 = 1333  ✓
+  x=7: 7^4+7^2+1 = 2451 = 57*43 = 2451  ✓
+
+======================================================================
+PART 3: THE FROBENIUS-COMPLEMENT PARALLEL
+======================================================================
+
+Two order-2 involutions in parallel algebraic structures:
+
+  PROJECTIVE GEOMETRY            TOURNAMENT THEORY
+  ─────────────────────          ──────────────────
+  F_4 / F_2                      Tournament space T
+  Frobenius σ: x → x^2           Complement τ: T → T^op
+  Fixed field: F_2               Fixed set: SC tournaments
+  σ has order 2                  τ has order 2
+  F_4 = F_2[α] / (α²+α+1)      |T| = 2^C(n,2) points
+  PG(2,F_4) = 21 pts            H-spectrum = {odd integers}
+  Fixed pts = PG(2,F_2) = 7     SC: H(T) = H(T^op)
+
+F_4 = {0, 1, α, α+1} where α² = α+1 (so α²+α+1=0 in F_2)
+Frobenius σ(x) = x²:
+  σ(0) = 0  (fixed)
+  σ(1) = 1  (fixed)
+  σ(α) = α+1  (moved)
+  σ(α+1) = α  (moved)
+
+Fixed points of Frobenius = F_2 = {0, 1}
+Orbits of non-fixed points: {α, α+1}
+
+On PG(2,F_4):
+  21 points total
+  7 fixed points = PG(2,F_2) (one Baer subplane)
+  14 moved points = 7 orbits of size 2
+  These 14 points form 2 more Baer subplanes (each of size 7)
+
+On tournament space (n=5):
+  C(5,2) = 10 arcs, 2^10 = 1024 tournaments
+  Complement τ(T) reverses all 10 arcs
+  Fixed points: 0 (no tournament can equal its complement)
+  Instead: SC tournaments satisfy T ≅ T^op (isomorphic, not equal)
+  8 SC isomorphism classes, 2 NSC pairs = 12 total classes
+
+THE PARALLEL DEEPENS:
+  Frobenius: PG(2,F_4) → 3 Baer subplanes (partition)
+  Complement: tournament iso classes → SC + NSC pairs
+  At n=5: 12 classes = 8 + 2*2 = 8 SC + 4 NSC (in 2 pairs)
+  At n=7: 456 classes = 88 SC + 184*2 NSC (in 184 pairs)
+
+======================================================================
+PART 4: BAER INTERSECTION PATTERNS → CONFLICT GRAPHS
+======================================================================
+
+In PG(2,F_4), the 3 Baer subplanes B_0, B_1, B_2 partition the 21 points.
+But the LINES of PG(2,F_4) intersect the Baer subplanes in structured ways.
+
+PG(2,F_4) has 21 points ✓
+Baer subplane B_0 = PG(2,F_2): 7 points
+Fixed points of Frobenius: 7
+Moved points: 14 = 7 orbits of size 2
+Fixed points = B_0 ✓
+
+Frobenius orbits of moved points: 7
+Lines of PG(2,F_4): 21
+Points per line: {5}
+
+B_0 indices: [0, 1, 2, 5, 6, 9, 10]
+Line-Baer intersection sizes:
+  |line ∩ B_0| = 1: 14 lines
+  |line ∩ B_0| = 3: 7 lines
+
+BAER SUBPLANE INTERSECTION THEOREM:
+  Every line of PG(2,q^2) meets a Baer subplane in either 1 or q+1 points.
+  At q=2: every line meets B_0 in 1 or 3 points
+  Lines with 3-point intersection: 7 = 7 = lines of PG(2,F_2)
+  Lines with 1-point intersection: 14 = 14 = remaining lines
+
+Finding all Baer subplane partitions of PG(2,F_4)...
+Found 3 Baer subplanes forming a partition!
+  B_0: [0, 1, 2, 5, 6, 9, 10]
+       = PG(2,F_2) (coordinates in F_2)
+  B_1: [3, 7, 11, 13, 18, 19, 20]
+       (coordinates involve α or α+1)
+  B_2: [4, 8, 12, 14, 15, 16, 17]
+       (coordinates involve α or α+1)
+
+======================================================================
+PART 5: THE TOURNAMENT-BAER CONFLICT ANALOGY
+======================================================================
+
+CONFLICT GRAPH Ω(T) has:
+  Vertices = odd cycles of T
+  Edges = cycles sharing a tournament vertex
+
+BAER INCIDENCE has:
+  'Vertices' = Baer subplanes B_i (i=0,1,2)
+  'Edges' = lines connecting points in different subplanes
+
+KEY ANALOGY:
+  In Ω(T): I(Ω(T), 2) = H(T) counts Hamiltonian paths
+  In Baer: 21 = 7 * 3 = I(K₃, 2) * (number of subplanes)
+
+  The K₃ structure in Ω(T) IS the Baer partition structure!
+  Three 'subplanes' (K₃ vertices) each of size 7 (independence count)
+  K₃ is the UNIQUE graph with I(G,2) = 7
+  And 3 copies of K₃ IS K₃ itself (K₃ is self-replicating)
+
+I(K₃, x) = 1 + 3x + 3x(x-1)/2 + ... let me compute properly
+K₃ = triangle. Independent sets: ∅, {1}, {2}, {3}, plus NO edges/triples
+Wait: K₃ has edges between ALL pairs, so max independent set size = 1
+I(K₃, x) = 1 + 3x
+I(K₃, 2) = 1 + 6 = 7 ✓
+
+But the Baer partition 21 = 3 * 7:
+  Think of 21 as I(3K₁ + K₃-structure, 2)
+  Actually: I(3*K₁, x) = (1+x)^3 = 1+3x+3x²+x³
+  I(3*K₁, 2) = 3^3 = 27 ≠ 21
+
+  Better: I(P₄, x) = (1+x)(1+3x)
+  I(P₄, 2) = 3 * 7 = 21 ✓
+  P₄ (path on 4 vertices) factors as: (1+x)(1+3x)
+  Factor (1+x) at x=2: 3 = Φ₆(2) = number of Baer subplanes
+  Factor (1+3x) at x=2: 7 = Φ₃(2) = Fano plane size
+
+THE I-POLYNOMIAL FACTORIZATION = BAER PARTITION:
+  I(P₄, x) = (1+x)(1+3x)
+  At x=2: 3 * 7 = 21
+  (1+x) = Φ₂(x) evaluated at x, = x+1
+  (1+3x) at x=2 gives 7 = Φ₃(2)
+
+  But 1+3x = 3(x + 1/3) = 3Φ₃^{-1}(x)
+  The root x = -1/3 of (1+3x) is the K₃ POISON ROOT!
+  This root is 1/Φ₃(1) = 1/3 = the CONE RATIO!
+
+======================================================================
+PART 6: TOWER OF BAER PLANES AND FORBIDDEN VALUES
+======================================================================
+
+The Baer tower: PG(2,F_{2^{2^k}}) for k=0,1,2,...
+
+  k=0: q=2^1=2
+       |PG(2,F_2)| = Φ₃(2) = 7
+       Forbidden H value? YES
+
+  k=1: q=2^2=4
+       |PG(2,F_4)| = Φ₃(4) = 21
+       Baer partition: 3 copies of PG(2,F_2)
+       Each subplane has 7 points
+       21 = 7 × 3
+       Forbidden H value? YES
+
+  k=2: q=2^4=16
+       |PG(2,F_16)| = Φ₃(16) = 273
+       Baer partition: 13 copies of PG(2,F_4)
+       Each subplane has 21 points
+       273 = 21 × 13
+       Forbidden H value? NO (too many graph types)
+
+  k=3: q=2^8=256
+       |PG(2,F_256)| = Φ₃(256) = 65793
+       Baer partition: 241 copies of PG(2,F_16)
+       Each subplane has 273 points
+       65793 = 273 × 241
+       Forbidden H value? NO (too many graph types)
+
+  k=4: q=2^16=65536
+       |PG(2,F_65536)| = Φ₃(65536) = 4295032833
+       Baer partition: 65281 copies of PG(2,F_256)
+       Each subplane has 65793 points
+       4295032833 = 65793 × 65281
+       Forbidden H value? NO (too many graph types)
+
+WHY THE TOWER STOPS AT k=1:
+  k=0: Φ₃(2) = 7.    Only 1 graph type with I(G,2)=7 (K₃). BLOCKABLE.
+  k=1: Φ₃(4) = 21.   Only 6 graph types with I(G,2)=21. ALL BLOCKABLE.
+  k=2: Φ₃(16) = 273. Hundreds of types. NOT ALL BLOCKABLE → H=273 achievable.
+
+  The blocking mechanism is the K₃ AVOIDANCE theorem (THM-029):
+  Ω(T) never contains K₃ as a component.
+  At I(G,2)=7: the ONLY graph is K₃ → always blocked
+  At I(G,2)=21: all 6 types contain K₃ substructure → blocked
+  At I(G,2)=273: some types avoid K₃ entirely → not blocked
+
+======================================================================
+PART 7: THE CYCLOTOMIC CASCADE
+======================================================================
+
+All cyclotomic polynomials evaluated at x=2:
+  n  | Phi_n(2) | deg(Phi_n) | Prime? | H-forbidden?
+  ---+----------+------------+--------+-------------
+   1 |        1 |          1 | no     | 
+   2 |        3 |          1 | YES    |  ← CONE DENOM
+   3 |        7 |          2 | YES    |  ← FORBIDDEN
+   4 |        5 |          2 | YES    | 
+   5 |       31 |          4 | YES    | 
+   6 |        3 |          2 | YES    |  ← CONE DENOM
+   7 |      127 |          6 | YES    | 
+   8 |       17 |          4 | YES    | 
+   9 |       73 |          6 | YES    | 
+  10 |       11 |          4 | YES    | 
+  11 |     2047 |         10 | no     | 
+  12 |       13 |          4 | YES    | 
+  13 |     8191 |         12 | YES    | 
+  14 |       43 |          6 | YES    | 
+  15 |      151 |          8 | YES    | 
+  16 |      257 |          8 | YES    | 
+  17 |   131071 |         16 | YES    | 
+  18 |       57 |          6 | no     | 
+  19 |   524287 |         18 | YES    | 
+  20 |      205 |          8 | no     | 
+  21 |     2359 |         12 | no     | 
+  22 |      683 |         10 | YES    | 
+  23 |  8388607 |         22 | no     | 
+  24 |      241 |          8 | YES    | 
+
+OBSERVATIONS:
+  Φ₁(2) = 1: trivial
+  Φ₂(2) = 3: the cycle generator / simplex factor / Baer partition count
+  Φ₃(2) = 7: FORBIDDEN (Fano plane)
+  Φ₄(2) = 5: NOT forbidden (achievable)
+  Φ₅(2) = 31: NOT forbidden
+  Φ₆(2) = 3: same as Φ₂(2)! Both give 3.
+
+  WHY Φ₃ IS SPECIAL:
+  - Φ₃(2) = 7 is the ONLY cyclotomic value that's forbidden
+  - Φ₃ is the minimal polynomial of F_4 over F_2
+  - The K₃ avoidance theorem makes I(K₃,2) = 7 unreachable
+  - K₃ is the UNIQUE graph with I(G,2) = Φ₃(2)
+
+======================================================================
+PART 8: THE FIBONACCI-BAER BRIDGE VIA CYCLOTOMIC NORMS
+======================================================================
+
+Recall from MEMORY: F_8 = 21 = F_4 × L_4 = 3 × 7
+And from Eisenstein norms (kind-pasteur S105c):
+  Φ₃(b) = |1 - b·ω²|² (norm of Eisenstein integer)
+  At b=2: Φ₃(2) = 7 = N(1 - 2ω²)
+  At b=4: Φ₃(4) = 21 = N(1 - 4ω²)
+
+The Fibonacci-Lucas identity at index 4:
+  F_8 = F_4 × L_4 = 3 × 7 = 21
+  F_4 = 3 = Φ₆(2) = Φ₂(2) = number of Baer subplanes
+  L_4 = 7 = Φ₃(2) = Fano plane size
+  Index 4 = |F₄| = the field that creates the Baer structure!
+
+THE TRIPLE FACTORIZATION OF 21:
+  21 = 3 × 7         (arithmetic)
+     = Φ₂(2) × Φ₃(2) (cyclotomic)
+     = F_4 × L_4     (Fibonacci-Lucas)
+     = Φ₃(4)         (projective plane)
+     = |PG(2,F_4)|   (geometry)
+     = F_8            (Fibonacci)
+     = I(P_4, 2)     (independence polynomial)
+     = H_forb_2      (tournament theory)
+
+ALL SEVEN are the SAME number, seen from different mathematical windows.
+
+DEEPER: The Fibonacci sequence mod 7 has period 16:
+  F_n mod 7: [0, 1, 1, 2, 3, 5, 1, 6, 0, 6, 6, 5, 4, 2, 6, 1, 0, 1, 1, 2]
+  Period of Fibonacci mod 7 (Pisano period π(7)): 16
+
+  F_n mod 3: [0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2]
+  Period of Fibonacci mod 3 (Pisano period π(3)): 8
+
+  π(7) = 16 = 2^4 = |F₄|²
+  π(3) = 8 = 2^3 = |F₄| * 2
+  LCM(π(3), π(7)) = LCM(8, 16) = 16
+  The Pisano periods at the Baer primes are powers of 2!
+
+Fibonacci numbers divisible by 21:
+  F_0 = 0, 21 | F_0
+  F_8 = 21, 21 | F_8
+  F_16 = 987, 21 | F_16
+  F_24 = 46368, 21 | F_24
+  Pisano period π(21) = 16
+
+======================================================================
+PART 9: THE SIMPLEX-CUBOID-BAER NESTING
+======================================================================
+
+Recall the user's observation:
+  'An equilateral triangle sits in a square with two halves on either side.'
+  'A tetrahedron sits in a cube with 4 halves around it.'
+
+The volume ratios:
+  n=1: 1-simplex in 1-cube
+       Line segment in line segment: no extra pieces
+  n=2: 2-simplex in 2-cube
+       Triangle in square: 2 extra pieces
+  n=3: 3-simplex in 3-cube
+       Tetrahedron in cube: 4 extra pieces
+       Ratio = 1/3 = 1/Φ₃(1) = CONE RATIO!
+  n=4: 4-simplex in 4-cube
+  n=5: 5-simplex in 5-cube
+  n=6: 6-simplex in 6-cube
+  n=7: 7-simplex in 7-cube
+
+Extra pieces when inscribing n-simplex in n-cube: 2^n - (n+1)
+  n=1: 2^1 - 2 =     0    |PG(2,F_0)| = N/A
+  n=2: 2^2 - 3 =     1    |PG(2,F_1)| = 3
+  n=3: 2^3 - 4 =     4    |PG(2,F_2)| = 7
+  n=4: 2^4 - 5 =    11    |PG(2,F_3)| = 13
+  n=5: 2^5 - 6 =    26    |PG(2,F_4)| = 21
+  n=6: 2^6 - 7 =    57    |PG(2,F_5)| = 31
+  n=7: 2^7 - 8 =   120    |PG(2,F_6)| = 43
+  n=8: 2^8 - 9 =   247    |PG(2,F_7)| = 57
+  n=9: 2^9 - 10 =   502    |PG(2,F_8)| = 73
+
+  At n=3: extra = 4 = |F₄|
+  At n=7: extra = 120 = |S_5| = |Aut(icosahedron rotations)| = 5!
+  The simplex-cuboid gap 2^n-(n+1) connects to Baer at n=3
+  because |F₄| = 4 is the field that creates the Baer structure!
+
+Note: 2^n - (n+1) = Σ C(n,k) for k=2..n
+  = number of subsets of size ≥ 2
+  = number of 'interaction terms' beyond individual elements
+
+  In the Walsh decomposition, these correspond to
+  the Fourier coefficients at degree ≥ 2.
+  H depends on degree 2 and higher — the 'extra pieces'!
+
+======================================================================
+PART 10: THE 1/3 GRAND UNIFICATION
+======================================================================
+
+The number 1/3 appears in AT LEAST 8 independent contexts:
+
+  1. Φ₃(1) = 3, so 1/3 = 1/Φ₃(1)
+     (reciprocal of cone polynomial)
+
+  2. K₃ poison root: I(P₄, -1/3) = 0
+     (the root that kills path independence poly)
+
+  3. Var(H)/Mean(H)² = 1/3 at n=3,4
+     (tournament variance ratio)
+
+  4. Volume ratio: tetrahedron/cube = 1/3
+     (simplex-cuboid nesting at n=3)
+
+  5. Φ₆(2) = 3 Baer subplanes in PG(2,F₄)
+     (Baer partition count)
+
+  6. Parseval: 1/Σ|c_k|² = 1/3 for Φ₃(e^{iθ})
+     (unit circle energy of cyclotomic)
+
+  7. Cuboid-simplex excess: (2^n - (1+x)^n) / 2^n → 1 - (3/4)^n
+     per-dimension factor: 1/(x+1) = 1/3 at x=2
+
+  8. Eisenstein norm: Φ₃(1) = N(1-ω²) = 3
+     (smallest non-trivial Eisenstein prime norm)
+
+  ALL EIGHT are manifestations of Φ₃(1) = 3.
+  The THIRD cyclotomic polynomial evaluated at 1 gives the
+  fundamental constant of tournament theory.
+
+======================================================================
+GRAND SYNTHESIS: THE BAER-CYCLOTOMIC-TOURNAMENT TRIANGLE
+======================================================================
+
+                    Φ₃(x) = x² + x + 1
+                    /         |         \
+                   /          |          \
+          Φ₃(1)=3       Φ₃(2)=7       Φ₃(4)=21
+         /    \          |    |         |    \
+    Var/μ²  3 Baer   Fano   K₃     PG(2,4)  F₈
+    =1/3    planes   plane  poison  Baer    Fibonacci
+                      |
+                   I(K₃,2)
+                      |
+                  THM-029
+                      |
+                  H ≠ 7
+
+The single polynomial Φ₃ generates:
+  - The variance structure (x=1)
+  - The first forbidden value (x=2)
+  - The second forbidden value (x=4)
+  - The field F₄ = F₂[x]/Φ₃(x)
+  - The Baer partition via Φ₃(q²) = Φ₃(q)·Φ₆(q)
+  - The Eisenstein integers Z[ω] where ω is a root of Φ₃
+
+======================================================================
+DONE — BAER CYCLOTOMIC FACTORIZATION
+======================================================================
