@@ -1,0 +1,140 @@
+======================================================================
+FOURIER SPECTRUM MASTER TABLE
+kind-pasteur-2026-03-14-S105j
+======================================================================
+
+  LEVEL 2:
+    n      N_2      |H_hat|      |H_hat| formula      E_2/E_0
+  ------------------------------------------------------------
+    3        3          1/2       (n-2)!/2^(n-2)          1/3
+    4       12          1/2       (n-2)!/2^(n-2)          1/3
+    5       30          3/4       (n-2)!/2^(n-2)         3/10
+    6       60          3/2       (n-2)!/2^(n-2)         4/15
+    7      105         15/4       (n-2)!/2^(n-2)         5/21
+    8      168         45/4       (n-2)!/2^(n-2)         3/14
+
+  LEVEL 4:
+  n=5: 60 nonzero, ALL |H_hat| = 1/8, all cover 5 vertices
+  n=6: 450 nonzero in TWO classes:
+        Class A: 360 with |H_hat| = 1/8, cover 5 vertices
+        Class B:  90 with |H_hat| = 1/4, cover 6 vertices
+
+  LEVEL 4 ENERGY:
+  n=5: E_4 = 60*(1/8)^2 = 15/16 = 15/16
+  n=6: E_4 = 360*(1/8)^2 + 90*(1/4)^2 = 45/4 = 45/4
+
+  MAGNITUDE ANALYSIS:
+  Level-2 magnitudes are always (n-2)!/2^(n-2)
+  Level-4 magnitudes at n=5:
+    All = 1/8 = 1!/2^3 = (5-4)!/2^(5-2)
+  Level-4 magnitudes at n=6:
+    Class A = 1/8 = 1!/2^3 (same as n=5)
+    Class B = 1/4 = 2!/2^4 = (6-4)!/2^(6-2)
+
+  PATTERN for Class B: |H_hat| = (n-|S|)!/2^(n-2)
+    n=5: (5-4)!/2^3 = 1/8  (all level-4 are Class B at n=5)
+    n=6: (6-4)!/2^4 = 1/8  ... WAIT that's 1/8, not 1/4!
+
+  CORRECTED FORMULA:
+  Class A (covers n-1 vertices): |H_hat| = 1/2^(n-3)
+    n=5: 1/2^2 = 1/4? NO, Class A at n=5 covers n=5 vertices, has |H_hat|=1/8
+
+  Hmm. Let me reconsider from scratch.
+
+  At n=5:
+    All level-4 coefficients cover all 5 vertices
+    |H_hat| = 1/8
+    There are 60 of them
+
+  At n=6:
+    360 level-4 coefficients cover 5 vertices, |H_hat| = 1/8
+    90 level-4 coefficients cover 6 vertices, |H_hat| = 1/4
+
+  The 360 at n=6 that cover 5 vertices: they use arcs from a K_5 subset.
+  There are C(6,5) = 6 ways to choose which 5 vertices to cover.
+  Each K_5 contributes 60 nonzero level-4 subsets (like n=5).
+  So 360 = 6 * 60. EXACTLY!
+
+  This makes perfect sense! The 360 level-4 coefficients at n=6 are
+  the 'inherited' level-4 coefficients from each K_5 subgraph.
+  The 90 are 'NEW' level-4 coefficients that use all 6 vertices.
+
+  HEREDITARY STRUCTURE:
+  N_4(n) = C(n, n-1) * N_4(n-1) + N_4^new(n)
+  At n=6: 450 = 6 * 60 + 90 = 360 + 90. CHECK!
+
+  And at n=5: 60 = 5 * N_4(4) + N_4^new(5)
+  But N_4(4) = 0 (no level 4 at n=4), so 60 = 0 + 60 = all new.
+
+  N_4^new (full-vertex-coverage count):
+    n=5: 60 (since all are new)
+    n=6: 90
+
+  60 = C(5,2)*C(3,2) = 10*3 = 30? No, 60 ≠ 30.
+  60 = 5!/(5-4)! = 5*4*3*2 = 120? No.
+  60 = 5*4*3 = P(5,3)? YES, 60 = P(5,3) = 5!/2!
+  90 = 6*5*3 = 90? YES!
+  Or: 90 = C(6,2)*C(4,2) = 15*6 = 90. YES!
+  And: 60 = C(5,2)*C(3,2)*... hmm, C(5,2)=10, C(3,2)=3, 10*3=30 ≠ 60.
+  60 = C(10,4) - C(5,1)*C(6,4) = 210 - 5*15 = 210-75 = 135? No, 135 ≠ 60.
+
+  DEGREE SEQUENCE ANALYSIS:
+  At n=5, covering 4-arc subsets have degree sequences:
+    (1,1,1,1,4): 5 subsets
+    (1,1,1,2,3): 60 subsets
+    (1,1,2,2,2): 70 subsets
+    Total: 135
+
+  But only 60 are nonzero. Is it exactly the (1,1,1,2,3) class?
+  There are 60 with degree (1,1,1,2,3) and 60 nonzero. MATCH!
+
+  HYPOTHESIS: Nonzero level-4 Fourier coefficients at n=5 correspond
+  EXACTLY to 4-arc subsets with degree sequence (1,1,1,2,3).
+  The (1,1,1,1,4) and (1,1,2,2,2) subsets give H_hat = 0!
+
+  STRUCTURE of (1,1,1,2,3) subsets:
+  One vertex v has degree 3: v is in 3 of the 4 arcs.
+  One vertex w has degree 2: w is in 2 of the 4 arcs.
+  Three vertices a,b,c each in exactly 1 arc.
+  The 4 arcs: (v,w), (v,a), (v,b), (w,c)? Let's check.
+  Arcs from v: 3 arcs. v connects to 3 other vertices.
+  Arcs from w: 2 arcs. One must be (v,w) or not.
+  If (v,w) is one of the arcs, then v has 2 other arcs to a,b.
+  w has 1 other arc to c.
+  4 arcs: (v,w), (v,a), (v,b), (w,c). Covers v,w,a,b,c = 5 vertices.
+  Degrees: v:3, w:2, a:1, b:1, c:1. = (1,1,1,2,3). CORRECT!
+
+  If (v,w) is NOT one of the arcs:
+  v has 3 arcs to a,b,c. w has 2 arcs to two of {a,b,c}.
+  Say arcs: (v,a),(v,b),(v,c),(w,a). Vertices: v,w,a,b,c = 5.
+  Degrees: v:3, w:1, a:2, b:1, c:1. = (1,1,1,2,3). Also works!
+
+  So the (1,1,1,2,3) pattern = a 'star with pendant' structure.
+  These are trees on 5 vertices with exactly 4 edges minus 1 edge
+  (caterpillar-type graphs).
+
+  At n=6, the 90 full-coverage level-4 coefficients:
+  Degree sequence: (1,1,1,1,2,2)
+  Two vertices have degree 2, four have degree 1.
+  This is TWO DISJOINT EDGES plus TWO MATCHING EDGES:
+  More precisely: 2 degree-2 vertices each share 2 arcs.
+  The 4 arcs form a 'double-edge plus matching' structure.
+  Example: (u,a), (u,b), (v,c), (v,d). This is a PERFECT MATCHING
+  of a bipartite graph K_{2,4} restricted to... hmm.
+
+  Actually: (u,v) with u in 2 arcs and v in 2 arcs.
+  If u and v are NOT connected: arcs are (u,a),(u,b),(v,c),(v,d)
+  with all 6 vertices distinct. That gives degrees u:2,v:2,a,b,c,d:1 each.
+  But we only have 6 vertices, not 6 others. So vertices are u,v,a,b,c,d = 6 total.
+  The 4 arcs span two 'cherries' centered at u and v.
+  This is the DISJOINT UNION of two stars S_2 (two edges each).
+
+  DIRECT COUNT of degree (1,1,1,1,2,2) subsets of K_6:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\fourier_master_formula.py", line 349, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\fourier_master_formula.py", line 287, in main
+    for combo in combinations(range(15), 4):
+                 ^^^^^^^^^^^^
+NameError: name 'combinations' is not defined
