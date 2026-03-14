@@ -1,0 +1,6 @@
+Error analysis:
+n=8: error = 1/7! = 1/5040. D_8 diff = -8 = -2^3.
+n=9: error = 1/3780. D_9 diff = -96 = -2^5*3.
+Ratio 5040/3780 = 4/3 = 1 + 1/Phi_3(1).
+The grand formula overcounts starting at n=8.
+The correction is related to the threshold and Phi_3.
