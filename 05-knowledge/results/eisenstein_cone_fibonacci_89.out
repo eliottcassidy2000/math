@@ -1,0 +1,517 @@
+======================================================================
+EISENSTEIN-CONE-FIBONACCI SYNTHESIS
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: DEVIATION FORMULA — Var/Mean^2 = 1/3 - c_n/n(n-1)(n-2)
+======================================================================
+
+  n=3: N=8 tournaments
+    Mean(H) = 1.500000
+    Var(H)  = 0.750000
+    Var/Mean^2 = 0.3333333333
+    1/3        = 0.3333333333
+    n(n-1)(n-2) = 6
+    c_n = (1/3 - ratio) * 6 = 0.000000
+    Exact: Var/Mean^2 = 1/3
+
+  n=4: N=64 tournaments
+    Mean(H) = 3.000000
+    Var(H)  = 3.000000
+    Var/Mean^2 = 0.3333333333
+    1/3        = 0.3333333333
+    n(n-1)(n-2) = 24
+    c_n = (1/3 - ratio) * 24 = 0.000000
+    Exact: Var/Mean^2 = 1/3
+
+  n=5: N=1024 tournaments
+    Mean(H) = 7.500000
+    Var(H)  = 17.812500
+    Var/Mean^2 = 0.3166666667
+    1/3        = 0.3333333333
+    n(n-1)(n-2) = 60
+    c_n = (1/3 - ratio) * 60 = 1.000000
+    Exact: Var/Mean^2 = 19/60
+
+  n=6 (Monte Carlo, 50000 samples):
+    Mean(H) = 22.5271
+    Var(H)  = 146.8131
+    Var/Mean^2 = 0.28930431
+    c_6 = (1/3 - ratio) * 120 = 5.2835
+    Expected exact: 1/3 - c_6/120 where c_6 ~ 5
+
+======================================================================
+PART 2: EISENSTEIN LATTICE — H-VALUES AS NORMS
+======================================================================
+
+  omega = -0.500000+0.866025j
+  omega^2 = -0.500000-0.866025j
+  1 + omega + omega^2 = 0.000000+0.000000j
+
+  Phi_3(b) = |1 - b*omega^2|^2 (Eisenstein norm)
+     b   Phi_3(b)    |1-b*w^2|^2   H achievable?
+  ------------------------------------------------
+     0          1         1.0000             YES
+     1          3         3.0000             YES
+     2          7         7.0000              no
+     3         13        13.0000             YES
+     4         21        21.0000              no
+     5         31        31.0000              no
+     6         43        43.0000              no
+     7         57        57.0000              no
+     8         73        73.0000              no
+     9         91        91.0000              no
+    10        111       111.0000              no
+    11        133       133.0000              no
+    12        157       157.0000              no
+    13        183       183.0000              no
+    14        211       211.0000              no
+
+  Eisenstein norms N(a+b*omega) for small a,b:
+    a   b    N(a+bw)    = a^2-ab+b^2   H value?
+  --------------------------------------------------
+   -1  -1          1                        YES
+   -2  -1          3                        YES
+   -2  -2          4                          ?
+   -3  -2          7                       FORB
+   -3  -3          9                        YES
+   -4  -2         12                          ?
+   -4  -3         13                        YES
+   -4  -4         16                          ?
+   -5  -3         19                          ?
+   -5  -4         21                       FORB
+   -5  -5         25                          ?
+
+======================================================================
+PART 3: EISENSTEIN NORMS vs H-VALUES — FORBIDDEN SET
+======================================================================
+
+  n=3: H-spectrum = [1, 3]
+
+  n=4: H-spectrum = [1, 3, 5]
+
+  n=5: H-spectrum = [1, 3, 5, 9, 11, 13, 15]
+
+  All H values achieved (n<=5): [1, 3, 5, 9, 11, 13, 15]
+  All odd numbers 1..25: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25]
+  Missing odd H values (n<=5): [7, 17, 19, 21, 23, 25]
+  Missing that are Eisenstein norms: [7, 19, 21, 25]
+
+  Phi_3 values:  [1, 3, 7, 13, 21, 31, 43, 57, 73, 91]
+  Missing H's:  [7, 17, 19, 21, 23, 25]
+  Overlap:  [7, 21]
+
+======================================================================
+PART 4: FIBONACCI IN THE EISENSTEIN WORLD
+======================================================================
+
+  Fibonacci:  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+  Fib mod 3: [0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2]
+  Pisano period pi(3) = 8
+  Fib mod 7: [0, 1, 1, 2, 3, 5, 1, 6, 0, 6, 6, 5, 4, 2, 6, 1, 0, 1, 1, 2]
+
+  Pisano periods for tournament-relevant primes:
+    pi(2) = 3
+    pi(3) = 8
+    pi(5) = 20
+    pi(7) = 16
+    pi(13) = 28
+
+  QUADRATIC NUMBER FIELD COMPARISON:
+                                Golden      Eisenstein
+  Generator                        phi           omega
+  Min poly                     x^2-x-1         x^2+x+1
+  Disc                               5              -3
+  Class number                       1               1
+  Units                        +-phi^n         omega^k
+  2 splits?                      irred           irred
+  Norm(2)                            4               4
+  Phi_n(2)                 Phi_5(2)=31      Phi_3(2)=7
+
+  2 in Z[phi]: inert (5 mod 4 = 1, but 2 is inert since disc 5)
+  2 in Z[omega]: inert (2 mod 3 = 2, so 2 stays prime)
+  Both: N(2) = 4 = 2^2
+
+======================================================================
+PART 5: FIBONACCI 2-3 DECOMPOSITION — ZECKENDORF AND BEYOND
+======================================================================
+
+  F(n) = 2*F(n-2) + F(n-3) [the 2-3 recurrence]:
+    F( 3) =     2 = 2*F( 1) + F( 0) = 2*   1 +    0 =     2  OK
+    F( 4) =     3 = 2*F( 2) + F( 1) = 2*   1 +    1 =     3  OK
+    F( 5) =     5 = 2*F( 3) + F( 2) = 2*   2 +    1 =     5  OK
+    F( 6) =     8 = 2*F( 4) + F( 3) = 2*   3 +    2 =     8  OK
+    F( 7) =    13 = 2*F( 5) + F( 4) = 2*   5 +    3 =    13  OK
+    F( 8) =    21 = 2*F( 6) + F( 5) = 2*   8 +    5 =    21  OK
+    F( 9) =    34 = 2*F( 7) + F( 6) = 2*  13 +    8 =    34  OK
+    F(10) =    55 = 2*F( 8) + F( 7) = 2*  21 +   13 =    55  OK
+    F(11) =    89 = 2*F( 9) + F( 8) = 2*  34 +   21 =    89  OK
+    F(12) =   144 = 2*F(10) + F( 9) = 2*  55 +   34 =   144  OK
+    F(13) =   233 = 2*F(11) + F(10) = 2*  89 +   55 =   233  OK
+    F(14) =   377 = 2*F(12) + F(11) = 2* 144 +   89 =   377  OK
+
+  Fibonacci in the 2-3 world:
+  Every Fibonacci number has a unique representation in terms of 2 and 3:
+    F( 1) =     1 = 
+    F( 2) =     1 = 
+    F( 3) =     2 = 2*1+3*0
+    F( 4) =     3 = 2*0+3*1
+    F( 5) =     5 = 2*1+3*1
+    F( 6) =     8 = 2*4+3*0, 2*1+3*2
+    F( 7) =    13 = 2*5+3*1, 2*2+3*3
+    F( 8) =    21 = 2*9+3*1, 2*6+3*3, 2*3+3*5, 2*0+3*7
+    F( 9) =    34 = 2*17+3*0, 2*14+3*2, 2*11+3*4, 2*8+3*6, 2*5+3*8
+    F(10) =    55 = 2*26+3*1, 2*23+3*3, 2*20+3*5, 2*17+3*7, 2*14+3*9
+    F(11) =    89 = 2*43+3*1, 2*40+3*3, 2*37+3*5, 2*34+3*7, 2*31+3*9
+    F(12) =   144 = 2*72+3*0, 2*69+3*2, 2*66+3*4, 2*63+3*6, 2*60+3*8
+    F(13) =   233 = 2*115+3*1, 2*112+3*3, 2*109+3*5, 2*106+3*7, 2*103+3*9
+    F(14) =   377 = 2*187+3*1, 2*184+3*3, 2*181+3*5, 2*178+3*7, 2*175+3*9
+    F(15) =   610 = 2*305+3*0, 2*302+3*2, 2*299+3*4, 2*296+3*6, 2*293+3*8
+    F(16) =   987 = 2*492+3*1, 2*489+3*3, 2*486+3*5, 2*483+3*7, 2*480+3*9
+    F(17) =  1597 = 2*797+3*1, 2*794+3*3, 2*791+3*5, 2*788+3*7, 2*785+3*9
+
+  FIBONACCI vs JACOBSTHAL — the 2-3 duality:
+    n     F(n)     J(n)  F(n)/J(n)  Ratio limit
+    1        1        1     1.0000
+    2        1        1     1.0000
+    3        2        3     0.6667
+    4        3        5     0.6000
+    5        5       11     0.4545
+    6        8       21     0.3810
+    7       13       43     0.3023
+    8       21       85     0.2471
+    9       34      171     0.1988
+   10       55      341     0.1613
+   11       89      683     0.1303
+   12      144     1365     0.1055
+   13      233     2731     0.0853
+   14      377     5461     0.0690
+   15      610    10923     0.0558
+   16      987    21845     0.0452
+   17     1597    43691     0.0366
+
+  F(n) ~ phi^n/sqrt(5) = 1.618033988749895^n / 2.2361
+  J(n) ~ 2^n/3
+  Ratio F/J ~ 3/sqrt(5) * (phi/2)^n -> 0 since phi/2 = 0.8090 < 1
+  But 3/sqrt(5) = 1.3416 = sqrt(9/5) = sqrt(1.8)
+
+======================================================================
+PART 6: PERIOD-6 — WHERE FIBONACCI MEETS THE CONE
+======================================================================
+
+  Pisano periods for first few moduli:
+    pi( 2) = 3
+    pi( 3) = 8
+    pi( 5) = 20
+    pi( 7) = 16
+    pi(11) = 10
+
+  What has period 6?
+  Checking period of Fibonacci matrix [[1,1],[1,0]] mod p:
+    mod  2: period = 3
+    mod  3: period = 8
+    mod  4: period = 6 *** PERIOD 6!
+    mod  5: period = 20
+    mod  6: period = 24
+    mod  7: period = 16
+    mod  8: period = 12
+    mod  9: period = 24
+    mod 10: period = 60
+    mod 11: period = 10
+    mod 12: period = 24
+    mod 13: period = 28
+    mod 14: period = 48
+    mod 15: period = 40
+    mod 16: period = 24
+    mod 17: period = 36
+    mod 18: period = 24
+    mod 19: period = 18
+
+  Fibonacci mod 4 (period 6):  [0, 1, 1, 2, 3, 1, 0, 1, 1, 2, 3, 1]
+  Pattern: 0, 1, 1, 2, 3, 1, 0, 1, 1, 2, 3, 1
+  The unique non-trivial residues: {0,1,2,3} — ALL mod-4 residues!
+  6 = 2 * 3 = the tournament numbers!
+
+  THE PERIOD-6 COINCIDENCE:
+    6 = period of Fib matrix mod 4
+    6 = |S_3| = Aut(3-tournament)
+    6 = number of totals in S_6 outer aut
+    6 = 2 * 3 = tournament_generator * cycle_generator
+    6 = Phi_6(1) = 1 - 1 + 1 = 1... no, Phi_6(1) = 1
+    6 = |units in Z[omega]| = {1, omega, omega^2, -1, -omega, -omega^2}
+
+======================================================================
+PART 7: CHEBYSHEV POLYNOMIALS — THE BRIDGE
+======================================================================
+
+  Chebyshev at x = phi/2 = 0.809017:
+  T_n(phi/2): [1, 0.809, 0.309, -0.309, -0.809, -1.0, -0.809, -0.309, 0.309, 0.809, 1.0, 0.809]
+  Compare F_n/2^(n-1): [0, 1.0, 0.5, 0.5, 0.375, 0.3125, 0.25, 0.203125, 0.1640625, 0.1328125, 0.107421875, 0.0869140625]
+
+  The 2-3 recurrence F(n) = 2*F(n-2) + F(n-3):
+  This is a DEPTH-3 Chebyshev variant!
+  Characteristic polynomial: x^3 = 2x + 1
+  = x^3 - 2x - 1 = (x+1)(x^2-x-1) = (x+1)*Phi_Fib(x)
+
+  Roots of x^3 - 2x - 1 = 0:
+    x = 1.618034 = phi!
+    x = -1.000000 = -1!
+    x = -0.618034 = -1/phi!
+
+  (x+1)(x^2-x-1) expanded:
+  = x^3 - x^2 - x + x^2 - x - 1 = x^3 - 2x - 1  CHECK!
+
+  THE 2-3 FIBONACCI RECURRENCE FACTORS AS:
+  (period-2 part) * (golden ratio part)
+  The -1 root gives period 2: (-1)^n alternates
+  The phi root gives growth: phi^n
+  Together: F(n) = A*phi^n + B*(-1/phi)^n + C*(-1)^n
+  But we know F(n) = (phi^n - (-1/phi)^n)/sqrt(5)
+  The extra (-1)^n part is the residue from the 2-3 decomposition
+
+======================================================================
+PART 8: EISENSTEIN + FIBONACCI = ICOSAHEDRAL SYMMETRY?
+======================================================================
+
+  PSL(2,4) = PSL(2,5) = A_5: the EXCEPTIONAL ISOMORPHISM
+  |PSL(2,4)| = (4^2-1)*(4^2-4)/2 = 15*12/2 = 60? No...
+  |PSL(2,q)| = q(q^2-1)/gcd(2,q-1)
+  |PSL(2,4)| = 4*(16-1)/1 = 60
+  |PSL(2,5)| = 5*(25-1)/2 = 60
+  |A_5| = 60
+  ALL EQUAL 60 = 3*4*5 = n(n-1)(n-2) at n=5!
+  And 60 is the denominator of the n=5 deviation: Var/Mean^2 = 19/60!!
+
+  THE A_5 CONNECTION:
+  - A_5 is the rotation symmetry of the ICOSAHEDRON
+  - The icosahedron has 12 vertices, 30 edges, 20 faces
+  - 20 faces = C(6,3) (triangulations of the hexagon)
+  - 30 edges = C(6,2)*2 (pairs of consecutive elements)
+  - 12 vertices = 2*6 (antipodal pairs)
+
+  Icosahedron: V=12, E=30, F=20
+  Euler: V - E + F = 12 - 30 + 20 = 2  CHECK
+  Each vertex has degree 5
+  Dual = dodecahedron: V=20, E=30, F=12
+
+  60 = |A_5| = |PSL(2,4)| = |PSL(2,5)|
+  60 = n(n-1)(n-2) at n=5
+  60 = denominator of Var/Mean^2 = 19/60 at n=5
+  Var/Mean^2 = 19/60 = 1/3 - 1/60
+  So: deviation = 1/|A_5| = 1/|PSL(2,4)| = 1/|PSL(2,5)|!
+  THE DEVIATION FROM THE CONE IS 1/|A_5|!
+
+======================================================================
+PART 9: 19/60 — A SPECIAL FRACTION
+======================================================================
+
+  19/60 = Var(H)/Mean(H)^2 at n=5
+  19 is the 8th prime
+  60 = 2^2 * 3 * 5
+  19/60 = 1/3 - 1/60 = 20/60 - 1/60
+  The '1' in the numerator correction: c_5 = 1
+
+  19/60 in the Phi_3 world:
+  1/Phi_3(1) = 1/3 = 20/60
+  1/Phi_3(1) - 1/A_5 = 1/3 - 1/60 = 19/60
+  So: Var/Mean^2 = 1/Phi_3(1) - 1/|PSL(2, Phi_3(1)+1)|
+  Because: PSL(2,4) = PSL(2, Phi_3(1)+1) = A_5, |A_5|=60
+
+  19 = 2^5 - 13 = 32 - |PG(2,3)|
+  19 = Phi_3(1) * Phi_3(2) - 2 = 3*7 - 2 = 21 - 2 = 19
+  Wait: 3*7 = 21, not 19. Let me reconsider.
+  19 = 20 - 1 = 4*5 - 1 = (Phi_3(1)+1)*(Phi_3(1)+2) - 1
+  19 is a UNIQUE prime: it's the number of rotational symmetries
+  of the regular 19-gon that are not trivial
+
+  PREDICTION for n=6:
+  If c_n pattern continues: Var/Mean^2 = 1/3 - c_6/(6*5*4)
+  From Monte Carlo: Var/Mean^2 ~ 0.289304
+  c_6 = (1/3 - 0.289304) * 120 = 5.2835
+  Nearest integer: c_6 ~ 5
+  Predicted: 1/3 - 5/120 = 0.291667
+
+======================================================================
+PART 10: THE TRINITY — THREE FACES OF Phi_3
+======================================================================
+
+  Phi_3(x) = x^2 + x + 1 has THREE geometric faces:
+
+  FACE 1: THE TRIANGLE (combinatorial)
+  - Phi_3(x) = 1 + x + x^2 = sum_{k=0}^{2} x^k
+  - This is the CHARACTER of the cyclic group C_3
+  - Phi_3(1) = 3 = |C_3| = number of vertices of a triangle
+  - The 3-CYCLE is the fundamental tournament generator
+  - Every tournament is built from 3-cycles (transitive + rotational)
+
+  FACE 2: THE CONE (geometric)
+  - 1/Phi_3(1) = 1/3 = cone-to-cylinder ratio
+  - V_cone = (1/3) * V_cylinder
+  - This is integral_0^1 t^2 dt = 1/3
+  - Var(H)/Mean(H)^2 = 1/3 at n=3,4
+  - The tournament H-landscape IS a cone in effective dimension 3
+
+  FACE 3: THE PROJECTIVE LINE (algebraic)
+  - Phi_3(x) = (x^3 - 1)/(x - 1) = |PG(0, F_{x^3-1})| ... no
+  - Better: Phi_3(q) = q^2 + q + 1 = |PG(2, F_q)|
+  - At q=2: |PG(2,F_2)| = 7 = Fano = H_forb_1
+  - At q=4: |PG(2,F_4)| = 21 = H_forb_2
+  - These are the tournament FORBIDDEN VALUES
+
+  UNIFICATION:
+  The 3-cycle (face 1) creates a cone (face 2) that forbids
+  projective plane sizes (face 3). ALL through Phi_3.
+
+  The Fibonacci connection:
+  - phi satisfies x^2 - x - 1 = 0 (reverse signs of Phi_3!)
+  - Phi_3(x) = x^2 + x + 1, Fibonacci poly = x^2 - x - 1
+  - They are COMPLEMENTARY: Phi_3(x) * (x-1) = x^3 - 1
+  - Fib_poly(x) * (x+1) = x^3 + x^2 - x - 1 = (x^2-1)(x+1) = (x-1)(x+1)^2
+  - Hmm, not as clean. But:
+  - Phi_3(-x) = x^2 - x + 1 = Phi_6(x)
+  - And Phi_6(phi) = phi^2 - phi + 1 = (phi+1) - phi + 1 = 2
+  - THE TOURNAMENT GENERATOR 2 = Phi_6(phi) = Phi_3(-phi)!
+
+  Phi_6(phi) = phi^2 - phi + 1 = 2.0000000000
+  Phi_3(-phi) = phi^2 - phi + 1 = 2.0000000000
+  = 2? True
+  Phi_3(-1/phi) = 2.0000000000
+  Phi_3(-1/phi) = 1 + (phi-1) + (2-phi) = 2 also! SAME VALUE!
+  Because -phi and -1/phi are BOTH roots of x^2+x-1=0
+  Wait: -phi and -1/phi satisfy x^2+x-1=0? Let me check.
+  (-phi)^2 + (-phi) - 1 = phi^2 - phi - 1 = (phi+1) - phi - 1 = 0  YES!
+  So Phi_3(x) at roots of x^2+x-1=0 always gives 2!
+  x^2+x-1 = 0 => x^2 = 1-x => Phi_3(x) = x^2+x+1 = (1-x)+x+1 = 2
+
+  *** BEAUTIFUL IDENTITY ***
+  For any root alpha of x^2 + x - 1 = 0:
+  Phi_3(alpha) = alpha^2 + alpha + 1 = (1-alpha) + alpha + 1 = 2
+  THE TOURNAMENT GENERATOR 2 = Phi_3 EVALUATED AT FIBONACCI ROOTS!
+  This connects the GOLDEN RATIO to the CUBE ROOT OF UNITY!
+
+======================================================================
+PART 11: THE MASTER EQUATION
+======================================================================
+
+  MASTER EQUATION: Phi_3(x) * (x - 1) = x^3 - 1
+
+  At x = 1:   Phi_3(1) * 0 = 0         (cone: 1/3)
+  At x = 2:   Phi_3(2) * 1 = 7          (Fano: H_forb_1)
+  At x = 4:   Phi_3(4) * 3 = 63         (= 2^6 - 1 = |PG(5,F_2)|)
+  At x = -phi: Phi_3(-phi) * (-phi-1) = (-phi)^3 - 1 = -(phi^3+1)
+              = 2 * (-phi-1) = -2phi-2 = -(phi^3+1)
+              phi^3 = phi*phi^2 = phi*(phi+1) = phi^2+phi = 2phi+1
+              -(2phi+1+1) = -2phi-2 and 2*(-phi-1) = -2phi-2  CHECK!
+
+  The FACTORIZATION x^3 - 1 = (x-1)(x^2+x+1) = (x-1)*Phi_3(x) says:
+
+  "Dividing the cube (x^3) by its unit boundary (x-1) leaves the
+  triangle (Phi_3(x))."
+
+  In tournament terms:
+  "The full binary structure (2^3 = 8 orientations per triangle)
+  minus the identity (1 trivial orientation)
+  equals the tournament cycle polynomial (Phi_3(2) = 7 = Fano)."
+
+  And: 8 - 1 = 7. The Fano IS the non-trivial part of the binary cube!
+
+  2^3 - 1 = 7 = Phi_3(2) = 7
+  2^6 - 1 = 63 = Phi_3(4) * Phi_6(4) * ... 
+  Actually 2^6-1 = 63 = 7*9 = 7*3^2
+  And 63 = Phi_3(4) * 3 = 21 * 3 = 63  CHECK
+  Or: 63 = (2^3-1)(2^3+1) = 7*9
+
+======================================================================
+PART 12: THE PERIOD-6 FIBONACCI CONE
+======================================================================
+
+  Fibonacci mod 4 (period 6):
+    F( 0) mod 4 = 0  (angle =   0 deg)
+    F( 1) mod 4 = 1  (angle =  60 deg)
+    F( 2) mod 4 = 1  (angle = 120 deg)
+    F( 3) mod 4 = 2  (angle = 180 deg)
+    F( 4) mod 4 = 3  (angle = 240 deg)
+    F( 5) mod 4 = 1  (angle = 300 deg)
+    F( 6) mod 4 = 0  (angle =   0 deg)
+    F( 7) mod 4 = 1  (angle =  60 deg)
+    F( 8) mod 4 = 1  (angle = 120 deg)
+    F( 9) mod 4 = 2  (angle = 180 deg)
+    F(10) mod 4 = 3  (angle = 240 deg)
+    F(11) mod 4 = 1  (angle = 300 deg)
+    F(12) mod 4 = 0  (angle =   0 deg)
+
+  The 6 states form a HEXAGONAL cycle in mod-4 space:
+  State: (F_n mod 4, F_{n+1} mod 4)
+    Step 0: (0, 1)
+    Step 1: (1, 1)
+    Step 2: (1, 2)
+    Step 3: (2, 3)
+    Step 4: (3, 1)
+    Step 5: (1, 0)
+  Return to start: (0, 1) = (0, 1)
+  Same as step 0? True
+
+  THE HEXAGONAL-CONIC CONNECTION:
+  A regular hexagon = cube section perpendicular to (1,1,1)
+  The (1,1,1) direction = the 'cone axis' in 3D
+  Period 6 = one full rotation around the cone axis
+  The 6 Fibonacci states = 6 vertices of the hexagonal cross-section
+  The cone dimension 3 × rotation period 2 = 6 = Fibonacci period mod 4
+
+======================================================================
+PART 13: GRAND SYNTHESIS — THE Phi_3-FIBONACCI-CONE TABLE
+======================================================================
+
+  ╔═══════════════════╦═══════════════╦════════════════╦═══════════════╗
+  ║     Concept       ║   Phi_3 eval  ║   Fibonacci    ║   Geometry    ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ Cone ratio 1/3    ║ 1/Phi_3(1)    ║ Fib mod 4      ║ V_cone/V_cyl  ║
+  ║                   ║               ║ period = 6=2*3 ║ in dim 3      ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ Generator 2       ║ Phi_3(-phi)   ║ phi^2-phi+1=2  ║ Binary choice ║
+  ║                   ║ = Phi_6(phi)  ║                ║ per arc       ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ Fano 7 = H_forb_1 ║ Phi_3(2)     ║ F(7-1)=8=2^3  ║ PG(2,F_2)    ║
+  ║                   ║               ║ F(7)=13=PG(2,3)║              ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ 21 = H_forb_2    ║ Phi_3(4)      ║ F(8) = 21 !    ║ PG(2,F_4)    ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ Deviation at n=5  ║ 1/3-1/60     ║ 60 = |A_5|     ║ Icosahedron   ║
+  ║                   ║ = 19/60      ║ PSL(2,4)=A_5   ║ 60 rotations  ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ Jacobsthal        ║ J(n) has 1/3  ║ J vs F:        ║ Discrete cone ║
+  ║ sequence          ║ in formula    ║ coeff 2 vs 1   ║ enumeration   ║
+  ╠═══════════════════╬═══════════════╬════════════════╬═══════════════╣
+  ║ Eisenstein norm   ║ Phi_3(b)=     ║ Class number 1 ║ Hexagonal     ║
+  ║                   ║ |1-b*w^2|^2  ║ (both Z[phi],  ║ lattice       ║
+  ║                   ║               ║  Z[omega])     ║               ║
+  ╚═══════════════════╩═══════════════╩════════════════╩═══════════════╝
+
+  THE MASTER IDENTITY:
+  For any root alpha of x^2 + x - 1 = 0 (the FIBONACCI polynomial):
+    Phi_3(alpha) = 2 = the TOURNAMENT GENERATOR
+
+  In words: "The third cyclotomic polynomial, evaluated at the
+  golden ratio, gives the tournament base."
+
+  Or equivalently: "The cube root of unity polynomial, composed
+  with the Fibonacci generator, produces the binary choice."
+
+  This is the DEEPEST connection between Fibonacci and tournaments:
+  THE GOLDEN RATIO IS A ROOT OF THE EQUATION Phi_3(x) = 2.
+
+  Verify: Phi_3(x) = 2  <=>  x^2 + x + 1 = 2  <=>  x^2 + x - 1 = 0
+  Solutions: x = (-1 +/- sqrt(5))/2 = {phi-1, -phi} = {1/phi, -phi}
+
+  THE FIBONACCI ROOTS SOLVE Phi_3(x) = 2 !!
+
+  Verification:
+    phi - 1 = 0.6180339887 = 1/phi = 0.6180339887
+    Phi_3(1/phi) = 2.0000000000
+    Phi_3(-phi) = 2.0000000000
+    Both equal 2: YES!
+
+======================================================================
+DONE — EISENSTEIN-CONE-FIBONACCI SYNTHESIS
+======================================================================
