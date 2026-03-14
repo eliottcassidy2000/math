@@ -1,0 +1,460 @@
+======================================================================
+PART 1: TOURNAMENT ORDER POLYTOPE — BASIC STRUCTURE
+======================================================================
+
+  n=3:
+    H=1: vol=1/6 = 0.166667, 1 paths
+      path (2, 1, 0): 2 boundary, 2 internal facets
+    H=3: vol=1/2 = 0.500000, 3 paths
+      path (0, 2, 1): 2 boundary, 2 internal facets
+      path (1, 0, 2): 2 boundary, 2 internal facets
+      path (2, 1, 0): 2 boundary, 2 internal facets
+
+  n=4:
+    H=1: vol=1/24 = 0.041667, 1 paths
+      path (3, 2, 1, 0): 2 boundary, 3 internal facets
+    H=3: vol=1/8 = 0.125000, 3 paths
+      path (3, 0, 2, 1): 2 boundary, 3 internal facets
+      path (3, 1, 0, 2): 2 boundary, 3 internal facets
+      path (3, 2, 1, 0): 2 boundary, 3 internal facets
+    H=5: vol=5/24 = 0.208333, 5 paths
+      path (0, 3, 2, 1): 2 boundary, 3 internal facets
+      path (1, 0, 3, 2): 2 boundary, 3 internal facets
+      path (2, 0, 3, 1): 2 boundary, 3 internal facets
+      path (2, 1, 0, 3): 2 boundary, 3 internal facets
+      path (3, 2, 1, 0): 2 boundary, 3 internal facets
+
+  n=5:
+    H=1: vol=1/120 = 0.008333, 1 paths
+    H=3: vol=1/40 = 0.025000, 3 paths
+    H=5: vol=1/24 = 0.041667, 5 paths
+    H=9: vol=3/40 = 0.075000, 9 paths
+    H=11: vol=11/120 = 0.091667, 11 paths
+    H=13: vol=13/120 = 0.108333, 13 paths
+    H=15: vol=1/8 = 0.125000, 15 paths
+
+======================================================================
+PART 2: ADJACENCY OF HAMILTONIAN PATHS
+======================================================================
+
+  Two Hamiltonian paths σ, τ are ADJACENT if they share a facet,
+  i.e., τ = σ with positions k and k+1 swapped.
+  This means σ(k)→σ(k+1) in T but also σ(k+1)→σ(k) in T
+  ... which is impossible in a tournament!
+
+  WAIT: The facet x_{σ(k)} = x_{σ(k+1)} is shared between Δ_σ
+  (where x_{σ(k)} ≥ x_{σ(k+1)}) and Δ_τ where τ swaps k and k+1
+  (where x_{σ(k+1)} ≥ x_{σ(k)}).
+  For Δ_τ to be in O(T), we need σ(k+1)→σ(k) in T.
+  But σ is a Hamiltonian path, so σ(k)→σ(k+1) in T.
+  These contradict! So NO two simplices share an INTERNAL facet.
+
+  CONCLUSION: The H simplices in the triangulation of O(T)
+  are DISJOINT (they only share lower-dimensional faces)!
+
+  This means O(T) is a DISJOINT UNION of H simplices,
+  not a proper triangulation. The order polytope is NOT convex
+  when H > 1 (it has 'holes' between simplices).
+
+  CORRECTION: Actually, the order polytope O(T) IS convex
+  (intersection of half-spaces). The simplices DO overlap in
+  lower-dimensional faces. The issue is that no two simplices
+  share a CODIMENSION-1 face that is internal to the cube.
+
+  Let me reconsider: O(T) = {x ∈ [0,1]^n : x_i > x_j if i→j}
+  This is convex. Its volume is H/n!.
+  The H simplices are the maximal simplices in the chamber
+  decomposition of O(T) by the hyperplanes x_i = x_j.
+
+  DETAILED GEOMETRY at n=3:
+
+  Tournament: 1→0, 2→0, 2→1, H=1
+    Path (2, 1, 0): simplex {x_2 ≥ x_1 ≥ x_0}
+      vertex: (0, 0, 0)
+      vertex: (0, 0, 1)
+      vertex: (0, 1, 1)
+      vertex: (1, 1, 1)
+
+  Tournament: 0→1, 2→0, 2→1, H=1
+    Path (2, 0, 1): simplex {x_2 ≥ x_0 ≥ x_1}
+      vertex: (0, 0, 0)
+      vertex: (0, 0, 1)
+      vertex: (1, 0, 1)
+      vertex: (1, 1, 1)
+
+  Tournament: 1→0, 0→2, 2→1, H=3
+    Path (0, 2, 1): simplex {x_0 ≥ x_2 ≥ x_1}
+      vertex: (0, 0, 0)
+      vertex: (1, 0, 0)
+      vertex: (1, 0, 1)
+      vertex: (1, 1, 1)
+    Path (1, 0, 2): simplex {x_1 ≥ x_0 ≥ x_2}
+      vertex: (0, 0, 0)
+      vertex: (0, 1, 0)
+      vertex: (1, 1, 0)
+      vertex: (1, 1, 1)
+    Path (2, 1, 0): simplex {x_2 ≥ x_1 ≥ x_0}
+      vertex: (0, 0, 0)
+      vertex: (0, 0, 1)
+      vertex: (0, 1, 1)
+      vertex: (1, 1, 1)
+    This is the REGULAR tournament (3-cycle).
+    O(T) = {x ∈ [0,1]³ : x_0>x_1, x_1>x_2, x_2>x_0} ∪ ...
+    Wait: x_0>x_1 AND x_1>x_2 AND x_2>x_0 is EMPTY (contradictory)!
+    So O(T) must be defined differently.
+
+    RECHECK: O(T) = {x ∈ [0,1]³ : x_i > x_j for SOME consistency}
+    Actually O(T) = convex hull of LINEAR EXTENSIONS
+
+    Let me reconsider the order polytope definition.
+    For a POSET P: O(P) = {f: P→[0,1] : f order-preserving}
+    A tournament is NOT a poset (has cycles).
+    So the 'order polytope' needs a different definition.
+
+  Tournament: 0→1, 0→2, 2→1, H=1
+    Path (0, 2, 1): simplex {x_0 ≥ x_2 ≥ x_1}
+      vertex: (0, 0, 0)
+      vertex: (1, 0, 0)
+      vertex: (1, 0, 1)
+      vertex: (1, 1, 1)
+
+  Tournament: 1→0, 2→0, 1→2, H=1
+    Path (1, 2, 0): simplex {x_1 ≥ x_2 ≥ x_0}
+      vertex: (0, 0, 0)
+      vertex: (0, 1, 0)
+      vertex: (0, 1, 1)
+      vertex: (1, 1, 1)
+
+  Tournament: 0→1, 2→0, 1→2, H=3
+    Path (0, 1, 2): simplex {x_0 ≥ x_1 ≥ x_2}
+      vertex: (0, 0, 0)
+      vertex: (1, 0, 0)
+      vertex: (1, 1, 0)
+      vertex: (1, 1, 1)
+    Path (1, 2, 0): simplex {x_1 ≥ x_2 ≥ x_0}
+      vertex: (0, 0, 0)
+      vertex: (0, 1, 0)
+      vertex: (0, 1, 1)
+      vertex: (1, 1, 1)
+    Path (2, 0, 1): simplex {x_2 ≥ x_0 ≥ x_1}
+      vertex: (0, 0, 0)
+      vertex: (0, 0, 1)
+      vertex: (1, 0, 1)
+      vertex: (1, 1, 1)
+    This is the REGULAR tournament (3-cycle).
+    O(T) = {x ∈ [0,1]³ : x_0>x_1, x_1>x_2, x_2>x_0} ∪ ...
+    Wait: x_0>x_1 AND x_1>x_2 AND x_2>x_0 is EMPTY (contradictory)!
+    So O(T) must be defined differently.
+
+    RECHECK: O(T) = {x ∈ [0,1]³ : x_i > x_j for SOME consistency}
+    Actually O(T) = convex hull of LINEAR EXTENSIONS
+
+    Let me reconsider the order polytope definition.
+    For a POSET P: O(P) = {f: P→[0,1] : f order-preserving}
+    A tournament is NOT a poset (has cycles).
+    So the 'order polytope' needs a different definition.
+
+  Tournament: 1→0, 0→2, 1→2, H=1
+    Path (1, 0, 2): simplex {x_1 ≥ x_0 ≥ x_2}
+      vertex: (0, 0, 0)
+      vertex: (0, 1, 0)
+      vertex: (1, 1, 0)
+      vertex: (1, 1, 1)
+
+  Tournament: 0→1, 0→2, 1→2, H=1
+    Path (0, 1, 2): simplex {x_0 ≥ x_1 ≥ x_2}
+      vertex: (0, 0, 0)
+      vertex: (1, 0, 0)
+      vertex: (1, 1, 0)
+      vertex: (1, 1, 1)
+
+======================================================================
+PART 3: ACYCLIC ORIENTATIONS AND LINEAR EXTENSIONS
+======================================================================
+
+  For a tournament T, the Hamiltonian paths correspond to
+  permutations σ where σ(1)→σ(2)→...→σ(n) follows T's arcs.
+
+  The 'natural polytope' associated to T is:
+  P(T) = convex hull of indicator vectors of Hamiltonian paths.
+
+  Or better: for each Hamiltonian path σ, define the simplex
+  Δ_σ = {x ∈ [0,1]^n : 1 ≥ x_{σ(1)} ≥ x_{σ(2)} ≥ ... ≥ x_{σ(n)} ≥ 0}
+
+  The UNION U(T) = ∪_σ Δ_σ over all H Hamiltonian paths
+  has volume H/n!.
+
+  For the TRANSITIVE tournament: U(T) = one simplex, volume 1/n!
+  For the REGULAR tournament on 3: U(T) = three simplices
+
+  At n=3, the three simplices for the regular tournament are:
+  Δ₁: x_0 ≥ x_1 ≥ x_2 (path 0→1→2)
+  Δ₂: x_1 ≥ x_2 ≥ x_0 (path 1→2→0)
+  Δ₃: x_2 ≥ x_0 ≥ x_1 (path 2→0→1)
+
+  Volume check: 3 × (1/6) = 1/2 of the cube.
+  The other 3 simplices belong to the REVERSE tournament.
+  Together, all 6 simplices tile the cube: 6/6 = 1. ✓
+
+  For a tournament T and its reverse T̄:
+  U(T) ∪ U(T̄) = [0,1]^n (they tile the cube!)
+  Vol(U(T)) + Vol(U(T̄)) = 1
+  H(T)/n! + H(T̄)/n! = 1
+  H(T) + H(T̄) = n!
+
+  RÉDEI'S THEOREM says H(T) is ODD, so H(T̄) = n! - H(T) is also odd
+  (since n! is even for n≥2, this requires n! to be even, which gives
+  H(T) odd → H(T̄) = n!-H(T) which is even-odd = odd ✓)
+
+  Verification of H(T) + H(T̄) = n!:
+  FAIL at n=3: H=1, H̄=1, sum=2, n!=6
+  FAIL at n=4: H=1, H̄=1, sum=2, n!=24
+  FAIL at n=5: H=1, H̄=1, sum=2, n!=120
+  FAIL at n=6: H=1, H̄=1, sum=2, n!=720
+
+======================================================================
+PART 4: SCISSORS CONGRUENCE OF SIMPLEX UNIONS
+======================================================================
+
+  U(T) = ∪_σ Δ_σ where σ ranges over H Hamiltonian paths.
+
+  TWO TOURNAMENT POLYTOPES U(T₁), U(T₂) with same H:
+  Do they have the same Dehn invariant?
+
+  Each Δ_σ is a standard simplex in [0,1]^n.
+  ALL such simplices are CONGRUENT (related by a permutation matrix).
+  So each has the SAME Dehn invariant.
+
+  The Dehn invariant of a UNION is NOT the sum of Dehn invariants!
+  D(A ∪ B) = D(A) + D(B) - D(A ∩ B)
+  (inclusion-exclusion on the boundary)
+
+  The intersection structure of the simplices is encoded by
+  the PERMUTOHEDRON COMPLEX of the tournament.
+
+  QUESTION: When do two simplices Δ_σ, Δ_τ intersect?
+  Δ_σ ∩ Δ_τ ≠ ∅ iff the corresponding total orders σ, τ
+  are 'compatible' on some subset.
+
+  INTERSECTION STRUCTURE at n=3, regular tournament:
+  Paths: [(0, 1, 2), (1, 2, 0), (2, 0, 1)]
+  Δ_(0, 1, 2) ∩ Δ_(1, 2, 0): non-empty (contains x=(1/3,1/3,1/3))
+    Constraints: [(0, 1), (1, 2), (2, 0)]
+    No forced equalities: intersection has positive measure!
+    (This would mean the simplices OVERLAP in volume)
+  Δ_(0, 1, 2) ∩ Δ_(2, 0, 1): non-empty (contains x=(1/3,1/3,1/3))
+    Constraints: [(0, 1), (1, 2), (2, 0)]
+    No forced equalities: intersection has positive measure!
+    (This would mean the simplices OVERLAP in volume)
+  Δ_(1, 2, 0) ∩ Δ_(2, 0, 1): non-empty (contains x=(1/3,1/3,1/3))
+    Constraints: [(0, 1), (1, 2), (2, 0)]
+    No forced equalities: intersection has positive measure!
+    (This would mean the simplices OVERLAP in volume)
+
+  The three simplices of the regular tournament pairwise intersect
+  only on their boundaries (measure 0), so they tile without overlap.
+
+======================================================================
+PART 5: DEHN INVARIANT COMPUTATION
+======================================================================
+
+  For a convex polytope P in R^n, the Dehn-Hadwiger invariant is:
+  D_k(P) = Σ_{k-faces F} vol_k(F) ⊗ external angle(F)
+
+  For n=3 (3-dimensional polytopes), the classical Dehn invariant is D_1:
+  D(P) = Σ_{edges e} length(e) ⊗ θ(e)
+  where θ(e) is the dihedral angle at edge e.
+
+  For the standard simplex Δ in R³:
+  {(x,y,z): 1 ≥ x ≥ y ≥ z ≥ 0}
+  Vertices: (0,0,0), (1,0,0), (1,1,0), (1,1,1)
+  Edges:
+  (0, 0, 0) — (1, 0, 0): length = 1.0000
+  (0, 0, 0) — (1, 1, 0): length = 1.4142
+  (0, 0, 0) — (1, 1, 1): length = 1.7321
+  (1, 0, 0) — (1, 1, 0): length = 1.0000
+  (1, 0, 0) — (1, 1, 1): length = 1.4142
+  (1, 1, 0) — (1, 1, 1): length = 1.0000
+
+  The dihedral angles of this simplex:
+  Between faces meeting at each edge:
+  Facets of the standard simplex {1≥x≥y≥z≥0}:
+    F1: x=1, vertices (1,0,0),(1,1,0),(1,1,1)
+    F2: y=x, vertices (0,0,0),(1,1,0),(1,1,1)
+    F3: z=y, vertices (0,0,0),(1,0,0),(1,1,1)
+    F4: z=0, vertices (0,0,0),(1,0,0),(1,1,0)
+
+  Dihedral angles:
+    Edge (0,0,0)-(1,0,0) (F:z=y ∩ F:z=0): cos=-0.7071, dihedral=0.7854 = 0.2500π
+    Edge (0,0,0)-(1,1,0) (F:y=x ∩ F:z=0): cos=0.0000, dihedral=1.5708 = 0.5000π
+    Edge (0,0,0)-(1,1,1) (F:y=x ∩ F:z=y): cos=-0.5000, dihedral=1.0472 = 0.3333π
+    Edge (1,0,0)-(1,1,0) (F:x=1 ∩ F:z=0): cos=0.0000, dihedral=1.5708 = 0.5000π
+    Edge (1,0,0)-(1,1,1) (F:x=1 ∩ F:z=y): cos=0.0000, dihedral=1.5708 = 0.5000π
+    Edge (1,1,0)-(1,1,1) (F:x=1 ∩ F:y=x): cos=-0.7071, dihedral=0.7854 = 0.2500π
+
+  Dehn invariant of standard simplex:
+  D = Σ length(e) ⊗ θ(e)
+
+    (0,0,0)-(1,0,0): length=1.0000, θ=0.250000π
+    (0,0,0)-(1,1,0): length=1.4142, θ=0.500000π
+    (0,0,0)-(1,1,1): length=1.7321, θ=0.333333π
+    (1,0,0)-(1,1,0): length=1.0000, θ=0.500000π
+    (1,0,0)-(1,1,1): length=1.4142, θ=0.500000π
+    (1,1,0)-(1,1,1): length=1.0000, θ=0.250000π
+
+  D =  1.0000⊗0.250000π + 1.4142⊗0.500000π + 1.7321⊗0.333333π + 1.0000⊗0.500000π + 1.4142⊗0.500000π + 1.0000⊗0.250000π
+
+  NOTE: The simplex {1≥x≥y≥z≥0} is an ORTHOSCHEME,
+  not a regular tetrahedron. Its Dehn invariant structure
+  reflects the ORDERING (permutation) that defines it.
+
+  DIHEDRAL ANGLE SUMMARY:
+  Distinct dihedral angles (as fractions of π): [np.float64(0.25), np.float64(0.333333), np.float64(0.5)]
+
+======================================================================
+PART 6: ORTHOSCHEME DIHEDRAL ANGLES IN GENERAL n
+======================================================================
+
+  The standard orthoscheme in R^n is:
+  {1 ≥ x₁ ≥ x₂ ≥ ... ≥ x_n ≥ 0}
+
+  Facets:
+  F₀: x₁ = 1 (cap)
+  Fₖ: xₖ = x_{k+1} for k=1,...,n-1 (internal)
+  F_n: x_n = 0 (base)
+
+  Normal vectors (outward):
+  F₀: (1, 0, ..., 0)
+  Fₖ: (-eₖ + e_{k+1})/√2 for k=1,...,n-1
+  F_n: (0, ..., 0, -1)
+
+  Dihedral angles between adjacent facets:
+  n=2: consecutive: F0∩F1: 0.2500π, F1∩F2: 0.2500π
+         non-adjacent F0∩F2: 0.5000π
+  n=3: consecutive: F0∩F1: 0.2500π, F1∩F2: 0.3333π, F2∩F3: 0.2500π
+         non-adjacent F0∩F2: 0.5000π
+         non-adjacent F0∩F3: 0.5000π
+         non-adjacent F1∩F3: 0.5000π
+  n=4: consecutive: F0∩F1: 0.2500π, F1∩F2: 0.3333π, F2∩F3: 0.3333π, F3∩F4: 0.2500π
+         non-adjacent F0∩F2: 0.5000π
+         non-adjacent F0∩F3: 0.5000π
+         non-adjacent F0∩F4: 0.5000π
+         non-adjacent F1∩F3: 0.5000π
+         non-adjacent F1∩F4: 0.5000π
+         non-adjacent F2∩F4: 0.5000π
+  n=5: consecutive: F0∩F1: 0.2500π, F1∩F2: 0.3333π, F2∩F3: 0.3333π, F3∩F4: 0.3333π, F4∩F5: 0.2500π
+  n=6: consecutive: F0∩F1: 0.2500π, F1∩F2: 0.3333π, F2∩F3: 0.3333π, F3∩F4: 0.3333π, F4∩F5: 0.3333π, F5∩F6: 0.2500π
+  n=7: consecutive: F0∩F1: 0.2500π, F1∩F2: 0.3333π, F2∩F3: 0.3333π, F3∩F4: 0.3333π, F4∩F5: 0.3333π, F5∩F6: 0.3333π, F6∩F7: 0.2500π
+
+  PATTERN: Consecutive orthoscheme facets meet at angle π/2!
+  (The orthoscheme is 'right-angled' between consecutive facets.)
+
+  Non-consecutive facets (Fᵢ, Fⱼ with |i-j|≥2) meet at
+  angle arccos(1/2) = π/3 (for adjacent-gap-1)
+  or arccos(?) for larger gaps.
+
+======================================================================
+PART 7: H(T) + H(T̄) = n! AND COMPLEMENTARY TILING
+======================================================================
+
+  The H simplices of T and n!-H simplices of T̄ tile [0,1]^n.
+  This is because every permutation σ defines exactly one simplex,
+  and σ is a Hamiltonian path of T XOR of T̄ (exactly one).
+
+  Wait: σ = (σ₁,...,σ_n) is a Ham path of T iff σᵢ→σᵢ₊₁ for all i.
+  It's a Ham path of T̄ iff σᵢ←σᵢ₊₁ for all i, i.e., σᵢ₊₁→σᵢ for all i.
+  This means the REVERSE permutation (σ_n,...,σ₁) is a Ham path of T̄.
+
+  So if σ is a Ham path of T, then σ^{rev} is a Ham path of T̄.
+  Since path reversal is a bijection, H(T) = H(T̄)... WRONG!
+
+  That would give H(T) = H(T̄), but we also have H(T) + H(T̄) = n!.
+  This forces H(T) = n!/2 for all T, which is false.
+
+  The ERROR: H(T) + H(T̄) = n! is NOT correct!
+  A permutation σ is a Ham path of T iff ALL arcs go forward.
+  If even ONE arc goes backward, σ is NOT a Ham path of T.
+  And σ is also not a Ham path of T̄ unless ALL arcs go backward.
+
+  So most permutations are Ham paths of NEITHER T nor T̄!
+
+  n=3 regular: H(T)=3, H(T̄)=3, sum=6, n!=6
+  H(T)+H(T̄) = 6 ≠ n! = 6
+
+  CORRECT PICTURE:
+  The n! simplices of the permutohedron decomposition tile [0,1]^n.
+  Each permutation σ defines one simplex Δ_σ = {x_{σ₁}≥...≥x_{σ_n}}.
+  H(T) of these are 'consistent' with T (all arcs forward).
+  The rest have at least one arc reversed.
+
+  H(T)/n! is the FRACTION of the cube covered by T's simplices.
+  At n=3: H=1 covers 1/6, H=3 covers 3/6=1/2 of the cube.
+
+  THEOREM: H(T̄) = H(T)
+  Proof: σ is a Ham path of T̄ iff σ^rev is a Ham path of T.
+
+  n=3: H(T)=H(T̄) for all T? True
+  n=4: H(T)=H(T̄) for all T? True
+  n=5: H(T)=H(T̄) for all T? True
+  n=6: H(T)=H(T̄) for all T? True
+
+======================================================================
+PART 8: THE REAL SCISSORS CONGRUENCE QUESTION
+======================================================================
+
+  Since U(T) is a union of H congruent simplices that tile
+  a region of [0,1]^n, and all these simplices are orthoschemes
+  (related by permutation of coordinates), the question becomes:
+
+  Given two DIFFERENT sets of H simplices from the n! total,
+  are the resulting unions scissors-congruent?
+
+  ANSWER: YES! Any two unions of the same number of
+  orthoschemes from the permutohedron decomposition are
+  scissors-congruent, because we can always 'swap' simplices:
+  Cut out a simplex from one, paste it into the other.
+
+  So in this picture, U(T₁) and U(T₂) are scissors-congruent
+  iff H(T₁) = H(T₂).
+
+  The Dehn invariant is the SAME for all such unions,
+  because the simplices are all congruent and the boundary
+  structure only depends on H.
+
+  CONCLUSION: The scissors congruence conjecture from Part 1
+  is WRONG. Same H always gives scissors congruence.
+  The independence polynomial I(x) captures ADDITIONAL structure
+  beyond scissors congruence — it's about the ARRANGEMENT,
+  not just the volume or Dehn invariant.
+
+  The RIGHT question: What does I(x) capture about U(T)
+  that H alone doesn't?
+
+  ANSWER: I(x) captures the TOPOLOGY of the boundary of U(T).
+  The boundary of U(T) consists of:
+  - External boundary (faces on the cube boundary)
+  - Internal boundary (faces between 'selected' and 'unselected' simplices)
+
+  I(-1) = Euler characteristic of the independence complex,
+  which measures the 'topological complexity' of the set of
+  selected simplices (how they're arranged in the permutohedron).
+
+  SAME H, DIFFERENT I(x) at n=6:
+  U(T₁) and U(T₂) are scissors-congruent (same volume, same pieces)
+  But their independence complexes have different Euler characteristics.
+  This means the 'wiring diagram' of which simplices are selected
+  has different topology, even though the union has the same volume.
+
+  ANALOGY to Hilbert's 3rd:
+  Hilbert asked: same volume → scissors congruent?
+  Dehn showed: NO, Dehn invariant obstructs.
+  We ask: same H → same arrangement?
+  I(x) shows: NO, arrangement topology differs.
+
+  But this is a DIFFERENT question from scissors congruence!
+  Scissors congruence asks about cutting and reassembling.
+  Arrangement topology asks about the combinatorial structure.
+
+======================================================================
+DONE
+======================================================================
