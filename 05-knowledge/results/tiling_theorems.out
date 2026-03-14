@@ -1,0 +1,134 @@
+======================================================================
+TILING STRUCTURE THEOREMS
+kind-pasteur-2026-03-14-S77
+======================================================================
+
+======================================================================
+THEOREM 1: FLIP OF GS TILING IS ALWAYS GS
+======================================================================
+
+  PROOF:
+  A tiling t is GS iff t[i] = t[trans(i)] for all i where trans(i) != i.
+  The flip of t is t' where t'[i] = 1 - t[i].
+  Then t'[i] = 1 - t[i] = 1 - t[trans(i)] = t'[trans(i)].
+  So t' is also GS. QED.
+
+  Key: flip commutes with the GS symmetry because:
+  - GS requires paired positions to have EQUAL bits
+  - Flip complements ALL bits
+  - Complementing equal bits gives equal bits
+
+
+======================================================================
+THEOREM 2: BLUE LINE WEIGHTS ARE ALWAYS EVEN
+======================================================================
+
+  CLAIM: The number of GS tilings in class A whose flip lands in class B
+  is always even (for A != B).
+
+  ARGUMENT: For a GS tiling t in class A with flip(t) in class B:
+  - The GS-transpose of t, call it trans(t), is ALSO in class A
+    (because GS + transpose = class-preserving for SC classes)
+  - flip(trans(t)) = trans(flip(t)) (since flip commutes with trans)
+  - trans(flip(t)) is in the SAME class as flip(t) = class B
+  - So tilings t and trans(t) are paired, both contributing to the
+    A->B count. Unless t = trans(t) (GS fixed point).
+
+  At odd n: the GS map has floor((n-1)/2) fixed points on the grid.
+  For paired positions, t and trans(t) are always DIFFERENT tilings.
+  But a GS tiling CAN be fixed by an additional symmetry...
+
+  Actually, this needs more careful analysis. Let me verify computationally.
+
+  n=3: 1 blue edges, all weights even? True
+  n=4: 1 blue edges, all weights even? True
+  n=5: 8 blue edges, all weights even? True
+  n=6: 26 blue edges, all weights even? True
+
+======================================================================
+THEOREM 3: COUNTING FORMULAS
+======================================================================
+
+  GS DOF formula:
+    n=3: m=1, fixed=1, paired=0, dof=1, #GS=2^1=2
+    n=4: m=3, fixed=1, paired=1, dof=2, #GS=2^2=4
+    n=5: m=6, fixed=2, paired=2, dof=4, #GS=2^4=16
+    n=6: m=10, fixed=2, paired=4, dof=6, #GS=2^6=64
+    n=7: m=15, fixed=3, paired=6, dof=9, #GS=2^9=512
+    n=8: m=21, fixed=3, paired=9, dof=12, #GS=2^12=4096
+    n=9: m=28, fixed=4, paired=12, dof=16, #GS=2^16=65536
+    n=10: m=36, fixed=4, paired=16, dof=20, #GS=2^20=1048576
+    n=11: m=45, fixed=5, paired=20, dof=25, #GS=2^25=33554432
+
+  Fixed point formula:
+    n even: #fixed = (n-2)/2
+    n odd:  #fixed = (n-1)/2
+    General: #fixed = floor((n-1)/2)
+    n=3: predicted=1, actual=1, match=True
+    n=4: predicted=1, actual=1, match=True
+    n=5: predicted=2, actual=2, match=True
+    n=6: predicted=2, actual=2, match=True
+    n=7: predicted=3, actual=3, match=True
+    n=8: predicted=3, actual=3, match=True
+    n=9: predicted=4, actual=4, match=True
+    n=10: predicted=4, actual=4, match=True
+    n=11: predicted=5, actual=5, match=True
+
+  GS DOF formula: dof = (C(n-1,2) + floor((n-1)/2)) / 2
+    n=3: formula=1, actual=1, match=True
+    n=4: formula=2, actual=2, match=True
+    n=5: formula=4, actual=4, match=True
+    n=6: formula=6, actual=6, match=True
+    n=7: formula=9, actual=9, match=True
+    n=8: formula=12, actual=12, match=True
+    n=9: formula=16, actual=16, match=True
+    n=10: formula=20, actual=20, match=True
+    n=11: formula=25, actual=25, match=True
+
+======================================================================
+THEOREM 4: PROPERTIES WE CAN BE CERTAIN OF
+======================================================================
+
+  PROVED:
+  1. GS flip preserves GS (algebraic, Theorem 1)
+  2. Blue line skeleton bipartite at odd n (THM-060, t3 parity)
+  3. Blueself requires even n (THM-023, score argument)
+  4. GS count = 2^{(m + floor((n-1)/2))/2} (combinatorial)
+  5. Weight enumerator = (1+z)^f * (1+z^2)^p (S76 product code)
+  6. GS DOF = (C(n-1,2) + floor((n-1)/2)) / 2
+
+  VERIFIED (conjecture status):
+  7. All blue line weights are even (verified n=3..6)
+  8. H-maximizer is always in a blueself class at even n (verified n=4,6)
+  9. At odd n: exactly 0 blueself tilings (verified n=3,5,7)
+  10. The number of blackself tilings grows rapidly with n
+
+  OPEN:
+  11. Formula for #SC classes as function of n
+  12. Formula for #blue edges as function of n
+  13. Why is the H-maximizer blueself at even n?
+  14. Structure of the black line skeleton
+
+
+  SC class counts (self-converse tournaments):
+    n=3: 2 SC classes
+    n=4: 2 SC classes
+    n=5: 8 SC classes
+    n=6: 12 SC classes
+    n=7: 88 SC classes
+
+  Total tournament classes (OEIS A000568):
+    n=3: 2
+    n=4: 4
+    n=5: 12
+    n=6: 56
+    n=7: 456
+    n=3: NSC pairs = 0
+    n=4: NSC pairs = 1
+    n=5: NSC pairs = 2
+    n=6: NSC pairs = 22
+    n=7: NSC pairs = 184
+
+======================================================================
+DONE
+======================================================================
