@@ -1,0 +1,266 @@
+======================================================================
+PART 1: THE EXCEPTIONAL ISOMORPHISM
+======================================================================
+  |PSL(2, F_2)| = 6
+  |PSL(2, F_3)| = 12
+  |PSL(2, F_4)| = 60
+  |PSL(2, F_5)| = 60
+  |PSL(2, F_7)| = 168
+  |PSL(2, F_8)| = 504
+  |PSL(2, F_9)| = 360
+  |PSL(2, F_11)| = 660
+  |PSL(2, F_13)| = 1092
+
+EXCEPTIONAL ISOMORPHISMS:
+  PSL(2,2) = S_3             (order 6)
+  PSL(2,3) = A_4             (order 12)
+  PSL(2,4) = PSL(2,5) = A_5  (order 60)  ← THE KEY ONE
+  PSL(2,7) = GL(3,2)         (order 168)
+
+WHY PSL(2,4) = PSL(2,5) = A_5:
+  PSL(2,4) acts on PG(1,4) = 5 points (projective line over F_4).
+  PSL(2,5) acts on PG(1,5) = 6 points.
+  A_5 acts on 5 elements.
+  All three have order 60 = 2^2 * 3 * 5.
+
+  The isomorphism PSL(2,4) -> A_5 comes from the action on 5 points
+  of PG(1,4) = F_4 union {infinity} = {0, 1, alpha, alpha+1, infinity}.
+
+  This connects F_4 (the field behind Baer subplanes) to A_5
+  (the icosahedral group behind the golden ratio)!
+
+======================================================================
+PART 2: ICOSAHEDRAL STRUCTURE AND TOURNAMENTS
+======================================================================
+
+THE ICOSAHEDRON:
+  12 vertices, 30 edges, 20 faces (triangular)
+  Rotation group: A_5 (order 60)
+  Full symmetry: A_5 x Z_2 (order 120 = |S_5|)
+
+  Vertex coordinates (up to scaling):
+  (0, +/-1, +/-phi), cyclic permutations
+
+  phi = 1.618034 (golden ratio)
+
+  Key numbers:
+  12 vertices = C(4,2) = number of edges in K_4
+  30 edges = C(6,2) - 6 = 15 - ... no
+  30 = 2 * 15 = 2 * C(6,2) / ...
+  20 faces = C(6,3) = 20 3-subsets of 6 elements
+
+  Wait: 20 = C(6,3)? Yes! 20 = 6!/(3!*3!)
+  And 20 triangular faces of icosahedron.
+  This connects to the 20 3-cycles in some tournament?
+
+  Actually for n=5: number of directed 3-cycles in a regular
+  tournament on 5 vertices:
+  Total 3-subsets: C(5,3) = 10
+  Each gives 2 orientations (CW, CCW).
+  In any tournament, each triple has exactly 1 of 2 cycle orientations
+  OR is a path (if 0 or 1 of the 2 3-cycles exist).
+
+  For a regular tournament on 5 (score sequence 2,2,2,2,2):
+  alpha_1 = n(n^2-1)/24 = 5*24/24 = 5
+  So 5 directed 3-cycles.
+  These 5 correspond to... 5 faces of a polytope?
+  5 = number of vertices of icosahedron / ... no.
+
+ICOSAHEDRAL TOURNAMENT:
+  The icosahedron graph has 12 vertices, 30 edges.
+  An orientation of the icosahedron graph gives a partial tournament.
+  But it's not a complete tournament (only 30 of C(12,2)=66 edges).
+
+  However: the DUAL of the icosahedron is the DODECAHEDRON:
+  20 vertices, 30 edges, 12 faces (pentagonal)
+  And the Petersen graph IS a subgraph of the dodecahedron graph!
+
+  Petersen graph: 10 vertices, 15 edges, girth 5
+  = K(5,2): vertices = 2-element subsets of {1,...,5}
+  = the Kneser graph
+
+  10 = Petersen vertices = BIBD points at n=6
+  15 = Petersen edges = C(6,2) = BIBD blocks at n=6 = duads of S_6
+
+======================================================================
+PART 3: REGULAR TOURNAMENTS ON 5 VERTICES
+======================================================================
+Regular tournaments on n=5: 24
+Distinct H values: [13]
+  H=13: 24 tournaments, 3-cycles=5, odd_cycles=6
+
+======================================================================
+PART 4: THE PLATONIC-TOURNAMENT CORRESPONDENCE
+======================================================================
+
+THE 5 PLATONIC SOLIDS AND TOURNAMENT NUMBERS:
+
+  Solid        V   E   F  |Aut|  f-vector    Tournament link
+  Tetrahedron  4   6   4    24   (4,6,4)     |S_4|=24=Golay length
+  Cube         8  12   6    48   (8,12,6)    8=T(3), 12=C(4,3)*3
+  Octahedron   6  12   8    48   (6,12,8)    6=LCM(2,3)=period
+  Dodecahedron 20  30  12   120  (20,30,12)  120=|S_5|=|Aut(Petersen)|
+  Icosahedron  12  30  20   120  (12,30,20)  12=2*6, 30=C(6,2)*2
+
+  V - E + F = 2 (Euler's formula) for all five.
+
+  THE EXCEPTIONAL SOLID: The icosahedron has A_5 rotation symmetry.
+  A_5 = PSL(2,4) = PSL(2,5) = the exceptional isomorphism.
+
+  THE DUAL PAIR: Icosahedron (12V,20F) <-> Dodecahedron (20V,12F)
+  This duality swaps vertices and faces.
+  20 = C(6,3): face count of icosahedron = 3-subsets of 6
+  12 = 2*6: vertex count = twice the period
+
+  THE CUBE-OCTAHEDRON PAIR: (8V,6F) <-> (6V,8F)
+  8 = number of tournaments at n=3
+  6 = period of tournament parity
+
+  THE SELF-DUAL: Tetrahedron (4V,4F) = K_4
+  4 = |F_4| = the field
+  |Aut(Tet)| = 24 = Golay code length!
+
+ICOSAHEDRAL NUMBERS:
+  12 vertices: 12 = 2 * 6 = 2 * period
+  30 edges: 30 = 2 * 15 = 2 * C(6,2) = 2 * (duads of S_6)
+  20 faces: 20 = C(6,3) = 3-subsets of 6
+  60 rotations = |A_5| = |PSL(2,4)|
+  120 symmetries = |S_5| = |Aut(Petersen)|
+
+  The icosahedron's face structure C(6,3) connects it to
+  the 3-SUBSETS of a 6-element set — exactly the context
+  where tournament 3-cycles live at n=6!
+
+======================================================================
+PART 5: GOLDEN RATIO APPEARANCES IN TOURNAMENTS
+======================================================================
+
+WHERE φ = 1.618034 APPEARS:
+
+1. FIBONACCI WORD: The tournament word L=3, S=2 with L/S ratio -> phi
+
+2. PROJECTIVE PLANE RATIO: |PG(2,F_3)|/|PG(2,F_4)| = 13/21 -> 1/phi
+
+3. CYCLOTOMIC: Phi_6(phi) = phi^2 - phi + 1 = 2 (the generator!)
+
+4. ICOSAHEDRAL COORDINATES: vertices at (0, +/-1, +/-phi)
+   and cyclic permutations
+
+5. CONTINUED FRACTION: phi = 1 + 1/(1 + 1/(1 + ...)) = [1;1,1,1,...]
+   The SIMPLEST continued fraction = the "most irrational" number.
+   Tournament parity is fundamentally about the interplay of 2 and 3,
+   and phi arises from the continued fraction [1;1,1,...] where
+   each step alternates between adding a 2-tile and a 3-tile.
+
+6. EIGENVALUE CONNECTION: The Fibonacci recurrence matrix
+   [[1,1],[1,0]] has eigenvalues phi and psi = -1/phi.
+   The tournament parity matrix M(-1) = [[1,-1],[1,0]] has
+   eigenvalues that are 6th roots of unity.
+   M(2) = [[1,2],[1,0]] has eigenvalues phi*sqrt(2)... no.
+   Actually [[1,2],[1,0]] has char poly x^2 - x - 2 = (x-2)(x+1).
+   Eigenvalues: 2 and -1.
+   Hmm, these are the tournament generators, not phi!
+
+   So: M(2) has eigenvalues 2 (arc generator) and -1 (sign flip).
+   M(-1) has eigenvalues that are 6th roots of unity (period 6).
+   The Fibonacci matrix M(1) has eigenvalues phi and psi.
+
+   These three matrices share the same form [[1,a],[1,0]]:
+   a = 1 -> Fibonacci (golden ratio)
+   a = 2 -> Tournament generators (2 and -1)
+   a = -1 -> Tournament parity (period 6)
+
+   THE MATRIX FAMILY [[1,a],[1,0]]:
+   Eigenvalues = (1 +/- sqrt(1+4a)) / 2
+   a = 1: (1+/-sqrt(5))/2 = phi, psi
+   a = 2: (1+/-3)/2 = 2, -1
+   a = -1: (1+/-sqrt(-3))/2 = primitive 6th roots of unity
+
+   All three are governed by discriminant D = 1 + 4a:
+   a=1: D=5 (sqrt(5) -> golden ratio)
+   a=2: D=9=3^2 (rational eigenvalues)
+   a=-1: D=-3 (complex eigenvalues -> periodicity)
+
+  M(+1) [Fibonacci           ]: eigenvalues = 1.6180+0.0000j, -0.6180+0.0000j  (D=5)
+  M(+2) [Tournament gen      ]: eigenvalues = 2.0000+0.0000j, -1.0000+0.0000j  (D=9)
+  M(-1) [Tournament parity   ]: eigenvalues = 0.5000+0.8660j, 0.5000-0.8660j  (D=-3)
+
+======================================================================
+PART 6: PENROSE TILINGS AND TOURNAMENT STRUCTURE
+======================================================================
+
+PENROSE TILINGS:
+  Use two tiles: thick rhombus (angle 2pi/5) and thin rhombus (angle pi/5)
+  Tile ratio -> phi (golden ratio)
+  5-fold rotational symmetry
+
+  The de Bruijn construction: a Penrose tiling is the projection of a
+  5D lattice Z^5 through a 2D plane with irrational slope.
+
+  The 1D analog: Fibonacci word = projection of Z^2 through a line
+  with slope 1/phi.
+
+TOURNAMENT ANALOG:
+  A tournament on n vertices = a complete directed graph.
+  The SCORE SEQUENCE is the degree vector.
+  Regular tournaments have constant score (n-1)/2.
+
+  The regular tournament lattice:
+  At n=5: 24 regular tournaments (on labeled vertices)
+  At n=7: 2640 regular tournaments
+
+  QUASICRYSTALLINE TOURNAMENTS?
+  A quasicrystalline tournament would have:
+  - Long-range order (structured H-spectrum)
+  - No translational symmetry (non-circulant)
+  - Self-similar scaling (Fibonacci-like structure)
+
+  The QR_7 tournament IS crystalline (circulant, periodic).
+  But the AP_7 has less symmetry (|Aut|=7 vs 21).
+  The "Middle" class has |Aut|=3, the least symmetric.
+
+  Conjecture: as n grows, "quasicrystalline" tournaments
+  (those with self-similar but non-periodic structure)
+  might dominate the H-spectrum.
+
+THE DEEP CONNECTION:
+  Penrose tilings are governed by the golden ratio phi.
+  Tournament tilings are governed by the generators 2 and 3.
+  The bridge: phi = (1+sqrt(5))/2, and sqrt(5) connects to
+  the discriminant of x^2-x-1.
+
+  But 5 = the smallest number of vertices for a non-trivial
+  regular tournament! (n must be odd, n=3 is trivial: all isomorphic.)
+
+  So: phi (golden ratio) ↔ n=5 (smallest non-trivial tournament)
+  And A_5 = PSL(2,4) = PSL(2,5) connects:
+  - The icosahedral symmetry (phi)
+  - The F_4 structure (Baer subplanes)
+  - The tournament on 5 vertices
+  All through one exceptional isomorphism!
+
+======================================================================
+SUMMARY: THE QUASICRYSTAL-TOURNAMENT DICTIONARY
+======================================================================
+
+  QUASICRYSTAL CONCEPT    TOURNAMENT ANALOG
+  ─────────────────────   ──────────────────
+  Two tile types (L,S)    Two generators (3,2)
+  Golden ratio phi        Period 6 / Fibonacci F_8=21
+  Penrose rhombi          Odd cycle types (3,5,7,...)
+  5-fold symmetry         A_5 = PSL(2,4) = PSL(2,5)
+  Z^5 lattice             Score sequence space
+  Irrational projection   Cyclotomic evaluation (Phi_3(2)=7)
+  Quasiperiodicity        Non-circulant tournaments
+  Inflation rule L->LS    H recursion via OCF
+  Diffraction pattern     Fourier spectrum of H(T)
+
+  THE MATRIX FAMILY M(a) = [[1,a],[1,0]]:
+  a = -1: Period 6 (tournament parity, 6th roots)     D = -3
+  a =  1: Golden ratio (Fibonacci, quasicrystals)      D = 5
+  a =  2: Generators (tournament arc/cycle counts)      D = 9
+
+  The discriminants: -3, 5, 9
+  Sum: -3 + 5 + 9 = 11 = |QR_11| (next Paley prime!)
+  Product: -3 * 5 * 9 = -135 = -5 * 27
+
