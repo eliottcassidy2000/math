@@ -1,0 +1,34 @@
+COMPUTING LEVEL-4 FOURIER COEFFICIENTS AT n=6
+m = 15, N = 32768
+Mean(H) = 22.5
+
+Computing level-4 Fourier coefficients (C(15,4) = 1365 subsets)...
+  500/1365 done, 170 nonzero so far
+  1000/1365 done, 344 nonzero so far
+
+Total level-4 subsets: 1365
+Nonzero: 450
+E_4 = 11.25
+E_4/E_0 = 0.022222222222222223
+Expected E_4 = 11.25
+
+Unique magnitudes: [(np.float64(0.125), 360), (np.float64(0.25), 90)]
+Vertex coverage: [(5, 360), (6, 90)]
+
+  |H_hat| = 0.125: 360 coefficients
+    [(0, 1), (0, 2), (1, 3), (2, 4)], vertices=5, deg=[0, 1, 1, 2, 2, 2], sign=+
+    [(0, 1), (0, 2), (1, 3), (2, 5)], vertices=5, deg=[0, 1, 1, 2, 2, 2], sign=+
+    [(0, 1), (0, 2), (1, 3), (3, 4)], vertices=5, deg=[0, 1, 1, 2, 2, 2], sign=-
+    [(0, 1), (0, 2), (1, 3), (3, 5)], vertices=5, deg=[0, 1, 1, 2, 2, 2], sign=-
+    [(0, 1), (0, 2), (1, 4), (2, 3)], vertices=5, deg=[0, 1, 1, 2, 2, 2], sign=+
+
+  |H_hat| = 0.25: 90 coefficients
+    [(0, 1), (0, 2), (3, 4), (3, 5)], vertices=6, deg=[1, 1, 1, 1, 2, 2], sign=+
+    [(0, 1), (0, 2), (3, 4), (4, 5)], vertices=6, deg=[1, 1, 1, 1, 2, 2], sign=-
+    [(0, 1), (0, 2), (3, 5), (4, 5)], vertices=6, deg=[1, 1, 1, 1, 2, 2], sign=+
+    [(0, 1), (0, 3), (2, 4), (2, 5)], vertices=6, deg=[1, 1, 1, 1, 2, 2], sign=+
+    [(0, 1), (0, 3), (2, 4), (4, 5)], vertices=6, deg=[1, 1, 1, 1, 2, 2], sign=-
+
+======================================================================
+DONE
+======================================================================
