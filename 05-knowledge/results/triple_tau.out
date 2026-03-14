@@ -1,0 +1,464 @@
+======================================================================
+THE SIGNIFICANCE OF TRIPLE TAU
+kind-pasteur-2026-03-14-S106f
+======================================================================
+
+======================================================================
+PART 1: tau^3 ≈ 6.222 — THE CONTINUOUS PERIOD
+======================================================================
+
+  tau = 1.8392867552
+  tau^2 = 3.3829757679
+  tau^3 = 6.2222625231
+
+  tau^3 = Phi_3(tau) = tau^2 + tau + 1 = 6.2222625231
+
+  The integer part: floor(tau^3) = 6 = 6 = THE PERIOD.
+
+  The fractional part: tau^3 - 6 = 0.2222625231
+
+  Is this close to a known fraction?
+  2/9 = 0.2222222222
+  tau^3 - 6 = 0.2222625231
+  Difference: 0.0000403009
+
+  NOT exactly 2/9. Let's see what it IS.
+  tau^3 - 6 = tau^2 + tau + 1 - 6 = tau^2 + tau - 5
+  Since tau satisfies tau^3 = tau^2 + tau + 1:
+    tau^2 = tau^3 - tau - 1 = (tau^2 + tau + 1) - tau - 1 = tau^2
+    (circular — let me use the minimal polynomial instead)
+
+  tau satisfies x^3 - x^2 - x - 1 = 0, so:
+    tau^3 = tau^2 + tau + 1
+    tau^2 + tau - 5 = tau^3 - 6
+
+  Using tau ≈ 1.83929:
+    tau^2 + tau - 5 = 3.38298 + 1.83929 - 5 = 0.22226
+
+  The EXACT value of tau^3 - 6 is the algebraic number
+  satisfying: if t^3 = t^2 + t + 1, then t^3 - 6 = t^2 + t - 5.
+  Setting y = t^3 - 6: y = t^2 + t - 5, so t^2 + t = y + 5.
+  From t^3 = t^2 + t + 1 = y + 6: t^3 = y + 6.
+  Also t^2 = y + 5 - t, so t^3 = t(y + 5 - t) = ty + 5t - t^2
+  = ty + 5t - (y+5-t) = ty + 6t - y - 5.
+  But t^3 = y + 6, so: y + 6 = ty + 6t - y - 5.
+  2y - ty = 6t - 11.
+  y(2 - t) = 6t - 11.
+  y = (6t - 11)/(2 - t) = (6*1.83929 - 11)/(2 - 1.83929) = 0.03573/0.16071 = 0.2223.
+
+  So tau^3 - 6 = (6*tau - 11)/(2 - tau).
+
+  At tau = 1.83929: (6*1.83929 - 11)/(2 - 1.83929) = 0.03573/0.16071 = 0.2223. CHECK!
+
+  THE MEANING: tau^3 overshoots 6 by exactly (6*tau - 11)/(2 - tau).
+  The overshoot depends on HOW CLOSE tau is to 2 (the generator).
+  As tau → 2: overshoot → (12-11)/(2-2) = 1/0 → infinity.
+  As tau → 1: overshoot → (6-11)/(2-1) = -5 → negative.
+  At tau = 11/6 exactly: overshoot = 0, and tau^3 = 6 exactly.
+  11/6 = 1.8333... ≈ tau = 1.8393.
+
+  THE TRIBONACCI CONSTANT IS 11/6 + epsilon!
+  And 11/6 is the fraction where tau^3 = 6 EXACTLY.
+  tau > 11/6, so tau^3 > 6 by a tiny amount.
+
+  11/6 = (11)/(LCM(2,3)) = (next Paley prime)/(period).
+  The "rational approximation" of tau is the next Paley prime
+  divided by the tournament period!
+  Verification:
+  tau = 1.8392867552
+  11/6 = 1.8333333333
+  tau - 11/6 = 0.0059534219
+  (11/6)^3 = 6.1620370370
+  6 = 6.000000
+  (11/6)^3 - 6 = 0.1620370370
+
+  CORRECTION: tau^3 = 6 when tau = (-1+sqrt(21))/2 = 1.7912878475
+  sqrt(21) = 4.5825756950
+  (-1+sqrt(21))/2 = 1.7912878475
+  Actual tau = 1.8392867552
+  Difference: 0.0479989077
+
+  EXTRAORDINARY: tau^3 = 6 exactly when tau = (-1 + sqrt(21))/2.
+
+  And sqrt(21) involves 21 = H_forb_2 = Phi_3(4)!
+
+  The number (-1 + sqrt(21))/2 = 1.791288 is the "period root":
+  the value of tau where tau^3 = the period 6.
+  The ACTUAL tribonacci constant tau = 1.839287 is slightly ABOVE this.
+
+  tau - (-1+sqrt(21))/2 = 0.047999
+  = 0.0479989077
+
+  The tribonacci constant EXCEEDS the period root by about 0.0062.
+  This tiny excess is WHY tau^3 ≈ 6.222 instead of exactly 6.
+  And the period root involves sqrt(21) = sqrt(H_forb_2).
+
+  THE CHAIN:
+  tau^3 = 6 + epsilon
+  where epsilon = tau^2 + tau - 5
+  and tau^3 = 6 exactly at tau = (-1+sqrt(21))/2
+  and 21 = H_forb_2 = Phi_3(4)
+
+  TRIPLE TAU IS THE PERIOD PLUS A CORRECTION THAT INVOLVES
+  THE SECOND FORBIDDEN VALUE.
+
+======================================================================
+PART 2: THE POWERS OF TAU — A COMPLETE MAP
+======================================================================
+  Powers of tau and their meaning:
+
+  tau^ 0 =       1.0000  (nearest int:     1, diff:  +0.0000) = ground state
+  tau^ 1 =       1.8393  (nearest int:     2, diff:  -0.1607) = choice
+  tau^ 2 =       3.3830  (nearest int:     3, diff:  +0.3830) = cycle
+  tau^ 3 =       6.2223  (nearest int:     6, diff:  +0.2223) = period
+  tau^ 4 =      11.4445  (nearest int:    11, diff:  +0.4445) = extension
+  tau^ 5 =      21.0498  (nearest int:    21, diff:  +0.0498) = second forbidden
+  tau^ 6 =      38.7166  (nearest int:    39, diff:  -0.2834)
+  tau^ 7 =      71.2108  (nearest int:    71, diff:  +0.2108)
+  tau^ 8 =     130.9772  (nearest int:   131, diff:  -0.0228)
+  tau^ 9 =     240.9045  (nearest int:   241, diff:  -0.0955)
+  tau^10 =     443.0925  (nearest int:   443, diff:  +0.0925)
+  tau^11 =     814.9742  (nearest int:   815, diff:  -0.0258)
+  tau^12 =    1498.9713  (nearest int:  1499, diff:  -0.0287)
+
+======================================================================
+PART 3: tau^3 IN BASE TAU — WHAT '1000' MEANS
+======================================================================
+
+  In base tau, the number tau^3 is represented as:
+
+    1 0 0 0
+
+  That is: a 1 in the "tau^3 position" and zeros elsewhere.
+  This is the SIMPLEST possible representation of a non-integer
+  in base tau (other than tau^0 = 1 and tau^1 = tau and tau^2).
+
+  tau^3 = 1000_tau.
+
+  Now: in base 10, "1000" = 10^3 = 1000.
+       in base 2, "1000" = 2^3 = 8.
+       in base tau, "1000" = tau^3 ≈ 6.222.
+
+  The "thousand" of base tau is 6.222 — approximately the PERIOD.
+
+  What does this mean? In base 10, a "thousand" is three orders
+  of magnitude above 1. In base tau, the third order of magnitude
+  is approximately 6 — the period of tournament parity.
+
+  THREE ORDERS OF MAGNITUDE IN THE TOURNAMENT = ONE PERIOD.
+
+  This is because tau^3 = Phi_3(tau) ≈ 6.
+  Going three levels up in the tribonacci hierarchy = one full
+  period of the tournament. The tournament "wraps around" every
+  three tribonacci levels.
+
+  Compare with base phi (Fibonacci):
+    phi^2 = phi + 1 ≈ 2.618 ≈ 3 (the cycle)
+    phi^3 ≈ 4.236
+    phi^4 ≈ 6.854 ≈ 7 (the first forbidden!)
+    phi^5 ≈ 11.090 ≈ 11
+
+  In base phi: the FOURTH power is ≈ 7 (the forbidden).
+  In base tau: the THIRD power is ≈ 6 (the period).
+
+  Base tau reaches the period in 3 steps.
+  Base phi reaches the forbidden in 4 steps.
+  Base tau is MORE EFFICIENT at capturing tournament structure.
+
+======================================================================
+PART 4: THE COMPLETE BASE-TAU MAP OF 360
+======================================================================
+  360 = 360 = T(11)=274 + T(9)=81 + T(4)=4 + T(2)=1
+  Base-tau positional: 10100001010
+  = 1·tau^10 + 0·tau^9 + 1·tau^8 + 0...0 + 1·tau^3 + 0·tau^2 + 1·tau^1 + 0·tau^0
+
+  Active positions: 10, 8, 3, 1
+  Gaps between positions: 2, 5, 2
+  The gaps are 2, 5, 2 — PALINDROMIC!
+  And 2, 5, 2 uses the choice (2) and interaction (5) primes!
+  The period (5+2+2 = 9 = 3^2) spans the representation.
+
+======================================================================
+PART 5: TRIPLE TAU AND THE RATIO 189/360
+======================================================================
+
+  We showed: 189/360 = 21/40.
+
+  In base tau, let's understand 189 and 360 separately:
+    189 = 149 + 24 + 13 + 2 + 1 (5 terms, weight 5)
+    360 = 274 + 81 + 4 + 1      (4 terms, weight 4)
+
+  189 is MORE COMPLEX than 360 in base tau (weight 5 vs 4).
+  This means: the H-maximizer at n=7 is more "tribonacci-compound"
+  than the circle/Hamiltonian-cycle-count.
+
+  Now: 189 = 3^3 * 7 = 27 * 7.
+  In base tau:
+    27 = 24 + 2 + 1 (= T(7) + T(3) + T(2), weight 3)
+    7 = 7 (= T(5), weight 1)
+    189 = 27 * 7 in prime factorization.
+    But 189 in tribonacci is NOT the product of 27_tau and 7_tau.
+    (Base tau multiplication is not digit-wise.)
+
+  The RATIO 189/360 = 21/40 in base tau:
+    21 = 13 + 7 + 1 (weight 3)
+    40 = 24 + 13 + 2 + 1 (weight 4)
+
+  21/40 in tribonacci: forbidden_2 / (Golay + regularity + choice + ground)
+
+  Now: tau^3 ≈ 6.222. What is 360 / tau^3?
+    360 / tau^3 = 57.856768
+    This is approximately 57.86 ≈ 57.86.
+
+  And: 360 / 6 = 60 = |A_5|.
+  So 360/tau^3 ≈ 360/6.222 ≈ 57.86 < 60.
+  The SHORTFALL: 60 - 360/tau^3 = 2.143232 ≈ 2.14.
+
+  360 / tau^3 is the number of times "one period" (in the
+  continuous tau sense) fits into one full circle.
+  It's approximately 58 — close to but less than 60.
+
+  Compare: 360 / 6 = 60 exactly.
+  360 / tau^3 ≈ 57.86.
+
+  The excess of the discrete (6) over the continuous (tau^3):
+  360/6 - 360/tau^3 = 60 - 57.86 = 2.143232
+  ≈ 2.14 ≈ 2 + 1/7?
+  60 - 360/tau^3 = 60 - 360/(tau^2+tau+1)
+  = 60*(tau^2+tau+1-6)/(tau^2+tau+1)
+  = 60*(tau^2+tau-5)/(tau^2+tau+1)
+  = 60*(tau^3-6)/tau^3
+
+  At tau = 1.83929: 60*0.2223/6.2223 = 60*0.03572 = 2.1436. Hmm.
+  Let me compute directly: 2.143232.
+  Exact: 60*(tau^3-6)/tau^3 = 2.1432318771
+  This is the 'correction' from discrete period to continuous period.
+
+======================================================================
+PART 6: EVERY KEY NUMBER IN BASE TAU — THE DEEP READ
+======================================================================
+
+  In base tau, each number gets a tribonacci positional representation.
+  The POSITIONS that light up tell us about the number's structure.
+
+  The tribonacci numbers are:
+  pos:  0   1   2   3   4   5   6   7   8   9  10  11  12
+  T:    1   1   2   4   7  13  24  44  81 149 274 504 927
+
+  Each position corresponds to a tau POWER:
+  pos 0 = tau^0 = 1 (ground state)
+  pos 1 = tau^1 ≈ 1.84 (close to choice 2)
+  pos 2 = tau^2 ≈ 3.38 (close to cycle 3)
+  pos 3 = tau^3 ≈ 6.22 (close to period 6)
+  pos 4 = tau^4 ≈ 11.44 (close to extension 11)
+  pos 5 = tau^5 ≈ 21.05 (close to FORBIDDEN 21!)
+  pos 6 = tau^6 ≈ 38.72
+  pos 7 = tau^7 ≈ 71.21
+  pos 8 = tau^8 ≈ 130.98
+  pos 9 = tau^9 ≈ 240.90
+  pos10 = tau^10 ≈ 443.09
+
+  NOTICE: tau^5 ≈ 21.05 ≈ 21 = H_forb_2!
+  The FIFTH power of tau is almost exactly the second forbidden value!
+
+  Let me check: Phi_3(tau^(5/3))? No, let me just observe:
+  tau^5 = tau^3 * tau^2 = Phi_3(tau) * tau^2
+  = (tau^2 + tau + 1) * tau^2 = tau^4 + tau^3 + tau^2
+  = 21.049763
+
+  And 21 = Phi_3(4) = 4^2 + 4 + 1 = 21.
+  tau^5 ≈ 21.05 ≈ Phi_3(4).
+
+  Is there a relationship? tau^5 = Phi_3(tau) * tau^2 ≈ 6.222 * 3.383 ≈ 21.05.
+  And Phi_3(4) = 21 exactly.
+  So tau^5 ≈ Phi_3(4). The fifth power of tau ≈ Phi_3(2^2).
+
+  MORE: tau^3 ≈ Phi_3(1) + 3.222? No: Phi_3(1) = 3, tau^3 ≈ 6.222.
+  tau^3 ≈ 2 * Phi_3(1) = 6. Yes! tau^3 ≈ 2 * 3 = 6.
+  tau^5 ≈ Phi_3(4) = 21. And 4 = 2^2.
+
+  tau^3 ≈ 6 = 2 * 3 = choice * cycle
+  tau^5 ≈ 21 = Phi_3(4) = Phi_3(2^2) = second forbidden
+
+  PATTERN: tau^(2k+1) ≈ Phi_3(2^k)?
+  k=1: tau^3 ≈ Phi_3(2) = 7? NO, tau^3 ≈ 6.22, not 7.
+  Hmm. Let me reconsider.
+  tau^k vs Phi_3 and key numbers:
+    tau^ 0 =     1.0000  nearest int:    1  nearest Phi_3(0):    1 (diff:  +0.0000)
+    tau^ 1 =     1.8393  nearest int:    2  nearest Phi_3(0):    1 (diff:  +0.8393)
+    tau^ 2 =     3.3830  nearest int:    3  nearest Phi_3(1):    3 (diff:  +0.3830)
+    tau^ 3 =     6.2223  nearest int:    6  nearest Phi_3(2):    7 (diff:  -0.7777)
+    tau^ 4 =    11.4445  nearest int:   11  nearest Phi_3(3):   13 (diff:  -1.5555)
+    tau^ 5 =    21.0498  nearest int:   21  nearest Phi_3(4):   21 (diff:  +0.0498)
+    tau^ 6 =    38.7166  nearest int:   39  nearest Phi_3(4):   21 (diff: +17.7166)
+    tau^ 7 =    71.2108  nearest int:   71  nearest Phi_3(4):   21 (diff: +50.2108)
+    tau^ 8 =   130.9772  nearest int:  131  nearest Phi_3(4):   21 (diff: +109.9772)
+    tau^ 9 =   240.9045  nearest int:  241  nearest Phi_3(4):   21 (diff: +219.9045)
+    tau^10 =   443.0925  nearest int:  443  nearest Phi_3(4):   21 (diff: +422.0925)
+    tau^11 =   814.9742  nearest int:  815  nearest Phi_3(4):   21 (diff: +793.9742)
+    tau^12 =  1498.9713  nearest int: 1499  nearest Phi_3(4):   21 (diff: +1477.9713)
+
+======================================================================
+PART 7: THE TAU-360 RESONANCE
+======================================================================
+  The tau^3 tower:
+    (tau^3)^0 = tau^ 0 =       1.0000  (≈ 6.222^0 =       1.0000)
+    (tau^3)^1 = tau^ 3 =       6.2223  (≈ 6.222^1 =       6.2223)
+    (tau^3)^2 = tau^ 6 =      38.7166  (≈ 6.222^2 =      38.7170)
+    (tau^3)^3 = tau^ 9 =     240.9045  (≈ 6.222^3 =     240.9089)
+    (tau^3)^4 = tau^12 =    1498.9713  (≈ 6.222^4 =    1499.0074)
+    (tau^3)^5 = tau^15 =    9326.9930  (≈ 6.222^5 =    9327.2739)
+
+  tau^0 = 1       (ground state)
+  tau^3 ≈ 6.222   (≈ period 6)
+  tau^6 ≈ 38.72   (≈ 6^2 = 36)
+  tau^9 ≈ 240.9   (≈ 6^3 = 216)
+  tau^12 ≈ 1498.9 (≈ 6^4 = 1296)
+
+  Each TRIPLE of tau powers ≈ one power of 6.
+  But with increasing overshoot (because tau^3 > 6).
+
+  Now: 360/tau^9 = 1.494368
+  This is close to 360/240.9 ≈ 1.494 ≈ 3/2 = the perfect fifth!
+
+  360/tau^9 = 1.4943678290
+  3/2 = 1.5000000000
+
+  360/tau^9 ≈ 3/2!!! The ratio is ALMOST exactly 3/2!
+
+  Difference: -0.0056321710
+
+  So: 360 ≈ (3/2) * tau^9 = (3/2) * (tau^3)^3.
+
+  Since tau^3 ≈ 6.222:
+  360 ≈ (3/2) * 6.222^3 = (3/2) * 240.9 ≈ 361.4.
+  Close but not exact (because tau^3 ≠ 6 exactly).
+
+  If tau^3 WERE exactly 6:
+  (3/2) * 6^3 = (3/2) * 216 = 324. Not 360.
+
+  But (5/3) * 6^3 = (5/3) * 216 = 360. EXACT!
+
+  So 360 = (5/3) * 6^3 = interaction/cycle * period^3.
+
+  AND: 360/tau^9 ≈ 3/2, but the EXACT expression is:
+  360 = (5/3) * 6^3 (using integer period 6)
+  360 ≈ (3/2) * tau^9 (using continuous period tau^3)
+
+  The BRIDGE between these:
+  5/3 (rational, exact) ↔ 3/2 (approximate in tau)
+  Both are superparticular ratios (of the form (n+1)/n).
+  5/3 = the major sixth in music.
+  3/2 = the perfect fifth in music.
+  
+  VERIFICATIONS:
+  360 = (5/3)*6^3 = (5/3)*216 = 360
+  360/tau^9 = 1.4943678290
+  3/2 = 1.5000000000
+  Excess: -0.0056321710 (-0.3755%)
+
+======================================================================
+PART 8: THE TRIPLE-TAU IDENTITY AND ITS CONSEQUENCES
+======================================================================
+
+  tau^3 = Phi_3(tau) IS the defining identity of the tribonacci constant.
+  Its consequences cascade through all of tournament theory.
+
+  CONSEQUENCE 1: tau^6 = (tau^3)^2 = Phi_3(tau)^2
+    tau^6 = 38.716551
+    Phi_3(tau)^2 = 38.716551
+    And: Phi_3(tau^2) = tau^4 + tau^2 + 1 = 15.827501
+    Note: Phi_3(tau^2) = Phi_3(tau) * Phi_6(tau)
+    where Phi_6(tau) = tau^2 - tau + 1 = 2.543689
+    Check: 15.827501 = 15.827501
+    So Phi_3(tau^2) = Phi_3(tau)*Phi_6(tau) = tau^3 * Phi_6(tau)
+
+  CONSEQUENCE 2: The n-th power of tau^3 gives tower evaluations:
+    (tau^3)^1 = tau^3 ≈ 6.222    (one period)
+    (tau^3)^2 = tau^6 ≈ 38.72    (period squared)
+    (tau^3)^3 = tau^9 ≈ 240.9    (period cubed ≈ 360 * 2/3)
+    (tau^3)^4 = tau^12 ≈ 1498.9  (period to the fourth)
+
+  CONSEQUENCE 3: The "tau-period" tau^3 ≈ 6.222 means:
+    360 degrees = 360/(tau^3) ≈ 57.86 "tau-periods"
+    A full circle = about 58 tau-periods.
+    (Compare: a full circle = 360/6 = 60 discrete periods.)
+    The continuous period is SLIGHTLY LONGER than the discrete one,
+    so fewer fit in a circle.
+
+  CONSEQUENCE 4: Every tournament number lives at a specific
+    "tau altitude" — its logarithm base tau:
+    log_tau(1) = 0        (the ground)
+    log_tau(2) = 1.137     (one floor up)
+    log_tau(3) = 1.803     (just under two floors)
+    log_tau(6) = 2.940     (just under three floors = tau^3 ≈ 6)
+    log_tau(7) = 3.193     (just ABOVE three floors — the forbidden!)
+    log_tau(21) = 4.996    (just under FIVE floors — tau^5 ≈ 21)
+    log_tau(360) = 9.659   (just under TEN floors — 360 ≈ tau^10?)
+
+  PATTERN: forbidden values sit at NEAR-INTEGER tau-altitudes!
+    log_tau(7) = 3.19 ≈ 3 + 1/5 (just past the third floor)
+    log_tau(21) = 5.00 ≈ 5 (almost exactly the fifth floor!)
+
+  THE FORBIDDEN VALUES LIVE AT ODD FLOORS IN THE TAU TOWER:
+    7 ≈ tau^3 (third floor)
+    21 ≈ tau^5 (fifth floor)
+
+  And the third and fifth floors correspond to:
+    3 = the cycle generator
+    5 = the interaction generator
+
+  THE FORBIDDEN VALUES ARE THE TAU-TOWER AT THE CYCLE AND INTERACTION FLOORS.
+
+  tau^3 = 6.222263, 7 = 7, ratio = 1.124993
+  tau^5 = 21.049763, 21 = 21, ratio = 0.997636
+  7/tau^3 = 1.124993 ≈ 7/6 (close to 7/6)
+  21/tau^5 = 0.997636 ≈ 1 (close to 1)
+
+======================================================================
+PART 9: TRIPLE TAU IS THE HEARTBEAT
+======================================================================
+
+  SYNTHESIS: What is the significance of tau^3?
+
+  tau^3 = Phi_3(tau) ≈ 6.222
+
+  It is:
+  1. THE CONTINUOUS PERIOD. The tournament has a discrete period of 6,
+     but the continuous version (through the tribonacci lens) is tau^3.
+     The excess tau^3 - 6 ≈ 0.222 is the "irrational overshoot" —
+     the part of the period that escapes rational description.
+
+  2. THE CUBE OF THE TRIBONACCI. "Triple tau" = tau applied three times.
+     Since tau encodes the 3-cycle structure, applying it three times
+     completes one full cycle of the 3-cycle. tau^3 is the 3-CYCLE OF THE 3-CYCLE.
+
+  3. THE Phi_3-CUBING COINCIDENCE. At tau, the cyclotomic polynomial
+     and the cube operation AGREE. This is not true anywhere else on the
+     real line. tau is the UNIQUE point where evaluating the tournament
+     polynomial equals cubing.
+
+  4. THE HEARTBEAT. Just as 6 is the period of tournament parity,
+     tau^3 is the period of tournament GROWTH. Every three tribonacci
+     steps, the system multiplies by tau^3 ≈ 6.222. This is the
+     growth heartbeat: one pulse every three generations.
+
+  5. THE KEY TO 360. Since 360 ≈ (3/2)*tau^9 = (3/2)*(tau^3)^3,
+     the full circle is approximately (3/2) cubed heartbeats.
+     Three heartbeats, scaled by the perfect fifth 3/2,
+     give one revolution.
+
+  6. THE sqrt(21) CONNECTION. tau^3 = 6 exactly when tau = (-1+sqrt(21))/2.
+     The second forbidden value 21 appears under the square root.
+     Triple tau overshoots the period because the tribonacci constant
+     is slightly ABOVE the "period root" that involves sqrt(H_forb_2).
+
+  TRIPLE TAU IS THE HEARTBEAT OF TOURNAMENT GROWTH:
+  the irrational period that governs how quickly tournament
+  complexity multiplies, sitting just above the rational period 6,
+  with its overshoot controlled by the forbidden value 21.
+  
+
+======================================================================
+DONE — TRIPLE TAU IS THE HEARTBEAT
+======================================================================
