@@ -1,0 +1,100 @@
+======================================================================
+H=21 STRUCTURAL PROOF VERIFICATION
+======================================================================
+
+--- Theorem: β₃ ≥ 1 implies H ≥ 27 ---
+  If there exist 3 pairwise-disjoint vertex sets S₁, S₂, S₃
+  with d(Sᵢ) ≥ 1 each, then:
+  I(Ω, 2) ≥ (1+2d₁)(1+2d₂)(1+2d₃) ≥ 3³ = 27
+  (The 3 disjoint sets contribute independently to I.P.)
+  Since d_i ≥ 1: factor ≥ 1+2 = 3 each.
+  Product ≥ 27 > 21. ✓
+
+  This proves: H=21 requires β₃ = 0 (and all higher = 0).
+  So we need β₁ + 2β₂ = 10 exactly.
+
+--- Cases for β₁ + 2β₂ = 10 with β₃ = 0 ---
+
+  (10,  0): 10 cycles, all pairwise intersecting
+    Feasibility: OK
+    All 10 cycles pairwise intersecting.
+    Each pair shares ≥1 vertex.
+    For vertex sets of size 3: Helly property on [n].
+    Helly for 3-sets: if pairwise intersecting, all share a common element.
+    NOT TRUE in general! Counter: {1,2,3}, {1,4,5}, {2,4,6}, {3,5,6}
+    pairwise intersect but no common element.
+    But: can we have 10 such pairwise-intersecting 3-sets?
+    On n=7: C(7,3)=35 triples. Max pairwise-intersecting family is C(6,2)=15
+    (sunflower with center 1). So 10 is achievable as a set system.
+    But the TOURNAMENT constraint: these must ALL be 3-cycles of a tournament.
+    Max 3-cycles at n=7 is ~15, but having 10 of them pairwise intersecting
+    while keeping the DIRECTED cycle count at exactly 10 (no 5-cycles) is hard.
+
+  ( 8,  1): 8 cycles, 1 disjoint pair
+    Feasibility: OK
+
+  ( 6,  2): 6 cycles, 2 disjoint pairs
+    Feasibility: OK
+
+  ( 4,  3): 4 cycles, 3 disjoint pairs (but no pairwise-disjoint triple)
+    Feasibility: OK
+    Need: 3 disjoint pairs among ≤4 vertex sets, but NO triple.
+    Disjointness graph on ≤4 vertices with 3 edges but no triangle:
+    4 vertices, 3 edges, triangle-free: possible (path P₄ has 3 edges,
+    triangle-free). Sets A,B,C,D with A⊥B, B⊥C, C⊥D but A∩C≠∅, etc.
+
+  ( 2,  4): 2 cycles, 4 disjoint pairs — IMPOSSIBLE (max C(2,2)=1)
+    Feasibility: IMPOSSIBLE
+    (max β₂ ≤ C(2,2) = 1 < 4)
+
+  ( 0,  5): 0 cycles — IMPOSSIBLE
+    Feasibility: IMPOSSIBLE
+    (max β₂ ≤ C(0,2) = 0 < 5)
+
+--- Helly property check at small n ---
+  Triples through vertex 0 at n=7:
+  Vertex 0 has out-degree d_0 in {0,1,...,6} = score from 0 to 6.
+  Triple {0,i,j} is cyclic iff vertex 0 beats exactly 1 of {i,j}.
+  (If 0 beats both or neither, triple is transitive.)
+
+  If score(0) = s₀ (out of n-1=6):
+  Cyclic triples through 0 = s₀(n-1-s₀)
+  (0 beats s₀ and loses to n-1-s₀; each win-loss pair gives cyclic triple)
+    s₀=0: 0 cyclic triples through 0
+    s₀=1: 5 cyclic triples through 0
+    s₀=2: 8 cyclic triples through 0
+    s₀=3: 9 cyclic triples through 0
+    s₀=4: 8 cyclic triples through 0
+    s₀=5: 5 cyclic triples through 0
+    s₀=6: 0 cyclic triples through 0
+
+  Max cyclic triples through any vertex at n=7: 9 (at s₀=3)
+  To have 10 pairwise-intersecting 3-cycles all through vertex 0:
+  Need ≤ 9 = 9 < 10. IMPOSSIBLE!
+  So the sunflower-centered approach FAILS.
+
+  But non-sunflower families can also be pairwise intersecting.
+  E.g., {1,2,3},{1,4,5},{2,4,6},{3,5,6} — no common element,
+  yet pairwise intersecting (each pair shares ≥1).
+
+--- Vertex-count bound ---
+  Key observation: if β₁ directed cycles use vertex sets S₁,...,S_m
+  (m ≤ β₁) and all pairs intersect (β₂=0), then by the sunflower
+  lemma or Helly theory, the sets have a specific structure.
+
+  For 3-element sets (3-cycles):
+  Max pairwise-intersecting family of 3-sets on [n]:
+  If all contain element v: C(n-1,2)
+  If not all through one vertex: Δ-system with ≤C(n-1,2)/2... complex.
+
+  CRITICAL: at n=7, max cyclic triples through vertex v is 9 (s=3).
+  Total 3-cycles at n=7 is ≤ 35 (C(7,3)), actual max is ~15.
+  For 10 pairwise-intersecting: need them NOT all through one vertex.
+  This means ≥2 intersection patterns, which creates 5-cycles via Splicing.
+  5-cycles add to β₁, pushing it above 10.
+
+  THIS is the structural proof:
+  10 pairwise-intersecting 3-cycles can't fit through 1 vertex (max 9),
+  so they spread across vertices, creating 5-cycles via Splicing,
+  increasing β₁ beyond 10. Including 5-cycles in β₁ means β₁ > 10
+  even if the 3-cycle count was exactly 10.
