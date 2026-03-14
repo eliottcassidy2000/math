@@ -1,0 +1,435 @@
+======================================================================
+PART 1: CARTAN DETERMINANTS — THE KEYS FOR EACH LIE ALGEBRA
+======================================================================
+
+For type A_n: det = n+1
+  A₁: det=2, A₂: det=3, A₃: det=4, ..., A₈: det=9
+  THESE ARE OUR KEYS: 2 and 3 from A₁ and A₂
+
+Cartan determinants of all simple Lie algebras:
+
+Classical series:
+  A_1: det = 2
+  A_2: det = 3
+  A_3: det = 4
+  A_4: det = 5
+  A_5: det = 6
+  A_6: det = 7
+  A_7: det = 8
+  A_8: det = 9
+  A_9: det = 10
+
+  B_2: det = 2
+  B_3: det = 2
+  B_4: det = 2
+  B_5: det = 2
+  B_6: det = 2
+  B_7: det = 2
+
+  C_3: det = 2
+  C_4: det = 2
+  C_5: det = 2
+  C_6: det = 2
+  C_7: det = 2
+
+  D_4: det = 4
+  D_5: det = 4
+  D_6: det = 4
+  D_7: det = 4
+  D_8: det = 4
+
+Exceptional:
+  G₂: det = 1
+  F₄: det = 1
+  E₆: det = 3
+  E₇: det = 2
+  E₈: det = 1
+
+OBSERVATION: The Cartan determinant = |weight lattice / root lattice|
+  = index of root lattice in weight lattice
+  = order of the center of the simply-connected group
+
+For A_n: det = n+1 = |Z(SU(n+1))| = |Z_{n+1}|
+  A₁: Z₂ (2 = KEY₁)
+  A₂: Z₃ (3 = KEY₂)
+
+For the exceptionals:
+  G₂: trivial center (det=1)
+  F₄: trivial center (det=1)
+  E₆: Z₃ center (det=3 = KEY₂!)
+  E₇: Z₂ center (det=2 = KEY₁!)
+  E₈: trivial center (det=1)
+
+REMARKABLE: E₆ has center Z₃ and E₇ has center Z₂!
+The two LARGEST non-trivial exceptionals carry our KEYS!
+E₆ ↔ KEY₂ = 3, E₇ ↔ KEY₁ = 2
+
+======================================================================
+PART 2: PLATONIC SOLIDS AND THEIR SYMMETRY NUMBERS
+======================================================================
+
+Solid           V    E    F    |Rot|  χ=V-E+F  V·F    Schläfli
+Tetrahedron     4    6    4    12     2        16     {3,3}
+Cube            8    12   6    24     2        48     {4,3}
+Octahedron      6    12   8    24     2        48     {3,4}
+Dodecahedron    20   30   12   60     2        240    {5,3}
+Icosahedron     12   30   20   60     2        240    {3,5}
+
+ALL have Euler characteristic χ = V - E + F = 2 (genus 0)
+This is the SPHERE relation — every Platonic solid is a 2-sphere.
+
+KEY NUMBERS in Platonic solids:
+  Rotation groups: |A₄|=12, |S₄|=24, |A₅|=60
+  12 = 2²·3, 24 = 2³·3, 60 = 2²·3·5
+  ALL are divisible by 6 = 2·3 = KEY₁·KEY₂!
+
+  Vertex counts: 4, 6, 8, 12, 20
+  4 = 2², 6 = 2·3, 8 = 2³, 12 = 2²·3, 20 = 2²·5
+  8 and 6 are our KEY POWERS: 8 = KEY₁³, 6 = KEY₁·KEY₂
+
+  Edge counts: 6, 12, 30
+  6 = KEY₁·KEY₂, 12 = 2·KEY₁·KEY₂, 30 = 2·3·5
+
+======================================================================
+PART 3: THE ADE CLASSIFICATION
+======================================================================
+
+The ADE classification connects:
+  1. Simply-laced Dynkin diagrams (A_n, D_n, E_6, E_7, E_8)
+  2. Finite subgroups of SU(2)
+  3. Simple singularities
+  4. Regular polyhedra
+
+The McKay correspondence:
+  A_n ↔ Z_{n+1} (cyclic group)
+  D_n ↔ Dic_{n-2} (binary dihedral, order 4(n-2))
+  E_6 ↔ BT (binary tetrahedral, order 24)
+  E_7 ↔ BO (binary octahedral, order 48)
+  E_8 ↔ BI (binary icosahedral, order 120)
+
+TOURNAMENT THEORY LIVES IN TYPE A:
+  A_{n-1} ↔ Z_n ↔ S_n (Weyl group)
+  Tournament on n vertices ↔ orientation of A_{n-1} root system
+
+BUT: the Platonic solids enter via E₆, E₇, E₈!
+  E₆ (tetrahedron): det = 3 = KEY₂
+  E₇ (cube/octahedron): det = 2 = KEY₁
+  E₈ (dodecahedron/icosahedron): det = 1
+
+THE KEYS ARE ENCODED IN THE EXCEPTIONAL-PLATONIC CORRESPONDENCE:
+  KEY₂ = 3 = det(E₆) ↔ tetrahedron (the SELF-DUAL solid)
+  KEY₁ = 2 = det(E₇) ↔ cube/octahedron (the DUAL PAIR)
+  1 = det(E₈) ↔ dodecahedron/icosahedron (the GOLDEN RATIO pair)
+
+======================================================================
+PART 4: TOURNAMENTS ON PLATONIC SOLID VERTICES
+======================================================================
+
+TETRAHEDRON (4 vertices):
+  Total tournaments: 2^6 = 64
+  Non-isomorphic: 4
+  Symmetry group: A₄ (order 12) — alternating on 4 elements
+  # orbits = 64/12 = 5.33... (not uniform orbits)
+
+  H distribution: {1: 24, 3: 16, 5: 24}
+  Possible H values: [1, 3, 5]
+  Note: H ∈ {1, 3, 5} at n=4
+
+OCTAHEDRON (6 vertices):
+  Total tournaments: 2^15 = 32768
+  Symmetry group: S₄ (order 24, acting on 3 pairs of antipodal vertices)
+
+  Octahedron faces: 8 triangles
+  T0: geo_3cyc=1/8, all_3cyc=5/C(6,3)=20, H=15
+  T1: geo_3cyc=4/8, all_3cyc=6/C(6,3)=20, H=31
+  T2: geo_3cyc=1/8, all_3cyc=1/C(6,3)=20, H=3
+  T3: geo_3cyc=1/8, all_3cyc=4/C(6,3)=20, H=15
+  T4: geo_3cyc=1/8, all_3cyc=3/C(6,3)=20, H=9
+
+======================================================================
+PART 5: THE COXETER NUMBER AND THE TOURNAMENT POLYNOMIAL
+======================================================================
+
+Coxeter numbers of simple Lie algebras:
+  A_n: h = n+1
+  B_n: h = 2n
+  C_n: h = 2n
+  D_n: h = 2(n-1)
+  G₂: h = 6
+  F₄: h = 12
+  E₆: h = 12
+  E₇: h = 18
+  E₈: h = 30
+
+COXETER NUMBERS OF THE EXCEPTIONALS:
+  G₂: h=6 = 2·3 = KEY₁·KEY₂ = product of keys
+  F₄: h=12 = 2²·3 = KEY₁²·KEY₂
+  E₆: h=12 = 2²·3 = KEY₁²·KEY₂ (same as F₄!)
+  E₇: h=18 = 2·3² = KEY₁·KEY₂² (9=KEY₂² appears!)
+  E₈: h=30 = 2·3·5
+
+THE 5 APPEARS ONLY IN E₈!
+E₈ is the only exceptional group whose Coxeter number involves
+a prime other than 2 and 3. The prime 5 enters through the
+icosahedral symmetry (dodecahedron has C₅ symmetry).
+
+TOURNAMENT POLYNOMIAL z² - 5z + 6 = 0:
+  5 = Coxeter number of A₄ (rank 4)
+  6 = Coxeter number of G₂ (rank 2)
+  So the tournament polynomial has:
+  coefficient 5 = h(A₄)
+  coefficient 6 = h(G₂)
+  roots 2 = det(A₁) = h(A₁)
+  roots 3 = det(A₂) = h(A₂)
+
+
+======================================================================
+PART 6: THE 5-FOLD WAY
+======================================================================
+
+WHY FIVE? The number 5 appears as:
+
+  5 Platonic solids
+  5 exceptional Lie groups
+  5 = 2 + 3 (sum of keys)
+  5 = Φ₄(2) (fourth cyclotomic at 2)
+  5 = h(A₄) (Coxeter number of A₄)
+  5 = F(5) (Fibonacci fixed point)
+
+THE DEEP REASON:
+  5 = 2 + 3 is the diameter of the key pair.
+  The 'classification gap' between keys 2 and 3.
+
+  In ADE: A, D are INFINITE series. E₆, E₇, E₈ are FINITE exceptions.
+  The E series ENDS at rank 8 (E₈). Why?
+  Because E₉ would require a Coxeter number of 30+...
+  Actually: the E-series stops because the Cartan matrix must
+  be positive definite. E₈ is the last.
+
+  In Platonic solids: they stop at 5 because higher-dimensional
+  analogs would require dihedral angles impossible on a 2-sphere.
+  The angle constraint is: π/(Schläfli number) must satisfy
+  a positivity condition — same as Cartan matrix positive-definiteness!
+
+  THE SAME POSITIVITY CONSTRAINT stops both sequences at 5!
+
+
+======================================================================
+PART 7: THE DUAL PAIRS AND THE KEYS
+======================================================================
+
+Platonic dual pairs:
+  Tetrahedron ↔ Tetrahedron (self-dual)
+  Cube ↔ Octahedron
+  Dodecahedron ↔ Icosahedron
+
+Tournament duality: T ↔ T̄ (reversal)
+  H(T) = H(T̄) (proved in S75)
+  The reversal is an INVOLUTION, like Platonic duality.
+
+THE SELF-DUAL SOLID (tetrahedron) has:
+  4 vertices, 6 edges, 4 faces
+  Symmetry group |A₄| = 12 = 2²·3
+  V = F = 4 = 2² = KEY₁²
+  E = 6 = 2·3 = KEY₁·KEY₂
+
+  In tournament theory, a 'self-dual' tournament is one with
+  T ≅ T̄ (has an anti-automorphism).
+  These are called SELF-COMPLEMENTARY tournaments.
+  They exist only for n ≡ 3 (mod 4): n = 3, 7, 11, 15, ...
+
+  At n=3: the 3-cycle C₃ is self-complementary (and is a
+  tournament on the faces of a tetrahedron!)
+  The tetrahedron has 4 vertices but its FACE graph is K₄,
+  and orientations of K₃ (= face triples) give tournaments.
+
+
+======================================================================
+PART 8: THE ICOSAHEDRAL CONNECTION — WHERE 5 MEETS 2 AND 3
+======================================================================
+
+The icosahedron/dodecahedron pair is special:
+  It introduces the GOLDEN RATIO φ = (1+√5)/2
+  φ² = φ + 1 (the Fibonacci recurrence!)
+  φ = 1.618... (the 2-nacci root!)
+
+  The k-nacci roots:
+  k=2: φ ≈ 1.618 (golden ratio, icosahedral)
+  k=3: ≈ 1.839 (tribonacci, n=9 regime)
+  k→∞: → 2 (KEY₁)
+
+  The GOLDEN RATIO is the FIRST k-nacci root.
+  It lives in Q(√5), the simplest quadratic extension.
+  And √5 comes from the DISCRIMINANT of z²-5z+6:
+  Δ = 25 - 24 = 1 → √Δ = 1 (trivial!)
+
+  BUT: φ satisfies z² - z - 1 = 0, with Δ = 5.
+  And 5 = the sum of keys = 2 + 3.
+  So √5 = √(KEY₁ + KEY₂).
+
+  The golden ratio φ = (1 + √(KEY₁+KEY₂)) / KEY₁
+
+  ICOSAHEDRAL SYMMETRY meets tournament theory:
+  The binary icosahedral group (BI) has order 120 = 5!
+  It corresponds to E₈ in the McKay correspondence.
+  E₈ is the LARGEST exceptional group.
+  Its Coxeter number h(E₈) = 30 = 2·3·5.
+  This is the PRODUCT of the three primes {2, 3, 5}.
+
+  The HIERARCHY:
+  Level 1: KEY₁ = 2 (binary, A₁, cycle orientations)
+  Level 2: KEY₂ = 3 (ternary, A₂, cycle length)
+  Level 3: 5 = KEY₁+KEY₂ (quintic, golden ratio, icosahedral)
+
+  2, 3, 5 are the first three primes.
+  They generate: 6=2·3, 10=2·5, 15=3·5, 30=2·3·5
+  These are the Coxeter numbers of the ADE system!
+  h(G₂)=6, h(A₉)=10, h(A₁₄)=15, h(E₈)=30
+
+
+======================================================================
+PART 9: THE TOURNAMENT ON THE ICOSAHEDRON
+======================================================================
+
+The icosahedron has 12 vertices, 30 edges, 20 triangular faces.
+A tournament on 12 vertices has C(12,2) = 66 edges.
+The icosahedron graph has 30 edges — less than half of 66.
+
+But the FACE graph of the icosahedron has 20 faces,
+each a triple of vertices. In a tournament, each triple
+is either a 3-cycle (prob 3/4) or transitive (prob 1/4).
+
+Expected # of 3-cycle faces: 20 · 3/4 = 15
+Expected α₁ at n=12: C(12,3)/4 = 55
+Face 3-cycles / total 3-cycles ≈ 15/55 ≈ 27%
+
+The 20 icosahedral faces decompose into:
+  10 pairs of opposite faces (antipodal)
+  5 'rings' of 4 faces each (around each edge pair)
+
+If we orient the tournament to MAXIMIZE 3-cycles among faces:
+  Want all 20 face triples to be 3-cycles
+  This constrains 20 · 3 = 60 edge orientations (with overlaps)
+  The icosahedron has 30 edges, each shared by 2 faces
+  So 40 constraints on 30 edges — OVERDETERMINED
+  Can we achieve all 20? Probably not.
+
+
+======================================================================
+PART 10: E₈ AND THE TOURNAMENT AT n=8
+======================================================================
+
+E₈ has rank 8, dim 248.
+A tournament on 8 vertices lives in type A₇ (rank 7).
+
+BUT: E₈ has deep connections to tournaments:
+  dim(E₈) = 248 = 8·31 = 8·(2⁵-1) = 8·Mersenne(5)
+  The number of positive roots: 120 = 5!
+  The Coxeter number: 30 = 2·3·5
+  The exponents: 1, 7, 11, 13, 17, 19, 23, 29 (primes < 30!)
+
+  E₈ exponents are EXACTLY the integers coprime to 30 in [1,29]:
+  These are the totatives of 30 = 2·3·5.
+  φ(30) = 30·(1-1/2)·(1-1/3)·(1-1/5) = 8
+  So E₈ has rank = φ(h) = φ(30) = 8!
+
+  THIS IS THE KEY RELATIONSHIP:
+  rank(E₈) = φ(h(E₈)) = φ(2·3·5) = 8
+  The rank of E₈ is the EULER TOTIENT of its Coxeter number!
+
+  For type A_{n-1}: rank = n-1, h = n
+  φ(h) = φ(n) — not equal to rank in general
+  But: φ(p) = p-1 = rank for prime n=p!
+  So A_{p-1} has rank = φ(h) when h=p is prime.
+
+  h(A₁) = 2 (prime): rank = 1 = φ(2) ✓
+  h(A₂) = 3 (prime): rank = 2 = φ(3) ✓
+  h(A₄) = 5 (prime): rank = 4 = φ(5) ✓
+  h(A₆) = 7 (prime): rank = 6 = φ(7) ✓
+
+  The KEY primes 2, 3, 5, 7 all give rank = φ(h)!
+  These are the primes dividing 30 = h(E₈)... plus 7.
+
+======================================================================
+PART 11: THE RECURRENCE VIEW — (2,3,5) HIERARCHY
+======================================================================
+
+  LEVEL 1 (KEY₁ = 2):
+  z² - z - 1 = 0 → φ = (1+√5)/2 ≈ 1.618 (Fibonacci)
+  z - 2 = 0 → x = 2 (evaluation point for H)
+  Binary choice: each cycle has 2 orientations
+
+  LEVEL 2 (KEY₂ = 3):
+  z² - 5z + 6 = 0 → roots 2, 3 (tournament polynomial)
+  Ternary structure: each cycle uses 3 vertices
+  n=9 = 3² is the CS boundary
+
+  LEVEL 3 (5 = KEY₁ + KEY₂):
+  z² - 5z + 5 = 0 → roots (5±√5)/2 ≈ 3.618, 1.382
+  These are φ² = φ+1 and 1/φ² = ... no.
+  Actually: the roots are φ³ = 2+φ ≈ 3.618 and φ⁻³ ≈ ... no.
+
+  Better: 5 appears as the DISCRIMINANT of the Fibonacci polynomial.
+  Δ(z²-z-1) = 1+4 = 5
+  And Δ(z²-5z+6) = 25-24 = 1 (trivial!)
+
+  The tournament polynomial has DISCRIMINANT 1 (perfect square).
+  The Fibonacci polynomial has DISCRIMINANT 5 (= sum of keys).
+
+  TOGETHER:
+  Fibonacci (k=2): gives φ → approaches KEY₁=2 as k→∞
+  Tournament poly: gives KEY₁=2, KEY₂=3 directly
+  The bridge: 5 = discriminant of Fibonacci = sum of keys
+
+  THE THREE POLYNOMIALS:
+  z - 2 = 0            (KEY₁)
+  z² - z - 1 = 0       (Fibonacci, disc = 5 = KEY₁+KEY₂)
+  z² - 5z + 6 = 0      (tournament, disc = 1, roots = keys)
+
+  They form a HIERARCHY:
+  1st poly degree 1: gives 2
+  2nd poly degree 2: gives φ (approaches 2)
+  3rd poly degree 2: gives 2 and 3
+
+======================================================================
+PART 12: SYNTHESIS — THE FIVE-FOLD TOURNAMENT UNIVERSE
+======================================================================
+
+  THE FIVE EXCEPTIONAL GROUPS ↔ FIVE TOURNAMENT STRUCTURES:
+
+  G₂ (det=1, h=6=2·3):
+    The MINIMAL exceptional. 'Octonion structure.'
+    Tournament analog: the 6-vertex tournament (first α₂>0)
+    h = 6 = product of keys = first non-trivial independence level
+
+  F₄ (det=1, h=12):
+    'Exceptional Jordan algebra.' 52-dimensional.
+    Tournament analog: n=12 (first α₄>0)
+    h = 12 = 4·3 = threshold for 4 disjoint 3-cycles
+
+  E₆ (det=3, h=12):
+    Center = Z₃ = KEY₂!
+    McKay: binary tetrahedral (order 24)
+    Tournament analog: the KEY₂ structure
+    Tetrahedron = self-dual solid = self-complementary tournament
+
+  E₇ (det=2, h=18):
+    Center = Z₂ = KEY₁!
+    McKay: binary octahedral (order 48)
+    Tournament analog: the KEY₁ structure (binary orientation)
+    h = 18 = 2·9 = 2·KEY₂² (the CS boundary!)
+
+  E₈ (det=1, h=30):
+    Center = trivial. The LARGEST exceptional.
+    McKay: binary icosahedral (order 120 = 5!)
+    Tournament analog: the COMPLETE structure
+    h = 30 = 2·3·5 = product of first 3 primes
+    rank = 8 = φ(30) = 2³ = KEY₁³
+
+  THE MASTER TABLE:
+  Group  det   h     McKay order    Key      Tournament n
+  G₂     1     6     12             2·3      n=6
+  F₄     1     12    24             2²·3     n=12
+  E₆     3     12    24             KEY₂     n=12 (self-dual)
+  E₇     2     18    48             KEY₁     n=18=2·9=2·3²
+  E₈     1     30    120            2·3·5    n=30
