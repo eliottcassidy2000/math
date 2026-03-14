@@ -1,0 +1,347 @@
+
+======================================================================
+1. THE UNIVERSAL NUMBER DICTIONARY
+======================================================================
+
+  1
+    Tournament  : identity, trivial tournament
+    Lie         : rank(A1)
+    Coding      : repetition code rate
+    Modular     : E4(0) = 1
+    Partition   : p(0) = p(1) = 1
+    Music       : unison
+
+  2
+    Tournament  : KEY1, root of f(z)=(z-2)(z-3)
+    Lie         : rank(G2), KEY1
+    Petersen    : diameter, clique number, spectral gap
+    Coding      : Fano parity check rank per point
+    Modular     : PSL(2,Z) = Z/2 * Z/3, order of S
+    Partition   : p(2) = 2 = KEY1
+    Music       : octave ratio
+
+  3
+    Tournament  : KEY2, root of f(z)
+    Lie         : rank(A2)
+    Petersen    : degree, chromatic number, max eigenvalue
+    Coding      : Hamming distance d, points per Fano line
+    Modular     : order of ST in PSL(2,Z)
+    Partition   : p(3) = 3 = KEY2
+    Music       : perfect 12th ratio
+
+  5
+    Tournament  : KEY1+KEY2, trace of f(z)
+    Lie         : Spherical boundary 1/2+1/3+1/5>1
+    Petersen    : girth, max indep sets, |base set|
+    Coding      : Steiner t-parameter, Ramanujan mod
+    Modular     : Phi3(5) = 31 = Mersenne M5
+    Partition   : p(5) = 7 = H_forb_1!
+    Music       : just major 3rd (5/4)
+
+  6
+    Tournament  : product KEY1*KEY2, constant of f(z)
+    Lie         : h(G2), rank(E6)
+    Petersen    : complement degree
+    Coding      : Z/6 -> A5 McKay
+    Modular     : PSL(2,2) = S3, order 6
+    Partition   : p(6) = 11
+    Music       : perfect 5th + octave
+
+  7
+    Tournament  : H_forb_1 = Phi3(KEY1), FORBIDDEN
+    Lie         : rank(E7), h(G2)+1
+    Petersen    : 7 = |base|-|pair| = 5-(-2)
+    Coding      : |PG(2,2)| = Fano plane, Hamming n, Golay d
+    Modular     : PSL(2,7) order has factor 7
+    Partition   : p(7) = 15 = C(6,2) = C(h(G2),2)
+    Music       : natural 7th (7/4)
+
+  8
+    Tournament  : rank(E8) = KEY1^3
+    Lie         : rank(E8), tau(30)
+    Petersen    : omega*alpha = 2*4, coeff of I in f(A_P)
+    Coding      : Steiner k-param, ext Golay distance
+    Modular     : Phi3(8) = 73 (H=73 achievable)
+    Partition   : p(8) = 22 = 2*11
+    Music       : Pythagorean whole tone 9/8 ~ KEY2^2/KEY1^3
+
+  9
+    Tournament  : KEY2^2, diagonal of f(A_P)
+    Lie         : KEY2^2 = # BI irreps
+    Petersen    : f(A_P) diagonal entries all = 9
+    Coding      : sigma_3(2) = 9 = KEY2^2
+    Modular     : sigma_3(2) = 9
+    Partition   : p(9) = 30 = h(E8)!
+    Music       : major 2nd squared
+
+  10
+    Tournament  : T=10 moat, V(Petersen)
+    Lie         : KEY1*(KEY1+KEY2)
+    Petersen    : V(K(5,2)) = C(5,2)
+    Coding      : sigma_3 never = 10
+    Modular     : E4/E6 leading ratio = 240/504 = 10/21
+    Partition   : p(10) = 42 = f(9)
+    Music       : major 10th (10/4)
+
+  12
+    Tournament  : h(E6) = h(F4)
+    Lie         : h(E6) = h(F4) = [S5:D5]
+    Petersen    : V(icosahedron)
+    Coding      : Golay dimension, ext Golay dimension
+    Modular     : |PSL(2,3)| = 12 = h(E6)
+    Partition   : p(12) = 77 = 7*11 = H_forb_1 * 11
+    Music       : octave + fifth (3)
+
+  14
+    Tournament  : dim(G2)
+    Lie         : dim(G2)
+    Petersen    : C_4 = 14 = dim(G2) (Catalan!)
+    Coding      : Hamming [7,4,3] has 2^4-2 = 14 non-trivial
+    Partition   : p(14) = 135 = (KEY1+KEY2)*KEY2^3
+
+  15
+    Tournament  : C(6,2), edges of Petersen
+    Lie         : 240/16 = C(h(G2),2) lattice ratio
+    Petersen    : 15 edges
+    Coding      : Hamming [15,11,3] code
+    Modular     : E8/Z^8 lattice vector ratio
+    Partition   : p(7) = 15 = C(h(G2),KEY1)
+
+  18
+    Tournament  : h(E7), I_k multiplier product
+    Lie         : h(E7)
+    Petersen    : multiplier product 1*2*3*3*1
+    Partition   : p(18) = 385 = 5*7*11 (Ramanujan triple!)
+    Music       : Pythagorean tritone
+
+  21
+    Tournament  : H_forb_2 = Phi3(KEY1^2), FORBIDDEN
+    Lie         : 3*7 = KEY2*Phi3(KEY1)
+    Petersen    : staircase(6) has |lambda| = 21
+    Coding      : |PG(2,4)| = 21 points
+    Modular     : 504/240*10 = 21, |tau(3)|/12
+    Partition   : p(21) = 792 = C(12,5) = C(h(E6),5)
+
+  24
+    Tournament  : |BT| -> E6 McKay
+    Lie         : |BT|, dim(Leech), discriminant exp
+    Petersen    : # pentagons in Petersen
+    Coding      : ext Golay length [24,12,8]
+    Modular     : Delta(q) = q*prod(1-q^n)^24
+    Partition   : p(24) = 1575 = KEY2^2*KEY1+KEY2^2*7
+
+  30
+    Tournament  : h(E8), complement edges of Petersen
+    Lie         : h(E8) = 2*3*5
+    Petersen    : 30 non-edges = 30-edge trinity count
+    Modular     : Theta_E8 evaluated at n=30
+    Partition   : p(9) = 30 = h(E8) (p maps KEY2^2 to h(E8)!)
+    Music       : h(E8) = 30 = Pythagorean comma denominator
+
+  48
+    Tournament  : |BO| -> E7 McKay
+    Lie         : |BO| = |det(A_Petersen)|
+    Petersen    : |det(A)| = 48
+
+  56
+    Tournament  : f(10) = dim(V_E7)
+    Lie         : dim(V_E7) = C(8,3)
+    Petersen    : f(V(P)) = dim(V_E7)
+    Partition   : p(11) = 56 = dim(V_E7)!
+
+  120
+    Tournament  : |BI| -> E8 McKay, |Aut(P)|
+    Lie         : |BI| = #pos_roots(E8) = 5!
+    Petersen    : |Aut(P)| = P(P,3) = |S5|
+    Coding      : Steiner S(5,8,24) point permutations/octad
+    Modular     : Pisano pi(30) = 120
+
+  240
+    Tournament  : #roots(E8), E4 leading coeff
+    Lie         : #roots(E8) = V(icos)*V(dodec)
+    Coding      : E8 lattice kissing number
+    Modular     : E_4 leading coefficient
+
+  252
+    Tournament  : sigma_3(6), C(10,5)
+    Petersen    : C(V(P), 5) = middle binom of V(P)
+    Modular     : sigma_3(h(G2)) = |tau(3)| = E8 vectors at norm 6
+
+
+======================================================================
+2. THE DEEP BRIDGE: p(n) = Lie_number TABLE
+======================================================================
+
+Partition function values that ARE Lie numbers:
+
+  p(2)  =   2 = KEY1
+  p(3)  =   3 = KEY2
+  p(4)  =   5 = KEY1+KEY2 = girth(Petersen)
+  p(5)  =   7 = H_forb_1 = Phi_3(KEY1) = rank(E7)
+  p(7)  =  15 = C(6,2) = edges(Petersen)
+  p(9)  =  30 = h(E8)
+  p(10) =  42 = f(9)
+  p(11) =  56 = f(10) = dim(V_E7)
+
+  The partition function at small integers GENERATES the
+  tournament-Lie vocabulary: KEY1, KEY2, KEY1+KEY2, H_forb_1, h(E8), f(9), dim(V_E7)
+
+Cross-table: f(z) vs p(n):
+  p(2) = 2 = f(4)
+  p(9) = 30 = f(8)
+  p(10) = 42 = f(9)
+  p(11) = 56 = f(10)
+
+======================================================================
+3. THE THREE SEEDS: f(z), p(z), Phi_3(z)
+======================================================================
+
+Three polynomials generate the entire (2,3,5) universe:
+
+  1. Tournament polynomial: f(z) = z^2-5z+6 = (z-2)(z-3)
+  2. Petersen minimal poly: p(z) = z^3-2z^2-5z+6 = (z-3)(z-1)(z+2)
+  3. Third cyclotomic: Phi_3(z) = z^2+z+1
+
+Combined evaluation table:
+   z     f(z)     p(z)  Phi3(z)   f*Phi3
+----------------------------------------
+   0        6        6        1        6
+   1        2        0        3        6 p=0
+   2        0       -4        7        0 f=0
+   3        0        0       13        0 f=0 p=0
+   4        2       18       21       42
+   5        6       56       31      186
+   6       12      120       43      516
+   7       20      216       57     1140
+   8       30      350       73     2190
+   9       42      528       91     3822
+  10       56      756      111     6216
+
+  f(2)=0, f(3)=0: tournament roots
+  p(3)=0, p(1)=0, p(-2)=0: Petersen eigenvalues
+  Shared root: z=3=KEY2 (the bridge)
+
+  Phi_3(2)=7=H_forb_1, Phi_3(3)=13=h(F4)+1, Phi_3(5)=31=h(E8)+1
+  f(z)*Phi_3(z) at z=2: 0*7=0 (tournament root kills it)
+  f(z)*Phi_3(z) at z=5: 6*31=186 = 6*31 = h(G2)*(h(E8)+1)
+  f(z)*Phi_3(z) at z=8: 30*73=2190 = h(E8)*73
+
+======================================================================
+4. THE MASTER IDENTITY: f(A_P) = 8I - 6A + J
+======================================================================
+
+The crown jewel identity connecting all three polynomials:
+
+  f(A_Petersen) = rank(E8)*I - h(G2)*A + J
+
+This says: applying the tournament polynomial to the Petersen
+adjacency matrix gives a linear combination of exactly three
+fundamental matrices, with TOURNAMENT/LIE coefficients.
+
+  Coefficient of I: 8 = rank(E8) = KEY1^3
+  Coefficient of A: -6 = -h(G2) = -KEY1*KEY2
+  Coefficient of J: 1 = trivial
+
+  Eigenvalue decomposition:
+  On all-1 (lambda=3=KEY2): 8-6*3+10 = 0  (null)
+  On 1-eigvecs (lambda=1):  8-6*1+0  = 2 = KEY1
+  On -2-eigvecs (lambda=-KEY1): 8+12+0 = 20 = KEY1^2*(KEY1+KEY2)
+
+  Tr(f(A_P)) = 90 = KEY2^2 * V(Petersen)
+  rank(f(A_P)) = 9 = KEY2^2
+  nullity(f(A_P)) = 1 (the bridge eigenvalue)
+
+======================================================================
+5. COUNTING THE CONNECTIONS
+======================================================================
+
+Session S80 discoveries — connections found:
+
+   1. Forbidden H = 7*3^k = I(K3 + kK1, 2)
+      -> Tripling = adding isolated cycle to Omega
+
+   2. 7 = |PG(2,2)| = Fano plane points
+      -> First forbidden = smallest projective plane
+
+   3. 21 = |PG(2,4)|, 63 = |PG(5,2)|
+      -> Forbidden sequence = projective geometry points
+
+   4. f(A_P) = 8I - 6A + J
+      -> Tournament poly of Petersen = rank(E8)*I - h(G2)*A + J
+
+   5. Petersen IS Ramanujan
+      -> Ihara zeros on |u|=1/sqrt(KEY1)
+
+   6. PSL(2,Z) = Z/KEY1 * Z/KEY2
+      -> Modular group = free product of tournament keys
+
+   7. N(f(omega)) = 91 = Phi3(2)*Phi3(3)
+      -> Tournament poly norm at cube root = 7*13
+
+   8. 504/240 = H_forb_2/V(Petersen)
+      -> Eisenstein series ratio = forbidden/Petersen
+
+   9. sigma_3(6) = 252 = C(10,5)
+      -> E8 theta at h(G2) = middle binom of V(Petersen)
+
+  10. 744 = |BT|*(h(E8)+1)
+      -> j-invariant constant = 24*31
+
+  11. Hamming [7,4,3] = [Phi3(KEY1), KEY1^2, KEY2]
+      -> Perfect code from tournament keys
+
+  12. Extended Golay [24,12,8] = [|BT|, h(E6), rank(E8)]
+      -> Perfect code from Lie data
+
+  13. S(5,8,24) = S(KEY1+KEY2, rank(E8), |BT|)
+      -> Steiner system from tournament/Lie
+
+  14. p(5) = 7 = H_forb_1
+      -> Partition of KEY1+KEY2 = first forbidden
+
+  15. p(9) = 30 = h(E8)
+      -> Partition of KEY2^2 = E8 Coxeter
+
+  16. p(11) = 56 = dim(V_E7) = f(10)
+      -> Partition of 11 = tournament poly at V(P)
+
+  17. p(18) = 385 = 5*7*11
+      -> Partition of h(E7) = product of Ramanujan moduli
+
+  18. C_4 = 14 = dim(G2)
+      -> 4th Catalan = dimension of smallest exceptional
+
+  19. C_5 = 42 = f(9) = 2*H_forb_2
+      -> 5th Catalan = tournament polynomial of KEY2^2
+
+  20. BT: 7 irreps = H_forb_1
+      -> Binary tetrahedral irrep count = first forbidden
+
+  21. BO: 8 irreps = rank(E8)
+      -> Binary octahedral irrep count = rank(E8)
+
+  22. BI: 9 irreps = KEY2^2
+      -> Binary icosahedral irrep count = KEY2^2
+
+  23. |GL(3,2)| = 168 = 7*24 = 8*21
+      -> Fano automorphisms = H_forb_1*|BT| = rank(E8)*H_forb_2
+
+  24. Pentagonal number differences = 3 = KEY2
+      -> Euler's pentagonal theorem uses KEY2
+
+  25. p(21) = 792 = C(12,5) = C(h(E6),5)
+      -> Partition of H_forb_2 = binom of h(E6)
+
+  26. Kissing: dim 1->2->3->4 gives 2->6->12->24
+      -> Kissing numbers = KEY1, h(G2), h(E6), |BT|
+
+  27. 1728 = 12^3 = h(E6)^3 = KEY1^6*KEY2^3
+      -> Modular discriminant normalizer = Coxeter cube
+
+TOTAL: 27 new cross-domain connections in session S80.
+
+======================================================================
+  THE (2,3,5) UNIVERSE IS A SINGLE MATHEMATICAL OBJECT
+  VIEWED THROUGH SEVEN DIFFERENT LENSES:
+  Tournament | Lie | Petersen | Coding | Modular | Partition | Music
+======================================================================

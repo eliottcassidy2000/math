@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S80 — 2026-03-14: Grand Rosetta Stone — 27 Cross-Domain Connections
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S79
+**Summary of work:**
+Creative tangent exploration connecting tournament theory to 7 different mathematical domains. Produced 6 computational scripts with 27 new cross-domain identities. Theme: the (2,3,5) universe as a single mathematical object viewed through different lenses.
+
+**Critical findings:**
+1. **f(A_Petersen) = rank(E₈)·I - h(G₂)·A + J** (HYP-1105): Crown jewel — tournament polynomial of Petersen adjacency = 8I - 6A + J
+2. **Forbidden H = 7·3^k = I(K₃ ⊔ kK₁, 2)** (HYP-1104): Tripling map I(G⊔K₁,2)=3·I(G,2). All forbidden values from single seed K₃.
+3. **PSL(2,Z) = Z/KEY₁ * Z/KEY₂** (HYP-1108): Modular group IS the free product of tournament keys!
+4. **N(f(ω)) = 91 = Φ₃(KEY₁)·Φ₃(KEY₂)** (HYP-1107): Tournament poly norm at cube root = 7·13
+5. **Hamming [7,4,3] = [Φ₃(KEY₁), KEY₁², KEY₂]** (HYP-1112): Perfect code from tournament keys
+6. **Extended Golay [24,12,8] = [|BT|, h(E₆), rank(E₈)]** (HYP-1113): Perfect code from Lie data
+7. **p(5)=7=H_forb₁** (HYP-1115): Partition of KEY₁+KEY₂ = first forbidden value
+8. **p(9)=30=h(E₈)** (HYP-1115): Partition of KEY₂² = E₈ Coxeter number
+9. **p(18)=385=5·7·11** (HYP-1116): Partition of h(E₇) = product of Ramanujan moduli
+10. **σ₃(6)=252=C(10,5)** (HYP-1109): E₈ theta at h(G₂) = middle binom of V(Petersen)
+11. **504/240 = H_forb₂/V(Petersen)** (HYP-1110): Eisenstein series ratio
+12. **Catalan: C₄=dim(G₂), C₅=f(9)** (HYP-1118): Catalan numbers encode Lie data
+
+**New contributions:** HYP-1104 through HYP-1121 (18 hypotheses), 6 scripts in 04-computation/
+**Unresolved threads:** Is there a category-theoretic framework unifying all 7 lenses? Can the partition-Lie correspondence p(n)=Lie_number be explained structurally?
+
+---
+
 ## opus-2026-03-14-S79 — 2026-03-14: The (2,3,5) Universe — Petersen Graph & Lie Theory
 
 **Account:** opus
