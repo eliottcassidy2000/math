@@ -1,0 +1,403 @@
+======================================================================
+THE INCIDENCE GEOMETRY OF TOURNAMENT COEFFICIENTS
+opus-2026-03-14-S71n
+======================================================================
+
+======================================================================
+PART 1: PATH vs STAR — THE SIGN RULE FOR ALL DEGREES
+======================================================================
+
+  n=3: Degree-2 coefficient sign rule
+    arcs (0, 1),(0, 2): shared=0, path=False, sign=-, v=-2
+    arcs (0, 1),(1, 2): shared=1, path=True, sign=+, v=2
+    arcs (0, 2),(1, 2): shared=2, path=False, sign=-, v=-2
+
+  n=3: All coefficients by degree and structure
+
+  n=4: Degree-2 coefficient sign rule
+    arcs (0, 1),(0, 2): shared=0, path=False, sign=-, v=-2
+    arcs (0, 1),(0, 3): shared=0, path=False, sign=-, v=-2
+    arcs (0, 2),(0, 3): shared=0, path=False, sign=-, v=-2
+    arcs (0, 1),(1, 2): shared=1, path=True, sign=+, v=2
+    arcs (0, 2),(1, 2): shared=2, path=False, sign=-, v=-2
+    arcs (0, 1),(1, 3): shared=1, path=True, sign=+, v=2
+    arcs (0, 3),(1, 3): shared=3, path=False, sign=-, v=-2
+
+  n=4: All coefficients by degree and structure
+
+  n=5: Degree-2 coefficient sign rule
+    arcs (0, 1),(0, 2): shared=0, path=False, sign=-, v=-2
+    arcs (0, 1),(0, 3): shared=0, path=False, sign=-, v=-2
+    arcs (0, 2),(0, 3): shared=0, path=False, sign=-, v=-2
+    arcs (0, 1),(0, 4): shared=0, path=False, sign=-, v=-4
+    arcs (0, 2),(0, 4): shared=0, path=False, sign=-, v=-2
+    arcs (0, 3),(0, 4): shared=0, path=False, sign=-, v=-2
+    arcs (0, 1),(1, 2): shared=1, path=True, sign=+, v=2
+    arcs (0, 2),(1, 2): shared=2, path=False, sign=-, v=-2
+
+  n=5: All coefficients by degree and structure
+  Degree 3: 35 nonzero coefficients
+    vertices=4, deg_seq={1: 2, 2: 2}: 20 coeffs, +:6 -:14, |vals|=[2]
+    vertices=5, deg_seq={1: 4, 2: 1}: 15 coeffs, +:5 -:10, |vals|=[2, 4]
+  Degree 4: 60 nonzero coefficients
+    vertices=5, deg_seq={1: 2, 2: 3}: 60 coeffs, +:34 -:26, |vals|=[2]
+
+======================================================================
+PART 2: THE ORIENTED INCIDENCE MATRIX AND H
+======================================================================
+
+  The ORIENTED INCIDENCE MATRIX D of K_n is the n x m matrix:
+  D[v, e] = +1 if v is the TAIL of edge e (smaller endpoint)
+           = -1 if v is the HEAD of edge e (larger endpoint)
+           = 0  otherwise
+
+  For a tournament T with arcs x = (x_1,...,x_m) in {0,1}^m:
+  The TOURNAMENT INCIDENCE MATRIX is:
+  T_inc[v, e] = D[v,e] * (2x_e - 1) for the direction of the arc.
+
+  The KERNEL of D^T is the cycle space of K_n (dimension C(n,2)-n+1).
+  The IMAGE of D is the cut space (dimension n-1).
+
+  The H function lives "above" D: it counts paths, which are
+  related to the INTERSECTION of the cut space with the tournament orientation.
+
+
+  n=3: DD^T (Laplacian of K_n):
+    [2, -1, -1]
+    [-1, 2, -1]
+    [-1, -1, 2]
+    Eigenvalues: 0 (x1), 3 (x2)
+
+  Comparing B (Gram matrix of H) with D^T D:
+    B = -2 * (off-diagonal of D^T D): True
+    B[i,j] = -2 * (D^T D)[i,j] for i!=j: True
+
+  n=4: DD^T (Laplacian of K_n):
+    [3, -1, -1, -1]
+    [-1, 3, -1, -1]
+    [-1, -1, 3, -1]
+    [-1, -1, -1, 3]
+    Eigenvalues: 0 (x1), 4 (x3)
+
+  Comparing B (Gram matrix of H) with D^T D:
+    B = -2 * (off-diagonal of D^T D): True
+    B[i,j] = -2 * (D^T D)[i,j] for i!=j: True
+
+  n=5: DD^T (Laplacian of K_n):
+    [4, -1, -1, -1, -1]
+    [-1, 4, -1, -1, -1]
+    [-1, -1, 4, -1, -1]
+    [-1, -1, -1, 4, -1]
+    [-1, -1, -1, -1, 4]
+    Eigenvalues: 0 (x1), 5 (x4)
+
+  Comparing B (Gram matrix of H) with D^T D:
+    B = -2 * (off-diagonal of D^T D): False
+    B[i,j] = -2 * (D^T D)[i,j] for i!=j: False
+
+======================================================================
+PART 3: THE KOSZUL COMPLEX AND TOURNAMENT HOMOLOGY
+======================================================================
+
+  The KOSZUL COMPLEX of a sequence (f_1,...,f_r) in a ring R is:
+  0 -> Lambda^r R^r -> ... -> Lambda^1 R^r -> R -> R/(f_1,...,f_r) -> 0
+
+  For tournaments: consider the sequence of CONSTRAINT FUNCTIONS
+  f_e = x_e(1-x_e) for each arc e (the Boolean constraints).
+
+  The KOSZUL HOMOLOGY H_i(f_1,...,f_m; Z) measures the
+  "higher syzygies" among the tournament constraints.
+
+  More interesting: the H function ITSELF defines a Koszul-like complex.
+  Consider the GRADIENT of H:
+  dH = (dH/dx_1, ..., dH/dx_m) where dH/dx_i = H(x + e_i) - H(x).
+
+  The JACOBIAN IDEAL J(H) = (dH/dx_1,...,dH/dx_m) ⊂ Z[x_1,...,x_m]/(x_i^2-x_i).
+
+  The MILNOR NUMBER of H at a critical point is:
+  mu = dim_k(Z[x]/(dH/dx_1,...,dH/dx_m))
+
+  For DISCRETE Morse theory: the Milnor number at a local max/min
+  tells us the "complexity" of the critical point.
+
+
+  n=3: Gradient statistics
+    Distinct gradient vectors: 4
+    Most common gradient (count): 2
+    |grad|^2 distribution:
+      |grad|^2 = 4: 6 tournaments
+      |grad|^2 = 12: 2 tournaments
+
+  n=4: Gradient statistics
+    Distinct gradient vectors: 28
+    Most common gradient (count): 4
+    |grad|^2 distribution:
+      |grad|^2 = 24: 64 tournaments
+
+  n=5: Gradient statistics
+    Distinct gradient vectors: 472
+    Most common gradient (count): 4
+    |grad|^2 distribution:
+      |grad|^2 = 100: 24 tournaments
+      |grad|^2 = 108: 240 tournaments
+      |grad|^2 = 132: 80 tournaments
+      |grad|^2 = 140: 120 tournaments
+      |grad|^2 = 156: 360 tournaments
+      |grad|^2 = 180: 40 tournaments
+      |grad|^2 = 196: 120 tournaments
+      |grad|^2 = 276: 40 tournaments
+
+======================================================================
+PART 4: THE LINE GRAPH L(K_n) AND TOURNAMENT ARCS
+======================================================================
+
+  The arcs of a tournament form a subset of the edges of K_n.
+  The LINE GRAPH L(K_n) has vertices = edges of K_n,
+  and two vertices are adjacent if the edges share a vertex.
+
+  L(K_n) is the Johnson graph J(n,2):
+  |V| = C(n,2) = m
+  Each vertex has degree 2(n-2)
+  (each edge shares a vertex with n-2 other edges from each endpoint)
+
+  The ADJACENCY MATRIX of L(K_n) is:
+  A_L[e, f] = 1 if edges e,f share a vertex.
+
+  From Part 4: the sign of the degree-2 coefficient c_{e,f} depends on
+  whether arcs e,f form a PATH or STAR in L(K_n).
+
+  More precisely:
+  - PATH: e,f are adjacent in L(K_n) with the shared vertex being
+    the "middle" vertex (tail of e, head of f or vice versa) → POSITIVE
+  - STAR: e,f adjacent with shared vertex being a common endpoint → NEGATIVE
+  - DISJOINT: e,f not adjacent → POSITIVE (for n>=5)
+
+  THIS MEANS: the sign of c_{e,f} is determined by the SIGNED LINE GRAPH!
+
+
+  n=3: Sign rule verification for degree-2 coefficients:
+    Rule accuracy: 3/3
+
+  Detailed check:
+    e=(0, 1), f=(0, 2): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 1), f=(1, 2): sv=1, pos_in_e=1, pos_in_f=0, v=+2
+    e=(0, 2), f=(1, 2): sv=2, pos_in_e=1, pos_in_f=1, v=-2
+
+  n=4: Sign rule verification for degree-2 coefficients:
+    Rule accuracy: 12/12
+
+  Detailed check:
+    e=(0, 1), f=(0, 2): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 1), f=(0, 3): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 2), f=(0, 3): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 1), f=(1, 2): sv=1, pos_in_e=1, pos_in_f=0, v=+2
+    e=(0, 2), f=(1, 2): sv=2, pos_in_e=1, pos_in_f=1, v=-2
+    e=(0, 1), f=(1, 3): sv=1, pos_in_e=1, pos_in_f=0, v=+2
+    e=(0, 3), f=(1, 3): sv=3, pos_in_e=1, pos_in_f=1, v=-2
+    e=(1, 2), f=(1, 3): sv=1, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 2), f=(2, 3): sv=2, pos_in_e=1, pos_in_f=0, v=+2
+    e=(0, 3), f=(2, 3): sv=3, pos_in_e=1, pos_in_f=1, v=-2
+    e=(1, 2), f=(2, 3): sv=2, pos_in_e=1, pos_in_f=0, v=+2
+    e=(1, 3), f=(2, 3): sv=3, pos_in_e=1, pos_in_f=1, v=-2
+
+  n=5: Sign rule verification for degree-2 coefficients:
+    Rule accuracy: 34/34
+
+  Detailed check:
+    e=(0, 1), f=(0, 2): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 1), f=(0, 3): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 2), f=(0, 3): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 1), f=(0, 4): sv=0, pos_in_e=0, pos_in_f=0, v=-4
+    e=(0, 2), f=(0, 4): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 3), f=(0, 4): sv=0, pos_in_e=0, pos_in_f=0, v=-2
+    e=(0, 1), f=(1, 2): sv=1, pos_in_e=1, pos_in_f=0, v=+2
+    e=(0, 2), f=(1, 2): sv=2, pos_in_e=1, pos_in_f=1, v=-2
+    e=(0, 1), f=(1, 3): sv=1, pos_in_e=1, pos_in_f=0, v=+2
+    e=(0, 3), f=(1, 3): sv=3, pos_in_e=1, pos_in_f=1, v=-2
+
+======================================================================
+PART 5: THE GRAM MATRIX B AS SIGNED LINE GRAPH
+======================================================================
+
+  n=3: D^T D matrix (edge inner products):
+    (0, 1): [2, 1, -1]
+    (0, 2): [1, 2, 1]
+    (1, 2): [-1, 1, 2]
+
+  B[i,j] = -2 * (D^T D)[i,j] for off-diagonal: 3/3
+
+  n=4: D^T D matrix (edge inner products):
+    (0, 1): [2, 1, 1, -1, -1, 0]
+    (0, 2): [1, 2, 1, 1, 0, -1]
+    (0, 3): [1, 1, 2, 0, 1, 1]
+    (1, 2): [-1, 1, 0, 2, 1, -1]
+    (1, 3): [-1, 0, 1, 1, 2, 1]
+    (2, 3): [0, -1, 1, -1, 1, 2]
+
+  B[i,j] = -2 * (D^T D)[i,j] for off-diagonal: 15/15
+
+  n=5: D^T D matrix (edge inner products):
+    (0, 1): [2, 1, 1, 1, -1, -1, -1, 0, 0, 0]
+    (0, 2): [1, 2, 1, 1, 1, 0, 0, -1, -1, 0]
+    (0, 3): [1, 1, 2, 1, 0, 1, 0, 1, 0, -1]
+    (0, 4): [1, 1, 1, 2, 0, 0, 1, 0, 1, 1]
+    (1, 2): [-1, 1, 0, 0, 2, 1, 1, -1, -1, 0]
+    (1, 3): [-1, 0, 1, 0, 1, 2, 1, 1, 0, -1]
+    (1, 4): [-1, 0, 0, 1, 1, 1, 2, 0, 1, 1]
+    (2, 3): [0, -1, 1, 0, -1, 1, 0, 2, 1, -1]
+    (2, 4): [0, -1, 0, 1, -1, 0, 1, 1, 2, 1]
+    (3, 4): [0, 0, -1, 1, 0, -1, 1, -1, 1, 2]
+
+  B[i,j] = -2 * (D^T D)[i,j] for off-diagonal: 36/45
+    MISMATCH at ((0, 1),(0, 4)): B=-4, -2*DtD=-2
+    MISMATCH at ((0, 1),(1, 4)): B=4, -2*DtD=2
+    MISMATCH at ((0, 2),(1, 4)): B=2, -2*DtD=0
+    MISMATCH at ((0, 2),(2, 4)): B=4, -2*DtD=2
+    MISMATCH at ((0, 3),(1, 4)): B=4, -2*DtD=0
+    MISMATCH at ((0, 3),(2, 4)): B=2, -2*DtD=0
+    MISMATCH at ((0, 3),(3, 4)): B=4, -2*DtD=2
+    MISMATCH at ((0, 4),(1, 3)): B=4, -2*DtD=0
+    MISMATCH at ((0, 4),(3, 4)): B=-4, -2*DtD=-2
+
+======================================================================
+PART 6: EIGENVALUE STRUCTURE OF B AND D^T D
+======================================================================
+
+  n=3 (m=3): B eigenvalues
+    B off-diagonal: -2, 2, -2
+    Char poly: -lambda^3 + 12*lambda + 16
+    Eigenvalues: 4, -2, -2
+
+  n=4 (m=6): B trace invariants
+    tr(B) = 0
+    tr(B^2) = 96
+    tr(B^3) = 0
+    sum of eigenvalues = 0
+    sum of eigenvalue^2 = 96
+    sum of eigenvalue^3 = 0
+    If B = -2*(L_edge - 2I): eigenvalues = -4 (x3), 0 (x3)
+    Check: sum = -12 (should be 0) — DOESN'T MATCH
+    B^2 diagonal: [16, 16, 16, 16, 16, 16]
+
+======================================================================
+PART 7: H AS A MULTILINEAR PERMANENT
+======================================================================
+
+  H(x) = sum_{P in S_n} prod_{i=0}^{n-2} a_{P_i, P_{i+1}}(x)
+
+  where a_{i,j}(x) = x_e if i < j (e = arc (i,j)),
+                    = 1 - x_e if i > j.
+
+  This is a MULTILINEAR function of x. Each term in the sum is a
+  product of n-1 factors, each depending on exactly ONE variable.
+
+  The MULTILINEAR COEFFICIENT c_S is:
+  c_S = sum_{P} epsilon(P, S) where epsilon(P, S) = +-1.
+
+  epsilon(P, S) = product of signs from each factor:
+  For arc e = (i,j) with i<j in the path P:
+  - If P traverses e "forward" (i before j, i.e., P_k=i, P_{k+1}=j):
+    factor = x_e, so contribution to x_e monomial is +1
+  - If P traverses e "backward" (j before i):
+    factor = 1-x_e, so contribution to (1) is +1 and to (x_e) is -1
+
+  So c_S = (# paths using all arcs in S forward) - (# paths using all arcs in S backward + ...)
+
+  Wait, it's more subtle because c_S involves the FULL Mobius inversion.
+  Let me think about this differently.
+
+
+  n=3: H as multilinear permanent
+  Arcs: [(0, 1), (0, 2), (1, 2)]
+  H(x) = sum_P prod a_{P_i,P_{i+1}}(x)
+
+  All 6 permutations and their contributions:
+  P=0->1->2: x0 * x2
+    +1 * x0*x2
+  P=0->2->1: x1 * (1-x2)
+    +1 * x1
+    -1 * x1*x2
+  P=1->0->2: (1-x0) * x1
+    +1 * x1
+    -1 * x0*x1
+  P=1->2->0: x2 * (1-x1)
+    +1 * x2
+    -1 * x1*x2
+  P=2->0->1: (1-x1) * x0
+    +1 * x0
+    -1 * x0*x1
+  P=2->1->0: (1-x2) * (1-x0)
+    +1 * 1
+    -1 * x0
+    -1 * x2
+    +1 * x0*x2
+
+  TOTAL: H(x) = 1*1 +2*x1 -2*x0*x1 +2*x0*x2 -2*x1*x2
+
+======================================================================
+PART 8: THE PATH-STAR DECOMPOSITION THEOREM
+======================================================================
+
+  THEOREM (conjectured from computation):
+  The degree-2 multilinear coefficient c_{e,f} of H satisfies:
+
+  For adjacent arcs e=(a,v), f=(v,b) sharing vertex v:
+    c_{e,f} = -2 * D^T D[e,f]
+  where D is the oriented incidence matrix of K_n.
+
+  Since D^T D[e,f] = D[a,e]*D[a,f] + D[v,e]*D[v,f] + ...
+  this equals the signed overlap of the incidence vectors.
+
+  For n=3: D^T D has off-diagonal entries +-1:
+    D^T D[(0,1),(0,2)] = D[0,(0,1)]*D[0,(0,2)] + D[1,(0,1)]*D[1,(0,2)] + D[2,(0,1)]*D[2,(0,2)]
+    = (+1)(+1) + (-1)(0) + (0)(-1) = 1
+    So c_{(0,1),(0,2)} = -2 * 1 = -2 ✓ (matches!)
+
+  For n=4: same pattern.
+
+  For n=5: ALSO c_{e,f} = -2*DtD[e,f] for ADJACENT arcs.
+  But what about DISJOINT arcs (n>=5)?
+  There are disjoint arc pairs at n>=5, and they have DtD[e,f]=0.
+  So the prediction is c_{e,f} = 0 for disjoint arcs.
+  But we found nonzero coefficients for disjoint arcs!
+
+
+  n=5: Disjoint arc pairs with nonzero degree-2 coefficients:
+    (0, 3) and (1, 2): c = 1.0
+    (0, 4) and (1, 2): c = 1.0
+    (0, 2) and (1, 3): c = 1.0
+    (0, 4) and (1, 3): c = 1.0
+    (0, 2) and (1, 4): c = 1.0
+    (0, 3) and (1, 4): c = 1.0
+    (0, 1) and (2, 3): c = 1.0
+    (0, 4) and (2, 3): c = 1.0
+    (1, 4) and (2, 3): c = 1.0
+    (0, 1) and (2, 4): c = 1.0
+    (0, 3) and (2, 4): c = 1.0
+    (1, 3) and (2, 4): c = 1.0
+    (0, 1) and (3, 4): c = 1.0
+    (0, 2) and (3, 4): c = 1.0
+    (1, 2) and (3, 4): c = 1.0
+  Total disjoint pairs with nonzero coeff: 15
+  Total disjoint pairs: 15
+
+  The 'missing vertex' for each disjoint pair:
+    (0, 3),(1, 2): missing vertex = {4}, coeff = 1.0
+    (0, 4),(1, 2): missing vertex = {3}, coeff = 1.0
+    (0, 2),(1, 3): missing vertex = {4}, coeff = 1.0
+    (0, 4),(1, 3): missing vertex = {2}, coeff = 1.0
+    (0, 2),(1, 4): missing vertex = {3}, coeff = 1.0
+    (0, 3),(1, 4): missing vertex = {2}, coeff = 1.0
+    (0, 1),(2, 3): missing vertex = {4}, coeff = 1.0
+    (0, 4),(2, 3): missing vertex = {1}, coeff = 1.0
+    (1, 4),(2, 3): missing vertex = {0}, coeff = 1.0
+    (0, 1),(2, 4): missing vertex = {3}, coeff = 1.0
+    (0, 3),(2, 4): missing vertex = {1}, coeff = 1.0
+    (1, 3),(2, 4): missing vertex = {0}, coeff = 1.0
+    (0, 1),(3, 4): missing vertex = {2}, coeff = 1.0
+    (0, 2),(3, 4): missing vertex = {1}, coeff = 1.0
+    (1, 2),(3, 4): missing vertex = {0}, coeff = 1.0
+
+======================================================================
+DONE — INCIDENCE GEOMETRY OF TOURNAMENT COEFFICIENTS
+======================================================================
