@@ -1,0 +1,227 @@
+======================================================================
+PART 1: FIBONACCI AS A SEQUENCE OF 2s AND 3s
+======================================================================
+Fibonacci word (L=3, S=2), first 60 terms:
+  323323233233232332323323323233233232332323323323233232332332
+  Length: 144
+
+Partial sums (first 20): [0, 3, 5, 8, 11, 13, 16, 18, 21, 24, 26, 29, 32, 34, 37, 39, 42, 45, 47, 50, 52]
+Fibonacci numbers: [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+  First  5: n₂=2, n₃=3, ratio 3s/2s=1.5000, sum=13
+  First  8: n₂=3, n₃=5, ratio 3s/2s=1.6667, sum=21
+  First 13: n₂=5, n₃=8, ratio 3s/2s=1.6000, sum=34
+  First 21: n₂=8, n₃=13, ratio 3s/2s=1.6250, sum=55
+  First 34: n₂=13, n₃=21, ratio 3s/2s=1.6154, sum=89
+  First 55: n₂=21, n₃=34, ratio 3s/2s=1.6190, sum=144
+
+  φ = 1.618034
+  Ratio of Ls to Ss → φ (golden ratio)
+
+======================================================================
+PART 2: PERIOD 6 — THE UNIVERSAL TOURNAMENT PERIOD
+======================================================================
+Fibonacci mod m periods (Pisano period π(m)):
+  m= 2: π(m)=   3  (divides 6!)
+  m= 3: π(m)=   8
+  m= 4: π(m)=   6  (divides 6!)  = 6
+  m= 5: π(m)=  20
+  m= 6: π(m)=  24
+  m= 7: π(m)=  16
+  m= 8: π(m)=  12
+  m= 9: π(m)=  24
+  m=10: π(m)=  60
+  m=11: π(m)=  10
+  m=12: π(m)=  24
+  m=13: π(m)=  28
+  m=14: π(m)=  48
+  m=15: π(m)=  40
+  m=16: π(m)=  24
+  m=17: π(m)=  36
+  m=18: π(m)=  24
+  m=19: π(m)=  18
+  m=20: π(m)=  60
+  m=21: π(m)=  16
+  m=22: π(m)=  30
+  m=23: π(m)=  48
+  m=24: π(m)=  24
+
+Jacobsthal mod m periods:
+  m= 3: π_J(m)=6  = 6
+  m= 5: π_J(m)=4
+  m= 7: π_J(m)=6  = 6
+  m= 9: π_J(m)=18
+  m=11: π_J(m)=10
+  m=13: π_J(m)=12
+
+======================================================================
+PART 3: CYCLOTOMIC Φ₃ AND F_4/F_2
+======================================================================
+
+THE CYCLOTOMIC CONNECTION:
+
+  Φ₃(x) = x² + x + 1 (3rd cyclotomic polynomial)
+
+  Key properties:
+  1. Φ₃(x) = 0 defines the primitive cube roots of unity
+  2. F_4 = F_2[x] / Φ₃(x) — the field extension defining PG(2,F_4)!
+  3. Φ₃(2) = 4 + 2 + 1 = 7 = H_forb_1 = |PG(2,F_2)|
+  4. Φ₃(4) = 16 + 4 + 1 = 21 = H_forb_2 = |PG(2,F_4)|
+  5. Φ₃(8) = 64 + 8 + 1 = 73 = |PG(2,F_8)| (NOT forbidden)
+
+  So: H_forb_k = Φ₃(2^k) = |PG(2, F_{2^k})|
+  for k=1,2 (but not k=3)
+
+  The period connection: the 6th roots of unity include
+  the 3rd roots (since 3|6). And:
+  x⁶ - 1 = (x³-1)(x³+1) = Φ₁Φ₃(x²+1)(x²-x+1)...
+  In characteristic 2: x⁶+1 = (x³+1)² = (x+1)²(x²+x+1)²
+  So Φ₃ divides x⁶-1, and the period-6 structure
+  CONTAINS the Baer subplane structure!
+
+Φ₃(2^k) = (2^k)² + 2^k + 1:
+  k=1: Φ₃(2^1) = 4 + 2 + 1 = 7 = H_forb_1
+  k=2: Φ₃(2^2) = 16 + 4 + 1 = 21 = H_forb_2
+  k=3: Φ₃(2^3) = 64 + 8 + 1 = 73
+  k=4: Φ₃(2^4) = 256 + 16 + 1 = 273
+  k=5: Φ₃(2^5) = 1024 + 32 + 1 = 1057
+  k=6: Φ₃(2^6) = 4096 + 64 + 1 = 4161
+  k=7: Φ₃(2^7) = 16384 + 128 + 1 = 16513
+
+======================================================================
+PART 4: FIBONACCI WORD ON THE PROJECTIVE LINE
+======================================================================
+Projective line sizes:
+  |PG(1, F_2)| = 3
+  |PG(1, F_4)| = 5
+  |PG(1, F_8)| = 9
+  |PG(1, F_16)| = 17
+  |PG(1, F_32)| = 33
+
+  |PGL(2, F_4)| = (16-1)(16-4)/(4-1) = 15×12/3 = 60 = |A₅|
+  A₅ = icosahedral group, connected to golden ratio φ!
+  The icosahedron has golden ratio proportions.
+  |PGL(2, F_2)| = (4-1)(4-2)/(2-1) = 3×2 = 6
+  6 = the period of M(-1) in SL(2,Z)!
+
+  60/6 = 10 = C(5,2) = Petersen vertices = BIBD points
+  The index [PGL(2,F_4) : PGL(2,F_2)] = 10
+  There are 10 copies of PGL(2,F_2) inside PGL(2,F_4)
+  And there are 10 partition pairs of {0,...,5}!
+
+======================================================================
+PART 5: 360 BAER SUBPLANES = |A₆|
+======================================================================
+  360 Baer subplanes in PG(2, F_4)
+  360 = 6!/2 = |A₆| (alternating group on 6)
+  S₆ is the ONLY symmetric group with outer automorphism!
+  |Aut(PG(2,F_4))| = |PΓL(3,F_4)| = |PGL(3,F_4)| × |Gal(F_4/F_2)|
+  |PGL(3,F_4)| = |GL(3,F_4)|/(4-1) = 181440/3 = 60480
+  |Gal(F_4/F_2)| = 2 (Frobenius x→x²)
+  |PΓL(3,F_4)| = 60480 × 2 = 120960
+  Orbits of Baer subplanes: |PΓL(3,F_4)| acts transitively
+  Stabilizer: 120960 / 360 = 336
+  336 = |PΓL(3,F_2)| = 2 × |PGL(3,F_2)| = 2 × 168 = 336
+
+  BEAUTIFUL: the stabilizer of a Baer subplane is |PΓL(3,F_2)| = 336!
+  This is 2 × |GL(3,F_2)| = 2 × 168 = 2 × 8 × 21
+  = 2 × 8 × H_forb_2
+
+======================================================================
+PART 6: FIBONACCI ↔ BAER DECOMPOSITION
+======================================================================
+Independence polynomial of the Petersen graph:
+  I(Petersen, x) = 1 + 10x + 30x^2 + 30x^3 + 5x^4
+  I(Petersen, -1.00) = -4.0000
+  I(Petersen,  2.00) = 461.0000
+  I(Petersen, -0.25) = -0.0742
+
+  I(Petersen, 2) = 461
+  Compare: H_forb_2 = 21, H_forb_1 = 7
+  I(Petersen, 2) = 461 = 461
+
+======================================================================
+PART 7: THE FIBONACCI-BAER-PERIOD-6 TRIANGLE
+======================================================================
+
+THREE THREADS, ONE STRUCTURE:
+
+THREAD 1: FIBONACCI PERIOD-6
+  M(-1) = [[1,-1],[1,0]] has order 6 in SL(2,Z)
+  M(2) ≡ M(-1) mod 3 (the mod-3 unification)
+  Fibonacci mod 8 has period 12 = 2 × 6
+  Jacobsthal mod 3 has period 6
+  The fundamental period of tournament parity is 6 = 2 × 3
+
+THREAD 2: BAER SUBPLANES
+  PG(2,F_2) ⊂ PG(2,F_4): Fano inside 21-point plane
+  F_4 = F_2[x]/Φ₃(x) where Φ₃(x) = x²+x+1
+  7 = Φ₃(2), 21 = Φ₃(4), 73 = Φ₃(8)
+  360 Baer subplanes = |A₆| (alternating on 6)
+  Stabilizer = |PΓL(3,F_2)| = 336 = 2 × 168 = 2 × 8 × 21
+
+THREAD 3: FIBONACCI 2-3 DECOMPOSITION
+  Fibonacci word: L→LS, S→L (L=3, S=2)
+  Ratio L/S → φ (golden ratio)
+  Partial sums approximate Fibonacci numbers
+  Connected to continued fraction [1;1,1,1,...]
+
+THE UNIFICATION:
+
+  ┌─────────────────┐
+  │   PERIOD 6      │
+  │ = LCM(2, 3)     │
+  │ = ord(M(-1))    │
+  └────────┬────────┘
+           │
+     ┌─────┴──────┐
+     │             │
+  ┌──┴───┐   ┌────┴────┐
+  │  2   │   │    3    │
+  │ gen  │   │  cycle  │
+  └──┬───┘   └────┬────┘
+     │             │
+     └──────┬──────┘
+            │
+  ┌─────────┴──────────┐
+  │  Φ₃(x) = x²+x+1   │
+  │  = cyclotomic of 3  │
+  │  divides x⁶-1      │
+  └─────────┬──────────┘
+            │
+     ┌──────┴───────┐
+     │              │
+  ┌──┴───┐   ┌─────┴─────┐
+  │ F_4   │   │ PG(2,F_4) │
+  │ =F_2² │   │ =21 pts   │
+  │via Φ₃ │   │ =H_forb_2 │
+  └──┬───┘   └─────┬─────┘
+     │              │
+     └──────┬───────┘
+            │
+  ┌─────────┴──────────┐
+  │   BAER SUBPLANE    │
+  │  7 ⊂ 21 (Fano ⊂ PG)│
+  │  H_forb_1 ⊂ H_forb_2│
+  └─────────┬──────────┘
+            │
+  ┌─────────┴──────────┐
+  │ FIBONACCI WORD      │
+  │ L=3, S=2            │
+  │ L/S → φ             │
+  │ φ = root of x²-x-1 │
+  │   = Φ₃ twin:        │
+  │   x²+x+1 vs x²-x-1 │
+  └────────────────────┘
+
+THE DEEPEST CONNECTION:
+  Φ₃(x) = x² + x + 1 (defines F_4, Baer, forbidden values)
+  Fibonacci: x² - x - 1 = 0 (defines φ, golden ratio)
+
+  These differ by: signs of x and constant!
+  Φ₃(x) at x=2: 7 (forbidden)
+  x²-x-1 at x=2: 4-2-1 = 1 (trivial)
+
+  But: Φ₃(-x) = x² - x + 1 (which IS close to x²-x-1)
+  The difference: Φ₃(-x) - (x²-x-1) = 2
+  THE GENERATOR 2 IS THE GAP BETWEEN BAER AND FIBONACCI!
+
