@@ -1,0 +1,360 @@
+======================================================================
+PART 1: TRANSITIVE AND NEAR-TRANSITIVE I(-1)
+======================================================================
+
+  n=3: (transitive = bits 0)
+    I(-1) > 0: 6/8 = 75.00%
+    I(-1) = 0: 2/8 = 25.00%
+    I(-1) < 0: 0/8
+    Examples with I(-1) > 0:
+      bits=0: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2)
+      bits=1: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2)
+      bits=3: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2)
+      bits=4: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2)
+      bits=6: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2)
+
+  n=4: (transitive = bits 0)
+    I(-1) > 0: 24/64 = 37.50%
+    I(-1) = 0: 16/64 = 25.00%
+    I(-1) < 0: 24/64
+    Examples with I(-1) > 0:
+      bits=0: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3)
+      bits=1: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3)
+      bits=3: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3)
+      bits=7: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3)
+      bits=8: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3)
+
+  n=5: (transitive = bits 0)
+    I(-1) > 0: 120/1024 = 11.72%
+    I(-1) = 0: 120/1024 = 11.72%
+    I(-1) < 0: 784/1024
+    Examples with I(-1) > 0:
+      bits=0: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4)
+      bits=1: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4)
+      bits=3: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4)
+      bits=7: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4)
+      bits=15: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4)
+
+  n=6: (transitive = bits 0)
+    I(-1) > 0: 720/32768 = 2.20%
+    I(-1) = 0: 1040/32768 = 3.17%
+    I(-1) < 0: 31008/32768
+    Examples with I(-1) > 0:
+      bits=0: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4, 5)
+      bits=1: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4, 5)
+      bits=3: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4, 5)
+      bits=7: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4, 5)
+      bits=15: I(-1)=1, α₁=0, α₂=0, scores=(0, 1, 2, 3, 4, 5)
+
+  n=7: (transitive = bits 0)
+
+======================================================================
+PART 2: DOES I(-1)=1 CHARACTERIZE TRANSITIVE?
+======================================================================
+
+  n=3: 6 tournaments with I(-1)=1
+    bits=0, scores=(0, 1, 2)
+    bits=1, scores=(0, 1, 2)
+    bits=3, scores=(0, 1, 2)
+    bits=4, scores=(0, 1, 2)
+    bits=6, scores=(0, 1, 2)
+    bits=7, scores=(0, 1, 2)
+    All transitive? Score check: True
+
+  n=4: 24 tournaments with I(-1)=1
+    bits=0, scores=(0, 1, 2, 3)
+    bits=1, scores=(0, 1, 2, 3)
+    bits=3, scores=(0, 1, 2, 3)
+    bits=7, scores=(0, 1, 2, 3)
+    bits=8, scores=(0, 1, 2, 3)
+    bits=10, scores=(0, 1, 2, 3)
+    bits=11, scores=(0, 1, 2, 3)
+    bits=15, scores=(0, 1, 2, 3)
+    bits=24, scores=(0, 1, 2, 3)
+    bits=26, scores=(0, 1, 2, 3)
+    All transitive? Score check: True
+
+  n=5: 120 tournaments with I(-1)=1
+    bits=0, scores=(0, 1, 2, 3, 4)
+    bits=1, scores=(0, 1, 2, 3, 4)
+    bits=3, scores=(0, 1, 2, 3, 4)
+    bits=7, scores=(0, 1, 2, 3, 4)
+    bits=15, scores=(0, 1, 2, 3, 4)
+    bits=16, scores=(0, 1, 2, 3, 4)
+    bits=18, scores=(0, 1, 2, 3, 4)
+    bits=19, scores=(0, 1, 2, 3, 4)
+    bits=23, scores=(0, 1, 2, 3, 4)
+    bits=31, scores=(0, 1, 2, 3, 4)
+    All transitive? Score check: True
+
+  n=6: 720 tournaments with I(-1)=1
+    bits=0, scores=(0, 1, 2, 3, 4, 5)
+    bits=1, scores=(0, 1, 2, 3, 4, 5)
+    bits=3, scores=(0, 1, 2, 3, 4, 5)
+    bits=7, scores=(0, 1, 2, 3, 4, 5)
+    bits=15, scores=(0, 1, 2, 3, 4, 5)
+    bits=31, scores=(0, 1, 2, 3, 4, 5)
+    bits=32, scores=(0, 1, 2, 3, 4, 5)
+    bits=34, scores=(0, 1, 2, 3, 4, 5)
+    bits=35, scores=(0, 1, 2, 3, 4, 5)
+    bits=39, scores=(0, 1, 2, 3, 4, 5)
+    All transitive? Score check: True
+
+======================================================================
+PART 3: EDGE-FLIP ANALYSIS FROM TRANSITIVE
+======================================================================
+
+  n=5: flipping edges from transitive (bits=0)
+    Edge mapping: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3)]...
+    flip edge (0, 1): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (0, 2): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (0, 3): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (0, 4): α₁=  4, α₂=  0, I(-1)=-3
+    flip edge (1, 2): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (1, 3): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (1, 4): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (2, 3): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (2, 4): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (3, 4): α₁=  0, α₂=  0, I(-1)=1
+
+  n=6: flipping edges from transitive (bits=0)
+    Edge mapping: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4)]...
+    flip edge (0, 1): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (0, 2): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (0, 3): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (0, 4): α₁=  4, α₂=  0, I(-1)=-3
+    flip edge (0, 5): α₁=  8, α₂=  0, I(-1)=-7
+    flip edge (1, 2): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (1, 3): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (1, 4): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (1, 5): α₁=  4, α₂=  0, I(-1)=-3
+    flip edge (2, 3): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (2, 4): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (2, 5): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (3, 4): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (3, 5): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (4, 5): α₁=  0, α₂=  0, I(-1)=1
+
+  n=7: flipping edges from transitive (bits=0)
+    Edge mapping: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3)]...
+    flip edge (0, 1): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (0, 2): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (0, 3): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (0, 4): α₁=  4, α₂=  0, I(-1)=-3
+    flip edge (0, 5): α₁=  8, α₂=  0, I(-1)=-7
+    flip edge (0, 6): α₁= 16, α₂=  0, I(-1)=-15
+    flip edge (1, 2): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (1, 3): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (1, 4): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (1, 5): α₁=  4, α₂=  0, I(-1)=-3
+    flip edge (1, 6): α₁=  8, α₂=  0, I(-1)=-7
+    flip edge (2, 3): α₁=  0, α₂=  0, I(-1)=1
+    flip edge (2, 4): α₁=  1, α₂=  0, I(-1)=0
+    flip edge (2, 5): α₁=  2, α₂=  0, I(-1)=-1
+    flip edge (2, 6): α₁=  4, α₂=  0, I(-1)=-3
+
+======================================================================
+PART 4: HOW MANY NEW CYCLES DOES FLIPPING EDGE (i,j) CREATE?
+======================================================================
+
+  Transitive n=5 adjacency (bits=0):
+    row 0: [0, 0, 0, 0, 0]
+    row 1: [1, 0, 0, 0, 0]
+    row 2: [1, 1, 0, 0, 0]
+    row 3: [1, 1, 1, 0, 0]
+    row 4: [1, 1, 1, 1, 0]
+  Out-degrees: [0, 1, 2, 3, 4]
+  So vertex 0 beats nobody, vertex n-1 beats everybody
+
+  A[1][0] = 1 (does vertex 1 beat vertex 0?)
+  A[4][3] = 1 (does vertex 4 beat vertex 3?)
+  A[0][1] = 0 (does vertex 0 beat vertex 1?)
+
+  KEY INSIGHT:
+  Flipping edge (i,j) in transitive creates a cycle of length j-i+1.
+  For α₁ count: need j-i+1 odd, i.e., j-i even (same parity).
+
+  But it might create MORE than one cycle!
+  Any subset of {i, i+1, ..., j} of odd size ≥ 3 that includes i,j
+  and forms a Hamiltonian cycle in the subtournament on those vertices
+  is a new directed odd cycle.
+
+  n=7: edge-flip cycle creation table
+      edge  gap   dc3   dc5   dc7  alpha1  alpha2  I(-1)
+  (0,1)        1     0     0     0       0       0      1
+  (0,2)        2     1     0     0       1       0      0
+  (0,3)        3     2     0     0       2       0     -1
+  (0,4)        4     3     1     0       4       0     -3
+  (0,5)        5     4     4     0       8       0     -7
+  (0,6)        6     5    10     1      16       0    -15
+  (1,2)        1     0     0     0       0       0      1
+  (1,3)        2     1     0     0       1       0      0
+  (1,4)        3     2     0     0       2       0     -1
+  (1,5)        4     3     1     0       4       0     -3
+  (1,6)        5     4     4     0       8       0     -7
+  (2,3)        1     0     0     0       0       0      1
+  (2,4)        2     1     0     0       1       0      0
+  (2,5)        3     2     0     0       2       0     -1
+  (2,6)        4     3     1     0       4       0     -3
+  (3,4)        1     0     0     0       0       0      1
+  (3,5)        2     1     0     0       1       0      0
+  (3,6)        3     2     0     0       2       0     -1
+  (4,5)        1     0     0     0       0       0      1
+  (4,6)        2     1     0     0       1       0      0
+  (5,6)        1     0     0     0       0       0      1
+
+======================================================================
+PART 5: CYCLE COUNT vs GAP IN TRANSITIVE EDGE-FLIP
+======================================================================
+
+  For the transitive tournament with ONE edge (i,j) flipped (i<j, gap g=j-i):
+
+  The subtournament on {i, i+1, ..., j} is "transitive + 1 reversal".
+  In this subtournament:
+    - All edges k→l for k>l (transitive direction)
+    - PLUS the edge i→j (the reversed one)
+
+  The directed odd cycles that USE the edge i→j:
+    For each odd-size subset S of {i,i+1,...,j} containing both i and j,
+    if S forms a directed cycle using i→j and the transitive edges.
+
+  The key cycle is: i → j → j-1 → ... → i+1 → i (length g+1).
+  This exists iff g+1 ≥ 3, i.e., g ≥ 2.
+
+  For g even: g+1 is odd, so the main cycle IS an odd cycle.
+    Example: g=2, cycle length 3 (triangle)
+    Example: g=4, cycle length 5 (pentagon)
+  For g odd: g+1 is even, so the main cycle is NOT odd.
+    But there might still be odd subcycles.
+
+  Subcycles of length 2k+1 (odd):
+    Choose a subset of size 2k+1 from {i,...,j} including i and j.
+    The remaining 2k+1-(2) = 2k-1 vertices from {i+1,...,j-1}.
+    The subset has one reversed edge i→j, rest transitive.
+    For it to form a directed cycle: i→j→(decreasing chain)→i.
+    The chain from j to i must be decreasing = use only consecutive
+    vertices in the gap. Actually any subset works because transitive
+    means all edges point "down" within the subset.
+
+  CLAIM: For gap g, the number of odd cycles through edge (i,j) is
+    sum_{k=0}^{floor((g-2)/2)} C(g-1, 2k) = 2^{g-2}  (for g ≥ 2)
+
+  Because: choose 2k intermediate vertices from g-1 available (indices i+1,...,j-1),
+  giving a cycle of length 2k+2. We need 2k+2 odd, so 2k+2 = 2k+2... wait.
+  Cycle has i, j, and 2k intermediates = 2k+2 total vertices.
+  Odd cycle needs 2k+2 odd → k is odd... that doesn't work.
+
+  Let me just count directly.
+
+  Direct cycle count by gap g at n=7:
+    gap 1: dc3={0}, dc5={0}, dc7={0}, α₁ = {0}
+           UNIVERSAL within same gap!
+    gap 2: dc3={1}, dc5={0}, dc7={0}, α₁ = {1}
+           UNIVERSAL within same gap!
+    gap 3: dc3={2}, dc5={0}, dc7={0}, α₁ = {2}
+           UNIVERSAL within same gap!
+    gap 4: dc3={3}, dc5={1}, dc7={0}, α₁ = {4}
+           UNIVERSAL within same gap!
+    gap 5: dc3={4}, dc5={4}, dc7={0}, α₁ = {8}
+           UNIVERSAL within same gap!
+    gap 6: dc3={5}, dc5={10}, dc7={1}, α₁ = {16}
+           UNIVERSAL within same gap!
+
+======================================================================
+PART 6: UNIVERSAL GAP FORMULA
+======================================================================
+
+  n=5:
+    gap 1: dc3=0, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 2: dc3=1, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 3: dc3=2, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 4: dc3=3, dc5=1, dc7=0, dc9=0  UNIVERSAL
+    All gaps universal: True
+
+  n=7:
+    gap 1: dc3=0, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 2: dc3=1, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 3: dc3=2, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 4: dc3=3, dc5=1, dc7=0, dc9=0  UNIVERSAL
+    gap 5: dc3=4, dc5=4, dc7=0, dc9=0  UNIVERSAL
+    gap 6: dc3=5, dc5=10, dc7=1, dc9=0  UNIVERSAL
+    All gaps universal: True
+
+  n=9:
+    gap 1: dc3=0, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 2: dc3=1, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 3: dc3=2, dc5=0, dc7=0, dc9=0  UNIVERSAL
+    gap 4: dc3=3, dc5=1, dc7=0, dc9=0  UNIVERSAL
+    gap 5: dc3=4, dc5=4, dc7=0, dc9=0  UNIVERSAL
+    gap 6: dc3=5, dc5=10, dc7=1, dc9=0  UNIVERSAL
+    gap 7: dc3=6, dc5=20, dc7=6, dc9=0  UNIVERSAL
+    gap 8: dc3=7, dc5=35, dc7=21, dc9=1  UNIVERSAL
+    All gaps universal: True
+
+  Pattern for dc3 at gap g (from n=9 data):
+    gap 1: dc3=0 (no triangle possible)
+    gap 2: dc3=1 (one triangle: {i, i+1, j})
+    gap 3: dc3=? (need even-length main cycle)
+    gap 4: dc3=?
+    gap 5: dc3=?
+
+  dc3 vs gap (from n=9):
+    gap 1: dc3=0, C(g-1,2)=0, match=True
+    gap 2: dc3=1, C(g-1,2)=0, match=False
+    gap 3: dc3=2, C(g-1,2)=1, match=False
+    gap 4: dc3=3, C(g-1,2)=3, match=True
+    gap 5: dc3=4, C(g-1,2)=6, match=False
+    gap 6: dc3=5, C(g-1,2)=10, match=False
+    gap 7: dc3=6, C(g-1,2)=15, match=False
+    gap 8: dc3=7, C(g-1,2)=21, match=False
+
+  dc5 vs gap (from n=9):
+    gap 1: dc5=0, C(g-1,4)=0, match=True
+    gap 2: dc5=0, C(g-1,4)=0, match=True
+    gap 3: dc5=0, C(g-1,4)=0, match=True
+    gap 4: dc5=1, C(g-1,4)=0, match=False
+    gap 5: dc5=4, C(g-1,4)=1, match=False
+    gap 6: dc5=10, C(g-1,4)=5, match=False
+    gap 7: dc5=20, C(g-1,4)=15, match=False
+    gap 8: dc5=35, C(g-1,4)=35, match=True
+
+  dc7 vs gap (from n=9):
+    gap 1: dc7=0, C(g-1,6)=0, match=True
+    gap 2: dc7=0, C(g-1,6)=0, match=True
+    gap 3: dc7=0, C(g-1,6)=0, match=True
+    gap 4: dc7=0, C(g-1,6)=0, match=True
+    gap 5: dc7=0, C(g-1,6)=0, match=True
+    gap 6: dc7=1, C(g-1,6)=0, match=False
+    gap 7: dc7=6, C(g-1,6)=1, match=False
+    gap 8: dc7=21, C(g-1,6)=7, match=False
+
+  dc9 vs gap (from n=9):
+    gap 1: dc9=0, C(g-1,8)=0, match=True
+    gap 2: dc9=0, C(g-1,8)=0, match=True
+    gap 3: dc9=0, C(g-1,8)=0, match=True
+    gap 4: dc9=0, C(g-1,8)=0, match=True
+    gap 5: dc9=0, C(g-1,8)=0, match=True
+    gap 6: dc9=0, C(g-1,8)=0, match=True
+    gap 7: dc9=0, C(g-1,8)=0, match=True
+    gap 8: dc9=1, C(g-1,8)=0, match=False
+
+  CONJECTURE: For the transitive tournament with one edge (i,j) flipped (gap g=j-i):
+    dc_{2k+1} = C(g-1, 2k) for k ≥ 1.
+
+  Explanation: A (2k+1)-cycle through edge (i,j) consists of:
+    - The reversed edge i→j
+    - A path j→...→i through 2k-1 intermediate vertices from {i+1,...,j-1}
+    - There are g-1 intermediates available, choose 2k of them
+    Wait, 2k+1 cycle = 2k+1 vertices = i, j, and 2k-1 intermediates.
+    Choose 2k-1 from g-1 available: C(g-1, 2k-1)? Let me recheck...
+
+    Actually: the (2k+1)-cycle uses 2k+1 VERTICES. Two are fixed (i and j).
+    So we choose 2k+1 - 2 = 2k - 1 intermediates from the g-1 available.
+    So dc_{2k+1} should be C(g-1, 2k-1)?
+
+    At g=2, 2k+1=3: C(1, 1) = 1 ✓
+    At g=4, 2k+1=3: C(3, 1) = 3. But data says dc3=? Let me check.
+    At g=4, 2k+1=5: C(3, 3) = 1.
+
+
+Done.
