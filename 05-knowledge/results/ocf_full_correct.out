@@ -1,0 +1,27 @@
+======================================================================
+CORRECT OCF VERIFICATION
+======================================================================
+
+n=5: 1024 tournaments
+
+Verifying H = I(Ω,2) for all tournaments...
+  ★ H = I(Ω,2) for ALL 1024 tournaments at n=5! ✓
+
+--- Cycle type breakdown ---
+  (t₃=0, d₅=0): 120 tournaments, H=[1], I=[1], α=[1]
+  (t₃=1, d₅=0): 120 tournaments, H=[3], I=[3], α=[1, 1]
+  (t₃=2, d₅=0): 240 tournaments, H=[5], I=[5], α=[1, 2, 0]
+  (t₃=3, d₅=1): 240 tournaments, H=[9], I=[9], α=[1, 4, 0, 0]
+  (t₃=4, d₅=1): 120 tournaments, H=[11], I=[11], α=[1, 5, 0, 0]
+  (t₃=4, d₅=2): 120 tournaments, H=[13], I=[13], α=[1, 6, 0, 0]
+  (t₃=4, d₅=3): 40 tournaments, H=[15], I=[15], α=[1, 7, 0, 0]
+  (t₃=5, d₅=2): 24 tournaments, H=[15], I=[15], α=[1, 7, 0, 0]
+
+--- Is Ω always complete at n=5? ---
+  bits=341: H=15, 7 cycles, non-adjacent pairs: 0
+  bits=40: H=15, 7 cycles, non-adjacent pairs: 0
+  bits=682: H=15, 7 cycles, non-adjacent pairs: 0
+
+======================================================================
+DONE
+======================================================================

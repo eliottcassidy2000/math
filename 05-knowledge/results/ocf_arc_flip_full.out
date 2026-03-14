@@ -1,0 +1,67 @@
+======================================================================
+FULL OCF ARC-FLIP VERIFICATION
+======================================================================
+
+n=5: 1024 tournaments, 10 edges each
+
+--- Verifying H = I(Ω,2) = 1 + 2α₁ ---
+(α₂=0 at n=5 since two disjoint odd cycles need ≥6 vertices)
+  FAIL: bits=40, H=15, α₁=5, α₂=0, predicted=11
+  FAIL: bits=41, H=13, α₁=5, α₂=0, predicted=11
+  FAIL: bits=42, H=13, α₁=5, α₂=0, predicted=11
+  FAIL: bits=44, H=13, α₁=5, α₂=0, predicted=11
+  FAIL: bits=68, H=13, α₁=5, α₂=0, predicted=11
+  OCF verified: 840/1024, failures: 184
+
+--- Arc-flip derivatives with full odd-cycle α₁ ---
+  (ΔH, Δα₁, Δα₂) → count, match?
+    (-12,  -4,  +0):    40 ✗
+    ( -8,  -4,  +0):   120 ✓
+    ( -8,  -3,  +0):   240 ✗
+    ( -6,  -3,  +0):   480 ✓
+    ( -6,  -1,  +0):   120 ✗
+    ( -4,  -2,  +0):   720 ✓
+    ( -4,  -1,  +0):   480 ✗
+    ( -2,  -1,  +0):  1320 ✓
+    ( -2,  +0,  +0):   480 ✗
+    ( +0,  +0,  +0):  2240 ✓
+    ( +2,  +0,  +0):   480 ✗
+    ( +2,  +1,  +0):  1320 ✓
+    ( +4,  +1,  +0):   480 ✗
+    ( +4,  +2,  +0):   720 ✓
+    ( +6,  +1,  +0):   120 ✗
+    ( +6,  +3,  +0):   480 ✓
+    ( +8,  +3,  +0):   240 ✗
+    ( +8,  +4,  +0):   120 ✓
+    (+12,  +4,  +0):    40 ✗
+
+  Mismatches: 10/19
+
+--- Cycle type breakdown at n=5 ---
+  (t₃, d₅) → count, H values, I(Ω,2)=1+2(t₃+d₅)
+    ( 0,  0):  120 tournaments, H=[1], predicted=1 ✓
+    ( 1,  0):  120 tournaments, H=[3], predicted=3 ✓
+    ( 2,  0):  240 tournaments, H=[5], predicted=5 ✓
+    ( 3,  1):   10 tournaments, H=[9], predicted=9 ✓
+    ( 3,  2):  110 tournaments, H=[9], predicted=11 ✗
+    ( 3,  3):  110 tournaments, H=[9], predicted=13 ✗
+    ( 3,  4):   10 tournaments, H=[9], predicted=15 ✗
+    ( 4,  1):    5 tournaments, H=[11], predicted=11 ✓
+    ( 4,  2):   55 tournaments, H=[11], predicted=13 ✗
+    ( 4,  3):   65 tournaments, H=[11, 13], predicted=15 ✗
+    ( 4,  4):   35 tournaments, H=[11, 13], predicted=17 ✗
+    ( 4,  5):   45 tournaments, H=[13, 15], predicted=19 ✗
+    ( 4,  6):   35 tournaments, H=[13, 15], predicted=21 ✗
+    ( 4,  7):   20 tournaments, H=[13, 15], predicted=23 ✗
+    ( 4,  8):   10 tournaments, H=[15], predicted=25 ✗
+    ( 4,  9):    5 tournaments, H=[15], predicted=27 ✗
+    ( 4, 10):    5 tournaments, H=[15], predicted=29 ✗
+    ( 5,  3):    1 tournaments, H=[15], predicted=17 ✗
+    ( 5,  4):    6 tournaments, H=[15], predicted=19 ✗
+    ( 5,  5):   10 tournaments, H=[15], predicted=21 ✗
+    ( 5,  6):    6 tournaments, H=[15], predicted=23 ✗
+    ( 5,  7):    1 tournaments, H=[15], predicted=25 ✗
+
+======================================================================
+DONE
+======================================================================
