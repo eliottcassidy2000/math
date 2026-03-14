@@ -1,0 +1,26 @@
+Directed 5-cycle count on n=5 tournaments:
+  0 directed 5-cycles: 480 tournaments (46.9%)
+  1 directed 5-cycles: 360 tournaments (35.2%)
+  2 directed 5-cycles: 144 tournaments (14.1%)
+  3 directed 5-cycles: 40 tournaments (3.9%)
+
+Note: each cyclic rotation gives the same cycle, and we fixed
+start vertex=0, so these are DISTINCT directed cycles.
+
+Total with ≥2: 184
+
+============================================================
+Impact on OCF:
+============================================================
+If a 5-element set has c directed 5-cycles:
+  Vertex-set approach: contributes 1 to α₁ (wrong)
+  Directed-cycle approach: contributes c to α₁ (correct)
+  These c cycles are all in a clique, so they contribute
+  I(K_c, 2) - 1 = 2c to H (not 2·1 = 2)
+
+  c=1: correct contribution = 2·1 = 2
+         vs-approach contribution = 2·1 = 2  
+  c=2: correct contribution = 2·2 = 4
+         vs-approach contribution = 2·1 = 2  ← ERROR!
+  c=3: correct contribution = 2·3 = 6
+         vs-approach contribution = 2·1 = 2  ← ERROR!
