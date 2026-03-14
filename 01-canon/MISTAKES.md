@@ -887,3 +887,46 @@ After any pivot subtraction, restart the row scan from the beginning (or at leas
 
 ### Lesson
 In sparse Gaussian elimination, fill-in from pivot subtraction can create new entries at rows that were not in the original column. These MUST be processed against their pivots. Always use a while loop that restarts after each subtraction, or maintain a priority queue of unprocessed rows.
+
+---
+
+## MISTAKE-023: α₁ Counts DIRECTED Odd Cycles, Not Vertex-Sets
+
+**Date discovered:** 2026-03-14
+**Found by:** opus-2026-03-14-S71d
+**Affects:** two_and_three_universality.py, i3_mod3_proof.py, vandermonde_sigma_connection.py, jacobsthal_23_deep.py (first version), and any script computing I(CG, x) by counting cycle vertex-sets
+
+### What was assumed
+
+The independence polynomial I(Ω, x) was computed by enumerating odd cycle **vertex-sets** (frozenset of vertices), counting each set once regardless of how many distinct directed cycles it supports.
+
+### Why it was wrong
+
+The conflict graph Ω(T) has vertices = **directed odd cycles** (definition in definitions.md line 37). For 3-cycles in tournaments, each vertex triple supports at most 1 directed 3-cycle, so vertex-set counting is correct. But for 5-cycles and above, a single vertex-set can support **multiple** distinct directed cycles:
+
+- Example: bits=40 at n=5, the 5-vertex set {0,1,2,3,4} supports **3** distinct directed 5-cycles
+- Vertex-set method gives α₁=5 → I(2)=11, but H=15
+- Directed-cycle method gives α₁=7 → I(2)=15 = H ✓
+
+### The correct framing
+
+When computing I(Ω, x):
+1. For each vertex-set of size k, enumerate ALL distinct directed k-cycles (normalize by fixing start vertex and direction)
+2. Each distinct directed cycle is a SEPARATE vertex of Ω(T)
+3. Two vertices of Ω are adjacent iff the underlying vertex-sets intersect
+
+**Exhaustive verification at n=5:**
+- Vertex-set method: 184/1024 mismatches with H
+- Directed-cycle method: 0/1024 mismatches with H
+
+### Impact
+
+- All α₁ values from scripts using vertex-set counting at n≥5 are WRONG (undercounted)
+- The Vandermonde extraction results (HYP-867, HYP-868) were based on the wrong α values
+- The 3/2 ratio result may still hold (it was measured within lambda fibers, not from α directly)
+- The structural insights about 7→8 transition are UNAFFECTED (vertex-set counting is correct for α₂ when cycles have different sizes)
+- Scripts need to be updated to use directed cycle enumeration
+
+### Lesson
+
+The definition says "vertices are **directed** odd cycles." For 3-cycles in tournaments, vertex-set = directed cycle (1-to-1). For k≥5 cycles, a k-vertex tournament subtournament can have multiple Hamiltonian cycles. Always enumerate directed cycles explicitly.

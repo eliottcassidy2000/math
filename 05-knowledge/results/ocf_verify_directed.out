@@ -1,0 +1,62 @@
+======================================================================
+DIRECTED vs VERTEX-SET CYCLE COUNTING
+======================================================================
+
+  Example: bits=40, n=5
+  Adjacency matrix:
+    [0 0 0 0 1]
+    [1 0 0 1 0]
+    [1 1 0 0 0]
+    [1 0 1 0 0]
+    [0 1 1 1 0]
+
+  Directed 3-cycles (raw): 4
+    0→4→1→0
+    0→4→2→0
+    0→4→3→0
+    1→3→2→1
+
+  Directed 5-cycles (normalized): 3
+    0→1→2→3→4→0
+    0→3→1→2→4→0
+    0→2→3→1→4→0
+
+======================================================================
+OCF VERIFICATION: DIRECTED CYCLES vs VERTEX SETS
+======================================================================
+
+  The definition says: 'vertices are directed odd cycles of T'
+  So each DISTINCT directed cycle is a separate vertex of Ω(T).
+  For 3-cycles: 1 directed cycle per vertex set (in a tournament).
+  For 5-cycles: MULTIPLE directed cycles possible per vertex set!
+
+======================================================================
+EXHAUSTIVE n=5: BOTH INTERPRETATIONS
+======================================================================
+
+  Vertex-set method: 184/1024 mismatches
+  Directed-cycle method: 0/1024 mismatches
+
+  DIRECTED CYCLE method is correct!
+  Must count distinct directed cycles, not just vertex sets.
+
+======================================================================
+DETAILED CASE: bits=40
+======================================================================
+  H = 15
+  Vertex sets: [{0, 1, 4}, {0, 2, 4}, {0, 3, 4}, {1, 2, 3}, {0, 1, 2, 3, 4}]
+  α₁ (vset) = 5
+  Directed 3-cycles: [(0, 4, 1), (0, 4, 2), (0, 4, 3), (1, 3, 2)]
+  Directed 5-cycles: [(0, 1, 2, 3, 4), (0, 3, 1, 2, 4), (0, 2, 3, 1, 4)]
+  α₁ (directed) = 7
+  α = [1, 7, 0, 0, 0, 0, 0, 0]
+  I(Ω,2) = 15, H = 15, match = True
+
+  5-cycles starting at 0: 3
+  Total directed 5-cycles (÷5 for rotation): 3
+  # directed 5-cycles (exact) = 3
+    0→4→1→3→2→0
+    0→4→2→1→3→0
+    0→4→3→2→1→0
+
+Done.
