@@ -1,0 +1,310 @@
+======================================================================
+PART 1: CYCLE PAIR BUDGET AT EACH n
+======================================================================
+
+  Cycle pair type (k1,k2) requires k1+k2 vertices.
+  At n=9, possible pairs:
+    (3,3): 6 vertices — YES (exists since n=6)
+    (3,5): 8 vertices — YES (exists since n=8)
+    (3,7): 10 vertices — NO! 3+7=10 > 9
+    (5,5): 10 vertices — NO! 5+5=10 > 9
+    (5,7): 12 vertices — NO!
+    (7,7): 14 vertices — NO!
+
+  So at n=9: α₂ = α₂^{33} + α₂^{35} only.
+  This explains why α₂^{37} = 0.
+
+  At n=10 = 5·2:
+    (3,3): YES     (3,5): YES     (3,7): YES (first time!)
+    (5,5): YES (first time! — this is the 5·2 connection)
+    So α₂ = α₂^{33} + α₂^{35} + α₂^{37} + α₂^{55}
+
+  At n=11:
+    (3,3): YES     (3,5): YES     (3,7): YES
+    (5,5): YES     (5,7): 12>11 NO
+    So α₂ same as n=10.
+
+  FIRST APPEARANCE OF EACH PAIR TYPE:
+
+    (3,3): first at n=6
+    (3,5): first at n=8
+    (3,7): first at n=10
+    (3,9): first at n=12
+    (3,11): first at n=14
+    (5,5): first at n=10
+    (5,7): first at n=12
+    (5,9): first at n=14
+    (5,11): first at n=16
+    (7,7): first at n=14
+    (7,9): first at n=16
+    (7,11): first at n=18
+    (9,9): first at n=18
+    (9,11): first at n=20
+
+======================================================================
+PART 2: 3-CYCLE PACKING — THE 9=3² STRUCTURE
+======================================================================
+
+  Searching for max α₃ at n=9 (100 random tournaments)...
+  Done: 9.8s
+
+  Top 5 by α₃:
+    α₃= 15, dc3= 28, α₂=293 (33:97,35:196), scores=(3, 3, 4, 4, 4, 4, 4, 5, 5)
+    α₃= 12, dc3= 29, α₂=323 (33:100,35:223), scores=(3, 4, 4, 4, 4, 4, 4, 4, 5)
+    α₃= 11, dc3= 23, α₂=208 (33:71,35:137), scores=(2, 3, 3, 3, 4, 5, 5, 5, 6)
+    α₃=  9, dc3= 26, α₂=252 (33:83,35:169), scores=(3, 3, 3, 4, 4, 4, 4, 5, 6)
+    α₃=  9, dc3= 25, α₂=230 (33:76,35:154), scores=(2, 3, 3, 4, 4, 5, 5, 5, 5)
+
+  Bottom 5 by α₃ (α₃=0):
+    α₃=0, dc3= 15, α₂= 31, scores=(2, 2, 3, 3, 3, 5, 5, 5, 8)
+    α₃=0, dc3= 19, α₂= 58, scores=(3, 3, 3, 3, 3, 4, 4, 5, 8)
+    α₃=0, dc3= 15, α₂= 42, scores=(2, 2, 2, 4, 4, 4, 4, 7, 7)
+    α₃=0, dc3= 11, α₂= 14, scores=(2, 2, 2, 3, 3, 4, 6, 6, 8)
+    α₃=0, dc3= 16, α₂= 30, scores=(0, 3, 3, 4, 4, 5, 5, 6, 6)
+
+======================================================================
+PART 3: SCORE SEQUENCE → α₃ PREDICTION
+======================================================================
+
+  49 distinct score sequences in 100 samples
+
+  Score → α₃ ranges:
+    (0, 3, 3, 4, 4, 5, 5, 6, 6): α₃ in [0, 0] (2 samples)
+    (1, 2, 3, 3, 4, 5, 5, 6, 7): α₃ in [0, 4] (3 samples)
+    (1, 2, 3, 4, 4, 5, 5, 6, 6): α₃ in [2, 4] (2 samples)
+    (1, 2, 3, 4, 5, 5, 5, 5, 6): α₃ in [1, 4] (2 samples)
+    (1, 3, 3, 3, 4, 5, 5, 6, 6): α₃ in [1, 3] (2 samples)
+    (1, 3, 3, 4, 4, 4, 5, 5, 7): α₃ in [2, 5] (2 samples)
+    (1, 3, 3, 4, 4, 5, 5, 5, 6): α₃ in [2, 6] (5 samples)
+    (1, 3, 4, 4, 4, 4, 5, 5, 6): α₃ in [5, 5] (2 samples)
+    (2, 2, 2, 3, 4, 5, 5, 6, 7): α₃ in [2, 2] (2 samples)
+    (2, 2, 3, 3, 4, 4, 5, 6, 7): α₃ in [0, 3] (3 samples)
+    (2, 2, 3, 3, 4, 5, 5, 5, 7): α₃ in [2, 2] (2 samples)
+    (2, 2, 3, 3, 4, 5, 5, 6, 6): α₃ in [2, 6] (6 samples)
+    (2, 2, 3, 4, 4, 4, 5, 5, 7): α₃ in [1, 5] (2 samples)
+    (2, 2, 3, 4, 4, 4, 5, 6, 6): α₃ in [3, 3] (2 samples)
+    (2, 2, 3, 4, 4, 5, 5, 5, 6): α₃ in [2, 4] (4 samples)
+    (2, 2, 4, 4, 4, 4, 5, 5, 6): α₃ in [4, 7] (3 samples)
+    (2, 3, 3, 3, 3, 5, 5, 6, 6): α₃ in [2, 6] (2 samples)
+    (2, 3, 3, 3, 4, 4, 5, 6, 6): α₃ in [4, 9] (4 samples)
+    (2, 3, 3, 3, 4, 5, 5, 5, 6): α₃ in [4, 11] (6 samples)
+    (2, 3, 3, 4, 4, 4, 4, 6, 6): α₃ in [4, 6] (2 samples)
+    (2, 3, 3, 4, 4, 4, 5, 5, 6): α₃ in [4, 8] (4 samples)
+    (2, 3, 3, 4, 4, 5, 5, 5, 5): α₃ in [5, 9] (7 samples)
+    (2, 3, 4, 4, 4, 4, 4, 5, 6): α₃ in [5, 8] (2 samples)
+    (2, 3, 4, 4, 4, 4, 5, 5, 5): α₃ in [7, 8] (2 samples)
+    (3, 3, 3, 3, 4, 4, 4, 5, 7): α₃ in [3, 7] (2 samples)
+    (3, 3, 3, 4, 4, 4, 4, 5, 6): α₃ in [7, 9] (2 samples)
+
+======================================================================
+PART 4: I(Omega, -1) AT n=9
+======================================================================
+
+  I(-1) = 1 - α₁ + α₂ - α₃
+  At n≤8: α₃=0, so I(-1)=1-α₁+α₂
+  At n=9: the -α₃ term makes I(-1) even MORE negative
+
+  I(-1) statistics at n=9 (100 samples):
+    mean: -245.1
+    range: [-507, -17]
+    I(-1) > 0: 0
+    I(-1) = 0: 0
+    I(-1) < 0: 100
+
+  Transitive tournament at n=9: bits=0
+    dc3=0, H=1
+    (Transitive: dc3=0, α₁=0, α₂=0, α₃=0, I(-1)=1)
+    But n=8 showed I(-1)∈[-158,-6] for ALL tournaments.
+    At n=9: is there any T with I(-1)≥0?
+
+  Near-transitive tournaments (flip 1 edge from transitive):
+    flip 0: dc3=0, α₁=0, α₂=0, α₃=0, I(-1)=1
+    flip 1: dc3=1, α₁=1, α₂=0, α₃=0, I(-1)=0
+    flip 2: dc3=2, α₁=2, α₂=0, α₃=0, I(-1)=-1
+    flip 3: dc3=3, α₁=4, α₂=0, α₃=0, I(-1)=-3
+    flip 4: dc3=4, α₁=8, α₂=0, α₃=0, I(-1)=-7
+
+======================================================================
+PART 5: k-NACCI CONVERGENCE AND EVALUATION POINTS
+======================================================================
+
+  The k-nacci golden ratio phi_k approaches 2 as k -> infinity:
+    phi_k = 2 - 1/2^k + O(k/4^k)
+
+  The weighted k-nacci ratio psi_k approaches 3:
+    psi_k = 3 - (2/3)^k + O(k*(4/9)^k)
+
+  KEY INSIGHT: The evaluation points for I(Omega, x) are 2, 3, 4, 5, ...
+  The k-nacci roots APPROACH these evaluation points from below.
+
+  Precisely:
+    k-nacci root phi_k: 2 - epsilon_2(k)  where epsilon_2 = 1/2^k
+    weighted root psi_k: 3 - epsilon_3(k)  where epsilon_3 = (2/3)^k
+
+  At tournament size n:
+    - We need evaluation points 2, 3, ..., floor(n/3)+1
+    - The k-nacci roots for k ~ n are VERY close to these integers
+    - The "error" epsilon_m(n) = ((m-1)/m)^n
+
+  For n=9 = 3^2:
+    eps_2(9) = 1/512 ~ 0.002  (effectively 2)
+    eps_3(9) = (2/3)^9 ~ 0.026 (close to 3)
+    eps_4(9) = (3/4)^9 ~ 0.075 (somewhat close to 4)
+
+  The PRECISION HIERARCHY:
+    2 is known to precision 1/2^n
+    3 is known to precision (2/3)^n
+    4 is known to precision (3/4)^n
+
+  The ratio of consecutive precisions: (err_{m+1}/err_m) = (m/(m-1))^n · ((m-1)/m)
+  For large n, this ratio ~ (m/(m-1))^n, growing EXPONENTIALLY.
+
+  So "knowing 2" is EXPONENTIALLY more precise than "knowing 3",
+  which is exponentially more precise than "knowing 4".
+
+  THIS IS WHY 2 AND 3 ARE SPECIAL:
+    - 2 is the dominant eigenvalue (most information)
+    - 3 gives the first correction (needed only when α₂ > 0, i.e., n ≥ 6)
+    - 4 gives the second correction (needed only when α₃ > 0, i.e., n ≥ 9)
+
+  The "keys to the universe" hierarchy:
+    Level 0: know 2 → know H (sufficient for n ≤ 5)
+    Level 1: know 2,3 → know α₁,α₂ (sufficient for n ≤ 8)
+    Level 2: know 2,3,4 → know α₁,α₂,α₃ (sufficient for n ≤ 11)
+    Level k: know 2,...,k+2 → know α₁,...,α_{k+1} (sufficient for n ≤ 3k+2)
+
+  But 4 = 2², so "knowing 4" IS knowing 2 at second order!
+  And 8 = 2³, and 9 = 3² — these are COMBINATIONS of knowing 2 and 3.
+
+  The "truly new" information enters at primes:
+    2 (Level 0), 3 (Level 1), 5 (Level 3, n ≥ 15), 7 (Level 5, n ≥ 21)
+
+  Information hierarchy — Vandermonde determinants and prime content:
+    Level 1: points [2, 3], det=1, primes=, sufficient n<=5
+    Level 2: points [2, 3, 4], det=2, primes=2, sufficient n<=8
+    Level 3: points [2, 3, 4, 5], det=12, primes=2^2*3, sufficient n<=11
+    Level 4: points [2, 3, 4, 5, 6], det=288, primes=2^5*3^2, sufficient n<=14
+    Level 5: points [2, 3, 4, 5, 6, 7], det=34560, primes=2^8*3^3*5, sufficient n<=17
+    Level 6: points [2, 3, 4, 5, 6, 7, 8], det=24883200, primes=2^12*3^5*5^2, sufficient n<=20
+    Level 7: points [2, 3, 4, 5, 6, 7, 8, 9], det=125411328000, primes=2^16*3^7*5^3*7, sufficient n<=23
+
+======================================================================
+PART 6: PERFECT 3-CYCLE PACKING AT n=9
+======================================================================
+
+  Circulant tournament C_9^{1,2,3,4}:
+    Scores: (4, 4, 4, 4, 4, 4, 4, 4, 4)
+    dc3=30, dc5=144, dc7=441, dc9=222
+    α₁=837, α₂=354 (33:120, 35:234), α₃=22
+    H=3267
+    I(-1) = -504
+
+  Correlation: dc3 vs α₃
+    corr(dc3, α₃) = 0.7773
+    corr(α₂^{33}, α₃) = 0.8769
+
+  Fraction of 3-cycle triples that are disjoint:
+    dc3= 28, C(dc3,3)=  3276, α₃= 15, ratio=0.004579
+    dc3= 29, C(dc3,3)=  3654, α₃= 12, ratio=0.003284
+    dc3= 23, C(dc3,3)=  1771, α₃= 11, ratio=0.006211
+    dc3= 26, C(dc3,3)=  2600, α₃=  9, ratio=0.003462
+    dc3= 25, C(dc3,3)=  2300, α₃=  9, ratio=0.003913
+    dc3= 25, C(dc3,3)=  2300, α₃=  9, ratio=0.003913
+    dc3= 22, C(dc3,3)=  1540, α₃=  9, ratio=0.005844
+    dc3= 24, C(dc3,3)=  2024, α₃=  8, ratio=0.003953
+    dc3= 26, C(dc3,3)=  2600, α₃=  8, ratio=0.003077
+    dc3= 25, C(dc3,3)=  2300, α₃=  8, ratio=0.003478
+
+======================================================================
+PART 7: VANDERMONDE GENERATING FUNCTION INTERPRETATION
+======================================================================
+
+  I(Omega, x) = sum_k alpha_k x^k is a GENERATING FUNCTION.
+
+  The "keys" 2 and 3 are the evaluation points that EXTRACT the coefficients.
+
+  Consider the Z-transform / probability generating function viewpoint:
+    I(x) evaluated at x=2 weights each independent k-set by 2^k.
+    I(x) evaluated at x=3 weights each independent k-set by 3^k.
+
+  So H = I(2) = sum_k alpha_k 2^k is a BINARY-WEIGHTED count.
+  And I_3 = I(3) = sum_k alpha_k 3^k is a TERNARY-WEIGHTED count.
+
+  The Hamiltonian paths are the BINARY counting of cycle independence!
+
+  Now: what is the NATURAL basis for tournament information?
+  If we define x_k = alpha_k / alpha_max_k where alpha_max_k is the max
+  possible alpha_k, then x_k in [0,1] and
+    I(x) = 1 + alpha_max_1 x_1 x + alpha_max_2 x_2 x^2 + ...
+
+  This normalizes the information content of each level.
+
+  At n=9:
+    alpha_max_1 ~ 819 (from data)
+    alpha_max_2 ~ 323
+    alpha_max_3 ~ 16
+
+  The ratio alpha_max_k / alpha_max_{k-1} shrinks rapidly.
+  Higher-order information is increasingly RARE.
+
+  THIS is why knowing 2 and 3 "gives the keys":
+  The alpha_k values are SPARSE at high k, so the higher evaluation
+  points contribute very little to the total information.
+
+  Information concentration (how much of I(2) comes from each level):
+    H=2777: level1=53.4%, level2=42.2%, level3=4.3%
+    H=3027: level1=54.1%, level2=42.7%, level3=3.2%
+    H=1935: level1=52.4%, level2=43.0%, level3=4.5%
+    H=2321: level1=53.4%, level2=43.4%, level3=3.1%
+    H=2181: level1=54.5%, level2=42.2%, level3=3.3%
+
+======================================================================
+PART 8: WHY 2 AND 3 — THE DEEP DUALITY
+======================================================================
+
+  THESIS: 2 and 3 are the keys because they are the SIMPLEST PRIMES
+  and the FIRST TWO POINTS of the Vandermonde interpolation scheme.
+
+  But there's a DEEPER reason connected to tournament structure:
+
+  1. "2" = the binary nature of tournaments (each edge has 2 orientations)
+     → H = I(2) counts Hamiltonian paths (binary evaluation)
+     → Redei's theorem: H ≡ 1 (mod 2) — PARITY is the first invariant
+
+  2. "3" = the smallest odd cycle (triangle)
+     → I(3) uses ternary weights — EXACTLY the weight needed to "see" triangles
+     → dc3 = C(n,3) - sum C(s_i,2) — triangle count is the FIRST non-trivial invariant
+     → I_3 ≡ 1 (mod 3) — TERNARY parity is the second invariant
+
+  3. "6 = 2*3" = the Vandermonde determinant = LCM of the first two primes
+     → 6 = 3! — also the first non-trivial factorial
+     → The integrality constraint mod 6 combines BOTH parities
+
+  4. The k-nacci approach rates:
+     → phi_k → 2 at rate 1/2^k (exponential in k)
+     → psi_k → 3 at rate (2/3)^k (exponential, but slower)
+     → The RATIO of precision losses = (4/3)^k
+     → At n=9: 3 is 13x less precisely known than 2
+     → At n=20: 3 is 1046x less precisely known than 2
+
+  5. The 9 = 3^2 connection:
+     → At n=9, α₃ appears → need evaluation at x=4=2^2
+     → "4 is the square of 2" — second-order knowledge of 2
+     → The Vandermonde (2,3,4) has det 48 = 2^4 * 3 — STILL only primes 2,3
+     → So the "3^2 threshold" is handled by "2^2 knowledge"
+
+  6. The 10 = 5*2 connection:
+     → At n=10, (5,5) pairs appear — the PRIME 5 gets its own pairing structure
+     → But we STILL don't need evaluation at x=5 (since α₄ doesn't appear until n=12)
+     → 5 enters the Vandermonde only at k=3 (points 2,3,4,5, det=1440=2^5*3^2*5)
+     → This happens at n=9+, but the ACTUAL need for x=5 is n=15+ (α₅ first at n=15)
+
+  SUMMARY: "2 and 3 are the keys to the universe" means:
+  - At small n (≤8): LITERALLY TRUE. Two evaluation points suffice.
+  - At n=9-11: Still true, because 4=2^2 carries no new prime information.
+  - At n≥15: 5 enters as a genuinely new prime. The universe expands.
+  - At ALL n: 2 and 3 are the DOMINANT evaluation points, carrying
+    exponentially more information than higher points.
+    The "keys" are always the most important, even when other keys exist.
+
+Done.
