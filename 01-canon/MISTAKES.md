@@ -519,7 +519,7 @@ THM-059 corrected. The (j+1)^2 factor now has a combinatorial explanation via th
 
 ---
 
-## MISTAKE-010: Missing 2^s Factor in M[a,b] Walsh Formula (THM-080)
+## MISTAKE-013b: Missing 2^s Factor in M[a,b] Walsh Formula (THM-080)
 
 **Date discovered:** 2026-03-07 (S35c7)
 **Found by:** opus-2026-03-07-S35c7
@@ -581,7 +581,7 @@ When constructing a circulant tournament from a connection set S ⊂ Z_p^*, ALWA
 
 ---
 
-## MISTAKE-016: Wrong formula for ker(d_2^rel) in relative homology
+## MISTAKE-016b: Wrong formula for ker(d_2^rel) in relative homology
 
 **Date discovered:** 2026-03-08 (kind-pasteur-S41)
 **Found by:** kind-pasteur-S41, via manual computation contradicting script output
@@ -738,7 +738,7 @@ Correct results: β_{n-1} = β_{n-2} = 0 for ALL tournaments at n=3-8 (HYP-423, 
 
 ---
 
-## MISTAKE-019: THM-136 Sign Convention Error
+## MISTAKE-019b: THM-136 Sign Convention Error
 
 **Date discovered:** 2026-03-12
 **Found by:** kind-pasteur-S57
@@ -822,7 +822,7 @@ When reading "path homology" results, check which convention is used.
 
 ---
 
-## MISTAKE-019: TWO bugs in independent set backtracking algorithm
+## MISTAKE-019c: TWO bugs in independent set backtracking algorithm
 
 **Date discovered:** 2026-03-13, kind-pasteur-S60
 **Found by:** kind-pasteur
