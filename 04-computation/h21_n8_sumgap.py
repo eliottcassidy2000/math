@@ -2,127 +2,166 @@
 h21_n8_sumgap.py — Investigate whether H=21 occurs at n=8.
 
 H(T) = number of Hamiltonian paths in tournament T.
-Uses DP on bitmasks: dp[S][v] = # HP using vertex set S ending at v.
-Total work per tournament: O(2^n * n^2) ~ 2^8 * 64 = 16384 ops.
+Uses DP on bitmasks with numpy vectorization for speed.
 
-We generate 500k random tournaments on n=8 and check:
+Generates 500k random tournaments on n=8 and checks:
 1. Does H=21 ever occur?
 2. Distribution of H values near 21
-3. The "sum gap" alpha_1 + 2*alpha_2 = 10 question
-   (H=21 means I(Omega,2)=21, i.e., 1+2*alpha_1+4*alpha_2+...=21,
-    so alpha_1+2*alpha_2+... = 10 with higher terms contributing)
-
-Since H = # Hamiltonian paths is much easier to compute than I(Omega,2),
-we just check whether H=21 is achievable.
 """
 
 import numpy as np
 from collections import Counter
 import time
+import ctypes
+import os
+import tempfile
+import subprocess
 import sys
 
-def count_hp_dp(adj, n):
-    """Count Hamiltonian paths using bitmask DP.
+N = 8
+FULL = (1 << N) - 1
+NUM_SAMPLES = 500_000
 
-    dp[mask][v] = number of Hamiltonian paths using vertices in 'mask' ending at v.
-    mask is a bitmask of n bits.
-    """
-    full = (1 << n) - 1
-    # dp[mask][v]: use arrays for speed
-    # Initialize: single vertex paths
-    dp = np.zeros((1 << n, n), dtype=np.int64)
-    for v in range(n):
-        dp[1 << v, v] = 1
+# Write and compile a C extension for the DP
+C_CODE = r"""
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdint.h>
 
-    for mask in range(1, 1 << n):
-        popcount = bin(mask).count('1')
-        if popcount < 2:
-            continue
-        for v in range(n):
-            if not (mask & (1 << v)):
-                continue
-            # v is the last vertex; sum over predecessors u
-            prev_mask = mask ^ (1 << v)
-            for u in range(n):
-                if (prev_mask & (1 << u)) and adj[u][v]:
-                    dp[mask, v] += dp[prev_mask, u]
+#define N 8
+#define FULL ((1<<N)-1)
 
-    return int(dp[full].sum())
+/* Count Hamiltonian paths in a tournament given by adj[i][j] */
+int count_hp(const int adj[N][N]) {
+    /* dp[mask][v] = # of Hamiltonian paths using vertices in mask, ending at v */
+    int dp[1<<N][N];
+    memset(dp, 0, sizeof(dp));
 
+    for (int v = 0; v < N; v++)
+        dp[1<<v][v] = 1;
 
-def count_hp_dp_fast(adj, n):
-    """Faster DP using Python lists instead of numpy for small n."""
-    full = (1 << n) - 1
-    # dp[mask] is a list of n values
-    dp = [[0] * n for _ in range(1 << n)]
-    for v in range(n):
-        dp[1 << v][v] = 1
+    for (int mask = 3; mask <= FULL; mask++) {
+        int pc = __builtin_popcount(mask);
+        if (pc < 2) continue;
+        for (int v = 0; v < N; v++) {
+            if (!(mask & (1<<v))) continue;
+            int prev = mask ^ (1<<v);
+            int total = 0;
+            for (int u = 0; u < N; u++) {
+                if ((prev & (1<<u)) && adj[u][v])
+                    total += dp[prev][u];
+            }
+            dp[mask][v] = total;
+        }
+    }
 
-    for mask in range(3, 1 << n):  # skip 0 and single-bit masks
-        # For each set bit v in mask
-        m = mask
-        while m:
-            v = (m & -m).bit_length() - 1  # lowest set bit
-            m &= m - 1
-            prev_mask = mask ^ (1 << v)
-            if prev_mask == 0:
-                continue
-            total = 0
-            # Sum over predecessors u in prev_mask that have edge u->v
-            pm = prev_mask
-            while pm:
-                u = (pm & -pm).bit_length() - 1
-                pm &= pm - 1
-                if adj[u][v]:
-                    total += dp[prev_mask][u]
-            dp[mask][v] = total
+    int h = 0;
+    for (int v = 0; v < N; v++)
+        h += dp[FULL][v];
+    return h;
+}
 
-    return sum(dp[full])
+/* Process batch of tournaments.
+   arcs: flat array of num_tournaments * N*(N-1)/2 bytes (0 or 1).
+   For pair (i,j) with i<j, arcs[t*28 + idx] = 1 means i->j, 0 means j->i.
+   results: output array of num_tournaments ints.
+*/
+void process_batch(const unsigned char *arcs, int *results, int num_tournaments) {
+    int adj[N][N];
+    int pair_idx;
+
+    for (int t = 0; t < num_tournaments; t++) {
+        memset(adj, 0, sizeof(adj));
+        pair_idx = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = i+1; j < N; j++) {
+                if (arcs[t * 28 + pair_idx]) {
+                    adj[i][j] = 1;
+                } else {
+                    adj[j][i] = 1;
+                }
+                pair_idx++;
+            }
+        }
+        results[t] = count_hp(adj);
+    }
+}
+"""
+
+def compile_c_extension():
+    """Compile the C code into a shared library."""
+    src_path = "/tmp/_hp_count.c"
+    lib_path = "/tmp/_hp_count.so"
+
+    with open(src_path, "w") as f:
+        f.write(C_CODE)
+
+    result = subprocess.run(
+        ["gcc", "-O3", "-march=native", "-shared", "-fPIC", "-o", lib_path, src_path],
+        capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        print("C compilation failed:", result.stderr)
+        return None
+
+    return ctypes.CDLL(lib_path)
 
 
 def main():
-    n = 8
-    num_samples = 500_000
-    batch_size = 1000
-
-    print(f"Investigating H=21 at n={n}")
-    print(f"Generating {num_samples} random tournaments")
-    print(f"Using bitmask DP: O(2^{n} * {n}^2) = {(1<<n)*n*n} ops per tournament")
+    print(f"Investigating H=21 at n={N}")
+    print(f"Generating {NUM_SAMPLES} random tournaments")
     print()
 
+    # Compile C extension
+    print("Compiling C extension...", flush=True)
+    lib = compile_c_extension()
+    if lib is None:
+        print("FATAL: Could not compile C extension")
+        sys.exit(1)
+    print("C extension compiled successfully.")
+
+    lib.process_batch.argtypes = [
+        ctypes.POINTER(ctypes.c_ubyte),  # arcs
+        ctypes.POINTER(ctypes.c_int),    # results
+        ctypes.c_int                     # num_tournaments
+    ]
+    lib.process_batch.restype = None
+
     rng = np.random.default_rng(42)
+    num_pairs = N * (N - 1) // 2  # 28
 
     h_counter = Counter()
     t0 = time.time()
+    batch_size = 50000
 
-    # Pre-build adjacency for speed
-    for batch_start in range(0, num_samples, batch_size):
-        batch_end = min(batch_start + batch_size, num_samples)
+    for batch_start in range(0, NUM_SAMPLES, batch_size):
+        batch_end = min(batch_start + batch_size, NUM_SAMPLES)
         actual_batch = batch_end - batch_start
 
-        for _ in range(actual_batch):
-            # Generate random tournament: for each pair i<j, flip a coin
-            adj = [[0]*n for _ in range(n)]
-            for i in range(n):
-                for j in range(i+1, n):
-                    if rng.random() < 0.5:
-                        adj[i][j] = 1
-                    else:
-                        adj[j][i] = 1
+        # Generate random arcs: for each pair (i<j), 1 means i->j
+        arcs = rng.integers(0, 2, size=(actual_batch, num_pairs), dtype=np.uint8)
+        arcs_flat = np.ascontiguousarray(arcs.reshape(-1))
 
-            h = count_hp_dp_fast(adj, n)
-            h_counter[h] += 1
+        results = np.zeros(actual_batch, dtype=np.int32)
+
+        lib.process_batch(
+            arcs_flat.ctypes.data_as(ctypes.POINTER(ctypes.c_ubyte)),
+            results.ctypes.data_as(ctypes.POINTER(ctypes.c_int)),
+            ctypes.c_int(actual_batch)
+        )
+
+        for h_val in results:
+            h_counter[h_val] += 1
 
         elapsed = time.time() - t0
         done = batch_end
         rate = done / elapsed if elapsed > 0 else 0
-        eta = (num_samples - done) / rate if rate > 0 else 0
-
-        if done % 10000 == 0 or done == num_samples:
-            print(f"  {done}/{num_samples} done  ({rate:.0f}/s, ETA {eta:.0f}s)", flush=True)
+        eta = (NUM_SAMPLES - done) / rate if rate > 0 else 0
+        print(f"  {done}/{NUM_SAMPLES} done  ({rate:.0f}/s, ETA {eta:.0f}s)", flush=True)
 
     total_time = time.time() - t0
-    print(f"\nCompleted in {total_time:.1f}s ({num_samples/total_time:.0f} tournaments/s)")
+    print(f"\nCompleted in {total_time:.1f}s ({NUM_SAMPLES/total_time:.0f} tournaments/s)")
 
     # Results
     print("\n" + "="*60)
@@ -130,13 +169,13 @@ def main():
     print("="*60)
     for h_val in sorted(h_counter.keys()):
         count = h_counter[h_val]
-        pct = 100.0 * count / num_samples
+        pct = 100.0 * count / NUM_SAMPLES
         print(f"  H={h_val:6d}: {count:8d} ({pct:6.3f}%)")
 
     print("\n" + "="*60)
     print("H VALUES NEAR 21")
     print("="*60)
-    for h_val in range(10, 32):
+    for h_val in range(10, 36):
         count = h_counter.get(h_val, 0)
         marker = " <--- TARGET" if h_val == 21 else ""
         print(f"  H={h_val:4d}: {count:8d}{marker}")
@@ -146,48 +185,54 @@ def main():
     print("="*60)
     h21_count = h_counter.get(21, 0)
     if h21_count > 0:
-        print(f"  YES! H=21 occurred {h21_count} times out of {num_samples}")
+        print(f"  YES! H=21 occurred {h21_count} times out of {NUM_SAMPLES}")
     else:
-        print(f"  NO. H=21 never occurred in {num_samples} samples.")
+        print(f"  NO. H=21 never occurred in {NUM_SAMPLES} samples.")
 
-    # Check odd values near 21
+    # Check parity
     print("\n" + "="*60)
-    print("ODD H VALUES (H must be odd for odd n by Redei)")
+    print("H PARITY ANALYSIS (n=8 is even)")
     print("="*60)
-    print("  Note: n=8 is EVEN, so H can be even or odd.")
-    odd_h = {h: c for h, c in h_counter.items() if h % 2 == 1}
-    even_h = {h: c for h, c in h_counter.items() if h % 2 == 0}
-    print(f"  Odd H values found:  {len(odd_h)} distinct values, {sum(odd_h.values())} total")
-    print(f"  Even H values found: {len(even_h)} distinct values, {sum(even_h.values())} total")
+    odd_vals = sorted([h for h in h_counter if h % 2 == 1])
+    even_vals = sorted([h for h in h_counter if h % 2 == 0])
+    odd_count = sum(h_counter[h] for h in odd_vals)
+    even_count = sum(h_counter[h] for h in even_vals)
+    print(f"  Odd H values:  {len(odd_vals)} distinct, {odd_count} total ({100*odd_count/NUM_SAMPLES:.1f}%)")
+    print(f"  Even H values: {len(even_vals)} distinct, {even_count} total ({100*even_count/NUM_SAMPLES:.1f}%)")
+    if odd_vals:
+        print(f"  Odd H list: {odd_vals[:40]}{'...' if len(odd_vals)>40 else ''}")
+    if even_vals:
+        print(f"  Even H list: {even_vals[:40]}{'...' if len(even_vals)>40 else ''}")
 
     # Summary statistics
     all_h = []
     for h_val, count in h_counter.items():
         all_h.extend([h_val] * count)
     all_h = np.array(all_h)
-    print(f"\n  min(H) = {all_h.min()}")
-    print(f"  max(H) = {all_h.max()}")
-    print(f"  mean(H) = {all_h.mean():.2f}")
+    print(f"\n  min(H)    = {all_h.min()}")
+    print(f"  max(H)    = {all_h.max()}")
+    print(f"  mean(H)   = {all_h.mean():.2f}")
     print(f"  median(H) = {np.median(all_h):.1f}")
-    print(f"  std(H) = {all_h.std():.2f}")
+    print(f"  std(H)    = {all_h.std():.2f}")
 
-    # Check: what H values are MISSING in a range?
+    # Missing values in range
     h_min, h_max = int(all_h.min()), int(all_h.max())
     missing = [h for h in range(h_min, h_max+1) if h not in h_counter]
     if missing:
-        print(f"\n  Missing H values in [{h_min}, {h_max}]: {missing[:50]}")
-        if len(missing) > 50:
-            print(f"    ... and {len(missing)-50} more")
+        print(f"\n  Missing H values in [{h_min}, {h_max}]:")
+        # Show in chunks
+        for i in range(0, len(missing), 20):
+            chunk = missing[i:i+20]
+            print(f"    {chunk}")
 
-    # Check H mod 2 pattern
+    # H mod 4 analysis
     print("\n" + "="*60)
-    print("H PARITY ANALYSIS")
+    print("H MOD 4 ANALYSIS")
     print("="*60)
-    # At n=8 (even), what's the H parity pattern?
-    for parity_name, subset in [("even", even_h), ("odd", odd_h)]:
-        if subset:
-            vals = sorted(subset.keys())
-            print(f"  {parity_name} H values: {vals[:30]}{'...' if len(vals)>30 else ''}")
+    for r in range(4):
+        vals = sorted([h for h in h_counter if h % 4 == r])
+        total = sum(h_counter[h] for h in vals)
+        print(f"  H ≡ {r} (mod 4): {len(vals)} distinct, {total} total ({100*total/NUM_SAMPLES:.1f}%)")
 
 
 if __name__ == "__main__":
