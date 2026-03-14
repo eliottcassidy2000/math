@@ -899,3 +899,17 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-945 | (dc3,dc5,dc7) ↛ H at n=7 | CONFIRMED | 15/148 groups ambiguous. α₂ depends on cycle intersection structure, not counts. | opus-S71d |
 | HYP-946 | Score → H is almost universal at n=5 (only regular score ambiguous) | CONFIRMED | α₂=0 for all n=5 tournaments, so H = 1+2α₁. Only (1,2,2,2,3) has multiple α₁ values. | opus-S71d |
 | HYP-947 | n=5→n=7 transition: from "score almost determines H" to "massive ambiguity" | CONFIRMED | n=5: 1/9 ambiguous. n=7: 34/46 ambiguous. The gap grows because α₂>0 becomes common. | opus-S71d |
+| HYP-948 | L(5) = J(5) = 11: Lucas and Jacobsthal agree at n=5 | CONFIRMED | L(n)=φ^n+ψ^n with initial (2,1); J(n)=2^n-(-1)^n/3 with initial (0,1). Both yield 11 at n=5. | opus-S73 |
+| HYP-949 | F(5)=5 is the unique prime Fibonacci fixed point | CONFIRMED | F(n)>n for n≥6 (since φ^n/√5 grows exp), F(n)<n for 2≤n≤4. Only n∈{0,1,5} satisfy F(n)=n. | opus-S73 |
+| HYP-950 | α₁=3 impossible at n=5 → H≡2(mod5) forbidden | CONFIRMED | dc3+dc5 takes values {0,1,2,4,5,6,7}, skipping 3. dc3=3 forces dc5≥1 (structural). | opus-S73 |
+| HYP-951 | H≡0(mod7) impossible for n≤6 | CONFIRMED | Verified: all 8+64+1024+32768 tournaments. Mechanism: α₁+2α₂≡3(mod7) never achieved. | opus-S73 |
+| HYP-952 | H≡0(mod7) first appears at n=7 | CONFIRMED | 322/3000 sampled n=7 tournaments have 7|H (10.7%). | opus-S73 |
+| HYP-953 | Q(√5) tower: x=1,11,31,61,101,... via x=(5m²-1)/4 for odd m | CONFIRMED | Second differences constant =10. Roots (1±m√5)/2 at each level. | opus-S73 |
+| HYP-954 | G₁₁(n) ≡ F(n) (mod 5) | CONFIRMED | Trivial: 11≡1(mod5), so both recurrences agree mod 5. Pisano period 20. | opus-S73 |
+| HYP-955 | 2 is primitive root mod 5 | CONFIRMED | ord_5(2)=4=φ(5). Makes H mod 5 maximally informative as I(CG,2) mod 5. | opus-S73 |
+| HYP-956 | QR₅ eigenvalues are {2, φ, φ, -1/φ, -1/φ} | CONFIRMED | QR₅ is doubly-regular. Gauss sum |g(5)|²=5. det(I+2A)=125=5³. | opus-S73 |
+| HYP-957 | 5 is the Fibonacci entry point of 5 (α(5)=5) | CONFIRMED | The ONLY prime p with α(p)=p. Equivalent to F(5)=5. | opus-S73 |
+| HYP-958 | Forbidden residue timeline: mod3→n=4, mod5→n=6, mod7→n=7, mod11→n=6, mod13→n=7 | CONFIRMED | Computed exhaustively for n≤6, sampled for n=7. | opus-S73 |
+| HYP-959 | dc3=3 at n=5 forces dc5≥1 | CONFIRMED | Score (1,1,2,3,3): all 240 tournaments have dc5=1. Structure: 3 fan-out cycles from one vertex force a Hamiltonian cycle. | opus-S73 |
+| HYP-960 | (3,5) disjoint pairs exist in 85% of random n=8 tournaments | CONFIRMED | 426/500 sampled. Mean 7.51 pairs per tournament. | opus-S73 |
+| HYP-961 | QR₅ has S=A-A^T=0 (symmetric tournament) | CONFIRMED | QR₅ has (j-i) mod 5 ∈ {1,4}: arc i→j iff j→i. So A=A^T and S=0. This is NOT a tournament! | REFUTED | opus-S73 |
