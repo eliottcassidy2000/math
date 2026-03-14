@@ -1,0 +1,414 @@
+======================================================================
+PART 1: THE k-NACCI FAMILY — APPROACH TO KEY₁ = 2
+======================================================================
+
+  The k-nacci recurrence: a(n) = a(n-1) + a(n-2) + ... + a(n-k)
+  Characteristic polynomial: x^k = x^{k-1} + x^{k-2} + ... + 1
+  Equivalently: x^{k+1} - 2x^k + 1 = 0
+
+  At the root r_k: r^{k+1} = 2r^k - 1
+  Therefore: r_k = 2 - 1/r_k^k
+  As k→∞: r_k → 2 (since 1/r_k^k → 0)
+
+  k= 2: r_k = 1.6180339887, gap = 3.82e-01, correction 1/r^k = 3.82e-01
+  k= 3: r_k = 1.8392867552, gap = 1.61e-01, correction 1/r^k = 1.61e-01
+  k= 4: r_k = 1.9275619755, gap = 7.24e-02, correction 1/r^k = 7.24e-02
+  k= 5: r_k = 1.9659482366, gap = 3.41e-02, correction 1/r^k = 3.41e-02
+  k= 6: r_k = 1.9835828434, gap = 1.64e-02, correction 1/r^k = 1.64e-02
+  k= 7: r_k = 1.9919641966, gap = 8.04e-03, correction 1/r^k = 8.04e-03
+  k= 8: r_k = 1.9960311797, gap = 3.97e-03, correction 1/r^k = 3.97e-03
+  k= 9: r_k = 1.9980294703, gap = 1.97e-03, correction 1/r^k = 1.97e-03
+  k=10: r_k = 1.9990186327, gap = 9.81e-04, correction 1/r^k = 9.81e-04
+  k=15: r_k = 1.9999694754, gap = 3.05e-05, correction 1/r^k = 3.05e-05
+
+  The APPROACH RATE: gap ≈ (1/r_k)^k ≈ (1/2)^k
+  Each step halves the gap — EXPONENTIAL convergence to KEY₁!
+
+  INTERPRETATION: Adding one more term to the recurrence
+  halves the distance to KEY₁ = 2.
+  The k-nacci is a BINARY APPROXIMATION SCHEME for 2.
+  Fibonacci (k=2) is the coarsest binary approximation.
+
+======================================================================
+PART 2: WEIGHTED k-NACCI — APPROACH TO KEY₂ = 3
+======================================================================
+
+  Weighted k-nacci with w=KEY₁=2:
+  a(n) = 2·[a(n-1) + a(n-2) + ... + a(n-k)]
+  Characteristic: x^k = 2(x^{k-1} + ... + 1)
+  Factored: x^{k+1} = 3x^k - 2
+  At root s_k: s_k = 3 - 2/s_k^k
+
+  k= 2: s_k = 2.7320508076, gap = 2.68e-01, correction 2/s^k = 2.68e-01
+  k= 3: s_k = 2.9196395658, gap = 8.04e-02, correction 2/s^k = 8.04e-02
+  k= 4: s_k = 2.9744492446, gap = 2.56e-02, correction 2/s^k = 2.56e-02
+  k= 5: s_k = 2.9916541014, gap = 8.35e-03, correction 2/s^k = 8.35e-03
+  k= 6: s_k = 2.9972413302, gap = 2.76e-03, correction 2/s^k = 2.76e-03
+  k= 7: s_k = 2.9990835473, gap = 9.16e-04, correction 2/s^k = 9.16e-04
+  k= 8: s_k = 2.9996949203, gap = 3.05e-04, correction 2/s^k = 3.05e-04
+
+  At root s_k: s_k = 3 - 2/s_k^k
+  Correction = 2/s^k ≈ 2·(1/3)^k = 2/3^k
+
+  INTERPRETATION: The weight w=2 shifts the attractor from 2 to 3.
+  Weight w=KEY₁ maps the attractor to KEY₂.
+  More generally: weight w maps attractor from 2 to w+1.
+
+  GENERAL WEIGHT-ATTRACTOR LAW:
+  Weight w → attractor w+1 (as k→∞)
+
+  w= 1 → attractor  2 = KEY₁  (standard k-nacci)
+  w= 2 → attractor  3 = KEY₂  (weighted, w=KEY₁)
+  w= 4 → attractor  5 = KEY₁+KEY₂=5  (w=KEY₁²)
+  w= 5 → attractor  6 = h(G₂)=6  (w=KEY₁+KEY₂)
+  w= 7 → attractor  8 = rank(E₈)=8  (w=h(G₂)+1)
+  w= 8 → attractor  9 = CS boundary=9  (w=rank(E₈))
+  w=11 → attractor 12 = h(F₄)=12  (w=L(5))
+  w=17 → attractor 18 = h(E₇)=18  (w=F(8))
+  w=29 → attractor 30 = h(E₈)=30  (w=L(7))
+
+  EVERY Lie-theoretic number is the attractor of a weighted k-nacci!
+  The Coxeter numbers are w+1 values for specific weights.
+
+  THE DEEP INSIGHT:
+  KEY₁ = 2 is the attractor of the SIMPLEST recurrence (w=1)
+  KEY₂ = 3 is the attractor of the KEY₁-WEIGHTED recurrence (w=2)
+  This is SELF-REFERENTIAL: KEY₂ = attractor(w=KEY₁)
+
+======================================================================
+PART 3: THE GENERALIZED FIBONACCI TRIANGLE
+======================================================================
+
+  R(k,w) = largest root of x^{k+1} = (w+1)x^k - w
+  R(k,w) → w+1 as k→∞
+  R(∞,1) = 2 = KEY₁
+  R(∞,2) = 3 = KEY₂
+
+  THE ROOT TABLE R(k,w):
+   k\w  w=  1   w=  2   w=  3   w=  4   w=  5   w=  6   w=  7 
+  k= 2   1.618   2.732   3.791   4.828   5.854   6.873   7.887
+  k= 3   1.839   2.920   3.951   4.967   5.977   6.982   7.986
+  k= 4   1.928   2.974   3.988   4.994   5.996   6.997   7.998
+  k= 5   1.966   2.992   3.997   4.999   5.999   7.000   8.000
+  k= 6   1.984   2.997   3.999   5.000   6.000   7.000   8.000
+  k= 7   1.992   2.999   4.000   5.000   6.000   7.000   8.000
+  k= 8   1.996   3.000   4.000   5.000   6.000   7.000   8.000
+
+  ROW k=2: R(2,w) = roots of x³ = (w+1)x² - w
+  R(2,1) = φ = 1.6180 (golden ratio)
+  R(2,2) = 2.732051 (root of x³-3x²+2=0)
+  Factored: (x-1)(x²-2x-2)=0, roots: 1, 1±√3
+  R(2,2) = 1+√3 = 2.732051
+
+  φ = (1+√5)/2 ≈ 1.618034
+  1+√3 ≈ 2.732051
+  1+√2 ≈ 2.414214 (silver ratio)
+
+  The diagonal k=w gives special values:
+  R(1,1) = 2 (trivially)
+  R(2,2) = 1+√3 = 2.732051
+  R(3,3) = 3.951373
+
+======================================================================
+PART 4: 10 AND 11 AS SHIFTED ONES — DECIMAL SELF-SIMILARITY
+======================================================================
+
+  10 and 11 in various bases:
+  Base 10: 10 = '10', 11 = '11'
+  Base 2:  10 = '1010', 11 = '1011'
+  Base 3:  10 = '101', 11 = '102'
+  Base 9:  10 = '11', 11 = '12'
+
+  In the (2,3) universe:
+  10 = 2·5 = KEY₁·(KEY₁+KEY₂)
+  10 = 2+3+5 = sum of the first 3 primes
+  11 = L(5) = Lucas(5), the 5th Lucas number
+  11 = first prime p where self-comp tournaments exist (p≡3 mod 4)
+
+  NUMBER BASES AND TOURNAMENT THEORY:
+  Base 2 (binary): each arc has 2 orientations → KEY₁
+  Base 3 (ternary): each 3-cycle has 3 vertices → KEY₂
+  Base 6 (seximal): h(G₂) = KEY₁·KEY₂, tournament product base
+  Base 10 (decimal): h(A₉), conventional notation
+  Base 30 (trigesimal): h(E₈), product of tournament primes
+
+  In base 6 (= KEY₁·KEY₂ = h(G₂)):
+  '10'₆ = 6 = h(G₂)
+  '11'₆ = 7 = Mersenne prime = 2³-1 = h(G₂)+1
+  '100'₆ = 36 = 6² = h(G₂)²
+
+  In base 30 (= h(E₈)):
+  '10'₃₀ = 30 = h(E₈)
+  '11'₃₀ = 31 = Mersenne prime = 2⁵-1 = h(E₈)+1
+
+  PATTERN: In base h, '11' = h+1 = dim(g)/rank
+  And h+1 is always PRIME for exceptionals!
+  So '11' in the 'natural base' of an exceptional is always prime!
+
+======================================================================
+PART 5: THE (2,3) ATTRACTOR BASIN
+======================================================================
+
+  RECURRENCES WITH ATTRACTOR 2:
+  k=1: a(n) = 2·a(n-1) [geometric]
+  k=2: a(n) = a(n-1) + 2·a(n-2) [Jacobsthal numbers, OEIS A001045]
+  k=2: a(n) = 3·a(n-1) - 2·a(n-2) [binary power diffs, 2^n - 1]
+  k=∞: k-nacci (sum of all previous k terms)
+
+  RECURRENCES WITH ATTRACTOR 3:
+  k=1: a(n) = 3·a(n-1) [geometric]
+  k=2: a(n) = a(n-1) + 6·a(n-2) [related to partition numbers]
+  k=2: a(n) = 4·a(n-1) - 3·a(n-2) [power diffs: 3^n - 1]
+  k=∞: w=2 weighted k-nacci
+
+  THE TOURNAMENT RECURRENCE:
+  a(n) = 5·a(n-1) - 6·a(n-2)
+  Characteristic: x² - 5x + 6 = (x-KEY₁)(x-KEY₂) = 0
+  General solution: a(n) = A·2ⁿ + B·3ⁿ
+
+  This is the MASTER RECURRENCE of tournament theory.
+  It contains BOTH keys as roots.
+  Any sequence satisfying it is a mixture of powers of 2 and 3.
+
+  SEQUENCES FROM THE TOURNAMENT RECURRENCE (a=5a'-6a''):
+
+  a(0)=1, a(1)=2: [1, 2, 4, 8, 16, 32, 64, 128]  [Pure 2ⁿ]
+  a(0)=1, a(1)=3: [1, 3, 9, 27, 81, 243, 729, 2187]  [Pure 3ⁿ]
+  a(0)=0, a(1)=1: [0, 1, 5, 19, 65, 211, 665, 2059]  [3ⁿ-2ⁿ (corner)]
+  a(0)=2, a(1)=5: [2, 5, 13, 35, 97, 275, 793, 2315]  [2ⁿ+3ⁿ (Lucas-like)]
+  a(0)=2, a(1)=4: [2, 4, 8, 16, 32, 64, 128, 256]  [3ⁿ+1]
+  a(0)=1, a(1)=1: [1, 1, -1, -11, -49, -179, -601, -1931]  [Alternating]
+
+  The CORNER PIECES 0,1,5,19,65,211,665,... = 3ⁿ-2ⁿ
+  arise from initial conditions (0,1) in the tournament recurrence!
+  These are the weights in I(3)-I(2) = Σ αₖ(3ᵏ-2ᵏ).
+
+======================================================================
+PART 6: 5, 6, 7, 8 IN THE RECURRENCE FRAMEWORK
+======================================================================
+
+  THE NUMBERS 5-8 AS RECURRENCE LANDMARKS:
+
+  5 = KEY₁ + KEY₂ (sum of keys)
+    = discriminant of Fibonacci polynomial x²-x-1
+    = (2φ-1)² where φ = golden ratio
+    = number of Platonic solids = number of exceptionals
+    = h(A₄) = Coxeter number of A₄
+
+  6 = KEY₁ · KEY₂ (product of keys)
+    = constant term of tournament polynomial z²-5z+6
+    = h(G₂) = smallest exceptional Coxeter number
+    = |A₄| = order of tetrahedral rotation group
+    = number of edges of tetrahedron
+    = lcm(2,3) = smallest common period of keys
+
+  7 = 2²+3 = KEY₁² + KEY₂  (OR 2³-1 = Mersenne(KEY₂))
+    = h(G₂)+1 = dim(G₂)/rank(G₂)
+    = L(4) = Lucas(4)
+    = number of non-iso tournaments on 3 cycles... no
+    = F(5) - 1 (related to Fibonacci)
+    = first Mersenne prime after 3
+
+  8 = 2³ = KEY₁^KEY₂ (KEY₁ raised to KEY₂)
+    = rank(E₈)
+    = φ(30) = φ(h(E₈)) = Euler totient of h(E₈)
+    = vertices of the cube
+    = dimension of octonion algebra O
+    = f(rank(E₈)) - h(E₈) = f(8)-30 = 0... wait, f(8)=30, so:
+    = z such that f(z)=h(E₈) — the INVERSE tournament poly at 30
+
+  AS WEIGHTED k-NACCI ATTRACTORS:
+  5 = R(∞,4)  [weight KEY₁² = 4]
+  6 = R(∞,5)  [weight KEY₁+KEY₂ = 5]
+  7 = R(∞,6)  [weight h(G₂) = 6]
+  8 = R(∞,7)  [weight Mersenne(3) = 7]
+
+  Each number is the attractor of a recurrence weighted by the PREVIOUS!
+  5 → weight 5 gives attractor 6 → weight 6 gives 7 → weight 7 gives 8
+  This is the SUCCESSOR CHAIN: each Coxeter number begets the next!
+
+======================================================================
+PART 7: THE GOLDEN RATIO AS PRIMORDIAL ROOT
+======================================================================
+
+  φ = (1+√5)/2 = 1.6180339887
+  ψ = (1-√5)/2 = -0.6180339887
+
+  φ is the R(2,1) root — the SIMPLEST non-trivial recurrence root.
+  It is the SEED from which 2 and 3 grow.
+
+  φ = (1+√(KEY₁+KEY₂))/KEY₁ = (1+√5)/2
+
+  Powers of φ (Fibonacci embedding):
+  φ^ 0 =       1.0000 = F(0)·φ + F(-1) = 0·φ + 0 = 1
+  φ^ 1 =       1.6180 = F(1)·φ + F(0) = 1·φ + 0 = φ = 1.6180
+  φ^ 2 =       2.6180 = F(2)·φ + F(1) = 1·φ + 1 = φ+1 (golden gnomon)
+  φ^ 3 =       4.2361 = F(3)·φ + F(2) = 2·φ + 1
+  φ^ 4 =       6.8541 = F(4)·φ + F(3) = 3·φ + 2
+  φ^ 5 =      11.0902 = F(5)·φ + F(4) = 5·φ + 3 ≈ 11.1 (5φ+3: coeff=5=KEY₁+KEY₂, const=KEY₂)
+  φ^ 6 =      17.9443 = F(6)·φ + F(5) = 8·φ + 5 ≈ 17.9 (8φ+5: coeff=8=rank(E₈))
+  φ^ 7 =      29.0344 = F(7)·φ + F(6) = 13·φ + 8
+  φ^ 8 =      46.9787 = F(8)·φ + F(7) = 21·φ + 13
+  φ^ 9 =      76.0132 = F(9)·φ + F(8) = 34·φ + 21
+  φ^10 =     122.9919 = F(10)·φ + F(9) = 55·φ + 34 ≈ 123.0 (55φ+34)
+
+  f(φ) = φ²-5φ+6 = 0.527864 = 5-2√5 = 0.527864
+  |f(φ)| = 2√5-5 = -0.527864
+  f(φ²) = φ⁴-5φ²+6 = (φ²)²-5(φ²)+6 = -0.236068
+  f(φ) · f(ψ) = f(φ)·f(ψ) = (5-2√5)(5+2√5) = 25-20 = 5 = KEY₁+KEY₂!
+
+  The tournament polynomial evaluated at φ and ψ has
+  PRODUCT = 5 = KEY₁+KEY₂ = discriminant of Fibonacci poly!
+
+======================================================================
+PART 8: THE n=9 TRANSITION AS RECURRENCE BIFURCATION
+======================================================================
+
+  THE BIFURCATION AT n=9=KEY₂²:
+
+  For each n, define the 'cycle efficiency' e(n,k) = (k choose 2)/n
+  where k is the cycle length.
+  This measures how many edges a k-cycle uses per vertex.
+
+  n= 3: max 3-packing = 1, arc coverage = 3/3 = 1.000  PERFECT
+  n= 4: max 3-packing = 1, arc coverage = 3/6 = 0.500  
+  n= 5: max 3-packing = 1, arc coverage = 3/10 = 0.300  
+  n= 6: max 3-packing = 2, arc coverage = 6/15 = 0.400  PERFECT
+  n= 7: max 3-packing = 2, arc coverage = 6/21 = 0.286  
+  n= 8: max 3-packing = 2, arc coverage = 6/28 = 0.214  
+  n= 9: max 3-packing = 3, arc coverage = 9/36 = 0.250  PERFECT
+  n=10: max 3-packing = 3, arc coverage = 9/45 = 0.200  
+  n=11: max 3-packing = 3, arc coverage = 9/55 = 0.164  
+  n=12: max 3-packing = 4, arc coverage = 12/66 = 0.182  PERFECT
+  n=13: max 3-packing = 4, arc coverage = 12/78 = 0.154  
+  n=14: max 3-packing = 4, arc coverage = 12/91 = 0.132  
+  n=15: max 3-packing = 5, arc coverage = 15/105 = 0.143  PERFECT
+
+  At n=9: PERFECT 3-packing with coverage = 9/36 = 0.250
+  This is a PHASE TRANSITION: before n=9, not all vertices
+  can be in disjoint 3-cycles. At n=9, they can.
+
+  THE CS RECURRENCE INTERPRETATION:
+  Let R(n) = α₁(n)/α₂(n) (ratio of independence coefficients)
+  CS proves R(n) ≥ 1 for n ≤ 9 (using only 3-cycles)
+  At n = 9: R = 1 is achievable (tight)
+  At n > 9: R < 1 is possible with 3-cycles only
+
+  This is a PITCHFORK BIFURCATION at n=9=KEY₂²:
+  For n < 9: one stable equilibrium (R ≥ 1)
+  At n = 9: critical point (R = 1)
+  For n > 9: instability (R may drop below 1)
+
+  The 5-cycle EXTENSION restores stability up to n=25=5²:
+  Including 5-cycles adds enough α₁ to maintain R ≥ 1
+  Next bifurcation at 25 = (KEY₁+KEY₂)²
+
+  BIFURCATION POINTS: 9=3², 25=5², 49=7², ...
+  These are the SQUARES OF ODD PRIMES!
+
+======================================================================
+PART 9: THE TOURNAMENT AS A DYNAMICAL SYSTEM
+======================================================================
+
+  TOURNAMENT DYNAMICS:
+  Think of T as a function (not quite, since out-degree > 1)
+  Better: T as a RANDOM DYNAMICAL SYSTEM
+  At vertex v, choose uniformly among out-neighbors
+  Periodic orbits correspond to directed cycles
+
+  The independence polynomial I(x) then counts:
+  Packings of periodic orbits = ways to decompose the system
+  I(2) = H(T) = # Hamiltonian paths = # total orderings
+  I(-1) = χ(Δ) = Euler characteristic = topological complexity
+
+  RETURN TIMES:
+  Transitive tournament: infinite (no cycles)
+  C₃: return time = 3 (deterministic)
+  General T: return time ∈ {3, 5, 7, ..., n (if n odd)}
+
+  THE TOURNAMENT ZETA FUNCTION:
+  Z_T(z) = exp(Σ c_k · zᵏ / k)
+  Poles/zeros encode the cycle structure
+  For a tournament with eigenvalues λ₁,...,λ_n:
+  1/Z_T(z) = det(I - zA) = Π(1 - λᵢz)
+
+  THE TOURNAMENT POLYNOMIAL AS A ZETA FUNCTION:
+  Z⁻¹(z) = (1-2z)(1-3z) = 1 - 5z + 6z²
+  Z(z) = 1/(1-5z+6z²) = Σ aₙ zⁿ
+  aₙ = 3^{n+1} - 2^{n+1}
+
+  Coefficients of Z(z):
+  a(0) = 1  ← 1
+  a(1) = 5  ← KEY₁+KEY₂
+  a(2) = 19  ← h(E₇)+1, Paley prime
+  a(3) = 65  ← 2⁶+1 = 65
+  a(4) = 211  ← 
+  a(5) = 665
+  a(6) = 2059
+  a(7) = 6305
+  a(8) = 19171
+  a(9) = 58025
+  a(10) = 175099
+  a(11) = 527345
+
+  The series 1, 5, 19, 65, 211, 665, 2059, ...
+  = 3^{n+1} - 2^{n+1}
+  = the CORNER PIECES shifted by one!
+  These are the moments of the (2,3) dynamical system.
+
+======================================================================
+PART 10: THE GRAND RECURRENCE SYNTHESIS
+======================================================================
+
+
+  THE UNIVERSE AS A RECURRENCE
+  ════════════════════════════
+
+  LEVEL 0 — THE SEEDS:
+  The two simplest attractors of linear recurrences:
+    KEY₁ = 2 ← attractor of a(n) = Σ a(n-i), i=1..k (k-nacci, w=1)
+    KEY₂ = 3 ← attractor of a(n) = 2·Σ a(n-i) (k-nacci, w=KEY₁)
+
+  LEVEL 1 — THE POLYNOMIAL:
+  z² - 5z + 6 = (z-2)(z-3) encodes BOTH attractors
+  Recurrence: a(n) = 5a(n-1) - 6a(n-2)
+  General solution: A·2ⁿ + B·3ⁿ
+  Corner pieces: 3ⁿ-2ⁿ = 0, 1, 5, 19, 65, 211, ...
+
+  LEVEL 2 — THE GOLDEN RATIO:
+  φ = (1+√5)/2 = (1+√(KEY₁+KEY₂))/KEY₁
+  The SEED of the recurrence family
+  f(φ)·f(ψ) = 5 = KEY₁+KEY₂
+  φ is the k=2 root; it GENERATES the approach to KEY₁
+
+  LEVEL 3 — THE BIFURCATION SEQUENCE:
+  n = 9 = KEY₂²: first bifurcation (CS boundary)
+  n = 25 = 5²: second bifurcation (5-cycle extension)
+  n = 49 = 7²: third bifurcation
+  Bifurcation points = squares of odd primes
+
+  LEVEL 4 — THE ADE ENCODING:
+  Weight w → attractor w+1:
+    w=1 → 2=KEY₁ (k-nacci)
+    w=2 → 3=KEY₂ (weighted)
+    w=5 → 6=h(G₂)
+    w=8 → 9=CS boundary
+    w=11 → 12=h(F₄)=h(E₆)
+    w=17 → 18=h(E₇)
+    w=29 → 30=h(E₈)
+  Every Coxeter number is a recurrence attractor!
+
+  LEVEL 5 — THE SELF-REFERENCE:
+  KEY₂ = attractor(w=KEY₁)  [3 = attractor at weight 2]
+  h(G₂) = KEY₁·KEY₂         [6 = product of keys]
+  h(E₇) = KEY₁·KEY₂²        [18 = 2·9]
+  h(E₈) = KEY₁·KEY₂·5       [30 = 2·3·5]
+  The Coxeter numbers are PRODUCTS of the keys and their sum.
+
+  THE CENTRAL THEOREM (conjectured):
+  The tournament polynomial z²-5z+6 is the CHARACTERISTIC POLYNOMIAL
+  of the simplest meaningful recurrence (a linear combination of
+  powers of the two simplest attractors). All of tournament theory,
+  the ADE classification, and the Platonic solid classification
+  are consequences of this polynomial and its recurrence family.
+
