@@ -1,0 +1,240 @@
+======================================================================
+FIVE-FOLD PETERSEN MAP: EXCEPTIONAL GROUPS ON K(5,2)
+======================================================================
+
+Petersen K(5,2) has 10 vertices and 15 edges
+Each vertex = {i,j} subset of {0,1,2,3,4}
+Edge connects {i,j} and {k,l} iff disjoint (i.e., {i,j,k,l} = 4 elements)
+
+NATURAL ASSIGNMENT (ordered by rank):
+  0->G2, 1->F4, 2->E6, 3->E7, 4->E8
+
+  Vertex  | Pair       | Sum_r | Prod_r | Sum_h | Prod_h | Sum_dim | Sum_roots+
+  -------------------------------------------------------------------------------------
+  {0,1}= 0 | (G2,F4)  |     6 |      8 |    18 |     72 |      66 |         30
+  {0,2}= 1 | (G2,E6)  |     8 |     12 |    18 |     72 |      92 |         42
+  {0,3}= 2 | (G2,E7)  |     9 |     14 |    24 |    108 |     147 |         69
+  {0,4}= 3 | (G2,E8)  |    10 |     16 |    36 |    180 |     262 |        126
+  {1,2}= 4 | (F4,E6)  |    10 |     24 |    24 |    144 |     130 |         60
+  {1,3}= 5 | (F4,E7)  |    11 |     28 |    30 |    216 |     185 |         87
+  {1,4}= 6 | (F4,E8)  |    12 |     32 |    42 |    360 |     300 |        144
+  {2,3}= 7 | (E6,E7)  |    13 |     42 |    30 |    216 |     211 |         99
+  {2,4}= 8 | (E6,E8)  |    14 |     48 |    42 |    360 |     326 |        156
+  {3,4}= 9 | (E7,E8)  |    15 |     56 |    48 |    540 |     381 |        183
+
+EDGES (disjoint pairs of pairs = using 4 of 5 groups):
+  Edge            | Missing | Sum_4r | Prod_4r | Sum_4h
+  -----------------------------------------------------------------
+  {0,1}--{2,3} | miss=4(E8) |     19 |     336 |     48
+  {0,1}--{2,4} | miss=3(E7) |     20 |     384 |     60
+  {0,1}--{3,4} | miss=2(E6) |     21 |     448 |     66
+  {0,2}--{1,3} | miss=4(E8) |     19 |     336 |     48
+  {0,2}--{1,4} | miss=3(E7) |     20 |     384 |     60
+  {0,2}--{3,4} | miss=1(F4) |     23 |     672 |     66
+  {0,3}--{1,2} | miss=4(E8) |     19 |     336 |     48
+  {0,3}--{1,4} | miss=2(E6) |     21 |     448 |     66
+  {0,3}--{2,4} | miss=1(F4) |     23 |     672 |     66
+  {0,4}--{1,2} | miss=3(E7) |     20 |     384 |     60
+  {0,4}--{1,3} | miss=2(E6) |     21 |     448 |     66
+  {0,4}--{2,3} | miss=1(F4) |     23 |     672 |     66
+  {1,2}--{3,4} | miss=0(G2) |     25 |    1344 |     72
+  {1,3}--{2,4} | miss=0(G2) |     25 |    1344 |     72
+  {1,4}--{2,3} | miss=0(G2) |     25 |    1344 |     72
+
+======================================================================
+PETERSEN ADJACENCY AS LIE INTERACTION
+======================================================================
+
+In Petersen K(5,2), vertices {i,j} and {k,l} are:
+  ADJACENT (edge) iff {i,j} and {k,l} are DISJOINT
+  NON-ADJACENT iff they SHARE an element
+
+For exceptional Lie groups:
+  Edge (disjoint pairs): the 4 groups are "independent" (no shared element)
+  Non-edge (overlapping): the groups share a "common root" element
+
+What makes two exceptional groups "interact"?
+  - F4/E6 share h=12 (same Coxeter number)
+  - E6/E7/E8 are the E-series (share Dynkin structure)
+  - G2/F4 are non-simply-laced
+  - G2/E8 are the "bookends" (h ratio = 5)
+
+MAXIMUM INDEPENDENT SETS (size 4 = alpha(Petersen)):
+Each is a 'star' — all pairs containing a fixed element
+  Center=0(G2): pairs with ['F4', 'E6', 'E7', 'E8']
+  Center=1(F4): pairs with ['G2', 'E6', 'E7', 'E8']
+  Center=2(E6): pairs with ['G2', 'F4', 'E7', 'E8']
+  Center=3(E7): pairs with ['G2', 'F4', 'E6', 'E8']
+  Center=4(E8): pairs with ['G2', 'F4', 'E6', 'E7']
+
+Under the natural assignment, the 5 max independent sets are:
+  Star(G2): {G2,F4}, {G2,E6}, {G2,E7}, {G2,E8} — G2 paired with everything
+  Star(F4): {F4,G2}, {F4,E6}, {F4,E7}, {F4,E8} — F4 paired with everything
+  Star(E6): {E6,G2}, {E6,F4}, {E6,E7}, {E6,E8} — E6 paired with everything
+  Star(E7): {E7,G2}, {E7,F4}, {E7,E6}, {E7,E8} — E7 paired with everything
+  Star(E8): {E8,G2}, {E8,F4}, {E8,E6}, {E8,E7} — E8 paired with everything
+
+The "dependent core" (6 vertices not in the star):
+  When center=E8: the core is all pairs NOT involving E8
+  = {G2,F4}, {G2,E6}, {G2,E7}, {F4,E6}, {F4,E7}, {E6,E7}
+  = all pairs from {G2,F4,E6,E7} = K_4 on the 4 non-E8 groups
+  This K_4 has 6 vertices and 3 edges in Petersen (= 3 disjoint pairs among 4 groups)
+
+======================================================================
+h-SUMS ON PETERSEN EDGES vs NON-EDGES
+======================================================================
+
+h-pair sums for each vertex:
+  {0,1} (G2,F4): h_sum = 18 = h(E7)
+  {0,2} (G2,E6): h_sum = 18 = h(E7)
+  {0,3} (G2,E7): h_sum = 24 = h(F4) + h(E6)
+  {0,4} (G2,E8): h_sum = 36 = 2*h(E7)
+  {1,2} (F4,E6): h_sum = 24 = h(F4) + h(E6)
+  {1,3} (F4,E7): h_sum = 30 = h(E8)
+  {1,4} (F4,E8): h_sum = 42 = h(G2)*7 = h(G2)*rank(E7)
+  {2,3} (E6,E7): h_sum = 30 = h(E8)
+  {2,4} (E6,E8): h_sum = 42 = h(G2)*7 = h(G2)*rank(E7)
+  {3,4} (E7,E8): h_sum = 48 = 4*h(F4)
+
+Sum of ALL h-pair sums = 312
+  = sum over each element of h_i * (number of pairs containing i)
+  = sum h_i * 4 = 4 * 78 = 312
+  Total h = 78 = 6+12+12+18+30 = 78
+  4 * total_h = 312
+
+======================================================================
+INVARIANT CONSTANCY ON PETERSEN EDGES
+======================================================================
+
+For each edge {{i,j}}--{{k,l}}, the missing element m has h_m:
+  miss=4(E8): h_miss=30, h_used_sum=48, r_used_sum=19, h_prod=15552
+  miss=3(E7): h_miss=18, h_used_sum=60, r_used_sum=20, h_prod=25920
+  miss=2(E6): h_miss=12, h_used_sum=66, r_used_sum=21, h_prod=38880
+  miss=4(E8): h_miss=30, h_used_sum=48, r_used_sum=19, h_prod=15552
+  miss=3(E7): h_miss=18, h_used_sum=60, r_used_sum=20, h_prod=25920
+  miss=1(F4): h_miss=12, h_used_sum=66, r_used_sum=23, h_prod=38880
+  miss=4(E8): h_miss=30, h_used_sum=48, r_used_sum=19, h_prod=15552
+  miss=2(E6): h_miss=12, h_used_sum=66, r_used_sum=21, h_prod=38880
+  miss=1(F4): h_miss=12, h_used_sum=66, r_used_sum=23, h_prod=38880
+  miss=3(E7): h_miss=18, h_used_sum=60, r_used_sum=20, h_prod=25920
+  miss=2(E6): h_miss=12, h_used_sum=66, r_used_sum=21, h_prod=38880
+  miss=1(F4): h_miss=12, h_used_sum=66, r_used_sum=23, h_prod=38880
+  miss=0(G2): h_miss=6, h_used_sum=72, r_used_sum=25, h_prod=77760
+  miss=0(G2): h_miss=6, h_used_sum=72, r_used_sum=25, h_prod=77760
+  miss=0(G2): h_miss=6, h_used_sum=72, r_used_sum=25, h_prod=77760
+
+KEY OBSERVATION:
+  Each Petersen EDGE excludes exactly one of the 5 groups.
+  The edges partition into 5 classes by which group is excluded:
+    miss=0 (G2):  3 edges, h_miss=6
+    miss=1 (F4):  3 edges, h_miss=12
+    miss=2 (E6):  3 edges, h_miss=12
+    miss=3 (E7):  3 edges, h_miss=18
+    miss=4 (E8):  3 edges, h_miss=30
+
+  Each group is "missed" by exactly 3 edges = degree of K(5,2).
+  h_used_sum = total_h - h_miss = 78 - h_miss
+
+======================================================================
+RANK PRODUCTS ON PETERSEN COMPLEMENT (JOHNSON J(5,2))
+======================================================================
+
+Ranks: [('G2', 2), ('F4', 4), ('E6', 6), ('E7', 7), ('E8', 8)]
+
+For J(5,2) edges (overlapping pairs, share element k):
+  Shared element gives 'interaction rank' = rank of shared group
+  Shared=0(G2, r=2): 6 edges (C(4,1)·... = 6 edges each)
+  Shared=1(F4, r=4): 6 edges (C(4,1)·... = 6 edges each)
+  Shared=2(E6, r=6): 6 edges (C(4,1)·... = 6 edges each)
+  Shared=3(E7, r=7): 6 edges (C(4,1)·... = 6 edges each)
+  Shared=4(E8, r=8): 6 edges (C(4,1)·... = 6 edges each)
+
+Total J(5,2) edges: 30 = h(E8) = 30
+Sum of interaction ranks: 162
+Expected: sum_k r_k * 6 = 6 * 27 = 162
+
+For each J(5,2) edge (overlapping pairs {a,b}--{a,c}):
+  The interaction is mediated by group a
+  Pair ranks: r_a+r_b and r_a+r_c
+  Product: (r_a+r_b)(r_a+r_c)
+
+======================================================================
+I(Petersen, x) AT LIE-DERIVED VALUES
+======================================================================
+  I(P, h(G2)) = I(P, 6) = 14101
+  I(P, h(F4)) = I(P, 12) = 159961
+  I(P, h(E6)) = I(P, 12) = 159961
+  I(P, h(E7)) = I(P, 18) = 709741
+  I(P, h(E8)) = I(P, 30) = 4887301
+
+  I(P, r(G2)) = I(P, 2) = 461
+  I(P, r(F4)) = I(P, 4) = 3721
+  I(P, r(E6)) = I(P, 6) = 14101
+  I(P, r(E7)) = I(P, 7) = 23836
+  I(P, r(E8)) = I(P, 8) = 37841
+
+  I(P, h+1(G2)) = I(P, 7) = 23836
+  I(P, h+1(F4)) = I(P, 13) = 213916
+  I(P, h+1(E6)) = I(P, 13) = 213916
+  I(P, h+1(E7)) = I(P, 19) = 868396
+  I(P, h+1(E8)) = I(P, 31) = 5540476
+
+  I(P, KEY_1=2) = 461 (= H if Petersen were a CG)
+  I(P, KEY_2=3) = 1516
+  I(P, -1) = -4 (Euler char of indep complex)
+  I(P, -2) = -59
+  I(P, -3) = -164
+
+SPECIAL VALUES:
+  I(P, 0) = 1
+  I(P, 1) = 76 = 4 * 19 = rank(F4) * (h(E7)+1)
+  I(P, -1) = -4 = -rank(F4)
+  I(P, 2) = 461 = prime
+  I(P, 3) = 1516 = 4 * 379 = rank(F4) * 379
+  76 = KEY_1^2 * (h(E7)+1) = 4 * 19
+
+======================================================================
+FIVE-FOLD SYNTHESIS
+======================================================================
+
+The Petersen graph K(5,2) encodes the exceptional Lie groups through:
+
+1. VERTEX = PAIR of groups
+   10 vertices = C(5,2) = all pairs from {G2,F4,E6,E7,E8}
+
+2. EDGE = DISJOINT PAIRS (complementary, using 4 of 5 groups)
+   15 edges, each missing exactly 1 group
+   3 edges miss each group (= degree of Petersen)
+
+3. NON-EDGE = OVERLAPPING PAIRS (interacting, sharing 1 group)
+   30 non-edges = h(E8) = Coxeter number of E8
+   6 non-edges share each group (= degree of J(5,2))
+
+4. INDEPENDENT SETS = families of pairwise non-interacting pairs
+   Maximum independent set = 4 pairs all containing the same group
+   = the "star" of one exceptional group
+   alpha = 4 = rank(F4)
+
+5. EIGENVALUE SPECTRUM
+   {3, 1^5, -2^4} = {KEY_2, 1, -KEY_1}
+   These are the roots of z^3-2z^2-5z+6 = 0
+   whose coefficients are {1, -KEY_1, -(KEY_1+KEY_2), h(G2)}
+
+6. PRODUCTS WITH TOURNAMENT POLYNOMIAL
+   (z-3)(z^2-5z+6) has coefficients {1, -rank(E8), 21, -h(E7)}
+   (z+2)(z^2-5z+6) has coefficients {1, -KEY_2, -rank(F4), h(F4)}
+   Both encode Lie data through elementary symmetric polynomials
+
+7. CYCLOTOMIC BRIDGE
+   h+1 = Phi_3(key) for 4 of 5 exceptional groups:
+     Phi_3(KEY_1) = 7 = h(G2)+1
+     Phi_3(KEY_2) = 13 = h(F4)+1 = h(E6)+1
+     Phi_3(KEY_1+KEY_2) = 31 = h(E8)+1
+   E7 is the outlier: h(E7)+1 = 19 = 3^3-2^3 (recurrence formula)
+
+8. FORBIDDEN H VALUES
+   H=7 = Phi_3(KEY_1) and H=21 = Phi_3(KEY_1^2)
+   are exactly the H values where the CG would need to be K_3 or K_3+K_1
+   — both have exactly KEY_2 = 3 edges, which is FORBIDDEN
+   by the tournament structure's forcing theorems.
+
