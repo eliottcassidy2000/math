@@ -1,0 +1,393 @@
+======================================================================
+PART 1: WALSH EVEN-DEGREE = FROBENIUS INVARIANCE
+======================================================================
+
+WALSH DECOMPOSITION RECAP:
+  A function f: {0,1}^m → R has Walsh expansion:
+  f(x) = Σ_S hat{f}[S] · χ_S(x)
+  where χ_S(x) = (-1)^{Σ_{i∈S} x_i}
+
+  Walsh degree of coefficient S = |S|
+  'Even degree only' means hat{f}[S] = 0 whenever |S| is odd
+
+  EQUIVALENTLY: f is invariant under the global sign flip
+  x → 1-x (complement of all arcs)
+  Because χ_S(1-x) = (-1)^{|S|} χ_S(x)
+  So if f is complement-invariant, f(x) = f(1-x),
+  then hat{f}[S] = (-1)^{|S|} hat{f}[S], forcing hat{f}[S]=0 for odd |S|
+
+FROBENIUS AUTOMORPHISM RECAP:
+  F_4 = F_2[α]/(α²+α+1)
+  Frobenius σ: α → α² = α+1
+  σ fixes F_2 = {0, 1}
+  σ swaps {α, α+1}
+
+  On PG(2,F_4): σ fixes the Baer subplane PG(2,F_2)
+  On F_4 as a vector space over F_2:
+    F_4 = F_2 ⊕ F_2·α
+    σ acts on the α-component: α ↦ α+1, i.e., it ADDS 1 to the coefficient
+    Writing x = a + b·α with a,b ∈ F_2:
+    σ(a + b·α) = a + b·(α+1) = (a+b) + b·α
+    So σ: (a,b) ↦ (a+b, b) in the F_2² representation
+
+THE PARALLEL:
+  Walsh complement: x_i ↦ 1-x_i for all arcs i
+  Frobenius:        a ↦ a+b in the F_2 component
+
+  Both are INVOLUTIONS (order 2)
+  Both FIX a 'base field' subspace
+  H is invariant under Walsh complement (even degrees only)
+  PG(2,F_2) is invariant under Frobenius
+
+======================================================================
+PART 2: THE Z/3Z EIGENSPACE DECOMPOSITION
+======================================================================
+
+F_4* = {1, α, α+1} ≅ Z/3Z (multiplicative group)
+The Z/3Z action on F_4 by multiplication:
+  1·x = x, α·x = αx, (α+1)·x = (α+1)x = α²x
+
+  This gives a Z/3Z representation on F_4 (as F_2-vector space).
+  Irreducible? F_4 as F_2-module under Z/3Z:
+  The trivial submodule is {0} (no nonzero fixed point under α·x)
+  Because α·1 = α ≠ 1.
+  So F_4 is a FAITHFUL 2-dimensional F_2-representation of Z/3Z.
+
+  Multiplication by α: (a+bα) ↦ aα + b(α+1) = b + (a+b)α
+  Matrix of ×α: [[0,1],[1,1]]
+
+  M(1) = I = [1 0 0 1]
+  M(α) = [[0,1],[1,1]] = [0 1 1 1]
+  M(α²) = M(α)² mod 2 = [1 1 1 0]
+  M(α)³ mod 2 = [1 0 0 1] = I ✓
+
+  Eigenvalues of M(α) over R: [-0.61803399  1.61803399]
+  These are φ and -1/φ (golden ratio!) — char poly x²-x-1 over R
+  But OVER F_2: char poly = x²+x+1 = Φ₃(x) (since -1=+1 in F_2)
+  Over C, Φ₃ has roots ω = e^(2πi/3) = -0.500000+0.866025j
+  ω² = e^(4πi/3) = -0.500000-0.866025j
+
+  CRUCIAL: The char poly of M(α) over F_2 is Φ₃(x) = x²+x+1!
+  Over Z: x²-x-1 (Fibonacci). Over F_2: x²+x+1 (cube root of unity).
+  The Fibonacci polynomial and Φ₃ are the SAME polynomial mod 2!
+
+  So Φ₃ appears simultaneously as:
+  1. The minimal polynomial of F_4/F_2
+  2. The characteristic polynomial of the Z/3Z multiplication action
+  3. The projective plane size formula
+  4. The forbidden value generator
+
+======================================================================
+PART 3: WALSH DEGREES AND F_4 ARITHMETIC
+======================================================================
+
+A tournament on n vertices has m = C(n,2) arcs.
+Each arc is a binary variable x_{ij} ∈ {0,1}.
+The Walsh transform decomposes functions on {0,1}^m.
+
+KEY INSIGHT: The m arcs of K_n can be identified with
+the EDGES of the complete graph. At n=3:
+  3 arcs → F_4* = {1, α, α²} (the 3 nonzero elements)
+  Each tournament on 3 vertices ↔ a function {1,α,α²} → {0,1}
+  ↔ a SUBSET of F_4*
+  ↔ a DIVISOR on the group scheme of F_4*
+
+At n=3: all 8 tournaments and their H values
+  T=(0,0,0): H=1
+  T=(1,0,0): H=1
+  T=(0,1,0): H=3
+  T=(1,1,0): H=1
+  T=(0,0,1): H=1
+  T=(1,0,1): H=3
+  T=(0,1,1): H=1
+  T=(1,1,1): H=1
+
+  H values: {1, 3} (only two values)
+  H=3 when all arcs form a 3-cycle (cyclic tournament)
+  H=1 when arcs form a transitive tournament
+
+======================================================================
+PART 4: THE BAER PARTITION AS A MATROID
+======================================================================
+
+The 3 Baer subplanes B_0, B_1, B_2 of PG(2,F_4) form a PARTITION.
+This partition has the structure of a PARTITION MATROID.
+
+A partition matroid M(B_0, B_1, B_2) with |B_i| = 7:
+  Ground set: 21 elements
+  Independent sets: at most k_i elements from block B_i
+  For k_i = 1: maximum independent set = 3 (one from each block)
+  For k_i = 3: maximum independent set = 9 (three from each)
+
+The FANO MATROID F_7 has 7 elements and rank 3.
+It lives INSIDE each Baer subplane B_i!
+
+MATROID HIERARCHY:
+  Level 0: Points (21 elements)
+  Level 1: Baer partition (3 blocks of 7)
+  Level 2: Fano structure within each block
+  Level 3: Lines within each Fano plane (7 lines of 3)
+
+Partition matroid M(7,7,7) with k_i = 1:
+  Rank = 3, ground set = 21
+  T(M; x, y) = (x+6y)^3 for the uniform partition matroid
+  T(M; 2, 1) = (2+6)^3 = 8^3 = 512
+  T(M; 1, 1) = (1+6)^3 = 7^3 = 343
+  T(M; 2, 0) = 2^3 = 8
+
+Compare to tournament values:
+  H_forb_2 = 21 = 3 × 7
+  T(F_7; 2, 1) = 57 (Fano matroid, computed by kind-pasteur)
+  343 = 7^3 = |PG(2,F_2)|^3 = (Fano)^3
+
+======================================================================
+PART 5: THE GALOIS CONNECTION
+======================================================================
+
+There is a GALOIS CONNECTION between:
+  - Subfields of F_{2^n}
+  - Partitions of projective space
+  - Walsh degree constraints on tournament functions
+
+Example: F_{2^6} has subfields:
+  F_2 ⊂ F_4 ⊂ F_{64}     (via Φ_3: F_4 = F_2[x]/Φ_3)
+  F_2 ⊂ F_8 ⊂ F_{64}     (via Φ_7: F_8 = F_2[x]/(x³+x+1))
+  F_2 ⊂ F_{64}            (direct)
+
+  Subfield lattice:
+       F_{64}
+      /     \
+    F_8     F_4
+      \     /
+       F_2
+
+  Corresponding projective planes:
+    PG(2,F_{64}): Φ₃(64) = 4161 points
+    PG(2,F_8):    Φ₃(8) = 73 points
+    PG(2,F_4):    Φ₃(4) = 21 points
+    PG(2,F_2):    Φ₃(2) = 7 points
+
+Baer factorizations at each level:
+  Φ₃(4) = Φ₃(2) × Φ₆(2) = 7 × 3 = 21
+  Φ₃(8) = Φ₃(2) × ? -- but 8 is not a perfect square!
+  (Baer subplanes require q = p², so F_8 has NO Baer subplanes of type PG(2,F_2))
+  Instead: PG(2,F_8) has UNITALS (Baer substructures of different type)
+
+======================================================================
+PART 6: THE DISCRIMINANT -3 AND TOURNAMENT PERIODICITY
+======================================================================
+
+Φ₃(x) = x² + x + 1 has discriminant D = 1 - 4 = -3
+The quadratic field Q(√(-3)) has:
+  Class number 1 (unique factorization)
+  Ring of integers = Z[ω] (Eisenstein integers)
+  Unit group = {±1, ±ω, ±ω²} (order 6)
+
+THE UNIT GROUP HAS ORDER 6 = LCM(2,3) = TOURNAMENT PERIOD!
+
+  The 6 units correspond to:
+  +1, -1 (real units, order 2 subgroup)
+  ω, ω² (cube roots, order 3 subgroup)
+  -ω, -ω² (order 6 elements)
+
+  Tournament period = 6: H(T) mod 2 has period 6 in n
+  This period comes from the ORDER OF THE UNIT GROUP of Z[ω]!
+
+Connection to tournament generators:
+  In Z[ω], the generators of the unit group are -ω and -ω²
+  These have order 6 (generate the full group)
+
+  In tournament theory, the generators are:
+  2 (arc count) and 3 (cycle count)
+  Their LCM = 6 = |Z[ω]*|
+
+  But more precisely:
+  The matrix M(-1) = [[1,-1],[1,0]] from the matrix family has
+  eigenvalues (1±√(-3))/2 = primitive 6th roots of unity
+  These are EXACTLY ω and ω̄ = ω²
+  And M(-1) governs tournament parity (period 6)
+
+  M(-1) eigenvalues: [0.5+0.8660254j 0.5-0.8660254j]
+  |eigenvalue| = 1.000000 (should be 1)
+  arg = 60.0° (should be 60°)
+
+  Forbidden values as Eisenstein norms:
+  N(2-ω) = 4+2+1 = 7  (but actually N = a²-ab+b² for a+bω)
+  N(1+0ω) = 1 = 1
+  N(1+1ω) = 1 = 1 (unit!)
+  N(2+1ω) = 3 = 3 = Φ₆(2)
+  N(3+1ω) = 7 = 7 = Φ₃(2) = FORBIDDEN
+  N(3+2ω) = 7 = 7 (associate)
+  N(4+3ω) = 13 = 13 = Φ₃(3) = |PG(2,F_3)|
+  N(5+3ω) = 19 = 19
+
+  Eisenstein integers with norm 7:
+    -3+-2ω: N = 7
+    -3+-1ω: N = 7
+    -2+-3ω: N = 7
+    -2+1ω: N = 7
+    -1+-3ω: N = 7
+    -1+2ω: N = 7
+    1+-2ω: N = 7
+    1+3ω: N = 7
+    2+-1ω: N = 7
+    2+3ω: N = 7
+    3+1ω: N = 7
+    3+2ω: N = 7
+
+  Eisenstein integers with norm 21:
+    -5+-4ω: N = 21
+    -5+-1ω: N = 21
+    -4+-5ω: N = 21
+    -4+1ω: N = 21
+    -1+-5ω: N = 21
+    -1+4ω: N = 21
+    1+-4ω: N = 21
+    1+5ω: N = 21
+    4+-1ω: N = 21
+    4+5ω: N = 21
+    5+1ω: N = 21
+    5+4ω: N = 21
+
+  7 = N(3+1ω) is an EISENSTEIN PRIME (norm is rational prime)
+  21 = N(5+1ω) is COMPOSITE: 21 = 3·7, and in Z[ω]:
+  21 = N(5+1ω) = (2+1ω)(2+1ω̄)·(3+1ω)(3+1ω̄)/units
+  Actually 21 = 3·7 and both 3 and 7 factor in Z[ω]:
+  3 = -ω²·(1-ω)² (ramified)
+  7 = (3+ω)(3+ω²) = (3+ω)(2-ω) (splits)
+
+======================================================================
+PART 7: THE BAER-WALSH CORRESPONDENCE TABLE
+======================================================================
+
+Assembling the complete correspondence:
+
+  BAER / PROJECTIVE              WALSH / TOURNAMENT
+  ─────────────────────────       ──────────────────────────
+  F_4 = F_2[α]/(Φ₃)             {0,1}^m = tournament space
+  Frobenius σ: α→α²              Complement τ: x_i→1-x_i
+  σ has order 2                  τ has order 2
+  Fixed: F_2                     Fixed: even Walsh degrees
+  F_4*/F_2* = Z/3Z              Walsh degree mod 3?
+  PG(2,F_4) = 21 pts            H-spectrum at odd n
+  3 Baer subplanes              3 = Φ₆(2) = cycle generator
+  7 pts per subplane            7 = Φ₃(2) = forbidden value
+  Φ₃(α) = 0 in F_4             Φ₃(2) = 7 = I(K₃,2)
+  α³ = 1 in F_4                Period 3 in F_4 multiplication
+  σ² = id                       τ² = id
+  Norm N_{F_4/F_2}: x → x·σ(x)  Paired Walsh: S → S̄ = complement
+  N(α) = α·α² = α³ = 1         Product of paired coefficients
+
+NEW INSIGHT: The Z/3Z structure of F_4*/F_2*
+  F_4* has 3 elements: {1, α, α²}
+  F_2* has 1 element: {1}
+  Quotient: F_4*/F_2* ≅ Z/3Z
+
+  In the Walsh world:
+  Walsh degree mod 2 splits coefficients into even/odd
+  Walsh degree mod 3 would split into 3 classes
+  But what's the 'mod 3' of Walsh degree?
+
+  ANSWER: The mod-3 structure comes from the CYCLE TYPES
+  3-cycles, 5-cycles, 7-cycles contribute to Walsh degrees 2, 4, 6
+  These are degrees 2, 4, 6 ≡ 2, 1, 0 (mod 3)
+  The Z/3Z coloring of Walsh degrees IS the cycle type mod 3!
+
+======================================================================
+PART 8: DEEPER — THE BAER OBSTRUCTION AS MATROID EXCLUSION
+======================================================================
+
+Why are EXACTLY 7 and 21 forbidden?
+
+MATROID THEORY PERSPECTIVE:
+  The Fano matroid F_7 (7 elements, rank 3) is:
+  - The UNIQUE smallest non-graphic matroid
+  - Representable over F_2 but NOT over F_3 or any field of char ≠ 2
+  - The matroid of PG(2,F_2)
+
+  A matroid is BINARY iff it has no U_{2,4} minor.
+  A binary matroid is GRAPHIC iff it has no F_7 or F_7* minor.
+
+  THE TOURNAMENT CONFLICT GRAPH Ω(T) avoids K₃.
+  The independence polynomial I(G,2) = 7 iff G = K₃.
+  So the K₃ exclusion IS a matroid-theoretic excluded minor condition!
+
+  F_7 appears at TWO levels:
+  1. As the structure of PG(2,F_2) (the Baer subplane)
+  2. As the excluded minor condition for graphic → binary matroids
+
+  CONJECTURE: The K₃ avoidance in Ω(T) is EQUIVALENT to
+  saying that the 'tournament matroid' avoids F_7 as a minor.
+  This would explain why 7 = |F_7| is forbidden — it's the
+  SIZE of the excluded minor!
+
+  And 21 = 3 × 7 is forbidden because the 3 Baer subplanes
+  of PG(2,F_4) each carry an F_7 structure, and the partition
+  into 3 copies means ANY graph with I(G,2) = 21 must have
+  K₃ (= F_7's I-polynomial evaluator) as a subgraph.
+
+======================================================================
+PART 9: THE PISANO-BAER-WALSH TRIAD
+======================================================================
+
+Three number-theoretic periods that ALL equal powers of 2:
+
+  π(3) = 8 = 2³    (Pisano period of Fibonacci mod 3)
+  π(7) = 16 = 2⁴   (Pisano period of Fibonacci mod 7)
+  π(21) = 16 = 2⁴  (Pisano period of Fibonacci mod 21)
+
+  Tournament period = 6 = LCM(2,3)
+  Walsh even-degree constraint ↔ period 2 (mod 2)
+  Cycle type constraint ↔ period 3 (mod 3)
+
+  The Pisano periods are POWERS OF 2 because 3 and 7 divide
+  EVEN-indexed Fibonacci numbers (F_4=3, F_8=21), and the
+  Fibonacci recurrence over F_2 has period dividing 2^k·3.
+
+Pisano periods for relevant moduli:
+  π(  2) =    3
+  π(  3) =    8 (2^3)
+  π(  4) =    6
+  π(  5) =   20
+  π(  6) =   24
+  π(  7) =   16 ← FORBIDDEN H-value (2^4)
+  π(  8) =   12
+  π( 13) =   28
+  π( 21) =   16 ← FORBIDDEN H-value (2^4)
+  π( 43) =   88
+  π( 57) =   72
+
+OBSERVATION: π(7) = 16 = 2⁴ and π(21) = LCM(π(3),π(7)) = LCM(8,16) = 16
+Both forbidden values have Pisano periods that are pure powers of 2!
+This is because 3|F_4 and 7|F_8, and indices 4,8 are powers of 2.
+
+Testing: m has π(m) = 2^k iff m | F_{2^k} for some k?
+  π(  3) =    8 = 2^3,  3 | F_8 = 21
+  π(  7) =   16 = 2^4,  7 | F_16 = 987
+  π( 21) =   16 = 2^4,  21 | F_16 = 987
+  π( 47) =   32 = 2^5,  47 | F_32 = 2178309
+
+======================================================================
+GRAND SYNTHESIS: WHY Φ₃ RULES TOURNAMENT THEORY
+======================================================================
+
+The third cyclotomic polynomial Φ₃(x) = x²+x+1 is the
+MASTER POLYNOMIAL of tournament theory because:
+
+1. It defines the field: F_4 = F_2[x]/Φ₃(x)
+2. It creates the geometry: |PG(2,q)| = Φ₃(q)
+3. It governs the Baer partition: Φ₃(q²) = Φ₃(q)·Φ₆(q)
+4. Its discriminant -3 gives Z[ω] with 6 units = tournament period
+5. Its root at x=2 gives 7 = I(K₃,2) = first forbidden value
+6. Its evaluation Φ₃(4)=21 gives second forbidden value
+7. Its evaluation Φ₃(1)=3 gives the variance ratio 1/3
+8. Its companion Φ₆(2)=3 gives the cycle generator
+9. Its roots are eigenvalues of the Z/3Z action on F_4
+10. Its Eisenstein norm interpretation: 7 = N(3+ω) is prime
+
+The tournament is an arithmetic object living in the shadow
+of the third cyclotomic polynomial.
+
+======================================================================
+DONE — FROBENIUS-WALSH-BAER CORRESPONDENCE
+======================================================================
