@@ -1,0 +1,289 @@
+======================================================================
+PART A: WHY α₂=3 IS IMPOSSIBLE AT n=6
+======================================================================
+
+All 10 partitions of {0,...,5} into two triples:
+  P_0: (0, 1, 2) | (3, 4, 5)
+  P_1: (0, 1, 3) | (2, 4, 5)
+  P_2: (0, 1, 4) | (2, 3, 5)
+  P_3: (0, 1, 5) | (2, 3, 4)
+  P_4: (0, 2, 3) | (1, 4, 5)
+  P_5: (0, 2, 4) | (1, 3, 5)
+  P_6: (0, 2, 5) | (1, 3, 4)
+  P_7: (0, 3, 4) | (1, 2, 5)
+  P_8: (0, 3, 5) | (1, 2, 4)
+  P_9: (0, 4, 5) | (1, 2, 3)
+
+Each partition {A, B} is both-cyclic iff T|_A is cyclic AND T|_B is cyclic.
+T|_{a,b,c} is cyclic iff arc pattern is not transitive.
+3 arcs among 3 vertices → 2 outcomes: transitive (2 of them) or cyclic (6 of them).
+P(T|_A cyclic) = 6/8 = 3/4 for each triple.
+
+Distribution of α₂ = #{both-cyclic partitions}:
+  α₂ = 0: 17328 tournaments
+  α₂ = 1: 10880 tournaments
+  α₂ = 2: 4320 tournaments
+  α₂ = 4: 240 tournaments
+
+Distinct both-cyclic patterns (subsets of 10 partitions): 71
+Patterns by size:
+  Size 0: 1 distinct patterns, total 17328 tournaments
+  Size 1: 10 distinct patterns, total 10880 tournaments
+  Size 2: 45 distinct patterns, total 4320 tournaments
+  Size 4: 15 distinct patterns, total 240 tournaments
+
+Analysis: which 3-element subsets of the 10 partitions can be simultaneously both-cyclic?
+  Feasible 3-subsets: 60 out of C(10,3) = 120
+
+★ NO tournament has EXACTLY 3 both-cyclic partitions!
+  But there are tournaments with ≥3 both-cyclic partitions (α₂=4 has 240).
+  CONCLUSION: Having 3 both-cyclic partitions FORCES a 4th!
+
+  Verification: #{α₂≥3' = #{α₂≥4: 240 = 240: True
+
+======================================================================
+PART A2: THE FORCING MECHANISM — WHY 3 → 4
+======================================================================
+
+Each triple appears in exactly {1} partitions.
+
+Partition overlap graph (shared triple means dependent):
+
+Partition adjacency (vertices in common):
+  P_0: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_1: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_2: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_3: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_4: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_5: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_6: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_7: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_8: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+  P_9: overlaps = [6, 6, 6, 6, 6, 6, 6, 6, 6]
+
+α₂ = 4 patterns:
+  Partitions [5, 6, 7, 8]: 16 tournaments
+    P_5: (0, 2, 4) | (1, 3, 5)
+    P_6: (0, 2, 5) | (1, 3, 4)
+    P_7: (0, 3, 4) | (1, 2, 5)
+    P_8: (0, 3, 5) | (1, 2, 4)
+  Partitions [4, 5, 8, 9]: 16 tournaments
+    P_4: (0, 2, 3) | (1, 4, 5)
+    P_5: (0, 2, 4) | (1, 3, 5)
+    P_8: (0, 3, 5) | (1, 2, 4)
+    P_9: (0, 4, 5) | (1, 2, 3)
+  Partitions [1, 2, 8, 9]: 16 tournaments
+    P_1: (0, 1, 3) | (2, 4, 5)
+    P_2: (0, 1, 4) | (2, 3, 5)
+    P_8: (0, 3, 5) | (1, 2, 4)
+    P_9: (0, 4, 5) | (1, 2, 3)
+  Partitions [1, 2, 4, 5]: 16 tournaments
+    P_1: (0, 1, 3) | (2, 4, 5)
+    P_2: (0, 1, 4) | (2, 3, 5)
+    P_4: (0, 2, 3) | (1, 4, 5)
+    P_5: (0, 2, 4) | (1, 3, 5)
+  Partitions [2, 3, 7, 8]: 16 tournaments
+    P_2: (0, 1, 4) | (2, 3, 5)
+    P_3: (0, 1, 5) | (2, 3, 4)
+    P_7: (0, 3, 4) | (1, 2, 5)
+    P_8: (0, 3, 5) | (1, 2, 4)
+  Partitions [2, 3, 5, 6]: 16 tournaments
+    P_2: (0, 1, 4) | (2, 3, 5)
+    P_3: (0, 1, 5) | (2, 3, 4)
+    P_5: (0, 2, 4) | (1, 3, 5)
+    P_6: (0, 2, 5) | (1, 3, 4)
+  Partitions [4, 6, 7, 9]: 16 tournaments
+    P_4: (0, 2, 3) | (1, 4, 5)
+    P_6: (0, 2, 5) | (1, 3, 4)
+    P_7: (0, 3, 4) | (1, 2, 5)
+    P_9: (0, 4, 5) | (1, 2, 3)
+  Partitions [1, 3, 7, 9]: 16 tournaments
+    P_1: (0, 1, 3) | (2, 4, 5)
+    P_3: (0, 1, 5) | (2, 3, 4)
+    P_7: (0, 3, 4) | (1, 2, 5)
+    P_9: (0, 4, 5) | (1, 2, 3)
+  Partitions [1, 3, 4, 6]: 16 tournaments
+    P_1: (0, 1, 3) | (2, 4, 5)
+    P_3: (0, 1, 5) | (2, 3, 4)
+    P_4: (0, 2, 3) | (1, 4, 5)
+    P_6: (0, 2, 5) | (1, 3, 4)
+  Partitions [0, 2, 6, 9]: 16 tournaments
+    P_0: (0, 1, 2) | (3, 4, 5)
+    P_2: (0, 1, 4) | (2, 3, 5)
+    P_6: (0, 2, 5) | (1, 3, 4)
+    P_9: (0, 4, 5) | (1, 2, 3)
+  Partitions [0, 2, 4, 7]: 16 tournaments
+    P_0: (0, 1, 2) | (3, 4, 5)
+    P_2: (0, 1, 4) | (2, 3, 5)
+    P_4: (0, 2, 3) | (1, 4, 5)
+    P_7: (0, 3, 4) | (1, 2, 5)
+  Partitions [0, 3, 5, 9]: 16 tournaments
+    P_0: (0, 1, 2) | (3, 4, 5)
+    P_3: (0, 1, 5) | (2, 3, 4)
+    P_5: (0, 2, 4) | (1, 3, 5)
+    P_9: (0, 4, 5) | (1, 2, 3)
+  Partitions [0, 3, 4, 8]: 16 tournaments
+    P_0: (0, 1, 2) | (3, 4, 5)
+    P_3: (0, 1, 5) | (2, 3, 4)
+    P_4: (0, 2, 3) | (1, 4, 5)
+    P_8: (0, 3, 5) | (1, 2, 4)
+  Partitions [0, 1, 5, 7]: 16 tournaments
+    P_0: (0, 1, 2) | (3, 4, 5)
+    P_1: (0, 1, 3) | (2, 4, 5)
+    P_5: (0, 2, 4) | (1, 3, 5)
+    P_7: (0, 3, 4) | (1, 2, 5)
+  Partitions [0, 1, 6, 8]: 16 tournaments
+    P_0: (0, 1, 2) | (3, 4, 5)
+    P_1: (0, 1, 3) | (2, 4, 5)
+    P_6: (0, 2, 5) | (1, 3, 4)
+    P_8: (0, 3, 5) | (1, 2, 4)
+
+======================================================================
+PART B: JACOBSTHAL PISANO = MATRIX ORDER THEOREM
+======================================================================
+
+THEOREM: For all odd primes p, the Jacobsthal Pisano period π_J(p)
+equals the order of M = [[1,2],[1,0]] in GL(2, Z/pZ).
+
+PROOF SKETCH:
+  The Jacobsthal sequence satisfies J(n) = a^T M^n e_1 where
+  a = [0, 1]^T, e_1 = [1, 0]^T. Actually:
+  [J(n+1)] = M^n [J(1)] = M^n [1]
+  [J(n)  ]       [J(0)]       [0]
+
+  π_J(p) = smallest k with J(k) ≡ 0, J(k+1) ≡ 1 mod p
+  = smallest k with M^k [1, 0]^T ≡ [1, 0]^T mod p
+  = smallest k with M^k ≡ I mod p (if this also gives 2nd column right)
+
+Verification: M^n [1,0]^T = [J(n+1), J(n)]^T mod p
+
+  p = 3:
+    ✓ M^n e_1 = [J(n+1), J(n)]^T mod 3 for n=1..8
+
+  p = 5:
+    ✓ M^n e_1 = [J(n+1), J(n)]^T mod 5 for n=1..19
+
+  p = 7:
+    ✓ M^n e_1 = [J(n+1), J(n)]^T mod 7 for n=1..19
+
+  p = 11:
+    ✓ M^n e_1 = [J(n+1), J(n)]^T mod 11 for n=1..19
+
+
+Deriving M^n explicitly:
+  M^n = [[a_n, b_n], [c_n, d_n]]
+  Column 1: M^n e_1 = [J(n+1), J(n)]
+  Column 2: M^n e_2 = [2J(n), J(n-1)] since M·e_2 = [2,0] = 2·e_1,
+    and M^n e_2 = M^{n-1}(Me_2) = M^{n-1}[2,0]^T = 2M^{n-1}e_1 = 2[J(n), J(n-1)]
+
+  So M^n = [[J(n+1), 2J(n)], [J(n), 2J(n-1)]]
+  M^n = I iff J(n)=0 and J(n+1)=1 and 2J(n-1)=1
+  J(n)=0 and J(n+1)=1 implies J(n-1) = (J(n+1)-J(n))/2 = 1/2
+  So need 2·(1/2) = 1 mod p → always true if 2 is invertible (p odd)!
+
+★ THEOREM PROVED: For odd prime p,
+  order(M mod p) = π_J(p) because M^n = [[J(n+1), 2J(n)], [J(n), 2J(n-1)]]
+  and M^n ≡ I iff J(n) ≡ 0 AND J(n+1) ≡ 1 (mod p),
+  which is exactly the Pisano period condition.
+
+Verification of M^n = [[J(n+1), 2J(n)], [J(n), 2J(n-1)]]:
+  ✓ M^n = [[J(n+1), 2J(n)], [J(n), 2J(n-1)]] verified for n=1..14
+
+======================================================================
+PART B2: THE p=3 JORDAN BLOCK ANOMALY
+======================================================================
+
+At p=3: eigenvalues of M are roots of λ²-λ-2 = (λ-2)(λ+1).
+Since 2≡-1 mod 3, this becomes (λ+1)² = 0 — DOUBLE ROOT!
+
+M mod 3 = [[1,2],[1,0]]. Eigenvalue λ=-1≡2 mod 3.
+Check: (M-2I) mod 3 = [[-1,2],[1,-2]] ≡ [[2,2],[1,1]] mod 3
+(M-2I)² mod 3 = ?
+(M-2I)² mod 3 = [[0, 0], [0, 0]]
+Is it zero? True
+
+★ CONFIRMED: (M-2I)² ≡ 0 mod 3. M has a Jordan block of size 2.
+  Order of Jordan block J = [[λ,1],[0,λ]] in GL(2,F_p):
+  J^k = [[λ^k, kλ^{k-1}], [0, λ^k]]
+  J^k = I iff λ^k = 1 AND kλ^{k-1} = 0
+  At p=3, λ=2: ord(2)=2, so λ^2=1. Need k·1=0 mod 3, i.e., 3|k.
+  So order = LCM(ord(λ), p) = LCM(2, 3) = 6. ✓
+
+★ GENERAL JORDAN BLOCK FORMULA:
+  If M has a Jordan block at prime p (repeated eigenvalue),
+  order = LCM(ord_p(λ), p) instead of just ord_p(λ).
+  This happens iff p | disc(char poly) = 1 + 8 = 9, so p = 3.
+  Indeed, 3 is the ONLY prime where M(2) has a Jordan block!
+
+  Discriminant of λ²-λ-2: Δ = 1+8 = 9 = 3²
+  Primes dividing Δ: only p=3
+  So p=3 is the UNIQUE 'exceptional' prime for tournament matrix order!
+
+======================================================================
+PART C: MATRIX ORDER AT COMPOSITE MODULI
+======================================================================
+
+   m  order(M mod m)   π_J(m)  match
+     3               6        6   True
+     5               4        4   True
+     7               6        6   True
+     9              18       18   True
+    11              10       10   True
+    13              12       12   True
+    15              12       12   True
+    17               8        8   True
+    19              18       18   True
+    21               6        6   True
+    23              22       22   True
+    25              20       20   True
+    27              54       54   True
+    29              28       28   True
+    31              10       10   True
+    33              30       30   True
+    35              12       12   True
+    37              36       36   True
+    39              12       12   True
+    41              20       20   True
+    43              14       14   True
+    45              36       36   True
+    47              46       46   True
+    49              42       42   True
+
+★ The Jacobsthal Pisano = matrix order theorem extends to ALL odd moduli,
+  not just primes! This follows from the Chinese Remainder Theorem.
+
+======================================================================
+GRAND SYNTHESIS
+======================================================================
+
+THE THREE LAYERS OF TOURNAMENT TOPOLOGY:
+
+Layer 1 (Euler/Topological): x = -1
+  Transfer matrix M(-1) ∈ SL(2,Z), order 6
+  I(P_k, -1) has exact period 6
+  Ind(P_k) cycles through 6 homotopy types
+
+Layer 2 (Combinatorial): x = 1
+  I(G, 1) = #independent sets
+  Fibonacci numbers at path graphs
+
+Layer 3 (Arithmetic/Tournament): x = 2
+  I(Ω, 2) = H (Hamiltonian path count)
+  Transfer matrix M(2), order mod p = π_J(p)
+  M(2) mod 3 = M(-1) mod 3 (the mod-3 unification)
+
+THE BRIDGE: M^n = [[J(n+1), 2J(n)], [J(n), 2J(n-1)]]
+  Connects Jacobsthal sequence to matrix dynamics
+  Jacobsthal Pisano period = matrix order (proved)
+
+THE EXCEPTIONAL PRIME p=3:
+  Discriminant Δ = 9 = 3², only divisible by p=3
+  Jordan block at p=3: order = LCM(ord_3(2), 3) = LCM(2,3) = 6
+  Same period as SL(2,Z) element at x=-1!
+  2 ≡ -1 mod 3 is the ROOT CAUSE of all period-6 phenomena
+
+THE α₂ GAP AT n=6:
+  α₂ = #{both-cyclic partitions of 6 into 3+3}
+  Values: {0, 1, 2, 4} — 3 is IMPOSSIBLE
+  Having 3 both-cyclic partitions FORCES a 4th
+  This is a deep combinatorial constraint on 3-cycle arrangements
