@@ -1,0 +1,39 @@
+Computing EXACT Var(H)/Mean(H)^2 at n=7
+m = 21, total tournaments = 2097152
+This will take a while...
+  5% done, elapsed 38.9s, est total 778.5s, sum_h so far = 7092035
+  10% done, elapsed 78.4s, est total 784.2s, sum_h so far = 15679738
+  15% done, elapsed 113.6s, est total 757.1s, sum_h so far = 23174199
+  20% done, elapsed 141.4s, est total 706.9s, sum_h so far = 31019202
+  25% done, elapsed 169.6s, est total 678.5s, sum_h so far = 39321595
+  30% done, elapsed 198.0s, est total 660.1s, sum_h so far = 48614058
+  35% done, elapsed 226.1s, est total 645.9s, sum_h so far = 58532363
+  40% done, elapsed 255.9s, est total 639.6s, sum_h so far = 66811624
+  45% done, elapsed 289.3s, est total 642.9s, sum_h so far = 74896735
+  50% done, elapsed 325.7s, est total 651.4s, sum_h so far = 82575346
+  55% done, elapsed 362.2s, est total 658.5s, sum_h so far = 90253481
+  60% done, elapsed 400.0s, est total 666.6s, sum_h so far = 98337746
+  65% done, elapsed 438.0s, est total 673.8s, sum_h so far = 106617417
+  70% done, elapsed 478.8s, est total 684.0s, sum_h so far = 116535376
+  75% done, elapsed 519.2s, est total 692.2s, sum_h so far = 125829033
+  80% done, elapsed 559.3s, est total 699.1s, sum_h so far = 134130080
+  85% done, elapsed 597.2s, est total 702.6s, sum_h so far = 141975125
+  90% done, elapsed 631.0s, est total 701.1s, sum_h so far = 149470252
+  95% done, elapsed 658.8s, est total 693.5s, sum_h so far = 158058243
+  100% done, elapsed 695.3s, est total 695.3s, sum_h so far = 165150674
+
+Done in 695.3s
+
+  sum(H) = 165150720
+  sum(H^2) = 16386048000
+  Mean = 315/4 = 78.750000
+  Mean(H^2) = 1000125/128 = 7813.476562
+  Var = 206325/128 = 1611.914062
+  Var/Mean^2 = 131/504 = 0.2599206349
+  Level-2 = 5/21 = 0.2380952381
+  E_4+/E_0 = 11/504 = 0.0218253968
+
+  Deviation from 1/3 = 37/504 = 0.0734126984
+  In 180ths: 185/14
+  Predicted (k=3): 15/180 = 0.0833333333
+  Actual: 13.214286/180
