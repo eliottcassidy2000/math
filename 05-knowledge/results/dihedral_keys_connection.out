@@ -1,0 +1,415 @@
+======================================================================
+PART 1: ORTHOSCHEME DIHEDRAL ANGLES — THE PATTERN
+======================================================================
+
+  Orthoscheme Δ_n = {1 ≥ x₁ ≥ x₂ ≥ ... ≥ x_n ≥ 0}
+
+  Facets: F₀ (x₁=1), Fₖ (xₖ=x_{k+1}), F_n (x_n=0)
+  Outward normals:
+    F₀: e₁
+    Fₖ: (-eₖ + e_{k+1})/√2 for k=1,...,n-1
+    F_n: -e_n
+
+  n=2:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=2, boundary-boundary: angles = [np.float64(0.5)]π
+  n=3:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=1, internal-internal: angles = [np.float64(0.333333)]π
+    gap=2, boundary-internal: angles = [np.float64(0.5)]π
+    gap=2, internal-boundary: angles = [np.float64(0.5)]π
+    gap=3, boundary-boundary: angles = [np.float64(0.5)]π
+  n=4:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=1, internal-internal: angles = [np.float64(0.333333)]π
+    gap=2, boundary-internal: angles = [np.float64(0.5)]π
+    gap=2, internal-boundary: angles = [np.float64(0.5)]π
+    gap=2, internal-internal: angles = [np.float64(0.5)]π
+    gap=3, boundary-internal: angles = [np.float64(0.5)]π
+    gap=3, internal-boundary: angles = [np.float64(0.5)]π
+    gap=4, boundary-boundary: angles = [np.float64(0.5)]π
+  n=5:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=1, internal-internal: angles = [np.float64(0.333333)]π
+    gap=2, boundary-internal: angles = [np.float64(0.5)]π
+    gap=2, internal-boundary: angles = [np.float64(0.5)]π
+    gap=2, internal-internal: angles = [np.float64(0.5)]π
+    gap=3, boundary-internal: angles = [np.float64(0.5)]π
+    gap=3, internal-boundary: angles = [np.float64(0.5)]π
+    gap=3, internal-internal: angles = [np.float64(0.5)]π
+    gap=4, boundary-internal: angles = [np.float64(0.5)]π
+    gap=4, internal-boundary: angles = [np.float64(0.5)]π
+    gap=5, boundary-boundary: angles = [np.float64(0.5)]π
+  n=6:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=1, internal-internal: angles = [np.float64(0.333333)]π
+    gap=2, boundary-internal: angles = [np.float64(0.5)]π
+    gap=2, internal-boundary: angles = [np.float64(0.5)]π
+    gap=2, internal-internal: angles = [np.float64(0.5)]π
+    gap=3, boundary-internal: angles = [np.float64(0.5)]π
+    gap=3, internal-boundary: angles = [np.float64(0.5)]π
+    gap=3, internal-internal: angles = [np.float64(0.5)]π
+    gap=4, boundary-internal: angles = [np.float64(0.5)]π
+    gap=4, internal-boundary: angles = [np.float64(0.5)]π
+    gap=4, internal-internal: angles = [np.float64(0.5)]π
+    gap=5, boundary-internal: angles = [np.float64(0.5)]π
+    gap=5, internal-boundary: angles = [np.float64(0.5)]π
+    gap=6, boundary-boundary: angles = [np.float64(0.5)]π
+  n=7:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=1, internal-internal: angles = [np.float64(0.333333)]π
+    gap=2, boundary-internal: angles = [np.float64(0.5)]π
+    gap=2, internal-boundary: angles = [np.float64(0.5)]π
+    gap=2, internal-internal: angles = [np.float64(0.5)]π
+    gap=3, boundary-internal: angles = [np.float64(0.5)]π
+    gap=3, internal-boundary: angles = [np.float64(0.5)]π
+    gap=3, internal-internal: angles = [np.float64(0.5)]π
+    gap=4, boundary-internal: angles = [np.float64(0.5)]π
+    gap=4, internal-boundary: angles = [np.float64(0.5)]π
+    gap=4, internal-internal: angles = [np.float64(0.5)]π
+    gap=5, boundary-internal: angles = [np.float64(0.5)]π
+    gap=5, internal-boundary: angles = [np.float64(0.5)]π
+    gap=5, internal-internal: angles = [np.float64(0.5)]π
+    gap=6, boundary-internal: angles = [np.float64(0.5)]π
+    gap=6, internal-boundary: angles = [np.float64(0.5)]π
+    gap=7, boundary-boundary: angles = [np.float64(0.5)]π
+  n=8:
+    gap=1, boundary-internal: angles = [np.float64(0.25)]π
+    gap=1, internal-boundary: angles = [np.float64(0.25)]π
+    gap=1, internal-internal: angles = [np.float64(0.333333)]π
+    gap=2, boundary-internal: angles = [np.float64(0.5)]π
+    gap=2, internal-boundary: angles = [np.float64(0.5)]π
+    gap=2, internal-internal: angles = [np.float64(0.5)]π
+    gap=3, boundary-internal: angles = [np.float64(0.5)]π
+    gap=3, internal-boundary: angles = [np.float64(0.5)]π
+    gap=3, internal-internal: angles = [np.float64(0.5)]π
+    gap=4, boundary-internal: angles = [np.float64(0.5)]π
+    gap=4, internal-boundary: angles = [np.float64(0.5)]π
+    gap=4, internal-internal: angles = [np.float64(0.5)]π
+    gap=5, boundary-internal: angles = [np.float64(0.5)]π
+    gap=5, internal-boundary: angles = [np.float64(0.5)]π
+    gap=5, internal-internal: angles = [np.float64(0.5)]π
+    gap=6, boundary-internal: angles = [np.float64(0.5)]π
+    gap=6, internal-boundary: angles = [np.float64(0.5)]π
+    gap=6, internal-internal: angles = [np.float64(0.5)]π
+    gap=7, boundary-internal: angles = [np.float64(0.5)]π
+    gap=7, internal-boundary: angles = [np.float64(0.5)]π
+    gap=8, boundary-boundary: angles = [np.float64(0.5)]π
+
+  SUMMARY:
+  - gap=1, boundary-internal: always π/4 = 0.25π
+  - gap=1, internal-internal: always π/3 = 0.3333π
+  - gap≥2, any: always π/2 = 0.5π
+
+======================================================================
+PART 2: WHY π/4 AND π/3?
+======================================================================
+
+  The angle between adjacent facet normals:
+
+  Case 1: F₀ (normal e₁) and F₁ (normal (-e₁+e₂)/√2)
+    cos(angle) = e₁ · (-e₁+e₂)/√2 = -1/√2
+    angle between normals = 3π/4
+    dihedral angle = π - 3π/4 = π/4
+
+  Case 2: Fₖ (normal (-eₖ+e_{k+1})/√2) and F_{k+1} (normal (-e_{k+1}+e_{k+2})/√2)
+    cos(angle) = (-eₖ+e_{k+1})·(-e_{k+1}+e_{k+2})/2 = (0+(-1)+0+0)/2 = -1/2
+    angle between normals = 2π/3
+    dihedral angle = π - 2π/3 = π/3
+
+  Case 3: F_n (normal -e_n) and F_{n-1} (normal (-e_{n-1}+e_n)/√2)
+    cos(angle) = -e_n · (-e_{n-1}+e_n)/√2 = -1/√2
+    dihedral angle = π/4 (same as Case 1)
+
+  WHY:
+  - π/4 arises from 1/√2 = cos(45°), the ratio of diagonal to side
+  - π/3 arises from 1/2 = cos(60°), the equilateral triangle angle
+
+  In terms of the keys:
+  - π/4: 4 = 2² → related to the KEY 2
+  - π/3: 3 = 3 → IS the KEY 3
+
+  The denominators of the dihedral angles are {2, 3, 4}.
+  2 = KEY₁, 3 = KEY₂, 4 = KEY₁²
+
+======================================================================
+PART 3: DEHN INVARIANT OF THE n-ORTHOSCHEME
+======================================================================
+
+  D(Δ_n) = Σ_{ridges R} vol_{n-2}(R) ⊗ θ(R)
+
+  The ridges of Δ_n are the (n-2)-dimensional faces.
+  Each ridge R = Fᵢ ∩ Fⱼ (intersection of two facets).
+
+  Since θ(R) is always a rational multiple of π,
+  the Dehn invariant lives in R ⊗_Q (R/πQ) = R ⊗_Q (Q/Z)·π
+  Wait: θ(R)/π is rational (1/4, 1/3, or 1/2).
+  So θ(R) ∈ πQ, which means θ(R) ⊗ 1 = 0 in R ⊗_Q R/πQ.
+
+  IMPORTANT: D = 0 for ALL orthoschemes!
+  This is because all dihedral angles are rational multiples of π.
+  In R ⊗_Q R/πQ, rational multiples of π are 0.
+
+  So D(Δ_n) = 0 for all n.
+  This means D(U(T)) = 0 for all tournament unions U(T).
+  The Dehn invariant CANNOT distinguish tournament polytopes!
+
+  CONSEQUENCE: By Sydler's theorem (n=3), all tournament polytopes
+  of the same volume are scissors-congruent. ✓
+  For general n: by Jessen (1968) / Dupont-Sah, rational dihedral
+  angles ⟹ Dehn = 0 ⟹ scissors congruence (in R^n for n≥3).
+
+  Comparison: regular tetrahedron dihedral = arccos(1/3) = 0.391827π
+  This is IRRATIONAL as a multiple of π → D ≠ 0.
+  The orthoscheme has rational π-multiples → D = 0.
+
+======================================================================
+PART 4: THE 1/4 AND 1/3 CONNECTION TO 2 AND 3
+======================================================================
+
+  The dihedral angles π/4 and π/3 arise from:
+    cos⁻¹(-1/√2) = 3π/4 → dihedral π - 3π/4 = π/4
+    cos⁻¹(-1/2)  = 2π/3 → dihedral π - 2π/3 = π/3
+
+  The cosines -1/√2 and -1/2 involve √2 and 2.
+
+  Connection to the recurrence z²-5z+6 = (z-2)(z-3):
+    At the roots z=2: 4-10+6 = 0
+    At the roots z=3: 9-15+6 = 0
+
+  The number 2 appears as:
+    √2: the norm of the internal normal (-eₖ+e_{k+1})
+    2: the key root
+    4 = 2²: the dihedral denominator at boundary-internal ridges
+
+  The number 3 appears as:
+    3: the key root
+    3: the dihedral denominator at internal-internal ridges
+    π/3: the angle of the equilateral triangle
+
+  DEEP CONNECTION:
+  The orthoscheme is built from the PERMUTOHEDRON, which is
+  built from the symmetric group S_n acting on R^n.
+  The 'type A' root system has roots eᵢ - eⱼ.
+  The normals to the internal facets are (eₖ - e_{k+1})/√2,
+  which are SIMPLE ROOTS of the type A root system!
+
+  The angle between adjacent simple roots is 2π/3 (=120°).
+  This is a UNIVERSAL fact about type A root systems!
+  The dihedral angle π/3 = π - 2π/3 is the SUPPLEMENT.
+
+  The angle π/4 at the boundary is specific to the ORTHOSCHEME
+  embedding in the cube [0,1]^n.
+
+======================================================================
+PART 5: ROOT SYSTEM AND THE 2-3 DICHOTOMY
+======================================================================
+
+  Type A_{n-1} root system: roots = {eᵢ - eⱼ : i ≠ j}
+  Simple roots: αₖ = eₖ - e_{k+1} for k=1,...,n-1
+  Cartan matrix: A_{ij} = 2δ_{ij} - δ_{|i-j|,1}
+
+  A_2 Cartan matrix (2×2):
+    [2, -1]
+    [-1, 2]
+  Eigenvalues: [np.float64(1.0), np.float64(3.0)]
+
+  A_3 Cartan matrix (3×3):
+    [2, -1, 0]
+    [-1, 2, -1]
+    [0, -1, 2]
+  Eigenvalues: [np.float64(0.585786437626905), np.float64(1.9999999999999998), np.float64(3.414213562373095)]
+
+  A_4 Cartan matrix (4×4):
+    [2, -1, 0, 0]
+    [-1, 2, -1, 0]
+    [0, -1, 2, -1]
+    [0, 0, -1, 2]
+  Eigenvalues: [np.float64(0.381966011250105), np.float64(1.381966011250105), np.float64(2.618033988749895), np.float64(3.6180339887498953)]
+
+  The Cartan matrix has diagonal entries 2 (= KEY₁).
+  Off-diagonal entries -1.
+  Eigenvalues: 2 - 2cos(kπ/n) for k=1,...,n-1
+
+  The eigenvalue range is [2-2cos(π/n), 2+2cos(π/n)] = [2-2, 2+2] → [0, 4]
+  But the actual range depends on n:
+    A_2: eigenvalues = [1.0000, ..., 3.0000]
+           det = 3.0000 (should be 3)
+    A_3: eigenvalues = [0.5858, ..., 3.4142]
+           det = 4.0000 (should be 4)
+    A_4: eigenvalues = [0.3820, ..., 3.6180]
+           det = 5.0000 (should be 5)
+    A_5: eigenvalues = [0.2679, ..., 3.7321]
+           det = 6.0000 (should be 6)
+    A_6: eigenvalues = [0.1981, ..., 3.8019]
+           det = 7.0000 (should be 7)
+    A_7: eigenvalues = [0.1522, ..., 3.8478]
+           det = 8.0000 (should be 8)
+    A_8: eigenvalues = [0.1206, ..., 3.8794]
+           det = 9.0000 (should be 9)
+
+  REMARKABLE: det(A_{n-1}) = n!
+  The determinant of the Cartan matrix is the INDEX of the root lattice
+  in the weight lattice, which equals n for type A_{n-1}.
+
+  det(A₁) = 2 = KEY₁
+  det(A₂) = 3 = KEY₂
+  det(A₃) = 4 = KEY₁²
+  det(A₄) = 5 = KEY₁ + KEY₂
+  det(A₅) = 6 = KEY₁ · KEY₂
+
+  THE KEYS 2 AND 3 ARE det(A₁) AND det(A₂)!
+  The tournament recurrence z² - 5z + 6 = (z-2)(z-3)
+  has roots equal to det(A₁) and det(A₂)!
+
+======================================================================
+PART 6: THE PERMUTOHEDRON AND TOURNAMENT STRUCTURE
+======================================================================
+
+  The permutohedron Π_n is the convex hull of all permutations
+  of (1, 2, ..., n) in R^n.
+
+  It has n! vertices (one per permutation).
+  Its normal fan is the TYPE A HYPERPLANE ARRANGEMENT:
+  {x_i = x_j : 1 ≤ i < j ≤ n}
+
+  The n! simplices Δ_σ (orthoschemes) are the CHAMBERS of this arrangement.
+  Each chamber corresponds to a total order on {1,...,n}.
+
+  A tournament T SELECTS H of these chambers.
+  The selection is NOT arbitrary — it must be consistent with T's arcs.
+
+  WHICH chambers are selected?
+  σ = (σ₁,...,σ_n) is selected iff σᵢ→σᵢ₊₁ in T for all i.
+
+  This is a condition on n-1 CONSECUTIVE pairs in the permutation.
+  Each pair (σₖ, σₖ₊₁) must agree with T's arc between them.
+
+  TWO CHAMBERS Δ_σ AND Δ_τ ARE ADJACENT (share a codim-1 face)
+  iff σ and τ differ by an adjacent transposition.
+  The transposition sₖ swaps positions k and k+1.
+
+  IF Δ_σ is selected (σ is a Ham path of T) AND Δ_{s_k·σ} is also
+  selected, then both σₖ→σₖ₊₁ AND σₖ₊₁→σₖ are arcs of T.
+  IMPOSSIBLE in a tournament!
+
+  CONSEQUENCE: The selected chambers form an INDEPENDENT SET
+  in the adjacency graph of the chamber complex!
+  No two selected chambers share a codim-1 face.
+
+  This is a CHROMATIC condition: the selected chambers form
+  an independent set in the Cayley graph of S_n with generators s₁,...,s_{n-1}.
+
+  VERIFICATION: Cayley graph of S_3 with s₁,s₂:
+  123 — 213 — 231 — 321 — 312 — 132 — 123
+  Hexagon. Max independent set = 3. Max H at n=3 = 3. ✓
+
+  n=3: max H = 3
+    Max independent set in Cayley(S_3): 3
+  n=4: max H = 5
+  n=5: max H = 15
+
+======================================================================
+PART 7: THE ARRANGEMENT TOPOLOGY = INDEPENDENCE COMPLEX OF CG
+======================================================================
+
+  We now have TWO independence complexes:
+
+  1. Ind(CG(T)): independence complex of the CONFLICT GRAPH
+     Vertices = odd cycles, faces = disjoint cycle sets
+     α₁ = #cycles, α₂ = #disjoint pairs, ...
+     I(x) = independence polynomial
+
+  2. Ind(Cayley): the set of selected chambers = independent set
+     in the Cayley graph of S_n
+     Size of this set = H
+
+  Are these related? YES!
+  The H selected chambers form a specific pattern in the permutohedron.
+  The ODD CYCLES of T correspond to OBSTRUCTIONS — regions where
+  the selected chambers are 'twisted'.
+
+  Each odd cycle C = (v₁→v₂→...→v_{2k+1}→v₁) creates a region
+  in the permutohedron where the 'natural' ordering is disrupted.
+  The NUMBER of such regions is α₁ (the number of cycles).
+  Their DISJOINTNESS structure gives α₂, α₃, ...
+
+  GEOMETRIC MEANING OF I(-1):
+  I(-1) = 1 - α₁ + α₂ - ... = Euler characteristic of Ind(CG)
+  = alternating count of cycle obstructions
+  = 'net topological complexity' of the tournament polytope U(T)
+
+  I(-1) ≤ 1 means: the obstructions don't create 'holes'
+  in the arrangement — the selected chambers, while non-adjacent,
+  form a topologically 'simple' pattern in the permutohedron.
+
+======================================================================
+PART 8: SYNTHESIS — THE KEYS IN GEOMETRY
+======================================================================
+
+  THE THREE APPEARANCES OF 2 AND 3:
+
+  1. ALGEBRAIC: z² - 5z + 6 = (z-2)(z-3)
+     I(2) = H, I(3) = ternary evaluation
+     k-nacci → 2, weighted k-nacci → 3
+
+  2. GEOMETRIC: Orthoscheme dihedral angles
+     π/4 = π/2² at boundary ridges
+     π/3 at internal ridges
+     Root system: angle between simple roots = 2π/3
+
+  3. ALGEBRAIC-GEOMETRIC: Cartan matrix determinants
+     det(A₁) = 2 = KEY₁
+     det(A₂) = 3 = KEY₂
+     det(A_{n-1}) = n
+     The keys are the first two Cartan determinants!
+
+  4. COMBINATORIAL: Cayley graph independence
+     Ham paths form independent set in Cayley(S_n, {s₁,...,s_{n-1}})
+     Max independent set at n=3 is 3 = max H ✓
+
+  THE UNIFYING PRINCIPLE:
+  The type A root system generates BOTH the geometry (angles)
+  AND the algebra (recurrence). The orthoscheme is the
+  fundamental domain of S_n acting on R^n, and its angles
+  encode the same information as the independence polynomial.
+
+  The dihedral angle π/3 between adjacent internal facets is
+  the ROOT SYSTEM ANGLE — it governs how 'nearby' simplices
+  are oriented relative to each other.
+
+  The angle π/4 at the boundary is the CUBE-SIMPLEX angle —
+  it governs how each simplex sits inside the ambient cube.
+
+  Together, π/3 and π/4 (with denominators 3 and 4=2²)
+  generate the full geometry. The keys 2 and 3 are the
+  GENERATORS of this angle structure!
+
+  ANGLE DICTIONARY:
+  π/2 = orthogonality (non-adjacent facets)
+  π/3 = root system angle (adjacent internal facets)
+  π/4 = cube-simplex angle (boundary-internal facets)
+
+  In terms of the recurrence z²-5z+6:
+  1/2 = 1/(KEY₁)
+  1/3 = 1/(KEY₂)
+  1/4 = 1/(KEY₁²)
+
+  The angle structure is: {1/KEY₁², 1/KEY₂, 1/KEY₁} × π
+  = {π/4, π/3, π/2}
+
+  The angles π/4, π/3, π/2 generate all multiples of π/12:
+  π/12 = π/3 - π/4
+  π/6 = π/3
+  π/4 = π/4
+  π/3 = π/3
+  5π/12 = π/4 + π/6 = π/4 + (π/3 - π/6)...
+
+  12 = 4 × 3 = KEY₁² × KEY₂ = LCM(4, 3)
+  The 'resolution' of the angle structure is π/12 = π/(KEY₁²·KEY₂)
