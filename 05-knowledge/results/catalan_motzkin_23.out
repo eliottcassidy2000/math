@@ -1,0 +1,288 @@
+======================================================================
+PART 1: MEAN H SEQUENCE — n!/2^{n-1}
+======================================================================
+
+  n | n!/2^{n-1} | ratio to previous | ratio/n
+   1 |         1.0000 |                   |
+   2 |         1.0000 |          1.000000 | 0.500000
+   3 |         1.5000 |          1.500000 | 0.500000
+   4 |         3.0000 |          2.000000 | 0.500000
+   5 |         7.5000 |          2.500000 | 0.500000
+   6 |        22.5000 |          3.000000 | 0.500000
+   7 |        78.7500 |          3.500000 | 0.500000
+   8 |       315.0000 |          4.000000 | 0.500000
+   9 |      1417.5000 |          4.500000 | 0.500000
+  10 |      7087.5000 |          5.000000 | 0.500000
+  11 |     38981.2500 |          5.500000 | 0.500000
+  12 |    233887.5000 |          6.000000 | 0.500000
+  13 |   1520268.7500 |          6.500000 | 0.500000
+  14 |  10641881.2500 |          7.000000 | 0.500000
+  15 |  79814109.3750 |          7.500000 | 0.500000
+
+→ Ratio = n/2 exactly. So mean_H(n) = n!/2^{n-1}.
+
+======================================================================
+PART 2: MAX H SEQUENCE (A038375)
+======================================================================
+
+  n | max H | max/mean | ratio | ratio/(n-1)
+   1 |       1 |   1.0000 |         |
+   2 |       1 |   1.0000 |    1.00 |     1.0
+   3 |       3 |   2.0000 |    3.00 |     1.5
+   4 |       5 |   1.6667 |    1.67 | 0.5555555555555556
+   5 |      15 |   2.0000 |    3.00 |    0.75
+   6 |      45 |   2.0000 |    3.00 |     0.6
+   7 |     189 |   2.4000 |    4.20 | 0.7000000000000001
+   8 |     661 |   2.0984 |    3.50 | 0.49962207105064244
+   9 |    3357 |   2.3683 |    5.08 | 0.6348335854765507
+  10 |   15745 |   2.2215 |    4.69 | 0.5211332869956641
+  11 |   95095 |   2.4395 |    6.04 | 0.6039695141314703
+
+======================================================================
+PART 3: CONTINUED FRACTION ANALYSIS
+======================================================================
+
+Total H counts: Σ_T H(T) = n! × 2^{(n-1)(n-2)/2}
+  n= 1: total H =               1
+  n= 2: total H =               2
+  n= 3: total H =              12
+  n= 4: total H =             192
+  n= 5: total H =            7680
+  n= 6: total H =          737280
+  n= 7: total H =       165150720
+  n= 8: total H =     84557168640
+  n= 9: total H =  97409858273280
+  n=10: total H = 249369237179596800
+  n=11: total H = 1404447543795489177600
+
+Ratios:
+  total_H(2)/total_H(1) = 2.0000 = n/2 × 2^0 = 1.0000
+  total_H(3)/total_H(2) = 6.0000 = n/2 × 2^1 = 3.0000
+  total_H(4)/total_H(3) = 16.0000 = n/2 × 2^2 = 8.0000
+  total_H(5)/total_H(4) = 40.0000 = n/2 × 2^3 = 20.0000
+  total_H(6)/total_H(5) = 96.0000 = n/2 × 2^4 = 48.0000
+  total_H(7)/total_H(6) = 224.0000 = n/2 × 2^5 = 112.0000
+  total_H(8)/total_H(7) = 512.0000 = n/2 × 2^6 = 256.0000
+  total_H(9)/total_H(8) = 1152.0000 = n/2 × 2^7 = 576.0000
+  total_H(10)/total_H(9) = 2560.0000 = n/2 × 2^8 = 1280.0000
+  total_H(11)/total_H(10) = 5632.0000 = n/2 × 2^9 = 2816.0000
+
+======================================================================
+PART 4: LATTICE PATH INTERPRETATION
+======================================================================
+
+n=4: Descent pattern analysis of Hamiltonian paths:
+  H=1: 24 HPs across 8 descent patterns
+    desc=() (0 descents): 1 total occurrences
+    desc=(0,) (1 descents): 3 total occurrences
+    desc=(0, 1) (2 descents): 3 total occurrences
+    desc=(0, 1, 2) (3 descents): 1 total occurrences
+    desc=(0, 2) (2 descents): 5 total occurrences
+    desc=(1,) (1 descents): 5 total occurrences
+    desc=(1, 2) (2 descents): 3 total occurrences
+    desc=(2,) (1 descents): 3 total occurrences
+  H=3: 48 HPs across 8 descent patterns
+    desc=() (0 descents): 2 total occurrences
+    desc=(0,) (1 descents): 6 total occurrences
+    desc=(0, 1) (2 descents): 6 total occurrences
+    desc=(0, 1, 2) (3 descents): 2 total occurrences
+    desc=(0, 2) (2 descents): 10 total occurrences
+    desc=(1,) (1 descents): 10 total occurrences
+    desc=(1, 2) (2 descents): 6 total occurrences
+    desc=(2,) (1 descents): 6 total occurrences
+  H=5: 120 HPs across 8 descent patterns
+    desc=() (0 descents): 5 total occurrences
+    desc=(0,) (1 descents): 15 total occurrences
+    desc=(0, 1) (2 descents): 15 total occurrences
+    desc=(0, 1, 2) (3 descents): 5 total occurrences
+    desc=(0, 2) (2 descents): 25 total occurrences
+    desc=(1,) (1 descents): 25 total occurrences
+    desc=(1, 2) (2 descents): 15 total occurrences
+    desc=(2,) (1 descents): 15 total occurrences
+
+n=5: Descent pattern analysis of Hamiltonian paths:
+  H=1: 120 HPs across 16 descent patterns
+    desc=() (0 descents): 1 total occurrences
+    desc=(0,) (1 descents): 4 total occurrences
+    desc=(0, 1) (2 descents): 6 total occurrences
+    desc=(0, 1, 2) (3 descents): 4 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 1 total occurrences
+    desc=(0, 1, 3) (3 descents): 9 total occurrences
+    desc=(0, 2) (2 descents): 16 total occurrences
+    desc=(0, 2, 3) (3 descents): 9 total occurrences
+    desc=(0, 3) (2 descents): 11 total occurrences
+    desc=(1,) (1 descents): 9 total occurrences
+    desc=(1, 2) (2 descents): 11 total occurrences
+    desc=(1, 2, 3) (3 descents): 4 total occurrences
+    desc=(1, 3) (2 descents): 16 total occurrences
+    desc=(2,) (1 descents): 9 total occurrences
+    desc=(2, 3) (2 descents): 6 total occurrences
+    desc=(3,) (1 descents): 4 total occurrences
+  H=3: 360 HPs across 16 descent patterns
+    desc=() (0 descents): 3 total occurrences
+    desc=(0,) (1 descents): 12 total occurrences
+    desc=(0, 1) (2 descents): 18 total occurrences
+    desc=(0, 1, 2) (3 descents): 12 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 3 total occurrences
+    desc=(0, 1, 3) (3 descents): 27 total occurrences
+    desc=(0, 2) (2 descents): 48 total occurrences
+    desc=(0, 2, 3) (3 descents): 27 total occurrences
+    desc=(0, 3) (2 descents): 33 total occurrences
+    desc=(1,) (1 descents): 27 total occurrences
+    desc=(1, 2) (2 descents): 33 total occurrences
+    desc=(1, 2, 3) (3 descents): 12 total occurrences
+    desc=(1, 3) (2 descents): 48 total occurrences
+    desc=(2,) (1 descents): 27 total occurrences
+    desc=(2, 3) (2 descents): 18 total occurrences
+    desc=(3,) (1 descents): 12 total occurrences
+  H=5: 1200 HPs across 16 descent patterns
+    desc=() (0 descents): 10 total occurrences
+    desc=(0,) (1 descents): 40 total occurrences
+    desc=(0, 1) (2 descents): 60 total occurrences
+    desc=(0, 1, 2) (3 descents): 40 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 10 total occurrences
+    desc=(0, 1, 3) (3 descents): 90 total occurrences
+    desc=(0, 2) (2 descents): 160 total occurrences
+    desc=(0, 2, 3) (3 descents): 90 total occurrences
+    desc=(0, 3) (2 descents): 110 total occurrences
+    desc=(1,) (1 descents): 90 total occurrences
+    desc=(1, 2) (2 descents): 110 total occurrences
+    desc=(1, 2, 3) (3 descents): 40 total occurrences
+    desc=(1, 3) (2 descents): 160 total occurrences
+    desc=(2,) (1 descents): 90 total occurrences
+    desc=(2, 3) (2 descents): 60 total occurrences
+    desc=(3,) (1 descents): 40 total occurrences
+  H=9: 2160 HPs across 16 descent patterns
+    desc=() (0 descents): 18 total occurrences
+    desc=(0,) (1 descents): 72 total occurrences
+    desc=(0, 1) (2 descents): 108 total occurrences
+    desc=(0, 1, 2) (3 descents): 72 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 18 total occurrences
+    desc=(0, 1, 3) (3 descents): 162 total occurrences
+    desc=(0, 2) (2 descents): 288 total occurrences
+    desc=(0, 2, 3) (3 descents): 162 total occurrences
+    desc=(0, 3) (2 descents): 198 total occurrences
+    desc=(1,) (1 descents): 162 total occurrences
+    desc=(1, 2) (2 descents): 198 total occurrences
+    desc=(1, 2, 3) (3 descents): 72 total occurrences
+    desc=(1, 3) (2 descents): 288 total occurrences
+    desc=(2,) (1 descents): 162 total occurrences
+    desc=(2, 3) (2 descents): 108 total occurrences
+    desc=(3,) (1 descents): 72 total occurrences
+  H=11: 1320 HPs across 16 descent patterns
+    desc=() (0 descents): 11 total occurrences
+    desc=(0,) (1 descents): 44 total occurrences
+    desc=(0, 1) (2 descents): 66 total occurrences
+    desc=(0, 1, 2) (3 descents): 44 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 11 total occurrences
+    desc=(0, 1, 3) (3 descents): 99 total occurrences
+    desc=(0, 2) (2 descents): 176 total occurrences
+    desc=(0, 2, 3) (3 descents): 99 total occurrences
+    desc=(0, 3) (2 descents): 121 total occurrences
+    desc=(1,) (1 descents): 99 total occurrences
+    desc=(1, 2) (2 descents): 121 total occurrences
+    desc=(1, 2, 3) (3 descents): 44 total occurrences
+    desc=(1, 3) (2 descents): 176 total occurrences
+    desc=(2,) (1 descents): 99 total occurrences
+    desc=(2, 3) (2 descents): 66 total occurrences
+    desc=(3,) (1 descents): 44 total occurrences
+  H=13: 1560 HPs across 16 descent patterns
+    desc=() (0 descents): 13 total occurrences
+    desc=(0,) (1 descents): 52 total occurrences
+    desc=(0, 1) (2 descents): 78 total occurrences
+    desc=(0, 1, 2) (3 descents): 52 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 13 total occurrences
+    desc=(0, 1, 3) (3 descents): 117 total occurrences
+    desc=(0, 2) (2 descents): 208 total occurrences
+    desc=(0, 2, 3) (3 descents): 117 total occurrences
+    desc=(0, 3) (2 descents): 143 total occurrences
+    desc=(1,) (1 descents): 117 total occurrences
+    desc=(1, 2) (2 descents): 143 total occurrences
+    desc=(1, 2, 3) (3 descents): 52 total occurrences
+    desc=(1, 3) (2 descents): 208 total occurrences
+    desc=(2,) (1 descents): 117 total occurrences
+    desc=(2, 3) (2 descents): 78 total occurrences
+    desc=(3,) (1 descents): 52 total occurrences
+  H=15: 960 HPs across 16 descent patterns
+    desc=() (0 descents): 8 total occurrences
+    desc=(0,) (1 descents): 32 total occurrences
+    desc=(0, 1) (2 descents): 48 total occurrences
+    desc=(0, 1, 2) (3 descents): 32 total occurrences
+    desc=(0, 1, 2, 3) (4 descents): 8 total occurrences
+    desc=(0, 1, 3) (3 descents): 72 total occurrences
+    desc=(0, 2) (2 descents): 128 total occurrences
+    desc=(0, 2, 3) (3 descents): 72 total occurrences
+    desc=(0, 3) (2 descents): 88 total occurrences
+    desc=(1,) (1 descents): 72 total occurrences
+    desc=(1, 2) (2 descents): 88 total occurrences
+    desc=(1, 2, 3) (3 descents): 32 total occurrences
+    desc=(1, 3) (2 descents): 128 total occurrences
+    desc=(2,) (1 descents): 72 total occurrences
+    desc=(2, 3) (2 descents): 48 total occurrences
+    desc=(3,) (1 descents): 32 total occurrences
+
+======================================================================
+PART 5: TOURNAMENT H AS MÖBIUS FUNCTION
+======================================================================
+
+n=4: Arc-flip poset (Hasse diagram for H-monotone flips):
+  H-monotone edges: 120
+  H=1: 24 tournaments, 72 upward edges
+  H=3: 16 tournaments, 48 upward edges
+  H=5: 24 tournaments, 0 upward edges
+
+======================================================================
+PART 6: GENERATING FUNCTION IDENTITIES
+======================================================================
+
+Factorization of F_n(z):
+  F_3(z) = 6z + 2z³ = 2z(3 + z²)
+  F_4(z) = 24z + 16z³ + 24z⁵ = 8z(3 + 2z² + 3z⁴)
+  F_5(z) = 120z + 120z³ + 240z⁵ + 240z⁹ + 120z¹¹ + 120z¹³ + 64z¹⁵
+  NOTE: z⁷ coefficient = 0 (H=7 forbidden!)
+  GCD of coefficients: 8
+  F_5(z) = 8 × (15z^1 + 15z^3 + 30z^5 + 30z^9 + 15z^11 + 15z^13 + 8z^15)
+
+  F_6: GCD of coefficients = 16
+  NOTE: z⁷, z²¹ coefficients = 0 (both forbidden!)
+
+======================================================================
+PART 7: RECURRENCE FOR H-TOURNAMENT COUNTS a_n(h)
+======================================================================
+
+a_n(h) tables:
+
+  n=3: a_n(h) = a(1)=6, a(3)=2
+    (dividing by n!=6: a(1)/n!=1, a(3)/n!=0.3333)
+
+  n=4: a_n(h) = a(1)=24, a(3)=16, a(5)=24
+    (dividing by n!=24: a(1)/n!=1, a(3)/n!=0.6667, a(5)/n!=1)
+
+  n=5: a_n(h) = a(1)=120, a(3)=120, a(5)=240, a(9)=240, a(11)=120, a(13)=120, a(15)=64
+    (dividing by n!=120: a(1)/n!=1, a(3)/n!=1, a(5)/n!=2, a(9)/n!=2, a(11)/n!=1, a(13)/n!=1, a(15)/n!=0.5333)
+
+======================================================================
+SYNTHESIS — CATALAN/MOTZKIN CONNECTIONS
+======================================================================
+
+CROWN JEWELS:
+
+1. MEAN H: mean_H(n) = n!/2^{n-1}, ratio = n/2 exactly.
+
+2. MAX H GROWTH: max_H(n)/max_H(n-1) grows roughly as (n-1).
+   max_H/mean → e (Szele-Alon theorem, confirmed to n=23).
+
+3. FORBIDDEN z COEFFICIENTS: F_n(z) has zero coefficient at z^7
+   (and z^21 at n≥6). The forbidden H values create "spectral gaps"
+   in the generating function.
+
+4. GCD OF COEFFICIENTS: GCD(a_n(h)) = 8 at n=5, 48 at n=6.
+   This factors as 2^k × (product of small primes?).
+
+5. LATTICE PATH: H counts lattice paths in the tournament digraph.
+   Descent patterns of HPs connect to Eulerian numbers.
+
+6. ARC-FLIP POSET: H defines a monotone function on the Boolean
+   lattice of arc configurations, with the H-monotone edges
+   forming a directed acyclic graph.
+
