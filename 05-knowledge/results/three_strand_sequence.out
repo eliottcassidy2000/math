@@ -1,0 +1,311 @@
+======================================================================
+THREE-STRAND SEQUENCE INVESTIGATION
+kind-pasteur-2026-03-14-S87
+======================================================================
+
+  The sequence (24 terms):
+    a(0) = 1
+    a(1) = 1
+    a(2) = 2
+    a(3) = 3
+    a(4) = 4
+    a(5) = 6
+    a(6) = 10
+    a(7) = 15
+    a(8) = 20
+    a(9) = 35
+    a(10) = 56
+    a(11) = 70
+    a(12) = 126
+    a(13) = 210
+    a(14) = 252
+    a(15) = 462
+    a(16) = 792
+    a(17) = 924
+    a(18) = 1716
+    a(19) = 3003
+    a(20) = 3432
+    a(21) = 6435
+    a(22) = 11440
+    a(23) = 12870
+
+  Strand 0 (pos mod 3 = 0): [1, 3, 10, 35, 126, 462, 1716, 6435]
+  Strand 1 (pos mod 3 = 1): [1, 4, 15, 56, 210, 792, 3003, 11440]
+  Strand 2 (pos mod 3 = 2): [2, 6, 20, 70, 252, 924, 3432, 12870]
+
+======================================================================
+IDENTIFYING THE THREE STRANDS
+======================================================================
+
+  Strand 2: [2, 6, 20, 70, 252, 924, 3432, 12870]
+  Testing C(2n, n):
+    n=0: C(0,0) = 1, actual = 2, match = False
+    n=1: C(2,1) = 2, actual = 6, match = False
+    n=2: C(4,2) = 6, actual = 20, match = False
+    n=3: C(6,3) = 20, actual = 70, match = False
+    n=4: C(8,4) = 70, actual = 252, match = False
+    n=5: C(10,5) = 252, actual = 924, match = False
+    n=6: C(12,6) = 924, actual = 3432, match = False
+    n=7: C(14,7) = 3432, actual = 12870, match = False
+
+  Strand 0: [1, 3, 10, 35, 126, 462, 1716, 6435]
+  Testing C(2n+1, n):
+    n=0: C(1,0) = 1, actual = 1, match = True
+    n=1: C(3,1) = 3, actual = 3, match = True
+    n=2: C(5,2) = 10, actual = 10, match = True
+    n=3: C(7,3) = 35, actual = 35, match = True
+    n=4: C(9,4) = 126, actual = 126, match = True
+    n=5: C(11,5) = 462, actual = 462, match = True
+    n=6: C(13,6) = 1716, actual = 1716, match = True
+    n=7: C(15,7) = 6435, actual = 6435, match = True
+
+  Strand 1: [1, 4, 15, 56, 210, 792, 3003, 11440]
+  Testing C(2n+2, n):
+    n=0: C(2,0) = 1, actual = 1, match = True
+    n=1: C(4,1) = 4, actual = 4, match = True
+    n=2: C(6,2) = 15, actual = 15, match = True
+    n=3: C(8,3) = 56, actual = 56, match = True
+    n=4: C(10,4) = 210, actual = 210, match = True
+    n=5: C(12,5) = 792, actual = 792, match = True
+    n=6: C(14,6) = 3003, actual = 3003, match = True
+    n=7: C(16,7) = 11440, actual = 11440, match = True
+
+  Testing C(2n+2, n+1):
+    n=0: C(2,1) = 2, actual = 1, match = False
+    n=1: C(4,2) = 6, actual = 4, match = False
+    n=2: C(6,3) = 20, actual = 15, match = False
+    n=3: C(8,4) = 70, actual = 56, match = False
+    n=4: C(10,5) = 252, actual = 210, match = False
+    n=5: C(12,6) = 924, actual = 792, match = False
+    n=6: C(14,7) = 3432, actual = 3003, match = False
+    n=7: C(16,8) = 12870, actual = 11440, match = False
+
+======================================================================
+THE UNIFIED FORMULA
+======================================================================
+
+  Central elements of Pascal's triangle, row by row:
+    Row  0: C(0,0) = 1
+    Row  1: C(1,0) = 1, C(1,1) = 1
+    Row  2: C(2,1) = 2
+    Row  3: C(3,1) = 3, C(3,2) = 3
+    Row  4: C(4,2) = 6
+    Row  5: C(5,2) = 10, C(5,3) = 10
+    Row  6: C(6,3) = 20
+    Row  7: C(7,3) = 35, C(7,4) = 35
+    Row  8: C(8,4) = 70
+    Row  9: C(9,4) = 126, C(9,5) = 126
+    Row 10: C(10,5) = 252
+    Row 11: C(11,5) = 462, C(11,6) = 462
+    Row 12: C(12,6) = 924
+    Row 13: C(13,6) = 1716, C(13,7) = 1716
+    Row 14: C(14,7) = 3432
+    Row 15: C(15,7) = 6435, C(15,8) = 6435
+    Row 16: C(16,8) = 12870
+    Row 17: C(17,8) = 24310, C(17,9) = 24310
+    Row 18: C(18,9) = 48620
+    Row 19: C(19,9) = 92378, C(19,10) = 92378
+
+  Testing: a(k) = C(k, floor(k/3)):
+    k= 0: C(0,0) =      1, actual =      1, MATCH
+    k= 1: C(1,0) =      1, actual =      1, MATCH
+    k= 2: C(2,0) =      1, actual =      2, no
+    k= 3: C(3,1) =      3, actual =      3, MATCH
+    k= 4: C(4,1) =      4, actual =      4, MATCH
+    k= 5: C(5,1) =      5, actual =      6, no
+    k= 6: C(6,2) =     15, actual =     10, no
+    k= 7: C(7,2) =     21, actual =     15, no
+    k= 8: C(8,2) =     28, actual =     20, no
+    k= 9: C(9,3) =     84, actual =     35, no
+    k=10: C(10,3) =    120, actual =     56, no
+    k=11: C(11,3) =    165, actual =     70, no
+    k=12: C(12,4) =    495, actual =    126, no
+    k=13: C(13,4) =    715, actual =    210, no
+    k=14: C(14,4) =   1001, actual =    252, no
+    k=15: C(15,5) =   3003, actual =    462, no
+    k=16: C(16,5) =   4368, actual =    792, no
+    k=17: C(17,5) =   6188, actual =    924, no
+    k=18: C(18,6) =  18564, actual =   1716, no
+    k=19: C(19,6) =  27132, actual =   3003, no
+    k=20: C(20,6) =  38760, actual =   3432, no
+    k=21: C(21,7) = 116280, actual =   6435, no
+    k=22: C(22,7) = 170544, actual =  11440, no
+    k=23: C(23,7) = 245157, actual =  12870, no
+
+  Checking all C(a,b) for small a,b:
+    1: [(0, 0), (1, 0), (1, 1), (2, 0), (2, 2)]
+    2: [(2, 1)]
+    3: [(3, 1), (3, 2)]
+    4: [(4, 1), (4, 3)]
+    6: [(4, 2), (6, 1), (6, 5)]
+    10: [(5, 2), (5, 3), (10, 1), (10, 9)]
+    15: [(6, 2), (6, 4), (15, 1), (15, 14)]
+    20: [(6, 3), (20, 1), (20, 19)]
+    35: [(7, 3), (7, 4)]
+    56: [(8, 3), (8, 5)]
+    70: [(8, 4)]
+    126: [(9, 4), (9, 5)]
+    210: [(10, 4), (10, 6), (21, 2), (21, 19)]
+    252: [(10, 5)]
+    462: [(11, 5), (11, 6)]
+    792: [(12, 5), (12, 7)]
+    924: [(12, 6)]
+    1716: [(13, 6), (13, 7)]
+    3003: [(14, 6), (14, 8), (15, 5), (15, 10)]
+    3432: [(14, 7)]
+    6435: [(15, 7), (15, 8)]
+    11440: [(16, 7), (16, 9)]
+    12870: [(16, 8)]
+
+======================================================================
+READING PASCAL'S TRIANGLE ALONG SPECIFIC DIAGONALS
+======================================================================
+
+  C(n, floor(n/2)) for n=0..23:
+  [1, 1, 2, 3, 6, 10, 20, 35, 70, 126, 252, 462, 924, 1716, 3432, 6435, 12870, 24310, 48620, 92378, 184756, 352716, 705432, 1352078]
+  Given: [1, 1, 2, 3, 4, 6, 10, 15, 20, 35, 56, 70, 126, 210, 252, 462, 792, 924, 1716, 3003, 3432, 6435, 11440, 12870]
+  Matches: 4/24
+
+  C(n, floor(n/3)):
+  [1, 1, 1, 3, 4, 5, 15, 21, 28, 84, 120, 165, 495, 715, 1001, 3003, 4368, 6188, 18564, 27132, 38760, 116280, 170544, 245157]
+
+  C(n, round(n/3)):
+  [1, 1, 2, 3, 4, 10, 15, 21, 56, 84, 120, 330, 495, 715, 2002, 3003, 4368, 12376, 18564, 27132, 77520, 116280, 170544, 490314]
+
+======================================================================
+CATALAN AND RELATED SEQUENCES
+======================================================================
+  Catalan: [1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, 2674440]
+  Central binomial C(2n,n): [1, 2, 6, 20, 70, 252, 924, 3432, 12870, 48620, 184756, 705432, 2704156, 10400600, 40116600]
+  Strand 2 = C(2n,n) for n=1,...: [2, 6, 20, 70, 252, 924, 3432, 12870]
+  Actual strand 2: [2, 6, 20, 70, 252, 924, 3432, 12870]
+
+  Ratios between strands:
+    n=0: s0=1, s1=1, s2=2, s1/s0=1.0000, s2/s1=2.0000, s2/s0=2.0000
+    n=1: s0=3, s1=4, s2=6, s1/s0=1.3333, s2/s1=1.5000, s2/s0=2.0000
+    n=2: s0=10, s1=15, s2=20, s1/s0=1.5000, s2/s1=1.3333, s2/s0=2.0000
+    n=3: s0=35, s1=56, s2=70, s1/s0=1.6000, s2/s1=1.2500, s2/s0=2.0000
+    n=4: s0=126, s1=210, s2=252, s1/s0=1.6667, s2/s1=1.2000, s2/s0=2.0000
+    n=5: s0=462, s1=792, s2=924, s1/s0=1.7143, s2/s1=1.1667, s2/s0=2.0000
+    n=6: s0=1716, s1=3003, s2=3432, s1/s0=1.7500, s2/s1=1.1429, s2/s0=2.0000
+    n=7: s0=6435, s1=11440, s2=12870, s1/s0=1.7778, s2/s1=1.1250, s2/s0=2.0000
+
+======================================================================
+CONNECTION TO TOURNAMENTS
+======================================================================
+
+  Tournament connections:
+  C(n,2) arc counts: [3, 6, 10, 15, 21, 28, 36, 45, 55]
+  C(n-1,2) tiling counts: [1, 3, 6, 10, 15, 21, 28, 36, 45]
+  n! tournament labels: [1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
+  2^C(n,2) total tournaments: [2, 8, 64, 1024, 32768, 2097152]
+  GS DOF: [1, 2, 4, 6, 9, 12, 16, 20, 25]
+    3 = C(3,2) = number of arcs at n=3
+    6 = 3! = number of labeled transitive tournaments
+    6 = C(4,2) = number of arcs at n=4
+    10 = C(5,2) = number of arcs at n=5
+    15 = C(6,2) = number of arcs at n=6
+
+  C(2n,n) counts lattice paths = balanced binary sequences.
+  Tournament score sequences are like CONSTRAINED binary sequences.
+  The strand interleaving mirrors how odd/even row parity
+  determines whether Pascal's row has 1 or 2 central elements.
+
+======================================================================
+THE THREE-FOLD SYMMETRY
+======================================================================
+
+  The 3 strands correspond to residues mod 3 of the index.
+  This THREE-FOLD splitting is like:
+
+  1. TOURNAMENT: The 3-cycle (fundamental odd cycle)
+     - 3-cycles are the basic building blocks of tournament complexity
+     - The blue skeleton bipartition is by t3 PARITY (mod 2 of 3-cycles)
+
+  2. FIBONACCI: The Tribonacci generalization
+     - T(n) = T(n-1) + T(n-2) + T(n-3) has 3 strands
+     - The characteristic polynomial x^3 - x^2 - x - 1 has 3 roots
+
+  3. PASCAL: Three diagonals of Pascal's triangle
+     - C(3n, n), C(3n+1, n), C(3n+2, n) form 3 strands
+     - Related to the cube root of the generating function
+
+  THE META-STRUCTURE:
+  Just as the Fibonacci 2-strand interleaving corresponds to the
+  ORDER-2 involution (T -> T^op), a 3-strand interleaving would
+  correspond to an ORDER-3 SYMMETRY.
+
+  For tournaments: is there a natural ORDER-3 operation?
+  - The 3-cycle reversal (which preserves H at n=4 but not n>=5)
+  - The Z/3 action on the 3 arcs of a triangle
+  - The mod-3 structure of alpha_1 (which determines H mod 3)
+
+
+======================================================================
+FINAL IDENTIFICATION ATTEMPT
+======================================================================
+
+  IDENTIFICATION:
+  Strand 0 = C(2n+1, n): [1, 3, 10, 35, 126, 462, 1716, 6435]
+  Strand 1 = C(2n+2, n): [1, 4, 15, 56, 210, 792, 3003, 11440]
+  Strand 2 = C(2n+2, n+1) = C(2n, n) shifted:
+    C(2n+2,n+1): [2, 6, 20, 70, 252, 924, 3432, 12870]
+    Actual s2: [2, 6, 20, 70, 252, 924, 3432, 12870]
+
+  *** IDENTIFICATION CONFIRMED ***
+  The full sequence interleaves three binomial strands:
+    a(3k)   = C(2k+1, k)     [odd rows, left of center]
+    a(3k+1) = C(2k+2, k)     [even rows, left of center]
+    a(3k+2) = C(2k+2, k+1)   [even rows, right of center]
+
+  This reads Pascal's triangle from BOTH sides of center,
+  alternating: center of odd row, then left-of-center and
+  right-of-center of even row.
+
+  Full verification:
+  Reconstructed: [1, 1, 2, 3, 4, 6, 10, 15, 20, 35, 56, 70, 126, 210, 252, 462, 792, 924, 1716, 3003, 3432, 6435, 11440, 12870]
+  Original:      [1, 1, 2, 3, 4, 6, 10, 15, 20, 35, 56, 70, 126, 210, 252, 462, 792, 924, 1716, 3003, 3432, 6435, 11440, 12870]
+  Match: True
+
+======================================================================
+GENERATING FUNCTIONS AND ASYMPTOTICS
+======================================================================
+
+  Asymptotic ratios:
+    n=1: s0/s2_prev = 1.5000, s1/s0 = 1.3333, s2/s1 = 1.5000
+    n=2: s0/s2_prev = 1.6667, s1/s0 = 1.5000, s2/s1 = 1.3333
+    n=3: s0/s2_prev = 1.7500, s1/s0 = 1.6000, s2/s1 = 1.2500
+    n=4: s0/s2_prev = 1.8000, s1/s0 = 1.6667, s2/s1 = 1.2000
+    n=5: s0/s2_prev = 1.8333, s1/s0 = 1.7143, s2/s1 = 1.1667
+    n=6: s0/s2_prev = 1.8571, s1/s0 = 1.7500, s2/s1 = 1.1429
+    n=7: s0/s2_prev = 1.8750, s1/s0 = 1.7778, s2/s1 = 1.1250
+    n=8: s0/s2_prev = 1.8889, s1/s0 = 1.8000, s2/s1 = 1.1111
+
+  Consecutive term ratios (approach 4^0.3333333333333333 ≈ 1.587?):
+    a(1)/a(0) = 1/1 = 1.0000
+    a(2)/a(1) = 2/1 = 2.0000
+    a(3)/a(2) = 3/2 = 1.5000
+    a(4)/a(3) = 4/3 = 1.3333
+    a(5)/a(4) = 6/4 = 1.5000
+    a(6)/a(5) = 10/6 = 1.6667
+    a(7)/a(6) = 15/10 = 1.5000
+    a(8)/a(7) = 20/15 = 1.3333
+    a(9)/a(8) = 35/20 = 1.7500
+    a(10)/a(9) = 56/35 = 1.6000
+    a(11)/a(10) = 70/56 = 1.2500
+    a(12)/a(11) = 126/70 = 1.8000
+    a(13)/a(12) = 210/126 = 1.6667
+    a(14)/a(13) = 252/210 = 1.2000
+    a(15)/a(14) = 462/252 = 1.8333
+    a(16)/a(15) = 792/462 = 1.7143
+    a(17)/a(16) = 924/792 = 1.1667
+    a(18)/a(17) = 1716/924 = 1.8571
+    a(19)/a(18) = 3003/1716 = 1.7500
+    a(20)/a(19) = 3432/3003 = 1.1429
+    a(21)/a(20) = 6435/3432 = 1.8750
+    a(22)/a(21) = 11440/6435 = 1.7778
+    a(23)/a(22) = 12870/11440 = 1.1250
+
+======================================================================
+DONE
+======================================================================
