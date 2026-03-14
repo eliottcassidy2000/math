@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S73 — 2026-03-14: The Role of 5 — Deep Exploration
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S72
+**Summary of work:**
+Deep exploration of the number 5 in tournament theory, paying particular attention to 5 as mortar between the keys 2 and 3, and its role in connecting to 7, 8, 10, 11 through recurrences.
+
+**Critical findings:**
+1. **L(5) = J(5) = 11** (HYP-948): Lucas (x=1 world) and Jacobsthal (x=2 world) BOTH produce 11 at n=5. The UNIQUE non-trivial crossing point. Bridge equation: 3L(n)+(-1)^n = 2^n holds only at n=1,5.
+2. **F(5) = 5** (HYP-949): 5 is the unique prime Fibonacci fixed point. Self-referential, like x=2 in H=I(CG,2).
+3. **Forbidden residues** (HYP-950-952): H≡2(mod5) impossible at n=5, H≡0(mod7) impossible at n≤6. Both trace to α₁=3 being impossible. Mod-5 lifts at n=6, mod-7 lifts at n=7.
+4. **Forbidden residue timeline** (HYP-958): mod3→n=4, mod5→n=6, mod7→n=7, mod11→n=6, mod13→n=7.
+5. **Q(√5) tower** (HYP-953): x=1,11,31,61,101,... share Q(√5) field. Roots at x=11: 3φ-1.
+6. **2 is primitive root mod 5** (HYP-955): Makes H mod 5 maximally informative.
+7. **J₆(5) = 55 = F(10) = F(5)·L(5)** (HYP-948): Level-3 Jacobsthal at n=5 equals doubled Fibonacci.
+8. **Lucas generates hierarchy**: L(0)=2, L(2)=3, L(4)=7, L(5)=11.
+9. **(3,5)-packing**: 85% of n=8 tournaments have disjoint (3-cycle, 5-cycle) pairs.
+10. **5 appears in OCF**: I₃ = (9H - 5 - 6α₁)/4, rate I₃/H → 3/2 - 5/(4H).
+
+**New contributions:**
+- HYP-948 through HYP-961 (14 hypotheses)
+- Scripts: the_role_of_five.py, five_recurrence_deep.py, five_mod_structure.py, five_forbidden_residues.py, seven_barrier_deep.py, five_as_bridge.py, five_recurrence_web.py, lucas_jacobsthal_bridge.py, five_synthesis.py
+
+**Unresolved threads:**
+- Why exactly does dc3=3 force dc5≥1 at n=5? (structural proof needed)
+- Does any prime p give H≡r(mod p) forbidden for ALL n, beyond p=2?
+- The J₆(5)=F(10) coincidence — is there a deeper identity?
+- Algebraic proof that α₁+2α₂≡3(mod7) is impossible at n≤6
+
 ## kind-pasteur-2026-03-14-S63 — 2026-03-14: Modular Towers, Eisenstein Integers, and Forbidden H Values
 
 **Account:** kind-pasteur
