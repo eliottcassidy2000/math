@@ -1,0 +1,445 @@
+Collecting tournament data...
+  100/500
+  200/500
+  300/500
+  400/500
+  500/500
+
+======================================================================
+PART 1: The Additive-Multiplicative Table
+======================================================================
+
+  The fundamental pair (2, 3) generates four numbers via +, *:
+    2 + 3 = 5     (additive)
+    2 * 3 = 6     (multiplicative)
+    2 + 3 + 1 = 6 (hmm, same as product -- THIS IS SPECIAL)
+    2^3 = 8       (exponential)
+    3^2 = 9       (reverse exponential)
+
+  The COINCIDENCE 2*3 = 2+3+1 is equivalent to:
+    2*3 - 2 - 3 = 1
+    (2-1)*(3-1) = 1*2 = 2
+  More generally: p*q - p - q = (p-1)(q-1) - 1
+  For p=2, q=3: (1)(2) - 1 = 1
+  This is the ONLY pair of primes where p*q = p+q+1.
+
+  In tournament theory:
+    x = 2: the evaluation point (H = I(Omega, 2))
+    x+1 = 3: the Galois gap / beta step
+    x + (x+1) = 2*x + 1 = 5: the sum
+    x * (x+1) = x^2 + x = 6: the product
+    5 = 2*3 - 1 (one less than the product!)
+    6 = 2*3 = 3! (also the Vandermonde det)
+
+======================================================================
+PART 2: I(5) and I(6) -- evaluating at sum and product
+======================================================================
+
+  I(x) = 1 + a1*x + a2*x^2
+  I(5) = 1 + 5*a1 + 25*a2
+  I(6) = 1 + 6*a1 + 36*a2
+
+  KEY: I(5) mod 6 = I(-1) mod 6 (from CRT tower: b=5, b+1=6)
+  And I(-1) mod 6 = H mod 6 (since H mod 3 = I(-1) mod 3, H mod 2 = 1)
+
+  Wait: I(-1) mod 6 vs H mod 6. H = I(2).
+  I(-1) mod 2 = (1-a1+a2) mod 2. H mod 2 = 1.
+  I(-1) mod 3 = H mod 3 (proved).
+  So I(-1) mod 6 = CRT(I(-1) mod 2, I(-1) mod 3)
+     = CRT(I(-1) mod 2, H mod 3)
+  But I(-1) mod 2 may differ from H mod 2 = 1!
+
+  I(-1) mod 2: {0: 252, 1: 248}
+  So I(-1) mod 2 != 1 in general. I(-1) mod 6 != H mod 6.
+
+  BUT: I(5) mod 6 = I(-1) mod 6 (since 5 = -1 mod 6)
+  This is a DIFFERENT fact from H mod 3 = I(-1) mod 3.
+  I(5) mod 6 = I(-1) mod 6: True
+
+  I(5) mod 6 = CRT(I(-1) mod 2, I(-1) mod 3)
+             = CRT((1+a1+a2) mod 2, (1-a1+a2) mod 3)
+  This is the FULL mod-6 topology, which H mod 6 only partially captures.
+
+  I(5) mod 6: {0: 84, 1: 107, 2: 105, 3: 76, 4: 63, 5: 65}
+  H mod 6:    {1: 170, 3: 160, 5: 170}
+  I(-1) mod 6: {0: 84, 1: 107, 2: 105, 3: 76, 4: 63, 5: 65}
+
+======================================================================
+PART 3: The Taylor shift -- I(2+3) from I(2)
+======================================================================
+
+  I(x+h) = I(x) + h*I'(x) + h^2*I''(x)/2
+  I(2+3) = I(5) = I(2) + 3*I'(2) + 9*I''(2)/2
+  where I'(2) = a1 + 4*a2, I''(2)/2 = a2
+  So: I(5) = H + 3*(a1 + 4*a2) + 9*a2 = H + 3*a1 + 21*a2
+    a1=36, a2= 6: H= 97, I(5)= 331, Taylor= 331, match=True
+    a1=37, a2= 4: H= 91, I(5)= 286, Taylor= 286, match=True
+    a1=45, a2= 6: H=115, I(5)= 376, Taylor= 376, match=True
+    a1=28, a2= 4: H= 73, I(5)= 241, Taylor= 241, match=True
+    a1=32, a2= 4: H= 81, I(5)= 261, Taylor= 261, match=True
+    a1=25, a2= 5: H= 71, I(5)= 251, Taylor= 251, match=True
+    a1=34, a2= 6: H= 93, I(5)= 321, Taylor= 321, match=True
+    a1=30, a2= 4: H= 77, I(5)= 251, Taylor= 251, match=True
+    a1=28, a2= 6: H= 81, I(5)= 291, Taylor= 291, match=True
+    a1=30, a2= 3: H= 73, I(5)= 226, Taylor= 226, match=True
+
+  I(5) - H = 3*a1 + 21*a2 = 3*(a1 + 7*a2)
+  So I(5) - H is ALWAYS divisible by 3!
+  And (I(5)-H)/3 = a1 + 7*a2
+
+  At n=7: (I(5)-H)/3 = a1 + 7*a2 = a1 + n*a2
+  The weight 7 = n is the number of vertices!
+
+  GENERAL: I(x+h) - I(x) = h*a1 + (2*x*h + h^2)*a2
+          = h*(a1 + (2x+h)*a2)
+  For x=2, h=3: I(5)-I(2) = 3*(a1 + 7*a2)
+  The coefficient 2x+h = 2*2+3 = 7 = n. COINCIDENCE for n=7.
+
+======================================================================
+PART 4: I(6) = I(2*3) vs I(2)*I(3) -- additive vs multiplicative
+======================================================================
+
+  For a polynomial f(x), f(ab) != f(a)*f(b) in general.
+  But the RATIO I(6)/(I(2)*I(3)) is interesting.
+    a1=36, a2= 6: I(2)= 97, I(3)=163, I(6)= 433, I(2)*I(3)=15811, I(6)/prod=0.0274
+    a1=37, a2= 4: I(2)= 91, I(3)=148, I(6)= 367, I(2)*I(3)=13468, I(6)/prod=0.0272
+    a1=45, a2= 6: I(2)=115, I(3)=190, I(6)= 487, I(2)*I(3)=21850, I(6)/prod=0.0223
+    a1=28, a2= 4: I(2)= 73, I(3)=121, I(6)= 313, I(2)*I(3)= 8833, I(6)/prod=0.0354
+    a1=32, a2= 4: I(2)= 81, I(3)=133, I(6)= 337, I(2)*I(3)=10773, I(6)/prod=0.0313
+    a1=25, a2= 5: I(2)= 71, I(3)=121, I(6)= 331, I(2)*I(3)= 8591, I(6)/prod=0.0385
+    a1=34, a2= 6: I(2)= 93, I(3)=157, I(6)= 421, I(2)*I(3)=14601, I(6)/prod=0.0288
+    a1=30, a2= 4: I(2)= 77, I(3)=127, I(6)= 325, I(2)*I(3)= 9779, I(6)/prod=0.0332
+    a1=28, a2= 6: I(2)= 81, I(3)=139, I(6)= 385, I(2)*I(3)=11259, I(6)/prod=0.0342
+    a1=30, a2= 3: I(2)= 73, I(3)=118, I(6)= 289, I(2)*I(3)= 8614, I(6)/prod=0.0336
+
+  Multiplicative defect D = I(6) - I(2)*I(3):
+  D = (1+6a1+36a2) - (1+2a1+4a2)(1+3a1+9a2)
+  Let me expand:
+  (1+2a1+4a2)(1+3a1+9a2) = 1 + 3a1 + 9a2 + 2a1 + 6a1^2 + 18a1*a2
+                          + 4a2 + 12a1*a2 + 36a2^2
+                        = 1 + 5a1 + 13a2 + 6a1^2 + 30a1*a2 + 36a2^2
+  I(6) = 1 + 6a1 + 36a2
+  D = (1+6a1+36a2) - (1+5a1+13a2+6a1^2+30a1*a2+36a2^2)
+    = a1 + 23a2 - 6a1^2 - 30a1*a2 - 36a2^2
+    a1=36, a2= 6: D= -15378, check= -15378, match=True
+    a1=37, a2= 4: D= -13101, check= -13101, match=True
+    a1=45, a2= 6: D= -21363, check= -21363, match=True
+    a1=28, a2= 4: D=  -8520, check=  -8520, match=True
+    a1=32, a2= 4: D= -10436, check= -10436, match=True
+    a1=25, a2= 5: D=  -8260, check=  -8260, match=True
+    a1=34, a2= 6: D= -14180, check= -14180, match=True
+    a1=30, a2= 4: D=  -9454, check=  -9454, match=True
+    a1=28, a2= 6: D= -10874, check= -10874, match=True
+    a1=30, a2= 3: D=  -8325, check=  -8325, match=True
+
+  D < 0 for all non-transitive: True
+  Product ALWAYS exceeds the 6-evaluation: I(2)*I(3) > I(6)
+
+======================================================================
+PART 5: The special identity (2-1)(3-1) = 2
+======================================================================
+
+  (p-1)(q-1) = 1 iff p*q = p+q+1
+  For primes: only p=2, q=3 satisfy this.
+  Consequence: 2*3 - (2+3) = 1, so 6 = 5+1.
+
+  In I(x) terms:
+  I(6) - I(5) = a1*(6-5) + a2*(36-25) = a1 + 11*a2
+
+  I(6) - I(5) = a1 + 11*a2
+  Compare with: I(3) - I(2) = a1 + 5*a2
+  And: I(2) - I(1) = a1 + 3*a2
+
+  General: I(k+1) - I(k) = a1 + (2k+1)*a2
+  The step from k to k+1 has weight 2k+1 on a2.
+
+  Step weights:
+    I(1)-I(0) = a1 + 1*a2   (weight 1)
+    I(2)-I(1) = a1 + 3*a2   (weight 3)
+    I(3)-I(2) = a1 + 5*a2   (weight 5)
+    I(4)-I(3) = a1 + 7*a2   (weight 7)
+    I(5)-I(4) = a1 + 9*a2   (weight 9)
+    I(6)-I(5) = a1 + 11*a2   (weight 11)
+    I(7)-I(6) = a1 + 13*a2   (weight 13)
+    I(8)-I(7) = a1 + 15*a2   (weight 15)
+    I(9)-I(8) = a1 + 17*a2   (weight 17)
+    I(10)-I(9) = a1 + 19*a2   (weight 19)
+    I(11)-I(10) = a1 + 21*a2   (weight 21)
+    I(12)-I(11) = a1 + 23*a2   (weight 23)
+
+  The weight at k=2 (I(3)-I(2)) is 5 = 2+3
+  The weight at k=5 (I(6)-I(5)) is 11 = our positional 11!
+  The weight at k=1 (I(2)-I(1)) is 3 = our fundamental 3!
+  The weight at k=4 (I(5)-I(4)) is 9 = 3^2!
+
+======================================================================
+PART 6: The step weight 2k+1 and the odd number sequence
+======================================================================
+
+  I(k+1) - I(k) = a1 + (2k+1)*a2
+  The weights are 1, 3, 5, 7, 9, 11, 13, ...
+  These are the ODD NUMBERS = the differences of perfect squares!
+  (k+1)^2 - k^2 = 2k+1
+
+  The x^2 term in I(x) means that consecutive differences
+  grow as odd numbers. This is the QUADRATIC structure of I.
+
+  Summing steps:
+  I(b) - I(0) = sum_{k=0}^{b-1} [a1 + (2k+1)*a2]
+              = b*a1 + a2 * sum_{k=0}^{b-1} (2k+1)
+              = b*a1 + a2 * b^2
+  So I(b) = 1 + b*a1 + b^2*a2. CORRECT by definition.
+
+  The step I(3)-I(2) = a1 + 5*a2 has a dual interpretation:
+  It is the coefficient of the FIRST DIFFERENCE at the counting point.
+  And 5 = 2+3 = the sum of the fundamental pair.
+  The derivative I'(2) = a1 + 4*a2. NOT the same (off by a2).
+  Step = derivative + a2. The extra a2 is the 'curvature correction'.
+    a1=36, a2= 6: step= 66, deriv= 60, diff=6=a2=6
+    a1=37, a2= 4: step= 57, deriv= 53, diff=4=a2=4
+    a1=45, a2= 6: step= 75, deriv= 69, diff=6=a2=6
+    a1=28, a2= 4: step= 48, deriv= 44, diff=4=a2=4
+    a1=32, a2= 4: step= 52, deriv= 48, diff=4=a2=4
+
+======================================================================
+PART 7: 10 = 2*(2+3) and 11 = 2*(2+3)+1
+======================================================================
+
+  10 = 2 * 5 = 2 * (2+3)
+  11 = 2 * 5 + 1 = 2*(2+3) + 1
+
+  10 = x * (x + (x+1)) = x*(2x+1) where x=2
+  11 = x*(2x+1) + 1
+
+  In Z[x] at x=2:
+    10 = 2x^2 + x = x(2x+1)
+    11 = 2x^2 + x + 1 = x(2x+1) + 1
+
+  Note: 2x+1 = 5 is the step weight at k=x=2.
+  So 10 = x * (step weight at x)!
+
+  I(10) = 1 + 10*a1 + 100*a2
+  I(11) = 1 + 11*a1 + 121*a2
+  I(11) - I(10) = a1 + 21*a2 (step weight 2*10+1 = 21 = 3*7)
+
+  Step weight at k=10: 21 = 3 * 7 = 3 * n (at n=7)
+  Another n=7 coincidence!
+
+  I(10) and I(11) via Vandermonde extraction:
+  I(10) = 1 + 10a1 + 100a2
+  I(2) = 1 + 2a1 + 4a2 = H
+  I(10) - I(2) = 8a1 + 96a2 = 8*(a1 + 12a2)
+  So I(10) = H + 8*(a1 + 12*a2)
+  And (I(10) - H)/8 = a1 + 12*a2
+    a1=36, a2= 6: (I(10)-H)/8 = 108 = a1+12a2 = 108, match=True
+    a1=37, a2= 4: (I(10)-H)/8 = 85 = a1+12a2 = 85, match=True
+    a1=45, a2= 6: (I(10)-H)/8 = 117 = a1+12a2 = 117, match=True
+    a1=28, a2= 4: (I(10)-H)/8 = 76 = a1+12a2 = 76, match=True
+    a1=32, a2= 4: (I(10)-H)/8 = 80 = a1+12a2 = 80, match=True
+
+======================================================================
+PART 8: Factorization in Z[x] -- everything through x=2
+======================================================================
+
+  Rewriting key numbers in terms of x=2:
+      1 = 1                                        [check: 1]
+      2 = x                                        [check: 2]
+      3 = x+1                                      [check: 3]
+      4 = x^2                                      [check: 4]
+      5 = x^2+1 = x+(x+1) = 2x+1                   [check: 5]
+      6 = x(x+1) = x^2+x                           [check: 6]
+      7 = x^3-1 = (x-1)(x^2+x+1) = 1*7             [check: 7]
+      8 = x^3                                      [check: 8]
+      9 = (x+1)^2                                  [check: 9]
+     10 = x(x^2+1) = x(2x+1)                       [check: 10]
+     11 = x^3+x+1                                  [check: 11]
+     12 = x^2(x+1)                                 [check: 12]
+     21 = x^4+x^2+1 = (x^2+x+1)(x^2-x+1) = 7*3     [check: 21]
+
+======================================================================
+PART 9: The 5-cycle structure -- cycles of length 2+3
+======================================================================
+
+  At n=7: C(7,5) = 21 potential 5-cycle vertex sets
+  Each 5-vertex set can host 0, 1, 2, or 3 directed 5-cycles
+  (since a 5-vertex tournament can have 0-12 Hamiltonian directed cycles)
+
+  Directed 5-cycles per tournament distribution:
+    c5= 0: 3 tournaments
+    c5= 1: 2 tournaments
+    c5= 2: 3 tournaments
+    c5= 4: 4 tournaments
+    c5= 6: 3 tournaments
+    c5= 7: 6 tournaments
+    c5= 9: 2 tournaments
+    c5=10: 4 tournaments
+    c5=11: 4 tournaments
+    c5=12: 4 tournaments
+    c5=13: 2 tournaments
+    c5=14: 7 tournaments
+    c5=16: 3 tournaments
+    c5=17: 4 tournaments
+    c5=18: 4 tournaments
+    c5=19: 8 tournaments
+    c5=20: 4 tournaments
+    c5=22: 4 tournaments
+    c5=23: 4 tournaments
+    c5=25: 5 tournaments
+    c5=26: 3 tournaments
+    c5=28: 5 tournaments
+    c5=29: 4 tournaments
+    c5=33: 2 tournaments
+
+  Directed 5-cycles per 5-vertex set:
+    0: 983 sets (46.8%)
+    1: 733 sets (34.9%)
+    2: 295 sets (14.0%)
+    3: 89 sets (4.2%)
+
+======================================================================
+PART 10: The FIVE identities connecting 2, 3, 5, 6
+======================================================================
+
+  Identity 1 (ADDITIVE): I(5) = I(2) + 3*(a1 + 7*a2)
+    The shift from x=2 to x=5=2+3 is always divisible by 3.
+    The quotient a1+7*a2 has weight 7=n at n=7.
+
+  Identity 2 (MULTIPLICATIVE): I(2)*I(3) - I(6) = 6*a1^2 + 30*a1*a2 + 36*a2^2 - a1 - 23*a2
+    The product always EXCEEDS the composite evaluation.
+
+  Identity 3 (CRT): I(5) mod 6 = I(-1) mod 6
+    Evaluation at 5=2+3 mod 6=2*3 gives FULL topological mod 6 info.
+
+  Identity 4 (STEP): I(3)-I(2) = a1 + 5*a2
+    The step at the counting point has weight 5 = 2+3 on a2.
+    This equals I'(2) + a2 (derivative + curvature).
+
+  Identity 5 (REDUCED): H = 3 - 2*I(-1) + 6*a2
+    The three numbers 3, 2, 6 are x+1, x, x(x+1).
+    H is determined by topology (b0) and curvature (a2) via
+    the multiplicative structure of {2, 3, 6}.
+
+  Verification (10 samples):
+    a1=36, a2= 6: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=37, a2= 4: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=45, a2= 6: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=28, a2= 4: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=32, a2= 4: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=25, a2= 5: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=34, a2= 6: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=30, a2= 4: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=28, a2= 6: [1]=True [2]=True [3]=True [4]=True [5]=True
+    a1=30, a2= 3: [1]=True [2]=True [3]=True [4]=True [5]=True
+
+======================================================================
+PART 11: The decimal system: 10 = 2*5, 11 = 2*5+1
+======================================================================
+
+  Why base 10? Mathematically:
+    10 = 2 * 5 = x * (x^2 + 1) = x * (2x + 1)    at x=2
+    10 = 2 * (2 + 3) = evaluation point * additive sum
+
+  The decimal digits of H encode:
+    H mod 10 = H mod (2*5) = CRT(H mod 2, H mod 5) = CRT(1, H mod 5)
+    H mod 5 determines the last decimal digit (since H odd, digit in {1,3,5,7,9})
+
+  The last decimal digit of H is determined by a1 and a2 mod 5:
+    H mod 5 = (1 + 2*a1 + 4*a2) mod 5
+
+  H mod 5: {0: 94, 1: 110, 2: 75, 3: 105, 4: 116}
+  H mod 10: {1: 110, 3: 105, 5: 94, 7: 75, 9: 116}
+  All 5 odd digits appear.
+
+  I(10) mod 11 = I(-1) mod 11 = topology mod 11:
+    {0: 63, 1: 51, 2: 29, 3: 37, 4: 57, 5: 49, 6: 50, 7: 40, 8: 44, 9: 32, 10: 48}
+
+======================================================================
+PART 12: The multiplication table of {2, 3, 5, 6}
+======================================================================
+
+  Products and their Z[x] representations at x=2:
+    2 * 3 =   6    I(6) = 1 + 6*a1 + 36*a2
+    2 * 5 =  10    I(10) = 1 + 10*a1 + 100*a2
+    2 * 6 =  12    I(12) = 1 + 12*a1 + 144*a2
+    3 * 5 =  15    I(15) = 1 + 15*a1 + 225*a2
+    3 * 6 =  18    I(18) = 1 + 18*a1 + 324*a2
+    5 * 6 =  30    I(30) = 1 + 30*a1 + 900*a2
+
+  Sums:
+    2 + 3 =   5    step weight at k=4 is 9
+    2 + 5 =   7    step weight at k=6 is 13
+    2 + 6 =   8    step weight at k=7 is 15
+    3 + 5 =   8    step weight at k=7 is 15
+    3 + 6 =   9    step weight at k=8 is 17
+    5 + 6 =  11    step weight at k=10 is 21
+
+======================================================================
+PART 13: H mod 5 and the golden ratio
+======================================================================
+
+  5 = 2+3 is the sum. H mod 5 = (1+2a1+4a2) mod 5.
+  Since 4 = -1 mod 5 and 2 = 2 mod 5:
+  H mod 5 = (1 + 2*a1 - a2) mod 5
+
+  The golden ratio phi = (1+sqrt(5))/2 is a root of x^2-x-1.
+  In F_5: x^2-x-1 = x^2+4x+4 = (x+2)^2 mod 5.
+  So phi = -2 = 3 mod 5.
+  And phi^2 = phi+1 = 4 mod 5.
+
+  Fibonacci mod 5: 0,1,1,2,3,0,3,3,1,4,0,4,4,3,2,0,... period 20
+  Fibonacci mod 5 has period 20 = 4*5.
+
+  H mod 5 distribution (500 samples):
+    H = 0 mod 5: 94 (18.8%)
+    H = 1 mod 5: 110 (22.0%)
+    H = 2 mod 5: 75 (15.0%)
+    H = 3 mod 5: 105 (21.0%)
+    H = 4 mod 5: 116 (23.2%)
+
+  (a1%5, a2%5) -> H%5 (checking determinism):
+  (a1%5, a2%5) uniquely determines H%5: True (by definition)
+
+======================================================================
+PART 14: Summary -- The Arithmetic of Tournament Theory
+======================================================================
+
+  THE FUNDAMENTAL PAIR: (2, 3)
+    2 = evaluation point (H = I(Omega, 2))
+    3 = topological gap (3 = 2-(-1)), beta step, 3-cycle length
+
+  THE ADDITIVE SON: 5 = 2 + 3
+    5 = length of next odd cycle
+    5 = step weight at counting point: I(3)-I(2) = a1 + 5*a2
+    I(5) = I(2) + 3*(a1 + (2*2+3)*a2)
+    I(5) mod 6 = I(-1) mod 6 = full topological mod 6
+
+  THE MULTIPLICATIVE SON: 6 = 2 * 3
+    6 = Vandermonde determinant = 3!
+    6 = CRT modulus combining mod 2 and mod 3
+    6*a2 = 2*I(3) - 3*H + 1 (extraction formula)
+    H = 3 - 2*b0 + 6*b2 (reduced formula)
+
+  THE SPECIAL IDENTITY: 5 + 1 = 6
+    (2-1)(3-1) = 2, so 2*3 = 2+3+1
+    ONLY pair of primes with this property
+    CONNECTS additive and multiplicative sons
+
+  THE DECIMAL BASE: 10 = 2 * 5 = 2(2+3)
+    10 = evaluation point * additive son
+    11 = 10 + 1 = 2*5 + 1
+    I(10) mod 11 = I(-1) mod 11
+
+  THE STEP SEQUENCE: I(k+1)-I(k) = a1 + (2k+1)*a2
+    k=0: weight 1    (trivial)
+    k=1: weight 3    (= x+1, the topological gap)
+    k=2: weight 5    (= 2+3, the additive son)
+    k=4: weight 9    (= (x+1)^2 = 3^2)
+    k=5: weight 11   (= positional 11)
+    k=10: weight 21  (= 3*7 = 3*n at n=7)
+
+  MULTIPLICATION vs ADDITION on I(x):
+    I(a+b) = I(a) + b*I'(a) + (b^2/2)*I''(a)   [Taylor]
+    I(a*b) != I(a)*I(b)                           [not multiplicative]
+    I(a)*I(b) > I(a*b) for a,b >= 2               [super-multiplicative]
+
+Done.
