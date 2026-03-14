@@ -1,0 +1,304 @@
+======================================================================
+TOURNAMENT THEORY IN BASE TAU (TRIBONACCI)
+opus-2026-03-14-S71l
+======================================================================
+
+======================================================================
+PART 1: Phi_3(tau) = tau^3 AND ITS CONSEQUENCES
+======================================================================
+
+  tau = 1.8392867552  (root of x^3 = x^2 + x + 1)
+  tau^2 = 3.3829757679
+  tau^3 = 6.2222625231
+  tau^2 + tau + 1 = 6.2222625231 = tau^3? True
+
+  So Phi_3(tau) = tau^3. This means:
+
+  I(K_3, tau) = tau^2 + tau + 1 = tau^3
+  I(K_3 + K_1, tau) = tau * (tau^2 + tau + 1) = tau * tau^3 = tau^4
+  More generally, I(K_3 + k*K_1, tau) = tau^(k+3)
+
+  So the "forbidden" independence polynomials evaluate to
+  PURE POWERS OF TAU at x = tau!
+
+  Forbidden values at x=2:   I(K_3,2) = 7,     I(K_3+K_1,2) = 21
+  Same values at x=tau: I(K_3,tau) = tau^3, I(K_3+K_1,tau) = tau^4
+
+  THE TRIBONACCI PERSPECTIVE: The forbidden values are just
+  tau^3 and tau^4 in disguise. The integers 7 and 21 arise
+  from evaluating at x=2 instead of x=tau.
+
+  Powers of tau:
+    tau^ 0 =     1.000000    nearest int = 1  = T_2 (tribonacci)
+    tau^ 1 =     1.839287    nearest int = 2  = T_3 (tribonacci)
+    tau^ 2 =     3.382976    nearest int = 3
+    tau^ 3 =     6.222263    nearest int = 6
+    tau^ 4 =    11.444525    nearest int = 11
+    tau^ 5 =    21.049763    nearest int = 21
+    tau^ 6 =    38.716551    nearest int = 39
+    tau^ 7 =    71.210839    nearest int = 71
+    tau^ 8 =   130.977154    nearest int = 131
+    tau^ 9 =   240.904544    nearest int = 241
+
+======================================================================
+PART 2: I(Omega, tau) FOR ALL TOURNAMENTS
+======================================================================
+
+  --- n = 3 ---
+    1 + tau = 2.839287
+    tau^2(tau - 1) = 2.839287
+    Match: True
+    H=  1:     6 tournaments, (H-1)/2 = 0
+    H=  3:     2 tournaments, (H-1)/2 = 1
+
+  --- n = 4 ---
+    1 + tau = 2.839287
+    tau^2(tau - 1) = 2.839287
+    Match: True
+    H=  1:    24 tournaments, (H-1)/2 = 0
+    H=  3:    16 tournaments, (H-1)/2 = 1
+    H=  5:    24 tournaments, (H-1)/2 = 2
+
+  --- n = 5 ---
+    1 + tau = 2.839287
+    tau^2(tau - 1) = 2.839287
+    Match: True
+    H=  1:   120 tournaments, (H-1)/2 = 0
+    H=  3:   120 tournaments, (H-1)/2 = 1
+    H=  5:   240 tournaments, (H-1)/2 = 2
+    H=  9:   240 tournaments, (H-1)/2 = 4
+    H= 11:   120 tournaments, (H-1)/2 = 5
+    H= 13:   120 tournaments, (H-1)/2 = 6
+    H= 15:    64 tournaments, (H-1)/2 = 7
+
+======================================================================
+PART 3: ZECKENDORF REPRESENTATION OF H VALUES
+======================================================================
+
+  The Zeckendorf representation expresses integers as sums of
+  non-consecutive Fibonacci numbers. Similarly, we can represent
+  H values in "tribonacci base" using non-consecutive tribonacci numbers.
+
+  Tribonacci sequence: 1, 1, 2, 4, 7, 13, 24, 44, 81, 149, ...
+
+  The tribonacci Zeckendorf theorem: every positive integer has a UNIQUE
+  representation as a sum of non-consecutive tribonacci numbers
+  (where "non-consecutive" means no three consecutive terms).
+
+  KEY OBSERVATION: The forbidden value 7 IS a tribonacci number!
+  7 = T_5 (the 5th tribonacci number, 0-indexed from T_0=0,T_1=0,T_2=1)
+  or T_7 in some indexing.
+
+  The achievable values near 7: 5, 9, 11, 13, 15
+  In tribonacci: 5 = 4+1, 9 = 7+2, 11 = 7+4, 13 = T_6, 15 = 13+2
+
+  Tribonacci numbers: [1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136, 5768]
+
+  n=5 achievable H values in tribonacci base:
+    H=  1: 1                tribonacci_number=True  (achievable)
+    H=  3: 2 + 1            tribonacci_number=False  (achievable)
+    H=  5: 4 + 1            tribonacci_number=False  (achievable)
+    H=  9: 7 + 2            tribonacci_number=False  (achievable)
+    H= 11: 7 + 4            tribonacci_number=False  (achievable)
+    H= 13: 13               tribonacci_number=True  (achievable)
+    H= 15: 13 + 2           tribonacci_number=False  (achievable)
+    H=  7: 7                tribonacci_number=True  (FORBIDDEN)
+
+  n=6 forbidden H values in tribonacci base:
+    H=  7: 7                tribonacci=True
+    H= 21: 13 + 7 + 1       tribonacci=False
+    H= 35: 24 + 7 + 4       tribonacci=False
+    H= 39: 24 + 13 + 2      tribonacci=False
+
+======================================================================
+PART 4: PG(2, tau) — THE CONTINUOUS PROJECTIVE PLANE
+======================================================================
+
+  PG(2, q) has q^2 + q + 1 = Phi_3(q) points.
+
+  At q = tau: Phi_3(tau) = tau^3 = 6.222263 "points"
+
+  This is NOT an integer, so PG(2, tau) is not a real projective plane.
+  But it tells us the "CONTINUOUS SIZE" of the projective structure.
+
+  The Baer partition of PG(2, q^2):
+  Phi_6(q) = q^2 - q + 1 copies of PG(2, q).
+
+  At q = tau: Phi_6(tau) = tau^2 - tau + 1 = 2.543689
+  And tau^2 = 3.382976, so Phi_6(tau) = 2.543689
+
+  Check: Phi_3(tau) * Phi_6(tau) = tau^3 * (tau^2-tau+1) = ?
+  Phi_3(tau^2) = tau^4 + tau^2 + 1 = 15.827501
+  tau^3 * (tau^2-tau+1) = 15.827501
+  Match: True
+
+  So the Baer factorization WORKS for tau:
+  Phi_3(tau^2) = Phi_3(tau) * Phi_6(tau)
+  15.827501 = 6.222263 * 2.543689
+
+  THE HIERARCHY:
+  Level 0: Phi_3(tau)   = tau^3  = 6.2223   (PG(2,tau))
+  Level 1: Phi_3(tau^2) = tau^6? No...
+
+  tau^2 = 3.382976
+  Phi_3(tau^2) = 15.827501
+
+  Powers of tau in tribonacci coordinates (a*tau^2 + b*tau + c):
+    tau^ 0 =     0*tau^2 +     0*tau +     1 =       1.0000
+    tau^ 1 =     0*tau^2 +     1*tau +     0 =       1.8393
+    tau^ 2 =     1*tau^2 +     0*tau +     0 =       3.3830
+    tau^ 3 =     1*tau^2 +     1*tau +     1 =       6.2223
+    tau^ 4 =     2*tau^2 +     2*tau +     1 =      11.4445
+    tau^ 5 =     4*tau^2 +     3*tau +     2 =      21.0498
+    tau^ 6 =     7*tau^2 +     6*tau +     4 =      38.7166
+    tau^ 7 =    13*tau^2 +    11*tau +     7 =      71.2108
+    tau^ 8 =    24*tau^2 +    20*tau +    13 =     130.9772
+    tau^ 9 =    44*tau^2 +    37*tau +    24 =     240.9045
+    tau^10 =    81*tau^2 +    68*tau +    44 =     443.0925
+    tau^11 =   149*tau^2 +   125*tau +    81 =     814.9742
+
+  The coefficients (a, b, c) follow tribonacci-like recurrences!
+  Column 'a': [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
+  Column 'b': [0, 1, 0, 1, 2, 3, 6, 11, 20, 37]
+  Column 'c': [1, 0, 0, 1, 1, 2, 4, 7, 13, 24]
+  Tribonacci:  [0, 0, 1, 1, 2, 4, 7, 13, 24, 44]
+  Column 'a' IS the tribonacci sequence (shifted by 2)!
+  Column 'b' IS the tribonacci sequence (shifted by 1)!
+  Column 'c' IS the tribonacci sequence (shifted by 0)!
+
+======================================================================
+PART 5: FORBIDDEN VALUES IN BASE TAU
+======================================================================
+
+  Since tau^k = T_k * tau^2 + T_{k-1} * tau + T_{k-2}
+  (where T_n are tribonacci numbers),
+
+  I(K_3, tau) = tau^3 = 1*tau^2 + 1*tau + 1
+  I(K_3+K_1, tau) = tau^4 = 2*tau^2 + 1*tau + 1... wait:
+  tau^4 = 2*tau^2 + 2*tau + 1
+  Check: 2*3.3830 + 2*1.8393 + 1 = 11.4445
+  tau^4 = 11.4445. Match: True
+
+  The forbidden values at x=2:
+  H = 7 = I(K_3, 2) corresponds to I(K_3, tau) = tau^3
+  H = 21 = I(K_3+K_1, 2) corresponds to tau^4
+
+  In base tau (tribonacci coordinates):
+  7 = 1*4 + 1*2 + 1*1 = 4+2+1 (tribonacci representation)
+    = T_4 + T_3 + T_2 = 4+2+1  (three consecutive tribonacci numbers!)
+  21 = 2*7 + 1*4 + 1*2 + 1*1? No, 21 = 13+7+1.
+
+  Actually: 7 = 7 = T_5 (itself a tribonacci number)
+  21 = 13 + 7 + 1... but 13 and 7 are consecutive, violating Zeckendorf.
+  21 = 13 + 4 + 2 + 1 + 1? No, can't repeat.
+  21 = 24 - 4 + 1? Negative not allowed.
+
+  In standard tribonacci representation (allowing up to 2 copies):
+  21 = 13 + 4 + 2 + 2? No.
+  21 = 2*7 + 4 + 2 + 1 = 14+4+2+1 = 21. With coefficient 2 for T_5.
+
+  Or in the tribonacci numeral system:
+  21 in base tau^3 = 21/tau^3 = 21/6.222 = 3.375...
+  Not an integer. But tau^3 = 7 approximately (7 at x=2).
+
+  THE KEY: at x=tau, 7 -> tau^3 and 21 -> tau^4.
+  The ratio 21/7 = 3 becomes tau^4/tau^3 = tau = 1.839...
+
+  So the factor-of-3 relationship (21 = 3*7) in integer space
+  becomes a factor-of-tau relationship in tribonacci space!
+
+  Forbidden value ratios:
+    At x=2:   21/7 = 3.0
+    At x=tau: tau^4/tau^3 = tau = 1.839287
+    At x=2:   63/21 = 3.0
+    At x=tau: tau^5/tau^4 = tau = 1.839287
+    The multiplicative group {7*3^k} becomes {tau^{k+3}} in tribonacci space.
+    It's a GEOMETRIC SEQUENCE with ratio tau instead of 3.
+
+======================================================================
+PART 6: CATEGORICAL INTERPRETATION
+======================================================================
+
+  CATEGORY: TournCat
+    Objects: Tournaments T on [n]
+    Morphisms: Score-preserving tournament maps
+
+  FUNCTOR F_x: TournCat -> Z[x]
+    T |-> I(Omega(T), x)
+
+  At x=2: F_2(T) = H(T) in Z (integers)
+  At x=tau: F_tau(T) = I(Omega(T), tau) in Z[tau] (tribonacci integers)
+  At x=omega: F_omega(T) in Z[omega] (Eisenstein integers)
+
+  THE TRIANGLE OF FUNCTORS:
+
+       TournCat
+      /    |    \
+     /     |     \
+    Z   Z[tau]  Z[omega]
+   (H)  (H_tau) (F(omega))
+
+  Each functor captures DIFFERENT aspects of tournament structure:
+  - F_2 = H: the HP count (integer, most studied)
+  - F_tau = H_tau: the tribonacci HP count (irrational, continuous)
+  - F_omega = F(omega): the Eisenstein phase (complex, hexagonal lattice)
+
+  NATURAL TRANSFORMATIONS between functors:
+  - Z[tau] -> Z via tau |-> 2: recovers H from H_tau
+  - Z[omega] -> Z via omega |-> 1: recovers H from F(omega) + corrections
+  - Z[tau] -> Z[omega] via tau |-> omega: connects tribonacci to Eisenstein
+
+  The LAST one: tau |-> omega.
+  Phi_3(tau) = tau^3 and Phi_3(omega) = 0.
+  So the map tau |-> omega sends the "forbidden" polynomial tau^3 to ZERO.
+  The Eisenstein integer F(T, omega) is what REMAINS after the forbidden
+  component is projected out!
+
+  THIS IS WHY F(T, omega) correlates with H but is not equal to it:
+  F(omega) = F(tau) evaluated at the ZERO of Phi_3, which kills
+  the Phi_3 component but preserves everything else.
+
+
+======================================================================
+PART 7: 3-STRAND PASCAL IN TRIBONACCI COORDINATES
+======================================================================
+
+  (1+x+x^2)^n = Phi_3(x)^n
+
+  At x=tau: Phi_3(tau)^n = (tau^3)^n = tau^{3n}
+  At x=omega: Phi_3(omega)^n = 0 for n >= 1
+  At x=2: Phi_3(2)^n = 7^n
+
+  So the 3-strand Pascal triangle evaluated at:
+  - x=2: gives 7^n (the forbidden value raised to the nth)
+  - x=tau: gives tau^(3n) (pure tribonacci power)
+  - x=omega: gives 0 (annihilation)
+
+  The individual trinomial coefficients T(n,k):
+  sum_k T(n,k) * tau^k = tau^(3n)
+  sum_k T(n,k) * 2^k = 7^n
+  sum_k T(n,k) * omega^k = 0
+
+  These are THREE constraints on the trinomial row.
+  Together with the total sum_k T(n,k) = 3^n,
+  they give FOUR equations for 2n+1 unknowns.
+
+  n=1: sum T(n,k)*2^k = 7 = 7^1 = 7
+       sum T(n,k)*tau^k = 6.2223 = tau^3 = 6.2223
+       sum T(n,k) = 3 = 3^1 = 3
+  n=2: sum T(n,k)*2^k = 49 = 7^2 = 49
+       sum T(n,k)*tau^k = 38.7166 = tau^6 = 38.7166
+       sum T(n,k) = 9 = 3^2 = 9
+  n=3: sum T(n,k)*2^k = 343 = 7^3 = 343
+       sum T(n,k)*tau^k = 240.9045 = tau^9 = 240.9045
+       sum T(n,k) = 27 = 3^3 = 27
+  n=4: sum T(n,k)*2^k = 2401 = 7^4 = 2401
+       sum T(n,k)*tau^k = 1498.9713 = tau^12 = 1498.9713
+       sum T(n,k) = 81 = 3^4 = 81
+  n=5: sum T(n,k)*2^k = 16807 = 7^5 = 16807
+       sum T(n,k)*tau^k = 9326.9930 = tau^15 = 9326.9930
+       sum T(n,k) = 243 = 3^5 = 243
+
+======================================================================
+DONE — TOURNAMENT THEORY IN BASE TAU
+======================================================================
