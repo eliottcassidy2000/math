@@ -1,0 +1,81 @@
+======================================================================
+α₁ FOR REGULAR TOURNAMENTS ON n VERTICES
+======================================================================
+  n= 3: α₁ =    1, α₁ mod 2 = 1, α₁/n = 0.3
+  n= 5: α₁ =    5, α₁ mod 2 = 1, α₁/n = 1.0
+  n= 7: α₁ =   14, α₁ mod 2 = 0, α₁/n = 2.0
+  n= 9: α₁ =   30, α₁ mod 2 = 0, α₁/n = 3.3
+  n=11: α₁ =   55, α₁ mod 2 = 1, α₁/n = 5.0
+  n=13: α₁ =   91, α₁ mod 2 = 1, α₁/n = 7.0
+
+Simplified: α₁ = n(n²-1)/24
+  n=3: α₁ = 3×8/24 = 3×0 = 1
+  n=5: α₁ = 5×24/24 = 5×1 = 5
+  n=7: α₁ = 7×48/24 = 7×2 = 14
+  n=9: α₁ = 9×80/24 = 9×3 = 30
+  n=11: α₁ = 11×120/24 = 11×5 = 55
+  n=13: α₁ = 13×168/24 = 13×7 = 91
+
+α₁ parity:
+  n= 3: α₁=   1, even=False
+  n= 5: α₁=   5, even=False
+  n= 7: α₁=  14, even=True
+  n= 9: α₁=  30, even=True
+  n=11: α₁=  55, even=False
+  n=13: α₁=  91, even=False
+  n=15: α₁= 140, even=True
+  n=17: α₁= 204, even=True
+  n=19: α₁= 285, even=False
+
+======================================================================
+QR₁₁: 3-CYCLE CONFLICT GRAPH
+======================================================================
+QR mod 11: [1, 3, 4, 5, 9]
+3-cycles: 55
+Building conflict graph...
+Degree distribution: {np.int64(36): 55}
+Regular graph: True with k=36
+Complement degrees: {np.int64(18): 55}
+λ values: {28: 165, 23: 605, 22: 110, 24: 110}
+μ values: {23: 275, 22: 110, 21: 110}
+NOT strongly regular
+
+======================================================================
+GENERAL PATTERN
+======================================================================
+
+RESULTS:
+  n=3: α₁=1, trivial
+  n=7: α₁=14, conflict = CP(7) = srg(14,12,10,12) ✓
+  n=11: α₁=55, ...
+
+For the cocktail party structure to hold:
+  1. α₁ must be EVEN (so 55 at n=11 prevents CP)
+  2. The conflict graph must be (n-2)-regular
+  3. Every non-conflicting pair must be unique
+
+The CP(7) theorem at n=7 may be specific to p=7:
+  - p=7 is the smallest prime ≡ 3 mod 4 with p>3
+  - α₁ = 14 = 2×7 (even, = 2p)
+  - The Fano structure makes the matching work
+
+For general Paley primes p ≡ 3 mod 4:
+  α₁(QR_p) = p(p²-1)/24
+  This is even iff 48 | p(p-1)(p+1)
+
+  p=3: 24/48 → α₁=1 (odd)
+  p=7: 336/48=7 → α₁=14 (even)
+  p=11: 1320/48=27.5 → α₁=55 (odd)
+  p=19: 6840/48=142.5 → α₁=285 (odd)
+  p=23: 12144/48=253 → α₁=506 (even!)
+
+  So CP structure can hold at p=7 and p=23 but not p=11 or p=19.
+
+  p= 3 (≡3 mod 4): α₁=1, even=False
+  p= 7 (≡3 mod 4): α₁=14, even=True
+  p=11 (≡3 mod 4): α₁=55, even=False
+  p=19 (≡3 mod 4): α₁=285, even=False
+  p=23 (≡3 mod 4): α₁=506, even=True
+  p=31 (≡3 mod 4): α₁=1240, even=True
+  p=43 (≡3 mod 4): α₁=3311, even=False
+  p=47 (≡3 mod 4): α₁=4324, even=True

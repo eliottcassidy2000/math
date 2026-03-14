@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S87b — 2026-03-14: QR₇-CP(7) crown jewel, Fano-BIBD bridge, regular tournament trichotomy
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S87
+**What was done:**
+Deep exploration of tournament design theory and spectral structure:
+
+- **QR₇-CP(7) CROWN JEWEL (PROVED)**: The 3-cycle conflict graph of QR₇ is the cocktail party graph CP(7) = srg(14,12,10,12). The 14 3-cycles pair into 7 vertex-disjoint couples; any two from different couples share a vertex. Complement = 7K₂ = perfect matching. Each couple maps to a unique uncovered vertex ∈ Z₇.
+- **Fano-BIBD bridge**: Connected PG(2,F₂) at n=3 to our 2-(10,4,2) BIBD at n=6. The 15 BIBD blocks = independent 4-sets of the Petersen graph K(5,2). Sylvester's duad-syntheme-total structure: 15 duads ↔ 15 synthemes via S₆ outer automorphism.
+- **n=7 α₂ gap at 13 (CONFIRMED)**: 0 in 500K random + 300K perturbations. Max α₂=14 with gap at max-1, paralleling n=6's gap at 3 (max=4).
+- **3 regular tournament classes at n=7 (EXHAUSTIVE)**: QR₇ (α₂=7, H=189, |Aut|=21), Middle (α₂=10, H=171, |Aut|=3, non-circulant), AP₇ (α₂=14, H=175, |Aut|=7). Total 2640.
+- **Additive-multiplicative dichotomy**: QR (multiplicative) minimizes α₂, AP (additive/consecutive) maximizes it. Confirmed at n=7 and n=11.
+- **H×|Aut| = perfect squares**: QR₇ gives 63², AP₇ gives 35², both divisible by 7².
+- **CP structure specific to p=7**: Does NOT generalize to QR₁₁ (55 cycles, not SRG).
+- **Conflict graph spectra**: QR₇ has 3 eigenvalues (SRG!), AP₇ has 5, Middle has 8.
+
+**Scripts created:** fano_bibd_bridge_87b.py, n7_alpha2_sample_87b.py, n7_gap_analysis_87b.py, paley_max_alpha2_87b.py, max_alpha2_structure_87b.py, additive_multiplicative_87b.py, synthesis_regular_7_87b.py, middle_class_87b.py, h_aut_square_87b.py, conflict_spectrum_87b.py, strongly_regular_87b.py, paley_cocktail_general_87b.py
+**New contributions:** HYP-1334 through HYP-1347 (14 hypotheses)
+**Unresolved threads:** Spectral theory of full odd-cycle conflict graph, CP structure at p=23, engineering applications of conflict graph spectral decomposition
+
 ## opus-2026-03-14-S71h (cont'd) — 2026-03-14: Ω(T) completeness theorem, cycle-count gaps, H≠21 structural proof
 
 **Account:** opus
