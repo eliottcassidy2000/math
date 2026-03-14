@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71k — 2026-03-14: Baer cyclotomic factorization, Fibonacci≡Φ₃ mod 2, discriminant tower
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71j
+**What was done:**
+Deep exploration of Baer subplane connections and the Φ₃ polynomial, yielding several major structural discoveries:
+
+- **Baer cyclotomic factorization**: Φ₃(q²) = Φ₃(q)·Φ₆(q) is the algebraic identity underlying the Baer partition. At q=2: 21 = 7×3 (subplane size × partition count). Verified PG(2,F₄) has exactly 3 Baer subplanes forming a partition.
+- **Frobenius-complement parallel**: The Frobenius automorphism σ:F₄→F₄ (order 2, fixes F₂) parallels the tournament complement τ:T→T^op (order 2). Walsh even-degree = Frobenius invariance. Fixed points of σ = Baer subplane PG(2,F₂).
+- **FIBONACCI POLYNOMIAL ≡ Φ₃ MOD 2**: x²-x-1 ≡ x²+x+1 (mod 2). The golden ratio φ and cube root ω are "the same" over F₂. Moreover, the Fibonacci matrix [[1,1],[1,0]] is CONJUGATE to the F₄ multiplication matrix [[0,1],[1,1]] OVER Z (not just mod 2!) via P=[[1,0],[1,1]].
+- **Three lifts of F₄ multiplication**: All three tournament matrices (a=-1,+1,+2) reduce to Φ₃(x) mod 2 when a is odd. Period 6 is a LIFTING phenomenon — over F₂, the period is 3 = |F₄*|.
+- **Discriminant tower**: D=1+4a maps M(a) to quadratic fields. D=21 appears at a=5=F₅ (second forbidden IS a discriminant). D=7 requires a=3/2 (first forbidden is NOT a discriminant). This reveals an asymmetry: 7 and 21 are forbidden for DIFFERENT reasons.
+- **Biquadratic field**: Q(√(-3),√5) has Galois group V₄ ≅ (F₄,+). Contains all tournament algebraic data.
+- **Class number h(-15)=2**: The composite discriminant Q(√(-15)) has class number 2 = number of forbidden values. Investigation shows 7 is INERT in Q(√(-15)), making this likely coincidental rather than structural.
+
+**New contributions:** HYP-1366 through HYP-1374 (9 new hypotheses, all CONFIRMED)
+**Scripts created:** baer_cyclotomic_factorization.py, frobenius_walsh_baer.py, fibonacci_phi3_mod2.py, discriminant_baer_tower.py, class_number_forbidden.py
+**Unresolved threads:**
+- Can the Frobenius-Walsh parallel be made functorial?
+- The "Baer matroid" concept (F₇ as excluded minor ↔ K₃ avoidance)
+- Why does Φ₃ uniquely generate tournament forbiddenness? (deeper rep-theoretic answer needed)
+- Z/3Z structure of Walsh degrees via cycle types
+
 ## kind-pasteur-2026-03-14-S105 — 2026-03-14: Cone geometry of 1/3, Phi_3 master formula, level-4 Fourier spectrum
 
 **Account:** kind-pasteur
