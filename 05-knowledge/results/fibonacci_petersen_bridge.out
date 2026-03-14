@@ -1,0 +1,294 @@
+======================================================================
+PART 1: FIBONACCI NUMBERS AND TOURNAMENT PRIMES
+======================================================================
+
+Fibonacci sequence and primality:
+
+  F_ 1 =      1
+  F_ 2 =      1
+  F_ 3 =      2 ← TOURNAMENT PRIME!
+  F_ 4 =      3 ← TOURNAMENT PRIME!
+  F_ 5 =      5 ← TOURNAMENT PRIME!
+  F_ 6 =      8
+  F_ 7 =     13 (prime)
+  F_ 8 =     21
+  F_ 9 =     34
+  F_10 =     55
+  F_11 =     89 (prime)
+  F_12 =    144
+  F_13 =    233 (prime)
+  F_14 =    377
+  F_15 =    610
+  F_16 =    987
+  F_17 =   1597 (prime)
+  F_18 =   2584
+  F_19 =   4181
+
+  Fibonacci PRIMES: F₃=2, F₄=3, F₅=5, F₇=13, F₁₁=89, F₁₃=233, ...
+  The first three: 2, 3, 5 = the tournament triple!
+  Indices of Fibonacci primes: 3, 4, 5, 7, 11, 13, ...
+    These indices are themselves mostly prime (Wall conjecture)
+
+Lucas numbers L_n = φⁿ + ψⁿ (companion to Fibonacci):
+  L_ 0 =      2 = KEY₁
+  L_ 1 =      1
+  L_ 2 =      3 = KEY₂
+  L_ 3 =      4
+  L_ 4 =      7 = rank(E₇)
+  L_ 5 =     11
+  L_ 6 =     18 = h(E₇)!
+  L_ 7 =     29
+  L_ 8 =     47 = prime
+  L_ 9 =     76
+  L_10 =    123 = 3·41
+  L_11 =    199
+
+  REMARKABLE: L₀ = 2 = KEY₁, L₁ = 1, L₂ = 3 = KEY₂
+  L₆ = 18 = h(E₇)!
+  The Lucas numbers start with the two keys!
+  And L₆ = 18 is the Coxeter number of E₇!
+
+======================================================================
+PART 2: COXETER RATIOS AS FIBONACCI CONVERGENTS
+======================================================================
+
+Coxeter number ratios and Fibonacci fractions:
+
+  h(F₄)/h(G₂) = 12/6 = 2 = F_3/F_2
+  h(E₆)/h(F₄) = 12/12 = 1 = F_2/F_1
+  h(E₇)/h(E₆) = 18/12 = 3/2 = F_4/F_3
+  h(E₈)/h(E₇) = 30/18 = 5/3 = F_5/F_4
+
+  The ratios: 2/1, 1/1, 3/2, 5/3
+  = F₃/F₂, F₁/F₁, F₄/F₃, F₅/F₄
+
+  Product of all ratios = 5 = 5.0
+  = h(E₈)/h(G₂) = 30/6 = 5 = KEY₁+KEY₂
+
+  These fractions converge to φ = 1.6180339887:
+    2/1 = 2.0   (above φ)
+    1/1 = 1.0   (below φ)
+    3/2 = 1.5   (below φ)
+    5/3 = 1.667 (above φ)
+
+  Average ratio = 37/24 ≈ 1.541667
+  φ = 1.618034
+  φ² = 2.618034
+  The average ≈ φ²/2 + 1/(2φ)... hmm, not exact
+
+  Geometric mean = 5^(1/4) = 1.495349 = 1.495349
+  (Since product = 5, geometric mean = 5^(1/(#ratios)))
+  5^(1/4) = 1.495349 ≈ φ^(3/4) = 1.434633... close!
+
+======================================================================
+PART 3: φ IN THE INDEPENDENCE POLYNOMIAL
+======================================================================
+
+Independence polynomial I(P,x) = 1 + 10x + 30x² + 30x³ + 5x⁴
+
+  After substitution u = x + 1/x:
+  I(P,x)/x² = 5(u² + 6u + 4)
+  Roots: u = -3 ± √5
+
+  u₁ = -3 + √5 = -0.7639320225
+  u₂ = -3 - √5 = -5.2360679775
+
+  Expressing in terms of φ:
+    φ = (1+√5)/2 = 1.6180339887
+    √5 = 2φ - 1
+    u₁ = -3 + (2φ-1) = 2φ - 4 = 2(φ - 2) = 2(φ - KEY₁)
+    u₂ = -3 - (2φ-1) = -2 - 2φ = -2(1+φ) = -2φ²
+
+    u₁ = 2(φ-KEY₁) = -0.7639320225
+    u₂ = -2φ²       = -5.2360679775
+
+  The four roots of I(P,x) = 0:
+    From u=-0.7639: x = -0.3820+0.9242j, -0.3820-0.9242j (complex, |x|=1.000000)
+    From u=-5.2361: x = -0.19850884, -5.03755914 (real)
+
+  Complex roots lie on the UNIT CIRCLE |x| = 1
+  This is related to the fact that Petersen is vertex-transitive
+
+  Real roots: -0.1985088357 and -5.0375591418
+  Product: 1.0000000000 (should be 1)
+  Sum: -5.2360679775 = u₂ = -2φ²
+
+  r₁ = (-φ² + √(φ⁴-1))/1 ≈ -0.198509
+  r₂ = (-φ² - √(φ⁴-1))/1 ≈ -5.037559
+  |r₂| = 5.037559
+  |r₂| = φ² + √(φ⁴-1) ≈ 5.037559
+  φ⁴ = 6.854102 = (φ²)² = (φ+1)² = φ²+2φ+1 = 3φ+2
+  φ⁴ - 1 = 3φ+1 = 5.854102
+
+======================================================================
+PART 4: THE GOLDEN RATIO IN E₈ — H₃ AND ICOSIANS
+======================================================================
+
+The non-crystallographic Coxeter group H₃:
+  H₃ is the symmetry group of the icosahedron
+  |H₃| = 120 = |BI| = |S₅|
+  H₃ has Coxeter matrix with entries 2, 3, 5
+  The eigenvalues of H₃'s Cartan matrix involve φ
+
+  The H₃ Coxeter diagram:  o---o===o
+                           3   5
+  (edge label 5 means angle π/5 between mirrors)
+
+  cos(π/5) = φ/2 = 0.809017
+  cos(2π/5) = (φ-1)/2 = 1/(2φ) = 0.309017
+  The golden ratio IS the cosine structure of the pentagon!
+
+  H₄ (4D icosahedral symmetry) and E₈:
+    |H₄| = 14400 = 120² = |BI|²
+    14400 = 2⁵·3²·5² = KEY₁⁵·KEY₂²·(KEY₁+KEY₂)²
+    H₄ has exponents {1, 11, 19, 29}
+    = all four CORNERS of E₈ exponent set!
+    E₈ exponents: {1, 7, 11, 13, 17, 19, 23, 29}
+    H₄ exponents are positions 1, 3, 6, 8 of E₈ list
+
+  The H₄ exponents {1,11,19,29} satisfy:
+    Sum: 1+11+19+29 = 60 = |A₅| = |BI|/2
+    Product: 1·11·19·29 = 6061 = h(E₈)·202
+    Pairs sum to 30: 1+29=30, 11+19=30
+    ALL pairs sum to h(E₈)!
+
+  ICOSIANS (Hamilton, 1856):
+    Quaternions with coefficients in Z[φ]
+    120 unit icosians form a group ≅ BI
+    When embedded in R⁸ via Z[φ] → R², they generate E₈
+    φ is the BRIDGE from H₃ to E₈!
+
+  The embedding map:
+    Z[φ] → R²: a+bφ ↦ (a+bφ, a+bψ) where ψ = (1-√5)/2
+    Quaternion q ∈ Z[φ]⁴ maps to R⁸
+    The image of the 120 unit icosians = the 240 shortest E₈ vectors
+    (each icosian maps to 2 E₈ vectors via the ±ψ embeddings)
+
+  THIS IS WHY #roots(E₈) = 2·|BI| = 240:
+    Each of the 120 icosians has 2 Galois conjugates
+    240 = 2·120 = KEY₁·|BI|
+
+======================================================================
+PART 5: φ AS THE BRIDGE BETWEEN KEY₁ AND KEY₂
+======================================================================
+
+The golden ratio φ = (1+√5)/2 connects KEY₁ and KEY₂:
+
+  φ ≈ 1.6180339887
+  KEY₁ = 2, KEY₂ = 3
+  KEY₁ < φ² < KEY₂ (since φ² = φ+1 ≈ 2.618)
+
+  KEY₁·KEY₂ = 6, √(KEY₁·KEY₂) = √6 ≈ 2.449490
+  φ² = φ+1 ≈ 2.618034
+  φ² is between √6 and KEY₂ = 3
+
+  φ = [1; 1, 1, 1, ...] (slowest converging CF)
+  KEY₂/KEY₁ = 3/2 = [1; 2] (finite CF)
+  φ is the 'most irrational' number between KEY₁ and KEY₂
+
+  Stern-Brocot mediants between 1 and 2:
+    1/1 ← 3/2 → 2/1
+    3/2 = KEY₂/KEY₁ is the mediant of 1/1 and 2/1
+    The SIMPLEST fraction between 1 and 2
+    In music: the perfect fifth, most consonant after the octave
+
+  φ satisfies x² = x + 1, i.e., x² - x - 1 = 0
+  Tournament polynomial: x² - 5x + 6 = 0
+  Compare:
+    φ poly: x² - x - 1 = 0 (roots φ, ψ)
+    f poly: x² - 5x + 6 = 0 (roots 2, 3)
+
+  The φ polynomial has:
+    sum of roots = 1, product = -1
+  The f polynomial has:
+    sum of roots = 5, product = 6
+
+  Ratio: sum_f/sum_φ = 5/1 = KEY₁+KEY₂
+  Ratio: prod_f/prod_φ = 6/(-1) = -6 = -h(G₂)
+
+  Golden recurrence: a(n) = a(n-1) + a(n-2)
+    General solution: A·φⁿ + B·ψⁿ
+    Dominant: φⁿ (since |φ| > |ψ|)
+
+  (2,3) recurrence: a(n) = 5a(n-1) - 6a(n-2)
+    General solution: A·2ⁿ + B·3ⁿ
+    Dominant: 3ⁿ (since 3 > 2)
+
+  PARALLEL:
+    Fibonacci: roots φ,ψ with |φ/ψ| = φ² ≈ 2.618
+    Tournament: roots 2,3 with |3/2| = 1.5
+    The golden ratio φ² ≈ 2.618 sits between KEY₂/KEY₁ = 1.5 and KEY₂ = 3
+
+======================================================================
+PART 6: THE (2,3,5) AS FIBONACCI PRIMES
+======================================================================
+
+The triple (2,3,5) = (F₃, F₄, F₅) — three consecutive Fibonacci numbers!
+
+  F₁ = 1, F₂ = 1, F₃ = 2, F₄ = 3, F₅ = 5, F₆ = 8, F₇ = 13
+
+  The triple (F₃, F₄, F₅) = (2, 3, 5) uniquely satisfies:
+    a + b = c (Fibonacci rule)
+    All three are prime
+    a·b·c = 30 = h(E₈)
+
+  Other consecutive Fibonacci triples with all prime:
+    (F_3, F_4, F_5) = (2, 3, 5)
+
+  ONLY (2, 3, 5) works!
+  Because F₆ = 8 = 2³ is not prime.
+  And for n≥7, at least one of F_n, F_{n+1}, F_{n+2} is even (divisible by KEY₁)
+
+  Fibonacci modulo 2: 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 
+  Period 3: (1, 1, 0, 1, 1, 0, ...)
+  Every 3rd Fibonacci number is even (divisible by KEY₁)
+  3 = KEY₂ is the Fibonacci period mod KEY₁!
+
+  Fibonacci modulo 3: 1 1 2 0 2 2 1 0 1 1 2 0 2 2 1 0 1 1 2 
+  Period 8: (1,1,2,0,2,2,1,0,...)
+  Every 4th Fibonacci number is divisible by KEY₂=3
+  Pisano period π(3) = 8 = rank(E₈)!
+
+  Fibonacci modulo 5: 1 1 2 3 0 3 3 1 4 0 4 4 3 2 0 2 2 4 1 
+  Period 20: ...
+  Every 5th Fibonacci number is divisible by KEY₁+KEY₂=5
+  Pisano period π(5) = 20 = V(dodecahedron) = f(7)!
+
+  PISANO PERIODS (period of F_n mod m):
+    π(  2) =    3 = KEY₂
+    π(  3) =    8 = rank(E₈)
+    π(  5) =   20 = V(dodec)
+    π(  6) =   24 = |BT|
+    π( 10) =   60 = |A₅|
+    π( 30) =  120 = |BI| = |S₅|!
+
+  π(30) = π(h(E₈)) = 120 = |BI| = |Aut(Petersen)|!
+  The Fibonacci period mod h(E₈) IS the icosahedral group order!
+
+  π(KEY₁) = KEY₂ = 3
+  π(KEY₂) = rank(E₈) = 8
+  π(KEY₁·KEY₂) = |BT| = 24
+  π(KEY₁·KEY₂·(KEY₁+KEY₂)) = |BI| = 120
+
+======================================================================
+FINAL: THE FIBONACCI-PETERSEN-LIE TRIANGLE
+======================================================================
+
+Three vertices of the universal triangle:
+
+       FIBONACCI
+      /         \
+   φ→2          (2,3,5) = (F₃,F₄,F₅)
+    /             \
+ PETERSEN -------- LIE
+   K(5,2)    E₆,E₇,E₈
+
+Edges:
+  Fibonacci → Petersen: π(30)=120=|Aut(P)|, I(P) factors via φ
+  Fibonacci → Lie:      (2,3,5)=tournament triple, 2·3·5=h(E₈)
+  Petersen → Lie:       eigenvalues {3,1,-2}, complement 30 edges
+
+Center:
+  The tournament polynomial f(z) = (z-2)(z-3)
+  lives at the CENTER of this triangle,
+  connecting all three worlds through z²-5z+6=0.
