@@ -1,0 +1,120 @@
+======================================================================
+Part 1: H as multilinear polynomial in arc variables
+======================================================================
+
+Degree analysis at n=5:
+  degree  0:     1/    1 nonzero alternating sums
+  degree  1:     6/   10 nonzero alternating sums
+  degree  2:    34/   45 nonzero alternating sums
+  degree  3:    35/  120 nonzero alternating sums
+  degree  4:    60/  210 nonzero alternating sums
+  degree  5:     0/  252 nonzero alternating sums
+  degree  6:     0/  210 nonzero alternating sums
+  degree  7:     0/  120 nonzero alternating sums
+  degree  8:     0/   45 nonzero alternating sums
+  degree  9:     0/   10 nonzero alternating sums
+  degree 10:     0/    1 nonzero alternating sums
+
+  Max nonzero degree: 4
+  Expected: n-1 = 4 (odd n)
+
+======================================================================
+Part 2: Top-degree coefficient values at n=5
+======================================================================
+  Degree 4 coefficient values:
+    c =  -2: 26 arc sets
+    c =   2: 34 arc sets
+
+======================================================================
+Part 3: Why ±2? Connection to OCF evaluation point
+======================================================================
+
+Degree Drop Theorem (kind-pasteur S72):
+  Each arc set S of size n-1 has exactly 2 Hamiltonian paths: P and P^rev
+  des(P) + des(P^rev) = n-1
+  c_S = (-1)^{des(P)} + (-1)^{des(P^rev)} = (-1)^{des(P)} * (1 + (-1)^{n-1})
+
+For odd n: c_S = (-1)^{des(P)} * 2 → c_S ∈ {+2, -2}
+For even n: c_S = 0
+
+The factor 2 comes from:
+  1 + (-1)^{n-1} = 2 (odd n)
+
+This is the SAME 2 as in OCF: I(Ω, x=2) = H.
+
+Deep reason: The path reversal involution P ↔ P^rev is the
+structural reason why:
+  (a) The OCF evaluation point is 2 (binary arc choice)
+  (b) Top-degree coefficients are ±2 (constructive interference of paired paths)
+  (c) k-nacci growth → 2 (sum of binary expansions)
+
+The factor 2 = |{P, P^rev}| = size of the orbit under path reversal.
+
+======================================================================
+Part 4: Arc flip analysis — ΔH vs Δα₁
+======================================================================
+ΔH distribution under single arc flip at n=5:
+  ΔH =  -12:     40 (0.4%)
+  ΔH =   -8:    360 (3.5%)
+  ΔH =   -6:    600 (5.9%)
+  ΔH =   -4:   1200 (11.7%)
+  ΔH =   -2:   1800 (17.6%)
+  ΔH =    0:   2240 (21.9%)
+  ΔH =    2:   1800 (17.6%)
+  ΔH =    4:   1200 (11.7%)
+  ΔH =    6:    600 (5.9%)
+  ΔH =    8:    360 (3.5%)
+  ΔH =   12:     40 (0.4%)
+
+  All ΔH even? True
+  ΔH range: [-12, 12]
+  ΔH = ±2 accounts for: 35.2%
+
+======================================================================
+Part 5: ΔH = 2·Δα₁ + 4·Δα₂ under arc flip?
+======================================================================
+  ΔH ≠ 2·Δα₁ violations (first 200 tournaments, n=5): 0
+  (At n=5, α₂=0 always, so ΔH = 2·Δα₁ expected)
+
+======================================================================
+Part 6: Synthesis — The 2-Bridge
+======================================================================
+
+UNIFIED PICTURE: The number 2 appears in THREE places:
+
+1. OCF EVALUATION: H = I(Ω, 2)
+   → The independence polynomial evaluated at x = 2
+
+2. TOP-DEGREE COEFFICIENT: c_S = ±2 for odd n
+   → Path reversal gives exactly 2 paths per arc set
+   → 1 + (-1)^{n-1} = 2
+
+3. ARC FLIP DERIVATIVE: ΔH = 2·Δα₁ (when α₂ = 0)
+   → Each new/lost cycle contributes ±2 to H
+
+These are all the SAME 2. The unifying explanation:
+
+BINARY CHOICE THEOREM:
+  Each arc of a tournament is a binary choice (i→j or j→i).
+  The Hamiltonian path count H weights each independent set of
+  odd cycles by 2^|S| (the OCF). The factor 2 per independent
+  cycle comes from the path reversal: each cycle that appears
+  in a Hamiltonian path can be traversed in 2 directions
+  (but the tournament fixes one), contributing a factor of 2
+  to the counting weight.
+
+CONSEQUENCE FOR FORBIDDEN VALUES:
+  H = 1 + 2α₁ + 4α₂ + 8α₃ + ... = I(Ω, 2)
+  The base-2 expansion structure means:
+  - H ≡ 1 (mod 2) always
+  - H ≡ 1 (mod 4) iff α₁ is even
+  - H ≡ 3 (mod 4) iff α₁ is odd
+
+  At n=8 (500k sample): H ≡ 1 (mod 4) = 52.1%, H ≡ 3 (mod 4) = 47.9%
+  → α₁ is slightly more likely even than odd
+
+  The forbidden H=7 ≡ 3 (mod 4) → would need α₁ odd (=3)
+  The forbidden H=21 ≡ 1 (mod 4) → would need α₁ even (=10)
+  Neither constraint rules out the values mod-4; the obstruction
+  is in the JOINT (α₁, α₂) achievability.
+
