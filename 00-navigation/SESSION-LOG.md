@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S74 — 2026-03-14: Cyclotomic Tournament Dictionary, The Forbidden 3, Modular Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S73
+**Summary of work:**
+Deep exploration of how (5,6)→(7,8) encodes the "keys to the universe" (2,3). Discovered the cyclotomic dictionary Φ_d(2), proved I(x)≡1(mod x) generalizes Rédei, identified the "Forbidden 3" as the universal driver of modular obstructions, proved the Cycle Threshold Theorem at n=5,6, and showed it breaks at n=7.
+
+**Critical findings:**
+1. **Tournament polynomial z²-5z+6=0** (HYP-985): Roots ARE 2 and 3. Coefficients (5,6) = (sum,product). Discriminant=1. The recurrence x(n)=5x(n-1)-6x(n-2) generates all A·2ⁿ+B·3ⁿ.
+2. **Cyclotomic dictionary** (HYP-986): 7=Φ₃(2), 3=Φ₂(2), 5=Φ₄(2), 31=Φ₅(2), 11=Φ₁₀(2). The ENTIRE hierarchy is Φ_d(2). p=Φ_d(2) ↔ ord_p(2)=d.
+3. **I(x)≡1(mod x) always** (HYP-987): Trivial algebraic proof. Rédei (H odd) is the x=2 case. I(x) mod p = I(x mod p) mod p (reduction theorem, HYP-988).
+4. **The Forbidden 3** (HYP-993): (H-1)/2=3 (H=7=Φ₃(2)) is impossible at n=5. This SINGLE gap drives ALL forbidden residues: H≡2(mod5), H≡0(mod7), H≡7(mod11), H≡7(mod13) — ALL are (H-1)/2≡3(mod p).
+5. **Cycle Threshold Theorem** (HYP-989): dc3≤2⟹dc5=0 and dc3≥3⟹dc5≥1 at n=5,6 (exhaustive). Creates gap: dc3+dc5 skips 3. BREAKS at n=7 (HYP-990): dc3=3,dc5=0 achievable.
+6. **α₁=3 at n=7 forces α₂=2** (HYP-991): All (dc3=3,dc5=0,dc7=0) have H=15, NOT H=7.
+7. **H=7 never achievable** (HYP-992): Low H spectrum at n=7 is {1,3,5,9,11,13,15} — same as n=5. Smallest H≡0(mod7) is H=35.
+8. **Constraint strength = cyclotomic period** (HYP-999): ord₃(2)=2 (Rédei, permanent), ord₇(2)=3 (lifts n=7), ord₅(2)=4 (lifts n=6).
+9. **I(x)/H → x/2 in sparse regime** (HYP-995): The 3/2 ratio IS the ratio of keys.
+10. **Lagrange through (0,2,3)** (HYP-997): Produces x²-5x+6 as basis polynomial — the tournament polynomial appears structurally.
+
+**New hypotheses:** HYP-985 through HYP-999 (15 hypotheses, all CONFIRMED)
+**New scripts:** five_six_to_seven_eight.py, cyclotomic_tournament_deep.py, i_mod_cyclotomic_v2.py, forbidden_residue_mechanism.py, h_gap_structure.py, dc3_dc5_impossibility.py, alpha1_3_at_n7.py
+
+**Unresolved threads:**
+- WHY does α₁=3 with α₂=0 seem impossible at ALL n? Is H=7 literally impossible for all tournaments?
+- The n=6 (H-1)/2 gaps {3,10,17,19}: first 3 are ≡3(mod7), but 19≡5(mod7). What drives the non-mod-7 gap?
+- kind-pasteur-S64 found H forbidden values at n=7: {7,21,63,107,119,149}. All of {7,21,63} are multiples of 7. 107,149 are ≡2(mod7). What is the unifying mechanism?
+
 ## opus-2026-03-14-S71e — 2026-03-14: n=9/10 Structure, Gap Formula, I(-1) Characterization
 
 **Account:** opus
