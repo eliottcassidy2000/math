@@ -1,0 +1,160 @@
+======================================================================
+PART 1: WHY H=15 IS THE ONLY AMBIGUOUS CASE AT n=5
+======================================================================
+
+  64 tournaments with H=15
+
+  (dc3=4, dc5=3): 40 tournaments
+    bits=40: α₂=0, dp33=0
+      3-cycle vertex-sets: [{0, 1, 4}, {0, 2, 4}, {0, 3, 4}, {1, 2, 3}]
+      5-cycle data: [({0, 1, 2, 3, 4}, 3)]
+    bits=69: α₂=0, dp33=0
+      3-cycle vertex-sets: [{0, 1, 4}, {0, 2, 3}, {1, 2, 4}, {1, 3, 4}]
+      5-cycle data: [({0, 1, 2, 3, 4}, 3)]
+    bits=93: α₂=0, dp33=0
+      3-cycle vertex-sets: [{0, 1, 2}, {0, 2, 3}, {0, 2, 4}, {1, 3, 4}]
+      5-cycle data: [({0, 1, 2, 3, 4}, 3)]
+
+  (dc3=5, dc5=2): 24 tournaments
+    bits=76: α₂=0, dp33=0
+      3-cycle vertex-sets: [{0, 1, 3}, {0, 2, 3}, {0, 2, 4}, {1, 2, 4}, {1, 3, 4}]
+      5-cycle data: [({0, 1, 2, 3, 4}, 2)]
+    bits=105: α₂=0, dp33=0
+      3-cycle vertex-sets: [{0, 1, 3}, {0, 2, 4}, {0, 3, 4}, {1, 2, 3}, {1, 2, 4}]
+      5-cycle data: [({0, 1, 2, 3, 4}, 2)]
+    bits=202: α₂=0, dp33=0
+      3-cycle vertex-sets: [{0, 1, 2}, {0, 2, 3}, {0, 3, 4}, {1, 2, 4}, {1, 3, 4}]
+      5-cycle data: [({0, 1, 2, 3, 4}, 2)]
+
+======================================================================
+PART 2: INTERSECTION STRUCTURE AT n=7 (ambiguous cases)
+======================================================================
+  trial 0: 0.0s
+  trial 100: 0.6s
+  trial 200: 1.1s
+  trial 300: 1.7s
+  trial 400: 2.3s
+  Done: 2.9s
+
+  AMBIGUOUS (dc3, dc5, dc7) → H groups:
+    (dc3=4, dc5=2, dc7=0): H ∈ [13, 17], α₂ ∈ [0, 1], dp33 ∈ [0, 1]
+    (dc3=5, dc5=4, dc7=0): H ∈ [19, 23], α₂ ∈ [0, 1], dp33 ∈ [0, 1]
+    (dc3=6, dc5=6, dc7=0): H ∈ [25, 29, 33], α₂ ∈ [0, 1, 2], dp33 ∈ [0, 1, 2]
+    (dc3=7, dc5=7, dc7=0): H ∈ [33, 37], α₂ ∈ [1, 2], dp33 ∈ [1, 2]
+    (dc3=7, dc5=9, dc7=0): H ∈ [33, 37], α₂ ∈ [0, 1], dp33 ∈ [0, 1]
+    (dc3=7, dc5=9, dc7=2): H ∈ [45, 49], α₂ ∈ [2, 3], dp33 ∈ [2, 3]
+    (dc3=7, dc5=10, dc7=3): H ∈ [49, 53], α₂ ∈ [2, 3], dp33 ∈ [2, 3]
+    (dc3=7, dc5=11, dc7=3): H ∈ [51, 55], α₂ ∈ [2, 3], dp33 ∈ [2, 3]
+    (dc3=8, dc5=12, dc7=4): H ∈ [61, 65, 69], α₂ ∈ [3, 4, 5], dp33 ∈ [3, 4, 5]
+    (dc3=9, dc5=17, dc7=5): H ∈ [75, 79], α₂ ∈ [3, 4], dp33 ∈ [3, 4]
+    (dc3=10, dc5=18, dc7=9): H ∈ [99, 103], α₂ ∈ [6, 7], dp33 ∈ [6, 7]
+    (dc3=10, dc5=20, dc7=6): H ∈ [89, 93], α₂ ∈ [4, 5], dp33 ∈ [4, 5]
+    (dc3=10, dc5=20, dc7=7): H ∈ [91, 95], α₂ ∈ [4, 5], dp33 ∈ [4, 5]
+    (dc3=11, dc5=23, dc7=9): H ∈ [111, 115], α₂ ∈ [6, 7], dp33 ∈ [6, 7]
+    (dc3=11, dc5=25, dc7=9): H ∈ [111, 115], α₂ ∈ [5, 6], dp33 ∈ [5, 6]
+
+  15/148 groups are ambiguous
+
+======================================================================
+PART 3: DOES dp33 DETERMINE α₂?
+======================================================================
+
+  At n=7: 3+5=8>7, so only (3,3) disjoint pairs contribute to α₂.
+  Therefore α₂ = dp33 (exact equality).
+  α₂ == dp33 check: 500/500 match
+
+======================================================================
+PART 4: WHAT DETERMINES dp33 GIVEN dc3?
+======================================================================
+
+  dc3 → possible dp33 values:
+    dc3= 1: dp33 = 0 (unique)
+    dc3= 2: dp33 = 0 (unique)
+    dc3= 3: dp33 ∈ [0, 2] (2 values)
+    dc3= 4: dp33 ∈ [0, 1] (2 values)
+    dc3= 5: dp33 ∈ [0, 1, 2, 3] (4 values)
+    dc3= 6: dp33 ∈ [0, 1, 2, 3] (4 values)
+    dc3= 7: dp33 ∈ [0, 1, 2, 3, 4] (5 values)
+    dc3= 8: dp33 ∈ [0, 1, 2, 3, 4, 5, 6] (7 values)
+    dc3= 9: dp33 ∈ [2, 3, 4, 5, 6, 7, 8] (7 values)
+    dc3=10: dp33 ∈ [2, 4, 5, 6, 7, 8] (6 values)
+    dc3=11: dp33 ∈ [4, 5, 6, 7, 8, 9, 10] (7 values)
+    dc3=12: dp33 ∈ [5, 6, 7, 8, 10, 11, 12] (7 values)
+    dc3=13: dp33 ∈ [8, 9, 10, 12] (4 values)
+
+======================================================================
+PART 5: 3-CYCLE INTERSECTION GRAPH
+======================================================================
+
+  For each dc3 value, correlation between intersection density and dp33:
+    dc3= 2: dp33 range [0, 0] out of max C(2,2)=1
+             edges in int-graph range [1, 1]
+    dc3= 3: dp33 range [0, 2] out of max C(3,2)=3
+             edges in int-graph range [1, 3]
+    dc3= 4: dp33 range [0, 1] out of max C(4,2)=6
+             edges in int-graph range [5, 6]
+    dc3= 5: dp33 range [0, 3] out of max C(5,2)=10
+             edges in int-graph range [7, 10]
+    dc3= 6: dp33 range [0, 3] out of max C(6,2)=15
+             edges in int-graph range [12, 15]
+    dc3= 7: dp33 range [0, 4] out of max C(7,2)=21
+             edges in int-graph range [17, 21]
+    dc3= 8: dp33 range [0, 6] out of max C(8,2)=28
+             edges in int-graph range [22, 28]
+    dc3= 9: dp33 range [2, 8] out of max C(9,2)=36
+             edges in int-graph range [28, 34]
+    dc3=10: dp33 range [2, 8] out of max C(10,2)=45
+             edges in int-graph range [37, 43]
+    dc3=11: dp33 range [4, 10] out of max C(11,2)=55
+             edges in int-graph range [45, 51]
+    dc3=12: dp33 range [5, 12] out of max C(12,2)=66
+             edges in int-graph range [54, 61]
+    dc3=13: dp33 range [8, 12] out of max C(13,2)=78
+             edges in int-graph range [66, 70]
+
+======================================================================
+PART 6: DOES SCORE SEQUENCE DETERMINE dp33?
+======================================================================
+
+  46 distinct score sequences in 500 samples
+    score=(0, 2, 2, 3, 4, 5, 5): dc3∈[4], dp33∈[0, 1]
+    score=(0, 2, 2, 4, 4, 4, 5): dc3∈[5], dp33∈[0, 1]
+    score=(0, 2, 3, 3, 4, 4, 5): dc3∈[6], dp33∈[0, 1, 2]
+    score=(0, 2, 3, 4, 4, 4, 4): dc3∈[7], dp33∈[1, 2]
+    score=(0, 3, 3, 3, 3, 4, 5): dc3∈[7], dp33∈[0, 1, 2]
+  31/46 score sequences have ambiguous dp33
+  0/46 score sequences have ambiguous dc3
+
+======================================================================
+INSIGHT: THE HIERARCHY OF DETERMINATION
+======================================================================
+
+  HIERARCHY (n=7):
+
+  Full adjacency matrix A
+       ↓ (determines everything)
+  Score sequence (loses arc directions)
+       ↓ (usually determines dc3 but not always)
+  dc3 = #(directed 3-cycles)
+       ↓ (DOES NOT determine dp33)
+  dp33 = α₂ = #(vertex-disjoint 3-cycle pairs)
+       ↓ (together with α₁)
+  H = 1 + 2α₁ + 4α₂
+
+  KEY INSIGHT: The OCF captures the INTERSECTION STRUCTURE
+  of directed cycles, not just their counts.
+
+  H encodes:
+  - How many directed cycles exist (α₁)
+  - How they are arranged in space (α₂, α₃, ...)
+
+  This is why H is a richer invariant than any single cycle count.
+  It's an independence polynomial, which captures the full
+  clique/independence structure of the conflict graph.
+
+  THE 2 CONNECTION: I(Ω, 2) = H means that evaluation at x=2
+  picks up EXACTLY the right combination of intersection data
+  to count Hamiltonian paths. The "2" is the unique evaluation
+  point where cycle intersection structure = path structure.
+
+Done.
