@@ -1,0 +1,166 @@
+======================================================================
+CONFLICT GRAPH SPECTRA FOR REGULAR n=7 TOURNAMENTS
+======================================================================
+
+==================================================
+QR₇
+==================================================
+Finding all odd cycles...
+  Odd cycles: {3: 14, 5: 42, 7: 24}
+  Total: 80
+  Conflict graph: 80 vertices, 3153 edges
+  Spectrum (rounded):
+    λ =   78.827 (×1)
+    λ =    0.000 (×7)
+    λ =   -1.000 (×65)
+    λ =   -1.827 (×1)
+    λ =   -2.000 (×6)
+  Spectral radius: 78.8268
+  Trace: 0.0000 (should be 0)
+  Sum of squares: 6306.0000 = 2 × edges
+  H(T) = 189
+  Lovász θ approximation: 3153.07
+  Chromatic number lower bound: 68.19
+
+==================================================
+Middle
+==================================================
+Finding all odd cycles...
+  Odd cycles: {3: 14, 5: 36, 7: 15}
+  Total: 65
+  Conflict graph: 65 vertices, 2070 edges
+  Spectrum (rounded):
+    λ =   63.700 (×1)
+    λ =    0.879 (×2)
+    λ =    0.000 (×3)
+    λ =   -1.000 (×53)
+    λ =   -1.347 (×2)
+    λ =   -1.959 (×1)
+    λ =   -2.532 (×2)
+    λ =   -2.741 (×1)
+  Spectral radius: 63.6997
+  Trace: -0.0000 (should be 0)
+  Sum of squares: 4140.0000 = 2 × edges
+  H(T) = 171
+  Lovász θ approximation: 1510.69
+  Chromatic number lower bound: 49.99
+
+==================================================
+AP₇
+==================================================
+Finding all odd cycles...
+  Odd cycles: {3: 14, 5: 28, 7: 17}
+  Total: 59
+  Conflict graph: 59 vertices, 1697 edges
+  Spectrum (rounded):
+    λ =   57.537 (×1)
+    λ =    0.802 (×4)
+    λ =   -0.555 (×4)
+    λ =   -1.000 (×44)
+    λ =   -2.247 (×4)
+    λ =   -2.537 (×1)
+    λ =   -3.000 (×1)
+  Spectral radius: 57.5375
+  Trace: -0.0000 (should be 0)
+  Sum of squares: 3394.0000 = 2 × edges
+  H(T) = 175
+  Lovász θ approximation: 1131.57
+  Chromatic number lower bound: 40.34
+
+======================================================================
+3-CYCLE CONFLICT GRAPH SPECTRA (14 vertices each)
+======================================================================
+
+  QR₇ (14 3-cycles):
+    Edges: 84
+    λ =   12.000 (×1)
+    λ =    0.000 (×7)
+    λ =   -2.000 (×6)
+    λ_max = 12.0000
+    λ_min = -2.0000
+    2×edges = 168
+    Sum λ² = 168.0
+
+  Middle (14 3-cycles):
+    Edges: 81
+    λ =   11.622 (×1)
+    λ =    0.879 (×2)
+    λ =    0.000 (×3)
+    λ =   -1.000 (×2)
+    λ =   -1.347 (×2)
+    λ =   -1.384 (×1)
+    λ =   -2.238 (×1)
+    λ =   -2.532 (×2)
+    λ_max = 11.6222
+    λ_min = -2.5321
+    2×edges = 162
+    Sum λ² = 162.0
+
+  AP₇ (14 3-cycles):
+    Edges: 77
+    λ =   11.000 (×1)
+    λ =    0.802 (×4)
+    λ =   -0.555 (×4)
+    λ =   -2.247 (×4)
+    λ =   -3.000 (×1)
+    λ_max = 11.0000
+    λ_min = -3.0000
+    2×edges = 154
+    Sum λ² = 154.0
+
+======================================================================
+COMPLEMENT CONFLICT GRAPH (non-conflicting = can be disjoint)
+======================================================================
+
+  QR₇ complement (14 vertices, 7 edges):
+    λ =    1.000 (×7)
+    λ =   -1.000 (×7)
+    α₂ = max independent set in conflict = max clique in complement
+    Spectral lower bound on α₂: 7.00
+
+  Middle complement (14 vertices, 10 edges):
+    λ =    2.000 (×1)
+    λ =    1.532 (×2)
+    λ =    1.000 (×1)
+    λ =    0.347 (×2)
+    λ =    0.000 (×3)
+    λ =   -1.000 (×3)
+    λ =   -1.879 (×2)
+    α₂ = max independent set in conflict = max clique in complement
+    Spectral lower bound on α₂: 4.67
+
+  AP₇ complement (14 vertices, 14 edges):
+    λ =    2.000 (×2)
+    λ =    1.247 (×4)
+    λ =   -0.445 (×4)
+    λ =   -1.802 (×4)
+    α₂ = max independent set in conflict = max clique in complement
+    Spectral lower bound on α₂: 4.67
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+The conflict graph spectrum distinguishes the three regular tournament classes!
+
+Each class has EXACTLY 14 3-cycles (α₁=14, constant for regular n=7).
+But the ADJACENCY STRUCTURE of these cycles varies:
+
+  QR₇:    Maximally spread → few non-edges → small α₂ = 7
+           Conflict graph is DENSE (many edges)
+           Most cycle pairs share a vertex
+
+  Middle:  Intermediate structure → α₂ = 10
+
+  AP₇:    Maximally clustered → many non-edges → large α₂ = 14
+           Conflict graph is SPARSE (fewer edges)
+           Many cycle pairs are vertex-disjoint
+
+The spectral gap (λ₁ - λ₂) should be:
+  LARGE for QR₇ (expander-like, homogeneous)
+  SMALL for AP₇ (clustered, non-expanding)
+
+This connects:
+  Number theory (QR vs AP) → Graph spectrum (expander vs clustered) →
+  Topology (α₂ = topological complexity) → Dynamics (H = path count)
+
