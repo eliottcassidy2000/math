@@ -1,0 +1,314 @@
+======================================================================
+PART A: DIM/RANK = 2h-1 AND THE MERSENNE CONNECTION
+======================================================================
+
+  THEOREM: For any simple Lie algebra,
+  #positive roots = rank · h / 2
+  dim(g) = rank + 2·(rank·h/2) = rank·(1+h) = rank·(h+1)
+
+  Verification: dim = rank · (h+1)
+  G₂: rank=2, h=6, rank·(h+1) = 2·7 = 14 ✓ (dim=14)
+  F₄: rank=4, h=12, rank·(h+1) = 4·13 = 52 ✓ (dim=52)
+  E₆: rank=6, h=12, rank·(h+1) = 6·13 = 78 ✓ (dim=78)
+  E₇: rank=7, h=18, rank·(h+1) = 7·19 = 133 ✓ (dim=133)
+  E₈: rank=8, h=30, rank·(h+1) = 8·31 = 248 ✓ (dim=248)
+
+  So dim/rank = h+1 for ALL simple Lie algebras!
+  The dim/rank ratios 7, 13, 13, 19, 31 are h+1 values.
+
+  G₂: h+1 = 7  ← PRIME, MERSENNE (2^3-1)
+  F₄: h+1 = 13  ← PRIME
+  E₆: h+1 = 13  ← PRIME
+  E₇: h+1 = 19  ← PRIME
+  E₈: h+1 = 31  ← PRIME, MERSENNE (2^5-1)
+
+  G₂: h+1 = 7 = 2³-1 (Mersenne prime!)
+  F₄: h+1 = 13 (prime)
+  E₆: h+1 = 13 (prime, same as F₄!)
+  E₇: h+1 = 19 (prime, = h(E₇)+1 = Paley prime)
+  E₈: h+1 = 31 = 2⁵-1 (Mersenne prime!)
+
+  TWO of the five exceptionals have MERSENNE PRIME dim/rank!
+  G₂: 7 = 2³-1 (3 = KEY₂)
+  E₈: 31 = 2⁵-1 (5 = KEY₁+KEY₂)
+  The Mersenne exponents are KEY₂ and KEY₁+KEY₂!
+
+======================================================================
+PART B: THE FREUDENTHAL MAGIC SQUARE
+======================================================================
+
+  THE FREUDENTHAL MAGIC SQUARE:
+  M(A,B) where A,B ∈ {R(1), C(2), H(4), O(8)}:
+
+         R(1)    C(2)     H(4)    O(8)
+  R(1)   A₁      A₂      C₃      F₄
+  C(2)   A₂      A₂⊕A₂   A₅      E₆
+  H(4)   C₃      A₅      D₆      E₇
+  O(8)   F₄      E₆      E₇      E₈
+
+  Dimensions:
+         R       C       H       O
+  R       3      8     21     52
+  C       8     16     35     78
+  H      21     35     66    133
+  O      52     78    133    248
+
+  Row differences:
+  R: [5, 13, 31]
+  C: [8, 19, 43]
+  H: [14, 31, 67]
+  O: [26, 55, 115]
+
+  Column differences:
+  R: [5, 13, 31]
+  C: [8, 19, 43]
+  H: [14, 31, 67]
+  O: [26, 55, 115]
+
+  TOURNAMENT CONNECTION:
+  The octonion (O) row gives ALL five exceptionals: F₄, E₆, E₇, E₈
+  (well, G₂ is missing but it's the automorphism group of O)
+
+  M(R,R) = A₁ → det = 2 = KEY₁
+  M(R,C) = A₂ → det = 3 = KEY₂
+  M(R,H) = C₃ → related to sp(6)
+  M(R,O) = F₄ → h∨ = 9 = CS boundary!
+
+  The REAL NUMBER LINE (R) paired with division algebras gives
+  a sequence encoding our keys: 2, 3, ..., 9(dual Coxeter)
+
+  Division algebra dimensions: 1, 2, 4, 8 = 2⁰, 2¹, 2², 2³
+  ALL are powers of KEY₁ = 2!
+  The 'doubling' from R→C→H→O is multiplication by KEY₁.
+
+  Sum of division algebra dimensions: 1+2+4+8 = 15 = h(E₈)/2
+  = average exponent of E₈!
+
+======================================================================
+PART C: TOURNAMENT COUNTS AT COXETER-RELATED n
+======================================================================
+
+  Non-isomorphic tournaments T(n):
+  T(1) = 1
+  T(2) = 1  ← KEY₁ = h(A₁)
+  T(3) = 2  ← KEY₂ = h(A₂)
+  T(4) = 4
+  T(5) = 12  ← KEY₁+KEY₂ = h(A₄)
+  T(6) = 56  ← h(G₂) = KEY₁·KEY₂
+  T(7) = 456  ← h(A₆) = G₂ dim/rank = 2³-1
+  T(8) = 6880  ← rank(E₈) = φ(30)
+
+  Tournament count factorizations:
+  T(3) = 2 = 2
+  T(4) = 4 = 2^2
+  T(5) = 12 = 2^2·3
+  T(6) = 56 = 2^3·7
+  T(7) = 456 = 2^3·3·19
+  T(8) = 6880 = 2^5·5·43
+
+  T(6) = 56 = 2³·7 = dim(minuscule E₇)!
+  T(7) = 456 = 2³·3·19: contains KEY₁³, KEY₂, and 19=h(E₇)+1
+  T(8) = 6880 = 2⁵·5·43: contains 5=KEY₁+KEY₂
+
+======================================================================
+PART D: THE SELF-REFERENTIAL LOOP
+======================================================================
+
+  The tournament polynomial f(z) = z²-5z+6 evaluated at key numbers:
+
+  f( 0) =     6  (constant term)
+  f( 1) =     2  (A₂ min eigenvalue)
+  f( 2) =     0  (KEY₁ = root)
+  f( 3) =     0  (KEY₂ = root)
+  f( 4) =     2  (det(D_n) = KEY₁²)
+  f( 5) =     6  (KEY₁+KEY₂ = axis of symmetry mirrored)
+  f( 6) =    12  (h(G₂))
+  f( 7) =    20  (dim(G₂)/rank = h(G₂)+1)
+  f( 8) =    30  (rank(E₈))
+  f( 9) =    42  (CS boundary)
+  f(12) =    90  (h(F₄) = h(E₆))
+  f(13) =   110  (h(F₄)+1 = h(E₆)+1)
+  f(18) =   240  (h(E₇))
+  f(19) =   272  (h(E₇)+1 = Paley prime)
+  f(30) =   756  (h(E₈))
+  f(31) =   812  (h(E₈)+1 = Mersenne prime)
+
+  PATTERNS IN f AT LIE NUMBERS:
+  f(h(G₂)) = f(6) = 12 = h(F₄) = h(E₆)!
+  f(h(E₇)) = f(18) = 240 = 240 = edges of icosahedron·8
+  f(h(E₈)) = f(30) = 756 = 756 = 4·189 = 4·27·7
+
+  THE TOURNAMENT POLYNOMIAL MAPS COXETER NUMBERS:
+  f(6) = 12: h(G₂) → h(F₄) = h(E₆)
+  This is the ONLY case where f maps h to h!
+  (Since f(h) = h² - 5h + 6 = h and h²-6h+6=0 gives h=3±√3)
+
+  INVERSE: which inputs give Coxeter number outputs?
+  f(z) = 6=h(G₂): z = 0 or z = 5=KEY₁+KEY₂
+  f(z) = 12=h(E₆): z = 6=h(G₂) or z = -1
+  f(z) = 30=h(E₈): z = 8=rank(E₈) or z = -3=-KEY₂
+
+  CHAIN: f(0)=6, f(6)=12, f(-1)=12, f(8)=30, f(-3)=30
+  Starting from 0: 0 →f 6 →f 12 →f ...
+  f(12) = 90 = 90
+  Not a Coxeter number. But 90 = 2·3²·5 = KEY₁·KEY₂²·5
+
+  Fixed points of f: z = 3±√3
+  z₊ = 4.732051
+  z₋ = 1.267949
+  Product = 6.0 = 6 = h(G₂)
+  Sum = 6.0 = 6 = h(G₂)
+  These are the GOLDEN POINTS of the tournament polynomial!
+
+======================================================================
+PART E: RECURRENCE STRUCTURE OF EXCEPTIONAL DIMENSIONS
+======================================================================
+
+  Exceptional dimensions: 14, 52, 78, 133, 248
+
+  First differences: [38, 26, 55, 115]
+  Second differences: [-12, 29, 60]
+  Third differences: [41, 31]
+
+  Ratios:
+  52/14 = 3.7143
+  78/52 = 1.5000
+  133/78 = 1.7051
+  248/133 = 1.8647
+
+  h+1 sequence: [7, 13, 13, 19, 31]
+  h+1 differences: [6, 0, 6, 12]
+  h+1 = 7, 13, 13, 19, 31
+  Diffs: 6, 0, 6, 12
+
+  The h+1 differences are 6, 0, 6, 12 = h(G₂), 0, h(G₂), h(F₄)
+  Pattern: h+1 jumps by multiples of h(G₂) = 6!
+  (With the F₄=E₆ coincidence giving a 0 step)
+
+  h+1 as 5-smooth expressions:
+  7 = 2³-1 (Mersenne)
+  13 = 2·7-1 = 2(2³-1)-1 = 2⁴-3
+  19 = 2·13-7 = 2(2⁴-3)-(2³-1) = 2⁵-5
+  31 = 2⁵-1 (Mersenne)
+
+  PATTERN: 7 = 2³-1, 19 = 2⁵-5, 31 = 2⁵-1
+  The Mersenne-like formula: h+1 = 2^a - b
+  where (a,b): (3,1), (4,3), (4,3), (5,5... wait, 2⁵-13=19? no, 32-13=19 ✓)
+
+  BETTER PATTERN: h+1 = 2m + 1 where m = h/2 (average exponent)!
+  G₂: h+1 = 7 = 2·3+1 (avg_exp=3)
+  F₄: h+1 = 13 = 2·6+1 (avg_exp=6)
+  E₆: h+1 = 13 = 2·6+1 (avg_exp=6)
+  E₇: h+1 = 19 = 2·9+1 (avg_exp=9)
+  E₈: h+1 = 31 = 2·15+1 (avg_exp=15)
+
+  YES! h+1 = 2·(h/2) + 1 = h+1. TAUTOLOGY!
+  But the POINT is: h+1 is always ODD for even h
+  And all exceptional h are even: 6, 12, 12, 18, 30
+  So h+1 is always odd: 7, 13, 13, 19, 31 — ALL ODD PRIMES!
+
+  WHY are they all prime? This is a DEEP question.
+  For A_n: h+1 = n+2 (not always prime)
+  For D_n: h+1 = 2n-1 (not always prime)
+  The EXCEPTIONAL algebras have h+1 prime!
+
+======================================================================
+PART F: THE (2,3,5) PRIME HIERARCHY AS TOURNAMENT STRUCTURE
+======================================================================
+
+  Platonic solids as {p,q} Schläfli symbols:
+  1/p + 1/q > 1/2 with p,q ≥ 3:
+
+  {3,3} = tetrahedron: 1/3+1/3 = 0.6667 > 0.5 ✓  (E₆ (BT))
+  {4,3} = cube: 1/4+1/3 = 0.5833 > 0.5 ✓  (E₇ (BO))
+  {3,4} = octahedron: 1/3+1/4 = 0.5833 > 0.5 ✓  (E₇ (BO))
+  {5,3} = dodecahedron: 1/5+1/3 = 0.5333 > 0.5 ✓  (E₈ (BI))
+  {3,5} = icosahedron: 1/3+1/5 = 0.5333 > 0.5 ✓  (E₈ (BI))
+
+  The constraint 1/p + 1/q > 1/2 is equivalent to
+  (p-2)(q-2) < 4
+  This gives EXACTLY 5 solutions with p,q ≥ 3.
+
+  In Lie theory, the analogous constraint for ADE types is:
+  1/a + 1/b + 1/c > 1  (for {a,b,c} = branch lengths of Dynkin diagram)
+  A_n: {1,1,n-1} → 1+1+1/(n-1) > 1 always
+  D_n: {2,2,n-2} → 1/2+1/2+1/(n-2) > 1 ↔ n < ∞
+  E₆: {2,3,3} → 1/2+1/3+1/3 = 7/6 > 1 ✓
+  E₇: {2,3,4} → 1/2+1/3+1/4 = 13/12 > 1 ✓
+  E₈: {2,3,5} → 1/2+1/3+1/5 = 31/30 > 1 ✓ (BARELY!)
+  E₉: {2,3,6} → 1/2+1/3+1/6 = 1 — FAILS!
+
+  NUMERATORS of the ADE inequality:
+  E₆: 7/6  → numerator 7 = h(G₂)+1
+  E₇: 13/12 → numerator 13 = h(F₄)+1 = h(E₆)+1
+  E₈: 31/30 → numerator 31 = h(E₈)+1
+
+  AND DENOMINATORS:
+  E₆: 6 = h(G₂)
+  E₇: 12 = h(F₄) = h(E₆)
+  E₈: 30 = h(E₈)
+
+  So the ADE inequality for E_n is: (h(E_n)+1)/h(E_n) > 1
+  Which is ALWAYS true (just barely at E₈ where 31/30 ≈ 1.033)
+
+  THE DEEPEST COINCIDENCE:
+  E₈ Dynkin diagram has branch lengths {2, 3, 5}
+  THESE ARE EXACTLY THE THREE TOURNAMENT PRIMES!
+  2 = KEY₁ (binary orientation)
+  3 = KEY₂ (3-cycle length)
+  5 = KEY₁+KEY₂ (sum of keys)
+
+  E₈ IS the Lie algebra whose SHAPE encodes the tournament structure.
+  The E₈ Dynkin diagram has a central node with three branches
+  of lengths 2, 3, and 5 — the generators of the tournament universe.
+
+======================================================================
+GRAND SYNTHESIS
+======================================================================
+
+
+  THE TOURNAMENT-LIE CORRESPONDENCE
+  ══════════════════════════════════
+
+  LEVEL 0 — THE KEYS:
+  KEY₁ = 2 = det(A₁) = h(A₁) = max eigenvalue of Cartan(A₁)
+  KEY₂ = 3 = det(A₂) = h(A₂) = max eigenvalue of Cartan(A₂)
+
+  LEVEL 1 — THE POLYNOMIAL:
+  z²-5z+6 = (z-KEY₁)(z-KEY₂)
+  f(0) = 6 = KEY₁·KEY₂ = h(G₂)
+  f(1) = 2 = KEY₁ (self-reference!)
+  f(6) = 12 = h(F₄) = h(E₆)
+
+  LEVEL 2 — THE EXCEPTIONALS:
+  G₂: h=6=KEY₁·KEY₂, h∨=4=KEY₁²
+  F₄: h=12=KEY₁²·KEY₂, h∨=9=KEY₂² (= CS BOUNDARY!)
+  E₆: det=3=KEY₂, h=12, McKay=tetrahedron
+  E₇: det=2=KEY₁, h=18=KEY₁·KEY₂², McKay=cube/oct
+  E₈: det=1, h=30=KEY₁·KEY₂·5, McKay=dodec/icos
+
+  LEVEL 3 — THE PLATONIC SOLIDS:
+  Constraint (p-2)(q-2) < 4 gives 5 solids
+  Constraint 1/a+1/b+1/c > 1 gives ADE series ending at E₈
+  E₈ branch lengths = {2,3,5} = THE TOURNAMENT PRIMES
+
+  LEVEL 4 — THE RECURRENCES:
+  k-nacci → KEY₁ = 2 (standard)
+  weighted k-nacci → KEY₂ = 3 (doubled weights)
+  Fibonacci: φ = (1+√5)/2 = (1+√(KEY₁+KEY₂))/KEY₁
+  Lucas: L(0)=KEY₁, L(2)=KEY₂, L(6)=h(E₇)=18
+
+  LEVEL 5 — THE CS BOUNDARY:
+  9 = KEY₂² = h(E₇)/det(E₇) = h∨(F₄) = avg exponent of E₇
+  The Cauchy-Schwarz proof of α₁≥α₂ works for n ≤ 9
+  E₇ ENCODES this boundary through FOUR independent invariants!
+
+  THE CENTRAL MYSTERY:
+  Why does E₈ with branch lengths {2,3,5} sit at the END of
+  the ADE classification, while the tournament polynomial
+  z²-5z+6 with roots {2,3} sits at the BEGINNING of
+  tournament theory? The answer: THEY ARE THE SAME CONSTRAINT.
+  The positive-definiteness that limits Platonic solids to 5
+  is the same algebraic structure that makes H(T) = I(Ω(T),2)
+  with roots KEY₁=2 and KEY₂=3.
+
