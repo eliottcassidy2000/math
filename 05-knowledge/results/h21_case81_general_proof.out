@@ -1,0 +1,269 @@
+======================================================================
+(8,1) GENERAL PROOF — DISJOINT PAIR DECOMPOSITION
+======================================================================
+
+--- Part 1: 5-cycle vertex set eliminates alpha_2=1 ---
+  If A (5 vertices, d_5>=1) is disjoint from B (3 vertices, d=1):
+  HYP-1104: d_5>=1 on A → t_3(A)>=3
+  Each internal 3-cycle of A is disjoint from B
+  alpha_2 >= t_3(A)*1 + d_5(A)*1 >= 3+1 = 4
+  CONTRADICTION with alpha_2=1. ✓
+  VERIFIED: d_5>=1 → t_3>=3 at n=5 (all 1024 tournaments)
+
+--- Part 2: alpha_1 distribution with forced disjoint pair at n=7 ---
+  Fixed: 6 edges, Free: 15 edges, 2^15 = 32768
+
+  alpha_1 distribution:
+    a1=  2:      6
+    a1=  3:     24
+    a1=  6:     36
+    a1=  9:    126
+    a1= 10:    144
+    a1= 11:     42
+    a1= 12:    180
+    a1= 13:    144
+    a1= 14:    498
+    a1= 16:    216
+    a1= 17:    144
+    a1= 18:    204
+    a1= 19:    108
+    a1= 20:    192
+    a1= 21:    504
+    a1= 22:    270
+    a1= 23:    252
+    a1= 24:    540
+    a1= 25:    324
+    a1= 26:    390
+    a1= 27:    504
+    a1= 28:   1440
+    a1= 29:    468
+    a1= 30:   1092
+    a1= 31:    738
+    a1= 32:    360
+    a1= 33:    906
+    a1= 34:    792
+    a1= 35:   1260
+    a1= 36:   1494
+    a1= 37:   1008
+    a1= 38:   1296
+    a1= 39:    912
+    a1= 40:   1116
+    a1= 41:    648
+    a1= 42:   1368
+    a1= 43:    810
+    a1= 44:    996
+    a1= 45:   1110
+    a1= 46:    756
+    a1= 47:    806
+    a1= 48:    432
+    a1= 49:   1404
+    a1= 50:   1422
+    a1= 51:   1164
+    a1= 52:    594
+    a1= 53:    186
+    a1= 54:    702
+    a1= 55:    756
+    a1= 56:    306
+    a1= 57:    576
+    a1= 59:    360
+    a1= 60:    288
+    a1= 61:    162
+    a1= 65:    186
+    a1= 80:      6
+
+  alpha_1=8 NEVER achieved with disjoint pair at n=7!
+  *** (8,1) trivially impossible at n=7 ***
+
+  All (alpha_1, alpha_2) pairs with forced disjoint pair:
+    ( 2, 1):      6
+    ( 3, 2):     24
+    ( 6, 1):     36
+    ( 9, 1):     72
+    ( 9, 3):     54
+    (10, 2):    144
+    (11, 1):     42
+    (12, 1):    108
+    (12, 2):     72
+    (13, 1):     72
+    (13, 2):     72
+    (14, 1):     72
+    (14, 2):    216
+    (14, 3):    162
+    (14, 4):     48
+    (16, 1):     72
+    (16, 2):    144
+    (17, 4):    144
+    (18, 2):     96
+    (18, 3):    108
+    (19, 1):    108
+    (20, 1):     12
+    (20, 2):     72
+    (20, 3):    108
+    (21, 2):    108
+    (21, 3):    108
+    (21, 4):    288
+    (22, 2):     72
+    (22, 3):    108
+    (22, 5):     90
+    (23, 2):     72
+    (23, 5):    180
+    (24, 3):     54
+    (24, 4):    216
+    (24, 5):    270
+    (25, 2):    144
+    (25, 5):    180
+    (26, 1):     12
+    (26, 3):    162
+    (26, 4):    216
+    (27, 3):     54
+    (27, 4):    360
+    (27, 5):     90
+    (28, 2):    144
+    (28, 4):    432
+    (28, 5):    540
+    (28, 6):    324
+    (29, 2):    108
+    (29, 4):    144
+    (29, 6):    216
+    (30, 2):     48
+    (30, 3):    108
+    (30, 4):    288
+    (30, 5):    540
+    (30, 6):    108
+    (31, 3):    108
+    (31, 4):    216
+    (31, 7):    126
+    (31, 8):    288
+    (32, 4):    144
+    (32, 6):    216
+    (33, 2):     24
+    (33, 4):    360
+    (33, 5):     90
+    (33, 6):    432
+    (34, 5):    360
+    (34, 6):    432
+    (35, 2):     72
+    (35, 5):    540
+    (35, 6):    108
+    (35, 7):    252
+    (35, 8):    288
+    (36, 4):    576
+    (36, 5):    270
+    (36, 6):    648
+    (37, 4):    288
+    (37, 5):    180
+    (37, 6):     36
+    (37, 7):    504
+    (38, 6):    432
+    (38, 8):    864
+    (39, 6):    432
+    (39, 8):    480
+    (40, 5):    360
+    (40, 6):    216
+    (40, 7):    252
+    (40, 8):    288
+    (41, 8):    288
+    (41,10):    360
+    (42, 4):    144
+    (42, 5):    180
+    (42, 6):    648
+    (42, 7):    252
+    (42, 8):    144
+    (43, 6):    432
+    (43, 7):    378
+    (44, 7):    252
+    (44, 8):    288
+    (44,10):    240
+    (44,12):    216
+    (45, 5):    180
+    (45, 6):    216
+    (45, 8):    192
+    (45, 9):    162
+    (45,10):    360
+    (46, 6):    432
+    (46, 9):    324
+    (47, 1):      2
+    (47, 7):    588
+    (47,10):    216
+    (48, 6):    216
+    (48,12):    216
+    (49, 8):    864
+    (49,10):    540
+    (50, 6):    108
+    (50, 7):    252
+    (50, 8):    864
+    (50,11):    198
+    (51, 8):    624
+    (51, 9):    324
+    (51,12):    216
+    (52, 8):    432
+    (52, 9):    162
+    (53, 7):     42
+    (53, 8):    144
+    (54, 5):     90
+    (54, 7):    252
+    (54, 8):    144
+    (54,12):    216
+    (55, 8):    144
+    (55,10):    540
+    (55,12):     72
+    (56, 7):    126
+    (56,10):    180
+    (57, 7):    252
+    (57, 8):    144
+    (57,10):    180
+    (59, 8):    144
+    (59,10):    180
+    (59,14):     36
+    (60, 8):    288
+    (61, 9):    162
+    (65, 7):    126
+    (65,10):     60
+    (80, 7):      6
+
+--- Part 3: Structural analysis near alpha_1=8 ---
+
+  alpha_1=9:
+    t3=5, d5=3, d7=1: 54
+    t3=5, d5=4, d7=0: 72
+
+--- Part 4: Cross-triple analysis through bridge vertex ---
+  For each tournament with disjoint pair, count cross-triples
+  Cross-triple count distribution:
+    0 cross-triples: 2754
+    1 cross-triples: 6642
+    2 cross-triples: 10152
+    3 cross-triples: 8040
+    4 cross-triples: 3708
+    5 cross-triples: 1116
+    6 cross-triples: 264
+    7 cross-triples: 72
+    8 cross-triples: 18
+    9 cross-triples: 2
+
+--- Part 5: Why alpha_1=8 can't happen ---
+  Minimum alpha_1 with forced disjoint pair at n=7:
+  min(alpha_1) = 2
+  max(alpha_1) = 80
+
+  CRITICAL: alpha_1=8 is NOT achievable when a disjoint pair exists!
+  This proves (8,1) is impossible at n=7:
+    alpha_2=1 requires a disjoint pair, but having a disjoint pair
+    makes alpha_1=8 impossible. QED at n=7.
+
+--- Part 6: Extension to n=8 (sampling) ---
+  At n=8: fix {0,1,2} and {3,4,5}, bridge vertices 6 and 7.
+  Free edges: 22, 2^22 = 4194304
+  Progress: 25000/100000, a1=8: 0
+  Progress: 50000/100000, a1=8: 0
+  Progress: 75000/100000, a1=8: 0
+
+  n=8 sampling (100000): a1=8 with disjoint pair: 0
+  alpha_1=8 NOT achieved with disjoint pair at n=8 sampling!
+
+--- Part 7: n=8 with 5-vertex + 3-vertex disjoint pair ---
+  Alpha_2 >= internal_alpha_1(5-vertex set) >= t3+d5 >= 3+1 = 4
+  if d5>=1. Let's verify this computationally.
+  Free edges: 20, sampling 100000
+  Progress: 25000/100000, a1=8: 1, min_a2: 4
+  Progress: 50000/100000, a1=8: 1, min_a2: 4

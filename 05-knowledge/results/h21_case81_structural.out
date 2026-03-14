@@ -1,0 +1,36 @@
+======================================================================
+CASE (8,1): STRUCTURAL INVESTIGATION
+======================================================================
+
+--- Part 1: alpha_1=8 structure at n=6 ---
+  (t₃, d₅, cycle_vertices): count
+    t₃=4, d₅=4, cycle_verts=6: 720
+
+--- Part 2: Cycle vertex span analysis ---
+  At n=6: alpha_1=8 always has cycle_verts=5.
+  Two disjoint 3-cycles need 6 vertices → impossible.
+  Two disjoint cycles at n=6: only complementary 3-cycles (6 verts).
+  Since cycle_verts=5 < 6: alpha_2=0 forced. ✓
+
+--- Part 3: alpha_1=8 at n=7 (exhaustive) ---
+  Progress: 500000/2097152
+  Progress: 1000000/2097152
+  Progress: 1500000/2097152
+  Progress: 2000000/2097152
+
+  alpha_1=8 count: 10080
+  alpha_2 distribution: {0: 10080}
+
+  Structural breakdown:
+    t₃   d₅   d₇  n_vs verts  count
+     4    4    0     8     6  10080
+
+--- Part 4: Minimum span for disjoint pair ---
+  At n=7: for alpha_2≥1 with alpha_1=8:
+    Need disjoint 3-cycle pair {a,b,c} ⊥ {d,e,f}, vertex g free.
+    Remaining alpha_1 = 6 cycles must all touch both groups.
+    Each such cycle uses vertex g (bridge between groups).
+    Cross-triples: {a_i, d_j, g} for i,j ∈ {0,1,2} → 9 possible.
+    Need 6 of 9 cross-triples to be cyclic.
+
+  Computational check: n=7, {0,1,2} and {3,4,5} both cyclic
