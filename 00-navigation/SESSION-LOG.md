@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71g — 2026-03-14: THM-200/201/202 — H=7 impossible, K₃ component impossible, P₄ Omega impossible
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71f (7th context continuation)
+**What was done:**
+Major session proving forbidden H value theorems:
+
+- **THM-200: H(T)≠7 for all tournaments (PROVED)**: Exhaustive n≤7, structural argument for n≥8. Key: K₃ is the unique graph with I(G,2)=7, but Ω(T) is never K₃.
+- **THM-201: K₃ cannot be a connected component of Ω(T) (PROVED)**: Three pairwise-sharing cycles isolated from all others is impossible. Extends THM-200 to rule out 7 as a factor in SCC decomposition.
+- **THM-202: P₄ cannot be Ω(T) (PROVED)**: "Dominance cascade" — forcing arcs to avoid triangles creates chain reaction making vertex 1 beat 6+ others. Three "skip triangles" through shared vertices are structurally unavoidable.
+- **H-spectrum gaps {7, 21, 63}**: Only structurally forbidden odd values ≤100 at n≤7 exhaustive. 7·3^k pattern (k=0,1,2). H=189=7·27 IS achievable (connected Ω at n=7).
+- **k-nacci/simplex/cuboid framework**: k-nacci ratio→2 (digraph), weighted→3 (tournament). OCF at x=2 maps independence "simplex" to "cuboid" counting. Powers of 3 are maximally cuboid H values.
+- **H=21 decomposition**: Exactly 5 graph structures give I(G,2)=21. Two ruled out (K₃+K₁, P₄). Three remaining (K₆-2e, K₈-e, K₁₀) absent at n≤7 exhaustive.
+- **t₃≥4 forces t₅>0 at n=7**: Critical lemma — all 179760 tournaments with t₃≥4 at n=7 have t₅>0.
+- **Jacobsthal connection**: I(P_m,2) follows Jacobsthal recurrence. H=21=I(P₄,2) is first forbidden Jacobsthal value.
+
+**New contributions:** THM-200, THM-201, THM-202, HYP-1288 through HYP-1292
+**Unresolved:** Full H≠21 proof (3 remaining graph structures), H≠63 proof, general t₃≥k forces t₅>0 lemma
+
 ## opus-2026-03-14-S85 — 2026-03-14: Deep exploration — Lucas/Jacobsthal, quantum entanglement, forbidden H, fingerprinting
 
 **Account:** opus
