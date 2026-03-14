@@ -1,0 +1,333 @@
+
+======================================================================
+  PART 1: H mod 7 AT n=7,8 BY SAMPLING
+======================================================================
+
+n=7 (5000 samples, 2.5s):
+  H ≡ 0 (mod 7):   517 ( 10.3%)
+  H ≡ 1 (mod 7):   560 ( 11.2%)
+  H ≡ 2 (mod 7):   812 ( 16.2%)
+  H ≡ 3 (mod 7):   763 ( 15.3%)
+  H ≡ 4 (mod 7):   807 ( 16.1%)
+  H ≡ 5 (mod 7):   817 ( 16.3%)
+  H ≡ 6 (mod 7):   724 ( 14.5%)
+
+n=8 (5000 samples, 6.2s):
+  H ≡ 0 (mod 7):   695 ( 13.9%)
+  H ≡ 1 (mod 7):   764 ( 15.3%)
+  H ≡ 2 (mod 7):   764 ( 15.3%)
+  H ≡ 3 (mod 7):   618 ( 12.4%)
+  H ≡ 4 (mod 7):   712 ( 14.2%)
+  H ≡ 5 (mod 7):   760 ( 15.2%)
+  H ≡ 6 (mod 7):   687 ( 13.7%)
+
+n=9 (2000 samples, 6.1s):
+  H ≡ 0 (mod 7):   283 ( 14.1%)
+  H ≡ 1 (mod 7):   267 ( 13.4%)
+  H ≡ 2 (mod 7):   273 ( 13.7%)
+  H ≡ 3 (mod 7):   297 ( 14.8%)
+  H ≡ 4 (mod 7):   312 ( 15.6%)
+  H ≡ 5 (mod 7):   270 ( 13.5%)
+  H ≡ 6 (mod 7):   298 ( 14.9%)
+
+
+======================================================================
+  PART 2: ALGEBRAIC ANALYSIS
+======================================================================
+
+H = I(CG, 2) where CG = odd-cycle conflict graph
+I(G, x) = Σ_{k≥0} i_k x^k
+
+H mod 7 = I(CG, 2) mod 7
+
+If we could show I(G, 2) ≡ 0 (mod 7) is impossible
+for ALL odd-cycle conflict graphs, this would prove it.
+
+Note: I(G, 2) ≡ 0 (mod 7) ≡ I(G, 2) ≡ 0 (mod 7)
+And 2³ ≡ 1 (mod 7), so the evaluation at 2 mod 7
+uses a cube root of unity in F_7.
+
+In F_7: 2³ = 8 ≡ 1, so 2 is a primitive 3rd root of unity.
+Let ω = 2 in F_7. Then ω³ = 1, ω ≠ 1.
+The minimal polynomial of ω over F_7 is x² + x + 1
+(since ω²+ω+1 = 4+2+1 = 7 ≡ 0 mod 7).
+
+OBSERVATION: I(G, ω) = 0 in F_7 means the independence polynomial
+has ω as a root modulo 7.
+Since ω satisfies ω²+ω+1 = 0, this means
+(x²+x+1) | I(G, x) in F_7[x].
+
+CLAIM: For odd-cycle conflict graphs of tournaments,
+(x²+x+1) never divides I(G, x) mod 7.
+
+======================================================================
+  PART 3: I(G, x) mod 7 FOR SMALL CASES
+======================================================================
+
+n=5: I(CG, x) mod 7 for all 1024 tournaments
+  MISMATCH at idx=40: H%7=1, I(2)%7=4
+  MISMATCH at idx=41: H%7=6, I(2)%7=4
+  MISMATCH at idx=42: H%7=6, I(2)%7=4
+  MISMATCH at idx=44: H%7=6, I(2)%7=4
+  MISMATCH at idx=68: H%7=6, I(2)%7=4
+  MISMATCH at idx=69: H%7=1, I(2)%7=4
+  MISMATCH at idx=74: H%7=6, I(2)%7=4
+  MISMATCH at idx=76: H%7=1, I(2)%7=6
+  MISMATCH at idx=77: H%7=6, I(2)%7=4
+  MISMATCH at idx=85: H%7=6, I(2)%7=4
+  MISMATCH at idx=89: H%7=6, I(2)%7=4
+  MISMATCH at idx=92: H%7=6, I(2)%7=4
+  MISMATCH at idx=93: H%7=1, I(2)%7=4
+  MISMATCH at idx=101: H%7=6, I(2)%7=4
+  MISMATCH at idx=104: H%7=6, I(2)%7=4
+  MISMATCH at idx=105: H%7=1, I(2)%7=6
+  MISMATCH at idx=106: H%7=1, I(2)%7=4
+  MISMATCH at idx=107: H%7=6, I(2)%7=4
+  MISMATCH at idx=152: H%7=1, I(2)%7=4
+  MISMATCH at idx=153: H%7=6, I(2)%7=4
+  MISMATCH at idx=154: H%7=6, I(2)%7=4
+  MISMATCH at idx=156: H%7=6, I(2)%7=4
+  MISMATCH at idx=194: H%7=6, I(2)%7=4
+  MISMATCH at idx=195: H%7=1, I(2)%7=4
+  MISMATCH at idx=202: H%7=1, I(2)%7=6
+  MISMATCH at idx=203: H%7=6, I(2)%7=4
+  MISMATCH at idx=204: H%7=6, I(2)%7=4
+  MISMATCH at idx=211: H%7=6, I(2)%7=4
+  MISMATCH at idx=216: H%7=6, I(2)%7=4
+  MISMATCH at idx=217: H%7=1, I(2)%7=6
+  MISMATCH at idx=220: H%7=1, I(2)%7=4
+  MISMATCH at idx=221: H%7=6, I(2)%7=4
+  MISMATCH at idx=227: H%7=6, I(2)%7=4
+  MISMATCH at idx=233: H%7=6, I(2)%7=4
+  MISMATCH at idx=234: H%7=6, I(2)%7=4
+  MISMATCH at idx=235: H%7=1, I(2)%7=4
+  MISMATCH at idx=262: H%7=6, I(2)%7=4
+  MISMATCH at idx=266: H%7=6, I(2)%7=4
+  MISMATCH at idx=268: H%7=6, I(2)%7=4
+  MISMATCH at idx=270: H%7=1, I(2)%7=4
+  MISMATCH at idx=276: H%7=6, I(2)%7=4
+  MISMATCH at idx=278: H%7=1, I(2)%7=4
+  MISMATCH at idx=281: H%7=6, I(2)%7=4
+  MISMATCH at idx=284: H%7=1, I(2)%7=6
+  MISMATCH at idx=286: H%7=6, I(2)%7=4
+  MISMATCH at idx=291: H%7=6, I(2)%7=4
+  MISMATCH at idx=296: H%7=6, I(2)%7=4
+  MISMATCH at idx=298: H%7=1, I(2)%7=6
+  MISMATCH at idx=300: H%7=1, I(2)%7=4
+  MISMATCH at idx=302: H%7=6, I(2)%7=4
+  MISMATCH at idx=305: H%7=6, I(2)%7=4
+  MISMATCH at idx=307: H%7=1, I(2)%7=4
+  MISMATCH at idx=313: H%7=1, I(2)%7=6
+  MISMATCH at idx=315: H%7=6, I(2)%7=4
+  MISMATCH at idx=316: H%7=6, I(2)%7=4
+  MISMATCH at idx=322: H%7=6, I(2)%7=4
+  MISMATCH at idx=325: H%7=6, I(2)%7=4
+  MISMATCH at idx=326: H%7=1, I(2)%7=6
+  MISMATCH at idx=330: H%7=1, I(2)%7=4
+  MISMATCH at idx=334: H%7=6, I(2)%7=4
+  MISMATCH at idx=337: H%7=6, I(2)%7=4
+  MISMATCH at idx=341: H%7=1, I(2)%7=6
+  MISMATCH at idx=342: H%7=6, I(2)%7=4
+  MISMATCH at idx=345: H%7=1, I(2)%7=4
+  MISMATCH at idx=349: H%7=6, I(2)%7=4
+  MISMATCH at idx=353: H%7=6, I(2)%7=4
+  MISMATCH at idx=355: H%7=1, I(2)%7=6
+  MISMATCH at idx=357: H%7=1, I(2)%7=4
+  MISMATCH at idx=359: H%7=6, I(2)%7=4
+  MISMATCH at idx=362: H%7=6, I(2)%7=4
+  MISMATCH at idx=369: H%7=1, I(2)%7=4
+  MISMATCH at idx=371: H%7=6, I(2)%7=4
+  MISMATCH at idx=373: H%7=6, I(2)%7=4
+  MISMATCH at idx=377: H%7=6, I(2)%7=4
+  MISMATCH at idx=406: H%7=6, I(2)%7=4
+  MISMATCH at idx=408: H%7=6, I(2)%7=4
+  MISMATCH at idx=409: H%7=1, I(2)%7=4
+  MISMATCH at idx=410: H%7=1, I(2)%7=6
+  MISMATCH at idx=411: H%7=6, I(2)%7=4
+  MISMATCH at idx=435: H%7=6, I(2)%7=4
+  MISMATCH at idx=441: H%7=6, I(2)%7=4
+  MISMATCH at idx=442: H%7=6, I(2)%7=4
+  MISMATCH at idx=443: H%7=1, I(2)%7=4
+  MISMATCH at idx=450: H%7=1, I(2)%7=4
+  MISMATCH at idx=451: H%7=6, I(2)%7=4
+  MISMATCH at idx=454: H%7=6, I(2)%7=4
+  MISMATCH at idx=458: H%7=6, I(2)%7=4
+  MISMATCH at idx=466: H%7=6, I(2)%7=4
+  MISMATCH at idx=467: H%7=1, I(2)%7=6
+  MISMATCH at idx=470: H%7=1, I(2)%7=4
+  MISMATCH at idx=471: H%7=6, I(2)%7=4
+  MISMATCH at idx=473: H%7=6, I(2)%7=4
+  MISMATCH at idx=550: H%7=6, I(2)%7=4
+  MISMATCH at idx=552: H%7=6, I(2)%7=4
+  MISMATCH at idx=553: H%7=1, I(2)%7=4
+  MISMATCH at idx=556: H%7=1, I(2)%7=6
+  MISMATCH at idx=557: H%7=6, I(2)%7=4
+  MISMATCH at idx=565: H%7=6, I(2)%7=4
+  MISMATCH at idx=569: H%7=6, I(2)%7=4
+  MISMATCH at idx=572: H%7=6, I(2)%7=4
+  MISMATCH at idx=573: H%7=1, I(2)%7=4
+  MISMATCH at idx=580: H%7=1, I(2)%7=4
+  MISMATCH at idx=581: H%7=6, I(2)%7=4
+  MISMATCH at idx=582: H%7=6, I(2)%7=4
+  MISMATCH at idx=588: H%7=6, I(2)%7=4
+  MISMATCH at idx=612: H%7=6, I(2)%7=4
+  MISMATCH at idx=613: H%7=1, I(2)%7=6
+  MISMATCH at idx=614: H%7=1, I(2)%7=4
+  MISMATCH at idx=615: H%7=6, I(2)%7=4
+  MISMATCH at idx=617: H%7=6, I(2)%7=4
+  MISMATCH at idx=646: H%7=6, I(2)%7=4
+  MISMATCH at idx=650: H%7=6, I(2)%7=4
+  MISMATCH at idx=652: H%7=6, I(2)%7=4
+  MISMATCH at idx=654: H%7=1, I(2)%7=4
+  MISMATCH at idx=661: H%7=6, I(2)%7=4
+  MISMATCH at idx=664: H%7=6, I(2)%7=4
+  MISMATCH at idx=666: H%7=1, I(2)%7=4
+  MISMATCH at idx=668: H%7=1, I(2)%7=6
+  MISMATCH at idx=670: H%7=6, I(2)%7=4
+  MISMATCH at idx=674: H%7=6, I(2)%7=4
+  MISMATCH at idx=678: H%7=1, I(2)%7=4
+  MISMATCH at idx=681: H%7=6, I(2)%7=4
+  MISMATCH at idx=682: H%7=1, I(2)%7=6
+  MISMATCH at idx=686: H%7=6, I(2)%7=4
+  MISMATCH at idx=689: H%7=6, I(2)%7=4
+  MISMATCH at idx=693: H%7=1, I(2)%7=4
+  MISMATCH at idx=697: H%7=1, I(2)%7=6
+  MISMATCH at idx=698: H%7=6, I(2)%7=4
+  MISMATCH at idx=701: H%7=6, I(2)%7=4
+  MISMATCH at idx=707: H%7=6, I(2)%7=4
+  MISMATCH at idx=708: H%7=6, I(2)%7=4
+  MISMATCH at idx=710: H%7=1, I(2)%7=6
+  MISMATCH at idx=716: H%7=1, I(2)%7=4
+  MISMATCH at idx=718: H%7=6, I(2)%7=4
+  MISMATCH at idx=721: H%7=6, I(2)%7=4
+  MISMATCH at idx=723: H%7=1, I(2)%7=4
+  MISMATCH at idx=725: H%7=1, I(2)%7=6
+  MISMATCH at idx=727: H%7=6, I(2)%7=4
+  MISMATCH at idx=732: H%7=6, I(2)%7=4
+  MISMATCH at idx=737: H%7=6, I(2)%7=4
+  MISMATCH at idx=739: H%7=1, I(2)%7=6
+  MISMATCH at idx=742: H%7=6, I(2)%7=4
+  MISMATCH at idx=745: H%7=1, I(2)%7=4
+  MISMATCH at idx=747: H%7=6, I(2)%7=4
+  MISMATCH at idx=753: H%7=1, I(2)%7=4
+  MISMATCH at idx=755: H%7=6, I(2)%7=4
+  MISMATCH at idx=757: H%7=6, I(2)%7=4
+  MISMATCH at idx=761: H%7=6, I(2)%7=4
+  MISMATCH at idx=788: H%7=1, I(2)%7=4
+  MISMATCH at idx=789: H%7=6, I(2)%7=4
+  MISMATCH at idx=790: H%7=6, I(2)%7=4
+  MISMATCH at idx=796: H%7=6, I(2)%7=4
+  MISMATCH at idx=802: H%7=6, I(2)%7=4
+  MISMATCH at idx=803: H%7=1, I(2)%7=4
+  MISMATCH at idx=806: H%7=1, I(2)%7=6
+  MISMATCH at idx=807: H%7=6, I(2)%7=4
+  MISMATCH at idx=812: H%7=6, I(2)%7=4
+  MISMATCH at idx=819: H%7=6, I(2)%7=4
+  MISMATCH at idx=820: H%7=6, I(2)%7=4
+  MISMATCH at idx=821: H%7=1, I(2)%7=6
+  MISMATCH at idx=828: H%7=1, I(2)%7=4
+  MISMATCH at idx=829: H%7=6, I(2)%7=4
+  MISMATCH at idx=867: H%7=6, I(2)%7=4
+  MISMATCH at idx=869: H%7=6, I(2)%7=4
+  MISMATCH at idx=870: H%7=6, I(2)%7=4
+  MISMATCH at idx=871: H%7=1, I(2)%7=4
+  MISMATCH at idx=916: H%7=6, I(2)%7=4
+  MISMATCH at idx=917: H%7=1, I(2)%7=4
+  MISMATCH at idx=918: H%7=1, I(2)%7=6
+  MISMATCH at idx=919: H%7=6, I(2)%7=4
+  MISMATCH at idx=922: H%7=6, I(2)%7=4
+  MISMATCH at idx=930: H%7=1, I(2)%7=4
+  MISMATCH at idx=931: H%7=6, I(2)%7=4
+  MISMATCH at idx=934: H%7=6, I(2)%7=4
+  MISMATCH at idx=938: H%7=6, I(2)%7=4
+  MISMATCH at idx=946: H%7=6, I(2)%7=4
+  MISMATCH at idx=947: H%7=1, I(2)%7=6
+  MISMATCH at idx=949: H%7=6, I(2)%7=4
+  MISMATCH at idx=954: H%7=1, I(2)%7=4
+  MISMATCH at idx=955: H%7=6, I(2)%7=4
+  MISMATCH at idx=979: H%7=6, I(2)%7=4
+  MISMATCH at idx=981: H%7=6, I(2)%7=4
+  MISMATCH at idx=982: H%7=6, I(2)%7=4
+  MISMATCH at idx=983: H%7=1, I(2)%7=4
+  I(CG, 2) mod 7: {1: 120, 2: 240, 3: 120, 4: 280, 5: 240, 6: 24}
+  I(CG, 4) mod 7: {0: 280, 1: 120, 2: 240, 3: 240, 4: 24, 5: 120}
+
+Independence polynomial mod 7 (distinct types):
+                          1 + 5x: I(2)≡4 (mod 7), remainder by x²+x+1 = (1, 5), count=280
+                          1 + 2x: I(2)≡5 (mod 7), remainder by x²+x+1 = (1, 2), count=240
+                          1 + 4x: I(2)≡2 (mod 7), remainder by x²+x+1 = (1, 4), count=240
+                               1: I(2)≡1 (mod 7), remainder by x²+x+1 = (1, 0), count=120
+                          1 + 1x: I(2)≡3 (mod 7), remainder by x²+x+1 = (1, 1), count=120
+                          1 + 6x: I(2)≡6 (mod 7), remainder by x²+x+1 = (1, 6), count=24
+
+======================================================================
+  PART 4: I(CG,x) MOD (x²+x+1) OVER F_7
+======================================================================
+
+Since 2 is a root of x²+x+1 over F_7,
+H ≡ 0 (mod 7) iff (x²+x+1) | I(CG,x) (mod 7).
+
+Question: does I(CG,x) ≡ 0 (mod x²+x+1) ever happen?
+
+n=6: checking I(CG,2) mod 7 for all 32768 tournaments...
+  H ≡ 0 (mod 7): 0/32768 tournaments (6.3s)
+
+n=7: sampling 3000 tournaments for H mod 7...
+  trial 0: 0.0s
+  trial 1000: 0.5s
+  trial 2000: 1.0s
+  H ≡ 0 (mod 7): 322/3000 tournaments
+  BROKEN! 322 tournaments have H ≡ 0 (mod 7).
+
+======================================================================
+  PART 5: THE 5-7 CONNECTION
+======================================================================
+
+Why are 5 and 7 special for forbidden residues?
+
+5 = the discriminant of the Fibonacci recurrence
+7 = 2³ - 1, a Mersenne prime
+  Also: 7 = the first prime where ord_p(2) < p-1
+  (ord_7(2) = 3, not 6)
+
+The key: powers of 2 mod 7 cycle with period 3,
+making 2 a CUBE ROOT OF UNITY in F_7.
+So H = I(CG, 2) mod 7 evaluates at a special algebraic point.
+
+In F_7: x²+x+1 = (x-2)(x-4)
+  Check: (2)²+2+1 = 7 ≡ 0 ✓
+  Check: (4)²+4+1 = 21 ≡ 0 ✓
+
+So H ≡ 0 (mod 7) iff I(CG, 2) ≡ 0 in F_7
+iff the cyclotomic polynomial Φ_3(x) = x²+x+1 divides I(CG,x) in F_7[x]
+
+EQUIVALENTLY: H ≡ 0 (mod 7) iff BOTH I(CG,2) ≡ 0 AND I(CG,4) ≡ 0 (mod 7)
+But we already know I(CG,2) = H and I(CG,4) is a different evaluation.
+
+At n=5, I(CG,4) mod 7 distribution:
+  I(CG, 4) mod 7: {0: 280, 1: 120, 2: 240, 3: 240, 4: 24, 5: 120}
+  I(CG, 4) ≡ 0 (mod 7): 280 tournaments
+
+======================================================================
+  PART 6: CONJECTURE — H ≢ 0 (mod 7) FOR ALL n
+======================================================================
+
+Evidence so far:
+  n=3: H ∈ {1,3} → H mod 7 ∈ {1,3} ✓ (no 0)
+  n=4: H ∈ {1,3,5} → H mod 7 ∈ {1,3,5} ✓
+  n=5: verified all 1024 ✓
+  n=6: verified all 32768 ✓
+  n=7: sampled 3000, found 322
+
+The conjecture FAILS at n=7!
+So H ≡ 0 (mod 7) first becomes possible at some n between 7 and beyond.
+
+======================================================================
+  PART 7: EXTENDED SAMPLING
+======================================================================
+
+n=8: 2000 samples in 2.5s → FOUND 316 with H≡0!
+n=9: 2000 samples in 6.1s → FOUND 289 with H≡0!
+n=10: 500 samples in 3.8s → FOUND 87 with H≡0!
+
+Done.
