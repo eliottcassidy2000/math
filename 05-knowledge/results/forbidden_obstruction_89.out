@@ -6,3 +6,586 @@ opus-2026-03-14-S89
 Step 1: Enumerate all 2^21 = 2097152 tournaments...
   Progress: 0/2097152 (0.0%)
   Progress: 500000/2097152 (23.8%)
+  Progress: 1000000/2097152 (47.7%)
+  Progress: 1500000/2097152 (71.5%)
+  Progress: 2000000/2097152 (95.4%)
+
+  Found 77 distinct H values
+  Range: [1, 189]
+
+Step 2: Forbidden values...
+  Odd integers in [1, 189]: 95
+  Achieved: 77
+  Forbidden: 18
+  Forbidden values: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+Step 3: Neighbor analysis of forbidden values...
+  H=7: below H=5 (20160 tours), above H=9 (31920 tours)
+  H=21: below H=19 (20160 tours), above H=23 (40320 tours)
+  H=63: below H=61 (5040 tours), above H=65 (55440 tours)
+  H=107: below H=105 (20160 tours), above H=109 (70560 tours)
+  H=119: below H=117 (35280 tours), above H=121 (20160 tours)
+  H=149: below H=147 (5040 tours), above H=151 (25200 tours)
+  H=161: below H=159 (16800 tours), above H=163 (0 tours)
+  H=163: below H=161 (0 tours), above H=165 (0 tours)
+  H=165: below H=163 (0 tours), above H=167 (0 tours)
+  H=167: below H=165 (0 tours), above H=169 (0 tours)
+  H=169: below H=167 (0 tours), above H=171 (1680 tours)
+  H=173: below H=171 (1680 tours), above H=175 (720 tours)
+  H=177: below H=175 (720 tours), above H=179 (0 tours)
+  H=179: below H=177 (0 tours), above H=181 (0 tours)
+  H=181: below H=179 (0 tours), above H=183 (0 tours)
+  H=183: below H=181 (0 tours), above H=185 (0 tours)
+  H=185: below H=183 (0 tours), above H=187 (0 tours)
+  H=187: below H=185 (0 tours), above H=189 (240 tours)
+
+Step 4: H values modular arithmetic...
+
+  H mod 2:
+    1: 2097152 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 3:
+    0: 660032 tournaments [FORBIDDEN RESIDUE]
+    1: 736560 tournaments [FORBIDDEN RESIDUE]
+    2: 700560 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 4:
+    1: 1157760 tournaments [FORBIDDEN RESIDUE]
+    3: 939392 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 5:
+    0: 352512 tournaments [FORBIDDEN RESIDUE]
+    1: 487200 tournaments [FORBIDDEN RESIDUE]
+    2: 322560 tournaments [FORBIDDEN RESIDUE]
+    3: 448560 tournaments [FORBIDDEN RESIDUE]
+    4: 486320 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 7:
+    0: 227760 tournaments [FORBIDDEN RESIDUE]
+    1: 228704 tournaments [FORBIDDEN RESIDUE]
+    2: 328608 tournaments [FORBIDDEN RESIDUE]
+    3: 309120 tournaments [FORBIDDEN RESIDUE]
+    4: 347760 tournaments [FORBIDDEN RESIDUE]
+    5: 359520 tournaments [FORBIDDEN RESIDUE]
+    6: 295680 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 8:
+    1: 618240 tournaments [FORBIDDEN RESIDUE]
+    3: 516320 tournaments [FORBIDDEN RESIDUE]
+    5: 539520 tournaments [FORBIDDEN RESIDUE]
+    7: 423072 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 9:
+    0: 228608 tournaments [FORBIDDEN RESIDUE]
+    1: 307440 tournaments [FORBIDDEN RESIDUE]
+    2: 252000 tournaments [FORBIDDEN RESIDUE]
+    3: 179760 tournaments [FORBIDDEN RESIDUE]
+    4: 222480 tournaments
+    5: 272160 tournaments [FORBIDDEN RESIDUE]
+    6: 251664 tournaments [FORBIDDEN RESIDUE]
+    7: 206640 tournaments [FORBIDDEN RESIDUE]
+    8: 176400 tournaments [FORBIDDEN RESIDUE]
+
+  H mod 16:
+    1: 315840 tournaments [FORBIDDEN RESIDUE]
+    3: 227360 tournaments [FORBIDDEN RESIDUE]
+    5: 262080 tournaments [FORBIDDEN RESIDUE]
+    7: 216048 tournaments [FORBIDDEN RESIDUE]
+    9: 302400 tournaments [FORBIDDEN RESIDUE]
+    11: 288960 tournaments [FORBIDDEN RESIDUE]
+    13: 277440 tournaments [FORBIDDEN RESIDUE]
+    15: 207024 tournaments [FORBIDDEN RESIDUE]
+
+Step 5: Distribution near forbidden values...
+
+  Around H=7:
+    H= -3:       0 
+    H= -1:       0 
+    H=  1:    5040 #####
+    H=  3:    8400 ########
+    H=  5:   20160 ####################
+    H=  7:       0  <<<FORBIDDEN
+    H=  9:   31920 ###############################
+    H= 11:   15120 ###############
+    H= 13:   15120 ###############
+    H= 15:   31584 ###############################
+    H= 17:   20160 ####################
+
+  Around H=21:
+    H= 11:   15120 ###############
+    H= 13:   15120 ###############
+    H= 15:   31584 ###############################
+    H= 17:   20160 ####################
+    H= 19:   20160 ####################
+    H= 21:       0  <<<FORBIDDEN
+    H= 23:   40320 ########################################
+    H= 25:   25200 #########################
+    H= 27:   21840 #####################
+    H= 29:   50400 ##################################################
+    H= 31:   30240 ##############################
+
+  Around H=63:
+    H= 53:   20160 ####################
+    H= 55:   20160 ####################
+    H= 57:   13440 #############
+    H= 59:   40320 ########################################
+    H= 61:    5040 #####
+    H= 63:       0  <<<FORBIDDEN
+    H= 65:   55440 ##################################################
+    H= 67:   30240 ##############################
+    H= 69:   40320 ########################################
+    H= 71:   35280 ###################################
+    H= 73:   40320 ########################################
+
+  Around H=107:
+    H= 97:   30240 ##############################
+    H= 99:   12320 ############
+    H=101:   50400 ##################################################
+    H=103:   50400 ##################################################
+    H=105:   20160 ####################
+    H=107:       0  <<<FORBIDDEN
+    H=109:   70560 ##################################################
+    H=111:   47040 ###############################################
+    H=113:   20160 ####################
+    H=115:   35280 ###################################
+    H=117:   35280 ###################################
+
+  Around H=119:
+    H=109:   70560 ##################################################
+    H=111:   47040 ###############################################
+    H=113:   20160 ####################
+    H=115:   35280 ###################################
+    H=117:   35280 ###################################
+    H=119:       0  <<<FORBIDDEN
+    H=121:   20160 ####################
+    H=123:   40320 ########################################
+    H=125:    5040 #####
+    H=127:    5040 #####
+    H=129:   31920 ###############################
+
+  Around H=149:
+    H=139:   30240 ##############################
+    H=141:   15120 ###############
+    H=143:   15120 ###############
+    H=145:   10080 ##########
+    H=147:    5040 #####
+    H=149:       0  <<<FORBIDDEN
+    H=151:   25200 #########################
+    H=153:   15120 ###############
+    H=155:    5040 #####
+    H=157:    5040 #####
+    H=159:   16800 ################
+
+  Around H=161:
+    H=151:   25200 #########################
+    H=153:   15120 ###############
+    H=155:    5040 #####
+    H=157:    5040 #####
+    H=159:   16800 ################
+    H=161:       0  <<<FORBIDDEN
+    H=163:       0 
+    H=165:       0 
+    H=167:       0 
+    H=169:       0 
+    H=171:    1680 #
+
+  Around H=163:
+    H=153:   15120 ###############
+    H=155:    5040 #####
+    H=157:    5040 #####
+    H=159:   16800 ################
+    H=161:       0 
+    H=163:       0  <<<FORBIDDEN
+    H=165:       0 
+    H=167:       0 
+    H=169:       0 
+    H=171:    1680 #
+    H=173:       0 
+
+  Around H=165:
+    H=155:    5040 #####
+    H=157:    5040 #####
+    H=159:   16800 ################
+    H=161:       0 
+    H=163:       0 
+    H=165:       0  <<<FORBIDDEN
+    H=167:       0 
+    H=169:       0 
+    H=171:    1680 #
+    H=173:       0 
+    H=175:     720 
+
+  Around H=167:
+    H=157:    5040 #####
+    H=159:   16800 ################
+    H=161:       0 
+    H=163:       0 
+    H=165:       0 
+    H=167:       0  <<<FORBIDDEN
+    H=169:       0 
+    H=171:    1680 #
+    H=173:       0 
+    H=175:     720 
+    H=177:       0 
+
+  Around H=169:
+    H=159:   16800 ################
+    H=161:       0 
+    H=163:       0 
+    H=165:       0 
+    H=167:       0 
+    H=169:       0  <<<FORBIDDEN
+    H=171:    1680 #
+    H=173:       0 
+    H=175:     720 
+    H=177:       0 
+    H=179:       0 
+
+  Around H=173:
+    H=163:       0 
+    H=165:       0 
+    H=167:       0 
+    H=169:       0 
+    H=171:    1680 #
+    H=173:       0  <<<FORBIDDEN
+    H=175:     720 
+    H=177:       0 
+    H=179:       0 
+    H=181:       0 
+    H=183:       0 
+
+  Around H=177:
+    H=167:       0 
+    H=169:       0 
+    H=171:    1680 #
+    H=173:       0 
+    H=175:     720 
+    H=177:       0  <<<FORBIDDEN
+    H=179:       0 
+    H=181:       0 
+    H=183:       0 
+    H=185:       0 
+    H=187:       0 
+
+  Around H=179:
+    H=169:       0 
+    H=171:    1680 #
+    H=173:       0 
+    H=175:     720 
+    H=177:       0 
+    H=179:       0  <<<FORBIDDEN
+    H=181:       0 
+    H=183:       0 
+    H=185:       0 
+    H=187:       0 
+    H=189:     240 
+
+  Around H=181:
+    H=171:    1680 #
+    H=173:       0 
+    H=175:     720 
+    H=177:       0 
+    H=179:       0 
+    H=181:       0  <<<FORBIDDEN
+    H=183:       0 
+    H=185:       0 
+    H=187:       0 
+    H=189:     240 
+    H=191:       0 
+
+  Around H=183:
+    H=173:       0 
+    H=175:     720 
+    H=177:       0 
+    H=179:       0 
+    H=181:       0 
+    H=183:       0  <<<FORBIDDEN
+    H=185:       0 
+    H=187:       0 
+    H=189:     240 
+    H=191:       0 
+    H=193:       0 
+
+  Around H=185:
+    H=175:     720 
+    H=177:       0 
+    H=179:       0 
+    H=181:       0 
+    H=183:       0 
+    H=185:       0  <<<FORBIDDEN
+    H=187:       0 
+    H=189:     240 
+    H=191:       0 
+    H=193:       0 
+    H=195:       0 
+
+  Around H=187:
+    H=177:       0 
+    H=179:       0 
+    H=181:       0 
+    H=183:       0 
+    H=185:       0 
+    H=187:       0  <<<FORBIDDEN
+    H=189:     240 
+    H=191:       0 
+    H=193:       0 
+    H=195:       0 
+    H=197:       0 
+
+Step 6: Binary/number-theoretic structure...
+
+  H=7:
+    Binary: 0b111
+    = 7
+    Factors: 7
+    Mod 7: 0
+    Mod 8: 7
+    Mod 9: 7
+    Mod 16: 7
+
+  H=21:
+    Binary: 0b10101
+    = 21
+    Factors: 3 * 7
+    Mod 7: 0
+    Mod 8: 5
+    Mod 9: 3
+    Mod 16: 5
+
+  H=63:
+    Binary: 0b111111
+    = 63
+    Factors: 3 * 3 * 7
+    Mod 7: 0
+    Mod 8: 7
+    Mod 9: 0
+    Mod 16: 15
+
+  H=107:
+    Binary: 0b1101011
+    = 107
+    Factors: 107
+    Mod 7: 2
+    Mod 8: 3
+    Mod 9: 8
+    Mod 16: 11
+
+  H=119:
+    Binary: 0b1110111
+    = 119
+    Factors: 7 * 17
+    Mod 7: 0
+    Mod 8: 7
+    Mod 9: 2
+    Mod 16: 7
+
+  H=149:
+    Binary: 0b10010101
+    = 149
+    Factors: 149
+    Mod 7: 2
+    Mod 8: 5
+    Mod 9: 5
+    Mod 16: 5
+
+  H=161:
+    Binary: 0b10100001
+    = 161
+    Factors: 7 * 23
+    Mod 7: 0
+    Mod 8: 1
+    Mod 9: 8
+    Mod 16: 1
+
+  H=163:
+    Binary: 0b10100011
+    = 163
+    Factors: 163
+    Mod 7: 2
+    Mod 8: 3
+    Mod 9: 1
+    Mod 16: 3
+
+  H=165:
+    Binary: 0b10100101
+    = 165
+    Factors: 3 * 5 * 11
+    Mod 7: 4
+    Mod 8: 5
+    Mod 9: 3
+    Mod 16: 5
+
+  H=167:
+    Binary: 0b10100111
+    = 167
+    Factors: 167
+    Mod 7: 6
+    Mod 8: 7
+    Mod 9: 5
+    Mod 16: 7
+
+  H=169:
+    Binary: 0b10101001
+    = 169
+    Factors: 13 * 13
+    Mod 7: 1
+    Mod 8: 1
+    Mod 9: 7
+    Mod 16: 9
+
+  H=173:
+    Binary: 0b10101101
+    = 173
+    Factors: 173
+    Mod 7: 5
+    Mod 8: 5
+    Mod 9: 2
+    Mod 16: 13
+
+  H=177:
+    Binary: 0b10110001
+    = 177
+    Factors: 3 * 59
+    Mod 7: 2
+    Mod 8: 1
+    Mod 9: 6
+    Mod 16: 1
+
+  H=179:
+    Binary: 0b10110011
+    = 179
+    Factors: 179
+    Mod 7: 4
+    Mod 8: 3
+    Mod 9: 8
+    Mod 16: 3
+
+  H=181:
+    Binary: 0b10110101
+    = 181
+    Factors: 181
+    Mod 7: 6
+    Mod 8: 5
+    Mod 9: 1
+    Mod 16: 5
+
+  H=183:
+    Binary: 0b10110111
+    = 183
+    Factors: 3 * 61
+    Mod 7: 1
+    Mod 8: 7
+    Mod 9: 3
+    Mod 16: 7
+
+  H=185:
+    Binary: 0b10111001
+    = 185
+    Factors: 5 * 37
+    Mod 7: 3
+    Mod 8: 1
+    Mod 9: 5
+    Mod 16: 9
+
+  H=187:
+    Binary: 0b10111011
+    = 187
+    Factors: 11 * 17
+    Mod 7: 5
+    Mod 8: 3
+    Mod 9: 7
+    Mod 16: 11
+
+Step 7: Full H-spectrum with counts...
+      H    count   cumul%
+      1     5040    0.24%
+      3     8400    0.64%
+      5    20160    1.60%
+      9    31920    3.12%
+     11    15120    3.85%
+     13    15120    4.57%
+     15    31584    6.07%
+     17    20160    7.03%
+     19    20160    7.99%
+     23    40320    9.92%
+     25    25200   11.12%
+     27    21840   12.16%
+     29    50400   14.56%
+     31    30240   16.01%
+     33    52080   18.49%
+     35    10080   18.97%
+     37    60480   21.85%
+     39    10080   22.33%
+     41    35280   24.02%
+     43    30240   25.46%
+     45    25200   26.66%
+     47    10080   27.14%
+     49    35280   28.82%
+     51    30240   30.27%
+     53    20160   31.23%
+     55    20160   32.19%
+     57    13440   32.83%
+     59    40320   34.75%
+     61     5040   34.99%
+     65    55440   37.64%
+     67    30240   39.08%
+     69    40320   41.00%
+     71    35280   42.68%
+     73    40320   44.60%
+     75    28560   45.97%
+     77    50400   48.37%
+     79    25200   49.57%
+     81    55440   52.21%
+     83    35280   53.90%
+     85     5040   54.14%
+     87     5040   54.38%
+     89    70560   57.74%
+     91    75600   61.35%
+     93    35280   63.03%
+     95    25200   64.23%
+     97    30240   65.67%
+     99    12320   66.26%
+    101    50400   68.66%
+    103    50400   71.07%
+    105    20160   72.03%
+    109    70560   75.39%
+    111    47040   77.64%
+    113    20160   78.60%
+    115    35280   80.28%
+    117    35280   81.96%
+    121    20160   82.92%
+    123    40320   84.85%
+    125     5040   85.09%
+    127     5040   85.33%
+    129    31920   86.85%
+    131    40320   88.77%
+    133    30240   90.21%
+    135    29568   91.62%
+    137    30240   93.06%
+    139    30240   94.51%
+    141    15120   95.23%
+    143    15120   95.95%
+    145    10080   96.43%
+    147     5040   96.67%
+    151    25200   97.87%
+    153    15120   98.59%
+    155     5040   98.83%
+    157     5040   99.07%
+    159    16800   99.87%
+    171     1680   99.95%
+    189      240  100.00%
+
+Step 8: Repunit structure of forbidden values...
+    H=7 in base 2: 111 (REPDIGIT)
+    H=7 in base 6: 11 (REPDIGIT)
+    H=7 in base 8: 7 (REPDIGIT)
+    H=7 in base 9: 7 (REPDIGIT)
+    H=21 in base 4: 111 (REPDIGIT)
+    H=21 in base 6: 33 (REPDIGIT)
+    H=63 in base 2: 111111 (REPDIGIT)
+    H=63 in base 4: 333 (REPDIGIT)
+    H=63 in base 8: 77 (REPDIGIT)
+
+======================================================================
+DONE -- FORBIDDEN OBSTRUCTION ANALYSIS
+======================================================================
