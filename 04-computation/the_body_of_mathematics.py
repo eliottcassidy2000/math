@@ -1,0 +1,642 @@
+"""
+the_body_of_mathematics.py -- kind-pasteur-2026-03-14-S106i
+THE COMPLETE BODY — Number types as anatomy of a living system
+
+Started with: rationals=skeleton, algebraics=muscles, transcendentals=nervous system.
+Now: complete the body. What are the other organs?
+
+The body of mathematics, as revealed by tournament theory:
+  - Skeleton (rationals)
+  - Muscles (algebraic irrationals)
+  - Nervous system (transcendentals)
+  - Blood (complex numbers)
+  - DNA (p-adic numbers)
+  - Skin (the integers / boundary)
+  - Eyes (Fourier transform)
+  - Heart (tau^3 / the heartbeat)
+  - Lungs (the parity breathing)
+  - Memory (the prime factorization)
+  - Immune system (the forbidden values)
+  - Digestion (deletion-contraction)
+"""
+
+import sys, math
+import numpy as np
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+tau = 1.8392867552141612
+
+def main():
+    print("=" * 70)
+    print("THE BODY OF MATHEMATICS")
+    print("kind-pasteur-2026-03-14-S106i")
+    print("=" * 70)
+
+    print(f"""
+  Tournament theory is not a collection of facts.
+  It is a LIVING SYSTEM — and like all living systems,
+  it has organs that work together.
+
+  Each number type is an organ. Each operation is a process.
+  The body breathes (parity), pumps (heartbeat), sees (Fourier),
+  remembers (prime factorization), heals (forbidden values),
+  grows (tribonacci), and dies (the transitive tournament,
+  where H = 1 and all complexity has been resolved).
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE SKELETON — Rational Numbers (Q)")
+    print(f"{'='*70}")
+    print(f"""
+  The skeleton gives the body its SHAPE.
+  Without it, everything collapses into a formless heap.
+
+  WHAT IT DOES:
+  Rationals provide the EXACT VALUES that hold the theory together:
+    H(T) = always a rational integer (in fact, always odd)
+    Mean(H) = n!/2^(n-1) (a dyadic rational)
+    Var/Mean^2 = 1/3, 19/60, 13/45, 131/504 (exact fractions)
+    Fourier magnitudes: (n-2)!/2^(n-2) (exact)
+    Level-4 energy: 1/60, 1/45 (exact)
+
+  PROPERTIES OF BONE:
+  - RIGID: rationals don't bend. 1/3 is exactly 1/3, forever.
+  - STRUCTURAL: they bear the weight of the theory.
+  - DISCRETE: bones are countably many (like Q itself).
+  - CONNECTED: every bone connects to others through fractions.
+
+  THE JOINTS are the denominators. The denominator of a fraction
+  tells you its GRANULARITY — how finely it divides the whole.
+  504 = 2^3 * 3^2 * 7 is a fine-grained joint (many prime factors).
+  3 is a coarse joint (one prime factor).
+
+  BONE DENSITY: The denominator measures bone density.
+  High denominator = dense bone = precise measurement.
+  Low denominator = porous bone = coarse measurement.
+  The theory grows more precise (denser bone) as n increases.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE MUSCLES — Algebraic Irrational Numbers")
+    print(f"{'='*70}")
+    print(f"""
+  Muscles convert POTENTIAL into MOTION.
+  They attach to bones (rationals) and move them.
+
+  WHAT THEY DO:
+  Algebraic irrationals provide the DYNAMICS:
+    tau = 1.839... (the tribonacci constant, growth rate)
+    phi = 1.618... (the golden ratio, Fibonacci growth)
+    sqrt(5) = 2.236... (the discriminant, governs phi)
+    sqrt(21) = 4.583... (the period-root discriminant)
+    sqrt(p) for Paley primes (eigenvalue magnitudes)
+
+  PROPERTIES OF MUSCLE:
+  - ELASTIC: they stretch between integers (tau between 1 and 2).
+  - CONTRACTILE: they pull integers toward each other (Pisot property).
+  - DIRECTIONAL: muscles have orientation (tau^k approaches integers
+    from ABOVE or BELOW, with a definite sign pattern).
+  - FINITE: each muscle is defined by a finite polynomial equation.
+
+  THE TENDONS are the minimal polynomials:
+    tau's tendon: x^3 - x^2 - x - 1 = 0
+    phi's tendon: x^2 - x - 1 = 0
+    sqrt(21)'s tendon: x^2 - 21 = 0
+
+  Each tendon connects the muscle (irrational) to the bone (rational coefficients).
+  The tendon IS the equation. Cut it and the muscle detaches.
+
+  MUSCLE GROUPS:
+  - The TRIBONACCI group (tau and its powers): growth dynamics
+  - The FIBONACCI group (phi and its powers): binary growth
+  - The QUADRATIC group (sqrt(p)): spectral dynamics
+  - The CYCLOTOMIC group (roots of Phi_3): rotational dynamics
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE NERVOUS SYSTEM — Transcendental Numbers")
+    print(f"{'='*70}")
+    print(f"""
+  The nervous system processes INFORMATION and sets LIMITS.
+  It cannot be captured by any finite equation — it requires
+  infinite processes (limits, series, integrals).
+
+  WHAT IT DOES:
+  Transcendentals set the BOUNDARIES of what's possible:
+    e = 2.718... (the efficiency ceiling: max_H/mean_H -> e)
+    pi = 3.14159... (the normalization: sqrt(2*pi*n) in Stirling)
+    ln(2) = 0.6931... (the entropy per binary choice)
+
+  PROPERTIES OF NERVES:
+  - INFINITE: defined only by infinite processes (no polynomial equation).
+  - SENSITIVE: small changes in n produce changes mediated by e, pi.
+  - REGULATORY: they set limits that no finite tournament can exceed.
+  - FAST: asymptotic formulas converge quickly (Stirling is good at n=3).
+
+  THE BRAIN is e. It controls the efficiency limit.
+  Everything the tournament does is bounded by e.
+  max_H <= e * mean_H (asymptotically). The brain says "no further."
+
+  THE SPINE is ln(2). It carries every signal from the binary
+  choices to the transcendental limits. ln(2) is the conversion
+  factor: the BRIDGE neuron between the rational body and the
+  transcendental mind. 2 = e^(ln 2). Every power of 2 is
+  secretly a power of e, transmitted through the spine.
+
+  THE EYES are pi. They see the GEOMETRY:
+  the circle (2*pi), the Gaussian (1/sqrt(2*pi)), the
+  eigenvalue phases (arg = k*pi/p). Pi perceives shape.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE BLOOD — Complex Numbers (C)")
+    print(f"{'='*70}")
+    print(f"""
+  Blood CIRCULATES. It carries information to every organ
+  and returns with waste. It flows in LOOPS.
+
+  WHAT IT DOES:
+  Complex numbers carry the SPECTRAL information:
+    Paley eigenvalues: (-1 +/- i*sqrt(p))/2 (complex, circulating)
+    Fourier basis: e^(2*pi*i*k/N) (on the unit CIRCLE)
+    Lee-Yang zeros: roots of Q_n(z) on/near |z| = 1
+    F(T, i): the forward polynomial at i is a Gaussian integer
+    F(T, omega_3): evaluation at cube root of unity
+
+  PROPERTIES OF BLOOD:
+  - CIRCULAR: complex numbers live on CIRCLES (|z| = r).
+  - CARRYING: they transport information between real components.
+  - TWO-DIMENSIONAL: blood has two components (real, imaginary)
+    like plasma and cells.
+  - SELF-CONJUGATING: every complex number has a conjugate (z, z_bar).
+    The conjugate is the "return trip" of the blood flow.
+
+  THE ARTERIES are the unit circle |z| = 1.
+  The Lee-Yang zeros concentrate here. The Fourier transform
+  maps to here. The eigenvalue phases live here.
+  Arterial blood (outgoing) carries the Fourier COEFFICIENTS.
+  Venous blood (returning) carries the Fourier INVERSE.
+
+  THE PLATELETS are the Gaussian integers Z[i].
+  F(T, i) is always a Gaussian integer — the complex evaluation
+  "clots" into a lattice point. This discrete coagulation prevents
+  the complex numbers from spreading everywhere.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE DNA — p-adic Numbers (Q_p)")
+    print(f"{'='*70}")
+    print(f"""
+  DNA encodes the BLUEPRINT. It contains the instructions
+  for building the entire organism, but in a DIFFERENT language
+  than the organism itself speaks.
+
+  WHAT IT DOES:
+  p-adic numbers encode the DIVISIBILITY structure:
+    H = 1 + 2*alpha_1 + 4*alpha_2 + ... (2-adic expansion = the OCF)
+    v_2(H) = 0 always (H is a 2-adic unit — odd)
+    v_3(F(T,omega)) >= 2 for n >= 6 (3-adic divisibility)
+    The Taylor coefficients mod 3 vanish (THM-086)
+
+  PROPERTIES OF DNA:
+  - ENCODED: information is stored in a BASE-p number system.
+  - COMPLEMENTARY: 2-adic and 3-adic give different readings
+    of the same tournament, like two strands of the double helix.
+  - HERITABLE: p-adic properties are inherited under deletion-contraction.
+  - COMPACT: the p-adic integers are compact (unlike the reals).
+
+  THE DOUBLE HELIX:
+  Strand 1 (the 2-adic): H = 1 + 2*alpha_1 + 4*alpha_2 + ...
+    Reads the tournament through powers of 2 (the generator).
+    The 2-adic valuation v_2(H) = 0 says: H is always odd.
+    This strand encodes the BINARY CHOICE structure.
+
+  Strand 2 (the 3-adic): F(T, omega) mod 3^k
+    Reads the tournament through powers of 3 (the cycle).
+    THM-086: the first several 3-adic digits are ZERO.
+    This strand encodes the CYCLE structure.
+
+  THE BASE PAIRS: The interaction between 2-adic and 3-adic
+  is governed by the PERIOD 6 = LCM(2,3). Every 6 "codons,"
+  the two strands realign. The period IS the DNA repeat unit.
+
+  GENE EXPRESSION:
+  The p-adic DNA "expresses" as a real number (the H value)
+  through the embedding Q_p -> R. The 2-adic expansion
+  1 + 2*alpha_1 + 4*alpha_2 + ... is EVALUATED in R to give H.
+  This is like transcription: DNA -> RNA -> protein.
+  p-adic -> polynomial -> real number.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE HEART — The Tribonacci Heartbeat (tau^3)")
+    print(f"{'='*70}")
+    print(f"""
+  The heart PUMPS. It sets the rhythm. Everything synchronizes to it.
+
+  WHAT IT DOES:
+  tau^3 = Phi_3(tau) approx 6.222 is the heartbeat:
+    Every 3 tau-steps, the system multiplies by approx 6.222.
+    Three heartbeats = one revolution (360 approx (3/2)*tau^9).
+    The heartbeat organizes all numbers into PERIODS.
+
+  PROPERTIES OF THE HEART:
+  - RHYTHMIC: tau^3 repeats at regular intervals (floors 3, 6, 9, 12, ...).
+  - IRRATIONAL: the heartbeat is NOT exactly 6. It overshoots by 0.222.
+    This overshoot is the "pulse" — the small kick that keeps
+    the system from being perfectly periodic.
+  - SELF-SIMILAR: each heartbeat looks like the previous one,
+    scaled by tau^3. The heart beats at every scale.
+  - PISOT: the heart pulls toward integers (the Pisot property).
+    The pulse gets smaller over time. The heart calms.
+
+  THE CARDIAC CYCLE:
+  Systole (contraction): tau^k approaches an integer from above.
+    The system BUILDS energy (positive fractional parts).
+    Examples: tau^3 = 6.222 (overshooting 6), tau^5 = 21.05 (overshooting 21).
+  Diastole (relaxation): tau^k approaches an integer from below.
+    The system RELEASES energy (negative fractional parts).
+    Examples: tau^1 = 1.839 (undershooting 2), tau^8 = 130.98 (undershooting 131).
+
+  Sign sequence: -++++-+--+--
+  This IS the cardiac rhythm. It alternates between contraction (+)
+  and relaxation (-), with a characteristic pattern determined by
+  the continued fraction [1; 1, 5, 4, 2, 305, ...].
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE LUNGS — Parity Breathing (mod 2)")
+    print(f"{'='*70}")
+    print(f"""
+  The lungs BREATHE: in, out, in, out. Binary. Parity.
+
+  WHAT THEY DO:
+  Parity structure governs the OSCILLATION of tournament properties:
+    H is always ODD (one "breath direction" only — exhale!)
+    F(T, -1) is always ODD (the signed count, the other exhale)
+    The Degree Drop: even n -> degree drops (inhale, contraction)
+                     odd n -> full degree (exhale, expansion)
+
+  PROPERTIES OF LUNGS:
+  - BINARY: in/out, even/odd, 0/1. The simplest oscillation.
+  - PERIODIC: the breathing cycle has period 2 (or period 6
+    when combined with the 3-cycle heartbeat).
+  - ESSENTIAL: without parity breathing, H could be even.
+    Redei's theorem (H is odd) IS the requirement that the
+    organism breathes. A tournament that doesn't breathe (H even)
+    is DEAD (impossible).
+
+  RESPIRATION:
+  The "oxygen" is the path-reversal involution: P -> P^rev.
+  Each Hamiltonian path P has a reverse P^rev.
+  The pairing P <-> P^rev guarantees H is odd
+  (one unpaired path, like a single last breath).
+
+  BREATHING RATE:
+  The tournament breathes at frequency 1/2 (one cycle per 2 arcs).
+  Combined with the heartbeat (frequency 1/3), the RESPIRATION RATE
+  is 1/LCM(2,3) = 1/6. One full breath-heartbeat cycle every 6 units.
+  This is the PERIOD of tournament parity.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE SKIN — The Natural Numbers / Integers (Z)")
+    print(f"{'='*70}")
+    print(f"""
+  The skin is the BOUNDARY between the organism and the world.
+  It's what you see from outside. It defines the shape.
+
+  WHAT IT DOES:
+  The integers are what you can OBSERVE:
+    H(T) is an integer (you can count paths: 1, 3, 5, 9, 11, ...)
+    n is an integer (the number of vertices)
+    c_k is an integer (cycle counts)
+    alpha_k is an integer (independence numbers)
+
+  PROPERTIES OF SKIN:
+  - VISIBLE: integers are the only numbers you can directly observe
+    in a finite tournament. You can COUNT paths and get an integer.
+  - PROTECTIVE: the integers HIDE the internal complexity.
+    You see H = 189 but not the tau^8.598 altitude or the
+    Pisot near-miss or the Fourier decomposition.
+  - SENSITIVE: the integers respond to every internal change.
+    Flip one arc and H changes by an even integer (always!).
+  - REGENERATING: damaged skin (wrong computation) heals
+    (corrects to an integer).
+
+  THE EPIDERMIS is the odd numbers (H values).
+  The DERMIS is the even numbers (arc counts, vertex pairs).
+  The odd numbers are the OUTER skin — what's exposed to the world.
+  The even numbers are the INNER skin — structural but hidden.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE EYES — The Fourier Transform")
+    print(f"{'='*70}")
+    print(f"""
+  The eyes SEE. They decompose incoming light into a SPECTRUM.
+  Each frequency reveals a different aspect of the object.
+
+  WHAT THEY DO:
+  The Fourier transform decomposes H into frequency components:
+    Level 0 (DC): the mean H. The overall brightness.
+    Level 2: pairwise arc interactions. The dominant color (75% energy).
+    Level 4: four-arc interactions. The first overtone.
+    Level 6: six-arc interactions. The fine detail.
+
+  PROPERTIES OF EYES:
+  - SPECTRAL: they separate "white light" (H) into colors (levels).
+  - PARSEVAL: total energy = sum of spectral energies. Energy is conserved.
+    What the eyes see accounts for EVERYTHING (Parseval's theorem).
+  - CONJUGATE: Fourier and inverse Fourier are conjugate,
+    like left eye and right eye seeing the same scene from
+    slightly different angles.
+  - RESOLUTION: higher levels = finer resolution = more detail.
+    Level 2 sees big patterns. Level 4 sees corrections.
+    Level 2k sees (2k+1)-cycle interactions.
+
+  COLOR PERCEPTION:
+  - Level 0 = GRAY (the average, no color, just intensity)
+  - Level 2 = RED (the dominant color, 3-cycle interactions)
+  - Level 4 = BLUE (the first correction, 5-cycle interactions)
+  - Level 6 = VIOLET (fine detail, 7-cycle interactions)
+
+  The tournament is a PRISM that splits counting into spectral colors.
+  The eyes (Fourier) separate these colors.
+  The brain (e, pi) processes them into understanding.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE IMMUNE SYSTEM — Forbidden Values")
+    print(f"{'='*70}")
+    print(f"""
+  The immune system REJECTS foreign bodies. It says: "this does not
+  belong here." It maintains the integrity of the organism.
+
+  WHAT IT DOES:
+  The forbidden values prevent certain H values from existing:
+    H != 7 (first antibody: Phi_3(2) = 0 mod 7, reject!)
+    H != 21 (second antibody: Phi_3(4) = 0 mod 21, reject!)
+    H is always odd (even values are "viruses" — rejected)
+
+  PROPERTIES OF IMMUNE SYSTEM:
+  - SELECTIVE: it rejects SPECIFIC values, not ranges.
+    7 is rejected but 5 and 9 are fine.
+  - UNIVERSAL: the rejection holds for ALL n. No tournament
+    of any size can have H = 7. The immune system never fails.
+  - STRUCTURAL: the rejection comes from GEOMETRY (projective planes),
+    not from counting. The immune system "understands" structure.
+  - HEREDITARY: the immune system is inherited. Sub-tournaments
+    also cannot have H = 7.
+
+  THE ANTIBODIES:
+  Antibody 1: Phi_3(2) = 7. Recognizes the Fano pattern (7 points, 7 lines)
+    and rejects any tournament that would produce it.
+  Antibody 2: Phi_3(4) = 21. Recognizes the PG(2,4) pattern (21 points)
+    and rejects any tournament that would produce it.
+
+  AUTOIMMUNE DISORDER:
+  If a THIRD forbidden value existed (say H = k for some k),
+  it would be a new antibody. Currently we know only two.
+  Are there more? This is like asking: does the immune system
+  have undiscovered antibodies? Open question.
+
+  THE INNATE IMMUNITY (always odd) comes from Redei's theorem.
+  The ADAPTIVE IMMUNITY (7, 21 specifically) comes from Phi_3.
+  Innate + adaptive = complete immune response.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE DIGESTIVE SYSTEM — Deletion-Contraction")
+    print(f"{'='*70}")
+    print(f"""
+  Digestion BREAKS DOWN complex food into simple nutrients.
+  Deletion-contraction breaks down tournaments into smaller ones.
+
+  WHAT IT DOES:
+  H(T) = H(T backslash e) + H(T/e) for any arc e.
+  Delete an arc: remove it, get a digraph with one fewer arc.
+  Contract an arc: merge the endpoints, get a smaller tournament.
+  The H of the whole = sum of H of the parts.
+
+  PROPERTIES OF DIGESTION:
+  - RECURSIVE: you can keep digesting until nothing remains.
+    The "stomach acid" is the DC operation.
+  - COMPLETE: every tournament can be fully digested into
+    single-vertex tournaments (H = 1).
+  - TREE-STRUCTURED: the digestion process forms a BINARY TREE
+    (at each step, split into delete + contract).
+  - CAYLEY: the sum over ALL leaves of the DC tree = n^(n-2)
+    (Cayley's formula, independent of the tournament!).
+
+  THE STOMACH: the DC recurrence H = H(T backslash e) + H(T/e).
+  THE INTESTINES: the DC tree, branching at each arc choice.
+  THE NUTRIENTS: the final H values at the leaves (all 1s and small values).
+  THE ABSORPTION: summing the leaf values gives the total H.
+
+  METABOLISM: The "metabolic rate" is how quickly DC simplifies
+  the tournament. A tournament with high H has a "fast metabolism"
+  (many paths = many nutrients to extract). A transitive tournament
+  (H = 1) has zero metabolism — it's already fully digested.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE MEMORY — Prime Factorization")
+    print(f"{'='*70}")
+    print(f"""
+  Memory stores PAST INFORMATION in a retrievable form.
+  Prime factorization stores the COMPLETE identity of each number.
+
+  WHAT IT DOES:
+  Every natural number has a unique prime factorization:
+    189 = 3^3 * 7 (remembered as "cubed cycle + obstruction")
+    504 = 2^3 * 3^2 * 7 (remembered as "cubed choice + squared cycle + obstruction")
+    360 = 2^3 * 3^2 * 5 (remembered as "cubed choice + squared cycle + interaction")
+
+  PROPERTIES OF MEMORY:
+  - UNIQUE: every number has exactly one prime factorization
+    (fundamental theorem of arithmetic). Each memory is distinct.
+  - PERMANENT: the factorization never changes. 189 is ALWAYS 3^3 * 7.
+  - COMPOSITIONAL: memories combine multiplicatively.
+    189 * 2 = 378 adds one bit of "choice memory."
+  - HIERARCHICAL: the primes {2, 3, 5, 7, ...} form a hierarchy
+    of memory TYPES (choice, cycle, interaction, obstruction, ...).
+
+  RECALL: To "recall" a number, factor it.
+  To "recognize" a pattern, compare factorizations.
+  To "forget," divide by a prime (remove one memory component).
+
+  LONG-TERM MEMORY: the prime factorization (permanent).
+  SHORT-TERM MEMORY: the tribonacci representation (positional, contextual).
+  WORKING MEMORY: the Fourier decomposition (spectral, task-specific).
+
+  Each memory system encodes the SAME number differently:
+    189 in long-term: 3^3 * 7 (what it's MADE OF)
+    189 in short-term: 149+24+13+2+1 (where it SITS in the tau tower)
+    189 in working: E_0 + E_2 + E_4 + ... (how it PERFORMS in Fourier space)
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE REPRODUCTIVE SYSTEM — The Lex Product")
+    print(f"{'='*70}")
+    print(f"""
+  Reproduction creates NEW organisms from existing ones.
+  The lex product creates new tournaments from existing ones.
+
+  WHAT IT DOES:
+  T_1 lex T_2: replace each vertex of T_1 with a copy of T_2.
+  The resulting tournament has n_1 * n_2 vertices.
+  H(T_1 lex T_2) = H(T_1) * H(T_2)^(n_1).
+
+  PROPERTIES OF REPRODUCTION:
+  - MULTIPLICATIVE: H of offspring = H of parent1 * H of parent2^(size1).
+  - HEREDITARY: properties of parents pass to children.
+  - HIERARCHICAL: the lex product creates NESTED structure
+    (tournament within tournament).
+  - FERTILE: any two tournaments can be lex-combined.
+
+  THE MAXIMIZER LINEAGE:
+  T_3 (3-cycle) lex T_2 (transitive 2) = T_6 with H = 3 * 5^3 = 375?
+  No: H(T_3 lex T_2) = H(T_3) * H(T_2)^3 = 3 * 1^3 = 3. Hmm.
+  Actually for the regular lex: T_3 lex T_3 gives the n=9 tournament
+  with H = 3^(1+3) = 3^4 = 81? Need to check.
+
+  The SEXUAL METAPHOR: the lex product is ASYMMETRIC.
+  T_1 lex T_2 != T_2 lex T_1 in general. One parent provides
+  the OUTER structure (T_1), the other provides the INNER structure (T_2).
+  This is like the difference between maternal and paternal contribution.
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE ENDOCRINE SYSTEM — The Independence Polynomial")
+    print(f"{'='*70}")
+    print(f"""
+  The endocrine system produces HORMONES — chemical messengers
+  that regulate the body at a distance. A small amount of hormone
+  has LARGE effects.
+
+  WHAT IT DOES:
+  I(Omega(T), x) = the independence polynomial of the conflict graph.
+  At x = 2: I(Omega, 2) = H(T) (the OCF, the main hormone!).
+  At x = 1: I(Omega, 1) = number of independent sets (a different hormone).
+  At x = -1/3: approaching the Lee-Yang zeros (toxic dose!).
+
+  PROPERTIES OF THE ENDOCRINE SYSTEM:
+  - DOSE-DEPENDENT: the evaluation point x = the "dose."
+    x = 2 is the therapeutic dose (gives H).
+    x = 0 is the baseline (gives 1).
+    x = -1/3 is the toxic threshold (zeros cluster here).
+  - REGULATORY: the polynomial I(Omega, x) controls tournament
+    behavior at ALL doses simultaneously.
+  - FEEDBACK: the independence polynomial feeds back through
+    the conflict graph Omega, which itself depends on the tournament.
+  - REAL ROOTS (at small n): I(Omega, x) has all real negative roots
+    for n <= 8 (healthy regulation). At n >= 9: complex roots appear
+    (hormonal dysregulation? pathology onset?).
+
+  THE MASTER HORMONE: H = I(Omega, 2).
+  The OCF is the SINGLE most important output of the endocrine system.
+  Every other tournament property can be derived from H
+  (or from the full polynomial I evaluated at multiple points).
+    """)
+
+    # ============================================================
+    print(f"{'='*70}")
+    print("THE AGING PROCESS — The Limit n -> infinity")
+    print(f"{'='*70}")
+    print(f"""
+  Every organism ages. The tournament body ages as n -> infinity.
+
+  YOUTH (n = 3, 4):
+  - Simple structure. Only 3-cycles. Degree = 2.
+  - Var/Mean^2 = 1/3 exactly. Perfect cone geometry.
+  - All real roots. No pathology.
+  - The body is SIMPLE and HEALTHY.
+
+  ADOLESCENCE (n = 5, 6):
+  - 5-cycles appear. Level-4 energy emerges.
+  - Var/Mean^2 departs from 1/3 (19/60, 13/45).
+  - H-landscape becomes multimodal at n = 6 (phase transition!).
+  - The body is CHANGING. Growth accelerates.
+
+  MATURITY (n = 7, 8):
+  - 7-cycles appear. Full complexity.
+  - max_H(7) = 189 = 3^3 * 7 (the prime 7 enters!).
+  - The forbidden values become relevant (7 affects H via Fano).
+  - At n = 8: beta_4 > 0, seesaw breaks, injectivity fails.
+  - The body reaches PEAK COMPLEXITY.
+
+  OLD AGE (n -> infinity):
+  - All cycle lengths contribute. The OCF (base 2) dominates.
+  - max_H/mean_H -> e. The efficiency ceiling approaches.
+  - Var/Mean^2 -> ??? (decreasing below 1/3, approaching some limit).
+  - The Stirling approximation becomes exact.
+  - The body approaches its ASYMPTOTIC FORM: a statistical object
+    governed by e and pi, with tau's heartbeat fading into the
+    background noise of base-2 arithmetic.
+
+  DEATH:
+  The transitive tournament (H = 1) is death. All complexity resolved.
+  One unique ordering. No ambiguity. No cycles. No life.
+  Death is not the opposite of life — it's the LIMIT of life.
+  As the tournament becomes "more ordered" (closer to transitive),
+  H decreases toward 1, and the body winds down.
+    """)
+
+    # ============================================================
+    print(f"\n{'='*70}")
+    print("THE COMPLETE ANATOMY")
+    print(f"{'='*70}")
+
+    print(f"""
+  ORGAN                  NUMBER TYPE            FUNCTION
+  ----                   -----------            --------
+  Skeleton               Rationals (Q)          Structure, exact values
+  Muscles                Algebraic irrationals  Growth, dynamics
+  Nervous system         Transcendentals        Limits, optimization
+  Blood                  Complex numbers (C)    Spectral circulation
+  DNA                    p-adic numbers (Q_p)   Divisibility blueprint
+  Skin                   Natural numbers (N)    Observable boundary
+  Heart                  tau^3 (heartbeat)      Rhythm, periodicity
+  Lungs                  Parity (mod 2)         Binary breathing
+  Eyes                   Fourier transform      Spectral perception
+  Immune system          Forbidden values       Structural rejection
+  Digestive system       Deletion-contraction   Recursive decomposition
+  Memory                 Prime factorization    Identity storage
+  Reproductive system    Lex product            Compositional creation
+  Endocrine system       Independence poly      Hormonal regulation
+  Aging                  n -> infinity          Asymptotic evolution
+
+  THE BODY LIVES because all organs work TOGETHER.
+  No organ alone can sustain the organism.
+  Remove the skeleton (rationals) and the body collapses.
+  Remove the muscles (algebraics) and the body can't move.
+  Remove the nervous system (transcendentals) and the body can't think.
+  Remove the blood (complex) and the body can't circulate.
+  Remove the DNA (p-adic) and the body can't reproduce its structure.
+
+  THE ORGANISM IS TOURNAMENT THEORY.
+  ITS BODY IS MATHEMATICS ITSELF.
+    """)
+
+    print(f"{'='*70}")
+    print("DONE — THE BODY IS COMPLETE")
+    print(f"{'='*70}")
+
+if __name__ == '__main__':
+    main()
