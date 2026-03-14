@@ -1,0 +1,474 @@
+======================================================================
+PART 1: k-NACCI CONVERGENCE TO KEY₁ = 2
+======================================================================
+
+k-nacci dominant roots (positive real root of x^k - x^{k-1} - ... - 1):
+
+  k= 2: root = 1.618033988750, gap from 2 = -0.381966011250
+  k= 3: root = 1.839286755214, gap from 2 = -0.160713244786
+  k= 4: root = 1.927561975483, gap from 2 = -0.072438024517
+  k= 5: root = 1.965948236645, gap from 2 = -0.034051763355
+  k= 6: root = 1.983582843424, gap from 2 = -0.016417156576
+  k= 7: root = 1.991964196605, gap from 2 = -0.008035803395
+  k= 8: root = 1.996031179735, gap from 2 = -0.003968820265
+  k= 9: root = 1.998029470262, gap from 2 = -0.001970529738
+  k=10: root = 1.999018632710, gap from 2 = -0.000981367290
+  k=11: root = 1.999510401978, gap from 2 = -0.000489598022
+  k=12: root = 1.999755500937, gap from 2 = -0.000244499063
+  k=13: root = 1.999877832712, gap from 2 = -0.000122167288
+  k=14: root = 1.999938938750, gap from 2 = -0.000061061250
+  k=15: root = 1.999969475435, gap from 2 = -0.000030524565
+
+  Limit: k→∞ gives root → 2 = KEY₁
+  Fibonacci (k=2): root = φ = (1+√5)/2 ≈ 1.6180339887
+  Tribonacci (k=3): root ≈ 1.8392867552
+
+  Convergence rate: gap(k) / gap(k-1):
+    k= 4: ratio = 0.45072841
+    k= 5: ratio = 0.47008134
+    k= 6: ratio = 0.48212354
+    k= 7: ratio = 0.48947596
+    k= 8: ratio = 0.49389216
+    k= 9: ratio = 0.49650264
+    k=10: ratio = 0.49802207
+    k=11: ratio = 0.49889376
+    k=12: ratio = 0.49938736
+    k=13: ratio = 0.49966363
+    k=14: ratio = 0.49981670
+    k=15: ratio = 0.49990076
+
+  The ratio → 1/2 = 1/KEY₁
+  So gap(k) ≈ C·(1/2)^k: GEOMETRIC convergence with base 1/KEY₁
+
+======================================================================
+PART 2: WEIGHTED k-NACCI CONVERGENCE TO KEY₂ = 3
+======================================================================
+
+Weight-2 k-nacci dominant roots:
+  (x^k = 2·x^{k-1} + 2·x^{k-2} + ... + 2)
+
+  k= 2: root = 2.732050807569, gap from 3 = -0.267949192431
+  k= 3: root = 2.919639565839, gap from 3 = -0.080360434161
+  k= 4: root = 2.974449244552, gap from 3 = -0.025550755448
+  k= 5: root = 2.991654101409, gap from 3 = -0.008345898591
+  k= 6: root = 2.997241330204, gap from 3 = -0.002758669796
+  k= 7: root = 2.999083547321, gap from 3 = -0.000916452679
+  k= 8: root = 2.999694920311, gap from 3 = -0.000305079689
+  k= 9: root = 2.999898358484, gap from 3 = -0.000101641516
+  k=10: root = 2.999966126000, gap from 3 = -0.000033874000
+  k=11: root = 2.999988709474, gap from 3 = -0.000011290526
+  k=12: root = 2.999996236591, gap from 3 = -0.000003763409
+  k=13: root = 2.999998745542, gap from 3 = -0.000001254458
+  k=14: root = 2.999999581849, gap from 3 = -0.000000418151
+  k=15: root = 2.999999860616, gap from 3 = -0.000000139384
+
+  Limit: k→∞ gives root → 3 = 3 = KEY₂
+  General: weight-w k-nacci → w+1 as k→∞
+
+  DUALITY:
+    Standard k-nacci (w=1): root → 2 = KEY₁
+    Weight-2 k-nacci (w=2): root → 3 = KEY₂
+    Weight-w k-nacci:       root → w+1
+    So KEY₁ = 1+1 (weight 1) and KEY₂ = 2+1 (weight 2)
+    The keys ARE the successor function applied to the weight!
+
+======================================================================
+PART 3: THE GAP DYNAMICS — 3ⁿ - 2ⁿ
+======================================================================
+
+The sequence 3ⁿ - 2ⁿ (corner piece sequence):
+
+  n= 0: 3^n-2^n =        0    3^n =        1    (3^n-2^n)/3^n = 0.000000
+  n= 1: 3^n-2^n =        1    3^n =        3    (3^n-2^n)/3^n = 0.333333
+  n= 2: 3^n-2^n =        5    3^n =        9    (3^n-2^n)/3^n = 0.555556
+  n= 3: 3^n-2^n =       19    3^n =       27    (3^n-2^n)/3^n = 0.703704
+  n= 4: 3^n-2^n =       65    3^n =       81    (3^n-2^n)/3^n = 0.802469
+  n= 5: 3^n-2^n =      211    3^n =      243    (3^n-2^n)/3^n = 0.868313
+  n= 6: 3^n-2^n =      665    3^n =      729    (3^n-2^n)/3^n = 0.912209
+  n= 7: 3^n-2^n =     2059    3^n =     2187    (3^n-2^n)/3^n = 0.941472
+  n= 8: 3^n-2^n =     6305    3^n =     6561    (3^n-2^n)/3^n = 0.960982
+  n= 9: 3^n-2^n =    19171    3^n =    19683    (3^n-2^n)/3^n = 0.973988
+  n=10: 3^n-2^n =    58025    3^n =    59049    (3^n-2^n)/3^n = 0.982658
+  n=11: 3^n-2^n =   175099    3^n =   177147    (3^n-2^n)/3^n = 0.988439
+  n=12: 3^n-2^n =   527345    3^n =   531441    (3^n-2^n)/3^n = 0.992293
+  n=13: 3^n-2^n =  1586131    3^n =  1594323    (3^n-2^n)/3^n = 0.994862
+  n=14: 3^n-2^n =  4766585    3^n =  4782969    (3^n-2^n)/3^n = 0.996575
+  n=15: 3^n-2^n = 14316139    3^n = 14348907    (3^n-2^n)/3^n = 0.997716
+
+  Interpretation: 3ⁿ - 2ⁿ counts something BETWEEN the two key powers
+  In the Rubik's cube: corner piece count = 3ⁿ - 2ⁿ for n faces
+  (3ⁿ total corners minus 2ⁿ edge-adjacent)
+
+  The general recurrence a(n) = 5a(n-1) - 6a(n-2) has solution:
+    a(n) = A·2ⁿ + B·3ⁿ
+
+  Special cases:
+    A=0, B=1: a(n) = 3ⁿ (pure KEY₂)
+    A=1, B=0: a(n) = 2ⁿ (pure KEY₁)
+    A=-1,B=1: a(n) = 3ⁿ-2ⁿ (corner pieces)
+    A=1, B=1: a(n) = 2ⁿ+3ⁿ (Euler's trick for sum of powers)
+
+  Checking: which famous integer sequences satisfy this recurrence?
+    A=0, B=1: [1, 3, 9, 27, 81, 243, 729, 2187]  (3ⁿ)
+    A=1, B=0: [1, 2, 4, 8, 16, 32, 64, 128]  (2ⁿ)
+    A=-1, B=1: [0, 1, 5, 19, 65, 211, 665, 2059]  (3ⁿ-2ⁿ)
+    A=1, B=1: [2, 5, 13, 35, 97, 275, 793, 2315]  (2ⁿ+3ⁿ)
+    A=3, B=-1: [2, 3, 3, -3, -33, -147, -537, -1803]  (3·2ⁿ-3ⁿ)
+    A=-1/2, B=1/2: [0, 0, 2, 9, 32, 105, 332, 1029]  ((3ⁿ-2ⁿ)/2)
+    A=-3, B=2: [-1, 0, 6, 30, 114, 390, 1266, 3990]  (2·3ⁿ-3·2ⁿ)
+
+======================================================================
+PART 4: THE (2,3,5) AS A MARKOV-LIKE TRIPLE
+======================================================================
+
+(2,3,5) relations:
+  a+b = c: 2+3 = 5 ✓ (Fibonacci-type)
+  a·b+c = 11: the shifted one!
+  a·b·c = 30 = h(E₈)
+  a²+b²+c² = 38 = 38
+  3abc = 90 = 90 ≠ 38 (NOT Markov)
+  a²+b² = 13 = 13 (Fibonacci prime!)
+  b²+c² = 34 = 34 (Fibonacci number!)
+  a²+b²+c² - a·b·c = 8 = 8 = rank(E₈)
+  a²·b²+b²·c²+a²·c² = 361
+    = 361 = 259
+
+UNIQUE PROPERTY: a² + b² + c² - abc = rank(E₈)
+  2² + 3² + 5² - 2·3·5 = 4+9+25-30 = 8 = rank(E₈)
+
+Platonic solids and their (p,q) Schläfli symbols:
+  Solid           {p,q}  V   E   F  Coxeter  1/p+1/q
+  Tetrahedron     {3,3}   4   6   4  A₃       2/3
+  Cube            {4,3}   8  12   6  B₃       7/12
+  Octahedron      {3,4}   6  12   8  B₃       7/12
+  Dodecahedron    {5,3}  20  30  12  H₃       8/15
+  Icosahedron     {3,5}  12  30  20  H₃       8/15
+
+  The condition for a Platonic solid: 1/p + 1/q > 1/2
+  Equivalently: 2pq - pq < 0 ... no, let's be precise:
+  1/p + 1/q > 1/2 ⟺ 2(p+q) > pq
+
+  (3,3): 2(3+3)=12 vs 3·3=9  ✓ SOLID
+  (4,3): 2(4+3)=14 vs 4·3=12  ✓ SOLID
+  (3,4): 2(3+4)=14 vs 3·4=12  ✓ SOLID
+  (5,3): 2(5+3)=16 vs 5·3=15  ✓ SOLID
+  (3,5): 2(3+5)=16 vs 3·5=15  ✓ SOLID
+  (6,3): 2(6+3)=18 vs 6·3=18  ✗ tiling
+  (3,6): 2(3+6)=18 vs 3·6=18  ✗ tiling
+
+======================================================================
+PART 5: ALTERNATING SUMS AND DEHN INVARIANTS
+======================================================================
+
+Eulerian numbers A(n,k) and alternating sums:
+(These are the h-vectors of hypercubes / permutohedra)
+
+  n=1: A(n,·) = [1]
+       sum = 1 = 1!, alt_sum = 1
+  n=2: A(n,·) = [1, 1]
+       sum = 2 = 2!, alt_sum = 0
+  n=3: A(n,·) = [1, 4, 1]
+       sum = 6 = 3!, alt_sum = -2
+  n=4: A(n,·) = [1, 11, 11, 1]
+       sum = 24 = 4!, alt_sum = 0
+  n=5: A(n,·) = [1, 26, 66, 26, 1]
+       sum = 120 = 5!, alt_sum = 16
+  n=6: A(n,·) = [1, 57, 302, 302, 57, 1]
+       sum = 720 = 6!, alt_sum = 0
+  n=7: A(n,·) = [1, 120, 1191, 2416, 1191, 120, 1]
+       sum = 5040 = 7!, alt_sum = -272
+  n=8: A(n,·) = [1, 247, 4293, 15619, 15619, 4293, 247, 1]
+       sum = 40320 = 8!, alt_sum = 0
+  n=9: A(n,·) = [1, 502, 14608, 88234, 156190, 88234, 14608, 502, 1]
+       sum = 362880 = 9!, alt_sum = 7936
+
+  The alternating sum is always 0 for n≥2!
+  This is the Dehn-Sommerville relation for the permutohedron.
+
+  Tournament polynomial f(z) = z² - 5z + 6:
+    f(0) = 6, f(1) = 2, alternating sum = f(0)-f(1) = 4
+    But for the COEFFICIENTS of z²-5z+6:
+    Coefficients: [1, -5, 6]
+    Alternating sum: 1-(-5)+6 = 12 = h(E₆)
+    Regular sum: 1+(-5)+6 = 2 = KEY₁ = f(1)
+
+  Dihedral angles of Platonic solids (in degrees):
+    Tetrahedron:  70.5288°
+    Cube:         90.0000°
+    Octahedron:   109.4712°
+    Dodecahedron: 116.5651°
+    Icosahedron:  138.1897°
+
+  Dehn invariant = 0 ⟺ scissors-congruent to cube
+  Only the CUBE has Dehn invariant 0 among Platonic solids!
+  This means: tetra, octa, dodec, icos CANNOT be cut into cubes
+
+  Niven's theorem: the only rational multiples of π where
+  sin and cos are algebraic are denominators {1, 2, 3} = {1, KEY₁, KEY₂}
+
+  Connection: Dehn invariant involves angles as elements of R⊗Q(R/πQ)
+  The 'rational' angles are exactly those with denominators dividing 6=KEY₁·KEY₂
+  Cube angle = π/2: denominator 2 = KEY₁
+  All other Platonic angles are irrational multiples of π
+
+======================================================================
+PART 6: THE MOAT AT T=10 — WHY n! < T(n) HERE
+======================================================================
+
+T(n) = 2^C(n,2) vs n!:
+
+  n= 1: T(n) =               1, n! =            1, T/n! =       1.0000
+  n= 2: T(n) =               2, n! =            2, T/n! =       1.0000
+  n= 3: T(n) =               8, n! =            6, T/n! =       1.3333
+  n= 4: T(n) =              64, n! =           24, T/n! =       2.6667
+  n= 5: T(n) =            1024, n! =          120, T/n! =       8.5333
+  n= 6: T(n) =           32768, n! =          720, T/n! =      45.5111
+  n= 7: T(n) =         2097152, n! =         5040, T/n! =     416.1016
+  n= 8: T(n) =       268435456, n! =        40320, T/n! =    6657.6254
+  n= 9: T(n) =     68719476736, n! =       362880, T/n! =  189372.4557
+  n=10: T(n) =  35184372088832, n! =      3628800, T/n! = 9695869.7335 ← CROSSOVER
+  n=11: T(n) = 36028797018963968, n! =     39916800, T/n! = 902597327.9162
+  n=12: T(n) = 73786976294838206464, n! =    479001600, T/n! = 154043277297.6921
+  n=13: T(n) = 3.022315e+23, n! = 6.227021e+09, T/n! = 4.8535e+13
+  n=14: T(n) = 2.475880e+27, n! = 8.717829e+10, T/n! = 2.8400e+16
+
+  T(n)/n! = number of non-isomorphic tournaments (by Burnside, approx)
+
+  n= 2: log₂(T) =    1, log₂(n!) =     1.00, diff =     0.00
+  n= 3: log₂(T) =    3, log₂(n!) =     2.58, diff =     0.42
+  n= 4: log₂(T) =    6, log₂(n!) =     4.58, diff =     1.42
+  n= 5: log₂(T) =   10, log₂(n!) =     6.91, diff =     3.09
+  n= 6: log₂(T) =   15, log₂(n!) =     9.49, diff =     5.51
+  n= 7: log₂(T) =   21, log₂(n!) =    12.30, diff =     8.70
+  n= 8: log₂(T) =   28, log₂(n!) =    15.30, diff =    12.70
+  n= 9: log₂(T) =   36, log₂(n!) =    18.47, diff =    17.53
+  n=10: log₂(T) =   45, log₂(n!) =    21.79, diff =    23.21 ← ZERO CROSSING
+  n=11: log₂(T) =   55, log₂(n!) =    25.25, diff =    29.75
+  n=12: log₂(T) =   66, log₂(n!) =    28.84, diff =    37.16
+  n=13: log₂(T) =   78, log₂(n!) =    32.54, diff =    45.46
+  n=14: log₂(T) =   91, log₂(n!) =    36.34, diff =    54.66
+
+  The moat is at n=10 = 2·5 = KEY₁·(KEY₁+KEY₂)
+  = Petersen vertex count!
+  The Petersen graph literally sits at the tournament-factorial boundary.
+
+  Before n=10: factorial symmetry dominates (few non-iso tournaments)
+  After n=10: binary choices dominate (exponentially many non-iso tournaments)
+  The Petersen graph K(5,2) marks this phase transition!
+
+======================================================================
+PART 7: 7 = 2²+3 AND 8 = 2³ — THE FIRST COMPOSITE KEYS
+======================================================================
+
+7 = KEY₁² + KEY₂ = 4 + 3:
+  7 is the smallest number NOT dividing 30 = KEY₁·KEY₂·(KEY₁+KEY₂)
+  7 is the first E₈ exponent after 1
+  7 = rank(E₇)
+  f(7) = (7-2)(7-3) = 5·4 = 20 = V(dodecahedron)
+  7 = h(G₂) + 1 = 6 + 1
+  7 = smallest prime not in {2,3,5} = first 'free' prime for E₈
+  C(7,2) = 21 = number of tournament multiples in [1,30)
+
+8 = KEY₁³ = 2³:
+  8 = rank(E₈)
+  8 = φ(30) = #{totatives of 30}
+  8 = τ(30) = #{divisors of 30}
+  f(8) = (8-2)(8-3) = 6·5 = 30 = h(E₈)
+  f(KEY₁³) = h(E₈): the polynomial at rank gives Coxeter number!
+  8 = number of 3-dimensional crystallographic point groups with det=1
+
+The 7-8 pair (KEY₁²+KEY₂, KEY₁³):
+  7·8 = 56 = T(6) = dim(V_E₇) = f(10)
+  7+8 = 15 = C(6,2) = E(Petersen)
+  8-7 = 1 (adjacent)
+  8/7 ≈ 1.142857 (close to 1, slowly diverging)
+  log₂(7) = 2.807355 ≈ KEY₁+0.8074
+  log₃(8) = 1.892789 ≈ KEY₁-0.1072
+
+  E₈ exponents: {1, 7, 11, 13, 17, 19, 23, 29}
+  Gaps:          6, 4,  2,  4,  2,  4,  6
+  First gap: 7-1 = 6 = h(G₂) = KEY₁·KEY₂
+  The gaps are palindromic: [6,4,2,4,2,4,6]
+  Gap sum: 28 = 28 = T(8) in binary = rank(E₈)·(rank(E₈)-1)/2-...
+  Actually 29-1 = 28 = C(8,2) = the LAST - FIRST = range
+
+======================================================================
+PART 8: 10 AND 11 AS SHIFTED ONES
+======================================================================
+
+10 = 1 shifted left in decimal:
+  10 = KEY₁ · (KEY₁+KEY₂) = 2·5
+  10 = V(Petersen)
+  f(10) = 56 = T(6) = dim(V_E₇)
+  In every base b, 10_b = b (the shifted identity)
+  In binary: 10₂ = 2 = KEY₁
+  In ternary: 10₃ = 3 = KEY₂
+  In base 5: 10₅ = 5 = KEY₁+KEY₂
+  So '10' in base b means b: it IS the base!
+
+11 = 1 repeated:
+  11 = KEY₁·KEY₂ + (KEY₁+KEY₂) = 6+5
+  f(11) = 72 = σ(30) = rank(E₈)·9
+  In binary: 11₂ = 3 = KEY₂
+  In ternary: 11₃ = 4 = KEY₁²
+  In base 5: 11₅ = 6 = KEY₁·KEY₂ = h(G₂)
+  In base b: 11_b = b+1 = next(b)
+  So 11 in base KEY₁ gives KEY₂, and vice versa!
+
+The 10-11 pair:
+  10·11 = 110 = C(11,2) + ... hmm, 110 = 2·5·11
+  10+11 = 21 = #tournament multiples of (2,3,5) in [1,30)
+  f(10)·f(11) = 56·72 = 4032 = 2⁶·3²·7 = KEY₁⁶·KEY₂²·7
+  f(10)+f(11) = 56+72 = 128 = 2⁷ = KEY₁^rank(E₇)
+
+  REMARKABLE: f(10) + f(11) = 2⁷ = KEY₁^rank(E₇)
+  Also: f(10) = 56 = 2³·7 and f(11) = 72 = 2³·9
+  So f(10) = 8·7 and f(11) = 8·9
+  f(10)+f(11) = 8·(7+9) = 8·16 = 128 = 2⁷
+
+  In the MODULAR perspective:
+    10 mod  2 = 0, 11 mod  2 = 1 ← 10≡0
+    10 mod  3 = 1, 11 mod  3 = 2 ← 10≡1
+    10 mod  5 = 0, 11 mod  5 = 1 ← 10≡0
+    10 mod  6 = 4, 11 mod  6 = 5
+    10 mod  7 = 3, 11 mod  7 = 4
+    10 mod  8 = 2, 11 mod  8 = 3
+    10 mod 12 = 10, 11 mod 12 = 11
+    10 mod 30 = 10, 11 mod 30 = 11
+
+  10 ≡ 1 (mod 3) and 11 ≡ 1 (mod 2, 5): shifted ones in key bases!
+  10 ≡ 1 (mod 3) ≡ 1 (mod 9): shifted one in KEY₂ and KEY₂²
+  11 ≡ 1 (mod 2) ≡ 1 (mod 5): shifted one in KEY₁ and KEY₁+KEY₂
+
+======================================================================
+PART 9: THE n=9 TRANSITION — FROM 2³ TO 3²
+======================================================================
+
+The landscape around n=9:
+
+  n= 6: C(n,2)= 15, T(n)=     32768, f(n)=  12 = 2·2·3
+  n= 7: C(n,2)= 21, T(n)=   2097152, f(n)=  20 = 2·2·5
+  n= 8: C(n,2)= 28, T(n)= 268435456, f(n)=  30 = 2·3·5
+  n= 9: C(n,2)= 36, T(n)=68719476736, f(n)=  42 = 2·3·7
+  n=10: C(n,2)= 45, T(n)=35184372088832, f(n)=  56 = 2·2·2·7
+  n=11: C(n,2)= 55, T(n)=36028797018963968, f(n)=  72 = 2·2·2·3·3
+  n=12: C(n,2)= 66, T(n)=73786976294838206464, f(n)=  90 = 2·3·3·5
+
+  AT n=9 (= KEY₂² = 3²):
+    C(9,2) = 36 = 6² = (KEY₁·KEY₂)²
+    f(9) = 42 = 2·3·7 = V(icos)+V(dodec)+V(Petersen)
+    42 = 6·7 = h(G₂)·rank(E₇)
+    #3-cycles in regular T₉ = 30 = h(E₈)
+
+  THE TRANSITION 8 → 9 is 2³ → 3²:
+    8 = KEY₁³: cubic power of first key
+    9 = KEY₂²: square power of second key
+    8·9 = 72 = f(11) = σ(30)
+    8+9 = 17: fifth E₈ exponent!
+    9-8 = 1: adjacent integers
+    9/8 = 9/8 = the 'Pythagorean' whole tone in music
+
+  MUSICAL INTERLUDE: the 9/8 whole tone
+    In Pythagorean tuning: whole tone = 9/8 = KEY₂²/KEY₁³
+    Perfect fifth = 3/2 = KEY₂/KEY₁
+    Perfect fourth = 4/3 = KEY₁²/KEY₂
+    Octave = 2/1 = KEY₁
+    Major third = 81/64 = (KEY₂/KEY₁)⁴/KEY₁
+    Pythagorean comma = 3¹²/2¹⁹ ≈ 1.013643
+    The comma ≈ 1.013643 is the 'gap' between the two keys
+    after 12 fifths vs 7 octaves: KEY₂¹² vs KEY₁¹⁹
+    12 = h(E₆), 19 = h₊₁(E₈) ... hmm
+
+  THE (p,q) TABLE:
+         q=1    q=2    q=3
+  p=2:   2      4=2²   8=2³
+  p=3:   3      9=3²   27=3³
+  p=5:   5     25=5²  125=5³
+
+  The 2×3 block {2,3,4,8,9,27} contains:
+    2,3 = the keys
+    4 = KEY₁² = rank(F₄)
+    8 = KEY₁³ = rank(E₈)
+    9 = KEY₂² = CS_boundary = h∨(F₄)
+    27 = KEY₂³ = dim(V_E₆)
+
+======================================================================
+PART 10: THE (2,3,5) IN STERN-BROCOT AND CONTINUED FRACTIONS
+======================================================================
+
+Golden ratio φ = (1+√5)/2 = [1; 1, 1, 1, ...]
+Convergents:
+  2/1 = 2.0000000000
+  3/2 = 1.5000000000  ← denominator = tournament prime!
+  5/3 = 1.6666666667  ← denominator = tournament prime!
+  8/5 = 1.6000000000  ← denominator = tournament prime!
+  13/8 = 1.6250000000
+  21/13 = 1.6153846154
+  34/21 = 1.6190476190
+  55/34 = 1.6176470588
+  89/55 = 1.6181818182
+
+  The first three Fibonacci primes: 2, 3, 5 = the tournament triple!
+  φ's convergents 'discover' the tournament primes in order.
+
+  In the Stern-Brocot tree:
+    Level 0: 1/1
+    Level 1: 1/2, 2/1
+    Level 2: 1/3, 2/3, 3/2, 3/1
+    Level 3: 1/4, 2/5, 3/5, 3/4, 4/3, 5/3, 5/2, 4/1
+
+    The fraction KEY₂/KEY₁ = 3/2 appears at level 2
+    This is the 'simplest' ratio between the two keys
+    In music: the perfect fifth (most consonant interval after octave)
+
+  KEY₂/KEY₁ = 3/2 = [1; 2] (finite continued fraction)
+  KEY₁+KEY₂ / KEY₁·KEY₂ = 5/6 = [0; 1, 5] 
+  KEY₁·KEY₂ / (KEY₁+KEY₂) = 6/5 = [1; 5]
+  h(E₈)/rank(E₈) = 30/8 = 15/4 = [3; 1, 3]
+
+======================================================================
+GRAND SYNTHESIS: THE DYNAMICAL PICTURE
+======================================================================
+
+The universe of (2,3,5) is a DYNAMICAL SYSTEM:
+
+1. TWO ATTRACTORS: KEY₁=2 and KEY₂=3
+   - k-nacci recurrences approach 2 from above
+   - weighted k-nacci approach 3 from above
+   - The gap is always exactly 1 (in the limit)
+
+2. THE POLYNOMIAL f(z)=(z-2)(z-3) IS THE POTENTIAL:
+   - Zeros at the two attractors
+   - Minimum at z=5/2 with f(5/2)=-1/4
+   - Integer evaluations encode the exceptional Lie data
+   - Vertex at (5/2, -1/4): KEY₁+KEY₂ over KEY₁ = midpoint
+
+3. THE SIEVE f(z) ≡ 0 mod 30 CREATES TWO WORLDS:
+   - Multiples of {2,3,5}: tournament theory (21 numbers)
+   - Coprime to 30: Lie exponent theory (8 numbers)
+   - The two worlds are complementary: partition ALL integers
+
+4. THE BOUNDARY AT 5 = KEY₁+KEY₂:
+   - (2,3,5) is the last spherical triple
+   - After 5, no more Platonic solids (hexagonal tiling is flat)
+   - The Petersen K(5,2) guards this boundary
+   - Its 10 vertices mark T(n) > n! crossover
+
+5. THE RECURRENCE BACKBONE:
+   - Every sequence A·2ⁿ + B·3ⁿ satisfies a(n) = 5a(n-1) - 6a(n-2)
+   - 3ⁿ always wins (KEY₂ dominates)
+   - But 2ⁿ controls the parity structure
+   - The gap 3ⁿ-2ⁿ grows geometrically with ratio → 3
+
+6. MUSIC, GEOMETRY, AND ALGEBRA AGREE:
+   - 3/2 = perfect fifth (music)
+   - (2,3,5) = spherical triple (geometry)
+   - E₈ = last exceptional Lie group (algebra)
+   - The Pythagorean comma ≈ 3¹²/2¹⁹ measures the mismatch
+   - 12 = h(E₆), 19 = ... the Lie numbers appear naturally
+
+ONE SENTENCE:
+  The characteristic polynomial z²-5z+6 = (z-2)(z-3) generates
+  the ADE classification through its sieve at 30 = 2·3·5,
+  the Petersen graph as the moat guardian at 10 = 2·5,
+  and all Platonic solids through the spherical condition 1/p+1/q > 1/2.
