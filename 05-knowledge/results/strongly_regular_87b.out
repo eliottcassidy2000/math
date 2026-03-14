@@ -1,0 +1,142 @@
+======================================================================
+QR₇: STRONGLY REGULAR 3-CYCLE CONFLICT GRAPH
+======================================================================
+14 directed 3-cycles of QR₇:
+  C 0: (0, 1, 3) → [0, 1, 3]
+  C 1: (0, 1, 5) → [0, 1, 5]
+  C 2: (0, 2, 3) → [0, 2, 3]
+  C 3: (0, 2, 6) → [0, 2, 6]
+  C 4: (0, 4, 5) → [0, 4, 5]
+  C 5: (0, 4, 6) → [0, 4, 6]
+  C 6: (1, 2, 4) → [1, 2, 4]
+  C 7: (1, 2, 6) → [1, 2, 6]
+  C 8: (1, 3, 4) → [1, 3, 4]
+  C 9: (1, 5, 6) → [1, 5, 6]
+  C10: (2, 3, 5) → [2, 3, 5]
+  C11: (2, 4, 5) → [2, 4, 5]
+  C12: (3, 4, 6) → [3, 4, 6]
+  C13: (3, 5, 6) → [3, 5, 6]
+
+Conflict graph degrees: Counter({np.int64(12): 14})
+
+k = 12 (every cycle conflicts with 12 others)
+Non-conflicting neighbors = 1
+
+λ values (common neighbors for adjacent pairs): {10: 84}
+μ values (common neighbors for non-adjacent pairs): {12: 7}
+
+✓ STRONGLY REGULAR: srg(14, 12, 10, 12)
+
+SRG identities:
+  k(k - λ - 1) = (n - k - 1)μ
+  12(12 - 10 - 1) = (14 - 12 - 1) × 12
+  12 = 12
+
+  Eigenvalues (from parameters):
+    λ₁ = k = 12
+    λ₂ = (10-12+√4)/2 = 0.0
+    λ₃ = (10-12-√4)/2 = -2.0
+  Matches computed spectrum: ✓
+
+======================================================================
+NON-CONFLICTING PAIRS (PERFECT MATCHING)
+======================================================================
+Non-conflicting (vertex-disjoint) 3-cycle pairs:
+  C0=[0, 1, 3] ↔ C11=[2, 4, 5] (uncov: 6)
+  C1=[0, 1, 5] ↔ C12=[3, 4, 6] (uncov: 2)
+  C2=[0, 2, 3] ↔ C9=[1, 5, 6] (uncov: 4)
+  C3=[0, 2, 6] ↔ C8=[1, 3, 4] (uncov: 5)
+  C4=[0, 4, 5] ↔ C7=[1, 2, 6] (uncov: 3)
+  C5=[0, 4, 6] ↔ C10=[2, 3, 5] (uncov: 1)
+  C6=[1, 2, 4] ↔ C13=[3, 5, 6] (uncov: 0)
+
+Degrees in complement: Counter({np.int64(1): 14})
+✓ PERFECT MATCHING — each 3-cycle has exactly ONE disjoint partner
+
+The 7 matched pairs:
+  Pair 0: [0, 1, 3] ↔ [2, 4, 5] → uncov 6
+  Pair 1: [0, 1, 5] ↔ [3, 4, 6] → uncov 2
+  Pair 2: [0, 2, 3] ↔ [1, 5, 6] → uncov 4
+  Pair 3: [0, 2, 6] ↔ [1, 3, 4] → uncov 5
+  Pair 4: [0, 4, 5] ↔ [1, 2, 6] → uncov 3
+  Pair 5: [0, 4, 6] ↔ [2, 3, 5] → uncov 1
+  Pair 6: [1, 2, 4] ↔ [3, 5, 6] → uncov 0
+
+Uncovered vertices: [0, 1, 2, 3, 4, 5, 6]
+Is this {0, 1, 2, 3, 4, 5, 6}: True
+
+✓ EACH VERTEX IS UNCOVERED BY EXACTLY ONE MATCHED PAIR!
+  The 7 matched pairs partition {0,...,6} by their uncovered vertex.
+  This gives a map: 3-cycle pairs → Z₇
+  The matching IS the Z₇ action!
+
+======================================================================
+IDENTIFICATION OF THE STRONGLY REGULAR GRAPH
+======================================================================
+Cocktail party graph CP(7) = srg(14, 12, 10, 12)
+Our conflict graph = srg(14, 12, 10, 12)
+Match: True
+
+✓ THE QR₇ 3-CYCLE CONFLICT GRAPH IS THE COCKTAIL PARTY GRAPH CP(7)!
+
+CP(7) = K_{14} minus a perfect matching = complement of 7K₂
+
+MEANING:
+  - 14 3-cycles grouped into 7 matched pairs
+  - Within each pair: the two cycles are vertex-disjoint
+  - Between pairs: every cycle from one pair conflicts with every cycle
+    from every other pair
+  - The ONLY non-conflicting pairs are the matched ones
+
+This is the MAXIMUM possible edge count for 14 vertices with
+independence number 2! (Any independent set has at most one cycle
+from each matched pair, so α ≤ 7 = number of pairs)
+
+For QR₇: α₂ = 7 = independence number = number of matched pairs
+This is TIGHT — the maximum independent set uses all 7 pairs!
+
+======================================================================
+AP₇: 3-CYCLE CONFLICT GRAPH
+======================================================================
+Conflict graph degrees: Counter({np.int64(11): 14})
+λ values: {8: 63, 9: 14}
+μ values: {10: 14}
+AP₇ conflict graph is NOT strongly regular
+  Multiple λ or μ values → different edge types
+
+Complement degrees: Counter({np.int64(2): 14})
+  (Each cycle has Counter({np.int64(2): 14}) disjoint partners)
+
+======================================================================
+THE PUNCHLINE
+======================================================================
+
+THE QR₇-CP(7) THEOREM:
+
+  The 3-cycle conflict graph of the Paley tournament QR₇ is
+  the cocktail party graph CP(7) = K_{14} - 7K₂.
+
+  This is the UNIQUE strongly regular graph with parameters
+  srg(14, 12, 10, 12), and is equivalent to the statement:
+
+  "The 14 directed 3-cycles of QR₇ pair up into 7 vertex-disjoint
+   couples, and any two cycles from DIFFERENT couples share a vertex."
+
+  This is the most rigid possible conflict structure:
+  - Independence number α₂ = 7 (one cycle per couple)
+  - The maximum independent set has a UNIQUE structure (up to choice
+    of cycle from each couple)
+  - Total independent sets of size 7: 2⁷ = 128
+
+  CONSEQUENCE: H(QR₇) is determined by the cocktail party structure.
+  I(CP(7), x) = (1 + 2x)⁷ (the independence polynomial of CP(n) is (1+2x)^n)
+  → I(CP(7), 2) = 5⁷ = 78125? No, this counts independent sets weighted by x^|S|.
+  Actually I(CP(n), x) = (1+2x)^n. At n=7, x=2: (1+4)^7 = 5^7 = 78125.
+
+  But H(QR₇) = 189, not 78125. The conflict graph independence polynomial
+  evaluated at x=2 gives H only for the FULL conflict graph (including
+  5-cycles and 7-cycles), not just the 3-cycle conflict graph.
+
+  Still: the cocktail party structure of the 3-CYCLE subgraph is a
+  beautiful structural theorem specific to Paley tournaments.
+
