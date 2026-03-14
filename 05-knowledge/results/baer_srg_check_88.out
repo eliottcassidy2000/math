@@ -1,0 +1,39 @@
+Finding all Baer subplanes...
+Total Baer subplanes: 360
+
+Building disjointness adjacency matrix...
+Degree distribution: {16: 360}
+
+Computing lambda (common neighbors of adjacent vertices)...
+Lambda distribution (from 800 edges): {1: 800}
+
+Computing mu (common neighbors of non-adjacent vertices)...
+Mu distribution (from 600 non-edges): {0: 183, 2: 417}
+
+Strongly regular: False
+
+======================================================================
+INTERSECTION PATTERN OF BAER SUBPLANES
+======================================================================
+Intersection size distribution (pairs of Baer subplanes):
+  |B_i ∩ B_j| = 0: 2880 pairs
+  |B_i ∩ B_j| = 1: 7560 pairs
+  |B_i ∩ B_j| = 2: 30240 pairs
+  |B_i ∩ B_j| = 3: 13860 pairs
+  |B_i ∩ B_j| = 4: 10080 pairs
+Total pairs: 64620
+
+======================================================================
+DESIGN INTERSECTION TRIANGLE
+======================================================================
+Block intersection graph: 343-regular on 360 vertices
+  343 = 7^3 = 7 * 49
+  The complement of the disjointness graph!
+  Each Baer subplane intersects 343 others
+  and is disjoint from 16 others
+  343 + 16 = 359 = 360 - 1 ✓
+
+  343 = 7^3: the number of non-disjoint neighbors
+  is a PERFECT CUBE of the Fano number!
+  16 = 2^4: the number of disjoint neighbors
+  is a PERFECT POWER of 2!
