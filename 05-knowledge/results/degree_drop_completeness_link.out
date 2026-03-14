@@ -1,0 +1,78 @@
+======================================================================
+H AS MULTILINEAR POLYNOMIAL: DIGRAPH vs TOURNAMENT
+======================================================================
+
+n=4: H as polynomial in 12 arc indicators
+  24 permutations = 4! = potential paths
+  Primary tournament variables: ['x01', 'x02', 'x03', 'x12', 'x13', 'x23']
+
+  H(tournament) = -2*x01*x02 - 2*x01*x03 + 2*x01*x12 + 2*x01*x13 - 2*x02*x03 - 2*x02*x12 + 2*x02*x23 + 2*x02 - 2*x03*x13 - 2*x03*x23 + 4*x03 - 2*x12*x13 + 2*x12*x23 - 2*x13*x23 + 2*x13 + 1
+  Degree in any single variable: 1
+  Max multilinear degree: 2
+  Expected (degree drop): 2*floor(3/2) = 2
+
+  DIGRAPH polynomial (independent arc variables):
+  Degree: always 3 (no constraint to cause cancellation)
+
+======================================================================
+CONSTRAINT SUBSTITUTION: xⱼᵢ = 1 - xᵢⱼ
+======================================================================
+
+  n=5: 10 primary variables
+  Multilinear degree: 4
+  Expected: n-1 = 4 (odd n: no drop)
+  Number of top-degree terms: 60
+  Top-degree coefficients: {2, -2}
+
+======================================================================
+THE KEY IDENTITY: COMPLETENESS = DEGREE DROP = H=7 OBSTRUCTION
+======================================================================
+
+SYNTHESIS:
+
+1. DIGRAPH WORLD (simplex = (x+1)^n):
+   - H is a multilinear polynomial of degree n-1 in n(n-1) variables
+   - Variables are INDEPENDENT (each arc can be present or absent)
+   - H=7 IS achievable (by directed 7-cycle: H=7)
+   - No degree drop — top-degree terms do NOT cancel
+
+2. TOURNAMENT WORLD (cuboid = (x+2)^n):
+   - The constraint xⱼᵢ = 1 - xᵢⱼ HALVES the variables
+   - But MORE importantly: it causes DEGREE DROP
+   - Even n: degree drops from n-1 to n-2 (top terms cancel)
+   - Odd n: degree stays n-1 but coefficients = ±2 (not general)
+   - H=7 is NOT achievable
+
+3. THE CONNECTION:
+   - The tournament constraint xⱼᵢ = 1 - xᵢⱼ is AFFINE (degree 1)
+   - Substituting it into degree-(n-1) terms:
+     (1 - x_{ij}) × other variables = -x_{ij} × others + others
+   - The -x terms cancel with matching +x terms from reversed paths
+   - This is the PATH REVERSAL INVOLUTION that kind-pasteur proved!
+
+4. WHY H=7 IS KILLED:
+   - In the digraph, H=7 requires very sparse arc structure
+   - Tournament completion adds (1-x) terms everywhere
+   - These terms expand to create many new paths
+   - The minimum tournament H at n=7 is 25 (from 7-cycle completion)
+   - The "gap" from 7 to 25 is exactly the effect of the constraint
+
+5. THE SIMPLEX-CUBOID ANALOGY:
+   - Simplex (x+1)^n: each dimension has 2 choices (arc present/absent)
+   - Cuboid (x+2)^n: each dimension has 3 values... wait, this doesn't
+     quite work because the constraint is binary (tournament), not ternary.
+
+   Better analogy:
+   - INDEPENDENT arcs = simplex: each pair contributes (1+xᵢⱼ)(1+xⱼᵢ)
+   - CONSTRAINED arcs = cuboid: each pair contributes (xᵢⱼ + (1-xᵢⱼ)) = 1
+     ... but this is trivial.
+
+   Actually, the simplex-cuboid connection is through the INDEPENDENCE
+   POLYNOMIAL:
+   - I(Ω, x) with x=2 (tournament) vs x=1 (graph)
+   - The factor (1+2x) = 5 vs (1+x) = 3 per cycle pair
+   - Cuboid evaluation is RICHER than simplex evaluation
+
+======================================================================
+ANALYSIS COMPLETE
+======================================================================
