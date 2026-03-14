@@ -1,0 +1,45 @@
+H=21 IMPOSSIBILITY ANALYSIS — opus-2026-03-14-S71g
+============================================================
+
+THEOREM: I(G,2) = 21 requires one of these graph structures:
+  (alpha_1=10, alpha_2=0): K_10 — 10 pairwise-sharing cycles
+  (alpha_1=8, alpha_2=1): K_8 - 1 edge — 8 cycles, 1 disjoint pair
+  (alpha_1=6, alpha_2=2): K_6 - 2 edges — 6 cycles, 2 disjoint pairs
+  (alpha_1=4, alpha_2=3): P_4 — 4 cycles, 3 disjoint pairs
+  (disconnected): K_3 + K_1 — 3+1 cycles (product 7*3=21)
+
+STATUS OF EACH CASE:
+
+1. K_3 + K_1 (disconnected): RULED OUT
+   K_3 cannot be a component of Omega(T) (THM-201).
+
+2. P_4 (path on 4 vertices): RULED OUT
+   Configuration on 7 vertices (sharing edges): min t3=5 (always extra triangles)
+   Configuration on 9 vertices (sharing 1 vertex each): min t3=9 (even worse)
+   The P4 triangle pattern inherently forces additional triangles.
+   Exhaustive check: 0/2048 completions on 7 vertices achieve t3=4.
+   Exhaustive check: 0/16777216 completions on 9 vertices achieve t3=4.
+
+3. K_6 - 2 edges: OPEN
+   Needs 6 odd cycles with exactly 2 vertex-disjoint pairs.
+   Needs total odd cycles = 6 exactly (no additional cycles).
+   This is the most promising case for H=21 — needs investigation.
+
+4. K_8 - 1 edge: OPEN
+   Needs 8 cycles with exactly 1 disjoint pair.
+
+5. K_10: OPEN
+   Needs 10 pairwise-sharing cycles, no additional cycles.
+   On ≤7 vertices: at n=5, all cycles pairwise share (alpha_2=0).
+   At n=7 with t3=10: some triangle pairs are necessarily disjoint.
+
+EMPIRICAL EVIDENCE:
+  H=21 absent at n≤7 (exhaustive: 2,130,920 tournaments checked)
+  H=21 absent at n≤9 (sampled: 100,000+ per n)
+  This strongly suggests H=21 is permanently forbidden.
+
+KEY INSIGHT:
+  The P4 structure is "self-defeating": planting 4 triangles in P4 pattern
+  always creates additional triangles, pushing total cycles above 4.
+  This is because the shared vertices create paths of length 2 that
+  are completed into triangles by the remaining arcs.
