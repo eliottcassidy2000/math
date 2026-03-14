@@ -1,0 +1,570 @@
+======================================================================
+WILD IDEAS — PART 3: DEEP INVESTIGATIONS
+opus-2026-03-14-S71m
+======================================================================
+
+======================================================================
+INVESTIGATION 1: WHY H ≡ 0 mod 7 IS FORBIDDEN
+======================================================================
+
+  H = I(Omega(T), 2) = independence polynomial of Omega(T) at x=2.
+  H = 1 + 2*|V(Omega)| + 4*|ind pairs| + 8*|ind triples| + ...
+  H = 1 + 2*C(n,2) + 4*i_2 + 8*i_3 + ...
+  where i_k = number of independent sets of size k in Omega(T).
+
+  Wait, Omega(T) has C(n,2) vertices (the edges of K_n).
+  An independent set in Omega(T) = set of edges with no two in a 3-cycle.
+
+  Actually: H = I(Omega, 2) where I is the independence polynomial
+  evaluated at x=2. But OCF says H = I(Omega(T), 2) where Omega(T)
+  is the ODD CYCLE COLLECTION. Let's use the simpler formula.
+
+  H ≡ 1 mod 2 always (Rédei).
+  H mod 3: H = 1 + 2*C(n,2) + 4*i_2 + 8*i_3 + ...
+           ≡ 1 + 2*C(n,2) + i_2 + 2*i_3 + i_4 + 2*i_5 + ... mod 3
+
+  H mod 7: H ≡ 1 + 2*C(n,2) + 4*i_2 + i_3 + 2*i_4 + 4*i_5 + i_6 + ... mod 7
+
+  For H ≡ 0 mod 7, we need this sum to vanish mod 7.
+
+  But WAIT: Φ_3(2) = 4 + 2 + 1 = 7. And the powers of 2 mod 7 cycle:
+  2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 1, 2^4 = 2, 2^5 = 4, ...
+  Period 3! Because ord_7(2) = 3.
+
+  So H mod 7 = sum_k i_k * 2^k mod 7
+             = sum_{k≡0 mod 3} i_k * 1 + sum_{k≡1 mod 3} i_k * 2 + sum_{k≡2 mod 3} i_k * 4 mod 7
+             = A + 2B + 4C mod 7
+  where A = sum_{k≡0(3)} i_k, B = sum_{k≡1(3)} i_k, C = sum_{k≡2(3)} i_k.
+
+  For H ≡ 0 mod 7: A + 2B + 4C ≡ 0 mod 7.
+
+  But I(Omega, omega) where omega = e^{2pi i/3} has the property:
+  I(Omega, omega) = A*omega^0 + B*omega^1 + C*omega^2 (grouping by residue mod 3)
+
+  Wait, this isn't quite right. Let me think more carefully.
+
+  I(Omega, x) = sum_k i_k * x^k.
+  At x = 2: I = H.
+  At x = 2*omega where omega^3 = 1:
+  I(Omega, 2*omega) = sum_k i_k * (2*omega)^k = sum_k i_k * 2^k * omega^k
+
+  The three values I(Omega, 2), I(Omega, 2*omega), I(Omega, 2*omega^2)
+  determine A + 2B + 4C, A + 2B*omega + 4C*omega^2, etc.
+
+  H mod 7 = 0 iff I(Omega, 2) mod 7 = 0 iff 7 | H.
+
+  Since Φ_3(2) = 7, this is related to the factorization of I(Omega, x) mod Φ_3(x).
+
+  KEY INSIGHT: 7 | H iff H ≡ 0 mod Φ_3(2).
+  This connects the forbidden value 7 to the cyclotomic polynomial!
+
+  If Φ_3(x) | I(Omega, x) in Z[x], then 7 = Φ_3(2) | I(Omega, 2) = H.
+  But Φ_3(x) NEVER divides I(Omega, x) for any tournament!
+
+  QUESTION: Is it true that I(Omega, omega) ≠ 0 for every tournament?
+  If so, then Φ_3(x) ∤ I(Omega, x), and the 7-divisibility question
+  becomes more nuanced.
+
+
+  n=3: H mod 7 distribution:
+    H ≡ 0 mod 7:      0 (  0.0%)
+    H ≡ 1 mod 7:      6 ( 75.0%)
+    H ≡ 2 mod 7:      0 (  0.0%)
+    H ≡ 3 mod 7:      2 ( 25.0%)
+    H ≡ 4 mod 7:      0 (  0.0%)
+    H ≡ 5 mod 7:      0 (  0.0%)
+    H ≡ 6 mod 7:      0 (  0.0%)
+  H mod 3 distribution:
+    H ≡ 0 mod 3:      2 ( 25.0%)
+    H ≡ 1 mod 3:      6 ( 75.0%)
+    H ≡ 2 mod 3:      0 (  0.0%)
+  H mod 21: 2 achievable residues, missing 19: [0, 2, 4, 5, 6, 7, 8, 9, 10, 11]...
+
+  n=4: H mod 7 distribution:
+    H ≡ 0 mod 7:      0 (  0.0%)
+    H ≡ 1 mod 7:     24 ( 37.5%)
+    H ≡ 2 mod 7:      0 (  0.0%)
+    H ≡ 3 mod 7:     16 ( 25.0%)
+    H ≡ 4 mod 7:      0 (  0.0%)
+    H ≡ 5 mod 7:     24 ( 37.5%)
+    H ≡ 6 mod 7:      0 (  0.0%)
+  H mod 3 distribution:
+    H ≡ 0 mod 3:     16 ( 25.0%)
+    H ≡ 1 mod 3:     24 ( 37.5%)
+    H ≡ 2 mod 3:     24 ( 37.5%)
+  H mod 21: 3 achievable residues, missing 18: [0, 2, 4, 6, 7, 8, 9, 10, 11, 12]...
+
+  n=5: H mod 7 distribution:
+    H ≡ 0 mod 7:      0 (  0.0%)
+    H ≡ 1 mod 7:    184 ( 18.0%)
+    H ≡ 2 mod 7:    240 ( 23.4%)
+    H ≡ 3 mod 7:    120 ( 11.7%)
+    H ≡ 4 mod 7:    120 ( 11.7%)
+    H ≡ 5 mod 7:    240 ( 23.4%)
+    H ≡ 6 mod 7:    120 ( 11.7%)
+  H mod 3 distribution:
+    H ≡ 0 mod 3:    424 ( 41.4%)
+    H ≡ 1 mod 3:    240 ( 23.4%)
+    H ≡ 2 mod 3:    360 ( 35.2%)
+  H mod 21: 7 achievable residues, missing 14: [0, 2, 4, 6, 7, 8, 10, 12, 14, 16]...
+
+  n=6: H mod 7 distribution:
+    H ≡ 0 mod 7:      0 (  0.0%)
+    H ≡ 1 mod 7:   7248 ( 22.1%)
+    H ≡ 2 mod 7:   9440 ( 28.8%)
+    H ≡ 3 mod 7:   4320 ( 13.2%)
+    H ≡ 4 mod 7:   2880 (  8.8%)
+    H ≡ 5 mod 7:   6240 ( 19.0%)
+    H ≡ 6 mod 7:   2640 (  8.1%)
+  H mod 3 distribution:
+    H ≡ 0 mod 3:   9728 ( 29.7%)
+    H ≡ 1 mod 3:  11520 ( 35.2%)
+    H ≡ 2 mod 3:  11520 ( 35.2%)
+  H mod 21: 17 achievable residues, missing 4: [0, 7, 14, 18]
+
+======================================================================
+INVESTIGATION 2: H AND THE ORDER OF 2 mod p
+======================================================================
+
+  ord_7(2) = 3 (since 2^3 = 8 ≡ 1 mod 7).
+  Φ_3(2) = 7.
+
+  For which primes p does ord_p(2) = 3?
+  Equivalently, which primes divide Φ_3(2) = 7?
+  Answer: only p = 7.
+
+  More generally, Φ_d(2) is divisible by primes p with ord_p(2) = d.
+  By Zsygmondy's theorem, Φ_d(2) has a "primitive prime divisor" for d ≥ 7.
+
+  Primes p | Φ_d(2):
+  d=1: Φ_1(2) = 1 (no prime)
+  d=2: Φ_2(2) = 3
+  d=3: Φ_3(2) = 7
+  d=4: Φ_4(2) = 5
+  d=5: Φ_5(2) = 31
+  d=6: Φ_6(2) = 3 (note: 3 | Φ_2 and Φ_6)
+  d=7: Φ_7(2) = 127
+  d=8: Φ_8(2) = 17
+
+  So:
+  H ≡ 0 mod 3: forbidden? Let's check.
+  H ≡ 0 mod 7: forbidden at n ≤ 6.
+  H ≡ 0 mod 5: forbidden?
+  H ≡ 0 mod 31: forbidden?
+
+
+  n=3: H-spectrum mod various Φ_d(2) primes:
+    H ≡ 0 mod   3 (Φ_2(2)): achievable (1 values: [3])
+    H ≡ 0 mod   7 (Φ_3(2)): FORBIDDEN
+    H ≡ 0 mod   5 (Φ_4(2)): FORBIDDEN
+    H ≡ 0 mod  31 (Φ_5(2)): FORBIDDEN
+    H ≡ 0 mod 127 (Φ_7(2)): FORBIDDEN
+    H ≡ 0 mod  17 (Φ_8(2)): FORBIDDEN
+
+  n=4: H-spectrum mod various Φ_d(2) primes:
+    H ≡ 0 mod   3 (Φ_2(2)): achievable (1 values: [3])
+    H ≡ 0 mod   7 (Φ_3(2)): FORBIDDEN
+    H ≡ 0 mod   5 (Φ_4(2)): achievable (1 values: [5])
+    H ≡ 0 mod  31 (Φ_5(2)): FORBIDDEN
+    H ≡ 0 mod 127 (Φ_7(2)): FORBIDDEN
+    H ≡ 0 mod  17 (Φ_8(2)): FORBIDDEN
+
+  n=5: H-spectrum mod various Φ_d(2) primes:
+    H ≡ 0 mod   3 (Φ_2(2)): achievable (3 values: [3, 9, 15])
+    H ≡ 0 mod   7 (Φ_3(2)): FORBIDDEN
+    H ≡ 0 mod   5 (Φ_4(2)): achievable (2 values: [5, 15])
+    H ≡ 0 mod  31 (Φ_5(2)): FORBIDDEN
+    H ≡ 0 mod 127 (Φ_7(2)): FORBIDDEN
+    H ≡ 0 mod  17 (Φ_8(2)): FORBIDDEN
+
+  n=6: H-spectrum mod various Φ_d(2) primes:
+    H ≡ 0 mod   3 (Φ_2(2)): achievable (6 values: [3, 9, 15, 27, 33])
+    H ≡ 0 mod   7 (Φ_3(2)): FORBIDDEN
+    H ≡ 0 mod   5 (Φ_4(2)): achievable (4 values: [5, 15, 25, 45])
+    H ≡ 0 mod  31 (Φ_5(2)): achievable (1 values: [31])
+    H ≡ 0 mod 127 (Φ_7(2)): FORBIDDEN
+    H ≡ 0 mod  17 (Φ_8(2)): achievable (1 values: [17])
+
+======================================================================
+INVESTIGATION 3: PAIRWISE ARC INFORMATION GIVEN H
+======================================================================
+
+  We found I(single arc; H) = 0 — a single arc is independent of H.
+  This makes sense: the H value doesn't depend on the orientation of
+  any particular arc, by the symmetry of the uniform distribution.
+
+  But what about I(arc_i, arc_j; H) — the JOINT information of two arcs?
+  Or equivalently, I(arc_i; H | arc_j) — does knowing one arc reveal
+  information about H ONCE YOU KNOW another arc?
+
+  For arcs that form a TRIANGLE: (i,j), (j,k), (i,k):
+  Knowing two determines whether there's a 3-cycle.
+  Since H depends on 3-cycles, knowing two arcs in a triangle
+  should give information about H.
+
+
+  n=5: I(arc_pair; H)
+  Adjacent pairs (share vertex): n=30
+    mean MI = 0.024139 bits
+    max MI = 0.024139 bits
+    min MI = 0.024139 bits
+  Disjoint pairs: n=15
+    mean MI = 0.000000 bits
+    max MI = 0.000000 bits
+    min MI = 0.000000 bits
+  Distinct adjacent MI values: 1
+  Distinct disjoint MI values: 1
+  ALL adjacent pairs have IDENTICAL MI = 0.0241391859
+  ALL disjoint pairs have IDENTICAL MI = 0.0000000000
+
+======================================================================
+INVESTIGATION 4: H GRADIENT FLOW ON TOURNAMENT HYPERCUBE
+======================================================================
+
+  Define the "steepest ascent" flow: from tournament T, flip the arc
+  that increases H the most (or stay if all flips decrease H).
+
+  This creates a DIRECTED GRAPH on tournaments: the gradient flow.
+
+  Questions:
+  - How many SINKS (local maxima)?
+  - How many BASINS OF ATTRACTION?
+  - What is the typical path length from a random tournament to a sink?
+  - Do all paths lead to the same maximum?
+
+
+  n=3 (m=3, 8 tournaments):
+    Local maxima (sinks): 2
+    H values at sinks: [3]
+    Basins of attraction: 2
+      Sink H=3: basin size = 4
+      Sink H=3: basin size = 4
+    Path lengths: min=0, max=1, mean=0.75
+
+  n=4 (m=6, 64 tournaments):
+    Local maxima (sinks): 24
+    H values at sinks: [5]
+    Basins of attraction: 24
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 2
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+      Sink H=5: basin size = 3
+    Path lengths: min=0, max=1, mean=0.62
+
+  n=5 (m=10, 1024 tournaments):
+    Local maxima (sinks): 64
+    H values at sinks: [15]
+    Basins of attraction: 64
+      Sink H=15: basin size = 27
+      Sink H=15: basin size = 20
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 21
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 27
+      Sink H=15: basin size = 24
+      Sink H=15: basin size = 11
+      Sink H=15: basin size = 16
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 20
+      Sink H=15: basin size = 24
+      Sink H=15: basin size = 15
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 14
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 21
+      Sink H=15: basin size = 21
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 20
+      Sink H=15: basin size = 27
+      Sink H=15: basin size = 11
+      Sink H=15: basin size = 14
+      Sink H=15: basin size = 24
+      Sink H=15: basin size = 14
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 15
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 21
+      Sink H=15: basin size = 14
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 16
+      Sink H=15: basin size = 11
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 11
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 24
+      Sink H=15: basin size = 20
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 24
+      Sink H=15: basin size = 24
+      Sink H=15: basin size = 20
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 27
+      Sink H=15: basin size = 11
+      Sink H=15: basin size = 16
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 9
+      Sink H=15: basin size = 16
+      Sink H=15: basin size = 11
+      Sink H=15: basin size = 20
+      Sink H=15: basin size = 17
+      Sink H=15: basin size = 27
+      Sink H=15: basin size = 27
+    Path lengths: min=0, max=3, mean=1.56
+
+======================================================================
+INVESTIGATION 5: ZEROS OF THE F-POLYNOMIAL
+======================================================================
+
+  The F-polynomial F(T, x) = sum_k F_k x^k counts HPs by ascent count.
+  Its roots (Lee-Yang zeros) in the complex plane reveal structure.
+
+  For the transitive tournament: F = x^{n-1}, all roots at x=0.
+  For the regular tournament: F has interesting roots.
+
+  Question: Do the roots cluster on a specific curve?
+  Lee-Yang theorem: for ferromagnetic Ising, roots are on unit circle.
+  What about tournament F-polynomials?
+
+
+  n=5 F-polynomial zeros:
+    H=   1, ss=(0, 1, 2, 3, 4): F = 1 (constant, no roots)
+    H=   3, ss=(0, 1, 3, 3, 3): F = [0, 3]
+           F(-1)=-3, |F(ω)|²=9, |F(i)|²=9
+    H=   3, ss=(0, 2, 2, 2, 4): F = [0, 3]
+           F(-1)=-3, |F(ω)|²=9, |F(i)|²=9
+    H=   3, ss=(1, 1, 1, 3, 4): F = [1, 2]
+           F(-1)=-1, |F(ω)|²=3, |F(i)|²=5
+    H=   5, ss=(0, 2, 2, 3, 3): F = [0, 5]
+           F(-1)=-5, |F(ω)|²=25, |F(i)|²=25
+    H=   5, ss=(1, 1, 2, 2, 4): F = [1, 4]
+           F(-1)=-3, |F(ω)|²=13, |F(i)|²=17
+    H=   9, ss=(1, 1, 2, 3, 3): F = [1, 8]
+           F(-1)=-7, |F(ω)|²=57, |F(i)|²=65
+    H=  11, ss=(1, 2, 2, 2, 3): F = [1, 10]
+           F(-1)=-9, |F(ω)|²=91, |F(i)|²=101
+    H=  13, ss=(1, 2, 2, 2, 3): F = [0, 6, 7]
+           F(-1)=1, |F(ω)|²=43, |F(i)|²=85
+    H=  15, ss=(1, 2, 2, 2, 3): F = [1, 8, 6]
+           F(-1)=-1, |F(ω)|²=39, |F(i)|²=89
+    H=  15, ss=(2, 2, 2, 2, 2): F = [1, 10, 4]
+           F(-1)=-5, |F(ω)|²=63, |F(i)|²=109
+
+======================================================================
+INVESTIGATION 6: H VIA MATRIX PERMANENT
+======================================================================
+
+  H(T) counts Hamiltonian paths. A Hamiltonian path is a permutation
+  sigma such that A[sigma(1)][sigma(2)] * A[sigma(2)][sigma(3)] * ... = 1.
+
+  Define the PATH MATRIX P where P[i][j] = A[i][j] for the tournament T.
+  Then H = sum over all n! permutations sigma of prod_{k=1}^{n-1} P[sigma(k)][sigma(k+1)].
+
+  This is NOT a standard permanent (which would be prod P[i][sigma(i)]).
+  Instead, it's a "path permanent" or "chain permanent."
+
+  But we CAN relate it to the permanent via:
+  H = sum_{start v} sum_{end w} perm of the transfer matrix...
+
+  Actually, the HP count from vertex v to vertex w is given by
+  the (v,w) entry of the matrix (A)^{n-1} where we sum over
+  paths avoiding repeated vertices (the permanent, not the power).
+
+  More precisely: define the "HP matrix" M[v][w] where
+  M[v][w] = number of Hamiltonian paths from v to w.
+  Then H = sum_{v,w} M[v][w].
+
+  M can be computed via inclusion-exclusion (permanent of submatrices).
+
+  Question: Is det(M) related to H in a simple way?
+  What about the eigenvalues of M?
+
+
+  n=3:
+    H=   1: tr(M)=0, sum(M)=1=H, sym=N, det(M)=0
+           row_sums=[0, 0, 1], col_sums=[1, 0, 0]
+    H=   3: tr(M)=0, sum(M)=3=H, sym=N, det(M)=1
+           row_sums=[1, 1, 1], col_sums=[1, 1, 1]
+
+  n=4:
+    H=   1: tr(M)=0, sum(M)=1=H, sym=N, det(M)=0
+           row_sums=[0, 0, 0, 1], col_sums=[1, 0, 0, 0]
+    H=   3: tr(M)=0, sum(M)=3=H, sym=N, det(M)=0
+           row_sums=[0, 0, 0, 3], col_sums=[1, 1, 1, 0]
+    H=   5: tr(M)=0, sum(M)=5=H, sym=N, det(M)=-1
+           row_sums=[1, 1, 2, 1], col_sums=[1, 2, 1, 1]
+
+  n=5:
+    H=   1: tr(M)=0, sum(M)=1=H, sym=N, det(M)=skipped
+    H=   3: tr(M)=0, sum(M)=3=H, sym=N, det(M)=skipped
+    H=   5: tr(M)=0, sum(M)=5=H, sym=N, det(M)=skipped
+    H=   9: tr(M)=0, sum(M)=9=H, sym=N, det(M)=skipped
+    H=  11: tr(M)=0, sum(M)=11=H, sym=N, det(M)=skipped
+    H=  15: tr(M)=0, sum(M)=15=H, sym=N, det(M)=skipped
+    H=  13: tr(M)=0, sum(M)=13=H, sym=N, det(M)=skipped
+
+======================================================================
+INVESTIGATION 7: POWER MEANS AND MOMENTS OF H
+======================================================================
+
+  The power mean M_p = (E[H^p])^{1/p} for various p.
+  M_1 = E[H] (arithmetic mean)
+  M_2 = sqrt(E[H^2]) (quadratic mean)
+  M_{-1} = 1/E[1/H] (harmonic mean)
+  M_0 = exp(E[log H]) (geometric mean)
+
+  Question: Does M_p / M_1 approach a simple constant as n grows?
+
+
+  n=3:
+    M_1 (arithmetic) = 1.5000
+    M_0 (geometric)  = 1.3161, ratio to M_1 = 0.877383
+    M_{-1} (harmonic)  = 1.2000, ratio to M_1 = 0.800000
+    M_2 (quadratic)  = 1.7321, ratio to M_1 = 1.154701
+    M_3 (cubic)      = 1.9574, ratio to M_1 = 1.304956
+    CV = 0.577350
+    Skewness = 1.154701, Excess kurtosis = -0.666667
+
+  n=4:
+    M_1 (arithmetic) = 3.0000
+    M_0 (geometric)  = 2.4065, ratio to M_1 = 0.802182
+    M_{-1} (harmonic)  = 1.8750, ratio to M_1 = 0.625000
+    M_2 (quadratic)  = 3.4641, ratio to M_1 = 1.154701
+    M_3 (cubic)      = 3.7798, ratio to M_1 = 1.259921
+    CV = 0.577350
+    Skewness = 0.000000, Excess kurtosis = -1.666667
+
+  n=5:
+    M_1 (arithmetic) = 7.5000
+    M_0 (geometric)  = 5.8812, ratio to M_1 = 0.784165
+    M_{-1} (harmonic)  = 3.9526, ratio to M_1 = 0.527007
+    M_2 (quadratic)  = 8.6060, ratio to M_1 = 1.147461
+    M_3 (cubic)      = 9.3895, ratio to M_1 = 1.251938
+    CV = 0.562731
+    Skewness = 0.068588, Excess kurtosis = -1.139982
+
+  n=6:
+    M_1 (arithmetic) = 22.5000
+    M_0 (geometric)  = 17.8938, ratio to M_1 = 0.795282
+    M_{-1} (harmonic)  = 11.1622, ratio to M_1 = 0.496096
+    M_2 (quadratic)  = 25.5441, ratio to M_1 = 1.135292
+    M_3 (cubic)      = 27.7092, ratio to M_1 = 1.231521
+    CV = 0.537484
+    Skewness = 0.007156, Excess kurtosis = -1.138330
+
+======================================================================
+INVESTIGATION 8: H mod MERSENNE NUMBERS
+======================================================================
+
+  Mersenne numbers M_k = 2^k - 1.
+  M_1 = 1, M_2 = 3, M_3 = 7, M_4 = 15, M_5 = 31, M_6 = 63, M_7 = 127.
+
+  These are related to 2^k via 2^k ≡ 1 mod M_k.
+
+  Since H = I(Omega, 2) = sum i_k * 2^k:
+  H mod M_k = sum i_j * 2^j mod (2^k - 1)
+            = sum i_j * (2^j mod M_k)
+            = sum i_j * 2^{j mod k}  (since 2^k ≡ 1 mod M_k)
+            = sum_{r=0}^{k-1} 2^r * sum_{j≡r mod k} i_j
+
+  This is a "DFT-like" projection of the independence number sequence.
+
+
+  n=3:
+    H mod M_2=  3: 0 is achievable (2/3 residues)
+    H mod M_3=  7: 0 is FORBIDDEN (2/7 residues)
+    H mod M_4= 15: 0 is FORBIDDEN (2/15 residues)
+    H mod M_5= 31: 0 is FORBIDDEN (2/31 residues)
+    H mod M_6= 63: 0 is FORBIDDEN (2/63 residues)
+    H mod M_7=127: 0 is FORBIDDEN (2/127 residues)
+
+  n=4:
+    H mod M_2=  3: 0 is achievable (3/3 residues)
+    H mod M_3=  7: 0 is FORBIDDEN (3/7 residues)
+    H mod M_4= 15: 0 is FORBIDDEN (3/15 residues)
+    H mod M_5= 31: 0 is FORBIDDEN (3/31 residues)
+    H mod M_6= 63: 0 is FORBIDDEN (3/63 residues)
+    H mod M_7=127: 0 is FORBIDDEN (3/127 residues)
+
+  n=5:
+    H mod M_2=  3: 0 is achievable (3/3 residues)
+    H mod M_3=  7: 0 is FORBIDDEN (6/7 residues)
+    H mod M_4= 15: 0 is achievable (7/15 residues)
+    H mod M_5= 31: 0 is FORBIDDEN (7/31 residues)
+    H mod M_6= 63: 0 is FORBIDDEN (7/63 residues)
+    H mod M_7=127: 0 is FORBIDDEN (7/127 residues)
+
+  n=6:
+    H mod M_2=  3: 0 is achievable (3/3 residues)
+    H mod M_3=  7: 0 is FORBIDDEN (6/7 residues)
+    H mod M_4= 15: 0 is achievable (14/15 residues)
+    H mod M_5= 31: 0 is achievable (19/31 residues)
+    H mod M_6= 63: 0 is FORBIDDEN (19/63 residues)
+    H mod M_7=127: 0 is FORBIDDEN (19/127 residues)
+
+======================================================================
+INVESTIGATION 9: INTER-CLASS DISTANCES IN HYPERCUBE
+======================================================================
+
+  n=5: minimum Hamming distance between H classes:
+    d(H=1, H=3) = 1
+    d(H=1, H=5) = 1
+    d(H=1, H=9) = 1
+    d(H=1, H=11) = 2
+    d(H=1, H=13) = 2
+    d(H=1, H=15) = 2
+    d(H=3, H=5) = 1
+    d(H=3, H=9) = 1
+    d(H=3, H=11) = 2
+    d(H=3, H=13) = 2
+    d(H=3, H=15) = 1
+    d(H=5, H=9) = 1
+    d(H=5, H=11) = 1
+    d(H=5, H=13) = 1
+    d(H=5, H=15) = 2
+    d(H=9, H=11) = 1
+    d(H=9, H=13) = 1
+    d(H=9, H=15) = 1
+    d(H=11, H=13) = 1
+    d(H=11, H=15) = 1
+    d(H=13, H=15) = 1
+
+  Minimum flips to change H by 2:
+    H=1 -> H=3: min 1 flips
+    H=3 -> H=5: min 1 flips
+    H=9 -> H=11: min 1 flips
+    H=11 -> H=13: min 1 flips
+    H=13 -> H=15: min 1 flips
+
+======================================================================
+DONE — PART 3 DEEP INVESTIGATIONS
+======================================================================
