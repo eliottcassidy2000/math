@@ -1,0 +1,163 @@
+======================================================================
+PART 1: FULL (α₁, α₂) LATTICE AT n=6
+======================================================================
+
+  Achievable (α₁, α₂) points:
+    α₁=  0: α₂ ∈ [0] (counts: [720])
+    α₁=  1: α₂ ∈ [0] (counts: [960])
+    α₁=  2: α₂ ∈ [0, 1] (counts: [2160, 80])
+    α₁=  4: α₂ ∈ [0] (counts: [2880])
+    α₁=  5: α₂ ∈ [0] (counts: [1440])
+    α₁=  6: α₂ ∈ [0, 1] (counts: [1440, 720])
+    α₁=  7: α₂ ∈ [0] (counts: [2208])
+    α₁=  8: α₂ ∈ [0] (counts: [720])
+    α₁=  9: α₂ ∈ [0, 1] (counts: [1440, 1440])
+    α₁= 10: α₂ ∈ [2] (counts: [720])
+    α₁= 11: α₂ ∈ [0, 1] (counts: [1440, 480])
+    α₁= 12: α₂ ∈ [0, 1, 2] (counts: [1440, 2160, 720])
+    α₁= 13: α₂ ∈ [1] (counts: [1440])
+    α₁= 14: α₂ ∈ [1, 2, 4] (counts: [1440, 2160, 240])
+    α₁= 16: α₂ ∈ [0, 1, 2] (counts: [480, 1440, 720])
+    α₁= 19: α₂ ∈ [1] (counts: [1440])
+    α₁= 20: α₂ ∈ [1] (counts: [240])
+
+  GAPS in α₂ for each α₁:
+    α₁= 14: α₂ range [1,4], MISSING: [3]
+
+  Achievable lattice grid (count):
+  α₂\α₁      0    1    2    4    5    6    7    8    9   10   11   12   13   14   16   19   20
+    0       720  960 2160 2880 1440 1440 2208  720 1440    . 1440 1440    .    .  480    .    .
+    1         .    .   80    .    .  720    .    . 1440    .  480 2160 1440 1440 1440 1440  240
+    2         .    .    .    .    .    .    .    .    .  720    .  720    . 2160  720    .    .
+    4         .    .    .    .    .    .    .    .    .    .    .    .    .  240    .    .    .
+
+======================================================================
+PART 2: dc3=8 AT n=6 — THE MISSING α₂=3
+======================================================================
+  With dc3=8 at n=6:
+    8 cyclic, 12 transitive out of C(6,3)=20 triples
+    10 complementary pairs
+
+  dc3=8 tournaments: 2640 total
+    α₂=1: 1680 tournaments. Example: both_cyclic=0, one_trans=0, neither=0, dc5=11
+    α₂=2: 720 tournaments. Example: both_cyclic=0, one_trans=0, neither=0, dc5=8
+    α₂=4: 240 tournaments. Example: both_cyclic=0, one_trans=0, neither=0, dc5=6
+
+  So α₂=3 is missing because... let's check the complementary pair constraint.
+  With 8 cyclic triples among 20:
+    10 complementary pairs. Let X = number of (cyclic T with cyclic T^c)
+    Then 2X of the 8 cyclic triples have cyclic complements.
+    So 8-2X cyclic triples have transitive complements.
+    And X pairs have both cyclic, 8-2X pairs have one cyclic+one trans,
+    10-X-(8-2X) = 10-8+X = 2+X pairs have both transitive.
+    But we need 2+X ≥ 0, so X ≥ -2 (always true).
+    Also need 8-2X ≥ 0, so X ≤ 4.
+    And need 2+X ≤ 12/2=6 (since 12 transitive triples form at most 6 pairs),
+    so X ≤ 4.
+    X = α₂ can be 0,1,2,3,4 a priori.
+    But the actual achievable values are [1, 2, 4]!
+    α₂=0 missing: with 8 cyclic, it's impossible for NONE to be complementary.
+    α₂=3 missing: some geometric constraint prevents exactly 3 pairs.
+
+======================================================================
+PART 3: REGULAR-LIKE SCORES AT n=6
+======================================================================
+
+  Score (2,2,2,3,3,3): 2640 tournaments
+    α₂ distribution: {1: 1680, 2: 720, 4: 240}
+    H distribution: {41: 720, 43: 1440, 45: 480}
+
+======================================================================
+PART 4: FORBIDDEN H VALUES
+======================================================================
+
+  n=6: achievable H = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Missing odd H in [1,45]: [7, 21, 35, 39]
+  n=5: achievable H = [1, 3, 5, 9, 11, 13, 15]
+  Missing odd H in [1,15]: [7]
+
+  α₁=3 achievable at n=6? False
+  → H=7 (=1+2*3+4*0) is IMPOSSIBLE at n=6!
+  → (α₁,α₂)=(1,1) achievable at n=6? False
+  → ALL decompositions of H=7 are impossible at n=6!
+
+======================================================================
+PART 5: (α₁, α₂) AS A POLYTOPE
+======================================================================
+
+  (dc3, dc5) → achievable α₂ at n=6:
+    dc3= 0, dc5=  0: α₂ ∈ [0]
+    dc3= 1, dc5=  0: α₂ ∈ [0]
+    dc3= 2, dc5=  0: α₂ ∈ [0, 1]
+    dc3= 3, dc5=  1: α₂ ∈ [0]
+    dc3= 4, dc5=  1: α₂ ∈ [0]
+    dc3= 4, dc5=  2: α₂ ∈ [0, 1]
+    dc3= 4, dc5=  3: α₂ ∈ [0]
+    dc3= 4, dc5=  4: α₂ ∈ [0]
+    dc3= 5, dc5=  2: α₂ ∈ [0]
+    dc3= 5, dc5=  4: α₂ ∈ [0, 1]
+    dc3= 5, dc5=  6: α₂ ∈ [1]
+    dc3= 6, dc5=  4: α₂ ∈ [2]
+    dc3= 6, dc5=  5: α₂ ∈ [0]
+    dc3= 6, dc5=  6: α₂ ∈ [0, 1, 2]
+    dc3= 6, dc5=  7: α₂ ∈ [1]
+    dc3= 6, dc5=  8: α₂ ∈ [2]
+    dc3= 7, dc5=  7: α₂ ∈ [1, 2]
+    dc3= 7, dc5=  9: α₂ ∈ [0, 1]
+    dc3= 8, dc5=  6: α₂ ∈ [4]
+    dc3= 8, dc5=  8: α₂ ∈ [2]
+    dc3= 8, dc5= 11: α₂ ∈ [1]
+    dc3= 8, dc5= 12: α₂ ∈ [1]
+
+  max(α₂) as function of α₁:
+    α₁=  0: max(α₂)=0, H_max = 1
+    α₁=  1: max(α₂)=0, H_max = 3
+    α₁=  2: max(α₂)=1, H_max = 9
+    α₁=  4: max(α₂)=0, H_max = 9
+    α₁=  5: max(α₂)=0, H_max = 11
+    α₁=  6: max(α₂)=1, H_max = 17
+    α₁=  7: max(α₂)=0, H_max = 15
+    α₁=  8: max(α₂)=0, H_max = 17
+    α₁=  9: max(α₂)=1, H_max = 23
+    α₁= 10: max(α₂)=2, H_max = 29
+    α₁= 11: max(α₂)=1, H_max = 27
+    α₁= 12: max(α₂)=2, H_max = 33
+    α₁= 13: max(α₂)=1, H_max = 31
+    α₁= 14: max(α₂)=4, H_max = 45
+    α₁= 16: max(α₂)=2, H_max = 41
+    α₁= 19: max(α₂)=1, H_max = 43
+    α₁= 20: max(α₂)=1, H_max = 45
+
+  Missing α₁ values at n=6: [3, 15, 17, 18]
+  (These correspond to α₁=3 being impossible — HYP-926!)
+
+======================================================================
+PART 6: H=21 IMPOSSIBILITY MECHANISM
+======================================================================
+
+  H=21: α₁+2α₂ = 10
+  Possible decompositions:
+    (α₁=10, α₂=0): achievable? False
+    (α₁= 8, α₂=1): achievable? False
+    (α₁= 6, α₂=2): achievable? False
+    (α₁= 4, α₂=3): achievable? False
+    (α₁= 2, α₂=4): achievable? False
+    (α₁= 0, α₂=5): achievable? False
+
+  H=7: α₁+2α₂ = 3
+    (α₁= 3, α₂=0): achievable? False
+    (α₁= 1, α₂=1): achievable? False
+
+  H=17: α₁+2α₂ = 8
+    (α₁= 8, α₂=0): achievable? True
+    (α₁= 6, α₂=1): achievable? True
+    (α₁= 4, α₂=2): achievable? False
+    (α₁= 2, α₂=3): achievable? False
+    (α₁= 0, α₂=4): achievable? False
+
+  Impossible odd H values at n=6 (≤45):
+    [7, 21, 35, 39]
+  Compare with actual missing H: [7, 21, 35, 39]
+  Match: True
+
+Done.
