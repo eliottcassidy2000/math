@@ -1,0 +1,46 @@
+=== CUBOID BRICK AT n=4 ===
+H=5 at n=4: 24 tournaments. All have t₃=2, sharing 2 vertices.
+Ω = K_2 (complete graph on 2 vertices)
+I(K_2, x) = 1 + 2x → I(K_2, 2) = 5 = H ✓
+This IS the cuboid brick!
+
+=== CUBOID BRICK AT n=5 ===
+H=5 at n=5: bits=4, t₃=2
+
+=== DOUBLE CUBOID AT n=6 (H=25=5²) ===
+  bits=89: H=25, t₃=6, d₅=4, disjoint_3cycle_pairs=0
+    3-cycles: [{0, 3, 4}, {0, 2, 5}, {0, 2, 4}, {0, 3, 5}, {1, 2, 3}, {0, 1, 3}]
+  bits=90: H=25, t₃=6, d₅=4, disjoint_3cycle_pairs=0
+    3-cycles: [{0, 3, 4}, {0, 1, 4}, {0, 1, 2}, {0, 1, 5}, {0, 3, 5}, {1, 2, 3}]
+  bits=92: H=25, t₃=6, d₅=4, disjoint_3cycle_pairs=0
+    3-cycles: [{0, 1, 4}, {0, 2, 3}, {0, 2, 5}, {0, 2, 4}, {0, 1, 5}, {1, 2, 3}]
+  bits=150: H=25, t₃=6, d₅=4, disjoint_3cycle_pairs=0
+    3-cycles: [{1, 2, 4}, {0, 1, 2}, {0, 4, 5}, {0, 1, 5}, {0, 1, 3}, {1, 3, 4}]
+  bits=220: H=25, t₃=6, d₅=4, disjoint_3cycle_pairs=0
+    3-cycles: [{0, 2, 3}, {1, 2, 4}, {0, 2, 5}, {0, 2, 4}, {0, 1, 5}, {1, 2, 3}]
+  Total H=25 at n=6: 1440
+
+=== Does (1+2x)² packing exist? ===
+Need: 4 three-cycles forming 2 disjoint overlapping pairs
+i.e., Ω restricted to 3-cycles = K_2 ⊔ K_2, with no 5-cycles
+This requires:
+  Pair 1: 2 overlapping 3-cycles on vertices A (|A|=4 or 5)
+  Pair 2: 2 overlapping 3-cycles on vertices B, disjoint from A
+  n ≥ |A| + |B| ≥ 8 (if |A|=|B|=4)
+BUT n=6 only has 6 vertices! So we need |A|+|B| ≤ 6.
+Min is |A|=4, |B|=4 → needs 8. IMPOSSIBLE at n=6!
+
+Wait — overlapping means sharing vertices. Two 3-cycles sharing 2 vertices
+use 4 distinct vertices. So pair 1 uses 4, pair 2 uses 4, total ≥ 8.
+If pairs share vertices with each other, they're NOT disjoint → not K_2 ⊔ K_2.
+
+UNLESS the pairs overlap by sharing 1 vertex:
+  Two 3-cycles sharing 1 vertex use 5 vertices.
+  Two such pairs sharing vertices between pairs → not K_2 ⊔ K_2.
+
+CONCLUSION: (1+2x)² packing needs n ≥ 8 (two disjoint cuboid bricks)
+  Each brick = 2 overlapping 3-cycles on 4 vertices (sharing edge)
+  Two bricks vertex-disjoint → 8 vertices minimum
+
+So H=25 at n=6 does NOT come from cuboid packing.
+Instead it comes from a SINGLE clique of cycles.

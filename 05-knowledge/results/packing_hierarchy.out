@@ -1,0 +1,201 @@
+======================================================================
+SIMPLEX-CUBOID PACKING HIERARCHY
+======================================================================
+
+--- Part 1: Independence polynomial factorization ---
+I(G,x) = prod_i (1 + c_i * x) iff G = disjoint union of K_{c_i}
+H = I(Ω,2) = prod_i (1 + 2c_i)
+
+Brick types:
+  (1+x) = simplex    → H contribution: 3
+  (1+2x) = cuboid    → H contribution: 5
+  (1+3x) = tesseract → H contribution: 7 (FORBIDDEN for m=1!)
+  (1+cx) = c-cell    → H contribution: 2c+1
+
+Packing = product of bricks:
+  3^a * 5^b * 7^c * ... = H
+
+  H=9  = 3² : two simplices
+  H=15 = 3*5 : simplex + cuboid
+  H=25 = 5² : two cuboids
+  H=27 = 3³ : three simplices
+  H=45 = 3²*5 : two simplices + cuboid
+  H=75 = 3*5² : simplex + two cuboids
+
+--- Part 2: Achievable H from packing ---
+H must be odd. H = prod (2c_i + 1) where c_i ≥ 1.
+So H is a product of odd numbers ≥ 3.
+
+Possible packings for small odd H:
+  H=   1: empty packing (transitive)
+  H=   3: single 1-cell
+  H=   5: single 2-cell
+  H=   7: single 3-cell
+  H=   9: S × S | 4-cell
+  H=  11: single 5-cell
+  H=  13: single 6-cell
+  H=  15: S × C | 7-cell
+  H=  17: single 8-cell
+  H=  19: single 9-cell
+  H=  21: S × T | 10-cell
+  H=  23: single 11-cell
+  H=  25: C × C | 12-cell
+  H=  27: S × S × S | S × 4-cell | 13-cell
+  H=  29: single 14-cell
+  H=  31: single 15-cell
+  H=  33: S × 5-cell | 16-cell
+  H=  35: C × T | 17-cell
+  H=  37: single 18-cell
+  H=  39: S × 6-cell | 19-cell
+  H=  41: single 20-cell
+  H=  43: single 21-cell
+  H=  45: S × S × C | S × 7-cell | C × 4-cell | 22-cell
+  H=  47: single 23-cell
+  H=  49: T × T | 24-cell
+  H=  51: S × 8-cell | 25-cell
+  H=  53: single 26-cell
+  H=  55: C × 5-cell | 27-cell
+  H=  57: S × 9-cell | 28-cell
+  H=  59: single 29-cell
+  H=  61: single 30-cell
+  H=  63: S × S × T | S × 10-cell | T × 4-cell | 31-cell
+  H=  65: C × 6-cell | 32-cell
+  H=  67: single 33-cell
+  H=  69: S × 11-cell | 34-cell
+  H=  71: single 35-cell
+  H=  73: single 36-cell
+  H=  75: S × C × C | S × 12-cell | C × 7-cell | 37-cell
+  H=  77: T × 5-cell | 38-cell
+  H=  79: single 39-cell
+  H=  81: S × S × S × S | S × S × 4-cell | S × 13-cell | 4-cell × 4-cell | 40-cell
+  H=  83: single 41-cell
+  H=  85: C × 8-cell | 42-cell
+  H=  87: S × 14-cell | 43-cell
+  H=  89: single 44-cell
+  H=  91: T × 6-cell | 45-cell
+  H=  93: S × 15-cell | 46-cell
+  H=  95: C × 9-cell | 47-cell
+  H=  97: single 48-cell
+  H=  99: S × S × 5-cell | S × 16-cell | 4-cell × 5-cell | 49-cell
+  H= 101: single 50-cell
+  H= 103: single 51-cell
+  H= 105: S × C × T | S × 17-cell | C × 10-cell | T × 7-cell | 52-cell
+  H= 107: single 53-cell
+  H= 109: single 54-cell
+  H= 111: S × 18-cell | 55-cell
+  H= 113: single 56-cell
+  H= 115: C × 11-cell | 57-cell
+  H= 117: S × S × 6-cell | S × 19-cell | 4-cell × 6-cell | 58-cell
+  H= 119: T × 8-cell | 59-cell
+  H= 121: 5-cell × 5-cell | 60-cell
+  H= 123: S × 20-cell | 61-cell
+  H= 125: C × C × C | C × 12-cell | 62-cell
+  H= 127: single 63-cell
+  H= 129: S × 21-cell | 64-cell
+
+
+--- Part 3: Why H=7 is unpacked ---
+H=7: only packing is a single 3-cell (1+3x)
+This requires 3 mutually overlapping 3-cycles on ≤5 vertices.
+But: 3 mutually overlapping 3-cycles sharing common vertices
+creates additional cycles (5-cycles), violating the single-clique structure.
+
+The key obstruction: at n=7 with t₃=3, there are ALWAYS d₅≥1
+This creates 5-cycle vertices in Ω adjacent to the 3-cycles,
+breaking the clique structure needed for I=(1+3x).
+
+--- Part 4: Simplex packing theorem ---
+I(Ω,x) = (1+x)^m requires m isolated vertices in Ω
+= m mutually non-adjacent odd cycles
+= m pairwise vertex-disjoint odd cycles
+Minimum n: 3m (each cycle uses 3 vertices, all disjoint)
+
+PROVED: Simplex tournaments exist for all m, using:
+  n = 3m vertices in m groups of 3
+  Within each group: directed 3-cycle
+  Between groups: all edges transitive (group i → group j if i < j)
+  No 5-cycles appear → Ω = m isolated vertices → I = (1+x)^m → H = 3^m
+
+--- Part 5: Cuboid packing possibilities ---
+I(Ω,x) = (1+2x) requires 2 cycles sharing a vertex, with NO disjoint pairs
+and NO other cycles in the tournament.
+
+For 2 overlapping 3-cycles:
+  They share 1 or 2 vertices.
+  Share 1 vertex: uses 5 vertices. But other triangles may form!
+  Share 2 vertices: uses 4 vertices. The common edge + 2 apex vertices.
+
+  At n=4:
+  bits=4: H=5, t₃=2, cycles=[(0, 3, 1), (0, 3, 2)]
+  bits=6: H=5, t₃=2, cycles=[(0, 2, 1), (0, 3, 1)]
+  bits=12: H=5, t₃=2, cycles=[(0, 3, 1), (0, 3, 2)]
+  bits=13: H=5, t₃=2, cycles=[(0, 1, 2), (0, 3, 2)]
+  bits=17: H=5, t₃=2, cycles=[(0, 1, 3), (1, 3, 2)]
+  bits=18: H=5, t₃=2, cycles=[(0, 2, 1), (1, 3, 2)]
+  bits=19: H=5, t₃=2, cycles=[(0, 1, 3), (1, 3, 2)]
+  bits=20: H=5, t₃=2, cycles=[(0, 3, 2), (1, 3, 2)]
+  bits=21: H=5, t₃=2, cycles=[(0, 3, 2), (1, 3, 2)]
+  bits=22: H=5, t₃=2, cycles=[(0, 2, 1), (1, 3, 2)]
+  bits=25: H=5, t₃=2, cycles=[(0, 1, 2), (0, 1, 3)]
+  bits=29: H=5, t₃=2, cycles=[(0, 1, 2), (0, 3, 2)]
+  bits=34: H=5, t₃=2, cycles=[(0, 2, 1), (0, 2, 3)]
+  bits=38: H=5, t₃=2, cycles=[(0, 2, 1), (0, 3, 1)]
+  bits=41: H=5, t₃=2, cycles=[(0, 1, 2), (1, 2, 3)]
+  bits=42: H=5, t₃=2, cycles=[(0, 2, 3), (1, 2, 3)]
+  bits=43: H=5, t₃=2, cycles=[(0, 2, 3), (1, 2, 3)]
+  bits=44: H=5, t₃=2, cycles=[(0, 3, 1), (1, 2, 3)]
+  bits=45: H=5, t₃=2, cycles=[(0, 1, 2), (1, 2, 3)]
+  bits=46: H=5, t₃=2, cycles=[(0, 3, 1), (1, 2, 3)]
+  bits=50: H=5, t₃=2, cycles=[(0, 2, 1), (0, 2, 3)]
+  bits=51: H=5, t₃=2, cycles=[(0, 1, 3), (0, 2, 3)]
+  bits=57: H=5, t₃=2, cycles=[(0, 1, 2), (0, 1, 3)]
+  bits=59: H=5, t₃=2, cycles=[(0, 1, 3), (0, 2, 3)]
+
+
+--- Part 6: The (2,3) duality in packing ---
+Evaluation at x=1 (simplex point): I(Ω,1) = sum α_k = total indep sets
+Evaluation at x=2 (OCF point):     I(Ω,2) = H
+Evaluation at x=3 (cuboid point):   I(Ω,3) = 'cuboid count'
+
+For a simplex (1+x)^m:
+  I(1) = 2^m, I(2) = 3^m, I(3) = 4^m
+  Ratio I(2)/I(1) = (3/2)^m → approaches infinity
+  Ratio I(3)/I(2) = (4/3)^m → approaches infinity
+
+For a cuboid (1+2x)^m:
+  I(1) = 3^m, I(2) = 5^m, I(3) = 7^m = FORBIDDEN^m!
+  So cuboid packing at x=3 gives powers of 7!
+  This is the CUBOID-TESSERACT DUALITY:
+  Cuboid at simplex point = Simplex at cuboid point = 3^m
+  Cuboid at cuboid point = Tesseract at simplex point = 7^m
+
+DEEP INSIGHT: The evaluation shift x → x+1 transforms:
+  (1+cx) at x+1 = (1+c(x+1)) = (c+1) + cx
+  Not exactly the same form. But at integer points:
+  I(k) / I(k-1) controls the 'growth rate' of independent sets.
+
+The k-nacci connection:
+  k-nacci ratio → 2: this IS the ratio I(2)/I(1) = H/|independent sets|
+  weighted k-nacci ratio → 3: this IS I(3)/I(1) = cuboid/simplex
+
+--- Part 7: Clique decomposition of Ω ---
+Ω decomposes into cliques when:
+  1. No two non-adjacent cycles share NO vertices (trivially)
+  2. The non-adjacency relation is an equivalence (transitivity)
+     i.e., if C1⊥C2 and C2⊥C3 then C1⊥C3
+     where ⊥ means vertex-disjoint
+
+Transitivity of vertex-disjointness:
+  If C1∩C2=∅ and C2∩C3=∅, must C1∩C3=∅?
+  NO! Counter: C1={1,2,3}, C2={4,5,6}, C3={1,4,7}
+  C1⊥C2, C2⊥C3, but C1∩C3={1} ≠ ∅
+
+So Ω does NOT always decompose into cliques!
+The INDEPENDENCE complex of Ω is generally NOT a product of simplices.
+
+CONSEQUENCE: Most H values do NOT have a clean packing interpretation.
+Only special tournaments with 'clean' cycle structure admit packing.
+
+======================================================================
+DONE
+======================================================================

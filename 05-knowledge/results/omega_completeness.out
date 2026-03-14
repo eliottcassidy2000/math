@@ -1,0 +1,21 @@
+=== n=5: exhaustive check ===
+  Ω is ALWAYS complete at n=5 ✓
+
+=== n=6: exhaustive check ===
+  NOT complete! bits=80, H=27, cycles=11, non-adj=1
+    Disjoint: {0, 4, 5} ⊥ {1, 2, 3}
+  NOT complete! bits=81, H=23, cycles=9, non-adj=1
+    Disjoint: {0, 4, 5} ⊥ {1, 2, 3}
+  NOT complete! bits=82, H=23, cycles=9, non-adj=1
+    Disjoint: {0, 4, 5} ⊥ {1, 2, 3}
+
+  NOT complete: 15440/32768 tournaments
+
+=== n=7: sampling ===
+  trial=0: H=159, disjoint 3-cycles: {1, 3, 5} ⊥ {0, 2, 4}
+  trial=1: H=171, disjoint 3-cycles: {1, 3, 5} ⊥ {0, 2, 4}
+  trial=2: H=95, disjoint 3-cycles: {2, 4, 6} ⊥ {0, 1, 3}
+  Non-complete (has disjoint 3-cycles): 8670/10000
+  First n where Ω can be non-complete: n=7 (3+3+1 = 7 vertices)
+  This is WHY α₂ > 0 is first possible at n ≥ 7 for 3-cycles
+  (but at n=6, disjoint 3-cycles need 3+3=6 vertices, so barely possible)
