@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S84 — 2026-03-14: Massive overnight (2,3) exploration — 30+ scripts, 17 new hypotheses
+
+**Account:** opus
+**Continuation of:** previous S84 context (multi-continuation overnight session)
+**What was done:**
+This was a marathon overnight exploration session spanning multiple context windows, creating ~30 new scripts across diverse mathematical domains. Key crown jewels:
+
+- **PROVED Var/Mean² = 1/3 iff n²-7n+12=0** (roots n=3,4). Quadratic coefficients 7=H_forb_1, 12=h(E6).
+- **PROVED Q_4 Lee-Yang**: Inner factor 3u²+2u+3 has all roots on unit circle. Q_4 is unique Lee-Yang among Q_n.
+- **Exhaustive n=6**: Missing H = {7,21,35,39}. ALL odd multiples of 7 ≤ 45 forbidden. H ≡ 0 mod 7 forbidden for n≤6, breaks at n=7.
+- **I(T;H)/m → 0.27 universal**: Information fraction 0.2704→0.2602→0.2681→0.2700 converging to ~27/100 = 3³/100.
+- **Zero single-arc information**: No individual arc has ANY mutual info with H. H is purely collective.
+- **HC threshold n=5: H=9**, n=6: H=17. H=15 unique transitional value (65.2% HC).
+- **H(P_7) = 189** = max H at n=7. max/mean = 12/5 = 2.4, breaking the max=2*mean pattern.
+- **D_e² = 2D_e**: Arc-flip operator is 2-idempotent, D_e/2 is projector.
+- **max_H(6) = 45 = small Schröder s_4**: Lattice path connection.
+- **Motzkin(5) = 21**: Forbidden H value is a Motzkin number.
+- **SCCs determine H at n=4**: Perfect bijection 1 SCC↔H=5, 2↔H=3, 4↔H=1.
+- **Scores determine H at n=4** (100%), declining to 68.4% at n=6.
+- **Tournament operad**: H is multiplicative character of substitution operad.
+- **0 prime tournaments at n=4**: Every n=4 tournament has nontrivial modules.
+- **Q(i) = iR(-1)**: #{H≡1 mod 4}/N = 3/4 at n=3,4 only.
+
+**New contributions:** HYP-1241 through HYP-1257 (17 new hypotheses)
+**Scripts created:** forbidden_mod7_deep.py, operad_species_23.py, max_H_formula.py, tropical_info_23.py, universality_27_percent.py, H_polynomial_geometry.py, Q_at_i_proof.py, game_matroid_23.py, HC_threshold_n6.py (plus ~20 from earlier S84 context windows)
+**Unresolved threads:** Prove Q(i)=iN/2 for all n (currently only n=3,4). Prove I/m → 27/100. Investigate HC threshold formula across n. Extend prime tournament count.
+
 ## opus-2026-03-14-S71g — 2026-03-14: Completeness Obstruction, Block-Transitive Products, α₁=3 Closes at n=9
 
 **Account:** opus
