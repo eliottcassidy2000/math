@@ -1,0 +1,448 @@
+======================================================================
+POSITIONAL NUMBER THEORY & OMEGA POWERS
+======================================================================
+
+PART 1: POWERS OF omega = e^{2pi*i/3}
+
+  omega = e^{2pi*i/3} = -1/2 + sqrt(3)/2 * i
+  omega = (-0.4999999999999998+0.8660254037844387j)
+  omega^2 = (-0.5000000000000003-0.8660254037844384j)
+  omega^3 = (0.9999999999999998-6.106226635438361e-16j)  (should be 1)
+  |omega| = 0.9999999999999999
+
+  Key identity: omega^2 + omega + 1 = 0
+  Check: 3.3306690738754696e-16j
+
+  So: omega^2 = -omega - 1
+  User said: omega^2 = 2/3 omega - 1. This is WRONG -- the correct
+  relation is omega^2 = -omega - 1 (from Phi_3(omega) = 0).
+
+  But 2/3 appears in a DIFFERENT way:
+  The minimal polynomial of omega over Q is x^2 + x + 1.
+  The golden ratio phi has x^2 - x - 1. Note the sign pattern!
+  phi^2 = phi + 1 (expanding)
+  omega^2 = -omega - 1 (contracting)
+  The ratio: if we write omega^2 = c*omega + d:
+    c = -1, d = -1
+  In the Fibonacci analogy: phi^2 = 1*phi + 1, so c=1, d=1.
+  phi and omega are 'dual' in some sense.
+
+======================================================================
+PART 2: OMEGA POWERS AND THE PIGEONHOLE ARGUMENT
+======================================================================
+
+  omega^n in Z[omega] = Z + Z*omega:
+    omega^ 0 =   1 +   0*omega  (|omega^0| = 1.0000)
+    omega^ 1 =   0 +   1*omega  (|omega^1| = 1.0000)
+    omega^ 2 =  -1 +  -1*omega  (|omega^2| = 1.0000)
+    omega^ 3 =   1 +   0*omega  (|omega^3| = 1.0000)
+    omega^ 4 =   0 +   1*omega  (|omega^4| = 1.0000)
+    omega^ 5 =  -1 +  -1*omega  (|omega^5| = 1.0000)
+    omega^ 6 =   1 +   0*omega  (|omega^6| = 1.0000)
+    omega^ 7 =   0 +   1*omega  (|omega^7| = 1.0000)
+    omega^ 8 =  -1 +  -1*omega  (|omega^8| = 1.0000)
+    omega^ 9 =   1 +   0*omega  (|omega^9| = 1.0000)
+    omega^10 =   0 +   1*omega  (|omega^10| = 1.0000)
+    omega^11 =  -1 +  -1*omega  (|omega^11| = 1.0000)
+    omega^12 =   1 +   0*omega  (|omega^12| = 1.0000)
+
+  Since |omega| = 1, ALL powers have |omega^n| = 1.
+  The pigeonhole argument doesn't apply to omega = e^{2pi*i/3}!
+
+======================================================================
+PART 3: THE PIGEONHOLE ARGUMENT FOR ROOTS OF UNITY
+======================================================================
+
+  The user mentioned: "omega^8 is the point where the pigeonhole principle
+  forces powers inside the complex unit circle."
+
+  This refers to the following:
+  Let zeta_m = e^{2pi*i/m} be a primitive mth root of unity.
+  The minimal polynomial is Phi_m(x) of degree phi(m).
+
+  If s is the SMALLEST natural such that zeta_m^s = 1, then s = m.
+  That's the definition of primitive root.
+
+  The pigeonhole argument: if |z| = 1 and z^n in Z[z] for all n,
+  then z is a root of unity (Kronecker's theorem).
+
+  For the Hilbert 3rd problem connection:
+  The Dehn invariant uses R tensor (R/pi*Q).
+  The irrational dihedral angles produce IRRATIONAL elements in R/Q*pi.
+  Specifically: if a dihedral angle theta is such that theta/pi is
+  irrational, then for no n does n*theta become a multiple of pi,
+  and the Dehn invariant cannot be zero.
+
+  The "omega^8" statement might refer to:
+  When we try to find s such that (2*cos(theta))^s is an algebraic integer
+  for theta = pi/m, the powers grow when |2*cos(theta)| > 1 (i.e., m >= 7).
+  For m <= 6: |2*cos(pi/m)| <= 2, and the powers stay bounded.
+  For m = 7: 2*cos(pi/7) = 1.802..., and powers grow.
+
+  Actually, the key Kronecker-like result:
+  If alpha is an algebraic integer with |alpha| <= 1 for ALL conjugates,
+  then alpha is a root of unity.
+
+  For the tournament setting: I(omega) = (1-a2) + (a1-a2)*omega
+  and |I(omega)|^2 = (1-a2)^2 + (a1-a2)^2 + (1-a2)*(a1-a2).
+  This is ALWAYS real and >= 0.
+  
+======================================================================
+PART 4: (omega^a - omega^b)^c IN Z[omega]
+======================================================================
+
+  Since omega has order 3: omega^a is one of {1, omega, omega^2}.
+  Possible differences omega^a - omega^b:
+    omega^0 - omega^1 = 1 + -1*omega  (|.|^2 = 3.0000)
+    omega^0 - omega^2 = 2 + 1*omega  (|.|^2 = 3.0000)
+    omega^1 - omega^0 = -1 + 1*omega  (|.|^2 = 3.0000)
+    omega^1 - omega^2 = 1 + 2*omega  (|.|^2 = 3.0000)
+    omega^2 - omega^0 = -2 + -1*omega  (|.|^2 = 3.0000)
+    omega^2 - omega^1 = -1 + -2*omega  (|.|^2 = 3.0000)
+
+  ALL differences have |omega^a - omega^b|^2 = 3.
+  So |omega^a - omega^b| = sqrt(3) for all a != b.
+  This is the Eisenstein norm: N(alpha) = |alpha|^2 in Z[omega].
+
+  Powers (omega^a - omega^b)^c:
+    (omega - 1)^1 =    -1 +     1*omega  (N = 3.0 = 3^1)
+    (omega - 1)^2 =     0 +    -3*omega  (N = 9.0 = 3^2)
+    (omega - 1)^3 =     3 +     6*omega  (N = 27.0 = 3^3)
+    (omega - 1)^4 =    -9 +    -9*omega  (N = 81.0 = 3^4)
+    (omega - 1)^5 =    18 +     9*omega  (N = 243.0 = 3^5)
+    (omega - 1)^6 =   -27 +     0*omega  (N = 729.0 = 3^6)
+
+  KEY: N((omega^a - omega^b)^c) = 3^c.
+  The 3-adic valuation grows linearly with c.
+  This creates a 3-ADIC FILTRATION on Z[omega].
+
+======================================================================
+PART 5: BASE 10 = 2*5 AND BASE 11 (PRIME)
+======================================================================
+
+  10 = 2 * 5
+  11 = prime
+
+  In tournament theory:
+    10 = T(21) = (H=21 - 1)/2  [the TARGET value for the H=21 gap!]
+    11 = the Paley prime T_11 with H = 95095
+
+  Base 10 positional system:
+    Each digit d in position k contributes d * 10^k = d * (2*5)^k = d * 2^k * 5^k
+    The factorization 10 = 2*5 means:
+      - Divisibility by 2 depends only on last digit (standard)
+      - Divisibility by 5 depends only on last digit
+      - But divisibility by 3 requires DIGIT SUM (since 10 = 1 mod 3)
+
+  Connection to tournaments:
+    H = sum a_k * 2^k (the I.P. "binary expansion with multiplicities")
+    H mod 3: depends on ALTERNATING SUM of a_k's (since 2 = -1 mod 3)
+      H mod 3 = sum (-1)^k * a_k mod 3
+      = a_0 - a_1 + a_2 - a_3 + ... mod 3
+      = 1 - a_1 + a_2 - a_3 + ... mod 3
+
+    This is like the "eleven-check" in base 10!
+    In base 10: N mod 11 = alternating digit sum (since 10 = -1 mod 11).
+    In base 2:  H mod 3 = alternating coefficient sum (since 2 = -1 mod 3).
+
+    The SAME structure: (base) = -1 mod (prime).
+
+  The parallel:
+    Base 10, prime 11: alternating digit sum gives N mod 11
+    Base 2, prime 3:   alternating alpha sum gives H mod 3
+
+  And we know H mod 3 from Redei/OCF:
+    H = 1 mod 2 always.
+    H mod 3 depends on the tournament.
+    But F(T, omega) = 9-divisibility (THM-085) for n >= 6.
+
+  11 in the cyclotomic dictionary:
+    11 = Phi_10(2) (since ord_11(2) = 10 = phi(11))
+    This means 2 is a primitive root mod 11.
+    The Paley tournament T_11 is based on QR = {1,3,4,5,9} mod 11.
+
+  The alternating sum connection is DEEP:
+    - Dehn invariant uses alternating-sum-like structure
+    - Tournament I.P. evaluates at 2 = -1 mod 3
+    - Base 10 divisibility by 11 = alternating digit sum
+    - All are instances of x = -1 mod p, giving Phi_2(x) = p
+  
+======================================================================
+PART 6: 5 AND 6 -- ADDITION AND MULTIPLICATION
+======================================================================
+
+  5 = 2 + 3 (additive combination)
+  6 = 2 * 3 (multiplicative combination)
+
+  In tournament theory:
+    5: first non-trivial tournament size (I.P. quadratic, real roots hold)
+    6: beta_3 first appears, n=6 has 720 = 6! tournaments (up to labels)
+
+  Deeper structure:
+    H = I(Omega, 2) = 1 + 2*a1 + 4*a2 + ...
+    I(Omega, 3) = 1 + 3*a1 + 9*a2 + ... (the "cuboid" evaluation)
+    I(Omega, 2+3) = I(Omega, 5) = 1 + 5*a1 + 25*a2 + ...
+    I(Omega, 2*3) = I(Omega, 6) = 1 + 6*a1 + 36*a2 + ...
+
+  The formula H = 5 - 4*Re(I(i)) + 2*Im(I(i)):
+    Here 5 = 2+3 appears as a CONSTANT.
+    H = (2+3) - 4*(1-a2) + 2*a1  [since I(i) = (1-a2)+a1*i]
+    = 5 - 4 + 4*a2 + 2*a1
+    = 1 + 2*a1 + 4*a2  [correct]
+
+  So the Gaussian evaluation naturally decomposes H as:
+    H = (2+3) + corrections
+
+  The additive combination 2+3=5 is the BASE, and the deviations
+  from the base are the cycle structure contributions.
+
+  At the other extreme, the multiplicative combination:
+    6 = 2*3 is the MINIMUM cost of 2 disjoint cycles (each using 3 vertices).
+    This is why a2 >= 1 requires 6 vertices (two disjoint 3-cycles).
+    And 6 = 2*3 = 2 * (minimum cycle length) = cost of one disjoint pair.
+
+  EXPONENTIATION:
+    2^3 = 8 = dimension where quaternion multiplication loses commutativity
+    3^2 = 9 = minimum vertices for cubic I.P. (three disjoint 3-cycles)
+
+    The fact that 2^3 < 3^2 (8 < 9) means:
+    Property loss (n=8) happens BEFORE cubic I.P. (n=9).
+    The quadratic era extends one step beyond the Cayley-Dickson threshold.
+
+    If 2^3 > 3^2 (hypothetically), the cubic I.P. would unlock BEFORE
+    the property losses at n=8, and the theory would be qualitatively different.
+
+    The Catalan-Mihailescu theorem says 2^3, 3^2 are the ONLY consecutive
+    perfect powers. This uniqueness is reflected in tournament theory:
+    there is exactly ONE "gap year" (n=8) between the last property-holding
+    size and the cubic I.P. onset.
+  
+======================================================================
+PART 7: THE HILBERT 3RD PROBLEM PROOF STRUCTURE
+======================================================================
+
+  Hilbert's 3rd problem (solved by Dehn, 1900):
+  A regular tetrahedron and a cube of the same volume are NOT
+  scissors-congruent (cannot be cut into finitely many pieces
+  and reassembled into each other).
+
+  Dehn's proof by contradiction:
+  1. Define the Dehn invariant D(P) for a polyhedron P.
+  2. Show D is preserved under scissors congruence.
+  3. Compute D(tetrahedron) and D(cube).
+  4. Show they differ => NOT scissors-congruent.
+
+  The irrationality enters via:
+    D(cube) = 0 (all dihedral angles are pi/2, rational multiple of pi)
+    D(tetrahedron) != 0 (dihedral angle = arccos(1/3), irrational/pi)
+
+  The key: arccos(1/3)/pi is IRRATIONAL (proved by Niven).
+  So the Dehn invariant of the tetrahedron is a non-trivial element
+  in the tensor product R tensor (R/Q*pi).
+
+  The tournament analogue (from our work):
+  1. Define the tournament Dehn invariant D_T = I(omega).
+  2. D_T is preserved under "tournament scissors congruence"
+     (tournaments with same (a1,a2) have same D_T).
+  3. D_T separates tournaments that H alone cannot.
+  4. At n=7: D_T separates 52 of the 75 achievable H values into
+     distinct Dehn classes.
+
+  The "irrationality insertion" in our setting:
+    I(2) = H is an integer.
+    I(omega) = (1-a2) + (a1-a2)*omega is in Z[omega].
+    The difference is that omega introduces sqrt(3) (irrational).
+    So I(omega) lives in a LARGER ring than I(2).
+
+  The "smallest s such that omega^s = 1":
+    For omega = e^{2pi*i/3}: s = 3.
+    For zeta_m = e^{2pi*i/m}: s = m.
+
+    The user's suggestion: let s be the smallest natural with omega^s=1.
+    Then use s=3 to set up the proof by contradiction for H=7:
+
+    Suppose H = 7 = Phi_3(2). Then I(2) = 7 = (2^3-1)/(2-1).
+    Evaluate at omega: I(omega) = (omega^3-1)/(omega-1) = 0/(omega-1) = 0.
+    Wait, that's only if I(x) = (x^3-1)/(x-1) = x^2+x+1 = Phi_3(x).
+    But we proved I(x) = Phi_3(x) is NEVER achievable (HYP-1015)!
+
+    So the proof is:
+    IF H = 7 THEN I(2) = 7.
+    The polynomial I(x) = 1 + a1*x + a2*x^2 with I(2) = 7.
+    If I(x) = Phi_3(x) = x^2+x+1: impossible (a1=a2=1, but a2=1 => a1>=2).
+    If I(x) = 7: (a1=3, a2=0). Blocked by Helly.
+    If I(x) = -x^2+4x+1: negative coefficient, impossible.
+    If I(x) = -2x^2+5x+1: negative, impossible.
+    If I(x) = -3x^2+6x+1: negative, impossible.
+    If I(x) = x+3: (a1=1, a2=0), I(2)=5!=7.
+    No valid I(x) gives I(2)=7. Hence H!=7. QED
+
+    The connection to omega:
+    The evaluation I(omega) for the blocked decompositions gives
+    specific values in Z[omega] that are inconsistent with tournament
+    structure. The omega evaluation acts as a SECONDARY INVARIANT
+    that refines the H constraint.
+  
+======================================================================
+PART 8: ALTERNATING SUM NON-NEGATIVITY
+======================================================================
+
+  For the independence polynomial I(x) = sum a_k * x^k:
+    I(-1) = sum (-1)^k * a_k = 1 - a1 + a2 - a3 + a4 - ...
+
+  This is the EULER CHARACTERISTIC of the independence complex.
+  For claw-free graphs (Omega at n<=8): I(-1) <= 1 always.
+  For general graphs: I(-1) can be any integer.
+
+  Non-negativity of the alternating sum is NOT guaranteed.
+  But for tournaments, I(-1) has specific constraints:
+    I(-1) = 1 - a1 + a2 - a3 + ...
+    At n=7: I(-1) = 1 - a1 + a2 (quadratic)
+
+  From the data:
+    H = 1 + 2*a1 + 4*a2
+    I(-1) = 1 - a1 + a2
+
+  So: I(-1) = 1 - a1 + a2
+      H = 1 + 2*a1 + 4*a2
+      => H + 2*I(-1) = 3 + 6*a2 - ... wait:
+         H + 2*I(-1) = (1+2a1+4a2) + 2(1-a1+a2) = 3 + 6*a2
+
+  So H + 2*I(-1) = 3 + 6*a2 = 3*(1+2*a2).
+  This means: H + 2*I(-1) is ALWAYS divisible by 3!
+  And H = 3*(1+2*a2) - 2*I(-1).
+
+  For H=7: 7 + 2*I(-1) = 3*(1+2*a2), so 7+2*I(-1) = 0 mod 3.
+  7 = 1 mod 3, so 2*I(-1) = 2 mod 3, so I(-1) = 1 mod 3.
+  Possible: I(-1) = 1, 4, 7, ...
+  With I(-1) = 1-a1+a2 and a1+2*a2=3:
+    (3,0): I(-1) = 1-3+0 = -2 (NOT 1 mod 3 -- wait, -2 = 1 mod 3. Yes.)
+    (1,1): I(-1) = 1-1+1 = 1 (= 1 mod 3. Yes.)
+  Both are consistent with 3 | (H + 2*I(-1)), as expected.
+
+  The formula H + 2*I(-1) = 3*(1+2*a2) is clean.
+  It says: a2 = (H + 2*I(-1) - 3) / 6.
+  And a1 = (H - 1)/2 - 2*a2 = (H-1)/2 - (H+2*I(-1)-3)/3.
+  
+======================================================================
+PART 9: VERIFICATION OF H + 2*I(-1) = 3*(1+2*a2)
+======================================================================
+  This formula holds by direct algebra (quadratic case):
+  I(2) = 1 + 2*a1 + 4*a2 = H
+  I(-1) = 1 - a1 + a2
+  I(2) + 2*I(-1) = (1+2a1+4a2) + 2(1-a1+a2) = 3 + 6*a2
+  = 3*(1+2*a2) always.
+
+  This extends to higher degree:
+  I(2) + 2*I(-1) = sum a_k*(2^k + 2*(-1)^k)
+  = a_0*(1+2) + a_1*(2-2) + a_2*(4+2) + a_3*(8-2) + a_4*(16+2) + ...
+  = 3*a_0 + 0*a_1 + 6*a_2 + 6*a_3 + 18*a_4 + 30*a_5 + ...
+    k=0: 2^k + 2*(-1)^k = 3  (divisible by 3? True, factor = 1)
+    k=1: 2^k + 2*(-1)^k = 0  (divisible by 3? True, factor = 0)
+    k=2: 2^k + 2*(-1)^k = 6  (divisible by 3? True, factor = 2)
+    k=3: 2^k + 2*(-1)^k = 6  (divisible by 3? True, factor = 2)
+    k=4: 2^k + 2*(-1)^k = 18  (divisible by 3? True, factor = 6)
+    k=5: 2^k + 2*(-1)^k = 30  (divisible by 3? True, factor = 10)
+    k=6: 2^k + 2*(-1)^k = 66  (divisible by 3? True, factor = 22)
+    k=7: 2^k + 2*(-1)^k = 126  (divisible by 3? True, factor = 42)
+
+  Hmm: for k=1, the coefficient is 0, not 3.
+  For k>=2 and even: 2^k+2 (e.g., 6, 18, 66)
+  For k>=3 and odd:  2^k-2 (e.g., 6, 30, 126)
+  k=1: 0 (a1 drops out!)
+
+  So: I(2) + 2*I(-1) = 3 + 6*a2 + 6*a3 + 18*a4 + 30*a5 + ...
+  = 3*(1 + 2*a2 + 2*a3 + 6*a4 + 10*a5 + ...)
+  Is this always divisible by 3? YES (each term is 3*something)
+  And a1 COMPLETELY drops out!
+
+  THEOREM: I(2) + 2*I(-1) is always divisible by 3,
+  regardless of a1, and equals 3*(1 + sum_{k>=2} c_k * a_k)
+  where c_k = (2^k + 2*(-1)^k)/3.
+
+  This means: H mod 3 = -2*I(-1) mod 3 = I(-1) mod 3.
+  (Since -2 = 1 mod 3)
+  So H and I(-1) have the SAME residue mod 3!
+  H = I(-1) mod 3.
+
+  COROLLARY: H = I(-1) (mod 3)
+  This relates the Hamiltonian path count to the Euler characteristic
+  of the independence complex, modulo 3.
+
+======================================================================
+PART 10: MULTIPLICATION AND ADDITION IN THE GAPS
+======================================================================
+
+  The two permanent gaps and their arithmetic:
+
+  H=7 = 2+5 = 2+(2+3)     [additive]
+  H=7 = 2^3-1              [exponential]
+  H=7 = Phi_3(2)           [cyclotomic]
+
+  H=21 = 3*7               [multiplicative]
+  H=21 = 3*Phi_3(2)        [cyclotomic product]
+  H=21 = (2+1)*(2^2+2+1)   [factored]
+
+  The gaps encode ALL three operations:
+    ADDITION: 7 = 2+5, 21 = 20+1
+    MULTIPLICATION: 21 = 3*7
+    EXPONENTIATION: 7 = 2^3-1, 21 = (2^3-1)*3
+
+  The "tower":
+    Level 0: 2 and 3 (the keys)
+    Level 1: 7 = 2^3 - 1 (exponentiation of keys, minus 1)
+    Level 2: 21 = 3 * 7 (multiplication by key)
+    Level 3: 63 = 3 * 21 = 9 * 7 (NOT forbidden -- too far from keys)
+
+  Why does the tower stop at level 2?
+    63 = 1 + 2*31 = 1 + 2*a1 (with a1=31, a2=0)
+    At n=8: 31 odd cycles all pairwise conflicting is achievable
+    because n=8 has enough vertices for the cycle structure to accommodate it.
+
+    But 21 = 1 + 2*10 requires 10 cycles all conflicting (if a2=0),
+    and at ANY n, 10 pairwise-conflicting cycles with the specific
+    tournament constraint is impossible.
+
+  The boundary between achievable and impossible:
+    (a1=3, a2=0): IMPOSSIBLE for all n (Helly)
+    (a1=4, a2=0): achievable? At n=5, H=9 exists but might be (2,1) not (4,0).
+    ...
+    (a1=31, a2=0): ACHIEVABLE at n=8 (H=63 found)
+
+  So somewhere between a1=3 and a1=31, all-conflicting becomes achievable.
+  Finding the EXACT threshold would pin down why 21 is the last gap.
+  
+
+======================================================================
+SUMMARY: THE 2-3 DEEP SYNTHESIS
+======================================================================
+
+  1. The permanent gaps {7, 21} encode the pair (2,3):
+     7 = Phi_3(2), 21 = 3*Phi_3(2)
+
+  2. Positional number theory:
+     H mod 3 = I(-1) mod 3 (Euler characteristic congruence)
+     This is the "alternating digit sum" rule in base 2, prime 3.
+
+  3. The omega evaluation I(omega):
+     - (omega-1)^c has norm 3^c (3-adic filtration)
+     - Phi_3(omega) = 0 is the defining relation
+     - I(omega) is the "Dehn invariant" of the tournament
+
+  4. The proof-by-contradiction:
+     H=7 => I(x) achieves 7 at x=2.
+     I(omega) for valid decompositions => contradiction with tournament structure.
+     The irrationality of omega (via sqrt(3)) creates obstructions
+     that are invisible in Z but visible in Z[omega].
+
+  5. Exponentiation: 2^3=8 vs 3^2=9
+     Property loss at n=8 (Cayley-Dickson threshold)
+     Cubic I.P. at n=9 (three disjoint 3-cycles)
+     Gap of 1 (the Catalan pair) creates the one "gap year" n=8.
+
+  6. 5 = 2+3 appears as the constant in H = 5 - 4*Re(I(i)) + 2*Im(I(i)).
+     6 = 2*3 = minimum cost of one disjoint pair (two 3-cycles, 6 vertices).
+
+  7. 10 = T(H=21) is palindromic in both binary (1010) and ternary (101).
+     11 = Paley prime, Phi_10(2), 2 is primitive root mod 11.
+  
