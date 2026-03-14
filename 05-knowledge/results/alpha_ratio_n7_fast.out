@@ -1,0 +1,72 @@
+n=7: 2097152 tournaments, 21 edges
+At n=7: α₃=0 (9>7), disjoint pairs only from 3-cycles (3+5=8>7)
+
+  Progress: 0/2097152 (0%), violations: 0, max α₂/α₁: 0.0000
+  Progress: 209715/2097152 (9%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 419430/2097152 (19%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 629145/2097152 (29%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 838860/2097152 (39%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 1048575/2097152 (49%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 1258290/2097152 (59%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 1468005/2097152 (69%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 1677720/2097152 (79%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 1887435/2097152 (89%), violations: 0, max α₂/α₁: 1.0000
+  Progress: 2097150/2097152 (99%), violations: 0, max α₂/α₁: 1.0000
+
+RESULTS for n=7 (3-cycle only analysis):
+  Total tournaments: 2097152
+  dc3 < dc3_pairs ('violations'): 0
+  Max ratio dc3_pairs/dc3: 1.000000
+    Achieved at bits=1584, dc3=12, dc3_pairs=12
+
+  (dc3, dc3_pairs) distribution (top 30 by frequency):
+    dc3= 12, pairs=  8:   117600 tours, ratio=0.6667, I(-1)_approx=-3
+    dc3= 11, pairs=  6:   100800 tours, ratio=0.5455, I(-1)_approx=-4
+    dc3= 10, pairs=  4:    95760 tours, ratio=0.4000, I(-1)_approx=-5
+    dc3= 10, pairs=  6:    87360 tours, ratio=0.6000, I(-1)_approx=-3
+    dc3= 10, pairs=  5:    85680 tours, ratio=0.5000, I(-1)_approx=-4
+    dc3=  9, pairs=  4:    70560 tours, ratio=0.4444, I(-1)_approx=-4
+    dc3=  4, pairs=  0:    65520 tours, ratio=0.0000, I(-1)_approx=-3
+    dc3=  8, pairs=  4:    63840 tours, ratio=0.5000, I(-1)_approx=-3
+    dc3=  9, pairs=  5:    60480 tours, ratio=0.5556, I(-1)_approx=-3
+    dc3=  8, pairs=  5:    60480 tours, ratio=0.6250, I(-1)_approx=-2
+    dc3=  6, pairs=  2:    58800 tours, ratio=0.3333, I(-1)_approx=-3
+    dc3=  6, pairs=  0:    55440 tours, ratio=0.0000, I(-1)_approx=-5
+    dc3=  7, pairs=  1:    50400 tours, ratio=0.1429, I(-1)_approx=-5
+    dc3=  8, pairs=  2:    50400 tours, ratio=0.2500, I(-1)_approx=-5
+    dc3=  6, pairs=  1:    50400 tours, ratio=0.1667, I(-1)_approx=-4
+    dc3=  7, pairs=  2:    50400 tours, ratio=0.2857, I(-1)_approx=-4
+    dc3= 10, pairs=  8:    50400 tours, ratio=0.8000, I(-1)_approx=-1
+    dc3= 10, pairs=  7:    50400 tours, ratio=0.7000, I(-1)_approx=-2
+    dc3=  9, pairs=  2:    45360 tours, ratio=0.2222, I(-1)_approx=-6
+    dc3=  9, pairs=  6:    45360 tours, ratio=0.6667, I(-1)_approx=-2
+    dc3=  5, pairs=  0:    43344 tours, ratio=0.0000, I(-1)_approx=-4
+    dc3= 11, pairs=  8:    40320 tours, ratio=0.7273, I(-1)_approx=-2
+    dc3= 11, pairs=  7:    40320 tours, ratio=0.6364, I(-1)_approx=-3
+    dc3= 12, pairs=  7:    35280 tours, ratio=0.5833, I(-1)_approx=-4
+    dc3=  5, pairs=  1:    31920 tours, ratio=0.2000, I(-1)_approx=-3
+    dc3=  3, pairs=  0:    30240 tours, ratio=0.0000, I(-1)_approx=-2
+    dc3=  8, pairs=  0:    30240 tours, ratio=0.0000, I(-1)_approx=-7
+    dc3=  7, pairs=  4:    30240 tours, ratio=0.5714, I(-1)_approx=-2
+    dc3=  7, pairs=  3:    30240 tours, ratio=0.4286, I(-1)_approx=-3
+    dc3=  8, pairs=  3:    30240 tours, ratio=0.3750, I(-1)_approx=-4
+
+  I(-1) approximate distribution (3-cycle only):
+    I(-1) ≈   -9:     3920 tournaments
+    I(-1) ≈   -8:     5040 tournaments
+    I(-1) ≈   -7:    40320 tournaments
+    I(-1) ≈   -6:   114480 tournaments
+    I(-1) ≈   -5:   317520 tournaments
+    I(-1) ≈   -4:   486864 tournaments
+    I(-1) ≈   -3:   562800 tournaments
+    I(-1) ≈   -2:   337680 tournaments
+    I(-1) ≈   -1:   151200 tournaments
+    I(-1) ≈    0:    60480 tournaments
+    I(-1) ≈    1:    16848 tournaments
+
+  Summary:
+    Max dc3: 14
+    Max dc3_pairs: 14
+    dc3 < pairs violations: 0
+    CONFIRMED: dc3 ≥ dc3_pairs for ALL n=7 tournaments
+    Since α₁ ≥ dc3 and α₂ = dc3_pairs, this implies α₁ ≥ α₂ ✓
