@@ -1,0 +1,280 @@
+======================================================================
+COMPLETE TILING ENUMERATION — ALL DIAGRAM ASPECTS
+kind-pasteur-2026-03-14-S77
+======================================================================
+
+======================================================================
+n = 3
+======================================================================
+  m = 1 tiles, 2 tilings, 2 iso classes
+  GS tilings: 2 (100.0%)
+
+   CI  Size    H  c3               Scores  GS  nGS BluS BluX BlkS BlkX  SC Trans
+  -------------------------------------------------------------------------------------
+    0     1    1   0            (0, 1, 2)   1    0    0    1    0    0  SC     0
+    1     1    3   1            (1, 1, 1)   1    0    0    1    0    0  SC     1
+
+  SUMMARY:
+    Total classes: 2
+    SC classes: 2
+    NSC pairs: 0
+    GS tilings: 2
+    Blueself (GS flip = same class): 0
+    Blue cross (GS flip = diff class): 2
+    Blackself (non-GS flip = same class): 0
+    Black cross (non-GS flip = diff class): 0
+    Check: blueself + blue_cross = 2 * GS_count? 2 = 4 = False
+    Check: blackself + black_cross = 2 * (N - GS_count)? 0 = 0 = True
+
+  BLUE LINE SKELETON:
+    Vertices (SC classes): 2
+    Edges: 1
+      0(H=1,c3=0) --- 1(H=3,c3=1) [weight=2]
+    Bipartite by t3 parity? True
+
+  BLACK LINE SKELETON:
+    Edges: 0
+
+  KEY FORMULAS:
+    N = 2^m = 2^1 = 2
+    #classes = 2
+    #GS = 2
+    GS formula: 2^(1 + 0) = 2^1 = 2
+    Check: 2 = 2? True
+    Total flip connections: 2 (each tiling has exactly 1 flip)
+    Of which GS: 2 (landing in GS)
+    Of which non-GS: 0
+    GS flip -> GS: 2
+    GS flip -> non-GS: 0
+
+======================================================================
+n = 4
+======================================================================
+  m = 3 tiles, 8 tilings, 4 iso classes
+  GS tilings: 4 (50.0%)
+
+   CI  Size    H  c3               Scores  GS  nGS BluS BluX BlkS BlkX  SC Trans
+  -------------------------------------------------------------------------------------
+    0     1    1   0         (0, 1, 2, 3)   1    0    0    1    0    0  SC     0
+    1     1    3   1         (0, 2, 2, 2)   0    1    0    0    0    1         3
+    2     5    5   2         (1, 1, 2, 2)   3    2    2    1    0    2  SC     2
+    3     1    3   1         (1, 1, 1, 3)   0    1    0    0    0    1         1
+
+  SUMMARY:
+    Total classes: 4
+    SC classes: 2
+    NSC pairs: 1
+    GS tilings: 4
+    Blueself (GS flip = same class): 2
+    Blue cross (GS flip = diff class): 2
+    Blackself (non-GS flip = same class): 0
+    Black cross (non-GS flip = diff class): 4
+    Check: blueself + blue_cross = 2 * GS_count? 4 = 8 = False
+    Check: blackself + black_cross = 2 * (N - GS_count)? 4 = 8 = False
+
+  BLUE LINE SKELETON:
+    Vertices (SC classes): 2
+    Edges: 1
+      0(H=1,c3=0) --- 2(H=5,c3=2) [weight=2]
+
+  BLACK LINE SKELETON:
+    Edges: 2
+
+  KEY FORMULAS:
+    N = 2^m = 2^3 = 8
+    #classes = 4
+    #GS = 4
+    GS formula: 2^(1 + 1) = 2^2 = 4
+    Check: 4 = 4? True
+    Total flip connections: 8 (each tiling has exactly 1 flip)
+    Of which GS: 4 (landing in GS)
+    Of which non-GS: 4
+    GS flip -> GS: 4
+    GS flip -> non-GS: 0
+
+======================================================================
+n = 5
+======================================================================
+  m = 6 tiles, 64 tilings, 12 iso classes
+  GS tilings: 16 (25.0%)
+
+   CI  Size    H  c3               Scores  GS  nGS BluS BluX BlkS BlkX  SC Trans
+  -------------------------------------------------------------------------------------
+    0     1    1   0      (0, 1, 2, 3, 4)   1    0    0    1    0    0  SC     0
+    1     1    3   1      (0, 1, 3, 3, 3)   0    1    0    0    0    1         7
+    2     5    5   2      (0, 2, 2, 3, 3)   0    5    0    0    0    5         5
+    3     1    3   1      (0, 2, 2, 2, 4)   1    0    0    1    0    0  SC     3
+    4     9    9   3      (1, 1, 2, 3, 3)   1    8    0    1    0    8  SC     4
+    5     5    5   2      (1, 1, 2, 2, 4)   0    5    0    0    0    5         2
+    6     9    9   3      (1, 1, 2, 3, 3)   3    6    0    3    0    6  SC     6
+    7     1    3   1      (1, 1, 1, 3, 4)   0    1    0    0    0    1         1
+    8    11   11   4      (1, 2, 2, 2, 3)   3    8    0    3    4    4  SC     8
+    9     5   15   4      (1, 2, 2, 2, 3)   1    4    0    1    0    4  SC     9
+   10    13   13   4      (1, 2, 2, 2, 3)   3   10    0    3    4    6  SC    10
+   11     3   15   5      (2, 2, 2, 2, 2)   3    0    0    3    0    0  SC    11
+
+  SUMMARY:
+    Total classes: 12
+    SC classes: 8
+    NSC pairs: 2
+    GS tilings: 16
+    Blueself (GS flip = same class): 0
+    Blue cross (GS flip = diff class): 16
+    Blackself (non-GS flip = same class): 8
+    Black cross (non-GS flip = diff class): 40
+    Check: blueself + blue_cross = 2 * GS_count? 16 = 32 = False
+    Check: blackself + black_cross = 2 * (N - GS_count)? 48 = 96 = False
+
+  BLUE LINE SKELETON:
+    Vertices (SC classes): 8
+    Edges: 8
+      0(H=1,c3=0) --- 6(H=9,c3=3) [weight=2]
+      3(H=3,c3=1) --- 10(H=13,c3=4) [weight=2]
+      4(H=9,c3=3) --- 8(H=11,c3=4) [weight=2]
+      6(H=9,c3=3) --- 8(H=11,c3=4) [weight=2]
+      6(H=9,c3=3) --- 10(H=13,c3=4) [weight=2]
+      8(H=11,c3=4) --- 11(H=15,c3=5) [weight=2]
+      9(H=15,c3=4) --- 11(H=15,c3=5) [weight=2]
+      10(H=13,c3=4) --- 11(H=15,c3=5) [weight=2]
+    Bipartite by t3 parity? True
+
+  BLACK LINE SKELETON:
+    Edges: 16
+
+  KEY FORMULAS:
+    N = 2^m = 2^6 = 64
+    #classes = 12
+    #GS = 16
+    GS formula: 2^(2 + 2) = 2^4 = 16
+    Check: 16 = 16? True
+    Total flip connections: 64 (each tiling has exactly 1 flip)
+    Of which GS: 16 (landing in GS)
+    Of which non-GS: 48
+    GS flip -> GS: 16
+    GS flip -> non-GS: 0
+
+======================================================================
+n = 6
+======================================================================
+  m = 10 tiles, 1024 tilings, 56 iso classes
+  GS tilings: 64 (6.2%)
+
+   CI  Size    H  c3               Scores  GS  nGS BluS BluX BlkS BlkX  SC Trans
+  -------------------------------------------------------------------------------------
+    0     1    1   0   (0, 1, 2, 3, 4, 5)   1    0    0    1    0    0  SC     0
+    1     1    3   1   (0, 1, 2, 4, 4, 4)   0    1    0    0    0    1        19
+    2     5    5   2   (0, 1, 3, 3, 4, 4)   0    5    0    0    0    5        15
+    3     1    3   1   (0, 1, 3, 3, 3, 5)   0    1    0    0    0    1         7
+    4     9    9   3   (0, 2, 2, 3, 4, 4)   0    9    0    0    0    9        13
+    5     5    5   2   (0, 2, 2, 3, 3, 5)   3    2    0    3    0    2  SC     5
+    6     9    9   3   (0, 2, 2, 3, 4, 4)   0    9    0    0    0    9        17
+    7     1    3   1   (0, 2, 2, 2, 4, 5)   0    1    0    0    0    1         3
+    8    11   11   4   (0, 2, 3, 3, 3, 4)   0   11    0    0    0   11        25
+    9     5   15   4   (0, 2, 3, 3, 3, 4)   0    5    0    0    0    5        36
+   10    13   13   4   (0, 2, 3, 3, 3, 4)   0   13    0    0    0   13        37
+   11     3   15   5   (0, 3, 3, 3, 3, 3)   0    3    0    0    0    3        50
+   12    17   17   4   (1, 1, 2, 3, 4, 4)   5   12    0    5    0   12  SC    12
+   13     9    9   3   (1, 1, 2, 3, 3, 5)   0    9    0    0    0    9         4
+   14    15   15   4   (1, 1, 2, 3, 4, 4)   0   15    0    0    2   13        18
+   15     5    5   2   (1, 1, 2, 2, 4, 5)   0    5    0    0    0    5         2
+   16    19   19   5   (1, 1, 3, 3, 3, 4)   0   19    0    0    0   19        26
+   17     9    9   3   (1, 1, 2, 3, 3, 5)   0    9    0    0    0    9         6
+   18    15   15   4   (1, 1, 2, 3, 4, 4)   0   15    0    0    2   13        14
+   19     1    3   1   (1, 1, 1, 3, 4, 5)   0    1    0    0    0    1         1
+   20     9   27   5   (1, 1, 3, 3, 3, 4)   0    9    0    0    0    9        34
+   21    23   23   5   (1, 1, 3, 3, 3, 4)   0   23    0    0    0   23        33
+   22    17   17   4   (1, 1, 2, 3, 4, 4)   5   12    0    5    0   12  SC    22
+   23     1    9   2   (1, 1, 1, 4, 4, 4)   1    0    0    1    0    0  SC    23
+   24    23   23   6   (1, 2, 2, 3, 3, 4)   0   23    0    0    0   23        27
+   25    11   11   4   (1, 2, 2, 2, 3, 5)   0   11    0    0    0   11         8
+   26    19   19   5   (1, 2, 2, 2, 4, 4)   0   19    0    0    0   19        16
+   27    23   23   6   (1, 2, 2, 3, 3, 4)   0   23    0    0    0   23        24
+   28    11   33   7   (1, 2, 3, 3, 3, 3)   0   11    0    0    0   11        53
+   29    25   25   6   (1, 2, 2, 3, 3, 4)   0   25    0    0    2   23        40
+   30    37   37   6   (1, 2, 2, 3, 3, 4)   7   30    0    7    0   30  SC    30
+   31    33   33   6   (1, 2, 2, 3, 3, 4)   7   26    0    7    0   26  SC    31
+   32    31   31   6   (1, 2, 2, 3, 3, 4)   0   31    0    0    0   31        39
+   33    23   23   5   (1, 2, 2, 2, 4, 4)   0   23    0    0    0   23        21
+   34     9   27   5   (1, 2, 2, 2, 4, 4)   0    9    0    0    0    9        20
+   35    29   29   6   (1, 2, 2, 3, 3, 4)   0   29    0    0    0   29        41
+   36     5   15   4   (1, 2, 2, 2, 3, 5)   0    5    0    0    0    5         9
+   37    13   13   4   (1, 2, 2, 2, 3, 5)   0   13    0    0    0   13        10
+   38    37   37   7   (1, 2, 3, 3, 3, 3)   0   37    0    0    0   37        49
+   39    31   31   6   (1, 2, 2, 3, 3, 4)   0   31    0    0    0   31        32
+   40    25   25   6   (1, 2, 2, 3, 3, 4)   0   25    0    0    2   23        29
+   41    29   29   6   (1, 2, 2, 3, 3, 4)   0   29    0    0    0   29        35
+   42    37   37   7   (1, 2, 3, 3, 3, 3)   0   37    0    0    0   37        47
+   43    29   29   6   (1, 2, 2, 3, 3, 4)   7   22    0    7    0   22  SC    43
+   44    29   29   6   (1, 2, 2, 3, 3, 4)   7   22    0    7    0   22  SC    44
+   45    33   33   7   (1, 2, 3, 3, 3, 3)   0   33    0    0    0   33        48
+   46    41   41   8   (2, 2, 2, 3, 3, 3)   9   32    2    7    0   32  SC    46
+   47    37   37   7   (2, 2, 2, 2, 3, 4)   0   37    0    0    0   37        42
+   48    33   33   7   (2, 2, 2, 2, 3, 4)   0   33    0    0    0   33        45
+   49    37   37   7   (2, 2, 2, 2, 3, 4)   0   37    0    0    0   37        38
+   50     3   15   5   (2, 2, 2, 2, 2, 5)   0    3    0    0    0    3        11
+   51    43   43   8   (2, 2, 2, 3, 3, 3)   0   43    0    0    2   41        52
+   52    43   43   8   (2, 2, 2, 3, 3, 3)   0   43    0    0    2   41        51
+   53    11   33   7   (2, 2, 2, 2, 3, 4)   0   11    0    0    0   11        28
+   54    15   45   8   (2, 2, 2, 3, 3, 3)   9    6    2    7    0    6  SC    54
+   55    15   45   8   (2, 2, 2, 3, 3, 3)   3   12    0    3    0   12  SC    55
+
+  SUMMARY:
+    Total classes: 56
+    SC classes: 12
+    NSC pairs: 22
+    GS tilings: 64
+    Blueself (GS flip = same class): 4
+    Blue cross (GS flip = diff class): 60
+    Blackself (non-GS flip = same class): 12
+    Black cross (non-GS flip = diff class): 948
+    Check: blueself + blue_cross = 2 * GS_count? 64 = 128 = False
+    Check: blackself + black_cross = 2 * (N - GS_count)? 960 = 1920 = False
+
+  BLUE LINE SKELETON:
+    Vertices (SC classes): 12
+    Edges: 26
+      0(H=1,c3=0) --- 22(H=17,c3=4) [weight=2]
+      5(H=5,c3=2) --- 31(H=33,c3=6) [weight=2]
+      5(H=5,c3=2) --- 43(H=29,c3=6) [weight=2]
+      5(H=5,c3=2) --- 44(H=29,c3=6) [weight=2]
+      12(H=17,c3=4) --- 22(H=17,c3=4) [weight=2]
+      12(H=17,c3=4) --- 23(H=9,c3=2) [weight=2]
+      12(H=17,c3=4) --- 31(H=33,c3=6) [weight=2]
+      12(H=17,c3=4) --- 43(H=29,c3=6) [weight=2]
+      12(H=17,c3=4) --- 44(H=29,c3=6) [weight=2]
+      22(H=17,c3=4) --- 30(H=37,c3=6) [weight=2]
+      22(H=17,c3=4) --- 31(H=33,c3=6) [weight=4]
+      30(H=37,c3=6) --- 31(H=33,c3=6) [weight=2]
+      30(H=37,c3=6) --- 43(H=29,c3=6) [weight=2]
+      30(H=37,c3=6) --- 44(H=29,c3=6) [weight=2]
+      30(H=37,c3=6) --- 46(H=41,c3=8) [weight=2]
+      30(H=37,c3=6) --- 54(H=45,c3=8) [weight=2]
+      30(H=37,c3=6) --- 55(H=45,c3=8) [weight=2]
+      31(H=33,c3=6) --- 44(H=29,c3=6) [weight=2]
+      31(H=33,c3=6) --- 54(H=45,c3=8) [weight=2]
+      43(H=29,c3=6) --- 44(H=29,c3=6) [weight=2]
+      43(H=29,c3=6) --- 46(H=41,c3=8) [weight=2]
+      43(H=29,c3=6) --- 54(H=45,c3=8) [weight=4]
+      44(H=29,c3=6) --- 46(H=41,c3=8) [weight=4]
+      46(H=41,c3=8) --- 54(H=45,c3=8) [weight=4]
+      46(H=41,c3=8) --- 55(H=45,c3=8) [weight=2]
+      54(H=45,c3=8) --- 55(H=45,c3=8) [weight=2]
+
+  BLACK LINE SKELETON:
+    Edges: 340
+
+  KEY FORMULAS:
+    N = 2^m = 2^10 = 1024
+    #classes = 56
+    #GS = 64
+    GS formula: 2^(2 + 4) = 2^6 = 64
+    Check: 64 = 64? True
+    Total flip connections: 1024 (each tiling has exactly 1 flip)
+    Of which GS: 64 (landing in GS)
+    Of which non-GS: 960
+    GS flip -> GS: 64
+    GS flip -> non-GS: 0
+
+======================================================================
+DONE
+======================================================================
