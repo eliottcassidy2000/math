@@ -1,0 +1,198 @@
+======================================================================
+LEX PRODUCT MAXIMIZER INVESTIGATION
+kind-pasteur-2026-03-14-S82
+======================================================================
+
+======================================================================
+PART 1: STRUCTURE OF H-MAXIMIZERS
+======================================================================
+
+  n=3, max_H=3:
+    Count: 2
+    Scores: [(np.int64(1), np.int64(1), np.int64(1))]
+    c3: [1]
+    Fraction: 2/8 = 0.2500
+
+  n=4, max_H=5:
+    Count: 24
+    Scores: [(np.int64(1), np.int64(1), np.int64(2), np.int64(2))]
+    c3: [2]
+    Fraction: 24/64 = 0.3750
+
+  n=5, max_H=15:
+    Count: 64
+    Scores: [(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))]
+    c3: [4, 5]
+    Fraction: 64/1024 = 0.0625
+
+  n=6, max_H=45:
+    Count: 480
+    Scores: [(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))]
+    c3: [8]
+    Fraction: 480/32768 = 0.0146
+
+======================================================================
+PART 2: CAN WE BUILD MAXIMIZERS VIA LEX PRODUCTS?
+======================================================================
+  3-cycle: H = 3
+  Transitive T_2: H = 1
+  Transitive T_3: H = 1
+  Transitive T_4: H = 1
+
+  Testing lex products that give n=6:
+    3 lex 2: H1=3, H2=1, H_prod=45, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))
+    3 lex 2: H1=3, H2=1, H_prod=45, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))
+    3 lex 2: H1=3, H2=1, H_prod=45, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))
+    3 lex 2: H1=3, H2=1, H_prod=45, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))
+
+  Checking: which n=6 maximizers (H=45) are lex products?
+    Lex products achieving H=45: 4
+    Total tournaments with H=45: 480
+    Lex products / total: 4/480
+    Overlap (lex products that ARE maximizers): 4
+    Non-lex maximizers: 476
+
+======================================================================
+PART 3: WHEN DOES H(T1 lex T2) = H(T1) * H(T2)^|V1|?
+  From S81: works for |V1|=2 (all T2)
+  Fails for |V1|=3 with 3-cycle T1 and |V2|=2
+  Let me check |V1|=3 more carefully
+======================================================================
+
+  3 lex 2 (n_prod=6):
+    Successes: 12, Failures: 4
+    Failing H1 values: {3: 4}
+    Failing H2 values: {1: 4}
+    Fails only when H1 > 1 (T1 has cycles)? True
+    Fails only when H1 = 3 (3-cycle)? True
+      H1=3, H2=1: actual=45, predicted=3, ratio=15.0000
+      H1=3, H2=1: actual=45, predicted=3, ratio=15.0000
+      H1=3, H2=1: actual=45, predicted=3, ratio=15.0000
+      H1=3, H2=1: actual=45, predicted=3, ratio=15.0000
+
+  3 lex 3 (n_prod=9):
+    Successes: 48, Failures: 16
+    Failing H1 values: {3: 16}
+    Failing H2 values: {1: 12, 3: 4}
+    Fails only when H1 > 1 (T1 has cycles)? True
+    Fails only when H1 = 3 (3-cycle)? True
+      H1=3, H2=1: actual=2721, predicted=3, ratio=907.0000
+      H1=3, H2=1: actual=2721, predicted=3, ratio=907.0000
+      H1=3, H2=3: actual=3159, predicted=81, ratio=39.0000
+      H1=3, H2=1: actual=2721, predicted=3, ratio=907.0000
+      H1=3, H2=1: actual=2721, predicted=3, ratio=907.0000
+
+======================================================================
+PART 4: FINDING THE CORRECT LEX PRODUCT FORMULA
+  For T1 lex T2 where T1 is the 3-cycle:
+  H = 45 when H2=1, and the formula H1*H2^3 gives 3.
+  What IS 45 in terms of T1 and T2?
+======================================================================
+  The 3-cycle lex T_2 is a 'blow-up' of the 3-cycle.
+  Each vertex becomes a pair. H=45 because this blow-up
+  creates the maximally regular tournament at n=6.
+
+  GENERAL BLOW-UP CONJECTURE:
+  The blow-up of T_p (Paley) by factor k gives:
+  n = p*k vertices, and achieves high H.
+
+  At n=6 = 3*2: blow-up of T_3 by factor 2 -> H=45=max
+  At n=7: Paley T_7 directly -> H=189=max
+  At n=9 = 3*3: blow-up of T_3 by factor 3 -> H=?
+    3-cycle lex T(H=1): n=9, H=2721, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5))
+    3-cycle lex T(H=1): n=9, H=2721, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5))
+    3-cycle lex T(H=3): n=9, H=3159, scores=(np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4))
+    3-cycle lex T(H=1): n=9, H=2721, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5))
+    3-cycle lex T(H=1): n=9, H=2721, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5))
+    3-cycle lex T(H=3): n=9, H=3159, scores=(np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4))
+    3-cycle lex T(H=1): n=9, H=2721, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5))
+    3-cycle lex T(H=1): n=9, H=2721, scores=(np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(4), np.int64(4), np.int64(5), np.int64(5), np.int64(5))
+
+  max_H(9) = 3357 (from OEIS)
+  3-cycle lex T_3(H=3) gives H=? (computed above)
+  3-cycle lex transitive-3(H=1) gives H=? (computed above)
+
+======================================================================
+PART 5: RECURSIVE MAXIMIZER STRUCTURE
+  max_H: 1, 1, 3, 5, 15, 45, 189, 661, 3357, 15745, 95095
+  Looking for recursive patterns
+======================================================================
+
+  max_H(n) / max_H(n-1):
+    a(2)/a(1) = 1/1 = 1.0000
+    a(3)/a(2) = 3/1 = 3.0000
+    a(4)/a(3) = 5/3 = 1.6667
+    a(5)/a(4) = 15/5 = 3.0000
+    a(6)/a(5) = 45/15 = 3.0000
+    a(7)/a(6) = 189/45 = 4.2000
+    a(8)/a(7) = 661/189 = 3.4974
+    a(9)/a(8) = 3357/661 = 5.0787
+    a(10)/a(9) = 15745/3357 = 4.6902
+    a(11)/a(10) = 95095/15745 = 6.0397
+
+  Check max_H(n) = (2n-3) * max_H(n-1):
+    n=3: (2n-3)*a(n-1) = 3, actual = 3, match = True
+    n=4: (2n-3)*a(n-1) = 15, actual = 5, match = False
+    n=5: (2n-3)*a(n-1) = 35, actual = 15, match = False
+    n=6: (2n-3)*a(n-1) = 135, actual = 45, match = False
+    n=7: (2n-3)*a(n-1) = 495, actual = 189, match = False
+    n=8: (2n-3)*a(n-1) = 2457, actual = 661, match = False
+    n=9: (2n-3)*a(n-1) = 9915, actual = 3357, match = False
+    n=10: (2n-3)*a(n-1) = 57069, actual = 15745, match = False
+    n=11: (2n-3)*a(n-1) = 299155, actual = 95095, match = False
+
+  Check max_H(n) * 2^(n-2) / n!:
+    n=1: max_H * 2^(n-2) / n! = 0.500000
+    n=2: max_H * 2^(n-2) / n! = 0.500000
+    n=3: max_H * 2^(n-2) / n! = 1.000000
+    n=4: max_H * 2^(n-2) / n! = 0.833333
+    n=5: max_H * 2^(n-2) / n! = 1.000000
+    n=6: max_H * 2^(n-2) / n! = 1.000000
+    n=7: max_H * 2^(n-2) / n! = 1.200000
+    n=8: max_H * 2^(n-2) / n! = 1.049206
+    n=9: max_H * 2^(n-2) / n! = 1.184127
+    n=10: max_H * 2^(n-2) / n! = 1.110758
+    n=11: max_H * 2^(n-2) / n! = 1.219753
+
+  Szele: max_H / (n!/2^(n-1)) -> e = 2.718282
+    n=2: ratio = 1.000000
+    n=3: ratio = 2.000000
+    n=4: ratio = 1.666667
+    n=5: ratio = 2.000000
+    n=6: ratio = 2.000000
+    n=7: ratio = 2.400000
+    n=8: ratio = 2.098413
+    n=9: ratio = 2.368254
+    n=10: ratio = 2.221517
+    n=11: ratio = 2.439506
+
+======================================================================
+PART 6: BLOW-UP PATTERN
+  Does T_3 lex max_T(k) give max_H(3k) for k = 1,2,...?
+======================================================================
+  k=1: T_3 lex T_1 = T_3. H=3 = max_H(3). CHECK
+  k=2: T_3 lex max_T_2 = T_3 lex trans_2. H=45 = max_H(6). CHECK
+  k=3: T_3 lex T_3 = ? H=? vs max_H(9) = 3357
+    T_3 lex T_3: H = 3159, max_H(9) = 3357
+    Match? False
+    Ratio: 0.9410
+    The blow-up does NOT give the maximizer at n=9!
+    The Paley tournament at n=7 has H=189, not a blow-up.
+    So the blow-up construction only works for specific n values.
+
+======================================================================
+PART 7: ITERATED LEX PRODUCTS
+  T lex T lex T ... — what happens?
+======================================================================
+  T_2 lex T_2: n=4, H=1, max_H(4)=5
+  T_2 lex T_2 lex T_2: n=8, H=1, max_H(8)=661
+  T_2 lex (T_2 lex T_2): n=8, H=1
+  Associativity: 1 vs 1, equal? True
+
+  If formula held: H(T_3 lex T_3) = 3 * 3^3 = 81
+  Actual: 3159
+  Formula FAILS
+
+======================================================================
+DONE
+======================================================================
