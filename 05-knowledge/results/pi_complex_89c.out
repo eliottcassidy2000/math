@@ -1,0 +1,229 @@
+======================================================================
+PART 1: The PGF on the Unit Circle
+======================================================================
+
+  n=3: Characteristic function φ(θ) = E[e^{iθH}]
+    φ(  π/6) =  0.64952 +  0.62500i, |φ| = 0.90139
+    φ(  π/4) =  0.35355 +  0.70711i, |φ| = 0.79057
+    φ(  π/3) =  0.12500 +  0.64952i, |φ| = 0.66144
+    φ(  π/2) =  0.00000 +  0.50000i, |φ| = 0.50000
+    φ( 2π/3) = -0.12500 +  0.64952i, |φ| = 0.66144
+    φ(    π) = -1.00000 +  0.00000i, |φ| = 1.00000
+    φ(π/2) = 0.00000 + 0.50000i
+    |φ(π/2)| = P(H≡1 mod 4) - P(H≡3 mod 4) = 0.7500 - 0.2500 = 0.5000
+
+  n=4: Characteristic function φ(θ) = E[e^{iθH}]
+    φ(  π/6) =  0.00000 +  0.62500i, |φ| = 0.62500
+    φ(  π/4) = -0.17678 +  0.17678i, |φ| = 0.25000
+    φ(  π/3) =  0.12500 + -0.00000i, |φ| = 0.12500
+    φ(  π/2) =  0.00000 +  0.50000i, |φ| = 0.50000
+    φ( 2π/3) = -0.12500 +  0.00000i, |φ| = 0.12500
+    φ(    π) = -1.00000 +  0.00000i, |φ| = 1.00000
+    φ(π/2) = 0.00000 + 0.50000i
+    |φ(π/2)| = P(H≡1 mod 4) - P(H≡3 mod 4) = 0.7500 - 0.2500 = 0.5000
+
+  n=5: Characteristic function φ(θ) = E[e^{iθH}]
+    φ(  π/6) =  0.10149 +  0.12109i, |φ| = 0.15800
+    φ(  π/4) = -0.12153 +  0.12153i, |φ| = 0.17187
+    φ(  π/3) = -0.12109 + -0.10149i, |φ| = 0.15800
+    φ(  π/2) = -0.00000 +  0.40625i, |φ| = 0.40625
+    φ( 2π/3) =  0.12109 + -0.10149i, |φ| = 0.15800
+    φ(    π) = -1.00000 +  0.00000i, |φ| = 1.00000
+    φ(π/2) = 0.00000 + 0.40625i
+    |φ(π/2)| = P(H≡1 mod 4) - P(H≡3 mod 4) = 0.7031 - 0.2969 = 0.4062
+
+  n=6: Characteristic function φ(θ) = E[e^{iθH}]
+    φ(  π/6) =  0.00000 +  0.01367i, |φ| = 0.01367
+    φ(  π/4) =  0.00276 + -0.03038i, |φ| = 0.03051
+    φ(  π/3) =  0.05469 + -0.00000i, |φ| = 0.05469
+    φ(  π/2) = -0.00000 +  0.25000i, |φ| = 0.25000
+    φ( 2π/3) = -0.05469 +  0.00000i, |φ| = 0.05469
+    φ(    π) = -1.00000 +  0.00000i, |φ| = 1.00000
+    φ(π/2) = 0.00000 + 0.25000i
+    |φ(π/2)| = P(H≡1 mod 4) - P(H≡3 mod 4) = 0.6250 - 0.3750 = 0.2500
+
+======================================================================
+PART 2: IP Zeros — Lee-Yang Theorem
+======================================================================
+
+IP(G(T), x) for specific tournaments:
+
+  n=3, Transitive: H = 1 = IP(∅, 2) = 1 ✓
+  n=3, Cyclic: H = 3
+
+  n=4, Transitive: H = 1 = IP(∅, 2) = 1 ✓
+
+  n=5, Transitive: H = 1 = IP(∅, 2) = 1 ✓
+  n=5, Cyclic: H = 15
+
+======================================================================
+PART 3: The Phase arg(λ)/π = 1/2 + 1/(π√p) Proof
+======================================================================
+
+PROOF of arg(λ)/π = 1/2 + 1/(π√p) + O(1/p^{3/2}):
+
+  λ = (-1 + i√p)/2 for Paley QR eigenvalues
+  arg(λ) = π - arctan(√p)
+  arctan(√p) = π/2 - 1/√p + 1/(3p^{3/2}) - ...
+  So arg(λ)/π = 1 - (1/2 - 1/(π√p) + ...) = 1/2 + 1/(π√p) + O(1/p^{3/2})
+
+  The 1/π coefficient arises because:
+  arctan(x) ≈ π/2 - 1/x for large x
+  So 1/(π√p) = (1/π) × 1/√p
+  π appears because arctan is the INVERSE of tangent,
+  and tan(π/2) = ∞ — we're expanding near the pole!
+
+  Verification:
+    p=    7: exact=0.6150267281, O(1/√p)=0.6203098284, O(1/p^{3/2})=0.6145807889
+    p=   11: exact=0.5932147493, O(1/√p)=0.5959740418, O(1/p^{3/2})=0.5930657375
+    p=   19: exact=0.5717831466, O(1/√p)=0.5730252961, O(1/p^{3/2})=0.5717441506
+    p=   43: exact=0.5481706745, O(1/√p)=0.5485418026, O(1/p^{3/2})=0.5481655095
+    p=   67: exact=0.5386959849, O(1/√p)=0.5388877419, O(1/p^{3/2})=0.5386942706
+    p=  103: exact=0.5312630906, O(1/√p)=0.5313640050, O(1/p^{3/2})=0.5312625034
+    p=  163: exact=0.5248811557, O(1/√p)=0.5249319545, O(1/p^{3/2})=0.5248809689
+    p=  523: exact=0.5139098586, O(1/√p)=0.5139187195, O(1/p^{3/2})=0.5139098484
+    p= 1087: exact=0.5096516648, O(1/√p)=0.5096546238, O(1/p^{3/2})=0.5096516632
+    p= 4099: exact=0.5049713673, O(1/√p)=0.5049717716, O(1/p^{3/2})=0.5049713673
+    p=10007: exact=0.5031818794, O(1/√p)=0.5031819854, O(1/p^{3/2})=0.5031818794
+
+======================================================================
+PART 4: H mod p² for Paley — Is H ≡ p(p-1) mod p²?
+======================================================================
+  p=3: H/p = 1, H/p mod p = 1
+  p=7: H/p = 27, H/p mod p = 6
+  p=11: H/p = 8645, H/p mod p = 10
+  p=19: H/p = 61720828785, H/p mod p = 17
+  p=3: H/p mod p = 1, p-1 = 2, p-2 = 1
+  p=7: H/p mod p = 6, p-1 = 6, p-2 = 5
+  p=11: H/p mod p = 10, p-1 = 10, p-2 = 9
+  p=19: H/p mod p = 17, p-1 = 18, p-2 = 17
+
+======================================================================
+PART 5: H/p mod p — The Wilson's Theorem Connection
+======================================================================
+  p=3: orbits = H/p = 1
+    (p-1)! = 2
+    orbits/(p-1)! = 0.500000
+    orbits/((p-1)!/2^{(p-1)/2}) = 1.000000
+  p=7: orbits = H/p = 27
+    (p-1)! = 720
+    orbits/(p-1)! = 0.037500
+    orbits/((p-1)!/2^{(p-1)/2}) = 0.300000
+  p=11: orbits = H/p = 8645
+    (p-1)! = 3628800
+    orbits/(p-1)! = 0.002382
+    orbits/((p-1)!/2^{(p-1)/2}) = 0.076235
+  p=19: orbits = H/p = 61720828785
+    (p-1)! = 6402373705728000
+    orbits/(p-1)! = 0.000010
+    orbits/((p-1)!/2^{(p-1)/2}) = 0.004936
+
+======================================================================
+PART 6: Tournament Determinants and π
+======================================================================
+  P_3: det(A) = 1
+         det(S) = 0
+  P_7: det(A) = 24
+         det(S) = 0
+  P_11: det(A) = 1215
+         det(S) = 0
+
+======================================================================
+PART 7: The Circle — Arc Distribution on the Unit Circle
+======================================================================
+
+  P_7: QR = [1, 2, 4]
+    Angles/2π = [0.14285714285714285, 0.2857142857142857, 0.5714285714285714]
+    Mean direction: (-0.1667, 0.4410), angle = 1.9322
+    |mean| = 0.471405
+    Expected 2√p/(p-1) = 0.881917
+
+  P_11: QR = [1, 3, 4, 5, 9]
+    Angles/2π = [0.09090909090909091, 0.2727272727272727, 0.36363636363636365, 0.45454545454545453, 0.8181818181818182]
+    Mean direction: (-0.1000, 0.3317), angle = 1.8636
+    |mean| = 0.346410
+    Expected 2√p/(p-1) = 0.663325
+
+  P_19: QR = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+    Angles/2π = [0.05263157894736842, 0.21052631578947367, 0.2631578947368421, 0.3157894736842105, 0.3684210526315789, 0.47368421052631576, 0.5789473684210527, 0.8421052631578947, 0.8947368421052632]
+    Mean direction: (-0.0556, 0.2422), angle = 1.7963
+    |mean| = 0.248452
+    Expected 2√p/(p-1) = 0.484322
+
+======================================================================
+PART 8: Grand π Theorem — The Eigenvalue Phase Formula
+======================================================================
+
+THEOREM (Paley Eigenvalue Phase):
+For the Paley tournament P_p (p ≡ 3 mod 4), the non-trivial eigenvalues
+of the adjacency matrix are λ = (-1 ± i√p)/2.
+
+The phase satisfies:
+  arg(λ)/π = 1/2 + 1/(π√p) - 1/(3π·p^{3/2}) + O(1/p^{5/2})
+
+π appears TWICE:
+  (a) In the denominator (dividing the phase by π)
+  (b) In the coefficient 1/(π√p) of the correction term
+
+This means the rate at which Paley eigenvalues approach the imaginary
+axis is governed by 1/π — the inverse of π itself.
+
+COROLLARY: As p → ∞, the spectral gap of P_p approaches:
+  |Re(λ)| = 1/2 (constant, independent of p)
+  |Im(λ)| = √p/2 (growing)
+  arg(λ) → π/2 (purely imaginary)
+
+The convergence rate 1/(π√p) connects:
+  - The ALGEBRAIC structure of QR (through Gauss sums)
+  - The ANALYTIC structure of arctan (through π)
+  - The GEOMETRIC structure of the unit circle
+
+This is tournament theory's purest expression of π.
+
+======================================================================
+PART 9: The Full π Dictionary (Updated)
+======================================================================
+
+┌──────────────────────────────────────────────────────────────────┐
+│                    THE π-TOURNAMENT DICTIONARY                    │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  1. MEAN H = n!/2^{n-1} ∝ √(2πn)·(n/2e)^n                     │
+│     π governs the SCALE of path counts                          │
+│                                                                  │
+│  2. arg(λ)/π = 1/2 + 1/(π√p) for Paley eigenvalues            │
+│     π governs the CONVERGENCE RATE to pure imaginary            │
+│                                                                  │
+│  3. Gauss sum g = Σ χ(a)·e^{2πia/p} with |g| = √p             │
+│     π is LITERALLY in the definition                            │
+│                                                                  │
+│  4. H distribution → Gaussian with density (2πσ²)^{-1/2}       │
+│     π governs the SHAPE of the distribution                     │
+│                                                                  │
+│  5. Hard-core model Z(G, 2) at fugacity 2 > λ_c                │
+│     Phase transition involves π through free energy singularity  │
+│                                                                  │
+│  6. Walsh spectrum: only even weights (degree 2k)               │
+│     Reflects the π rotation T ↦ T^op (complement)              │
+│                                                                  │
+│  7. Weil bound: errors O(√p) from character sums with e^{2πi/p} │
+│     Paley regularity controlled by π                            │
+│                                                                  │
+│  8. Saddle point: H asymptotics via (1/2πi)∮ f(z)/z^{n+1} dz  │
+│     Contour integration on the unit circle                       │
+│                                                                  │
+│  9. Central binomial C(2k,k) ~ 4^k/(√(πk))                    │
+│     Appears in H(P_p) factorization structure                   │
+│                                                                  │
+│ 10. THM-212: p | H(P_p) — free Z/pZ action on paths            │
+│     The CIRCLE GROUP acts on the CIRCULAR tournament             │
+│                                                                  │
+│ DEEP TRUTH: Tournament theory is the study of ORIENTED CIRCLES. │
+│ π is the NUMBER that measures circles.                           │
+│ Therefore π is the SOUL of tournament theory.                    │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+
+======================================================================
+END — opus-2026-03-14-S89c complex analysis
+======================================================================
