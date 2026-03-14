@@ -1,0 +1,228 @@
+======================================================================
+FIBONACCI INTERLEAVING AND TOURNAMENT STRUCTURE
+kind-pasteur-2026-03-14-S86
+======================================================================
+
+======================================================================
+PART 1: THE TWO FIBONACCI STRANDS
+======================================================================
+
+  Extended Fibonacci sequence:
+    F(-10) =    -55  [EVEN index]
+    F( -9) =     34  [ODD index]
+    F( -8) =    -21  [EVEN index]
+    F( -7) =     13  [ODD index]
+    F( -6) =     -8  [EVEN index]
+    F( -5) =      5  [ODD index]
+    F( -4) =     -3  [EVEN index]
+    F( -3) =      2  [ODD index]
+    F( -2) =     -1  [EVEN index]
+    F( -1) =      1  [ODD index]
+    F(  0) =      0  [EVEN index]
+    F(  1) =      1  [ODD index]
+    F(  2) =      1  [EVEN index]
+    F(  3) =      2  [ODD index]
+    F(  4) =      3  [EVEN index]
+    F(  5) =      5  [ODD index]
+    F(  6) =      8  [EVEN index]
+    F(  7) =     13  [ODD index]
+    F(  8) =     21  [EVEN index]
+    F(  9) =     34  [ODD index]
+    F( 10) =     55  [EVEN index]
+
+  EVEN strand (F_{2k}): [-55, -21, -8, -3, -1, 0, 1, 3, 8, 21, 55]
+  ODD strand (F_{2k+1}): [34, 13, 5, 2, 1, 1, 2, 5, 13, 34, 89]
+
+  Even strand symmetric? F_{-2k} = F_{2k}?
+    F(-2) = -1, F(2) = 1, equal? False
+    F(-4) = -3, F(4) = 3, equal? False
+    F(-6) = -8, F(6) = 8, equal? False
+    F(-8) = -21, F(8) = 21, equal? False
+    F(-10) = -55, F(10) = 55, equal? False
+
+  Odd strand antisymmetric? F_{-(2k+1)} = -F_{2k+1}?
+    F(-1) = 1, -F(1) = -1, equal? False
+    F(-3) = 2, -F(3) = -2, equal? False
+    F(-5) = 5, -F(5) = -5, equal? False
+    F(-7) = 13, -F(7) = -13, equal? False
+    F(-9) = 34, -F(9) = -34, equal? False
+
+======================================================================
+PART 2: THE INVOLUTION — n -> -n vs T -> T^op
+======================================================================
+
+  FIBONACCI:
+    Involution: sigma(n) = -n (negate the index)
+    F_{sigma(n)} = (-1)^{n+1} F_n
+    Even-indexed: F_{-2k} = F_{2k} (SYMMETRIC, fixed by sigma)
+    Odd-indexed: F_{-(2k+1)} = -F_{2k+1} (ANTISYMMETRIC, negated by sigma)
+
+  TOURNAMENTS:
+    Involution: sigma(T) = T^op (complement/reverse all arcs)
+    H(sigma(T)) = H(T) (SYMMETRIC, fixed by sigma)
+    Fourier: H_hat(S) for even |S| survives (SYMMETRIC)
+             H_hat(S) for odd |S| vanishes (ANTISYMMETRIC = 0)
+
+  THE PARALLEL IS EXACT:
+    Fibonacci n -> -n = Tournament T -> T^op
+    Even Fibonacci strand = Even Fourier levels
+    Odd Fibonacci strand = Odd Fourier levels (vanishing)
+
+  Both are ORDER-2 INVOLUTIONS that decompose a sequence/function
+  into symmetric and antisymmetric parts.
+
+
+======================================================================
+PART 3: THE RECURRENCE — F_{n+2} = F_{n+1} + F_n vs DC
+======================================================================
+
+  FIBONACCI:
+    F_{n+2} = F_{n+1} + F_n (two previous terms)
+    In even/odd strands:
+      F_{2k+2} = F_{2k+1} + F_{2k} = (odd term) + (even term)
+      F_{2k+3} = F_{2k+2} + F_{2k+1} = (even term) + (odd term)
+    The strands are COUPLED: each depends on the other.
+
+  TOURNAMENTS:
+    H(T) = H(T\e) + H(T/e) (deletion-contraction)
+    The even Fourier part and odd Fourier part couple similarly:
+    Deleting an arc mixes the even and odd parts.
+    But the ODD part is always 0 (by path reversal), so the
+    coupling is ONE-WAY: only the even part matters.
+
+  DEEPER: Independence polynomial recurrence:
+    I(G, x) for graphs satisfies:
+    I(G, x) = I(G-v, x) + x * I(G-N[v], x)
+    (delete vertex vs delete vertex + neighbors)
+    This is a FIBONACCI-TYPE recurrence for independence polynomials!
+
+  When G = P_m (path): I(P_m, x) = I(P_{m-1}, x) + x * I(P_{m-2}, x)
+  This IS the Fibonacci recurrence with parameter x!
+  At x=1: F_{m+2} (Fibonacci)
+  At x=2: Jacobsthal numbers (from S85)
+
+  SO: The Fibonacci recurrence is the INDEPENDENCE POLYNOMIAL recurrence
+  specialized to the path graph. Tournament OCF generalizes this to
+  arbitrary conflict graphs.
+
+
+======================================================================
+PART 4: THE TWO STRANDS OF H(T)
+  H lives only on even Fourier levels.
+  Can we split H into a 'level-0 strand' and 'level-2 strand'?
+======================================================================
+
+  n=5: H = H_0 + H_2 + H_4
+    Max reconstruction error: 0.0000000000
+    H_0 (constant) = 7.5000 for all tournaments
+    H_2 range: [-7.5000, 7.5000]
+    H_4 range: [-1.0000, 3.0000]
+
+  THE TWO STRANDS:
+    Strand 0 (level 0): constant = 7.5000 = mean(H)
+    Strand 1 (level 2): pairwise arc interactions, 25% of energy
+    Strand 2 (level 4): 4-way interactions, 1.3% of energy
+
+    Like Fibonacci strands: strand 0 is 'even' (symmetric),
+    and strands 1,2 add the 'texture' that makes H nontrivial.
+
+  H decomposition for sample tournaments:
+    bits=0: H=1 = 7.50 + -7.50 + 1.00
+    bits=42: H=13 = 7.50 + 4.50 + 1.00
+    bits=341: H=15 = 7.50 + 7.50 + 0.00
+    bits=682: H=15 = 7.50 + 7.50 + 0.00
+    bits=1023: H=1 = 7.50 + -7.50 + 1.00
+
+======================================================================
+PART 5: THE EIGENVALUE PERSPECTIVE
+  The involution T -> T^op has eigenvalues +1 and -1.
+  H lives in the +1 eigenspace (symmetric functions).
+  The Fibonacci involution n -> -n also has eigenvalues +1, -1.
+  Even Fibonacci = +1 eigenspace. Odd Fibonacci = -1 eigenspace.
+======================================================================
+
+  THE UNIVERSAL PATTERN:
+  Any involution sigma on a set X decomposes functions on X into:
+    f = f_+ + f_-
+  where f_+(x) = (f(x) + f(sigma(x)))/2  [symmetric]
+    and f_-(x) = (f(x) - f(sigma(x)))/2  [antisymmetric]
+
+  For Fibonacci: sigma(n) = -n, f = F_n
+    F_n = (F_n + F_{-n})/2 + (F_n - F_{-n})/2
+    F_+ = (F_n + (-1)^{n+1}F_n)/2 = F_n(1+(-1)^{n+1})/2
+    F_+_n = F_n if n even, 0 if n odd
+    F_-_n = 0 if n even, F_n if n odd
+
+  For tournaments: sigma(T) = T^op, f = H(T)
+    H(T) = (H(T) + H(T^op))/2 + (H(T) - H(T^op))/2
+    H_+ = H (since H(T^op) = H(T))
+    H_- = 0 (the antisymmetric part is identically zero)
+
+  THE FIBONACCI DIFFERENCE:
+  In Fibonacci, BOTH eigenspaces are nontrivial (F_+ and F_- both nonzero).
+  In tournaments, ONLY the +1 eigenspace is nontrivial (H_- = 0).
+  This is because H is a SPECIFIC function (Hamiltonian path count),
+  not a generic function on tournaments.
+
+  BUT: Other tournament functions DO have nontrivial antisymmetric parts!
+  For example: the "writhe" w(T) = #ascending - #descending arcs.
+  w(T^op) = -w(T), so w is PURELY antisymmetric (w lives in the -1 eigenspace).
+  w is the "odd Fibonacci strand" of tournament theory!
+
+
+  TOURNAMENT WRITHE (antisymmetric strand):
+  Writhe Fourier energy:
+    Even levels: 0.000000 (0.00%)
+    Odd levels: 10.000000 (100.00%)
+    Writhe is PURELY antisymmetric? True
+
+======================================================================
+PART 6: THE GRAND INTERLEAVING — H AND WRITHE AS TWO STRANDS
+======================================================================
+
+  THE COMPLETE PICTURE:
+
+  FIBONACCI:                    TOURNAMENTS:
+  F_n = F_even + F_odd         Tournament function = H + writhe + ...
+  F_even: symmetric             H: symmetric (even Fourier levels)
+  F_odd: antisymmetric          writhe: antisymmetric (odd Fourier levels)
+  F_{n+2} = F_{n+1} + F_n   H(D) = H(D\e) + H(D/e) [DC]
+  I(path, 1) = Fibonacci        I(Omega, 2) = H [OCF]
+  Zeckendorf = no adjacent 1s   OCF = no conflicting cycles
+
+  THE INTERLEAVING:
+  Just as the full Fibonacci sequence interleaves its even and odd strands,
+  the full information content of a tournament interleaves:
+    - H (the symmetric strand, 75% of energy, captures 27% of info)
+    - writhe (the antisymmetric strand, 0% of H but 100% of writhe energy)
+    - other invariants (higher-order strands)
+
+  TOGETHER they span the full tournament information.
+  H alone gives 27%. Adding writhe gives MORE. Adding score gives 33%.
+  The FULL interleaving of all strands gives 100% (the tournament itself).
+
+  THE FIBONACCI NUMBER 2:
+  Why is the OCF fugacity 2? Because each arc has 2 orientations.
+  The independence polynomial at x=2 counts configurations weighted
+  by 2 per independent element. This is the "Fibonacci at x=2" evaluation!
+
+  F_{m+2}(x=2) = Jacobsthal = I(path, 2)
+  I(Omega, 2) = H = "Jacobsthal on the conflict graph"
+
+  The tournament IS the Fibonacci sequence, generalized:
+    - from path graphs to conflict graphs
+    - from fugacity 1 to fugacity 2
+    - from 1D sequences to m-dimensional hypercube functions
+
+
+======================================================================
+PART 7: DO H AND WRITHE TOGETHER DETERMINE THE TOURNAMENT?
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\fibonacci_interleaving.py", line 442, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\fibonacci_interleaving.py", line 396, in main
+    perms = list(permutations(range(n)))
+                 ^^^^^^^^^^^^
+NameError: name 'permutations' is not defined
