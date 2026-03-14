@@ -1,0 +1,294 @@
+======================================================================
+THM-206: LOCAL MINIMA OF H = TRANSITIVE TOURNAMENTS
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: EXHAUSTIVE VERIFICATION (n=3 to 6)
+======================================================================
+
+  n=3:
+    Local minima: 6
+    Transitive tournaments: 6
+    Local minima that are transitive: 6
+    Local minima that are NOT transitive: 0
+    n! = 6
+    All local minima transitive? True
+    All transitive are local minima? True
+    |local minima| = n!? True
+
+  n=4:
+    Local minima: 24
+    Transitive tournaments: 24
+    Local minima that are transitive: 24
+    Local minima that are NOT transitive: 0
+    n! = 24
+    All local minima transitive? True
+    All transitive are local minima? True
+    |local minima| = n!? True
+
+  n=5:
+    Local minima: 120
+    Transitive tournaments: 120
+    Local minima that are transitive: 120
+    Local minima that are NOT transitive: 0
+    n! = 120
+    All local minima transitive? True
+    All transitive are local minima? True
+    |local minima| = n!? True
+
+  n=6:
+    Local minima: 720
+    Transitive tournaments: 720
+    Local minima that are transitive: 720
+    Local minima that are NOT transitive: 0
+    n! = 720
+    All local minima transitive? True
+    All transitive are local minima? True
+    |local minima| = n!? True
+
+======================================================================
+PART 2: PROOF THAT TRANSITIVE => LOCAL MINIMUM
+======================================================================
+
+  CLAIM: If T is transitive, then T is a local minimum of H.
+
+  PROOF: Let T be transitive, so H(T) = 1 (the unique Hamiltonian path
+  follows the total order).
+
+  Since H(T') >= 1 for all tournaments T' (by Redei), and H(T) = 1,
+  we have H(T) <= H(T') for ALL T', not just neighbors.
+
+  In particular, H(T) <= H(T^e) for every edge e.
+  So T is a GLOBAL minimum, hence certainly a local minimum.
+
+  QED. (This direction is trivial since H >= 1 always.)
+
+======================================================================
+PART 3: PROOF THAT LOCAL MINIMUM => TRANSITIVE
+======================================================================
+
+  CLAIM: If T is a local minimum of H (i.e., H(T) <= H(T^e) for all e),
+  then T is transitive (H(T) = 1).
+
+  PROOF ATTEMPT:
+  Suppose T is NOT transitive. Then T contains a 3-cycle: i -> j -> k -> i.
+
+  We need to show: there exists an edge e such that flipping e DECREASES H.
+
+  The key insight: if T has a 3-cycle C = (i,j,k), then flipping
+  one arc of C "resolves" the cycle into a transitive triple,
+  which should decrease H.
+
+  Let's verify computationally: for every non-transitive tournament,
+  does there exist an arc whose flip decreases H?
+
+
+  n=3:
+    Non-transitive with a decreasing flip: 2
+    Non-transitive with NO decreasing flip: 0
+    Theorem holds? True
+
+  n=4:
+    Non-transitive with a decreasing flip: 40
+    Non-transitive with NO decreasing flip: 0
+    Theorem holds? True
+
+  n=5:
+    Non-transitive with a decreasing flip: 904
+    Non-transitive with NO decreasing flip: 0
+    Theorem holds? True
+
+  n=6:
+    Non-transitive with a decreasing flip: 32048
+    Non-transitive with NO decreasing flip: 0
+    Theorem holds? True
+
+======================================================================
+PART 4: WHICH ARC DECREASES H IN A 3-CYCLE?
+======================================================================
+
+  n=3: 3-cycle C_3 (H=3):
+    Any flip: H(T^e) = 1 < 3. So dH = +2 for each flip.
+    => C_3 is NOT a local minimum (confirmed).
+
+  n=4: Analysis of H=3 tournaments:
+    Count: 16
+    T=000010: H=3, 3-cycles = 1, transitive = False
+      Flip edge (0, 1): H changes 3 -> 1 (dH = +2)
+      Flip edge (0, 2): H changes 3 -> 1 (dH = +2)
+      Flip edge (0, 3): H changes 3 -> 5 (dH = -2)
+      Flip edge (1, 2): H changes 3 -> 1 (dH = +2)
+      Flip edge (1, 3): H changes 3 -> 5 (dH = -2)
+      Flip edge (2, 3): H changes 3 -> 5 (dH = -2)
+    T=000101: H=3, 3-cycles = 1, transitive = False
+      Flip edge (0, 1): H changes 3 -> 5 (dH = -2)
+      Flip edge (0, 2): H changes 3 -> 1 (dH = +2)
+      Flip edge (0, 3): H changes 3 -> 1 (dH = +2)
+      Flip edge (1, 2): H changes 3 -> 5 (dH = -2)
+      Flip edge (1, 3): H changes 3 -> 5 (dH = -2)
+      Flip edge (2, 3): H changes 3 -> 1 (dH = +2)
+    T=001001: H=3, 3-cycles = 1, transitive = False
+      Flip edge (0, 1): H changes 3 -> 1 (dH = +2)
+      Flip edge (0, 2): H changes 3 -> 1 (dH = +2)
+      Flip edge (0, 3): H changes 3 -> 5 (dH = -2)
+      Flip edge (1, 2): H changes 3 -> 1 (dH = +2)
+      Flip edge (1, 3): H changes 3 -> 5 (dH = -2)
+      Flip edge (2, 3): H changes 3 -> 5 (dH = -2)
+    T=001110: H=3, 3-cycles = 1, transitive = False
+      Flip edge (0, 1): H changes 3 -> 1 (dH = +2)
+      Flip edge (0, 2): H changes 3 -> 5 (dH = -2)
+      Flip edge (0, 3): H changes 3 -> 1 (dH = +2)
+      Flip edge (1, 2): H changes 3 -> 5 (dH = -2)
+      Flip edge (1, 3): H changes 3 -> 1 (dH = +2)
+      Flip edge (2, 3): H changes 3 -> 5 (dH = -2)
+
+======================================================================
+PART 5: LOCAL MAXIMA — WHICH TOURNAMENTS ARE THEY?
+======================================================================
+
+  n=3: 2 local maxima
+    H=3: 2 tournaments
+    Score sequences of local maxima:
+      (1, 1, 1): 2
+
+  n=4: 24 local maxima
+    H=5: 24 tournaments
+    Score sequences of local maxima:
+      (1, 1, 2, 2): 24
+
+  n=5: 64 local maxima
+    H=15: 64 tournaments
+    Score sequences of local maxima:
+      (1, 2, 2, 2, 3): 40
+      (2, 2, 2, 2, 2): 24
+
+  n=6: 1200 local maxima
+    H=37: 720 tournaments
+    H=45: 480 tournaments
+    Score sequences of local maxima:
+      (1, 2, 2, 3, 3, 4): 720
+      (2, 2, 2, 3, 3, 3): 480
+
+======================================================================
+PART 6: REGULARITY OF LOCAL MAXIMA
+======================================================================
+  n=3: Avg score variance:
+    Local maxima: 0.0000
+    All tournaments: 0.5000
+    Ratio: 0.0000
+    Avg 3-cycles: maxima = 1.00, all = 0.25, max possible = 1
+  n=4: Avg score variance:
+    Local maxima: 0.2500
+    All tournaments: 0.7500
+    Ratio: 0.3333
+    Avg 3-cycles: maxima = 2.00, all = 1.00, max possible = 2
+  n=5: Avg score variance:
+    Local maxima: 0.2500
+    All tournaments: 1.0000
+    Ratio: 0.2500
+    Avg 3-cycles: maxima = 4.38, all = 2.50, max possible = 5
+  n=6: Avg score variance:
+    Local maxima: 0.6500
+    All tournaments: 1.2500
+    Ratio: 0.5200
+    Avg 3-cycles: maxima = 6.80, all = 5.00, max possible = 8
+
+======================================================================
+PART 7: GRADIENT FLOW BASINS (COMPACT SUMMARY)
+======================================================================
+
+  n=3: Basin sizes by attractor H-value:
+    Attractor H=3: 8 tournaments (1.0000)
+
+  n=4: Basin sizes by attractor H-value:
+    Attractor H=5: 64 tournaments (1.0000)
+
+  n=5: Basin sizes by attractor H-value:
+    Attractor H=15: 1024 tournaments (1.0000)
+
+  n=6: Basin sizes by attractor H-value:
+    Attractor H=45: 28928 tournaments (0.8828)
+    Attractor H=37: 3840 tournaments (0.1172)
+
+======================================================================
+PART 8: MORSE NUMBERS AND INEQUALITIES
+======================================================================
+
+  For a Morse function f on a manifold M:
+    c_k >= b_k (weak Morse inequality)
+    sum (-1)^k c_k = sum (-1)^k b_k = chi(M) (strong Morse inequality)
+
+  For the tournament hypercube Q_m:
+    b_k = C(m, k) (Betti numbers of Q_m)
+    chi(Q_m) = sum (-1)^k C(m,k) = (1-1)^m = 0
+
+  Our "Morse function" H is not quite Morse (it has flat directions
+  where dH = 0). But we can still count critical points by index.
+
+
+  n=3 (m=3):
+    Morse index counts: c_k
+      c_ 0 =      6 (b_0 = C(3,0) = 1, c_0-b_0 = 5)
+      c_ 3 =      2 (b_3 = C(3,3) = 1, c_3-b_3 = 1)
+    Alternating sum: 4 (should be 0 = chi(Q_3))
+    Weak Morse inequality holds? False
+
+  n=4 (m=6):
+    Morse index counts: c_k
+      c_ 0 =     24 (b_0 = C(6,0) = 1, c_0-b_0 = 23)
+      c_ 3 =     40 (b_3 = C(6,3) = 20, c_3-b_3 = 20)
+    Alternating sum: -16 (should be 0 = chi(Q_6))
+    Weak Morse inequality holds? False
+
+  n=5 (m=10):
+    Morse index counts: c_k
+      c_ 0 =    120 (b_0 = C(10,0) = 1, c_0-b_0 = 119)
+      c_ 3 =    480 (b_3 = C(10,3) = 120, c_3-b_3 = 360)
+      c_ 4 =    120 (b_4 = C(10,4) = 210, c_4-b_4 = -90)
+      c_ 5 =    120 (b_5 = C(10,5) = 252, c_5-b_5 = -132)
+      c_ 7 =    120 (b_7 = C(10,7) = 120, c_7-b_7 = 0)
+      c_10 =     64 (b_10 = C(10,10) = 1, c_10-b_10 = 63)
+    Alternating sum: -416 (should be 0 = chi(Q_10))
+    Weak Morse inequality holds? False
+
+  n=6 (m=15):
+    Morse index counts: c_k
+      c_ 0 =    720 (b_0 = C(15,0) = 1, c_0-b_0 = 719)
+      c_ 3 =   4560 (b_3 = C(15,3) = 455, c_3-b_3 = 4105)
+      c_ 4 =   2880 (b_4 = C(15,4) = 1365, c_4-b_4 = 1515)
+      c_ 5 =   3600 (b_5 = C(15,5) = 3003, c_5-b_5 = 597)
+      c_ 6 =   4400 (b_6 = C(15,6) = 5005, c_6-b_6 = -605)
+      c_ 7 =   5040 (b_7 = C(15,7) = 6435, c_7-b_7 = -1395)
+      c_ 8 =   3120 (b_8 = C(15,8) = 6435, c_8-b_8 = -3315)
+      c_ 9 =   5760 (b_9 = C(15,9) = 5005, c_9-b_9 = 755)
+      c_10 =   2208 (b_10 = C(15,10) = 3003, c_10-b_10 = -795)
+      c_12 =    240 (b_12 = C(15,12) = 455, c_12-b_12 = -215)
+      c_15 =    240 (b_15 = C(15,15) = 1, c_15-b_15 = 239)
+    Alternating sum: -5632 (should be 0 = chi(Q_15))
+    Weak Morse inequality holds? False
+
+======================================================================
+THEOREM STATEMENT (candidate THM-206)
+======================================================================
+
+  THM-206: Tournament H-Minimum Characterization
+
+  A tournament T on n vertices is a local minimum of H on the
+  tournament hypercube Q_{C(n,2)} if and only if T is transitive.
+
+  Equivalently: T is a local minimum iff H(T) = 1.
+
+  PROOF:
+  (=>) If T is transitive, H(T) = 1 = min possible. Global min => local min.
+  (<=) If T is not transitive, T contains a 3-cycle (i,j,k).
+       [NEED: constructive argument that some arc flip decreases H]
+
+  VERIFIED: Exhaustively confirmed for n = 3, 4, 5, 6.
+
+  COROLLARY: The number of local minima of H on Q_{C(n,2)} is exactly n!
+  (the number of labeled transitive tournaments).
+
+======================================================================
+DONE -- MORSE MINIMA = TRANSITIVE TOURNAMENTS
+======================================================================

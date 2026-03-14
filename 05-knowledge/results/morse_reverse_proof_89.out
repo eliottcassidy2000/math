@@ -1,0 +1,173 @@
+======================================================================
+PROVING THE REVERSE: NON-TRANSITIVE => HAS DECREASING FLIP
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: DOES FLIPPING AN 'UPSET' ARC ALWAYS DECREASE H?
+======================================================================
+
+  n=3: 2 non-transitive tournaments
+    Flipping ANY upset decreases H: 2
+    Flipping SOME upset decreases H: 0
+    Flipping NO upset decreases H: 0
+
+  n=4: 40 non-transitive tournaments
+    Flipping ANY upset decreases H: 40
+    Flipping SOME upset decreases H: 0
+    Flipping NO upset decreases H: 0
+
+  n=5: 904 non-transitive tournaments
+    Flipping ANY upset decreases H: 904
+    Flipping SOME upset decreases H: 0
+    Flipping NO upset decreases H: 0
+
+  n=6: 32048 non-transitive tournaments
+    Flipping ANY upset decreases H: 32048
+    Flipping SOME upset decreases H: 0
+    Flipping NO upset decreases H: 0
+
+======================================================================
+PART 2: DOES FLIPPING A 3-CYCLE ARC ALWAYS DECREASE H?
+======================================================================
+
+  n=3: 2 non-transitive
+    ALL cycle arcs decrease H: 2
+    SOME cycle arcs decrease H: 0
+    NO cycle arc decreases H: 0
+
+  n=4: 40 non-transitive
+    ALL cycle arcs decrease H: 16
+    SOME cycle arcs decrease H: 24
+    NO cycle arc decreases H: 0
+
+  n=5: 904 non-transitive
+    ALL cycle arcs decrease H: 184
+    SOME cycle arcs decrease H: 720
+    NO cycle arc decreases H: 0
+
+  n=6: 32048 non-transitive
+    ALL cycle arcs decrease H: 2288
+    SOME cycle arcs decrease H: 29760
+    NO cycle arc decreases H: 0
+
+======================================================================
+PART 3: THE MAXIMUM-DECREASE EDGE -- WHAT CHARACTERIZES IT?
+======================================================================
+
+  n=3: Properties of the maximum-decrease edge:
+    in_cycle: 2/2 (1.0000)
+    not_upset: 2/2 (1.0000)
+
+  n=4: Properties of the maximum-decrease edge:
+    in_cycle: 40/40 (1.0000)
+    not_upset: 16/40 (0.4000)
+    upset: 24/40 (0.6000)
+
+  n=5: Properties of the maximum-decrease edge:
+    in_cycle: 904/904 (1.0000)
+    not_upset: 144/904 (0.1593)
+    upset: 760/904 (0.8407)
+
+======================================================================
+PART 4: PATH COUNTING ARGUMENT
+======================================================================
+
+  Consider a non-transitive tournament T with a 3-cycle i->j->k->i.
+
+  A Hamiltonian path P either:
+  (a) Uses at most one arc of the 3-cycle (doesn't "traverse" the cycle)
+  (b) Uses exactly two arcs of the 3-cycle (partially traverses)
+
+  If P uses two arcs of the cycle, say i->j and j->k, then P contains
+  the sub-path ...->i->j->k->... The third arc k->i is not used.
+
+  When we flip k->i to i->k:
+  - Paths using i->j and j->k still work (they don't use k->i)
+  - The path REVERSAL that used k->i and j->k is disrupted
+  - New paths using i->k become available
+
+  But how does this CHANGE THE COUNT?
+
+  Key insight from the n=3 case:
+  C_3 has H=3: the three paths are 0->1->2, 1->2->0, 2->0->1.
+  Flipping 2->0 to 0->2 gives the transitive T_3 with H=1.
+  The path 0->1->2 SURVIVES.
+  The paths 1->2->0 and 2->0->1 are KILLED (they used arc 2->0).
+  The new path using 0->2 would be ...->0->2->..., but 0->1 and 0->2
+  means 0 has two outgoing edges, and 1->2 is also present, so the
+  only Hamiltonian path is 0->1->2. Net change: lost 2 paths.
+
+  This suggests: flipping a cycle arc kills paths that use it,
+  and the creation of new paths doesn't fully compensate.
+
+  Detailed path analysis for n=4, T with one 3-cycle:
+
+  Tournament T = 000010:
+    0 -> 2
+    1 -> 0
+    2 -> 1
+    3 -> 0
+    3 -> 1
+    3 -> 2
+  H(T) = 3
+  Hamiltonian paths of T:
+    3->0->2->1, arcs: [(3, 0), (0, 2), (2, 1)]
+    3->1->0->2, arcs: [(3, 1), (1, 0), (0, 2)]
+    3->2->1->0, arcs: [(3, 2), (2, 1), (1, 0)]
+
+  Path analysis for each edge flip:
+    Flip 1->0 to 0->1: H 3->1, killed 2 paths, kept 1, created 0 new
+    Flip 0->2 to 2->0: H 3->1, killed 2 paths, kept 1, created 0 new
+    Flip 3->0 to 0->3: H 3->5, killed 1 paths, kept 2, created 3 new
+    Flip 2->1 to 1->2: H 3->1, killed 2 paths, kept 1, created 0 new
+    Flip 3->1 to 1->3: H 3->5, killed 1 paths, kept 2, created 3 new
+    Flip 3->2 to 2->3: H 3->5, killed 1 paths, kept 2, created 3 new
+
+======================================================================
+PART 5: STRATEGY -- FLIP THE ARC INTO THE MAX-SCORE VERTEX
+======================================================================
+
+  n=3: 'Flip max-score losing arc' strategy:
+    Works (first cycle tried): 2/2
+    Fails: 0
+    Success rate: 1.0000
+
+  n=4: 'Flip max-score losing arc' strategy:
+    Works (first cycle tried): 40/40
+    Fails: 0
+    Success rate: 1.0000
+
+  n=5: 'Flip max-score losing arc' strategy:
+    Works (first cycle tried): 904/904
+    Fails: 0
+    Success rate: 1.0000
+
+  n=6: 'Flip max-score losing arc' strategy:
+    Works (first cycle tried): 32048/32048
+    Fails: 237
+    Success rate: 1.0000
+
+======================================================================
+PART 6: ALWAYS FIND A CYCLE ARC THAT DECREASES H?
+======================================================================
+
+  n=3: 2 non-transitive
+    EVERY 3-cycle has a decreasing arc: 2
+    SOME 3-cycle has no decreasing arc: 0
+
+  n=4: 40 non-transitive
+    EVERY 3-cycle has a decreasing arc: 40
+    SOME 3-cycle has no decreasing arc: 0
+
+  n=5: 904 non-transitive
+    EVERY 3-cycle has a decreasing arc: 904
+    SOME 3-cycle has no decreasing arc: 0
+
+  n=6: 32048 non-transitive
+    EVERY 3-cycle has a decreasing arc: 32048
+    SOME 3-cycle has no decreasing arc: 0
+
+======================================================================
+DONE -- REVERSE DIRECTION ANALYSIS
+======================================================================
