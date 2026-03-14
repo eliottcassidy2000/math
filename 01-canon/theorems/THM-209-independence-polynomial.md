@@ -1,8 +1,8 @@
 # THM-209: H = Independence Polynomial of Odd-Cycle Disjointness Graph at x=2
 
-**Status:** VERIFIED (exhaustive n=3..6, sampled n=7: 50000/50000), PROOF NEEDED
+**Status:** VERIFIED (exhaustive n=3..7, sampled n=8: 5K, n=9: 5K, n=10: 200), PROOF NEEDED
 **Found by:** opus-2026-03-14-S89b
-**Verified in:** `04-computation/crown_jewel_verify_89b.py`, `04-computation/ip_sample_n7_89b.py`
+**Verified in:** `04-computation/crown_jewel_verify_89b.py`, `04-computation/ip_verify_n7n8.c`, `04-computation/ip_sample_n9_large_89b.py`, `04-computation/ip_sample_n10_fixed_89b.py`
 
 ## Statement
 
@@ -69,17 +69,20 @@ The Odd-Cycle Collection Formula expresses H in terms of independent sets of odd
 
 ## Verification Data
 
-| n | Tournaments | All match? | Method |
-|---|-------------|------------|--------|
-| 3 | 8 | YES | Exhaustive |
-| 4 | 64 | YES | Exhaustive |
-| 5 | 1024 | YES | Exhaustive |
-| 6 | 32768 | YES | Exhaustive |
-| 7 | 2097152 | 50000/50000 | Random sample |
+| n | Tournaments | All match? | Method | New terms tested |
+|---|-------------|------------|--------|------------------|
+| 3 | 8 | YES | Exhaustive | t₃ |
+| 4 | 64 | YES | Exhaustive | - |
+| 5 | 1,024 | YES | Exhaustive | t₅ |
+| 6 | 32,768 | YES | Exhaustive | d₃₃ (level 2) |
+| 7 | 2,097,152 | YES | Exhaustive (C) | t₇ |
+| 8 | 268M | 5000/5000 | Random sample | d₃₅ |
+| 9 | 69B | 5000/5000 | Random sample | t₉, **d₃₃₃ (level 3!)** |
+| 10 | 35T | 200/200 | Random sample | d₃₇, d₅₅ |
 
 ## Open Questions
 
-1. **Proof?** The formula is exact for all tested cases. What is the proof mechanism?
-2. **Does it hold at n=8?** Need to verify with d₃₅ (disjoint 3+5 pairs).
-3. **Connection to chromatic symmetric function?** Via Mitrovic-Stojadinovic, the chromatic function of the incomparability graph equals ω applied to the Rédei-Berge symmetric function. Does IP(G,2) arise from an e-positivity/h-positivity statement?
-4. **Asymptotic behavior?** As n→∞, how does the independence polynomial grow?
+1. **Proof?** The formula is exact for all tested cases (n=3 through n=10). What is the proof mechanism? The connection to the OCF and the multilinear expansion of H on the tournament hypercube may provide the key.
+2. **Connection to chromatic symmetric function?** Via Mitrovic-Stojadinovic, the chromatic function of the incomparability graph equals ω applied to the Rédei-Berge symmetric function. Does IP(G,2) arise from an e-positivity/h-positivity statement?
+3. **Asymptotic behavior?** As n→∞, how does the independence polynomial grow?
+4. **Connection to statistical mechanics?** H = Z(G, 2) is the hard-core lattice gas partition function at fugacity 2. What thermodynamic quantities arise from this?

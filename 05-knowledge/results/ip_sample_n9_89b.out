@@ -1,0 +1,22 @@
+  0/500... (0s elapsed, ~0s remaining)
+  50/500... (1s elapsed, ~6s remaining)
+  100/500... (1s elapsed, ~5s remaining)
+  150/500... (2s elapsed, ~4s remaining)
+  200/500... (3s elapsed, ~4s remaining)
+  250/500... (3s elapsed, ~3s remaining)
+  300/500... (4s elapsed, ~2s remaining)
+  350/500... (4s elapsed, ~2s remaining)
+  400/500... (5s elapsed, ~1s remaining)
+  450/500... (6s elapsed, ~1s remaining)
+N=9 SAMPLING
+Testing H = 1 + 2*(t3+t5+t7+t9) + 4*(d33+d35) + 8*d333
+Sample size: 500
+
+
+Done in 6.2s
+
+Base formula (no t9, no d333): 467/500 mismatches, max error = 520
+Full formula (with t9 and d333): 0/500 mismatches, max error = 0
+
+*** ALL 500 MATCH! Independence polynomial formula EXACT at n=9! ***
+*** First verification of 2^3 = 8 coefficient for disjoint triples! ***
