@@ -1,0 +1,54 @@
+======================================================================
+INDEPENDENCE POLYNOMIAL AS SIMPLEX-CUBOID INTERPOLATION
+======================================================================
+
+--- Part 1: I(G,2) for small graphs ---
+  Which values of I(G,2) are achievable by ANY graph G?
+  (Not just tournament conflict graphs)
+  m=1: I(G,2) range [3, 3], odd gaps: [1]
+  m=2: I(G,2) range [5, 9], odd gaps: [1, 3, 7]
+  m=3: I(G,2) range [7, 27], odd gaps: [1, 3, 5, 9, 13, 17, 19, 21, 23, 25]
+  m=4: I(G,2) range [9, 81], odd gaps: [1, 3, 5, 7, 11, 15, 19, 23, 27, 31]...
+  m=5: I(G,2) range [11, 243], odd gaps: [1, 3, 5, 7, 9, 13, 17, 21, 25, 29]...
+  m=6: I(G,2) range [13, 729], odd gaps: [1, 3, 5, 7, 9, 11, 15, 19, 23, 27]...
+
+--- Part 2: Permanently missing I(G,2) values ---
+  Checking odd values 1 to 81:
+  Missing (never achieved for m≤8): [1, 59, 67, 71, 79]
+
+--- Part 3: Key comparison ---
+  Tournament H values (odd) at n=5: [1, 3, 5, 9, 11, 13, 15]
+  Tournament H values (odd) at n=6: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+  Graph I(G,2) achievable odd values ≤45:
+    [3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45]
+
+  Tournament-missing vs Graph-missing:
+    Tournament (n≤6): [7, 21, 35, 39]
+    Graph (m≤8): [1]
+
+--- Part 4: Is I(G,2)=7 achievable by any graph? ---
+  YES at m=3!
+    Example: m=3, edges=[(0, 1), (0, 2), (1, 2)]
+
+--- Part 5: Is I(G,2)=21 achievable by any graph? ---
+  YES at m=4!
+    Example: m=4, edges=[(0, 1), (0, 2), (1, 2)]
+
+--- Part 6: UNIVERSAL I.P. gaps ---
+  If I(G,2)=7 and I(G,2)=21 are impossible for ALL graphs,
+  then the impossibility is GRAPH-THEORETIC, not tournament-specific!
+  This would be a MUCH stronger result than the tournament-only version.
+
+  WAIT: I(K₃, 2) = 1 + 3·2 = 7
+  I(K₃, 2) = 7
+
+  And I(K₁₀, 2) = 1 + 10·2 = 21
+  I(K₁₀, 2) = 21
+
+  So 7 and 21 ARE achievable by graphs!
+  The constraint is SPECIFICALLY about which graphs arise as
+  tournament conflict graphs Ω(T).
+  K₃ can be a conflict graph (3 pairwise-intersecting cycles),
+  but the Splicing Lemma forces a 4th cycle → not exactly K₃.
+  K₁₀ similarly: 10 pairwise-intersecting cycles force additional cycles.
