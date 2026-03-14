@@ -1,0 +1,389 @@
+======================================================================
+PART 1: PISANO PERIODS π(m) — FIBONACCI PERIODICITY
+======================================================================
+
+Fibonacci sequence (first 30):
+  [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229]
+
+Pisano periods π(m) for m = 2..20:
+  π( 2) =   3  residues: [0, 1, 1]
+  π( 3) =   8  residues: [0, 1, 1, 2, 0, 2, 2, 1]
+  π( 4) =   6  residues: [0, 1, 1, 2, 3, 1]
+  π( 5) =  20  residues: [0, 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0, 2, 2, 4, 1]
+  π( 6) =  24  residues: [0, 1, 1, 2, 3, 5, 2, 1, 3, 4, 1, 5, 0, 5, 5, 4, 3, 1, 4, 5, 3, 2, 5, 1]
+  π( 7) =  16  residues: [0, 1, 1, 2, 3, 5, 1, 6, 0, 6, 6, 5, 4, 2, 6, 1]
+  π( 8) =  12  residues: [0, 1, 1, 2, 3, 5, 0, 5, 5, 2, 7, 1]
+  π( 9) =  24  residues: [0, 1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 0, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1]
+  π(10) =  60  residues: [0, 1, 1, 2, 3, 5, 8, 3, 1, 4, 5, 9, 4, 3, 7, 0, 7, 7, 4, 1, 5, 6, 1, 7, 8, 5, 3, 8, 1, 9, 0, 9, 9, 8, 7, 5, 2, 7, 9, 6, 5, 1, 6, 7, 3, 0, 3, 3, 6, 9, 5, 4, 9, 3, 2, 5, 7, 2, 9, 1]
+  π(11) =  10  residues: [0, 1, 1, 2, 3, 5, 8, 2, 10, 1]
+  π(12) =  24  residues: [0, 1, 1, 2, 3, 5, 8, 1, 9, 10, 7, 5, 0, 5, 5, 10, 3, 1, 4, 5, 9, 2, 11, 1]
+  π(13) =  28  residues: [0, 1, 1, 2, 3, 5, 8, 0, 8, 8, 3, 11, 1, 12, 0, 12, 12, 11, 10, 8, 5, 0, 5, 5, 10, 2, 12, 1]
+  π(14) =  48  residues: [0, 1, 1, 2, 3, 5, 8, 13, 7, 6, 13, 5, 4, 9, 13, 8, 7, 1, 8, 9, 3, 12, 1, 13, 0, 13, 13, 12, 11, 9, 6, 1, 7, 8, 1, 9, 10, 5, 1, 6, 7, 13, 6, 5, 11, 2, 13, 1]
+  π(15) =  40  residues: [0, 1, 1, 2, 3, 5, 8, 13, 6, 4, 10, 14, 9, 8, 2, 10, 12, 7, 4, 11, 0, 11, 11, 7, 3, 10, 13, 8, 6, 14, 5, 4, 9, 13, 7, 5, 12, 2, 14, 1]
+  π(16) =  24  residues: [0, 1, 1, 2, 3, 5, 8, 13, 5, 2, 7, 9, 0, 9, 9, 2, 11, 13, 8, 5, 13, 2, 15, 1]
+  π(17) =  36  residues: [0, 1, 1, 2, 3, 5, 8, 13, 4, 0, 4, 4, 8, 12, 3, 15, 1, 16, 0, 16, 16, 15, 14, 12, 9, 4, 13, 0, 13, 13, 9, 5, 14, 2, 16, 1]
+  π(18) =  24  residues: [0, 1, 1, 2, 3, 5, 8, 13, 3, 16, 1, 17, 0, 17, 17, 16, 15, 13, 10, 5, 15, 2, 17, 1]
+  π(19) =  18  residues: [0, 1, 1, 2, 3, 5, 8, 13, 2, 15, 17, 13, 11, 5, 16, 2, 18, 1]
+  π(20) =  60  residues: [0, 1, 1, 2, 3, 5, 8, 13, 1, 14, 15, 9, 4, 13, 17, 10, 7, 17, 4, 1, 5, 6, 11, 17, 8, 5, 13, 18, 11, 9, 0, 9, 9, 18, 7, 5, 12, 17, 9, 6, 15, 1, 16, 17, 13, 10, 3, 13, 16, 9, 5, 14, 19, 13, 12, 5, 17, 2, 19, 1]
+
+*** FOCUS: m=4, π(4) = 6 ***
+F(n) mod 4:
+  Period 0: [0, 1, 1, 2, 3, 1]
+  Period 1: [0, 1, 1, 2, 3, 1]
+  Period 2: [0, 1, 1, 2, 3, 1]
+  Period 3: [0, 1, 1, 2, 3, 1]
+
+======================================================================
+PART 2: 2 AND 3 SUBSEQUENCES IN F(n) mod 4
+======================================================================
+
+Positions of each residue mod 4 (within period 6):
+  F(n) ≡ 0 mod 4: positions mod 6 = [0], first 10: [0, 6, 12, 18, 24]
+  F(n) ≡ 1 mod 4: positions mod 6 = [1, 2, 5], first 10: [1, 2, 5, 7, 8, 11, 13, 14, 17, 19]
+  F(n) ≡ 2 mod 4: positions mod 6 = [3], first 10: [3, 9, 15, 21, 27]
+  F(n) ≡ 3 mod 4: positions mod 6 = [4], first 10: [4, 10, 16, 22, 28]
+
+Decomposition of period {1,1,2,3,1,0}:
+  Position 0 (mod 6): F ≡ 0 mod 4 → divisible by 4
+  Position 1 (mod 6): F ≡ 1 mod 4 → ≡ 1
+  Position 2 (mod 6): F ≡ 1 mod 4 → ≡ 1
+  Position 3 (mod 6): F ≡ 2 mod 4 → EVEN, not div by 4
+  Position 4 (mod 6): F ≡ 3 mod 4 → ≡ 3
+  Position 5 (mod 6): F ≡ 1 mod 4 → ≡ 1
+
+The 2 and 3 are ADJACENT in the period: (2,3) at positions (3,4).
+Together they give F(3)×F(4) = 2×3 = 6 = period length!
+
+======================================================================
+PART 3: UNIFIED RECURRENCE a(k) = a(k-1) + x·a(k-2)
+======================================================================
+
+Generalized Fibonacci G_x(k) = G_x(k-1) + x·G_x(k-2):
+  x=1: Fibonacci   (char roots: φ ≈ 1.618, -1/φ ≈ -0.618)
+  x=2: Jacobsthal  (char roots: 2, -1)
+  x=3: 'Tribonacci' variant (char roots: (1±√13)/2 ≈ 2.303, -1.303)
+
+  x=1: G = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+       Roots: 1.618034, -0.618034
+       G(k)/G(k-1) → 1.618034
+       Ratio check: 1.618056
+  x=2: G = [1, 3, 5, 11, 21, 43, 85, 171, 341, 683]
+       Roots: 2.000000, -1.000000
+       G(k)/G(k-1) → 2.000000
+       Ratio check: 2.000733
+  x=3: G = [1, 4, 7, 19, 40, 97, 217, 508, 1159, 2683]
+       Roots: 2.302776, -1.302776
+       G(k)/G(k-1) → 2.302776
+       Ratio check: 2.306656
+  x=4: G = [1, 5, 9, 29, 65, 181, 441, 1165, 2929, 7589]
+       Roots: 2.561553, -1.561553
+       G(k)/G(k-1) → 2.561553
+       Ratio check: 2.572442
+
+======================================================================
+PART 4: JACOBSTHAL mod m — PISANO-LIKE PERIODS
+======================================================================
+
+Jacobsthal: [0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341, 683, 1365, 2731, 5461, 10923, 21845, 43691, 87381, 174763]
+
+Jacobsthal Pisano periods πJ(m):
+  πJ( 2) = >600
+  πJ( 3) =   6  residues: [0, 1, 1, 0, 2, 2]
+  πJ( 4) = >600
+  πJ( 5) =   4  residues: [0, 1, 1, 3]
+  πJ( 6) = >600
+  πJ( 7) =   6  residues: [0, 1, 1, 3, 5, 4]
+  πJ( 8) = >600
+  πJ( 9) =  18  residues: [0, 1, 1, 3, 5, 2, 3, 7, 4, 0, 8, 8, 6, 4, 7, 6, 2, 5]
+  πJ(10) = >600
+  πJ(11) =  10  residues: [0, 1, 1, 3, 5, 0, 10, 10, 8, 6]
+  πJ(12) = >600
+  πJ(13) =  12  residues: [0, 1, 1, 3, 5, 11, 8, 4, 7, 2, 3, 7]
+  πJ(14) = >600
+  πJ(15) =  12  residues: [0, 1, 1, 3, 5, 11, 6, 13, 10, 6, 11, 8]
+  πJ(16) = >600
+  πJ(17) =   8  residues: [0, 1, 1, 3, 5, 11, 4, 9]
+  πJ(18) = >600
+  πJ(19) =  18  residues: [0, 1, 1, 3, 5, 11, 2, 5, 9, 0, 18, 18, 16, 14, 8, 17, 14, 10]
+  πJ(20) = >600
+
+*** Jacobsthal mod 4 ***
+  J(n) mod 4: [0, 1, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+
+======================================================================
+PART 5: WHY PERIOD 6? THE 6-FOLD STRUCTURE
+======================================================================
+
+Pisano period π(4) = 6 for Fibonacci. WHY 6?
+
+Factor: 4 = 2². Using the formula:
+  π(p^k) = p^{k-1} × π(p) for primes p ≥ 5
+  But for p=2: π(2)=3, π(4)=6=2×3, π(8)=12=4×3, π(16)=24=8×3
+  So π(2^k) = 3 × 2^{k-1} for k ≥ 1.
+
+The 6 = 2 × 3 comes from:
+  - 3 = π(2) = period of Fibonacci mod 2: {1,1,0}
+  - 2 = multiplier from 2² vs 2¹
+
+The DEEP reason: F(n) mod 2 has period 3 because:
+  The matrix [[1,1],[1,0]] mod 2 = [[1,1],[1,0]] has order 3 in GL₂(F₂).
+  Its orbit: [[1,1],[1,0]], [[0,1],[1,1]], [[1,0],[1,1]], [[1,1],[1,0]]...
+  Three distinct matrices, then repeats.
+
+For mod 4: lifting from F₂ to Z/4Z doubles the period via Hensel.
+
+Matrix [[1,1],[1,0]] mod m — orders in GL₂(Z/mZ):
+  mod 2: order = 3 = π(2)
+  mod 3: order = 8 = π(3)
+  mod 4: order = 6 = π(4)
+  mod 5: order = 20 = π(5)
+  mod 6: order = 24 = π(6)
+  mod 7: order = 16 = π(7)
+  mod 8: order = 12 = π(8)
+
+======================================================================
+PART 6: FIBONACCI DECOMPOSED INTO 2 AND 3 SUBSEQUENCES
+======================================================================
+
+Tiling interpretations:
+  F(n+1) = #{tilings of 1×n with tiles of size 1 and 2}
+  What if we use tiles of size 2 and 3?
+
+  T(n) [2,3 tiles]: [1, 0, 1, 1, 1, 2, 2, 3, 4, 5, 7, 9, 12, 16, 21, 28, 37, 49, 65, 86]
+  Fibonacci F(n):   [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+
+  T satisfies T(n) = T(n-2) + T(n-3)
+  Char eq: t³ - t - 1 = 0
+  Roots: [ 1.32471796+0.j         -0.66235898+0.56227951j -0.66235898-0.56227951j]
+  Real root ≈ 1.324718 (Plastic number!)
+
+  The real root is the PLASTIC NUMBER ρ ≈ 1.3247
+  It's the smallest Pisot number — a DEEP algebraic constant!
+
+======================================================================
+PART 7: FIBONACCI WORD ON ALPHABET {2, 3}
+======================================================================
+
+Fibonacci word construction (2→23, 3→2):
+  Level 0: [2] (length 1)
+  Level 1: [2, 3] (length 2)
+  Level 2: [2, 3, 2] (length 3)
+  Level 3: [2, 3, 2, 2, 3] (length 5)
+  Level 4: [2, 3, 2, 2, 3, 2, 3, 2] (length 8)
+  Level 5: [2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 2, 3] (length 13)
+  Level 6: [2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 3, 2] (length 21)
+  Level 7: [2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 3, 2, 2, 3, 2, 2, 3, 2, 3, 2, 2]... (length 34)
+
+  Word lengths: [1, 1, 2, 3, 5, 8, 13, 21, 34]
+  (= Fibonacci numbers!)
+
+Partial sums of Fibonacci word:
+  [0, 2, 5, 7, 9, 12, 14, 17, 19, 21, 24, 26, 28, 31, 33, 36, 38, 40, 43, 45]
+
+Partial sums mod 6:
+  [0, 2, 5, 1, 3, 0, 2, 5, 1, 3, 0, 2, 4, 1, 3, 0, 2, 4, 1, 3, 0, 2, 4, 1, 3, 5, 2, 4, 1, 3]
+
+======================================================================
+PART 8: 2+3=5 (FIBONACCI), 2×3=6 (PERIOD)
+======================================================================
+
+DEEP NUMEROLOGY:
+  2 + 3 = 5 = F(5)    [fifth Fibonacci number]
+  2 × 3 = 6 = π(4)    [Pisano period of Fibonacci mod 4]
+  2 and 3 are CONSECUTIVE FIBONACCI NUMBERS: F(3)=2, F(4)=3
+
+The period-6 structure of Fib mod 4 = {1,1,2,3,1,0}:
+  Sum of residues: 1+1+2+3+1+0 = 8 = 2³ = F(6)
+  Product of nonzero: 1×1×2×3×1 = 6 = period itself!
+
+The 2 and 3 in the period are AT POSITIONS 3 and 4.
+  F(3) = 2, F(4) = 3 — the Fibonacci numbers ARE the residues!
+  F(F(3)) = F(2) = 1, F(F(4)) = F(3) = 2 — self-referential!
+
+CONNECTIONS TO TOURNAMENTS:
+  - x=2 in I(P_k, x): Jacobsthal, roots {2, -1}
+  - x=3 in I(P_k, x): roots {(1+√13)/2, (1-√13)/2}
+  - Period 6 = π(4) = π(2²) = 2 × π(2) = 2 × 3
+  - The OCF uses x=2 (binary arc choice)
+  - The "3" appears as: I(single vertex, 2) = 1+2 = 3,
+    and 3^k = I(k disjoint vertices, 2)
+
+======================================================================
+PART 9: FIBONACCI mod 2 AND mod 3 — CRT RECONSTRUCTION
+======================================================================
+
+F(n) mod 2: period π(2) = 3
+  [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1]
+  Pattern: 1, 1, 0 (repeating)
+
+F(n) mod 3: period π(3) = 8
+  [0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1]
+  Pattern: 0, 1, 1, 2, 0, 2, 2, 1 (repeating)
+
+F(n) mod 4: period π(4) = 6
+  [0, 1, 1, 2, 3, 1, 0, 1, 1, 2, 3, 1, 0, 1, 1, 2, 3, 1]
+  Pattern: 0, 1, 1, 2, 3, 1 (repeating)
+
+F(n) mod 6: period π(6) = lcm(π(2), π(3)) = lcm(3, 8) = 24
+  [0, 1, 1, 2, 3, 5, 2, 1, 3, 4, 1, 5, 0, 5, 5, 4, 3, 1, 4, 5, 3, 2, 5, 1]
+
+--- 2-SUBSEQUENCE: positions where F(n) ≡ 2 mod 4 ---
+  Positions: [3, 9, 15, 21, 27]
+  Gaps: [6, 6, 6, 6]
+
+--- 3-SUBSEQUENCE: positions where F(n) ≡ 3 mod 4 ---
+  Positions: [4, 10, 16, 22, 28]
+  Gaps: [6, 6, 6, 6]
+
+  Both subsequences have constant gap 6 = π(4)
+  The 2 appears at n ≡ 3 mod 6, the 3 at n ≡ 4 mod 6
+  They are always ADJACENT in the period: (..., 2, 3, ...)
+
+======================================================================
+PART 10: JACOBSTHAL mod 4 AND TOURNAMENT H mod 4
+======================================================================
+
+Jacobsthal mod 4: [0, 1, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+
+I(P_k, 2) mod 4: [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+I(C_k, 2) mod 4 (k≥3): [3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1]
+
+Forbidden H values mod 4:
+  H=7: 7 mod 4 = 3
+  H=21: 21 mod 4 = 1
+  H=63: 63 mod 4 = 3
+
+H mod 4 at n=5: {1: ≡1, 3: ≡3, 5: ≡1, 9: ≡1, 11: ≡3, 13: ≡1, 15: ≡3}
+  H=  1: mod 4 = 1
+  H=  3: mod 4 = 3
+  H=  5: mod 4 = 1
+  H=  9: mod 4 = 1
+  H= 11: mod 4 = 3
+  H= 13: mod 4 = 1
+  H= 15: mod 4 = 3
+
+======================================================================
+PART 11: PERIOD 6 IN TOURNAMENT THEORY
+======================================================================
+
+WHERE DOES 6 APPEAR IN TOURNAMENTS?
+
+1. ARCS AT n=4: m = C(4,2) = 6 arcs. The Boolean hypercube {0,1}^6
+   is the space of all tournaments on 4 vertices.
+
+2. EULERIAN NUMBER A(4,1) = 11, A(4,2) = 11 — symmetric.
+   But A(3,1) = 4, and 4+1+1 = 6 = C(3,2).
+
+3. PERIOD OF FIBONACCI MOD 4 = 6.
+   Since tournaments are 2-colorings of arcs (mod 2 structure),
+   and the Jacobsthal recurrence uses x=2,
+   the period-6 structure may govern H periodicity.
+
+4. 6 = 2 × 3 = product of the two "atomic" tournament numbers:
+   - 2: binary arc choice
+   - 3: smallest non-trivial tournament (triangle)
+
+5. THE PATH-TOURNAMENT ANALOGY:
+   I(P_k, 1) follows Fibonacci (period π(m) for mod m)
+   I(P_k, 2) follows Jacobsthal (different period)
+   At x=1: π(4) = 6
+   At x=2: what is the period of Jacobsthal mod 4?
+
+I(P_k, 2) mod m — periods:
+  I(P_k, 2) mod  2: period =   1  pattern: [1]
+  I(P_k, 2) mod  3: period =   6  pattern: [1, 0, 2, 2, 0, 1]
+  I(P_k, 2) mod  4: period =   2  pattern: [1, 3]
+  I(P_k, 2) mod  5: period =   4  pattern: [1, 3, 0, 1]
+  I(P_k, 2) mod  6: period =   6  pattern: [1, 3, 5, 5, 3, 1]
+  I(P_k, 2) mod  7: period =   6  pattern: [1, 3, 5, 4, 0, 1]
+  I(P_k, 2) mod  9: period =  18  pattern: [1, 3, 5, 2, 3, 7, 4, 0, 8, 8, 6, 4, 7, 6, 2]...
+  I(P_k, 2) mod 10: period =   4  pattern: [1, 3, 5, 1]
+  I(P_k, 2) mod 11: period =  10  pattern: [1, 3, 5, 0, 10, 10, 8, 6, 0, 1]
+  I(P_k, 2) mod 12: period =   6  pattern: [1, 3, 5, 11, 9, 7]
+
+Fibonacci mod m (= I(P_k, 1)) — periods:
+  F(n) mod  2: π =   3
+  F(n) mod  3: π =   8
+  F(n) mod  4: π =   6
+  F(n) mod  5: π =  20
+  F(n) mod  6: π =  24
+  F(n) mod  7: π =  16
+  F(n) mod  8: π =  12
+  F(n) mod  9: π =  24
+  F(n) mod 10: π =  60
+  F(n) mod 11: π =  10
+  F(n) mod 12: π =  24
+
+======================================================================
+PART 12: φ → 2 DEFORMATION — GOLDEN TO TOURNAMENT
+======================================================================
+
+The family of recurrences a(k) = a(k-1) + x·a(k-2) with:
+  x = 1: roots φ ≈ 1.618, -1/φ ≈ -0.618 (GOLDEN)
+  x = 2: roots 2, -1               (TOURNAMENT/JACOBSTHAL)
+  x = 3: roots (1+√13)/2, (1-√13)/2  ≈ 2.303, -1.303
+
+As x increases from 1 to 2:
+  - Larger root goes from φ → 2 (EXACTLY at x=2, root is INTEGER)
+  - Smaller root goes from -1/φ → -1 (also INTEGER at x=2!)
+  - The Jacobsthal case x=2 is SPECIAL: both roots are integers!
+
+This is why I(P_k, 2) = (2^{k+2} - (-1)^k)/3 has such clean forms.
+Fibonacci has I(P_k, 1) = F(k+2) with irrational closed form.
+
+The "deformation parameter" x interpolates:
+  x = 0: trivial (constant sequence)
+  x = 1: golden ratio (Fibonacci, nature, aesthetics)
+  x = 2: tournaments (binary choices, OCF evaluation)
+  x = 3: Ω with "ternary" structure
+
+TOURNAMENT THEORY LIVES AT THE UNIQUE INTEGER POINT x=2
+where both characteristic roots are integers!
+
+Deformation table:
+     x |      root1 |      root2 |    product |        sum | I(P_5,x)
+   0.5 |   1.366025 |  -0.366025 |  -0.500000 |   1.000000 | 5.1
+   1.0 |   1.618034 |  -0.618034 |  -1.000000 |   1.000000 | 13.0
+   1.5 |   1.822876 |  -0.822876 |  -1.500000 |   1.000000 | 25.4
+   2.0 |   2.000000 |  -1.000000 |  -2.000000 |   1.000000 | 43.0
+   2.5 |   2.158312 |  -1.158312 |  -2.500000 |   1.000000 | 66.6
+   3.0 |   2.302776 |  -1.302776 |  -3.000000 |   1.000000 | 97.0
+   4.0 |   2.561553 |  -1.561553 |  -4.000000 |   1.000000 | 181.0
+   5.0 |   2.791288 |  -1.791288 |  -5.000000 |   1.000000 | 301.0
+
+  Vieta: root1 + root2 = 1, root1 × root2 = -x
+
+======================================================================
+SYNTHESIS — FIBONACCI, PERIOD 6, AND TOURNAMENTS
+======================================================================
+
+CROWN JEWELS:
+
+1. FIBONACCI mod 4 = {0,1,1,2,3,1} with period π(4) = 6.
+   The 2 and 3 are at positions 3 and 4 (mod 6) — adjacent,
+   and F(3)=2, F(4)=3 are themselves the residues.
+
+2. 6 = 2×3: The period is the PRODUCT of the two "special" residues.
+   Also 2+3 = 5 = F(5), the next Fibonacci number.
+
+3. UNIFIED RECURRENCE: I(P_k, x) = I(P_{k-1}, x) + x·I(P_{k-2}, x)
+   - x=1: Fibonacci world (golden ratio φ)
+   - x=2: Tournament world (Jacobsthal, integer roots 2 and -1)
+   Tournament theory lives at the UNIQUE INTEGER POINT of the
+   φ-deformation family.
+
+4. PLASTIC NUMBER: Tiles of size 2 and 3 give recurrence
+   T(n) = T(n-2) + T(n-3), char eq t³-t-1=0.
+   The real root is the Plastic number ρ ≈ 1.3247, the smallest
+   Pisot number. This bridges 2-3 composition to algebraic number theory.
+
+5. FIBONACCI WORD on {2,3}: The substitution 2→23, 3→2 generates
+   the golden string with letters 2 and 3. Lengths follow Fibonacci.
+   This is a quasicrystal — aperiodic but highly ordered.
+
+6. PERIOD-6 UNIVERSALITY: π(4)=6 for Fibonacci, and 6 = C(4,2) =
+   number of arcs in a 4-tournament. The connection runs deep:
+   - F(n) mod 4 returns to start after 6 steps
+   - Tournament on 4 vertices has 6 binary arc choices
+   - The Jacobsthal sequence mod 4 has period 6 too!
+
