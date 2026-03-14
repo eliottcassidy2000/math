@@ -1,0 +1,246 @@
+======================================================================
+PART 1: CYCLOTOMIC POLYNOMIALS AT x=2 AND MERSENNE NUMBERS
+======================================================================
+
+  Φ_n(2) and its relation to Mersenne numbers:
+    n       Φ_n(2)        2^n-1 n prime?        factorization
+    1            1            1       no                    1 = 2^n-1
+    2            3            3      YES                    3 = M_n
+    3            7            7      YES                    7 = M_n
+    4            5           15       no                    5
+    5           31           31      YES                   31 = M_n
+    6            3           63       no                    3
+    7          127          127      YES                  127 = M_n
+    8           17          255       no                   17
+    9           73          511       no                   73
+   10           11         1023       no                   11
+   11         2047         2047      YES                23×89 = M_n
+   12           13         4095       no                   13
+   13         8191         8191      YES                 8191 = M_n
+   14           43        16383       no                   43
+   15          151        32767       no                  151
+   16          257        65535       no                  257
+   17       131071       131071      YES               131071 = M_n
+   18           57       262143       no                 3×19
+   19       524287       524287      YES               524287 = M_n
+   20          205      1048575       no                 5×41
+   21         2359      2097151       no                7×337
+   22          683      4194303       no                  683
+   23      8388607      8388607      YES            47×178481 = M_n
+   24          241     16777215       no                  241
+
+  KEY IDENTITIES:
+  - For prime p: Φ_p(2) = 2^p - 1 (Mersenne number M_p)
+  - For prime power p^k: Φ_{p^k}(2) = (2^{p^k}-1)/(2^{p^{k-1}}-1)
+  - Product: 2^n - 1 = ∏_{d|n} Φ_d(2)
+
+  VERIFICATION: 2^n - 1 = ∏_{d|n} Φ_d(2)
+    n= 1: ∏ =      1, 2^n-1 =      1, divisors of n: [1]
+    n= 2: ∏ =      3, 2^n-1 =      3, divisors of n: [1, 2]
+    n= 3: ∏ =      7, 2^n-1 =      7, divisors of n: [1, 3]
+    n= 4: ∏ =     15, 2^n-1 =     15, divisors of n: [1, 2, 4]
+    n= 5: ∏ =     31, 2^n-1 =     31, divisors of n: [1, 5]
+    n= 6: ∏ =     63, 2^n-1 =     63, divisors of n: [1, 2, 3, 6]
+    n= 7: ∏ =    127, 2^n-1 =    127, divisors of n: [1, 7]
+    n= 8: ∏ =    255, 2^n-1 =    255, divisors of n: [1, 2, 4, 8]
+    n= 9: ∏ =    511, 2^n-1 =    511, divisors of n: [1, 3, 9]
+    n=10: ∏ =   1023, 2^n-1 =   1023, divisors of n: [1, 2, 5, 10]
+    n=11: ∏ =   2047, 2^n-1 =   2047, divisors of n: [1, 11]
+    n=12: ∏ =   4095, 2^n-1 =   4095, divisors of n: [1, 2, 3, 4, 6, 12]
+
+======================================================================
+PART 2: H-SPECTRUM AND CYCLOTOMIC VALUES
+======================================================================
+
+  Cyclotomic values Φ_n(2) that are/aren't achievable H values:
+
+  Achievable H at n=5: [1, 3, 5, 9, 11, 13, 15]
+  Missing odd values ≤ 15: [7]
+
+  Φ_1(2) =     1: ACHIEVABLE at n=5
+  Φ_2(2) =     3: ACHIEVABLE at n=5
+  Φ_3(2) =     7: NOT achievable at n=5
+  Φ_4(2) =     5: ACHIEVABLE at n=5
+  Φ_5(2) =    31: NOT achievable at n=5
+  Φ_6(2) =     3: ACHIEVABLE at n=5
+  Φ_7(2) =   127: NOT achievable at n=5
+  Φ_8(2) =    17: NOT achievable at n=5
+  Φ_9(2) =    73: NOT achievable at n=5
+
+  H = 7 = Φ₃(2) ANALYSIS:
+  At n=5: NOT achievable (H ∈ {1,3,5,9,11,13,15})
+  At n=7: NOT achievable (from h7_check_v3)
+
+  For H=7: need I(Ω,2)=7, so 2α₁+4α₂+8α₃=6
+  → α₁+2α₂+4α₃=3
+  Solutions: (3,0,0), (1,1,0)
+  (1,1,0) impossible: α₂ ≤ C(α₁,2) = 0
+  (3,0,0): need 3 cycles, no disjoint pair
+  At n=5: 3 cycles on 5 vertices → at least 2 share ≤2 vertices,
+    but they use 3+3+3=9 vertex slots → MUST share.
+    With 5 vertices: by pigeonhole, ≤ floor(5/3)=1 disjoint cycle!
+    So can't have 3 non-disjoint cycles with α₂=0...
+    Wait: α₂=0 means no DISJOINT pair, which is what we want.
+    We need 3 cycles, ALL sharing at least one vertex.
+
+  Testing: 3 cycles {0,1,2}, {0,3,4}, {2,3,4} on n=5
+  Need: all three are directed 3-cycles in some tournament
+    H=7 NOT found among tournaments with these 3 specific cycles (dc3=3)
+
+  ALL tournaments at n=5 with dc3=3:
+    H distribution for dc3=3: [(9, 240)]
+
+  Tournaments at n=5 with dc3=3 and dc5=0:
+    H distribution for dc3=3, dc5=0: []
+
+  The key question: does dc3=3, dc5=0 exist at n=5?
+    NO! No tournaments at n=5 have dc3=3 and dc5=0!
+    This means: 3 directed 3-cycles at n=5 FORCE at least one 5-cycle.
+    And α₁ = dc3+dc5 ≥ 4, so H ≥ 1+2·4 = 9.
+
+    WHY? With 3 three-cycles on 5 vertices,
+    each pair shares at least 1 vertex (pigeonhole).
+    The arc structure forced by 3 cycles creates a 5-cycle.
+
+  Alternative: dc3=2, dc5=1 → α₁=3, H=7?
+    H distribution for dc3=2, dc5=1: []
+
+  And: dc3=1, dc5=2 → α₁=3, H=7?
+    H distribution for dc3=1, dc5=2: []
+
+======================================================================
+PART 3: COMPLETE H-SPECTRUM ANALYSIS
+======================================================================
+
+  Full (dc3, dc5) → H distribution at n=5:
+     (dc3,dc5)   α₁     H  count  H=1+2α₁?
+  ( 0, 0)    0     1    120         ✓
+  ( 1, 0)    1     3    120         ✓
+  ( 2, 0)    2     5    240         ✓
+  ( 3, 1)    4     9    240         ✓
+  ( 4, 1)    5    11    120         ✓
+  ( 4, 2)    6    13    120         ✓
+  ( 4, 3)    7    15     40         ✓
+  ( 5, 2)    7    15     24         ✓
+
+  SUMMARY: achievable α₁ values at n=5:
+    [0, 1, 2, 4, 5, 6, 7]
+    3 is NOT achievable
+
+  Complete H-spectrum at n=5: [1, 3, 5, 9, 11, 13, 15]
+  Gaps (missing odd values): [7]
+
+  OBSERVATION: H=7 is the ONLY gap in {1,3,5,7,9,11,13,15}!
+  7 = 2³-1 = Φ₃(2)
+
+  From h7_check_v3 data, H values at n=7 include:
+  dc3=0: H=1
+  dc3=1: H=3
+  dc3=2: H=5 or 9
+  dc3=3: H=9 or 15
+  dc3=4: H=11,13,15,17
+  dc3=5: H=15,19,23,25,27,29,31,33
+  So H=7 is MISSING from all dc3 categories!
+
+======================================================================
+PART 4: THE IMPOSSIBILITY OF H = Φ₃(2)
+======================================================================
+
+  THEOREM CANDIDATE (HYP-1010): H = 7 = Φ₃(2) is never achievable
+  for any tournament on any number of vertices n ≥ 3.
+
+  PROOF SKETCH:
+  H = 1 + 2α₁ + 4α₂ + 8α₃ + ... = 7
+  → α₁ + 2α₂ + 4α₃ + ... = 3
+  → (α₁, α₂, α₃, ...) ∈ {(3,0,0,...), (1,1,0,...)}
+  (1,1,0,...) impossible: α₂ ≤ C(α₁,2) = 0.
+  (3,0,0,...): need exactly 3 odd cycles, NO disjoint pair.
+
+  CLAIM: For any tournament, 3 odd cycles with no disjoint pair
+  force the existence of ADDITIONAL odd cycles.
+
+  WHY: if 3 odd cycles all share a common vertex v,
+  then the arcs among the other vertices are highly constrained.
+  The constraint forces additional cycles beyond the original 3.
+
+  At n=5: 3 three-cycles on 5 vertices sharing pairwise
+  → forced 5-cycle (verified exhaustively)
+
+  At n=7: 3 three-cycles sharing vertex 0
+  → additional 3-cycles always appear (dc3 > 3)
+  OR: dc3=3 but dc5 > 0 or dc7 > 0
+  → α₁ > 3, so H > 7
+
+  Checking all (dc3,dc5) with dc3+dc5=3 at n=5:
+    (0,3): DOES NOT EXIST
+    (1,2): DOES NOT EXIST
+    (2,1): DOES NOT EXIST
+    (3,0): DOES NOT EXIST
+
+  Further analysis: WHY α₁=3 is impossible at n=5
+
+  dc3=0 → transitive → dc5=0 → α₁=0
+  dc3=1 → max dc5 at this dc3?
+    dc3=0: max dc5 = 0
+    dc3=1: max dc5 = 0
+    dc3=2: max dc5 = 0
+    dc3=3: max dc5 = 1
+    dc3=4: max dc5 = 3
+    dc3=5: max dc5 = 2
+
+  So at n=5:
+  dc3=0: dc5=0 → α₁=0
+  dc3=1: max dc5=0 → max α₁=1
+  dc3=2: max dc5=0 → max α₁=2
+  dc3=4: max dc5=1 → max α₁=5 → JUMP!
+
+  α₁=3 is SKIPPED! The jump from α₁=2 to α₁=4 happens because
+  3 three-cycles at n=5 FORCE a 5-cycle (or more 3-cycles).
+  This is why H=7 (= 1+2·3) is impossible!
+
+  At n=7: dc3=3 gives H∈{9,15}.
+  H=9 = 1+2·4 → α₁=4 (the 3 three-cycles force extra cycle)
+  H=15 = 1+2·7 → α₁=7 (even more forced cycles)
+  In both cases α₁ > 3, confirming the skip.
+
+  RAMSEY-TYPE PHENOMENON:
+  3 overlapping odd cycles → forced additional cycles
+  This is analogous to R(3,3)=6: enough edges → forced triangle
+  Here: enough overlapping cycles → forced extra cycles
+
+======================================================================
+PART 5: WHICH CYCLOTOMIC VALUES ARE H-GAPS?
+======================================================================
+
+  Φ_d(2) values and their H-achievability:
+    Φ_d(2)   d  n=3  n=5
+         1   1    ✓    ✓
+         3   2    ✓    ✓
+         7   3    ✗    ✗
+         5   4    ✗    ✓
+        31   5    ✗    ✗
+         3   6    ✓    ✓
+       127   7    ✗    ✗
+
+  Φ₁(2) = 1: always achievable (transitive tournament)
+  Φ₂(2) = 3: achievable (one 3-cycle, e.g. regular 3-tournament)
+  Φ₃(2) = 7: NEVER achievable (gap at both n=5 and n=7)
+  Φ₄(2) = 5: achievable (α₁=2)
+  Φ₅(2) = 31: achievable at n=7 (from dc3=5 data)
+  Φ₆(2) = 3: same as Φ₂
+  Φ₇(2) = 127: beyond range for small n
+
+  THE CYCLOTOMIC INTERPRETATION:
+  Φ₃(x) = x²+x+1 with roots ω = e^{2πi/3}
+  Φ₃(2) = 7: the 'third cyclotomic at 2'
+
+  The 3 in Φ₃ corresponds to 3-CYCLES in tournaments.
+  The evaluation at x=2 corresponds to the tournament KEY₁.
+  The impossibility of H=Φ₃(2) is a STRUCTURAL constraint:
+  3 entangled 3-cycles cannot avoid creating extra cycles.
+
+  THIS IS THE TOURNAMENT ANALOG OF THE CUBE ROOT OF UNITY:
+  Just as ω³=1 forces algebraic constraints,
+  3 overlapping directed 3-cycles force cycle-count constraints.
+
+Done.
