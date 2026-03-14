@@ -1,0 +1,127 @@
+======================================================================
+H=21 PERMANENT GAP THEOREM: CONSOLIDATED PROOF VERIFICATION
+======================================================================
+
+Exhaustive enumeration at n=6 (32768 tournaments)...
+
+======================================================================
+KEY FORCING THEOREM VERIFICATION (n=6 EXHAUSTIVE)
+======================================================================
+
+--- alpha_1=3 forcing ---
+  alpha_1=3: DOES NOT EXIST at n=6
+
+--- alpha_1=10 forcing ---
+  alpha_1=10 alpha_2 values: {2: 720}
+  CONFIRMED: alpha_2 >= 2 always
+
+--- alpha_1=8 forcing ---
+  alpha_1=8 alpha_2 values: {0: 720}
+  CONFIRMED: alpha_2=1 NEVER occurs
+
+--- alpha_1=6 forcing ---
+  alpha_1=6 alpha_2 values: {0: 1440, 1: 720}
+  CONFIRMED: alpha_2=2 NEVER occurs
+
+--- alpha_1=4 forcing ---
+  alpha_1=4 alpha_2 values: {0: 2880}
+  CONFIRMED: alpha_2=3 NEVER occurs
+
+======================================================================
+T-SPECTRUM AT n=6
+======================================================================
+
+Achievable T values:
+  T=  0:   720 tournaments
+  T=  1:   960 tournaments
+  T=  2:  2160 tournaments
+  T=  4:  2960 tournaments
+  T=  5:  1440 tournaments
+  T=  6:  1440 tournaments
+  T=  7:  2208 tournaments
+  T=  8:  1440 tournaments
+  T=  9:  1440 tournaments
+  T= 11:  2880 tournaments
+  T= 12:  1440 tournaments
+  T= 13:   480 tournaments
+  T= 14:  2880 tournaments
+  T= 15:  1440 tournaments
+  T= 16:  2640 tournaments
+  T= 18:  3600 tournaments
+  T= 20:   720 tournaments
+  T= 21:  1440 tournaments
+  T= 22:   480 tournaments
+
+Missing T values (permanent gaps): [3, 10, 17, 19]
+
+======================================================================
+H-SPECTRUM AT n=6
+======================================================================
+
+Achievable H values:
+  H=  1:   720 tournaments
+  H=  3:   960 tournaments
+  H=  5:  2160 tournaments
+  H=  9:  2960 tournaments
+  H= 11:  1440 tournaments
+  H= 13:  1440 tournaments
+  H= 15:  2208 tournaments
+  H= 17:  1440 tournaments
+  H= 19:  1440 tournaments
+  H= 23:  2880 tournaments
+  H= 25:  1440 tournaments
+  H= 27:   480 tournaments
+  H= 29:  2880 tournaments
+  H= 31:  1440 tournaments
+  H= 33:  2640 tournaments
+  H= 37:  3600 tournaments
+  H= 41:   720 tournaments
+  H= 43:  1440 tournaments
+  H= 45:   480 tournaments
+
+Missing odd H values: [7, 21, 35, 39]
+
+======================================================================
+H=21 PROOF STATUS
+======================================================================
+
+STEP 1: Cubic Exclusion (alpha_3>=1 => H>=27>21)
+  STATUS: PROVED (algebraic, from 3^k lower bound)
+
+STEP 2: T=10 six-way block:
+
+  (10,0): PROVED        alpha_1=10 forces alpha_2>=2
+  ( 8,1): EMPIRICAL     alpha_1=8 skips alpha_2=1 (gap: {0}->>{7})
+  ( 6,2): EMPIRICAL     alpha_1=6 skips alpha_2=2 (gap: {0,1}->>{5})
+  ( 4,3): EMPIRICAL*    alpha_1=4 binary phase: alpha_2 in {0,4} only
+  ( 2,4): PROVED        2 cycles => alpha_2 <= 1 < 4
+  ( 0,5): PROVED        0 cycles => alpha_2 = 0 < 5
+
+  Proved: 3/6 cases
+  Empirical: 3/6 cases (verified n<=9)
+
+COMPARISON: H=7 PROOF STATUS
+----------------------------------------
+  (3,0): PROVED  alpha_1=3 forces alpha_2>=2
+  (1,1): PROVED  1 cycle => alpha_2=0
+  Proved: 2/2 cases. H=7 gap is FULLY PROVED.
+
+======================================================================
+THE ALPHA_2 PHASE TRANSITION TABLE
+======================================================================
+
+Each alpha_1 value has a specific set of achievable alpha_2 values.
+The T=10 requirement alpha_2 = (10-alpha_1)/2 always falls in the GAP.
+
+alpha_1 | Achievable alpha_2 (n<=9) | Required alpha_2 | Status
+----------------------------------------------------------------------
+   10   | {2}                        |        0         | IN GAP (PROVED)
+    8   | {0, 7}                     |        1         | IN GAP
+    6   | {0, 1, 5}                  |        2         | IN GAP
+    4   | {0, 4}                     |        3         | IN GAP
+    2   | {0, 1}                     |        4         | OUT OF RANGE (PROVED)
+    0   | {0}                        |        5         | OUT OF RANGE (PROVED)
+
+The beautiful structure: the T=10 line passes through the
+EXACT gap in each alpha_1 value's achievable alpha_2 spectrum.
+This is a combinatorial conspiracy rooted in tournament cycle structure.

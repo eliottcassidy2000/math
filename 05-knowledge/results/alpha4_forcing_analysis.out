@@ -1,0 +1,157 @@
+======================================================================
+ALPHA_1=4 FORCING ANALYSIS: IS alpha_2 IN {0,4} UNIVERSAL?
+======================================================================
+
+==================================================
+n = 7
+==================================================
+  100000/500000, alpha_1=4 found: 1500
+  200000/500000, alpha_1=4 found: 2898
+
+alpha_1=4 at n=7: 7237 found
+alpha_2 distribution:
+  alpha_2=0: 7237 (100.0%)
+
+Disjointness graph topologies:
+  empty: 7237
+
+==================================================
+n = 8
+==================================================
+
+alpha_1=4 at n=8: 617 found
+alpha_2 distribution:
+  alpha_2=0: 543 (88.0%)
+  alpha_2=4: 74 (12.0%)
+
+Disjointness graph topologies:
+  C4: 74
+  empty: 543
+
+==================================================
+n = 9
+==================================================
+
+alpha_1=4 at n=9: 17 found
+alpha_2 distribution:
+  alpha_2=0: 11 (64.7%)
+  alpha_2=4: 6 (35.3%)
+
+Disjointness graph topologies:
+  C4: 6
+  empty: 11
+
+======================================================================
+DEEP DIVE: alpha_2=4 at n=8
+======================================================================
+
+alpha_2=0 examples (first 5):
+  Score: (0, 1, 2, 4, 4, 5, 6, 6)
+    Cycle: [0, 3, 5] (size 3, 1 directed)
+    Cycle: [0, 3, 7] (size 3, 1 directed)
+    Cycle: [0, 5, 6] (size 3, 1 directed)
+    Cycle: [0, 3, 5, 6, 7] (size 5, 1 directed)
+
+  Score: (0, 1, 3, 3, 4, 5, 5, 7)
+    Cycle: [0, 1, 3] (size 3, 1 directed)
+    Cycle: [1, 3, 4] (size 3, 1 directed)
+    Cycle: [1, 3, 7] (size 3, 1 directed)
+    Cycle: [0, 1, 3, 4, 7] (size 5, 1 directed)
+
+  Score: (1, 1, 2, 3, 3, 5, 6, 7)
+    Cycle: [1, 2, 4] (size 3, 1 directed)
+    Cycle: [1, 4, 5] (size 3, 1 directed)
+    Cycle: [1, 5, 7] (size 3, 1 directed)
+    Cycle: [1, 2, 4, 5, 7] (size 5, 1 directed)
+
+  Score: (0, 1, 2, 4, 4, 5, 6, 6)
+    Cycle: [0, 3, 5] (size 3, 1 directed)
+    Cycle: [2, 3, 5] (size 3, 1 directed)
+    Cycle: [3, 5, 6] (size 3, 1 directed)
+    Cycle: [0, 2, 3, 5, 6] (size 5, 1 directed)
+
+  Score: (0, 1, 3, 3, 4, 5, 5, 7)
+    Cycle: [0, 2, 4] (size 3, 1 directed)
+    Cycle: [0, 3, 4] (size 3, 1 directed)
+    Cycle: [0, 4, 6] (size 3, 1 directed)
+    Cycle: [0, 2, 3, 4, 6] (size 5, 1 directed)
+
+alpha_2=4 examples (first 5):
+  Score: (1, 1, 2, 2, 5, 5, 6, 6), disjoint_pairs=4
+    Cycle: [0, 1, 2] (size 3, 1 directed)
+    Cycle: [1, 2, 7] (size 3, 1 directed)
+    Cycle: [3, 4, 6] (size 3, 1 directed)
+    Cycle: [3, 5, 6] (size 3, 1 directed)
+    0-1: share frozenset({1, 2})
+    0-2: DISJOINT
+    0-3: DISJOINT
+    1-2: DISJOINT
+    1-3: DISJOINT
+    2-3: share frozenset({3, 6})
+
+  Score: (1, 1, 2, 2, 5, 5, 6, 6), disjoint_pairs=4
+    Cycle: [0, 1, 5] (size 3, 1 directed)
+    Cycle: [1, 5, 7] (size 3, 1 directed)
+    Cycle: [2, 3, 4] (size 3, 1 directed)
+    Cycle: [3, 4, 6] (size 3, 1 directed)
+    0-1: share frozenset({1, 5})
+    0-2: DISJOINT
+    0-3: DISJOINT
+    1-2: DISJOINT
+    1-3: DISJOINT
+    2-3: share frozenset({3, 4})
+
+  Score: (1, 1, 2, 2, 5, 5, 6, 6), disjoint_pairs=4
+    Cycle: [0, 1, 3] (size 3, 1 directed)
+    Cycle: [0, 3, 7] (size 3, 1 directed)
+    Cycle: [2, 4, 5] (size 3, 1 directed)
+    Cycle: [4, 5, 6] (size 3, 1 directed)
+    0-1: share frozenset({0, 3})
+    0-2: DISJOINT
+    0-3: DISJOINT
+    1-2: DISJOINT
+    1-3: DISJOINT
+    2-3: share frozenset({4, 5})
+
+  Score: (1, 1, 2, 2, 5, 5, 6, 6), disjoint_pairs=4
+    Cycle: [0, 2, 4] (size 3, 1 directed)
+    Cycle: [0, 4, 7] (size 3, 1 directed)
+    Cycle: [1, 3, 6] (size 3, 1 directed)
+    Cycle: [1, 5, 6] (size 3, 1 directed)
+    0-1: share frozenset({0, 4})
+    0-2: DISJOINT
+    0-3: DISJOINT
+    1-2: DISJOINT
+    1-3: DISJOINT
+    2-3: share frozenset({1, 6})
+
+  Score: (1, 1, 2, 2, 5, 5, 6, 6), disjoint_pairs=4
+    Cycle: [0, 2, 6] (size 3, 1 directed)
+    Cycle: [1, 3, 5] (size 3, 1 directed)
+    Cycle: [2, 4, 6] (size 3, 1 directed)
+    Cycle: [3, 5, 7] (size 3, 1 directed)
+    0-1: DISJOINT
+    0-2: share frozenset({2, 6})
+    0-3: DISJOINT
+    1-2: DISJOINT
+    1-3: share frozenset({3, 5})
+    2-3: DISJOINT
+
+======================================================================
+THEORETICAL ANALYSIS: WHY alpha_2 IN {0,4}?
+======================================================================
+
+alpha_1=4 means exactly 4 directed odd cycles (counting multiplicity).
+These live on some set of vertex-SETS. Multiple directed cycles can
+live on the same vertex set (e.g., a 5-vertex set with 3 Hamiltonian cycles).
+
+Case analysis:
+  If 4 cycles on 4 distinct vertex sets:
+    alpha_2 = sum of products over disjoint pairs
+    Each cycle has multiplicity 1. alpha_2 = #disjoint_pairs.
+    So alpha_2 in {0,1,2,3,4,5,6} a priori.
+    But data shows only {0,4}.
+
+  If 4 cycles on fewer vertex sets (e.g., 2 cycles on one 5-vertex set):
+    alpha_2 = sum c_i*c_j for disjoint set-pairs
+    Products can be >1.

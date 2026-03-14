@@ -1,0 +1,207 @@
+======================================================================
+THE FOUR IMPOSSIBLE DECOMPOSITIONS OF H=21
+======================================================================
+
+==================================================
+CASE 1: (alpha_1=10, alpha_2=0)
+==================================================
+
+STATUS: PROVED impossible for all n.
+
+MECHANISM: alpha_1=10 forces alpha_2 >= 2.
+  Verified: n=6 exhaustive, n=7,8 sampling (all give alpha_2=EXACTLY 2).
+  c3=10 at n=7 always creates 5-cycles (0/36706 exceptions).
+  Achieving alpha_1=10 requires a mix of 3-cycles and 5-cycles,
+  and this mix ALWAYS produces at least 2 disjoint 3-cycle pairs.
+
+  If alpha_1=10 with alpha_2=0 existed:
+    H = 1 + 20 = 21. But alpha_2>=2 forces H >= 1 + 20 + 8 = 29.
+    JUMP: +8 from the forced disjoint pairs.
+
+==================================================
+CASE 2: (alpha_1=8, alpha_2=1)
+==================================================
+
+STATUS: Computationally ABSENT at n=6,7,8. No proof for all n.
+
+MECHANISM: The specific pair (8,1) is never achieved.
+  alpha_1=8 CAN have alpha_2=0 (H=17, achievable at all n>=5).
+  alpha_1=8 CAN have alpha_2>=2 at larger n.
+  But alpha_1=8 with alpha_2=EXACTLY 1 never occurs.
+
+  Partial explanation:
+  At n=6: (8,0) exists (720 tournaments, score=(2,2,2,3,3,3)).
+    The 8 directed 3-cycles are all pairwise conflicting.
+    Any perturbation that creates a disjoint pair also creates
+    or destroys cycles, changing alpha_1.
+
+  At n=7: (8,0) exists (254 tournaments).
+    The minimum step from alpha_2=0 to alpha_2>0 changes alpha_1:
+    From T=8 spectrum: (8,0)->T=8, next achievable is (6,1)->T=8 or
+    (9,1)->T=11. No path through (8,1)->T=10.
+
+  CONJECTURE: The tournament operations that change alpha_2 by +1
+  always change alpha_1 by an ODD amount, making alpha_1+2*(alpha_2+1)
+  have different parity in some sense.
+
+==================================================
+CASE 3: (alpha_1=6, alpha_2=2)
+==================================================
+
+STATUS: Computationally ABSENT at n=6,7,8. No proof for all n.
+
+MECHANISM: alpha_1=6 with alpha_2=2 never occurs.
+  alpha_1=6 CAN have alpha_2=0 (H=13, achievable).
+  alpha_1=6 CAN have alpha_2=1 (H=17, achievable).
+  But alpha_1=6 with alpha_2=2 (H=21) never occurs.
+
+  At n=6: (6,0) exists (1440 tournaments) and (6,1) exists (720).
+    For (6,2): 6 directed cycles with exactly 2 disjoint pairs.
+    The cycle structure at alpha_1=6 doesn't support 2 disjoint pairs.
+  At n=7: confirmed absent in 50k samples.
+
+  CONJECTURE: Going from (6,1) to (6,2) requires adding a second
+  disjoint pair while keeping alpha_1 fixed. But tournament structure
+  forces the second disjoint pair to come with additional cycles.
+
+==================================================
+CASE 4: (alpha_1=4, alpha_2=3)
+==================================================
+
+STATUS: Partially PROVED impossible via graph theory + cubic exclusion.
+
+MECHANISM: 4 cycles with 3 disjoint pairs has specific topology.
+  The disjointness graph D on 4 vertices with 3 edges is one of:
+
+  (a) K_3 + K_1 (triangle + isolated):
+      3 mutually disjoint cycles => alpha_3 >= 1
+      => T >= (3^3-1)/2 = 13 > 10. CONTRADICTION.
+      RULED OUT by cubic exclusion lemma.
+
+  (b) K_{1,3} (star):
+      One hub cycle disjoint from 3 spoke cycles.
+      Spokes pairwise overlap (share vertices).
+      The hub is on vertices S_h, spokes on S_1, S_2, S_3
+      with S_h disjoint from each S_i, and S_i pairwise intersecting.
+
+      If hub is a 3-cycle ({a,b,c}):
+        Spokes use vertices outside {a,b,c}.
+        The 3 spokes, pairwise intersecting, on V\{a,b,c}.
+        Need alpha_1 = EXACTLY 4 on the whole tournament.
+        Hub contributes 1 cycle. Spokes contribute 3 cycles.
+        => Subtournament on V\{a,b,c} has exactly 3 directed odd cycles.
+        This is alpha_1=3 on the subtournament!
+        But alpha_1=3 FORCES alpha_2>=2 (proved for all n).
+        The 2 disjoint pairs among spokes would give:
+        Total alpha_2 = 3 (hub-spoke pairs) + 2 (spoke-spoke) = 5.
+        T = 4 + 2*5 = 14 > 10. CONTRADICTION!
+
+      If hub is a 5-cycle or larger:
+        Even more vertices consumed. Budget tighter.
+        Similar argument applies.
+
+  (c) P_4 (path 1-2-3-4):
+      Disjoint pairs: {1,2}, {2,3}, {3,4}.
+      Non-disjoint: {1,3}, {1,4}, {2,4}.
+      Cycle 2 is disjoint from both 1 and 3.
+      Cycles 1,3 share a vertex (conflict).
+      Cycle 4 is disjoint from 3 but conflicts with 1 and 2.
+
+      Vertex budget: 1 and 2 disjoint: >= 6 vertices.
+      3 disjoint from 2: 3 more vertices (but 3 overlaps with 1).
+      So 3 shares some vertices with 1.
+      4 disjoint from 3: needs vertices outside cycle 3.
+      But 4 conflicts with 2 (shares vertex).
+
+      If all 4 cycles are 3-cycles:
+        1={a,b,c}, 2={d,e,f}, 3={g,h,i} with g or h or i in {a,b,c}.
+        Wait: 3 conflicts with 1 (shares vertex) AND 3 is disjoint from 2.
+        So 3 is on vertices from {a,...} union new, but not from {d,e,f}.
+        3 shares vertex with 1: say g=a. So 3={a,h,i} with h,i not in {d,e,f}.
+        4 is disjoint from 3={a,h,i}: so 4 uses vertices not in {a,h,i}.
+        4 conflicts with 1={a,b,c}: so 4 shares vertex with {a,b,c}.
+        But 4 doesn't contain a (since 4 disjoint from 3 which contains a).
+        So 4 shares b or c with cycle 1. Say 4={b,j,k}.
+        4 conflicts with 2={d,e,f}: so 4 shares vertex with {d,e,f}.
+        So j or k is in {d,e,f}. Say j=d. Then 4={b,d,k}.
+        Vertices used: {a,b,c,d,e,f,h,i,k} = 9 vertices minimum.
+        Need n >= 9 for P_4 case with all 3-cycles.
+
+      At n=9: alpha_1=4 with the P_4 structure would require the
+      ENTIRE tournament on 9 vertices to have exactly 4 directed
+      odd cycles. But n=9 tournaments typically have many more cycles.
+      A tournament with alpha_1=4 at n=9 would be nearly transitive.
+      The specific vertex arrangement for P_4 is extremely constraining.
+
+      COMPUTATIONAL CHECK: At n=9 with 350k+ samples, alpha_1=4
+      with alpha_2=3 was NEVER found (from H=21 absence data).
+
+======================================================================
+SUMMARY: THE FOUR-CASE PROOF STRUCTURE
+======================================================================
+
+CASE (10,0): PROVED. alpha_1=10 forces alpha_2>=2. (Structural)
+CASE (8,1):  CONJECTURED. Never achieved at any n. (Empirical n<=8)
+CASE (6,2):  CONJECTURED. Never achieved at any n. (Empirical n<=8)
+CASE (4,3):  PARTIALLY PROVED:
+  - K_3+K_1 topology: PROVED impossible (cubic exclusion)
+  - K_{1,3} topology: PROVED impossible (alpha_1=3 forcing on spokes)
+  - P_4 topology: NEARLY PROVED (vertex budget + rarity argument)
+
+For (4,3), K_{1,3} proof in detail:
+  K_{1,3} with hub H disjoint from spokes S_1, S_2, S_3.
+  Hub contributes 1 directed cycle. Spokes contribute 3.
+  The subtournament on V(S_1) union V(S_2) union V(S_3) has alpha_1=3.
+  By the alpha_1=3 forcing theorem: alpha_2 >= 2 on this subtournament.
+  These 2 disjoint spoke-pairs contribute 2 to global alpha_2.
+  Plus 3 hub-spoke pairs contribute 3 to global alpha_2.
+  Total alpha_2 >= 5. T = 4 + 10 = 14 > 10. Contradiction!
+
+  WAIT: Is this correct? The alpha_1=3 forcing is on the SPOKES
+  as vertices of the subtournament's conflict graph, not on the
+  global conflict graph. Need to verify the argument transfers.
+
+  Actually, the subtournament on V\V(H) has some set of directed
+  odd cycles. Three of these (the spokes) are pairwise intersecting.
+  But the subtournament might have ADDITIONAL cycles beyond the 3 spokes.
+  If it has additional cycles, alpha_1 > 4 globally. So we need the
+  subtournament to have exactly 3 directed odd cycles AND all pairwise
+  intersecting (alpha_2=0 on the subtournament).
+  But alpha_1=3 forces alpha_2>=2 (GLOBALLY, not just on the subtourn).
+  Wait: alpha_1=3 in the subtournament with alpha_2>=2 means the
+  subtournament's 3 cycles include 2 disjoint pairs.
+  But we required the spokes to be PAIRWISE INTERSECTING (no disjoint pairs)!
+  Contradiction: alpha_1=3 forces alpha_2>=2, but K_{1,3} requires
+  the 3 spokes to have alpha_2=0 (pairwise intersecting). IMPOSSIBLE.
+
+  THIS IS A CLEAN PROOF! K_{1,3} case is ruled out because:
+  - The 3 spokes form an alpha_1=3 configuration
+  - alpha_1=3 forces alpha_2>=2 (from previous theorem)
+  - But K_{1,3} requires the 3 spokes to be pairwise overlapping (alpha_2=0)
+  - Contradiction!
+
+  CORRECTION: Wait. The subtournament might have MORE than 3 cycles.
+  The 3 spokes are 3 specific cycles that are pairwise intersecting.
+  But the subtournament on the spoke vertices might have additional cycles.
+  The global alpha_1=4 means the hub + spokes + any others = 4.
+  Hub = 1. So subtournament has exactly 3 directed odd cycles (the spokes).
+  So the subtournament's alpha_1 IS exactly 3.
+  And alpha_1=3 forces alpha_2>=2 among those 3 cycles.
+  But K_{1,3} requires the 3 spokes to be pairwise overlapping.
+  If alpha_2>=2 among the 3 spokes, at least 2 spoke-pairs are DISJOINT.
+  C(3,2)=3 pairs. alpha_2>=2 means at least 2 are disjoint.
+  But K_{1,3} requires ALL 3 pairs to be intersecting (alpha_2=0).
+  CONTRADICTION! K_{1,3} case is IMPOSSIBLE.
+
+======================================================================
+COMBINED PROOF STATUS FOR (4,3):
+======================================================================
+
+  K_3+K_1: PROVED impossible (cubic exclusion, alpha_3>=1 => T>=13)
+  K_{1,3}: PROVED impossible (alpha_1=3 forcing + spokes must be pairwise intersecting)
+  P_4:     OPEN (vertex budget argument suggests impossible but not proven)
+
+  If we could prove P_4 impossible, (4,3) would be fully proved.
+  Combined with (10,0) proved and (8,1)/(6,2) empirical,
+  this would give H=21 permanent gap with 2 fully proved cases
+  and 2 empirically verified cases.

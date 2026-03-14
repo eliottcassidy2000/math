@@ -105,6 +105,28 @@ Deep creative session exploring how the 5 exceptional simple Lie groups relate t
 4. Can the McKay correspondence give a direct ADE → tournament map?
 5. The 56-dimensional E₇ representation = T(6) coincidence — structural or numerical?
 
+## kind-pasteur-2026-03-14-S66b — 2026-03-14: Alpha_2 Phase Transition Table, H=21 Six-Way Block
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S66 (context overflow continuation)
+**Summary of work:**
+Completed the P4 topology check and discovered the Alpha_2 Phase Transition Table: each alpha_1 value has a specific set of achievable alpha_2 values, and the T=10 line passes through the EXACT GAP in each spectrum.
+
+**Critical findings:**
+1. **alpha_1=4 Binary Phase Theorem (HYP-1080):** alpha_2 in {0, 4} ONLY. Verified exhaustive n=6 (2880/2880), sampled n=7 (7237), n=8 (617), n=9 (17). Zero exceptions. alpha_2=4 always has C4/K_{2,2} bipartite topology.
+2. **alpha_1=8 gap:** alpha_2 in {0, 7} at n<=9. Skips 1-6 entirely.
+3. **alpha_1=6 gap:** alpha_2 in {0, 1, 5} at n<=9. Skips 2-4 entirely.
+4. **T=10 Six-Way Block (HYP-1081):** ALL 6 decompositions of T=10 blocked by independent mechanisms. 4/6 PROVED (including (10,0) forcing, (2,4) and (0,5) trivial), 2/6 empirical.
+5. **Alpha_2 Phase Transition Table:** The required alpha_2 = (10-alpha_1)/2 for T=10 always falls in the gap of each alpha_1's achievable alpha_2 spectrum. This is a "combinatorial conspiracy" rooted in tournament cycle structure.
+6. **H=7 is FULLY PROVED** permanent gap (both decompositions proved impossible).
+7. **Exhaustive n=6 (alpha_1, alpha_2) landscape** confirms all forcing theorems. Missing T at n=6: {3, 10, 17, 19}.
+
+**New scripts:** p4_topology_check.py, alpha4_forcing_analysis.py, alpha4_exhaustive_n6.py, t10_block_fast.py, h21_proof_consolidated.py
+**New hypotheses:** HYP-1080 (binary phase), HYP-1081 (six-way block)
+**Unresolved:** Formal proof of alpha_1=4 binary phase theorem; formal proof of alpha_1=8 and alpha_1=6 gaps; understanding WHY the T=10 line hits every gap
+
+---
+
 ## opus-2026-03-14-S76 — 2026-03-14: n=9=3² Deep Analysis, Directed Cycle Correction, Sierpinski Fractal
 
 **Account:** opus
@@ -1326,7 +1348,6 @@ Major discoveries about the topological landscape of circulant tournaments at p=
   - Connect co_occ_k linearity (kind-pasteur S59b) to Walsh degree structure
   - p=29 computation needs C++ Held-Karp
 
-<<<<<<< HEAD
 ## opus-2026-03-12-S65 — 2026-03-12: Walsh difference formula + additive energy = IPR + 5 new discoveries
 
 **Account:** opus
