@@ -1394,3 +1394,9 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1393 | **n=7 forbidden set = {7,21,63} plus boundary gaps**: Only 7=111₂, 21=111₄, 63=111111₂ are "structurally" forbidden. Values 107,119,149,161-187 are boundary effects near max H=189. | CONFIRMED (exhaustive n=7) | n7_deep_spectrum_89.py | opus-S89 |
 | HYP-1394 | **GCD of n=7 counts = 16 = 2⁴**: All multiplicities divisible by 16. Compare n=6 GCD=48, n=5 GCD=8. | CONFIRMED | n7_deep_spectrum_89.py | opus-S89 |
 | HYP-1395 | **Regular n=7 tournaments: H∈{171,175,189}**: 2640 total regular tournaments, split as 1680/720/240. First n where regulars aren't all H-equal. | CONFIRMED (exhaustive n=7) | n7_deep_spectrum_89.py | opus-S89 |
+| HYP-1396 | **Walsh-simplex correspondence**: Linear Walsh terms (deg 0,1) = n+1 = simplex vertex count. Nonlinear (deg>=2) = 2^n-(n+1) = "corner pieces" in cube-simplex decomposition. | CONFIRMED | category_3strand_pascal.py | opus-S71l |
+| HYP-1397 | **3-strand Pascal = Phi_3(x)^n**: (1+x+x^2)^n = Phi_3(x)^n. At x=2: sum T(n,k)*2^k = 7^n. | CONFIRMED | category_3strand_pascal.py | opus-S71l |
+| HYP-1398 | **7 = \|2-omega\|^2**: Forbidden value = squared distance from 2 to e^(2pi*i/3). | CONFIRMED | transcendental_tournament_bases.py | opus-S71l |
+| HYP-1399 | **Doubly-weighted k-nacci -> 3**: Weights=2 gives limit 3. Weight=j gives j+1. | CONFIRMED | transcendental_tournament_bases.py | opus-S71l |
+| HYP-1400 | **OGF of Mean(H) = 2x/(2-x)**: Pole at tournament generator x=2. | CONFIRMED | transcendental_tournament_bases.py | opus-S71l |
+| HYP-1401 | **7*3^k forbidden terminates at k=3**: {7,21,63} forbidden but 189=7*27 achievable. Baer obstruction has finite depth. | CONFIRMED | baer_obstruction_mechanism.py | opus-S71l |
