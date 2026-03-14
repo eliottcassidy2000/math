@@ -1,0 +1,391 @@
+======================================================================
+JACOBSTHAL NUMBERS AND THE FANO PLANE
+======================================================================
+
+======================================================================
+PART 1: PATH INDEPENDENCE POLYNOMIALS AT x=2
+======================================================================
+
+I(P_n, 2) via recurrence (= Jacobsthal(n+1)):
+   n   I(P_n,2)     closed  mod 7  mod 21    I(P_n,-1/3)
+   0          1          1      1           1                   1 
+   1          3          1      3           3                 2/3 
+   2          5          3      5           5                 1/3 
+   3         11          5      4          11                 1/9 
+   4         21         11      0 ←7|       0 ←21|              0  = 21!
+   5         43         21      1           1               -1/27 
+   6         85         43      1           1               -1/27 
+   7        171         85      3           3               -2/81 
+   8        341        171      5           5               -1/81 
+   9        683        341      4          11              -1/243 
+  10       1365        683      0 ←7|       0 ←21|              0 
+  11       2731       1365      1           1               1/729 
+  12       5461       2731      1           1               1/729 
+  13      10923       5461      3           3              2/2187 
+  14      21845      10923      5           5              1/2187 
+  15      43691      21845      4          11              1/6561 
+  16      87381      43691      0 ←7|       0 ←21|              0 
+  17     174763      87381      1           1            -1/19683 
+  18     349525     174763      1           1            -1/19683 
+  19     699051     349525      3           3            -2/59049 
+
+KEY OBSERVATIONS:
+1. I(P_4, 2) = 21 = H_forb_2 = |PG(2,F₄)|
+2. I(P_n, 2) ≡ 0 mod 7 iff n ≡ 4 mod 6  (period 6!)
+3. I(P_n, -1/3) = 0 iff n ≡ 4 mod 6 (same period!)
+4. Period 6 = LCM(2,3) = the tournament period
+
+======================================================================
+PART 2: THE PERIOD-6 STRUCTURE OF JACOBSTHAL MOD 7
+======================================================================
+
+Jacobsthal J(n) = (2^n - (-1)^n)/3 mod 7:
+  J( 0) =      0 ≡ 0 mod 7
+  J( 1) =      1 ≡ 1 mod 7
+  J( 2) =      1 ≡ 1 mod 7
+  J( 3) =      3 ≡ 3 mod 7
+  J( 4) =      5 ≡ 5 mod 7
+  J( 5) =     11 ≡ 4 mod 7
+  J( 6) =     21 ≡ 0 mod 7  ← divisible!
+  J( 7) =     43 ≡ 1 mod 7
+  J( 8) =     85 ≡ 1 mod 7
+  J( 9) =    171 ≡ 3 mod 7
+  J(10) =    341 ≡ 5 mod 7
+  J(11) =    683 ≡ 4 mod 7
+  J(12) =   1365 ≡ 0 mod 7  ← divisible!
+  J(13) =   2731 ≡ 1 mod 7
+
+Period of J(n) mod 7: ord(2) mod 7 = 3, so 2³ ≡ 1 mod 7.
+The period of J(n) mod 7 is 6 (because (-1)^n adds period 2).
+
+J(n) ≡ 0 mod 7 at n = 3, 9, 15, 21, ... (n ≡ 3 mod 6)
+Since I(P_n, 2) = J(n+1), this gives I(P_n, 2) ≡ 0 mod 7 at n = 2, 8, 14, 20, ...
+Wait, let me recheck...
+
+Rechecking: which n have I(P_n, 2) ≡ 0 mod 7?
+  n = 4: I(P_4, 2) = 21 ≡ 0 mod 7
+  n = 10: I(P_10, 2) = 1365 ≡ 0 mod 7
+  n = 16: I(P_16, 2) = 87381 ≡ 0 mod 7
+  n = 22: I(P_22, 2) = 5592405 ≡ 0 mod 7
+
+I(P_n, 2) ≡ 0 mod 7 at n = 4, 10, 16, 22, ... (n ≡ 4 mod 6)
+
+This is EXACTLY the n where I(P_n, -1/3) = 0,
+i.e., where (1+3x) divides I(P_n, x).
+
+The period is 6 = 2 × 3. Why 6?
+  - Factor 2: from (-1)^n in the closed form
+  - Factor 3: from ord(2 mod 7) = 3
+
+  These are the tournament's fundamental numbers: 2 (binary orientations)
+  and 3 (3-cycles, the building block of tournament complexity).
+
+======================================================================
+PART 3: FACTORIZATION OF I(P_n, x) WHEN n ≡ 4 MOD 6
+======================================================================
+
+I(P_n, x) polynomials:
+  I(P_ 1, x) = 1 + x
+    at x=2: 3, at x=-1/3: 0.666667
+  I(P_ 2, x) = 1 + 2x
+    at x=2: 5, at x=-1/3: 0.333333
+  I(P_ 3, x) = 1 + 3x + x^2
+    at x=2: 11, at x=-1/3: 0.111111
+  I(P_ 4, x) = 1 + 4x + 3x^2
+    at x=2: 21, at x=-1/3: 0.000000  ← (1+3x) divides!
+    I(P_4, x) = (1+3x) × Q(x)
+  I(P_ 5, x) = 1 + 5x + 6x^2 + x^3
+    at x=2: 43, at x=-1/3: -0.037037
+  I(P_ 6, x) = 1 + 6x + 10x^2 + 4x^3
+    at x=2: 85, at x=-1/3: -0.037037
+  I(P_ 7, x) = 1 + 7x + 15x^2 + 10x^3 + x^4
+    at x=2: 171, at x=-1/3: -0.024691
+  I(P_ 8, x) = 1 + 8x + 21x^2 + 20x^3 + 5x^4
+    at x=2: 341, at x=-1/3: -0.012346
+  I(P_ 9, x) = 1 + 9x + 28x^2 + 35x^3 + 15x^4 + x^5
+    at x=2: 683, at x=-1/3: -0.004115
+  I(P_10, x) = 1 + 10x + 36x^2 + 56x^3 + 35x^4 + 6x^5
+    at x=2: 1365, at x=-1/3: 0.000000  ← (1+3x) divides!
+    I(P_10, x) = (1+3x) × Q(x)
+  I(P_11, x) = 1 + 11x + 45x^2 + 84x^3 + 70x^4 + 21x^5 + x^6
+    at x=2: 2731, at x=-1/3: 0.001372
+  I(P_12, x) = 1 + 12x + 55x^2 + 120x^3 + 126x^4 + 56x^5 + 7x^6
+    at x=2: 5461, at x=-1/3: 0.001372
+
+======================================================================
+PART 4: WHEN DOES (1+3x) DIVIDE I(G,x)?
+======================================================================
+
+(1+3x) | I(G,x) iff I(G, -1/3) = 0.
+
+For the independence polynomial: I(G, -1/3) = sum_{k=0}^{alpha} i_k (-1/3)^k
+
+This is zero iff the alternating sum weighted by 3^{-k} vanishes:
+  sum_{k=0}^{alpha} i_k (-1)^k / 3^k = 0
+  Multiply by 3^alpha:
+  sum_{k=0}^{alpha} i_k (-1)^k 3^{alpha-k} = 0
+
+EXAMPLES OF GRAPHS WITH (1+3x) | I(G,x):
+  - K₃: I = 1+3x (trivially)
+  - P₄: I = (1+x)(1+3x)
+  - K₁⊔K₃: I = (1+x)(1+3x) (same polynomial!)
+  - P₁₀: I = (1+3x) × Q₉(x) (by period-6 Jacobsthal)
+  - Any graph with K₃ as connected component
+
+KEY INSIGHT: (1+3x) | I(G,x) does NOT require K₃ as a component!
+P₄ is connected but still has the poison root.
+
+This means the K₃ "poison" is really about the ROOT -1/3,
+not about the graph K₃ itself. The root -1/3 can appear in the
+independence polynomial of connected graphs that have nothing to do
+with K₃ structurally.
+
+BUT: for Ω(T), the constraint is stronger.
+Not just (1+3x) | I(Ω,x), but Ω must actually be a conflict graph.
+And conflict graphs have very specific structure (dense, specific overlap
+patterns) that makes the root -1/3 hard to achieve.
+
+======================================================================
+PART 5: JACOBSTHAL MOD 21 AND THE BAER PARTITION
+======================================================================
+
+I(P_n, 2) mod 21:
+  I(P_ 0, 2) =          1 ≡  1 mod 21
+  I(P_ 1, 2) =          3 ≡  3 mod 21
+  I(P_ 2, 2) =          5 ≡  5 mod 21
+  I(P_ 3, 2) =         11 ≡ 11 mod 21
+  I(P_ 4, 2) =         21 ≡  0 mod 21 = 0 mod 21!
+  I(P_ 5, 2) =         43 ≡  1 mod 21
+  I(P_ 6, 2) =         85 ≡  1 mod 21
+  I(P_ 7, 2) =        171 ≡  3 mod 21
+  I(P_ 8, 2) =        341 ≡  5 mod 21
+  I(P_ 9, 2) =        683 ≡ 11 mod 21
+  I(P_10, 2) =       1365 ≡  0 mod 21 = 0 mod 21!
+  I(P_11, 2) =       2731 ≡  1 mod 21
+  I(P_12, 2) =       5461 ≡  1 mod 21
+  I(P_13, 2) =      10923 ≡  3 mod 21
+  I(P_14, 2) =      21845 ≡  5 mod 21
+  I(P_15, 2) =      43691 ≡ 11 mod 21
+  I(P_16, 2) =      87381 ≡  0 mod 21 = 0 mod 21!
+  I(P_17, 2) =     174763 ≡  1 mod 21
+  I(P_18, 2) =     349525 ≡  1 mod 21
+  I(P_19, 2) =     699051 ≡  3 mod 21
+  I(P_20, 2) =    1398101 ≡  5 mod 21
+  I(P_21, 2) =    2796203 ≡ 11 mod 21
+  I(P_22, 2) =    5592405 ≡  0 mod 21 = 0 mod 21!
+  I(P_23, 2) =   11184811 ≡  1 mod 21
+  I(P_24, 2) =   22369621 ≡  1 mod 21
+
+I(P_n, 2) mod 21 has period LCM(period mod 3, period mod 7):
+  mod 3: J(n) = (2^n - (-1)^n)/3. 2^n mod 3 has period 2.
+    So J(n) mod 3 has period dividing 6.
+  mod 7: period 6 (as computed above)
+  LCM(6, 6) = 6.
+
+The residues mod 21 cycle with period 6:
+  n mod 6:  0  1  2  3  4  5
+  I mod 21: 1  3 11  1 0  1  ... (approximately)
+
+I(P_4, 2) ≡ 0 mod 21 means I(P_4, 2) is divisible by BOTH 3 and 7.
+This is why I(P_4, 2) = 21 EXACTLY — it's the first value divisible by 21
+in the Jacobsthal sequence, and it happens to be exactly 21.
+
+======================================================================
+PART 6: JACOBSTHAL HITS BOTH FORBIDDEN VALUES
+======================================================================
+
+The sequence I(P_n, 2) = (2^{n+1} + (-1)^n)/3:
+  n=0: 1
+  n=1: 3 = I(K₁, 2)
+  n=2: 5 = I(K₂, 2)
+  n=3: 11
+  n=4: 21 = H_forb_2 = |PG(2,F₄)| ← !!!
+
+Note: I(K₃, 2) = 7 = H_forb_1 is NOT in this sequence.
+K₃ (the complete graph) has I = 1+3x, while P₃ has I = 1+3x+x².
+I(P₃, 2) = 11 ≠ 7. The value 7 requires the COMPLETE graph, not a path.
+
+But: I(P_n, x) = I(P_{n-1}, x) + x·I(P_{n-2}, x)
+  And the roots of I(P_n, x) include -1/3 exactly when n ≡ 4 mod 6.
+  At n=4: the root -1/3 appears for the FIRST time.
+
+THE FIBONACCI-FANO BRIDGE:
+  The weighted Fibonacci (Jacobsthal) sequence at x=2 passes through 21 at n=4.
+  The polynomial I(P_4, x) carries the K₃ poison root -1/3.
+  The value 21 = 3 × 7 = |PG(2,F₄)| = 3 Baer subplanes of Fano planes.
+  The period 6 = LCM(2,3) = the tournament period.
+
+  All of these numbers — 2, 3, 6, 7, 21 — are intimately connected
+  through the single equation:
+
+    (2^5 + (-1)^4)/3 = (32+1)/3 = 33/3 = 11... wait that's wrong.
+    I(P_4, 2) = (2^5 + 1)/3 = 33/3 = 11. THAT'S WRONG!
+
+  Let me recheck. Jacobsthal: J(n) = (2^n - (-1)^n)/3
+  J(0)=0, J(1)=1, J(2)=1, J(3)=3, J(4)=5, J(5)=11, J(6)=21
+
+  So J(6) = 21, not J(5). And I(P_n, 2) = J(n+1) + J(n) or similar?
+
+CAREFUL RECHECK:
+Jacobsthal: J(n) = J(n-1) + 2·J(n-2), J(0)=0, J(1)=1
+  J( 0) =      0  = (2^0 - (-1)^0)/3 = 0
+  J( 1) =      1  = (2^1 - (-1)^1)/3 = 1
+  J( 2) =      1  = (2^2 - (-1)^2)/3 = 1
+  J( 3) =      3  = (2^3 - (-1)^3)/3 = 3
+  J( 4) =      5  = (2^4 - (-1)^4)/3 = 5
+  J( 5) =     11  = (2^5 - (-1)^5)/3 = 11
+  J( 6) =     21  = (2^6 - (-1)^6)/3 = 21
+  J( 7) =     43  = (2^7 - (-1)^7)/3 = 43
+  J( 8) =     85  = (2^8 - (-1)^8)/3 = 85
+  J( 9) =    171  = (2^9 - (-1)^9)/3 = 171
+  J(10) =    341  = (2^10 - (-1)^10)/3 = 341
+  J(11) =    683  = (2^11 - (-1)^11)/3 = 683
+  J(12) =   1365  = (2^12 - (-1)^12)/3 = 1365
+  J(13) =   2731  = (2^13 - (-1)^13)/3 = 2731
+  J(14) =   5461  = (2^14 - (-1)^14)/3 = 5461
+
+I(P_n, 2): a(n) = a(n-1) + 2·a(n-2), a(0)=1, a(1)=3
+  I(P_0, 2) =      1  vs  (2^1+(-1)^n)/3 = 1
+  I(P_1, 2) =      3  vs  (2^2+(-1)^n)/3 = 1
+  I(P_2, 2) =      5  vs  (2^3+(-1)^n)/3 = 3
+  I(P_3, 2) =     11  vs  (2^4+(-1)^n)/3 = 5
+  I(P_4, 2) =     21  vs  (2^5+(-1)^n)/3 = 11
+  I(P_5, 2) =     43  vs  (2^6+(-1)^n)/3 = 21
+  I(P_6, 2) =     85  vs  (2^7+(-1)^n)/3 = 43
+  I(P_7, 2) =    171  vs  (2^8+(-1)^n)/3 = 85
+  I(P_8, 2) =    341  vs  (2^9+(-1)^n)/3 = 171
+  I(P_9, 2) =    683  vs  (2^10+(-1)^n)/3 = 341
+
+CORRECTED: I(P_n, 2) = (2^{n+1} + (-1)^n)/3
+
+  I(P_0, 2) = (2 + 1)/3 = 1 ✓
+  I(P_1, 2) = (4 - 1)/3 = 1 ✗ (should be 3)
+
+  Hmm, that's not matching. Let me redo this.
+
+FROM SCRATCH:
+  I(P_1, 2) = 3
+  I(P_2, 2) = 5
+  I(P_ 3, 2) = 11
+  I(P_ 4, 2) = 21
+  I(P_ 5, 2) = 43
+  I(P_ 6, 2) = 85
+  I(P_ 7, 2) = 171
+  I(P_ 8, 2) = 341
+  I(P_ 9, 2) = 683
+  I(P_10, 2) = 1365
+  I(P_11, 2) = 2731
+  I(P_12, 2) = 5461
+  I(P_13, 2) = 10923
+  I(P_14, 2) = 21845
+
+  (2^3 + (-1)^2)/3 = 3
+  (2^4 + (-1)^3)/3 = 5
+  (2^5 + (-1)^4)/3 = 11
+  (2^6 + (-1)^5)/3 = 21
+  (2^7 + (-1)^6)/3 = 43
+  (2^8 + (-1)^7)/3 = 85
+  (2^9 + (-1)^8)/3 = 171
+  (2^10 + (-1)^9)/3 = 341
+  (2^11 + (-1)^10)/3 = 683
+
+CORRECT FORMULA: I(P_n, 2) = (2^{n+2} + (-1)^{n+1})/3  for n ≥ 1
+  = (4·2^n - (-1)^n)/3
+
+  n=1: (8 - 1)/3 = 7/3... no. (8 + (-1))/3 = 7/3. Still wrong!
+
+  Let me just use: (2^{n+2} - (-1)^n)/3
+  n=1: (8 - (-1))/3 = 9/3 = 3 ✓
+  n=2: (16 - 1)/3 = 15/3 = 5 ✓
+  n=3: (32 - (-1))/3 = 33/3 = 11 ✓
+  n=4: (64 - 1)/3 = 63/3 = 21 ✓ !!!
+  n=5: (128 - (-1))/3 = 129/3 = 43 ✓
+
+VERIFIED FORMULA: I(P_n, 2) = (2^{n+2} - (-1)^n)/3
+
+  I(P_1, 2) = (2^3 - (-1)^1)/3 = (8 - -1)/3 = 3
+  I(P_2, 2) = (2^4 - (-1)^2)/3 = (16 - 1)/3 = 5
+  I(P_3, 2) = (2^5 - (-1)^3)/3 = (32 - -1)/3 = 11
+  I(P_4, 2) = (2^6 - (-1)^4)/3 = (64 - 1)/3 = 21
+  I(P_5, 2) = (2^7 - (-1)^5)/3 = (128 - -1)/3 = 43
+  I(P_6, 2) = (2^8 - (-1)^6)/3 = (256 - 1)/3 = 85
+  I(P_7, 2) = (2^9 - (-1)^7)/3 = (512 - -1)/3 = 171
+  I(P_8, 2) = (2^10 - (-1)^8)/3 = (1024 - 1)/3 = 341
+  I(P_9, 2) = (2^11 - (-1)^9)/3 = (2048 - -1)/3 = 683
+
+NOW: I(P_4, 2) = (2^6 - 1)/3 = (64 - 1)/3 = 63/3 = 21
+
+And 63 = 2^6 - 1 is a Mersenne number!
+21 = (2^6 - 1)/3 = M_6/3 where M_6 = 2^6 - 1
+
+The Mersenne number M_6 = 63 = 9 × 7 = 3² × 7
+21 = 63/3 = 3 × 7
+
+So the forbidden value 21 arises as:
+  21 = M_6/3 = (2^6 - 1)/3 = Φ₃(4) = |PG(2,F₄)|
+
+And indeed: Φ₃(q) = (q^3 - 1)/(q - 1) = q² + q + 1
+At q=4: (64 - 1)/3 = 21 ✓
+
+So the cyclotomic polynomial Φ₃(q) = (q^3-1)/(q-1) directly gives
+the path independence polynomial value:
+  I(P_4, 2) = Φ₃(4) = Φ₃(2²)
+
+And more generally:
+  I(P_{2k}, 2) = (2^{2k+2} - 1)/3 = (4^{k+1} - 1)/3
+  Which is related to Φ₃ through: Φ₃(q) = (q³-1)/(q-1) = q²+q+1
+
+  For k=1: I(P_2, 2) = (16-1)/3 = 5. Is 5 = Φ₃(q) for some q? No (q² + q + 1 = 5 → q = (-1±√17)/2)
+  For k=2: I(P_4, 2) = (64-1)/3 = 21 = Φ₃(4) ✓
+  For k=3: I(P_6, 2) = (256-1)/3 = 85. Is 85 = Φ₃(q)? q² + q + 1 = 85 → q ≈ 8.7. No.
+  For k=4: I(P_8, 2) = (1024-1)/3 = 341 = 11 × 31. Φ₃(q)=341 → no integer q.
+
+So the Φ₃ connection is SPECIFIC to I(P_4, 2) = 21 = Φ₃(4).
+This is because Φ₃(4) = (4³-1)/3 = 63/3 = 21 and also I(P_4,2) = (2⁶-1)/3 = 63/3 = 21.
+The coincidence is: 4³ = 2⁶.
+
+PUNCHLINE:
+  21 = Φ₃(2²) = (2^6 - 1)/3 = I(P_4, 2) = |PG(2,F₄)|
+  All because 4 = 2² and 4³ = 2⁶.
+  The SECOND power of 2 generates the forbidden projective plane.
+  The Jacobsthal sequence (weighted Fibonacci at x=2) passes through
+  this value at the FOURTH term, connecting paths to projective planes.
+
+======================================================================
+PART 7: THE COMPLETE NUMBER-THEORETIC PICTURE
+======================================================================
+
+THE UNIFIED STORY:
+
+1. TOURNAMENT FUNDAMENTALS:
+   x = 2 (evaluation point of independence polynomial)
+   3 = 1 + x (simplex value, k-nacci limit)
+   7 = Φ₃(2) = 2² + 2 + 1 (first forbidden H, Fano plane)
+   21 = Φ₃(4) = 4² + 4 + 1 (second forbidden H, PG(2,F₄))
+
+2. JACOBSTHAL CONNECTION:
+   I(P_n, 2) = (2^{n+2} - (-1)^n)/3 (weighted Fibonacci at x=2)
+   I(P_4, 2) = 21 = Φ₃(4) (path graph hits forbidden value!)
+   Period mod 7: 6 = LCM(2, 3) (the tournament period)
+
+3. I-POLYNOMIAL FACTORIZATION:
+   I(P_4, x) = (1+x)(1+3x)
+   Root -1/3 is the K₃ poison
+   Root -1 is the isolated vertex factor
+   21 = (1+2)(1+6) = 3 × 7 at x=2
+
+4. BAER SUBPLANE PARTITION:
+   PG(2,F₄) = 3 × PG(2,F₂) (three Fano planes)
+   21 = 3 × 7 mirrors I(P₄,x) = (1+x)(1+3x) evaluated at x=2
+
+5. SIMPLEX-CUBOID:
+   C(2) = 4² - 3² = 7 (simplex-in-cuboid complement at n=2)
+   C(2) × 3 = 21 (three copies of the complement)
+   3 = (x+1)|_{x=2} = the simplex contribution per vertex
+
+6. WHY ONLY {7, 21}:
+   7 is the unique single-graph poison (K₃)
+   21 has only 6 graph realizations, all individually blocked
+   Higher multiples of 7 (49, 91, ...) have too many realizations to block
+   The tower stops because graph-realization count grows faster than constraints
+
