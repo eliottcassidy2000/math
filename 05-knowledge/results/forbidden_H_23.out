@@ -1,0 +1,243 @@
+  n=7: 500000/2097152 (23.8%)
+  n=7: 1000000/2097152 (47.7%)
+  n=7: 1500000/2097152 (71.5%)
+  n=7: 2000000/2097152 (95.4%)
+======================================================================
+PART 1: ACHIEVABLE H VALUES FOR n ≤ 7
+======================================================================
+
+n=2: 1 distinct H values
+  Range: [1, 1]
+  Values: [1]
+  Missing odd values ≤ 1: []
+
+n=3: 2 distinct H values
+  Range: [1, 3]
+  Values: [1, 3]
+  Missing odd values ≤ 3: []
+
+n=4: 3 distinct H values
+  Range: [1, 5]
+  Values: [1, 3, 5]
+  Missing odd values ≤ 5: []
+
+n=5: 7 distinct H values
+  Range: [1, 15]
+  Values: [1, 3, 5, 9, 11, 13, 15]
+  Missing odd values ≤ 15: [7]
+
+n=6: 19 distinct H values
+  Range: [1, 45]
+  Values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Missing odd values ≤ 45: [7, 21, 35, 39]
+
+n=7: 77 distinct H values
+  Range: [1, 189]
+  Values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65]...
+  Missing odd values ≤ 189: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+Combined achievable (all n≤7): [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105]...
+Total achievable: 77
+
+Missing odd values ≤ 189: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+======================================================================
+PART 2: WHICH GRAPHS G HAVE I(G, 2) = H?
+======================================================================
+
+I(G, 2) values and their graphs (sorted):
+  I(G,2) =    3: smallest graph on 1 vertices, 0 edges ✓
+  I(G,2) =    5: smallest graph on 2 vertices, 1 edges ✓
+  I(G,2) =    7: smallest graph on 3 vertices, 3 edges ✗ MISSING
+  I(G,2) =    9: smallest graph on 2 vertices, 0 edges ✓
+  I(G,2) =   11: smallest graph on 3 vertices, 2 edges ✓
+  I(G,2) =   13: smallest graph on 4 vertices, 5 edges ✓
+  I(G,2) =   15: smallest graph on 3 vertices, 1 edges ✓
+  I(G,2) =   17: smallest graph on 4 vertices, 4 edges ✓
+  I(G,2) =   19: smallest graph on 5 vertices, 8 edges ✓
+  I(G,2) =   21: smallest graph on 4 vertices, 3 edges ✗ MISSING
+  I(G,2) =   23: smallest graph on 5 vertices, 7 edges ✓
+  I(G,2) =   25: smallest graph on 4 vertices, 2 edges ✓
+  I(G,2) =   27: smallest graph on 3 vertices, 0 edges ✓
+  I(G,2) =   29: smallest graph on 4 vertices, 3 edges ✓
+  I(G,2) =   31: smallest graph on 5 vertices, 7 edges ✓
+  I(G,2) =   33: smallest graph on 4 vertices, 2 edges ✓
+  I(G,2) =   35: smallest graph on 5 vertices, 6 edges ✓
+  I(G,2) =   37: smallest graph on 6 vertices, 11 edges ✓
+  I(G,2) =   39: smallest graph on 5 vertices, 5 edges ✓
+  I(G,2) =   41: smallest graph on 6 vertices, 10 edges ✓
+  I(G,2) =   43: smallest graph on 5 vertices, 4 edges ✓
+  I(G,2) =   45: smallest graph on 4 vertices, 1 edges ✓
+  I(G,2) =   47: smallest graph on 5 vertices, 5 edges ✓
+  I(G,2) =   49: smallest graph on 6 vertices, 10 edges ✓
+  I(G,2) =   51: smallest graph on 5 vertices, 4 edges ✓
+  I(G,2) =   53: smallest graph on 6 vertices, 9 edges ✓
+  I(G,2) =   55: smallest graph on 5 vertices, 3 edges ✓
+  I(G,2) =   57: smallest graph on 6 vertices, 8 edges ✓
+  I(G,2) =   61: smallest graph on 6 vertices, 7 edges ✓
+  I(G,2) =   63: smallest graph on 5 vertices, 3 edges ✗ MISSING
+  I(G,2) =   65: smallest graph on 6 vertices, 8 edges ✓
+  I(G,2) =   69: smallest graph on 6 vertices, 7 edges ✓
+  I(G,2) =   73: smallest graph on 6 vertices, 6 edges ✓
+  I(G,2) =   75: smallest graph on 5 vertices, 2 edges ✓
+  I(G,2) =   77: smallest graph on 6 vertices, 5 edges ✓
+  I(G,2) =   81: smallest graph on 4 vertices, 0 edges ✓
+  I(G,2) =   83: smallest graph on 5 vertices, 4 edges ✓
+  I(G,2) =   85: smallest graph on 6 vertices, 9 edges ✓
+  I(G,2) =   87: smallest graph on 5 vertices, 3 edges ✓
+  I(G,2) =   89: smallest graph on 6 vertices, 8 edges ✓
+  I(G,2) =   93: smallest graph on 6 vertices, 7 edges ✓
+  I(G,2) =   97: smallest graph on 6 vertices, 6 edges ✓
+  I(G,2) =   99: smallest graph on 5 vertices, 2 edges ✓
+
+======================================================================
+PART 3: FACTORIZATION PATTERN OF H VALUES
+======================================================================
+
+H = I(Ω, 2) = product over components C of I(C, 2)
+Since I(G₁ ⊔ G₂, 2) = I(G₁, 2) · I(G₂, 2)
+
+Connected graph I(G,2) values (k≤6): [3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 57, 61, 65, 69, 73, 77, 81, 83, 85, 89, 93, 97, 101, 105, 109, 117, 137, 141, 245]
+
+All possible products of connected I(G,2) values ≤ 200: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 61, 63, 65, 69, 73, 75, 77, 81, 83, 85, 87]...
+Odd values NOT expressible as products: [59, 67, 71, 79, 103, 107, 113, 127, 131, 139, 149, 151, 157, 163, 167, 173, 177, 179, 181, 191]
+
+--- KEY STRUCTURAL QUESTION ---
+If K₃ is impossible as Ω component (THM-201),
+then 7 cannot appear as a factor in the product decomposition.
+This forbids: 7, 21, 35, 49, 63, 77, 91, ...
+But some of these might be achievable via OTHER decompositions!
+
+21 = 3 × 7 (needs K₃ as component — FORBIDDEN)
+21 = 21 as a single connected component I(G,2)
+  Connected graphs with I(G,2) = 21: 121 found
+    4 vertices, edges: [(0, 1), (0, 2), (1, 2)]
+    4 vertices, edges: [(0, 1), (0, 3), (1, 2)]
+    4 vertices, edges: [(0, 2), (0, 3), (1, 2)]
+    4 vertices, edges: [(0, 1), (0, 2), (1, 3)]
+    4 vertices, edges: [(0, 1), (0, 3), (1, 3)]
+
+Connected graphs with I(G,2) = 63: 70 found
+    5 vertices, edges: [(0, 1), (0, 2), (1, 2)]
+    5 vertices, edges: [(0, 1), (0, 3), (1, 2)]
+    5 vertices, edges: [(0, 2), (0, 3), (1, 2)]
+    5 vertices, edges: [(0, 1), (0, 4), (1, 2)]
+    5 vertices, edges: [(0, 2), (0, 4), (1, 2)]
+
+======================================================================
+PART 4: CONFLICT GRAPH Ω COMPONENT ANALYSIS
+======================================================================
+
+n=4: Ω (3-cycle conflict graph) component structures:
+  (1,): count=16, H values=[3]
+  (2,): count=24, H values=[5]
+  empty: count=24, H values=[1]
+
+n=5: Ω (3-cycle conflict graph) component structures:
+  (1,): count=120, H values=[3]
+  (2,): count=240, H values=[5]
+  (3,): count=240, H values=[9]
+  (4,): count=280, H values=[11, 13, 15]
+  (5,): count=24, H values=[15]
+  empty: count=120, H values=[1]
+
+======================================================================
+PART 5: MULTIPLES OF 7 IN H SPECTRUM
+======================================================================
+
+Multiples of 7 that are odd (potential H values):
+  7 × 1 = 7: MISSING
+  7 × 3 = 21: MISSING
+  7 × 5 = 35: ACHIEVABLE
+  7 × 7 = 49: ACHIEVABLE
+  7 × 9 = 63: MISSING
+  7 × 11 = 77: ACHIEVABLE
+  7 × 13 = 91: ACHIEVABLE
+  7 × 15 = 105: ACHIEVABLE
+  7 × 17 = 119: MISSING
+  7 × 19 = 133: ACHIEVABLE
+  7 × 21 = 147: ACHIEVABLE
+  7 × 23 = 161: MISSING
+  7 × 25 = 175: ACHIEVABLE
+  7 × 27 = 189: ACHIEVABLE
+  7 × 29 = 203: MISSING
+
+--- 189 = max H(7) ---
+189 = 3³ × 7 = 27 × 7
+Since 7 is forbidden as a component factor,
+189 must come from a SINGLE connected component with I(Ω,2)=189
+OR from a different factorization not involving 7.
+Check: 189 = 3 × 63, 9 × 21, 27 × 7
+All factorizations involve 7 or 21 (=3×7) or 63 (=9×7)
+So 189 MUST come from a single connected Ω with I(Ω,2)=189
+This means Ω has a single large connected component!
+
+======================================================================
+PART 6: MERSENNE NUMBERS AND H
+======================================================================
+Mersenne numbers: [3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047]
+  2^2 - 1 = 3: ACHIEVABLE
+  2^3 - 1 = 7: MISSING
+  2^4 - 1 = 15: ACHIEVABLE
+  2^5 - 1 = 31: ACHIEVABLE
+  2^6 - 1 = 63: MISSING
+  2^7 - 1 = 127: ACHIEVABLE
+  2^8 - 1 = 255: MISSING
+  2^9 - 1 = 511: MISSING
+  2^10 - 1 = 1023: MISSING
+  2^11 - 1 = 2047: MISSING
+
+I(K_k, 2) = 1 + 2k:
+  I(K_1, 2) = 3
+  I(K_2, 2) = 5
+  I(K_3, 2) = 7
+  I(K_4, 2) = 9
+  I(K_5, 2) = 11
+  I(K_6, 2) = 13
+  I(K_7, 2) = 15
+
+I(C_k, 2) for cycles:
+  I(C_3, 2) = 7
+  I(C_4, 2) = 17
+  I(C_5, 2) = 31
+  I(C_6, 2) = 65
+  I(C_7, 2) = 127
+  I(C_8, 2) = 257
+  I(C_9, 2) = 511
+
+I(P_k, 2) for paths (no wraparound):
+  I(P_1, 2) = 3
+  I(P_2, 2) = 5
+  I(P_3, 2) = 11
+  I(P_4, 2) = 21
+  I(P_5, 2) = 43
+  I(P_6, 2) = 85
+  I(P_7, 2) = 171
+  I(P_8, 2) = 341
+  I(P_9, 2) = 683
+
+======================================================================
+SYNTHESIS — FORBIDDEN H VALUES
+======================================================================
+
+FINDINGS:
+1. FORBIDDEN H values (odd numbers not achievable for any n≤7):
+   Check output above for exact list.
+
+2. STRUCTURAL MECHANISM:
+   H = I(Ω, 2) where Ω = conflict graph of odd cycles
+   H = product of I(Cᵢ, 2) over connected components Cᵢ of Ω
+   If some connected graph G is impossible as Ω-component,
+   then I(G,2) is forbidden as a factor.
+
+3. THM-201 forbids K₃ as component → I(K₃,2)=7 is a forbidden factor.
+   This propagates: 7, 7×3=21, 7×9=63, 7×27=189, ...
+   BUT 189 IS achievable! So 189 must come from a single
+   connected component (not factoring through 7).
+
+4. MERSENNE CONNECTION: 7 = 2³-1 is Mersenne. But 31, 127 are also
+   Mersenne and may or may not be forbidden.
+
+5. I(C_k, 2) sequence for cycles gives the forbidden component values.
+   I(K_k, 2) = 2k+1 — these are odd numbers, matching the spectrum.
+
