@@ -1,0 +1,394 @@
+======================================================================
+PART 1: k-NACCI DOMINANT ROOTS → 2
+======================================================================
+
+  Fibonacci       (k= 2): dominant root = 1.6180339887, gap from 2: 3.82e-01
+  Tribonacci      (k= 3): dominant root = 1.8392867552, gap from 2: 1.61e-01
+  Tetranacci      (k= 4): dominant root = 1.9275619755, gap from 2: 7.24e-02
+  5-nacci         (k= 5): dominant root = 1.9659482366, gap from 2: 3.41e-02
+  6-nacci         (k= 6): dominant root = 1.9835828434, gap from 2: 1.64e-02
+  8-nacci         (k= 8): dominant root = 1.9960311797, gap from 2: 3.97e-03
+  10-nacci        (k=10): dominant root = 1.9990186327, gap from 2: 9.81e-04
+  15-nacci        (k=15): dominant root = 1.9999694754, gap from 2: 3.05e-05
+  20-nacci        (k=20): dominant root = 1.9999990463, gap from 2: 9.54e-07
+  50-nacci        (k=50): dominant root = 2.0000000000, gap from 2: -4.00e-15
+
+  CONFIRMED: k-nacci dominant root → 2 as k → ∞
+
+======================================================================
+PART 2: x-WEIGHTED k-NACCI → (1+x)
+======================================================================
+
+As k→∞, differencing gives a_{n+1} = (1+x)·a_n, so ratio → (1+x).
+
+  x = 1, expected limit = 2:
+    k=  3: dominant root = 1.8392867552, gap from 2: 1.61e-01
+    k=  5: dominant root = 1.9659482366, gap from 2: 3.41e-02
+    k= 10: dominant root = 1.9990186327, gap from 2: 9.81e-04
+    k= 20: dominant root = 1.9999990463, gap from 2: 9.54e-07
+    k= 50: dominant root = 2.0000000000, gap from 2: 5.33e-15
+
+  x = 2, expected limit = 3:
+    k=  3: dominant root = 2.9196395658, gap from 3: 8.04e-02
+    k=  5: dominant root = 2.9916541014, gap from 3: 8.35e-03
+    k= 10: dominant root = 2.9999661260, gap from 3: 3.39e-05
+    k= 20: dominant root = 2.9999999994, gap from 3: 5.74e-10
+    k= 50: dominant root = 3.0000000000, gap from 3: -3.11e-15
+
+  x = 3, expected limit = 4:
+    k=  3: dominant root = 3.9513730356, gap from 4: 4.86e-02
+    k=  5: dominant root = 3.9970595204, gap from 4: 2.94e-03
+    k= 10: dominant root = 3.9999971390, gap from 4: 2.86e-06
+    k= 20: dominant root = 4.0000000000, gap from 4: 2.73e-12
+    k= 50: dominant root = 4.0000000000, gap from 4: 5.33e-15
+
+  x = 5, expected limit = 6:
+    k=  3: dominant root = 5.9765786411, gap from 6: 2.34e-02
+    k=  5: dominant root = 5.9993566510, gap from 6: 6.43e-04
+    k= 10: dominant root = 5.9999999173, gap from 6: 8.27e-08
+    k= 20: dominant root = 6.0000000000, gap from 6: -8.88e-16
+    k= 50: dominant root = 6.0000000000, gap from 6: -1.78e-15
+
+  CONFIRMED: x-weighted k-nacci dominant root → (1+x)
+
+  KEY: At x=2 (tournament fugacity): limit = 3 = (x+1)^1
+       The simplex polynomial (x+1)^n at n=1 IS the k-nacci limit!
+
+======================================================================
+PART 3: SIMPLEX AND CUBOID AS NESTING POLYNOMIALS
+======================================================================
+
+Simplex polynomial: S(x,n) = (x+1)^n
+Cuboid polynomial:  C(x,n) = (x+2)^n
+Complement:         C(x,n) - S(x,n) = (x+2)^n - (x+1)^n
+
+At x=2 (tournament point):
+    n   Simplex 3^n    Cuboid 4^n    Complement   Comp/Simp
+    1             3             4             1      0.3333
+    2             9            16             7      0.7778
+    3            27            64            37      1.3704
+    4            81           256           175      2.1605
+    5           243          1024           781      3.2140
+    6           729          4096          3367      4.6187
+    7          2187         16384         14197      6.4915
+    8          6561         65536         58975      8.9887
+
+  Complement/Simplex = (4/3)^n - 1 → ∞ (exponential divergence)
+
+FORBIDDEN H VALUES AND SIMPLEX-CUBOID:
+
+  4^1 - 3^1 = 4 - 3 = 1
+  4^2 - 3^2 = 16 - 9 = 7  ← H=7 (PERMANENTLY FORBIDDEN)
+  4^3 - 3^3 = 64 - 27 = 37
+  4^4 - 3^4 = 256 - 81 = 175
+  4^5 - 3^5 = 1024 - 243 = 781
+  4^6 - 3^6 = 4096 - 729 = 3367
+
+  4^n - 3^n sequence:  [1, 7, 37, 175, 781, 3367, 14197, 58975, 242461]
+  Only n=2 gives forbidden H=7. At n=3: 37 (not forbidden).
+
+(x+2)^n - (x+1)^n at x=0:
+  n=1: 2^1 - 1 = 1 (Mersenne!)
+  n=2: 2^2 - 1 = 3 (Mersenne!)
+  n=3: 2^3 - 1 = 7 (Mersenne!)
+  n=4: 2^4 - 1 = 15 (Mersenne!)
+  n=5: 2^5 - 1 = 31 (Mersenne!)
+  n=6: 2^6 - 1 = 63 (Mersenne!)
+  n=7: 2^7 - 1 = 127 (Mersenne!)
+
+(x+2)^n - (x+1)^n at x=1:
+  n=1: 3^1 - 2^1 = 1
+  n=2: 3^2 - 2^2 = 5
+  n=3: 3^3 - 2^3 = 19
+  n=4: 3^4 - 2^4 = 65
+  n=5: 3^5 - 2^5 = 211
+  n=6: 3^6 - 2^6 = 665
+  n=7: 3^7 - 2^7 = 2059
+
+  x=0: Mersenne numbers 2^n - 1
+  x=1: 3^n - 2^n (OEIS A001047)
+  x=2: 4^n - 3^n (OEIS A005061) — contains H=7
+
+======================================================================
+PART 4: NESTING = BINOMIAL EXPANSION
+======================================================================
+
+Cuboid = sum of simplex pieces:
+  (x+2)^n = Σ_{k=0}^n C(n,k) · (x+1)^k
+
+At x=2:
+  n=1: 4^1 = 4 = 1·3^0 + 1·3^1
+  n=2: 4^2 = 16 = 1·3^0 + 2·3^1 + 1·3^2
+  n=3: 4^3 = 64 = 1·3^0 + 3·3^1 + 3·3^2 + 1·3^3
+  n=4: 4^4 = 256 = 1·3^0 + 4·3^1 + 6·3^2 + 4·3^3 + 1·3^4
+  n=5: 4^5 = 1024 = 1·3^0 + 5·3^1 + 10·3^2 + 10·3^3 + 5·3^4 + 1·3^5
+  n=6: 4^6 = 4096 = 1·3^0 + 6·3^1 + 15·3^2 + 20·3^3 + 15·3^4 + 6·3^5 + 1·3^6
+
+This is the GEOMETRIC NESTING: a cuboid (x+2)^n is packed with
+C(n,k) simplices of dimension k, each of 'size' (x+1)^k.
+
+SIMPLEX-IN-CUBOID PACKING RATIO:
+  Simplex/Cuboid = ((x+1)/(x+2))^n
+
+  x=0: ratio = (1/2)^n
+    n=1: (1/2)^1 = 0.500000 (50.00%)
+    n=2: (1/2)^2 = 0.250000 (25.00%)
+    n=3: (1/2)^3 = 0.125000 (12.50%)
+    n=4: (1/2)^4 = 0.062500 (6.25%)
+    n=5: (1/2)^5 = 0.031250 (3.12%)
+    n=6: (1/2)^6 = 0.015625 (1.56%)
+    n=7: (1/2)^7 = 0.007812 (0.78%)
+
+  x=1: ratio = (2/3)^n
+    n=1: (2/3)^1 = 0.666667 (66.67%)
+    n=2: (2/3)^2 = 0.444444 (44.44%)
+    n=3: (2/3)^3 = 0.296296 (29.63%)
+    n=4: (2/3)^4 = 0.197531 (19.75%)
+    n=5: (2/3)^5 = 0.131687 (13.17%)
+    n=6: (2/3)^6 = 0.087791 (8.78%)
+    n=7: (2/3)^7 = 0.058528 (5.85%)
+
+  x=2: ratio = (3/4)^n
+    n=1: (3/4)^1 = 0.750000 (75.00%)
+    n=2: (3/4)^2 = 0.562500 (56.25%)
+    n=3: (3/4)^3 = 0.421875 (42.19%)
+    n=4: (3/4)^4 = 0.316406 (31.64%)
+    n=5: (3/4)^5 = 0.237305 (23.73%)
+    n=6: (3/4)^6 = 0.177979 (17.80%)
+    n=7: (3/4)^7 = 0.133484 (13.35%)
+
+======================================================================
+PART 5: I(P_k, x) AS SIMPLEX-WEIGHTED WALK
+======================================================================
+
+I(P_k, x) at oblong fugacities x = m(m+1):
+
+  x = 0 (m=0): eigenvalues (1, 0)
+    I(P_k): [1, 1, 1, 1, 1, 1, 1, 1]
+    Ratios (k=5..10): ['1.0000', '1.0000', '1.0000', '1.0000', '1.0000', '1.0000']
+    Limit: 1
+
+  x = 2 (m=1): eigenvalues (2, -1)
+    I(P_k): [1, 3, 5, 11, 21, 43, 85, 171]
+    Ratios (k=5..10): ['1.9767', '2.0118', '1.9942', '2.0029', '1.9985', '2.0007']
+    Limit: 2
+
+  x = 6 (m=2): eigenvalues (3, -2)
+    I(P_k): [1, 7, 13, 55, 133, 463, 1261, 4039]
+    Ratios (k=5..10): ['2.7235', '3.2030', '2.8732', '3.0882', '2.9429', '3.0388']
+    Limit: 3
+
+  x = 12 (m=3): eigenvalues (4, -3)
+    I(P_k): [1, 13, 25, 181, 481, 2653, 8425, 40261]
+    Ratios (k=5..10): ['3.1757', '4.7788', '3.5111', '4.4177', '3.7163', '4.2290']
+    Limit: 4
+
+  x = 20 (m=4): eigenvalues (5, -4)
+    I(P_k): [1, 21, 41, 461, 1281, 10501, 36121, 246141]
+    Ratios (k=5..10): ['3.4398', '6.8143', '3.9350', '6.0826', '4.2881', '5.6641']
+    Limit: 5
+
+  I(P_k, x) growth rate = dominant eigenvalue = (1+√(1+4x))/2
+  At oblong x=m(m+1): dominant root = m+1 (integer!)
+
+======================================================================
+PART 6: THE GRAND BRIDGE — k-NACCI ↔ SIMPLEX ↔ TOURNAMENT
+======================================================================
+
+THEOREM (Bridge):
+
+The following are three views of the SAME structure:
+
+1. COMBINATORIAL: k-nacci with weight x
+   a_n = x·Σ_{j=1}^k a_{n-j}
+   As k→∞: growth rate → (1+x)
+
+2. GEOMETRIC: simplex polynomial
+   (x+1)^n = sum of "unit simplices at fugacity x"
+   At x=2: gives 3^n (tournament world)
+
+3. ALGEBRAIC: I(P_k, x) at oblong points x = m(m+1)
+   Growth rate → (m+1) = positive eigenvalue
+   Tournament: x=2, m=1, growth → 2
+
+CONNECTIONS:
+  - k-nacci(x=0) limit = 1 = simplex(n=0)
+  - k-nacci(x=1) limit = 2 = simplex(n=1, x=1) = cuboid(n=1, x=0)
+  - k-nacci(x=2) limit = 3 = simplex(n=1, x=2)  [USER'S "approaches 3"]
+  - k-nacci(x) limit = x+1 = simplex(n=1, x) = (x+1)^1
+
+  The cuboid polynomial (x+2)^n = ((x+1)+1)^n packs simplices:
+  Level 0: 1 cuboid = Σ C(n,k) simplices of dim k
+  Level 1: each simplex (x+1)^k packs into a cuboid (x+2)^k
+  ...ad infinitum — this is the NESTING the user described!
+
+KEY INSIGHT: The sequence of limits
+  x=0 → 1, x=1 → 2, x=2 → 3, x=3 → 4, ...
+  IS the sequence x+1 = the simplex polynomial at n=1.
+
+  The sequence of cuboid limits:
+  x=0 → 2, x=1 → 3, x=2 → 4, x=3 → 5, ...
+  IS x+2 = the cuboid polynomial at n=1.
+
+  The NESTING of limits mirrors the geometric nesting:
+  simplex limit(x) = cuboid limit(x-1)
+  (x+1) = (x-1+2)
+  i.e., a simplex at fugacity x has the same growth as a cuboid at fugacity (x-1).
+
+======================================================================
+PART 7: DEEPER — WHY x=2 IS SPECIAL
+======================================================================
+
+WHERE DOES 21 COME FROM in simplex-cuboid arithmetic?
+
+21 as difference (x+2)^n - (x+1)^n:
+  n=2, x=9: 11^2 - 10^2 = 121 - 100 = 21
+
+21 as single simplex (x+1)^n:
+  Simplex: (x+1)^n = (21)^1 = 21
+
+21 as Jacobsthal value: I(P_4, 2) = 21 ← path graph on 4+1=5 vertices
+21 = (2^6 + (-1)^4)/3 = (64+1)/3 = 65/3 ... no.
+21 = (2^{4+2} - (-1)^{4+2})/3 = (64-1)/3 = 63/3 = 21 ✓
+
+UNIFICATION OF FORBIDDEN VALUES:
+
+  H = 7:  I(C_3, 2) = 2^3+(-1)^3 = 7  (Jacobsthal-LUCAS)
+         = I(K_3, 2) = complement cycle graph value
+         = 4^2 - 3^2 = simplex-cuboid complement at n=2
+
+  H = 21: I(P_4, 2) = (2^6-(-1)^6)/3 = 63/3 = 21 (Jacobsthal)
+         = path graph independence at tournament fugacity
+         = C(7,2) = triangular number T(6)
+
+NEXT CANDIDATES from cycle/path independence:
+  I(C_k, 2) [cycle, Jacobsthal-Lucas]: [(3, 7), (5, 31), (7, 127), (9, 511), (11, 2047)]
+  I(P_k, 2) [path, Jacobsthal]:        [(1, 3), (2, 5), (3, 11), (4, 21), (5, 43), (6, 85), (7, 171), (8, 341), (9, 683)]
+
+  Values from cycles/paths vs H-spectrum gaps at n=7:
+    Cycle C_k k=3: I=   7  PERMANENTLY FORBIDDEN
+    Cycle C_k k=5: I=  31  achievable at n≤7
+    Cycle C_k k=7: I= 127  achievable at n≤7
+    Path P_k k=1: I=   3  achievable at n≤7
+    Path P_k k=2: I=   5  achievable at n≤7
+    Path P_k k=3: I=  11  achievable at n≤7
+    Path P_k k=4: I=  21  PERMANENTLY FORBIDDEN
+    Path P_k k=5: I=  43  achievable at n≤7
+    Path P_k k=6: I=  85  achievable at n≤7
+    Path P_k k=7: I= 171  achievable at n≤7
+
+======================================================================
+PART 8: NESTING HIERARCHY — SIMPLEX INSIDE CUBOID INSIDE ?
+======================================================================
+
+Nesting hierarchy at x=2 (tournament point):
+  Level 0: Simplex (x+1)^n = 3^n
+  Level 1: Cuboid  (x+2)^n = 4^n
+  Level 2: (x+3)^n = 5^n
+  Level k: (x+k+1)^n = (k+3)^n
+
+Complement fractions (outer-inner)/outer:
+  n=2:
+    Level 0→1: (4^2-3^2)/4^2 = 0.4375
+    Level 1→2: (5^2-4^2)/5^2 = 0.3600
+    Level 2→3: (6^2-5^2)/6^2 = 0.3056
+    Level 3→4: (7^2-6^2)/7^2 = 0.2653
+    Level 4→5: (8^2-7^2)/8^2 = 0.2344
+  n=3:
+    Level 0→1: (4^3-3^3)/4^3 = 0.5781
+    Level 1→2: (5^3-4^3)/5^3 = 0.4880
+    Level 2→3: (6^3-5^3)/6^3 = 0.4213
+    Level 3→4: (7^3-6^3)/7^3 = 0.3703
+    Level 4→5: (8^3-7^3)/8^3 = 0.3301
+  n=4:
+    Level 0→1: (4^4-3^4)/4^4 = 0.6836
+    Level 1→2: (5^4-4^4)/5^4 = 0.5904
+    Level 2→3: (6^4-5^4)/6^4 = 0.5177
+    Level 3→4: (7^4-6^4)/7^4 = 0.4602
+    Level 4→5: (8^4-7^4)/8^4 = 0.4138
+  n=5:
+    Level 0→1: (4^5-3^5)/4^5 = 0.7627
+    Level 1→2: (5^5-4^5)/5^5 = 0.6723
+    Level 2→3: (6^5-5^5)/6^5 = 0.5981
+    Level 3→4: (7^5-6^5)/7^5 = 0.5373
+    Level 4→5: (8^5-7^5)/8^5 = 0.4871
+
+OBSERVATION: The complement fraction = 1 - ((k+3)/(k+4))^n
+As k→∞: fraction → 0 (bricks fill up)
+As n→∞: fraction → 1 (inner is negligible)
+
+HOW MANY SIMPLICES FIT IN A CUBOID?
+  Cuboid/Simplex = ((x+2)/(x+1))^n = (4/3)^n at x=2
+
+  n=1: (4/3)^1 = 1.3333 ≈ 1 simplices fit in cuboid
+  n=2: (4/3)^2 = 1.7778 ≈ 2 simplices fit in cuboid
+  n=3: (4/3)^3 = 2.3704 ≈ 2 simplices fit in cuboid
+  n=4: (4/3)^4 = 3.1605 ≈ 3 simplices fit in cuboid
+  n=5: (4/3)^5 = 4.2140 ≈ 4 simplices fit in cuboid
+  n=6: (4/3)^6 = 5.6187 ≈ 6 simplices fit in cuboid
+  n=7: (4/3)^7 = 7.4915 ≈ 7 simplices fit in cuboid
+  n=8: (4/3)^8 = 9.9887 ≈ 10 simplices fit in cuboid
+  n=9: (4/3)^9 = 13.3183 ≈ 13 simplices fit in cuboid
+
+  This grows EXPONENTIALLY. The simplex is an exponentially smaller
+  fraction of the cuboid as dimension increases.
+
+======================================================================
+PART 9: SYNTHESIS — THE MASTER PATTERN
+======================================================================
+
+
+MASTER PATTERN: Three parallel structures connected by x+1 and x+2.
+
+┌──────────────────┬───────────────┬───────────────┬───────────────┐
+│ Structure        │   x=0         │   x=1         │   x=2         │
+├──────────────────┼───────────────┼───────────────┼───────────────┤
+│ k-nacci limit    │   1           │   2           │   3           │
+│ simplex (x+1)^1  │   1           │   2           │   3           │
+│ cuboid (x+2)^1   │   2           │   3           │   4           │
+│ I(P_k,x) root    │   1           │   φ=1.618..   │   2           │
+│ I(P_k,x) mod 4   │   period 1    │   period 6*   │   period 2    │
+│ eigenvalues      │   (1,0)       │   (φ,-1/φ)    │   (2,-1)      │
+│ integrality      │   yes         │   NO          │   YES         │
+│ H-spectrum type  │   trivial     │   Fibonacci   │   Tournament  │
+│ forbidden values │   none        │   none        │   {7, 21}     │
+└──────────────────┴───────────────┴───────────────┴───────────────┘
+
+The x=2 column is UNIQUE among integer x:
+  - Both eigenvalues are integers (2, -1)
+  - I(G, 2) is always odd (empty set contributes 1, all others ×2^k)
+  - The H-spectrum has exactly two permanent gaps {7, 21}
+  - k-nacci limit = 3 = I(C_3, -1) magnitude (Euler char of triangle)
+
+GEOMETRIC PACKING AT x=2:
+  n=2: triangle (3^2=9) in square (4^2=16). Gap = 7 = FORBIDDEN!
+  n=3: tetrahedron (3^3=27) in cube (4^3=64). Gap = 37 = achievable.
+  n=4: 4-simplex (3^4=81) in 4-cuboid (4^4=256). Gap = 175.
+
+  The ONLY dimension where the gap is forbidden is n=2!
+  4^2-3^2 = (4-3)(4+3) = 1·7 = 7. The factorization
+  is trivial because at n=2, (a^2-b^2) = (a-b)(a+b) = 1·7.
+  At higher n, 4^n-3^n has no such simple factorization.
+
+======================================================================
+PART 10: NEW HYPOTHESIS — GOLDEN BRIDGE
+======================================================================
+
+Integer eigenvalue landscape:
+
+  m=0: x=  0, λ=(1,0), k-nacci→1, simplex(n=1)=1
+         ↑ Trivial (constant sequences)
+  m=1: x=  2, λ=(2,-1), k-nacci→3, simplex(n=1)=3
+         ↑ TOURNAMENT (Jacobsthal, OCF, H-spectrum)
+  m=2: x=  6, λ=(3,-2), k-nacci→7, simplex(n=1)=7
+         ↑ k-tournament? (3-uniform?)
+  m=3: x= 12, λ=(4,-3), k-nacci→13, simplex(n=1)=13
+  m=4: x= 20, λ=(5,-4), k-nacci→21, simplex(n=1)=21
+  m=5: x= 30, λ=(6,-5), k-nacci→31, simplex(n=1)=31
+
+  The user's insight: tournament theory = the FIRST nontrivial level
+  in an infinite tower of integer-eigenvalue number systems,
+  where k-nacci limits (1, 2, 3, 4, 5, ...) correspond to
+  simplex evaluations (x+1)^1 at oblong fugacities.
+
+DONE.
