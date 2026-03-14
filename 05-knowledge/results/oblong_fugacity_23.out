@@ -1,0 +1,381 @@
+======================================================================
+PART 1: OBLONG FUGACITY LADDER — x = k(k+1)
+======================================================================
+
+  k | x=k(k+1) | eigenvalues | gen_Fib sequence (first 10)
+  0 |     0    | ( 1,   0)   | [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  1 |     2    | ( 2,  -1)   | [0, 1, 1, 3, 5, 11, 21, 43, 85, 171]
+  2 |     6    | ( 3,  -2)   | [0, 1, 1, 7, 13, 55, 133, 463, 1261, 4039]
+  3 |    12    | ( 4,  -3)   | [0, 1, 1, 13, 25, 181, 481, 2653, 8425, 40261]
+  4 |    20    | ( 5,  -4)   | [0, 1, 1, 21, 41, 461, 1281, 10501, 36121, 246141]
+  5 |    30    | ( 6,  -5)   | [0, 1, 1, 31, 61, 991, 2821, 32551, 117181, 1093711]
+  6 |    42    | ( 7,  -6)   | [0, 1, 1, 43, 85, 1891, 5461, 84883, 314245, 3879331]
+  7 |    56    | ( 8,  -7)   | [0, 1, 1, 57, 113, 3305, 9633, 194713, 734161, 11638089]
+
+======================================================================
+PART 2: CLOSED FORMS — gen_Fib_k(n) = ((k+1)^n - (-k)^n) / (2k+1)
+======================================================================
+
+k=0, x=0: gen_Fib(n) = ((1)^n - (0)^n) / 1
+  n=1: actual=         1, formula=         1, match=True
+  n=2: actual=         1, formula=         1, match=True
+  n=3: actual=         1, formula=         1, match=True
+  n=4: actual=         1, formula=         1, match=True
+  n=5: actual=         1, formula=         1, match=True
+  n=6: actual=         1, formula=         1, match=True
+  n=7: actual=         1, formula=         1, match=True
+  n=8: actual=         1, formula=         1, match=True
+  n=9: actual=         1, formula=         1, match=True
+
+k=1, x=2: gen_Fib(n) = ((2)^n - (-1)^n) / 3
+  n=1: actual=         1, formula=         1, match=True
+  n=2: actual=         1, formula=         1, match=True
+  n=3: actual=         3, formula=         3, match=True
+  n=4: actual=         5, formula=         5, match=True
+  n=5: actual=        11, formula=        11, match=True
+  n=6: actual=        21, formula=        21, match=True
+  n=7: actual=        43, formula=        43, match=True
+  n=8: actual=        85, formula=        85, match=True
+  n=9: actual=       171, formula=       171, match=True
+
+k=2, x=6: gen_Fib(n) = ((3)^n - (-2)^n) / 5
+  n=1: actual=         1, formula=         1, match=True
+  n=2: actual=         1, formula=         1, match=True
+  n=3: actual=         7, formula=         7, match=True
+  n=4: actual=        13, formula=        13, match=True
+  n=5: actual=        55, formula=        55, match=True
+  n=6: actual=       133, formula=       133, match=True
+  n=7: actual=       463, formula=       463, match=True
+  n=8: actual=      1261, formula=      1261, match=True
+  n=9: actual=      4039, formula=      4039, match=True
+
+k=3, x=12: gen_Fib(n) = ((4)^n - (-3)^n) / 7
+  n=1: actual=         1, formula=         1, match=True
+  n=2: actual=         1, formula=         1, match=True
+  n=3: actual=        13, formula=        13, match=True
+  n=4: actual=        25, formula=        25, match=True
+  n=5: actual=       181, formula=       181, match=True
+  n=6: actual=       481, formula=       481, match=True
+  n=7: actual=      2653, formula=      2653, match=True
+  n=8: actual=      8425, formula=      8425, match=True
+  n=9: actual=     40261, formula=     40261, match=True
+
+k=4, x=20: gen_Fib(n) = ((5)^n - (-4)^n) / 9
+  n=1: actual=         1, formula=         1, match=True
+  n=2: actual=         1, formula=         1, match=True
+  n=3: actual=        21, formula=        21, match=True
+  n=4: actual=        41, formula=        41, match=True
+  n=5: actual=       461, formula=       461, match=True
+  n=6: actual=      1281, formula=      1281, match=True
+  n=7: actual=     10501, formula=     10501, match=True
+  n=8: actual=     36121, formula=     36121, match=True
+  n=9: actual=    246141, formula=    246141, match=True
+
+k=5, x=30: gen_Fib(n) = ((6)^n - (-5)^n) / 11
+  n=1: actual=         1, formula=         1, match=True
+  n=2: actual=         1, formula=         1, match=True
+  n=3: actual=        31, formula=        31, match=True
+  n=4: actual=        61, formula=        61, match=True
+  n=5: actual=       991, formula=       991, match=True
+  n=6: actual=      2821, formula=      2821, match=True
+  n=7: actual=     32551, formula=     32551, match=True
+  n=8: actual=    117181, formula=    117181, match=True
+  n=9: actual=   1093711, formula=   1093711, match=True
+
+======================================================================
+PART 3: CYCLE INDEPENDENCE — I(C_n, k(k+1)) = (k+1)^n + (-k)^n
+======================================================================
+
+k=0, x=0: I(C_n,x) = (1)^n + (0)^n
+  n=3: I(C_n,0) =          1, formula =          1, match = True
+  n=4: I(C_n,0) =          1, formula =          1, match = True
+  n=5: I(C_n,0) =          1, formula =          1, match = True
+  n=6: I(C_n,0) =          1, formula =          1, match = True
+  n=7: I(C_n,0) =          1, formula =          1, match = True
+  n=8: I(C_n,0) =          1, formula =          1, match = True
+  n=9: I(C_n,0) =          1, formula =          1, match = True
+
+k=1, x=2: I(C_n,x) = (2)^n + (-1)^n
+  n=3: I(C_n,2) =          7, formula =          7, match = True
+  n=4: I(C_n,2) =         17, formula =         17, match = True
+  n=5: I(C_n,2) =         31, formula =         31, match = True
+  n=6: I(C_n,2) =         65, formula =         65, match = True
+  n=7: I(C_n,2) =        127, formula =        127, match = True
+  n=8: I(C_n,2) =        257, formula =        257, match = True
+  n=9: I(C_n,2) =        511, formula =        511, match = True
+
+k=2, x=6: I(C_n,x) = (3)^n + (-2)^n
+  n=3: I(C_n,6) =         19, formula =         19, match = True
+  n=4: I(C_n,6) =         97, formula =         97, match = True
+  n=5: I(C_n,6) =        211, formula =        211, match = True
+  n=6: I(C_n,6) =        793, formula =        793, match = True
+  n=7: I(C_n,6) =       2059, formula =       2059, match = True
+  n=8: I(C_n,6) =       6817, formula =       6817, match = True
+  n=9: I(C_n,6) =      19171, formula =      19171, match = True
+
+k=3, x=12: I(C_n,x) = (4)^n + (-3)^n
+  n=3: I(C_n,12) =         37, formula =         37, match = True
+  n=4: I(C_n,12) =        337, formula =        337, match = True
+  n=5: I(C_n,12) =        781, formula =        781, match = True
+  n=6: I(C_n,12) =       4825, formula =       4825, match = True
+  n=7: I(C_n,12) =      14197, formula =      14197, match = True
+  n=8: I(C_n,12) =      72097, formula =      72097, match = True
+  n=9: I(C_n,12) =     242461, formula =     242461, match = True
+
+k=4, x=20: I(C_n,x) = (5)^n + (-4)^n
+  n=3: I(C_n,20) =         61, formula =         61, match = True
+  n=4: I(C_n,20) =        881, formula =        881, match = True
+  n=5: I(C_n,20) =       2101, formula =       2101, match = True
+  n=6: I(C_n,20) =      19721, formula =      19721, match = True
+  n=7: I(C_n,20) =      61741, formula =      61741, match = True
+  n=8: I(C_n,20) =     456161, formula =     456161, match = True
+  n=9: I(C_n,20) =    1690981, formula =    1690981, match = True
+
+k=5, x=30: I(C_n,x) = (6)^n + (-5)^n
+  n=3: I(C_n,30) =         91, formula =         91, match = True
+  n=4: I(C_n,30) =       1921, formula =       1921, match = True
+  n=5: I(C_n,30) =       4651, formula =       4651, match = True
+  n=6: I(C_n,30) =      62281, formula =      62281, match = True
+  n=7: I(C_n,30) =     201811, formula =     201811, match = True
+  n=8: I(C_n,30) =    2070241, formula =    2070241, match = True
+  n=9: I(C_n,30) =    8124571, formula =    8124571, match = True
+
+======================================================================
+PART 4: 'FORBIDDEN' CYCLE VALUES AT EACH FUGACITY
+======================================================================
+
+'Forbidden C_3 value' at each fugacity:
+  k | x=k(k+1) | I(C_3,x) = (k+1)^3 + (-k)^3 = (2k+1)(k^2+k+1)
+  0 |     0    |          1 = 1 x 1
+  1 |     2    |          7 = 3 x 3
+  2 |     6    |         19 = 5 x 7
+  3 |    12    |         37 = 7 x 13
+  4 |    20    |         61 = 9 x 21
+  5 |    30    |         91 = 11 x 31
+  6 |    42    |        127 = 13 x 43
+  7 |    56    |        169 = 15 x 57
+  8 |    72    |        217 = 17 x 73
+  9 |    90    |        271 = 19 x 91
+
+  PATTERN: I(C_3, k(k+1)) = 3k(k+1) + 1 = 3x + 1
+  At x=2: I(C_3,2) = 7 = 3(2)+1
+  At x=6: I(C_3,6) = 19 = 3(6)+1
+  At x=12: I(C_3,12) = 37 = 3(12)+1
+  BEAUTIFUL: the 'forbidden' C_3 value at fugacity x is always 3x+1!
+
+  VERIFIED: I(C_3, x) = 3x + 1 for ALL x = 0..29
+  (This is just 1 + 3x = I({triangle}, x) since C_3 has 3 vertices,
+   3 edges, and independence sets: {}, {0}, {1}, {2} giving 1 + 3x.)
+  Wait, C_3 has NO independent sets of size >= 2 (it's a triangle)!
+  So I(C_3, x) = 1 + 3x exactly. Not 3k^2+3k+1!
+
+  CORRECTION: I(C_n, x) vs alpha^n + beta^n:
+
+  x=2: alpha=2, beta=-1
+    I(C_3,2) =        7, alpha^n+beta^n =        7, match = True
+    I(C_4,2) =       17, alpha^n+beta^n =       17, match = True
+    I(C_5,2) =       31, alpha^n+beta^n =       31, match = True
+    I(C_6,2) =       65, alpha^n+beta^n =       65, match = True
+    I(C_7,2) =      127, alpha^n+beta^n =      127, match = True
+    I(C_8,2) =      257, alpha^n+beta^n =      257, match = True
+    I(C_9,2) =      511, alpha^n+beta^n =      511, match = True
+    I(C_10,2) =     1025, alpha^n+beta^n =     1025, match = True
+    I(C_11,2) =     2047, alpha^n+beta^n =     2047, match = True
+
+  RESOLUTION: Both formulas agree!
+  I(C_3, x) = 1 + 3x (from direct counting)
+  I(C_3, k(k+1)) = (k+1)^3 + (-k)^3 = 3k^2+3k+1 = 3k(k+1)+1 = 3x+1
+  These are THE SAME formula: 1 + 3x = 3x + 1 ✓
+
+======================================================================
+PART 5: GENERALIZED FIBONACCI/LUCAS AT EACH OBLONG FUGACITY
+======================================================================
+
+Fibonacci family (paths):
+  n\k | k=   0   k=   1   k=   2   k=   3   k=   4   k=   5  
+    0 |      0       0       0       0       0       0 
+    1 |      1       1       1       1       1       1 
+    2 |      1       1       1       1       1       1 
+    3 |      1       3       7      13      21      31 
+    4 |      1       5      13      25      41      61 
+    5 |      1      11      55     181     461     991 
+    6 |      1      21     133     481    1281    2821 
+    7 |      1      43     463    2653   10501   32551 
+    8 |      1      85    1261    8425   36121  117181 
+    9 |      1     171    4039   40261  246141  1093711 
+
+Lucas family (cycles): L_k(n) = (k+1)^n + (-k)^n
+  n\k | k=   0   k=   1   k=   2   k=   3   k=   4   k=   5  
+    3 |      1       7      19      37      61      91 
+    4 |      1      17      97     337     881    1921 
+    5 |      1      31     211     781    2101    4651 
+    6 |      1      65     793    4825   19721   62281 
+    7 |      1     127    2059   14197   61741  201811 
+    8 |      1     257    6817   72097  456161  2070241 
+    9 |      1     511   19171  242461  1690981  8124571 
+
+======================================================================
+PART 6: THE x=6 WORLD — EIGENVALUES (3, -2)
+======================================================================
+
+At x=6 (k=2):
+  Eigenvalues: 3 and -2
+  Gen_Fib: G_2(n) = (3^n - (-2)^n) / 5
+  Gen_Lucas: L_2(n) = 3^n + (-2)^n
+
+This is the "base-3 minus base-(-2)" sequence divided by 5.
+G_2: 0, 1, 1, 7, 13, 55, 133, 463, 1261, ...
+L_2: 2, 1, 13, 19, 97, 211, 793, 1981, ...
+
+INTERPRETATION:
+  If tournaments use binary orientations (2 choices per arc),
+  what uses TERNARY structure (3 choices per edge)?
+  Answer: SIGNED GRAPHS! Edge can be +, -, or 0.
+  Or: COLORED TOURNAMENTS with 3 arc types.
+  Or: HYPERGRAPHS with 3-uniform structure.
+
+At x=6: each independent set element contributes 6 = 2×3 weight.
+This is the product of binary and ternary worlds!
+
+G_2(n) = (3^n - (-2)^n) / 5: [0, 1, 1, 7, 13, 55, 133, 463, 1261, 4039, 11605, 35839, 105469, 320503, 953317]
+
+G_2(n) values: [0, 1, 1, 7, 13, 55, 133, 463, 1261, 4039, 11605, 35839]
+Differences: [1, 0, 6, 6, 42, 78, 330, 798, 2778, 7566, 24234]
+Ratios: ['inf', 1.0, 7.0, 1.8571428571428572, 4.230769230769231, 2.418181818181818, 3.481203007518797, 2.7235421166306697, 3.203013481363997, 2.8732359494924484, 3.0882378285221885]
+
+G_2(n) mod 6: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+G_2(n) mod 5: [0, 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2]
+G_2(n) mod 7: [0, 1, 1, 0, 6, 6, 0, 1, 1, 0, 6, 6, 0, 1, 1]
+
+======================================================================
+PART 7: TRIBONACCI AND THE PLASTIC NUMBER (x=3)
+======================================================================
+
+2/3 tile transfer matrix eigenvalues: [ 1.32471796+0.j         -0.66235898+0.56227951j -0.66235898-0.56227951j]
+Largest = 1.324718 (plastic number = 1.324718)
+
+2/3 compositions: [1, 0, 1, 1, 1, 2, 2, 3, 4, 5, 7, 9, 12, 16, 21]
+Ratios: [1.0, 2.0, 1.0, 1.5, 1.3333333333333333, 1.25, 1.4, 1.2857142857142858, 1.3333333333333333, 1.3333333333333333, 1.3125]
+
+======================================================================
+PART 8: k-TOURNAMENTS — WHAT ARE THEY?
+======================================================================
+
+At each oblong fugacity x = k(k+1), we get a "k-tournament" theory:
+
+k=0 (x=0): Trivial — all I values are 1.
+k=1 (x=2): TOURNAMENTS — binary arc orientations.
+  Each arc has 2 directions. H = I(Omega, 2).
+k=2 (x=6): 3-TOURNAMENTS — ternary edge types?
+  Each edge has 6 = 2*3 "states" (e.g., oriented + colored).
+  H_6 = I(Omega, 6). Each independent set member contributes 6.
+k=3 (x=12): 4-TOURNAMENTS — quaternary edge types?
+  Each edge has 12 = 3*4 "states".
+  H_12 = I(Omega, 12).
+
+PATTERN: k-tournament has edges with k(k+1) states.
+  The number of states factorizes as k × (k+1).
+  At k=1: 1×2 = 2 states (forward/backward)
+  At k=2: 2×3 = 6 states (like 2 colors × 3 orientations)
+  At k=3: 3×4 = 12 states
+
+The eigenvalue pair (k+1, -k) encodes:
+  - k+1: "forward" growth rate
+  - k: "backward" decay rate
+  - Sum = 1 (always! trace of T_x)
+  - Product = -k(k+1) = -x (determinant)
+
+CONJECTURE: k-tournaments correspond to oriented (k+1)-uniform
+hypergraphs with k colors per edge, giving k(k+1) total states.
+
+
+======================================================================
+PART 9: CROSS-FUGACITY IDENTITIES
+======================================================================
+
+Cross-fugacity comparison:
+  n | G_0=n | G_1=J(n) | G_2 | G_3 | G_4
+  0 |     0 |        0 |        0 |          0 |            0
+  1 |     1 |        1 |        1 |          1 |            1
+  2 |     1 |        1 |        1 |          1 |            1
+  3 |     1 |        3 |        7 |         13 |           21
+  4 |     1 |        5 |       13 |         25 |           41
+  5 |     1 |       11 |       55 |        181 |          461
+  6 |     1 |       21 |      133 |        481 |         1281
+  7 |     1 |       43 |      463 |       2653 |        10501
+  8 |     1 |       85 |     1261 |       8425 |        36121
+  9 |     1 |      171 |     4039 |      40261 |       246141
+
+Nested evaluation G_2(G_1(n)):
+  G_1(1) = J(1) = 1, G_2(1) = 1
+  G_1(2) = J(2) = 1, G_2(1) = 1
+  G_1(3) = J(3) = 3, G_2(3) = 7
+  G_1(4) = J(4) = 5, G_2(5) = 55
+  G_1(5) = J(5) = 11, G_2(11) = 35839
+
+======================================================================
+PART 10: THE GRAND FAMILY — ALL INTEGER-EIGENVALUE FIBONACCI SEQUENCES
+======================================================================
+
+THE COMPLETE CLASSIFICATION:
+
+All sequences satisfying a(n) = a(n-1) + x*a(n-2) with integer roots
+have x = k(k+1) for some integer k >= 0.
+
+The corresponding sequences form a HIERARCHY:
+
+  k=0: a(n) = 0, 1, 1, 1, 1, ...  (eventually constant)
+  k=1: a(n) = Jacobsthal           (tournament counts at x=2)
+  k=2: a(n) = (3^n-(-2)^n)/5       (x=6 generalization)
+  k=3: a(n) = (4^n-(-3)^n)/7       (x=12)
+  ...
+  k→∞: a(n) ~ (k+1)^n / (2k+1)    (exponential growth)
+
+LUCAS PARTNERS:
+  k=0: L(n) = 2, 1, 1, 1, ...
+  k=1: L(n) = 2^n + (-1)^n = Jacobsthal-Lucas
+  k=2: L(n) = 3^n + (-2)^n
+  k=3: L(n) = 4^n + (-3)^n
+
+THE TOURNAMENT IS k=1 in this infinite family.
+The "forbidden value" I(C_3, k(k+1)) = 3k(k+1)+1 = 3x+1 grows linearly.
+
+DEEPER STRUCTURE: The Fibonacci number itself (k=0.5..., x=3/4...no)
+is NOT an integer-eigenvalue point! φ is irrational.
+The Fibonacci sequence is the "continuous" version;
+Jacobsthal (k=1) is its "integer shadow" at the nearest oblong point.
+
+
+======================================================================
+SYNTHESIS — OBLONG FUGACITY LANDSCAPE
+======================================================================
+
+CROWN JEWELS:
+
+1. INTEGER EIGENVALUE FUGACITIES: x = k(k+1) (oblong numbers)
+   0, 2, 6, 12, 20, 30, 42, 56, ...
+   Eigenvalues: (k+1, -k). Tournament = k=1.
+
+2. FORBIDDEN C_3 VALUE: I(C_3, x) = 3x + 1 for ALL x.
+   At x=2: I(C_3,2) = 7 = forbidden H.
+   At x=6: I(C_3,6) = 19.
+   The triangle's independence polynomial is ALWAYS 1+3x, trivially.
+
+3. CLOSED FORMS: G_k(n) = ((k+1)^n - (-k)^n) / (2k+1)
+   This generalizes Jacobsthal to all oblong fugacities.
+   L_k(n) = (k+1)^n + (-k)^n generalizes Jacobsthal-Lucas.
+
+4. THE k-TOURNAMENT INTERPRETATION: At fugacity k(k+1),
+   each edge has k(k+1) states = k × (k+1).
+   For k=1: 2 states (orientations). For k=2: 6 states.
+
+5. FIBONACCI IS NOT AN INTEGER POINT: φ ≈ 1.618 lives between
+   k=0 (x=0) and k=1 (x=2). The golden ratio is the irrational
+   "seed" that integer eigenvalue points approximate.
+
+6. THE 2/3 COMPOSITION RECURRENCE: T(n) = T(n-2) + T(n-3)
+   with plastic number root ρ ≈ 1.325 is a DIFFERENT family
+   (3-step recurrence, not 2-step). The (2,3) tile counting
+   is NOT the same as the independence polynomial recurrence.
+   They share the atoms {2,3} but combine them differently.
+
