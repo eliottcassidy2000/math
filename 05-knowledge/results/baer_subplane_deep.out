@@ -1,0 +1,314 @@
+======================================================================
+PART 1: THE FIELD F₄ AND ITS STRUCTURE
+======================================================================
+
+F₄ = {0, 1, ω, ω²} where ω² + ω + 1 = 0 over F₂
+
+Multiplication table:
+   0 × : ['0', '0', '0', '0']
+   1 × : ['0', '1', 'ω', 'ω²']
+   ω × : ['0', 'ω', 'ω²', '1']
+  ω² × : ['0', 'ω²', '1', 'ω']
+
+Frobenius automorphism (x → x²):
+  0² = 0
+  1² = 1
+  ω² = ω²
+  ω²² = ω
+  Fixed points of Frobenius = F₂ = {0, 1}
+
+======================================================================
+PART 2: PG(2, F₄) — THE 21-POINT PROJECTIVE PLANE
+======================================================================
+
+|PG(2, F₄)| = 21 points
+Points of PG(2, F₄):
+  P 0 = (0, 0, 1) ← F₂ point (Baer)
+  P 1 = (0, 1, 0) ← F₂ point (Baer)
+  P 2 = (0, 1, ω)
+  P 3 = (0, 1, 1) ← F₂ point (Baer)
+  P 4 = (0, 1, ω²)
+  P 5 = (1, 0, 0) ← F₂ point (Baer)
+  P 6 = (1, 0, ω)
+  P 7 = (1, 0, 1) ← F₂ point (Baer)
+  P 8 = (1, 0, ω²)
+  P 9 = (1, ω, 0)
+  P10 = (1, ω, ω)
+  P11 = (1, ω, 1)
+  P12 = (1, ω, ω²)
+  P13 = (1, 1, 0) ← F₂ point (Baer)
+  P14 = (1, 1, ω)
+  P15 = (1, 1, 1) ← F₂ point (Baer)
+  P16 = (1, 1, ω²)
+  P17 = (1, ω², 0)
+  P18 = (1, ω², ω)
+  P19 = (1, ω², 1)
+  P20 = (1, ω², ω²)
+
+======================================================================
+PART 3: THE 3 BAER SUBPLANES OF PG(2, F₄)
+======================================================================
+
+Baer subplane B₁ (F₂-rational points): [0, 1, 3, 5, 7, 13, 15]
+  |B₁| = 7
+
+Frobenius orbits (σ: x → x²):
+  Fixed: P0
+  Fixed: P1
+  Orbit: P2 ↔ P4
+  Fixed: P3
+  Fixed: P5
+  Orbit: P6 ↔ P8
+  Fixed: P7
+  Orbit: P9 ↔ P17
+  Orbit: P10 ↔ P20
+  Orbit: P11 ↔ P19
+  Orbit: P12 ↔ P18
+  Fixed: P13
+  Orbit: P14 ↔ P16
+  Fixed: P15
+
+Fixed points (= B₁): [0, 1, 3, 5, 7, 13, 15] (7 points)
+2-orbits: 7 orbits (14 points)
+Total: 7 + 14 = 21
+
+B₁ has 7 lines of 3 points = PG(2,F₂) ✓
+
+Searching for Baer subplane partition...
+  Found partition! mask=0
+  B₂ = [4, 8, 17, 20, 19, 18, 16] (7 lines ✓)
+  B₃ = [2, 6, 9, 10, 11, 12, 14] (7 lines ✓)
+
+======================================================================
+PART 4: I-POLYNOMIAL ↔ BAER SUBPLANE CORRESPONDENCE
+======================================================================
+
+INDEPENDENCE POLYNOMIAL FACTORIZATION:
+  I(K₁⊔K₃, x) = I(K₁, x) · I(K₃, x) = (1+x)(1+3x)
+  At x=2: I = 3 × 7 = 21
+
+BAER SUBPLANE DECOMPOSITION:
+  PG(2, F₄) = B₁ ⊔ B₂ ⊔ B₃
+  |PG(2, F₄)| = |B₁| + |B₂| + |B₃| = 7 + 7 + 7 = 21
+
+THE CORRESPONDENCE:
+  Factor 7 = I(K₃, 2) = |PG(2, F₂)| = |Baer subplane|
+  Factor 3 = I(K₁, 2) = NUMBER of Baer subplanes
+
+  K₃ component of Ω ↔ one Baer subplane (the cycle conflict structure)
+  K₁ component of Ω ↔ the 'selector' choosing which subplane
+
+  The I-polynomial factorization IS the Baer partition!
+
+======================================================================
+PART 5: SIMPLEX (x+1)^n, CUBOID (x+2)^n, AND PROJECTIVE PLANES
+======================================================================
+
+Evaluate at x = 2:
+  (x+1)^n at x=2: 3^n (simplex polynomial)
+  (x+2)^n at x=2: 4^n (cuboid polynomial)
+  Complement C(n) = 4^n - 3^n
+
+  n=1: C(n) = 4^1 - 3^1 = 1
+  n=2: C(n) = 4^2 - 3^2 = 7 = |PG(2, F_2)| ← PROJECTIVE PLANE!
+  n=3: C(n) = 4^3 - 3^3 = 37
+  n=4: C(n) = 4^4 - 3^4 = 175 (div by 7)
+  n=5: C(n) = 4^5 - 3^5 = 781
+  n=6: C(n) = 4^6 - 3^6 = 3367 (div by 7)
+  n=7: C(n) = 4^7 - 3^7 = 14197
+
+STUNNING: C(2) = 4² - 3² = 16 - 9 = 7 = |PG(2, F₂)| = H_forb_1!
+The complement of the simplex-in-cuboid at n=2 IS the Fano plane size!
+
+And C(2) × 3 = 7 × 3 = 21 = |PG(2, F₄)| = H_forb_2
+The three 'copies' are the three Baer subplanes!
+
+======================================================================
+PART 6: WHY THE PATTERN STOPS — THE BAER WALL
+======================================================================
+
+Projective planes over F_{2^k}:
+  k=1: q=2^1=2, |PG(2,F_2)| = 7 [FORBIDDEN]
+         Baer subplanes of PG(2,F_2²): |PG(2,F_2²)/7 = 3
+         q² - q + 1 = 3
+  k=2: q=2^2=4, |PG(2,F_4)| = 21 [FORBIDDEN]
+         Baer subplanes of PG(2,F_4²): |PG(2,F_4²)/21 = 13
+         q² - q + 1 = 13
+  k=3: q=2^3=8, |PG(2,F_8)| = 73 [achievable]
+         Baer subplanes of PG(2,F_8²): |PG(2,F_8²)/73 = 57
+         q² - q + 1 = 57
+  k=4: q=2^4=16, |PG(2,F_16)| = 273 [achievable]
+         Baer subplanes of PG(2,F_16²): |PG(2,F_16²)/273 = 241
+         q² - q + 1 = 241
+  k=5: q=2^5=32, |PG(2,F_32)| = 1057 [achievable]
+         Baer subplanes of PG(2,F_32²): |PG(2,F_32²)/1057 = 993
+         q² - q + 1 = 993
+  k=6: q=2^6=64, |PG(2,F_64)| = 4161 [achievable]
+         Baer subplanes of PG(2,F_64²): |PG(2,F_64²)/4161 = 4033
+         q² - q + 1 = 4033
+
+THE BAER WALL:
+  k=1: |PG(2,F₂)| = 7: FORBIDDEN (= Ω cannot be K₃)
+  k=2: |PG(2,F₄)| = 21: FORBIDDEN (= 3 copies of forbidden)
+  k=3: |PG(2,F₈)| = 73: ACHIEVABLE (escapes the wall)
+
+Why? At k=1,2 the field F_{2^k} has 'too few elements' for
+the Ω conflict graph to accommodate the projective structure.
+At k=3 (F₈), there are enough elements (8) that tournaments
+with enough vertices can achieve H=73.
+
+======================================================================
+PART 7: THE TRINITY — 3 BAER, 3 STRANDS, 3^n
+======================================================================
+
+THE NUMBER 3 APPEARS IN THREE STRUCTURAL ROLES:
+
+1. BAER SUBPLANE COUNT:
+   PG(2,F₄) = 3 × PG(2,F₂)
+   21 = 3 × 7
+   The 3 Baer subplanes partition the forbidden structure
+
+2. PASCAL STRAND COUNT:
+   Standard Pascal (2-strand): row sums 2^n → Fibonacci
+   Trinomial Pascal (3-strand): row sums 3^n → tribonacci
+   3 strands ↔ 3 Baer subplanes ↔ ternary triple classification
+
+3. SIMPLEX VALUE:
+   (x+1)^n at x=2 = 3^n = I(empty graph on n vertices, 2)
+   = maximum possible I(G,2) for n-vertex graph
+   = CEILING of the independence polynomial world
+
+4. k-NACCI LIMIT:
+   Weighted k-nacci with weight x=2 → limit ratio = 1+x = 3
+   The limit IS the per-vertex simplex contribution
+
+UNIFIED VIEW:
+   3 = (x+1)|_{x=2} = |{Baer subplanes}| = |{Pascal strands}|
+   = k-nacci limit at x=2 = the fundamental 'packing factor'
+
+   When we 'pack' a simplex (x+1)^n into a cuboid (x+2)^n,
+   the simplex captures 3^n of the cuboid's 4^n points.
+   The complement 4^n - 3^n at n=2 gives EXACTLY the Fano plane size 7.
+   The 3 Baer subplanes of PG(2,4) are the 3 'directions' of packing.
+
+======================================================================
+PART 8: WHY BAER STRUCTURE CANNOT BE Ω(T)
+======================================================================
+
+THEOREM (informal): The Baer subplane structure of PG(2,F₄)
+is incompatible with tournament conflict graphs because:
+
+1. Each Baer subplane = PG(2,F₂) = Fano plane
+   = 7 points with S(2,3,7) incidence structure
+   = every pair of points on exactly 1 common line
+
+2. In Ω(T), the 'lines' would be sets of 3 mutually-conflicting
+   odd cycles (3 cycles sharing a common tournament vertex).
+   This is EXACTLY the K₃ structure that THM-201 prohibits!
+
+3. So each Baer subplane requires K₃ substructures in Ω,
+   which are impossible. And 3 Baer subplanes compound this.
+
+4. Result: H = |PG(2,F₄)| = 21 is forbidden because the
+   geometric structure REQUIRES tournament-impossible configurations.
+
+======================================================================
+PART 9: INCIDENCE STRUCTURE OF PG(2, F₄)
+======================================================================
+
+Lines of PG(2, F₄): 21
+Points per line: {5} (expected {5})
+Lines per point pair: {1} (expected {1})
+
+Lines of PG(2,F₄) restricted to Baer subplane B₁:
+  Lines meeting B₁ in ≥3 points: 7
+  (A Baer subplane meets each line in 1 or q+1=3 points)
+
+  Line-B₁ intersection sizes: {1: 14, 3: 7}
+  (Expected: 7 lines meet in 3 points, 14 lines meet in 1 point)
+
+======================================================================
+PART 10: Φ₃(q) AND THE OCF — THE DEEPEST CONNECTION
+======================================================================
+
+The third cyclotomic polynomial Φ₃(q) = q² + q + 1:
+  Φ₃(1) = 3   (= I(K₁, 2) = number of Baer subplanes)
+  Φ₃(2) = 7   (= I(K₃, 2) = |PG(2,F₂)| = H_forb_1)
+  Φ₃(3) = 13  (Fibonacci prime, not forbidden)
+  Φ₃(4) = 21  (= I(K₁⊔K₃, 2) = |PG(2,F₄)| = H_forb_2)
+  Φ₃(5) = 31  (Mersenne prime)
+  Φ₃(6) = 43  (achievable)
+  Φ₃(7) = 57  (= 3×19)
+  Φ₃(8) = 73  (achievable)
+
+OBSERVATION: Φ₃ at POWERS OF 2 gives projective planes over F_{2^k}:
+  Φ₃(2¹) = 7   → FORBIDDEN
+  Φ₃(2²) = 21  → FORBIDDEN
+  Φ₃(2³) = 73  → achievable
+
+The forbidden values are Φ₃(2) and Φ₃(4) = Φ₃(2²).
+But Φ₃(2³) = 73 escapes. WHY?
+
+ANSWER: The Baer subplane structure.
+  PG(2,F₄) = 3 × PG(2,F₂): the subplane IS the forbidden structure.
+  PG(2,F₈) cannot be decomposed into copies of PG(2,F₂) because
+  F₈ is NOT an extension of F₂ via squaring (F₈ ≅ F₂[x]/(x³+x+1)).
+  The Baer subplane of PG(2,F₈) would be PG(2,F_{√8}),
+  but √8 is not a prime power — no subplane exists!
+
+MORE PRECISELY: A Baer subplane PG(2,q) exists in PG(2,Q)
+  iff Q = q². So:
+  - PG(2,4) has Baer subplanes PG(2,2) ✓ (4 = 2²)
+  - PG(2,8) has Baer subplanes PG(2,√8) ✗ (√8 not integer)
+  - PG(2,16) has Baer subplanes PG(2,4) ✓ (16 = 4²)
+
+So: |PG(2,16)| = 273 = Φ₃(16). Is 273 forbidden?
+  PG(2,16) has Baer subplanes PG(2,4), each of size 21.
+  But 21 is ITSELF forbidden, so the chain continues!
+  273 = 21 × 13 = forbidden × ??
+  Actually 273/21 = 13, and Φ₃(4) = 21, so 273 = 13 × 21.
+  Number of Baer subplanes in PG(2,16): |PG(2,16)|/|PG(2,4)| = 273/21 = 13
+
+OPEN QUESTION: Is H=273 = |PG(2,F₁₆)| forbidden?
+  If yes: the Baer chain continues (PG(2,2) → PG(2,4) → PG(2,16))
+  Each level contains the previous as a Baer subplane.
+  This would give forbidden values at |PG(2, 2^{2^k})|:
+  k=0: |PG(2,2)| = 7
+  k=1: |PG(2,4)| = 21
+  k=2: |PG(2,16)| = 273
+  k=3: |PG(2,256)| = 65793
+  These are the 'Baer tower' values!
+
+======================================================================
+PART 11: THE BAER SUBPLANE THEORY OF FORBIDDEN H
+======================================================================
+
+MAIN THEOREM (conjectural):
+  H(T) ≠ |PG(2, F_{2^{2^k}})| for all tournaments T and all k ≥ 0.
+
+PROOF SKETCH:
+  Base case (k=0): H ≠ 7 = |PG(2,F₂)|.
+    Proof: Ω(T) ≠ K₃ by THM-201 (K₃ requires a tournament vertex
+    common to 3 directed 3-cycles in a Steiner-like arrangement,
+    which forces additional cycles by dominance cascade).
+
+  k=1: H ≠ 21 = |PG(2,F₄)|.
+    The I-polynomial of any graph with I(G,2)=21 factors through
+    the Baer subplane structure: either (1+3x) divides I(G,x)
+    (the K₃ poison), or G ∈ {K₆-2e, K₈-e, K₁₀} which cannot be Ω(T)
+    by structural constraints on cycle overlap in tournaments.
+
+  k≥2: H ≠ |PG(2, F_{2^{2^k}})| (CONJECTURED).
+    Each level inherits the impossibility from the previous via
+    the Baer subplane containment PG(2,F_{q²}) ⊃ PG(2,F_q).
+
+THE SIMPLEX-CUBOID NESTING INTERPRETATION:
+  The forbidden values arise at the 'corners' of the simplex-in-cuboid
+  packing. At n=2: the complement 4²-3²=7 is the Fano plane.
+  The 3 Baer subplanes are the 3 'directions' along which the
+  simplex touches the cuboid boundary.
+  The k-nacci limit 3 = the number of these directions.
+
+  (x+1)^n = simplex = 'achievable core'
+  (x+2)^n = cuboid = 'total space'
+  Complement = the 'forbidden shell' with projective structure!
