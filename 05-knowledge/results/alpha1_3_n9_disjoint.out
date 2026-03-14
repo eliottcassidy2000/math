@@ -1,0 +1,88 @@
+======================================================================
+α₁=3 DISJOINT CONSTRUCTION at n=9
+======================================================================
+
+Out-degrees: [7, 7, 7, 4, 4, 4, 1, 1, 1]
+Score sequence: (1, 1, 1, 4, 4, 4, 7, 7, 7)
+
+Counting directed odd cycles...
+  d_3 = 3
+  d_5 = 0
+  d_7 = 0
+  d_9 = 0
+  α₁ = 3
+
+Computing H(T) via Held-Karp DP...
+  H = 27
+
+OCF prediction:
+  3 disjoint 3-cycles → Ω = 3 isolated vertices
+  I(Ω, 2) = (1+2)^3 = 27
+  H matches OCF: True
+
+======================================================================
+ALTERNATE INTER-GROUP ORDERINGS
+======================================================================
+
+Out-degrees (cyclic inter-group): [4, 4, 4, 4, 4, 4, 4, 4, 4]
+Score sequence: (4, 4, 4, 4, 4, 4, 4, 4, 4)
+
+Counting directed odd cycles...
+  d_3 = 30
+  d_5 = 162
+  d_7 = 486
+  d_9 = 207
+  α₁ = 885
+  H = 3159
+  This is the regular tournament (all degrees = 4)
+
+======================================================================
+SAMPLE SEARCH for α₁=3 at n=9 (random tournaments)
+======================================================================
+  ... 0/10000 processed, 0 found
+  ... 2000/10000 processed, 0 found
+  ... 4000/10000 processed, 0 found
+  ... 6000/10000 processed, 0 found
+  ... 8000/10000 processed, 0 found
+
+  Total with α₁=3: 0/10000
+
+======================================================================
+EXPLICIT CHECK: Our n=9 construction
+======================================================================
+  Total directed odd cycles: 3
+    (0, 1, 2) (vertices: [0, 1, 2], length: 3)
+    (3, 4, 5) (vertices: [3, 4, 5], length: 3)
+    (6, 7, 8) (vertices: [6, 7, 8], length: 3)
+
+  Conflict graph Ω:
+    α₁ = 3 vertices
+    α₂ = 0 edges
+    → Ω has NO edges (all cycles vertex-disjoint)
+    → I(Ω, 2) = (1+2)^3 = 27
+    → H should be 27
+
+  H(T) = 27 (via Held-Karp)
+  OCF prediction = 27
+  MATCH: True
+
+======================================================================
+CONCLUSION
+======================================================================
+
+At n=9: α₁=3 with α₂=0 IS ACHIEVABLE.
+
+Construction: 3 vertex-disjoint 3-cycles covering all 9 vertices,
+with transitive inter-group structure.
+
+This gives:
+  H = (1+2)^3 = 27 (pure simplex^3 decomposition)
+  Ω = 3 isolated vertices (no conflicts)
+
+The α₁=3 → α₂≥2 gap CLOSES at n=9.
+
+For n ≤ 8: α₁=3 forces α₂≥2 (verified computationally).
+For n = 9: α₁=3 can have α₂=0 (by explicit construction).
+
+The critical threshold is n=9 = 3×3 (three disjoint 3-cycles need exactly 9 vertices).
+
