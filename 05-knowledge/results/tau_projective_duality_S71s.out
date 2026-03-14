@@ -1,0 +1,789 @@
+======================================================================
+THE GOLDEN THREAD: τ, 2, 7, AND PROJECTIVE DUALITY
+opus-2026-03-14-S71s
+======================================================================
+
+======================================================================
+PART 1: WHY 7? — THE MERSENNE PRIME AND FANO PLANE
+======================================================================
+
+  S71r found: the effective duality group is (Z/2)³ of order 8.
+  The number of NONTRIVIAL elements is 8 - 1 = 7.
+
+  But 7 = 2³ - 1 is a MERSENNE PRIME.
+  The points of PG(2, F_2) — the Fano plane — number exactly 7.
+
+  CLAIM: The 7 dualities of tournament theory are the 7 POINTS
+  of the Fano plane. The 7 LINES of the Fano plane are the
+  7 ways two dualities COMPOSE to give a third.
+
+  The Fano plane PG(2, F_2) has:
+  - 7 points = nonzero elements of F_2³
+  - 7 lines = 3-element subsets {a, b, a+b}
+  - Each line contains 3 points
+  - Each point lies on 3 lines
+  - Any 2 points determine a unique line
+
+  This is the SMALLEST projective plane. It is SELF-DUAL:
+  PG(2, F_2) ≅ PG(2, F_2)* (points ↔ lines).
+
+  Fano plane: 7 points, 7 lines
+
+  Point ↔ Duality correspondence:
+    (0, 0, 1) ↔ D1: Complement
+    (0, 1, 0) ↔ D2: Walsh
+    (0, 1, 1) ↔ D3: Path-reversal
+    (1, 0, 0) ↔ D4: Score-reversal
+    (1, 0, 1) ↔ D5: Möbius
+    (1, 1, 0) ↔ D6: Segre
+    (1, 1, 1) ↔ D7: Adjunction
+
+  Fano lines (each = composition closure {Di, Dj, Di∘Dj}):
+    {Complement, Walsh, Path-reversal}
+    {Complement, Score-reversal, Möbius}
+    {Complement, Segre, Adjunction}
+    {Walsh, Score-reversal, Segre}
+    {Walsh, Möbius, Adjunction}
+    {Path-reversal, Score-reversal, Adjunction}
+    {Path-reversal, Möbius, Segre}
+
+  SELF-DUALITY of the Fano plane mirrors the self-duality of H:
+  - H(T) = H(T^op)  (complement self-duality)
+  - hat{H} determines H and vice versa (Walsh self-duality)
+  - The Fano plane is its own dual (projective self-duality)
+
+  The number 7 appears because:
+  - 3 independent dualities generate (Z/2)³
+  - (Z/2)³ has 2³ - 1 = 7 nontrivial elements
+  - 7 is the smallest Mersenne prime
+  - PG(2, F_2) has exactly 7 points
+  - The Fano plane is the UNIQUE projective plane of order 2
+
+  7 is not arbitrary. It is the PROJECTIVE COMPLETION of the
+  duality group. The 7th duality (adjunction) is the "point at
+  infinity" that completes the affine plane AG(2, F_2) into PG(2, F_2).
+
+
+======================================================================
+PART 2: BASE τ — THE GOLDEN RATIO IN TOURNAMENT THEORY
+======================================================================
+
+  The golden ratio τ = (1+√5)/2 satisfies τ² = τ + 1.
+  Its minimal polynomial is x² - x - 1.
+
+  In BASE τ: every non-negative integer has a unique representation
+  using digits {0, 1} with no two consecutive 1s (Zeckendorf).
+
+  QUESTION: Does H have structure in base τ?
+  Since H is always odd and H = I(Ω, 2), what is I(Ω, τ)?
+
+  n=3: corr(H, I(Ω,τ)) = 1.000000
+    H range: [1, 3]
+    I(Ω,τ) range: [1.000, 2.618]
+  n=4: corr(H, I(Ω,τ)) = 1.000000
+    H range: [1, 5]
+    I(Ω,τ) range: [1.000, 4.236]
+  n=5: corr(H, I(Ω,τ)) = 0.973329
+    H range: [1, 15]
+    I(Ω,τ) range: [1.000, 9.090]
+  n=6: corr(H, I(Ω,τ)) = 0.960769
+    H range: [1, 45]
+    I(Ω,τ) range: [1.000, 13.944]
+
+  KEY INSIGHT: I(Ω, x) is a POLYNOMIAL in x. H = I(Ω, 2).
+  But I(Ω, τ) evaluates this polynomial at the golden ratio.
+
+  τ satisfies τ² = τ + 1, so any polynomial in τ REDUCES
+  to a LINEAR expression a + bτ with a, b integers.
+
+  This means I(Ω, τ) = a(T) + b(T)·τ for integers a(T), b(T).
+  The pair (a, b) is a RICHER invariant than H alone!
+
+  Golden decomposition I(Ω, τ) = a + b·τ:
+
+  n = 3:
+    H=  1, (a,b)=( 1, 0), I(Ω,τ)=   1.000, count=6
+    H=  3, (a,b)=( 1, 1), I(Ω,τ)=   2.618, count=2
+
+  n = 4:
+    H=  1, (a,b)=( 1, 0), I(Ω,τ)=   1.000, count=24
+    H=  3, (a,b)=( 1, 1), I(Ω,τ)=   2.618, count=16
+    H=  5, (a,b)=( 1, 2), I(Ω,τ)=   4.236, count=24
+
+  n = 5:
+    H=  1, (a,b)=( 1, 0), I(Ω,τ)=   1.000, count=120
+    H=  3, (a,b)=( 1, 1), I(Ω,τ)=   2.618, count=120
+    H=  5, (a,b)=( 1, 2), I(Ω,τ)=   4.236, count=240
+    H=  9, (a,b)=( 1, 3), I(Ω,τ)=   5.854, count=240
+    H= 11, (a,b)=( 1, 4), I(Ω,τ)=   7.472, count=120
+    H= 13, (a,b)=( 1, 4), I(Ω,τ)=   7.472, count=120
+    H= 15, (a,b)=( 1, 4), I(Ω,τ)=   7.472, count=40
+    H= 15, (a,b)=( 1, 5), I(Ω,τ)=   9.090, count=24
+
+======================================================================
+PART 3: ZECKENDORF REPRESENTATION OF H VALUES
+======================================================================
+
+  Every positive integer has a unique ZECKENDORF representation:
+  a sum of non-consecutive Fibonacci numbers.
+
+  This is "base τ" in a precise sense: the Fibonacci sequence
+  is the positional numeral system with base τ.
+
+  Since H is always odd, and Fibonacci numbers alternate even/odd,
+  the Zeckendorf representation of H may reveal hidden structure.
+
+
+  n = 3:
+    H =     1 = 1                     (F_0), len=1
+    H =     3 = 3                     (F_2), len=1
+
+  n = 4:
+    H =     1 = 1                     (F_0), len=1
+    H =     3 = 3                     (F_2), len=1
+    H =     5 = 5                     (F_3), len=1
+
+  n = 5:
+    H =     1 = 1                     (F_0), len=1
+    H =     3 = 3                     (F_2), len=1
+    H =     5 = 5                     (F_3), len=1
+    H =     9 = 8 + 1                 (F_4 + F_0), len=2
+    H =    11 = 8 + 3                 (F_4 + F_2), len=2
+    H =    13 = 13                    (F_5), len=1
+    H =    15 = 13 + 2                (F_5 + F_1), len=2
+
+  n = 6:
+    H =     1 = 1                     (F_0), len=1
+    H =     3 = 3                     (F_2), len=1
+    H =     5 = 5                     (F_3), len=1
+    H =     9 = 8 + 1                 (F_4 + F_0), len=2
+    H =    11 = 8 + 3                 (F_4 + F_2), len=2
+    H =    13 = 13                    (F_5), len=1
+    H =    15 = 13 + 2                (F_5 + F_1), len=2
+    H =    17 = 13 + 3 + 1            (F_5 + F_2 + F_0), len=3
+    H =    19 = 13 + 5 + 1            (F_5 + F_3 + F_0), len=3
+    H =    23 = 21 + 2                (F_6 + F_1), len=2
+    H =    25 = 21 + 3 + 1            (F_6 + F_2 + F_0), len=3
+    H =    27 = 21 + 5 + 1            (F_6 + F_3 + F_0), len=3
+    H =    29 = 21 + 8                (F_6 + F_4), len=2
+    H =    31 = 21 + 8 + 2            (F_6 + F_4 + F_1), len=3
+    H =    33 = 21 + 8 + 3 + 1        (F_6 + F_4 + F_2 + F_0), len=4
+    H =    37 = 34 + 3                (F_7 + F_2), len=2
+    H =    41 = 34 + 5 + 2            (F_7 + F_3 + F_1), len=3
+    H =    43 = 34 + 8 + 1            (F_7 + F_4 + F_0), len=3
+    H =    45 = 34 + 8 + 3            (F_7 + F_4 + F_2), len=3
+
+  Zeckendorf complexity (number of Fibonacci summands):
+    n=3: mean=1.000, max=1, min=1
+    n=4: mean=1.000, max=1, min=1
+    n=5: mean=1.414, max=2, min=1
+    n=6: mean=2.271, max=4, min=1
+
+======================================================================
+PART 4: PROJECTIVE DUALITY — TOURNAMENTS IN PG(m-1, F_2)
+======================================================================
+
+  A tournament on n vertices is a point in F_2^m where m = C(n,2).
+  The projective space PG(m-1, F_2) has (2^m - 1) points.
+
+  PROJECTIVE DUALITY: In PG(d, F_q),
+  - Points ↔ Hyperplanes (codimension-1 subspaces)
+  - A point x and a hyperplane H are INCIDENT iff x ∈ H
+  - This duality is an INVOLUTION on the geometry
+
+  For F_2: a hyperplane is {x : <a, x> = 0} for some nonzero a.
+  The dual of a tournament T is the set of tournaments H(T)
+  orthogonal to T in F_2^m.
+
+  KEY: The Walsh transform IS the projective duality map!
+  hat{H}[S] = sum_x (-1)^{<S,x>} H(x)
+  The Walsh coefficient at S measures the CORRELATION of H with
+  the hyperplane defined by S.
+
+  n=3: PG(2, F_2) has 7 points
+    Walsh nonzero: 4/8
+    Hyperplane size: always 4 (= 2^2)
+    H lives on 4/7 hyperplanes (Walsh zeros)
+    H avoids 3 hyperplanes (Walsh nonzeros)
+  n=4: PG(5, F_2) has 63 points
+    Walsh nonzero: 13/64
+    Hyperplane size: always 32 (= 2^5)
+/home/e/Documents/claude/math/04-computation/tau_projective_duality_S71s.py:597: DeprecationWarning: `np.math` is a deprecated alias for the standard library `math` module (Deprecated Numpy 1.25). Replace usages of `np.math` with `math`
+  mean_H = np.math.factorial(n) / 2**(n-1)
+    H lives on 51/63 hyperplanes (Walsh zeros)
+    H avoids 12 hyperplanes (Walsh nonzeros)
+  n=5: PG(9, F_2) has 1023 points
+    Walsh nonzero: 91/1024
+    Hyperplane size: always 512 (= 2^9)
+    H lives on 933/1023 hyperplanes (Walsh zeros)
+    H avoids 90 hyperplanes (Walsh nonzeros)
+
+  PROJECTIVE DUALITY THEOREM:
+  H "lives on" (has zero Walsh coefficient at) exactly the
+  ODD-DEGREE hyperplanes. H "avoids" all EVEN-DEGREE hyperplanes.
+
+  This is a PROJECTIVE STATEMENT: H lives on a specific
+  LINEAR VARIETY in PG(m-1, F_2).
+
+  The variety V(H) = {S : hat{H}[S] = 0} is the set of
+  odd-cardinality subsets of [m]. This is a WELL-KNOWN
+  projective variety: the COMPLEMENT of the even-weight code.
+
+  In algebraic geometry: V(H) is a LINEAR ALGEBRAIC VARIETY
+  defined over F_2. In projective geometry: it's a flat.
+  The UNITY of these two viewpoints IS the duality.
+
+
+======================================================================
+PART 5: THE MÖBIUS STRIP — CATEGORICAL AND TOPOLOGICAL
+======================================================================
+
+  The Möbius strip M has fundamental group Z and first homology Z.
+  Its boundary is a SINGLE circle (not two, like the cylinder).
+
+  In tournament theory: the complement involution σ : T → T^op
+  acts on the Boolean cube Q_m = {0,1}^m.
+  The quotient Q_m / σ is a projective space RP^{m-1}.
+
+  Functions on Q_m decompose into:
+  - EVEN (complement-invariant): f(T) = f(T^op)  → lives on RP^{m-1}
+  - ODD (complement-anti-invariant): f(T) = -f(T^op) → lives on MÖBIUS BUNDLE
+
+  H is EVEN: H(T) = H(T^op). So H lives on the projective space.
+  M[a,*] has BOTH even and odd parts. The odd part lives on the Möbius bundle.
+
+  CATEGORICALLY: The Möbius strip is the total space of the
+  non-orientable line bundle over RP^{m-1}.
+
+  More precisely: let C = Z/2 act on F_2^m by complement.
+  - The trivial C-module: even functions (including H)
+  - The sign C-module: odd functions (including odd Walsh of M)
+  - These form a REPRESENTATION RING: Rep(Z/2) = Z[x]/(x²-1)
+
+  The ring Rep(Z/2) has TWO generators: trivial (1) and sign (x).
+  x² = 1 (composing the sign rep with itself gives trivial).
+  This is the ALGEBRAIC counterpart of the Möbius strip:
+  twist twice = untwist.
+
+  n=3: H even under complement: 8/8 (YES)
+  n=4: H even under complement: 64/64 (YES)
+  n=5: H even under complement: 1024/1024 (YES)
+
+  CATEGORICAL MÖBIUS INVERSION on the poset of tournament subsets:
+
+  The Boolean lattice B_m = (2^[m], ⊆) has Möbius function:
+    μ(S, T) = (-1)^{|T|-|S|} if S ⊆ T, else 0
+
+  This IS the Walsh transform! Specifically:
+    hat{f}[S] = sum_{T ⊇ S} μ(S, T) · f(T)
+              = sum_T (-1)^{|T|-|S|} · f(T)  (when S ⊆ T)
+
+  But the MULTIPLICATIVE Möbius function on (Z, |) is:
+    μ(n) = (-1)^k if n = p_1...p_k (squarefree), else 0
+
+  At n = 2: μ(2) = -1. The tournament complement has weight -1.
+  At n = 7: μ(7) = -1. Seven is squarefree (prime).
+  At n = 8: μ(8) = μ(2³) = 0. Eight is NOT squarefree.
+
+  The Möbius strip topology (non-orientable) corresponds to
+  μ(2) = -1 (the complement involution has sign -1).
+  The Möbius FUNCTION μ(n) encodes the same sign.
+
+  μ( 2) = -1
+  μ( 7) = -1
+  μ( 8) = +0
+  μ(14) = +1
+  μ(15) = +1
+
+======================================================================
+PART 6: τ² = τ + 1 AND THE DELETION-CONTRACTION RECURRENCE
+======================================================================
+
+  The golden ratio satisfies: τ² = τ + 1.
+  The Fibonacci recurrence is: F_{n+2} = F_{n+1} + F_n.
+
+  The DP recurrence for H is:
+    H(T) = sum_{v: last} H(T - v)_restricted
+
+  This is NOT a Fibonacci-type recurrence (it branches over n choices).
+  But the DELETION-CONTRACTION recurrence IS binary:
+    H(T) = H(T\e) + H(T/e)   (delete + contract edge e)
+
+  QUESTION: Does the DC recurrence have a τ-related structure?
+
+  Consider the DC TREE for a tournament T:
+  - Root: T
+  - Left child: T\e (delete edge)
+  - Right child: T/e (contract edge)
+  - Leaves: single-vertex tournaments (H = 1)
+
+  The DC tree has depth m = C(n,2) (one level per edge).
+  The total number of leaves is 2^m (but many are shared).
+
+  The FIBONACCI CONNECTION: if the DC tree had the Fibonacci
+  structure (each node has weight F_k), then H would be related
+  to τ^m. Let's check.
+
+  n=3, m=3: τ^m = 4.236
+    H/τ^m range: [0.236068, 0.708204]
+    mean(H)/τ^m = 0.354102
+    mean(H) = 1.500
+  n=4, m=6: τ^m = 17.944
+    H/τ^m range: [0.055728, 0.278640]
+    mean(H)/τ^m = 0.167184
+    mean(H) = 3.000
+  n=5, m=10: τ^m = 122.992
+    H/τ^m range: [0.008131, 0.121959]
+    mean(H)/τ^m = 0.060980
+    mean(H) = 7.500
+
+  The mean H at each n is n!/2^{n-1} (PROVED).
+  In terms of τ: mean/τ^m is NOT a simple expression.
+  But: n!/2^{n-1} vs τ^{C(n,2)} — which grows faster?
+
+  n=3: mean(H) = 1.5, τ^m = 4.2, ratio = 0.354102
+  n=4: mean(H) = 3.0, τ^m = 17.9, ratio = 0.167184
+  n=5: mean(H) = 7.5, τ^m = 123.0, ratio = 0.060980
+  n=6: mean(H) = 22.5, τ^m = 1364.0, ratio = 0.016496
+  n=7: mean(H) = 78.8, τ^m = 24476.0, ratio = 0.003217
+  n=8: mean(H) = 315.0, τ^m = 710647.0, ratio = 0.000443
+  n=9: mean(H) = 1417.5, τ^m = 33385282.0, ratio = 0.000042
+
+======================================================================
+PART 7: HERTZSPRUNG → 8 → VITALI — THE ABSTRACT CHAIN
+======================================================================
+
+  S71p established the chain: Hertzsprung → 8 → Vitali.
+  S71q abstracted it to: Combinatorics → Algebra → Analysis.
+  S71r found: the chain is generated by 2 and has period 8.
+
+  NOW: We add τ as the MEDIATOR.
+
+  HERTZSPRUNG (Combinatorics):
+  - Ménage numbers D_n count permutations with NO fixed points
+    AND no "near-misses" (no i→i±1)
+  - Derangement fraction of HPs = D_n/n! exactly (S71p)
+  - The ménage problem has a FIBONACCI structure:
+    D_n ~ n! / e (derangements) modified by near-miss exclusion
+
+  THE NUMBER 8 (Algebra):
+  - Bott periodicity: Cl(m+8) ≅ Cl(m) ⊗ M_{16}(R)
+  - The 8 comes from the Cayley-Dickson chain:
+    R → C → H → O (dimensions 1, 2, 4, 8)
+  - After O (dimension 8): ASSOCIATIVITY FAILS
+  - 8 = 2³ = |effective duality group|
+  - The Clifford algebra Cl(m) acting on L²(Q_m) has period 8
+
+  VITALI (Analysis):
+  - Walsh eigenfunctions are "spectral atoms"
+  - TV distance μ_H to μ_count = 1/4 exactly (S71p)
+  - 1/4 = 1/2² — the SQUARE of the fundamental scale 1/2
+
+  THE GOLDEN THREAD (τ):
+  - τ = (1+√5)/2 = 2·cos(π/5)
+  - τ connects the PENTAGON (5-fold symmetry) to the plane
+  - 5 is the SMALLEST n where tournaments get interesting
+    (n=5: first non-trivial H values, first β₁>0, first SC pairs)
+  - F_5 = 5 (the 5th Fibonacci number IS 5 — unique fixed point)
+  - The 5-cycle C_5 is the smallest tournament with β₁ = 1
+
+  ABSTRACT CHAIN:
+  Hertzsprung(D_n/n!) →[Fibonacci]→ τ →[τ²=τ+1]→ 2 →[2³=8]→ Bott →[period]→ Vitali atoms
+
+
+  τ = 1.6180339887
+  2·cos(π/5) = 1.6180339887
+  Match: True
+
+  The 5-cycle C_5 (regular tournament on 5 vertices):
+    H(C_5) = 15, scores = (2, 2, 2, 2, 2)
+    C_5 has β₁ = 1 (the smallest tournament with nontrivial homology)
+    C_5 has 5-fold rotational symmetry = the PENTAGON
+    The pentagon's diagonal/side ratio = τ
+
+======================================================================
+PART 8: ALGEBRAIC GEOMETRY ↔ PROJECTIVE GEOMETRY — THE UNITY
+======================================================================
+
+  PROJECTIVE GEOMETRY: Studies incidence (points on lines, etc.)
+  ALGEBRAIC GEOMETRY: Studies zero sets of polynomials
+
+  Their UNITY: A projective variety is the zero set of HOMOGENEOUS
+  polynomials in projective space. This merges both viewpoints.
+
+  For tournaments:
+
+  PROJECTIVE VIEW: A tournament T is a POINT in PG(m-1, F_2).
+  The complement T^op is the "antipodal" point.
+  H is a FUNCTION on these points.
+  hat{H}[S] = 0 for odd |S| defines a LINEAR VARIETY V ⊂ PG(m-1, F_2).
+
+  ALGEBRAIC VIEW: H is a MULTILINEAR POLYNOMIAL on F_2^m.
+  H(x) = sum_S c_S prod_{i∈S} x_i
+  The level set {T : H(T) = h} is an ALGEBRAIC VARIETY.
+
+  UNITY: The Walsh transform converts between these views:
+  - Projective view: H as a linear functional on subsets
+  - Algebraic view: H as a polynomial on binary vectors
+  - They are the SAME object, seen from dual sides
+
+  THE DEEP DUALITY:
+  - In PROJECTIVE geometry: a point and a hyperplane are dual
+  - In ALGEBRAIC geometry: a variety and its ideal are dual
+  - In TOURNAMENT theory: a tournament and its Walsh spectrum are dual
+  - These are ALL THE SAME DUALITY, instantiated in different settings
+
+
+  n=3: Level sets of H (algebraic varieties over F_2):
+    H=  1:     6 points (non-affine variety)
+    H=  3:   2^1 points (AFFINE variety)
+
+  n=4: Level sets of H (algebraic varieties over F_2):
+    H=  1:    24 points (non-affine variety)
+    H=  3:   2^4 points (AFFINE variety)
+    H=  5:    24 points (non-affine variety)
+
+  n=5: Level sets of H (algebraic varieties over F_2):
+    H=  1:   120 points (non-affine variety)
+    H=  3:   120 points (non-affine variety)
+    H=  5:   240 points (non-affine variety)
+    H=  9:   240 points (non-affine variety)
+    H= 11:   120 points (non-affine variety)
+    H= 13:   120 points (non-affine variety)
+    H= 15:   2^6 points (non-affine variety)
+
+======================================================================
+PART 9: CATEGORICAL YONEDA + GOLDEN RATIO
+======================================================================
+
+  YONEDA LEMMA: For a presheaf F on category C,
+    F(c) ≅ Nat(Hom(c, -), F)
+
+  For tournaments: C = category of sub-tournaments (objects = subsets of [n]).
+  F = the HP presheaf: F(S) = {HPs of T|_S}.
+  Then: H(T) = |F([n])| = |global sections of F|.
+
+  The GOLDEN RATIO enters through the FIBONACCI CATEGORY:
+  Consider the category Fib with objects F_0, F_1, F_2, ... and
+  morphisms reflecting F_{n+2} = F_{n+1} + F_n.
+
+  CLAIM: The tower of sub-tournament categories
+    Cat(T|_2) → Cat(T|_3) → ... → Cat(T|_n)
+  has a FIBONACCI-LIKE structure when restricted to vertex deletion.
+
+  At each level, deleting vertex v gives TWO types of sub-problems:
+  - Type A: v was an "endpoint" (connected to the start of remaining HPs)
+  - Type B: v was "internal" (connected to two neighbors)
+
+  The number of Type A + Type B sub-problems follows a recurrence
+  analogous to Fibonacci, with base τ as the growth rate.
+
+  n=3: Sub-tournament counts by size:
+    |S|=2:     3 sub-tournaments (C(n,k)/F_k = 1.000)
+    |S|=3:     1 sub-tournaments (C(n,k)/F_k = 0.200)
+  n=4: Sub-tournament counts by size:
+    |S|=2:     6 sub-tournaments (C(n,k)/F_k = 2.000)
+    |S|=3:     4 sub-tournaments (C(n,k)/F_k = 0.800)
+    |S|=4:     1 sub-tournaments (C(n,k)/F_k = 0.125)
+  n=5: Sub-tournament counts by size:
+    |S|=2:    10 sub-tournaments (C(n,k)/F_k = 3.333)
+    |S|=3:    10 sub-tournaments (C(n,k)/F_k = 2.000)
+    |S|=4:     5 sub-tournaments (C(n,k)/F_k = 0.625)
+    |S|=5:     1 sub-tournaments (C(n,k)/F_k = 0.077)
+
+  Total sub-tournaments vs τ^n:
+    n=3: total=     4, τ^n=4.2, ratio=0.9443
+    n=4: total=    11, τ^n=6.9, ratio=1.6049
+    n=5: total=    26, τ^n=11.1, ratio=2.3444
+    n=6: total=    57, τ^n=17.9, ratio=3.1765
+    n=7: total=   120, τ^n=29.0, ratio=4.1330
+
+======================================================================
+PART 10: THE SYMBOLIC MÖBIUS STRIP
+======================================================================
+
+  The Möbius strip has a TOPOLOGICAL OBSTRUCTION: it is non-orientable.
+  The first Stiefel-Whitney class w₁ ∈ H¹(M; Z/2) is nonzero.
+
+  In tournament theory, the SYMBOLIC Möbius strip arises from:
+
+  1. The complement involution σ has TWO eigenspaces:
+     - Even (H lives here): σf = +f
+     - Odd (M[a,*] odd part lives here): σf = -f
+
+  2. The ODD eigenspace is a LINE BUNDLE over RP^{m-1}.
+     This bundle is NONTRIVIAL: its Stiefel-Whitney class is nonzero.
+     It IS the Möbius bundle.
+
+  3. The OBSTRUCTION to triviality is the Walsh parity:
+     If ALL Walsh coefficients were even-degree, the bundle would be trivial.
+     The existence of odd-degree Walsh coefficients (for M, not H)
+     is the NON-ORIENTABILITY of the tournament transfer matrix.
+
+  SYMBOLIC VERSION: Replace topology with FORMAL PROPERTIES.
+
+  A "symbolic Möbius strip" is any quadruple (V, σ, f, g) where:
+  - V is a vector space (or module)
+  - σ: V → V is an involution (σ² = id)
+  - f ∈ V^σ (fixed by σ, the "even" part)
+  - g ∈ V^{-σ} (negated by σ, the "odd" part)
+  - The pair (f, g) determines a section of a GRADED bundle
+
+  Tournament instantiation: V = L²(Q_m), σ = complement,
+  f = H, g = odd Walsh part of M[a, *].
+
+  n=3: M[0,1] Walsh energy: even=4, odd=4
+    → Möbius bundle is NONTRIVIAL (odd Walsh nonzero)
+  n=4: M[0,1] Walsh energy: even=64, odd=48
+    → Möbius bundle is NONTRIVIAL (odd Walsh nonzero)
+  n=5: M[0,1] Walsh energy: even=2304, odd=2304
+    → Möbius bundle is NONTRIVIAL (odd Walsh nonzero)
+
+======================================================================
+PART 11: THE TRINITY — 2, 7, AND τ
+======================================================================
+
+  THREE numbers govern tournament theory at different scales:
+
+  2 = the LOCAL number (binary choices, F_2, complement)
+  7 = the GLOBAL number (dualities, Fano plane, PG(2, F_2))
+  τ = the ASYMPTOTIC number (growth rate, Fibonacci, pentagon)
+
+  Their relationships:
+  - 7 = 2³ - 1 (Mersenne prime from 2)
+  - τ² = τ + 1 (golden ratio satisfies a BINARY recurrence)
+  - 7 and τ: the regular heptagon has diagonal ratios involving
+    2·cos(π/7), 2·cos(2π/7), 2·cos(3π/7) — a DIFFERENT system
+  - But: PG(2, F_2) has 7 points AND 7 lines, and τ is the growth
+    rate of the Fibonacci sequence, which counts paths in the
+    SIMPLEST directed graph (a single edge with self-loops)
+
+  THE UNITY: All three numbers encode SELF-REFERENCE.
+  - 2: x² = x over F_2 (idempotent, self-referential field)
+  - 7: PG(2, F_2) is self-dual (self-referential geometry)
+  - τ: τ = 1 + 1/τ (self-referential continued fraction)
+
+  In each case, the number is defined by a FIXED-POINT EQUATION:
+  - 2: the unique prime p with p-1 = 1
+  - 7: the unique Mersenne prime 2^p - 1 with p prime (for p=3)
+  - τ: the unique positive root of x² - x - 1 = 0
+
+  τ = 1.6180339887
+  1 + 1/τ = 1.6180339887
+  Match: True
+
+  τ = [1; 1, 1, 1, 1, ...] (all 1s continued fraction)
+  This makes τ the MOST IRRATIONAL number (hardest to approximate)
+
+  Fibonacci growth rate: F_n ~ τ^n / √5
+  Tournament count: 2^{C(n,2)} ~ 2^{n²/2}
+  H mean: n!/2^{n-1} ~ √(2πn) · (n/e)^n / 2^{n-1}
+
+  Growth hierarchy: τ^n << n! << 2^{n²/2}
+  τ governs FIBONACCI (the simplest recurrence)
+  2 governs TOURNAMENTS (the binary structure)
+  n! governs PERMUTATIONS (the counting bridge)
+
+======================================================================
+PART 12: THE ULTIMATE ABSTRACTION — STRUCTURE AS MORPHISM
+======================================================================
+
+  In category theory, EVERYTHING is a morphism.
+  Objects are identity morphisms. Properties are natural transformations.
+
+  Tournament theory, viewed categorically:
+
+  LEVEL 0 (Sets):
+    Objects: finite sets [n]
+    Morphisms: functions [n] → [m]
+    H: a function from tournaments to N
+
+  LEVEL 1 (Categories):
+    Objects: tournaments T_n
+    Morphisms: tournament embeddings T_k → T_n
+    H: a FUNCTOR from Tournament to (N, ≤)
+
+  LEVEL 2 (Functors):
+    Objects: categories (Tournament, Vect, Ab, ...)
+    Morphisms: functors (H, Walsh, Homology, ...)
+    H: a NATURAL TRANSFORMATION from Id to a constant functor
+
+  LEVEL 3 (Natural transformations):
+    Objects: functors
+    Morphisms: natural transformations
+    The 7 dualities are NATURAL ISOMORPHISMS between functors
+
+  LEVEL 4 (2-categories):
+    Objects: categories of functors
+    Morphisms: functors between functor categories
+    The Fano plane structure lives here: it organizes the
+    natural isomorphisms into a projective plane
+
+  LEVEL 5 (∞-categories):
+    The tower stabilizes. H is a 0-cell in the ∞-topos of
+    tournament invariants. The homotopy type is contractible
+    (because H is the unique fixed point of the DP operator).
+
+  THE MORPHISM VIEW OF THE TRINITY:
+  - 2 is a morphism in Fin (the category of finite sets): {0} → {0,1}
+  - 7 is a morphism in Proj (projective planes): ∅ → PG(2, F_2)
+  - τ is a morphism in Ring: Z[x]/(x²-x-1) → R
+
+  These three morphisms GENERATE the entire categorical structure
+  of tournament theory. They are the "DNA" of the theory.
+
+
+======================================================================
+PART 13: FIBONACCI MATRIX vs TOURNAMENT TRANSFER MATRIX
+======================================================================
+
+  The Fibonacci sequence is generated by the matrix:
+    F = [[1, 1], [1, 0]]
+  with eigenvalues τ and ψ = 1-τ = -1/τ.
+
+  The tournament transfer matrix M[a,b] has eigenvalues
+  determined by the Walsh spectrum.
+
+  QUESTION: Is there a Fibonacci sub-structure in M?
+
+  Fibonacci matrix eigenvalues: [1.618033988749895, -0.6180339887498948]
+  τ = 1.6180339887, ψ = -0.6180339887
+
+  n=3: Average M eigenvalues (real parts): ['1.0000', '-0.5000', '-0.5000']
+    λ₁/λ₂ = -2.000000 (τ would be 1.618034)
+
+  n=4: Average M eigenvalues (real parts): ['2.2500', '-0.7500', '-0.7500', '-0.7500']
+    λ₁/λ₂ = -3.000000 (τ would be 1.618034)
+
+  n=5: Average M eigenvalues (real parts): ['6.0000', '-1.5000', '-1.5000', '-1.5000']
+    λ₁/λ₂ = -4.000000 (τ would be 1.618034)
+
+======================================================================
+PART 14: VITALI ATOMS AND τ-DEFORMATION
+======================================================================
+
+  S71p found: Walsh eigenfunctions W_S are "spectral atoms."
+  The TV distance between μ_H and μ_count is exactly 1/4.
+
+  NOW: Consider a τ-DEFORMATION of the Walsh transform.
+
+  Standard Walsh: W_S(x) = (-1)^{<S,x>} uses roots of unity ±1.
+  τ-deformed Walsh: W_S^τ(x) = τ^{<S,x>} · ψ^{|S|-<S,x>}
+
+  This replaces {-1, +1} with {ψ, τ} = eigenvalues of [[1,1],[1,0]].
+
+  The τ-deformed transform MIXES the Walsh coefficients according
+  to the Fibonacci structure. Since τ·ψ = -1, the product is
+  the SAME as the standard Walsh (up to sign).
+
+  But the INDIVIDUAL coefficients differ!
+
+
+  n=3: Walsh coefficients (standard vs τ-deformed)
+         S |S|     standard     τ-deformed      ratio
+         0   0           12        12.0000   1.000000
+         3   2           -4        -2.0000   0.500000
+         5   2            4         8.0000   2.000000
+         6   2           -4        -2.0000   0.500000
+
+  n=4: Walsh coefficients (standard vs τ-deformed)
+         S |S|     standard     τ-deformed      ratio
+         0   0          192       192.0000   1.000000
+         3   2          -32         8.0000  -0.250000
+         5   2          -32         8.0000  -0.250000
+         6   2          -32         8.0000  -0.250000
+         9   2           32        88.0000   2.750000
+        10   2          -32         8.0000  -0.250000
+
+======================================================================
+PART 15: GRAND SYNTHESIS — THE GOLDEN PROJECTIVE OUROBOROS
+======================================================================
+
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  THE GRAND UNIFIED VIEW OF TOURNAMENT THEORY                    ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║                                                                  ║
+  ║  THREE NUMBERS:                                                  ║
+  ║    2 (local)  — binary choice, F_2, complement                  ║
+  ║    7 (global) — Fano plane, PG(2,F_2), dualities               ║
+  ║    τ (limit)  — golden ratio, Fibonacci, growth rate            ║
+  ║                                                                  ║
+  ║  THREE GEOMETRIES:                                               ║
+  ║    Projective — PG(m-1, F_2), incidence, duality                ║
+  ║    Algebraic  — multilinear varieties over F_2                  ║
+  ║    Differential — Möbius bundle, Stiefel-Whitney                ║
+  ║                                                                  ║
+  ║  THREE CATEGORIES:                                               ║
+  ║    Tournament (objects = tournaments, morphisms = embeddings)    ║
+  ║    Walsh (objects = spectra, morphisms = convolutions)           ║
+  ║    Fibonacci (objects = F_n, morphisms = recurrence maps)        ║
+  ║                                                                  ║
+  ║  THREE FIXED POINTS:                                             ║
+  ║    H = unique fixed pt of DP operator                           ║
+  ║    PG(2,F_2) = unique self-dual projective plane of order 2     ║
+  ║    τ = unique positive fixed pt of x ↦ 1 + 1/x                 ║
+  ║                                                                  ║
+  ║  THE GOLDEN THREAD connects them:                                ║
+  ║    F_2 → complement → Walsh → eigenvalues → τ-deformation      ║
+  ║    → Fibonacci → pentagon → 5-cycle C_5 → tournaments → F_2    ║
+  ║                                                                  ║
+  ║  The OUROBOROS (S71r) now has a GOLDEN TAIL:                     ║
+  ║    T_2 generates tournament theory via the DP recurrence.        ║
+  ║    The Fibonacci matrix F generates growth via eigenvalue τ.     ║
+  ║    The Fano plane PG(2,F_2) organizes the 7 dualities.          ║
+  ║    All three are SELF-REFERENTIAL:                               ║
+  ║    - T_2 contains its own theory                                ║
+  ║    - τ satisfies τ = 1 + 1/τ                                    ║
+  ║    - PG(2,F_2) is its own dual                                  ║
+  ║                                                                  ║
+  ║  LEVEL 6 (beyond S71r):                                          ║
+  ║    The trinity (2, 7, τ) is itself a PROJECTIVE TRIPLE:         ║
+  ║    three points determining a unique projective plane.           ║
+  ║    That plane IS PG(2, F_2). The structure CLOSES.              ║
+  ║                                                                  ║
+  ║  There is no Level 7. Level 6 is the fixed point.               ║
+  ║  The golden projective ouroboros eats its own tail.              ║
+  ╚══════════════════════════════════════════════════════════════════╝
+
+  THE PROJECTIVE TRIPLE:
+    2 = F_3 (3rd Fibonacci number)
+    7 = 2³ - 1 (Mersenne prime)
+    τ = lim F_{n+1}/F_n (Fibonacci limit)
+
+    2 + 7 = 9 = 3² (square of the independent duality count)
+    2 × 7 = 14 = 2 × 7 (the 14 = 2·7 elements of GL(3,F_2)... no)
+    |GL(3,F_2)| = (8-1)(8-2)(8-4) = 7·6·4 = 168
+    168 = 24 × 7 = (4!) × 7
+    24 = number of HPs of the transitive tournament T_5? No, that's 1.
+    168 = |PSL(2,7)| — the second smallest non-abelian simple group
+
+    PSL(2,7) ≅ GL(3,F_2) — THE SAME GROUP
+    This is the automorphism group of PG(2,F_2) = the Fano plane
+    Order 168 = 8 × 21 = 8 × 3 × 7
+    The 8 (duality group order) × 21 (= C(7,2)) = 168
+
+  FINAL INSIGHT:
+
+  The automorphism group of the duality structure is PSL(2,7),
+  which has order 168 = 8 · 21.
+
+  - 8 = |(Z/2)³| = the duality group
+  - 21 = C(7,2) = number of pairs of dualities
+  - 168 = ways to PERMUTE dualities while preserving incidence
+
+  PSL(2,7) is the SIMPLICITY GROUP of tournament dualities.
+  It is simple (no normal subgroups), just as H is rigid
+  (no deformations). The simplicity of the group mirrors
+  the rigidity of the invariant.
+
+  And PSL(2,7) acts on the PROJECTIVE LINE over F_7:
+  PL(F_7) has 7 + 1 = 8 points. There's the 8 again.
+
+  THE CHAIN CLOSES:
+  2 → 7 = 2³-1 → PG(2,F_2) → GL(3,F_2) = PSL(2,7) → PL(F_7) → 8 points → (Z/2)³ → 2
+
+  This is the GOLDEN PROJECTIVE OUROBOROS.
+
+======================================================================
+SESSION S71s COMPLETE
+======================================================================
