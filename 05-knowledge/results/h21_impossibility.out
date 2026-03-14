@@ -1,0 +1,244 @@
+======================================================================
+PART 1: Exhaustive analysis at n=5 and n=6
+======================================================================
+
+  --- n=5 ---
+  Total tournaments: 1024
+  H=21: IMPOSSIBLE at n=5
+  Checking H=21 candidates (a1 + 2*a2 = 10):
+    (10, 0): IMPOSSIBLE
+    (8, 1): IMPOSSIBLE
+    (6, 2): IMPOSSIBLE
+    (4, 3): IMPOSSIBLE
+    (2, 4): IMPOSSIBLE
+    (0, 5): IMPOSSIBLE
+  Achievable a1 range: [0, 1, 2, 4, 5, 6, 7]
+  a1=10: IMPOSSIBLE at n=5
+  Achievable a2 range: [0]
+    a2=0: a1 in [0, 1, 2, 4, 5, 6, 7]
+
+  --- n=6 ---
+  Total tournaments: 32768
+  H=21: IMPOSSIBLE at n=6
+  Checking H=21 candidates (a1 + 2*a2 = 10):
+    (10, 0): IMPOSSIBLE
+    (8, 1): IMPOSSIBLE
+    (6, 2): IMPOSSIBLE
+    (4, 3): IMPOSSIBLE
+    (2, 4): IMPOSSIBLE
+    (0, 5): IMPOSSIBLE
+  Achievable a1 range: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 19, 20]
+  a1=10 achieved with a2 in: [2]
+  Achievable a2 range: [0, 1, 2, 4]
+    a2=0: a1 in [0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 16]
+    a2=1: a1 in [2, 6, 9, 11, 12, 13, 14, 16, 19, 20]
+    a2=2: a1 in [10, 12, 14, 16]
+    a2=4: a1 in [14]
+
+======================================================================
+PART 2: The (c3, c5, c7) decomposition at n=7
+======================================================================
+
+  At n=7, a1 = c3 + c5 + c7.
+  c3 = number of cyclic triples (3-cycles)
+  c5 = number of directed 5-cycles
+  c7 = 0 or 1 (existence of directed Hamiltonian cycle)
+
+  For H=21, need a1 + 2*a2 = 10.
+  a2 = disjoint pairs of 3-cycles.
+
+  Sampling n=7 tournaments to find (a1, a2) near H=21...
+  1000/5000
+  2000/5000
+  3000/5000
+  4000/5000
+  5000/5000
+
+  Tournaments with |H-21| <= 10:
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+    H= 11: a1= 5, a2= 0, c3= 4, c5= 1, c7=0
+
+  H values near 21:
+    H= 11:    35 tournaments
+    H= 12:     0 tournaments <-- GAP
+    H= 13:    28 tournaments
+    H= 14:     0 tournaments <-- GAP
+    H= 15:    89 tournaments
+    H= 16:     0 tournaments <-- GAP
+    H= 17:    37 tournaments
+    H= 18:     0 tournaments <-- GAP
+    H= 19:    47 tournaments
+    H= 20:     0 tournaments <-- GAP
+    H= 21:     0 tournaments <-- GAP
+    H= 22:     0 tournaments <-- GAP
+    H= 23:    99 tournaments
+    H= 24:     0 tournaments <-- GAP
+    H= 25:    65 tournaments
+    H= 26:     0 tournaments <-- GAP
+    H= 27:    56 tournaments
+    H= 28:     0 tournaments <-- GAP
+    H= 29:   127 tournaments
+    H= 30:     0 tournaments <-- GAP
+    H= 31:    64 tournaments
+
+======================================================================
+PART 3: Why a1=10 at n=7 is trapped
+======================================================================
+
+  a1 = c3 + c5 + c7 = 10
+  c7 in {0, 1}
+  Possible decompositions: (c3, c5, c7) with c3+c5+c7=10
+
+  Score sequence constraint: c3 = 35 - sum C(s_i, 2)
+  For c3=10: sum C(s_i, 2) = 25
+  For c3=9: sum C(s_i, 2) = 26
+  For c3=8: sum C(s_i, 2) = 27
+
+  c3=8: need sum C(s_i,2) = 27
+    Score sequence: (0, 3, 3, 3, 4, 4, 4), c3=8
+    Score sequence: (1, 1, 3, 4, 4, 4, 4), c3=8
+    Score sequence: (1, 2, 2, 3, 4, 4, 5), c3=8
+    Score sequence: (2, 2, 2, 2, 3, 5, 5), c3=8
+    Score sequence: (2, 2, 2, 3, 3, 3, 6), c3=8
+
+  c3=9: need sum C(s_i,2) = 26
+    Score sequence: (1, 2, 2, 4, 4, 4, 4), c3=9
+    Score sequence: (1, 2, 3, 3, 3, 4, 5), c3=9
+    Score sequence: (2, 2, 2, 2, 4, 4, 5), c3=9
+
+  c3=10: need sum C(s_i,2) = 25
+    Score sequence: (1, 2, 3, 3, 4, 4, 4), c3=10
+    Score sequence: (1, 3, 3, 3, 3, 3, 5), c3=10
+    Score sequence: (2, 2, 2, 3, 3, 4, 5), c3=10
+
+======================================================================
+PART 4: The c5 constraint — what limits 5-cycles?
+======================================================================
+
+  c5 statistics by c3 (n=7, 5000 samples):
+    c3= 0: c5 in [ 0,  0], mean=0.0, count=12
+    c3= 1: c5 in [ 0,  0], mean=0.0, count=21
+    c3= 2: c5 in [ 0,  0], mean=0.0, count=42
+    c3= 3: c5 in [ 0,  1], mean=0.9, count=83
+    c3= 4: c5 in [ 1,  4], mean=2.4, count=165
+    c3= 5: c5 in [ 2, 10], mean=4.9, count=227
+    c3= 6: c5 in [ 4, 12], mean=6.5, count=429
+    c3= 7: c5 in [ 7, 14], mean=9.4, count=468
+    c3= 8: c5 in [ 6, 17], mean=12.7, count=719
+    c3= 9: c5 in [12, 21], mean=16.0, count=665
+    c3=10: c5 in [14, 22], mean=19.2, count=870
+    c3=11: c5 in [19, 27], mean=22.7, count=571
+    c3=12: c5 in [19, 30], mean=26.7, count=551
+    c3=13: c5 in [24, 35], mean=30.4, count=174
+    c3=14: c5 in [28, 36], mean=30.7, count=3
+
+  a2 by c3 (for c3 in 8-12):
+    c3= 8: a2 in [0, 1, 2, 3, 4, 5, 6], count=719
+    c3= 9: a2 in [0, 2, 3, 4, 5, 6, 7, 8], count=665
+    c3=10: a2 in [0, 2, 4, 5, 6, 7, 8, 10], count=870
+    c3=11: a2 in [1, 4, 5, 6, 7, 8, 9, 10], count=571
+    c3=12: a2 in [5, 6, 7, 8, 9, 10, 11, 12], count=551
+
+======================================================================
+PART 5: The RIGID constraint — c3 determines a2 range
+======================================================================
+
+  a2=0 requires: every pair of 3-cycles shares a vertex.
+  This means the 3-cycles form a CLIQUE in the conflict graph.
+
+  Maximum clique in conflict graph of 3-cycles on 7 vertices:
+  A 3-cycle uses 3 of 7 vertices.
+  Two 3-cycles conflict iff they share >= 1 vertex.
+  Two 3-cycles are DISJOINT only if they share 0 vertices (using 6 of 7).
+
+  For c3 cycles with a2=0: ALL cycles pairwise conflict.
+  Max # of pairwise conflicting 3-cycles on 7 vertices:
+  If they all share vertex v, up to C(6,2)=15 cycles through v.
+  But not all of those need to be 3-cycles in the tournament.
+
+  KEY: if c3=10 and a2=0, all 10 cyclic triples share a common vertex.
+  But with 10 triples on 7 vertices, Helly-type argument...
+
+  Frequency of a2=0 by c3:
+    c3= 0: a2=0 in   12/  12 (100.0%)
+    c3= 1: a2=0 in   21/  21 (100.0%)
+    c3= 2: a2=0 in   40/  42 ( 95.2%)
+    c3= 3: a2=0 in   72/  83 ( 86.7%)
+    c3= 4: a2=0 in  148/ 165 ( 89.7%)
+    c3= 5: a2=0 in  114/ 227 ( 50.2%)
+    c3= 6: a2=0 in  148/ 429 ( 34.5%)
+    c3= 7: a2=0 in   72/ 468 ( 15.4%)
+    c3= 8: a2=0 in   79/ 719 ( 11.0%)
+    c3= 9: a2=0 in   11/ 665 (  1.7%)
+    c3=10: a2=0 in    7/ 870 (  0.8%)
+    c3=11: a2=0 in    0/ 571 (  0.0%)
+    c3=12: a2=0 in    0/ 551 (  0.0%)
+    c3=13: a2=0 in    0/ 174 (  0.0%)
+    c3=14: a2=0 in    0/   3 (  0.0%)
+
+======================================================================
+PART 6: Exhaustive check — does (a1=10, a2=0) exist at n=7?
+======================================================================
+
+  Checking 20000 random tournaments for (a1=10, a2=0)...
+  5000/20000
+  10000/20000
+  15000/20000
+  20000/20000
+
+  (a1=10, a2=0) found: 0
+  H=21 found: 0
+
+  H distribution near 21 (20000 samples):
+    H= 15:   308
+    H= 16:     0  <-- GAP
+    H= 17:   201
+    H= 18:     0  <-- GAP
+    H= 19:   179
+    H= 20:     0  <-- GAP
+    H= 21:     0  <-- GAP
+    H= 22:     0  <-- GAP
+    H= 23:   348
+    H= 24:     0  <-- GAP
+    H= 25:   252
+
+======================================================================
+PART 7: The (a1, a2) constraint graph — what IS achievable?
+======================================================================
+
+  Points near the line a1 + 2*a2 = 10:
+    a1+2a2= 8: EMPTY
+    a1+2a2= 9: EMPTY
+    a1+2a2=10: EMPTY <-- H=21
+    a1+2a2=11: EMPTY
+    a1+2a2=12: EMPTY
+
+Done.
