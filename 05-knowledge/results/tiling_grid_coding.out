@@ -1,0 +1,298 @@
+======================================================================
+TRIANGULAR PIN GRID, TILING CODES, AND BLUE LINE SKELETON
+kind-pasteur-2026-03-14-S76
+======================================================================
+
+======================================================================
+PART 1: THE TRIANGULAR PIN GRID
+======================================================================
+
+  n=4: m=3 tiles on delta_{2}
+  Pin grid:
+    r=1: ['(3,1)', '(4,2)']
+    r=2: ['(4,1)']
+
+  GS symmetry (r,c) -> (r, 4-r-c):
+    Fixed points: [(2, 1)]
+    Paired positions: 1
+    GS degrees of freedom: 2
+    #GS tilings = 2^(2) = 4
+
+  n=5: m=6 tiles on delta_{3}
+  Pin grid:
+    r=1: ['(3,1)', '(4,2)', '(5,3)']
+    r=2: ['(4,1)', '(5,2)']
+    r=3: ['(5,1)']
+
+  GS symmetry (r,c) -> (r, 5-r-c):
+    Fixed points: [(1, 2), (3, 1)]
+    Paired positions: 2
+    GS degrees of freedom: 4
+    #GS tilings = 2^(4) = 16
+
+  n=6: m=10 tiles on delta_{4}
+  Pin grid:
+    r=1: ['(3,1)', '(4,2)', '(5,3)', '(6,4)']
+    r=2: ['(4,1)', '(5,2)', '(6,3)']
+    r=3: ['(5,1)', '(6,2)']
+    r=4: ['(6,1)']
+
+  GS symmetry (r,c) -> (r, 6-r-c):
+    Fixed points: [(2, 2), (4, 1)]
+    Paired positions: 4
+    GS degrees of freedom: 6
+    #GS tilings = 2^(6) = 64
+
+  n=7: m=15 tiles on delta_{5}
+  Pin grid:
+    r=1: ['(3,1)', '(4,2)', '(5,3)', '(6,4)', '(7,5)']
+    r=2: ['(4,1)', '(5,2)', '(6,3)', '(7,4)']
+    r=3: ['(5,1)', '(6,2)', '(7,3)']
+    r=4: ['(6,1)', '(7,2)']
+    r=5: ['(7,1)']
+
+  GS symmetry (r,c) -> (r, 7-r-c):
+    Fixed points: [(1, 3), (3, 2), (5, 1)]
+    Paired positions: 6
+    GS degrees of freedom: 9
+    #GS tilings = 2^(9) = 512
+
+======================================================================
+PART 2: GS TILINGS AS A LINEAR CODE
+  GS constraint: tile(r,c) = tile(r, n-2-r-c)
+  This is a linear constraint over F_2
+======================================================================
+
+  n=5: m=6, GS dim = 4, rate = 0.6667
+    #GS codewords = 16
+
+  GS tiling H distribution:
+    H=1: 1 GS tilings
+    H=3: 1 GS tilings
+    H=9: 4 GS tilings
+    H=11: 3 GS tilings
+    H=13: 3 GS tilings
+    H=15: 4 GS tilings
+
+  Weight distribution of GS tilings:
+    weight 0: 1
+    weight 1: 2
+    weight 2: 3
+    weight 3: 4
+    weight 4: 3
+    weight 5: 2
+    weight 6: 1
+
+  Self-flip analysis:
+    Blueself (GS + self-flip same H): 2 tilings
+    Expected: 0 (THM-023: blueself requires even n)
+
+  n=7: m=15, GS dim = 9, rate = 0.6000
+    #GS codewords = 512
+
+  GS tiling H distribution:
+    H=1: 1 GS tilings
+    H=3: 1 GS tilings
+    H=9: 5 GS tilings
+    H=11: 3 GS tilings
+    H=13: 3 GS tilings
+    H=15: 4 GS tilings
+    H=25: 5 GS tilings
+    H=27: 3 GS tilings
+    H=31: 10 GS tilings
+    H=33: 1 GS tilings
+    H=41: 5 GS tilings
+    H=45: 7 GS tilings
+    H=49: 5 GS tilings
+    H=51: 8 GS tilings
+    H=61: 7 GS tilings
+    H=65: 15 GS tilings
+    H=67: 10 GS tilings
+    H=69: 10 GS tilings
+    H=71: 7 GS tilings
+    H=75: 7 GS tilings
+    H=77: 14 GS tilings
+    H=79: 5 GS tilings
+    H=81: 7 GS tilings
+    H=83: 7 GS tilings
+    H=85: 7 GS tilings
+    H=87: 7 GS tilings
+    H=91: 5 GS tilings
+    H=93: 11 GS tilings
+    H=95: 7 GS tilings
+    H=99: 10 GS tilings
+    H=105: 14 GS tilings
+    H=111: 10 GS tilings
+    H=115: 7 GS tilings
+    H=117: 17 GS tilings
+    H=123: 8 GS tilings
+    H=125: 9 GS tilings
+    H=127: 5 GS tilings
+    H=129: 25 GS tilings
+    H=133: 16 GS tilings
+    H=135: 20 GS tilings
+    H=137: 16 GS tilings
+    H=139: 16 GS tilings
+    H=141: 19 GS tilings
+    H=143: 5 GS tilings
+    H=145: 16 GS tilings
+    H=147: 9 GS tilings
+    H=151: 27 GS tilings
+    H=153: 9 GS tilings
+    H=155: 7 GS tilings
+    H=157: 9 GS tilings
+    H=159: 30 GS tilings
+    H=171: 9 GS tilings
+    H=175: 9 GS tilings
+    H=189: 3 GS tilings
+
+  Weight distribution of GS tilings:
+    weight 0: 1
+    weight 1: 3
+    weight 2: 9
+    weight 3: 19
+    weight 4: 33
+    weight 5: 51
+    weight 6: 65
+    weight 7: 75
+    weight 8: 75
+    weight 9: 65
+    weight 10: 51
+    weight 11: 33
+    weight 12: 19
+    weight 13: 9
+    weight 14: 3
+    weight 15: 1
+
+  Self-flip analysis:
+    Blueself (GS + self-flip same H): 4 tilings
+    Expected: 0 (THM-023: blueself requires even n)
+
+======================================================================
+PART 3: REED-MULLER CODE CONNECTION
+  H(T) has degree d = 2*floor((n-1)/2) [Degree Drop Theorem]
+  So H is in RM(d, m) — the Reed-Muller code of order d on m variables
+  RM(d,m) has dimension sum_{k=0}^{d} C(m,k)
+======================================================================
+
+  n=3: degree d=2
+    Arc variables: m=3, RM(2,3) dim = 7
+    Tiling variables: m_tiling=1, RM(2,1) dim = 2
+    Total tournaments: 2^3 = 8
+    H values from 8 tournaments: at most 8 (in practice much fewer)
+
+  n=4: degree d=2
+    Arc variables: m=6, RM(2,6) dim = 22
+    Tiling variables: m_tiling=3, RM(2,3) dim = 7
+    Total tournaments: 2^6 = 64
+    H values from 64 tournaments: at most 64 (in practice much fewer)
+
+  n=5: degree d=4
+    Arc variables: m=10, RM(4,10) dim = 386
+    Tiling variables: m_tiling=6, RM(4,6) dim = 57
+    Total tournaments: 2^10 = 1024
+    H values from 1024 tournaments: at most 1024 (in practice much fewer)
+
+  n=6: degree d=4
+    Arc variables: m=15, RM(4,15) dim = 1941
+    Tiling variables: m_tiling=10, RM(4,10) dim = 386
+    Total tournaments: 2^15 = 32768
+    H values from 32768 tournaments: at most 32768 (in practice much fewer)
+
+======================================================================
+PART 4: STRIP STRUCTURE AND TILING CODES
+  Strip Str(k) = {(r,c) : r+c=k, r,c >= 1} has k-1 tiles
+  Strips are the 'rows' of the triangular grid (anti-diagonals)
+======================================================================
+
+  n=5:
+    Strip 2 (1 tiles): [(3, 1)]
+    Strip 3 (2 tiles): [(4, 2), (4, 1)]
+    Strip 4 (3 tiles): [(5, 3), (5, 2), (5, 1)]
+
+  Strip weight profiles for GS tilings:
+    strips=[0, 0, 0]: H values = [1]
+    strips=[0, 0, 1]: H values = [9]
+    strips=[0, 1, 0]: H values = [3]
+    strips=[0, 1, 1]: H values = [13, 15]
+    strips=[0, 1, 2]: H values = [15]
+    strips=[0, 2, 1]: H values = [9]
+    strips=[0, 2, 2]: H values = [11]
+    strips=[1, 0, 1]: H values = [9]
+    strips=[1, 0, 2]: H values = [13]
+    strips=[1, 1, 1]: H values = [11]
+    strips=[1, 1, 2]: H values = [15]
+    strips=[1, 1, 3]: H values = [13]
+    strips=[1, 2, 2]: H values = [11]
+    strips=[1, 2, 3]: H values = [9]
+
+  n=7:
+    Strip 2 (1 tiles): [(3, 1)]
+    Strip 3 (2 tiles): [(4, 2), (4, 1)]
+    Strip 4 (3 tiles): [(5, 3), (5, 2), (5, 1)]
+    Strip 5 (4 tiles): [(6, 4), (6, 3), (6, 2), (6, 1)]
+    Strip 6 (5 tiles): [(7, 5), (7, 4), (7, 3), (7, 2), (7, 1)]
+
+======================================================================
+PART 5: BLUE LINE SKELETON AND TANNER GRAPHS
+  In coding theory, the Tanner graph connects variable nodes to
+  check nodes. Does the skeleton have this structure?
+======================================================================
+
+  n=5: 16 GS tilings -> 7 classes
+    (np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), c3=0, H=1: 1 GS tilings
+    (np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)), c3=1, H=3: 1 GS tilings
+    (np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)), c3=3, H=9: 4 GS tilings
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), c3=4, H=11: 3 GS tilings
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), c3=4, H=13: 3 GS tilings
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), c3=4, H=15: 1 GS tilings
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), c3=5, H=15: 3 GS tilings
+
+  Skeleton edges (GS flip between different classes):
+    ((np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), 0, 1) <-> ((np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)), 3, 9)
+    ((np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)), 1, 3) <-> ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 13)
+    ((np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)), 3, 9) <-> ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 11)
+    ((np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)), 3, 9) <-> ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 13)
+    ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 11) <-> ((np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), 5, 15)
+    ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 13) <-> ((np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), 5, 15)
+    ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 15) <-> ((np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), 5, 15)
+
+  t3 parity bipartition check:
+    ((np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), 0, 1): t3=0 -> side EVEN
+    ((np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)), 1, 3): t3=1 -> side ODD
+    ((np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)), 3, 9): t3=3 -> side ODD
+    ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 11): t3=4 -> side EVEN
+    ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 13): t3=4 -> side EVEN
+    ((np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), 4, 15): t3=4 -> side EVEN
+    ((np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), 5, 15): t3=5 -> side ODD
+
+  Skeleton bipartite (t3 parity)? True
+
+======================================================================
+PART 6: HAMMING WEIGHT = BACKWARD ARC COUNT
+  The Hamming weight of a tiling = # backward (blue) arcs
+  = # arcs pointing 'against' the base path direction
+  This is related to the 'writhe' from knot theory (S69)
+======================================================================
+
+  n=5: Hamming weight (backward arcs) vs H:
+    hw= 0: mean H=  1.00, H range=[1,1], count=1
+    hw= 1: mean H=  4.67, H range=[3,9], count=6
+    hw= 2: mean H=  8.33, H range=[5,15], count=15
+    hw= 3: mean H= 11.00, H range=[5,15], count=20
+    hw= 4: mean H= 12.07, H range=[9,15], count=15
+    hw= 5: mean H= 11.33, H range=[9,13], count=6
+    hw= 6: mean H=  9.00, H range=[9,9], count=1
+
+  Mean H by Hamming weight (should be symmetric):
+    hw= 0: mean H =   1.00 #
+    hw= 1: mean H =   4.67 ####
+    hw= 2: mean H =   8.33 ########
+    hw= 3: mean H =  11.00 ###########
+    hw= 4: mean H =  12.07 ############
+    hw= 5: mean H =  11.33 ###########
+    hw= 6: mean H =   9.00 #########
+
+======================================================================
+DONE
+======================================================================
