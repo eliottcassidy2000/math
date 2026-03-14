@@ -1,0 +1,463 @@
+======================================================================
+PART 1: Z[omega] NORM SPECTRUM — ACHIEVABLE NORMS
+======================================================================
+
+N(a + b*omega) = a^2 - a*b + b^2
+This is a positive definite quadratic form (discriminant -3)
+
+Which positive integers are representable as a^2 - ab + b^2?
+Answer: n is representable iff all prime factors p = 2 mod 3 appear
+with EVEN exponent. Equivalently: n has no prime factor = 2 mod 3
+with odd exponent.
+
+Representable norms up to 100: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28, 31, 36, 37, 39, 43, 48, 49, 52, 57, 61, 63, 64, 67, 73, 75, 76, 79, 81, 84, 91, 93, 97, 100]
+Non-representable: [2, 5, 6, 8, 10, 11, 14, 15, 17, 18, 20, 22, 23, 24, 26, 29, 30, 32, 33, 34, 35, 38, 40, 41, 42, 44, 45, 46, 47, 50, 51, 53, 54, 55, 56, 58, 59, 60, 62, 65, 66, 68, 69, 70, 71, 72, 74, 77, 78, 80, 82, 83, 85, 86, 87, 88, 89, 90, 92, 94, 95, 96, 98, 99]
+
+Primes = 2 mod 3 up to 100: [2, 5, 11, 17, 23, 29, 41, 47, 53, 59, 71, 83, 89]
+
+Note: the Eisenstein norm for tournaments is NOT the standard norm.
+Tournament norm: N(I(omega)) = a1^2 - a1*a2 + a2^2 - a1 - a2 + 1
+                             = N_std(a1 - (a2+1)/2, ...) - shifted
+Let's check which TOURNAMENT norms occur:
+  Achieved tournament norms: [1, 3, 13, 21, 25, 31, 43, 52, 57, 64, 73, 100, 111, 121, 133, 139, 144, 147, 157, 169, 211, 217, 225, 241, 259, 273, 307, 324, 327, 343]...
+  Total distinct norms: 153
+  Gap norms (not achieved): [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36]...
+
+  Tournament norms mod 3: {0: 45, 1: 108}
+  NO norm = 2 mod 3? True
+
+======================================================================
+PART 2: I(omega) MOD 3 — THE REDUCED INVARIANT
+======================================================================
+
+I(omega) = (1-a2) + (a1-a2)*omega in Z[omega]
+Reducing mod 3:
+  I(omega) mod 3 = ((1-a2) mod 3) + ((a1-a2) mod 3)*omega
+  Lives in F_9 = F_3[omega] = (Z/3Z)[x]/(x^2+x+1)
+
+I(omega) mod 3 distribution at n=7 (5000 samples):
+  0 + 0*omega :  508 ( 10.2%), norm mod 3 = 0
+  0 + 1*omega :  474 (  9.5%), norm mod 3 = 1
+  0 + 2*omega :  654 ( 13.1%), norm mod 3 = 1
+  1 + 0*omega :  686 ( 13.7%), norm mod 3 = 1
+  1 + 1*omega :  588 ( 11.8%), norm mod 3 = 1
+  1 + 2*omega :  428 (  8.6%), norm mod 3 = 0
+  2 + 0*omega :  519 ( 10.4%), norm mod 3 = 1
+  2 + 1*omega :  502 ( 10.0%), norm mod 3 = 0
+  2 + 2*omega :  641 ( 12.8%), norm mod 3 = 1
+
+F_9 has 9 elements, but only some appear as I(omega) mod 3.
+The non-appearing elements correspond to 'forbidden residues'.
+
+All 9 elements of F_9 = F_3[omega]:
+  0 + 0*omega: norm = 0, occurs 508 times
+  0 + 1*omega: norm = 1, occurs 474 times
+  0 + 2*omega: norm = 1, occurs 654 times
+  1 + 0*omega: norm = 1, occurs 686 times
+  1 + 1*omega: norm = 1, occurs 588 times
+  1 + 2*omega: norm = 0, occurs 428 times
+  2 + 0*omega: norm = 1, occurs 519 times
+  2 + 1*omega: norm = 0, occurs 502 times
+  2 + 2*omega: norm = 1, occurs 641 times
+
+======================================================================
+PART 3: I(i) — EVALUATION AT 4TH ROOT OF UNITY (GAUSSIAN)
+======================================================================
+
+I(i) = 1 + a1*i + a2*i^2 = 1 + a1*i - a2 = (1-a2) + a1*i
+This is a Gaussian integer in Z[i]!
+Gaussian norm: N(I(i)) = (1-a2)^2 + a1^2
+
+Gaussian norm distribution at n=7 (3000 samples):
+  N_gauss =      1:    7 (  0.2%)
+  N_gauss =      2:   13 (  0.4%)
+  N_gauss =      4:    1 (  0.0%)
+  N_gauss =      5:   25 (  0.8%)
+  N_gauss =     10:    3 (  0.1%)
+  N_gauss =     17:   33 (  1.1%)
+  N_gauss =     26:   30 (  1.0%)
+  N_gauss =     36:   15 (  0.5%)
+  N_gauss =     37:   16 (  0.5%)
+  N_gauss =     50:   45 (  1.5%)
+  N_gauss =     65:   16 (  0.5%)
+  N_gauss =     81:   28 (  0.9%)
+  N_gauss =     82:   36 (  1.2%)
+  N_gauss =     85:    4 (  0.1%)
+  N_gauss =    101:   32 (  1.1%)
+  N_gauss =    121:   13 (  0.4%)
+  N_gauss =    122:   30 (  1.0%)
+  N_gauss =    144:   34 (  1.1%)
+  N_gauss =    145:   58 (  1.9%)
+  N_gauss =    169:   29 (  1.0%)
+
+Comparison: Eisenstein vs Gaussian norm
+    a1   a2     H  N_eis  N_gau N_eis/N_gau
+    36    6    97   1075   1321     0.8138
+    37    4    91   1197   1378     0.8687
+    45    6   115   1741   2050     0.8493
+    28    4    73    657    793     0.8285
+    32    4    81    877   1033     0.8490
+    25    5    71    496    641     0.7738
+    34    6    93    949   1181     0.8036
+    30    4    77    763    909     0.8394
+    28    6    81    619    809     0.7651
+    30    3    73    787    904     0.8706
+    13    0    27    157    170     0.9235
+    53    8   139   2389   2858     0.8359
+    20    1    45    361    400     0.9025
+    24    4    65    469    585     0.8017
+     9    1    23     64     81     0.7901
+
+Relation between the two norms:
+  N_eis = a1^2 - a1*a2 + a2^2 - a1 - a2 + 1
+  N_gau = a1^2 + (1-a2)^2 = a1^2 + a2^2 - 2*a2 + 1
+  Difference: N_eis - N_gau = -a1*a2 + 2*a2^2 - a1 + a2
+            = a2*(2*a2 - a1) - (a1 - a2)
+            = (a2 - 1)*(2*a2 - a1) + (a2 - a1)
+
+  N_eis = N_gau iff -a1*a2 + 2*a2^2 - a1 + a2 = 0
+                iff a2*(2*a2 - a1 + 1) = a1
+  For a2=0: a1=0 (trivial)
+  For a2=1: 1*(2 - a1 + 1) = a1 => 3 - a1 = a1 => a1 = 3/2 (no integer)
+  So they are equal ONLY at (0,0) among non-negative integers!
+
+======================================================================
+PART 4: I(zeta_8) — 8TH ROOT OF UNITY EVALUATION
+======================================================================
+
+zeta_8 = e^(2*pi*i/8) = cos(pi/4) + i*sin(pi/4) = (1+i)/sqrt(2)
+       = (0.7071067811865476+0.7071067811865476j)
+  |zeta_8| = 1
+  zeta_8^2 = i
+  zeta_8^4 = -1
+  zeta_8^8 = 1
+
+I(zeta_8) = 1 + a1*zeta_8 + a2*zeta_8^2 = 1 + a1*zeta_8 + a2*i
+  Real part: 1 + a1*cos(pi/4) = 1 + a1/sqrt(2)
+  Imag part: a1*sin(pi/4) + a2 = a1/sqrt(2) + a2
+
+  Z[zeta_8] has rank phi(8) = 4 as Z-module
+  Basis: 1, zeta_8, zeta_8^2=i, zeta_8^3 = i*zeta_8
+  I(zeta_8) = 1 + a1*zeta_8 + a2*zeta_8^2
+  Only uses 3 of the 4 basis elements (no zeta_8^3 component)
+
+Norm in Z[zeta_8]: N(alpha) = |alpha|^2 * |sigma(alpha)|^2
+  where sigma is the Galois conjugation zeta_8 -> zeta_8^3
+  sigma(I(zeta_8)) = 1 + a1*zeta_8^3 + a2*zeta_8^6
+                   = 1 + a1*zeta_8^3 + a2*(-i)
+
+  Sample |I(zeta_8)|^2 values at n=7:
+    a1= 22, a2= 5: |I(zeta_8)|^2 = 696.68, full norm = 225252
+    a1= 33, a2= 6: |I(zeta_8)|^2 = 1452.68, full norm = 1161154
+    a1= 46, a2= 6: |I(zeta_8)|^2 = 2608.38, full norm = 4428041
+    a1= 19, a2= 1: |I(zeta_8)|^2 = 416.74, full norm = 128881
+    a1= 18, a2= 2: |I(zeta_8)|^2 = 405.37, full norm = 102409
+    a1= 36, a2= 5: |I(zeta_8)|^2 = 1627.47, full norm = 1654372
+    a1= 26, a2= 4: |I(zeta_8)|^2 = 876.85, full norm = 446449
+    a1= 49, a2= 8: |I(zeta_8)|^2 = 3089.67, full norm = 5692194
+    a1= 22, a2= 2: |I(zeta_8)|^2 = 582.34, full norm = 230409
+    a1= 36, a2= 4: |I(zeta_8)|^2 = 1567.56, full norm = 1659169
+
+  |I(zeta_8)|^2 = (1 + a1/sqrt(2))^2 + (a1/sqrt(2) + a2)^2
+  = 1 + a1*sqrt(2) + a1^2/2 + a1^2/2 + a1*a2*sqrt(2) + a2^2
+  = 1 + a1^2 + a2^2 + (a1 + a1*a2)*sqrt(2)
+  NOTE: this has an IRRATIONAL part (involving sqrt(2))!
+  So |I(zeta_8)|^2 is NOT in Z unless a1*(1+a2) = 0
+  i.e., a1=0 or a2=-1 (impossible since a2>=0)
+  So only for trivial a1=0, |I(zeta_8)|^2 is rational!
+
+======================================================================
+PART 5: NORM COMPARISON ACROSS ROOTS OF UNITY
+======================================================================
+
+Comparing |I(x)|^2 at x = omega, i, -1:
+    a1   a2     H   |I(w)|^2   |I(i)|^2  I(-1)  I(-1)^2
+    12    0    25     133.00     145.00    -11      121
+    45   10   131    1621.00    2106.00    -34     1156
+    36    4    89    1129.00    1305.00    -31      961
+    24    4    65     469.00     585.00    -19      361
+    51    8   135    2199.00    2650.00    -42     1764
+    49   10   139    1953.00    2482.00    -38     1444
+    34    5    89     973.00    1172.00    -28      784
+    30    2    69     813.00     901.00    -27      729
+    52    8   137    2293.00    2753.00    -43     1849
+    59   10   159    2923.00    3562.00    -48     2304
+    36    6    97    1075.00    1321.00    -29      841
+    37    7   103    1116.00    1405.00    -29      841
+    30    4    77     763.00     909.00    -25      625
+    36    6    97    1075.00    1321.00    -29      841
+    14    3    41     147.00     200.00    -10      100
+
+Formulas:
+  |I(omega)|^2 = N_eis = a1^2 - a1*a2 + a2^2 - a1 - a2 + 1
+               (integer, always >= 0, never 2 mod 3)
+  |I(i)|^2     = N_gau = a1^2 + (1-a2)^2
+               (integer, sum of two squares)
+  I(-1)^2      = (1-a1+a2)^2
+               (perfect square)
+
+Product of norms: |I(omega)|^2 * |I(i)|^2 * I(-1)^2
+  a1= 10, a2= 2: N_e=   73, N_g=  101, N_-1=   49, product=    361277
+  a1= 43, a2= 7: N_e= 1548, N_g= 1885, N_-1= 1225, product=3574525500
+  a1= 30, a2= 4: N_e=  763, N_g=  909, N_-1=  625, product= 433479375
+  a1=  5, a2= 0: N_e=   21, N_g=   26, N_-1=   16, product=      8736
+  a1= 28, a2= 4: N_e=  657, N_g=  793, N_-1=  529, product= 275609529
+  a1= 31, a2= 4: N_e=  819, N_g=  970, N_-1=  676, product= 537034680
+  a1= 39, a2= 8: N_e= 1227, N_g= 1570, N_-1=  900, product=1733751000
+  a1=  2, a2= 0: N_e=    3, N_g=    5, N_-1=    1, product=        15
+  a1= 46, a2= 6: N_e= 1825, N_g= 2141, N_-1= 1521, product=5943041325
+  a1= 13, a2= 1: N_e=  144, N_g=  169, N_-1=  121, product=   2944656
+
+======================================================================
+PART 6: QUATERNIONIC STRUCTURE OF I(i)
+======================================================================
+
+I(i) = (1-a2) + a1*i = Gaussian integer
+Gaussian integers Z[i] are the 'complex part' of quaternions H
+
+Can we define a 'quaternionic tournament invariant'?
+  Q(T) = I(1) + I(i)*j = (1+a1+a2) + ((1-a2) + a1*i)*j
+  = (1+a1+a2) + (1-a2)*j + a1*ij
+  = (1+a1+a2) + (1-a2)*j + a1*k
+  (using quaternion convention ij = k)
+
+Quaternionic tournament invariant Q(T) = w + xi + yj + zk:
+  a1= 22, a2= 5: Q = 28 + 0i + -4j + 22k, |Q|^2 = 1284, H = 65
+  a1= 33, a2= 6: Q = 40 + 0i + -5j + 33k, |Q|^2 = 2714, H = 91
+  a1= 46, a2= 6: Q = 53 + 0i + -5j + 46k, |Q|^2 = 4950, H = 117
+  a1= 19, a2= 1: Q = 21 + 0i + 0j + 19k, |Q|^2 = 802, H = 43
+  a1= 18, a2= 2: Q = 21 + 0i + -1j + 18k, |Q|^2 = 766, H = 45
+  a1= 36, a2= 5: Q = 42 + 0i + -4j + 36k, |Q|^2 = 3076, H = 93
+  a1= 26, a2= 4: Q = 31 + 0i + -3j + 26k, |Q|^2 = 1646, H = 69
+  a1= 49, a2= 8: Q = 58 + 0i + -7j + 49k, |Q|^2 = 5814, H = 131
+  a1= 22, a2= 2: Q = 25 + 0i + -1j + 22k, |Q|^2 = 1110, H = 53
+  a1= 36, a2= 4: Q = 41 + 0i + -3j + 36k, |Q|^2 = 2986, H = 89
+
+Quaternionic norm |Q|^2 = (1+a1+a2)^2 + (1-a2)^2 + a1^2
+  = I(1)^2 + N_gaussian(I(i))
+  = (total indep sets + 1)^2 + Gaussian norm
+
+Relation to H:
+  H = I(2) = 1 + 2*a1 + 4*a2
+  I(1) = 1 + a1 + a2
+  N_gau = a1^2 + (1-a2)^2
+  |Q|^2 = I(1)^2 + N_gau = (1+a1+a2)^2 + a1^2 + (1-a2)^2
+
+  Can we recover H from |Q|^2? Probably not uniquely,
+  but |Q|^2 encodes STRICTLY MORE information than H.
+
+Octonionic extension (dim 8 = 2^3):
+  Would need evaluations at 4 independent points to fill 8 components
+  e.g., I(1), I(i), I(omega), I(omega*i)
+  But I(x) is degree 2, so 3 points determine it completely
+  An octonionic invariant would be REDUNDANT for quadratic I(x)
+  This is why n=7 (quadratic I.P.) doesn't 'see' the octonionic structure
+  At n>=8, I(x) can be cubic => need 4 points => octonionic NOT redundant!
+  THIS is the Cayley-Dickson connection: at n=8, the invariant
+  needs more than quaternionic (dim 4) structure!
+
+======================================================================
+PART 7: THE FOUR EVALUATIONS I(1), I(2), I(omega), I(i)
+======================================================================
+
+I(x) = 1 + a1*x + a2*x^2 (degree 2)
+Three points determine I(x) uniquely.
+With FOUR points, we have one redundancy = one CHECK.
+
+The four evaluations:
+  I(1) = 1 + a1 + a2         (total independent sets + empty set)
+  I(2) = 1 + 2*a1 + 4*a2     (= H, Hamiltonian paths)
+  I(omega) = (1-a2)+(a1-a2)w  (Eisenstein integer)
+  I(i) = (1-a2) + a1*i        (Gaussian integer)
+
+The CHECK relation:
+  I(2) = 2*I(1) + 2*a2 - 1
+  H = 2*(1+a1+a2) + 2*a2 - 1 = 1 + 2*a1 + 4*a2  (correct)
+
+  More interesting: I(2) from I(omega) and I(i)?
+  I(omega): real = 1-a2, omega-coeff = a1-a2
+    => a2 = 1-real, a1 = omega-coeff + (1-real)
+  I(i): real = 1-a2, imag = a1
+    => a2 = 1-Re(I(i)), a1 = Im(I(i))
+  Then H = 1 + 2*Im(I(i)) + 4*(1 - Re(I(i)))
+         = 5 - 4*Re(I(i)) + 2*Im(I(i))
+
+Verification at n=7:
+  a1= 36, a2= 6: H=97, I(1)=43, Re(I(i))=-5, Im(I(i))=36, 5-4Re+2Im=97
+  a1= 37, a2= 4: H=91, I(1)=42, Re(I(i))=-3, Im(I(i))=37, 5-4Re+2Im=91
+  a1= 45, a2= 6: H=115, I(1)=52, Re(I(i))=-5, Im(I(i))=45, 5-4Re+2Im=115
+  a1= 28, a2= 4: H=73, I(1)=33, Re(I(i))=-3, Im(I(i))=28, 5-4Re+2Im=73
+  a1= 32, a2= 4: H=81, I(1)=37, Re(I(i))=-3, Im(I(i))=32, 5-4Re+2Im=81
+  a1= 25, a2= 5: H=71, I(1)=31, Re(I(i))=-4, Im(I(i))=25, 5-4Re+2Im=71
+  a1= 34, a2= 6: H=93, I(1)=41, Re(I(i))=-5, Im(I(i))=34, 5-4Re+2Im=93
+  a1= 30, a2= 4: H=77, I(1)=35, Re(I(i))=-3, Im(I(i))=30, 5-4Re+2Im=77
+
+The formula H = 5 - 4*Re(I(i)) + 2*Im(I(i)) shows:
+  H increases with a1 (more cycles -> more paths)
+  H increases with a2 (more disjoint pairs -> more paths)
+  The coefficients 4 and 2 are POWERS OF 2
+  And the constant 5 = 2+3!
+
+======================================================================
+PART 8: CAYLEY-DICKSON DOUBLING AND I.P. DEGREE TRANSITION
+======================================================================
+
+I(x) = 1 + a1*x + a2*x^2 + a3*x^3 + ...
+The maximum independence number alpha(Omega(T)) determines the degree.
+
+  n <= 4: alpha(Omega) = 0 or 1, degree <= 1 (real = dim 1)
+  n = 5,6,7: alpha(Omega) = 0,1, or 2, degree <= 2 (complex = dim 2)
+  n = 8: alpha(Omega) can reach 3, degree <= 3
+  n = 9+: alpha(Omega) can reach 4+, degree <= 4+
+
+Cayley-Dickson parallel:
+  Degree 1 (linear I.P.): R (dim 1) — fully ordered
+  Degree 2 (quadratic I.P.): C (dim 2) — lose ordering
+  Degree 3 (cubic I.P.): between C and H
+  Degree 4 (quartic I.P.): H (dim 4) — lose commutativity
+
+But wait: Cayley-Dickson doubles, while I.P. degree increments by 1.
+The connection is through EVALUATION POINTS needed:
+  Degree d polynomial needs d+1 points to determine it
+  d=1: 2 points = 2^1 (complex)
+  d=2: 3 points (not a power of 2!)
+  d=3: 4 points = 2^2 (quaternionic)
+  d=7: 8 points = 2^3 (octonionic)
+
+  The Cayley-Dickson step at 2^k evaluations corresponds to
+  I.P. degree 2^k - 1:
+    2^1 - 1 = 1: linear I.P. (n <= 4)
+    2^2 - 1 = 3: cubic I.P. (n = 8)
+    2^3 - 1 = 7: degree-7 I.P. (n = ?)
+
+  For degree 3 (n=8): the 4 evaluations I(1), I(2), I(omega), I(i)
+  form a COMPLETE basis for recovering I(x).
+  This is the 'quaternionic' level of information.
+  The fact that n=8 = 2^3 matches the Cayley-Dickson dim for
+  quaternion -> octonion transition is suggestive but not proven.
+
+Estimating max alpha(Omega) at n=7 vs n=8:
+  n=7: alpha(Omega) <= 2 always (proved, Omega has <= 14+21+1=36 vertices)
+  n=8: alpha(Omega) can reach 3 (3 mutually disjoint odd cycles)
+  Example: three 3-cycles on disjoint vertex triples
+    Vertices {0,1,2}, {3,4,5}, {6,7}: only 2 triples of 3 from 8 vertices
+    Wait: C(8,3)=56, can we find 3 DISJOINT 3-cycles?
+    Need 9 vertices for 3 disjoint triples, but n=8 has only 8!
+    So max disjoint 3-cycles at n=8 is FLOOR(8/3) = 2
+    But: a 3-cycle and a 5-cycle on disjoint vertices: 3+5=8 = n!
+    So alpha(Omega) >= 2 at n=8, and a1=3 = 1 disjoint 3-5 pair + 1 cycle
+    Can we get 3 mutually disjoint odd cycles? No, because 3+3+3=9 > 8
+    But 3+5 = 8, and we need a third cycle disjoint from both.
+    That's impossible: 8 vertices are all used up!
+    So alpha(Omega) = 2 at n=8 as well! (for 3-cycles and 5-cycles)
+
+    What about at n=9? 3+3+3=9: three disjoint 3-cycles possible!
+    So alpha(Omega) can reach 3 at n=9 = 3^2
+    The CUBIC transition happens at n=9, not n=8!
+    This matches: 9 = 3^2, and cubic I.P. = degree 3
+
+======================================================================
+PART 9: DISCRIMINANT 4*a2 - a1^2 AND PHASE TRANSITION
+======================================================================
+
+I(x) = 1 + a1*x + a2*x^2
+Roots: x = (-a1 +- sqrt(a1^2 - 4*a2)) / (2*a2)
+Discriminant: Delta = a1^2 - 4*a2
+  Delta > 0: two real roots (hyperbolic)
+  Delta = 0: double root (parabolic)
+  Delta < 0: two complex roots (elliptic)
+
+Root type distribution at n=7 (5000 samples):
+  elliptic    :    0 (0.0%)
+  hyperbolic  : 4272 (85.4%)
+  parabolic   :    5 (0.1%)
+  linear (a2=0): 723
+
+The phase transition at Delta = 0:
+  a1^2 = 4*a2 => a2 = a1^2/4
+  For integer a2: a1 must be even, say a1 = 2m, then a2 = m^2
+  Parabolic tournaments: (a1, a2) = (2m, m^2)
+  m=0: (a1= 0, a2= 0), H=   1, N_eis=   1, double root at x = inf
+  m=1: (a1= 2, a2= 1), H=   9, N_eis=   1, double root at x = -1.0000
+  m=2: (a1= 4, a2= 4), H=  25, N_eis=   9, double root at x = -0.5000
+  m=3: (a1= 6, a2= 9), H=  49, N_eis=  49, double root at x = -0.3333
+  m=4: (a1= 8, a2=16), H=  81, N_eis= 169, double root at x = -0.2500
+  m=5: (a1=10, a2=25), H= 121, N_eis= 441, double root at x = -0.2000
+  m=6: (a1=12, a2=36), H= 169, N_eis= 961, double root at x = -0.1667
+  m=7: (a1=14, a2=49), H= 225, N_eis=1849, double root at x = -0.1429
+
+Achievable parabolic points at n=7:
+  (a1=2, a2=1): found 3 times
+
+  Note: for (a1, a2) = (2, 1), Delta = 4-4 = 0
+  This requires exactly 2 odd cycles with 1 disjoint pair
+  Two disjoint odd cycles: possible at n>=6 (e.g., 3+3=6)
+  At n=6: (a1=2, a2=1) found 10/5000 times (0.2%)
+
+======================================================================
+PART 10: H MOD 8 — THE OCTONIONIC RESIDUE
+======================================================================
+
+H = 1 + 2*a1 + 4*a2
+H mod 2 = 1 always
+H mod 4 = 1 + 2*(a1 mod 2)
+H mod 8 = 1 + 2*a1 + 4*(a2 mod 2)  (since 8|4*2)
+        = 1 + 2*(a1 mod 4) + 4*(a2 mod 2)
+
+H mod 4 distribution at n=7:
+  H = 0 mod 4:    0 (0.0%)
+  H = 1 mod 4: 2820 (56.4%)
+  H = 2 mod 4:    0 (0.0%)
+  H = 3 mod 4: 2180 (43.6%)
+
+H mod 8 distribution at n=7:
+  H = 0 mod 8:    0 (0.0%)
+  H = 1 mod 8: 1495 (29.9%)
+  H = 2 mod 8:    0 (0.0%)
+  H = 3 mod 8: 1184 (23.7%)
+  H = 4 mod 8:    0 (0.0%)
+  H = 5 mod 8: 1325 (26.5%)
+  H = 6 mod 8:    0 (0.0%)
+  H = 7 mod 8:  996 (19.9%)
+
+Explanation:
+  H mod 8 = (1 + 2*a1 + 4*a2) mod 8
+  H is always odd, so only residues 1, 3, 5, 7 appear
+  H mod 4: only 1 and 3 (since H = 1 + 2*a1 mod 4)
+    H = 1 mod 4 iff a1 even
+    H = 3 mod 4 iff a1 odd
+
+  H mod 8:
+    1 mod 8: a1 even, a2 even
+    3 mod 8: a1 odd, a2 even
+    5 mod 8: a1 even, a2 odd
+    7 mod 8: a1 odd, a2 odd
+
+  H mod 8 determines (a1 mod 2, a2 mod 2)!
+  This is a 2-dimensional mod-2 invariant
+  = point in F_2 x F_2 = (Z/2Z)^2
+  The group (Z/2Z)^2 has order 4 = 2^2 = dim(quaternions)
+
+  Extended: H mod 16 determines (a1 mod 4, a2 mod 2)
+  and H mod 32 determines (a1 mod 8, a2 mod 2)
+  In general: H mod 2^k determines (a1 mod 2^(k-1), a2 mod 2^(k-2))
+
+  2-adic structure of H-1:
+  H - 1 = 2*(a1 + 2*a2)
+  v_2(H-1) >= 1 always
+  v_2(H-1) >= 2 iff a1 + 2*a2 even iff a1 even
+  v_2(H-1) >= 3 iff a1 + 2*a2 = 0 mod 4 iff a1 = 0 mod 4
+
+  v_2(H-1) distribution at n=7:
+    v_2(H-1) = 0:   12 (0.2%)
+    v_2(H-1) = 1: 2262 (45.2%)
+    v_2(H-1) = 2: 1295 (25.9%)
+    v_2(H-1) = 3:  669 (13.4%)
+    v_2(H-1) = 4:  327 (6.5%)
+    v_2(H-1) = 5:  192 (3.8%)
+    v_2(H-1) = 6:  157 (3.1%)
+    v_2(H-1) = 7:   86 (1.7%)
+
+======================================================================
+END OF Z[omega] TOWER EXPLORATION
+======================================================================
