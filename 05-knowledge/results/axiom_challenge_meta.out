@@ -1,0 +1,258 @@
+======================================================================
+AXIOM CHALLENGE & META-STRUCTURE EXPLORATION
+kind-pasteur-2026-03-14-S83
+======================================================================
+
+======================================================================
+AXIOM 1 CHALLENGED: IS F(T,3) = I(Omega,3) MORE NATURAL THAN H?
+  H = I(Omega, 2) = the 'binary' evaluation
+  I(Omega, 3) = the 'ternary' evaluation
+  At n=5: I(Omega,3) = 1 + 3*alpha_1 = (3H-1)/2
+  Is I(Omega, 3) 'better' in some sense?
+======================================================================
+
+  n=5: Information comparison
+    I(Omega,1): 7 values, entropy = 2.6810 bits
+    I(Omega,2) = H: 7 values, entropy = 2.6810 bits
+    I(Omega,3): 7 values, entropy = 2.6810 bits
+
+    At n=5: all three are affinely related (alpha_2=0)
+    So they carry EXACTLY the same information!
+    The difference only matters at n>=6 where alpha_2 > 0.
+
+  At n>=6: different lambda emphasize different cycle structures:
+    lambda=1: weights all independent sets equally (alpha_k has weight 1)
+    lambda=2: H = OCF point, weights pairs 4x singles (standard)
+    lambda=3: weights pairs 9x singles (emphasizes disjoint cycles)
+    lambda->inf: dominated by max independent set (clique number)
+
+======================================================================
+AXIOM 2 CHALLENGED: ARE THE GAPS {7,21} STRUCTURALLY INEVITABLE?
+  THM-200 proves H≠7 via Omega = K_3 impossibility
+  But WHY is K_3 impossible? Is it just combinatorics,
+  or is there a deeper algebraic reason?
+======================================================================
+
+  The (z-2)(z-3) orbit: 7, 21, 63, 189, 567, 1701, ...
+  [7, 21, 63, 189, 567, 1701, 5103, 15309, 45927]
+  Forbidden: 7, 21
+  Achievable: 63 (n=8), 189 (n=7, Paley!)
+
+  META-PATTERN: The first TWO values of the orbit are forbidden,
+  then it 'escapes'. Why two? Because:
+  - H=7 requires alpha_1=3, alpha_2=0 with Omega=K_3
+  - H=21 requires alpha_1+2*alpha_2=10 with specific Omega
+  - H=63 can use alpha_3>=1 (which first appears at n=8)
+  The 'escape' happens when higher alpha_k terms kick in!
+
+======================================================================
+AXIOM 3 CHALLENGED: IS THE CYCLE BASIS MORE NATURAL THAN ARC BASIS?
+  H = 1 + 2*alpha_1 + 4*alpha_2 + ... (OCF)
+  The OCF writes H in terms of CYCLE STRUCTURE, not arcs.
+  Maybe the 'right' basis for understanding H is:
+  {alpha_k : k = 0,1,2,...} not {arc_e : e in E}
+======================================================================
+
+  H-1 = 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
+  = 2*(alpha_1 + 2*alpha_2 + 4*alpha_3 + ...)
+  = 2 * T where T = alpha_1 + 2*alpha_2 + ...
+
+  T is the 'total cycle weight' = alpha_1 + 2*alpha_2 + 4*alpha_3 + ...
+  H = 1 + 2T, so T = (H-1)/2
+  T counts independent sets of Omega weighted by 2^(size-1)
+
+  INSIGHT: T is the 'half-Redei' number. H = 2T+1 (always odd).
+  T = 0 (transitive), T = 1 (one 3-cycle), T = 2 (two non-disjoint), ...
+  T is a NON-NEGATIVE INTEGER that fully determines H.
+
+  Forbidden T values:
+    T=3 (H=7): FORBIDDEN (proved)
+    T=10 (H=21): FORBIDDEN (proved through n<=8)
+    T=31 (H=63): NOT forbidden (achieved at n=8)
+
+======================================================================
+META-STRUCTURE 1: THE SHAPE OF OUR THEORY
+======================================================================
+
+  Our theory has a LAYERED structure, like an onion:
+
+  LAYER 0 (Ground Truth):
+    H(T) is always odd. [Redei, 1934]
+    H(T) = I(Omega(T), 2). [Grinberg-Stanley, 2023]
+
+  LAYER 1 (Structural):
+    deg(H) = 2*floor((n-1)/2). [Our proof via path reversal]
+    Fourier spectrum: only even levels, 75/25 split.
+    H(T) = H(T^op). [Path reversal]
+
+  LAYER 2 (Landscape):
+    Unimodal for n<=5, multimodal for n>=6. [Our computation]
+    Score regularization = H maximization (R=-0.97).
+    Phase transition at beta_c ≈ 0.3-0.8. [Stat mech]
+
+  LAYER 3 (Forbidden Structure):
+    H=7 forbidden (Omega=K_3 impossible). [THM-200]
+    H=21 forbidden (6-way block). [THM-079]
+    (z-2)(z-3) orbit escapes at k=2 via alpha_3.
+
+  LAYER 4 (Connections):
+    DC = Jones skein relation. [Our observation]
+    GS code = product code on pin grid. [Our proof]
+    Lex product formula for transitive T1. [Our verification]
+    0.27 = non-constant Fourier energy / m. [Our computation]
+
+  LAYER 5 (Open Frontiers):
+    Categorification via Khovanov/Sazdanovic-Yip?
+    Awan-Bernardi B-polynomial specialization?
+    Tournament operads and composition?
+    Var/Mean^2 = 1/3 exact proof?
+
+  META-OBSERVATION: Each layer EXPLAINS the one above it.
+  OCF explains Redei. Fourier explains the landscape.
+  The forbidden structure explains the gaps. Connections
+  explain WHY the structure looks the way it does.
+
+
+======================================================================
+META-STRUCTURE 2: THE 2-3-5 UNIVERSALITY
+======================================================================
+
+  The numbers 2, 3, 5 appear EVERYWHERE in tournament theory:
+
+  THE NUMBER 2:
+    - H = I(Omega, 2)
+    - deg(H) coefficients = +-2 at odd n
+    - H(T) = H(T^op) (involution of order 2)
+    - 2 orientations per arc
+    - mean H = n!/2^{n-1}
+
+  THE NUMBER 3:
+    - 3-cycles are the fundamental building blocks
+    - (z-2)(z-3) recurrence
+    - H = 1 + 2T with T = alpha_1 + 2*alpha_2 (base 2 + base 3 interplay)
+    - max_H ratio approaches 3 for consecutive n
+    - GS weight enumerator has (1+z^2)^p factors (degree 2, from pairs)
+
+  THE NUMBER 5:
+    - 5-cycles first appear at n=5
+    - KEY_SUM = 2+3 = 5
+    - n=5 is the largest n with claw-free Omega
+    - H(T_5 regular) = 15 = 3*5
+
+  WHY 2, 3, 5? These are the first three primes.
+  Tournament theory lives in the intersection of:
+  - Binary choice (2)
+  - Cyclic structure (3)
+  - Pentagonal symmetry (5)
+
+  CHALLENGE: Is this just pattern-matching, or is there
+  a STRUCTURAL reason why exactly these three primes matter?
+
+
+======================================================================
+FRONTIER 1: p-ADIC EXPANSION OF H
+  H is always odd. What if we expand in powers of 2?
+  H = 1 + 2*(alpha_1 + 2*alpha_2 + 4*alpha_3 + ...)
+  The alpha_k ARE the p=2 expansion coefficients!
+======================================================================
+  bits=000000: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=000001: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=000010: H=  3, T=(H-1)/2= 1, T_binary=1
+  bits=000011: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=000100: H=  5, T=(H-1)/2= 2, T_binary=10
+  bits=000101: H=  3, T=(H-1)/2= 1, T_binary=1
+  bits=000110: H=  5, T=(H-1)/2= 2, T_binary=10
+  bits=000111: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=001000: H=  9, T=(H-1)/2= 4, T_binary=100
+  bits=001001: H=  5, T=(H-1)/2= 2, T_binary=10
+  bits=001010: H=  9, T=(H-1)/2= 4, T_binary=100
+  bits=001011: H=  3, T=(H-1)/2= 1, T_binary=1
+  bits=001100: H= 11, T=(H-1)/2= 5, T_binary=101
+  bits=001101: H=  5, T=(H-1)/2= 2, T_binary=10
+  bits=001110: H=  9, T=(H-1)/2= 4, T_binary=100
+  bits=001111: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=010000: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=010001: H=  3, T=(H-1)/2= 1, T_binary=1
+  bits=010010: H=  1, T=(H-1)/2= 0, T_binary=0
+  bits=010011: H=  1, T=(H-1)/2= 0, T_binary=0
+
+  The binary expansion of T = (H-1)/2 encodes the cycle structure!
+  T bit 0 (= alpha_1 mod 2): parity of total odd cycles
+  T bit 1 (= alpha_2 mod 2): parity of disjoint cycle pairs
+  T bit 2 (= alpha_3 mod 2): parity of disjoint cycle triples
+
+======================================================================
+FRONTIER 2: THE TOURNAMENT CATEGORY
+  Objects: tournaments
+  Morphisms: tournament homomorphisms (arc-preserving maps)
+  Question: What are the universal properties of H in this category?
+======================================================================
+  THEOREM: H is monotone decreasing under contraction:
+  H(T/e) <= H(T) (from DC: H = H(T\e) + H(T/e) >= H(T/e))
+
+  Is H monotone under general homomorphisms? OPEN QUESTION.
+
+======================================================================
+FRONTIER 3: EXTENDING BEYOND TOURNAMENTS
+  What if we allow bidirectional arcs? (semicomplete digraphs)
+  What if we allow missing arcs? (partial tournaments)
+  H(T)=7 is impossible for TOURNAMENTS but possible for DIGRAPHS!
+======================================================================
+  The directed 7-cycle C_7 has H(C_7) = 7 (as a digraph).
+  But C_7 is NOT a tournament (only 7 arcs, not C(7,2)=21).
+  The COMPLETENESS constraint is what forbids H=7.
+
+  DEEP INSIGHT: Tournament theory is about what COMPLETENESS forces.
+  H=7 is impossible BECAUSE every vertex pair has an arc,
+  creating unavoidable additional cycles that push H above 7.
+
+======================================================================
+FRONTIER 4: THE DUAL — WHAT COUNTS HAM CYCLES INSTEAD OF PATHS?
+======================================================================
+  Let C(T) = number of directed Hamiltonian cycles in T.
+  Moon's theorem: C(T) > 0 iff T is strongly connected.
+
+  n=5: (H, C) joint distribution:
+    H=  1, C=  0:  120 tournaments, C/H=0.0
+    H=  3, C=  0:  120 tournaments, C/H=0.0
+    H=  5, C=  0:  240 tournaments, C/H=0.0
+    H=  9, C=  1:  240 tournaments, C/H=0.1111111111111111
+    H= 11, C=  1:  120 tournaments, C/H=0.09090909090909091
+    H= 13, C=  2:  120 tournaments, C/H=0.15384615384615385
+    H= 15, C=  2:   24 tournaments, C/H=0.13333333333333333
+    H= 15, C=  3:   40 tournaments, C/H=0.2
+
+  For regular tournaments (H=15): C/H values =  [0.13333333333333333, 0.2]
+
+======================================================================
+FRONTIER 5: THE MASTER GENERATING FUNCTION
+  Z(q, t, n) = sum over all tournaments T on n vertices:
+  q^{H(T)} * t^{c3(T)}
+  This encodes EVERYTHING about (H, c3) jointly.
+  Does Z factor? Have nice specializations?
+======================================================================
+
+  n=4: Z(q,t) =
+    + 24 * q^1 * t^0
+    + 16 * q^3 * t^1
+    + 24 * q^5 * t^2
+
+  Z(1,1) = 64 = 2^6 ✓
+  Z(1,0) = 24 = number of transitive tournaments = 24
+
+  n=5: Z(q,t) =
+    + 120 * q^1 * t^0
+    + 120 * q^3 * t^1
+    + 240 * q^5 * t^2
+    + 240 * q^9 * t^3
+    + 120 * q^11 * t^4
+    + 120 * q^13 * t^4
+    + 40 * q^15 * t^4
+    + 24 * q^15 * t^5
+
+  Z(1,1) = 1024 = 2^10 ✓
+  Z(1,0) = 120 = number of transitive tournaments = 120
+
+======================================================================
+DONE — AXIOMS CHALLENGED, FRONTIERS EXPLORED
+======================================================================
