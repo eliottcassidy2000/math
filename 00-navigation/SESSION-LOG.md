@@ -32,8 +32,14 @@ Deep exploration of quiver representation theory, Dynkin diagrams, and informati
 9. **Disjoint interval modules (HYP-1130)**: Max antichain in A₆ interval modules = 3 = KEY₂. 70 disjoint pairs, 140 overlapping.
 10. **Cartan matrix bug fixed**: E-type branching was at node 2 (wrong), corrected to node 3 (Bourbaki convention).
 
-**New contributions:** HYP-1122 to HYP-1130 (9 hypotheses), quiver_dynkin_deep.py (corrected), quiver_rep_deep.py (new)
-**Unresolved threads:** Prove H=21 impossible for all n. Is the A₆ Cartan matrix adjacency literally the decomposition block adjacency? Channel rate asymptotics (does 27% persist for n>6?).
+**Additional findings (continued session):**
+11. **alpha_2=0 for ALL n=5 tournaments (HYP-1131)**: Trivially proved — two disjoint odd cycles need ≥6 vertices. H=1+2·alpha_1 at n=5.
+12. **dc3-dc5 coupling theorem (HYP-1132)**: When all 3 triangles flip (dc3=±3), the 5-cycle change is determined by Hamiltonian path count in 3-vertex sub-tournament: dc5∈{±1,±3}, never ±2. Therefore da1=±5 impossible, |δH|=10 forbidden at n=5.
+13. **n=6 delta spectrum (HYP-1133)**: At n=6, |δH|=10 BECOMES achievable. New gaps at {28,30}. da2≠0 in 36% of flips.
+14. **(dc3,dc5) coupling table**: 7×7 matrix with only 17 non-zero entries, tridiagonal-like structure. Anti-symmetric under (dc3,dc5)→(-dc3,-dc5).
+
+**New contributions:** HYP-1122 to HYP-1133 (12 hypotheses), quiver_dynkin_deep.py, quiver_rep_deep.py, arc_flip_spectrum.py, da1_parity_analysis.py, dc3_dc5_coupling.py (5 scripts)
+**Unresolved threads:** Prove H=21 impossible for all n. Does the coupling theorem generalize to n>5? What is the representation-theoretic meaning of the (dc3,dc5) coupling matrix? Why are {28,30} missing from the n=6 delta spectrum?
 
 ---
 
