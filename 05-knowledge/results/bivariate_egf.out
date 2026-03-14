@@ -1,0 +1,86 @@
+======================================================================
+BIVARIATE EGF — THE CONCRETE TASK
+kind-pasteur-2026-03-14-S108i
+======================================================================
+
+--- STEP 1: Compute D_n(q) as a polynomial in q for small n
+  D_1(q) = 1q^0
+  D_2(q) = 1q^1
+  D_3(q) = 2q^1 + 1q^2
+  D_4(q) = 2q^0 + 5q^1 + 3q^2 + 1q^3
+  D_5(q) = 14q^0 + 20q^1 + 14q^2 + 4q^3 + 1q^4
+  D_6(q) = 90q^0 + 115q^1 + 72q^2 + 26q^3 + 5q^4 + 1q^5
+  D_7(q) = 646q^0 + 790q^1 + 467q^2 + 168q^3 + 41q^4 + 6q^5 + 1q^6
+
+--- STEP 2: Test recurrence D_n(q) = (n-1+q)*D_{n-1}(q) + (n-2)*D_{n-2}(q)
+
+  Testing: D_n(q) = (n-1+q)*D_{n-1}(q) + (n-1)*D_{n-2}(q)
+
+  q=1:
+    n=3: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 5, actual = 3, match = False
+    n=4: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 15, actual = 11, match = False
+    n=5: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 67, actual = 53, match = False
+    n=6: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 373, actual = 309, match = False
+    n=7: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 2481, actual = 2119, match = False
+
+  q=2:
+    n=3: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 10, actual = 8, match = False
+    n=4: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 46, actual = 32, match = False
+    n=5: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 224, actual = 158, match = False
+    n=6: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 1266, actual = 928, match = False
+    n=7: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 8372, actual = 6350, match = False
+
+  q=3:
+    n=3: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 17, actual = 15, match = False
+    n=4: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 99, actual = 71, match = False
+    n=5: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 557, actual = 389, match = False
+    n=6: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 3467, actual = 2433, match = False
+    n=7: (n-1+q)*D_{n-1} + (n-1)*D_{n-2} = 24231, actual = 17263, match = False
+
+  Testing: D_n(q) = n*D_{n-1}(q) + (n-1)*D_{n-2}(q)
+  q=1:
+    n=3: n*D_{n-1}+(n-1)*D_{n-2} = 5, actual = 3, diff = -2
+    n=4: n*D_{n-1}+(n-1)*D_{n-2} = 15, actual = 11, diff = -4
+    n=5: n*D_{n-1}+(n-1)*D_{n-2} = 67, actual = 53, diff = -14
+    n=6: n*D_{n-1}+(n-1)*D_{n-2} = 373, actual = 309, diff = -64
+    n=7: n*D_{n-1}+(n-1)*D_{n-2} = 2481, actual = 2119, diff = -362
+  q=2:
+    n=3: n*D_{n-1}+(n-1)*D_{n-2} = 8, actual = 8, diff = 0
+    n=4: n*D_{n-1}+(n-1)*D_{n-2} = 38, actual = 32, diff = -6
+    n=5: n*D_{n-1}+(n-1)*D_{n-2} = 192, actual = 158, diff = -34
+    n=6: n*D_{n-1}+(n-1)*D_{n-2} = 1108, actual = 928, diff = -180
+    n=7: n*D_{n-1}+(n-1)*D_{n-2} = 7444, actual = 6350, diff = -1094
+  q=3:
+    n=3: n*D_{n-1}+(n-1)*D_{n-2} = 11, actual = 15, diff = 4
+    n=4: n*D_{n-1}+(n-1)*D_{n-2} = 69, actual = 71, diff = 2
+    n=5: n*D_{n-1}+(n-1)*D_{n-2} = 415, actual = 389, diff = -26
+    n=6: n*D_{n-1}+(n-1)*D_{n-2} = 2689, actual = 2433, diff = -256
+    n=7: n*D_{n-1}+(n-1)*D_{n-2} = 19365, actual = 17263, diff = -2102
+
+  Differences D_n(q) - [n*D_{n-1}(q) + (n-1)*D_{n-2}(q)]:
+  q=1: diffs = [-2, -4, -14, -64, -362]
+  q=2: diffs = [0, -6, -34, -180, -1094]
+  q=3: diffs = [4, 2, -26, -256, -2102]
+
+--- STEP 3: Look at D_n(q) coefficients more carefully
+  a(n, 0) = coefficient of q^0 in D_n(q):
+    n=1: a(n,0) = 1
+    n=2: a(n,0) = 0
+    n=3: a(n,0) = 0
+    n=4: a(n,0) = 2
+    n=5: a(n,0) = 14
+    n=6: a(n,0) = 90
+    n=7: a(n,0) = 646
+  Hertzsprung A002464: 1, 0, 0, 2, 14, 90, 646
+  Match with A002464(n) for n>=4: confirmed!
+
+--- STEP 4: THE INSERTION RECURRENCE
+
+  Verifying insertion recurrence numerically:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\bivariate_egf.py", line 333, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\bivariate_egf.py", line 229, in main
+    pos_nm1 = list(pi).index(n-1)  # n-1 in 0-indexed = largest element
+ValueError: 2 is not in list
