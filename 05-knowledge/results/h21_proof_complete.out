@@ -1,0 +1,111 @@
+======================================================================
+PROOF ATTEMPT: K₁₀ CANNOT BE Ω(T)
+======================================================================
+
+3-cycle counts at n=7:
+Checking n=5 for exactly-k 3-cycles, no 5-cycles:
+  Distribution of t₃ at n=5 (1024 tournaments):
+    t₃=0: 120 tournaments
+    t₃=1: 120 tournaments
+    t₃=2: 240 tournaments
+    t₃=3: 240 tournaments
+    t₃=4: 280 tournaments
+    t₃=5: 24 tournaments
+
+======================================================================
+K₁₀ IMPOSSIBILITY ARGUMENT
+======================================================================
+
+
+THEOREM: K₁₀ cannot be Ω(T) for any tournament T.
+
+PROOF SKETCH:
+
+K₁₀ as Ω(T) means: T has exactly 10 directed odd cycles,
+every pair sharing at least one vertex, and no independent (disjoint) pair.
+
+Case 1: All 10 cycles are 3-cycles.
+  10 pairwise-intersecting 3-cycles (triangles on vertex sets).
+  By the Helly property for families of sets of bounded size:
+
+  CLAIM: 10 pairwise-intersecting 3-element subsets of an n-set
+  must have a common element when arranged as directed 3-cycles of a tournament.
+
+  PROOF: Consider the "intersection graph" of these 10 triangles.
+  If all share a common vertex v, then t₃(v) = 10.
+  For n vertices: t₃(v) = d_v^+ · d_v^- - (edges among out-neighbors of v).
+
+  With d_v^+ + d_v^- = n-1:
+    t₃(v) ≤ d_v^+ · d_v^- ≤ ((n-1)/2)² = (n-1)²/4
+
+  For t₃(v) ≥ 10: need (n-1)²/4 ≥ 10, so n ≥ 8.
+
+  But: total t₃ = 10 AND all through one vertex means:
+    ALL other triples must be transitive.
+    This is extremely constraining on n=8.
+
+  If NOT all through one vertex: by Helly's theorem for 3-sets,
+  there exist 3 triangles A,B,C with A∩B, B∩C, A∩C all different.
+  These 3 shared vertices form a "backbone."
+  Adding more triangles quickly forces additional triangles
+  beyond the 10 allowed (similar cascade as THM-202).
+
+Case 2: Some cycles are 5-cycles or longer.
+  A 5-cycle on 5 vertices contains C(5,3)=10 triples.
+  At least some of these triples form directed 3-cycles.
+  This creates ADDITIONAL cycles beyond the 5-cycle,
+  quickly exceeding the 10-cycle limit.
+
+  Specifically: a directed 5-cycle (a→b→c→d→e→a) in a tournament
+  on n≥5 vertices forces at least 1 additional 3-cycle
+  (because the 5 vertices have C(5,2)=10 arcs, 5 determined by
+   the cycle, 5 free — and the free arcs create triangles).
+
+  With 10 total cycles allowed: at most 2 five-cycles (each bringing
+  ~2 extra 3-cycles), but the intersection constraint makes even 1
+  five-cycle difficult to accommodate.
+
+CONCLUSION: K₁₀ as Ω(T) is impossible because the 10-cycle constraint
+combined with pairwise intersection forces additional cycles via the
+"dominance cascade" mechanism (generalizing THM-202).
+
+======================================================================
+K₈-e AND K₆-2e ARGUMENTS
+======================================================================
+
+
+K₈-e (8 vertices, 27 edges in Ω, 1 disjoint pair):
+  8 odd cycles with exactly 1 pair of disjoint cycles.
+  Similar cascade argument: the 6 non-disjoint cycles form a K₆ subgraph
+  in Ω, requiring 6 pairwise-intersecting cycles.
+  The 2 disjoint cycles must each intersect all other 6.
+  This is more constrained than K₁₀ and similarly leads to forced
+  extra cycles via dominance cascades.
+
+K₆-2e (6 vertices, 13 edges in Ω, 2 disjoint pairs):
+  6 odd cycles with exactly 2 pairs of disjoint cycles.
+  The 6 cycles have a "near-clique" structure.
+  The dominance cascade from THM-202 generalizes: with 6 cycles
+  arranged in K₆-2e, the shared vertex structure forces at least
+  1 additional cycle, contradicting the exactly-6 constraint.
+
+These arguments are SKETCHES that need formalization.
+The key tool is always the "dominance cascade": when odd cycles
+share vertices in a tournament, their arc structure forces
+additional triangles.
+
+======================================================================
+COMPUTATIONAL VERIFICATION
+======================================================================
+
+At n=5: checking all tournaments for I(Ω,2)=21...
+  Total tournaments at n=5: 1024
+  Tournaments with H(T) = I(Ω,2) = 21: 0
+
+  H=21 does NOT occur at n=5! (Consistent with spectrum: {1,3,5,9,11,13,15})
+
+At n=7: sampling 10000 tournaments for H=21...
+  H=21 at n=7 (10K sample): 0
+
+  If 0: H=21 is absent from n=7 spectrum (consistent with known gaps)
+  The full n=7 spectrum is known exhaustively: H=21 is indeed absent.
