@@ -1,0 +1,291 @@
+======================================================================
+PASCAL-FIBONACCI ALIGNMENT AND PERIOD-6 STRUCTURE
+kind-pasteur-2026-03-14-S88
+======================================================================
+
+======================================================================
+PART 1: FIBONACCI AND 3-STRAND PASCAL SIDE BY SIDE
+======================================================================
+
+    k      F_k      P_k        P/F  k%3  k%6  k%2
+  --------------------------------------------------
+    0        0        1        inf    0    0    0
+    1        1        1     1.0000    1    1    1
+    2        1        2     2.0000    2    2    0
+    3        2        3     1.5000    0    3    1
+    4        3        4     1.3333    1    4    0
+    5        5        6     1.2000    2    5    1
+    6        8       10     1.2500    0    0    0
+    7       13       15     1.1538    1    1    1
+    8       21       20     0.9524    2    2    0
+    9       34       35     1.0294    0    3    1
+   10       55       56     1.0182    1    4    0
+   11       89       70     0.7865    2    5    1
+   12      144      126     0.8750    0    0    0
+   13      233      210     0.9013    1    1    1
+   14      377      252     0.6684    2    2    0
+   15      610      462     0.7574    0    3    1
+   16      987      792     0.8024    1    4    0
+   17     1597      924     0.5786    2    5    1
+   18     2584     1716     0.6641    0    0    0
+   19     4181     3003     0.7182    1    1    1
+   20     6765     3432     0.5073    2    2    0
+   21    10946     6435     0.5879    0    3    1
+   22    17711    11440     0.6459    1    4    0
+   23    28657    12870     0.4491    2    5    1
+   24    46368    24310     0.5243    0    0    0
+   25    75025    43758     0.5832    1    1    1
+   26   121393    48620     0.4005    2    2    0
+   27   196418    92378     0.4703    0    3    1
+   28   317811   167960     0.5285    1    4    0
+   29   514229   184756     0.3593    2    5    1
+
+======================================================================
+PART 2: PERIOD-6 STRUCTURE — P/F RATIOS BY k MOD 6
+======================================================================
+
+  k ≡ 0 (mod 6): P/F ratios = ['1.2500', '0.8750', '0.6641', '0.5243']
+    Differences: ['-0.3750', '-0.2109', '-0.1398']
+    Converging? True
+
+  k ≡ 1 (mod 6): P/F ratios = ['1.1538', '0.9013', '0.7182', '0.5832']
+    Differences: ['-0.2526', '-0.1830', '-0.1350']
+    Converging? True
+
+  k ≡ 2 (mod 6): P/F ratios = ['0.9524', '0.6684', '0.5073', '0.4005']
+    Differences: ['-0.2839', '-0.1611', '-0.1068']
+    Converging? True
+
+  k ≡ 3 (mod 6): P/F ratios = ['1.0294', '0.7574', '0.5879', '0.4703']
+    Differences: ['-0.2720', '-0.1695', '-0.1176']
+    Converging? True
+
+  k ≡ 4 (mod 6): P/F ratios = ['1.0182', '0.8024', '0.6459', '0.5285']
+    Differences: ['-0.2158', '-0.1565', '-0.1174']
+    Converging? True
+
+  k ≡ 5 (mod 6): P/F ratios = ['0.7865', '0.5786', '0.4491', '0.3593']
+    Differences: ['-0.2079', '-0.1295', '-0.0898']
+    Converging? True
+
+======================================================================
+PART 3: GROWTH RATES — BOTH GROW EXPONENTIALLY
+======================================================================
+
+  Fibonacci growth rate: phi = 1.618034
+  Pascal 3-strand growth rate per step: 4^(1/3) = 1.587401
+  Pascal 3-strand growth rate per 3 steps: 4 (doubling of central binomial)
+
+  Fibonacci per 3 steps: phi^3 = 4.236068
+  Pascal per 3 steps: 4
+  Ratio: 4/phi^3 = 0.944272
+
+  Fibonacci per 6 steps: phi^6 = 17.944272
+  Pascal per 6 steps: 4^2 = 16
+  Ratio: 16/phi^6 = 0.891649
+
+  4^(1/3) = 1.587401 vs phi = 1.618034
+  Fibonacci per step is FASTER! phi > 4^(1/3)
+  So P/F ratio should DECREASE over time.
+  k=6: P/F = 1.250000
+  k=12: P/F = 0.875000
+  k=18: P/F = 0.664087
+  k=24: P/F = 0.524284
+
+======================================================================
+PART 4: THE 6-CYCLE AND TOURNAMENT THEORY
+======================================================================
+
+  WHY 6?
+  The 3-strand Pascal has period 3 (from the 3 strands).
+  The Fibonacci has period 2 (even/odd symmetry from n -> -n involution).
+  Their LCM is 6.
+
+  In tournament theory:
+  - 3 = the fundamental odd cycle (3-cycle)
+  - 2 = the arc binary choice (and the OCF fugacity)
+  - 6 = LCM(3,2) = the "full period" of the combined structure
+
+  This 6 appears as:
+  - h(G2) = 6 (Coxeter number of the exceptional Lie algebra G2)
+  - 6 = C(4,2) = number of arcs at n=4
+  - 6 = 3! = number of labeled transitive tournaments on 3 vertices
+  - The GS DOF formula has period related to floor((n-1)/2)
+
+  THE DEEP REASON:
+  3 and 2 are the GENERATORS of the theory.
+  3-cycles generate tournament complexity.
+  2-fold arc choice generates tournament variety.
+  Their interaction has period LCM(3,2) = 6.
+
+
+======================================================================
+PART 5: LOG-RATIO ANALYSIS
+  log(P_k) / log(F_k) should approach log(4^{1/3}) / log(phi)
+======================================================================
+
+  Target: log(4^{1/3}) / log(phi) = 0.960280
+  k= 3: log(P)/log(F) = 1.584963, target = 0.960280, diff = +0.624682
+  k= 4: log(P)/log(F) = 1.261860, target = 0.960280, diff = +0.301579
+  k= 5: log(P)/log(F) = 1.113283, target = 0.960280, diff = +0.153003
+  k= 6: log(P)/log(F) = 1.107309, target = 0.960280, diff = +0.147029
+  k= 7: log(P)/log(F) = 1.055791, target = 0.960280, diff = +0.095511
+  k= 8: log(P)/log(F) = 0.983974, target = 0.960280, diff = +0.023694
+  k= 9: log(P)/log(F) = 1.008220, target = 0.960280, diff = +0.047940
+  k=10: log(P)/log(F) = 1.004496, target = 0.960280, diff = +0.044216
+  k=11: log(P)/log(F) = 0.946500, target = 0.960280, diff = -0.013780
+  k=12: log(P)/log(F) = 0.973132, target = 0.960280, diff = +0.012851
+  k=13: log(P)/log(F) = 0.980934, target = 0.960280, diff = +0.020654
+  k=14: log(P)/log(F) = 0.932097, target = 0.960280, diff = -0.028183
+  k=15: log(P)/log(F) = 0.956670, target = 0.960280, diff = -0.003610
+  k=16: log(P)/log(F) = 0.968076, target = 0.960280, diff = +0.007795
+  k=17: log(P)/log(F) = 0.925816, target = 0.960280, diff = -0.034464
+  k=18: log(P)/log(F) = 0.947902, target = 0.960280, diff = -0.012379
+  k=19: log(P)/log(F) = 0.960311, target = 0.960280, diff = +0.000031
+  k=20: log(P)/log(F) = 0.923055, target = 0.960280, diff = -0.037225
+  k=21: log(P)/log(F) = 0.942884, target = 0.960280, diff = -0.017396
+  k=22: log(P)/log(F) = 0.955319, target = 0.960280, diff = -0.004961
+  k=23: log(P)/log(F) = 0.922003, target = 0.960280, diff = -0.038277
+  k=24: log(P)/log(F) = 0.939901, target = 0.960280, diff = -0.020379
+  k=25: log(P)/log(F) = 0.951972, target = 0.960280, diff = -0.008309
+  k=26: log(P)/log(F) = 0.921840, target = 0.960280, diff = -0.038440
+  k=27: log(P)/log(F) = 0.938107, target = 0.960280, diff = -0.022173
+  k=28: log(P)/log(F) = 0.949663, target = 0.960280, diff = -0.010617
+  k=29: log(P)/log(F) = 0.922160, target = 0.960280, diff = -0.038120
+
+======================================================================
+PART 6: 3×2 = 6 CROSS-ALIGNMENT
+  Fibonacci has 2 strands (even/odd index)
+  Pascal has 3 strands (mod 3)
+  Cross-product: 6 sub-sequences at positions k mod 6
+======================================================================
+
+  k ≡ 0 (mod 6): Fib strand = even, Pascal strand = 0
+    Fibonacci: [0, 8, 144, 2584, 46368]
+    Pascal:    [1, 10, 126, 1716, 24310]
+    P/F ratios: ['1.2500', '0.8750', '0.6641', '0.5243']
+
+  k ≡ 1 (mod 6): Fib strand = odd, Pascal strand = 1
+    Fibonacci: [1, 13, 233, 4181, 75025]
+    Pascal:    [1, 15, 210, 3003, 43758]
+    P/F ratios: ['1.0000', '1.1538', '0.9013', '0.7182', '0.5832']
+
+  k ≡ 2 (mod 6): Fib strand = even, Pascal strand = 2
+    Fibonacci: [1, 21, 377, 6765, 121393]
+    Pascal:    [2, 20, 252, 3432, 48620]
+    P/F ratios: ['2.0000', '0.9524', '0.6684', '0.5073', '0.4005']
+
+  k ≡ 3 (mod 6): Fib strand = odd, Pascal strand = 0
+    Fibonacci: [2, 34, 610, 10946, 196418]
+    Pascal:    [3, 35, 462, 6435, 92378]
+    P/F ratios: ['1.5000', '1.0294', '0.7574', '0.5879', '0.4703']
+
+  k ≡ 4 (mod 6): Fib strand = even, Pascal strand = 1
+    Fibonacci: [3, 55, 987, 17711, 317811]
+    Pascal:    [4, 56, 792, 11440, 167960]
+    P/F ratios: ['1.3333', '1.0182', '0.8024', '0.6459', '0.5285']
+
+  k ≡ 5 (mod 6): Fib strand = odd, Pascal strand = 2
+    Fibonacci: [5, 89, 1597, 28657, 514229]
+    Pascal:    [6, 70, 924, 12870, 184756]
+    P/F ratios: ['1.2000', '0.7865', '0.5786', '0.4491', '0.3593']
+
+======================================================================
+PART 7: n=6 — THE MEETING POINT OF 3 AND 2
+======================================================================
+
+  n=6 is the FIRST n where ALL of these things happen:
+  - H-landscape becomes MULTIMODAL (phase transition)
+  - alpha_2 first becomes nonzero (disjoint cycle pairs appear)
+  - The lex product T_3 lex T_2 achieves max_H = 45
+  - The blue line skeleton becomes NON-bipartite
+  - Blueself tilings first appear (even n required)
+
+  n = 6 = LCM(3, 2) = 2 * 3
+
+  The tournament at n=6 is where the 3-cycle structure (period 3)
+  and the binary arc structure (period 2) SYNCHRONIZE for the first time.
+  This synchronization creates the richest new phenomena.
+
+  ANALOGY TO THE SEQUENCE:
+  The 3-strand Pascal sequence at position 6 completes its first
+  full 6-cycle (one complete period of both the 3-fold and 2-fold
+  structures). Similarly, n=6 is the first tournament size where
+  the 3-cycle and 2-fold structures both fully manifest.
+
+  The values at k=0..5 (one full period):
+    k=0: P=1, F=0   (genesis)
+    k=1: P=1, F=1   (unit)
+    k=2: P=2, F=1   (the 2 = binary choice)
+    k=3: P=3, F=2   (the 3 = 3-cycle)
+    k=4: P=4, F=3   (4 = 2^2 = arc count at n=3)
+    k=5: P=6, F=5   (6 = LCM(2,3) = the meeting point)
+
+
+======================================================================
+PART 8: DIVISIBILITY PATTERNS
+======================================================================
+
+  P_k mod 2 (period?): [1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0]
+  P_k mod 3 (period?): [1, 1, 2, 0, 1, 0, 1, 0, 2, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+  P_k mod 6 (period?): [1, 1, 2, 3, 4, 0, 4, 3, 2, 5, 2, 4, 0, 0, 0, 0, 0, 0, 0, 3, 0, 3, 4, 0]
+
+  F_k mod 2 (period 3): [0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1]
+  F_k mod 3 (period 8): [0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1, 0, 1, 1, 2, 0, 2, 2, 1]
+
+  Pisano period of Fibonacci mod 2: 3
+  Pisano period of Fibonacci mod 3: 8
+  Pisano period of Fibonacci mod 6: 24
+  LCM(3, 8) = 24 ✓
+
+  Looking for period of P_k mod 2:
+    Period 24: YES
+
+  Looking for period of P_k mod 3:
+    Period 24: YES
+
+======================================================================
+PART 9: THE FIBONACCI-PASCAL RESONANCE
+======================================================================
+
+  GCD(F_k, P_k) for k=1..29:
+    k= 6: F=8, P=10, GCD=2
+    k=12: F=144, P=126, GCD=18
+    k=15: F=610, P=462, GCD=2
+    k=16: F=987, P=792, GCD=3
+    k=18: F=2584, P=1716, GCD=4
+    k=20: F=6765, P=3432, GCD=33
+    k=21: F=10946, P=6435, GCD=13
+    k=24: F=46368, P=24310, GCD=2
+    k=27: F=196418, P=92378, GCD=34
+    k=28: F=317811, P=167960, GCD=13
+
+  P_k / F_k integer?
+    k= 1: P/F = 1
+    k= 2: P/F = 2
+
+======================================================================
+PART 10: INDEPENDENCE POLYNOMIAL OF THE 6-CYCLE
+  The 6-cycle C_6 is the simplest graph with period 6.
+  I(C_6, x) = ? and how does it relate to tournaments?
+======================================================================
+  I(C_3, 1) = 4 (Lucas number L_3)
+  I(C_3, 2) = 7
+  I(C_4, 1) = 7 (Lucas number L_4)
+  I(C_4, 2) = 17
+  I(C_5, 1) = 11 (Lucas number L_5)
+  I(C_5, 2) = 31
+  I(C_6, 1) = 18 (Lucas number L_6)
+  I(C_6, 2) = 65
+  I(C_7, 1) = 29 (Lucas number L_7)
+  I(C_7, 2) = 127
+  I(C_8, 1) = 47 (Lucas number L_8)
+  I(C_8, 2) = 257
+
+  I(C_6, 2) = 65
+  Is this a tournament H value? H = 65 would require Omega = C_6
+  This needs 6 odd cycles in a hexagonal conflict pattern.
+
+======================================================================
+DONE
+======================================================================
