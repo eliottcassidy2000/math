@@ -1,0 +1,273 @@
+======================================================================
+MYSTERY SEQUENCE + DEEP META-ALIGNMENT
+kind-pasteur-2026-03-14-S90
+======================================================================
+
+======================================================================
+PART 1: IDENTIFY THE SEQUENCE
+======================================================================
+
+  Positive part: [0, 1, 2, 4, 8, 15, 26, 42, 64, 93]
+  1st differences: [1, 1, 2, 4, 7, 11, 16, 22, 29]
+  2nd differences: [0, 1, 2, 3, 4, 5, 6, 7]
+  3rd differences: [1, 1, 1, 1, 1, 1, 1]
+
+  *** 2nd differences are 0, 1, 2, 3, 4, 5, 6, 7 ***
+  *** = the natural numbers! ***
+
+  1st differences: d1(n) = 1 + T(n-1) = 1 + (n-1)n/2
+  Verification:
+    n=0: predicted = 1, actual = 1, match = True
+    n=1: predicted = 1, actual = 1, match = True
+    n=2: predicted = 2, actual = 2, match = True
+    n=3: predicted = 4, actual = 4, match = True
+    n=4: predicted = 7, actual = 7, match = True
+    n=5: predicted = 11, actual = 11, match = True
+    n=6: predicted = 16, actual = 16, match = True
+    n=7: predicted = 22, actual = 22, match = True
+    n=8: predicted = 29, actual = 29, match = True
+
+  Corrected: d1(k) = 1 + k(k-1)/2
+    k=0: predicted = 1, actual = 1, match = True
+    k=1: predicted = 1, actual = 1, match = True
+    k=2: predicted = 2, actual = 2, match = True
+    k=3: predicted = 4, actual = 4, match = True
+    k=4: predicted = 7, actual = 7, match = True
+    k=5: predicted = 11, actual = 11, match = True
+    k=6: predicted = 16, actual = 16, match = True
+    k=7: predicted = 22, actual = 22, match = True
+    k=8: predicted = 29, actual = 29, match = True
+
+  a(n) = n + C(n, 3)
+  Verification:
+    n=0: predicted = 0, actual = 0, match = True
+    n=1: predicted = 1, actual = 1, match = True
+    n=2: predicted = 2, actual = 2, match = True
+    n=3: predicted = 4, actual = 4, match = True
+    n=4: predicted = 8, actual = 8, match = True
+    n=5: predicted = 15, actual = 15, match = True
+    n=6: predicted = 26, actual = 26, match = True
+    n=7: predicted = 42, actual = 42, match = True
+    n=8: predicted = 64, actual = 64, match = True
+    n=9: predicted = 93, actual = 93, match = True
+
+  Extended: a(n) = n + C(n,3) for n = -6..15:
+    a( -6) =   -6 +    -56 =    -62
+    a( -5) =   -5 +    -35 =    -40
+    a( -4) =   -4 +    -20 =    -24
+    a( -3) =   -3 +    -10 =    -13
+    a( -2) =   -2 +     -4 =     -6
+    a( -1) =   -1 +     -1 =     -2
+    a(  0) =    0 +      0 =      0
+    a(  1) =    1 +      0 =      1
+    a(  2) =    2 +      0 =      2
+    a(  3) =    3 +      1 =      4
+    a(  4) =    4 +      4 =      8
+    a(  5) =    5 +     10 =     15
+    a(  6) =    6 +     20 =     26
+    a(  7) =    7 +     35 =     42
+    a(  8) =    8 +     56 =     64
+    a(  9) =    9 +     84 =     93
+    a( 10) =   10 +    120 =    130
+    a( 11) =   11 +    165 =    176
+    a( 12) =   12 +    220 =    232
+    a( 13) =   13 +    286 =    299
+    a( 14) =   14 +    364 =    378
+    a( 15) =   15 +    455 =    470
+
+  Matches with given negative values:
+    a(-6) = -62, expected = -62, match = True
+    a(-5) = -40, expected = -40, match = True
+    a(-4) = -24, expected = -24, match = True
+    a(-3) = -13, expected = -13, match = True
+    a(-2) = -6, expected = -6, match = True
+    a(-1) = -2, expected = -2, match = True
+
+  *** THE SEQUENCE IS a(n) = n + C(n, 3) ***
+  *** = n + n(n-1)(n-2)/6 ***
+  *** = n(n^2 - 3n + 8)/6 ***
+
+======================================================================
+PART 2: WHAT IS n + C(n,3)?
+======================================================================
+  n + C(n,3) = C(n,1) + C(n,3)
+  This is the sum of the FIRST TWO odd binomial coefficients!
+
+  Full odd sum: C(n,1) + C(n,3) + C(n,5) + ... = 2^(n-1)
+  Our sequence = the PARTIAL sum C(n,1) + C(n,3)
+
+  Compare with:
+  C(n,0) + C(n,2) + C(n,4) + ... = 2^(n-1) (even sum)
+
+  So a(n)/2^(n-1) -> 0 as n -> infinity (only 2 of ~n/2 terms)
+
+======================================================================
+PART 3: STRANDS OF a(n) = C(n,1) + C(n,3)
+======================================================================
+
+  Even-index strand: a(0), a(2), a(4), a(6), ...
+    a( 0) =      0
+    a( 2) =      2
+    a( 4) =      8
+    a( 6) =     26
+    a( 8) =     64
+    a(10) =    130
+    a(12) =    232
+    a(14) =    378
+
+  Odd-index strand: a(1), a(3), a(5), a(7), ...
+    a( 1) =      1
+    a( 3) =      4
+    a( 5) =     15
+    a( 7) =     42
+    a( 9) =     93
+    a(11) =    176
+    a(13) =    299
+    a(15) =    470
+
+  SYMMETRY: a(n) + a(-n) = -n^2
+  Verification:
+    a(1) + a(-1) = 1 + -2 = -1, -n^2 = -1, match = True
+    a(2) + a(-2) = 2 + -6 = -4, -n^2 = -4, match = True
+    a(3) + a(-3) = 4 + -13 = -9, -n^2 = -9, match = True
+    a(4) + a(-4) = 8 + -24 = -16, -n^2 = -16, match = True
+    a(5) + a(-5) = 15 + -40 = -25, -n^2 = -25, match = True
+    a(6) + a(-6) = 26 + -62 = -36, -n^2 = -36, match = True
+
+  So: a(n) = (-n^2 - a(-n))/1... or better:
+  a(n) - a(-n) = 2n + n(n-1)(n-2)/6 + n(n+1)(n+2)/6
+  = 2n + n[(n-1)(n-2) + (n+1)(n+2)]/6
+  = 2n + n[2n^2 + 4]/6
+  = 2n + n(n^2+2)/3
+
+======================================================================
+PART 4: TOURNAMENT CONNECTIONS OF C(n,1) + C(n,3)
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\mystery_sequence_deep.py", line 506, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\mystery_sequence_deep.py", line 236, in main
+    print(f"  n={n:2d}: a(n)={val:6d}, C(n,2)={m:3d}, ratio={val/m if m>0 else 'inf':.4f}")
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+    Fib(n) = 5
+    C(2n,n) = 252
+    max_H(n) = 15
+    C(n,2) = 10
+    *** a(n) = Tri(n) ***
+    *** a(n) = max_H(n) ***
+    *** Tri(n) = max_H(n) ***
+    *** max_H = Tri(n) ***
+    *** max_H = a(n) ***
+
+  n = 6:
+    a(n) = C(n,1)+C(n,3) = 26
+    Tri(n) = 21
+    Fib(n) = 8
+    C(2n,n) = 924
+    max_H(n) = 45
+    C(n,2) = 15
+
+  n = 7:
+    a(n) = C(n,1)+C(n,3) = 42
+    Tri(n) = 28
+    Fib(n) = 13
+    C(2n,n) = 3432
+    max_H(n) = 189
+    C(n,2) = 21
+
+  n = 10:
+    a(n) = C(n,1)+C(n,3) = 130
+    Tri(n) = 55
+    Fib(n) = 55
+    C(2n,n) = 184756
+    max_H(n) = 15745
+    C(n,2) = 45
+    *** Tri(n) = Fib(n) ***
+
+  n = 11:
+    a(n) = C(n,1)+C(n,3) = 176
+    Tri(n) = 66
+    Fib(n) = 89
+    C(2n,n) = 705432
+    max_H(n) = 95095
+    C(n,2) = 55
+
+======================================================================
+PART 8: THE n=5 TRIPLE COINCIDENCE
+  At n=5: a(5) = Tri(5) = max_H(5) = 15
+  THREE different sequences meet at the tournament maximizer!
+======================================================================
+
+  a(5) = 5 + C(5,3) = 5 + 10 = 15
+  Tri(5) = 5*6/2 = 15
+  max_H(5) = 15
+
+  WHY?
+  a(n) = Tri(n) iff C(n,3) = C(n,2) iff n = 5 (unique solution for n >= 3).
+  max_H(5) = 15 = n!/2^(n-2) = 120/8 = 15 (regular tournament formula).
+
+  So n=5 is the UNIQUE point where:
+  - The "odd Pascal partial sum" C(n,1)+C(n,3) equals the triangular number
+  - Both equal the max Hamiltonian path count
+  - Both equal 15 = the 5th triangular number = C(6,2)
+
+  This makes n=5 a UNIVERSAL FIXED POINT of the sequence alignment.
+  It's also the LAST n where:
+  - Omega(T) is always claw-free
+  - The H-landscape is unimodal
+  - alpha_2 = 0 (no disjoint cycle pairs)
+  - The 3-strand Pascal aligns with Jacobsthal for max_H
+
+
+======================================================================
+PART 9: C(n,1)+C(n,3) AS PARTIAL INDEPENDENCE POLYNOMIAL
+======================================================================
+  If Omega = empty graph on n vertices: I(Omega, 2) = 3^n
+  3^n sequence: [1, 3, 9, 27, 81, 243, 729, 2187, 6561, 19683]
+  max_H values: [1, 1, 3, 5, 15, 45, 189, 661, 3357, 15745, 95095]
+
+  max_H(n) vs 3^{alpha_1_max}:
+
+======================================================================
+PART 10: a(n) = n + C(n,3) AS TOURNAMENT COMPLEXITY
+======================================================================
+
+  INTERPRETATION:
+  a(n) = n + C(n,3) counts the total number of "simple structures"
+  in a tournament on n vertices:
+    - n vertices (0-dimensional structure)
+    - C(n,3) potential 3-cycles (1-dimensional structure)
+
+  This is the EULER CHARACTERISTIC of the "potential cycle complex":
+    chi = V - E + F = n - C(n,2) + C(n,3)
+    = n - n(n-1)/2 + n(n-1)(n-2)/6
+
+  Let me compute this:
+
+  n= 1: V=  1, E=  0, F=   0, chi=V-E+F=    1, a(n)=V+F=    1
+  n= 2: V=  2, E=  1, F=   0, chi=V-E+F=    1, a(n)=V+F=    2
+  n= 3: V=  3, E=  3, F=   1, chi=V-E+F=    1, a(n)=V+F=    4
+  n= 4: V=  4, E=  6, F=   4, chi=V-E+F=    2, a(n)=V+F=    8
+  n= 5: V=  5, E= 10, F=  10, chi=V-E+F=    5, a(n)=V+F=   15
+  n= 6: V=  6, E= 15, F=  20, chi=V-E+F=   11, a(n)=V+F=   26
+  n= 7: V=  7, E= 21, F=  35, chi=V-E+F=   21, a(n)=V+F=   42
+  n= 8: V=  8, E= 28, F=  56, chi=V-E+F=   36, a(n)=V+F=   64
+  n= 9: V=  9, E= 36, F=  84, chi=V-E+F=   57, a(n)=V+F=   93
+  n=10: V= 10, E= 45, F= 120, chi=V-E+F=   85, a(n)=V+F=  130
+  n=11: V= 11, E= 55, F= 165, chi=V-E+F=  121, a(n)=V+F=  176
+
+  chi = n(n^2 - 6n + 11)/6
+  a(n) = n(n^2 - 3n + 8)/6
+  Difference: a(n) - chi = n(3n - 3)/6 = n(n-1)/2 = C(n,2)
+  So: a(n) = chi + C(n,2)
+  Or: a(n) = (V - E + F) + E = V + F = n + C(n,3)
+
+  This is just the UNSIGNED version:
+  a(n) = #{vertices} + #{triangles}
+  chi(n) = #{vertices} - #{edges} + #{triangles}
+
+======================================================================
+DONE — DEEP MULTI-SEQUENCE EXPLORATION
+======================================================================
