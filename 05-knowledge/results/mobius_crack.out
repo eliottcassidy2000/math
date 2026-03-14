@@ -1,0 +1,36 @@
+======================================================================
+MOBIUS CRACK — POSET AND BLOCK PERSPECTIVE
+======================================================================
+
+--- STEP 1: Understand D_n(2) through BLOCKS
+
+  n=5: Anti-succ-free permutations with their runs:
+  Anti-succ-free permutations grouped by run sizes:
+    Sizes (1, 1, 1, 1, 1): 14 perms, s=0, 2^s=1, contribution=14
+    Sizes (1, 1, 1, 2): 3 perms, s=1, 2^s=2, contribution=6
+    Sizes (1, 1, 2, 1): 7 perms, s=1, 2^s=2, contribution=14
+    Sizes (1, 1, 3): 1 perms, s=2, 2^s=4, contribution=4
+    Sizes (1, 2, 1, 1): 7 perms, s=1, 2^s=2, contribution=14
+    Sizes (1, 2, 2): 3 perms, s=2, 2^s=4, contribution=12
+    Sizes (1, 3, 1): 3 perms, s=2, 2^s=4, contribution=12
+    Sizes (1, 4): 1 perms, s=3, 2^s=8, contribution=8
+    Sizes (2, 1, 1, 1): 3 perms, s=1, 2^s=2, contribution=6
+    Sizes (2, 1, 2): 3 perms, s=2, 2^s=4, contribution=12
+    Sizes (2, 2, 1): 3 perms, s=2, 2^s=4, contribution=12
+    Sizes (2, 3): 1 perms, s=3, 2^s=8, contribution=8
+    Sizes (3, 1, 1): 1 perms, s=2, 2^s=4, contribution=4
+    Sizes (3, 2): 1 perms, s=3, 2^s=8, contribution=8
+    Sizes (4, 1): 1 perms, s=3, 2^s=8, contribution=8
+    Sizes (5,): 1 perms, s=4, 2^s=16, contribution=16
+  Total D_n(2) = 158
+  Expected: 158
+
+--- STEP 2: WHAT IS an anti-succ-free permutation in block language?
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\mobius_crack.py", line 411, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\mobius_crack.py", line 146, in main
+    First element of block i+1 = min(block_{i+1}).
+                                            ^
+NameError: name 'i' is not defined. Did you mean: 'pi'?
