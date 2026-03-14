@@ -1,0 +1,256 @@
+======================================================================
+PART 1: DISCRIMINANT MAP D = 1 + 4a
+======================================================================
+
+  a   D=1+4a  D mod 8  Factorization     Tournament significance
+  --- ------- -------  ----------------  ----------------------
+   -5    -19    +5    -19               ← class number 1
+   -4    -15    +1    -3×5              ← -3×5
+   -3    -11    +5    -11               ← sum of D=-3,5,9
+   -2     -7    +1    -7                ← disc of Q(√(-7))
+   -1     -3    +5    -3                ← TOURNAMENT PARITY (Z[ω], period 6)  F_4
+   +0     +1    +1    1                   F_1
+   +1     +5    +5    5                 ← FIBONACCI (φ, golden ratio)  F_5
+   +2     +9    +1    3×3               ← TOURNAMENT GENERATORS (eigenvals 2,-1)
+   +3    +13    +5    13                ← |PG(2,F₃)|  F_7
+   +4    +17    +1    17                ← Fermat prime = Φ₈(2)
+   +5    +21    +5    3×7               ← SECOND FORBIDDEN = Φ₃(4) = |PG(2,F₄)|  F_8
+   +6    +25    +1    5×5               
+   +7    +29    +5    29                ← prime
+   +8    +33    +1    3×11              
+   +9    +37    +5    37                ← prime
+  +10    +41    +1    41                
+  +11    +45    +5    3×3×5             
+  +12    +49    +1    7×7               
+  +13    +53    +5    53                
+  +14    +57    +1    3×19              
+  +15    +61    +5    61                
+  +16    +65    +1    5×13              
+  +17    +69    +5    3×23              
+  +18    +73    +1    73                
+  +19    +77    +5    7×11              
+
+KEY OBSERVATIONS:
+  1. D = 7 requires a = 3/2 (non-integer)
+     The FIRST forbidden value is NOT in the discriminant spectrum!
+  2. D = 21 occurs at a = 5 = F_5
+     The SECOND forbidden value IS in the discriminant spectrum!
+  3. D = 13 = |PG(2,F_3)| at a = 3
+  4. D = -3 at a = -1: the Eisenstein discriminant
+  5. D = 5 at a = 1: the golden ratio discriminant
+
+======================================================================
+PART 2: THE D ≡ 1 (MOD 4) STRUCTURE
+======================================================================
+
+ALL discriminants D = 1+4a satisfy D ≡ 1 (mod 4).
+This means D is a FUNDAMENTAL discriminant iff D is squarefree.
+
+Fundamental discriminants in the family:
+  D =  -19 (a= -5): fundamental discriminant, Q(√-19)
+  D =  -15 (a= -4): fundamental discriminant, Q(√-15)
+  D =  -11 (a= -3): fundamental discriminant, Q(√-11)
+  D =   -7 (a= -2): fundamental discriminant, Q(√-7)
+  D =   -3 (a= -1): fundamental discriminant, Q(√-3)
+  D =   +1 (a= +0): fundamental discriminant, Q(√1)
+  D =   +5 (a= +1): fundamental discriminant, Q(√5)
+  D =  +13 (a= +3): fundamental discriminant, Q(√13)
+  D =  +17 (a= +4): fundamental discriminant, Q(√17)
+  D =  +21 (a= +5): fundamental discriminant, Q(√21)
+  D =  +29 (a= +7): fundamental discriminant, Q(√29)
+  D =  +33 (a= +8): fundamental discriminant, Q(√33)
+  D =  +37 (a= +9): fundamental discriminant, Q(√37)
+  D =  +41 (a=+10): fundamental discriminant, Q(√41)
+  D =  +53 (a=+13): fundamental discriminant, Q(√53)
+  D =  +57 (a=+14): fundamental discriminant, Q(√57)
+  D =  +61 (a=+15): fundamental discriminant, Q(√61)
+  D =  +65 (a=+16): fundamental discriminant, Q(√65)
+  D =  +69 (a=+17): fundamental discriminant, Q(√69)
+  D =  +73 (a=+18): fundamental discriminant, Q(√73)
+  D =  +77 (a=+19): fundamental discriminant, Q(√77)
+
+NON-FUNDAMENTAL (contains square factor):
+  D =   +9 (a= +2): NOT fundamental (D = 9)
+  D =  +25 (a= +6): NOT fundamental (D = 25)
+  D =  +45 (a=+11): NOT fundamental (D = 45)
+  D =  +49 (a=+12): NOT fundamental (D = 49)
+
+======================================================================
+PART 3: THE QUADRATIC FIELD TOWER
+======================================================================
+
+The matrix family M(a) generates a TOWER of quadratic fields:
+
+  a=-1: D=-3 → Q(ω) = Q(√(-3))
+          Eisenstein, class 1, unit group Z/6Z
+
+  a=+1: D=+5 → Q(φ) = Q(√5)
+          Golden ratio, fund. unit φ
+          Fund. unit: (9+4√5)/1
+
+  a=+2: D=+9 → Q (rational)
+          D=9=3² → trivially Q
+
+  a=+3: D=+13 → Q(√13)
+          Class 1, fund. unit (3+√13)/2
+          Fund. unit: (18+5√13)/1 (norm -1)
+
+  a=+5: D=+21 → Q(√21)
+          Class 1? fund. unit (5+√21)/2
+          Fund. unit: (55+12√21)/1
+
+
+DEEP STRUCTURE:
+  The quadratic fields Q(√D) for the tournament values D=-3,5,9
+  form a triangle:
+
+       Q(√(-3))          ← period 6, Eisenstein
+       /      \
+    Q(√5)    Q (=Q(√9))  ← golden ratio  /  rational
+       \      /
+       Q(√(-15))         ← composite field Q(√(-3),√5)
+
+  The composite field Q(√(-3), √5) = Q(√(-3), √5, √(-15))
+  This is a BIQUADRATIC field of degree 4 over Q!
+  Galois group: Z/2Z × Z/2Z
+
+  |F₄| = 4: the field with 4 elements
+  Gal(Q(√(-3),√5)/Q) = Z/2Z × Z/2Z: group with 4 elements
+  COINCIDENCE? These are the same group (Klein four-group)!
+
+======================================================================
+PART 4: THE BIQUADRATIC FIELD AND BAER STRUCTURE
+======================================================================
+
+The biquadratic field Q(√(-3), √5) contains ALL tournament information:
+
+  In Q(√(-3)):
+    ω = (-1+√(-3))/2  (6th root of unity)
+    Period 6 structure
+    Eisenstein primes: 7 = (3+ω)(3+ω²) splits, 3 = -ω²(1-ω)² ramifies
+
+  In Q(√5):
+    φ = (1+√5)/2  (golden ratio)
+    Fibonacci growth F_n ~ φ^n/√5
+    F_8 = 21 = Φ₃(4)
+
+  In Q(√(-15)) = Q(√(-3)·√5):
+    Discriminant -15 = (-3)(5) = product of the two 'real' discriminants
+    Class number of Q(√(-15)) = 2
+    The non-trivial ideal class might relate to the 2 forbidden values!
+
+  Class number of Q(√(-15)):
+    D = -15, Minkowski bound = √(15)·2/π ≈ 2.47
+    Need to check primes 2 only.
+    2 splits as (2, (1+√(-15))/2)... wait, -15 ≡ 1 mod 4
+    So disc = -15, ring of integers = Z[(1+√(-15))/2]
+    2 = (2, (1+√(-15))/2)(2, (1-√(-15))/2) — splits
+    The ideal (2, (1+√(-15))/2) has norm 2 and order 2 in class group
+    So class number h(-15) = 2
+
+  CLASS NUMBER 2 ↔ 2 FORBIDDEN VALUES!
+  Coincidence? In Q(√(-15)) = Q(√(-3), √5), there are
+  2 non-principal ideal classes, and 2 forbidden H-values (7, 21).
+
+  Class numbers of Q(√(-D)) for small D:
+    Q(√(- 1)): h = 1
+    Q(√(- 2)): h = 1
+    Q(√(- 3)): h = 1 ← disc of M(-1)
+    Q(√(- 5)): h = 2 ← disc of M(+1)
+    Q(√(- 6)): h = 2
+    Q(√(- 7)): h = 1 ← first forbidden H value
+    Q(√(-10)): h = 2
+    Q(√(-11)): h = 1
+    Q(√(-13)): h = 2
+    Q(√(-14)): h = 4
+    Q(√(-15)): h = 2 ← (-3)×5 = product of tournament discs
+    Q(√(-17)): h = 4
+    Q(√(-19)): h = 1
+    Q(√(-21)): h = 4 ← second forbidden H value
+    Q(√(-23)): h = 3
+
+  REMARKABLE:
+  h(-15) = 2 = number of forbidden H-values
+  h(-3) = 1 = class number of Eisenstein integers
+  h(-7) = 1 = class number of Q(√(-7))
+
+  The forbidden values 7 and 21 are norms of Eisenstein PRIMES
+  (well, 21 = 3×7 is a product of Eisenstein primes)
+  and the composite disc (-3)×5 = -15 has class number = 
+  number of forbidden values!
+
+======================================================================
+PART 5: FIBONACCI NUMBERS AS DISCRIMINANTS
+======================================================================
+
+Which Fibonacci numbers appear as discriminants D = 1+4a?
+  D = F_n requires a = (F_n - 1)/4, which needs F_n ≡ 1 mod 4.
+
+  F_ 1 =     1 = D at a=   0
+  F_ 2 =     1 = D at a=   0
+  F_ 5 =     5 = D at a=   1
+          ← golden ratio discriminant!
+  F_ 7 =    13 = D at a=   3
+  F_ 8 =    21 = D at a=   5
+          ← SECOND FORBIDDEN VALUE!
+  F_11 =    89 = D at a=  22
+          ← Fibonacci prime
+  F_13 =   233 = D at a=  58
+          ← Fibonacci prime
+  F_14 =   377 = D at a=  94
+  F_17 =  1597 = D at a= 399
+  F_19 =  4181 = D at a=1045
+
+  Both tournament-critical Fibonacci numbers F_5=5 and F_8=21
+  are discriminants of the matrix family!
+  F_5 = 5: the golden ratio discriminant (a=1)
+  F_8 = 21: the Baer plane discriminant (a=5)
+
+  Pattern of a-values:
+    F_ 1 =      1 → a =      0
+    F_ 2 =      1 → a =      0
+    F_ 5 =      5 → a =      1
+    F_ 7 =     13 → a =      3
+    F_ 8 =     21 → a =      5
+    F_11 =     89 → a =     22
+    F_13 =    233 → a =     58
+    F_14 =    377 → a =     94
+    F_17 =   1597 → a =    399
+    F_19 =   4181 → a =   1045
+    F_20 =   6765 → a =   1691
+    F_23 =  28657 → a =   7164
+
+  The a-values grow like F_n/4 ~ φ^n/(4√5)
+
+======================================================================
+PART 6: THE DISCRIMINANT-BAER CORRESPONDENCE
+======================================================================
+
+THEOREM (Discriminant-Baer-Fibonacci Triangle):
+
+  For the matrix family M(a) = [[1,a],[1,0]]:
+
+  1. D = 1+4a is ALWAYS ≡ 1 (mod 4)
+  2. Over F_2, char poly ≡ Φ₃(x) iff a is odd
+     (equivalently: D ≡ 5 mod 8)
+  3. The forbidden values of tournament theory appear as:
+     • 7 = NOT a discriminant (a = 3/2 is non-integer)
+     • 21 = discriminant at a = 5 = F_5
+  4. The Fibonacci numbers F_n ≡ 1 (mod 4) give discriminants
+     including F_5 = 5 (golden ratio) and F_8 = 21 (Baer)
+
+  INTERPRETATION:
+  The FIRST forbidden value 7 lives OUTSIDE the matrix family
+  (it requires fractional a). It's purely a graph-theoretic
+  obstruction (K₃ avoidance).
+
+  The SECOND forbidden value 21 lives INSIDE the matrix family
+  (at a = 5 = F_5). It's simultaneously a matrix-theoretic
+  discriminant AND a graph-theoretic obstruction (Baer partition).
+
+  This asymmetry explains why 7 and 21 are forbidden for
+  DIFFERENT algebraic reasons despite both being Φ₃ values.
+
+======================================================================
+DONE — DISCRIMINANT BAER TOWER
+======================================================================
