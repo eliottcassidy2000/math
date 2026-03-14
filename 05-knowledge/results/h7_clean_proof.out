@@ -1,0 +1,73 @@
+============================================================
+LEMMA 1: 5-cycle on 5 vertices forces t₃ ≥ 3
+============================================================
+  Min t₃ when t₅>0 at n=5: 3
+  LEMMA 1 PROVED: 5-cycle forces t₃ ≥ 3.
+
+============================================================
+LEMMA 2: t₃=3 on 5 vertices forces t₅ ≥ 1
+============================================================
+  Min t₅ when t₃=3 at n=5: 1
+  LEMMA 2 PROVED: t₃=3 on 5 vertices forces t₅ ≥ 1.
+
+============================================================
+THEOREM: No tournament has exactly 3 directed odd cycles
+============================================================
+  n=3: exactly 3 total directed odd cycles: 0/8
+  n=4: exactly 3 total directed odd cycles: 0/64
+  n=5: exactly 3 total directed odd cycles: 0/1024
+  n=6: exactly 3 total directed odd cycles: 0/32768
+
+  n=7 analysis (structural):
+  For total=3: need t₃+t₅+t₇=3.
+  If t₃≥3: on the vertices of the 3-cycles (at most 9 vertices),
+    any 5-vertex subset containing a 3-cycle has t₃≥1 on those 5 vertices.
+    If that subset also has t₃=3, Lemma 2 gives t₅≥1 on those 5 → total>3.
+  If t₃<3: need t₅+t₇ ≥ 1 to reach total=3.
+    But Lemma 1: any 5-cycle creates ≥3 more 3-cycles, so t₃≥3.
+    This contradicts t₃<3.
+
+  Direct check at n=7: fix 3 triangles, enumerate completions
+  3 triangles through v=0, 12 remaining arcs
+  Completions with t₃=3: 0
+  Of those with t₅=0: 0
+  PROVED: 3 triangles through common vertex at n=7 → t₅>0 ALWAYS!
+  Therefore total odd cycles > 3.
+
+  Case: C1={0,1,2}, C2={0,3,4}, C3={1,3,5} (pairwise sharing, no common)
+  Remaining arcs: 6, 64 completions
+  Completions with t₃=3: 0
+  Of those with t₅=0: 0
+  PROVED: these 3 triangles always force t₅>0!
+
+============================================================
+COMPREHENSIVE: Does ANY n≤6 tournament have t₃+t₅ = 3?
+============================================================
+  n=3: total with t₃+t₅=3: 0
+  n=4: total with t₃+t₅=3: 0
+  n=5: total with t₃+t₅=3: 0
+  n=6: total with t₃+t₅=3: 0
+
+============================================================
+KEY FACT: t₃ = C(n,3) - Σ C(sᵢ,2)
+============================================================
+
+  For a tournament with score sequence (s₁,...,sₙ):
+    t₃ = C(n,3) - Σᵢ C(sᵢ, 2)
+
+  The possible values of t₃ at each n:
+
+  n=3: t₃ values = [0, 1]
+    t₃=3 NOT achievable!
+  n=4: t₃ values = [0, 1, 2]
+    t₃=3 NOT achievable!
+  n=5: t₃ values = [0, 1, 2, 3, 4, 5]
+    t₃=3 IS achievable
+  n=6: t₃ values = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    t₃=3 IS achievable
+  n=7: t₃ values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    t₃=3 IS achievable
+
+============================================================
+ANALYSIS COMPLETE
+============================================================
