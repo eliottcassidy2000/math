@@ -1,0 +1,11 @@
+Investigating H=21 at n=8
+Generating 500000 random tournaments
+Using bitmask DP: O(2^8 * 8^2) = 16384 ops per tournament
+
+  10000/500000 done  (276/s, ETA 1778s)
+  20000/500000 done  (278/s, ETA 1728s)
+  30000/500000 done  (284/s, ETA 1657s)
+  40000/500000 done  (286/s, ETA 1611s)
+  50000/500000 done  (284/s, ETA 1586s)
+  60000/500000 done  (274/s, ETA 1606s)
+  70000/500000 done  (268/s, ETA 1606s)
