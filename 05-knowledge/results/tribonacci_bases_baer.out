@@ -1,0 +1,497 @@
+======================================================================
+PART 1: THE K-NACCI CONSTANTS
+======================================================================
+
+The k-nacci sequence generalizes Fibonacci:
+  k=2: Fibonacci     a(n) = a(n-1) + a(n-2)         ratio → φ ≈ 1.618
+  k=3: Tribonacci    a(n) = a(n-1) + a(n-2) + a(n-3) ratio → τ ≈ 1.839
+  k=4: Tetranacci    a(n) = Σ a(n-i) for i=1..4      ratio → ≈ 1.928
+  k→∞:                                                ratio → 2
+
+  k=  2: ratio = 1.6180339887  (2 - ratio = 0.3819660113)
+  k=  3: ratio = 1.8392867552  (2 - ratio = 0.1607132448)
+  k=  4: ratio = 1.9275619755  (2 - ratio = 0.0724380245)
+  k=  5: ratio = 1.9659482366  (2 - ratio = 0.0340517634)
+  k=  6: ratio = 1.9835828434  (2 - ratio = 0.0164171566)
+  k=  7: ratio = 1.9919641966  (2 - ratio = 0.0080358034)
+  k=  8: ratio = 1.9960311797  (2 - ratio = 0.0039688203)
+  k= 10: ratio = 1.9990186327  (2 - ratio = 0.0009813673)
+  k= 20: ratio = 1.9999990463  (2 - ratio = 0.0000009537)
+  k= 50: ratio = 2.0000000000  (2 - ratio = 0.0000000000)
+
+  As k→∞, ratio → 2 (the k-nacci constant approaches 2)
+  The TOURNAMENT GENERATOR 2 is the LIMIT of k-nacci ratios!
+
+======================================================================
+PART 2: WEIGHTED K-NACCI → 3
+======================================================================
+
+Weighted k-nacci at x=2: a(n) = 2·a(n-1) + 2·a(n-2) + ... + 2·a(n-k)
+  This is the k-nacci with each term weighted by x=2.
+  Equivalently: char poly = x^k - 2(x^{k-1} + ... + 1) = x^k - 2(x^k-1)/(x-1)
+
+  The dominant root approaches 2k/(k-1)... let's compute:
+
+  k=  2: weighted ratio = 2.7320508076  (3 - ratio = 0.2679491924)
+  k=  3: weighted ratio = 2.9196395658  (3 - ratio = 0.0803604342)
+  k=  4: weighted ratio = 2.9744492446  (3 - ratio = 0.0255507554)
+  k=  5: weighted ratio = 2.9916541014  (3 - ratio = 0.0083458986)
+  k=  6: weighted ratio = 2.9972413302  (3 - ratio = 0.0027586698)
+  k=  7: weighted ratio = 2.9990835473  (3 - ratio = 0.0009164527)
+  k=  8: weighted ratio = 2.9996949203  (3 - ratio = 0.0003050797)
+  k= 10: weighted ratio = 2.9999661260  (3 - ratio = 0.0000338740)
+  k= 20: weighted ratio = 2.9999999994  (3 - ratio = 0.0000000006)
+
+  As k→∞, weighted ratio → 3 = 1+x = simplex factor!
+  The SIMPLEX GENERATOR (x+1)=3 is the limit of weighted k-nacci!
+
+  INTERPRETATION:
+    k-nacci → 2 = cuboid factor (x+2)/2 ... no.
+    Actually: k-nacci → 2 = number of arc states per edge
+    Weighted k-nacci at x=2 → 3 = simplex volume factor (1+x)
+    These are (x+2)^n and (1+x)^n at x=2!
+
+======================================================================
+PART 3: THE TRIBONACCI CONSTANT τ
+======================================================================
+
+Tribonacci constant τ = 1.839286755214161
+  Real root of x³ - x² - x - 1 = 0
+  Equivalently: x³ = x² + x + 1 = Φ₃(x)!
+
+  *** τ³ = Φ₃(τ) = τ² + τ + 1 ***
+  Verify: τ³ = 6.2222625231
+          τ²+τ+1 = 6.2222625231
+
+  THE TRIBONACCI CONSTANT SATISFIES τ³ = Φ₃(τ)!
+  This is the DEFINING RELATIONSHIP connecting tribonacci to Φ₃!
+
+  Rewriting: x³ - (x²+x+1) = 0  →  x³ = Φ₃(x)
+
+  Compare with golden ratio: φ² = φ + 1 = Φ₂(φ)? 
+    φ = 1.6180339887
+    φ² = 2.6180339887
+    φ+1 = 2.6180339887
+    Φ₂(φ) = φ+1 = 2.6180339887
+
+  Actually φ² = φ+1, and x²-x-1 = 0 means x² = x+1.
+  For Fibonacci: x² = x + 1 (sum of 2 terms)
+  For tribonacci: x³ = x² + x + 1 = Φ₃(x) (sum of 3 terms)
+  For k-nacci:    x^k = x^{k-1} + ... + x + 1 = (x^k-1)/(x-1)
+
+  THE K-NACCI EQUATION: x^k = (x^k - 1)/(x - 1)
+  Rearranging: x^k(x-1) = x^k - 1
+               x^{k+1} - x^k = x^k - 1
+               x^{k+1} = 2x^k - 1
+
+  At the limit k→∞: if x = 2-ε, then
+  (2-ε)^{k+1} ≈ 2(2-ε)^k - 1
+  This gives x → 2 as k → ∞ ✓
+
+  τ = 1.8392867552
+  τ² = 3.3829757679
+  τ³ = 6.2222625231 = Φ₃(τ)
+  Φ₃(τ) = τ²+τ+1 = 6.2222625231
+  Φ₃(2) = 7
+  Φ₃(φ) = φ²+φ+1 = 5.2360679775
+         = (φ+1)+φ+1 = 2φ+2 = 5.2360679775
+         = 2+√5 = 4.2360679775
+
+  Φ₃(φ) = 2+√5 ≈ 4.236068
+  Φ₃(τ) = τ³ ≈ 6.222263
+  Φ₃(2) = 7 (integer!)
+  Φ₃(3) = 13 (integer!)
+
+======================================================================
+PART 4: TOURNAMENT CONSTANTS IN NON-STANDARD BASES
+======================================================================
+
+Tournament constants in various bases:
+
+      3 = cycle generator = Φ₆(2)
+         base 2 (binary): 11  (log = 1.5850)
+         base 3 (ternary): 10  (log = 1.0000)
+         base φ ≈ 1.6180 (golden): 11  (log = 2.2830)
+         base τ ≈ 1.8393 (tribonacci): 11  (log = 1.8028)
+
+      7 = Fano = Φ₃(2) = FORBIDDEN
+         base 2 (binary): 111  (log = 2.8074)
+         base 3 (ternary): 21  (log = 1.7712)
+         base φ ≈ 1.6180 (golden): 1000  (log = 4.0438)
+         base τ ≈ 1.8393 (tribonacci): 111  (log = 3.1933)
+
+     13 = |PG(2,F₃)| = Φ₃(3)
+         base 2 (binary): 1101  (log = 3.7004)
+         base 3 (ternary): 111  (log = 2.3347)
+         base φ ≈ 1.6180 (golden): 10010  (log = 5.3302)
+         base τ ≈ 1.8393 (tribonacci): 1110  (log = 4.2091)
+
+     21 = Baer = Φ₃(4) = FORBIDDEN
+         base 2 (binary): 10101  (log = 4.3923)
+         base 3 (ternary): 210  (log = 2.7712)
+         base φ ≈ 1.6180 (golden): 100001  (log = 6.3268)
+         base τ ≈ 1.8393 (tribonacci): 10110  (log = 4.9961)
+
+      6 = tournament period = LCM(2,3)
+         base 2 (binary): 110  (log = 2.5850)
+         base 3 (ternary): 20  (log = 1.6309)
+         base φ ≈ 1.6180 (golden): 111  (log = 3.7234)
+         base τ ≈ 1.8393 (tribonacci): 110  (log = 2.9403)
+
+      8 = |T₃| = 2³
+         base 2 (binary): 1000  (log = 3.0000)
+         base 3 (ternary): 22  (log = 1.8928)
+         base φ ≈ 1.6180 (golden): 1001  (log = 4.3213)
+         base τ ≈ 1.8393 (tribonacci): 1000  (log = 3.4124)
+
+     64 = |T₄| = 2⁶
+         base 2 (binary): 1000000  (log = 6.0000)
+         base 3 (ternary): 2101  (log = 3.7856)
+         base φ ≈ 1.6180 (golden): 10011100  (log = 8.6425)
+         base τ ≈ 1.8393 (tribonacci): 1001101  (log = 6.8248)
+
+   1024 = |T₅| = 2¹⁰
+         base 2 (binary): 10000000000  (log = 10.0000)
+         base 3 (ternary): 1101221  (log = 6.3093)
+         base φ ≈ 1.6180 (golden): 10000100001001  (log = 14.4042)
+         base τ ≈ 1.8393 (tribonacci): 11110000001  (log = 11.3747)
+
+======================================================================
+PART 5: BASE-τ AND Φ₃
+======================================================================
+
+Since τ³ = Φ₃(τ) = τ²+τ+1, base-τ has special properties:
+
+  In base τ:
+    τ = 10                (by definition)
+    τ² = 100
+    τ³ = 1000 = 111       (because τ³ = τ²+τ+1)
+    This means: 1000 = 111 in base τ!
+    The tribonacci 'carrying rule': three consecutive 1s = one 1 three places left
+
+  Verification:
+    τ² + τ + 1 = 3.382976 + 1.839287 + 1 = 6.222263
+    τ³ = 6.222263
+    Match: True
+
+  Compare with base φ:
+    φ² = φ+1, so in base φ: 100 = 11
+    The Fibonacci carrying rule: two consecutive 1s = one 1 two places left
+
+  Compare with base 2:
+    2² = 2+2, so in base 2: 100 = ... (normal binary)
+    No carrying rule involving sums of lower digits
+
+  THE CARRYING RULES ARE THE K-NACCI RECURRENCES!
+  base φ: 100_φ = 11_φ      → Fibonacci carrying (2 terms)
+  base τ: 1000_τ = 111_τ    → Tribonacci carrying (3 terms)
+  base k-nacci: 10...0 = 1...1  → k-nacci carrying (k terms)
+
+======================================================================
+PART 6: Φ₃ IN BASE τ vs BASE φ vs BASE 2
+======================================================================
+
+Evaluating Φ₃(x) = x²+x+1 at different bases:
+
+  Φ₃(τ) = τ³ = 6.2222625231
+    In base τ: 1000
+    Or equivalently: 111 (using tribonacci carrying)
+    The Fano-like value in base τ is just 'three ones'!
+
+  Φ₃(φ) = 2+√5 = 4.2360679775
+    = φ² + φ + 1 = (φ+1) + φ + 1 = 2φ+2
+    In base φ: 100 + 10 + 1 = 111_φ
+    But 111_φ = φ²+φ+1 is NOT the same as writing 111 in base φ
+    (In Zeckendorf, 111 is not allowed since φ²=φ+1 means 100=11)
+
+  Φ₃(2) = 7
+    In base 2: 111
+    7 = 4+2+1 = 2²+2¹+2⁰ = 111₂
+
+  Φ₃(3) = 13
+    In base 3: 111
+    13 = 9+3+1 = 3²+3¹+3⁰ = 111₃
+
+  *** Φ₃(x) = x²+x+1 IS the number 111 in base x! ***
+
+  This is OBVIOUS but PROFOUND:
+  The 'Fano number' 7 = 111₂
+  The 'PG(2,3) number' 13 = 111₃
+  The 'Baer number' 21 = 111₄ (base 4)
+  The projective plane PG(2,q) has 111_q points!
+
+  21 in base 4: 21 = 4²+4+1 = 16+4+1 = 21 = 111₄ ✓
+
+  MORE GENERALLY:
+  PG(k-1, q) has q^{k-1}+q^{k-2}+...+q+1 = 111...1_q (k ones) points
+  This is the number (q^k-1)/(q-1) = 'k ones in base q'
+
+  For k=3 (projective planes):
+    PG(2,2) = 111₂ = 7
+    PG(2,3) = 111₃ = 13
+    PG(2,4) = 111₄ = 21
+    PG(2,5) = 111₅ = 31
+
+  For k=2 (projective lines):
+    PG(1,2) = 11₂ = 3
+    PG(1,3) = 11₃ = 4
+    PG(1,4) = 11₄ = 5
+    PG(1,5) = 11₅ = 6
+
+  THE FORBIDDEN VALUES ARE 'ALL ONES' NUMBERS:
+  7 = 111₂ = repunit in base 2
+  21 = 111₄ = repunit in base 4 = base 2²
+  273 = 111₁₆ = repunit in base 16 = base 2⁴ (NOT forbidden)
+
+======================================================================
+PART 7: SIMPLEX-CUBOID PACKING
+======================================================================
+
+User's framework: simplex = (x+1)^n, cuboid = (x+2)^n at x=2
+  Simplex volume factor: (1+x)^n = 3^n
+  Cuboid volume factor:  (2+x)^n = 4^n
+
+  Packing ratio: simplex/cuboid = (3/4)^n = ((1+x)/(2+x))^n
+  This is the fraction of cuboid volume occupied by the simplex.
+
+  Complement = 1 - (3/4)^n = 'extra pieces' fraction
+  n=1: (3/4)^1 = 0.750000, complement = 0.250000, extra = 4^1-3^1 = 1
+  n=2: (3/4)^2 = 0.562500, complement = 0.437500, extra = 4^2-3^2 = 7
+  n=3: (3/4)^3 = 0.421875, complement = 0.578125, extra = 4^3-3^3 = 37
+  n=4: (3/4)^4 = 0.316406, complement = 0.683594, extra = 4^4-3^4 = 175
+  n=5: (3/4)^5 = 0.237305, complement = 0.762695, extra = 4^5-3^5 = 781
+  n=6: (3/4)^6 = 0.177979, complement = 0.822021, extra = 4^6-3^6 = 3367
+  n=7: (3/4)^7 = 0.133484, complement = 0.866516, extra = 4^7-3^7 = 14197
+  n=8: (3/4)^8 = 0.100113, complement = 0.899887, extra = 4^8-3^8 = 58975
+
+  The extra pieces 4^n - 3^n:
+    n=1:      1  mod 7 = 1  
+    n=2:      7  mod 7 = 0  = 7·1
+    n=3:     37  mod 7 = 2  
+    n=4:    175  mod 7 = 0  = 7·25
+    n=5:    781  mod 7 = 4  
+    n=6:   3367  mod 7 = 0  = 7·481
+    n=7:  14197  mod 7 = 1  
+    n=8:  58975  mod 7 = 0  = 7·8425
+
+  7 | (4^n - 3^n) iff n is even (since 4≡3≡-1 mod 7 fails...)
+  Actually: 4 ≡ 4 mod 7, 3 ≡ 3 mod 7
+  4^n - 3^n mod 7:
+    n=1: 4^1 ≡ 4, 3^1 ≡ 3, diff ≡ 1 mod 7
+    n=2: 4^2 ≡ 2, 3^2 ≡ 2, diff ≡ 0 mod 7
+    n=3: 4^3 ≡ 1, 3^3 ≡ 6, diff ≡ 2 mod 7
+    n=4: 4^4 ≡ 4, 3^4 ≡ 4, diff ≡ 0 mod 7
+    n=5: 4^5 ≡ 2, 3^5 ≡ 5, diff ≡ 4 mod 7
+    n=6: 4^6 ≡ 1, 3^6 ≡ 1, diff ≡ 0 mod 7
+    n=7: 4^7 ≡ 4, 3^7 ≡ 3, diff ≡ 1 mod 7
+    n=8: 4^8 ≡ 2, 3^8 ≡ 2, diff ≡ 0 mod 7
+    n=9: 4^9 ≡ 1, 3^9 ≡ 6, diff ≡ 2 mod 7
+    n=10: 4^10 ≡ 4, 3^10 ≡ 4, diff ≡ 0 mod 7
+    n=11: 4^11 ≡ 2, 3^11 ≡ 5, diff ≡ 4 mod 7
+    n=12: 4^12 ≡ 1, 3^12 ≡ 1, diff ≡ 0 mod 7
+  Period of (4^n - 3^n) mod 7: 6 = tournament period!
+
+======================================================================
+PART 8: SIMPLEX NESTING AND CORNER PIECES
+======================================================================
+
+The user's geometric picture:
+  n=2: equilateral triangle in square, 2 corner triangles
+  n=3: regular tetrahedron in cube, 4 corner pieces
+
+  For a regular n-simplex inscribed in an n-cube:
+  A regular simplex with n+1 vertices can inscribe in an n-cube
+  when a Hadamard matrix H_{n+1} exists (n+1 ≡ 0 mod 4 or n+1 ≤ 2)
+
+  HADAMARD DIMENSIONS: n+1 = 1, 2, 4, 8, 12, 16, 20, ...
+  So n = 0, 1, 3, 7, 11, 15, 19, ...
+
+  At these dimensions, the simplex inscribes perfectly and
+  the 'corner pieces' are congruent orthoschemes.
+
+  Volume ratios (simplex/cube) at Hadamard dimensions:
+  n=1: vol ratio ≈ 1.000000, corner pieces = 2^1-2 = 0
+  n=2: vol ratio ≈ 0.433013, corner pieces = 2^2-3 = 1
+  n=3: vol ratio ≈ 0.333333, corner pieces = 2^3-4 = 4
+  n=7: vol ratio ≈ 0.025397, corner pieces = 2^7-8 = 120
+
+  THE KEY PATTERN:
+  n=1: 2^1 - 2 = 0 pieces (simplex = segment = cube)
+  n=2: 2^2 - 3 = 1 piece  (triangle + 1 complement)
+  n=3: 2^3 - 4 = 4 pieces (tetrahedron + 4 corners)
+  n=7: 2^7 - 8 = 120 = 5! pieces
+
+  General: 2^n - (n+1) = Σ C(n,k) for k≥2 = interaction terms
+  These are the higher-order terms in (1+1)^n = 2^n
+  The simplex captures the 'linear' part: C(n,0)+C(n,1) = 1+n
+  The corners capture the 'nonlinear' part: C(n,2)+C(n,3)+...
+
+  IN TOURNAMENT TERMS:
+  The simplex ↔ degree-0 and degree-1 Walsh components = mean + linear
+  The corners ↔ degree-2 and higher Walsh components = interactions
+  H is determined by degree-2+ interactions (the 'corner pieces'!)
+
+======================================================================
+PART 9: THE TRIBONACCI-BAER CONNECTION
+======================================================================
+
+Since τ³ = Φ₃(τ) and Φ₃(2) = 7, Φ₃(4) = 21:
+
+  The tribonacci constant satisfies THE SAME polynomial relation
+  that generates the forbidden values, just at an irrational point.
+
+  Think of it as a continuous version:
+  Φ₃(x) evaluated at integer points gives projective planes
+  Φ₃(x) evaluated at k-nacci constants gives k-nacci^(k+1)
+
+  k-nacci ratios and Φ₃ values:
+  k= 2: ratio=1.61803399, Φ₃(r) = 5.236068, r^k = 2.618034, r³ = 4.236068
+  k= 3: ratio=1.83928676, Φ₃(r) = 6.222263, r^k = 6.222263, r³ = 6.222263
+  k= 4: ratio=1.92756198, Φ₃(r) = 6.643057, r^k = 13.804904, r³ = 7.161847
+  k= 5: ratio=1.96594824, Φ₃(r) = 6.830901, r^k = 29.367055, r³ = 7.598296
+  k= 6: ratio=1.98358284, Φ₃(r) = 6.918184, r^k = 60.911888, r³ = 7.804607
+  k=10: ratio=1.99901863, Φ₃(r) = 6.995094, r^k = 1018.986480, r³ = 7.988229
+
+  For k=3 (tribonacci): Φ₃(τ) = τ³ EXACTLY
+  For k=2 (Fibonacci): Φ₃(φ) = 2+√5 ≈ 4.236, φ³ ≈ 4.236 — WAIT
+    φ³ = 4.2360679775
+    Φ₃(φ) = 5.2360679775
+    φ³ = Φ₃(φ)? False
+
+  WAIT: φ³ = φ·φ² = φ(φ+1) = φ²+φ = (φ+1)+φ = 2φ+1
+    2φ+1 = 4.2360679775
+    Φ₃(φ) = φ²+φ+1 = (φ+1)+φ+1 = 2φ+2 = 5.2360679775
+    So φ³ = 2φ+1 ≠ 2φ+2 = Φ₃(φ)
+    The Fibonacci equation is φ² = φ+1, NOT φ³ = Φ₃(φ)
+
+  THE DISTINCTION:
+  Fibonacci: φ² = φ+1  (degree 2 relation)
+  Tribonacci: τ³ = τ²+τ+1 = Φ₃(τ)  (degree 3 relation)
+  The tribonacci is the UNIQUE constant where x^3 = Φ₃(x)
+
+======================================================================
+PART 10: REPUNITS AND TOURNAMENT FORBIDDEN VALUES
+======================================================================
+
+REPUNIT: a number consisting of all 1s in some base
+  R_k(b) = 111...1_b (k ones) = (b^k - 1)/(b - 1)
+
+  R_3(b) = b² + b + 1 = Φ₃(b)  (3-digit repunit = Φ₃)
+  R_2(b) = b + 1               (2-digit repunit)
+  R_k(b) = Σ b^i for i=0..k-1   (k-digit repunit)
+
+  FORBIDDEN VALUES AS REPUNITS:
+  7 = R_3(2) = 111₂  (base-2 repunit)
+  21 = R_3(4) = 111₄ (base-4 repunit)
+  273 = R_3(16) = 111₁₆ (base-16 repunit, NOT forbidden)
+
+  These are 3-digit repunits in base 2^{2^k}:
+  k=0: R_3(2) = 7 ← FORBIDDEN
+  k=1: R_3(4) = 21 ← FORBIDDEN
+  k=2: R_3(16) = 273 ← achievable
+
+  OTHER REPUNIT SEQUENCES:
+  2-digit repunits R_2(b) = b+1: 3, 5, 7, 9, 11, ...
+    R_2(2) = 3 = Φ₆(2), R_2(6) = 7 = Φ₃(2)
+    7 is BOTH R_3(2) and R_2(6)!
+
+  4-digit repunits R_4(b) = b³+b²+b+1:
+    R_4(2) = 15 = (b+1)(b²+1) = 3×5
+    R_4(3) = 40 = (b+1)(b²+1) = 4×10
+    R_4(4) = 85 = (b+1)(b²+1) = 5×17
+    R_4(5) = 156 = (b+1)(b²+1) = 6×26
+    R_4(6) = 259 = (b+1)(b²+1) = 7×37
+    R_4(7) = 400 = (b+1)(b²+1) = 8×50
+
+  R_4(b) = (b+1)(b²+1) always factors!
+  So 4-digit repunits are NEVER prime.
+  But 3-digit repunits R_3(b) = Φ₃(b) can be prime.
+
+  Primality of R_3(b) = Φ₃(b):
+    Φ₃( 2) =    7 PRIME
+    Φ₃( 3) =   13 PRIME
+    Φ₃( 4) =   21  = 3 × 7
+    Φ₃( 5) =   31 PRIME
+    Φ₃( 6) =   43 PRIME
+    Φ₃( 7) =   57  = 3 × 19
+    Φ₃( 8) =   73 PRIME
+    Φ₃( 9) =   91  = 7 × 13
+    Φ₃(10) =  111  = 3 × 37
+    Φ₃(11) =  133  = 7 × 19
+    Φ₃(12) =  157 PRIME
+    Φ₃(13) =  183  = 3 × 61
+    Φ₃(14) =  211 PRIME
+    Φ₃(15) =  241 PRIME
+    Φ₃(16) =  273  = 3 × 7 × 13
+    Φ₃(17) =  307 PRIME
+    Φ₃(18) =  343  = 7 × 7 × 7
+    Φ₃(19) =  381  = 3 × 127
+
+  Φ₃ primes (b such that Φ₃(b) is prime):
+  b = 1(3), 2(7), 3(13), 5(31), 6(43), 8(73), 12(157), 14(211), ...
+  These are called 'generalized Eisenstein primes' — norms of
+  Eisenstein primes in Z[ω].
+
+======================================================================
+PART 11: THE CATEGORY OF REPUNITS
+======================================================================
+
+Define the REPUNIT FUNCTOR:
+  R_k: (Bases) → (Integers)
+  b ↦ R_k(b) = (b^k-1)/(b-1)
+
+  Morphisms: b₁ = b₂^m gives R_k(b₂^m) | R_{km}(b₂)
+  because 111...1_{b^m} (k digits) embeds into 111...1_b (km digits)
+
+  At k=3: R_3(2) = 7, R_3(4) = 21, R_3(16) = 273
+  Divisibility: R_3(2) | R_3(4)? 7 | 21 = 3×7 ✓
+  R_3(4) | R_3(16)? 21 | 273 = 13×21 ✓
+  R_3(2^{2^k}) divides R_3(2^{2^{k+1}}) for all k!
+
+  The Baer divisibility tower:
+    R_3(2) = 7
+    R_3(4) = 21 = R_3(2) × 3
+    R_3(16) = 273 = R_3(4) × 13
+    R_3(256) = 65793 = R_3(16) × 241
+    R_3(65536) = 4295032833 = R_3(256) × 65281
+
+  The quotients: 3, 13, 241, 65281, ...
+  These are Φ₆(2^{2^k}) = q² - q + 1 at q = 2^{2^k}!
+  This IS the Baer partition: each PG(2,F_{q²}) contains
+  Φ₆(q) = q²-q+1 copies of PG(2,F_q).
+
+======================================================================
+PART 12: SYNTHESIS — THE REPUNIT-TRIBONACCI-BAER TRIANGLE
+======================================================================
+
+THREE WINDOWS onto the same structure:
+
+  1. REPUNITS: Φ₃(b) = 111_b = 3-digit repunit in base b
+     Forbidden values = repunits in bases 2, 4
+     The 'all ones' structure = every position contributes equally
+
+  2. TRIBONACCI: τ³ = Φ₃(τ) = τ²+τ+1
+     The tribonacci recurrence IS the Φ₃ polynomial relation
+     τ is the 'irrational base' where Φ₃ becomes a pure power
+
+  3. BAER PLANES: |PG(2,q)| = Φ₃(q) = 111_q
+     The projective plane IS the repunit geometry
+     Each 'digit position' (0, 1, 2) corresponds to a coordinate axis
+     The 111 structure means: one point for each combination
+
+  THE UNITY:
+  A projective plane PG(2,q) has q²+q+1 = 111_q points.
+  This is Φ₃(q), the third cyclotomic polynomial.
+  At q = τ (tribonacci), this becomes τ³ = Φ₃(τ).
+  At q = 2 (tournament base), this becomes 7 = FORBIDDEN.
+  The repunit '111' is the universal form, and the base
+  determines which mathematical world we're in.
+
+  FORBIDDEN VALUES = REPUNITS IN TOURNAMENT-RELATED BASES
+  The base 2 is the tournament generator (2 states per arc)
+  The base 4 = 2² is the Baer square (F₄ field size)
+  Together, 7 = 111₂ and 21 = 111₄ are the only forbidden repunits.
+
+======================================================================
+DONE — TRIBONACCI BASES BAER
+======================================================================
