@@ -1,0 +1,131 @@
+======================================================================
+GRAND SYNTHESIS — LEX + FOURIER + INFO + TILING
+kind-pasteur-2026-03-14-S82
+======================================================================
+
+======================================================================
+SYNTHESIS 1: THE INTERLEAVING NUMBER
+  For T = T1 lex T2, decompose H into block + interleaved paths.
+  I(T) = H(T) - H_block = the 'extra' paths from interleaving.
+  For T_3 lex T_2: I = 45 - 3 = 42.
+  Question: What is I(T) for general tournaments (not just lex)?
+======================================================================
+
+  n=5: Score-interleaving analysis
+     H   avg_mono  avg_inter  avg_total   inter%
+     1       1.00       0.00       1.00     0.0%
+     3       3.00       0.00       3.00     0.0%
+     5       1.00       4.00       5.00    80.0%
+     9       1.50       7.50       9.00    83.3%
+    11       1.00      10.00      11.00    90.9%
+    13       2.00      11.00      13.00    84.6%
+    15       7.50       7.50      15.00    50.0%
+
+======================================================================
+SYNTHESIS 2: H = 1 + 2*alpha_1 + 4*alpha_2 + ... (OCF)
+  Each term in OCF corresponds to a specific cycle structure.
+  Term 1 (constant): the transitive 'backbone'
+  Term 2*alpha_1: contribution from individual odd cycles
+  Term 4*alpha_2: contribution from PAIRS of disjoint cycles
+  The 'interleaving' in lex products corresponds to alpha_2+.
+======================================================================
+
+  n=5: OCF decomposition
+     H  alpha_1  alpha_2   c3  OCF check
+     1        0        0    0          1
+     3        1        0    1          3
+     5        2        0    2          5
+     9        4        0    3          9
+    11        5        0    4         11
+    13        6        0    4         13
+    15        7        0    4         15
+
+  n=6: OCF decomposition
+     H  alpha_1  alpha_2   c3  OCF check
+     1        0        0    0          1
+     3        1        0    1          3
+     5        2        0    2          5
+     9        4        0    3          9
+    11        5        0    4         11
+    13        6        0    4         13
+    15        7        0    4         15
+    17        8        0    4         17
+    19        9        0    5         19
+    23       11        0    6         23
+    25       12        0    6         25
+    27       11        1    5         27
+    29       10        2    6         29
+    31       13        1    6         31
+    33       16        0    7         33
+
+======================================================================
+SYNTHESIS 3: WHAT THREE NUMBERS DEFINE A TOURNAMENT?
+  H alone captures ~27% of tournament info.
+  (H, score_seq) captures ~33%.
+  (H, score_seq, c3) captures more.
+  What is the MINIMAL set of invariants that determines the class?
+======================================================================
+
+  n=5: How many classes does each invariant tuple distinguish?
+  Total classes: 12
+                          H: 7 values, max classes per value = 3, determines class? False
+                 (H,scores): 11 values, max classes per value = 2, determines class? False
+                     (H,c3): 8 values, max classes per value = 3, determines class? False
+              (H,scores,c3): 11 values, max classes per value = 2, determines class? False
+           (H,scores,c3,c5): 11 values, max classes per value = 2, determines class? False
+                    (H,det): 8 values, max classes per value = 3, determines class? False
+                (scores,c3): 9 values, max classes per value = 3, determines class? False
+
+======================================================================
+SYNTHESIS 4: THE COMPLETE PICTURE
+======================================================================
+
+  WHAT WE NOW KNOW (S69-S82):
+
+  ALGEBRAIC:
+  - H = I(Omega, 2) = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...  [OCF]
+  - deg(H) = 2*floor((n-1)/2) in arc variables  [Degree Drop]
+  - H_hat(S) = (n-2)!/2^{n-2} at level 2, sign by 2-path vs V-shape  [Fourier]
+  - All odd Fourier levels vanish (from H(T)=H(T^op))  [path reversal]
+
+  STRUCTURAL:
+  - H-landscape: unimodal n<=5, multimodal n>=6  [phase transition]
+  - H=37 trap at n=6 from score (1,2,2,3,3,4)  [score barrier]
+  - Lex product: H(T1 lex T2) = H(T1)*H(T2)^|V1| for transitive T1
+  - Cyclic lex: creates 14x more paths via interleaving  [42/3 at n=6]
+  - T_3 lex T_2 = H-maximizer at n=6
+
+  INFORMATION:
+  - I(T;H)/m ≈ 0.27 = non-constant Fourier energy / m  [information rate]
+  - Var(H)/Mean(H)^2 ≈ 1/3 = E_nonconst/E_0  [Fourier Parseval]
+  - H beats score as best single summary at n>=6
+  - (H, score) jointly captures I/m = 0.33 = class info rate
+
+  TILING:
+  - GS code = product code (1+z)^f*(1+z^2)^p  [S76]
+  - GS iff self-converse  [S78]
+  - Blue skeleton bipartite at odd n by t3 parity  [THM-060]
+  - Blue line weights always even  [S77]
+  - Monadic bind non-deterministic at class level  [S78]
+
+  TOPOLOGICAL:
+  - chi(GLMY) = 1-b1-b3+b4, Paley T_7 has chi=7  [S69]
+  - DC = skein relation (Jones polynomial analog)  [S69]
+  - H is Vassiliev type 2*floor((n-1)/2)  [S69-S72]
+
+  DYNAMIC:
+  - Majority dynamics: transitivizes in O(1) steps  [S71]
+  - SA escapes H=37 trap (20/20 at n=6)  [S71]
+  - logH ≈ -score_variance with R = -0.97  [S71]
+
+  THE 20 OPEN LEADS FROM S80 (most promising):
+  1. Tournament operads
+  2. Awan-Bernardi B-polynomial
+  3. Asao magnitude-path spectral sequence
+  4. The Var/Mean^2 = 1/3 exact proof
+  5. Lee-Yang zero concentration
+
+
+======================================================================
+DONE
+======================================================================
