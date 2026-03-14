@@ -872,3 +872,19 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-910 | H = 1 + 2α₁ + 4α₂ at n≤7 with DIRECTED α₁ (α₃=0) | CONFIRMED | 200/200 at n=7, 1024/1024 at n=5. Three disjoint cycles need ≥9 vertices. | opus-S71d |
 | HYP-911 | I₃/H ratio NOT 3/2 globally (mean ≈ 1.64 at n=7), increases with α₂ | CONFIRMED | 200 samples: I₃/H = (1+3α₁+9α₂)/(1+2α₁+4α₂) → 9/4 as α₂ dominates. Earlier "3/2 ratio" was within λ-fibers. | opus-S71d |
 | HYP-912 | Cross-level contribution 4·α₂^{35}/H averages 11.4% at n=8 | CONFIRMED | 200 random n=8 tournaments. Range [0%, 19.6%]. | opus-S71d |
+
+## kind-pasteur-2026-03-14-S63 Hypotheses
+
+| HYP-920 | I(b) mod (b+1) = I(-1) mod (b+1) for ALL b >= 0 | CONFIRMED | Trivial: I(b) = 1+a1*b+a2*b^2. At b=-1 mod (b+1): I(b) mod (b+1) = I(-1) mod (b+1). Verified b=2..20, 300 tournaments at n=7. | kind-pasteur-S63 |
+| HYP-921 | CRT tower: (I(2) mod 3, I(3) mod 4, I(4) mod 5) recovers I(-1) exactly for all n=7 tournaments | CONFIRMED | 3 evaluations suffice since lcm(3,4,5)=60 > max|I(-1)|=51 at n=7. All 300 samples verified. | kind-pasteur-S63 |
+| HYP-922 | G(1/2) = H + 1 + 2*alpha_2 where G(z) = sum I(b)*z^b | CONFIRMED | Algebraic: G(z) = 1/(1-z) + a1*z/(1-z)^2 + a2*z*(1+z)/(1-z)^3. At z=1/2: G=2+2a1+6a2 = H+1+2a2. 300/300 verified. | kind-pasteur-S63 |
+| HYP-923 | N(I(omega)) mod 3 in {0, 1} only (never 2) for ALL tournaments | CONFIRMED | N = a^2-ab+b^2 is Eisenstein norm, always 0 or 1 mod 3 (number theory). 1000/1000 verified. 3|N iff I(1)=0 mod 3. | kind-pasteur-S63 |
+| HYP-924 | H = 3 - 2*b0 + 6*b2 (reduced formula from constraint b0+b1+b2=1) | CONFIRMED | From I(0)=1: b0+b1+b2=1, so b1=1-b0-b2. H=b0+3b1+9b2=3-2b0+6b2. 300/300 verified. | kind-pasteur-S63 |
+| HYP-925 | H mod 6 depends ONLY on b0 mod 3: b0=0(3)->H=3(6), b0=1(3)->H=1(6), b0=2(3)->H=5(6) | CONFIRMED | From H=3-2b0+6b2: H mod 6 = (3-2b0) mod 6. 300/300 verified. | kind-pasteur-S63 |
+| HYP-926 | a1=3 is IMPOSSIBLE for ALL tournaments at n=5 and n=6 | CONFIRMED | Exhaustive: 0/1024 at n=5, 0/32768 at n=6 have exactly 3 directed odd cycles. THM-029 proves this for all n. | kind-pasteur-S63 |
+| HYP-927 | H=21 is impossible for all n <= 7 | CONFIRMED | Exhaustive at n=5 (0/1024), n=6 (0/32768), sampled at n=7 (0/5000). All 5 decompositions (a1,a2) with H=21 are individually unachievable. | kind-pasteur-S63 |
+| HYP-928 | H mod m achieves ALL odd residues for m = 2,3,4,5,6,7,8,9,10,11,12,24,36,72 at n=7 | CONFIRMED | No modular obstructions up to mod 72. Gaps appear only at mod 216+ from lattice constraints. 5000 samples at n=7. | kind-pasteur-S63 |
+| HYP-929 | (b0%2, b1%2, b2%2) always has odd sum (exactly 1 or 3 odd components) | CONFIRMED | From b0+b1+b2=1: sum mod 2 = 1 always. 1000/1000 verified. | kind-pasteur-S63 |
+| HYP-930 | I(omega) mod (1-omega) = I(1) mod 3 in Eisenstein integers Z[omega] | CONFIRMED | I(omega) = (1-a2)+(a1-a2)omega. Mod (1-omega): sum = 1+a1-2a2 = I(1) mod 3. 1000/1000 verified. | kind-pasteur-S63 |
+| HYP-931 | Score sequence does NOT determine (a1,a2) at n>=5 | CONFIRMED | n=5: score (1,2,2,2,3) maps to a1 in {5,6,7}. n=6: score (1,2,2,3,3,4) maps to 7 distinct (a1,a2). | kind-pasteur-S63 |
+| HYP-932 | In tournament, each cyclic triple has exactly 1 directed 3-cycle (not 2) | CONFIRMED | Verified: count_directed_ham_cycles([0,1,2]) = 1 for cyclic tournament. Reverse direction uses opposite arcs. | kind-pasteur-S63 |

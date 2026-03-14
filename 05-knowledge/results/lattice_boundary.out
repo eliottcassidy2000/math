@@ -1,0 +1,183 @@
+======================================================================
+PART 1: Exhaustive (a1, a2) lattice at n=5
+======================================================================
+
+  Lattice points: 7
+
+  a1 | a2 | count | H
+   0 |  0 |   120 |   1
+   1 |  0 |   120 |   3
+   2 |  0 |   240 |   5
+   4 |  0 |   240 |   9
+   5 |  0 |   120 |  11
+   6 |  0 |   120 |  13
+   7 |  0 |    64 |  15
+
+  c3 and c5 at n=5:
+  (dc3, dc5) -> count:
+    dc3=0, dc5=0: a1=0, count=120
+    dc3=1, dc5=0: a1=1, count=120
+    dc3=2, dc5=0: a1=2, count=240
+    dc3=3, dc5=1: a1=4, count=240
+    dc3=4, dc5=1: a1=5, count=120
+    dc3=4, dc5=2: a1=6, count=120
+    dc3=4, dc5=3: a1=7, count=40
+    dc3=5, dc5=2: a1=7, count=24
+
+  c5 constrained by c3:
+    dc3=0: possible dc5 = [0]
+    dc3=1: possible dc5 = [0]
+    dc3=2: possible dc5 = [0]
+    dc3=3: possible dc5 = [1]
+    dc3=4: possible dc5 = [1, 2, 3]
+    dc3=5: possible dc5 = [2]
+
+======================================================================
+PART 2: Exhaustive (a1, a2) lattice at n=6
+======================================================================
+
+  Lattice points: 27
+
+  The (a1, a2) grid:
+
+  a2\a1   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
+    0  720 960 2160   . 2880 1440 1440 2208 720 1440   . 1440 1440   .   .   . 480   .   .   .   .
+    1    .   .  80   .   .   . 720   .   . 1440   . 480 2160 1440 1440   . 1440   .   . 1440 240
+    2    .   .   .   .   .   .   .   .   .   . 720   . 720   . 2160   . 720   .   .   .   .
+    3    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+    4    .   .   .   .   .   .   .   .   .   .   .   .   .   . 240   .   .   .   .   .   .
+
+  Missing a1 values: [3, 15, 17, 18]
+
+======================================================================
+PART 3: The boundary curve a2_max(a1)
+======================================================================
+
+  n=6: a2_max(a1)
+    a1= 0: a2_max=0
+    a1= 1: a2_max=0
+    a1= 2: a2_max=1
+    a1= 4: a2_max=0
+    a1= 5: a2_max=0
+    a1= 6: a2_max=1
+    a1= 7: a2_max=0
+    a1= 8: a2_max=0
+    a1= 9: a2_max=1
+    a1=10: a2_max=2
+    a1=11: a2_max=1
+    a1=12: a2_max=2
+    a1=13: a2_max=1
+    a1=14: a2_max=4
+    a1=16: a2_max=2
+    a1=19: a2_max=1
+    a1=20: a2_max=1
+
+  The boundary is determined by tournament geometry:
+  a2 <= floor(a1 * something)
+  But the exact bound is NOT linear.
+
+======================================================================
+PART 4: Score sequence determines cycle counts?
+======================================================================
+
+  n=5: score -> (a1, a2) map:
+    score=(0, 1, 2, 3, 4): (0, 0)
+    score=(0, 1, 3, 3, 3): (1, 0)
+    score=(0, 2, 2, 2, 4): (1, 0)
+    score=(0, 2, 2, 3, 3): (2, 0)
+    score=(1, 1, 1, 3, 4): (1, 0)
+    score=(1, 1, 2, 2, 4): (2, 0)
+    score=(1, 1, 2, 3, 3): (4, 0)
+    score=(1, 2, 2, 2, 3): [(5, 0), (6, 0), (7, 0)]  [MULTIPLE]
+    score=(2, 2, 2, 2, 2): (7, 0)
+
+  n=6: score -> (a1, a2) map:
+    score=(0, 1, 2, 3, 4, 5): (0, 0)
+    score=(0, 1, 2, 4, 4, 4): (1, 0)
+    score=(0, 1, 3, 3, 3, 5): (1, 0)
+    score=(0, 1, 3, 3, 4, 4): (2, 0)
+    score=(0, 2, 2, 2, 4, 5): (1, 0)
+    score=(0, 2, 2, 3, 3, 5): (2, 0)
+    score=(0, 2, 2, 3, 4, 4): (4, 0)
+    score=(0, 2, 3, 3, 3, 4): [(5, 0), (6, 0), (7, 0)]  [MULTIPLE]
+    score=(0, 3, 3, 3, 3, 3): (7, 0)
+    score=(1, 1, 1, 3, 4, 5): (1, 0)
+    score=(1, 1, 1, 4, 4, 4): (2, 1)
+    score=(1, 1, 2, 2, 4, 5): (2, 0)
+    score=(1, 1, 2, 3, 3, 5): (4, 0)
+    score=(1, 1, 2, 3, 4, 4): [(6, 1), (7, 0), (8, 0)]  [MULTIPLE]
+    score=(1, 1, 3, 3, 3, 4): [(9, 0), (9, 1), (11, 1)]  [MULTIPLE]
+    score=(1, 2, 2, 2, 3, 5): [(5, 0), (6, 0), (7, 0)]  [MULTIPLE]
+    score=(1, 2, 2, 2, 4, 4): [(9, 0), (9, 1), (11, 1)]  [MULTIPLE]
+    score=(1, 2, 2, 3, 3, 4): [(10, 2), (11, 0), (12, 0), (12, 1), (12, 2), (13, 1), (14, 2)]  [MULTIPLE]
+    score=(1, 2, 3, 3, 3, 3): [(14, 1), (14, 2), (16, 0), (16, 1)]  [MULTIPLE]
+    score=(2, 2, 2, 2, 2, 5): (7, 0)
+    score=(2, 2, 2, 2, 3, 4): [(14, 1), (14, 2), (16, 0), (16, 1)]  [MULTIPLE]
+    score=(2, 2, 2, 3, 3, 3): [(14, 4), (16, 2), (19, 1), (20, 1)]  [MULTIPLE]
+
+======================================================================
+PART 5: Why is a1=3 impossible? (n=5 proof)
+======================================================================
+
+  At n=5: a1 = dc3 + dc5 (total directed odd cycles with multiplicity)
+  From Part 1 data:
+    dc3=0: dc5 in {0, 2}. a1 in {0, 2}.
+    dc3=1: dc5=0. a1=1.
+    dc3=2: dc5=0. a1=2.
+    dc3=4: dc5=0. a1=4.
+    dc3=5: dc5=0. a1=5.
+    dc3=6: dc5=0. a1=6.
+    dc3=5: dc5=2. a1=7.
+
+  So a1=3 requires dc3=3 (since dc5 is 0 or 2, and 3-2=1 needs dc3=1 but
+  then dc5=2 is impossible when dc3=1).
+
+  Wait, let me re-examine: dc3=1, dc5=2 gives a1=3. Is this possible?
+  dc3=1 means exactly one 3-vertex set forming a directed 3-cycle.
+  dc5=2 means there IS a Hamiltonian 5-cycle.
+
+  But at n=5: if there is a Hamiltonian cycle, then at least 2 of the
+  C(5,2)=10 vertex triples form 3-cycles. So dc3=1 with dc5=2 is impossible!
+
+  Also: dc3=3 means exactly 3 directed 3-cycles. This means 1 or 2
+  undirected 3-cycle vertex sets. Each undirected set gives exactly 2
+  directed cycles, so dc3 is always EVEN for 3-cycles.
+
+  WAIT: Each 3-vertex tournament is either transitive (0 directed 3-cycles)
+  or cyclic (2 directed 3-cycles: fwd and bwd).
+  So dc3 is ALWAYS even!
+
+  dc3 in {0, 2, 4, 6, 8, 10, ...} only.
+  At n=5: C(5,3)=10 vertex triples, each contributes 0 or 2 directed cycles.
+  So dc3 is even, max = 20 (impossible).
+  Observed: dc3 in {0, 2, 4, 6, 8, 10}... let me check.
+
+  n=5: dc3 values = [0, 1, 2, 3, 4, 5]
+  All even: False
+
+  n=6: dc3 values = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  n=6: dc5 values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+
+  Rechecking a1=1 at n=5:
+    bits=2: a1=1, cycles=[[0, 1, 2]]
+      [0, 0, 1, 0, 0]
+      [1, 0, 0, 0, 0]
+      [0, 1, 0, 0, 0]
+      [1, 1, 1, 0, 0]
+      [1, 1, 1, 1, 0]
+
+  Test: 3-cycle 0->1->2->0:
+    count_directed_ham_cycles = 1
+    In a tournament, each cyclic triple has exactly 1 directed 3-cycle
+    (the other direction uses the opposite arcs)
+
+  n=5: c3 (vertex sets) = [0, 1, 2, 3, 4, 5]
+  n=5: dc5 (directed 5-cycles) = [0, 1, 2, 3]
+
+  CORRECTED understanding:
+  Each cyclic triple -> exactly 1 directed 3-cycle
+  Each directed 5-cycle is counted individually
+  a1 = c3 + dc5 can be any non-negative integer
+  The constraint a1 != 3 is genuinely non-trivial!
+
+Done.
