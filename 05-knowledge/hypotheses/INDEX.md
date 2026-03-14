@@ -1265,3 +1265,23 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1270 | **SCC structure determines H for non-strongly-connected**: At n=5: SCC partition determines H exactly for all non-strongly-connected tournaments. Only strongly connected tournaments (single SCC) split across multiple H values. | CONFIRMED (exhaustive n=5) | knot_algebraic_K_23.py | opus-S85 |
 | HYP-1271 | **Dichromatic number χ_d = 1 iff transitive**: χ_d(T) = 1 iff T is transitive (H=1). ALL non-transitive tournaments at n≤5 have χ_d = 2. Every non-transitive tournament can be 2-partitioned into acyclic parts. | CONFIRMED (exhaustive n=4,5) | knot_algebraic_K_23.py | opus-S85 |
 | HYP-1272 | **Var/Mean² = 1/3 at n=3,4 exactly**: Second moment ratio <H²>/<H>² = 4/3 at n=3,4 (exactly), giving Var/Mean² = 1/3. Declines to ~0.317 at n=5. | CONFIRMED (exact computation) | knot_algebraic_K_23.py | opus-S85 |
+
+### S85 New Hypotheses (continued)
+
+| ID | Statement | Status | Source | Session |
+|----|-----------|--------|--------|---------|
+| HYP-1273 | **I(C_k, 2) = 2^k + (-1)^k**: Independence polynomial of cycle C_k at x=2 equals Lucas-like sequence. Proven by transfer matrix / closed form. | CONFIRMED (verified k≤12) | independence_closed_form_23.py | opus-S85 |
+| HYP-1274 | **I(P_k, 2) = (2^{k+2} - (-1)^k)/3**: Independence polynomial of path P_k at x=2 equals Jacobsthal-related sequence. Both satisfy a(k) = a(k-1) + 2·a(k-2). | CONFIRMED (verified k≤12) | independence_closed_form_23.py | opus-S85 |
+| HYP-1275 | **I(C_k, 2) = I(P_{k-2}, 2) + 2·I(P_{k-4}, 2)**: Cycle-path identity connecting the two closed forms. | CONFIRMED (k=3..9) | independence_closed_form_23.py | opus-S85 |
+| HYP-1276 | **H values closed under GCD at n=5,6**: The set of achievable H values forms a GCD-closed set. Every pairwise GCD of two achievable H values is itself achievable. | CONFIRMED (exhaustive n=5,6) | analytic_number_theory_23.py | opus-S85 |
+| HYP-1277 | **H mod 7 = 0 impossible for n≤6**: No tournament on ≤6 vertices has H divisible by 7. First 7|H occurs at n=7. Connected to forbidden H=7 (THM-200). | CONFIRMED (exhaustive n≤6) | analytic_number_theory_23.py | opus-S85 |
+| HYP-1278 | **perm²(A) = det²(A) for n≤5**: For tournament adjacency A on n≤5 vertices, the square of the permanent equals the square of the determinant. Breaks at n=6. | CONFIRMED (exhaustive n≤5, counterexample n=6) | perm_det_23.py | opus-S85 |
+| HYP-1279 | **Corr(H, von Neumann entropy) > 0.97**: Tournament state ρ_A = AA^T/m has von Neumann entropy nearly perfectly correlated with H. Corr = 0.996 at n=4, 0.978 at n=5. | CONFIRMED (exhaustive n=4,5) | tropical_quantum_23.py | opus-S85 |
+| HYP-1280 | **Corr(H, Wiener index) ≈ -0.96**: More Hamiltonian paths ↔ shorter average distances (smaller Wiener index). Strong anti-correlation. | CONFIRMED (exhaustive n=5, sampled n=6) | tropical_quantum_23.py | opus-S85 |
+| HYP-1281 | **Diameter 2 ⟺ max H at n=5**: At n=5, all tournaments with diameter 2 have H=15 (max), and all H=15 tournaments have diameter 2. | CONFIRMED (exhaustive n=5) | tropical_quantum_23.py | opus-S85 |
+| HYP-1282 | **perm(A) = 0 iff H below threshold**: At n=4: perm=0 ↔ H∈{1,3}. At n=5: perm=0 ↔ H∈{1,3,5}. The permanent detects "sub-critical" tournaments that lack cycle covers. | CONFIRMED (exhaustive n=4,5) | tropical_quantum_23.py / perm_det_23.py | opus-S85 |
+| HYP-1283 | **Pfaffian²(A-A^T) at even n gives consecutive odd squares**: At n=4: Pf²∈{1,9}. At n=6: Pf²∈{1,9,25,49,81}. Values are (2k-1)² for k=1,2,3,... | CONFIRMED (exhaustive n=4,6) | perm_det_23.py / spectral_number_theory_23.py | opus-S85 |
+| HYP-1284 | **Θ_n(-1) = -2^m**: The θ-series (tournament count by H) evaluated at q=-1 equals -2^m, trivially because all H are odd. | CONFIRMED (n=3..6) | analytic_number_theory_23.py | opus-S85 |
+| HYP-1285 | **Autocorrelation R(d)/Var depends only on Hamming weight of d**: H is "balanced" on the Boolean hypercube — its autocorrelation function R(d) is constant on each Hamming weight layer. | CONFIRMED (n=5, weight 1 and 2 layers) | analytic_number_theory_23.py | opus-S85 |
+| HYP-1286 | **Forbidden H = {7, 21, 63} at n≤7**: These are the only "structural" missing odd values (others are merely not yet achieved). 7=I(K₃,2), 21=I(P₄,2)=3×7, 63=9×7=I(K₃⊔K₁²,2). | OPEN (structural argument for 21, 63 not yet proven for all n) | forbidden_H_23.py | opus-S85 |
+| HYP-1287 | **189 = H(T₇) requires single connected Ω component**: Since 189=3³×7 and all factorizations involve forbidden factor 7, the Ω conflict graph must be a single connected component with I(Ω,2)=189. | OPEN (structural, not yet verified via direct Ω computation) | forbidden_H_23.py | opus-S85 |
