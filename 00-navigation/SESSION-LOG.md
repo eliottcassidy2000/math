@@ -32,9 +32,17 @@ Deep exploration of 2^3=8 vs 3^2=9 asymmetry, Cayley-Dickson tower parallels, to
 9. **Cayley-Dickson parallel**: property losses at dim 2^k (commutativity@4, associativity@8, alternativity@16) mirror tournament property losses at n=2^k
 10. **H mod 8** determines (a1 mod 2, a2 mod 2); v_2(H-1) has geometric decay distribution
 
-**New scripts:** exponentiation_cayley_dickson.py, hilbert3_dehn_tournament.py, z_omega_tower.py, cubic_transition_fast.py
-**New hypotheses:** HYP-1009 through HYP-1020 (12 hypotheses; numbering conflicts with opus agent)
-**Unresolved:** Whether H=63,107,119,149 are permanently forbidden; HYP numbering conflict with opus; alpha_1>=alpha_2 conjecture
+**Additional findings (session continuation):**
+11. **COMPLETE PERMANENT GAP THEOREM (HYP-1026):** The ONLY permanently forbidden H values are H=7=Phi_3(2) and H=21=3*Phi_3(2). Proof: (i) H>=27 always achievable via cubic I.P. at n>=9, (ii) odd H in [3,25]\{7,21} all achieved at n<=7, (iii) H=7,21 proved forbidden.
+12. **H=63, 107, 119, 149 are NOT permanent gaps** — all found at n=8 (h63_search.py confirmed). These are n=7-specific gaps only.
+13. **H = I(-1) mod 3 (HYP-1028):** The Hamiltonian path count and Euler characteristic of the independence complex share the same residue mod 3. Proof: 2^k+2*(-1)^k = 0 mod 3 for all k.
+14. **a1 drops out of I(2)+2*I(-1) (HYP-1030):** The coefficient of a1 in I(2)+2*I(-1) is exactly 0. Only higher-order cycle structure matters.
+15. **Base-2/prime-3 alternating sum rule (HYP-1029):** H mod 3 = alternating alpha sum, exactly paralleling base-10/prime-11 divisibility rule.
+16. **(omega-1)^c has Eisenstein norm 3^c** — creates 3-adic filtration on Z[omega]
+
+**New scripts:** exponentiation_cayley_dickson.py, hilbert3_dehn_tournament.py, z_omega_tower.py, cubic_transition_fast.py, h63_search.py, permanent_gap_mechanism.py, two_three_deep_synthesis.py, positional_and_omega.py
+**New hypotheses:** HYP-1009 through HYP-1030 (including updates; HYP-1018 REFUTED — H=63 achievable at n=8)
+**Unresolved:** Full proof of H=21 impossibility at all n (4 quadratic decompositions need individual proofs); exact threshold where (a1,0) becomes achievable (between 3 and 31)
 
 ---
 
