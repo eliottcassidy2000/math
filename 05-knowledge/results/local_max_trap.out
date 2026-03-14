@@ -1,0 +1,74 @@
+======================================================================
+LOCAL MAXIMUM TRAP ANALYSIS — H=37 at n=6
+kind-pasteur-2026-03-14-S71
+======================================================================
+
+======================================================================
+PART 1: ALL LOCAL MAXIMA AT n=6
+======================================================================
+  Total local maxima: 1200
+  By H value: {37: 720, 45: 480}
+
+======================================================================
+PART 2: STRUCTURE OF H=37 LOCAL MAXIMA
+======================================================================
+  H=37 local maxima: 720
+  H=45 local maxima: 480
+
+  H=37 score sequences:
+    (np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)): 720 tournaments
+
+  H=45 score sequences:
+    (np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)): 480 tournaments
+
+  H=37 cycle structure:
+    bits=144: c3=6, c5=8, scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), var=0.92
+    bits=208: c3=6, c5=8, scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), var=0.92
+    bits=265: c3=6, c5=8, scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), var=0.92
+    bits=269: c3=6, c5=8, scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), var=0.92
+    bits=317: c3=6, c5=8, scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)), var=0.92
+
+  H=45 cycle structure:
+    bits=408: c3=8, c5=6, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)), var=0.25
+    bits=409: c3=8, c5=6, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)), var=0.25
+    bits=920: c3=8, c5=6, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)), var=0.25
+    bits=921: c3=8, c5=6, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)), var=0.25
+    bits=1332: c3=8, c5=12, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)), var=0.25
+
+======================================================================
+PART 3: BARRIER BETWEEN H=37 AND H=45 LOCAL MAXIMA
+  What is the minimum H on any path from a H=37 max to a H=45 max?
+======================================================================
+  Found path from H=37 max to H=45 max!
+    Distance: 2 flips
+    Min H on path: 37
+
+======================================================================
+PART 4: NUMBER-THEORETIC PROPERTIES OF H=37
+======================================================================
+  37 is prime
+  37 = 36 + 1 = 6^2 + 1
+  37 mod 4 = 1
+  37 = C(6,2) + C(6,1) + 1 = 15 + 6 + 1 + ... no, 37 doesn't factor nicely into C(6,k)
+  37 in OCF: H=37 means 1 + 2*alpha_1 + 4*alpha_2 = 37
+  => alpha_1 + 2*alpha_2 = 18
+  Possible: (18,0), (16,1), (14,2), ..., (0,9)
+
+  Actual (alpha_1, alpha_2) for H=37:
+    (alpha_1=14, alpha_2=2): 2160 tournaments
+    (alpha_1=16, alpha_2=1): 1440 tournaments
+
+  Actual (alpha_1, alpha_2) for H=45:
+    (alpha_1=14, alpha_2=4): 240 tournaments
+    (alpha_1=20, alpha_2=1): 240 tournaments
+
+======================================================================
+PART 5: STRUCTURAL COMPARISON H=37 vs H=45 LOCAL MAXIMA
+======================================================================
+  det(A) for H=37 local maxima: [-3]
+  det(A) for H=45 local maxima: [-4, -1]
+  SC-score compatible: H=37: 720/720, H=45: 480/480
+
+======================================================================
+DONE
+======================================================================
