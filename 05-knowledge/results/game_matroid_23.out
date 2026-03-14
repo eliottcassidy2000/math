@@ -1,0 +1,173 @@
+  n=6: 0/32768
+  n=6: 10000/32768
+  n=6: 20000/32768
+  n=6: 30000/32768
+======================================================================
+PART 1: CONDORCET WINNER AND H CORRELATION
+======================================================================
+
+n=4:
+  winner=False, loser=False: 24 tours, mean_H=5.00, H range=5-5
+    H values: [5]
+  winner=False, loser=True: 8 tours, mean_H=3.00, H range=3-3
+    H values: [3]
+  winner=True, loser=False: 8 tours, mean_H=3.00, H range=3-3
+    H values: [3]
+  winner=True, loser=True: 24 tours, mean_H=1.00, H range=1-1
+    H values: [1]
+
+n=5:
+  winner=False, loser=False: 544 tours, mean_H=11.03, H range=9-15
+    H values: [9, 11, 13, 15]
+  winner=False, loser=True: 160 tours, mean_H=4.50, H range=3-5
+    H values: [3, 5]
+  winner=True, loser=False: 160 tours, mean_H=4.50, H range=3-5
+    H values: [3, 5]
+  winner=True, loser=True: 160 tours, mean_H=1.50, H range=1-3
+    H values: [1, 3]
+
+n=6:
+  winner=False, loser=False: 22400 tours, mean_H=29.06, H range=9-45
+    H values: [9, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  winner=False, loser=True: 4224 tours, mean_H=9.55, H range=3-15
+    H values: [3, 5, 9, 11, 13, 15]
+  winner=True, loser=False: 4224 tours, mean_H=9.55, H range=3-15
+    H values: [3, 5, 9, 11, 13, 15]
+  winner=True, loser=True: 1920 tours, mean_H=3.00, H range=1-5
+    H values: [1, 3, 5]
+
+======================================================================
+PART 2: SLATER DISTANCE AND H
+======================================================================
+
+n=4: Slater distance vs H
+  Slater=0: 24 tours, mean_H=1.00, H values=[1]
+  Slater=1: 40 tours, mean_H=4.20, H values=[3, 5]
+
+n=5: Slater distance vs H
+  Slater=0: 120 tours, mean_H=1.00, H values=[1]
+  Slater=1: 480 tours, mean_H=5.50, H values=[3, 5, 9]
+  Slater=2: 400 tours, mean_H=11.40, H values=[9, 11, 13, 15]
+  Slater=3: 24 tours, mean_H=15.00, H values=[15]
+
+======================================================================
+PART 3: KENDALL-TAU DISTANCE BETWEEN HAMILTONIAN PATHS
+======================================================================
+
+n=4: Kendall-tau statistics of HP sets
+  H=3: avg_mean_KT=2.000, avg_max_KT=2.000 (16 tours)
+  H=5: avg_mean_KT=3.200, avg_max_KT=5.000 (24 tours)
+
+n=5: Kendall-tau statistics of HP sets
+  H=3: avg_mean_KT=2.000, avg_max_KT=2.000 (120 tours)
+  H=5: avg_mean_KT=3.200, avg_max_KT=5.000 (240 tours)
+  H=9: avg_mean_KT=4.639, avg_max_KT=8.000 (240 tours)
+  H=11: avg_mean_KT=4.945, avg_max_KT=8.000 (120 tours)
+  H=13: avg_mean_KT=4.795, avg_max_KT=8.000 (120 tours)
+  H=15: avg_mean_KT=4.893, avg_max_KT=8.000 (64 tours)
+
+======================================================================
+PART 4: MATROID THEORY — CYCLE MATROID OF K_n
+======================================================================
+Spanning trees of K_n (bases of cycle matroid):
+  K_2: 1 spanning trees
+  K_3: 3 spanning trees
+  K_4: 16 spanning trees
+  K_5: 125 spanning trees
+  K_6: 1296 spanning trees
+  K_7: 16807 spanning trees
+  K_8: 262144 spanning trees
+
+Tutte polynomial evaluations for K_n:
+  T_K_n(1,1) = n^(n-2) = spanning trees
+  T_K_n(2,0) = n! = acyclic orientations of K_n
+  T_K_n(0,2) = totally cyclic orientations
+
+Acyclic orientations of K_n = n! = transitive tournaments = T(2,0):
+  n=2: 2
+  n=3: 6
+  n=4: 24
+  n=5: 120
+  n=6: 720
+
+======================================================================
+PART 5: BRADLEY-TERRY MODEL LIKELIHOOD
+======================================================================
+
+n=4 BT model analysis:
+  bits=000000, scores=(0, 1, 2, 3), H=1
+    log_L(uniform)=-4.1589, log_L(scores)=-1.9692
+    likelihood ratio = exp(2.1897)
+  bits=111111, scores=(0, 1, 2, 3), H=1
+    log_L(uniform)=-4.1589, log_L(scores)=-1.9692
+    likelihood ratio = exp(2.1897)
+  bits=010100, scores=(1, 1, 2, 2), H=5
+    log_L(uniform)=-4.1589, log_L(scores)=-3.7771
+    likelihood ratio = exp(0.3817)
+  bits=101011, scores=(1, 1, 2, 2), H=5
+    log_L(uniform)=-4.1589, log_L(scores)=-3.7771
+    likelihood ratio = exp(0.3817)
+
+======================================================================
+PART 6: TOURNAMENT DOMINANCE POSET
+======================================================================
+
+n=4: Number of SCCs vs H:
+  #SCCs=1: 24 tours, mean_H=5.00, H values=[5]
+  #SCCs=2: 16 tours, mean_H=3.00, H values=[3]
+  #SCCs=4: 24 tours, mean_H=1.00, H values=[1]
+
+======================================================================
+PART 7: KIRCHHOFF'S THEOREM — SPANNING TREES OF TOURNAMENT
+======================================================================
+
+n=4: Arborescence count vs H:
+  Arb_count=0: 26 tours, H distribution: {1: 18, 3: 8}
+  Arb_count=1: 6 tours, H distribution: {5: 6}
+  Arb_count=2: 6 tours, H distribution: {5: 6}
+  Arb_count=3: 12 tours, H distribution: {3: 6, 5: 6}
+  Arb_count=4: 6 tours, H distribution: {5: 6}
+  Arb_count=6: 6 tours, H distribution: {1: 6}
+  Arb_count=7: 2 tours, H distribution: {3: 2}
+
+======================================================================
+PART 8: TOURNAMENT LAPLACIAN SPECTRUM
+======================================================================
+
+n=5: Laplacian spectrum by H value:
+  H= 1: 120 tours, 1 distinct spectra, most common=(np.float64(3.077684), np.float64(0.726543), np.float64(0.0), np.float64(-0.726543), np.float64(-3.077684)) (120 times)
+  H= 3: 120 tours, 1 distinct spectra, most common=(np.float64(2.645751), np.float64(1.732051), np.float64(0.0), np.float64(-1.732051), np.float64(-2.645751)) (120 times)
+  H= 5: 240 tours, 1 distinct spectra, most common=(np.float64(2.645751), np.float64(1.732051), np.float64(0.0), np.float64(-1.732051), np.float64(-2.645751)) (240 times)
+  H= 9: 240 tours, 2 distinct spectra, most common=(np.float64(3.077684), np.float64(0.726543), np.float64(0.0), np.float64(-0.726543), np.float64(-3.077684)) (120 times)
+  H=11: 120 tours, 1 distinct spectra, most common=(np.float64(3.077684), np.float64(0.726543), np.float64(0.0), np.float64(-0.726543), np.float64(-3.077684)) (120 times)
+  H=13: 120 tours, 1 distinct spectra, most common=(np.float64(2.645751), np.float64(1.732051), np.float64(0.0), np.float64(-1.732051), np.float64(-2.645751)) (120 times)
+  H=15: 64 tours, 2 distinct spectra, most common=(np.float64(2.645751), np.float64(1.732051), np.float64(0.0), np.float64(-1.732051), np.float64(-2.645751)) (40 times)
+
+======================================================================
+PART 9: RAMSEY FOR H — GUARANTEED SUB-TOURNAMENT H
+======================================================================
+
+n=5: Min sub-tournament H for each (H, sub_size):
+  H  min_sub3  max_sub3  count
+   1    1        1     120
+   3    1        3     120
+   5    1        3     240
+   9    1        3     240
+  11    1        3     120
+  13    1        3     120
+  15    1        3     64
+
+======================================================================
+SYNTHESIS — GAME THEORY AND MATROID CONNECTIONS
+======================================================================
+
+KEY FINDINGS:
+1. Condorcet winners force LOW H: having a Condorcet winner restricts H values
+2. Slater distance inversely correlates with H: more "mixed" tournaments have higher H
+3. Kendall-tau diameter of HP set grows with H (more spread-out rankings)
+4. Arborescence count correlates with H but is NOT determined by it
+5. Tutte polynomial T(2,0) = n! counts exactly the H=1 (transitive) tournaments
+6. Every n=5 tournament has a 3-vertex subtournament with H=3 (cyclic)
+   — this is the Ramsey property of tournaments
+7. The skew-adjacency spectrum partially determines H but not completely
+
