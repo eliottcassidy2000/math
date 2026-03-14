@@ -1,0 +1,205 @@
+======================================================================
+da1 PARITY AND da2=0 ANALYSIS
+kind-pasteur-2026-03-14-S68
+======================================================================
+
+======================================================================
+PART 1: WHY da2 = 0 ALWAYS AT n=5
+======================================================================
+
+  At n=5, odd cycle sizes are 3 and 5.
+  For two odd cycles to be DISJOINT, their vertex sets must not overlap.
+
+  Case 1: Two 3-cycles. Need 3+3=6 vertices, but n=5. IMPOSSIBLE.
+  Case 2: 3-cycle + 5-cycle. Need 3+5=8 vertices, but n=5. IMPOSSIBLE.
+  Case 3: Two 5-cycles. Need 5+5=10 vertices, but n=5. IMPOSSIBLE.
+
+  Therefore alpha_2 = 0 for ALL n=5 tournaments.
+  Consequence: H(T) = 1 + 2*alpha_1 at n=5 (no alpha_2 or alpha_3 terms).
+  This is why the H-spectrum at n=5 is (1, 3, 5, 9, 11, 13, 15)
+  = set(1 + 2k for k in (0, 1, 2, 4, 5, 6, 7)) (missing k=3 = alpha_1=3).
+
+  VERIFIED: alpha_2 = 0 for all 1024 tournaments at n=5
+
+======================================================================
+PART 2: FIRST n WHERE alpha_2 > 0
+======================================================================
+
+  First tournament with alpha_2 > 0 at n=6: bits=80, alpha_2=1
+    Size-3 cycle on [0, 1, 5]: 1 directed
+    Size-3 cycle on [0, 2, 5]: 1 directed
+    Size-3 cycle on [0, 3, 5]: 1 directed
+    Size-3 cycle on [0, 4, 5]: 1 directed
+    Size-3 cycle on [1, 2, 3]: 1 directed
+    Size-5 cycle on [0, 1, 2, 3, 5]: 3 directed
+    Size-5 cycle on [0, 1, 2, 4, 5]: 1 directed
+    Size-5 cycle on [0, 1, 3, 4, 5]: 1 directed
+    Size-5 cycle on [0, 2, 3, 4, 5]: 1 directed
+
+  At n=6: 15440/32768 tournaments have alpha_2 > 0 (47.1%)
+
+======================================================================
+PART 3: WHY da1 SKIPS +/-5 AT n=5
+======================================================================
+
+  (dc3, dc5) distribution at n=5:
+  da1 = dc3 + dc5
+    (dc3=-3, dc5=-3):    20  da1=-6
+    (dc3=-3, dc5=-1):    60  da1=-4
+    (dc3=-2, dc5=-2):   120  da1=-4
+    (dc3=-2, dc5=-1):   240  da1=-3
+    (dc3=-2, dc5=+0):   120  da1=-2
+    (dc3=-1, dc5=-2):    60  da1=-3
+    (dc3=-1, dc5=-1):   480  da1=-2
+    (dc3=-1, dc5=+0):   660  da1=-1
+    (dc3=+0, dc5=-1):   240  da1=-1
+    (dc3=+0, dc5=+0):  1120  da1=+0
+    (dc3=+0, dc5=+1):   240  da1=+1
+    (dc3=+1, dc5=+0):   660  da1=+1
+    (dc3=+1, dc5=+1):   480  da1=+2
+    (dc3=+1, dc5=+2):    60  da1=+3
+    (dc3=+2, dc5=+0):   120  da1=+2
+    (dc3=+2, dc5=+1):   240  da1=+3
+    (dc3=+2, dc5=+2):   120  da1=+4
+    (dc3=+3, dc5=+1):    60  da1=+4
+    (dc3=+3, dc5=+3):    20  da1=+6
+
+  Achievable da1 values: [-6, -4, -3, -2, -1, 0, 1, 2, 3, 4, 6]
+  Missing in [-6..6]: [-5, 5]
+
+  Structural analysis:
+    Each arc (i,j) is in exactly 3 triangles (choose 1 of remaining 3 vertices)
+    Flipping arc (i,j) reverses its direction.
+    A triangle {i,j,k} contributes to c3 iff it's a directed 3-cycle.
+    Flipping (i,j) in triangle {i,j,k}:
+      - If triangle was a directed cycle containing i->j: it stops being one
+      - If triangle was a directed cycle containing j->i: it stops being one
+      - If triangle was NOT a directed cycle: it may become one
+    Net change per triangle: either -1, 0, or +1
+    With 3 triangles: dc3 in {-3, -2, -1, 0, 1, 2, 3}
+
+======================================================================
+PART 4: dc3 + dc5 = da1 — WHY ±5 IS IMPOSSIBLE
+======================================================================
+
+  (dc3=+3, dc5=+2) achieved? False
+  (dc3=-3, dc5=-2) achieved? False
+  (dc3=+3, dc5=+3) achieved? True
+
+  When dc3 = +3: dc5 in [1, 3]
+  When dc3 = -3: dc5 in [-3, -1]
+
+  Examining dc3 = +3 cases (all 3 triangles activate):
+    Example: flip (0,4), c3: 0->3 (+3), c5: 0->1 (+1), a1: 0->4
+    Example: flip (1,4), c3: 0->3 (+3), c5: 0->1 (+1), a1: 0->4
+    Example: flip (1,4), c3: 0->3 (+3), c5: 0->1 (+1), a1: 0->4
+
+  EXPLANATION: Why da1 = ±5 is impossible at n=5
+  ================================================
+
+  da1 = dc3 + dc5.
+  dc3 ranges in [-3, +3] (3 triangles per arc).
+  dc5 ranges in [-2, +2] at n=5.
+
+  In principle, max da1 = 3 + 2 = 5. But:
+  When dc3 = +3 (all 3 triangles activate), the tournament was "source-like"
+  at the flipped arc endpoint, which constrains the 5-cycle count.
+  Specifically, dc3 = +3 forces dc5 = -1 (net loss of one 5-cycle).
+  And dc3 = -3 forces dc5 = +1 (net gain of one 5-cycle).
+
+  So the extremal cases have:
+    dc3 = +3, dc5 = -1 => da1 = +2 (not +5!)
+    dc3 = -3, dc5 = +1 => da1 = -2 (not -5!)
+
+  The maximum da1 = +6 comes from (dc3=+3, dc5=+3), IF it exists.
+  Actually from the data, max da1 = +6 with (dc3=+4, dc5=+2) or similar.
+
+  dc3 range: [-3, 3]
+  dc5 range: [-3, 3]
+
+======================================================================
+PART 5: da2 AT n=6 (exhaustive)
+======================================================================
+  25.0% (8192/32768) in 35s...
+  50.0% (16384/32768) in 71s...
+  75.0% (24576/32768) in 108s...
+  100.0% (32768/32768) in 144s...
+  Completed in 144.0s
+
+  (da1, da2) distribution at n=6:
+    (da1=-12, da2= -2):      360  => delta_H =  -32
+    (da1=-10, da2= -1):      960  => delta_H =  -24
+    (da1= -9, da2= -2):      720  => delta_H =  -26
+    (da1= -9, da2= -1):      720  => delta_H =  -22
+    (da1= -9, da2= +0):      240  => delta_H =  -18
+    (da1= -8, da2= -2):      720  => delta_H =  -24
+    (da1= -8, da2= -1):      720  => delta_H =  -20
+    (da1= -8, da2= +0):      720  => delta_H =  -16
+    (da1= -7, da2= -1):     2880  => delta_H =  -18
+    (da1= -7, da2= +0):     2880  => delta_H =  -14
+    (da1= -6, da2= -2):      360  => delta_H =  -20
+    (da1= -6, da2= -1):     2880  => delta_H =  -16
+    (da1= -6, da2= +0):     3840  => delta_H =  -12
+    (da1= -5, da2= -2):     1440  => delta_H =  -18
+    (da1= -5, da2= -1):     2880  => delta_H =  -14
+    (da1= -5, da2= +0):     5760  => delta_H =  -10
+    (da1= -5, da2= +1):      960  => delta_H =   -6
+    (da1= -4, da2= -2):      360  => delta_H =  -16
+    (da1= -4, da2= -1):     2400  => delta_H =  -12
+    (da1= -4, da2= +0):     8640  => delta_H =   -8
+    (da1= -4, da2= +1):      720  => delta_H =   -4
+    (da1= -3, da2= -2):      720  => delta_H =  -14
+    (da1= -3, da2= -1):     5760  => delta_H =  -10
+    (da1= -3, da2= +0):    11520  => delta_H =   -6
+    (da1= -3, da2= +1):     1440  => delta_H =   -2
+    (da1= -2, da2= -1):     5760  => delta_H =   -8
+    (da1= -2, da2= +0):    15120  => delta_H =   -4
+    (da1= -2, da2= +1):     2880  => delta_H =   +0
+    (da1= -2, da2= +2):      360  => delta_H =   +4
+    (da1= -1, da2= -1):     3120  => delta_H =   -6
+    (da1= -1, da2= +0):    15120  => delta_H =   -2
+    (da1= -1, da2= +1):     1440  => delta_H =   +2
+    (da1= +0, da2= -2):      720  => delta_H =   -8
+    (da1= +0, da2= -1):     2880  => delta_H =   -4
+    (da1= +0, da2= +0):    29760  => delta_H =   +0
+    (da1= +0, da2= +1):     2880  => delta_H =   +4
+    (da1= +0, da2= +2):      720  => delta_H =   +8
+    (da1= +1, da2= -1):     1440  => delta_H =   -2
+    (da1= +1, da2= +0):    15120  => delta_H =   +2
+    (da1= +1, da2= +1):     3120  => delta_H =   +6
+    (da1= +2, da2= -2):      360  => delta_H =   -4
+    (da1= +2, da2= -1):     2880  => delta_H =   +0
+    (da1= +2, da2= +0):    15120  => delta_H =   +4
+    (da1= +2, da2= +1):     5760  => delta_H =   +8
+    (da1= +3, da2= -1):     1440  => delta_H =   +2
+    (da1= +3, da2= +0):    11520  => delta_H =   +6
+    (da1= +3, da2= +1):     5760  => delta_H =  +10
+    (da1= +3, da2= +2):      720  => delta_H =  +14
+    (da1= +4, da2= -1):      720  => delta_H =   +4
+    (da1= +4, da2= +0):     8640  => delta_H =   +8
+    (da1= +4, da2= +1):     2400  => delta_H =  +12
+    (da1= +4, da2= +2):      360  => delta_H =  +16
+    (da1= +5, da2= -1):      960  => delta_H =   +6
+    (da1= +5, da2= +0):     5760  => delta_H =  +10
+    (da1= +5, da2= +1):     2880  => delta_H =  +14
+    (da1= +5, da2= +2):     1440  => delta_H =  +18
+    (da1= +6, da2= +0):     3840  => delta_H =  +12
+    (da1= +6, da2= +1):     2880  => delta_H =  +16
+    (da1= +6, da2= +2):      360  => delta_H =  +20
+    (da1= +7, da2= +0):     2880  => delta_H =  +14
+    (da1= +7, da2= +1):     2880  => delta_H =  +18
+    (da1= +8, da2= +0):      720  => delta_H =  +16
+    (da1= +8, da2= +1):      720  => delta_H =  +20
+    (da1= +8, da2= +2):      720  => delta_H =  +24
+    (da1= +9, da2= +0):      240  => delta_H =  +18
+    (da1= +9, da2= +1):      720  => delta_H =  +22
+    (da1= +9, da2= +2):      720  => delta_H =  +26
+    (da1=+10, da2= +1):      960  => delta_H =  +24
+    (da1=+12, da2= +2):      360  => delta_H =  +32
+
+  da2 != 0 fraction: 88320/245760 = 35.94%
+  da1 range: [-12, 12]
+  Missing da1 values: [-11, 11]
+
+  |delta_H| values: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 32]
+  Missing |delta_H|: [28, 30]

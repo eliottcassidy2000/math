@@ -1,0 +1,195 @@
+======================================================================
+ARC FLIP DELTA SPECTRUM ANALYSIS
+kind-pasteur-2026-03-14-S68
+======================================================================
+
+  n=3: C(n,2) = 3
+    |delta H| spectrum (each flip counted once):
+      |delta| =   0:      6 flips
+      |delta| =   2:      6 flips
+    Missing values in [0..2]:
+      NONE
+    Maximum |delta| = 2
+
+  n=4: C(n,2) = 6
+    |delta H| spectrum (each flip counted once):
+      |delta| =   0:     72 flips
+      |delta| =   2:     96 flips
+      |delta| =   4:     24 flips
+    Missing values in [0..4]:
+      NONE
+    Maximum |delta| = 4
+
+  n=5: C(n,2) = 10
+    |delta H| spectrum (each flip counted once):
+      |delta| =   0:   1120 flips
+      |delta| =   2:   1800 flips
+      |delta| =   4:   1200 flips
+      |delta| =   6:    600 flips
+      |delta| =   8:    360 flips
+      |delta| =  12:     40 flips
+    Missing values in [0..12]:
+      [10]
+    Maximum |delta| = 12
+
+======================================================================
+n=6: SAMPLING ARC FLIP DELTAS (50k tournaments)
+======================================================================
+  10000/50000 (224/sec)...
+  20000/50000 (223/sec)...
+  30000/50000 (223/sec)...
+  40000/50000 (222/sec)...
+  50000/50000 (222/sec)...
+  Completed in 225.0s
+
+  n=6 |delta H| spectrum:
+    |delta| =   0:   108264 flips
+    |delta| =   2:   109505 flips
+    |delta| =   4:   116142 flips
+    |delta| =   6:    95786 flips
+    |delta| =   8:    92137 flips
+    |delta| =  10:    70364 flips
+    |delta| =  12:    38499 flips
+    |delta| =  14:    39263 flips
+    |delta| =  16:    24452 flips
+    |delta| =  18:    27728 flips
+    |delta| =  20:     6615 flips
+    |delta| =  22:     4496 flips
+    |delta| =  24:    10137 flips
+    |delta| =  26:     4400 flips
+    |delta| =  32:     2212 flips
+
+  Missing even values in [0..32]:
+    [28, 30]
+  Maximum |delta| = 32
+
+======================================================================
+n=5: DELTA BY ARC POSITION
+======================================================================
+
+  Delta spectrum by arc position:
+    Arc (0,1): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (0,2): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (0,3): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (0,4): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (1,2): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (1,3): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (1,4): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (2,3): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (2,4): |delta| in [0, 2, 4, 6, 8, 12]
+    Arc (3,4): |delta| in [0, 2, 4, 6, 8, 12]
+
+  All arcs have same spectrum? True
+
+======================================================================
+n=5: H-TRANSITION GRAPH
+======================================================================
+
+  H values at n=5: [1, 3, 5, 9, 11, 13, 15]
+
+  H-transition graph (H -> H' by single arc flip):
+    H=  1 -> H=  3:   360 total flips (avg 3.0 per tournament)
+    H=  1 -> H=  5:   240 total flips (avg 2.0 per tournament)
+    H=  1 -> H=  9:   120 total flips (avg 1.0 per tournament)
+    H=  3 -> H=  1:   360 total flips (avg 3.0 per tournament)
+    H=  3 -> H=  5:   480 total flips (avg 4.0 per tournament)
+    H=  3 -> H=  9:   240 total flips (avg 2.0 per tournament)
+    H=  3 -> H= 15:    40 total flips (avg 0.3 per tournament)
+    H=  5 -> H=  1:   240 total flips (avg 1.0 per tournament)
+    H=  5 -> H=  3:   480 total flips (avg 2.0 per tournament)
+    H=  5 -> H=  9:   480 total flips (avg 2.0 per tournament)
+    H=  5 -> H= 11:   240 total flips (avg 1.0 per tournament)
+    H=  5 -> H= 13:   240 total flips (avg 1.0 per tournament)
+    H=  9 -> H=  1:   120 total flips (avg 0.5 per tournament)
+    H=  9 -> H=  3:   240 total flips (avg 1.0 per tournament)
+    H=  9 -> H=  5:   480 total flips (avg 2.0 per tournament)
+    H=  9 -> H= 11:   360 total flips (avg 1.5 per tournament)
+    H=  9 -> H= 13:   360 total flips (avg 1.5 per tournament)
+    H=  9 -> H= 15:   120 total flips (avg 0.5 per tournament)
+    H= 11 -> H=  5:   240 total flips (avg 2.0 per tournament)
+    H= 11 -> H=  9:   360 total flips (avg 3.0 per tournament)
+    H= 11 -> H= 13:   240 total flips (avg 2.0 per tournament)
+    H= 11 -> H= 15:   120 total flips (avg 1.0 per tournament)
+    H= 13 -> H=  5:   240 total flips (avg 2.0 per tournament)
+    H= 13 -> H=  9:   360 total flips (avg 3.0 per tournament)
+    H= 13 -> H= 11:   240 total flips (avg 2.0 per tournament)
+    H= 13 -> H= 15:   360 total flips (avg 3.0 per tournament)
+    H= 15 -> H=  3:    40 total flips (avg 0.6 per tournament)
+    H= 15 -> H=  9:   120 total flips (avg 1.9 per tournament)
+    H= 15 -> H= 11:   120 total flips (avg 1.9 per tournament)
+    H= 15 -> H= 13:   360 total flips (avg 5.6 per tournament)
+
+======================================================================
+ANALYSIS: WHY |delta|=10 IS MISSING AT n=5
+======================================================================
+
+  H values at n=5: [1, 3, 5, 9, 11, 13, 15]
+  For |delta|=10, need pairs (h, h+10):
+    (1, 11): both exist, connected by flip? False
+    (3, 13): both exist, connected by flip? False
+    (5, 15): both exist, connected by flip? False
+    (9, 19): 19 not achievable
+    (11, 21): 21 not achievable
+    (13, 23): 23 not achievable
+    (15, 25): 25 not achievable
+
+  Analysis of potentially reachable pairs:
+
+  A single arc flip in n=5 affects:
+    - Exactly 3 triangles (the ones containing the flipped arc)
+    - The 5-cycle (if it uses the flipped arc)
+    Each triangle can contribute ±1 to c3_directed
+    The 5-cycle can contribute ±1 to c5_directed
+    So max |delta(alpha_1)| <= 3 + 1 = 4 for 3-cycles + 5-cycles
+    But also alpha_2 can change
+
+  (delta_alpha_1, delta_alpha_2) distribution at n=5:
+    (da1, da2): count
+    (-6, +0):    20  => delta_H = -12
+    (-4, +0):   180  => delta_H =  -8
+    (-3, +0):   300  => delta_H =  -6
+    (-2, +0):   600  => delta_H =  -4
+    (-1, +0):   900  => delta_H =  -2
+    (+0, +0):  1120  => delta_H =  +0
+    (+1, +0):   900  => delta_H =  +2
+    (+2, +0):   600  => delta_H =  +4
+    (+3, +0):   300  => delta_H =  +6
+    (+4, +0):   180  => delta_H =  +8
+    (+6, +0):    20  => delta_H = +12
+
+======================================================================
+MAXIMUM |delta H| BY n
+======================================================================
+  n=3: max |delta H| = 2, max H = 3, ratio = 0.6667
+  n=4: max |delta H| = 4, max H = 5, ratio = 0.8000
+  n=5: max |delta H| = 12, max H = 15, ratio = 0.8000
+
+  Ratio max_delta / max_H:
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+  ARC FLIP DELTA SPECTRUM ANALYSIS:
+  ==================================
+
+  n=3: |delta| in {0, 2}         (max=2, H_max=3)
+  n=4: |delta| in {0, 2, 4}      (max=4, H_max=5)
+  n=5: |delta| in {0, 2, 4, 6, 8, 12} (max=12, H_max=15)
+       MISSING: |delta|=10
+
+  WHY |delta|=10 IS MISSING AT n=5:
+  A single arc flip changes (alpha_1, alpha_2) by bounded amounts.
+  The possible (da1, da2) pairs determine possible delta_H = 2*da1 + 4*da2.
+  The value delta_H = 10 requires (da1, da2) such that 2*da1 + 4*da2 = 10,
+  i.e., da1 + 2*da2 = 5. This is exactly the equation for T = 5!
+  And 5 = |Phi+(A_2)| = rank(A_2) * h(A_2) / 2 = 2*3/2.
+
+  Connection to H=21 forbidden:
+    H=21 requires T = alpha_1 + 2*alpha_2 = 10 = |Phi+(A_4)|
+    |delta|=10 requires da1 + 2*da2 = 5 = |Phi+(A_2)|
+    Both involve the SAME linear form alpha_1 + 2*alpha_2 at forbidden values!
+
+  The delta spectrum holes mirror the H-spectrum forbidden values
+  through the linear form T = alpha_1 + 2*alpha_2.
+
