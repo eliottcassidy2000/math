@@ -1,0 +1,29 @@
+======================================================================
+CORRECT OCF: DIRECTED CYCLES AS VERTICES
+======================================================================
+
+--- Part 1: Verify H = I(Ω,2) at n=5 ---
+  n=5: 1024 match, 0 mismatch out of 1024
+
+--- Part 2: Directed cycles vs vertex sets ---
+  bits=40: 7 dir cycles, 5 vertex sets. Multi: {'[0, 1, 2, 3, 4]': 3}
+  (Shows first tournament where dir cycle count ≠ vertex set count)
+
+--- Part 3: Revisiting bits=153 at n=7 ---
+  H = 25
+  Directed odd cycles: 12
+  Unique vertex sets: 10
+    [0, 1, 3] (len 3): 1 directed cycle(s)
+    [0, 2, 4] (len 3): 1 directed cycle(s)
+    [0, 2, 5] (len 3): 1 directed cycle(s)
+    [0, 3, 4] (len 3): 1 directed cycle(s)
+    [0, 3, 5] (len 3): 1 directed cycle(s)
+    [1, 2, 3] (len 3): 1 directed cycle(s)
+    [0, 1, 2, 3, 4] (len 5): 2 directed cycle(s)
+    [0, 1, 2, 3, 5] (len 5): 2 directed cycle(s)
+    [0, 1, 3, 4, 5] (len 5): 1 directed cycle(s)
+    [0, 2, 3, 4, 5] (len 5): 1 directed cycle(s)
+
+  I(Ω,2) with directed cycles = 25
+  H = 25
+  Match: YES

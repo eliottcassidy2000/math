@@ -1,0 +1,119 @@
+INVESTIGATING (α₁,α₂) = (10,0) CONTRADICTION
+============================================================
+
+Tournament bits=153
+  dc3=6
+  Cycle vertex sets (α₁=10): [[0, 3, 4], [0, 1, 2, 3, 4], [0, 2, 5], [0, 2, 3, 4, 5], [0, 2, 4], [0, 1, 3, 4, 5], [0, 3, 5], [0, 1, 2, 3, 5], [1, 2, 3], [0, 1, 3]]
+  Directed cycle count (with multiplicity): 12
+  Unique vertex sets: 10
+  α₂ (disjoint pairs) = 0
+  H (from DP) = 25
+  Expected H from I(K₁₀, 2) = 21
+  MATCH: NO — DISCREPANCY!
+  *** BUG FOUND! H=25 ≠ 21 ***
+  Checking ALL pairs for intersection:
+  Cycle lengths:
+    [0, 3, 4] (length 3)
+    [0, 1, 2, 3, 4] (length 5)
+    [0, 2, 5] (length 3)
+    [0, 2, 3, 4, 5] (length 5)
+    [0, 2, 4] (length 3)
+    [0, 1, 3, 4, 5] (length 5)
+    [0, 3, 5] (length 3)
+    [0, 1, 2, 3, 5] (length 5)
+    [1, 2, 3] (length 3)
+    [0, 1, 3] (length 3)
+
+Tournament bits=154
+  dc3=6
+  Cycle vertex sets (α₁=10): [[0, 3, 4], [0, 1, 4], [0, 1, 2], [0, 1, 2, 3, 4], [0, 1, 5], [0, 1, 3, 4, 5], [0, 3, 5], [0, 1, 2, 3, 5], [1, 2, 3], [0, 1, 2, 4, 5]]
+  Directed cycle count (with multiplicity): 12
+  Unique vertex sets: 10
+  α₂ (disjoint pairs) = 0
+  H (from DP) = 25
+  Expected H from I(K₁₀, 2) = 21
+  MATCH: NO — DISCREPANCY!
+  *** BUG FOUND! H=25 ≠ 21 ***
+  Checking ALL pairs for intersection:
+  Cycle lengths:
+    [0, 3, 4] (length 3)
+    [0, 1, 4] (length 3)
+    [0, 1, 2] (length 3)
+    [0, 1, 2, 3, 4] (length 5)
+    [0, 1, 5] (length 3)
+    [0, 1, 3, 4, 5] (length 5)
+    [0, 3, 5] (length 3)
+    [0, 1, 2, 3, 5] (length 5)
+    [1, 2, 3] (length 3)
+    [0, 1, 2, 4, 5] (length 5)
+
+Tournament bits=156
+  dc3=6
+  Cycle vertex sets (α₁=10): [[0, 1, 4], [0, 2, 3], [0, 1, 2, 3, 4], [0, 2, 5], [0, 2, 3, 4, 5], [0, 2, 4], [0, 1, 5], [0, 1, 2, 3, 5], [1, 2, 3], [0, 1, 2, 4, 5]]
+  Directed cycle count (with multiplicity): 12
+  Unique vertex sets: 10
+  α₂ (disjoint pairs) = 0
+  H (from DP) = 25
+  Expected H from I(K₁₀, 2) = 21
+  MATCH: NO — DISCREPANCY!
+  *** BUG FOUND! H=25 ≠ 21 ***
+  Checking ALL pairs for intersection:
+  Cycle lengths:
+    [0, 1, 4] (length 3)
+    [0, 2, 3] (length 3)
+    [0, 1, 2, 3, 4] (length 5)
+    [0, 2, 5] (length 3)
+    [0, 2, 3, 4, 5] (length 5)
+    [0, 2, 4] (length 3)
+    [0, 1, 5] (length 3)
+    [0, 1, 2, 3, 5] (length 5)
+    [1, 2, 3] (length 3)
+    [0, 1, 2, 4, 5] (length 5)
+
+Tournament bits=278
+  dc3=6
+  Cycle vertex sets (α₁=10): [[1, 2, 4], [0, 1, 2], [0, 1, 2, 3, 4], [0, 4, 5], [0, 1, 5], [0, 1, 3, 4, 5], [0, 1, 2, 3, 5], [0, 1, 3], [1, 3, 4], [0, 1, 2, 4, 5]]
+  Directed cycle count (with multiplicity): 12
+  Unique vertex sets: 10
+  α₂ (disjoint pairs) = 0
+  H (from DP) = 25
+  Expected H from I(K₁₀, 2) = 21
+  MATCH: NO — DISCREPANCY!
+  *** BUG FOUND! H=25 ≠ 21 ***
+  Checking ALL pairs for intersection:
+  Cycle lengths:
+    [1, 2, 4] (length 3)
+    [0, 1, 2] (length 3)
+    [0, 1, 2, 3, 4] (length 5)
+    [0, 4, 5] (length 3)
+    [0, 1, 5] (length 3)
+    [0, 1, 3, 4, 5] (length 5)
+    [0, 1, 2, 3, 5] (length 5)
+    [0, 1, 3] (length 3)
+    [1, 3, 4] (length 3)
+    [0, 1, 2, 4, 5] (length 5)
+
+Tournament bits=371
+  dc3=6
+  Cycle vertex sets (α₁=10): [[0, 1, 4], [0, 4, 6], [0, 4, 5], [0, 3, 6], [0, 1, 4, 5, 6], [0, 3, 4, 5, 6], [0, 1, 3, 4, 5], [0, 3, 5], [0, 1, 3, 4, 6], [1, 3, 4]]
+  Directed cycle count (with multiplicity): 12
+  Unique vertex sets: 10
+  α₂ (disjoint pairs) = 0
+  H (from DP) = 25
+  Expected H from I(K₁₀, 2) = 21
+  MATCH: NO — DISCREPANCY!
+  *** BUG FOUND! H=25 ≠ 21 ***
+  Checking ALL pairs for intersection:
+  Cycle lengths:
+    [0, 1, 4] (length 3)
+    [0, 4, 6] (length 3)
+    [0, 4, 5] (length 3)
+    [0, 3, 6] (length 3)
+    [0, 1, 4, 5, 6] (length 5)
+    [0, 3, 4, 5, 6] (length 5)
+    [0, 1, 3, 4, 5] (length 5)
+    [0, 3, 5] (length 3)
+    [0, 1, 3, 4, 6] (length 5)
+    [1, 3, 4] (length 3)
+
+Total (10,0) tournaments found in first 535: 10

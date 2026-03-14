@@ -1,0 +1,50 @@
+======================================================================
+H=21 STRUCTURAL ANALYSIS
+======================================================================
+
+--- Part 2: (α₁,α₂) landscape ---
+
+  n=5:
+    (α₁,α₂)=(10,0): NOT ACHIEVED, H values: []
+    (α₁,α₂)=(8,1): NOT ACHIEVED, H values: []
+    (α₁,α₂)=(6,2): NOT ACHIEVED, H values: []
+    (α₁,α₂)=(4,3): NOT ACHIEVED, H values: []
+    H=17: NOT ACHIEVED
+    H=19: NOT ACHIEVED
+    H=21: NOT ACHIEVED
+    H=23: NOT ACHIEVED
+    H=25: NOT ACHIEVED
+
+  n=6:
+    (α₁,α₂)=(10,0): ACHIEVED, H values: [25]
+    (α₁,α₂)=(8,1): ACHIEVED, H values: [23]
+    (α₁,α₂)=(6,2): NOT ACHIEVED, H values: []
+    (α₁,α₂)=(4,3): NOT ACHIEVED, H values: []
+    H=17 comes from (α₁,α₂) ∈ [(6, 1), (8, 0)]
+    H=19 comes from (α₁,α₂) ∈ [(9, 0)]
+    H=21: NOT ACHIEVED
+    H=23 comes from (α₁,α₂) ∈ [(8, 1), (11, 0)]
+    H=25 comes from (α₁,α₂) ∈ [(10, 0)]
+
+--- Part 3: (α₁,α₂) at n=7 (exhaustive, no HP needed) ---
+  Scanning all 2097152 tournaments at n=7 for (α₁,α₂) near H=21 targets...
+  Progress: 500000/2097152
+  Progress: 2000000/2097152
+
+  (α₁,α₂) counts for α₁ ∈ [3,12]:
+    ( 4, 0):  30240
+    ( 6, 0):   3024 ← H=21 TARGET
+    ( 6, 1):  10080
+    ( 8, 0):  10080
+    ( 8, 1):  20160 ← H=21 TARGET
+    (10, 0):  20160 ← H=21 TARGET
+    (10, 1):  30240
+    (10, 2):  40320
+
+  H=21 target decomposition status:
+    (α₁,α₂)=(10,0): EXISTS (20160 tournaments)
+      But does any of them give H=21? Need to check HP.
+    (α₁,α₂)=(8,1): EXISTS (20160 tournaments)
+      But does any of them give H=21? Need to check HP.
+    (α₁,α₂)=(6,2): DOES NOT EXIST at n=7!
+    (α₁,α₂)=(4,3): DOES NOT EXIST at n=7!
