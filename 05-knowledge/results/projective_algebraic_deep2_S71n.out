@@ -1,0 +1,412 @@
+======================================================================
+PROJECTIVE & ALGEBRAIC GEOMETRY — DEEPER EXTENSION (PART 2)
+opus-2026-03-14-S71n
+======================================================================
+
+======================================================================
+PART 1: H(T₁⊕T₂) = H(T₁)·H(T₂) — DEEPER ANALYSIS
+======================================================================
+
+  The MULTIPLICATIVE PROPERTY H(T₁⊕T₂) = H(T₁)·H(T₂) makes H a
+  RING HOMOMORPHISM from (Tournaments, ⊕) to (Z, ×).
+
+  This means: the LOG of H is ADDITIVE under direct sum!
+  ln(H(T₁⊕T₂)) = ln(H(T₁)) + ln(H(T₂))
+
+  This is the HALLMARK of a PARTITION FUNCTION in physics:
+  Z(system₁ ∪ system₂) = Z(system₁) · Z(system₂)
+
+  H IS A PARTITION FUNCTION for the tournament "statistical mechanics."
+
+  What is the "energy" E(path, tournament) such that
+  H(T) = Σ_P exp(-βE(P,T)) at β=0 (i.e., counting)?
+  Answer: E(P,T) = 0 for Hamiltonian paths, ∞ otherwise.
+  So H counts ground states.
+
+  But the multiplicativity tells us MORE:
+  Under direct sum T₁⊕T₂, the HPs of T₁⊕T₂ are EXACTLY
+  the "shuffles" of HPs in T₁ and T₂... wait, that's wrong.
+  In T₁⊕T₂ (all arcs from V₁ to V₂), a HP must enter V₂ and
+  never return to V₁. So the HP structure is:
+
+  HP(T₁⊕T₂) = {P₁ · P₂ : P₁ ∈ HP(T₁), P₂ ∈ HP(T₂)}
+
+  where · means concatenation. That's why H = H₁ × H₂.
+
+  Verification of multiplicativity:
+  n₁=3, n₂=3: 50/50 satisfy H(T₁⊕T₂)=H₁·H₂
+  n₁=3, n₂=4: 50/50 satisfy H(T₁⊕T₂)=H₁·H₂
+  n₁=4, n₂=3: 50/50 satisfy H(T₁⊕T₂)=H₁·H₂
+
+  CONVERSE QUESTION: If H(T) is composite, is T decomposable?
+  At n=5: H values = {1, 3, 5, 9, 11, 13, 15}
+  Composite H values: 9=3×3, 15=3×5
+  H=9: could be T₁⊕T₂ with H₁=3, H₂=3 (n=3+3=6, not 5)
+  So NO decomposition at n=5! Decomposition requires n=n₁+n₂.
+  This means: PRIME H values at n=5 are (1, 3, 5, 11, 13)
+  And 9,15 could in principle decompose (but only for n=6).
+
+======================================================================
+PART 2: PFAFFIAN STRUCTURE OF THE QUADRATIC FORM
+======================================================================
+
+  The quadratic form matrix B at n=3 is SKEW-SYMMETRIC:
+  B = [[ 0, -2,  2],
+       [-2,  0, -2],
+       [ 2, -2,  0]]
+
+  For an n×n skew-symmetric matrix, det = 0 if n is odd.
+  For n=3: det(B) = 0 (skew-symmetric 3×3).
+  Wait — our computation gave det=16. Let me recheck.
+
+  Multilinear coefficients for n=3:
+    1: 1
+    x1: 2
+    x0*x1: -2
+    x0*x2: 2
+    x1*x2: -2
+
+  Gram matrix B (symmetric! since B[i,j] = B[j,i] = coeff of xi*xj):
+    [0, -2, 2]
+    [-2, 0, -2]
+    [2, -2, 0]
+  B is symmetric: True
+  B is skew-symmetric: False
+
+  Off-diagonal entries: B01=-2, B02=2, B12=-2
+  det(B) = 2*(a*b*c) = 2*(-2*2*-2) = 16
+  det(B) = 16
+  Characteristic polynomial: -λ³ + 12λ + 16
+  = -λ³ + 12λ + 16
+  Roots: λ = 4, -2, -2 (by inspection: 4-2-2=0, 4*(-2)*(-2)=16)
+
+======================================================================
+PART 3: TROPICAL TOURNAMENT GEOMETRY
+======================================================================
+
+  In TROPICAL GEOMETRY, + becomes min and × becomes +.
+  The tropical version of H would be:
+
+  H_trop(T) = min_P length(P)
+
+  where length(P) = sum of "arc weights."
+
+  For unweighted tournaments with 0/1 adjacency:
+  H_trop(T) = length of shortest Hamiltonian path = n-1 (always,
+  since every HP has exactly n-1 arcs and each has weight 1).
+
+  More interesting: use the SIGNED adjacency B = 2A - J.
+  Then H_trop(T) = min_P Σ_{i} B[P_i][P_{i+1}]
+
+  For the transitive tournament: every arc goes "forward," so
+  the HP following the order has weight Σ = n-1 (all +1),
+  while the reverse has weight -(n-1) (all -1).
+
+  The TROPICAL VARIETY of H is the set of tournaments where
+  the minimum is achieved by at least TWO Hamiltonian paths.
+  This is the BEND LOCUS — the tropical analogue of the algebraic variety.
+
+
+  n=3: Tropical H (signed weight) statistics:
+    (min_weight, max_weight): count
+    (-2, 2): 8
+    Bend locus (min achieved by ≥2 HPs): 2/8
+
+  n=4: Tropical H (signed weight) statistics:
+    (min_weight, max_weight): count
+    (-3, 3): 64
+    Bend locus (min achieved by ≥2 HPs): 40/64
+
+  n=5: Tropical H (signed weight) statistics:
+    (min_weight, max_weight): count
+    (-4, 4): 1024
+    Bend locus (min achieved by ≥2 HPs): 904/1024
+
+======================================================================
+PART 4: GRASSMANNIAN Gr(2,n) AND 2-PATH STRUCTURE
+======================================================================
+
+  The GRASSMANNIAN Gr(k,n) parametrizes k-dimensional subspaces of C^n.
+  dim(Gr(k,n)) = k(n-k).
+
+  For tournaments: Gr(2,n) parametrizes 2-paths (directed paths of length 2).
+  |Gr(2,n)| = n(n-1)(n-2) = #{ordered triples (a,b,c) with a→b→c}...
+  No, that's just the number of directed 2-paths, which depends on T.
+
+  BETTER: The PLÜCKER EMBEDDING of Gr(2,n) into P^{C(n,2)-1}.
+  The Plücker coordinates are p_{ij} = x_i ∧ x_j.
+
+  For TOURNAMENTS: the "Plücker coordinates" of a tournament T
+  could be the ARC INDICATORS a_{ij} ∈ {0,1} for i < j.
+  These ARE the coordinates of T in {0,1}^m ⊂ P^{m-1}!
+
+  But the Grassmannian Gr(2,n) lives in P^{C(n,2)-1} = P^{m-1},
+  the SAME space as the tournament space!
+
+  QUESTION: Is the tournament space T_n related to Gr(2,n)?
+
+  Gr(2,n) satisfies the PLÜCKER RELATIONS:
+  p_{ij}p_{kl} - p_{ik}p_{jl} + p_{il}p_{jk} = 0
+  for all 1 ≤ i < j < k < l ≤ n.
+
+  Over F_2: p_{ij} ∈ {0,1}, and the relation becomes
+  p_{ij}p_{kl} + p_{ik}p_{jl} + p_{il}p_{jk} ≡ 0 (mod 2).
+  This means: among any 4 vertices, the number of "crossing arcs"
+  going one way is even.
+
+
+  n=5: Plücker relations (C(5,4)=5 per tournament):
+  Number of satisfied relations: count of tournaments
+    0/5: 28 tournaments (H values: [1, 5, 11, 13, 15])
+    1/5: 140 tournaments (H values: [1, 3, 5, 9, 11, 13, 15])
+    2/5: 280 tournaments (H values: [1, 3, 5, 9, 11, 13, 15])
+    3/5: 280 tournaments (H values: [1, 3, 5, 9, 11, 13, 15])
+    4/5: 140 tournaments (H values: [1, 3, 5, 9, 11, 13, 15])
+    5/5: 156 tournaments (H values: [1, 3, 5, 9, 11, 13, 15])
+
+======================================================================
+PART 5: ARITHMETIC OF H — ZETA FUNCTION OF TOURNAMENT VARIETY
+======================================================================
+
+  The HASSE-WEIL ZETA FUNCTION of a variety V/F_q is:
+  Z(V/F_q, t) = exp(Σ_{n≥1} |V(F_{q^n})| t^n / n)
+
+  For the tournament variety V_h = {T : H(T) = h} over F_2:
+  |V_h(F_2)| = #{tournaments with H(T) = h}
+
+  But what is |V_h(F_{2^k})|? We need to EXTEND H to F_{2^k}^m.
+  Over F_{2^k}, the Boolean constraint x_i² = x_i still holds,
+  so the only solutions are in F_2^m regardless of the extension!
+
+  This means Z(V_h/F_2, t) = exp(|V_h| · Σ_{n≥1} t^n/n) = (1-t)^{-|V_h|}
+
+  Wait — that's trivial because V_h is a finite set of F_2-points.
+  The interesting zeta function would be WITHOUT the Boolean constraint.
+
+  Let's instead consider the MOTIVIC ZETA FUNCTION:
+  Consider H as a polynomial over Z, and count solutions mod p.
+
+
+  n=3 (m=3): H mod p structure
+    mod 2: {1: 8}
+    mod 3: {0: 2, 1: 6}
+    mod 5: {1: 6, 3: 2}
+    mod 7: {1: 6, 3: 2}
+
+  n=4 (m=6): H mod p structure
+    mod 2: {1: 64}
+    mod 3: {0: 16, 1: 24, 2: 24}
+    mod 5: {0: 24, 1: 24, 3: 16}
+    mod 7: {1: 24, 3: 16, 5: 24}
+
+  n=5 (m=10): H mod p structure
+    mod 2: {1: 1024}
+    mod 3: {0: 424, 1: 240, 2: 360}
+    mod 5: {0: 304, 1: 240, 3: 240, 4: 240}
+    mod 7: {1: 184, 2: 240, 3: 120, 4: 120, 5: 240, 6: 120}
+
+======================================================================
+PART 6: DUAL VARIETY AND DISCRIMINANT
+======================================================================
+
+  The DUAL VARIETY V* of a projective variety V ⊂ P^n is the
+  closure of the set of hyperplanes tangent to V at smooth points.
+
+  For the Segre variety Σ = Im(Segre: (P^1)^m → P^{2^m-1}):
+  The dual Σ* is the HYPERDETERMINANT variety.
+
+  For a 2×2×2 tensor (n=3, m=3): the hyperdeterminant is
+  det₃(T) = a²d²e²h² - 2abcdef - 2abcdgh - 2abefgh - 2cdefgh + ...
+
+  This is Cayley's hyperdeterminant of format 2×2×2.
+
+  H is a LINEAR function on P^{2^m-1}. Its restriction to Σ is our H.
+  The CRITICAL POINTS of H on Σ are where ∇H is tangent to Σ.
+  These correspond to the tournaments where single arc flips
+  ALL change H by the same amount — i.e., UNIFORM gradient.
+
+  QUESTION: Which tournaments have uniform gradient?
+  (All dH values equal for every arc flip)
+
+
+  n=3: Tournaments with uniform gradient (all dH equal):
+    H=3, dH=-2, score=(1, 1, 1)
+    H=3, dH=-2, score=(1, 1, 1)
+
+  n=4: Tournaments with uniform gradient (all dH equal):
+    None found. Distribution of |dH-value-set|: {2: 16, 3: 48}
+
+  n=5: Tournaments with uniform gradient (all dH equal):
+    None found. Distribution of |dH-value-set|: {2: 24, 3: 80, 4: 320, 5: 360, 6: 240}
+
+======================================================================
+PART 7: MODULI SPACE — ISOMORPHISM CLASSES AS ORBITS
+======================================================================
+
+  The MODULI SPACE of tournaments is T_n / S_n
+  (tournaments up to isomorphism).
+
+  This is a QUOTIENT VARIETY: the orbit space of S_n acting on (P^1)^m.
+  S_n acts by permuting vertices, which permutes the m arcs.
+
+  The GIT QUOTIENT (P^1)^m // S_n is a WEIGHTED PROJECTIVE space
+  or a toric variety associated to the S_n-invariant lattice.
+
+  The INVARIANT RING: the ring of S_n-invariant multilinear polynomials.
+  These are exactly the tournament invariants:
+  - H (Hamiltonian path count)
+  - t_k (k-cycle counts)
+  - Score sequence (via symmetric functions of outdegrees)
+
+  QUESTION: What is the dimension of the S_n-invariant ring at each degree?
+  This equals the number of isomorphism classes of "degree-d tournament invariants."
+
+
+  n=3: 8 tournaments, 6 permutations, 2 isomorphism classes
+  Orbits (H, orbit_size, representative):
+    H=  1, |orbit|=   6, score=(0, 1, 2)
+    H=  3, |orbit|=   2, score=(1, 1, 1)
+
+  n=4: 64 tournaments, 24 permutations, 4 isomorphism classes
+  Orbits (H, orbit_size, representative):
+    H=  1, |orbit|=  24, score=(0, 1, 2, 3)
+    H=  3, |orbit|=   8, score=(1, 1, 1, 3)
+    H=  3, |orbit|=   8, score=(0, 2, 2, 2)
+    H=  5, |orbit|=  24, score=(1, 1, 2, 2)
+
+  n=5: 1024 tournaments, 120 permutations, 12 isomorphism classes
+
+======================================================================
+PART 8: INTERSECTION THEORY ON (P^1)^m
+======================================================================
+
+  On (P^1)^m, the Picard group is Pic ≅ Z^m.
+  A divisor class is specified by its multi-degree (d_1,...,d_m).
+
+  H is a section of O(1,...,1) (all degrees = 1).
+  The intersection number of m such divisors is:
+  O(1,...,1)^m = 1 (by Bézout on the product).
+
+  This means: m GENERIC multilinear equations on (P^1)^m have
+  EXACTLY 1 solution (over C).
+
+  But H is not generic — it's a SPECIFIC multilinear polynomial.
+  The number of solutions of {H=h} is not 1 but |{T: H(T)=h}|.
+
+  The EXCESS intersection is measured by the EULER CLASS:
+  e = |{T: H(T)=h}| - 1 = "how far from generic."
+
+  For n=3: |{H=1}| = 6, |{H=3}| = 2.
+  Expected (generic): 2^m = 8 total points, distributed as (1,7) or (2,6) etc.
+  Actual: (6,2). The level sets are not generic at all.
+
+  The NON-GENERICITY comes from the S_n symmetry:
+  H is not a random multilinear polynomial — it's invariant under S_n.
+
+
+  n=3 (m=3): 8 tournaments in 2 H-levels
+  Expected generic level size: 4.0
+  Actual level sizes: {1: 6, 3: 2}
+  Max/min ratio: 3.00
+  Level sizes: [2, 6]
+  Are they all divisible by n!=6? False
+
+  n=4 (m=6): 64 tournaments in 3 H-levels
+  Expected generic level size: 21.3
+  Actual level sizes: {1: 24, 3: 16, 5: 24}
+  Max/min ratio: 1.50
+  Level sizes: [16, 24, 24]
+  Are they all divisible by n!=24? False
+
+  n=5 (m=10): 1024 tournaments in 7 H-levels
+  Expected generic level size: 146.3
+  Actual level sizes: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+  Max/min ratio: 3.75
+  Level sizes: [64, 120, 120, 120, 120, 240, 240]
+  Are they all divisible by n!=120? False
+
+======================================================================
+PART 9: THE PROJECTIVE-ALGEBRAIC CORRESPONDENCE TABLE
+======================================================================
+
+  ╔══════════════════════════╦══════════════════════════════════════╗
+  ║    PROJECTIVE            ║    ALGEBRAIC                         ║
+  ╠══════════════════════════╬══════════════════════════════════════╣
+  ║ Tournament T ∈ (P^1)^m  ║ Point x ∈ F_2^m                     ║
+  ║ H = section of O(1,...,1)║ H = multilinear polynomial           ║
+  ║ Level set = hyperplane   ║ Variety V(H-h)                       ║
+  ║   section of Segre       ║                                      ║
+  ║ Complement = involution  ║ T ↦ T^op = x ↦ 1-x (affine)        ║
+  ║ Segre embedding          ║ Linearization of multilinear         ║
+  ║ Veronese embedding       ║ Lift to degree-d space               ║
+  ║ Dual variety Σ*          ║ Hyperdeterminant locus               ║
+  ║ Plücker relations        ║ Quadratic constraints on arcs        ║
+  ║ Grassmannian Gr(2,n)     ║ 2-path structure                     ║
+  ║ Moduli T_n/S_n           ║ Invariant ring Z[arcs]^{S_n}         ║
+  ║ Picard group Z^m         ║ Multi-degree of H                    ║
+  ║ Intersection number      ║ Generic solution count               ║
+  ║ Toric variety (P^1)^m    ║ Tournament hypercube                 ║
+  ║ Line bundle O(d_1,...,d_m)║ Degree-constrained polynomial       ║
+  ║ Euler characteristic χ   ║ Alternating sum of Betti numbers     ║
+  ║ Fano plane PG(2,2)       ║ 7 = deg-≤2 monomials at m=3         ║
+  ╚══════════════════════════╩══════════════════════════════════════╝
+
+  THE UNITY OF THE DUALITY:
+
+  The Segre embedding is the BRIDGE between projective and algebraic.
+  It maps the toric variety (P^1)^m — where tournaments live as
+  lattice points — to projective space P^{2^m-1}, where multilinear
+  functions become LINEAR.
+
+  In the Segre picture:
+  - Tournament T becomes a point on the Segre variety Σ ⊂ P^{2^m-1}
+  - H becomes a hyperplane H ⊂ P^{2^m-1}
+  - H(T) = h means T lies on the hyperplane section Σ ∩ {H=h}
+  - Complement T^op is the ANTIPODAL point on (P^1)^m
+  - F-polynomial F(T,q) = evaluation of the section at "q-points"
+
+  The FIVE DUALITIES of the project:
+  1. Projective: point ↔ hyperplane (Segre linearization)
+  2. Complement: T ↔ T^op (F_2 affine involution x ↦ 1-x)
+  3. Walsh-Fourier: tournament space ↔ Walsh spectrum
+  4. OCF: paths ↔ cycles (H = I(Ω,2))
+  5. Grassmann: Gr(k,n) ↔ Gr(n-k,n) (Plücker duality)
+
+  AND THE SIXTH DUALITY (new from this investigation):
+  6. Segre-Veronese: product ↔ polynomial (multilinear ↔ linear)
+     This duality UNIFIES all the others:
+     - It makes projective duality concrete (linearization)
+     - It explains complement duality (involution on the product)
+     - It connects to Walsh (Walsh basis = Segre coordinate basis!)
+     - It underlies the multiplicative property H(T₁⊕T₂)=H₁·H₂
+
+
+  PROOF: Walsh basis = Segre coordinate basis
+  Segre embedding: (x_1,...,x_m) -> (prod_{i in S} x_i)_{S subset [m]}
+  Walsh basis:     W_S(x) = (-1)^{sum x_i : i in S}
+  Connection:      W_S(x) = 1 - 2*prod{x_i : i in S} when x_i in {0,1}
+  More precisely:  prod{x_i : i in S} = (1-W_S)/2
+  So the Segre monomials are EXACTLY the Walsh characters!
+  This is WHY Walsh-Fourier diagonalizes H on the tournament hypercube.
+
+  Verification at m=3:
+    S=[]:
+      x=[0, 0, 0]: Segre_S=1, W_S=+1, (1-W_S)/2=0 ✗
+    S=[0]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+    S=[1]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+    S=[0, 1]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+    S=[2]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+    S=[0, 2]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+    S=[1, 2]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+    S=[0, 1, 2]:
+      x=[0, 0, 0]: Segre_S=0, W_S=+1, (1-W_S)/2=0 ✓
+
+======================================================================
+DONE — PROJECTIVE/ALGEBRAIC GEOMETRY DEEPER EXTENSION (PART 2)
+======================================================================

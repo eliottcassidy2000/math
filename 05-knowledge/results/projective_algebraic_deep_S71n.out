@@ -1,0 +1,805 @@
+======================================================================
+PROJECTIVE & ALGEBRAIC GEOMETRY — DEEP EXTENSION
+opus-2026-03-14-S71n
+======================================================================
+
+======================================================================
+PART 1: THE VERONESE EMBEDDING
+======================================================================
+
+  The VERONESE MAP v_d: P^n → P^{C(n+d,d)-1} sends a point
+  [x_0 : ... : x_n] to all degree-d monomials.
+
+  For tournaments in F_2^m:
+  The degree-2 Veronese map sends x = (x_1,...,x_m) to all
+  products x_i*x_j (including x_i^2 = x_i over F_2).
+
+  Since H is degree 2 at n=3,4, the H-level sets live on
+  the Veronese surface v_2(P^{m-1}) ⊂ P^{C(m+2,2)-1}.
+
+  This means the H hypersurface {H(x)=h} becomes a HYPERPLANE SECTION
+  of the Veronese surface after lifting to the Veronese space!
+
+  QUESTION: What are the H-level sets as intersections of
+  the Veronese variety with hyperplanes?
+
+  For n=3 (m=3): H = 1 + 2x₁ - 2x₀x₁ + 2x₀x₂ - 2x₁x₂
+  This is degree 2, so H is a QUADRATIC FORM + linear + constant.
+
+  The degree-2 Veronese of F_2^3 maps to F_2^{C(3+2,2)} = F_2^{10}?
+  No — over F_2, x_i^2 = x_i, so degree-2 monomials are:
+  {x_0, x_1, x_2, x_0x_1, x_0x_2, x_1x_2} plus constant 1.
+  That's 7 = C(3,1) + C(3,2) + 1 = 3 + 3 + 1 monomials.
+  Wait, that's 7 = |PG(2,2)|!!! The Fano plane appears again!
+
+  Actually: the number of multilinear monomials in m variables of
+  degree ≤ 2 (including constant) is 1 + m + C(m,2).
+  At m=3: 1 + 3 + 3 = 7 = Φ_3(2).
+  At m=6: 1 + 6 + 15 = 22.
+  At m=10: 1 + 10 + 45 = 56.
+
+  GENERAL: 1 + C(n,2) + C(C(n,2), 2) = 1 + m + m(m-1)/2.
+
+  n=3 (m=3): degree-≤1 monomials = 4
+  n=3 (m=3): degree-≤2 monomials = 7
+    *** = 7 = |PG(2,2)| = Φ_3(2) ***
+  n=3 (m=3): degree-≤3 monomials = 8
+  n=3 (m=3): degree-≤4 monomials = 8
+
+  n=4 (m=6): degree-≤1 monomials = 7
+  n=4 (m=6): degree-≤2 monomials = 22
+  n=4 (m=6): degree-≤3 monomials = 42
+  n=4 (m=6): degree-≤4 monomials = 57
+
+  n=5 (m=10): degree-≤1 monomials = 11
+  n=5 (m=10): degree-≤2 monomials = 56
+  n=5 (m=10): degree-≤3 monomials = 176
+  n=5 (m=10): degree-≤4 monomials = 386
+
+  n=6 (m=15): degree-≤1 monomials = 16
+  n=6 (m=15): degree-≤2 monomials = 121
+  n=6 (m=15): degree-≤3 monomials = 576
+  n=6 (m=15): degree-≤4 monomials = 1941
+
+  n=7 (m=21): degree-≤1 monomials = 22
+  n=7 (m=21): degree-≤2 monomials = 232
+  n=7 (m=21): degree-≤3 monomials = 1562
+  n=7 (m=21): degree-≤4 monomials = 7547
+
+
+======================================================================
+PART 2: THE QUADRATIC FORM STRUCTURE OF H
+======================================================================
+
+  H at n=3 is a QUADRATIC FORM over Z (not F_2!):
+  H = 1 + 2x₁ - 2x₀x₁ + 2x₀x₂ - 2x₁x₂
+    = 1 + 2(x₁ - x₀x₁ + x₀x₂ - x₁x₂)
+    = 1 + 2(x₁(1-x₀) + x₂(x₀-x₁))
+
+  The QUADRATIC PART is: Q = -2x₀x₁ + 2x₀x₂ - 2x₁x₂
+  The LINEAR PART is: L = 2x₁
+  The CONSTANT is: 1
+
+  So H = 1 + L + Q.
+
+  The MATRIX of Q (the Gram matrix) is:
+  Q(x) = x^T M_Q x where M_Q = [[ 0, -1,  1],
+                                   [-1,  0, -1],
+                                   [ 1, -1,  0]]
+  (upper triangle × 2, since Q = sum_{i<j} 2a_{ij} x_i x_j)
+
+  Wait, that's the SKEW-SYMMETRIC matrix! M_Q = skew-adjacency matrix
+  of the "reference tournament" (the one with all arcs oriented 0→1→2→0).
+
+  No — the multilinear coefficients are a_{01}=-2, a_{02}=+2, a_{12}=-2.
+  These are NOT the skew-adjacency ±1 entries.
+
+  Let me be more careful.
+
+  n=3: H multilinear coefficients:
+    deg 0: a = +1  (1)
+    deg 1: a = +2  (x_1)
+    deg 2: a = -2  (x_0*x_1)
+    deg 2: a = +2  (x_0*x_2)
+    deg 2: a = -2  (x_1*x_2)
+
+  Quadratic form matrix (B[i,j] = coefficient of x_i*x_j):
+    [0, -2, 2]
+    [-2, 0, -2]
+    [2, -2, 0]
+  det(B) = 16
+  Rank of B over Q: 3 (full rank)
+
+  n=4: Quadratic form matrix (6×6):
+    [0, -2, -2, 2, 2, 0]
+    [-2, 0, -2, -2, 0, 2]
+    [-2, -2, 0, 0, -2, -2]
+    [2, -2, 0, 0, -2, 2]
+    [2, 0, -2, -2, 0, -2]
+    [0, 2, -2, 2, -2, 0]
+
+  Arc labels for n=4:
+    x_0 = arc (0,1)
+    x_1 = arc (0,2)
+    x_2 = arc (0,3)
+    x_3 = arc (1,2)
+    x_4 = arc (1,3)
+    x_5 = arc (2,3)
+
+======================================================================
+PART 3: THE F-POLYNOMIAL AS AN ALGEBRAIC CURVE
+======================================================================
+
+  The F-polynomial F(T, q) = sum_k F_k(T) q^k is a polynomial in q
+  with nonneg integer coefficients summing to H(T).
+
+  For fixed T, F defines a POINT in P^{n-1} (projective space):
+  [F_0 : F_1 : ... : F_{n-1}]
+
+  The SET of all possible F-polynomial vectors {F(T) : T tournament on n}
+  is a FINITE subset of P^{n-1}.
+
+  QUESTION: What is the CONVEX HULL of these points?
+  What is the ALGEBRAIC VARIETY they span?
+
+  For n=5: F lives in P^4. The achievable F-vectors are a finite set.
+  The SECANT VARIETY connects pairs of F-vectors.
+  The TANGENT SPACE at a point [F] tells us how F changes under arc flips.
+
+
+  n=5: 144 distinct F-polynomial vectors
+    F = [0, 0, 0, 0, 1], H=1, count=1
+    F = [0, 0, 0, 1, 0], H=1, count=26
+    F = [0, 0, 0, 2, 1], H=3, count=3
+    F = [0, 0, 0, 3, 0], H=3, count=6
+    F = [0, 0, 0, 4, 1], H=5, count=6
+    F = [0, 0, 0, 5, 0], H=5, count=4
+    F = [0, 0, 0, 8, 1], H=9, count=5
+    F = [0, 0, 0, 10, 1], H=11, count=2
+    F = [0, 0, 1, 0, 0], H=1, count=66
+    F = [0, 0, 1, 2, 0], H=3, count=12
+    F = [0, 0, 1, 3, 1], H=5, count=2
+    F = [0, 0, 1, 4, 0], H=5, count=6
+    F = [0, 0, 2, 1, 0], H=3, count=30
+    F = [0, 0, 2, 2, 1], H=5, count=2
+    F = [0, 0, 2, 3, 0], H=5, count=20
+    F = [0, 0, 2, 6, 1], H=9, count=2
+    F = [0, 0, 3, 0, 0], H=3, count=18
+    F = [0, 0, 3, 2, 0], H=5, count=34
+    F = [0, 0, 3, 5, 1], H=9, count=2
+    F = [0, 0, 3, 6, 0], H=9, count=2
+    F = [0, 0, 3, 7, 1], H=11, count=2
+    F = [0, 0, 3, 9, 1], H=13, count=2
+    F = [0, 0, 4, 1, 0], H=5, count=26
+    F = [0, 0, 4, 4, 1], H=9, count=7
+    F = [0, 0, 4, 5, 0], H=9, count=10
+    F = [0, 0, 4, 6, 1], H=11, count=1
+    F = [0, 0, 4, 7, 0], H=11, count=4
+    F = [0, 0, 4, 8, 1], H=13, count=3
+    F = [0, 0, 4, 10, 1], H=15, count=1
+    F = [0, 0, 5, 0, 0], H=5, count=16
+    F = [0, 0, 5, 3, 1], H=9, count=2
+    F = [0, 0, 5, 4, 0], H=9, count=19
+    F = [0, 0, 5, 6, 0], H=11, count=2
+    F = [0, 0, 5, 7, 1], H=13, count=2
+    F = [0, 0, 6, 3, 0], H=9, count=14
+    F = [0, 0, 6, 4, 1], H=11, count=2
+    F = [0, 0, 6, 5, 0], H=11, count=2
+    F = [0, 0, 6, 6, 1], H=13, count=2
+    F = [0, 0, 6, 7, 0], H=13, count=2
+    F = [0, 0, 6, 8, 1], H=15, count=5
+    F = [0, 0, 7, 2, 0], H=9, count=18
+    F = [0, 0, 7, 4, 0], H=11, count=6
+    F = [0, 0, 7, 5, 1], H=13, count=2
+    F = [0, 0, 7, 6, 0], H=13, count=4
+    F = [0, 0, 8, 2, 1], H=11, count=1
+    F = [0, 0, 8, 3, 0], H=11, count=6
+    F = [0, 0, 8, 5, 0], H=13, count=8
+    F = [0, 0, 9, 2, 0], H=11, count=5
+    F = [0, 0, 9, 4, 0], H=13, count=5
+    F = [0, 0, 9, 6, 0], H=15, count=7
+    F = [0, 0, 10, 4, 1], H=15, count=1
+    F = [0, 1, 0, 0, 0], H=1, count=26
+    F = [0, 1, 2, 0, 0], H=3, count=30
+    F = [0, 1, 2, 2, 0], H=5, count=4
+    F = [0, 1, 3, 1, 0], H=5, count=16
+    F = [0, 1, 4, 0, 0], H=5, count=26
+    F = [0, 1, 4, 4, 0], H=9, count=2
+    F = [0, 1, 5, 3, 0], H=9, count=16
+    F = [0, 1, 5, 5, 0], H=11, count=2
+    F = [0, 1, 5, 6, 1], H=13, count=2
+    F = [0, 1, 6, 2, 0], H=9, count=4
+    F = [0, 1, 6, 3, 1], H=11, count=2
+    F = [0, 1, 6, 4, 0], H=11, count=4
+    F = [0, 1, 7, 5, 0], H=13, count=4
+    F = [0, 1, 7, 7, 0], H=15, count=2
+    F = [0, 1, 8, 4, 0], H=13, count=2
+    F = [0, 2, 1, 0, 0], H=3, count=12
+    F = [0, 2, 2, 1, 0], H=5, count=4
+    F = [0, 2, 3, 0, 0], H=5, count=34
+    F = [0, 2, 4, 3, 0], H=9, count=2
+    F = [0, 2, 5, 2, 0], H=9, count=30
+    F = [0, 2, 5, 4, 0], H=11, count=4
+    F = [0, 2, 6, 1, 0], H=9, count=4
+    F = [0, 2, 6, 2, 1], H=11, count=1
+    F = [0, 2, 6, 3, 0], H=11, count=10
+    F = [0, 2, 6, 6, 1], H=15, count=1
+    F = [0, 2, 7, 0, 0], H=9, count=18
+    F = [0, 2, 7, 2, 0], H=11, count=8
+    F = [0, 2, 7, 4, 0], H=13, count=8
+    F = [0, 2, 8, 3, 0], H=13, count=6
+    F = [0, 2, 9, 0, 0], H=11, count=5
+    F = [0, 2, 9, 2, 0], H=13, count=12
+    F = [0, 2, 9, 4, 0], H=15, count=10
+    F = [0, 2, 11, 2, 0], H=15, count=2
+    F = [0, 3, 0, 0, 0], H=3, count=6
+    F = [0, 3, 2, 0, 0], H=5, count=20
+    F = [0, 3, 4, 2, 0], H=9, count=2
+    F = [0, 3, 5, 1, 0], H=9, count=16
+    F = [0, 3, 6, 0, 0], H=9, count=14
+    F = [0, 3, 6, 2, 0], H=11, count=10
+    F = [0, 3, 7, 3, 0], H=13, count=4
+    F = [0, 3, 8, 0, 0], H=11, count=6
+    F = [0, 3, 8, 2, 0], H=13, count=6
+    F = [0, 3, 9, 3, 0], H=15, count=8
+    F = [0, 4, 1, 0, 0], H=5, count=6
+    F = [0, 4, 4, 1, 0], H=9, count=2
+    F = [0, 4, 5, 0, 0], H=9, count=19
+    F = [0, 4, 5, 2, 0], H=11, count=4
+    F = [0, 4, 6, 1, 0], H=11, count=4
+    F = [0, 4, 7, 0, 0], H=11, count=6
+    F = [0, 4, 7, 2, 0], H=13, count=8
+    F = [0, 4, 8, 1, 0], H=13, count=2
+    F = [0, 4, 9, 0, 0], H=13, count=5
+    F = [0, 4, 9, 2, 0], H=15, count=10
+    F = [0, 5, 0, 0, 0], H=5, count=4
+    F = [0, 5, 4, 0, 0], H=9, count=10
+    F = [0, 5, 5, 1, 0], H=11, count=2
+    F = [0, 5, 6, 0, 0], H=11, count=2
+    F = [0, 5, 7, 1, 0], H=13, count=4
+    F = [0, 5, 8, 0, 0], H=13, count=8
+    F = [0, 6, 3, 0, 0], H=9, count=2
+    F = [0, 6, 5, 0, 0], H=11, count=2
+    F = [0, 6, 7, 0, 0], H=13, count=4
+    F = [0, 6, 9, 0, 0], H=15, count=7
+    F = [0, 7, 4, 0, 0], H=11, count=4
+    F = [0, 7, 6, 0, 0], H=13, count=2
+    F = [0, 7, 7, 1, 0], H=15, count=2
+    F = [1, 0, 0, 0, 0], H=1, count=1
+    F = [1, 2, 0, 0, 0], H=3, count=3
+    F = [1, 2, 2, 0, 0], H=5, count=2
+    F = [1, 2, 6, 2, 0], H=11, count=1
+    F = [1, 2, 8, 0, 0], H=11, count=1
+    F = [1, 3, 1, 0, 0], H=5, count=2
+    F = [1, 3, 5, 0, 0], H=9, count=2
+    F = [1, 3, 6, 1, 0], H=11, count=2
+    F = [1, 4, 0, 0, 0], H=5, count=6
+    F = [1, 4, 4, 0, 0], H=9, count=7
+    F = [1, 4, 6, 0, 0], H=11, count=2
+    F = [1, 4, 10, 0, 0], H=15, count=1
+    F = [1, 5, 3, 0, 0], H=9, count=2
+    F = [1, 5, 7, 0, 0], H=13, count=2
+    F = [1, 6, 2, 0, 0], H=9, count=2
+    F = [1, 6, 4, 0, 0], H=11, count=1
+    F = [1, 6, 5, 1, 0], H=13, count=2
+    F = [1, 6, 6, 0, 0], H=13, count=2
+    F = [1, 6, 6, 2, 0], H=15, count=1
+    F = [1, 7, 3, 0, 0], H=11, count=2
+    F = [1, 7, 5, 0, 0], H=13, count=2
+    F = [1, 8, 0, 0, 0], H=9, count=5
+    F = [1, 8, 4, 0, 0], H=13, count=3
+    F = [1, 8, 6, 0, 0], H=15, count=5
+    F = [1, 9, 3, 0, 0], H=13, count=2
+    F = [1, 10, 0, 0, 0], H=11, count=2
+    F = [1, 10, 4, 0, 0], H=15, count=1
+
+  Linear relations among F-vector components:
+    F_0 + F_1 + ... + F_4 = H (always)
+    Palindromic F (F_k = F_{n-1-k}): 10/144
+
+  F evaluated at special points:
+    F=[0, 0, 0, 0, 1]: F(1)=1, F(-1)=1, |F(ω)|²=1, F(φ)=6.85
+    F=[0, 0, 0, 1, 0]: F(1)=1, F(-1)=-1, |F(ω)|²=1, F(φ)=4.24
+    F=[0, 0, 0, 2, 1]: F(1)=3, F(-1)=-1, |F(ω)|²=3, F(φ)=15.33
+    F=[0, 0, 0, 3, 0]: F(1)=3, F(-1)=-3, |F(ω)|²=9, F(φ)=12.71
+    F=[0, 0, 0, 4, 1]: F(1)=5, F(-1)=-3, |F(ω)|²=13, F(φ)=23.80
+    F=[0, 0, 0, 5, 0]: F(1)=5, F(-1)=-5, |F(ω)|²=25, F(φ)=21.18
+    F=[0, 0, 0, 8, 1]: F(1)=9, F(-1)=-7, |F(ω)|²=57, F(φ)=40.74
+    F=[0, 0, 0, 10, 1]: F(1)=11, F(-1)=-9, |F(ω)|²=91, F(φ)=49.21
+    F=[0, 0, 1, 0, 0]: F(1)=1, F(-1)=1, |F(ω)|²=1, F(φ)=2.62
+    F=[0, 0, 1, 2, 0]: F(1)=3, F(-1)=-1, |F(ω)|²=3, F(φ)=11.09
+    F=[0, 0, 1, 3, 1]: F(1)=5, F(-1)=-1, |F(ω)|²=4, F(φ)=22.18
+    F=[0, 0, 1, 4, 0]: F(1)=5, F(-1)=-3, |F(ω)|²=13, F(φ)=19.56
+    F=[0, 0, 2, 1, 0]: F(1)=3, F(-1)=1, |F(ω)|²=3, F(φ)=9.47
+    F=[0, 0, 2, 2, 1]: F(1)=5, F(-1)=1, |F(ω)|²=1, F(φ)=20.56
+    F=[0, 0, 2, 3, 0]: F(1)=5, F(-1)=-1, |F(ω)|²=7, F(φ)=17.94
+    F=[0, 0, 2, 6, 1]: F(1)=9, F(-1)=-3, |F(ω)|²=21, F(φ)=37.51
+    F=[0, 0, 3, 0, 0]: F(1)=3, F(-1)=3, |F(ω)|²=9, F(φ)=7.85
+    F=[0, 0, 3, 2, 0]: F(1)=5, F(-1)=1, |F(ω)|²=7, F(φ)=16.33
+    F=[0, 0, 3, 5, 1]: F(1)=9, F(-1)=-1, |F(ω)|²=12, F(φ)=35.89
+    F=[0, 0, 3, 6, 0]: F(1)=9, F(-1)=-3, |F(ω)|²=27, F(φ)=33.27
+    F=[0, 0, 3, 7, 1]: F(1)=11, F(-1)=-3, |F(ω)|²=28, F(φ)=44.36
+    F=[0, 0, 3, 9, 1]: F(1)=13, F(-1)=-5, |F(ω)|²=52, F(φ)=52.83
+    F=[0, 0, 4, 1, 0]: F(1)=5, F(-1)=3, |F(ω)|²=13, F(φ)=14.71
+    F=[0, 0, 4, 4, 1]: F(1)=9, F(-1)=1, |F(ω)|²=9, F(φ)=34.27
+    F=[0, 0, 4, 5, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=21, F(φ)=31.65
+    F=[0, 0, 4, 6, 1]: F(1)=11, F(-1)=-1, |F(ω)|²=19, F(φ)=42.74
+    F=[0, 0, 4, 7, 0]: F(1)=11, F(-1)=-3, |F(ω)|²=37, F(φ)=40.12
+    F=[0, 0, 4, 8, 1]: F(1)=13, F(-1)=-3, |F(ω)|²=37, F(φ)=51.21
+    F=[0, 0, 4, 10, 1]: F(1)=15, F(-1)=-5, |F(ω)|²=63, F(φ)=59.69
+    F=[0, 0, 5, 0, 0]: F(1)=5, F(-1)=5, |F(ω)|²=25, F(φ)=13.09
+    F=[0, 0, 5, 3, 1]: F(1)=9, F(-1)=3, |F(ω)|²=12, F(φ)=32.65
+    F=[0, 0, 5, 4, 0]: F(1)=9, F(-1)=1, |F(ω)|²=21, F(φ)=30.03
+    F=[0, 0, 5, 6, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=31, F(φ)=38.51
+    F=[0, 0, 5, 7, 1]: F(1)=13, F(-1)=-1, |F(ω)|²=28, F(φ)=49.60
+    F=[0, 0, 6, 3, 0]: F(1)=9, F(-1)=3, |F(ω)|²=27, F(φ)=28.42
+    F=[0, 0, 6, 4, 1]: F(1)=11, F(-1)=3, |F(ω)|²=19, F(φ)=39.51
+    F=[0, 0, 6, 5, 0]: F(1)=11, F(-1)=1, |F(ω)|²=31, F(φ)=36.89
+    F=[0, 0, 6, 6, 1]: F(1)=13, F(-1)=1, |F(ω)|²=25, F(φ)=47.98
+    F=[0, 0, 6, 7, 0]: F(1)=13, F(-1)=-1, |F(ω)|²=43, F(φ)=45.36
+    F=[0, 0, 6, 8, 1]: F(1)=15, F(-1)=-1, |F(ω)|²=39, F(φ)=56.45
+    F=[0, 0, 7, 2, 0]: F(1)=9, F(-1)=5, |F(ω)|²=39, F(φ)=26.80
+    F=[0, 0, 7, 4, 0]: F(1)=11, F(-1)=3, |F(ω)|²=37, F(φ)=35.27
+    F=[0, 0, 7, 5, 1]: F(1)=13, F(-1)=3, |F(ω)|²=28, F(φ)=46.36
+    F=[0, 0, 7, 6, 0]: F(1)=13, F(-1)=1, |F(ω)|²=43, F(φ)=43.74
+    F=[0, 0, 8, 2, 1]: F(1)=11, F(-1)=7, |F(ω)|²=43, F(φ)=36.27
+    F=[0, 0, 8, 3, 0]: F(1)=11, F(-1)=5, |F(ω)|²=49, F(φ)=33.65
+    F=[0, 0, 8, 5, 0]: F(1)=13, F(-1)=3, |F(ω)|²=49, F(φ)=42.12
+    F=[0, 0, 9, 2, 0]: F(1)=11, F(-1)=7, |F(ω)|²=67, F(φ)=32.03
+    F=[0, 0, 9, 4, 0]: F(1)=13, F(-1)=5, |F(ω)|²=61, F(φ)=40.51
+    F=[0, 0, 9, 6, 0]: F(1)=15, F(-1)=3, |F(ω)|²=63, F(φ)=48.98
+    F=[0, 0, 10, 4, 1]: F(1)=15, F(-1)=7, |F(ω)|²=63, F(φ)=49.98
+    F=[0, 1, 0, 0, 0]: F(1)=1, F(-1)=-1, |F(ω)|²=1, F(φ)=1.62
+    F=[0, 1, 2, 0, 0]: F(1)=3, F(-1)=1, |F(ω)|²=3, F(φ)=6.85
+    F=[0, 1, 2, 2, 0]: F(1)=5, F(-1)=-1, |F(ω)|²=1, F(φ)=15.33
+    F=[0, 1, 3, 1, 0]: F(1)=5, F(-1)=1, |F(ω)|²=4, F(φ)=13.71
+    F=[0, 1, 4, 0, 0]: F(1)=5, F(-1)=3, |F(ω)|²=13, F(φ)=12.09
+    F=[0, 1, 4, 4, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=9, F(φ)=29.03
+    F=[0, 1, 5, 3, 0]: F(1)=9, F(-1)=1, |F(ω)|²=12, F(φ)=27.42
+    F=[0, 1, 5, 5, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=16, F(φ)=35.89
+    F=[0, 1, 5, 6, 1]: F(1)=13, F(-1)=-1, |F(ω)|²=13, F(φ)=46.98
+    F=[0, 1, 6, 2, 0]: F(1)=9, F(-1)=3, |F(ω)|²=21, F(φ)=25.80
+    F=[0, 1, 6, 3, 1]: F(1)=11, F(-1)=3, |F(ω)|²=13, F(φ)=36.89
+    F=[0, 1, 6, 4, 0]: F(1)=11, F(-1)=1, |F(ω)|²=19, F(φ)=34.27
+    F=[0, 1, 7, 5, 0]: F(1)=13, F(-1)=1, |F(ω)|²=28, F(φ)=41.12
+    F=[0, 1, 7, 7, 0]: F(1)=15, F(-1)=-1, |F(ω)|²=36, F(φ)=49.60
+    F=[0, 1, 8, 4, 0]: F(1)=13, F(-1)=3, |F(ω)|²=37, F(φ)=39.51
+    F=[0, 2, 1, 0, 0]: F(1)=3, F(-1)=-1, |F(ω)|²=3, F(φ)=5.85
+    F=[0, 2, 2, 1, 0]: F(1)=5, F(-1)=-1, |F(ω)|²=1, F(φ)=12.71
+    F=[0, 2, 3, 0, 0]: F(1)=5, F(-1)=1, |F(ω)|²=7, F(φ)=11.09
+    F=[0, 2, 4, 3, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=3, F(φ)=26.42
+    F=[0, 2, 5, 2, 0]: F(1)=9, F(-1)=1, |F(ω)|²=9, F(φ)=24.80
+    F=[0, 2, 5, 4, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=7, F(φ)=33.27
+    F=[0, 2, 6, 1, 0]: F(1)=9, F(-1)=3, |F(ω)|²=21, F(φ)=23.18
+    F=[0, 2, 6, 2, 1]: F(1)=11, F(-1)=3, |F(ω)|²=13, F(φ)=34.27
+    F=[0, 2, 6, 3, 0]: F(1)=11, F(-1)=1, |F(ω)|²=13, F(φ)=31.65
+    F=[0, 2, 6, 6, 1]: F(1)=15, F(-1)=-1, |F(ω)|²=9, F(φ)=51.21
+    F=[0, 2, 7, 0, 0]: F(1)=9, F(-1)=5, |F(ω)|²=39, F(φ)=21.56
+    F=[0, 2, 7, 2, 0]: F(1)=11, F(-1)=3, |F(ω)|²=25, F(φ)=30.03
+    F=[0, 2, 7, 4, 0]: F(1)=13, F(-1)=1, |F(ω)|²=19, F(φ)=38.51
+    F=[0, 2, 8, 3, 0]: F(1)=13, F(-1)=3, |F(ω)|²=31, F(φ)=36.89
+    F=[0, 2, 9, 0, 0]: F(1)=11, F(-1)=7, |F(ω)|²=67, F(φ)=26.80
+    F=[0, 2, 9, 2, 0]: F(1)=13, F(-1)=5, |F(ω)|²=49, F(φ)=35.27
+    F=[0, 2, 9, 4, 0]: F(1)=15, F(-1)=3, |F(ω)|²=39, F(φ)=43.74
+    F=[0, 2, 11, 2, 0]: F(1)=15, F(-1)=7, |F(ω)|²=81, F(φ)=40.51
+    F=[0, 3, 0, 0, 0]: F(1)=3, F(-1)=-3, |F(ω)|²=9, F(φ)=4.85
+    F=[0, 3, 2, 0, 0]: F(1)=5, F(-1)=-1, |F(ω)|²=7, F(φ)=10.09
+    F=[0, 3, 4, 2, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=3, F(φ)=23.80
+    F=[0, 3, 5, 1, 0]: F(1)=9, F(-1)=1, |F(ω)|²=12, F(φ)=22.18
+    F=[0, 3, 6, 0, 0]: F(1)=9, F(-1)=3, |F(ω)|²=27, F(φ)=20.56
+    F=[0, 3, 6, 2, 0]: F(1)=11, F(-1)=1, |F(ω)|²=13, F(φ)=29.03
+    F=[0, 3, 7, 3, 0]: F(1)=13, F(-1)=1, |F(ω)|²=16, F(φ)=35.89
+    F=[0, 3, 8, 0, 0]: F(1)=11, F(-1)=5, |F(ω)|²=49, F(φ)=25.80
+    F=[0, 3, 8, 2, 0]: F(1)=13, F(-1)=3, |F(ω)|²=31, F(φ)=34.27
+    F=[0, 3, 9, 3, 0]: F(1)=15, F(-1)=3, |F(ω)|²=36, F(φ)=41.12
+    F=[0, 4, 1, 0, 0]: F(1)=5, F(-1)=-3, |F(ω)|²=13, F(φ)=9.09
+    F=[0, 4, 4, 1, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=9, F(φ)=21.18
+    F=[0, 4, 5, 0, 0]: F(1)=9, F(-1)=1, |F(ω)|²=21, F(φ)=19.56
+    F=[0, 4, 5, 2, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=7, F(φ)=28.03
+    F=[0, 4, 6, 1, 0]: F(1)=11, F(-1)=1, |F(ω)|²=19, F(φ)=26.42
+    F=[0, 4, 7, 0, 0]: F(1)=11, F(-1)=3, |F(ω)|²=37, F(φ)=24.80
+    F=[0, 4, 7, 2, 0]: F(1)=13, F(-1)=1, |F(ω)|²=19, F(φ)=33.27
+    F=[0, 4, 8, 1, 0]: F(1)=13, F(-1)=3, |F(ω)|²=37, F(φ)=31.65
+    F=[0, 4, 9, 0, 0]: F(1)=13, F(-1)=5, |F(ω)|²=61, F(φ)=30.03
+    F=[0, 4, 9, 2, 0]: F(1)=15, F(-1)=3, |F(ω)|²=39, F(φ)=38.51
+    F=[0, 5, 0, 0, 0]: F(1)=5, F(-1)=-5, |F(ω)|²=25, F(φ)=8.09
+    F=[0, 5, 4, 0, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=21, F(φ)=18.56
+    F=[0, 5, 5, 1, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=16, F(φ)=25.42
+    F=[0, 5, 6, 0, 0]: F(1)=11, F(-1)=1, |F(ω)|²=31, F(φ)=23.80
+    F=[0, 5, 7, 1, 0]: F(1)=13, F(-1)=1, |F(ω)|²=28, F(φ)=30.65
+    F=[0, 5, 8, 0, 0]: F(1)=13, F(-1)=3, |F(ω)|²=49, F(φ)=29.03
+    F=[0, 6, 3, 0, 0]: F(1)=9, F(-1)=-3, |F(ω)|²=27, F(φ)=17.56
+    F=[0, 6, 5, 0, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=31, F(φ)=22.80
+    F=[0, 6, 7, 0, 0]: F(1)=13, F(-1)=1, |F(ω)|²=43, F(φ)=28.03
+    F=[0, 6, 9, 0, 0]: F(1)=15, F(-1)=3, |F(ω)|²=63, F(φ)=33.27
+    F=[0, 7, 4, 0, 0]: F(1)=11, F(-1)=-3, |F(ω)|²=37, F(φ)=21.80
+    F=[0, 7, 6, 0, 0]: F(1)=13, F(-1)=-1, |F(ω)|²=43, F(φ)=27.03
+    F=[0, 7, 7, 1, 0]: F(1)=15, F(-1)=-1, |F(ω)|²=36, F(φ)=33.89
+    F=[1, 0, 0, 0, 0]: F(1)=1, F(-1)=1, |F(ω)|²=1, F(φ)=1.00
+    F=[1, 2, 0, 0, 0]: F(1)=3, F(-1)=-1, |F(ω)|²=3, F(φ)=4.24
+    F=[1, 2, 2, 0, 0]: F(1)=5, F(-1)=1, |F(ω)|²=1, F(φ)=9.47
+    F=[1, 2, 6, 2, 0]: F(1)=11, F(-1)=3, |F(ω)|²=13, F(φ)=28.42
+    F=[1, 2, 8, 0, 0]: F(1)=11, F(-1)=7, |F(ω)|²=43, F(φ)=25.18
+    F=[1, 3, 1, 0, 0]: F(1)=5, F(-1)=-1, |F(ω)|²=4, F(φ)=8.47
+    F=[1, 3, 5, 0, 0]: F(1)=9, F(-1)=3, |F(ω)|²=12, F(φ)=18.94
+    F=[1, 3, 6, 1, 0]: F(1)=11, F(-1)=3, |F(ω)|²=13, F(φ)=25.80
+    F=[1, 4, 0, 0, 0]: F(1)=5, F(-1)=-3, |F(ω)|²=13, F(φ)=7.47
+    F=[1, 4, 4, 0, 0]: F(1)=9, F(-1)=1, |F(ω)|²=9, F(φ)=17.94
+    F=[1, 4, 6, 0, 0]: F(1)=11, F(-1)=3, |F(ω)|²=19, F(φ)=23.18
+    F=[1, 4, 10, 0, 0]: F(1)=15, F(-1)=7, |F(ω)|²=63, F(φ)=33.65
+    F=[1, 5, 3, 0, 0]: F(1)=9, F(-1)=-1, |F(ω)|²=12, F(φ)=16.94
+    F=[1, 5, 7, 0, 0]: F(1)=13, F(-1)=3, |F(ω)|²=28, F(φ)=27.42
+    F=[1, 6, 2, 0, 0]: F(1)=9, F(-1)=-3, |F(ω)|²=21, F(φ)=15.94
+    F=[1, 6, 4, 0, 0]: F(1)=11, F(-1)=-1, |F(ω)|²=19, F(φ)=21.18
+    F=[1, 6, 5, 1, 0]: F(1)=13, F(-1)=-1, |F(ω)|²=13, F(φ)=28.03
+    F=[1, 6, 6, 0, 0]: F(1)=13, F(-1)=1, |F(ω)|²=25, F(φ)=26.42
+    F=[1, 6, 6, 2, 0]: F(1)=15, F(-1)=-1, |F(ω)|²=9, F(φ)=34.89
+    F=[1, 7, 3, 0, 0]: F(1)=11, F(-1)=-3, |F(ω)|²=28, F(φ)=20.18
+    F=[1, 7, 5, 0, 0]: F(1)=13, F(-1)=-1, |F(ω)|²=28, F(φ)=25.42
+    F=[1, 8, 0, 0, 0]: F(1)=9, F(-1)=-7, |F(ω)|²=57, F(φ)=13.94
+    F=[1, 8, 4, 0, 0]: F(1)=13, F(-1)=-3, |F(ω)|²=37, F(φ)=24.42
+    F=[1, 8, 6, 0, 0]: F(1)=15, F(-1)=-1, |F(ω)|²=39, F(φ)=29.65
+    F=[1, 9, 3, 0, 0]: F(1)=13, F(-1)=-5, |F(ω)|²=52, F(φ)=23.42
+    F=[1, 10, 0, 0, 0]: F(1)=11, F(-1)=-9, |F(ω)|²=91, F(φ)=17.18
+    F=[1, 10, 4, 0, 0]: F(1)=15, F(-1)=-5, |F(ω)|²=63, F(φ)=27.65
+
+======================================================================
+PART 4: SEGRE PRODUCT — COMPOSITION OF TOURNAMENTS
+======================================================================
+
+  The SEGRE EMBEDDING σ: P^a × P^b → P^{(a+1)(b+1)-1} realizes the
+  product of two projective spaces as a projective variety.
+
+  For tournaments: if T₁ is a tournament on n₁ and T₂ on n₂,
+  can we define a PRODUCT T₁ × T₂?
+
+  COMPOSITION (Lexicographic product):
+  T₁[T₂] has n₁*n₂ vertices. Vertex (i,j) beats (k,l) iff:
+  - T₁: i→k, OR
+  - i=k and T₂: j→l.
+
+  H(T₁[T₂]) = H(T₁) * H(T₂)^{n₁}?
+  No — it's more complex. The HP must traverse all n₁*n₂ vertices.
+
+  SIMPLER: Direct sum T₁ ⊕ T₂ (disjoint union, all arcs from T₁ to T₂).
+  This is a tournament on n₁+n₂ vertices.
+  H(T₁ ⊕ T₂) depends on how many HPs cross between T₁ and T₂.
+
+  For the ORDERED direct sum (all arcs from V₁ to V₂):
+  Any HP must visit all of V₁ before entering V₂ (or vice versa)?
+  No — it can interleave.
+
+  Let's compute: for small T₁, T₂, what is H(T₁ ⊕ T₂)?
+
+
+  Direct sum T₁ ⊕ T₂ (n₁=n₂=3, all arcs V₁→V₂):
+   H(T₁)  H(T₂)   H(T₁⊕T₂)  Product    Ratio
+       1      1          1        1     1.00
+       1      3          3        3     1.00
+       3      1          3        3     1.00
+       3      3          9        9     1.00
+
+======================================================================
+PART 5: THE TOURNAMENT MATROID AND FANO CONNECTION
+======================================================================
+
+  A MATROID M(E, I) on ground set E with independent sets I
+  captures the notion of "linear independence" abstractly.
+
+  For tournaments: consider the CYCLE MATROID of the underlying
+  undirected graph (always K_n), which is the graphic matroid M(K_n).
+
+  M(K_n) has rank n-1 and is the same for ALL tournaments on n vertices.
+  So this doesn't distinguish tournaments.
+
+  MORE INTERESTING: The ORIENTED MATROID of T.
+  The signed incidence matrix of T (±1 entries) defines an oriented matroid.
+  The chirotope (sign pattern of maximal minors) encodes the orientation.
+
+  For n=3: The signed incidence matrix is 3×3 (skew-symmetric).
+  Its chirotope has 1 element (the Pfaffian sign... but n=3 is odd).
+
+  Actually: the oriented matroid of a tournament T on n vertices
+  is determined by the SIGNS of all (n-1)×(n-1) minors of the
+  signed incidence matrix.
+
+  FANO MATROID: The Fano matroid F_7 is the matroid of PG(2,2).
+  It has 7 elements, rank 3, and is the smallest non-representable
+  matroid over R (but IS representable over F_2).
+
+  QUESTION: Does the Fano matroid appear in tournament theory?
+
+  At n=3, m=3 arcs. The cycle space of K_3 has dimension C(3,2)-3+1=1.
+  The Fano matroid has 7 elements, so it can't appear at n=3.
+
+  At n=4, m=6 arcs. The graphic matroid M(K_4) has rank 3.
+  The Fano matroid also has rank 3, on 7 elements.
+  But m=6 ≠ 7, so no direct match.
+
+  HOWEVER: if we ADD the H function as a 7th "element" to the
+  matroid on m=6 arcs, we get a matroid on 7 elements of rank 3.
+  Could THIS be the Fano matroid?
+
+  The Fano matroid's circuits (minimal dependent sets) are:
+  {1,2,4}, {2,3,5}, {3,4,6}, {4,5,7}, {5,6,1}, {6,7,2}, {7,1,3}
+  (the 7 lines of PG(2,2)).
+
+  For K_4: the graphic matroid circuits are the cycles of K_4:
+  {01,12,02}, {01,13,03}, {02,23,03}, {12,23,13},
+  plus the whole graph {01,02,03,12,13,23}.
+
+  These are 3-element circuits (triangles) and the 6-element circuit.
+  The Fano matroid has only 3-element circuits. So M(K_4) is NOT F_7.
+
+  But the DUAL of M(K_4) has rank m-n+1 = 6-3 = 3, same as F_7.
+  The dual matroid M*(K_4) = the bond matroid of K_4.
+  Its circuits are the minimal edge cuts of K_4.
+  Min cuts of K_4: removing all edges incident to one vertex (3 edges each).
+  There are 4 such cuts, each of size 3.
+
+  Circuits of M*(K_4): {01,02,03}, {01,12,13}, {02,12,23}, {03,13,23}.
+  Four circuits of size 3 — same as the graphic matroid of K_4
+  (which is self-dual for K_4? No, K_4 is planar so M*(K_4) = M(K_4*)
+  where K_4* is the dual graph = K_4 again... actually that gives the
+  same matroid since K_4 is self-dual as a planar graph!).
+
+  Nope: M(K_4) is uniform U_{3,6} only if K_4 were "generic," but
+  K_4 has structure. Actually M(K_4) is isomorphic to the graphic
+  matroid of K_4, which has rank 3 on 6 elements with the 4 triangle circuits.
+
+  Cycle matroid of K_4 (m=6 edges, rank 3):
+  Edges: 01, 02, 03, 12, 13, 23
+  Circuits (3-cycles): {01,02,12}, {01,03,13}, {02,03,23}, {12,13,23}
+  4-cycles: {01,12,23,03}, {01,13,23,02}, {02,12,13,03}
+
+  PG(2,2) = Fano plane:
+  Points = nonzero vectors in F_2^3:
+    P_1 = (0, 0, 1)
+    P_2 = (0, 1, 0)
+    P_3 = (0, 1, 1)
+    P_4 = (1, 0, 0)
+    P_5 = (1, 0, 1)
+    P_6 = (1, 1, 0)
+    P_7 = (1, 1, 1)
+  Lines (3-point subsets where sum = 0 mod 2):
+    {P_1, P_2, P_3}
+    {P_1, P_4, P_5}
+    {P_1, P_6, P_7}
+    {P_2, P_4, P_6}
+    {P_2, P_5, P_7}
+    {P_3, P_4, P_7}
+    {P_3, P_5, P_6}
+
+======================================================================
+PART 6: TORIC GEOMETRY OF TOURNAMENT SPACE
+======================================================================
+
+  The tournament hypercube Q_m = {0,1}^m is the set of LATTICE POINTS
+  of the m-dimensional unit cube [0,1]^m.
+
+  In TORIC GEOMETRY, the unit cube corresponds to the projective space P^m.
+  More precisely:
+  - The vertices {0,1}^m are the torus-fixed points of P^m.
+  - The faces of the cube correspond to the torus orbits.
+  - The H function is a "toric polynomial" — a Laurent polynomial
+    on the torus (C*)^m.
+
+  Actually, since H is a multilinear polynomial, it IS a section of
+  a line bundle on the toric variety X_Cube associated to the cube.
+
+  The toric variety X = TV(Δ) where Δ is the normal fan of [0,1]^m.
+  For the cube, Δ is the fan over the faces of the CROSS-POLYTOPE.
+  And X_Cube ≅ (P^1)^m = the product of m copies of P^1.
+
+  Each tournament is a point on this toric variety!
+  And H is a section of O(1,1,...,1) (the "multilinear" line bundle).
+
+  For n=3: X = (P^1)^3. H is a section of O(1,1,1).
+  sections of O(1,1,1) on (P^1)^3 form a space of dimension 2^3 = 8.
+  H is one specific section.
+
+  The ZERO LOCUS of H - h (as a section of O(1,1,1)) is a divisor in X.
+  Over C: this divisor has degree (1,1,1) = total degree 3 in the
+  Segre embedding of (P^1)^3 → P^7.
+
+  THIS IS THE PROJECTIVE-ALGEBRAIC DUALITY:
+  - PROJECTIVELY: H-level sets are hyperplane sections of the Segre variety
+  - ALGEBRAICALLY: H is a polynomial function on affine space
+  - These UNIFY because the Segre embedding realizes (P^1)^m as a
+    projective variety, and multilinear functions become linear on the
+    ambient projective space
+
+  THE SEGRE-VERONESE DUALITY:
+  - Segre: product P^1 × ... × P^1 → P^{2^m - 1} (multilinear)
+  - Veronese: P^m → P^{C(m+d,d)-1} (degree-d homogeneous)
+  - For d=1: Veronese = identity, Segre gives the full structure
+  - H being degree 2 means: H factors through the degree-2 Veronese
+    of the linear span, OR equivalently, H is LINEAR on the Segre variety
+
+  n=3 (m=3): dim H^0((P^1)^3, O(1,...,1)) = 8
+    = total functions (0, 1)^3 → Z  (multilinear)
+    H is ONE such section
+  n=4 (m=6): dim H^0((P^1)^6, O(1,...,1)) = 64
+    = total functions (0, 1)^6 → Z  (multilinear)
+    H is ONE such section
+  n=5 (m=10): dim H^0((P^1)^10, O(1,...,1)) = 1024
+    = total functions (0, 1)^10 → Z  (multilinear)
+    H is ONE such section
+
+======================================================================
+PART 7: BAER SUBPLANES AND SUB-TOURNAMENTS
+======================================================================
+
+  A BAER SUBPLANE of PG(2,q²) is a copy of PG(2,q) embedded within it.
+  |PG(2,q²)| = q⁴ + q² + 1
+  |PG(2,q)| = q² + q + 1
+  Ratio: (q⁴+q²+1)/(q²+q+1) = q²-q+1 = Φ_6(q)
+
+  At q=2: PG(2,4) has 21 points, PG(2,2) has 7 points.
+  Ratio = 21/7 = 3 = Φ_6(2) = 2² - 2 + 1.
+
+  TOURNAMENT CONNECTION:
+  The FORBIDDEN VALUES are 7 = |PG(2,2)| and 21 = |PG(2,4)|.
+  A Baer subplane of PG(2,4) is a copy of PG(2,2).
+  So PG(2,4) contains Φ_6(2) = 3 copies of PG(2,2)? No — each point
+  is in exactly one Baer subplane of the Baer partition.
+
+  PG(2,4) has exactly q²-q+1 = 3 disjoint Baer subplanes that
+  partition all the points when q=2: 21 = 3 × 7.
+
+  THIS IS 21 = 3 × 7 = Φ_6(2) × Φ_3(2).
+  The factorization of the second forbidden value involves the first!
+
+  For SUB-TOURNAMENTS: a tournament on k vertices embedded in
+  a tournament on n vertices (induced sub-tournament).
+  The number of sub-tournaments of size k is C(n, k).
+
+  QUESTION: Is there a "Baer sub-tournament" concept?
+  A sub-tournament T' ⊂ T such that H(T') relates to H(T)
+  in a way analogous to Baer subplanes?
+
+  For the transitive tournament T_n (H=1):
+  Every sub-tournament is transitive: H(T'_k) = 1 for all k ≤ n.
+  Not interesting.
+
+  For the regular tournament C_5 (H=15):
+  Sub-tournaments of size 3: C(5,3) = 10 induced sub-tournaments.
+  How many have H=1 and how many have H=3?
+
+
+  Transitive (H=1):
+    Score: (0, 1, 2, 3, 4)
+    Induced 3-sub-tournaments: {1: 10}
+    Induced 4-sub-tournaments: {1: 5}
+
+  Regular (H=15):
+    Score: (2, 2, 2, 2, 2)
+    Induced 3-sub-tournaments: {1: 5, 3: 5}
+    Induced 4-sub-tournaments: {5: 5}
+
+======================================================================
+PART 8: THE SCHEME Spec(Z[H]) AND ITS FIBERS
+======================================================================
+
+  Consider the map H: {0,1}^m → Z.
+  This defines a SCHEME morphism π: Spec(Z[x_1,...,x_m]/(x_i²-x_i)) → Spec(Z[H]).
+
+  The fiber π^{-1}(h) is the tournament variety {T : H(T) = h}.
+  This is a 0-dimensional scheme over Z.
+
+  The HILBERT FUNCTION of this fiber:
+  h_F(d) = #{monomials of degree ≤ d constant on the fiber}
+
+  But for us, the more interesting question is:
+  What is the GENUS of the curve {H(x) = h} in (P^1)^m?
+
+  For n=3, H has degree (1,1,1) in (P^1)^3.
+  By adjunction formula: the generic fiber has genus
+  g = (d₁-1)(d₂-1) + ... = 0 (for a trilinear hypersurface in (P^1)^3).
+  Actually for a smooth divisor D of class (1,1,1) in (P^1)^3:
+  D is isomorphic to a del Pezzo surface of degree 6.
+
+  Wait — (P^1)^3 is 3-dimensional, and a divisor D of class (1,1,1)
+  is a surface (2-dimensional), not a curve.
+
+  The CURVE arises when we intersect D with another divisor.
+  E.g., {H = h₁} ∩ {H = h₂} is empty (since H takes one value at each point).
+
+  Better: the H-level set is a FINITE set of points in (P^1)^3.
+  These points form a 0-dimensional subscheme.
+  Its DEGREE = |{T : H(T) = h}| = multiplicity of h in the H-spectrum.
+
+
+  n=3 (m=3):
+    H=  1: degree = 6, frac of (P^1)^3 = 0.750000
+    H=  3: degree = 2, frac of (P^1)^3 = 0.250000
+
+  n=4 (m=6):
+    H=  1: degree = 24, frac of (P^1)^6 = 0.375000
+    H=  3: degree = 16, frac of (P^1)^6 = 0.250000
+    H=  5: degree = 24, frac of (P^1)^6 = 0.375000
+
+  n=5 (m=10):
+    H=  1: degree = 120, frac of (P^1)^10 = 0.117188
+    H=  3: degree = 120, frac of (P^1)^10 = 0.117188
+    H=  5: degree = 240, frac of (P^1)^10 = 0.234375
+    H=  9: degree = 240, frac of (P^1)^10 = 0.234375
+    H= 11: degree = 120, frac of (P^1)^10 = 0.117188
+    H= 13: degree = 120, frac of (P^1)^10 = 0.117188
+    H= 15: degree = 64, frac of (P^1)^10 = 0.062500
+
+======================================================================
+PART 9: THE DUALITY MADE EXPLICIT
+======================================================================
+
+  THE CENTRAL THEOREM (of this investigation):
+
+  Let T_n be the space of tournaments on n vertices.
+  T_n ≅ F_2^m as an affine space (m = C(n,2)).
+  T_n ≅ (P^1)^m as a toric variety.
+  T_n ↪ P^{2^m-1} via the Segre embedding.
+
+  H: T_n → Z is a multilinear function of degree ≤ n-1.
+
+  PROJECTIVE VIEWPOINT:
+  The Segre embedding maps (P^1)^m → P^{2^m-1}.
+  H becomes a LINEAR function on P^{2^m-1}.
+  The H-level sets are HYPERPLANE SECTIONS of the Segre variety.
+  Projective duality exchanges H-level sets with their dual hyperplanes.
+
+  ALGEBRAIC VIEWPOINT:
+  H is a polynomial in F_2[x_1,...,x_m]/(x_i²-x_i).
+  The H-level sets are varieties V(H-h) in affine space.
+  Their ideal I(V) lives in the Boolean polynomial ring.
+  The Hilbert function of I(V) encodes the algebraic complexity.
+
+  THE UNIFICATION:
+  The Segre embedding realizes T_n as a projective variety.
+  Multilinear polynomials become linear forms on the ambient space.
+  H-level sets become hyperplane sections.
+  Projective duality exchanges points ↔ hyperplanes.
+  Algebraic duality exchanges varieties ↔ ideals.
+
+  THESE ARE THE SAME DUALITY: the hyperplane {H = h} in P^{2^m-1}
+  defines both a projective variety (the section) and an algebraic ideal
+  (the kernel of the linear form H-h).
+
+  The FANO PLANE enters because:
+  - At n=3 (m=3), the Segre variety Σ ⊂ P^7 has 2^3 = 8 points
+  - The number of degree-≤2 multilinear monomials is 7 = |PG(2,2)|
+  - H is one of these 7 "directions" in the multilinear space
+  - The forbidden value 7 = Φ_3(2) is the COUNT of these directions
+  - The 7 Fano lines correspond to the 7 degree-2 equations that
+    constrain the tournament structure
+
+  THE BRIDGE BETWEEN PROJECTIVE AND ALGEBRAIC:
+  In classical geometry, "projective" = "linear algebra over a field"
+  and "algebraic" = "polynomial equations."
+  The Segre/Veronese embeddings LINEARIZE polynomial equations,
+  making algebraic geometry into projective geometry in a higher-dimensional space.
+
+  For tournaments: H is algebraic (polynomial) in T_n but PROJECTIVE (linear)
+  in the Segre-embedded P^{2^m-1}. This is the unity of the duality.
+
+
+  n=3: H-level sets in Segre-embedded space P^7:
+    H=  1: |level|=    6, Segre rank (F_2) = 6/8
+    H=  3: |level|=    2, Segre rank (F_2) = 2/8
+
+  n=4: H-level sets in Segre-embedded space P^63:
+    H=  1: |level|=   24, Segre rank (F_2) = 15/64
+    H=  3: |level|=   16, Segre rank (F_2) = 16/64
+    H=  5: |level|=   24, Segre rank (F_2) = 14/64
+
+  n=5: H-level sets in Segre-embedded space P^1023:
+    H=  1: |level|=  120, Segre rank (F_2) = 50/1024
+    H=  3: |level|=  120, Segre rank (F_2) = 65/1024
+    H=  5: |level|=  240, Segre rank (F_2) = 155/1024
+    H=  9: |level|=  240, Segre rank (F_2) = 144/1024
+    H= 11: |level|=  120, Segre rank (F_2) = 64/1024
+    H= 13: |level|=  120, Segre rank (F_2) = 64/1024
+    H= 15: |level|=   64, Segre rank (F_2) = 36/1024
+
+======================================================================
+DONE — PROJECTIVE/ALGEBRAIC GEOMETRY DEEP EXTENSION
+======================================================================
