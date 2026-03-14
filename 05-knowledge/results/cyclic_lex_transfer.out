@@ -1,0 +1,121 @@
+======================================================================
+CYCLIC LEX PRODUCT — PATH ANATOMY
+kind-pasteur-2026-03-14-S82
+======================================================================
+
+  Adjacency matrix:
+    [np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0)]
+    [np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0)]
+    [np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(1)]
+    [np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(1)]
+    [np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1)]
+    [np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+  Scores: [np.int64(3), np.int64(2), np.int64(3), np.int64(2), np.int64(3), np.int64(2)]
+
+  Total Ham paths: 45
+
+  PATH CLASSIFICATION BY GROUP SEQUENCE:
+  (The group each vertex belongs to, in path order)
+    gseq=(0, 1, 2, 0, 1, 2): 8 paths, 5 switches, group runs=[0, 1, 2, 0, 1, 2]
+    gseq=(1, 2, 0, 1, 2, 0): 8 paths, 5 switches, group runs=[1, 2, 0, 1, 2, 0]
+    gseq=(2, 0, 1, 2, 0, 1): 8 paths, 5 switches, group runs=[2, 0, 1, 2, 0, 1]
+    gseq=(0, 1, 2, 2, 0, 1): 4 paths, 4 switches, group runs=[0, 1, 2, 0, 1]
+    gseq=(1, 2, 0, 0, 1, 2): 4 paths, 4 switches, group runs=[1, 2, 0, 1, 2]
+    gseq=(2, 0, 1, 1, 2, 0): 4 paths, 4 switches, group runs=[2, 0, 1, 2, 0]
+    gseq=(0, 1, 1, 2, 2, 0): 2 paths, 3 switches, group runs=[0, 1, 2, 0]
+    gseq=(1, 2, 2, 0, 0, 1): 2 paths, 3 switches, group runs=[1, 2, 0, 1]
+    gseq=(2, 0, 0, 1, 1, 2): 2 paths, 3 switches, group runs=[2, 0, 1, 2]
+    gseq=(0, 0, 1, 1, 2, 2): 1 paths, 2 switches, group runs=[0, 1, 2]
+    gseq=(1, 1, 2, 2, 0, 0): 1 paths, 2 switches, group runs=[1, 2, 0]
+    gseq=(2, 2, 0, 0, 1, 1): 1 paths, 2 switches, group runs=[2, 0, 1]
+
+  Block paths (each group contiguous): 3
+  Non-block paths (groups interleaved): 42
+
+  Block group sequences: [(0, 0, 1, 1, 2, 2), (1, 1, 2, 2, 0, 0), (2, 2, 0, 0, 1, 1)]
+    (0, 0, 1, 1, 2, 2): 1 paths
+    (1, 1, 2, 2, 0, 0): 1 paths
+    (2, 2, 0, 0, 1, 1): 1 paths
+
+  *** KEY INSIGHT ***
+  The simple formula H(T1)*H(T2)^|V1| counts only BLOCK paths
+  (where each group is visited contiguously).
+  But the cyclic T1 = 3-cycle allows interleaving: visiting
+  part of group A, then group B, then back to group A.
+  This creates 42 extra paths beyond the 3 block paths!
+  Total: 3 + 42 = 45 = 45.
+
+======================================================================
+PART 2: INTERLEAVING PATTERNS
+  Non-block paths interleave groups. How?
+======================================================================
+
+  Interleaving patterns (group run sequences):
+    (0, 1, 2, 0, 1, 2): 8 paths [INTERLEAVED]
+    (1, 2, 0, 1, 2, 0): 8 paths [INTERLEAVED]
+    (2, 0, 1, 2, 0, 1): 8 paths [INTERLEAVED]
+    (0, 1, 2, 0, 1): 4 paths [INTERLEAVED]
+    (1, 2, 0, 1, 2): 4 paths [INTERLEAVED]
+    (2, 0, 1, 2, 0): 4 paths [INTERLEAVED]
+    (0, 1, 2, 0): 2 paths [INTERLEAVED]
+    (1, 2, 0, 1): 2 paths [INTERLEAVED]
+    (2, 0, 1, 2): 2 paths [INTERLEAVED]
+    (0, 1, 2): 1 paths [BLOCK]
+    (1, 2, 0): 1 paths [BLOCK]
+    (2, 0, 1): 1 paths [BLOCK]
+
+======================================================================
+PART 3: TRANSFER MATRIX FOR LEX PRODUCT
+  Define states as (group, position_within_group)
+  The transfer matrix M[s1, s2] = 1 iff transition s1->s2 is an arc
+  H = #{Ham paths in M} = same as our tournament
+======================================================================
+
+  Block structure of adjacency matrix:
+    M[group 0 -> group 0] = [[0, 1], [0, 0]]
+    M[group 0 -> group 1] = [[1, 1], [1, 1]]
+    M[group 0 -> group 2] = [[0, 0], [0, 0]]
+    M[group 1 -> group 0] = [[0, 0], [0, 0]]
+    M[group 1 -> group 1] = [[0, 1], [0, 0]]
+    M[group 1 -> group 2] = [[1, 1], [1, 1]]
+    M[group 2 -> group 0] = [[1, 1], [1, 1]]
+    M[group 2 -> group 1] = [[0, 0], [0, 0]]
+    M[group 2 -> group 2] = [[0, 1], [0, 0]]
+
+  Cross-group blocks are ALL-ONES for winning direction,
+  ALL-ZEROS for losing direction. This creates maximum flexibility
+  for path construction, explaining the high H value.
+
+======================================================================
+PART 4: T_3 lex T_3 — CYCLIC LEX CYCLIC
+  T_3 lex T_3 gives n=9, H=3159
+  The internal blocks are 3-cycles, not transitive
+======================================================================
+  Scores: [np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4), np.int64(4)]
+  All scores = 4? True (REGULAR)
+  H(T_3 lex T_3) = 3159
+  max_H(9) = 3357
+  Ratio: 0.9410
+  T_3 lex T_3 achieves 94.1% of maximum!
+
+  NOTE: T_3 lex T_3 is REGULAR (all scores 4).
+  The Paley tournament at p=7 has n=7 vertices (wrong size).
+  At n=9, the maximizer likely has a different structure.
+
+======================================================================
+PART 5: WHEN DOES LEX PRODUCT ACHIEVE max_H?
+======================================================================
+    n         Construction    H_lex    max_H   Achieves max?
+    3      T_3 (trivially)        3        3             YES
+    4       no lex product      N/A        5              NO
+    6          T_3 lex T_2       45       45             YES
+    9          T_3 lex T_3     3159     3357              NO
+
+  CONCLUSION: Lex products give maximizers at n=3,6 (=3*1, 3*2)
+  but NOT at n=4,9. The pattern is NOT simply 'blow up T_3'.
+  At odd prime n=7,11: Paley tournaments achieve max, not lex products.
+  At even n: lex products of T_3 with smaller tournaments can help.
+
+======================================================================
+DONE
+======================================================================
