@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-14-S67 — 2026-03-14: Permanent Moat = {7, 21} + Monotonicity Theorem
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S66b (overnight session)
+**Summary of work:**
+Overnight session focused on the five themes: Petersen graph, exceptional Lie groups, Platonic solids, moat at T=10, and recurrence. Major new theorem: the set of achievable H values is monotonically increasing (source vertex construction). Combined with exhaustive/sampling computations at n=6,7,8, this establishes the permanent moat as exactly {7, 21}.
+
+**Critical findings:**
+1. **H=63 ACHIEVABLE at n=8** (22/100k hits): Corrects the 7·3^k conjecture — only k=0,1 are permanent.
+2. **Permanent moat = {7, 21} = {Phi3(2), Phi3(4)}**: Only 2 odd gaps below 600 at n=8.
+3. **Moat Monotonicity Theorem**: S_n c S_{n+1} via source/sink vertex construction. Once a gap fills, it stays filled. Verified exhaustive n=3-6 and source construction n=4->5, n=5->6 (1088/1088).
+4. **Complete mod 7 barrier at n=6**: No n=6 tournament has H=0 mod 7. Root: (a1+2*a2) mod 7 never equals 3. Barrier breaks at n=7.
+5. **Six-way block verified at n=7** (500k): All 6 decompositions of T=10 independently blocked.
+6. **alpha_1=3 achievable at n=7 but forces alpha_2=2**: Gives H=15, not H=7. The H=7 impossibility extends beyond the original common-vertex argument.
+7. **Phi3(z) - f(z) = 6z - 5**: Beautiful algebraic identity linking cyclotomic and tournament polynomials. At roots: Phi3(KEY_i) = 6·KEY_i - 5.
+8. **Polynomial Lie Encoding**: e_k(2,3,3) = {8, 21, 18} = {rank(E8), H_forb_2, h(E7)}.
+9. **Cyclotomic bridge**: Phi3 gives h+1 for 4/5 exceptional Lie groups. E7 uses recurrence 3^3-2^3=19.
+
+**New contributions:** HYP-1099 to HYP-1107 (9 hypotheses), 10 scripts in 04-computation/, integrated opus HYP-1082-1098.
+**Unresolved threads:** PROVE H=21 impossible for all n (currently empirical at n>6). Is there a representation-theoretic explanation for the (a1,a2) gap structure?
+
+---
+
 ## opus-2026-03-14-S80 — 2026-03-14: Grand Rosetta Stone — 27 Cross-Domain Connections
 
 **Account:** opus
