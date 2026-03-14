@@ -1,0 +1,108 @@
+======================================================================
+EISENSTEIN NORM vs H-SPECTRUM SIZE CONNECTION
+opus-2026-03-14-S89
+======================================================================
+
+  Eisenstein norms of consecutive Fibonacci pairs:
+    n= 0: N(F_0, F_1) = N(0, 1) = 1
+    n= 1: N(F_1, F_2) = N(1, 1) = 1
+    n= 2: N(F_2, F_3) = N(1, 2) = 3
+    n= 3: N(F_3, F_4) = N(2, 3) = 7
+    n= 4: N(F_4, F_5) = N(3, 5) = 19
+    n= 5: N(F_5, F_6) = N(5, 8) = 49
+    n= 6: N(F_6, F_7) = N(8, 13) = 129
+    n= 7: N(F_7, F_8) = N(13, 21) = 337
+    n= 8: N(F_8, F_9) = N(21, 34) = 883
+    n= 9: N(F_9, F_10) = N(34, 55) = 2311
+    n=10: N(F_10, F_11) = N(55, 89) = 6051
+    n=11: N(F_11, F_12) = N(89, 144) = 15841
+    n=12: N(F_12, F_13) = N(144, 233) = 41473
+    n=13: N(F_13, F_14) = N(233, 377) = 108577
+    n=14: N(F_14, F_15) = N(377, 610) = 284259
+    n=15: N(F_15, F_16) = N(610, 987) = 744199
+    n=16: N(F_16, F_17) = N(987, 1597) = 1948339
+    n=17: N(F_17, F_18) = N(1597, 2584) = 5100817
+    n=18: N(F_18, F_19) = N(2584, 4181) = 13354113
+    n=19: N(F_19, F_20) = N(4181, 6765) = 34961521
+
+  H-spectrum sizes:
+    n=1: |Spec| = 1
+    n=2: |Spec| = 1
+    n=3: |Spec| = 2
+    n=4: |Spec| = 3
+    n=5: |Spec| = 7
+    n=6: |Spec| = 19
+    n=7: |Spec| = 77
+
+  COMPARISON:
+    n  |Spec(n)|  N(F_k,F_{k+1})  match
+
+  Test: |Spec(n+2)| = N(F_n, F_{n+1}):
+    n=0: N(F_0,F_1)=1, |Spec(2)|=1, match=True
+    n=1: N(F_1,F_2)=1, |Spec(3)|=2, match=False
+    n=2: N(F_2,F_3)=3, |Spec(4)|=3, match=True
+    n=3: N(F_3,F_4)=7, |Spec(5)|=7, match=True
+    n=4: N(F_4,F_5)=19, |Spec(6)|=19, match=True
+    n=5: N(F_5,F_6)=49, |Spec(7)|=77, match=False
+    n=6: N(F_6,F_7)=129, |Spec(8)|=?, match=?
+    n=7: N(F_7,F_8)=337, |Spec(9)|=?, match=?
+    n=8: N(F_8,F_9)=883, |Spec(10)|=?, match=?
+    n=9: N(F_9,F_10)=2311, |Spec(11)|=?, match=?
+
+  Subsequence 2, 3, 7, 19, 77:
+
+  Sequence 2,3,7,19,77: checking patterns
+  Test s[i] = s[i-1]*s[i-2] - s[i-3]:
+    s[3] = 7*3 - 2 = 19 (expected 19): MATCH
+    s[4] = 19*7 - 3 = 130 (expected 77): FAIL
+
+  Somos/determinant-like relations:
+    s[2]*s[0] - s[1]^2 = 7*2 - 3^2 = 5
+    s[3]*s[1] - s[2]^2 = 19*3 - 7^2 = 8
+    s[4]*s[2] - s[3]^2 = 77*7 - 19^2 = 178
+
+  |Spec(n)| vs Fibonacci-based formulas:
+    n=3: |Spec|=2, F(3)=2
+    n=4: |Spec|=3, F(5)=5
+    n=5: |Spec|=7, F(7)=13
+    n=6: |Spec|=19, F(9)=34
+    n=7: |Spec|=77, F(11)=89
+
+  Lucas numbers: [2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521, 843]
+  |Spec|: 1, 1, 2, 3, 7, 19, 77
+  L(4) = 7 vs |Spec(5)| = 7: match = True
+  L(9) = 76 vs |Spec(7)| = 77: diff = 1
+    n=3: L(0)=2, |Spec|=2, diff=0
+    n=4: L(2)=3, |Spec|=3, diff=0
+    n=5: L(4)=7, |Spec|=7, diff=0
+    n=6: L(6)=18, |Spec|=19, diff=1
+    n=7: L(8)=47, |Spec|=77, diff=30
+
+  |Spec(n)| = (max_H - 1)/2 + 1 - |forbidden|:
+    n=3: max=3, odds=2, forb=0, pred=2, actual=2, match=True
+    n=4: max=5, odds=3, forb=0, pred=3, actual=3, match=True
+    n=5: max=15, odds=8, forb=1, pred=7, actual=7, match=True
+    n=6: max=45, odds=23, forb=4, pred=19, actual=19, match=True
+    n=7: max=189, odds=95, forb=18, pred=77, actual=77, match=True
+
+  max(H) sequence: 1, 1, 3, 5, 15, 45, 189
+    max(2)/max(1) = 1/1 = 1.0000
+    max(3)/max(2) = 3/1 = 3.0000
+    max(4)/max(3) = 5/3 = 1.6667
+    max(5)/max(4) = 15/5 = 3.0000
+    max(6)/max(5) = 45/15 = 3.0000
+    max(7)/max(6) = 189/45 = 4.2000
+
+  max(H)/Mean(H):
+    n=3: max/mean = 3/1.5 = 2.0000
+    n=4: max/mean = 5/3 = 1.6667
+    n=5: max/mean = 15/7.5 = 2.0000
+    n=6: max/mean = 45/22.5 = 2.0000
+    n=7: max/mean = 189/78.75 = 2.4000
+
+  OBSERVATION: max(H) = 2*Mean for n=3,5,6 (exact)
+  At n=7: max = 189 = 2.4*Mean, which is > 2*Mean = 157.5
+
+======================================================================
+DONE -- EISENSTEIN SPECTRUM CONNECTION
+======================================================================
