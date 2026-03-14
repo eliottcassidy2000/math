@@ -1,0 +1,55 @@
+============================================================
+SCC PRODUCT FORMULA VERIFICATION
+============================================================
+
+  n=3: 2 SC (25.0%), 6 non-SC
+  Product formula mismatches: 0/6
+  SC H-values: [3]
+  Non-SC H-values: [1]
+  SC-ONLY H-values (prime): [3]
+  SCC patterns:
+    1+1+1     :      6 ( 75.0%)
+    3         :      2 ( 25.0%) [SC]
+
+  n=4: 24 SC (37.5%), 40 non-SC
+  Product formula mismatches: 0/40
+  SC H-values: [5]
+  Non-SC H-values: [1, 3]
+  SC-ONLY H-values (prime): [5]
+  SCC patterns:
+    1+1+1+1   :     24 ( 37.5%)
+    3+1       :     16 ( 25.0%)
+    4         :     24 ( 37.5%) [SC]
+
+  n=5: 544 SC (53.1%), 480 non-SC
+  Product formula mismatches: 0/480
+  SC H-values: [9, 11, 13, 15]
+  Non-SC H-values: [1, 3, 5]
+  SC-ONLY H-values (prime): [9, 11, 13, 15]
+  SCC patterns:
+    1+1+1+1+1 :    120 ( 11.7%)
+    3+1+1     :    120 ( 11.7%)
+    4+1       :    240 ( 23.4%)
+    5         :    544 ( 53.1%) [SC]
+
+  n=6: 22320 SC (68.1%), 10448 non-SC
+  Product formula mismatches: 0/10448
+  SC H-values: [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Non-SC H-values: [1, 3, 5, 9, 11, 13, 15]
+  SC-ONLY H-values (prime): [17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  SCC patterns:
+    1+1+1+1+1+1:    720 (  2.2%)
+    3+1+1+1   :    960 (  2.9%)
+    3+3       :     80 (  0.2%)
+    4+1+1     :   2160 (  6.6%)
+    5+1       :   6528 ( 19.9%)
+    6         :  22320 ( 68.1%) [SC]
+
+============================================================
+H-SPECTRUM FORBIDDEN VALUES
+============================================================
+
+  Odd H ≤ 100 NOT achievable (exact n≤6 + products): [7, 21, 35, 47, 49, 53, 59, 61, 63, 67, 71, 73, 77, 79, 83, 89, 91, 97]
+  7·3^k: [7, 21, 63]
+  21·3^k: [21, 63]
+  Unexplained: [35, 47, 49, 53, 59, 61, 67, 71, 73, 77, 79, 83, 89, 91, 97]
