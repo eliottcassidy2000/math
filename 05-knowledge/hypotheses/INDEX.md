@@ -578,6 +578,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-1128 | **Gabriel numbers verified via Tits form**: q(α)=1 for ALL positive roots of A₆ (21), E₆ (36), E₇ (63), E₈ (120). Positive definiteness confirmed. | CONFIRMED (computational verification) | quiver_rep_deep.py | kind-pasteur-S68 |
 | HYP-1129 | **7 NOT a Gabriel number**: 7 is not \|Φ⁺(Q)\| for any Dynkin quiver Q (simply-laced or not). Neither T(n)=7 nor n(n-1)=7 have integer solutions. H_forb₁ is an "orphan" — not a root count but the Coxeter number h(A₆). | CONFIRMED (exhaustive check) | quiver_dynkin_deep.py | kind-pasteur-S68 |
 | HYP-1130 | **Disjoint interval modules of A₆: max antichain = 3 = KEY₂**: Maximum pairwise disjoint interval modules [i,j] on A₆ = floor(7/2) = 3. Total disjoint pairs among 21 modules = 70. Conflict (overlapping) pairs = 140. | CONFIRMED (exact computation) | quiver_rep_deep.py | kind-pasteur-S68 |
+| HYP-1131 | **alpha_2=0 for ALL n=5 tournaments**: Two disjoint odd cycles need ≥6 vertices. Therefore H=1+2·alpha_1 at n=5. First alpha_2>0 at n=6 (47.1%). | CONFIRMED (proved + exhaustive verification) | da1_parity_analysis.py | kind-pasteur-S68 |
+| HYP-1132 | **dc3-dc5 coupling theorem: da1=±5 impossible at n=5**: When dc3=+3 (source/sink flip), dc5∈{1,3} by Rédei (3-vertex HP count). So da1∈{4,6}, never 5. (dc3=2,dc5=3) also impossible. Therefore \|δH\|=10 is forbidden at n=5. | CONFIRMED (proved + exhaustive 10240 flips) | dc3_dc5_coupling.py | kind-pasteur-S68 |
+| HYP-1133 | **n=6 delta spectrum gaps at {28,30}**: At n=6 (50k sample), \|δH\|∈{0,2,...,26,32}, with \|δH\|∈{28,30} missing. da1 range [-12,12] with ±11 missing. da2≠0 in 36% of flips. | CONFIRMED (sampling, 750k flips) | da1_parity_analysis.py, arc_flip_spectrum.py | kind-pasteur-S68 |
 
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
