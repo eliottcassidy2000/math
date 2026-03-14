@@ -1,0 +1,69 @@
+======================================================================
+ALPHA_1=4 BINARY PHASE THEOREM INVESTIGATION
+======================================================================
+
+--- Part 1: alpha_1=4 structure at n=6 ---
+  Tournaments with alpha_1=4: 2880
+  alpha_2 distribution: {0: 2880}
+
+--- Part 2: Intersection patterns ---
+  Distinct structural patterns: 1
+    sizes=(3, 3, 3, 5), d=(1, 1, 1, 1), int_pairs=6/6, alpha_2=0, count=2880
+      Example (bits=8):
+        [0, 1, 4] d=1
+        [0, 2, 4] d=1
+        [0, 3, 4] d=1
+        [0, 1, 2, 3, 4] d=1
+
+--- Part 3: Why alpha_2 ∈ {0,4} only? ---
+  Case analysis of alpha_1=4 decomposition:
+    d-vector=(1, 1, 1, 1), alpha_2=0: 2880 tournaments
+
+--- Part 4: 4 vertex sets with d=(1,1,1,1) ---
+  Count: 2880
+  alpha_2 distribution: {0: 2880}
+
+  Intersection graph types:
+    6 intersecting pairs (alpha_2=0=0): 2880 cases
+
+--- Part 5: Why certain intersection graphs are impossible ---
+  Checking: do intersecting 3-cycles always splice to create more?
+    bits=10: [0, 1, 2] ∩ [0, 3, 4] = [0] → splice creates 5-cycle on [0, 1, 2, 3, 4]
+    bits=21: [0, 2, 3] ∩ [0, 4, 5] = [0] → splice creates 5-cycle on [0, 2, 3, 4, 5]
+
+--- Part 6: alpha_1=4 at n=7 (sampling) ---
+  Sampled 200000 tournaments, 2889 with alpha_1=4
+  alpha_2 distribution: {0: 2889}
+  Decomposition types:
+    d=(1, 1, 1, 1), alpha_2=0: 2889
+
+--- Part 7: Structural theorem ---
+
+CLAIM: For alpha_1=4 with 4 vertex sets each having d=1,
+the intersection graph is either K_4 (all intersect) or
+the complement of K_4 (all disjoint) or has exactly 2 edges
+forming a matching.
+
+REASON: If two 3-cycles share exactly 1 vertex, Splicing creates
+a 5th cycle → alpha_1 ≥ 5. So any intersection must involve
+sharing ≥2 vertices. But two 3-cycles sharing 2 vertices must be
+on vertex sets like {a,b,c} and {a,b,d}, sharing {a,b}.
+These DON'T splice (they share 2 vertices, not 1).
+
+The constraint is: no two of the 4 cycles can share EXACTLY 1 vertex
+(otherwise splicing creates a 5th cycle, violating alpha_1=4).
+
+With this constraint, each pair either:
+- Shares 0 vertices (disjoint)
+- Shares 2 vertices (heavily overlapping)
+
+4 triangles on 6 vertices with this constraint:
+If all 4 pairwise share ≥2 vertices → all on ≤4 vertices → K_4 type
+If some pairs disjoint → disjoint pairs = alpha_2
+
+  VERIFICATION: Do any intersecting cycle pairs share exactly 1 vertex?
+  Single-vertex overlaps found: 1440
+
+======================================================================
+CONCLUSION
+======================================================================

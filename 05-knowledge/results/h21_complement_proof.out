@@ -1,0 +1,96 @@
+======================================================================
+H=21 COMPLEMENT PROOF
+======================================================================
+
+--- Part 1: Complementary triple constraint at n=6 ---
+  Total complementary pair instances: 327680
+  Both cyclic: 20480
+  Exactly one cyclic: 122880
+  Neither cyclic: 184320
+
+  COMPLEMENT LEMMA FAILS at n=6!
+  But this means alpha_2 > 0 IS possible... checking which alpha_1
+  Examples of both-cyclic complementary pairs:
+    bits=80: [0, 4, 5] and [1, 2, 3] both cyclic, alpha_1=11, alpha_2=1
+    bits=80: [1, 2, 3] and [0, 4, 5] both cyclic, alpha_1=11, alpha_2=1
+    bits=81: [0, 4, 5] and [1, 2, 3] both cyclic, alpha_1=9, alpha_2=1
+    bits=81: [1, 2, 3] and [0, 4, 5] both cyclic, alpha_1=9, alpha_2=1
+    bits=82: [0, 4, 5] and [1, 2, 3] both cyclic, alpha_1=9, alpha_2=1
+
+--- Part 2: Full (alpha_1, alpha_2) landscape at n=6 ---
+    a1   a2  count  T=a1+2a2
+     0    0    720  T=  0
+     1    0    960  T=  1
+     2    0   2160  T=  2
+     2    1     80  T=  4
+     4    0   2880  T=  4
+     5    0   1440  T=  5
+     6    0   1440  T=  6
+     6    1    720  T=  8
+     7    0   2208  T=  7
+     8    0    720  T=  8
+     9    0   1440  T=  9
+     9    1   1440  T= 11
+    10    2    720  T= 14
+    11    0   1440  T= 11
+    11    1    480  T= 13
+    12    0   1440  T= 12
+    12    1   2160  T= 14
+    12    2    720  T= 16
+    13    1   1440  T= 15
+    14    1   1440  T= 16
+    14    2   2160  T= 18
+    14    4    240  T= 22
+    16    0    480  T= 16
+    16    1   1440  T= 18
+    16    2    720  T= 20
+    19    1   1440  T= 21
+    20    1    240  T= 22
+
+  T-spectrum gaps: [3, 10, 17, 19]
+
+--- Part 3: n=7 sampling near T=10 ---
+  n=7, 300000 samples, (alpha_1, alpha_2) with T ∈ [6,14]:
+    (  3,   2): T=  7, count=  479
+    (  6,   0): T=  6, count= 2107
+    (  6,   1): T=  8, count= 1450
+    (  7,   0): T=  7, count= 4022
+    (  8,   0): T=  8, count= 1427
+    (  9,   0): T=  9, count= 2897
+    (  9,   1): T= 11, count= 2765
+    ( 10,   2): T= 14, count= 2887
+    ( 11,   0): T= 11, count= 2959
+    ( 11,   1): T= 13, count= 1663
+    ( 12,   0): T= 12, count= 3595
+    ( 12,   1): T= 14, count= 4304
+    ( 13,   0): T= 13, count= 1437
+
+  T=10 total: 0
+  CONFIRMED: T=10 absent at n=7 (300k sample)
+
+--- Part 4: alpha_2 spectrum by alpha_1 at n=7 (sample) ---
+  a1=  0: a2 ∈ [0] (n=661)  need a2=5 for T=10 → IN GAP
+  a1=  1: a2 ∈ [0] (n=1128)
+  a1=  2: a2 ∈ [0, 1] (n=3067)  need a2=4 for T=10 → IN GAP
+  a1=  3: a2 ∈ [2] (n=513)
+  a1=  4: a2 ∈ [0] (n=4325)  need a2=3 for T=10 → IN GAP
+  a1=  5: a2 ∈ [0] (n=2157)
+  a1=  6: a2 ∈ [0, 1] (n=3582)  need a2=2 for T=10 → IN GAP
+  a1=  7: a2 ∈ [0] (n=4025)
+  a1=  8: a2 ∈ [0] (n=1460)  need a2=1 for T=10 → IN GAP
+  a1=  9: a2 ∈ [0, 1, 3] (n=6470)
+  a1= 10: a2 ∈ [2] (n=2853)  need a2=0 for T=10 → IN GAP
+  a1= 11: a2 ∈ [0, 1] (n=4592)
+  a1= 12: a2 ∈ [0, 1, 2] (n=9238)
+  a1= 13: a2 ∈ [0, 1, 2] (n=5802)
+  a1= 14: a2 ∈ [1, 2, 3, 4] (n=9992)
+  a1= 15: a2 ∈ [0] (n=773)
+  a1= 16: a2 ∈ [0, 1, 2] (n=8927)
+  a1= 17: a2 ∈ [4] (n=1445)
+  a1= 18: a2 ∈ [0, 2, 3] (n=4943)
+  a1= 19: a2 ∈ [0, 1] (n=5767)
+  a1= 20: a2 ∈ [1, 2, 3] (n=3462)
+
+======================================================================
+CONCLUSIONS
+======================================================================
