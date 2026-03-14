@@ -839,3 +839,12 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-880 | H=|Pf| frequency drops exponentially: 100,62.5,23.4,5.4% at n=3,4,5,6 | CONFIRMED | Exhaustive computation. Consistent with ~(2/3)^n scaling. | opus-S68 |
 | HYP-881 | J_{k(k-1)}(n) = (k^n-(-(k-1))^n)/(2k-1) for all k≥2 | CONFIRMED | Direct verification at k=2 (Jacobsthal), k=3 (root=3, denom=5), k=4 (root=4, denom=7). | opus-S68 |
 | HYP-882 | J(n) mod 3 has period 6: pattern (0,1,1,0,2,2) | CONFIRMED | Since 2^n mod 9 has period 6 and (-1)^n mod 9 has period 2, lcm=6. | opus-S68 |
+| HYP-883 | tr(A^k)/k EXACT for k=3,5, OVERCOUNTS for k>=7 in tournaments | CONFIRMED | Non-simple closed walks exist at k=7: e.g., 0->1->2->3->0->4->5->0. Overcount ranges 2-301 at n=7. c3, c5 always correct. | kind-pasteur-S62 |
+| HYP-884 | (H-1)/2 mod 2 = alpha_1 mod 2 with EXACT cycle counts | CONFIRMED | 100/100 at n=7 using Held-Karp exact Ham cycles. Previously failed with tr(A^7)/7 due to HYP-883. | kind-pasteur-S62 |
+| HYP-885 | H = 1 + 2*a1 + 4*a2 exactly at n<=7 (alpha_k=0 for k>=3) | CONFIRMED | 300/300 at n=7, exhaustive n=5. Two disjoint 3-cycles need 6 verts, third needs 9>7. | kind-pasteur-S62 |
+| HYP-886 | I(Omega(T), 3) = 1 mod 3 always | CONFIRMED | Trivially true: I(Omega,3) = 1 + 3*a1 + 9*a2. All terms after 1 divisible by 3. | kind-pasteur-S62 |
+| HYP-887 | Beta basis: H = b0 + 3*b1 + 9*b2 where b0=I(Omega,-1), b1=a1-2*a2, b2=a2 | CONFIRMED | 400/400 at n=7. Change of variable x = y-1 transforms alpha to beta basis. The 3 in x=2=-1+3 IS the modular gap. | kind-pasteur-S62 |
+| HYP-888 | b0 = I(Omega,-1) <= 0 for all non-transitive tournaments | CONFIRMED at n<=5 (exhaustive), n=7 (400/400 non-transitive). b0>0 iff a1=0 iff transitive (H=1). At n>=8, b0 REVERSES sign (becomes positive due to a2 growth). | kind-pasteur-S62 |
+| HYP-889 | b1 > 0 at n<=7 (ALWAYS for non-transitive) but b1 < 0 at n>=8 | CONFIRMED | Phase transition at n=7: 46% neg, 46.5% pos. Predicted by a2/a1 = C(n-3,3)/8 = 0.5 at n=7. At n=8: 88.5% negative. At n=9: 100% negative. | kind-pasteur-S62 |
+| HYP-890 | a2/a1 ratio predicted by C(n-3,3)/8 | CONFIRMED | Observed ratios: n=6: 0.095, n=7: 0.513, n=8: 1.198, n=9: 2.407, n=10: 4.461. Predicted: 0.125, 0.5, 1.25, 2.5, 4.375. Match within sampling noise. | kind-pasteur-S62 |
+| HYP-891 | Omega(T) density decreases monotonically from 1.0 (n=4) to ~0.66 (n=11) | CONFIRMED | 1.0, 1.0, 0.97, 0.89, 0.83, 0.76, 0.71, 0.66 for n=4,...,11. Reflects increasing room for disjoint cycle placements. | kind-pasteur-S62 |

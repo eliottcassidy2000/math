@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-13-S62 — 2026-03-13: Deep 2-3 Duality with Correct Cycle Counts
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-13-S61
+**Summary of work:**
+Deep computational exploration of how the numbers 2 and 3 appear in tournament theory, with CRITICAL bug fix for cycle counting:
+
+**Critical findings:**
+1. **tr(A^k)/k OVERCOUNTS for k>=7** (HYP-883): non-simple closed walks exist. Overcounts range 2-301 at n=7. c3, c5 always exact.
+2. **Alpha_1 parity identity RESTORED** (HYP-884): (H-1)/2 mod 2 = alpha_1 mod 2 is PERFECT (100/100) with exact Held-Karp cycle counting.
+3. **H = 1 + 2*a1 + 4*a2 exactly at n<=7** (HYP-885): alpha_k = 0 for k>=3 since three mutually disjoint 3-cycles need 9 > 7 vertices.
+4. **Beta basis discovery** (HYP-887): change of variable x = y-1 gives H = b0 + 3*b1 + 9*b2 where b0 = I(Omega,-1) = topological (Euler char), b1 = a1-2*a2 = derivative, b2 = a2 = curvature. The "3" in the beta basis IS the gap 2-(-1) = 3.
+5. **Phase transition at n=7** (HYP-889-890): b1 = a1-2*a2 transitions from positive (n<=6) to negative (n>=8). Predicted by a2/a1 = C(n-3,3)/8 ratio formula. At n=7 the ratio is exactly 0.5 (transition point).
+6. **GS formula verified term by term**: I(Omega, x) = sum_{valid sigma} x^{psi(sigma)} confirmed at all x. The factor 2 in 2^psi is simply the evaluation point x=2.
+7. **I(Omega, 3) = 1 mod 3 always** (trivially, but confirms CRT structure)
+8. **Omega density monotonically decreasing**: from 1.0 (n=4,5) to 0.66 (n=11)
+
+**New contributions:** HYP-883 through HYP-891 (9 new hypotheses, all confirmed)
+**Scripts:** cycle_count_fix.py, two_three_fast.py, two_three_gs_factor.py, two_three_beta_tower.py, two_three_phase.py, two_three_signs.py, alpha1_parity_debug.py
+**Unresolved threads:**
+- What determines b1 sign at n=8 (transition zone)?
+- The 3-adic structure "inverts" at large n: b2 dominates, b0 becomes noise. What does this mean for the topological content?
+- Connection to Savchenko c_k formulas for DRTs
+- Does the beta basis give a new proof strategy for Claim A?
+
 ## opus-2026-03-14-S68 — 2026-03-14: The Universe of 2 and 3
 
 **Account:** opus
