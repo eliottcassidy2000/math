@@ -1,0 +1,674 @@
+======================================================================
+PART 1: EXPONENTIATION ASYMMETRY — 2^3=8 vs 3^2=9
+======================================================================
+
+The three binary operations on {2,3}:
+  Addition:        2+3 = 5,   3+2 = 5   (commutative)
+  Multiplication:  2*3 = 6,   3*2 = 6   (commutative)
+  Exponentiation:  2^3 = 8,   3^2 = 9   (NON-commutative!)
+
+Exponentiation BREAKS symmetry between 2 and 3.
+  2^3 = 8,  3^2 = 9,  difference = 1 = 1
+  This is Catalan's conjecture (proved by Mihailescu 2002):
+  The ONLY consecutive perfect powers are 8 and 9.
+
+In tournament theory:
+  2 = evaluation point (H = I(Omega, 2))
+  3 = cycle length (3-cycles are fundamental)
+  8 = 2^3 = first n where seesaw breaks, beta_3>1
+  9 = 3^2 = 'square of triangles' — 9 = C(3+1,2)+3
+
+The operation hierarchy:
+  +: 2+3=5 (additive son, prime)
+  *: 2*3=6 (multiplicative son, composite = 2*3)
+  ^: 2^3=8 (exponential son, 2^3), 3^2=9 (exponential son, 3^2)
+  Three sons: 5, 6, 8 (or 5, 6, 9 depending on direction)
+
+Tournament theory preference:
+  n=8 is the inflection point (2^3 wins)
+  n=9 is where real-roots first fail (3^2 = the response)
+  The ASYMMETRY 2^3 < 3^2 mirrors the asymmetry in tournament theory:
+  structural breaks happen at 8 BEFORE 9
+
+======================================================================
+PART 2: THE GAP 3^2 - 2^3 = 1 AND CATALAN'S THEOREM
+======================================================================
+
+Perfect powers up to 100:
+  2^2 = 4
+  2^3 = 8
+  3^2 = 9
+  2^4 = 16
+  4^2 = 16
+  5^2 = 25
+  3^3 = 27
+  2^5 = 32
+  6^2 = 36
+  7^2 = 49
+  2^6 = 64
+  4^3 = 64
+  8^2 = 64
+  3^4 = 81
+  9^2 = 81
+  10^2 = 100
+
+Consecutive perfect powers: only (8, 9)
+  Mihailescu (2002): x^p - y^q = 1 has unique solution 3^2 - 2^3 = 1
+
+In our context:
+  H values are always odd: H = 1 + 2*(a1 + 2*a2)
+  H=9 is achievable (e.g., a1=4, a2=0: H=9)
+  H=8 is NEVER achievable (H always odd)
+  So the Catalan pair (8, 9) is split: 8 is structurally forbidden, 9 is allowed
+  The gap between them (=1) is invisible from H's perspective
+
+  But dimensionally: n=8 and n=9 are consecutive orders where
+  different structural properties fail:
+    n=8: beta_3>1, seesaw breaks, i_*-injectivity fails
+    n=9: real roots of I(Omega, x) first fail, claw-free fails
+
+======================================================================
+PART 3: OMEGA (CUBE ROOT OF UNITY) AND Z[omega]
+======================================================================
+
+omega = e^(2*pi*i/3) = -1/2 + sqrt(3)/2 * i
+  = (-0.5+0.8660254037844386j)
+
+Powers of omega:
+  omega^0 =   1.0000 +   0.0000i  (|omega^0| = 1.0000)
+  omega^1 =  -0.5000 +   0.8660i  (|omega^1| = 1.0000)
+  omega^2 =  -0.5000 +  -0.8660i  (|omega^2| = 1.0000)
+  omega^3 =   1.0000 +   0.0000i  (|omega^3| = 1.0000)
+  omega^4 =  -0.5000 +   0.8660i  (|omega^4| = 1.0000)
+  omega^5 =  -0.5000 +  -0.8660i  (|omega^5| = 1.0000)
+  omega^6 =   1.0000 +   0.0000i  (|omega^6| = 1.0000)
+
+Key relation: omega^2 + omega + 1 = 0
+  => omega^2 = -omega - 1
+  Check: omega^2 + omega + 1 = 1.110223e-16 + 0.000000e+00i
+
+The user's relation 'omega^2 = 2/3 omega - 1':
+  2/3*omega - 1 = (-1.3333333333333333+0.5773502691896257j)
+  omega^2 = (-0.4999999999999999-0.8660254037844386j)
+  These differ by: 1.666667
+  Standard: omega^2 = -omega - 1 = -(-1/2 + sqrt(3)/2 i) - 1
+                    = 1/2 - sqrt(3)/2 i - 1 = -1/2 - sqrt(3)/2 i
+
+Z[omega] = {a + b*omega : a, b in Z}
+  This is a Euclidean domain (Eisenstein integers)
+  Norm: N(a + b*omega) = a^2 - ab + b^2
+  Units: {+-1, +-omega, +-omega^2} (6 units)
+
+I(omega) for a tournament with (a1, a2):
+  I(omega) = 1 + a1*omega + a2*omega^2
+           = 1 + a1*omega + a2*(-omega-1)
+           = (1-a2) + (a1-a2)*omega
+  Norm N(I(omega)) = (1-a2)^2 - (1-a2)(a1-a2) + (a1-a2)^2
+                   = a1^2 - a1*a2 + a2^2 - a1 - a2 + 1  (Eisenstein norm)
+
+Eisenstein norm for small (a1, a2):
+  (a1= 0, a2= 0): N =   1  (mod 3 = 1)
+  (a1= 0, a2= 1): N =   1  (mod 3 = 1)
+  (a1= 0, a2= 2): N =   3  (mod 3 = 0)
+  (a1= 0, a2= 3): N =   7  (mod 3 = 1)
+  (a1= 0, a2= 4): N =  13  (mod 3 = 1)
+  (a1= 0, a2= 5): N =  21  (mod 3 = 0)
+  (a1= 1, a2= 0): N =   1  (mod 3 = 1)
+  (a1= 1, a2= 1): N =   0  (mod 3 = 0)
+  (a1= 1, a2= 2): N =   1  (mod 3 = 1)
+  (a1= 1, a2= 3): N =   4  (mod 3 = 1)
+  (a1= 1, a2= 4): N =   9  (mod 3 = 0)
+  (a1= 1, a2= 5): N =  16  (mod 3 = 1)
+  (a1= 2, a2= 0): N =   3  (mod 3 = 0)
+  (a1= 2, a2= 1): N =   1  (mod 3 = 1)
+  (a1= 2, a2= 2): N =   1  (mod 3 = 1)
+  (a1= 2, a2= 3): N =   3  (mod 3 = 0)
+  (a1= 2, a2= 4): N =   7  (mod 3 = 1)
+  (a1= 2, a2= 5): N =  13  (mod 3 = 1)
+  (a1= 3, a2= 0): N =   7  (mod 3 = 1)
+  (a1= 3, a2= 1): N =   4  (mod 3 = 1)
+  (a1= 3, a2= 2): N =   3  (mod 3 = 0)
+  (a1= 3, a2= 3): N =   4  (mod 3 = 1)
+  (a1= 3, a2= 4): N =   7  (mod 3 = 1)
+  (a1= 3, a2= 5): N =  12  (mod 3 = 0)
+  (a1= 4, a2= 0): N =  13  (mod 3 = 1)
+  (a1= 4, a2= 1): N =   9  (mod 3 = 0)
+  (a1= 4, a2= 2): N =   7  (mod 3 = 1)
+  (a1= 4, a2= 3): N =   7  (mod 3 = 1)
+  (a1= 4, a2= 4): N =   9  (mod 3 = 0)
+  (a1= 4, a2= 5): N =  13  (mod 3 = 1)
+  (a1= 5, a2= 0): N =  21  (mod 3 = 0)
+  (a1= 5, a2= 1): N =  16  (mod 3 = 1)
+  (a1= 5, a2= 2): N =  13  (mod 3 = 1)
+  (a1= 5, a2= 3): N =  12  (mod 3 = 0)
+  (a1= 5, a2= 4): N =  13  (mod 3 = 1)
+  (a1= 5, a2= 5): N =  16  (mod 3 = 1)
+  (a1= 6, a2= 1): N =  25  (mod 3 = 1)
+  (a1= 6, a2= 2): N =  21  (mod 3 = 0)
+  (a1= 6, a2= 3): N =  19  (mod 3 = 1)
+  (a1= 6, a2= 4): N =  19  (mod 3 = 1)
+  (a1= 6, a2= 5): N =  21  (mod 3 = 0)
+
+======================================================================
+PART 4: omega^2 = -omega - 1 AND THE MINIMAL POLYNOMIAL
+======================================================================
+
+The minimal polynomial of omega over Q: x^2 + x + 1 = 0
+  This is Phi_3(x), the 3rd cyclotomic polynomial
+  Phi_3(2) = 4 + 2 + 1 = 7
+  Phi_3(3) = 9 + 3 + 1 = 13
+  Phi_3(5) = 25 + 5 + 1 = 31
+  Phi_3(6) = 36 + 6 + 1 = 43
+
+The '2/3 omega - 1' interpretation:
+  If we write omega^2 = c*omega + d, then c = -1, d = -1
+  But in F_3: omega^2 = -omega - 1 = 2*omega + 2 = 2*omega - 1 (mod 3)
+  So '2/3 omega - 1' might mean '2 omega - 1 (mod 3)'
+  In F_3[omega]: omega^2 = 2*omega + 2
+
+In F_3 = Z/3Z:
+  omega^2 + omega + 1 = 0 mod 3
+  omega^2 = -omega - 1 = 2*omega + 2 (mod 3)
+  Note: 2 = -1 mod 3, so omega^2 = -omega + (-1) = -(omega+1)
+
+Connection to I(omega) mod 3:
+  I(omega) = 1 + a1*omega + a2*omega^2
+           = 1 + a1*omega + a2*(2*omega + 2) mod 3
+           = (1 + 2*a2) + (a1 + 2*a2)*omega mod 3
+
+  Since a1 = total odd cycles, a2 = disjoint pairs:
+  The real part (1 + 2*a2) mod 3 depends only on a2
+  The omega part (a1 + 2*a2) mod 3 combines both
+
+H mod 3 analysis:
+  H = 1 + 2*a1 + 4*a2 = 1 + 2*a1 + a2 (mod 3)
+  H mod 3 = (1 + 2*a1 + a2) mod 3
+  a1=0 mod 3, a2=0 mod 3 => H=1 mod 3
+  a1=0 mod 3, a2=1 mod 3 => H=2 mod 3
+  a1=0 mod 3, a2=2 mod 3 => H=0 mod 3
+  a1=1 mod 3, a2=0 mod 3 => H=0 mod 3
+  a1=1 mod 3, a2=1 mod 3 => H=1 mod 3
+  a1=1 mod 3, a2=2 mod 3 => H=2 mod 3
+  a1=2 mod 3, a2=0 mod 3 => H=2 mod 3
+  a1=2 mod 3, a2=1 mod 3 => H=0 mod 3
+  a1=2 mod 3, a2=2 mod 3 => H=1 mod 3
+
+======================================================================
+PART 5: OMEGA POWERS 1 THROUGH 8 — PIGEONHOLE AT DIM 2
+======================================================================
+
+Powers of omega (period 3):
+  omega^0 = 1        = ( 1.00000,  0.00000)
+  omega^1 = omega    = (-0.50000,  0.86603)
+  omega^2 = omega^2  = (-0.50000, -0.86603)
+  omega^3 = 1        = ( 1.00000,  0.00000)
+  omega^4 = omega    = (-0.50000,  0.86603)
+  omega^5 = omega^2  = (-0.50000, -0.86603)
+  omega^6 = 1        = ( 1.00000,  0.00000)
+  omega^7 = omega    = (-0.50000,  0.86603)
+  omega^8 = omega^2  = (-0.50000, -0.86603)
+
+Pigeonhole principle for Z[omega]:
+  Z[omega] is a rank-2 Z-module: every element is a + b*omega
+  Only 3 distinct powers: 1, omega, omega^2
+  After 3 steps, powers cycle back
+
+But the user mentions 'omega^8' as where pigeonhole forces things
+  omega^8 = omega^(3*2+2) = omega^2 = -omega - 1
+  In terms of INDEX: 8 = 2*3 + 2, so omega^8 = omega^2
+
+The KEY insight: 8 = 2^3 = 2*3 + 2
+  The exponent 8 encodes BOTH the exponential (2^3) and modular (2 mod 3) structure
+  omega^8 = omega^2 = omega^2 = conjugate of omega
+
+General nth roots of unity and pigeonhole:
+  For primitive nth root zeta_n, Z[zeta_n] has rank phi(n) as Z-module
+  phi(3) = 2, phi(4) = 2, phi(5) = 4, phi(6) = 2, phi(7) = 6, phi(8) = 4
+  At n=8: zeta_8 gives rank phi(8)=4 module
+  8 powers to fill 4 dimensions => pigeonhole gives first FORCED dependence
+  after 4+1=5 powers (5 = 2+3!)
+
+  For omega (n=3): rank 2, period 3, pigeonhole at 2+1=3 powers
+  For zeta_8 (n=8): rank 4, period 8, pigeonhole at 4+1=5 powers
+  The pigeonhole bound for nth root is phi(n)+1 distinct powers before dependence
+
+  phi(n)+1 for small n:
+    n= 2: phi(2)=1, pigeonhole at 2 powers
+    n= 3: phi(3)=2, pigeonhole at 3 powers
+    n= 4: phi(4)=2, pigeonhole at 3 powers
+    n= 5: phi(5)=4, pigeonhole at 5 powers
+    n= 6: phi(6)=2, pigeonhole at 3 powers
+    n= 7: phi(7)=6, pigeonhole at 7 powers
+    n= 8: phi(8)=4, pigeonhole at 5 powers
+    n= 9: phi(9)=6, pigeonhole at 7 powers
+    n=10: phi(10)=4, pigeonhole at 5 powers
+    n=11: phi(11)=10, pigeonhole at 11 powers
+    n=12: phi(12)=4, pigeonhole at 5 powers
+
+======================================================================
+PART 6: HILBERT'S 3RD PROBLEM — DEHN INVARIANT & IRRATIONALITY
+======================================================================
+
+Hilbert's 3rd problem (1900): Can any two polyhedra of equal volume
+be cut into finitely many pieces and reassembled into each other?
+
+Answer: NO (Dehn, 1901)
+The Dehn invariant is the obstruction.
+
+Dehn invariant: D(P) = sum over edges e of length(e) (x) dihedral_angle(e)
+where (x) is tensor product in R (x)_Q (R/Q*pi)
+Two polyhedra are scissors-congruent iff same volume AND same Dehn invariant.
+
+The IRRATIONALITY insertion:
+  Regular tetrahedron: dihedral angle = arccos(1/3)
+  arccos(1/3)/pi is IRRATIONAL
+  Cube: all dihedral angles = pi/2 (rational multiple of pi)
+  => Dehn(cube) = 0 but Dehn(regular tet) != 0
+  => They are NOT scissors-congruent despite having equal volume
+
+The proof by contradiction pattern:
+  1. Assume scissors-congruence: P = union of pieces = Q
+  2. Dehn invariant is additive: D(P) = sum D(piece_i) = D(Q)
+  3. But D(cube) = 0 and D(tet) != 0
+  4. Contradiction.
+
+Connection to tournaments:
+  H(T) = I(Omega, 2) uses the EVALUATION at x=2
+  I(Omega, omega) uses evaluation at x=omega (irrational)
+  The Eisenstein norm N(I(omega)) is an INTEGER invariant
+  Like the Dehn invariant, it provides an OBSTRUCTION:
+  If two tournaments have different N(I(omega)), they are 'non-congruent'
+
+  arccos(1/3) = 1.230959 rad = 70.5288 deg
+  arccos(1/3)/pi = 0.391827... (irrational)
+
+Alternating sum non-negativity:
+  In the Dehn proof: the key is that contributions CANNOT cancel
+  because the angle is irrational over Q*pi
+  Similarly: I(Omega, x) has alternating-sign coefficients?
+  I(x) = 1 + a1*x + a2*x^2 with a1, a2 >= 0 (no alternation needed)
+  But I(x) at x=-1: I(-1) = 1 - a1 + a2 = alternating sum of alpha basis
+  I(-1) >= 0 iff a2 >= a1 - 1
+
+  At n=7: I(-1) < 0 for 989/1000 tournaments (98.9%)
+  So alternating sum non-negativity FAILS (a1 can be large with a2=0)
+
+======================================================================
+PART 7: ALTERNATING SUMS AND NON-NEGATIVITY IN TOURNAMENTS
+======================================================================
+
+I(x) at negative integers (n=7, 500 samples):
+  I(-1): range [-51, 1], always >=0: False
+  I(-2): range [-89, 3], always >=0: False
+  I(-3): range [-131, 10], always >=0: False
+
+Euler characteristic perspective:
+  I(-1) = chi(Omega) = Euler characteristic of independence complex
+  I(-1) = 1 - a1 + a2 (alternating sum of face counts)
+  For Omega(T): vertices = odd cycles, edges = disjoint pairs
+  chi(Omega) = 1 - |V| + |E| = 1 - a1 + a2
+
+When is chi(Omega) = 0?
+  a2 = a1 - 1 => chi = 0
+  This means the 'topological charge' of Omega vanishes
+
+chi(Omega(T)) distribution at n=7:
+  chi =  -57:    2 (0.1%)
+  chi =  -51:   12 (0.6%)
+  chi =  -50:    6 (0.3%)
+  chi =  -49:   10 (0.5%)
+  chi =  -48:   18 (0.9%)
+  chi =  -46:   15 (0.8%)
+  chi =  -45:   12 (0.6%)
+  chi =  -44:   18 (0.9%)
+  chi =  -43:   19 (0.9%)
+  chi =  -42:   38 (1.9%)
+  chi =  -41:   63 (3.1%)
+  chi =  -40:   23 (1.1%)
+  chi =  -39:   55 (2.8%)
+  chi =  -38:   34 (1.7%)
+  chi =  -37:   14 (0.7%)
+  chi =  -36:   68 (3.4%)
+  chi =  -35:   90 (4.5%)
+  chi =  -34:   21 (1.1%)
+  chi =  -33:   25 (1.2%)
+  chi =  -32:   51 (2.5%)
+  chi =  -31:   81 (4.0%)
+  chi =  -30:   46 (2.3%)
+  chi =  -29:  101 (5.0%)
+  chi =  -28:   45 (2.2%)
+  chi =  -27:   55 (2.8%)
+  chi =  -26:   71 (3.5%)
+  chi =  -25:   59 (3.0%)
+  chi =  -24:   51 (2.5%)
+  chi =  -23:   52 (2.6%)
+  chi =  -22:  146 (7.3%)
+  chi =  -21:   42 (2.1%)
+  chi =  -20:   15 (0.8%)
+  chi =  -19:   33 (1.6%)
+  chi =  -18:   40 (2.0%)
+  chi =  -17:   62 (3.1%)
+  chi =  -16:   32 (1.6%)
+  chi =  -15:   36 (1.8%)
+  chi =  -14:   35 (1.8%)
+  chi =  -13:   20 (1.0%)
+  chi =  -12:   28 (1.4%)
+  chi =  -11:   74 (3.7%)
+  chi =  -10:   63 (3.1%)
+  chi =   -9:   17 (0.8%)
+  chi =   -8:   24 (1.2%)
+  chi =   -7:   52 (2.6%)
+  chi =   -6:   26 (1.3%)
+  chi =   -5:   17 (0.8%)
+  chi =   -4:   30 (1.5%)
+  chi =   -3:   26 (1.3%)
+  chi =   -1:   14 (0.7%)
+  chi =    0:    9 (0.5%)
+  chi =    1:    4 (0.2%)
+
+======================================================================
+PART 8: n=8 AS TOURNAMENT INFLECTION POINT (= 2^3)
+======================================================================
+
+The number 8 = 2^3 is where multiple structural properties fail:
+
+  HOMOLOGICAL FAILURES AT n=8:
+  1. beta_3 > 1 first occurs (beta_3 = 2, freq 0.08%)
+  2. Seesaw mechanism breaks (beta_3 and beta_4 coexist)
+  3. i_*-injectivity fails (even with beta_4 = 0)
+  4. beta_4 first appears (n=8 is onset)
+  5. beta_5 also first appears at n=8
+
+  GRAPH-THEORETIC FAILURES:
+  6. Quasi-line property of Omega(T) fails at n=8 (49%)
+  7. (Claw-free still holds at n=8, fails at n=9)
+
+  NUMBER-THEORETIC:
+  8. n=8 is the first EVEN n with self-complementary maximizer
+     (H(SC max) = 661 at n=8)
+
+  TOTAL: At least 7 independent structural breaks at n=8
+
+Why 8 = 2^3?
+  The path homology chain complex has length n-1
+  At n=8: chain complex has 7 = n-1 terms
+  Betti numbers beta_0 through beta_7 are possible
+  beta_2 = 0 always (proved), so effective dimension = 6
+  With 6 slots and the seesaw constraint, n=8 is the first n
+  where there are ENOUGH degrees of freedom for multiple nonzero betas
+
+  Combinatorial: C(8,3) = 56 three-vertex subsets
+  Each can be a 3-cycle (2 of 8 orientations)
+  Max c3 at n=8: C(8,3)/4 = 14 (regular tournament)
+  For comparison: C(7,3) = 35, max c3 = 35/5 = 7
+
+  The ratio c3_max / C(n,3) = 1/(n-2):
+    n=3: c3_max = 1, ratio = 1/1 = 1.0000
+    n=4: c3_max = 2, ratio = 1/2 = 0.5000
+    n=5: c3_max = 3, ratio = 1/3 = 0.3333
+    n=6: c3_max = 5, ratio = 1/4 = 0.2500
+    n=7: c3_max = 7, ratio = 1/5 = 0.2000
+    n=8: c3_max = 9, ratio = 1/6 = 0.1667
+    n=9: c3_max = 12, ratio = 1/7 = 0.1429
+
+======================================================================
+PART 9: CAYLEY-DICKSON TOWER: R -> C -> H -> O -> S
+======================================================================
+
+The Cayley-Dickson construction doubles dimension at each step:
+  R (dim 1):  Real numbers — all properties
+  C (dim 2):  Complex numbers — lose ordering
+  H (dim 4):  Quaternions — lose COMMUTATIVITY
+  O (dim 8):  Octonions — lose ASSOCIATIVITY
+  S (dim 16): Sedenions — lose ALTERNATIVITY (and division)
+
+Dimensions: 1, 2, 4, 8, 16 = 2^0, 2^1, 2^2, 2^3, 2^4
+
+Properties lost at each step:
+  R (dim  1 = 2^0): ordered, commutative, associative, alternative, division, composition
+  C (dim  2 = 2^1): commutative, associative, alternative, division, composition
+  H (dim  4 = 2^2): associative, alternative, division, composition
+  O (dim  8 = 2^3): alternative, division, composition
+  S (dim 16 = 2^4): power-associative, flexible (but NOT division, NOT composition)
+
+Property loss at dim 2^k:
+  2^0 -> 2^1: lose total ordering        (at dim 2)
+  2^1 -> 2^2: lose commutativity          (at dim 4)
+  2^2 -> 2^3: lose associativity           (at dim 8)
+  2^3 -> 2^4: lose alternativity & division (at dim 16)
+
+Hurwitz theorem: normed division algebras exist ONLY at dim 1, 2, 4, 8
+  Equivalently: composition algebras over R = R, C, H, O
+  Sum of squares identity: |xy|^2 = |x|^2 * |y|^2
+  This corresponds to: 1, 2, 4, 8 squares identities
+  (Hurwitz 1, 2, 4, 8 squares theorem)
+
+  Topological manifestation: parallelizable spheres only S^0, S^1, S^3, S^7
+  Dimensions 0, 1, 3, 7 = (dim of algebra) - 1
+  These are exactly 2^k - 1 for k = 0, 1, 2, 3
+
+======================================================================
+PART 10: CAYLEY-DICKSON PROPERTY LOSS PARALLELS IN TOURNAMENTS
+======================================================================
+
+Tournament property losses at powers of 2:
+  n=1 (2^0): Trivial tournament. All properties hold vacuously.
+  n=2 (2^1): Unique tournament. H=1. Only beta_0=1. No cycles.
+  n=4 (2^2): First n with non-trivial structure. C(4,3)=4 triples.
+              First n where score sequence matters.
+              Omega(T) can be empty or non-empty.
+  n=8 (2^3): THE INFLECTION POINT
+              - beta_3 can exceed 1 (first time)
+              - Seesaw mechanism fails
+              - i_*-injectivity fails
+              - Quasi-line fails for Omega(T)
+  n=16(2^4): Predicted: more properties fail
+              - Independence polynomial coefficients more complex
+              - Higher Betti numbers emerge
+
+The parallel structure:
+  Cayley-Dickson at dim 2^k: lose k-th algebraic property
+  Tournament at n=2^k: lose k-th homological property
+  k=0: trivial
+  k=1: non-trivial but simple
+  k=2: first interesting structure
+  k=3: MAJOR phase transition (octonions / seesaw break)
+  k=4: further degradation (sedenions / ???)
+
+Specifically for k=3 (the CRITICAL step):
+  Octonions (dim 8): lose ASSOCIATIVITY of multiplication
+  Tournaments (n=8): lose 'ASSOCIATIVITY' of homological seesaw
+    The seesaw beta_1*beta_3=0 is a kind of associativity:
+    the boundary maps d_2 and d_3 cannot simultaneously have
+    nontrivial kernel AND nontrivial cokernel
+    At n=8, this constraint breaks: both can be nontrivial
+
+Alternative connection via Hurwitz:
+  Hurwitz: sum-of-squares identity in n variables exists iff n in {1,2,4,8}
+  Tournament: exactly at n=8, the 'sum-of-squares' structure of
+  the Eisenstein norm breaks in a new way (higher Betti numbers
+  allow more complex norm values)
+
+======================================================================
+PART 11: I(8) = 2^3 — THE OCTONIONIC EVALUATION
+======================================================================
+
+I(x) = 1 + a1*x + a2*x^2 evaluated at x = 8 = 2^3:
+  I(8) = 1 + 8*a1 + 64*a2
+  I(2) = 1 + 2*a1 + 4*a2   = H(T)
+  I(3) = 1 + 3*a1 + 9*a2
+
+Ratio I(8)/I(2) for random n=7 tournaments:
+  Mean I(8)/H = 6.16
+  Range: [3.00, 10.20]
+
+I(8) = 1 + 8*a1 + 64*a2
+     = I(2) + 6*a1 + 60*a2
+     = H + 6*(a1 + 10*a2)
+  So I(8) - H = 6*(a1 + 10*a2)
+  The gap is always divisible by 6 = 2*3!
+
+I(8) mod small numbers:
+  I(8) mod 2 = 1 (always odd, like H)
+  I(8) mod 3 = 1 + 2*a1 + a2 (mod 3) = H mod 3
+  I(8) mod 7 = 1 + a1 + a2 (mod 7) = I(1) mod 7 = (1+a1+a2) mod 7
+
+  I(8) mod 7 = I(1) mod 7  (since 8 = 1 mod 7)
+  I(1) = 1 + a1 + a2 = number of independent sets + 1
+  This is the TOTAL count of independent sets in Omega(T)!
+
+I(8) mod 8:
+  I(8) = 1 + 8*a1 + 64*a2 = 1 mod 8
+  I(8) mod 8 = 1 ALWAYS (universal!)
+  More generally: I(b) mod b = 1 for all b (CRT tower, HYP-963)
+
+Verification I(8) mod 8 = 1:
+  CONFIRMED: I(8) = 1 mod 8 for all 200 tested tournaments
+
+======================================================================
+PART 12: EXPONENTIATION IN H(T) — FRACTIONAL POWERS
+======================================================================
+
+H = I(2) = 1 + 2*a1 + 4*a2
+Can we make sense of 'H to a power'?
+
+H^(1/2) and H^(1/3) for n=7 tournaments:
+  H=  23, H^(1/2)=  4.7958, H^(1/3)=  2.8439, a1= 11, a2=  0
+  H=  73, H^(1/2)=  8.5440, H^(1/3)=  4.1793, a1= 28, a2=  4
+  H= 111, H^(1/2)= 10.5357, H^(1/3)=  4.8059, a1= 43, a2=  6
+  H=  81, H^(1/2)=  9.0000, H^(1/3)=  4.3267, a1= 30, a2=  5
+  H= 123, H^(1/2)= 11.0905, H^(1/3)=  4.9732, a1= 47, a2=  7
+  H=  33, H^(1/2)=  5.7446, H^(1/3)=  3.2075, a1= 16, a2=  0
+  H=  65, H^(1/2)=  8.0623, H^(1/3)=  4.0207, a1= 24, a2=  4
+  H= 121, H^(1/2)= 11.0000, H^(1/3)=  4.9461, a1= 44, a2=  8
+  H=  15, H^(1/2)=  3.8730, H^(1/3)=  2.4662, a1=  7, a2=  0
+  H=  77, H^(1/2)=  8.7750, H^(1/3)=  4.2543, a1= 30, a2=  4
+
+H^(1/3) interpretation via Claim B:
+  H = sum over odd-cycle collections 2^|C|
+  = sum_{k=0}^{alpha(Omega)} f_k * 2^k  where f_k = independent sets of size k
+  For n=7: H = 1 + 2*a1 + 4*a2 (only k=0,1,2)
+  H^(1/3) would mix the binary layers in a non-integer way
+
+More natural: I(2^(1/3)) = 1 + 2^(1/3)*a1 + 2^(2/3)*a2
+  This is NOT an integer, but lives in Z[2^(1/3)]
+  The ring Z[2^(1/3)] is a degree-3 extension of Z
+  Minimal polynomial: x^3 - 2 = 0 (Eisenstein at p=2)
+
+  2^(1/3) = 1.259921
+  a1= 42, a2=  7: I(2^(1/3)) = 65.0285
+  a1= 42, a2=  7: I(2^(1/3)) = 65.0285
+  a1= 21, a2=  4: I(2^(1/3)) = 33.8079
+  a1= 19, a2=  1: I(2^(1/3)) = 26.5259
+  a1= 41, a2=  8: I(2^(1/3)) = 65.3560
+
+The NUMBER FIELD tower:
+  I(2) lives in Z
+  I(omega) lives in Z[omega] = Z[(-1+sqrt(-3))/2]
+  I(2^(1/3)) lives in Z[2^(1/3)]
+  These are three distinct quadratic/cubic extensions of Q
+  Union: I lives in Q(omega, 2^(1/3)) which has degree 6 = 2*3 over Q!
+  The splitting field of x^3 - 2 is exactly Q(omega, 2^(1/3))
+  Galois group: S_3 (order 6 = 2*3 = |S_3|)
+
+======================================================================
+PART 13: THE 8-9 PAIR — CONSECUTIVE POWERS AND NEAR-MISSES
+======================================================================
+
+8 = 2^3 and 9 = 3^2: the ONLY consecutive perfect powers (Catalan/Mihailescu)
+
+In tournament theory:
+  n=8: homological inflection (beta_3>1, seesaw breaks)
+  n=9: I.P. real-roots first fail (THM-025 counterexample)
+  The failures at 8 and 9 are DIFFERENT IN KIND:
+    n=8: topological (path homology)
+    n=9: algebraic (independence polynomial roots)
+
+H values at n=8 and n=9:
+
+  Sample H values at n=7:
+    Min H = 5, Max H = 159, Mean = 82.2
+
+  H=8 is impossible (H always odd)
+  H=9 = 1 + 2*4 + 4*0 (a1=4, a2=0) — achievable at n>=5
+
+The Catalan equation x^p - y^q = 1:
+  3^2 - 2^3 = 1
+  Tournament version: I(3) - I(2) = step = a1 + 5*a2
+  When does I(3) - I(2) = 1?
+    a1 + 5*a2 = 1 => a1=1, a2=0
+    This means exactly 1 odd cycle, 0 disjoint pairs
+    H = I(2) = 1 + 2 = 3, I(3) = 1 + 3 = 4
+    So the 'Catalan' step I(3)-I(2)=1 forces H=3 (smallest non-trivial)
+
+  When does I(3)^2 - I(2)^3 = 1? (actual Catalan structure)
+
+======================================================================
+PART 14: SYNTHESIS — THE TRINITY OF OPERATIONS ON {2,3}
+======================================================================
+
+The three binary operations on the pair (2, 3):
+
+  ADDITION:        2 + 3 = 5    (prime, commutative)
+  MULTIPLICATION:  2 * 3 = 6    (composite = 2*3, commutative)
+  EXPONENTIATION:  2 ^ 3 = 8    (= 2^3, NON-commutative)
+                   3 ^ 2 = 9    (= 3^2)
+
+  Outputs: {5, 6, 8, 9} (four numbers from three operations)
+
+Tournament theory meaning:
+  5 = 2+3: first n with non-trivial Omega(T); I(Omega,x) quadratic
+  6 = 2*3: first n with beta_3 > 0; multiplicative structure emerges
+  8 = 2^3: inflection point; homological properties fail
+  9 = 3^2: algebraic properties fail (real roots); claw-free fails
+
+The ORDERED structure:
+  5 < 6 < 8 < 9
+  + < * < ^(2,3) < ^(3,2)
+  Each operation produces a LARGER result on (2,3)
+  The gap pattern: 6-5=1, 8-6=2, 9-8=1
+  Symmetric: gaps are 1, 2, 1 (palindromic!)
+
+Cyclotomic connections:
+  Phi_1(2) = 1    (2-1)
+  Phi_2(2) = 3    (2+1)
+  Phi_3(2) = 7    (2^2+2+1)
+  Phi_4(2) = 5    (2^2+1)
+  Phi_5(2) = 31   (2^4+2^3+2^2+2+1)
+  Phi_6(2) = 3    (2^2-2+1)
+  Phi_8(2) = 17   (2^4+1)
+  Phi_9(2) = 73   (2^6+2^3+1)
+
+  Products:
+  2^1 - 1 = 1  = Phi_1(2)
+  2^2 - 1 = 3  = Phi_1(2)*Phi_2(2) = 1*3
+  2^3 - 1 = 7  = Phi_1(2)*Phi_3(2) = 1*7
+  2^6 - 1 = 63 = Phi_1*Phi_2*Phi_3*Phi_6 = 1*3*7*3 = 63
+  Note: 63 = 2^6 - 1 is in our forbidden set!
+  2^6 = 64, and 63 = forbidden H, and 6 = 2*3
+  So 2^(2*3) - 1 is forbidden!
+
+The NUMBER FIELD synthesis:
+  Q(omega, 2^(1/3)) is the splitting field of x^3 - 2
+  Degree [Q(omega, 2^(1/3)) : Q] = 6 = 2*3
+  Galois group = S_3, order 6 = 3! = 2*3
+  The tournament independence polynomial I(x) = 1 + a1*x + a2*x^2
+  has degree 2 (at n=7), so its splitting field is at most degree 2 over Q
+  But evaluating I at 2^(1/3) yields elements of the DEGREE 6 field
+  Combining all tournament evaluations requires the full S_3 Galois group
+
+Final observation: FIVE numbers summarize everything
+  2, 3, 5=2+3, 6=2*3, 7=Phi_3(2)=2^2+2+1
+  These are the first 5 primes: 2, 3, 5, 7 (plus 6=2*3)
+  And n=7 is where our quadratic I.P. theory is most complete
+  At n=7: alpha(Omega) = 2 always, so I(x) is quadratic
+  The theory 'lives' in the quadratic world of 2 and 3
+
+  Beyond n=7: I(x) can be cubic or higher
+  The quadratic era ends, the cubic era begins
+  Exponentiation (2^3=8) marks this transition
+  Just as octonions (dim 2^3=8) end the division algebra era
+
+======================================================================
+END OF EXPLORATION
+======================================================================
