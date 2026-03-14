@@ -1,0 +1,304 @@
+======================================================================
+PART 1: THE TRIANGLE AS SIMPLEX — Δ² AND ITS BOUNDARY
+======================================================================
+
+THE STANDARD 2-SIMPLEX Δ²:
+  3 vertices: {0, 1, 2}
+  3 edges: {01, 02, 12}
+  1 face: {012}
+
+  Boundary operator ∂:
+  ∂(012) = 12 - 02 + 01  (alternating sum of faces)
+
+  In tournament terms:
+  A DIRECTED triangle (3-cycle) is an ORIENTED 2-simplex.
+  The boundary of the cycle 0→1→2→0 is:
+  ∂(0→1→2→0) = (1→2) - (0→2) + (0→1)
+               = (1→2) + (2→0) + (0→1)  [reversing orientation = negation]
+
+  This is the CYCLE CONDITION: the boundary of a cycle is 0
+  iff the edges "cancel" in the chain complex.
+
+  HOMOLOGICAL INTERPRETATION:
+  A 3-cycle [a→b→c→a] is an element of ker(∂₂: C₂ → C₁)
+  but NOT in im(∂₃: C₃ → C₂) (there's no 3-simplex to fill it)
+  → It represents a nonzero element of H₂ (second homology!)
+
+  But wait: in the PATH HOMOLOGY of GLMY, the boundary
+  map is different from simplicial homology. Let me be precise.
+
+======================================================================
+PART 2: GLMY PATH HOMOLOGY — THE 3-CYCLE AS GENERATOR
+======================================================================
+
+GLMY PATH HOMOLOGY (Grigor'yan-Lin-Muranov-Yau):
+
+  For a digraph G, the path chain complex is:
+  ... → Ω₃(G) →^{∂₃} Ω₂(G) →^{∂₂} Ω₁(G) →^{∂₁} Ω₀(G) → 0
+
+  where Ω_n(G) = formal sums of allowed n-paths [v₀→v₁→...→vₙ].
+
+  An "allowed path" has v_i → v_{i+1} in G and v_i ≠ v_j for i≠j.
+
+  Boundary: ∂[v₀→v₁→...→vₙ] = sum_{i=0}^{n} (-1)^i [v₀→...→v̂ᵢ→...→vₙ]
+  BUT only including terms where the resulting path is still allowed.
+
+  For a 3-CYCLE a→b→c→a in tournament T:
+  The path [a→b→c] has boundary:
+  ∂[a→b→c] = [b→c] - [a→c] + [a→b]
+
+  If a→c is NOT in T (i.e., c→a is), then [a→c] is NOT an allowed 1-path.
+  So: ∂[a→b→c] = [b→c] + [a→b] (with [a→c] dropped or sign-flipped)
+
+  Actually, in GLMY: the "allowed" condition means [a→c] requires a→c.
+  If c→a instead, then [a→c] is not allowed, so that term vanishes.
+  ∂[a→b→c] = [b→c] - 0 + [a→b] = [a→b] + [b→c]
+
+  For the cycle a→b→c→a to be in ker(∂₂), we need ∂ = 0.
+  But [a→b] + [b→c] ≠ 0 in general.
+  So the 3-cycle is NOT automatically a cycle in path homology!
+
+  HOWEVER: we can also include [b→c→a] and [c→a→b]:
+  ∂[b→c→a] = [c→a] + [b→c] (assuming b→a not in T)
+  ∂[c→a→b] = [a→b] + [c→a] (assuming c→b not in T, i.e., b→c in T)
+
+  Sum: ∂([a→b→c] + [b→c→a] + [c→a→b])
+     = ([a→b] + [b→c]) + ([b→c] + [c→a]) + ([c→a] + [a→b])
+     = 2([a→b] + [b→c] + [c→a])
+
+  Over Z/2Z (mod 2): this is 0!
+  Over Z: it's 2 × (sum of edges), not 0.
+
+  KEY INSIGHT: the 3-cycle generates homology MOD 2 but not over Z.
+  This connects to the field F₂ and the characteristic-2 theme!
+
+======================================================================
+PART 3: THE CONE CONSTRUCTION — ADDING A VERTEX
+======================================================================
+3-cycle C₃: H = 3, #odd_cycles = 1
+Dominating cone(C₃): H = 3, #odd_cycles = 1
+Dominated cone(C₃): H = 3, #odd_cycles = 1
+
+Transitive T₃: H = 1, #odd_cycles = 0
+Dominating cone(Trans₃): H = 1, #odd_cycles = 0
+Dominated cone(Trans₃): H = 1, #odd_cycles = 0
+
+CONE RESULTS:
+  T          H(T)   →  H(dom_cone(T))  H(sub_cone(T))
+  C₃ (cycle)   3   →  3              3
+  Trans₃       1   →  1              1
+
+  The dominating/dominated cone ALWAYS gives H = H(T) for transitive T.
+  For the 3-cycle: cone increases H from 3 to 3/3.
+
+======================================================================
+PART 4: CONE OPERATIONS ON ALL n=3 TOURNAMENTS
+======================================================================
+All n=3 tournaments: 8
+  mask=000: H=1, cycles=0
+  mask=001: H=1, cycles=0
+  mask=010: H=3, cycles=1
+  mask=011: H=1, cycles=0
+  mask=100: H=1, cycles=0
+  mask=101: H=3, cycles=1
+  mask=110: H=1, cycles=0
+  mask=111: H=1, cycles=0
+
+Cone over each n=3 tournament → n=4:
+  mask  H(T) H(dom) H(sub)  H_avg_mixed
+  000      1      1      1           2.5  [1, 3, 5]
+  001      1      1      1           2.5  [1, 3, 5]
+  010      3      3      3           4.5  [3, 5]
+  011      1      1      1           2.5  [1, 3, 5]
+  100      1      1      1           2.5  [1, 3, 5]
+  101      3      3      3           4.5  [3, 5]
+  110      1      1      1           2.5  [1, 3, 5]
+  111      1      1      1           2.5  [1, 3, 5]
+
+======================================================================
+PART 5: THE 1/3 RATIO AND CONE GEOMETRY
+======================================================================
+n=3: Mean(H)=1.50, Var(H)=0.75, Var/Mean²=0.3333, level-2 approx=0.3333
+n=4: Mean(H)=3.00, Var(H)=3.00, Var/Mean²=0.3333, level-2 approx=0.3333
+n=5: Mean(H)=7.50, Var(H)=17.81, Var/Mean²=0.3167, level-2 approx=0.3000
+n=6: Mean(H)=22.50, Var(H)=146.25, Var/Mean²=0.2889, level-2 approx=0.2667
+
+======================================================================
+PART 6: THE TRIANGLE — THREE MEANINGS, ONE OBJECT
+======================================================================
+
+THE TRIANGLE ▲ IN TOURNAMENT THEORY HAS THREE FACES:
+
+FACE 1: THE 3-CYCLE (combinatorial triangle)
+  The directed 3-cycle a→b→c→a is the simplest non-transitive tournament.
+  It generates ALL tournament complexity:
+  - H(T)=1 iff T has NO 3-cycles (transitive)
+  - H(T) counts "how 3-cyclic" T is (via OCF)
+  - Every odd cycle arises from overlapping 3-cycles
+  Key numbers: 3 = Φ₆(2), F_4, |C₃|
+
+FACE 2: THE CONE (geometric triangle)
+  V = (1/3) × base × height — the universal pyramid formula.
+  The tournament H-landscape IS a discrete cone:
+  - Var(H)/Mean(H)² = 1/3 (proved at n=3,4)
+  - The fibers of H form a "conical" structure on the hypercube
+  - The 1/3 comes from ∫₀¹ t² dt = 1/3 (the paraboloid ratio)
+  Key numbers: 1/3, ∫t²dt, Fourier level 2
+
+FACE 3: THE MAPPING CONE (categorical triangle)
+  In homological algebra, the mapping cone of f: C → D is:
+  cone(f)_n = D_n ⊕ C_{n-1}
+  The triangle C →^f D → cone(f) →^{+1} C[1] is EXACT.
+
+  In tournament homology:
+  - The chain complex has C_n = allowed n-paths
+  - Adding a dominating vertex = taking a categorical cone
+  - The cone makes the complex ACYCLIC (no homology)
+  - This is why the dominating cone of any tournament gives H=H(T)
+
+  The distinguished triangle in the derived category:
+  T →^{cone} T' → homological_error →^{+1} T[1]
+  measures how the tournament's cycle structure changes under coning.
+
+THE UNIFICATION:
+  The NUMBER 3 connects all three:
+  - 3 vertices in the combinatorial triangle
+  - 1/3 ratio in the geometric cone
+  - The distinguished triangle in homological algebra
+
+  And: 3 = Φ₆(2) = F_4 = the cycle generator.
+  The triangle IS the tournament generator in every sense.
+
+======================================================================
+PART 7: FIBONACCI 2-3 DECOMPOSITION OF CONE SEQUENCES
+======================================================================
+H-spectrum sizes:
+  n=1: 1 value  ({1})
+  n=2: 1 value  ({1})
+  n=3: 2 values ({1, 3})
+  n=4: 3 values ({1, 3, 5})
+  n=5: 7 values? Let me compute...
+  n=5: 7 values: [1, 3, 5, 9, 11, 13, 15]
+  n=4: 3 values: [1, 3, 5]
+
+H-spectrum size sequence: 1, 1, 2, 3, 7
+
+======================================================================
+PART 8: PERIOD 6, CONES, AND THE FIBONACCI WORD
+======================================================================
+
+CONE AND BETTI NUMBERS:
+
+  Dominating cone (new vertex beats all):
+    β₁(cone_dom(T)) = 0 for ALL T
+    The dominating vertex makes the digraph "contractible"
+    (there's always a path from the top to anywhere)
+
+  Dominated cone (new vertex loses to all):
+    β₁(cone_sub(T)) = 0 for ALL T
+    Same reasoning (there's always a path from anywhere to the bottom)
+
+  Mixed cone (new vertex beats some, loses to others):
+    β₁(cone_mixed(T)) can be 0 or 1
+    It depends on which edges are "in" and "out"
+
+  So: the PURE cones (dominating or dominated) KILL all homology!
+  This is the ACYCLICITY of the cone in homological algebra.
+
+  In categorical terms:
+  cone(T) is CONTRACTIBLE iff the cone vertex is universal (source or sink).
+  The "distinguished triangle" T → cone(T) → T[1] then gives:
+    H_1(cone(T)) = 0 → H_1(T) ≅ H_0(T[1]) (long exact sequence)
+
+  Period-6 connection:
+  Starting from T₃ (3-cycle), iterate mixed cones 6 times:
+  T₃ → T₄ → T₅ → T₆ → T₇ → T₈ → T₉
+  After 6 steps: n goes from 3 to 9.
+  The Fibonacci word L=3, S=2 tiles this as: 3+3+3 = 9
+  (three L tiles, no S tiles)
+  Or: 3+2+2+2 = 9 (one L, three S)
+
+  The FIBONACCI tiling of the cone sequence counts
+  how many "cyclic" (L=3-cycle) and "transitive" (S=2-arc)
+  building blocks are used in the construction.
+
+======================================================================
+PART 9: TRINOMIAL POWERS AND THE FANO CONE
+======================================================================
+
+THE PROJECTIVE CONE TOWER:
+
+  Φ₁(x) = 1                      at x=2: 1 = |PG(0, F₂)| = point
+  Φ₁(x)(1+x) = 1+x              at x=2: 3 = |PG(1, F₂)| = line
+  Φ₃(x) = 1+x+x²                at x=2: 7 = |PG(2, F₂)| = Fano plane
+  1+x+x²+x³                     at x=2: 15 = |PG(3, F₂)|
+  1+x+x²+x³+x⁴                  at x=2: 31 = |PG(4, F₂)|
+
+  Each step: PG(k, F₂) = CONE over PG(k-1, F₂) ∪ PG(k-1, F₂)
+  (projective join = add a new coordinate)
+
+  |PG(k, F₂)| = 2^{k+1} - 1 (Mersenne number)
+
+  The FANO PLANE is the CONE over the projective LINE:
+  PG(2, F₂) = cone(PG(1, F₂))
+
+  And PG(2, F₄) = cone(PG(1, F₄)) in a different sense:
+  |PG(2, F₄)| = 21 = 4² + 4 + 1 = Φ₃(4) = Φ₃(2²)
+
+  THE RECURSIVE CONE:
+  Fano = cone(line) = 7
+  PG(2,4) = cone(PG(1,4)) = 21 = 7 × 3
+  The factor 3 = Φ₆(2) = the "cone dimension" = PERIOD
+
+  So: H_forb_2 = Fano × cone_dim = 7 × 3 = 21
+  The second forbidden value is the Fano plane times the cone factor!
+
+======================================================================
+PART 10: GRAND SYNTHESIS — TRIANGLE-CONE-3 UNIFICATION
+======================================================================
+
+THE NUMBER 3 IS THE TOURNAMENT UNIVERSE:
+
+ARITHMETIC:
+  3 = smallest odd prime
+  3 = Φ₆(2) (6th cyclotomic at generator 2)
+  3 = F₄ (4th Fibonacci number, 0-indexed)
+  3 = |PG(1, F₂)| (projective line)
+  3 | (2^n - 1) iff 2 | n (period 2 in Z/3Z)
+
+GEOMETRY:
+  3 = dimension where cones have volume ratio 1/3
+  3 = number of vertices in the fundamental cycle
+  3 = number of edges in a triangle
+  3 = number of Baer subplanes partitioning PG(2,4)
+  3 = Euler characteristic of RP² (real projective plane)
+
+TOPOLOGY:
+  3-cycle = generator of H₁ in tournament path homology (mod 2)
+  3 = number of terms in the distinguished triangle (C → D → cone(f))
+  3 = the "acyclicity dimension" — cone kills H₁ after 3 steps
+  3 = rank of the Fano matroid F₇
+
+ALGEBRA:
+  Φ₃(x) = x² + x + 1 = character of Z/3Z
+  Z/3Z = the "triangle group" (cyclic group of order 3)
+  Φ₃(2) = 7 = |Fano| (evaluation at the generator)
+  Φ₃(4) = 21 = H_forb_2 (evaluation at the generator squared)
+
+THE CONE FORMULA:
+  Volume of a cone in dimension d: V_cone = V_cyl / d
+  At d=3: V_cone = V_cyl / 3 = (1/3) × base × height
+
+  Tournament analog:
+  Var(H)/Mean(H)² = 1/3 at n=3,4
+  = the "discrete cone ratio"
+  = ∫₀¹ t² dt (the second moment of uniform)
+
+  THE CONE IS THE TOURNAMENT IN GEOMETRIC FORM:
+  The H-landscape is a cone with "dimension" 3,
+  the same 3 that generates cycles, defines the period,
+  and creates the Fano plane.
+
+  3 → triangle → cone → 1/3 → period 6/2 → Φ₃ → Fano → H_forb
+  Everything flows from the TRIANGLE.
+
