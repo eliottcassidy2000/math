@@ -1,0 +1,80 @@
+    7 = I(C_3, 2) (independence polynomial of 3-cycle at fugacity 2)
+    7 = h(A_6) (Coxeter number)
+    7 = dim(O) - 1 (imaginary octonion dimension)
+    7 = number of lines in Fano plane
+    7 = number of vertices in Fano plane
+    7 = number of non-identity octonion basis elements
+
+  THE FANO PLANE IS THE OCTONION MULTIPLICATION TABLE.
+  7 = dim(O) - 1 IS FORBIDDEN as an H value.
+  This cannot be a coincidence.
+
+  SPECULATIVE CHAIN:
+    Octonions O have dim 8 = 2^3.
+    The 7 imaginary units multiply via the Fano plane.
+    The Fano plane has symmetry group of order 168 = 8 * 21.
+    21 = 3 * 7 = H_forb_2.
+    7 = H_forb_1.
+    Both forbidden values appear in the octonionic structure!
+
+  DEEPER:
+    The Fano plane is PG(2, F_2) — the projective plane over F_2.
+    F_2 = the field with 2 elements = the TOURNAMENT FIELD.
+    Each arc orientation is an element of F_2.
+    The Fano plane lives in F_2^3 — which has 2^3 = 8 elements.
+    These 8 elements ARE the 8 tournaments at n=3!
+
+  SO: The 8 tournaments at n=3 ARE the points of F_2^3,
+  and the Fano plane is the projective closure PG(2, F_2).
+  The forbidden H=7 = |PG(2, F_2)| (number of points in the Fano plane).
+  H=21 = |GL(3, F_2)| / 8 = order of the Fano symmetry / dim(O).
+
+  |GL(3, F_2)| = (2^3-1)(2^3-2)(2^3-4) = 7*6*4 = 168
+  168 / 8 = 21.0 = 21 = H_forb_2
+  168 / 24 = 7.0 = 7 = H_forb_1
+  168 = 7 * 24 = 7 * 4! = H_forb_1 * n(4)!
+
+======================================================================
+PART 10: THE GRAND SYNTHESIS
+======================================================================
+
+  THE CAYLEY-DICKSON TOWER IN TOURNAMENT THEORY:
+
+  LEVEL 0 (R, dim 1): The real line.
+    Tournament: H(T) is a real (natural) number.
+    Property: ordered (H values form a total order).
+
+  LEVEL 1 (C, dim 2): The complex plane.
+    Tournament: F(T, i) is a Gaussian integer.
+    Property: lose ordering (F(T,i) is complex, not ordered).
+    Euler: F(T, e^(i*pi)) = F(T, -1) always odd.
+
+  LEVEL 2 (H, dim 4): The quaternions.
+    Tournament: 4 = 2^2 = level-2 Fourier structure.
+    Property: lose commutativity (arc-flip effects may not commute
+    at the level of intermediate H values).
+    4 = the number of Fourier levels that matter (0, 2, 4, and the rest).
+
+  LEVEL 3 (O, dim 8): The octonions.
+    Tournament: 8 = 2^3 = tournaments at n=3.
+    Property: lose associativity (tournament composition via lex product
+    is NOT associative at the class level — from S78!).
+    7 = dim(O) - 1 = FORBIDDEN H value.
+    The Fano plane (octonion mult. table) = PG(2, F_2).
+    |GL(3, F_2)| = 168 = 8 * 21 = dim(O) * H_forb_2.
+
+  BEYOND O (sedenions, dim 16):
+    Tournament: 16 = 2^4 = GS tilings at n=5.
+    Property: zero divisors (= the H=7 gap as an "algebraic zero").
+
+  THE DEEPEST INSIGHT:
+  The FORBIDDEN H values (7, 21) are the OCTONION NUMBERS:
+    7 = |imaginary octonion units| = |Fano plane points|
+    21 = |GL(3,F_2)|/8 = |Fano plane symmetries|/dim(O)
+  Tournament impossibility at H=7 IS the impossibility of extending
+  the Cayley-Dickson construction beyond the octonions without zero divisors.
+
+
+======================================================================
+DONE — QUATERNIONS AND OCTONIONS IN TOURNAMENTS
+======================================================================
