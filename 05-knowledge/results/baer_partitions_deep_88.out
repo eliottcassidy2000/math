@@ -1,0 +1,215 @@
+======================================================================
+PART 1: THE NUMBER 960
+======================================================================
+960 = {2: 6, 3: 1, 5: 1}
+960 = 2^6 * 3 * 5 = 64 * 15
+960 = 8! / (7 * 6) = 40320 / 42
+960 / 6 = 160 = 2^5 * 5
+960 / 120 = 8
+960 / 360 = 2.6666666666666665
+960 / 720 = 1.3333333333333333
+
+120960 / 960 = 126 = stabilizer of a partition
+  126 = 2 * 63 = 2 * 7 * 9
+  OR: 126 = C(9,4) = 9!/(4!5!)
+
+Stabilizer of a Baer partition: 126
+  126 = 2 * 3^2 * 7
+  126 / 2 = 63 = 7 * 9 = |PGL(2,F_4)| / ... no
+  |PGL(2,F_8)| = (8^3-8)/(8-1) = 504/7 = 72
+  Actually: |PSL(2,F_7)| = 168, |PSL(2,F_8)| = 504
+  126 = 168 * 3/4 = not clean
+  126 = 2 * 63 = 2 * 63
+  63 = 2^6 - 1 (Mersenne)
+
+960 as group-theoretic object:
+  960 = |Sp(4,F_2)| = |Omega(5,F_2)|? No, |Sp(4,2)| = 720
+  960 = 2 * |S_5 x Z_2| = 2 * 240? No
+  Actually: 960 = 2^6 * 15 = 64 * 15
+
+960 = 8 * 120 = 8 * |S_5| = 8 * |Aut(Petersen)|
+  Each Baer subplane is in 8 partitions
+  |Aut(Petersen)| = |S_5| = 120
+
+======================================================================
+PART 2: STRUCTURE OF BAER DISJOINTNESS
+======================================================================
+Baer disjointness graph:
+  360 vertices, each with degree 16
+  Total edges: 360 * 16 / 2 = 2880
+  Edge density: 0.0446
+  Triangles: 960 (= partitions)
+  360 * 8 / 3 = 960 ✓
+
+  Each edge in exactly 1 triangle!
+  → Each pair of disjoint Baer subplanes has a UNIQUE
+    complement that is also a Baer subplane.
+  → The 960 partitions are a STEINER-LIKE system:
+    each disjoint pair extends uniquely to a partition!
+
+  The 16 disjoint neighbors of each B decompose into
+  8 matched pairs (from the 8 partitions containing B)
+  → The disjoint neighborhood = 8K_2 (8 disjoint edges)
+  → Lambda = 1 (adjacent pair shares exactly 1 common neighbor)
+  → This is related to the cocktail party CP(8)!
+
+======================================================================
+PART 3: THE HESSE CONFIGURATION AND PARTITION STRUCTURE
+======================================================================
+Partition stabilizer order: 126
+  If S_3 action on {B1,B2,B3}: pointwise stab = 126/6 = 21
+  If Z_3 action: pointwise stab = 126/3 = 42
+  21 = H_forb_2 = |PG(2,F_4)| points = |Aut(Fano)| / 8
+  42 = 2 * 21 = |PGL(2,F_7)| / 4
+
+If Z_2 action (Frobenius): pointwise stab = 126/2 = 63
+  63 = 7 * 9 = 2^6 - 1 (Mersenne)
+  63 = H_forb_1 * 9 = 7 * 9
+  H(QR_7) * |Aut(QR_7)| = 189 * 21 = 3969 = 63^2 !!!
+
+  BEAUTIFUL: 63 = sqrt(H(QR_7) * |Aut(QR_7)|)
+  The partition stabilizer connects to the QR_7 invariant!
+
+======================================================================
+PART 4: CYCLOTOMIC TOWER AT x=2
+======================================================================
+2^6 - 1 = 63
+= Phi_1(2) * Phi_2(2) * Phi_3(2) * Phi_6(2)
+= 1 * 3 * 7 * 3 = 63
+
+The complete factorization of 2^n - 1:
+  2^ 1 - 1 =     1 = 
+  2^ 2 - 1 =     3 = 3
+  2^ 3 - 1 =     7 = 7
+  2^ 4 - 1 =    15 = 3 * 5
+  2^ 5 - 1 =    31 = 31
+  2^ 6 - 1 =    63 = 3^2 * 7
+  2^ 7 - 1 =   127 = 127
+  2^ 8 - 1 =   255 = 3 * 5 * 17
+  2^ 9 - 1 =   511 = 7 * 73
+  2^10 - 1 =  1023 = 3 * 11 * 31
+  2^11 - 1 =  2047 = 23 * 89
+  2^12 - 1 =  4095 = 3^2 * 5 * 7 * 13
+
+Cyclotomic Phi_d(2) for d = 1..12:
+  Phi_ 1(2) = 1
+  Phi_ 2(2) = 3
+  Phi_ 3(2) = 7
+  Phi_ 4(2) = 5
+  Phi_ 5(2) = 31
+  Phi_ 6(2) = 3
+  Phi_ 7(2) = 127
+  Phi_ 8(2) = 17
+  Phi_ 9(2) = 73
+  Phi_10(2) = 11
+  Phi_11(2) = 2047
+  Phi_12(2) = 13
+  Phi_13(2) = 8191
+  Phi_14(2) = 43
+  Phi_15(2) = 151
+  Phi_16(2) = 257
+  Phi_17(2) = 131071
+  Phi_18(2) = 57
+  Phi_19(2) = 524287
+  Phi_20(2) = 205
+  Phi_21(2) = 2359
+  Phi_22(2) = 683
+  Phi_23(2) = 8388607
+  Phi_24(2) = 241
+
+======================================================================
+PART 5: FORBIDDEN VALUES AND CYCLOTOMIC POLYNOMIALS
+======================================================================
+
+FORBIDDEN H VALUES (from tournament theory):
+  H_forb_1 = 7  = Phi_3(2) = |PG(2,F_2)|
+  H_forb_2 = 21 = Phi_3(4) = Phi_3(2) * Phi_6(2) = 7 * 3 = |PG(2,F_4)|
+
+THE CYCLOTOMIC DECOMPOSITION:
+  Phi_3(2) = 7   (Fano plane)
+  Phi_6(2) = 3   (cycle generator)
+  Phi_3(4) = 21  (second forbidden)
+
+  2^6 - 1 = 63 = 1 * 3 * 7 * 3 = Phi_1 * Phi_2 * Phi_3 * Phi_6 at x=2
+  63 = sqrt(H(QR_7) * |Aut(QR_7)|) = sqrt(3969)
+
+  THE 6th CYCLOTOMIC NUMBER AT 2 UNIFIES:
+  - Period 6 (order of M(-1) in SL(2,Z))
+  - 63 = 2^6 - 1 (Mersenne)
+  - 63 = sqrt(H * |Aut|) for the Paley tournament
+  - 63 = product of ALL cyclotomic values at x=2 for d | 6
+
+HIGHER FORBIDDEN VALUES (conjectural):
+  If H_forb_k = Phi_3(2^k) = (2^k)^2 + 2^k + 1:
+    k=1: 7
+    k=2: 21
+    k=3: 73 (NOT forbidden — this is where the pattern breaks)
+
+  WHY does it break at k=3?
+  Because 2^3 = 8, and F_8 is a CUBIC extension of F_2.
+  The Baer subplane machinery requires QUADRATIC extensions.
+  F_4 = F_2^2 (quadratic) → Baer subplanes exist
+  F_8 = F_2^3 (cubic) → NO Baer subplanes of type F_2 in F_8!
+  (Baer subplanes of PG(2,F_q^2) ≅ PG(2,F_q), need q^2)
+
+  For PG(2,F_8) to have Baer subplanes, we'd need F_8 = (F_q)^2
+  for some q. But 8 = 2^3 is not a perfect square!
+  So PG(2,F_8) has NO Baer subplanes ≅ PG(2,F_q).
+  (It has F_2-subplanes, but those are PG(2,F_2) and F_2^2 ≠ F_8.)
+
+  CONCLUSION: The forbidden values stop because the field extension
+  tower 2 → 4 → 8 goes from quadratic (4=2^2) to cubic (8=2^3).
+  The Baer structure requires squaring, not cubing.
+
+======================================================================
+PART 6: FIBONACCI NUMBERS AS PROJECTIVE PLANE SIZES
+======================================================================
+Fibonacci numbers and Phi_3:
+  F(1) = 1 = Phi_3(0) [q=0 too small for PG]
+  F(2) = 1 = Phi_3(0) [q=0 too small for PG]
+  F(4) = 3 = Phi_3(1) [q=1 too small for PG]
+  F(7) = 13 = Phi_3(3) = |PG(2,F_3)| ✓
+  F(8) = 21 = Phi_3(4) = |PG(2,F_4)| ✓
+
+F(7) = 13 = |PG(2,F_3)| (the 13-point plane)
+F(8) = 21 = |PG(2,F_4)| = H_forb_2 (the 21-point plane)
+Consecutive Fibonacci numbers are consecutive projective planes!
+F(7)/F(8) → phi ≈ 13/21 ≈ 0.619048 vs 0.618034
+
+7 = L(4) (Lucas, not Fibonacci)
+21 = F(8) (Fibonacci)
+The two forbidden values live in DIFFERENT recurrence families!
+
+======================================================================
+SUMMARY: CROWN JEWELS FROM BAER PARTITION ANALYSIS
+======================================================================
+
+1. PG(2,F_4) has exactly 960 partitions into 3 Fano subplanes.
+   960 = 2^6 * 3 * 5 = 64 * 15
+
+2. Each Baer subplane is disjoint from exactly 16 others.
+   16 = 2^4 (a power of 2!)
+
+3. Each Baer subplane belongs to exactly 8 partitions.
+   8 = 2^3 = number of tournaments at n=3
+
+4. Each pair of disjoint Baer subplanes extends UNIQUELY to a partition.
+   (The complement of two disjoint Fano planes is always a Fano plane!)
+
+5. The disjoint neighborhood of each B decomposes as 8K_2.
+   This is a COCKTAIL PARTY structure — echoing CP(7) from QR_7!
+
+6. 63 = 2^6 - 1 = Phi_1(2)*Phi_2(2)*Phi_3(2)*Phi_6(2) = sqrt(H*|Aut|) for QR_7
+
+7. F(8) = 21 = H_forb_2 is a FIBONACCI number.
+   F(7) = 13 = |PG(2,F_3)| is the previous projective plane.
+   The golden ratio sits between two projective plane sizes!
+
+8. The forbidden value pattern breaks at k=3 because 8 = 2^3
+   is not a perfect square, so PG(2,F_8) has no Baer subplanes
+   from F_2.
+
+9. Phi_3(x^2) = Phi_3(x) * Phi_6(x) captures the Baer embedding:
+   |PG(2,F_{q^2})| = |PG(2,F_q)| * Phi_6(q)
+   At q=2: 21 = 7 * 3 (Fano * cycle-generator)
+
