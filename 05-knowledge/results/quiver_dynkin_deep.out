@@ -1,0 +1,244 @@
+======================================================================
+QUIVER-DYNKIN DEEP ANALYSIS (CORRECTED)
+======================================================================
+
+--- PART 1: GABRIEL NUMBERS |Phi+| = nh/2 ---
+
+  A_1: |Phi+| =    1  (nh/2 = 1, h= 2) OK
+  A_2: |Phi+| =    3  (nh/2 = 3, h= 3) OK
+  A_3: |Phi+| =    6  (nh/2 = 6, h= 4) OK
+  A_4: |Phi+| =   10  (nh/2 = 10, h= 5) OK
+  A_5: |Phi+| =   15  (nh/2 = 15, h= 6) OK
+  A_6: |Phi+| =   21  (nh/2 = 21, h= 7) OK = H_forb_2 = Phi3(4)
+  A_7: |Phi+| =   28  (nh/2 = 28, h= 8) OK = C(8,2)
+  D_4: |Phi+| =   12  (nh/2 = 12, h= 6) OK = h(E_6)
+  D_5: |Phi+| =   20  (nh/2 = 20, h= 8) OK
+  D_6: |Phi+| =   30  (nh/2 = 30, h=10) OK
+  D_7: |Phi+| =   42  (nh/2 = 42, h=12) OK
+  E_6: |Phi+| =   36  (nh/2 = 36, h=12) OK = C(9,2)
+  E_7: |Phi+| =   63  (nh/2 = 63, h=18) OK = 7*9 = FORBIDDEN at n<=7
+  E_8: |Phi+| =  120  (nh/2 = 120, h=30) OK = |BI| = |S_5|
+
+--- PART 2: EXCEPTIONAL ROOT COUNTS ---
+
+  |Phi+(E_6)| = 36
+  |Phi+(E_7)| = 63
+  |Phi+(E_8)| = 120
+
+  Total roots (positive + negative):
+    |Phi(E_6)| = 72 = 2*36
+    |Phi(E_7)| = 126 = 2*63
+    |Phi(E_8)| = 240 = 240 = #roots(E_8)
+
+  Connections to tournament theory:
+    |Phi+(A_6)| = 21 = H_forb_2 (permanently forbidden)
+    |Phi+(E_7)| = 63 = forbidden at n<=7, achievable at n=8=rank(E_8)
+    |Phi(E_8)|  = 240 = V(icos)*V(dodec) = 12*20
+
+  The sequence |Phi+(E_n)| = {36, 63, 120}:
+    63/36 = 1.750000 = 7/4 = H_forb_1/KEY_1^2
+    120/63 = 1.904762 = 40/21 = 40/H_forb_2
+    120/36 = 3.333333 = 10/3 = V(Petersen)/KEY_2
+
+--- PART 3: ROOT HEIGHT DISTRIBUTIONS ---
+
+  E_6 (h=12, |Phi+|=36):
+    Heights span: 1 to 11 (should be 1 to 11)
+    Highest root: (1, 2, 2, 3, 2, 1)
+    Height sequence: [6, 5, 5, 5, 4, 3, 3, 2, 1, 1, 1]
+    Palindromic? False
+    #roots at height 1: 6 (= rank = 6)
+    #roots at height 11: 1 (= 1, highest root)
+  E_7 (h=18, |Phi+|=63):
+    Heights span: 1 to 17 (should be 1 to 17)
+    Highest root: (2, 2, 3, 4, 3, 2, 1)
+    Height sequence: [7, 6, 6, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 1, 1]
+    Palindromic? False
+    #roots at height 1: 7 (= rank = 7)
+    #roots at height 17: 1 (= 1, highest root)
+  E_8 (h=30, |Phi+|=120):
+    Heights span: 1 to 29 (should be 1 to 29)
+    Highest root: (2, 3, 4, 6, 5, 4, 3, 2)
+    Height sequence: [8, 7, 7, 7, 7, 7, 7, 6, 6, 6, 6, 5, 5, 4, 4, 4, 4, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]
+    Palindromic? False
+    #roots at height 1: 8 (= rank = 8)
+    #roots at height 29: 1 (= 1, highest root)
+
+--- PART 4: McKAY QUIVER DIMENSIONS ---
+
+  BT (E_6, |G|=24):
+    Irrep dims: [1, 1, 1, 2, 2, 2, 3]
+    Sum(d_i) = 12 = h(E_6)
+    Sum(d_i^2) = 24 = |BT|
+    #irreps = 7 = rank+1
+    Max dim = 3
+    Dimension spectrum: {1: 3, 2: 3, 3: 1}
+  BO (E_7, |G|=48):
+    Irrep dims: [1, 1, 2, 2, 3, 3, 2, 4]
+    Sum(d_i) = 18 = h(E_7)
+    Sum(d_i^2) = 48 = |BO|
+    #irreps = 8 = rank+1
+    Max dim = 4
+    Dimension spectrum: {1: 2, 2: 3, 3: 2, 4: 1}
+  BI (E_8, |G|=120):
+    Irrep dims: [1, 2, 3, 4, 5, 6, 4, 2, 3]
+    Sum(d_i) = 30 = h(E_8)
+    Sum(d_i^2) = 120 = |BI|
+    #irreps = 9 = rank+1
+    Max dim = 6
+    Dimension spectrum: {1: 1, 2: 2, 3: 2, 4: 2, 5: 1, 6: 1}
+
+--- PART 5: TOURNAMENT INFORMATION CHANNEL ---
+
+  Define the TOURNAMENT CHANNEL:
+    Input: tournament T on n vertices (C(n,2) bits)
+    Output: H(T) (odd integer)
+    This is a DETERMINISTIC channel (zero noise)
+    But it's MANY-TO-ONE, so information is lost.
+
+  Channel capacity analysis:
+    n=3: input=3 bits, I(T;H)=0.811 bits, |outputs|=2, ratio=0.2704
+    n=4: input=6 bits, I(T;H)=1.561 bits, |outputs|=3, ratio=0.2602
+    n=5: input=10 bits, I(T;H)=2.681 bits, |outputs|=7, ratio=0.2681
+    n=6: input=15 bits, I(T;H)=4.050 bits, |outputs|=19, ratio=0.2700
+
+--- PART 6: MOAT AS EXCLUDED CODEWORDS ---
+
+  The permanent moat {7, 21} = excluded H values.
+  In coding theory terms: H(T) is a CODE with forbidden codewords.
+
+  Connection to Hamming code [7,4,3]:
+    Code length = 7 = H_forb_1
+    Dimension = 4 = rank(F_4) = KEY_1^2
+    Distance = 3 = KEY_2
+    #codewords = 16 = 2^4
+
+  The H-CODE:
+    'Alphabet' = odd positive integers
+    'Forbidden words' = {7, 21}
+    'Code distance' = ? (minimum gap between achievable H values)
+    n=3: H in [1, 3]
+          min gap=2, max gap=2
+    n=4: H in [1, 3, 5]
+          min gap=2, max gap=2
+    n=5: H in [1, 3, 5, 9, 11, 13, 15]
+          min gap=2, max gap=4
+    n=6: H in [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+          min gap=2, max gap=4
+
+--- PART 7: QUIVER MUTATION INTERPRETATION ---
+
+  QUIVER MUTATION (Fomin-Zelevinsky, 2002):
+    Mutating at vertex k: reverse arrows at k, apply exchange rule
+    Cluster algebras classify finite-type quivers -> Dynkin diagrams!
+
+  TOURNAMENT MUTATION = ARC FLIP:
+    Flipping arc (u,v) in tournament T:
+    - Reverses the arrow between u and v
+    - Changes H(T) by H(T/e) - H(T'/e')
+    - The DELTA is always even (H odd -> H' odd)
+
+  Arc flip as quiver mutation at a vertex pair:
+    Tournament mutations connect ALL n-vertex tournaments
+    (the flip graph is connected)
+    But cluster mutations preserve Dynkin type!
+    Tournament 'type' = H value (H is a mutation invariant class label)
+
+--- PART 8: AUSLANDER-REITEN PERSPECTIVE ---
+
+  The AR quiver of a Dynkin algebra kQ:
+    Vertices = indecomposable modules (= positive roots by Gabriel)
+    Arrows = irreducible morphisms
+    Shape: preprojective + regular + preinjective components
+
+  For Dynkin type, the AR quiver has |Phi+| vertices:
+    A_6: 21 = H_forb_2 indecomposables
+    E_6: 36 indecomposables
+    E_7: 63 indecomposables
+    E_8: 120 = |BI| indecomposables
+
+  CONJECTURE (HYP-new): The permanent forbidden H values
+  {7, 21} correspond to Gabriel numbers of specific quivers:
+    H_forb_1 = 7 = |Phi+(A_3)|... wait, |Phi+(A_3)| = 3*4/2 = 6.
+    Actually: 7 = |Phi+(B_2)| = |Phi+(C_2)| = |Phi+(G_2)| (non-simply-laced!)
+
+  CORRECTION: 7 is NOT a Gabriel number for any Dynkin diagram!
+  Gabriel numbers (|Phi+|) for ranks 1-8:
+    A_1: 1
+    A_2: 3
+    A_3: 6
+    A_4: 10
+    A_5: 15
+    A_6: 21
+    A_7: 28
+    D_4: 12
+    D_5: 20
+    D_6: 30
+    D_7: 42
+    E_6: 36
+    E_7: 63
+    E_8: 120
+
+  Gabriel numbers: [1, 3, 6, 10, 12, 15, 20, 21, 28, 30, 36, 42, 63, 120]
+  Is 7 a Gabriel number? False
+  Is 21 a Gabriel number? True (A_6!)
+  Is 63 a Gabriel number? True (E_7!)
+  Is 120 a Gabriel number? True (E_8!)
+
+  DEEP OBSERVATION:
+    H=21 is the Gabriel number of A_6 (path quiver on 7 vertices)
+    7 = the NUMBER OF VERTICES of the A_6 quiver!
+    H_forb_1 = #vertices of the quiver whose Gabriel number = H_forb_2
+    This is a SELF-REFERENTIAL structure.
+
+--- PART 9: ASYMPTOTIC CHANNEL RATE ---
+
+  As n -> infinity:
+    #distinct H values grows (monotonicity theorem)
+    Input entropy = C(n,2) = n(n-1)/2 bits
+    H-entropy <= log2(max_H) ~ O(n log n) bits
+
+  Channel rate R = I(T;H) / C(n,2):
+    n=3: R = 0.2704 = 0.811/3
+    n=4: R = 0.2602 = 1.561/6
+    n=5: R = 0.2681 = 2.681/10
+    n=6: R = 0.2700 = 4.050/15
+    Rate -> 0 as n -> inf (H captures vanishing fraction of tournament info)
+
+======================================================================
+GRAND SYNTHESIS: QUIVER-DYNKIN-INFORMATION-TOURNAMENT
+======================================================================
+
+  THE QUIVER-TOURNAMENT DICTIONARY:
+  ==================================
+
+  Tournament theory          |  Quiver/Dynkin theory
+  ========================== | =============================
+  Tournament T on n vertices |  Complete quiver Q_T (wild type)
+  Arc flip (mutation)        |  Quiver mutation
+  H(T) = I(Omega(T), 2)     |  Gabriel number |Phi+|
+  Forbidden H = 7            |  NOT a Gabriel number (orphan)
+  Forbidden H = 21           |  |Phi+(A_6)| = Gabriel number!
+  H=63 (n<=7 forbidden)      |  |Phi+(E_7)| = 63
+  H=120 (achievable)         |  |Phi+(E_8)| = 120 = |BI|
+  Permanent moat {7, 21}    |  {orphan, Phi+(A_6)}
+
+  INFORMATION-THEORETIC VIEW:
+  ============================
+  Tournament = C(n,2)-bit codeword
+  H(T) = lossy compression (retains ~28% of info at n=6)
+  Forbidden H values = excluded codewords
+  Hamming [7,4,3] = [H_forb_1, rank(F4), KEY_2]
+
+  McKAY BRIDGE:
+  =============
+  BT -> affine E_6: sum(dims) = 12 = h(E_6), sum(dims^2) = 24 = |BT|
+  BO -> affine E_7: sum(dims) = 18 = h(E_7), sum(dims^2) = 48 = |BO|
+  BI -> affine E_8: sum(dims) = 30 = h(E_8), sum(dims^2) = 120 = |BI|
+
+  THE SELF-REFERENTIAL STRUCTURE:
+  ================================
+  H_forb_2 = 21 = |Phi+(A_6)| where A_6 has 7 = H_forb_1 vertices
+  The first forbidden value COUNTS the vertices of the quiver whose
+  indecomposable count equals the second forbidden value.
+

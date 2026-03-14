@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-14-S68 — 2026-03-14: Quiver Representation Theory + Information Theory Deep Dive
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S67
+**Summary of work:**
+Deep exploration of quiver representation theory, Dynkin diagrams, and information theory connections to tournament parity. Fixed the E-type Cartan matrix bug (branching node at position 3, not 2), achieving correct root counts: E₆=36, E₇=63, E₈=120. Built complete A₆ Auslander-Reiten quiver analysis revealing self-referential structure. Computed tournament→H channel capacity and arc flip delta spectrum.
+
+**Critical findings:**
+1. **A₆ self-referential structure (HYP-1122)**: H_forb₁=7=h(A₆), H_forb₂=21=|Φ⁺(A₆)|, rank(A₆)=6 = # blocked decompositions. The 6 simple roots of A₆ ↔ the 6 decompositions of T=10.
+2. **T=10=|Φ⁺(A₄)| (HYP-1123)**: The target value for H=21 is itself a Gabriel number. Nested: H_forb₂=|Φ⁺(A₆)|, T(H_forb₂)=|Φ⁺(A₄)|.
+3. **E₇ threshold (HYP-1124)**: |Φ⁺(E₇)|=63 forbidden at n≤7, achievable at n=8=rank(E₈). Gabriel number crossover at exact Lie-theoretic boundary.
+4. **Channel rate ≈ 27% (HYP-1125)**: Tournament→H retains ~27% of information, remarkably stable across n=3..6.
+5. **Arc flip deltas (HYP-1126)**: All even, symmetric, |δ|∈{0,2,4,6,8,12} at n=5. |δ|=10 ABSENT (= T(H_forb₂)).
+6. **Max fiber diameter = C(n,2) (HYP-1127)**: Every H-fiber at n=5 contains complementary tournament pairs (Hamming distance = 10/10).
+7. **7 is NOT a Gabriel number (HYP-1129)**: H_forb₁ is an orphan — not |Φ⁺| for any Dynkin type, but h(A₆).
+8. **Tits form verified (HYP-1128)**: q(α)=1 for all positive roots of A₆, E₆, E₇, E₈.
+9. **Disjoint interval modules (HYP-1130)**: Max antichain in A₆ interval modules = 3 = KEY₂. 70 disjoint pairs, 140 overlapping.
+10. **Cartan matrix bug fixed**: E-type branching was at node 2 (wrong), corrected to node 3 (Bourbaki convention).
+
+**New contributions:** HYP-1122 to HYP-1130 (9 hypotheses), quiver_dynkin_deep.py (corrected), quiver_rep_deep.py (new)
+**Unresolved threads:** Prove H=21 impossible for all n. Is the A₆ Cartan matrix adjacency literally the decomposition block adjacency? Channel rate asymptotics (does 27% persist for n>6?).
+
+---
+
 ## kind-pasteur-2026-03-14-S67 — 2026-03-14: Permanent Moat = {7, 21} + Monotonicity Theorem
 
 **Account:** kind-pasteur
