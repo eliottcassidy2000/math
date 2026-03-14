@@ -1399,4 +1399,5 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1398 | **7 = \|2-omega\|^2**: Forbidden value = squared distance from 2 to e^(2pi*i/3). | CONFIRMED | transcendental_tournament_bases.py | opus-S71l |
 | HYP-1399 | **Doubly-weighted k-nacci -> 3**: Weights=2 gives limit 3. Weight=j gives j+1. | CONFIRMED | transcendental_tournament_bases.py | opus-S71l |
 | HYP-1400 | **OGF of Mean(H) = 2x/(2-x)**: Pole at tournament generator x=2. | CONFIRMED | transcendental_tournament_bases.py | opus-S71l |
-| HYP-1401 | **7*3^k forbidden terminates at k=3**: {7,21,63} forbidden but 189=7*27 achievable. Baer obstruction has finite depth. | CONFIRMED | baer_obstruction_mechanism.py | opus-S71l |
+| HYP-1401 | **7*3^k forbidden terminates at k=2 (not permanent)**: {7,21,63} forbidden at n=7 but 63 ACHIEVABLE at n=8! Only {7,21} permanently forbidden. | REFUTED as permanent pattern — 63 is temporary. | baer_obstruction_mechanism.py | opus-S71l |
+| HYP-1402 | **H=63 ACHIEVABLE at n=8**: Monte Carlo (100K samples) finds H=63 28 times at n=8. H=7 and H=21 still at 0. Permanently forbidden set = {7, 21} ONLY. | CONFIRMED (Monte Carlo n=8, DP counting) | baer_obstruction_mechanism.py | opus-S71l |
