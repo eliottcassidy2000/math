@@ -1,0 +1,174 @@
+======================================================================
+PROOF DIRECTION: Why does each disjoint cycle set contribute 2^k?
+======================================================================
+
+======================================================================
+PART 1: CYCLE REVERSAL — ΔH for reversing a single 3-cycle
+======================================================================
+  n=5: ΔH distribution when reversing a 3-cycle:
+    ΔH = -4: 120 cases
+    ΔH = -2: 240 cases
+    ΔH = 0: 1840 cases
+    ΔH = 2: 240 cases
+    ΔH = 4: 120 cases
+
+  Note: ΔH when reversing a 3-cycle is NOT always ±2.
+  The reversal can change MULTIPLE cycles simultaneously.
+
+======================================================================
+PART 2: WHICH PATHS USE WHICH CYCLE ARCS?
+======================================================================
+  Tournament (bits=341): H=15, 5 3-cycles
+    C0: [0, 1, 2], arcs=[(0, 1), (1, 2), (2, 0)]
+      Paths using ≥2 arcs from C0: 5
+    C1: [0, 1, 4], arcs=[(0, 1), (1, 4), (4, 0)]
+      Paths using ≥2 arcs from C1: 5
+    C2: [0, 2, 3], arcs=[(0, 3), (3, 2), (2, 0)]
+      Paths using ≥2 arcs from C2: 5
+    C3: [1, 3, 4], arcs=[(1, 4), (4, 3), (3, 1)]
+      Paths using ≥2 arcs from C3: 5
+    C4: [2, 3, 4], arcs=[(2, 4), (4, 3), (3, 2)]
+      Paths using ≥2 arcs from C4: 5
+
+======================================================================
+PART 3: INCLUSION-EXCLUSION / MÖBIUS FUNCTION
+======================================================================
+
+The OCF says: H(T) = Σ_Ω (-1)^{n-comp(Ω)} where Ω ranges over
+"odd-cycle covers" of T. The 2^k pattern suggests a BINARY choice
+at each cycle: include it or not.
+
+For the Möbius function on the Boolean lattice of cycle subsets:
+  μ(∅, S) = (-1)^|S|
+
+And the inclusion-exclusion gives:
+  f(S) = Σ_{U ⊆ S} (-1)^{|S|-|U|} g(U)
+
+The formula H = Σ_S 2^|S| where S ranges over disjoint cycle sets
+is equivalent to:
+  H = Σ_S 2^|S| = evaluation of IP at x=2
+
+This is the PARTITION FUNCTION of the hard-core lattice gas at λ=2.
+
+
+======================================================================
+PART 4: DIRECT PATH ANALYSIS AT n=4
+======================================================================
+
+  Tournament with t₃=1, H=3 (bits=2):
+    3-cycle: [(0, 2), (2, 1), (1, 0)]
+    Hamiltonian paths:
+      3→0→2→1 (cycle arcs: [(0, 2), (2, 1)]) ← uses cycle arcs
+      3→1→0→2 (cycle arcs: [(1, 0), (0, 2)]) ← uses cycle arcs
+      3→2→1→0 (cycle arcs: [(2, 1), (1, 0)]) ← uses cycle arcs
+
+======================================================================
+PART 5: UNDERSTANDING THE +2 CONTRIBUTION
+======================================================================
+
+For n=4 with one 3-cycle on {a,b,c} and a fourth vertex d:
+  - The transitive part gives H=1 (the unique path through all vertices in score order)
+  - The 3-cycle adds 2 more paths — the "cycle-traversing" paths
+
+How does this work? If the cycle is a→b→c→a and d beats a,b,c:
+  Transitive path: d→a→b→c (or some order)
+  Cycle paths: d→c→a→b and d→b→c→a (the two ways to traverse the cycle)
+
+Wait, that's 3 paths total? Yes: H = 1 + 2 = 3.
+
+But the "1" is the path that doesn't use the cycle at all?
+No — in a tournament, ALL paths use arcs. The question is whether
+the path TRAVERSES the cycle (uses 2 consecutive cycle arcs).
+
+Let me check: for the cycle a→b→c→a:
+  - Path d→a→b→c: uses arcs (a,b) and (b,c) from the cycle. TWO cycle arcs.
+  - Path d→c→a→b: uses arc (c,a) and (a,b). TWO cycle arcs.
+  - Path d→b→c→a: uses arcs (b,c) and (c,a). TWO cycle arcs.
+
+All three paths use exactly 2 cycle arcs! So the +2 is not "2 cycle paths",
+it's something more subtle.
+
+  Example: bits=2
+    Vertex 0 beats: [2]
+    Vertex 1 beats: [0]
+    Vertex 2 beats: [1]
+    Vertex 3 beats: [0, 1, 2]
+  Cycle: [(0, 2), (2, 1), (1, 0)]
+  All 3 Hamiltonian paths:
+    3→0→2→1: cycle arcs=[(0, 2), (2, 1)], other=[(3, 0)]
+    3→1→0→2: cycle arcs=[(1, 0), (0, 2)], other=[(3, 1)]
+    3→2→1→0: cycle arcs=[(2, 1), (1, 0)], other=[(3, 2)]
+
+======================================================================
+PART 6: THE PAIRING — Paths in T vs paths in T' (reversed cycle)
+======================================================================
+  Original (1 cycle, H=3):
+    3→0→2→1
+    3→1→0→2
+    3→2→1→0
+  Reversed (T', H=3):
+    3→0→1→2
+    3→1→2→0
+    3→2→0→1
+
+  Common paths: 0
+  Only in original: 3
+    3→0→2→1
+    3→1→0→2
+    3→2→1→0
+  Only in reversed: 3
+    3→0→1→2
+    3→1→2→0
+    3→2→0→1
+
+  H(T) - H(T') = 0
+  |only_orig| - |only_rev| = 0
+  Cycles in T': [([0, 1, 2], [(0, 1), (1, 2), (2, 0)])]
+
+======================================================================
+PART 7: TRANSITIVE BASE + CYCLE CONTRIBUTION DECOMPOSITION
+======================================================================
+  For each n=5 tournament, decompose H into contributions:
+  H = 1 (base) + Σ_C 2 (each cycle) + Σ_{C,C'} 4 (disjoint pairs)
+
+  bits=0: H=1, t₃=0, t₅=0, 1+2(t₃+t₅)=1, match=True
+  bits=1: H=1, t₃=0, t₅=0, 1+2(t₃+t₅)=1, match=True
+  bits=3: H=1, t₃=0, t₅=0, 1+2(t₃+t₅)=1, match=True
+  bits=682: H=15, t₃=5, t₅=2, 1+2(t₃+t₅)=15, match=True
+  bits=1023: H=1, t₃=0, t₅=0, 1+2(t₃+t₅)=1, match=True
+
+======================================================================
+DONE — Proof direction analysis
+======================================================================
+
+PROOF STRATEGY SUMMARY:
+
+The formula H = IP(G, 2) can be understood through the OCF
+(Odd Cycle Collection Formula):
+
+H(T) = Σ_{Ω ∈ OddCycCovers(T)} (-1)^{n - comp(Ω)}
+
+The key insight is that each INDEPENDENT SET of pairwise
+vertex-disjoint odd cycles S = {C₁, ..., C_k} contributes
+exactly 2^k to this sum.
+
+This is because:
+1. The cycles in S partition some of the vertices into disjoint cycles
+2. Each cycle C_i of length ℓ_i contributes a factor of 2 to the path
+   count (the two ways to "unwind" the cycle into a path segment)
+3. The disjointness ensures these factors multiply independently
+
+The factor 2 per cycle is related to the fact that a directed
+odd cycle of length ℓ has exactly 2 Hamiltonian paths (the two
+directions of traversal), and ℓ is odd, so reversing contributes
+with the same sign.
+
+FORMAL PROOF DIRECTION:
+Use the OCF expansion and group terms by the maximal independent
+set they contain. Show that the contribution of each independent
+set S is exactly 2^|S| by:
+(a) Identifying a bijection between Hamiltonian paths and
+    (independent set, remaining path) pairs
+(b) Showing the "remaining path" factor contributes 1 (the base)
+(c) The "independent set" factor contributes 2^|S| (binary choice per cycle)
+
