@@ -1,0 +1,345 @@
+======================================================================
+PART 1: THE (x+1)^n vs (x+2)^n RATIO AT SPECIAL n
+======================================================================
+
+The ratio (x+1)^n / (x+2)^n as a function of x:
+  At x=1: (2/3)^n → 0 as n → ∞
+  At x=0: (1/2)^n → 0
+  At x=-1: (0/1)^n = 0 for n>0
+  At x=∞: → 1
+
+  n= 3: (2/3)^n = 0.29629630, diff 3^n - 2^n =         19
+  n= 5: (2/3)^n = 0.13168724, diff 3^n - 2^n =        211
+  n= 7: (2/3)^n = 0.05852766, diff 3^n - 2^n =       2059
+  n= 8: (2/3)^n = 0.03901844, diff 3^n - 2^n =       6305
+  n= 9: (2/3)^n = 0.02601229, diff 3^n - 2^n =      19171
+  n=10: (2/3)^n = 0.01734153, diff 3^n - 2^n =      58025
+  n=11: (2/3)^n = 0.01156102, diff 3^n - 2^n =     175099
+  n=12: (2/3)^n = 0.00770735, diff 3^n - 2^n =     527345
+  n=15: (2/3)^n = 0.00228366, diff 3^n - 2^n =   14316139
+
+======================================================================
+PART 2: DIFFERENCE (x+2)^n - (x+1)^n AT EACH n
+======================================================================
+
+  (x+2)^n - (x+1)^n evaluated at specific x values:
+
+  x=0: 2^n - 1^n = 2^n - 1 (Mersenne numbers!)
+  x=1: 3^n - 2^n
+  x=2: 4^n - 3^n
+  x=3: 5^n - 4^n
+
+  At x=0, these give Mersenne numbers:
+    n=2: 3, n=3: 7, n=5: 31, n=7: 127 — ALL MERSENNE PRIMES!
+    n=4: 15, n=6: 63 — not prime.
+
+  At x=1:
+    3^n - 2^n: 1, 5, 19, 65, 211, 665, 2059, 6305, 19171, ...
+    (OEIS A001047: 3^n - 2^n)
+
+  TOURNAMENT CONNECTION:
+  I(Omega, 3) - I(Omega, 2) = alpha_1 + 5*alpha_2 + 19*alpha_3 + ...
+  The coefficients ARE the Mersenne-like numbers 3^k - 2^k!
+
+    n    2^n-1    3^n-2^n      4^n-3^n        5^n-4^n
+    1        1          1            1              1
+    2        3          5            7              9
+    3        7         19           37             61
+    4       15         65          175            369
+    5       31        211          781           2101
+    6       63        665         3367          11529
+    7      127       2059        14197          61741
+    8      255       6305        58975         325089
+    9      511      19171       242461        1690981
+   10     1023      58025       989527        8717049
+   11     2047     175099      4017157       44633821
+   12     4095     527345     16245775      227363409
+   13     8191    1586131     65514541     1153594261
+   14    16383    4766585    263652487     5835080169
+   15    32767   14316139   1059392917    29443836301
+
+======================================================================
+PART 3: THE ROLE OF 7 AND 8
+======================================================================
+
+  7 = (x+2)^n - (x+1)^n at n=3, x=0 = 2^3 - 1 = Mersenne prime!
+  Also: 7 = Φ_3(2) = cyclotomic polynomial of order 3 at 2.
+  Also: 7 = C(7,1) = first prime that enters at n=18 in the packing dictionary.
+  Also: H=7 is IMPOSSIBLE for n=5 tournaments (the Forbidden 3 / S74).
+
+  8 = 2^3 = (x+1)^n at n=3, x=1
+  Also: 8 = first n where even-tournament structure appears
+  Also: H_8 Hadamard matrix: creates the n=7 regular simplex in {0,1}^7
+
+  HOW 7 AND 8 CHANGE THINGS in the (x+1)/(x+2) framework:
+
+  At x=1 (tournament evaluation point):
+    (x+1)^3 = 8 = 2^3    ← the simplex "fills" 8 slots
+    (x+2)^3 = 27 = 3^3   ← the cuboid has 27 slots
+    Complement: 27 - 8 = 19 = 3^3 - 2^3
+
+  The number 19 appears as:
+    - 3^3 - 2^3 = 19
+    - Coefficient of alpha_3 in I(3)-I(2)
+    - "The 19 corner pieces at level 3"
+
+  7 + 8 = 15 = C(6,2) = number of edges in T_6
+  7 * 8 = 56 = C(8,3) = number of 3-element subsets of 8
+
+  THE (5,6) → (7,8) SHIFT:
+  Tournament polynomial: z^2 - 5z + 6 = (z-2)(z-3)
+  Roots: 2, 3. Sum=5, Product=6.
+  The "next level": z^2 - 7z + 8... doesn't factor nicely.
+  But z^2 - 7z + 12 = (z-3)(z-4) — shift up by 1!
+  Sum=7, Product=12 = 3*4.
+
+  The (5,6)-recurrence: p_k = 5p_{k-1} - 6p_{k-2}
+    k    2^k+3^k   5*prev-6*prev2  match
+    2         13               13      ✓
+    3         35               35      ✓
+    4         97               97      ✓
+    5        275              275      ✓
+    6        793              793      ✓
+    7       2315             2315      ✓
+    8       6817             6817      ✓
+    9      20195            20195      ✓
+   10      60073            60073      ✓
+   11     179195           179195      ✓
+
+  NOW: what recurrence does 7^k + 8^k satisfy?
+  (z-7)(z-8) = z^2 - 15z + 56. Sum=15, Product=56.
+    k      7^k+8^k   15*prev-56*prev2  match
+    2          113                113      ✓
+    3          855                855      ✓
+    4         6497               6497      ✓
+    5        49575              49575      ✓
+    6       379793             379793      ✓
+    7      2920695            2920695      ✓
+    8     22542017           22542017      ✓
+    9    174571335          174571335      ✓
+
+======================================================================
+PART 4: 9=3² AND 10=5*2 IN THE POLYNOMIAL FRAMEWORK
+======================================================================
+
+  9 = 3² = (x+1)^2 at x=2 = simplex squared
+  10 = 5*2 = (x+2)*(x+1) at x=1? No, (1+2)*(1+1) = 6.
+       10 = C(5,2) = triangular number
+       10 = (x+2)^n - (x+1)^n at... let's check.
+
+  At x=1: 3^n - 2^n = 10 has no integer solution (3^2-2^2=5, 3^3-2^3=19).
+  At x=0: 2^n - 1 = 10 → 2^n = 11, no solution.
+
+  So 10 doesn't appear directly as a simplex-cuboid difference.
+
+  But 9 = 3^2 DOES:
+  (x+2)^n at x=1, n=2: 3^2 = 9. The 2-cuboid has 9 faces.
+  (x+1)^n at x=2, n=2: 3^2 = 9. The 2-simplex at x=2 has 9 elements.
+
+  The DOUBLE APPEARANCE of 9:
+    9 = (1+2)^2 = 3^2 = cuboid^2
+    9 = (2+1)^2 = 3^2 = simplex-at-x=2 squared
+
+  This is because (x+2)^n at x=1 EQUALS (x+1)^n at x=2! Both give 3^n.
+  It's the SAME evaluation: 3^n = I(Omega, 3) in tournament theory.
+
+  THE BEAUTIFUL SYMMETRY:
+    (x+1)^n|_{x=1} = 2^n = I(2) = "simplex"
+    (x+1)^n|_{x=2} = 3^n = I(3) = "cuboid"
+    (x+2)^n|_{x=1} = 3^n = I(3) = "cuboid"
+
+  So I(3) can be computed EITHER as (x+1)^n at x=2 OR (x+2)^n at x=1.
+  The simplex polynomial at a HIGHER evaluation point equals the
+  cuboid polynomial at the STANDARD point!
+
+  GENERALIZATION: (x+r)^n at x=1 gives (r+1)^n
+    r   (r+1)^1  (r+1)^2  (r+1)^3  (r+1)^4                 name
+    0         1        1        1        1       simplex at x=0
+    1         2        4        8       16              simplex
+    2         3        9       27       81               cuboid
+    3         4       16       64      256            4-hedroid
+    4         5       25      125      625            5-hedroid
+    5         6       36      216     1296                (r=5)
+    6         7       49      343     2401                (r=6)
+    7         8       64      512     4096                (r=7)
+
+======================================================================
+PART 5: THE 9=3² PACKING — SIMPLEX INSIDE SIMPLEX
+======================================================================
+
+  9 = 3² means: the 3-CYCLE can be SQUARED.
+  In tournament theory: 3 disjoint 3-cycles cover all 9 vertices.
+  This is alpha_3 first appearing.
+
+  In the (x+1)/(x+2) framework:
+  (x+1)^9 = ((x+1)^3)^3 = simplex^3
+  (x+2)^9 = ((x+2)^3)^3 = cuboid^3
+
+  The RATIO: ((x+2)/(x+1))^9 = ((x+2)/(x+1))^{3*3}
+  At x=1: (3/2)^9 = 19683/512 ≈ 38.44
+
+  But also: (3/2)^9 = ((3/2)^3)^3 = (27/8)^3 = 19683/512
+
+  THE TRIPLE NESTING:
+  (x+2)^9 = ((x+1)+1)^9 = sum C(9,k)(x+1)^k
+  But ALSO:
+  (x+2)^9 = (((x+1)+1)^3)^3
+
+  Can we decompose the packing hierarchically?
+  Level 1: cuboid^3 = simplex^3 + complement^3
+  Level 2: each complement^3 = simplex^2 * complement + ...
+  Level 3: ...
+
+  This is the ITERATED PACKING of simplices inside cuboids.
+  At 9=3², we get a DOUBLY NESTED structure.
+  At 27=3³, a TRIPLY NESTED structure.
+  At 3^k, a k-FOLD NESTED structure.
+
+  ITERATED DECOMPOSITION:
+  (x+2)^9 = ((x+2)^3)^3
+  At x=1: 3^9 = 19683 = (3^3)^3 = 19683
+
+  Let y = (x+1). Then (x+2) = y+1.
+  (x+2)^3 = (y+1)^3 = y^3 + 3y^2 + 3y + 1
+  (x+2)^9 = ((y+1)^3)^3 = (y^3 + 3y^2 + 3y + 1)^3
+
+  But also: (x+2)^9 = (y+1)^9 = sum C(9,k) y^k
+  Both expressions are equal (of course!).
+
+  The HIERARCHICAL view: ((y+1)^3)^3
+  First level: y^3 + (3y^2 + 3y + 1) = simplex + complement
+  Second level: (simplex + complement)^3
+    = simplex^3 + 3*simplex^2*complement + 3*simplex*complement^2 + complement^3
+
+  At y=2 (x=1):
+    simplex = y^3 = 8
+    complement = 3y^2 + 3y + 1 = 19 = 19
+    simplex^3 = 512
+    3*simplex^2*complement = 3648
+    3*simplex*complement^2 = 8664
+    complement^3 = 6859
+    Total = 19683 = 3^9 = 19683
+
+======================================================================
+PART 6: 10=5*2 — THE CROSS-PRODUCT
+======================================================================
+
+  10 = 5 * 2 = C(5,2)
+
+  In tournament terms: n=10 is where 5-cycles can first pair up:
+    Two disjoint 5-cycles covering all 10 vertices → alpha_2^{55}
+    Also: (3,7) pair first appears → alpha_2^{37}
+
+  In the polynomial framework:
+  10 is NOT a power of a single base. It's a PRODUCT of distinct primes.
+
+  (x+1)^{10} = ((x+1)^5)^2 = ((x+1)^2)^5
+  (x+2)^{10} = ((x+2)^5)^2 = ((x+2)^2)^5
+
+  Both factorizations are available: 10 = 5*2 = 2*5.
+
+  The CROSS-PRODUCT structure:
+  Let y = (x+1). Then (x+2)^10 = (y+1)^10.
+
+  (y+1)^10 = sum C(10,k) y^k
+  = y^10 + 10y^9 + 45y^8 + 120y^7 + 210y^6 + 252y^5 + 210y^4 + 120y^3 + 45y^2 + 10y + 1
+
+  The LARGEST binomial coefficient is C(10,5) = 252 at the CENTER.
+  This is EXACTLY where the "cuboid excess" peaks!
+
+  At y=2: each term C(10,k)*2^k:
+
+  (y+1)^10 at y=2:
+    C(10,10)*2^10 =    1*  1024 =     1024  (  1.7%) 
+    C(10,9)*2^9 =   10*   512 =     5120  (  8.7%) ####
+    C(10,8)*2^8 =   45*   256 =    11520  ( 19.5%) #########
+    C(10,7)*2^7 =  120*   128 =    15360  ( 26.0%) #############
+    C(10,6)*2^6 =  210*    64 =    13440  ( 22.8%) ###########
+    C(10,5)*2^5 =  252*    32 =     8064  ( 13.7%) ######
+    C(10,4)*2^4 =  210*    16 =     3360  (  5.7%) ##
+    C(10,3)*2^3 =  120*     8 =      960  (  1.6%) 
+    C(10,2)*2^2 =   45*     4 =      180  (  0.3%) 
+    C(10,1)*2^1 =   10*     2 =       20  (  0.0%) 
+    C(10,0)*2^0 =    1*     1 =        1  (  0.0%) 
+    Total = 59049 = 3^10 = 59049
+
+  Simplex part y^10 = 1024
+  Complement = 59049 - 1024 = 58025
+  Complement/simplex = 56.6650
+
+======================================================================
+PART 7: THE CONNECTION — k-NACCI, SIMPLICES, AND TOURNAMENTS
+======================================================================
+
+  UNIFIED PICTURE:
+
+  1. k-NACCI LIMIT = 2:
+     The ratio of consecutive k-nacci numbers → 2.
+     2 = (x+1)|_{x=1} = simplex evaluation point.
+     Error: ~1/2^k = inverse simplex at dimension k.
+
+  2. DOUBLED k-NACCI LIMIT = 3:
+     The ratio of doubled k-nacci → 3.
+     3 = (x+2)|_{x=1} = cuboid evaluation point.
+     Error: ~2/3^k = 2 * inverse cuboid at dimension k.
+
+  3. SIMPLEX-IN-CUBOID:
+     (x+2)^n = sum C(n,k)(x+1)^k
+     The cuboid is a binomial sum of simplex pieces.
+     The complement has corner pieces of size 3^k - 2^k.
+
+  4. TOURNAMENT INDEPENDENCE POLYNOMIAL:
+     I(Omega, x) = 1 + alpha_1*x + alpha_2*x^2 + ...
+     I(2) = H (Hamiltonian paths = simplex evaluation)
+     I(3) = "cuboid evaluation"
+     I(3) - I(2) = sum alpha_k(3^k - 2^k) = corner piece count
+
+  5. THE KEYS 2 AND 3:
+     2 = smallest prime = simplex = k-nacci limit
+     3 = smallest odd prime = cuboid = doubled k-nacci limit
+     z^2 - 5z + 6 = (z-2)(z-3) = tournament polynomial
+     5 = sum, 6 = product = 3! = 2*3
+
+  6. HOW 7 AND 8 MODIFY:
+     7 = Φ_3(2) = 2^3 - 1 = Mersenne prime = cuboid complement at n=3
+     8 = 2^3 = simplex at n=3
+     Together: (7,8) represents the "first nontrivial corner" —
+     the first dimension where corner pieces have structure.
+
+     7 + 8 = 15 = (3/2)^n at n=... no.
+     15 = 2^4 - 1 = Mersenne number (not prime)
+     15 = (x+2)^4 - (x+1)^4 at... no, that's 65.
+     15 = C(6,2) = edges in 6-vertex tournament.
+     15 = 3*5 = both odd primes multiplied.
+
+  7. HOW 9=3² AND 10=5*2 FIT:
+     9 = simplex evaluation squared = 3^2
+     → Doubly-nested packing: ((y+1)^3)^3
+     → Tournament: alpha_3 first appears (3 disjoint 3-cycles)
+     → The SELF-SIMILAR level of the hierarchy
+
+     10 = 5*2 = odd prime * even prime
+     → Cross-product packing: ((y+1)^5)^2 or ((y+1)^2)^5
+     → Tournament: alpha_2^{55} first appears (paired 5-cycles)
+     → The MIXED level: odd and even interact
+
+  THE FINAL SYNTHESIS:
+  The simplex-cuboid framework IS the independence polynomial framework.
+  Every tournament lives on a spectrum from:
+    - TRANSITIVE (I=1, simplex=cuboid, no corners, pure order)
+    - REGULAR (I maximal, simplex << cuboid, many corners, pure chaos)
+
+  The "packing ratio" I(3)/I(2) is a single number measuring this:
+    I(3)/I(2) = 1: transitive (simplex fills cuboid)
+    I(3)/I(2) → (3/2)^{n/3}: maximally cyclic (empty simplex)
+
+  The k-nacci limit (2) and doubled k-nacci limit (3) are the
+  BOUNDARIES of this spectrum: the simplex wall and cuboid wall.
+
+  MAXIMAL I(3)/I(2) RATIOS vs (3/2)^{n/3}:
+    n  max I3/I2  (3/2)^(n/3)    ratio
+    3     1.3333       1.5000   0.8889
+    5     1.4667       1.9656   0.7462
+    7     1.8897       2.5756   0.7337
+
+Done.
