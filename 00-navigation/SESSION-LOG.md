@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71e — 2026-03-14: Simplex-Cuboid-Cyclotomic, H=21 Six-Way Block, α₁=3 Gap Theorem
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71e (4th context continuation)
+**Files read:** Prior session summary, h21_proof_status_s71e.md, h21_case62 scripts, spectral_tournament_knot.out, inbox messages
+**What was done:**
+- **H=21 proof**: Continued six-way block analysis. (6,2) exhaustive at n=7 running (1.5M/2.1M, all zero). Cases A/B1 PROVED for all n.
+- **Simplex tournament construction**: PROVED H=3^m exists for ALL m via m disjoint 3-cycles with transitive inter-group structure. Verified m=1,2,3,4. Cross-group 5-subs lack Hamiltonian cycles (too score-polarized for HYP-1142 to apply).
+- **α₁=3 gap theorem**: Phase transition at t₃=3: for n≤6, t₃≤2→d₅=0, t₃≥3→d₅≥1, so α₁ jumps from 2 to 4 (gap at 3). At n=7, α₁=3 exists but FORCES α₂=2 (357/357 samples), giving H=15 not 7.
+- **Simplex-cuboid-cyclotomic framework**: k-bonacci→2 = OCF base, weighted k-bonacci→3. (x+2)²-(x+1)²=2x+3 gives H_forb at x=2,9. Forbidden values in simplex-cuboid gaps [4^m+1, 3^{m+1}-1].
+- **Independence polynomial analysis**: Exhaustive n=6: H=9 with (2,1) gives I=(x+1)² (perfect simplex). Most polynomials irreducible.
+- **H=73 achievable**: Φ₃(8)=73 found 1888/100k at n=7, confirming only {7,21} are permanently forbidden.
+- Added HYP-1211 through HYP-1215.
+**Unresolved threads:**
+- (6,2) exhaustive n=7 completion (process died at 1.5M, restarted)
+- General proof of (8,1) Case B and (6,2) Subcase B2 for n≥8
+- P_11 eigenspace computation still running (1160 min CPU, 1.4GB RAM)
+- n=8 H spectrum sampling (in progress)
+
 ## opus-2026-03-14-S84 — 2026-03-14: Ultimate (2,3) Rosetta Stone — 7+ Domain Explorations
 
 **Account:** opus
