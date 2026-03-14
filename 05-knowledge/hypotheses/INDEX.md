@@ -740,6 +740,10 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-333 | #RC=0 when redundancy (#TTs-rank) ≥ threshold | CONFIRMED: threshold=3 at n=5, =8 at n=6. Note: #bad=3 at n=5→redundancy=0, at n=6→redundancy∈{2,3} (nonzero). | beta2_rank_critical.py |
 | HYP-334 | Flip obstruction: 3-cycle among ALL bad vertices forces β₁≥1 | CONFIRMED: 0 counterexamples at n=5 (720), n=6 (27968), n=7 (479). Flipping bad TT→3-cycle: 100% force β₁=1 | beta2_flip_deep.py |
 | HYP-335 | Minimum #bad when β₁=1 grows with n | CONFIRMED: min_bad=3(n=5), 4(n=6), 5(n=7). β₁=1 bad sub-tournament often SC (55% at n=6) | beta2_flip_deep.py |
+| HYP-1104 | **H=7 and H=21 are the ONLY permanent forbidden H values**: At n=8 (100k sampling), only 2 odd gaps exist below H=600: H=7 and H=21. H=63 achievable at n=8 (22/100k). All other previous gaps (35, 39 at n=6; 63 at n=7) fill in at higher n. The permanent moat = {Φ₃(KEY₁), Φ₃(KEY₁²)} = {Φ₃(2), Φ₃(4)}. | moat_n8_analysis.py, h63_fast.py | kind-pasteur-S67 |
+| HYP-1105 | **Complete mod 7 barrier at n=6**: No tournament on 6 vertices has H ≡ 0 mod 7. Root cause: (alpha_1 + 2·alpha_2) mod 7 never equals 3. The 16 achievable (a1 mod 7, a2 mod 7) pairs skip all combinations summing to 3 mod 7. Barrier breaks at n=7 (H=189=27·7 achievable). | forbidden_73k_theory.py, alpha_mod7_constraint.py | kind-pasteur-S67 |
+| HYP-1106 | **H=63 = 7·3² is NOT permanently forbidden**: Achievable at n=8 (22/100k hits). The 7·3^k pattern {7,21,63} was a finite-n coincidence: 63 fills at n=8, 189=7·3³ fills at n=7 (it's the max), 567=7·3⁴ fills at n=8. Only 7·3⁰=7 and 7·3¹=21 remain permanently forbidden. | moat_n8_analysis.py | kind-pasteur-S67 |
+| HYP-1107 | **Alpha_1=3 universally impossible**: At n=5 (exhaustive), n=6 (exhaustive): alpha_1=3 never achieved. c3d=2 gives c5d=0 (alpha_1=2), c3d=3 forces c5d≥1 (alpha_1≥4). Jump from 2 to 4. This is the root mechanism blocking H=7. | alpha_mod7_constraint.py | kind-pasteur-S67 |
 
 ---
 

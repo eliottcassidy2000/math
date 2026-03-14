@@ -1,0 +1,105 @@
+======================================================================
+ALPHA MOD 7 CONSTRAINT — STRUCTURAL ANALYSIS
+======================================================================
+
+--- DIRECTED HAMILTONIAN CYCLE COUNTS ON 5-VERTEX TOURNAMENTS ---
+  Possible directed Hamiltonian cycle counts: [0, 1, 2, 3]
+    count=0: 480 tournaments
+    count=1: 360 tournaments
+    count=2: 144 tournaments
+    count=3: 40 tournaments
+
+--- ALPHA ANALYSIS AT n=5 (exhaustive) ---
+  Achievable alpha_1: [0, 1, 2, 4, 5, 6, 7]
+  Achievable H: [1, 3, 5, 9, 11, 13, 15]
+
+  (c3_directed, c5_directed) -> alpha_1:
+    c3d=0, c5d=0: alpha_1=0, H=1, count=120
+    c3d=1, c5d=0: alpha_1=1, H=3, count=120
+    c3d=2, c5d=0: alpha_1=2, H=5, count=240
+    c3d=3, c5d=1: alpha_1=4, H=9, count=240
+    c3d=4, c5d=1: alpha_1=5, H=11, count=120
+    c3d=4, c5d=2: alpha_1=6, H=13, count=120
+    c3d=4, c5d=3: alpha_1=7, H=15, count=40
+    c3d=5, c5d=2: alpha_1=7, H=15, count=24
+
+--- ALPHA STRUCTURE AT n=6 (exhaustive) ---
+  0%...
+  25%...
+  50%...
+  75%...
+
+  (c3d, c5d, alpha_2) -> H, mod 7:
+    c3d= 0 c5d= 0 a2=0: a1= 0 H=  1 mod7=1 s=0 (720)
+    c3d= 1 c5d= 0 a2=0: a1= 1 H=  3 mod7=3 s=1 (960)
+    c3d= 2 c5d= 0 a2=0: a1= 2 H=  5 mod7=5 s=2 (2160)
+    c3d= 3 c5d= 1 a2=0: a1= 4 H=  9 mod7=2 s=4 (2880)
+    c3d= 4 c5d= 1 a2=0: a1= 5 H= 11 mod7=4 s=5 (1440)
+    c3d= 4 c5d= 2 a2=0: a1= 6 H= 13 mod7=6 s=6 (1440)
+    c3d= 4 c5d= 2 a2=1: a1= 6 H= 17 mod7=3 s=1 (720)
+    c3d= 4 c5d= 3 a2=0: a1= 7 H= 15 mod7=1 s=0 (1920)
+    c3d= 4 c5d= 4 a2=0: a1= 8 H= 17 mod7=3 s=1 (720)
+    c3d= 5 c5d= 2 a2=0: a1= 7 H= 15 mod7=1 s=0 (288)
+    c3d= 5 c5d= 4 a2=0: a1= 9 H= 19 mod7=5 s=2 (1440)
+    c3d= 5 c5d= 4 a2=1: a1= 9 H= 23 mod7=2 s=4 (1440)
+    c3d= 5 c5d= 6 a2=1: a1=11 H= 27 mod7=6 s=6 (480)
+    c3d= 6 c5d= 4 a2=2: a1=10 H= 29 mod7=1 s=0 (720)
+    c3d= 6 c5d= 5 a2=0: a1=11 H= 23 mod7=2 s=4 (1440)
+    c3d= 6 c5d= 6 a2=0: a1=12 H= 25 mod7=4 s=5 (1440)
+    c3d= 6 c5d= 6 a2=1: a1=12 H= 29 mod7=1 s=0 (2160)
+    c3d= 6 c5d= 6 a2=2: a1=12 H= 33 mod7=5 s=2 (720)
+    c3d= 6 c5d= 7 a2=1: a1=13 H= 31 mod7=3 s=1 (1440)
+    c3d= 6 c5d= 8 a2=2: a1=14 H= 37 mod7=2 s=4 (720)
+    c3d= 7 c5d= 7 a2=1: a1=14 H= 33 mod7=5 s=2 (1440)
+    c3d= 7 c5d= 7 a2=2: a1=14 H= 37 mod7=2 s=4 (1440)
+    c3d= 7 c5d= 9 a2=0: a1=16 H= 33 mod7=5 s=2 (480)
+    c3d= 7 c5d= 9 a2=1: a1=16 H= 37 mod7=2 s=4 (1440)
+    c3d= 8 c5d= 6 a2=4: a1=14 H= 45 mod7=3 s=1 (240)
+    c3d= 8 c5d= 8 a2=2: a1=16 H= 41 mod7=6 s=6 (720)
+    c3d= 8 c5d=11 a2=1: a1=19 H= 43 mod7=1 s=0 (1440)
+    c3d= 8 c5d=12 a2=1: a1=20 H= 45 mod7=3 s=1 (240)
+
+  (a1 + 2*a2) mod 7 summary:
+    s = 0:   7248 (22.1%)
+    s = 1:   4320 (13.2%)
+    s = 2:   6240 (19.0%)
+    s = 3:      0 (0.0%) *** NEEDED FOR H=0 mod 7
+    s = 4:   9440 (28.8%)
+    s = 5:   2880 (8.8%)
+    s = 6:   2640 (8.1%)
+
+  c3 (directed) mod 7:
+    c3d mod 7 = 0: 5520
+    c3d mod 7 = 1: 3600
+    c3d mod 7 = 2: 2240
+    c3d mod 7 = 3: 2880
+    c3d mod 7 = 4: 6240
+    c3d mod 7 = 5: 3648
+    c3d mod 7 = 6: 8640
+
+  alpha_1 mod 7:
+    a1 mod 7 = 0: 6768
+    a1 mod 7 = 1: 1680
+    a1 mod 7 = 2: 7760
+    a1 mod 7 = 3: 720
+    a1 mod 7 = 4: 4800
+    a1 mod 7 = 5: 7200
+    a1 mod 7 = 6: 3840
+
+  (a1 mod 7, a2 mod 7) that occur:
+    (a1 mod 7, a2 mod 7) = (0,0):   2928  s = 0
+    (a1 mod 7, a2 mod 7) = (0,1):   1440  s = 2
+    (a1 mod 7, a2 mod 7) = (0,2):   2160  s = 4
+    (a1 mod 7, a2 mod 7) = (0,4):    240  s = 1
+    (a1 mod 7, a2 mod 7) = (1,0):   1680  s = 1
+    (a1 mod 7, a2 mod 7) = (2,0):   4080  s = 2
+    (a1 mod 7, a2 mod 7) = (2,1):   2960  s = 4
+    (a1 mod 7, a2 mod 7) = (2,2):    720  s = 6
+    (a1 mod 7, a2 mod 7) = (3,2):    720  s = 0
+    (a1 mod 7, a2 mod 7) = (4,0):   4320  s = 4
+    (a1 mod 7, a2 mod 7) = (4,1):    480  s = 6
+    (a1 mod 7, a2 mod 7) = (5,0):   2880  s = 5
+    (a1 mod 7, a2 mod 7) = (5,1):   3600  s = 0
+    (a1 mod 7, a2 mod 7) = (5,2):    720  s = 2
+    (a1 mod 7, a2 mod 7) = (6,0):   1440  s = 6
+    (a1 mod 7, a2 mod 7) = (6,1):   2400  s = 1
