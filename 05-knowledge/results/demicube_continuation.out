@@ -1,0 +1,296 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+DEMICUBE CONTINUATION AND FIBONACCI CATEGORY
+opus-2026-03-14-S71g
+======================================================================
+
+======================================================================
+PART 1: DEMICUBE VOLUMES
+======================================================================
+
+Demicube convex hull volumes:
+  n=2: only 2 vertices, not enough for full-dim hull
+  n=3: 4 vertices, Vol = 0.3333333333 ≈ 1/3, complement verts = 4
+         Complement vol = 0.6666666667 ≈ 2/3
+         Vol per complement vertex = 0.1666666667 ≈ 1/6
+  n=4: 8 vertices, Vol = 0.6666666667 ≈ 2/3, complement verts = 8
+         Complement vol = 0.3333333333 ≈ 1/3
+         Vol per complement vertex = 0.0416666667 ≈ 1/24
+  n=5: 16 vertices, Vol = 0.8666666667 ≈ 13/15, complement verts = 16
+         Complement vol = 0.1333333333 ≈ 2/15
+         Vol per complement vertex = 0.0083333333 ≈ 1/120
+  n=6: 32 vertices, Vol = 0.9555555556 ≈ 43/45, complement verts = 32
+         Complement vol = 0.0444444444 ≈ 2/45
+         Vol per complement vertex = 0.0013888889 ≈ 1/720
+  n=7: 64 vertices, Vol = 0.9873015873 ≈ 311/315, complement verts = 64
+         Complement vol = 0.0126984127 ≈ 4/315
+         Vol per complement vertex = 0.0001984127 ≈ 1/5040
+  n=8: 128 vertices, Vol = 0.9968253968 ≈ 314/315, complement verts = 128
+         Complement vol = 0.0031746032 ≈ 1/315
+         Vol per complement vertex = 0.0000248016 ≈ 1/40320
+
+======================================================================
+PART 2: ANALYTIC FORMULA
+======================================================================
+Reading pattern from computed volumes:
+  n=3: Vol = 0.3333333333 = 1/3
+  n=4: Vol = 0.6666666667 = 2/3
+  n=5: Vol = 0.8666666667 = 13/15
+  n=6: Vol = 0.9555555556 = 43/45
+  n=7: Vol = 0.9873015873 = 311/315
+  n=8: Vol = 0.9968253968 = 314/315
+
+  Pattern search:
+  n=3: Vol = 1/3, 1-Vol = 2/3, Vol*n! = 2
+  n=4: Vol = 2/3, 1-Vol = 1/3, Vol*n! = 16
+  n=5: Vol = 13/15, 1-Vol = 2/15, Vol*n! = 104
+  n=6: Vol = 43/45, 1-Vol = 2/45, Vol*n! = 688
+  n=7: Vol = 311/315, 1-Vol = 4/315, Vol*n! = 4976
+  n=8: Vol = 314/315, 1-Vol = 1/315, Vol*n! = 40192
+
+  Vol(h_n) * n!:
+  n=3: 2.000000 ≈ 2
+  n=4: 16.000000 ≈ 16
+  n=5: 104.000000 ≈ 104
+  n=6: 688.000000 ≈ 688
+  n=7: 4976.000000 ≈ 4976
+  n=8: 40192.000000 ≈ 40192
+
+======================================================================
+PART 3: THE USER'S PATTERN — SIMPLEX HALVES
+======================================================================
+
+The user's observation:
+  n=2: triangle in square, 2 halves on either side
+  n=3: tetrahedron in cube, 4 halves around it
+
+Interpretation: each "half" is a corner piece with volume = (1/2) × simplex volume.
+
+n=3: simplex vol = 1/3, corner vol = 1/6 = (1/2)(1/3). ✓
+     4 corners × 1/6 = 2/3 complement. ✓
+
+n=2: For the equilateral triangle inscribed in square:
+     The equilateral triangle has area = (√3/4) × s²
+     For it to fit in a unit square with "2 halves on either side":
+     Side length s = 1, area = √3/4 ≈ 0.433.
+     2 halves each ≈ (1 - √3/4)/2 ≈ 0.284.
+     Ratio = 0.284/0.433 ≈ 0.655 ≠ 0.5.
+
+     That doesn't give "halves" in the volume sense.
+
+     ALTERNATIVE: The user might mean the RIGHT triangle (half of square):
+     Area = 1/2. The OTHER triangle is the single complement piece.
+     But there's 1 complement, not 2.
+
+     OR: The user means the diagonal splits the square into 2 pieces,
+     and the TRIANGLE is one of them. Then there are 2 pieces total
+     (2 halves of the square), and the simplex IS one of the halves.
+     So "2 halves on either side" = the 2 halves are the triangle
+     AND its complement.
+
+     This interpretation: the cube/square is divided into
+     the simplex + complement, and the pattern is about the
+     COMBINATORICS of the complement.
+
+REINTERPRETATION:
+  n=2: Square = 2 right triangles (the Coxeter decomposition: 2! = 2 pieces)
+       One piece = the simplex, the other = complement.
+       Number of complement pieces = 1 = 2!/1 - 1 = 1.
+
+  n=3: Cube = regular tet + 4 corner tets.
+       The 4 corners are the "halves."
+       Corner count = 2^{n-1} = 4.
+
+So the pattern 2, 4 represents:
+  n=2: 2 = total pieces (simplex + 1 complement)
+  n=3: 4 = complement pieces only
+
+These are DIFFERENT counting conventions!
+
+If we use "complement pieces = 2^{n-1}":
+  n=2: 2^1 = 2 complement pieces
+  n=3: 2^2 = 4 complement pieces ✓
+
+But at n=2 the demicube has vertices (0,0),(1,1) which is a DIAGONAL,
+not a triangle. The 2 complement pieces would be the 2 triangles
+on either side of the diagonal. THAT matches "2 halves on either side"!
+
+n=2 VERIFIED: diagonal (0,0)-(1,1) divides square into 2 triangles
+  Each triangle has area 1/2. These are the '2 halves.'
+  The 'equilateral triangle' is actually the DIAGONAL (1-simplex).
+
+n=3 VERIFIED: demicube tetrahedron divides cube into 1 tet + 4 corners
+  The 4 corners are the '4 halves.'
+
+======================================================================
+PART 4: n=4 — 8 'HALVES' (16-CELL IN TESSERACT)
+======================================================================
+
+n=4: The even-parity vertices of [0,1]^4 form a 16-cell (8 vertices).
+     The odd-parity vertices also form a 16-cell (8 vertices).
+     The tesseract = 16-cell ∪ 8 corner pieces.
+
+     Number of 'halves' = 2^{n-1} = 8.
+
+     But what ARE the corner pieces?
+     Each odd vertex is "cut off" by the 16-cell.
+     The corner at an odd vertex v is a simplex formed by
+     v and its n = 4 neighbors in the 16-cell.
+
+  16-cell volume: 0.6666666667
+  Complement: 0.3333333333
+  8 corners, each: 0.0416666667
+  = 1/24
+
+  Corner simplex at (1,0,0,0):
+  Volume = 0.0416666667 = 1/24
+  8 × corner = 0.3333333333 = complement ✓
+  Corner/16-cell = 0.0625000000
+  = 1/16
+
+======================================================================
+PART 5: THE GENERAL PATTERN
+======================================================================
+
+DEMICUBE PACKING PATTERN:
+
+n | Demicube      | Vol(DC) | Corners | Vol/corner | Corner/DC
+--|---------------|---------|---------|------------|----------
+2 | line segment  |    0    |    2    |    1/2     |    ∞
+3 | tetrahedron   |   1/3   |    4    |    1/6     |   1/2
+4 | 16-cell       |   2/3   |    8    |    1/24    |   1/16
+5 | 5-demicube    |  13/15  |   16    |   1/120    |   ?
+n | n-demicube    |   ?     |  2^{n-1}|   1/n!     |   ?
+
+Computed values:
+  n=3: Vol(DC) = 1/3, corners = 4, vol/corner = 1/6, 1/n! = 1/6, match = True
+  n=4: Vol(DC) = 2/3, corners = 8, vol/corner = 1/24, 1/n! = 1/24, match = True
+  n=5: Vol(DC) = 13/15, corners = 16, vol/corner = 1/120, 1/n! = 1/120, match = True
+  n=6: Vol(DC) = 43/45, corners = 32, vol/corner = 1/720, 1/n! = 1/720, match = True
+  n=7: Vol(DC) = 311/315, corners = 64, vol/corner = 1/5040, 1/n! = 1/5040, match = True
+
+======================================================================
+PART 6: EACH CORNER = 1/n! (PROOF)
+======================================================================
+
+THEOREM: Each of the 2^{n-1} corner pieces of the n-demicube in [0,1]^n
+has volume exactly 1/n!.
+
+PROOF: Consider the corner at odd vertex v = (v_1,...,v_n) with Σv_i odd.
+The n even neighbors of v are obtained by flipping one coordinate.
+Let w_j = v with v_j flipped (j = 1,...,n).
+
+The corner simplex has vertices v, w_1, ..., w_n.
+Its edge vectors are w_j - v = ±e_j (the j-th standard basis vector).
+
+The volume is |det(w_1-v, ..., w_n-v)| / n! = |det(±I)| / n! = 1/n!.
+
+∎
+
+COROLLARY:
+  Vol(complement) = 2^{n-1} / n!
+  Vol(demicube) = 1 - 2^{n-1}/n!
+
+CHECK:
+  n=3: 1 - 4/6 = 1 - 2/3 = 1/3 ✓
+  n=4: 1 - 8/24 = 1 - 1/3 = 2/3 ✓
+  n=5: 1 - 16/120 = 1 - 2/15 = 13/15 ✓
+  n=6: 1 - 32/720 = 1 - 2/45 = 43/45 ✓
+
+This is beautiful!
+
+The RATIO corner/demicube:
+  = (1/n!) / (1 - 2^{n-1}/n!)
+  = 1 / (n! - 2^{n-1})
+
+For the user's "halves" (corner = half of simplex):
+  At n=3: corner/tet = (1/6)/(1/3) = 1/2 ✓ (each corner is HALF the tet)
+  At n=4: corner/16cell = (1/24)/(2/3) = 1/16
+  At n=5: corner/demicube = (1/120)/(13/15) = 15/1560 = 1/104
+
+So the "halves" interpretation (corner = half of central polytope)
+is SPECIFIC to n=3!
+
+At n=3: corner/central = 1/2 → TRUE halves
+At n=4: corner/central = 1/16 → sixteenths, not halves
+At n=5: corner/central = 1/104 → much smaller
+
+The ratio shrinks rapidly because n! grows much faster than 2^n.
+
+
+Full table:
+  n |      Vol(DC) | corners |   vol/corner |    corner/DC |   2^(n-1)/n!
+  2 |            0 |       2 |          1/2 |            0 |            1
+  3 |          1/3 |       4 |          1/6 |          1/2 |          2/3
+  4 |          2/3 |       8 |         1/24 |         1/16 |          1/3
+  5 |        13/15 |      16 |        1/120 |        1/104 |         2/15
+  6 |        43/45 |      32 |        1/720 |        1/688 |         2/45
+  7 |      311/315 |      64 |       1/5040 |       1/4976 |        4/315
+  8 |      314/315 |     128 |      1/40320 |      1/40192 |        1/315
+  9 |    2833/2835 |     256 |     1/362880 |     1/362624 |       2/2835
+ 10 |  14173/14175 |     512 |    1/3628800 |    1/3628288 |      2/14175
+ 11 | 155921/155925 |    1024 |   1/39916800 |   1/39915776 |     4/155925
+
+======================================================================
+PART 7: TOURNAMENT EVALUATION INTERPRETATION
+======================================================================
+
+At the tournament point x=2:
+  (x+1)^n = 3^n (simplex)
+  (x+2)^n = 4^n (cuboid)
+
+The DEMICUBE evaluation:
+  Each corner has "tournament volume" 4^n / n! × 1/n! ... no.
+
+  Actually: the polynomials (x+1)^n and (x+2)^n are NOT the same as
+  geometric volumes. They count COMBINATORIAL structures.
+
+  The geometric packing gives:
+    Vol(demicube) = 1 - 2^{n-1}/n!
+    Vol(corner) = 1/n!
+
+  At x=2 evaluation:
+    "Simplex value" = 3^n
+    "Cuboid value" = 4^n
+    "Complement value" = 4^n - 3^n
+
+  The geometric ratio: 2^{n-1}/n! (complement fraction)
+  The polynomial ratio: (4^n - 3^n)/4^n = 1 - (3/4)^n
+
+  These are DIFFERENT! The geometric complement shrinks as 2^n/n! → 0,
+  while the polynomial complement grows as 1 - (3/4)^n → 1.
+
+  This INVERSION is key: geometrically, the demicube dominates (fills cube).
+  Combinatorially, the complement dominates (most structures are non-simplex).
+
+Geometric vs Polynomial complement fractions:
+  n |   Geom: 2^(n-1)/n! |    Poly: 1-(3/4)^n
+  2 |       1.0000000000 |       0.4375000000
+  3 |       0.6666666667 |       0.5781250000
+  4 |       0.3333333333 |       0.6835937500
+  5 |       0.1333333333 |       0.7626953125
+  6 |       0.0444444444 |       0.8220214844
+  7 |       0.0126984127 |       0.8665161133
+  8 |       0.0031746032 |       0.8998870850
+  9 |       0.0007054674 |       0.9249153137
+ 10 |       0.0001410935 |       0.9436864853
+ 11 |       0.0000256534 |       0.9577648640
+
+BEAUTIFUL INVERSION:
+  Geometrically: the demicube takes over (Vol → 1 as n → ∞)
+  Combinatorially: the complement takes over (→ 1 as n → ∞)
+
+  At n=3: Geom complement = 2/3, Poly complement = 37/64 ≈ 0.578
+  These are closest at small n and diverge dramatically.
+
+  INTERPRETATION: In low dimensions, geometry and combinatorics agree.
+  In high dimensions, the exponential (4^n vs 3^n) overwhelms
+  the factorial (1/n!). This is why tournament theory is "hard" —
+  the combinatorial landscape is exponentially larger than the
+  geometric intuition suggests.
+
+
+======================================================================
+DONE
+======================================================================

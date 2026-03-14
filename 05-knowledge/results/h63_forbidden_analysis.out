@@ -1,0 +1,114 @@
+======================================================================
+H=63 FORBIDDEN ANALYSIS
+opus-2026-03-14-S71g
+======================================================================
+
+======================================================================
+PART 1: ALL FACTORIZATIONS OF 63
+======================================================================
+
+63 = 2^6 - 1 = 9 × 7 = 3^2 × 7
+
+I(K_3, 2) = 7 (expected 7)
+I(P_4, 2) = 21 (expected 21)
+I(C_4, 2) = 17 (expected 17)
+I(C_5, 2) = 31 (expected 31)
+
+63 = 9 × 7 = 3² × 7
+  3 = I(single vertex) → component = isolated vertex
+  7 = I(K_3) → component = K_3 = triangle
+  9 = I(2 isolated vertices) = 3² → two isolated vertices
+  21 = I(P_4) → component = P_4
+
+======================================================================
+PART 2: CONNECTED GRAPHS WITH I(G,2) = 63
+======================================================================
+Enumerating connected graphs on n=4,5,6 vertices with I(G,2) = 63:
+
+n=4: Found 0 connected graphs with I(G,2)=63
+n=5: Found 0 connected graphs with I(G,2)=63
+n=6: Found 0 connected graphs with I(G,2)=63
+n=7: (checking specific structures only)
+
+======================================================================
+PART 3: DISCONNECTED DECOMPOSITIONS
+======================================================================
+
+Since I(G1 ⊔ G2, 2) = I(G1) · I(G2), we need factorizations of 63:
+
+63 = 1 × 63   → G = connected graph with I=63
+63 = 3 × 21   → G = vertex ⊔ (graph with I=21)
+63 = 7 × 9    → G = K_3 ⊔ (graph with I=9)
+63 = 9 × 7    → same as above
+63 = 21 × 3   → G = (graph with I=21) ⊔ vertex
+
+Factorizations with more factors:
+63 = 3 × 3 × 7   → vertex ⊔ vertex ⊔ K_3
+63 = 3 × 21      → vertex ⊔ (I=21 graph)
+63 = 7 × 3 × 3   → K_3 ⊔ vertex ⊔ vertex
+
+So the DISCONNECTED options are:
+1. E_2 ⊔ K_3 (two isolated vertices + triangle) [I = 9·7 = 63]
+2. E_1 ⊔ G_{21} (one isolated vertex + I=21 component) [I = 3·21 = 63]
+
+For option 1: Ω(T) contains K_3 as component → IMPOSSIBLE by THM-201 ✓
+For option 2: need I(G,2) = 21 as a connected component of Ω.
+  The five graphs with I=21 were enumerated: P_4, K_3+K_1, K_6-2e, K_8-e, K_10.
+  P_4 is ruled out by THM-202.
+  K_3+K_1 is disconnected (ruled out since we need connected component with I=21).
+
+  Actually: K_3+K_1 is disconnected, so as a connected component it doesn't work.
+  We'd need: Ω has components {vertex, component_with_I=21}
+  The component with I=21 must be connected: K_6-2e, K_8-e, K_10, or P_4.
+  P_4 is ruled out by THM-202.
+  The three remaining are what we need to investigate.
+
+For the connected case (I=63 as single connected component):
+This requires finding connected graphs with I(G,2) = 63.
+
+======================================================================
+PART 4: IS H=63 EVER ACHIEVED?
+======================================================================
+Checking if H=63 appears at n=7 (sampling)...
+  n=7: 0/100000 tournaments have H=63
+  H=63 NOT found at n=7 in 100K samples!
+  (This is consistent with 63 being forbidden)
+
+Checking at n=6 exhaustively...
+  n=6: H values = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  63 in H-spectrum at n=6: False
+
+======================================================================
+PART 5: WHY 63 MIGHT BE FORBIDDEN
+======================================================================
+
+ARGUMENT FOR H=63 BEING FORBIDDEN:
+
+1. 63 = 3² × 7. The ONLY multiplicative decompositions are:
+   1 × 63, 3 × 21, 7 × 9, 3 × 3 × 7
+
+2. Via OCF H = I(Ω, 2), we need Ω(T) with I(Ω, 2) = 63.
+
+3. DISCONNECTED cases (I factors):
+   a) 3 × 3 × 7: Ω has components {vertex, vertex, K_3}.
+      K_3 as Ω component → IMPOSSIBLE (THM-201).
+   b) 3 × 21: Ω has components {vertex, G_21}.
+      G_21 must be connected with I=21.
+      Options: P_4 (THM-202 rules out), K_6-2e, K_8-e, K_10.
+      If these are all impossible as Ω components → this case falls.
+   c) 7 × 9: Ω has components {K_3, 2 vertices} or {K_3, E_2}.
+      K_3 as component → IMPOSSIBLE (THM-201).
+
+4. CONNECTED case (I(G,2) = 63 for connected G):
+   Need to enumerate all connected graphs with this property.
+   From n≤6 search above: check what we found.
+
+CONCLUSION: H=63 is forbidden IF:
+   (a) THM-201 (K_3 component impossible) — PROVED ✓
+   (b) All connected graphs with I=21 are impossible as Ω components
+   (c) All connected graphs with I=63 are impossible as Ω
+
+
+======================================================================
+DONE — H=63 ANALYSIS
+======================================================================
