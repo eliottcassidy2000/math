@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S76 — 2026-03-14: n=9=3² Deep Analysis, Directed Cycle Correction, Sierpinski Fractal
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S75
+**Summary of work:**
+Deep creative exploration of n=9 as 3² or 3×3, connecting the Cauchy-Schwarz boundary to fractal structure, simplex packing, and Hilbert's 3rd problem.
+
+**Critical findings:**
+1. **DIRECTED CYCLES as CG vertices** (HYP-1031): Ω(T) has one vertex per directed odd cycle, NOT per vertex set. Multiple directed cycles on the same vertex set are separate vertices. VERIFIED exhaustive n=5 (1024/1024), n=6 (32768/32768), sampled n=7 (500/500), n=8 (200/200). Previous computations using only vertex sets or only 3-cycles were WRONG.
+2. **I(-1) ≤ 1 CONFIRMED** with correct counting: n=5 [-4,1], n=6 [-18,1], n=7 [-51,1], n=8 [-148,-7]. All violations previously reported were artifacts of undercounting α₁.
+3. **α₁ ≥ α₂ CONFIRMED** with correct counting at n=6 (exhaustive), n=7,8 (sampled). The full directed-cycle α₁ is much larger than previously thought (n=8: ~80 cycles vs ~13 with 3-cycles only).
+4. **9 = 3² manifesto**: Nine reasons why n=9 is the boundary: CS tight, perfect partition, tribonacci, Cartan det, Paley failure, Sierpinski level 2, entropy maximum, corner-piece transition.
+5. **Sierpinski tournament hierarchy**: C₃⊠C₃ at n=9 has α₁=30, α₂=111, α₃=37, H=3159. Level 3 (n=27): α₁=819, α₂=233397.
+6. **3-cycle entropy maximum**: log₂(3)/3 ≈ 0.528 bits/vertex is the highest among odd cycles. 3-cycles are the most efficient information carriers.
+7. **Corner piece sequence** 3^k - 2^k = 1, 5, 19, 65, ... appears as coefficients in I(3)-I(2).
+
+**New contributions:**
+- HYP-1031 through HYP-1039
+- Scripts: n9_transition_deep.py, n9_fiveycle_extension.py, n9_threebythree_creative.py, full_cg_iminus1.py, full_cg_allcycles.py, correct_ocf_verify.py, sierpinski_tournament.py, hilbert3_at_nine.py
+
+**Unresolved threads:**
+1. Prove α₁ ≥ α₂ for ALL n (with correct directed-cycle counting) — extends beyond the 3-cycle CS proof
+2. Does the 5-cycle extension strategy work? Need proper mixed CS bound
+3. The Sierpinski tournament H growth rate (what is H at level 3?)
+4. Can the fractal structure of tournaments prove I(-1) ≤ 1?
+5. Definition in definitions.md should be clarified: "directed odd cycles" means each directed cycle is a separate vertex
+
 ## kind-pasteur-2026-03-14-S65 — 2026-03-14: Exponentiation, Cayley-Dickson, Dehn Invariant, Cubic I.P. Transition
 
 **Account:** kind-pasteur
