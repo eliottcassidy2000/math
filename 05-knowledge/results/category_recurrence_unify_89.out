@@ -1,0 +1,198 @@
+======================================================================
+CATEGORICAL RECURRENCE UNIFICATION
+opus-2026-03-14-S89
+======================================================================
+
+======================================================================
+PART 1: H AS TRACE / PERMANENT
+======================================================================
+
+  H(T) = sum_{sigma in S_n} prod_{i=1}^{n-1} T_{sigma(i), sigma(i+1)}
+
+  This is a multilinear polynomial of degree n-1 in m=C(n,2) variables.
+  Each monomial corresponds to a set of n-1 edges forming a Hamiltonian path.
+
+  In the Walsh basis: H = sum_S c_hat_S chi_S
+  where chi_S(T) = prod_{e in S} (-1)^{T_e}
+
+  The coefficients c_hat_S are determined by the overlap between
+  the Hamiltonian-path polynomial and the Walsh characters.
+
+
+======================================================================
+PART 2: RECURRENCE FOR a(n) = V(n)*n!/2
+======================================================================
+  Solving for f(n) assuming a(n) = f(n)*a(n-1) + g(n)*a(n-2):
+    n=5: a(n)/a(n-1) = 4.75000000, excess over n-1: 0.75000000
+    n=6: a(n)/a(n-1) = 5.47368421, excess over n-1: 0.47368421
+    n=7: a(n)/a(n-1) = 6.29807692, excess over n-1: 0.29807692
+    n=8: a(n)/a(n-1) = 7.20610687, excess over n-1: 0.20610687
+    n=9: a(n)/a(n-1) = 8.14470339, excess over n-1: 0.14470339
+    n=10: a(n)/a(n-1) = 9.10563692, excess over n-1: 0.10563692
+    n=11: a(n)/a(n-1) = 10.07966622, excess over n-1: 0.07966622
+    n=12: a(n)/a(n-1) = 11.06183342, excess over n-1: 0.06183342
+    n=13: a(n)/a(n-1) = 12.04921222, excess over n-1: 0.04921222
+    n=14: a(n)/a(n-1) = 13.04001524, excess over n-1: 0.04001524
+    n=15: a(n)/a(n-1) = 14.03313673, excess over n-1: 0.03313673
+    n=16: a(n)/a(n-1) = 15.02787192, excess over n-1: 0.02787192
+    n=17: a(n)/a(n-1) = 16.02375948, excess over n-1: 0.02375948
+    n=18: a(n)/a(n-1) = 17.02048936, excess over n-1: 0.02048936
+    n=19: a(n)/a(n-1) = 18.01784798, excess over n-1: 0.01784798
+
+  Precise excess: a(n)/a(n-1) - (n-1):
+    n=5: excess = 0.75000000, c_est = excess*(n-1) = 3.000000
+    n=6: excess = 0.47368421, c_est = excess*(n-1) = 2.368421
+    n=7: excess = 0.29807692, c_est = excess*(n-1) = 1.788462
+    n=8: excess = 0.20610687, c_est = excess*(n-1) = 1.442748
+    n=9: excess = 0.14470339, c_est = excess*(n-1) = 1.157627
+    n=10: excess = 0.10563692, c_est = excess*(n-1) = 0.950732
+    n=11: excess = 0.07966622, c_est = excess*(n-1) = 0.796662
+    n=12: excess = 0.06183342, c_est = excess*(n-1) = 0.680168
+    n=13: excess = 0.04921222, c_est = excess*(n-1) = 0.590547
+    n=14: excess = 0.04001524, c_est = excess*(n-1) = 0.520198
+    n=15: excess = 0.03313673, c_est = excess*(n-1) = 0.463914
+    n=16: excess = 0.02787192, c_est = excess*(n-1) = 0.418079
+    n=17: excess = 0.02375948, c_est = excess*(n-1) = 0.380152
+    n=18: excess = 0.02048936, c_est = excess*(n-1) = 0.348319
+    n=19: excess = 0.01784798, c_est = excess*(n-1) = 0.321264
+
+  Dominant term ratio (n-2)^2/(n-3):
+    n=5: (n-2)^2/(n-3)=4.500000, actual=4.750000, diff=0.250000
+    n=6: (n-2)^2/(n-3)=5.333333, actual=5.473684, diff=0.140351
+    n=7: (n-2)^2/(n-3)=6.250000, actual=6.298077, diff=0.048077
+    n=8: (n-2)^2/(n-3)=7.200000, actual=7.206107, diff=0.006107
+    n=9: (n-2)^2/(n-3)=8.166667, actual=8.144703, diff=-0.021963
+    n=10: (n-2)^2/(n-3)=9.142857, actual=9.105637, diff=-0.037220
+    n=11: (n-2)^2/(n-3)=10.125000, actual=10.079666, diff=-0.045334
+    n=12: (n-2)^2/(n-3)=11.111111, actual=11.061833, diff=-0.049278
+    n=13: (n-2)^2/(n-3)=12.100000, actual=12.049212, diff=-0.050788
+    n=14: (n-2)^2/(n-3)=13.090909, actual=13.040015, diff=-0.050894
+    n=15: (n-2)^2/(n-3)=14.083333, actual=14.033137, diff=-0.050197
+    n=16: (n-2)^2/(n-3)=15.076923, actual=15.027872, diff=-0.049051
+    n=17: (n-2)^2/(n-3)=16.071429, actual=16.023759, diff=-0.047669
+    n=18: (n-2)^2/(n-3)=17.066667, actual=17.020489, diff=-0.046177
+    n=19: (n-2)^2/(n-3)=18.062500, actual=18.017848, diff=-0.044652
+
+======================================================================
+PART 3: THREE RECURRENCE FAMILIES
+======================================================================
+
+  THREE RECURRENCE FAMILIES in tournament theory:
+
+  1. FIBONACCI (phi: x^2 = x + 1):
+     - Counts tilings of [n] by 1-tiles and 2-tiles
+     - Counts Hamiltonian paths on path graphs
+     - Period pi(4) = 6 governs tournament parity mod 4
+     - phi = (1+sqrt(5))/2
+
+  2. PADOVAN (p: x^3 = x + 1):
+     - Counts tilings of [n] by 2-tiles and 3-tiles
+     - The {2,3} = {edge, triangle} building blocks of tournaments
+     - Plastic number p = 1.3247... governs the "cycle complexity growth"
+     - Real root of x^3 - x - 1 = 0
+
+  3. TRIBONACCI (tau: x^3 = x^2 + x + 1):
+     - Counts tilings of [n] by 1,2,3-tiles
+     - tau^3 = Phi_3(tau) connects to cyclotomic structure
+     - tau = 1.8393... governs the "full complexity growth"
+     - Real root of x^3 - x^2 - x - 1 = 0
+
+  Connection: Phi_3(x) = x^2 + x + 1 evaluates to:
+    Phi_3(1) = 3 (the triangle)
+    Phi_3(2) = 7 (the Fano plane / first forbidden value)
+    Phi_3(phi) = phi^2 + phi + 1 = phi+1+phi+1 = 2phi+2 = 1+sqrt(5)+2 = 3+sqrt(5)
+    Phi_3(p) = p^2 + p + 1 (where p^3 = p+1, so p^2 = (p+1)/p = 1 + 1/p)
+            = 1 + 1/p + p + 1 = 2 + p + 1/p
+
+  The three constants phi, p, tau are the "metallic means" of tournaments:
+  phi governs the parity period,
+  p governs the cycle-edge decomposition,
+  tau governs the full spectral structure.
+
+  phi = 1.6180339887
+  p   = 1.3247179572
+  tau = 1.8392867552
+
+  Phi_3(phi) = 5.2360679775 = 5.2360679775 (= 3 + sqrt(5))
+  Phi_3(p)   = 4.0795956235
+  Phi_3(tau) = 6.2222625231 = tau^3 = 6.2222625231
+
+======================================================================
+PART 4: RECURRENCE SPECTRUM
+======================================================================
+  Mean(H) sequence and ratios:
+    n=3: Mean = 1.5000
+    n=4: Mean = 3.0000, ratio = 2 = 2.0000
+    n=5: Mean = 7.5000, ratio = 5/2 = 2.5000
+    n=6: Mean = 22.5000, ratio = 3 = 3.0000
+    n=7: Mean = 78.7500, ratio = 7/2 = 3.5000
+    n=8: Mean = 315.0000, ratio = 4 = 4.0000
+    n=9: Mean = 1417.5000, ratio = 9/2 = 4.5000
+    n=10: Mean = 7087.5000, ratio = 5 = 5.0000
+    n=11: Mean = 38981.2500, ratio = 11/2 = 5.5000
+
+======================================================================
+PART 5: DELETION-CONTRACTION TREE
+======================================================================
+  Edge sensitivity |H(T) - H(T')| when flipping one arc:
+    n=3: avg |dH/de| = 1.0000
+    n=4: avg |dH/de| = 1.5000
+    n=5: avg |dH/de| = 3.0000
+    n=6: avg |dH/de| = 7.0078
+
+======================================================================
+PART 6: CATEGORICAL PERSPECTIVE
+======================================================================
+
+  CATEGORY OF TOURNAMENTS (Tourn):
+    Objects: tournaments T on [n] for various n
+    Morphisms: tournament homomorphisms f: T -> T'
+      (vertex maps preserving arc direction)
+
+  FUNCTORS from Tourn:
+    H: Tourn -> Z  (Hamiltonian path count)
+      H is NOT a functor (doesn't preserve morphisms).
+      But it IS an INVARIANT: H(T) = H(sigma(T)) for all sigma in S_n.
+
+    Cone: Tourn_n -> Tourn_{n+1}  (cone construction)
+      This IS a functor: it maps T to Cone(T), and morphisms f to Cone(f).
+      THM-205: H . Cone = H (the cone preserves H).
+      In categorical language: H is a NATURAL INVARIANT of Cone.
+
+    Complement: Tourn -> Tourn  (reverse all arcs)
+      THM-203: H . Complement = H (complement preserves H).
+      Complement is an INVOLUTION (Complement^2 = Id).
+
+  NATURAL TRANSFORMATION perspective:
+    The cone functor Cone: Tourn_n -> Tourn_{n+1} satisfies:
+    H_{n+1} . Cone = H_n (as invariants)
+    This means H is "stable" in the sense of algebraic K-theory.
+    The stabilization: colim_n H_n gives a "universal" invariant.
+
+  MONOIDAL STRUCTURE:
+    Tourn has a product: T x T' = direct product tournament.
+    H is NOT multiplicative: H(T x T') != H(T) * H(T').
+    But the complement involution IS monoidal: (T x T')^bar = T^bar x T'^bar.
+
+  THE KEY QUESTION:
+    Is there a "derived" category of tournaments where H becomes a trace?
+    In other words: is there a chain complex C(T) such that
+    chi(C(T)) = H(T) (Euler characteristic = Hamiltonian path count)?
+
+
+======================================================================
+PART 7: H AS EULER CHARACTERISTIC?
+======================================================================
+  n=3: H mod 2 values: {1}
+  n=4: H mod 2 values: {1}
+  n=5: H mod 2 values: {1}
+  n=6: H mod 2 values: {1}
+
+  H(T) is always ODD (confirmed n=3..6). This is Redei's theorem.
+  Write H = 2Q + 1 for some integer Q >= 0.
+  Q(T) = (H(T)-1)/2 IS a natural candidate for an Euler-like characteristic.
+  Q(transitive) = 0, Q(3-cycle) = 1, Q(max at n=7) = 94.
+
+======================================================================
+DONE -- CATEGORICAL RECURRENCE UNIFICATION
+======================================================================
