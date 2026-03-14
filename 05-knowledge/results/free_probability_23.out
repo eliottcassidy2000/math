@@ -1,0 +1,182 @@
+======================================================================
+PART 1: SPECTRAL DISTRIBUTION OF RANDOM TOURNAMENTS
+======================================================================
+
+n=10: (200 samples)
+  Mean |eigenvalue|/√n: 0.5031
+  Std |eigenvalue|/√n: 0.3290
+  Max |eigenvalue|/√n: 1.3968
+  Mean real part: 0.0000
+  Mean imag part: 0.0000
+  Radial histogram: [127 553 326 354 298 142   3  32 137  28]
+
+n=20: (200 samples)
+  Mean |eigenvalue|/√n: 0.5052
+  Std |eigenvalue|/√n: 0.4149
+  Max |eigenvalue|/√n: 2.0863
+  Mean real part: 0.0000
+  Mean imag part: 0.0000
+  Radial histogram: [1002 1062  948  730   58    0    0    0   21  179]
+
+n=50: (50 samples)
+  Mean |eigenvalue|/√n: 0.4863
+  Std |eigenvalue|/√n: 0.4831
+  Max |eigenvalue|/√n: 3.4211
+  Mean real part: 0.0000
+  Mean imag part: 0.0000
+  Radial histogram: [1052  974  424    0    0    0    0    0    0   50]
+
+n=100: (50 samples)
+  Mean |eigenvalue|/√n: 0.4711
+  Std |eigenvalue|/√n: 0.5127
+  Max |eigenvalue|/√n: 4.9108
+  Mean real part: -0.0000
+  Mean imag part: -0.0000
+  Radial histogram: [3018 1932    0    0    0    0    0    0    0   50]
+
+======================================================================
+PART 2: MOMENT SEQUENCE AND CUMULANTS OF H
+======================================================================
+
+n=3: H moments (centered):
+  mean = 1.5000
+  σ = 0.8660
+  μ_1 = 0.0000, standardized = 0.0000
+  μ_2 = 0.7500, standardized = 1.0000
+  μ_3 = 0.7500, standardized = 1.1547
+  μ_4 = 1.3125, standardized = 2.3333
+  μ_5 = 1.8750, standardized = 3.8490
+  μ_6 = 2.8594, standardized = 6.7778
+  μ_7 = 4.2656, standardized = 11.6753
+  μ_8 = 6.4102, standardized = 20.2593
+
+  Raw moments: E[H^k] for k=1..6:
+    E[H^1] = 1.5000
+    E[H^2] = 3.0000
+    E[H^3] = 7.5000
+    E[H^4] = 21.0000
+    E[H^5] = 61.5000
+    E[H^6] = 183.0000
+
+  Cumulants: κ_1=1.5000, κ_2=0.7500, κ_3=0.7500, κ_4=-0.3750
+  Skewness = κ_3/κ_2^1.5 = 1.1547
+  Kurtosis = κ_4/κ_2² = -0.6667
+
+n=4: H moments (centered):
+  mean = 3.0000
+  σ = 1.7321
+  μ_1 = 0.0000, standardized = 0.0000
+  μ_2 = 3.0000, standardized = 1.0000
+  μ_3 = 0.0000, standardized = 0.0000
+  μ_4 = 12.0000, standardized = 1.3333
+  μ_5 = 0.0000, standardized = 0.0000
+  μ_6 = 48.0000, standardized = 1.7778
+  μ_7 = 0.0000, standardized = 0.0000
+  μ_8 = 192.0000, standardized = 2.3704
+
+  Raw moments: E[H^k] for k=1..6:
+    E[H^1] = 3.0000
+    E[H^2] = 12.0000
+    E[H^3] = 54.0000
+    E[H^4] = 255.0000
+    E[H^5] = 1233.0000
+    E[H^6] = 6042.0000
+
+  Cumulants: κ_1=3.0000, κ_2=3.0000, κ_3=0.0000, κ_4=-15.0000
+  Skewness = κ_3/κ_2^1.5 = 0.0000
+  Kurtosis = κ_4/κ_2² = -1.6667
+
+n=5: H moments (centered):
+  mean = 7.5000
+  σ = 4.2205
+  μ_1 = 0.0000, standardized = 0.0000
+  μ_2 = 17.8125, standardized = 1.0000
+  μ_3 = 5.1562, standardized = 0.0686
+  μ_4 = 590.1562, standardized = 1.8600
+  μ_5 = 537.4219, standardized = 0.4013
+  μ_6 = 24454.0430, standardized = 4.3269
+  μ_7 = 40056.4746, standardized = 1.6793
+  μ_8 = 1119951.0938, standardized = 11.1250
+
+  Raw moments: E[H^k] for k=1..6:
+    E[H^1] = 7.5000
+    E[H^2] = 74.0625
+    E[H^3] = 827.8125
+    E[H^4] = 9920.6250
+    E[H^5] = 124445.6250
+    E[H^6] = 1613464.6875
+
+  Cumulants: κ_1=7.5000, κ_2=17.8125, κ_3=5.1562, κ_4=-361.6992
+  Skewness = κ_3/κ_2^1.5 = 0.0686
+  Kurtosis = κ_4/κ_2² = -1.1400
+
+======================================================================
+PART 3: IS H DISTRIBUTION APPROACHING A KNOWN LAW?
+======================================================================
+
+n=4: Standardized H distribution:
+  Symmetry: mean(z) = 0.000000
+  Skewness = 0.000000
+  Kurtosis excess = -1.666667
+  Distinct standardized values: 3
+
+n=5: Standardized H distribution:
+  Symmetry: mean(z) = 0.000000
+  Skewness = 0.068588
+  Kurtosis excess = -1.139982
+  Distinct standardized values: 7
+
+======================================================================
+PART 4: TRACE FORMULA — CONNECTING SPECTRUM TO H
+======================================================================
+
+n=4: H vs spectral invariants:
+  Corr(H, spectral_radius) = 0.977322
+  Corr(H, tr(A³)) = 1.000000
+  Note: tr(A³) = 3 * c3 (3-cycle count)
+  Corr(H, c3) = 1.000000
+
+n=5: H vs spectral invariants:
+  Corr(H, spectral_radius) = 0.860853
+  Corr(H, tr(A³)) = 0.973329
+  Note: tr(A³) = 3 * c3 (3-cycle count)
+  Corr(H, c3) = 0.973329
+
+======================================================================
+PART 5: FREE CUMULANTS OF TOURNAMENT DISTRIBUTION
+======================================================================
+
+n=3:
+  Classical cumulants: κ2=0.7500, κ3=0.7500, κ4=-0.3750
+  Free cumulants: κ2_f=0.7500, κ3_f=0.7500, κ4_f=0.1875
+  Ratio κ4_f/κ4 = -0.5000
+  Free entropy (log-energy): 0.2599
+
+n=4:
+  Classical cumulants: κ2=3.0000, κ3=0.0000, κ4=-15.0000
+  Free cumulants: κ2_f=3.0000, κ3_f=0.0000, κ4_f=-6.0000
+  Ratio κ4_f/κ4 = 0.4000
+  Free entropy (log-energy): 0.6498
+
+n=5:
+  Classical cumulants: κ2=17.8125, κ3=5.1562, κ4=-361.6992
+  Free cumulants: κ2_f=17.8125, κ3_f=5.1562, κ4_f=-44.4141
+  Ratio κ4_f/κ4 = 0.1228
+  Free entropy (log-energy): 1.3215
+
+======================================================================
+SYNTHESIS — FREE PROBABILITY AND RANDOM MATRICES
+======================================================================
+
+KEY FINDINGS:
+1. SPECTRAL DISTRIBUTION: Random tournament eigenvalues (normalized by √n)
+   approach a circular-like distribution with radius ≈ 0.5.
+2. MOMENT SEQUENCE: H has well-defined moments. Kurtosis excess < 0
+   (sub-Gaussian, platykurtic — more concentrated than Gaussian).
+3. TRACE FORMULA: H correlates strongly with tr(A³) = 3c₃ (3-cycle count).
+   Spectral radius also correlates with H.
+4. FREE CUMULANTS: Tournament H distribution has specific free cumulants
+   that differ from classical cumulants. The difference measures
+   "non-commutative" structure.
+5. The H/mean ratio → e (Szele-Alon) is a random-matrix-type result.
+
