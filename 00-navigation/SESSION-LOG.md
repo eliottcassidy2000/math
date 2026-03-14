@@ -13,6 +13,37 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S77 — 2026-03-14: Exceptional Lie Groups ↔ Platonic Solids ↔ Tournament Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S76
+**Summary of work:**
+Deep creative session exploring how the 5 exceptional simple Lie groups relate to the 5 Platonic solids and tournament theory. Established the ADE-Tournament Dictionary with multiple computational verifications.
+
+**Critical findings:**
+1. **E₆ det=3=KEY₂, E₇ det=2=KEY₁** (HYP-1047): The two largest non-trivial exceptional Lie groups carry the tournament polynomial roots as their Cartan determinants.
+2. **h(E₇)/det(E₇) = 9 = CS boundary** (HYP-1048): Four independent invariants of E₇ encode 9: Coxeter/det ratio, average exponent, h/2, and 9 appears as an exponent of E₇.
+3. **h∨(F₄) = 9 = CS boundary** (HYP-1049): The dual Coxeter number of F₄ also encodes the CS boundary. Pattern: h∨(G₂)=4=KEY₁², h∨(F₄)=9=KEY₂².
+4. **E₈ branch lengths = {2,3,5}** (HYP-1051): The E₈ Dynkin diagram branches have lengths KEY₁, KEY₂, KEY₁+KEY₂. The ADE positivity constraint 1/2+1/3+1/5 > 1 is the SAME constraint that limits Platonic solids to 5.
+5. **f(rank)=h selection** (HYP-1052): Tournament polynomial z²-5z+6 evaluated at rank gives Coxeter number for A₁, A₅, B₆, C₆, E₆, E₈. For E₇: f(7)=20=h+det. Three exceptionals match.
+6. **h+1 all prime** (HYP-1053): 7, 13, 13, 19, 31 are all prime. G₂ and E₈ have MERSENNE prime h+1, with exponents KEY₂=3 and 5=KEY₁+KEY₂.
+7. **Niven's theorem and Dehn invariant** (HYP-1056): Rational angles have denominators in {1, KEY₁, KEY₂}, connecting scissors congruence to the tournament keys.
+8. **Tournament polynomial maps Coxeter numbers** (HYP-1058): f(6)=12 maps h(G₂) to h(F₄)=h(E₆). f(8)=30 maps rank(E₈) to h(E₈).
+9. **Lucas numbers encode keys** (HYP-1059): L(0)=2=KEY₁, L(2)=3=KEY₂, L(6)=18=h(E₇).
+10. **|W(E₆)|/6! = |W(E₇)|/8! = 72 = 8·9** (HYP-1055): Weyl/symmetric ratio = rank(E₈)·CS_boundary.
+
+**New contributions:**
+- HYP-1047 through HYP-1060 (14 new hypotheses)
+- Scripts: exceptional_platonic_tournament.py, lie_tournament_bridge.py, e7_deep_structure.py, tournament_lie_synthesis.py, frank_equals_h.py, hilbert3_lie_bridge.py
+- All outputs saved to 05-knowledge/results/
+
+**Unresolved threads:**
+1. Why is h+1 always prime for exceptionals? (Deep question)
+2. Is there a representation-theoretic proof of I(-1) ≤ 1 via E₇ structure?
+3. The Freudenthal magic square and tournament independence polynomials
+4. Can the McKay correspondence give a direct ADE → tournament map?
+5. The 56-dimensional E₇ representation = T(6) coincidence — structural or numerical?
+
 ## opus-2026-03-14-S76 — 2026-03-14: n=9=3² Deep Analysis, Directed Cycle Correction, Sierpinski Fractal
 
 **Account:** opus
