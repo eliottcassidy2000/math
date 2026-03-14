@@ -1,0 +1,107 @@
+======================================================================
+H=21 DECOMPOSITION ANALYSIS
+H = 1 + 2*a1 + 4*a2 = 21 => a1 + 2*a2 = 10
+Decompositions: (10,0), (8,1), (6,2), (4,3)
+======================================================================
+
+--- Part 1: EXHAUSTIVE n=6 ---
+Total tournaments: 32768
+Tournaments with H=21: 0
+
+All achievable (a1, a2) pairs with a1+2*a2 near 10:
+  ( 6, 1): T=  8, H= 17, count=720
+  ( 7, 0): T=  7, H= 15, count=2208
+  ( 8, 0): T=  8, H= 17, count=720
+  ( 9, 0): T=  9, H= 19, count=1440
+  ( 9, 1): T= 11, H= 23, count=1440
+  (11, 0): T= 11, H= 23, count=1440
+  (11, 1): T= 13, H= 27, count=480
+  (12, 0): T= 12, H= 25, count=1440
+
+Decompositions of T=10 at n=6:
+  (10,0): 0 tournaments -- ABSENT
+  (8,1): 0 tournaments -- ABSENT
+  (6,2): 0 tournaments -- ABSENT
+  (4,3): 0 tournaments -- ABSENT
+  (2,4): 0 tournaments -- ABSENT
+  (0,5): 0 tournaments -- ABSENT
+
+--- Part 2: n=7 TARGETED SEARCH ---
+  10000/50000, H=21 found: 0
+  20000/50000, H=21 found: 0
+  30000/50000, H=21 found: 0
+  40000/50000, H=21 found: 0
+  50000/50000, H=21 found: 0
+
+H=21 at n=7: 0 / 50000
+
+Achievable (a1, a2) pairs near T=10 at n=7:
+  ( 3, 2): T=  7, H= 15, count=74
+  ( 6, 1): T=  8, H= 17, count=238
+  ( 7, 0): T=  7, H= 15, count=664
+  ( 8, 0): T=  8, H= 17, count=254
+  ( 9, 0): T=  9, H= 19, count=467
+  ( 9, 1): T= 11, H= 23, count=488
+  (11, 0): T= 11, H= 23, count=456
+  (11, 1): T= 13, H= 27, count=269
+  (12, 0): T= 12, H= 25, count=567
+  (13, 0): T= 13, H= 27, count=246
+
+Decompositions of T=10 at n=7:
+  (10,0): 0 tournaments -- ABSENT
+  (8,1): 0 tournaments -- ABSENT
+  (6,2): 0 tournaments -- ABSENT
+  (4,3): 0 tournaments -- ABSENT
+
+--- Part 3: n=8 TARGETED SEARCH ---
+  5000/20000, H=21 found: 0
+  10000/20000, H=21 found: 0
+  15000/20000, H=21 found: 0
+  20000/20000, H=21 found: 0
+
+H=21 at n=8: 0 / 20000
+
+Achievable (a1, a2) near T=10 at n=8:
+  ( 3, 2): T=  7, H= 15, count=7
+  ( 4, 4): T= 12, H= 25, count=5
+  ( 5, 4): T= 13, H= 27, count=6
+  ( 6, 1): T=  8, H= 17, count=9
+  ( 7, 0): T=  7, H= 15, count=24
+  ( 8, 0): T=  8, H= 17, count=7
+  ( 9, 0): T=  9, H= 19, count=14
+  ( 9, 1): T= 11, H= 23, count=15
+  (11, 0): T= 11, H= 23, count=21
+  (11, 1): T= 13, H= 27, count=6
+  (12, 0): T= 12, H= 25, count=29
+  (13, 0): T= 13, H= 27, count=15
+
+Decompositions of T=10 at n=8:
+  (10,0): 0 tournaments -- ABSENT
+  (8,1): 0 tournaments -- ABSENT
+  (6,2): 0 tournaments -- ABSENT
+  (4,3): 0 tournaments -- ABSENT
+
+======================================================================
+ANALYSIS: WHY EACH DECOMPOSITION FAILS
+======================================================================
+
+    (10,0): alpha_1=10, alpha_2=0
+      10 odd cycles, ALL pairwise sharing a vertex.
+      BLOCKED: Exhaustive data shows alpha_1=10 always has alpha_2>=2.
+      Mechanism: too many cycles force disjoint pairs.
+
+    (8,1): alpha_1=8, alpha_2=1
+      8 cycles, exactly 1 disjoint pair.
+      Need: 8 cycles where exactly one pair is vertex-disjoint.
+      This is a very specific structural requirement.
+
+    (6,2): alpha_1=6, alpha_2=2
+      6 cycles, exactly 2 disjoint pairs.
+      H = 1 + 12 + 8 = 21.
+
+    (4,3): alpha_1=4, alpha_2=3
+      4 cycles, 3 disjoint pairs.
+      But C(4,2)=6 pairs total. 3 disjoint means half are disjoint.
+      4 cycles with 3 disjoint pairs: this constrains the cycle structure heavily.
+      Actually need: among 4 cycles, exactly 3 pairs are vertex-disjoint.
+    

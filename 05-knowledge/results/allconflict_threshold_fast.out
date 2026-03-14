@@ -1,0 +1,434 @@
+======================================================================
+ALL-CONFLICTING THRESHOLD ANALYSIS
+Finding min alpha_1 where (alpha_1, 0) is achievable
+======================================================================
+
+n=3: 8 tournaments
+  All achievable (alpha_1, alpha_2) pairs:
+    (a1=  0, a2=  0):      6 tournaments, H=1
+    (a1=  1, a2=  0):      2 tournaments, H=3
+
+  All-conflicting (alpha_2=0):
+    a1=0: 6 tournaments, H=1
+    a1=1: 2 tournaments, H=3
+  Max alpha_1 with alpha_2=0: 1
+
+n=4: 64 tournaments
+  All achievable (alpha_1, alpha_2) pairs:
+    (a1=  0, a2=  0):     24 tournaments, H=1
+    (a1=  1, a2=  0):     16 tournaments, H=3
+    (a1=  2, a2=  0):     24 tournaments, H=5
+
+  All-conflicting (alpha_2=0):
+    a1=0: 24 tournaments, H=1
+    a1=1: 16 tournaments, H=3
+    a1=2: 24 tournaments, H=5
+  Max alpha_1 with alpha_2=0: 2
+
+n=5: 1024 tournaments
+  All achievable (alpha_1, alpha_2) pairs:
+    (a1=  0, a2=  0):    120 tournaments, H=1
+    (a1=  1, a2=  0):    120 tournaments, H=3
+    (a1=  2, a2=  0):    240 tournaments, H=5
+    (a1=  4, a2=  0):    240 tournaments, H=9
+    (a1=  5, a2=  0):    120 tournaments, H=11
+    (a1=  6, a2=  0):    120 tournaments, H=13
+    (a1=  7, a2=  0):     64 tournaments, H=15
+
+  All-conflicting (alpha_2=0):
+    a1=0: 120 tournaments, H=1
+    a1=1: 120 tournaments, H=3
+    a1=2: 240 tournaments, H=5
+    a1=4: 240 tournaments, H=9
+    a1=5: 120 tournaments, H=11
+    a1=6: 120 tournaments, H=13
+    a1=7: 64 tournaments, H=15
+  Max alpha_1 with alpha_2=0: 7
+
+n=6: 32768 tournaments
+  All achievable (alpha_1, alpha_2) pairs:
+    (a1=  0, a2=  0):    720 tournaments, H=1
+    (a1=  1, a2=  0):    960 tournaments, H=3
+    (a1=  2, a2=  0):   2160 tournaments, H=5
+    (a1=  2, a2=  1):     80 tournaments, H=9
+    (a1=  4, a2=  0):   2880 tournaments, H=9
+    (a1=  5, a2=  0):   1440 tournaments, H=11
+    (a1=  6, a2=  0):   1440 tournaments, H=13
+    (a1=  6, a2=  1):    720 tournaments, H=17
+    (a1=  7, a2=  0):   2208 tournaments, H=15
+    (a1=  8, a2=  0):    720 tournaments, H=17
+    (a1=  9, a2=  0):   1440 tournaments, H=19
+    (a1=  9, a2=  1):   1440 tournaments, H=23
+    (a1= 10, a2=  2):    720 tournaments, H=29
+    (a1= 11, a2=  0):   1440 tournaments, H=23
+    (a1= 11, a2=  1):    480 tournaments, H=27
+    (a1= 12, a2=  0):   1440 tournaments, H=25
+    (a1= 12, a2=  1):   2160 tournaments, H=29
+    (a1= 12, a2=  2):    720 tournaments, H=33
+    (a1= 13, a2=  1):   1440 tournaments, H=31
+    (a1= 14, a2=  1):   1440 tournaments, H=33
+    (a1= 14, a2=  2):   2160 tournaments, H=37
+    (a1= 14, a2=  4):    240 tournaments, H=45
+    (a1= 16, a2=  0):    480 tournaments, H=33
+    (a1= 16, a2=  1):   1440 tournaments, H=37
+    (a1= 16, a2=  2):    720 tournaments, H=41
+    (a1= 19, a2=  1):   1440 tournaments, H=43
+    (a1= 20, a2=  1):    240 tournaments, H=45
+
+  All-conflicting (alpha_2=0):
+    a1=0: 720 tournaments, H=1
+    a1=1: 960 tournaments, H=3
+    a1=2: 2160 tournaments, H=5
+    a1=4: 2880 tournaments, H=9
+    a1=5: 1440 tournaments, H=11
+    a1=6: 1440 tournaments, H=13
+    a1=7: 2208 tournaments, H=15
+    a1=8: 720 tournaments, H=17
+    a1=9: 1440 tournaments, H=19
+    a1=11: 1440 tournaments, H=23
+    a1=12: 1440 tournaments, H=25
+    a1=16: 480 tournaments, H=33
+  Max alpha_1 with alpha_2=0: 16
+
+======================================================================
+n=7: SAMPLING
+======================================================================
+  1000/5000
+  2000/5000
+  3000/5000
+  4000/5000
+  5000/5000
+
+  All-conflicting (alpha_2=0) at n=7:
+    a1=0: 13 tournaments, H=1
+    a1=1: 23 tournaments, H=3
+    a1=2: 49 tournaments, H=5
+    a1=4: 70 tournaments, H=9
+    a1=5: 39 tournaments, H=11
+    a1=6: 33 tournaments, H=13
+    a1=7: 82 tournaments, H=15
+    a1=8: 22 tournaments, H=17
+    a1=9: 40 tournaments, H=19
+    a1=11: 48 tournaments, H=23
+    a1=12: 69 tournaments, H=25
+    a1=13: 27 tournaments, H=27
+    a1=15: 10 tournaments, H=31
+    a1=16: 31 tournaments, H=33
+    a1=18: 17 tournaments, H=37
+    a1=19: 26 tournaments, H=39
+    a1=22: 12 tournaments, H=45
+    a1=23: 16 tournaments, H=47
+    a1=24: 36 tournaments, H=49
+    a1=25: 16 tournaments, H=51
+    a1=34: 11 tournaments, H=69
+
+  Min alpha_2 by alpha_1 at n=7:
+    a1=  0: min_a2=0
+    a1=  1: min_a2=0
+    a1=  2: min_a2=0
+    a1=  3: min_a2=2
+    a1=  4: min_a2=0
+    a1=  5: min_a2=0
+    a1=  6: min_a2=0
+    a1=  7: min_a2=0
+    a1=  8: min_a2=0
+    a1=  9: min_a2=0
+    a1= 10: min_a2=2
+    a1= 11: min_a2=0
+    a1= 12: min_a2=0
+    a1= 13: min_a2=0
+    a1= 14: min_a2=1
+    a1= 15: min_a2=0
+    a1= 16: min_a2=0
+    a1= 17: min_a2=4
+    a1= 18: min_a2=0
+    a1= 19: min_a2=0
+    a1= 20: min_a2=1
+    a1= 21: min_a2=2
+    a1= 22: min_a2=0
+    a1= 23: min_a2=0
+    a1= 24: min_a2=0
+    a1= 25: min_a2=0
+    a1= 26: min_a2=1
+    a1= 27: min_a2=3
+    a1= 28: min_a2=2
+    a1= 29: min_a2=2
+    a1= 30: min_a2=2
+    a1= 31: min_a2=3
+    a1= 32: min_a2=4
+    a1= 33: min_a2=2
+    a1= 34: min_a2=0
+    a1= 35: min_a2=2
+    a1= 36: min_a2=4
+    a1= 37: min_a2=4
+    a1= 38: min_a2=6
+    a1= 39: min_a2=6
+    a1= 40: min_a2=5
+    a1= 41: min_a2=8
+    a1= 42: min_a2=4
+    a1= 43: min_a2=6
+    a1= 44: min_a2=7
+    a1= 45: min_a2=5
+    a1= 46: min_a2=6
+    a1= 47: min_a2=1
+    a1= 48: min_a2=6
+    a1= 49: min_a2=8
+    a1= 50: min_a2=6
+    a1= 51: min_a2=8
+    a1= 52: min_a2=8
+    a1= 53: min_a2=7
+    a1= 54: min_a2=5
+    a1= 55: min_a2=8
+    a1= 56: min_a2=7
+    a1= 57: min_a2=7
+    a1= 59: min_a2=8
+    a1= 60: min_a2=8
+    a1= 61: min_a2=9
+    a1= 65: min_a2=7
+
+======================================================================
+n=8: SAMPLING
+======================================================================
+  500/2000
+  1000/2000
+  1500/2000
+  2000/2000
+
+  All-conflicting (alpha_2=0) at n=8:
+    a1=4: 1 tournaments, H=9
+    a1=5: 2 tournaments, H=11
+    a1=6: 2 tournaments, H=13
+    a1=7: 1 tournaments, H=15
+    a1=8: 1 tournaments, H=17
+    a1=9: 3 tournaments, H=19
+    a1=11: 2 tournaments, H=23
+    a1=12: 5 tournaments, H=25
+    a1=13: 1 tournaments, H=27
+    a1=16: 4 tournaments, H=33
+    a1=18: 2 tournaments, H=37
+    a1=22: 1 tournaments, H=45
+    a1=24: 2 tournaments, H=49
+    a1=25: 1 tournaments, H=51
+    a1=31: 2 tournaments, H=63
+    a1=34: 1 tournaments, H=69
+    a1=36: 3 tournaments, H=73
+    a1=39: 2 tournaments, H=79
+    a1=43: 2 tournaments, H=87
+    a1=47: 1 tournaments, H=95
+    a1=48: 1 tournaments, H=97
+    a1=53: 1 tournaments, H=107
+
+  Min alpha_2 by alpha_1 at n=8:
+    a1=  3: min_a2=2
+    a1=  4: min_a2=0
+    a1=  5: min_a2=0
+    a1=  6: min_a2=0
+    a1=  7: min_a2=0
+    a1=  8: min_a2=0
+    a1=  9: min_a2=0
+    a1= 10: min_a2=2
+    a1= 11: min_a2=0
+    a1= 12: min_a2=0
+    a1= 13: min_a2=0
+    a1= 14: min_a2=1
+    a1= 15: min_a2=5
+    a1= 16: min_a2=0
+    a1= 18: min_a2=0
+    a1= 19: min_a2=1
+    a1= 20: min_a2=2
+    a1= 21: min_a2=2
+    a1= 22: min_a2=0
+    a1= 23: min_a2=2
+    a1= 24: min_a2=0
+    a1= 25: min_a2=0
+    a1= 26: min_a2=3
+    a1= 27: min_a2=3
+    a1= 28: min_a2=4
+    a1= 29: min_a2=2
+    a1= 30: min_a2=2
+    a1= 31: min_a2=0
+    a1= 32: min_a2=4
+    a1= 33: min_a2=2
+    a1= 34: min_a2=0
+    a1= 35: min_a2=2
+    a1= 36: min_a2=0
+    a1= 37: min_a2=1
+    a1= 38: min_a2=4
+    a1= 39: min_a2=0
+    a1= 40: min_a2=5
+    a1= 41: min_a2=10
+    a1= 42: min_a2=4
+    a1= 43: min_a2=0
+    a1= 44: min_a2=2
+    a1= 45: min_a2=4
+    a1= 46: min_a2=6
+    a1= 47: min_a2=0
+    a1= 48: min_a2=0
+    a1= 49: min_a2=8
+    a1= 50: min_a2=4
+    a1= 51: min_a2=4
+    a1= 52: min_a2=6
+    a1= 53: min_a2=0
+    a1= 54: min_a2=5
+    a1= 55: min_a2=5
+    a1= 56: min_a2=4
+    a1= 57: min_a2=7
+    a1= 58: min_a2=11
+    a1= 59: min_a2=8
+    a1= 60: min_a2=5
+    a1= 61: min_a2=6
+    a1= 62: min_a2=8
+    a1= 63: min_a2=5
+    a1= 64: min_a2=6
+    a1= 65: min_a2=7
+    a1= 66: min_a2=11
+    a1= 67: min_a2=9
+    a1= 68: min_a2=8
+    a1= 69: min_a2=8
+    a1= 70: min_a2=10
+    a1= 71: min_a2=9
+    a1= 72: min_a2=11
+    a1= 73: min_a2=13
+    a1= 74: min_a2=11
+    a1= 75: min_a2=15
+    a1= 76: min_a2=14
+    a1= 77: min_a2=16
+    a1= 78: min_a2=11
+    a1= 79: min_a2=15
+    a1= 80: min_a2=13
+    a1= 81: min_a2=11
+    a1= 82: min_a2=13
+    a1= 83: min_a2=16
+    a1= 84: min_a2=15
+    a1= 85: min_a2=15
+    a1= 86: min_a2=15
+    a1= 87: min_a2=9
+    a1= 88: min_a2=14
+    a1= 89: min_a2=14
+    a1= 90: min_a2=18
+    a1= 91: min_a2=15
+    a1= 92: min_a2=11
+    a1= 93: min_a2=19
+    a1= 94: min_a2=17
+    a1= 95: min_a2=21
+    a1= 96: min_a2=22
+    a1= 97: min_a2=20
+    a1= 98: min_a2=21
+    a1= 99: min_a2=21
+    a1=100: min_a2=16
+    a1=101: min_a2=15
+    a1=102: min_a2=17
+    a1=103: min_a2=22
+    a1=104: min_a2=19
+    a1=105: min_a2=17
+    a1=106: min_a2=17
+    a1=107: min_a2=20
+    a1=108: min_a2=21
+    a1=109: min_a2=22
+    a1=110: min_a2=23
+    a1=111: min_a2=23
+    a1=112: min_a2=24
+    a1=113: min_a2=27
+    a1=114: min_a2=28
+    a1=115: min_a2=26
+    a1=116: min_a2=25
+    a1=117: min_a2=25
+    a1=118: min_a2=26
+    a1=119: min_a2=27
+    a1=120: min_a2=26
+    a1=121: min_a2=32
+    a1=122: min_a2=25
+    a1=123: min_a2=23
+    a1=124: min_a2=30
+    a1=125: min_a2=28
+    a1=126: min_a2=25
+    a1=127: min_a2=30
+    a1=128: min_a2=25
+    a1=129: min_a2=27
+    a1=130: min_a2=25
+    a1=131: min_a2=34
+    a1=132: min_a2=32
+    a1=133: min_a2=32
+    a1=134: min_a2=36
+    a1=135: min_a2=38
+    a1=136: min_a2=32
+    a1=137: min_a2=33
+    a1=138: min_a2=33
+    a1=139: min_a2=35
+    a1=140: min_a2=33
+    a1=141: min_a2=41
+    a1=142: min_a2=36
+    a1=143: min_a2=38
+    a1=144: min_a2=35
+    a1=145: min_a2=33
+    a1=146: min_a2=35
+    a1=147: min_a2=31
+    a1=148: min_a2=43
+    a1=149: min_a2=41
+    a1=150: min_a2=44
+    a1=151: min_a2=37
+    a1=152: min_a2=41
+    a1=153: min_a2=39
+    a1=154: min_a2=37
+    a1=155: min_a2=43
+    a1=156: min_a2=43
+    a1=157: min_a2=44
+    a1=158: min_a2=42
+    a1=159: min_a2=43
+    a1=160: min_a2=44
+    a1=161: min_a2=43
+    a1=162: min_a2=45
+    a1=163: min_a2=44
+    a1=164: min_a2=41
+    a1=165: min_a2=45
+    a1=166: min_a2=44
+    a1=167: min_a2=41
+    a1=168: min_a2=49
+    a1=169: min_a2=41
+    a1=170: min_a2=46
+    a1=171: min_a2=55
+    a1=172: min_a2=43
+    a1=173: min_a2=44
+    a1=174: min_a2=45
+    a1=175: min_a2=53
+    a1=176: min_a2=45
+    a1=177: min_a2=47
+    a1=178: min_a2=51
+    a1=179: min_a2=49
+    a1=180: min_a2=51
+    a1=181: min_a2=51
+    a1=182: min_a2=52
+    a1=183: min_a2=53
+    a1=184: min_a2=51
+    a1=185: min_a2=52
+    a1=186: min_a2=53
+    a1=187: min_a2=52
+    a1=188: min_a2=54
+    a1=189: min_a2=66
+    a1=190: min_a2=50
+    a1=191: min_a2=50
+    a1=193: min_a2=49
+    a1=194: min_a2=67
+    a1=195: min_a2=65
+    a1=200: min_a2=60
+    a1=201: min_a2=59
+    a1=203: min_a2=61
+    a1=204: min_a2=61
+    a1=206: min_a2=60
+    a1=209: min_a2=60
+    a1=210: min_a2=58
+    a1=218: min_a2=55
+
+======================================================================
+ANALYSIS: ALL-CONFLICTING THRESHOLD
+======================================================================
+
+At n=3: max 1 cycle (one 3-cycle), alpha_2=0 trivial
+At n=4: max 2 3-cycles on 4 vertices, always share 2+ vertices
+At n=5: 5-cycles enter. 10 3-cycles + 1-3 5-cycles for regular
+At n=6: More cycles, disjoint pairs become easier
+
+KEY QUESTION: Is alpha_2=0 achievable for alpha_1 >= 3?
+If NOT: then the all-conflicting property is bounded by alpha_1 <= 2
+for ALL n, meaning H=7 is the FIRST impossible (a1,0) value
+and all (a1,0) with a1 >= 3 are impossible.

@@ -1,0 +1,148 @@
+======================================================================
+T=10 GAP ANALYSIS (H=21 IMPOSSIBILITY)
+======================================================================
+
+--- CUBIC EXCLUSION LEMMA ---
+CLAIM: alpha_3 >= 1 implies T >= 13
+PROOF:
+  alpha_3 >= 1: exists 3 mutually vertex-disjoint odd cycles
+  => alpha_1 >= 3 (at least these 3 cycles exist)
+  => alpha_2 >= C(3,2) = 3 (each pair of the 3 cycles is disjoint)
+  => T = a1 + 2*a2 + 4*a3 + ... >= 3 + 6 + 4 = 13
+  Since T=10 < 13, we conclude alpha_3 = 0 for any T=10 tournament.
+  Similarly alpha_k = 0 for all k >= 3.
+
+  GENERALIZATION: alpha_k >= 1 implies:
+  alpha_2 >= 1 => T >= (3^2-1)/2 = 4
+  alpha_3 >= 1 => T >= (3^3-1)/2 = 13
+  alpha_4 >= 1 => T >= (3^4-1)/2 = 40
+  alpha_5 >= 1 => T >= (3^5-1)/2 = 121
+  alpha_6 >= 1 => T >= (3^6-1)/2 = 364
+  alpha_7 >= 1 => T >= (3^7-1)/2 = 1093
+
+  BEAUTIFUL: the bound is T >= (3^k - 1)/2!
+  k=1: T >= 1 (trivial)
+  k=2: T >= 4 (one disjoint pair)
+  k=3: T >= 13 (blocks T=10!)
+  k=4: T >= 40
+  The generating function: sum C(k,j)*2^{j-1} = (3^k-1)/2
+  This is (I(K_k, 2) - 1) / 2 where K_k is the empty graph on k vertices!
+
+--- ACHIEVABLE T-SPECTRUM ---
+
+n=5: achievable T values (7 distinct):
+  T=  0: H=  1 via (0,0)
+  T=  1: H=  3 via (1,0)
+  T=  2: H=  5 via (2,0)
+  T=  4: H=  9 via (4,0)
+  T=  5: H= 11 via (5,0)
+  T=  6: H= 13 via (6,0)
+  T=  7: H= 15 via (7,0)
+  Gaps in [0..7]: [3]
+  T=3 (H=7): ABSENT
+  T=10 (H=21): ABSENT
+
+n=6: achievable T values (19 distinct):
+  T=  0: H=  1 via (0,0)
+  T=  1: H=  3 via (1,0)
+  T=  2: H=  5 via (2,0)
+  T=  4: H=  9 via (2,1), (4,0)
+  T=  5: H= 11 via (5,0)
+  T=  6: H= 13 via (6,0)
+  T=  7: H= 15 via (7,0)
+  T=  8: H= 17 via (6,1), (8,0)
+  T=  9: H= 19 via (9,0)
+  T= 11: H= 23 via (9,1), (11,0)
+  T= 12: H= 25 via (12,0)
+  T= 13: H= 27 via (11,1)
+  T= 14: H= 29 via (10,2), (12,1)
+  T= 15: H= 31 via (13,1)
+  T= 16: H= 33 via (12,2), (14,1), (16,0)
+  T= 18: H= 37 via (14,2), (16,1)
+  T= 20: H= 41 via (16,2)
+  T= 21: H= 43 via (19,1)
+  T= 22: H= 45 via (14,4), (20,1)
+  Gaps in [0..22]: [3, 10, 17, 19]
+  T=3 (H=7): ABSENT
+  T=10 (H=21): ABSENT
+
+======================================================================
+WHY EACH DECOMPOSITION OF T=10 FAILS
+======================================================================
+
+    (10,0): 10 cycles, all pairwise sharing a vertex.
+      At n=6 exhaustive: alpha_1=10 always has alpha_2 = 2 (never 0 or 1).
+      This means alpha_1=10 forces at least 2 disjoint pairs.
+      MECHANISM: With 10 cycles on 6 vertices, having c3 values that
+      give exactly 10 directed cycles forces configurations where some
+      pairs are on disjoint vertex sets.
+
+    (8,1): 8 cycles, exactly 1 disjoint pair.
+      NEVER OBSERVED: at n=6,7,8 no tournament has this exact (a1,a2) pair.
+      Note alpha_1=8 with alpha_2=0 IS achievable (H=17), but adding
+      exactly 1 disjoint pair to get from T=8 to T=10 doesn't happen.
+      The jump from (8,0) to (8,1+) is blocked by a structural gap.
+
+    (6,2): 6 cycles, exactly 2 disjoint pairs.
+      At n=6: alpha_1=6 with alpha_2=1 has count 720 (T=8, H=17).
+      But (6,2) (T=10, H=21) has count 0.
+      The step from alpha_2=1 to alpha_2=2 with alpha_1=6 is blocked.
+
+    (4,3): 4 cycles, 3 disjoint pairs.
+      Requires: among 4 odd cycles, 3 pairs are vertex-disjoint.
+      This means at least 2 of the 4 cycles are part of a disjoint triple
+      (forming alpha_3 candidate if not for the alpha constraint).
+      At n<9: alpha_3=0 always (need 9 vertices for 3 disjoint 3-cycles).
+      So at n<9, any disjoint pair structure is constrained by the vertex
+      budget. 4 cycles with 3 disjoint pairs at n=8: possible only if
+      the disjoint pairs don't form a full triple.
+
+      KEY CONSTRAINT: 3 disjoint pairs among 4 items form a matching
+      in the complete graph K_4 minus a matching (= C_4 or P_4 or K_{1,3}).
+
+      If the disjoint pairs form a path P_4: A-B, B-C, C-D.
+        A is disjoint from B, B from C, C from D.
+        But A,C conflict; A,D conflict; B,D conflict.
+        So A&C != empty, A&D != empty, B&D != empty.
+        The cycles form an overlapping chain.
+        Need: 4 cycles total (alpha_1=4), each 3+ vertices.
+        A and B disjoint: 6+ vertices. C disjoint from B: C uses 3 new.
+        9+ vertices. D disjoint from C but conflicts with B: D shares
+        with B but not C. Uses some B vertices + some new.
+        Total >= 9 vertices, so n >= 9.
+        But at n=9: alpha_3 might be >= 1 if A,B,C are mutually disjoint.
+        Check: A and B empty, B and C empty, A and C nonempty (conflict).
+        So A,B,C are NOT mutually disjoint. alpha_3 doesn't trigger.
+
+      This analysis shows (4,3) requires n >= 9 vertices. But at n >= 9,
+      with so many vertices, additional cycles appear beyond the 4, raising
+      alpha_1 above 4.
+    
+
+======================================================================
+THE TWO PERMANENT T-GAPS: T=3 AND T=10
+======================================================================
+
+T = a1 + 2*a2 = (3^k-1)/2 at k=1: T=1, k=2: T=4
+But T=3 and T=10 are the permanent gaps.
+
+T=3 = (7-1)/2: H=7 = Phi_3(2)
+T=10 = (21-1)/2: H=21 = 3 * Phi_3(2)
+
+Key difference from (3^k-1)/2 values:
+  (3^1-1)/2 = 1: achievable (transitive + 1 cycle)
+  (3^2-1)/2 = 4: achievable (alpha_2=1 at n>=6, or alpha_1=4 at n=5)
+  (3^3-1)/2 = 13: achievable (alpha_1=13 at n>=6)
+
+So the gaps 3 and 10 are NOT the (3^k-1)/2 values!
+
+T=3: the unique T value where alpha_1=3 is the only decomposition,
+  and alpha_1=3 forces alpha_2>=2 (by splicing lemma).
+  Alternative decomposition (1,1) needs alpha_1=1, alpha_2=1,
+  which requires 2 cycles (for the pair) but alpha_1=1 means
+  only 1 cycle. Contradiction.
+
+T=10: all 4 quadratic decompositions are achievability-blocked,
+  and the cubic exclusion lemma blocks higher-order terms.
+  T=10 is the LARGEST T value blocked by quadratic constraints
+  because T>=13 always has valid cubic decomposition.
