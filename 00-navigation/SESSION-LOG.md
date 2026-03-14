@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S89 (continuation) — 2026-03-14: Morse Theory, Upset Monotonicity, Fibonacci Period-6
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S89 (context overflow continuation)
+**Summary of work:** Deep exploration of tournament topology through Morse theory on the hypercube. Discovered that local minima of H are exactly the transitive tournaments (THM-206, verified n<=6). Proved the forward direction (trivial: H>=1). Discovered Upset Monotonicity: flipping ANY upset arc ALWAYS decreases H (100% verified n<=6). Connected Fibonacci period-6 to tournament structure via Pisano period pi(4)=6=|S_3|. Explored Baer subplanes in PG(2,q). Analyzed edge sensitivity via Walsh derivatives. Found one-flip-from-transitive H values = {2^d+1}. Monte Carlo n=7 reveals 6 distinct local maxima H-values with H=159 as most common attractor.
+**New contributions:**
+- THM-205: Cone H-Invariance (proved + verified)
+- THM-206: Local minima = transitive tournaments (verified n<=6)
+- HYP-1420 through HYP-1427 (8 new hypotheses)
+- Upset Monotonicity Conjecture (100% verified, potential crown jewel)
+- Score-product heuristic: algebraic difference (n-2)(s_j-s_i+1) always positive
+- Fibonacci bisection coefficient = Phi_3(1) = 3
+- One-flip-from-transitive formula: H = 2^d + 1
+- Baer subplane near-miss: PG(2,9) exterior = 78 vs |Spec(7)| = 77
+- n=7 landscape: 6 local max H-values, H=159 most common attractor (43.4%)
+**Unresolved threads:**
+- Prove Upset Monotonicity generally (score-product gives right sign but need rigorous path-counting bound)
+- Prove reverse direction of THM-206 for all n
+- Why exactly H = 2^d + 1 for one-flip-from-transitive?
+- Do local max counts follow a pattern? n=3:2, n=4:24, n=5:64, n=6:1200
+- The forbidden value fraction seems to grow — what's the limiting behavior?
+
 ## opus-2026-03-14-S71m — 2026-03-14: Wild Ideas — Eigenfunction, Traps, Entropy, Projective Geometry
 
 **Account:** opus
