@@ -1,0 +1,204 @@
+======================================================================
+SEQUENCE INTERACTION — HOW THEY MOVE TOGETHER
+kind-pasteur-2026-03-14-S90 (continued)
+======================================================================
+
+======================================================================
+INTERACTION 1: GCD PATTERNS
+======================================================================
+
+    n   a(n)   F(n)   T(n) GCD(a,F) GCD(a,T) GCD(F,T)
+    1      1      1      1        1        1        1
+    2      2      1      3        1        1        1
+    3      4      2      6        2        2        2
+    4      8      3     10        1        2        1
+    5     15      5     15        5       15        5
+    6     26      8     21        2        1        1
+    7     42     13     28        1       14        1
+    8     64     21     36        1        4        3
+    9     93     34     45        1        3        1
+   10    130     55     55        5        5       55
+   11    176     89     66        1       22        1
+   12    232    144     78        8        2        6
+   13    299    233     91        1       13        1
+   14    378    377    105        1       21        1
+   15    470    610    120       10       10       10
+
+======================================================================
+INTERACTION 2: DIVISIBILITY PATTERNS
+======================================================================
+
+  F(n) | a(n)? (Fibonacci divides a(n)):
+    n= 1: a(n)/F(n) = 1/1 = 1
+    n= 2: a(n)/F(n) = 2/1 = 2
+    n= 3: a(n)/F(n) = 4/2 = 2
+    n= 5: a(n)/F(n) = 15/5 = 3
+
+  T(n) | a(n)? (Triangular divides a(n)):
+    n= 1: a(n)/T(n) = 1/1 = 1
+    n= 5: a(n)/T(n) = 15/15 = 1
+
+  a(n) | T(n)? (a(n) divides triangular):
+    n= 1: T(n)/a(n) = 1/1 = 1
+    n= 5: T(n)/a(n) = 15/15 = 1
+
+======================================================================
+INTERACTION 3: CAN ONE SEQUENCE PREDICT ANOTHER?
+======================================================================
+
+  max_H(n) / a(n):
+    n= 3: maxH=     3, a(n)=     4, ratio=0.7500
+    n= 4: maxH=     5, a(n)=     8, ratio=0.6250
+    n= 5: maxH=    15, a(n)=    15, ratio=1.0000
+    n= 6: maxH=    45, a(n)=    26, ratio=1.7308
+    n= 7: maxH=   189, a(n)=    42, ratio=4.5000
+    n= 8: maxH=   661, a(n)=    64, ratio=10.3281
+    n= 9: maxH=  3357, a(n)=    93, ratio=36.0968
+    n=10: maxH= 15745, a(n)=   130, ratio=121.1154
+    n=11: maxH= 95095, a(n)=   176, ratio=540.3125
+
+  max_H(n) / a(n) pattern:
+    n=3: 3/4 = 0.75
+    n=4: 5/8 = 0.625
+    n=5: 15/15 = 1.000  <-- EXACT!
+    n=6: 45/26 = 1.731
+    n=7: 189/42 = 4.500
+    n=8: 661/64 = 10.328
+    n=9: 3357/93 = 36.097
+
+======================================================================
+INTERACTION 4: EVEN-ODD INTERLEAVING OF a(n)
+  a(n) has a beautiful symmetry: a(n) + a(-n) = -n^2
+  The 'symmetric part' s(n) = (a(n) - a(-n))/2 and
+  'antisymmetric part' d(n) = (a(n) + a(-n))/2 = -n^2/2
+======================================================================
+  n= 0: a(n)=     0, a(-n)=     0, sym=(a-a')/2=0, anti=(a+a')/2=0
+  n= 1: a(n)=     1, a(-n)=    -2, sym=(a-a')/2=1.5, anti=(a+a')/2=-0.5
+  n= 2: a(n)=     2, a(-n)=    -6, sym=(a-a')/2=4, anti=(a+a')/2=-2
+  n= 3: a(n)=     4, a(-n)=   -13, sym=(a-a')/2=8.5, anti=(a+a')/2=-4.5
+  n= 4: a(n)=     8, a(-n)=   -24, sym=(a-a')/2=16, anti=(a+a')/2=-8
+  n= 5: a(n)=    15, a(-n)=   -40, sym=(a-a')/2=27.5, anti=(a+a')/2=-12.5
+  n= 6: a(n)=    26, a(-n)=   -62, sym=(a-a')/2=44, anti=(a+a')/2=-18
+  n= 7: a(n)=    42, a(-n)=   -91, sym=(a-a')/2=66.5, anti=(a+a')/2=-24.5
+  n= 8: a(n)=    64, a(-n)=  -128, sym=(a-a')/2=96, anti=(a+a')/2=-32
+  n= 9: a(n)=    93, a(-n)=  -174, sym=(a-a')/2=133.5, anti=(a+a')/2=-40.5
+
+  Symmetric part: s(n) = n(n^2+8)/6
+    n=0: predicted=0, actual=0, match=True
+    n=1: predicted=1, actual=1, match=True
+    n=2: predicted=4, actual=4, match=True
+    n=3: predicted=8, actual=8, match=True
+    n=4: predicted=16, actual=16, match=True
+    n=5: predicted=27, actual=27, match=True
+    n=6: predicted=44, actual=44, match=True
+    n=7: predicted=66, actual=66, match=True
+    n=8: predicted=96, actual=96, match=True
+    n=9: predicted=133, actual=133, match=True
+
+  DECOMPOSITION: a(n) = s(n) + d(n)
+  where s(n) = n(n^2+8)/6 (symmetric, s(n) = s(-n)... wait)
+  CORRECTION: s(n) is ANTISYMMETRIC (s(-n) = -s(n))
+  d(n) = -n^2/2 is SYMMETRIC (d(-n) = d(n))
+
+  a(n) = s(n) + d(n)
+  a(-n) = -s(n) + d(n)
+  Adding: a(n) + a(-n) = 2*d(n) = -n^2 ✓
+  Subtracting: a(n) - a(-n) = 2*s(n) = n(n^2+8)/3
+
+======================================================================
+INTERACTION 5: WHERE FIBONACCI MEETS a(n) = C(n,1)+C(n,3)
+======================================================================
+  a(n) first exceeds Fib at n=2: a=2, F=1
+  a(n) first exceeds C(n,2) at n=1: a=1, C(n,2)=0
+
+  a(n) - C(n,2) = n(n^2 - 5n + 10)/6
+  Discriminant of n^2-5n+10: 25-40 = -15 < 0
+  So n^2-5n+10 > 0 for ALL n! Hence a(n) > C(n,2) for all n >= 1.
+
+======================================================================
+INTERACTION 6: LAYERS OF PASCAL AND TOURNAMENT STRUCTURE
+======================================================================
+
+  The sequence a(n) = C(n,1) + C(n,3) is the sum of Pascal layers 1 and 3.
+
+  Each layer has a tournament interpretation:
+    Layer 0: C(n,0) = 1 (the empty set — the "constant" term)
+    Layer 1: C(n,1) = n (vertices — 0-dimensional structure)
+    Layer 2: C(n,2) = n(n-1)/2 (edges/arcs — 1-dimensional structure)
+    Layer 3: C(n,3) = n(n-1)(n-2)/6 (triangles — 2-dimensional structure)
+    Layer 4: C(n,4) (tetrahedra — 3-dimensional)
+    ...
+    Layer k: C(n,k) (k-element subsets — (k-1)-dimensional)
+
+  The OCF uses powers of 2 to weight cycle counts:
+    H = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
+    = C(x,0) + 2*alpha_1 + 4*alpha_2 + ... where x counts at fugacity 2
+
+  The connection:
+    H counts weighted INDEPENDENT SETS (of the cycle graph)
+    a(n) counts UNWEIGHTED subsets of sizes 1 and 3 (of the vertex set)
+    Both are partial sums of a "layer decomposition"
+    But the layers are different:
+      H: layers are sizes of independent cycle sets (0,1,2,3,...)
+      a(n): layers are sizes of vertex subsets (1,3)
+
+  THE BRIDGE:
+  At n=5: alpha_1 = (H-1)/2 ranges from 0 to 7.
+  The max alpha_1 = 7 = C(5,1) + C(5,3)/... no, 7 ≠ 5+10.
+  But a(5) = 15 = max_H(5) = the TOTAL structure count.
+  And 15 = C(5,1) + C(5,3) = 5 + 10.
+  The maximum Ham path count EQUALS the vertex + triangle count!
+
+
+======================================================================
+INTERACTION 7: THE SEQUENCE AT n=6 (THE CRITICAL TRANSITION)
+======================================================================
+
+  n=6 values:
+    a(6) = C(6,1) + C(6,3) = 6 + 20 = 26
+    Tri(6) = 21 = FORBIDDEN H value
+    Fib(6) = 8
+    C(6,2) = 15 = max_H(5)
+    max_H(6) = 45 = T(9)
+    Jacobsthal(6) = 21 = FORBIDDEN!
+
+  At n=6: the 'forbidden' number 21 appears as BOTH
+  Tri(6) AND Jacobsthal(6) AND C(7,2).
+  While a(6) = 26 passes through, giving NO special alignment.
+  But C(6,2) = 15 = max_H(5) = a(5) = Tri(5)!
+  The 'echo' of n=5 appears in n=6's arc count.
+
+======================================================================
+THE META-PATTERN
+======================================================================
+
+  The sequences align at SPECIFIC "resonance points":
+    n=1: everything = 1 (trivial)
+    n=3: a(3)=4=2^2, Fib(3)=2, Tri(3)=6, maxH(3)=3
+    n=5: a(5)=Tri(5)=maxH(5)=15 (TRIPLE COINCIDENCE)
+    n=7: a(7)=42=Catalan(5), Tri(7)=28=C(8,2), maxH(7)=189=3^3*7
+    n=10: Fib(10)=Tri(10)=55, a(10)=130, C(10,2)=45=maxH(6)
+    n=11: maxH(11)/Tri(10)=1729
+
+  The RESONANCE POINTS are at n = 1, 5, 10 (and weakly 3, 7, 11).
+  These are n ≡ 0, 1 (mod 5)!
+  Or: the Fibonacci-indexed resonances.
+
+  At each resonance, multiple sequences agree on a value that has
+  TOURNAMENT SIGNIFICANCE (a max_H value, a forbidden value, or
+  a structural quantity like arc count).
+
+  The 2nd differences of a(n) are the natural numbers.
+  The 2nd differences of Fibonacci are... Fibonacci itself!
+  The 2nd differences of triangular are... 1, 1, 1, ... (constant)!
+
+  HIERARCHY OF SIMPLICITY:
+    Triangular: constant 2nd diff (simplest polynomial)
+    a(n) = n+C(n,3): natural number 2nd diff (next simplest)
+    Fibonacci: self-similar 2nd diff (simplest exponential)
+    max_H: no simple diff pattern (most complex)
+
+
+======================================================================
+DONE — DEEP INTERACTION ANALYSIS
+======================================================================
