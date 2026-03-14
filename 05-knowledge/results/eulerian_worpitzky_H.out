@@ -1,0 +1,324 @@
+======================================================================
+EULERIAN-WORPITZKY-TOURNAMENT CONNECTION
+opus-2026-03-14-S71l
+======================================================================
+
+======================================================================
+PART 1: EULERIAN NUMBERS AND TOURNAMENT STRUCTURE
+======================================================================
+
+  Eulerian triangle A(n,k):
+  n=1: [1]  sum=1=1!
+  n=2: [1, 1]  sum=2=2!
+  n=3: [1, 4, 1]  sum=6=3!
+  n=4: [1, 11, 11, 1]  sum=24=4!
+  n=5: [1, 26, 66, 26, 1]  sum=120=5!
+  n=6: [1, 57, 302, 302, 57, 1]  sum=720=6!
+  n=7: [1, 120, 1191, 2416, 1191, 120, 1]  sum=5040=7!
+  n=8: [1, 247, 4293, 15619, 15619, 4293, 247, 1]  sum=40320=8!
+
+  WORPITZKY IDENTITY:
+  sum_{k=0}^{n-1} A(n,k) * C(x+n-1-k, n) = x^n
+
+  At x=1: sum A(n,k) * C(n-k, n) = 1
+  At x=2: sum A(n,k) * C(n+1-k, n) = 2^n
+
+  This gives a DECOMPOSITION of 2^n (number of arc orientations)
+  into Eulerian contributions!
+
+  n=1: 2^1 = 2 =A(1,0)*C(2,1) = 2
+  n=2: 2^2 = 4 =A(2,0)*C(3,2) + A(2,1)*C(2,2) = 4
+  n=3: 2^3 = 8 =A(3,0)*C(4,3) + A(3,1)*C(3,3) + A(3,2)*C(2,3) = 8
+  n=4: 2^4 = 16 =A(4,0)*C(5,4) + A(4,1)*C(4,4) + A(4,2)*C(3,4) + A(4,3)*C(2,4) = 16
+  n=5: 2^5 = 32 =A(5,0)*C(6,5) + A(5,1)*C(5,5) + A(5,2)*C(4,5) + A(5,3)*C(3,5) + A(5,4)*C(2,5) = 32
+  n=6: 2^6 = 64 =A(6,0)*C(7,6) + A(6,1)*C(6,6) + A(6,2)*C(5,6) + A(6,3)*C(4,6) + A(6,4)*C(3,6) + A(6,5)*C(2,6) = 64
+  n=7: 2^7 = 128 =A(7,0)*C(8,7) + A(7,1)*C(7,7) + A(7,2)*C(6,7) + A(7,3)*C(5,7) + A(7,4)*C(4,7) + A(7,5)*C(3,7) + A(7,6)*C(2,7) = 128
+
+======================================================================
+PART 2: H-VALUE DECOMPOSITION
+======================================================================
+
+  For a tournament T on [n], the F-polynomial is:
+  F(T, x) = sum_k F_k(T) * x^k
+
+  where F_k(T) = number of HP of T with exactly k "ascents"
+  (positions where the arc goes from smaller to larger vertex).
+
+  H(T) = F(T, 1) = sum of all F_k.
+
+  The Worpitzky decomposition of H(T):
+  H(T) = sum_k w_k(T) where w_k = Eulerian-weighted F-coefficients.
+
+  n=3, bits=000: H=1, F=[1, 0, 0]
+  n=3, bits=111: H=1, F=[0, 0, 1]
+  n=3, bits=010: H=3, F=[1, 2, 0]
+  n=4, bits=000000: H=1, F=[1, 0, 0, 0]
+  n=4, bits=111111: H=1, F=[0, 0, 0, 1]
+  n=4, bits=001000: H=1, F=[0, 1, 0, 0]
+  n=5, bits=0000000000: H=1, F=[1, 0, 0, 0, 0]
+  n=5, bits=1111111111: H=1, F=[0, 0, 0, 0, 1]
+  n=5, bits=0000100000: H=3, F=[1, 2, 0, 0, 0]
+  n=6, bits=000000000000000: H=1, F=[1, 0, 0, 0, 0, 0]
+  n=6, bits=111111111111111: H=1, F=[0, 0, 0, 0, 0, 1]
+  n=6, bits=000000010000000: H=5, F=[1, 4, 0, 0, 0, 0]
+
+======================================================================
+PART 3: EULERIAN-TOURNAMENT AVERAGE F-POLYNOMIAL
+======================================================================
+
+  Over ALL tournaments, what is the average F-polynomial?
+
+  Each permutation pi is a HP of exactly 2^{m-(n-1)} tournaments
+  (the n-1 arcs are fixed, the rest are free).
+
+  The average F_k = sum over perms with k ascents, each counted
+  2^{m-(n-1)} / 2^m = 1/2^{n-1} times.
+
+  So: E[F_k] = A(n,k) / 2^{n-1}
+
+  where A(n,k) is the Eulerian number!
+
+
+  n=3: Mean F-polynomial = (1/2^2) * Eulerian row
+    E[F_0] = 1/4 = 1/4
+    E[F_1] = 4/4 = 1
+    E[F_2] = 1/4 = 1/4
+    E[H] = 3!/2^2 = 1.5
+
+  n=4: Mean F-polynomial = (1/2^3) * Eulerian row
+    E[F_0] = 1/8 = 1/8
+    E[F_1] = 11/8 = 11/8
+    E[F_2] = 11/8 = 11/8
+    E[F_3] = 1/8 = 1/8
+    E[H] = 4!/2^3 = 3.0
+
+  n=5: Mean F-polynomial = (1/2^4) * Eulerian row
+    E[F_0] = 1/16 = 1/16
+    E[F_1] = 26/16 = 13/8
+    E[F_2] = 66/16 = 33/8
+    E[F_3] = 26/16 = 13/8
+    E[F_4] = 1/16 = 1/16
+    E[H] = 5!/2^4 = 7.5
+
+  n=6: Mean F-polynomial = (1/2^5) * Eulerian row
+    E[F_0] = 1/32 = 1/32
+    E[F_1] = 57/32 = 57/32
+    E[F_2] = 302/32 = 151/16
+    E[F_3] = 302/32 = 151/16
+    E[F_4] = 57/32 = 57/32
+    E[F_5] = 1/32 = 1/32
+    E[H] = 6!/2^5 = 22.5
+
+  n=7: Mean F-polynomial = (1/2^6) * Eulerian row
+    E[F_0] = 1/64 = 1/64
+    E[F_1] = 120/64 = 15/8
+    E[F_2] = 1191/64 = 1191/64
+    E[F_3] = 2416/64 = 151/4
+    E[F_4] = 1191/64 = 1191/64
+    E[F_5] = 120/64 = 15/8
+    E[F_6] = 1/64 = 1/64
+    E[H] = 7!/2^6 = 78.75
+
+  Direct verification at n=5:
+    F_0: actual mean = 1/16 = 0.0625, expected = 1/16 = 0.0625, match: True
+    F_1: actual mean = 13/8 = 1.6250, expected = 13/8 = 1.6250, match: True
+    F_2: actual mean = 33/8 = 4.1250, expected = 33/8 = 4.1250, match: True
+    F_3: actual mean = 13/8 = 1.6250, expected = 13/8 = 1.6250, match: True
+    F_4: actual mean = 1/16 = 0.0625, expected = 1/16 = 0.0625, match: True
+
+======================================================================
+PART 4: VARIANCE STRUCTURE OF F-POLYNOMIAL
+======================================================================
+  n=5: F-polynomial statistics over all 1024 tournaments
+    F_0: mean=0.0625, var=0.0586, std=0.2421
+    F_1: mean=1.6250, var=3.8125, std=1.9526
+    F_2: mean=4.1250, var=7.2344, std=2.6897
+    F_3: mean=1.6250, var=3.8125, std=1.9526
+    F_4: mean=0.0625, var=0.0586, std=0.2421
+
+    H = sum F_k: mean=7.5000, var=17.8125
+
+  Correlation matrix of F_k's:
+      1.000  0.496 -0.072 -0.198 -0.067
+      0.496  1.000  0.253 -0.373 -0.198
+     -0.072  0.253  1.000  0.253 -0.072
+     -0.198 -0.373  0.253  1.000  0.496
+     -0.067 -0.198 -0.072  0.496  1.000
+
+======================================================================
+PART 5: F-POLYNOMIAL AND SIMPLEX DECOMPOSITION
+======================================================================
+
+  The F-polynomial F(T,x) evaluated at x gives:
+    F(T,0) = F_0(T) = number of HP with 0 ascents
+                     = number of "descending" HP (pi(1)>pi(2)>...>pi(n))
+                     = either 0 or 1 (can be at most 1)
+
+    F(T,1) = H(T) = total HP count
+
+    F(T,-1) = sum (-1)^k F_k(T)
+            = "signed alternating HP count"
+
+  The Worpitzky connection:
+  F(T,x) = sum_k F_k(T) * x^k
+
+  The "Eulerian decomposition" of F:
+  F(T,x) = sum_k w_k(T) * C(x+n-1-k, n)
+
+  where the w_k are the "Worpitzky coefficients" of T.
+
+  If T is the AVERAGE tournament (uniform over all T):
+  E[F(T,x)] = (1/2^{n-1}) * sum_k A(n,k) * x^k = A_n(x) / 2^{n-1}
+
+  where A_n(x) is the Eulerian polynomial.
+
+  At x=1: E[H] = A_n(1)/2^{n-1} = n!/2^{n-1}  ✓
+
+  The SIMPLEX interpretation:
+  A_n(x) = n! * sum_k A(n,k)/n! * x^k
+  The normalized coefficients A(n,k)/n! sum to 1.
+  So A_n(x)/n! is a probability generating function!
+
+  The descent probability: P(k descents) = A(n,k)/n!
+  Mean descents = (n-1)/2 (by symmetry of Eulerian numbers)
+
+  n=3: Eulerian probabilities P(k descents):
+    P(k=0) = 1/6 = 0.1667
+    P(k=1) = 2/3 = 0.6667
+    P(k=2) = 1/6 = 0.1667
+  n=4: Eulerian probabilities P(k descents):
+    P(k=0) = 1/24 = 0.0417
+    P(k=1) = 11/24 = 0.4583
+    P(k=2) = 11/24 = 0.4583
+    P(k=3) = 1/24 = 0.0417
+  n=5: Eulerian probabilities P(k descents):
+    P(k=0) = 1/120 = 0.0083
+    P(k=1) = 13/60 = 0.2167
+    P(k=2) = 11/20 = 0.5500
+    P(k=3) = 13/60 = 0.2167
+    P(k=4) = 1/120 = 0.0083
+  n=6: Eulerian probabilities P(k descents):
+    P(k=0) = 1/720 = 0.0014
+    P(k=1) = 19/240 = 0.0792
+    P(k=2) = 151/360 = 0.4194
+    P(k=3) = 151/360 = 0.4194
+    P(k=4) = 19/240 = 0.0792
+    P(k=5) = 1/720 = 0.0014
+  n=7: Eulerian probabilities P(k descents):
+    P(k=0) = 1/5040 = 0.0002
+    P(k=1) = 1/42 = 0.0238
+    P(k=2) = 397/1680 = 0.2363
+    P(k=3) = 151/315 = 0.4794
+    P(k=4) = 397/1680 = 0.2363
+    P(k=5) = 1/42 = 0.0238
+    P(k=6) = 1/5040 = 0.0002
+
+======================================================================
+PART 6: FROM EULERIAN TO 3-STRAND PASCAL
+======================================================================
+
+  QUESTION: Is there a "trinomial F-polynomial" that decomposes H
+  using the 3-strand Pascal (trinomial coefficients) instead of
+  the 2-strand Pascal (binomial coefficients)?
+
+  The standard decomposition:
+  H(T) = sum_k F_k(T) * 1^k = sum F_k  (all weights = 1)
+
+  A 3-strand version would be:
+  H_3(T) = sum_k F_k(T) * omega^k  where omega = e^(2pi*i/3)
+
+  This is the "cube-root-of-unity Fourier transform" of the F-polynomial!
+
+  F(T, omega) = sum_k F_k(T) * omega^k
+
+  Since omega^3 = 1, this only depends on F_k mod 3:
+  F(T, omega) = (F_0 + F_3 + ...) + omega*(F_1 + F_4 + ...) + omega^2*(F_2 + F_5 + ...)
+
+  Let G_j = sum_{k equiv j mod 3} F_k. Then:
+  F(T, omega) = G_0 + omega*G_1 + omega^2*G_2
+
+  |F(T, omega)|^2 = G_0^2 + G_1^2 + G_2^2 - G_0*G_1 - G_1*G_2 - G_0*G_2
+                   = Phi_3-norm of (G_0, G_1, G_2) in some sense
+
+  THIS IS THE 3-STRAND H VALUE!
+  It measures the "imbalance" among the three residue classes of descents.
+
+
+  n=5: F(T, omega) statistics
+    |F(omega)| range: [1.0000, 9.5394]
+    Mean |F(omega)|: 3.8587
+    |F(omega)|^2 range: [1.0000, 91.0000]
+    |F(omega)|^2 always integer? True
+    Distinct |F(omega)|^2 values: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28, 31, 36]...
+    Correlation(H, |F(omega)|): 0.8339
+
+  n=6: F(T, omega) statistics
+    |F(omega)| range: [1.0000, 28.1603]
+    Mean |F(omega)|: 9.4818
+    |F(omega)|^2 range: [1.0000, 793.0000]
+    |F(omega)|^2 always integer? True
+    Distinct |F(omega)|^2 values: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28, 31, 36]...
+    Correlation(H, |F(omega)|): 0.8571
+
+======================================================================
+PART 7: DESCENT POLYNOMIAL AND WHY 7 IS FORBIDDEN
+======================================================================
+
+  For a tournament T, define the descent polynomial:
+  D(T, x) = sum over all HP pi: x^{des(pi)}
+
+  where des(pi) = number of descents in pi as a permutation.
+
+  Then F(T, x) counts ascents, so:
+  D(T, x) = x^{n-1} * F(T, 1/x)  (reverse coefficients)
+
+  The relationship: F_k(T) = D_{n-1-k}(T) (palindromic duality for each T)
+
+  Wait, that's only true for the uniform distribution.
+  For a specific tournament, F(T,x) is generally NOT palindromic.
+  But F(T,x) = x^{n-1} * F(T^op, 1/x) (complement duality, from HYP-011).
+
+  KEY QUESTION: Can H=7 be expressed as a sum F_0 + F_1 + ... + F_{n-1}
+  for some valid F-polynomial?
+
+  At n=5 (first n where 7 could be achievable):
+  H = F_0 + F_1 + F_2 + F_3 + F_4 = 7
+  Each F_k >= 0.
+  F_0 + F_4 are the "extremal" terms (fully descending / fully ascending HP).
+
+  The constraint: sum = 7 with F_k >= 0.
+  This is certainly achievable as a partition of 7.
+  But the F_k must ALSO be consistent with being the descent distribution
+  of Hamiltonian paths of some tournament.
+
+  The obstructions are:
+  1. F_0 in {{0, 1}} (at most one fully descending HP)
+  2. F_{n-1} in {{0, 1}} (at most one fully ascending HP)
+  3. F_k(T) = F_{n-1-k}(T^op) (complement duality)
+  4. Various inequalities from the tournament structure
+
+
+  n=5: 144 distinct F-polynomials
+  H-values and their F-polynomials:
+    H= 1: 5 F-polys: [(0, 0, 0, 0, 1), (0, 0, 0, 1, 0), (0, 0, 1, 0, 0), (0, 1, 0, 0, 0), (1, 0, 0, 0, 0)]
+    H= 3: 9 F-polys: [(0, 0, 0, 2, 1), (0, 0, 0, 3, 0), (0, 0, 1, 2, 0), (0, 0, 2, 1, 0), (0, 0, 3, 0, 0)]...
+    H= 5: 20 F-polys: [(0, 0, 0, 4, 1), (0, 0, 0, 5, 0), (0, 0, 1, 3, 1), (0, 0, 1, 4, 0), (0, 0, 2, 2, 1)]...
+    H= 9: 29 F-polys: [(0, 0, 0, 8, 1), (0, 0, 2, 6, 1), (0, 0, 3, 5, 1), (0, 0, 3, 6, 0), (0, 0, 4, 4, 1)]...
+    H=11: 35 F-polys: [(0, 0, 0, 10, 1), (0, 0, 3, 7, 1), (0, 0, 4, 6, 1), (0, 0, 4, 7, 0), (0, 0, 5, 6, 0)]...
+    H=13: 30 F-polys: [(0, 0, 3, 9, 1), (0, 0, 4, 8, 1), (0, 0, 5, 7, 1), (0, 0, 6, 6, 1), (0, 0, 6, 7, 0)]...
+    H=15: 16 F-polys: [(0, 0, 4, 10, 1), (0, 0, 6, 8, 1), (0, 0, 9, 6, 0), (0, 0, 10, 4, 1), (0, 1, 7, 7, 0)]...
+
+  H=7 has 0 F-polynomials (should be 0)
+  H=11 has 35 F-polynomials
+
+  F-polynomials that sum to 7 (if they existed):
+  Since F_0, F_4 in {0,1}, and F_1+F_2+F_3 must fill the rest:
+  F_0=0, F_4=0: need F_1+F_2+F_3=7
+  F_0=1, F_4=0: need F_1+F_2+F_3=6
+  F_0=0, F_4=1: need F_1+F_2+F_3=6
+  F_0=1, F_4=1: need F_1+F_2+F_3=5
+  None of these combinations are achievable by any tournament!
+
+======================================================================
+DONE — EULERIAN-WORPITZKY-TOURNAMENT CONNECTION
+======================================================================
