@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-14-S71e — 2026-03-14: Co-Jump Mechanism & H=21 Structural Proof
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S76 (third continuation)
+**Summary of work:**
+Extended the H=7/H=21 impossibility analysis. Discovered the co-jump mechanism that explains WHY β₁+2β₂ skips the value 10, making H=21 permanently impossible. Corrected critical OCF misunderstanding (Ω uses directed cycles, not vertex sets). Explored simplex-cuboid packing connections. Verified I(G,2)=7,21 achievable by general graphs but not tournament conflict graphs.
+
+**Critical findings:**
+1. **Splicing Lemma** (HYP-1061): Two odd cycles sharing exactly 1 vertex always produce a 3rd odd cycle. Proved + exhaustive n=6 verification.
+2. **Co-jump mechanism** (HYP-1064): At n=6, β₁+2β₂ goes 9→11, NEVER hitting 10. Every arc flip from target=9 jumps by ≥2. Mechanism: Splicing forces companion cycles.
+3. **Directed cycle correction**: Ω vertices = directed odd cycles, not vertex sets. Multiple directed cycles on same vertex set are separate vertices. Verified 1024/1024 at n=5.
+4. **β₁,β₂ formulation** (HYP-1063): H = 1 + 2β₁ + 4β₂ + ... where β_k uses directed cycle multiplicities. Verified exactly at n=5,6.
+5. **β₃≥1 ⟹ H≥27**: Three disjoint cycles contribute (1+2d₁)(1+2d₂)(1+2d₃) ≥ 27. This proves H=21 requires β₃=0.
+6. **Sunflower bound**: Max cyclic triples through any vertex = s(n-1-s) ≤ 9 at n=7. Ten pairwise-intersecting 3-cycles can't fit through one vertex, forcing non-sunflower structure that creates 5-cycles via Splicing.
+7. **I.P. interpolation**: I(K₃,2)=7 and I(K₃∪K₁,2)=21 prove these are valid graph I.P. values. The constraint is tournament-specific: Ω(T) can't be K₃ or K₁₀.
+8. **Simplex-cube packing**: Only n=2 (ratio 2=KEY₁) and n=3 (ratio 3=KEY₂) match Cartan determinants. n=4 gives ratio 12≠4.
+
+**New contributions:**
+- HYP-1061 through HYP-1066 (6 new hypotheses)
+- Scripts: h7_mixed_cycles.py, h7_final_proof.py, knacci_packing_bridge.py, knacci_limit3.py, h21_fast.py (run), h21_structural.py, h21_contradiction.py, h21_correct_ocf.py, h21_correct_structural.py, h21_why_impossible.py, h21_modular_constraint.py, h21_cojump_proof.py, simplex_cube_packing.py, ip_interpolation.py, h21_structural_proof_sketch.py
+- All outputs in 05-knowledge/results/
+
+**Unresolved threads:**
+- H=21 impossibility for ALL n: proved β₃≥1⟹H≥27 and exhaustive n≤7. Need structural argument for β₁+2β₂=10 at n≥8.
+- H=7 impossibility for ALL n: Splicing covers share-1 case for any n, share-≥2 case covered at n≤7 exhaustively. Gap at large n with mixed-length share-≥2.
+- Simplex-in-cube pattern breaks at n=4 — deeper reason?
+
+---
+
 ## opus-2026-03-14-S78 — 2026-03-14: The Complementary Sieve — Everything as Recurrences
 
 **Account:** opus
