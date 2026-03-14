@@ -1,0 +1,66 @@
+======================================================================
+PROPER HANDLE ON EVERYTHING
+kind-pasteur-2026-03-14-S110e
+======================================================================
+
+======================================================================
+STEP 1: CHARACTERIZE NONZERO N(S)
+======================================================================
+
+  S is a set of 2k UNDIRECTED edges from K_n.
+  N(S) != 0 iff there exists a Hamiltonian path P of K_n
+  such that all edges of S are consecutive pairs in P.
+
+  Equivalently: the subgraph S must be a UNION OF DISJOINT PATHS
+  (a "linear forest"), because consecutive pairs in a permutation
+  form paths. And these paths must be embeddable into a single
+  Hamiltonian path (which they always are, by inserting free vertices).
+
+  So: N(S) != 0 iff S forms a LINEAR FOREST (disjoint union of paths).
+
+  A linear forest on 2k edges and v vertices has:
+  - v = 2k + (number of components): each path of length L has L+1 vertices.
+  - Components: paths of lengths L_1, ..., L_r with sum L_i = 2k.
+  - Number of components r: between 1 (single path of length 2k) and 2k (matching).
+  - Vertices: v = 2k + r.
+  - Free vertices: n - v = n - 2k - r.
+
+  For a MATCHING (r = 2k, all paths of length 1):
+  v = 2k + 2k = 4k. Free = n - 4k. Need n >= 4k.
+
+  For a SINGLE PATH (r = 1):
+  v = 2k + 1. Free = n - 2k - 1.
+    
+
+======================================================================
+STEP 2: |N(S)| FOR EACH LINEAR FOREST TYPE AT LEVEL 4
+======================================================================
+
+  n=5: Nonzero level-4 subsets by (forest_type, free):
+    forest=(4,), free=0: 60 subsets, |N|^2=4 each, total N^2=240
+    Total sum N^2 = 240
+    E_4/E_0 = 0.0166666667, formula = 0.0166666667, match = True
+
+  n=6: Nonzero level-4 subsets by (forest_type, free):
+    forest=(2, 2), free=0: 90 subsets, |N|^2=64 each, total N^2=5760
+    forest=(4,), free=1: 360 subsets, |N|^2=16 each, total N^2=5760
+    Total sum N^2 = 11520
+    E_4/E_0 = 0.0222222222, formula = 0.0222222222, match = True
+
+  n=7: Nonzero level-4 subsets by (forest_type, free):
+    forest=(2, 2), free=1: 630 subsets, |N|^2=576 each, total N^2=362880
+    forest=(4,), free=2: 1260 subsets, |N|^2=144 each, total N^2=181440
+    Total sum N^2 = 544320
+    E_4/E_0 = 0.0214285714, formula = 0.0214285714, match = True
+
+======================================================================
+STEP 3: THE PATTERN IN |N(S)|^2
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\proper_handle.py", line 690, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\proper_handle.py", line 241, in main
+    For each p: the f free positions are {0,...,p-1, p+5,...,n-1}.
+                                                ^
+NameError: name 'p' is not defined
