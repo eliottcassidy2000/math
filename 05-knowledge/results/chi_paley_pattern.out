@@ -1,0 +1,41 @@
+======================================================================
+CHI(PALEY) PATTERN TEST
+kind-pasteur-2026-03-14-S69
+======================================================================
+
+--- Paley T_3 ---
+  Betti = [1, 1, 0]
+  Omega = [3, 3, 0]
+  Chi = 0
+  Chi == p? False
+  Omega palindromic? False
+
+--- Paley T_7 ---
+  Betti = [1, 0, 0, 0, 6, 0, 0]
+  Omega = [7, 21, 42, 63, 63, 42, 21]
+  Chi = 7
+  Chi == p? True
+  Omega palindromic? False
+
+--- TRANSITIVE vs PALEY chi ---
+  n=3 transitive: chi=1, betti=[1, 0, 0]
+  n=5 transitive: chi=1, betti=[1, 0, 0, 0, 0]
+  n=7 transitive: chi=1, betti=[1, 0, 0, 0, 0, 0, 0]
+
+--- RANDOM n=7 tournaments: chi distribution ---
+  Chi distribution (100 random n=7): {0: 12, 1: 88}
+
+--- CYCLIC INTERVAL at various n ---
+  n=5 cyclic interval: chi=0, betti=[1, 1, 0, 0, 0]
+    Omega = [5, 10, 10, 10, 5]
+    Palindromic? True
+  n=7 cyclic interval: chi=0, betti=[1, 1, 0, 0, 0, 0, 0]
+    Omega = [7, 21, 42, 77, 98, 63, 14]
+    Palindromic? False
+  n=9 cyclic interval: chi=324, betti=[1, 1, 0, 0, 0, 0, 324]
+    Omega = [9, 36, 108, 297, 630, 909, 819]
+    Palindromic? False
+
+======================================================================
+DONE
+======================================================================
