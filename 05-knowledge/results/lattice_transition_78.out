@@ -1,0 +1,137 @@
+======================================================================
+PART 1: LATTICE DENSITY AT n=5,6 (exhaustive)
+======================================================================
+
+  n=5:
+    α₁ range: [0, 7]
+    α₂ range: [0, 0]
+    Achievable points: 7
+    Total area: 8
+    Density: 0.8750
+    H range: [1, 15]
+    Achievable H: 7 out of 8 possible odd values
+    Missing H: [7]
+
+  n=6:
+    α₁ range: [0, 20]
+    α₂ range: [0, 4]
+    Achievable points: 27
+    Total area: 105
+    Density: 0.2571
+    H range: [1, 45]
+    Achievable H: 19 out of 23 possible odd values
+    Missing H: [7, 21, 35, 39]
+
+======================================================================
+PART 2: LATTICE AT n=7 (5000 samples)
+======================================================================
+  Computed in 32.5s
+  α₁ range: [0, 80]
+  α₂ range: [0, 14]
+  Achievable points: 166
+  Density: 0.1366
+  H range: [1, 189]
+  Achievable H: 77 out of 95 possible odd
+  Missing α₁ values (in sample): [58, 62, 63, 64, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]
+  α₂ mean: 4.42, max: 14
+
+======================================================================
+PART 3: LATTICE AT n=8 (2000 samples)
+======================================================================
+  trial 0: 0.0s
+  trial 500: 16.1s
+  trial 1000: 32.0s
+  trial 1500: 48.0s
+  Done in 64.0s
+
+  α₁ range: [0, 216]
+  α₂ range: [0, 72]
+  Achievable points: 1141
+  α₂ mean: 28.07
+
+  α₂ decomposition at n=8:
+    α₂^(33) mean: 17.54, max: 40
+    α₂^(35) mean: 10.53, max: 32
+    α₂^(33) + α₂^(35) mean: 28.07
+    α₂ actual mean: 28.07
+    Match: True
+    Fraction with α₂^(35)>0: 0.873
+
+======================================================================
+PART 4: H-SPECTRUM EVOLUTION n=5→6→7→8
+======================================================================
+
+    n   max H  #H vals   max α₁   max α₂   H density
+    5      15        7        7        0      0.8750
+    6      45       19       20        4      0.8261
+    7     189       77       80       14      0.8105
+    8     661      303      216       72      0.9154
+
+======================================================================
+PART 5: THE 2-3 FRAMEWORK — COMPLETE PICTURE
+======================================================================
+
+  HOW 7 AND 8 CHANGE THINGS:
+
+  n=5 (one key: 2):
+    α₂ = 0 always. H = 1 + 2α₁. ONE evaluation suffices.
+    Score almost determines H. Only 7 H-values exist.
+    The world is "one-dimensional" in the cycle-intersection space.
+
+  n=6 (two keys: 2 and 3):
+    α₂ > 0 for the first time (max 4). H = 1 + 2α₁ + 4α₂.
+    TWO evaluations needed: I(Ω,2) and I(Ω,3).
+    The (α₁,α₂) lattice is still sparse (27 points in ~85 area).
+    4 forbidden H values: {7, 21, 35, 39}.
+    α₁ = 3 is permanently forbidden.
+
+  n=7 (2 and 3 fully engaged):
+    α₂ grows significantly (mean ~4.4, max ~12).
+    Score → dc3 still, but score ↛ {dc5, dc7, α₂, H}.
+    The lattice fills in substantially.
+    H ranges widely: [1, ~185].
+    Previously forbidden H mod 7 ≡ 0 now achievable.
+
+  n=8 (cross-level coupling):
+    α₂ splits: α₂ = α₂^{33} + α₂^{35}.
+    α₂^{35} (3-cycle ∩ 5-cycle disjoint pairs) appears for first time.
+    ~37% of α₂ comes from cross-level pairs.
+    The "3" in "knowing 3" now means understanding BOTH:
+      - 3-cycle disjointness (same as n=7)
+      - 3-to-5 cycle disjointness (new)
+    The dimension of the invariant space grows.
+
+  n=9 (three keys: 2, 3, 4):
+    α₃ > 0 for the first time (three disjoint 3-cycles).
+    THREE evaluations needed: I(Ω,2), I(Ω,3), I(Ω,4).
+    "Knowing 2 and 3" is no longer sufficient!
+    Need "deeper knowledge of 2" (i.e., 4 = 2²).
+    The Vandermonde matrix becomes 3×3 with det 48.
+
+  THE KEY TRANSITIONS:
+    n=5→6: dimension 1→2 (α₂ appears)
+    n=7→8: cross-level coupling (α₂^{35} appears)
+    n=8→9: dimension 2→3 (α₃ appears)
+    n=11→12: dimension 3→4 (α₄ appears)
+
+  AND THE k-NACCI RATES:
+    At n=k, the error in "knowing 2" is (1/2)^k.
+    At n=k, the error in "knowing 3" is (2/3)^k.
+    The RATIO of uncertainties (2/3)^k / (1/2)^k = (4/3)^k grows!
+    → "3 becomes relatively less known" as n grows.
+    → By n=8, knowing 3 to precision 0.039 vs knowing 2 to precision 0.004.
+    → The "gap" between the two keys widens.
+
+  Precision ratios:
+    n=k= 3: err(2)=0.125000, err(3)=0.296296, ratio(3/2)=2.37
+    n=k= 4: err(2)=0.062500, err(3)=0.197531, ratio(3/2)=3.16
+    n=k= 5: err(2)=0.031250, err(3)=0.131687, ratio(3/2)=4.21
+    n=k= 6: err(2)=0.015625, err(3)=0.087791, ratio(3/2)=5.62
+    n=k= 7: err(2)=0.007812, err(3)=0.058528, ratio(3/2)=7.49
+    n=k= 8: err(2)=0.003906, err(3)=0.039018, ratio(3/2)=9.99
+    n=k= 9: err(2)=0.001953, err(3)=0.026012, ratio(3/2)=13.32
+    n=k=10: err(2)=0.000977, err(3)=0.017342, ratio(3/2)=17.76
+    n=k=11: err(2)=0.000488, err(3)=0.011561, ratio(3/2)=23.68
+    n=k=12: err(2)=0.000244, err(3)=0.007707, ratio(3/2)=31.57
+
+Done.

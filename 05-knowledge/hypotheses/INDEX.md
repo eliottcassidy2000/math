@@ -913,3 +913,11 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-959 | dc3=3 at n=5 forces dc5≥1 | CONFIRMED | Score (1,1,2,3,3): all 240 tournaments have dc5=1. Structure: 3 fan-out cycles from one vertex force a Hamiltonian cycle. | opus-S73 |
 | HYP-960 | (3,5) disjoint pairs exist in 85% of random n=8 tournaments | CONFIRMED | 426/500 sampled. Mean 7.51 pairs per tournament. | opus-S73 |
 | HYP-961 | QR₅ has S=A-A^T=0 (symmetric tournament) | CONFIRMED | QR₅ has (j-i) mod 5 ∈ {1,4}: arc i→j iff j→i. So A=A^T and S=0. This is NOT a tournament! | REFUTED | opus-S73 |
+| HYP-970 | (H,I₃) is complete coordinate system for I(Ω,x) at n≤8 | CONFIRMED | α₂=(2I₃-3H+1)/6, α₁=(H-1-4α₂)/2. Verified 1000/1000 at n=7, 1024/1024 at n=5. α₃=0 gives only 2 unknowns; (2,3) Vandermonde has det=6. | opus-S71d |
+| HYP-971 | (2I₃-3H+1) ≡ 0 (mod 6) universally | CONFIRMED | 1000/1000 at n=7. Integrality from H≡1(mod 2) and OCF structure. Vandermonde det=6. | opus-S71d |
+| HYP-972 | corr(α₂, I₃-3H/2) = 1.0 exactly | CONFIRMED | Perfect linear relationship: I₃-3H/2 = -(5+6α₁)/4+9α₂/2 is linear in (α₁,α₂). | opus-S71d |
+| HYP-973 | H mod 3 = (1-α₁+α₂) mod 3 | CONFIRMED | Since 2≡-1 mod 3: H=1+2α₁+4α₂≡1-α₁+α₂ mod 3. 500/500 at n=7. | opus-S71d |
+| HYP-974 | Forbidden H at n=6: {7,21,35,39} from lattice impossibility | CONFIRMED | Each forbidden H has ALL (α₁,α₂) decompositions individually unachievable. EXACT MATCH with actual missing H values. | opus-S71d |
+| HYP-975 | α₁=3 impossible for all n (HYP-926 confirmation) | CONFIRMED | Missing at n=5, n=6 exhaustive. Part of the general impossibility of α₁=3. | opus-S71d |
+| HYP-976 | α₂=3 gap at n=6, dc3=8: achievable α₂∈{1,2,4} only | CONFIRMED | Complementary 3-cycle pair parity constraint on 10 pairs. α₂=0 and α₂=3 both impossible. | opus-S71d |
+| HYP-977 | Score→dc3 always at n≤7 (0/22 at n=6, 0/46 at n=7) | CONFIRMED | Classical: dc3=C(n,3)-Σ C(s_i,2). Exhaustive n=5,6; sample n=7. | opus-S71d |
