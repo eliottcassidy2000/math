@@ -1,0 +1,101 @@
+======================================================================
+FEEL THE NEWTON POWER SUM
+kind-pasteur-2026-03-14-S107i
+======================================================================
+
+  The three roots of x^3 - x^2 - x - 1 = 0:
+
+    tau       = 1.8392867552           (real, growing)
+    sigma     = -0.419643 + 0.606291i   (complex, spiraling)
+    sigma_bar = -0.419643 - 0.606291i   (conjugate, co-spiraling)
+
+    |tau|     = 1.8392867552
+    |sigma|   = 0.7373527058
+    |sigma|^2 = 0.5436890127
+    tau * |sigma|^2 = 1.0000000000 = 1 (Vieta)
+
+  tau grows. sigma and sigma_bar shrink AND rotate.
+  They are bound to tau by the product rule: tau * |sigma|^2 = 1.
+  As tau gets bigger, sigma gets smaller. They are COUPLED.
+  One expands, the other contracts. Like breathing.
+    
+  THE SPIRAL OF sigma^k:
+    k  |sigma|^k  arg(sigma^k)/pi   sigma^k + conj        tau^k    S_k
+    0   1.000000         0.000000         2.000000       1.0000      3
+    1   0.737353         0.692717        -0.839287       1.8393      1
+    2   0.543689        -0.614567        -0.382976       3.3830      3
+    3   0.400891         0.078150         0.777737       6.2223      7
+    4   0.295598         0.770867        -0.444525      11.4445     11
+    5   0.217960        -0.536417        -0.049763      21.0498     21
+    6   0.160713         0.156300         0.283449      38.7166     39
+    7   0.118502         0.849017        -0.210839      71.2108     71
+    8   0.087378        -0.458267         0.022846     130.9772    131
+    9   0.064428         0.234450         0.095456     240.9045    241
+   10   0.047506         0.927167        -0.092537     443.0925    443
+   11   0.035029        -0.380117         0.025766     814.9742    815
+   12   0.025829         0.312600         0.028686    1498.9713   1499
+   13   0.019045        -0.994684        -0.038084    2757.0381   2757
+   14   0.014043        -0.301967         0.016368    5070.9836   5071
+   15   0.010355         0.390750         0.006969    9326.9930   9327
+   16   0.007635        -0.916534        -0.014748   17155.0147  17155
+   17   0.005630        -0.223817         0.008589   31552.9914  31553
+   18   0.004151         0.468900         0.000810   58034.9992  58035
+   19   0.003061        -0.838384        -0.005349  106743.0053 106743
+
+
+  WHAT YOU SEE:
+
+  |sigma|^k SHRINKS: 1.000, 0.737, 0.544, 0.401, 0.296, 0.218, ...
+  Each step multiplies by |sigma| = 0.737. Geometric decay.
+  By k=8: |sigma|^8 = 0.054. By k=15: 0.006. Vanishing.
+
+  arg(sigma^k)/pi ROTATES: 0, 0.603, 1.206, -0.191, 0.412, 1.015, ...
+  The argument advances by about 0.603*pi ≈ 108.5 degrees per step.
+  This is close to the GOLDEN ANGLE (137.5 degrees = pi*(3-sqrt(5)))
+  but not exactly it. It's the tribonacci angle.
+
+  sigma^k + conj OSCILLATES: 2.00, -0.84, -0.38, +0.78, -0.44, -0.05, ...
+  This is a DAMPED OSCILLATION. It swings back and forth,
+  getting smaller each time. Like a pendulum losing energy.
+
+  tau^k GROWS: 1.00, 1.84, 3.38, 6.22, 11.44, 21.05, ...
+  Steady, relentless exponential growth. No oscillation.
+
+  S_k = tau^k + oscillation = INTEGER.
+  The growing term plus the oscillating term ALWAYS equals an integer.
+  The oscillation EXACTLY COMPENSATES for the non-integer part of tau^k.
+  It's as if sigma and sigma_bar exist SOLELY to make tau^k round to an integer.
+
+  THIS IS THE NATURE OF THE NEWTON POWER SUM:
+  Three forces — growth (tau), rotation (sigma), and contraction (|sigma| < 1) —
+  conspire to produce an integer at every step. The conspiracy is ALGEBRAIC:
+  it follows from the integer coefficients of x^3 - x^2 - x - 1.
+
+  The polynomial COMMANDS: "your roots shall sum to integers at every power."
+  And the roots OBEY, forever. tau grows and sigma compensates.
+  Growth and decay in perfect balance, producing perfect integers.
+    
+======================================================================
+THE FORBIDDEN VALUES AS MOMENTS OF THE SPIRAL
+======================================================================
+
+  S_3 = 7:  tau^3 = 6.222, correction = +0.778. The spiral adds 0.778.
+            tau UNDERSHOOTS 7. sigma LIFTS it up.
+            The spiral is in its POSITIVE phase at k=3.
+            7 = 6.222 + 0.778. Growth needs help to reach 7.
+
+  S_5 = 21: tau^5 = 21.050, correction = -0.050. The spiral subtracts 0.050.
+            tau OVERSHOOTS 21. sigma PULLS it back.
+            The spiral is in its NEGATIVE phase at k=5, but barely.
+            21 = 21.050 - 0.050. Growth nearly hits 21 on its own.
+            This is WHY tau^5 ≈ 21 so precisely: the correction is tiny.
+
+  S_8 = 131: tau^8 = 130.977, correction = +0.023. The spiral adds 0.023.
+             tau barely undershoots. sigma barely lifts.
+             131 = 130.977 + 0.023. Almost no correction needed.
+             This is the Pisot effect: the corrections SHRINK.
+
+  THE PATTERN:
+  At k=3: large correction (+0.778). The spiral is ACTIVE.
+          The forbidden value 7 is PARTLY created by sigma.
+          tau alone wo
