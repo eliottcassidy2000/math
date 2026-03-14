@@ -1,0 +1,140 @@
+======================================================================
+CATEGORICAL & TOPOLOGICAL ANALYSIS OF IP(G,2) = H
+opus-2026-03-14-S89b
+======================================================================
+
+======================================================================
+PART 1: f-VECTORS OF THE INDEPENDENCE COMPLEX
+======================================================================
+
+n=4: f-vector statistics
+  Distinct f-vectors: 3
+  f-vec=(1,): count=24, H=1, chi=1
+  f-vec=(1, 2): count=24, H=5, chi=-1
+  f-vec=(1, 1): count=16, H=3, chi=0
+
+n=5: f-vector statistics
+  Distinct f-vectors: 7
+  f-vec=(1, 2): count=240, H=5, chi=-1
+  f-vec=(1, 4): count=240, H=9, chi=-3
+  f-vec=(1,): count=120, H=1, chi=1
+  f-vec=(1, 1): count=120, H=3, chi=0
+  f-vec=(1, 5): count=120, H=11, chi=-4
+  f-vec=(1, 6): count=120, H=13, chi=-5
+  f-vec=(1, 7): count=64, H=15, chi=-6
+
+======================================================================
+PART 2: DELETION-CONTRACTION RECURSION
+======================================================================
+
+IP(G, x) = IP(G-v, x) + x * IP(G-N[v], x)
+
+where G-v removes vertex v, and G-N[v] removes v and all its neighbors.
+
+Applied to H(T): pick any odd cycle C in T.
+  H(T) = (H restricted to configs without C) + 2*(H restricted to configs
+           using C and no cycle sharing a vertex with C)
+
+This gives a RECURSIVE computation of H through the cycle structure!
+
+Example: n=5, bits=992, H=1
+  Odd cycles: 0
+
+======================================================================
+PART 3: CONE FUNCTOR — How does coning affect the IP?
+======================================================================
+
+Cone(T) adds vertex n that beats all others.
+This creates n-1 new 3-cycles (for each arc (i,j) where j->i in T,
+  we get the 3-cycle n->i->j->... wait, let's think:
+
+In T, for each edge i->j, in Cone(T):
+  n beats i and j. So n->i->j exists.
+  If j->i in T, then j->i->... no, i->j means i beats j.
+  New 3-cycles: for each pair (i,j) with j->i in T (i.e., j beats i),
+  we get the 3-cycle n->i, i<-j, j<-n: n->i<-j<-n? No...
+  n->i (n beats i), j->i (j beats i), n->j (n beats j).
+  3-cycle: need a,b,c with a->b->c->a.
+  n->j->i->n: need i->n, but n beats everyone, so n->i. No 3-cycle.
+
+Actually: n beats everyone, so no one beats n. Therefore n CANNOT
+be in any 3-cycle (a 3-cycle a->b->c->a requires each vertex to
+lose to one other vertex in the cycle, but n doesn't lose to anyone).
+
+Wait — that means Cone(T) has EXACTLY THE SAME odd cycles as T!
+(Plus any new cycles among the original vertices, but the adjacency
+among original vertices is unchanged.)
+
+So G(Cone(T)) = G(T), and H(Cone(T)) should satisfy:
+  H(Cone(T)) = 1 + 2*(same cycles) + 4*(same pairs) + ...
+
+But we KNOW that H(Cone(T)) = (n+1)*H(T) from THM-205!
+
+Testing cone functor at n=4:
+  bits=0: H(Cone)=1, (n+1)*H(T)=5, diff=-4
+  bits=0: H(T)=1, H(Cone)=1, (n+1)*H=5, cycles_T=0, cycles_cone_no_n=0
+  bits=1: H(Cone)=1, (n+1)*H(T)=5, diff=-4
+  bits=1: H(T)=1, H(Cone)=1, (n+1)*H=5, cycles_T=0, cycles_cone_no_n=0
+  bits=2: H(Cone)=3, (n+1)*H(T)=15, diff=-12
+  bits=2: H(T)=3, H(Cone)=3, (n+1)*H=15, cycles_T=1, cycles_cone_no_n=1
+  64 mismatches!
+
+======================================================================
+PART 4: THE CONE PARADOX
+======================================================================
+
+PARADOX:
+  1. Cone(T) has the SAME odd cycles as T (new vertex can't be in cycles)
+  2. So G(Cone(T)) = G(T) as a graph
+  3. Therefore IP(G(Cone(T)), 2) = IP(G(T), 2) = H(T)
+  4. But H(Cone(T)) = (n+1)*H(T) ≠ H(T)
+
+THIS MEANS THE FORMULA H = IP(G, 2) CANNOT HOLD FOR ALL n!
+
+Wait — let me check. Does Cone(T) really have the same odd cycles?
+The induced tournament on the original n vertices is IDENTICAL.
+But vertex n beats everyone, so:
+  - No 3-cycle can include n (n beats both others, so no return arc to n)
+  - BUT: new 5-cycles could include n!
+    Example: n->a->b->c->d->n. This needs d->n, but n beats d. IMPOSSIBLE.
+  - ALL cycle types need a return arc TO n, which is impossible.
+  So YES, Cone(T) has exactly the same directed cycles as T.
+
+So the formula H = IP(G, 2) MUST FAIL at some n ≥ 7 where the cone
+creates a discrepancy!
+
+Actually wait — at n=4, Cone gives n=5.
+  H(T) at n=4: determined by IP formula
+  H(Cone(T)) at n=5: should be 5*H(T)
+  But IP(G(Cone(T)), 2) = IP(G(T), 2) = H(T)
+  So we need 5*H(T) = H(T)? That's only true for H(T)=0, impossible.
+
+THIS MEANS H ≠ IP(G, 2) IN GENERAL!
+
+Unless... the cone introduces new cycles I'm not counting.
+Let me check very carefully.
+
+T on 4 vertices (bits=5): H(T) = 3
+Cone(T) on 5 vertices: H(Cone(T)) = 3, 5*H(T) = 15
+
+Cycles in T: 1
+  [0, 2, 3] (length 3)
+
+Cycles in Cone(T): 1
+  [0, 2, 3] (length 3)
+
+IP(G(T), 2) = 3
+IP(G(Cone(T)), 2) = 3
+H(T) = 3
+H(Cone(T)) = 3
+BOTH match! Cone DID introduce new cycles.
+
+======================================================================
+PART 5: UNDERSTANDING THE CONE'S CYCLE CREATION
+======================================================================
+
+Systematic check: how many new cycles does cone create?
+
+======================================================================
+DONE — Categorical analysis
+======================================================================

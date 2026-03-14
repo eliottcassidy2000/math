@@ -1,0 +1,29 @@
+  0% done (errors: 0)
+  4% done (errors: 0)
+  9% done (errors: 0)
+  14% done (errors: 0)
+  19% done (errors: 0)
+  24% done (errors: 0)
+  29% done (errors: 0)
+  34% done (errors: 0)
+  39% done (errors: 0)
+  44% done (errors: 0)
+  49% done (errors: 0)
+  54% done (errors: 0)
+  59% done (errors: 0)
+  64% done (errors: 0)
+  69% done (errors: 0)
+  74% done (errors: 0)
+  79% done (errors: 0)
+  84% done (errors: 0)
+  89% done (errors: 0)
+  94% done (errors: 0)
+  99% done (errors: 0)
+EXHAUSTIVE VERIFICATION: H = IP(OddCycGraph, 2)
+n=7, m=21, total=2097152 tournaments
+Formula: H = 1 + 2(t3+t5+t7) + 4*d33
+
+
+==============================
+*** PERFECT: Formula EXACT for ALL 2097152 n=7 tournaments! ***
+==============================
