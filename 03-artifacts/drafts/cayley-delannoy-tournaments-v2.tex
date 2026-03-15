@@ -1,0 +1,333 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\DeclareMathOperator{\CV}{CV}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arctan}{arctan}
+\DeclareMathOperator{\Tr}{Tr}
+
+\title{The Cayley Transform, Delannoy Paths, and the\\Fourier Analysis of Hamiltonian Paths in Random Tournaments}
+
+\author{Eliott Cassidy}
+\thanks{With computational assistance from Claude (Anthropic).}
+
+\begin{document}
+
+\begin{abstract}
+We prove that the squared coefficient of variation of the Hamiltonian path count $H(T)$ over random tournaments on $n$ vertices satisfies
+\[
+\CV^2(H) = \sum_{k=1}^{\lfloor(n-1)/2\rfloor} \frac{[x^k]\, Q(x)^{n-2k}}{(n)_{2k}},
+\]
+where $Q(x) = (1+x)/(1-x)$ is the Cayley transform. We establish the master generating function
+\[
+Q(x)^m = 1 + 2\sum_{k=1}^{\infty} g_k(m)\, x^k,
+\]
+identify $k\cdot g_k(m) = \sum_j j\binom{k}{j}\binom{m}{j}2^{j-1}$ as the total diagonal-step count across all Delannoy lattice paths from $(0,0)$ to $(k,m)$ (OEIS A108666 on the diagonal), and derive a Rodrigues formula, a duality $k\,g_k(m) = m\,g_m(k)$, a parity theorem, and a functional equation $Q^m Q(-x)^m = 1$ that makes even-index weights algebraically redundant. The underlying generator is $\arctanh(x) = x + x^3/3 + x^5/5 + \cdots$, the unique odd formal power series with rational exponential. The Wick rotation $x \to ix$ sends $\arctanh$ to $i\arctan$, converting the tournament (hyperbolic, temporal, divergent) into the circle (spherical, spatial, convergent), and producing $\pi$ via $\arctanh(i) = i\pi/4$.
+\end{abstract}
+
+\maketitle
+
+%% ====================================================================
+\section{Introduction}
+%% ====================================================================
+
+A \emph{tournament} $T$ on $n$ vertices is a complete oriented graph: for each pair $\{u,v\}$, exactly one of $u \to v$ or $v \to u$ holds. R\'edei's theorem~\cite{redei1934} states that the number $H(T)$ of directed Hamiltonian paths is always odd.
+
+When $T$ is drawn uniformly from all $2^{\binom{n}{2}}$ tournaments, $H(T)$ becomes a random variable with $\mathbb{E}[H] = n!/2^{n-1}$. This paper gives a complete description of $\CV^2(H) = \Var(H)/\mathbb{E}[H]^2$ through the lens of the Cayley transform $Q(x) = (1+x)/(1-x) = \exp(2\arctanh x)$.
+
+\subsection{Main results}
+
+\begin{theorem}[Master Generating Function]\label{thm:master}
+$\displaystyle Q(x)^m = \left(\frac{1+x}{1-x}\right)^m = 1 + 2\sum_{k=1}^{\infty} g_k(m)\, x^k$, where $g_k(m) = \sum_{j=1}^{\min(k,m)} \binom{k-1}{j-1}\binom{m}{j}2^{j-1}$.
+\end{theorem}
+
+\begin{theorem}[Weight Formula]\label{thm:weight}
+For a domino subset $S \subseteq \{0,\ldots,n-2\}$ with $|S|=L$ and $c$ connected components, $\mathbb{E}[\prod_{j \in S} Z_j] = 2^c/(n)_L$, where $Z_j = \mathbf{1}[\sigma(j{+}1)=\sigma(j){+}1] - \mathbf{1}[\sigma(j{+}1)=\sigma(j){-}1]$ for a uniform random permutation $\sigma$.
+\end{theorem}
+
+\begin{theorem}[Variance Formula]\label{thm:cv2}
+$\displaystyle \CV^2(H) = \sum_{k=1}^{\lfloor(n-1)/2\rfloor} \frac{2\,g_k(n-2k)}{(n)_{2k}} = \frac{2}{n} - \frac{14}{3n^3} + O(n^{-4})$.
+\end{theorem}
+
+From these, we derive:
+
+\begin{corollary}[Delannoy Identity]\label{cor:delannoy}
+$k\,g_k(m) = \sum_{j=1}^{\min(k,m)} j\binom{k}{j}\binom{m}{j}2^{j-1}$ counts total diagonal steps in Delannoy paths from $(0,0)$ to $(k,m)$.
+\end{corollary}
+
+\begin{corollary}[Duality]\label{cor:duality}
+$k\,g_k(m) = m\,g_m(k)$.
+\end{corollary}
+
+\begin{corollary}[Parity]\label{cor:parity}
+$g_k(-m) = (-1)^k g_k(m)$.
+\end{corollary}
+
+\begin{corollary}[Rodrigues Formula]\label{cor:rodrigues}
+$g_k(m) = \frac{1}{k!}\left[\frac{d^k}{du^k}\,u^m(u+1)^{k-1}\right]_{u=1}$.
+\end{corollary}
+
+\begin{corollary}[Functional Equation]\label{cor:functeq}
+$Q(x)^m \cdot Q(-x)^m = 1$, so $g_{2k}$ is algebraically determined by $g_1, g_3, \ldots, g_{2k-1}$.
+\end{corollary}
+
+\begin{corollary}[Wick Rotation]\label{cor:wick}
+$\arctanh(ix) = i\arctan(x)$. In particular, $\arctanh(i) = i\pi/4$ and $Q(i)^m = i^m$.
+\end{corollary}
+
+%% ====================================================================
+\section{The $Z$-process}
+%% ====================================================================
+
+Fix $n \geq 2$ and a uniform random permutation $\sigma$ of $\{0,\ldots,n{-}1\}$. Define
+\[
+X_j = \mathbf{1}[\sigma(j{+}1)=\sigma(j){+}1],\quad Y_j = \mathbf{1}[\sigma(j{+}1)=\sigma(j){-}1],\quad Z_j = X_j - Y_j \in \{-1,0,1\}.
+\]
+
+Since $X_jY_j = 0$, we have $(1+Z_j) = (1+X_j)(1-Y_j)$. Define
+\[
+W(n) = \sum_{\sigma \in S_n} \prod_{j=0}^{n-2}(1+Z_j(\sigma)),
+\]
+which sums $2^{\#\text{unit ascents}}$ over permutations with no unit descents. The Fourier analysis of $H(T)$ yields $W(n)/n! = 1 + \CV^2(H)$.
+
+\begin{definition}
+A subset $S \subseteq \{0,\ldots,n{-}2\}$ is a \emph{domino subset} if every element has a neighbor in $S$.
+\end{definition}
+
+Expanding the product: $W(n)/n! = \sum_S \mathbb{E}[\prod_{j \in S} Z_j]$. By the complement symmetry $Z_j \mapsto -Z_j$, odd-size subsets contribute zero; among even-size subsets, only domino subsets contribute.
+
+%% ====================================================================
+\section{Proof of the Weight Formula}
+%% ====================================================================
+
+\begin{proof}[Proof of Theorem~\ref{thm:weight}]
+\textbf{Single block.} For a contiguous block $S = \{a,\ldots,a{+}L{-}1\}$ of even size $L$, the product $\prod Z_j \neq 0$ requires each $Z_j \in \{+1,-1\}$, so $\sigma(a),\ldots,\sigma(a{+}L)$ form a $\pm 1$ walk. For distinct values (as $\sigma$ is a permutation), the walk must be monotone. Ascending and descending each give $n{-}L$ starting values with product $+1$ (since $L$ is even), and $(n{-}L{-}1)!$ arrangements of remaining values:
+\[
+\mathbb{E}\left[\prod_{j \in S} Z_j\right] = \frac{2(n-L)!}{n!} = \frac{2}{(n)_L}.
+\]
+
+\textbf{Multiple blocks.} For $c$ separated blocks of total size $L$, each block requires a contiguous range of integer values with $2$ orientations. The number of ways to place $c$ distinguishable disjoint value-intervals in $\{0,\ldots,n{-}1\}$ is $(n{-}L)!/(n{-}L{-}c)!$ by stars-and-bars, giving
+\[
+\mathbb{E}\left[\prod_{j \in S} Z_j\right] = \frac{2^c(n-L)!}{n!} = \frac{2^c}{(n)_L}.\qedhere
+\]
+\end{proof}
+
+%% ====================================================================
+\section{Cluster counting and the closed form}
+%% ====================================================================
+
+\begin{lemma}\label{lem:cluster}
+The number of $k$-matchings of the path $P_{m+2k-2}$ with exactly $j$ clusters is $\binom{k-1}{j-1}\binom{m}{j}$.
+\end{lemma}
+
+\begin{proof}
+A $j$-cluster matching is specified by a composition of $k$ into $j$ parts ($\binom{k-1}{j-1}$ choices) and a placement of $j$ clusters on the path. Each cluster of size $s$ occupies $2s$ vertex positions. With $m{-}1$ free positions distributed into $j{-}1$ mandatory gaps and $2$ margins: $\binom{m}{j}$ placements.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:master}]
+By the weight formula, a $k$-matching with $j$ clusters contributes $2^j/(n)_{2k}$ to $\CV^2$. By Lemma~\ref{lem:cluster}, there are $\binom{k-1}{j-1}\binom{m}{j}$ such matchings. Summing:
+\[
+g_k(m) = \sum_{j=1}^{\min(k,m)} \binom{k-1}{j-1}\binom{m}{j}\,2^{j-1}.
+\]
+To derive the master generating function, the OGF of $g_k$ in $m$ is
+\[
+\sum_{m \geq 0} g_k(m)\,t^m = \frac{t}{(1-t)^2}\left(\frac{1+t}{1-t}\right)^{k-1} = \frac{t(1+t)^{k-1}}{(1-t)^{k+1}},
+\]
+obtained by substituting $\sum_{m \geq j}\binom{m}{j}t^m = t^j/(1-t)^{j+1}$ and applying the binomial theorem. The GF in $k$ follows by partial fractions:
+\[
+\sum_{k \geq 1} g_k(m)\,x^k = \frac{Q(x)^m - 1}{2},
+\]
+which gives $Q(x)^m = 1 + 2\sum_{k \geq 1} g_k(m)\,x^k$.
+\end{proof}
+
+%% ====================================================================
+\section{Corollaries}
+%% ====================================================================
+
+\begin{proof}[Proof of Corollary~\ref{cor:delannoy}]
+$k\binom{k-1}{j-1} = j\binom{k}{j}$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:duality}]
+$j\binom{k}{j}\binom{m}{j}$ is symmetric in $k$ and $m$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:parity}]
+$Q(-x) = (1-x)/(1+x) = Q(x)^{-1}$. So $Q(-x)^m = Q(x)^{-m}$. Comparing coefficients: $(-1)^k g_k(m) = g_k(-m)$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:rodrigues}]
+By Cauchy's integral formula under the substitution $u = Q(x)$, $x = (u-1)/(u+1)$: $2g_k(m) = \frac{1}{k!}[d^k/du^k\,u^m(u+1)^{k-1}]_{u=1}$. The Delannoy identity follows by the Leibniz rule.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:functeq}]
+$Q(x)^m Q(-x)^m = Q(x)^m Q(x)^{-m} = 1$. Expanding: $(1 + 2\sum g_k x^k)(1 + 2\sum (-1)^k g_k x^k) = 1$. At even order $2k$: $g_{2k} = \sum_{j=1}^{2k-1}(-1)^{j+1}g_j g_{2k-j}$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:wick}]
+$\arctanh(ix) = \sum_{k \geq 0}(ix)^{2k+1}/(2k+1) = i\sum_{k \geq 0}(-1)^k x^{2k+1}/(2k+1) = i\arctan(x)$. Setting $x = 1$: $\arctanh(i) = i\arctan(1) = i\pi/4$.
+\end{proof}
+
+%% ====================================================================
+\section{The generator $\arctanh$ and the $1/n^2$ cancellation}
+%% ====================================================================
+
+\begin{proposition}[Log-coefficients]\label{prop:log}
+$[x^k]\log Q(x)^m = 2m/k$ if $k$ is odd, and $0$ if $k$ is even.
+\end{proposition}
+
+\begin{proof}
+$\log Q^m = 2m\arctanh(x) = 2m\sum_{k \text{ odd}} x^k/k$.
+\end{proof}
+
+The vanishing of even log-coefficients has two consequences.
+
+\begin{corollary}[$1/n^2$ cancellation]\label{cor:cancel}
+In the expansion $\CV^2 = \sum_{p \geq 1} a_p/n^p$, we have $a_2 = 0$.
+\end{corollary}
+
+\begin{proof}
+The $k{=}1$ contribution is $2(n{-}2)/(n(n{-}1)) = 2/n - 2/n^2 + O(n^{-3})$. The $k{=}2$ contribution is $2(n{-}4)^2/(n)_4 = 2/n^2 + O(n^{-3})$. The cancellation $-2/n^2 + 2/n^2 = 0$ holds because $g_2(m) = g_1(m)^2 = m^2$, which follows from $[x^2]\log Q^m = 0$ (the second log-coefficient vanishes).
+\end{proof}
+
+\begin{remark}
+The identity $g_2 = g_1^2$ is the simplest case of the functional equation. More generally, $g_4 = 2g_1 g_3 - g_2^2$, $g_6 = 2g_1 g_5 - 2g_2 g_4 + g_3^2$, etc. Each even-index weight is algebraically determined by odd-index weights, which are themselves determined by $\arctanh$.
+\end{remark}
+
+%% ====================================================================
+\section{The transfer matrix and the $x$-tribonacci recurrence}
+%% ====================================================================
+
+\begin{proposition}\label{prop:transfer}
+The generating function $F(N,x) = \sum_k [x^k]Q(x)^{N-2k+2}\cdot x^k$ satisfies
+\[
+F(N{+}3,x) = F(N{+}2,x) + x\,F(N{+}1,x) + x\,F(N,x)
+\]
+with generating function $\sum_{N \geq 0} F(N,x)\,y^N = (1+2xy+xy^2)/(1-y-xy^2-xy^3)$.
+\end{proposition}
+
+This follows from the transfer matrix $M(x) = \left(\begin{smallmatrix}1&2x&0\\0&0&1\\1&x&0\end{smallmatrix}\right)$, whose characteristic polynomial $\lambda^3 - \lambda^2 - x\lambda - x = 0$ gives the denominator $1 - y - xy^2 - xy^3 = \det(I - yM)$. At $x = 1$, the dominant eigenvalue is the tribonacci constant $\tau = 1.8393\ldots$, satisfying $\tau^3 = \tau^2 + \tau + 1$.
+
+The three eigenvalues are:
+\begin{itemize}
+\item $\lambda_1(x) = 1 + 2x + O(x^2)$: real, dominant (Perron--Frobenius);
+\item $\lambda_{2,3}(x) \sim \pm i\sqrt{x}$: complex conjugate pair.
+\end{itemize}
+
+The complex pair arises from the degeneracy splitting of the null state at $x = 0$. The tribonacci constant $\tau = \varphi + 0.2213\ldots$ where $\varphi = (1+\sqrt{5})/2$ is the golden ratio; the correction $\tau - \varphi$ is the \emph{cost of memory}.
+
+%% ====================================================================
+\section{The Wick rotation and the emergence of $\pi$}
+%% ====================================================================
+
+The functions $\arctanh$ and $\arctan$ share the same coefficients but differ by sign:
+\begin{align*}
+\arctanh(x) &= x + \frac{x^3}{3} + \frac{x^5}{5} + \cdots && \text{(constant signs: \emph{temporal})}, \\
+\arctan(x) &= x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots && \text{(alternating signs: \emph{spatial})}.
+\end{align*}
+
+The Wick rotation $x \to ix$ converts one to the other: $\arctanh(ix) = i\arctan(x)$.
+
+\begin{proposition}\label{prop:pi}
+$Q(i) = i$ and $\arctanh(i) = i\pi/4$. More generally, $Q(i)^m = i^m = e^{im\pi/2}$, so the period-4 orbit $\{1, i, -1, -i\}$ of $Q$ in $\mathrm{PGL}(2,\mathbb{C})$ parametrizes the unit circle by $m\pi/2$.
+\end{proposition}
+
+\begin{proof}
+$Q(i) = (1+i)/(1-i) = i$. Then $\exp(2\arctanh(i)) = i$, so $\arctanh(i) = \frac{1}{2}\log i = i\pi/4$.
+\end{proof}
+
+This provides a dictionary:
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}lll@{}}
+\toprule
+& \textbf{Tournament (real $x$)} & \textbf{Circle (imaginary $ix$)} \\
+\midrule
+Generator & $\arctanh(x)$ & $i\arctan(x)$ \\
+Signs & all positive & alternating \\
+Geometry & hyperbolic & spherical \\
+Convergence & diverges at $x=1$ & converges to $\pi/4$ \\
+Interpretation & temporal (direction) & spatial (symmetry) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The constant signs in $\arctanh$ produce divergence (infinite time: one can never finish comparing). The alternating signs in $\arctan$ produce convergence (finite space: the circle closes). The number $\pi$ emerges from the tournament at imaginary coupling.
+
+%% ====================================================================
+\section{The sequence $W(n)$ and connections}
+%% ====================================================================
+
+The sequence $W(n) = n!(1 + \CV^2)$ begins $1, 2, 8, 32, 158, 928, 6350, 49752, 439670, \ldots$ and does not appear in the OEIS as of 2026.
+
+The diagonal $T(k,k) = k\,g_k(k)$ is OEIS A108666 (total diagonal steps in Delannoy paths of length $k$).
+
+\subsection{Summary of formulas}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}cl@{}}
+\toprule
+\# & Formula \\
+\midrule
+1 & $Q(x)^m = 1 + 2\sum g_k(m)\,x^k$, \quad $Q = (1{+}x)/(1{-}x) = e^{2\arctanh x}$ \\
+2 & $k\,g_k(m) = \sum j\binom{k}{j}\binom{m}{j}2^{j-1}$ \quad (Delannoy diagonal steps) \\
+3 & $g_k(m) = \frac{1}{k!}[d^k/du^k\,u^m(u{+}1)^{k-1}]_{u=1}$ \quad (Rodrigues) \\
+4 & $\sum g_k(m)\,t^m = t(1{+}t)^{k-1}/(1{-}t)^{k+1}$ \quad (OGF in $m$) \\
+5 & $Q^m Q(-x)^m = 1$ \quad (functional equation, even $g_k$ redundant) \\
+6 & $[x^k]\log Q^m = 2m/k$ for odd $k$, $0$ for even $k$ \\
+7 & $k\,g_k(m) = m\,g_m(k)$ \quad (duality) \\
+8 & $g_k(-m) = (-1)^k g_k(m)$ \quad (parity) \\
+9 & $\arctanh(ix) = i\arctan(x)$; \quad $\arctanh(i) = i\pi/4$ \quad (Wick rotation) \\
+10 & $\CV^2 = 2/n + 0/n^2 - 14/(3n^3) + O(n^{-4})$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Uniqueness of $\arctanh$}
+
+\begin{proposition}\label{prop:unique}
+$\arctanh$ is the unique odd formal power series whose exponential is rational of degree $(1,1)$.
+\end{proposition}
+
+\begin{proof}
+If $f(-x) = -f(x)$ and $e^f = P/Q$ with $P, Q$ coprime polynomials, then $e^{-f} = e^{f(-x)} = P(-x)/Q(-x)$, so $P(x)Q(-x) = P(-x)Q(x)$. By coprimality, $P(-x) = cQ(x)$, and $c = 1$ from $f(0) = 0$. For degree $(1,1)$: $Q = 1 - ax$, $P = 1 + ax$, $f = \log((1{+}ax)/(1{-}ax)) = 2\arctanh(ax)$.
+\end{proof}
+
+%% ====================================================================
+\section{Interpretation}
+%% ====================================================================
+
+The entire tournament Fourier theory reduces to the sequence $1, 1/3, 1/5, 1/7, \ldots$ of reciprocal odd integers---the Taylor coefficients of $\arctanh$. These encode the \emph{directed interaction scales}: the weight $1/(2k{+}1)$ at scale $2k{+}1$ measures the contribution of directed cycles of that length.
+
+The even coefficients of $\log Q^m$ vanish because the tournament is built from independent arc decisions, and even-order interactions are symmetric (insensitive to direction). The directed (odd) and undirected (even) parts decompose the theory into
+\[
+Q^m = \underbrace{\cosh(2m\arctanh x)}_{\text{symmetric (space)}} + \underbrace{\sinh(2m\arctanh x)}_{\text{antisymmetric (time)}},
+\]
+and the Wick rotation $x \to ix$ converts the temporal $\arctanh$ into the spatial $\arctan$, producing $\pi$.
+
+\begin{thebibliography}{99}
+\bibitem{redei1934} L.~R\'edei, \emph{Ein kombinatorischer Satz}, Acta Litt.\ Szeged \textbf{7} (1934), 39--43.
+
+\bibitem{grinberg-stanley} D.~Grinberg and R.~P.~Stanley, \emph{On the number of Hamiltonian paths in a tournament}, arXiv:2307.05569 (2023).
+
+\bibitem{oeis-a108666} OEIS Foundation, \emph{A108666: Number of $(1,1)$-steps in all Delannoy paths of length $n$}, \url{https://oeis.org/A108666}.
+
+\bibitem{sulanke} R.~A.~Sulanke, \emph{Objects counted by the central Delannoy numbers}, J.\ Integer Seq.\ \textbf{6} (2003), Art.~03.1.5.
+\end{thebibliography}
+
+\end{document}
