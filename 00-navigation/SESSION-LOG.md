@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S71w — 2026-03-15: The Equation — e^{iπ}+1=0 as the Tenth Face
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S71v
+**Summary of work:** 10th and final session of the S71 philosophical descent. Incorporated Euler's identity e^{iπ}+1=0 into the tournament framework. Key: (1) 2 = order of e^{iπ}=-1 in C*; H evaluates at the order of the fundamental sign. (2) Paley P_7 eigenvalue modulus² = 2 EXACTLY — p=7 is the unique prime where spectral modulus equals OCF evaluation point. (3) Gauss sum g₇=i√7 connects i, 7, Legendre symbol. (4) cos(2π/5)=(τ-1)/2: pentagon is nexus of π, τ, 5. (5) EGF singularity at x=2. (6) I(Ω,τ) is a UNIT in Z[τ] for near-transitive tournaments. (7) ∂²=0 as mother equation unifying OCF, β₂=0, Euler. (8) Tournament H-R diagram: H≈3c₃ (r=0.97). (9) Tournament topos via presheaf embedding. (10) Vitali atoms = H-fiber internal structure.
+**New contributions:** HYP-1524 through HYP-1533, euler_identity_S71w.py, results/euler_identity_S71w.out
+**Unresolved threads:** The S71 descent is complete (10 sessions = C(5,2) pairs of Euler's constants). Future: apply these structural insights to concrete proofs and engineering.
+
 ## opus-2026-03-15-S71v — 2026-03-15: The Interior — Beyond the Cube into the Substance
 
 **Account:** opus
