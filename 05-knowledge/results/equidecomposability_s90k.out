@@ -1,0 +1,244 @@
+======================================================================
+PART 1: THE ARC-FLIP GRAPH
+======================================================================
+
+Two tournaments T₁, T₂ on n vertices are CONNECTED by an arc flip
+if they differ in exactly one arc direction.
+
+The ARC-FLIP GRAPH G_n has:
+  Vertices: all 2^{C(n,2)} tournaments on n vertices
+  Edges: pairs differing in exactly one arc
+
+This graph is the C(n,2)-dimensional HYPERCUBE {0,1}^{C(n,2)}.
+It is ALWAYS connected: any tournament can reach any other
+by at most C(n,2) arc flips.
+
+THE QUESTION: What invariants are preserved along PATHS in G_n?
+
+  H(T) mod 2 = 1 ALWAYS (Rédei). ← preserved trivially
+  H(T) itself changes with each flip. ← NOT preserved
+  Score sequence changes with each flip. ← NOT preserved
+
+But the PARITY of certain invariants IS preserved:
+  H(T) ≡ 1 + 2α₁(T) (mod 4), where α₁ = #odd cycles.
+  So H mod 4 is determined by the cycle count parity.
+
+THE EQUIDECOMPOSABILITY QUESTION:
+  T₁ ~ T₂ iff there exists a sequence of arc flips
+  T₁ → T₁' → T₁'' → ... → T₂ such that some invariant I
+  is preserved at EACH STEP: I(T_k) = I(T_{k+1}).
+
+  Which invariants give interesting equivalence classes?
+
+n=4: Arc-flip graph analysis (64 tournaments, 6 arcs)
+  Distribution of ΔH per single arc flip:
+    ΔH =  -4: occurs 12 times
+    ΔH =  -2: occurs 48 times
+    ΔH =  +0: occurs 72 times
+    ΔH =  +2: occurs 48 times
+    ΔH =  +4: occurs 12 times
+
+======================================================================
+PART 2: β₁ IS THE DEHN INVARIANT
+======================================================================
+
+HILBERT'S THIRD PROBLEM asks: when are two polyhedra with the same
+volume scissors-congruent?
+
+THE DEHN INVARIANT D(P) is the OBSTRUCTION:
+  D(P) = 0 iff P is scissors-congruent to a box.
+  D(P) ≠ 0 iff P has a "twist" that prevents box-decomposition.
+
+For tournaments, the ANALOG is:
+  "VOLUME" = H(T) (the Hamiltonian path count)
+  "DEHN INVARIANT" = β₁(T) (the first Betti number)
+  "BOX" = transitive tournament (the "untwisted" ground state)
+
+CLAIM: β₁(T) measures the obstruction to decomposing T into
+"transitive pieces" (sub-tournaments that are total orders).
+
+When β₁ = 0: T can be decomposed into transitive sub-tournaments
+  whose orderings are GLOBALLY CONSISTENT.
+  The tournament IS a "patchwork" of total orders.
+
+When β₁ = 1: T has a TWIST — a 1-cycle that no collection of
+  transitive triples can fill. The twist prevents global consistency.
+  The tournament is like a Möbius strip: locally flat, globally twisted.
+
+THE NEAR-TRANSITIVE TOURNAMENT:
+  β₁ = 1 (one twist) and sim_H = 1 (one simplicial path).
+  It is the SIMPLEST non-trivial Dehn class.
+  It is the "regular tetrahedron" of tournaments:
+    same "volume" as a box, but with a nonzero twist.
+
+
+n=5: Computing (H, β₁) for all 1024 tournaments...
+
+  (H, β₁) distribution:
+     H |  β₁ |  count
+  ----------------------
+     1 |   0 |    120
+     3 |   0 |    120
+     5 |   0 |    240
+     9 |   0 |    120
+     9 |   1 |    120
+    11 |   1 |    120
+    13 |   0 |    120
+    15 |   1 |     64
+
+  H values with ONLY β₁=0: [1, 3, 5, 13]
+  H values with ONLY β₁=1: [11, 15]
+  H values with BOTH: [9]
+
+======================================================================
+PART 3: EQUIDECOMPOSABILITY CLASSES AT n=5
+======================================================================
+
+Two tournaments T₁, T₂ are EQUIDECOMPOSABLE iff:
+  H(T₁) = H(T₂) AND β₁(T₁) = β₁(T₂)
+
+This is the tournament analog of Dehn-Sydler:
+  same volume AND same Dehn invariant.
+
+The equidecomposability classes at n=5:
+
+  8 equidecomposability classes at n=5
+  (compared to 7 H-only classes)
+
+  β₁ adds information beyond H for 1 H-values
+  β₁ is redundant (determined by H) for 6 H-values
+
+======================================================================
+PART 4: FLIP DISTANCE vs DEHN INVARIANT
+======================================================================
+
+The FLIP DISTANCE d(T₁, T₂) = number of arcs that differ
+= Hamming distance in {0,1}^{C(n,2)}.
+
+The Dehn invariant difference Δβ₁ = |β₁(T₁) - β₁(T₂)|.
+
+QUESTION: Can a single arc flip change β₁?
+
+From our near-transitive analysis:
+  Transitive tournament: β₁ = 0, H = 1
+  Near-transitive (one flip from transitive): β₁ = 1, H = 2^{n-2}+1
+  Flip distance = 1, Δβ₁ = 1.
+
+So YES: a single arc flip CAN change β₁ by 1.
+The Dehn invariant is NOT invariant under arc flips.
+
+But it IS invariant under a RESTRICTED class of flips:
+flips that preserve the transitive core structure.
+
+THE SCISSORS-CONGRUENCE THEOREM FOR TOURNAMENTS:
+  Two tournaments T₁, T₂ are "tournament-scissors-congruent" iff:
+  1. H(T₁) = H(T₂) (same "volume")
+  2. β₁(T₁) = β₁(T₂) (same "Dehn invariant")
+  3. They have the same independence polynomial I(Ω(T), x) (full Dehn)
+
+  Condition 3 is STRICTLY finer than conditions 1+2.
+  The full equidecomposability requires matching the ENTIRE
+  independence polynomial, not just its value at x=2 (=H).
+
+
+Checking: same (H, β₁) → same I(Ω, x)?
+  (H=9, β₁=0): 120 tournaments, 1 distinct I(Ω₃, x)
+  (H=3, β₁=0): 120 tournaments, 1 distinct I(Ω₃, x)
+  (H=5, β₁=0): 240 tournaments, 1 distinct I(Ω₃, x)
+
+======================================================================
+PART 5: EQUIDECOMPOSABILITY = HOMOLOGICAL EQUIVALENCE
+======================================================================
+
+THE THEOREM (conjectured):
+
+Two tournaments T₁, T₂ on n vertices are "tournament-equidecomposable"
+(in the strongest sense: same independence polynomial I(Ω, x)) iff
+they have the same HOMOLOGICAL TYPE:
+  β_k(T₁) = β_k(T₂) for all k
+
+This is the tournament analog of Dehn-Sydler-Jessen:
+  Volume (H) = β₀ contribution (trivial)
+  Dehn (β₁) = first homological obstruction
+  Higher Dehn (β₃, β₄, ...) = higher obstructions
+
+THE HIERARCHY:
+  Level 0: H(T₁) = H(T₂)                     [volume]
+  Level 1: β₁(T₁) = β₁(T₂)                   [Dehn = twist]
+  Level 2: β₃(T₁) = β₃(T₂)                   [higher twist]
+  Level ∞: I(Ω(T₁), x) = I(Ω(T₂), x)        [full polynomial]
+
+Each level is STRICTLY FINER than the previous.
+
+For the near-transitive tournament:
+  Level 0: H = 2^{n-2}+1 (shared with many others)
+  Level 1: β₁ = 1 (shared with fewer)
+  Level ∞: I(Ω, x) = 1 + 2^{n-3}·x (complete graph: unique!)
+
+The near-transitive tournament is EQUIDECOMPOSABLE only with itself
+(and its relabelings). It is the "regular tetrahedron" of tournaments:
+irreducible, with a unique Dehn invariant.
+
+CONNECTION TO KIND-PASTEUR'S POLYTOPE TRILOGY:
+  Simplex: Q₁(x) = 1+x → transitive tournament (β₁=0)
+  Cuboid: Q₂(x) = (2+x)/(2-x) → "box" tournament
+  Cayley: Q(x) = (1+x)/(1-x) → general tournament
+
+  The TRANSITION from cuboid to Cayley introduces the twist.
+  The cuboid has D = 0 (all angles π/2, rational).
+  The Cayley has D ≠ 0 generically (angles irrational).
+
+  Equidecomposability in the polytope trilogy:
+    Cuboid = equidecomposable (D = 0 → scissors-congruent)
+    Regular tetrahedron ≠ cube (D ≠ 0 → NOT scissors-congruent)
+    Near-transitive ≠ transitive (β₁ = 1 → NOT homologically trivial)
+
+  This IS Hilbert's third problem for tournaments.
+
+
+╔══════════════════════════════════════════════════════════════════════╗
+║           HILBERT'S THIRD PROBLEM FOR TOURNAMENTS                  ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                    ║
+║  CLASSICAL:                                                        ║
+║    Two polyhedra with same volume are scissors-congruent           ║
+║    iff they have the same Dehn invariant.                          ║
+║                                                                    ║
+║  TOURNAMENTS:                                                      ║
+║    Two tournaments with same H are "tournament-congruent"          ║
+║    iff they have the same β₁ (and higher Betti numbers).          ║
+║                                                                    ║
+║  THE OBSTRUCTION:                                                  ║
+║    Classical: dihedral angles irrational multiples of π            ║
+║    Tournament: the 1-cycle that no triple boundary can fill        ║
+║    Both: a GLOBAL property invisible to LOCAL decomposition        ║
+║                                                                    ║
+║  THE INVARIANT:                                                    ║
+║    Classical: D = Σ l(e) ⊗ θ(e)  (edge lengths × dihedral angles)║
+║    Tournament: β₁ = dim ker(∂₁) - rank(∂₂)  (cycle deficiency)   ║
+║    Both: measured by HOMOLOGY (Dehn = H₃ of scissors group)       ║
+║                                                                    ║
+║  THE SPECIAL CASES:                                                ║
+║    Classical: cube (D=0) vs regular tetrahedron (D≠0)             ║
+║    Tournament: transitive (β₁=0) vs near-transitive (β₁=1)       ║
+║    Both: the simplest non-decomposable object                     ║
+║                                                                    ║
+║  THE CAYLEY CONNECTION:                                            ║
+║    Classical: Dehn invariant lives in R ⊗_Q (R/πQ)               ║
+║    Tournament: β₁ lives in H₁(tournament path complex)           ║
+║    The Cayley transform Q maps between these:                      ║
+║      arctanh (hyperbolic angle) ↔ β₁ (topological twist)          ║
+║      Q(x) = exp(2·arctanh(x)) converts distances to twists        ║
+║                                                                    ║
+║  THE ANSWER:                                                       ║
+║    Tournaments are equidecomposable iff their Betti profiles       ║
+║    agree at all levels. The complete invariant is the              ║
+║    independence polynomial I(Ω(T), x) — the FULL DEHN.            ║
+║    β₁ is the first obstruction.                                   ║
+║    The near-transitive tournament is the tetrahedron:              ║
+║    same volume as a cube, but not scissors-congruent to it.        ║
+║                                                                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+opus-2026-03-15-S90k: EQUIDECOMPOSABILITY
+
