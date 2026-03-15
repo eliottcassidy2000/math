@@ -1,7 +1,7 @@
 %I A??????
 %S A?????? 1,2,8,32,158,928,6350,49752,439670,4327904,46963358,556953448,
 %T A?????? 7166360054,99428495088,1479600188798,23506712352248,
-%U A?????? 397095175477430,7107209383674112
+%U A?????? 397095175477430,7107209383674112,134345623603516190,2674426516381764744
 %N A?????? Sum over permutations of {0,...,n-1} with no unit descents of 2^(number of unit ascents).
 %C A?????? A unit ascent at position j means sigma(j+1) = sigma(j) + 1. A unit descent means sigma(j+1) = sigma(j) - 1. The sum is over permutations with no unit descents (NUD), weighted by 2^(number of unit ascents).
 %C A?????? a(n)/n! = 1 + CV^2(H) where H is the number of Hamiltonian paths in a uniformly random tournament on n vertices and CV^2 = Var(H)/E[H]^2.
