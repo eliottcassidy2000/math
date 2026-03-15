@@ -13,13 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-15-S71y — 2026-03-15: The Functor — Logic as Geometry, Geometry as Logic
+## opus-2026-03-15-S89c — 2026-03-15: W(n) to n=27, g_k to k=11, NUD-Poisson-e Connection
 
 **Account:** opus
-**Continuation of:** opus-2026-03-15-S71x
-**Summary of work:** 12th session of S71 descent. Shifted from objects/symbols to ARROWS/FUNCTORS as primary. Key: (1) Five fundamental functors: H(counting), Ω(structure), I(evaluation), ∂(boundary), W(duality) — corresponding to e,π,1,0,i. (2) OCF as functor factorization: H = ev₂ ∘ I ∘ Ω. (3) H = |Hom(P_n, T)| via Yoneda — H counts path embeddings (probe interpretation). (4) Modal tournament logic: □(H odd), □(β₂=0), ✗(H=7), ◇(β₃>0). (5) Galois connection between properties and invariants: 8 closed classes at n=5. (6) β₂=0 implies asphericity: path complex is K(π₁,1). (7) Tournament monad with unit=transitivity. (8) Curry-Howard: OCF proof = program constructing HP↔IndSet bijection. (9) Logic-Algebra-Geometry triangle with OCF at center.
-**New contributions:** HYP-1544 through HYP-1553, functors_S71y.py, results/functors_S71y.out
-**Unresolved threads:** The arrows are the substance. The triangle Logic-Algebra-Geometry may have further internal structure.
+**Continuation of:** opus-2026-03-15-S89c (context continuation)
+**Summary of work:** Extended W(n) computation from n=24 to n=27 using progressively optimized C programs (bitmask DP → popcount-level → rank-based → packed endpoints). Computed g_11 polynomial. Discovered deep structural connections: NUD(n) = A000255(n-1) with EGF exp(-x)/(1-x)², W(n)/NUD(n) → e (Euler's number), CV²(n) ≈ 2/n, and adj1 → Poisson(1) in random NUD perms.
+**New contributions:**
+- W(n) extended: n=25 (16746599265666151628174198), n=26 (434187457363955400414175008), n=27 (11692423738081050318010736030)
+- g_11 polynomial: 3·g_11(m) = 1030345293948358170·m³ - 5802477398736520560·m² + 10195015138571054553·m - 5422883033782892160
+- g_12(3) = 165564813972957667489 (partial: D0+D3 = 165564813972957667420)
+- NUD(n) = A000255(n-1), recurrence NUD(n) = (n-1)·NUD(n-1) + (n-2)·NUD(n-2)
+- W(n)/NUD(n) → e as n → ∞ (Poisson(1) mechanism: adj1 ≈ Poisson(1) in NUD perms)
+- CV²(n) ≈ 2/n (Richardson extrapolation: CV²·n → 2)
+- a_k/a_{k-1} ≈ 5k² (growth rate of leading coefficient)
+- THM-217 updated to k=1..11
+- wn_rank2.c: packed endpoint storage, 2× memory savings (n=27 peak 8.7 GB on 8 GB machine)
+**Unresolved threads:**
+- W(28) needed for full g_12 (requires 18 GB peak — beyond current hardware)
+- Prove W(n)/NUD(n) → e analytically (Poisson approximation argument sketched)
+- Find recurrence/GF for a_k sequence
+- Prove binomial truncation (why r≥4 terms cancel in g_k)
 
 ## kind-pasteur-2026-03-15-S112 — 2026-03-15: Transfer Matrix Weight Formula — g_k Has Degree k, Not 3
 
