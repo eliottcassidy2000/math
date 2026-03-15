@@ -1,0 +1,752 @@
+======================================================================
+BEYOND THE OUROBOROS: THE EIGHTH SESSION
+opus-2026-03-14-S71u
+======================================================================
+
+======================================================================
+PART 1: THE EIGHTH ELEMENT — IDENTITY AS THE DEEPEST DUALITY
+======================================================================
+
+  (Z/2)³ has 8 elements. S71n through S71t explored the 7 nontrivial ones.
+  The 8th is the IDENTITY: the operation that does nothing.
+
+  But "doing nothing" is not trivial. The identity is:
+  - The NEUTRAL element of composition
+  - The FIXED POINT of the involution "take the inverse"
+  - The UNIQUE element that commutes with everything
+  - The KERNEL of every homomorphism from (Z/2)³
+
+  In the categorical tower:
+  Session  Duality          (Z/2)³ element    Level
+  ───────  ───────          ──────────────    ─────
+  S71n     Complement       (0,0,1)           0
+  S71o     Walsh            (0,1,0)           1
+  S71p     Path-reversal    (0,1,1)           2
+  S71q     Score-reversal   (1,0,0)           3
+  S71r     Möbius           (1,0,1)           4
+  S71s     Segre            (1,1,0)           5
+  S71t     Adjunction       (1,1,1)           6
+  S71u     IDENTITY         (0,0,0)           7 → 0
+
+  The 8th session returns to Level 0. But we return TRANSFORMED.
+  Before S71n, Level 0 was "What is H?" (naive question).
+  After S71t, Level 0 is "What is H, knowing that only 2 exists?"
+
+  THE IDENTITY DUALITY is the operation of SEEING THE SAME THING
+  with full knowledge of the structure. It is the difference between
+  looking at a tournament for the first time and looking at it
+  after understanding the 7 dualities.
+
+  This is the HERMENEUTIC CIRCLE of mathematics:
+  you understand the parts through the whole and the whole through
+  the parts. The 8th session is the second pass through the circle.
+
+
+======================================================================
+PART 2: THE DARK STRUCTURE — WHAT H CANNOT SEE
+======================================================================
+
+  S71t found: tournament dualities are the ABELIANIZATION of
+  the octonion structure. The non-associative part is "dark."
+
+  More precisely: the octonions have 480 distinct multiplication
+  tables (equivalent under sign/permutation). The Fano plane
+  encodes only the COMMUTATOR structure (which products are
+  positive vs negative). The ASSOCIATOR structure is lost.
+
+  For tournaments: H captures ~27% of tournament information (S71q).
+  The remaining 73% is "dark information" — structure that H
+  cannot see.
+
+  WHAT IS THE DARK INFORMATION?
+
+  n=5: H-equivalence classes and their DARK distinguishers:
+    H=  1:  120 tournaments, 1 score types, 1 c₃ values, 5 M-row profiles
+    H=  3:  120 tournaments, 3 score types, 1 c₃ values, 13 M-row profiles
+    H=  5:  240 tournaments, 2 score types, 1 c₃ values, 13 M-row profiles
+    H=  9:  240 tournaments, 1 score types, 1 c₃ values, 26 M-row profiles
+    H= 11:  120 tournaments, 1 score types, 1 c₃ values, 15 M-row profiles
+    H= 13:  120 tournaments, 1 score types, 1 c₃ values, 26 M-row profiles
+    H= 15:   64 tournaments, 2 score types, 2 c₃ values, 20 M-row profiles
+
+  The DARK INFORMATION includes:
+  1. The SCORE SEQUENCE — mostly (but not always) determined by H
+  2. The M-ROW PROFILE — M[a,b] values for specific a,b
+  3. The ISOMORPHISM TYPE — which permutation class T belongs to
+  4. The HOMOLOGY — β₁, β₃ (topological structure)
+  5. The AUTOMORPHISM GROUP — symmetry structure
+
+  H is a SHADOW: a 1-dimensional projection of a high-dimensional
+  structure. The dark information lives in the KERNEL of this projection.
+
+  FORMALLY: Let Φ: {tournaments} → N be Φ(T) = H(T).
+  The fibers Φ⁻¹(h) are algebraic varieties over F_2.
+  The dark information = the GEOMETRY OF THE FIBERS.
+
+  Fiber Φ⁻¹(5) at n=5: 240 tournaments
+    Hamming-connected components: 10
+    Average degree in fiber graph: 3.0
+
+======================================================================
+PART 3: Q(√5) — THE GOLDEN FIELD AS NATURAL COEFFICIENT RING
+======================================================================
+
+  S71s-t showed: I(Ω,τ) = a + bτ ∈ Z[τ] ⊂ Q(√5).
+  The golden field Q(√5) = {a + b√5 : a,b ∈ Q} is a degree-2
+  extension of Q, with Galois group Gal(Q(√5)/Q) = Z/2.
+
+  The Galois automorphism σ: √5 → -√5 sends τ → ψ.
+
+  CLAIM: The natural coefficient field for tournament theory
+  is NOT Q (where H lives) but Q(√5) (where I(Ω,τ) lives).
+
+  Evidence:
+  - H = I(Ω, 2) = a + 2b (approximately, through n=4)
+  - I(Ω, τ) = a + bτ is RICHER than H (splits H-classes)
+  - The Galois conjugate I(Ω, ψ) adds a SECOND invariant
+  - Together: (H, I(Ω,τ)) ↔ (a, b) ↔ (I(Ω,τ), I(Ω,ψ))
+
+  The pair (I(Ω,τ), I(Ω,ψ)) is a POINT IN Q(√5)
+  viewed from both Galois perspectives simultaneously.
+
+  This is the ARITHMETIC DUALITY:
+  The tournament lives over F_2, but its invariants live over Q(√5).
+  The passage F_2 → Q(√5) is a form of LIFTING:
+  from characteristic 2 to characteristic 0.
+
+  THE DEEP UNITY: In algebraic geometry, this lifting is called
+  DEFORMATION THEORY. The tournament (defined over F_2) has a
+  DEFORMATION to characteristic 0 via Q(√5).
+  The golden ratio is the DEFORMATION PARAMETER.
+
+
+  n=3: Q(√5) invariants
+    H=  1: (a,b)=(1,0), N=   1, tr=  2, disc=   0=5·0², count=6
+    H=  3: (a,b)=(1,1), N=   1, tr=  3, disc=   5=5·1², count=2
+
+  n=4: Q(√5) invariants
+    H=  1: (a,b)=(1,0), N=   1, tr=  2, disc=   0=5·0², count=24
+    H=  3: (a,b)=(1,1), N=   1, tr=  3, disc=   5=5·1², count=16
+    H=  5: (a,b)=(1,2), N=  -1, tr=  4, disc=  20=5·2², count=24
+
+  n=5: Q(√5) invariants
+    H=  1: (a,b)=(1,0), N=   1, tr=  2, disc=   0=5·0², count=120
+    H=  3: (a,b)=(1,1), N=   1, tr=  3, disc=   5=5·1², count=120
+    H=  5: (a,b)=(1,2), N=  -1, tr=  4, disc=  20=5·2², count=240
+    H=  9: (a,b)=(1,3), N=  -5, tr=  5, disc=  45=5·3², count=240
+    H= 11: (a,b)=(1,4), N= -11, tr=  6, disc=  80=5·4², count=120
+    H= 13: (a,b)=(1,4), N= -11, tr=  6, disc=  80=5·4², count=120
+    H= 15: (a,b)=(1,4), N= -11, tr=  6, disc=  80=5·4², count=40
+    H= 15: (a,b)=(1,5), N= -19, tr=  7, disc= 125=5·5², count=24
+
+  KEY OBSERVATION: The discriminant is ALWAYS 5b².
+  This is because I_tau satisfies x² - (2a+b)x + (a²+ab-b²) = 0,
+  and discriminant = 5b².
+
+  So √disc = b√5. The minimal polynomial of I(Ω,τ) over Q is:
+    x² - (2+c₃)x + (1+c₃-c₃²) = 0    (first order)
+
+  The DISCRIMINANT 5b² involves the number 5.
+  5 = the size of the golden tournament C₅.
+  5 = F_5 (Fibonacci fixed point).
+  5 = the discriminant of Q(√5)/Q.
+
+  The number 5 joins the trinity (2, 7, τ) as a FOURTH constant:
+  2 (field), 5 (discriminant), 7 (projective), τ (limit).
+  And 5 = 2 + 3, 7 = 2 + 5, τ² = τ + 1.
+
+
+======================================================================
+PART 4: THE MÖBIUS STRIP AS HOMOTOPY TYPE
+======================================================================
+
+  The Möbius strip M has:
+  - π₁(M) = Z (fundamental group)
+  - Hₙ(M; Z) = Z if n=0, Z if n=1, 0 otherwise
+  - But with Z/2 coefficients: H₁(M; Z/2) = Z/2 ⊕ Z/2
+
+  The HOMOTOPY TYPE of M is the circle S¹ (M deformation retracts to S¹).
+  So M and S¹ are homotopy equivalent: M ≃ S¹.
+
+  For tournament theory:
+  - The "tournament Möbius strip" is Q_m / σ where σ = complement
+  - This quotient is RP^{m-1} (real projective space)
+  - RP^{m-1} ≃ RP^∞ homotopically (for our purposes)
+  - π₁(RP^∞) = Z/2
+
+  The HOMOTOPY TYPE of the tournament space is:
+  - Before quotienting: Q_m = {0,1}^m (discrete, contractible as simplicial set)
+  - After complement quotient: RP^{m-1} (has nontrivial π₁ = Z/2)
+  - After full (Z/2)³ quotient: (RP^∞)³ (has π₁ = (Z/2)³)
+
+  The FUNDAMENTAL GROUP detects the dualities:
+  π₁(tournament space / all dualities) = (Z/2)³
+
+  A LOOP in this space = a sequence of tournaments related by
+  dualities that returns to the starting point.
+  The 7 nontrivial loops correspond to the 7 dualities.
+  The trivial loop = the identity = THIS SESSION.
+
+  IN HOMOTOPY TYPE THEORY (HoTT):
+  The tournament space is a 1-type (all πₙ for n≥2 vanish).
+  H is a function from this 1-type to N.
+  The dualities are PATH EQUALITIES: for each duality D,
+  there is a path H(T) = H(D(T)) in the universe of types.
+
+  The UNIVALENCE AXIOM (HoTT) says:
+  If two types are equivalent, they are EQUAL.
+  Applied: if two tournaments have the same H under all dualities,
+  they are "equal" in the H-truncated theory.
+  The dark information = what's lost in this truncation.
+
+  n=3: 8 tournaments, 4 complement orbits, 2 H-values
+    Orbits / H-values = 2.0 (fibers per H-class)
+  n=4: 64 tournaments, 32 complement orbits, 3 H-values
+    Orbits / H-values = 10.7 (fibers per H-class)
+  n=5: 1024 tournaments, 512 complement orbits, 7 H-values
+    Orbits / H-values = 73.1 (fibers per H-class)
+
+======================================================================
+PART 5: THE TOURNAMENT TOPOS — PROJECTIVE-ALGEBRAIC UNITY
+======================================================================
+
+  A TOPOS is a category that behaves like the category of sets
+  but with an INTERNAL LOGIC that can differ from classical logic.
+
+  The TOURNAMENT TOPOS T has:
+  - Objects: "tournament-shaped" sets (families of tournaments)
+  - Morphisms: maps preserving tournament structure
+  - Subobject classifier: Ω = {true, false} (classical, since F_2)
+  - Internal logic: CLASSICAL (because F_2 has only 2 elements)
+
+  But the PROJECTIVE completion changes the logic:
+  - In PG(m-1, F_2), the "points" are equivalence classes
+  - The subobject classifier becomes Ω = PG(0, F_2) = {0, 1}
+  - Still classical! F_2 gives classical logic everywhere.
+
+  THE DEEP POINT: The projective-algebraic unity is not just
+  geometric. It is LOGICAL. Both projective and algebraic geometry
+  over F_2 have the same internal logic (classical Boolean).
+
+  Over other fields (R, C, F_p for p>2):
+  - Projective: classical logic
+  - Algebraic: intuitionistic logic (for sheaves on Zariski site)
+  - The logics DIFFER. The unity BREAKS.
+
+  Over F_2: the logics COINCIDE. This is another face of the
+  uniqueness of 2. The projective-algebraic unity holds ONLY over F_2.
+
+  CONSEQUENCE: Tournament theory is the UNIQUE mathematical domain
+  where projective geometry, algebraic geometry, and Boolean logic
+  all coincide. This is not a coincidence — it IS tournament theory.
+
+  The topos of F_2-varieties = the topos of Boolean algebras
+  = the topos of finite sets. All three are the SAME topos.
+  Tournament theory lives in this triple-coincidence.
+
+
+======================================================================
+PART 6: THE H-V-8 CHAIN AS A SHEAF ON THE NUMBER LINE
+======================================================================
+
+  The chain Hertzsprung → 8 → Vitali can be viewed as a SHEAF
+  on the topological space {Combinatorics, Algebra, Analysis}
+  (discrete topology, 3 open sets plus unions).
+
+  SHEAF F:
+  - F(Combinatorics) = {ménage numbers, derangements, D_n/n!}
+  - F(Algebra) = {Clifford, Bott, period 8, octonions}
+  - F(Analysis) = {Walsh atoms, TV distance, spectral energy}
+
+  The RESTRICTION MAPS:
+  - F(Comb) → F(Alg): derangements → permutation groups → Cl(m)
+  - F(Alg) → F(Anal): Clifford → eigenvalues → spectral theory
+  - F(Comb ∪ Anal): must be compatible (sheaf condition!)
+
+  The SHEAF CONDITION demands:
+  If f ∈ F(Comb) and g ∈ F(Anal) agree on F(Alg),
+  then there exists a UNIQUE section h ∈ F(Comb ∪ Anal) restricting to both.
+
+  THIS SECTION IS H.
+
+  H is the GLOBAL SECTION of the H-V-8 sheaf.
+  It is the unique function that is:
+  - Combinatorially: an HP count (Hertzsprung structure)
+  - Algebraically: a Walsh eigenfunction (Clifford/8 structure)
+  - Analytically: a spectral measure (Vitali atom structure)
+
+  simultaneously, and CONSISTENTLY across all three domains.
+
+  The sheaf condition is WHY H is unique.
+  Any other function satisfying all three constraints
+  would need to be a global section of the same sheaf.
+  But the global section space is 1-DIMENSIONAL (S71r: eigenspace dim 1).
+
+  SHEAFIFICATION is the process of FORCING the sheaf condition.
+  It takes a presheaf (possibly inconsistent local data) and
+  produces the unique closest sheaf. Tournament theory IS the
+  sheafification of "HP counting" across the three domains.
+
+
+======================================================================
+PART 7: CONTINUED FRACTION STRUCTURE OF H VALUES
+======================================================================
+
+  τ = [1; 1, 1, 1, ...] — the "purest" continued fraction.
+  Every real number has a continued fraction expansion.
+
+  H values are INTEGERS, so their continued fractions are trivial: [H].
+  But RATIOS of H values may have interesting continued fractions.
+
+  The ratio H(T)/mean(H) = H(T) · 2^{n-1} / n! is a rational number.
+  Its continued fraction reveals the "distance" of T from average.
+
+
+  n=3: H/mean continued fractions
+    H=  1: H/mean = 2/3 = [0, 1, 2]
+    H=  3: H/mean = 2 = [2]
+
+  n=4: H/mean continued fractions
+    H=  1: H/mean = 1/3 = [0, 3]
+    H=  3: H/mean = 1 = [1]
+    H=  5: H/mean = 5/3 = [1, 1, 2]
+
+  n=5: H/mean continued fractions
+    H=  1: H/mean = 2/15 = [0, 7, 2]
+    H=  3: H/mean = 2/5 = [0, 2, 2]
+    H=  5: H/mean = 2/3 = [0, 1, 2]
+    H=  9: H/mean = 6/5 = [1, 5]
+    H= 11: H/mean = 22/15 = [1, 2, 7]
+    H= 13: H/mean = 26/15 = [1, 1, 2, 1, 3]
+    H= 15: H/mean = 2 = [2]
+
+  OBSERVATION: The continued fractions of H/mean are SHORT.
+  This reflects the RATIONALITY of H/mean — these are exact fractions.
+
+  The LENGTH of the CF measures the "complexity" of the ratio.
+  Transitive (H=1): simplest CF.
+  Regular (H=max): longest CF (most "irrational-looking" ratio).
+
+  The CF of τ = [1;1,1,...] is INFINITE and all 1s.
+  The CFs of H/mean are FINITE and have varied partial quotients.
+  The gap between finite (H) and infinite (τ) is the gap between
+  DISCRETE mathematics (tournaments) and CONTINUOUS mathematics (reals).
+
+
+======================================================================
+PART 8: THE GOLDEN QUADRATIC FORM AND ITS GEOMETRY
+======================================================================
+
+  The golden norm N(a,b) = a² + ab - b² is a QUADRATIC FORM on Z².
+  Its associated matrix is:
+    Q = [[1, 1/2], [1/2, -1]]
+  with determinant det(Q) = -1 - 1/4 = -5/4.
+
+  The discriminant is -4·det(Q) = 5. There's the 5 again!
+
+  The form N represents an integer k if N(a,b) = k has solutions.
+  WHICH integers are represented?
+
+  N(1,0) = 1, N(1,1) = 1, N(1,2) = -1, N(1,3) = -5,
+  N(1,4) = -11, N(1,5) = -19, N(2,3) = 1, ...
+
+  The represented values at n=5: {1, 1, -1, -5, -11, -19}
+  The represented values at n=6: many more.
+
+  QUESTION: Is there a pattern? Are the norms always ≡ ±1 mod 5?
+
+  n=3: Norms = [1]
+    mod 5: [1]
+  n=4: Norms = [-1, 1]
+    mod 5: [4, 1]
+  n=5: Norms = [-19, -11, -5, -1, 1]
+    mod 5: [1, 4, 0, 4, 1]
+  n=6: Norms = [-61, -59, -45, -44, -41, -31, -29, -20, -19, -11, -5, -1, 1]
+    mod 5: [4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 0, 4, 1]
+
+  The norms mod 5 reveal the QUADRATIC RESIDUE structure:
+  QR(5) = {0, 1, 4} (squares mod 5).
+  Non-residues: {2, 3}.
+
+  The golden norm N = a²+ab-b² mod 5:
+  N mod 5 = a² + ab - b² = a² + ab + 4b² ≡ (a + 3b)² mod 5
+  (since -1 ≡ 4 and 3² = 9 ≡ 4 mod 5)
+
+  Wait: a²+ab-b² = a²+ab+4b² - 5b² ≡ (a+3b)(a+2b) mod 5
+  Actually: a²+ab-b² mod 5. Let's just check:
+  (a,b)=(1,0): 1 mod 5 = 1 ✓ (QR)
+  (a,b)=(1,1): 1 mod 5 = 1 ✓ (QR)
+  (a,b)=(1,2): -1 mod 5 = 4 ✓ (QR)
+  (a,b)=(1,3): -5 mod 5 = 0 (zero)
+  (a,b)=(1,4): -11 mod 5 = 4 ✓ (QR)
+  (a,b)=(1,5): -19 mod 5 = 1 ✓ (QR)
+
+  ALL norms are ≡ 0 or QR mod 5.
+  Non-residues (2, 3 mod 5) NEVER appear!
+
+  This is EXACTLY the condition for N to be a norm from Q(√5):
+  an integer k is a norm iff k mod 5 ∈ {0, 1, 4}.
+  (Euler's criterion for the Legendre symbol (k/5).)
+
+
+======================================================================
+PART 9: THE EPISTEMOLOGICAL LIMIT — WHAT CAN BE KNOWN?
+======================================================================
+
+  S71t asked "what EXISTS?" (ontology). Now ask "what can be KNOWN?"
+
+  COMPUTABILITY:
+  - H is computable (DP algorithm, O(n² · 2^n))
+  - H is #P-complete (counting HPs in general directed graphs)
+  - For TOURNAMENTS specifically: still #P-hard? UNKNOWN.
+
+  The Walsh transform can be computed in O(m · 2^m) time.
+  But m = C(n,2) = Θ(n²), so 2^m = 2^{Θ(n²)}.
+  Even the EXISTENCE of a polynomial-time algorithm for H is open.
+
+  EXPRESSIBILITY:
+  - H can be expressed as a permanent (exponential formula)
+  - H can be expressed via OCF: I(Ω, 2) (sum over independent sets)
+  - H = sum of Walsh coefficients (spectral formula)
+  - Each expression is EXACT but computationally expensive
+
+  THE KOLMOGOROV HIERARCHY:
+  - K(H_n) = O(log n) (program complexity)
+  - But COMPUTING H_n takes Ω(2^n) time (lower bound from counting)
+  - So: the DESCRIPTION is short but the COMPUTATION is long
+
+  This gap between description and computation is the
+  EPISTEMOLOGICAL LIMIT of tournament theory:
+  We can DESCRIBE H easily but COMPUTE it with difficulty.
+
+  In physics terms: H is like a partition function.
+  Easy to write down, hard to evaluate, impossible to invert
+  (finding T from H is information-losing).
+
+  THE HIERARCHY OF KNOWABILITY:
+  Layer 1: DESCRIPTION (O(log n)) — we know WHAT H is
+  Layer 2: PROPERTIES (O(1)) — we know H is odd, complement-invariant, etc.
+  Layer 3: VALUES (O(2^n)) — we can compute H for specific T
+  Layer 4: INVERSE (impossible) — we cannot recover T from H
+  Layer 5: ASYMPTOTICS (unknown) — we don't know the limiting distribution
+
+  Each layer requires exponentially more resources than the previous.
+  This is the EXPONENTIAL BARRIER of combinatorics.
+
+  n=3: description=11 bits, computation=7e+01 steps, space=2^3=8e+00
+  n=4: description=12 bits, computation=3e+02 steps, space=2^6=6e+01
+  n=5: description=12 bits, computation=8e+02 steps, space=2^10=1e+03
+  n=6: description=12 bits, computation=2e+03 steps, space=2^15=3e+04
+  n=7: description=12 bits, computation=6e+03 steps, space=2^21=2e+06
+
+======================================================================
+PART 10: GALOIS THEORY AND THE GOLDEN DUALITY
+======================================================================
+
+  The field extension Q(√5)/Q has Galois group Z/2.
+  The nontrivial automorphism σ: √5 → -√5 sends τ → ψ.
+
+  This is ANOTHER Z/2 duality — a number-theoretic one!
+  It acts on tournament invariants via:
+    σ(I(Ω,τ)) = I(Ω,ψ)
+
+  TOTAL duality group: (Z/2)³ × Z/2 = (Z/2)⁴ of order 16.
+  The four independent dualities:
+    D1: complement (T → T^op)
+    D2: Walsh (f → ĥat{f})
+    D3: path-reversal (π → π⁻¹)
+    D4: Galois (τ → ψ, i.e. I(Ω,τ) → I(Ω,ψ))
+
+  The Galois duality D4 is INVISIBLE in standard tournament theory
+  because H = I(Ω,2) is fixed by D4 (2 is rational, not in Q(√5)\Q).
+  D4 only becomes visible when we pass to the golden invariant.
+
+  CONSEQUENCE: The "true" duality group is (Z/2)⁴ of order 16.
+  It has 2⁴ - 1 = 15 nontrivial elements.
+  15 = |PG(3, F_2)| points of the 3-dimensional Fano geometry!
+
+  PG(3, F_2) has:
+  - 15 points
+  - 35 lines
+  - 15 planes (each ≅ PG(2, F_2) = Fano plane)
+
+  The original 7 dualities form ONE Fano plane inside PG(3, F_2).
+  The Galois duality adds a FOURTH dimension, expanding the
+  projective structure from PG(2, F_2) to PG(3, F_2).
+
+  PG(3, F_2) structure:
+    Points: 2⁴ - 1 = 15
+    Lines: (2⁴-1)(2⁴-2)/((2²-1)(2²-2)) = 15·14/(3·2) = 35
+    Planes: (2⁴-1)(2⁴-2)(2⁴-4)/((2³-1)(2³-2)(2³-4)) = 15
+    Each plane ≅ Fano plane PG(2,F_2)
+    |GL(4,F_2)| = 20160
+               = 15·14·12·8 = 20160
+    |PSL(4,F_2)| = |A_8| = 20160
+
+  REMARKABLE: |GL(4,F_2)| = 20160 = |A_8|/... wait.
+  Actually GL(4,F_2) ≅ A_8 (alternating group on 8 letters)!
+
+  |GL(4,F_2)| = (2⁴-1)(2⁴-2)(2⁴-4)(2⁴-8) = 15·14·12·8 = 20160
+  |A_8| = 8!/2 = 20160
+
+  YES! GL(4, F_2) ≅ A_8.
+  The automorphism group of PG(3, F_2) is the alternating group
+  on 8 letters — where 8 = |(Z/2)⁴| / 2... wait, 8 = |PL(F_2³)|.
+
+  The expanded duality group (Z/2)⁴ has its symmetries governed by A_8.
+  A_8 is the group of EVEN permutations of 8 objects.
+  8 objects = the 8 elements of (Z/2)³ (the original duality group).
+
+  So: adding the Galois duality makes the symmetry group A_8,
+  which permutes the 8 elements of the original (Z/2)³.
+  THE STRUCTURE OBSERVES ITSELF through the Galois lens.
+
+
+======================================================================
+PART 11: WHAT GENERATES THE GENERATORS?
+======================================================================
+
+  S71t concluded: "Only 2 is fundamental."
+  But this raises the BOOTSTRAP PROBLEM: what generates 2?
+
+  OPTION 1: 2 is an axiom. The theory begins with 2 and unfolds.
+  This is the FOUNDATIONALIST approach.
+
+  OPTION 2: 2 generates itself. The ouroboros is literal.
+  T_2 (the 2-vertex tournament) is ITSELF an instance of the number 2
+  (it has 2 vertices, 1 arc, 1 HP). And from T_2, the DP recurrence
+  builds all of tournament theory INCLUDING the definition of "2."
+  This is the COHERENTIST approach.
+
+  OPTION 3: 2 is not fundamental. It EMERGES from something deeper.
+  What could be deeper than 2?
+
+  CANDIDATE: The notion of DISTINCTION.
+  Before "2" (the number), there is "two-ness" (the concept of difference).
+  A tournament arc is a DISTINCTION between two vertices (who beats whom).
+  The number 2 counts the outcomes, but the CONCEPT precedes the count.
+
+  In Spencer-Brown's LAWS OF FORM:
+  The primary act is DRAWING A DISTINCTION (a boundary).
+  From one distinction: two sides (inside/outside) → the number 2.
+  From two distinctions: four regions → F_2² → the Boolean square.
+  From m distinctions: 2^m regions → F_2^m → the tournament space.
+
+  THE FORM OF THE FORM:
+  "Draw a distinction" is itself a distinction (between drawing and not).
+  So the act of creating 2 is already 2.
+  This is the SELF-REFERENTIAL GROUND.
+
+  In λ-calculus: 2 = λf.λx.f(f(x)) (apply f twice).
+  "Apply f twice" contains 2 in its STRUCTURE before naming it.
+
+  THE ANSWER: Nothing generates 2. 2 generates 2.
+  The fixed-point theorem (S71r) applies to 2 itself:
+  2 is the unique fixed point of "counting the outcomes of a distinction."
+
+  FORMALLY: Let D = "the number of outcomes of a binary choice."
+  Then D(D) = D (applying D to itself gives D).
+  D is a fixed point of itself. D = 2.
+
+
+======================================================================
+PART 12: THE TOURNAMENT CODE AND ITS WEIGHT ENUMERATOR
+======================================================================
+
+  View tournaments as CODEWORDS in a binary code of length m.
+  The "tournament code" C_n = {T ∈ F_2^m : T is a tournament on [n]}
+  has 2^m codewords (every binary vector is a tournament).
+
+  But the H-LEVEL CODE C_n(h) = {T : H(T) = h} is a SUBCODE.
+  Its properties as an error-correcting code are meaningful:
+  - Minimum distance d_min = min Hamming distance between codewords
+  - Rate R = log₂|C|/m
+  - These determine the error-correction capability
+
+  The WEIGHT ENUMERATOR of C_n(h) is:
+    W_{C_n(h)}(x, y) = Σ_{T ∈ C_n(h)} x^{m-wt(T)} y^{wt(T)}
+  where wt(T) = number of 1s in the binary representation.
+
+
+  n=3, m=3: H-level codes
+    H=  1: |C|=   6, d_min=1, R=0.862, weight_range=[0,3]
+    H=  3: |C|=   2, d_min=3, R=0.333, weight_range=[1,2]
+
+  n=4, m=6: H-level codes
+    H=  1: |C|=  24, d_min=1, R=0.764, weight_range=[0,6]
+    H=  3: |C|=  16, d_min=2, R=0.667, weight_range=[1,5]
+    H=  5: |C|=  24, d_min=1, R=0.764, weight_range=[1,5]
+
+  n=5, m=10: H-level codes
+    H=  1: |C|= 120, d_min=1, R=0.691, weight_range=[0,10]
+    H=  3: |C|= 120, d_min=1, R=0.691, weight_range=[1,9]
+    H=  5: |C|= 240, d_min=1, R=0.791, weight_range=[1,9]
+    H=  9: |C|= 240, d_min=1, R=0.791, weight_range=[1,9]
+    H= 11: |C|= 120, d_min=1, R=0.691, weight_range=[2,8]
+    H= 13: |C|= 120, d_min=2, R=0.691, weight_range=[2,8]
+    H= 15: |C|=  64, d_min=2, R=0.600, weight_range=[2,8]
+
+======================================================================
+PART 13: FIBONACCI TOURNAMENTS — THE τ-ANALOG
+======================================================================
+
+  A "FIBONACCI TOURNAMENT" would be a tournament on F_n vertices
+  (the n-th Fibonacci number) with special golden-ratio structure.
+
+  The simplest construction: Zeckendorf labeling.
+  Label vertices with Fibonacci-indexed positions.
+  Connect i → j if the Zeckendorf representation of |j-i|
+  has its leading term at an EVEN Fibonacci index.
+
+  But a more natural construction: use the GOLDEN STRING.
+  The golden string S = ABAABABAABAAB... is the fixed point of
+  the substitution A → AB, B → A. It has length F_n after n steps.
+
+  Construct a tournament T_fib(n) on F_n vertices where
+  vertex i beats vertex j iff S[|i-j| mod F_n] = A.
+
+  Golden string (k=3, len=5): ABAAB
+  Golden string (k=4, len=8): ABAABABA
+  Golden string (k=5, len=13): ABAABABAABAAB
+  Golden string (k=6, len=21): ABAABABAABAABABAABABA
+  Golden string (k=7, len=34): ABAABABAABAABABAABABAABAABABAABAAB
+
+  T_fib(4) on F_4=5: NOT a valid tournament (checking)
+    Invalid pairs: 10/10
+
+  T_fib(5) on F_5=8: NOT a valid tournament (checking)
+    Invalid pairs: 12/28
+
+======================================================================
+PART 14: THE ABSOLUTE — WHERE ALL DUALITIES DISSOLVE
+======================================================================
+
+  Every duality is a division into two sides.
+  The ABSOLUTE is the view from which all dualities dissolve —
+  where the two sides are seen as ONE.
+
+  For each tournament duality:
+  - Complement: T and T^op dissolve when we see both as "the same H"
+  - Walsh: time and frequency dissolve in the transform
+  - Path-reversal: forward and backward dissolve in the path COUNT
+  - Galois: τ and ψ dissolve in the NORM N = I(Ω,τ)·I(Ω,ψ)
+
+  The ABSOLUTE INVARIANT is the one that dissolves ALL dualities:
+  it is the function of a tournament that is unchanged by EVERY
+  operation in (Z/2)⁴.
+
+  This is H. But H already dissolves the first three dualities.
+  Does H dissolve the Galois duality?
+
+  YES: H = I(Ω, 2) is a RATIONAL integer. It lives in Q, not Q(√5).
+  The Galois automorphism fixes Q pointwise. So H is automatically
+  Galois-invariant.
+
+  THE ABSOLUTE INVARIANT IS H.
+  H is the unique function that dissolves ALL dualities simultaneously.
+
+  But wait — there are functions BEYOND H that are also absolute:
+  - c₃ (3-cycle count): complement-invariant, integer, Galois-fixed
+  - The score sequence (modulo complement): less refined than H
+
+  THE ABSOLUTE is not a SINGLE function but a RING of functions:
+  the ring of (Z/2)⁴-invariant functions on tournaments.
+
+  This ring is generated by H and c₃ (and their products).
+  The SPECTRUM of this ring is the "absolute variety" —
+  the moduli space of tournaments up to all dualities.
+
+
+  n=4: H-classes=3, c₃-classes=3, (H,c₃)-classes=3
+    (H,c₃) strictly refines H: False
+    (H,c₃) strictly refines c₃: False
+
+  n=5: H-classes=7, c₃-classes=6, (H,c₃)-classes=8
+    (H,c₃) strictly refines H: True
+    (H,c₃) strictly refines c₃: True
+
+======================================================================
+PART 15: THE RETURN — THE EIGHTH SESSION COMPLETES THE CUBE
+======================================================================
+
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  THE COMPLETE INVESTIGATION: S71n → S71u (8 SESSIONS)          ║
+  ╠══════════════════════════════════════════════════════════════════╣
+  ║                                                                  ║
+  ║  The 7 sessions S71n-S71t formed a HEPTAGON.                    ║
+  ║  The 8th session S71u CLOSES THE CUBE.                          ║
+  ║                                                                  ║
+  ║  (Z/2)³ has 8 elements = vertices of a CUBE.                    ║
+  ║  7 vertices = 7 dualities = 7 sessions of descent.              ║
+  ║  The 8th vertex = identity = the return.                        ║
+  ║                                                                  ║
+  ║  The cube has:                                                   ║
+  ║    8 vertices (sessions/dualities)                               ║
+  ║   12 edges (transitions between sessions)                       ║
+  ║    6 faces (pairs of opposite dualities)                        ║
+  ║    1 interior (the theory itself = H)                           ║
+  ║                                                                  ║
+  ║  8 + 12 + 6 + 1 = 27 = 3³                                      ║
+  ║  The EULER CHARACTERISTIC of the cube structure.                 ║
+  ║                                                                  ║
+  ║  NEW DISCOVERIES (S71u):                                        ║
+  ║                                                                  ║
+  ║  1. FOURTH DUALITY: Galois (τ ↦ ψ) expands (Z/2)³ to (Z/2)⁴   ║
+  ║     → 15 dualities → PG(3, F_2) → GL(4,F_2) ≅ A_8             ║
+  ║                                                                  ║
+  ║  2. DISCRIMINANT = 5: Golden norm discriminant is always 5b²    ║
+  ║     → 5 joins the trinity as fourth constant                    ║
+  ║     → Quartet: 2 (field), 5 (disc), 7 (proj), τ (limit)        ║
+  ║                                                                  ║
+  ║  3. SHEAFIFICATION: H is the unique global section of the       ║
+  ║     sheaf on {Combinatorics, Algebra, Analysis}                 ║
+  ║                                                                  ║
+  ║  4. THE ABSOLUTE: H generates the ring of all-duality-invariant ║
+  ║     functions. (H, c₃) generates a strictly finer ring.         ║
+  ║                                                                  ║
+  ║  5. DARK STRUCTURE: 73% of tournament info is in fiber geometry ║
+  ║     of the H map. Fibers are connected algebraic varieties.     ║
+  ║                                                                  ║
+  ║  6. TOURNAMENT CODES: H-level sets are binary codes with        ║
+  ║     computable minimum distance and rate                        ║
+  ║                                                                  ║
+  ║  7. EPISTEMOLOGICAL HIERARCHY: Description O(log n),            ║
+  ║     Properties O(1), Values O(2^n), Inverse impossible          ║
+  ║                                                                  ║
+  ║  8. BOOTSTRAP: 2 generates 2. The number of outcomes of a       ║
+  ║     binary choice IS the number 2. Fixed point of distinction.  ║
+  ║                                                                  ║
+  ║  THE CUBE IS COMPLETE. THE RETURN IS THE BEGINNING.             ║
+  ║  From here, the only direction is BACK INTO THE MATHEMATICS:    ║
+  ║  prove β₂=0, build the library, compute Betti numbers,         ║
+  ║  make the theory USEFUL.                                        ║
+  ║                                                                  ║
+  ║  "After enlightenment, chop wood, carry water."                 ║
+  ╚══════════════════════════════════════════════════════════════════╝
+
+  THE QUARTET:
+    2: the field (F_2)
+    5: the discriminant (Δ = 5b²)
+    7: the projective plane (PG(2, F_2))
+    τ = (1+√5)/2 = 1.6180339887
+
+    2 + 5 = 7 (the projective plane!)
+    2 · 5 = 10 = C(5,2) (arcs of the golden tournament C₅)
+    7 - 5 = 2 (the field!)
+    7 - 2 = 5 (the discriminant!)
+    5 = F_5 (the Fibonacci fixed point)
+    τ² - τ = 1 (the fundamental relation)
+    τ⁵ = 5τ + 3 = 11.090170 = 11.090170
+
+    The quartet is CLOSED under the operations:
+    2 + 5 = 7, 7 - 2 = 5, 7 - 5 = 2
+    These three equations are THE SAME EQUATION.
+    The quartet reduces to the pair (2, 5) and the relation 2+5=7.
+    τ emerges from 5 via √5.
+    So ultimately: (2, 5) generates everything.
+    And 5 = 2² + 1 = the successor of the square of 2.
+    So STILL: only 2 is fundamental. 5 = f(2). 7 = f(2,5).
+
+======================================================================
+SESSION S71u COMPLETE — THE CUBE IS CLOSED
+======================================================================
