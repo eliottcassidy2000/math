@@ -1,0 +1,208 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+β₁ ≤ 1 INVESTIGATION
+======================================================================
+
+n=5: 1024 tournaments
+  β₁ distribution: {0: 720, 1: 304}
+  max β₁ = 1
+
+n=6: 32768 tournaments
+  β₁ distribution: {0: 27968, 1: 4800}
+  max β₁ = 1
+
+n=7: sampling 5000 random tournaments...
+  β₁ distribution: {0: 4780, 1: 220}
+  max β₁ = 1
+
+n=8: sampling 2000 random tournaments...
+  β₁ distribution: {0: 1978, 1: 22}
+  max β₁ = 1
+
+n=9: sampling 500 random tournaments...
+  β₁ distribution: {0: 500}
+  max β₁ = 0
+
+======================================================================
+HARMONIC CYCLE ANALYSIS (n=5)
+======================================================================
+
+  bits=8: β₁=1
+  ker(∂₁)=6, rank(∂₂|Ω₂)=5, dim(Ω₂)=9
+  Transitive triples: 7
+  Codimension of im(∂₂) in ker(∂₁): 1
+  Score sequence: (1, 1, 2, 3, 3)
+
+======================================================================
+TRANSITIVE TRIPLE STRUCTURE
+======================================================================
+
+n=5: Transitive triple count range: [5, 10]
+  C(n,3) = 10, max possible = 20
+
+n=6: Transitive triple count range: [12, 20]
+  C(n,3) = 20, max possible = 40
+
+======================================================================
+RANK OF ∂₂ vs β₁ STATUS
+======================================================================
+  bits=0: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=10, #triples=10
+  bits=1: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=10, #triples=10
+  bits=2: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=9, #triples=9
+  bits=3: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=10, #triples=10
+  bits=4: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=9, #triples=8
+  bits=5: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=9, #triples=9
+  bits=6: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=9, #triples=8
+  bits=7: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=10, #triples=10
+  bits=8: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=9: β₁=0, rank(∂₂)=6, ker(∂₁)=6, dim(Ω₂)=9, #triples=8
+  bits=12: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=14: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=24: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=28: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=29: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=40: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=8, #triples=6
+  bits=56: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=57: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=61: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=65: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=67: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=69: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=8, #triples=6
+  bits=70: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=71: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=72: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=73: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=76: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=5
+  bits=78: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=93: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=8, #triples=6
+  bits=97: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+  bits=98: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=9, #triples=7
+  bits=99: β₁=1, rank(∂₂)=5, ker(∂₁)=6, dim(Ω₂)=10, #triples=6
+
+
+DONE

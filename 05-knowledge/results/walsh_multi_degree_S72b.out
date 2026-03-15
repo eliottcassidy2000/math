@@ -1,0 +1,190 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+Computing H and β₁ for all 32768 tournaments at n=6...
+  ...10000/32768
+  ...20000/32768
+  ...30000/32768
+
+Computing Walsh degree-2 and degree-4 energies...
+  Degree 2...
+  Degree 4...
+    500/1365
+    1000/1365
+Done.
+
+n=6: β₁=0 count=27968, β₁=1 count=4800
+
+E₂ by β₁:
+  β₁=0: mean=-1.1327, range=[-30.00, 18.00]
+  β₁=1: mean=6.6000, range=[-6.00, 18.00]
+
+E₄ by β₁:
+  β₁=0: mean=-0.0515, range=[-7.50, 8.50]
+  β₁=1: mean=0.3000, range=[-5.50, 8.50]
+
+sklearn not available, skipping logistic regression
+  E₂ > -6: TP=4080, FP=15648, FN=720, precision=0.2068, recall=0.8500
+  E₂ > -3: TP=4080, FP=15648, FN=720, precision=0.2068, recall=0.8500
+  E₂ > 0: TP=3600, FP=12480, FN=1200, precision=0.2239, recall=0.7500
+  E₂ > 3: TP=3600, FP=12480, FN=1200, precision=0.2239, recall=0.7500
+  E₂ > 6: TP=1440, FP=6000, FN=3360, precision=0.1935, recall=0.3000
+
+Score sequence → β₁ rate:
+  (0, 1, 2, 3, 4, 5): 0/720 = 0.0000
+  (0, 1, 2, 4, 4, 4): 0/240 = 0.0000
+  (0, 1, 3, 3, 3, 5): 0/240 = 0.0000
+  (0, 1, 3, 3, 4, 4): 0/720 = 0.0000
+  (0, 2, 2, 2, 4, 5): 0/240 = 0.0000
+  (0, 2, 2, 3, 3, 5): 0/720 = 0.0000
+  (0, 2, 2, 3, 4, 4): 0/1440 = 0.0000
+  (0, 2, 3, 3, 3, 4): 0/1680 = 0.0000
+  (0, 3, 3, 3, 3, 3): 0/144 = 0.0000
+  (1, 1, 1, 3, 4, 5): 0/240 = 0.0000
+  (1, 1, 1, 4, 4, 4): 0/80 = 0.0000
+  (1, 1, 2, 2, 4, 5): 0/720 = 0.0000
+  (1, 1, 2, 3, 3, 5): 0/1440 = 0.0000
+  (1, 1, 2, 3, 4, 4): 720/2880 = 0.2500
+  (1, 1, 3, 3, 3, 4): 240/1680 = 0.1429
+  (1, 2, 2, 2, 3, 5): 0/1680 = 0.0000
+  (1, 2, 2, 2, 4, 4): 240/1680 = 0.1429
+  (1, 2, 2, 3, 3, 4): 2160/8640 = 0.2500
+  (1, 2, 3, 3, 3, 3): 240/2400 = 0.1000
+  (2, 2, 2, 2, 2, 5): 0/144 = 0.0000
+  (2, 2, 2, 2, 3, 4): 240/2400 = 0.1000
+  (2, 2, 2, 3, 3, 3): 960/2640 = 0.3636
+
+β₁=1 tournaments with LOWEST E₂:
+  bits=16: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=15240: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=15005: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=15001: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=14985: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=14984: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=13815: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=13793: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=13751: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)
+  bits=13732: E₂=-6.0, E₄=0.5, H=17, t3=4, score=(1, 1, 2, 3, 4, 4)

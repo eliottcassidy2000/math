@@ -527,15 +527,21 @@ The interval's margin is WIDENING with p, consistent with the spectral argument:
 
 ---
 
-## OPEN-Q-027 🟡 Prove the Grand Energy Formula (THM-201)
+## OPEN-Q-027 -- RESOLVED (PROVED with correction)
+**Prove the Grand Energy Formula (THM-201)**
 
-**Statement:** E_{2k}/E_0 = 2*(n-2k)^k / P(n,2k) for all tournament sizes n and Fourier levels 2k.
+**RESOLVED by kind-pasteur-2026-03-15-S112 (THM-217):**
 
-**Evidence:** Verified exactly at n=3,4,5,6,7 (all levels match). Monte Carlo at n=8. k=1 case proved (S75).
+The original formula E_{2k}/E_0 = 2*(n-2k)^k / P(n,2k) is the LEADING-TERM APPROXIMATION only, exact for k ≤ 2 but requiring corrections for k ≥ 3.
 
-**Proof approach:** Spectator freedom argument — fixing 2k arcs creates k interaction points each with (n-2k) free spectator choices. Equivalent to a combinatorial identity about permutation pairs via Krawtchouk polynomials. See THM-201 and rapid_perspectives.py.
+The EXACT formula uses combinatorial g_k polynomials of degree k:
+- CV²(H) = Σ_{k≥1} 2·g_k(n-2k) / (n)_{2k}
+- g_k defined via transfer matrix M(x) = [[1,2x,0],[0,0,1],[1,x,0]]
+- Weight formula E[∏Z_j] = 2^c/(n)_L PROVED (c=components, L=|S|)
+- g_k(m) ~ 2^{k-1}·m^k/k! + lower terms (leading term is original formula)
+- Verified exhaustively n=3..18 via bitmask DP
 
-**Source:** kind-pasteur-S105-S107
+**Source:** THM-217, kind-pasteur-S112, opus-S89c
 
 ---
 
