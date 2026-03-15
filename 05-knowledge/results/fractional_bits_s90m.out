@@ -1,0 +1,196 @@
+======================================================================
+PART 1: THE BIT RULER
+======================================================================
+
+The Cayley line maps x ∈ [0,1) to arctanh(x) ∈ [0, ∞).
+arctanh(x) measures the "information distance" in nats.
+1 bit = ln(2) nats ≈ 0.6931 nats.
+
+The BIT RULER marks fractional bits on the Cayley line:
+
+    Bits |       Nats | x = tanh(nats) |       Q(x) |                        Meaning
+-------------------------------------------------------------------------------------
+  0.0000 |   0.000000 |   0.0000000000 |     1.0000 |             nothing (identity)
+  0.1250 |   0.086643 |   0.0864272337 |     1.1892 |                     eighth-bit
+  0.2500 |   0.173287 |   0.1715728753 |     1.4142 |                    quarter-bit
+  0.3333 |   0.231049 |   0.2270235809 |     1.5874 |                      third-bit
+  0.5000 |   0.346574 |   0.3333333333 |     2.0000 |              half-bit = OCTAVE
+  0.6667 |   0.462098 |   0.4317926932 |     2.5198 |                 two-thirds bit
+  0.7500 |   0.519860 |   0.4775922501 |     2.8284 |              three-quarter bit
+  1.0000 |   0.693147 |   0.6000000000 |     4.0000 |           1 BIT = the decision
+  1.5000 |   1.039721 |   0.7777777778 |     8.0000 |                       1.5 bits
+  2.0000 |   1.386294 |   0.8823529412 |    16.0000 |                         2 bits
+  3.0000 |   2.079442 |   0.9692307692 |    64.0000 |             3 bits = BYTE/2.67
+  8.0000 |   5.545177 |   0.9999694829 | 65536.0000 |                8 bits = 1 BYTE
+
+KEY OBSERVATIONS:
+
+  1/4 bit: x = tanh(ln(2)/4) = tanh(0.1733) = 0.1716
+     Q(0.1716) = 2^(1/4) = sqrtsqrt2 = 1.189207
+     This IS the fourth root of 2!
+
+  1/2 bit: x = tanh(ln(2)/2) = tanh(0.3466) = 0.3333 = 1/3
+     Q(1/3) = 2 (the octave)
+     The half-bit point IS x = 1/3!
+
+  1 bit: x = tanh(ln(2)) = tanh(0.6931) = 0.6
+     Q(0.6) = 4 = 2² (two octaves)
+     NOT x = 1/2! The 1-bit point is at x = 3/5.
+
+  So the natural numbers on the Cayley line are at INTEGER bits:
+    0 bits: Q = 1 (unison)
+    1/2 bit: Q = 2 (octave)  ← Q = sqrt2... wait, Q(1/3) = 2, not sqrt2!
+
+Let me recalculate. The relationship is:
+  arctanh(x) = ln(Q(x))/2
+  So Q(x) = exp(2·arctanh(x))
+
+At 1/4 bit:
+  arctanh = ln(2)/4
+  Q = exp(2·ln(2)/4) = exp(ln(2)/2) = 2^(1/2) = sqrt2 = 1.414214
+
+So sqrt2 lives at the QUARTER-BIT mark!
+
+======================================================================
+PART 2: sqrt2 = THE QUARTER-BIT NUMBER
+======================================================================
+Q(x) = sqrt2 at x = (sqrt2-1)/(sqrt2+1) = 0.1715728753
+Simplified: x = sqrt2 - 1 = 0.4142135624
+Check: (sqrt2-1)/(sqrt2+1) = 0.1715728753, sqrt2-1 = 0.4142135624
+Exact: x = 3 - 2sqrt2 = 0.1715728753
+arctanh(x) = 0.1732867951
+ln(2)/4 = 0.1732867951
+Match: True
+
+*** sqrt2 lives at exactly 1/4 bit on the Cayley line ***
+
+  x = 3 - 2sqrt2 ≈ 0.1716
+  Q(x) = sqrt2
+  arctanh(x) = ln(2)/4 = 1/4 bit
+
+And the COUPLING x = 3-2sqrt2 satisfies:
+  x = 3 - 2sqrt2 = (sqrt2-1)²
+  1-x = 2(sqrt2-1)
+  1+x = 2(2-sqrt2)
+  Q(x) = (2(2-sqrt2))/(2(sqrt2-1)) = (2-sqrt2)/(sqrt2-1) = (2-sqrt2)(sqrt2+1)/1 = sqrt2
+
+So sqrt2 carries exactly 1/4 bit of information.
+
+What does this MEAN?
+
+In the tournament:
+  At coupling x = 3-2sqrt2, the "directed advantage" is very small.
+  The odds ratio is sqrt2 : 1 ≈ 1.414 : 1.
+  This is a WEAK preference — barely more than a coin flip.
+  It carries 1/4 of one binary decision's worth of information.
+
+In music:
+  The octave ratio 2:1 is at 1/2 bit.
+  The "quarter-tone" (half of a semitone) has ratio 2^(1/24).
+  Q = 2^(1/24) is at (1/24)·(1/2) bit = 1/48 bit.
+  A single quarter-tone carries 1/48 of a bit of pitch information.
+
+======================================================================
+PART 3: FAMOUS NUMBERS AND THEIR BIT CONTENT
+======================================================================
+              Number |      Value |       Bits |       Nats |  x on Cayley
+---------------------------------------------------------------------------
+        1 (identity) |     1.0000 |     0.0000 |     0.0000 |   0.00000000
+  sqrt2 (Pythagoras) |     1.4142 |     0.5000 |     0.3466 |   0.17157288
+    φ = golden ratio |     1.6180 |     0.6942 |     0.4812 |   0.23606798
+     τ₃ = tribonacci |     1.8393 |     0.8791 |     0.6094 |   0.29559774
+          2 (octave) |     2.0000 |     1.0000 |     0.6931 |   0.33333333
+           e (Euler) |     2.7183 |     1.4427 |     1.0000 |   0.46211716
+         3 (tritave) |     3.0000 |     1.5850 |     1.0986 |   0.50000000
+          π (circle) |     3.1416 |     1.6515 |     1.1447 |   0.51709399
+              4 = 2² |     4.0000 |     2.0000 |     1.3863 |   0.60000000
+                   5 |     5.0000 |     2.3219 |     1.6094 |   0.66666667
+    7 (forbidden H!) |     7.0000 |     2.8074 |     1.9459 |   0.75000000
+              8 = 2³ |     8.0000 |     3.0000 |     2.0794 |   0.77777778
+   11 (discriminant) |    11.0000 |     3.4594 |     2.3979 |   0.83333333
+   21 (forbidden H!) |    21.0000 |     4.3923 |     3.0445 |   0.90909091
+         131 (Tr M⁸) |   131.0000 |     7.0334 |     4.8752 |   0.98484848
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/fractional_bits_s90m.py", line 182, in <module>
+    arctanh(x_{sqrt2}) = ln(sqrt2)/2 = ln(2)/4. This is the CAYLEY DISTANCE.
+NameError: name 'sqrt2' is not defined. Did you mean: 'sqrt'?
+  φ: log₂(φ) = 0.6942 bits ≈ ln(2)! (φ carries ≈ ln(2) bits!)
+    More precisely: log₂(φ) = ln(φ)/ln(2) = 0.48121/0.69315 = 0.6942
+
+    Wait: 0.6942 ≈ ln(2) ≈ 0.6931? Close but not exact.
+    The difference: 0.6942 - 0.6931 = 0.0011.
+
+    But log₂(φ) = log₂((1+sqrt5)/2). Is this close to ln(2)?
+    log₂(φ) ≈ 0.6942, ln(2) ≈ 0.6931. Ratio: 1.0016.
+
+  τ₃: log₂(τ₃) = 0.879157 ≈ 0.879
+    The tribonacci constant carries ≈ 0.879 bits.
+    In the τ-φ clock: τ₃ advances by arg(λ_c)/π ≈ ln(2) ≈ 0.693
+    per step. And log₂(τ₃) ≈ 0.879 ≈ 1 - 0.121.
+    0.879 ≈ 7/8? Let me check: 7/8 = 0.875. Close!
+    log₂(τ₃) ≈ 7/8 bit. The tribonacci carries 7/8 of a bit!
+
+  131: log₂(131) = 7.0334 ≈ 7.03 bits.
+    Tr(M⁸) = 131 carries ≈ 7 bits of information.
+    7 bits at step 8 → average 0.8792 bits per step.
+    log₂(131)/8 ≈ 0.879 ≈ log₂(τ₃)! EXACTLY!
+    Because τ₃^8 ≈ 131, so log₂(131) ≈ 8·log₂(τ₃).
+
+
+======================================================================
+PART 4: THE HIERARCHY OF FRACTIONAL BITS
+======================================================================
+
+The Cayley line is a RULER marked with fractional bits.
+Each mark corresponds to a specific ratio Q and coupling x:
+
+  0 bits:    Q = 1,    x = 0         (no information)
+  1/8 bit:   Q = 2^(1/4), x = ...    (eighth-root of octave)
+  1/4 bit:   Q = sqrt2,  x = 3-2sqrt2     (quarter-bit = sqrt2)
+  1/2 bit:   Q = 2,   x = 1/3       (half-bit = octave)
+  3/4 bit:   Q = 2sqrt2, x = ...       (three-quarter bit)
+  1 bit:     Q = 4,   x = 3/5       (full bit = two octaves)
+
+The n-th fractional bit at k/n lives at:
+  Q = 2^(k/n)
+  x = (2^(k/n) - 1) / (2^(k/n) + 1)
+  arctanh = k·ln(2)/(2n)
+
+THE HIERARCHY OF ROOTS:
+  Q = 2^(1/n) lives at the 1/n-th bit mark.
+  The INFORMATION carried by the n-th root of 2 is exactly 1/n bits.
+
+  sqrt2 = 2^(1/2): 1/2 bit (but 1/4 Cayley bit)
+  ∛2 = 2^(1/3): 1/3 bit (but 1/6 Cayley bit)
+  2^(1/4): 1/4 bit (but 1/8 Cayley bit)
+  2^(1/12): 1/12 bit = one semitone (= 1/24 Cayley bit)
+
+THE MUSICAL SCALE AS FRACTIONAL BITS:
+  Equal temperament divides the octave into 12 semitones.
+  Each semitone = 1/12 bit of information = 1/24 Cayley bit.
+  A note n semitones above the root carries n/12 bits.
+
+  C  = 0/12 bit = 0.000 bit
+  C# = 1/12 bit = 0.083 bit
+  D  = 2/12 bit = 0.167 bit
+  Eb = 3/12 bit = 0.250 bit = 1/4 bit (QUARTER!)
+  E  = 4/12 bit = 0.333 bit = 1/3 bit
+  F  = 5/12 bit = 0.417 bit
+  F# = 6/12 bit = 0.500 bit = 1/2 bit (TRITONE)
+  G  = 7/12 bit = 0.583 bit
+  Ab = 8/12 bit = 0.667 bit = 2/3 bit
+  A  = 9/12 bit = 0.750 bit = 3/4 bit
+  Bb = 10/12 bit = 0.833 bit
+  B  = 11/12 bit = 0.917 bit
+  C' = 12/12 bit = 1.000 bit (OCTAVE)
+
+So Eb (the minor third) carries EXACTLY 1/4 bit.
+And the tritone F# carries exactly 1/2 bit.
+
+======================================================================
+PART 5: φ CARRIES ≈ ln(2) BITS (THE SELF-REFERENTIAL BIT)
+======================================================================
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/fractional_bits_s90m.py", line 280, in <module>
+    log2_phi = log(phi) / log(2)
+NameError: name 'phi' is not defined. Did you mean: 'pi'?
