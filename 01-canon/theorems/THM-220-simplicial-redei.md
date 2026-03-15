@@ -1,6 +1,6 @@
 # THM-220: Simplicial Rédei Theorem
 
-**Status:** PROVED (all parts: dichotomy algebraically, formula via OCF, construction by verification)
+**Status:** PROVED FOR ALL n ≥ 4 (dichotomy: algebraic proof, complete; formula: two proofs; construction: verified n≤8, algebraic for all n)
 **Source:** opus-2026-03-15-S90 (discovery + proof), kind-pasteur-2026-03-15-S112 (initial computation)
 
 ---
@@ -79,7 +79,11 @@ where S ⊆ {1, ..., n-2}.
 
 **Conclusion:** At most ONE non-core edge exists. With ≤1 non-core edge, the transitive core is a total order. ∎
 
-**Verification:** score(a)=1, score(b)=n-2 for all non-core edges: 0 violations at n=5 (160 checked), n=6 (1920 checked), n=7 (994 sampled).
+**Note on n=3:** At n=3, the cyclic tournament has NO transitive triples, so every Hamiltonian path is vacuously simplicial: sim_H = H = 3. The dichotomy fails at n=3. For n ≥ 4, every tournament has at least 1 transitive triple (since Σ d_i = C(n,2) forces some d_i ≥ 2, creating transitive triples). The core is never empty for n ≥ 4.
+
+**Note on Case 3 (b=c):** Requires n ≥ 4 so that V\{a,b,d} ≠ ∅. At n=3, V\{a,b,d} = ∅ and the argument fails. This is consistent with the n ≥ 4 restriction.
+
+**Verification:** score(a)=1, score(b)=n-2 for all non-core edges: 0 violations at n=5 (160 checked), n=6 (1920 checked), n=7 (994 sampled). The Key Lemma and Main Argument are ALGEBRAIC and hold for all n ≥ 4 without computational verification.
 
 ---
 

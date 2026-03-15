@@ -6,10 +6,48 @@
 **Last web research:** kind-pasteur-2026-03-10-S50 (Tang-Yau circulant path homology, Schweser-Stiebitz-Toft Redei revisited, Mitrovic NC Redei, Satake DRT)
 **Last engineering update:** kind-pasteur-2026-03-10-S54 (sparse T_19 Omega computation, CLAUDE.md engineering mandate)
 **Last packing framework update:** opus-2026-03-14-S71f (nesting obstruction, (z-2)(z-3) recurrence, 2-Bridge)
+**Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
 
 ---
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
+
+### INV-150: Simplicial Rédei Theorem (THM-220) — PROVED for all n ≥ 4
+**Source:** opus-2026-03-15-S90
+**Status:** COMPLETE. sim_H ∈ {0,1} for all tournaments on n ≥ 4 vertices.
+**Key results:** Algebraic proof (Key Lemma + case analysis), near-transitive construction (H=2^{n-2}+1), OCF proof (Ω = K_{2^{n-3}}), β₁=1 for all near-transitive.
+**Char poly:** p(λ) = λ^{n-2}(λ²+1) - (1+λ)^{n-2} (binomial coefficients!).
+**Next:** Write as standalone paper. This is publishable.
+
+### INV-151: The Cayley Monad D₄ Framework
+**Source:** opus-2026-03-15-S90c/d/f
+**Status:** ESTABLISHED. Q⁴=Id generates D₄ of order 8 acting on ℂP¹.
+**Key results:** Cross-ratio of Q-orbit of 2 = 2 (the fugacity). Fixed points ±i. Bloch sphere connection: D₄ = Pauli group mod center. Q⁴(M)=M on transfer matrix. Spectral zeta ζ_M(-3)=7, ζ_M(-5)=21 (forbidden H!).
+**Next:** Investigate D₄ action on tournament invariants. Possible paper.
+
+### INV-152: The τ-φ Clock and Quasicrystal Structure
+**Source:** opus-2026-03-15-S90h
+**Status:** DISCOVERED. arg(λ_c)/π ≈ ln(2) (4 sig figs, NOT exact).
+**Key results:** Gear ratio ≈ ln(2), period ≈ 2/ln(2), Tr mod 8 period = 8 exactly. Bott periodicity connection. Information interpretation: 1 bit per half-turn.
+**Next:** Investigate why the approximation is so good. Connection to Rauzy fractal.
+
+### INV-153: Tournament Equidecomposability (Hilbert's Third Problem analog)
+**Source:** opus-2026-03-15-S90k
+**Status:** PARTIALLY PROVED. β₁ as Dehn invariant. (H,β₁) complete at n=5.
+**Key results:** 8 equidecomposability classes at n=5. Near-transitive = regular tetrahedron (non-decomposable). Within each (H,β₁) class, I(Ω₃,x) constant.
+**Next:** Verify at n=6,7. Prove or disprove completeness for general n.
+
+### INV-154: The Golden Shadow f(n) = (n-2+√(n²+4))/2
+**Source:** opus-2026-03-15-S90o/p, kind-pasteur-S112
+**Status:** EXPLORED. CF = [n-2; n,n,n,...]. Pell norm f·f'=-n. n-tribonacci family.
+**Key results:** Unifies golden ratio, √2, silver ratio in one formula. f(n) satisfies λ²=(n-2)λ+n, transfer matrix [[n-2,n],[1,0]]. Memory correction T_n-M_{n-2} maximal at n=3.
+**Next:** Investigate the n-tribonacci family more. Connection to Pisot substitution conjecture.
+
+### INV-155: Tournament Wick Rotation and Spin-1 Ising
+**Source:** opus-2026-03-15-S90g/i
+**Status:** DISCOVERED. arctanh(2) = log(3)/2+iπ/2 → complex temperature.
+**Key results:** H(T) = Wick-rotated partition function. ln(2) = renormalized criticality. Arrow's theorem = arctanh pole. Discriminant Δ(x) = 4x(x²-11x-1).
+**Next:** Formalize the Ising correspondence. Yang-Lee zero connections.
 
 ### INV-141: T_19 Full Omega Dims — Degrees 9-18 Pending (Engineering Priority)
 **Source:** kind-pasteur-2026-03-10-S54
