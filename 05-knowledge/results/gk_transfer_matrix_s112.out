@@ -1,0 +1,374 @@
+======================================================================
+g_k(m) FROM TRANSFER MATRIX
+======================================================================
+
+k=1:
+  g_1(2) = 2
+  g_1(3) = 3
+  g_1(4) = 4
+  g_1(5) = 5
+  g_1(6) = 6
+  g_1(7) = 7
+  g_1(8) = 8
+  g_1(9) = 9
+  g_1(10) = 10
+  g_1(11) = 11
+  g_1(12) = 12
+  g_1(13) = 13
+  g_1(14) = 14
+  g_1(15) = 15
+  g_1(16) = 16
+  g_1(17) = 17
+  g_1(18) = 18
+  g_1(19) = 19
+  g_1(20) = 20
+  g_1(21) = 21
+  g_1(22) = 22
+  g_1(23) = 23
+  g_1(24) = 24
+
+k=2:
+  g_2(2) = 4
+  g_2(3) = 9
+  g_2(4) = 16
+  g_2(5) = 25
+  g_2(6) = 36
+  g_2(7) = 49
+  g_2(8) = 64
+  g_2(9) = 81
+  g_2(10) = 100
+  g_2(11) = 121
+  g_2(12) = 144
+  g_2(13) = 169
+  g_2(14) = 196
+  g_2(15) = 225
+  g_2(16) = 256
+  g_2(17) = 289
+  g_2(18) = 324
+  g_2(19) = 361
+  g_2(20) = 400
+  g_2(21) = 441
+  g_2(22) = 484
+  g_2(23) = 529
+  g_2(24) = 576
+
+k=3:
+  g_3(2) = 6
+  g_3(3) = 19
+  g_3(4) = 44
+  g_3(5) = 85
+  g_3(6) = 146
+  g_3(7) = 231
+  g_3(8) = 344
+  g_3(9) = 489
+  g_3(10) = 670
+  g_3(11) = 891
+  g_3(12) = 1156
+  g_3(13) = 1469
+  g_3(14) = 1834
+  g_3(15) = 2255
+  g_3(16) = 2736
+  g_3(17) = 3281
+  g_3(18) = 3894
+  g_3(19) = 4579
+  g_3(20) = 5340
+  g_3(21) = 6181
+  g_3(22) = 7106
+  g_3(23) = 8119
+  g_3(24) = 9224
+
+k=4:
+  g_4(2) = 8
+  g_4(3) = 33
+  g_4(4) = 96
+  g_4(5) = 225
+  g_4(6) = 456
+  g_4(7) = 833
+  g_4(8) = 1408
+  g_4(9) = 2241
+  g_4(10) = 3400
+  g_4(11) = 4961
+  g_4(12) = 7008
+  g_4(13) = 9633
+  g_4(14) = 12936
+  g_4(15) = 17025
+  g_4(16) = 22016
+  g_4(17) = 28033
+  g_4(18) = 35208
+  g_4(19) = 43681
+  g_4(20) = 53600
+  g_4(21) = 65121
+  g_4(22) = 78408
+
+k=5:
+  g_5(2) = 10
+  g_5(3) = 51
+  g_5(4) = 180
+  g_5(5) = 501
+  g_5(6) = 1182
+  g_5(7) = 2471
+  g_5(8) = 4712
+  g_5(9) = 8361
+  g_5(10) = 14002
+  g_5(11) = 22363
+  g_5(12) = 34332
+  g_5(13) = 50973
+  g_5(14) = 73542
+  g_5(15) = 103503
+  g_5(16) = 142544
+  g_5(17) = 192593
+  g_5(18) = 255834
+  g_5(19) = 334723
+  g_5(20) = 432004
+
+k=6:
+  g_6(2) = 12
+  g_6(3) = 73
+  g_6(4) = 304
+  g_6(5) = 985
+  g_6(6) = 2668
+  g_6(7) = 6321
+  g_6(8) = 13504
+  g_6(9) = 26577
+  g_6(10) = 48940
+  g_6(11) = 85305
+  g_6(12) = 142000
+  g_6(13) = 227305
+  g_6(14) = 351820
+  g_6(15) = 528865
+  g_6(16) = 774912
+  g_6(17) = 1110049
+  g_6(18) = 1558476
+
+k=7:
+  g_7(2) = 14
+  g_7(3) = 99
+  g_7(4) = 476
+  g_7(5) = 1765
+  g_7(6) = 5418
+  g_7(7) = 14407
+  g_7(8) = 34232
+  g_7(9) = 74313
+  g_7(10) = 149830
+  g_7(11) = 284075
+  g_7(12) = 511380
+  g_7(13) = 880685
+  g_7(14) = 1459810
+  g_7(15) = 2340495
+  g_7(16) = 3644272
+
+k=8:
+  g_8(2) = 16
+  g_8(3) = 129
+  g_8(4) = 704
+  g_8(5) = 2945
+  g_8(6) = 10128
+  g_8(7) = 29953
+  g_8(8) = 78592
+  g_8(9) = 187137
+  g_8(10) = 411280
+  g_8(11) = 845185
+  g_8(12) = 1640640
+  g_8(13) = 3032705
+  g_8(14) = 5373200
+
+k=9:
+  g_9(2) = 18
+  g_9(3) = 163
+  g_9(4) = 996
+  g_9(5) = 4645
+  g_9(6) = 17718
+  g_9(7) = 57799
+  g_9(8) = 166344
+  g_9(9) = 432073
+  g_9(10) = 1030490
+  g_9(11) = 2286955
+  g_9(12) = 4772780
+
+k=10:
+  g_10(2) = 20
+  g_10(3) = 201
+  g_10(4) = 1360
+  g_10(5) = 7001
+  g_10(6) = 29364
+  g_10(7) = 104881
+  g_10(8) = 329024
+  g_10(9) = 927441
+  g_10(10) = 2390004
+
+======================================================================
+VERIFY AGAINST KNOWN POLYNOMIALS
+======================================================================
+
+k=1:
+  m=2: transfer=2, known=2 OK
+  m=3: transfer=3, known=3 OK
+  m=4: transfer=4, known=4 OK
+  m=5: transfer=5, known=5 OK
+  m=6: transfer=6, known=6 OK
+  m=7: transfer=7, known=7 OK
+  m=8: transfer=8, known=8 OK
+  m=9: transfer=9, known=9 OK
+  m=10: transfer=10, known=10 OK
+  m=11: transfer=11, known=11 OK
+  m=12: transfer=12, known=12 OK
+  m=13: transfer=13, known=13 OK
+  m=14: transfer=14, known=14 OK
+
+k=2:
+  m=2: transfer=4, known=4 OK
+  m=3: transfer=9, known=9 OK
+  m=4: transfer=16, known=16 OK
+  m=5: transfer=25, known=25 OK
+  m=6: transfer=36, known=36 OK
+  m=7: transfer=49, known=49 OK
+  m=8: transfer=64, known=64 OK
+  m=9: transfer=81, known=81 OK
+  m=10: transfer=100, known=100 OK
+  m=11: transfer=121, known=121 OK
+  m=12: transfer=144, known=144 OK
+  m=13: transfer=169, known=169 OK
+  m=14: transfer=196, known=196 OK
+
+k=3:
+  m=2: transfer=6, known=6 OK
+  m=3: transfer=19, known=19 OK
+  m=4: transfer=44, known=44 OK
+  m=5: transfer=85, known=85 OK
+  m=6: transfer=146, known=146 OK
+  m=7: transfer=231, known=231 OK
+  m=8: transfer=344, known=344 OK
+  m=9: transfer=489, known=489 OK
+  m=10: transfer=670, known=670 OK
+  m=11: transfer=891, known=891 OK
+  m=12: transfer=1156, known=1156 OK
+  m=13: transfer=1469, known=1469 OK
+  m=14: transfer=1834, known=1834 OK
+
+k=4:
+  m=2: transfer=8, known=8 OK
+  m=3: transfer=33, known=33 OK
+  m=4: transfer=96, known=96 OK
+  m=5: transfer=225, known=217 MISMATCH (tm=225, known=217)
+  m=6: transfer=456, known=416 MISMATCH (tm=456, known=416)
+  m=7: transfer=833, known=713 MISMATCH (tm=833, known=713)
+  m=8: transfer=1408, known=1128 MISMATCH (tm=1408, known=1128)
+  m=9: transfer=2241, known=1681 MISMATCH (tm=2241, known=1681)
+  m=10: transfer=3400, known=2392 MISMATCH (tm=3400, known=2392)
+  m=11: transfer=4961, known=3281 MISMATCH (tm=4961, known=3281)
+  m=12: transfer=7008, known=4368 MISMATCH (tm=7008, known=4368)
+  m=13: transfer=9633, known=5673 MISMATCH (tm=9633, known=5673)
+  m=14: transfer=12936, known=7216 MISMATCH (tm=12936, known=7216)
+
+k=5:
+  m=2: transfer=10, known=10 OK
+  m=3: transfer=51, known=211 MISMATCH (tm=51, known=211)
+  m=4: transfer=180, known=1380 MISMATCH (tm=180, known=1380)
+  m=5: transfer=501, known=4293 MISMATCH (tm=501, known=4293)
+  m=6: transfer=1182, known=9726 MISMATCH (tm=1182, known=9726)
+  m=7: transfer=2471, known=18455 MISMATCH (tm=2471, known=18455)
+  m=8: transfer=4712, known=31256 MISMATCH (tm=4712, known=31256)
+  m=9: transfer=8361, known=48905 MISMATCH (tm=8361, known=48905)
+  m=10: transfer=14002, known=72178 MISMATCH (tm=14002, known=72178)
+  m=11: transfer=22363, known=101851 MISMATCH (tm=22363, known=101851)
+  m=12: transfer=34332, known=138700 MISMATCH (tm=34332, known=138700)
+  m=13: transfer=50973, known=183501 MISMATCH (tm=50973, known=183501)
+  m=14: transfer=73542, known=237030 MISMATCH (tm=73542, known=237030)
+
+======================================================================
+POLYNOMIAL DEGREE ANALYSIS
+======================================================================
+
+k=1: degree = 1, 23 data points
+  g_1(0..5) = ['?', '?', '2', '3', '4', '5']
+  1-th differences: [Fraction(1, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1), Fraction(1, 1)] (should be constant)
+
+k=2: degree = 2, 23 data points
+  g_2(0..5) = ['?', '?', '4', '9', '16', '25']
+  2-th differences: [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)] (should be constant)
+
+k=3: degree = 3, 23 data points
+  g_3(0..5) = ['?', '?', '6', '19', '44', '85']
+  3-th differences: [Fraction(4, 1), Fraction(4, 1), Fraction(4, 1), Fraction(4, 1), Fraction(4, 1), Fraction(4, 1)] (should be constant)
+
+k=4: degree = 4, 21 data points
+  g_4(0..5) = ['?', '?', '8', '33', '96', '225']
+  4-th differences: [Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1)] (should be constant)
+
+k=5: degree = 5, 19 data points
+  g_5(0..5) = ['?', '?', '10', '51', '180', '501']
+  5-th differences: [Fraction(16, 1), Fraction(16, 1), Fraction(16, 1), Fraction(16, 1), Fraction(16, 1), Fraction(16, 1)] (should be constant)
+
+k=6: degree = 6, 17 data points
+  g_6(0..5) = ['?', '?', '12', '73', '304', '985']
+  6-th differences: [Fraction(32, 1), Fraction(32, 1), Fraction(32, 1), Fraction(32, 1), Fraction(32, 1), Fraction(32, 1)] (should be constant)
+
+k=7: degree = 7, 15 data points
+  g_7(0..5) = ['?', '?', '14', '99', '476', '1765']
+  7-th differences: [Fraction(64, 1), Fraction(64, 1), Fraction(64, 1), Fraction(64, 1), Fraction(64, 1), Fraction(64, 1)] (should be constant)
+
+k=8: degree = 8, 13 data points
+  g_8(0..5) = ['?', '?', '16', '129', '704', '2945']
+  8-th differences: [Fraction(128, 1), Fraction(128, 1), Fraction(128, 1), Fraction(128, 1), Fraction(128, 1)] (should be constant)
+
+k=9: degree = 9, 11 data points
+  g_9(0..5) = ['?', '?', '18', '163', '996', '4645']
+  9-th differences: [Fraction(256, 1), Fraction(256, 1)] (should be constant)
+
+k=10: degree = 8, 9 data points
+  g_10(0..5) = ['?', '?', '20', '201', '1360', '7001']
+  8-th differences: [Fraction(9728, 1)] (should be constant)
+
+======================================================================
+CUBIC COEFFICIENTS: 3*g_k(m) = a*m^3 + b*m^2 + c*m + d
+======================================================================
+
+k=3: 3*g_3(m) = 11/6*m^3 + 5/6*m^2 + 0*m + 0
+  m=4: FAIL (pred=392/9)
+  m=5: FAIL (pred=250/3)
+  m=6: FAIL (pred=142)
+  m=10: FAIL (pred=5750/9)
+
+k=4: 3*g_4(m) = 5*m^3 + -4*m^2 + 0*m + 0
+  m=4: FAIL (pred=256/3)
+  m=5: FAIL (pred=175)
+  m=6: FAIL (pred=312)
+  m=10: FAIL (pred=4600/3)
+
+k=5: 3*g_5(m) = 19/2*m^3 + -23/2*m^2 + 0*m + 0
+  m=4: FAIL (pred=424/3)
+  m=5: FAIL (pred=300)
+  m=6: FAIL (pred=546)
+  m=10: FAIL (pred=8350/3)
+
+k=6: 3*g_6(m) = 46/3*m^3 + -65/3*m^2 + 0*m + 0
+  m=4: FAIL (pred=1904/9)
+  m=5: FAIL (pred=1375/3)
+  m=6: FAIL (pred=844)
+  m=10: FAIL (pred=39500/9)
+
+k=7: 3*g_7(m) = 45/2*m^3 + -69/2*m^2 + 0*m + 0
+  m=4: FAIL (pred=296)
+  m=5: FAIL (pred=650)
+  m=6: FAIL (pred=1206)
+  m=10: FAIL (pred=6350)
+
+k=8: 3*g_8(m) = 31*m^3 + -50*m^2 + 0*m + 0
+  m=4: FAIL (pred=1184/3)
+  m=5: FAIL (pred=875)
+  m=6: FAIL (pred=1632)
+  m=10: FAIL (pred=26000/3)
+
+k=9: 3*g_9(m) = 245/6*m^3 + -409/6*m^2 + 0*m + 0
+  m=4: FAIL (pred=4568/9)
+  m=5: FAIL (pred=3400/3)
+  m=6: FAIL (pred=2122)
+  m=10: FAIL (pred=102050/9)
+
+k=10: 3*g_10(m) = 52*m^3 + -89*m^2 + 0*m + 0
+  m=4: FAIL (pred=1904/3)
+  m=5: FAIL (pred=1425)
+  m=6: FAIL (pred=2676)
+  m=10: FAIL (pred=43100/3)
+
+Done!

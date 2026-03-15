@@ -1,0 +1,448 @@
+==============================================================================
+j>=4 CORRECTION COEFFICIENTS IN SHIFTED BASIS C(m-1, j)
+==============================================================================
+
+From Part 14 of s112, the corrections E_k in C(m-1,j) basis are:
+k=4: [-8]*C(m-1,4)
+k=5: [160]*C(m-1,2) + [720]*C(m-1,3) + [-48]*C(m-1,4) + [-16]*C(m-1,5)
+k=6: large*C(m-1,2) + large*C(m-1,3) + [-160]*C(m-1,4) + [-112]*C(m-1,5) + [-32]*C(m-1,6)
+etc.
+
+The j>=4 coefficients are SMALL. Let's tabulate them:
+
+k=4: j>=4 coeffs: {4: -8}
+k=5: j>=4 coeffs: {4: -48, 5: -16}
+k=6: j>=4 coeffs: {4: -160, 5: -112, 6: -32}
+k=7: j>=4 coeffs: {4: -400, 5: -432, 6: -256, 7: -64}
+k=8: j>=4 coeffs: {4: -840, 5: -1232, 6: -1120, 7: -576, 8: -128}
+k=9: j>=4 coeffs: {4: -1568, 5: -2912, 6: -3584, 7: -2816, 8: -1280, 9: -256}
+
+Naive j>=4 coefficients for comparison:
+k=4: {4: 8}
+k=5: {4: 32, 5: 16}
+k=6: {4: 80, 5: 80, 6: 32}
+k=7: {4: 160, 5: 240, 6: 192, 7: 64}
+k=8: {4: 280, 5: 560, 6: 672, 7: 448, 8: 128}
+k=9: {4: 448, 5: 1120, 6: 1792, 7: 1792, 8: 1024, 9: 256}
+
+==============================================================================
+COMPARISON: shifted vs standard binomial correction at j>=4
+==============================================================================
+
+k=4:
+  Standard C(m,j) [j>=4]: [-8]
+  Shifted  C(m-1,j) [j>=4]: [-8]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-8]
+
+k=5:
+  Standard C(m,j) [j>=4]: [-32, -16]
+  Shifted  C(m-1,j) [j>=4]: [-48, -16]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-32, -16]
+
+k=6:
+  Standard C(m,j) [j>=4]: [-80, -80, -32]
+  Shifted  C(m-1,j) [j>=4]: [-160, -112, -32]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-80, -80, -32]
+
+k=7:
+  Standard C(m,j) [j>=4]: [-160, -240, -192, -64]
+  Shifted  C(m-1,j) [j>=4]: [-400, -432, -256, -64]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-160, -240, -192, -64]
+
+k=8:
+  Standard C(m,j) [j>=4]: [-280, -560, -672, -448, -128]
+  Shifted  C(m-1,j) [j>=4]: [-840, -1232, -1120, -576, -128]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-280, -560, -672, -448, -128]
+
+k=9:
+  Standard C(m,j) [j>=4]: [-448, -1120, -1792, -1792, -1024, -256]
+  Shifted  C(m-1,j) [j>=4]: [-1568, -2912, -3584, -2816, -1280, -256]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-448, -1120, -1792, -1792, -1024, -256]
+
+==============================================================================
+FACTORING THE SHIFTED j>=4 CORRECTION COEFFICIENTS
+==============================================================================
+
+  k   j    shifted coeff     =-C(k-1,j-1)*2^(j-1)?               factor
+----------------------------------------------------------------------
+  4   4               -8                       YES c/2^(j-1)=-1, c/C=-8
+  5   4              -48        NO (naive_neg=-32) c/2^(j-1)=-6, c/C=-12
+  5   5              -16                       YES c/2^(j-1)=-1, c/C=-16
+  6   4             -160        NO (naive_neg=-80) c/2^(j-1)=-20, c/C=-16
+  6   5             -112        NO (naive_neg=-80) c/2^(j-1)=-7, c/C=-112/5
+  6   6              -32                       YES c/2^(j-1)=-1, c/C=-32
+  7   4             -400       NO (naive_neg=-160) c/2^(j-1)=-50, c/C=-20
+  7   5             -432       NO (naive_neg=-240) c/2^(j-1)=-27, c/C=-144/5
+  7   6             -256       NO (naive_neg=-192) c/2^(j-1)=-8, c/C=-128/3
+  7   7              -64                       YES c/2^(j-1)=-1, c/C=-64
+  8   4             -840       NO (naive_neg=-280) c/2^(j-1)=-105, c/C=-24
+  8   5            -1232       NO (naive_neg=-560) c/2^(j-1)=-77, c/C=-176/5
+  8   6            -1120       NO (naive_neg=-672) c/2^(j-1)=-35, c/C=-160/3
+  8   7             -576       NO (naive_neg=-448) c/2^(j-1)=-9, c/C=-576/7
+  8   8             -128                       YES c/2^(j-1)=-1, c/C=-128
+  9   4            -1568       NO (naive_neg=-448) c/2^(j-1)=-196, c/C=-28
+  9   5            -2912      NO (naive_neg=-1120) c/2^(j-1)=-182, c/C=-208/5
+  9   6            -3584      NO (naive_neg=-1792) c/2^(j-1)=-112, c/C=-64
+  9   7            -2816      NO (naive_neg=-1792) c/2^(j-1)=-44, c/C=-704/7
+  9   8            -1280      NO (naive_neg=-1024) c/2^(j-1)=-10, c/C=-160
+  9   9             -256                       YES c/2^(j-1)=-1, c/C=-256
+
+==============================================================================
+SHIFTED j>=4 COEFFICIENTS: looking for 2^j * polynomial(k,j) pattern
+==============================================================================
+
+j=4:
+  k=4: coeff = -8, coeff/2^4 = -1/2
+  k=5: coeff = -48, coeff/2^4 = -3
+  k=6: coeff = -160, coeff/2^4 = -10
+  k=7: coeff = -400, coeff/2^4 = -25
+  k=8: coeff = -840, coeff/2^4 = -105/2
+  k=9: coeff = -1568, coeff/2^4 = -98
+
+j=5:
+  k=5: coeff = -16, coeff/2^5 = -1/2
+  k=6: coeff = -112, coeff/2^5 = -7/2
+  k=7: coeff = -432, coeff/2^5 = -27/2
+  k=8: coeff = -1232, coeff/2^5 = -77/2
+  k=9: coeff = -2912, coeff/2^5 = -91
+
+j=6:
+  k=6: coeff = -32, coeff/2^6 = -1/2
+  k=7: coeff = -256, coeff/2^6 = -4
+  k=8: coeff = -1120, coeff/2^6 = -35/2
+  k=9: coeff = -3584, coeff/2^6 = -56
+
+j=7:
+  k=7: coeff = -64, coeff/2^7 = -1/2
+  k=8: coeff = -576, coeff/2^7 = -9/2
+  k=9: coeff = -2816, coeff/2^7 = -22
+
+j=8:
+  k=8: coeff = -128, coeff/2^8 = -1/2
+  k=9: coeff = -1280, coeff/2^8 = -5
+
+j=9:
+  k=9: coeff = -256, coeff/2^9 = -1/2
+
+==============================================================================
+SHIFTED COEFFICIENTS / (-2^{j-1}): pattern in k?
+==============================================================================
+
+j=4: c_4^(k) / (-2^3) =
+  k=4: 1
+  k=5: 6
+  k=6: 20
+  k=7: 50
+  k=8: 105
+  k=9: 196
+  Forward differences: [[1.0, 6.0, 20.0, 50.0, 105.0, 196.0], [5.0, 14.0, 30.0, 55.0, 91.0], [9.0, 16.0, 25.0, 36.0], [7.0, 9.0, 11.0], [2.0, 2.0], [0.0]]
+
+j=5: c_5^(k) / (-2^4) =
+  k=5: 1
+  k=6: 7
+  k=7: 27
+  k=8: 77
+  k=9: 182
+  Forward differences: [[1.0, 7.0, 27.0, 77.0, 182.0], [6.0, 20.0, 50.0, 105.0], [14.0, 30.0, 55.0], [16.0, 25.0], [9.0]]
+
+j=6: c_6^(k) / (-2^5) =
+  k=6: 1
+  k=7: 8
+  k=8: 35
+  k=9: 112
+  Forward differences: [[1.0, 8.0, 35.0, 112.0], [7.0, 27.0, 77.0], [20.0, 50.0], [30.0]]
+
+j=7: c_7^(k) / (-2^6) =
+  k=7: 1
+  k=8: 9
+  k=9: 44
+  Forward differences: [[1.0, 9.0, 44.0], [8.0, 35.0], [27.0]]
+
+j=8: c_8^(k) / (-2^7) =
+  k=8: 1
+  k=9: 10
+
+j=9: c_9^(k) / (-2^8) =
+  k=9: 1
+
+==============================================================================
+PART F: REDISTRIBUTION POLYNOMIALS
+==============================================================================
+
+E_k(m) = [true g_k] - [naive g_k]
+       = [degree-3 polynomial] - [degree-k polynomial]
+
+The high-order (j>=4) part of naive = sum C(k-1,j-1)*2^{j-1}*C(m,j)
+always factors as: x*(x-1)*(x-2)*(x-3) * Q_{k-4}(x) / denominator
+where Q is a polynomial of degree k-4.
+
+This means: E_k has (x-1)(x-2) as a factor (confirmed: E_k(1)=E_k(2)=0).
+For k=4: E_4 = -(x-1)(x-2)(x-3)(x-4)/3
+  has EXTRA roots at x=3 and x=4!
+
+k=4: E_k factored = -(x - 4)*(x - 3)*(x - 2)*(x - 1)/3
+       E_k(3) = 0
+       E_k(4) = 0
+
+k=5: E_k factored = -2*(x - 2)*(x - 1)*(x**3 + 3*x**2 - 958*x + 2220)/15
+       E_k(3) = 160
+       E_k(4) = 1200
+
+k=6: E_k factored = -2*(x - 2)*(x - 1)*(x**4 + 3*x**3 + 17*x**2 - 522405*x + 1286100)/45
+       E_k(3) = 24960
+       E_k(4) = 214080
+
+k=7: E_k factored = -2*(x - 2)*(x - 1)*(2*x**5 + 6*x**4 + 49*x**3 + 135*x**2 - 1040878770*x + 2625386400)/315
+       E_k(3) = 6314240
+       E_k(4) = 58595040
+
+k=8: E_k factored = -(x - 2)*(x - 1)*(x**6 + 3*x**5 + 35*x**4 + 99*x**3 + 381*x**2 - 767521306965*x + 1964841725700)/315
+       E_k(3) = 2144267840
+       E_k(4) = 21052256640
+
+k=9: E_k factored = -2*(x - 2)*(x - 1)*(x**7 + 3*x**6 + 49*x**5 + 141*x**4 + 724*x**3 + 1890*x**2 - 1541619947808360*x + 3989943478731420)/2835
+       E_k(3) = 895825558560
+       E_k(4) = 9212852115600
+
+
+==============================================================================
+PART G: WHY alpha_{k,4} = 0 — the 4-body weight identity
+==============================================================================
+
+The effective weight for r clusters (all singletons) is:
+  w_r^eff(k) = alpha_{k,r} / C(k-1,r-1)
+
+For r=1,2,3 the weights are nonzero and k-dependent.
+For r=4, the weight is ZERO for ALL k>=4.
+
+This is equivalent to saying: the coefficient of C(m,4) in g_k(m)
+is zero for all k>=4.
+
+To see WHY, note that the 4-cluster contribution to g_k involves:
+  Sum over (s1,...,s4) with s_i>=1, sum=k of:
+    C(m,4) * weight(s1,...,s4; n)
+
+For the alpha_{k,4}=0 identity, we need:
+  Sum over compositions of k into 4 parts: weight(s1,...,s4; n) = 0
+
+For k=4: the only composition is (1,1,1,1).
+  weight(1,1,1,1; n) = 0
+  This is the 4-body EXACT CANCELLATION.
+
+For k=5: compositions are (2,1,1,1) (4 permutations) + (1,1,1,1) impossible.
+  Actually, compositions of 5 into 4 parts:
+  (2,1,1,1) and permutations: C(3,0)=1 way to pick which part is 2? No,
+  C(5-1,4-1) = C(4,3) = 4 total ordered compositions.
+
+k=4: compositions of k into 4 parts:
+  1 compositions
+    (1, 1, 1, 1)
+
+k=5: compositions of k into 4 parts:
+  4 compositions
+    (1, 1, 1, 2)
+    (1, 1, 2, 1)
+    (1, 2, 1, 1)
+    (2, 1, 1, 1)
+
+k=6: compositions of k into 4 parts:
+  10 compositions
+    (1, 1, 1, 3)
+    (1, 1, 2, 2)
+    (1, 1, 3, 1)
+    (1, 2, 1, 2)
+    (1, 2, 2, 1)
+    (1, 3, 1, 1)
+    (2, 1, 1, 2)
+    (2, 1, 2, 1)
+    (2, 2, 1, 1)
+    (3, 1, 1, 1)
+
+k=7: compositions of k into 4 parts:
+  20 compositions
+    (1, 1, 1, 4)
+    (1, 1, 2, 3)
+    (1, 1, 3, 2)
+    (1, 1, 4, 1)
+    (1, 2, 1, 3)
+    (1, 2, 2, 2)
+    (1, 2, 3, 1)
+    (1, 3, 1, 2)
+    (1, 3, 2, 1)
+    (1, 4, 1, 1)
+    ... (10 more)
+
+==============================================================================
+PART H: WHAT THE ZERO EFFECTIVE WEIGHT MEANS PHYSICALLY
+==============================================================================
+
+The effective r-cluster weight alpha_{k,r} / C(k-1,r-1) represents the
+AVERAGE weight of an r-cluster configuration, summed over all compositions
+of k into r parts, when placed with C(m,r) spacings.
+
+For r >= 4 clusters, this average is ZERO. This means the weights
+of different compositions (with their correlations) CANCEL each other.
+
+For r=4, k=4: the only composition is (1,1,1,1).
+  The weight is h_1^4 * [correlation correction] = 0.
+  This means the 4-body correlation for 4 separated single-dominos
+  is EXACTLY -h_1^4 (complete cancellation).
+
+For r=4, k=5: compositions are (2,1,1,1) in 4 orderings.
+  The total weight sum includes:
+  - 4 terms with one cluster of size 2 and three singletons
+  Their weights must sum to zero.
+
+For r=4, k=6: compositions (3,1,1,1), (2,2,1,1), etc.
+  Again, the weighted sum over all compositions must vanish.
+
+The PATTERN: for r >= 4, the r-cluster weight polynomial
+  W_r(k) = sum over compositions of k into r parts: weight(s1,...,sr; n=m+2k)
+vanishes as a polynomial in m at degree r.
+
+This is a NON-TRIVIAL identity about the multi-body correlations of the
+domino process {Z_j Z_{j+1}} in random permutations.
+
+PROOF APPROACH: This could potentially be proved by showing that the
+moment-generating function of the domino process has a special form
+(e.g., determinantal or Pfaffian structure) that forces the cumulants
+beyond order 3 to contribute only at bounded degree.
+
+==============================================================================
+PART I: VERIFYING 4-DOMINO WEIGHT IS ZERO
+==============================================================================
+
+For 4 separated single-dominos at positions p_1, p_1+1, p_2, p_2+1,
+p_3, p_3+1, p_4, p_4+1 (all gaps >= 1) in a permutation of n elements:
+
+E[Z_{p1}Z_{p1+1} * Z_{p2}Z_{p2+1} * Z_{p3}Z_{p3+1} * Z_{p4}Z_{p4+1}]
+
+The naive (product) approximation gives h_1^4 = 16/(n)_2^4.
+
+If the pairwise correlations are the ONLY correlations (no 3-body+),
+then the weight would be h_1^4 * rho^6 = 16/(n)_2^4 * [C(n,2)/C(n-2,2)]^6.
+
+The effective weight in g_k is:
+  alpha_{k,4}/C(k-1,3) * C(m,4) / [(n)_{2k}/2 * h_1^4 * C(m,4)]
+  = 0.
+
+This means EITHER:
+(a) The pairwise factorization is wrong (there are genuine 3-body and 4-body cumulants), OR
+(b) The pairwise rho^6 correction already gives zero.
+
+Let's check (b): does rho^6 * h_1^4 * (n)_8/2 * C(m,4) give the right g_4 coefficient?
+
+Pairwise rho^6 contribution (before C(m,4)):
+  = (8*n**10 - 200*n**9 + 1984*n**8 - 9936*n**7 + 26504*n**6 - 36904*n**5 + 25264*n**4 - 6720*n**3)/(n**10 - 25*n**9 + 280*n**8 - 1850*n**7 + 7985*n**6 - 23525*n**5 + 47910*n**4 - 66600*n**3 + 60480*n**2 - 32400*n + 7776)
+  = 8*n**3*(n - 7)*(n - 6)*(n - 5)*(n - 4)*(n - 1)**3/((n - 3)**5*(n - 2)**5)
+
+Substituting n = m + 8:
+  = 8*(m + 1)*(m + 2)*(m + 3)*(m + 4)*(m + 7)**3*(m + 8)**3/((m + 5)**5*(m + 6)**5)
+  This is a rational function of m, NOT a polynomial.
+  And NOT zero. So pairwise rho alone does NOT explain alpha_4 = 0.
+
+The pairwise rho model gives a non-constant rational function of n,
+not zero. This means the pairwise factorization is INSUFFICIENT.
+There MUST be genuine higher-body cumulants (3-body, 4-body, etc.)
+that contribute to making alpha_{k,4} = 0.
+
+CONCLUSION: The degree-3 property requires a FULL cumulant analysis,
+not just pairwise correlations. The vanishing of alpha_{k,r} for r>=4
+is a deep identity involving all orders of cumulants simultaneously.
+
+==============================================================================
+PART J: PATTERN IN LOW-ORDER CORRECTION COEFFICIENTS
+==============================================================================
+
+From Part 6 of s112, the low-order corrections are:
+
+k=4: c0=-8, c1=8, c2=-8, c3=8
+       c0 = -c1 = c2? True
+       |c0| = 8
+       |c0| = {2: 3}
+       c3/c0 = -1 = -1.000000
+
+k=5: c0=-592, c1=592, c2=-592, c3=752
+       c0 = -c1 = c2? True
+       |c0| = 592
+       |c0| = {2: 4, 37: 1}
+       c3/c0 = -47/37 = -1.270270
+
+k=6: c0=-114320, c1=114320, c2=-114320, c3=139280
+       c0 = -c1 = c2? True
+       |c0| = 114320
+       |c0| = {2: 4, 5: 1, 1429: 1}
+       c3/c0 = -1741/1429 = -1.218334
+
+k=7: c0=-33338240, c1=33338240, c2=-33338240, c3=39652480
+       c0 = -c1 = c2? True
+       |c0| = 33338240
+       |c0| = {2: 7, 5: 1, 13: 1, 4007: 1}
+       c3/c0 = -61957/52091 = -1.189399
+
+k=8: c0=-12475185560, c1=12475185560, c2=-12475185560, c3=14619453400
+       c0 = -c1 = c2? True
+       |c0| = 12475185560
+       |c0| = {2: 3, 5: 1, 47: 1, 6635737: 1}
+       c3/c0 = -7776305/6635737 = -1.171883
+
+k=9: c0=-5629549881808, c1=5629549881808, c2=-5629549881808, c3=6525375440368
+       c0 = -c1 = c2? True
+       |c0| = 5629549881808
+       |c0| = {2: 4, 351846867613: 1}
+       c3/c0 = -407835965023/351846867613 = -1.159129
+
+
+STRIKING PATTERN: c0 = -c1 = c2 for ALL k >= 4!
+And c3 differs, absorbing the remaining mass.
+
+c0 values: -8, -592, -114320, -33338240, -12475185560, -5629549881808, 
+
+These are: -g_k(0) for k>=4 (since naive(0) = 0).
+g_k(0) values:
+  g_3(0) = 0
+  g_4(0) = -8
+  g_5(0) = -592
+  g_6(0) = -114320
+  g_7(0) = -33338240
+  g_8(0) = -12475185560
+  g_9(0) = -5629549881808
+
+g_k(0) = d_k/3 where d_k is from the coefficient table.
+g_k(0) is the 'boundary value' of the polynomial at m=0.
+It's NOT a meaningful value (m>=1 in practice), but it determines
+the constant term in the binomial expansion.
+
+==============================================================================
+KEY IDENTITIES DISCOVERED
+==============================================================================
+
+1. NAIVE FORMULA EXACTNESS: g_k^naive(m) = sum C(k-1,r-1)*C(m,r)*2^{r-1}
+   is EXACT for k = 1, 2, 3. This is the cluster-independence formula.
+
+2. CORRECTION STRUCTURE: For k >= 4, E_k(m) = g_k(m) - g_k^naive(m):
+   (a) E_k always has (m-1)(m-2) as a factor (E_k(1) = E_k(2) = 0)
+   (b) For k=4: E_4 = -(m-1)(m-2)(m-3)(m-4)/3 (complete falling factorial)
+   (c) For k>=5: E_k = (m-1)(m-2) * Q_{k-2}(m) where Q has degree k-2
+
+3. BINOMIAL COEFFICIENTS:
+   (a) For j >= 4: correction coeff = -C(k-1,j-1)*2^{j-1} (trivially, since true=0)
+   (b) For j = 0,1,2: correction coeff c_0 = -c_1 = c_2 = -g_k(0) for all k >= 4
+   (c) For j = 3: correction coeff absorbs remaining mass
+
+4. EFFECTIVE CLUSTER WEIGHTS:
+   - For r=1: weight = alpha_{k,1} (grows explosively with k)
+   - For r=2: weight = alpha_{k,2}/C(k-1,1) (grows, negative)
+   - For r=3: weight = alpha_{k,3}/C(k-1,2) (grows)
+   - For r>=4: weight = 0 for ALL k (the central mystery)
+
+5. INTERPRETATION: The vanishing of r>=4 effective weights means that
+   in the cumulant expansion of the r-domino joint moment, the sum of
+   all partition contributions at "4+ clusters" level cancels exactly.
+   This is a COMBINATORIAL IDENTITY about random permutation statistics.
+
+6. OPEN: Prove alpha_{k,r} = 0 for r >= 4 analytically. This requires
+   understanding the cumulant structure of the domino process
+   {Z_j * Z_{j+1}} over random permutations.
+
+Done!

@@ -1,0 +1,51 @@
+n=13: Individual g_k values and their contributions
+============================================================
+k=1, m=11:
+  TM:   g_1(11) =         11, term = 1.410256410256e-01
+  Opus: g_1(11) =         11, term = 1.410256410256e-01
+k=2, m=9:
+  TM:   g_2(9) =         81, term = 9.440559440559e-03
+  Opus: g_2(9) =         81, term = 9.440559440559e-03
+k=3, m=7:
+  TM:   g_3(7) =        231, term = 3.739316239316e-04
+  Opus: g_3(7) =        231, term = 3.739316239316e-04
+k=4, m=5:
+  TM:   g_4(5) =        225, term = 8.671883671884e-06
+  Opus: g_4(5) =        217, term = 8.363550030217e-06
+k=5, m=3:
+  TM:   g_5(3) =         51, term = 9.828134828135e-08
+  Opus: g_5(3) =        211, term = 4.066149899483e-07
+k=6, m=1:
+  TM:   g_6(1) =          1, term = 3.211808767364e-10
+  Opus: g_6(1) =          1, term = 3.211808767364e-10
+
+Total CV^2 at n=13:
+  TM:   0.150848902576333
+  Opus: 0.150848902576333
+  Match: True
+
+============================================================
+REDISTRIBUTION between k=4 and k=5:
+  k=4: TM=8.671883671884e-06, Opus=8.363550030217e-06, diff=3.083336416670e-07
+  k=5: TM=9.828134828135e-08, Opus=4.066149899483e-07, diff=-3.083336416670e-07
+  Sum diff: 0.000000000000000e+00
+
+============================================================
+CONCLUSION:
+Transfer matrix g_k has degree k (natural combinatorial meaning).
+Opus g_k has degree 3 for k>=3 (valid reparametrization).
+Both give the same CV^2. Neither is 'wrong'.
+The degree-3 universality is a property of the DECOMPOSITION,
+not of the individual matching weights.
+
+============================================================
+WHY DEGREE-3 REPARAMETRIZATION EXISTS:
+The transfer matrix M(x) is 3x3. Its characteristic polynomial
+p(lambda) = lambda^3 - lambda^2 - x*lambda - x constrains
+lambda_1(x) = 1 + 2x + O(x^2). The 3 eigenvalues generate
+at most 3 exponential terms in M^N, which gives at most
+3 independent functions of N (hence m). Any higher-degree
+polynomial in m can be re-expressed using these 3 functions,
+hence the degree-3 reparametrization exists.
+This is fundamentally because the Z_j process has TRIDIAGONAL
+covariance (nearest-neighbor interaction), requiring only 3 states.

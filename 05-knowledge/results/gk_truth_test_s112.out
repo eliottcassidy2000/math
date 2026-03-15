@@ -1,0 +1,95 @@
+======================================================================
+TRUTH TEST: Transfer Matrix vs Opus g_k
+======================================================================
+
+n=3: W=8, W/n!=4/3, CV^2=0.3333333333
+  Transfer matrix: CV^2 = 0.3333333333 OK
+  Opus cubic:      CV^2 = 0.3333333333 OK
+  Transfer terms:
+    k=1: g_1(1) = 1
+  Opus terms:
+    k=1: g_1(1) = 1
+
+n=4: W=32, W/n!=4/3, CV^2=0.3333333333
+  Transfer matrix: CV^2 = 0.3333333333 OK
+  Opus cubic:      CV^2 = 0.3333333333 OK
+  Transfer terms:
+    k=1: g_1(2) = 2
+  Opus terms:
+    k=1: g_1(2) = 2
+    k=2: g_2(0) = 0
+
+n=5: W=158, W/n!=79/60, CV^2=0.3166666667
+  Transfer matrix: CV^2 = 0.3166666667 OK
+  Opus cubic:      CV^2 = 0.3166666667 OK
+  Transfer terms:
+    k=1: g_1(3) = 3
+    k=2: g_2(1) = 1
+  Opus terms:
+    k=1: g_1(3) = 3
+    k=2: g_2(1) = 1
+
+n=6: W=928, W/n!=58/45, CV^2=0.2888888889
+  Transfer matrix: CV^2 = 0.2888888889 OK
+  Opus cubic:      CV^2 = 0.2888888889 OK
+  Transfer terms:
+    k=1: g_1(4) = 4
+    k=2: g_2(2) = 4
+  Opus terms:
+    k=1: g_1(4) = 4
+    k=2: g_2(2) = 4
+    k=3: g_3(0) = 0
+
+n=7: W=6350, W/n!=635/504, CV^2=0.2599206349
+  Transfer matrix: CV^2 = 0.2599206349 OK
+  Opus cubic:      CV^2 = 0.2599206349 OK
+  Transfer terms:
+    k=1: g_1(5) = 5
+    k=2: g_2(3) = 9
+    k=3: g_3(1) = 1
+  Opus terms:
+    k=1: g_1(5) = 5
+    k=2: g_2(3) = 9
+    k=3: g_3(1) = 1
+
+n=8: W=49752, W/n!=691/560, CV^2=0.2339285714
+  Transfer matrix: CV^2 = 0.2339285714 OK
+  Opus cubic:      CV^2 = 0.2335317460 FAIL (diff=-1/2520)
+  Transfer terms:
+    k=1: g_1(6) = 6
+    k=2: g_2(4) = 16
+    k=3: g_3(2) = 6
+  Opus terms:
+    k=1: g_1(6) = 6
+    k=2: g_2(4) = 16
+    k=3: g_3(2) = 6
+    k=4: g_4(0) = -8
+
+n=9: (skipping direct W computation, too large)
+
+n=10: (skipping direct W computation, too large)
+
+======================================================================
+LARGER n VIA RECURRENCE: W(n) = n*W(n-1) + 2*(n-1)*W(n-2)
+======================================================================
+n= 3: CV^2=0.66666667  TM:FAIL (err=-3.33e-01)  Opus:FAIL (err=-3.33e-01)
+n= 4: CV^2=1.16666667  TM:FAIL (err=-8.33e-01)  Opus:FAIL (err=-8.33e-01)
+n= 5: CV^2=1.83333333  TM:FAIL (err=-1.52e+00)  Opus:FAIL (err=-1.52e+00)
+n= 6: CV^2=2.55555556  TM:FAIL (err=-2.27e+00)  Opus:FAIL (err=-2.27e+00)
+n= 7: CV^2=3.36507937  TM:FAIL (err=-3.11e+00)  Opus:FAIL (err=-3.11e+00)
+n= 8: CV^2=4.25396825  TM:FAIL (err=-4.02e+00)  Opus:FAIL (err=-4.02e+00)
+n= 9: CV^2=5.22398589  TM:FAIL (err=-5.01e+00)  Opus:FAIL (err=-5.01e+00)
+n=10: CV^2=6.27477954  TM:FAIL (err=-6.08e+00)  Opus:FAIL (err=-6.08e+00)
+n=11: CV^2=7.40641334  TM:FAIL (err=-7.23e+00)  Opus:FAIL (err=-7.23e+00)
+n=12: CV^2=8.61887660  TM:FAIL (err=-8.46e+00)  Opus:FAIL (err=-8.46e+00)
+n=13: CV^2=9.91217096  TM:FAIL (err=-9.76e+00)  Opus:FAIL (err=-9.76e+00)
+n=14: CV^2=11.28629618  TM:FAIL (err=-1.11e+01)  Opus:FAIL (err=-1.11e+01)
+n=15: CV^2=12.74125231  TM:FAIL (err=-1.26e+01)  Opus:FAIL (err=-1.26e+01)
+n=16: CV^2=14.27703934  TM:FAIL (err=-1.42e+01)  Opus:FAIL (err=-1.42e+01)
+n=17: CV^2=15.89365725  TM:FAIL (err=-1.58e+01)  Opus:FAIL (err=-1.58e+01)
+n=18: CV^2=17.59110607  TM:FAIL (err=-1.75e+01)  Opus:FAIL (err=-1.75e+01)
+n=19: CV^2=19.36938578  TM:FAIL (err=-1.93e+01)  Opus:FAIL (err=-1.93e+01)
+n=20: CV^2=21.22849639  TM:FAIL (err=-2.11e+01)  Opus:incomplete (k too high)
+n=21: CV^2=23.16843789  TM:FAIL (err=-2.31e+01)  Opus:incomplete (k too high)
+
+Done!

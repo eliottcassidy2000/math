@@ -1,0 +1,1455 @@
+==============================================================================
+PART 1: NAIVE FORMULA AS POLYNOMIALS
+==============================================================================
+
+k=1: g_k^naive(m) = x
+       degree = 1
+
+k=2: g_k^naive(m) = x**2
+       degree = 2
+
+k=3: g_k^naive(m) = 2*x**3/3 + x/3
+       degree = 3
+
+k=4: g_k^naive(m) = x**4/3 + 2*x**2/3
+       degree = 4
+
+k=5: g_k^naive(m) = 2*x**5/15 + 2*x**3/3 + x/5
+       degree = 5
+
+k=6: g_k^naive(m) = 2*x**6/45 + 4*x**4/9 + 23*x**2/45
+       degree = 6
+
+k=7: g_k^naive(m) = 4*x**7/315 + 2*x**5/9 + 28*x**3/45 + x/7
+       degree = 7
+
+k=8: g_k^naive(m) = x**8/315 + 4*x**6/45 + 22*x**4/45 + 44*x**2/105
+       degree = 8
+
+k=9: g_k^naive(m) = 2*x**9/2835 + 4*x**7/135 + 38*x**5/135 + 1636*x**3/2835 + x/9
+       degree = 9
+
+
+==============================================================================
+PART 2: TRUE g_k POLYNOMIALS
+==============================================================================
+
+k=1: g_k(m) = x
+       degree = 1
+
+k=2: g_k(m) = x**2
+       degree = 2
+
+k=3: g_k(m) = 2*x**3/3 + x/3
+       degree = 3
+
+k=4: g_k(m) = 10*x**3/3 - 11*x**2 + 50*x/3 - 8
+       degree = 3
+
+k=5: g_k(m) = 388*x**3/3 - 680*x**2 + 3431*x/3 - 592
+       degree = 3
+
+k=6: g_k(m) = 23220*x**3 - 126815*x**2 + 217916*x - 114320
+       degree = 3
+
+k=7: g_k(m) = 19826270*x**3/3 - 36495384*x**2 + 189674605*x/3 - 33338240
+       degree = 3
+
+k=8: g_k(m) = 7309726742*x**3/3 - 13547319515*x**2 + 70757788486*x/3 - 12475185560
+       degree = 3
+
+k=9: g_k(m) = 3262687720240*x**3/3 - 6077462661136*x**2 + 31858349908595*x/3 - 5629549881808
+       degree = 3
+
+
+==============================================================================
+PART 3: CORRECTION POLYNOMIALS E_k(m) = g_k(m) - g_k^naive(m)
+==============================================================================
+
+k=1: E_k(m) = 0  [naive formula is EXACT]
+
+k=2: E_k(m) = 0  [naive formula is EXACT]
+
+k=3: E_k(m) = 0  [naive formula is EXACT]
+
+k=4: E_k(m) = -x**4/3 + 10*x**3/3 - 35*x**2/3 + 50*x/3 - 8
+       degree = 4
+       factored: -(x - 4)*(x - 3)*(x - 2)*(x - 1)/3
+       values: E(0)=-8  E(1)=0  E(2)=0  E(3)=0  E(4)=0  E(5)=-8  E(6)=-40  E(7)=-120  
+
+k=5: E_k(m) = -2*x**5/15 + 386*x**3/3 - 680*x**2 + 17152*x/15 - 592
+       degree = 5
+       factored: -2*(x - 2)*(x - 1)*(x**3 + 3*x**2 - 958*x + 2220)/15
+       values: E(0)=-592  E(1)=0  E(2)=0  E(3)=160  E(4)=1200  E(5)=3792  E(6)=8544  E(7)=15984  
+
+k=6: E_k(m) = -2*x**6/45 - 4*x**4/9 + 23220*x**3 - 5706698*x**2/45 + 217916*x - 114320
+       degree = 6
+       factored: -2*(x - 2)*(x - 1)*(x**4 + 3*x**3 + 17*x**2 - 522405*x + 1286100)/45
+       values: E(0)=-114320  E(1)=0  E(2)=0  E(3)=24960  E(4)=214080  E(5)=706400  E(6)=1640688  E(7)=3155296  
+
+k=7: E_k(m) = -4*x**7/315 - 2*x**5/9 + 297394022*x**3/45 - 36495384*x**2 + 1327722232*x/21 - 33338240
+       degree = 7
+       factored: -2*(x - 2)*(x - 1)*(2*x**5 + 6*x**4 + 49*x**3 + 135*x**2 - 1040878770*x + 2625386400)/315
+       values: E(0)=-33338240  E(1)=0  E(2)=0  E(3)=6314240  E(4)=58595040  E(5)=196494320  E(6)=459663168  E(7)=887751152  
+
+k=8: E_k(m) = -x**8/315 - 4*x**6/45 - 22*x**4/45 + 7309726742*x**3/3 - 1422468549119*x**2/105 + 70757788486*x/3 - 12475185560
+       degree = 8
+       factored: -(x - 2)*(x - 1)*(x**6 + 3*x**5 + 35*x**4 + 99*x**3 + 381*x**2 - 767521306965*x + 1964841725700)/315
+       values: E(0)=-12475185560  E(1)=0  E(2)=0  E(3)=2144267840  E(4)=21052256640  E(5)=71343418680  E(6)=167637204168  E(7)=324553058888  
+
+k=9: E_k(m) = -2*x**9/2835 - 4*x**7/135 - 38*x**5/135 + 3083239895625164*x**3/2835 - 6077462661136*x**2 + 95575049725784*x/9 - 5629549881808
+       degree = 9
+       factored: -2*(x - 2)*(x - 1)*(x**7 + 3*x**6 + 49*x**5 + 141*x**4 + 724*x**3 + 1890*x**2 - 1541619947808360*x + 3989943478731420)/2835
+       values: E(0)=-5629549881808  E(1)=0  E(2)=0  E(3)=895825558560  E(4)=9212852115600  E(5)=31476455109472  E(6)=74212009974048  E(7)=143944892132224  
+
+
+==============================================================================
+PART 4: BINOMIAL BASIS EXPANSION OF CORRECTIONS
+==============================================================================
+Express E_k(m) = sum_{j=0}^{deg} e_{k,j} * C(m, j)
+
+k=3: E_k = 0 (no correction)
+
+k=4: E_k(m) = (-8)*C(m,0) + (8)*C(m,1) + (-8)*C(m,2) + (8)*C(m,3) + (-8)*C(m,4)
+       E_k(1)=0, E_k(2)=0, E_k(3)=0
+
+k=5: E_k(m) = (-592)*C(m,0) + (592)*C(m,1) + (-592)*C(m,2) + (752)*C(m,3) + (-32)*C(m,4) + (-16)*C(m,5)
+       E_k(1)=0, E_k(2)=0, E_k(3)=160
+
+k=6: E_k(m) = (-114320)*C(m,0) + (114320)*C(m,1) + (-114320)*C(m,2) + (139280)*C(m,3) + (-80)*C(m,4) + (-80)*C(m,5) + (-32)*C(m,6)
+       E_k(1)=0, E_k(2)=0, E_k(3)=24960
+
+k=7: E_k(m) = (-33338240)*C(m,0) + (33338240)*C(m,1) + (-33338240)*C(m,2) + (39652480)*C(m,3) + (-160)*C(m,4) + (-240)*C(m,5) + (-192)*C(m,6) + (-64)*C(m,7)
+       E_k(1)=0, E_k(2)=0, E_k(3)=6314240
+
+k=8: E_k(m) = (-12475185560)*C(m,0) + (12475185560)*C(m,1) + (-12475185560)*C(m,2) + (14619453400)*C(m,3) + (-280)*C(m,4) + (-560)*C(m,5) + (-672)*C(m,6) + (-448)*C(m,7) + (-128)*C(m,8)
+       E_k(1)=0, E_k(2)=0, E_k(3)=2144267840
+
+k=9: E_k(m) = (-5629549881808)*C(m,0) + (5629549881808)*C(m,1) + (-5629549881808)*C(m,2) + (6525375440368)*C(m,3) + (-448)*C(m,4) + (-1120)*C(m,5) + (-1792)*C(m,6) + (-1792)*C(m,7) + (-1024)*C(m,8) + (-256)*C(m,9)
+       E_k(1)=0, E_k(2)=0, E_k(3)=895825558560
+
+
+==============================================================================
+PART 5: NAIVE FORMULA IN BINOMIAL BASIS
+==============================================================================
+g_k^naive(m) = sum_{r=1}^{k} C(k-1,r-1) * 2^{r-1} * C(m,r)
+By construction, the binomial coefficient of C(m,r) is C(k-1,r-1)*2^{r-1}
+
+k=1: naive coeffs [C(m,0), C(m,1), ..., C(m,1)] = [0, 1]
+k=2: naive coeffs [C(m,0), C(m,1), ..., C(m,2)] = [0, 1, 2]
+k=3: naive coeffs [C(m,0), C(m,1), ..., C(m,3)] = [0, 1, 4, 4]
+k=4: naive coeffs [C(m,0), C(m,1), ..., C(m,4)] = [0, 1, 6, 12, 8]
+k=5: naive coeffs [C(m,0), C(m,1), ..., C(m,5)] = [0, 1, 8, 24, 32, 16]
+k=6: naive coeffs [C(m,0), C(m,1), ..., C(m,6)] = [0, 1, 10, 40, 80, 80, 32]
+k=7: naive coeffs [C(m,0), C(m,1), ..., C(m,7)] = [0, 1, 12, 60, 160, 240, 192, 64]
+k=8: naive coeffs [C(m,0), C(m,1), ..., C(m,8)] = [0, 1, 14, 84, 280, 560, 672, 448, 128]
+k=9: naive coeffs [C(m,0), C(m,1), ..., C(m,9)] = [0, 1, 16, 112, 448, 1120, 1792, 1792, 1024, 256]
+
+
+==============================================================================
+PART 6: TRUE g_k IN BINOMIAL BASIS
+==============================================================================
+Express g_k(m) = sum_{j>=0} c_{k,j} * C(m,j)
+
+k=1:
+  true    [C(m,j) for j=0..2]: [0, 1, 0]
+  naive   [C(m,j) for j=0..2]: [0, 1, 0]
+  corr    [C(m,j) for j=0..2]: [0, 0, 0]
+
+k=2:
+  true    [C(m,j) for j=0..3]: [0, 1, 2, 0]
+  naive   [C(m,j) for j=0..3]: [0, 1, 2, 0]
+  corr    [C(m,j) for j=0..3]: [0, 0, 0, 0]
+
+k=3:
+  true    [C(m,j) for j=0..4]: [0, 1, 4, 4, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 4, 4, 0]
+  corr    [C(m,j) for j=0..4]: [0, 0, 0, 0, 0]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+k=4:
+  true    [C(m,j) for j=0..4]: [-8, 9, -2, 20, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 6, 12, 8]
+  corr    [C(m,j) for j=0..4]: [-8, 8, -8, 8, -8]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+k=5:
+  true    [C(m,j) for j=0..4]: [-592, 593, -584, 776, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 8, 24, 32]
+  corr    [C(m,j) for j=0..4]: [-592, 592, -592, 752, -32]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+k=6:
+  true    [C(m,j) for j=0..4]: [-114320, 114321, -114310, 139320, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 10, 40, 80]
+  corr    [C(m,j) for j=0..4]: [-114320, 114320, -114320, 139280, -80]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+k=7:
+  true    [C(m,j) for j=0..4]: [-33338240, 33338241, -33338228, 39652540, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 12, 60, 160]
+  corr    [C(m,j) for j=0..4]: [-33338240, 33338240, -33338240, 39652480, -160]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+k=8:
+  true    [C(m,j) for j=0..4]: [-12475185560, 12475185561, -12475185546, 14619453484, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 14, 84, 280]
+  corr    [C(m,j) for j=0..4]: [-12475185560, 12475185560, -12475185560, 14619453400, -280]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+k=9:
+  true    [C(m,j) for j=0..4]: [-5629549881808, 5629549881809, -5629549881792, 6525375440480, 0]
+  naive   [C(m,j) for j=0..4]: [0, 1, 16, 112, 448]
+  corr    [C(m,j) for j=0..4]: [-5629549881808, 5629549881808, -5629549881808, 6525375440368, -448]
+  max nonzero j: 3 (should be 3 for degree-3)
+
+
+==============================================================================
+PART 7: CORRECTION BINOMIAL COEFFICIENTS TABLE
+==============================================================================
+For each k and j >= 4: what is the correction e_{k,j} = true_j - naive_j?
+Naive j-th coeff = C(k-1,j-1)*2^{j-1} for j >= 1.
+For the true g_k (degree 3), the j-th coeff = 0 for j >= 4.
+So the correction at j >= 4 is: e_{k,j} = -C(k-1,j-1)*2^{j-1}
+
+  k |          j=0         j=1         j=2         j=3         j=4         j=5         j=6         j=7
+---------------------------------------------------------------------------------------------------
+  3 |            0           0           0           0           0
+  4 |           -8           8          -8           8          -8
+  5 |         -592         592        -592         752         -32         -16
+  6 |      -114320      114320     -114320      139280         -80         -80         -32
+  7 |    -33338240    33338240   -33338240    39652480        -160        -240        -192         -64
+  8 | -12475185560 12475185560-12475185560 14619453400        -280        -560        -672        -448
+  9 | -56295498818085629549881808-56295498818086525375440368        -448       -1120       -1792       -1792
+
+
+==============================================================================
+PART 8: THE KEY IDENTITY — corrections at j>=4 equal -naive coeffs
+==============================================================================
+Since true g_k has degree 3, for j >= 4: true C(m,j) coeff = 0
+So correction coeff at j = -(naive coeff at j) = -C(k-1,j-1)*2^{j-1}
+This means the EXACT cancellation condition is:
+  true coeff at j=0,1,2,3 absorbs ALL the correction mass
+
+The correction at j=0,1,2,3 MUST equal:
+  sum_{j=4}^{k} C(k-1,j-1)*2^{j-1} * [something relating C(m,j) to C(m,0..3)]
+
+k=3: sum of all correction coefficients = 0
+       g_k(1) = 1, naive(1) = 1, diff = 0
+k=4: sum of all correction coefficients = -8
+       g_k(1) = 1, naive(1) = 1, diff = 0
+k=5: sum of all correction coefficients = 112
+       g_k(1) = 1, naive(1) = 1, diff = 0
+k=6: sum of all correction coefficients = 24768
+       g_k(1) = 1, naive(1) = 1, diff = 0
+k=7: sum of all correction coefficients = 6313584
+       g_k(1) = 1, naive(1) = 1, diff = 0
+k=8: sum of all correction coefficients = 2144265752
+       g_k(1) = 1, naive(1) = 1, diff = 0
+k=9: sum of all correction coefficients = 895825552128
+       g_k(1) = 1, naive(1) = 1, diff = 0
+
+
+==============================================================================
+PART 9: CORRECTION SUM IDENTITY
+==============================================================================
+The sum of corrections = g_k(m) evaluated at m -> infinity difference.
+
+For j >= 4, the correction e_{k,j} = -C(k-1,j-1)*2^{j-1}.
+Sum of these negative corrections:
+k=3: -sum_{j=4}^3 C(k-1,j-1)*2^{j-1} = 0
+       total naive (all j) = 9 = 3^(k-1)
+       low-j naive (j=1..3) = 9
+       high-j naive (j=4..k) = 0
+       Check: low + high = 9 = 3^2 = 9 : YES
+
+k=4: -sum_{j=4}^4 C(k-1,j-1)*2^{j-1} = -8
+       total naive (all j) = 27 = 3^(k-1)
+       low-j naive (j=1..3) = 19
+       high-j naive (j=4..k) = 8
+       Check: low + high = 27 = 3^3 = 27 : YES
+
+k=5: -sum_{j=4}^5 C(k-1,j-1)*2^{j-1} = -48
+       total naive (all j) = 81 = 3^(k-1)
+       low-j naive (j=1..3) = 33
+       high-j naive (j=4..k) = 48
+       Check: low + high = 81 = 3^4 = 81 : YES
+
+k=6: -sum_{j=4}^6 C(k-1,j-1)*2^{j-1} = -192
+       total naive (all j) = 243 = 3^(k-1)
+       low-j naive (j=1..3) = 51
+       high-j naive (j=4..k) = 192
+       Check: low + high = 243 = 3^5 = 243 : YES
+
+k=7: -sum_{j=4}^7 C(k-1,j-1)*2^{j-1} = -656
+       total naive (all j) = 729 = 3^(k-1)
+       low-j naive (j=1..3) = 73
+       high-j naive (j=4..k) = 656
+       Check: low + high = 729 = 3^6 = 729 : YES
+
+k=8: -sum_{j=4}^8 C(k-1,j-1)*2^{j-1} = -2088
+       total naive (all j) = 2187 = 3^(k-1)
+       low-j naive (j=1..3) = 99
+       high-j naive (j=4..k) = 2088
+       Check: low + high = 2187 = 3^7 = 2187 : YES
+
+k=9: -sum_{j=4}^9 C(k-1,j-1)*2^{j-1} = -6432
+       total naive (all j) = 6561 = 3^(k-1)
+       low-j naive (j=1..3) = 129
+       high-j naive (j=4..k) = 6432
+       Check: low + high = 6561 = 3^8 = 6561 : YES
+
+
+==============================================================================
+PART 10: TOTAL NAIVE SUM = 3^{k-1}
+==============================================================================
+g_k^naive(m) = sum_r C(k-1,r-1)*C(m,r)*2^{r-1}
+At m -> inf, C(m,r) ~ m^r/r!, so the sum is dominated by r=k.
+But the TOTAL of the binomial coefficients is:
+sum_{r=1}^{k} C(k-1,r-1)*2^{r-1} = sum_{r=0}^{k-1} C(k-1,r)*2^r = 3^{k-1}
+
+k=1: sum = 1, 3^0 = 1, match = YES
+k=2: sum = 3, 3^1 = 3, match = YES
+k=3: sum = 9, 3^2 = 9, match = YES
+k=4: sum = 27, 3^3 = 27, match = YES
+k=5: sum = 81, 3^4 = 81, match = YES
+k=6: sum = 243, 3^5 = 243, match = YES
+k=7: sum = 729, 3^6 = 729, match = YES
+k=8: sum = 2187, 3^7 = 2187, match = YES
+k=9: sum = 6561, 3^8 = 6561, match = YES
+
+
+==============================================================================
+PART 11: WHAT DO THE j>=4 CORRECTIONS LOOK LIKE AS POLYNOMIALS?
+==============================================================================
+The high-order part of the naive formula (j=4..k terms) is a polynomial
+of degree k. This must be EXACTLY cancelled by inter-cluster correlations.
+
+
+k=4: high-order part (j=4..4) = x**4/3 - 2*x**3 + 11*x**2/3 - 2*x
+       degree = 4, leading coeff = 1/3
+       factored = x*(x - 3)*(x - 2)*(x - 1)/3
+       equals -(correction)? False
+       RESIDUAL (high-order + correction): 4*x**3/3 - 8*x**2 + 44*x/3 - 8
+       This residual is the j=0,1,2,3 correction redistribution
+
+k=5: high-order part (j=4..5) = 2*x**5/15 - 10*x**3/3 + 8*x**2 - 24*x/5
+       degree = 5, leading coeff = 2/15
+       factored = 2*x*(x - 3)*(x - 2)*(x - 1)*(x + 6)/15
+       equals -(correction)? False
+       RESIDUAL (high-order + correction): 376*x**3/3 - 672*x**2 + 3416*x/3 - 592
+       This residual is the j=0,1,2,3 correction redistribution
+
+k=6: high-order part (j=4..6) = 2*x**6/45 + 4*x**4/9 - 20*x**3/3 + 698*x**2/45 - 28*x/3
+       degree = 6, leading coeff = 2/45
+       factored = 2*x*(x - 3)*(x - 2)*(x - 1)*(x**2 + 6*x + 35)/45
+       equals -(correction)? False
+       RESIDUAL (high-order + correction): 69640*x**3/3 - 126800*x**2 + 653720*x/3 - 114320
+       This residual is the j=0,1,2,3 correction redistribution
+
+k=7: high-order part (j=4..7) = 4*x**7/315 + 2*x**5/9 - 422*x**3/45 + 24*x**2 - 104*x/7
+       degree = 7, leading coeff = 4/315
+       factored = 2*x*(x - 3)*(x - 2)*(x - 1)*(2*x**3 + 12*x**2 + 85*x + 390)/315
+       equals -(correction)? False
+       RESIDUAL (high-order + correction): 19826240*x**3/3 - 36495360*x**2 + 189674560*x/3 - 33338240
+       This residual is the j=0,1,2,3 correction redistribution
+
+k=8: high-order part (j=4..8) = x**8/315 + 4*x**6/45 + 22*x**4/45 - 14*x**3 + 3719*x**2/105 - 22*x
+       degree = 8, leading coeff = 1/315
+       factored = x*(x - 3)*(x - 2)*(x - 1)*(x**4 + 6*x**3 + 53*x**2 + 258*x + 1155)/315
+       equals -(correction)? False
+       RESIDUAL (high-order + correction): 7309726700*x**3/3 - 13547319480*x**2 + 70757788420*x/3 - 12475185560
+       This residual is the j=0,1,2,3 correction redistribution
+
+k=9: high-order part (j=4..9) = 2*x**9/2835 + 4*x**7/135 + 38*x**5/135 - 51284*x**3/2835 + 48*x**2 - 272*x/9
+       degree = 9, leading coeff = 2/2835
+       factored = 2*x*(x - 3)*(x - 2)*(x - 1)*(x**5 + 6*x**4 + 67*x**3 + 342*x**2 + 1750*x + 7140)/2835
+       equals -(correction)? False
+       RESIDUAL (high-order + correction): 3262687720184*x**3/3 - 6077462661088*x**2 + 31858349908504*x/3 - 5629549881808
+       This residual is the j=0,1,2,3 correction redistribution
+
+
+==============================================================================
+PART 12: STRUCTURE OF THE CORRECTION E_k(m)
+==============================================================================
+
+Since g_k(m) has degree 3 and naive has degree k,
+E_k(m) = g_k(m) - naive_k(m) has degree k (for k>=4).
+Key: the correction is degree k, not degree 3.
+The correction must kill degrees 4..k in the naive formula
+AND modify the degree 0..3 terms.
+
+k=4: E_k(m) = -x**4/3 + 10*x**3/3 - 35*x**2/3 + 50*x/3 - 8
+       degree = 4
+       standard basis coefficients: [-0.3333333333333333, 3.3333333333333335, -11.666666666666666, 16.666666666666668, -8.0]
+       factored = -(x - 4)*(x - 3)*(x - 2)*(x - 1)/3
+       integer roots: [1, 2, 3, 4]
+
+k=5: E_k(m) = -2*x**5/15 + 386*x**3/3 - 680*x**2 + 17152*x/15 - 592
+       degree = 5
+       standard basis coefficients: [-0.13333333333333333, 0.0, 128.66666666666666, -680.0, 1143.4666666666667, -592.0]
+       factored = -2*(x - 2)*(x - 1)*(x**3 + 3*x**2 - 958*x + 2220)/15
+       integer roots: [1, 2]
+
+k=6: E_k(m) = -2*x**6/45 - 4*x**4/9 + 23220*x**3 - 5706698*x**2/45 + 217916*x - 114320
+       degree = 6
+       standard basis coefficients: [-0.044444444444444446, 0.0, -0.4444444444444444, 23220.0, -126815.51111111112, 217916.0, -114320.0]
+       factored = -2*(x - 2)*(x - 1)*(x**4 + 3*x**3 + 17*x**2 - 522405*x + 1286100)/45
+       integer roots: [1, 2]
+
+k=7: E_k(m) = -4*x**7/315 - 2*x**5/9 + 297394022*x**3/45 - 36495384*x**2 + 1327722232*x/21 - 33338240
+       degree = 7
+       standard basis coefficients: [-0.012698412698412698, 0.0, -0.2222222222222222, 0.0, 6608756.044444445, -36495384.0, 63224868.190476194, -33338240.0]
+       factored = -2*(x - 2)*(x - 1)*(2*x**5 + 6*x**4 + 49*x**3 + 135*x**2 - 1040878770*x + 2625386400)/315
+       integer roots: [1, 2]
+
+k=8: E_k(m) = -x**8/315 - 4*x**6/45 - 22*x**4/45 + 7309726742*x**3/3 - 1422468549119*x**2/105 + 70757788486*x/3 - 12475185560
+       degree = 8
+       standard basis coefficients: [-0.0031746031746031746, 0.0, -0.08888888888888889, 0.0, -0.4888888888888889, 2436575580.6666665, -13547319515.419048, 23585929495.333332, -12475185560.0]
+       factored = -(x - 2)*(x - 1)*(x**6 + 3*x**5 + 35*x**4 + 99*x**3 + 381*x**2 - 767521306965*x + 1964841725700)/315
+       integer roots: [1, 2]
+
+k=9: E_k(m) = -2*x**9/2835 - 4*x**7/135 - 38*x**5/135 + 3083239895625164*x**3/2835 - 6077462661136*x**2 + 95575049725784*x/9 - 5629549881808
+       degree = 9
+       standard basis coefficients: [-0.0007054673721340388, 0.0, -0.02962962962962963, 0.0, -0.2814814814814815, 0.0, 1087562573412.7562, -6077462661136.0, 10619449969531.555, -5629549881808.0]
+       factored = -2*(x - 2)*(x - 1)*(x**7 + 3*x**6 + 49*x**5 + 141*x**4 + 724*x**3 + 1890*x**2 - 1541619947808360*x + 3989943478731420)/2835
+       integer roots: [1, 2]
+
+
+==============================================================================
+PART 13: RATIO E_k / FALLING FACTORIAL ANALYSIS
+==============================================================================
+For k=4: E_4(m) = -(m-1)(m-2)(m-3)(m-4)/3 = -8*C(m-1,4)
+This is a FALLING FACTORIAL in (m-1). Shifted by 1.
+Let's check if E_k(m) has a similar shifted falling factorial structure.
+
+k=4: E_k(m) / [(m-1)(m-2)...(m-4)] = -1/3
+       = -0.3333333333
+       ~ -1/3
+
+k=5: E_k(m) / [(m-1)(m-2)...(m-5)] = (-2*x**3 - 6*x**2 + 1916*x - 4440)/(15*x**3 - 180*x**2 + 705*x - 900)
+       NOT a constant (it's a polynomial in m)
+       = -2*x**3/(15*x**3 - 180*x**2 + 705*x - 900) - 6*x**2/(15*x**3 - 180*x**2 + 705*x - 900) + 1916*x/(15*x**3 - 180*x**2 + 705*x - 900) - 4440/(15*x**3 - 180*x**2 + 705*x - 900)
+
+k=6: E_k(m) / [(m-1)(m-2)...(m-6)] = (-2*x**4 - 6*x**3 - 34*x**2 + 1044810*x - 2572200)/(45*x**4 - 810*x**3 + 5355*x**2 - 15390*x + 16200)
+       NOT a constant (it's a polynomial in m)
+       = -2*x**4/(45*x**4 - 810*x**3 + 5355*x**2 - 15390*x + 16200) - 6*x**3/(45*x**4 - 810*x**3 + 5355*x**2 - 15390*x + 16200) - 34*x**2/(45*x**4 - 810*x**3 + 5355*x**2 - 15390*x + 16200) + 1044810*x/(45*x**4 - 810*x**3 + 5355*x**2 - 15390*x + 16200) - 2572200/(45*x**4 - 810*x**3 + 5355*x**2 - 15390*x + 16200)
+
+k=7: E_k(m) / [(m-1)(m-2)...(m-7)] = (-4*x**5 - 12*x**4 - 98*x**3 - 270*x**2 + 2081757540*x - 5250772800)/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800)
+       NOT a constant (it's a polynomial in m)
+       = -4*x**5/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800) - 12*x**4/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800) - 98*x**3/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800) - 270*x**2/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800) + 2081757540*x/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800) - 5250772800/(315*x**5 - 7875*x**4 + 77175*x**3 - 370125*x**2 + 867510*x - 793800)
+
+k=8: E_k(m) / [(m-1)(m-2)...(m-8)] = (-x**6 - 3*x**5 - 35*x**4 - 99*x**3 - 381*x**2 + 767521306965*x - 1964841725700)/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400)
+       NOT a constant (it's a polynomial in m)
+       = -x**6/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400) - 3*x**5/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400) - 35*x**4/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400) - 99*x**3/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400) - 381*x**2/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400) + 767521306965*x/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400) - 1964841725700/(315*x**6 - 10395*x**5 + 140175*x**4 - 987525*x**3 + 3828510*x**2 - 7733880*x + 6350400)
+
+k=9: E_k(m) / [(m-1)(m-2)...(m-9)] = (-2*x**7 - 6*x**6 - 98*x**5 - 282*x**4 - 1448*x**3 - 3780*x**2 + 3083239895616720*x - 7979886957462840)/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400)
+       NOT a constant (it's a polynomial in m)
+       = -2*x**7/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) - 6*x**6/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) - 98*x**5/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) - 282*x**4/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) - 1448*x**3/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) - 3780*x**2/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) + 3083239895616720*x/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400) - 7979886957462840/(2835*x**7 - 119070*x**6 + 2103570*x**5 - 20241900*x**4 + 114446115*x**3 - 379714230*x**2 + 683597880*x - 514382400)
+
+
+==============================================================================
+PART 14: E_k IN SHIFTED BINOMIAL BASIS C(m-1, j)
+==============================================================================
+Since E_k vanishes at m=1 (g_k(1) = naive(1) = 1), try basis C(m-1, j).
+
+k=4: E_k(m) in basis C(m-1, j):
+  E_k(m) = (-8)*C(m-1,4)
+  Coefficients: [0, 0, 0, 0, -8, 0]
+  First nonzero coefficient at j=4
+
+k=5: E_k(m) in basis C(m-1, j):
+  E_k(m) = (160)*C(m-1,2) + (720)*C(m-1,3) + (-48)*C(m-1,4) + (-16)*C(m-1,5)
+  Coefficients: [0, 0, 160, 720, -48, -16, 0]
+  First nonzero coefficient at j=2
+
+k=6: E_k(m) in basis C(m-1, j):
+  E_k(m) = (24960)*C(m-1,2) + (139200)*C(m-1,3) + (-160)*C(m-1,4) + (-112)*C(m-1,5) + (-32)*C(m-1,6)
+  Coefficients: [0, 0, 24960, 139200, -160, -112, -32, 0]
+  First nonzero coefficient at j=2
+
+k=7: E_k(m) in basis C(m-1, j):
+  E_k(m) = (6314240)*C(m-1,2) + (39652320)*C(m-1,3) + (-400)*C(m-1,4) + (-432)*C(m-1,5) + (-256)*C(m-1,6) + (-64)*C(m-1,7)
+  Coefficients: [0, 0, 6314240, 39652320, -400, -432, -256, -64, 0]
+  First nonzero coefficient at j=2
+
+k=8: E_k(m) in basis C(m-1, j):
+  E_k(m) = (2144267840)*C(m-1,2) + (14619453120)*C(m-1,3) + (-840)*C(m-1,4) + (-1232)*C(m-1,5) + (-1120)*C(m-1,6) + (-576)*C(m-1,7) + (-128)*C(m-1,8)
+  Coefficients: [0, 0, 2144267840, 14619453120, -840, -1232, -1120, -576, -128, 0]
+  First nonzero coefficient at j=2
+
+k=9: E_k(m) in basis C(m-1, j):
+  E_k(m) = (895825558560)*C(m-1,2) + (6525375439920)*C(m-1,3) + (-1568)*C(m-1,4) + (-2912)*C(m-1,5) + (-3584)*C(m-1,6) + (-2816)*C(m-1,7) + (-1280)*C(m-1,8) + (-256)*C(m-1,9)
+  Coefficients: [0, 0, 895825558560, 6525375439920, -1568, -2912, -3584, -2816, -1280, -256, 0]
+  First nonzero coefficient at j=2
+
+
+==============================================================================
+PART 15: FACTORIZATION OF CORRECTION COEFFICIENTS
+==============================================================================
+The correction in C(m-1,j) basis shows which j contribute.
+For degree 3, we need the TOTAL correction (high-j naive + low-j adjustment)
+to make the result degree 3. Let's track this more carefully.
+
+True g_k binomial coefficients alpha_{k,r}:
+  k |      r=0      r=1      r=2      r=3
+----------------------------------------
+  1 |        0        1        0 
+  2 |        0        1        2        0 
+  3 |        0        1        4        4 
+  4 |       -8        9       -2       20 
+  5 |     -592      593     -584      776 
+  6 |  -114320   114321  -114310   139320 
+  7 | -33338240 33338241 -33338228 39652540 
+  8 | -12475185560 12475185561 -12475185546 14619453484 
+  9 | -5629549881808 5629549881809 -5629549881792 6525375440480 
+
+Naive binomial coefficients C(k-1,r-1)*2^{r-1}:
+  k |      r=0      r=1      r=2      r=3      r=4      r=5
+--------------------------------------------------------
+  1 |        0        1 
+  2 |        0        1        2 
+  3 |        0        1        4        4 
+  4 |        0        1        6       12        8 
+  5 |        0        1        8       24       32       16 
+  6 |        0        1       10       40       80       80 
+  7 |        0        1       12       60      160      240 
+  8 |        0        1       14       84      280      560 
+  9 |        0        1       16      112      448     1120 
+
+LOW-ORDER CORRECTIONS (r=0,1,2,3):
+These are alpha_{k,r} - C(k-1,r-1)*2^{r-1} for r=0,1,2,3
+  k |          r=0          r=1          r=2          r=3
+-------------------------------------------------------
+  3 |            0            0            0            0
+  4 |           -8            8           -8            8
+  5 |         -592          592         -592          752
+  6 |      -114320       114320      -114320       139280
+  7 |    -33338240     33338240    -33338240     39652480
+  8 | -12475185560  12475185560 -12475185560  14619453400
+  9 | -5629549881808 5629549881808 -5629549881808 6525375440368
+
+==============================================================================
+PART 16: SUM RULES FOR CORRECTIONS
+==============================================================================
+The total correction sums must absorb the mass from j>=4.
+For each k, sum_{r=4}^{k} C(k-1,r-1)*2^{r-1} (the killed mass) equals:
+
+k=3: killed mass (from j>=4) = 0
+       sum of low corrections = 0
+       difference (should relate to E_k constraint): 0
+       E_k(2) = g_k(2) - naive(2) = 6 - 6 = 0
+
+k=4: killed mass (from j>=4) = 8
+       sum of low corrections = 0
+       difference (should relate to E_k constraint): 8
+       E_k(2) = g_k(2) - naive(2) = 8 - 8 = 0
+
+k=5: killed mass (from j>=4) = 48
+       sum of low corrections = 160
+       difference (should relate to E_k constraint): 208
+       E_k(2) = g_k(2) - naive(2) = 10 - 10 = 0
+
+k=6: killed mass (from j>=4) = 192
+       sum of low corrections = 24960
+       difference (should relate to E_k constraint): 25152
+       E_k(2) = g_k(2) - naive(2) = 12 - 12 = 0
+
+k=7: killed mass (from j>=4) = 656
+       sum of low corrections = 6314240
+       difference (should relate to E_k constraint): 6314896
+       E_k(2) = g_k(2) - naive(2) = 14 - 14 = 0
+
+k=8: killed mass (from j>=4) = 2088
+       sum of low corrections = 2144267840
+       difference (should relate to E_k constraint): 2144269928
+       E_k(2) = g_k(2) - naive(2) = 16 - 16 = 0
+
+k=9: killed mass (from j>=4) = 6432
+       sum of low corrections = 895825558560
+       difference (should relate to E_k constraint): 895825564992
+       E_k(2) = g_k(2) - naive(2) = 18 - 18 = 0
+
+
+==============================================================================
+PART 17: THE CLUSTER CORRELATION FUNCTION
+==============================================================================
+
+KEY INSIGHT: The naive formula assumes clusters are INDEPENDENT.
+The two-cluster weight is h_1^2 (product of independent domino weights).
+But actually, two dominos in the SAME permutation of n elements are CORRELATED.
+
+From gk_factorization_89c.out:
+  E[Z_0Z_1 * Z_lZ_{l+1}] / E[Z_0Z_1]^2 = rho(n, gap)
+
+where gap = l-2 (number of positions between the dominos).
+
+The ratio is:
+  gap=0 (consecutive): n(n-1)/(2(n-2)(n-3))
+  gap>=1 (separated):  n(n-1)/(2(n-2)(n-3)) * ...
+
+Wait, let me just re-derive this. h_1(n) = 2/(n(n-1)).
+
+Two-domino correlation ratios from factorization output:
+rho(n, gap) = E[pair] / h_1^2
+  n=6, gap=0: rho = 5/4 = 1.250000
+    predicted n(n-1)/(2(n-2)(n-3)) = 5/4 MATCH
+  n=6, gap=1: rho = 5/2 = 2.500000
+  n=7, gap=0: rho = 21/20 = 1.050000
+    predicted n(n-1)/(2(n-2)(n-3)) = 21/20 MATCH
+  n=7, gap=1: rho = 21/10 = 2.100000
+  n=8, gap=0: rho = 14/15 = 0.933333
+    predicted n(n-1)/(2(n-2)(n-3)) = 14/15 MATCH
+  n=8, gap=1: rho = 28/15 = 1.866667
+  n=9, gap=0: rho = 6/7 = 0.857143
+    predicted n(n-1)/(2(n-2)(n-3)) = 6/7 MATCH
+  n=9, gap=1: rho = 12/7 = 1.714286
+
+For gap >= 1, the ratio stabilizes. Let's find the formula:
+  n=6: n(n-1)/((n-2)(n-3)) = 5/2 vs 5/2: MATCH
+  n=7: n(n-1)/((n-2)(n-3)) = 21/10 vs 21/10: MATCH
+  n=8: n(n-1)/((n-2)(n-3)) = 28/15 vs 28/15: MATCH
+  n=9: n(n-1)/((n-2)(n-3)) = 12/7 vs 12/7: MATCH
+
+CONFIRMED: For gap >= 1 (non-adjacent clusters):
+  rho(n, gap>=1) = n(n-1) / ((n-2)(n-3))
+  rho(n, gap=0)  = n(n-1) / (2(n-2)(n-3))
+  So gap=0 has HALF the ratio of gap>=1.
+  (The factor of 2 comes from the single cluster h_2 = 2/(n)_4
+   vs the pair h_1^2 = 4/((n)_2)^2 = 4/(n^2(n-1)^2).)
+
+
+==============================================================================
+PART 18: EXACT PAIR EXPECTATION
+==============================================================================
+For two dominos separated by gap >= 1:
+E[pair] = rho * h_1^2 = [n(n-1)/((n-2)(n-3))] * [4/(n^2(n-1)^2)]
+        = 4 / (n(n-1)(n-2)(n-3))
+        = 4 / (n)_4
+        = 2 * h_2(n)
+
+For gap = 0 (consecutive dominos forming one cluster of size 2):
+E[cluster_2] = h_2(n) = 2/(n)_4
+
+So the pair weight for SEPARATED dominos is TWICE the single-cluster weight!
+E[Z_0Z_1 * Z_lZ_{l+1}] = 4/(n)_4 for l >= 3
+E[Z_0Z_1Z_2Z_3] = h_2(n) = 2/(n)_4
+
+This means that in the g_k formula:
+  g_k(m) * 2/(n)_{2k} = sum over tilings of weight(tiling)
+  where weight(tiling with clusters c_1,...,c_r) = product of h_{c_i}(n)
+  ONLY if clusters don't share permutation positions.
+
+But the correlation rho != 1 means we need CORRECTED weights.
+For r clusters: the weight includes pairwise correlation factors.
+
+
+==============================================================================
+PART 19: CUMULANT / URSELL FUNCTION PERSPECTIVE
+==============================================================================
+
+The cumulant expansion explains the degree-3 bound.
+
+For r random variables (domino indicators), the joint expectation decomposes
+into connected correlations (cumulants). The key structure:
+
+E[Z_{d1} * Z_{d2} * ... * Z_{dr}] = sum over set partitions of {d1,...,dr}
+   of products of cumulants.
+
+For DOMINOS (each Z_di is a pair Z_j Z_{j+1}):
+- 1-body cumulant: kappa_1 = h_1 = 2/(n(n-1))
+- 2-body cumulant: kappa_2 = E[pair] - h_1^2
+  For gap >= 1: kappa_2 = 4/(n)_4 - 4/(n(n-1))^2
+                         = 4/(n(n-1)) * [1/((n-2)(n-3)) - 1/(n(n-1))]
+                         = 4/(n(n-1)) * [n(n-1) - (n-2)(n-3)] / [n(n-1)(n-2)(n-3)]
+                         = 4/(n(n-1)) * [2(2n-3)] / [n(n-1)(n-2)(n-3)]
+
+Let me compute this more carefully.
+
+kappa_2 (gap>=1) = E[pair] - h_1^2 = (16*n - 24)/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2)
+               = 8*(2*n - 3)/(n**2*(n - 3)*(n - 2)*(n - 1)**2)
+
+kappa_2 numerator analysis:
+  kappa_2 * n^2*(n-1)^2*(n-2)*(n-3) = 16*n**7/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2) - 136*n**6/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2) + 440*n**5/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2) - 680*n**4/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2) + 504*n**3/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2) - 144*n**2/(n**6 - 7*n**5 + 17*n**4 - 17*n**3 + 6*n**2)
+  = 8*(2*n - 3)
+
+So kappa_2 = 8*(2*n - 3) / [n^2(n-1)^2(n-2)(n-3)]
+           = O(n / n^6) = O(1/n^5)
+
+KEY: kappa_2 = O(1/n^5) while h_1^2 = O(1/n^4).
+The 2-body cumulant is one order smaller than the product approximation.
+
+For r dominos, the naive (product) approximation gives h_1^r = O(1/n^{2r}).
+The k-body cumulant kappa_k contributes to g_k(m) at order 1/n^{2k + (k-1)}
+because each cumulant link adds an extra 1/n factor.
+
+
+==============================================================================
+PART 20: WHY DEGREE 3 — THE CUMULANT ARGUMENT
+==============================================================================
+
+THEOREM (degree bound from cumulants):
+
+g_k(m) is a polynomial in m of degree exactly 3 for k >= 3.
+
+PROOF SKETCH:
+
+1. The contribution from |S|=2k subsets to CV^2 is:
+   T_k = (2/(n)_{2k}) * g_k(n-2k)
+
+2. g_k(m) counts weighted domino tilings on a path of length m+2k-1,
+   where the weight of each tiling is:
+   w(tiling) = (n)_{2k}/2 * E[prod_{j in S} Z_j]
+   for the appropriate n = m + 2k.
+
+3. For r clusters at positions p_1,...,p_r (each cluster is a contiguous
+   block of dominos), the expectation factorizes into CONNECTED PARTS:
+
+   E[prod Z_j] = sum over set partitions P of [r]:
+                  product over blocks B in P: kappa_B(n)
+
+   where kappa_B is the |B|-body cumulant of the domino-clusters in B.
+
+4. The number of tilings with cluster structure (s_1,...,s_r) placed with
+   r clusters is C(m, r) (degree r in m).
+
+5. Critical orders:
+   - h_1^r (all singletons) contributes C(m,r) * (2/(n)_2)^r
+   - After multiplying by (n)_{2k}/2, the h_1^r term gives
+     ~ m^r * n^{2k} / n^{2r} = m^r * n^{2(k-r)}
+   - But n = m + 2k, so n^{2(k-r)} introduces powers of m
+   - The TOTAL degree from the product approximation is r + 2(k-r) = 2k - r
+   - Maximized at r=1: degree 2k-1. This is HIGHER than 3.
+
+6. But the cumulant corrections:
+   - 2-body cumulant kappa_2 = O(1/n^5) vs h_1^2 = O(1/n^4)
+   - 3-body cumulant kappa_3 = O(1/n^7) vs h_1^3 = O(1/n^6) [conjecture]
+   - k-body cumulant kappa_k = O(1/n^{2k+k-1}) vs h_1^k = O(1/n^{2k})
+
+   Each higher cumulant subtracts EXACTLY the right amount to cancel
+   the high-degree terms in m.
+
+7. CRUCIAL: After multiplying by (n)_{2k}/2 = (m+2k)_{2k}/2 (degree 2k in m),
+   the final g_k(m) is a polynomial of degree at most 2k + k = 3k (from r=k).
+   But the cumulant cancellations reduce this to exactly degree 3.
+
+   The reason is that (n)_{2k} * kappa_r / h_1^r contributes terms of
+   degree at most 3 (independent of k and r), because the cumulant
+   corrections involve (n-2)(n-3) in the denominator, which are each
+   linear in n=m+2k, and these denominators cancel the numerator powers.
+
+   Specifically, the NORMALIZED cumulant (n)_{2k} * kappa_r evaluated
+   as a polynomial in m has a degree that saturates at 3 for r >= 3.
+
+
+==============================================================================
+PART 21: VERIFICATION — scaled g_k contributions
+==============================================================================
+For each k, the actual scaled contributions T_k(n) = 2*g_k(n-2k)/(n)_{2k}:
+Expansion in powers of 1/n:
+
+k=1:
+  n=3 (m=1): T_k = 0.3333333333
+  n=4 (m=2): T_k = 0.3333333333
+  n=5 (m=3): T_k = 0.3000000000
+  n=6 (m=4): T_k = 0.2666666667
+  n=7 (m=5): T_k = 0.2380952381
+
+k=2:
+  n=5 (m=1): T_k = 0.0166666667
+  n=6 (m=2): T_k = 0.0222222222
+  n=7 (m=3): T_k = 0.0214285714
+  n=8 (m=4): T_k = 0.0190476190
+  n=9 (m=5): T_k = 0.0165343915
+
+k=3:
+  n=7 (m=1): T_k = 0.0003968254
+  n=8 (m=2): T_k = 0.0005952381
+  n=9 (m=3): T_k = 0.0006283069
+  n=10 (m=4): T_k = 0.0005820106
+  n=11 (m=5): T_k = 0.0005110630
+
+k=4:
+  n=9 (m=1): T_k = 0.0000055115
+  n=10 (m=2): T_k = 0.0000088183
+  n=11 (m=3): T_k = 0.0000099206
+  n=12 (m=4): T_k = 0.0000096200
+  n=13 (m=5): T_k = 0.0000083636
+
+k=5:
+  n=11 (m=1): T_k = 0.0000000501
+  n=12 (m=2): T_k = 0.0000000835
+  n=13 (m=3): T_k = 0.0000004066
+  n=14 (m=4): T_k = 0.0000007598
+  n=15 (m=5): T_k = 0.0000007879
+
+k=6:
+  n=13 (m=1): T_k = 0.0000000003
+  n=14 (m=2): T_k = 0.0000000006
+  n=15 (m=3): T_k = 0.0000002297
+  n=16 (m=4): T_k = 0.0000004918
+  n=17 (m=5): T_k = 0.0000004773
+
+k=7:
+  n=15 (m=1): T_k = 0.0000000000
+  n=16 (m=2): T_k = 0.0000000000
+  n=17 (m=3): T_k = 0.0000002130
+  n=18 (m=4): T_k = 0.0000004393
+  n=19 (m=5): T_k = 0.0000003877
+
+
+==============================================================================
+PART 22: DEGREE ANALYSIS SUMMARY
+==============================================================================
+
+SUMMARY OF FINDINGS:
+
+1. The naive formula g_k^naive(m) = sum_{r=1}^{k} C(k-1,r-1)*C(m,r)*2^{r-1}
+   has degree k in m. It assumes domino clusters are independent.
+
+2. The correction E_k(m) = g_k(m) - g_k^naive(m) is:
+   - E_3 = 0 (naive is exact for k=3)
+   - E_k has degree k for k >= 4 (must cancel degrees 4..k of naive)
+
+3. In the binomial basis C(m,j):
+   - Naive coefficients: a_{k,j} = C(k-1,j-1)*2^{j-1} for j=1..k
+   - True coefficients: alpha_{k,j} for j=0..3 (only 4 nonzero!)
+   - Correction: alpha_{k,j} - a_{k,j} for j=0..3, and -a_{k,j} for j>=4
+
+4. The total naive binomial mass is sum_{j=1}^{k} C(k-1,j-1)*2^{j-1} = 3^{k-1}.
+   The high-j (j>=4) mass is 3^{k-1} - sum_{j=1}^{3} C(k-1,j-1)*2^{j-1}
+   = 3^{k-1} - (1 + 2(k-1) + 2(k-1)(k-2))
+   which grows as 3^{k-1}.
+
+5. The physical explanation: inter-cluster correlations.
+   Two dominos sharing the same random permutation of n elements are NOT
+   independent. The pairwise correlation ratio is:
+     rho(n) = n(n-1)/((n-2)(n-3)) = 1 + O(1/n)
+   The deviation from 1 is rho - 1 = (4n-6)/((n-2)(n-3)) = O(1/n).
+
+   For r clusters, the r-body cumulant corrections involve products of
+   these 1/n deviations, which after multiplying by the (n)_{2k}
+   normalization factor, contribute polynomials of bounded degree in m.
+
+6. The DEGREE-3 BARRIER arises because:
+   - The pair correlation rho(n) = C(n,2)/C(n-2,2) involves (n-2)(n-3) in
+     the denominator.
+   - After normalization, the dominant contribution from ANY number of
+     clusters r is: C(m,r) * [something with (n-2)(n-3)...(n-2r+1) in
+     denominator, but (n)_{2k} in numerator].
+   - The numerator (n)_{2k} provides degree 2k in n = m+2k.
+   - The denominator from r-cluster correlations is degree 2r + (r-1)
+     [the extra r-1 from cumulants].
+   - Net degree: 2k - 2r - (r-1) + r = 2k - 2r + 1 (from the normalization
+     minus the correlation denominator, plus the C(m,r) contribution).
+   - For r=1: degree 2k-1 (but this is the product term, no cumulant correction)
+   - The CONSTRAINED degree is from the fact that the g_k formula sums over
+     all m-placements of r clusters, and the normalization (n)_{2k}/2
+     absorbs exactly the right powers.
+
+   THE ULTIMATE REASON: The two-domino joint expectation for separated
+   dominos is EXACTLY 4/(n)_4, which (after normalization) gives C(m,2)
+   as the placement count times a rational function that is O(1) in m.
+   The three-domino joint is 8/(n)_6 (if fully factorized with the right
+   correlation), giving C(m,3) times O(1). But the four-domino joint
+   introduces a DEFICIT that cancels the C(m,4) term.
+
+
+==============================================================================
+PART 23: THREE-DOMINO CORRELATION PREDICTION
+==============================================================================
+
+If the pattern continues:
+  1 domino:  weight = 2/(n)_2
+  2 dominos: weight = 4/(n)_4 for separated pairs
+  3 dominos: weight = ?/(n)_6
+
+From g_3(m) = (2m^3 + m)/3 and the naive formula matching,
+the naive formula for k=3 IS EXACT (E_3 = 0).
+This means for k=3, the correlation corrections vanish identically.
+
+The naive formula for k=3:
+  g_3(m) = C(2,0)*C(m,1)*1 + C(2,1)*C(m,2)*2 + C(2,2)*C(m,3)*4
+         = m + 4*C(m,2) + 4*C(m,3)
+         = m + 2m(m-1) + 2m(m-1)(m-2)/3
+         = (3m + 6m^2 - 6m + 2m^3 - 6m^2 + 4m) / 3
+         = (2m^3 + m) / 3
+
+This matches! So for k=3, the weight of 3 separated dominos is
+h_1^3 = 8/(n(n-1))^3, and the tiling count C(m,3) gives the right answer.
+But C(m,3) is already degree 3. So no cancellation is needed at k=3!
+
+For k=4, the naive formula has a C(m,4) term = C(3,3)*8*C(m,4) = 8*C(m,4).
+This comes from 4 separated dominos. The true g_4 has NO C(m,4) term.
+So the 4-domino correlation must deviate from the product formula.
+
+The correction at k=4, j=4 is -8*C(m,4).
+E_4(m) = -8*C(m-1,4) = -(8/3)*(m-1)(m-2)(m-3)(m-4)/8
+Wait, let me recompute:
+  E_4(m) = -x**4/3 + 10*x**3/3 - 35*x**2/3 + 50*x/3 - 8
+         = -(x - 4)*(x - 3)*(x - 2)*(x - 1)/3
+  Binomial basis C(m,j): [-8, 8, -8, 8, -8, 0]
+  So E_4 = -8*C(m,0) + 8*C(m,1) + -8*C(m,2) + 8*C(m,3) + -8*C(m,4)
+  The j=4 coefficient is -8
+  The naive j=4 coefficient is C(3,3)*2^3 = 8 = 8
+  Correction at j=4: -8 (should be -8): MATCH
+
+==============================================================================
+PART 24: THE FOUR-DOMINO CUMULANT
+==============================================================================
+
+For 4 separated dominos, the expectation E[d1*d2*d3*d4] decomposes as:
+
+E[d1 d2 d3 d4] = h_1^4 + (sum over pairs) h_1^2 * kappa_2
+                + (sum over triples) h_1 * kappa_3
+                + kappa_4
+                + (product of pair cumulants) kappa_2^2
+
+The C(m,4) coefficient in g_k is proportional to the total weight
+for 4 separated dominos. If this total differs from h_1^4 * C(m,4),
+the correction is -8*C(m,4) which means the 4-domino weight is NOT h_1^4.
+
+Specifically, the correction coefficient at j=4 is:
+  e_{4,4} = alpha_{4,4} - a_{4,4} = 0 - 8 = -8
+
+This means the EFFECTIVE 4-domino weight (accounting for all correlations)
+has NO degree-4 term in m. The correlations EXACTLY cancel the product
+approximation at degree 4.
+
+CONJECTURE: For r >= 4 separated dominos, the r-body cumulant kappa_r
+(plus products of lower cumulants) is EXACTLY -h_1^r / r! times a
+correction that cancels the C(m,r) contribution.
+
+This would explain why g_k(m) is degree 3 for ALL k >= 3:
+the corrections from r >= 4 cluster configurations always cancel.
+
+
+==============================================================================
+PART 25: EXACT kappa_2 FORMULA AND ITS CONSEQUENCES
+==============================================================================
+kappa_2 = 8(2n-3) / [n^2(n-1)^2(n-2)(n-3)]
+
+Scale by (n)_{2k}/2:
+  For |S|=2k, the contribution from a pair of separated dominos
+  with remaining k-2 dominos as singletons is:
+  C(m,2) * kappa_2 * h_1^{r-2} * ...
+
+This gets complicated for general k. The key observation is simpler:
+
+==============================================================================
+CLEAN EXPLANATION:
+==============================================================================
+
+The g_k formula can be written as:
+  g_k(m) = (n)_{2k}/2 * sum over all domino tilings T of weight(T)
+
+where n = m + 2k and the sum is over tilings with k dominos on a path of
+length m + 2k - 1.
+
+The weight depends on the POSITIONS of the dominos through the permutation
+statistics. For r clusters placed at positions with gaps g_1,...,g_{r-1}
+between them (each g_i >= 1):
+
+  weight(T) = (product of single-cluster weights) * (correlation correction)
+
+The single-cluster weight for a cluster of size s is h_s(n) = 2/(n)_{2s}.
+
+The correlation correction for r SEPARATED clusters (all size 1) is:
+  product_{1<=i<j<=r} rho(n, gap_{ij})
+
+where rho(n, g) = n(n-1)/((n-2)(n-3)) for g >= 1.
+
+So for r separated single-dominos:
+  weight = h_1^r * rho^{C(r,2)} = [2/(n(n-1))]^r * [n(n-1)/((n-2)(n-3))]^{C(r,2)}
+
+The number of such tilings is C(m, r) (placement count).
+
+The contribution to g_k from r separated dominos:
+  C(m,r) * (n)_{2k}/2 * [2/(n(n-1))]^r * [n(n-1)/((n-2)(n-3))]^{C(r,2)}
+
+As a polynomial in m (via n = m + 2k), the degree of C(m,r) is r.
+The factor (n)_{2k}/[n(n-1)]^r contributes degree 2k - 2r in m.
+The factor [n(n-1)]^{C(r,2)}/[(n-2)(n-3)]^{C(r,2)} contributes:
+  degree 2*C(r,2) - 2*C(r,2) = 0 in m (leading terms cancel!)
+  BUT it has SUBLEADING terms of degree -1, -2, etc.
+
+Total degree: r + 2k - 2r + O(corrections from rho) = 2k - r + corrections.
+
+For r=1: degree 2k-1 (no rho correction).
+For r=2: degree 2k-2, but rho introduces a correction at degree 2k-2 as well.
+For r=3: degree 2k-3 + rho correction.
+
+WAIT — this doesn't immediately give degree 3. Let me think again...
+
+
+==============================================================================
+PART 26: EXPLICIT r-DOMINO CONTRIBUTION POLYNOMIALS
+==============================================================================
+
+--- k = 3 ---
+
+--- k = 4 ---
+For k=4, the r=4 (all singletons) contribution to g_4:
+  Naive: 8*C(m,4)
+  True: 0 (no C(m,4) term)
+  So the effective R(4,n) must reduce the r=4 weight such that
+  after (n)_8/2 normalization, the degree-4 term vanishes.
+
+
+--- k = 5 ---
+
+--- k = 6 ---
+
+==============================================================================
+PART 27: NUMERICAL CHECK OF MULTI-DOMINO WEIGHTS
+==============================================================================
+Using the EXACT g_k polynomials, back out the effective r-cluster weight
+for each k and r.
+
+  k   r   C(k-1,r-1)      alpha_true         eff_w_r naive_w=2^(r-1)        ratio
+-------------------------------------------------------------------------------------
+  1   1            1               1               1               1            1
+  2   1            1               1               1               1            1
+  2   2            1               2               2               2            1
+  3   1            1               1               1               1            1
+  3   2            2               4               2               2            1
+  3   3            1               4               4               4            1
+  4   1            1               9               9               1            9
+  4   2            3              -2            -2/3               2         -1/3
+  4   3            3              20            20/3               4          5/3
+  4   4            1               0               0               8            0
+  5   1            1             593             593               1          593
+  5   2            4            -584            -146               2          -73
+  5   3            6             776           388/3               4         97/3
+  5   4            4               0               0               8            0
+  6   1            1          114321          114321               1       114321
+  6   2            5         -114310          -22862               2       -11431
+  6   3           10          139320           13932               4         3483
+  6   4           10               0               0               8            0
+  7   1            1        33338241        33338241               1     33338241
+  7   2            6       -33338228     -16669114/3               2   -8334557/3
+  7   3           15        39652540       7930508/3               4    1982627/3
+  7   4           20               0               0               8            0
+  8   1            1     12475185561     12475185561               1  12475185561
+  8   2            7    -12475185546  -12475185546/7               2 -6237592773/7
+  8   3           21     14619453484  14619453484/21               4 3654863371/21
+  8   4           35               0               0               8            0
+  9   1            1   5629549881809   5629549881809               1 5629549881809
+  9   2            8  -5629549881792   -703693735224               2 -351846867612
+  9   3           28   6525375440480 1631343860120/7               4 407835965030/7
+  9   4           56               0               0               8            0
+
+KEY OBSERVATION:
+For r >= 4: alpha_{k,r} = 0 (true g_k has degree 3).
+So effective_w_r = 0 for r >= 4. The inter-cluster correlations
+produce a weight that is EXACTLY ZERO for 4+ separated clusters!
+
+For r = 1, 2, 3: effective weights are nonzero and k-dependent.
+The k-dependence of the effective weights is what makes g_k a
+degree-3 polynomial with k-dependent coefficients.
+
+==============================================================================
+FINAL SUMMARY
+==============================================================================
+
+WHY g_k(m) HAS DEGREE EXACTLY 3 FOR k >= 3:
+
+1. g_k(m) = sum_{r=1}^{min(k,3)} alpha_{k,r} * C(m,r) + 0 * C(m,4) + ... + 0 * C(m,k)
+
+2. The C(m,r) = 0 for r >= 4 because the effective weight of 4 or more
+   SEPARATED domino clusters is EXACTLY ZERO. This is not an approximation
+   -- it's an exact identity.
+
+3. The naive formula (independent clusters) predicts effective_w_r = 2^{r-1},
+   which is correct for r = 1, 2, 3 when k = 1, 2, 3 respectively.
+
+4. For r >= 4, the inter-cluster correlations in the Z_j variables
+   produce EXACT CANCELLATION of the product contribution. This is because:
+   - The 4-point function E[Z_{j1}Z_{j1+1} * Z_{j2}Z_{j2+1} * Z_{j3}Z_{j3+1} * Z_{j4}Z_{j4+1}]
+     (with all pairs well-separated) is NOT equal to h_1^4.
+   - The difference, when summed over all C(m,4) placements and normalized
+     by (n)_{2k}/2, gives a polynomial whose degree-4 coefficient is
+     EXACTLY -8 (the negative of the naive coefficient).
+
+5. DEGREE 3 IS SHARP: g_3 already has degree 3 (the naive formula is exact
+   for k=3), and for k >= 4, the three-cluster contributions survive while
+   four-cluster contributions cancel. So deg(g_k) = 3 for all k >= 3.
+
+6. The physical intuition: in a random permutation of n elements, having
+   4 or more disjoint unit-step patterns at distant positions is EXACTLY
+   as likely as having 3 such patterns times a correction that is O(1/n).
+   When aggregated over all placements, this O(1/n) correction precisely
+   cancels the C(m,4) growth, leaving the contribution bounded at degree 3.
+
+OPEN QUESTION: Prove that the effective 4-domino weight is exactly zero
+analytically. This would require computing the 4-point cumulant of the
+domino process and showing it exactly cancels the product moment.
+
+
+Done!
+==============================================================================
+j>=4 CORRECTION COEFFICIENTS IN SHIFTED BASIS C(m-1, j)
+==============================================================================
+
+From Part 14 of s112, the corrections E_k in C(m-1,j) basis are:
+k=4: [-8]*C(m-1,4)
+k=5: [160]*C(m-1,2) + [720]*C(m-1,3) + [-48]*C(m-1,4) + [-16]*C(m-1,5)
+k=6: large*C(m-1,2) + large*C(m-1,3) + [-160]*C(m-1,4) + [-112]*C(m-1,5) + [-32]*C(m-1,6)
+etc.
+
+The j>=4 coefficients are SMALL. Let's tabulate them:
+
+k=4: j>=4 coeffs: {4: -8}
+k=5: j>=4 coeffs: {4: -48, 5: -16}
+k=6: j>=4 coeffs: {4: -160, 5: -112, 6: -32}
+k=7: j>=4 coeffs: {4: -400, 5: -432, 6: -256, 7: -64}
+k=8: j>=4 coeffs: {4: -840, 5: -1232, 6: -1120, 7: -576, 8: -128}
+k=9: j>=4 coeffs: {4: -1568, 5: -2912, 6: -3584, 7: -2816, 8: -1280, 9: -256}
+
+Naive j>=4 coefficients for comparison:
+k=4: {4: 8}
+k=5: {4: 32, 5: 16}
+k=6: {4: 80, 5: 80, 6: 32}
+k=7: {4: 160, 5: 240, 6: 192, 7: 64}
+k=8: {4: 280, 5: 560, 6: 672, 7: 448, 8: 128}
+k=9: {4: 448, 5: 1120, 6: 1792, 7: 1792, 8: 1024, 9: 256}
+
+==============================================================================
+COMPARISON: shifted vs standard binomial correction at j>=4
+==============================================================================
+
+k=4:
+  Standard C(m,j) [j>=4]: [-8]
+  Shifted  C(m-1,j) [j>=4]: [-8]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-8]
+
+k=5:
+  Standard C(m,j) [j>=4]: [-32, -16]
+  Shifted  C(m-1,j) [j>=4]: [-48, -16]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-32, -16]
+
+k=6:
+  Standard C(m,j) [j>=4]: [-80, -80, -32]
+  Shifted  C(m-1,j) [j>=4]: [-160, -112, -32]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-80, -80, -32]
+
+k=7:
+  Standard C(m,j) [j>=4]: [-160, -240, -192, -64]
+  Shifted  C(m-1,j) [j>=4]: [-400, -432, -256, -64]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-160, -240, -192, -64]
+
+k=8:
+  Standard C(m,j) [j>=4]: [-280, -560, -672, -448, -128]
+  Shifted  C(m-1,j) [j>=4]: [-840, -1232, -1120, -576, -128]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-280, -560, -672, -448, -128]
+
+k=9:
+  Standard C(m,j) [j>=4]: [-448, -1120, -1792, -1792, -1024, -256]
+  Shifted  C(m-1,j) [j>=4]: [-1568, -2912, -3584, -2816, -1280, -256]
+  -Naive C(k-1,j-1)*2^(j-1) [j>=4]: [-448, -1120, -1792, -1792, -1024, -256]
+
+==============================================================================
+FACTORING THE SHIFTED j>=4 CORRECTION COEFFICIENTS
+==============================================================================
+
+  k   j    shifted coeff     =-C(k-1,j-1)*2^(j-1)?               factor
+----------------------------------------------------------------------
+  4   4               -8                       YES c/2^(j-1)=-1, c/C=-8
+  5   4              -48        NO (naive_neg=-32) c/2^(j-1)=-6, c/C=-12
+  5   5              -16                       YES c/2^(j-1)=-1, c/C=-16
+  6   4             -160        NO (naive_neg=-80) c/2^(j-1)=-20, c/C=-16
+  6   5             -112        NO (naive_neg=-80) c/2^(j-1)=-7, c/C=-112/5
+  6   6              -32                       YES c/2^(j-1)=-1, c/C=-32
+  7   4             -400       NO (naive_neg=-160) c/2^(j-1)=-50, c/C=-20
+  7   5             -432       NO (naive_neg=-240) c/2^(j-1)=-27, c/C=-144/5
+  7   6             -256       NO (naive_neg=-192) c/2^(j-1)=-8, c/C=-128/3
+  7   7              -64                       YES c/2^(j-1)=-1, c/C=-64
+  8   4             -840       NO (naive_neg=-280) c/2^(j-1)=-105, c/C=-24
+  8   5            -1232       NO (naive_neg=-560) c/2^(j-1)=-77, c/C=-176/5
+  8   6            -1120       NO (naive_neg=-672) c/2^(j-1)=-35, c/C=-160/3
+  8   7             -576       NO (naive_neg=-448) c/2^(j-1)=-9, c/C=-576/7
+  8   8             -128                       YES c/2^(j-1)=-1, c/C=-128
+  9   4            -1568       NO (naive_neg=-448) c/2^(j-1)=-196, c/C=-28
+  9   5            -2912      NO (naive_neg=-1120) c/2^(j-1)=-182, c/C=-208/5
+  9   6            -3584      NO (naive_neg=-1792) c/2^(j-1)=-112, c/C=-64
+  9   7            -2816      NO (naive_neg=-1792) c/2^(j-1)=-44, c/C=-704/7
+  9   8            -1280      NO (naive_neg=-1024) c/2^(j-1)=-10, c/C=-160
+  9   9             -256                       YES c/2^(j-1)=-1, c/C=-256
+
+==============================================================================
+SHIFTED j>=4 COEFFICIENTS: looking for 2^j * polynomial(k,j) pattern
+==============================================================================
+
+j=4:
+  k=4: coeff = -8, coeff/2^4 = -1/2
+  k=5: coeff = -48, coeff/2^4 = -3
+  k=6: coeff = -160, coeff/2^4 = -10
+  k=7: coeff = -400, coeff/2^4 = -25
+  k=8: coeff = -840, coeff/2^4 = -105/2
+  k=9: coeff = -1568, coeff/2^4 = -98
+
+j=5:
+  k=5: coeff = -16, coeff/2^5 = -1/2
+  k=6: coeff = -112, coeff/2^5 = -7/2
+  k=7: coeff = -432, coeff/2^5 = -27/2
+  k=8: coeff = -1232, coeff/2^5 = -77/2
+  k=9: coeff = -2912, coeff/2^5 = -91
+
+j=6:
+  k=6: coeff = -32, coeff/2^6 = -1/2
+  k=7: coeff = -256, coeff/2^6 = -4
+  k=8: coeff = -1120, coeff/2^6 = -35/2
+  k=9: coeff = -3584, coeff/2^6 = -56
+
+j=7:
+  k=7: coeff = -64, coeff/2^7 = -1/2
+  k=8: coeff = -576, coeff/2^7 = -9/2
+  k=9: coeff = -2816, coeff/2^7 = -22
+
+j=8:
+  k=8: coeff = -128, coeff/2^8 = -1/2
+  k=9: coeff = -1280, coeff/2^8 = -5
+
+j=9:
+  k=9: coeff = -256, coeff/2^9 = -1/2
+
+==============================================================================
+SHIFTED COEFFICIENTS / (-2^{j-1}): pattern in k?
+==============================================================================
+
+j=4: c_4^(k) / (-2^3) =
+  k=4: 1
+  k=5: 6
+  k=6: 20
+  k=7: 50
+  k=8: 105
+  k=9: 196
+  Forward differences: [[1.0, 6.0, 20.0, 50.0, 105.0, 196.0], [5.0, 14.0, 30.0, 55.0, 91.0], [9.0, 16.0, 25.0, 36.0], [7.0, 9.0, 11.0], [2.0, 2.0], [0.0]]
+
+j=5: c_5^(k) / (-2^4) =
+  k=5: 1
+  k=6: 7
+  k=7: 27
+  k=8: 77
+  k=9: 182
+  Forward differences: [[1.0, 7.0, 27.0, 77.0, 182.0], [6.0, 20.0, 50.0, 105.0], [14.0, 30.0, 55.0], [16.0, 25.0], [9.0]]
+
+j=6: c_6^(k) / (-2^5) =
+  k=6: 1
+  k=7: 8
+  k=8: 35
+  k=9: 112
+  Forward differences: [[1.0, 8.0, 35.0, 112.0], [7.0, 27.0, 77.0], [20.0, 50.0], [30.0]]
+
+j=7: c_7^(k) / (-2^6) =
+  k=7: 1
+  k=8: 9
+  k=9: 44
+  Forward differences: [[1.0, 9.0, 44.0], [8.0, 35.0], [27.0]]
+
+j=8: c_8^(k) / (-2^7) =
+  k=8: 1
+  k=9: 10
+
+j=9: c_9^(k) / (-2^8) =
+  k=9: 1
+
+==============================================================================
+PART F: REDISTRIBUTION POLYNOMIALS
+==============================================================================
+
+E_k(m) = [true g_k] - [naive g_k]
+       = [degree-3 polynomial] - [degree-k polynomial]
+
+The high-order (j>=4) part of naive = sum C(k-1,j-1)*2^{j-1}*C(m,j)
+always factors as: x*(x-1)*(x-2)*(x-3) * Q_{k-4}(x) / denominator
+where Q is a polynomial of degree k-4.
+
+This means: E_k has (x-1)(x-2) as a factor (confirmed: E_k(1)=E_k(2)=0).
+For k=4: E_4 = -(x-1)(x-2)(x-3)(x-4)/3
+  has EXTRA roots at x=3 and x=4!
+
+k=4: E_k factored = -(x - 4)*(x - 3)*(x - 2)*(x - 1)/3
+       E_k(3) = 0
+       E_k(4) = 0
+
+k=5: E_k factored = -2*(x - 2)*(x - 1)*(x**3 + 3*x**2 - 958*x + 2220)/15
+       E_k(3) = 160
+       E_k(4) = 1200
+
+k=6: E_k factored = -2*(x - 2)*(x - 1)*(x**4 + 3*x**3 + 17*x**2 - 522405*x + 1286100)/45
+       E_k(3) = 24960
+       E_k(4) = 214080
+
+k=7: E_k factored = -2*(x - 2)*(x - 1)*(2*x**5 + 6*x**4 + 49*x**3 + 135*x**2 - 1040878770*x + 2625386400)/315
+       E_k(3) = 6314240
+       E_k(4) = 58595040
+
+k=8: E_k factored = -(x - 2)*(x - 1)*(x**6 + 3*x**5 + 35*x**4 + 99*x**3 + 381*x**2 - 767521306965*x + 1964841725700)/315
+       E_k(3) = 2144267840
+       E_k(4) = 21052256640
+
+k=9: E_k factored = -2*(x - 2)*(x - 1)*(x**7 + 3*x**6 + 49*x**5 + 141*x**4 + 724*x**3 + 1890*x**2 - 1541619947808360*x + 3989943478731420)/2835
+       E_k(3) = 895825558560
+       E_k(4) = 9212852115600
+
+
+==============================================================================
+PART G: WHY alpha_{k,4} = 0 — the 4-body weight identity
+==============================================================================
+
+The effective weight for r clusters (all singletons) is:
+  w_r^eff(k) = alpha_{k,r} / C(k-1,r-1)
+
+For r=1,2,3 the weights are nonzero and k-dependent.
+For r=4, the weight is ZERO for ALL k>=4.
+
+This is equivalent to saying: the coefficient of C(m,4) in g_k(m)
+is zero for all k>=4.
+
+To see WHY, note that the 4-cluster contribution to g_k involves:
+  Sum over (s1,...,s4) with s_i>=1, sum=k of:
+    C(m,4) * weight(s1,...,s4; n)
+
+For the alpha_{k,4}=0 identity, we need:
+  Sum over compositions of k into 4 parts: weight(s1,...,s4; n) = 0
+
+For k=4: the only composition is (1,1,1,1).
+  weight(1,1,1,1; n) = 0
+  This is the 4-body EXACT CANCELLATION.
+
+For k=5: compositions are (2,1,1,1) (4 permutations) + (1,1,1,1) impossible.
+  Actually, compositions of 5 into 4 parts:
+  (2,1,1,1) and permutations: C(3,0)=1 way to pick which part is 2? No,
+  C(5-1,4-1) = C(4,3) = 4 total ordered compositions.
+
+k=4: compositions of k into 4 parts:
+  1 compositions
+    (1, 1, 1, 1)
+
+k=5: compositions of k into 4 parts:
+  4 compositions
+    (1, 1, 1, 2)
+    (1, 1, 2, 1)
+    (1, 2, 1, 1)
+    (2, 1, 1, 1)
+
+k=6: compositions of k into 4 parts:
+  10 compositions
+    (1, 1, 1, 3)
+    (1, 1, 2, 2)
+    (1, 1, 3, 1)
+    (1, 2, 1, 2)
+    (1, 2, 2, 1)
+    (1, 3, 1, 1)
+    (2, 1, 1, 2)
+    (2, 1, 2, 1)
+    (2, 2, 1, 1)
+    (3, 1, 1, 1)
+
+k=7: compositions of k into 4 parts:
+  20 compositions
+    (1, 1, 1, 4)
+    (1, 1, 2, 3)
+    (1, 1, 3, 2)
+    (1, 1, 4, 1)
+    (1, 2, 1, 3)
+    (1, 2, 2, 2)
+    (1, 2, 3, 1)
+    (1, 3, 1, 2)
+    (1, 3, 2, 1)
+    (1, 4, 1, 1)
+    ... (10 more)
+
+==============================================================================
+PART H: WHAT THE ZERO EFFECTIVE WEIGHT MEANS PHYSICALLY
+==============================================================================
+
+The effective r-cluster weight alpha_{k,r} / C(k-1,r-1) represents the
+AVERAGE weight of an r-cluster configuration, summed over all compositions
+of k into r parts, when placed with C(m,r) spacings.
+
+For r >= 4 clusters, this average is ZERO. This means the weights
+of different compositions (with their correlations) CANCEL each other.
+
+For r=4, k=4: the only composition is (1,1,1,1).
+  The weight is h_1^4 * [correlation correction] = 0.
+  This means the 4-body correlation for 4 separated single-dominos
+  is EXACTLY -h_1^4 (complete cancellation).
+
+For r=4, k=5: compositions are (2,1,1,1) in 4 orderings.
+  The total weight sum includes:
+  - 4 terms with one cluster of size 2 and three singletons
+  Their weights must sum to zero.
+
+For r=4, k=6: compositions (3,1,1,1), (2,2,1,1), etc.
+  Again, the weighted sum over all compositions must vanish.
+
+The PATTERN: for r >= 4, the r-cluster weight polynomial
+  W_r(k) = sum over compositions of k into r parts: weight(s1,...,sr; n=m+2k)
+vanishes as a polynomial in m at degree r.
+
+This is a NON-TRIVIAL identity about the multi-body correlations of the
+domino process {Z_j Z_{j+1}} in random permutations.
+
+PROOF APPROACH: This could potentially be proved by showing that the
+moment-generating function of the domino process has a special form
+(e.g., determinantal or Pfaffian structure) that forces the cumulants
+beyond order 3 to contribute only at bounded degree.
+
+==============================================================================
+PART I: VERIFYING 4-DOMINO WEIGHT IS ZERO
+==============================================================================
+
+For 4 separated single-dominos at positions p_1, p_1+1, p_2, p_2+1,
+p_3, p_3+1, p_4, p_4+1 (all gaps >= 1) in a permutation of n elements:
+
+E[Z_{p1}Z_{p1+1} * Z_{p2}Z_{p2+1} * Z_{p3}Z_{p3+1} * Z_{p4}Z_{p4+1}]
+
+The naive (product) approximation gives h_1^4 = 16/(n)_2^4.
+
+If the pairwise correlations are the ONLY correlations (no 3-body+),
+then the weight would be h_1^4 * rho^6 = 16/(n)_2^4 * [C(n,2)/C(n-2,2)]^6.
+
+The effective weight in g_k is:
+  alpha_{k,4}/C(k-1,3) * C(m,4) / [(n)_{2k}/2 * h_1^4 * C(m,4)]
+  = 0.
+
+This means EITHER:
+(a) The pairwise factorization is wrong (there are genuine 3-body and 4-body cumulants), OR
+(b) The pairwise rho^6 correction already gives zero.
+
+Let's check (b): does rho^6 * h_1^4 * (n)_8/2 * C(m,4) give the right g_4 coefficient?
+
+Pairwise rho^6 contribution (before C(m,4)):
+  = (8*n**10 - 200*n**9 + 1984*n**8 - 9936*n**7 + 26504*n**6 - 36904*n**5 + 25264*n**4 - 6720*n**3)/(n**10 - 25*n**9 + 280*n**8 - 1850*n**7 + 7985*n**6 - 23525*n**5 + 47910*n**4 - 66600*n**3 + 60480*n**2 - 32400*n + 7776)
+  = 8*n**3*(n - 7)*(n - 6)*(n - 5)*(n - 4)*(n - 1)**3/((n - 3)**5*(n - 2)**5)
+
+Substituting n = m + 8:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polyutils.py", line 231, in _parallel_dict_from_expr_if_gens
+    monom[indices[base]] = exp
+          ~~~~~~~^^^^^^
+KeyError: 1/(m**10 + 55*m**9 + 1360*m**8 + 19910*m**7 + 191105*m**6 + 1256651*m**5 + 5733150*m**4 + 17919000*m**3 + 36720000*m**2 + 44550000*m + 24300000)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\gk_degree_analysis_s112b.py", line 421, in <module>
+    p = Poly(ratio_m_expanded, m_sym)
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 190, in __new__
+    return cls._from_expr(rep, opt)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polytools.py", line 319, in _from_expr
+    rep, opt = _dict_from_expr(rep, opt)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polyutils.py", line 388, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polyutils.py", line 327, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sympy\polys\polyutils.py", line 236, in _parallel_dict_from_expr_if_gens
+    raise PolynomialError("%s contains an element of "
+                          "the set of generators." % factor)
+sympy.polys.polyerrors.PolynomialError: 1/(m**10 + 55*m**9 + 1360*m**8 + 19910*m**7 + 191105*m**6 + 1256651*m**5 + 5733150*m**4 + 17919000*m**3 + 36720000*m**2 + 44550000*m + 24300000) contains an element of the set of generators.

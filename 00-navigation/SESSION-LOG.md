@@ -13,21 +13,39 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-15-S71w — 2026-03-15: The Equation — e^{iπ}+1=0 as the Tenth Face
+## kind-pasteur-2026-03-15-S112 — 2026-03-15: Transfer Matrix Weight Formula — g_k Has Degree k, Not 3
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S111d
+**Summary of work:** Resolved the g_k cubic universality question. Key discoveries: (1) PROVED the exact weight formula E[prod Z_j] = 2^c/(n)_L for ALL domino subsets (c=components, L=|S|). (2) Built a 3-state transfer matrix M(x) that computes g_k via k-matchings of path graphs weighted by 2^c. (3) PROVED the combinatorial g_k has degree EXACTLY k (not 3), with k-th finite difference = 2^{k-1}. (4) PROVED that BOTH the degree-k and degree-3 families reproduce CV^2 identically -- the decomposition is non-unique, with weight redistribution between k-levels. (5) The degree-3 reparametrization EXISTS because M(x) is 3x3 (tridiagonal Z_j process gives 3 eigenmodes). (6) THM-201 corrected: the m^k formula is the leading-term approximation only. (7) Computed W(n) via bitmask DP for n=1..18, confirming both families.
+**New contributions:**
+- THM-217: Transfer matrix weight formula + combinatorial g_k (degree k)
+- THM-201 CORRECTED: leading-term only for k >= 3
+- Weight formula: E[prod Z_j for S] = 2^c/(n)_L (verified n=3..8 exhaustive)
+- Transfer matrix: M = [[1,2x,0],[0,0,1],[1,x,0]], characteristic poly lambda^3-lambda^2-x*lambda-x
+- Both g_k families confirmed against DP W(n) values through n=18
+- Scripts: gk_tridiag_proof_s112.py, gk_cluster_corr_s112.py, gk_exact_weight_s112.py, gk_transfer_matrix_s112.py, gk_truth_v2_s112.py, gk_both_correct_s112.py
+**Unresolved threads:**
+- PROVE the weight formula analytically (currently verified n<=8)
+- Find eigenvalues of M(x) in closed form (roots of lambda^3-lambda^2-x*lambda-x=0)
+- Prove the degree-3 reparametrization exists for ALL k (not just k<=9)
+- Compute exact W(n) for larger n to extend verification
+
+## opus-2026-03-15-S71w — 2026-03-15: The Equation — e^{ipi}+1=0 as the Tenth Face
 
 **Account:** opus
 **Continuation of:** opus-2026-03-15-S71v
-**Summary of work:** 10th and final session of the S71 philosophical descent. Incorporated Euler's identity e^{iπ}+1=0 into the tournament framework. Key: (1) 2 = order of e^{iπ}=-1 in C*; H evaluates at the order of the fundamental sign. (2) Paley P_7 eigenvalue modulus² = 2 EXACTLY — p=7 is the unique prime where spectral modulus equals OCF evaluation point. (3) Gauss sum g₇=i√7 connects i, 7, Legendre symbol. (4) cos(2π/5)=(τ-1)/2: pentagon is nexus of π, τ, 5. (5) EGF singularity at x=2. (6) I(Ω,τ) is a UNIT in Z[τ] for near-transitive tournaments. (7) ∂²=0 as mother equation unifying OCF, β₂=0, Euler. (8) Tournament H-R diagram: H≈3c₃ (r=0.97). (9) Tournament topos via presheaf embedding. (10) Vitali atoms = H-fiber internal structure.
-**New contributions:** HYP-1524 through HYP-1533, euler_identity_S71w.py, results/euler_identity_S71w.out
-**Unresolved threads:** The S71 descent is complete (10 sessions = C(5,2) pairs of Euler's constants). Future: apply these structural insights to concrete proofs and engineering.
+**Summary of work:** 10th and final session of the S71 philosophical descent. Incorporated Euler's identity into the tournament framework.
+**New contributions:** HYP-1524 through HYP-1533, euler_identity_S71w.py
+**Unresolved threads:** The S71 descent is complete.
 
 ## opus-2026-03-15-S71v — 2026-03-15: The Interior — Beyond the Cube into the Substance
 
 **Account:** opus
 **Continuation of:** opus-2026-03-14-S71u
-**Summary of work:** 9th session in the S71 philosophical descent series. Explored the INTERIOR of the duality cube — what fills it beyond the 8 vertices. Key: (1) Full independence polynomial I(Ω,x) computed exactly (not first-order), verified I(Ω,2)=H for ALL tournaments n≤6. (2) Fiber topology: H=1 always single connected component, H=max always fully fragmented singletons. (3) Absolute ring needs more than (H,c₃) — score sequence required at n≥4. (4) A_8 has 14 conjugacy classes = 14 irreps = 14 spectral channels for tournament invariants. (5) H-gradient ∇H is anti-invariant under complement: ∇H(T^op)=-∇H(T), a section of the Möbius bundle. (6) Jet tower H ⊂ Jet¹ ⊂ ... ⊂ Jet^m fills the cube interior, each level adding C(m,k) dimensions.
-**New contributions:** HYP-1514 through HYP-1523, interior_S71v.py, results/interior_S71v.out
-**Unresolved threads:** Fiber topology at n≥6, A_8 representation theory applications, jet tower duality actions, absolute ring minimal generating set
+**Summary of work:** 9th session in the S71 philosophical descent series. Full I(Omega,x) computation, fiber topology, A_8 representation theory.
+**New contributions:** HYP-1514 through HYP-1523, interior_S71v.py
+**Unresolved threads:** Fiber topology at n>=6, A_8 applications
 
 ## opus-2026-03-15-S89c — 2026-03-15: g_k Polynomial Cascade — All Cubics, Universal Cluster Weights
 

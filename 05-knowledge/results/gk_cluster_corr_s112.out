@@ -1,0 +1,185 @@
+======================================================================
+CLUSTER CORRELATION ANALYSIS
+======================================================================
+
+==================================================
+n = 3
+==================================================
+
+  cluster sizes=(2,), gaps=(): 1 subsets, all same=True, val=1/3
+    vs 2^1/(n)_{2} = 1/3, ratio = 1
+
+==================================================
+n = 4
+==================================================
+
+  cluster sizes=(2,), gaps=(): 2 subsets, all same=True, val=1/6
+    vs 2^1/(n)_{2} = 1/6, ratio = 1
+
+==================================================
+n = 5
+==================================================
+
+  cluster sizes=(2,), gaps=(): 3 subsets, all same=True, val=1/10
+    vs 2^1/(n)_{2} = 1/10, ratio = 1
+
+  cluster sizes=(4,), gaps=(): 1 subsets, all same=True, val=1/60
+    vs 2^2/(n)_{4} = 1/30, ratio = 1/2
+
+==================================================
+n = 6
+==================================================
+
+  cluster sizes=(2,), gaps=(): 4 subsets, all same=True, val=1/15
+    vs 2^1/(n)_{2} = 1/15, ratio = 1
+
+  cluster sizes=(2, 2), gaps=(1,): 1 subsets, all same=True, val=1/90
+    vs 2^2/(n)_{4} = 1/90, ratio = 1
+
+  cluster sizes=(4,), gaps=(): 2 subsets, all same=True, val=1/180
+    vs 2^2/(n)_{4} = 1/90, ratio = 1/2
+
+==================================================
+n = 7
+==================================================
+
+  cluster sizes=(2,), gaps=(): 5 subsets, all same=True, val=1/21
+    vs 2^1/(n)_{2} = 1/21, ratio = 1
+
+  cluster sizes=(2, 2), gaps=(1,): 2 subsets, all same=True, val=1/210
+    vs 2^2/(n)_{4} = 1/210, ratio = 1
+
+  cluster sizes=(2, 2), gaps=(2,): 1 subsets, all same=True, val=1/210
+    vs 2^2/(n)_{4} = 1/210, ratio = 1
+
+  cluster sizes=(4,), gaps=(): 3 subsets, all same=True, val=1/420
+    vs 2^2/(n)_{4} = 1/210, ratio = 1/2
+
+  cluster sizes=(6,), gaps=(): 1 subsets, all same=True, val=1/2520
+    vs 2^3/(n)_{6} = 1/630, ratio = 1/4
+
+==================================================
+n = 8
+==================================================
+
+  cluster sizes=(2,), gaps=(): 6 subsets, all same=True, val=1/28
+    vs 2^1/(n)_{2} = 1/28, ratio = 1
+
+  cluster sizes=(2, 2), gaps=(1,): 3 subsets, all same=True, val=1/420
+    vs 2^2/(n)_{4} = 1/420, ratio = 1
+
+  cluster sizes=(2, 2), gaps=(2,): 2 subsets, all same=True, val=1/420
+    vs 2^2/(n)_{4} = 1/420, ratio = 1
+
+  cluster sizes=(2, 2), gaps=(3,): 1 subsets, all same=True, val=1/420
+    vs 2^2/(n)_{4} = 1/420, ratio = 1
+
+  cluster sizes=(2, 4), gaps=(1,): 1 subsets, all same=True, val=1/5040
+    vs 2^3/(n)_{6} = 1/2520, ratio = 1/2
+
+  cluster sizes=(4,), gaps=(): 4 subsets, all same=True, val=1/840
+    vs 2^2/(n)_{4} = 1/420, ratio = 1/2
+
+  cluster sizes=(4, 2), gaps=(1,): 1 subsets, all same=True, val=1/5040
+    vs 2^3/(n)_{6} = 1/2520, ratio = 1/2
+
+  cluster sizes=(6,), gaps=(): 2 subsets, all same=True, val=1/10080
+    vs 2^3/(n)_{6} = 1/2520, ratio = 1/4
+
+======================================================================
+SEPARATED PAIRS HYPOTHESIS: E[prod] = 2^r / (n)_{2r}
+======================================================================
+
+n=5:
+
+n=6:
+  S=[0, 1, 3, 4], 2 sep pairs, gaps=[1]: E=1/90, pred=1/90 OK
+
+n=7:
+  S=[0, 1, 3, 4], 2 sep pairs, gaps=[1]: E=1/210, pred=1/210 OK
+  S=[0, 1, 4, 5], 2 sep pairs, gaps=[2]: E=1/210, pred=1/210 OK
+  S=[1, 2, 4, 5], 2 sep pairs, gaps=[1]: E=1/210, pred=1/210 OK
+
+n=8:
+  S=[0, 1, 3, 4], 2 sep pairs, gaps=[1]: E=1/420, pred=1/420 OK
+  S=[0, 1, 4, 5], 2 sep pairs, gaps=[2]: E=1/420, pred=1/420 OK
+  S=[0, 1, 5, 6], 2 sep pairs, gaps=[3]: E=1/420, pred=1/420 OK
+  S=[1, 2, 4, 5], 2 sep pairs, gaps=[1]: E=1/420, pred=1/420 OK
+  S=[1, 2, 5, 6], 2 sep pairs, gaps=[2]: E=1/420, pred=1/420 OK
+  S=[2, 3, 5, 6], 2 sep pairs, gaps=[1]: E=1/420, pred=1/420 OK
+
+======================================================================
+CONNECTED CUMULANTS
+======================================================================
+If separated pairs factorize as 2^r/(n)_{2r},
+then connected cumulants come only from OVERLAPPING clusters.
+
+n=5:
+  contiguous L=4: E=1/60, sep_pred=1/30, ratio=1/2, excess=-1/60
+
+n=6:
+  contiguous L=4: E=1/180, sep_pred=1/90, ratio=1/2, excess=-1/180
+  contiguous L=4: E=1/180, sep_pred=1/90, ratio=1/2, excess=-1/180
+
+n=7:
+  contiguous L=4: E=1/420, sep_pred=1/210, ratio=1/2, excess=-1/420
+  contiguous L=4: E=1/420, sep_pred=1/210, ratio=1/2, excess=-1/420
+  contiguous L=4: E=1/420, sep_pred=1/210, ratio=1/2, excess=-1/420
+  contiguous L=6: E=1/2520, sep_pred=1/630, ratio=1/4, excess=-1/840
+
+n=8:
+  contiguous L=4: E=1/840, sep_pred=1/420, ratio=1/2, excess=-1/840
+  contiguous L=4: E=1/840, sep_pred=1/420, ratio=1/2, excess=-1/840
+  contiguous L=4: E=1/840, sep_pred=1/420, ratio=1/2, excess=-1/840
+  contiguous L=4: E=1/840, sep_pred=1/420, ratio=1/2, excess=-1/840
+  contiguous L=6: E=1/10080, sep_pred=1/2520, ratio=1/4, excess=-1/3360
+  contiguous L=6: E=1/10080, sep_pred=1/2520, ratio=1/4, excess=-1/3360
+
+======================================================================
+CONTIGUOUS BLOCK EXPECTATIONS
+======================================================================
+
+n=4:
+  block L=2: E=1/6
+    vs 2^1/(n)_{2} = 1/6 (ratio 1)
+    vs 2/(n)_{2} = 1/6 (ratio 1)
+
+n=5:
+  block L=2: E=1/10
+    vs 2^1/(n)_{2} = 1/10 (ratio 1)
+    vs 2/(n)_{2} = 1/10 (ratio 1)
+  block L=4: E=1/60
+    vs 2^2/(n)_{4} = 1/30 (ratio 1/2)
+    vs 2/(n)_{4} = 1/60 (ratio 1)
+
+n=6:
+  block L=2: E=1/15
+    vs 2^1/(n)_{2} = 1/15 (ratio 1)
+    vs 2/(n)_{2} = 1/15 (ratio 1)
+  block L=4: E=1/180
+    vs 2^2/(n)_{4} = 1/90 (ratio 1/2)
+    vs 2/(n)_{4} = 1/180 (ratio 1)
+
+n=7:
+  block L=2: E=1/21
+    vs 2^1/(n)_{2} = 1/21 (ratio 1)
+    vs 2/(n)_{2} = 1/21 (ratio 1)
+  block L=4: E=1/420
+    vs 2^2/(n)_{4} = 1/210 (ratio 1/2)
+    vs 2/(n)_{4} = 1/420 (ratio 1)
+  block L=6: E=1/2520
+    vs 2^3/(n)_{6} = 1/630 (ratio 1/4)
+    vs 2/(n)_{6} = 1/2520 (ratio 1)
+
+n=8:
+  block L=2: E=1/28
+    vs 2^1/(n)_{2} = 1/28 (ratio 1)
+    vs 2/(n)_{2} = 1/28 (ratio 1)
+  block L=4: E=1/840
+    vs 2^2/(n)_{4} = 1/420 (ratio 1/2)
+    vs 2/(n)_{4} = 1/840 (ratio 1)
+  block L=6: E=1/10080
+    vs 2^3/(n)_{6} = 1/2520 (ratio 1/4)
+    vs 2/(n)_{6} = 1/10080 (ratio 1)
+
+Done!

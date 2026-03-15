@@ -1,0 +1,90 @@
+TESTING: E[prod Z_j] = 2^c / (n)_L
+where c = #components, L = #positions
+============================================================
+
+n=6:
+  S=[0, 1], comps=(2,), c=1, L=2: OK
+  S=[1, 2], comps=(2,), c=1, L=2: OK
+  S=[2, 3], comps=(2,), c=1, L=2: OK
+  S=[3, 4], comps=(2,), c=1, L=2: OK
+  S=[0, 1, 2, 3], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 3, 4], comps=(2, 2), c=2, L=4: OK
+  S=[1, 2, 3, 4], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 2, 3], comps=(4,), c=1, L=4: OK
+  S=[1, 2, 3, 4], comps=(4,), c=1, L=4: OK
+
+n=7:
+  S=[0, 1], comps=(2,), c=1, L=2: OK
+  S=[1, 2], comps=(2,), c=1, L=2: OK
+  S=[2, 3], comps=(2,), c=1, L=2: OK
+  S=[3, 4], comps=(2,), c=1, L=2: OK
+  S=[4, 5], comps=(2,), c=1, L=2: OK
+  S=[0, 1, 2, 3], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 3, 4], comps=(2, 2), c=2, L=4: OK
+  S=[0, 1, 4, 5], comps=(2, 2), c=2, L=4: OK
+  S=[1, 2, 3, 4], comps=(4,), c=1, L=4: OK
+  S=[1, 2, 4, 5], comps=(2, 2), c=2, L=4: OK
+  S=[2, 3, 4, 5], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 2, 3], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 2, 3, 4, 5], comps=(6,), c=1, L=6: OK
+  S=[1, 2, 3, 4], comps=(4,), c=1, L=4: OK
+  S=[2, 3, 4, 5], comps=(4,), c=1, L=4: OK
+
+n=8:
+  S=[0, 1], comps=(2,), c=1, L=2: OK
+  S=[1, 2], comps=(2,), c=1, L=2: OK
+  S=[2, 3], comps=(2,), c=1, L=2: OK
+  S=[3, 4], comps=(2,), c=1, L=2: OK
+  S=[4, 5], comps=(2,), c=1, L=2: OK
+  S=[5, 6], comps=(2,), c=1, L=2: OK
+  S=[0, 1, 2, 3], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 3, 4], comps=(2, 2), c=2, L=4: OK
+  S=[0, 1, 4, 5], comps=(2, 2), c=2, L=4: OK
+  S=[0, 1, 5, 6], comps=(2, 2), c=2, L=4: OK
+  S=[1, 2, 3, 4], comps=(4,), c=1, L=4: OK
+  S=[1, 2, 4, 5], comps=(2, 2), c=2, L=4: OK
+  S=[1, 2, 5, 6], comps=(2, 2), c=2, L=4: OK
+  S=[2, 3, 4, 5], comps=(4,), c=1, L=4: OK
+  S=[2, 3, 5, 6], comps=(2, 2), c=2, L=4: OK
+  S=[3, 4, 5, 6], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 2, 3], comps=(4,), c=1, L=4: OK
+  S=[0, 1, 2, 3, 4, 5], comps=(6,), c=1, L=6: OK
+  S=[0, 1, 2, 3, 5, 6], comps=(4, 2), c=2, L=6: OK
+  S=[0, 1, 3, 4, 5, 6], comps=(2, 4), c=2, L=6: OK
+  S=[1, 2, 3, 4], comps=(4,), c=1, L=4: OK
+  S=[1, 2, 3, 4, 5, 6], comps=(6,), c=1, L=6: OK
+  S=[2, 3, 4, 5], comps=(4,), c=1, L=4: OK
+  S=[3, 4, 5, 6], comps=(4,), c=1, L=4: OK
+
+============================================================
+DERIVE g_k FROM WEIGHT FORMULA
+============================================================
+E_{2k}/E_0 = sum over configs of r pairs from m=n-2 slots
+         = sum over domino subsets S with |S|=2k of 2^c/(n)_L
+where c=#components, L=|S|=2k
+So factor out 1/(n)_{2k}: g_k(m)/(n)_{2k} * 2 = sum 2^c/(n)_{2k}
+=> contribution = (sum 2^{c-1}) * 2/(n)_{2k}
+=> g_k(m) = sum over configs of k pairs in m+2k-1 positions of 2^{c-1}
+
+Wait, that's not right. Let me reconsider.
+
+Actually: the sum over all k-pair domino configs in positions 0..n-2
+of E[prod Z] = sum of 2^c/(n)_{|S|}.
+But |S| is NOT always 2k! Overlapping pairs share positions.
+
+CAREFUL DECOMPOSITION:
+
+n=5, k=1: total=0.30000000, pred=0.30000000, FAIL
+  type (2,): 0.3000000000
+n=5, k=2: total=0.08333333, pred=0.01666667, FAIL
+  type (3,): 0.0666666667
+  type (4,): 0.0166666667
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\gk_exact_weight_s112.py", line 221, in <module>
+    pred = 2 * gk / falling_factorial(n, 2*k)
+           ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\fractions.py", line 670, in forward
+    return monomorphic_operator(a, Fraction(b))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\fractions.py", line 816, in _div
+    raise ZeroDivisionError('Fraction(%s, 0)' % db)
+ZeroDivisionError: Fraction(1, 0)
