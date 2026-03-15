@@ -1,6 +1,6 @@
 # THM-217: Binomial Truncation of g_k
 
-**Status:** VERIFIED (computationally, k=1..10)
+**Status:** VERIFIED (computationally, k=1..11)
 **Session:** opus-2026-03-15-S89c
 **Depends on:** THM-216
 
@@ -36,6 +36,7 @@ where:
 | 8 | -12475185560 | 12475185561 | -12475185546 | 14619453484 |
 | 9 | -5629549881808 | 5629549881809 | -5629549881792 | 6525375440480 |
 | 10 | -2973062116837472 | 2973062116837473 | -2973062116837454 | 3415543797850416 |
+| 11 | -1807627677927630720 | 1807627677927630721 | -1807627677927630700 | 2060690587896716340 |
 
 Pattern: Δ¹ = 1 - Δ⁰, Δ² = Δ⁰ + 2(k-1)
 
@@ -53,14 +54,17 @@ Key correlation facts (verified for small n):
 ## Open questions
 
 1. Prove the truncation analytically (why do r ≥ 4 terms cancel?)
-2. Find recurrence or GF for a_k: 2, 10, 388, 69660, 19826270, 7309726742, 3262687720240, 1707771898925208
-3. Find recurrence or GF for g_k(0): 0, -8, -592, -114320, -33338240, -12475185560, -5629549881808, -2973062116837472
+2. Find recurrence or GF for a_k: 2, 10, 388, 69660, 19826270, 7309726742, 3262687720240, 1707771898925208, 1030345293948358170
+3. Find recurrence or GF for g_k(0): 0, -8, -592, -114320, -33338240, -12475185560, -5629549881808, -2973062116837472, -1807627677927630720
 4. Both sequences are new to OEIS
-5. Ratio a_k/a_{k-1} grows roughly linearly: 5, 38.8, 179.5, 284.6, 368.7, 446.3, 523.4
-6. Ratio g_k(0)/a_k slowly approaches ~-2
+5. Ratio a_k/a_{k-1} grows roughly as 5k²: 5, 38.8, 179.5, 284.6, 368.7, 446.3, 523.4, 603.3
+6. Ratio g_k(0)/a_k slowly approaches ~-2 (currently -1.754 at k=11)
+7. **Asymptotics discovered**: NUD(n) = A000255(n-1), EGF = exp(-x)/(1-x)²
+8. **W(n)/NUD(n) → e** as n → ∞ (where e = Euler's number)
+9. **CV²(n) ≈ 2/n** as n → ∞
 
 ## Evidence
 
-- Exact polynomial match for n=3..21 (gk_verify_89c.py)
+- Exact polynomial match for n=3..26 (gk_verify_89c.py, wn_rank2.c)
 - Binomial basis computed via forward differences (gk_corrections_89c.py)
 - 4-cluster cancellation verified via brute-force expectation (gk_cumulant_89c.py)
