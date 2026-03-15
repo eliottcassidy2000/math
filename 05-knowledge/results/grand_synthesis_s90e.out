@@ -1,0 +1,61 @@
+======================================================================
+PART 1: DOES THE NEAR-TRANSITIVE TOURNAMENT HAVE β₁ = 1?
+======================================================================
+n=3: near-trans β₁ = 1, transitive β₁ = 0
+       c₃=1, H=3, sim_H=1
+       ker(∂₁)=1, rank(∂₂)=0, #edges=3, #2-paths=0
+n=4: near-trans β₁ = 1, transitive β₁ = 0
+       c₃=2, H=5, sim_H=1
+       ker(∂₁)=3, rank(∂₂)=2, #edges=6, #2-paths=2
+n=5: near-trans β₁ = 1, transitive β₁ = 0
+       c₃=3, H=9, sim_H=1
+       ker(∂₁)=6, rank(∂₂)=5, #edges=10, #2-paths=7
+n=6: near-trans β₁ = 1, transitive β₁ = 0
+       c₃=4, H=17, sim_H=1
+       ker(∂₁)=10, rank(∂₂)=9, #edges=15, #2-paths=16
+n=7: near-trans β₁ = 1, transitive β₁ = 0
+       c₃=5, H=33, sim_H=1
+       ker(∂₁)=15, rank(∂₂)=14, #edges=21, #2-paths=30
+n=8: near-trans β₁ = 1, transitive β₁ = 0
+       c₃=6, H=65, sim_H=1
+       ker(∂₁)=21, rank(∂₂)=20, #edges=28, #2-paths=50
+
+======================================================================
+PART 2: THE TWIST IS THE PORTAL — DUAL PERSPECTIVES
+======================================================================
+
+If β₁ = 1 for the near-transitive tournament, then:
+
+  sim_H = 1: There exists a UNIQUE simplicial Hamiltonian path.
+  β₁ = 1:    There exists a 1-cycle that NO triple boundary can fill.
+
+These are DUAL:
+  - The simplicial path is the unique GLOBAL SECTION of the covering.
+  - The unbounding cycle is the TWIST that prevents local-to-global patching.
+  - Both arise from the SAME reversed arc (the portal).
+
+THE PORTAL AS MÖBIUS TWIST:
+  The reversed arc (n-1)→0 creates a "wormhole" from bottom to top.
+  Locally, every edge is covered by a transitive triple.
+  But globally, the cycle 0→k→(n-1)→0 can't be decomposed into triples
+  because it goes BACKWARDS through the portal.
+
+  This is exactly the Möbius strip: locally flat, globally twisted.
+
+THE CAYLEY CONNECTION:
+  Q²(x) = -1/x is the ORIENTATION REVERSAL.
+  The portal reverses an arc: T[max][min] → T[min][max].
+  This is a LOCAL application of Q² to the single arc.
+  The Möbius twist β₁=1 detects this single reversal homologically.
+
+SPACE-TIME INTERPRETATION (kind-pasteur):
+  cosh = the transitive core = spatial structure = simplicial skeleton
+  sinh = the odd cycles = temporal structure = directed loops
+  The portal is a SINGULARITY where space becomes time:
+    the transitive arc (space-like) becomes a cycle arc (time-like).
+
+n=5 near-transitive: ker(∂₁) dim = 6, rank(∂₂) = 10, β₁ = -4
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/grand_synthesis_s90e.py", line 258, in <module>
+    if kd1 > rank_d2:
+NameError: name 'rank_d2' is not defined. Did you mean: 'rank_d2_n5'?
