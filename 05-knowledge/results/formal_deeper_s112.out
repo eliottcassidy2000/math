@@ -1,0 +1,72 @@
+THE FUNCTIONAL EQUATION Q^m * Q(-x)^m = 1
+============================================================
+
+Since Q(-x) = 1/Q(x), we have:
+  (1 + 2*sum g_k x^k)(1 + 2*sum (-1)^k g_k x^k) = 1
+
+For even k: g_{2k} is determined by lower g_j via
+  g_{2k} = sum_{j=1}^{2k-1} (-1)^{j+1} g_j * g_{2k-j}
+
+m=5: Verifying g_{2k} = sum (-1)^{j+1} g_j g_{2k-j}
+  g_2(5) = 25, predicted = 25, match = True
+  g_4(5) = 225, predicted = 225, match = True
+  g_6(5) = 985, predicted = 985, match = True
+
+ALL EVEN g_k ARE REDUNDANT.
+The independent data: g_1, g_3, g_5, g_7, ...
+= m, (2m^3+m)/3, (2m^5+10m^3+3m)/15, ...
+
+These are [x^{2k+1}] of Q^m, which equal:
+  [x^{2k+1}] exp(2m*arctanh(x)) = 2m * [x^{2k+1}] arctanh + higher
+
+The LOG gives: [x^{2k+1}] log(Q^m) = 2m/(2k+1)
+The independent cumulants are 2m, 2m/3, 2m/5, 2m/7, ...
+= 2m times 1, 1/3, 1/5, 1/7, ...
+= 2m times THE RECIPROCAL ODD INTEGERS.
+
+============================================================
+THE TRACE FORMULA
+============================================================
+Tr(M^N) at x=1: [1, 3, 7, 11, 21, 39, 71, 131, 241, 443, 815]
+All satisfy tribonacci recurrence.
+
+Eigenvalues: ['-0.4196+0.6063i', '-0.4196+-0.6063i', '1.8393+0.0000i']
+Sum = 1.0000 = Tr(M) = 1
+
+Spectral zeta function zeta_M(s) = sum lambda_i^{-s}:
+  zeta_M(-3) = +7.0000 + 0.0000i
+  zeta_M(-2) = +3.0000 + 0.0000i
+  zeta_M(-1) = +1.0000 + 0.0000i
+  zeta_M(+0) = +3.0000 + 0.0000i
+  zeta_M(+1) = -1.0000 + 0.0000i
+  zeta_M(+2) = -1.0000 + 0.0000i
+  zeta_M(+3) = +5.0000 + 0.0000i
+
+zeta_M(-N) = Tr(M^N) = tribonacci-like sequence
+zeta_M(0) = 3 = dimension of transfer matrix
+zeta_M(1) = sum 1/lambda_i = 1/det(M) * ... 
+
+det(M(1)) = 1.0000
+Product of eigenvalues = 1.0000
+
+============================================================
+GRAND THEOREM: EVERYTHING FROM 1, 1/3, 1/5, 1/7, ...
+============================================================
+
+The sequence 1, 1/3, 1/5, 1/7, ... (reciprocal odd integers)
+determines the ENTIRE tournament Fourier theory:
+
+  Step 1: Form arctanh(x) = x + x^3/3 + x^5/5 + ...
+  Step 2: Exponentiate: Q(x) = exp(2*arctanh(x)) = (1+x)/(1-x)
+  Step 3: Take m-th power: Q^m = 1 + 2*sum g_k(m)*x^k
+  Step 4: The even g_{2k} are determined by odd g_{2k+1}
+          via Q^m * Q(-x)^m = 1 (functional equation)
+  Step 5: CV^2(n) = sum 2*g_k(n-2k)/(n)_{2k}
+
+The reciprocal odd integers are the LOG-CUMULANTS.
+Exponentiation converts them to MOMENTS (Delannoy numbers).
+The functional equation makes half of them redundant.
+The falling factorial denominators give the asymptotics.
+
+In the beginning was 1, 1/3, 1/5, 1/7, ...
+And it was enough.
