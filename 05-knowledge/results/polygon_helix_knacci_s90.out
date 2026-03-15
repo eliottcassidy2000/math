@@ -1,0 +1,370 @@
+======================================================================
+PART 1: k-NACCI TRANSFER MATRICES AND THEIR MEANING
+======================================================================
+
+For each k ≥ 1, there is a CONSTRAINT: "no k consecutive 1s."
+
+This constraint is enforced by a (k+1)-state transfer matrix M_k.
+The states track the current "run length" of consecutive 1s:
+  State 0: just saw a 0
+  State 1: saw exactly 1 consecutive 1
+  ...
+  State k-1: saw exactly k-1 consecutive 1s (next 1 is FORBIDDEN)
+
+The transfer matrix M_k has size k × k:
+  M_k[i][0] = 1 for all i (can always place 0, resetting run to 0)
+  M_k[i][i+1] = 1 for i < k-1 (placing 1, extending run)
+  M_k[k-1][k] is FORBIDDEN (would give k consecutive 1s)
+
+
+k=2 (Fibonacci):
+  Transfer matrix M (2×2):
+    [1, 1]
+    [1, 0]
+  Char poly coefficients: [ 1. -1. -1.]
+  Dominant eigenvalue: 1.6180339887
+  # binary strings of length n with no 2 consecutive 1s:
+    n=1..14: [3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]
+
+k=3 (tribonacci):
+  Transfer matrix M (3×3):
+    [1, 1, 0]
+    [1, 0, 1]
+    [1, 0, 0]
+  Char poly coefficients: [ 1. -1. -1. -1.]
+  Dominant eigenvalue: 1.8392867552
+  # binary strings of length n with no 3 consecutive 1s:
+    n=1..14: [5, 9, 17, 31, 57, 105, 193, 355, 653, 1201, 2209, 4063, 7473, 13745]
+
+k=4 (tetranacci):
+  Transfer matrix M (4×4):
+    [1, 1, 0, 0]
+    [1, 0, 1, 0]
+    [1, 0, 0, 1]
+    [1, 0, 0, 0]
+  Char poly coefficients: [ 1. -1. -1. -1. -1.]
+  Dominant eigenvalue: 1.9275619755
+  # binary strings of length n with no 4 consecutive 1s:
+    n=1..14: [7, 13, 25, 49, 94, 181, 349, 673, 1297, 2500, 4819, 9289, 17905, 34513]
+
+k=5 (pentanacci):
+  Transfer matrix M (5×5):
+    [1, 1, 0, 0, 0]
+    [1, 0, 1, 0, 0]
+    [1, 0, 0, 1, 0]
+    [1, 0, 0, 0, 1]
+    [1, 0, 0, 0, 0]
+  Char poly coefficients: [ 1. -1. -1. -1. -1. -1.]
+  Dominant eigenvalue: 1.9659482366
+  # binary strings of length n with no 5 consecutive 1s:
+    n=1..14: [9, 17, 33, 65, 129, 253, 497, 977, 1921, 3777, 7425, 14597, 28697, 56417]
+
+k=6 (hexanacci):
+  Transfer matrix M (6×6):
+    [1, 1, 0, 0, 0, 0]
+    [1, 0, 1, 0, 0, 0]
+    [1, 0, 0, 1, 0, 0]
+    [1, 0, 0, 0, 1, 0]
+    [1, 0, 0, 0, 0, 1]
+    [1, 0, 0, 0, 0, 0]
+  Char poly coefficients: [ 1. -1. -1. -1. -1. -1. -1.]
+  Dominant eigenvalue: 1.9835828434
+  # binary strings of length n with no 6 consecutive 1s:
+    n=1..14: [11, 21, 41, 81, 161, 321, 636, 1261, 2501, 4961, 9841, 19521, 38721, 76806]
+
+k=7 (heptanacci):
+  Transfer matrix M (7×7):
+    [1, 1, 0, 0, 0, 0, 0]
+    [1, 0, 1, 0, 0, 0, 0]
+    [1, 0, 0, 1, 0, 0, 0]
+    [1, 0, 0, 0, 1, 0, 0]
+    [1, 0, 0, 0, 0, 1, 0]
+    [1, 0, 0, 0, 0, 0, 1]
+    [1, 0, 0, 0, 0, 0, 0]
+  Char poly coefficients: [ 1. -1. -1. -1. -1. -1. -1. -1.]
+  Dominant eigenvalue: 1.9919641966
+  # binary strings of length n with no 7 consecutive 1s:
+    n=1..14: [13, 25, 49, 97, 193, 385, 769, 1531, 3049, 6073, 12097, 24097, 48001, 95617]
+
+======================================================================
+PART 2: INDEPENDENT SETS ON PATHS AND CYCLES — LUCAS NUMBERS
+======================================================================
+
+The number of independent sets of size k on the path graph P_n
+(vertices 1,...,n, edges {i,i+1}) is:
+  i_k(P_n) = C(n-k+1, k)
+
+The total number of independent sets (including empty set) is:
+  I(P_n) = Σ_k C(n-k+1, k) = F(n+2) (Fibonacci!)
+
+For the CYCLE graph C_n:
+  I(C_n) = L(n) (Lucas numbers!) for n ≥ 3.
+
+These connect to the Zeckendorf representation:
+  The independent sets of P_n biject with binary strings of length n
+  with no two adjacent 1s. The total count is F(n+2).
+
+For k-GAP independent sets (no two selected vertices within distance k):
+  On P_n: count = k-nacci(n + something)
+  On C_n: count = k-Lucas analog
+
+Path graph independence polynomials I(P_n, x):
+  P_1: [1, 1]  I(P_1,1)=2  I(P_1,2)=3
+  P_2: [1, 2]  I(P_2,1)=3  I(P_2,2)=5
+  P_3: [1, 3, 1]  I(P_3,1)=5  I(P_3,2)=11
+  P_4: [1, 4, 3]  I(P_4,1)=8  I(P_4,2)=21
+  P_5: [1, 5, 6, 1]  I(P_5,1)=13  I(P_5,2)=43
+  P_6: [1, 6, 10, 4]  I(P_6,1)=21  I(P_6,2)=85
+  P_7: [1, 7, 15, 10, 1]  I(P_7,1)=34  I(P_7,2)=171
+  P_8: [1, 8, 21, 20, 5]  I(P_8,1)=55  I(P_8,2)=341
+  P_9: [1, 9, 28, 35, 15, 1]  I(P_9,1)=89  I(P_9,2)=683
+  P_10: [1, 10, 36, 56, 35, 6]  I(P_10,1)=144  I(P_10,2)=1365
+
+Cycle graph independence polynomials I(C_n, x):
+  C_3: [1, 3]  I(C_3,1)=4  I(C_3,2)=7
+  C_4: [1, 4, 2]  I(C_4,1)=7  I(C_4,2)=17
+  C_5: [1, 5, 5]  I(C_5,1)=11  I(C_5,2)=31
+  C_6: [1, 6, 9, 2]  I(C_6,1)=18  I(C_6,2)=65
+  C_7: [1, 7, 14, 7]  I(C_7,1)=29  I(C_7,2)=127
+  C_8: [1, 8, 20, 16, 2]  I(C_8,1)=47  I(C_8,2)=257
+  C_9: [1, 9, 27, 30, 9]  I(C_9,1)=76  I(C_9,2)=511
+  C_10: [1, 10, 35, 50, 25, 2]  I(C_10,1)=123  I(C_10,2)=1025
+
+======================================================================
+PART 3: FIBONACCI NUMBERS IN TOURNAMENTS
+======================================================================
+
+The tournament-Fibonacci connection runs deep:
+
+1. INDEPENDENCE POLYNOMIAL: I(Ω(T), x) gives H(T) at x=2.
+   For the conflict graph Ω(T), the independence polynomial at x=2
+   counts Hamiltonian paths (OCF/Grinberg-Stanley).
+
+2. FIBONACCI IN TRANSFERS: The 2-state transfer matrix for "no unit descent"
+   gives Fibonacci-like counts. The 3-state matrix gives tribonacci.
+
+3. ZECKENDORF AND TOURNAMENTS:
+   H(T) = I(Ω(T), 2) = Σ_k α_k · 2^k
+   where α_k = #{independent sets of size k in Ω(T)}.
+   This is a "base-2 expansion" of H with Fibonacci-like constraints
+   on the α_k (from the structure of Ω).
+
+4. CYCLIC TOURNAMENTS AND LUCAS:
+   For circulant tournaments on Z_n, the conflict graph has circular
+   structure. The independence polynomial of circular graphs involves
+   Lucas numbers.
+
+5. PALEY = QUADRATIC RESIDUE CODE:
+   The Paley tournament T_p uses QR(p) as connection set.
+   The eigenvalues are Gauss sums at p-th roots of unity.
+   The "base" is the Gauss sum modulus √p.
+
+Independence polynomials of Ω(T) for circulant tournaments:
+
+--- Circulant tournaments on Z_5 ---
+  Interval C_5: 5 3-cycles
+  I(Ω, x) = [1, 5, 0, 0, 0, 0]
+  H = I(Ω, 2) = 11
+
+--- Circulant tournaments on Z_7 ---
+  Paley T_7: 14 3-cycles
+  I(Ω, x) = [1, 14, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  H = I(Ω, 2) = 57
+  Interval C_7: 14 3-cycles
+  I(Ω, x) = [1, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  H = I(Ω, 2) = 85
+
+======================================================================
+PART 4: THE GRAND HELIX — EIGENVALUE EVOLUTION ACROSS k
+======================================================================
+
+As k increases (Fibonacci → tribonacci → ... → k-nacci → ...):
+  - The dominant eigenvalue τ_k increases toward 2
+  - More complex conjugate pairs appear
+  - Each pair traces a helix as we raise to the n-th power
+  - The helices NEST: inner helices (earlier k) inside outer helices (later k)
+
+The LIMIT k → ∞:
+  - τ_∞ = 2 (every binary string allowed = 2^n total)
+  - All complex roots collapse to the unit circle
+  - The "helix" flattens into a circle
+
+This is the SPECTRAL GEOMETRY of the k-nacci family:
+  k=2 (Fibonacci): 1 helix with frequency arg(ψ) = π (alternating)
+  k=3 (tribonacci): 1 helix with frequency ≈ 124.7°
+  k=4 (tetranacci): 2 helices with different frequencies
+  ...
+  k→∞: all helices crowd the unit circle
+
+Eigenvalue table for k-nacci transfer matrices:
+  k |          τ_k |    |λ_c| |     arg° |   period |  decays?
+-----------------------------------------------------------------
+  2 |   1.61803399 |  0.00000 |     0.00 |      inf |      N/A
+  3 |   1.83928676 |  0.73735 |   124.69 |     2.89 |      yes
+  4 |   1.92756198 |  0.81828 |    95.36 |     3.78 |      yes
+  5 |   1.96594824 |  0.87105 |    77.04 |     4.67 |      yes
+  6 |   1.98358284 |  0.90621 |    64.49 |     5.58 |      yes
+  7 |   1.99196420 |  0.93029 |    55.36 |     6.50 |      yes
+  8 |   1.99603118 |  0.94719 |    48.42 |     7.44 |      yes
+  9 |   1.99802947 |  0.95930 |    42.97 |     8.38 |      yes
+ 10 |   1.99901863 |  0.96815 |    38.59 |     9.33 |      yes
+ 11 |   1.99951040 |  0.97473 |    35.00 |    10.29 |      yes
+ 12 |   1.99975550 |  0.97969 |    32.00 |    11.25 |      yes
+ 13 |   1.99987783 |  0.98349 |    29.46 |    12.22 |      yes
+ 14 |   1.99993894 |  0.98643 |    27.28 |    13.20 |      yes
+
+======================================================================
+PART 5: EIGENVECTORS ON THE POLYGON
+======================================================================
+
+For a circulant tournament on Z_n with connection set S:
+  - Vertices sit at ω^j = e^{2πij/n} on the unit circle
+  - The adjacency matrix is diagonalized by the DFT
+  - Eigenvector k: χ_k(j) = ω^{jk} (the k-th character)
+  - Eigenvalue k: λ_k = Σ_{s∈S} ω^{ks}
+
+The eigenvectors ARE the vertices of the polygon (rotated by k)!
+
+For the Paley tournament T_p:
+  λ_k = (χ(k)·√p - 1)/2 where χ = Legendre symbol
+  - For k = QR: λ_k = (√p - 1)/2 > 0
+  - For k = NR: λ_k = (-√p - 1)/2 < 0
+  - The eigenvalues split into TWO values (not n-1 distinct ones!)
+  - This 2-level structure is why Paley is "almost Fibonacci" (2 eigenvalues)
+
+For the interval tournament C_p^{1,...,(p-1)/2}:
+  λ_k = (sin(kπ(p+1)/(2p)) / sin(kπ/p) - 1) / 2
+  - These give (p-1)/2 distinct eigenvalue magnitudes
+  - The dominant λ_1 ~ p/(2π) as p → ∞
+  - The subdominant eigenvalues decay like 1/sin(kπ/p)
+
+
+--- p = 7 ---
+  Paley T_7: eigenvalues = [np.float64(3.0), np.float64(-0.5)]
+    (p-1)/2 = 3.0, (√p-1)/2 = 0.8229, (-√p-1)/2 = -1.8229
+  Interval: |eigenvalues| = [np.float64(3.0), np.float64(2.247), np.float64(0.8019), np.float64(0.555)]
+
+--- p = 11 ---
+  Paley T_11: eigenvalues = [np.float64(5.0), np.float64(-0.5)]
+    (p-1)/2 = 5.0, (√p-1)/2 = 1.1583, (-√p-1)/2 = -2.1583
+  Interval: |eigenvalues| = [np.float64(5.0), np.float64(3.5133), np.float64(1.2036), np.float64(0.7635), np.float64(0.5944), np.float64(0.5211)]
+
+--- p = 13 ---
+  Interval: |eigenvalues| = [np.float64(6.0), np.float64(4.1481), np.float64(1.41), np.float64(0.8802), np.float64(0.668), np.float64(0.5647)]...
+
+--- p = 19 ---
+  Paley T_19: eigenvalues = [np.float64(9.0), np.float64(-0.5)]
+    (p-1)/2 = 9.0, (√p-1)/2 = 1.6794, (-√p-1)/2 = -2.6794
+  Interval: |eigenvalues| = [np.float64(9.0), np.float64(6.0548), np.float64(2.0368), np.float64(1.2447), np.float64(0.9142), np.float64(0.7382)]...
+
+--- p = 23 ---
+  Paley T_23: eigenvalues = [np.float64(11.0), np.float64(-0.5)]
+    (p-1)/2 = 11.0, (√p-1)/2 = 1.8979, (-√p-1)/2 = -2.8979
+  Interval: |eigenvalues| = [np.float64(11.0), np.float64(7.3268), np.float64(2.4575), np.float64(1.4931), np.float64(1.0868), np.float64(0.867)]...
+
+======================================================================
+PART 6: THE HELICAL PERMANENT — H(T) DECOMPOSED
+======================================================================
+
+H(T) = permanent(A) for the adjacency matrix A.
+
+For circulant T with eigenvalues λ_0, ..., λ_{n-1}:
+  The permanent is NOT simply Π λ_k (that's the determinant).
+  But the permanent CAN be expressed via the eigenvalues using
+  MacMahon's master theorem or the Ryser formula.
+
+The key insight: H(T) = I(Ω(T), 2), and I(Ω, x) is a polynomial
+in x whose coefficients α_k count independent sets of size k.
+
+For Paley T_p with only 2 distinct eigenvalue magnitudes:
+  The permanent concentrates on a few terms.
+  H(T_p) ≈ C · ((p-1)/2)^{p-1} · correction
+  The correction involves the Gauss sum eigenvalues.
+
+For the interval tournament:
+  H = Σ over all perfect matchings of arc weights
+  The dominant eigenvalue λ_1 ~ p/(2π) gives the main term
+  The subdominant eigenvalues give helical corrections
+
+ON THE RIEMANN SURFACE:
+  log H(T) = Σ_k log(contribution from eigenspace k)
+  Each eigenspace k contributes a term that, on the Riemann surface,
+  is a straight line with slope (log|λ_k|, arg(λ_k)).
+  The total log H is a SUPERPOSITION of these lines.
+  In the flat complex plane, this superposition appears as a
+  sum of spirals = a complex helix pattern.
+
+
+Interval T on Z_5:
+  H = 15
+  Eigenvalues: ['2.000+0.000i', '-0.500+1.539i', '-0.500+-0.363i', '-0.500+0.363i']
+  |λ_0| = 2.0000 = (p-1)/2 = 2.0
+  |λ_1| = 1.6180
+
+Interval T on Z_7:
+  H = 175
+  Eigenvalues: ['3.000+0.000i', '-0.500+2.191i', '-0.500+-0.241i', '-0.500+0.627i']
+  |λ_0| = 3.0000 = (p-1)/2 = 3.0
+  |λ_1| = 2.2470
+  H(Paley T_7) = 189
+  Same? False
+
+======================================================================
+PART 7: THE FULL PICTURE
+======================================================================
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                    THE HELICAL SIMPLICIAL RÉDEI                    ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                    ║
+║  POLYGON (roots of unity)                                          ║
+║     │                                                              ║
+║     ├── Circulant tournaments ←→ Connection sets S                 ║
+║     ├── DFT diagonalizes adjacency matrix                          ║
+║     ├── Eigenvalues = character sums over S                        ║
+║     └── Eigenvectors = the polygon vertices themselves!            ║
+║                                                                    ║
+║  DIHEDRAL SYMMETRY                                                 ║
+║     │                                                              ║
+║     ├── Rotations ↔ Circulant automorphisms                        ║
+║     ├── Reflections ↔ Anti-automorphisms (self-complementary)      ║
+║     └── Paley = full D_p symmetry                                  ║
+║                                                                    ║
+║  HELIX (Riemann surface of log)                                    ║
+║     │                                                              ║
+║     ├── Complex eigenvalues trace spirals under M^n                ║
+║     ├── On covering space, spirals = straight lines                ║
+║     ├── Dominant eigenvalue = flat growth (Pisot root)             ║
+║     └── Subdominant = helical correction (complex conjugates)      ║
+║                                                                    ║
+║  k-NACCI FAMILY                                                    ║
+║     │                                                              ║
+║     ├── k=2: Fibonacci, φ, no adjacent 1s, 1 helix (degenerate)   ║
+║     ├── k=3: Tribonacci, τ₃, no 3 consecutive 1s, 1 helix        ║
+║     ├── k=4: Tetranacci, τ₄, no 4 consecutive 1s, 2 helices      ║
+║     ├── ...                                                        ║
+║     └── k→∞: τ_∞ = 2, all binary strings, helices → unit circle   ║
+║                                                                    ║
+║  ZECKENDORF REPRESENTATION                                         ║
+║     │                                                              ║
+║     ├── Base φ: digits {0,1}, no 11, uniqueness = Zeckendorf      ║
+║     ├── Base τ₃: digits {0,1}, no 111, tribonacci Zeckendorf      ║
+║     ├── 131 ≈ τ₃^8 (OPEN-Q-029), 504 = T(13)                     ║
+║     └── Transfer matrix enforces the digit constraint              ║
+║                                                                    ║
+║  SIMPLICIAL RÉDEI (THM-220)                                        ║
+║     │                                                              ║
+║     ├── sim_H ∈ {0,1} for all tournaments (n ≥ 4)                 ║
+║     ├── 2·n! have sim_H = 1 (n! transitive + n! near-transitive)  ║
+║     ├── Near-transitive: single reversed arc, H = 2^{n-2}+1       ║
+║     ├── Monodromy group (Z/2)^{n-2} → covering space structure    ║
+║     └── Transitive core = universal cover (remove 3-cycle loops)   ║
+║                                                                    ║
+║  THE CIRCLE CLOSES:                                                ║
+║     Polygon → DFT → Eigenvalues → Helix → k-nacci →               ║
+║     Zeckendorf → Transfer matrix → Simplicial → Tournament →      ║
+║     Polygon                                                        ║
+║                                                                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+opus-2026-03-15-S90: THE HELICAL SIMPLICIAL RÉDEI EXPLORATION

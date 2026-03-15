@@ -1,0 +1,133 @@
+======================================================================
+CORRECTED NEAR-TRANSITIVE CONSTRUCTION
+======================================================================
+
+Construction: Start with total order σ = (v₁ > v₂ > ... > vₙ).
+Reverse the SINGLE arc from vₙ (min) to v₁ (max).
+Result: vₙ → v₁ (instead of v₁ → vₙ), all other arcs unchanged.
+
+This creates exactly n-2 directed 3-cycles: {v₁, vₖ, vₙ} for k=2,...,n-1.
+Each cycle: vₙ → v₁ → vₖ → vₙ (since v₁ beats vₖ and vₖ beats vₙ).
+
+n=3: H=3, c3=1, is_DAG=True, is_total_order=False, expected H=3
+n=4: H=5, c3=2, is_DAG=True, is_total_order=True, expected H=5
+n=5: H=9, c3=3, is_DAG=True, is_total_order=True, expected H=9
+n=6: H=17, c3=4, is_DAG=True, is_total_order=True, expected H=17
+n=7: H=33, c3=5, is_DAG=True, is_total_order=True, expected H=33
+n=8: H=?, c3=6, is_DAG=True, is_total_order=True, expected H=65
+
+======================================================================
+MATCHING CONSTRUCTION TO EXHAUSTIVE RESULTS
+======================================================================
+
+--- n=4 ---
+  Constructed: 24, Exhaustive: 24
+  MATCH: True
+
+--- n=5 ---
+  Constructed: 120, Exhaustive: 120
+  MATCH: True
+
+--- n=6 ---
+  Constructed: 720, Exhaustive: 720
+  MATCH: True
+
+======================================================================
+PATH STRUCTURE IN SINGLE-REVERSED-ARC TOURNAMENT
+======================================================================
+
+n=4: H = 5 (= 2^2+1 = 5)
+  Paths using reversed arc (n-1)→0: 4
+  Paths NOT using reversed arc: 1
+  Path (0,1,...,3) valid? True
+  Path (3,2,...,0) valid? False
+    (0, 1, 2, 3)  FFF
+    (1, 2, 3, 0)  FFR
+    (1, 3, 0, 2)  FRF
+    (2, 3, 0, 1)  FRF
+    (3, 0, 1, 2)  RFF
+
+n=5: H = 9 (= 2^3+1 = 9)
+  Paths using reversed arc (n-1)→0: 8
+  Paths NOT using reversed arc: 1
+  Path (0,1,...,4) valid? True
+  Path (4,3,...,0) valid? False
+    (0, 1, 2, 3, 4)  FFFF
+    (1, 2, 3, 4, 0)  FFFR
+    (1, 2, 4, 0, 3)  FFRF
+    (1, 3, 4, 0, 2)  FFRF
+    (1, 4, 0, 2, 3)  FRFF
+    (2, 3, 4, 0, 1)  FFRF
+    (2, 4, 0, 1, 3)  FRFF
+    (3, 4, 0, 1, 2)  FRFF
+    (4, 0, 1, 2, 3)  RFFF
+
+n=6: H = 17 (= 2^4+1 = 17)
+  Paths using reversed arc (n-1)→0: 16
+  Paths NOT using reversed arc: 1
+  Path (0,1,...,5) valid? True
+  Path (5,4,...,0) valid? False
+
+n=7: H = 33 (= 2^5+1 = 33)
+  Path (0,1,...,6) valid? True
+  Path (6,5,...,0) valid? False
+
+======================================================================
+FORMULA DERIVATION
+======================================================================
+
+WHY H = 2^{n-2} + 1:
+
+In the single-reversed-arc tournament (order 0>1>...>n-1, arc n-1→0):
+  Forward arcs: i→j for i<j (except 0→n-1 which is reversed)
+  Reversed arc: (n-1)→0
+
+A Hamiltonian path is a sequence using these arcs.
+
+TYPE 1: The path does NOT use arc (n-1)→0.
+  Then it only uses forward arcs i→j (i<j, i≠0 or j≠n-1) and
+  backward arcs j→i (j>i) that come from the original tournament.
+  Wait — the only "backward" arc is (n-1)→0. If we don't use it,
+  we can only use forward arcs i→j (i<j). But these form a DAG,
+  and the only Hamiltonian path in a DAG with a total order is
+  the total order itself: (0, 1, 2, ..., n-1).
+
+  So there's exactly 1 such path (the simplicial/topo-order path).
+
+TYPE 2: The path USES arc (n-1)→0 at some position k.
+  Path: (..., n-1, 0, ...)
+  Before (n-1): some subset of {1,...,n-2} visited in decreasing order
+                (since they form a transitive sub-tournament)
+  After 0: the remaining subset of {1,...,n-2} in increasing order
+
+  If the prefix visits vertices S ⊂ {1,...,n-2} (in some valid order),
+  then the suffix visits {1,...,n-2}\S (in some valid order).
+
+  CLAIM: The prefix must end at (n-1) using only forward arcs within S∪{(n-1)},
+  and the suffix must start at 0 and visit {1,...,n-2}\S using forward arcs.
+
+  How many valid prefixes end at (n-1)?
+  Any subset S of {1,...,n-2} can serve: the prefix is
+  (elements of S in increasing order, then n-1).
+  This works because: within S, i→(i') is a forward arc (i<i'),
+  and the last element of S → (n-1) is forward (since max(S) < n-1).
+  Then (n-1) → 0 (reversed arc).
+  Then 0 → remaining elements in increasing order.
+
+  The number of subsets S ⊂ {1,...,n-2} is 2^{n-2}.
+
+  So H = 1 (simplicial) + 2^{n-2} (using reversed arc) - 1 (double count?)
+  = 2^{n-2} + 1  ... but wait, we need to check for double-counting.
+
+  Actually, the subset S = ∅ gives prefix = (n-1), suffix = (0, 1, ..., n-2).
+  The full path: (n-1, 0, 1, ..., n-2). This is valid!
+  And S = {1,...,n-2} gives prefix = (1, 2, ..., n-2, n-1), suffix = (0).
+  Full path: (1, 2, ..., n-2, n-1, 0). Valid!
+
+  All 2^{n-2} subsets give distinct valid paths.
+  Plus the simplicial path (0, 1, ..., n-1) which doesn't use (n-1)→0.
+  Total: 2^{n-2} + 1. ∎
+
+n=5: constructed=9, actual H=9, all_valid=True, match=True
+n=6: constructed=17, actual H=17, all_valid=True, match=True
+n=7: constructed=33, actual H=33, all_valid=True, match=True
