@@ -1,0 +1,235 @@
+EQUIDECOMPOSABILITY ON THE CAYLEY LINE
+============================================================
+
+THE SETUP
+============================================================
+
+Two natural numbers n and m are MULTIPLICATIVELY
+EQUIDECOMPOSABLE if they have the same prime factorization
+structure — the same multiset of prime exponents.
+
+  12 = 2^2 * 3     exponents: {2, 1}
+  18 = 2 * 3^2     exponents: {1, 2}
+  12 and 18 are equidecomposable (same multiset {1,2}).
+
+On the Cayley line:
+  x_12 = 11/13,  arctanh = ln(12)/2
+  x_18 = 17/19,  arctanh = ln(18)/2
+
+  12 = 2^2 * 3: arctanh = 2*ln(2)/2 + ln(3)/2
+  18 = 2 * 3^2: arctanh = ln(2)/2 + 2*ln(3)/2
+
+  Both have the SAME total arctanh-distance (= ln(72)/2 ... no).
+  Actually: ln(12)/2 != ln(18)/2. They have DIFFERENT addresses.
+  But the DECOMPOSITION into prime arctanh-steps has the
+  same STRUCTURE: two steps of one size, one of another.
+
+  Equidecomposability = same MULTISET of arctanh step sizes.
+
+============================================================
+DEHN-SYDLER ON THE CAYLEY LINE
+============================================================
+
+Dehn-Sydler (for polyhedra): two polyhedra are scissors-
+congruent iff they have the same volume AND the same
+Dehn invariant D = sum l_i tensor theta_i.
+
+On the Cayley line, the analog:
+  'Volume' = arctanh(x_n) = ln(n)/2 = total hyperbolic length
+  'Dehn invariant' = sum of prime arctanh-steps TENSORED with
+  the prime itself (or its index)
+
+  D(n) = sum_{p^a || n} a * ln(p)/2  tensor  p
+       = sum_{p | n} v_p(n) * ln(p)/2  tensor  p
+
+  where v_p(n) = exponent of p in n, and the tensor is
+  over R tensor_{Q} R (same structure as the Dehn invariant).
+
+Examples:
+  n= 12: vol=1.2425, D = 2*ln(2)/2 + 1*ln(3)/2
+  n= 18: vol=1.4452, D = 1*ln(2)/2 + 2*ln(3)/2
+  n= 24: vol=1.5890, D = 3*ln(2)/2 + 1*ln(3)/2
+  n= 36: vol=1.7918, D = 2*ln(2)/2 + 2*ln(3)/2
+  n= 72: vol=2.1383, D = 3*ln(2)/2 + 2*ln(3)/2
+  n= 60: vol=2.0472, D = 2*ln(2)/2 + 1*ln(3)/2 + 1*ln(5)/2
+  n= 30: vol=1.7006, D = 1*ln(2)/2 + 1*ln(3)/2 + 1*ln(5)/2
+
+  12: D = 2*ln(2)/2 + 1*ln(3)/2 = ln(4)/2 + ln(3)/2
+  18: D = 1*ln(2)/2 + 2*ln(3)/2 = ln(2)/2 + ln(9)/2
+
+  Same volume (ln(n)/2)? No: ln(12) != ln(18).
+  Same Dehn invariant? No: different prime structure.
+
+  12 and 18 are NOT scissors-congruent on the Cayley line.
+  Even though they have the same exponent multiset {1,2},
+  the Dehn invariant distinguishes them because it tracks
+  WHICH primes carry which exponents.
+
+============================================================
+WHAT IS SCISSORS-CONGRUENT ON THE CAYLEY LINE?
+============================================================
+
+  Two numbers n, m are Cayley-scissors-congruent iff:
+    1. ln(n) = ln(m)  (same volume)  =>  n = m
+    2. Same Dehn invariant  =>  same prime factorization
+
+  So: n and m are scissors-congruent iff n = m.
+  TRIVIALLY.
+
+  This is because the natural numbers have UNIQUE FACTORIZATION.
+  The Dehn invariant on the Cayley line IS the prime factorization.
+  And uniqueness of factorization means the invariant is COMPLETE:
+  it distinguishes all numbers.
+
+  DEEP POINT: the Dehn-Sydler theorem for polyhedra says that
+  volume + Dehn invariant is a COMPLETE invariant for scissors-
+  congruence. On the Cayley line, the analog is:
+  ln(n) + prime factorization is a complete invariant.
+  And this is just... the number n itself.
+
+  THE FUNDAMENTAL THEOREM OF ARITHMETIC IS THE
+  DEHN-SYDLER THEOREM ON THE CAYLEY LINE.
+
+============================================================
+BUT WHAT IF WE RELAX THE INVARIANT?
+============================================================
+
+  In the polyhedron case, we mod out by the GROUP of motions.
+  Different motion groups give different equivalence relations.
+
+  On the Cayley line, we can mod out by different GROUPS:
+
+  (a) Mod out by PERMUTATION of prime factors:
+      n ~ m iff they have the same prime exponent multiset.
+      12 = 2^2*3 ~ 18 = 2*3^2 (both have exponents {1,2}).
+      This gives the PARTITION classification of numbers.
+
+  Numbers with exponent multiset {1,2} (up to 100):
+    12 = 2^2 * 3 (or 3^2 * 2... )
+    18 = 2^2 * 3 (or 3^2 * 2... )
+    20 = 2^2 * 5 (or 5^2 * 2... )
+    28 = 2^2 * 7 (or 7^2 * 2... )
+    44 = 2^2 * 11 (or 11^2 * 2... )
+    45 = 3^2 * 5 (or 5^2 * 3... )
+    50 = 2^2 * 5 (or 5^2 * 2... )
+    52 = 2^2 * 13 (or 13^2 * 2... )
+    63 = 3^2 * 7 (or 7^2 * 3... )
+    68 = 2^2 * 17 (or 17^2 * 2... )
+    75 = 3^2 * 5 (or 5^2 * 3... )
+    76 = 2^2 * 19 (or 19^2 * 2... )
+    92 = 2^2 * 23 (or 23^2 * 2... )
+    98 = 2^2 * 7 (or 7^2 * 2... )
+    99 = 3^2 * 11 (or 11^2 * 3... )
+
+  (b) Mod out by PRIME RELABELING (all primes equivalent):
+      n ~ m iff they have the same exponent PARTITION.
+      12 = 2^2*3 ~ 18 = 2*3^2 ~ 50 = 2*5^2 (all partition [2,1]).
+
+  Partition classification up to 60:
+    partition [1]: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59]
+    partition [1, 1]: [6, 10, 14, 15, 21, 22, 26, 33, 34, 35, 38, 39, 46, 51, 55, 57, 58]
+    partition [1, 1, 1]: [30, 42]
+    partition [2]: [4, 9, 25, 49]
+    partition [2, 1]: [12, 18, 20, 28, 44, 45, 50, 52]
+    partition [2, 1, 1]: [60]
+    partition [2, 2]: [36]
+    partition [3]: [8, 27]
+    partition [3, 1]: [24, 40, 54, 56]
+    partition [4]: [16]
+    partition [4, 1]: [48]
+    partition [5]: [32]
+
+  (c) Mod out by SCALING (n ~ kn for any k):
+      This identifies numbers with the same 'shape' of factorization
+      regardless of overall size. In arctanh-space: translation invariance.
+
+  (d) Mod out by a SPECIFIC PRIME (e.g., ignore factors of 2):
+      n ~ m iff n/2^{v_2(n)} = m/2^{v_2(m)} (same odd part).
+      This is the ODD CAYLEY LINE: the restriction to odd numbers.
+      DIRECTLY connects to our tournament theory (only odd cycles)!
+
+============================================================
+THE ODD CAYLEY LINE AND TOURNAMENTS
+============================================================
+
+  In tournament theory: H(T) is always ODD (Redei).
+  The independence polynomial I(Omega, x) at x=2 gives H.
+  Only ODD cycles contribute.
+
+  On the Cayley line: the ODD numbers have addresses
+  x_{2k+1} = 2k/(2k+2) = k/(k+1).
+
+    x_1 = 0 = 0.000000
+    x_3 = 1/2 = 0.500000
+    x_5 = 2/3 = 0.666667
+    x_7 = 3/4 = 0.750000
+    x_9 = 4/5 = 0.800000
+    x_11 = 5/6 = 0.833333
+    x_13 = 6/7 = 0.857143
+    x_15 = 7/8 = 0.875000
+
+  These fill [0, 1) with spacing 1/((k+1)(k+2)).
+  The odd numbers on the Cayley line form a SUB-LINE
+  that is ISOMORPHIC to the full Cayley line via k -> 2k+1:
+  x_{2k+1} = k/(k+1) = ((k+1)-1)/((k+1)) which is the address
+  of k+1 on a SHIFTED Cayley line.
+
+  So the odd numbers ARE the natural numbers, re-indexed!
+  The restriction to odd = the full structure, rescaled.
+  This is why tournament theory (which uses only odd cycles)
+  captures the FULL structure of comparison.
+
+============================================================
+EQUIDECOMPOSABILITY AND TOURNAMENT EQUIVALENCE
+============================================================
+
+  Two tournaments T, T' are EQUIVALENT if H(T) = H(T').
+  H = I(Omega, 2) depends on the conflict graph Omega.
+
+  In the Cayley-Dehn framework:
+  H(T) = I(Omega, 2) = a sum over independent cycle collections,
+  each contributing 2^{size}.
+
+  The DEHN INVARIANT of the tournament:
+  D(T) = sum_{odd cycles C} |C| * ln(2)/2  tensor  [C]
+  where [C] is the 'class' of the cycle.
+
+  Two tournaments have the same H iff their Dehn invariants
+  (cycle structure tensored with independence structure)
+  agree when evaluated at x=2.
+
+  Tournament equivalence = Cayley equidecomposability at x=2.
+
+============================================================
+THE PUNCHLINE
+============================================================
+
+Three theorems that are secretly the same:
+
+  1. FUNDAMENTAL THEOREM OF ARITHMETIC:
+     Every natural number factors uniquely into primes.
+     = Dehn-Sydler completeness on the Cayley line.
+     = The Cayley Dehn invariant (prime factorization)
+     is a complete invariant for scissors-congruence (= equality).
+
+  2. DEHN-SYDLER THEOREM:
+     Volume + Dehn invariant is complete for polyhedra.
+     = On the Cayley line: ln(n) + prime factorization = n.
+     = Unique factorization IS completeness of the invariant.
+
+  3. OCF / TOURNAMENT EQUIVALENCE:
+     H(T) = I(Omega, 2) determines the Hamiltonian path count.
+     = The tournament Dehn invariant (cycle structure at x=2)
+     classifies tournaments by their 'scissors-congruence class.'
+     = Tournaments with same H are 'equidecomposable.'
+
+The thread connecting them: the Cayley transform Q(x) = (1+x)/(1-x)
+provides the METRIC in which equidecomposability is defined.
+The Dehn invariant is the OBSTRUCTION to rearrangement.
+And the fundamental theorem of arithmetic is the statement
+that the obstruction is COMPLETE: nothing can be rearranged.
+
+Unique factorization = no scissors-congruence = rigidity.
+The natural numbers are RIGID on the Cayley line.
+You cannot cut one into pieces and reassemble it as another.
+Each number is its own irreducible geometric object.
