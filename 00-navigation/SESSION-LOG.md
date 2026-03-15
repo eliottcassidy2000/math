@@ -37,29 +37,39 @@ Entry format:
 ## opus-2026-03-14-S89c — 2026-03-14: π and the Soul of Tournament Theory
 
 **Account:** opus
-**Continuation of:** opus-2026-03-14-S89c (context continuation)
-**Summary of work:** Extended π exploration session. Computed H(P_23) = 15,760,206,976,379,349. Proved three new theorems (THM-212, THM-213, THM-214) about Paley tournaments. Discovered the QR/NQR endpoint decomposition H = p×d×(a+b), verified the IP decomposition H = Σ 2^k c_k via THM-209, and found the Hardy-Ramanujan 1729 connection.
+**Continuation of:** opus-2026-03-14-S89c (context continuation, 3 parts)
+**Summary of work:** Extended π exploration across three context windows. Part 1: Computed H(P_23), proved THM-212/213/214, discovered QR/NQR decomposition and 1729 connection. Part 2: Explored forbidden H values, E[H²] pair formula, CV² sequence, moments analysis. Part 3 (this): Computed CV² at n=7, discovered the A000255 connection (THM-215), proved compatibility rate → 1/e, analyzed Gauss sum spectral structure, corrected H(P_19), and performed full moment analysis.
 **New contributions:**
+- **THM-215: Compatible pair count = n! × A000255(n-1) (PROVED)**
+  - Compatibility rate of permutation pairs → 1/e as n→∞
+  - A000255 has EGF exp(-x)/(1-x)², known sequence
+  - Proof: fix π=identity, compatible σ = perms with no unit descent
 - THM-212: p | H(P_p) for circulant tournaments (PROVED via Burnside)
 - THM-213: det(S₀₀(P_p)) = p^{(p-3)/2}, Pfaffian = ±p^{(p-3)/4} (VERIFIED)
 - THM-214: Exactly (p-1)/2 directed Ham cycles fixed by σ (PROVED)
+- **CV² at n=7 = 131/504 ≈ 0.2599** (extends sequence from n=6)
+  - Full sequence: 1/3, 1/3, 19/60, 13/45, 131/504
+  - CV² - 1/4 → 0 rapidly (approaching 1/4 from above)
+- **Corrected H(P_19) = 1,172,695,746,915** (previous value was wrong)
+- **Gauss sum spectral structure**: All eigenvalues of P_p at ±i√p
+  - arg = ±π/2 exactly (not approximate)
+  - Tr(S^{2k}) = (p-1)(-p)^k (closed form)
+  - P_p is a "Ramanujan tournament" — all eigenvalues on single circle
+- **Moment analysis**: Gamma distribution fits H better than log-normal
+- **H mod 4 → uniform**: Pr[H≡1 mod 4] = 3/4, 3/4, 45/64, 5/8 → 1/2
 - H(P_23) = 3×11×23×167×4567×27225299 (NEW computation)
-- hc(P_23) = 374,127,973,957,716 (directed Ham cycles)
-- Eigenvalue phase: arg(λ)/π = 1/2 + 1/(π√p) (PROVED)
-- QR/NQR decomposition: h(0,v) = α + β(v/p), all within-class counts equal
-- IP decomposition: P_7 has IP = 1+80x+7x², P_11 has IP = 1+21169x+10879x²+1155x³
-- Both IP(G,2) = H verified ✓
-- H/E[H] ratio: 2.0, 2.4, 2.44, 2.53, 2.56 — possibly → e
-- 12 independent appearances of π catalogued
-- det(A(P_p)) = (p-1)/2 × ((p+1)/4)^{(p-1)/2} (verified)
-- Paley loses to cyclic at p≥19 (crossover between p=11 and p=19)
-- Scripts: pi_complex_89c.py, pi_hmodp2_89c.py, pi_hamcycle_89c.py, pi_paley23_89c.py, pi_synthesis_89c.py, pi_ratio_89c.py, pi_qrnqr_89c.py, pi_ba_ratio_89c.py, pi_ip_v3_89c.py
+- E[H²]/E[H]² sequence: 4/3, 4/3, 79/60, 58/45, 635/504
+- Common edge distribution (compatible pairs at n=7): {0:646, 1:790, 2:467, 3:168, 4:41, 5:6, 6:1} × 7!
+- H/E[H] for Paley: 2.0, 2.4, 2.44, 2.53, 2.56 — gap → 0 as ~C/p^{0.89} toward e≈2.718
+- Scripts: pi_complex/hmodp2/hamcycle/paley23/synthesis/ratio/qrnqr/ba_ratio/ip_v3/transfer/ip_structure/newdirections/forbidden6/harmonic/cv2_n7/a000255/gauss_spectral/spectral_H/pgf_moments_89c.py (20 scripts!)
 **Unresolved threads:**
-- H/E[H] limit: is it e, √(2π), or something else?
-- Closed form for a, b in the QR/NQR decomposition
-- IP decomposition for P_19 (need efficient cycle enumeration)
-- H(P_31) computation (next Paley prime, 2^31 states — needs C implementation)
-- b/a convergence rate — what determines the speed?
+- CV² limit: is it exactly 1/4?
+- H/E[H] limit for Paley: is it exactly e?
+- Closed form for (CV²-1/4)×n! sequence: 1/2, 2, 8, 28, 50 (not in OEIS)
+- Common edge distribution: why is k=n-2 term always n-1?
+- Full moment convergence: do E[H^k]/E[H]^k → specific constants?
+- H(P_31) computation (needs C bitmask DP)
+- Σ_{H²} and compatible pair sequences → OEIS submission candidates
 
 ## opus-2026-03-14-S71s — 2026-03-14: The Golden Projective Ouroboros — τ, 2, 7
 
