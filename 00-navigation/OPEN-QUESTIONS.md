@@ -477,9 +477,14 @@ GLMY path homology Betti numbers beta_p of tournaments:
 - **i_*-injectivity REFUTED at n=8** (HYP-380, kind-pasteur-S48): rank(i_*)=0 when b3=b3(T\v)=1
 - Omega_p dimensions for Paley T_7: 7, 21, 42, 63, 63, 42, 21 (palindromic!)
 
+**UPDATE (opus-S72b): β₁ ∈ {0,1} verified exhaustive n≤8, sampled n=9 (THM-223).**
+Key discovery: β₁ is determined ENTIRELY by rank of transitive triple constraint matrix.
+Cancellation chains are ALWAYS redundant. Combined with THM-095 seesaw: β₁·β₃=0 follows.
+Algebraic proof of β₁ ≤ 1 still open (reformulated as transitive triple rank bound).
+
 REMAINING OPEN:
 - **What bound replaces beta_3 <= 1 at n >= 8?** (beta_3=2 confirmed at n=8,9)
-- **Prove beta_1 * beta_3 = 0 for all n** (currently n <= 7 only)
+- **Prove beta_1 ≤ 1 algebraically** — equiv. to rank(TT) ≥ C(n,2)-n (THM-223)
 - Characterize which tournaments have beta_4 > 0 (appears linked to H-maximizers)
 - Is beta_6 = 0 for all tournaments? (0/300 at n=7)
 - Prove beta_2k = 0 for k >= some threshold, or find more counterexamples

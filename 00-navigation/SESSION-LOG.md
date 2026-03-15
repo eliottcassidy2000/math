@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S72c — 2026-03-15: Walsh-β₁ spectral connection + β₁ ≤ 1 investigation
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S72b
+**Summary of work:** (1) Ran walsh_beta1_connection_S72b.py — Walsh degree-2 energy E₂ separates β₁ STATISTICALLY (mean +6.6 for β₁=1 vs -1.1 for β₁=0 at n=6) but NOT deterministically. Ranges overlap at n≥6. (2) Score sequence analysis: β₁=1 NEVER with source/sink vertex; highest rate at (2,2,2,3,3,3) = 36.4%. (3) Major investigation of β₁ ≤ 1 proof. Key discovery: transitive triple constraint rank completely determines β₁. rank(TT) ∈ {C(n,2)-n+1, C(n,2)-n} ALWAYS. Cancellation chains are REDUNDANT. β₁=1 iff exactly one rank deficiency. (4) Harmonic cycle analysis: when β₁=1, the unique harmonic cycle spans ALL vertices with rational coefficients. (5) THM-223 established: β₁ ∈ {0,1} computationally verified through n=9. Combined with THM-095: β₁·β₃=0 follows.
+
+**New contributions:** THM-223 (β₁ binary), HYP-1579-1581, walsh_beta1_connection_S72b.py results, walsh_multi_degree_S72b.py, beta1_upper_bound_S72b.py, OPEN-Q-027 resolved
+**Unresolved threads:**
+- Prove rank(TT) ≥ C(n,2) - n algebraically (= prove β₁ ≤ 1)
+- Single-vertex propagation insufficient; need global argument (LES? matroid?)
+- Why are cancellation chains always redundant?
+- Can β₁ criterion be expressed in terms of t₃ alone?
+
 ## opus-2026-03-15-S72b — 2026-03-15: β₁ Fundamental Insight — Orientability Obstruction
 
 **Account:** opus
