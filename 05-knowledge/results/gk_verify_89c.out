@@ -1,0 +1,24 @@
+======================================================================
+CROSS-VERIFICATION: W(n)/n! - 1 vs Σ 2·g_k(n-2k)/(n)_{2k}
+======================================================================
+n= 3: EXACT MATCH ✓ (max_k=1, all terms accounted)
+n= 4: EXACT MATCH ✓ (max_k=1, all terms accounted)
+n= 5: EXACT MATCH ✓ (max_k=2, all terms accounted)
+n= 6: EXACT MATCH ✓ (max_k=2, all terms accounted)
+n= 7: EXACT MATCH ✓ (max_k=3, all terms accounted)
+n= 8: EXACT MATCH ✓ (max_k=3, all terms accounted)
+n= 9: EXACT MATCH ✓ (max_k=4, all terms accounted)
+n=10: EXACT MATCH ✓ (max_k=4, all terms accounted)
+n=11: EXACT MATCH ✓ (max_k=5, all terms accounted)
+n=12: EXACT MATCH ✓ (max_k=5, all terms accounted)
+n=13: EXACT MATCH ✓ (max_k=6, all terms accounted)
+n=14: EXACT MATCH ✓ (max_k=6, all terms accounted)
+n=15: EXACT MATCH ✓ (max_k=7, all terms accounted)
+n=16: EXACT MATCH ✓ (max_k=7, all terms accounted)
+n=17: EXACT MATCH ✓ (max_k=8, all terms accounted)
+n=18: EXACT MATCH ✓ (max_k=8, all terms accounted)
+n=19: EXACT MATCH ✓ (max_k=9, all terms accounted)
+n=20: EXACT MATCH ✓ (max_k=9, all terms accounted)
+n=21: EXACT MATCH ✓ (max_k=10, all terms accounted)
+
+Done!

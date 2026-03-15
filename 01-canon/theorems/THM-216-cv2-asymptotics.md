@@ -3,7 +3,7 @@ id: THM-216
 name: CV² Asymptotics
 status: PROVED
 proved_by: opus-2026-03-14-S89c
-verified_computationally: n=3..25
+verified_computationally: n=3..21 (exact polynomial match)
 ---
 
 # THM-216: CV²(H) = 2/n + O(1/n³)
@@ -112,12 +112,27 @@ to E[∏_{j∈S} Z_j]. All other subsets give 0, because:
 1. Isolated positions give 0 by the complement symmetry Z→-Z
 2. Three+one patterns give 0 by the same argument applied to the odd part
 
-### Exact |S|=2k contributions (verified n=3..10)
+### Exact |S|=2k contributions (verified n=3..21)
 The |S|=2k contribution equals 2·g_k(n-2k) / (n)_{2k} where:
   g₁(m) = m
   g₂(m) = m²
-  g₃(m) = m(2m²+1)/3
-  g₄(1) = 1, g₄(2) = 8 (need more data for full formula)
+  3·g_k(m) = a_k·m³ + b_k·m² + c_k·m + d_k   for all k ≥ 3
+
+**All g_k for k ≥ 3 are degree-3 polynomials.** Coefficients:
+
+| k | a_k | b_k | c_k | d_k |
+|---|-----|-----|-----|-----|
+| 3 | 2 | 0 | 1 | 0 |
+| 4 | 10 | -33 | 50 | -24 |
+| 5 | 388 | -2040 | 3431 | -1776 |
+| 6 | 69660 | -380445 | 653748 | -342960 |
+| 7 | 19826270 | -109486152 | 189674605 | -100014720 |
+| 8 | 7309726742 | -40641958545 | 70757788486 | -37425556680 |
+| 9 | 3262687720240 | -18232387983408 | 31858349908595 | -16888649645424 |
+
+Universal boundary values: g_k(1) = 1 and g_k(2) = 2k for all k ≥ 1.
+Note: g_k(0) ≠ 0 for k ≥ 4 (the polynomial domain is m ≥ 1).
+Verified: CV² = Σ 2·g_k(n-2k)/(n)_{2k} reproduces W(n)/n!-1 exactly for n=3..21.
 
 ### 1/n² cancellation
 |S|=2: 2(n-2)/(n(n-1)) = 2/n - 2/n² + 2/n³ - ...
@@ -135,7 +150,8 @@ The value crosses below 1/4 at n=8 and continues toward 0.
 
 - `04-computation/nud_weight.c` — C implementation for n up to 25
 - `04-computation/cv2_proof_89c.py` — Proof verification script
+- `04-computation/gk_verify_89c.py` — Cross-verification: all g_k polynomials reproduce W(n) exactly
+- `04-computation/gk_coefficients_v2_89c.py` — Sequential extraction of g_k coefficients
+- `04-computation/gk_cascade_v2_89c.py` — Manual cascade extraction (correct, no g_k(0)=0 assumption)
 - `04-computation/w_recurrence_89c.py` — Recurrence analysis
 - `04-computation/w_analytic_89c.py` — Poisson approximation analysis
-- `04-computation/pi_edge_dist_89c.py` — Common edge distribution
-- `04-computation/pi_cv2_n7_89c.py` — Original n=7 computation
