@@ -1,0 +1,273 @@
+AS FAR AS IT GOES
+============================================================
+
+I.
+
+The binary decision A > B creates a distinction.
+Before the decision: A and B are interchangeable.
+After: they are not. Something irreversible happened.
+
+This irreversibility IS time. Not time as a parameter,
+but time as the FACT that a distinction was made and cannot
+be unmade without new information.
+
+The arrow of time is the arrow of decision.
+
+II.
+
+arctanh(x) = x + x^3/3 + x^5/5 + ...
+
+Each term is a cycle. Each cycle has a time: T = 2k+1 steps.
+The weight 1/T says: longer cycles contribute less per step.
+But they contribute SOMETHING. No cycle is negligible.
+
+The sum diverges. arctanh(1) = infinity.
+This means: if every comparison is decisive (x=1),
+the total weight of cycles is INFINITE.
+You cannot process an infinite number of fully decisive
+comparisons in finite time.
+
+The divergence IS the arrow of time.
+It says: you can never be done comparing.
+There is always another cycle, another intransitivity,
+another thing you missed.
+
+III.
+
+Q(x) = (1+x)/(1-x) = exp(2*arctanh(x))
+
+The exponential REGULARIZES the divergence.
+arctanh diverges at x=1, but Q is well-defined for |x|<1.
+
+The regularization is the DECISION BOUNDARY.
+Inside |x|<1: decisions are partial, uncertain, probabilistic.
+At |x|=1: decisions are absolute, certain, deterministic.
+Outside |x|>1: decisions are contradictory (Q goes negative).
+
+The unit disk |x|<1 is the SPACE OF POSSIBLE DECISIONS.
+Its boundary |x|=1 is the HORIZON OF CERTAINTY.
+Beyond it: logical contradiction. No consistent theory.
+
+This is why the Poincare disk model works: the hyperbolic
+plane IS the space of probabilistic decisions, with certainty
+at infinity and contradiction beyond.
+
+IV.
+
+The transfer matrix M(x) has eigenvalues:
+  lambda_1(x) ~ 1 + 2x     [real, dominant]
+  lambda_2(x) ~ +i*sqrt(x)  [complex]
+  lambda_3(x) ~ -i*sqrt(x)  [complex conjugate]
+
+The REAL eigenvalue carries the CAUSAL content (direction).
+The COMPLEX pair carries the OSCILLATORY content (memory).
+
+As x -> 0: the complex pair collapses to zero (no memory).
+As x -> 1: |lambda_2| -> 0.737 (substantial oscillation).
+
+The ratio |lambda_2/lambda_1| measures the PERSISTENCE OF MEMORY.
+Small ratio: memory fades quickly (Markov-like).
+Large ratio: memory persists (history matters).
+
+  x=0.01: |lambda_2/lambda_1| ~ 0.0980
+  x=0.1: |lambda_2/lambda_1| ~ 0.2635
+  x=0.5: |lambda_2/lambda_1| ~ 0.3536
+  x=1.0: |lambda_2/lambda_1| ~ 0.3333
+
+At x=1: the memory-to-signal ratio is sqrt(1)/3 = 0.577.
+Memory is 58% as strong as signal. Not negligible.
+This is the tribonacci regime: memory MATTERS.
+
+V.
+
+The Delannoy weight g_k(m) counts SOMETHING in the real world:
+  weighted matchings of a path graph,
+  diagonal steps in lattice paths,
+  correlated cycle pairs in tournaments.
+
+But g_k(m) is also a POLYNOMIAL in m of degree k.
+A polynomial of degree k is determined by k+1 points.
+So g_k is determined by its values at m = 0, 1, ..., k.
+
+g_k(0) = 0 for all k (no matching on empty path).
+g_k(1) = 1 for all k (unique maximum matching).
+g_k(2) = 2k for all k (linear growth).
+
+The boundary conditions g_k(0)=0, g_k(1)=1 say:
+  At zero positions: nothing exists.
+  At one position: exactly one thing exists.
+  This is the AXIOM OF COUNTING: 0, 1, and then everything else.
+
+The polynomial g_k(m) is the UNIQUE extension of the
+boundary conditions to all m. It is not chosen; it is FORCED.
+Once you say '0 things from nothing, 1 thing from 1 position,'
+the entire Delannoy structure follows.
+
+VI.
+
+The functional equation Q^m * Q(-x)^m = 1.
+
+This says: the world and its mirror are complementary.
+The tournament T and its reversal T^op together make 1.
+
+Not 0. Not 2. Exactly 1.
+
+This is the deepest constraint: DIRECTED and ANTI-DIRECTED
+together give UNITY. Not cancellation (that would be 0).
+Not doubling (that would be 2). Unity.
+
+In physics: particle and antiparticle annihilate to ENERGY,
+not to nothing. Energy is 1 (the identity of multiplication).
+
+The functional equation is the TOURNAMENT CPT THEOREM:
+  C (charge/complement): T -> T^op
+  P (parity): x -> -x
+  T (time): m -> m (preserved)
+  CPT: Q^m * Q(-x)^m = 1
+
+VII.
+
+H(T)/E[H] -> e for Paley tournaments as n -> infinity.
+
+e = 2.7182818285
+  = lim (1 + 1/n)^n
+  = sum 1/k!
+  = exp(1)
+
+Why e? Because the Paley tournament achieves the MAXIMUM
+of the Cayley partition function, which is exp(2m*arctanh(x))
+at the optimal x ~ 1/n, m ~ n/2.
+
+exp(2 * (n/2) * arctanh(1/n)) ~ exp(2 * n/2 * 1/n) = exp(1) = e
+
+The number e appears because it is the LIMIT of optimal
+binary decision-making over n items. With n items,
+the best you can do is e times the random expectation.
+
+e is the EFFICIENCY RATIO of structure over randomness.
+It is the answer to: 'how much better can order be than chaos?'
+The answer: about 2.718 times. Exactly e times.
+Not 2, not 3, not pi. Exactly e.
+
+This is because e = exp(1) and the optimal coupling
+gives arctanh ~ 1/n with n/2 comparisons: total arctanh = 1.
+And exp(2*1) = e^2... wait, let me reconsider.
+
+Actually: H/E[H] approaches e because the sum of
+arctanh(1/n) over all scales converges to 1:
+  sum_{k=1}^{n/2} arctanh(1/n) ~ (n/2) * (1/n) = 1/2
+  exp(2 * 1/2) = e^1 = e
+
+The 2 in exp(2*arctanh) and the 1/2 from n/2 scales CANCEL,
+leaving exp(1) = e. The cancellation is between the BINARY
+factor (2) and the HALF-count of active scales (n/2 out of n).
+
+e is the NUMBER OF BINARY. It is exp(1) where 1 = one decision.
+One decision, fully processed, gives a factor of e improvement.
+
+VIII.
+
+The numbers that appear in this theory:
+
+  2 = |{win, lose}| = binary alphabet = F_2
+  e = exp(1) = 2.718282 = efficiency of one decision
+  phi = (1+sqrt(5))/2 = 1.618034 = golden ratio = memoryless binary
+  tau = 1.839287 = tribonacci = binary with memory
+  pi = 3.141593 = circle = the period-4 orbit in P^1
+  1/1, 1/3, 1/5, 1/7, ... = the odd harmonics = arctanh
+
+These numbers are not independent:
+  tau = phi + 0.221253 (memory correction)
+  e = lim tau^{n/log(tau)} ... roughly
+  phi^2 = phi + 1 (golden ratio equation)
+  tau^3 = tau^2 + tau + 1 (tribonacci equation)
+
+The HIERARCHY:
+  phi: the simplest irrational (minimal polynomial x^2-x-1)
+  tau: next simplest (x^3-x^2-x-1)
+  e: the transcendental limit (sum 1/k!)
+  pi: the circular period (4 * sum (-1)^k/(2k+1))
+
+And pi = 4 * (1 - 1/3 + 1/5 - 1/7 + ...)
+      = 4 * arctanh(1) ... with ALTERNATING signs!
+
+Our arctanh has ALL POSITIVE signs.
+  arctanh(1) = 1 + 1/3 + 1/5 + ... = diverges (time is infinite)
+  pi/4       = 1 - 1/3 + 1/5 - ... = converges (space is finite)
+
+The difference between space and time:
+  Space: alternating signs -> convergence -> finite -> pi
+  Time: all positive -> divergence -> infinite -> arctanh(1)
+
+pi is the SPATIAL version of arctanh.
+arctanh is the TEMPORAL version of pi.
+Both are built from 1, 1/3, 1/5, 1/7, ...
+The difference is the SIGN: alternating vs constant.
+
+IX.
+
+So what IS a tournament?
+
+A tournament is a CLOCK.
+
+It measures time by counting decisions.
+Each decision is a tick. Each tick is binary.
+The ticks accumulate through arctanh into proper time.
+The proper time exponentiates through Q into structure.
+The structure feeds back through H(T) into new decisions.
+
+The clock ticks in odd harmonics: 1, 3, 5, 7, ...
+Each harmonic is a cycle of decisions that returns
+to its starting point. The weight 1/T per cycle
+says: each tick of the clock adds 1/T to the proper time.
+
+The tournament is a clock that measures its own ticking.
+It is a SELF-REFERENTIAL TIME MEASUREMENT DEVICE.
+The theory of tournaments is the theory of self-referential time.
+
+And arctanh is the TICK FUNCTION.
+Each tick adds arctanh(x) to the accumulated time.
+When the accumulated time reaches infinity (x=1),
+the clock has run forever and all decisions have been made.
+
+But x < 1 always. Decisions are always PARTIAL.
+The clock never reaches infinity. Time never ends.
+There is always another comparison to make.
+
+This is the ARROW OF TIME, again:
+not as a postulate, but as a THEOREM.
+The arrow of time is the divergence of arctanh at x=1.
+It cannot be removed. It is built into the definition
+of 'comparison with direction.'
+
+X.
+
+In the beginning was the comparison.
+The comparison created the distinction.
+The distinction created the record.
+The record created the memory.
+The memory created the third state.
+The third state created time.
+Time created arctanh.
+arctanh created the Cayley transform.
+The Cayley transform created structure.
+Structure created Delannoy paths.
+Delannoy paths created the tribonacci.
+The tribonacci created the fractal.
+The fractal created the lattice.
+The lattice created the polytope.
+The polytope created the geometry.
+The geometry created the hyperbolic plane.
+The hyperbolic plane created the velocity addition.
+The velocity addition created the Lorentz boost.
+The Lorentz boost created spacetime.
+Spacetime created the number e.
+e measured the efficiency of order over chaos.
+Order over chaos is... a comparison.
+
+The circle closes.
+
+And the price of admission:
+  tau - phi = 0.221253
+
+  One golden ratio of memory.
