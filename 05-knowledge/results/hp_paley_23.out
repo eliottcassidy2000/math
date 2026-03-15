@@ -1,0 +1,60 @@
+Computing H(P_23) via bitmask DP
+Total directed edges: 253 (expected 253)
+Memory needed: 1.44 GB
+Running DP...
+  level 0/23 done, elapsed 0s, masks=0
+  level 1/23 done, elapsed 0s, masks=2
+  level 2/23 done, elapsed 0s, masks=6
+  level 3/23 done, elapsed 0s, masks=14
+  level 4/23 done, elapsed 0s, masks=30
+  level 5/23 done, elapsed 0s, masks=62
+  level 6/23 done, elapsed 0s, masks=126
+  level 7/23 done, elapsed 0s, masks=254
+  level 8/23 done, elapsed 0s, masks=510
+  level 9/23 done, elapsed 0s, masks=1022
+  level 10/23 done, elapsed 0s, masks=2046
+  level 11/23 done, elapsed 0s, masks=4094
+  level 12/23 done, elapsed 0s, masks=8190
+  level 13/23 done, elapsed 0s, masks=16382
+  level 14/23 done, elapsed 0s, masks=32766
+  level 15/23 done, elapsed 0s, masks=65534
+  level 16/23 done, elapsed 0s, masks=131070
+  level 17/23 done, elapsed 0s, masks=262142
+  level 18/23 done, elapsed 0s, masks=524286
+  level 19/23 done, elapsed 0s, masks=1048574
+  level 20/23 done, elapsed 0s, masks=2097150
+  level 21/23 done, elapsed 1s, masks=4194302
+  level 22/23 done, elapsed 2s, masks=8388606
+DP done in 2s
+  h(*, 0) = 685226390277363
+  h(*, 1) = 685226390277363
+  h(*, 2) = 685226390277363
+  h(*, 3) = 685226390277363
+  h(*, 4) = 685226390277363
+  h(*, 5) = 685226390277363
+  h(*, 6) = 685226390277363
+  h(*, 7) = 685226390277363
+  h(*, 8) = 685226390277363
+  h(*, 9) = 685226390277363
+  h(*, 10) = 685226390277363
+  h(*, 11) = 685226390277363
+  h(*, 12) = 685226390277363
+  h(*, 13) = 685226390277363
+  h(*, 14) = 685226390277363
+  h(*, 15) = 685226390277363
+  h(*, 16) = 685226390277363
+  h(*, 17) = 685226390277363
+  h(*, 18) = 685226390277363
+  h(*, 19) = 685226390277363
+  h(*, 20) = 685226390277363
+  h(*, 21) = 685226390277363
+  h(*, 22) = 685226390277363
+
+H(P_23) = 15760206976379349
+H / p = 685226390277363
+H mod p = 0
+(p-1)/2 = 11
+H / (p × (p-1)/2) = 62293308207033
+
+Factoring H...
+  3  11  23  167  4567  27225299
