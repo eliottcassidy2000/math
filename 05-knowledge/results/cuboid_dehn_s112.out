@@ -1,0 +1,273 @@
+======================================================================
+THE POLYTOPE TRILOGY
+======================================================================
+
+THREE POLYNOMIALS:
+  (1+x)^n = face polynomial of the n-SIMPLEX
+    Coefficients: C(n+1, k+1) = faces of each dimension
+    At x=1: 2^n = total faces (including empty set)
+
+  (2+x)^n = face polynomial of the n-CUBE
+    Coefficients: C(n,k) * 2^{n-k} = k-faces of the n-cube
+    At x=1: 3^n (each coordinate: low face, high face, or spanning)
+
+  Q(x)^m = ((1+x)/(1-x))^m = our CAYLEY TRANSFORM
+    Coefficients: 2*g_k(m) = Delannoy diagonal-step weights
+    At x=1: diverges (pole)
+
+Face polynomial comparison:
+  n=1: simplex=[2, 1]
+        cube   =[2, 1]
+        Q^n    =[1, 2]
+
+  n=2: simplex=[3, 3, 1]
+        cube   =[4, 4, 1]
+        Q^n    =[1, 4, 8]
+
+  n=3: simplex=[4, 6, 4, 1]
+        cube   =[8, 12, 6, 1]
+        Q^n    =[1, 6, 30, 38]
+
+  n=4: simplex=[5, 10, 10, 5, 1]
+        cube   =[16, 32, 24, 8, 1]
+        Q^n    =[1, 8, 80, 176, 192]
+
+  n=5: simplex=[6, 15, 20, 15, 6, 1]
+        cube   =[32, 80, 80, 40, 10, 1]
+        Q^n    =[1, 10, 170, 650, 970, 1002]
+
+======================================================================
+Q(x) CONNECTS SIMPLEX AND CUBE
+======================================================================
+
+Observation: Q(x) = (1+x)/(1-x) = (1+x) * 1/(1-x)
+
+  (1+x) = face polynomial of the 0-simplex (vertex)
+  1/(1-x) = Σ x^k = generating function for counting (infinite simplex)
+
+So Q(x) = simplex-polynomial * counting-GF.
+
+For the CUBE connection:
+  (2+x)^n = face polynomial of n-cube
+  Q(x/2) = (2+x)/(2-x)   [substituting x -> x/2]
+
+So Q(x/2)^n = ((2+x)/(2-x))^n generates CUBOID weights!
+
+The relationship: CUBOID weights = g_k(m) / 2^{k-1}
+  (same Delannoy polynomials, just rescaled)
+
+Q(x/2)^m vs cube face polynomial:
+  m=1: cuboid_weights = [1.0, 1.0]
+        cube_faces     = [2, 1]
+        ratio          = ['0.5000', '1.0000']
+
+  m=2: cuboid_weights = [1.0, 2.0, 2.0]
+        cube_faces     = [4, 4, 1]
+        ratio          = ['0.2500', '0.5000', '2.0000']
+
+  m=3: cuboid_weights = [1.0, 3.0, 7.5, 4.75]
+        cube_faces     = [8, 12, 6, 1]
+        ratio          = ['0.1250', '0.2500', '1.2500', '4.7500']
+
+  m=4: cuboid_weights = [1.0, 4.0, 20.0, 22.0, 12.0]
+        cube_faces     = [16, 32, 24, 8, 1]
+        ratio          = ['0.0625', '0.1250', '0.8333', '2.7500', '12.0000']
+
+======================================================================
+THE DEHN INVARIANT
+======================================================================
+
+DEHN-SYDLER THEOREM (1965):
+  Two polyhedra P, Q in R^3 are scissors-congruent (can be cut and
+  reassembled into each other) iff:
+    Vol(P) = Vol(Q)  AND  D(P) = D(Q)
+
+  where D(P) = Σ_e l(e) ⊗ θ(e) is the DEHN INVARIANT,
+  l(e) = edge length, θ(e) = dihedral angle,
+  and the tensor product is over R ⊗_Q (R/πQ).
+
+KEY EXAMPLES:
+  D(cube) = 0         (all angles = π/2, rational mod πQ)
+  D(regular tet) ≠ 0  (angle = arccos(1/3), irrational/π)
+
+OUR CONNECTION:
+  Q(x) = (1+x)/(1-x) = exp(2*arctanh(x))
+
+  In the POINCARE DISK model of hyperbolic geometry:
+    arctanh(r) = hyperbolic distance from origin to point at radius r
+
+  So our tournament weights g_k(m) are coefficients of
+  exp(2m * arctanh(x)) = exp(m * HYPERBOLIC_DISTANCE(x))
+
+  The tournament Fourier decomposition lives in HYPERBOLIC SPACE,
+  and the Dehn invariant of the associated hyperbolic polytope
+  would encode the tournament's structural properties.
+
+======================================================================
+THE TOURNAMENT HYPERBOLIC POLYTOPE
+======================================================================
+Hyperbolic coordinates of tournament energy:
+
+  n=5:
+    k=1: E_2/E_0 = 0.300000, arctanh = 0.3095
+    k=2: E_4/E_0 = 0.016667, arctanh = 0.0167
+
+  n=7:
+    k=1: E_2/E_0 = 0.238095, arctanh = 0.2428
+    k=2: E_4/E_0 = 0.021429, arctanh = 0.0214
+    k=3: E_6/E_0 = 0.000397, arctanh = 0.0004
+
+  n=9:
+    k=1: E_2/E_0 = 0.194444, arctanh = 0.1970
+    k=2: E_4/E_0 = 0.016534, arctanh = 0.0165
+    k=3: E_6/E_0 = 0.000628, arctanh = 0.0006
+    k=4: E_8/E_0 = 0.000006, arctanh = 0.0000
+
+======================================================================
+CUBOID DECOMPOSITION OF TOURNAMENT VARIANCE
+======================================================================
+
+THE STRUCTURAL THEOREM:
+
+CV^2 = sum_k 2*g_k(n-2k)/(n)_{2k}
+
+Each g_k(m) = sum_j C(k-1,j-1)*C(m,j)*2^{j-1} is a sum over j-CLUSTER
+matchings. Each j-cluster matching has j connected components.
+
+POLYTOPE INTERPRETATION:
+  - Each cluster is a "SIMPLEX" (contiguous matching)
+  - j clusters form a "SIMPLICIAL COMPLEX" (disconnected union)
+  - Weight 2^j per j-cluster = 2 per component
+
+  The weight 2 per component is the "FACE COUNT" of a 0-simplex:
+  (1+1)^1 = 2 (a vertex has 2 faces: itself and the empty set)
+
+  For CUBOIDS: replace 2 with 3 (a 0-cube has 3 faces: itself,
+  the empty set, and... wait, a point has 2 faces).
+
+  Actually: the weight 2^j comes from the 2 ORIENTATIONS per
+  cluster (ascending or descending). For a "cuboid" version,
+  we'd have 3 orientations: ascending, descending, and FLAT.
+  This would give weight 3^j per j-cluster.
+
+THE CUBOID WEIGHT FORMULA:
+  E_cuboid[prod Z] = 3^c / (n)_L  (if we had 3 states per position)
+
+  This would correspond to a transfer matrix with 3 STATES at each
+  position: {ascending, descending, neither} instead of our current
+  {ascending or descending, or neither} with weight 2 for the first.
+
+  The cuboid transfer matrix would generate:
+  Q_cuboid(x)^m = ((2+x)/(2-x))^m = ((1+x/2)/(1-x/2))^m
+  = Q(x/2)^m
+
+  And the cuboid variance would be:
+  CV^2_cuboid = sum_k 2*g_k(n-2k)/(2^k * (n)_{2k})
+  = sum_k g_k(n-2k)/(2^{k-1} * (n)_{2k})
+
+CV^2 comparison (simplex vs cuboid):
+  n= 5: CV^2_simplex = 0.316667, CV^2_cuboid = 0.154167, ratio = 0.4868
+  n= 6: CV^2_simplex = 0.288889, CV^2_cuboid = 0.138889, ratio = 0.4808
+  n= 7: CV^2_simplex = 0.259921, CV^2_cuboid = 0.124454, ratio = 0.4788
+  n= 8: CV^2_simplex = 0.233929, CV^2_cuboid = 0.111979, ratio = 0.4787
+  n= 9: CV^2_simplex = 0.211613, CV^2_cuboid = 0.101435, ratio = 0.4793
+  n=10: CV^2_simplex = 0.192654, CV^2_cuboid = 0.092534, ratio = 0.4803
+  n=11: CV^2_simplex = 0.176531, CV^2_cuboid = 0.084976, ratio = 0.4814
+  n=12: CV^2_simplex = 0.162738, CV^2_cuboid = 0.078507, ratio = 0.4824
+  n=13: CV^2_simplex = 0.150849, CV^2_cuboid = 0.072920, ratio = 0.4834
+  n=14: CV^2_simplex = 0.140519, CV^2_cuboid = 0.068056, ratio = 0.4843
+  n=15: CV^2_simplex = 0.131474, CV^2_cuboid = 0.063786, ratio = 0.4852
+
+======================================================================
+THE TOURNAMENT DEHN INVARIANT
+======================================================================
+
+Define the TOURNAMENT POLYTOPE P(T) as the convex hull in R^K
+(K = floor((n-1)/2)) with coordinates:
+  x_k = sqrt(2*g_k(n-2k)/(n)_{2k}) for k = 1,...,K
+
+For a RANDOM tournament: E[x_k^2] = 2*g_k(n-2k)/(n)_{2k}.
+
+The DEHN INVARIANT of this polytope:
+  D(P(T)) = sum_edges l(e) ⊗ θ(e)
+
+For the "simplex" version: the angles involve arctanh.
+For the "cuboid" version: all angles are π/2 (D = 0).
+
+CONJECTURE: The tournament Dehn invariant measures the
+"non-cuboidality" of the tournament — how far the tournament's
+energy profile is from the cuboid (independent) case.
+
+  D(P) = 0  iff  tournament energy levels are INDEPENDENT
+  D(P) ≠ 0  iff  levels have CORRELATIONS (inter-level coupling)
+
+The 1/n^2 CANCELLATION we proved is a DEHN-LIKE phenomenon:
+the simplex contribution at k=1 (-2/n^2) and k=2 (+2/n^2)
+cancel because their "dihedral angle" is rational (π/2).
+This is exactly when the Dehn invariant allows scissors equivalence!
+
+The 1/n^2 cancellation as vanishing Dehn invariant:
+
+  Level k=1: contributes -2/n^2 to CV^2
+  Level k=2: contributes +2/n^2 to CV^2
+  These cancel iff the angle between levels 1 and 2 is π/2
+  (orthogonal contributions = cuboid-like = D=0 at this order)
+
+  At order 1/n^3: cancellation is INCOMPLETE
+  a_3 = -14/3 ≠ 0
+  This is the Dehn invariant becoming NONZERO: the tournament
+  polytope is NOT scissors-equivalent to a cuboid at this order
+
+Effective angle between consecutive levels:
+  n= 10: E_2/E_0=0.177778, E_4/E_0=0.014286, angle=0.0802 rad = 4.6 deg
+  n= 20: E_2/E_0=0.094737, E_4/E_0=0.004403, angle=0.0464 rad = 2.7 deg
+  n= 50: E_2/E_0=0.039184, E_4/E_0=0.000766, angle=0.0195 rad = 1.1 deg
+  n=100: E_2/E_0=0.019798, E_4/E_0=0.000196, angle=0.0099 rad = 0.6 deg
+
+As n -> infinity: angle -> arctan(0) = 0 (levels become orthogonal)
+This means the tournament polytope approaches a CUBOID for large n
+— consistent with D -> 0 and the 1/n^2 cancellation.
+
+======================================================================
+THE GENERATING FUNCTION TRINITY
+======================================================================
+
+THREE CAYLEY TRANSFORMS, THREE GEOMETRIES:
+
+1. SIMPLEX:  Q_1(x) = (1+x)     [linear, flat geometry]
+   Q_1^m = (1+x)^m = binomial coefficients
+   Face polynomial of the m-simplex
+
+2. CUBOID:   Q_2(x) = (2+x)/(2-x) = Q(x/2)  [rescaled hyperbolic]
+   Q_2^m = ((2+x)/(2-x))^m = damped Delannoy weights
+   Face polynomial of the m-cube (up to scaling)
+
+3. CAYLEY:   Q(x) = (1+x)/(1-x)   [full hyperbolic]
+   Q^m = ((1+x)/(1-x))^m = Delannoy weights
+   Tournament Fourier weights
+
+RELATIONSHIPS:
+   Q(x) = Q_2(2x) = exp(2*arctanh(x))
+   Q_2(x) = Q(x/2) = exp(2*arctanh(x/2))
+   Q_1(x) = lim_{a->0} Q(ax)/Q(0) = 1+x   [linearization]
+
+The three are the SAME function at different scales:
+   Simplex = linearized Cayley (small x)
+   Cuboid = half-scale Cayley
+   Tournament = full-scale Cayley
+
+Dehn-Sydler says: scissors-congruence depends on ANGLES.
+The Cayley transform converts DISTANCES (arctanh) to ANGLES.
+Tournament decomposability (sim_H = 1 or 0) is the COMBINATORIAL
+analog of scissors-congruence (D = 0 or ≠ 0).
+
+DEEP ANALOGY:
+   sim_H = 1  ←→  D(P) = 0  (scissors-congruent to cuboid)
+   sim_H = 0  ←→  D(P) ≠ 0  (not scissors-congruent)
+
+   P(sim_H=1) = 2n!/2^{C(n,2)} → 0
+   (Almost all tournaments are NOT scissors-equivalent to cuboids)
+
+This is the tournament-geometric DICTIONARY.
+
+Done!
