@@ -1,0 +1,282 @@
+======================================================================
+DETAILED SUCCESSION ANALYSIS IN NUD PERMUTATIONS
+======================================================================
+
+n=2: |NUD|=1, W=2, n!=2
+  E[succ | NUD] = 1 = 1.000000
+  E[succ²| NUD] = 1 = 1.000000
+  Var[succ|NUD] = 0.000000
+  Succession distribution in NUD perms:
+    succ=1: 1 (100.0%), contribution to W: 2 (100.0%)
+
+n=3: |NUD|=3, W=8, n!=6
+  E[succ | NUD] = 4/3 = 1.333333
+  E[succ²| NUD] = 2 = 2.000000
+  Var[succ|NUD] = 0.222222
+  Succession distribution in NUD perms:
+    succ=1: 2 (66.7%), contribution to W: 4 (50.0%)
+    succ=2: 1 (33.3%), contribution to W: 4 (50.0%)
+
+n=4: |NUD|=11, W=32, n!=24
+  E[succ | NUD] = 14/11 = 1.272727
+  E[succ²| NUD] = 26/11 = 2.363636
+  Var[succ|NUD] = 0.743802
+  Succession distribution in NUD perms:
+    succ=0: 2 (18.2%), contribution to W: 2 (6.2%)
+    succ=1: 5 (45.5%), contribution to W: 10 (31.2%)
+    succ=2: 3 (27.3%), contribution to W: 12 (37.5%)
+    succ=3: 1 (9.1%), contribution to W: 8 (25.0%)
+
+n=5: |NUD|=53, W=158, n!=120
+  E[succ | NUD] = 64/53 = 1.207547
+  E[succ²| NUD] = 128/53 = 2.415094
+  Var[succ|NUD] = 0.956924
+  Succession distribution in NUD perms:
+    succ=0: 14 (26.4%), contribution to W: 14 (8.9%)
+    succ=1: 20 (37.7%), contribution to W: 40 (25.3%)
+    succ=2: 14 (26.4%), contribution to W: 56 (35.4%)
+    succ=3: 4 (7.5%), contribution to W: 32 (20.3%)
+    succ=4: 1 (1.9%), contribution to W: 16 (10.1%)
+
+n=6: |NUD|=309, W=928, n!=720
+  E[succ | NUD] = 362/309 = 1.171521
+  E[succ²| NUD] = 742/309 = 2.401294
+  Var[succ|NUD] = 1.028833
+  Succession distribution in NUD perms:
+    succ=0: 90 (29.1%), contribution to W: 90 (9.7%)
+    succ=1: 115 (37.2%), contribution to W: 230 (24.8%)
+    succ=2: 72 (23.3%), contribution to W: 288 (31.0%)
+    succ=3: 26 (8.4%), contribution to W: 208 (22.4%)
+    succ=4: 5 (1.6%), contribution to W: 80 (8.6%)
+    succ=5: 1 (0.3%), contribution to W: 32 (3.4%)
+
+n=7: |NUD|=2119, W=6350, n!=5040
+  E[succ | NUD] = 2428/2119 = 1.145824
+  E[succ²| NUD] = 5012/2119 = 2.365267
+  Var[succ|NUD] = 1.052355
+  Succession distribution in NUD perms:
+    succ=0: 646 (30.5%), contribution to W: 646 (10.2%)
+    succ=1: 790 (37.3%), contribution to W: 1580 (24.9%)
+    succ=2: 467 (22.0%), contribution to W: 1868 (29.4%)
+    succ=3: 168 (7.9%), contribution to W: 1344 (21.2%)
+    succ=4: 41 (1.9%), contribution to W: 656 (10.3%)
+    succ=5: 6 (0.3%), contribution to W: 192 (3.0%)
+    succ=6: 1 (0.0%), contribution to W: 64 (1.0%)
+
+n=8: |NUD|=16687, W=49752, n!=40320
+  E[succ | NUD] = 18806/16687 = 1.126985
+  E[succ²| NUD] = 38890/16687 = 2.330557
+  Var[succ|NUD] = 1.060461
+  Succession distribution in NUD perms:
+    succ=0: 5242 (31.4%), contribution to W: 5242 (10.5%)
+    succ=1: 6217 (37.3%), contribution to W: 12434 (25.0%)
+    succ=2: 3557 (21.3%), contribution to W: 14228 (28.6%)
+    succ=3: 1285 (7.7%), contribution to W: 10280 (20.7%)
+    succ=4: 319 (1.9%), contribution to W: 5104 (10.3%)
+    succ=5: 59 (0.4%), contribution to W: 1888 (3.8%)
+    succ=6: 7 (0.0%), contribution to W: 448 (0.9%)
+    succ=7: 1 (0.0%), contribution to W: 128 (0.3%)
+
+n=9: |NUD|=148329, W=439670, n!=362880
+  E[succ | NUD] = 165016/148329 = 1.112500
+  E[succ²| NUD] = 341192/148329 = 2.300238
+  Var[succ|NUD] = 1.062582
+  Succession distribution in NUD perms:
+    succ=0: 47622 (32.1%), contribution to W: 47622 (10.8%)
+    succ=1: 55160 (37.2%), contribution to W: 110320 (25.1%)
+    succ=2: 30968 (20.9%), contribution to W: 123872 (28.2%)
+    succ=3: 11120 (7.5%), contribution to W: 88960 (20.2%)
+    succ=4: 2834 (1.9%), contribution to W: 45344 (10.3%)
+    succ=5: 536 (0.4%), contribution to W: 17152 (3.9%)
+    succ=6: 80 (0.1%), contribution to W: 5120 (1.2%)
+    succ=7: 8 (0.0%), contribution to W: 1024 (0.2%)
+    succ=8: 1 (0.0%), contribution to W: 256 (0.1%)
+
+======================================================================
+B(n) = (n+2)(n-1)! - W(n) SEQUENCE ANALYSIS
+======================================================================
+  B(3) = 2
+  B(4) = 4
+  B(5) = 10
+  B(6) = 32
+  B(7) = 130
+  B(8) = 648
+  B(9) = 3850
+
+Trying B(n) = (an+b)B(n-1) + (cn+d)B(n-2):
+  Solution: a=5/6, b=0, c=-7/6, d=5/2
+  Verification:
+    B(5): predicted=10, actual=10 ✓
+    B(6): predicted=32, actual=32 ✓
+    B(7): predicted=130, actual=130 ✓
+    B(8): predicted=648, actual=648 ✓
+    B(9): predicted=3820, actual=3850 ✗
+
+======================================================================
+W(n) RECURRENCE WITH n-DEPENDENT COEFFICIENTS
+======================================================================
+  Solution: a=-21594555/1840625312, b=1689104045/920312656, c=-395912785/115039082
+            d=-509679211/920312656, e=1670571169/920312656, f=633038839/230078164
+
+Trying W(n) = (n+α)W(n-1) + β(n-1)W(n-2):
+  α=3/16, β=-1/4
+    W(4): predicted=32, actual=32 ✓
+    W(5): predicted=158, actual=158 ✓
+    W(6): predicted=7501/8, actual=928 ✗
+    W(7): predicted=6433, actual=6350 ✗
+    W(8): predicted=402933/8, actual=49752 ✗
+    W(9): predicted=888793/2, actual=439670 ✗
+
+  α=-2/15, β=-1/4, γ=23/15
+    W(4): predicted=32, actual=32 ✓
+    W(5): predicted=158, actual=158 ✓
+    W(6): predicted=928, actual=928 ✓
+    W(7): predicted=190141/30, actual=6350 ✗
+    W(8): predicted=742804/15, actual=49752 ✗
+    W(9): predicted=13097507/30, actual=439670 ✗
+
+Residuals from A000255-type recurrence W(n) - n·W(n-1) - (n-1)·W(n-2):
+  n=4: residual = -6
+  n=5: residual = -34
+  n=6: residual = -180
+  n=7: residual = -1094
+  n=8: residual = -7544
+  n=9: residual = -58898
+
+Residuals from W(n) - n·W(n-1) - (n-3)·W(n-2):
+  n=4: residual = -2
+  n=5: residual = -18
+  n=6: residual = -116
+  n=7: residual = -778
+  n=8: residual = -5688
+  n=9: residual = -46198
+
+Brute force search for W(n) = (an+b)W(n-1) + (cn+d)W(n-2):
+  Best: a=1, b=2, c=-2, d=1, error=596
+
+3-term recurrence search W(n) = (an+b)W(n-1) + (cn+d)W(n-2) + (en+f)W(n-3):
+  With a=1: b=12774/40927, c=-13484/40927, d=-5109/40927, e=-55357/40927, f=321590/40927
+    W(5): predicted=158, actual=158 ✓
+    W(6): predicted=928, actual=928 ✓
+    W(7): predicted=6350, actual=6350 ✓
+    W(8): predicted=49752, actual=49752 ✓
+    W(9): predicted=439670, actual=439670 ✓
+
+======================================================================
+ANALYTIC PROOF STRATEGY
+======================================================================
+
+Key insight from Poisson approximation:
+
+For a random permutation of [n], let A = # unit ascents, D = # unit descents.
+Both A and D are approximately Poisson(1) for large n, with correlation.
+
+W(n)/n! = E[2^A · 1_{D=0}]
+
+where expectation is over uniform random permutations.
+
+By independence (approximately):
+E[2^A · 1_{D=0}] ≈ E[2^A] · P(D=0)
+
+For large n:
+- E[2^A] → E_Poisson[2^X] = Σ e^{-1}/k! · 2^k = e^{-1} · e^2 = e
+- P(D=0) → e^{-1}
+
+So W(n)/n! → e · e^{-1} = 1. ✓
+
+For the correction term:
+- E[A] = (n-1)/n ≈ 1 - 1/n  (prob 1/(n-1) at each of n-1 positions... wait)
+
+Actually, let me be precise about the first moment:
+
+Exact statistics for random permutation of [n]:
+
+  n=3:
+    E[A] = 2/3 = 0.666667
+    E[D] = 2/3 = 0.666667
+    P(D=0) = 1/2 = 0.500000 (1/e = 0.367879)
+    E[2^A] = 11/6 = 1.833333 (e = 2.718282)
+    E[2^A|D=0] = 8/3 = 2.666667
+    E[2^A·1(D=0)] = 4/3 = 1.333333 = W/n!
+    E[2^A]·P(D=0) = 0.916667
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.45454545
+    Covariance factor = 0.41666667
+
+  n=4:
+    E[A] = 3/4 = 0.750000
+    E[D] = 3/4 = 0.750000
+    P(D=0) = 11/24 = 0.458333 (1/e = 0.367879)
+    E[2^A] = 49/24 = 2.041667 (e = 2.718282)
+    E[2^A|D=0] = 32/11 = 2.909091
+    E[2^A·1(D=0)] = 4/3 = 1.333333 = W/n!
+    E[2^A]·P(D=0) = 0.935764
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.42486085
+    Covariance factor = 0.39756944
+
+  n=5:
+    E[A] = 4/5 = 0.800000
+    E[D] = 4/5 = 0.800000
+    P(D=0) = 53/120 = 0.441667 (1/e = 0.367879)
+    E[2^A] = 87/40 = 2.175000 (e = 2.718282)
+    E[2^A|D=0] = 158/53 = 2.981132
+    E[2^A·1(D=0)] = 79/60 = 1.316667 = W/n!
+    E[2^A]·P(D=0) = 0.960625
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.37063544
+    Covariance factor = 0.35604167
+
+  n=6:
+    E[A] = 5/6 = 0.833333
+    E[D] = 5/6 = 0.833333
+    P(D=0) = 103/240 = 0.429167 (1/e = 0.367879)
+    E[2^A] = 1631/720 = 2.265278 (e = 2.718282)
+    E[2^A|D=0] = 928/309 = 3.003236
+    E[2^A·1(D=0)] = 58/45 = 1.288889 = W/n!
+    E[2^A]·P(D=0) = 0.972182
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.32576953
+    Covariance factor = 0.31670718
+
+  n=7:
+    E[A] = 6/7 = 0.857143
+    E[D] = 6/7 = 0.857143
+    P(D=0) = 2119/5040 = 0.420437 (1/e = 0.367879)
+    E[2^A] = 11743/5040 = 2.329960 (e = 2.718282)
+    E[2^A|D=0] = 6350/2119 = 2.996697
+    E[2^A·1(D=0)] = 635/504 = 1.259921 = W/n!
+    E[2^A]·P(D=0) = 0.979600
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.28615777
+    Covariance factor = 0.28032026
+
+  n=8:
+    E[A] = 7/8 = 0.875000
+    E[D] = 7/8 = 0.875000
+    P(D=0) = 16687/40320 = 0.413864 (1/e = 0.367879)
+    E[2^A] = 31967/13440 = 2.378497 (e = 2.718282)
+    E[2^A|D=0] = 49752/16687 = 2.981483
+    E[2^A·1(D=0)] = 691/560 = 1.233929 = W/n!
+    E[2^A]·P(D=0) = 0.984374
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.25351538
+    Covariance factor = 0.24955407
+
+  n=9:
+    E[A] = 8/9 = 0.888889
+    E[D] = 8/9 = 0.888889
+    P(D=0) = 16481/40320 = 0.408755 (1/e = 0.367879)
+    E[2^A] = 876809/362880 = 2.416251 (e = 2.718282)
+    E[2^A|D=0] = 439670/148329 = 2.964154
+    E[2^A·1(D=0)] = 6281/5184 = 1.211613 = W/n!
+    E[2^A]·P(D=0) = 0.987654
+    Ratio W(n)/n! / (E[2^A]·P(D=0)) = 1.22675772
+    Covariance factor = 0.22395826
+
+======================================================================
+CUMULANT EXPANSION
+======================================================================
+  n=3: E[A]=(n-1)/n = 0.666667
+  n=4: E[A]=(n-1)/n = 0.750000
+  n=5: E[A]=(n-1)/n = 0.800000
+  n=6: E[A]=(n-1)/n = 0.833333
+  n=7: E[A]=(n-1)/n = 0.857143
+  n=8: E[A]=(n-1)/n = 0.875000
+  n=9: E[A]=(n-1)/n = 0.888889
+
+Done!
