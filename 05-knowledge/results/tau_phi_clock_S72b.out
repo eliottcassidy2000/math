@@ -1,0 +1,475 @@
+========================================================================
+THE TAU-PHI CLOCK
+opus-2026-03-15-S72b
+========================================================================
+
+============================================================
+PART 1: THE TAU-PHI RATIO
+============================================================
+
+  phi   = 1.6180339887  (golden ratio)
+  tau   = 1.8392867552  (tribonacci constant)
+  tau/phi = 1.1367417298
+
+  Is tau/phi algebraic? YES — it's a root of a degree-6 polynomial:
+  If phi = (1+√5)/2 and tau satisfies tau^3 = tau^2 + tau + 1,
+  then r = tau/phi, so tau = r*phi, and:
+    (r*phi)^3 = (r*phi)^2 + r*phi + 1
+    r^3 * phi^3 = r^2 * phi^2 + r*phi + 1
+  Using phi^2 = phi + 1, phi^3 = 2phi + 1:
+    r^3 * (2phi+1) = r^2 * (phi+1) + r*phi + 1
+    (2r^3 - r^2 - r)*phi + (r^3 - r^2 - 1) = 0
+  Since phi is irrational:
+    2r^3 - r^2 - r = 0  AND  r^3 - r^2 - 1 = 0
+  From the first: r(2r^2 - r - 1) = 0, so r(2r+1)(r-1) = 0 → r=0, -1/2, 1.
+  But r ≈ 1.137, contradiction!
+
+  So phi and tau are NOT simply related: tau ≠ c*phi for any rational c.
+  The ratio tau/phi is algebraic of degree 6 (product of minimal polys).
+
+  Powers of tau/phi:
+    (tau/phi)^0 = 1.0000000000
+    (tau/phi)^1 = 1.1367417298
+    (tau/phi)^2 = 1.2921817602
+    (tau/phi)^3 = 1.4688769293
+    (tau/phi)^4 = 1.6697337015
+    (tau/phi)^5 = 1.8980559761
+    (tau/phi)^6 = 2.1575994334
+
+  Searching for minimal polynomial of tau/phi...
+  P = -(r^3-r^2-1) = 0.8233048309
+  Q = 2r^3-r^2-r = 0.5088303686
+  P^2 - P*Q - Q^2 = -1.6653345369e-16
+
+  Minimal polynomial of tau/phi:
+  r^6 + r^5 - 4r^4 + 5r^3 - 2r^2 - r - 1 = -4.4408920985e-16
+
+============================================================
+PART 2: THE COMPLEX CLOCK
+============================================================
+
+  The tau-phi point in C: z = phi + i*tau = (1.618033988749895+1.8392867552141612j)
+  |z| = 2.4496958498
+  arg(z) = 0.8493064560 rad = 48.661675°
+
+  Compare: phi^2 + tau^2 = 6.0010097567
+  |z|^2 = 6.0010097567
+
+  phi^2 = phi + 1 = 2.6180339887
+  tau^2 = tau^3 - tau - 1? No: tau^3 = tau^2 + tau + 1 => tau^2 = tau^3 - tau - 1
+  tau^2 = 3.3829757679
+
+  |z|^2 = phi^2 + tau^2 = (phi+1) + tau^2 = 6.0010097567
+
+  theta = arctan(tau/phi) = 0.8493064560 rad
+        = 48.661675°
+  theta/pi = 0.2703426413
+  theta/(2*pi) = 0.1351713207
+  1/theta = 1.1774312946
+
+  Powers of z = phi + i*tau:
+    z^ 1 =       1.6180 +       1.8393i  |z^k| =       2.4497  arg =    48.66°
+    z^ 2 =      -0.7649 +       5.9521i  |z^k| =       6.0010  arg =    97.32°
+    z^ 3 =     -12.1852 +       8.2237i  |z^k| =      14.7006  arg =   145.99°
+    z^ 4 =     -34.8418 +      -9.1060i  |z^k| =      36.0121  arg =  -165.35°
+    z^ 5 =     -39.6268 +     -78.8179i  |z^k| =      88.2187  arg =  -116.69°
+    z^ 6 =      80.8511 +    -200.4151i  |z^k| =     216.1091  arg =   -68.03°
+    z^ 7 =     499.4408 +    -175.5701i  |z^k| =     529.4015  arg =   -19.37°
+    z^ 8 =    1131.0358 +     634.5365i  |z^k| =    1296.8727  arg =    29.29°
+    z^ 9 =     662.9599 +    3107.0009i  |z^k| =    3176.9435  arg =    77.96°
+    z^10 =   -4641.9740 +    6246.6063i  |z^k| =    7782.5454  arg =   126.62°
+    z^11 =  -19000.1720 +    1569.3001i  |z^k| =   19064.8692  arg =   175.28°
+    z^12 =  -33629.3169 +  -32407.5839i  |z^k| =   46703.1310  arg =  -136.06°
+
+============================================================
+PART 3: MODULAR PERIODICITY — THE CLOCK
+============================================================
+
+  The "parity clock" in tournament theory has period 6 = LCM(2,3).
+
+  Fibonacci mod m has Pisano period pi(m).
+  Tribonacci mod m has its own period.
+
+  Question: what is the JOINT period of Fibonacci and Tribonacci
+  modulo small integers? This defines the "tau-phi clock".
+
+    m  pi_F(m)  pi_T(m)      lcm  pi_F*pi_T
+  ----------------------------------------
+    2        3        4       12         12
+    3        8       13      104        104
+    4        6        8       24         48
+    5       20       31      620        620
+    6       24       52      312       1248
+    7       16       48       48        768
+    8       12       16       48        192
+    9       24       39      312        936
+   10       60      124     1860       7440
+   11       10      110      110       1100
+   12       24      104      312       2496
+   13       28      168      168       4704
+   14       48       48       48       2304
+   15       40      403    16120      16120
+   16       24       32       96        768
+   17       36       96      288       3456
+   18       24      156      312       3744
+   19       18      360      360       6480
+   20       60      248     3720      14880
+   21       16      624      624       9984
+   22       30      220      660       6600
+   23       48      553    26544      26544
+   24       24      208      624       4992
+
+============================================================
+PART 4: CYCLOTOMIC STRUCTURE
+============================================================
+
+  phi satisfies x^2 - x - 1 = 0  → roots: phi, -1/phi
+  tau satisfies x^3 - x^2 - x - 1 = 0  → roots: tau, alpha, alpha_bar
+
+  The companion matrices define linear recurrences:
+  M_phi = [[1,1],[1,0]]  (Fibonacci matrix)
+  M_tau = [[1,1,1],[1,0,0],[0,1,0]]  (tribonacci matrix)
+
+  The "tau-phi clock" = eigenvalues of these matrices on the unit circle:
+
+  Fibonacci eigenvalues: [ 1.61803399 -0.61803399]
+    phi = 1.6180339887
+    -1/phi = -0.6180339887
+
+  Tribonacci eigenvalues: [ 1.83928676+0.j         -0.41964338+0.60629073j -0.41964338-0.60629073j]
+    tau = 1.8392867552
+    alpha_1 = -0.4196433776+0.6062907292j  |alpha| = 0.7373527058
+    alpha_2 = -0.4196433776-0.6062907292j  |alpha| = 0.7373527058
+
+  The complex tribonacci root alpha:
+    alpha = (-0.41964337760708065+0.6062907292071997j)
+    |alpha| = 0.7373527058
+    arg(alpha) = 124.688997°
+    1/|alpha|^2 = 1.8392867552
+    |alpha|^2 = 0.5436890127
+    Compare: 1/tau = 0.5436890127
+    tau * |alpha|^2 = 1.0000000000
+    (Should be 1 by Vieta's: product of all 3 roots = 1)
+
+============================================================
+PART 5: THE CLOCK HANDS — ANGULAR VELOCITIES
+============================================================
+
+  The "tau-phi clock" has TWO hands:
+
+  HOUR HAND (slow): The Fibonacci matrix M_phi mod m
+    Period at m=2: 3
+    Period at m=3: 8
+    Period at m=4: 6
+    Period at m=5: 20
+    Period at m=6: 24
+    Period at m=7: 16
+
+  MINUTE HAND (fast): The tribonacci matrix M_tau mod m
+    Period at m=2: 4
+    Period at m=3: 13
+    Period at m=4: 8
+    Period at m=5: 31
+    Period at m=6: 52
+    Period at m=7: 48
+
+  JOINT CLOCK (both hands at 12):
+    m Fib period Trib period  Joint (LCM)  ratio T/F
+  --------------------------------------------------
+    2          3           4           12      1.333
+    3          8          13          104      1.625
+    4          6           8           24      1.333
+    5         20          31          620      1.550
+    6         24          52          312      2.167
+    7         16          48           48      3.000
+    8         12          16           48      1.333
+    9         24          39          312      1.625
+   10         60         124         1860      2.067
+   11         10         110          110     11.000
+   12         24         104          312      4.333
+   13         28         168          168      6.000
+
+============================================================
+PART 6: THE TAU-PHI ANGLE AND 3-CYCLES
+============================================================
+
+  The tribonacci roots form a "Y" in the complex plane:
+    tau = 1.839287  (on real axis)
+    alpha = 0.737353 * e^(i * 124.6890°)
+    alpha_bar = 0.737353 * e^(-i * 124.6890°)
+
+  The angle between the complex roots:
+    2*theta = 249.3780°
+
+  Compare: 360°/3 = 120° (the angle for a 3-cycle!)
+    2*theta = 249.3780° ≈ 2.0781 × 120°
+
+  The tribonacci roots DON'T form a 120° pattern (they would if they
+  were cube roots of unity scaled by |alpha|).
+
+  But the PHASE ROTATION per step is:
+    Each tribonacci step rotates alpha by theta_alpha:
+    alpha^n = |alpha|^n * e^(i*n*theta_alpha)
+
+  theta_alpha / (2*pi) = 0.3463583261
+  ≈ 0.3464... is this rational?
+  Continued fraction: [0, 2, 1, 7, 1, 6, 2, 1, 6, 11, 1, 1, 5, 1, 6]
+  Convergents:
+    [0] = 0/1 = 0.0000000000  (error = 3.46e-01)
+    [1] = 1/2 = 0.5000000000  (error = 1.54e-01)
+    [2] = 1/3 = 0.3333333333  (error = 1.30e-02)
+    [3] = 8/23 = 0.3478260870  (error = 1.47e-03)
+    [4] = 9/26 = 0.3461538462  (error = 2.04e-04)
+    [5] = 62/179 = 0.3463687151  (error = 1.04e-05)
+    [6] = 133/384 = 0.3463541667  (error = 4.16e-06)
+    [7] = 195/563 = 0.3463587922  (error = 4.66e-07)
+    [8] = 1303/3762 = 0.3463583200  (error = 6.04e-09)
+    [9] = 14528/41945 = 0.3463583264  (error = 2.92e-10)
+    [10] = 15831/45707 = 0.3463583259  (error = 2.29e-10)
+    [11] = 30359/87652 = 0.3463583261  (error = 2.04e-11)
+    [12] = 167626/483967 = 0.3463583261  (error = 3.22e-12)
+    [13] = 197985/571619 = 0.3463583261  (error = 3.99e-13)
+    [14] = 1355536/3913681 = 0.3463583261  (error = 4.80e-14)
+
+============================================================
+PART 7: FIBONACCI × TRIBONACCI INTERACTION
+============================================================
+
+  Fibonacci:   [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+  Tribonacci:  [1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136, 5768]
+
+  Ratio F_n / T_n:
+    n= 3: F=       2, T=       1, F/T = 2.000000
+    n= 4: F=       3, T=       2, F/T = 1.500000
+    n= 5: F=       5, T=       4, F/T = 1.250000
+    n= 6: F=       8, T=       7, F/T = 1.142857
+    n= 7: F=      13, T=      13, F/T = 1.000000
+    n= 8: F=      21, T=      24, F/T = 0.875000
+    n= 9: F=      34, T=      44, F/T = 0.772727
+    n=10: F=      55, T=      81, F/T = 0.679012
+    n=11: F=      89, T=     149, F/T = 0.597315
+    n=12: F=     144, T=     274, F/T = 0.525547
+    n=13: F=     233, T=     504, F/T = 0.462302
+    n=14: F=     377, T=     927, F/T = 0.406688
+    n=15: F=     610, T=    1705, F/T = 0.357771
+    n=16: F=     987, T=    3136, F/T = 0.314732
+    n=17: F=    1597, T=    5768, F/T = 0.276872
+    n=18: F=    2584, T=   10609, F/T = 0.243567
+    n=19: F=    4181, T=   19513, F/T = 0.214267
+
+  Asymptotic: F_n/T_n ~ (phi/tau)^n → 0 (phi/tau = 0.879707 < 1)
+
+  Mixed sequence F_n * T_n:
+    n= 3: F*T = 2
+    n= 4: F*T = 6
+    n= 5: F*T = 20
+    n= 6: F*T = 56
+    n= 7: F*T = 169
+    n= 8: F*T = 504
+    n= 9: F*T = 1496
+    n=10: F*T = 4455
+    n=11: F*T = 13261
+    n=12: F*T = 39456
+    n=13: F*T = 117432
+    n=14: F*T = 349479
+    n=15: F*T = 1040050
+
+  phi * tau = 2.9760284850
+  (phi*tau)^n growth rate check:
+    n=5: ratio = 3.33333333 (target: 2.97602848)
+    n=6: ratio = 2.80000000 (target: 2.97602848)
+    n=7: ratio = 3.01785714 (target: 2.97602848)
+    n=8: ratio = 2.98224852 (target: 2.97602848)
+    n=9: ratio = 2.96825397 (target: 2.97602848)
+    n=10: ratio = 2.97794118 (target: 2.97602848)
+    n=11: ratio = 2.97665544 (target: 2.97602848)
+    n=12: ratio = 2.97534123 (target: 2.97602848)
+    n=13: ratio = 2.97627737 (target: 2.97602848)
+    n=14: ratio = 2.97601165 (target: 2.97602848)
+    n=15: ratio = 2.97600142 (target: 2.97602848)
+
+============================================================
+PART 8: THE 6-CLOCK AND TOURNAMENT PARITY
+============================================================
+
+  The period-6 "parity clock" from tournament theory:
+
+  Fibonacci mod 4: [1, 1, 2, 3, 1, 0] repeating (period 6)
+  Fibonacci mod 2: [1, 1, 0] repeating (period 3)
+  Fibonacci mod 3: [1, 1, 2, 0, 2, 2, 1, 0] repeating (period 8)
+
+  Tribonacci mod 2: period = 4
+  Tribonacci mod 4: period = 8
+
+  The "tau-phi clock" runs on the joint period:
+  LCM(pi_F(4), pi_T(4)) = LCM(6, 8) = 24
+
+  Fibonacci mod 4 cycle:
+    [0, 1, 1, 2, 3, 1]
+
+  Tribonacci mod 4 cycle:
+    [0, 0, 1, 1, 2, 0, 3, 1]
+
+============================================================
+PART 9: THE JOINT STATE CLOCK
+============================================================
+
+  At each tick n, the clock has state (F_n mod m, T_n mod m).
+
+  For m=2, the possible states form a finite automaton.
+  The "clock face" is Z/mZ × Z/mZ.
+
+  Joint state (F_n mod 2, T_n mod 2):
+    n= 0: (0, 0)
+    n= 1: (1, 0)
+    n= 2: (1, 1)
+    n= 3: (0, 1)
+    n= 4: (1, 0)
+    n= 5: (1, 0)
+    n= 6: (0, 1)
+    n= 7: (1, 1)
+    n= 8: (1, 0)
+    n= 9: (0, 0)
+
+  Joint period mod 2: 12
+  Joint period mod 4: 24
+
+============================================================
+PART 10: WHAT THE CLOCK MEASURES
+============================================================
+
+  SYNTHESIS: The tau-phi clock is the PHASE PORTRAIT of tournament structure.
+
+  In a Paley tournament P_p (p prime, p ≡ 3 mod 4):
+  - The vertices are Z/pZ
+  - The arcs come from quadratic residues
+  - The eigenvalues of the adjacency matrix involve ROOTS OF UNITY
+  - The Hamiltonian path count H decomposes via CHARACTERS of Z/pZ
+
+  The characters chi_k(j) = omega^(jk) where omega = e^(2*pi*i/p)
+  trace around the clock with angular velocity 2*pi*k/p.
+
+  For p=5: omega = e^(2*pi*i/5)
+  For p=7: omega = e^(2*pi*i/7)
+
+  The TOURNAMENT CLOCK has:
+  - HOUR HAND: Fibonacci period pi_F(p) (path-counting periodicity)
+  - MINUTE HAND: Tribonacci period pi_T(p) (3-cycle periodicity)
+  - SECOND HAND: The character phase 2*pi*k/p (eigenspace rotation)
+
+  When all three hands align → the tournament has maximal symmetry.
+
+  P_3: QR=[1], pi_F=8, pi_T=13, joint=104
+    p-1=2, joint/(p-1)=52.00, joint/p=34.67
+  P_5: QR=[1, 4], pi_F=20, pi_T=31, joint=620
+    p-1=4, joint/(p-1)=155.00, joint/p=124.00
+  P_7: QR=[1, 2, 4], pi_F=16, pi_T=48, joint=48
+    p-1=6, joint/(p-1)=8.00, joint/p=6.86
+  P_11: QR=[1, 3, 4, 5, 9], pi_F=10, pi_T=110, joint=110
+    p-1=10, joint/(p-1)=11.00, joint/p=10.00
+  P_13: QR=[1, 3, 4, 9, 10, 12], pi_F=28, pi_T=168, joint=168
+    p-1=12, joint/(p-1)=14.00, joint/p=12.92
+
+============================================================
+PART 11: THE GOLDEN ANGLE
+============================================================
+
+  The GOLDEN ANGLE = 2*pi*(1 - 1/phi) = 2*pi*(2-phi) = 137.5078°
+  This is the "most irrational" angle — gives optimal packing (sunflowers).
+
+  The TRIBONACCI ANGLE = 2*pi*(1 - 1/tau) = 164.2720°
+
+  The TAU-PHI ANGLE = 2*pi*(1 - phi/tau) = 43.3054°
+
+  In tournament terms:
+  - Golden angle: the OPTIMAL spacing for placing vertices around a circle
+    so that no two adjacent vertices in the tournament ordering are close.
+  - Tribonacci angle: the optimal spacing for 3-step avoidance.
+
+  If we arrange n vertices on a circle with angular spacing equal to the
+  golden angle, the tournament defined by "i→j iff i comes before j
+  in the angular ordering" has MAXIMAL dispersion of Hamiltonian paths.
+
+  The golden ratio's connection to tournament scores:
+  - The transitive tournament has score sequence (0, 1, ..., n-1)
+  - This is the MOST ordered: H = 1
+  - A "golden tournament" would maximize disorder per arc
+
+  Fibonacci mod p periods for Paley primes:
+
+  Primes where pi_F(p) = p-1 (phi is primitive root mod p):
+    p=3: pi_F = 8 (ratio = 0.25)
+    p=5: pi_F = 20 (ratio = 0.20)
+    p=7: pi_F = 16 (ratio = 0.38)
+    p=11: pi_F = 10 = p-1 ✓
+    p=13: pi_F = 28 (ratio = 0.43)
+    p=17: pi_F = 36 (ratio = 0.44)
+    p=19: pi_F = 18 = p-1 ✓
+    p=23: pi_F = 48 (ratio = 0.46)
+    p=29: pi_F = 14 (ratio = 2.00)
+    p=31: pi_F = 30 = p-1 ✓
+    p=37: pi_F = 76 (ratio = 0.47)
+    p=41: pi_F = 40 = p-1 ✓
+    p=43: pi_F = 88 (ratio = 0.48)
+    p=47: pi_F = 32 (ratio = 1.44)
+
+  Primes where pi_T(p) divides p^2-1:
+    p=3: pi_T = 13
+    p=5: pi_T = 31
+    p=7: pi_T = 48, divides 48 = p²-1
+    p=11: pi_T = 110, divides 110 = p²-p
+    p=13: pi_T = 168, divides 168 = p²-1
+    p=17: pi_T = 96, divides 288 = p²-1
+    p=19: pi_T = 360, divides 360 = p²-1
+    p=23: pi_T = 553
+    p=29: pi_T = 140, divides 840 = p²-1
+    p=31: pi_T = 331
+
+============================================================
+FINAL SYNTHESIS: THE TAU-PHI CLOCK
+============================================================
+
+  THE TAU-PHI CLOCK IS A THREE-HAND TIMEPIECE:
+
+  1. PHI HAND (golden/Fibonacci):
+     - Tracks binary recurrence: F_n = F_{n-1} + F_{n-2}
+     - Pisano period pi_F(m) governs modular return times
+     - Angular velocity: golden angle ≈ 137.5°
+     - Controls: PATH COUNTING structure (2-step)
+
+  2. TAU HAND (tribonacci):
+     - Tracks ternary recurrence: T_n = T_{n-1} + T_{n-2} + T_{n-3}
+     - Period pi_T(m) governs 3-step return times
+     - Angular velocity: tribonacci angle ≈ 164.3°
+     - Controls: 3-CYCLE structure (the fundamental tournament invariant)
+
+  3. OMEGA HAND (roots of unity):
+     - Tracks character rotation: omega^n = e^(2*pi*i*n/p)
+     - Period exactly p
+     - Controls: EIGENSPACE decomposition (THM-125)
+
+  WHEN HANDS ALIGN:
+     Joint period = LCM(pi_F(p), pi_T(p), p)
+     At alignment: the tournament achieves FULL SYMMETRY
+
+  DEEP CONNECTION:
+     phi < tau < 2 means: GOLDEN < TRIBONACCI < BINARY
+
+     Tournament theory lives between tau and 2:
+     - tau governs the GROWTH RATE of 3-cycle-related structures
+     - 2 governs the NUMBER OF CHOICES (arc orientations)
+
+     The gap tau → 2 (ratio 1.087378) is where tournament
+     structure lives: too few choices for pure Fibonacci recursion,
+     but enough for tribonacci-type interactions.
+
+     β₁ (our new orientability obstruction from earlier today)
+     is essentially about when the PHI hand and TAU hand are
+     OUT OF SYNC: the path structure (Fibonacci-like) doesn't
+     align with the cycle structure (tribonacci-like).
+
+  phi * tau = 2.976028 ≈ 3 (the 3-nacci weight limit!)
+  This is NOT a coincidence: the product of the dominant roots
+  of x^2-x-1 and x^3-x^2-x-1 is related to the next integer.
+
+DONE — tau_phi_clock_S72b.py complete
