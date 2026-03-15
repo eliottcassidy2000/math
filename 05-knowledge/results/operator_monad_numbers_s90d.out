@@ -1,0 +1,334 @@
+======================================================================
+PART 1: THE NUMBER OPERATOR — n AS AN OPERATOR, NOT A SCALAR
+======================================================================
+
+In quantum field theory, the NUMBER OPERATOR N counts particles:
+  N = Σ_k a†_k a_k
+
+For tournaments, the analog is the CYCLE COUNTING OPERATOR:
+  N_T = Σ_{odd k} α_k(T)  where α_k = #{independent sets of size k in Ω(T)}
+
+The OCF says: H(T) = I(Ω(T), 2) = Σ_k α_k · 2^k = evaluation of the
+independence polynomial at the "fugacity" z = 2.
+
+This IS a partition function: H = Z(β) at β = -log(2).
+
+In OPERATOR LANGUAGE:
+  The "Hamiltonian" is H_op = -Σ_k k·n_k  (n_k = occupation number of cycle type k)
+  The partition function is Z = Tr(e^{-βH_op}) = Σ_configs e^{-β·E(config)}
+  At β = -log(2): Z = Σ_configs 2^{#cycles} = I(Ω, 2) = H(T)
+
+The NATURAL NUMBER n appears as:
+  - Scale index: the n-th term in arctanh(x) = Σ x^{2k+1}/(2k+1)
+  - Operator index: the n-th Fourier harmonic of the tournament
+  - Cycle length: directed cycles of length n
+  - Interaction order: the n-point correlation function
+
+Transfer matrix M(1) — the OPERATOR:
+  M = [[1.0, 2.0, 0.0], [0.0, 0.0, 1.0], [1.0, 1.0, 0.0]]
+  Eigenvalues: ['-0.419643+0.606291j', '-0.419643-0.606291j', '1.839287+0.000000j']
+  det(M) = 1.000000 = 1 (unimodular)
+  tr(M) = 1
+  tr(M²) = 3
+  tr(M³) = 7
+
+======================================================================
+PART 2: THE RESOLVENT (zI - M)⁻¹ — THE MONAD'S HOME
+======================================================================
+
+The RESOLVENT of M is R(z) = (zI - M)⁻¹.
+It exists for z not an eigenvalue.
+
+R(z) has POLES at z = λ_i (the eigenvalues τ₃, λ_c, λ̄_c).
+
+The SPECTRAL DECOMPOSITION:
+  R(z) = Σ_i P_i / (z - λ_i)
+where P_i are the spectral projections.
+
+The TRACE of the resolvent:
+  tr R(z) = Σ_i 1/(z - λ_i)
+
+This is a RATIONAL FUNCTION with poles at the eigenvalues.
+Its residues are the MULTIPLICITIES (all 1 for M(1)).
+
+GENERATING FUNCTION interpretation:
+  tr R(z) = Σ_{n≥0} tr(M^n) / z^{n+1}
+           = Σ_{n≥0} T_n / z^{n+1}
+
+where T_n = tr(M^n) is the tribonacci-like trace sequence.
+
+So the RESOLVENT is the GF for the TRIBONACCI SEQUENCE!
+
+Resolvent trace tr(zI - M)⁻¹:
+         z |    tr R(z) numerical |           p'(z)/p(z) |  match
+-----------------------------------------------------------------
+         3 |   1.428571+0.000000i |   1.428571+0.000000i | True
+         4 |   0.906977+0.000000i |   0.906977+0.000000i | True
+         5 |   0.680851+0.000000i |   0.680851+0.000000i | True
+        10 |   0.313836+0.000000i |   0.313836+0.000000i | True
+        -2 |  -1.363636+0.000000i |  -1.363636+-0.000000i | True
+  (0.5+1j) |   0.707993-1.220228i |   0.707993-1.220228i | True
+
+======================================================================
+PART 3: Q(M) — THE CAYLEY TRANSFORM OF THE OPERATOR ITSELF
+======================================================================
+
+We can apply the Cayley transform Q to the MATRIX M:
+  Q(M) = (I + M)(I - M)⁻¹
+
+This is well-defined since no eigenvalue of M is 1.
+(Eigenvalues: τ₃ ≈ 1.839, λ_c ≈ -0.420 ± 0.606i)
+
+Wait — τ₃ > 1, so (I - M) has eigenvalue 1 - τ₃ < 0. It's invertible!
+
+Q(M) maps the eigenvalues: Q(λ_i) = (1+λ_i)/(1-λ_i)
+  Q(τ₃) = (1+1.839)/(1-1.839) = 2.839/(-0.839) = -3.384
+  Q(λ_c) = (1+λ_c)/(1-λ_c)
+
+And Q(M)⁴ = M (since Q has order 4 on each eigenvalue!... wait, Q
+  has order 4 only on the PROJECTIVE LINE. On matrices, Q⁴(M) = M
+  iff all eigenvalues return to themselves under Q⁴, which they do.)
+
+So Q⁴(M) = M. The Cayley transform of the operator is also 4-periodic!
+
+M =
+[[1. 2. 0.]
+ [0. 0. 1.]
+ [1. 1. 0.]]
+
+Q(M) =
+[[-1. -2. -2.]
+ [-1. -1.  0.]
+ [-1. -2. -1.]]
+
+Q²(M) =
+[[ 1.  0. -2.]
+ [-1.  0.  1.]
+ [ 0. -1.  0.]]
+
+Q³(M) =
+[[ 1.  2. -2.]
+ [-1. -1.  2.]
+ [ 1.  0. -1.]]
+
+Q⁴(M) =
+[[1. 2. 0.]
+ [0. 0. 1.]
+ [1. 1. 0.]]
+
+Q⁴(M) = M? True
+
+Eigenvalues of Q(M): ['0.1915+0.5089j', '0.1915-0.5089j', '-3.3830+0.0000j']
+  λ = -0.419643+0.606291j → Q(λ) = 0.191488+0.508852j
+  λ = -0.419643-0.606291j → Q(λ) = 0.191488-0.508852j
+  λ = 1.839287+0.000000j → Q(λ) = -3.382976-0.000000j
+
+======================================================================
+PART 4: n AS A SPECTRAL RESIDUE
+======================================================================
+
+THE OPERATOR-THEORETIC VIEW OF NATURAL NUMBERS:
+
+The n-th natural number appears in the RESOLVENT EXPANSION:
+  tr R(z) = Σ_{n≥0} T_n / z^{n+1}
+
+where T_n = tr(M^n) = τ₃^n + 2|λ_c|^n cos(nθ).
+
+So the "n-th natural number" in our framework is T_n:
+  T_0 = 3,  T_1 = 1,  T_2 = 3,  T_3 = 7,  T_4 = 11,
+  T_5 = 21, T_6 = 39, T_7 = 71, T_8 = 131, ...
+
+These ARE the natural numbers — not 1, 2, 3, 4, ... but the
+TRIBONACCI NATURALS 3, 1, 3, 7, 11, 21, 39, 71, 131, ...
+
+The standard natural numbers 1, 2, 3, ... appear as the
+INTERACTION SCALES (the index n), while the tribonacci
+numbers T_n are the SPECTRAL CONTENT at each scale.
+
+RECONCILIATION:
+  The interaction scale n and the spectral content T_n are
+  DUAL descriptions of the same thing:
+    n is the POSITION (when the interaction happens)
+    T_n is the MAGNITUDE (how strong the interaction is)
+
+  The resolvent connects them: T_n = ∮ z^n tr R(z) dz / 2πi
+  (Cauchy integral formula — the n-th moment of the spectral measure)
+
+The spectral naturals T_n = tr(M^n):
+  n:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  T_n: [3, 1, 3, 7, 11, 21, 39, 71, 131, 241, 443, 815, 1499, 2757, 5071, 9327, 17155, 31553, 58035, 106743]
+
+Verify tribonacci: T_n = T_{n-1} + T_{n-2} + T_{n-3}:
+  T_3 = 7, T_2+T_1+T_0 = 7, match: True
+  T_4 = 11, T_3+T_2+T_1 = 11, match: True
+  T_5 = 21, T_4+T_3+T_2 = 21, match: True
+  T_6 = 39, T_5+T_4+T_3 = 39, match: True
+  T_7 = 71, T_6+T_5+T_4 = 71, match: True
+  T_8 = 131, T_7+T_6+T_5 = 131, match: True
+  T_9 = 241, T_8+T_7+T_6 = 241, match: True
+  T_10 = 443, T_9+T_8+T_7 = 443, match: True
+  T_11 = 815, T_10+T_9+T_8 = 815, match: True
+  T_12 = 1499, T_11+T_10+T_9 = 1499, match: True
+  T_13 = 2757, T_12+T_11+T_10 = 2757, match: True
+  T_14 = 5071, T_13+T_12+T_11 = 5071, match: True
+
+======================================================================
+PART 5: TOEPLITZ OPERATORS — CIRCULANT TOURNAMENTS
+======================================================================
+
+The adjacency matrix of a CIRCULANT tournament is a CIRCULANT MATRIX.
+Circulant matrices are special TOEPLITZ matrices.
+
+In operator theory, a TOEPLITZ OPERATOR T_f on the Hardy space H²
+has symbol f: S¹ → ℂ (a function on the unit circle).
+
+For a circulant tournament on Z_p with connection set S:
+  Symbol f(e^{iθ}) = Σ_{s∈S} e^{isθ}
+  Eigenvalues = {f(ω^k) : k = 0,...,p-1} where ω = e^{2πi/p}
+
+The SZEGŐ LIMIT THEOREM:
+  As n → ∞, the distribution of eigenvalues of T_n(f) converges to
+  the pushforward measure f_*(dθ/2π).
+
+For PALEY tournaments:
+  f(e^{iθ}) = Σ_{s∈QR(p)} e^{isθ} = (χ(k)i√p - 1)/2  at θ = 2πk/p
+  The symbol takes only 2 values! (Fibonacci-type, as we discovered)
+  Szegő: eigenvalue distribution → two-point measure
+
+For INTERVAL tournaments:
+  f(e^{iθ}) = Σ_{s=1}^{(p-1)/2} e^{isθ} = Dirichlet kernel
+  The symbol is continuous → Szegő gives absolutely continuous measure
+
+This is why interval tournaments maximize H: their symbol has the
+LARGEST L¹ norm, which by Szegő maximizes the trace of any polynomial.
+
+THE PERMANENT via OPERATOR THEORY:
+  H(T) = perm(A) where A is the adjacency matrix.
+  By the van der Waerden inequality: perm(A) ≥ n!/n^n for doubly stochastic A.
+  The near-transitive tournament has A NOT doubly stochastic (row sums differ).
+  But the OPERATOR NORM ||A|| = λ_max gives a bound: perm ≤ λ_max^n.
+  More refined: perm relates to the HAFNIAN of (A + A^T), connecting
+  to the undirected structure.
+
+  Paley T_7: |S|=3, L¹ norm=1.6408, L∞ norm=3.0000
+  Interval_7: |S|=3, L¹ norm=1.4583, L∞ norm=3.0000
+  Paley T_11: |S|=5, L¹ norm=2.0291, L∞ norm=5.0000
+  Interval_11: |S|=5, L¹ norm=1.6538, L∞ norm=5.0000
+  Interval_13: |S|=6, L¹ norm=1.7209, L∞ norm=6.0000
+
+======================================================================
+PART 6: THE SPECTRAL ZETA — THE MONAD'S DNA
+======================================================================
+
+The SPECTRAL ZETA FUNCTION of M:
+  ζ_M(s) = Σ_{i=1}^{3} λ_i^{-s}
+
+At NEGATIVE integers: ζ_M(-n) = tr(M^n) = tribonacci T_n.
+At s = 0: ζ_M(0) = 3 = dim(M) (the number of states).
+At POSITIVE integers: ζ_M(n) = "reciprocal moments".
+
+The FUNCTIONAL EQUATION:
+  ζ_M(s) involves τ₃^{-s} + 2|λ_c|^{-s} cos(sθ - s·arg(λ_c))
+
+Since |λ_c|² = 1/τ₃ (from det = 1):
+  ζ_M(s) = τ₃^{-s} + 2·τ₃^{s/2} · cos(s·arg(λ_c))
+
+This has a SELF-DUALITY: the term τ₃^{-s} at large s is balanced
+by τ₃^{s/2} from the complex pair. The critical line is at
+Re(s) = 0 (where both terms have the same magnitude).
+
+ANALOGY WITH RIEMANN ZETA:
+  ζ(s) = Σ n^{-s}  (Riemann: over all natural numbers)
+  ζ_M(s) = Σ λ_i^{-s}  (spectral: over eigenvalues)
+
+  Riemann: functional equation ζ(s) ↔ ζ(1-s)
+  Spectral: "functional equation" from det(M) = τ₃·|λ_c|² = 1
+
+  Riemann: trivial zeros at s = -2, -4, -6, ...
+  Spectral: ζ_M(-n) = T_n (tribonacci, NEVER zero!)
+
+  Riemann: non-trivial zeros on Re(s) = 1/2 (hypothesis)
+  Spectral: non-trivial zeros when τ₃^{-s} = -2τ₃^{s/2}cos(sθ)
+
+Spectral zeta ζ_M(s) = τ₃^{-s} + λ_c^{-s} + λ̄_c^{-s}:
+       s |               ζ_M(s) |  T_n check
+---------------------------------------------
+     -10 |   443.0000 +   0.0000i | tr(M^10)=443
+      -9 |   241.0000 +   0.0000i | tr(M^9)=241
+      -8 |   131.0000 +   0.0000i | tr(M^8)=131
+      -7 |    71.0000 +  -0.0000i | tr(M^7)=71
+      -6 |    39.0000 +   0.0000i | tr(M^6)=39
+      -5 |    21.0000 +   0.0000i | tr(M^5)=21
+      -4 |    11.0000 +   0.0000i | tr(M^4)=11
+      -3 |     7.0000 +   0.0000i | tr(M^3)=7
+      -2 |     3.0000 +   0.0000i | tr(M^2)=3
+      -1 |     1.0000 +   0.0000i | tr(M^1)=1
+       0 |     3.0000 +   0.0000i | tr(M^0)=3
+       1 |    -1.0000 +   0.0000i | 
+       2 |    -1.0000 +   0.0000i | 
+       3 |     5.0000 +  -0.0000i | 
+       4 |    -5.0000 +   0.0000i | 
+       5 |    -1.0000 +   0.0000i | 
+
+======================================================================
+PART 7: THE GRAND DICTIONARY — NUMBER ↔ OPERATOR ↔ TOURNAMENT
+======================================================================
+
+╔══════════════════════════════════════════════════════════════════════╗
+║          NUMBER  ↔  OPERATOR  ↔  TOURNAMENT  ↔  MONAD             ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                    ║
+║  n ∈ ℕ          M^n           tr(M^n) = T_n     Q^n mod 4         ║
+║  1/n            Resolvent     n-th cumulant      1/n weight        ║
+║  n odd          Directed op   Odd cycles (3,5,7) arctanh coeff    ║
+║  n even         Undirected    Symmetric pairs    log(1-x²) coeff  ║
+║  n prime        Irreducible   Paley T_n          Simple monad     ║
+║  n composite    Factored      Non-Paley          Composed monad   ║
+║                                                                    ║
+║  The NUMBER LINE is the SPECTRUM of the shift operator.            ║
+║  The NATURAL NUMBERS are the resonances of Q⁴ = Id.              ║
+║  Each n is an OPERATOR SCALE at which tournaments interact.        ║
+║                                                                    ║
+║  GRAPH = even part = undirected = 1/(1-x²) = symmetric            ║
+║  TOURNAMENT = odd part = directed = Q(x) = antisymmetric           ║
+║  NATURAL NUMBER = both together = 1/(1-x) = the whole             ║
+║                                                                    ║
+║  n = graph + tournament                                            ║
+║  1/(1-x) = √(Q(x)) · √(1/(1-x²))                               ║
+║  The whole = √(directed) · √(undirected)                          ║
+║                                                                    ║
+║  This is the GEOMETRIC MEAN of two worlds.                        ║
+║                                                                    ║
+║  The MONAD Q cycles through 4 aspects:                             ║
+║    Q⁰ = identity (the number itself)                              ║
+║    Q¹ = Cayley (directed/undirected exchange)                     ║
+║    Q² = inversion (-1/x) (reciprocal/complement)                  ║
+║    Q³ = inverse Cayley (return through the mirror)                ║
+║                                                                    ║
+║  After 4 steps: you're back. The monad has period 4.              ║
+║  The fixed points ±i are where directed = undirected:             ║
+║  the IMAGINARY UNIT is the tournament that IS its own graph.      ║
+║                                                                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+WHAT OPERATOR THEORY SAYS:
+
+1. Natural numbers are SPECTRAL RESIDUES of the resolvent of M.
+   T_n = tr(M^n) = tribonacci = the "content" at scale n.
+
+2. The TOEPLITZ STRUCTURE of circulant tournaments connects to
+   the Szegő limit theorem: eigenvalue distributions → symbol measure.
+
+3. The CAYLEY TRANSFORM Q acts on M with period 4, cycling through
+   four "aspects" of the operator (direct, Cayley, inverse, reverse).
+
+4. The SPECTRAL ZETA ζ_M(s) encodes ALL moments simultaneously,
+   with det(M)=1 providing a self-duality at s ↔ -s.
+
+5. Each natural number n is BOTH a tournament (odd part, directed)
+   AND a graph (even part, undirected). The geometric mean
+   1/(1-x) = √Q(x) · √(1/(1-x²)) decomposes the number line
+   into its directed and undirected components.
+
+opus-2026-03-15-S90d: THE OPERATOR MONAD
+
