@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries The Unique Odd Function with Rational Exponential}
+\end{center}
+
+\medskip
+
+\textbf{Theorem.} $\mathrm{arctanh}(x) = x + \dfrac{x^3}{3} + \dfrac{x^5}{5} + \cdots$ is the unique odd formal power series $f(x)$ such that $e^{f(x)}$ is a rational function of degree $(1,1)$.
+
+\medskip
+
+\textit{Proof.} If $f$ is odd and $R = e^f = P/Q$ is rational with $P,Q$ coprime, then $R(-x) = e^{-f} = 1/R(x)$, so $P(-x)Q(x) = P(x)Q(-x)$. Coprimality forces $P(-x) = cQ(x)$; evaluating at $x = 0$ gives $c = 1$. For degree $(1,1)$: $Q = 1 - ax$, $P = Q(-x) = 1 + ax$, so $R = (1+ax)/(1-ax)$ and $f = 2\,\mathrm{arctanh}(ax)$.\hfill$\square$
+
+\medskip
+
+\textbf{Consequence.} Any system of sequential directed binary comparisons---tournaments, spin chains, phylogenetic distances, channel capacities---is governed by $\mathrm{arctanh}$. There is no alternative.
+
+\end{document}

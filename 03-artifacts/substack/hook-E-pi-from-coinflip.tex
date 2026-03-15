@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Pi from a Coin Flip}
+\end{center}
+
+\medskip
+
+Flip a coin for every pair of players: heads means A wins. Count the number of consistent rankings. The mathematics governing the \emph{variance} of this count is
+\[
+\mathrm{arctanh}(x) = x + \frac{x^3}{3} + \frac{x^5}{5} + \frac{x^7}{7} + \cdots
+\]
+---a sum over the odd numbers $1, 3, 5, 7, \ldots$ with \textbf{all positive signs}.
+
+Now set $x = i = \sqrt{-1}$. The signs alternate, and out comes
+\[
+\mathrm{arctanh}(i) = i\!\left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots\right) = \frac{i\pi}{4}.
+\]
+The same ingredients---$1, \frac{1}{3}, \frac{1}{5}, \frac{1}{7}$---build both the tournament and the circle. The only difference is the sign:
+\[
+\underbrace{1 + \tfrac{1}{3} + \tfrac{1}{5} + \cdots}_{\text{all positive} \;=\; \infty \;=\; \textbf{time}} \qquad\text{vs}\qquad \underbrace{1 - \tfrac{1}{3} + \tfrac{1}{5} - \cdots}_{\text{alternating} \;=\; \pi/4 \;=\; \textbf{space}}
+\]
+Positive signs diverge: time is infinite. Alternating signs converge: space is finite. The circle is the tournament, rotated through the imaginary.
+
+\end{document}

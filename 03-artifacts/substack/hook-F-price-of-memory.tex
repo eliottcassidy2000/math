@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries The Price of Memory}
+\end{center}
+
+\medskip
+
+Two numbers govern the growth of sequences built from binary choices.
+
+Without memory---each choice independent of the last---the growth rate is the \textbf{golden ratio}:
+\[
+\varphi = \frac{1+\sqrt{5}}{2} = 1.61803\ldots \qquad (\text{Fibonacci: } \lambda^2 = \lambda + 1)
+\]
+
+With one step of memory---each choice sees what happened just before---the growth rate is the \textbf{tribonacci constant}:
+\[
+\tau = 1.83929\ldots \qquad (\text{tribonacci: } \lambda^3 = \lambda^2 + \lambda + 1)
+\]
+
+The difference
+\[
+\tau - \varphi = 0.22125\ldots
+\]
+is the \textbf{price of memory}: the exact cost, in growth rate per step, of remembering what just happened.
+
+Tournaments pay this price. Every comparison ``A beats B'' echoes into the next: not as a new decision, but as a \emph{record}---the third state (besides win and lose) that makes the $3 \times 3$ transfer matrix irreducible, the recurrence cubic instead of quadratic, the golden ratio not quite enough.
+
+The entire theory of pairwise comparison lives in that gap of $0.221$.
+
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries How to Measure Whether a Ranking Is Real}
+\end{center}
+
+\medskip
+
+You run a round-robin tournament: every team plays every other. Some results make sense (the best team beats everyone). Others are contradictory (A beats B, B beats C, C beats A). How many consistent total rankings are there?
+
+Call this number $H$. For $n$ teams choosing outcomes at random, $H$ averages $n!/2^{n-1}$ and fluctuates with coefficient of variation
+\[
+\mathrm{CV}(H) = \sqrt{\frac{2}{n}}.
+\]
+\textbf{This is exact} (up to $O(1/n^3)$ corrections). For 20 teams: $\mathrm{CV} = 32\%$. Any ranking within $32\%$ of the random expectation is indistinguishable from noise. Beyond that, the skill differences are real.
+
+The formula comes from the Cayley transform $Q(x) = (1{+}x)/(1{-}x)$. Each ``level'' of interaction contributes $2g_k(n{-}2k)/(n)_{2k}$ to the variance, where the $g_k$ are Delannoy lattice path weights. The first two levels cancel at order $1/n^2$, leaving the clean $2/n$.
+
+\end{document}

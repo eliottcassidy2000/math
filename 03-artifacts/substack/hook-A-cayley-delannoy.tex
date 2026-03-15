@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries The Cayley Transform Counts Lattice Paths}
+\end{center}
+
+\medskip
+
+The Taylor coefficients of the Cayley transform raised to the $m$-th power are Delannoy lattice path weights:
+\[
+\left(\frac{1+x}{1-x}\right)^{\!m} = 1 + 2\sum_{k=1}^{\infty} g_k(m)\, x^k, \qquad g_k(m) = \sum_{j=1}^{\min(k,m)} \binom{k{-}1}{j{-}1}\binom{m}{j}\, 2^{j-1}.
+\]
+The matrix $T(k,m) = k\,g_k(m)$ is \textbf{symmetric} ($k\,g_k(m) = m\,g_m(k)$) and its diagonal $T(k,k)$ is OEIS~A108666: the total number of diagonal steps across all Delannoy paths from $(0,0)$ to $(k,k)$. Applying this to the Fourier analysis of Hamiltonian path counts over random tournaments on $n$ vertices:
+\[
+\mathrm{CV}^2(H) = \sum_{k \geq 1} \frac{2\,g_k(n{-}2k)}{(n)_{2k}} = \frac{2}{n} + \frac{0}{n^2} - \frac{14}{3n^3} + O(n^{-4}).
+\]
+The coefficient of $1/n^2$ vanishes \emph{exactly}, because $g_2(m) = g_1(m)^2 = m^2$.
+
+\end{document}
