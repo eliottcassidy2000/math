@@ -1,0 +1,193 @@
+n=4: shared_2=3, shared_1=0, shared_0=0, total=3
+  shared_2/(n-2) = 1.500
+  shared_2 + shared_0 = 3
+  x_n = 3.2361
+n=5: shared_2=6, shared_1=3, shared_0=0, total=9
+  shared_2/(n-2) = 2.000
+  shared_2 + shared_0 = 6
+  x_n = 4.1926
+n=6: shared_2=9, shared_1=9, shared_0=1, total=19
+  shared_2/(n-2) = 2.250
+  shared_2 + shared_0 = 10
+  x_n = 5.1623
+n=7: shared_2=12, shared_1=18, shared_0=4, total=34
+  shared_2/(n-2) = 2.400
+  shared_2 + shared_0 = 16
+  x_n = 6.1401
+n=8: shared_2=15, shared_1=30, shared_0=10, total=55
+  shared_2/(n-2) = 2.500
+  shared_2 + shared_0 = 25
+  x_n = 7.1231
+n=9: shared_2=18, shared_1=45, shared_0=20, total=83
+  shared_2/(n-2) = 2.571
+  shared_2 + shared_0 = 38
+  x_n = 8.1098
+
+=== For rank to drop when removing one TT constraint ===
+Need: for EVERY d ∉ {a,b,c}, at least one of
+  {a,b,d}, {a,c,d}, {b,c,d} is cyclic.
+This means d cannot be 'fully transitive' with all pairs from {a,b,c}.
+
+
+=== Dependency graph expected degree ===
+n=4: shared_2=3, E[degree]=2.2, x_n=3.236, E[degree]/x_n=0.6953
+n=5: shared_2=6, E[degree]=4.5, x_n=4.193, E[degree]/x_n=1.0733
+n=6: shared_2=9, E[degree]=6.8, x_n=5.162, E[degree]/x_n=1.3076
+n=7: shared_2=12, E[degree]=9.0, x_n=6.140, E[degree]/x_n=1.4658
+n=8: shared_2=15, E[degree]=11.2, x_n=7.123, E[degree]/x_n=1.5794
+n=9: shared_2=18, E[degree]=13.5, x_n=8.110, E[degree]/x_n=1.6647
+n=10: shared_2=21, E[degree]=15.8, x_n=9.099, E[degree]/x_n=1.7310
+n=11: shared_2=24, E[degree]=18.0, x_n=10.090, E[degree]/x_n=1.7839
+
+QR residues mod 7: [1, 2, 4]
+QR_7: transitive 2-subsets (Ω_1): 21
+QR_7: transitive 3-subsets (Ω_2): 21
+QR_7: transitive 4-subsets (Ω_3): 0
+QR_7: transitive 5-subsets (Ω_4): 0
+QR_7: transitive 6-subsets (Ω_5): 0
+QR_7: transitive 7-subsets (Ω_6): 0
+
+
+Transitive T_7: Ω_k = C(7,k+1)
+  Ω_0 = C(7,1) = 7
+  Ω_1 = C(7,2) = 21
+  Ω_2 = C(7,3) = 35
+  Ω_3 = C(7,4) = 35
+  Ω_4 = C(7,5) = 21
+  Ω_5 = C(7,6) = 7
+  Ω_6 = C(7,7) = 1
+
+=== Special values ===
+n=4: x = 1+√5 = 2φ = 3.236068
+  φ = 1.618034
+  This is the 'golden rectangle' ratio in a different guise
+  x² = 2x + 4 → x(x-2) = 4 → (excess)·(capacity) = (vertices)
+
+n=5: x = (3+√29)/2 = 4.192582
+  x² = 3x + 5 → x(x-3) = 5
+
+n=6: x = 2+√10 = 5.162278
+  x² = 4x + 6 → x(x-4) = 6
+  UNIQUE: factors THM-217 transfer matrix at x=18
+
+=== INTERPRETATION ===
+
+x(x-(n-2)) = n
+
+CONSTRAINT PROPAGATION MODEL:
+- Start with one known edge value h(a,b)
+- Propagation rate per step: each known edge determines ~x new edge values
+  via transitive triple constraints
+- "Free reach" per step: x - (n-2) beyond the immediate neighborhood
+- Total system size: n vertices
+- BALANCE CONDITION: x·(x-(n-2)) = n
+
+At the critical rate x_n:
+- If effective propagation > x_n: system is over-determined → rank maximal → β₁=0
+- If effective propagation < x_n: system under-determined → rank deficient → β₁=1
+
+The FRACTION of β₁=1 tournaments depends on how often the 
+random tournament's constraint structure falls below this threshold.
+
+=== Convergence rate ===
+n=3: P(β₁=1)_crude ≈ 0.250000, 1/x_n = 0.434259
+n=4: P(β₁=1)_crude ≈ 0.578125, 1/x_n = 0.309017
+n=5: P(β₁=1)_crude ≈ 0.835571, 1/x_n = 0.238516
+n=6: P(β₁=1)_crude ≈ 0.966129, 1/x_n = 0.193713
+n=7: P(β₁=1)_crude ≈ 0.977451, 1/x_n = 0.162865
+n=8: P(β₁=1)_crude ≈ 0.904142, 1/x_n = 0.140388
+n=9: P(β₁=1)_crude ≈ 0.784061, 1/x_n = 0.123308
+n=10: P(β₁=1)_crude ≈ 0.647550, 1/x_n = 0.109902
+n=11: P(β₁=1)_crude ≈ 0.514752, 1/x_n = 0.099106
+n=12: P(β₁=1)_crude ≈ 0.396788, 1/x_n = 0.090230
+n=13: P(β₁=1)_crude ≈ 0.298211, 1/x_n = 0.082806
+n=14: P(β₁=1)_crude ≈ 0.219422, 1/x_n = 0.076505
+n=15: P(β₁=1)_crude ≈ 0.158567, 1/x_n = 0.071092
+n=16: P(β₁=1)_crude ≈ 0.112826, 1/x_n = 0.066391
+n=17: P(β₁=1)_crude ≈ 0.079205, 1/x_n = 0.062272
+n=18: P(β₁=1)_crude ≈ 0.054949, 1/x_n = 0.058633
+n=19: P(β₁=1)_crude ≈ 0.037723, 1/x_n = 0.055394
+n=3: BB^T eigs: 3 (×1), 0 (×2)
+  √eig1 = 1.7321, x_n = 2.3028
+  eig2=0
+  eig2 = C(n-2,2) = 0
+n=4: BB^T eigs: 9 (×1), 1 (×3)
+  √eig1 = 3.0000, x_n = 3.2361
+  eig1/eig2 = 9.0000
+  eig2 = C(n-2,2) = 1
+n=5: BB^T eigs: 18 (×1), 3 (×4)
+  √eig1 = 4.2426, x_n = 4.1926
+  eig1/eig2 = 6.0000
+  eig2 = C(n-2,2) = 3
+n=6: BB^T eigs: 30 (×1), 6 (×5)
+  √eig1 = 5.4772, x_n = 5.1623
+  eig1/eig2 = 5.0000
+  eig2 = C(n-2,2) = 6
+n=7: BB^T eigs: 45 (×1), 10 (×6)
+  √eig1 = 6.7082, x_n = 6.1401
+  eig1/eig2 = 4.5000
+  eig2 = C(n-2,2) = 10
+n=8: BB^T eigs: 63 (×1), 15 (×7)
+  √eig1 = 7.9373, x_n = 7.1231
+  eig1/eig2 = 4.2000
+  eig2 = C(n-2,2) = 15
+n=9: BB^T eigs: 84 (×1), 21 (×8)
+  √eig1 = 9.1652, x_n = 8.1098
+  eig1/eig2 = 4.0000
+  eig2 = C(n-2,2) = 21
+n=5, k=1: tr(A_L^k) = 0 closed walks of length 1
+n=5, k=2: tr(A_L^k) = 60 closed walks of length 2
+n=5, k=3: tr(A_L^k) = 180 closed walks of length 3
+n=5, k=4: tr(A_L^k) = 1380 closed walks of length 4
+  x_n² = 17.58, tr(A²)/E = 6.00
+
+n=6, k=1: tr(A_L^k) = 0 closed walks of length 1
+n=6, k=2: tr(A_L^k) = 120 closed walks of length 2
+n=6, k=3: tr(A_L^k) = 480 closed walks of length 3
+n=6, k=4: tr(A_L^k) = 4320 closed walks of length 4
+  x_n² = 26.65, tr(A²)/E = 8.00
+
+n=7, k=1: tr(A_L^k) = 0 closed walks of length 1
+n=7, k=2: tr(A_L^k) = 210 closed walks of length 2
+n=7, k=3: tr(A_L^k) = 1050 closed walks of length 3
+n=7, k=4: tr(A_L^k) = 10710 closed walks of length 4
+  x_n² = 37.70, tr(A²)/E = 10.00
+
+=== Out-neighbor tournament structure ===
+For transitive tournament on n vertices, vertex 0:
+  Out-neighbors: {1, 2, ..., n-1}
+  Induced tournament: transitive on n-1 vertices
+  Propagation chain: h(0,1) → h(0,2) → ... → h(0,n-1)
+  Length: n-2 steps
+
+For random tournament, vertex v with d+ out-neighbors:
+  Induced tournament is random on d+ vertices
+  Expected diameter: 2 (for d+ ≥ 4)
+  Propagation reaches all v-edges in ~2 steps
+
+=== x_n decomposition ===
+n=3: x_n = 2.3028 = (n-2) + 1.3028, n-2 = 1, correction = n/x_n = 1.3028
+n=4: x_n = 3.2361 = (n-2) + 1.2361, n-2 = 2, correction = n/x_n = 1.2361
+n=5: x_n = 4.1926 = (n-2) + 1.1926, n-2 = 3, correction = n/x_n = 1.1926
+n=6: x_n = 5.1623 = (n-2) + 1.1623, n-2 = 4, correction = n/x_n = 1.1623
+n=7: x_n = 6.1401 = (n-2) + 1.1401, n-2 = 5, correction = n/x_n = 1.1401
+n=8: x_n = 7.1231 = (n-2) + 1.1231, n-2 = 6, correction = n/x_n = 1.1231
+n=9: x_n = 8.1098 = (n-2) + 1.1098, n-2 = 7, correction = n/x_n = 1.1098
+n=10: x_n = 9.0990 = (n-2) + 1.0990, n-2 = 8, correction = n/x_n = 1.0990
+n=11: x_n = 10.0902 = (n-2) + 1.0902, n-2 = 9, correction = n/x_n = 1.0902
+
+=== β₁=1 count analysis ===
+n=3: count=2, total=8, fraction=0.25
+  count = 2 = 2^1
+n=4: count=24, total=64, fraction=0.375
+  count = 24 = 2^3 · 3^1
+n=5: count=304, total=1024, fraction=0.296875
+  count = 304 = 2^4 · 19^1
+
+=== Generating function check ===
+Fit: a(x) = 1009.0654 + -765.3012·x + 142.4257·x²
+Prediction for n=6: 854
+(Actual n=6 β₁=1 count: pending)
+
+Fit in n: a(n) = 1484.0 + -881.0·n + 129.0·n²
+Prediction for n=6: 842

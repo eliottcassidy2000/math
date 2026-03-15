@@ -38,6 +38,19 @@ Entry format:
 - Tournament equidecomposability: is (H,β₁) complete at n≥6?
 - Prove T_n - M_{n-2} ~ 1/(n-2)² asymptotic
 
+## opus-2026-03-15-S72d — 2026-03-15: Metallic mean exploration + THM-224 up-Laplacian
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S72c
+**Summary of work:** Explored the user's expression x_n = (n-2+√(n²+4))/2 = M_n - 1 (shifted metallic mean) and its connections to tournament homology. Key discoveries: (1) THM-224 PROVED: the simplicial up-Laplacian ∂₂∂₂^T on K_n has ALL nonzero eigenvalues = n, proved via S_n symmetry + trace argument. (2) THM-217 transfer matrix char poly factors via metallic mean UNIQUELY at n=6 (x=18). (3) Independent constraint fraction = 3/n exactly. (4) Corrected β₁=1 count at n=6 from ~9744 to 4800 (old estimate was buggy). (5) β₁=1 count/(n-1)! has ratios approaching ~3.1-3.4, suggestively near π but not confirmed. (6) C^TC has off-diagonal entries ∈ {-1,0,+1} only — beautiful combinatorial structure.
+
+**New contributions:** THM-224, HYP-1582-1584, metallic_mean_S72d.py, ctc_identity_proof_S72d.py
+**Unresolved threads:**
+- Exact β₁=1 count at n=7 (need exhaustive or more samples to test π convergence)
+- Does the metallic mean x_n have a direct tournament spectral interpretation?
+- Prove β₁ ≤ 1 algebraically using THM-224 (uniform spectrum → rank can drop by at most 1?)
+- The recurrence a_{k+1} = (n-2)a_k + n·a_{k-1} — does it count any tournament object?
+
 ## opus-2026-03-15-S72c — 2026-03-15: Walsh-β₁ spectral connection + β₁ ≤ 1 investigation
 
 **Account:** opus

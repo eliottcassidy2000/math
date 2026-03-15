@@ -1,0 +1,86 @@
+/tmp/metallic_deeper_S72d.py:185: DeprecationWarning: `np.math` is a deprecated alias for the standard library `math` module (Deprecated Numpy 1.25). Replace usages of `np.math` with `math`
+  print(f"  count / n! = {c / np.math.factorial(n):.6f}")
+/tmp/metallic_deeper_S72d.py:186: DeprecationWarning: `np.math` is a deprecated alias for the standard library `math` module (Deprecated Numpy 1.25). Replace usages of `np.math` with `math`
+  print(f"  count / (n-1)! = {c / np.math.factorial(n-1):.6f}")
+=== THM-217 ↔ Metallic Mean Connection ===
+
+3×3 transfer matrix char poly: λ³ - λ² - xλ - x = 0
+Want to factor as (λ - α)(λ² - (n-2)λ - n) = 0
+
+n=3: x(const)=0, x(coeff)=3, match=False
+n=4: x(const)=4, x(coeff)=6, match=False
+n=5: x(const)=10, x(coeff)=11, match=False
+n=6: x(const)=18, x(coeff)=18, match=True
+n=7: x(const)=28, x(coeff)=27, match=False
+n=8: x(const)=40, x(coeff)=38, match=False
+n=9: x(const)=54, x(coeff)=51, match=False
+
+UNIQUE match at n=6 with x=18.
+At n=6, x=18: λ³ - λ² - 18λ - 18 = (λ+3)(λ² - 4λ - 6)
+Metallic eigenvalue: (4+√40)/2 = 2+√10 ≈ 5.16227766016838
+
+Roots of λ³-λ²-18λ-18: [ 5.162278 -1.162278 -3.      ]
+x_6 = (4+√40)/2 = 5.162278
+-3 is a root: 0
+
+=== Physical meaning of x=n(n-3) in THM-217 ===
+THM-217 parameter x: weight for matched pairs in HP counting
+g_k(m) counts k-matchings of path P_{m+2k-1} weighted by 2^{c(M)}
+At x=n(n-3): the 'matching parameter' equals n(n-3)
+
+n=3: x=n(n-3)=0, C(n-1,2)=1, C(n,2)-n=0
+n=4: x=n(n-3)=4, C(n-1,2)=3, C(n,2)-n=2
+n=5: x=n(n-3)=10, C(n-1,2)=6, C(n,2)-n=5
+n=6: x=n(n-3)=18, C(n-1,2)=10, C(n,2)-n=9
+n=7: x=n(n-3)=28, C(n-1,2)=15, C(n,2)-n=14
+n=8: x=n(n-3)=40, C(n-1,2)=21, C(n,2)-n=20
+n=9: x=n(n-3)=54, C(n-1,2)=28, C(n,2)-n=27
+
+=== Constraint propagation BFS (transitive tournament) ===
+n=5: E=10, max_rank=6, C(n,3)=10, redundancy=4
+  Need to remove ≥ 5 independent constraints to drop rank
+  redundancy/C(n,3) = 0.4000
+n=6: E=15, max_rank=10, C(n,3)=20, redundancy=10
+  Need to remove ≥ 11 independent constraints to drop rank
+  redundancy/C(n,3) = 0.5000
+n=7: E=21, max_rank=15, C(n,3)=35, redundancy=20
+  Need to remove ≥ 21 independent constraints to drop rank
+  redundancy/C(n,3) = 0.5714
+n=8: E=28, max_rank=21, C(n,3)=56, redundancy=35
+  Need to remove ≥ 36 independent constraints to drop rank
+  redundancy/C(n,3) = 0.6250
+
+=== Expected constraint independence ===
+n=5: max_rank/C(n,3) = 6/10 = 0.6000
+  6/n = 1.2000, 3/(n-1) = 0.7500, 1/x_n = 0.2385
+n=6: max_rank/C(n,3) = 10/20 = 0.5000
+  6/n = 1.0000, 3/(n-1) = 0.6000, 1/x_n = 0.1937
+n=7: max_rank/C(n,3) = 15/35 = 0.4286
+  6/n = 0.8571, 3/(n-1) = 0.5000, 1/x_n = 0.1629
+n=8: max_rank/C(n,3) = 21/56 = 0.3750
+  6/n = 0.7500, 3/(n-1) = 0.4286, 1/x_n = 0.1404
+
+=== Metallic mean as adjacency eigenvalue ===
+Regular T_5: eigenvalues = [ 2.  -0.5 -0.5 -0.5 -0.5]
+  x_5 = 4.1926
+  (-1+√5)/2 = 0.6180
+QR_7: eigenvalues = [ 3.  -0.5 -0.5 -0.5 -0.5 -0.5 -0.5]
+  x_n = 6.1401
+
+=== β₁=1 tournament counts ===
+n=3: β₁=1 count=2, total=8, fraction=0.250000
+  count / n! = 0.333333
+  count / (n-1)! = 1.000000
+n=4: β₁=1 count=24, total=64, fraction=0.375000
+  count / n! = 1.000000
+  count / (n-1)! = 4.000000
+n=5: β₁=1 count=304, total=1024, fraction=0.296875
+  count / n! = 2.533333
+  count / (n-1)! = 12.666667
+
+Fraction ratios:
+  f(4)/f(3) = 1.500000
+  f(5)/f(4) = 0.791667
+n=3: f=0.250000, 1/x_n=0.434259, n/x_n²=0.565741, 1-(n-1)/x_n=0.131483
+n=4: f=0.375000, 1/x_n=0.309017, n/x_n²=0.381966, 1-(n-1)/x_n=0.072949
+n=5: f=0.296875, 1/x_n=0.238516, n/x_n²=0.284451, 1-(n-1)/x_n=0.045934

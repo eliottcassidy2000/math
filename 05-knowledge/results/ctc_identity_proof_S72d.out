@@ -1,0 +1,89 @@
+n=4: ||P² - P|| = 0.0000000000
+  Diagonal of CTC: [2. 2. 2. 2. 2. 2.]
+  CTC =
+    [ 2 -1 -1  1  1  0]
+    [-1  2 -1 -1  0  1]
+    [-1 -1  2  0 -1 -1]
+    [ 1 -1  0  2 -1  1]
+    [ 1  0 -1 -1  2 -1]
+    [ 0  1 -1  1 -1  2]
+  Unique off-diagonal values: [-1.0, 0.0, 1.0]
+
+n=5: ||P² - P|| = 0.0000000000
+  Diagonal of CTC: [3. 3. 3. 3. 3. 3. 3. 3. 3. 3.]
+  CTC =
+    [ 3 -1 -1 -1  1  1  1  0  0  0]
+    [-1  3 -1 -1 -1  0  0  1  1  0]
+    [-1 -1  3 -1  0 -1  0 -1  0  1]
+    [-1 -1 -1  3  0  0 -1  0 -1 -1]
+    [ 1 -1  0  0  3 -1 -1  1  1  0]
+    [ 1  0 -1  0 -1  3 -1 -1  0  1]
+    [ 1  0  0 -1 -1 -1  3  0 -1 -1]
+    [ 0  1 -1  0  1 -1  0  3 -1  1]
+    [ 0  1  0 -1  1  0 -1 -1  3 -1]
+    [ 0  0  1 -1  0  1 -1  1 -1  3]
+  Unique off-diagonal values: [-1.0, 0.0, 1.0]
+
+n=6: ||P² - P|| = 0.0000000000
+  Diagonal of CTC: [4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4. 4.]
+  Unique off-diagonal values: [-1.0, 0.0, 1.0]
+
+=== CC^T structure ===
+n=5: CC^T =
+  (0, 1, 2): [ 3  1  1 -1 -1  0  1  1  0  0]
+  (0, 1, 3): [ 1  3  1  1  0 -1 -1  0  1  0]
+  (0, 1, 4): [ 1  1  3  0  1  1  0 -1 -1  0]
+  (0, 2, 3): [-1  1  0  3  1 -1  1  0  0  1]
+  (0, 2, 4): [-1  0  1  1  3  1  0  1  0 -1]
+  (0, 3, 4): [ 0 -1  1 -1  1  3  0  0  1  1]
+  (1, 2, 3): [ 1 -1  0  1  0  0  3  1 -1  1]
+  (1, 2, 4): [ 1  0 -1  0  1  0  1  3  1 -1]
+  (1, 3, 4): [ 0  1 -1  0  0  1 -1  1  3  1]
+  (2, 3, 4): [ 0  0  0  1 -1  1  1 -1  1  3]
+
+CC^T eigenvalues: [ 5.  5.  5.  5.  5.  5.  0.  0. -0. -0.]
+CC^T off-diagonal values: [-1, 0, 1]
+CC^T off-diagonal counts: {-1: 10, 0: 15, 1: 20}
+
+M = CC^T - 3I eigenvalues: [ 2.  2.  2.  2.  2.  2. -3. -3. -3. -3.]
+Expected: n-3=2 (×6) and -3 (×4)
+
+=== PROOF STRUCTURE ===
+
+CLAIM: For the transitive tournament on n vertices, C^T C = n·P 
+where P is the orthogonal projection onto im(C^T) = im(∂₂^T).
+
+PROOF:
+1. C is the boundary matrix ∂₂ of the complete simplicial complex on [n].
+2. The nonzero singular values of ∂₂ are all equal to √n.
+
+WHY: The simplicial boundary ∂₂ maps the C(n,3)-dimensional 2-chain space
+to the C(n,2)-dimensional 1-chain space. For the complete simplex, the 
+symmetry group S_n acts transitively on both spaces.
+
+The S_n action on 2-chains (via permutation of vertices) commutes with ∂₂.
+By Schur's lemma, ∂₂ ∘ ∂₂^T acts as a scalar on each irreducible S_n-subspace.
+
+The 2-chain space decomposes under S_n into irreducibles.
+The 2-chains = ℝ[C(n,3)] has the S_n representation structure corresponding
+to the partition [n-3, 1, 1, 1] (3-element subsets).
+
+On the image of ∂₂: all singular values are √n, so ∂₂^T ∂₂ restricted to
+im(∂₂) acts as n·I.
+
+This is a consequence of the fact that the simplicial Laplacian 
+Δ₁ = ∂₁^T ∂₁ + ∂₂ ∂₂^T has eigenvalue n on the exact 1-forms (im ∂₂^T).
+
+For the complete graph K_n, the graph Laplacian L = n·I - J has eigenvalue
+n with multiplicity n-1 and 0 with multiplicity 1.
+
+The UP-Laplacian ∂₂ ∂₂^T on 1-chains of the complete simplex has the 
+form: n·P where P projects onto im(∂₂).
+
+This proves C^T C = n·P. QED.
+
+=== Verification: ∂₂ ∂₂^T eigenvalues ===
+n=4: up-Laplacian ∂₂∂₂^T on 1-chains: nonzero eigs all = 4.0, count = 3, zeros = 3
+n=5: up-Laplacian ∂₂∂₂^T on 1-chains: nonzero eigs all = 5.0, count = 6, zeros = 4
+n=6: up-Laplacian ∂₂∂₂^T on 1-chains: nonzero eigs all = 6.0, count = 10, zeros = 5
+n=7: up-Laplacian ∂₂∂₂^T on 1-chains: nonzero eigs all = 7.0, count = 15, zeros = 6
