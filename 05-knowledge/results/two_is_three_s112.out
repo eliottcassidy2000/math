@@ -1,0 +1,120 @@
+THE STEP FROM 2 TO 3 IS NOT THERE
+============================================================
+
+We said: binary -> R (arctanh), ternary -> C (complex log).
+But what if 3 is already inside 2?
+
+============================================================
+THE Z PROCESS IS ALREADY TERNARY
+
+Z_j in {-1, 0, +1}: three values from a BINARY comparison.
+  +1 = unit ascent (sigma goes up by 1)
+  -1 = unit descent (sigma goes down by 1)
+   0 = big jump (|sigma(j+1) - sigma(j)| > 1)
+
+The third state (0) is NOT a third decision.
+It is the ABSENCE of a unit-step decision.
+It is the NULL outcome of a binary question.
+
+============================================================
+3 = 2 + MEMORY
+
+The 3x3 transfer matrix has states {A, B, C}:
+  A = 'undecided' (not in a matching)
+  B = 'just decided' (matched at this position)
+  C = 'remembering' (one step after a match)
+
+These are NOT 3 types of outcome.
+They are: DECIDE, and the MEMORY of having decided.
+
+The 3-state automaton is the MINIMAL MEMORY needed to
+process sequential binary decisions with nearest-neighbor
+interaction. You need to know if you JUST decided (state C)
+to determine if the next decision creates a cluster.
+
+3 = 2 + 1 where the 1 is memory, not a new option.
+
+============================================================
+FIBONACCI INSIDE TRIBONACCI
+
+The characteristic equation:
+  lambda^3 = lambda^2 + x*lambda + x
+
+Divide by lambda:
+  lambda^2 = lambda + x + x/lambda
+
+For large lambda: lambda^2 ~ lambda + x (FIBONACCI!)
+  Solution: lambda ~ (1 + sqrt(1+4x))/2
+  At x=1: this is phi = (1+sqrt(5))/2 = 1.618...
+
+The correction x/lambda adds the NULL STATE contribution.
+The full tribonacci constant tau = 1.839...
+= phi + 0.221... = golden ratio + null correction.
+
+  Golden ratio (Fibonacci, no null):    phi = 1.618034
+  Tribonacci constant (with null):      tau = 1.839287
+  Difference (null correction):         0.221253
+  Ratio:                                1.136742
+
+The tribonacci IS the Fibonacci deformed by memory.
+
+============================================================
+THE CUBIC = QUADRATIC + NULL DEGENERACY
+
+At x=0: eigenvalues are 1, 0, 0 (one real + double zero).
+  The double zero IS the null state (degenerate, decoupled).
+  Turning on x>0 splits it into a complex conjugate pair:
+    lambda_{2,3} ~ +/- i*sqrt(x)
+
+This splitting is EXACTLY the spin-orbit coupling in QM:
+  A degenerate energy level splits when coupling is turned on.
+  The two split states acquire COMPLEX phases.
+  The real part (Fibonacci) gets a correction (-> tribonacci).
+
+The cubic characteristic equation is the QUADRATIC (Fibonacci)
+coupled to a NULL STATE (degenerate zero) via coupling x.
+
+============================================================
+COMPOSITION, NOT EXTENSION
+
+A pair of binary outcomes has 3 combined results:
+  (win, win)  -> net forward (+)
+  (win, lose) or (lose, win) -> net neutral (0)
+  (lose, lose) -> net backward (-)
+
+The ternary is the COMPOSITION of two binaries.
+There is no independent 'ternary decision.'
+There is: binary, and the PATTERN of binary.
+
+The 3 in our theory comes from composing 2 with itself.
+2 x 2 = 4 raw outcomes, but {+-, -+} are indistinguishable,
+leaving 3 DISTINGUISHABLE outcomes: ++, {+-,-+}, --.
+
+============================================================
+THE ANSWER
+
+The step from 2 to 3 is not there because:
+
+  3 = 2 + MEMORY
+
+The third state is the record that a binary decision was made.
+The null state Z=0 is not a third outcome but the ABSENCE.
+
+A TRUE ternary decision (rock-paper-scissors) requires
+complex numbers and winding numbers. But tournaments never
+need that, because their 3 states are DECIDE, DONT DECIDE,
+and REMEMBER -- not three kinds of decision.
+
+The Fibonacci (memoryless binary) becomes tribonacci
+(binary with one step of memory).
+The golden ratio becomes the tribonacci constant.
+The 2x2 becomes 3x3.
+But the underlying decision is still binary.
+
+And this is why arctanh -- a REAL function -- governs
+the whole theory. If there were truly 3 outcomes,
+we would need C. But there are only 2 outcomes + memory.
+Memory is real. So the theory stays real.
+
+Underneath all the structure:
+just yes or no, over and over, remembering one step back.
